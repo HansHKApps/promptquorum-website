@@ -239,7 +239,7 @@ import { article as a_edge_ai_hardware_for_local_llms } from './articles/edge-ai
 import { article as a_vla_models_robots_local_inference } from './articles/vla-models-robots-local-inference'
 import { article as a_vlm_video_analytics_drones_edge } from './articles/vlm-video-analytics-drones-edge'
 import { article as a_local_ai_agents_business_workflows_eu_compliance } from './articles/local-ai-agents-business-workflows-eu-compliance'
-import { article as a_local_ai_agents_with_mcp_2026 } from './articles/local-ai-agents-with-mcp-2026'
+import { article as a_local_ai_agents_with_mcp } from './articles/local-ai-agents-with-mcp'
 import { article as a_lm_studio_vs_jan_vs_gpt4all_2026 } from './articles/lm-studio-vs-jan-vs-gpt4all-2026'
 import { article as a_local_ai_app_non_technical_users } from './articles/local-ai-app-non-technical-users'
 import { article as a_local_ai_app_with_built_in_rag } from './articles/local-ai-app-with-built-in-rag'
@@ -487,7 +487,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'chat-with-1000-pdfs-locally':            a_chat_with_1000_pdfs_locally,
   'continue-dev-vs-cline-vs-aider-local':   a_continue_dev_vs_cline_vs_aider_local,
   'local-ai-agents-business-workflows-eu-compliance': a_local_ai_agents_business_workflows_eu_compliance,
-  'local-ai-agents-with-mcp-2026':          a_local_ai_agents_with_mcp_2026,
+  'local-ai-agents-with-mcp':          a_local_ai_agents_with_mcp,
   'lm-studio-vs-jan-vs-gpt4all-2026':       a_lm_studio_vs_jan_vs_gpt4all_2026,
   'local-ai-app-non-technical-users':       a_local_ai_app_non_technical_users,
   'local-ai-app-with-built-in-rag':         a_local_ai_app_with_built_in_rag,

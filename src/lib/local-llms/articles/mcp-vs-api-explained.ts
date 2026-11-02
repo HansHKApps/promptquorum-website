@@ -5,7 +5,7 @@
 // traditional API as the underlying service/endpoint itself. Vendor-neutral by design — no
 // concrete model names, versions, or years anywhere in reader-facing prose (evergreen tier).
 // Companion to local-llm-openai-compatible-api.ts (function-calling / tools=[] mechanics) and
-// power-local-llm/local-ai-agents-with-mcp-2026.ts (hands-on MCP server setup).
+// power-local-llm/local-ai-agents-with-mcp.ts (hands-on MCP server setup).
 // All 9 locales authored (en/de/fr/ja/zh/es/pt/ar/ko).
 
 import type { Language } from '@/lib/blog/blogContent'
@@ -167,7 +167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Do Local AI Setups Support MCP?',
         content: [
           '**Many local AI tools have started adding MCP client or server support, so a locally run model can connect to external tools using the same standardized protocol — but support varies by tool and setup, so check the specific tool before relying on it.** MCP support in the local AI ecosystem is not universal or uniform: some tools ship MCP client support (letting a local AI assistant connect out to MCP servers), some ship MCP server support (exposing the local tool\'s own capabilities to other MCP clients), and some ship both or neither.',
-          'Because this landscape changes as individual projects add or extend support, the reliable approach is to check the specific local AI tool\'s own documentation or release notes for its current MCP support, rather than assuming a given feature is present. For hands-on setup of a local AI agent connected to MCP servers, see [local AI agents with MCP](/power-local-llm/local-ai-agents-with-mcp-2026), which covers concrete server configuration steps.',
+          'Because this landscape changes as individual projects add or extend support, the reliable approach is to check the specific local AI tool\'s own documentation or release notes for its MCP support, rather than assuming a given feature is present. For hands-on setup of a local AI agent connected to MCP servers, see [local AI agents with MCP](/power-local-llm/local-ai-agents-with-mcp), which covers concrete server configuration steps.',
         ],
       },
       securityConsiderations: {
@@ -199,7 +199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[The OpenAI-Compatible API and Function Calling Guide](/local-llms/local-llm-openai-compatible-api) — the hands-on mechanics of the `tools=[]` function-calling layer that MCP typically builds on.',
-          '[Local AI Agents with MCP](/power-local-llm/local-ai-agents-with-mcp-2026) — a hands-on walkthrough of setting up an MCP server for a local AI agent.',
+          '[Local AI Agents with MCP](/power-local-llm/local-ai-agents-with-mcp) — a hands-on walkthrough of setting up an MCP server for a local AI agent.',
         ],
       },
       faq: {
@@ -428,7 +428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Unterstützen lokale KI-Setups MCP?',
         content: [
           '**Viele lokale KI-Tools bieten inzwischen MCP-Client- oder Server-Unterstützung, sodass ein lokal laufendes Modell externe Tools über dasselbe standardisierte Protokoll ansprechen kann — die Unterstützung variiert jedoch je nach Tool und Setup und sollte im Einzelfall geprüft werden.** MCP-Unterstützung im lokalen KI-Ökosystem ist weder universell noch einheitlich: Manche Tools bieten MCP-Client-Unterstützung (ein lokaler KI-Assistent kann sich mit MCP-Servern verbinden), manche bieten MCP-Server-Unterstützung (die Fähigkeiten des lokalen Tools werden anderen MCP-Clients bereitgestellt), manche beides oder keines.',
-          'Da sich diese Landschaft ändert, sobald einzelne Projekte Unterstützung hinzufügen oder erweitern, ist der verlässliche Weg, die aktuelle Dokumentation oder die Release Notes des konkreten lokalen KI-Tools zu prüfen, statt ein bestimmtes Feature als gegeben anzunehmen. Eine praktische Anleitung zum Einrichten eines lokalen KI-Agenten mit MCP-Servern finden Sie unter [lokale KI-Agenten mit MCP](/de/power-local-llm/local-ai-agents-with-mcp-2026), die konkrete Schritte zur Server-Konfiguration beschreibt.',
+          'Da sich diese Landschaft ändert, sobald einzelne Projekte Unterstützung hinzufügen oder erweitern, ist der verlässliche Weg, die aktuelle Dokumentation oder die Release Notes des konkreten lokalen KI-Tools zu prüfen, statt ein bestimmtes Feature als gegeben anzunehmen. Eine praktische Anleitung zum Einrichten eines lokalen KI-Agenten mit MCP-Servern finden Sie unter [lokale KI-Agenten mit MCP](/de/power-local-llm/local-ai-agents-with-mcp), die konkrete Schritte zur Server-Konfiguration beschreibt.',
         ],
       },
       securityConsiderations: {
@@ -460,7 +460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Der Leitfaden zur OpenAI-kompatiblen API und Function Calling](/de/local-llms/local-llm-openai-compatible-api) — die praktische Mechanik der `tools=[]`-Function-Calling-Schicht, auf der MCP typischerweise aufbaut.',
-          '[Lokale KI-Agenten mit MCP](/de/power-local-llm/local-ai-agents-with-mcp-2026) — eine praktische Anleitung zum Aufsetzen eines MCP-Servers für einen lokalen KI-Agenten.',
+          '[Lokale KI-Agenten mit MCP](/de/power-local-llm/local-ai-agents-with-mcp) — eine praktische Anleitung zum Aufsetzen eines MCP-Servers für einen lokalen KI-Agenten.',
         ],
       },
       faq: {
@@ -689,7 +689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Les configurations IA locales prennent-elles en charge MCP ?',
         content: [
           '**De nombreux outils IA locaux ont commencé à ajouter une prise en charge client ou serveur MCP, permettant à un modèle exécuté localement de se connecter à des outils externes via le même protocole standardisé — mais le support varie selon l\'outil et la configuration, il faut donc vérifier l\'outil précis avant de s\'y fier.** La prise en charge de MCP dans l\'écosystème IA local n\'est ni universelle ni uniforme : certains outils intègrent la prise en charge client MCP (un assistant IA local peut se connecter à des serveurs MCP), d\'autres intègrent la prise en charge serveur MCP (exposant les capacités de l\'outil local à d\'autres clients MCP), et d\'autres les deux ou aucun.',
-          'Ce paysage évoluant à mesure que les projets ajoutent ou étendent leur support, l\'approche fiable consiste à vérifier la documentation ou les notes de version propres à l\'outil IA local concerné pour connaître son support MCP actuel, plutôt que de supposer qu\'une fonctionnalité donnée est présente. Pour une mise en place concrète d\'un agent IA local connecté à des serveurs MCP, consultez [les agents IA locaux avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp-2026), qui détaille les étapes de configuration du serveur.',
+          'Ce paysage évoluant à mesure que les projets ajoutent ou étendent leur support, l\'approche fiable consiste à vérifier la documentation ou les notes de version propres à l\'outil IA local concerné pour connaître son support MCP actuel, plutôt que de supposer qu\'une fonctionnalité donnée est présente. Pour une mise en place concrète d\'un agent IA local connecté à des serveurs MCP, consultez [les agents IA locaux avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp), qui détaille les étapes de configuration du serveur.',
         ],
       },
       securityConsiderations: {
@@ -721,7 +721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           '[Le guide de l\'API compatible OpenAI et du function calling](/fr/local-llms/local-llm-openai-compatible-api) — la mécanique pratique de la couche de function calling `tools=[]` sur laquelle MCP s\'appuie généralement.',
-          '[Agents IA locaux avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp-2026) — un guide pratique pour mettre en place un serveur MCP destiné à un agent IA local.',
+          '[Agents IA locaux avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp) — un guide pratique pour mettre en place un serveur MCP destiné à un agent IA local.',
         ],
       },
       faq: {
@@ -950,7 +950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ローカルAI環境はMCPに対応しているか',
         content: [
           '**多くのローカルAIツールがMCPクライアントまたはサーバー対応を追加し始めており、ローカルで実行されるモデルが同じ標準化されたプロトコルを使って外部ツールに接続できるようになっています——ただし対応状況はツールや設定によって異なるため、頼る前に個別のツールを確認してください。** ローカルAIエコシステムにおけるMCP対応は普遍的でも均一でもありません。あるツールはMCPクライアント対応（ローカルAIアシスタントがMCPサーバーに外部接続できる）を、別のツールはMCPサーバー対応（ローカルツール自身の機能を他のMCPクライアントに公開する）を提供し、両方に対応するツールも、どちらにも対応しないツールもあります。',
-          'この状況は各プロジェクトが対応を追加・拡張するにつれて変化するため、特定の機能が存在すると想定するのではなく、使用するローカルAIツール自体のドキュメントやリリースノートで現在のMCP対応状況を確認するのが確実な方法です。MCPサーバーに接続したローカルAIエージェントの具体的なセットアップについては、サーバー構成の具体的な手順を扱う[MCPを使ったローカルAIエージェント](/ja/power-local-llm/local-ai-agents-with-mcp-2026)を参照してください。',
+          'この状況は各プロジェクトが対応を追加・拡張するにつれて変化するため、特定の機能が存在すると想定するのではなく、使用するローカルAIツール自体のドキュメントやリリースノートで現在のMCP対応状況を確認するのが確実な方法です。MCPサーバーに接続したローカルAIエージェントの具体的なセットアップについては、サーバー構成の具体的な手順を扱う[MCPを使ったローカルAIエージェント](/ja/power-local-llm/local-ai-agents-with-mcp)を参照してください。',
         ],
       },
       securityConsiderations: {
@@ -982,7 +982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[OpenAI互換APIとfunction callingガイド](/ja/local-llms/local-llm-openai-compatible-api) — MCPが通常その上に構築される`tools=[]`function calling層の実践的な仕組み。',
-          '[MCPを使ったローカルAIエージェント](/ja/power-local-llm/local-ai-agents-with-mcp-2026) — ローカルAIエージェント向けにMCPサーバーをセットアップする実践的な手順。',
+          '[MCPを使ったローカルAIエージェント](/ja/power-local-llm/local-ai-agents-with-mcp) — ローカルAIエージェント向けにMCPサーバーをセットアップする実践的な手順。',
         ],
       },
       faq: {
@@ -1211,7 +1211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '本地 AI 环境支持 MCP 吗？',
         content: [
           '**许多本地 AI 工具已经开始加入 MCP 客户端或服务器支持，使本地运行的模型能够通过相同的标准化协议连接外部工具——但支持程度因工具和配置而异，因此在依赖之前应检查具体工具。** 本地 AI 生态系统中对 MCP 的支持既不普遍也不统一：有些工具提供 MCP 客户端支持（让本地 AI 助手能连接到外部 MCP 服务器），有些提供 MCP 服务器支持（把本地工具自身的能力暴露给其他 MCP 客户端），还有些两者都支持或都不支持。',
-          '由于这一格局会随各个项目添加或扩展支持而变化，可靠的做法是查阅具体本地 AI 工具自身的文档或发布说明以了解其当前的 MCP 支持情况，而不要想当然地认为某个功能已经存在。关于将本地 AI 智能体连接到 MCP 服务器的具体搭建步骤，请参阅[配合 MCP 使用的本地 AI 智能体](/zh/power-local-llm/local-ai-agents-with-mcp-2026)，其中介绍了具体的服务器配置步骤。',
+          '由于这一格局会随各个项目添加或扩展支持而变化，可靠的做法是查阅具体本地 AI 工具自身的文档或发布说明以了解其当前的 MCP 支持情况，而不要想当然地认为某个功能已经存在。关于将本地 AI 智能体连接到 MCP 服务器的具体搭建步骤，请参阅[配合 MCP 使用的本地 AI 智能体](/zh/power-local-llm/local-ai-agents-with-mcp)，其中介绍了具体的服务器配置步骤。',
         ],
       },
       securityConsiderations: {
@@ -1243,7 +1243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '延伸阅读',
         items: [
           '[OpenAI 兼容 API 与函数调用指南](/zh/local-llms/local-llm-openai-compatible-api) — MCP 通常建立于其上的 `tools=[]` 函数调用层的实操细节。',
-          '[配合 MCP 使用的本地 AI 智能体](/zh/power-local-llm/local-ai-agents-with-mcp-2026) — 为本地 AI 智能体搭建 MCP 服务器的实操指南。',
+          '[配合 MCP 使用的本地 AI 智能体](/zh/power-local-llm/local-ai-agents-with-mcp) — 为本地 AI 智能体搭建 MCP 服务器的实操指南。',
         ],
       },
       faq: {
@@ -1472,7 +1472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Los setups de IA local soportan MCP?',
         content: [
           '**Muchas herramientas de IA local han empezado a añadir soporte de cliente o servidor MCP, de modo que un modelo ejecutado localmente puede conectarse a herramientas externas usando el mismo protocolo estandarizado — pero el soporte varía según la herramienta y la configuración, así que conviene verificar la herramienta concreta antes de confiar en ello.** El soporte de MCP en el ecosistema de IA local no es universal ni uniforme: algunas herramientas incluyen soporte de cliente MCP (permitiendo que un asistente de IA local se conecte a servidores MCP), otras incluyen soporte de servidor MCP (exponiendo las capacidades de la propia herramienta local a otros clientes MCP), y otras incluyen ambos o ninguno.',
-          'Como este panorama cambia a medida que cada proyecto añade o amplía soporte, el enfoque fiable es revisar la documentación o las notas de la versión de la herramienta de IA local concreta para conocer su soporte actual de MCP, en lugar de asumir que una función determinada está presente. Para una configuración práctica de un agente de IA local conectado a servidores MCP, consulta [agentes de IA locales con MCP](/es/power-local-llm/local-ai-agents-with-mcp-2026), que cubre pasos concretos de configuración del servidor.',
+          'Como este panorama cambia a medida que cada proyecto añade o amplía soporte, el enfoque fiable es revisar la documentación o las notas de la versión de la herramienta de IA local concreta para conocer su soporte actual de MCP, en lugar de asumir que una función determinada está presente. Para una configuración práctica de un agente de IA local conectado a servidores MCP, consulta [agentes de IA locales con MCP](/es/power-local-llm/local-ai-agents-with-mcp), que cubre pasos concretos de configuración del servidor.',
         ],
       },
       securityConsiderations: {
@@ -1504,7 +1504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[La guía de la API compatible con OpenAI y function calling](/es/local-llms/local-llm-openai-compatible-api) — la mecánica práctica de la capa de function calling `tools=[]` sobre la que normalmente se construye MCP.',
-          '[Agentes de IA locales con MCP](/es/power-local-llm/local-ai-agents-with-mcp-2026) — un recorrido práctico para configurar un servidor MCP para un agente de IA local.',
+          '[Agentes de IA locales con MCP](/es/power-local-llm/local-ai-agents-with-mcp) — un recorrido práctico para configurar un servidor MCP para un agente de IA local.',
         ],
       },
       faq: {
@@ -1733,7 +1733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Configurações de IA local suportam MCP?',
         content: [
           '**Muitas ferramentas de IA local começaram a adicionar suporte de cliente ou servidor MCP, permitindo que um modelo rodado localmente se conecte a ferramentas externas usando o mesmo protocolo padronizado — mas o suporte varia conforme a ferramenta e a configuração, então verifique a ferramenta específica antes de contar com isso.** O suporte ao MCP no ecossistema de IA local não é universal nem uniforme: algumas ferramentas incluem suporte de cliente MCP (permitindo que um assistente de IA local se conecte a servidores MCP), outras incluem suporte de servidor MCP (expondo as capacidades da própria ferramenta local a outros clientes MCP), e outras incluem ambos ou nenhum.',
-          'Como esse cenário muda à medida que cada projeto adiciona ou amplia o suporte, a abordagem confiável é verificar a documentação ou as notas de versão da ferramenta de IA local específica para conhecer seu suporte atual ao MCP, em vez de presumir que um determinado recurso está presente. Para uma configuração prática de um agente de IA local conectado a servidores MCP, veja [agentes de IA locais com MCP](/pt/power-local-llm/local-ai-agents-with-mcp-2026), que cobre passos concretos de configuração do servidor.',
+          'Como esse cenário muda à medida que cada projeto adiciona ou amplia o suporte, a abordagem confiável é verificar a documentação ou as notas de versão da ferramenta de IA local específica para conhecer seu suporte atual ao MCP, em vez de presumir que um determinado recurso está presente. Para uma configuração prática de um agente de IA local conectado a servidores MCP, veja [agentes de IA locais com MCP](/pt/power-local-llm/local-ai-agents-with-mcp), que cobre passos concretos de configuração do servidor.',
         ],
       },
       securityConsiderations: {
@@ -1765,7 +1765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[O guia da API compatível com OpenAI e function calling](/pt/local-llms/local-llm-openai-compatible-api) — a mecânica prática da camada de function calling `tools=[]` sobre a qual o MCP normalmente se apoia.',
-          '[Agentes de IA locais com MCP](/pt/power-local-llm/local-ai-agents-with-mcp-2026) — um passo a passo prático para configurar um servidor MCP para um agente de IA local.',
+          '[Agentes de IA locais com MCP](/pt/power-local-llm/local-ai-agents-with-mcp) — um passo a passo prático para configurar um servidor MCP para um agente de IA local.',
         ],
       },
       faq: {
@@ -1994,7 +1994,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'هل تدعم إعدادات الذكاء الاصطناعي المحلية MCP؟',
         content: [
           '**بدأت العديد من أدوات الذكاء الاصطناعي المحلية بإضافة دعم عميل أو خادم MCP، بحيث يمكن لنموذج يعمل محلياً الاتصال بأدوات خارجية باستخدام البروتوكول الموحَّد نفسه — لكن الدعم يتفاوت حسب الأداة والإعداد، لذا تحقق من الأداة المحددة قبل الاعتماد عليها.** دعم MCP في منظومة الذكاء الاصطناعي المحلية ليس شاملاً ولا موحَّداً: بعض الأدوات تتضمن دعم عميل MCP (يتيح لمساعد ذكاء اصطناعي محلي الاتصال بخوادم MCP خارجية)، وبعضها يتضمن دعم خادم MCP (يعرض قدرات الأداة المحلية نفسها لعملاء MCP آخرين)، وبعضها يدعم كليهما أو لا يدعم أياً منهما.',
-          'ولأن هذا المشهد يتغير مع إضافة كل مشروع للدعم أو توسيعه، فإن النهج الموثوق هو التحقق من وثائق أو ملاحظات إصدار الأداة المحلية المحددة للتعرف على دعمها الحالي لـ MCP، بدلاً من افتراض وجود ميزة معينة. للاطلاع على إعداد عملي لوكيل ذكاء اصطناعي محلي متصل بخوادم MCP، راجع [وكلاء الذكاء الاصطناعي المحليون باستخدام MCP](/ar/power-local-llm/local-ai-agents-with-mcp-2026)، الذي يغطي خطوات ملموسة لإعداد الخادم.',
+          'ولأن هذا المشهد يتغير مع إضافة كل مشروع للدعم أو توسيعه، فإن النهج الموثوق هو التحقق من وثائق أو ملاحظات إصدار الأداة المحلية المحددة للتعرف على دعمها الحالي لـ MCP، بدلاً من افتراض وجود ميزة معينة. للاطلاع على إعداد عملي لوكيل ذكاء اصطناعي محلي متصل بخوادم MCP، راجع [وكلاء الذكاء الاصطناعي المحليون باستخدام MCP](/ar/power-local-llm/local-ai-agents-with-mcp)، الذي يغطي خطوات ملموسة لإعداد الخادم.',
         ],
       },
       securityConsiderations: {
@@ -2026,7 +2026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[دليل API المتوافقة مع OpenAI واستدعاء الدوال](/ar/local-llms/local-llm-openai-compatible-api) — الآلية العملية لطبقة استدعاء الدوال `tools=[]` التي يُبنى MCP فوقها عادة.',
-          '[وكلاء الذكاء الاصطناعي المحليون باستخدام MCP](/ar/power-local-llm/local-ai-agents-with-mcp-2026) — شرح عملي لإعداد خادم MCP لوكيل ذكاء اصطناعي محلي.',
+          '[وكلاء الذكاء الاصطناعي المحليون باستخدام MCP](/ar/power-local-llm/local-ai-agents-with-mcp) — شرح عملي لإعداد خادم MCP لوكيل ذكاء اصطناعي محلي.',
         ],
       },
       faq: {
@@ -2255,7 +2255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '로컬 AI 환경은 MCP를 지원하는가?',
         content: [
           '**많은 로컬 AI 도구가 MCP 클라이언트 또는 서버 지원을 추가하기 시작하여, 로컬에서 실행되는 모델이 동일한 표준화된 프로토콜을 사용해 외부 도구에 연결할 수 있게 되었습니다——다만 지원 여부는 도구와 설정에 따라 다르므로, 이를 신뢰하기 전에 사용할 구체적인 도구를 확인해야 합니다.** 로컬 AI 생태계에서 MCP 지원은 보편적이지도 균일하지도 않습니다. 어떤 도구는 MCP 클라이언트 지원(로컬 AI 어시스턴트가 외부 MCP 서버에 연결할 수 있음)을 제공하고, 어떤 도구는 MCP 서버 지원(로컬 도구 자체의 기능을 다른 MCP 클라이언트에 노출함)을 제공하며, 둘 다 제공하거나 둘 다 제공하지 않는 도구도 있습니다.',
-          '이런 상황은 각 프로젝트가 지원을 추가하거나 확장함에 따라 계속 변하기 때문에, 특정 기능이 있다고 가정하기보다는 사용할 구체적인 로컬 AI 도구 자체의 문서나 릴리스 노트에서 현재의 MCP 지원 상태를 확인하는 것이 신뢰할 수 있는 방법입니다. MCP 서버에 연결된 로컬 AI 에이전트를 실제로 구성하는 방법은 구체적인 서버 설정 단계를 다루는 [MCP를 활용한 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp-2026)를 참고하세요.',
+          '이런 상황은 각 프로젝트가 지원을 추가하거나 확장함에 따라 계속 변하기 때문에, 특정 기능이 있다고 가정하기보다는 사용할 구체적인 로컬 AI 도구 자체의 문서나 릴리스 노트에서 현재의 MCP 지원 상태를 확인하는 것이 신뢰할 수 있는 방법입니다. MCP 서버에 연결된 로컬 AI 에이전트를 실제로 구성하는 방법은 구체적인 서버 설정 단계를 다루는 [MCP를 활용한 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp)를 참고하세요.',
         ],
       },
       securityConsiderations: {
@@ -2287,7 +2287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[OpenAI 호환 API 및 함수 호출 가이드](/ko/local-llms/local-llm-openai-compatible-api) — MCP가 보통 그 위에 구축되는 `tools=[]` 함수 호출 계층의 실전 메커니즘.',
-          '[MCP를 활용한 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp-2026) — 로컬 AI 에이전트를 위한 MCP 서버 설정을 다루는 실전 가이드.',
+          '[MCP를 활용한 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp) — 로컬 AI 에이전트를 위한 MCP 서버 설정을 다루는 실전 가이드.',
         ],
       },
       faq: {

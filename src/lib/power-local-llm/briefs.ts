@@ -342,7 +342,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     internalLinks: [
       { ref: 'replace-github-copilot-with-local-llm', reasoning: 'broader replacement context' },
       { ref: 'best-local-coding-models-2026', reasoning: 'model side of the equation' },
-      { ref: 'local-ai-agents-with-mcp-2026', reasoning: 'for users who want extended tool calling' },
+      { ref: 'local-ai-agents-with-mcp', reasoning: 'for users who want extended tool calling' },
       { ref: 'best-local-models-tool-calling-2026', reasoning: 'adjacent technical depth' },
     ],
     externalLinks: [{ url: '/local-llms/llamacpp-vs-ollama-vs-vllm', reasoning: 'engine layer authority' }],
@@ -506,7 +506,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
 
   // ─── CATEGORY 4 — Local AI Agents & Tool Use ────────────────────────────
 
-  'local-ai-agents-with-mcp-2026': {
+  'local-ai-agents-with-mcp': {
     title: 'Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026',
     meta: 'Model Context Protocol + local Ollama = AI agents that actually do things. Setup guide with database, browser, and filesystem tools.',
     articleType: 'Tutorial (frontier topic)',
@@ -555,7 +555,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     writingBrief:
       'Model comparison focused on tool/function calling specifically. Test Gemma 4 (9B, 27B), GLM-5.1, Qwen3 (8B, 32B), Llama 3.3, Mistral Small on standardized tool-calling benchmarks (BFCL, ToolBench) plus real workflows (database queries, API chains, multi-step plans). Measure: function selection accuracy, parameter extraction, error recovery, parallel calls, schema adherence. Show JSON output reliability per model. Include latency per tool call. Declare winners per workflow type. Heavy table format. Lead with the verdict — which model wins overall.',
     internalLinks: [
-      { ref: 'local-ai-agents-with-mcp-2026', reasoning: 'practical implementation' },
+      { ref: 'local-ai-agents-with-mcp', reasoning: 'practical implementation' },
       { ref: 'autonomous-local-agents-actually-work', reasoning: 'broader context' },
       { ref: 'replace-zapier-with-local-ai-agents', reasoning: 'applied use case' },
     ],
@@ -597,7 +597,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     writingBrief:
       'Reality-check decision page based on the "what actually works" research framing. Test 6 local agent stacks (Cline+Ollama, Continue.dev agent mode, custom LangGraph+Ollama, AutoGPT-local, OpenInterpreter local, MetaGPT local) on 5 real tasks: research a topic, refactor a codebase, manage email drafts, scrape and summarize, debug an issue. Document successes and failures honestly. Measure cost (electricity, time), success rate, supervision required. Position as "the article that cuts through the hype" — high CTR via curiosity gap. Be willing to call out failures by name. Strong opinion required.',
     internalLinks: [
-      { ref: 'local-ai-agents-with-mcp-2026', reasoning: 'what enables agents' },
+      { ref: 'local-ai-agents-with-mcp', reasoning: 'what enables agents' },
       { ref: 'best-local-models-tool-calling-2026', reasoning: 'model layer' },
       { ref: 'local-ai-agents-business-workflows-eu-compliance', reasoning: 'applied context' },
     ],
@@ -638,7 +638,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     writingBrief:
       '"Replace SaaS" decision page. Pick 5 popular Zapier workflows (Gmail to Notion, RSS to summary, calendar reminders, file backup, content scheduling) and rebuild each with local AI agents. Stack: Ollama + custom Python agent or n8n self-hosted with local LLM. Measure: setup time vs Zapier, monthly savings, reliability over 30 days, limitations (no cloud webhooks unless you self-host). Be honest about what\'s harder vs Zapier (no managed integrations). Strong CTR pattern — "replace" intent. Cost math is the hook. End each workflow with a setup checklist.',
     internalLinks: [
-      { ref: 'local-ai-agents-with-mcp-2026', reasoning: 'what enables these workflows' },
+      { ref: 'local-ai-agents-with-mcp', reasoning: 'what enables these workflows' },
       { ref: 'autonomous-local-agents-actually-work', reasoning: 'context for limitations' },
       { ref: 'replace-grammarly-notion-ai-with-local', reasoning: 'adjacent SaaS replacement' },
     ],
@@ -678,7 +678,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     writingBrief:
       'Compliance-driven decision page for EU business buyers. Anchor every recommendation in a specific regulation (GDPR Articles 5, 25, 32; EU AI Act risk tiers; BSI baseline for DACH). Stack pick: Ollama or vLLM on dedicated hardware + Cline / Continue.dev (UI) + AnythingLLM (RAG) + audit logging — all open source, all on-prem, all auditable. Walk 5 real workflows: HR CV-screening, contract-clause review, customer-support draft generation, finance invoice triage, internal knowledge-base Q&A. For each: data classification, lawful basis (consent vs legitimate interest vs contract), DPIA trigger criteria, retention policy, audit-log requirement, AI Act classification (limited/high-risk). Be specific about what disqualifies cloud (Schrems II, sub-processor list, EDPB guidance) and what makes local defensible (data never leaves controller). End with a 10-point compliance checklist a DPO can sign off on.',
     internalLinks: [
-      { ref: 'local-ai-agents-with-mcp-2026', reasoning: 'protocol layer the compliance stack runs on' },
+      { ref: 'local-ai-agents-with-mcp', reasoning: 'protocol layer the compliance stack runs on' },
       { ref: 'autonomous-local-agents-actually-work', reasoning: 'reality check on what the stack can do' },
       { ref: 'local-rag-for-private-business-data', reasoning: 'RAG side of the same compliance picture' },
     ],

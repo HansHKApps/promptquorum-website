@@ -504,7 +504,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 0.00004600239212439047,
+      "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
   },
@@ -6633,6 +6633,259 @@
       "clicks": 0,
       "ctr": 0,
       "period": "90d 2026-08-05 to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "860ea068-2181-4e9a-aacd-e397958a194a",
+    "slug": "/power-local-llm/local-ai-agents-with-mcp",
+    "date": "2026-11-02T08:47:01.312Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Local Ollama + MCP: Connect AI to Databases and APIs (2026)",
+        "new": "Ollama MCP Setup 2026: Connect Local AI to Files and APIs"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Setup guide for local AI agents in 2026 using Ollama and Model Context Protocol (MCP). Filesystem, SQLite/Postgres, browser, GitHub servers, working JSON config, and a sandboxing model that does not trust the LLM.",
+        "new": "How to use MCP with Ollama: connect a local model to files, Postgres, a browser and GitHub with Goose. Working config, maintained servers, safe permissions."
+      }
+    ],
+    "reason": "Full refresh 2026-11-02, data-free for this locale (no/thin visible queries); slug renamed from local-ai-agents-with-mcp-2026 (301). Baseline = 28d on the OLD slug URL.",
+    "baseline": {
+      "position": 7.18,
+      "impressions": 250,
+      "clicks": 1,
+      "ctr": 0.004,
+      "period": "2026-10-06 to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "013802c3-0131-42bc-8613-5316d94282ee",
+    "slug": "/de/power-local-llm/local-ai-agents-with-mcp",
+    "date": "2026-11-02T08:47:01.340Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Lokale KI-Agenten mit MCP 2026: Model Context Protocol",
+        "new": "Ollama MCP einrichten 2026: Lokale KI mit Dateien und APIs"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Lokale KI-Agenten 2026 mit Ollama und MCP: Dateisystem, SQLite/Postgres, Browser, GitHub-Server. Funktionierende Configs + Sicherheitsmodell ohne Vertrauen.",
+        "new": "MCP mit Ollama nutzen: Lokales Modell per Goose mit Dateien, Postgres, Browser und GitHub verbinden. Config, gepflegte Server, sichere Rechte."
+      }
+    ],
+    "reason": "Full refresh 2026-11-02, data-free for this locale (no/thin visible queries); slug renamed from local-ai-agents-with-mcp-2026 (301). Baseline = 28d on the OLD slug URL.",
+    "baseline": {
+      "position": 6.47,
+      "impressions": 34,
+      "clicks": 2,
+      "ctr": 0.058823529411764705,
+      "period": "2026-10-06 to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8d902d80-c6bd-4839-bb72-0581e7c822dd",
+    "slug": "/fr/power-local-llm/local-ai-agents-with-mcp",
+    "date": "2026-11-02T08:47:01.367Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Ollama + MCP local : agent IA avec bases et APIs 2026",
+        "new": "Ollama MCP : connecter un agent IA local à vos outils"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Agents IA locaux avec MCP 2026 : configurez le Model Context Protocol pour des agents qui utilisent des outils. Serveurs MCP et workflows agentiques expliqués.",
+        "new": "Ollama MCP : comment connecter un modèle local à vos fichiers, Postgres, un navigateur et GitHub avec Goose. Configuration pas à pas, serveurs maintenus."
+      }
+    ],
+    "reason": "Full refresh 2026-11-02, query-adapted from this locale's own GSC queries (90d); slug renamed from local-ai-agents-with-mcp-2026 (301). Baseline = 28d on the OLD slug URL.",
+    "queries": [
+      "ollama mcp",
+      "mcp ollama",
+      "ollama connect mcp",
+      "mcp client ollama",
+      "ollama claude desktop"
+    ],
+    "baseline": {
+      "position": 4.63,
+      "impressions": 331,
+      "clicks": 4,
+      "ctr": 0.012084592145015106,
+      "period": "2026-10-06 to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "2d06f2d8-b7ad-47bb-bde8-7af7f179e926",
+    "slug": "/ja/power-local-llm/local-ai-agents-with-mcp",
+    "date": "2026-11-02T08:47:01.393Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Ollama + MCP ローカル：DB と API 接続ガイド 2026",
+        "new": "Ollama MCP 設定 2026：MCPサーバー接続ガイド"
+      },
+      {
+        "field": "metaDescription",
+        "old": "ローカル AI エージェントを 2026 年に Ollama と MCP で構築。ファイルシステム、SQLite/Postgres、ブラウザ、GitHub サーバー、動作する設定例とサンドボックスモデル。",
+        "new": "Ollama で MCPサーバーを設定する方法。Goose でローカルモデルをファイル・Postgres・ブラウザ・GitHub に接続。動作する設定例と安全な権限設計を解説。"
+      }
+    ],
+    "reason": "Full refresh 2026-11-02, query-adapted from this locale's own GSC queries (90d); slug renamed from local-ai-agents-with-mcp-2026 (301). Baseline = 28d on the OLD slug URL.",
+    "queries": [
+      "ollama mcp 設定",
+      "ollama mcpサーバー",
+      "ollama mcp",
+      "goose ollama"
+    ],
+    "baseline": {
+      "position": 6.69,
+      "impressions": 211,
+      "clicks": 4,
+      "ctr": 0.018957345971563982,
+      "period": "2026-10-06 to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "bf5c75ad-4113-4248-a42e-d87ef4f6e091",
+    "slug": "/zh/power-local-llm/local-ai-agents-with-mcp",
+    "date": "2026-11-02T08:47:01.419Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "本地 Ollama + MCP：连接数据库与 API 完整指南 2026",
+        "new": "Ollama MCP 配置 2026：本地模型连接文件与 API"
+      },
+      {
+        "field": "metaDescription",
+        "old": "2026 年本地 AI 智能体配置指南：Ollama + Model Context Protocol (MCP)。涵盖文件系统、SQLite/Postgres、浏览器、GitHub 服务器，提供可工作的 JSON 配置和不信任 LLM 的沙箱模型。",
+        "new": "Ollama 本身不支持 MCP，需要客户端桥接。用 Goose 把本地模型连接到文件、Postgres、浏览器和 GitHub，附可用配置、仍在维护的服务器和安全权限设置。"
+      }
+    ],
+    "reason": "Full refresh 2026-11-02, data-free for this locale (no/thin visible queries); slug renamed from local-ai-agents-with-mcp-2026 (301). Baseline = 28d on the OLD slug URL.",
+    "baseline": {
+      "position": 8.22,
+      "impressions": 46,
+      "clicks": 1,
+      "ctr": 0.021739130434782608,
+      "period": "2026-10-06 to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "82ad0405-e696-4ba5-975d-df15e393fefd",
+    "slug": "/es/power-local-llm/local-ai-agents-with-mcp",
+    "date": "2026-11-02T08:47:01.445Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Ollama + MCP local 2026: conecta IA a bases de datos y APIs",
+        "new": "MCP con Ollama 2026: conecta IA local a archivos y APIs"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Configura agentes de IA locales en 2026 con Ollama y MCP: filesystem, SQLite/Postgres, navegador, servidor GitHub, JSON funcional y un modelo de sandboxing.",
+        "new": "Cómo usar MCP con Ollama: conecta un modelo local a archivos, Postgres, un navegador y GitHub con Goose. Configuración que funciona y permisos seguros."
+      }
+    ],
+    "reason": "Full refresh 2026-11-02, data-free for this locale (no/thin visible queries); slug renamed from local-ai-agents-with-mcp-2026 (301). Baseline = 28d on the OLD slug URL.",
+    "baseline": {
+      "position": 3.97,
+      "impressions": 130,
+      "clicks": 2,
+      "ctr": 0.015384615384615385,
+      "period": "2026-10-06 to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "33d2cb92-d2cc-4d95-823f-94c8c81eddda",
+    "slug": "/pt/power-local-llm/local-ai-agents-with-mcp",
+    "date": "2026-11-02T08:47:01.471Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Ollama + MCP local 2026: conecte IA a bancos de dados e APIs",
+        "new": "Ollama + MCP 2026: conecte IA local a arquivos e APIs"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Configure agentes de IA locais em 2026 com Ollama e MCP: filesystem, SQLite/Postgres, navegador, servidor GitHub, JSON funcional e um modelo de sandboxing.",
+        "new": "Como usar MCP com o Ollama: conecte um modelo local a arquivos, Postgres, navegador e GitHub com o Goose. Config funcional e servidores mantidos."
+      }
+    ],
+    "reason": "Full refresh 2026-11-02, data-free for this locale (no/thin visible queries); slug renamed from local-ai-agents-with-mcp-2026 (301). Baseline = 28d on the OLD slug URL.",
+    "baseline": {
+      "position": 3.6,
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "2026-10-06 to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "dd4f5d3d-faac-44b3-8bf4-cbe0a55ca87f",
+    "slug": "/ar/power-local-llm/local-ai-agents-with-mcp",
+    "date": "2026-11-02T08:47:01.496Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "⁨Ollama + MCP⁩ محلياً ⁨2026⁩: ربط قواعد البيانات و⁨APIs⁩",
+        "new": "إعداد ⁨Ollama⁩ مع ⁨MCP⁩ ⁨2026⁩: ربط الملفات و⁨APIs⁩"
+      },
+      {
+        "field": "metaDescription",
+        "old": "MCP يُتيح لـOllama استعلام Postgres وقراءة الملفات والتحكم في المتصفح محلياً. إعداد filesystem وSQLite وGitHub مع sandboxing للأمان 2026.",
+        "new": "كيف تستخدم MCP مع Ollama: اربط نموذجاً محلياً بالملفات وPostgres والمتصفح وGitHub عبر Goose. إعدادات تعمل، وخوادم مُصانة، وأذونات آمنة لوكيلك المحلي."
+      }
+    ],
+    "reason": "Full refresh 2026-11-02, data-free for this locale (no/thin visible queries); slug renamed from local-ai-agents-with-mcp-2026 (301). Baseline = 28d on the OLD slug URL.",
+    "baseline": {
+      "position": 22,
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "2026-10-06 to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c9397227-fb13-4834-8f56-116791a739ef",
+    "slug": "/ko/power-local-llm/local-ai-agents-with-mcp",
+    "date": "2026-11-02T08:47:01.522Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Ollama + MCP 로컬 2026: AI를 데이터베이스 및 API에 연결하기",
+        "new": "Ollama MCP 연결·연동 방법 2026: 파일, DB, API"
+      },
+      {
+        "field": "metaDescription",
+        "old": "2026년 Ollama와 MCP로 로컬 AI 에이전트 설정하기: filesystem, SQLite/Postgres, 브라우저, GitHub 서버, 실제 작동하는 JSON 설정, 샌드박싱 모델.",
+        "new": "Ollama MCP 연결 방법: Goose로 로컬 모델을 파일, Postgres, 브라우저, GitHub에 연동합니다. 실제 설정, 유지되는 서버, 안전한 권한."
+      }
+    ],
+    "reason": "Full refresh 2026-11-02, query-adapted from this locale's own GSC queries (90d); slug renamed from local-ai-agents-with-mcp-2026 (301). Baseline = 28d on the OLD slug URL.",
+    "queries": [
+      "ollama mcp 연결",
+      "ollama mcp 연동",
+      "ollama mcp",
+      "llm 으로 browser mcp 를 사용하는 방법"
+    ],
+    "baseline": {
+      "position": 4.77,
+      "impressions": 137,
+      "clicks": 9,
+      "ctr": 0.06569343065693431,
+      "period": "2026-10-06 to 2026-11-02"
     },
     "deployedAt": null
   }

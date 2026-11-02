@@ -454,4 +454,21 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 ## Deployments are on demand (owner rule 2026-10-17)
 
-Pushing/merging to `main` NEVER deploys by itself — `scripts/vercel-ignore-build-step.sh` skips every production build that lacks `[force-deploy]`. Sessions merge to main freely (`scripts/session.sh finish`) and must **never** put `[force-deploy]` in a commit message. When the owner says "ship"/"deploy"/"go live", run `scripts/deploy.sh` once — it pushes one empty `[force-deploy]` commit, which builds everything accumulated on main as a single production deployment.
+Pushing/merging to `main` NEVER deploys by itself — `scripts/vercel-ignore-build-step.sh` skips every production build that lacks `[force-deploy]`. Sessions merge to main freely (`scripts/session.sh finish`) and must **never** put `[force-deploy]` in a commit message. When the owner says "ship"/"deploy"/"go live", run `scripts/deploy.sh` once — it pushes one empty `[force-deploy]` commit, which builds everything accumulated on main as a single production deployment. Right after it, in the same step, run `npm run seo:log -- --mark-deployed --all-pending --date <today YYYY-MM-DD>` so the logged SEO changes start their T+14/T+28 clocks (no separate ask; if the deploy was skipped or failed, do not run it). Commit the updated `src/data/seo-changelog.json` like any other change.
+
+## GSC data before page edits (standing rule, owner 2026-11-02)
+
+The `gsc` MCP tool is connected. I never paste GSC data by hand; Claude pulls it. Whenever I ask to update, rewrite or optimise a specific page (including `/updater` and `/geo-meta-optimizer` runs):
+
+1. First call the `gsc` tool `page_stats` for that page's live URL: **last 28 days, top 20 queries. If the 28-day pull has no usable data (no rows, impressions but empty `top_queries`, or <500 impressions), use 3 months (90 days).** If `top_queries` is still empty, fall back to `mcp__gsc__query` (`[query]` with `page_equals`, then `[page,query]` with `page_contains:<slug>` over 90 days) and say which window/rung produced the data.
+2. Show a short table first: clicks, impressions, CTR, position, then the top queries, with the window dates.
+   **Per language:** pull each locale's queries separately. If a locale has enough (3+ target queries, 30+ combined impressions, noise removed), adapt that locale's text (title, meta, headings, FAQ, keywords) to its own queries; if not, data-free review for that locale. Never translate another locale's query wording literally. Report one row per locale.
+3. Use that data as input for the edit (never ask me to paste GSC data).
+4. Use the exact live URL form, starting with `https://www.promptquorum.com/`, no trailing slash,
+   English unprefixed, other locales as `/de|fr|ja|zh|es|pt|ar|ko/...`. Never `?lang=`.
+   Mapping: `src/lib/{cluster}/articles/{slug}.ts` -> `/{cluster}/{slug}` (check the cluster's
+   `slugs.ts`); use the post-redirect URL for moved pages.
+5. Mark the last 1-2 days as provisional.
+6. If no data comes back, say so and continue (No-GSC mode in the skills).
+7. Do not call it for edits that are not about a specific page.
+8. Everything GSC-related is automatic: monthly `gsc-intake` and the T+14/T+28 `seo:measure` pulls also use the gsc tool; never ask me for exports or uploads. If a step truly cannot be automated, skip it and say so.

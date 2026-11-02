@@ -192,7 +192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Automation:** trigger scripts and local services from a WeChat message.',
           '**Home Assistant:** send commands to your smart home — see [Connect Ollama to Home Assistant](/smart-home/home-assistant-ollama-integration).',
           '**Scheduled tasks:** generate daily summaries or reports.',
-          'This reframes the project from "a WeChat bot" to a private local AI server with WeChat as one interface into it — see [Local AI Agents with MCP](/power-local-llm/local-ai-agents-with-mcp-2026) for the next step.',
+          'This reframes the project from "a WeChat bot" to a private local AI server with WeChat as one interface into it — see [Local AI Agents with MCP](/power-local-llm/local-ai-agents-with-mcp) for the next step.',
         ],
       },
       privacy: {
@@ -333,7 +333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     relatedReading: {
       items: [
         '[WeChat Local LLM Integration Guide — 3 Integration Patterns](/power-local-llm/wechat-local-llm-integration-2026) — webhook, WeChatFerry, and mini-PC server patterns for developers',
-        '[Local AI Agents with MCP 2026](/power-local-llm/local-ai-agents-with-mcp-2026) — extend your local LLM with tool-calling and automation beyond WeChat',
+        '[Local AI Agents with MCP 2026](/power-local-llm/local-ai-agents-with-mcp) — extend your local LLM with tool-calling and automation beyond WeChat',
         '[GMKtec G3 Plus Review](/smart-home/gmktec-g3-plus-local-ai-review) — the budget hardware option, full spec breakdown',
         '[Minisforum UM890 Pro Review](/smart-home/minisforum-um890-pro-local-ai-review) — the recommended hardware option, full spec breakdown',
         '[Best Mini PC for Always-On Ollama Server](/prompt-bites/best-mini-pc-for-ollama-server-always-on) — hardware options for running a 24/7 WeChat bot server',
@@ -492,7 +492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Automatisierung:** Skripte und lokale Dienste per WeChat-Nachricht auslösen.',
           '**Home Assistant:** Befehle an Ihr Smart Home senden — siehe [Ollama mit Home Assistant verbinden](/de/smart-home/home-assistant-ollama-integration).',
           '**Geplante Aufgaben:** tägliche Zusammenfassungen oder Berichte erstellen.',
-          'Das verwandelt das Projekt von „ein WeChat-Bot" in einen privaten lokalen KI-Server mit WeChat als eine Schnittstelle hinein — siehe [Lokale KI-Agenten mit MCP](/de/power-local-llm/local-ai-agents-with-mcp-2026) für den nächsten Schritt.',
+          'Das verwandelt das Projekt von „ein WeChat-Bot" in einen privaten lokalen KI-Server mit WeChat als eine Schnittstelle hinein — siehe [Lokale KI-Agenten mit MCP](/de/power-local-llm/local-ai-agents-with-mcp) für den nächsten Schritt.',
         ],
       },
       privacy: {
@@ -641,7 +641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     relatedReading: {
       items: [
         '[WeChat Lokale LLM Integration — 3 Integrationsmuster](/de/power-local-llm/wechat-local-llm-integration-2026) — Webhook-, WeChatFerry- und Mini-PC-Server-Muster für Entwickler',
-        '[Lokale KI-Agenten mit MCP 2026](/de/power-local-llm/local-ai-agents-with-mcp-2026) — lokales LLM mit Tool-Calling und Automatisierung erweitern',
+        '[Lokale KI-Agenten mit MCP 2026](/de/power-local-llm/local-ai-agents-with-mcp) — lokales LLM mit Tool-Calling und Automatisierung erweitern',
         '[GMKtec G3 Plus Test](/de/smart-home/gmktec-g3-plus-local-ai-review) — die Budget-Hardware-Option, vollständige Spezifikationen',
         '[Minisforum UM890 Pro Test](/de/smart-home/minisforum-um890-pro-local-ai-review) — die empfohlene Hardware-Option, vollständige Spezifikationen',
         '[Bester Mini-PC für Always-On-Ollama-Server](/de/prompt-bites/best-mini-pc-for-ollama-server-always-on) — Hardware für einen 24/7-WeChat-Bot-Server',
@@ -800,7 +800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Automatisation :** déclencher des scripts et des services locaux depuis un message WeChat.",
           "**Home Assistant :** envoyer des commandes à votre maison connectée — voir [Connecter Ollama à Home Assistant](/fr/smart-home/home-assistant-ollama-integration).",
           "**Tâches planifiées :** générer des résumés ou rapports quotidiens.",
-          "Cela transforme le projet de « un bot WeChat » en un serveur IA local privé avec WeChat comme une des interfaces — voir [Agents IA locaux avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp-2026) pour la suite.",
+          "Cela transforme le projet de « un bot WeChat » en un serveur IA local privé avec WeChat comme une des interfaces — voir [Agents IA locaux avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp) pour la suite.",
         ],
       },
       privacy: {
@@ -931,7 +931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     relatedReading: {
       items: [
         '[Intégration WeChat LLM local — 3 modèles d\'intégration](/fr/power-local-llm/wechat-local-llm-integration-2026) — modèles webhook, WeChatFerry et serveur mini-PC pour développeurs',
-        '[Agents IA locaux avec MCP 2026](/fr/power-local-llm/local-ai-agents-with-mcp-2026) — étendre votre LLM local avec appel d\'outils et automatisation au-delà de WeChat',
+        '[Agents IA locaux avec MCP 2026](/fr/power-local-llm/local-ai-agents-with-mcp) — étendre votre LLM local avec appel d\'outils et automatisation au-delà de WeChat',
         '[Test du GMKtec G3 Plus](/fr/smart-home/gmktec-g3-plus-local-ai-review) — l\'option matérielle économique, spécifications complètes',
         '[Test du Minisforum UM890 Pro](/fr/smart-home/minisforum-um890-pro-local-ai-review) — l\'option matérielle recommandée, spécifications complètes',
         '[Meilleur mini-PC pour un serveur Ollama permanent](/fr/prompt-bites/best-mini-pc-for-ollama-server-always-on) — options matérielles pour un serveur bot WeChat 24/7',
@@ -1090,7 +1090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**自動化：**WeChatメッセージからスクリプトやローカルサービスをトリガーします。',
           '**Home Assistant：**スマートホームにコマンドを送信します——[OllamaをHome Assistantに接続する](/ja/smart-home/home-assistant-ollama-integration)を参照してください。',
           '**スケジュールされたタスク：**日次のサマリーやレポートを生成します。',
-          'これにより、プロジェクトは「WeChatボット」から、WeChatをインターフェースの一つとする private なローカルAIサーバーへと再定義されます——次のステップは[MCPを使ったローカルAIエージェント](/ja/power-local-llm/local-ai-agents-with-mcp-2026)を参照してください。',
+          'これにより、プロジェクトは「WeChatボット」から、WeChatをインターフェースの一つとする private なローカルAIサーバーへと再定義されます——次のステップは[MCPを使ったローカルAIエージェント](/ja/power-local-llm/local-ai-agents-with-mcp)を参照してください。',
         ],
       },
       privacy: {
@@ -1221,7 +1221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     relatedReading: {
       items: [
         '[WeChatローカルLLM統合ガイド——3つの統合パターン](/ja/power-local-llm/wechat-local-llm-integration-2026) — 開発者向けのWebhook、WeChatFerry、ミニPCサーバーパターン',
-        '[MCPによるローカルAIエージェント2026](/ja/power-local-llm/local-ai-agents-with-mcp-2026) — WeChatを超えてツール呼び出しと自動化でローカルLLMを拡張',
+        '[MCPによるローカルAIエージェント2026](/ja/power-local-llm/local-ai-agents-with-mcp) — WeChatを超えてツール呼び出しと自動化でローカルLLMを拡張',
         '[GMKtec G3 Plusレビュー](/ja/smart-home/gmktec-g3-plus-local-ai-review) — 予算重視のハードウェア選択肢、完全な仕様一覧',
         '[Minisforum UM890 Proレビュー](/ja/smart-home/minisforum-um890-pro-local-ai-review) — 推奨ハードウェア選択肢、完全な仕様一覧',
         '[常時稼働Ollamaサーバー向けベストミニPC](/ja/prompt-bites/best-mini-pc-for-ollama-server-always-on) — 24時間WeChatボットサーバー向けハードウェア選択肢',
@@ -1380,7 +1380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**自动化：**通过一条微信消息触发脚本和本地服务。',
           '**Home Assistant：**向智能家居发送指令——参见[将Ollama连接到Home Assistant](/zh/smart-home/home-assistant-ollama-integration)。',
           '**定时任务：**生成每日摘要或报告。',
-          '这会把这个项目从"一个微信机器人"重新定义为一个以微信为入口之一的私人本地AI服务器——下一步可参见[基于MCP的本地AI智能体](/zh/power-local-llm/local-ai-agents-with-mcp-2026)。',
+          '这会把这个项目从"一个微信机器人"重新定义为一个以微信为入口之一的私人本地AI服务器——下一步可参见[基于MCP的本地AI智能体](/zh/power-local-llm/local-ai-agents-with-mcp)。',
         ],
       },
       privacy: {
@@ -1511,7 +1511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     relatedReading: {
       items: [
         '[微信本地LLM集成指南——3种集成模式](/zh/power-local-llm/wechat-local-llm-integration-2026) — 面向开发者的webhook、WeChatFerry和迷你主机服务器模式',
-        '[基于MCP的本地AI智能体2026](/zh/power-local-llm/local-ai-agents-with-mcp-2026) — 用工具调用和自动化拓展你的本地LLM，超越微信本身',
+        '[基于MCP的本地AI智能体2026](/zh/power-local-llm/local-ai-agents-with-mcp) — 用工具调用和自动化拓展你的本地LLM，超越微信本身',
         '[GMKtec G3 Plus评测](/zh/smart-home/gmktec-g3-plus-local-ai-review) — 预算硬件选项，完整规格解析',
         '[Minisforum UM890 Pro评测](/zh/smart-home/minisforum-um890-pro-local-ai-review) — 推荐硬件选项，完整规格解析',
         '[常驻Ollama服务器最佳迷你主机](/zh/prompt-bites/best-mini-pc-for-ollama-server-always-on) — 24/7微信机器人服务器的硬件选择',
@@ -1670,7 +1670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Automatización:** activa scripts y servicios locales desde un mensaje de WeChat.',
           '**Home Assistant:** envía comandos a tu hogar inteligente — consulta [Conectar Ollama con Home Assistant](/es/smart-home/home-assistant-ollama-integration).',
           '**Tareas programadas:** genera resúmenes o informes diarios.',
-          'Esto convierte el proyecto de "un bot de WeChat" en un servidor de IA local privado con WeChat como una de sus interfaces — consulta [Agentes de IA locales con MCP](/es/power-local-llm/local-ai-agents-with-mcp-2026) para el siguiente paso.',
+          'Esto convierte el proyecto de "un bot de WeChat" en un servidor de IA local privado con WeChat como una de sus interfaces — consulta [Agentes de IA locales con MCP](/es/power-local-llm/local-ai-agents-with-mcp) para el siguiente paso.',
         ],
       },
       privacy: {
@@ -1801,7 +1801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     relatedReading: {
       items: [
         '[Guía de integración de WeChat con LLM local — 3 patrones de integración](/es/power-local-llm/wechat-local-llm-integration-2026) — patrones de webhook, WeChatFerry y servidor mini PC para desarrolladores',
-        '[Agentes de IA locales con MCP 2026](/es/power-local-llm/local-ai-agents-with-mcp-2026) — amplía tu LLM local con llamadas a herramientas y automatización más allá de WeChat',
+        '[Agentes de IA locales con MCP 2026](/es/power-local-llm/local-ai-agents-with-mcp) — amplía tu LLM local con llamadas a herramientas y automatización más allá de WeChat',
         '[Reseña del GMKtec G3 Plus](/es/smart-home/gmktec-g3-plus-local-ai-review) — la opción de hardware económica, especificaciones completas',
         '[Reseña del Minisforum UM890 Pro](/es/smart-home/minisforum-um890-pro-local-ai-review) — la opción de hardware recomendada, especificaciones completas',
         '[Mejor mini PC para un servidor Ollama siempre activo](/es/prompt-bites/best-mini-pc-for-ollama-server-always-on) — opciones de hardware para un servidor de bot de WeChat 24/7',
@@ -1960,7 +1960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**자동화:** 위챗 메시지로 스크립트와 로컬 서비스를 트리거합니다.',
           '**Home Assistant:** 스마트홈에 명령을 전송합니다 — [Ollama를 Home Assistant에 연결하기](/ko/smart-home/home-assistant-ollama-integration)를 참고하세요.',
           '**예약 작업:** 일일 요약이나 보고서를 생성합니다.',
-          '이는 프로젝트를 "위챗 봇"에서 위챗을 하나의 인터페이스로 삼는 프라이빗 로컬 AI 서버로 재정의합니다 — 다음 단계는 [MCP를 활용한 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp-2026)를 참고하세요.',
+          '이는 프로젝트를 "위챗 봇"에서 위챗을 하나의 인터페이스로 삼는 프라이빗 로컬 AI 서버로 재정의합니다 — 다음 단계는 [MCP를 활용한 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp)를 참고하세요.',
         ],
       },
       privacy: {
@@ -2091,7 +2091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     relatedReading: {
       items: [
         '[위챗 로컬 LLM 통합 가이드 — 3가지 통합 패턴](/ko/power-local-llm/wechat-local-llm-integration-2026) — 개발자를 위한 웹훅, WeChatFerry, 미니PC 서버 패턴',
-        '[MCP를 활용한 로컬 AI 에이전트 2026](/ko/power-local-llm/local-ai-agents-with-mcp-2026) — 위챗을 넘어 도구 호출과 자동화로 로컬 LLM을 확장',
+        '[MCP를 활용한 로컬 AI 에이전트 2026](/ko/power-local-llm/local-ai-agents-with-mcp) — 위챗을 넘어 도구 호출과 자동화로 로컬 LLM을 확장',
         '[GMKtec G3 Plus 리뷰](/ko/smart-home/gmktec-g3-plus-local-ai-review) — 예산형 하드웨어 옵션, 전체 사양',
         '[Minisforum UM890 Pro 리뷰](/ko/smart-home/minisforum-um890-pro-local-ai-review) — 추천 하드웨어 옵션, 전체 사양',
         '[상시 가동 Ollama 서버를 위한 최고의 미니PC](/ko/prompt-bites/best-mini-pc-for-ollama-server-always-on) — 24/7 위챗 봇 서버를 위한 하드웨어 옵션',
@@ -2250,7 +2250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Automação:** dispare scripts e serviços locais a partir de uma mensagem do WeChat.',
           '**Home Assistant:** envie comandos para sua casa inteligente — veja [Conectar o Ollama ao Home Assistant](/pt/smart-home/home-assistant-ollama-integration).',
           '**Tarefas agendadas:** gere resumos ou relatórios diários.',
-          'Isso transforma o projeto de "um bot do WeChat" em um servidor de IA local privado com o WeChat como uma das interfaces — veja [Agentes de IA locais com MCP](/pt/power-local-llm/local-ai-agents-with-mcp-2026) para o próximo passo.',
+          'Isso transforma o projeto de "um bot do WeChat" em um servidor de IA local privado com o WeChat como uma das interfaces — veja [Agentes de IA locais com MCP](/pt/power-local-llm/local-ai-agents-with-mcp) para o próximo passo.',
         ],
       },
       privacy: {
@@ -2381,7 +2381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     relatedReading: {
       items: [
         '[Guia de integração do WeChat com LLM local — 3 padrões de integração](/pt/power-local-llm/wechat-local-llm-integration-2026) — padrões de webhook, WeChatFerry e servidor mini PC para desenvolvedores',
-        '[Agentes de IA locais com MCP 2026](/pt/power-local-llm/local-ai-agents-with-mcp-2026) — amplie seu LLM local com chamadas de ferramentas e automação além do WeChat',
+        '[Agentes de IA locais com MCP 2026](/pt/power-local-llm/local-ai-agents-with-mcp) — amplie seu LLM local com chamadas de ferramentas e automação além do WeChat',
         '[Análise do GMKtec G3 Plus](/pt/smart-home/gmktec-g3-plus-local-ai-review) — a opção de hardware econômica, especificações completas',
         '[Análise do Minisforum UM890 Pro](/pt/smart-home/minisforum-um890-pro-local-ai-review) — a opção de hardware recomendada, especificações completas',
         '[Melhor mini PC para um servidor Ollama sempre ativo](/pt/prompt-bites/best-mini-pc-for-ollama-server-always-on) — opções de hardware para um servidor de bot do WeChat 24/7',
@@ -2540,7 +2540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الأتمتة:** شغّل نصوصًا وخدمات محلية من خلال رسالة WeChat.',
           '**Home Assistant:** أرسل أوامر إلى منزلك الذكي — راجع [ربط Ollama بـ Home Assistant](/ar/smart-home/home-assistant-ollama-integration).',
           '**المهام المجدولة:** أنشئ ملخصات أو تقارير يومية.',
-          'هذا يعيد صياغة المشروع من "بوت WeChat" إلى خادم ذكاء اصطناعي محلي خاص يكون WeChat فيه إحدى الواجهات — راجع [وكلاء الذكاء الاصطناعي المحليون باستخدام MCP](/ar/power-local-llm/local-ai-agents-with-mcp-2026) للخطوة التالية.',
+          'هذا يعيد صياغة المشروع من "بوت WeChat" إلى خادم ذكاء اصطناعي محلي خاص يكون WeChat فيه إحدى الواجهات — راجع [وكلاء الذكاء الاصطناعي المحليون باستخدام MCP](/ar/power-local-llm/local-ai-agents-with-mcp) للخطوة التالية.',
         ],
       },
       privacy: {
@@ -2671,7 +2671,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     relatedReading: {
       items: [
         '[دليل تكامل WeChat مع LLM محلي — 3 أنماط تكامل](/ar/power-local-llm/wechat-local-llm-integration-2026) — أنماط webhook وWeChatFerry وخادم الجهاز المصغّر للمطورين',
-        '[وكلاء الذكاء الاصطناعي المحليون باستخدام MCP 2026](/ar/power-local-llm/local-ai-agents-with-mcp-2026) — وسّع نموذج LLM المحلي الخاص بك باستدعاء الأدوات والأتمتة بما يتجاوز WeChat',
+        '[وكلاء الذكاء الاصطناعي المحليون باستخدام MCP 2026](/ar/power-local-llm/local-ai-agents-with-mcp) — وسّع نموذج LLM المحلي الخاص بك باستدعاء الأدوات والأتمتة بما يتجاوز WeChat',
         '[مراجعة GMKtec G3 Plus](/ar/smart-home/gmktec-g3-plus-local-ai-review) — خيار الأجهزة الاقتصادي، المواصفات الكاملة',
         '[مراجعة Minisforum UM890 Pro](/ar/smart-home/minisforum-um890-pro-local-ai-review) — خيار الأجهزة الموصى به، المواصفات الكاملة',
         '[أفضل جهاز مصغّر لخادم Ollama يعمل باستمرار](/ar/prompt-bites/best-mini-pc-for-ollama-server-always-on) — خيارات الأجهزة لخادم بوت WeChat على مدار الساعة',

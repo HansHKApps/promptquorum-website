@@ -251,7 +251,7 @@ while True:
         items: [
           '[WeChat Bot with Local LLM: Personal Assistant Guide](/power-local-llm/wechat-bot-local-llm-personal-assistant-2026) — WeChatFerry deep dive for personal assistant setup',
           '[Best Mini PC for Local LLM](/prompt-bites/best-mini-pc-for-local-llm) — hardware comparison for always-on LLM servers',
-          '[Local AI Agents with MCP 2026](/power-local-llm/local-ai-agents-with-mcp-2026) — extend WeChat bots with tool use and automation',
+          '[Local AI Agents with MCP 2026](/power-local-llm/local-ai-agents-with-mcp) — extend WeChat bots with tool use and automation',
           '[Replace Zapier with Local AI Agents](/power-local-llm/replace-zapier-with-local-ai-agents) — automation workflows triggered by WeChat events',
           '[Local AI Behind a Firewall / Offline 2026](/power-local-llm/local-ai-behind-firewall-offline-2026) — air-gapped Ollama: network isolation, audit logging, and no-internet setup',
           '[Best Qwen Model for Coding](/prompt-bites/best-qwen-model-for-coding) — picking the right Qwen3-Coder size for WeChat bot integrations',
@@ -537,7 +537,7 @@ while True:
         items: [
           '[WeChat-Bot mit lokalem LLM: Persönlicher Assistent](/de/power-local-llm/wechat-bot-local-llm-personal-assistant-2026) — WeChatFerry-Tieftauchgang für persönliche Assistent-Einrichtung',
           '[Bester Mini-PC für lokale LLMs](/de/prompt-bites/best-mini-pc-for-local-llm) — Hardware-Vergleich für Always-On-LLM-Server',
-          '[Lokale KI-Agenten mit MCP 2026](/de/power-local-llm/local-ai-agents-with-mcp-2026) — WeChat-Bots mit Tool-Use erweitern',
+          '[Lokale KI-Agenten mit MCP 2026](/de/power-local-llm/local-ai-agents-with-mcp) — WeChat-Bots mit Tool-Use erweitern',
           '[Zapier durch lokale KI-Agenten ersetzen](/de/power-local-llm/replace-zapier-with-local-ai-agents) — Automatisierungs-Workflows, ausgelöst durch WeChat-Ereignisse',
           '[Lokale KI hinter der Firewall / offline 2026](/de/power-local-llm/local-ai-behind-firewall-offline-2026) — Air-Gap-Ollama: Netzwerkisolation, Audit-Logs und Setup ohne Internet',
           '[Bestes Qwen-Modell fürs Coding](/de/prompt-bites/best-qwen-model-for-coding) — die richtige Qwen3-Coder-Größe für WeChat-Bot-Integrationen',
@@ -804,7 +804,7 @@ while True:
         items: [
           '[Bot WeChat avec LLM local : Guide assistant personnel](/fr/power-local-llm/wechat-bot-local-llm-personal-assistant-2026)',
           '[Meilleur mini PC pour LLM local](/fr/prompt-bites/best-mini-pc-for-local-llm)',
-          '[Agents IA locaux avec MCP 2026](/fr/power-local-llm/local-ai-agents-with-mcp-2026)',
+          '[Agents IA locaux avec MCP 2026](/fr/power-local-llm/local-ai-agents-with-mcp)',
           '[Remplacer Zapier par des agents IA locaux](/fr/power-local-llm/replace-zapier-with-local-ai-agents) — automatisations déclenchées par des événements WeChat',
           '[IA locale derrière un pare-feu / hors ligne 2026](/fr/power-local-llm/local-ai-behind-firewall-offline-2026) — Ollama en air gap : isolation réseau, journaux d\'audit et installation sans internet',
           '[Meilleur modèle Qwen pour le code](/fr/prompt-bites/best-qwen-model-for-coding) — choisir la bonne taille de Qwen3-Coder pour les intégrations de bot WeChat',
@@ -1074,7 +1074,7 @@ while True:
         items: [
           '[WeChat + ローカルLLM：パーソナルアシスタントガイド](/ja/power-local-llm/wechat-bot-local-llm-personal-assistant-2026)',
           '[ローカルLLM向けベストミニPC](/ja/prompt-bites/best-mini-pc-for-local-llm)',
-          '[MCP対応ローカルAIエージェント 2026](/ja/power-local-llm/local-ai-agents-with-mcp-2026)',
+          '[MCP対応ローカルAIエージェント 2026](/ja/power-local-llm/local-ai-agents-with-mcp)',
           '[ZapierをローカルAIエージェントで置き換える](/ja/power-local-llm/replace-zapier-with-local-ai-agents) — WeChatイベントでトリガーする自動化ワークフロー',
           '[ファイアウォール内・オフラインのローカルAI 2026](/ja/power-local-llm/local-ai-behind-firewall-offline-2026) — エアギャップOllama：ネットワーク分離、監査ログ、インターネット不要のセットアップ',
           '[コーディングに最適なQwenモデル](/ja/prompt-bites/best-qwen-model-for-coding) — WeChatボット統合に適したQwen3-Coderサイズの選び方',
@@ -1347,7 +1347,7 @@ while True:
         items: [
           '[微信机器人与本地LLM：个人助手指南](/zh/power-local-llm/wechat-bot-local-llm-personal-assistant-2026) — WeChatFerry深度个人助手配置',
           '[本地LLM最佳迷你主机](/zh/prompt-bites/best-mini-pc-for-local-llm) — 常驻LLM服务器硬件对比',
-          '[本地AI智能体与MCP 2026](/zh/power-local-llm/local-ai-agents-with-mcp-2026) — 为微信机器人添加工具调用能力',
+          '[本地AI智能体与MCP 2026](/zh/power-local-llm/local-ai-agents-with-mcp) — 为微信机器人添加工具调用能力',
           '[用本地AI智能体替代Zapier](/zh/power-local-llm/replace-zapier-with-local-ai-agents) — 由微信事件触发的自动化工作流',
           '[本地AI防火墙/离线部署2026](/zh/power-local-llm/local-ai-behind-firewall-offline-2026) — 气隙Ollama：网络隔离、审计日志与无互联网设置。',
           '[最佳Qwen编码模型](/zh/prompt-bites/best-qwen-model-for-coding) — Qwen3-Coder集成微信机器人的最优规格选择。',
@@ -1653,7 +1653,7 @@ while True:
         items: [
           '[Bot de WeChat con LLM local: Guía de asistente personal](/es/power-local-llm/wechat-bot-local-llm-personal-assistant-2026) — Análisis en profundidad de WeChatFerry para asistentes personales',
           '[Mejor mini PC para LLM local](/es/prompt-bites/best-mini-pc-for-local-llm) — Comparativa de hardware para servidores LLM siempre activos',
-          '[Agentes de IA local con MCP 2026](/es/power-local-llm/local-ai-agents-with-mcp-2026) — Amplía los bots de WeChat con uso de herramientas y automatización',
+          '[Agentes de IA local con MCP 2026](/es/power-local-llm/local-ai-agents-with-mcp) — Amplía los bots de WeChat con uso de herramientas y automatización',
           '[Reemplaza Zapier con agentes de IA local](/es/power-local-llm/replace-zapier-with-local-ai-agents) — Flujos de automatización activados por eventos de WeChat',
           '[IA local tras un firewall / sin conexión 2026](/es/power-local-llm/local-ai-behind-firewall-offline-2026) — Ollama aislado: aislamiento de red, registros de auditoría y configuración sin internet',
           '[Mejor modelo Qwen para programar](/es/prompt-bites/best-qwen-model-for-coding) — elegir el tamaño correcto de Qwen3-Coder para integraciones de bots de WeChat',
@@ -1945,7 +1945,7 @@ while True:
         items: [
           '[WeChat 로컬 LLM 봇: 개인 비서 가이드](/ko/power-local-llm/wechat-bot-local-llm-personal-assistant-2026) — 개인 비서를 위한 WeChatFerry 심층 분석',
           '[로컬 LLM을 위한 최고의 미니 PC](/ko/prompt-bites/best-mini-pc-for-local-llm) — 항상 켜져 있는 LLM 서버를 위한 하드웨어 비교',
-          '[2026년 MCP가 있는 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp-2026) — 도구 사용 및 자동화로 WeChat 봇 확장',
+          '[2026년 MCP가 있는 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp) — 도구 사용 및 자동화로 WeChat 봇 확장',
           '[Zapier를 로컬 AI 에이전트로 대체하기](/ko/power-local-llm/replace-zapier-with-local-ai-agents) — WeChat 이벤트로 트리거되는 자동화 워크플로우',
           '[방화벽 뒤 / 오프라인 로컬 AI 2026](/ko/power-local-llm/local-ai-behind-firewall-offline-2026) — 에어갭 Ollama: 네트워크 격리, 감사 로그, 인터넷 없는 설정',
           '[코딩에 가장 좋은 Qwen 모델](/ko/prompt-bites/best-qwen-model-for-coding) — WeChat 봇 통합에 맞는 Qwen3-Coder 크기 선택',
@@ -2237,7 +2237,7 @@ while True:
         items: [
           '[Bot do WeChat com LLM local: Guia de assistente pessoal](/pt/power-local-llm/wechat-bot-local-llm-personal-assistant-2026) — Análise aprofundada do WeChatFerry para assistentes pessoais',
           '[Melhor mini PC para LLM local](/pt/prompt-bites/best-mini-pc-for-local-llm) — Comparativo de hardware para servidores LLM sempre ativos',
-          '[Agentes de IA local com MCP 2026](/pt/power-local-llm/local-ai-agents-with-mcp-2026) — Amplie os bots do WeChat com uso de ferramentas e automação',
+          '[Agentes de IA local com MCP 2026](/pt/power-local-llm/local-ai-agents-with-mcp) — Amplie os bots do WeChat com uso de ferramentas e automação',
           '[Substitua o Zapier por agentes de IA local](/pt/power-local-llm/replace-zapier-with-local-ai-agents) — Fluxos de automação acionados por eventos do WeChat',
           '[IA local atrás de firewall / offline 2026](/pt/power-local-llm/local-ai-behind-firewall-offline-2026) — Ollama isolado: isolamento de rede, logs de auditoria e configuração sem internet',
           '[Melhor modelo Qwen para programação](/pt/prompt-bites/best-qwen-model-for-coding) — escolhendo o tamanho certo do Qwen3-Coder para integrações de bot do WeChat',
@@ -2530,7 +2530,7 @@ while True:
         items: [
           '[بوت WeChat مع نموذج لغة محلي: دليل المساعد الشخصي](/ar/power-local-llm/wechat-bot-local-llm-personal-assistant-2026) — تحليل متعمق لـ WeChatFerry للمساعدين الشخصيين',
           '[أفضل mini PC للنموذج اللغوي المحلي](/ar/prompt-bites/best-mini-pc-for-local-llm) — مقارنة الأجهزة لخوادم النماذج اللغوية الدائمة التشغيل',
-          '[وكلاء الذكاء الاصطناعي المحليون مع MCP 2026](/ar/power-local-llm/local-ai-agents-with-mcp-2026) — وسّع بوتات WeChat باستخدام الأدوات والأتمتة',
+          '[وكلاء الذكاء الاصطناعي المحليون مع MCP 2026](/ar/power-local-llm/local-ai-agents-with-mcp) — وسّع بوتات WeChat باستخدام الأدوات والأتمتة',
           '[استبدل Zapier بوكلاء ذكاء اصطناعي محليين](/ar/power-local-llm/replace-zapier-with-local-ai-agents) — تدفقات الأتمتة المُشغَّلة بأحداث WeChat',
           '[ذكاء اصطناعي محلي خلف جدار الحماية / دون اتصال 2026](/ar/power-local-llm/local-ai-behind-firewall-offline-2026) — Ollama معزول: عزل الشبكة وسجلات التدقيق والإعداد دون إنترنت',
           '[أفضل نموذج Qwen للبرمجة](/ar/prompt-bites/best-qwen-model-for-coding) — اختيار حجم Qwen3-Coder المناسب لتكاملات بوت WeChat',

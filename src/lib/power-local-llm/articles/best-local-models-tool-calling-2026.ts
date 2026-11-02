@@ -385,7 +385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026](/power-local-llm/local-ai-agents-with-mcp-2026) — practical implementation; the protocol layer the models above tool-call into.',
+          '[Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026](/power-local-llm/local-ai-agents-with-mcp) — practical implementation; the protocol layer the models above tool-call into.',
           '[Local AI Agents in 2026: What Actually Works (And What Still Fails)](/power-local-llm/autonomous-local-agents-actually-work) — broader context; how tool-call reliability compounds across agent loop steps.',
           '[Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local) — adjacent harness comparison for the code-shaped end of the agent spectrum.',
           '[Replace GitHub Copilot With a Local LLM](/power-local-llm/replace-github-copilot-with-local-llm) — applied use case for the coding tool-call models above.',
@@ -800,7 +800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Literatur',
         items: [
-          '[Ollama mit Datenbanken und APIs über MCP verbinden: Lokales Agent-Setup 2026](/de/power-local-llm/local-ai-agents-with-mcp-2026) — praktische Implementierung; die Protokoll-Schicht, in die die Modelle oben Tool-Calls durchführen.',
+          '[Ollama mit Datenbanken und APIs über MCP verbinden: Lokales Agent-Setup 2026](/de/power-local-llm/local-ai-agents-with-mcp) — praktische Implementierung; die Protokoll-Schicht, in die die Modelle oben Tool-Calls durchführen.',
           '[Lokale KI-Agenten in 2026: Was eigentlich funktioniert (Und was noch nicht)](/de/power-local-llm/autonomous-local-agents-actually-work) — Breiterer Kontext; wie Tool-Call-Zuverlässigkeit sich über Agent-Loop-Schritte zusammensetzt.',
           '[Continue.dev vs Cline vs Aider: Bester lokaler Coding-Agent 2026](/de/power-local-llm/continue-dev-vs-cline-vs-aider-local) — angrenzender Harness-Vergleich für das Code-orientierte Ende des Agent-Spektrums.',
           '[GitHub Copilot durch einen lokalen LLM ersetzen](/de/power-local-llm/replace-github-copilot-with-local-llm) — angewendeter Use-Case für die Coding-Tool-Call-Modelle oben.',
@@ -1195,7 +1195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Connecter Ollama aux bases de données et APIs avec MCP : Configuration agent local 2026](/fr/power-local-llm/local-ai-agents-with-mcp-2026) — implémentation pratique ; la couche protocole dans laquelle les modèles ci-dessus exécutent Tool Calls.',
+          '[Connecter Ollama aux bases de données et APIs avec MCP : Configuration agent local 2026](/fr/power-local-llm/local-ai-agents-with-mcp) — implémentation pratique ; la couche protocole dans laquelle les modèles ci-dessus exécutent Tool Calls.',
           '[Agents AI locaux en 2026 : Qu\'est-ce qui fonctionne vraiment (Et ce qui ne fonctionne toujours pas)](/fr/power-local-llm/autonomous-local-agents-actually-work) — contexte plus large ; comment fiabilité Tool Call se compose sur étapes boucle agent.',
           '[Continue.dev vs Cline vs Aider : Meilleur agent de codage local 2026](/fr/power-local-llm/continue-dev-vs-cline-vs-aider-local) — comparaison harness adjointe pour l\'extrémité orientée code du spectre d\'agent.',
           '[Remplacer GitHub Copilot par un LLM local](/fr/power-local-llm/replace-github-copilot-with-local-llm) — cas d\'usage appliqué pour modèles Tool Call de codage ci-dessus.',
@@ -1590,7 +1590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連資料',
         items: [
-          '[OllamaをMCPで使用して、データベースと APIをローカル Agent設定2026に接続](/ja/power-local-llm/local-ai-agents-with-mcp-2026) — 実践実装; 上記のモデルがツール呼び出しをするプロトコルレイヤー。',
+          '[OllamaをMCPで使用して、データベースと APIをローカル Agent設定2026に接続](/ja/power-local-llm/local-ai-agents-with-mcp) — 実践実装; 上記のモデルがツール呼び出しをするプロトコルレイヤー。',
           '[2026年のローカルAIエージェント: 実際に機能するもの(そして依然として失敗するもの)](/ja/power-local-llm/autonomous-local-agents-actually-work) — より広いコンテキスト; ツール呼び出し信頼性がエージェントループステップ全体で構成される方法。',
           '[Continue.dev vs Cline vs Aider: ベストローカルコーディングAgent2026](/ja/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 隣接ハーネス比較。',
           '[GitHub Copilotをローカル LLMに置き換える](/ja/power-local-llm/replace-github-copilot-with-local-llm) — 上記のツール呼び出しモデルの適用ユースケース。',
@@ -1985,7 +1985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[通过MCP连接Ollama到数据库和API：本地代理设置2026](/zh/power-local-llm/local-ai-agents-with-mcp-2026) — 实践实现; 上述模型工具调用的协议层。',
+          '[通过MCP连接Ollama到数据库和API：本地代理设置2026](/zh/power-local-llm/local-ai-agents-with-mcp) — 实践实现; 上述模型工具调用的协议层。',
           '[2026年本地AI代理：实际工作(及仍然失败)的](/zh/power-local-llm/autonomous-local-agents-actually-work) — 更广方针; 工具调用可靠性如何跨代理循环步骤复合。',
           '[Continue.dev对Cline对Aider：最佳本地代码代理2026](/zh/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 相邻工具框架比较。',
           '[用本地LLM替换GitHub Copilot](/zh/power-local-llm/replace-github-copilot-with-local-llm) — 上述工具调用模型的应用用例。',
@@ -2380,7 +2380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectura relacionada',
         items: [
-          '[Conectar Ollama a bases de datos y APIs con MCP: Configuración de agente local 2026](/es/power-local-llm/local-ai-agents-with-mcp-2026) — implementación práctica; la capa de protocolo a la que los modelos de arriba realizan tool calls.',
+          '[Conectar Ollama a bases de datos y APIs con MCP: Configuración de agente local 2026](/es/power-local-llm/local-ai-agents-with-mcp) — implementación práctica; la capa de protocolo a la que los modelos de arriba realizan tool calls.',
           '[Agentes de IA locales en 2026: Lo que realmente funciona (y lo que sigue fallando)](/es/power-local-llm/autonomous-local-agents-actually-work) — contexto más amplio; cómo la fiabilidad del tool calling se compone a lo largo de los pasos del bucle de agente.',
           '[Continue.dev vs Cline vs Aider: Mejor agente de código local en 2026](/es/power-local-llm/continue-dev-vs-cline-vs-aider-local) — comparativa de harness para el extremo orientado a código del espectro de agentes.',
           '[Reemplaza GitHub Copilot con un LLM local](/es/power-local-llm/replace-github-copilot-with-local-llm) — caso de uso aplicado para los modelos de tool calling de código de arriba.',
@@ -2775,7 +2775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura relacionada',
         items: [
-          '[Conecte o Ollama a bancos de dados e APIs com MCP: Configuração de agente local 2026](/pt/power-local-llm/local-ai-agents-with-mcp-2026) — implementação prática; a camada de protocolo para a qual os modelos acima realizam tool calls.',
+          '[Conecte o Ollama a bancos de dados e APIs com MCP: Configuração de agente local 2026](/pt/power-local-llm/local-ai-agents-with-mcp) — implementação prática; a camada de protocolo para a qual os modelos acima realizam tool calls.',
           '[Agentes de IA locais em 2026: O que realmente funciona (e o que ainda falha)](/pt/power-local-llm/autonomous-local-agents-actually-work) — contexto mais amplo; como a confiabilidade do tool calling se compõe ao longo das etapas do loop de agente.',
           '[Continue.dev vs Cline vs Aider: Melhor agente de código local em 2026](/pt/power-local-llm/continue-dev-vs-cline-vs-aider-local) — comparativo de harness para o extremo voltado a código do espectro de agentes.',
           '[Substitua o GitHub Copilot por um LLM local](/pt/power-local-llm/replace-github-copilot-with-local-llm) — caso de uso aplicado para os modelos de tool calling de código acima.',
@@ -3171,7 +3171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءة ذات صلة',
         items: [
-          '[ربط Ollama بقواعد البيانات وAPIs باستخدام MCP: إعداد وكيل محلي 2026](/ar/power-local-llm/local-ai-agents-with-mcp-2026) — تنفيذ عملي؛ طبقة البروتوكول التي تُجري عليها النماذج أعلاه استدعاءات الأدوات.',
+          '[ربط Ollama بقواعد البيانات وAPIs باستخدام MCP: إعداد وكيل محلي 2026](/ar/power-local-llm/local-ai-agents-with-mcp) — تنفيذ عملي؛ طبقة البروتوكول التي تُجري عليها النماذج أعلاه استدعاءات الأدوات.',
           '[وكلاء الذكاء الاصطناعي المحلية في 2026: ما يعمل حقاً (وما يظل يفشل)](/ar/power-local-llm/autonomous-local-agents-actually-work) — سياق أوسع؛ كيف تتراكم موثوقية استدعاء الأدوات عبر خطوات حلقة الوكيل.',
           '[Continue.dev مقابل Cline مقابل Aider: أفضل وكيل كود محلي في 2026](/ar/power-local-llm/continue-dev-vs-cline-vs-aider-local) — مقارنة المنظومات للطرف الموجّه للكود من طيف الوكلاء.',
           '[استبدل GitHub Copilot بنموذج LLM محلي](/ar/power-local-llm/replace-github-copilot-with-local-llm) — حالة استخدام تطبيقية لنماذج استدعاء أدوات الكود أعلاه.',
@@ -3566,7 +3566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[MCP로 Ollama를 데이터베이스 및 API에 연결하기: 2026년 로컬 에이전트 설정](/ko/power-local-llm/local-ai-agents-with-mcp-2026) — 실용적인 구현; 위의 모델이 tool call을 수행하는 프로토콜 레이어.',
+          '[MCP로 Ollama를 데이터베이스 및 API에 연결하기: 2026년 로컬 에이전트 설정](/ko/power-local-llm/local-ai-agents-with-mcp) — 실용적인 구현; 위의 모델이 tool call을 수행하는 프로토콜 레이어.',
           '[2026년 로컬 AI 에이전트: 실제로 작동하는 것(그리고 여전히 실패하는 것)](/ko/power-local-llm/autonomous-local-agents-actually-work) — 더 넓은 맥락; 에이전트 루프 단계에 걸쳐 tool calling 신뢰성이 어떻게 복합되는가.',
           '[Continue.dev vs Cline vs Aider: 2026년 최고의 로컬 코드 에이전트](/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 에이전트 스펙트럼의 코드 중심 끝을 위한 harness 비교.',
           '[로컬 LLM으로 GitHub Copilot 대체하기](/ko/power-local-llm/replace-github-copilot-with-local-llm) — 위의 코드 tool calling 모델에 대한 응용 사용 사례.',

@@ -405,7 +405,7 @@ const response = {
         title: 'Related Reading',
         items: [
           '[Ollama Review](/power-local-llm/ollama-review) — the local model runner the Snug download page names as one option.',
-          '[Local AI Agents With MCP](/power-local-llm/local-ai-agents-with-mcp-2026) — another approach to connecting AI agents to tools and data.',
+          '[Local AI Agents With MCP](/power-local-llm/local-ai-agents-with-mcp) — another approach to connecting AI agents to tools and data.',
         ],
       },
     },
@@ -826,7 +826,7 @@ const response = {
         title: 'Weiterführende Artikel',
         items: [
           '[Ollama-Rezension](/de/power-local-llm/ollama-review) — der lokale Modell-Runner, den die Snug-Download-Seite als eine Option nennt.',
-          '[Lokale KI-Agenten mit MCP](/de/power-local-llm/local-ai-agents-with-mcp-2026) — ein weiterer Ansatz, KI-Agenten mit Werkzeugen und Daten zu verbinden.',
+          '[Lokale KI-Agenten mit MCP](/de/power-local-llm/local-ai-agents-with-mcp) — ein weiterer Ansatz, KI-Agenten mit Werkzeugen und Daten zu verbinden.',
         ],
       },
     },
@@ -1217,7 +1217,7 @@ const response = {
         title: 'Lectures associées',
         items: [
           '[Avis sur Ollama](/fr/power-local-llm/ollama-review) — l\'outil d\'exécution de modèles locaux que la page de téléchargement de Snug cite comme option.',
-          '[Agents IA locaux avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp-2026) — une autre approche pour relier des agents IA à des outils et à des données.',
+          '[Agents IA locaux avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp) — une autre approche pour relier des agents IA à des outils et à des données.',
         ],
       },
     },
@@ -1608,7 +1608,7 @@ const response = {
         title: 'Lecturas relacionadas',
         items: [
           '[Análisis de Ollama](/es/power-local-llm/ollama-review) — el ejecutor de modelos locales que la página de descarga de Snug menciona como una opción.',
-          '[Agentes de IA locales con MCP](/es/power-local-llm/local-ai-agents-with-mcp-2026) — otro enfoque para conectar agentes de IA con herramientas y datos.',
+          '[Agentes de IA locales con MCP](/es/power-local-llm/local-ai-agents-with-mcp) — otro enfoque para conectar agentes de IA con herramientas y datos.',
         ],
       },
     },
@@ -1999,7 +1999,7 @@ const response = {
         title: 'Leitura relacionada',
         items: [
           '[Análise do Ollama](/pt/power-local-llm/ollama-review) — o executor de modelos locais que a página de download do Snug cita como uma das opções.',
-          '[Agentes de IA locais com MCP](/pt/power-local-llm/local-ai-agents-with-mcp-2026) — outra abordagem para conectar agentes de IA a ferramentas e dados.',
+          '[Agentes de IA locais com MCP](/pt/power-local-llm/local-ai-agents-with-mcp) — outra abordagem para conectar agentes de IA a ferramentas e dados.',
         ],
       },
     },
@@ -2390,7 +2390,7 @@ const response = {
         title: '関連記事',
         items: [
           '[Ollamaレビュー](/ja/power-local-llm/ollama-review) — Snugのダウンロードページが選択肢の1つとして挙げているローカルモデルランナー。',
-          '[MCPで作るローカルAIエージェント](/ja/power-local-llm/local-ai-agents-with-mcp-2026) — AIエージェントをツールやデータにつなぐもう1つのアプローチ。',
+          '[MCPで作るローカルAIエージェント](/ja/power-local-llm/local-ai-agents-with-mcp) — AIエージェントをツールやデータにつなぐもう1つのアプローチ。',
         ],
       },
     },
@@ -2781,7 +2781,7 @@ const response = {
         title: '延伸阅读',
         items: [
           '[Ollama 评测](/zh/power-local-llm/ollama-review) — Snug 下载页面提到的一种本地模型运行器。',
-          '[基于 MCP 的本地 AI 智能体](/zh/power-local-llm/local-ai-agents-with-mcp-2026) — 将 AI 智能体连接到工具和数据的另一种方式。',
+          '[基于 MCP 的本地 AI 智能体](/zh/power-local-llm/local-ai-agents-with-mcp) — 将 AI 智能体连接到工具和数据的另一种方式。',
         ],
       },
     },
@@ -3172,7 +3172,7 @@ const response = {
         title: 'قراءات ذات صلة',
         items: [
           '[مراجعة Ollama](/ar/power-local-llm/ollama-review) — أداة تشغيل النماذج المحلية التي تذكرها صفحة تنزيل Snug كأحد الخيارات.',
-          '[وكلاء الذكاء الاصطناعي المحليون مع MCP](/ar/power-local-llm/local-ai-agents-with-mcp-2026) — مقاربة أخرى لربط وكلاء الذكاء الاصطناعي بالأدوات والبيانات.',
+          '[وكلاء الذكاء الاصطناعي المحليون مع MCP](/ar/power-local-llm/local-ai-agents-with-mcp) — مقاربة أخرى لربط وكلاء الذكاء الاصطناعي بالأدوات والبيانات.',
         ],
       },
     },
@@ -3563,7 +3563,7 @@ const response = {
         title: '관련 읽을거리',
         items: [
           '[Ollama 리뷰](/ko/power-local-llm/ollama-review) — Snug 다운로드 페이지가 선택지 중 하나로 언급하는 로컬 모델 실행기.',
-          '[MCP로 만드는 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp-2026) — AI 에이전트를 도구와 데이터에 연결하는 또 다른 접근 방식.',
+          '[MCP로 만드는 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp) — AI 에이전트를 도구와 데이터에 연결하는 또 다른 접근 방식.',
         ],
       },
     },

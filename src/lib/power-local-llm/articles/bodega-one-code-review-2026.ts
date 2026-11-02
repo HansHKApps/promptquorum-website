@@ -347,7 +347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Continue.dev vs. Cline vs. Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local) — three open-source local coding tools that plug into an existing editor instead of replacing it.',
           '[Best Local Coding Models in 2026](/power-local-llm/best-local-coding-models-2026) — the model layer: which open-weight models to point a BYOLLM tool like Bodega One Code at.',
-          '[Local AI Agents With MCP in 2026](/power-local-llm/local-ai-agents-with-mcp-2026) — for readers comparing Bodega One Code\'s built-in tool list to an open MCP-based tool ecosystem.',
+          '[Local AI Agents With MCP in 2026](/power-local-llm/local-ai-agents-with-mcp) — for readers comparing Bodega One Code\'s built-in tool list to an open MCP-based tool ecosystem.',
           '[Replace GitHub Copilot With a Local LLM](/power-local-llm/replace-github-copilot-with-local-llm) — broader context on moving AI coding assistance to local or self-hosted models.',
           '[Power Local LLM Hub](/power-local-llm) — full guide library.',
         ],
@@ -709,7 +709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Continue.dev vs. Cline vs. Aider](/de/power-local-llm/continue-dev-vs-cline-vs-aider-local) — drei quelloffene lokale Coding-Tools, die einen bestehenden Editor erweitern statt ihn zu ersetzen.',
           '[Beste lokale Coding-Modelle 2026](/de/power-local-llm/best-local-coding-models-2026) — die Modellebene: welche offenen Modelle sich für ein BYOLLM-Tool wie Bodega One Code eignen.',
-          '[Lokale KI-Agenten mit MCP 2026](/de/power-local-llm/local-ai-agents-with-mcp-2026) — für Leser, die die eingebaute Tool-Liste von Bodega One Code mit einem offenen MCP-basierten Tool-Ökosystem vergleichen wollen.',
+          '[Lokale KI-Agenten mit MCP 2026](/de/power-local-llm/local-ai-agents-with-mcp) — für Leser, die die eingebaute Tool-Liste von Bodega One Code mit einem offenen MCP-basierten Tool-Ökosystem vergleichen wollen.',
           '[GitHub Copilot durch ein lokales LLM ersetzen](/de/power-local-llm/replace-github-copilot-with-local-llm) — breiterer Kontext zum Umstieg auf lokale oder selbstgehostete Modelle für KI-Coding-Unterstützung.',
           '[Power Local LLM Hub](/de/power-local-llm) — vollständige Guide-Bibliothek.',
         ],
@@ -1071,7 +1071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Continue.dev vs. Cline vs. Aider](/fr/power-local-llm/continue-dev-vs-cline-vs-aider-local) — trois outils de codage local open source qui s\'ajoutent à un éditeur existant plutôt que de le remplacer.',
           '[Meilleurs modèles de codage locaux en 2026](/fr/power-local-llm/best-local-coding-models-2026) — la couche modèle : quels modèles ouverts utiliser avec un outil BYOLLM comme Bodega One Code.',
-          '[Agents IA locaux avec MCP en 2026](/fr/power-local-llm/local-ai-agents-with-mcp-2026) — pour les lecteurs comparant la liste d\'outils intégrés de Bodega One Code à un écosystème d\'outils ouvert basé sur MCP.',
+          '[Agents IA locaux avec MCP en 2026](/fr/power-local-llm/local-ai-agents-with-mcp) — pour les lecteurs comparant la liste d\'outils intégrés de Bodega One Code à un écosystème d\'outils ouvert basé sur MCP.',
           '[Remplacer GitHub Copilot par un LLM local](/fr/power-local-llm/replace-github-copilot-with-local-llm) — contexte plus large sur le passage à des modèles locaux ou auto-hébergés pour l\'assistance de codage IA.',
           '[Hub Power Local LLM](/fr/power-local-llm) — bibliothèque complète de guides.',
         ],
@@ -1433,7 +1433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Continue.dev vs. Cline vs. Aider](/es/power-local-llm/continue-dev-vs-cline-vs-aider-local) — tres herramientas de codificación local de código abierto que se añaden a un editor existente en lugar de sustituirlo.',
           '[Mejores modelos de codificación locales en 2026](/es/power-local-llm/best-local-coding-models-2026) — la capa de modelos: qué modelos abiertos usar con una herramienta BYOLLM como Bodega One Code.',
-          '[Agentes de IA locales con MCP en 2026](/es/power-local-llm/local-ai-agents-with-mcp-2026) — para lectores que comparan la lista de herramientas integradas de Bodega One Code con un ecosistema de herramientas abierto basado en MCP.',
+          '[Agentes de IA locales con MCP en 2026](/es/power-local-llm/local-ai-agents-with-mcp) — para lectores que comparan la lista de herramientas integradas de Bodega One Code con un ecosistema de herramientas abierto basado en MCP.',
           '[Reemplazar GitHub Copilot con un LLM local](/es/power-local-llm/replace-github-copilot-with-local-llm) — contexto más amplio sobre trasladar la asistencia de codificación con IA a modelos locales o autoalojados.',
           '[Centro Power Local LLM](/es/power-local-llm) — biblioteca completa de guías.',
         ],
@@ -1795,7 +1795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Continue.dev vs. Cline vs. Aider](/pt/power-local-llm/continue-dev-vs-cline-vs-aider-local) — três ferramentas de codificação local de código aberto que se conectam a um editor existente em vez de substituí-lo.',
           '[Melhores modelos de codificação locais em 2026](/pt/power-local-llm/best-local-coding-models-2026) — a camada de modelos: quais modelos abertos usar com uma ferramenta BYOLLM como a Bodega One Code.',
-          '[Agentes de IA locais com MCP em 2026](/pt/power-local-llm/local-ai-agents-with-mcp-2026) — para leitores que comparam a lista de ferramentas integradas da Bodega One Code a um ecossistema de ferramentas aberto baseado em MCP.',
+          '[Agentes de IA locais com MCP em 2026](/pt/power-local-llm/local-ai-agents-with-mcp) — para leitores que comparam a lista de ferramentas integradas da Bodega One Code a um ecossistema de ferramentas aberto baseado em MCP.',
           '[Substituir o GitHub Copilot por um LLM local](/pt/power-local-llm/replace-github-copilot-with-local-llm) — contexto mais amplo sobre mover a assistência de codificação com IA para modelos locais ou autogerenciados.',
           '[Hub Power Local LLM](/pt/power-local-llm) — biblioteca completa de guias.',
         ],
@@ -2157,7 +2157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Continue.dev vs. Cline vs. Aider](/ja/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 既存エディタを置き換えるのではなく拡張する、3つのオープンソースのローカルコーディングツール。',
           '[2026年版：最良のローカルコーディングモデル](/ja/power-local-llm/best-local-coding-models-2026) — モデル層：Bodega One CodeのようなBYOLLMツールに接続すべきオープンウェイトモデル。',
-          '[2026年版：MCPを使ったローカルAIエージェント](/ja/power-local-llm/local-ai-agents-with-mcp-2026) — Bodega One Codeの組み込みツールリストをオープンなMCPベースのツールエコシステムと比較したい読者向け。',
+          '[2026年版：MCPを使ったローカルAIエージェント](/ja/power-local-llm/local-ai-agents-with-mcp) — Bodega One Codeの組み込みツールリストをオープンなMCPベースのツールエコシステムと比較したい読者向け。',
           '[GitHub Copilotをローカルllmで置き換える](/ja/power-local-llm/replace-github-copilot-with-local-llm) — AIコーディング支援をローカルまたは自己ホスト型モデルに移すより広い文脈。',
           '[Power Local LLMハブ](/ja/power-local-llm) — ガイドライブラリ全体。',
         ],
@@ -2519,7 +2519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Continue.dev 对比 Cline 对比 Aider](/zh/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 三款开源本地编程工具，为现有编辑器添加功能而非取代它。',
           '[2026年最佳本地编程模型](/zh/power-local-llm/best-local-coding-models-2026) — 模型层面：应该为Bodega One Code这类BYOLLM工具搭配哪些开放权重模型。',
-          '[2026年使用MCP的本地AI代理](/zh/power-local-llm/local-ai-agents-with-mcp-2026) — 面向希望将Bodega One Code内置工具列表与开放的基于MCP的工具生态系统进行比较的读者。',
+          '[2026年使用MCP的本地AI代理](/zh/power-local-llm/local-ai-agents-with-mcp) — 面向希望将Bodega One Code内置工具列表与开放的基于MCP的工具生态系统进行比较的读者。',
           '[用本地LLM取代GitHub Copilot](/zh/power-local-llm/replace-github-copilot-with-local-llm) — 关于将AI编程辅助迁移到本地或自托管模型的更广泛背景。',
           '[Power Local LLM中心](/zh/power-local-llm) — 完整指南库。',
         ],
@@ -2881,7 +2881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Continue.dev مقابل Cline مقابل Aider](/ar/power-local-llm/continue-dev-vs-cline-vs-aider-local) — ثلاث أدوات برمجة محلية مفتوحة المصدر تضاف إلى محرر موجود بدلاً من استبداله.',
           '[أفضل نماذج البرمجة المحلية في 2026](/ar/power-local-llm/best-local-coding-models-2026) — طبقة النماذج: أي النماذج المفتوحة الوزن تستخدمها مع أداة BYOLLM مثل Bodega One Code.',
-          '[وكلاء الذكاء الاصطناعي المحليون باستخدام MCP في 2026](/ar/power-local-llm/local-ai-agents-with-mcp-2026) — للقراء الذين يقارنون قائمة أدوات Bodega One Code المدمجة بنظام أدوات مفتوح قائم على MCP.',
+          '[وكلاء الذكاء الاصطناعي المحليون باستخدام MCP في 2026](/ar/power-local-llm/local-ai-agents-with-mcp) — للقراء الذين يقارنون قائمة أدوات Bodega One Code المدمجة بنظام أدوات مفتوح قائم على MCP.',
           '[استبدال GitHub Copilot بنموذج لغة محلي](/ar/power-local-llm/replace-github-copilot-with-local-llm) — سياق أوسع حول نقل المساعدة البرمجية بالذكاء الاصطناعي إلى نماذج محلية أو مستضافة ذاتيًا.',
           '[مركز Power Local LLM](/ar/power-local-llm) — مكتبة الأدلة الكاملة.',
         ],
@@ -3243,7 +3243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Continue.dev vs. Cline vs. Aider](/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 기존 에디터를 대체하지 않고 확장하는 세 가지 오픈소스 로컬 코딩 도구.',
           '[2026년 최고의 로컬 코딩 모델](/ko/power-local-llm/best-local-coding-models-2026) — 모델 계층: Bodega One Code 같은 BYOLLM 도구에 연결할 오픈 웨이트 모델.',
-          '[2026년 MCP를 활용한 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp-2026) — Bodega One Code의 내장 도구 목록을 개방형 MCP 기반 도구 생태계와 비교하고 싶은 독자를 위한 자료.',
+          '[2026년 MCP를 활용한 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp) — Bodega One Code의 내장 도구 목록을 개방형 MCP 기반 도구 생태계와 비교하고 싶은 독자를 위한 자료.',
           '[GitHub Copilot을 로컬 LLM으로 대체하기](/ko/power-local-llm/replace-github-copilot-with-local-llm) — AI 코딩 지원을 로컬 또는 자체 호스팅 모델로 옮기는 것에 대한 더 넓은 맥락.',
           '[Power Local LLM 허브](/ko/power-local-llm) — 전체 가이드 라이브러리.',
         ],

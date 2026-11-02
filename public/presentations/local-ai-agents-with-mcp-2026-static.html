@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026 | PromptQuorum</title>
-  <meta name="description" content="How MCP turns a local Ollama model into an agent: 4 reference servers, 6-step setup, security model, and Claude Desktop comparison." />
+  <meta name="description" content="How MCP turns a local Ollama model into an agent: 4 kinds of server, 6-step setup, security model, and Claude Desktop comparison." />
   <meta property="og:title" content="Local Ollama + MCP: Connect AI to Databases and APIs — PromptQuorum" />
-  <meta property="og:description" content="MCP filesystem, SQLite/Postgres, browser, GitHub servers. Working configs and a security model that does not trust the LLM." />
+  <meta property="og:description" content="MCP filesystem, Postgres, Playwright browser and GitHub servers. Working configs and a security model that does not trust the LLM." />
   <meta property="og:type" content="website" />
   <link rel="canonical" href="https://www.promptquorum.com/power-local-llm/local-ai-agents-with-mcp-2026" />
   <style>
@@ -140,8 +140,8 @@
             items: [
               '<strong>MCP is JSON-RPC 2.0 for tools.</strong> The client connects to servers that expose Tools, Resources, and Prompts. The wire format is the same under Claude Desktop, Goose, Cline, Continue.dev, or LM Studio.',
               '<strong>Ollama does not speak MCP directly.</strong> An MCP client (Goose, Cline, Continue.dev, LM Studio) wraps Ollama and routes tool calls to MCP servers.',
-              '<strong>Four reference servers cover most use cases:</strong> filesystem (sandboxed read/write), sqlite and postgres (read-only queries), puppeteer/playwright (headless browser), github (repo and PR management).',
-              '<strong>Tool-call reliability scales with model size.</strong> Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, and Llama 3.3 70B handle MCP cleanly. Models under 7B regularly emit malformed tool calls.'
+              '<strong>Four kinds of server cover most use cases:</strong> filesystem (sandboxed read/write), Postgres (postgres-mcp, restricted mode), Playwright MCP (browser), GitHub (official server). The old reference servers for SQLite, PostgreSQL, Puppeteer and GitHub are archived.',
+              '<strong>Tool-call reliability scales with model size.</strong> Gemma 4 31B, GLM-4.7 Flash, Qwen3.6 27B, Qwen3 32B, and Llama 3.3 70B handle MCP cleanly. Models under 7B regularly emit malformed tool calls.'
             ]
           },
           {
@@ -160,9 +160,9 @@
             items: [
               '<strong>File automation:</strong> "Find every TODO in this repo, group by file, write a Markdown summary to notes/todos.md." — filesystem server reads, model groups, server writes.',
               '<strong>Data analysis:</strong> "Show me top 10 customers by revenue this quarter." — postgres server runs SQL (read-only), model summarises, filesystem writes CSV.',
-              '<strong>Web research:</strong> "Open Hacker News, find top 3 AI stories, summarise and append to my reading list." — puppeteer drives browser, filesystem appends.',
+              '<strong>Web research:</strong> "Open Hacker News, find top 3 AI stories, summarise and append to my reading list." — playwright server drives a browser, filesystem appends.',
               '<strong>Dev workflow:</strong> "Open a draft PR titled chore: bump deps and link the failing CI run." — github server creates PR and fetches run.',
-              '<strong>Log analysis:</strong> "Which user IDs caused the new error spike in events.db?" — sqlite queries, model reasons, you read the answer.'
+              '<strong>Log analysis:</strong> "Which user IDs caused the new error spike in events.db?" — a database server queries a copy of the data, model reasons, you read the answer.'
             ]
           },
           {
@@ -171,10 +171,10 @@
             columns: ['Server', 'Capability', 'Risk', 'Best For'],
             rows: [
               { 'Server': 'Filesystem', 'Capability': 'Read/write files in a sandboxed directory', 'Risk': 'Medium — scope tightly', 'Best For': 'File automation, repo summaries' },
-              { 'Server': 'SQLite', 'Capability': 'Query a local .db file', 'Risk': 'Low (read-only)', 'Best For': 'Log analysis, prototyping' },
-              { 'Server': 'Postgres', 'Capability': 'Query Postgres via connection string', 'Risk': 'Medium — use read-only role', 'Best For': 'Data exploration, reporting' },
-              { 'Server': 'Puppeteer', 'Capability': 'Drive a headless Chromium', 'Risk': 'High — can submit forms', 'Best For': 'Research, scraping, testing' },
-              { 'Server': 'GitHub', 'Capability': 'List repos, open issues and PRs', 'Risk': 'Medium — scope PAT narrowly', 'Best For': 'Dev workflows, PR drafting' }
+              { 'Server': 'SQLite (archived)', 'Capability': 'Query a local SQLite file', 'Risk': 'Medium — no fixes, use a copy', 'Best For': 'Throwaway data exploration only' },
+              { 'Server': 'Postgres (postgres-mcp)', 'Capability': 'Query Postgres in restricted (read-only) mode', 'Risk': 'Medium — restricted mode + read-only role', 'Best For': 'Data exploration, reporting' },
+              { 'Server': 'Playwright (@playwright/mcp)', 'Capability': 'Drive a browser via accessibility snapshots', 'Risk': 'High — can submit forms', 'Best For': 'Research, scraping, testing' },
+              { 'Server': 'GitHub (official)', 'Capability': 'List repos, open issues and PRs', 'Risk': 'Medium — scope PAT narrowly', 'Best For': 'Dev workflows, PR drafting' }
             ]
           },
           {
@@ -185,7 +185,7 @@
               '<strong>MCP client</strong> (Goose, Cline, Continue.dev, LM Studio) bridges Ollama and MCP servers. When the model emits a tool call, the client routes it, gets the result, and feeds it back.',
               '<strong>MCP servers</strong> are independent subprocesses, one per capability. They speak JSON-RPC 2.0 over stdio. Each server advertises its Tools, Resources, and Prompts.',
               '<strong>Stdio transport keeps everything local.</strong> Servers launch as subprocesses, communicate over stdin/stdout, and exit when the client exits. Nothing routes through the network unless the server itself opens a connection.',
-              '<strong>The model sees one flat tool list.</strong> From the model\'s view, there are just tool names like filesystem.read_file, sqlite.query, puppeteer.navigate. The client handles routing.'
+              '<strong>The model sees one flat tool list.</strong> From the model\'s view, there are just tool names like filesystem.read_file, playwright.browser_navigate, github.create_pull_request. The client handles routing.'
             ]
           },
           {
@@ -193,10 +193,10 @@
             h2: 'Setup: Ollama + Goose in 15 Minutes',
             items: [
               '<strong>Install Ollama.</strong> Download from ollama.com/download (macOS/Windows/Linux). Confirm with: curl http://127.0.0.1:11434/api/tags',
-              '<strong>Pull a tool-calling model.</strong> Choose: gemma4:27b, glm5:32b, qwen3:32b, or llama3.3:70b. 16 GB unified memory handles 27B–32B at Q4_K_M.',
-              '<strong>Install Goose.</strong> Run: pipx install goose-ai (macOS/Linux), or download from the Goose releases page.',
-              '<strong>Configure Ollama as provider.</strong> Run goose configure → pick ollama → set model and host (http://127.0.0.1:11434). Goose writes ~/.config/goose/config.yaml.',
-              '<strong>Add the filesystem MCP server.</strong> Edit ~/.config/goose/config.yaml to add an mcpServers block (see article for config). Restart goose session.',
+              '<strong>Pull a tool-calling model.</strong> Choose: gemma4:31b, glm-4.7-flash, qwen3.6:27b, qwen3:32b, or llama3.3:70b. 32 GB unified memory or 24 GB VRAM handles 26B–32B at Q4_K_M.',
+              '<strong>Install Goose.</strong> Run: curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash (macOS/Linux), or brew install block-goose-cli.',
+              '<strong>Configure Ollama as provider.</strong> Run goose configure → pick ollama → set model and host (http://127.0.0.1:11434). Start Ollama with OLLAMA_CONTEXT_LENGTH=32768 or higher.',
+              '<strong>Add the filesystem MCP server.</strong> Run goose configure → Add Extension, or add an extensions block (type stdio, cmd, args, envs, timeout) to ~/.config/goose/config.yaml (see article).',
               '<strong>Verify with a real task.</strong> Ask: "List every Markdown file in notes/ with title and word count, write to notes/index.md." A working loop reads, summarises, and writes back.'
             ]
           },
@@ -206,19 +206,19 @@
             items: [
               '<strong>Filesystem server</strong> (@modelcontextprotocol/server-filesystem): expose read_file, write_file, list_directory, search_files, directory_tree — all restricted to allow-listed paths.',
               '<strong>Allow-list only narrow paths.</strong> Never ~ or /. Create a dedicated agent-workspace/ folder. If the agent goes wrong, the blast radius stops at one directory.',
-              '<strong>SQLite server</strong> (@modelcontextprotocol/server-sqlite): takes a path to a .db file. Tools: query, list_tables, describe_table. Enable read-only mode by default.',
-              '<strong>Postgres server</strong> (@modelcontextprotocol/server-postgres): takes a connection string. Create a dedicated agent_ro role with SELECT-only grants and a 30-second statement timeout.',
-              '<strong>Schema awareness matters.</strong> Ask the agent to describe tables before analytical questions — the model is much more accurate when it has called describe_table than when it guesses column names.'
+              '<strong>Postgres server</strong> (postgres-mcp): run with --access-mode=restricted and pass the URI in DATABASE_URI. Restricted mode allows read-only transactions and a query time limit.',
+              '<strong>Add a read-only role too.</strong> Create a dedicated agent_ro role with SELECT-only grants and a 30-second statement timeout.',
+              '<strong>SQLite: the reference server is archived.</strong> It gets no fixes. Point it only at a copy of the file, or load the data into Postgres instead.'
             ]
           },
           {
             type: 'list',
             h2: 'Browser and GitHub Servers',
             items: [
-              '<strong>Puppeteer server</strong> (@modelcontextprotocol/server-puppeteer): navigate, screenshot, click, fill, evaluate (JS), get_page_content. Lighter than Playwright; headless by default.',
+              '<strong>Playwright MCP</strong> (@playwright/mcp): browser_navigate, browser_snapshot, browser_click, browser_type, browser_fill_form, browser_evaluate. The old Puppeteer server is no longer supported.',
               '<strong>Latency warning:</strong> real browser sessions take 1–5 sec per action. A multi-step browse can consume 30–60 sec and tens of thousands of tokens. Use 32K+ context.',
               '<strong>Never give the browser server credentials.</strong> No banking, email, or cloud consoles. Treat the model like an intern with no context — it sees text and clicks, nothing more.',
-              '<strong>GitHub server</strong> (@modelcontextprotocol/server-github): search repos, read files, create PRs, list issues, add comments. Only needs a PAT in the GITHUB_PERSONAL_ACCESS_TOKEN env var.',
+              '<strong>GitHub server</strong> (official github/github-mcp-server, run via Docker): search repos, read files, create PRs, list issues, add comments. Needs a PAT in the GITHUB_PERSONAL_ACCESS_TOKEN env var.',
               '<strong>Scope the PAT narrowly.</strong> Use a fine-grained PAT scoped to specific test repos with minimum permissions. Do not use a classic PAT with full repo scope for an experimental agent.'
             ]
           },
@@ -253,9 +253,9 @@
             h2: 'Picking a Tool-Calling Model',
             intro: 'Tool-call reliability scales with model size and training, not with the client harness.',
             items: [
-              '<strong>Gemma 4 27B</strong> (gemma4:27b) — best-in-class tool-call training for the size. Fits in 16 GB unified memory at Q4_K_M. Good general reasoning.',
-              '<strong>GLM-4.7 32B</strong> (glm5:32b) — very strong tool-call reliability, 128K context out of the box. Fits on a 24 GB GPU.',
-              '<strong>Qwen3 32B</strong> (qwen3:32b) — well-rounded; handles MCP cleanly in long agent loops. Qwen3-Coder 30B is the best pick for code-shaped agent work.',
+              '<strong>Gemma 4 31B</strong> (gemma4:31b) — best-in-class tool-call training for the size. Fits in 16 GB unified memory or 24 GB VRAM at Q4_K_M. Good general reasoning.',
+              '<strong>GLM-4.7 Flash</strong> (glm-4.7-flash) — very strong tool-call reliability, 128K context out of the box. Fits comfortably on a 24 GB GPU.',
+              '<strong>Qwen3.6 27B</strong> (qwen3.6:27b) and <strong>Qwen3 32B</strong> (qwen3:32b) — well-rounded; handle MCP cleanly in long agent loops. Qwen3-Coder 30B is the best pick for code-shaped agent work.',
               '<strong>Llama 3.3 70B</strong> (llama3.3:70b) — highest ceiling, heaviest. Needs 48 GB+ unified memory or 2x 24 GB GPUs at Q4_K_M.',
               '<strong>Avoid for MCP:</strong> anything under 7B and general-purpose models without explicit tool-call training. They emit malformed calls and stall the loop.'
             ]
@@ -297,8 +297,8 @@
             items: [
               '<strong>MCP ist JSON-RPC 2.0 für Tools.</strong> Der Client verbindet sich mit Servern, die Tools, Resources und Prompts bereitstellen. Das Wire-Format ist identisch unter Claude Desktop, Goose, Cline, Continue.dev oder LM Studio.',
               '<strong>Ollama spricht MCP nicht direkt.</strong> Ein MCP-Client (Goose, Cline, Continue.dev, LM Studio) umhüllt Ollama und leitet Tool-Calls an MCP-Server weiter.',
-              '<strong>Vier Referenz-Server decken die meisten Anwendungsfälle ab:</strong> Filesystem (isoliertes Lesen/Schreiben), SQLite und Postgres (read-only Abfragen), Puppeteer/Playwright (Headless-Browser), GitHub (Repo- und PR-Verwaltung).',
-              '<strong>Tool-Call-Zuverlässigkeit skaliert mit der Modellgröße.</strong> Gemma 4 27B, GLM-4.7 32B, Qwen3 32B und Llama 3.3 70B verarbeiten MCP sauber. Modelle unter 7B geben regelmäßig fehlerhafte Tool-Calls aus.'
+              '<strong>Vier Arten von Servern decken die meisten Anwendungsfälle ab:</strong> Filesystem (isoliertes Lesen/Schreiben), Postgres (postgres-mcp, Restricted-Modus), Playwright MCP (Browser), GitHub (offizieller Server). Die alten Referenz-Server für SQLite, PostgreSQL, Puppeteer und GitHub sind archiviert.',
+              '<strong>Tool-Call-Zuverlässigkeit skaliert mit der Modellgröße.</strong> Gemma 4 31B, GLM-4.7 Flash, Qwen3.6 27B, Qwen3 32B und Llama 3.3 70B verarbeiten MCP sauber. Modelle unter 7B geben regelmäßig fehlerhafte Tool-Calls aus.'
             ]
           },
           {
@@ -317,9 +317,9 @@
             items: [
               '<strong>Dateiautomatisierung:</strong> „Finde jedes TODO in diesem Repo, gruppiere nach Datei, schreibe Markdown-Zusammenfassung in notes/todos.md." — Filesystem liest, Modell gruppiert, Server schreibt.',
               '<strong>Datenanalyse:</strong> „Top-10-Kunden nach Umsatz dieses Quartal." — Postgres-Server führt SQL aus (read-only), Modell fasst zusammen, Filesystem schreibt CSV.',
-              '<strong>Web-Recherche:</strong> „Hacker News öffnen, Top-3-KI-Stories zusammenfassen und an Leseliste anhängen." — Puppeteer steuert Browser, Filesystem hängt an.',
+              '<strong>Web-Recherche:</strong> „Hacker News öffnen, Top-3-KI-Stories zusammenfassen und an Leseliste anhängen." — Playwright-Server steuert einen Browser, Filesystem hängt an.',
               '<strong>Dev-Workflow:</strong> „Draft-PR mit Titel \'chore: bump deps\' öffnen und fehlgeschlagenen CI-Run verlinken." — GitHub-Server erstellt PR.',
-              '<strong>Log-Analyse:</strong> „Welche User-IDs verursachen den neuen Error-Spike in events.db?" — SQLite fragt ab, Modell schließt.'
+              '<strong>Log-Analyse:</strong> „Welche User-IDs verursachen den neuen Error-Spike in events.db?" — ein Datenbank-Server fragt eine Kopie der Daten ab, Modell schließt.'
             ]
           },
           {
@@ -328,10 +328,10 @@
             columns: ['Server', 'Fähigkeit', 'Risiko', 'Geeignet für'],
             rows: [
               { 'Server': 'Filesystem', 'Fähigkeit': 'Dateien in isoliertem Verzeichnis lesen/schreiben', 'Risiko': 'Mittel — eng beschränken', 'Geeignet für': 'Dateiautomatisierung, Repo-Zusammenfassungen' },
-              { 'Server': 'SQLite', 'Fähigkeit': 'Lokale .db-Datei abfragen', 'Risiko': 'Niedrig (read-only)', 'Geeignet für': 'Log-Analyse, Prototyping' },
-              { 'Server': 'Postgres', 'Fähigkeit': 'Postgres über Connection-String abfragen', 'Risiko': 'Mittel — read-only-Rolle nutzen', 'Geeignet für': 'Datenexploration, Reporting' },
-              { 'Server': 'Puppeteer', 'Fähigkeit': 'Headless Chromium steuern', 'Risiko': 'Hoch — kann Formulare absenden', 'Geeignet für': 'Recherche, Scraping, Tests' },
-              { 'Server': 'GitHub', 'Fähigkeit': 'Repos auflisten, Issues und PRs öffnen', 'Risiko': 'Mittel — PAT eng scopen', 'Geeignet für': 'Dev-Workflows, PR-Drafts' }
+              { 'Server': 'SQLite (archiviert)', 'Fähigkeit': 'Lokale SQLite-Datei abfragen', 'Risiko': 'Mittel — keine Fixes, Kopie verwenden', 'Geeignet für': 'Nur Wegwerf-Datenexploration' },
+              { 'Server': 'Postgres (postgres-mcp)', 'Fähigkeit': 'Postgres im Restricted-Modus (read-only) abfragen', 'Risiko': 'Mittel — Restricted-Modus + read-only-Rolle', 'Geeignet für': 'Datenexploration, Reporting' },
+              { 'Server': 'Playwright (@playwright/mcp)', 'Fähigkeit': 'Browser über Accessibility-Snapshots steuern', 'Risiko': 'Hoch — kann Formulare absenden', 'Geeignet für': 'Recherche, Scraping, Tests' },
+              { 'Server': 'GitHub (offiziell)', 'Fähigkeit': 'Repos auflisten, Issues und PRs öffnen', 'Risiko': 'Mittel — PAT eng scopen', 'Geeignet für': 'Dev-Workflows, PR-Drafts' }
             ]
           },
           {
@@ -342,7 +342,7 @@
               '<strong>MCP-Client</strong> (Goose, Cline, Continue.dev, LM Studio) verbindet Ollama mit MCP-Servern. Bei einem Tool-Call leitet der Client ihn weiter, holt das Ergebnis und speist es zurück.',
               '<strong>MCP-Server</strong> sind unabhängige Subprozesse, einer pro Fähigkeit. JSON-RPC 2.0 über stdio. Jeder Server bewirbt seine Tools, Resources und Prompts.',
               '<strong>Stdio-Transport hält alles lokal.</strong> Server werden als Subprozesse gestartet, kommunizieren über stdin/stdout und beenden sich, wenn der Client endet.',
-              '<strong>Das Modell sieht eine flache Tool-Liste.</strong> Aus Modellsicht gibt es nur Tool-Namen wie filesystem.read_file, sqlite.query, puppeteer.navigate. Der Client übernimmt das Routing.'
+              '<strong>Das Modell sieht eine flache Tool-Liste.</strong> Aus Modellsicht gibt es nur Tool-Namen wie filesystem.read_file, playwright.browser_navigate, github.create_pull_request. Der Client übernimmt das Routing.'
             ]
           },
           {
@@ -350,10 +350,10 @@
             h2: 'Setup: Ollama + Goose in 15 Minuten',
             items: [
               '<strong>Ollama installieren.</strong> Download von ollama.com/download (macOS/Windows/Linux). Test: curl http://127.0.0.1:11434/api/tags',
-              '<strong>Tool-Calling-Modell ziehen.</strong> Auswahl: gemma4:27b, glm5:32b, qwen3:32b oder llama3.3:70b. 16 GB Unified Memory für 27B–32B bei Q4_K_M.',
-              '<strong>Goose installieren.</strong> pipx install goose-ai (macOS/Linux) oder Installer von der Goose-Releases-Seite.',
-              '<strong>Ollama als Provider konfigurieren.</strong> goose configure → ollama wählen → Modell und Host (http://127.0.0.1:11434) setzen.',
-              '<strong>Filesystem-MCP-Server hinzufügen.</strong> ~/.config/goose/config.yaml bearbeiten, mcpServers-Block ergänzen, goose session neu starten.',
+              '<strong>Tool-Calling-Modell ziehen.</strong> Auswahl: gemma4:31b, glm-4.7-flash, qwen3.6:27b, qwen3:32b oder llama3.3:70b. 32 GB Unified Memory oder 24 GB VRAM bewältigen 26B–32B bei Q4_K_M.',
+              '<strong>Goose installieren.</strong> curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash (macOS/Linux) oder brew install block-goose-cli.',
+              '<strong>Ollama als Provider konfigurieren.</strong> goose configure → ollama wählen → Modell und Host (http://127.0.0.1:11434) setzen. Ollama mit OLLAMA_CONTEXT_LENGTH=32768 oder höher starten.',
+              '<strong>Filesystem-MCP-Server hinzufügen.</strong> goose configure → Add Extension, oder einen extensions-Block (type stdio, cmd, args, envs, timeout) in ~/.config/goose/config.yaml ergänzen (siehe Artikel).',
               '<strong>Mit echten Aufgaben verifizieren.</strong> „Liste alle Markdown-Dateien in notes/ mit Titel und Wortanzahl, schreibe in notes/index.md." Funktionierender Loop: lesen, zusammenfassen, zurückschreiben.'
             ]
           },
@@ -363,19 +363,19 @@
             items: [
               '<strong>Filesystem-Server</strong> (@modelcontextprotocol/server-filesystem): read_file, write_file, list_directory, search_files, directory_tree — alles auf allow-listed Pfade beschränkt.',
               '<strong>Nur schmale Pfade allow-listen.</strong> Nie ~ oder /. Einen dedizierten agent-workspace/ Ordner erstellen. Fehler bleiben auf diesen Ordner beschränkt.',
-              '<strong>SQLite-Server</strong> (@modelcontextprotocol/server-sqlite): Pfad zur .db-Datei. Tools: query, list_tables, describe_table. Standardmäßig read-only.',
-              '<strong>Postgres-Server</strong> (@modelcontextprotocol/server-postgres): Connection-String. Dedizierte agent_ro-Rolle mit SELECT-only und 30-Sekunden-Statement-Timeout erstellen.',
-              '<strong>Schema-Awareness wichtig.</strong> Agent bitten, Tabellen zu beschreiben, bevor analytische Fragen gestellt werden — deutlich präziser als geraten.'
+              '<strong>Postgres-Server</strong> (postgres-mcp): mit --access-mode=restricted starten und die URI in DATABASE_URI übergeben. Der Restricted-Modus erlaubt read-only-Transaktionen und ein Zeitlimit für Abfragen.',
+              '<strong>Zusätzlich eine read-only-Rolle nutzen.</strong> Eine dedizierte agent_ro-Rolle mit SELECT-only und 30-Sekunden-Statement-Timeout erstellen.',
+              '<strong>SQLite: Der Referenz-Server ist archiviert.</strong> Er erhält keine Fixes. Nur auf eine Kopie der Datei richten oder die Daten stattdessen in Postgres laden.'
             ]
           },
           {
             type: 'list',
             h2: 'Browser- und GitHub-Server',
             items: [
-              '<strong>Puppeteer-Server</strong> (@modelcontextprotocol/server-puppeteer): navigate, screenshot, click, fill, evaluate (JS), get_page_content. Headless standardmäßig.',
+              '<strong>Playwright MCP</strong> (@playwright/mcp): browser_navigate, browser_snapshot, browser_click, browser_type, browser_fill_form, browser_evaluate. Der alte Puppeteer-Server wird nicht mehr unterstützt.',
               '<strong>Latenz-Warnung:</strong> Echte Browser-Sessions brauchen 1–5 Sekunden pro Aktion. Mehrstufige Browse-Vorgänge verbrauchen leicht 30K+ Tokens. 32K+ Context nutzen.',
               '<strong>Dem Browser-Server niemals Anmeldedaten geben.</strong> Kein Banking, keine E-Mails, keine Cloud-Konsolen. Das Modell sieht Text und klickt — ohne Urteilsvermögen.',
-              '<strong>GitHub-Server</strong> (@modelcontextprotocol/server-github): Repos durchsuchen, Dateien lesen, PRs und Issues erstellen. Nur PAT in der Env-Var GITHUB_PERSONAL_ACCESS_TOKEN nötig.',
+              '<strong>GitHub-Server</strong> (offizieller github/github-mcp-server, per Docker): Repos durchsuchen, Dateien lesen, PRs und Issues erstellen. Benötigt einen PAT in der Env-Var GITHUB_PERSONAL_ACCESS_TOKEN.',
               '<strong>PAT eng scopen.</strong> Fine-Grained-PAT auf bestimmte Test-Repos mit Mindestberechtigungen. Kein klassisches PAT mit vollem repo-Scope für einen experimentellen Agenten.'
             ]
           },
@@ -410,9 +410,9 @@
             h2: 'Auswahl eines Tool-Calling-Modells',
             intro: 'Tool-Call-Zuverlässigkeit skaliert mit Modellgröße und Training, nicht mit dem Client.',
             items: [
-              '<strong>Gemma 4 27B</strong> (gemma4:27b) — beste Tool-Call-Training für die Größe. 16 GB Unified Memory bei Q4_K_M. Gutes allgemeines Denkvermögen.',
-              '<strong>GLM-4.7 32B</strong> (glm5:32b) — sehr starke Tool-Call-Zuverlässigkeit, 128K Context. Passt auf eine 24-GB-GPU.',
-              '<strong>Qwen3 32B</strong> (qwen3:32b) — ausgewogen, handhabt MCP in langen Loops sauber. Qwen3-Coder 30B ist die beste Wahl für Code-bezogene Aufgaben.',
+              '<strong>Gemma 4 31B</strong> (gemma4:31b) — bestes Tool-Call-Training für die Größe. Passt bei Q4_K_M in 16 GB Unified Memory oder 24 GB VRAM. Gutes allgemeines Denkvermögen.',
+              '<strong>GLM-4.7 Flash</strong> (glm-4.7-flash) — sehr starke Tool-Call-Zuverlässigkeit, 128K Context. Passt bequem auf eine 24-GB-GPU.',
+              '<strong>Qwen3.6 27B</strong> (qwen3.6:27b) und <strong>Qwen3 32B</strong> (qwen3:32b) — ausgewogen, handhaben MCP in langen Loops sauber. Qwen3-Coder 30B ist die beste Wahl für Code-bezogene Aufgaben.',
               '<strong>Llama 3.3 70B</strong> (llama3.3:70b) — höchste Leistung, aber schwer. 48 GB+ Unified Memory oder 2× 24 GB GPU bei Q4_K_M.',
               '<strong>Für MCP vermeiden:</strong> Alles unter 7B und allgemeine Modelle ohne Tool-Call-Fine-Tuning. Sie geben fehlerhafte Calls aus und blockieren den Loop.'
             ]
@@ -454,8 +454,8 @@
             items: [
               '<strong>MCP est JSON-RPC 2.0 pour les outils.</strong> Le client se connecte à des serveurs qui exposent des Tools, Resources et Prompts. Le format est identique sous Claude Desktop, Goose, Cline, Continue.dev ou LM Studio.',
               "<strong>Ollama ne parle pas MCP directement.</strong> Un client MCP (Goose, Cline, Continue.dev, LM Studio) enveloppe Ollama et route les tool calls vers les serveurs MCP.",
-              '<strong>Quatre serveurs de référence couvrent la plupart des cas :</strong> filesystem (lecture/écriture isolée), sqlite et postgres (requêtes en lecture seule), puppeteer/playwright (navigateur headless), github (gestion de repos et PRs).',
-              '<strong>La fiabilité des tool calls scale avec la taille du modèle.</strong> Gemma 4 27B, GLM-4.7 32B, Qwen3 32B et Llama 3.3 70B gèrent MCP proprement. Les modèles sous 7B produisent régulièrement des appels malformés.'
+              '<strong>Quatre types de serveurs couvrent la plupart des cas :</strong> filesystem (lecture/écriture isolée), Postgres (postgres-mcp, mode restricted), Playwright MCP (navigateur), GitHub (serveur officiel). Les anciens serveurs de référence pour SQLite, PostgreSQL, Puppeteer et GitHub sont archivés.',
+              '<strong>La fiabilité des tool calls scale avec la taille du modèle.</strong> Gemma 4 31B, GLM-4.7 Flash, Qwen3.6 27B, Qwen3 32B et Llama 3.3 70B gèrent MCP proprement. Les modèles sous 7B produisent régulièrement des appels malformés.'
             ]
           },
           {
@@ -474,9 +474,9 @@
             items: [
               "<strong>Automatisation de fichiers :</strong> \"Trouve tous les TODO dans ce repo, groupe par fichier, écris un résumé Markdown dans notes/todos.md.\" — filesystem lit, modèle groupe, serveur écrit.",
               '<strong>Analyse de données :</strong> "Top 10 clients par CA ce trimestre." — postgres exécute le SQL (read-only), modèle résume, filesystem écrit le CSV.',
-              "<strong>Veille web :</strong> \"Ouvre Hacker News, trouve les 3 meilleures stories IA, résume et ajoute à ma liste.\" — puppeteer pilote le navigateur, filesystem ajoute.",
+              "<strong>Veille web :</strong> \"Ouvre Hacker News, trouve les 3 meilleures stories IA, résume et ajoute à ma liste.\" — le serveur playwright pilote un navigateur, filesystem ajoute.",
               '<strong>Workflow dev :</strong> "Ouvre un draft PR \'chore: bump deps\' et lie le run CI en échec." — serveur github crée le PR.',
-              '<strong>Analyse de logs :</strong> "Quels user IDs ont causé le nouveau pic d\'erreurs dans events.db ?" — sqlite interroge, modèle raisonne.'
+              '<strong>Analyse de logs :</strong> "Quels user IDs ont causé le nouveau pic d\'erreurs dans events.db ?" — un serveur de base de données interroge une copie des données, modèle raisonne.'
             ]
           },
           {
@@ -485,10 +485,10 @@
             columns: ['Serveur', 'Capacité', 'Risque', 'Idéal pour'],
             rows: [
               { 'Serveur': 'Filesystem', 'Capacité': 'Lire/écrire dans un répertoire isolé', 'Risque': 'Moyen — périmètre serré', 'Idéal pour': 'Automatisation fichiers, résumés repo' },
-              { 'Serveur': 'SQLite', 'Capacité': 'Interroger un fichier .db local', 'Risque': 'Faible (lecture seule)', 'Idéal pour': 'Analyse logs, prototypage' },
-              { 'Serveur': 'Postgres', 'Capacité': 'Interroger Postgres via connection string', 'Risque': 'Moyen — rôle read-only', 'Idéal pour': 'Exploration données, reporting' },
-              { 'Serveur': 'Puppeteer', 'Capacité': 'Piloter un Chromium headless', 'Risque': 'Élevé — peut soumettre des formulaires', 'Idéal pour': 'Recherche, scraping, tests' },
-              { 'Serveur': 'GitHub', 'Capacité': 'Lister repos, ouvrir issues et PRs', 'Risque': 'Moyen — PAT limité', 'Idéal pour': 'Workflows dev, rédaction PRs' }
+              { 'Serveur': 'SQLite (archivé)', 'Capacité': 'Interroger un fichier SQLite local', 'Risque': 'Moyen — plus de correctifs, utiliser une copie', 'Idéal pour': 'Exploration jetable uniquement' },
+              { 'Serveur': 'Postgres (postgres-mcp)', 'Capacité': 'Interroger Postgres en mode restricted (lecture seule)', 'Risque': 'Moyen — mode restricted + rôle read-only', 'Idéal pour': 'Exploration données, reporting' },
+              { 'Serveur': 'Playwright (@playwright/mcp)', 'Capacité': 'Piloter un navigateur via des snapshots d\'accessibilité', 'Risque': 'Élevé — peut soumettre des formulaires', 'Idéal pour': 'Recherche, scraping, tests' },
+              { 'Serveur': 'GitHub (officiel)', 'Capacité': 'Lister repos, ouvrir issues et PRs', 'Risque': 'Moyen — PAT limité', 'Idéal pour': 'Workflows dev, rédaction PRs' }
             ]
           },
           {
@@ -499,7 +499,7 @@
               '<strong>Le client MCP</strong> (Goose, Cline, Continue.dev, LM Studio) fait le pont entre Ollama et les serveurs MCP. Il route les tool calls, récupère les résultats et les réinjecte.',
               '<strong>Les serveurs MCP</strong> sont des sous-processus indépendants, un par capacité. JSON-RPC 2.0 sur stdio. Chaque serveur annonce ses Tools, Resources et Prompts.',
               '<strong>Le transport stdio garde tout en local.</strong> Les serveurs se lancent en sous-processus et communiquent sur stdin/stdout. Rien ne passe par le réseau sauf si le serveur lui-même ouvre une connexion.',
-              "<strong>Le modèle voit une liste d'outils plate.</strong> Du point de vue du modèle, il n'y a que des noms d'outils : filesystem.read_file, sqlite.query, puppeteer.navigate. Le client gère le routage."
+              "<strong>Le modèle voit une liste d'outils plate.</strong> Du point de vue du modèle, il n'y a que des noms d'outils : filesystem.read_file, playwright.browser_navigate, github.create_pull_request. Le client gère le routage."
             ]
           },
           {
@@ -507,10 +507,10 @@
             h2: 'Configuration : Ollama + Goose en 15 minutes',
             items: [
               '<strong>Installer Ollama.</strong> Télécharger sur ollama.com/download. Vérifier avec : curl http://127.0.0.1:11434/api/tags',
-              '<strong>Télécharger un modèle tool calling.</strong> Choisir : gemma4:27b, glm5:32b, qwen3:32b ou llama3.3:70b. 16 Go de mémoire unifiée pour 27B–32B en Q4_K_M.',
-              '<strong>Installer Goose.</strong> pipx install goose-ai (macOS/Linux) ou télécharger le programme depuis la page releases de Goose.',
-              "<strong>Configurer Ollama comme provider.</strong> goose configure → choisir ollama → définir le modèle et le host (http://127.0.0.1:11434).",
-              '<strong>Ajouter le serveur MCP filesystem.</strong> Éditer ~/.config/goose/config.yaml, ajouter un bloc mcpServers, relancer goose session.',
+              '<strong>Télécharger un modèle tool calling.</strong> Choisir : gemma4:31b, glm-4.7-flash, qwen3.6:27b, qwen3:32b ou llama3.3:70b. 32 Go de mémoire unifiée ou 24 Go de VRAM gèrent 26B–32B en Q4_K_M.',
+              '<strong>Installer Goose.</strong> curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash (macOS/Linux) ou brew install block-goose-cli.',
+              "<strong>Configurer Ollama comme provider.</strong> goose configure → choisir ollama → définir le modèle et le host (http://127.0.0.1:11434). Lancer Ollama avec OLLAMA_CONTEXT_LENGTH=32768 ou plus.",
+              '<strong>Ajouter le serveur MCP filesystem.</strong> goose configure → Add Extension, ou ajouter un bloc extensions (type stdio, cmd, args, envs, timeout) dans ~/.config/goose/config.yaml (voir l\'article).',
               '<strong>Vérifier avec une vraie tâche.</strong> "Liste tous les fichiers Markdown dans notes/ avec titre et nombre de mots, écris le résultat dans notes/index.md." Boucle fonctionnelle : lit, résume, écrit.'
             ]
           },
@@ -520,19 +520,19 @@
             items: [
               '<strong>Serveur filesystem</strong> (@modelcontextprotocol/server-filesystem) : read_file, write_file, list_directory, search_files, directory_tree — limités aux chemins en allow-list.',
               "<strong>Allow-lister uniquement des chemins étroits.</strong> Jamais ~ ou /. Créer un dossier agent-workspace/ dédié. En cas d'erreur, le rayon d'action s'arrête au dossier.",
-              '<strong>Serveur SQLite</strong> (@modelcontextprotocol/server-sqlite) : chemin vers un fichier .db. Outils : query, list_tables, describe_table. Mode lecture seule par défaut.',
-              '<strong>Serveur Postgres</strong> (@modelcontextprotocol/server-postgres) : connection string. Créer un rôle agent_ro dédié avec grants SELECT uniquement et un statement_timeout de 30s.',
-              "<strong>La conscience du schéma est importante.</strong> Demander à l'agent de décrire les tables avant les questions analytiques — bien plus précis que de deviner les noms de colonnes."
+              '<strong>Serveur Postgres</strong> (postgres-mcp) : lancer avec --access-mode=restricted et passer l\'URI dans DATABASE_URI. Le mode restricted autorise les transactions en lecture seule et une limite de temps par requête.',
+              '<strong>Ajouter aussi un rôle en lecture seule.</strong> Créer un rôle agent_ro dédié avec grants SELECT uniquement et un statement_timeout de 30s.',
+              "<strong>SQLite : le serveur de référence est archivé.</strong> Il ne reçoit plus de correctifs. L'utiliser uniquement sur une copie du fichier, ou charger les données dans Postgres."
             ]
           },
           {
             type: 'list',
             h2: 'Serveurs navigateur et GitHub',
             items: [
-              '<strong>Serveur Puppeteer</strong> (@modelcontextprotocol/server-puppeteer) : navigate, screenshot, click, fill, evaluate (JS), get_page_content. Headless par défaut.',
+              '<strong>Playwright MCP</strong> (@playwright/mcp) : browser_navigate, browser_snapshot, browser_click, browser_type, browser_fill_form, browser_evaluate. L\'ancien serveur Puppeteer n\'est plus supporté.',
               '<strong>Avertissement latence :</strong> les sessions navigateur prennent 1–5 s par action. Un browse multi-étapes peut consommer 30 000+ tokens. Utiliser 32K+ de contexte.',
               "<strong>Ne jamais donner des identifiants au serveur navigateur.</strong> Pas de banque, e-mail, ni consoles cloud. Le modèle voit du texte et clique — sans discernement.",
-              '<strong>Serveur GitHub</strong> (@modelcontextprotocol/server-github) : chercher repos, lire fichiers, créer PRs, lister issues. Seul un PAT dans GITHUB_PERSONAL_ACCESS_TOKEN est requis.',
+              '<strong>Serveur GitHub</strong> (officiel github/github-mcp-server, via Docker) : chercher repos, lire fichiers, créer PRs, lister issues. Un PAT dans GITHUB_PERSONAL_ACCESS_TOKEN est requis.',
               '<strong>Limiter le PAT au strict minimum.</strong> Fine-grained PAT limité à des repos de test spécifiques. Pas de PAT classique avec scope repo complet pour un agent expérimental.'
             ]
           },
@@ -567,9 +567,9 @@
             h2: 'Choisir un modèle compatible tool calling',
             intro: 'La fiabilité des tool calls scale avec la taille et le training, pas avec le client.',
             items: [
-              '<strong>Gemma 4 27B</strong> (gemma4:27b) — meilleur training tool-call pour sa taille. 16 Go de mémoire unifiée en Q4_K_M.',
-              '<strong>GLM-4.7 32B</strong> (glm5:32b) — très haute fiabilité, contexte 128K natif. Compatible GPU 24 Go.',
-              '<strong>Qwen3 32B</strong> (qwen3:32b) — équilibré, gère MCP proprement dans les longues boucles. Qwen3-Coder 30B est le meilleur choix pour les tâches orientées code.',
+              '<strong>Gemma 4 31B</strong> (gemma4:31b) — meilleur training tool-call pour sa taille. Tient en 16 Go de mémoire unifiée ou 24 Go de VRAM en Q4_K_M.',
+              '<strong>GLM-4.7 Flash</strong> (glm-4.7-flash) — très haute fiabilité, contexte 128K natif. Tient confortablement sur un GPU 24 Go.',
+              '<strong>Qwen3.6 27B</strong> (qwen3.6:27b) et <strong>Qwen3 32B</strong> (qwen3:32b) — équilibrés, gèrent MCP proprement dans les longues boucles. Qwen3-Coder 30B est le meilleur choix pour les tâches orientées code.',
               '<strong>Llama 3.3 70B</strong> (llama3.3:70b) — plafond le plus élevé, mais le plus lourd. 48 Go+ de mémoire ou 2× 24 Go GPU en Q4_K_M.',
               "<strong>À éviter pour MCP :</strong> tout modèle sous 7B et les modèles généralistes sans training tool-call explicite. Ils émettent des appels malformés et bloquent la boucle."
             ]
@@ -611,8 +611,8 @@
             items: [
               '<strong>MCP はツール用 JSON-RPC 2.0 プロトコル。</strong>クライアントが Tools・Resources・Prompts を提供するサーバーに接続。Claude Desktop、Goose、Cline、Continue.dev、LM Studio のいずれでもワイヤーフォーマットは同じ。',
               '<strong>Ollama は MCP を直接話せない。</strong>MCP クライアント（Goose、Cline、Continue.dev、LM Studio）が Ollama をラップし、ツールコールを MCP サーバーへルーティングする。',
-              '<strong>4 つのリファレンスサーバーで大半のユースケースに対応：</strong>filesystem（サンドボックス読み書き）、sqlite と postgres（read-only クエリ）、puppeteer/playwright（ヘッドレスブラウザ）、github（リポジトリと PR 管理）。',
-              '<strong>ツールコールの信頼性はモデルサイズとトレーニングに比例。</strong>Gemma 4 27B、GLM-4.7 32B、Qwen3 32B、Llama 3.3 70B は MCP をクリーンに処理。7B 未満のモデルは頻繁に不正ツールコールを出力。'
+              '<strong>4 種類のサーバーで大半のユースケースに対応できます：</strong>filesystem（サンドボックス読み書き）、Postgres（postgres-mcp、restricted モード）、Playwright MCP（ブラウザ）、GitHub（公式サーバー）。SQLite・PostgreSQL・Puppeteer・GitHub 向けの旧リファレンスサーバーはアーカイブ済みです。',
+              '<strong>ツールコールの信頼性はモデルサイズとトレーニングに比例。</strong>Gemma 4 31B、GLM-4.7 Flash、Qwen3.6 27B、Qwen3 32B、Llama 3.3 70B は MCP をクリーンに処理。7B 未満のモデルは頻繁に不正ツールコールを出力。'
             ]
           },
           {
@@ -631,9 +631,9 @@
             items: [
               '<strong>ファイル自動化：</strong>「このリポジトリの TODO を全部見つけ、ファイル別にグループ化し、notes/todos.md に Markdown まとめを書け。」— filesystem が読み、モデルがグループ化し、サーバーが書く。',
               '<strong>データ分析：</strong>「今四半期の売上上位 10 顧客は？」— postgres が SQL 実行（read-only）、モデルが集計、filesystem が CSV を書く。',
-              '<strong>Web リサーチ：</strong>「Hacker News を開いて AI トップ 3 記事を要約し、読書リストに追記。」— puppeteer がブラウザを操作、filesystem が追記。',
+              '<strong>Web リサーチ：</strong>「Hacker News を開いて AI トップ 3 記事を要約し、読書リストに追記。」— playwright サーバーがブラウザを操作、filesystem が追記。',
               '<strong>開発ワークフロー：</strong>「chore: bump deps というタイトルのドラフト PR を作成し、失敗した CI ランをリンクせよ。」— github サーバーが PR を作成。',
-              '<strong>ログ分析：</strong>「events.db のエラースパイクを引き起こしたユーザー ID は？」— sqlite が照会、モデルが推論。'
+              '<strong>ログ分析：</strong>「events.db のエラースパイクを引き起こしたユーザー ID は？」— データベースサーバーがデータのコピーを照会、モデルが推論。'
             ]
           },
           {
@@ -642,10 +642,10 @@
             columns: ['サーバー', '機能', 'リスク', '用途'],
             rows: [
               { 'サーバー': 'Filesystem', '機能': 'サンドボックスディレクトリでファイル読み書き', 'リスク': '中 — パスを限定', '用途': 'ファイル自動化、リポジトリ要約' },
-              { 'サーバー': 'SQLite', '機能': 'ローカル .db ファイルを照会', 'リスク': '低（read-only）', '用途': 'ログ分析、プロトタイピング' },
-              { 'サーバー': 'Postgres', '機能': 'Postgres を接続文字列で照会', 'リスク': '中 — read-only ロール推奨', '用途': 'データ探索、レポーティング' },
-              { 'サーバー': 'Puppeteer', '機能': 'ヘッドレス Chromium を操作', 'リスク': '高 — フォーム送信可能', '用途': 'リサーチ、スクレイピング、テスト' },
-              { 'サーバー': 'GitHub', '機能': 'リポジトリ一覧、Issue・PR 作成', 'リスク': '中 — PAT を限定', '用途': '開発ワークフロー、PR 下書き' }
+              { 'サーバー': 'SQLite（アーカイブ済み）', '機能': 'ローカルの SQLite ファイルを照会', 'リスク': '中 — 修正なし、コピーを使用', '用途': '使い捨てのデータ探索のみ' },
+              { 'サーバー': 'Postgres（postgres-mcp）', '機能': 'Postgres を restricted（read-only）モードで照会', 'リスク': '中 — restricted モード + read-only ロール', '用途': 'データ探索、レポーティング' },
+              { 'サーバー': 'Playwright（@playwright/mcp）', '機能': 'アクセシビリティスナップショットでブラウザを操作', 'リスク': '高 — フォーム送信可能', '用途': 'リサーチ、スクレイピング、テスト' },
+              { 'サーバー': 'GitHub（公式）', '機能': 'リポジトリ一覧、Issue・PR 作成', 'リスク': '中 — PAT を限定', '用途': '開発ワークフロー、PR 下書き' }
             ]
           },
           {
@@ -656,7 +656,7 @@
               '<strong>MCP クライアント</strong>（Goose、Cline、Continue.dev、LM Studio）は橋渡し役。モデルのツールコールを適切なサーバーにルーティングし、結果を会話に戻す。',
               '<strong>MCP サーバー</strong>は機能ごとに独立したサブプロセス。stdio 経由で JSON-RPC 2.0 を話す。各サーバーが Tools・Resources・Prompts を公開。',
               '<strong>stdio トランスポートですべてをローカルに保つ。</strong>サーバーはクライアントからサブプロセスとして起動され、stdin/stdout で通信。ネットワークを通過しない（ブラウザサーバーを除く）。',
-              '<strong>モデルは一つのフラットなツールリストを見る。</strong>モデルからはサーバーの概念がなく filesystem.read_file や sqlite.query といったツール名のみが見える。ルーティングはクライアントが担当。'
+              '<strong>モデルは一つのフラットなツールリストを見る。</strong>モデルからはサーバーの概念がなく filesystem.read_file、playwright.browser_navigate、github.create_pull_request といったツール名のみが見える。ルーティングはクライアントが担当。'
             ]
           },
           {
@@ -664,10 +664,10 @@
             h2: 'セットアップ：Ollama + Goose を 15 分で',
             items: [
               '<strong>Ollama をインストール。</strong>ollama.com/download からダウンロード（macOS/Windows/Linux）。確認：curl http://127.0.0.1:11434/api/tags',
-              '<strong>ツールコール対応モデルを取得。</strong>選択肢：gemma4:27b、glm5:32b、qwen3:32b、llama3.3:70b。27B〜32B は Q4_K_M で 16 GB ユニファイドメモリに収まる。',
-              '<strong>Goose をインストール。</strong>pipx install goose-ai（macOS/Linux）またはリリースページからインストーラーをダウンロード。',
-              '<strong>Ollama をプロバイダーとして設定。</strong>goose configure → ollama を選択 → モデルとホスト（http://127.0.0.1:11434）を設定。',
-              '<strong>filesystem MCP サーバーを追加。</strong>~/.config/goose/config.yaml を編集して mcpServers ブロックを追加し、goose session を再起動。',
+              '<strong>ツールコール対応モデルを取得。</strong>選択肢：gemma4:31b、glm-4.7-flash、qwen3.6:27b、qwen3:32b、llama3.3:70b。32 GB ユニファイドメモリまたは 24 GB VRAM があれば、26B〜32B を Q4_K_M で快適に動かせます。',
+              '<strong>Goose をインストール。</strong>curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash（macOS/Linux）、または brew install block-goose-cli を実行します。',
+              '<strong>Ollama をプロバイダーとして設定。</strong>goose configure → ollama を選択 → モデルとホスト（http://127.0.0.1:11434）を設定。Ollama は OLLAMA_CONTEXT_LENGTH=32768 以上で起動します。',
+              '<strong>filesystem MCP サーバーを追加。</strong>goose configure → Add Extension を選ぶか、~/.config/goose/config.yaml に extensions ブロック（type stdio、cmd、args、envs、timeout）を追加します（記事を参照）。',
               '<strong>実際のタスクで確認。</strong>「notes/ の全 Markdown ファイルをタイトルと文字数とともに一覧にし、notes/index.md に書き込め。」動作するループは読み取り・要約・書き込みを実行する。'
             ]
           },
@@ -677,19 +677,19 @@
             items: [
               '<strong>Filesystem サーバー</strong>（@modelcontextprotocol/server-filesystem）：read_file、write_file、list_directory、search_files、directory_tree — すべて allow-list パスに限定。',
               '<strong>パスは狭く限定する。</strong>~ や / は絶対に許可しない。専用の agent-workspace/ を作成。エラーが起きても被害はそのフォルダ内で止まる。',
-              '<strong>SQLite サーバー</strong>（@modelcontextprotocol/server-sqlite）：.db ファイルのパスを指定。ツール：query、list_tables、describe_table。デフォルト read-only。',
-              '<strong>Postgres サーバー</strong>（@modelcontextprotocol/server-postgres）：接続文字列を指定。SELECT 権限のみ持つ agent_ro ロールと 30 秒の statement_timeout を設定。',
-              '<strong>スキーマ認識が重要。</strong>分析的な質問の前に「テーブルを説明せよ」と依頼する — カラム名を推測させるより精度が大幅に向上。'
+              '<strong>Postgres サーバー</strong>（postgres-mcp）：--access-mode=restricted で起動し、URI を DATABASE_URI に渡します。restricted モードでは read-only トランザクションとクエリ時間制限が適用されます。',
+              '<strong>read-only ロールも併用。</strong>SELECT 権限のみの専用 agent_ro ロールと 30 秒の statement_timeout を作成します。',
+              '<strong>SQLite：リファレンスサーバーはアーカイブ済み。</strong>修正は提供されません。ファイルのコピーにのみ向けるか、データを Postgres に読み込んでください。'
             ]
           },
           {
             type: 'list',
             h2: 'ブラウザ・GitHub サーバー',
             items: [
-              '<strong>Puppeteer サーバー</strong>（@modelcontextprotocol/server-puppeteer）：navigate、screenshot、click、fill、evaluate（JS）、get_page_content。デフォルトでヘッドレス。',
+              '<strong>Playwright MCP</strong>（@playwright/mcp）：browser_navigate、browser_snapshot、browser_click、browser_type、browser_fill_form、browser_evaluate。旧 Puppeteer サーバーはサポート終了です。',
               '<strong>レイテンシ警告：</strong>実際のブラウザセッションはアクション 1 回に 1〜5 秒かかる。複数ステップの閲覧で 30K 以上のトークンを容易に消費。32K+ コンテキストを使用。',
               '<strong>ブラウザサーバーに認証情報を渡さない。</strong>バンキング・メール・クラウドコンソールへのアクセスは禁止。モデルはテキストを見てクリックするだけで判断力はない。',
-              '<strong>GitHub サーバー</strong>（@modelcontextprotocol/server-github）：リポジトリ検索、ファイル読み取り、PR 作成、Issue 一覧。GITHUB_PERSONAL_ACCESS_TOKEN 環境変数に PAT を設定するだけ。',
+              '<strong>GitHub サーバー</strong>（公式 github/github-mcp-server、Docker で実行）：リポジトリ検索、ファイル読み取り、PR 作成、Issue 一覧。GITHUB_PERSONAL_ACCESS_TOKEN 環境変数に PAT を設定します。',
               '<strong>PAT の範囲を限定。</strong>特定のテストリポジトリに限定したファイングレイン PAT を使用。実験的なエージェントにフル repo スコープの古典的 PAT は使わない。'
             ]
           },
@@ -724,9 +724,9 @@
             h2: 'ツールコール対応モデルの選び方',
             intro: 'ツールコールの信頼性はモデルサイズとトレーニングに比例し、クライアントには依存しない。',
             items: [
-              '<strong>Gemma 4 27B</strong>（gemma4:27b）— このサイズで最高クラスのツールコールトレーニング。Q4_K_M で 16 GB ユニファイドメモリに収まる。',
-              '<strong>GLM-4.7 32B</strong>（glm5:32b）— 非常に高いツールコール信頼性、128K コンテキスト標準搭載。24 GB GPU に対応。',
-              '<strong>Qwen3 32B</strong>（qwen3:32b）— バランスが良く長いエージェントループで MCP をクリーンに処理。コード系タスクには Qwen3-Coder 30B が最適。',
+              '<strong>Gemma 4 31B</strong>（gemma4:31b）— このサイズで最高クラスのツールコールトレーニング。Q4_K_M で 16 GB ユニファイドメモリまたは 24 GB VRAM に収まる。',
+              '<strong>GLM-4.7 Flash</strong>（glm-4.7-flash）— 非常に高いツールコール信頼性、128K コンテキスト標準搭載。24 GB GPU に余裕で収まる。',
+              '<strong>Qwen3.6 27B</strong>（qwen3.6:27b）と <strong>Qwen3 32B</strong>（qwen3:32b）— バランスが良く長いエージェントループで MCP をクリーンに処理。コード系タスクには Qwen3-Coder 30B が最適。',
               '<strong>Llama 3.3 70B</strong>（llama3.3:70b）— 最高性能だが最も重い。Q4_K_M で 48 GB+ ユニファイドメモリまたは 2x 24 GB GPU が必要。',
               '<strong>MCP での使用を避けるもの：</strong>7B 未満のモデルおよびツールコールの明示的トレーニングなしの汎用モデル。不正なツールコールを出力してループを停止させる。'
             ]
@@ -768,8 +768,8 @@
             items: [
               '<strong>MCP 是工具调用的 JSON-RPC 2.0 协议。</strong>客户端连接到公开 Tools、Resources 和 Prompts 的服务器。Claude Desktop、Goose、Cline、Continue.dev 或 LM Studio 下的接线格式完全相同。',
               '<strong>Ollama 本身不支持 MCP。</strong>需要 MCP 客户端（Goose、Cline、Continue.dev、LM Studio）封装 Ollama，将工具调用路由到 MCP 服务器。',
-              '<strong>四个参考服务器覆盖大多数场景：</strong>filesystem（沙箱读写）、sqlite 和 postgres（只读查询）、puppeteer/playwright（无头浏览器）、github（仓库和 PR 管理）。',
-              '<strong>工具调用可靠性随模型规模和训练提升。</strong>Gemma 4 27B、GLM-4.7 32B、Qwen3 32B、Llama 3.3 70B 能干净处理 MCP。7B 以下模型频繁输出格式错误的工具调用。'
+              '<strong>四类服务器覆盖大多数场景：</strong>filesystem（沙箱读写）、Postgres（postgres-mcp，restricted 模式）、Playwright MCP（浏览器）、GitHub（官方服务器）。SQLite、PostgreSQL、Puppeteer 和 GitHub 的旧参考服务器已归档。',
+              '<strong>工具调用可靠性随模型规模和训练提升。</strong>Gemma 4 31B、GLM-4.7 Flash、Qwen3.6 27B、Qwen3 32B、Llama 3.3 70B 能干净处理 MCP。7B 以下模型频繁输出格式错误的工具调用。'
             ]
           },
           {
@@ -788,9 +788,9 @@
             items: [
               '<strong>文件自动化：</strong>「找出这个仓库中所有 TODO，按文件分组，写入 notes/todos.md 的 Markdown 摘要。」——filesystem 读取，模型分组，服务器写入。',
               '<strong>数据分析：</strong>「本季度营收前 10 名客户是哪些？」——postgres 执行 SQL（只读），模型汇总，filesystem 写出 CSV。',
-              '<strong>Web 研究：</strong>「打开 Hacker News，找出前 3 条 AI 新闻，摘要并追加到我的阅读列表。」——puppeteer 驱动浏览器，filesystem 追加。',
+              '<strong>Web 研究：</strong>「打开 Hacker News，找出前 3 条 AI 新闻，摘要并追加到我的阅读列表。」——playwright 服务器驱动浏览器，filesystem 追加。',
               '<strong>开发工作流：</strong>「创建标题为 chore: bump deps 的草稿 PR 并关联失败的 CI 运行。」——github 服务器创建 PR。',
-              '<strong>日志分析：</strong>「events.db 中造成新错误峰值的用户 ID 是哪些？」——sqlite 查询，模型推理。'
+              '<strong>日志分析：</strong>「events.db 中造成新错误峰值的用户 ID 是哪些？」——数据库服务器查询数据副本，模型推理。'
             ]
           },
           {
@@ -799,10 +799,10 @@
             columns: ['服务器', '功能', '风险', '适用场景'],
             rows: [
               { '服务器': 'Filesystem', '功能': '在沙箱目录中读写文件', '风险': '中等——严格限定路径', '适用场景': '文件自动化、仓库摘要' },
-              { '服务器': 'SQLite', '功能': '查询本地 .db 文件', '风险': '低（只读）', '适用场景': '日志分析、原型开发' },
-              { '服务器': 'Postgres', '功能': '通过连接字符串查询 Postgres', '风险': '中等——使用只读角色', '适用场景': '数据探索、报表生成' },
-              { '服务器': 'Puppeteer', '功能': '驱动无头 Chromium', '风险': '高——可提交表单', '适用场景': '研究、抓取、测试' },
-              { '服务器': 'GitHub', '功能': '列出仓库、创建 Issue 和 PR', '风险': '中等——限制 PAT 范围', '适用场景': '开发工作流、PR 草稿' }
+              { '服务器': 'SQLite（已归档）', '功能': '查询本地 SQLite 文件', '风险': '中等——无后续修复，使用副本', '适用场景': '仅限一次性数据探索' },
+              { '服务器': 'Postgres（postgres-mcp）', '功能': '以 restricted（只读）模式查询 Postgres', '风险': '中等——restricted 模式加只读角色', '适用场景': '数据探索、报表生成' },
+              { '服务器': 'Playwright（@playwright/mcp）', '功能': '通过无障碍快照驱动浏览器', '风险': '高——可提交表单', '适用场景': '研究、抓取、测试' },
+              { '服务器': 'GitHub（官方）', '功能': '列出仓库、创建 Issue 和 PR', '风险': '中等——限制 PAT 范围', '适用场景': '开发工作流、PR 草稿' }
             ]
           },
           {
@@ -813,7 +813,7 @@
               '<strong>MCP 客户端</strong>（Goose、Cline、Continue.dev、LM Studio）是桥梁。当模型输出工具调用时，客户端将其路由到正确的服务器，获取结果并反馈给模型。',
               '<strong>MCP 服务器</strong>是独立的子进程，每个功能一个。通过 stdio 进行 JSON-RPC 2.0 通信。每个服务器公开其 Tools、Resources 和 Prompts。',
               '<strong>stdio 传输使一切保持本地。</strong>服务器由客户端启动，通过 stdin/stdout 通信，客户端退出时服务器也退出。除非服务器本身需要（如浏览器服务器），否则不经过网络。',
-              '<strong>模型看到的是一个扁平工具列表。</strong>从模型视角看，只有 filesystem.read_file、sqlite.query、puppeteer.navigate 等工具名称。路由由客户端处理。'
+              '<strong>模型看到的是一个扁平工具列表。</strong>从模型视角看，只有 filesystem.read_file、playwright.browser_navigate、github.create_pull_request 等工具名称。路由由客户端处理。'
             ]
           },
           {
@@ -821,10 +821,10 @@
             h2: '配置：Ollama + Goose 15 分钟完成',
             items: [
               '<strong>安装 Ollama。</strong>从 ollama.com/download 下载（macOS/Windows/Linux）。验证：curl http://127.0.0.1:11434/api/tags',
-              '<strong>拉取 tool calling 模型。</strong>选择：gemma4:27b、glm5:32b、qwen3:32b 或 llama3.3:70b。27B～32B 在 Q4_K_M 下需 16 GB 统一内存。',
-              '<strong>安装 Goose。</strong>执行 pipx install goose-ai（macOS/Linux），或从 Goose 发布页下载安装包。',
+              '<strong>拉取 tool calling 模型。</strong>选择：gemma4:31b、glm-4.7-flash、qwen3.6:27b、qwen3:32b 或 llama3.3:70b。32 GB 统一内存或 24 GB 显存可在 Q4_K_M 下流畅运行 26B～32B。',
+              '<strong>安装 Goose。</strong>执行 curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash（macOS/Linux），或 brew install block-goose-cli。',
               '<strong>将 Ollama 配置为提供商。</strong>运行 goose configure → 选择 ollama → 设置模型和主机（http://127.0.0.1:11434）。',
-              '<strong>添加 filesystem MCP 服务器。</strong>编辑 ~/.config/goose/config.yaml，添加 mcpServers 块，重启 goose session。',
+              '<strong>添加 filesystem MCP 服务器。</strong>执行 goose configure → Add Extension，或在 ~/.config/goose/config.yaml 中添加 extensions 块（type stdio、cmd、args、envs、timeout，详见文章）。',
               '<strong>用真实任务验证。</strong>「列出 notes/ 中所有 Markdown 文件的标题和字数，写入 notes/index.md。」正常工作的循环应该能读取、汇总并写回。'
             ]
           },
@@ -834,19 +834,19 @@
             items: [
               '<strong>Filesystem 服务器</strong>（@modelcontextprotocol/server-filesystem）：read_file、write_file、list_directory、search_files、directory_tree——均限定在白名单路径内。',
               '<strong>只白名单窄路径。</strong>永远不允许 ~ 或 /。创建专用的 agent-workspace/ 文件夹。出错时影响范围仅限该目录。',
-              '<strong>SQLite 服务器</strong>（@modelcontextprotocol/server-sqlite）：指定 .db 文件路径。工具：query、list_tables、describe_table。默认只读。',
-              '<strong>Postgres 服务器</strong>（@modelcontextprotocol/server-postgres）：连接字符串。创建专用 agent_ro 角色，仅授予 SELECT 权限，并设置 30 秒 statement_timeout。',
-              '<strong>Schema 感知至关重要。</strong>在提问分析性问题前，先让智能体描述表结构——比让它猜测列名精准得多。'
+              '<strong>Postgres 服务器</strong>（postgres-mcp）：以 --access-mode=restricted 启动，并通过 DATABASE_URI 传入连接 URI。restricted 模式只允许只读事务并限制查询时间。',
+              '<strong>同时使用只读角色。</strong>创建专用 agent_ro 角色，仅授予 SELECT 权限，并设置 30 秒 statement_timeout。',
+              '<strong>SQLite：参考服务器已归档。</strong>它不再获得修复。只指向文件副本，或改为把数据加载到 Postgres。'
             ]
           },
           {
             type: 'list',
             h2: '浏览器与 GitHub 服务器',
             items: [
-              '<strong>Puppeteer 服务器</strong>（@modelcontextprotocol/server-puppeteer）：navigate、screenshot、click、fill、evaluate（JS）、get_page_content。默认无头模式。',
+              '<strong>Playwright MCP</strong>（@playwright/mcp）：browser_navigate、browser_snapshot、browser_click、browser_type、browser_fill_form、browser_evaluate。旧的 Puppeteer 服务器已不再受支持。',
               '<strong>延迟警告：</strong>真实浏览器会话每个操作需 1～5 秒。多步骤浏览可轻松消耗 3 万多 token。使用 32K+ 上下文。',
               '<strong>永远不要给浏览器服务器提供凭据。</strong>不得访问银行、邮件或云控制台。模型只是看到文字然后点击，没有任何判断力。',
-              '<strong>GitHub 服务器</strong>（@modelcontextprotocol/server-github）：搜索仓库、读取文件、创建 PR 和 Issue。只需在 GITHUB_PERSONAL_ACCESS_TOKEN 环境变量中设置 PAT。',
+              '<strong>GitHub 服务器</strong>（官方 github/github-mcp-server，通过 Docker 运行）：搜索仓库、读取文件、创建 PR 和 Issue。需在 GITHUB_PERSONAL_ACCESS_TOKEN 环境变量中设置 PAT。',
               '<strong>严格限制 PAT 范围。</strong>使用范围限定为特定测试仓库的细粒度 PAT，权限最小化。实验性智能体不要使用全仓库范围的经典 PAT。'
             ]
           },
@@ -881,9 +881,9 @@
             h2: '选择 Tool Calling 模型',
             intro: '工具调用可靠性取决于模型规模和训练，与客户端无关。',
             items: [
-              '<strong>Gemma 4 27B</strong>（gemma4:27b）——该规模下最佳 tool calling 训练。Q4_K_M 下 16 GB 统一内存可运行。',
-              '<strong>GLM-4.7 32B</strong>（glm5:32b）——工具调用可靠性极高，原生 128K 上下文。兼容 24 GB GPU。',
-              '<strong>Qwen3 32B</strong>（qwen3:32b）——均衡全面，长智能体循环中干净处理 MCP。代码类任务首选 Qwen3-Coder 30B。',
+              '<strong>Gemma 4 31B</strong>（gemma4:31b）——该规模下最佳 tool calling 训练。Q4_K_M 下 16 GB 统一内存或 24 GB 显存可运行。',
+              '<strong>GLM-4.7 Flash</strong>（glm-4.7-flash）——工具调用可靠性极高，原生 128K 上下文。可在 24 GB GPU 上流畅运行。',
+              '<strong>Qwen3.6 27B</strong>（qwen3.6:27b）和 <strong>Qwen3 32B</strong>（qwen3:32b）——均衡全面，长智能体循环中干净处理 MCP。代码类任务首选 Qwen3-Coder 30B。',
               '<strong>Llama 3.3 70B</strong>（llama3.3:70b）——上限最高但最重。Q4_K_M 下需 48 GB+ 统一内存或 2x 24 GB GPU。',
               '<strong>MCP 中应避免使用：</strong>7B 以下的模型以及没有显式 tool calling 训练的通用模型。它们会输出格式错误的调用，导致循环卡死。'
             ]

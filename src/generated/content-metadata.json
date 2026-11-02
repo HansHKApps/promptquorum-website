@@ -6582,8 +6582,8 @@
       ],
       "images": []
     },
-    "local-ai-agents-with-mcp-2026": {
-      "dateModified": "2026-08-27",
+    "local-ai-agents-with-mcp": {
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6601,11 +6601,11 @@
       "images": [
         {
           "url": "/images/local-ai-agents-with-mcp-2026-mcp-architecture-en.svg",
-          "title": "MCP architecture diagram: Ollama serves the local model, an MCP client (Goose, Cline, Continue.dev, or LM Studio) bridges to MCP servers over stdio using JSON-RPC 2.0, and four reference servers — filesystem, SQLite/Postgres, browser, and GitHub — expose the actual tools."
+          "title": "MCP architecture diagram: Ollama serves the local model, an MCP client (Goose, Cline, Continue.dev, or LM Studio) bridges to MCP servers over stdio using JSON-RPC 2.0, and four kinds of server — filesystem, database, browser, and GitHub — expose the actual tools."
         },
         {
           "url": "/images/local-ai-agents-with-mcp-2026-setup-flow-en.svg",
-          "title": "Six-step Ollama and Goose setup flow: install Ollama, pull a tool-calling model like gemma4:31b, install Goose via pipx, configure the provider, add the filesystem MCP server, and verify with a real task in about 15 minutes."
+          "title": "Six-step Ollama and Goose setup flow: install Ollama, pull a tool-calling model like gemma4:31b, install Goose with the official script, configure the provider, add the filesystem MCP server, and verify with a real task in about 15 minutes."
         }
       ]
     },

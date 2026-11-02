@@ -64,7 +64,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'privategpt-review',
 
   // Cat 4 — Agents & Automation
-  'local-ai-agents-with-mcp-2026',
+  'local-ai-agents-with-mcp',
   'autonomous-local-agents-actually-work',
   'local-ai-agents-business-workflows-eu-compliance',
   'replace-zapier-with-local-ai-agents',
