@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 4.600239212439047e-05,
+      "ctr": 0.00004600239212439047,
       "period": "last 90 days"
     }
   },
@@ -12459,6 +12459,369 @@
       "impressions": 920,
       "clicks": 0,
       "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "5a86b001-7963-4809-8293-574cb4af7aac",
+    "slug": "/power-local-llm/risuai-review",
+    "date": "2026-11-02T10:14:43.725Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "RisuAI is a free, open-source (GPL-3.0) roleplay chat client with a web app, Tauri desktop app, and self-hosted server. Verified facts, install steps, and comparisons for 2026.",
+        "new": "Free, open-source (GPL-3.0) roleplay chat client: web app, desktop, Docker. Verified install steps, Android status, pricing and SillyTavern comparison."
+      },
+      {
+        "field": "targetKeywords",
+        "old": "'RisuAI review', 'RisuAI install', 'RisuAI vs SillyTavern', 'RisuAI Lorebook', 'open-source roleplay chat client',",
+        "new": "'RisuAI review', 'RisuAI install', 'RisuAI vs SillyTavern', 'RisuAI Lorebook', 'open-source roleplay chat client', 'RisuAI Android', 'RisuAI Docker',"
+      },
+      {
+        "field": "sections",
+        "old": "no Android/iPhone, Docker or README-extras sections",
+        "new": "added extraFeatures, mobile, docker sections + 3 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "117-word lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh (review-top100 pilot): version/last-update + typed star count replaced by directory data, new sections (Android/iPhone, Docker, README extras), lead answer cut to 41 words for Rule 31/36, meta rewritten around Android/Docker coverage. GSC: top query is the bare product name (navigational).",
+    "queries": [
+      "risuai",
+      "risu ai",
+      "risuai android",
+      "risuai app",
+      "risuai vs sillytavern",
+      "hypamemory"
+    ],
+    "baseline": {
+      "position": 7.4,
+      "impressions": 3801,
+      "clicks": 7,
+      "ctr": 0.001841620626151013,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "63e890c7-8339-4d93-847a-e464d1d6c974",
+    "slug": "/de/power-local-llm/risuai-review",
+    "date": "2026-11-02T10:14:43.759Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "RisuAI Review: Client, Installation & Preise",
+        "new": "RisuAI Review: Rollenspiel-Client, Installation & Preise"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RisuAI ist ein kostenloser, quelloffener (GPL-3.0) Rollenspiel-Chat-Client mit Web-App, Tauri-Desktop-App und selbst gehostetem Server. Geprüfte Fakten, Installation und Vergleiche für 2026.",
+        "new": "Kostenloser, quelloffener (GPL-3.0) Rollenspiel-Chat-Client: Web, Desktop, Docker. Geprüfte Installation, Android-Status, Preise, SillyTavern-Vergleich."
+      },
+      {
+        "field": "sections",
+        "old": "no Android/iPhone, Docker or README-extras sections",
+        "new": "added extraFeatures, mobile, docker sections + 3 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "117-word lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: title/meta brought inside locale budget (data-free review for this locale, too few queries), new sections translated, lead answer shortened.",
+    "queries": [
+      "risuai",
+      "risu ai"
+    ],
+    "baseline": {
+      "position": 6.05,
+      "impressions": 196,
+      "clicks": 2,
+      "ctr": 0.01020408163265306,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "436d4278-5d76-41d2-81f0-031534450d7a",
+    "slug": "/fr/power-local-llm/risuai-review",
+    "date": "2026-11-02T10:14:43.788Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Avis RisuAI: client, installation et tarifs",
+        "new": "Avis RisuAI : client de jeu de rôle, installation, tarifs"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RisuAI est un client de chat de jeu de rôle gratuit et open source (GPL-3.0) avec application web, application de bureau Tauri et serveur auto-hébergé. Faits vérifiés, installation et comparaisons pour 2026.",
+        "new": "Client de chat de jeu de rôle gratuit et open source (GPL-3.0) : web, bureau, Docker. Installation vérifiée, Android, tarifs et comparatif SillyTavern."
+      },
+      {
+        "field": "sections",
+        "old": "no Android/iPhone, Docker or README-extras sections",
+        "new": "added extraFeatures, mobile, docker sections + 3 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "117-word lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: title/meta brought inside locale budget (data-free review for this locale, too few queries), new sections translated, lead answer shortened.",
+    "queries": [
+      "risuai",
+      "risuai android"
+    ],
+    "baseline": {
+      "position": 6.1,
+      "impressions": 127,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a8becfa3-6a52-428b-b50d-6451c15a060d",
+    "slug": "/es/power-local-llm/risuai-review",
+    "date": "2026-11-02T10:14:43.816Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Reseña RisuAI: cliente, instalación y precios",
+        "new": "Reseña de RisuAI: cliente de rol, instalación y precios"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RisuAI es un cliente de chat de rol gratuito y de código abierto (GPL-3.0) con app web, app de escritorio Tauri y servidor autoalojado. Datos verificados, instalación y comparativas para 2026.",
+        "new": "Cliente de chat de rol gratuito y open source (GPL-3.0): web, escritorio, Docker. Instalación verificada, Android, precios y comparativa con SillyTavern."
+      },
+      {
+        "field": "sections",
+        "old": "no Android/iPhone, Docker or README-extras sections",
+        "new": "added extraFeatures, mobile, docker sections + 3 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "117-word lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: title/meta brought inside locale budget (data-free review for this locale, too few queries), new sections translated, lead answer shortened.",
+    "queries": [
+      "risuai",
+      "risu ai",
+      "risuai android",
+      "hypamemory"
+    ],
+    "baseline": {
+      "position": 6.1,
+      "impressions": 430,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "05481ba3-3a0c-4308-ad38-8ad19e3219b2",
+    "slug": "/pt/power-local-llm/risuai-review",
+    "date": "2026-11-02T10:14:43.844Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Análise RisuAI: cliente, instalação e preços",
+        "new": "Análise do RisuAI: cliente de roleplay, instalação, preços"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RisuAI é um cliente de chat de roleplay gratuito e open source (GPL-3.0) com app web, app desktop Tauri e servidor autogerenciado. Fatos verificados, instalação e comparações para 2026.",
+        "new": "Cliente de chat de roleplay gratuito e open source (GPL-3.0): web, desktop, Docker. Instalação verificada, Android, preços e comparação com SillyTavern."
+      },
+      {
+        "field": "sections",
+        "old": "no Android/iPhone, Docker or README-extras sections",
+        "new": "added extraFeatures, mobile, docker sections + 3 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "117-word lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: title/meta brought inside locale budget (data-free review for this locale, too few queries), new sections translated, lead answer shortened.",
+    "queries": [
+      "risuai",
+      "risu ai"
+    ],
+    "baseline": {
+      "position": 6.5,
+      "impressions": 34,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a172be66-8404-4a94-ac68-c098938813a6",
+    "slug": "/ja/power-local-llm/risuai-review",
+    "date": "2026-11-02T10:14:43.872Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "RisuAIレビュー:クライアント・導入・料金",
+        "new": "RisuAIレビュー:ロールプレイ用クライアントの導入・料金"
+      },
+      {
+        "field": "sections",
+        "old": "no Android/iPhone, Docker or README-extras sections",
+        "new": "added extraFeatures, mobile, docker sections + 3 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "117-word lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: title/meta brought inside locale budget (data-free review for this locale, too few queries), new sections translated, lead answer shortened.",
+    "queries": [
+      "risuai"
+    ],
+    "baseline": {
+      "position": 3.08,
+      "impressions": 13,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c6309d70-3d25-4888-9916-31ed53a25665",
+    "slug": "/zh/power-local-llm/risuai-review",
+    "date": "2026-11-02T10:14:43.900Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "RisuAI评测:客户端、安装与定价",
+        "new": "RisuAI评测:角色扮演聊天客户端的安装与定价"
+      },
+      {
+        "field": "sections",
+        "old": "no Android/iPhone, Docker or README-extras sections",
+        "new": "added extraFeatures, mobile, docker sections + 3 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "117-word lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: title/meta brought inside locale budget (data-free review for this locale, too few queries), new sections translated, lead answer shortened.",
+    "queries": [
+      "risuai",
+      "risuai 中文"
+    ],
+    "baseline": {
+      "position": 6.1,
+      "impressions": 41,
+      "clicks": 3,
+      "ctr": 0.07317073170731707,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "eae09d3d-83ca-475e-9244-00375a7d1384",
+    "slug": "/ar/power-local-llm/risuai-review",
+    "date": "2026-11-02T10:14:43.928Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة RisuAI: العميل والتثبيت والأسعار",
+        "new": "مراجعة RisuAI: عميل لعب الأدوار والتثبيت والأسعار"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RisuAI هو عميل دردشة مجاني ومفتوح المصدر (GPL-3.0) للعب الأدوار، يوفر تطبيق ويب وتطبيق سطح مكتب Tauri وخادمًا مستضافًا ذاتيًا. حقائق موثقة وخطوات تثبيت ومقارنات لعام 2026.",
+        "new": "عميل دردشة مجاني ومفتوح المصدر (GPL-3.0) للعب الأدوار: ويب وسطح مكتب وDocker. تثبيت موثّق وحالة Android والأسعار ومقارنة مع SillyTavern."
+      },
+      {
+        "field": "sections",
+        "old": "no Android/iPhone, Docker or README-extras sections",
+        "new": "added extraFeatures, mobile, docker sections + 3 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "117-word lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: title/meta brought inside locale budget (data-free review for this locale, too few queries), new sections translated, lead answer shortened.",
+    "queries": [
+      "risuai"
+    ],
+    "baseline": {
+      "position": 7.3,
+      "impressions": 52,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8030a3cd-2aba-436b-84ae-887e14d431ee",
+    "slug": "/ko/power-local-llm/risuai-review",
+    "date": "2026-11-02T10:14:43.956Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "RisuAI 리뷰: 클라이언트, 설치, 가격",
+        "new": "RisuAI 리뷰: 모바일 사용, 무료 여부, 가격, 설치법"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RisuAI는 웹 앱, Tauri 데스크톱 앱, 자체 호스팅 서버를 갖춘 무료 오픈소스(GPL-3.0) 롤플레이 채팅 클라이언트입니다. 2026년 검증된 사실, 설치 단계, 비교 정보.",
+        "new": "RisuAI는 웹 앱, Tauri 데스크톱 앱, Docker 자체 호스팅을 지원하는 무료 오픈소스(GPL-3.0) 롤플레이 클라이언트입니다. 모바일 사용, 가격, 설치 단계를 정리했습니다."
+      },
+      {
+        "field": "targetKeywords",
+        "old": "'RisuAI 리뷰', 'RisuAI 설치', 'RisuAI vs SillyTavern', 'RisuAI Lorebook', '오픈소스 롤플레이 채팅 클라이언트',",
+        "new": "'RisuAI 리뷰', 'RisuAI 모바일', 'RisuAI 무료', 'RisuAI 가격', 'RisuAI 다운로드', 'RisuAI 로컬',"
+      },
+      {
+        "field": "sections",
+        "old": "no Android/iPhone, Docker or README-extras sections",
+        "new": "added extraFeatures, mobile, docker sections + 3 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "117-word lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: ko title/meta/keywords adapted to ko queries (모바일, 무료, 가격, 로컬, 다운로드) plus the same new sections and lead-answer shortening.",
+    "queries": [
+      "risuai",
+      "risuai 모바일",
+      "risu ai 무료",
+      "risu ai 가격",
+      "risuai 로컬",
+      "risuai 다운로드"
+    ],
+    "baseline": {
+      "position": 6.44,
+      "impressions": 4988,
+      "clicks": 25,
+      "ctr": 0.005012028869286287,
       "period": "28d to 2026-11-01"
     },
     "deployedAt": null
