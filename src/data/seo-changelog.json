@@ -10302,5 +10302,302 @@
       "period": "28d to 2026-11-01"
     },
     "deployedAt": null
+  },
+  {
+    "id": "5a922094-191f-40d7-9ed2-8b9d6fac4861",
+    "slug": "/local-llms/local-llm-vs-cloud-gpu-cost",
+    "date": "2026-11-02T14:17:24.659Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Local LLM vs Cloud GPU Cost: Paperspace, Lambda Labs, AWS Comparison 2026",
+        "new": "Local GPU vs Cloud GPU Cost for LLMs: Break-Even 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Local GPU vs cloud compute: cost per hour, breakeven analysis. Lambda Labs, Paperspace, AWS.",
+        "new": "Local GPU vs cloud GPU cost for LLMs: break-even hours using RunPod, Lambda and AWS prices read 2 November 2026, plus the formula to redo it."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4. Page rebuilt on prices re-read 2026-11-02 (RunPod, Lambda, DigitalOcean, AWS via Vantage): old figures (Lambda RTX 4090 $2.50/hr, Paperspace A100 $0.60/hr, AWS g4dn V100 $0.98/hr) were not supported by provider pages. DE/FR/JA/ZH replaced by translations of the same article (they were a different enterprise-TCO text). Titles/metas/leads into locale budgets.",
+    "queries": [
+      "cloud gpu for llm",
+      "gpu cloud vs buying your own gpus",
+      "cloud gpu cost",
+      "ローカルllm 料金",
+      "ローカルllm 費用"
+    ],
+    "baseline": {
+      "position": 7.21,
+      "impressions": 513,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "beded68a-0b65-486b-b0ff-e34c8a3ae082",
+    "slug": "/de/local-llms/local-llm-vs-cloud-gpu-cost",
+    "date": "2026-11-02T14:17:24.691Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Local LLMs vs. Cloud-GPUs: Kostenvergleich 2026",
+        "new": "Lokale GPU vs. Cloud-GPU für LLMs: Kosten-Break-even 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Gesamtbetriebskosten von Local LLMs vs. Cloud-GPU-Lösungen. TCO-Vergleich, ROI-Analyse und Kostenoptimierung für Unternehmen.",
+        "new": "Lokale GPU oder Cloud-GPU für LLMs: Break-even-Stunden mit RunPod-, Lambda- und AWS-Preisen vom 2. November 2026 und die Formel zum Nachrechnen."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4. Page rebuilt on prices re-read 2026-11-02 (RunPod, Lambda, DigitalOcean, AWS via Vantage): old figures (Lambda RTX 4090 $2.50/hr, Paperspace A100 $0.60/hr, AWS g4dn V100 $0.98/hr) were not supported by provider pages. DE/FR/JA/ZH replaced by translations of the same article (they were a different enterprise-TCO text). Titles/metas/leads into locale budgets.",
+    "queries": [
+      "cloud gpu for llm",
+      "gpu cloud vs buying your own gpus",
+      "cloud gpu cost",
+      "ローカルllm 料金",
+      "ローカルllm 費用"
+    ],
+    "baseline": {
+      "position": 8.52,
+      "impressions": 91,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "be433f5e-f9fa-4079-84ac-05d709869717",
+    "slug": "/fr/local-llms/local-llm-vs-cloud-gpu-cost",
+    "date": "2026-11-02T14:17:24.724Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Local LLMs vs. GPU Cloud: Comparaison des coûts 2026",
+        "new": "GPU local vs cloud pour LLM : seuil de rentabilité 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Coût total de possession des LLM locaux vs. solutions GPU Cloud. Comparaison TCO, analyse ROI et optimisation des coûts pour les entreprises.",
+        "new": "GPU local ou cloud pour LLM : heures de rentabilité avec les prix RunPod, Lambda et AWS relevés le 2 novembre 2026, et la formule pour refaire le calcul."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4. Page rebuilt on prices re-read 2026-11-02 (RunPod, Lambda, DigitalOcean, AWS via Vantage): old figures (Lambda RTX 4090 $2.50/hr, Paperspace A100 $0.60/hr, AWS g4dn V100 $0.98/hr) were not supported by provider pages. DE/FR/JA/ZH replaced by translations of the same article (they were a different enterprise-TCO text). Titles/metas/leads into locale budgets.",
+    "queries": [
+      "cloud gpu for llm",
+      "gpu cloud vs buying your own gpus",
+      "cloud gpu cost",
+      "ローカルllm 料金",
+      "ローカルllm 費用"
+    ],
+    "baseline": {
+      "position": 8.04,
+      "impressions": 96,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "cc41aa43-4d12-40dc-b325-0a4a597ad0ea",
+    "slug": "/ja/local-llms/local-llm-vs-cloud-gpu-cost",
+    "date": "2026-11-02T14:17:24.755Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "ローカルLLMとクラウドGPU: コスト比較2026",
+        "new": "LLM向けローカルGPUとクラウドGPUの費用：損益分岐2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "ローカルLLMとクラウドGPUソリューションの総所有コスト。TCO比較、ROI分析、企業向けコスト最適化。",
+        "new": "LLM向けにローカルGPUとクラウドGPUを比較。2026年11月2日時点のRunPod・Lambda・AWSの料金で損益分岐の時間を算出し、計算式も示します。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4. Page rebuilt on prices re-read 2026-11-02 (RunPod, Lambda, DigitalOcean, AWS via Vantage): old figures (Lambda RTX 4090 $2.50/hr, Paperspace A100 $0.60/hr, AWS g4dn V100 $0.98/hr) were not supported by provider pages. DE/FR/JA/ZH replaced by translations of the same article (they were a different enterprise-TCO text). Titles/metas/leads into locale budgets.",
+    "queries": [
+      "cloud gpu for llm",
+      "gpu cloud vs buying your own gpus",
+      "cloud gpu cost",
+      "ローカルllm 料金",
+      "ローカルllm 費用"
+    ],
+    "baseline": {
+      "position": 8.79,
+      "impressions": 475,
+      "clicks": 10,
+      "ctr": 0.021052631578947368,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d99e2d54-c94f-4308-8061-6f57a1139243",
+    "slug": "/zh/local-llms/local-llm-vs-cloud-gpu-cost",
+    "date": "2026-11-02T14:17:24.785Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "本地LLM与云GPU: 2026年成本比较",
+        "new": "LLM本地GPU与云GPU成本：盈亏平衡2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "本地LLM与云GPU解决方案的总拥有成本。TCO比较、ROI分析和企业成本优化。",
+        "new": "LLM用本地GPU还是云GPU更省钱：用2026年11月2日读取的RunPod、Lambda和AWS价格算出盈亏平衡小时数，并附计算公式供你自行重算。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4. Page rebuilt on prices re-read 2026-11-02 (RunPod, Lambda, DigitalOcean, AWS via Vantage): old figures (Lambda RTX 4090 $2.50/hr, Paperspace A100 $0.60/hr, AWS g4dn V100 $0.98/hr) were not supported by provider pages. DE/FR/JA/ZH replaced by translations of the same article (they were a different enterprise-TCO text). Titles/metas/leads into locale budgets.",
+    "queries": [
+      "cloud gpu for llm",
+      "gpu cloud vs buying your own gpus",
+      "cloud gpu cost",
+      "ローカルllm 料金",
+      "ローカルllm 費用"
+    ],
+    "baseline": {
+      "position": 4.62,
+      "impressions": 8,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "cc17537e-f46c-4059-8d0d-d3bca8f13c94",
+    "slug": "/es/local-llms/local-llm-vs-cloud-gpu-cost",
+    "date": "2026-11-02T14:17:24.817Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LLM Local vs GPU en la Nube: Comparativa de Costos Paperspace, Lambda Labs, AWS 2026",
+        "new": "GPU local vs en la nube para LLM: punto de equilibrio 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "GPU local vs cómputo en la nube: costo por hora, análisis de punto de equilibrio. Lambda Labs, Paperspace, AWS.",
+        "new": "GPU local o en la nube para LLM: horas de equilibrio con precios de RunPod, Lambda y AWS del 2 de noviembre de 2026 y la fórmula para repetirlo."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4. Page rebuilt on prices re-read 2026-11-02 (RunPod, Lambda, DigitalOcean, AWS via Vantage): old figures (Lambda RTX 4090 $2.50/hr, Paperspace A100 $0.60/hr, AWS g4dn V100 $0.98/hr) were not supported by provider pages. DE/FR/JA/ZH replaced by translations of the same article (they were a different enterprise-TCO text). Titles/metas/leads into locale budgets.",
+    "queries": [
+      "cloud gpu for llm",
+      "gpu cloud vs buying your own gpus",
+      "cloud gpu cost",
+      "ローカルllm 料金",
+      "ローカルllm 費用"
+    ],
+    "baseline": {
+      "position": 5.42,
+      "impressions": 26,
+      "clicks": 1,
+      "ctr": 0.038461538461538464,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "1402f92d-b7c8-4aa6-93c0-3fb1fc282600",
+    "slug": "/pt/local-llms/local-llm-vs-cloud-gpu-cost",
+    "date": "2026-11-02T14:17:24.846Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LLM Local vs GPU na Nuvem: Comparativo de Custos Paperspace, Lambda Labs, AWS 2026",
+        "new": "GPU local vs na nuvem para LLM: ponto de equilíbrio 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "GPU local vs computação em nuvem: custo por hora, análise de ponto de equilíbrio. Lambda Labs, Paperspace, AWS.",
+        "new": "GPU local ou na nuvem para LLM: horas de equilíbrio com preços da RunPod, Lambda e AWS lidos em 2 de novembro de 2026, e a fórmula para refazer a conta."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4. Page rebuilt on prices re-read 2026-11-02 (RunPod, Lambda, DigitalOcean, AWS via Vantage): old figures (Lambda RTX 4090 $2.50/hr, Paperspace A100 $0.60/hr, AWS g4dn V100 $0.98/hr) were not supported by provider pages. DE/FR/JA/ZH replaced by translations of the same article (they were a different enterprise-TCO text). Titles/metas/leads into locale budgets.",
+    "queries": [
+      "cloud gpu for llm",
+      "gpu cloud vs buying your own gpus",
+      "cloud gpu cost",
+      "ローカルllm 料金",
+      "ローカルllm 費用"
+    ],
+    "baseline": {
+      "position": 7.22,
+      "impressions": 51,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "21e4b20b-c9fb-4eac-a214-c9337b3d84b4",
+    "slug": "/ar/local-llms/local-llm-vs-cloud-gpu-cost",
+    "date": "2026-11-02T14:17:24.884Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "⁨LLM⁩ محلي مقابل ⁨GPU⁩ سحابية ⁨2026⁩: التعادل والتكلفة",
+        "new": "تكلفة GPU محلية مقابل سحابية لـ LLM: التعادل 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "⁨RTX 4070⁩ المحلية: ⁨0.02⁩–⁨0.05⁩$/ساعة مقابل ⁨0.50⁩–⁨2.50⁩$ على ⁨Paperspace⁩ و⁨Lambda Labs⁩ و⁨AWS⁩. التعادل خلال ⁨2⁩–⁨6⁩ أشهر. السحابة أفضل للأحمال المتقطعة.",
+        "new": "GPU محلية أم سحابية لـ LLM: ساعات التعادل بأسعار RunPod وLambda وAWS المقروءة في 2 نوفمبر 2026، مع المعادلة لإعادة الحساب."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4. Page rebuilt on prices re-read 2026-11-02 (RunPod, Lambda, DigitalOcean, AWS via Vantage): old figures (Lambda RTX 4090 $2.50/hr, Paperspace A100 $0.60/hr, AWS g4dn V100 $0.98/hr) were not supported by provider pages. DE/FR/JA/ZH replaced by translations of the same article (they were a different enterprise-TCO text). Titles/metas/leads into locale budgets.",
+    "queries": [
+      "cloud gpu for llm",
+      "gpu cloud vs buying your own gpus",
+      "cloud gpu cost",
+      "ローカルllm 料金",
+      "ローカルllm 費用"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "4f541609-c4a6-4c56-b98d-9748d2e4ad4e",
+    "slug": "/ko/local-llms/local-llm-vs-cloud-gpu-cost",
+    "date": "2026-11-02T14:17:24.925Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "로컬 LLM vs 클라우드 GPU 비용: Paperspace, Lambda Labs, AWS 비교 2026",
+        "new": "LLM용 로컬 GPU vs 클라우드 GPU 비용: 손익분기 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "로컬 GPU vs 클라우드 컴퓨팅: 시간당 비용, 손익분기점 분석. Lambda Labs, Paperspace, AWS.",
+        "new": "LLM에 로컬 GPU와 클라우드 GPU 중 무엇이 저렴한지, 2026년 11월 2일 확인한 RunPod·Lambda·AWS 가격으로 손익분기 시간을 계산하고 공식도 제공합니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4. Page rebuilt on prices re-read 2026-11-02 (RunPod, Lambda, DigitalOcean, AWS via Vantage): old figures (Lambda RTX 4090 $2.50/hr, Paperspace A100 $0.60/hr, AWS g4dn V100 $0.98/hr) were not supported by provider pages. DE/FR/JA/ZH replaced by translations of the same article (they were a different enterprise-TCO text). Titles/metas/leads into locale budgets.",
+    "queries": [
+      "cloud gpu for llm",
+      "gpu cloud vs buying your own gpus",
+      "cloud gpu cost",
+      "ローカルllm 料金",
+      "ローカルllm 費用"
+    ],
+    "baseline": {
+      "position": 7.87,
+      "impressions": 31,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
   }
 ]
