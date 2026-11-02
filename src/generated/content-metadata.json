@@ -938,7 +938,7 @@
       "images": []
     },
     "nextchat-review": {
-      "dateModified": "2026-09-11",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-11",
       "hasSections": true,
@@ -7774,7 +7774,7 @@
       "images": []
     },
     "enterprise-rag-vector-database-deployment-guide-2026": {
-      "dateModified": "2026-10-09",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
       "hasSections": true,
@@ -8071,7 +8071,7 @@
       "images": []
     },
     "enterprise-llm-inference-servers-vllm-tgi-nim-2026": {
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-02",
       "hasSections": true,
@@ -8086,12 +8086,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/enterprise-llm-inference-servers-comparison-en.svg",
-          "title": "vLLM (Apache 2.0, PagedAttention, tensor + pipeline parallel) vs TGI (Apache 2.0, Rust router, HF-native) vs NVIDIA NIM (paid, TensorRT-LLM, SLA support) vs Ollama (MIT, single-node, not multi-tenant)."
-        }
-      ]
+      "images": []
     },
     "dify-ai-workflow-builder-review": {
       "dateModified": "2026-10-30",
@@ -8400,7 +8395,7 @@
       "images": []
     },
     "pydantic-ai-review": {
-      "dateModified": "2026-09-11",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-11",
       "hasSections": true,
@@ -11483,7 +11478,7 @@
       "images": []
     },
     "facet-review": {
-      "dateModified": "2026-10-28",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-10-28",
       "hasSections": true,

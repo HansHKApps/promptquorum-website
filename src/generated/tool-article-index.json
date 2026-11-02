@@ -11,6 +11,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "nextchat-review",
+        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
+        "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "page-assist-review",
         "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
         "url": "/local-llms/page-assist-review",
@@ -22,6 +30,22 @@
         "slug": "babyagi-review-autonomous-agent",
         "title": "BabyAGI: What the First AI Agent Became",
         "url": "/power-local-llm/babyagi-review-autonomous-agent",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
+        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
+        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "facet-review",
+        "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
+        "url": "/power-local-llm/facet-review",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -43,42 +67,18 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "pydantic-ai-review",
+        "title": "Pydantic AI Review: Features, Structured Outputs, Alternatives",
+        "url": "/power-local-llm/pydantic-ai-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "self-hosted-ai-starter-kit-review",
         "title": "Self-Hosted AI Starter Kit Review: n8n + Ollama + Qdrant in One Compose File",
         "url": "/power-local-llm/self-hosted-ai-starter-kit-review",
         "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "weaviate-review",
-        "title": "Weaviate Review: The Self-Hostable Vector Database for RAG",
-        "url": "/power-local-llm/weaviate-review",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "hillnote-review",
-        "title": "Hillnote Review: Local-First Markdown Notes With On-Device AI",
-        "url": "/power-local-llm/hillnote-review",
-        "dateModified": "2026-11-01",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "home-generative-agent-review",
-        "title": "Home Generative Agent Review: AI Agent for Home Assistant",
-        "url": "/power-local-llm/home-generative-agent-review",
-        "dateModified": "2026-11-01",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llm-vision-review",
-        "title": "LLM Vision Review: Camera Analysis for Home Assistant With Vision LLMs",
-        "url": "/power-local-llm/llm-vision-review",
-        "dateModified": "2026-11-01",
         "tier": "about"
       }
     ],
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
+        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
+        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -158,14 +166,6 @@
         "url": "/power-local-llm/llama-app-review",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-10-24",
-        "tier": "about"
       }
     ],
     "totalCount": 183,
@@ -179,6 +179,14 @@
         "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
         "url": "/power-local-llm/vllm-explained",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
+        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
+        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -243,14 +251,6 @@
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-10-24",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "omlx-review",
-        "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
-        "url": "/power-local-llm/omlx-review",
-        "dateModified": "2026-10-23",
         "tier": "about"
       }
     ],
@@ -355,6 +355,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
+        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
+        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "dynamo-review",
         "title": "NVIDIA Dynamo Review: Datacenter-Scale Inference Serving",
         "url": "/power-local-llm/dynamo-review",
@@ -391,14 +399,6 @@
         "title": "text-generation-webui in 2026: How Oobabooga's Local LLM UI Became \"TextGen\"",
         "url": "/local-llms/text-generation-webui-review",
         "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
-        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
-        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
-        "dateModified": "2026-09-02",
         "tier": "about"
       },
       {
@@ -503,6 +503,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
+        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
+        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
@@ -564,17 +572,9 @@
         "url": "/power-local-llm/aiclient2api-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "lmdeploy-review",
-        "title": "LMDeploy Review: High-Throughput LLM Serving and Quantization",
-        "url": "/power-local-llm/lmdeploy-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "ExLlamaV2": {
@@ -861,6 +861,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "nextchat-review",
+        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
+        "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "page-assist-review",
         "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
         "url": "/local-llms/page-assist-review",
@@ -920,14 +928,6 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-30",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "reins-review",
-        "title": "Reins Review: iPhone Chat App for Ollama and LM Studio",
-        "url": "/power-local-llm/reins-review",
         "dateModified": "2026-10-30",
         "tier": "about"
       }
@@ -1345,6 +1345,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "nextchat-review",
+        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
+        "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
         "url": "/local-llms/best-local-llm-frontends",
@@ -1364,14 +1372,6 @@
         "slug": "big-agi-review",
         "title": "Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare",
         "url": "/local-llms/big-agi-review",
-        "dateModified": "2026-09-11",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "nextchat-review",
-        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
-        "url": "/local-llms/nextchat-review",
         "dateModified": "2026-09-11",
         "tier": "mentioned"
       },
@@ -2081,6 +2081,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "nextchat-review",
+        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
+        "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "page-assist-review",
         "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
         "url": "/local-llms/page-assist-review",
@@ -2141,14 +2149,6 @@
         "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
         "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
         "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
-        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
-        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
-        "dateModified": "2026-10-16",
         "tier": "about"
       }
     ],
@@ -2277,6 +2277,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
+        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
+        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "risuai-review",
         "title": "RisuAI Review: Open-Source Roleplay Chat Client",
         "url": "/power-local-llm/risuai-review",
@@ -2312,14 +2320,6 @@
         "slug": "ai-tool-licenses-explained",
         "title": "AI & Open-Source Software Licenses Explained: MIT vs Apache vs GPL vs AGPL vs Proprietary",
         "url": "/power-local-llm/ai-tool-licenses-explained",
-        "dateModified": "2026-09-03",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "librechat-review-2026",
-        "title": "LibreChat Review: Self-Hosted ChatGPT Alternative for Local LLMs",
-        "url": "/power-local-llm/librechat-review",
         "dateModified": "2026-09-03",
         "tier": "mentioned"
       }
@@ -2449,17 +2449,17 @@
       },
       {
         "cluster": "local-llms",
-        "slug": "big-agi-review",
-        "title": "Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare",
-        "url": "/local-llms/big-agi-review",
-        "dateModified": "2026-09-11",
+        "slug": "nextchat-review",
+        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
+        "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-11-02",
         "tier": "mentioned"
       },
       {
         "cluster": "local-llms",
-        "slug": "nextchat-review",
-        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
-        "url": "/local-llms/nextchat-review",
+        "slug": "big-agi-review",
+        "title": "Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare",
+        "url": "/local-llms/big-agi-review",
         "dateModified": "2026-09-11",
         "tier": "mentioned"
       }
@@ -2475,6 +2475,14 @@
         "title": "Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare",
         "url": "/local-llms/big-agi-review",
         "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "nextchat-review",
+        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
+        "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -2503,14 +2511,6 @@
       },
       {
         "cluster": "local-llms",
-        "slug": "nextchat-review",
-        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
-        "url": "/local-llms/nextchat-review",
-        "dateModified": "2026-09-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
@@ -2528,7 +2528,7 @@
         "slug": "nextchat-review",
         "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
         "url": "/local-llms/nextchat-review",
-        "dateModified": "2026-09-11",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -4169,6 +4169,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "pydantic-ai-review",
+        "title": "Pydantic AI Review: Features, Structured Outputs, Alternatives",
+        "url": "/power-local-llm/pydantic-ai-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "self-hosted-ai-starter-kit-review",
         "title": "Self-Hosted AI Starter Kit Review: n8n + Ollama + Qdrant in One Compose File",
         "url": "/power-local-llm/self-hosted-ai-starter-kit-review",
@@ -4212,14 +4220,6 @@
         "slug": "langchain-chatchat-review",
         "title": "Langchain-Chatchat Review: Self-Hosted RAG and Agent Framework",
         "url": "/power-local-llm/langchain-chatchat-review",
-        "dateModified": "2026-09-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "qdrant-review",
-        "title": "Qdrant Review: The Self-Hosted Vector Database for RAG",
-        "url": "/power-local-llm/qdrant-review",
         "dateModified": "2026-09-18",
         "tier": "about"
       }
@@ -4481,6 +4481,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "pydantic-ai-review",
+        "title": "Pydantic AI Review: Features, Structured Outputs, Alternatives",
+        "url": "/power-local-llm/pydantic-ai-review",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "agent-zero-review",
         "title": "Agent Zero Review: Features, Install, Alternatives",
         "url": "/power-local-llm/agent-zero-review",
@@ -4492,14 +4500,6 @@
         "slug": "leon-ai-review",
         "title": "Leon AI Review: Features, Install, Alternatives",
         "url": "/power-local-llm/leon-ai-review",
-        "dateModified": "2026-09-11",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "pydantic-ai-review",
-        "title": "Pydantic AI Review: Features, Structured Outputs, Alternatives",
-        "url": "/power-local-llm/pydantic-ai-review",
         "dateModified": "2026-09-11",
         "tier": "mentioned"
       },
@@ -4583,18 +4583,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "home-generative-agent-review",
-        "title": "Home Generative Agent Review: AI Agent for Home Assistant",
-        "url": "/power-local-llm/home-generative-agent-review",
-        "dateModified": "2026-11-01",
+        "slug": "pydantic-ai-review",
+        "title": "Pydantic AI Review: Features, Structured Outputs, Alternatives",
+        "url": "/power-local-llm/pydantic-ai-review",
+        "dateModified": "2026-11-02",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "home-generative-agent-review",
+        "title": "Home Generative Agent Review: AI Agent for Home Assistant",
+        "url": "/power-local-llm/home-generative-agent-review",
+        "dateModified": "2026-11-01",
         "tier": "mentioned"
       }
     ],
@@ -4622,7 +4622,7 @@
         "slug": "pydantic-ai-review",
         "title": "Pydantic AI Review: Features, Structured Outputs, Alternatives",
         "url": "/power-local-llm/pydantic-ai-review",
-        "dateModified": "2026-09-11",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -4828,7 +4828,7 @@
         "slug": "pydantic-ai-review",
         "title": "Pydantic AI Review: Features, Structured Outputs, Alternatives",
         "url": "/power-local-llm/pydantic-ai-review",
-        "dateModified": "2026-09-11",
+        "dateModified": "2026-11-02",
         "tier": "mentioned"
       }
     ],
@@ -4872,7 +4872,7 @@
         "slug": "pydantic-ai-review",
         "title": "Pydantic AI Review: Features, Structured Outputs, Alternatives",
         "url": "/power-local-llm/pydantic-ai-review",
-        "dateModified": "2026-09-11",
+        "dateModified": "2026-11-02",
         "tier": "mentioned"
       }
     ],
@@ -9937,6 +9937,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "facet-review",
+        "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
+        "url": "/power-local-llm/facet-review",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "swerve-ai-review",
         "title": "Swerve Review: AI Story and Character Chat for iPhone",
         "url": "/power-local-llm/swerve-ai-review",
@@ -9981,14 +9989,6 @@
         "title": "Tonfotos Review: Local Face Recognition Photo Manager",
         "url": "/power-local-llm/tonfotos-review",
         "dateModified": "2026-10-30",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "facet-review",
-        "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
-        "url": "/power-local-llm/facet-review",
-        "dateModified": "2026-10-28",
         "tier": "mentioned"
       },
       {
@@ -10759,18 +10759,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "weaviate-review",
-        "title": "Weaviate Review: The Self-Hostable Vector Database for RAG",
-        "url": "/power-local-llm/weaviate-review",
+        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
+        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
+        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
-        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
-        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
-        "dateModified": "2026-10-09",
+        "slug": "weaviate-review",
+        "title": "Weaviate Review: The Self-Hostable Vector Database for RAG",
+        "url": "/power-local-llm/weaviate-review",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -11151,19 +11151,19 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
+        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
+        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
-        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
-        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
       }
     ],
     "totalCount": 3,
@@ -11532,7 +11532,7 @@
         "slug": "enterprise-rag-vector-database-deployment-guide-2026",
         "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
         "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
-        "dateModified": "2026-10-09",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -11911,6 +11911,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "nextchat-review",
+        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
+        "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "page-assist-review",
         "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
         "url": "/local-llms/page-assist-review",
@@ -11935,38 +11943,30 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
+        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
+        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "facet-review",
+        "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
+        "url": "/power-local-llm/facet-review",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "gpt-engineer-review",
         "title": "GPT Engineer Review: Archived on GitHub, App Now Lovable",
         "url": "/power-local-llm/gpt-engineer-review",
         "dateModified": "2026-11-02",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
-        "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
-        "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
-        "dateModified": "2026-11-02",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-agents-with-mcp",
-        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
-        "url": "/power-local-llm/local-ai-agents-with-mcp",
-        "dateModified": "2026-11-02",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "milvus-review",
-        "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
-        "url": "/power-local-llm/milvus-review",
-        "dateModified": "2026-11-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 246,
+    "totalCount": 247,
     "capped": true
   },
   "Qdrant": {
@@ -11984,6 +11984,14 @@
         "slug": "best-vector-database-2026",
         "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
         "url": "/local-llms/best-vector-database",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
+        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
+        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -12017,14 +12025,6 @@
         "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
         "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
         "dateModified": "2026-10-16",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
-        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
-        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
-        "dateModified": "2026-10-09",
         "tier": "about"
       },
       {
@@ -12421,18 +12421,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
-        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
-        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
-        "dateModified": "2026-10-16",
+        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
+        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
+        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
-        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
-        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
-        "dateModified": "2026-10-09",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-10-16",
         "tier": "about"
       },
       {
@@ -13010,7 +13010,7 @@
         "slug": "facet-review",
         "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
         "url": "/power-local-llm/facet-review",
-        "dateModified": "2026-10-28",
+        "dateModified": "2026-11-02",
         "tier": "mentioned"
       }
     ],
@@ -13038,7 +13038,7 @@
         "slug": "facet-review",
         "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
         "url": "/power-local-llm/facet-review",
-        "dateModified": "2026-10-28",
+        "dateModified": "2026-11-02",
         "tier": "about"
       }
     ],
@@ -13497,14 +13497,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
-        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
-        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "best-workstation-build-local-ai-2026",
         "title": "Best Workstation Build for Local AI (2026): Three Budget Tiers",
         "url": "/power-local-llm/best-workstation-build-local-ai-2026",
@@ -13528,7 +13520,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 5,
     "capped": false
   }
 }

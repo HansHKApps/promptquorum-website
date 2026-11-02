@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'MIT',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/ChatGPTNextWeb/NextChat README: a ~5MB compact client / ~100kb first-screen web app that only calls a configured LLM API (OpenAI-compatible, RWKV-Runner, LocalAI, etc.) — it never runs inference itself, so no GPU/VRAM of its own; verified 2026-09-13
-  stars: 88700,
+  stars: 88938,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat'],
@@ -38,6 +38,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { dockerDeploy: true, customEndpoint: true, mcp: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-10-15', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2026-10-20', // GitHub API (latest release or push, whichever is newer), read 2026-11-02
   lastUpstreamUpdateSource: 'https://github.com/ChatGPTNextWeb/NextChat',
 }

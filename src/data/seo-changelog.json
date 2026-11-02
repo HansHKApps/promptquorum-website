@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 4.600239212439047e-05,
+      "ctr": 0.00004600239212439047,
       "period": "last 90 days"
     }
   },
@@ -12459,6 +12459,294 @@
       "impressions": 920,
       "clicks": 0,
       "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b83535e5-db94-4531-995e-d42282fa0746",
+    "slug": "/local-llms/nextchat-review",
+    "date": "2026-11-02T15:05:56.678Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "NextChat Review 2026: One-Click-Deploy Chat UI",
+        "new": "NextChat Review 2026: Free Chat UI, Deploy and Security"
+      },
+      {
+        "field": "metaDescription",
+        "old": "NextChat is a free, MIT-licensed chat interface with 88,700+ GitHub stars and a one-click Vercel deploy. License, Docker setup, and 2026 pricing covered here.",
+        "new": "NextChat review: free MIT-licensed chat UI with one-click Vercel deploy and Docker setup, plus an October 2026 MCP security fix not yet in a release."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5. Titles/metas/leads into locale budget (leads were 79-117 words); month-stamped phrases removed; added warning and corrected \"safe if CODE is set\" FAQ: MCP server actions in main were callable without authentication per the fixing pull request (merged 2026-10-20, not in a tagged release, latest v2.16.1 from 2025-07-29). Note: most EN impressions are automated intitle: operator queries.",
+    "queries": [
+      "nextchat",
+      "how to use nextchat",
+      "nextchat review",
+      "nextchat docker"
+    ],
+    "baseline": {
+      "position": 10.85,
+      "impressions": 1288,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "65ed0d3a-8144-48e3-9fee-abdbc77c0b13",
+    "slug": "/de/local-llms/nextchat-review",
+    "date": "2026-11-02T15:05:56.709Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "NextChat-Rezension 2026: Ein-Klick-Deploy-Chat-UI",
+        "new": "NextChat im Test 2026: Chat-UI, Deployment und Sicherheit"
+      },
+      {
+        "field": "metaDescription",
+        "old": "NextChat ist eine kostenlose, MIT-lizenzierte Chat-Oberfläche mit 88.700+ GitHub-Sternen und Ein-Klick-Vercel-Deploy. Lizenz, Docker-Setup und Preise 2026.",
+        "new": "NextChat im Test: kostenlose MIT-Chat-Oberfläche mit Ein-Klick-Vercel-Deploy und Docker, dazu eine MCP-Sicherheitskorrektur vom Oktober 2026 ohne Release."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5. Titles/metas/leads into locale budget (leads were 79-117 words); month-stamped phrases removed; added warning and corrected \"safe if CODE is set\" FAQ: MCP server actions in main were callable without authentication per the fixing pull request (merged 2026-10-20, not in a tagged release, latest v2.16.1 from 2025-07-29). Note: most EN impressions are automated intitle: operator queries.",
+    "queries": [
+      "nextchat",
+      "how to use nextchat",
+      "nextchat review",
+      "nextchat docker"
+    ],
+    "baseline": {
+      "position": 7.98,
+      "impressions": 130,
+      "clicks": 1,
+      "ctr": 0.007692307692307693,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6ed59eb7-42c4-4212-a73b-776af3300413",
+    "slug": "/fr/local-llms/nextchat-review",
+    "date": "2026-11-02T15:05:56.737Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "NextChat : avis 2026, déploiement en un clic",
+        "new": "Avis NextChat 2026 : chat, déploiement, sécurité"
+      },
+      {
+        "field": "metaDescription",
+        "old": "NextChat est une interface de chat gratuite sous licence MIT avec 88 700+ étoiles GitHub et un déploiement Vercel en un clic. Licence, installation Docker et tarifs 2026.",
+        "new": "Avis NextChat : chat gratuit sous licence MIT, déploiement Vercel en un clic et Docker, avec un correctif de sécurité MCP d'octobre 2026 hors release."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5. Titles/metas/leads into locale budget (leads were 79-117 words); month-stamped phrases removed; added warning and corrected \"safe if CODE is set\" FAQ: MCP server actions in main were callable without authentication per the fixing pull request (merged 2026-10-20, not in a tagged release, latest v2.16.1 from 2025-07-29). Note: most EN impressions are automated intitle: operator queries.",
+    "queries": [
+      "nextchat",
+      "how to use nextchat",
+      "nextchat review",
+      "nextchat docker"
+    ],
+    "baseline": {
+      "position": 7.39,
+      "impressions": 125,
+      "clicks": 2,
+      "ctr": 0.016,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "095e84ab-08ed-4407-a9d1-e9d1ded1b833",
+    "slug": "/ja/local-llms/nextchat-review",
+    "date": "2026-11-02T15:05:56.767Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "NextChatレビュー2026：ワンクリックデプロイ対応",
+        "new": "NextChatレビュー2026：チャットUIとセキュリティ"
+      },
+      {
+        "field": "metaDescription",
+        "old": "NextChatは88,700以上のGitHubスターを持つ無料のMITライセンスチャットインターフェース、ワンクリックVercelデプロイに対応。ライセンス、Dockerセットアップ、2026年の料金を解説。",
+        "new": "NextChatレビュー：MITライセンスの無料チャットUI。Vercelワンクリック導入とDocker設定、リリース未反映の2026年10月MCPセキュリティ修正も解説。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5. Titles/metas/leads into locale budget (leads were 79-117 words); month-stamped phrases removed; added warning and corrected \"safe if CODE is set\" FAQ: MCP server actions in main were callable without authentication per the fixing pull request (merged 2026-10-20, not in a tagged release, latest v2.16.1 from 2025-07-29). Note: most EN impressions are automated intitle: operator queries.",
+    "queries": [
+      "nextchat",
+      "how to use nextchat",
+      "nextchat review",
+      "nextchat docker"
+    ],
+    "baseline": {
+      "position": 6.04,
+      "impressions": 124,
+      "clicks": 3,
+      "ctr": 0.024193548387096774,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b5a2c358-3fe5-4587-9d3c-8e64786634c8",
+    "slug": "/zh/local-llms/nextchat-review",
+    "date": "2026-11-02T15:05:56.796Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "NextChat 2026评测：一键部署聊天界面",
+        "new": "NextChat评测2026：聊天界面、部署与安全"
+      },
+      {
+        "field": "metaDescription",
+        "old": "NextChat是一款拥有88,700+ GitHub星标、采用MIT许可证的免费聊天界面，支持一键Vercel部署。本文介绍许可证、Docker配置及2026年价格。",
+        "new": "NextChat评测：MIT许可证的免费聊天界面，支持Vercel一键部署与Docker，并说明尚未进入正式版本的2026年10月MCP安全修复。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5. Titles/metas/leads into locale budget (leads were 79-117 words); month-stamped phrases removed; added warning and corrected \"safe if CODE is set\" FAQ: MCP server actions in main were callable without authentication per the fixing pull request (merged 2026-10-20, not in a tagged release, latest v2.16.1 from 2025-07-29). Note: most EN impressions are automated intitle: operator queries.",
+    "queries": [
+      "nextchat",
+      "how to use nextchat",
+      "nextchat review",
+      "nextchat docker"
+    ],
+    "baseline": {
+      "position": 6.01,
+      "impressions": 82,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "153ab3dd-c4d1-4a7e-8f73-bac55bef8bb4",
+    "slug": "/es/local-llms/nextchat-review",
+    "date": "2026-11-02T15:05:56.826Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "NextChat: análisis 2026, despliegue en un clic",
+        "new": "Reseña de NextChat 2026: chat, despliegue y seguridad"
+      },
+      {
+        "field": "metaDescription",
+        "old": "NextChat es una interfaz de chat gratuita con licencia MIT, 88.700+ estrellas en GitHub y despliegue en Vercel con un clic. Licencia, configuración con Docker y precios 2026.",
+        "new": "Reseña de NextChat: chat gratuito con licencia MIT, despliegue en Vercel con un clic y Docker, y un parche de seguridad MCP de octubre de 2026 sin release."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5. Titles/metas/leads into locale budget (leads were 79-117 words); month-stamped phrases removed; added warning and corrected \"safe if CODE is set\" FAQ: MCP server actions in main were callable without authentication per the fixing pull request (merged 2026-10-20, not in a tagged release, latest v2.16.1 from 2025-07-29). Note: most EN impressions are automated intitle: operator queries.",
+    "queries": [
+      "nextchat",
+      "how to use nextchat",
+      "nextchat review",
+      "nextchat docker"
+    ],
+    "baseline": {
+      "position": 7.16,
+      "impressions": 234,
+      "clicks": 1,
+      "ctr": 0.004273504273504274,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "531401b8-b571-48d5-af2f-6f97e2712e43",
+    "slug": "/pt/local-llms/nextchat-review",
+    "date": "2026-11-02T15:05:56.854Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "NextChat: análise 2026, deploy em um clique",
+        "new": "Análise do NextChat 2026: chat, deploy e segurança"
+      },
+      {
+        "field": "metaDescription",
+        "old": "NextChat é uma interface de chat gratuita e licenciada sob MIT, com 88.700+ estrelas no GitHub e deploy na Vercel em um clique. Licença, configuração com Docker e preços de 2026.",
+        "new": "Análise do NextChat: chat gratuito com licença MIT, deploy na Vercel com um clique e Docker, e correção de segurança do MCP de outubro de 2026 sem release."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5. Titles/metas/leads into locale budget (leads were 79-117 words); month-stamped phrases removed; added warning and corrected \"safe if CODE is set\" FAQ: MCP server actions in main were callable without authentication per the fixing pull request (merged 2026-10-20, not in a tagged release, latest v2.16.1 from 2025-07-29). Note: most EN impressions are automated intitle: operator queries.",
+    "queries": [
+      "nextchat",
+      "how to use nextchat",
+      "nextchat review",
+      "nextchat docker"
+    ],
+    "baseline": {
+      "position": 6.2,
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "97eb058a-32bb-4770-b547-08bc36290364",
+    "slug": "/ar/local-llms/nextchat-review",
+    "date": "2026-11-02T15:05:56.883Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة NextChat 2026: نشر بنقرة واحدة",
+        "new": "مراجعة NextChat 2026: الواجهة والنشر والأمان"
+      },
+      {
+        "field": "metaDescription",
+        "old": "NextChat واجهة دردشة مجانية برخصة MIT تضم أكثر من 88,700 نجمة على GitHub ونشرًا بنقرة واحدة على Vercel. الرخصة وإعداد Docker وأسعار 2026.",
+        "new": "مراجعة NextChat: واجهة دردشة مجانية برخصة MIT مع نشر بنقرة على Vercel وDocker، مع إصلاح أمني لـ MCP في أكتوبر 2026 غير مضمَّن بعد في إصدار."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5. Titles/metas/leads into locale budget (leads were 79-117 words); month-stamped phrases removed; added warning and corrected \"safe if CODE is set\" FAQ: MCP server actions in main were callable without authentication per the fixing pull request (merged 2026-10-20, not in a tagged release, latest v2.16.1 from 2025-07-29). Note: most EN impressions are automated intitle: operator queries.",
+    "queries": [
+      "nextchat",
+      "how to use nextchat",
+      "nextchat review",
+      "nextchat docker"
+    ],
+    "baseline": {
+      "position": 6,
+      "impressions": 9,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ba04c688-5d5f-4ca3-8770-3e5425e48a27",
+    "slug": "/ko/local-llms/nextchat-review",
+    "date": "2026-11-02T15:05:56.914Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "NextChat 리뷰 2026: 원클릭 배포 채팅 UI",
+        "new": "NextChat 리뷰 2026: 채팅 UI, 배포, 보안"
+      },
+      {
+        "field": "metaDescription",
+        "old": "NextChat은 GitHub 스타 88,700개 이상을 보유한 무료 MIT 라이선스 채팅 인터페이스로, 원클릭 Vercel 배포를 지원합니다. 라이선스, Docker 설정, 2026년 가격을 소개합니다.",
+        "new": "NextChat 리뷰: MIT 라이선스 무료 채팅 UI, Vercel 원클릭 배포와 Docker 설정, 릴리스에 아직 없는 2026년 10월 MCP 보안 수정까지 정리."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5. Titles/metas/leads into locale budget (leads were 79-117 words); month-stamped phrases removed; added warning and corrected \"safe if CODE is set\" FAQ: MCP server actions in main were callable without authentication per the fixing pull request (merged 2026-10-20, not in a tagged release, latest v2.16.1 from 2025-07-29). Note: most EN impressions are automated intitle: operator queries.",
+    "queries": [
+      "nextchat",
+      "how to use nextchat",
+      "nextchat review",
+      "nextchat docker"
+    ],
+    "baseline": {
+      "position": 5.01,
+      "impressions": 127,
+      "clicks": 5,
+      "ctr": 0.03937007874015748,
       "period": "28d to 2026-11-01"
     },
     "deployedAt": null
