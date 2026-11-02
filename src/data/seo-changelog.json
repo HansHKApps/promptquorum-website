@@ -212,7 +212,27 @@
       "clicks": 0,
       "ctr": 0,
       "period": "2026-04-17 to 2026-05-15"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+28",
+        "clicks": 116,
+        "impressions": 30632,
+        "ctr": 0.00379,
+        "position": 4.54,
+        "ctrDeltaPp": 0.38,
+        "z": 5.06,
+        "verdict": "CTR improved",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "window mismatch 29d vs 28d — compare per-day",
+          "2 logged changes on this page — effects not separable; first change measured",
+          "position moved +1.6 (worse) — CTR change may be rank-driven"
+        ]
+      }
+    ]
   },
   {
     "id": "e3cfd636-403a-4392-aea8-7430b9d77d54",
@@ -371,7 +391,26 @@
       "clicks": 466,
       "ctr": 0.00999957083386979,
       "period": "2026-07-31 to 2026-08-27"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+28",
+        "clicks": 128,
+        "impressions": 28877,
+        "ctr": 0.00443,
+        "position": 6.65,
+        "ctrDeltaPp": -0.56,
+        "z": -8.41,
+        "verdict": "CTR declined",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "no baseline position",
+          "3 logged changes on this page — effects not separable; first change measured"
+        ]
+      }
+    ]
   },
   {
     "id": "8b214ec6-b6f1-4dfd-a13e-e8a945177d02",
@@ -573,7 +612,27 @@
       "clicks": 126,
       "ctr": 0.008863876187126274,
       "period": "last 90 days"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+28",
+        "clicks": 70,
+        "impressions": 6055,
+        "ctr": 0.01156,
+        "position": 5.11,
+        "ctrDeltaPp": 0.27,
+        "z": 1.8,
+        "verdict": "no significant change",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "window mismatch 90d vs 28d — compare per-day",
+          "no baseline position",
+          "2 logged changes on this page — effects not separable; first change measured"
+        ]
+      }
+    ]
   },
   {
     "id": "851ccd52-9b84-465a-a7f4-a154e281ae23",
@@ -1165,7 +1224,25 @@
       "clicks": 596,
       "ctr": 0.06616341030195382,
       "period": "GSC last 28d as pasted 2026-08-30"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+28",
+        "clicks": 2537,
+        "impressions": 25619,
+        "ctr": 0.09903,
+        "position": 4.58,
+        "ctrDeltaPp": 3.29,
+        "z": 9.35,
+        "verdict": "CTR improved",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "3 logged changes on this page — effects not separable; first change measured"
+        ]
+      }
+    ]
   },
   {
     "id": "321aee8f-434c-475d-8c31-fbbde7f797e2",
@@ -1215,7 +1292,25 @@
       "clicks": 273,
       "ctr": 0.03463148547507294,
       "period": "GSC last 28d as pasted 2026-08-30"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+28",
+        "clicks": 520,
+        "impressions": 13215,
+        "ctr": 0.03935,
+        "position": 4,
+        "ctrDeltaPp": 0.47,
+        "z": 1.74,
+        "verdict": "no significant change",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "3 logged changes on this page — effects not separable; first change measured"
+        ]
+      }
+    ]
   },
   {
     "id": "729892c7-1f8a-469f-a324-c7a001a52a01",
@@ -1811,7 +1906,26 @@
       "clicks": 47,
       "ctr": 0.07807308970099668,
       "period": "2026-08-23 to 2026-09-20 (trailing 28 days)"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+28",
+        "clicks": 38,
+        "impressions": 709,
+        "ctr": 0.0536,
+        "position": 4.26,
+        "ctrDeltaPp": -2.45,
+        "z": -1.79,
+        "verdict": "no significant change",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "window mismatch 29d vs 28d — compare per-day",
+          "position moved -5.2 (better) — CTR change may be rank-driven"
+        ]
+      }
+    ]
   },
   {
     "id": "a0ac8fd1-14b6-40a9-9733-0d51e944ae4a",
@@ -1836,7 +1950,25 @@
       "clicks": 1,
       "ctr": 0.0007183908045977011,
       "period": "GSC top queries 2026-10-09"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 47,
+        "impressions": 26210,
+        "ctr": 0.00179,
+        "position": 5.25,
+        "ctrDeltaPp": 0.11,
+        "z": 0.94,
+        "verdict": "no significant change",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d"
+        ]
+      }
+    ]
   },
   {
     "id": "50478a10-afb1-4b2a-828e-26e94a2713fa",
@@ -1861,7 +1993,25 @@
       "clicks": 2,
       "ctr": 0.0011648223645894002,
       "period": "GSC top queries 2026-10-09"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 16,
+        "impressions": 5203,
+        "ctr": 0.00308,
+        "position": 6.21,
+        "ctrDeltaPp": 0.19,
+        "z": 1.35,
+        "verdict": "no significant change",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d"
+        ]
+      }
+    ]
   },
   {
     "id": "8a6a4f60-001a-4cae-a3c5-65c417f82e72",
@@ -1886,7 +2036,25 @@
       "clicks": 5,
       "ctr": 0.002960331557134399,
       "period": "GSC top queries 2026-10-09"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 16,
+        "impressions": 14926,
+        "ctr": 0.00107,
+        "position": 7.1,
+        "ctrDeltaPp": -0.19,
+        "z": -2.07,
+        "verdict": "CTR declined",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d"
+        ]
+      }
+    ]
   },
   {
     "id": "8630f7d4-b1db-4ce6-a4cd-f698df8b17b3",
@@ -1911,7 +2079,26 @@
       "clicks": 3,
       "ctr": 0.0015519917227108122,
       "period": "GSC top queries 2026-10-09"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 59,
+        "impressions": 17954,
+        "ctr": 0.00329,
+        "position": 6.91,
+        "ctrDeltaPp": 0.17,
+        "z": 1.3,
+        "verdict": "no significant change",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d",
+          "2 logged changes on this page — effects not separable; first change measured"
+        ]
+      }
+    ]
   },
   {
     "id": "c72cdaba-bdf2-491f-81ea-78a0329523e2",
@@ -2083,7 +2270,25 @@
       "clicks": 2,
       "ctr": 0.0032626427406199023,
       "period": "GSC top queries 2026-10-09"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 33,
+        "impressions": 11775,
+        "ctr": 0.0028,
+        "position": 6.75,
+        "ctrDeltaPp": -0.05,
+        "z": -0.21,
+        "verdict": "no significant change",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d"
+        ]
+      }
+    ]
   },
   {
     "id": "de9780d3-05c1-4946-987f-04f194759dd6",
@@ -2407,7 +2612,25 @@
       "clicks": 0,
       "ctr": 0,
       "period": "GSC top queries 2026-10-10"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 9,
+        "impressions": 4954,
+        "ctr": 0.00182,
+        "position": 7.12,
+        "ctrDeltaPp": 0.18,
+        "z": 1.6,
+        "verdict": "no significant change",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d"
+        ]
+      }
+    ]
   },
   {
     "id": "6bd790a7-7f20-49fd-b12b-0efc0d7cada9",
@@ -2780,7 +3003,25 @@
       "clicks": 7,
       "ctr": 0.018134715025906734,
       "period": "GSC top-10 queries paste 2026-10-16"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 19,
+        "impressions": 2839,
+        "ctr": 0.00669,
+        "position": 6.41,
+        "ctrDeltaPp": -1.14,
+        "z": -2.36,
+        "verdict": "CTR declined",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d"
+        ]
+      }
+    ]
   },
   {
     "id": "3ea2533f-abc4-4fba-9710-b3ab33d437e3",
@@ -3134,7 +3375,26 @@
       "clicks": 132,
       "ctr": 0.00889727689404152,
       "period": "GSC last period (user paste 2026-10-17)"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 725,
+        "impressions": 50230,
+        "ctr": 0.01443,
+        "position": 5.06,
+        "ctrDeltaPp": 0.55,
+        "z": 5.2,
+        "verdict": "CTR improved",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d",
+          "2 logged changes on this page — effects not separable; first change measured"
+        ]
+      }
+    ]
   },
   {
     "id": "ab81afbd-dd2a-4ae4-8c2b-4e3954a473bd",
@@ -3335,7 +3595,26 @@
       "clicks": 92,
       "ctr": 0.08333333333333333,
       "period": "GSC top queries, pasted 2026-10-17"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 6949,
+        "impressions": 109449,
+        "ctr": 0.06349,
+        "position": 4.95,
+        "ctrDeltaPp": -1.98,
+        "z": -2.69,
+        "verdict": "CTR declined",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d",
+          "2 logged changes on this page — effects not separable; first change measured"
+        ]
+      }
+    ]
   },
   {
     "id": "4af785c7-826f-4a0f-8dfe-ab2df00180fd",
@@ -3360,7 +3639,26 @@
       "clicks": 1,
       "ctr": 0.011235955056179775,
       "period": "GSC top queries, pasted 2026-10-17"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 43,
+        "impressions": 3870,
+        "ctr": 0.01111,
+        "position": 4.11,
+        "ctrDeltaPp": -0.01,
+        "z": null,
+        "verdict": "insufficient data",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d",
+          "position moved +1.8 (worse) — CTR change may be rank-driven"
+        ]
+      }
+    ]
   },
   {
     "id": "ecd27ca9-48f6-4da0-9bfc-83cf9eddf875",
@@ -3385,7 +3683,26 @@
       "clicks": 0,
       "ctr": 0,
       "period": "GSC 2026-10 (top query \"prompt in chinese\")"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 9,
+        "impressions": 1772,
+        "ctr": 0.00508,
+        "position": 6.34,
+        "ctrDeltaPp": 0.51,
+        "z": 1.33,
+        "verdict": "no significant change",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d",
+          "position moved -4.1 (better) — CTR change may be rank-driven"
+        ]
+      }
+    ]
   },
   {
     "id": "75f9e672-5e89-411a-9022-f603e72692eb",
@@ -3562,7 +3879,25 @@
       "clicks": 16,
       "ctr": 0.0903954802259887,
       "period": "last 28 days to 2026-10-17"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 23,
+        "impressions": 4105,
+        "ctr": 0.0056,
+        "position": 3.92,
+        "ctrDeltaPp": -8.48,
+        "z": -11.63,
+        "verdict": "CTR declined",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "position moved +1.8 (worse) — CTR change may be rank-driven"
+        ]
+      }
+    ]
   },
   {
     "id": "feecabf8-171c-4def-bdf9-e369882a28b8",
@@ -3587,7 +3922,24 @@
       "clicks": 16,
       "ctr": 0.0903954802259887,
       "period": "last 28 days to 2026-10-17"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 3,
+        "impressions": 116,
+        "ctr": 0.02586,
+        "position": 3.08,
+        "ctrDeltaPp": -6.45,
+        "z": -2.19,
+        "verdict": "CTR declined",
+        "flags": [
+          "start date approximate (no deploy date logged)"
+        ]
+      }
+    ]
   },
   {
     "id": "1b5d19b6-fcdf-479b-90fb-3f029e8f3e73",
@@ -3612,7 +3964,24 @@
       "clicks": 16,
       "ctr": 0.0903954802259887,
       "period": "last 28 days to 2026-10-17"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 1,
+        "impressions": 112,
+        "ctr": 0.00893,
+        "position": 3.18,
+        "ctrDeltaPp": -8.15,
+        "z": -2.87,
+        "verdict": "CTR declined",
+        "flags": [
+          "start date approximate (no deploy date logged)"
+        ]
+      }
+    ]
   },
   {
     "id": "9f0555d0-9550-43cd-92e5-d47d27d8f1f4",
@@ -3637,7 +4006,25 @@
       "clicks": 16,
       "ctr": 0.0903954802259887,
       "period": "last 28 days to 2026-10-17"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 7,
+        "impressions": 265,
+        "ctr": 0.02642,
+        "position": 5.6,
+        "ctrDeltaPp": -6.4,
+        "z": -2.97,
+        "verdict": "CTR declined",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "position moved +3.5 (worse) — CTR change may be rank-driven"
+        ]
+      }
+    ]
   },
   {
     "id": "b127925e-30e9-4349-b742-7606ef504a94",
@@ -3662,7 +4049,25 @@
       "clicks": 16,
       "ctr": 0.0903954802259887,
       "period": "last 28 days to 2026-10-17"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4,
+        "ctrDeltaPp": -9.04,
+        "z": null,
+        "verdict": "insufficient data",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "position moved +1.9 (worse) — CTR change may be rank-driven"
+        ]
+      }
+    ]
   },
   {
     "id": "e88ec91f-f217-49ed-a2d0-ef1c34c231f4",
@@ -3687,7 +4092,24 @@
       "clicks": 16,
       "ctr": 0.0903954802259887,
       "period": "last 28 days to 2026-10-17"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 3,
+        "impressions": 49,
+        "ctr": 0.06122,
+        "position": 3.18,
+        "ctrDeltaPp": -2.92,
+        "z": null,
+        "verdict": "insufficient data",
+        "flags": [
+          "start date approximate (no deploy date logged)"
+        ]
+      }
+    ]
   },
   {
     "id": "31d55192-ca16-4122-ba6b-cfc8f2727637",
@@ -3712,7 +4134,24 @@
       "clicks": 16,
       "ctr": 0.0903954802259887,
       "period": "last 28 days to 2026-10-17"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 4,
+        "impressions": 114,
+        "ctr": 0.03509,
+        "position": 3.11,
+        "ctrDeltaPp": -5.53,
+        "z": -1.82,
+        "verdict": "no significant change",
+        "flags": [
+          "start date approximate (no deploy date logged)"
+        ]
+      }
+    ]
   },
   {
     "id": "8b8dd6e8-dd2a-4a2b-b80d-d93a055cbec0",
@@ -3737,7 +4176,25 @@
       "clicks": 16,
       "ctr": 0.0903954802259887,
       "period": "last 28 days to 2026-10-17"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10,
+        "ctrDeltaPp": -9.04,
+        "z": null,
+        "verdict": "insufficient data",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "position moved +7.9 (worse) — CTR change may be rank-driven"
+        ]
+      }
+    ]
   },
   {
     "id": "ee5420a3-f6d9-4713-b08a-f829980926c0",
@@ -3762,7 +4219,25 @@
       "clicks": 16,
       "ctr": 0.0903954802259887,
       "period": "last 28 days to 2026-10-17"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 10,
+        "impressions": 99,
+        "ctr": 0.10101,
+        "position": 4,
+        "ctrDeltaPp": 1.06,
+        "z": null,
+        "verdict": "insufficient data",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "position moved +1.9 (worse) — CTR change may be rank-driven"
+        ]
+      }
+    ]
   },
   {
     "id": "9b909a12-ac80-4b88-b730-6fb3dd5796ce",
@@ -3787,7 +4262,26 @@
       "clicks": 0,
       "ctr": 0,
       "period": "2026-09-19/2026-10-16"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 20,
+        "impressions": 1526,
+        "ctr": 0.01311,
+        "position": 6.81,
+        "ctrDeltaPp": 1.31,
+        "z": 1.99,
+        "verdict": "CTR improved",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d",
+          "position moved -4.8 (better) — CTR change may be rank-driven"
+        ]
+      }
+    ]
   },
   {
     "id": "fc1d20f9-517a-48f7-a231-4cbc57eceb93",
@@ -3938,7 +4432,25 @@
       "clicks": 0,
       "ctr": 0,
       "period": "GSC 2026-10 (hiwaifu brand queries)"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 19,
+        "impressions": 8263,
+        "ctr": 0.0023,
+        "position": 6.39,
+        "ctrDeltaPp": 0.23,
+        "z": 2.3,
+        "verdict": "CTR improved",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d"
+        ]
+      }
+    ]
   },
   {
     "id": "23413e4d-a004-46c8-b6a5-fcd0dac90bc0",
@@ -3963,7 +4475,25 @@
       "clicks": 0,
       "ctr": 0,
       "period": "GSC 2026-10 (hiwaifu brand queries)"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 0,
+        "impressions": 938,
+        "ctr": 0,
+        "position": 6.59,
+        "ctrDeltaPp": 0,
+        "z": 0,
+        "verdict": "no significant change",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d"
+        ]
+      }
+    ]
   },
   {
     "id": "eef87c53-87fb-4f98-8c20-2c3e77bc7e78",
@@ -3988,7 +4518,25 @@
       "clicks": 0,
       "ctr": 0,
       "period": "GSC 2026-10 (hiwaifu brand queries)"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 0,
+        "impressions": 730,
+        "ctr": 0,
+        "position": 7.52,
+        "ctrDeltaPp": 0,
+        "z": 0,
+        "verdict": "no significant change",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d"
+        ]
+      }
+    ]
   },
   {
     "id": "358fc45b-7989-4db7-8d15-fbfc9a7e7347",
@@ -4013,7 +4561,26 @@
       "clicks": 0,
       "ctr": 0,
       "period": "GSC 2026-10 (hiwaifu brand queries)"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 0,
+        "impressions": 74,
+        "ctr": 0,
+        "position": 9.96,
+        "ctrDeltaPp": 0,
+        "z": null,
+        "verdict": "insufficient data",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d",
+          "position moved +3.8 (worse) — CTR change may be rank-driven"
+        ]
+      }
+    ]
   },
   {
     "id": "86d7af87-cade-4f6e-b562-652d85a7c47f",
@@ -4038,7 +4605,26 @@
       "clicks": 0,
       "ctr": 0,
       "period": "GSC 2026-10 (hiwaifu brand queries)"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 2,
+        "impressions": 65,
+        "ctr": 0.03077,
+        "position": 16.34,
+        "ctrDeltaPp": 3.08,
+        "z": null,
+        "verdict": "insufficient data",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d",
+          "position moved +10.1 (worse) — CTR change may be rank-driven"
+        ]
+      }
+    ]
   },
   {
     "id": "293e2274-79e2-4d1c-82a1-c40b470343b7",
@@ -4063,7 +4649,25 @@
       "clicks": 0,
       "ctr": 0,
       "period": "GSC 2026-10 (hiwaifu brand queries)"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 10,
+        "impressions": 7394,
+        "ctr": 0.00135,
+        "position": 5.9,
+        "ctrDeltaPp": 0.14,
+        "z": 1.76,
+        "verdict": "no significant change",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d"
+        ]
+      }
+    ]
   },
   {
     "id": "e3d360f0-7471-4d8b-b9d2-a1a04293dd95",
@@ -4088,7 +4692,26 @@
       "clicks": 0,
       "ctr": 0,
       "period": "GSC 2026-10 (hiwaifu brand queries)"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 1,
+        "impressions": 722,
+        "ctr": 0.00139,
+        "position": 8.15,
+        "ctrDeltaPp": 0.14,
+        "z": 1.79,
+        "verdict": "no significant change",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d",
+          "position moved +2.0 (worse) — CTR change may be rank-driven"
+        ]
+      }
+    ]
   },
   {
     "id": "6c7e15e8-9b98-468c-85c7-edc995ce789d",
@@ -4113,7 +4736,26 @@
       "clicks": 0,
       "ctr": 0,
       "period": "GSC 2026-10 (hiwaifu brand queries)"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 1,
+        "impressions": 181,
+        "ctr": 0.00552,
+        "position": 7.78,
+        "ctrDeltaPp": 0.55,
+        "z": 3.57,
+        "verdict": "CTR improved",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d",
+          "position moved +1.6 (worse) — CTR change may be rank-driven"
+        ]
+      }
+    ]
   },
   {
     "id": "1d418c8f-e6a1-4128-9167-0d39718b3d9a",
@@ -4138,7 +4780,26 @@
       "clicks": 0,
       "ctr": 0,
       "period": "GSC 2026-10 (hiwaifu brand queries)"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 4,
+        "impressions": 231,
+        "ctr": 0.01732,
+        "position": 9.88,
+        "ctrDeltaPp": 1.73,
+        "z": 6.32,
+        "verdict": "CTR improved",
+        "flags": [
+          "start date approximate (no deploy date logged)",
+          "baseline window assumed 28d",
+          "position moved +3.7 (worse) — CTR change may be rank-driven"
+        ]
+      }
+    ]
   },
   {
     "id": "f57802d3-bd87-465d-96b6-a93cfd1dd3e5",
@@ -4707,7 +5368,21 @@
     "measure": {
       "t14": "2026-11-01",
       "t28": "2026-11-15"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 827,
+        "impressions": 8295,
+        "ctr": 0.0997,
+        "position": 3.81,
+        "ctrDeltaPp": -2.53,
+        "z": -4.75,
+        "verdict": "CTR declined"
+      }
+    ]
   },
   {
     "id": "a2870688-c010-4108-a4b5-4a5ecd63904b",
@@ -4782,7 +5457,21 @@
     "measure": {
       "t14": "2026-11-01",
       "t28": "2026-11-15"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 136,
+        "impressions": 3546,
+        "ctr": 0.03835,
+        "position": 9.52,
+        "ctrDeltaPp": -1.54,
+        "z": -3.16,
+        "verdict": "CTR declined"
+      }
+    ]
   },
   {
     "id": "421caae1-d67b-4c3b-890a-725e09593468",
@@ -4807,7 +5496,21 @@
     "measure": {
       "t14": "2026-11-01",
       "t28": "2026-11-15"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 164,
+        "impressions": 4459,
+        "ctr": 0.03678,
+        "position": 4.68,
+        "ctrDeltaPp": -0.7,
+        "z": -1.64,
+        "verdict": "no significant change"
+      }
+    ]
   },
   {
     "id": "0b5e1ae3-b2f2-41b7-96fd-9eda5755c443",
@@ -4832,7 +5535,24 @@
     "measure": {
       "t14": "2026-11-01",
       "t28": "2026-11-15"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 76,
+        "impressions": 2238,
+        "ctr": 0.03396,
+        "position": 5.15,
+        "ctrDeltaPp": 0.16,
+        "z": 0.33,
+        "verdict": "no significant change",
+        "flags": [
+          "position moved -1.9 (better) — CTR change may be rank-driven"
+        ]
+      }
+    ]
   },
   {
     "id": "3a7ad695-7557-42f4-8c60-02c8ad6e540d",
@@ -4857,7 +5577,21 @@
     "measure": {
       "t14": "2026-11-01",
       "t28": "2026-11-15"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 100,
+        "impressions": 4314,
+        "ctr": 0.02318,
+        "position": 4.52,
+        "ctrDeltaPp": -0.57,
+        "z": -1.56,
+        "verdict": "no significant change"
+      }
+    ]
   },
   {
     "id": "636f19dc-5bf2-44fd-90d3-394259c6a56f",
@@ -4882,7 +5616,21 @@
     "measure": {
       "t14": "2026-11-01",
       "t28": "2026-11-15"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 26,
+        "impressions": 2329,
+        "ctr": 0.01116,
+        "position": 5.42,
+        "ctrDeltaPp": -0.83,
+        "z": -2.27,
+        "verdict": "CTR declined"
+      }
+    ]
   },
   {
     "id": "41a2cd2f-cc9b-4f6b-80d8-b9ec752f7ad8",
@@ -4907,7 +5655,21 @@
     "measure": {
       "t14": "2026-11-01",
       "t28": "2026-11-15"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 20,
+        "impressions": 4337,
+        "ctr": 0.00461,
+        "position": 7.28,
+        "ctrDeltaPp": -0.04,
+        "z": -0.29,
+        "verdict": "no significant change"
+      }
+    ]
   },
   {
     "id": "e5e9c74b-9c3e-4b84-96ec-7471c543f8af",
@@ -4932,7 +5694,21 @@
     "measure": {
       "t14": "2026-11-01",
       "t28": "2026-11-15"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 16,
+        "impressions": 1681,
+        "ctr": 0.00952,
+        "position": 8.6,
+        "ctrDeltaPp": 0.27,
+        "z": 0.95,
+        "verdict": "no significant change"
+      }
+    ]
   },
   {
     "id": "9083865e-19e7-4449-8d83-8a048c40533d",
@@ -4957,7 +5733,21 @@
     "measure": {
       "t14": "2026-11-01",
       "t28": "2026-11-15"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 7,
+        "impressions": 358,
+        "ctr": 0.01955,
+        "position": 11.69,
+        "ctrDeltaPp": -0.51,
+        "z": -0.5,
+        "verdict": "no significant change"
+      }
+    ]
   },
   {
     "id": "2962ebcd-0075-47fc-9bde-fafa87310535",
@@ -4982,7 +5772,24 @@
     "measure": {
       "t14": "2026-11-01",
       "t28": "2026-11-15"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 6,
+        "impressions": 655,
+        "ctr": 0.00916,
+        "position": 22.86,
+        "ctrDeltaPp": -0.21,
+        "z": -0.39,
+        "verdict": "no significant change",
+        "flags": [
+          "position moved +1.8 (worse) — CTR change may be rank-driven"
+        ]
+      }
+    ]
   },
   {
     "id": "945e1e3f-39d3-4a9a-8d4b-8de1419fa909",
@@ -5007,7 +5814,21 @@
     "measure": {
       "t14": "2026-11-01",
       "t28": "2026-11-15"
-    }
+    },
+    "results": [
+      {
+        "measuredAt": "2026-11-02",
+        "window": "28d",
+        "tPlus": "T+14",
+        "clicks": 5,
+        "impressions": 582,
+        "ctr": 0.00859,
+        "position": 10.34,
+        "ctrDeltaPp": -0.85,
+        "z": -1.21,
+        "verdict": "no significant change"
+      }
+    ]
   },
   {
     "id": "c7ad1fbd-622b-4628-bb7d-6ed3e4cda88d",
