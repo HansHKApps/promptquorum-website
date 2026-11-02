@@ -33,6 +33,7 @@ import { ASK_HANS_CATEGORIES, isCategoryKey } from './categories'
 import { withConfidence } from './confidence'
 import { ASK_HANS_LIMITS } from './config'
 import { normalizePagePath } from './paths'
+import { topicsFromToolInput, topicsFromToolResult, mergeTopics, type AnswerTopics } from './topics'
 
 const OS = z.enum(['mac', 'win', 'linux', 'ios', 'ipados', 'watchos', 'android', 'web'])
 const LANG = z.string().optional().describe('Language code; defaults to the visitor\'s page language')
@@ -250,6 +251,8 @@ export interface ToolOutcome {
   category?: string
   /** page path → page title, taken from the tool result (used for descriptive link cards) */
   pages?: Record<string, string>
+  /** whitelisted directory apps / categories this call looked up (see topics.ts) */
+  topics?: AnswerTopics
 }
 
 /** Walks a tool result and collects {url, title|name} pairs of PromptQuorum pages. */
@@ -285,7 +288,10 @@ export async function runTool(name: string, input: unknown, ctx: ToolContext): P
     const result = await (def.run as (a: unknown, c: ToolContext) => unknown)(parsed.data, ctx)
     const pages: Record<string, string> = {}
     collectPages(result, pages)
-    return { content: truncate(JSON.stringify(withConfidence(result))), isError: false, ...(Object.keys(pages).length ? { pages } : {}) }
+    const topics: AnswerTopics = { apps: [], dirCats: [] }
+    mergeTopics(topics, topicsFromToolInput(parsed.data))
+    mergeTopics(topics, topicsFromToolResult(name, result))
+    return { content: truncate(JSON.stringify(withConfidence(result))), isError: false, topics, ...(Object.keys(pages).length ? { pages } : {}) }
   } catch (err) {
     if (err instanceof AppNotFoundError || err instanceof ArticleNotFoundError) return { content: err.message, isError: true }
     console.error('[askhans] tool failed', name, err)
