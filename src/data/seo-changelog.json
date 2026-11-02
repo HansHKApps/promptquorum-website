@@ -13557,5 +13557,555 @@
       "period": "28d 2026-10-06..2026-11-02"
     },
     "deployedAt": null
+  },
+  {
+    "id": "3f10a4f9-5dd8-4a7e-8a3e-6758e1e7746e",
+    "slug": "/prompt-engineering/best-prompt-optimization-tools-for-teams",
+    "date": "2026-11-02T15:48:25.181Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best Prompt Optimization Tools for Teams 2026: Ranked & Compared",
+        "new": "Best Prompt Optimization Tools for Teams 2026 Compared"
+      },
+      {
+        "field": "metaDescription",
+        "old": "No single tool covers versioning, A/B testing, scoring, and review. Braintrust leads eval (free tier, $249/mo Pro), Vellum leads production A/B, Promptfoo is free CI/CD, DSPy auto-optimizes from examples. Stack recommendations by team size.",
+        "new": "Compare Braintrust, DSPy, Promptfoo, Vellum, Helicone and PromptPerfect for team prompt work: pricing, A/B testing, CI/CD and 2026 vendor status."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (best-prompt-optimization-tools-for-teams); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "best prompt optimization tools",
+      "prompt optimization tools for teams",
+      "best prompt analytics software",
+      "mejorador de prompts",
+      "optimizador de prompts"
+    ],
+    "baseline": {
+      "position": 8.34,
+      "impressions": 783,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "f0413092-454b-4ef0-8758-874467117c9b",
+    "slug": "/de/prompt-engineering/best-prompt-optimization-tools-for-teams",
+    "date": "2026-11-02T15:48:25.285Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Beste Prompt-Optimierungstools für Teams 2026",
+        "new": "Beste Prompt-Optimierungstools für Teams 2026 im Vergleich"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Kein einzelnes Tool deckt Versionierung, A/B-Tests, Scoring und Review ab. Braintrust führt bei Evaluation (kostenlos / 249 $/Monat Pro), Vellum bei Produktion, Promptfoo ist gratis.",
+        "new": "Braintrust, DSPy, Promptfoo, Vellum, Helicone und PromptPerfect im Vergleich: Preise, A/B-Tests, CI/CD und Anbieter-Status für Teams, Stand 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (best-prompt-optimization-tools-for-teams); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "best prompt optimization tools",
+      "prompt optimization tools for teams",
+      "best prompt analytics software",
+      "mejorador de prompts",
+      "optimizador de prompts"
+    ],
+    "baseline": {
+      "position": 5.98,
+      "impressions": 41,
+      "clicks": 1,
+      "ctr": 0.024390243902439025,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "37541320-4047-4c71-8d3b-a9e9ae72ad43",
+    "slug": "/es/prompt-engineering/best-prompt-optimization-tools-for-teams",
+    "date": "2026-11-02T15:48:25.388Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Optimización de prompts para equipos 2026: top herramientas",
+        "new": "Optimizador de prompts para equipos: herramientas 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Ninguna herramienta cubre versionado, A/B, scoring y revisión. Braintrust lidera en eval, Vellum en A/B, Promptfoo es gratis. Stack por tamaño de equipo.",
+        "new": "Optimiza y mejora prompts en equipo y mide su rendimiento: Braintrust, DSPy, Promptfoo, Vellum y Helicone, con precios y estado verificados."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (best-prompt-optimization-tools-for-teams); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "best prompt optimization tools",
+      "prompt optimization tools for teams",
+      "best prompt analytics software",
+      "mejorador de prompts",
+      "optimizador de prompts"
+    ],
+    "baseline": {
+      "position": 7.96,
+      "impressions": 1531,
+      "clicks": 23,
+      "ctr": 0.015022860875244938,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e3e9965a-5d9d-4746-b826-6594a2a41e18",
+    "slug": "/pt/prompt-engineering/best-prompt-optimization-tools-for-teams",
+    "date": "2026-11-02T15:48:25.493Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Otimização de prompts para equipes 2026: melhores ferramentas",
+        "new": "Ferramentas de otimização de prompts para equipes 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Nenhuma ferramenta cobre versionamento, A/B, scoring e revisão. Braintrust lidera em avaliação (grátis / $249/mês Pro), Vellum em A/B, Promptfoo é gratuito. Stack por tamanho de equipe.",
+        "new": "Compare Braintrust, DSPy, Promptfoo, Vellum, Helicone e PromptPerfect para equipes: preços, testes A/B, CI/CD e status dos fornecedores em 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (best-prompt-optimization-tools-for-teams); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "best prompt optimization tools",
+      "prompt optimization tools for teams",
+      "best prompt analytics software",
+      "mejorador de prompts",
+      "optimizador de prompts"
+    ],
+    "baseline": {
+      "position": 12.9,
+      "impressions": 35,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ebcb4cb0-c460-4953-8a68-ff2a58cd38e5",
+    "slug": "/fr/prompt-engineering/best-prompt-optimization-tools-for-teams",
+    "date": "2026-11-02T15:48:25.600Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Meilleurs outils d'optimisation de prompts pour équipes (2026)",
+        "new": "Meilleurs outils d'optimisation de prompts en équipe 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Aucun outil ne couvre versioning, A/B testing, scoring et revue. Braintrust domine l'évaluation (gratuit / 249 $/mois Pro), Vellum la production, Promptfoo est gratuit. Recommandations de stack par taille d'équipe.",
+        "new": "Comparez Braintrust, DSPy, Promptfoo, Vellum, Helicone et PromptPerfect : tarifs, tests A/B, CI/CD et changements de statut des éditeurs en 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (best-prompt-optimization-tools-for-teams); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "best prompt optimization tools",
+      "prompt optimization tools for teams",
+      "best prompt analytics software",
+      "mejorador de prompts",
+      "optimizador de prompts"
+    ],
+    "baseline": {
+      "position": 7.75,
+      "impressions": 4,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "4e11dae0-2b38-48e0-ab2c-f123424059ac",
+    "slug": "/ja/prompt-engineering/best-prompt-optimization-tools-for-teams",
+    "date": "2026-11-02T15:48:25.707Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "チーム向けプロンプト最適化ツール2026：ランキング＆比較",
+        "new": "チーム向けプロンプト最適化ツール6種の比較2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "バージョン管理・A/Bテスト・スコアリング・レビューを1つで網羅するツールはない。Braintrustは評価（無料プラン / 月額249ドルPro）、Vellumは本番A/B、Promptfooは無料CI/CD。チーム規模別スタック推薦。",
+        "new": "Braintrust、DSPy、Promptfoo、Vellum、Helicone、PromptPerfectをチーム向けに比較。料金、A/Bテスト、CI/CD、2026年のベンダー状況の変化を公式情報で確認しました。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (best-prompt-optimization-tools-for-teams); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "best prompt optimization tools",
+      "prompt optimization tools for teams",
+      "best prompt analytics software",
+      "mejorador de prompts",
+      "optimizador de prompts"
+    ],
+    "baseline": {
+      "position": 6.75,
+      "impressions": 4,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "905f0810-a61c-4945-9eaf-00e5a218e994",
+    "slug": "/zh/prompt-engineering/best-prompt-optimization-tools-for-teams",
+    "date": "2026-11-02T15:48:25.811Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026团队最佳提示词优化工具：排名与对比",
+        "new": "团队提示词优化工具对比2026：价格与厂商状态已核实"
+      },
+      {
+        "field": "metaDescription",
+        "old": "没有单一工具能覆盖版本管理、A/B测试、评分和审核。Braintrust领先评估（免费层 / 249美元/月Pro），Vellum领先生产环境，Promptfoo免费CI/CD，DSPy自动优化。按团队规模推荐技术栈。",
+        "new": "对比Braintrust、DSPy、Promptfoo、Vellum、Helicone和PromptPerfect：价格、A/B测试、CI/CD，并标注2026年厂商状态变化，信息均核对官方页面。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (best-prompt-optimization-tools-for-teams); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "best prompt optimization tools",
+      "prompt optimization tools for teams",
+      "best prompt analytics software",
+      "mejorador de prompts",
+      "optimizador de prompts"
+    ],
+    "baseline": {
+      "position": 6.04,
+      "impressions": 306,
+      "clicks": 22,
+      "ctr": 0.0718954248366013,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "419fde33-8924-45bf-8afe-7ce374d6389f",
+    "slug": "/ar/prompt-engineering/best-prompt-optimization-tools-for-teams",
+    "date": "2026-11-02T15:48:25.917Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "أدوات تحسين التعليمات للفرق ⁨2026⁩: مقارنة وتصنيف",
+        "new": "أدوات تحسين التعليمات للفرق 2026: مقارنة محدّثة"
+      },
+      {
+        "field": "metaDescription",
+        "old": "⁨Braintrust⁩ الأفضل للتقييم (خطة مجانية / 249 دولار/شهر Pro)، ⁨Vellum⁩ لاختبار ⁨A/B⁩ في الإنتاج، ⁨Promptfoo⁩ مجاني لـ ⁨CI/CD⁩، ⁨DSPy⁩ يحسّن تلقائياً. توصيات بحسب حجم الفريق.",
+        "new": "قارن Braintrust وDSPy وPromptfoo وVellum وHelicone وPromptPerfect للفرق: الأسعار واختبار A/B وCI/CD وتغيّر حالة الموردين في 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (best-prompt-optimization-tools-for-teams); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "best prompt optimization tools",
+      "prompt optimization tools for teams",
+      "best prompt analytics software",
+      "mejorador de prompts",
+      "optimizador de prompts"
+    ],
+    "baseline": {
+      "position": 11.1,
+      "impressions": 21,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "9fb85867-f1a3-4987-bbb2-4b7f8d9ca37b",
+    "slug": "/ko/prompt-engineering/best-prompt-optimization-tools-for-teams",
+    "date": "2026-11-02T15:48:26.023Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "팀을 위한 프롬프트 최적화 도구 2026: 최고 순위 비교",
+        "new": "팀 프롬프트 최적화 도구 6가지 비교 2026: 가격·상태 확인"
+      },
+      {
+        "field": "metaDescription",
+        "old": "버전 관리, A/B 테스트, 점수 평가, 검토를 모두 커버하는 단일 도구는 없습니다. Braintrust는 평가에서 선두, Vellum은 A/B 테스트에서 선두, Promptfoo는 무료입니다. 팀 규모별 스택 추천.",
+        "new": "Braintrust, DSPy, Promptfoo, Vellum, Helicone을 팀 기준으로 비교합니다. 가격, A/B 테스트, CI/CD와 2026년 공급사 상태 변화를 확인했습니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (best-prompt-optimization-tools-for-teams); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "best prompt optimization tools",
+      "prompt optimization tools for teams",
+      "best prompt analytics software",
+      "mejorador de prompts",
+      "optimizador de prompts"
+    ],
+    "baseline": {
+      "position": 6.65,
+      "impressions": 267,
+      "clicks": 10,
+      "ctr": 0.03745318352059925,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "3d1cf25b-1225-4055-94b7-8da58d0eba49",
+    "slug": "/prompt-engineering/self-consistency-prompting",
+    "date": "2026-11-02T15:48:26.146Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Self-Consistency Prompting: Multiple Answers, Pick Best",
+        "new": "Self-Consistency Prompting: How Majority Voting Works"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Self-consistency prompting generates 5-20 reasoning paths and picks the majority answer. Improves accuracy on math and logic from 56% to 74%.",
+        "new": "Self-consistency prompting samples several reasoning paths and picks the majority answer. In the original paper, GSM8K accuracy rose from 56.5% to 74.4%."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (self-consistency-prompting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "self consistency prompting",
+      "self-consistency prompting",
+      "what is self consistency prompting"
+    ],
+    "baseline": {
+      "position": 7.39,
+      "impressions": 510,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "2b06df59-3c3d-4124-8b25-269d4af1db4f",
+    "slug": "/de/prompt-engineering/self-consistency-prompting",
+    "date": "2026-11-02T15:48:26.251Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Self-Consistency Prompting generiert 5-20 Denkketten und wählt die Mehrheitsantwort. Verbessert Genauigkeit bei Mathematik und Logik von 56% auf 74%.",
+        "new": "Self-Consistency Prompting zieht mehrere Lösungswege und wählt die Mehrheitsantwort. Im Originalpaper stieg die GSM8K-Genauigkeit von 56,5% auf 74,4%."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (self-consistency-prompting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "self consistency prompting",
+      "self-consistency prompting",
+      "what is self consistency prompting"
+    ],
+    "baseline": {
+      "position": 5.54,
+      "impressions": 61,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "1b4dcb0b-4f9d-4e18-b1f3-275120aeeb9d",
+    "slug": "/es/prompt-engineering/self-consistency-prompting",
+    "date": "2026-11-02T15:48:26.357Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "El self-consistency prompting genera 5–20 caminos de razonamiento y elige la respuesta mayoritaria. Mejora la precisión en matemáticas del 56% al 74%.",
+        "new": "El self-consistency prompting muestrea caminos de razonamiento y elige la respuesta mayoritaria. En el artículo original, GSM8K sube del 56.5% al 74.4%."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (self-consistency-prompting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "self consistency prompting",
+      "self-consistency prompting",
+      "what is self consistency prompting"
+    ],
+    "baseline": {
+      "position": 5.25,
+      "impressions": 112,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8bbf19d4-278f-44b4-83e3-def2c888e0d4",
+    "slug": "/ar/prompt-engineering/self-consistency-prompting",
+    "date": "2026-11-02T15:48:26.465Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "الاتساق الذاتي يُولّد ⁨5-20⁩ مساراً استدلالياً ويختار بالأغلبية. رفع دقة ⁨GSM8K⁩ من ⁨56⁩٪ إلى ⁨74⁩٪ في ورقة ⁨Wang et al. 2023⁩. كيفية التطبيق والتكلفة.",
+        "new": "الاتساق الذاتي يأخذ عدة مسارات استدلالية ويختار الإجابة الأغلبية. في الورقة الأصلية ارتفعت دقة GSM8K من 56.5٪ إلى 74.4٪. كيفية التطبيق والتكلفة."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (self-consistency-prompting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "self consistency prompting",
+      "self-consistency prompting",
+      "what is self consistency prompting"
+    ],
+    "baseline": {
+      "position": 8.33,
+      "impressions": 15,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "0f2f55d7-ddc0-48a3-9ec5-3799268c1cf2",
+    "slug": "/pt/prompt-engineering/self-consistency-prompting",
+    "date": "2026-11-02T15:48:26.569Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Self-Consistency Prompting: Várias Respostas, Escolha a Melhor",
+        "new": "Self-Consistency Prompting: Escolha a Melhor Resposta"
+      },
+      {
+        "field": "metaDescription",
+        "old": "O self-consistency prompting gera 5–20 caminhos de raciocínio e escolhe a resposta majoritária. Melhora a precisão em matemática de 56% para 74%.",
+        "new": "O self-consistency prompting amostra vários caminhos de raciocínio e escolhe a resposta majoritária. No artigo original, o GSM8K subiu de 56,5% para 74,4%."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (self-consistency-prompting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "self consistency prompting",
+      "self-consistency prompting",
+      "what is self consistency prompting"
+    ],
+    "baseline": {
+      "position": 12.38,
+      "impressions": 21,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "238618d2-1618-45cf-857c-bb114799b156",
+    "slug": "/fr/prompt-engineering/self-consistency-prompting",
+    "date": "2026-11-02T15:48:26.673Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Self-Consistency Prompting génère 5-20 chemins de raisonnement et sélectionne la réponse majoritaire. Améliore la précision en mathématiques de 56% à 74%.",
+        "new": "Le Self-Consistency Prompting échantillonne des chemins de raisonnement et retient la réponse majoritaire. Dans l'article, GSM8K passe de 56.5% à 74.4%."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (self-consistency-prompting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "self consistency prompting",
+      "self-consistency prompting",
+      "what is self consistency prompting"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "050feed1-9d20-4842-bd14-5c9b754f11d6",
+    "slug": "/ja/prompt-engineering/self-consistency-prompting",
+    "date": "2026-11-02T15:48:26.777Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "セルフコンシステンシープロンプティング：複数の推論経路で精度向上する手法と実装ガイド",
+        "new": "Self-Consistencyプロンプト：多数決の仕組み"
+      },
+      {
+        "field": "metaDescription",
+        "old": "セルフコンシステンシープロンプティングは複数の推論パスを生成して多数決で最頻回答を選択。GSM8K数学ベンチマークで56%から74%に精度向上。実装方法と活用シーンを詳しく解説します。",
+        "new": "Self-Consistencyプロンプトは複数の推論パスをサンプリングし、多数派の答えを採用します。原論文ではGSM8Kの正答率が56.5%から74.4%に上がりました。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (self-consistency-prompting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "self consistency prompting",
+      "self-consistency prompting",
+      "what is self consistency prompting"
+    ],
+    "baseline": {
+      "position": 12.11,
+      "impressions": 55,
+      "clicks": 2,
+      "ctr": 0.03636363636363636,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "78795940-ed28-4136-97af-07d090821a37",
+    "slug": "/zh/prompt-engineering/self-consistency-prompting",
+    "date": "2026-11-02T15:48:26.885Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "自洽一致性提示：多采样投票法精度提升18%，完整实现和企业应用指南",
+        "new": "Self-Consistency提示：多数投票如何选出答案"
+      },
+      {
+        "field": "metaDescription",
+        "old": "自洽一致性提示生成多个推理路径投票选择最频繁答案。GSM8K数学精度从56%提升到74%。包含完整实现步骤和金融、医疗、法律企业部署指南。",
+        "new": "Self-Consistency提示采样多条推理路径并选取多数答案。原论文中GSM8K准确率从56.5%提高到74.4%，本文说明原理、适用场景与成本。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (self-consistency-prompting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "self consistency prompting",
+      "self-consistency prompting",
+      "what is self consistency prompting"
+    ],
+    "baseline": {
+      "position": 11.72,
+      "impressions": 151,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "f69e8f8e-95ff-4aa3-99fc-89e6a945f05b",
+    "slug": "/ko/prompt-engineering/self-consistency-prompting",
+    "date": "2026-11-02T15:48:26.991Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "자기 일관성 프롬프팅: 여러 답변 생성 후 최적 선택",
+        "new": "자기 일관성 프롬프팅: 다수결로 정답을 고르는 방법"
+      },
+      {
+        "field": "metaDescription",
+        "old": "자기 일관성 프롬프팅은 5~20개의 추론 경로를 생성하고 다수결 답변을 선택합니다. 수학 및 논리 정확도를 56%에서 74%로 향상시킵니다.",
+        "new": "자기 일관성 프롬프팅은 여러 추론 경로를 샘플링해 다수결 답변을 선택합니다. 원본 논문에서 GSM8K 정확도는 56.5%에서 74.4%로 올랐습니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (self-consistency-prompting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "self consistency prompting",
+      "self-consistency prompting",
+      "what is self consistency prompting"
+    ],
+    "baseline": {
+      "position": 6.11,
+      "impressions": 45,
+      "clicks": 1,
+      "ctr": 0.022222222222222223,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
   }
 ]
