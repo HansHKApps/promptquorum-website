@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       heroImage: '/images/how-much-vram-local-llm-vram-by-size-hero-en.webp',
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
-      leadAnswerBlock: '**A 7B model needs about 4GB of VRAM at Q4 (4-bit) for its weights; 13B needs about 8GB; 22B needs about 13GB; 70B needs about 42GB. Add 1-2GB of headroom for context and the OS on top of those figures, and budget 15-20% more for Q5 or roughly 75% more for Q8.**',
+      leadAnswerBlock: '**A 7B model needs about 4GB of VRAM at Q4 (4-bit) for its weights; 13B about 8GB; 22B about 13GB; 70B about 42GB. Add 1-2GB for context and the OS, and budget 15-20% more for Q5 or roughly 75% more for Q8.**',
       quickAnswerTop: {
         en: {
           question: 'How much VRAM do I need to run a local LLM?',
@@ -222,7 +222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'What quantization level has the best accuracy?', a: 'Q8 is nearly imperceptible quality loss. Q5 is ~2% degradation. Q4 is ~1% degradation. For most tasks, Q4 is the sweet spot between VRAM savings and quality.' },
             { q: 'What is the VRAM formula for LLMs?', a: 'VRAM (GB) = model parameters (billions) × bytes per parameter + overhead. At Q4 (4-bit): 7B × 0.5 bytes + 1GB overhead ≈ 4.5GB weights + 2GB KV cache = ~7GB total.' },
             { q: 'How much more VRAM does Q8 need vs Q4?', a: 'Q8 uses 2× the VRAM of Q4. A 7B model at Q4 needs ~4-5GB; at Q8, ~8-9GB. Always check quantization level before buying a GPU.' },
-            { q: 'Can I run a 70B model on two GPUs?', a: 'Yes. Two RTX 5090s (24GB each) combine for 48GB VRAM -- enough for a 70B model at Q4. llama.cpp and Ollama support multi-GPU via tensor parallelism and --n-gpu-layers.' },
+            { q: 'Can I run a 70B model on two GPUs?', a: 'Yes. Two RTX 5090s (32GB each) combine for 64GB VRAM -- enough for a 70B model at Q4. llama.cpp and Ollama support multi-GPU via tensor parallelism and --n-gpu-layers.' },
           ],
         },
         'relatedReading': {
@@ -360,7 +360,7 @@ schema: {
             'name': 'Can I run a 70B model on two GPUs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes. Two RTX 5090s (24GB each) combine for 48GB VRAM -- enough for a 70B model at Q4. llama.cpp and Ollama support multi-GPU via tensor parallelism and --n-gpu-layers.',
+              'text': 'Yes. Two RTX 5090s (32GB each) combine for 64GB VRAM -- enough for a 70B model at Q4. llama.cpp and Ollama support multi-GPU via tensor parallelism and --n-gpu-layers.',
             },
           },
         ]
@@ -378,7 +378,7 @@ schema: {
       heroImage: '/images/how-much-vram-local-llm-vram-by-size-hero-es.webp',
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
-      leadAnswerBlock: '**Un modelo 7B necesita unos 4 GB de VRAM en Q4 (4 bits) para sus pesos; 13B necesita unos 8 GB; 22B unos 13 GB; 70B unos 42 GB. Añade 1-2 GB de margen para el contexto y el sistema sobre esas cifras, y un 15-20% más para Q5 o un 75% más para Q8.**',
+      leadAnswerBlock: '**Un modelo 7B necesita unos 4 GB de VRAM en Q4 (4 bits) para sus pesos; 13B unos 8 GB; 22B unos 13 GB; 70B unos 42 GB. Añade 1-2 GB para contexto y sistema, y un 15-20% más para Q5 o un 75% más para Q8.**',
       nextStep: {
         text: 'Ya conoces tu presupuesto de VRAM. Ahora elige la GPU correcta para él.',
         label: 'Mejores GPUs económicas para LLMs locales →',
@@ -559,7 +559,7 @@ schema: {
             { q: '¿Qué nivel de cuantización tiene la mejor precisión?', a: 'Q8 tiene una pérdida de calidad casi imperceptible. Q5 tiene ~2% de degradación. Q4 tiene ~1% de degradación. Para la mayoría de las tareas, Q4 es el punto óptimo entre ahorro de VRAM y calidad.' },
             { q: '¿Cuál es la fórmula de VRAM para LLMs?', a: 'VRAM (GB) = parámetros del modelo (miles de millones) × bytes por parámetro + overhead. En Q4 (4 bits): 7B × 0.5 bytes + 1 GB overhead ≈ 4.5 GB pesos + 2 GB caché KV = ~7 GB total.' },
             { q: '¿Cuánta más VRAM necesita Q8 frente a Q4?', a: 'Q8 usa el doble de VRAM que Q4. Un modelo 7B en Q4 necesita ~4-5 GB; en Q8, ~8-9 GB. Comprueba siempre el nivel de cuantización antes de comprar una GPU.' },
-            { q: '¿Puedo ejecutar un modelo 70B en dos GPUs?', a: 'Sí. Dos RTX 5090 (24 GB cada una) combinan 48 GB de VRAM — suficiente para un modelo 70B en Q4. llama.cpp y Ollama soportan múltiples GPUs mediante paralelismo tensorial y --n-gpu-layers.' },
+            { q: '¿Puedo ejecutar un modelo 70B en dos GPUs?', a: 'Sí. Dos RTX 5090 (32 GB cada una) combinan 64 GB de VRAM — suficiente para un modelo 70B en Q4. llama.cpp y Ollama soportan múltiples GPUs mediante paralelismo tensorial y --n-gpu-layers.' },
           ],
         },
         'relatedReading': {
@@ -697,7 +697,7 @@ schema: {
             'name': '¿Puedo ejecutar un modelo 70B en dos GPUs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sí. Dos RTX 5090 (24 GB cada una) combinan 48 GB de VRAM — suficiente para un modelo 70B en Q4. llama.cpp y Ollama soportan múltiples GPUs mediante paralelismo tensorial y --n-gpu-layers.',
+              'text': 'Sí. Dos RTX 5090 (32 GB cada una) combinan 64 GB de VRAM — suficiente para un modelo 70B en Q4. llama.cpp y Ollama soportan múltiples GPUs mediante paralelismo tensorial y --n-gpu-layers.',
             },
           },
         ]
@@ -896,7 +896,7 @@ schema: {
             { q: 'أي مستوى تكميم له أفضل دقة؟', a: 'Q8 فقدان جودته غير محسوس تقريبًا. Q5 تدهوره ~2%. Q4 تدهوره ~1%. لمعظم المهام، Q4 هي النقطة المثالية بين توفير VRAM والجودة.' },
             { q: 'ما صيغة VRAM لنماذج LLM؟', a: 'VRAM (GB) = معاملات النموذج (مليار) × بايت لكل معامل + عبء. بـ Q4 (4 بت): 7B × 0.5 بايت + 1 GB عبء ≈ 4.5 GB أوزان + 2 GB ذاكرة KV = ~7 GB إجمالي.' },
             { q: 'كم تحتاج Q8 من VRAM أكثر من Q4؟', a: 'تستخدم Q8 ضعف VRAM مقارنة بـ Q4. يحتاج نموذج 7B بـ Q4 إلى ~4-5 GB؛ وبـ Q8 ~8-9 GB. تحقّق دائمًا من مستوى التكميم قبل شراء GPU.' },
-            { q: 'هل يمكنني تشغيل نموذج 70B على وحدتي GPU؟', a: 'نعم. وحدتا RTX 5090 (24 GB لكل منهما) تجمعان 48 GB من VRAM — كافية لنموذج 70B بـ Q4. يدعم llama.cpp و Ollama وحدات GPU متعددة عبر التوازي التنسوري و --n-gpu-layers.' },
+            { q: 'هل يمكنني تشغيل نموذج 70B على وحدتي GPU؟', a: 'نعم. وحدتا RTX 5090 (32 GB لكل منهما) تجمعان 64 GB من VRAM — كافية لنموذج 70B بـ Q4. يدعم llama.cpp و Ollama وحدات GPU متعددة عبر التوازي التنسوري و --n-gpu-layers.' },
           ],
         },
         'relatedReading': {
@@ -1034,7 +1034,7 @@ schema: {
             'name': 'هل يمكنني تشغيل نموذج 70B على وحدتي GPU؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'نعم. وحدتا RTX 5090 (24 GB لكل منهما) تجمعان 48 GB من VRAM — كافية لنموذج 70B بـ Q4. يدعم llama.cpp و Ollama وحدات GPU متعددة عبر التوازي التنسوري و --n-gpu-layers.',
+              'text': 'نعم. وحدتا RTX 5090 (32 GB لكل منهما) تجمعان 64 GB من VRAM — كافية لنموذج 70B بـ Q4. يدعم llama.cpp و Ollama وحدات GPU متعددة عبر التوازي التنسوري و --n-gpu-layers.',
             },
           },
         ]
@@ -1052,7 +1052,7 @@ schema: {
       heroImage: '/images/how-much-vram-local-llm-vram-by-size-hero-pt.webp',
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
-      leadAnswerBlock: '**Um modelo 7B precisa de cerca de 4 GB de VRAM em Q4 (4 bits) para os pesos; 13B precisa de cerca de 8 GB; 22B de cerca de 13 GB; 70B de cerca de 42 GB. Adicione 1-2 GB de margem para o contexto e o sistema, e 15-20% a mais para Q5 ou cerca de 75% a mais para Q8.**',
+      leadAnswerBlock: '**Um modelo 7B precisa de cerca de 4 GB de VRAM em Q4 (4 bits) para os pesos; 13B de cerca de 8 GB; 22B de 13 GB; 70B de 42 GB. Adicione 1-2 GB para contexto e sistema, e 15-20% para Q5 ou 75% para Q8.**',
       nextStep: {
         text: 'Você já conhece seu orçamento de VRAM. Agora escolha a GPU certa para ele.',
         label: 'Melhores GPUs econômicas para LLMs locais →',
@@ -1232,7 +1232,7 @@ schema: {
             { q: 'Posso descarregar parte da VRAM para a RAM da CPU?', a: 'Sim, via divisão de camadas (NVLink). O llama.cpp e o Ollama suportam isso. A vazão cai 30-50%, mas funciona. Menos de 8 GB de VRAM? Veja **[quais modelos rodam mais rápido no seu nível exato de hardware](/pt/local-llms/fastest-local-llms-low-end-pcs)** — benchmarks com números reais de tok/seg para apenas CPU, 4 GB, 6 GB e 8 GB de VRAM.' },
             { q: 'Qual é a fórmula de VRAM para LLMs?', a: 'VRAM (GB) = parâmetros do modelo (bilhões) × bytes por parâmetro + overhead. Em Q4 (4 bits): 7B × 0.5 bytes + 1 GB overhead ≈ 4.5 GB de pesos + 2 GB de cache KV = ~7 GB no total.' },
             { q: 'Quanto mais VRAM o Q8 precisa em relação ao Q4?', a: 'O Q8 usa o dobro da VRAM do Q4. Um modelo 7B em Q4 precisa de ~4-5 GB; em Q8, ~8-9 GB. Verifique sempre o nível de quantização antes de comprar uma GPU.' },
-            { q: 'Posso rodar um modelo 70B em duas GPUs?', a: 'Sim. Duas RTX 5090 (24 GB cada) combinam 48 GB de VRAM — suficiente para um modelo 70B em Q4. O llama.cpp e o Ollama suportam várias GPUs via paralelismo tensorial e --n-gpu-layers.' },
+            { q: 'Posso rodar um modelo 70B em duas GPUs?', a: 'Sim. Duas RTX 5090 (32 GB cada) combinam 64 GB de VRAM — suficiente para um modelo 70B em Q4. O llama.cpp e o Ollama suportam várias GPUs via paralelismo tensorial e --n-gpu-layers.' },
           ],
         },
         'relatedReading': {
@@ -1362,7 +1362,7 @@ schema: {
             'name': 'Posso rodar um modelo 70B em duas GPUs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sim. Duas RTX 5090 (24 GB cada) combinam 48 GB de VRAM — suficiente para um modelo 70B em Q4. O llama.cpp e o Ollama suportam várias GPUs via paralelismo tensorial e --n-gpu-layers.',
+              'text': 'Sim. Duas RTX 5090 (32 GB cada) combinam 64 GB de VRAM — suficiente para um modelo 70B em Q4. O llama.cpp e o Ollama suportam várias GPUs via paralelismo tensorial e --n-gpu-layers.',
             },
           },
         ]
@@ -1383,6 +1383,7 @@ schema: {
       },
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
+      leadAnswerBlock: '**Un modèle 7B a besoin d\'environ 4 GB de VRAM en Q4 (4 bits) ; 13B environ 8 GB ; 22B 13 GB ; 70B 42 GB. Ajoutez 1-2 GB pour le contexte et le système, et 15-20 % en Q5 ou 75 % en Q8.**',
       readTime: '7 min de lecture',
       educationalLevel: 'Beginner',
       primaryTerm: 'Exigences VRAM',
@@ -1656,6 +1657,7 @@ schema: {
       },
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
+      leadAnswerBlock: '**Ein 7B-Modell benötigt bei Q4 (4-Bit) etwa 4 GB VRAM für die Gewichte; 13B etwa 8 GB; 22B etwa 13 GB; 70B etwa 42 GB. Rechnen Sie 1-2 GB für Kontext und System dazu, bei Q5 etwa 15-20 % und bei Q8 etwa 75 % mehr.**',
       readTime: '7 min Lesezeit',
       educationalLevel: 'Beginner',
       primaryTerm: 'VRAM-Anforderungen',
@@ -1719,6 +1721,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'W
       },
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
+      leadAnswerBlock: '**7BモデルはQ4（4ビット）量子化で重みに約4 GBのVRAMが必要で、13Bは約8 GB、22Bは約13 GB、70Bは約42 GBです。コンテキストとシステム用に1-2 GBを追加し、Q5では約15-20%増、Q8では約75%増を見込んでください。**',
       readTime: '7分で読める',
       educationalLevel: 'Beginner',
       primaryTerm: 'VRAM要件',
@@ -1917,6 +1920,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
       },
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
+      leadAnswerBlock: '**7B模型在Q4（4位）量化下权重约需4 GB显存，13B约需8 GB，22B约需13 GB，70B约需42 GB。请为上下文和系统预留1-2 GB，Q5约增加15-20%，Q8约增加75%。**',
       readTime: '7分钟阅读',
       educationalLevel: 'Beginner',
       primaryTerm: '显存要求',
@@ -2285,7 +2289,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
             { q: '정확도가 가장 높은 양자화 수준은 무엇입니까?', a: 'Q8은 거의 감지하기 어려운 품질 손실입니다. Q5는 약 2% 저하. Q4는 약 1% 저하. 대부분의 작업에서 Q4가 VRAM 절감과 품질 사이의 최적점입니다.' },
             { q: 'LLM의 VRAM 공식이란 무엇입니까?', a: 'VRAM (GB) = 모델 파라미터(십억 단위) × 파라미터당 바이트 + 오버헤드. 파라미터당 바이트는 실제 GGUF 파일로 검증된 값으로 Q4는 약 0.6, Q5는 약 0.7, Q8은 약 1.05입니다. 예: 7B × 0.6바이트 = 4.2GB 가중치 + 1~2GB 오버헤드 ≈ 5~6GB 합계.' },
             { q: 'Q8은 Q4보다 VRAM이 얼마나 더 필요합니까?', a: 'Q8은 Q4의 약 1.75배 VRAM을 사용합니다. 7B 모델은 Q4에서 약 4GB, Q8에서 약 7GB가 필요합니다. GPU를 구매하기 전에 항상 양자화 수준을 확인하십시오.' },
-            { q: '두 개의 GPU로 70B 모델을 실행할 수 있습니까?', a: '예. 두 개의 RTX 5090(각 24GB)을 합치면 48GB VRAM — Q4에서 70B 모델을 실행하기에 충분합니다. llama.cpp와 Ollama는 텐서 병렬 처리 및 --n-gpu-layers를 통해 다중 GPU를 지원합니다.' },
+            { q: '두 개의 GPU로 70B 모델을 실행할 수 있습니까?', a: '예. 두 개의 RTX 5090(각 32GB)을 합치면 64GB VRAM — Q4에서 70B 모델을 실행하기에 충분합니다. llama.cpp와 Ollama는 텐서 병렬 처리 및 --n-gpu-layers를 통해 다중 GPU를 지원합니다.' },
           ],
         },
         'relatedReading': {
@@ -2423,7 +2427,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
             'name': '두 개의 GPU로 70B 모델을 실행할 수 있습니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '예. 두 개의 RTX 5090(각 24GB)을 합치면 48GB VRAM — Q4에서 70B 모델을 실행하기에 충분합니다. llama.cpp와 Ollama는 텐서 병렬 처리 및 --n-gpu-layers를 통해 다중 GPU를 지원합니다.',
+              'text': '예. 두 개의 RTX 5090(각 32GB)을 합치면 64GB VRAM — Q4에서 70B 모델을 실행하기에 충분합니다. llama.cpp와 Ollama는 텐서 병렬 처리 및 --n-gpu-layers를 통해 다중 GPU를 지원합니다.',
             },
           },
         ]
