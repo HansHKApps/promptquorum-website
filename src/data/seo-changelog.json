@@ -13168,5 +13168,336 @@
       "period": "28d to 2026-11-01"
     },
     "deployedAt": null
+  },
+  {
+    "id": "35eb0a37-7e87-46f5-b712-b214871bcfe8",
+    "slug": "/power-local-llm/odysseus-review",
+    "date": "2026-11-02T14:06:08.771Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Odysseus Review: Self-Hosted AI Workspace Guide",
+        "new": "Odysseus Review: Self-Hosted AI Workspace, Docker Setup"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Odysseus is a free, open-source, self-hosted AI workspace for chat, agents, research, and documents, started by Felix Kjellberg (PewDiePie). Install steps, features, and license for 2026.",
+        "new": "Free, open-source (AGPL-3.0) self-hosted AI workspace by PewDiePie: Docker install on port 7011, Apple Silicon setup, image tags, license and features."
+      },
+      {
+        "field": "sections",
+        "old": "port 7000, typed stars, no production/Apple Silicon coverage",
+        "new": "port 7011, directory star count, install code block, production + appleSilicon sections, 5 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh (review-top100 pilot rank 3): stale 87,156 stars/860 forks replaced by directory data, default port corrected 7000->7011 (compose file), install code block (top query is the exact git clone command), production section (branches, GHCR image tags, security flags), Apple Silicon/native section, 5 new FAQs, lead cut to 48 words, meta and title rewritten.",
+    "queries": [
+      "odysseus github",
+      "odysseus workspace",
+      "git clone https://github.com/odysseus-dev/odysseus.git && cd odysseus",
+      "odysseus dev",
+      "odysseus llm",
+      "odysseus-dev"
+    ],
+    "baseline": {
+      "position": 6.2,
+      "impressions": 7922,
+      "clicks": 24,
+      "ctr": 0.003029537995455693,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "3a308c79-e7e4-49bc-86a5-cce3bb6ffde7",
+    "slug": "/de/power-local-llm/odysseus-review",
+    "date": "2026-11-02T14:06:08.799Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Odysseus ist ein kostenloser, quelloffener, selbstgehosteter KI-Arbeitsbereich für Chat, Agenten, Recherche und Dokumente, gestartet von Felix Kjellberg (PewDiePie). Installation, Funktionen und Lizenz für 2026.",
+        "new": "Kostenloser, quelloffener (AGPL-3.0) KI-Arbeitsbereich zum Selbsthosten, gestartet von PewDiePie: Docker-Installation, Port 7011, Apple Silicon, Lizenz."
+      },
+      {
+        "field": "sections",
+        "old": "port 7000, typed stars, no production/Apple Silicon coverage",
+        "new": "port 7011, directory star count, install code block, production + appleSilicon sections, 5 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "odysseus dev",
+      "odysseus git"
+    ],
+    "baseline": {
+      "position": 8.22,
+      "impressions": 102,
+      "clicks": 1,
+      "ctr": 0.00980392156862745,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "1317f41b-3adb-4c4c-9847-488cae15aa58",
+    "slug": "/fr/power-local-llm/odysseus-review",
+    "date": "2026-11-02T14:06:08.826Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Odysseus est un espace de travail IA gratuit, open source et auto-hébergé pour le chat, les agents, la recherche et les documents, lancé par Felix Kjellberg (PewDiePie). Installation, fonctionnalités et licence pour 2026.",
+        "new": "Espace de travail IA gratuit et open source (AGPL-3.0) à auto-héberger, lancé par PewDiePie : installation Docker, port 7011, Apple Silicon, licence."
+      },
+      {
+        "field": "sections",
+        "old": "port 7000, typed stars, no production/Apple Silicon coverage",
+        "new": "port 7011, directory star count, install code block, production + appleSilicon sections, 5 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "odysseus ia",
+      "odysseus llm",
+      "odysseus-dev/odysseus",
+      "odysseus dev"
+    ],
+    "baseline": {
+      "position": 5.14,
+      "impressions": 84,
+      "clicks": 1,
+      "ctr": 0.011904761904761904,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "bb4563f5-4909-4b2b-b5cd-ab00c1bcdebb",
+    "slug": "/es/power-local-llm/odysseus-review",
+    "date": "2026-11-02T14:06:08.855Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Odysseus es un espacio de trabajo de IA gratuito, de código abierto y autoalojado para chat, agentes, investigación y documentos, iniciado por Felix Kjellberg (PewDiePie). Pasos de instalación, funciones y licencia para 2026.",
+        "new": "Espacio de trabajo de IA gratuito y open source (AGPL-3.0) autoalojado, creado por PewDiePie: instalación con Docker, puerto 7011, Apple Silicon, licencia."
+      },
+      {
+        "field": "sections",
+        "old": "port 7000, typed stars, no production/Apple Silicon coverage",
+        "new": "port 7011, directory star count, install code block, production + appleSilicon sections, 5 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "odysseus ia",
+      "odysseus-dev",
+      "odysseus",
+      "odysseus software"
+    ],
+    "baseline": {
+      "position": 6.15,
+      "impressions": 201,
+      "clicks": 1,
+      "ctr": 0.004975124378109453,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "507854ae-30e2-4ba5-a63a-73f96ab134b5",
+    "slug": "/pt/power-local-llm/odysseus-review",
+    "date": "2026-11-02T14:06:08.884Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Odysseus é um espaço de trabalho de IA gratuito, de código aberto e auto-hospedado para chat, agentes, pesquisa e documentos, iniciado por Felix Kjellberg (PewDiePie). Passos de instalação, recursos e licença para 2026.",
+        "new": "Espaço de trabalho de IA gratuito e open source (AGPL-3.0) auto-hospedado, criado por PewDiePie: instalação com Docker, porta 7011, Apple Silicon, licença."
+      },
+      {
+        "field": "sections",
+        "old": "port 7000, typed stars, no production/Apple Silicon coverage",
+        "new": "port 7011, directory star count, install code block, production + appleSilicon sections, 5 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "no query rows in window"
+    ],
+    "baseline": {
+      "position": 5.5,
+      "impressions": 6,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e89af407-9e7f-46f9-b06c-4f74c9c06c2d",
+    "slug": "/ja/power-local-llm/odysseus-review",
+    "date": "2026-11-02T14:06:08.916Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Odysseusは、Felix Kjellberg（PewDiePie）が始めた、チャット・エージェント・リサーチ・文書向けの無料オープンソースのセルフホスト型AIワークスペースです。2026年版のインストール手順、機能、ライセンス。",
+        "new": "無料のオープンソース(AGPL-3.0)でセルフホストできるAIワークスペース。PewDiePie発。Docker導入、ポート7011、Apple Silicon、ライセンスを解説。"
+      },
+      {
+        "field": "sections",
+        "old": "port 7000, typed stars, no production/Apple Silicon coverage",
+        "new": "port 7011, directory star count, install code block, production + appleSilicon sections, 5 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "odysseus",
+      "odysseus llm"
+    ],
+    "baseline": {
+      "position": 7.09,
+      "impressions": 11,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c7f1e7d1-1fe9-41c2-ba98-c15f34fdc182",
+    "slug": "/zh/power-local-llm/odysseus-review",
+    "date": "2026-11-02T14:06:08.946Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Odysseus评测：自托管AI工作空间",
+        "new": "Odysseus评测：自托管AI工作空间与Docker部署"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Odysseus是一款由Felix Kjellberg（PewDiePie）发起的免费开源自托管AI工作空间，面向聊天、代理、研究和文档。2026年安装步骤、功能与许可证一览。",
+        "new": "免费开源（AGPL-3.0）、可自托管的 AI 工作空间，由 PewDiePie 发起。含 Docker 安装、端口 7011、Apple Silicon 部署与许可证说明。"
+      },
+      {
+        "field": "sections",
+        "old": "port 7000, typed stars, no production/Apple Silicon coverage",
+        "new": "port 7011, directory star count, install code block, production + appleSilicon sections, 5 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "odysseus dev"
+    ],
+    "baseline": {
+      "position": 4.41,
+      "impressions": 22,
+      "clicks": 1,
+      "ctr": 0.045454545454545456,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "61af31b2-deae-47db-9b07-54c85c27f3f9",
+    "slug": "/ar/power-local-llm/odysseus-review",
+    "date": "2026-11-02T14:06:08.980Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Odysseus هي مساحة عمل ذكاء اصطناعي مجانية ومفتوحة المصدر وذاتية الاستضافة للدردشة والوكلاء والبحث والمستندات، بدأها فيليكس كيلبرغ (PewDiePie). خطوات التثبيت والميزات والرخصة لعام 2026.",
+        "new": "مساحة عمل ذكاء اصطناعي مجانية ومفتوحة المصدر (AGPL-3.0) ذاتية الاستضافة، بدأها PewDiePie: تثبيت Docker والمنفذ 7011 وApple Silicon والترخيص والميزات."
+      },
+      {
+        "field": "sections",
+        "old": "port 7000, typed stars, no production/Apple Silicon coverage",
+        "new": "port 7011, directory star count, install code block, production + appleSilicon sections, 5 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "no query rows in window"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "98800e55-9610-4ba4-88a0-ed6b01094d27",
+    "slug": "/ko/power-local-llm/odysseus-review",
+    "date": "2026-11-02T14:06:09.011Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Odysseus는 펠릭스 셸버그(PewDiePie)가 시작한, 채팅·에이전트·리서치·문서용 무료 오픈소스 셀프 호스팅 AI 워크스페이스입니다. 2026년 설치 단계, 기능, 라이선스를 정리했습니다.",
+        "new": "무료 오픈소스(AGPL-3.0) 자체 호스팅 AI 워크스페이스, PewDiePie가 시작. Docker 설치, 포트 7011, Apple Silicon 실행법, 라이선스를 정리했습니다."
+      },
+      {
+        "field": "sections",
+        "old": "port 7000, typed stars, no production/Apple Silicon coverage",
+        "new": "port 7011, directory star count, install code block, production + appleSilicon sections, 5 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "odysseus",
+      "odysseus ai",
+      "오디세우스 ai"
+    ],
+    "baseline": {
+      "position": 8.61,
+      "impressions": 185,
+      "clicks": 3,
+      "ctr": 0.016216216216216217,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
   }
 ]
