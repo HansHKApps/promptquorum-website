@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Second Me Review: Train Your Own Personal AI Locally',
     seoTitle: 'Second Me Review: Local Personal AI on GitHub',
     intro: 'Second Me ([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)) is an open-source project, released under the Apache License 2.0, for training a personalized AI representation of yourself from your own data rather than talking to a generic chatbot. It runs locally through llama.cpp, uses Microsoft\'s GraphRAG to turn your data into something the model can draw on, and starts from base models in the Qwen2.5 series.',
-    metaDescription: 'Second Me is an open-source (Apache 2.0) project for training a personal AI from your own data, using GraphRAG and llama.cpp with Qwen2.5 base models. Here is what it actually does.',
+    metaDescription: 'Second Me on GitHub: open-source (Apache 2.0) project that trains a personal AI on your own data with GraphRAG and llama.cpp on Qwen2.5. What it does.',
     readTime: '9 min read',
     targetKeywords: [
       'Second Me review',
@@ -169,7 +169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '[Second Me](https://github.com/mindverse/Second-Me)', 'Core Idea': 'Personalized AI trained on your data', 'License': 'Apache 2.0', 'Local Inference': 'llama.cpp', 'Best For': 'Experimenting with a personal model' },
           { 'Tool': '[Khoj](https://khoj.dev)', 'Core Idea': 'Chat/search over notes + Notion', 'License': 'AGPL 3.0', 'Local Inference': 'Ollama/llama-cpp-server/vLLM', 'Best For': 'Obsidian/Notion second brain' },
           { 'Tool': '[AnythingLLM](https://anythingllm.com)', 'Core Idea': 'General document RAG', 'License': 'MIT', 'Local Inference': 'Multiple backends', 'Best For': 'General document Q&A' },
-          { 'Tool': '[Open WebUI](https://openwebui.com)', 'Core Idea': 'Chat frontend over local models', 'License': 'BSD-3', 'Local Inference': 'Ollama-based', 'Best For': 'A UI on top of Ollama' },
+          { 'Tool': '[Open WebUI](https://openwebui.com)', 'Core Idea': 'Chat frontend over local models', 'License': 'Open WebUI License (BSD-3 + branding clause)', 'Local Inference': 'Ollama-based', 'Best For': 'A UI on top of Ollama' },
         ],
       },
       commonMistakes: {
@@ -239,7 +239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Second Me Review: Trainieren Sie Ihre eigene KI lokal',
     seoTitle: 'Second Me Review: Lokale persönliche KI auf GitHub',
     intro: 'Second Me ([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)) ist ein Open-Source-Projekt unter der Apache License 2.0, mit dem Sie eine personalisierte KI-Repräsentation Ihrer selbst aus Ihren eigenen Daten trainieren, statt mit einem generischen Chatbot zu sprechen. Es läuft lokal über llama.cpp, nutzt Microsofts GraphRAG, um Ihre Daten in eine für das Modell nutzbare Form zu bringen, und startet von Basismodellen der Qwen2.5-Serie.',
-    metaDescription: 'Second Me ist ein Open-Source-Projekt (Apache 2.0) zum Trainieren einer persönlichen KI aus Ihren eigenen Daten, mit GraphRAG und llama.cpp auf Qwen2.5-Basismodellen. Was es wirklich tut.',
+    metaDescription: 'Second Me auf GitHub: Open-Source-Projekt (Apache 2.0), das mit GraphRAG und llama.cpp auf Qwen2.5 eine persönliche KI aus Ihren Daten trainiert.',
     readTime: '9 min read',
     targetKeywords: [
       'Second Me Review',
@@ -392,7 +392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '[Second Me](https://github.com/mindverse/Second-Me)', 'Kernidee': 'Personalisierte KI, trainiert auf Ihren Daten', 'Lizenz': 'Apache 2.0', 'Lokale Inferenz': 'llama.cpp', 'Am besten für': 'Experimentieren mit einem persönlichen Modell' },
           { 'Tool': '[Khoj](https://khoj.dev)', 'Kernidee': 'Chat/Suche über Notizen + Notion', 'Lizenz': 'AGPL 3.0', 'Lokale Inferenz': 'Ollama/llama-cpp-server/vLLM', 'Am besten für': 'Obsidian/Notion Second Brain' },
           { 'Tool': '[AnythingLLM](https://anythingllm.com)', 'Kernidee': 'Allgemeines Dokumenten-RAG', 'Lizenz': 'MIT', 'Lokale Inferenz': 'Mehrere Backends', 'Am besten für': 'Allgemeine Dokumenten-Q&A' },
-          { 'Tool': '[Open WebUI](https://openwebui.com)', 'Kernidee': 'Chat-Frontend über lokale Modelle', 'Lizenz': 'BSD-3', 'Lokale Inferenz': 'Ollama-basiert', 'Am besten für': 'Eine Oberfläche über Ollama' },
+          { 'Tool': '[Open WebUI](https://openwebui.com)', 'Kernidee': 'Chat-Frontend über lokale Modelle', 'Lizenz': 'Open WebUI License (BSD-3 + Branding-Klausel)', 'Lokale Inferenz': 'Ollama-basiert', 'Am besten für': 'Eine Oberfläche über Ollama' },
         ],
       },
       commonMistakes: {
@@ -462,7 +462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Second Me Review: entraînez votre propre IA en local',
     seoTitle: 'Second Me Review: IA personnelle locale sur GitHub',
     intro: 'Second Me ([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)) est un projet open source sous licence Apache 2.0, permettant d\'entraîner une représentation IA personnalisée de vous-même à partir de vos propres données, plutôt que de parler à un chatbot générique. Il fonctionne en local via llama.cpp, utilise GraphRAG de Microsoft pour transformer vos données en une forme exploitable par le modèle, et part de modèles de base de la série Qwen2.5.',
-    metaDescription: 'Second Me est un projet open source (Apache 2.0) pour entraîner une IA personnelle à partir de vos données, avec GraphRAG et llama.cpp sur des modèles de base Qwen2.5. Ce qu\'il fait réellement.',
+    metaDescription: 'Second Me sur GitHub : projet open source (Apache 2.0) qui entraîne une IA personnelle sur vos données avec GraphRAG et llama.cpp (Qwen2.5). Ce qu\'il fait.',
     readTime: '9 min read',
     targetKeywords: [
       'Second Me avis',
@@ -615,7 +615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Outil': '[Second Me](https://github.com/mindverse/Second-Me)', 'Idée centrale': 'IA personnalisée entraînée sur vos données', 'Licence': 'Apache 2.0', 'Inférence locale': 'llama.cpp', 'Idéal pour': 'Expérimenter un modèle personnel' },
           { 'Outil': '[Khoj](https://khoj.dev)', 'Idée centrale': 'Chat/recherche sur notes + Notion', 'Licence': 'AGPL 3.0', 'Inférence locale': 'Ollama/llama-cpp-server/vLLM', 'Idéal pour': 'Second brain Obsidian/Notion' },
           { 'Outil': '[AnythingLLM](https://anythingllm.com)', 'Idée centrale': 'RAG documentaire généraliste', 'Licence': 'MIT', 'Inférence locale': 'Plusieurs backends', 'Idéal pour': 'Q&R documentaire générale' },
-          { 'Outil': '[Open WebUI](https://openwebui.com)', 'Idée centrale': 'Interface de chat sur modèles locaux', 'Licence': 'BSD-3', 'Inférence locale': 'Basée sur Ollama', 'Idéal pour': 'Une interface au-dessus d\'Ollama' },
+          { 'Outil': '[Open WebUI](https://openwebui.com)', 'Idée centrale': 'Interface de chat sur modèles locaux', 'Licence': 'Open WebUI License (BSD-3 + clause de marque)', 'Inférence locale': 'Basée sur Ollama', 'Idéal pour': 'Une interface au-dessus d\'Ollama' },
         ],
       },
       commonMistakes: {
@@ -685,7 +685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Second Meレビュー：自分専用のAIをローカルで訓練する',
     seoTitle: 'Second Meレビュー：GitHubのローカル個人AI',
     intro: 'Second Me（github.com/mindverse/Second-Me）は、Apache License 2.0の下で公開されているオープンソースプロジェクトで、汎用チャットボットと話す代わりに、自分自身のデータからパーソナライズされたAI表現を訓練するためのものです。llama.cppを通じてローカルで動作し、MicrosoftのGraphRAGを使ってデータをモデルが利用できる形に変換し、Qwen2.5シリーズのベースモデルから始まります。',
-    metaDescription: 'Second Meは、GraphRAGとllama.cppを使い、Qwen2.5ベースモデル上で自分のデータからパーソナルAIを訓練するオープンソース（Apache 2.0）プロジェクトです。実際に何をするのかを解説します。',
+    metaDescription: 'Second MeのGitHubプロジェクトを解説。GraphRAGとllama.cppでQwen2.5上に自分のデータからパーソナルAIを訓練するオープンソース（Apache 2.0）です。',
     readTime: '9 min read',
     targetKeywords: [
       'Second Me レビュー',
@@ -838,7 +838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ツール': '[Second Me](https://github.com/mindverse/Second-Me)', '中核となる考え方': '自分のデータで訓練されたパーソナライズAI', 'ライセンス': 'Apache 2.0', 'ローカル推論': 'llama.cpp', '最適な用途': '個人モデルの実験' },
           { 'ツール': '[Khoj](https://khoj.dev)', '中核となる考え方': 'ノート＋Notionのチャット/検索', 'ライセンス': 'AGPL 3.0', 'ローカル推論': 'Ollama/llama-cpp-server/vLLM', '最適な用途': 'Obsidian/Notionのセカンドブレイン' },
           { 'ツール': '[AnythingLLM](https://anythingllm.com)', '中核となる考え方': '汎用ドキュメントRAG', 'ライセンス': 'MIT', 'ローカル推論': '複数のバックエンド', '最適な用途': '一般的なドキュメントQ&A' },
-          { 'ツール': '[Open WebUI](https://openwebui.com)', '中核となる考え方': 'ローカルモデル向けチャットフロントエンド', 'ライセンス': 'BSD-3', 'ローカル推論': 'Ollamaベース', '最適な用途': 'Ollama上のUI' },
+          { 'ツール': '[Open WebUI](https://openwebui.com)', '中核となる考え方': 'ローカルモデル向けチャットフロントエンド', 'ライセンス': 'Open WebUI License（BSD-3＋ブランディング条項）', 'ローカル推論': 'Ollamaベース', '最適な用途': 'Ollama上のUI' },
         ],
       },
       commonMistakes: {
@@ -1061,7 +1061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '工具': '[Second Me](https://github.com/mindverse/Second-Me)', '核心理念': '基于你的数据训练的个性化AI', '许可证': 'Apache 2.0', '本地推理': 'llama.cpp', '最适合': '尝试个人模型' },
           { '工具': '[Khoj](https://khoj.dev)', '核心理念': '笔记+Notion的聊天/搜索', '许可证': 'AGPL 3.0', '本地推理': 'Ollama/llama-cpp-server/vLLM', '最适合': 'Obsidian/Notion第二大脑' },
           { '工具': '[AnythingLLM](https://anythingllm.com)', '核心理念': '通用文档RAG', '许可证': 'MIT', '本地推理': '多种后端', '最适合': '通用文档问答' },
-          { '工具': '[Open WebUI](https://openwebui.com)', '核心理念': '本地模型的聊天前端', '许可证': 'BSD-3', '本地推理': '基于Ollama', '最适合': 'Ollama之上的界面' },
+          { '工具': '[Open WebUI](https://openwebui.com)', '核心理念': '本地模型的聊天前端', '许可证': 'Open WebUI License（BSD-3 + 品牌条款）', '本地推理': '基于Ollama', '最适合': 'Ollama之上的界面' },
         ],
       },
       commonMistakes: {
@@ -1131,7 +1131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Second Me Review: entrena tu propia IA en local',
     seoTitle: 'Second Me Review: IA personal local en GitHub',
     intro: 'Second Me ([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)) es un proyecto de código abierto bajo la Apache License 2.0 para entrenar una representación de IA personalizada de ti mismo a partir de tus propios datos, en lugar de hablar con un chatbot genérico. Funciona en local mediante llama.cpp, usa GraphRAG de Microsoft para convertir tus datos en algo que el modelo pueda aprovechar, y parte de modelos base de la serie Qwen2.5.',
-    metaDescription: 'Second Me es un proyecto de código abierto (Apache 2.0) para entrenar una IA personal con tus propios datos, usando GraphRAG y llama.cpp sobre modelos base Qwen2.5. Esto es lo que realmente hace.',
+    metaDescription: 'Second Me en GitHub: proyecto de código abierto (Apache 2.0) que entrena una IA personal con tus datos usando GraphRAG y llama.cpp (Qwen2.5). Qué hace.',
     readTime: '9 min read',
     targetKeywords: [
       'Second Me review',
@@ -1284,7 +1284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': '[Second Me](https://github.com/mindverse/Second-Me)', 'Idea central': 'IA personalizada entrenada con tus datos', 'Licencia': 'Apache 2.0', 'Inferencia local': 'llama.cpp', 'Ideal para': 'Experimentar con un modelo personal' },
           { 'Herramienta': '[Khoj](https://khoj.dev)', 'Idea central': 'Chat/búsqueda sobre notas + Notion', 'Licencia': 'AGPL 3.0', 'Inferencia local': 'Ollama/llama-cpp-server/vLLM', 'Ideal para': 'Segundo cerebro Obsidian/Notion' },
           { 'Herramienta': '[AnythingLLM](https://anythingllm.com)', 'Idea central': 'RAG documental general', 'Licencia': 'MIT', 'Inferencia local': 'Múltiples backends', 'Ideal para': 'Preguntas y respuestas documentales generales' },
-          { 'Herramienta': '[Open WebUI](https://openwebui.com)', 'Idea central': 'Frontend de chat sobre modelos locales', 'Licencia': 'BSD-3', 'Inferencia local': 'Basado en Ollama', 'Ideal para': 'Una interfaz sobre Ollama' },
+          { 'Herramienta': '[Open WebUI](https://openwebui.com)', 'Idea central': 'Frontend de chat sobre modelos locales', 'Licencia': 'Open WebUI License (BSD-3 + cláusula de marca)', 'Inferencia local': 'Basado en Ollama', 'Ideal para': 'Una interfaz sobre Ollama' },
         ],
       },
       commonMistakes: {
@@ -1354,7 +1354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Second Me Review: treine sua própria IA localmente',
     seoTitle: 'Second Me Review: IA pessoal local no GitHub',
     intro: 'O Second Me ([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)) é um projeto open source sob a Apache License 2.0, para treinar uma representação de IA personalizada de você a partir dos seus próprios dados, em vez de conversar com um chatbot genérico. Ele roda localmente via llama.cpp, usa o GraphRAG da Microsoft para transformar seus dados em algo que o modelo pode aproveitar, e parte de modelos base da série Qwen2.5.',
-    metaDescription: 'O Second Me é um projeto open source (Apache 2.0) para treinar uma IA pessoal a partir dos seus próprios dados, usando GraphRAG e llama.cpp em modelos base Qwen2.5. Veja o que ele realmente faz.',
+    metaDescription: 'Second Me no GitHub: projeto open source (Apache 2.0) que treina uma IA pessoal com seus dados usando GraphRAG e llama.cpp (Qwen2.5). O que ele faz.',
     readTime: '9 min read',
     targetKeywords: [
       'Second Me review',
@@ -1507,7 +1507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '[Second Me](https://github.com/mindverse/Second-Me)', 'Ideia central': 'IA personalizada treinada com seus dados', 'Licença': 'Apache 2.0', 'Inferência local': 'llama.cpp', 'Melhor para': 'Experimentar um modelo pessoal' },
           { 'Ferramenta': '[Khoj](https://khoj.dev)', 'Ideia central': 'Chat/busca sobre notas + Notion', 'Licença': 'AGPL 3.0', 'Inferência local': 'Ollama/llama-cpp-server/vLLM', 'Melhor para': 'Segundo cérebro Obsidian/Notion' },
           { 'Ferramenta': '[AnythingLLM](https://anythingllm.com)', 'Ideia central': 'RAG documental geral', 'Licença': 'MIT', 'Inferência local': 'Múltiplos backends', 'Melhor para': 'Perguntas e respostas gerais sobre documentos' },
-          { 'Ferramenta': '[Open WebUI](https://openwebui.com)', 'Ideia central': 'Frontend de chat sobre modelos locais', 'Licença': 'BSD-3', 'Inferência local': 'Baseado em Ollama', 'Melhor para': 'Uma interface sobre o Ollama' },
+          { 'Ferramenta': '[Open WebUI](https://openwebui.com)', 'Ideia central': 'Frontend de chat sobre modelos locais', 'Licença': 'Open WebUI License (BSD-3 + cláusula de marca)', 'Inferência local': 'Baseado em Ollama', 'Melhor para': 'Uma interface sobre o Ollama' },
         ],
       },
       commonMistakes: {
@@ -1577,7 +1577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مراجعة Second Me: درّب ذكاءك الاصطناعي الخاص محليًا',
     seoTitle: 'مراجعة Second Me: ذكاء اصطناعي شخصي محلي على GitHub',
     intro: 'Second Me ([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)) هو مشروع مفتوح المصدر بموجب رخصة Apache 2.0، يتيح لك تدريب تمثيل ذكاء اصطناعي شخصي عنك من بياناتك الخاصة، بدلاً من التحدث إلى روبوت محادثة عام. يعمل محليًا عبر llama.cpp، ويستخدم GraphRAG من Microsoft لتحويل بياناتك إلى شكل يمكن للنموذج الاستفادة منه، وينطلق من نماذج أساس من سلسلة Qwen2.5.',
-    metaDescription: 'Second Me هو مشروع مفتوح المصدر (Apache 2.0) لتدريب ذكاء اصطناعي شخصي من بياناتك الخاصة، باستخدام GraphRAG وllama.cpp على نماذج أساس Qwen2.5. إليك ما يفعله فعليًا.',
+    metaDescription: 'Second Me على GitHub: مشروع مفتوح المصدر (Apache 2.0) لتدريب ذكاء اصطناعي شخصي من بياناتك بـ GraphRAG وllama.cpp على Qwen2.5. ماذا يفعل فعليًا.',
     readTime: '9 min read',
     targetKeywords: [
       'مراجعة Second Me',
@@ -1730,7 +1730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': '[Second Me](https://github.com/mindverse/Second-Me)', 'الفكرة الأساسية': 'ذكاء اصطناعي شخصي مدرَّب على بياناتك', 'الترخيص': 'Apache 2.0', 'الاستدلال المحلي': 'llama.cpp', 'الأنسب لـ': 'تجربة نموذج شخصي' },
           { 'الأداة': '[Khoj](https://khoj.dev)', 'الفكرة الأساسية': 'دردشة/بحث في الملاحظات + Notion', 'الترخيص': 'AGPL 3.0', 'الاستدلال المحلي': 'Ollama/llama-cpp-server/vLLM', 'الأنسب لـ': 'دماغ ثانٍ عبر Obsidian/Notion' },
           { 'الأداة': '[AnythingLLM](https://anythingllm.com)', 'الفكرة الأساسية': 'RAG عام للمستندات', 'الترخيص': 'MIT', 'الاستدلال المحلي': 'خلفيات متعددة', 'الأنسب لـ': 'أسئلة وأجوبة عامة على المستندات' },
-          { 'الأداة': '[Open WebUI](https://openwebui.com)', 'الفكرة الأساسية': 'واجهة دردشة فوق نماذج محلية', 'الترخيص': 'BSD-3', 'الاستدلال المحلي': 'قائم على Ollama', 'الأنسب لـ': 'واجهة فوق Ollama' },
+          { 'الأداة': '[Open WebUI](https://openwebui.com)', 'الفكرة الأساسية': 'واجهة دردشة فوق نماذج محلية', 'الترخيص': 'Open WebUI License (BSD-3 + بند العلامة التجارية)', 'الاستدلال المحلي': 'قائم على Ollama', 'الأنسب لـ': 'واجهة فوق Ollama' },
         ],
       },
       commonMistakes: {
@@ -1800,7 +1800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Second Me 리뷰: 나만의 AI를 로컬에서 훈련하기',
     seoTitle: 'Second Me 리뷰: GitHub의 로컬 개인 AI',
     intro: 'Second Me([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me))는 Apache License 2.0 라이선스로 공개된 오픈소스 프로젝트로, 범용 챗봇과 대화하는 대신 자신의 데이터로 개인화된 AI 표현을 훈련할 수 있게 해줍니다. llama.cpp를 통해 로컬에서 실행되며, Microsoft의 GraphRAG를 사용해 데이터를 모델이 활용할 수 있는 형태로 변환하고, Qwen2.5 시리즈의 베이스 모델에서 시작합니다.',
-    metaDescription: 'Second Me는 GraphRAG와 llama.cpp를 사용해 Qwen2.5 베이스 모델 위에서 자신의 데이터로 개인 AI를 훈련하는 오픈소스(Apache 2.0) 프로젝트입니다. 실제로 무엇을 하는지 알아봅니다.',
+    metaDescription: 'Second Me GitHub 리뷰: GraphRAG와 llama.cpp로 Qwen2.5 위에서 내 데이터로 개인 AI를 훈련하는 오픈소스(Apache 2.0) 프로젝트입니다.',
     readTime: '9 min read',
     targetKeywords: [
       'Second Me 리뷰',
@@ -1953,7 +1953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': '[Second Me](https://github.com/mindverse/Second-Me)', '핵심 개념': '자신의 데이터로 훈련된 개인화 AI', '라이선스': 'Apache 2.0', '로컬 추론': 'llama.cpp', '가장 적합한 용도': '개인 모델 실험' },
           { '도구': '[Khoj](https://khoj.dev)', '핵심 개념': '노트 + Notion 채팅/검색', '라이선스': 'AGPL 3.0', '로컬 추론': 'Ollama/llama-cpp-server/vLLM', '가장 적합한 용도': 'Obsidian/Notion 세컨드 브레인' },
           { '도구': '[AnythingLLM](https://anythingllm.com)', '핵심 개념': '범용 문서 RAG', '라이선스': 'MIT', '로컬 추론': '다중 백엔드', '가장 적합한 용도': '일반 문서 Q&A' },
-          { '도구': '[Open WebUI](https://openwebui.com)', '핵심 개념': '로컬 모델용 채팅 프런트엔드', '라이선스': 'BSD-3', '로컬 추론': 'Ollama 기반', '가장 적합한 용도': 'Ollama 위의 UI' },
+          { '도구': '[Open WebUI](https://openwebui.com)', '핵심 개념': '로컬 모델용 채팅 프런트엔드', '라이선스': 'Open WebUI License (BSD-3 + 브랜딩 조항)', '로컬 추론': 'Ollama 기반', '가장 적합한 용도': 'Ollama 위의 UI' },
         ],
       },
       commonMistakes: {
