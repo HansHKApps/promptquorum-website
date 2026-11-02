@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Jan — fully open source, no telemetry by default, native dark mode; best for privacy-first users',
           'GPT4All — light requirements for older PCs, but no release since February 2025',
           'All three are free, work offline after install, and load GGUF model files',
-          'LM Studio + Jan support RAG-on-files out of the box; GPT4All requires a plugin',
+          'All three can chat with local files: LM Studio and Jan attach documents in a chat, GPT4All uses its built-in LocalDocs',
         ],
         updatedDate: '2026-11-02',
       },
@@ -66,7 +66,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Jan is fully open source with no telemetry by default — wins for privacy-first users.',
           'GPT4All has the lightest requirements but no release since February 2025 — use it only on very old hardware.',
           'All three are free, offline after install, and load standard GGUF models.',
-          'LM Studio and Jan ship built-in RAG; GPT4All needs a plugin.',
+          'All three can chat with local files: LM Studio and Jan attach documents in a chat, GPT4All uses LocalDocs.',
         ],
       },
       comparisonTable: {
@@ -75,7 +75,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Feature comparison of LM Studio, Jan, and GPT4All.',
         rows: [
           { 'Criterion': 'Best for', 'LM Studio': 'Power users', 'Jan': 'Privacy users', 'GPT4All': 'Beginners' },
-          { 'Criterion': 'Built-in RAG', 'LM Studio': 'Yes', 'Jan': 'Yes (extension)', 'GPT4All': 'Plugin only' },
+          { 'Criterion': 'Chat with local files', 'LM Studio': 'Yes (attach in chat)', 'Jan': 'Yes (attach in chat)', 'GPT4All': 'Yes (LocalDocs)' },
           { 'Criterion': 'Open source', 'LM Studio': 'No (proprietary)', 'Jan': 'Yes (Apache 2.0)', 'GPT4All': 'Yes (MIT)' },
           { 'Criterion': 'Telemetry by default', 'LM Studio': 'None per its privacy policy', 'Jan': 'None by default', 'GPT4All': 'Opt-in only' },
           { 'Criterion': 'OpenAI-compatible API server', 'LM Studio': 'Yes', 'Jan': 'Yes', 'GPT4All': 'Yes' },
@@ -174,7 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which app is best for chatting with my PDFs?',
-            a: 'LM Studio has built-in document chat. Jan offers it via an extension. GPT4All requires a third-party plugin or a separate tool like AnythingLLM.',
+            a: 'All three can. In LM Studio and Jan you attach documents inside a chat; LM Studio puts short documents into the context in full and uses retrieval (RAG) for long ones. GPT4All uses LocalDocs, where you add a folder as a collection. For more control over document chat, a separate tool such as AnythingLLM sits on top of a local model server.',
           },
           {
             q: 'Do I need an NVIDIA GPU to run any of these apps?',
@@ -263,7 +263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Jan — vollständig Open Source, standardmäßig keine Telemetrie, nativer Dark Mode; ideal für datenschutzbewusste Nutzer',
           'GPT4All — geringe Anforderungen für ältere PCs, aber seit Februar 2025 kein Release',
           'Alle drei sind kostenlos, funktionieren nach der Installation offline und laden GGUF-Modelldateien',
-          'LM Studio + Jan unterstützen RAG-auf-Dateien direkt; GPT4All benötigt ein Plugin',
+          'Alle drei können mit lokalen Dateien chatten: LM Studio und Jan hängen Dokumente direkt im Chat an, GPT4All nutzt das eingebaute LocalDocs',
         ],
         updatedDate: '2026-11-02',
       },
@@ -289,7 +289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Jan ist vollständig Open Source mit Telemetrie standardmäßig aus — und gewinnt damit für datenschutzbewusste Nutzer.',
           'GPT4All hat die geringsten Anforderungen, aber seit Februar 2025 kein Release — nur für sehr alte Hardware.',
           'Alle drei Apps sind kostenlos, nach der Installation offline-fähig und laden Standard-GGUF-Modelle.',
-          'LM Studio und Jan liefern RAG out-of-the-box; GPT4All benötigt dafür ein Plugin.',
+          'Alle drei können mit lokalen Dateien chatten: LM Studio und Jan hängen Dokumente direkt im Chat an, GPT4All nutzt LocalDocs.',
         ],
       },
       comparisonTable: {
@@ -298,7 +298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Funktionsvergleich von LM Studio, Jan und GPT4All.',
         rows: [
           { 'Kriterium': 'Ideal für', 'LM Studio': 'Power-User', 'Jan': 'Datenschutz-Nutzer', 'GPT4All': 'Einsteiger' },
-          { 'Kriterium': 'Eingebautes RAG', 'LM Studio': 'Ja', 'Jan': 'Ja (Erweiterung)', 'GPT4All': 'Nur per Plugin' },
+          { 'Kriterium': 'Chat mit lokalen Dateien', 'LM Studio': 'Ja (im Chat anhängen)', 'Jan': 'Ja (im Chat anhängen)', 'GPT4All': 'Ja (LocalDocs)' },
           { 'Kriterium': 'Open Source', 'LM Studio': 'Nein (proprietär)', 'Jan': 'Ja (Apache 2.0)', 'GPT4All': 'Ja (MIT)' },
           { 'Kriterium': 'Telemetrie standardmäßig', 'LM Studio': 'Laut Richtlinie keine', 'Jan': 'Standardmäßig keine', 'GPT4All': 'Nur opt-in' },
           { 'Kriterium': 'OpenAI-kompatibler API-Server', 'LM Studio': 'Ja', 'Jan': 'Ja', 'GPT4All': 'Ja' },
@@ -408,7 +408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welche App eignet sich am besten zum Chatten mit eigenen PDFs?',
-            a: 'LM Studio hat einen integrierten Dokumenten-Chat. Jan bietet ihn über eine Erweiterung. GPT4All benötigt ein Drittanbieter-Plugin oder ein separates Tool wie AnythingLLM.',
+            a: 'Alle drei können es. In LM Studio und Jan hängen Sie Dokumente direkt im Chat an; LM Studio legt kurze Dokumente vollständig in den Kontext und nutzt für lange Retrieval (RAG). GPT4All verwendet LocalDocs, wobei Sie einen Ordner als Sammlung hinzufügen. Für mehr Kontrolle beim Dokumenten-Chat sitzt ein separates Tool wie AnythingLLM auf einem lokalen Modellserver.',
           },
           {
             q: 'Brauche ich eine NVIDIA-GPU, um diese Apps zu nutzen?',
@@ -503,7 +503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Jan — entièrement open source, sans télémétrie par défaut, mode sombre natif ; idéal pour la confidentialité',
           'GPT4All — exigences légères pour les anciens PC, mais plus de version depuis février 2025',
           'Les trois sont gratuites, fonctionnent hors ligne après installation et chargent les fichiers GGUF',
-          'LM Studio + Jan intègrent le RAG sur fichiers ; GPT4All exige un plugin',
+          'Les trois peuvent discuter avec des fichiers locaux : LM Studio et Jan joignent des documents dans un chat, GPT4All utilise son module intégré LocalDocs',
         ],
         updatedDate: '2026-11-02',
       },
@@ -529,7 +529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Jan est entièrement open source, télémétrie désactivée par défaut — choix des utilisateurs vie-privée d\'abord.',
           'GPT4All a les exigences les plus légères mais plus de version depuis février 2025 — à réserver aux très anciens PC.',
           'Les trois sont gratuites, hors ligne après installation, et chargent les modèles GGUF standard.',
-          'LM Studio et Jan intègrent le RAG ; GPT4All requiert un plugin.',
+          'Les trois peuvent discuter avec des fichiers locaux : LM Studio et Jan joignent des documents dans un chat, GPT4All utilise LocalDocs.',
         ],
       },
       comparisonTable: {
@@ -539,7 +539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Critère': 'Idéal pour', 'LM Studio': 'Power users', 'Jan': 'Vie privée', 'GPT4All': 'Débutants' },
           { 'Critère': 'Taille d\'installation', 'LM Studio': '~450 Mo', 'Jan': '~380 Mo', 'GPT4All': '~290 Mo' },
-          { 'Critère': 'RAG intégré', 'LM Studio': 'Oui', 'Jan': 'Oui (extension)', 'GPT4All': 'Plugin uniquement' },
+          { 'Critère': 'Chat avec fichiers locaux', 'LM Studio': 'Oui (joindre au chat)', 'Jan': 'Oui (joindre au chat)', 'GPT4All': 'Oui (LocalDocs)' },
           { 'Critère': 'Open source', 'LM Studio': 'Non (propriétaire)', 'Jan': 'Oui (Apache 2.0)', 'GPT4All': 'Oui (MIT)' },
           { 'Critère': 'Télémétrie par défaut', 'LM Studio': 'Aucune selon sa politique', 'Jan': 'Aucune par défaut', 'GPT4All': 'Opt-in seulement' },
           { 'Critère': 'Serveur API compatible OpenAI', 'LM Studio': 'Oui', 'Jan': 'Oui', 'GPT4All': 'Oui' },
@@ -649,7 +649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quelle app est la meilleure pour discuter avec mes PDF ?',
-            a: 'LM Studio intègre un chat avec documents. Jan le propose via une extension. GPT4All nécessite un plugin tiers ou un outil séparé comme AnythingLLM.',
+            a: 'Les trois le permettent. Dans LM Studio et Jan, vous joignez des documents à l\'intérieur d\'un chat ; LM Studio place les documents courts en entier dans le contexte et utilise la recherche par récupération (RAG) pour les longs. GPT4All utilise LocalDocs, où vous ajoutez un dossier comme collection. Pour plus de contrôle sur le chat documentaire, un outil séparé comme AnythingLLM se place au-dessus d\'un serveur de modèles local.',
           },
           {
             q: 'Faut-il un GPU NVIDIA pour utiliser ces apps ?',
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Jan — 完全オープンソース、デフォルトでテレメトリなし、ネイティブダークモード。プライバシー重視ユーザー向け',
           'GPT4All — 古いPC向けの軽い動作要件。ただし2025年2月以降リリースなし',
           '3つとも無料、インストール後はオフライン動作、GGUFモデルファイルを読み込み可能',
-          'LM StudioとJanは標準でファイルRAGをサポート、GPT4Allはプラグインが必要',
+          '3つともローカルファイルとチャット可能：LM StudioとJanはチャットに文書を添付、GPT4Allは内蔵のLocalDocsを使用',
         ],
         updatedDate: '2026-11-02',
       },
@@ -763,7 +763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Janは完全オープンソース、デフォルトでテレメトリなし — プライバシー重視ユーザーに最適。',
           'GPT4Allは要件が最も軽い一方、2025年2月以降リリースがないため、ごく古いハードウェア向けにとどめてください。',
           '3つとも無料、インストール後はオフライン動作、標準GGUFモデルを読み込み可能。',
-          'LM StudioとJanはRAGを標準搭載、GPT4Allはプラグインが必要。',
+          '3つともローカルファイルとチャット可能：LM StudioとJanはチャットに文書を添付、GPT4AllはLocalDocsを使用。',
         ],
       },
       comparisonTable: {
@@ -772,7 +772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'LM Studio、Jan、GPT4Allの機能比較です。',
         rows: [
           { '基準': '最適な用途', 'LM Studio': 'パワーユーザー', 'Jan': 'プライバシー重視', 'GPT4All': '初心者' },
-          { '基準': '内蔵RAG', 'LM Studio': 'あり', 'Jan': 'あり（拡張）', 'GPT4All': 'プラグインのみ' },
+          { '基準': 'ローカルファイルとのチャット', 'LM Studio': 'あり（チャットに添付）', 'Jan': 'あり（チャットに添付）', 'GPT4All': 'あり（LocalDocs）' },
           { '基準': 'オープンソース', 'LM Studio': 'なし（プロプライエタリ）', 'Jan': 'あり（Apache 2.0）', 'GPT4All': 'あり（MIT）' },
           { '基準': 'デフォルトのテレメトリ', 'LM Studio': 'ポリシー上なし', 'Jan': 'デフォルトでなし', 'GPT4All': 'オプトインのみ' },
           { '基準': 'OpenAI互換APIサーバー', 'LM Studio': 'あり', 'Jan': 'あり', 'GPT4All': 'あり' },
@@ -893,7 +893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'PDFと対話するのに最適なアプリはどれですか？',
-            a: 'LM Studioには文書チャットが内蔵されています。Janは拡張機能で対応し、GPT4Allはサードパーティ製プラグインか、AnythingLLMのような別ツールが必要です。',
+            a: '3つとも可能です。LM StudioとJanではチャット内で文書を添付します。LM Studioは短い文書は全文をコンテキストに入れ、長い文書には検索拡張生成（RAG）を使います。GPT4AllはLocalDocsを使い、フォルダをコレクションとして追加します。ドキュメントチャットをさらに細かく制御したい場合は、AnythingLLMのような別ツールをローカルのモデルサーバーの上で使います。',
           },
           {
             q: 'これらのアプリを使うのにNVIDIA GPUは必要ですか？',
@@ -980,7 +980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Jan——完全开源、默认无遥测、原生暗色模式；隐私优先用户首选',
           'GPT4All——对旧电脑要求低，但2025年2月以来没有新版本',
           '三款均免费、安装后离线工作、可加载GGUF模型文件',
-          'LM Studio + Jan开箱即用支持文件RAG；GPT4All需安装插件',
+          '三款都能与本地文件对话：LM Studio和Jan在聊天中附加文档，GPT4All使用内置的LocalDocs',
         ],
         updatedDate: '2026-11-02',
       },
@@ -1007,7 +1007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Jan完全开源、默认无遥测——隐私优先用户首选。',
           'GPT4All要求最低，但2025年2月以来没有新版本——仅适用于非常旧的硬件。',
           '三款均免费、安装后离线工作、可加载标准GGUF模型。',
-          'LM Studio与Jan内置RAG开箱即用；GPT4All需要插件。',
+          '三款都能与本地文件对话：LM Studio和Jan在聊天中附加文档，GPT4All使用LocalDocs。',
         ],
       },
       comparisonTable: {
@@ -1016,7 +1016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'LM Studio、Jan、GPT4All功能对比。',
         rows: [
           { '维度': '最佳用户', 'LM Studio': '高级用户', 'Jan': '隐私用户', 'GPT4All': '新手用户' },
-          { '维度': '内置RAG', 'LM Studio': '是', 'Jan': '是（扩展）', 'GPT4All': '仅插件' },
+          { '维度': '与本地文件对话', 'LM Studio': '是（在聊天中附加）', 'Jan': '是（在聊天中附加）', 'GPT4All': '是（LocalDocs）' },
           { '维度': '开源', 'LM Studio': '否（专有）', 'Jan': '是（Apache 2.0）', 'GPT4All': '是（MIT）' },
           { '维度': '默认遥测', 'LM Studio': '隐私政策称无', 'Jan': '默认无', 'GPT4All': '仅可选加入' },
           { '维度': 'OpenAI兼容API服务', 'LM Studio': '是', 'Jan': '是', 'GPT4All': '是' },
@@ -1137,7 +1137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '哪款应用最适合与PDF对话？',
-            a: 'LM Studio内置文档对话；Jan通过扩展提供；GPT4All需要第三方插件或AnythingLLM等独立工具。',
+            a: '三款都可以。在LM Studio和Jan中，你在聊天内附加文档；LM Studio会把较短的文档完整放入上下文，较长的文档则使用检索（RAG）。GPT4All使用LocalDocs，你把一个文件夹添加为集合。若需要对文档对话有更多控制，可在本地模型服务器之上使用AnythingLLM等独立工具。',
           },
           {
             q: '使用这些应用需要NVIDIA显卡吗？',
@@ -1224,7 +1224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Jan — completamente open source, sin telemetría por defecto, modo oscuro nativo; ideal para usuarios que priorizan la privacidad',
           'GPT4All — requisitos ligeros para PC antiguos, pero sin versiones desde febrero de 2025',
           'Las tres son gratuitas, funcionan sin conexión tras la instalación y cargan archivos de modelo GGUF',
-          'LM Studio + Jan admiten RAG sobre archivos de forma nativa; GPT4All requiere un plugin',
+          'Las tres pueden chatear con archivos locales: LM Studio y Jan adjuntan documentos en el chat, GPT4All usa su función integrada LocalDocs',
         ],
         updatedDate: '2026-11-02',
       },
@@ -1249,7 +1249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Jan es completamente open source con telemetría desactivada por defecto — gana para usuarios que priorizan la privacidad.',
           'GPT4All tiene los requisitos más ligeros pero no publica versiones desde febrero de 2025: solo para hardware muy antiguo.',
           'Las tres son gratuitas, funcionan sin conexión tras la instalación y cargan modelos GGUF estándar.',
-          'LM Studio y Jan incluyen RAG integrado; GPT4All necesita un plugin.',
+          'Las tres pueden chatear con archivos locales: LM Studio y Jan adjuntan documentos en el chat, GPT4All usa LocalDocs.',
         ],
       },
       comparisonTable: {
@@ -1258,7 +1258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Comparación de funciones de LM Studio, Jan y GPT4All.',
         rows: [
           { 'Criterio': 'Ideal para', 'LM Studio': 'Usuarios avanzados', 'Jan': 'Usuarios de privacidad', 'GPT4All': 'Principiantes' },
-          { 'Criterio': 'RAG integrado', 'LM Studio': 'Sí', 'Jan': 'Sí (extensión)', 'GPT4All': 'Solo con plugin' },
+          { 'Criterio': 'Chat con archivos locales', 'LM Studio': 'Sí (adjuntar en el chat)', 'Jan': 'Sí (adjuntar en el chat)', 'GPT4All': 'Sí (LocalDocs)' },
           { 'Criterio': 'Open source', 'LM Studio': 'No (propietario)', 'Jan': 'Sí (Apache 2.0)', 'GPT4All': 'Sí (MIT)' },
           { 'Criterio': 'Telemetría por defecto', 'LM Studio': 'Ninguna según su política', 'Jan': 'Ninguna por defecto', 'GPT4All': 'Solo opt-in' },
           { 'Criterio': 'Servidor API compatible con OpenAI', 'LM Studio': 'Sí', 'Jan': 'Sí', 'GPT4All': 'Sí' },
@@ -1357,7 +1357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué app es mejor para chatear con mis PDFs?',
-            a: 'LM Studio tiene chat con documentos integrado. Jan lo ofrece mediante una extensión. GPT4All requiere un plugin de terceros o una herramienta aparte como AnythingLLM.',
+            a: 'Las tres pueden. En LM Studio y Jan adjuntas los documentos dentro de un chat; LM Studio incluye los documentos cortos completos en el contexto y usa recuperación (RAG) para los largos. GPT4All usa LocalDocs, donde añades una carpeta como colección. Para más control sobre el chat con documentos, una herramienta aparte como AnythingLLM se coloca encima de un servidor de modelos local.',
           },
           {
             q: '¿Necesito una GPU NVIDIA para usar estas apps?',
@@ -1444,7 +1444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Jan — 완전 오픈소스, 기본 설정에서 텔레메트리 없음, 기본 다크 모드; 개인정보를 중시하는 사용자에게 적합',
           'GPT4All — 오래된 PC에 맞는 낮은 요구 사양, 다만 2025년 2월 이후 릴리스 없음',
           '세 가지 모두 무료이며 설치 후 오프라인에서 작동하고 GGUF 모델 파일을 로드합니다',
-          'LM Studio + Jan은 기본 RAG 파일을 지원하고 GPT4All은 플러그인이 필요합니다',
+          '세 가지 모두 로컬 파일과 채팅할 수 있습니다: LM Studio와 Jan은 채팅에 문서를 첨부하고, GPT4All은 내장 LocalDocs를 사용합니다',
         ],
         updatedDate: '2026-11-02',
       },
@@ -1469,7 +1469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Jan은 기본적으로 텔레메트리가 없는 완전 오픈소스입니다 — 개인정보를 중시하는 사용자에게 유리합니다.',
           'GPT4All은 요구 사양이 가장 낮지만 2025년 2월 이후 릴리스가 없으므로 매우 오래된 하드웨어에서만 쓰세요.',
           '세 가지 모두 무료이며 설치 후 오프라인에서 작동하고 표준 GGUF 모델을 로드합니다.',
-          'LM Studio와 Jan은 통합 RAG를 포함하고 GPT4All은 플러그인이 필요합니다.',
+          '세 가지 모두 로컬 파일과 채팅할 수 있습니다: LM Studio와 Jan은 채팅에 문서를 첨부하고, GPT4All은 LocalDocs를 사용합니다.',
         ],
       },
       comparisonTable: {
@@ -1478,7 +1478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'LM Studio, Jan, GPT4All의 기능 비교입니다.',
         rows: [
           { '기준': '최적 대상', 'LM Studio': '고급 사용자', 'Jan': '개인정보 중시 사용자', 'GPT4All': '초보자' },
-          { '기준': '통합 RAG', 'LM Studio': '있음', 'Jan': '있음(확장)', 'GPT4All': '플러그인만' },
+          { '기준': '로컬 파일과 채팅', 'LM Studio': '예(채팅에 첨부)', 'Jan': '예(채팅에 첨부)', 'GPT4All': '예(LocalDocs)' },
           { '기준': '오픈소스', 'LM Studio': '아니요(독점)', 'Jan': '예(Apache 2.0)', 'GPT4All': '예(MIT)' },
           { '기준': '기본 텔레메트리', 'LM Studio': '정책상 없음', 'Jan': '기본값 없음', 'GPT4All': 'opt-in만' },
           { '기준': 'OpenAI 호환 API 서버', 'LM Studio': '있음', 'Jan': '있음', 'GPT4All': '있음' },
@@ -1577,7 +1577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'PDF와 채팅하기에 가장 좋은 앱은 무엇입니까?',
-            a: 'LM Studio는 문서 채팅이 내장되어 있습니다. Jan은 확장 기능으로, GPT4All은 서드파티 플러그인이나 AnythingLLM 같은 별도 도구가 필요합니다.',
+            a: '세 앱 모두 가능합니다. LM Studio와 Jan에서는 채팅 안에서 문서를 첨부하며, LM Studio는 짧은 문서는 전체를 컨텍스트에 넣고 긴 문서에는 검색(RAG)을 사용합니다. GPT4All은 폴더를 컬렉션으로 추가하는 LocalDocs를 사용합니다. 문서 채팅을 더 세밀하게 제어하려면 AnythingLLM 같은 별도 도구를 로컬 모델 서버 위에 올려 사용합니다.',
           },
           {
             q: '이 앱들을 사용하려면 NVIDIA GPU가 필요합니까?',
@@ -1664,7 +1664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Jan — totalmente open source, sem telemetria por padrão, modo escuro nativo; ideal para usuários que priorizam a privacidade',
           'GPT4All — requisitos leves para PCs antigos, mas sem versão nova desde fevereiro de 2025',
           'Os três são gratuitos, funcionam offline após a instalação e carregam arquivos de modelo GGUF',
-          'LM Studio + Jan suportam RAG sobre arquivos nativamente; o GPT4All requer um plugin',
+          'Os três conversam com arquivos locais: LM Studio e Jan anexam documentos no chat, o GPT4All usa o LocalDocs integrado',
         ],
         updatedDate: '2026-11-02',
       },
@@ -1689,7 +1689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O Jan é totalmente open source com telemetria desativada por padrão — vence para usuários que priorizam a privacidade.',
           'O GPT4All tem os requisitos mais leves, mas não lança versão desde fevereiro de 2025 — só para hardware muito antigo.',
           'Os três são gratuitos, funcionam offline após a instalação e carregam modelos GGUF padrão.',
-          'LM Studio e Jan trazem RAG integrado; o GPT4All precisa de um plugin.',
+          'Os três conversam com arquivos locais: LM Studio e Jan anexam documentos no chat, o GPT4All usa o LocalDocs.',
         ],
       },
       comparisonTable: {
@@ -1698,7 +1698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Comparação de recursos do LM Studio, Jan e GPT4All.',
         rows: [
           { 'Criterion': 'Ideal para', 'LM Studio': 'Usuários avançados', 'Jan': 'Usuários de privacidade', 'GPT4All': 'Iniciantes' },
-          { 'Criterion': 'RAG integrado', 'LM Studio': 'Sim', 'Jan': 'Sim (extensão)', 'GPT4All': 'Apenas plugin' },
+          { 'Criterion': 'Chat com arquivos locais', 'LM Studio': 'Sim (anexar no chat)', 'Jan': 'Sim (anexar no chat)', 'GPT4All': 'Sim (LocalDocs)' },
           { 'Criterion': 'Open source', 'LM Studio': 'Não (proprietário)', 'Jan': 'Sim (Apache 2.0)', 'GPT4All': 'Sim (MIT)' },
           { 'Criterion': 'Telemetria por padrão', 'LM Studio': 'Nenhuma pela política', 'Jan': 'Nenhuma por padrão', 'GPT4All': 'Apenas opt-in' },
           { 'Criterion': 'Servidor de API compatível com OpenAI', 'LM Studio': 'Sim', 'Jan': 'Sim', 'GPT4All': 'Sim' },
@@ -1797,7 +1797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual app é melhor para conversar com meus PDFs?',
-            a: 'O LM Studio tem chat com documentos integrado. O Jan o oferece por extensão. O GPT4All exige um plugin de terceiros ou uma ferramenta separada como o AnythingLLM.',
+            a: 'Os três conseguem. No LM Studio e no Jan você anexa documentos dentro de um chat; o LM Studio coloca documentos curtos inteiros no contexto e usa recuperação (RAG) para os longos. O GPT4All usa o LocalDocs, em que você adiciona uma pasta como coleção. Para mais controle sobre o chat com documentos, uma ferramenta separada como o AnythingLLM roda sobre um servidor de modelos local.',
           },
           {
             q: 'Preciso de uma GPU NVIDIA para usar algum desses apps?',
@@ -1884,7 +1884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Jan — مفتوح المصدر بالكامل، بلا قياس عن بُعد، وضع داكن أصلي؛ الأفضل للمستخدمين المهتمين بالخصوصية',
           'GPT4All — متطلبات خفيفة للأجهزة القديمة، لكن بلا إصدار منذ فبراير 2025',
           'الثلاثة مجانية وتعمل بدون اتصال بعد التثبيت وتحمّل ملفات نماذج GGUF',
-          'LM Studio + Jan يدعمان RAG على الملفات بشكل مدمج؛ GPT4All يتطلب إضافة',
+          'الثلاثة تستطيع الدردشة مع الملفات المحلية: LM Studio وJan يرفقان المستندات داخل المحادثة، وGPT4All يستخدم ميزة LocalDocs المدمجة',
         ],
         updatedDate: '2026-11-02',
       },
@@ -1909,7 +1909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Jan مفتوح المصدر بالكامل مع صفر قياس عن بُعد — يفوز للمستخدمين المهتمين بالخصوصية.',
           'GPT4All أخفّها متطلبات لكنه بلا إصدار منذ فبراير 2025 — للأجهزة القديمة جداً فقط.',
           'الثلاثة مجانية وتعمل بدون اتصال بعد التثبيت وتحمّل نماذج GGUF القياسية.',
-          'LM Studio وJan يتضمنان RAG مدمجاً؛ GPT4All يحتاج إلى إضافة.',
+          'الثلاثة تستطيع الدردشة مع الملفات المحلية: LM Studio وJan يرفقان المستندات داخل المحادثة، وGPT4All يستخدم LocalDocs.',
         ],
       },
       comparisonTable: {
@@ -1919,7 +1919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'المعيار': 'الأفضل لـ', 'LM Studio': 'المستخدمون المتقدمون', 'Jan': 'مستخدمو الخصوصية', 'GPT4All': 'المبتدئون' },
           { 'المعيار': 'حجم التثبيت', 'LM Studio': '~450 ميجابايت', 'Jan': '~380 ميجابايت', 'GPT4All': '~290 ميجابايت' },
-          { 'المعيار': 'RAG مدمج', 'LM Studio': 'نعم', 'Jan': 'نعم (إضافة)', 'GPT4All': 'بإضافة فقط' },
+          { 'المعيار': 'الدردشة مع الملفات المحلية', 'LM Studio': 'نعم (إرفاق في المحادثة)', 'Jan': 'نعم (إرفاق في المحادثة)', 'GPT4All': 'نعم (LocalDocs)' },
           { 'المعيار': 'مفتوح المصدر', 'LM Studio': 'لا (مملوك)', 'Jan': 'نعم (Apache 2.0)', 'GPT4All': 'نعم (MIT)' },
           { 'المعيار': 'القياس عن بُعد افتراضياً', 'LM Studio': 'لا شيء وفق سياسته', 'Jan': 'لا شيء افتراضياً', 'GPT4All': 'اشتراك اختياري فقط' },
           { 'المعيار': 'خادم API متوافق مع OpenAI', 'LM Studio': 'نعم', 'Jan': 'نعم', 'GPT4All': 'نعم' },
@@ -2018,7 +2018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'أيّ تطبيق أفضل للدردشة مع ملفات PDF الخاصة بي؟',
-            a: 'يوفّر LM Studio دردشة مع المستندات مدمجة. ويوفرها Jan عبر إضافة. أما GPT4All فيتطلب إضافة من طرف ثالث أو أداة منفصلة مثل AnythingLLM.',
+            a: 'الثلاثة قادرة على ذلك. في LM Studio وJan ترفق المستندات داخل المحادثة؛ ويضع LM Studio المستندات القصيرة في السياق كاملةً ويستخدم الاسترجاع (RAG) للطويلة منها. أما GPT4All فيستخدم LocalDocs حيث تضيف مجلداً كمجموعة. وللتحكم الأكبر في الدردشة مع المستندات، توجد أداة منفصلة مثل AnythingLLM تعمل فوق خادم نماذج محلي.',
           },
           {
             q: 'هل أحتاج إلى GPU من NVIDIA لاستخدام هذه التطبيقات؟',
