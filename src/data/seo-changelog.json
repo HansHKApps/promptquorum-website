@@ -12750,5 +12750,812 @@
       "period": "28d to 2026-11-01"
     },
     "deployedAt": null
+  },
+  {
+    "id": "c006bf31-2001-480f-97fe-5ed9bcf56e68",
+    "slug": "/prompt-engineering/chain-of-thought-prompting",
+    "date": "2026-11-02T15:44:24.925Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Chain-of-Thought Prompting: Boost Accuracy 40%",
+        "new": "Chain-of-Thought Prompting: Examples and When to Use It"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Chain-of-Thought improves reasoning by 10-40% on math and logic tasks. Learn when to use prompt-level CoT vs built-in reasoning modes.",
+        "new": "Chain-of-thought prompting makes a model reason step by step. See worked examples, the research behind it and when built-in reasoning makes it unnecessary."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (chain-of-thought-prompting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "chain of thought prompting",
+      "chain of thought prompt",
+      "en qué consiste el chain of thought prompting",
+      "ejemplo de razonamiento de cadena de pensamiento"
+    ],
+    "baseline": {
+      "position": 26.9,
+      "impressions": 348,
+      "clicks": 1,
+      "ctr": 0.0028735632183908046,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "053bc313-cabd-4b42-a372-6e8d9ba9a4c3",
+    "slug": "/de/prompt-engineering/chain-of-thought-prompting",
+    "date": "2026-11-02T15:44:25.038Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Chain-of-Thought Prompting: Genauigkeit um 40%",
+        "new": "Chain-of-Thought (Gedankenkette) Prompting: Beispiele"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Chain-of-Thought Prompting verbessert die Genauigkeit um 10–40 % bei Mathematik und Logik. Erfahren Sie, wann Sie es einsetzen sollten.",
+        "new": "Chain-of-Thought Prompting lässt ein Modell Schritt für Schritt denken. Mit Beispielen, Studienlage und Hinweisen, wann integriertes Reasoning es ersetzt."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (chain-of-thought-prompting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "chain of thought prompting",
+      "chain of thought prompt",
+      "en qué consiste el chain of thought prompting",
+      "ejemplo de razonamiento de cadena de pensamiento"
+    ],
+    "baseline": {
+      "position": 40,
+      "impressions": 269,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a1cfa14d-08b1-4f0a-9a2d-19c274499d8d",
+    "slug": "/es/prompt-engineering/chain-of-thought-prompting",
+    "date": "2026-11-02T15:44:25.155Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Chain-of-Thought Prompting: Aumenta la Precisión un 40%",
+        "new": "Chain of Thought Prompting: qué es, ejemplos y usos"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Chain-of-Thought mejora el razonamiento entre un 10 y un 40 % en matemáticas y lógica. Aprende cuándo usar CoT frente a los modos de razonamiento integrados.",
+        "new": "Qué es el chain-of-thought prompting (cadena de pensamiento): ejemplos de razonamiento paso a paso, la investigación detrás y cuándo usarlo."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (chain-of-thought-prompting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "chain of thought prompting",
+      "chain of thought prompt",
+      "en qué consiste el chain of thought prompting",
+      "ejemplo de razonamiento de cadena de pensamiento"
+    ],
+    "baseline": {
+      "position": 7.8,
+      "impressions": 570,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "73072849-79c2-4746-8004-b82762e00936",
+    "slug": "/ar/prompt-engineering/chain-of-thought-prompting",
+    "date": "2026-11-02T15:44:25.268Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "توجيه سلسلة الأفكار: دقة أعلى بـ⁨40%⁩ في الرياضيات",
+        "new": "توجيه سلسلة الأفكار (CoT): أمثلة ومتى تستخدمه"
+      },
+      {
+        "field": "metaDescription",
+        "old": "توجيه سلسلة الأفكار (⁨CoT⁩) يرفع الدقة ⁨10-40%⁩ في الرياضيات والمنطق. تعرّف على متى تستخدم ⁨CoT⁩ على الموجّه مقابل أوضاع الاستدلال في ⁨Claude⁩ و⁨o3⁩.",
+        "new": "تعرّف على توجيه سلسلة الأفكار (CoT) الذي يجعل النموذج يستدل خطوة بخطوة، مع أمثلة عملية والأبحاث الداعمة ومتى تغني أوضاع الاستدلال المدمجة عنه."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (chain-of-thought-prompting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "chain of thought prompting",
+      "chain of thought prompt",
+      "en qué consiste el chain of thought prompting",
+      "ejemplo de razonamiento de cadena de pensamiento"
+    ],
+    "baseline": {
+      "position": 13.4,
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6244f0e0-0084-4c5c-aa2b-068aa630a5e3",
+    "slug": "/pt/prompt-engineering/chain-of-thought-prompting",
+    "date": "2026-11-02T15:44:25.379Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Chain-of-Thought Prompting: Aumente a Precisão em 40%",
+        "new": "Chain-of-Thought Prompting: o que é, exemplos e usos"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Chain-of-Thought melhora o raciocínio entre 10 e 40% em matemática e lógica. Aprenda quando usar CoT versus os modos de raciocínio integrados.",
+        "new": "O que é chain-of-thought prompting, como funciona e exemplos passo a passo. Veja a pesquisa por trás e quando o raciocínio integrado dispensa a técnica."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (chain-of-thought-prompting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "chain of thought prompting",
+      "chain of thought prompt",
+      "en qué consiste el chain of thought prompting",
+      "ejemplo de razonamiento de cadena de pensamiento"
+    ],
+    "baseline": {
+      "position": 15.7,
+      "impressions": 52,
+      "clicks": 1,
+      "ctr": 0.019230769230769232,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a250c768-7b6e-4673-9dc3-a164e02b73bc",
+    "slug": "/fr/prompt-engineering/chain-of-thought-prompting",
+    "date": "2026-11-02T15:44:25.490Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Chain-of-Thought: Améliorer la Précision de 40%",
+        "new": "Chain-of-Thought Prompting : exemples et cas d'usage"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Le Chain-of-Thought améliore la précision de 10-40 % sur les tâches mathématiques et logiques. Découvrez quand et comment l'utiliser.",
+        "new": "Le chain-of-thought prompting fait raisonner un modèle étape par étape. Exemples concrets, recherches à l'appui et quand le raisonnement intégré suffit."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (chain-of-thought-prompting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "chain of thought prompting",
+      "chain of thought prompt",
+      "en qué consiste el chain of thought prompting",
+      "ejemplo de razonamiento de cadena de pensamiento"
+    ],
+    "baseline": {
+      "position": 28.1,
+      "impressions": 188,
+      "clicks": 3,
+      "ctr": 0.015957446808510637,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "3f77590e-23ca-44e6-b7f3-46daa1da942b",
+    "slug": "/ja/prompt-engineering/chain-of-thought-prompting",
+    "date": "2026-11-02T15:44:25.597Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Chain-of-Thoughtプロンプティング: 精度40%向上",
+        "new": "Chain-of-Thoughtプロンプティングとは？例と使い方"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Chain-of-Thoughtは数学・論理タスクで精度を10～40%向上させます。効果的な使用方法と活用場面を学べます。",
+        "new": "Chain-of-Thoughtプロンプティングは、モデルに段階的に推論させる手法です。具体例、元になった研究、組み込み推論モードとの使い分けを解説します。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (chain-of-thought-prompting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "chain of thought prompting",
+      "chain of thought prompt",
+      "en qué consiste el chain of thought prompting",
+      "ejemplo de razonamiento de cadena de pensamiento"
+    ],
+    "baseline": {
+      "position": 18.9,
+      "impressions": 430,
+      "clicks": 6,
+      "ctr": 0.013953488372093023,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "179e70d5-c1a1-4aca-84bf-f609daeeac08",
+    "slug": "/zh/prompt-engineering/chain-of-thought-prompting",
+    "date": "2026-11-02T15:44:25.706Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "链式思维提示词: 精度提升40%",
+        "new": "链式思维（CoT）提示词：原理、示例与适用场景详解"
+      },
+      {
+        "field": "metaDescription",
+        "old": "链式思维在数学和逻辑任务上将精度提高10-40%。了解何时使用及最佳实践。",
+        "new": "链式思维提示词让模型逐步推理后再作答，可提高数学、逻辑和多步骤任务的准确率。本文介绍原理、示例、相关研究，以及何时可改用模型内置的推理模式。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (chain-of-thought-prompting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "chain of thought prompting",
+      "chain of thought prompt",
+      "en qué consiste el chain of thought prompting",
+      "ejemplo de razonamiento de cadena de pensamiento"
+    ],
+    "baseline": {
+      "position": 14.5,
+      "impressions": 98,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c8afa537-83d0-4c12-a4de-eb6cd49fc277",
+    "slug": "/ko/prompt-engineering/chain-of-thought-prompting",
+    "date": "2026-11-02T15:44:25.816Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Chain-of-Thought 프롬프팅: 정확도 40% 향상 방법",
+        "new": "Chain-of-Thought 프롬프팅: 예시와 활용법"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Chain-of-Thought 프롬프팅으로 수학·논리 작업 정확도를 10~40% 향상시키는 방법. 프롬프트 수준 CoT와 내장 추론 모드의 차이를 알아보세요.",
+        "new": "Chain-of-Thought 프롬프팅은 모델이 단계별로 추론하게 하는 기법입니다. 예시, 관련 연구, 내장 추론 모드와의 선택 기준을 설명합니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (chain-of-thought-prompting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "chain of thought prompting",
+      "chain of thought prompt",
+      "en qué consiste el chain of thought prompting",
+      "ejemplo de razonamiento de cadena de pensamiento"
+    ],
+    "baseline": {
+      "position": 10.4,
+      "impressions": 121,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "85d0df73-556e-4dd5-8d6a-ef8deebf4c1c",
+    "slug": "/prompt-engineering/prompt-chaining",
+    "date": "2026-11-02T15:44:25.940Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Prompt Chaining: Split Complex Tasks Into Focused Steps",
+        "new": "Prompt Chaining: Examples, LangChain Code and Patterns"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Prompt chaining breaks complex tasks into focused steps, improving accuracy by separating understanding, planning, and generation. Learn how to design reliable multi-step AI workflows.",
+        "new": "Prompt chaining explained: what it is, worked examples, a LangChain code sample, common patterns and when a single prompt is the better choice."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (prompt-chaining); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "prompt chaining",
+      "what is prompt chaining",
+      "encadenamiento de prompts langchain",
+      "ejemplos de encadenamiento de prompts"
+    ],
+    "baseline": {
+      "position": 20.1,
+      "impressions": 399,
+      "clicks": 1,
+      "ctr": 0.002506265664160401,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "9dd2c8a8-3b0d-4e51-b6d1-793f3220599c",
+    "slug": "/de/prompt-engineering/prompt-chaining",
+    "date": "2026-11-02T15:44:26.048Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Prompt Chaining: Komplexe Aufgaben in Fokussierte Schritte",
+        "new": "Prompt Chaining: Beispiele, LangChain-Code und Muster"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Prompt Chaining zerlegt Aufgaben in fokussierte Schritte für mehr Genauigkeit. Multi-Step-Workflows mit bewährten Praktiken für Claude, GPT und lokale Modelle.",
+        "new": "Prompt Chaining erklärt: Definition, Beispiele für Prompt-Ketten, ein LangChain-Codebeispiel, typische Muster und wann ein einzelner Prompt reicht."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (prompt-chaining); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "prompt chaining",
+      "what is prompt chaining",
+      "encadenamiento de prompts langchain",
+      "ejemplos de encadenamiento de prompts"
+    ],
+    "baseline": {
+      "position": 15.4,
+      "impressions": 44,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6b5ef857-a603-42fc-af33-f65daa01bcd8",
+    "slug": "/es/prompt-engineering/prompt-chaining",
+    "date": "2026-11-02T15:44:26.157Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Prompt Chaining: divide tareas complejas en pasos enfocados",
+        "new": "Encadenamiento de prompts: ejemplos y código LangChain"
+      },
+      {
+        "field": "metaDescription",
+        "old": "El prompt chaining divide las tareas complejas en pasos enfocados, mejorando la precisión al separar comprensión, planificación y generación. Aprende a diseñar workflows de IA multi-paso fiables.",
+        "new": "Encadenamiento de prompts explicado: qué es, ejemplos de cadenas, un código de ejemplo con LangChain, patrones habituales y cuándo basta un solo prompt."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (prompt-chaining); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "prompt chaining",
+      "what is prompt chaining",
+      "encadenamiento de prompts langchain",
+      "ejemplos de encadenamiento de prompts"
+    ],
+    "baseline": {
+      "position": 10.9,
+      "impressions": 652,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "64c9bd7c-59ca-49b7-a1e4-9152084aa0b2",
+    "slug": "/ar/prompt-engineering/prompt-chaining",
+    "date": "2026-11-02T15:44:26.266Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "ربط البرومبتات: قسّم المهام المعقدة إلى خطوات مركّزة",
+        "new": "ربط البرومبتات: أمثلة وكود LangChain وأنماط"
+      },
+      {
+        "field": "metaDescription",
+        "old": "ربط البرومبتات يقسّم المهام المعقدة إلى ⁨3⁩–⁨5⁩ خطوات مركّزة، ويحسّن الدقة بفصل الفهم والتخطيط والتوليد. صمّم سير عمل ⁨LLM⁩ متعدد الخطوات وموثوق.",
+        "new": "شرح ربط البرومبتات (Prompt Chaining): تعريفه وأمثلة عملية وكود LangChain وأنماط شائعة، ومتى يكفي برومبت واحد بدلًا من سلسلة."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (prompt-chaining); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "prompt chaining",
+      "what is prompt chaining",
+      "encadenamiento de prompts langchain",
+      "ejemplos de encadenamiento de prompts"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "81d179e9-05c2-49d5-a38b-87669b93376d",
+    "slug": "/pt/prompt-engineering/prompt-chaining",
+    "date": "2026-11-02T15:44:26.376Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Prompt Chaining: divida tarefas complexas em etapas focadas",
+        "new": "Encadeamento de prompts: exemplos e código LangChain"
+      },
+      {
+        "field": "metaDescription",
+        "old": "O prompt chaining divide tarefas complexas em etapas focadas, melhorando a precisão ao separar compreensão, planejamento e geração. Aprenda a projetar fluxos de trabalho de IA de múltiplas etapas confiáveis.",
+        "new": "Encadeamento de prompts explicado: o que é, exemplos de cadeias, um código de exemplo com LangChain, padrões comuns e quando um único prompt basta."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (prompt-chaining); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "prompt chaining",
+      "what is prompt chaining",
+      "encadenamiento de prompts langchain",
+      "ejemplos de encadenamiento de prompts"
+    ],
+    "baseline": {
+      "position": 12.6,
+      "impressions": 289,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "362bfff7-676f-4d3b-8594-d747cf07b035",
+    "slug": "/fr/prompt-engineering/prompt-chaining",
+    "date": "2026-11-02T15:44:26.502Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Chaînage de Prompts : Décomposer les Tâches Complexes",
+        "new": "Chaînage de prompts : exemples et code LangChain"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Construisez des workflows IA multi-étapes fiables avec le chaînage de prompts. Techniques, exemples et bonnes pratiques pour Claude, GPT-5.6 et modèles locaux.",
+        "new": "Chaînage de prompts expliqué : définition, exemples de chaînes, exemple de code LangChain, schémas courants et cas où un seul prompt suffit."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (prompt-chaining); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "prompt chaining",
+      "what is prompt chaining",
+      "encadenamiento de prompts langchain",
+      "ejemplos de encadenamiento de prompts"
+    ],
+    "baseline": {
+      "position": 11.2,
+      "impressions": 226,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8e7873fe-a4a3-47a1-9ba2-09698b84bd55",
+    "slug": "/ja/prompt-engineering/prompt-chaining",
+    "date": "2026-11-02T15:44:26.621Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "プロンプトチェーニング：複雑なAIワークフローを段階的に構築する",
+        "new": "プロンプトチェーンの例とLangChainコード"
+      },
+      {
+        "field": "metaDescription",
+        "old": "プロンプトチェーニングの手法を学んで、強力で信頼できる多段階AIワークフローを作成しましょう。実例、実装パターン、実践的なベストプラクティスを紹介します。Claude、GPT、ローカルLLMに対応。",
+        "new": "プロンプトチェーン（プロンプトチェイニング）とは何かを、具体例、LangChainのコード例、代表的なパターン、単一プロンプトで十分なケースまで解説します。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (prompt-chaining); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "prompt chaining",
+      "what is prompt chaining",
+      "encadenamiento de prompts langchain",
+      "ejemplos de encadenamiento de prompts"
+    ],
+    "baseline": {
+      "position": 15.8,
+      "impressions": 174,
+      "clicks": 1,
+      "ctr": 0.005747126436781609,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "fff7693f-ed4e-49e2-8984-31f644e780bd",
+    "slug": "/zh/prompt-engineering/prompt-chaining",
+    "date": "2026-11-02T15:44:26.730Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "",
+        "new": "提示链：复杂任务分步示例与LangChain代码"
+      },
+      {
+        "field": "metaDescription",
+        "old": "",
+        "new": "提示链（Prompt Chaining）详解：定义、复杂任务的分步示例、LangChain代码示例、常见模式，以及什么时候单个提示就已足够。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (prompt-chaining); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "prompt chaining",
+      "what is prompt chaining",
+      "encadenamiento de prompts langchain",
+      "ejemplos de encadenamiento de prompts"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3651059f-f9c9-4dfd-abdb-31360469eb2f",
+    "slug": "/ko/prompt-engineering/prompt-chaining",
+    "date": "2026-11-02T15:44:26.841Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "프롬프트 체이닝: 복잡한 작업을 집중된 단계로 분리하기",
+        "new": "프롬프트 체이닝: 예시와 LangChain 코드 예제"
+      },
+      {
+        "field": "metaDescription",
+        "old": "프롬프트 체이닝은 복잡한 작업을 집중된 단계로 분해하여, 이해·계획·생성을 분리함으로써 정확도를 높입니다. 신뢰할 수 있는 다단계 AI 워크플로를 설계하는 방법을 알아보십시오.",
+        "new": "프롬프트 체이닝이란 무엇인지, 복잡한 작업을 단계로 나누는 예시, LangChain 코드 예제, 대표 패턴과 단일 프롬프트가 나은 경우를 설명합니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (prompt-chaining); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "prompt chaining",
+      "what is prompt chaining",
+      "encadenamiento de prompts langchain",
+      "ejemplos de encadenamiento de prompts"
+    ],
+    "baseline": {
+      "position": 16.3,
+      "impressions": 158,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ef950c41-c9e9-4de0-a540-7014ed858cd9",
+    "slug": "/prompt-engineering/ai-hallucinations-why-ai-makes-things-up",
+    "date": "2026-11-02T15:44:26.978Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Understand why LLMs hallucinate and learn proven prompting techniques to minimize errors. Special section on local LLMs and PromptQuorum consensus scoring.",
+        "new": "Why AI hallucinates, real cases, and how to detect hallucinations: check sources, compare answers, then cut errors with prompts, RAG and human review."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (ai-hallucinations-why-ai-makes-things-up); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hallucinations",
+      "ai hallucination detection",
+      "ai hallucination prevention",
+      "hallucination ia"
+    ],
+    "baseline": {
+      "position": 23.57,
+      "impressions": 768,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c2cacbc9-3ad3-4cdc-a413-5760638f576d",
+    "slug": "/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up",
+    "date": "2026-11-02T15:44:27.089Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Verstehen Sie, warum LLMs halluzinieren und lernen Sie bewährte Prompt-Techniken zur Minimierung von Fehlern. Mit Konsens-Scoring und Local LLMs Abschnitt.",
+        "new": "Warum KI halluziniert, reale Fälle und wie Sie Halluzinationen erkennen: Quellen prüfen, Antworten vergleichen, Fehler mit Prompts, RAG und Review senken."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (ai-hallucinations-why-ai-makes-things-up); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hallucinations",
+      "ai hallucination detection",
+      "ai hallucination prevention",
+      "hallucination ia"
+    ],
+    "baseline": {
+      "position": 13,
+      "impressions": 8,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e6fe8e94-8ff5-4795-997a-510bb999c5e7",
+    "slug": "/es/prompt-engineering/ai-hallucinations-why-ai-makes-things-up",
+    "date": "2026-11-02T15:44:27.198Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Entiende por qué los LLMs alucinan y aplica técnicas probadas de prompting para minimizar errores. Incluye LLMs locales y el consenso de PromptQuorum.",
+        "new": "Por qué la IA alucina, casos reales y cómo detectar alucinaciones: verifica fuentes, compara respuestas y reduce errores con prompts, RAG y revisión."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (ai-hallucinations-why-ai-makes-things-up); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hallucinations",
+      "ai hallucination detection",
+      "ai hallucination prevention",
+      "hallucination ia"
+    ],
+    "baseline": {
+      "position": 10.95,
+      "impressions": 141,
+      "clicks": 1,
+      "ctr": 0.0070921985815602835,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d99bc6d4-61d3-47a2-8022-fa3d34767c92",
+    "slug": "/ar/prompt-engineering/ai-hallucinations-why-ai-makes-things-up",
+    "date": "2026-11-02T15:44:27.307Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "⁨7⁩ أنماط هلوسة في النماذج اللغوية الكبيرة مع تقنيات صياغة تعليمات مجرَّبة لتقليلها. يشمل النماذج المحلية وتوافق ⁨PromptQuorum⁩ عبر ⁨25⁩+ نموذج.",
+        "new": "لماذا تهلوس نماذج الذكاء الاصطناعي، وحالات واقعية، وكيفية اكتشاف الهلوسة: تحقق من المصادر وقارن الإجابات وقلّل الأخطاء بالتعليمات والمراجعة البشرية."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (ai-hallucinations-why-ai-makes-things-up); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hallucinations",
+      "ai hallucination detection",
+      "ai hallucination prevention",
+      "hallucination ia"
+    ],
+    "baseline": {
+      "position": 27.8,
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "da3f1fa0-ad95-49fe-a9f7-37dda18cd222",
+    "slug": "/pt/prompt-engineering/ai-hallucinations-why-ai-makes-things-up",
+    "date": "2026-11-02T15:44:27.414Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Entenda por que os LLMs alucinam e aplique técnicas comprovadas de prompting para minimizar erros. Inclui LLMs locais e consenso multi-modelo do PromptQuorum.",
+        "new": "Por que a IA alucina, casos reais e como detectar alucinações: verifique fontes, compare respostas e reduza erros com prompts, RAG e revisão humana."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (ai-hallucinations-why-ai-makes-things-up); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hallucinations",
+      "ai hallucination detection",
+      "ai hallucination prevention",
+      "hallucination ia"
+    ],
+    "baseline": {
+      "position": 11.04,
+      "impressions": 127,
+      "clicks": 1,
+      "ctr": 0.007874015748031496,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "947393cc-f07e-4f55-8db1-7ed5a8d87309",
+    "slug": "/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up",
+    "date": "2026-11-02T15:44:27.527Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Comprenez pourquoi les LLM hallucinent et apprenez les techniques de prompting éprouvées pour minimiser les erreurs. Section sur scoring et LLMs locaux.",
+        "new": "Pourquoi l'IA hallucine, cas réels et détection des hallucinations : vérifiez les sources, comparez les réponses, réduisez les erreurs (prompts, RAG)."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (ai-hallucinations-why-ai-makes-things-up); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hallucinations",
+      "ai hallucination detection",
+      "ai hallucination prevention",
+      "hallucination ia"
+    ],
+    "baseline": {
+      "position": 37.26,
+      "impressions": 258,
+      "clicks": 2,
+      "ctr": 0.007751937984496124,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a24906f9-206b-4bc2-9dae-aaeedadb3693",
+    "slug": "/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up",
+    "date": "2026-11-02T15:44:27.637Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "LLMが幻覚を起こす理由と、エラーを最小化する実証済みのプロンプト技術を解説。ローカルLLMへの適用と多モデル合意スコアリングの活用法も紹介。",
+        "new": "AIがもっともらしい嘘を出す理由、実際の事例、幻覚の検出法を解説。出典確認や回答比較で見抜き、プロンプト・RAG・人の確認で減らす方法を紹介します。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (ai-hallucinations-why-ai-makes-things-up); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hallucinations",
+      "ai hallucination detection",
+      "ai hallucination prevention",
+      "hallucination ia"
+    ],
+    "baseline": {
+      "position": 6.56,
+      "impressions": 9,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c8094e48-9ee2-4fa4-b655-0c737ef69bc2",
+    "slug": "/zh/prompt-engineering/ai-hallucinations-why-ai-makes-things-up",
+    "date": "2026-11-02T15:44:27.748Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "深入解析LLM幻觉的成因，系统学习减少AI错误的实证提示技术。包含本地LLM适用策略与通过多模型共识评分验证输出可信度的实践方法。",
+        "new": "解析AI幻觉的成因与真实案例，教你检测幻觉：核对来源、多次提问对比，并通过提示词、RAG检索增强与人工审核降低错误，附检测方法与提示词示例。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (ai-hallucinations-why-ai-makes-things-up); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hallucinations",
+      "ai hallucination detection",
+      "ai hallucination prevention",
+      "hallucination ia"
+    ],
+    "baseline": {
+      "position": 12.17,
+      "impressions": 394,
+      "clicks": 1,
+      "ctr": 0.0025380710659898475,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "14295270-8ccc-4c0e-a5f2-84d6177d89c3",
+    "slug": "/ko/prompt-engineering/ai-hallucinations-why-ai-makes-things-up",
+    "date": "2026-11-02T15:44:27.857Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "LLM이 왜 환각을 일으키는지 이해하고, 오류를 최소화하는 검증된 프롬프트 기술을 배우십시오. 로컬 LLM 및 PromptQuorum 합의 점수에 대한 특별 섹션 포함.",
+        "new": "AI가 환각을 일으키는 이유와 실제 사례, 환각 탐지법을 설명합니다. 출처 확인과 답변 비교로 찾고 프롬프트·RAG·검토로 줄이는 방법을 다룹니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5 (ai-hallucinations-why-ai-makes-things-up); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hallucinations",
+      "ai hallucination detection",
+      "ai hallucination prevention",
+      "hallucination ia"
+    ],
+    "baseline": {
+      "position": 9.31,
+      "impressions": 124,
+      "clicks": 1,
+      "ctr": 0.008064516129032258,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
   }
 ]
