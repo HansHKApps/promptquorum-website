@@ -8,13 +8,19 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { starsFor } from '@/lib/power-local-llm/app-facts'
+
+const ST = {
+  en: starsFor('en'), de: starsFor('de'), fr: starsFor('fr'), ja: starsFor('ja'), zh: starsFor('zh'),
+  es: starsFor('es'), pt: starsFor('pt'), ar: starsFor('ar'), ko: starsFor('ko'),
+}
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/automatic1111-review-hero-en.webp',
@@ -23,7 +29,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'AUTOMATIC1111 — formally "Stable Diffusion web UI" — is a free, open-source, tab-based web interface for running Stable Diffusion models on your own GPU. Released on GitHub on August 22, 2022, one month after Stable Diffusion\'s public launch, it became the first widely adopted graphical front-end for local image generation and is still described by third-party reviewers as one of the most-used and most-documented options in the category, thanks to a huge extension ecosystem (ControlNet, LoRA training, and thousands of community scripts). This review covers what AUTOMATIC1111 actually is, how it differs from Stable Diffusion the model and from newer UIs like ComfyUI, Forge, and InvokeAI, its real maintenance status heading into 2026, license terms, hardware needs, and honest guidance on who should — and should not — use it today.',
     metaDescription:
-      'AUTOMATIC1111 review 2026: what Stable Diffusion WebUI actually is, verified maintenance status (last commit and release dates), AGPL-3.0 license, ControlNet extension, hardware needs, and how it compares with Forge, ComfyUI, and InvokeAI.',
+      'AUTOMATIC1111 review: what Stable Diffusion WebUI is, its verified maintenance status, AGPL-3.0 license, ControlNet, hardware needs and alternatives.',
     twitterDescription:
       'AUTOMATIC1111 review 2026: the original Stable Diffusion WebUI explained — verified maintenance status, license, extension ecosystem, hardware needs, and how it stacks up against Forge, ComfyUI, and InvokeAI.',
     audience:
@@ -44,20 +50,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion 1.5', 'Stable Diffusion XL', 'ControlNet', 'Stable Diffusion WebUI Forge', 'ComfyUI', 'InvokeAI', 'Fooocus'],
     current_hardware_mentioned: ['2 GB VRAM', '4 GB VRAM', '6 GB VRAM', '8 GB VRAM', '12 GB VRAM', 'NVIDIA RTX 3060', 'NVIDIA RTX 4090'],
     leadAnswerBlock:
-      '**AUTOMATIC1111 (Stable Diffusion web UI) is a free, open-source, tab-based web interface for running Stable Diffusion models locally — it is the UI, not the model itself.** Launched August 22, 2022, it is licensed under AGPL-3.0, self-hosted only with no official paid tier, and remains one of the most-documented options because of its extension ecosystem, led by the ControlNet extension. Its core codebase has slowed markedly since mid-2024: the last tagged release, v1.10.1, shipped in July 2024 (its release notes were published February 2025), and as of September 2026 the `master` branch has had no further release, while the actively developed `dev` branch has continued to receive commits, most recently in March 2026. Its own most popular fork, Forge, states directly in its README that "original SD-WebUI is almost static now." Verify current activity on [GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui) before assuming ongoing active development.',
+      '**Warning: AUTOMATIC1111 has had no update since 2 March 2026 (last release v1.10.1, 9 February 2025), so it may be unmaintained — check before relying on it.** **AUTOMATIC1111 (Stable Diffusion web UI) is a free, open-source (AGPL-3.0) browser interface for running Stable Diffusion models locally, not the model itself.**',
     quickAnswerTop: {
       en: {
         question: 'Is AUTOMATIC1111 still maintained, and is it the same thing as Stable Diffusion?',
         answer:
-          'No, AUTOMATIC1111 is not Stable Diffusion — it is a separate, free open-source web interface (a UI) that loads Stable Diffusion model weights and lets you generate images through a browser tab. Its core `master` branch has seen no new tagged release since v1.10.1 in July 2024, though its `dev` branch has continued receiving less-frequent commits, most recently in March 2026. Its own most-used fork, Forge, describes the original project as "almost static now" in its own documentation. It still works and remains widely used, but readers who want the newest model architectures or fastest updates should also evaluate actively maintained alternatives such as Forge, ComfyUI, or SD.Next.',
+          'No update has been published since 2 March 2026. AUTOMATIC1111 is not Stable Diffusion: it is a separate, free open-source web interface that loads Stable Diffusion model weights and lets you generate images through a browser tab. Its last tagged release, v1.10.1, was published on 9 February 2025, and the `dev` branch has had no commits since 2 March 2026. Forge, its most-used fork, calls the original "almost static now", yet Forge has had no push since 31 July 2025. It still works for many setups; readers who need newer model architectures should compare ComfyUI, InvokeAI or SD.Next.',
         bullets: [
           'AUTOMATIC1111 is a UI/front-end, not a model — you still need to download Stable Diffusion weights separately and load them into it.',
-          'Verified on GitHub: the last tagged release (v1.10.1) shipped July 2024; the `dev` branch\'s most recent commit was March 2026 — check the repository directly for the current state before relying on this article alone.',
+          'Verified on GitHub: the last tagged release (v1.10.1) was published on 9 February 2025, and the last commit on the `dev` branch is from 2 March 2026 — check the repository for the current state.',
           'Free and open source under the AGPL-3.0 license; no official paid tier or hosted plan exists.',
           'The extension ecosystem — especially the ControlNet extension for pose and composition guidance — is the main reason it remains widely used despite slower core development.',
-          'Actively maintained alternatives exist: Forge (a fork built specifically to add features AUTOMATIC1111 has not), ComfyUI, and SD.Next all see more frequent commits as of 2026.',
+          'Actively maintained alternatives: ComfyUI, InvokeAI and SD.Next all had pushes on 2026-11-02, while Forge, the fork built on AUTOMATIC1111, has had no push since 31 July 2025.',
         ],
-        updatedDate: '2026-09-06',
+        updatedDate: '2026-11-02',
       },
     },
     toc: [
@@ -86,9 +92,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'AUTOMATIC1111 (Stable Diffusion web UI) is a free, open-source, tab-based web interface for running Stable Diffusion locally — it is the front-end app, not the model itself.',
           'Released on GitHub on August 22, 2022, by a pseudonymous developer using the handle "AUTOMATIC1111," one month after Stable Diffusion\'s public release, filling the gap for a graphical local interface.',
           'Licensed under AGPL-3.0. Self-hosted only, with no official paid tier or hosted plan.',
-          'Its main codebase has slowed since mid-2024: the last tagged release (v1.10.1) shipped July 2024, and the actively developed `dev` branch\'s most recent commit was March 2026 — verify current status on GitHub rather than assuming this is unchanged.',
+          'Its main codebase has slowed since mid-2024: the last tagged release (v1.10.1) was published on 9 February 2025, and the last commit on the `dev` branch is from 2 March 2026 — check GitHub for the current state.',
           'The extension ecosystem, especially the ControlNet extension for pose/composition guidance, is its biggest remaining advantage — one of the largest and most documented sets of community add-ons of any local image-generation UI.',
-          'Actively maintained forks and alternatives — including Forge, ComfyUI, InvokeAI, and SD.Next — exist for readers who want faster support for newer model architectures.',
+          'Actively maintained alternatives include ComfyUI, InvokeAI and SD.Next (pushes on 2026-11-02); Forge, the AUTOMATIC1111 fork, has had no push since 31 July 2025.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'No update since 2 March 2026 (last release v1.10.1, 9 February 2025). AUTOMATIC1111 may be unmaintained: check that it still works for your GPU and model before you rely on it.',
+          },
         ],
       },
       whatIsAutomatic1111: {
@@ -110,7 +122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'History: Why AUTOMATIC1111 Exists',
         content: [
           'Stability AI, the CompVis research group at LMU Munich, and Runway ML publicly released Stable Diffusion on August 22, 2022. At launch, Stable Diffusion shipped as model weights and command-line scripts — there was no official graphical interface for typing a prompt and clicking a button.',
-          'AUTOMATIC1111 published the first version of Stable Diffusion web UI on GitHub the same day, August 22, 2022, building on earlier community scripts and adding a Gradio-based browser interface. The timing put it in the right place at the right moment: as Stable Diffusion\'s popularity exploded through late 2022, AUTOMATIC1111\'s UI became the default way most hobbyists actually ran it, accumulating tens of thousands of GitHub stars within months and, as of September 2026, over 164,000 stars — among the most-starred repositories in the local AI image-generation category.',
+          `AUTOMATIC1111 published the first version of Stable Diffusion web UI on GitHub the same day, August 22, 2022, building on earlier community scripts and adding a Gradio-based browser interface. The timing put it in the right place at the right moment: as Stable Diffusion's popularity exploded through late 2022, AUTOMATIC1111's UI became the default way most hobbyists actually ran it, accumulating tens of thousands of GitHub stars within months and, now over ${ST.en('automatic1111-webui', 'bare')} stars — among the most-starred repositories in the local AI image-generation category.`,
           'Because it arrived first and absorbed most of the early community contributions, extension authors, and tutorial writers, AUTOMATIC1111 became the de facto standard reference implementation that later UIs (Forge, ComfyUI extensions, and community documentation sites) still describe features and workflows in relation to, even where those newer tools have since taken a different technical approach.',
         ],
       },
@@ -136,23 +148,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Maintenance Status: Verified',
         itemHeadings: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'AUTOMATIC1111\'s core codebase has slowed markedly since mid-2024 — its last tagged release was v1.10.1 in July 2024, and its own most popular fork describes the original project as "almost static now" in its own documentation.' },
-          { type: 'plain-terms', text: 'The project still runs and is still widely used, but new features and support for newer model types now generally land in forks like Forge before they reach the original AUTOMATIC1111 codebase, if they reach it at all.' },
+          { type: 'one-sentence', text: 'AUTOMATIC1111 has had no update since 2 March 2026: its last tagged release was v1.10.1 (published 9 February 2025), and its own most popular fork describes the original project as "almost static now" in its README.' },
+          { type: 'plain-terms', text: 'The project still runs and is still widely used, but nobody has pushed an update to it since 2 March 2026, so support for newer model types is more likely to appear in actively developed tools such as ComfyUI, InvokeAI or SD.Next.' },
         ],
         columns: ['Signal', 'Verified status', 'Source'],
         rows: [
           { 'Signal': 'Last tagged release', 'Verified status': 'v1.10.1 — code from July 27, 2024; release notes published February 9, 2025', 'Source': '[GitHub releases](https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases)' },
           { 'Signal': '`master` branch last commit', 'Verified status': 'July 27, 2024', 'Source': '[GitHub commit history](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commits/master)' },
-          { 'Signal': '`dev` branch last commit', 'Verified status': 'March 2, 2026 — slower but not abandoned', 'Source': 'GitHub commit history (verify current date before citing)' },
-          { 'Signal': 'Open issues', 'Verified status': 'Over 2,500 open as of September 2026', 'Source': '[GitHub issues](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues)' },
+          { 'Signal': '`dev` branch last commit', 'Verified status': '2 March 2026 (merge of PR #17313); no commits on `dev` since', 'Source': 'GitHub commit history (verify current date before citing)' },
+          { 'Signal': 'Open issues', 'Verified status': '2,429 open (GitHub issue search, 2026-11-02)', 'Source': '[GitHub issues](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues)' },
           { 'Signal': 'Fork maintainer\'s own assessment', 'Verified status': '"Because original SD-WebUI is almost static now, Forge will sync with original WebUI every 90 days, or when important fixes" — a direct quote from the Forge project\'s own README', 'Source': '[Forge README](https://github.com/lllyasviel/stable-diffusion-webui-forge)' },
+          { 'Signal': 'Forge (fork) last push', 'Verified status': '31 July 2025; its latest GitHub release is dated 5 February 2024', 'Source': '[Forge on GitHub](https://github.com/lllyasviel/stable-diffusion-webui-forge)' },
+          { 'Signal': 'ControlNet extension last push', 'Verified status': '12 August 2024; no GitHub releases', 'Source': '[sd-webui-controlnet on GitHub](https://github.com/Mikubill/sd-webui-controlnet)' },
         ],
         content: [
-          'This section states what could be verified directly against GitHub\'s API at the time of writing, rather than repeating secondhand claims. The picture is neither "actively developed like a mainstream product" nor "abandoned" — it sits between the two: the stable `master` branch, which is what most one-click installers and existing documentation point to, has not received a new tagged release since July 2024, while the `dev` branch (used for testing changes before they are promoted) has continued to receive commits, just at a markedly slower pace than in 2022–2023.',
-          'The most credible outside signal comes from lllyasviel, the developer of Forge — a fork built specifically on top of AUTOMATIC1111\'s codebase. Forge\'s own README states it will "sync with original WebUI every 90 days, or when important fixes," directly because, in the fork maintainer\'s own words, "original SD-WebUI is almost static now." This is a maintainer of a closely related project describing AUTOMATIC1111\'s development pace, not a rumor — treat it as a strong, if not definitive, signal.',
-          'None of this means AUTOMATIC1111 stops working. It remains fully functional for Stable Diffusion 1.5 and SDXL workflows, its extension ecosystem is still active even where the core is not, and its install base and tutorial coverage are still larger than most alternatives\'. The practical implication is about the future, not the present: readers who need first-day support for brand-new model architectures or active bug-fix turnaround should weight that against actively maintained forks like Forge, ComfyUI, or SD.Next, covered in the comparison table below.',
+          'This section states what could be verified directly against the GitHub API on 2026-11-02, rather than repeating secondhand claims. AUTOMATIC1111 has had no update since 2 March 2026: the stable `master` branch, which most one-click installers and documentation point to, has not changed since 27 July 2024, and the `dev` branch has no commits after 2 March 2026. The repository is not archived and the maintainer has not announced that it is abandoned, but it should be treated as possibly unmaintained.',
+          'The most credible outside signal comes from lllyasviel, the developer of Forge, a fork built on AUTOMATIC1111\'s codebase. Forge\'s README says it will "sync with original WebUI every 90 days, or when important fixes," because "original SD-WebUI is almost static now." That is a fork maintainer\'s description of AUTOMATIC1111\'s pace, not a rumor. Forge itself has had no push since 31 July 2025, so it is no longer evidence of an active alternative.',
+          'None of this means AUTOMATIC1111 stops working. It remains functional for Stable Diffusion 1.5 and SDXL workflows, and its install base and tutorial coverage are still larger than most alternatives\'. The practical implication is about the future: readers who need support for newer model architectures or bug-fix turnaround should compare ComfyUI, InvokeAI and SD.Next, which all had pushes on 2026-11-02, using the comparison table below.',
         ],
-        note: 'GitHub activity data (commit dates, release dates, open-issue counts) changes continuously — the figures above were verified directly against the GitHub API on 2026-09-06. Check [the repository](https://github.com/AUTOMATIC1111/stable-diffusion-webui) directly for the current numbers before relying on this table for a time-sensitive decision.',
+        note: 'GitHub activity data changes continuously: the figures above were verified against the GitHub API on 2026-11-02. Check [the repository](https://github.com/AUTOMATIC1111/stable-diffusion-webui) for the current numbers before relying on this table for a time-sensitive decision.',
       },
       extensionsControlnet: {
         id: 'extensions-controlnet',
@@ -199,14 +213,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Option': 'AUTOMATIC1111 (Stable Diffusion web UI)',
             'Best for': 'One of the largest tutorial/extension catalogs, tab-based simplicity',
-            'Maintenance pace (2026)': 'Core `master` slowed since mid-2024; `dev` branch still receives occasional commits',
+            'Maintenance pace (2026)': 'No update since 2 March 2026; `master` unchanged since 27 July 2024',
             'License': 'AGPL-3.0',
             'Key trade-off': 'Most-documented option, but newer model support tends to land in forks first',
           },
           {
             'Option': '[Stable Diffusion WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)',
             'Best for': 'AUTOMATIC1111-familiar UI with faster feature and new-model support',
-            'Maintenance pace (2026)': 'More active than upstream AUTOMATIC1111; syncs from it periodically per its own README',
+            'Maintenance pace (2026)': 'No push since 31 July 2025; latest GitHub release 5 February 2024',
             'License': 'AGPL-3.0',
             'Key trade-off': 'Smaller community than AUTOMATIC1111 itself; still tracks the original codebase\'s general structure',
           },
@@ -227,7 +241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Option': '[Fooocus](https://github.com/lllyasviel/Fooocus)',
             'Best for': 'Fewest clicks to a usable image, minimal configuration',
-            'Maintenance pace (2026)': 'Slower release cadence, smaller scope by design',
+            'Maintenance pace (2026)': 'Last push 1 December 2025; latest release v2.5.5 (12 August 2024)',
             'License': 'GPL-3.0',
             'Key trade-off': 'Deliberately fewer settings and less extension support in exchange for simplicity',
           },
@@ -239,14 +253,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Key trade-off': 'Smaller community and tutorial base than AUTOMATIC1111 despite feature parity or advantages',
           },
         ],
-        note: 'Maintenance pace is based on public commit and release activity verified on GitHub as of 2026-09-06 and can change — check each project\'s own repository before choosing based on activity level alone. See [Stable Diffusion Review](/power-local-llm/stable-diffusion-review) for the underlying model comparison and [Local AI Image Generation vs. Cloud](/power-local-llm/local-ai-image-generation-vs-cloud) for local-vs-cloud trade-offs.',
+        note: 'Maintenance pace is based on public push and release activity verified on GitHub on 2026-11-02 and can change — check each project\'s own repository before choosing based on activity level alone. See [Stable Diffusion Review](/power-local-llm/stable-diffusion-review) for the underlying model comparison and [Local AI Image Generation vs. Cloud](/power-local-llm/local-ai-image-generation-vs-cloud) for local-vs-cloud trade-offs.',
       },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Who Should Use AUTOMATIC1111',
         items: [
           '**Reader who wants one of the largest bases of tutorials and community answers.** Because it was first to market and has the longest install history, a large share of forum posts, YouTube tutorials, and Stack Overflow-style answers about Stable Diffusion UIs reference AUTOMATIC1111 specifically.',
-          '**Reader who wants ControlNet and a mature extension catalog.** The ControlNet extension and thousands of other community add-ons remain actively used and, in many cases, actively maintained even during periods when the core project sees fewer commits.',
+          '**Reader who wants ControlNet and a mature extension catalog.** The ControlNet extension and thousands of other community add-ons are widely used; check each extension\'s repository before relying on it, since the main ControlNet extension was last pushed to on 12 August 2024.',
           '**Reader who prefers a tab-based interface over a node graph.** AUTOMATIC1111\'s layout — text fields, sliders, and buttons organized into tabs — is generally easier for a first-time user to approach than ComfyUI\'s node-based canvas.',
           '**Reader who wants full local control and privacy.** Once installed, generation happens entirely on your own GPU; no prompt or image data leaves your machine unless you install an extension that does so.',
           '**Reader on a budget who wants zero licensing cost for the UI itself.** AGPL-3.0 means the software is free to use, modify, and redistribute, with no subscription of any kind.',
@@ -256,9 +270,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Who Should Not Use AUTOMATIC1111',
         items: [
-          '**Reader who wants day-one support for the newest model architectures.** Given the core project\'s slower release cadence since mid-2024, new model support has tended to appear first in actively maintained forks like Forge, ComfyUI, or SD.Next — evaluate those if cutting-edge model support matters most to you.',
+          '**Reader who wants support for the newest model architectures.** With no update since 2 March 2026, new model support is more likely to appear in actively developed tools such as ComfyUI, InvokeAI or SD.Next — compare those first.',
           '**Reader who wants a one-click app with zero command-line exposure.** Installation requires Python and Git and, on some systems, manual troubleshooting of dependency versions — readers who want a fully polished consumer app experience may prefer Fooocus\'s simplified installer or a cloud tool instead.',
-          '**Reader who needs guaranteed active core-repository bug fixes on a predictable schedule.** With over 2,500 open issues and no new tagged release since July 2024 on the `master` branch, readers with a hard reliability requirement should not assume fast turnaround on a newly filed bug report.',
+          '**Reader who needs guaranteed active core-repository bug fixes on a predictable schedule.** With over 2,400 open issues and no new tagged release since July 2024 on the `master` branch, readers with a hard reliability requirement should not assume fast turnaround on a newly filed bug report.',
           '**Reader who wants maximum workflow control over multi-step pipelines.** ComfyUI\'s node-graph approach generally offers more precise control over complex, multi-stage generation pipelines than AUTOMATIC1111\'s tab-based layout.',
           '**Enterprise team that needs a vendor-supported product with an SLA.** AUTOMATIC1111 is a community project with no official support contract, paid tier, or service-level agreement — teams needing contractual support should evaluate a commercial cloud image-generation product instead.',
         ],
@@ -273,7 +287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is AUTOMATIC1111 still maintained in 2026?',
-            a: 'Its core `master` branch has slowed markedly: the last tagged release, v1.10.1, shipped in July 2024, with release notes published February 2025, and no new tagged release has followed as of September 2026. Its `dev` branch has continued to receive occasional commits, most recently in March 2026. Its own most-used fork, Forge, states in its README that "original SD-WebUI is almost static now." It still works and remains widely used, but readers wanting the fastest updates should also consider actively maintained alternatives like Forge, ComfyUI, or SD.Next.',
+            a: 'No update has been published since 2 March 2026. Its last tagged release, v1.10.1, was published on 9 February 2025, and the `dev` branch has had no commits since 2 March 2026. Forge\'s README calls the original "almost static now", and Forge itself has had no push since 31 July 2025. It still works, but treat it as possibly unmaintained and compare ComfyUI, InvokeAI or SD.Next.',
           },
           {
             q: 'Is AUTOMATIC1111 free?',
@@ -289,7 +303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What is the difference between AUTOMATIC1111 and Forge?',
-            a: 'Forge is a fork of AUTOMATIC1111\'s codebase, built by developer lllyasviel specifically to add performance optimizations and faster support for newer models. Per Forge\'s own README, it syncs with the original AUTOMATIC1111 project periodically (roughly every 90 days or for important fixes) rather than continuously, and its maintainer describes the original project as seeing markedly slower development. Forge is generally the better choice for readers who want an AUTOMATIC1111-like interface with more active ongoing development.',
+            a: 'Forge is a fork of AUTOMATIC1111\'s codebase built by lllyasviel to add performance optimizations and newer model support such as Flux. Per its README it syncs with the original roughly every 90 days or for important fixes. Its last push on GitHub was on 31 July 2025 and its latest GitHub release is dated 5 February 2024, so it is no longer a clearly more active choice — check its repository before choosing it.',
           },
           {
             q: 'What is the difference between AUTOMATIC1111 and ComfyUI?',
@@ -299,13 +313,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Where do I download AUTOMATIC1111?',
             a: 'The official source is the [AUTOMATIC1111/stable-diffusion-webui repository on GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui), which includes the code, an installation wiki, and links to platform-specific setup instructions for NVIDIA, AMD, Intel, and Apple Silicon hardware. You will separately need to download Stable Diffusion model weights (e.g. from Hugging Face) to use with it.',
           },
+          {
+            q: 'Is Stable Diffusion WebUI Forge still maintained?',
+            a: 'Its last push on GitHub was on 31 July 2025, and its latest GitHub release is dated 5 February 2024. Its README says it is based on SD-WebUI 1.10.1. Check the repository for newer activity before choosing it.',
+          },
+          {
+            q: 'Is the ControlNet extension for AUTOMATIC1111 still maintained?',
+            a: 'The sd-webui-controlnet repository was last pushed to on 12 August 2024 and has no GitHub releases. It is still widely used, but check its repository and open issues before relying on it for a production workflow.',
+          },
         ],
       },
       verdict: {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'AUTOMATIC1111 earned its place as the default local Stable Diffusion interface by being first, and the resulting ecosystem — the ControlNet extension above all, alongside thousands of other community tools, tutorials, and forum answers — is still its strongest asset in 2026. That said, an honest review has to state plainly what the evidence shows: the core project\'s development pace has slowed markedly since mid-2024, with no new tagged release since v1.10.1 and its own most popular fork describing it as "almost static now." It still installs, still runs, and still produces good results on SD 1.5 and SDXL checkpoints, so readers already using it have no urgent reason to switch. But readers starting fresh in 2026, especially those who want the newest model architectures or the fastest bug-fix turnaround, should seriously evaluate Forge, ComfyUI, or SD.Next alongside it rather than defaulting to AUTOMATIC1111 purely on name recognition.',
+          'AUTOMATIC1111 earned its place as the default local Stable Diffusion interface by being first, and its ecosystem — the ControlNet extension above all, alongside thousands of other community tools, tutorials, and forum answers — is still its strongest asset. But the project has had no update since 2 March 2026, its last tagged release is v1.10.1, its fork Forge has had no push since 31 July 2025, and the leading ControlNet extension was last pushed to on 12 August 2024. It still installs and runs on SD 1.5 and SDXL checkpoints, so readers already using it have no urgent reason to switch. Readers starting fresh should compare ComfyUI, InvokeAI and SD.Next, which are actively developed, rather than defaulting to AUTOMATIC1111 on name recognition, and should confirm it works for their GPU and model first.',
       },
       sources: {
         id: 'sources',
@@ -334,8 +356,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/automatic1111-review-hero-de.webp',
@@ -344,7 +366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'AUTOMATIC1111 — offiziell "Stable Diffusion web UI" — ist eine kostenlose Open-Source-Weboberfläche mit Tab-Struktur zum lokalen Ausführen von Stable-Diffusion-Modellen auf der eigenen GPU. Am 22. August 2022 auf GitHub veröffentlicht, einen Monat nach dem öffentlichen Start von Stable Diffusion, wurde es zur ersten weit verbreiteten grafischen Oberfläche für lokale Bildgenerierung und gilt bei Drittanbieter-Reviews weiterhin als eine der meistgenutzten und am besten dokumentierten Optionen der Kategorie — dank eines riesigen Extension-Ökosystems (ControlNet, LoRA-Training und tausende Community-Skripte). Diese Rezension erklärt, was AUTOMATIC1111 tatsächlich ist, wie es sich vom Modell Stable Diffusion und von neueren Oberflächen wie ComfyUI, Forge und InvokeAI unterscheidet, den realen Wartungsstatus mit Blick auf 2026, die Lizenzbedingungen, den Hardware-Bedarf und eine ehrliche Einschätzung, für wen es sich heute eignet — und für wen nicht.',
     metaDescription:
-      'AUTOMATIC1111-Rezension 2026: was Stable Diffusion WebUI tatsächlich ist, verifizierter Wartungsstatus (letzte Commits und Release-Daten), AGPL-3.0-Lizenz, ControlNet-Extension, Hardware-Bedarf und Vergleich mit Forge, ComfyUI und InvokeAI.',
+      'AUTOMATIC1111-Review: Was Stable Diffusion WebUI ist, geprüfter Wartungsstatus, AGPL-3.0-Lizenz, ControlNet, Hardwarebedarf und Alternativen im Vergleich.',
     twitterDescription:
       'AUTOMATIC1111-Rezension 2026: die ursprüngliche Stable Diffusion WebUI erklärt — verifizierter Wartungsstatus, Lizenz, Extension-Ökosystem, Hardware-Bedarf und Vergleich mit Forge, ComfyUI und InvokeAI.',
     audience:
@@ -365,20 +387,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion 1.5', 'Stable Diffusion XL', 'ControlNet', 'Stable Diffusion WebUI Forge', 'ComfyUI', 'InvokeAI', 'Fooocus'],
     current_hardware_mentioned: ['2 GB VRAM', '4 GB VRAM', '6 GB VRAM', '8 GB VRAM', '12 GB VRAM', 'NVIDIA RTX 3060', 'NVIDIA RTX 4090'],
     leadAnswerBlock:
-      '**AUTOMATIC1111 (Stable Diffusion web UI) ist eine kostenlose Open-Source-Weboberfläche mit Tab-Struktur zum lokalen Ausführen von Stable-Diffusion-Modellen — es ist die Oberfläche, nicht das Modell selbst.** Gestartet am 22. August 2022, steht es unter der AGPL-3.0-Lizenz, wird ausschließlich selbst gehostet und hat keine offizielle kostenpflichtige Stufe. Es bleibt eine der am besten dokumentierten Optionen dank seines Extension-Ökosystems, angeführt von der ControlNet-Extension. Die Kern-Codebasis hat sich seit Mitte 2024 spürbar verlangsamt: Der letzte getaggte Release, v1.10.1, erschien im Juli 2024 (die Release Notes wurden im Februar 2025 veröffentlicht), und mit Stand September 2026 gab es im `master`-Branch keinen weiteren Release, während der aktiv entwickelte `dev`-Branch weiterhin Commits erhielt, zuletzt im März 2026. Der beliebteste Fork des Projekts, Forge, erklärt in seinem README direkt: "original SD-WebUI is almost static now" ("das ursprüngliche SD-WebUI ist inzwischen fast statisch"). Prüfen Sie die aktuelle Aktivität auf [GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui), bevor Sie von fortlaufender aktiver Entwicklung ausgehen.',
+      '**Warnung: AUTOMATIC1111 hat seit dem 2. März 2026 kein Update erhalten (letzte Version v1.10.1, 9. Februar 2025) und ist womöglich ungepflegt — prüfen Sie es vor dem Einsatz.** **AUTOMATIC1111 (Stable Diffusion web UI) ist eine kostenlose, quelloffene (AGPL-3.0) Browseroberfläche zum lokalen Ausführen von Stable-Diffusion-Modellen, nicht das Modell selbst.**',
     quickAnswerTop: {
       de: {
         question: 'Wird AUTOMATIC1111 noch gepflegt, und ist es dasselbe wie Stable Diffusion?',
         answer:
-          'Nein, AUTOMATIC1111 ist nicht Stable Diffusion — es ist eine separate, kostenlose Open-Source-Weboberfläche (eine UI), die Stable-Diffusion-Modellgewichte lädt und Bildgenerierung über einen Browser-Tab ermöglicht. Der Kern-`master`-Branch hat seit v1.10.1 im Juli 2024 keinen neuen getaggten Release erhalten, wobei der `dev`-Branch weiterhin seltenere Commits erhielt, zuletzt im März 2026. Der meistgenutzte Fork, Forge, beschreibt das Originalprojekt in seiner eigenen Dokumentation als "inzwischen fast statisch". Es funktioniert weiterhin und wird noch breit genutzt, aber Leser, die die neuesten Modellarchitekturen oder die schnellsten Updates möchten, sollten auch aktiv gepflegte Alternativen wie Forge, ComfyUI oder SD.Next prüfen.',
+          'Seit dem 2. März 2026 wurde kein Update veröffentlicht. AUTOMATIC1111 ist nicht Stable Diffusion: Es ist eine eigenständige, kostenlose, quelloffene Weboberfläche, die Stable-Diffusion-Modellgewichte lädt und Bilder über einen Browser-Tab erzeugt. Die letzte getaggte Version v1.10.1 wurde am 9. Februar 2025 veröffentlicht, und der `dev`-Branch hat seit dem 2. März 2026 keine Commits mehr. Forge, der meistgenutzte Fork, nennt das Original „almost static now“, doch auch Forge hat seit dem 31. Juli 2025 keinen Push erhalten. Es funktioniert in vielen Setups weiter; wer neuere Modellarchitekturen braucht, sollte ComfyUI, InvokeAI oder SD.Next vergleichen.',
         bullets: [
           'AUTOMATIC1111 ist eine Oberfläche/ein Frontend, kein Modell — Sie müssen Stable-Diffusion-Gewichte separat herunterladen und laden.',
-          'Verifiziert auf GitHub: Der letzte getaggte Release (v1.10.1) erschien im Juli 2024; der letzte Commit im `dev`-Branch war im März 2026 — prüfen Sie das Repository direkt, bevor Sie sich allein auf diesen Artikel verlassen.',
+          'Auf GitHub geprüft: Die letzte getaggte Version (v1.10.1) wurde am 9. Februar 2025 veröffentlicht, der letzte Commit im `dev`-Branch stammt vom 2. März 2026 — den aktuellen Stand finden Sie im Repository.',
           'Kostenlos und Open Source unter der AGPL-3.0-Lizenz; es gibt keine offizielle kostenpflichtige Stufe oder gehostete Version.',
           'Das Extension-Ökosystem — insbesondere die ControlNet-Extension für Posen- und Kompositionssteuerung — ist der Hauptgrund, warum es trotz langsamerer Kernentwicklung breit genutzt bleibt.',
-          'Aktiv gepflegte Alternativen existieren: Forge (ein Fork, gezielt gebaut, um Funktionen hinzuzufügen, die AUTOMATIC1111 nicht hat), ComfyUI und SD.Next erhalten 2026 alle häufigere Commits.',
+          'Aktiv gepflegte Alternativen: ComfyUI, InvokeAI und SD.Next hatten am 2026-11-02 Pushes, während Forge, der auf AUTOMATIC1111 aufbauende Fork, seit dem 31. Juli 2025 keinen Push mehr hatte.',
         ],
-        updatedDate: '2026-09-06',
+        updatedDate: '2026-11-02',
       },
     },
     toc: [
@@ -407,9 +429,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'AUTOMATIC1111 (Stable Diffusion web UI) ist eine kostenlose Open-Source-Weboberfläche mit Tab-Struktur zum lokalen Ausführen von Stable Diffusion — es ist die Frontend-App, nicht das Modell selbst.',
           'Am 22. August 2022 von einem pseudonymen Entwickler unter dem Namen "AUTOMATIC1111" auf GitHub veröffentlicht, einen Monat nach dem öffentlichen Start von Stable Diffusion, und schloss die Lücke einer grafischen lokalen Oberfläche.',
           'Lizenziert unter AGPL-3.0. Ausschließlich Self-Hosting, ohne offizielle kostenpflichtige Stufe oder gehostete Version.',
-          'Die Kern-Codebasis hat sich seit Mitte 2024 verlangsamt: Der letzte getaggte Release (v1.10.1) erschien im Juli 2024, und der letzte Commit im aktiv entwickelten `dev`-Branch war im März 2026 — prüfen Sie den aktuellen Status auf GitHub, statt anzunehmen, dass sich nichts geändert hat.',
+          'Die Hauptcodebasis ist seit Mitte 2024 langsamer geworden: Die letzte getaggte Version (v1.10.1) wurde am 9. Februar 2025 veröffentlicht, der letzte Commit im `dev`-Branch stammt vom 2. März 2026 — den aktuellen Stand finden Sie auf GitHub.',
           'Das Extension-Ökosystem, insbesondere die ControlNet-Extension für Posen-/Kompositionssteuerung, ist der größte verbleibende Vorteil — eines der größten und am besten dokumentierten Sets an Community-Erweiterungen jeder lokalen Bildgenerierungs-UI.',
-          'Aktiv gepflegte Forks und Alternativen — darunter Forge, ComfyUI, InvokeAI und SD.Next — existieren für Leser, die schnellere Unterstützung neuerer Modellarchitekturen möchten.',
+          'Aktiv gepflegte Alternativen sind unter anderem ComfyUI, InvokeAI und SD.Next (Pushes am 2026-11-02); Forge, der AUTOMATIC1111-Fork, hatte seit dem 31. Juli 2025 keinen Push.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Kein Update seit dem 2. März 2026 (letzte Version v1.10.1, 9. Februar 2025). AUTOMATIC1111 ist womöglich ungepflegt: Prüfen Sie, ob es mit Ihrer GPU und Ihrem Modell noch funktioniert, bevor Sie sich darauf verlassen.',
+          },
         ],
       },
       whatIsAutomatic1111: {
@@ -431,7 +459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Geschichte: Warum AUTOMATIC1111 existiert',
         content: [
           'Stability AI, die CompVis-Forschungsgruppe der LMU München und Runway ML veröffentlichten Stable Diffusion am 22. August 2022 öffentlich. Zum Start wurde Stable Diffusion als Modellgewichte und Kommandozeilen-Skripte ausgeliefert — es gab keine offizielle grafische Oberfläche zum Eintippen eines Prompts und Klicken eines Buttons.',
-          'AUTOMATIC1111 veröffentlichte die erste Version von Stable Diffusion web UI am selben Tag, dem 22. August 2022, aufbauend auf früheren Community-Skripten und ergänzt um eine Gradio-basierte Browser-Oberfläche. Das Timing brachte das Projekt zur richtigen Zeit an die richtige Stelle: Als die Popularität von Stable Diffusion Ende 2022 explodierte, wurde AUTOMATIC1111s Oberfläche der Standardweg, auf dem die meisten Hobbyisten es tatsächlich ausführten — mit zehntausenden GitHub-Stars innerhalb weniger Monate und, Stand September 2026, über 164.000 Stars — eines der meist-gestarrten Repositories der Kategorie lokale KI-Bildgenerierung.',
+          `AUTOMATIC1111 veröffentlichte die erste Version von Stable Diffusion web UI am selben Tag, dem 22. August 2022, aufbauend auf früheren Community-Skripten und ergänzt um eine Gradio-basierte Browser-Oberfläche. Das Timing brachte das Projekt zur richtigen Zeit an die richtige Stelle: Als die Popularität von Stable Diffusion Ende 2022 explodierte, wurde AUTOMATIC1111s Oberfläche der Standardweg, auf dem die meisten Hobbyisten es tatsächlich ausführten — mit zehntausenden GitHub-Stars innerhalb weniger Monate und, inzwischen über ${ST.de('automatic1111-webui', 'bare')} Stars — eines der meist-gestarrten Repositories der Kategorie lokale KI-Bildgenerierung.`,
           'Weil es zuerst da war und den Großteil der frühen Community-Beiträge, Extension-Autoren und Tutorial-Autoren an sich zog, wurde AUTOMATIC1111 zur De-facto-Referenzimplementierung, auf die spätere Oberflächen (Forge, ComfyUI-Extensions und Community-Dokumentationsseiten) Funktionen und Workflows weiterhin beziehen — selbst dort, wo diese neueren Tools inzwischen einen anderen technischen Ansatz verfolgen.',
         ],
       },
@@ -457,23 +485,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wartungsstatus: verifiziert',
         itemHeadings: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Die Kern-Codebasis von AUTOMATIC1111 hat sich seit Mitte 2024 spürbar verlangsamt — der letzte getaggte Release war v1.10.1 im Juli 2024, und der beliebteste Fork des Projekts beschreibt das Original in seiner eigenen Dokumentation als "inzwischen fast statisch".' },
-          { type: 'plain-terms', text: 'Das Projekt läuft weiterhin und wird noch breit genutzt, aber neue Funktionen und Unterstützung für neuere Modelltypen landen inzwischen meist zuerst in Forks wie Forge, bevor sie überhaupt die ursprüngliche AUTOMATIC1111-Codebasis erreichen — wenn sie sie überhaupt erreichen.' },
+          { type: 'one-sentence', text: 'AUTOMATIC1111 hat seit dem 2. März 2026 kein Update erhalten: Die letzte getaggte Version war v1.10.1 (veröffentlicht am 9. Februar 2025), und der beliebteste Fork beschreibt das Originalprojekt in seinem README als „almost static now“.' },
+          { type: 'plain-terms', text: 'Das Projekt läuft weiter und wird weiterhin viel genutzt, doch seit dem 2. März 2026 hat niemand ein Update eingespielt; Unterstützung für neuere Modelltypen taucht daher eher in aktiv entwickelten Tools wie ComfyUI, InvokeAI oder SD.Next auf.' },
         ],
         columns: ['Signal', 'Verifizierter Status', 'Quelle'],
         rows: [
           { 'Signal': 'Letzter getaggter Release', 'Verifizierter Status': 'v1.10.1 — Code vom 27. Juli 2024; Release Notes veröffentlicht am 9. Februar 2025', 'Quelle': '[GitHub Releases](https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases)' },
           { 'Signal': 'Letzter Commit im `master`-Branch', 'Verifizierter Status': '27. Juli 2024', 'Quelle': '[GitHub-Commit-Verlauf](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commits/master)' },
-          { 'Signal': 'Letzter Commit im `dev`-Branch', 'Verifizierter Status': '2. März 2026 — langsamer, aber nicht aufgegeben', 'Quelle': 'GitHub-Commit-Verlauf (aktuelles Datum vor Zitat prüfen)' },
-          { 'Signal': 'Offene Issues', 'Verifizierter Status': 'Über 2.500 offen (Stand September 2026)', 'Quelle': '[GitHub Issues](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues)' },
+          { 'Signal': 'Letzter Commit im `dev`-Branch', 'Verifizierter Status': '2. März 2026 (Merge von PR #17313); seitdem keine Commits auf `dev`', 'Quelle': 'GitHub-Commit-Verlauf (aktuelles Datum vor Zitat prüfen)' },
+          { 'Signal': 'Offene Issues', 'Verifizierter Status': '2.429 offen (GitHub-Issue-Suche, 2026-11-02)', 'Quelle': '[GitHub Issues](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues)' },
           { 'Signal': 'Einschätzung des Fork-Maintainers', 'Verifizierter Status': '"Because original SD-WebUI is almost static now, Forge will sync with original WebUI every 90 days, or when important fixes" — Originalzitat aus dem README des Forge-Projekts', 'Quelle': '[Forge README](https://github.com/lllyasviel/stable-diffusion-webui-forge)' },
+          { 'Signal': 'Forge (Fork): letzter Push', 'Verifizierter Status': '31. Juli 2025; das neueste GitHub-Release datiert vom 5. Februar 2024', 'Quelle': '[Forge on GitHub](https://github.com/lllyasviel/stable-diffusion-webui-forge)' },
+          { 'Signal': 'ControlNet-Erweiterung: letzter Push', 'Verifizierter Status': '12. August 2024; keine GitHub-Releases', 'Quelle': '[sd-webui-controlnet auf GitHub](https://github.com/Mikubill/sd-webui-controlnet)' },
         ],
         content: [
-          'Dieser Abschnitt gibt wieder, was zum Zeitpunkt der Erstellung direkt über die GitHub-API verifiziert werden konnte, statt Aussagen aus zweiter Hand zu wiederholen. Das Bild ist weder "aktiv entwickelt wie ein Mainstream-Produkt" noch "aufgegeben" — es liegt dazwischen: Der stabile `master`-Branch, auf den die meisten Ein-Klick-Installer und bestehende Dokumentationen verweisen, hat seit Juli 2024 keinen neuen getaggten Release erhalten, während der `dev`-Branch (zum Testen von Änderungen vor deren Übernahme) weiterhin Commits erhält, nur deutlich langsamer als 2022–2023.',
-          'Das glaubwürdigste externe Signal stammt von lllyasviel, dem Entwickler von Forge — einem Fork, der gezielt auf der Codebasis von AUTOMATIC1111 aufbaut. Forges eigenes README erklärt, es werde "alle 90 Tage oder bei wichtigen Fixes" mit dem Original-WebUI synchronisiert, direkt begründet damit, dass, in den Worten des Fork-Maintainers, "das ursprüngliche SD-WebUI inzwischen fast statisch ist". Das ist die Einschätzung des Maintainers eines eng verwandten Projekts zum Entwicklungstempo von AUTOMATIC1111, kein Gerücht — behandeln Sie es als starkes, wenn auch nicht endgültiges Signal.',
-          'Nichts davon bedeutet, dass AUTOMATIC1111 nicht mehr funktioniert. Es bleibt für SD-1.5- und SDXL-Workflows voll funktionsfähig, sein Extension-Ökosystem ist weiterhin aktiv, selbst wenn der Kern es nicht ist, und seine Installationsbasis sowie Tutorial-Abdeckung sind weiterhin größer als bei den meisten Alternativen. Die praktische Konsequenz betrifft die Zukunft, nicht die Gegenwart: Leser, die Support ab dem ersten Tag für brandneue Modellarchitekturen oder aktive Fehlerbehebung brauchen, sollten das gegen aktiv gepflegte Forks wie Forge, ComfyUI oder SD.Next abwägen, die in der Vergleichstabelle unten behandelt werden.',
+          'Dieser Abschnitt nennt, was sich am 2026-11-02 direkt über die GitHub-API prüfen ließ, statt Aussagen aus zweiter Hand zu wiederholen. AUTOMATIC1111 hat seit dem 2. März 2026 kein Update erhalten: Der stabile `master`-Branch, auf den die meisten Ein-Klick-Installer und Dokumentationen verweisen, hat sich seit dem 27. Juli 2024 nicht geändert, und der `dev`-Branch hat keine Commits nach dem 2. März 2026. Das Repository ist nicht archiviert, und der Maintainer hat es nicht als aufgegeben erklärt, dennoch sollte es als möglicherweise ungepflegt gelten.',
+          'Das glaubwürdigste Signal von außen kommt von lllyasviel, dem Entwickler von Forge, einem Fork auf Basis der AUTOMATIC1111-Codebasis. Forges README sagt, es werde „sync with original WebUI every 90 days, or when important fixes“, weil „original SD-WebUI is almost static now“. Das ist die Beschreibung des Entwicklungstempos von AUTOMATIC1111 durch einen Fork-Maintainer, kein Gerücht. Forge selbst hat seit dem 31. Juli 2025 keinen Push erhalten und ist damit kein Beleg mehr für eine aktive Alternative.',
+          'All das bedeutet nicht, dass AUTOMATIC1111 aufhört zu funktionieren. Es bleibt für Stable-Diffusion-1.5- und SDXL-Workflows funktionsfähig, und Nutzerbasis und Tutorial-Abdeckung sind weiterhin größer als bei den meisten Alternativen. Die praktische Folge betrifft die Zukunft: Wer Unterstützung für neuere Modellarchitekturen oder schnelle Fehlerbehebung braucht, sollte ComfyUI, InvokeAI und SD.Next vergleichen, die am 2026-11-02 alle Pushes hatten – siehe die Vergleichstabelle unten.',
         ],
-        note: 'GitHub-Aktivitätsdaten (Commit-Daten, Release-Daten, Anzahl offener Issues) ändern sich fortlaufend — die obigen Zahlen wurden am 06.09.2026 direkt über die GitHub-API verifiziert. Prüfen Sie [das Repository](https://github.com/AUTOMATIC1111/stable-diffusion-webui) direkt auf aktuelle Zahlen, bevor Sie diese Tabelle für eine zeitkritische Entscheidung heranziehen.',
+        note: 'GitHub-Aktivitätsdaten ändern sich laufend: Die obigen Angaben wurden am 2026-11-02 über die GitHub-API geprüft. Prüfen Sie [das Repository](https://github.com/AUTOMATIC1111/stable-diffusion-webui) auf aktuelle Zahlen, bevor Sie sich bei einer zeitkritischen Entscheidung auf diese Tabelle verlassen.',
       },
       extensionsControlnet: {
         id: 'extensions-controlnet',
@@ -520,14 +550,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Option': 'AUTOMATIC1111 (Stable Diffusion web UI)',
             'Am besten für': 'Eine der größten Tutorial-/Extension-Basen, einfache Tab-Struktur',
-            'Wartungstempo (2026)': 'Kern-`master` seit Mitte 2024 verlangsamt; `dev`-Branch erhält noch gelegentlich Commits',
+            'Wartungstempo (2026)': 'Kein Update seit dem 2. März 2026; `master` unverändert seit dem 27. Juli 2024',
             'Lizenz': 'AGPL-3.0',
             'Wichtigster Kompromiss': 'Am besten dokumentierte Option, aber neuere Modellunterstützung landet meist zuerst in Forks',
           },
           {
             'Option': '[Stable Diffusion WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)',
             'Am besten für': 'AUTOMATIC1111-vertraute Oberfläche mit schnellerer Funktions- und Modellunterstützung',
-            'Wartungstempo (2026)': 'Aktiver als das ursprüngliche AUTOMATIC1111; synct laut eigenem README periodisch damit',
+            'Wartungstempo (2026)': 'Kein Push seit dem 31. Juli 2025; neuestes GitHub-Release vom 5. Februar 2024',
             'Lizenz': 'AGPL-3.0',
             'Wichtigster Kompromiss': 'Kleinere Community als AUTOMATIC1111 selbst; folgt weiterhin der grundsätzlichen Struktur der Original-Codebasis',
           },
@@ -548,7 +578,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Option': '[Fooocus](https://github.com/lllyasviel/Fooocus)',
             'Am besten für': 'Wenigste Klicks zu einem brauchbaren Bild, minimale Konfiguration',
-            'Wartungstempo (2026)': 'Langsamerer Release-Rhythmus, bewusst kleinerer Funktionsumfang',
+            'Wartungstempo (2026)': 'Letzter Push am 1. Dezember 2025; neuestes Release v2.5.5 (12. August 2024)',
             'Lizenz': 'GPL-3.0',
             'Wichtigster Kompromiss': 'Bewusst weniger Einstellungen und weniger Extension-Unterstützung zugunsten von Einfachheit',
           },
@@ -560,14 +590,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Wichtigster Kompromiss': 'Kleinere Community und Tutorial-Basis als AUTOMATIC1111 trotz gleichwertiger oder besserer Funktionen',
           },
         ],
-        note: 'Das Wartungstempo basiert auf öffentlicher Commit- und Release-Aktivität, verifiziert auf GitHub zum 06.09.2026, und kann sich ändern — prüfen Sie das jeweilige Repository, bevor Sie allein anhand des Aktivitätsniveaus entscheiden. Siehe [Stable-Diffusion-Rezension](/de/power-local-llm/stable-diffusion-review) für den Modellvergleich und [Lokale KI-Bildgenerierung vs. Cloud](/de/power-local-llm/local-ai-image-generation-vs-cloud) für lokale vs. Cloud-Abwägungen.',
+        note: 'Das Wartungstempo beruht auf öffentlicher Push- und Release-Aktivität, die am 2026-11-02 auf GitHub geprüft wurde, und kann sich ändern — prüfen Sie das jeweilige Repository, bevor Sie allein nach der Aktivität entscheiden. Siehe [Stable-Diffusion-Review](/power-local-llm/stable-diffusion-review) für den Modellvergleich und [Lokale KI-Bildgenerierung vs. Cloud](/power-local-llm/local-ai-image-generation-vs-cloud) für Vor- und Nachteile von lokal gegenüber Cloud.',
       },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Für wen sich AUTOMATIC1111 eignet',
         items: [
           '**Leser, die eine der größten Basen an Tutorials und Community-Antworten möchten.** Weil es zuerst am Markt war und die längste Installationshistorie hat, bezieht sich ein großer Teil der Forenbeiträge, YouTube-Tutorials und Stack-Overflow-artigen Antworten zu Stable-Diffusion-Oberflächen speziell auf AUTOMATIC1111.',
-          '**Leser, die ControlNet und einen ausgereiften Extension-Katalog möchten.** Die ControlNet-Extension und tausende weitere Community-Erweiterungen werden weiterhin aktiv genutzt und, in vielen Fällen, auch aktiv gepflegt, selbst wenn das Kernprojekt weniger Commits sieht.',
+          '**Leser, die ControlNet und einen ausgereiften Erweiterungskatalog wollen.** Die ControlNet-Erweiterung und Tausende weitere Community-Add-ons sind weit verbreitet; prüfen Sie das Repository jeder Erweiterung, bevor Sie sich darauf verlassen, denn die wichtigste ControlNet-Erweiterung erhielt ihren letzten Push am 12. August 2024.',
           '**Leser, die eine Tab-basierte Oberfläche einem Node-Graphen vorziehen.** Das Layout von AUTOMATIC1111 — Textfelder, Regler und Schaltflächen in Tabs organisiert — ist für Erstnutzer in der Regel zugänglicher als ComfyUIs node-basierte Arbeitsfläche.',
           '**Leser, die vollständige lokale Kontrolle und Privatsphäre möchten.** Einmal installiert, läuft die Generierung vollständig auf der eigenen GPU; kein Prompt und kein Bild verlässt die Maschine, es sei denn, Sie installieren eine Extension, die das tut.',
           '**Leser mit begrenztem Budget, die keine Lizenzkosten für die Oberfläche selbst möchten.** AGPL-3.0 bedeutet, dass die Software kostenlos nutzbar, veränderbar und weiterverbreitbar ist, ohne jegliches Abonnement.',
@@ -577,9 +607,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Für wen sich AUTOMATIC1111 nicht eignet',
         items: [
-          '**Leser, die Support ab dem ersten Tag für die neuesten Modellarchitekturen möchten.** Angesichts des seit Mitte 2024 langsameren Release-Rhythmus des Kernprojekts erscheint Unterstützung für neue Modelle meist zuerst in aktiv gepflegten Forks wie Forge, ComfyUI oder SD.Next — prüfen Sie diese, wenn Ihnen aktuellste Modellunterstützung am wichtigsten ist.',
+          '**Leser, die Unterstützung für die neuesten Modellarchitekturen wollen.** Ohne Update seit dem 2. März 2026 taucht neue Modellunterstützung eher in aktiv entwickelten Tools wie ComfyUI, InvokeAI oder SD.Next auf — vergleichen Sie diese zuerst.',
           '**Leser, die eine Ein-Klick-App ohne jede Kommandozeilen-Berührung möchten.** Die Installation erfordert Python und Git und auf manchen Systemen manuelle Fehlerbehebung bei Abhängigkeitsversionen — Leser, die eine vollständig polierte Konsumenten-App-Erfahrung möchten, greifen besser zu Fooocus\' vereinfachtem Installer oder einem Cloud-Tool.',
-          '**Leser, die garantiert aktive Fehlerbehebungen im Kern-Repository nach planbarem Zeitplan brauchen.** Mit über 2.500 offenen Issues und keinem neuen getaggten Release seit Juli 2024 im `master`-Branch sollten Leser mit harten Zuverlässigkeitsanforderungen nicht von schneller Bearbeitung eines neu gemeldeten Bugs ausgehen.',
+          '**Leser, die garantiert aktive Fehlerbehebungen im Kern-Repository nach planbarem Zeitplan brauchen.** Mit über 2.400 offenen Issues und keinem neuen getaggten Release seit Juli 2024 im `master`-Branch sollten Leser mit harten Zuverlässigkeitsanforderungen nicht von schneller Bearbeitung eines neu gemeldeten Bugs ausgehen.',
           '**Leser, die maximale Workflow-Kontrolle über mehrstufige Pipelines möchten.** ComfyUIs Node-Graph-Ansatz bietet in der Regel präzisere Kontrolle über komplexe, mehrstufige Generierungspipelines als AUTOMATIC1111s Tab-Layout.',
           '**Unternehmensteam, das ein herstellerunterstütztes Produkt mit SLA braucht.** AUTOMATIC1111 ist ein Community-Projekt ohne offiziellen Support-Vertrag, kostenpflichtige Stufe oder Service-Level-Agreement — Teams mit vertraglichem Support-Bedarf sollten stattdessen ein kommerzielles Cloud-Bildgenerierungsprodukt prüfen.',
         ],
@@ -594,7 +624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wird AUTOMATIC1111 2026 noch gepflegt?',
-            a: 'Der Kern-`master`-Branch hat sich spürbar verlangsamt: Der letzte getaggte Release, v1.10.1, erschien im Juli 2024, die Release Notes wurden im Februar 2025 veröffentlicht, und bis September 2026 folgte kein neuer getaggter Release. Der `dev`-Branch erhielt weiterhin gelegentliche Commits, zuletzt im März 2026. Der meistgenutzte Fork, Forge, erklärt in seinem README, das "ursprüngliche SD-WebUI ist inzwischen fast statisch". Es funktioniert weiterhin und wird breit genutzt, aber Leser, die die schnellsten Updates möchten, sollten auch aktiv gepflegte Alternativen wie Forge, ComfyUI oder SD.Next in Betracht ziehen.',
+            a: 'Seit dem 2. März 2026 wurde kein Update veröffentlicht. Die letzte getaggte Version v1.10.1 erschien am 9. Februar 2025, und der `dev`-Branch hat seit dem 2. März 2026 keine Commits. Forges README nennt das Original „almost static now“, und Forge selbst hatte seit dem 31. Juli 2025 keinen Push. Es funktioniert weiterhin, sollte aber als möglicherweise ungepflegt gelten; vergleichen Sie ComfyUI, InvokeAI oder SD.Next.',
           },
           {
             q: 'Ist AUTOMATIC1111 kostenlos?',
@@ -610,7 +640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was ist der Unterschied zwischen AUTOMATIC1111 und Forge?',
-            a: 'Forge ist ein Fork der Codebasis von AUTOMATIC1111, entwickelt von lllyasviel gezielt, um Performance-Optimierungen und schnellere Unterstützung neuerer Modelle hinzuzufügen. Laut Forges eigenem README synchronisiert es sich periodisch (etwa alle 90 Tage oder bei wichtigen Fixes) mit dem ursprünglichen AUTOMATIC1111-Projekt statt fortlaufend, und der Maintainer beschreibt das Originalprojekt als deutlich langsamer entwickelt. Forge ist in der Regel die bessere Wahl für Leser, die eine AUTOMATIC1111-ähnliche Oberfläche mit aktiverer laufender Entwicklung möchten.',
+            a: 'Forge ist ein Fork der AUTOMATIC1111-Codebasis, von lllyasviel gebaut, um Performance-Optimierungen und neuere Modellunterstützung wie Flux zu ergänzen. Laut README gleicht er sich etwa alle 90 Tage oder bei wichtigen Fixes mit dem Original ab. Sein letzter Push auf GitHub erfolgte am 31. Juli 2025, sein neuestes GitHub-Release datiert vom 5. Februar 2024; er ist damit keine eindeutig aktivere Wahl mehr — prüfen Sie sein Repository, bevor Sie ihn wählen.',
           },
           {
             q: 'Was ist der Unterschied zwischen AUTOMATIC1111 und ComfyUI?',
@@ -620,13 +650,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Wo lade ich AUTOMATIC1111 herunter?',
             a: 'Die offizielle Quelle ist das [AUTOMATIC1111/stable-diffusion-webui-Repository auf GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui), das den Code, ein Installations-Wiki und Links zu plattformspezifischen Setup-Anleitungen für NVIDIA-, AMD-, Intel- und Apple-Silicon-Hardware enthält. Sie müssen separat Stable-Diffusion-Modellgewichte (z. B. von Hugging Face) herunterladen, um es zu nutzen.',
           },
+          {
+            q: 'Wird Stable Diffusion WebUI Forge noch gepflegt?',
+            a: 'Sein letzter Push auf GitHub erfolgte am 31. Juli 2025, das neueste GitHub-Release datiert vom 5. Februar 2024. Laut README basiert er auf SD-WebUI 1.10.1. Prüfen Sie das Repository auf neuere Aktivität, bevor Sie ihn wählen.',
+          },
+          {
+            q: 'Wird die ControlNet-Erweiterung für AUTOMATIC1111 noch gepflegt?',
+            a: 'Das Repository sd-webui-controlnet erhielt seinen letzten Push am 12. August 2024 und hat keine GitHub-Releases. Die Erweiterung ist weiterhin weit verbreitet, doch prüfen Sie Repository und offene Issues, bevor Sie sich in einem Produktions-Workflow darauf verlassen.',
+          },
         ],
       },
       verdict: {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'AUTOMATIC1111 hat sich seinen Platz als lokale Standardoberfläche für Stable Diffusion verdient, weil es zuerst da war, und das daraus entstandene Ökosystem — allen voran die ControlNet-Extension, dazu tausende weitere Community-Tools, Tutorials und Forenantworten — ist 2026 weiterhin sein stärkstes Kapital. Ein ehrlicher Test muss aber klar benennen, was die Evidenz zeigt: Das Entwicklungstempo des Kernprojekts hat sich seit Mitte 2024 spürbar verlangsamt, es gab keinen neuen getaggten Release seit v1.10.1, und der beliebteste eigene Fork beschreibt es als "inzwischen fast statisch". Es lässt sich weiterhin installieren, läuft weiterhin und liefert bei SD-1.5- und SDXL-Checkpoints weiterhin gute Ergebnisse — Leser, die es bereits nutzen, haben also keinen dringenden Grund zum Wechsel. Leser, die 2026 neu einsteigen, insbesondere solche, die die neuesten Modellarchitekturen oder die schnellste Fehlerbehebung möchten, sollten aber Forge, ComfyUI oder SD.Next ernsthaft daneben prüfen, statt sich allein aufgrund des Namens für AUTOMATIC1111 zu entscheiden.',
+          'AUTOMATIC1111 hat sich seinen Platz als Standardoberfläche für lokales Stable Diffusion verdient, weil es als Erstes da war, und sein Ökosystem — allen voran die ControlNet-Erweiterung, dazu Tausende weitere Community-Tools, Tutorials und Forenantworten — ist weiterhin seine größte Stärke. Doch das Projekt hat seit dem 2. März 2026 kein Update erhalten, die letzte getaggte Version ist v1.10.1, der Fork Forge hatte seit dem 31. Juli 2025 keinen Push, und die führende ControlNet-Erweiterung erhielt ihren letzten Push am 12. August 2024. Es lässt sich weiterhin installieren und läuft mit SD-1.5- und SDXL-Checkpoints, sodass bestehende Nutzer keinen dringenden Grund zum Wechsel haben. Wer neu einsteigt, sollte ComfyUI, InvokeAI und SD.Next vergleichen, die aktiv entwickelt werden, statt AUTOMATIC1111 nur wegen des Bekanntheitsgrads zu wählen, und zuerst prüfen, ob es mit der eigenen GPU und dem eigenen Modell funktioniert.',
       },
       sources: {
         id: 'sources',
@@ -655,8 +693,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/automatic1111-review-hero-es.webp',
@@ -665,7 +703,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'AUTOMATIC1111 — formalmente "Stable Diffusion web UI" — es una interfaz web gratuita, de código abierto y organizada en pestañas para ejecutar modelos Stable Diffusion en tu propia GPU. Publicado en GitHub el 22 de agosto de 2022, un mes después del lanzamiento público de Stable Diffusion, se convirtió en la primera interfaz gráfica ampliamente adoptada para generación local de imágenes y sigue siendo descrito por reseñas de terceros como una de las opciones más usadas y mejor documentadas de la categoría, gracias a un enorme ecosistema de extensiones (ControlNet, entrenamiento de LoRA y miles de scripts de la comunidad). Esta reseña explica qué es realmente AUTOMATIC1111, en qué se diferencia del modelo Stable Diffusion y de interfaces más nuevas como ComfyUI, Forge e InvokeAI, su estado real de mantenimiento de cara a 2026, los términos de licencia, los requisitos de hardware y una guía honesta sobre quién debería —y quién no debería— usarlo hoy.',
     metaDescription:
-      'Reseña de AUTOMATIC1111 2026: qué es realmente Stable Diffusion WebUI, estado de mantenimiento verificado (fechas de commits y releases), licencia AGPL-3.0, extensión ControlNet, requisitos de hardware y comparación con Forge, ComfyUI e InvokeAI.',
+      'Reseña de AUTOMATIC1111: qué es Stable Diffusion WebUI, estado de mantenimiento verificado, licencia AGPL-3.0, ControlNet, hardware y alternativas.',
     twitterDescription:
       'Reseña de AUTOMATIC1111 2026: la Stable Diffusion WebUI original explicada — estado de mantenimiento verificado, licencia, ecosistema de extensiones, requisitos de hardware y comparación con Forge, ComfyUI e InvokeAI.',
     audience:
@@ -686,20 +724,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion 1.5', 'Stable Diffusion XL', 'ControlNet', 'Stable Diffusion WebUI Forge', 'ComfyUI', 'InvokeAI', 'Fooocus'],
     current_hardware_mentioned: ['2 GB VRAM', '4 GB VRAM', '6 GB VRAM', '8 GB VRAM', '12 GB VRAM', 'NVIDIA RTX 3060', 'NVIDIA RTX 4090'],
     leadAnswerBlock:
-      '**AUTOMATIC1111 (Stable Diffusion web UI) es una interfaz web gratuita, de código abierto y organizada en pestañas para ejecutar modelos Stable Diffusion de forma local — es la interfaz, no el modelo en sí.** Lanzado el 22 de agosto de 2022, tiene licencia AGPL-3.0, es de autoalojamiento exclusivo y no tiene ningún nivel de pago oficial. Sigue siendo una de las opciones mejor documentadas gracias a su ecosistema de extensiones, encabezado por la extensión ControlNet. Su código base principal se ha ralentizado notablemente desde mediados de 2024: la última versión etiquetada, v1.10.1, se publicó en julio de 2024 (sus notas de la versión se publicaron en febrero de 2025), y a septiembre de 2026 la rama `master` no ha tenido ninguna versión posterior, mientras que la rama `dev`, en desarrollo activo, ha seguido recibiendo commits, el más reciente en marzo de 2026. Su propio fork más popular, Forge, afirma directamente en su README que "original SD-WebUI is almost static now" ("el SD-WebUI original está ahora casi estático"). Verifica la actividad actual en [GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui) antes de asumir un desarrollo activo continuo.',
+      '**Aviso: AUTOMATIC1111 no recibe actualizaciones desde el 2 de marzo de 2026 (última versión v1.10.1, 9 de febrero de 2025) y puede estar sin mantenimiento — compruébalo antes de usarlo.** **AUTOMATIC1111 es una interfaz web gratuita y open source (AGPL-3.0) para ejecutar Stable Diffusion en local, no el modelo.**',
     quickAnswerTop: {
       es: {
         question: '¿Sigue manteniéndose AUTOMATIC1111, y es lo mismo que Stable Diffusion?',
         answer:
-          'No, AUTOMATIC1111 no es Stable Diffusion — es una interfaz web (una UI) gratuita y de código abierto, separada, que carga los pesos del modelo Stable Diffusion y permite generar imágenes desde una pestaña del navegador. Su rama principal `master` no ha recibido ninguna versión etiquetada nueva desde v1.10.1 en julio de 2024, aunque su rama `dev` ha seguido recibiendo commits menos frecuentes, el más reciente en marzo de 2026. Su fork más usado, Forge, describe el proyecto original como "ahora casi estático" en su propia documentación. Sigue funcionando y se usa ampliamente, pero los lectores que quieran las arquitecturas de modelo más recientes o las actualizaciones más rápidas también deberían evaluar alternativas activamente mantenidas como Forge, ComfyUI o SD.Next.',
+          'No se ha publicado ninguna actualización desde el 2 de marzo de 2026. AUTOMATIC1111 no es Stable Diffusion: es una interfaz web independiente, gratuita y open source que carga los pesos de modelos de Stable Diffusion y permite generar imágenes desde una pestaña del navegador. Su última versión etiquetada, v1.10.1, se publicó el 9 de febrero de 2025, y la rama `dev` no tiene commits desde el 2 de marzo de 2026. Forge, su fork más usado, describe el original como «almost static now», pero Forge no ha recibido ningún push desde el 31 de julio de 2025. Sigue funcionando en muchas configuraciones; quien necesite arquitecturas de modelo más nuevas debería comparar ComfyUI, InvokeAI o SD.Next.',
         bullets: [
           'AUTOMATIC1111 es una interfaz/frontend, no un modelo — igual necesitas descargar por separado los pesos de Stable Diffusion y cargarlos en ella.',
-          'Verificado en GitHub: la última versión etiquetada (v1.10.1) se publicó en julio de 2024; el commit más reciente de la rama `dev` fue en marzo de 2026 — revisa el repositorio directamente antes de confiar solo en este artículo.',
+          'Verificado en GitHub: la última versión etiquetada (v1.10.1) se publicó el 9 de febrero de 2025, y el último commit de la rama `dev` es del 2 de marzo de 2026 — consulta el repositorio para ver el estado actual.',
           'Gratuito y de código abierto bajo la licencia AGPL-3.0; no existe ningún nivel de pago oficial ni plan alojado.',
           'El ecosistema de extensiones —especialmente la extensión ControlNet para guiar pose y composición— es la principal razón por la que sigue siendo ampliamente usado pese al desarrollo más lento del núcleo.',
-          'Existen alternativas activamente mantenidas: Forge (un fork creado específicamente para añadir funciones que AUTOMATIC1111 no tiene), ComfyUI y SD.Next reciben commits más frecuentes en 2026.',
+          'Alternativas con mantenimiento activo: ComfyUI, InvokeAI y SD.Next tuvieron pushes el 2026-11-02, mientras que Forge, el fork basado en AUTOMATIC1111, no ha recibido ninguno desde el 31 de julio de 2025.',
         ],
-        updatedDate: '2026-09-06',
+        updatedDate: '2026-11-02',
       },
     },
     toc: [
@@ -728,9 +766,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'AUTOMATIC1111 (Stable Diffusion web UI) es una interfaz web gratuita, de código abierto y organizada en pestañas para ejecutar Stable Diffusion de forma local — es la aplicación frontend, no el modelo en sí.',
           'Publicado en GitHub el 22 de agosto de 2022 por un desarrollador seudónimo bajo el nombre "AUTOMATIC1111", un mes después del lanzamiento público de Stable Diffusion, cubriendo la falta de una interfaz gráfica local.',
           'Con licencia AGPL-3.0. Solo de autoalojamiento, sin ningún nivel de pago oficial ni plan alojado.',
-          'Su código base principal se ha ralentizado desde mediados de 2024: la última versión etiquetada (v1.10.1) se publicó en julio de 2024, y el commit más reciente de la rama `dev`, en desarrollo activo, fue en marzo de 2026 — verifica el estado actual en GitHub en lugar de asumir que no ha cambiado.',
+          'Su código principal se ha ralentizado desde mediados de 2024: la última versión etiquetada (v1.10.1) se publicó el 9 de febrero de 2025, y el último commit de la rama `dev` es del 2 de marzo de 2026 — consulta GitHub para ver el estado actual.',
           'El ecosistema de extensiones, especialmente la extensión ControlNet para guiar pose/composición, es su mayor ventaja restante — uno de los conjuntos más grandes y mejor documentados de complementos de la comunidad de cualquier UI de generación local de imágenes.',
-          'Existen forks y alternativas activamente mantenidos —incluyendo Forge, ComfyUI, InvokeAI y SD.Next— para lectores que quieran soporte más rápido para arquitecturas de modelo más nuevas.',
+          'Entre las alternativas con mantenimiento activo están ComfyUI, InvokeAI y SD.Next (pushes el 2026-11-02); Forge, el fork de AUTOMATIC1111, no ha recibido ningún push desde el 31 de julio de 2025.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Sin actualizaciones desde el 2 de marzo de 2026 (última versión v1.10.1, 9 de febrero de 2025). AUTOMATIC1111 puede estar sin mantenimiento: comprueba que sigue funcionando con tu GPU y tu modelo antes de depender de él.',
+          },
         ],
       },
       whatIsAutomatic1111: {
@@ -752,7 +796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Historia: por qué existe AUTOMATIC1111',
         content: [
           'Stability AI, el grupo de investigación CompVis de la LMU de Múnich y Runway ML lanzaron públicamente Stable Diffusion el 22 de agosto de 2022. En el lanzamiento, Stable Diffusion se distribuyó como pesos de modelo y scripts de línea de comandos — no existía una interfaz gráfica oficial para escribir un prompt y pulsar un botón.',
-          'AUTOMATIC1111 publicó la primera versión de Stable Diffusion web UI en GitHub ese mismo día, el 22 de agosto de 2022, construyendo sobre scripts previos de la comunidad y añadiendo una interfaz de navegador basada en Gradio. El momento lo situó en el lugar correcto en el momento adecuado: cuando la popularidad de Stable Diffusion se disparó a finales de 2022, la interfaz de AUTOMATIC1111 se convirtió en la forma por defecto en que la mayoría de aficionados realmente lo ejecutaban, acumulando decenas de miles de estrellas de GitHub en pocos meses y, a septiembre de 2026, más de 164.000 estrellas — entre los repositorios con más estrellas de la categoría de generación local de imágenes con IA.',
+          `AUTOMATIC1111 publicó la primera versión de Stable Diffusion web UI en GitHub ese mismo día, el 22 de agosto de 2022, construyendo sobre scripts previos de la comunidad y añadiendo una interfaz de navegador basada en Gradio. El momento lo situó en el lugar correcto en el momento adecuado: cuando la popularidad de Stable Diffusion se disparó a finales de 2022, la interfaz de AUTOMATIC1111 se convirtió en la forma por defecto en que la mayoría de aficionados realmente lo ejecutaban, acumulando decenas de miles de estrellas de GitHub en pocos meses y, hoy más de ${ST.es('automatic1111-webui', 'bare')} estrellas — entre los repositorios con más estrellas de la categoría de generación local de imágenes con IA.`,
           'Por haber llegado primero y absorber la mayoría de las contribuciones tempranas de la comunidad, autores de extensiones y creadores de tutoriales, AUTOMATIC1111 se convirtió en la implementación de referencia de facto a la que interfaces posteriores (Forge, extensiones de ComfyUI y sitios de documentación de la comunidad) siguen refiriéndose para describir funciones y flujos de trabajo, incluso cuando esas herramientas más nuevas han adoptado desde entonces un enfoque técnico diferente.',
         ],
       },
@@ -778,23 +822,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Estado de mantenimiento: verificado',
         itemHeadings: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'El código base principal de AUTOMATIC1111 se ha ralentizado notablemente desde mediados de 2024 — su última versión etiquetada fue v1.10.1 en julio de 2024, y su propio fork más popular describe el proyecto original como "ahora casi estático" en su propia documentación.' },
-          { type: 'plain-terms', text: 'El proyecto sigue funcionando y se usa ampliamente, pero las funciones nuevas y el soporte para tipos de modelo más nuevos suelen llegar primero a forks como Forge antes de alcanzar el código base original de AUTOMATIC1111, si es que llegan a hacerlo.' },
+          { type: 'one-sentence', text: 'AUTOMATIC1111 no recibe actualizaciones desde el 2 de marzo de 2026: su última versión etiquetada fue v1.10.1 (publicada el 9 de febrero de 2025), y su fork más popular describe el proyecto original como «almost static now» en su README.' },
+          { type: 'plain-terms', text: 'El proyecto sigue funcionando y se usa mucho, pero nadie ha publicado una actualización desde el 2 de marzo de 2026, por lo que el soporte para nuevos tipos de modelo aparecerá antes en herramientas con desarrollo activo como ComfyUI, InvokeAI o SD.Next.' },
         ],
         columns: ['Señal', 'Estado verificado', 'Fuente'],
         rows: [
           { 'Señal': 'Última versión etiquetada', 'Estado verificado': 'v1.10.1 — código del 27 de julio de 2024; notas de versión publicadas el 9 de febrero de 2025', 'Fuente': '[GitHub releases](https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases)' },
           { 'Señal': 'Último commit en la rama `master`', 'Estado verificado': '27 de julio de 2024', 'Fuente': '[Historial de commits de GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commits/master)' },
-          { 'Señal': 'Último commit en la rama `dev`', 'Estado verificado': '2 de marzo de 2026 — más lento pero no abandonado', 'Fuente': 'Historial de commits de GitHub (verifica la fecha actual antes de citarlo)' },
-          { 'Señal': 'Issues abiertos', 'Estado verificado': 'Más de 2.500 abiertos a septiembre de 2026', 'Fuente': '[GitHub issues](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues)' },
+          { 'Señal': 'Último commit en la rama `dev`', 'Estado verificado': '2 de marzo de 2026 (fusión de la PR #17313); sin commits en `dev` desde entonces', 'Fuente': 'Historial de commits de GitHub (verifica la fecha actual antes de citarlo)' },
+          { 'Señal': 'Issues abiertos', 'Estado verificado': '2.429 abiertas (búsqueda de issues de GitHub, 2026-11-02)', 'Fuente': '[GitHub issues](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues)' },
           { 'Señal': 'Valoración propia del mantenedor del fork', 'Estado verificado': '"Because original SD-WebUI is almost static now, Forge will sync with original WebUI every 90 days, or when important fixes" — cita textual del propio README del proyecto Forge', 'Fuente': '[Forge README](https://github.com/lllyasviel/stable-diffusion-webui-forge)' },
+          { 'Señal': 'Fork Forge: último push', 'Estado verificado': '31 de julio de 2025; su última release de GitHub es del 5 de febrero de 2024', 'Fuente': '[Forge on GitHub](https://github.com/lllyasviel/stable-diffusion-webui-forge)' },
+          { 'Señal': 'Extensión ControlNet: último push', 'Estado verificado': '12 de agosto de 2024; sin releases de GitHub', 'Fuente': '[sd-webui-controlnet en GitHub](https://github.com/Mikubill/sd-webui-controlnet)' },
         ],
         content: [
-          'Esta sección expone lo que se pudo verificar directamente contra la API de GitHub en el momento de redactarla, en lugar de repetir afirmaciones de segunda mano. El panorama no es ni "desarrollado activamente como un producto mainstream" ni "abandonado" — se sitúa entre ambos: la rama estable `master`, a la que apuntan la mayoría de instaladores de un clic y la documentación existente, no ha recibido una nueva versión etiquetada desde julio de 2024, mientras que la rama `dev` (usada para probar cambios antes de promoverlos) ha seguido recibiendo commits, aunque a un ritmo notablemente más lento que en 2022–2023.',
-          'La señal externa más creíble proviene de lllyasviel, el desarrollador de Forge — un fork construido específicamente sobre el código base de AUTOMATIC1111. El propio README de Forge afirma que se sincronizará "con el WebUI original cada 90 días, o cuando haya correcciones importantes", precisamente porque, en palabras del propio mantenedor del fork, "el SD-WebUI original está ahora casi estático". Es la valoración del mantenedor de un proyecto estrechamente relacionado sobre el ritmo de desarrollo de AUTOMATIC1111, no un rumor — trátalo como una señal fuerte, aunque no definitiva.',
-          'Nada de esto significa que AUTOMATIC1111 deje de funcionar. Sigue siendo totalmente funcional para flujos de trabajo de SD 1.5 y SDXL, su ecosistema de extensiones sigue activo incluso cuando el núcleo no lo está, y su base de instalación y cobertura de tutoriales siguen siendo mayores que las de la mayoría de alternativas. La implicación práctica tiene que ver con el futuro, no con el presente: los lectores que necesiten soporte desde el primer día para arquitecturas de modelo completamente nuevas o corrección de errores con rapidez deberían sopesar eso frente a forks activamente mantenidos como Forge, ComfyUI o SD.Next, cubiertos en la tabla comparativa más abajo.',
+          'Esta sección recoge lo que pudo verificarse directamente con la API de GitHub el 2026-11-02, en lugar de repetir afirmaciones de segunda mano. AUTOMATIC1111 no recibe actualizaciones desde el 2 de marzo de 2026: la rama estable `master`, a la que apuntan la mayoría de instaladores de un clic y de la documentación, no ha cambiado desde el 27 de julio de 2024, y la rama `dev` no tiene commits posteriores al 2 de marzo de 2026. El repositorio no está archivado y el mantenedor no ha anunciado su abandono, pero debe tratarse como posiblemente sin mantenimiento.',
+          'La señal externa más creíble viene de lllyasviel, el desarrollador de Forge, un fork construido sobre el código de AUTOMATIC1111. El README de Forge dice que se sincronizará «with original WebUI every 90 days, or when important fixes», porque «original SD-WebUI is almost static now». Es el mantenedor de un fork describiendo el ritmo de AUTOMATIC1111, no un rumor. El propio Forge no ha recibido ningún push desde el 31 de julio de 2025, así que ya no prueba que exista una alternativa activa.',
+          'Nada de esto significa que AUTOMATIC1111 deje de funcionar. Sigue siendo funcional para flujos de Stable Diffusion 1.5 y SDXL, y su base instalada y su cobertura de tutoriales siguen siendo mayores que las de la mayoría de alternativas. La implicación práctica es de futuro: quien necesite soporte para arquitecturas de modelo más nuevas o correcciones rápidas debería comparar ComfyUI, InvokeAI y SD.Next, que tuvieron pushes el 2026-11-02, con la tabla comparativa de abajo.',
         ],
-        note: 'Los datos de actividad de GitHub (fechas de commits, fechas de versiones, número de issues abiertos) cambian continuamente — las cifras anteriores se verificaron directamente contra la API de GitHub el 06/09/2026. Consulta [el repositorio](https://github.com/AUTOMATIC1111/stable-diffusion-webui) directamente para conocer las cifras actuales antes de basar en esta tabla una decisión sensible al tiempo.',
+        note: 'Los datos de actividad de GitHub cambian continuamente: las cifras anteriores se verificaron con la API de GitHub el 2026-11-02. Consulta [el repositorio](https://github.com/AUTOMATIC1111/stable-diffusion-webui) para ver las cifras actuales antes de apoyarte en esta tabla para una decisión urgente.',
       },
       extensionsControlnet: {
         id: 'extensions-controlnet',
@@ -841,14 +887,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Opción': 'AUTOMATIC1111 (Stable Diffusion web UI)',
             'Mejor para': 'Una de las mayores bases de tutoriales/extensiones, sencillez de pestañas',
-            'Ritmo de mantenimiento (2026)': 'El `master` principal se ralentizó desde mediados de 2024; la rama `dev` aún recibe commits ocasionales',
+            'Ritmo de mantenimiento (2026)': 'Sin actualizaciones desde el 2 de marzo de 2026; `master` sin cambios desde el 27 de julio de 2024',
             'Licencia': 'AGPL-3.0',
             'Compromiso clave': 'La opción mejor documentada, pero el soporte de modelos nuevos suele llegar primero a forks',
           },
           {
             'Opción': '[Stable Diffusion WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)',
             'Mejor para': 'Interfaz familiar tipo AUTOMATIC1111 con soporte más rápido de funciones y modelos nuevos',
-            'Ritmo de mantenimiento (2026)': 'Más activo que el AUTOMATIC1111 original; se sincroniza periódicamente con él según su propio README',
+            'Ritmo de mantenimiento (2026)': 'Sin push desde el 31 de julio de 2025; última release de GitHub del 5 de febrero de 2024',
             'Licencia': 'AGPL-3.0',
             'Compromiso clave': 'Comunidad más pequeña que AUTOMATIC1111; sigue la estructura general del código base original',
           },
@@ -869,7 +915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Opción': '[Fooocus](https://github.com/lllyasviel/Fooocus)',
             'Mejor para': 'Mínimos clics hasta una imagen utilizable, configuración mínima',
-            'Ritmo de mantenimiento (2026)': 'Ritmo de versiones más lento, alcance deliberadamente menor',
+            'Ritmo de mantenimiento (2026)': 'Último push el 1 de diciembre de 2025; última release v2.5.5 (12 de agosto de 2024)',
             'Licencia': 'GPL-3.0',
             'Compromiso clave': 'Deliberadamente menos ajustes y menos soporte de extensiones a cambio de simplicidad',
           },
@@ -881,14 +927,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Compromiso clave': 'Comunidad y base de tutoriales más pequeñas que AUTOMATIC1111 pese a igualar o superar sus funciones',
           },
         ],
-        note: 'El ritmo de mantenimiento se basa en la actividad pública de commits y versiones verificada en GitHub a fecha 06/09/2026 y puede cambiar — consulta el repositorio de cada proyecto antes de decidir basándote solo en el nivel de actividad. Consulta [Reseña de Stable Diffusion](/es/power-local-llm/stable-diffusion-review) para la comparación del modelo subyacente y [Generación de imágenes con IA local vs. la nube](/es/power-local-llm/local-ai-image-generation-vs-cloud) para las ventajas y desventajas local vs. nube.',
+        note: 'El ritmo de mantenimiento se basa en la actividad pública de push y releases verificada en GitHub el 2026-11-02 y puede cambiar — consulta el repositorio de cada proyecto antes de elegir solo por su nivel de actividad. Consulta la [reseña de Stable Diffusion](/power-local-llm/stable-diffusion-review) para la comparación de modelos y [Generación local de imágenes con IA frente a la nube](/power-local-llm/local-ai-image-generation-vs-cloud) para las ventajas e inconvenientes de local frente a nube.',
       },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Quién debería usar AUTOMATIC1111',
         items: [
           '**El lector que quiere una de las mayores bases de tutoriales y respuestas de la comunidad.** Por haber llegado primero al mercado y tener el historial de instalación más largo, una gran parte de las publicaciones en foros, tutoriales de YouTube y respuestas al estilo Stack Overflow sobre interfaces de Stable Diffusion hacen referencia específicamente a AUTOMATIC1111.',
-          '**El lector que quiere ControlNet y un catálogo de extensiones maduro.** La extensión ControlNet y miles de otros complementos de la comunidad siguen usándose activamente y, en muchos casos, mantenidos activamente, incluso en periodos en los que el proyecto principal ve menos commits.',
+          '**Lector que quiere ControlNet y un catálogo de extensiones maduro.** La extensión ControlNet y miles de complementos comunitarios más se usan mucho; revisa el repositorio de cada extensión antes de depender de ella, ya que la principal extensión ControlNet recibió su último push el 12 de agosto de 2024.',
           '**El lector que prefiere una interfaz basada en pestañas frente a un grafo de nodos.** El diseño de AUTOMATIC1111 —campos de texto, deslizadores y botones organizados en pestañas— es generalmente más accesible para un usuario primerizo que el lienzo basado en nodos de ComfyUI.',
           '**El lector que quiere control local total y privacidad.** Una vez instalado, la generación ocurre por completo en tu propia GPU; ningún prompt o dato de imagen sale de tu máquina a menos que instales una extensión que lo haga.',
           '**El lector con presupuesto ajustado que quiere coste de licencia cero para la interfaz en sí.** AGPL-3.0 significa que el software es gratuito de usar, modificar y redistribuir, sin ningún tipo de suscripción.',
@@ -898,9 +944,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Quién no debería usar AUTOMATIC1111',
         items: [
-          '**El lector que quiere soporte desde el primer día para las arquitecturas de modelo más nuevas.** Dado el ritmo de versiones más lento del proyecto principal desde mediados de 2024, el soporte de modelos nuevos ha tendido a aparecer primero en forks activamente mantenidos como Forge, ComfyUI o SD.Next — evalúa esas opciones si el soporte de modelos de vanguardia es lo más importante para ti.',
+          '**Lector que quiere soporte para las arquitecturas de modelo más recientes.** Sin actualizaciones desde el 2 de marzo de 2026, el soporte para modelos nuevos aparecerá antes en herramientas con desarrollo activo como ComfyUI, InvokeAI o SD.Next — compáralas primero.',
           '**El lector que quiere una aplicación de un clic sin ninguna exposición a la línea de comandos.** La instalación requiere Python y Git y, en algunos sistemas, solución manual de problemas de versiones de dependencias — los lectores que quieran una experiencia de aplicación de consumo totalmente pulida pueden preferir el instalador simplificado de Fooocus o una herramienta en la nube.',
-          '**El lector que necesita correcciones de errores garantizadas y activas en el repositorio principal con un calendario predecible.** Con más de 2.500 issues abiertos y ninguna nueva versión etiquetada desde julio de 2024 en la rama `master`, los lectores con un requisito de fiabilidad estricto no deberían asumir una resolución rápida de un error recién reportado.',
+          '**El lector que necesita correcciones de errores garantizadas y activas en el repositorio principal con un calendario predecible.** Con más de 2.400 issues abiertos y ninguna nueva versión etiquetada desde julio de 2024 en la rama `master`, los lectores con un requisito de fiabilidad estricto no deberían asumir una resolución rápida de un error recién reportado.',
           '**El lector que quiere el máximo control de flujo sobre pipelines de varios pasos.** El enfoque de grafo de nodos de ComfyUI generalmente ofrece un control más preciso sobre pipelines de generación complejos y de varias etapas que el layout de pestañas de AUTOMATIC1111.',
           '**El equipo empresarial que necesita un producto con soporte de proveedor y un SLA.** AUTOMATIC1111 es un proyecto de la comunidad sin contrato de soporte oficial, nivel de pago ni acuerdo de nivel de servicio — los equipos que necesiten soporte contractual deberían evaluar en su lugar un producto comercial de generación de imágenes en la nube.',
         ],
@@ -915,7 +961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Sigue manteniéndose AUTOMATIC1111 en 2026?',
-            a: 'Su rama principal `master` se ha ralentizado notablemente: la última versión etiquetada, v1.10.1, se publicó en julio de 2024, con notas de versión publicadas en febrero de 2025, y no le ha seguido ninguna nueva versión etiquetada hasta septiembre de 2026. Su rama `dev` ha seguido recibiendo commits ocasionales, el más reciente en marzo de 2026. Su fork más usado, Forge, afirma en su README que "el SD-WebUI original está ahora casi estático". Sigue funcionando y se usa ampliamente, pero los lectores que quieran las actualizaciones más rápidas también deberían considerar alternativas activamente mantenidas como Forge, ComfyUI o SD.Next.',
+            a: 'No se ha publicado ninguna actualización desde el 2 de marzo de 2026. Su última versión etiquetada, v1.10.1, se publicó el 9 de febrero de 2025, y la rama `dev` no tiene commits desde el 2 de marzo de 2026. El README de Forge describe el original como «almost static now», y el propio Forge no ha recibido ningún push desde el 31 de julio de 2025. Sigue funcionando, pero trátalo como posiblemente sin mantenimiento y compara ComfyUI, InvokeAI o SD.Next.',
           },
           {
             q: '¿Es gratis AUTOMATIC1111?',
@@ -931,7 +977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuál es la diferencia entre AUTOMATIC1111 y Forge?',
-            a: 'Forge es un fork del código base de AUTOMATIC1111, creado por el desarrollador lllyasviel específicamente para añadir optimizaciones de rendimiento y soporte más rápido para modelos nuevos. Según el propio README de Forge, se sincroniza periódicamente con el proyecto original de AUTOMATIC1111 (aproximadamente cada 90 días o para correcciones importantes) en lugar de hacerlo de forma continua, y su mantenedor describe el proyecto original como con un desarrollo notablemente más lento. Forge suele ser la mejor opción para lectores que quieran una interfaz tipo AUTOMATIC1111 con desarrollo continuo más activo.',
+            a: 'Forge es un fork del código de AUTOMATIC1111, creado por lllyasviel para añadir optimizaciones de rendimiento y soporte de modelos más nuevos como Flux. Según su README, se sincroniza con el original aproximadamente cada 90 días o para correcciones importantes. Su último push en GitHub fue el 31 de julio de 2025 y su última release de GitHub es del 5 de febrero de 2024, así que ya no es una opción claramente más activa — consulta su repositorio antes de elegirlo.',
           },
           {
             q: '¿Cuál es la diferencia entre AUTOMATIC1111 y ComfyUI?',
@@ -941,13 +987,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Dónde descargo AUTOMATIC1111?',
             a: 'La fuente oficial es el [repositorio AUTOMATIC1111/stable-diffusion-webui en GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui), que incluye el código, una wiki de instalación y enlaces a instrucciones de configuración específicas para hardware NVIDIA, AMD, Intel y Apple Silicon. Necesitarás descargar por separado los pesos del modelo Stable Diffusion (por ejemplo, desde Hugging Face) para usarlo.',
           },
+          {
+            q: '¿Sigue manteniéndose Stable Diffusion WebUI Forge?',
+            a: 'Su último push en GitHub fue el 31 de julio de 2025, y su última release de GitHub es del 5 de febrero de 2024. Su README indica que se basa en SD-WebUI 1.10.1. Consulta el repositorio por si hay actividad más reciente antes de elegirlo.',
+          },
+          {
+            q: '¿Sigue manteniéndose la extensión ControlNet para AUTOMATIC1111?',
+            a: 'El repositorio sd-webui-controlnet recibió su último push el 12 de agosto de 2024 y no tiene releases de GitHub. Se sigue usando mucho, pero revisa su repositorio y sus issues abiertas antes de depender de ella en un flujo de producción.',
+          },
         ],
       },
       verdict: {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'AUTOMATIC1111 se ganó su lugar como interfaz local por defecto para Stable Diffusion por haber sido el primero, y el ecosistema resultante —la extensión ControlNet sobre todo, junto a miles de otras herramientas de la comunidad, tutoriales y respuestas de foros— sigue siendo su mayor activo en 2026. Dicho esto, una reseña honesta debe declarar sin rodeos lo que muestra la evidencia: el ritmo de desarrollo del proyecto principal se ha ralentizado notablemente desde mediados de 2024, sin ninguna nueva versión etiquetada desde v1.10.1, y su propio fork más popular lo describe como "ahora casi estático". Aun así se instala, sigue funcionando y sigue produciendo buenos resultados con checkpoints SD 1.5 y SDXL, así que los lectores que ya lo usan no tienen una razón urgente para cambiar. Pero los lectores que empiecen de cero en 2026, especialmente quienes quieran las arquitecturas de modelo más nuevas o la resolución de errores más rápida, deberían evaluar seriamente Forge, ComfyUI o SD.Next junto a él, en lugar de decantarse por AUTOMATIC1111 solo por reconocimiento de nombre.',
+          'AUTOMATIC1111 se ganó su lugar como interfaz local por defecto de Stable Diffusion por ser la primera, y su ecosistema — la extensión ControlNet sobre todo, junto a miles de herramientas comunitarias, tutoriales y respuestas en foros — sigue siendo su mayor activo. Pero el proyecto no recibe actualizaciones desde el 2 de marzo de 2026, su última versión etiquetada es v1.10.1, su fork Forge no ha recibido ningún push desde el 31 de julio de 2025, y la principal extensión ControlNet recibió su último push el 12 de agosto de 2024. Sigue instalándose y funcionando con checkpoints de SD 1.5 y SDXL, así que quienes ya lo usan no tienen un motivo urgente para cambiar. Quien empiece de cero debería comparar ComfyUI, InvokeAI y SD.Next, con desarrollo activo, en lugar de elegir AUTOMATIC1111 solo por su fama, y comprobar primero que funciona con su GPU y su modelo.',
       },
       sources: {
         id: 'sources',
@@ -976,8 +1030,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/automatic1111-review-hero-fr.webp',
@@ -986,7 +1040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'AUTOMATIC1111 — officiellement "Stable Diffusion web UI" — est une interface web gratuite, open source et organisée en onglets pour exécuter des modèles Stable Diffusion sur votre propre GPU. Publiée sur GitHub le 22 août 2022, un mois après le lancement public de Stable Diffusion, elle est devenue la première interface graphique largement adoptée pour la génération d\'images en local et reste décrite par des avis tiers comme l\'une des options les plus utilisées et les mieux documentées de la catégorie, grâce à un immense écosystème d\'extensions (ControlNet, entraînement de LoRA et des milliers de scripts communautaires). Cet avis explique ce qu\'est réellement AUTOMATIC1111, en quoi il diffère du modèle Stable Diffusion et des interfaces plus récentes comme ComfyUI, Forge et InvokeAI, son véritable état de maintenance à l\'approche de 2026, ses conditions de licence, ses besoins matériels, et un avis honnête sur qui devrait — et ne devrait pas — l\'utiliser aujourd\'hui.',
     metaDescription:
-      'Avis AUTOMATIC1111 2026 : ce qu\'est réellement Stable Diffusion WebUI, état de maintenance vérifié (dates de commits et de versions), licence AGPL-3.0, extension ControlNet, besoins matériels et comparaison avec Forge, ComfyUI et InvokeAI.',
+      'Avis AUTOMATIC1111 : ce qu\'est Stable Diffusion WebUI, état de maintenance vérifié, licence AGPL-3.0, ControlNet, matériel requis et alternatives.',
     twitterDescription:
       'Avis AUTOMATIC1111 2026 : le Stable Diffusion WebUI original expliqué — état de maintenance vérifié, licence, écosystème d\'extensions, besoins matériels et comparaison avec Forge, ComfyUI et InvokeAI.',
     audience:
@@ -1007,20 +1061,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion 1.5', 'Stable Diffusion XL', 'ControlNet', 'Stable Diffusion WebUI Forge', 'ComfyUI', 'InvokeAI', 'Fooocus'],
     current_hardware_mentioned: ['2 GB VRAM', '4 GB VRAM', '6 GB VRAM', '8 GB VRAM', '12 GB VRAM', 'NVIDIA RTX 3060', 'NVIDIA RTX 4090'],
     leadAnswerBlock:
-      '**AUTOMATIC1111 (Stable Diffusion web UI) est une interface web gratuite, open source et organisée en onglets pour exécuter des modèles Stable Diffusion en local — c\'est l\'interface, pas le modèle lui-même.** Lancé le 22 août 2022, il est sous licence AGPL-3.0, uniquement auto-hébergé, sans aucun palier payant officiel. Il reste l\'une des options les mieux documentées grâce à son écosystème d\'extensions, mené par l\'extension ControlNet. Sa base de code principale a nettement ralenti depuis mi-2024 : la dernière version taguée, v1.10.1, est sortie en juillet 2024 (ses notes de version ont été publiées en février 2025), et en septembre 2026, la branche `master` n\'a connu aucune nouvelle version, tandis que la branche `dev`, activement développée, a continué de recevoir des commits, le plus récent en mars 2026. Son fork le plus populaire, Forge, indique directement dans son README que "original SD-WebUI is almost static now" ("le SD-WebUI original est désormais presque statique"). Vérifiez l\'activité actuelle sur [GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui) avant de présumer un développement actif continu.',
+      '**Avertissement : aucune mise à jour d\'AUTOMATIC1111 depuis le 2 mars 2026 (dernière version v1.10.1, 9 février 2025) ; le projet n\'est peut-être plus maintenu — vérifiez avant usage.** **AUTOMATIC1111 est une interface web gratuite et open source (AGPL-3.0) pour exécuter Stable Diffusion en local, pas le modèle.**',
     quickAnswerTop: {
       fr: {
         question: 'AUTOMATIC1111 est-il encore maintenu, et est-ce la même chose que Stable Diffusion ?',
         answer:
-          'Non, AUTOMATIC1111 n\'est pas Stable Diffusion — c\'est une interface web (une UI) gratuite et open source distincte, qui charge les poids du modèle Stable Diffusion et permet de générer des images depuis un onglet de navigateur. Sa branche principale `master` n\'a reçu aucune nouvelle version taguée depuis v1.10.1 en juillet 2024, bien que sa branche `dev` ait continué de recevoir des commits moins fréquents, le dernier en mars 2026. Son fork le plus utilisé, Forge, décrit le projet original comme "désormais presque statique" dans sa propre documentation. Il fonctionne toujours et reste largement utilisé, mais les lecteurs qui veulent les architectures de modèle les plus récentes ou les mises à jour les plus rapides devraient aussi évaluer des alternatives activement maintenues comme Forge, ComfyUI ou SD.Next.',
+          'Aucune mise à jour n\'a été publiée depuis le 2 mars 2026. AUTOMATIC1111 n\'est pas Stable Diffusion : c\'est une interface web distincte, gratuite et open source, qui charge les poids de modèles Stable Diffusion et permet de générer des images dans un onglet de navigateur. Sa dernière version étiquetée, v1.10.1, a été publiée le 9 février 2025, et la branche `dev` n\'a plus de commit depuis le 2 mars 2026. Forge, son fork le plus utilisé, qualifie l\'original de « almost static now », mais Forge n\'a lui-même reçu aucun push depuis le 31 juillet 2025. Il fonctionne encore dans de nombreuses configurations ; qui a besoin de nouvelles architectures de modèles devrait comparer ComfyUI, InvokeAI ou SD.Next.',
         bullets: [
           'AUTOMATIC1111 est une interface/un frontend, pas un modèle — vous devez quand même télécharger séparément les poids de Stable Diffusion et les charger dedans.',
-          'Vérifié sur GitHub : la dernière version taguée (v1.10.1) est sortie en juillet 2024 ; le commit le plus récent de la branche `dev` datait de mars 2026 — vérifiez directement le dépôt avant de vous fier uniquement à cet article.',
+          'Vérifié sur GitHub : la dernière version étiquetée (v1.10.1) a été publiée le 9 février 2025, et le dernier commit de la branche `dev` date du 2 mars 2026 — consultez le dépôt pour l\'état actuel.',
           'Gratuit et open source sous licence AGPL-3.0 ; il n\'existe aucun palier payant officiel ni offre hébergée.',
           'L\'écosystème d\'extensions — notamment l\'extension ControlNet pour guider pose et composition — est la principale raison pour laquelle il reste largement utilisé malgré un développement de base plus lent.',
-          'Des alternatives activement maintenues existent : Forge (un fork conçu spécifiquement pour ajouter des fonctionnalités qu\'AUTOMATIC1111 n\'a pas), ComfyUI et SD.Next reçoivent tous des commits plus fréquents en 2026.',
+          'Alternatives activement maintenues : ComfyUI, InvokeAI et SD.Next ont reçu des pushes le 2026-11-02, tandis que Forge, le fork bâti sur AUTOMATIC1111, n\'en a reçu aucun depuis le 31 juillet 2025.',
         ],
-        updatedDate: '2026-09-06',
+        updatedDate: '2026-11-02',
       },
     },
     toc: [
@@ -1049,9 +1103,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'AUTOMATIC1111 (Stable Diffusion web UI) est une interface web gratuite, open source et organisée en onglets pour exécuter Stable Diffusion en local — c\'est l\'application frontend, pas le modèle lui-même.',
           'Publié sur GitHub le 22 août 2022 par un développeur pseudonyme sous le nom "AUTOMATIC1111", un mois après le lancement public de Stable Diffusion, comblant l\'absence d\'interface graphique locale.',
           'Sous licence AGPL-3.0. Uniquement auto-hébergé, sans aucun palier payant officiel ni offre hébergée.',
-          'Sa base de code principale a ralenti depuis mi-2024 : la dernière version taguée (v1.10.1) est sortie en juillet 2024, et le commit le plus récent de la branche `dev`, activement développée, datait de mars 2026 — vérifiez l\'état actuel sur GitHub plutôt que de supposer qu\'il n\'a pas changé.',
+          'Sa base de code principale a ralenti depuis mi-2024 : la dernière version étiquetée (v1.10.1) a été publiée le 9 février 2025, et le dernier commit de la branche `dev` date du 2 mars 2026 — consultez GitHub pour l\'état actuel.',
           'L\'écosystème d\'extensions, notamment l\'extension ControlNet pour guider pose/composition, reste son plus grand atout — l\'un des plus vastes catalogues d\'extensions communautaires parmi les interfaces de génération d\'images en local.',
-          'Des forks et alternatives activement maintenus — dont Forge, ComfyUI, InvokeAI et SD.Next — existent pour les lecteurs qui veulent un support plus rapide des nouvelles architectures de modèles.',
+          'Parmi les alternatives activement maintenues figurent ComfyUI, InvokeAI et SD.Next (pushes le 2026-11-02) ; Forge, le fork d\'AUTOMATIC1111, n\'a reçu aucun push depuis le 31 juillet 2025.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Aucune mise à jour depuis le 2 mars 2026 (dernière version v1.10.1, 9 février 2025). AUTOMATIC1111 n\'est peut-être plus maintenu : vérifiez qu\'il fonctionne encore avec votre GPU et votre modèle avant de vous y fier.',
+          },
         ],
       },
       whatIsAutomatic1111: {
@@ -1073,7 +1133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Historique : pourquoi AUTOMATIC1111 existe',
         content: [
           'Stability AI, le groupe de recherche CompVis de la LMU de Munich et Runway ML ont publiquement lancé Stable Diffusion le 22 août 2022. Au lancement, Stable Diffusion était distribué sous forme de poids de modèle et de scripts en ligne de commande — il n\'existait aucune interface graphique officielle pour taper un prompt et cliquer sur un bouton.',
-          'AUTOMATIC1111 a publié la première version de Stable Diffusion web UI sur GitHub ce même jour, le 22 août 2022, en s\'appuyant sur des scripts communautaires antérieurs et en ajoutant une interface navigateur basée sur Gradio. Le timing l\'a placé au bon endroit au bon moment : quand la popularité de Stable Diffusion a explosé fin 2022, l\'interface d\'AUTOMATIC1111 est devenue la manière par défaut dont la plupart des amateurs l\'utilisaient réellement, accumulant des dizaines de milliers d\'étoiles GitHub en quelques mois et, en septembre 2026, plus de 164 000 étoiles — parmi les dépôts les plus étoilés de la catégorie génération d\'images IA en local.',
+          `AUTOMATIC1111 a publié la première version de Stable Diffusion web UI sur GitHub ce même jour, le 22 août 2022, en s'appuyant sur des scripts communautaires antérieurs et en ajoutant une interface navigateur basée sur Gradio. Le timing l'a placé au bon endroit au bon moment : quand la popularité de Stable Diffusion a explosé fin 2022, l'interface d'AUTOMATIC1111 est devenue la manière par défaut dont la plupart des amateurs l'utilisaient réellement, accumulant des dizaines de milliers d'étoiles GitHub en quelques mois et, désormais plus de ${ST.fr('automatic1111-webui', 'bare')} étoiles — parmi les dépôts les plus étoilés de la catégorie génération d'images IA en local.`,
           'Étant arrivé le premier et ayant absorbé la majorité des contributions communautaires précoces, des auteurs d\'extensions et des rédacteurs de tutoriels, AUTOMATIC1111 est devenu l\'implémentation de référence de facto à laquelle les interfaces ultérieures (Forge, extensions ComfyUI, sites de documentation communautaire) continuent de se référer pour décrire fonctionnalités et workflows, même là où ces outils plus récents ont depuis adopté une approche technique différente.',
         ],
       },
@@ -1099,23 +1159,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'État de maintenance : vérifié',
         itemHeadings: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'La base de code principale d\'AUTOMATIC1111 a nettement ralenti depuis mi-2024 — sa dernière version taguée était v1.10.1 en juillet 2024, et son propre fork le plus populaire décrit le projet original comme "désormais presque statique" dans sa propre documentation.' },
-          { type: 'plain-terms', text: 'Le projet fonctionne toujours et reste largement utilisé, mais les nouvelles fonctionnalités et le support de types de modèles plus récents ont tendance à arriver d\'abord dans des forks comme Forge avant d\'atteindre la base de code originale d\'AUTOMATIC1111, si tant est qu\'ils l\'atteignent.' },
+          { type: 'one-sentence', text: 'AUTOMATIC1111 n\'a reçu aucune mise à jour depuis le 2 mars 2026 : sa dernière version étiquetée était v1.10.1 (publiée le 9 février 2025), et son fork le plus populaire décrit le projet d\'origine comme « almost static now » dans son README.' },
+          { type: 'plain-terms', text: 'Le projet fonctionne encore et reste très utilisé, mais personne n\'y a poussé de mise à jour depuis le 2 mars 2026 ; la prise en charge des nouveaux types de modèles apparaît donc plutôt dans des outils activement développés comme ComfyUI, InvokeAI ou SD.Next.' },
         ],
         columns: ['Signal', 'État vérifié', 'Source'],
         rows: [
           { 'Signal': 'Dernière version taguée', 'État vérifié': 'v1.10.1 — code du 27 juillet 2024 ; notes de version publiées le 9 février 2025', 'Source': '[GitHub releases](https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases)' },
           { 'Signal': 'Dernier commit sur la branche `master`', 'État vérifié': '27 juillet 2024', 'Source': '[Historique de commits GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commits/master)' },
-          { 'Signal': 'Dernier commit sur la branche `dev`', 'État vérifié': '2 mars 2026 — plus lent mais pas abandonné', 'Source': 'Historique de commits GitHub (vérifiez la date actuelle avant de citer)' },
-          { 'Signal': 'Issues ouvertes', 'État vérifié': 'Plus de 2 500 ouvertes en septembre 2026', 'Source': '[GitHub issues](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues)' },
+          { 'Signal': 'Dernier commit sur la branche `dev`', 'État vérifié': '2 mars 2026 (fusion de la PR #17313) ; aucun commit sur `dev` depuis', 'Source': 'Historique de commits GitHub (vérifiez la date actuelle avant de citer)' },
+          { 'Signal': 'Issues ouvertes', 'État vérifié': '2 429 ouvertes (recherche d\'issues GitHub, 2026-11-02)', 'Source': '[GitHub issues](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues)' },
           { 'Signal': 'Évaluation du mainteneur du fork', 'État vérifié': '"Because original SD-WebUI is almost static now, Forge will sync with original WebUI every 90 days, or when important fixes" — citation directe du README du projet Forge', 'Source': '[Forge README](https://github.com/lllyasviel/stable-diffusion-webui-forge)' },
+          { 'Signal': 'Fork Forge : dernier push', 'État vérifié': '31 juillet 2025 ; sa dernière release GitHub date du 5 février 2024', 'Source': '[Forge on GitHub](https://github.com/lllyasviel/stable-diffusion-webui-forge)' },
+          { 'Signal': 'Extension ControlNet : dernier push', 'État vérifié': '12 août 2024 ; aucune release GitHub', 'Source': '[sd-webui-controlnet sur GitHub](https://github.com/Mikubill/sd-webui-controlnet)' },
         ],
         content: [
-          'Cette section présente ce qui a pu être vérifié directement via l\'API GitHub au moment de la rédaction, plutôt que de répéter des affirmations de seconde main. Le tableau n\'est ni "activement développé comme un produit grand public" ni "abandonné" — il se situe entre les deux : la branche stable `master`, vers laquelle pointent la plupart des installateurs en un clic et la documentation existante, n\'a reçu aucune nouvelle version taguée depuis juillet 2024, tandis que la branche `dev` (utilisée pour tester des changements avant promotion) a continué de recevoir des commits, à un rythme nettement plus lent qu\'en 2022-2023.',
-          'Le signal externe le plus crédible vient de lllyasviel, le développeur de Forge — un fork construit spécifiquement sur la base de code d\'AUTOMATIC1111. Le README de Forge indique qu\'il se synchronisera "avec le WebUI original tous les 90 jours, ou lors de corrections importantes", précisément parce que, selon les mots du mainteneur du fork lui-même, "le SD-WebUI original est désormais presque statique". C\'est l\'évaluation du mainteneur d\'un projet étroitement lié sur le rythme de développement d\'AUTOMATIC1111, pas une rumeur — à considérer comme un signal fort, sans être définitif.',
-          'Rien de tout cela ne signifie qu\'AUTOMATIC1111 cesse de fonctionner. Il reste pleinement fonctionnel pour les workflows SD 1.5 et SDXL, son écosystème d\'extensions reste actif même quand le cœur ne l\'est pas, et sa base d\'installation ainsi que sa couverture de tutoriels restent plus larges que la plupart des alternatives. L\'implication pratique concerne l\'avenir, pas le présent : les lecteurs ayant besoin d\'un support dès le premier jour pour de toutes nouvelles architectures de modèles ou d\'une résolution rapide des bugs devraient mettre cela en balance avec des forks activement maintenus comme Forge, ComfyUI ou SD.Next, traités dans le tableau comparatif ci-dessous.',
+          'Cette section indique ce qui a pu être vérifié directement auprès de l\'API GitHub le 2026-11-02, plutôt que de répéter des affirmations de seconde main. AUTOMATIC1111 n\'a reçu aucune mise à jour depuis le 2 mars 2026 : la branche stable `master`, vers laquelle pointent la plupart des installeurs en un clic et de la documentation, n\'a pas changé depuis le 27 juillet 2024, et la branche `dev` n\'a aucun commit après le 2 mars 2026. Le dépôt n\'est pas archivé et le mainteneur n\'a pas annoncé son abandon, mais il faut le considérer comme potentiellement non maintenu.',
+          'Le signal extérieur le plus crédible vient de lllyasviel, développeur de Forge, un fork bâti sur la base de code d\'AUTOMATIC1111. Le README de Forge indique qu\'il se synchronisera « with original WebUI every 90 days, or when important fixes », parce que « original SD-WebUI is almost static now ». C\'est le mainteneur d\'un fork qui décrit le rythme d\'AUTOMATIC1111, pas une rumeur. Forge lui-même n\'a reçu aucun push depuis le 31 juillet 2025 : il ne prouve donc plus l\'existence d\'une alternative active.',
+          'Rien de tout cela ne signifie qu\'AUTOMATIC1111 cesse de fonctionner. Il reste utilisable pour les workflows Stable Diffusion 1.5 et SDXL, et sa base installée et sa couverture de tutoriels restent supérieures à celles de la plupart des alternatives. L\'implication pratique concerne l\'avenir : qui a besoin de nouvelles architectures de modèles ou de corrections rapides devrait comparer ComfyUI, InvokeAI et SD.Next, tous poussés le 2026-11-02, grâce au tableau comparatif ci-dessous.',
         ],
-        note: 'Les données d\'activité GitHub (dates de commits, dates de version, nombre d\'issues ouvertes) changent en continu — les chiffres ci-dessus ont été vérifiés directement via l\'API GitHub le 06/09/2026. Consultez [le dépôt](https://github.com/AUTOMATIC1111/stable-diffusion-webui) directement pour les chiffres actuels avant de baser une décision sensible au temps sur ce tableau.',
+        note: 'Les données d\'activité GitHub évoluent en continu : les chiffres ci-dessus ont été vérifiés auprès de l\'API GitHub le 2026-11-02. Consultez [le dépôt](https://github.com/AUTOMATIC1111/stable-diffusion-webui) pour les valeurs actuelles avant de vous fier à ce tableau pour une décision urgente.',
       },
       extensionsControlnet: {
         id: 'extensions-controlnet',
@@ -1162,14 +1224,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Option': 'AUTOMATIC1111 (Stable Diffusion web UI)',
             'Idéal pour': 'Une des plus grandes bases de tutoriels/extensions, simplicité des onglets',
-            'Rythme de maintenance (2026)': 'Le `master` principal a ralenti depuis mi-2024 ; la branche `dev` reçoit encore des commits occasionnels',
+            'Rythme de maintenance (2026)': 'Aucune mise à jour depuis le 2 mars 2026 ; `master` inchangée depuis le 27 juillet 2024',
             'Licence': 'AGPL-3.0',
             'Compromis clé': 'Option la mieux documentée, mais le support des nouveaux modèles arrive souvent d\'abord dans des forks',
           },
           {
             'Option': '[Stable Diffusion WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)',
             'Idéal pour': 'Interface familière type AUTOMATIC1111 avec support plus rapide des fonctionnalités et nouveaux modèles',
-            'Rythme de maintenance (2026)': 'Plus actif que l\'AUTOMATIC1111 d\'origine ; se synchronise périodiquement avec lui selon son propre README',
+            'Rythme de maintenance (2026)': 'Aucun push depuis le 31 juillet 2025 ; dernière release GitHub du 5 février 2024',
             'Licence': 'AGPL-3.0',
             'Compromis clé': 'Communauté plus petite qu\'AUTOMATIC1111 lui-même ; suit toujours la structure générale de la base de code originale',
           },
@@ -1190,7 +1252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Option': '[Fooocus](https://github.com/lllyasviel/Fooocus)',
             'Idéal pour': 'Le moins de clics possible pour obtenir une image exploitable, configuration minimale',
-            'Rythme de maintenance (2026)': 'Rythme de sortie plus lent, portée volontairement réduite',
+            'Rythme de maintenance (2026)': 'Dernier push le 1er décembre 2025 ; dernière release v2.5.5 (12 août 2024)',
             'Licence': 'GPL-3.0',
             'Compromis clé': 'Volontairement moins de réglages et moins de support d\'extensions en échange de la simplicité',
           },
@@ -1202,14 +1264,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Compromis clé': 'Communauté et base de tutoriels plus restreintes qu\'AUTOMATIC1111 malgré des fonctionnalités équivalentes ou supérieures',
           },
         ],
-        note: 'Le rythme de maintenance est basé sur l\'activité publique de commits et de versions vérifiée sur GitHub au 06/09/2026 et peut évoluer — consultez le dépôt de chaque projet avant de choisir sur la seule base du niveau d\'activité. Voir [Avis Stable Diffusion](/fr/power-local-llm/stable-diffusion-review) pour la comparaison du modèle sous-jacent et [Génération d\'images IA locale vs. cloud](/fr/power-local-llm/local-ai-image-generation-vs-cloud) pour les compromis local vs. cloud.',
+        note: 'Le rythme de maintenance repose sur l\'activité publique de push et de release vérifiée sur GitHub le 2026-11-02 et peut changer — consultez le dépôt de chaque projet avant de choisir sur la seule base de l\'activité. Voir l\'[avis Stable Diffusion](/power-local-llm/stable-diffusion-review) pour la comparaison des modèles et [Génération d\'images IA locale vs cloud](/power-local-llm/local-ai-image-generation-vs-cloud) pour les compromis local/cloud.',
       },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Qui devrait utiliser AUTOMATIC1111',
         items: [
           '**Le lecteur qui veut l\'une des plus grandes bases de tutoriels et de réponses communautaires.** Étant arrivé le premier sur le marché et ayant l\'historique d\'installation le plus long, une grande partie des posts de forum, tutoriels YouTube et réponses type Stack Overflow sur les interfaces Stable Diffusion font spécifiquement référence à AUTOMATIC1111.',
-          '**Le lecteur qui veut ControlNet et un catalogue d\'extensions mature.** L\'extension ControlNet et des milliers d\'autres modules communautaires restent activement utilisés et, dans de nombreux cas, activement maintenus, même pendant les périodes où le projet principal voit moins de commits.',
+          '**Lecteur qui veut ControlNet et un catalogue d\'extensions mature.** L\'extension ControlNet et des milliers d\'autres modules communautaires sont très utilisés ; consultez le dépôt de chaque extension avant de vous y fier, car l\'extension ControlNet principale a reçu son dernier push le 12 août 2024.',
           '**Le lecteur qui préfère une interface à onglets à un graphe de nœuds.** La disposition d\'AUTOMATIC1111 — champs de texte, curseurs et boutons organisés en onglets — est généralement plus abordable pour un débutant que le canevas à nœuds de ComfyUI.',
           '**Le lecteur qui veut un contrôle local total et la confidentialité.** Une fois installé, la génération se fait entièrement sur votre propre GPU ; aucun prompt ni donnée d\'image ne quitte votre machine, sauf si vous installez une extension qui le fait.',
           '**Le lecteur à budget serré qui veut un coût de licence nul pour l\'interface elle-même.** L\'AGPL-3.0 signifie que le logiciel est gratuit à utiliser, modifier et redistribuer, sans aucun abonnement.',
@@ -1219,9 +1281,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Qui ne devrait pas utiliser AUTOMATIC1111',
         items: [
-          '**Le lecteur qui veut un support dès le premier jour pour les architectures de modèles les plus récentes.** Vu le rythme de sortie plus lent du projet principal depuis mi-2024, le support des nouveaux modèles a tendance à apparaître d\'abord dans des forks activement maintenus comme Forge, ComfyUI ou SD.Next — évaluez-les si le support des modèles de pointe compte le plus pour vous.',
+          '**Lecteur qui veut la prise en charge des architectures de modèles les plus récentes.** Sans mise à jour depuis le 2 mars 2026, la prise en charge de nouveaux modèles apparaît plutôt dans des outils activement développés comme ComfyUI, InvokeAI ou SD.Next — comparez-les d\'abord.',
           '**Le lecteur qui veut une application en un clic sans aucune exposition à la ligne de commande.** L\'installation nécessite Python et Git et, sur certains systèmes, un dépannage manuel des versions de dépendances — les lecteurs voulant une expérience d\'application grand public totalement soignée préféreront peut-être l\'installateur simplifié de Fooocus ou un outil cloud.',
-          '**Le lecteur qui a besoin de corrections de bugs actives et garanties sur le dépôt principal selon un calendrier prévisible.** Avec plus de 2 500 issues ouvertes et aucune nouvelle version taguée depuis juillet 2024 sur la branche `master`, les lecteurs ayant une exigence de fiabilité stricte ne devraient pas présumer d\'un traitement rapide d\'un bug nouvellement signalé.',
+          '**Le lecteur qui a besoin de corrections de bugs actives et garanties sur le dépôt principal selon un calendrier prévisible.** Avec plus de 2 400 issues ouvertes et aucune nouvelle version taguée depuis juillet 2024 sur la branche `master`, les lecteurs ayant une exigence de fiabilité stricte ne devraient pas présumer d\'un traitement rapide d\'un bug nouvellement signalé.',
           '**Le lecteur qui veut un contrôle maximal du workflow sur des pipelines multi-étapes.** L\'approche par graphe de nœuds de ComfyUI offre généralement un contrôle plus précis sur des pipelines de génération complexes et multi-étapes que la disposition en onglets d\'AUTOMATIC1111.',
           '**L\'équipe d\'entreprise qui a besoin d\'un produit soutenu par un éditeur avec un SLA.** AUTOMATIC1111 est un projet communautaire sans contrat de support officiel, palier payant ni accord de niveau de service — les équipes ayant besoin d\'un support contractuel devraient plutôt évaluer un produit commercial cloud de génération d\'images.',
         ],
@@ -1236,7 +1298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'AUTOMATIC1111 est-il encore maintenu en 2026 ?',
-            a: 'Sa branche principale `master` a nettement ralenti : la dernière version taguée, v1.10.1, est sortie en juillet 2024, avec des notes de version publiées en février 2025, et aucune nouvelle version taguée n\'a suivi jusqu\'en septembre 2026. Sa branche `dev` a continué de recevoir des commits occasionnels, le plus récent en mars 2026. Son fork le plus utilisé, Forge, indique dans son README que "le SD-WebUI original est désormais presque statique". Il fonctionne toujours et reste largement utilisé, mais les lecteurs voulant les mises à jour les plus rapides devraient aussi envisager des alternatives activement maintenues comme Forge, ComfyUI ou SD.Next.',
+            a: 'Aucune mise à jour n\'a été publiée depuis le 2 mars 2026. Sa dernière version étiquetée, v1.10.1, date du 9 février 2025, et la branche `dev` n\'a aucun commit depuis le 2 mars 2026. Le README de Forge qualifie l\'original de « almost static now », et Forge lui-même n\'a reçu aucun push depuis le 31 juillet 2025. Il fonctionne encore, mais considérez-le comme potentiellement non maintenu et comparez ComfyUI, InvokeAI ou SD.Next.',
           },
           {
             q: 'AUTOMATIC1111 est-il gratuit ?',
@@ -1252,7 +1314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quelle est la différence entre AUTOMATIC1111 et Forge ?',
-            a: 'Forge est un fork de la base de code d\'AUTOMATIC1111, créé par le développeur lllyasviel spécifiquement pour ajouter des optimisations de performance et un support plus rapide des nouveaux modèles. Selon le propre README de Forge, il se synchronise périodiquement avec le projet AUTOMATIC1111 original (environ tous les 90 jours ou pour des corrections importantes) plutôt que de façon continue, et son mainteneur décrit le projet original comme ayant un développement nettement plus lent. Forge est généralement le meilleur choix pour les lecteurs qui veulent une interface type AUTOMATIC1111 avec un développement continu plus actif.',
+            a: 'Forge est un fork de la base de code d\'AUTOMATIC1111, créé par lllyasviel pour ajouter des optimisations de performance et la prise en charge de modèles plus récents comme Flux. Selon son README, il se synchronise avec l\'original environ tous les 90 jours ou pour des correctifs importants. Son dernier push sur GitHub date du 31 juillet 2025 et sa dernière release GitHub du 5 février 2024 : ce n\'est donc plus un choix clairement plus actif — consultez son dépôt avant de le choisir.',
           },
           {
             q: 'Quelle est la différence entre AUTOMATIC1111 et ComfyUI ?',
@@ -1262,13 +1324,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Où télécharger AUTOMATIC1111 ?',
             a: 'La source officielle est le [dépôt AUTOMATIC1111/stable-diffusion-webui sur GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui), qui inclut le code, un wiki d\'installation et des liens vers des instructions de configuration spécifiques au matériel NVIDIA, AMD, Intel et Apple Silicon. Vous devrez télécharger séparément des poids de modèle Stable Diffusion (par exemple depuis Hugging Face) pour l\'utiliser.',
           },
+          {
+            q: 'Stable Diffusion WebUI Forge est-il toujours maintenu ?',
+            a: 'Son dernier push sur GitHub date du 31 juillet 2025, et sa dernière release GitHub du 5 février 2024. Son README indique qu\'il repose sur SD-WebUI 1.10.1. Consultez le dépôt pour une activité plus récente avant de le choisir.',
+          },
+          {
+            q: 'L\'extension ControlNet pour AUTOMATIC1111 est-elle toujours maintenue ?',
+            a: 'Le dépôt sd-webui-controlnet a reçu son dernier push le 12 août 2024 et n\'a aucune release GitHub. Elle reste très utilisée, mais consultez son dépôt et ses issues ouvertes avant de vous y fier pour un workflow de production.',
+          },
         ],
       },
       verdict: {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'AUTOMATIC1111 a mérité sa place d\'interface locale par défaut pour Stable Diffusion en étant le premier arrivé, et l\'écosystème qui en résulte — l\'extension ControlNet en premier lieu, aux côtés de milliers d\'autres outils communautaires, tutoriels et réponses de forums — reste son plus grand atout en 2026. Cela dit, un avis honnête doit énoncer clairement ce que montrent les faits : le rythme de développement du projet principal a nettement ralenti depuis mi-2024, sans aucune nouvelle version taguée depuis v1.10.1, et son propre fork le plus populaire le décrit comme "désormais presque statique". Il s\'installe toujours, fonctionne toujours, et produit toujours de bons résultats avec les checkpoints SD 1.5 et SDXL, donc les lecteurs qui l\'utilisent déjà n\'ont aucune raison urgente de changer. Mais les lecteurs qui débutent en 2026, en particulier ceux qui veulent les architectures de modèles les plus récentes ou la résolution de bugs la plus rapide, devraient sérieusement évaluer Forge, ComfyUI ou SD.Next à ses côtés, plutôt que de choisir AUTOMATIC1111 par simple réflexe de notoriété.',
+          'AUTOMATIC1111 a mérité sa place d\'interface locale par défaut pour Stable Diffusion en étant la première, et son écosystème — l\'extension ControlNet avant tout, ainsi que des milliers d\'autres outils communautaires, tutoriels et réponses de forum — reste son principal atout. Mais le projet n\'a reçu aucune mise à jour depuis le 2 mars 2026, sa dernière version étiquetée est v1.10.1, son fork Forge n\'a reçu aucun push depuis le 31 juillet 2025, et l\'extension ControlNet principale a reçu son dernier push le 12 août 2024. Il s\'installe et fonctionne encore avec des checkpoints SD 1.5 et SDXL, donc les utilisateurs actuels n\'ont pas de raison urgente de changer. Qui démarre devrait comparer ComfyUI, InvokeAI et SD.Next, activement développés, plutôt que de choisir AUTOMATIC1111 pour sa seule notoriété, et vérifier d\'abord qu\'il fonctionne avec son GPU et son modèle.',
       },
       sources: {
         id: 'sources',
@@ -1297,17 +1367,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/automatic1111-review-hero-ja.webp',
     title: 'AUTOMATIC1111レビュー: Stable Diffusion WebUIを解説',
-    seoTitle: 'AUTOMATIC1111レビュー: Stable Diffusion WebUIガイド',
+    seoTitle: 'AUTOMATIC1111レビュー:導入と保守状況',
     intro:
       'AUTOMATIC1111（正式名称「Stable Diffusion web UI」）は、自分のGPU上でStable Diffusionモデルを実行するための、無料・オープンソースでタブ形式のWebインターフェースです。Stable Diffusionの一般公開から1か月後の2022年8月22日にGitHubで公開され、ローカル画像生成向けとして広く採用された最初のグラフィカルなフロントエンドとなり、巨大な拡張機能エコシステム（ControlNet、LoRAトレーニング、数千のコミュニティスクリプト）のおかげで、第三者レビューでも今なおこのカテゴリで最も使われ、最もドキュメント化されたオプションの一つとされています。本レビューでは、AUTOMATIC1111が実際に何であるか、モデルであるStable Diffusion自体や、ComfyUI、Forge、InvokeAIといった新しいUIとの違い、2026年に向けた実際のメンテナンス状況、ライセンス条件、ハードウェア要件、そして今日誰が使うべきで誰が使うべきでないかについての正直な指針を扱います。',
     metaDescription:
-      'AUTOMATIC1111レビュー2026: Stable Diffusion WebUIとは実際に何か、検証済みのメンテナンス状況（最終コミット・リリース日）、AGPL-3.0ライセンス、ControlNet拡張機能、ハードウェア要件、Forge・ComfyUI・InvokeAIとの比較。',
+      'AUTOMATIC1111とは何か、保守状況の検証結果、AGPL-3.0ライセンス、ControlNet、必要なハードウェア、代替ツールとの比較を解説するレビューです。',
     twitterDescription:
       'AUTOMATIC1111レビュー2026: 元祖Stable Diffusion WebUIを解説 — 検証済みのメンテナンス状況、ライセンス、拡張機能エコシステム、ハードウェア要件、Forge・ComfyUI・InvokeAIとの比較。',
     audience:
@@ -1328,20 +1398,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion 1.5', 'Stable Diffusion XL', 'ControlNet', 'Stable Diffusion WebUI Forge', 'ComfyUI', 'InvokeAI', 'Fooocus'],
     current_hardware_mentioned: ['2 GB VRAM', '4 GB VRAM', '6 GB VRAM', '8 GB VRAM', '12 GB VRAM', 'NVIDIA RTX 3060', 'NVIDIA RTX 4090'],
     leadAnswerBlock:
-      '**AUTOMATIC1111（Stable Diffusion web UI）は、Stable Diffusionモデルをローカルで実行するための無料・オープンソースでタブ形式のWebインターフェースであり、UIであってモデル自体ではありません。** 2022年8月22日に公開され、AGPL-3.0ライセンスの下で提供され、セルフホスト専用で公式の有料プランはありません。ControlNet拡張機能を筆頭とする拡張機能エコシステムのおかげで、今も最もドキュメント化されたオプションの一つです。中核となるコードベースは2024年半ば以降、目に見えて開発が減速しており、最後にタグ付けされたリリースであるv1.10.1は2024年7月に出荷されました（リリースノートは2025年2月に公開）。2026年9月時点で`master`ブランチにその後のリリースはありませんが、活発に開発されている`dev`ブランチは引き続きコミットを受けており、直近のものは2026年3月でした。最も人気のある独自のフォークであるForgeは、自身のREADMEで「original SD-WebUI is almost static now（元のSD-WebUIは今やほぼ静的になっている）」と直接述べています。継続的な活発な開発を前提とする前に、[GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui)で現在の活動状況を確認してください。',
+      '**警告:AUTOMATIC1111は2026年3月2日以降更新されておらず(最新リリースはv1.10.1、2025年2月9日)、メンテナンスされていない可能性があります。利用前に確認してください。** **AUTOMATIC1111(Stable Diffusion web UI)は、Stable Diffusionモデルをローカルで動かす無料のオープンソース(AGPL-3.0)のブラウザUIで、モデルそのものではありません。**',
     quickAnswerTop: {
       ja: {
         question: 'AUTOMATIC1111はまだメンテナンスされていますか。Stable Diffusionと同じものですか。',
         answer:
-          'いいえ、AUTOMATIC1111はStable Diffusionではありません。Stable Diffusionのモデル重みを読み込み、ブラウザタブから画像を生成できるようにする、別個の無料オープンソースWebインターフェース（UI）です。中核の`master`ブランチは2024年7月のv1.10.1以降、新しいタグ付きリリースを受けていませんが、`dev`ブランチは頻度は下がったものの引き続きコミットを受けており、直近は2026年3月でした。最も使われているフォークであるForgeは、自身のドキュメントで元のプロジェクトを「今やほぼ静的」と表現しています。今も動作し、広く使われ続けていますが、最新のモデルアーキテクチャや最速のアップデートを求める読者は、Forge、ComfyUI、SD.Nextなど活発にメンテナンスされている代替も検討すべきです。',
+          '2026年3月2日以降、更新は公開されていません。AUTOMATIC1111はStable Diffusionそのものではなく、Stable Diffusionのモデル重みを読み込み、ブラウザのタブから画像を生成する、独立した無料のオープンソースのWebインターフェースです。最後のタグ付きリリースv1.10.1は2025年2月9日に公開され、`dev`ブランチには2026年3月2日以降コミットがありません。最も使われているフォークのForgeは元のプロジェクトを「almost static now」と呼んでいますが、Forge自身も2025年7月31日以降プッシュがありません。多くの環境でまだ動作しますが、新しいモデルアーキテクチャが必要な場合は、ComfyUI、InvokeAI、SD.Nextを比較してください。',
         bullets: [
           'AUTOMATIC1111はUI／フロントエンドであり、モデルではありません — Stable Diffusionの重みは別途ダウンロードして読み込む必要があります。',
-          'GitHubで検証済み: 最後にタグ付けされたリリース（v1.10.1）は2024年7月に出荷され、`dev`ブランチの直近のコミットは2026年3月でした — この記事だけに頼らず、リポジトリを直接確認してください。',
+          'GitHubで確認済み:最後のタグ付きリリース(v1.10.1)は2025年2月9日に公開され、`dev`ブランチの最後のコミットは2026年3月2日です。現在の状態はリポジトリで確認してください。',
           'AGPL-3.0ライセンスの下で無料かつオープンソース。公式の有料プランやホスティングプランは存在しません。',
           '拡張機能エコシステム、特にポーズや構図を誘導するControlNet拡張機能が、中核開発の減速にもかかわらず広く使われ続けている主な理由です。',
-          '活発にメンテナンスされている代替は存在します。Forge（AUTOMATIC1111にはない機能を追加するために特別に作られたフォーク）、ComfyUI、SD.Nextはいずれも2026年時点でより頻繁なコミットを受けています。',
+          '積極的にメンテナンスされている代替:ComfyUI、InvokeAI、SD.Nextは2026-11-02にプッシュがありました。一方、AUTOMATIC1111をベースにしたフォークのForgeは2025年7月31日以降プッシュがありません。',
         ],
-        updatedDate: '2026-09-06',
+        updatedDate: '2026-11-02',
       },
     },
     toc: [
@@ -1370,9 +1440,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'AUTOMATIC1111（Stable Diffusion web UI）は、Stable Diffusionをローカルで実行するための無料・オープンソースでタブ形式のWebインターフェースであり、フロントエンドアプリであってモデル自体ではありません。',
           'Stable Diffusionの一般公開から1か月後の2022年8月22日、「AUTOMATIC1111」というハンドルネームを使う匿名の開発者によってGitHubで公開され、グラフィカルなローカルインターフェースの空白を埋めました。',
           'AGPL-3.0ライセンスの下で提供。セルフホスト専用で、公式の有料プランやホスティングプランはありません。',
-          '中核のコードベースは2024年半ば以降減速しています。最後にタグ付けされたリリース（v1.10.1）は2024年7月に出荷され、活発に開発されている`dev`ブランチの直近のコミットは2026年3月でした — 変わっていないと決めつけず、GitHubで現状を確認してください。',
+          'メインのコードベースは2024年半ば以降ペースが落ちています。最後のタグ付きリリース(v1.10.1)は2025年2月9日に公開され、`dev`ブランチの最後のコミットは2026年3月2日です。現在の状態はGitHubで確認してください。',
           '拡張機能エコシステム、特にポーズ／構図誘導のためのControlNet拡張機能は、残された最大の強みです。ローカル画像生成UIの中でも最大級かつ最もドキュメント化されたコミュニティ拡張機能群の一つです。',
-          '新しいモデルアーキテクチャへの対応をより早く求める読者向けに、Forge、ComfyUI、InvokeAI、SD.Nextなど、活発にメンテナンスされているフォークや代替が存在します。',
+          '積極的にメンテナンスされている代替には、ComfyUI、InvokeAI、SD.Next(2026-11-02にプッシュ)があります。AUTOMATIC1111のフォークであるForgeは、2025年7月31日以降プッシュがありません。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '2026年3月2日以降更新なし(最新リリースはv1.10.1、2025年2月9日)。AUTOMATIC1111はメンテナンスされていない可能性があります。頼る前に、お使いのGPUとモデルで動作することを確認してください。',
+          },
         ],
       },
       whatIsAutomatic1111: {
@@ -1394,7 +1470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '歴史: AUTOMATIC1111が存在する理由',
         content: [
           'Stability AI、ミュンヘン大学（LMU）のCompVis研究グループ、Runway MLは、2022年8月22日にStable Diffusionを一般公開しました。公開時点でStable Diffusionはモデル重みとコマンドラインスクリプトとして提供され、プロンプトを入力してボタンをクリックするための公式なグラフィカルインターフェースは存在しませんでした。',
-          'AUTOMATIC1111は同じ日、2022年8月22日にStable Diffusion web UIの最初のバージョンをGitHubで公開し、それ以前のコミュニティスクリプトを土台にしつつ、Gradioベースのブラウザインターフェースを追加しました。このタイミングが功を奏し、2022年後半にStable Diffusionの人気が爆発的に高まる中、AUTOMATIC1111のUIはほとんどの愛好家が実際に使う標準的な方法となり、数か月のうちに数万のGitHubスターを集め、2026年9月時点で16万4千を超えるスターを獲得しています — ローカルAI画像生成カテゴリの中でも最もスターを集めたリポジトリの一つです。',
+          `AUTOMATIC1111は同じ日、2022年8月22日にStable Diffusion web UIの最初のバージョンをGitHubで公開し、それ以前のコミュニティスクリプトを土台にしつつ、Gradioベースのブラウザインターフェースを追加しました。このタイミングが功を奏し、2022年後半にStable Diffusionの人気が爆発的に高まる中、AUTOMATIC1111のUIはほとんどの愛好家が実際に使う標準的な方法となり、数か月のうちに数万のGitHubスターを集め、現在は${ST.ja('automatic1111-webui', 'bare')}を超えるスターを獲得しています — ローカルAI画像生成カテゴリの中でも最もスターを集めたリポジトリの一つです。`,
           '最初に登場し、初期のコミュニティ貢献、拡張機能の作者、チュートリアル執筆者の大半を吸収したことで、AUTOMATIC1111は事実上の標準リファレンス実装となり、後発のUI（Forge、ComfyUIの拡張機能、コミュニティのドキュメントサイト）は、それらの新しいツールがすでに異なる技術的アプローチを取っている場合でも、機能やワークフローをAUTOMATIC1111との対比で説明し続けています。',
         ],
       },
@@ -1420,23 +1496,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'メンテナンス状況: 検証結果',
         itemHeadings: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'AUTOMATIC1111の中核コードベースは2024年半ば以降、目に見えて開発が減速しています — 最後にタグ付けされたリリースは2024年7月のv1.10.1であり、最も人気のある独自のフォークは自身のドキュメントで元のプロジェクトを「今やほぼ静的」と表現しています。' },
-          { type: 'plain-terms', text: 'プロジェクトは今も動作し、広く使われ続けていますが、新機能や新しいモデルタイプへの対応は、AUTOMATIC1111の元のコードベースに到達する前に、あるいはそもそも到達しないまま、Forgeのようなフォークに先に反映される傾向があります。' },
+          { type: 'one-sentence', text: 'AUTOMATIC1111は2026年3月2日以降更新されていません。最後のタグ付きリリースはv1.10.1(2025年2月9日公開)で、最も人気のあるフォークは自身のREADMEで元のプロジェクトを「almost static now」と説明しています。' },
+          { type: 'plain-terms', text: 'プロジェクトは今も動作し広く使われていますが、2026年3月2日以降は誰も更新をプッシュしていないため、新しいモデルタイプへの対応は、ComfyUI、InvokeAI、SD.Nextなど積極的に開発されているツールに先に現れる可能性が高いです。' },
         ],
         columns: ['シグナル', '検証済みの状況', '出典'],
         rows: [
           { 'シグナル': '最後にタグ付けされたリリース', '検証済みの状況': 'v1.10.1 — コードは2024年7月27日のもの。リリースノートは2025年2月9日に公開', '出典': '[GitHubリリース](https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases)' },
           { 'シグナル': '`master`ブランチの最終コミット', '検証済みの状況': '2024年7月27日', '出典': '[GitHubコミット履歴](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commits/master)' },
-          { 'シグナル': '`dev`ブランチの最終コミット', '検証済みの状況': '2026年3月2日 — 遅くなってはいるが放棄されてはいない', '出典': 'GitHubコミット履歴（引用前に最新日付を確認）' },
-          { 'シグナル': 'オープンなIssue数', '検証済みの状況': '2026年9月時点で2,500件超がオープン', '出典': '[GitHub Issues](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues)' },
+          { 'シグナル': '`dev`ブランチの最終コミット', '検証済みの状況': '2026年3月2日(PR #17313のマージ)。それ以降`dev`へのコミットなし', '出典': 'GitHubコミット履歴（引用前に最新日付を確認）' },
+          { 'シグナル': 'オープンなIssue数', '検証済みの状況': '2,429件がオープン(GitHub Issue検索、2026-11-02)', '出典': '[GitHub Issues](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues)' },
           { 'シグナル': 'フォーク開発者自身の評価', '検証済みの状況': '「Because original SD-WebUI is almost static now, Forge will sync with original WebUI every 90 days, or when important fixes」— Forgeプロジェクト自身のREADMEからの直接引用', '出典': '[Forge README](https://github.com/lllyasviel/stable-diffusion-webui-forge)' },
+          { 'シグナル': 'Forge(フォーク)の最終プッシュ', '検証済みの状況': '2025年7月31日。最新のGitHubリリースは2024年2月5日付', '出典': '[Forge on GitHub](https://github.com/lllyasviel/stable-diffusion-webui-forge)' },
+          { 'シグナル': 'ControlNet拡張の最終プッシュ', '検証済みの状況': '2024年8月12日。GitHubリリースなし', '出典': '[GitHubのsd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet)' },
         ],
         content: [
-          'このセクションは、伝聞情報を繰り返すのではなく、執筆時点でGitHubのAPIに対して直接検証できた内容を示しています。実態は「主流製品のように活発に開発されている」わけでも「放棄されている」わけでもなく、その中間にあります。ほとんどのワンクリックインストーラーや既存のドキュメントが参照している安定版の`master`ブランチは、2024年7月以降新しいタグ付きリリースを受けていない一方で、（変更を昇格させる前にテストするための）`dev`ブランチは、2022〜2023年よりも明らかに遅いペースではあるものの、引き続きコミットを受けています。',
-          '最も信頼できる外部シグナルは、AUTOMATIC1111のコードベースの上に特化して構築されたフォークであるForgeの開発者、lllyasviel氏から来ています。Forge自身のREADMEは、「元のSD-WebUIは今やほぼ静的」というフォーク開発者自身の言葉を直接の理由として、「90日ごと、または重要な修正があるときに元のWebUIと同期する」と述べています。これは近い関係にあるプロジェクトのメンテナーがAUTOMATIC1111の開発ペースについて述べたものであり、噂ではありません — 決定的ではないものの、強いシグナルとして扱うべきです。',
-          'これらはいずれも、AUTOMATIC1111が動作しなくなることを意味するものではありません。SD 1.5やSDXLのワークフローについては引き続き完全に機能し、その拡張機能エコシステムは、中核部分がそうでない期間でも引き続き活発であり、導入実績とチュートリアルの充実度は多くの代替ツールよりも依然として大きいままです。実際上の含意は現在ではなく将来に関わるものです — 真新しいモデルアーキテクチャへの初日対応や、活発なバグ修正の回転を必要とする読者は、下の比較表で扱うForge、ComfyUI、SD.Nextのような活発にメンテナンスされているフォークと比較検討すべきです。',
+          'このセクションは、二次情報を繰り返すのではなく、2026-11-02にGitHub APIで直接確認できた内容を示します。AUTOMATIC1111は2026年3月2日以降更新されていません。ワンクリックインストーラーや多くのドキュメントが指す安定版の`master`ブランチは2024年7月27日から変わっておらず、`dev`ブランチにも2026年3月2日より後のコミットはありません。リポジトリはアーカイブされておらず、メンテナーが放棄を表明したわけでもありませんが、メンテナンスされていない可能性があるものとして扱うべきです。',
+          '最も信頼できる外部のシグナルは、AUTOMATIC1111のコードベースを土台にしたフォークForgeの開発者、lllyasvielによるものです。ForgeのREADMEは「sync with original WebUI every 90 days, or when important fixes」と述べており、その理由として「original SD-WebUI is almost static now」を挙げています。これは噂ではなく、フォークのメンテナーによるAUTOMATIC1111の開発ペースの説明です。Forge自身も2025年7月31日以降プッシュがなく、活発な代替の証拠にはもうなりません。',
+          'これはAUTOMATIC1111が動かなくなるという意味ではありません。Stable Diffusion 1.5とSDXLのワークフローでは引き続き機能し、利用者数とチュートリアルの量も、ほとんどの代替より多いままです。実際の影響は将来にあります。新しいモデルアーキテクチャへの対応や迅速なバグ修正が必要な読者は、2026-11-02にプッシュがあったComfyUI、InvokeAI、SD.Nextを、下の比較表で比べてください。',
         ],
-        note: 'GitHubの活動データ（コミット日、リリース日、オープンIssue数）は絶えず変化します — 上記の数値は2026年9月6日にGitHub APIに対して直接検証されたものです。時間に左右される判断をこの表に基づいて行う前に、[リポジトリ](https://github.com/AUTOMATIC1111/stable-diffusion-webui)を直接確認して最新の数値を確認してください。',
+        note: 'GitHubの活動データは絶えず変化します。上記の数値は2026-11-02にGitHub APIで確認したものです。時間的に重要な判断にこの表を使う前に、[リポジトリ](https://github.com/AUTOMATIC1111/stable-diffusion-webui)で最新の数値を確認してください。',
       },
       extensionsControlnet: {
         id: 'extensions-controlnet',
@@ -1483,14 +1561,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '選択肢': 'AUTOMATIC1111（Stable Diffusion web UI）',
             '最適な用途': '最大級の一つとされるチュートリアル・拡張機能の蓄積、タブ形式のシンプルさ',
-            'メンテナンスペース（2026年）': '中核の`master`は2024年半ば以降減速。`dev`ブランチは今も時々コミットを受ける',
+            'メンテナンスペース（2026年）': '2026年3月2日以降更新なし。`master`は2024年7月27日から変更なし',
             'ライセンス': 'AGPL-3.0',
             '主なトレードオフ': '最もドキュメント化された選択肢だが、新しいモデルへの対応は先にフォークに反映される傾向',
           },
           {
             '選択肢': '[Stable Diffusion WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)',
             '最適な用途': 'AUTOMATIC1111に近い操作感で機能や新モデルへの対応がより速い',
-            'メンテナンスペース（2026年）': '本家AUTOMATIC1111より活発。自身のREADMEによれば定期的に本家と同期',
+            'メンテナンスペース（2026年）': '2025年7月31日以降プッシュなし。最新のGitHubリリースは2024年2月5日',
             'ライセンス': 'AGPL-3.0',
             '主なトレードオフ': 'AUTOMATIC1111自体よりコミュニティは小規模。元のコードベースの全体構造は引き続き踏襲',
           },
@@ -1511,7 +1589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '選択肢': '[Fooocus](https://github.com/lllyasviel/Fooocus)',
             '最適な用途': '使える画像に到達するまでのクリック数が最少、設定は最小限',
-            'メンテナンスペース（2026年）': 'リリースペースは遅め、意図的に対象範囲を絞っている',
+            'メンテナンスペース（2026年）': '最終プッシュは2025年12月1日。最新リリースはv2.5.5(2024年8月12日)',
             'ライセンス': 'GPL-3.0',
             '主なトレードオフ': 'シンプルさと引き換えに、意図的に設定項目と拡張機能サポートを少なくしている',
           },
@@ -1523,14 +1601,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '主なトレードオフ': '機能面で同等かそれ以上にもかかわらず、AUTOMATIC1111よりコミュニティとチュートリアル基盤は小規模',
           },
         ],
-        note: 'メンテナンスペースは、2026年9月6日時点でGitHub上で検証された公開のコミットおよびリリース活動に基づいており、変化する可能性があります — 活動レベルだけで判断する前に、各プロジェクト自身のリポジトリを確認してください。基盤となるモデルの比較については[Stable Diffusionレビュー](/ja/power-local-llm/stable-diffusion-review)を、ローカルとクラウドのトレードオフについては[ローカルAI画像生成 vs. クラウド](/ja/power-local-llm/local-ai-image-generation-vs-cloud)を参照してください。',
+        note: '保守のペースは、2026-11-02にGitHubで確認した公開のプッシュとリリースの活動に基づいており、変わる可能性があります。活動量だけで選ぶ前に、各プロジェクトのリポジトリを確認してください。基盤モデルの比較は[Stable Diffusionレビュー](/power-local-llm/stable-diffusion-review)、ローカルとクラウドの得失は[ローカルAI画像生成とクラウドの比較](/power-local-llm/local-ai-image-generation-vs-cloud)をご覧ください。',
       },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'AUTOMATIC1111を使うべき人',
         items: [
           '**最大級とされるチュートリアルとコミュニティの回答基盤を求める読者。** 最初に市場に登場し、最も長いインストール実績を持つため、Stable Diffusion UIに関するフォーラム投稿、YouTubeチュートリアル、Stack Overflow風の回答の多くが、AUTOMATIC1111を具体的に参照しています。',
-          '**ControlNetと成熟した拡張機能カタログを求める読者。** ControlNet拡張機能とその他数千のコミュニティ拡張機能は、中核プロジェクトのコミットが減っている期間中でも、引き続き活発に使われ、多くの場合活発にメンテナンスされています。',
+          '**ControlNetと成熟した拡張機能カタログが欲しい読者。** ControlNet拡張と数千のコミュニティ製アドオンは広く使われていますが、頼る前に各拡張機能のリポジトリを確認してください。主要なControlNet拡張の最後のプッシュは2024年8月12日です。',
           '**ノードグラフよりタブ形式のインターフェースを好む読者。** テキストフィールド、スライダー、ボタンがタブに整理されたAUTOMATIC1111のレイアウトは、ComfyUIのノードベースのキャンバスよりも、初めて使う人にとって一般的に取っつきやすいものです。',
           '**完全なローカル制御とプライバシーを求める読者。** インストール後は、生成がすべて自分自身のGPU上で行われます。意図的にそうする拡張機能をインストールしない限り、プロンプトや画像データが自分のマシンから外に出ることはありません。',
           '**UI自体のライセンス費用をゼロにしたい、予算に限りのある読者。** AGPL-3.0であることは、このソフトウェアがサブスクリプションなしに無料で利用、改変、再配布できることを意味します。',
@@ -1540,9 +1618,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'AUTOMATIC1111を使うべきでない人',
         items: [
-          '**最新のモデルアーキテクチャへの初日対応を求める読者。** 中核プロジェクトのリリースペースが2024年半ば以降遅くなっていることを踏まえると、新しいモデルへの対応はForge、ComfyUI、SD.Nextのような活発にメンテナンスされているフォークに先に現れる傾向があります — 最先端のモデル対応が最も重要な場合は、これらを検討してください。',
+          '**最新のモデルアーキテクチャへの対応を求める読者。** 2026年3月2日以降更新がないため、新しいモデルへの対応は、ComfyUI、InvokeAI、SD.Nextなど積極的に開発されているツールに先に現れる可能性が高いです。まずそれらを比較してください。',
           '**コマンドライン操作に一切触れたくない、ワンクリックのアプリを求める読者。** インストールにはPythonとGitが必要で、システムによっては依存関係のバージョンを手動でトラブルシューティングする必要があります — 完全に洗練された一般消費者向けアプリの体験を求める読者は、Fooocusの簡略化されたインストーラーやクラウドツールの方が向いているかもしれません。',
-          '**予測可能なスケジュールでの、保証された活発な中核リポジトリのバグ修正が必要な読者。** `master`ブランチで2,500件を超えるオープンIssueがあり、2024年7月以降新しいタグ付きリリースがないことを踏まえると、厳格な信頼性要件を持つ読者は、新しく報告されたバグへの迅速な対応を前提とすべきではありません。',
+          '**予測可能なスケジュールでの、保証された活発な中核リポジトリのバグ修正が必要な読者。** `master`ブランチで2,400件を超えるオープンIssueがあり、2024年7月以降新しいタグ付きリリースがないことを踏まえると、厳格な信頼性要件を持つ読者は、新しく報告されたバグへの迅速な対応を前提とすべきではありません。',
           '**多段階パイプラインに対する最大限のワークフロー制御を求める読者。** ComfyUIのノードグラフアプローチは、一般的にAUTOMATIC1111のタブ形式レイアウトよりも、複雑で多段階の生成パイプラインに対してより精密な制御を提供します。',
           '**SLA付きのベンダーサポート製品を必要とする企業チーム。** AUTOMATIC1111は公式のサポート契約、有料プラン、サービスレベル契約のないコミュニティプロジェクトです — 契約に基づくサポートが必要なチームは、代わりに商用のクラウド画像生成製品を検討すべきです。',
         ],
@@ -1557,7 +1635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'AUTOMATIC1111は2026年時点でまだメンテナンスされていますか。',
-            a: '中核の`master`ブランチは目に見えて減速しています。最後にタグ付けされたリリースであるv1.10.1は2024年7月に出荷され、リリースノートは2025年2月に公開されましたが、2026年9月時点でその後の新しいタグ付きリリースは続いていません。`dev`ブランチは引き続き時折コミットを受けており、直近は2026年3月でした。最も使われているフォークであるForgeは、自身のREADMEで「元のSD-WebUIは今やほぼ静的」と述べています。今も動作し広く使われ続けていますが、最速のアップデートを求める読者は、Forge、ComfyUI、SD.Nextのような活発にメンテナンスされている代替も検討すべきです。',
+            a: '2026年3月2日以降、更新は公開されていません。最後のタグ付きリリースv1.10.1は2025年2月9日に公開され、`dev`ブランチには2026年3月2日以降コミットがありません。ForgeのREADMEは元のプロジェクトを「almost static now」と呼んでおり、Forge自身も2025年7月31日以降プッシュがありません。まだ動作はしますが、メンテナンスされていない可能性があるものとして扱い、ComfyUI、InvokeAI、SD.Nextを比較してください。',
           },
           {
             q: 'AUTOMATIC1111は無料ですか。',
@@ -1573,7 +1651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'AUTOMATIC1111とForgeの違いは何ですか。',
-            a: 'Forgeは、開発者lllyasviel氏によって、パフォーマンスの最適化や新しいモデルへのより速い対応を追加することを目的に作られた、AUTOMATIC1111のコードベースのフォークです。Forge自身のREADMEによれば、継続的にではなく、元のAUTOMATIC1111プロジェクトとおおむね90日ごと、あるいは重要な修正があるときに定期的に同期します。開発者は元のプロジェクトの開発が目に見えて遅くなっていると述べています。より活発に開発が続くAUTOMATIC1111風のインターフェースを求める読者にとって、Forgeは一般的により良い選択肢です。',
+            a: 'ForgeはAUTOMATIC1111のコードベースのフォークで、lllyasvielがパフォーマンスの最適化とFluxなど新しいモデルへの対応を加えるために作りました。READMEによれば、元のプロジェクトとは約90日ごと、または重要な修正があるときに同期します。GitHubでの最後のプッシュは2025年7月31日、最新のGitHubリリースは2024年2月5日付で、もはや明らかに活発な選択肢とは言えません。選ぶ前にリポジトリを確認してください。',
           },
           {
             q: 'AUTOMATIC1111とComfyUIの違いは何ですか。',
@@ -1583,13 +1661,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'AUTOMATIC1111はどこでダウンロードできますか。',
             a: '公式のソースは[GitHub上のAUTOMATIC1111/stable-diffusion-webuiリポジトリ](https://github.com/AUTOMATIC1111/stable-diffusion-webui)で、コード、インストールWiki、NVIDIA、AMD、Intel、Apple Siliconのハードウェアごとのセットアップ手順へのリンクが含まれています。利用するには、Stable Diffusionのモデル重み（例えばHugging Faceから）を別途ダウンロードする必要があります。',
           },
+          {
+            q: 'Stable Diffusion WebUI Forgeは今もメンテナンスされていますか?',
+            a: 'GitHubでの最後のプッシュは2025年7月31日で、最新のGitHubリリースは2024年2月5日付です。READMEによれば、SD-WebUI 1.10.1をベースにしています。選ぶ前に、リポジトリでより新しい活動がないか確認してください。',
+          },
+          {
+            q: 'AUTOMATIC1111用のControlNet拡張は今もメンテナンスされていますか?',
+            a: 'sd-webui-controlnetリポジトリの最後のプッシュは2024年8月12日で、GitHubリリースはありません。今も広く使われていますが、本番のワークフローで頼る前に、リポジトリとオープンなIssueを確認してください。',
+          },
         ],
       },
       verdict: {
         id: 'verdict',
         title: '総評',
         content:
-          'AUTOMATIC1111は、最初に登場したことによってローカルStable Diffusionの標準インターフェースとしての地位を勝ち取り、その結果生まれたエコシステム — 何よりもControlNet拡張機能、そしてその他数千のコミュニティツール、チュートリアル、フォーラムの回答 — は、2026年になっても依然として最大の強みです。とはいえ、正直なレビューとして、証拠が示すことをはっきり述べる必要があります。中核プロジェクトの開発ペースは2024年半ば以降目に見えて減速しており、v1.10.1以降新しいタグ付きリリースはなく、最も人気のある独自のフォーク自身がそれを「今やほぼ静的」と表現しています。それでもインストールでき、動作し続け、SD 1.5やSDXLのチェックポイントで引き続き良好な結果を生み出しているため、すでに使っている読者が急いで乗り換える理由はありません。しかし2026年にゼロから始める読者、特に最新のモデルアーキテクチャや最速のバグ修正を求める読者は、単に名前の知名度だけでAUTOMATIC1111を選ぶのではなく、Forge、ComfyUI、SD.Nextを併せて真剣に検討すべきです。',
+          'AUTOMATIC1111は、最初に登場したことでローカルStable Diffusionの標準的なインターフェースとしての地位を築きました。そのエコシステム——とりわけControlNet拡張、数千のコミュニティツール、チュートリアル、フォーラムの回答——は今も最大の強みです。しかし、このプロジェクトは2026年3月2日以降更新されておらず、最後のタグ付きリリースはv1.10.1で、フォークのForgeは2025年7月31日以降プッシュがなく、主要なControlNet拡張の最後のプッシュは2024年8月12日です。SD 1.5とSDXLのチェックポイントではまだインストールして動作するため、すでに使っている読者がただちに乗り換える理由はありません。新しく始める読者は、知名度だけでAUTOMATIC1111を選ぶのではなく、積極的に開発されているComfyUI、InvokeAI、SD.Nextと比較し、まず自分のGPUとモデルで動作することを確認してください。',
       },
       sources: {
         id: 'sources',
@@ -1618,8 +1704,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/automatic1111-review-hero-pt.webp',
@@ -1628,7 +1714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O AUTOMATIC1111 — formalmente "Stable Diffusion web UI" — é uma interface web gratuita, de código aberto e organizada em abas para rodar modelos Stable Diffusion na sua própria GPU. Lançado no GitHub em 22 de agosto de 2022, um mês após o lançamento público do Stable Diffusion, tornou-se a primeira interface gráfica amplamente adotada para geração local de imagens e ainda é descrito por análises de terceiros como uma das opções mais usadas e mais bem documentadas da categoria, graças a um enorme ecossistema de extensões (ControlNet, treinamento de LoRA e milhares de scripts da comunidade). Esta análise explica o que o AUTOMATIC1111 realmente é, em que difere do modelo Stable Diffusion e de interfaces mais novas como ComfyUI, Forge e InvokeAI, seu real estado de manutenção de cara para 2026, os termos de licença, os requisitos de hardware, e uma orientação honesta sobre quem deve — e quem não deve — usá-lo hoje.',
     metaDescription:
-      'Análise do AUTOMATIC1111 2026: o que o Stable Diffusion WebUI realmente é, status de manutenção verificado (datas de commits e releases), licença AGPL-3.0, extensão ControlNet, requisitos de hardware e comparação com Forge, ComfyUI e InvokeAI.',
+      'Análise do AUTOMATIC1111: o que é o Stable Diffusion WebUI, status de manutenção verificado, licença AGPL-3.0, ControlNet, hardware e alternativas.',
     twitterDescription:
       'Análise do AUTOMATIC1111 2026: o Stable Diffusion WebUI original explicado — status de manutenção verificado, licença, ecossistema de extensões, requisitos de hardware e comparação com Forge, ComfyUI e InvokeAI.',
     audience:
@@ -1649,20 +1735,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion 1.5', 'Stable Diffusion XL', 'ControlNet', 'Stable Diffusion WebUI Forge', 'ComfyUI', 'InvokeAI', 'Fooocus'],
     current_hardware_mentioned: ['2 GB VRAM', '4 GB VRAM', '6 GB VRAM', '8 GB VRAM', '12 GB VRAM', 'NVIDIA RTX 3060', 'NVIDIA RTX 4090'],
     leadAnswerBlock:
-      '**O AUTOMATIC1111 (Stable Diffusion web UI) é uma interface web gratuita, de código aberto e organizada em abas para rodar modelos Stable Diffusion localmente — é a interface, não o modelo em si.** Lançado em 22 de agosto de 2022, tem licença AGPL-3.0, é somente autoalojado e não tem nenhum nível pago oficial. Continua sendo uma das opções mais bem documentadas graças ao seu ecossistema de extensões, liderado pela extensão ControlNet. Sua base de código principal desacelerou visivelmente desde meados de 2024: o último release com tag, v1.10.1, foi lançado em julho de 2024 (as notas de lançamento foram publicadas em fevereiro de 2025), e em setembro de 2026 a branch `master` não teve nenhum release posterior, enquanto a branch `dev`, ativamente desenvolvida, continuou recebendo commits, o mais recente em março de 2026. Seu próprio fork mais popular, o Forge, afirma diretamente em seu README que "original SD-WebUI is almost static now" ("o SD-WebUI original está praticamente estático agora"). Verifique a atividade atual no [GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui) antes de presumir desenvolvimento ativo contínuo.',
+      '**Aviso: o AUTOMATIC1111 não recebe atualizações desde 2 de março de 2026 (última versão v1.10.1, 9 de fevereiro de 2025) e pode estar sem manutenção — confira antes de usar.** **O AUTOMATIC1111 é uma interface gratuita e open source (AGPL-3.0) para rodar o Stable Diffusion localmente, não o modelo.**',
     quickAnswerTop: {
       pt: {
         question: 'O AUTOMATIC1111 ainda é mantido, e é a mesma coisa que o Stable Diffusion?',
         answer:
-          'Não, o AUTOMATIC1111 não é o Stable Diffusion — é uma interface web (uma UI) gratuita e de código aberto separada, que carrega os pesos do modelo Stable Diffusion e permite gerar imagens a partir de uma aba do navegador. Sua branch principal `master` não recebeu nenhum release novo com tag desde a v1.10.1 em julho de 2024, embora sua branch `dev` tenha continuado recebendo commits menos frequentes, o mais recente em março de 2026. Seu fork mais usado, o Forge, descreve o projeto original como "praticamente estático agora" em sua própria documentação. Ele ainda funciona e continua amplamente usado, mas leitores que queiram as arquiteturas de modelo mais recentes ou as atualizações mais rápidas também devem avaliar alternativas ativamente mantidas, como Forge, ComfyUI ou SD.Next.',
+          'Nenhuma atualização foi publicada desde 2 de março de 2026. O AUTOMATIC1111 não é o Stable Diffusion: é uma interface web separada, gratuita e open source, que carrega pesos de modelos do Stable Diffusion e permite gerar imagens em uma aba do navegador. Sua última versão com tag, v1.10.1, foi publicada em 9 de fevereiro de 2025, e a branch `dev` não tem commits desde 2 de março de 2026. O Forge, seu fork mais usado, chama o original de «almost static now», mas o próprio Forge não recebe push desde 31 de julho de 2025. Ele ainda funciona em muitas configurações; quem precisa de arquiteturas de modelo mais novas deve comparar ComfyUI, InvokeAI ou SD.Next.',
         bullets: [
           'O AUTOMATIC1111 é uma interface/frontend, não um modelo — você ainda precisa baixar os pesos do Stable Diffusion separadamente e carregá-los nele.',
-          'Verificado no GitHub: o último release com tag (v1.10.1) foi lançado em julho de 2024; o commit mais recente da branch `dev` foi em março de 2026 — verifique o repositório diretamente antes de confiar apenas neste artigo.',
+          'Verificado no GitHub: a última versão com tag (v1.10.1) foi publicada em 9 de fevereiro de 2025, e o último commit da branch `dev` é de 2 de março de 2026 — consulte o repositório para ver o estado atual.',
           'Gratuito e de código aberto sob a licença AGPL-3.0; não existe nenhum nível pago oficial nem plano hospedado.',
           'O ecossistema de extensões — especialmente a extensão ControlNet para orientar pose e composição — é o principal motivo pelo qual continua amplamente usado apesar do desenvolvimento mais lento do núcleo.',
-          'Existem alternativas ativamente mantidas: Forge (um fork criado especificamente para adicionar recursos que o AUTOMATIC1111 não tem), ComfyUI e SD.Next recebem commits mais frequentes em 2026.',
+          'Alternativas com manutenção ativa: ComfyUI, InvokeAI e SD.Next tiveram pushes em 2026-11-02, enquanto o Forge, o fork baseado no AUTOMATIC1111, não recebe push desde 31 de julho de 2025.',
         ],
-        updatedDate: '2026-09-06',
+        updatedDate: '2026-11-02',
       },
     },
     toc: [
@@ -1691,9 +1777,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O AUTOMATIC1111 (Stable Diffusion web UI) é uma interface web gratuita, de código aberto e organizada em abas para rodar o Stable Diffusion localmente — é o aplicativo frontend, não o modelo em si.',
           'Lançado no GitHub em 22 de agosto de 2022 por um desenvolvedor pseudônimo usando o nome "AUTOMATIC1111", um mês após o lançamento público do Stable Diffusion, preenchendo a lacuna de uma interface gráfica local.',
           'Licenciado sob AGPL-3.0. Somente autoalojado, sem nenhum nível pago oficial nem plano hospedado.',
-          'Sua base de código principal desacelerou desde meados de 2024: o último release com tag (v1.10.1) foi lançado em julho de 2024, e o commit mais recente da branch `dev`, ativamente desenvolvida, foi em março de 2026 — verifique o status atual no GitHub em vez de presumir que nada mudou.',
+          'Seu código principal desacelerou desde meados de 2024: a última versão com tag (v1.10.1) foi publicada em 9 de fevereiro de 2025, e o último commit da branch `dev` é de 2 de março de 2026 — consulte o GitHub para ver o estado atual.',
           'O ecossistema de extensões, especialmente a extensão ControlNet para orientar pose/composição, é sua maior vantagem restante — um dos maiores e mais bem documentados conjuntos de complementos da comunidade entre as UIs de geração local de imagens.',
-          'Existem forks e alternativas ativamente mantidos — incluindo Forge, ComfyUI, InvokeAI e SD.Next — para leitores que queiram suporte mais rápido para arquiteturas de modelo mais novas.',
+          'Entre as alternativas com manutenção ativa estão ComfyUI, InvokeAI e SD.Next (pushes em 2026-11-02); o Forge, o fork do AUTOMATIC1111, não recebe push desde 31 de julho de 2025.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Sem atualizações desde 2 de março de 2026 (última versão v1.10.1, 9 de fevereiro de 2025). O AUTOMATIC1111 pode estar sem manutenção: confirme que ele ainda funciona com sua GPU e seu modelo antes de depender dele.',
+          },
         ],
       },
       whatIsAutomatic1111: {
@@ -1715,7 +1807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'História: por que o AUTOMATIC1111 existe',
         content: [
           'A Stability AI, o grupo de pesquisa CompVis da LMU de Munique e a Runway ML lançaram publicamente o Stable Diffusion em 22 de agosto de 2022. No lançamento, o Stable Diffusion foi distribuído como pesos de modelo e scripts de linha de comando — não havia uma interface gráfica oficial para digitar um prompt e clicar em um botão.',
-          'O AUTOMATIC1111 publicou a primeira versão do Stable Diffusion web UI no GitHub no mesmo dia, 22 de agosto de 2022, construindo sobre scripts anteriores da comunidade e adicionando uma interface de navegador baseada em Gradio. O momento colocou o projeto no lugar certo na hora certa: à medida que a popularidade do Stable Diffusion explodiu no final de 2022, a UI do AUTOMATIC1111 se tornou a forma padrão pela qual a maioria dos entusiastas de fato o executava, acumulando dezenas de milhares de estrelas no GitHub em poucos meses e, em setembro de 2026, mais de 164.000 estrelas — entre os repositórios com mais estrelas da categoria de geração local de imagens com IA.',
+          `O AUTOMATIC1111 publicou a primeira versão do Stable Diffusion web UI no GitHub no mesmo dia, 22 de agosto de 2022, construindo sobre scripts anteriores da comunidade e adicionando uma interface de navegador baseada em Gradio. O momento colocou o projeto no lugar certo na hora certa: à medida que a popularidade do Stable Diffusion explodiu no final de 2022, a UI do AUTOMATIC1111 se tornou a forma padrão pela qual a maioria dos entusiastas de fato o executava, acumulando dezenas de milhares de estrelas no GitHub em poucos meses e, hoje mais de ${ST.pt('automatic1111-webui', 'bare')} estrelas — entre os repositórios com mais estrelas da categoria de geração local de imagens com IA.`,
           'Por ter chegado primeiro e absorvido a maior parte das contribuições iniciais da comunidade, autores de extensões e criadores de tutoriais, o AUTOMATIC1111 se tornou a implementação de referência de facto à qual interfaces posteriores (Forge, extensões do ComfyUI e sites de documentação da comunidade) ainda se referem para descrever recursos e fluxos de trabalho, mesmo quando essas ferramentas mais novas já adotaram uma abordagem técnica diferente.',
         ],
       },
@@ -1741,23 +1833,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Status de manutenção: verificado',
         itemHeadings: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'A base de código principal do AUTOMATIC1111 desacelerou visivelmente desde meados de 2024 — seu último release com tag foi a v1.10.1 em julho de 2024, e seu próprio fork mais popular descreve o projeto original como "praticamente estático agora" em sua própria documentação.' },
-          { type: 'plain-terms', text: 'O projeto ainda roda e continua amplamente usado, mas novos recursos e suporte a tipos de modelo mais novos geralmente chegam primeiro a forks como o Forge antes de atingir a base de código original do AUTOMATIC1111, quando chegam a atingi-la.' },
+          { type: 'one-sentence', text: 'O AUTOMATIC1111 não recebe atualizações desde 2 de março de 2026: sua última versão com tag foi a v1.10.1 (publicada em 9 de fevereiro de 2025), e seu fork mais popular descreve o projeto original como «almost static now» no README.' },
+          { type: 'plain-terms', text: 'O projeto ainda roda e continua muito usado, mas ninguém publica uma atualização desde 2 de março de 2026; por isso, o suporte a novos tipos de modelo tende a aparecer antes em ferramentas com desenvolvimento ativo, como ComfyUI, InvokeAI ou SD.Next.' },
         ],
         columns: ['Sinal', 'Status verificado', 'Fonte'],
         rows: [
           { 'Sinal': 'Último release com tag', 'Status verificado': 'v1.10.1 — código de 27 de julho de 2024; notas de lançamento publicadas em 9 de fevereiro de 2025', 'Fonte': '[GitHub releases](https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases)' },
           { 'Sinal': 'Último commit na branch `master`', 'Status verificado': '27 de julho de 2024', 'Fonte': '[Histórico de commits do GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commits/master)' },
-          { 'Sinal': 'Último commit na branch `dev`', 'Status verificado': '2 de março de 2026 — mais lento, mas não abandonado', 'Fonte': 'Histórico de commits do GitHub (verifique a data atual antes de citar)' },
-          { 'Sinal': 'Issues abertas', 'Status verificado': 'Mais de 2.500 abertas em setembro de 2026', 'Fonte': '[GitHub issues](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues)' },
+          { 'Sinal': 'Último commit na branch `dev`', 'Status verificado': '2 de março de 2026 (merge da PR #17313); sem commits na `dev` desde então', 'Fonte': 'Histórico de commits do GitHub (verifique a data atual antes de citar)' },
+          { 'Sinal': 'Issues abertas', 'Status verificado': '2.429 abertas (busca de issues do GitHub, 2026-11-02)', 'Fonte': '[GitHub issues](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues)' },
           { 'Sinal': 'Avaliação do próprio mantenedor do fork', 'Status verificado': '"Because original SD-WebUI is almost static now, Forge will sync with original WebUI every 90 days, or when important fixes" — citação direta do próprio README do projeto Forge', 'Fonte': '[Forge README](https://github.com/lllyasviel/stable-diffusion-webui-forge)' },
+          { 'Sinal': 'Fork Forge: último push', 'Status verificado': '31 de julho de 2025; a última release do GitHub é de 5 de fevereiro de 2024', 'Fonte': '[Forge on GitHub](https://github.com/lllyasviel/stable-diffusion-webui-forge)' },
+          { 'Sinal': 'Extensão ControlNet: último push', 'Status verificado': '12 de agosto de 2024; sem releases no GitHub', 'Fonte': '[sd-webui-controlnet no GitHub](https://github.com/Mikubill/sd-webui-controlnet)' },
         ],
         content: [
-          'Esta seção apresenta o que pôde ser verificado diretamente na API do GitHub no momento da redação, em vez de repetir afirmações de segunda mão. O quadro não é nem "desenvolvido ativamente como um produto mainstream" nem "abandonado" — fica entre os dois: a branch estável `master`, para a qual apontam a maioria dos instaladores de um clique e a documentação existente, não recebeu nenhum release novo com tag desde julho de 2024, enquanto a branch `dev` (usada para testar mudanças antes de promovê-las) continuou recebendo commits, só que em um ritmo visivelmente mais lento do que em 2022–2023.',
-          'O sinal externo mais confiável vem de lllyasviel, o desenvolvedor do Forge — um fork construído especificamente sobre a base de código do AUTOMATIC1111. O próprio README do Forge afirma que ele vai "sincronizar com o WebUI original a cada 90 dias, ou quando houver correções importantes", justamente porque, nas palavras do próprio mantenedor do fork, "o SD-WebUI original está praticamente estático agora". Essa é a avaliação do mantenedor de um projeto intimamente relacionado sobre o ritmo de desenvolvimento do AUTOMATIC1111, não um boato — trate-a como um sinal forte, embora não definitivo.',
-          'Nada disso significa que o AUTOMATIC1111 deixou de funcionar. Ele continua totalmente funcional para fluxos de trabalho com SD 1.5 e SDXL, seu ecossistema de extensões continua ativo mesmo quando o núcleo não está, e sua base de instalação e cobertura de tutoriais ainda são maiores do que a maioria das alternativas. A implicação prática diz respeito ao futuro, não ao presente: leitores que precisem de suporte desde o primeiro dia para arquiteturas de modelo totalmente novas ou de resolução ativa de bugs devem ponderar isso contra forks ativamente mantidos como Forge, ComfyUI ou SD.Next, abordados na tabela comparativa abaixo.',
+          'Esta seção apresenta o que foi possível verificar diretamente na API do GitHub em 2026-11-02, em vez de repetir afirmações de segunda mão. O AUTOMATIC1111 não recebe atualizações desde 2 de março de 2026: a branch estável `master`, para a qual apontam a maioria dos instaladores de um clique e da documentação, não muda desde 27 de julho de 2024, e a branch `dev` não tem commits depois de 2 de março de 2026. O repositório não está arquivado e o mantenedor não anunciou seu abandono, mas ele deve ser tratado como possivelmente sem manutenção.',
+          'O sinal externo mais crível vem de lllyasviel, desenvolvedor do Forge, um fork construído sobre o código do AUTOMATIC1111. O README do Forge diz que ele vai se sincronizar «with original WebUI every 90 days, or when important fixes», porque «original SD-WebUI is almost static now». É o mantenedor de um fork descrevendo o ritmo do AUTOMATIC1111, não um boato. O próprio Forge não recebe push desde 31 de julho de 2025, portanto já não comprova uma alternativa ativa.',
+          'Nada disso significa que o AUTOMATIC1111 deixe de funcionar. Ele continua funcional para fluxos com Stable Diffusion 1.5 e SDXL, e sua base instalada e a cobertura de tutoriais ainda são maiores que as da maioria das alternativas. A implicação prática é para o futuro: quem precisa de suporte a arquiteturas de modelo mais novas ou de correções rápidas deve comparar ComfyUI, InvokeAI e SD.Next, que tiveram pushes em 2026-11-02, usando a tabela comparativa abaixo.',
         ],
-        note: 'Os dados de atividade do GitHub (datas de commits, datas de release, número de issues abertas) mudam continuamente — os números acima foram verificados diretamente na API do GitHub em 06/09/2026. Consulte [o repositório](https://github.com/AUTOMATIC1111/stable-diffusion-webui) diretamente para os números atuais antes de basear uma decisão sensível ao tempo nesta tabela.',
+        note: 'Os dados de atividade do GitHub mudam continuamente: os números acima foram verificados na API do GitHub em 2026-11-02. Consulte [o repositório](https://github.com/AUTOMATIC1111/stable-diffusion-webui) para ver os números atuais antes de basear uma decisão urgente nesta tabela.',
       },
       extensionsControlnet: {
         id: 'extensions-controlnet',
@@ -1804,14 +1898,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Opção': 'AUTOMATIC1111 (Stable Diffusion web UI)',
             'Melhor para': 'Uma das maiores bases de tutoriais/extensões, simplicidade em abas',
-            'Ritmo de manutenção (2026)': 'O `master` principal desacelerou desde meados de 2024; a branch `dev` ainda recebe commits ocasionais',
+            'Ritmo de manutenção (2026)': 'Sem atualizações desde 2 de março de 2026; `master` sem mudanças desde 27 de julho de 2024',
             'Licença': 'AGPL-3.0',
             'Principal trade-off': 'Opção mais bem documentada, mas o suporte a modelos novos tende a chegar primeiro a forks',
           },
           {
             'Opção': '[Stable Diffusion WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)',
             'Melhor para': 'Interface familiar ao AUTOMATIC1111 com suporte mais rápido a recursos e modelos novos',
-            'Ritmo de manutenção (2026)': 'Mais ativo que o AUTOMATIC1111 original; sincroniza com ele periodicamente segundo seu próprio README',
+            'Ritmo de manutenção (2026)': 'Sem push desde 31 de julho de 2025; última release do GitHub de 5 de fevereiro de 2024',
             'Licença': 'AGPL-3.0',
             'Principal trade-off': 'Comunidade menor que o próprio AUTOMATIC1111; ainda segue a estrutura geral da base de código original',
           },
@@ -1832,7 +1926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Opção': '[Fooocus](https://github.com/lllyasviel/Fooocus)',
             'Melhor para': 'Menos cliques até uma imagem utilizável, configuração mínima',
-            'Ritmo de manutenção (2026)': 'Ritmo de lançamento mais lento, escopo deliberadamente menor',
+            'Ritmo de manutenção (2026)': 'Último push em 1 de dezembro de 2025; última release v2.5.5 (12 de agosto de 2024)',
             'Licença': 'GPL-3.0',
             'Principal trade-off': 'Deliberadamente menos configurações e menos suporte a extensões em troca de simplicidade',
           },
@@ -1844,14 +1938,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Principal trade-off': 'Comunidade e base de tutoriais menores que o AUTOMATIC1111 apesar da paridade ou vantagem em recursos',
           },
         ],
-        note: 'O ritmo de manutenção se baseia na atividade pública de commits e releases verificada no GitHub em 06/09/2026 e pode mudar — consulte o repositório de cada projeto antes de escolher com base apenas no nível de atividade. Veja a [Análise do Stable Diffusion](/pt/power-local-llm/stable-diffusion-review) para a comparação do modelo subjacente e [Geração local de imagens com IA vs. nuvem](/pt/power-local-llm/local-ai-image-generation-vs-cloud) para os trade-offs entre local e nuvem.',
+        note: 'O ritmo de manutenção baseia-se na atividade pública de push e releases verificada no GitHub em 2026-11-02 e pode mudar — consulte o repositório de cada projeto antes de escolher apenas pelo nível de atividade. Veja a [análise do Stable Diffusion](/power-local-llm/stable-diffusion-review) para a comparação de modelos e [Geração local de imagens com IA vs. nuvem](/power-local-llm/local-ai-image-generation-vs-cloud) para os prós e contras de local vs. nuvem.',
       },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Quem deve usar o AUTOMATIC1111',
         items: [
           '**Leitor que quer uma das maiores bases de tutoriais e respostas da comunidade.** Por ter chegado primeiro ao mercado e ter o histórico de instalação mais longo, boa parte dos posts de fórum, tutoriais do YouTube e respostas no estilo Stack Overflow sobre interfaces de Stable Diffusion se referem especificamente ao AUTOMATIC1111.',
-          '**Leitor que quer o ControlNet e um catálogo de extensões maduro.** A extensão ControlNet e milhares de outros complementos da comunidade continuam sendo usados ativamente e, em muitos casos, ativamente mantidos, mesmo em períodos em que o projeto principal recebe menos commits.',
+          '**Leitor que quer o ControlNet e um catálogo maduro de extensões.** A extensão ControlNet e milhares de outros complementos da comunidade são muito usados; confira o repositório de cada extensão antes de depender dela, pois a principal extensão ControlNet recebeu seu último push em 12 de agosto de 2024.',
           '**Leitor que prefere uma interface baseada em abas a um grafo de nós.** O layout do AUTOMATIC1111 — campos de texto, controles deslizantes e botões organizados em abas — costuma ser mais acessível para um usuário iniciante do que a tela baseada em nós do ComfyUI.',
           '**Leitor que quer controle local total e privacidade.** Uma vez instalado, a geração acontece inteiramente na sua própria GPU; nenhum dado de prompt ou imagem sai da sua máquina, a menos que você instale uma extensão que faça isso.',
           '**Leitor com orçamento limitado que quer custo de licença zero para a própria interface.** A AGPL-3.0 significa que o software é gratuito para usar, modificar e redistribuir, sem qualquer tipo de assinatura.',
@@ -1861,9 +1955,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Quem não deve usar o AUTOMATIC1111',
         items: [
-          '**Leitor que quer suporte desde o primeiro dia para as arquiteturas de modelo mais novas.** Dado o ritmo de lançamento mais lento do projeto principal desde meados de 2024, o suporte a modelos novos tem tendido a aparecer primeiro em forks ativamente mantidos como Forge, ComfyUI ou SD.Next — avalie essas opções se o suporte a modelos de ponta for o que mais importa para você.',
+          '**Leitor que quer suporte às arquiteturas de modelo mais recentes.** Sem atualizações desde 2 de março de 2026, o suporte a novos modelos tende a aparecer antes em ferramentas com desenvolvimento ativo, como ComfyUI, InvokeAI ou SD.Next — compare-as primeiro.',
           '**Leitor que quer um aplicativo de um clique sem nenhuma exposição à linha de comando.** A instalação exige Python e Git e, em alguns sistemas, solução manual de problemas de versões de dependências — leitores que queiram uma experiência de aplicativo de consumo totalmente polida podem preferir o instalador simplificado do Fooocus ou uma ferramenta de nuvem.',
-          '**Leitor que precisa de correções de bugs ativas e garantidas no repositório principal em um cronograma previsível.** Com mais de 2.500 issues abertas e nenhum release novo com tag desde julho de 2024 na branch `master`, leitores com um requisito rígido de confiabilidade não devem presumir uma resolução rápida de um bug recém-reportado.',
+          '**Leitor que precisa de correções de bugs ativas e garantidas no repositório principal em um cronograma previsível.** Com mais de 2.400 issues abertas e nenhum release novo com tag desde julho de 2024 na branch `master`, leitores com um requisito rígido de confiabilidade não devem presumir uma resolução rápida de um bug recém-reportado.',
           '**Leitor que quer controle máximo de fluxo de trabalho sobre pipelines de várias etapas.** A abordagem de grafo de nós do ComfyUI geralmente oferece controle mais preciso sobre pipelines de geração complexos e de múltiplas etapas do que o layout em abas do AUTOMATIC1111.',
           '**Equipe empresarial que precisa de um produto com suporte de fornecedor e SLA.** O AUTOMATIC1111 é um projeto da comunidade sem contrato de suporte oficial, nível pago ou acordo de nível de serviço — equipes que precisam de suporte contratual devem avaliar, em vez disso, um produto comercial de geração de imagens em nuvem.',
         ],
@@ -1878,7 +1972,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'O AUTOMATIC1111 ainda é mantido em 2026?',
-            a: 'Sua branch principal `master` desacelerou visivelmente: o último release com tag, v1.10.1, foi lançado em julho de 2024, com notas de lançamento publicadas em fevereiro de 2025, e nenhum release novo com tag veio depois até setembro de 2026. Sua branch `dev` continuou recebendo commits ocasionais, o mais recente em março de 2026. Seu fork mais usado, o Forge, afirma em seu README que "o SD-WebUI original está praticamente estático agora". Ele ainda funciona e continua amplamente usado, mas leitores que queiram as atualizações mais rápidas também devem considerar alternativas ativamente mantidas como Forge, ComfyUI ou SD.Next.',
+            a: 'Nenhuma atualização foi publicada desde 2 de março de 2026. Sua última versão com tag, v1.10.1, foi publicada em 9 de fevereiro de 2025, e a branch `dev` não tem commits desde 2 de março de 2026. O README do Forge chama o original de «almost static now», e o próprio Forge não recebe push desde 31 de julho de 2025. Ele ainda funciona, mas trate-o como possivelmente sem manutenção e compare ComfyUI, InvokeAI ou SD.Next.',
           },
           {
             q: 'O AUTOMATIC1111 é gratuito?',
@@ -1894,7 +1988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual é a diferença entre o AUTOMATIC1111 e o Forge?',
-            a: 'O Forge é um fork da base de código do AUTOMATIC1111, criado pelo desenvolvedor lllyasviel especificamente para adicionar otimizações de desempenho e suporte mais rápido a modelos novos. Segundo o próprio README do Forge, ele sincroniza periodicamente com o projeto original do AUTOMATIC1111 (aproximadamente a cada 90 dias ou em caso de correções importantes) em vez de continuamente, e seu mantenedor descreve o projeto original como tendo um desenvolvimento visivelmente mais lento. O Forge costuma ser a melhor escolha para leitores que queiram uma interface parecida com o AUTOMATIC1111, mas com desenvolvimento contínuo mais ativo.',
+            a: 'O Forge é um fork do código do AUTOMATIC1111, criado por lllyasviel para adicionar otimizações de desempenho e suporte a modelos mais novos, como o Flux. Segundo o README, ele se sincroniza com o original aproximadamente a cada 90 dias ou para correções importantes. Seu último push no GitHub foi em 31 de julho de 2025 e sua última release do GitHub é de 5 de fevereiro de 2024; portanto, já não é uma escolha claramente mais ativa — consulte o repositório antes de escolhê-lo.',
           },
           {
             q: 'Qual é a diferença entre o AUTOMATIC1111 e o ComfyUI?',
@@ -1904,13 +1998,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Onde eu baixo o AUTOMATIC1111?',
             a: 'A fonte oficial é o [repositório AUTOMATIC1111/stable-diffusion-webui no GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui), que inclui o código, uma wiki de instalação e links para instruções de configuração específicas para hardware NVIDIA, AMD, Intel e Apple Silicon. Você vai precisar baixar separadamente os pesos do modelo Stable Diffusion (por exemplo, do Hugging Face) para usá-lo.',
           },
+          {
+            q: 'O Stable Diffusion WebUI Forge ainda é mantido?',
+            a: 'Seu último push no GitHub foi em 31 de julho de 2025, e sua última release do GitHub é de 5 de fevereiro de 2024. O README informa que ele é baseado no SD-WebUI 1.10.1. Consulte o repositório para ver se há atividade mais recente antes de escolhê-lo.',
+          },
+          {
+            q: 'A extensão ControlNet para o AUTOMATIC1111 ainda é mantida?',
+            a: 'O repositório sd-webui-controlnet recebeu seu último push em 12 de agosto de 2024 e não tem releases no GitHub. Ela continua muito usada, mas consulte o repositório e as issues abertas antes de depender dela em um fluxo de produção.',
+          },
         ],
       },
       verdict: {
         id: 'verdict',
         title: 'Veredito',
         content:
-          'O AUTOMATIC1111 conquistou seu lugar como a interface local padrão para Stable Diffusion por ter sido o primeiro, e o ecossistema resultante — a extensão ControlNet acima de tudo, ao lado de milhares de outras ferramentas, tutoriais e respostas de fórum da comunidade — continua sendo seu maior trunfo em 2026. Dito isso, uma análise honesta precisa afirmar claramente o que a evidência mostra: o ritmo de desenvolvimento do projeto principal desacelerou visivelmente desde meados de 2024, sem nenhum release novo com tag desde a v1.10.1, e seu próprio fork mais popular o descreve como "praticamente estático agora". Ele ainda instala, ainda roda e ainda produz bons resultados com checkpoints SD 1.5 e SDXL, então leitores que já o usam não têm motivo urgente para trocar. Mas leitores começando do zero em 2026, especialmente os que querem as arquiteturas de modelo mais novas ou a resolução de bugs mais rápida, devem avaliar seriamente Forge, ComfyUI ou SD.Next ao lado dele, em vez de escolher o AUTOMATIC1111 apenas pelo reconhecimento do nome.',
+          'O AUTOMATIC1111 conquistou seu lugar como interface local padrão do Stable Diffusion por ter sido o primeiro, e seu ecossistema — a extensão ControlNet acima de tudo, além de milhares de outras ferramentas da comunidade, tutoriais e respostas em fóruns — continua sendo seu maior ativo. Mas o projeto não recebe atualizações desde 2 de março de 2026, sua última versão com tag é a v1.10.1, o fork Forge não recebe push desde 31 de julho de 2025, e a principal extensão ControlNet recebeu seu último push em 12 de agosto de 2024. Ele ainda instala e roda com checkpoints SD 1.5 e SDXL, então quem já o usa não tem motivo urgente para trocar. Quem está começando deve comparar ComfyUI, InvokeAI e SD.Next, com desenvolvimento ativo, em vez de escolher o AUTOMATIC1111 só pelo nome, e confirmar antes que ele funciona com sua GPU e seu modelo.',
       },
       sources: {
         id: 'sources',
@@ -1939,8 +2041,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/automatic1111-review-hero-ar.webp',
@@ -1949,7 +2051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'AUTOMATIC1111 — واسمه الرسمي "Stable Diffusion web UI" — هو واجهة ويب مجانية ومفتوحة المصدر ومنظّمة في تبويبات لتشغيل نماذج Stable Diffusion على معالج الرسومات (GPU) الخاص بك. صدر على GitHub في 22 أغسطس 2022، أي بعد شهر واحد من الإطلاق العام لـ Stable Diffusion، وأصبح أول واجهة رسومية تُعتمد على نطاق واسع لتوليد الصور محليًا، ولا تزال مراجعات جهات خارجية تصفها بأنها من أكثر الخيارات استخدامًا وتوثيقًا في هذه الفئة، بفضل نظام إضافات ضخم (ControlNet وتدريب LoRA وآلاف السكربتات المجتمعية). تتناول هذه المراجعة ما هو AUTOMATIC1111 فعليًا، وكيف يختلف عن نموذج Stable Diffusion نفسه وعن واجهات أحدث مثل ComfyUI وForge وInvokeAI، وحالة صيانته الحقيقية مع اقتراب 2026، وشروط الترخيص، ومتطلبات العتاد، وإرشادات صادقة حول من يجب أن يستخدمه — ومن لا ينبغي له ذلك — اليوم.',
     metaDescription:
-      'مراجعة AUTOMATIC1111 2026: ما هو Stable Diffusion WebUI فعليًا، وحالة الصيانة الموثقة (تواريخ آخر تحديثات وإصدارات)، وترخيص AGPL-3.0، وإضافة ControlNet، ومتطلبات العتاد، ومقارنته مع Forge وComfyUI وInvokeAI.',
+      'مراجعة AUTOMATIC1111: ما هي واجهة Stable Diffusion WebUI، وحالة صيانتها الموثّقة، وترخيص AGPL-3.0، وControlNet، ومتطلبات العتاد، ومقارنتها بالبدائل.',
     twitterDescription:
       'مراجعة AUTOMATIC1111 2026: شرح واجهة Stable Diffusion WebUI الأصلية — حالة الصيانة الموثقة، والترخيص، ونظام الإضافات، ومتطلبات العتاد، ومقارنته مع Forge وComfyUI وInvokeAI.',
     audience:
@@ -1970,20 +2072,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion 1.5', 'Stable Diffusion XL', 'ControlNet', 'Stable Diffusion WebUI Forge', 'ComfyUI', 'InvokeAI', 'Fooocus'],
     current_hardware_mentioned: ['2 GB VRAM', '4 GB VRAM', '6 GB VRAM', '8 GB VRAM', '12 GB VRAM', 'NVIDIA RTX 3060', 'NVIDIA RTX 4090'],
     leadAnswerBlock:
-      '**AUTOMATIC1111 (Stable Diffusion web UI) هو واجهة ويب مجانية ومفتوحة المصدر ومنظّمة في تبويبات لتشغيل نماذج Stable Diffusion محليًا — إنه الواجهة وليس النموذج نفسه.** أُطلق في 22 أغسطس 2022، وهو مرخّص بموجب AGPL-3.0، ويُستضاف ذاتيًا فقط دون أي مستوى مدفوع رسمي. لا يزال من أكثر الخيارات توثيقًا بفضل نظام إضافاته الذي تتصدره إضافة ControlNet. تباطأت قاعدة الشيفرة الأساسية بشكل ملحوظ منذ منتصف 2024: صدر آخر إصدار موسوم، v1.10.1، في يوليو 2024 (ونُشرت ملاحظات الإصدار في فبراير 2025)، وحتى سبتمبر 2026 لم يشهد فرع `master` أي إصدار لاحق، بينما استمر فرع `dev` قيد التطوير الفعّال في تلقّي تحديثات، كان آخرها في مارس 2026. وتذكر أشهر نسخة مشتقة منه، وهي Forge، مباشرة في ملف README الخاص بها أن "original SD-WebUI is almost static now" ("أصبح SD-WebUI الأصلي شبه ثابت الآن"). تحقق من النشاط الحالي على [GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui) قبل افتراض استمرار التطوير الفعّال.',
+      '**تحذير: لم يتلقَّ AUTOMATIC1111 أي تحديث منذ 2 مارس 2026 (آخر إصدار v1.10.1 بتاريخ 9 فبراير 2025)، وقد يكون غير مصان — تحقق قبل الاعتماد عليه.** **AUTOMATIC1111 (واجهة Stable Diffusion web UI) واجهة متصفح مجانية ومفتوحة المصدر (AGPL-3.0) لتشغيل نماذج Stable Diffusion محليًا، وليست النموذج نفسه.**',
     quickAnswerTop: {
       ar: {
         question: 'هل ما زال AUTOMATIC1111 تحت الصيانة، وهل هو نفسه Stable Diffusion؟',
         answer:
-          'لا، AUTOMATIC1111 ليس Stable Diffusion — إنه واجهة ويب (UI) مجانية ومفتوحة المصدر منفصلة، تُحمّل أوزان نموذج Stable Diffusion وتتيح توليد الصور من تبويب في المتصفح. لم يتلقَّ فرعه الأساسي `master` أي إصدار موسوم جديد منذ v1.10.1 في يوليو 2024، رغم أن فرع `dev` استمر في تلقّي تحديثات أقل تكرارًا، كان آخرها في مارس 2026. وتصف أكثر نسخة مشتقة استخدامًا منه، وهي Forge، المشروع الأصلي في توثيقها الخاص بأنه "شبه ثابت الآن". لا يزال يعمل ويُستخدم على نطاق واسع، لكن القراء الراغبين في أحدث بنى النماذج أو أسرع التحديثات ينبغي أيضًا تقييم بدائل قيد التطوير الفعّال مثل Forge وComfyUI وSD.Next.',
+          'لم يُنشر أي تحديث منذ 2 مارس 2026. AUTOMATIC1111 ليس Stable Diffusion: إنه واجهة ويب منفصلة ومجانية ومفتوحة المصدر تحمّل أوزان نماذج Stable Diffusion وتتيح توليد الصور عبر تبويب في المتصفح. نُشر آخر إصدار موسوم v1.10.1 في 9 فبراير 2025، ولا توجد التزامات (commits) في فرع `dev` منذ 2 مارس 2026. ويصف Forge، أكثر نسخ المشروع المتفرعة استخدامًا، الأصل بأنه «almost static now»، لكن Forge نفسه لم يتلقَّ أي دفعة تعديلات منذ 31 يوليو 2025. ما زال يعمل في كثير من الإعدادات؛ ومن يحتاج إلى معماريات نماذج أحدث فعليه مقارنة ComfyUI أو InvokeAI أو SD.Next.',
         bullets: [
           'AUTOMATIC1111 هو واجهة/برنامج أمامي وليس نموذجًا — لا تزال بحاجة إلى تنزيل أوزان Stable Diffusion بشكل منفصل وتحميلها فيه.',
-          'تم التحقق على GitHub: صدر آخر إصدار موسوم (v1.10.1) في يوليو 2024؛ وكان آخر تحديث في فرع `dev` في مارس 2026 — تحقق من المستودع مباشرة قبل الاعتماد على هذا المقال وحده.',
+          'تم التحقق على GitHub: نُشر آخر إصدار موسوم (v1.10.1) في 9 فبراير 2025، وآخر التزام في فرع `dev` بتاريخ 2 مارس 2026 — راجع المستودع لمعرفة الحالة الراهنة.',
           'مجاني ومفتوح المصدر بموجب ترخيص AGPL-3.0؛ لا يوجد أي مستوى مدفوع رسمي أو خطة استضافة.',
           'نظام الإضافات — وخصوصًا إضافة ControlNet لتوجيه الوضعية والتكوين — هو السبب الرئيسي وراء استمرار استخدامه على نطاق واسع رغم تباطؤ تطوير النواة.',
-          'توجد بدائل قيد التطوير الفعّال: Forge (نسخة مشتقة صُممت خصيصًا لإضافة ميزات لا يملكها AUTOMATIC1111)، وComfyUI، وSD.Next، وجميعها تتلقى تحديثات أكثر تكرارًا في 2026.',
+          'بدائل مصانة بنشاط: تلقّت ComfyUI وInvokeAI وSD.Next دفعات تعديلات في 2026-11-02، بينما لم يتلقَّ Forge، النسخة المتفرعة المبنية على AUTOMATIC1111، أي دفعة منذ 31 يوليو 2025.',
         ],
-        updatedDate: '2026-09-06',
+        updatedDate: '2026-11-02',
       },
     },
     toc: [
@@ -2012,9 +2114,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'AUTOMATIC1111 (Stable Diffusion web UI) هو واجهة ويب مجانية ومفتوحة المصدر ومنظّمة في تبويبات لتشغيل Stable Diffusion محليًا — إنه تطبيق الواجهة الأمامية وليس النموذج نفسه.',
           'صدر على GitHub في 22 أغسطس 2022 من قِبل مطوّر مجهول الهوية يستخدم الاسم المستعار "AUTOMATIC1111"، بعد شهر واحد من الإطلاق العام لـ Stable Diffusion، ليسد الفجوة في غياب واجهة رسومية محلية.',
           'مرخّص بموجب AGPL-3.0. استضافة ذاتية فقط، دون أي مستوى مدفوع رسمي أو خطة استضافة.',
-          'تباطأت قاعدة الشيفرة الأساسية منذ منتصف 2024: صدر آخر إصدار موسوم (v1.10.1) في يوليو 2024، وكان آخر تحديث في فرع `dev` قيد التطوير الفعّال في مارس 2026 — تحقق من الحالة الحالية على GitHub بدلًا من افتراض عدم تغيّرها.',
+          'تباطأت شيفرته الرئيسية منذ منتصف 2024: نُشر آخر إصدار موسوم (v1.10.1) في 9 فبراير 2025، وآخر التزام في فرع `dev` بتاريخ 2 مارس 2026 — راجع GitHub لمعرفة الحالة الراهنة.',
           'يظل نظام الإضافات، وخصوصًا إضافة ControlNet لتوجيه الوضعية/التكوين، أكبر ميزة متبقية له — أحد أكبر مجموعات الإضافات المجتمعية وأكثرها توثيقًا بين واجهات توليد الصور المحلية.',
-          'توجد نسخ مشتقة وبدائل قيد التطوير الفعّال — منها Forge وComfyUI وInvokeAI وSD.Next — لمن يريد دعمًا أسرع لبنى النماذج الأحدث.',
+          'من البدائل المصانة بنشاط ComfyUI وInvokeAI وSD.Next (دفعات تعديلات في 2026-11-02)؛ أما Forge، النسخة المتفرعة من AUTOMATIC1111، فلم يتلقَّ أي دفعة منذ 31 يوليو 2025.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'لا تحديث منذ 2 مارس 2026 (آخر إصدار v1.10.1 بتاريخ 9 فبراير 2025). قد يكون AUTOMATIC1111 غير مصان: تأكد أنه ما زال يعمل مع بطاقتك الرسومية ونموذجك قبل أن تعتمد عليه.',
+          },
         ],
       },
       whatIsAutomatic1111: {
@@ -2036,7 +2144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'التاريخ: لماذا يوجد AUTOMATIC1111',
         content: [
           'أطلقت Stability AI ومجموعة أبحاث CompVis في جامعة LMU ميونخ وRunway ML علنًا Stable Diffusion في 22 أغسطس 2022. عند الإطلاق، تم توزيع Stable Diffusion كأوزان نموذج وسكربتات سطر أوامر — ولم تكن هناك واجهة رسومية رسمية لكتابة نص توجيهي والنقر على زر.',
-          'نشر AUTOMATIC1111 أول إصدار من Stable Diffusion web UI على GitHub في اليوم نفسه، 22 أغسطس 2022، معتمدًا على سكربتات مجتمعية سابقة ومضيفًا واجهة متصفح مبنية على Gradio. وضع هذا التوقيت المشروع في المكان الصحيح في اللحظة المناسبة: فمع انفجار شعبية Stable Diffusion في أواخر 2022، أصبحت واجهة AUTOMATIC1111 الطريقة الافتراضية التي استخدمها بها معظم الهواة فعليًا، حيث جمعت عشرات الآلاف من نجوم GitHub خلال أشهر، وحتى سبتمبر 2026 تجاوزت 164,000 نجمة — من بين المستودعات الأكثر تقييمًا بالنجوم في فئة توليد الصور المحلية بالذكاء الاصطناعي.',
+          `نشر AUTOMATIC1111 أول إصدار من Stable Diffusion web UI على GitHub في اليوم نفسه، 22 أغسطس 2022، معتمدًا على سكربتات مجتمعية سابقة ومضيفًا واجهة متصفح مبنية على Gradio. وضع هذا التوقيت المشروع في المكان الصحيح في اللحظة المناسبة: فمع انفجار شعبية Stable Diffusion في أواخر 2022، أصبحت واجهة AUTOMATIC1111 الطريقة الافتراضية التي استخدمها بها معظم الهواة فعليًا، حيث جمعت عشرات الآلاف من نجوم GitHub خلال أشهر، وتجاوزت اليوم ${ST.ar('automatic1111-webui', 'bare')} نجمة — من بين المستودعات الأكثر تقييمًا بالنجوم في فئة توليد الصور المحلية بالذكاء الاصطناعي.`,
           'ولأنه وصل أولًا واستحوذ على معظم المساهمات المجتمعية المبكرة ومطوّري الإضافات وكتّاب الدروس التعليمية، أصبح AUTOMATIC1111 التطبيق المرجعي الفعلي الذي لا تزال الواجهات اللاحقة (Forge، وإضافات ComfyUI، ومواقع التوثيق المجتمعية) تصف الميزات وسير العمل بالإشارة إليه، حتى عندما تبنّت هذه الأدوات الأحدث نهجًا تقنيًا مختلفًا منذ ذلك الحين.',
         ],
       },
@@ -2062,23 +2170,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'حالة الصيانة: موثقة',
         itemHeadings: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'تباطأت قاعدة الشيفرة الأساسية لـ AUTOMATIC1111 بشكل ملحوظ منذ منتصف 2024 — كان آخر إصدار موسوم هو v1.10.1 في يوليو 2024، وتصف أشهر نسخة مشتقة منه المشروع الأصلي في توثيقها الخاص بأنه "شبه ثابت الآن".' },
-          { type: 'plain-terms', text: 'لا يزال المشروع يعمل ويُستخدم على نطاق واسع، لكن الميزات الجديدة ودعم أنواع النماذج الأحدث تميل الآن إلى الوصول أولًا إلى نسخ مشتقة مثل Forge قبل أن تصل إلى قاعدة شيفرة AUTOMATIC1111 الأصلية، إن وصلت إليها أصلًا.' },
+          { type: 'one-sentence', text: 'لم يتلقَّ AUTOMATIC1111 أي تحديث منذ 2 مارس 2026: كان آخر إصدار موسوم v1.10.1 (نُشر في 9 فبراير 2025)، ويصف أشهر نسخة متفرعة منه المشروع الأصلي في README الخاص بها بأنه «almost static now».' },
+          { type: 'plain-terms', text: 'ما زال المشروع يعمل ويُستخدم على نطاق واسع، لكن لم يدفع أحد تحديثًا إليه منذ 2 مارس 2026، لذا فمن الأرجح أن يظهر دعم أنواع النماذج الأحدث أولًا في أدوات تُطوَّر بنشاط مثل ComfyUI أو InvokeAI أو SD.Next.' },
         ],
         columns: ['المؤشر', 'الحالة الموثقة', 'المصدر'],
         rows: [
           { 'المؤشر': 'آخر إصدار موسوم', 'الحالة الموثقة': 'v1.10.1 — الشيفرة بتاريخ 27 يوليو 2024؛ نُشرت ملاحظات الإصدار في 9 فبراير 2025', 'المصدر': '[إصدارات GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases)' },
           { 'المؤشر': 'آخر تحديث في فرع `master`', 'الحالة الموثقة': '27 يوليو 2024', 'المصدر': '[سجل تحديثات GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commits/master)' },
-          { 'المؤشر': 'آخر تحديث في فرع `dev`', 'الحالة الموثقة': '2 مارس 2026 — أبطأ لكنه لم يُهجر', 'المصدر': 'سجل تحديثات GitHub (تحقق من التاريخ الحالي قبل الاستشهاد به)' },
-          { 'المؤشر': 'المشكلات (issues) المفتوحة', 'الحالة الموثقة': 'أكثر من 2,500 مفتوحة حتى سبتمبر 2026', 'المصدر': '[مشكلات GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues)' },
+          { 'المؤشر': 'آخر تحديث في فرع `dev`', 'الحالة الموثقة': '2 مارس 2026 (دمج PR #17313)؛ لا التزامات في `dev` منذ ذلك الحين', 'المصدر': 'سجل تحديثات GitHub (تحقق من التاريخ الحالي قبل الاستشهاد به)' },
+          { 'المؤشر': 'المشكلات (issues) المفتوحة', 'الحالة الموثقة': '2,429 مفتوحة (بحث المشكلات في GitHub، 2026-11-02)', 'المصدر': '[مشكلات GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues)' },
           { 'المؤشر': 'تقييم مطوّر النسخة المشتقة نفسه', 'الحالة الموثقة': '"Because original SD-WebUI is almost static now, Forge will sync with original WebUI every 90 days, or when important fixes" — اقتباس مباشر من ملف README الخاص بمشروع Forge نفسه', 'المصدر': '[Forge README](https://github.com/lllyasviel/stable-diffusion-webui-forge)' },
+          { 'المؤشر': 'Forge (نسخة متفرعة): آخر دفعة', 'الحالة الموثقة': '31 يوليو 2025؛ وأحدث إصدار له على GitHub بتاريخ 5 فبراير 2024', 'المصدر': '[Forge on GitHub](https://github.com/lllyasviel/stable-diffusion-webui-forge)' },
+          { 'المؤشر': 'إضافة ControlNet: آخر دفعة', 'الحالة الموثقة': '12 أغسطس 2024؛ لا توجد إصدارات على GitHub', 'المصدر': '[sd-webui-controlnet على GitHub](https://github.com/Mikubill/sd-webui-controlnet)' },
         ],
         content: [
-          'يعرض هذا القسم ما أمكن التحقق منه مباشرة عبر واجهة برمجة تطبيقات GitHub وقت الكتابة، بدلًا من تكرار ادعاءات من مصادر غير مباشرة. الصورة ليست "قيد تطوير فعّال كمنتج سائد" ولا "مهجورة" — بل تقع بين الحالتين: فرع `master` المستقر، الذي تشير إليه معظم أدوات التثبيت بنقرة واحدة والتوثيق الحالي، لم يتلقَّ إصدارًا موسومًا جديدًا منذ يوليو 2024، بينما استمر فرع `dev` (المستخدم لاختبار التغييرات قبل ترقيتها) في تلقّي تحديثات، وإن كان بوتيرة أبطأ بشكل ملحوظ مقارنة بـ 2022-2023.',
-          'يأتي أكثر مؤشر خارجي مصداقية من lllyasviel، مطوّر Forge — وهي نسخة مشتقة مبنية خصيصًا فوق قاعدة شيفرة AUTOMATIC1111. ينص ملف README الخاص بـ Forge على أنه سيتم "المزامنة مع الواجهة الأصلية كل 90 يومًا، أو عند وجود إصلاحات مهمة"، وذلك تحديدًا لأن، بحسب كلمات مطوّر النسخة المشتقة نفسه، "أصبح SD-WebUI الأصلي شبه ثابت الآن". هذا تقييم من مطوّر مشروع وثيق الصلة حول وتيرة تطوير AUTOMATIC1111، وليس شائعة — يُنظر إليه كمؤشر قوي، وإن لم يكن قاطعًا.',
-          'لا يعني أي مما سبق أن AUTOMATIC1111 توقف عن العمل. فهو لا يزال يعمل بكامل وظائفه لسير عمل SD 1.5 وSDXL، ولا يزال نظام إضافاته نشطًا حتى عندما لا تكون النواة كذلك، ولا تزال قاعدة تثبيته وتغطيته التعليمية أكبر من معظم البدائل. الأثر العملي يتعلق بالمستقبل وليس بالحاضر: القراء الذين يحتاجون إلى دعم من اليوم الأول لبنى نماذج جديدة تمامًا أو إلى معالجة سريعة للأخطاء ينبغي أن يوازنوا ذلك مع نسخ مشتقة قيد التطوير الفعّال مثل Forge وComfyUI وSD.Next، المتناولة في جدول المقارنة أدناه.',
+          'يعرض هذا القسم ما أمكن التحقق منه مباشرة عبر واجهة GitHub البرمجية في 2026-11-02، بدل تكرار ادعاءات من مصادر ثانوية. لم يتلقَّ AUTOMATIC1111 أي تحديث منذ 2 مارس 2026: فرع `master` المستقر، الذي تشير إليه أغلب مثبّتات النقرة الواحدة والوثائق، لم يتغيّر منذ 27 يوليو 2024، ولا توجد في فرع `dev` أي التزامات بعد 2 مارس 2026. المستودع غير مؤرشف ولم يعلن المشرف التخلي عنه، لكن ينبغي التعامل معه على أنه قد يكون غير مصان.',
+          'أوثق إشارة خارجية تأتي من lllyasviel، مطوّر Forge، وهو نسخة متفرعة مبنية على شيفرة AUTOMATIC1111. يقول README الخاص بـ Forge إنه سيتزامن «with original WebUI every 90 days, or when important fixes» لأن «original SD-WebUI is almost static now». هذا وصف من مشرف نسخة متفرعة لوتيرة AUTOMATIC1111، وليس شائعة. وForge نفسه لم يتلقَّ أي دفعة منذ 31 يوليو 2025، فلم يعد دليلًا على وجود بديل نشط.',
+          'لا يعني ذلك كله أن AUTOMATIC1111 سيتوقف عن العمل. فهو ما زال يعمل مع سير عمل Stable Diffusion 1.5 وSDXL، وما زالت قاعدة مستخدميه وتغطية الشروحات أكبر من معظم البدائل. والأثر العملي يخص المستقبل: من يحتاج إلى دعم معماريات نماذج أحدث أو إلى إصلاح سريع للأخطاء عليه مقارنة ComfyUI وInvokeAI وSD.Next، التي تلقّت جميعها دفعات تعديلات في 2026-11-02، عبر جدول المقارنة أدناه.',
         ],
-        note: 'بيانات نشاط GitHub (تواريخ التحديثات، تواريخ الإصدارات، عدد المشكلات المفتوحة) تتغير باستمرار — تم التحقق من الأرقام أعلاه مباشرة عبر واجهة برمجة تطبيقات GitHub بتاريخ 06/09/2026. راجع [المستودع](https://github.com/AUTOMATIC1111/stable-diffusion-webui) مباشرة للحصول على الأرقام الحالية قبل بناء قرار حساس للوقت على هذا الجدول.',
+        note: 'تتغيّر بيانات نشاط GitHub باستمرار: تم التحقق من الأرقام أعلاه عبر واجهة GitHub البرمجية في 2026-11-02. راجع [المستودع](https://github.com/AUTOMATIC1111/stable-diffusion-webui) لمعرفة الأرقام الحالية قبل الاعتماد على هذا الجدول في قرار عاجل.',
       },
       extensionsControlnet: {
         id: 'extensions-controlnet',
@@ -2125,14 +2235,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'الخيار': 'AUTOMATIC1111 (Stable Diffusion web UI)',
             'الأفضل لـ': 'إحدى أكبر قواعد الدروس والإضافات، وبساطة قائمة على التبويبات',
-            'وتيرة الصيانة (2026)': 'تباطأ فرع `master` الأساسي منذ منتصف 2024؛ لا يزال فرع `dev` يتلقى تحديثات عرضية',
+            'وتيرة الصيانة (2026)': 'لا تحديث منذ 2 مارس 2026؛ `master` دون تغيير منذ 27 يوليو 2024',
             'الترخيص': 'AGPL-3.0',
             'المفاضلة الرئيسية': 'الخيار الأكثر توثيقًا، لكن دعم النماذج الأحدث يميل إلى الوصول أولًا إلى النسخ المشتقة',
           },
           {
             'الخيار': '[Stable Diffusion WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)',
             'الأفضل لـ': 'واجهة مألوفة تشبه AUTOMATIC1111 مع دعم أسرع للميزات والنماذج الجديدة',
-            'وتيرة الصيانة (2026)': 'أكثر نشاطًا من AUTOMATIC1111 الأصلي؛ يتزامن معه دوريًا وفقًا لملف README الخاص به',
+            'وتيرة الصيانة (2026)': 'لا دفعات منذ 31 يوليو 2025؛ وأحدث إصدار على GitHub بتاريخ 5 فبراير 2024',
             'الترخيص': 'AGPL-3.0',
             'المفاضلة الرئيسية': 'مجتمع أصغر من AUTOMATIC1111 نفسه؛ لا يزال يتّبع البنية العامة لقاعدة الشيفرة الأصلية',
           },
@@ -2153,7 +2263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'الخيار': '[Fooocus](https://github.com/lllyasviel/Fooocus)',
             'الأفضل لـ': 'أقل عدد من النقرات للوصول إلى صورة قابلة للاستخدام، بإعدادات دنيا',
-            'وتيرة الصيانة (2026)': 'وتيرة إصدار أبطأ، ونطاق أصغر بشكل مقصود',
+            'وتيرة الصيانة (2026)': 'آخر دفعة في 1 ديسمبر 2025؛ وأحدث إصدار v2.5.5 (12 أغسطس 2024)',
             'الترخيص': 'GPL-3.0',
             'المفاضلة الرئيسية': 'إعدادات أقل عمدًا ودعم إضافات أقل مقابل البساطة',
           },
@@ -2165,14 +2275,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'المفاضلة الرئيسية': 'مجتمع وقاعدة دروس تعليمية أصغر من AUTOMATIC1111 رغم تكافؤ الميزات أو تفوّقها',
           },
         ],
-        note: 'تعتمد وتيرة الصيانة على نشاط التحديثات والإصدارات العلني الموثّق على GitHub بتاريخ 06/09/2026 وقد تتغير — راجع مستودع كل مشروع قبل الاختيار بناءً على مستوى النشاط وحده. راجع [مراجعة Stable Diffusion](/ar/power-local-llm/stable-diffusion-review) لمقارنة النموذج الأساسي، و[توليد الصور المحلي بالذكاء الاصطناعي مقابل السحابة](/ar/power-local-llm/local-ai-image-generation-vs-cloud) للمفاضلات بين المحلي والسحابي.',
+        note: 'تستند وتيرة الصيانة إلى نشاط الدفعات والإصدارات العام الذي تم التحقق منه على GitHub في 2026-11-02، وقد تتغيّر — راجع مستودع كل مشروع قبل الاختيار بناءً على مستوى النشاط وحده. انظر [مراجعة Stable Diffusion](/power-local-llm/stable-diffusion-review) لمقارنة النماذج الأساسية، و[توليد الصور بالذكاء الاصطناعي محليًا مقابل السحابة](/power-local-llm/local-ai-image-generation-vs-cloud) لمفاضلات المحلي مقابل السحابي.',
       },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'لمن يناسب AUTOMATIC1111',
         items: [
           '**القارئ الذي يريد إحدى أكبر قواعد الدروس التعليمية وإجابات المجتمع.** نظرًا لكونه الأول في السوق وله أطول تاريخ تثبيت، يشير جزء كبير من منشورات المنتديات ودروس YouTube والإجابات على طراز Stack Overflow حول واجهات Stable Diffusion إلى AUTOMATIC1111 تحديدًا.',
-          '**القارئ الذي يريد ControlNet وكتالوج إضافات ناضج.** لا تزال إضافة ControlNet وآلاف الإضافات المجتمعية الأخرى مستخدَمة بنشاط، وفي كثير من الحالات مصانة بنشاط، حتى في الفترات التي يشهد فيها المشروع الأساسي تحديثات أقل.',
+          '**القارئ الذي يريد ControlNet وفهرس إضافات ناضجًا.** إضافة ControlNet وآلاف الإضافات المجتمعية الأخرى شائعة الاستخدام؛ راجع مستودع كل إضافة قبل الاعتماد عليها، لأن آخر دفعة تلقتها إضافة ControlNet الرئيسية كانت في 12 أغسطس 2024.',
           '**القارئ الذي يفضّل واجهة قائمة على التبويبات على رسم بياني للعُقد.** تخطيط AUTOMATIC1111 — حقول نصية وأشرطة تمرير وأزرار منظّمة في تبويبات — عادة ما يكون أسهل بالنسبة لمستخدم جديد مقارنة بلوحة العُقد في ComfyUI.',
           '**القارئ الذي يريد تحكمًا محليًا كاملًا وخصوصية.** بمجرد التثبيت، يتم التوليد بالكامل على معالج الرسومات الخاص بك؛ ولا يغادر أي نص توجيهي أو بيانات صورة جهازك ما لم تُثبّت إضافة تفعل ذلك.',
           '**القارئ ذو الميزانية المحدودة الذي يريد تكلفة ترخيص صفرية للواجهة نفسها.** يعني AGPL-3.0 أن البرنامج مجاني للاستخدام والتعديل وإعادة التوزيع، دون أي نوع من الاشتراك.',
@@ -2182,9 +2292,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'لمن لا يناسب AUTOMATIC1111',
         items: [
-          '**القارئ الذي يريد دعمًا من اليوم الأول لأحدث بنى النماذج.** بالنظر إلى وتيرة الإصدار الأبطأ للمشروع الأساسي منذ منتصف 2024، مال دعم النماذج الجديدة إلى الظهور أولًا في نسخ مشتقة قيد التطوير الفعّال مثل Forge وComfyUI وSD.Next — قيّم هذه الخيارات إذا كان دعم أحدث النماذج هو الأهم بالنسبة لك.',
+          '**القارئ الذي يريد دعم أحدث معماريات النماذج.** مع غياب أي تحديث منذ 2 مارس 2026، من الأرجح أن يظهر دعم النماذج الجديدة أولًا في أدوات تُطوَّر بنشاط مثل ComfyUI أو InvokeAI أو SD.Next — قارن بينها أولًا.',
           '**القارئ الذي يريد تطبيقًا بنقرة واحدة دون أي تعامل مع سطر الأوامر.** يتطلب التثبيت Python وGit، وعلى بعض الأنظمة استكشاف يدوي لمشاكل إصدارات الاعتماديات وحلها — القراء الراغبون في تجربة تطبيق استهلاكي مصقول بالكامل قد يفضّلون مثبّت Fooocus المبسّط أو أداة سحابية بدلًا من ذلك.',
-          '**القارئ الذي يحتاج إلى إصلاحات أخطاء نشطة ومضمونة في المستودع الأساسي وفق جدول زمني يمكن التنبؤ به.** مع أكثر من 2,500 مشكلة مفتوحة وعدم صدور إصدار موسوم جديد منذ يوليو 2024 على فرع `master`، لا ينبغي للقراء ذوي متطلبات الموثوقية الصارمة افتراض معالجة سريعة لخلل مُبلَّغ عنه حديثًا.',
+          '**القارئ الذي يحتاج إلى إصلاحات أخطاء نشطة ومضمونة في المستودع الأساسي وفق جدول زمني يمكن التنبؤ به.** مع أكثر من 2,400 مشكلة مفتوحة وعدم صدور إصدار موسوم جديد منذ يوليو 2024 على فرع `master`، لا ينبغي للقراء ذوي متطلبات الموثوقية الصارمة افتراض معالجة سريعة لخلل مُبلَّغ عنه حديثًا.',
           '**القارئ الذي يريد أقصى تحكم في سير العمل عبر خطوط أنابيب متعددة الخطوات.** يوفّر نهج الرسم البياني للعُقد في ComfyUI عمومًا تحكمًا أدق في خطوط أنابيب التوليد المعقدة متعددة المراحل مقارنة بتخطيط تبويبات AUTOMATIC1111.',
           '**الفريق المؤسسي الذي يحتاج إلى منتج مدعوم من مورّد مع اتفاقية مستوى خدمة (SLA).** AUTOMATIC1111 مشروع مجتمعي دون عقد دعم رسمي أو مستوى مدفوع أو اتفاقية مستوى خدمة — ينبغي للفرق التي تحتاج دعمًا تعاقديًا تقييم منتج تجاري سحابي لتوليد الصور بدلًا من ذلك.',
         ],
@@ -2199,7 +2309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل ما زال AUTOMATIC1111 تحت الصيانة في 2026؟',
-            a: 'تباطأ فرعه الأساسي `master` بشكل ملحوظ: صدر آخر إصدار موسوم، v1.10.1، في يوليو 2024، ونُشرت ملاحظات الإصدار في فبراير 2025، ولم يصدر إصدار موسوم جديد بعده حتى سبتمبر 2026. استمر فرع `dev` في تلقّي تحديثات عرضية، كان آخرها في مارس 2026. تذكر أشهر نسخة مشتقة منه، وهي Forge، في ملف README الخاص بها أن "SD-WebUI الأصلي أصبح شبه ثابت الآن". لا يزال يعمل ويُستخدم على نطاق واسع، لكن القراء الراغبين في أسرع التحديثات ينبغي أيضًا النظر في بدائل قيد التطوير الفعّال مثل Forge وComfyUI وSD.Next.',
+            a: 'لم يُنشر أي تحديث منذ 2 مارس 2026. نُشر آخر إصدار موسوم v1.10.1 في 9 فبراير 2025، ولا توجد التزامات في فرع `dev` منذ 2 مارس 2026. يصف README الخاص بـ Forge الأصل بأنه «almost static now»، وForge نفسه لم يتلقَّ أي دفعة منذ 31 يوليو 2025. ما زال يعمل، لكن تعامل معه على أنه قد يكون غير مصان وقارن ComfyUI أو InvokeAI أو SD.Next.',
           },
           {
             q: 'هل AUTOMATIC1111 مجاني؟',
@@ -2215,7 +2325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما الفرق بين AUTOMATIC1111 وForge؟',
-            a: 'Forge نسخة مشتقة من قاعدة شيفرة AUTOMATIC1111، أنشأها المطوّر lllyasviel خصيصًا لإضافة تحسينات في الأداء ودعم أسرع للنماذج الجديدة. وفقًا لملف README الخاص بـ Forge نفسه، فإنه يتزامن دوريًا مع مشروع AUTOMATIC1111 الأصلي (نحو كل 90 يومًا أو عند وجود إصلاحات مهمة) بدلًا من التزامن المستمر، ويصف مطوّره المشروع الأصلي بأن تطويره أصبح أبطأ بشكل ملحوظ. يُعد Forge عمومًا الخيار الأفضل للقراء الراغبين في واجهة تشبه AUTOMATIC1111 مع تطوير مستمر أكثر نشاطًا.',
+            a: 'Forge نسخة متفرعة من شيفرة AUTOMATIC1111، بناها lllyasviel لإضافة تحسينات الأداء ودعم نماذج أحدث مثل Flux. بحسب README الخاص به، يتزامن مع الأصل كل 90 يومًا تقريبًا أو عند الإصلاحات المهمة. وكانت آخر دفعة له على GitHub في 31 يوليو 2025، وأحدث إصدار له على GitHub بتاريخ 5 فبراير 2024، فلم يعد خيارًا أكثر نشاطًا بوضوح — راجع مستودعه قبل اختياره.',
           },
           {
             q: 'ما الفرق بين AUTOMATIC1111 وComfyUI؟',
@@ -2225,13 +2335,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'من أين أنزّل AUTOMATIC1111؟',
             a: 'المصدر الرسمي هو [مستودع AUTOMATIC1111/stable-diffusion-webui على GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui)، الذي يتضمن الشيفرة وويكي تثبيت وروابط لتعليمات إعداد خاصة بعتاد NVIDIA وAMD وIntel وApple Silicon. ستحتاج إلى تنزيل أوزان نموذج Stable Diffusion بشكل منفصل (مثلًا من Hugging Face) لاستخدامه.',
           },
+          {
+            q: 'هل ما زال Stable Diffusion WebUI Forge مصانًا؟',
+            a: 'كانت آخر دفعة له على GitHub في 31 يوليو 2025، وأحدث إصدار له على GitHub بتاريخ 5 فبراير 2024. ويذكر README أنه مبني على SD-WebUI 1.10.1. راجع المستودع بحثًا عن نشاط أحدث قبل اختياره.',
+          },
+          {
+            q: 'هل ما زالت إضافة ControlNet لـ AUTOMATIC1111 مصانة؟',
+            a: 'تلقّى مستودع sd-webui-controlnet آخر دفعة في 12 أغسطس 2024 ولا توجد له إصدارات على GitHub. ما زالت شائعة الاستخدام، لكن راجع مستودعها ومشكلاتها المفتوحة قبل الاعتماد عليها في سير عمل إنتاجي.',
+          },
         ],
       },
       verdict: {
         id: 'verdict',
         title: 'الحكم النهائي',
         content:
-          'استحق AUTOMATIC1111 مكانته كواجهة محلية افتراضية لـ Stable Diffusion لكونه السبّاق، ولا يزال النظام الناتج عن ذلك — وعلى رأسه إضافة ControlNet، إلى جانب آلاف الأدوات المجتمعية والدروس التعليمية وإجابات المنتديات الأخرى — أكبر ميزة له في 2026. مع ذلك، يجب على مراجعة صادقة أن تذكر بوضوح ما تُظهره الأدلة: تباطأت وتيرة تطوير المشروع الأساسي بشكل ملحوظ منذ منتصف 2024، دون صدور أي إصدار موسوم جديد منذ v1.10.1، وتصفه أشهر نسخة مشتقة منه بأنه "شبه ثابت الآن". ومع ذلك، لا يزال يُثبَّت، ولا يزال يعمل، ولا يزال ينتج نتائج جيدة مع نقاط تفتيش SD 1.5 وSDXL، لذا فإن القراء الذين يستخدمونه بالفعل ليس لديهم سبب ملحّ للتبديل. لكن القراء الذين يبدأون من الصفر في 2026، وخصوصًا من يريدون أحدث بنى النماذج أو أسرع معالجة للأخطاء، ينبغي أن يقيّموا بجدية Forge وComfyUI وSD.Next إلى جانبه، بدلًا من اختيار AUTOMATIC1111 لمجرد شهرة اسمه.',
+          'استحق AUTOMATIC1111 مكانته واجهةً محلية افتراضية لـ Stable Diffusion لأنه كان الأول، وما زال نظامه البيئي — وفي مقدمته إضافة ControlNet، إلى جانب آلاف الأدوات المجتمعية والشروحات وإجابات المنتديات — أكبر أصوله. لكن المشروع لم يتلقَّ أي تحديث منذ 2 مارس 2026، وآخر إصدار موسوم له v1.10.1، ونسخته المتفرعة Forge لم تتلقَّ أي دفعة منذ 31 يوليو 2025، وآخر دفعة تلقتها إضافة ControlNet الرئيسية كانت في 12 أغسطس 2024. ما زال يُثبَّت ويعمل مع نقاط SD 1.5 وSDXL، فلا يوجد سبب عاجل للتحول لمن يستخدمه بالفعل. أما من يبدأ من جديد فعليه مقارنة ComfyUI وInvokeAI وSD.Next، وهي تُطوَّر بنشاط، بدل اختيار AUTOMATIC1111 لمجرد شهرته، وأن يتأكد أولًا من أنه يعمل مع بطاقته الرسومية ونموذجه.',
       },
       sources: {
         id: 'sources',
@@ -2260,17 +2378,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/automatic1111-review-hero-zh.webp',
     title: 'AUTOMATIC1111评测：详解Stable Diffusion WebUI',
-    seoTitle: 'AUTOMATIC1111评测：Stable Diffusion WebUI指南',
+    seoTitle: 'AUTOMATIC1111评测：安装、维护状态与替代品',
     intro:
       'AUTOMATIC1111——正式名称为"Stable Diffusion web UI"——是一款免费、开源、采用标签页布局的Web界面，用于在自己的GPU上运行Stable Diffusion模型。它于2022年8月22日在GitHub上发布，比Stable Diffusion公开发布晚了一个月，成为第一个被广泛采用的本地图像生成图形前端，并且至今仍被第三方评测称为该类别中使用最广泛、文档最完善的选择之一，这得益于其庞大的扩展生态系统（ControlNet、LoRA训练以及数千个社区脚本）。本评测将说明AUTOMATIC1111究竟是什么，它与Stable Diffusion模型本身以及ComfyUI、Forge、InvokeAI等更新的界面有何不同，展望2026年的真实维护状态、许可条款、硬件需求，并诚实地说明如今谁应该——以及谁不应该——使用它。',
     metaDescription:
-      'AUTOMATIC1111评测2026：Stable Diffusion WebUI究竟是什么、经过核实的维护状态（最后提交与发布日期）、AGPL-3.0许可、ControlNet扩展、硬件需求，以及与Forge、ComfyUI、InvokeAI的对比。',
+      'AUTOMATIC1111评测：Stable Diffusion WebUI 是什么、经核实的维护状态、AGPL-3.0 许可证、ControlNet、硬件需求以及可选替代品对比。',
     twitterDescription:
       'AUTOMATIC1111评测2026：详解最初的Stable Diffusion WebUI——经核实的维护状态、许可、扩展生态系统、硬件需求，以及与Forge、ComfyUI、InvokeAI的对比。',
     audience:
@@ -2291,20 +2409,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion 1.5', 'Stable Diffusion XL', 'ControlNet', 'Stable Diffusion WebUI Forge', 'ComfyUI', 'InvokeAI', 'Fooocus'],
     current_hardware_mentioned: ['2 GB VRAM', '4 GB VRAM', '6 GB VRAM', '8 GB VRAM', '12 GB VRAM', 'NVIDIA RTX 3060', 'NVIDIA RTX 4090'],
     leadAnswerBlock:
-      '**AUTOMATIC1111（Stable Diffusion web UI）是一款免费、开源、标签页式的Web界面，用于在本地运行Stable Diffusion模型——它是界面，而不是模型本身。** 它于2022年8月22日发布，采用AGPL-3.0许可，仅支持自托管，没有任何官方付费层级。凭借以ControlNet扩展为首的扩展生态系统，它仍然是文档最完善的选项之一。自2024年年中以来，其核心代码库的开发速度明显放缓：最后一个带标签的版本v1.10.1于2024年7月发布（发布说明于2025年2月发布），截至2026年9月，`master`分支没有再发布过新版本，而正在积极开发的`dev`分支则持续收到提交，最近一次是在2026年3月。它自己最受欢迎的分支Forge在其README中直接指出"original SD-WebUI is almost static now"（"原始SD-WebUI现在几乎处于静止状态"）。在假定其持续积极开发之前，请在[GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui)上核实当前的活跃度。',
+      '**警告：AUTOMATIC1111 自 2026 年 3 月 2 日起没有更新（最新版本 v1.10.1，发布于 2025 年 2 月 9 日），可能已无人维护——使用前请先确认。** **AUTOMATIC1111（Stable Diffusion web UI）是在本地运行 Stable Diffusion 模型的免费开源（AGPL-3.0）浏览器界面，而不是模型本身。**',
     quickAnswerTop: {
       zh: {
         question: 'AUTOMATIC1111还在维护吗？它和Stable Diffusion是同一回事吗？',
         answer:
-          '不，AUTOMATIC1111不是Stable Diffusion——它是一个独立的、免费开源的Web界面（UI），加载Stable Diffusion的模型权重，让你可以通过浏览器标签页生成图像。其核心`master`分支自2024年7月的v1.10.1以来没有收到过新的带标签版本，不过`dev`分支仍在以较低频率持续接收提交，最近一次是在2026年3月。使用最广泛的分支Forge在自己的文档中将原始项目描述为"现在几乎处于静止状态"。它仍然可以正常使用，也依然被广泛使用，但如果读者想要最新的模型架构或最快的更新，也应该评估Forge、ComfyUI或SD.Next等仍在积极维护的替代方案。',
+          '自 2026 年 3 月 2 日起没有发布任何更新。AUTOMATIC1111 不是 Stable Diffusion：它是一个独立的免费开源网页界面，加载 Stable Diffusion 模型权重，并让你在浏览器标签页中生成图像。其最新的带标签版本 v1.10.1 发布于 2025 年 2 月 9 日，`dev` 分支自 2026 年 3 月 2 日起没有新的提交。使用最多的分支 Forge 称原项目“almost static now”，但 Forge 自身也已自 2025 年 7 月 31 日起没有推送。它在许多配置下仍能工作；需要更新的模型架构的读者应比较 ComfyUI、InvokeAI 或 SD.Next。',
         bullets: [
           'AUTOMATIC1111是界面/前端，不是模型——你仍然需要单独下载Stable Diffusion的权重并加载到其中。',
-          '已在GitHub上核实：最后一个带标签的版本（v1.10.1）于2024年7月发布；`dev`分支最近一次提交是在2026年3月——在只依赖本文之前，请直接查看该仓库。',
+          '已在 GitHub 上核实：最新的带标签版本（v1.10.1）发布于 2025 年 2 月 9 日，`dev` 分支的最后一次提交是 2026 年 3 月 2 日——请查看仓库了解当前状态。',
           '在AGPL-3.0许可下免费且开源；不存在任何官方付费层级或托管方案。',
           '扩展生态系统——尤其是用于引导姿势和构图的ControlNet扩展——是它在核心开发放缓的情况下仍被广泛使用的主要原因。',
-          '存在仍在积极维护的替代方案：Forge（专为添加AUTOMATIC1111所没有的功能而打造的分支）、ComfyUI和SD.Next在2026年都获得了更频繁的提交。',
+          '仍在积极维护的替代品：ComfyUI、InvokeAI 和 SD.Next 都在 2026-11-02 有推送，而基于 AUTOMATIC1111 的分支 Forge 自 2025 年 7 月 31 日起没有推送。',
         ],
-        updatedDate: '2026-09-06',
+        updatedDate: '2026-11-02',
       },
     },
     toc: [
@@ -2333,9 +2451,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'AUTOMATIC1111（Stable Diffusion web UI）是一款免费、开源、标签页式的Web界面，用于在本地运行Stable Diffusion——它是前端应用程序，而不是模型本身。',
           '由一位使用"AUTOMATIC1111"这一化名的匿名开发者于2022年8月22日在GitHub上发布，比Stable Diffusion公开发布晚一个月，填补了本地图形界面的空白。',
           '采用AGPL-3.0许可。仅支持自托管，没有任何官方付费层级或托管方案。',
-          '其核心代码库自2024年年中以来开发速度放缓：最后一个带标签的版本（v1.10.1）于2024年7月发布，正在积极开发的`dev`分支最近一次提交是在2026年3月——请在GitHub上核实当前状态，而不要假定情况没有变化。',
+          '其主代码库自 2024 年中以来明显放缓：最新的带标签版本（v1.10.1）发布于 2025 年 2 月 9 日，`dev` 分支的最后一次提交是 2026 年 3 月 2 日——请查看 GitHub 了解当前状态。',
           '扩展生态系统，尤其是用于姿势/构图引导的ControlNet扩展，是它保留下来的最大优势——在所有本地图像生成界面中，属于规模最大、文档最完善的社区扩展集合之一。',
-          '存在仍在积极维护的分支与替代方案——包括Forge、ComfyUI、InvokeAI和SD.Next——供希望更快获得对更新模型架构支持的读者选择。',
+          '仍在积极维护的替代品包括 ComfyUI、InvokeAI 和 SD.Next（2026-11-02 有推送）；AUTOMATIC1111 的分支 Forge 自 2025 年 7 月 31 日起没有推送。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '自 2026 年 3 月 2 日起没有更新（最新版本 v1.10.1，发布于 2025 年 2 月 9 日）。AUTOMATIC1111 可能已无人维护：在依赖它之前，请确认它仍能在你的 GPU 和模型上正常运行。',
+          },
         ],
       },
       whatIsAutomatic1111: {
@@ -2357,7 +2481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '历史：AUTOMATIC1111为何存在',
         content: [
           'Stability AI、慕尼黑大学（LMU）的CompVis研究小组以及Runway ML于2022年8月22日公开发布了Stable Diffusion。发布之初，Stable Diffusion是以模型权重和命令行脚本的形式提供的——当时并没有官方的图形界面可以让用户输入提示词并点击按钮。',
-          'AUTOMATIC1111在同一天，即2022年8月22日，在GitHub上发布了Stable Diffusion web UI的第一个版本，它在早期社区脚本的基础上，加入了基于Gradio的浏览器界面。这个时机让它恰好出现在正确的时间点：随着Stable Diffusion的人气在2022年底爆炸式增长，AUTOMATIC1111的界面成为大多数爱好者实际使用它的默认方式，短短几个月内积累了数万个GitHub星标，截至2026年9月已超过164,000个星标——在本地AI图像生成类别中属于星标数最高的仓库之一。',
+          `AUTOMATIC1111在同一天，即2022年8月22日，在GitHub上发布了Stable Diffusion web UI的第一个版本，它在早期社区脚本的基础上，加入了基于Gradio的浏览器界面。这个时机让它恰好出现在正确的时间点：随着Stable Diffusion的人气在2022年底爆炸式增长，AUTOMATIC1111的界面成为大多数爱好者实际使用它的默认方式，短短几个月内积累了数万个GitHub星标，目前已超过${ST.zh('automatic1111-webui', 'bare')}个星标——在本地AI图像生成类别中属于星标数最高的仓库之一。`,
           '由于率先进入市场并吸引了早期大部分社区贡献、扩展开发者和教程作者，AUTOMATIC1111成为事实上的标准参考实现——后来的界面（Forge、ComfyUI的扩展以及社区文档网站）在描述功能和工作流时，至今仍然会以它作为参照，即便这些较新的工具已经采用了不同的技术路线。',
         ],
       },
@@ -2383,23 +2507,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '维护状态：经核实',
         itemHeadings: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: '自2024年年中以来，AUTOMATIC1111的核心代码库开发速度明显放缓——最后一个带标签的版本是2024年7月的v1.10.1，而它自己最受欢迎的分支在自身文档中将原始项目描述为"现在几乎处于静止状态"。' },
-          { type: 'plain-terms', text: '该项目仍在运行，也仍被广泛使用，但新功能和对更新模型类型的支持，如今往往会先出现在Forge等分支中，然后才（如果真的会）到达AUTOMATIC1111的原始代码库。' },
+          { type: 'one-sentence', text: 'AUTOMATIC1111 自 2026 年 3 月 2 日起没有更新：最新的带标签版本是 v1.10.1（发布于 2025 年 2 月 9 日），其最受欢迎的分支在自己的 README 中称原项目“almost static now”。' },
+          { type: 'plain-terms', text: '该项目仍可运行且使用广泛，但自 2026 年 3 月 2 日起没有人推送过更新，因此对新模型类型的支持更可能先出现在 ComfyUI、InvokeAI 或 SD.Next 等积极开发的工具中。' },
         ],
         columns: ['信号', '经核实的状态', '来源'],
         rows: [
           { '信号': '最后一个带标签的版本', '经核实的状态': 'v1.10.1——代码来自2024年7月27日；发布说明于2025年2月9日公布', '来源': '[GitHub releases](https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases)' },
           { '信号': '`master`分支的最后一次提交', '经核实的状态': '2024年7月27日', '来源': '[GitHub提交历史](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commits/master)' },
-          { '信号': '`dev`分支的最后一次提交', '经核实的状态': '2026年3月2日——变慢了，但并未被放弃', '来源': 'GitHub提交历史（引用前请核实当前日期）' },
-          { '信号': '开放的Issue数量', '经核实的状态': '截至2026年9月，超过2,500个处于开放状态', '来源': '[GitHub issues](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues)' },
+          { '信号': '`dev`分支的最后一次提交', '经核实的状态': '2026 年 3 月 2 日（合并 PR #17313）；此后 `dev` 没有新提交', '来源': 'GitHub提交历史（引用前请核实当前日期）' },
+          { '信号': '开放的Issue数量', '经核实的状态': '2,429 个开放（GitHub issue 搜索，2026-11-02）', '来源': '[GitHub issues](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues)' },
           { '信号': '分支维护者自己的评价', '经核实的状态': '"Because original SD-WebUI is almost static now, Forge will sync with original WebUI every 90 days, or when important fixes"——直接引自Forge项目自己的README', '来源': '[Forge README](https://github.com/lllyasviel/stable-diffusion-webui-forge)' },
+          { '信号': 'Forge（分支）最后一次推送', '经核实的状态': '2025 年 7 月 31 日；其最新的 GitHub release 日期为 2024 年 2 月 5 日', '来源': '[Forge on GitHub](https://github.com/lllyasviel/stable-diffusion-webui-forge)' },
+          { '信号': 'ControlNet 扩展最后一次推送', '经核实的状态': '2024 年 8 月 12 日；没有 GitHub release', '来源': '[GitHub 上的 sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet)' },
         ],
         content: [
-          '本节呈现的是撰写本文时通过GitHub API直接核实到的信息，而不是转述二手说法。整体情况既不是"像主流产品那样积极开发"，也不是"已被放弃"——而是介于两者之间：大多数一键安装程序和现有文档指向的稳定`master`分支，自2024年7月以来没有收到过新的带标签版本；而用于在正式合并之前测试改动的`dev`分支，仍在持续接收提交，只是节奏明显比2022至2023年慢得多。',
-          '最可信的外部信号来自Forge的开发者lllyasviel——Forge正是专门基于AUTOMATIC1111代码库构建的一个分支。Forge自己的README指出，它将"每90天与原始WebUI同步一次，或在有重要修复时同步"，其直接原因正如分支维护者自己所说的那样，"原始SD-WebUI现在几乎处于静止状态"。这是一个关系密切的项目的维护者对AUTOMATIC1111开发节奏的评价，而不是传闻——应将其视为一个有力、但并非决定性的信号。',
-          '这些都不意味着AUTOMATIC1111已经停止运行。对于SD 1.5和SDXL工作流，它依然功能完备；即便核心项目不再活跃，它的扩展生态系统仍然活跃；它的安装基数和教程覆盖面依然大于大多数替代方案。这一切的实际影响关乎未来，而非当下：如果读者需要在新架构模型推出的第一天就获得支持，或需要积极的漏洞修复响应速度，就应该将这一点与下方对比表中涉及的Forge、ComfyUI、SD.Next等仍在积极维护的分支进行权衡。',
+          '本节说明的是 2026-11-02 能直接通过 GitHub API 核实的内容，而不是转述二手说法。AUTOMATIC1111 自 2026 年 3 月 2 日起没有更新：多数一键安装包和文档所指向的稳定 `master` 分支自 2024 年 7 月 27 日起没有变化，`dev` 分支在 2026 年 3 月 2 日之后也没有提交。仓库没有被归档，维护者也没有宣布放弃，但应将其视为可能已无人维护。',
+          '最可信的外部信号来自 Forge 的开发者 lllyasviel，Forge 是基于 AUTOMATIC1111 代码库的分支。Forge 的 README 写道它会“sync with original WebUI every 90 days, or when important fixes”，原因是“original SD-WebUI is almost static now”。这是分支维护者对 AUTOMATIC1111 开发节奏的描述，而不是传言。Forge 自身也已自 2025 年 7 月 31 日起没有推送，因此它不再能证明存在活跃的替代品。',
+          '这并不意味着 AUTOMATIC1111 会停止工作。它在 Stable Diffusion 1.5 和 SDXL 工作流中仍然可用，其用户基数和教程覆盖面也仍然大于多数替代品。实际影响在于未来：需要支持更新模型架构或快速修复漏洞的读者，应使用下面的对比表比较在 2026-11-02 都有推送的 ComfyUI、InvokeAI 和 SD.Next。',
         ],
-        note: 'GitHub的活动数据（提交日期、发布日期、开放Issue数量）在持续变化——上述数字于2026年9月6日通过GitHub API直接核实。在依据本表做出对时间敏感的决策之前，请直接查看[该仓库](https://github.com/AUTOMATIC1111/stable-diffusion-webui)以获取最新数字。',
+        note: 'GitHub 活跃度数据在不断变化：上述数字已于 2026-11-02 通过 GitHub API 核实。在依据此表做出时间敏感的决定之前，请查看[仓库](https://github.com/AUTOMATIC1111/stable-diffusion-webui)获取当前数值。',
       },
       extensionsControlnet: {
         id: 'extensions-controlnet',
@@ -2446,14 +2572,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '选项': 'AUTOMATIC1111（Stable Diffusion web UI）',
             '最适合': '规模最大之一的教程与扩展积累，标签页式的简洁操作',
-            '维护节奏（2026年）': '核心`master`自2024年年中以来放缓；`dev`分支仍偶尔收到提交',
+            '维护节奏（2026年）': '自 2026 年 3 月 2 日起没有更新；`master` 自 2024 年 7 月 27 日起未变',
             '许可证': 'AGPL-3.0',
             '主要权衡': '文档最完善的选项，但对新模型的支持往往先出现在分支中',
           },
           {
             '选项': '[Stable Diffusion WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)',
             '最适合': '与AUTOMATIC1111类似但对新功能和新模型支持更快的界面',
-            '维护节奏（2026年）': '比原始AUTOMATIC1111更活跃；据其自身README会定期与其同步',
+            '维护节奏（2026年）': '自 2025 年 7 月 31 日起没有推送；最新 GitHub release 为 2024 年 2 月 5 日',
             '许可证': 'AGPL-3.0',
             '主要权衡': '社区规模小于AUTOMATIC1111本身；仍大体沿用原始代码库的整体结构',
           },
@@ -2474,7 +2600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '选项': '[Fooocus](https://github.com/lllyasviel/Fooocus)',
             '最适合': '以最少的点击获得可用的图像，配置最少',
-            '维护节奏（2026年）': '发布节奏较慢，功能范围有意收窄',
+            '维护节奏（2026年）': '最后一次推送为 2025 年 12 月 1 日；最新版本 v2.5.5（2024 年 8 月 12 日）',
             '许可证': 'GPL-3.0',
             '主要权衡': '为换取简洁性，有意减少了设置项和扩展支持',
           },
@@ -2486,14 +2612,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '主要权衡': '尽管在功能上与AUTOMATIC1111相当甚至更优，但社区和教程基础更小',
           },
         ],
-        note: '维护节奏基于截至2026年9月6日在GitHub上核实的公开提交和发布活动，可能会发生变化——在仅凭活跃程度做出选择之前，请查看每个项目自己的仓库。关于底层模型的对比，请参阅[Stable Diffusion评测](/zh/power-local-llm/stable-diffusion-review)；关于本地与云端的权衡，请参阅[本地AI图像生成对比云端](/zh/power-local-llm/local-ai-image-generation-vs-cloud)。',
+        note: '维护节奏基于 2026-11-02 在 GitHub 上核实的公开推送和发布记录，可能会变化——仅凭活跃度做选择之前，请查看各项目自己的仓库。底层模型对比请见[Stable Diffusion 评测](/power-local-llm/stable-diffusion-review)，本地与云端的取舍请见[本地 AI 图像生成与云端对比](/power-local-llm/local-ai-image-generation-vs-cloud)。',
       },
       whoShouldUse: {
         id: 'who-should-use',
         title: '谁应该使用AUTOMATIC1111',
         items: [
           '**希望获得规模最大之一的教程基础和社区解答的读者。** 由于最早进入市场、拥有最长的安装历史，大量关于Stable Diffusion界面的论坛帖子、YouTube教程和类似Stack Overflow的解答都专门提到了AUTOMATIC1111。',
-          '**希望使用ControlNet和成熟扩展目录的读者。** ControlNet扩展以及其他数千个社区插件仍在被积极使用，在许多情况下也被积极维护，即便核心项目的提交较少。',
+          '**想要 ControlNet 和成熟扩展目录的读者。** ControlNet 扩展和数千个其他社区插件使用广泛；依赖某个扩展之前请查看它自己的仓库，因为主要的 ControlNet 扩展最后一次推送是在 2024 年 8 月 12 日。',
           '**更喜欢标签页界面而不是节点图的读者。** AUTOMATIC1111的布局——将文本字段、滑块和按钮组织在标签页中——对初次使用的用户来说，通常比ComfyUI基于节点的画布更容易上手。',
           '**希望完全本地控制和隐私的读者。** 安装完成后，生成过程完全在你自己的GPU上进行；除非你安装了会这样做的扩展，否则不会有任何提示词或图像数据离开你的机器。',
           '**预算有限、希望界面本身零许可成本的读者。** AGPL-3.0意味着该软件可以免费使用、修改和再分发，无需任何形式的订阅。',
@@ -2503,9 +2629,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: '谁不应该使用AUTOMATIC1111',
         items: [
-          '**希望在新模型架构推出当天就获得支持的读者。** 鉴于核心项目自2024年年中以来发布节奏放缓，对新模型的支持往往会先出现在Forge、ComfyUI或SD.Next等仍在积极维护的分支中——如果最前沿的模型支持对你最重要，请评估这些选项。',
+          '**想要支持最新模型架构的读者。** 由于自 2026 年 3 月 2 日起没有更新，对新模型的支持更可能先出现在 ComfyUI、InvokeAI 或 SD.Next 等积极开发的工具中——请先比较它们。',
           '**希望完全不接触命令行、一键即用的读者。** 安装需要Python和Git，在某些系统上还需要手动排查依赖版本问题——希望获得完全打磨的消费级应用体验的读者，可能更适合Fooocus的简化安装程序或某个云端工具。',
-          '**需要按可预测时间表获得有保证的活跃核心仓库漏洞修复的读者。** 由于`master`分支上有超过2,500个开放Issue，且自2024年7月以来没有发布过新的带标签版本，对可靠性有严格要求的读者不应假定新报告的漏洞会得到快速处理。',
+          '**需要按可预测时间表获得有保证的活跃核心仓库漏洞修复的读者。** 由于`master`分支上有超过2,400个开放Issue，且自2024年7月以来没有发布过新的带标签版本，对可靠性有严格要求的读者不应假定新报告的漏洞会得到快速处理。',
           '**希望对多步骤流水线拥有最大工作流控制权的读者。** 相比AUTOMATIC1111的标签页布局，ComfyUI的节点图方式通常能对复杂的多阶段生成流水线提供更精确的控制。',
           '**需要有厂商支持并附带SLA的企业团队。** AUTOMATIC1111是一个社区项目，没有官方支持合同、付费层级或服务级别协议——需要合同保障支持的团队应该改为评估商用的云端图像生成产品。',
         ],
@@ -2520,7 +2646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'AUTOMATIC1111在2026年还在维护吗？',
-            a: '其核心`master`分支明显放缓：最后一个带标签的版本v1.10.1于2024年7月发布，发布说明于2025年2月公布，此后截至2026年9月都没有再发布新的带标签版本。`dev`分支仍在偶尔收到提交，最近一次是在2026年3月。使用最广泛的分支Forge在其README中表示"原始SD-WebUI现在几乎处于静止状态"。它仍然可以正常运行、也仍被广泛使用，但如果读者希望获得最快的更新，也应该考虑Forge、ComfyUI或SD.Next等仍在积极维护的替代方案。',
+            a: '自 2026 年 3 月 2 日起没有发布任何更新。其最新的带标签版本 v1.10.1 发布于 2025 年 2 月 9 日，`dev` 分支自 2026 年 3 月 2 日起没有提交。Forge 的 README 称原项目“almost static now”，而 Forge 自身也已自 2025 年 7 月 31 日起没有推送。它仍可使用，但应视为可能已无人维护，并比较 ComfyUI、InvokeAI 或 SD.Next。',
           },
           {
             q: 'AUTOMATIC1111免费吗？',
@@ -2536,7 +2662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'AUTOMATIC1111和Forge有什么区别？',
-            a: 'Forge是AUTOMATIC1111代码库的一个分支，由开发者lllyasviel专门打造，用于添加性能优化并更快支持新模型。根据Forge自己的README，它会定期（大约每90天，或在有重要修复时）与原始AUTOMATIC1111项目同步，而不是持续同步，其维护者认为原始项目的开发速度明显更慢。对于希望获得类似AUTOMATIC1111的界面、同时拥有更活跃的持续开发的读者来说，Forge通常是更好的选择。',
+            a: 'Forge 是 AUTOMATIC1111 代码库的分支，由 lllyasviel 创建，用来增加性能优化和对 Flux 等较新模型的支持。根据其 README，它大约每 90 天或在有重要修复时与原项目同步。它在 GitHub 上最后一次推送是在 2025 年 7 月 31 日，最新的 GitHub release 日期为 2024 年 2 月 5 日，因此已不再是明显更活跃的选择——选择之前请查看它的仓库。',
           },
           {
             q: 'AUTOMATIC1111和ComfyUI有什么区别？',
@@ -2546,13 +2672,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '在哪里下载AUTOMATIC1111？',
             a: '官方来源是[GitHub上的AUTOMATIC1111/stable-diffusion-webui仓库](https://github.com/AUTOMATIC1111/stable-diffusion-webui)，其中包含代码、安装Wiki，以及针对NVIDIA、AMD、Intel和Apple Silicon硬件的特定安装说明链接。你还需要单独下载Stable Diffusion模型权重（例如从Hugging Face）才能使用它。',
           },
+          {
+            q: 'Stable Diffusion WebUI Forge 还在维护吗？',
+            a: '它在 GitHub 上最后一次推送是在 2025 年 7 月 31 日，最新的 GitHub release 日期为 2024 年 2 月 5 日。其 README 称它基于 SD-WebUI 1.10.1。选择之前，请查看仓库是否有更新的动态。',
+          },
+          {
+            q: 'AUTOMATIC1111 的 ControlNet 扩展还在维护吗？',
+            a: 'sd-webui-controlnet 仓库最后一次推送是在 2024 年 8 月 12 日，没有 GitHub release。它仍被广泛使用，但在生产工作流中依赖它之前，请查看其仓库和未解决的 issue。',
+          },
         ],
       },
       verdict: {
         id: 'verdict',
         title: '结论',
         content:
-          'AUTOMATIC1111凭借率先问世赢得了本地Stable Diffusion默认界面的地位，由此形成的生态系统——首先是ControlNet扩展，还有数千个其他社区工具、教程和论坛解答——在2026年依然是它最大的资产。话虽如此，一份诚实的评测必须直白地说明证据所显示的事实：核心项目的开发节奏自2024年年中以来明显放缓，自v1.10.1以来没有再发布过新的带标签版本，而它自己最受欢迎的分支也将其描述为"现在几乎处于静止状态"。它仍然可以安装、仍然可以运行，并且在SD 1.5和SDXL检查点上仍能产出良好的效果，因此已经在使用它的读者没有紧迫的理由需要更换。但对于在2026年从零开始的读者，尤其是那些希望获得最新模型架构或最快漏洞修复速度的读者，应该认真将Forge、ComfyUI或SD.Next与它一同评估，而不是仅凭名气默认选择AUTOMATIC1111。',
+          'AUTOMATIC1111 凭借“第一个出现”赢得了本地 Stable Diffusion 默认界面的地位，其生态——首推 ControlNet 扩展，加上数千个社区工具、教程和论坛回答——仍是它最大的资产。但该项目自 2026 年 3 月 2 日起没有更新，最新的带标签版本是 v1.10.1，其分支 Forge 自 2025 年 7 月 31 日起没有推送，主要的 ControlNet 扩展最后一次推送是在 2024 年 8 月 12 日。它仍可安装，并能在 SD 1.5 和 SDXL 检查点上运行，因此已经在用的读者没有急着切换的理由。新入门的读者应比较仍在积极开发的 ComfyUI、InvokeAI 和 SD.Next，而不是仅凭知名度默认选择 AUTOMATIC1111，并先确认它能在自己的 GPU 和模型上运行。',
       },
       sources: {
         id: 'sources',
@@ -2581,17 +2715,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/automatic1111-review-hero-ko.webp',
     title: 'AUTOMATIC1111 리뷰: Stable Diffusion WebUI 완전 정리',
-    seoTitle: 'AUTOMATIC1111 리뷰: Stable Diffusion WebUI 가이드',
+    seoTitle: 'AUTOMATIC1111 리뷰: 설치, 유지보수 상태, 대안',
     intro:
       'AUTOMATIC1111 — 공식 명칭 "Stable Diffusion web UI" — 는 자신의 GPU에서 Stable Diffusion 모델을 실행하기 위한 무료 오픈소스 탭 방식 웹 인터페이스입니다. Stable Diffusion 공개 출시 한 달 뒤인 2022년 8월 22일 GitHub에 공개되어 로컬 이미지 생성용으로 널리 채택된 최초의 그래픽 프런트엔드가 되었으며, ControlNet, LoRA 학습, 수천 개의 커뮤니티 스크립트로 이루어진 거대한 확장 기능 생태계 덕분에 제3자 리뷰에서도 여전히 이 카테고리에서 가장 많이 사용되고 문서화가 가장 잘된 옵션 중 하나로 꼽힙니다. 이 리뷰에서는 AUTOMATIC1111이 실제로 무엇인지, 모델 자체인 Stable Diffusion 및 ComfyUI·Forge·InvokeAI 같은 더 새로운 UI와 어떻게 다른지, 2026년을 앞둔 실제 유지보수 상태, 라이선스 조건, 하드웨어 요구 사항, 그리고 오늘날 누가 사용해야 하고 누가 사용하지 말아야 하는지에 대한 솔직한 안내를 다룹니다.',
     metaDescription:
-      'AUTOMATIC1111 리뷰 2026: Stable Diffusion WebUI가 실제로 무엇인지, 검증된 유지보수 상태(마지막 커밋·릴리스 날짜), AGPL-3.0 라이선스, ControlNet 확장 기능, 하드웨어 요구 사항, Forge·ComfyUI·InvokeAI와의 비교.',
+      'AUTOMATIC1111이 무엇인지, 확인된 유지보수 상태, AGPL-3.0 라이선스, ControlNet, 필요한 하드웨어, 대안과의 비교를 정리한 리뷰입니다.',
     twitterDescription:
       'AUTOMATIC1111 리뷰 2026: 원조 Stable Diffusion WebUI 완전 정리 — 검증된 유지보수 상태, 라이선스, 확장 기능 생태계, 하드웨어 요구 사항, Forge·ComfyUI·InvokeAI와의 비교.',
     audience:
@@ -2612,20 +2746,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion 1.5', 'Stable Diffusion XL', 'ControlNet', 'Stable Diffusion WebUI Forge', 'ComfyUI', 'InvokeAI', 'Fooocus'],
     current_hardware_mentioned: ['2 GB VRAM', '4 GB VRAM', '6 GB VRAM', '8 GB VRAM', '12 GB VRAM', 'NVIDIA RTX 3060', 'NVIDIA RTX 4090'],
     leadAnswerBlock:
-      '**AUTOMATIC1111(Stable Diffusion web UI)은 Stable Diffusion 모델을 로컬에서 실행하기 위한 무료 오픈소스 탭 방식 웹 인터페이스로, 모델 자체가 아니라 UI입니다.** 2022년 8월 22일 출시되었으며 AGPL-3.0 라이선스로 제공되고, 오직 셀프 호스팅만 가능하며 공식 유료 등급은 없습니다. ControlNet 확장 기능을 필두로 한 확장 기능 생태계 덕분에 여전히 문서화가 가장 잘된 옵션 중 하나입니다. 핵심 코드베이스는 2024년 중반 이후 눈에 띄게 개발 속도가 느려졌습니다. 마지막으로 태그가 지정된 릴리스인 v1.10.1은 2024년 7월에 나왔고(릴리스 노트는 2025년 2월에 공개), 2026년 9월 기준으로 `master` 브랜치에는 그 이후 새 릴리스가 없었던 반면, 활발히 개발 중인 `dev` 브랜치는 계속 커밋을 받아왔으며 가장 최근 커밋은 2026년 3월이었습니다. 가장 인기 있는 자체 포크인 Forge는 README에서 직접 "original SD-WebUI is almost static now"("원본 SD-WebUI는 이제 거의 정적인 상태다")라고 밝히고 있습니다. 지속적인 활발한 개발을 전제하기 전에 [GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui)에서 현재 활동을 확인하세요.',
+      '**경고: AUTOMATIC1111은 2026년 3월 2일 이후 업데이트가 없으며(최신 릴리스 v1.10.1, 2025년 2월 9일) 유지보수되지 않을 수 있습니다. 사용 전에 확인하시기 바랍니다.** **AUTOMATIC1111(Stable Diffusion web UI)은 Stable Diffusion 모델을 로컬에서 실행하는 무료 오픈소스(AGPL-3.0) 브라우저 인터페이스이며, 모델 자체가 아닙니다.**',
     quickAnswerTop: {
       ko: {
         question: 'AUTOMATIC1111은 아직도 유지보수되고 있나요? Stable Diffusion과 같은 것인가요?',
         answer:
-          '아닙니다. AUTOMATIC1111은 Stable Diffusion이 아닙니다 — Stable Diffusion 모델 가중치를 불러와 브라우저 탭에서 이미지를 생성할 수 있게 해주는 별도의 무료 오픈소스 웹 인터페이스(UI)입니다. 핵심 `master` 브랜치는 2024년 7월 v1.10.1 이후 새로 태그가 지정된 릴리스를 받지 못했지만, `dev` 브랜치는 빈도는 줄었어도 계속 커밋을 받아왔으며 가장 최근은 2026년 3월이었습니다. 가장 많이 사용되는 포크인 Forge는 자체 문서에서 원래 프로젝트를 "이제 거의 정적인 상태"라고 설명합니다. 여전히 작동하고 널리 사용되고 있지만, 최신 모델 아키텍처나 가장 빠른 업데이트를 원하는 독자라면 Forge, ComfyUI, SD.Next 같은 활발히 유지보수되는 대안도 함께 평가해야 합니다.',
+          '2026년 3월 2일 이후 공개된 업데이트가 없습니다. AUTOMATIC1111은 Stable Diffusion이 아니라, Stable Diffusion 모델 가중치를 불러와 브라우저 탭에서 이미지를 생성하는 별도의 무료 오픈소스 웹 인터페이스입니다. 마지막 태그 릴리스인 v1.10.1은 2025년 2월 9일에 공개되었고, `dev` 브랜치에는 2026년 3월 2일 이후 커밋이 없습니다. 가장 많이 쓰이는 포크인 Forge는 원본을 "almost static now"라고 부르지만, Forge 자신도 2025년 7월 31일 이후 푸시가 없습니다. 많은 환경에서 여전히 작동하지만, 더 새로운 모델 아키텍처가 필요하다면 ComfyUI, InvokeAI, SD.Next를 비교해 보시기 바랍니다.',
         bullets: [
           'AUTOMATIC1111은 UI/프런트엔드이지 모델이 아닙니다 — Stable Diffusion 가중치는 여전히 별도로 다운로드해 불러와야 합니다.',
-          'GitHub에서 확인된 사실: 마지막으로 태그가 지정된 릴리스(v1.10.1)는 2024년 7월에 나왔고, `dev` 브랜치의 가장 최근 커밋은 2026년 3월이었습니다 — 이 글에만 의존하지 말고 저장소를 직접 확인하세요.',
+          'GitHub에서 확인됨: 마지막 태그 릴리스(v1.10.1)는 2025년 2월 9일에 공개되었고, `dev` 브랜치의 마지막 커밋은 2026년 3월 2일입니다. 현재 상태는 저장소에서 확인하시기 바랍니다.',
           'AGPL-3.0 라이선스 아래 무료이자 오픈소스이며, 공식 유료 등급이나 호스팅 플랜은 존재하지 않습니다.',
           '확장 기능 생태계 — 특히 포즈와 구도를 유도하는 ControlNet 확장 기능 — 이 핵심 개발 속도가 느려졌음에도 여전히 널리 사용되는 주된 이유입니다.',
-          'Forge(AUTOMATIC1111에 없는 기능을 추가하기 위해 특별히 만들어진 포크), ComfyUI, SD.Next 등 활발히 유지보수되는 대안이 존재하며, 이들 모두 2026년 기준 더 잦은 커밋을 받고 있습니다.',
+          '활발히 유지보수되는 대안: ComfyUI, InvokeAI, SD.Next는 2026-11-02에 푸시가 있었으며, AUTOMATIC1111을 기반으로 한 포크 Forge는 2025년 7월 31일 이후 푸시가 없습니다.',
         ],
-        updatedDate: '2026-09-06',
+        updatedDate: '2026-11-02',
       },
     },
     toc: [
@@ -2654,9 +2788,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'AUTOMATIC1111(Stable Diffusion web UI)은 Stable Diffusion을 로컬에서 실행하기 위한 무료 오픈소스 탭 방식 웹 인터페이스입니다 — 모델 자체가 아니라 프런트엔드 애플리케이션입니다.',
           'Stable Diffusion 공개 출시 한 달 뒤인 2022년 8월 22일, "AUTOMATIC1111"이라는 가명을 쓰는 익명의 개발자가 GitHub에 공개했으며, 그래픽 방식의 로컬 인터페이스가 없던 공백을 채웠습니다.',
           'AGPL-3.0 라이선스로 제공됩니다. 오직 셀프 호스팅만 가능하며 공식 유료 등급이나 호스팅 플랜은 없습니다.',
-          '핵심 코드베이스는 2024년 중반 이후 느려졌습니다 — 마지막으로 태그가 지정된 릴리스(v1.10.1)는 2024년 7월에 나왔고, 활발히 개발 중인 `dev` 브랜치의 가장 최근 커밋은 2026년 3월이었습니다 — 변하지 않았다고 가정하지 말고 GitHub에서 현재 상태를 확인하세요.',
+          '핵심 코드베이스는 2024년 중반 이후 속도가 느려졌습니다. 마지막 태그 릴리스(v1.10.1)는 2025년 2월 9일에 공개되었고, `dev` 브랜치의 마지막 커밋은 2026년 3월 2일입니다. 현재 상태는 GitHub에서 확인하시기 바랍니다.',
           '확장 기능 생태계, 특히 포즈/구도 유도를 위한 ControlNet 확장 기능은 남아 있는 가장 큰 강점입니다 — 로컬 이미지 생성 UI 중에서도 가장 크고 문서화가 잘된 커뮤니티 확장 기능 모음 중 하나입니다.',
-          '더 새로운 모델 아키텍처에 대한 지원을 더 빨리 받고 싶은 독자를 위해 Forge, ComfyUI, InvokeAI, SD.Next를 비롯한 활발히 유지보수되는 포크와 대안이 존재합니다.',
+          '활발히 유지보수되는 대안으로는 ComfyUI, InvokeAI, SD.Next(2026-11-02 푸시)가 있으며, AUTOMATIC1111의 포크인 Forge는 2025년 7월 31일 이후 푸시가 없습니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '2026년 3월 2일 이후 업데이트 없음(최신 릴리스 v1.10.1, 2025년 2월 9일). AUTOMATIC1111은 유지보수되지 않을 수 있습니다. 의존하기 전에 사용 중인 GPU와 모델에서 여전히 작동하는지 확인하시기 바랍니다.',
+          },
         ],
       },
       whatIsAutomatic1111: {
@@ -2678,7 +2818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '역사: AUTOMATIC1111이 존재하는 이유',
         content: [
           'Stability AI, 뮌헨 루트비히 막시밀리안 대학교(LMU)의 CompVis 연구 그룹, Runway ML은 2022년 8월 22일 Stable Diffusion을 공개적으로 출시했습니다. 출시 당시 Stable Diffusion은 모델 가중치와 명령줄 스크립트 형태로 제공되었으며, 프롬프트를 입력하고 버튼을 클릭할 수 있는 공식 그래픽 인터페이스는 없었습니다.',
-          'AUTOMATIC1111은 같은 날인 2022년 8월 22일, 이전의 커뮤니티 스크립트를 기반으로 Gradio 기반 브라우저 인터페이스를 추가한 Stable Diffusion web UI의 첫 버전을 GitHub에 공개했습니다. 이 타이밍 덕분에 적절한 순간에 적절한 위치를 차지하게 되었습니다 — 2022년 말 Stable Diffusion의 인기가 폭발적으로 늘어나면서 AUTOMATIC1111의 UI는 대부분의 애호가들이 실제로 이를 사용하는 기본적인 방식이 되었고, 몇 달 만에 수만 개의 GitHub 스타를 모았으며 2026년 9월 기준 16만 4천 개 이상의 스타를 기록했습니다 — 로컬 AI 이미지 생성 카테고리에서 가장 많은 스타를 받은 저장소 중 하나입니다.',
+          `AUTOMATIC1111은 같은 날인 2022년 8월 22일, 이전의 커뮤니티 스크립트를 기반으로 Gradio 기반 브라우저 인터페이스를 추가한 Stable Diffusion web UI의 첫 버전을 GitHub에 공개했습니다. 이 타이밍 덕분에 적절한 순간에 적절한 위치를 차지하게 되었습니다 — 2022년 말 Stable Diffusion의 인기가 폭발적으로 늘어나면서 AUTOMATIC1111의 UI는 대부분의 애호가들이 실제로 이를 사용하는 기본적인 방식이 되었고, 몇 달 만에 수만 개의 GitHub 스타를 모았으며 현재 ${ST.ko('automatic1111-webui', 'bare')}개 이상의 스타를 기록했습니다 — 로컬 AI 이미지 생성 카테고리에서 가장 많은 스타를 받은 저장소 중 하나입니다.`,
           '가장 먼저 등장해 초기 커뮤니티 기여, 확장 기능 제작자, 튜토리얼 작성자 대부분을 흡수했기 때문에 AUTOMATIC1111은 사실상의 표준 참조 구현이 되었으며, 이후 등장한 UI들(Forge, ComfyUI 확장 기능, 커뮤니티 문서 사이트)은 그 새로운 도구들이 이미 다른 기술적 접근 방식을 취하고 있는 경우에도 여전히 AUTOMATIC1111을 기준으로 기능과 워크플로를 설명하고 있습니다.',
         ],
       },
@@ -2704,23 +2844,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '유지보수 상태: 검증 결과',
         itemHeadings: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'AUTOMATIC1111의 핵심 코드베이스는 2024년 중반 이후 눈에 띄게 느려졌습니다 — 마지막으로 태그가 지정된 릴리스는 2024년 7월의 v1.10.1이었고, 가장 인기 있는 자체 포크는 자체 문서에서 원래 프로젝트를 "이제 거의 정적인 상태"라고 설명합니다.' },
-          { type: 'plain-terms', text: '프로젝트는 여전히 실행되고 널리 사용되고 있지만, 새로운 기능과 더 새로운 모델 유형에 대한 지원은 이제 AUTOMATIC1111의 원본 코드베이스에 도달하기 전에, 또는 아예 도달하지 못한 채 Forge 같은 포크에 먼저 반영되는 경향이 있습니다.' },
+          { type: 'one-sentence', text: 'AUTOMATIC1111은 2026년 3월 2일 이후 업데이트가 없습니다. 마지막 태그 릴리스는 v1.10.1(2025년 2월 9일 공개)이며, 가장 인기 있는 포크는 자체 README에서 원본 프로젝트를 "almost static now"라고 설명합니다.' },
+          { type: 'plain-terms', text: '프로젝트는 여전히 실행되고 널리 쓰이지만, 2026년 3월 2일 이후 아무도 업데이트를 푸시하지 않았으므로 새로운 모델 유형에 대한 지원은 ComfyUI, InvokeAI, SD.Next처럼 활발히 개발되는 도구에 먼저 나타날 가능성이 큽니다.' },
         ],
         columns: ['신호', '검증된 상태', '출처'],
         rows: [
           { '신호': '마지막으로 태그가 지정된 릴리스', '검증된 상태': 'v1.10.1 — 코드는 2024년 7월 27일 기준; 릴리스 노트는 2025년 2월 9일 공개', '출처': '[GitHub releases](https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases)' },
           { '신호': '`master` 브랜치의 마지막 커밋', '검증된 상태': '2024년 7월 27일', '출처': '[GitHub 커밋 기록](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commits/master)' },
-          { '신호': '`dev` 브랜치의 마지막 커밋', '검증된 상태': '2026년 3월 2일 — 느려졌지만 방치된 것은 아님', '출처': 'GitHub 커밋 기록(인용 전 최신 날짜 확인 필요)' },
-          { '신호': '열려 있는 이슈 수', '검증된 상태': '2026년 9월 기준 2,500건 이상 열려 있음', '출처': '[GitHub issues](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues)' },
+          { '신호': '`dev` 브랜치의 마지막 커밋', '검증된 상태': '2026년 3월 2일(PR #17313 병합). 이후 `dev`에 커밋 없음', '출처': 'GitHub 커밋 기록(인용 전 최신 날짜 확인 필요)' },
+          { '신호': '열려 있는 이슈 수', '검증된 상태': '2,429건 열림(GitHub 이슈 검색, 2026-11-02)', '출처': '[GitHub issues](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues)' },
           { '신호': '포크 유지관리자 자신의 평가', '검증된 상태': '"Because original SD-WebUI is almost static now, Forge will sync with original WebUI every 90 days, or when important fixes" — Forge 프로젝트 자체 README에서 직접 인용', '출처': '[Forge README](https://github.com/lllyasviel/stable-diffusion-webui-forge)' },
+          { '신호': 'Forge(포크) 마지막 푸시', '검증된 상태': '2025년 7월 31일. 최신 GitHub 릴리스는 2024년 2월 5일자', '출처': '[Forge on GitHub](https://github.com/lllyasviel/stable-diffusion-webui-forge)' },
+          { '신호': 'ControlNet 확장 마지막 푸시', '검증된 상태': '2024년 8월 12일. GitHub 릴리스 없음', '출처': '[GitHub의 sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet)' },
         ],
         content: [
-          '이 섹션은 전해 들은 주장을 반복하는 대신, 작성 시점에 GitHub API를 통해 직접 확인할 수 있었던 내용을 제시합니다. 실제 상황은 "주류 제품처럼 활발히 개발되고 있다"도, "방치되었다"도 아니며 그 중간쯤에 있습니다. 대부분의 원클릭 설치 프로그램과 기존 문서가 가리키는 안정적인 `master` 브랜치는 2024년 7월 이후 새로 태그가 지정된 릴리스를 받지 못한 반면, 변경 사항을 승격하기 전에 테스트하는 데 쓰이는 `dev` 브랜치는 2022~2023년보다는 눈에 띄게 느린 속도이지만 계속 커밋을 받고 있습니다.',
-          '가장 신뢰할 만한 외부 신호는 AUTOMATIC1111 코드베이스 위에 특별히 구축된 포크인 Forge의 개발자 lllyasviel에게서 나옵니다. Forge 자체 README는 "90일마다, 또는 중요한 수정이 있을 때" 원본 WebUI와 동기화하겠다고 밝히고 있는데, 그 직접적인 이유는 포크 유지관리자 자신의 말대로 "원본 SD-WebUI가 이제 거의 정적인 상태이기" 때문입니다. 이는 밀접하게 관련된 프로젝트의 유지관리자가 AUTOMATIC1111의 개발 속도에 대해 내린 평가이지 소문이 아닙니다 — 결정적이지는 않더라도 강력한 신호로 다루어야 합니다.',
-          '이 모든 것이 AUTOMATIC1111이 작동을 멈췄다는 뜻은 아닙니다. SD 1.5와 SDXL 워크플로에서는 여전히 완전히 작동하며, 핵심이 그렇지 않은 시기에도 확장 기능 생태계는 여전히 활발하고, 설치 기반과 튜토리얼 커버리지는 대부분의 대안보다 여전히 큽니다. 실질적인 의미는 현재가 아니라 미래에 관한 것입니다 — 완전히 새로운 모델 아키텍처에 대한 즉각적인 지원이나 활발한 버그 수정 회전이 필요한 독자는 아래 비교표에서 다루는 Forge, ComfyUI, SD.Next 같은 활발히 유지보수되는 포크와 이를 비교해 저울질해야 합니다.',
+          '이 섹션은 2차 정보를 반복하는 대신 2026-11-02에 GitHub API로 직접 확인할 수 있었던 내용을 정리합니다. AUTOMATIC1111은 2026년 3월 2일 이후 업데이트가 없습니다. 대부분의 원클릭 설치 프로그램과 문서가 가리키는 안정판 `master` 브랜치는 2024년 7월 27일 이후 바뀌지 않았고, `dev` 브랜치에도 2026년 3월 2일 이후 커밋이 없습니다. 저장소는 보관(archived) 처리되지 않았고 메인테이너가 포기를 선언하지도 않았지만, 유지보수되지 않을 수 있는 프로젝트로 취급해야 합니다.',
+          '가장 신뢰할 만한 외부 신호는 AUTOMATIC1111 코드베이스 위에 만들어진 포크 Forge의 개발자 lllyasviel에게서 나옵니다. Forge의 README는 "sync with original WebUI every 90 days, or when important fixes"라고 밝히며, 그 이유로 "original SD-WebUI is almost static now"를 듭니다. 이는 소문이 아니라 포크 메인테이너가 AUTOMATIC1111의 개발 속도를 설명한 것입니다. Forge 자신도 2025년 7월 31일 이후 푸시가 없어, 더 이상 활발한 대안의 증거가 되지 못합니다.',
+          '이것이 AUTOMATIC1111이 작동을 멈춘다는 뜻은 아닙니다. Stable Diffusion 1.5와 SDXL 워크플로에서는 여전히 작동하며, 사용자 기반과 튜토리얼 범위도 대부분의 대안보다 큽니다. 실질적인 영향은 앞으로의 일입니다. 더 새로운 모델 아키텍처 지원이나 빠른 버그 수정이 필요하다면, 아래 비교표를 이용해 2026-11-02에 모두 푸시가 있었던 ComfyUI, InvokeAI, SD.Next를 비교해 보시기 바랍니다.',
         ],
-        note: 'GitHub 활동 데이터(커밋 날짜, 릴리스 날짜, 열려 있는 이슈 수)는 계속 변합니다 — 위 수치는 2026년 9월 6일 GitHub API를 통해 직접 확인한 것입니다. 시간에 민감한 결정을 이 표에 근거해 내리기 전에 [저장소](https://github.com/AUTOMATIC1111/stable-diffusion-webui)를 직접 확인해 최신 수치를 확인하세요.',
+        note: 'GitHub 활동 데이터는 계속 바뀝니다. 위 수치는 2026-11-02에 GitHub API로 확인한 것입니다. 시간에 민감한 결정에 이 표를 사용하기 전에 [저장소](https://github.com/AUTOMATIC1111/stable-diffusion-webui)에서 현재 수치를 확인하시기 바랍니다.',
       },
       extensionsControlnet: {
         id: 'extensions-controlnet',
@@ -2767,14 +2909,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '옵션': 'AUTOMATIC1111(Stable Diffusion web UI)',
             '적합한 경우': '가장 큰 축에 속하는 튜토리얼·확장 기능 기반, 탭 기반의 단순함',
-            '유지보수 속도(2026년)': '핵심 `master`는 2024년 중반 이후 느려짐; `dev` 브랜치는 여전히 가끔 커밋을 받음',
+            '유지보수 속도(2026년)': '2026년 3월 2일 이후 업데이트 없음. `master`는 2024년 7월 27일 이후 변경 없음',
             '라이선스': 'AGPL-3.0',
             '핵심 트레이드오프': '문서화가 가장 잘된 옵션이지만 새 모델 지원은 포크에 먼저 반영되는 경향',
           },
           {
             '옵션': '[Stable Diffusion WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)',
             '적합한 경우': 'AUTOMATIC1111에 익숙한 UI에 더 빠른 기능·신모델 지원',
-            '유지보수 속도(2026년)': '원본 AUTOMATIC1111보다 더 활발함; 자체 README에 따르면 주기적으로 원본과 동기화',
+            '유지보수 속도(2026년)': '2025년 7월 31일 이후 푸시 없음. 최신 GitHub 릴리스는 2024년 2월 5일',
             '라이선스': 'AGPL-3.0',
             '핵심 트레이드오프': 'AUTOMATIC1111 자체보다 커뮤니티가 작음; 원본 코드베이스의 전반적 구조는 여전히 따름',
           },
@@ -2795,7 +2937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '옵션': '[Fooocus](https://github.com/lllyasviel/Fooocus)',
             '적합한 경우': '사용 가능한 이미지까지 클릭 수가 가장 적음, 최소한의 설정',
-            '유지보수 속도(2026년)': '릴리스 속도가 더 느리고 범위가 의도적으로 작음',
+            '유지보수 속도(2026년)': '마지막 푸시는 2025년 12월 1일. 최신 릴리스 v2.5.5(2024년 8월 12일)',
             '라이선스': 'GPL-3.0',
             '핵심 트레이드오프': '단순함을 대가로 설정 항목과 확장 기능 지원을 의도적으로 줄임',
           },
@@ -2807,14 +2949,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '핵심 트레이드오프': '기능 면에서 동등하거나 앞섬에도 불구하고 AUTOMATIC1111보다 커뮤니티와 튜토리얼 기반이 작음',
           },
         ],
-        note: '유지보수 속도는 2026년 9월 6일 기준 GitHub에서 확인된 공개 커밋 및 릴리스 활동을 근거로 하며 변경될 수 있습니다 — 활동 수준만으로 선택하기 전에 각 프로젝트 자체 저장소를 확인하세요. 기반 모델 비교는 [Stable Diffusion 리뷰](/ko/power-local-llm/stable-diffusion-review)를, 로컬 대 클라우드 트레이드오프는 [로컬 AI 이미지 생성 vs. 클라우드](/ko/power-local-llm/local-ai-image-generation-vs-cloud)를 참고하세요.',
+        note: '유지보수 속도는 2026-11-02에 GitHub에서 확인한 공개 푸시 및 릴리스 활동을 기준으로 하며 바뀔 수 있습니다. 활동 수준만으로 고르기 전에 각 프로젝트의 저장소를 확인하시기 바랍니다. 기반 모델 비교는 [Stable Diffusion 리뷰](/power-local-llm/stable-diffusion-review), 로컬과 클라우드의 장단점은 [로컬 AI 이미지 생성과 클라우드 비교](/power-local-llm/local-ai-image-generation-vs-cloud)를 참고하십시오.',
       },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'AUTOMATIC1111을 사용해야 할 사람',
         items: [
           '**가장 큰 축에 속하는 튜토리얼 및 커뮤니티 답변 기반을 원하는 독자.** 시장에 가장 먼저 나왔고 가장 긴 설치 이력을 가지고 있기 때문에, Stable Diffusion UI 관련 포럼 게시물, 유튜브 튜토리얼, Stack Overflow 형식의 답변 상당수가 AUTOMATIC1111을 구체적으로 언급합니다.',
-          '**ControlNet과 성숙한 확장 기능 카탈로그를 원하는 독자.** ControlNet 확장 기능과 수천 개의 다른 커뮤니티 애드온은 핵심 프로젝트의 커밋이 줄어드는 시기에도 여전히 활발히 사용되고, 많은 경우 활발히 유지보수됩니다.',
+          '**ControlNet과 성숙한 확장 기능 목록을 원하는 독자.** ControlNet 확장과 수천 개의 커뮤니티 애드온은 널리 쓰이지만, 의존하기 전에 각 확장 기능의 저장소를 확인하시기 바랍니다. 주요 ControlNet 확장의 마지막 푸시는 2024년 8월 12일입니다.',
           '**노드 그래프보다 탭 기반 인터페이스를 선호하는 독자.** 텍스트 필드, 슬라이더, 버튼을 탭으로 정리한 AUTOMATIC1111의 레이아웃은 ComfyUI의 노드 기반 캔버스보다 처음 사용하는 사람에게 일반적으로 더 접근하기 쉽습니다.',
           '**완전한 로컬 제어와 프라이버시를 원하는 독자.** 설치 후에는 생성이 전적으로 자신의 GPU에서 이루어집니다. 의도적으로 그렇게 하는 확장 기능을 설치하지 않는 한 어떤 프롬프트나 이미지 데이터도 자신의 컴퓨터를 벗어나지 않습니다.',
           '**UI 자체에 대한 라이선스 비용을 0으로 유지하고 싶은 예산이 제한된 독자.** AGPL-3.0이라는 것은 어떤 종류의 구독도 없이 소프트웨어를 무료로 사용·수정·재배포할 수 있다는 뜻입니다.',
@@ -2824,9 +2966,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'AUTOMATIC1111을 사용하지 말아야 할 사람',
         items: [
-          '**최신 모델 아키텍처에 대한 출시 당일 지원을 원하는 독자.** 핵심 프로젝트의 릴리스 속도가 2024년 중반 이후 느려진 것을 감안하면, 새 모델 지원은 Forge, ComfyUI, SD.Next 같은 활발히 유지보수되는 포크에 먼저 나타나는 경향이 있습니다 — 최첨단 모델 지원이 가장 중요하다면 이들을 평가하세요.',
+          '**최신 모델 아키텍처 지원을 원하는 독자.** 2026년 3월 2일 이후 업데이트가 없으므로 새 모델 지원은 ComfyUI, InvokeAI, SD.Next처럼 활발히 개발되는 도구에 먼저 나타날 가능성이 큽니다. 먼저 이들을 비교해 보시기 바랍니다.',
           '**명령줄을 전혀 접하고 싶지 않은, 원클릭 앱을 원하는 독자.** 설치에는 Python과 Git이 필요하며, 일부 시스템에서는 의존성 버전 문제를 수동으로 해결해야 합니다 — 완전히 다듬어진 소비자용 앱 경험을 원하는 독자는 Fooocus의 단순화된 설치 프로그램이나 클라우드 도구를 선호할 수 있습니다.',
-          '**예측 가능한 일정에 따른, 보장된 활발한 핵심 저장소 버그 수정이 필요한 독자.** `master` 브랜치에 2,500건이 넘는 이슈가 열려 있고 2024년 7월 이후 새로 태그가 지정된 릴리스가 없는 상황에서, 엄격한 신뢰성 요구 사항이 있는 독자는 새로 보고된 버그가 빠르게 처리될 것이라고 가정해서는 안 됩니다.',
+          '**예측 가능한 일정에 따른, 보장된 활발한 핵심 저장소 버그 수정이 필요한 독자.** `master` 브랜치에 2,400건이 넘는 이슈가 열려 있고 2024년 7월 이후 새로 태그가 지정된 릴리스가 없는 상황에서, 엄격한 신뢰성 요구 사항이 있는 독자는 새로 보고된 버그가 빠르게 처리될 것이라고 가정해서는 안 됩니다.',
           '**다단계 파이프라인에 대한 최대한의 워크플로 제어를 원하는 독자.** ComfyUI의 노드 그래프 방식은 일반적으로 AUTOMATIC1111의 탭 기반 레이아웃보다 복잡한 다단계 생성 파이프라인에 대해 더 정밀한 제어를 제공합니다.',
           '**SLA를 갖춘 벤더 지원 제품이 필요한 기업 팀.** AUTOMATIC1111은 공식 지원 계약, 유료 등급, 서비스 수준 계약이 없는 커뮤니티 프로젝트입니다 — 계약상의 지원이 필요한 팀은 대신 상용 클라우드 이미지 생성 제품을 평가해야 합니다.',
         ],
@@ -2841,7 +2983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'AUTOMATIC1111은 2026년에도 유지보수되고 있나요?',
-            a: '핵심 `master` 브랜치는 눈에 띄게 느려졌습니다. 마지막으로 태그가 지정된 릴리스인 v1.10.1은 2024년 7월에 나왔고 릴리스 노트는 2025년 2월에 공개되었으며, 2026년 9월까지 그 뒤로 새로 태그가 지정된 릴리스는 이어지지 않았습니다. `dev` 브랜치는 계속 가끔 커밋을 받았으며 가장 최근은 2026년 3월이었습니다. 가장 많이 사용되는 포크인 Forge는 README에서 "원본 SD-WebUI가 이제 거의 정적인 상태"라고 밝히고 있습니다. 여전히 작동하고 널리 사용되고 있지만, 가장 빠른 업데이트를 원하는 독자라면 Forge, ComfyUI, SD.Next 같은 활발히 유지보수되는 대안도 고려해야 합니다.',
+            a: '2026년 3월 2일 이후 공개된 업데이트가 없습니다. 마지막 태그 릴리스 v1.10.1은 2025년 2월 9일에 공개되었고, `dev` 브랜치에는 2026년 3월 2일 이후 커밋이 없습니다. Forge의 README는 원본을 "almost static now"라고 부르며, Forge 자신도 2025년 7월 31일 이후 푸시가 없습니다. 여전히 작동하지만 유지보수되지 않을 수 있는 프로젝트로 취급하고 ComfyUI, InvokeAI, SD.Next를 비교해 보시기 바랍니다.',
           },
           {
             q: 'AUTOMATIC1111은 무료인가요?',
@@ -2857,7 +2999,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'AUTOMATIC1111과 Forge의 차이는 무엇인가요?',
-            a: 'Forge는 개발자 lllyasviel이 성능 최적화와 신모델에 대한 더 빠른 지원을 추가하기 위해 특별히 만든 AUTOMATIC1111 코드베이스의 포크입니다. Forge 자체 README에 따르면 지속적으로가 아니라 대략 90일마다, 또는 중요한 수정이 있을 때 원본 AUTOMATIC1111 프로젝트와 주기적으로 동기화하며, 유지관리자는 원본 프로젝트의 개발 속도가 눈에 띄게 느려졌다고 설명합니다. 더 활발한 지속적 개발이 이루어지는 AUTOMATIC1111 스타일의 인터페이스를 원하는 독자에게는 일반적으로 Forge가 더 나은 선택입니다.',
+            a: 'Forge는 lllyasviel이 성능 최적화와 Flux 같은 더 새로운 모델 지원을 더하기 위해 만든 AUTOMATIC1111 코드베이스의 포크입니다. README에 따르면 원본과는 약 90일마다 또는 중요한 수정이 있을 때 동기화합니다. GitHub에서의 마지막 푸시는 2025년 7월 31일이고 최신 GitHub 릴리스는 2024년 2월 5일자라서, 더 이상 확실히 더 활발한 선택지라고 하기 어렵습니다. 고르기 전에 저장소를 확인하시기 바랍니다.',
           },
           {
             q: 'AUTOMATIC1111과 ComfyUI의 차이는 무엇인가요?',
@@ -2867,13 +3009,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'AUTOMATIC1111은 어디서 다운로드하나요?',
             a: '공식 출처는 [GitHub의 AUTOMATIC1111/stable-diffusion-webui 저장소](https://github.com/AUTOMATIC1111/stable-diffusion-webui)로, 코드, 설치 위키, NVIDIA·AMD·Intel·Apple Silicon 하드웨어별 설정 지침 링크가 포함되어 있습니다. 이를 사용하려면 Stable Diffusion 모델 가중치(예: Hugging Face에서)를 별도로 다운로드해야 합니다.',
           },
+          {
+            q: 'Stable Diffusion WebUI Forge는 아직 유지보수되고 있나요?',
+            a: 'GitHub에서의 마지막 푸시는 2025년 7월 31일이고, 최신 GitHub 릴리스는 2024년 2월 5일자입니다. README에 따르면 SD-WebUI 1.10.1을 기반으로 합니다. 고르기 전에 저장소에서 더 새로운 활동이 있는지 확인하시기 바랍니다.',
+          },
+          {
+            q: 'AUTOMATIC1111용 ControlNet 확장은 아직 유지보수되고 있나요?',
+            a: 'sd-webui-controlnet 저장소의 마지막 푸시는 2024년 8월 12일이며 GitHub 릴리스는 없습니다. 여전히 널리 쓰이지만, 프로덕션 워크플로에서 의존하기 전에 저장소와 열려 있는 이슈를 확인하시기 바랍니다.',
+          },
         ],
       },
       verdict: {
         id: 'verdict',
         title: '총평',
         content:
-          'AUTOMATIC1111은 가장 먼저 등장함으로써 로컬 Stable Diffusion의 기본 인터페이스라는 지위를 얻었으며, 그 결과로 형성된 생태계 — 무엇보다 ControlNet 확장 기능, 그리고 수천 개의 다른 커뮤니티 도구, 튜토리얼, 포럼 답변 — 은 2026년에도 여전히 가장 큰 강점입니다. 그렇다고 해도 솔직한 리뷰라면 증거가 보여주는 바를 분명히 밝혀야 합니다. 핵심 프로젝트의 개발 속도는 2024년 중반 이후 눈에 띄게 느려졌고, v1.10.1 이후 새로 태그가 지정된 릴리스가 없으며, 가장 인기 있는 자체 포크조차 이를 "이제 거의 정적인 상태"라고 설명합니다. 그럼에도 여전히 설치되고, 여전히 실행되며, SD 1.5와 SDXL 체크포인트에서 여전히 좋은 결과를 내고 있으므로 이미 사용 중인 독자가 서둘러 갈아탈 급한 이유는 없습니다. 하지만 2026년에 처음 시작하는 독자, 특히 최신 모델 아키텍처나 가장 빠른 버그 수정을 원하는 독자라면 단순히 이름값만 보고 AUTOMATIC1111을 기본값으로 선택하기보다 Forge, ComfyUI, SD.Next를 함께 진지하게 평가해야 합니다.',
+          'AUTOMATIC1111은 가장 먼저 나왔다는 점에서 로컬 Stable Diffusion의 기본 인터페이스 자리를 얻었고, 그 생태계 — 무엇보다 ControlNet 확장, 그리고 수천 개의 커뮤니티 도구, 튜토리얼, 포럼 답변 — 는 여전히 가장 큰 자산입니다. 그러나 이 프로젝트는 2026년 3월 2일 이후 업데이트가 없고, 마지막 태그 릴리스는 v1.10.1이며, 포크 Forge는 2025년 7월 31일 이후 푸시가 없고, 주요 ControlNet 확장의 마지막 푸시는 2024년 8월 12일입니다. SD 1.5와 SDXL 체크포인트에서는 여전히 설치되고 실행되므로, 이미 사용 중인 독자가 서둘러 바꿀 이유는 없습니다. 새로 시작하는 독자는 인지도만으로 AUTOMATIC1111을 고르지 말고 활발히 개발되는 ComfyUI, InvokeAI, SD.Next와 비교하며, 먼저 자신의 GPU와 모델에서 작동하는지 확인하시기 바랍니다.',
       },
       sources: {
         id: 'sources',

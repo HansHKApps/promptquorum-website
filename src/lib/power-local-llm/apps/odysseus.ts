@@ -22,7 +22,7 @@ export const app: ToolRecord = {
   license: 'AGPL-3.0',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: null, variesByModel: true }, // per github.com/odysseus-dev/odysseus README (also documented in articles/odysseus-review.ts): Odysseus itself has no fixed hardware minimum — a local-model backend needs that model's own RAM/VRAM, while an API-provider backend needs only a small footprint for its Docker containers; genuinely backend-dependent — verified 2026-09-13
-  stars: 86856, // github.com/odysseus-dev/odysseus (formerly pewdiepie-archdaemon/odysseus), verified via GitHub API 2026-09-05
+  stars: 94920, // github.com/odysseus-dev/odysseus (formerly pewdiepie-archdaemon/odysseus), verified via GitHub API 2026-11-02
   addedDate: '2026-09-05',
   status: 'listed',
   uses: ['chat', 'agent', 'docs'],
@@ -43,7 +43,7 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { localLlm: true, dockerDeploy: true, mcp: true, memory: true, toolUse: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
-  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2026-11-02', // GitHub API (no releases published; last push 2026-11-02), read 2026-11-02
   lastUpstreamUpdateSource: 'https://github.com/odysseus-dev/odysseus',
   reviewSlug: 'odysseus-review', // dedicated PromptQuorum review — added Batch 21, 2026-09-12
 }
