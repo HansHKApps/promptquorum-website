@@ -2422,7 +2422,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: '자기 일관성 프롬프팅은 여러 추론 경로를 생성하고 다수결 답변을 선택함으로써 수학, 논리, 분석에서 AI 정확도를 향상시킵니다. 기법, 예시, 비용-편익 분석.',
         datePublished: '2026-03-26',
         dateModified: '2026-11-02',
-        'url': 'https://www.promptquorum.com/prompt-engineering/self-consistency-prompting',
+        'url': 'https://www.promptquorum.com/ko/prompt-engineering/self-consistency-prompting',
         keywords: ['자기 일관성 프롬프팅', '프롬프트 엔지니어링', '추론 프롬프트', '다수결 투표', 'chain-of-thought', '정확도 향상', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
