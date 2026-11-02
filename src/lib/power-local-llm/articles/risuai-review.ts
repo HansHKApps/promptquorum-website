@@ -140,7 +140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Platform': 'Hosted web app', 'How to Get It': '[risuai.net](https://risuai.net) — no install; runs in a browser and is the option listed first on the project\'s own homepage' },
           { 'Platform': 'Desktop app (Windows/Mac/Linux)', 'How to Get It': 'Tauri-based installer from [GitHub Releases](https://github.com/kwaroran/RisuAI/releases)' },
-          { 'Platform': 'Self-hosted (Docker)', 'How to Get It': 'Clone the [repository](https://github.com/kwaroran/RisuAI) and run its docker-compose file; the README calls this route particularly useful for web hosting' },
+          { 'Platform': 'Self-hosted (Docker)', 'How to Get It': 'Run the docker compose command from the [README](https://github.com/kwaroran/RisuAI#readme), no clone needed (steps below); the README calls this route particularly useful for web hosting' },
           { 'Platform': 'Self-hosted (Node.js source)', 'How to Get It': 'Requires Node.js 20.19+ or 22.12+ with pnpm; clone the [repository](https://github.com/kwaroran/RisuAI) and follow the README\'s development-server instructions' },
         ],
         note: 'RisuAI is GPL-3.0 licensed, a copyleft license: a self-hosted instance you modify and distribute to others must also make its source available under GPL-3.0. Read the [repository\'s license file](https://github.com/kwaroran/RisuAI/blob/main/LICENSE) before building a modified public instance. None of these installation routes include a model — you connect a backend separately after installing.',
@@ -423,7 +423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Plattform': 'Gehostete Web-App', 'So erhalten Sie es': '[risuai.net](https://risuai.net) — keine Installation; läuft im Browser und ist die auf der Projekt-Homepage zuerst genannte Option' },
           { 'Plattform': 'Desktop-App (Windows/Mac/Linux)', 'So erhalten Sie es': 'Tauri-basierter Installer über [GitHub Releases](https://github.com/kwaroran/RisuAI/releases)' },
-          { 'Plattform': 'Selbst gehostet (Docker)', 'So erhalten Sie es': 'Klonen Sie das [Repository](https://github.com/kwaroran/RisuAI) und führen Sie dessen docker-compose-Datei aus; das README nennt diesen Weg besonders nützlich für Web-Hosting' },
+          { 'Plattform': 'Selbst gehostet (Docker)', 'So erhalten Sie es': 'Führen Sie den Docker-Compose-Befehl aus dem [README](https://github.com/kwaroran/RisuAI#readme) aus, ohne Klonen (Schritte unten); das README nennt diesen Weg besonders nützlich für Web-Hosting' },
           { 'Plattform': 'Selbst gehostet (Node.js-Quellcode)', 'So erhalten Sie es': 'Erfordert Node.js 20.19+ oder 22.12+ mit pnpm; klonen Sie das [Repository](https://github.com/kwaroran/RisuAI) und folgen Sie der Entwicklungsserver-Anleitung im README' },
         ],
         note: 'RisuAI ist GPL-3.0-lizenziert, eine Copyleft-Lizenz: Eine selbst gehostete Instanz, die Sie ändern und an andere weitergeben, muss ihren Quellcode ebenfalls unter GPL-3.0 verfügbar machen. Lesen Sie die [Lizenzdatei des Repositorys](https://github.com/kwaroran/RisuAI/blob/main/LICENSE), bevor Sie eine modifizierte öffentliche Instanz aufbauen. Keiner dieser Installationswege enthält ein Modell — Sie verbinden ein Backend separat nach der Installation.',
@@ -706,7 +706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Plateforme': 'Application web hébergée', 'Comment l\'obtenir': '[risuai.net](https://risuai.net) — aucune installation ; s\'exécute dans un navigateur et c\'est l\'option listée en premier sur la page d\'accueil du projet' },
           { 'Plateforme': 'Application de bureau (Windows/Mac/Linux)', 'Comment l\'obtenir': 'Installateur basé sur Tauri via [GitHub Releases](https://github.com/kwaroran/RisuAI/releases)' },
-          { 'Plateforme': 'Auto-hébergé (Docker)', 'Comment l\'obtenir': 'Clonez le [dépôt](https://github.com/kwaroran/RisuAI) et exécutez son fichier docker-compose ; le README juge cette voie particulièrement utile pour l\'hébergement web' },
+          { 'Plateforme': 'Auto-hébergé (Docker)', 'Comment l\'obtenir': 'Exécutez la commande docker compose du [README](https://github.com/kwaroran/RisuAI#readme), sans cloner (étapes ci-dessous) ; le README juge cette voie particulièrement utile pour l\'hébergement web' },
           { 'Plateforme': 'Auto-hébergé (source Node.js)', 'Comment l\'obtenir': 'Nécessite Node.js 20.19+ ou 22.12+ avec pnpm ; clonez le [dépôt](https://github.com/kwaroran/RisuAI) et suivez les instructions du serveur de développement du README' },
         ],
         note: 'RisuAI est sous licence GPL-3.0, une licence copyleft : une instance auto-hébergée que vous modifiez et distribuez à d\'autres doit également rendre son code source disponible sous GPL-3.0. Lisez le [fichier de licence du dépôt](https://github.com/kwaroran/RisuAI/blob/main/LICENSE) avant de construire une instance publique modifiée. Aucune de ces voies d\'installation n\'inclut de modèle — vous connectez un backend séparément après l\'installation.',
@@ -989,7 +989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Plataforma': 'App web alojada', 'Cómo obtenerlo': '[risuai.net](https://risuai.net) — sin instalación; funciona en el navegador y es la opción listada primero en la página de inicio del proyecto' },
           { 'Plataforma': 'App de escritorio (Windows/Mac/Linux)', 'Cómo obtenerlo': 'Instalador basado en Tauri desde [GitHub Releases](https://github.com/kwaroran/RisuAI/releases)' },
-          { 'Plataforma': 'Autoalojado (Docker)', 'Cómo obtenerlo': 'Clona el [repositorio](https://github.com/kwaroran/RisuAI) y ejecuta su archivo docker-compose; el README la considera especialmente útil para el alojamiento web' },
+          { 'Plataforma': 'Autoalojado (Docker)', 'Cómo obtenerlo': 'Ejecuta el comando docker compose del [README](https://github.com/kwaroran/RisuAI#readme), sin clonar (pasos abajo); el README la considera especialmente útil para el alojamiento web' },
           { 'Plataforma': 'Autoalojado (código fuente Node.js)', 'Cómo obtenerlo': 'Requiere Node.js 20.19+ o 22.12+ con pnpm; clona el [repositorio](https://github.com/kwaroran/RisuAI) y sigue las instrucciones del servidor de desarrollo del README' },
         ],
         note: 'RisuAI tiene licencia GPL-3.0, una licencia copyleft: una instancia autoalojada que modifiques y distribuyas a otros debe también poner su código fuente disponible bajo GPL-3.0. Lee el [archivo de licencia del repositorio](https://github.com/kwaroran/RisuAI/blob/main/LICENSE) antes de construir una instancia pública modificada. Ninguna de estas vías de instalación incluye un modelo — conectas un backend por separado tras instalarlo.',
@@ -1272,7 +1272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Plataforma': 'App web hospedado', 'Como obter': '[risuai.net](https://risuai.net) — sem instalação; roda no navegador e é a opção listada primeiro na página inicial do projeto' },
           { 'Plataforma': 'App desktop (Windows/Mac/Linux)', 'Como obter': 'Instalador baseado em Tauri via [GitHub Releases](https://github.com/kwaroran/RisuAI/releases)' },
-          { 'Plataforma': 'Autogerenciado (Docker)', 'Como obter': 'Clone o [repositório](https://github.com/kwaroran/RisuAI) e execute seu arquivo docker-compose; o README considera esse caminho particularmente útil para hospedagem web' },
+          { 'Plataforma': 'Autogerenciado (Docker)', 'Como obter': 'Execute o comando docker compose do [README](https://github.com/kwaroran/RisuAI#readme), sem clonar (passos abaixo); o README considera esse caminho particularmente útil para hospedagem web' },
           { 'Plataforma': 'Autogerenciado (código-fonte Node.js)', 'Como obter': 'Requer Node.js 20.19+ ou 22.12+ com pnpm; clone o [repositório](https://github.com/kwaroran/RisuAI) e siga as instruções do servidor de desenvolvimento no README' },
         ],
         note: 'O RisuAI é licenciado sob GPL-3.0, uma licença copyleft: uma instância autogerenciada que você modifica e distribui a terceiros também deve disponibilizar seu código-fonte sob GPL-3.0. Leia o [arquivo de licença do repositório](https://github.com/kwaroran/RisuAI/blob/main/LICENSE) antes de criar uma instância pública modificada. Nenhum desses caminhos de instalação inclui um modelo — você conecta um backend separadamente após a instalação.',
@@ -1555,7 +1555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'プラットフォーム': 'ホスト型ウェブアプリ', '入手方法': '[risuai.net](https://risuai.net) — インストール不要。ブラウザで動作し、プロジェクトのホームページで最初に紹介されている選択肢' },
           { 'プラットフォーム': 'デスクトップアプリ(Windows/Mac/Linux)', '入手方法': '[GitHub Releases](https://github.com/kwaroran/RisuAI/releases)からTauriベースのインストーラーを入手' },
-          { 'プラットフォーム': 'セルフホスト(Docker)', '入手方法': '[リポジトリ](https://github.com/kwaroran/RisuAI)をクローンしてdocker-composeファイルを実行——READMEはこの方法をウェブホスティングに特に便利としています' },
+          { 'プラットフォーム': 'セルフホスト(Docker)', '入手方法': '[README](https://github.com/kwaroran/RisuAI#readme)のdocker composeコマンドを実行(クローン不要、手順は下記)——READMEはこの方法をウェブホスティングに特に便利としています' },
           { 'プラットフォーム': 'セルフホスト(Node.jsソース)', '入手方法': 'Node.js 20.19以上または22.12以上とpnpmが必要。[リポジトリ](https://github.com/kwaroran/RisuAI)をクローンし、READMEの開発サーバー手順に従います' },
         ],
         note: 'RisuAIはコピーレフトライセンスであるGPL-3.0でライセンスされています。改変して他者に配布するセルフホスト型インスタンスも、そのソースコードをGPL-3.0の下で公開する必要があります。改変した公開インスタンスを構築する前に、[リポジトリのライセンスファイル](https://github.com/kwaroran/RisuAI/blob/main/LICENSE)を読んでください。これらのインストール方法のいずれにもモデルは含まれていません——インストール後に別途バックエンドを接続します。',
@@ -1838,7 +1838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '平台': '托管网页应用', '获取方式': '[risuai.net](https://risuai.net) — 无需安装;在浏览器中运行,是项目主页上排名第一的选项' },
           { '平台': '桌面应用(Windows/Mac/Linux)', '获取方式': '通过[GitHub Releases](https://github.com/kwaroran/RisuAI/releases)获取基于Tauri的安装程序' },
-          { '平台': '自托管(Docker)', '获取方式': '克隆[仓库](https://github.com/kwaroran/RisuAI)并运行其docker-compose文件;README称此方式对网页托管特别有用' },
+          { '平台': '自托管(Docker)', '获取方式': '运行[README](https://github.com/kwaroran/RisuAI#readme)中的docker compose命令,无需克隆(步骤见下);README称此方式对网页托管特别有用' },
           { '平台': '自托管(Node.js源码)', '获取方式': '需要Node.js 20.19+或22.12+及pnpm;克隆[仓库](https://github.com/kwaroran/RisuAI)并按照README中的开发服务器说明操作' },
         ],
         note: 'RisuAI采用GPL-3.0许可,这是一种著佐权(copyleft)许可:你修改后分发给他人的自托管实例,也必须以GPL-3.0许可公开其源代码。在构建修改后的公开实例之前,请阅读[仓库的许可证文件](https://github.com/kwaroran/RisuAI/blob/main/LICENSE)。这些安装方式均不包含模型——安装后需单独连接后端。',
@@ -2121,7 +2121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'المنصة': 'تطبيق ويب مستضاف', 'كيفية الحصول عليه': '[risuai.net](https://risuai.net) — لا حاجة للتثبيت؛ يعمل في المتصفح وهو الخيار المُدرج أولًا في الصفحة الرئيسية للمشروع' },
           { 'المنصة': 'تطبيق سطح مكتب (Windows/Mac/Linux)', 'كيفية الحصول عليه': 'برنامج تثبيت مبني على Tauri من [GitHub Releases](https://github.com/kwaroran/RisuAI/releases)' },
-          { 'المنصة': 'استضافة ذاتية (Docker)', 'كيفية الحصول عليه': 'استنسخ [المستودع](https://github.com/kwaroran/RisuAI) وشغّل ملف docker-compose الخاص به؛ يصف README هذه الطريقة بأنها مفيدة بشكل خاص لاستضافة الويب' },
+          { 'المنصة': 'استضافة ذاتية (Docker)', 'كيفية الحصول عليه': 'شغّل أمر docker compose الوارد في [README](https://github.com/kwaroran/RisuAI#readme) دون استنساخ (الخطوات أدناه)؛ يصف README هذه الطريقة بأنها مفيدة بشكل خاص لاستضافة الويب' },
           { 'المنصة': 'استضافة ذاتية (كود مصدري Node.js)', 'كيفية الحصول عليه': 'يتطلب Node.js 20.19+ أو 22.12+ مع pnpm؛ استنسخ [المستودع](https://github.com/kwaroran/RisuAI) واتبع تعليمات خادم التطوير في README' },
         ],
         note: 'RisuAI مرخّص بموجب GPL-3.0، وهي رخصة "الحقوق المتروكة" (copyleft): يجب على أي نسخة مستضافة ذاتيًا تُعدّلها وتوزّعها على آخرين أن تتيح أيضًا كودها المصدري بموجب GPL-3.0. اقرأ [ملف ترخيص المستودع](https://github.com/kwaroran/RisuAI/blob/main/LICENSE) قبل بناء نسخة عامة معدّلة. لا يتضمن أي من طرق التثبيت هذه نموذجًا — تتصل بخلفية بشكل منفصل بعد التثبيت.',
@@ -2405,7 +2405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '플랫폼': '호스팅 웹 앱', '받는 방법': '[risuai.net](https://risuai.net) — 설치 불필요; 브라우저에서 실행되며 프로젝트 홈페이지에서 가장 먼저 소개되는 옵션' },
           { '플랫폼': '데스크톱 앱(Windows/Mac/Linux)', '받는 방법': '[GitHub Releases](https://github.com/kwaroran/RisuAI/releases)에서 Tauri 기반 설치 프로그램' },
-          { '플랫폼': '자체 호스팅(Docker)', '받는 방법': '[저장소](https://github.com/kwaroran/RisuAI)를 클론하고 docker-compose 파일을 실행 — README는 이 방법을 웹 호스팅에 특히 유용하다고 설명함' },
+          { '플랫폼': '자체 호스팅(Docker)', '받는 방법': '[README](https://github.com/kwaroran/RisuAI#readme)의 docker compose 명령을 실행(클론 불필요, 단계는 아래) — README는 이 방법을 웹 호스팅에 특히 유용하다고 설명함' },
           { '플랫폼': '자체 호스팅(Node.js 소스)', '받는 방법': 'Node.js 20.19+ 또는 22.12+와 pnpm 필요; [저장소](https://github.com/kwaroran/RisuAI)를 클론하고 README의 개발 서버 안내를 따름' },
         ],
         note: 'RisuAI는 코드공유(copyleft) 라이선스인 GPL-3.0으로 라이선스되어 있습니다: 사용자가 수정하여 다른 사람에게 배포하는 자체 호스팅 인스턴스도 GPL-3.0에 따라 소스 코드를 공개해야 합니다. 수정된 공개 인스턴스를 구축하기 전에 [저장소의 라이선스 파일](https://github.com/kwaroran/RisuAI/blob/main/LICENSE)을 읽어보세요. 이 설치 경로 중 어느 것도 모델을 포함하지 않습니다 — 설치 후 별도로 백엔드를 연결합니다.',
