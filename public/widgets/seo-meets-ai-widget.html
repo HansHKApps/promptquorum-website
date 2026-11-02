@@ -300,17 +300,17 @@
             category: 'Technical SEO',
             q: 'Do your pages rank in Google\'s top 10 for your target keywords?',
             points: 2,
-            tip: 'Top-10 ranking gives ~25% probability of Google AI Overview citations'
+            tip: 'Google says a page only needs to be indexed and snippet-eligible to appear in AI Overviews and AI Mode'
           },
           {
             category: 'Technical SEO',
             q: 'Have you implemented JSON-LD schema markup (Article, TechArticle, HowTo)?',
             points: 1,
-            tip: 'Structured data increases citation probability by ~340% in controlled tests'
+            tip: 'Schema helps machines parse the page; Google says AI features need no special schema'
           },
           {
             category: 'Technical SEO',
-            q: 'Are GPTBot, ClaudeBot, and PerplexityBot unblocked in your robots.txt?',
+            q: 'Are OAI-SearchBot, Claude-SearchBot, PerplexityBot and Googlebot allowed in your robots.txt?',
             points: 1,
             tip: 'Blocking AI crawlers prevents your content from being cited'
           },
@@ -322,7 +322,7 @@
           },
           {
             category: 'AI Platform Readiness',
-            q: 'Have you optimized for ChatGPT first (59.70% AI search market share)?',
+            q: 'Have you optimized for ChatGPT first (74.78% of AI referral traffic)?',
             points: 1,
             tip: 'ChatGPT dominates AI search; optimize there before other platforms'
           },
@@ -334,9 +334,9 @@
           },
           {
             category: 'Technical SEO',
-            q: 'Have you added a machine-readable llms.txt file to your site root?',
+            q: 'Have you considered an optional llms.txt file in your site root?',
             points: 0.5,
-            tip: 'llms.txt accelerates AI indexing; not required but recommended'
+            tip: 'No major AI provider documents using llms.txt; optional'
           },
           {
             category: 'AI Platform Readiness',
@@ -355,9 +355,9 @@
           { score: 0, priority: 'High', text: 'Add JSON-LD schema markup (Article, FAQPage, TechArticle) to all articles', effort: '2–4 hours' },
           { score: 0, priority: 'High', text: 'Restructure content to answer-first format: direct answer in first sentence of each heading', effort: '3–6 hours per article' },
           { score: 1, priority: 'High', text: 'Create FAQ sections for 5–7 derived questions (sub-questions AI systems ask)', effort: '1–2 hours per article' },
-          { score: 2, priority: 'High', text: 'Ensure GPTBot, ClaudeBot, PerplexityBot are unblocked in robots.txt', effort: '15 minutes' },
+          { score: 2, priority: 'High', text: 'Ensure OAI-SearchBot, Claude-SearchBot, PerplexityBot and Googlebot are allowed in robots.txt', effort: '15 minutes' },
           { score: 3, priority: 'Medium', text: 'Optimize Core Web Vitals and page speed (SEO foundation for GEO)', effort: '4–8 hours' },
-          { score: 3, priority: 'Medium', text: 'Build llms.txt file listing high-value content topics and data sources', effort: '1–2 hours' },
+          { score: 3, priority: 'Medium', text: 'Optionally publish an llms.txt file summarizing high-value content (not a ranking lever)', effort: '1–2 hours' },
           { score: 5, priority: 'Medium', text: 'Audit 10 highest-traffic pages: test citations in ChatGPT, Perplexity, Google AI Overviews', effort: '2–3 hours' },
           { score: 6, priority: 'Low', text: 'Expand entity mentions (add 5–7 named entities per article)', effort: '1–2 hours per article' },
           { score: 7, priority: 'Low', text: 'Set up CI/CD to track AI citation metrics monthly', effort: '4–6 hours' },
@@ -393,17 +393,17 @@
             category: 'Technische SEO',
             q: 'Rankt Ihre Website in den Top 10 von Google für Ihre Ziel-Keywords?',
             points: 2,
-            tip: 'Top-10-Ranking gibt ~25% Wahrscheinlichkeit für Google AI Overview Zitate'
+            tip: 'Google nennt als Voraussetzung nur Indexierung und Snippet-Fähigkeit, um in AI Overviews und AI Mode zu erscheinen'
           },
           {
             category: 'Technische SEO',
             q: 'Haben Sie JSON-LD-Schema-Markup implementiert (Article, TechArticle, HowTo)?',
             points: 1,
-            tip: 'Strukturierte Daten erhöhen die Zitat-Wahrscheinlichkeit um ~340%'
+            tip: 'Schema hilft Maschinen beim Verstehen der Seite; Google verlangt für KI-Funktionen kein spezielles Schema'
           },
           {
             category: 'Technische SEO',
-            q: 'Sind GPTBot, ClaudeBot und PerplexityBot in Ihrer robots.txt nicht blockiert?',
+            q: 'Sind OAI-SearchBot, Claude-SearchBot, PerplexityBot und Googlebot in Ihrer robots.txt erlaubt?',
             points: 1,
             tip: 'Das Blockieren von KI-Crawlern verhindert, dass Ihr Inhalt zitiert wird'
           },
@@ -415,7 +415,7 @@
           },
           {
             category: 'KI-Plattform-Bereitschaft',
-            q: 'Haben Sie zunächst ChatGPT optimiert (59,70% Marktanteil bei KI-Suche)?',
+            q: 'Haben Sie zunächst ChatGPT optimiert (74,78 % des KI-Referral-Traffics)?',
             points: 1,
             tip: 'ChatGPT dominiert die KI-Suche; optimieren Sie dort vor anderen Plattformen'
           },
@@ -427,9 +427,9 @@
           },
           {
             category: 'Technische SEO',
-            q: 'Haben Sie eine maschinenlesbares llms.txt-Datei in Ihrem Site-Root hinzugefügt?',
+            q: 'Haben Sie eine optionale llms.txt-Datei im Site-Root in Erwägung gezogen?',
             points: 0.5,
-            tip: 'llms.txt beschleunigt KI-Indexierung; nicht erforderlich, aber empfohlen'
+            tip: 'Kein großer KI-Anbieter dokumentiert die Nutzung von llms.txt; optional'
           },
           {
             category: 'KI-Plattform-Bereitschaft',
@@ -448,9 +448,9 @@
           { score: 0, priority: 'Hoch', text: 'Fügen Sie JSON-LD-Schema-Markup (Article, FAQPage, TechArticle) zu allen Artikeln hinzu', effort: '2–4 Stunden' },
           { score: 0, priority: 'Hoch', text: 'Umstrukturieren Sie Inhalte auf Antwort-First-Format: direkte Antwort im ersten Satz jeder Überschrift', effort: '3–6 Stunden pro Artikel' },
           { score: 1, priority: 'Hoch', text: 'Erstellen Sie FAQ-Abschnitte für 5–7 abgeleitete Fragen', effort: '1–2 Stunden pro Artikel' },
-          { score: 2, priority: 'Hoch', text: 'Stellen Sie sicher, dass GPTBot, ClaudeBot, PerplexityBot in robots.txt nicht blockiert sind', effort: '15 Minuten' },
+          { score: 2, priority: 'Hoch', text: 'Stellen Sie sicher, dass OAI-SearchBot, Claude-SearchBot, PerplexityBot und Googlebot in robots.txt erlaubt sind', effort: '15 Minuten' },
           { score: 3, priority: 'Mittel', text: 'Optimieren Sie Core Web Vitals und Seitengeschwindigkeit (SEO-Grundlage für GEO)', effort: '4–8 Stunden' },
-          { score: 3, priority: 'Mittel', text: 'Erstellen Sie llms.txt-Datei mit hochwertigen Content-Themen', effort: '1–2 Stunden' },
+          { score: 3, priority: 'Mittel', text: 'Optional: llms.txt-Datei mit hochwertigen Content-Themen veröffentlichen (kein Ranking-Hebel)', effort: '1–2 Stunden' },
           { score: 5, priority: 'Mittel', text: 'Überprüfen Sie 10 Traffic-Artikel: testen Sie Zitate in ChatGPT, Perplexity, Google AI Overviews', effort: '2–3 Stunden' },
           { score: 6, priority: 'Niedrig', text: 'Erweitern Sie Entity-Erwähnungen (5–7 benannte Entitäten pro Artikel)', effort: '1–2 Stunden pro Artikel' },
           { score: 7, priority: 'Niedrig', text: 'Richten Sie CI/CD ein, um monatliche KI-Zitat-Metriken zu verfolgen', effort: '4–6 Stunden' },
@@ -458,7 +458,7 @@
         ],
         compliance: {
           regional: 'DSGVO und BSI-Grundschutz-Kataloges Compliance für deutschsprachige Märkte.',
-          note: 'GEO-Strategien im deutschsprachigen Raum müssen DSGVO-Konformität und BSI-Sicherheitsstandards beachten. Nutzen Sie lokale Crawlers wie GPTBot, berücksichtigen Sie Datenschutz bei der Contentstrukturierung.'
+          note: 'GEO-Strategien im deutschsprachigen Raum müssen DSGVO-Konformität und BSI-Sicherheitsstandards beachten. Prüfen Sie in der robots.txt, welche KI-Crawler Zugriff haben, und berücksichtigen Sie Datenschutz bei der Contentstrukturierung.'
         },
         resultsTitles: {
           resultsTitle: 'Ihre GEO-Audit-Ergebnisse',
@@ -486,17 +486,17 @@
             category: 'SEO technique',
             q: 'Vos pages sont-elles classées dans les 10 premiers résultats Google pour vos mots-clés cibles ?',
             points: 2,
-            tip: 'Un classement top-10 donne ~25% de probabilité de citations Google AI Overview'
+            tip: 'Google indique qu'une page doit seulement être indexée et éligible à un extrait pour apparaître dans AI Overviews et AI Mode'
           },
           {
             category: 'SEO technique',
             q: 'Avez-vous implémenté le balisage de schéma JSON-LD (Article, TechArticle, HowTo) ?',
             points: 1,
-            tip: 'Les données structurées augmentent la probabilité de citation d\'environ 340 %'
+            tip: 'Les données structurées aident les machines à comprendre la page ; Google n\'exige aucun schéma spécial pour les fonctions d\'IA'
           },
           {
             category: 'SEO technique',
-            q: 'GPTBot, ClaudeBot et PerplexityBot ne sont-ils pas bloqués dans votre robots.txt ?',
+            q: 'OAI-SearchBot, Claude-SearchBot, PerplexityBot et Googlebot sont-ils autorisés dans votre robots.txt ?',
             points: 1,
             tip: 'Bloquer les crawlers IA empêche votre contenu d\'être cité'
           },
@@ -508,7 +508,7 @@
           },
           {
             category: 'Préparation des plates-formes IA',
-            q: 'Avez-vous d\'abord optimisé pour ChatGPT (59,70% de part de marché de la recherche IA) ?',
+            q: 'Avez-vous d\'abord optimisé pour ChatGPT (74,78 % du trafic de référence IA) ?',
             points: 1,
             tip: 'ChatGPT domine la recherche IA; optimisez d\'abord avant les autres plates-formes'
           },
@@ -520,9 +520,9 @@
           },
           {
             category: 'SEO technique',
-            q: 'Avez-vous ajouté un fichier llms.txt lisible par machine à la racine de votre site ?',
+            q: 'Avez-vous envisagé un fichier llms.txt facultatif à la racine de votre site ?',
             points: 0.5,
-            tip: 'llms.txt accélère l\'indexation par l\'IA; pas obligatoire mais recommandé'
+            tip: 'Aucun grand fournisseur d\'IA ne documente l\'usage de llms.txt ; facultatif'
           },
           {
             category: 'Préparation des plates-formes IA',
@@ -541,9 +541,9 @@
           { score: 0, priority: 'Élevé', text: 'Ajoutez le balisage de schéma JSON-LD (Article, FAQPage, TechArticle) à tous les articles', effort: '2–4 heures' },
           { score: 0, priority: 'Élevé', text: 'Restructurez le contenu au format réponse-d\'abord: réponse directe dans la première phrase', effort: '3–6 heures par article' },
           { score: 1, priority: 'Élevé', text: 'Créez des sections FAQ pour 5–7 questions dérivées', effort: '1–2 heures par article' },
-          { score: 2, priority: 'Élevé', text: 'Assurez-vous que GPTBot, ClaudeBot, PerplexityBot ne sont pas bloqués dans robots.txt', effort: '15 minutes' },
+          { score: 2, priority: 'Élevé', text: 'Assurez-vous qu\'OAI-SearchBot, Claude-SearchBot, PerplexityBot et Googlebot sont autorisés dans robots.txt', effort: '15 minutes' },
           { score: 3, priority: 'Moyen', text: 'Optimisez Core Web Vitals et la vitesse des pages (fondation SEO pour GEO)', effort: '4–8 heures' },
-          { score: 3, priority: 'Moyen', text: 'Créez un fichier llms.txt listant les sujets de contenu de haute valeur', effort: '1–2 heures' },
+          { score: 3, priority: 'Moyen', text: 'Facultatif : publiez un fichier llms.txt résumant les contenus clés (pas un levier de classement)', effort: '1–2 heures' },
           { score: 5, priority: 'Moyen', text: 'Auditez 10 pages à fort trafic: testez les citations dans ChatGPT, Perplexity, Google AI Overviews', effort: '2–3 heures' },
           { score: 6, priority: 'Faible', text: 'Développez les mentions d\'entités (5–7 entités nommées par article)', effort: '1–2 heures par article' },
           { score: 7, priority: 'Faible', text: 'Configurez CI/CD pour suivre les métriques de citation IA mensuellement', effort: '4–6 heures' },
@@ -579,17 +579,17 @@
             category: '技術的SEO',
             q: 'ターゲット キーワードでサイトが Google の上位 10 位にランクされていますか?',
             points: 2,
-            tip: 'トップ 10 ランキングは Google AI Overview 引用の約 25% の確率を提供します'
+            tip: 'Google によると、AI Overviews と AI Mode に表示される条件はインデックス登録とスニペット表示の対象であることのみです'
           },
           {
             category: '技術的SEO',
             q: 'JSON-LD スキーママークアップ (Article、TechArticle、HowTo) を実装していますか?',
             points: 1,
-            tip: '構造化データは引用確率を約 340% 向上させます'
+            tip: '構造化データはページの理解を助けますが、Google は AI 機能に特別なスキーマは不要としています'
           },
           {
             category: '技術的SEO',
-            q: 'GPTBot、ClaudeBot、PerplexityBot は robots.txt でブロックされていませんか?',
+            q: 'OAI-SearchBot、Claude-SearchBot、PerplexityBot、Googlebot は robots.txt で許可されていますか?',
             points: 1,
             tip: 'AI クローラーをブロックするとコンテンツが引用されません'
           },
@@ -601,7 +601,7 @@
           },
           {
             category: 'AI プラットフォーム準備',
-            q: '最初に ChatGPT を最適化していますか (AI 検索市場シェアの 59.70%)?',
+            q: '最初に ChatGPT を最適化していますか (AI 参照トラフィックの 74.78%)?',
             points: 1,
             tip: 'ChatGPT が AI 検索を支配します; 他のプラットフォームの前に最適化してください'
           },
@@ -613,9 +613,9 @@
           },
           {
             category: '技術的SEO',
-            q: 'サイト ルートに機械可読の llms.txt ファイルを追加していますか?',
+            q: 'サイトルートに任意の llms.txt ファイルを検討しましたか?',
             points: 0.5,
-            tip: 'llms.txt は AI インデックスを加速します; 必須ではありませんが推奨されます'
+            tip: '主要な AI プロバイダーは llms.txt の利用を公式に記載していません。任意です'
           },
           {
             category: 'AI プラットフォーム準備',
@@ -634,9 +634,9 @@
           { score: 0, priority: '高', text: 'すべての記事に JSON-LD スキーママークアップ (Article、FAQPage、TechArticle) を追加', effort: '2–4 時間' },
           { score: 0, priority: '高', text: 'コンテンツを回答ファースト形式に再構成: 各見出しの最初の文に直接回答', effort: '記事あたり 3–6 時間' },
           { score: 1, priority: '高', text: '5–7 つの派生質問に対する FAQ セクションを作成', effort: '記事あたり 1–2 時間' },
-          { score: 2, priority: '高', text: 'GPTBot、ClaudeBot、PerplexityBot が robots.txt でブロックされていないことを確認', effort: '15 分' },
+          { score: 2, priority: '高', text: 'OAI-SearchBot、Claude-SearchBot、PerplexityBot、Googlebot が robots.txt で許可されていることを確認', effort: '15 分' },
           { score: 3, priority: '中', text: 'Core Web Vitals とページ速度を最適化 (GEO のための SEO 基礎)', effort: '4–8 時間' },
-          { score: 3, priority: '中', text: '高価値コンテンツ トピックをリストする llms.txt ファイルを構築', effort: '1–2 時間' },
+          { score: 3, priority: '中', text: '任意: 重要コンテンツを要約した llms.txt を公開 (ランキング要因ではありません)', effort: '1–2 時間' },
           { score: 5, priority: '中', text: 'トラフィックが多い 10 ページを監査: ChatGPT、Perplexity、Google AI Overviews で引用をテスト', effort: '2–3 時間' },
           { score: 6, priority: '低', text: 'エンティティ記述を拡張 (記事あたり 5–7 個の名前付きエンティティ)', effort: '記事あたり 1–2 時間' },
           { score: 7, priority: '低', text: 'CI/CD をセットアップして月単位で AI 引用メトリクスを追跡', effort: '4–6 時間' },
@@ -672,17 +672,17 @@
             category: '技术 SEO',
             q: '您的网页是否在目标关键词的 Google 前 10 位排名?',
             points: 2,
-            tip: '前 10 名排名为 Google AI Overview 引用提供约 25% 的概率'
+            tip: 'Google 表示，页面只需被收录且可显示摘要，即可出现在 AI Overviews 和 AI Mode 中'
           },
           {
             category: '技术 SEO',
             q: '您是否实现了 JSON-LD 模式标记 (Article、TechArticle、HowTo)?',
             points: 1,
-            tip: '结构化数据将引用概率提高约 340%'
+            tip: '结构化数据有助于机器理解页面；Google 表示 AI 功能无需特殊结构化数据'
           },
           {
             category: '技术 SEO',
-            q: 'GPTBot、ClaudeBot 和 PerplexityBot 是否在您的 robots.txt 中未被阻止?',
+            q: 'OAI-SearchBot、Claude-SearchBot、PerplexityBot 和 Googlebot 是否在您的 robots.txt 中被允许?',
             points: 1,
             tip: '阻止 AI 爬虫会阻止您的内容被引用'
           },
@@ -694,7 +694,7 @@
           },
           {
             category: 'AI 平台准备',
-            q: '您是否首先优化了 ChatGPT (59.70% AI 搜索市场份额)?',
+            q: '您是否首先优化了 ChatGPT (占 AI 引荐流量的 74.78%)?',
             points: 1,
             tip: 'ChatGPT 主导 AI 搜索；在其他平台之前进行优化'
           },
@@ -706,9 +706,9 @@
           },
           {
             category: '技术 SEO',
-            q: '您是否在网站根目录添加了机器可读的 llms.txt 文件?',
+            q: '您是否考虑过在网站根目录添加可选的 llms.txt 文件?',
             points: 0.5,
-            tip: 'llms.txt 加速 AI 索引；非必需但建议'
+            tip: '主要 AI 服务商均未官方说明会使用 llms.txt；可选'
           },
           {
             category: 'AI 平台准备',
@@ -727,9 +727,9 @@
           { score: 0, priority: '高', text: '将 JSON-LD 模式标记 (Article、FAQPage、TechArticle) 添加到所有文章', effort: '2–4 小时' },
           { score: 0, priority: '高', text: '将内容重构为答案优先格式：每个标题的第一句给出直接答案', effort: '每篇文章 3–6 小时' },
           { score: 1, priority: '高', text: '为 5–7 个衍生问题创建 FAQ 部分', effort: '每篇文章 1–2 小时' },
-          { score: 2, priority: '高', text: '确保 GPTBot、ClaudeBot、PerplexityBot 在 robots.txt 中未被阻止', effort: '15 分钟' },
+          { score: 2, priority: '高', text: '确保 OAI-SearchBot、Claude-SearchBot、PerplexityBot、Googlebot 在 robots.txt 中被允许', effort: '15 分钟' },
           { score: 3, priority: '中', text: '优化 Core Web Vitals 和页面速度 (GEO 的 SEO 基础)', effort: '4–8 小时' },
-          { score: 3, priority: '中', text: '构建列出高价值内容主题的 llms.txt 文件', effort: '1–2 小时' },
+          { score: 3, priority: '中', text: '可选：发布概述重要内容的 llms.txt 文件（不是排名因素）', effort: '1–2 小时' },
           { score: 5, priority: '中', text: '审计 10 个高流量页面：在 ChatGPT、Perplexity、Google AI Overviews 中测试引用', effort: '2–3 小时' },
           { score: 6, priority: '低', text: '扩展实体提及（每篇文章 5–7 个命名实体）', effort: '每篇文章 1–2 小时' },
           { score: 7, priority: '低', text: '设置 CI/CD 以每月跟踪 AI 引用指标', effort: '4–6 小时' },
