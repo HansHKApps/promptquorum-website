@@ -104,7 +104,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'replace-grammarly-notion-ai-with-local',
 
   // Cat 8 — Tools & App Reviews
-  'lm-studio-vs-jan-vs-gpt4all-2026',
+  'lm-studio-vs-jan-vs-gpt4all',
   'best-local-models-tool-calling-2026',
 
   // Cat 9 — Voice, Speech & Multimodal

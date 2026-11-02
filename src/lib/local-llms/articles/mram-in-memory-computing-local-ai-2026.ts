@@ -1350,7 +1350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Year', 'Milestone', 'Status'],
         image: '/images/mram-in-memory-computing-local-ai-2026-mram-timeline-roadmap-en.svg',
-        imageAlt: '时间线：面向AI的MRAM路线图，从28nm eMRAM(2019年)到消费级手机(2029–2031年)',
+        imageAlt: '时间线：面向 AI 的 MRAM 路线图，从 28nm eMRAM (2019年) 到消费级手机 (2029–2031年)',
         imageCaption: '面向AI的MRAM路线图:28nm eMRAM(2019年)和14nm(2024年)量产已完成;8nm eMRAM及SemiFive/ICYTech流片(2026年5月)已确认;5nm eMRAM(2027年)按计划推进;边缘AI SoC(2028–2029年)和消费级智能手机MRAM(2029–2031年)仍属推测,尚未确认。',
         items: [
           '**尚未确认的内容：**',

@@ -8171,160 +8171,6 @@
     "deployedAt": null
   },
   {
-    "id": "bb09114e-4cf5-4c0a-97d3-0d5a039ef95e",
-    "slug": "/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
-    "date": "2026-11-02T10:39:17.086Z",
-    "fields": [
-      {
-        "field": "seoTitle",
-        "old": "LM Studio vs Jan vs GPT4All 2026：M5とRTX 4070で実機検証",
-        "new": "LM Studio・Jan・GPT4All比較 2026"
-      }
-    ],
-    "reason": "Zero-click batch 01 round 1. Titles of es/pt/ja/zh/ko/ar and pt/ar metas into budget; GPT4All stale warning refreshed (20+ months, no release since 2025-02-25); Jan privacy claims corrected (optional PostHog analytics), month snapshots removed.",
-    "queries": [
-      "lm studio vs gpt4all"
-    ],
-    "baseline": {
-      "position": 4.8,
-      "impressions": 5,
-      "clicks": 0,
-      "ctr": 0,
-      "period": "28d to 2026-11-01"
-    },
-    "deployedAt": null
-  },
-  {
-    "id": "eb14e66a-b455-4e3d-9d68-6c08d93b3418",
-    "slug": "/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
-    "date": "2026-11-02T10:39:17.114Z",
-    "fields": [
-      {
-        "field": "seoTitle",
-        "old": "LM Studio vs Jan vs GPT4All 2026：M5与RTX 4070深度实测",
-        "new": "LM Studio、Jan、GPT4All对比 2026"
-      }
-    ],
-    "reason": "Zero-click batch 01 round 1. Titles of es/pt/ja/zh/ko/ar and pt/ar metas into budget; GPT4All stale warning refreshed (20+ months, no release since 2025-02-25); Jan privacy claims corrected (optional PostHog analytics), month snapshots removed.",
-    "queries": [
-      "lm studio vs gpt4all"
-    ],
-    "baseline": {
-      "position": 7.67,
-      "impressions": 3,
-      "clicks": 1,
-      "ctr": 0.3333333333333333,
-      "period": "28d to 2026-11-01"
-    },
-    "deployedAt": null
-  },
-  {
-    "id": "85ca0529-7490-4b2c-a64a-35f0c1febff3",
-    "slug": "/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
-    "date": "2026-11-02T10:39:17.141Z",
-    "fields": [
-      {
-        "field": "seoTitle",
-        "old": "LM Studio vs Jan vs GPT4All 2026: probados en M5 + RTX 4070",
-        "new": "LM Studio vs Jan vs GPT4All 2026: pruebas M5 + RTX 4070"
-      }
-    ],
-    "reason": "Zero-click batch 01 round 1. Titles of es/pt/ja/zh/ko/ar and pt/ar metas into budget; GPT4All stale warning refreshed (20+ months, no release since 2025-02-25); Jan privacy claims corrected (optional PostHog analytics), month snapshots removed.",
-    "queries": [
-      "lm studio vs gpt4all"
-    ],
-    "baseline": {
-      "position": 4.65,
-      "impressions": 17,
-      "clicks": 1,
-      "ctr": 0.058823529411764705,
-      "period": "28d to 2026-11-01"
-    },
-    "deployedAt": null
-  },
-  {
-    "id": "f59430f0-b4e9-436a-8d1d-844bbc15a464",
-    "slug": "/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
-    "date": "2026-11-02T10:39:17.168Z",
-    "fields": [
-      {
-        "field": "seoTitle",
-        "old": "LM Studio vs Jan vs GPT4All 2026: testados em M5 + RTX 4070",
-        "new": "LM Studio vs Jan vs GPT4All 2026: testes M5 + RTX 4070"
-      },
-      {
-        "field": "metaDescription",
-        "old": "3 apps de IA de desktop testados em MacBook M5 e RTX 4070. O LM Studio vence em velocidade, o Jan em UX e o GPT4All em simplicidade. Comparativo com benchmarks.",
-        "new": "3 apps de IA de desktop testados em MacBook M5 e RTX 4070: LM Studio vence em velocidade, Jan em UX e GPT4All em simplicidade. Com benchmarks."
-      }
-    ],
-    "reason": "Zero-click batch 01 round 1. Titles of es/pt/ja/zh/ko/ar and pt/ar metas into budget; GPT4All stale warning refreshed (20+ months, no release since 2025-02-25); Jan privacy claims corrected (optional PostHog analytics), month snapshots removed.",
-    "queries": [
-      "lm studio vs gpt4all"
-    ],
-    "baseline": {
-      "position": 0,
-      "impressions": 0,
-      "clicks": 0,
-      "ctr": 0,
-      "period": "28d to 2026-11-01"
-    },
-    "deployedAt": null
-  },
-  {
-    "id": "6ad457fd-e709-4867-9f52-8fdd47313129",
-    "slug": "/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
-    "date": "2026-11-02T10:39:17.195Z",
-    "fields": [
-      {
-        "field": "seoTitle",
-        "old": "⁨LM Studio⁩ مقابل ⁨Jan⁩ و⁨GPT4All⁩: اختبار ⁨M5 + RTX 4070⁩",
-        "new": "LM Studio مقابل Jan وGPT4All 2026: مقارنة"
-      },
-      {
-        "field": "metaDescription",
-        "old": "اختُبرت ⁨3⁩ تطبيقات على ⁨MacBook M5⁩ و⁨RTX 4070⁩: ⁨LM Studio⁩ أسرع في الاستدلال، ⁨Jan⁩ أفضل في تجربة المستخدم، ⁨GPT4All⁩ أبسط للمبتدئين. معايير قياسية كاملة.",
-        "new": "اختُبرت 3 تطبيقات على MacBook M5 وRTX 4070: LM Studio أسرع في الاستدلال، وJan أفضل تجربة، وGPT4All أبسط للمبتدئين."
-      }
-    ],
-    "reason": "Zero-click batch 01 round 1. Titles of es/pt/ja/zh/ko/ar and pt/ar metas into budget; GPT4All stale warning refreshed (20+ months, no release since 2025-02-25); Jan privacy claims corrected (optional PostHog analytics), month snapshots removed.",
-    "queries": [
-      "lm studio vs gpt4all"
-    ],
-    "baseline": {
-      "position": 0,
-      "impressions": 0,
-      "clicks": 0,
-      "ctr": 0,
-      "period": "28d to 2026-11-01"
-    },
-    "deployedAt": null
-  },
-  {
-    "id": "cf3f3afe-ea28-4559-a52d-f2bacd123543",
-    "slug": "/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
-    "date": "2026-11-02T10:39:17.222Z",
-    "fields": [
-      {
-        "field": "seoTitle",
-        "old": "LM Studio vs Jan vs GPT4All 2026: M5 + RTX 4070 실측",
-        "new": "LM Studio·Jan·GPT4All 비교 2026"
-      }
-    ],
-    "reason": "Zero-click batch 01 round 1. Titles of es/pt/ja/zh/ko/ar and pt/ar metas into budget; GPT4All stale warning refreshed (20+ months, no release since 2025-02-25); Jan privacy claims corrected (optional PostHog analytics), month snapshots removed.",
-    "queries": [
-      "lm studio vs gpt4all"
-    ],
-    "baseline": {
-      "position": 5.45,
-      "impressions": 11,
-      "clicks": 0,
-      "ctr": 0,
-      "period": "28d to 2026-11-01"
-    },
-    "deployedAt": null
-  },
-  {
     "id": "6d952dea-4c21-466f-9a47-da3a61430231",
     "slug": "/local-llms/page-assist-review",
     "date": "2026-11-02T10:39:17.308Z",
@@ -8479,6 +8325,268 @@
     "baseline": {
       "position": 8,
       "impressions": 13,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "cb5f4f6a-5fa7-42e9-9700-03444aea69e2",
+    "slug": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
+    "date": "2026-11-02T11:07:10.674Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LM Studio vs Jan vs GPT4All 2026: Tested on M5 + RTX 4070",
+        "new": "LM Studio vs Jan vs GPT4All 2026: Which Local AI App?"
+      },
+      {
+        "field": "metaDescription",
+        "old": "3 desktop AI apps tested on M5 MacBook and RTX 4070. LM Studio wins on speed, Jan on UX, GPT4All on simplicity. Full breakdown with benchmarks.",
+        "new": "LM Studio vs Jan vs GPT4All compared: model library, privacy and telemetry, licenses, platforms and maintenance status. Which local AI app in 2026?"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 1. Titles/metas of all locales rewritten without the first-person M5/RTX 4070 test claims (benchmarks, onboarding timings and 5 diagrams removed); GPT4All stale warning refreshed (20+ months, no release since 2025-02-25); Jan privacy claims corrected (optional PostHog analytics); compliance wording softened; slug year dropped with 301s.",
+    "queries": [
+      "lm studio vs gpt4all",
+      "gpt4all vs lm studio"
+    ],
+    "baseline": {
+      "position": 5.82,
+      "impressions": 609,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "380a9f5a-d3c4-4335-80fc-e0d7a22c1af7",
+    "slug": "/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
+    "date": "2026-11-02T11:07:10.701Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LM Studio vs Jan vs GPT4All 2026: Test auf M5 + RTX 4070",
+        "new": "LM Studio vs Jan vs GPT4All 2026: Welche lokale KI-App?"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LM Studio vs Jan vs GPT4All 2026: drei lokale LLM-Apps im Vergleich. Benutzerfreundlichkeit, Modell-Support, Geschwindigkeit und Datenschutz im Test.",
+        "new": "LM Studio, Jan und GPT4All im Vergleich: Modellbibliothek, Datenschutz und Telemetrie, Lizenzen, Plattformen und Wartungsstatus. Welche lokale KI-App 2026?"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 1. Titles/metas of all locales rewritten without the first-person M5/RTX 4070 test claims (benchmarks, onboarding timings and 5 diagrams removed); GPT4All stale warning refreshed (20+ months, no release since 2025-02-25); Jan privacy claims corrected (optional PostHog analytics); compliance wording softened; slug year dropped with 301s.",
+    "queries": [
+      "lm studio vs gpt4all"
+    ],
+    "baseline": {
+      "position": 5.17,
+      "impressions": 6,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ddb87dfe-6434-43ab-8b08-0221d542852b",
+    "slug": "/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
+    "date": "2026-11-02T11:07:10.728Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LM Studio vs Jan vs GPT4All 2026 : test M5 + RTX 4070",
+        "new": "LM Studio vs Jan vs GPT4All 2026: quelle app IA locale?"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LM Studio vs Jan vs GPT4All 2026 : trois applications LLM locales comparées. Facilité d'utilisation, support de modèles, vitesse et confidentialité testés.",
+        "new": "LM Studio, Jan et GPT4All comparés : bibliothèque de modèles, confidentialité, télémétrie, licences, plateformes et maintenance. Quelle app IA locale ?"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 1. Titles/metas of all locales rewritten without the first-person M5/RTX 4070 test claims (benchmarks, onboarding timings and 5 diagrams removed); GPT4All stale warning refreshed (20+ months, no release since 2025-02-25); Jan privacy claims corrected (optional PostHog analytics); compliance wording softened; slug year dropped with 301s.",
+    "queries": [
+      "lm studio vs gpt4all"
+    ],
+    "baseline": {
+      "position": 9.25,
+      "impressions": 4,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "428815bd-12f6-4f8d-8af3-301f83795a57",
+    "slug": "/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
+    "date": "2026-11-02T11:07:10.756Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LM Studio vs Jan vs GPT4All 2026：M5とRTX 4070で実機検証",
+        "new": "LM Studio・Jan・GPT4All比較 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LM Studio、Jan、GPT4Allを2026年版で比較。3つのローカルLLMアプリの使いやすさ、モデル対応、速度、プライバシーを初心者から上級者向けに検証して解説。",
+        "new": "LM Studio・Jan・GPT4Allを比較：モデルライブラリ、プライバシーとテレメトリ、ライセンス、対応OS、メンテナンス状況。どのローカルAIアプリを選ぶ？"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 1. Titles/metas of all locales rewritten without the first-person M5/RTX 4070 test claims (benchmarks, onboarding timings and 5 diagrams removed); GPT4All stale warning refreshed (20+ months, no release since 2025-02-25); Jan privacy claims corrected (optional PostHog analytics); compliance wording softened; slug year dropped with 301s.",
+    "queries": [
+      "lm studio vs gpt4all"
+    ],
+    "baseline": {
+      "position": 4.8,
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "82c69ecf-3f92-4ba3-bae5-96077eced7fe",
+    "slug": "/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
+    "date": "2026-11-02T11:07:10.783Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LM Studio vs Jan vs GPT4All 2026：M5与RTX 4070深度实测",
+        "new": "LM Studio、Jan、GPT4All对比 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "M5 MacBook与RTX 4070实测3款本地AI应用。LM Studio速度最快，Jan体验最佳，GPT4All安装最简。完整对比数据与中国企业部署建议。",
+        "new": "LM Studio、Jan、GPT4All对比:模型库、隐私与遥测、许可证、支持平台和维护状态。2026年该选哪款本地AI应用,一文快速看懂。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 1. Titles/metas of all locales rewritten without the first-person M5/RTX 4070 test claims (benchmarks, onboarding timings and 5 diagrams removed); GPT4All stale warning refreshed (20+ months, no release since 2025-02-25); Jan privacy claims corrected (optional PostHog analytics); compliance wording softened; slug year dropped with 301s.",
+    "queries": [
+      "lm studio vs gpt4all"
+    ],
+    "baseline": {
+      "position": 7.67,
+      "impressions": 3,
+      "clicks": 1,
+      "ctr": 0.3333333333333333,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "967b556f-507e-415f-8e0a-b7fc2aebde9d",
+    "slug": "/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
+    "date": "2026-11-02T11:07:10.811Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LM Studio vs Jan vs GPT4All 2026: probados en M5 + RTX 4070",
+        "new": "LM Studio vs Jan vs GPT4All 2026: ¿qué app de IA local?"
+      },
+      {
+        "field": "metaDescription",
+        "old": "3 apps de IA de escritorio probadas en MacBook M5 y RTX 4070: LM Studio gana en velocidad, Jan en UX y GPT4All en simplicidad. Comparativa con benchmarks.",
+        "new": "LM Studio, Jan y GPT4All comparados: biblioteca de modelos, privacidad y telemetría, licencias, plataformas y mantenimiento. ¿Qué app de IA local en 2026?"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 1. Titles/metas of all locales rewritten without the first-person M5/RTX 4070 test claims (benchmarks, onboarding timings and 5 diagrams removed); GPT4All stale warning refreshed (20+ months, no release since 2025-02-25); Jan privacy claims corrected (optional PostHog analytics); compliance wording softened; slug year dropped with 301s.",
+    "queries": [
+      "lm studio vs gpt4all"
+    ],
+    "baseline": {
+      "position": 4.65,
+      "impressions": 17,
+      "clicks": 1,
+      "ctr": 0.058823529411764705,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "aa813a6f-1e21-4da1-ae00-1e49ccc3f548",
+    "slug": "/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
+    "date": "2026-11-02T11:07:10.837Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LM Studio vs Jan vs GPT4All 2026: testados em M5 + RTX 4070",
+        "new": "LM Studio vs Jan vs GPT4All 2026: qual app de IA local?"
+      },
+      {
+        "field": "metaDescription",
+        "old": "3 apps de IA de desktop testados em MacBook M5 e RTX 4070. O LM Studio vence em velocidade, o Jan em UX e o GPT4All em simplicidade. Comparativo com benchmarks.",
+        "new": "LM Studio, Jan e GPT4All comparados: biblioteca de modelos, privacidade e telemetria, licenças, plataformas e manutenção. Qual app de IA local em 2026?"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 1. Titles/metas of all locales rewritten without the first-person M5/RTX 4070 test claims (benchmarks, onboarding timings and 5 diagrams removed); GPT4All stale warning refreshed (20+ months, no release since 2025-02-25); Jan privacy claims corrected (optional PostHog analytics); compliance wording softened; slug year dropped with 301s.",
+    "queries": [
+      "lm studio vs gpt4all"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "eb1188f7-ceb6-4601-b51b-71f23e3d5241",
+    "slug": "/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
+    "date": "2026-11-02T11:07:10.865Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "⁨LM Studio⁩ مقابل ⁨Jan⁩ و⁨GPT4All⁩: اختبار ⁨M5 + RTX 4070⁩",
+        "new": "LM Studio مقابل Jan وGPT4All 2026: مقارنة"
+      },
+      {
+        "field": "metaDescription",
+        "old": "اختُبرت ⁨3⁩ تطبيقات على ⁨MacBook M5⁩ و⁨RTX 4070⁩: ⁨LM Studio⁩ أسرع في الاستدلال، ⁨Jan⁩ أفضل في تجربة المستخدم، ⁨GPT4All⁩ أبسط للمبتدئين. معايير قياسية كاملة.",
+        "new": "مقارنة LM Studio وJan وGPT4All: مكتبة النماذج والخصوصية والقياس عن بُعد والتراخيص والمنصات وحالة الصيانة. أي تطبيق ذكاء اصطناعي محلي تثبّت في 2026؟"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 1. Titles/metas of all locales rewritten without the first-person M5/RTX 4070 test claims (benchmarks, onboarding timings and 5 diagrams removed); GPT4All stale warning refreshed (20+ months, no release since 2025-02-25); Jan privacy claims corrected (optional PostHog analytics); compliance wording softened; slug year dropped with 301s.",
+    "queries": [
+      "lm studio vs gpt4all"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "86629870-2c4e-4ef9-8fa1-4d1e8ade69b9",
+    "slug": "/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
+    "date": "2026-11-02T11:07:10.892Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LM Studio vs Jan vs GPT4All 2026: M5 + RTX 4070 실측",
+        "new": "LM Studio·Jan·GPT4All 비교 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "MacBook M5와 RTX 4070에서 테스트한 3가지 데스크톱 AI 앱: LM Studio는 속도 우세, Jan은 UX, GPT4All은 단순성. 벤치마크가 포함된 비교.",
+        "new": "LM Studio·Jan·GPT4All 비교: 모델 라이브러리, 프라이버시와 텔레메트리, 라이선스, 지원 플랫폼, 유지 관리 상태. 어떤 로컬 AI 앱을 설치할까요?"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 1. Titles/metas of all locales rewritten without the first-person M5/RTX 4070 test claims (benchmarks, onboarding timings and 5 diagrams removed); GPT4All stale warning refreshed (20+ months, no release since 2025-02-25); Jan privacy claims corrected (optional PostHog analytics); compliance wording softened; slug year dropped with 301s.",
+    "queries": [
+      "lm studio vs gpt4all"
+    ],
+    "baseline": {
+      "position": 5.45,
+      "impressions": 11,
       "clicks": 0,
       "ctr": 0,
       "period": "28d to 2026-11-01"

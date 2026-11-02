@@ -97,14 +97,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
-        "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
-        "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -166,9 +158,17 @@
         "url": "/power-local-llm/llama-app-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "dateModified": "2026-10-24",
+        "tier": "about"
       }
     ],
-    "totalCount": 184,
+    "totalCount": 183,
     "capped": true
   },
   "vLLM": {
@@ -871,7 +871,7 @@
         "cluster": "power-local-llm",
         "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
         "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
-        "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
+        "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -995,7 +995,7 @@
         "cluster": "power-local-llm",
         "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
         "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
-        "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
+        "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -1081,7 +1081,7 @@
         "cluster": "power-local-llm",
         "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
         "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
-        "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
+        "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
