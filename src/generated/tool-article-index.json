@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-ai-agents-with-mcp",
         "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
@@ -72,14 +80,6 @@
         "url": "/power-local-llm/local-llm-app-alternatives",
         "dateModified": "2026-10-31",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "agnai-review",
-        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
-        "url": "/power-local-llm/agnai-review",
-        "dateModified": "2026-10-30",
-        "tier": "about"
       }
     ],
     "totalCount": 340,
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
+        "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
+        "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -156,14 +164,6 @@
         "slug": "llama-app-review",
         "title": "Llama App Review: llama.cpp Desktop App for Mac and Windows",
         "url": "/power-local-llm/llama-app-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
@@ -720,6 +720,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "omlx-review",
         "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
@@ -741,14 +749,6 @@
         "title": "AutoGPT Review: Classic Agent vs. Hosted Platform",
         "url": "/power-local-llm/autogpt-local-review",
         "dateModified": "2026-09-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "page-assist-review",
-        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
-        "url": "/local-llms/page-assist-review",
-        "dateModified": "2026-09-11",
         "tier": "mentioned"
       },
       {
@@ -860,6 +860,22 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
+        "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
+        "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-ai-agents-with-mcp",
         "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
@@ -913,22 +929,6 @@
         "title": "Best Local AI App for Non-Technical Users (2026)",
         "url": "/power-local-llm/local-ai-app-non-technical-users",
         "dateModified": "2026-10-28",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "liquid-apollo-review",
-        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
-        "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-prompts-for-fiction-writers",
-        "title": "Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)",
-        "url": "/power-local-llm/local-llm-prompts-for-fiction-writers",
-        "dateModified": "2026-10-26",
         "tier": "about"
       }
     ],
@@ -989,6 +989,14 @@
         "title": "Jan Review: The Open-Source, Offline ChatGPT Alternative",
         "url": "/power-local-llm/jan-review",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
+        "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
+        "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -1054,14 +1062,6 @@
         "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-ai-app-low-end-pc",
-        "title": "Best Local AI Apps for Low-End PCs in 2026 (8GB RAM, No GPU)",
-        "url": "/power-local-llm/best-local-ai-app-low-end-pc",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
     "totalCount": 51,
@@ -1075,6 +1075,14 @@
         "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
         "url": "/power-local-llm/gpt4all-review",
         "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
+        "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
+        "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -1138,14 +1146,6 @@
         "slug": "atomic-chat-review",
         "title": "Atomic Chat Review: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enchanted-review",
-        "title": "Enchanted Review: Native macOS/iOS Ollama Client",
-        "url": "/power-local-llm/enchanted-review",
         "dateModified": "2026-09-05",
         "tier": "about"
       }
@@ -2080,6 +2080,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "llm-vision-review",
         "title": "LLM Vision Review: Camera Analysis for Home Assistant With Vision LLMs",
@@ -2141,14 +2149,6 @@
         "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
         "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
         "dateModified": "2026-10-16",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-chat-assistants-compared",
-        "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-        "url": "/power-local-llm/local-llm-chat-assistants-compared",
-        "dateModified": "2026-09-20",
         "tier": "about"
       }
     ],
@@ -2478,6 +2478,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
@@ -2498,14 +2506,6 @@
         "slug": "nextchat-review",
         "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
         "url": "/local-llms/nextchat-review",
-        "dateModified": "2026-09-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "page-assist-review",
-        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
-        "url": "/local-llms/page-assist-review",
         "dateModified": "2026-09-11",
         "tier": "about"
       },
@@ -2532,6 +2532,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
@@ -2544,14 +2552,6 @@
         "slug": "chatbox-review",
         "title": "Chatbox Review 2026: Cross-Platform AI Chat Client for Desktop, Web, and Mobile",
         "url": "/local-llms/chatbox-review",
-        "dateModified": "2026-09-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "page-assist-review",
-        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
-        "url": "/local-llms/page-assist-review",
         "dateModified": "2026-09-11",
         "tier": "about"
       },
@@ -2574,7 +2574,7 @@
         "slug": "page-assist-review",
         "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
         "url": "/local-llms/page-assist-review",
-        "dateModified": "2026-09-11",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -6809,6 +6809,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "comfyui-review",
+        "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
+        "url": "/power-local-llm/comfyui-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "layla-review",
         "title": "Layla Review: On-Device AI Companion App for Android and iOS",
         "url": "/power-local-llm/layla-review",
@@ -6870,14 +6878,6 @@
         "url": "/power-local-llm/local-ai-geetmark-review",
         "dateModified": "2026-10-09",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "stableswarmui-review",
-        "title": "SwarmUI Review: The Multi-GPU Stable Diffusion Web UI",
-        "url": "/power-local-llm/stableswarmui-review",
-        "dateModified": "2026-10-09",
-        "tier": "about"
       }
     ],
     "totalCount": 35,
@@ -6890,7 +6890,7 @@
         "slug": "comfyui-review",
         "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
         "url": "/power-local-llm/comfyui-review",
-        "dateModified": "2026-09-06",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -6981,6 +6981,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "comfyui-review",
+        "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
+        "url": "/power-local-llm/comfyui-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "lm-mini-review",
         "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
         "url": "/power-local-llm/lm-mini-review",
@@ -7017,14 +7025,6 @@
         "title": "Stable Diffusion WebUI Forge Review: Faster, Lower-VRAM AUTOMATIC1111 Fork",
         "url": "/power-local-llm/stable-diffusion-forge-review",
         "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "comfyui-review",
-        "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
-        "url": "/power-local-llm/comfyui-review",
-        "dateModified": "2026-09-06",
         "tier": "about"
       },
       {
@@ -7081,6 +7081,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "comfyui-review",
+        "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
+        "url": "/power-local-llm/comfyui-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "stableswarmui-review",
         "title": "SwarmUI Review: The Multi-GPU Stable Diffusion Web UI",
         "url": "/power-local-llm/stableswarmui-review",
@@ -7100,14 +7108,6 @@
         "slug": "automatic1111-review",
         "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
         "url": "/power-local-llm/automatic1111-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "comfyui-review",
-        "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
-        "url": "/power-local-llm/comfyui-review",
         "dateModified": "2026-09-06",
         "tier": "about"
       },
@@ -7237,6 +7237,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "comfyui-review",
+        "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
+        "url": "/power-local-llm/comfyui-review",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "krita-ai-diffusion-review",
         "title": "Krita AI Diffusion Review: Open-Source AI Painting Plugin",
         "url": "/power-local-llm/krita-ai-diffusion-review",
@@ -7249,14 +7257,6 @@
         "title": "Easy Diffusion Review: One-Click Stable Diffusion for PC and Mac",
         "url": "/power-local-llm/easy-diffusion-review",
         "dateModified": "2026-10-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "draw-things-review",
-        "title": "Draw Things Review: Local-First Image AI with Optional Cloud",
-        "url": "/power-local-llm/draw-things-review",
-        "dateModified": "2026-10-09",
         "tier": "mentioned"
       }
     ],
@@ -11902,6 +11902,14 @@
         "tier": "mentioned"
       },
       {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-ai-agents-with-mcp",
         "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
@@ -11954,14 +11962,6 @@
         "slug": "acdsee-photo-studio-ultimate-review",
         "title": "ACDSee Photo Studio Ultimate 2027 Review: Photo Editor With Local and Cloud AI",
         "url": "/power-local-llm/acdsee-photo-studio-ultimate-review",
-        "dateModified": "2026-10-30",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "agnai-review",
-        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
-        "url": "/power-local-llm/agnai-review",
         "dateModified": "2026-10-30",
         "tier": "mentioned"
       }

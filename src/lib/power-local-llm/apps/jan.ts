@@ -18,7 +18,7 @@ export const app: ToolRecord = {
   license: 'Apache 2.0 (variant)',
   price: 'free',
   hardware: { ramGb: 8, vramGb: 6, cpuOnly: true }, // per jan.ai/docs/desktop/windows official install docs: "8GB minimum (16GB recommended)" RAM, "6GB VRAM minimum" only if using GPU acceleration — GPU is optional, Jan runs on CPU alone, verified 2026-09-13
-  stars: 45051,
+  stars: 45303,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat'],
@@ -38,6 +38,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { desktopApp: true, builtInEngine: true, mcp: true, openaiApi: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-10-23', // GitHub API (latest release or push, whichever is newer), read 2026-10-23
+  lastUpstreamUpdate: '2026-11-02', // GitHub API (latest release or push, whichever is newer), read 2026-11-02
   lastUpstreamUpdateSource: 'https://github.com/janhq/jan',
 }

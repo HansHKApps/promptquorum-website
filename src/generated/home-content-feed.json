@@ -9560,27 +9560,27 @@
   {
     "lang": "en",
     "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
-    "excerpt": "Page Assist is a free, MIT-licensed browser extension with 8,200+ GitHub stars for chatting with local AI models and web pages. Install links and 2026 review.",
+    "excerpt": "Page Assist is a free MIT-licensed browser extension for Chrome, Firefox and Edge to chat with local AI models via Ollama. Install links and 2026 review.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-09-11",
+    "dateModified": "2026-11-02",
     "url": "/local-llms/page-assist-review",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Page-Assist-Rezension 2026: Browser-Sidebar für lokale KI-Modelle",
-    "excerpt": "Page Assist ist eine kostenlose, MIT-lizenzierte Browser-Erweiterung mit 8.200+ GitHub-Sternen für den Chat mit lokalen KI-Modellen und Webseiten. Installationslinks und Rezension 2026.",
+    "excerpt": "Page Assist ist eine kostenlose, MIT-lizenzierte Browser-Erweiterung für Chrome, Firefox und Edge: Chat mit lokalen KI-Modellen via Ollama. Rezension 2026.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-09-11",
+    "dateModified": "2026-11-02",
     "url": "/de/local-llms/page-assist-review",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "Page Assist : Test 2026 de la barre latérale de navigateur pour IA locale",
-    "excerpt": "Page Assist est une extension de navigateur gratuite sous licence MIT avec 8 200+ étoiles GitHub pour discuter avec des modèles IA locaux et des pages web. Liens d'installation et test 2026.",
+    "excerpt": "Page Assist est une extension gratuite (MIT) pour Chrome, Firefox et Edge : discutez avec des modèles IA locaux via Ollama. Liens d'installation et test.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-09-11",
+    "dateModified": "2026-11-02",
     "url": "/fr/local-llms/page-assist-review",
     "cluster": "local-llms"
   },
@@ -9589,7 +9589,7 @@
     "title": "Page Assistレビュー2026：ローカルAIモデル用ブラウザサイドバー",
     "excerpt": "Page AssistはGitHubスター8,200以上の無料・MITライセンスのブラウザ拡張機能で、ローカルAIモデルやウェブページとチャットできます。インストールリンクと2026年レビュー。",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-09-11",
+    "dateModified": "2026-11-02",
     "url": "/ja/local-llms/page-assist-review",
     "cluster": "local-llms"
   },
@@ -9598,34 +9598,34 @@
     "title": "Page Assist 评测2026：本地AI模型的浏览器侧边栏",
     "excerpt": "Page Assist是一款免费、MIT许可的浏览器扩展，GitHub星标超8,200，可与本地AI模型和网页对话。附安装链接及2026评测。",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-09-11",
+    "dateModified": "2026-11-02",
     "url": "/zh/local-llms/page-assist-review",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "Page Assist: análisis 2026 de la barra lateral de navegador para IA local",
-    "excerpt": "Page Assist es una extensión de navegador gratuita con licencia MIT y más de 8.200 estrellas en GitHub para chatear con modelos de IA locales y páginas web. Enlaces de instalación y análisis 2026.",
+    "excerpt": "Page Assist es una extensión gratuita (MIT) para Chrome, Firefox y Edge: chatea con modelos de IA locales vía Ollama. Enlaces de instalación y análisis.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-09-11",
+    "dateModified": "2026-11-02",
     "url": "/es/local-llms/page-assist-review",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "Page Assist: análise 2026 da barra lateral de navegador para IA local",
-    "excerpt": "Page Assist é uma extensão de navegador gratuita com licença MIT e mais de 8.200 estrelas no GitHub para conversar com modelos de IA locais e páginas web. Links de instalação e análise 2026.",
+    "excerpt": "Page Assist é uma extensão gratuita (MIT) para Chrome, Firefox e Edge: converse com modelos de IA locais via Ollama. Links de instalação e análise 2026.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-09-11",
+    "dateModified": "2026-11-02",
     "url": "/pt/local-llms/page-assist-review",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "مراجعة Page Assist 2026: الشريط الجانبي للمتصفح للنماذج الذكية المحلية",
-    "excerpt": "Page Assist إضافة متصفح مجانية برخصة MIT وأكثر من 8,200 نجمة على GitHub للدردشة مع نماذج الذكاء الاصطناعي المحلية وصفحات الويب. روابط التثبيت ومراجعة 2026.",
+    "excerpt": "Page Assist إضافة متصفح مجانية برخصة MIT لـ Chrome وFirefox وEdge للدردشة مع نماذج ذكاء اصطناعي محلية عبر Ollama. روابط التثبيت ومراجعة 2026.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-09-11",
+    "dateModified": "2026-11-02",
     "url": "/ar/local-llms/page-assist-review",
     "cluster": "local-llms"
   },
@@ -9634,7 +9634,7 @@
     "title": "Page Assist 리뷰 2026: 로컬 AI 모델용 브라우저 사이드바",
     "excerpt": "Page Assist는 GitHub 스타 8,200개 이상의 무료 MIT 라이선스 브라우저 확장 프로그램으로, 로컬 AI 모델 및 웹페이지와 채팅할 수 있습니다. 설치 링크와 2026년 리뷰.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-09-11",
+    "dateModified": "2026-11-02",
     "url": "/ko/local-llms/page-assist-review",
     "cluster": "local-llms"
   },
@@ -22117,7 +22117,7 @@
     "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
     "excerpt": "3 desktop AI apps tested on M5 MacBook and RTX 4070. LM Studio wins on speed, Jan on UX, GPT4All on simplicity. Full breakdown with benchmarks.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-02",
     "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
     "cluster": "power-local-llm"
   },
@@ -22126,7 +22126,7 @@
     "title": "LM Studio vs Jan vs GPT4All: Welche lokale KI-App gewinnt 2026?",
     "excerpt": "LM Studio vs Jan vs GPT4All 2026: drei lokale LLM-Apps im Vergleich. Benutzerfreundlichkeit, Modell-Support, Geschwindigkeit und Datenschutz im Test.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-02",
     "url": "/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
     "cluster": "power-local-llm"
   },
@@ -22135,7 +22135,7 @@
     "title": "LM Studio vs Jan vs GPT4All : quelle app IA locale gagne en 2026 ?",
     "excerpt": "LM Studio vs Jan vs GPT4All 2026 : trois applications LLM locales comparées. Facilité d'utilisation, support de modèles, vitesse et confidentialité testés.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-02",
     "url": "/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
     "cluster": "power-local-llm"
   },
@@ -22144,7 +22144,7 @@
     "title": "LM Studio vs Jan vs GPT4All：2026年のローカルAIアプリ徹底比較",
     "excerpt": "LM Studio、Jan、GPT4Allを2026年版で比較。3つのローカルLLMアプリの使いやすさ、モデル対応、速度、プライバシーを初心者から上級者向けに検証して解説。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-02",
     "url": "/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
     "cluster": "power-local-llm"
   },
@@ -22153,7 +22153,7 @@
     "title": "LM Studio vs Jan vs GPT4All：2026年本地AI应用谁是赢家？",
     "excerpt": "M5 MacBook与RTX 4070实测3款本地AI应用。LM Studio速度最快，Jan体验最佳，GPT4All安装最简。完整对比数据与中国企业部署建议。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-02",
     "url": "/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
     "cluster": "power-local-llm"
   },
@@ -22162,25 +22162,25 @@
     "title": "LM Studio vs Jan vs GPT4All: qué app de IA local gana en 2026",
     "excerpt": "3 apps de IA de escritorio probadas en MacBook M5 y RTX 4070: LM Studio gana en velocidad, Jan en UX y GPT4All en simplicidad. Comparativa con benchmarks.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-02",
     "url": "/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "LM Studio vs Jan vs GPT4All: qual app de IA local vence em 2026",
-    "excerpt": "3 apps de IA de desktop testados em MacBook M5 e RTX 4070. O LM Studio vence em velocidade, o Jan em UX e o GPT4All em simplicidade. Comparativo com benchmarks.",
+    "excerpt": "3 apps de IA de desktop testados em MacBook M5 e RTX 4070: LM Studio vence em velocidade, Jan em UX e GPT4All em simplicidade. Com benchmarks.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-02",
     "url": "/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "⁨LM Studio⁩ مقابل ⁨Jan⁩ مقابل ⁨GPT4All⁩: أيّ تطبيق ذكاء اصطناعي محلي يفوز في ⁨2026⁩",
-    "excerpt": "اختُبرت ⁨3⁩ تطبيقات على ⁨MacBook M5⁩ و⁨RTX 4070⁩: ⁨LM Studio⁩ أسرع في الاستدلال، ⁨Jan⁩ أفضل في تجربة المستخدم، ⁨GPT4All⁩ أبسط للمبتدئين. معايير قياسية كاملة.",
+    "excerpt": "اختُبرت 3 تطبيقات على MacBook M5 وRTX 4070: LM Studio أسرع في الاستدلال، وJan أفضل تجربة، وGPT4All أبسط للمبتدئين.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-02",
     "url": "/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
     "cluster": "power-local-llm"
   },
@@ -22189,7 +22189,7 @@
     "title": "LM Studio vs Jan vs GPT4All: 2026년 어느 로컬 AI 앱이 이깁니까",
     "excerpt": "MacBook M5와 RTX 4070에서 테스트한 3가지 데스크톱 AI 앱: LM Studio는 속도 우세, Jan은 UX, GPT4All은 단순성. 벤치마크가 포함된 비교.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-02",
     "url": "/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
     "cluster": "power-local-llm"
   },
@@ -47954,81 +47954,81 @@
   {
     "lang": "en",
     "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
-    "excerpt": "ComfyUI review 2026: GPL-3.0 license, node-graph workflow explained, VRAM needs for SD 1.5/SDXL/Flux, ComfyUI Manager, Comfy Cloud pricing, and how it compares with AUTOMATIC1111, InvokeAI, and Fooocus.",
+    "excerpt": "ComfyUI review: free GPL-3.0 node-based UI for Stable Diffusion and Flux. VRAM needs by model, ComfyUI Manager, Comfy Cloud pricing and alternatives.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-11-02",
     "url": "/power-local-llm/comfyui-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "ComfyUI-Rezension: Kostenlose node-basierte Oberfläche für Stable Diffusion & Flux",
-    "excerpt": "ComfyUI-Rezension 2026: GPL-3.0-Lizenz, Node-Graph-Workflow erklärt, VRAM-Bedarf für SD 1.5/SDXL/Flux, ComfyUI Manager, Comfy-Cloud-Preise und der Vergleich mit AUTOMATIC1111, InvokeAI und Fooocus.",
+    "excerpt": "ComfyUI-Rezension: kostenloser Node-Editor (GPL-3.0) für Stable Diffusion und Flux, VRAM-Bedarf je Modell, ComfyUI Manager, Comfy-Cloud-Preise.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-11-02",
     "url": "/de/power-local-llm/comfyui-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Avis ComfyUI: interface gratuite à base de nœuds pour Stable Diffusion et Flux",
-    "excerpt": "Avis ComfyUI 2026 : licence GPL-3.0, workflow par graphe de nœuds expliqué, VRAM nécessaire pour SD 1.5/SDXL/Flux, ComfyUI Manager, tarifs Comfy Cloud et comparaison avec AUTOMATIC1111, InvokeAI et Fooocus.",
+    "excerpt": "Avis ComfyUI: éditeur de nœuds gratuit (GPL-3.0) pour Stable Diffusion et Flux, VRAM requise par modèle, ComfyUI Manager, tarifs Comfy Cloud, alternatives.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-11-02",
     "url": "/fr/power-local-llm/comfyui-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "ComfyUIレビュー:Stable DiffusionとFluxを動かす無料ノードベースUI",
-    "excerpt": "ComfyUIレビュー2026:GPL-3.0ライセンス、ノードグラフ・ワークフローの解説、SD 1.5/SDXL/Fluxに必要なVRAM、ComfyUI Manager、Comfy Cloudの料金、AUTOMATIC1111・InvokeAI・Fooocusとの比較。",
+    "excerpt": "ComfyUIレビュー：GPL-3.0の無料ノードエディタ。必要VRAM、ComfyUI Manager、Comfy Cloudの料金、AUTOMATIC1111との比較を解説。",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-11-02",
     "url": "/ja/power-local-llm/comfyui-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "ComfyUI评测:运行Stable Diffusion与Flux的免费节点式界面",
-    "excerpt": "ComfyUI评测2026:GPL-3.0许可证、节点图工作流详解、SD 1.5/SDXL/Flux所需VRAM、ComfyUI Manager、Comfy Cloud定价,以及与AUTOMATIC1111、InvokeAI、Fooocus的对比。",
+    "excerpt": "ComfyUI评测:GPL-3.0免费节点编辑器,各模型所需VRAM、ComfyUI Manager、Comfy Cloud定价,以及与AUTOMATIC1111、Fooocus的对比。",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-11-02",
     "url": "/zh/power-local-llm/comfyui-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "ComfyUI Análisis: Interfaz gratuita basada en nodos para Stable Diffusion y Flux",
-    "excerpt": "Análisis de ComfyUI 2026: licencia GPL-3.0, workflow de grafo de nodos explicado, VRAM necesaria para SD 1.5/SDXL/Flux, ComfyUI Manager, precios de Comfy Cloud y comparación con AUTOMATIC1111, InvokeAI y Fooocus.",
+    "excerpt": "Análisis de ComfyUI: qué es, si es gratis (GPL-3.0), requisitos de VRAM por modelo, ComfyUI Manager, precios de Comfy Cloud y alternativas a AUTOMATIC1111.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-11-02",
     "url": "/es/power-local-llm/comfyui-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Análise do ComfyUI: interface gratuita baseada em nós para Stable Diffusion e Flux",
-    "excerpt": "Análise do ComfyUI 2026: licença GPL-3.0, workflow de grafo de nós explicado, VRAM necessária para SD 1.5/SDXL/Flux, ComfyUI Manager, preços do Comfy Cloud e comparação com AUTOMATIC1111, InvokeAI e Fooocus.",
+    "excerpt": "Análise do ComfyUI: editor de nós gratuito (GPL-3.0) para Stable Diffusion e Flux, VRAM por modelo, ComfyUI Manager, preços do Comfy Cloud e alternativas.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-11-02",
     "url": "/pt/power-local-llm/comfyui-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "مراجعة ComfyUI: واجهة مجانية قائمة على العُقد لتشغيل Stable Diffusion وFlux",
-    "excerpt": "مراجعة ComfyUI 2026: رخصة GPL-3.0، شرح سير عمل مخطط العُقد، متطلبات VRAM لـ SD 1.5/SDXL/Flux، ComfyUI Manager، أسعار Comfy Cloud، ومقارنة مع AUTOMATIC1111 وInvokeAI وFooocus.",
+    "excerpt": "مراجعة ComfyUI: محرر عُقد مجاني (GPL-3.0) لـ Stable Diffusion وFlux، متطلبات VRAM لكل نموذج، ComfyUI Manager، أسعار Comfy Cloud والبدائل.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-11-02",
     "url": "/ar/power-local-llm/comfyui-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "ComfyUI 리뷰: Stable Diffusion과 Flux를 구동하는 무료 노드 기반 UI",
-    "excerpt": "ComfyUI 리뷰 2026: GPL-3.0 라이선스, 노드 그래프 워크플로우 설명, SD 1.5/SDXL/Flux에 필요한 VRAM, ComfyUI Manager, Comfy Cloud 요금제, AUTOMATIC1111·InvokeAI·Fooocus와의 비교.",
+    "excerpt": "ComfyUI 리뷰: ComfyUI란 무엇인지, 무료인지(GPL-3.0), 필요 VRAM, ComfyUI Manager, Comfy Cloud 요금제와 대안을 정리했습니다.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-11-02",
     "url": "/ko/power-local-llm/comfyui-review",
     "cluster": "power-local-llm"
   },

@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'GPL 3.0',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // github.com/comfyanonymous/ComfyUI README: no fixed minimum VRAM/RAM published (see wiki "Which GPU should I buy for ComfyUI"), but the official portable Windows build explicitly "should work for running on your CPU only", verified 2026-09-13
-  stars: 131200,
+  stars: 144576,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['image'],
@@ -40,10 +40,10 @@ export const app: ToolRecord = {
     ko: '고급 이미지 생성 워크플로용 노드 기반 UI — 활발히 유지 관리, 릴리스 1주 전',
   },
   reviewSlug: 'comfyui-review', // dedicated PromptQuorum review — pinned to #1 in the article index
-  pqReview: { date: '2026-09-20', version: 'v0.36.0', versionSourceUrl: 'https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.36.0' },
+  pqReview: { date: '2026-11-02', version: 'v0.43.0', versionSourceUrl: 'https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.43.0' },
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { visualBuilder: true, apiServer: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2026-11-02', // GitHub API (latest release or push, whichever is newer), read 2026-11-02
   lastUpstreamUpdateSource: 'https://github.com/Comfy-Org/ComfyUI',
 }

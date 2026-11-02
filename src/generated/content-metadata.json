@@ -956,7 +956,7 @@
       "images": []
     },
     "page-assist-review": {
-      "dateModified": "2026-09-11",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-11",
       "hasSections": true,
@@ -6610,7 +6610,7 @@
       ]
     },
     "lm-studio-vs-jan-vs-gpt4all-2026": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6628,11 +6628,11 @@
       "images": [
         {
           "url": "/images/lm-studio-jan-gpt4all-comparison-table-en.svg",
-          "title": "LM Studio vs Jan vs GPT4All feature comparison (2026, tested on M5 MacBook + RTX 4070): LM Studio leads on speed (38 tok/s M5, 74 tok/s RTX 4070) and model library; Jan wins on privacy (zero telemetry, Apache 2.0 open-source); GPT4All has the smallest install (290 MB) and lowest RAM requirement (4 GB)."
+          "title": "LM Studio vs Jan vs GPT4All feature comparison (2026, tested on M5 MacBook + RTX 4070): LM Studio leads on speed (38 tok/s M5, 74 tok/s RTX 4070) and model library; Jan wins on privacy (no telemetry by default, Apache 2.0 open-source); GPT4All has the smallest install (290 MB) and lowest RAM requirement (4 GB)."
         },
         {
           "url": "/images/lm-studio-jan-gpt4all-verdict-en.svg",
-          "title": "Which local AI desktop app to pick: LM Studio for max speed on RTX 3060+ or M3+ Mac and built-in PDF chat; Jan for Apache 2.0 open-source and zero telemetry including EU compliance; GPT4All for older 8 GB RAM hardware or users who want the simplest possible install."
+          "title": "Which local AI desktop app to pick: LM Studio for max speed on RTX 3060+ or M3+ Mac and built-in PDF chat; Jan for Apache 2.0 open-source and no telemetry by default including EU compliance; GPT4All for older 8 GB RAM hardware or users who want the simplest possible install."
         },
         {
           "url": "/images/lm-studio-jan-gpt4all-speed-benchmarks-en.svg",
@@ -12800,7 +12800,7 @@
       "images": []
     },
     "comfyui-review": {
-      "dateModified": "2026-09-06",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
