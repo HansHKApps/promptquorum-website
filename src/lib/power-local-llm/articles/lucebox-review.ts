@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Lucebox',
     title: 'Lucebox Review: Hand-Tuned Inference Engine and the Company Behind It',
     seoTitle: 'Lucebox Review: Engine, Company and Zero 495 Workstation',
-    intro: 'Lucebox ([lucebox.com](https://www.lucebox.com)) is a free, open-source local LLM inference server ([github.com/Luce-Org/lucebox](https://github.com/Luce-Org/lucebox), Apache-2.0) with hand-tuned kernels and speculative decoding for specific NVIDIA (CUDA 12+) and AMD (ROCm 6+) GPUs, and also the name of the company behind it, which sells a local AI workstation, the Lucebox Zero 495. The repository has more than ' + st.en('lucebox', 'bare') + ' GitHub stars. This review covers what the engine does, how it installs, who is behind it and who it fits.',
+    intro: 'Lucebox ([lucebox.com](https://www.lucebox.com)) is the open-source inference engine on GitHub ([github.com/Luce-Org/lucebox](https://github.com/Luce-Org/lucebox), Apache-2.0) and the company behind it. This review covers what the engine does, how it installs, who is behind it and who it fits.',
     metaDescription: 'Lucebox is a free, Apache-2.0 inference engine from AGMI AI, Inc., which also sells the Lucebox Zero 495 workstation. What it does and who it fits.',
     readTime: '10 min read',
     targetKeywords: [
@@ -35,7 +35,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'speculative decoding local LLM',
       'Lucebox Zero 495',
     ],
-    leadAnswerBlock: '**Lucebox is a free, open-source local LLM inference server that uses hand-tuned kernels and speculative decoding built for specific consumer and prosumer GPUs, and the name of the company that sells a local AI workstation built around it.** The engine is maintained under the Luce-Org GitHub organization, released under the Apache-2.0 license, targets NVIDIA GPUs (CUDA 12+, including RTX 3090/4090/5090 and Jetson AGX Thor) and AMD GPUs (ROCm 6+, including the R9700, RX 7900 XT/XTX, and Ryzen AI MAX+ 395/Strix Halo), and is also distributed in containerized form as "lucebox-hub."',
+    leadAnswerBlock: '**Lucebox is a free, open-source local LLM inference server with hand-tuned kernels and speculative decoding for specific NVIDIA (CUDA 12+) and AMD (ROCm 6+) consumer GPUs, and the name of the company that sells a local AI workstation built around it.**',
     quickAnswerTop: {
       en: {
         question: 'What is Lucebox and how does it differ from Ollama or vLLM?',
@@ -305,7 +305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Lucebox',
     title: 'Lucebox Review: Handoptimierte Inferenz-Engine und das Unternehmen dahinter',
     seoTitle: 'Lucebox Review: Engine, Firma und Zero-495-Workstation',
-    intro: 'Lucebox ([lucebox.com](https://www.lucebox.com)) ist ein kostenloser, quelloffener lokaler LLM-Inferenzserver ([github.com/Luce-Org/lucebox](https://github.com/Luce-Org/lucebox), Apache-2.0) mit handoptimierten Kernels und spekulativem Decoding für bestimmte NVIDIA- (CUDA 12+) und AMD-GPUs (ROCm 6+) — und zugleich der Name des Unternehmens dahinter, das eine lokale KI-Workstation verkauft, den Lucebox Zero 495. Das Repository hat über ' + st.de('lucebox', 'bare') + ' GitHub-Stars. Diese Review behandelt, was die Engine tut, wie sie sich installieren lässt, wer dahintersteht und für wen sie geeignet ist.',
+    intro: 'Lucebox ([lucebox.com](https://www.lucebox.com)) ist die quelloffene Inferenz-Engine auf GitHub ([github.com/Luce-Org/lucebox](https://github.com/Luce-Org/lucebox), Apache-2.0) und das Unternehmen dahinter. Diese Review behandelt, was die Engine tut, wie sie sich installieren lässt, wer dahintersteht und für wen sie geeignet ist.',
     metaDescription: 'Lucebox ist eine kostenlose Apache-2.0-Inferenz-Engine von AGMI AI, Inc., die auch die Workstation Lucebox Zero 495 verkauft. Funktion und Eignung.',
     readTime: '10 Min. Lesezeit',
     targetKeywords: [
@@ -315,7 +315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'spekulatives Decoding lokales LLM',
       'Lucebox Zero 495',
     ],
-    leadAnswerBlock: '**Lucebox ist ein kostenloser, quelloffener lokaler LLM-Inferenzserver, der handoptimierte Kernels und spekulatives Decoding für konkrete Consumer- und Prosumer-GPUs nutzt, und zugleich der Name des Unternehmens, das eine darauf aufbauende lokale KI-Workstation verkauft.** Die Engine wird unter der GitHub-Organisation Luce-Org gepflegt, steht unter der Apache-2.0-Lizenz, zielt auf NVIDIA-GPUs (CUDA 12+, darunter RTX 3090/4090/5090 und Jetson AGX Thor) und AMD-GPUs (ROCm 6+, darunter R9700, RX 7900 XT/XTX und Ryzen AI MAX+ 395/Strix Halo) und wird zusätzlich als Container-Image unter dem Namen „lucebox-hub" vertrieben.',
+    leadAnswerBlock: '**Lucebox ist ein kostenloser, quelloffener lokaler LLM-Inferenzserver mit handoptimierten Kernels und spekulativem Decoding für bestimmte NVIDIA- (CUDA 12+) und AMD-GPUs (ROCm 6+) und zugleich der Name des Unternehmens, das eine darauf aufbauende lokale KI-Workstation verkauft.**',
     quickAnswerTop: {
       de: {
         question: 'Was ist Lucebox und wie unterscheidet es sich von Ollama oder vLLM?',
@@ -584,7 +584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Lucebox',
     title: 'Lucebox Review: moteur d\'inférence optimisé à la main et entreprise derrière',
     seoTitle: 'Lucebox Review: moteur, entreprise et station Zero 495',
-    intro: 'Lucebox ([lucebox.com](https://www.lucebox.com)) est un serveur d\'inférence LLM local gratuit et open source ([github.com/Luce-Org/lucebox](https://github.com/Luce-Org/lucebox), Apache-2.0) avec des kernels optimisés à la main et du décodage spéculatif pour des GPU NVIDIA (CUDA 12+) et AMD (ROCm 6+) précis, et aussi le nom de l\'entreprise qui le développe et vend une station de travail IA locale, la Lucebox Zero 495. Le dépôt compte plus de ' + st.fr('lucebox', 'bare') + ' étoiles GitHub. Cette review présente ce que fait le moteur, son installation, qui est derrière et à qui il convient.',
+    intro: 'Lucebox ([lucebox.com](https://www.lucebox.com)) désigne le moteur d\'inférence open source sur GitHub ([github.com/Luce-Org/lucebox](https://github.com/Luce-Org/lucebox), Apache-2.0) et l\'entreprise qui le développe. Cette review présente ce que fait le moteur, son installation, qui est derrière et à qui il convient.',
     metaDescription: 'Lucebox est un moteur d\'inférence gratuit sous Apache-2.0 d\'AGMI AI, Inc., qui vend aussi la station Lucebox Zero 495. Rôle, installation, public.',
     readTime: '10 min de lecture',
     targetKeywords: [
@@ -594,7 +594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'décodage spéculatif LLM local',
       'Lucebox Zero 495',
     ],
-    leadAnswerBlock: '**Lucebox est un serveur d\'inférence LLM local gratuit et open source qui utilise des kernels optimisés à la main et du décodage spéculatif conçus pour des GPU grand public et prosumer spécifiques, et le nom de l\'entreprise qui vend une station de travail IA locale construite autour.** Le moteur est maintenu sous l\'organisation GitHub Luce-Org, publié sous licence Apache-2.0, cible les GPU NVIDIA (CUDA 12+, dont les RTX 3090/4090/5090 et Jetson AGX Thor) et AMD (ROCm 6+, dont R9700, RX 7900 XT/XTX et Ryzen AI MAX+ 395/Strix Halo), et est aussi distribué sous forme de conteneur sous le nom « lucebox-hub ».',
+    leadAnswerBlock: '**Lucebox est un serveur d\'inférence LLM local gratuit et open source, avec des kernels optimisés à la main et du décodage spéculatif pour des GPU NVIDIA (CUDA 12+) et AMD (ROCm 6+) précis, et le nom de l\'entreprise qui vend une station IA locale basée dessus.**',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que Lucebox et en quoi diffère-t-il d\'Ollama ou de vLLM ?',
@@ -1421,7 +1421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Lucebox',
     title: 'Lucebox Review: motor de inferencia ajustado a mano y la empresa detrás',
     seoTitle: 'Lucebox Review: motor, empresa y estación Zero 495',
-    intro: 'Lucebox ([lucebox.com](https://www.lucebox.com)) es un servidor de inferencia LLM local gratuito y de código abierto ([github.com/Luce-Org/lucebox](https://github.com/Luce-Org/lucebox), Apache-2.0) con kernels ajustados a mano y decodificación especulativa para GPUs NVIDIA (CUDA 12+) y AMD (ROCm 6+) concretas, y también el nombre de la empresa que lo desarrolla y vende una estación de trabajo de IA local, la Lucebox Zero 495. El repositorio tiene más de ' + st.es('lucebox', 'bare') + ' estrellas en GitHub. Esta review explica qué hace el motor, cómo se instala, quién está detrás y para quién es adecuado.',
+    intro: 'Lucebox ([lucebox.com](https://www.lucebox.com)) es el motor de inferencia de código abierto en GitHub ([github.com/Luce-Org/lucebox](https://github.com/Luce-Org/lucebox), Apache-2.0) y la empresa que lo desarrolla. Esta review explica qué hace el motor, cómo se instala, quién está detrás y para quién es adecuado.',
     metaDescription: 'Lucebox es un motor de inferencia gratuito Apache-2.0 de AGMI AI, Inc., que también vende la estación Lucebox Zero 495. Qué hace y para quién es.',
     readTime: '10 min de lectura',
     targetKeywords: [
@@ -1431,7 +1431,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'decodificación especulativa LLM local',
       'Lucebox Zero 495',
     ],
-    leadAnswerBlock: '**Lucebox es un servidor de inferencia LLM local gratuito y de código abierto que usa kernels ajustados a mano y decodificación especulativa pensados para GPUs de consumo y prosumer concretas, y el nombre de la empresa que vende una estación de trabajo de IA local construida a su alrededor.** El motor se mantiene bajo la organización de GitHub Luce-Org, se publica con licencia Apache-2.0, apunta a GPUs NVIDIA (CUDA 12+, incluidas RTX 3090/4090/5090 y Jetson AGX Thor) y AMD (ROCm 6+, incluidas R9700, RX 7900 XT/XTX y Ryzen AI MAX+ 395/Strix Halo), y también se distribuye en contenedor con el nombre «lucebox-hub».',
+    leadAnswerBlock: '**Lucebox es un servidor de inferencia LLM local gratuito y de código abierto, con kernels ajustados a mano y decodificación especulativa para GPUs NVIDIA (CUDA 12+) y AMD (ROCm 6+) concretas, y el nombre de la empresa que vende una estación de IA local basada en él.**',
     quickAnswerTop: {
       es: {
         question: '¿Qué es Lucebox y en qué se diferencia de Ollama o vLLM?',
@@ -1700,7 +1700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Lucebox',
     title: 'Lucebox Review: motor de inferência ajustado à mão e a empresa por trás',
     seoTitle: 'Lucebox Review: motor, empresa e estação Zero 495',
-    intro: 'O Lucebox ([lucebox.com](https://www.lucebox.com)) é um servidor de inferência LLM local gratuito e de código aberto ([github.com/Luce-Org/lucebox](https://github.com/Luce-Org/lucebox), Apache-2.0) com kernels ajustados manualmente e decodificação especulativa para GPUs NVIDIA (CUDA 12+) e AMD (ROCm 6+) específicas, e também o nome da empresa que o desenvolve e vende uma estação de trabalho de IA local, a Lucebox Zero 495. O repositório tem mais de ' + st.pt('lucebox', 'bare') + ' estrelas no GitHub. Esta review explica o que o motor faz, como instalar, quem está por trás e para quem ele serve.',
+    intro: 'O Lucebox ([lucebox.com](https://www.lucebox.com)) é o motor de inferência de código aberto no GitHub ([github.com/Luce-Org/lucebox](https://github.com/Luce-Org/lucebox), Apache-2.0) e a empresa que o desenvolve. Esta review explica o que o motor faz, como instalar, quem está por trás e para quem ele serve.',
     metaDescription: 'O Lucebox é um motor de inferência gratuito Apache-2.0 da AGMI AI, Inc., que também vende a estação Lucebox Zero 495. O que faz e para quem serve.',
     readTime: '10 min de leitura',
     targetKeywords: [
@@ -1710,7 +1710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'decodificação especulativa LLM local',
       'Lucebox Zero 495',
     ],
-    leadAnswerBlock: '**O Lucebox é um servidor de inferência LLM local gratuito e de código aberto que usa kernels ajustados manualmente e decodificação especulativa feitos para GPUs de consumo e prosumer específicas, e o nome da empresa que vende uma estação de trabalho de IA local construída em torno dele.** O motor é mantido sob a organização do GitHub Luce-Org, é publicado sob a licença Apache-2.0, tem como alvo GPUs NVIDIA (CUDA 12+, incluindo RTX 3090/4090/5090 e Jetson AGX Thor) e AMD (ROCm 6+, incluindo R9700, RX 7900 XT/XTX e Ryzen AI MAX+ 395/Strix Halo) e também é distribuído em contêiner com o nome "lucebox-hub".',
+    leadAnswerBlock: '**O Lucebox é um servidor de inferência LLM local gratuito e de código aberto, com kernels ajustados manualmente e decodificação especulativa para GPUs NVIDIA (CUDA 12+) e AMD (ROCm 6+) específicas, e o nome da empresa que vende uma estação de IA local baseada nele.**',
     quickAnswerTop: {
       pt: {
         question: 'O que é o Lucebox e como ele difere do Ollama ou do vLLM?',
@@ -1979,7 +1979,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Lucebox',
     title: 'مراجعة Lucebox: محرك استدلال مضبوط يدويًا والشركة التي تقف خلفه',
     seoTitle: 'مراجعة Lucebox: خادم استدلال محلي محسَّن لكل GPU',
-    intro: 'Lucebox ([lucebox.com](https://www.lucebox.com)) خادم استدلال محلي مجاني ومفتوح المصدر ([github.com/Luce-Org/lucebox](https://github.com/Luce-Org/lucebox)، ترخيص Apache-2.0) بنوى مضبوطة يدويًا وفك ترميز تخميني لوحدات GPU محددة من NVIDIA (CUDA 12+) وAMD (ROCm 6+)، وهو أيضًا اسم الشركة التي تطوره وتبيع محطة عمل محلية للذكاء الاصطناعي هي Lucebox Zero 495. يتجاوز عدد نجوم المستودع على GitHub ' + st.ar('lucebox', 'bare') + '. تشرح هذه المراجعة ما يفعله المحرك وطريقة تثبيته ومن يقف خلفه ولمن يناسب.',
+    intro: 'Lucebox ([lucebox.com](https://www.lucebox.com)) هو محرك الاستدلال المفتوح المصدر على GitHub ([github.com/Luce-Org/lucebox](https://github.com/Luce-Org/lucebox)، ترخيص Apache-2.0) والشركة التي تطوره. تشرح هذه المراجعة ما يفعله المحرك وطريقة تثبيته ومن يقف خلفه ولمن يناسب.',
     metaDescription: 'Lucebox خادم استدلال محلي مجاني ومفتوح المصدر بنواة محسَّنة يدويًا لكل GPU وفك ترميز تخميني. إليك كيفية تثبيته وأدائه ولمن يناسب.',
     readTime: '10 دقائق للقراءة',
     targetKeywords: [
@@ -1989,7 +1989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'فك ترميز تخميني نموذج لغوي محلي',
       'Lucebox Zero 495',
     ],
-    leadAnswerBlock: '**Lucebox خادم استدلال محلي مجاني ومفتوح المصدر يستخدم نوى مضبوطة يدويًا وفك ترميز تخمينيًا مصممة لوحدات GPU استهلاكية ومهنية محددة، وهو أيضًا اسم الشركة التي تبيع محطة عمل محلية للذكاء الاصطناعي مبنية حوله.** يُصان المحرك ضمن منظمة Luce-Org على GitHub ويُنشر بترخيص Apache-2.0، ويستهدف وحدات NVIDIA (CUDA 12+، ومنها RTX 3090/4090/5090 وJetson AGX Thor) ووحدات AMD (ROCm 6+، ومنها R9700 وRX 7900 XT/XTX وRyzen AI MAX+ 395/Strix Halo)، ويُوزَّع أيضًا في صورة حاوية باسم "lucebox-hub".',
+    leadAnswerBlock: '**Lucebox خادم استدلال محلي مجاني ومفتوح المصدر بنوى مضبوطة يدويًا وفك ترميز تخميني لوحدات GPU محددة من NVIDIA (CUDA 12+) وAMD (ROCm 6+)، وهو أيضًا اسم الشركة التي تبيع محطة عمل محلية للذكاء الاصطناعي مبنية حوله.**',
     quickAnswerTop: {
       ar: {
         question: 'ما هو Lucebox وكيف يختلف عن Ollama أو vLLM؟',
