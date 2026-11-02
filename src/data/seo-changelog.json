@@ -9447,5 +9447,1103 @@
       "period": "28d to 2026-11-01"
     },
     "deployedAt": null
+  },
+  {
+    "id": "ab18515a-3bd4-4d3f-8f69-22221acbb679",
+    "slug": "/power-local-llm/aquavoice-review",
+    "date": "2026-11-02T14:07:21.769Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "AquaVoice Review: Voice Dictation for AI",
+        "new": "AquaVoice Review: Pricing, Privacy and AI Dictation"
+      },
+      {
+        "field": "metaDescription",
+        "old": "AquaVoice review: dictating prompts into Claude Code and WhatsApp, why speaking gives AI more context, multilingual results, and the limits found in daily use.",
+        "new": "AquaVoice review: current plans and prices, what its privacy pages say about hosting and data, platforms, and daily use dictating AI prompts."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (aquavoice-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "aquavoice review",
+      "aqua voice review",
+      "aquavoice pricing",
+      "aqua voice reviews"
+    ],
+    "baseline": {
+      "position": 7.68,
+      "impressions": 1121,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "f96193ad-ae61-4b21-a93a-4321c487a5d4",
+    "slug": "/de/power-local-llm/aquavoice-review",
+    "date": "2026-11-02T14:07:21.876Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "AquaVoice-Rezension: Sprachdiktat für KI",
+        "new": "AquaVoice-Rezension: Preise, Datenschutz und KI-Diktat"
+      },
+      {
+        "field": "metaDescription",
+        "old": "AquaVoice-Rezension: Prompts in Claude Code und WhatsApp diktieren, warum Sprechen der KI mehr Kontext gibt, Mehrsprachigkeit und Grenzen im Alltag.",
+        "new": "AquaVoice-Rezension: aktuelle Tarife, was die Datenschutzseiten zu Hosting und Daten sagen, Plattformen und Alltagseinsatz beim Diktieren von KI-Prompts."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (aquavoice-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "aquavoice review",
+      "aqua voice review",
+      "aquavoice pricing",
+      "aqua voice reviews"
+    ],
+    "baseline": {
+      "position": 4.57,
+      "impressions": 35,
+      "clicks": 1,
+      "ctr": 0.02857142857142857,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "de235c4d-c8c4-4214-8674-03f4ac1e5a37",
+    "slug": "/fr/power-local-llm/aquavoice-review",
+    "date": "2026-11-02T14:07:21.982Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Avis sur AquaVoice : dictée vocale pour l’IA",
+        "new": "Avis AquaVoice : tarifs, confidentialité et dictée IA"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Avis sur AquaVoice : dicter des prompts dans Claude Code et WhatsApp, pourquoi parler donne plus de contexte à l’IA, résultats multilingues et limites constatées.",
+        "new": "Avis AquaVoice : tarifs actuels, ce que disent les pages de confidentialité sur l’hébergement, plateformes et usage quotidien pour dicter des prompts IA."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (aquavoice-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "aquavoice review",
+      "aqua voice review",
+      "aquavoice pricing",
+      "aqua voice reviews"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "099ddca9-aa82-4ae4-82c3-a5f2fdfd6182",
+    "slug": "/es/power-local-llm/aquavoice-review",
+    "date": "2026-11-02T14:07:22.089Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Reseña de AquaVoice: dictado por voz para IA",
+        "new": "Reseña de AquaVoice: precios, privacidad y dictado IA"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Reseña de AquaVoice: dictar prompts en Claude Code y WhatsApp, por qué hablar da más contexto a la IA, resultados multilingües y los límites del uso diario.",
+        "new": "Reseña de AquaVoice: planes y precios actuales, qué dicen sus páginas de privacidad sobre alojamiento y datos, plataformas y uso diario al dictar prompts."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (aquavoice-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "aquavoice review",
+      "aqua voice review",
+      "aquavoice pricing",
+      "aqua voice reviews"
+    ],
+    "baseline": {
+      "position": 5.9,
+      "impressions": 21,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c8957cac-82bc-495f-9eec-5837f52ab5f3",
+    "slug": "/pt/power-local-llm/aquavoice-review",
+    "date": "2026-11-02T14:07:22.196Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Análise do AquaVoice: ditado por voz para IA",
+        "new": "Análise do AquaVoice: preços, privacidade e ditado IA"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Análise do AquaVoice: ditar prompts no Claude Code e no WhatsApp, por que falar dá mais contexto à IA, resultados multilíngues e os limites do uso diário.",
+        "new": "Análise do AquaVoice: planos e preços atuais, o que as páginas de privacidade dizem sobre hospedagem e dados, plataformas e uso diário para ditar prompts."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (aquavoice-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "aquavoice review",
+      "aqua voice review",
+      "aquavoice pricing",
+      "aqua voice reviews"
+    ],
+    "baseline": {
+      "position": 10.18,
+      "impressions": 11,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "74f0c133-e1e6-4fef-b58e-6aa50e4367a2",
+    "slug": "/ar/power-local-llm/aquavoice-review",
+    "date": "2026-11-02T14:07:22.309Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة AquaVoice: إملاء الأوامر في Claude Code وWhatsApp، ولماذا يمنح الكلام الذكاء الاصطناعي سياقًا أكبر، والنتائج متعددة اللغات، والحدود التي ظهرت في الاستخدام اليومي.",
+        "new": "مراجعة AquaVoice: الأسعار الحالية وما تقوله صفحات الخصوصية عن الاستضافة والبيانات، والمنصات، والاستخدام اليومي لإملاء أوامر الذكاء الاصطناعي."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (aquavoice-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "aquavoice review",
+      "aqua voice review",
+      "aquavoice pricing",
+      "aqua voice reviews"
+    ],
+    "baseline": {
+      "position": 4.2,
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "52d0c717-1106-450a-b086-b3dc43ec547c",
+    "slug": "/ko/power-local-llm/aquavoice-review",
+    "date": "2026-11-02T14:07:22.414Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "AquaVoice 리뷰: AI용 음성 받아쓰기",
+        "new": "AquaVoice 리뷰: 요금·개인정보·AI 받아쓰기"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (aquavoice-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "aquavoice review",
+      "aqua voice review",
+      "aquavoice pricing",
+      "aqua voice reviews"
+    ],
+    "baseline": {
+      "position": 6.29,
+      "impressions": 80,
+      "clicks": 1,
+      "ctr": 0.0125,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ce69d4b6-98f1-4891-9208-2a603c292d76",
+    "slug": "/power-local-llm/swerve-ai-review",
+    "date": "2026-11-02T14:07:22.531Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Swerve Review: AI Story and Character Chat for iPhone",
+        "new": "Swerve AI Review: Privacy, Price, 18+ Rating and Android"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Swerve review: free iPhone app for AI character chat and branching stories. In-app purchases, 18+ rating, cloud service, privacy and local alternatives.",
+        "new": "Swerve AI review for iPhone: free download with in-app purchases, 18+ rating, what the privacy notice says about chats, and Android and web status."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (swerve-ai-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "swerve ai",
+      "is swerve ai safe",
+      "is swerve ai free",
+      "swerve ia",
+      "swerve ai android"
+    ],
+    "baseline": {
+      "position": 7.91,
+      "impressions": 5315,
+      "clicks": 10,
+      "ctr": 0.0018814675446848542,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d265aa8c-4d3a-4ac1-9610-c2c066ca2869",
+    "slug": "/fr/power-local-llm/swerve-ai-review",
+    "date": "2026-11-02T14:07:22.636Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Test de Swerve : personnages IA et histoires sur iPhone",
+        "new": "Test de Swerve AI : prix, 18+, vie privée et Android"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Test de Swerve : appli iPhone gratuite de chat avec personnages IA et histoires à embranchements. Achats intégrés, 18+, cloud, vie privée, alternatives.",
+        "new": "Test de Swerve AI sur iPhone : appli gratuite avec achats intégrés, classement 18+, ce que dit l’avis de confidentialité et statut d’Android et du web."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (swerve-ai-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "swerve ai",
+      "is swerve ai safe",
+      "is swerve ai free",
+      "swerve ia",
+      "swerve ai android"
+    ],
+    "baseline": {
+      "position": 8.14,
+      "impressions": 510,
+      "clicks": 1,
+      "ctr": 0.00196078431372549,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ba32be19-a79e-4b2a-8154-37ac08406bf3",
+    "slug": "/ja/power-local-llm/swerve-ai-review",
+    "date": "2026-11-02T14:07:22.741Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Swerveレビュー：iPhoneのAIキャラチャットとストーリー",
+        "new": "Swerveレビュー：iPhone向けAIキャラチャット"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (swerve-ai-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "swerve ai",
+      "is swerve ai safe",
+      "is swerve ai free",
+      "swerve ia",
+      "swerve ai android"
+    ],
+    "baseline": {
+      "position": 10.28,
+      "impressions": 50,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "65e6302d-3725-4cea-b9a4-076192189b78",
+    "slug": "/es/power-local-llm/swerve-ai-review",
+    "date": "2026-11-02T14:07:22.848Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Reseña de Swerve: chat de historias y personajes con IA",
+        "new": "Swerve AI: qué es, precio, privacidad y Android (reseña)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Reseña de Swerve: app gratuita para iPhone de chat con personajes de IA e historias ramificadas. Compras en la app, 18+, nube, privacidad y alternativas.",
+        "new": "Reseña de Swerve AI para iPhone: qué es, descarga gratis con compras en la app, clasificación 18+, qué dice su aviso de privacidad y si hay Android."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (swerve-ai-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "swerve ai",
+      "is swerve ai safe",
+      "is swerve ai free",
+      "swerve ia",
+      "swerve ai android"
+    ],
+    "baseline": {
+      "position": 7.75,
+      "impressions": 978,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "29adfb08-64d9-4cd1-b936-d406654a5726",
+    "slug": "/power-local-llm/lucebox-review",
+    "date": "2026-11-02T14:07:22.967Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Lucebox Review: Per-GPU Local Inference Server",
+        "new": "Lucebox Review: Engine, Company and Zero 495 Workstation"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Lucebox is a free, open-source local inference server with hand-tuned, per-GPU kernels and speculative decoding. Here is how it installs, performs, and who it fits.",
+        "new": "Lucebox is a free, Apache-2.0 inference engine from AGMI AI, Inc., which also sells the Lucebox Zero 495 workstation. What it does and who it fits."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (lucebox-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "lucebox",
+      "lucebox ai",
+      "lucebox github",
+      "lucebox amd",
+      "lucebox engine"
+    ],
+    "baseline": {
+      "position": 6.69,
+      "impressions": 574,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "506b6b59-1bab-45bd-b962-db7df2e41fb8",
+    "slug": "/de/power-local-llm/lucebox-review",
+    "date": "2026-11-02T14:07:23.075Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Lucebox Review: Pro-GPU-Inferenzserver für lokale KI",
+        "new": "Lucebox Review: Engine, Firma und Zero-495-Workstation"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Lucebox ist ein kostenloser, quelloffener lokaler Inferenzserver mit handoptimierten, pro-GPU-abgestimmten Kernels und spekulativem Decoding. So installiert und performt er, und dafür eignet er sich.",
+        "new": "Lucebox ist eine kostenlose Apache-2.0-Inferenz-Engine von AGMI AI, Inc., die auch die Workstation Lucebox Zero 495 verkauft. Funktion und Eignung."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (lucebox-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "lucebox",
+      "lucebox ai",
+      "lucebox github",
+      "lucebox amd",
+      "lucebox engine"
+    ],
+    "baseline": {
+      "position": 4.17,
+      "impressions": 12,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a4575ccd-474b-447f-9248-7a7c851d8174",
+    "slug": "/fr/power-local-llm/lucebox-review",
+    "date": "2026-11-02T14:07:23.181Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Lucebox Review: serveur d'inférence locale par GPU",
+        "new": "Lucebox Review: moteur, entreprise et station Zero 495"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Lucebox est un serveur d'inférence locale gratuit et open source avec des kernels optimisés par GPU et du décodage spéculatif. Voici son installation, ses performances et à qui il convient.",
+        "new": "Lucebox est un moteur d'inférence gratuit sous Apache-2.0 d'AGMI AI, Inc., qui vend aussi la station Lucebox Zero 495. Rôle, installation, public."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (lucebox-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "lucebox",
+      "lucebox ai",
+      "lucebox github",
+      "lucebox amd",
+      "lucebox engine"
+    ],
+    "baseline": {
+      "position": 5.93,
+      "impressions": 14,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c797e4bd-3724-46a1-883d-0cca83c8ab4d",
+    "slug": "/es/power-local-llm/lucebox-review",
+    "date": "2026-11-02T14:07:23.287Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Lucebox Review: servidor de inferencia local por GPU",
+        "new": "Lucebox Review: motor, empresa y estación Zero 495"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Lucebox es un servidor de inferencia local gratuito y de código abierto con kernels ajustados a mano por GPU y decodificación especulativa. Así se instala, rinde y para quién es adecuado.",
+        "new": "Lucebox es un motor de inferencia gratuito Apache-2.0 de AGMI AI, Inc., que también vende la estación Lucebox Zero 495. Qué hace y para quién es."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (lucebox-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "lucebox",
+      "lucebox ai",
+      "lucebox github",
+      "lucebox amd",
+      "lucebox engine"
+    ],
+    "baseline": {
+      "position": 7.35,
+      "impressions": 23,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "51ba6c70-e83d-4f45-9cb6-b840b1acb10a",
+    "slug": "/pt/power-local-llm/lucebox-review",
+    "date": "2026-11-02T14:07:23.394Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Lucebox Review: servidor de inferência local por GPU",
+        "new": "Lucebox Review: motor, empresa e estação Zero 495"
+      },
+      {
+        "field": "metaDescription",
+        "old": "O Lucebox é um servidor de inferência local gratuito e de código aberto, com kernels ajustados manualmente por GPU e decodificação especulativa. Veja como instala, performa e para quem é indicado.",
+        "new": "O Lucebox é um motor de inferência gratuito Apache-2.0 da AGMI AI, Inc., que também vende a estação Lucebox Zero 495. O que faz e para quem serve."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (lucebox-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "lucebox",
+      "lucebox ai",
+      "lucebox github",
+      "lucebox amd",
+      "lucebox engine"
+    ],
+    "baseline": {
+      "position": 2,
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "77385492-6643-4b80-b9c9-5babfc94ed14",
+    "slug": "/ko/power-local-llm/lucebox-review",
+    "date": "2026-11-02T14:07:23.499Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Lucebox 리뷰: GPU별 로컬 추론 서버",
+        "new": "Lucebox 리뷰: 추론 엔진, 회사, Zero 495 워크스테이션"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (lucebox-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "lucebox",
+      "lucebox ai",
+      "lucebox github",
+      "lucebox amd",
+      "lucebox engine"
+    ],
+    "baseline": {
+      "position": 6.07,
+      "impressions": 15,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ec91420a-4ead-4d77-b9bd-97a6d2349c4a",
+    "slug": "/power-local-llm/gpt-engineer-review",
+    "date": "2026-11-02T14:07:23.621Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GPT Engineer Review: Archived Repo & Alternatives",
+        "new": "GPT Engineer: Archived on GitHub, App Now Lovable"
+      },
+      {
+        "field": "metaDescription",
+        "old": "GPT Engineer's GitHub repository is archived (read-only) — MIT licensed, 55k+ stars, last PyPI release 0.3.1 in June 2024. Its own README now points to Aider and gptengineer.app instead.",
+        "new": "GPT Engineer's GitHub repo is archived (MIT, last release 0.3.1 in 2024), and gptengineer.app is now Lovable. Its README recommends Aider instead."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (gpt-engineer-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "gpt engineer",
+      "gpt engineer github",
+      "gptengineer",
+      "gpt engineer app"
+    ],
+    "baseline": {
+      "position": 7.5,
+      "impressions": 247,
+      "clicks": 1,
+      "ctr": 0.004048582995951417,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "84833e95-60c0-4a31-a150-fba57d7433b0",
+    "slug": "/de/power-local-llm/gpt-engineer-review",
+    "date": "2026-11-02T14:07:23.725Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GPT Engineer Review: Archiviertes Repo & Alternativen",
+        "new": "GPT Engineer: Auf GitHub archiviert, App jetzt Lovable"
+      },
+      {
+        "field": "metaDescription",
+        "old": "GPT Engineers GitHub-Repository ist archiviert (nur lesbar) — MIT-lizenziert, über 55.000 Stars, letztes PyPI-Release 0.3.1 im Juni 2024. Die eigene README verweist nun auf Aider und gptengineer.app.",
+        "new": "GPT Engineers GitHub-Repo ist archiviert (MIT, letztes Release 0.3.1 im Jahr 2024), gptengineer.app heißt jetzt Lovable. Die README empfiehlt Aider."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (gpt-engineer-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "gpt engineer",
+      "gpt engineer github",
+      "gptengineer",
+      "gpt engineer app"
+    ],
+    "baseline": {
+      "position": 6.5,
+      "impressions": 48,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "cfeb1125-6686-4cc7-9905-57b3031dfd10",
+    "slug": "/fr/power-local-llm/gpt-engineer-review",
+    "date": "2026-11-02T14:07:23.831Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GPT Engineer: dépôt archivé et alternatives",
+        "new": "GPT Engineer : archivé sur GitHub, l’app est Lovable"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Le dépôt GitHub de GPT Engineer est archivé (lecture seule) — licence MIT, plus de 55 000 étoiles, dernière publication PyPI 0.3.1 en juin 2024. Son propre README recommande désormais Aider et gptengineer.app.",
+        "new": "Le dépôt GitHub de GPT Engineer est archivé (MIT, dernière version 0.3.1 en 2024) et gptengineer.app est devenu Lovable. Son README recommande Aider."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (gpt-engineer-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "gpt engineer",
+      "gpt engineer github",
+      "gptengineer",
+      "gpt engineer app"
+    ],
+    "baseline": {
+      "position": 6.7,
+      "impressions": 17,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "62a52107-070c-464e-9f08-2f715637269c",
+    "slug": "/es/power-local-llm/gpt-engineer-review",
+    "date": "2026-11-02T14:07:23.936Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GPT Engineer: repo archivado y alternativas",
+        "new": "GPT Engineer: archivado en GitHub, la app es Lovable"
+      },
+      {
+        "field": "metaDescription",
+        "old": "El repositorio de GitHub de GPT Engineer está archivado (solo lectura) — licencia MIT, más de 55.000 estrellas, último lanzamiento en PyPI 0.3.1 en junio de 2024. Su propio README ahora recomienda Aider y gptengineer.app.",
+        "new": "El repositorio de GPT Engineer en GitHub está archivado (MIT, última versión 0.3.1 en 2024) y gptengineer.app ahora es Lovable. Su README recomienda Aider."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (gpt-engineer-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "gpt engineer",
+      "gpt engineer github",
+      "gptengineer",
+      "gpt engineer app"
+    ],
+    "baseline": {
+      "position": 5.9,
+      "impressions": 83,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ce091484-4179-4ad3-a8f3-625be1c4c8cd",
+    "slug": "/pt/power-local-llm/gpt-engineer-review",
+    "date": "2026-11-02T14:07:24.046Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GPT Engineer: repo arquivado e alternativas",
+        "new": "GPT Engineer: arquivado no GitHub, app virou Lovable"
+      },
+      {
+        "field": "metaDescription",
+        "old": "O repositório GitHub do GPT Engineer está arquivado (somente leitura) — licença MIT, mais de 55 mil estrelas, último lançamento no PyPI 0.3.1 em junho de 2024. O próprio README agora recomenda Aider e gptengineer.app.",
+        "new": "O repositório do GPT Engineer no GitHub está arquivado (MIT, última versão 0.3.1 em 2024) e o gptengineer.app virou Lovable. O README recomenda o Aider."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (gpt-engineer-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "gpt engineer",
+      "gpt engineer github",
+      "gptengineer",
+      "gpt engineer app"
+    ],
+    "baseline": {
+      "position": 6,
+      "impressions": 918,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6ac15d1d-f659-467e-803f-9e163e9c4563",
+    "slug": "/ja/power-local-llm/gpt-engineer-review",
+    "date": "2026-11-02T14:07:24.153Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GPT Engineer：アーカイブされたリポジトリと代替案",
+        "new": "GPT Engineer：アーカイブ、アプリはLovableに"
+      },
+      {
+        "field": "metaDescription",
+        "old": "GPT EngineerのGitHubリポジトリはアーカイブ（読み取り専用）されている — MITライセンス、5万5千以上のスター、最終PyPIリリースは2024年6月の0.3.1。README自体が現在AiderとgptengineerAppを推奨。",
+        "new": "GPT EngineerのGitHubリポジトリはアーカイブ済み（MIT、最終リリース0.3.1は2024年）。gptengineer.appはLovableに改称。READMEはAiderを推奨。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (gpt-engineer-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "gpt engineer",
+      "gpt engineer github",
+      "gptengineer",
+      "gpt engineer app"
+    ],
+    "baseline": {
+      "position": 7.7,
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ba960e52-4074-483a-aa68-8a8d8d4371da",
+    "slug": "/zh/power-local-llm/gpt-engineer-review",
+    "date": "2026-11-02T14:07:24.258Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GPT Engineer：仓库已归档及替代方案",
+        "new": "GPT Engineer：已归档，应用现为Lovable"
+      },
+      {
+        "field": "metaDescription",
+        "old": "GPT Engineer的GitHub仓库已被归档（只读）——MIT许可，超过5.5万星标，最后一次PyPI发布是2024年6月的0.3.1。其自身README现推荐Aider和gptengineer.app。",
+        "new": "GPT Engineer的GitHub仓库已归档（MIT，最后发布0.3.1于2024年），gptengineer.app已更名为Lovable。其README推荐Aider。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (gpt-engineer-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "gpt engineer",
+      "gpt engineer github",
+      "gptengineer",
+      "gpt engineer app"
+    ],
+    "baseline": {
+      "position": 4.7,
+      "impressions": 7,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a4073059-629e-4764-8cc8-c1cbae5f773b",
+    "slug": "/ar/power-local-llm/gpt-engineer-review",
+    "date": "2026-11-02T14:07:24.365Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة GPT Engineer: مستودع مؤرشف والبدائل",
+        "new": "GPT Engineer: مؤرشف على GitHub والتطبيق أصبح Lovable"
+      },
+      {
+        "field": "metaDescription",
+        "old": "مستودع GPT Engineer على GitHub مؤرشف (للقراءة فقط) — برخصة MIT، أكثر من 55 ألف نجمة، آخر إصدار على PyPI كان 0.3.1 في يونيو 2024. ملف README الخاص به يوصي الآن بـ Aider وgptengineer.app.",
+        "new": "مستودع GPT Engineer على GitHub مؤرشف (MIT، آخر إصدار 0.3.1 في 2024) وتطبيق gptengineer.app أصبح Lovable. يوصي ملف README بـ Aider."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (gpt-engineer-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "gpt engineer",
+      "gpt engineer github",
+      "gptengineer",
+      "gpt engineer app"
+    ],
+    "baseline": {
+      "position": 8,
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "81c09663-7344-4c82-8a23-18c84baa0ace",
+    "slug": "/ko/power-local-llm/gpt-engineer-review",
+    "date": "2026-11-02T14:07:24.474Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GPT Engineer: 아카이브된 저장소와 대안",
+        "new": "GPT Engineer: GitHub 아카이브, 앱은 Lovable로"
+      },
+      {
+        "field": "metaDescription",
+        "old": "GPT Engineer의 GitHub 저장소는 아카이브(읽기 전용)됨 — MIT 라이선스, 5만 5천 개 이상의 스타, 마지막 PyPI 릴리스는 2024년 6월의 0.3.1. 자체 README는 이제 Aider와 gptengineer.app을 추천한다.",
+        "new": "GPT Engineer 저장소는 아카이브되었고(MIT, 릴리스 0.3.1은 2024년) 앱은 Lovable로 바뀌었다. README는 Aider를 추천한다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (gpt-engineer-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "gpt engineer",
+      "gpt engineer github",
+      "gptengineer",
+      "gpt engineer app"
+    ],
+    "baseline": {
+      "position": 7.9,
+      "impressions": 21,
+      "clicks": 1,
+      "ctr": 0.047619047619047616,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "5dae5f3d-45a8-464d-9c75-5d778912d8b1",
+    "slug": "/power-local-llm/self-hosted-ai-starter-kit-review",
+    "date": "2026-11-02T14:07:24.600Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Self-Hosted AI Starter Kit Review",
+        "new": "n8n Self-Hosted AI Starter Kit Review: Setup and Limits"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Self-hosted AI Starter Kit bundles n8n, Ollama, Qdrant, and PostgreSQL in one docker-compose template for local AI workflows. Verified install and features for 2026.",
+        "new": "What n8n's Self-hosted AI Starter Kit bundles (n8n, Ollama, Qdrant, PostgreSQL), how to install it, what its demo does, and n8n's testing-only note."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (self-hosted-ai-starter-kit-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "n8n ai starter kit",
+      "self hosted ai starter kit",
+      "self hosted ai starter kit github",
+      "n8n starter kit"
+    ],
+    "baseline": {
+      "position": 7.5,
+      "impressions": 689,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a89798cd-484b-402a-836f-af2b62abe5eb",
+    "slug": "/de/power-local-llm/self-hosted-ai-starter-kit-review",
+    "date": "2026-11-02T14:07:24.708Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Self-Hosted-AI-Starter-Kit-Rezension",
+        "new": "n8n AI Starter Kit Rezension: Setup, Umfang und Grenzen"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Self-hosted AI Starter Kit bündelt n8n, Ollama, Qdrant und PostgreSQL in einer docker-compose-Vorlage für lokale KI-Workflows. Geprüfte Installation und Funktionen für 2026.",
+        "new": "Was das n8n Self-hosted AI Starter Kit bündelt (n8n, Ollama, Qdrant, PostgreSQL), Installation, Demo-Workflow und der Hinweis „nur zum Testen\"."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (self-hosted-ai-starter-kit-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "n8n ai starter kit",
+      "self hosted ai starter kit",
+      "self hosted ai starter kit github",
+      "n8n starter kit"
+    ],
+    "baseline": {
+      "position": 8.5,
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "0b6b08ef-27e2-4f0e-88d9-113f23a14b1a",
+    "slug": "/fr/power-local-llm/self-hosted-ai-starter-kit-review",
+    "date": "2026-11-02T14:07:24.817Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Self-Hosted AI Starter Kit: test",
+        "new": "Avis sur le n8n AI Starter Kit : installation et limites"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Le Self-hosted AI Starter Kit réunit n8n, Ollama, Qdrant et PostgreSQL dans un modèle docker-compose pour des workflows IA locaux. Installation et fonctionnalités vérifiées pour 2026.",
+        "new": "Ce que contient le Self-hosted AI Starter Kit de n8n (n8n, Ollama, Qdrant, PostgreSQL), l'installation, le workflow de démo et la mention « tests »."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (self-hosted-ai-starter-kit-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "n8n ai starter kit",
+      "self hosted ai starter kit",
+      "self hosted ai starter kit github",
+      "n8n starter kit"
+    ],
+    "baseline": {
+      "position": 3.7,
+      "impressions": 14,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ac7705b2-63ee-49d5-aa07-11220b48b8db",
+    "slug": "/es/power-local-llm/self-hosted-ai-starter-kit-review",
+    "date": "2026-11-02T14:07:24.927Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Self-Hosted AI Starter Kit: análisis",
+        "new": "Self-hosted AI Starter Kit de n8n: análisis y límites"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Self-hosted AI Starter Kit combina n8n, Ollama, Qdrant y PostgreSQL en una plantilla docker-compose para workflows de IA local. Instalación y funciones verificadas para 2026.",
+        "new": "Qué incluye el Self-hosted AI Starter Kit de n8n (n8n, Ollama, Qdrant, PostgreSQL), su instalación, qué hace la demo y la nota «solo para pruebas»."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (self-hosted-ai-starter-kit-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "n8n ai starter kit",
+      "self hosted ai starter kit",
+      "self hosted ai starter kit github",
+      "n8n starter kit"
+    ],
+    "baseline": {
+      "position": 8.5,
+      "impressions": 36,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "85c66cfe-10e5-4ebf-ba66-56cd523d3cfe",
+    "slug": "/pt/power-local-llm/self-hosted-ai-starter-kit-review",
+    "date": "2026-11-02T14:07:25.039Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Self-Hosted AI Starter Kit: análise",
+        "new": "Self-hosted AI Starter Kit da n8n: análise e limites"
+      },
+      {
+        "field": "metaDescription",
+        "old": "O Self-hosted AI Starter Kit reúne n8n, Ollama, Qdrant e PostgreSQL em um template docker-compose para workflows de IA local. Instalação e recursos verificados para 2026.",
+        "new": "O que o Self-hosted AI Starter Kit da n8n reúne (n8n, Ollama, Qdrant, PostgreSQL), a instalação, o que a demo faz e o aviso «apenas para testes»."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (self-hosted-ai-starter-kit-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "n8n ai starter kit",
+      "self hosted ai starter kit",
+      "self hosted ai starter kit github",
+      "n8n starter kit"
+    ],
+    "baseline": {
+      "position": 9.1,
+      "impressions": 21,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "fb9fb0cf-63f2-4b6b-b2df-f09b01cecd43",
+    "slug": "/ja/power-local-llm/self-hosted-ai-starter-kit-review",
+    "date": "2026-11-02T14:07:25.152Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Self-Hosted AI Starter Kitレビュー",
+        "new": "n8n AI Starter Kitレビュー：導入と制限"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Self-hosted AI Starter Kitはn8n、Ollama、Qdrant、PostgreSQLを1つのdocker-composeテンプレートにまとめ、ローカルAIワークフローを実現します。2026年版の検証済みインストール手順と機能を解説。",
+        "new": "n8n公式のSelf-hosted AI Starter Kitが含む構成（n8n、Ollama、Qdrant、PostgreSQL）、導入手順、デモの内容、n8nが示す「テスト用」の注記を解説します。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (self-hosted-ai-starter-kit-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "n8n ai starter kit",
+      "self hosted ai starter kit",
+      "self hosted ai starter kit github",
+      "n8n starter kit"
+    ],
+    "baseline": {
+      "position": 15.1,
+      "impressions": 8,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "723184e9-f4ee-4782-9bf9-9942d19193f9",
+    "slug": "/zh/power-local-llm/self-hosted-ai-starter-kit-review",
+    "date": "2026-11-02T14:07:25.262Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Self-Hosted AI Starter Kit评测",
+        "new": "n8n AI Starter Kit评测：安装与限制"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Self-hosted AI Starter Kit把n8n、Ollama、Qdrant和PostgreSQL打包进一个docker-compose模板，用于本地AI工作流。2026版验证过的安装步骤与功能解析。",
+        "new": "介绍n8n的Self-hosted AI Starter Kit包含的组件（n8n、Ollama、Qdrant、PostgreSQL）、安装步骤、演示工作流的内容，以及n8n文档中的“仅供测试”说明。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (self-hosted-ai-starter-kit-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "n8n ai starter kit",
+      "self hosted ai starter kit",
+      "self hosted ai starter kit github",
+      "n8n starter kit"
+    ],
+    "baseline": {
+      "position": 5.5,
+      "impressions": 16,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "692f847a-dab1-4df9-a5fa-fa3299388919",
+    "slug": "/ar/power-local-llm/self-hosted-ai-starter-kit-review",
+    "date": "2026-11-02T14:07:25.374Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Self-Hosted AI Starter Kit",
+        "new": "مراجعة n8n AI Starter Kit: التثبيت والحدود"
+      },
+      {
+        "field": "metaDescription",
+        "old": "يجمع Self-hosted AI Starter Kit بين n8n وOllama وQdrant وPostgreSQL في قالب docker-compose واحد لسير عمل ذكاء اصطناعي محلي. خطوات تثبيت وميزات موثقة لعام 2026.",
+        "new": "ما يضمّه Self-hosted AI Starter Kit من n8n (n8n وOllama وQdrant وPostgreSQL)، وطريقة التثبيت، والعرض التجريبي، وتنبيه «للاختبار فقط»."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (self-hosted-ai-starter-kit-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "n8n ai starter kit",
+      "self hosted ai starter kit",
+      "self hosted ai starter kit github",
+      "n8n starter kit"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2f029fc3-4b1f-472b-8c70-0ad8478aac58",
+    "slug": "/ko/power-local-llm/self-hosted-ai-starter-kit-review",
+    "date": "2026-11-02T14:07:25.482Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Self-Hosted AI Starter Kit 리뷰",
+        "new": "n8n AI Starter Kit 리뷰: 설치와 한계"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Self-hosted AI Starter Kit는 n8n, Ollama, Qdrant, PostgreSQL을 하나의 docker-compose 템플릿으로 묶어 로컬 AI 워크플로를 제공합니다. 2026년 기준 검증된 설치 방법과 기능을 확인하세요.",
+        "new": "n8n Self-hosted AI Starter Kit 구성(n8n, Ollama, Qdrant, PostgreSQL), 설치 방법, 데모 워크플로, '테스트 전용' 안내를 정리했습니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3 (self-hosted-ai-starter-kit-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "n8n ai starter kit",
+      "self hosted ai starter kit",
+      "self hosted ai starter kit github",
+      "n8n starter kit"
+    ],
+    "baseline": {
+      "position": 7.8,
+      "impressions": 25,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
   }
 ]
