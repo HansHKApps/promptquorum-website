@@ -1750,7 +1750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Las plataformas líderes de RR. HH. con IA y una pila de LLM local autoalojada resuelven problemas diferentes, no versiones competidoras del mismo.** Las plataformas son la vía más rápida; el autoalojamiento, cuando los datos de candidatos o empleados no pueden salir de tu infraestructura.',
+          '**Las plataformas de RR. HH. con IA y un LLM local autoalojado resuelven problemas diferentes.** Las plataformas son la vía más rápida; el autoalojamiento, cuando los datos de candidatos o empleados no pueden salir de tu infraestructura.',
           '**El filtrado de CV, el análisis de clima laboral y la redacción de evaluaciones son los casos más sólidos para el autoalojamiento** —cada uno toca habitualmente datos (identidad del candidato, texto sincero de empleados, contenido de evaluación confidencial) que una empresa puede preferir no procesar mediante una API de terceros.',
           '**La IA en reclutamiento y RR. HH. es una categoría de alto riesgo bajo el Reglamento de IA de la UE**, y jurisdicciones de EE. UU. como Nueva York exigen auditorías de sesgo independientes para herramientas de contratación automatizada —esto aplica a cualquier flujo de filtrado o puntuación asistido por IA, comercial o autoalojado.',
           '**Esto no es asesoramiento legal.** Las obligaciones de auditoría de sesgo, notificación a candidatos y las reglas para sistemas de alto riesgo varían según la jurisdicción y cambian con el tiempo —consulta con un abogado calificado antes de desplegar cualquier sistema de IA en reclutamiento o RR. HH.',
@@ -2052,7 +2052,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Plataformas líderes de RH com IA e uma pilha de LLM local auto-hospedada resolvem problemas diferentes, não versões concorrentes do mesmo problema.** As plataformas são o caminho mais rápido; a auto-hospedagem, quando dados de candidatos ou funcionários não podem sair da sua infraestrutura.',
+          '**Plataformas de RH com IA e um LLM local auto-hospedado resolvem problemas diferentes.** As plataformas são o caminho mais rápido; a auto-hospedagem, quando dados de candidatos ou funcionários não podem sair da sua infraestrutura.',
           '**Triagem de currículos, análise de sentimento e redação de avaliações são os casos mais fortes para auto-hospedagem** — cada um regularmente toca dados (dados pessoais de candidatos, texto sincero de funcionários, conteúdo confidencial de avaliação) que uma empresa pode preferir não enviar a uma API de terceiros.',
           '**IA em recrutamento e RH é categoria de alto risco sob o AI Act da UE**, e jurisdições dos EUA, incluindo Nova York, exigem auditorias de viés independentes para ferramentas automatizadas de contratação — isso vale para qualquer fluxo de triagem ou pontuação assistido por IA, comercial ou auto-hospedado.',
           '**Isto não é aconselhamento jurídico.** Obrigações de auditoria de viés, exigências de notificação a candidatos e regras para sistemas de alto risco variam por jurisdição e mudam com o tempo — consulte um advogado qualificado antes de implantar qualquer sistema de IA em recrutamento ou RH.',
