@@ -403,6 +403,7 @@ https://www.promptquorum.com/power-local-llm/hillnote-review
 https://www.promptquorum.com/power-local-llm/hiwaifu-review
 https://www.promptquorum.com/power-local-llm/home-assistant-assist-review
 https://www.promptquorum.com/power-local-llm/home-gallery-review
+https://www.promptquorum.com/power-local-llm/home-generative-agent-review
 https://www.promptquorum.com/power-local-llm/honey-llm-review
 https://www.promptquorum.com/power-local-llm/hyperlink-nexa-review
 https://www.promptquorum.com/power-local-llm/idefics-review
@@ -563,6 +564,7 @@ https://www.promptquorum.com/power-local-llm/openhands-review
 https://www.promptquorum.com/power-local-llm/openllm-review
 https://www.promptquorum.com/power-local-llm/openmontage-review
 https://www.promptquorum.com/power-local-llm/openrag-review
+https://www.promptquorum.com/power-local-llm/openvoiceos-review
 https://www.promptquorum.com/power-local-llm/openwhispr-review
 https://www.promptquorum.com/power-local-llm/osaurus-ai-review
 https://www.promptquorum.com/power-local-llm/oscilla-review
@@ -610,6 +612,7 @@ https://www.promptquorum.com/power-local-llm/risuai-review
 https://www.promptquorum.com/power-local-llm/rtx-3090-local-llm-buy-or-rent
 https://www.promptquorum.com/power-local-llm/run-ai-on-tablet-ipad-android
 https://www.promptquorum.com/power-local-llm/runanywhere-review
+https://www.promptquorum.com/power-local-llm/scrypted-review
 https://www.promptquorum.com/power-local-llm/searxng-review
 https://www.promptquorum.com/power-local-llm/second-me-review
 https://www.promptquorum.com/power-local-llm/secret-ai-review
