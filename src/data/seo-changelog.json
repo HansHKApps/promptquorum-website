@@ -14196,5 +14196,364 @@
       "period": "28d to 2026-11-01"
     },
     "deployedAt": null
+  },
+  {
+    "id": "d9e1e3ff-72f4-4a54-85df-f065c317391e",
+    "slug": "/power-local-llm/langchain-review",
+    "date": "2026-11-02T15:19:07.883Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "LangChain is a free, MIT-licensed framework for LLM apps, RAG, and agents from VC-backed LangChain Inc. Verified pricing, code examples, and company history.",
+        "new": "LangChain is a free, MIT-licensed framework for LLM apps, RAG and agents from LangChain Inc. Verified LangSmith pricing, code examples and funding rounds."
+      },
+      {
+        "field": "sections",
+        "old": "unverified funding total/valuation, LCU/LSU and LangGraph Platform pricing, LANGCHAIN_TRACING_V2",
+        "new": "funding from primary posts, LSU $1.00 and LangSmith Deployment, LANGSMITH_TRACING, version FAQ, 3 sources"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead over 50 words in most locales (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh (review-top100 wave 1, rank 6): unverified \"$260M raised\", \"$200M Series A valuation\" and \"incorporated January 2023\" removed; funding rebuilt from LangChain primary announcements (seed 2023-04-04, Series A 2024-02-15, Series B 2025-10-20); LangSmith overage now LSU $1.00 and LangSmith Deployment per pricing page; tracing env vars LANGSMITH_TRACING/LANGSMITH_API_KEY; unverified \"700+ integrations\" softened; typed stars replaced by directory data; lead cut to 39 words; 2 titles/9 metas within budget. GSC: top queries navigational (langchain, is langchain free, langchain pricing).",
+    "queries": [
+      "langchain",
+      "is langchain free",
+      "langchain pricing",
+      "vagrant vs langchain",
+      "cypress vs langchain",
+      "langchain vs vault"
+    ],
+    "baseline": {
+      "position": 8.97,
+      "impressions": 4699,
+      "clicks": 5,
+      "ctr": 0.0010640561821664183,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "fff2220d-dde3-4c8f-8524-a1d51f1001d8",
+    "slug": "/de/power-local-llm/langchain-review",
+    "date": "2026-11-02T15:19:07.916Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LangChain: Funktionen, Preise & MIT-Lizenz",
+        "new": "LangChain Review: Funktionen, Preise & MIT-Lizenz"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LangChain ist ein kostenloses, MIT-lizenziertes Framework für LLM-Apps, RAG und Agenten von LangChain Inc. Geprüfte Preise, Code-Beispiele und Firmengeschichte.",
+        "new": "LangChain: kostenloses, MIT-lizenziertes Framework für LLM-Apps, RAG und Agenten von LangChain Inc. Geprüfte LangSmith-Preise, Codebeispiele, Finanzierung."
+      },
+      {
+        "field": "sections",
+        "old": "unverified funding total/valuation, LCU/LSU and LangGraph Platform pricing, LANGCHAIN_TRACING_V2",
+        "new": "funding from primary posts, LSU $1.00 and LangSmith Deployment, LANGSMITH_TRACING, version FAQ, 3 sources"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead over 50 words in most locales (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), lead shortened, meta and title within locale budget.",
+    "queries": [
+      "langgraph",
+      "was ist langchain"
+    ],
+    "baseline": {
+      "position": 6.86,
+      "impressions": 29,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "2ab40eab-fa3a-4be9-bd2d-3d1ba7bd6e27",
+    "slug": "/fr/power-local-llm/langchain-review",
+    "date": "2026-11-02T15:19:07.944Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LangChain: fonctionnalités et tarifs (guide)",
+        "new": "Avis LangChain : fonctionnalités, tarifs et alternatives"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LangChain est un framework gratuit sous licence MIT pour applications LLM, RAG et agents, édité par LangChain Inc. Tarifs vérifiés, exemples de code et historique de l'entreprise.",
+        "new": "LangChain : framework gratuit sous licence MIT pour apps LLM, RAG et agents, par LangChain Inc. Tarifs LangSmith vérifiés, exemples de code, financement."
+      },
+      {
+        "field": "sections",
+        "old": "unverified funding total/valuation, LCU/LSU and LangGraph Platform pricing, LANGCHAIN_TRACING_V2",
+        "new": "funding from primary posts, LSU $1.00 and LangSmith Deployment, LANGSMITH_TRACING, version FAQ, 3 sources"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead over 50 words in most locales (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), lead shortened, meta and title within locale budget.",
+    "queries": [
+      "langchain",
+      "agence développeurs langchain"
+    ],
+    "baseline": {
+      "position": 16.42,
+      "impressions": 43,
+      "clicks": 1,
+      "ctr": 0.023255813953488372,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "38146a2e-d8ce-4049-bf60-64c976745a9a",
+    "slug": "/es/power-local-llm/langchain-review",
+    "date": "2026-11-02T15:19:07.971Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LangChain: reseña de funciones y precios",
+        "new": "LangChain: reseña de funciones, precios y alternativas"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LangChain es un framework gratuito con licencia MIT para apps LLM, RAG y agentes, de LangChain Inc. Precios verificados, ejemplos de código e historia de la empresa.",
+        "new": "LangChain: framework gratuito con licencia MIT para apps LLM, RAG y agentes, de LangChain Inc. Precios de LangSmith verificados, código y financiación."
+      },
+      {
+        "field": "sections",
+        "old": "unverified funding total/valuation, LCU/LSU and LangGraph Platform pricing, LANGCHAIN_TRACING_V2",
+        "new": "funding from primary posts, LSU $1.00 and LangSmith Deployment, LANGSMITH_TRACING, version FAQ, 3 sources"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead over 50 words in most locales (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), lead shortened, meta and title within locale budget.",
+    "queries": [
+      "langchain",
+      "langchain que es",
+      "qué es langchain",
+      "langsmith"
+    ],
+    "baseline": {
+      "position": 12.57,
+      "impressions": 203,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b9a8a50d-76c6-4751-a5a9-c64d9c301984",
+    "slug": "/pt/power-local-llm/langchain-review",
+    "date": "2026-11-02T15:19:07.999Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LangChain: análise de recursos e preços",
+        "new": "LangChain: análise de recursos, preços e alternativas"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LangChain é um framework gratuito e MIT para apps LLM, RAG e agentes, da LangChain Inc. Preços verificados, exemplos de código e histórico da empresa.",
+        "new": "LangChain: framework gratuito com licença MIT para apps LLM, RAG e agentes, da LangChain Inc. Preços do LangSmith verificados, código e financiamento."
+      },
+      {
+        "field": "sections",
+        "old": "unverified funding total/valuation, LCU/LSU and LangGraph Platform pricing, LANGCHAIN_TRACING_V2",
+        "new": "funding from primary posts, LSU $1.00 and LangSmith Deployment, LANGSMITH_TRACING, version FAQ, 3 sources"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead over 50 words in most locales (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), lead shortened, meta and title within locale budget.",
+    "queries": [
+      "langchain",
+      "langchain o que é",
+      "o que é langchain"
+    ],
+    "baseline": {
+      "position": 8.52,
+      "impressions": 46,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6995b51a-1d77-4afe-8ece-3fd99cc04282",
+    "slug": "/ja/power-local-llm/langchain-review",
+    "date": "2026-11-02T15:19:08.026Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "LangChainはLLMアプリ・RAG・エージェント向けの無料・MITライセンスフレームワーク（開発元はLangChain Inc.）。検証済みの料金、コード例、企業沿革を掲載。",
+        "new": "無料でMITライセンスのLLMアプリ・RAG・エージェント向けフレームワークLangChainを解説。LangSmithの料金、コード例、資金調達ラウンドを確認済みの情報で紹介します。"
+      },
+      {
+        "field": "sections",
+        "old": "unverified funding total/valuation, LCU/LSU and LangGraph Platform pricing, LANGCHAIN_TRACING_V2",
+        "new": "funding from primary posts, LSU $1.00 and LangSmith Deployment, LANGSMITH_TRACING, version FAQ, 3 sources"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead over 50 words in most locales (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), lead shortened, meta and title within locale budget.",
+    "queries": [
+      "langchain",
+      "langchain とは",
+      "langchain 料金",
+      "langchain ai"
+    ],
+    "baseline": {
+      "position": 14.87,
+      "impressions": 289,
+      "clicks": 3,
+      "ctr": 0.010380622837370242,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a2edc802-6209-4766-a2a2-de2fd19a16df",
+    "slug": "/zh/power-local-llm/langchain-review",
+    "date": "2026-11-02T15:19:08.053Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LangChain 评测：功能、定价与替代方案",
+        "new": "LangChain评测：功能、定价、替代方案与开源许可"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LangChain 是面向 LLM 应用、RAG 与智能体的免费 MIT 许可开源框架，由风投支持的 LangChain Inc. 开发。内含已核实的定价、代码示例与公司历史。",
+        "new": "LangChain 是免费、MIT 许可的 LLM 应用、RAG 与智能体框架，由 LangChain Inc. 开发。已核实 LangSmith 定价、代码示例和融资轮次。"
+      },
+      {
+        "field": "sections",
+        "old": "unverified funding total/valuation, LCU/LSU and LangGraph Platform pricing, LANGCHAIN_TRACING_V2",
+        "new": "funding from primary posts, LSU $1.00 and LangSmith Deployment, LANGSMITH_TRACING, version FAQ, 3 sources"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead over 50 words in most locales (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), lead shortened, meta and title within locale budget.",
+    "queries": [
+      "langchain"
+    ],
+    "baseline": {
+      "position": 9.58,
+      "impressions": 65,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6abf4774-ab7f-49b5-9a7b-af4fee2cfb7c",
+    "slug": "/ar/power-local-llm/langchain-review",
+    "date": "2026-11-02T15:19:08.080Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة LangChain: المزايا والأسعار",
+        "new": "مراجعة LangChain: المزايا والأسعار والبدائل"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LangChain إطار مجاني برخصة MIT لتطبيقات LLM وRAG والوكلاء، من تطوير LangChain Inc. أسعار موثّقة، أمثلة برمجية، وتاريخ الشركة.",
+        "new": "LangChain إطار مجاني بترخيص MIT لتطبيقات النماذج اللغوية وRAG والوكلاء من LangChain Inc. أسعار LangSmith الموثّقة وأمثلة الشيفرة وجولات التمويل."
+      },
+      {
+        "field": "sections",
+        "old": "unverified funding total/valuation, LCU/LSU and LangGraph Platform pricing, LANGCHAIN_TRACING_V2",
+        "new": "funding from primary posts, LSU $1.00 and LangSmith Deployment, LANGSMITH_TRACING, version FAQ, 3 sources"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead over 50 words in most locales (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), lead shortened, meta and title within locale budget.",
+    "queries": [
+      "no query rows in window"
+    ],
+    "baseline": {
+      "position": 8,
+      "impressions": 9,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "2b1cfa33-19c8-4a75-8d2c-b9310acd30ce",
+    "slug": "/ko/power-local-llm/langchain-review",
+    "date": "2026-11-02T15:19:08.107Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LangChain 리뷰: 기능과 가격 총정리",
+        "new": "LangChain 리뷰: 기능, 가격, 대안, 오픈소스 라이선스"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LangChain은 LLM 앱, RAG, 에이전트를 위한 무료 MIT 라이선스 프레임워크로, LangChain Inc.가 개발합니다. 검증된 가격, 코드 예제, 기업 연혁을 다룹니다.",
+        "new": "LangChain은 LLM 앱, RAG, 에이전트를 위한 무료 MIT 라이선스 프레임워크입니다. LangChain Inc.의 확인된 LangSmith 가격, 코드 예시, 투자 라운드를 정리했습니다."
+      },
+      {
+        "field": "sections",
+        "old": "unverified funding total/valuation, LCU/LSU and LangGraph Platform pricing, LANGCHAIN_TRACING_V2",
+        "new": "funding from primary posts, LSU $1.00 and LangSmith Deployment, LANGSMITH_TRACING, version FAQ, 3 sources"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead over 50 words in most locales (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), lead shortened, meta and title within locale budget.",
+    "queries": [
+      "langchain",
+      "langchain 2026",
+      "langchain gui",
+      "langchain inc"
+    ],
+    "baseline": {
+      "position": 10.69,
+      "impressions": 109,
+      "clicks": 1,
+      "ctr": 0.009174311926605505,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
   }
 ]
