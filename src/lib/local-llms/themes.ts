@@ -43,7 +43,7 @@ export const llmThemes: LLMTheme[] = [
       'best-cpu-only-llm',
       'double-local-llm-speed',
       'local-llm-power-consumption',
-      'mram-in-memory-computing-local-ai-2026',
+      'mram-in-memory-computing-local-ai',
     ],
   },
   {

@@ -7735,5 +7735,193 @@
       "period": "2026-08-05..2026-11-02"
     },
     "deployedAt": null
+  },
+  {
+    "id": "c367f853-a9fe-433b-9cc4-23003ed8c28a",
+    "slug": "/fr/local-llms/mram-in-memory-computing-local-ai",
+    "date": "2026-11-02T09:58:05.805Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "MRAM vs HBM en Mémoire 2026: IA sur appareil",
+        "new": "Mémoire MRAM magnétique vs HBM 2026: IA sur appareil"
+      },
+      {
+        "field": "metaDescription",
+        "old": "MRAM informatique en mémoire vs HBM et DRAM pour l'IA sur appareil: MRAM va-t-elle remplacer la DRAM, est-ce l'avenir, et en quoi diffère-t-elle de Qualcomm HBC. État 2026 + calendrier.",
+        "new": "La mémoire MRAM magnétique va-t-elle remplacer la DRAM? Calcul en mémoire vs HBM pour l'IA sur appareil, écart avec Qualcomm HBC. État 2026 et calendrier."
+      }
+    ],
+    "reason": "Zero-click batch 01 pilot. Title and meta now name \"mémoire MRAM magnétique\" (1649 of 1731 impressions, pos 9.1, 0 clicks); meta cut from 185 to 154 chars; first H2 retitled. Body refreshed in all 9 locales; slug year dropped with 301s. No earlier seo:log entry on this page.",
+    "queries": [
+      "memoire mram magnetique",
+      "mram",
+      "mram memory"
+    ],
+    "baseline": {
+      "position": 9.11,
+      "impressions": 1731,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7fae132f-eae3-4a37-b034-fb7f9a5042e9",
+    "slug": "/local-llms/mram-in-memory-computing-local-ai",
+    "date": "2026-11-02T09:58:05.834Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "MRAM in-memory computing vs HBM and DRAM for on-device AI: will MRAM replace DRAM, is it the future, and how it differs from Qualcomm HBC. 2026 status + timeline.",
+        "new": "MRAM in-memory computing vs HBM and DRAM for on-device AI: will MRAM replace DRAM, how it differs from Qualcomm HBC. 2026 status + timeline."
+      }
+    ],
+    "reason": "Zero-click batch 01 pilot. Meta length fix (162 to 140 chars, budget 140-155); title unchanged. Most visible queries are Everspin/MRAM stock quotes, not addressed.",
+    "queries": [
+      "mram in memory computing",
+      "mram vs dram"
+    ],
+    "baseline": {
+      "position": 4.69,
+      "impressions": 786,
+      "clicks": 7,
+      "ctr": 0.008905852417302799,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7c65b3c7-9776-4d38-ab84-d2681df590b5",
+    "slug": "/de/local-llms/mram-in-memory-computing-local-ai",
+    "date": "2026-11-02T09:58:05.862Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "MRAM In-Memory-Computing vs HBM und DRAM für On-Device-KI: Ersetzt MRAM DRAM, ist es die Zukunft und wie unterscheidet es sich von Qualcomm HBC. Status 2026 + Zeitplan.",
+        "new": "MRAM In-Memory-Computing vs HBM und DRAM für On-Device-KI: Ersetzt MRAM den DRAM und was unterscheidet es von Qualcomm HBC? Status 2026 + Zeitplan."
+      }
+    ],
+    "reason": "Zero-click batch 01 pilot. Meta length fix (168 to 147 chars). Too few impressions to measure.",
+    "queries": [
+      "mram vs dram",
+      "emerging memory technologien"
+    ],
+    "baseline": {
+      "position": 8.31,
+      "impressions": 35,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6f54bd87-e023-437e-a890-c1b582b16d32",
+    "slug": "/es/local-llms/mram-in-memory-computing-local-ai",
+    "date": "2026-11-02T09:58:05.892Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "MRAM vs HBM en Memoria 2026: IA en dispositivo",
+        "new": "MRAM vs HBM en Memoria 2026: IA en el dispositivo"
+      },
+      {
+        "field": "metaDescription",
+        "old": "MRAM informática en memoria vs HBM y DRAM para IA en dispositivo: si MRAM reemplazará a DRAM, si es el futuro y en qué difiere de Qualcomm HBC. Estado 2026 + cronograma.",
+        "new": "MRAM informática en memoria vs HBM y DRAM para IA en dispositivo: ¿reemplazará MRAM a la DRAM y en qué difiere de Qualcomm HBC? Estado 2026 + cronograma."
+      }
+    ],
+    "reason": "Zero-click batch 01 pilot. Title below budget (46 to 49) and meta over budget (169 to 153). No visible queries; too few impressions to measure.",
+    "queries": [
+      "mram vs dram"
+    ],
+    "baseline": {
+      "position": 5.29,
+      "impressions": 24,
+      "clicks": 1,
+      "ctr": 0.041666666666666664,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d7a9c2a8-6194-4ca7-8baf-44e3f096eccf",
+    "slug": "/pt/local-llms/mram-in-memory-computing-local-ai",
+    "date": "2026-11-02T09:58:05.921Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "MRAM vs HBM em Memória 2026: IA em dispositivo",
+        "new": "MRAM vs HBM em Memória 2026: IA no seu dispositivo"
+      },
+      {
+        "field": "metaDescription",
+        "old": "MRAM computação em memória vs HBM e DRAM para IA em dispositivo: se MRAM vai substituir a DRAM, se é o futuro e como difere do Qualcomm HBC. Status 2026 + cronograma.",
+        "new": "MRAM computação em memória vs HBM e DRAM para IA em dispositivo: a MRAM vai substituir a DRAM e como difere do Qualcomm HBC? Status 2026 + cronograma."
+      }
+    ],
+    "reason": "Zero-click batch 01 pilot. Title below budget (46 to 50) and meta over budget (166 to 150). Too few impressions to measure.",
+    "queries": [
+      "mram vs dram"
+    ],
+    "baseline": {
+      "position": 10,
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "fc5f8656-b930-400d-b01e-49bfa13511e7",
+    "slug": "/ja/local-llms/mram-in-memory-computing-local-ai",
+    "date": "2026-11-02T09:58:05.949Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "MRAM vs HBM メモリ内コンピューティング 2026：オンデバイスAI",
+        "new": "MRAMメモリ内コンピューティング 2026：オンデバイスAI"
+      }
+    ],
+    "reason": "Zero-click batch 01 pilot. Title over budget (39 to 31 chars, budget 24-32).",
+    "queries": [
+      "hbc メモリ",
+      "hbmキャリブレーション"
+    ],
+    "baseline": {
+      "position": 5.61,
+      "impressions": 89,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "dc500024-1059-4fa4-8c52-733e5641b1b2",
+    "slug": "/ar/local-llms/mram-in-memory-computing-local-ai",
+    "date": "2026-11-02T09:58:05.977Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "حوسبة MRAM في الذاكرة مقابل HBM و DRAM لذكاء اصطناعي على الجهاز: هل ستحل MRAM محل DRAM، هل هي المستقبل، وكيف تختلف عن Qualcomm HBC. حالة 2026 + جدول زمني.",
+        "new": "حوسبة MRAM في الذاكرة مقابل HBM و DRAM لذكاء اصطناعي على الجهاز: هل ستحل MRAM محل DRAM، وكيف تختلف عن Qualcomm HBC. حالة 2026 + جدول زمني."
+      }
+    ],
+    "reason": "Zero-click batch 01 pilot. Meta over budget (154 to 138 chars). Too few impressions to measure.",
+    "queries": [
+      "mram vs dram"
+    ],
+    "baseline": {
+      "position": 7.82,
+      "impressions": 11,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
   }
 ]

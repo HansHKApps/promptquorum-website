@@ -3966,6 +3966,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "mram-in-memory-computing-local-ai-2026",
+        "title": "MRAM and In-Memory Computing: The Next Leap for On-Device AI?",
+        "url": "/local-llms/mram-in-memory-computing-local-ai",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-whisper-stt-comparison",
         "title": "Whisper.cpp vs faster-whisper 2026: Local STT Benchmarks, Setup & GPU Acceleration",
@@ -4019,14 +4027,6 @@
         "title": "LlamaIndex Review: Code-First RAG Framework, Not a No-Code Builder",
         "url": "/power-local-llm/llamaindex-rag-framework-review",
         "dateModified": "2026-09-02",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mram-in-memory-computing-local-ai-2026",
-        "title": "MRAM and In-Memory Computing: The Next Leap for On-Device AI?",
-        "url": "/local-llms/mram-in-memory-computing-local-ai-2026",
-        "dateModified": "2026-08-28",
         "tier": "mentioned"
       }
     ],
@@ -11894,6 +11894,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "mram-in-memory-computing-local-ai-2026",
+        "title": "MRAM and In-Memory Computing: The Next Leap for On-Device AI?",
+        "url": "/local-llms/mram-in-memory-computing-local-ai",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-ai-agents-with-mcp",
         "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
@@ -11954,14 +11962,6 @@
         "slug": "agnai-review",
         "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
         "url": "/power-local-llm/agnai-review",
-        "dateModified": "2026-10-30",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-10-30",
         "tier": "mentioned"
       }

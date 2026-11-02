@@ -17,7 +17,10 @@ export const stopFor = (loc) => new Set(STOP[loc] ?? [])
 
 export const CJK = new Set(['ja', 'zh', 'ko'])
 export const isCjkChar = (c) => /[぀-ヿ㐀-鿿가-힯]/.test(c)
-export const norm = (s) => s.normalize('NFKC').toLowerCase().replace(/[-_./]/g, ' ').replace(/\s+/g, ' ').trim()
+// Latin text is compared without diacritics (GSC queries are often typed without accents: "memoire magnetique"
+// must hit "mémoire magnétique"). Text containing CJK characters is left alone: NFD would split kana/hangul.
+const stripMarks = (s) => ([...s].some((c) => isCjkChar(c)) ? s : s.normalize('NFD').replace(/[̀-ͯ]/g, ''))
+export const norm = (s) => stripMarks(s.normalize('NFKC').toLowerCase().replace(/[-_./]/g, ' ').replace(/\s+/g, ' ').trim())
 
 export function keyTerms(query, loc) {
   const q = norm(query)

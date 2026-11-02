@@ -3653,7 +3653,7 @@
       ]
     },
     "mram-in-memory-computing-local-ai-2026": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-06-15",
       "hasSections": true,
@@ -3671,11 +3671,11 @@
       "images": [
         {
           "url": "/images/mram-in-memory-computing-local-ai-2026-energy-cost-comparison-en.svg",
-          "title": "Energy cost per 32-bit operation: DRAM access costs ~640 pJ (~200x a MAC op), SRAM access ~5 pJ, and the multiply-accumulate itself only ~0.9 pJ — up to 90% of local LLM inference energy goes to data movement."
+          "title": "Energy cost per 32-bit operation: DRAM access costs 500+ pJ (>130x a 32-bit floating-point multiply), SRAM access ~5 pJ, and the multiply itself only ~3.7 pJ — up to 90% of local LLM inference energy goes to data movement."
         },
         {
           "url": "/images/mram-in-memory-computing-local-ai-2026-mram-timeline-roadmap-en.svg",
-          "title": "MRAM roadmap for AI: 28nm eMRAM (2019) and 14nm (2024) production are done; 8nm eMRAM and the SemiFive/ICYTech tape-out (June 2026) are confirmed; 5nm eMRAM (2027) is on track; edge AI SoCs (2028-2029) and consumer smartphone MRAM (2029-2031) remain plausible but unconfirmed."
+          "title": "MRAM roadmap for AI: 28nm eMRAM (2019) and 14nm (2024) production are done; 8nm eMRAM and the SemiFive/ICYTech tape-out (May 2026) are confirmed; 5nm eMRAM (2027) is on track; edge AI SoCs (2028-2029) and consumer smartphone MRAM (2029-2031) remain plausible but unconfirmed."
         }
       ]
     },
@@ -4478,8 +4478,8 @@
       "images": []
     },
     "seo-meets-ai": {
-      "dateModified": "2026-09-01",
-      "lastFactChecked": "2026-04-28 against GPT-5.6, Claude Opus 5, Gemini 3 Pro release data",
+      "dateModified": "2026-11-02",
+      "lastFactChecked": "2026-11-02 against Google Search Central, OpenAI, Anthropic and Perplexity crawler documentation, SE Ranking (June 2026) and WebFX (March 2026)",
       "publishDate": "2026-03-23",
       "hasSections": true,
       "langs": [
@@ -5532,8 +5532,8 @@
       "images": []
     },
     "prompt-governance-production": {
-      "dateModified": null,
-      "lastFactChecked": null,
+      "dateModified": "2026-11-02",
+      "lastFactChecked": "2026-11-02 — EU AI Act Digital Omnibus (Regulation (EU) 2026/1744), Promptfoo/OpenAI announcement, PromptHub, Braintrust and Langfuse pricing and features re-checked against vendor pages",
       "publishDate": "2026-05-02",
       "hasSections": true,
       "langs": [

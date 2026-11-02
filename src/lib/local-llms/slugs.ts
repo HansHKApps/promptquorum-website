@@ -178,7 +178,7 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-saudi-arabic-local-llms-allam-2026':      'best-saudi-arabic-local-llms-allam-2026',
 
   // Emerging memory tech 2026-06-15
-  'mram-in-memory-computing-local-ai-2026':       'mram-in-memory-computing-local-ai-2026',
+  'mram-in-memory-computing-local-ai':            'mram-in-memory-computing-local-ai-2026',
 
   // Korea Hardware 2026-06-15
   'galaxy-vs-iphone-on-device-ai-2026':           'galaxy-vs-iphone-on-device-ai-2026',

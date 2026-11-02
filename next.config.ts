@@ -414,6 +414,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/local-llms/mram-in-memory-computing-local-ai-2026',
+        destination: '/local-llms/mram-in-memory-computing-local-ai',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/local-llms/mram-in-memory-computing-local-ai-2026',
+        destination: '/:lang/local-llms/mram-in-memory-computing-local-ai',
+        permanent: true,
+      },
+      {
         source: '/local-llms/best-vector-database-2026',
         destination: '/local-llms/best-vector-database',
         permanent: true,
