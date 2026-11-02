@@ -34,11 +34,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'best local ai app 2026',
       'local llm desktop app comparison',
     ],
-    leadAnswerBlock: '**LM Studio wins for power users: fastest inference, biggest model library. Jan wins for privacy-conscious users: open source, zero telemetry, cleanest UI. GPT4All wins for beginners on slow PCs: smallest install, but no release since February 2025. All three are free.**',
+    leadAnswerBlock: '**LM Studio wins for power users: fastest inference, biggest model library. Jan wins for privacy-conscious users: open source, no telemetry by default, cleanest UI. GPT4All wins for beginners on slow PCs: smallest install, but no release since February 2025. All three are free.**',
     quickAnswerTop: {
       en: {
         question: 'Which local AI app should I install: LM Studio, Jan, or GPT4All?',
-        answer: 'Pick LM Studio if you have an RTX GPU or M3+ Mac and want the fastest inference and biggest model library. Pick Jan if you want a clean UI, fully open-source code, and zero telemetry. Pick GPT4All if you have an older PC (8 GB RAM, no GPU) and want the simplest install path.',
+        answer: 'Pick LM Studio if you have an RTX GPU or M3+ Mac and want the fastest inference and biggest model library. Pick Jan if you want a clean UI, fully open-source code, and no telemetry by default. Pick GPT4All if you have an older PC (8 GB RAM, no GPU) and want the simplest install path.',
         bullets: [
           'LM Studio — fastest tokens/sec on both M5 and RTX 4070; richest model browser; best for power users',
           'Jan — fully open source, no telemetry, native dark mode; best for privacy-first users',
@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'LM Studio is fastest on both Apple Silicon and NVIDIA — wins for power users.',
-          'Jan is fully open source with zero telemetry — wins for privacy-first users.',
+          'Jan is fully open source with no telemetry by default — wins for privacy-first users.',
           'GPT4All has the smallest install and runs on 8 GB RAM — wins for older hardware, but its latest release is v3.10.0 from 25 February 2025.',
           'All three are free, offline after install, and load standard GGUF models.',
           'All three can chat with local files: LM Studio and Jan attach documents in a chat, GPT4All uses LocalDocs.',
@@ -83,7 +83,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'How Do LM Studio, Jan, and GPT4All Compare in 2026?',
         content: 'Tested on Apple M5 MacBook Pro (16 GB unified memory) and a desktop with NVIDIA RTX 4070 (12 GB VRAM, 32 GB system RAM) running Windows 11. All three apps tested with the same 8B-class model (Llama 3.1 8B Q4_K_M) for direct comparison. Treat the speeds as indicative: they come from one test run in August 2026, and app builds change quickly.',
         image: '/images/lm-studio-jan-gpt4all-comparison-table-en.svg',
-        imageCaption: 'LM Studio vs Jan vs GPT4All feature comparison (2026, tested on M5 MacBook + RTX 4070): LM Studio leads on speed (38 tok/s M5, 74 tok/s RTX 4070) and model library; Jan wins on privacy (zero telemetry, Apache 2.0 open-source); GPT4All has the smallest install (290 MB) and lowest RAM requirement (4 GB).',
+        imageCaption: 'LM Studio vs Jan vs GPT4All feature comparison (2026, tested on M5 MacBook + RTX 4070): LM Studio leads on speed (38 tok/s M5, 74 tok/s RTX 4070) and model library; Jan wins on privacy (no telemetry by default, Apache 2.0 open-source); GPT4All has the smallest install (290 MB) and lowest RAM requirement (4 GB).',
         imageAlt: 'Table comparing LM Studio, Jan and GPT4All on install size, speed, licence and telemetry',
         rows: [
           { 'Criterion': 'Best for', 'LM Studio': 'Power users', 'Jan': 'Privacy users', 'GPT4All': 'Beginners' },
@@ -118,7 +118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageAlt: 'Decision chart matching your situation to LM Studio, Jan or GPT4All',
         rows: [
           { 'Your situation': 'I have an RTX 3060+ or M3+ Mac, want max speed', 'Pick': 'LM Studio' },
-          { 'Your situation': 'I want fully open-source code and zero telemetry', 'Pick': 'Jan' },
+          { 'Your situation': 'I want fully open-source code and no telemetry by default', 'Pick': 'Jan' },
           { 'Your situation': 'I have a 4-year-old laptop, 8 GB RAM, no GPU', 'Pick': 'GPT4All' },
           { 'Your situation': 'I want to attach PDFs to a chat with no setup', 'Pick': 'LM Studio or Jan' },
           { 'Your situation': 'My privacy review needs auditable source and no default telemetry', 'Pick': 'Jan' },
@@ -187,7 +187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageAlt: 'Privacy cards for LM Studio, Jan and GPT4All showing telemetry, source licence and offline use',
         items: [
           '**LM Studio** — Its privacy policy states no telemetry or user-specific tracking. Update checks send app version, OS and IP address; model search and downloads send anonymized search queries. Chats and documents stay on the device.',
-          '**Jan** — No telemetry by default. No analytics SDK. Source code is auditable on GitHub (Apache 2.0).',
+          '**Jan** — No telemetry by default. Optional anonymous analytics (PostHog EU) only if you allow it at first launch. Source code is auditable on GitHub (Apache 2.0).',
           '**GPT4All** — Telemetry is opt-in (off by default). Source on GitHub (MIT).',
           'None of the three send your prompts, your conversations, or your loaded model files anywhere — local inference is local in all cases.',
         ],
@@ -224,7 +224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Pick **LM Studio** unless you have a specific reason not to — it is the default recommendation for most users.',
-          'Pick **Jan** if you specifically need open-source code, zero telemetry, or a cleaner UI for daily use.',
+          'Pick **Jan** if you specifically need open-source code, no telemetry by default, or a cleaner UI for daily use.',
           'Pick **GPT4All** if your hardware is borderline (8 GB RAM, no GPU) — it is the most forgiving on low-end systems.',
           'You can install all three side-by-side; they share GGUF model files, so the disk cost of trying multiple apps is small.',
         ],
@@ -388,11 +388,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'beste lokale ki-app 2026',
       'lokale llm desktop-app vergleich',
     ],
-    leadAnswerBlock: '**LM Studio gewinnt für Power-User: schnellste Inferenz, größte Modellbibliothek. Jan gewinnt für datenschutzbewusste Nutzer: Open Source, null Telemetrie, klarste Oberfläche. GPT4All gewinnt für Einsteiger auf langsamen PCs: kleinste Installation, aber keine Version seit Februar 2025. Alle drei sind kostenlos.**',
+    leadAnswerBlock: '**LM Studio gewinnt für Power-User: schnellste Inferenz, größte Modellbibliothek. Jan gewinnt für datenschutzbewusste Nutzer: Open Source, standardmäßig keine Telemetrie, klarste Oberfläche. GPT4All gewinnt für Einsteiger auf langsamen PCs: kleinste Installation, aber keine Version seit Februar 2025. Alle drei sind kostenlos.**',
     quickAnswerTop: {
       de: {
         question: 'Welche lokale KI-App soll ich installieren: LM Studio, Jan oder GPT4All?',
-        answer: 'Wählen Sie LM Studio, wenn Sie eine RTX-GPU oder einen M3+-Mac haben und die schnellste Inferenz mit der größten Modellbibliothek wünschen. Wählen Sie Jan, wenn Sie eine klare Oberfläche, vollständig quelloffenen Code und null Telemetrie wollen. Wählen Sie GPT4All, wenn Sie einen älteren PC haben (8 GB RAM, keine GPU) und den einfachsten Installationsweg suchen.',
+        answer: 'Wählen Sie LM Studio, wenn Sie eine RTX-GPU oder einen M3+-Mac haben und die schnellste Inferenz mit der größten Modellbibliothek wünschen. Wählen Sie Jan, wenn Sie eine klare Oberfläche, vollständig quelloffenen Code und Telemetrie standardmäßig aus wollen. Wählen Sie GPT4All, wenn Sie einen älteren PC haben (8 GB RAM, keine GPU) und den einfachsten Installationsweg suchen.',
         bullets: [
           'LM Studio — schnellste Tokens/Sek. auf M5 und RTX 4070; reichhaltigster Modell-Browser; ideal für Power-User',
           'Jan — vollständig Open Source, keine Telemetrie, nativer Dark Mode; ideal für datenschutzbewusste Nutzer',
@@ -426,7 +426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'LM Studio ist am schnellsten — sowohl auf Apple Silicon als auch auf NVIDIA — und gewinnt damit für Power-User.',
-          'Jan ist vollständig Open Source mit null Telemetrie — und gewinnt damit für datenschutzbewusste Nutzer.',
+          'Jan ist vollständig Open Source mit Telemetrie standardmäßig aus — und gewinnt damit für datenschutzbewusste Nutzer.',
           'GPT4All hat die kleinste Installation und läuft auf 8 GB RAM — und gewinnt damit für ältere Hardware, doch die jüngste Version ist v3.10.0 vom 25. Februar 2025.',
           'Alle drei Apps sind kostenlos, nach der Installation offline-fähig und laden Standard-GGUF-Modelle.',
           'Alle drei können mit lokalen Dateien chatten: LM Studio und Jan hängen Dokumente direkt im Chat an, GPT4All nutzt LocalDocs.',
@@ -437,7 +437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wie schneiden LM Studio, Jan und GPT4All 2026 im Vergleich ab?',
         content: 'Getestet auf einem Apple M5 MacBook Pro (16 GB Unified Memory) sowie einem Desktop mit NVIDIA RTX 4070 (12 GB VRAM, 32 GB System-RAM) unter Windows 11. Alle drei Apps wurden für einen direkten Vergleich mit demselben 8B-Modell (Llama 3.1 8B Q4_K_M) getestet. Verstehen Sie die Geschwindigkeiten als Richtwerte: Sie stammen aus einem Testlauf im August 2026, und App-Builds ändern sich schnell.',
         image: '/images/lm-studio-jan-gpt4all-comparison-table-de.svg',
-        imageCaption: 'LM Studio vs Jan vs GPT4All Merkmalsvergleich (2026, getestet auf M5 MacBook + RTX 4070): LM Studio führt bei Geschwindigkeit (38 Tok/Sek. M5, 74 Tok/Sek. RTX 4070) und Modellbibliothek; Jan gewinnt beim Datenschutz (null Telemetrie, Apache 2.0 Open Source); GPT4All hat die kleinste Installation (290 MB) und den niedrigsten RAM-Bedarf (4 GB).',
+        imageCaption: 'LM Studio vs Jan vs GPT4All Merkmalsvergleich (2026, getestet auf M5 MacBook + RTX 4070): LM Studio führt bei Geschwindigkeit (38 Tok/Sek. M5, 74 Tok/Sek. RTX 4070) und Modellbibliothek; Jan gewinnt beim Datenschutz (Telemetrie standardmäßig aus, Apache 2.0 Open Source); GPT4All hat die kleinste Installation (290 MB) und den niedrigsten RAM-Bedarf (4 GB).',
         imageAlt: 'Tabelle zum Vergleich von LM Studio, Jan und GPT4All bei Größe und Tempo, Lizenz, Telemetrie und RAM',
         rows: [
           { 'Kriterium': 'Ideal für', 'LM Studio': 'Power-User', 'Jan': 'Datenschutz-Nutzer', 'GPT4All': 'Einsteiger' },
@@ -472,7 +472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageAlt: 'Entscheidungshilfe: Ihre Situation und die passende lokale KI-App unter LM Studio, Jan oder GPT4All',
         rows: [
           { 'Ihre Situation': 'Ich habe eine RTX 3060+ oder einen M3+-Mac und will maximale Geschwindigkeit', 'Wahl': 'LM Studio' },
-          { 'Ihre Situation': 'Ich will vollständig quelloffenen Code und null Telemetrie', 'Wahl': 'Jan' },
+          { 'Ihre Situation': 'Ich will vollständig quelloffenen Code und Telemetrie standardmäßig aus', 'Wahl': 'Jan' },
           { 'Ihre Situation': 'Ich habe einen 4 Jahre alten Laptop mit 8 GB RAM und ohne GPU', 'Wahl': 'GPT4All' },
           { 'Ihre Situation': 'Ich möchte PDFs ohne Einrichtung an einen Chat anhängen', 'Wahl': 'LM Studio oder Jan' },
           { 'Ihre Situation': 'Meine Datenschutzprüfung verlangt prüfbaren Quellcode und keine Standard-Telemetrie', 'Wahl': 'Jan' },
@@ -541,7 +541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageAlt: 'Datenschutz-Karten zu LM Studio, Jan und GPT4All mit Telemetrie, Quellcode-Lizenz und Offline-Nutzung',
         items: [
           '**LM Studio** — Laut Datenschutzerklärung keine Telemetrie und kein nutzerbezogenes Tracking. Update-Prüfungen übermitteln App-Version, Betriebssystem und IP-Adresse; Modellsuche und Downloads übermitteln anonymisierte Suchanfragen. Chats und Dokumente bleiben auf dem Gerät.',
-          '**Jan** — Standardmäßig keine Telemetrie. Kein Analytics-SDK. Quellcode auf GitHub einsehbar (Apache 2.0).',
+          '**Jan** — Standardmäßig keine Telemetrie. Optionale anonyme Analytics (PostHog EU) nur, wenn Sie beim ersten Start zustimmen. Quellcode auf GitHub einsehbar (Apache 2.0).',
           '**GPT4All** — Telemetrie ist opt-in (standardmäßig deaktiviert). Quellcode auf GitHub (MIT).',
           'Keine der drei Apps sendet Ihre Prompts, Ihre Konversationen oder Ihre geladenen Modelldateien irgendwohin — lokale Inferenz ist in allen Fällen wirklich lokal.',
         ],
@@ -578,7 +578,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Wählen Sie **LM Studio**, sofern Sie keinen besonderen Grund dagegen haben — sie ist die Standard-Empfehlung für die meisten Nutzer.',
-          'Wählen Sie **Jan**, wenn Sie ausdrücklich quelloffenen Code, null Telemetrie oder eine aufgeräumtere Oberfläche für den täglichen Einsatz benötigen.',
+          'Wählen Sie **Jan**, wenn Sie ausdrücklich quelloffenen Code, Telemetrie standardmäßig aus oder eine aufgeräumtere Oberfläche für den täglichen Einsatz benötigen.',
           'Wählen Sie **GPT4All**, wenn Ihre Hardware grenzwertig ist (8 GB RAM, keine GPU) — sie ist die nachsichtigste auf schwacher Hardware.',
           'Sie können alle drei Apps parallel installieren; sie teilen sich GGUF-Modelldateien, sodass die Festplattenkosten beim Ausprobieren mehrerer Apps gering bleiben.',
         ],
@@ -743,11 +743,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'meilleure app ia locale 2026',
       'comparaison app llm local desktop',
     ],
-    leadAnswerBlock: '**LM Studio gagne pour les power users : inférence la plus rapide, plus grande bibliothèque. Jan gagne pour la vie privée : open source, zéro télémétrie. GPT4All gagne pour les débutants sur PC lent : installation légère, mais aucune version depuis février 2025. Les trois sont gratuites.**',
+    leadAnswerBlock: '**LM Studio gagne pour les power users : inférence la plus rapide, plus grande bibliothèque. Jan gagne pour la vie privée : open source, aucune télémétrie par défaut. GPT4All gagne pour les débutants sur PC lent : installation légère, mais aucune version depuis février 2025. Les trois sont gratuites.**',
     quickAnswerTop: {
       fr: {
         question: 'Quelle app IA locale installer : LM Studio, Jan ou GPT4All ?',
-        answer: 'Choisissez LM Studio si vous avez un GPU RTX ou un Mac M3+ et voulez l\'inférence la plus rapide avec la plus grande bibliothèque de modèles. Choisissez Jan si vous voulez une interface claire, du code 100 % open source et zéro télémétrie. Choisissez GPT4All si vous avez un PC plus ancien (8 Go de RAM, sans GPU) et cherchez le chemin d\'installation le plus simple.',
+        answer: 'Choisissez LM Studio si vous avez un GPU RTX ou un Mac M3+ et voulez l\'inférence la plus rapide avec la plus grande bibliothèque de modèles. Choisissez Jan si vous voulez une interface claire, du code 100 % open source et télémétrie désactivée par défaut. Choisissez GPT4All si vous avez un PC plus ancien (8 Go de RAM, sans GPU) et cherchez le chemin d\'installation le plus simple.',
         bullets: [
           'LM Studio — tokens/sec les plus élevés sur M5 et RTX 4070 ; navigateur de modèles le plus riche ; idéal power users',
           'Jan — entièrement open source, sans télémétrie, mode sombre natif ; idéal pour la confidentialité',
@@ -781,7 +781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'LM Studio est la plus rapide — sur Apple Silicon comme sur NVIDIA — choix des power users.',
-          'Jan est entièrement open source, zéro télémétrie — choix des utilisateurs vie-privée d\'abord.',
+          'Jan est entièrement open source, télémétrie désactivée par défaut — choix des utilisateurs vie-privée d\'abord.',
           'GPT4All a la plus petite installation et tourne sur 8 Go de RAM — choix sur matériel ancien, mais sa dernière version est la v3.10.0 du 25 février 2025.',
           'Les trois sont gratuites, hors ligne après installation, et chargent les modèles GGUF standard.',
           'Les trois peuvent discuter avec des fichiers locaux : LM Studio et Jan joignent des documents dans un chat, GPT4All utilise LocalDocs.',
@@ -792,7 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comment LM Studio, Jan et GPT4All se comparent en 2026 ?',
         content: 'Test sur Apple M5 MacBook Pro (16 Go de mémoire unifiée) et un desktop NVIDIA RTX 4070 (12 Go VRAM, 32 Go RAM système) sous Windows 11. Les trois apps ont été testées avec le même modèle 8B (Llama 3.1 8B Q4_K_M) pour comparaison directe. Considérez les vitesses comme indicatives : elles proviennent d\'une seule série de tests d\'août 2026, et les builds des apps évoluent vite.',
         image: '/images/lm-studio-jan-gpt4all-comparison-table-fr.svg',
-        imageCaption: 'Comparatif LM Studio vs Jan vs GPT4All (2026, testé sur M5 MacBook + RTX 4070) : LM Studio en tête sur la vitesse (38 tok/s M5, 74 tok/s RTX 4070) et la bibliothèque de modèles ; Jan gagne sur la confidentialité (zéro télémétrie, Apache 2.0 open-source) ; GPT4All a la plus petite installation (290 Mo) et le besoin en RAM le plus faible (4 Go).',
+        imageCaption: 'Comparatif LM Studio vs Jan vs GPT4All (2026, testé sur M5 MacBook + RTX 4070) : LM Studio en tête sur la vitesse (38 tok/s M5, 74 tok/s RTX 4070) et la bibliothèque de modèles ; Jan gagne sur la confidentialité (aucune télémétrie par défaut, Apache 2.0 open-source) ; GPT4All a la plus petite installation (290 Mo) et le besoin en RAM le plus faible (4 Go).',
         imageAlt: 'Tableau comparatif de LM Studio, Jan et GPT4All sur la taille, la vitesse, la licence et la RAM',
         rows: [
           { 'Critère': 'Idéal pour', 'LM Studio': 'Power users', 'Jan': 'Vie privée', 'GPT4All': 'Débutants' },
@@ -827,7 +827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageAlt: 'Schéma de décision associant votre situation à LM Studio, Jan ou GPT4All',
         rows: [
           { 'Votre situation': 'GPU RTX 3060+ ou Mac M3+, vitesse maximale', 'Choix': 'LM Studio' },
-          { 'Votre situation': 'Code 100 % open source et zéro télémétrie', 'Choix': 'Jan' },
+          { 'Votre situation': 'Code 100 % open source et télémétrie désactivée par défaut', 'Choix': 'Jan' },
           { 'Votre situation': 'Portable de 4 ans, 8 Go de RAM, sans GPU', 'Choix': 'GPT4All' },
           { 'Votre situation': 'Joindre des PDF à un chat, sans réglage', 'Choix': 'LM Studio ou Jan' },
           { 'Votre situation': 'Ma revue vie privée exige un code auditable et aucune télémétrie par défaut', 'Choix': 'Jan' },
@@ -896,7 +896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageAlt: 'Fiches confidentialité de LM Studio, Jan et GPT4All : télémétrie, licence du code source et usage hors ligne',
         items: [
           '**LM Studio** — Sa politique de confidentialité indique ni télémétrie ni suivi propre à l\'utilisateur. Les vérifications de mise à jour envoient version de l\'app, OS et adresse IP ; la recherche et le téléchargement de modèles envoient des requêtes anonymisées. Conversations et documents restent sur l\'appareil.',
-          '**Jan** — Aucune télémétrie par défaut. Aucun SDK analytique. Code source auditable sur GitHub (Apache 2.0).',
+          '**Jan** — Aucune télémétrie par défaut. Analytique anonyme optionnelle (PostHog EU) uniquement si vous l\'autorisez au premier lancement. Code source auditable sur GitHub (Apache 2.0).',
           '**GPT4All** — Télémétrie en opt-in (désactivée par défaut). Code source sur GitHub (MIT).',
           'Aucune des trois n\'envoie vos prompts, vos conversations ou vos modèles ailleurs — l\'inférence locale est bien locale dans tous les cas.',
         ],
@@ -933,7 +933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Choisissez **LM Studio** sauf raison particulière — c\'est la recommandation par défaut pour la plupart des utilisateurs.',
-          'Choisissez **Jan** s\'il vous faut spécifiquement du code open source, zéro télémétrie ou une interface plus épurée au quotidien.',
+          'Choisissez **Jan** s\'il vous faut spécifiquement du code open source, télémétrie désactivée par défaut ou une interface plus épurée au quotidien.',
           'Choisissez **GPT4All** si votre matériel est limite (8 Go de RAM, sans GPU) — la plus indulgente sur configurations modestes.',
           'Vous pouvez installer les trois côte à côte ; elles partagent les fichiers GGUF, donc le coût disque d\'essayer plusieurs apps reste minime.',
         ],
@@ -1098,14 +1098,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルAIアプリ 2026',
       'ローカルllm デスクトップアプリ 比較',
     ],
-    leadAnswerBlock: '**LM Studioはパワーユーザー向け：推論が最速でモデルライブラリも最大。Janはプライバシー重視のユーザー向け：オープンソース、テレメトリゼロ、UIが最もシンプル。GPT4Allは低スペックPCの初心者向け：インストールが最小ですが、2025年2月以降リリースなし。3つとも無料です。**',
+    leadAnswerBlock: '**LM Studioはパワーユーザー向け：推論が最速でモデルライブラリも最大。Janはプライバシー重視のユーザー向け：オープンソース、デフォルトでテレメトリなし、UIが最もシンプル。GPT4Allは低スペックPCの初心者向け：インストールが最小ですが、2025年2月以降リリースなし。3つとも無料です。**',
     quickAnswerTop: {
       ja: {
         question: 'LM Studio、Jan、GPT4Allのどれをインストールすべきですか？',
-        answer: 'RTX GPUまたはM3以降のMacを持ち、最速の推論と最大のモデルライブラリを求めるならLM Studio。クリーンなUI、完全オープンソースのコード、テレメトリゼロを求めるならJan。古いPC（8 GB RAM、GPUなし）で最も簡単な導入経路を求めるならGPT4Allを選びましょう。',
+        answer: 'RTX GPUまたはM3以降のMacを持ち、最速の推論と最大のモデルライブラリを求めるならLM Studio。クリーンなUI、完全オープンソースのコード、デフォルトでテレメトリなしを求めるならJan。古いPC（8 GB RAM、GPUなし）で最も簡単な導入経路を求めるならGPT4Allを選びましょう。',
         bullets: [
           'LM Studio — M5とRTX 4070のどちらでも最高のtokens/sec、最も豊富なモデルブラウザ。パワーユーザー向け',
-          'Jan — 完全オープンソース、テレメトリなし、ネイティブのダークモード。プライバシー重視ユーザー向け',
+          'Jan — 完全オープンソース、デフォルトでテレメトリなし、ネイティブのダークモード。プライバシー重視ユーザー向け',
           'GPT4All — 最小のダウンロード、8 GB RAMのノートPCでも動作。低スペックハードウェアの初心者向けですが、v3.10.0（2025年2月25日）以降リリースなし',
           '3つとも無料、インストール後はオフライン動作、GGUFモデルファイルを読み込み可能',
           '3つともローカルファイルとチャット可能：LM StudioとJanはチャットに文書を添付、GPT4Allは内蔵のLocalDocsを使用',
@@ -1137,7 +1137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'LM StudioはApple SiliconでもNVIDIAでも最速 — パワーユーザーに最適。',
-          'Janは完全オープンソースでテレメトリゼロ — プライバシー重視ユーザーに最適。',
+          'Janは完全オープンソースでデフォルトでテレメトリなし — プライバシー重視ユーザーに最適。',
           'GPT4Allは最小インストールで8 GB RAMでも動作 — 古いハードウェアに最適ですが、最新リリースは2025年2月25日のv3.10.0です。',
           '3つとも無料、インストール後はオフライン動作、標準のGGUFモデルを読み込み可能。',
           '3つともローカルファイルとチャット可能：LM StudioとJanはチャットに文書を添付、GPT4AllはLocalDocsを使用。',
@@ -1148,7 +1148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LM Studio、Jan、GPT4Allの2026年時点の比較',
         content: 'Apple M5 MacBook Pro（16 GBユニファイドメモリ）と、Windows 11を搭載したNVIDIA RTX 4070（VRAM 12 GB、システムRAM 32 GB）のデスクトップで検証。直接比較のため、3アプリすべてで同じ8Bクラスのモデル（Llama 3.1 8B Q4_K_M）を使用しました。速度はあくまで目安として扱ってください。2026年8月の1回の検証結果であり、アプリのビルドは頻繁に変わります。',
         image: '/images/lm-studio-jan-gpt4all-comparison-table-ja.svg',
-        imageCaption: 'LM Studio vs Jan vs GPT4All機能比較（2026年、M5 MacBook + RTX 4070でテスト）：LM Studioが速度（M5で38 tok/s、RTX 4070で74 tok/s）とモデルライブラリでリード；Janがプライバシー（ゼロテレメトリ、Apache 2.0オープンソース）で優勝；GPT4Allは最小のインストールサイズ（290 MB）と最低RAM要件（4 GB）。',
+        imageCaption: 'LM Studio vs Jan vs GPT4All機能比較（2026年、M5 MacBook + RTX 4070でテスト）：LM Studioが速度（M5で38 tok/s、RTX 4070で74 tok/s）とモデルライブラリでリード；Janがプライバシー（デフォルトでテレメトリなし、Apache 2.0オープンソース）で優勝；GPT4Allは最小のインストールサイズ（290 MB）と最低RAM要件（4 GB）。',
         imageAlt: 'LM Studio・Jan・GPT4All徹底比較：インストールサイズ・速度・ライセンス・テレメトリを並べた比較表',
         rows: [
           { '基準': '最適な用途', 'LM Studio': 'パワーユーザー', 'Jan': 'プライバシー重視', 'GPT4All': '初心者' },
@@ -1183,7 +1183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageAlt: 'あなたの状況に合わせてLM Studio、Jan、GPT4Allのどれを選ぶかを示すローカルAIアプリの選択チャート',
         rows: [
           { 'あなたの状況': 'RTX 3060以上またはM3以降のMac、最大速度を求める', '推奨': 'LM Studio' },
-          { 'あなたの状況': '完全オープンソース、テレメトリゼロを求める', '推奨': 'Jan' },
+          { 'あなたの状況': '完全オープンソース、デフォルトでテレメトリなしを求める', '推奨': 'Jan' },
           { 'あなたの状況': '4年前のノートPC、8 GB RAM、GPUなし', '推奨': 'GPT4All' },
           { 'あなたの状況': '設定なしでPDFをチャットに添付したい', '推奨': 'LM StudioまたはJan' },
           { 'あなたの状況': 'プライバシー審査で、監査可能なソースとデフォルトのテレメトリなしが必要', '推奨': 'Jan' },
@@ -1252,7 +1252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageAlt: 'LM Studio、Jan、GPT4Allのテレメトリ・ソースのライセンス・オフライン利用を示すプライバシー比較カード',
         items: [
           '**LM Studio** — プライバシーポリシーでは、テレメトリやユーザー固有のトラッキングはないと明記されています。アップデート確認ではアプリのバージョン、OS、IPアドレスが送信され、モデル検索・ダウンロードでは匿名化された検索クエリが送信されます。チャットとドキュメントは端末内に留まります。',
-          '**Jan** — デフォルトでテレメトリなし。アナリティクスSDKなし。GitHubでソースコードを監査可能（Apache 2.0）。',
+          '**Jan** — デフォルトでテレメトリなし。匿名の利用分析（PostHog EU）は初回起動時に許可した場合のみ。GitHubでソースコードを監査可能（Apache 2.0）。',
           '**GPT4All** — テレメトリはオプトイン（デフォルトでオフ）。ソースはGitHubで公開（MIT）。',
           '3アプリとも、プロンプト、会話、ロード済みモデルファイルをどこにも送信しません — ローカル推論はいずれの場合もローカルです。',
         ],
@@ -1289,7 +1289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '特別な理由がなければ **LM Studio** を選択 — 多くのユーザーに対するデフォルトの推奨です。',
-          'オープンソースのコード、テレメトリゼロ、または日常使いのよりすっきりしたUIが必要なら **Jan**。',
+          'オープンソースのコード、デフォルトでテレメトリなし、または日常使いのよりすっきりしたUIが必要なら **Jan**。',
           'ハードウェアがギリギリ（8 GB RAM、GPUなし）なら **GPT4All** — 低スペックのシステムに最も寛容です。',
           '3アプリは並行インストール可能。GGUFモデルファイルを共有するため、複数を試すディスクコストは小さく抑えられます。',
         ],
@@ -1464,14 +1464,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '本地AI应用 2026',
       '本地llm桌面应用对比',
     ],
-    leadAnswerBlock: '**LM Studio适合高级用户：推理最快、模型库最大。Jan适合注重隐私的用户：开源、零遥测、UI最干净。GPT4All适合低配PC上的新手：安装包最小，但自2025年2月起无新版本。三款均免费。**',
+    leadAnswerBlock: '**LM Studio适合高级用户：推理最快、模型库最大。Jan适合注重隐私的用户：开源、默认无遥测、UI最干净。GPT4All适合低配PC上的新手：安装包最小，但自2025年2月起无新版本。三款均免费。**',
     quickAnswerTop: {
       zh: {
         question: '应该安装哪款本地AI应用：LM Studio、Jan还是GPT4All？',
-        answer: '若你拥有RTX显卡或M3+ Mac，并希望获得最快推理速度和最大模型库，选LM Studio。若你想要干净UI、完全开源代码和零遥测，选Jan。若你的电脑较旧（8 GB RAM、无GPU）且追求最简安装路径，选GPT4All。',
+        answer: '若你拥有RTX显卡或M3+ Mac，并希望获得最快推理速度和最大模型库，选LM Studio。若你想要干净UI、完全开源代码和默认无遥测，选Jan。若你的电脑较旧（8 GB RAM、无GPU）且追求最简安装路径，选GPT4All。',
         bullets: [
           'LM Studio——M5与RTX 4070上tokens/sec最高；模型浏览器最丰富；高级用户首选',
-          'Jan——完全开源、无遥测、原生暗色模式；隐私优先用户首选',
+          'Jan——完全开源、默认无遥测、原生暗色模式；隐私优先用户首选',
           'GPT4All——安装包最小，可在8 GB RAM笔记本上运行；低配硬件新手首选，但自v3.10.0（2025年2月25日）起没有新版本',
           '三款均免费、安装后离线工作、可加载GGUF模型文件',
           '三款都能与本地文件对话：LM Studio和Jan在聊天中附加文档，GPT4All使用内置的LocalDocs',
@@ -1503,7 +1503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'LM Studio在Apple Silicon与NVIDIA上均速度最快——高级用户首选。',
-          'Jan完全开源、零遥测——隐私优先用户首选。',
+          'Jan完全开源、默认无遥测——隐私优先用户首选。',
           'GPT4All安装包最小、可在8 GB RAM上运行——老旧硬件首选，但其最新版本是2025年2月25日的v3.10.0。',
           '三款均免费、安装后离线工作、可加载标准GGUF模型。',
           '三款都能与本地文件对话：LM Studio和Jan在聊天中附加文档，GPT4All使用LocalDocs。',
@@ -1514,7 +1514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2026年LM Studio、Jan与GPT4All的对比',
         content: '在Apple M5 MacBook Pro（16 GB统一内存）和搭载NVIDIA RTX 4070（12 GB显存、32 GB系统内存）的Windows 11桌面机上实测。三款应用均使用相同的8B级模型（Llama 3.1 8B Q4_K_M）以确保直接可比性。请将这些速度视为参考值：它们来自2026年8月的一次测试，而应用版本更新很快。',
         image: '/images/lm-studio-jan-gpt4all-comparison-table-zh.svg',
-        imageCaption: 'LM Studio vs Jan vs GPT4All功能对比（2026年，在M5 MacBook + RTX 4070上测试）：LM Studio在速度（M5上38 tok/s，RTX 4070上74 tok/s）和模型库方面领先；Jan在隐私方面胜出（零遥测，Apache 2.0开源）；GPT4All安装包最小（290 MB），RAM要求最低（4 GB）。',
+        imageCaption: 'LM Studio vs Jan vs GPT4All功能对比（2026年，在M5 MacBook + RTX 4070上测试）：LM Studio在速度（M5上38 tok/s，RTX 4070上74 tok/s）和模型库方面领先；Jan在隐私方面胜出（默认无遥测，Apache 2.0开源）；GPT4All安装包最小（290 MB），RAM要求最低（4 GB）。',
         imageAlt: 'LM Studio、Jan、GPT4All对比表：安装包大小、速度、许可证和遥测',
         rows: [
           { '维度': '最佳用户', 'LM Studio': '高级用户', 'Jan': '隐私用户', 'GPT4All': '新手用户' },
@@ -1549,7 +1549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageAlt: '决策图：按你的情况在LM Studio、Jan和GPT4All三款本地AI应用中选择',
         rows: [
           { '你的情况': 'RTX 3060+或M3+ Mac，要最快速度', '建议': 'LM Studio' },
-          { '你的情况': '要完全开源代码和零遥测', '建议': 'Jan' },
+          { '你的情况': '要完全开源代码和默认无遥测', '建议': 'Jan' },
           { '你的情况': '4年旧笔记本、8 GB RAM、无GPU', '建议': 'GPT4All' },
           { '你的情况': '想在聊天中附加PDF，无需设置', '建议': 'LM Studio或Jan' },
           { '你的情况': '隐私审查要求可审计源码且默认无遥测', '建议': 'Jan' },
@@ -1618,7 +1618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageAlt: 'LM Studio、Jan和GPT4All隐私对比卡片：遥测、源码许可证和离线使用',
         items: [
           '**LM Studio**——隐私政策称无遥测、无针对用户的跟踪。检查更新会发送应用版本、操作系统和IP地址；模型搜索和下载会发送匿名化的搜索查询。聊天和文档保留在设备上。',
-          '**Jan**——默认无遥测。无分析SDK。源代码在GitHub上可审计（Apache 2.0）。',
+          '**Jan**——默认无遥测。仅在首次启动时同意后才启用匿名使用分析(PostHog EU)。源代码在GitHub上可审计（Apache 2.0）。',
           '**GPT4All**——遥测为可选加入（默认关闭）。源代码在GitHub上（MIT）。',
           '三款都不会把你的提示词、对话或已加载模型文件发送到任何地方——本地推理在所有情况下都是真本地。',
         ],
@@ -1655,7 +1655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '除非有特殊原因，否则选 **LM Studio** ——这是给多数用户的默认推荐。',
-          '若你明确需要开源代码、零遥测，或日常使用更整洁的UI，选 **Jan** 。',
+          '若你明确需要开源代码、默认无遥测，或日常使用更整洁的UI，选 **Jan** 。',
           '若你的硬件接近临界（8 GB RAM、无GPU），选 **GPT4All** ——它在低配系统上最宽容。',
           '可以并排安装三款；它们共享GGUF模型文件，因此尝试多款应用的磁盘成本很低。',
         ],
@@ -1830,11 +1830,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mejor app de ia local 2026',
       'comparativa apps llm local escritorio',
     ],
-    leadAnswerBlock: '**LM Studio gana para usuarios avanzados: inferencia más rápida, mayor biblioteca de modelos. Jan gana para quienes priorizan la privacidad: open source, cero telemetría, UI más limpia. GPT4All gana para principiantes en PCs lentos: instalación más pequeña, pero sin versiones desde febrero de 2025. Las tres son gratuitas.**',
+    leadAnswerBlock: '**LM Studio gana para usuarios avanzados: inferencia más rápida, mayor biblioteca de modelos. Jan gana para quienes priorizan la privacidad: open source, sin telemetría por defecto, UI más limpia. GPT4All gana para principiantes en PCs lentos: instalación más pequeña, pero sin versiones desde febrero de 2025. Las tres son gratuitas.**',
     quickAnswerTop: {
       es: {
         question: '¿Qué app de IA local instalo: LM Studio, Jan o GPT4All?',
-        answer: 'Elige LM Studio si tienes una GPU RTX o un Mac M3+ y quieres la inferencia más rápida con la biblioteca de modelos más grande. Elige Jan si quieres una UI limpia, código completamente open source y cero telemetría. Elige GPT4All si tienes un PC más antiguo (8 GB de RAM, sin GPU) y buscas la instalación más sencilla.',
+        answer: 'Elige LM Studio si tienes una GPU RTX o un Mac M3+ y quieres la inferencia más rápida con la biblioteca de modelos más grande. Elige Jan si quieres una UI limpia, código completamente open source y telemetría desactivada por defecto. Elige GPT4All si tienes un PC más antiguo (8 GB de RAM, sin GPU) y buscas la instalación más sencilla.',
         bullets: [
           'LM Studio — mayor tokens/seg en M5 y RTX 4070; navegador de modelos más completo; ideal para usuarios avanzados',
           'Jan — completamente open source, sin telemetría, modo oscuro nativo; ideal para usuarios que priorizan la privacidad',
@@ -1867,7 +1867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'LM Studio es la más rápida en Apple Silicon y NVIDIA — gana para usuarios avanzados.',
-          'Jan es completamente open source con cero telemetría — gana para usuarios que priorizan la privacidad.',
+          'Jan es completamente open source con telemetría desactivada por defecto — gana para usuarios que priorizan la privacidad.',
           'GPT4All tiene la instalación más pequeña y funciona con 8 GB de RAM — gana para hardware antiguo, pero su última versión es la v3.10.0 del 25 de febrero de 2025.',
           'Las tres son gratuitas, funcionan sin conexión tras la instalación y cargan modelos GGUF estándar.',
           'Las tres pueden chatear con archivos locales: LM Studio y Jan adjuntan documentos en el chat, GPT4All usa LocalDocs.',
@@ -1878,7 +1878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Cómo se comparan LM Studio, Jan y GPT4All en 2026?',
         content: 'Probadas en Apple M5 MacBook Pro (16 GB de memoria unificada) y un escritorio con NVIDIA RTX 4070 (12 GB de VRAM, 32 GB de RAM del sistema) con Windows 11. Las tres apps se probaron con el mismo modelo de clase 8B (Llama 3.1 8B Q4_K_M) para una comparación directa. Toma las velocidades como orientativas: proceden de una sola ronda de pruebas en agosto de 2026, y las versiones de las apps cambian rápido.',
         image: '/images/lm-studio-jan-gpt4all-comparison-table-es.svg',
-        imageCaption: 'Comparativa de funciones LM Studio vs Jan vs GPT4All (2026, probadas en M5 MacBook + RTX 4070): LM Studio lidera en velocidad (38 tok/s M5, 74 tok/s RTX 4070) y biblioteca de modelos; Jan gana en privacidad (cero telemetría, Apache 2.0 open source); GPT4All tiene la instalación más pequeña (290 MB) y el requisito de RAM más bajo (4 GB).',
+        imageCaption: 'Comparativa de funciones LM Studio vs Jan vs GPT4All (2026, probadas en M5 MacBook + RTX 4070): LM Studio lidera en velocidad (38 tok/s M5, 74 tok/s RTX 4070) y biblioteca de modelos; Jan gana en privacidad (sin telemetría por defecto, Apache 2.0 open source); GPT4All tiene la instalación más pequeña (290 MB) y el requisito de RAM más bajo (4 GB).',
         imageAlt: 'Tabla que compara LM Studio, Jan y GPT4All en instalación, velocidad, licencia y telemetría',
         rows: [
           { 'Criterio': 'Ideal para', 'LM Studio': 'Usuarios avanzados', 'Jan': 'Usuarios de privacidad', 'GPT4All': 'Principiantes' },
@@ -1913,7 +1913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageAlt: 'Gráfico de decisión que asocia tu situación con LM Studio, Jan o GPT4All',
         rows: [
           { 'Tu situación': 'Tengo RTX 3060+ o Mac M3+, quiero velocidad máxima', 'Elige': 'LM Studio' },
-          { 'Tu situación': 'Quiero código completamente open source y cero telemetría', 'Elige': 'Jan' },
+          { 'Tu situación': 'Quiero código completamente open source y telemetría desactivada por defecto', 'Elige': 'Jan' },
           { 'Tu situación': 'Tengo un laptop de 4 años, 8 GB de RAM, sin GPU', 'Elige': 'GPT4All' },
           { 'Tu situación': 'Quiero adjuntar PDFs a un chat sin configuración', 'Elige': 'LM Studio o Jan' },
           { 'Tu situación': 'Mi revisión de privacidad exige código auditable y sin telemetría por defecto', 'Elige': 'Jan' },
@@ -1982,7 +1982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageAlt: 'Tarjetas de privacidad de LM Studio, Jan y GPT4All con telemetría, licencia del código y uso sin conexión',
         items: [
           '**LM Studio** — Su política de privacidad indica que no hay telemetría ni seguimiento específico del usuario. Las comprobaciones de actualización envían versión de la app, SO y dirección IP; la búsqueda y descarga de modelos envían consultas de búsqueda anonimizadas. Chats y documentos permanecen en el dispositivo.',
-          '**Jan** — Sin telemetría por defecto. Sin SDK de analítica. Código fuente auditable en GitHub (Apache 2.0).',
+          '**Jan** — Sin telemetría por defecto. Analítica anónima opcional (PostHog EU) solo si la permites al primer inicio. Código fuente auditable en GitHub (Apache 2.0).',
           '**GPT4All** — La telemetría es opt-in (desactivada por defecto). Código fuente en GitHub (MIT).',
           'Ninguna de las tres envía tus prompts, tus conversaciones ni los archivos de modelos cargados a ningún lugar — la inferencia local es local en todos los casos.',
         ],
@@ -2019,7 +2019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Elige **LM Studio** salvo que tengas una razón específica para no hacerlo — es la recomendación predeterminada para la mayoría de los usuarios.',
-          'Elige **Jan** si necesitas específicamente código open source, cero telemetría o una UI más limpia para uso diario.',
+          'Elige **Jan** si necesitas específicamente código open source, telemetría desactivada por defecto o una UI más limpia para uso diario.',
           'Elige **GPT4All** si tu hardware es justo (8 GB de RAM, sin GPU) — es la más tolerante en sistemas de gama baja.',
           'Puedes instalar las tres en paralelo; comparten archivos de modelo GGUF, por lo que el coste en disco de probar varias apps es pequeño.',
         ],
@@ -2166,14 +2166,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026 최고 로컬 AI 앱',
       '로컬 LLM 데스크톱 앱 비교',
     ],
-    leadAnswerBlock: '**LM Studio는 고급 사용자에게 유리합니다: 가장 빠른 추론, 가장 큰 모델 라이브러리. Jan은 개인정보를 중시하는 사용자에게 유리합니다: 오픈소스, 텔레메트리 없음, 가장 깔끔한 UI. GPT4All은 저사양 PC의 초보자에게 유리합니다: 가장 작은 설치 파일, 다만 2025년 2월 이후 릴리스 없음. 세 가지 모두 무료입니다.**',
+    leadAnswerBlock: '**LM Studio는 고급 사용자에게 유리합니다: 가장 빠른 추론, 가장 큰 모델 라이브러리. Jan은 개인정보를 중시하는 사용자에게 유리합니다: 오픈소스, 기본 텔레메트리 없음, 가장 깔끔한 UI. GPT4All은 저사양 PC의 초보자에게 유리합니다: 가장 작은 설치 파일, 다만 2025년 2월 이후 릴리스 없음. 세 가지 모두 무료입니다.**',
     quickAnswerTop: {
       ko: {
         question: '어떤 로컬 AI 앱을 설치해야 합니까: LM Studio, Jan, GPT4All?',
-        answer: 'RTX GPU 또는 M3 이상 Mac이 있고 가장 빠른 추론과 가장 큰 모델 라이브러리를 원한다면 LM Studio를 선택하십시오. 깔끔한 UI, 완전 오픈소스 코드, 텔레메트리 없음을 원한다면 Jan을 선택하십시오. 오래된 PC(RAM 8 GB, GPU 없음)가 있고 가장 간단한 설치를 원한다면 GPT4All을 선택하십시오.',
+        answer: 'RTX GPU 또는 M3 이상 Mac이 있고 가장 빠른 추론과 가장 큰 모델 라이브러리를 원한다면 LM Studio를 선택하십시오. 깔끔한 UI, 완전 오픈소스 코드, 기본 텔레메트리 없음을 원한다면 Jan을 선택하십시오. 오래된 PC(RAM 8 GB, GPU 없음)가 있고 가장 간단한 설치를 원한다면 GPT4All을 선택하십시오.',
         bullets: [
           'LM Studio — M5와 RTX 4070 모두에서 가장 높은 tok/s; 가장 풍부한 모델 브라우저; 고급 사용자에게 적합',
-          'Jan — 완전 오픈소스, 텔레메트리 없음, 기본 다크 모드; 개인정보를 중시하는 사용자에게 적합',
+          'Jan — 완전 오픈소스, 기본 텔레메트리 없음, 기본 다크 모드; 개인정보를 중시하는 사용자에게 적합',
           'GPT4All — 가장 작은 다운로드, RAM 8 GB 노트북에서 작동; 저사양 하드웨어의 초보자에게 적합하지만 v3.10.0(2025년 2월 25일) 이후 릴리스 없음',
           '세 가지 모두 무료이며 설치 후 오프라인에서 작동하고 GGUF 모델 파일을 로드합니다',
           '세 가지 모두 로컬 파일과 채팅할 수 있습니다: LM Studio와 Jan은 채팅에 문서를 첨부하고, GPT4All은 내장 LocalDocs를 사용합니다',
@@ -2203,7 +2203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'LM Studio는 Apple Silicon과 NVIDIA 모두에서 가장 빠릅니다 — 고급 사용자에게 유리합니다.',
-          'Jan은 텔레메트리가 없는 완전 오픈소스입니다 — 개인정보를 중시하는 사용자에게 유리합니다.',
+          'Jan은 기본적으로 텔레메트리가 없는 완전 오픈소스입니다 — 개인정보를 중시하는 사용자에게 유리합니다.',
           'GPT4All은 설치 파일이 가장 작고 RAM 8 GB에서 작동합니다 — 구형 하드웨어에 유리하지만 최신 릴리스는 2025년 2월 25일의 v3.10.0입니다.',
           '세 가지 모두 무료이며 설치 후 오프라인에서 작동하고 표준 GGUF 모델을 로드합니다.',
           '세 가지 모두 로컬 파일과 채팅할 수 있습니다: LM Studio와 Jan은 채팅에 문서를 첨부하고, GPT4All은 LocalDocs를 사용합니다.',
@@ -2214,7 +2214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2026년 LM Studio, Jan, GPT4All 비교',
         content: 'Apple M5 MacBook Pro(통합 메모리 16 GB)와 Windows 11이 설치된 NVIDIA RTX 4070 데스크톱(VRAM 12 GB, 시스템 RAM 32 GB)에서 테스트했습니다. 직접 비교를 위해 세 앱 모두 동일한 8B 클래스 모델(Llama 3.1 8B Q4_K_M)로 테스트했습니다. 속도는 참고용으로 보십시오. 2026년 8월의 단일 테스트 결과이며 앱 빌드는 빠르게 바뀝니다.',
         image: '/images/lm-studio-jan-gpt4all-comparison-table-ko.svg',
-        imageCaption: 'LM Studio vs Jan vs GPT4All 기능 비교(2026, M5 MacBook + RTX 4070에서 테스트): LM Studio는 속도(M5에서 38 tok/s, RTX 4070에서 74 tok/s)와 모델 라이브러리에서 선두; Jan은 개인정보 보호(텔레메트리 없음, Apache 2.0 오픈소스)에서 우세; GPT4All은 설치 파일이 가장 작고(290 MB) RAM 요구가 가장 낮습니다(4 GB).',
+        imageCaption: 'LM Studio vs Jan vs GPT4All 기능 비교(2026, M5 MacBook + RTX 4070에서 테스트): LM Studio는 속도(M5에서 38 tok/s, RTX 4070에서 74 tok/s)와 모델 라이브러리에서 선두; Jan은 개인정보 보호(기본 텔레메트리 없음, Apache 2.0 오픈소스)에서 우세; GPT4All은 설치 파일이 가장 작고(290 MB) RAM 요구가 가장 낮습니다(4 GB).',
         imageAlt: 'LM Studio vs Jan vs GPT4All 비교 표: 설치 크기와 속도와 라이선스와 텔레메트리 항목',
         rows: [
           { '기준': '최적 대상', 'LM Studio': '고급 사용자', 'Jan': '개인정보 중시 사용자', 'GPT4All': '초보자' },
@@ -2249,7 +2249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageAlt: '로컬 AI 앱 비교 결정 차트: 내 상황에 맞는 LM Studio, Jan, GPT4All 선택',
         rows: [
           { '상황': 'RTX 3060 이상 또는 Mac M3 이상이 있고 최대 속도를 원합니다', '선택': 'LM Studio' },
-          { '상황': '완전 오픈소스 코드와 텔레메트리 없음을 원합니다', '선택': 'Jan' },
+          { '상황': '완전 오픈소스 코드와 기본 텔레메트리 없음을 원합니다', '선택': 'Jan' },
           { '상황': '4년 된 노트북, RAM 8 GB, GPU 없음입니다', '선택': 'GPT4All' },
           { '상황': '별도 설정 없이 PDF를 채팅에 첨부하고 싶습니다', '선택': 'LM Studio 또는 Jan' },
           { '상황': '개인정보 검토에 감사 가능한 소스 코드와 기본 텔레메트리 없음이 필요합니다', '선택': 'Jan' },
@@ -2318,7 +2318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageAlt: '로컬 AI 앱 비교 카드: LM Studio, Jan, GPT4All의 텔레메트리와 소스 라이선스와 오프라인 사용',
         items: [
           '**LM Studio** — 개인정보 처리방침상 텔레메트리와 사용자별 추적이 없습니다. 업데이트 확인 시 앱 버전, OS, IP 주소가, 모델 검색·다운로드 시 익명화된 검색어가 전송됩니다. 채팅과 문서는 기기에 남습니다.',
-          '**Jan** — 기본적으로 텔레메트리 없음. 분석 SDK 없음. GitHub에서 소스 코드 감사 가능(Apache 2.0).',
+          '**Jan** — 기본적으로 텔레메트리 없음. 익명 사용 분석(PostHog EU)은 첫 실행 때 허용한 경우에만 사용됩니다. GitHub에서 소스 코드 감사 가능(Apache 2.0).',
           '**GPT4All** — 텔레메트리는 opt-in(기본 비활성화). GitHub에서 소스 코드 확인 가능(MIT).',
           '세 앱 모두 프롬프트, 대화, 로드된 모델 파일을 어디로도 보내지 않습니다 — 로컬 추론은 모든 경우에 로컬입니다.',
         ],
@@ -2355,7 +2355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '특별한 이유가 없다면 **LM Studio**를 선택하십시오 — 대부분의 사용자에게 기본 추천입니다.',
-          '오픈소스 코드, 텔레메트리 없음, 또는 일상 사용에 더 깔끔한 UI가 특별히 필요하다면 **Jan**을 선택하십시오.',
+          '오픈소스 코드, 기본 텔레메트리 없음, 또는 일상 사용에 더 깔끔한 UI가 특별히 필요하다면 **Jan**을 선택하십시오.',
           '하드웨어가 제한적이라면(RAM 8 GB, GPU 없음) **GPT4All**을 선택하십시오 — 저사양 시스템에 가장 관대합니다.',
           '세 가지를 나란히 설치할 수 있습니다. GGUF 모델 파일을 공유하므로 여러 앱을 시도하는 디스크 비용은 작습니다.',
         ],
@@ -2502,11 +2502,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'melhor app de ia local 2026',
       'comparativo apps llm local desktop',
     ],
-    leadAnswerBlock: '**LM Studio vence para usuários avançados: inferência mais rápida, maior biblioteca. Jan vence para quem prioriza privacidade: open source, zero telemetria, UI mais limpa. GPT4All vence para iniciantes em PCs lentos: menor instalação, mas sem versão nova desde fevereiro de 2025. Os três são gratuitos.**',
+    leadAnswerBlock: '**LM Studio vence para usuários avançados: inferência mais rápida, maior biblioteca. Jan vence para quem prioriza privacidade: open source, sem telemetria por padrão, UI mais limpa. GPT4All vence para iniciantes em PCs lentos: menor instalação, mas sem versão nova desde fevereiro de 2025. Os três são gratuitos.**',
     quickAnswerTop: {
       pt: {
         question: 'Qual app de IA local devo instalar: LM Studio, Jan ou GPT4All?',
-        answer: 'Escolha o LM Studio se você tem uma GPU RTX ou um Mac M3+ e quer a inferência mais rápida com a maior biblioteca de modelos. Escolha o Jan se você quer uma UI limpa, código totalmente open source e zero telemetria. Escolha o GPT4All se você tem um PC mais antigo (8 GB de RAM, sem GPU) e busca o caminho de instalação mais simples.',
+        answer: 'Escolha o LM Studio se você tem uma GPU RTX ou um Mac M3+ e quer a inferência mais rápida com a maior biblioteca de modelos. Escolha o Jan se você quer uma UI limpa, código totalmente open source e telemetria desativada por padrão. Escolha o GPT4All se você tem um PC mais antigo (8 GB de RAM, sem GPU) e busca o caminho de instalação mais simples.',
         bullets: [
           'LM Studio — maior tokens/seg tanto no M5 quanto na RTX 4070; navegador de modelos mais completo; ideal para usuários avançados',
           'Jan — totalmente open source, sem telemetria, modo escuro nativo; ideal para usuários que priorizam a privacidade',
@@ -2539,7 +2539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'O LM Studio é o mais rápido tanto no Apple Silicon quanto na NVIDIA — vence para usuários avançados.',
-          'O Jan é totalmente open source com zero telemetria — vence para usuários que priorizam a privacidade.',
+          'O Jan é totalmente open source com telemetria desativada por padrão — vence para usuários que priorizam a privacidade.',
           'O GPT4All tem a menor instalação e roda com 8 GB de RAM — vence para hardware mais antigo, mas sua versão mais recente é a v3.10.0, de 25 de fevereiro de 2025.',
           'Os três são gratuitos, funcionam offline após a instalação e carregam modelos GGUF padrão.',
           'Os três conversam com arquivos locais: LM Studio e Jan anexam documentos no chat, o GPT4All usa o LocalDocs.',
@@ -2550,7 +2550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Como o LM Studio, o Jan e o GPT4All se comparam em 2026?',
         content: 'Testados no Apple M5 MacBook Pro (16 GB de memória unificada) e em um desktop com NVIDIA RTX 4070 (12 GB de VRAM, 32 GB de RAM do sistema) rodando Windows 11. Os três apps foram testados com o mesmo modelo de classe 8B (Llama 3.1 8B Q4_K_M) para uma comparação direta. Trate as velocidades como indicativas: vêm de uma única rodada de testes em agosto de 2026, e as builds dos apps mudam rápido.',
         image: '/images/lm-studio-jan-gpt4all-comparison-table-pt.svg',
-        imageCaption: 'Comparativo de recursos LM Studio vs Jan vs GPT4All (2026, testados em M5 MacBook + RTX 4070): o LM Studio lidera em velocidade (38 tok/s M5, 74 tok/s RTX 4070) e biblioteca de modelos; o Jan vence em privacidade (zero telemetria, Apache 2.0 open source); o GPT4All tem a menor instalação (290 MB) e o menor requisito de RAM (4 GB).',
+        imageCaption: 'Comparativo de recursos LM Studio vs Jan vs GPT4All (2026, testados em M5 MacBook + RTX 4070): o LM Studio lidera em velocidade (38 tok/s M5, 74 tok/s RTX 4070) e biblioteca de modelos; o Jan vence em privacidade (sem telemetria por padrão, Apache 2.0 open source); o GPT4All tem a menor instalação (290 MB) e o menor requisito de RAM (4 GB).',
         imageAlt: 'Tabela comparando LM Studio, Jan e GPT4All em tamanho de instalação, velocidade, licença e telemetria',
         rows: [
           { 'Criterion': 'Ideal para', 'LM Studio': 'Usuários avançados', 'Jan': 'Usuários de privacidade', 'GPT4All': 'Iniciantes' },
@@ -2585,7 +2585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageAlt: 'Fluxograma que relaciona sua situação ao LM Studio, ao Jan ou ao GPT4All',
         rows: [
           { 'Your situation': 'Tenho uma RTX 3060+ ou um Mac M3+ e quero velocidade máxima', 'Pick': 'LM Studio' },
-          { 'Your situation': 'Quero código totalmente open source e zero telemetria', 'Pick': 'Jan' },
+          { 'Your situation': 'Quero código totalmente open source e telemetria desativada por padrão', 'Pick': 'Jan' },
           { 'Your situation': 'Tenho um laptop de 4 anos, 8 GB de RAM, sem GPU', 'Pick': 'GPT4All' },
           { 'Your situation': 'Quero anexar PDFs a um chat sem configuração', 'Pick': 'LM Studio ou Jan' },
           { 'Your situation': 'Minha revisão de privacidade exige código auditável e nenhuma telemetria por padrão', 'Pick': 'Jan' },
@@ -2654,7 +2654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageAlt: 'Cartões de privacidade do LM Studio, Jan e GPT4All com telemetria, licença do código e uso offline',
         items: [
           '**LM Studio** — Sua política de privacidade afirma não haver telemetria nem rastreamento específico do usuário. Verificações de atualização enviam versão do app, SO e endereço IP; busca e download de modelos enviam consultas anonimizadas. Chats e documentos ficam no dispositivo.',
-          '**Jan** — Sem telemetria por padrão. Sem SDK de analytics. O código-fonte é auditável no GitHub (Apache 2.0).',
+          '**Jan** — Sem telemetria por padrão. Analytics anônimo opcional (PostHog EU) só se você permitir na primeira execução. O código-fonte é auditável no GitHub (Apache 2.0).',
           '**GPT4All** — A telemetria é opt-in (desativada por padrão). Código-fonte no GitHub (MIT).',
           'Nenhum dos três envia seus prompts, suas conversas ou seus arquivos de modelo carregados para qualquer lugar — a inferência local é local em todos os casos.',
         ],
@@ -2691,7 +2691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Escolha o **LM Studio** a menos que você tenha um motivo específico para não fazê-lo — é a recomendação padrão para a maioria dos usuários.',
-          'Escolha o **Jan** se você precisa especificamente de código open source, zero telemetria ou uma UI mais limpa para uso diário.',
+          'Escolha o **Jan** se você precisa especificamente de código open source, telemetria desativada por padrão ou uma UI mais limpa para uso diário.',
           'Escolha o **GPT4All** se o seu hardware está no limite (8 GB de RAM, sem GPU) — é o mais tolerante em sistemas de entrada.',
           'Você pode instalar os três lado a lado; eles compartilham arquivos de modelo GGUF, então o custo em disco de testar vários apps é pequeno.',
         ],
@@ -2838,14 +2838,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'أفضل تطبيق ذكاء اصطناعي محلي 2026',
       'مقارنة تطبيقات النماذج اللغوية المحلية',
     ],
-    leadAnswerBlock: '**⁨LM Studio⁩ يفوز للمستخدمين المتقدمين: أسرع استدلال وأكبر مكتبة نماذج. ⁨Jan⁩ يفوز للمهتمين بالخصوصية: مفتوح المصدر وبلا قياس عن بُعد وأنظف واجهة. ⁨GPT4All⁩ يفوز للمبتدئين على الأجهزة البطيئة: أصغر تثبيت، لكن بلا إصدار منذ فبراير 2025. الثلاثة مجانية.**',
+    leadAnswerBlock: '**⁨LM Studio⁩ يفوز للمستخدمين المتقدمين: أسرع استدلال وأكبر مكتبة نماذج. ⁨Jan⁩ يفوز للمهتمين بالخصوصية: مفتوح المصدر وبلا قياس عن بُعد افتراضياً وأنظف واجهة. ⁨GPT4All⁩ يفوز للمبتدئين على الأجهزة البطيئة: أصغر تثبيت، لكن بلا إصدار منذ فبراير 2025. الثلاثة مجانية.**',
     quickAnswerTop: {
       ar: {
         question: 'أيّ تطبيق ذكاء اصطناعي محلي أثبّت: LM Studio أم Jan أم GPT4All؟',
-        answer: 'اختر LM Studio إذا كان لديك GPU من RTX أو Mac بمعالج M3 أو أحدث وتريد أسرع استدلال مع أكبر مكتبة نماذج. اختر Jan إذا أردت واجهة نظيفة وشفرة مفتوحة المصدر بالكامل وبلا قياس عن بُعد. اختر GPT4All إذا كان لديك حاسوب قديم (8 جيجابايت RAM، بدون GPU) وتريد أبسط مسار تثبيت.',
+        answer: 'اختر LM Studio إذا كان لديك GPU من RTX أو Mac بمعالج M3 أو أحدث وتريد أسرع استدلال مع أكبر مكتبة نماذج. اختر Jan إذا أردت واجهة نظيفة وشفرة مفتوحة المصدر بالكامل وبلا قياس عن بُعد افتراضياً. اختر GPT4All إذا كان لديك حاسوب قديم (8 جيجابايت RAM، بدون GPU) وتريد أبسط مسار تثبيت.',
         bullets: [
           'LM Studio — أعلى رموز/ثانية على M5 وRTX 4070؛ أغنى متصفح نماذج؛ الأفضل للمستخدمين المتقدمين',
-          'Jan — مفتوح المصدر بالكامل، بلا قياس عن بُعد، وضع داكن أصلي؛ الأفضل للمستخدمين المهتمين بالخصوصية',
+          'Jan — مفتوح المصدر بالكامل، بلا قياس عن بُعد افتراضياً، وضع داكن أصلي؛ الأفضل للمستخدمين المهتمين بالخصوصية',
           'GPT4All — أصغر تنزيل، يعمل على أجهزة محمولة بـ8 جيجابايت RAM؛ الأفضل للمبتدئين على الأجهزة البطيئة، لكن بلا إصدار جديد منذ v3.10.0 (25 فبراير 2025)',
           'الثلاثة مجانية وتعمل بدون اتصال بعد التثبيت وتحمّل ملفات نماذج GGUF',
           'الثلاثة تستطيع الدردشة مع الملفات المحلية: LM Studio وJan يرفقان المستندات داخل المحادثة، وGPT4All يستخدم ميزة LocalDocs المدمجة',
@@ -2875,7 +2875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'LM Studio هو الأسرع على Apple Silicon وNVIDIA — يفوز للمستخدمين المتقدمين.',
-          'Jan مفتوح المصدر بالكامل وبلا قياس عن بُعد — يفوز للمستخدمين المهتمين بالخصوصية.',
+          'Jan مفتوح المصدر بالكامل وبلا قياس عن بُعد افتراضياً — يفوز للمستخدمين المهتمين بالخصوصية.',
           'GPT4All يمتلك أصغر تثبيت ويعمل بـ8 جيجابايت RAM — يفوز للأجهزة القديمة، لكن أحدث إصدار له هو v3.10.0 بتاريخ 25 فبراير 2025.',
           'الثلاثة مجانية وتعمل بدون اتصال بعد التثبيت وتحمّل نماذج GGUF القياسية.',
           'الثلاثة تستطيع الدردشة مع الملفات المحلية: LM Studio وJan يرفقان المستندات داخل المحادثة، وGPT4All يستخدم LocalDocs.',
@@ -2886,7 +2886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كيف تتقابل LM Studio وJan وGPT4All في 2026؟',
         content: 'اختُبرت على Apple M5 MacBook Pro (16 جيجابايت ذاكرة موحدة) وحاسوب مكتبي بـNVIDIA RTX 4070 (12 جيجابايت VRAM، 32 جيجابايت RAM نظام) بنظام Windows 11. اختُبرت التطبيقات الثلاثة بنفس نموذج فئة 8B (Llama 3.1 8B Q4_K_M) لمقارنة مباشرة. اعتبر السرعات إرشادية: فهي من تشغيل اختبار واحد في أغسطس 2026، وإصدارات التطبيقات تتغير بسرعة.',
         image: '/images/lm-studio-jan-gpt4all-comparison-table-ar.svg',
-        imageCaption: 'مقارنة ميزات LM Studio مقابل Jan مقابل GPT4All (2026، اختُبرت على M5 MacBook + RTX 4070): LM Studio يتصدر في السرعة (38 رمز/ثانية M5، 74 رمز/ثانية RTX 4070) ومكتبة النماذج؛ Jan يفوز في الخصوصية (بلا قياس عن بُعد، مفتوح المصدر Apache 2.0)؛ GPT4All يمتلك أصغر تثبيت (290 ميجابايت) وأدنى متطلبات RAM (4 جيجابايت).',
+        imageCaption: 'مقارنة ميزات LM Studio مقابل Jan مقابل GPT4All (2026، اختُبرت على M5 MacBook + RTX 4070): LM Studio يتصدر في السرعة (38 رمز/ثانية M5، 74 رمز/ثانية RTX 4070) ومكتبة النماذج؛ Jan يفوز في الخصوصية (بلا قياس عن بُعد افتراضياً، مفتوح المصدر Apache 2.0)؛ GPT4All يمتلك أصغر تثبيت (290 ميجابايت) وأدنى متطلبات RAM (4 جيجابايت).',
         imageAlt: 'جدول يقارن ⁨LM Studio⁩ و⁨Jan⁩ و⁨GPT4All⁩ في حجم التثبيت والسرعة والترخيص والقياس عن بُعد وRAM',
         rows: [
           { 'المعيار': 'الأفضل لـ', 'LM Studio': 'المستخدمون المتقدمون', 'Jan': 'مستخدمو الخصوصية', 'GPT4All': 'المبتدئون' },
@@ -2921,7 +2921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageAlt: 'مخطط قرار يربط حالتك باختيار ⁨LM Studio⁩ أو ⁨Jan⁩ أو ⁨GPT4All⁩',
         rows: [
           { 'حالتك': 'لديّ RTX 3060+ أو Mac بمعالج M3+، أريد السرعة القصوى', 'اختر': 'LM Studio' },
-          { 'حالتك': 'أريد شفرة مفتوحة المصدر بالكامل وبلا قياس عن بُعد', 'اختر': 'Jan' },
+          { 'حالتك': 'أريد شفرة مفتوحة المصدر بالكامل وبلا قياس عن بُعد افتراضياً', 'اختر': 'Jan' },
           { 'حالتك': 'لديّ حاسوب محمول عمره 4 سنوات، 8 جيجابايت RAM، بدون GPU', 'اختر': 'GPT4All' },
           { 'حالتك': 'أريد إرفاق ملفات PDF بالمحادثة دون أي إعداد', 'اختر': 'LM Studio أو Jan' },
           { 'حالتك': 'تتطلب مراجعة الخصوصية لديّ شفرة قابلة للتدقيق وبلا قياس عن بُعد افتراضياً', 'اختر': 'Jan' },
@@ -2990,7 +2990,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageAlt: 'بطاقات خصوصية لـ⁨LM Studio⁩ و⁨Jan⁩ و⁨GPT4All⁩ تعرض القياس عن بُعد وترخيص المصدر والعمل دون اتصال',
         items: [
           '**LM Studio** — تنص سياسة الخصوصية على عدم وجود قياس عن بُعد أو تتبّع خاص بالمستخدم. فحص التحديثات يرسل إصدار التطبيق ونظام التشغيل وعنوان IP؛ والبحث عن النماذج وتنزيلها يرسلان استعلامات بحث مجهولة الهوية. تبقى المحادثات والمستندات على الجهاز.',
-          '**Jan** — بلا قياس عن بُعد افتراضياً. بلا SDK للتحليل. الشفرة المصدرية قابلة للتدقيق على GitHub (Apache 2.0).',
+          '**Jan** — بلا قياس عن بُعد افتراضياً. تحليلات مجهولة اختيارية (PostHog EU) فقط إذا سمحت بها عند أول تشغيل. الشفرة المصدرية قابلة للتدقيق على GitHub (Apache 2.0).',
           '**GPT4All** — القياس عن بُعد اختياري (معطّل افتراضياً). الشفرة المصدرية على GitHub (MIT).',
           'لا أيٌّ منها يرسل prompts الخاصة بك أو محادثاتك أو ملفات النماذج المحمّلة إلى أي مكان — الاستدلال المحلي محلي في جميع الحالات.',
         ],
@@ -3027,7 +3027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'اختر **LM Studio** ما لم يكن لديك سبب محدد لعدم ذلك — هو التوصية الافتراضية لمعظم المستخدمين.',
-          'اختر **Jan** إذا كنت تحتاج تحديداً إلى شفرة مفتوحة المصدر أو بلا قياس عن بُعد أو واجهة أنظف للاستخدام اليومي.',
+          'اختر **Jan** إذا كنت تحتاج تحديداً إلى شفرة مفتوحة المصدر أو بلا قياس عن بُعد افتراضياً أو واجهة أنظف للاستخدام اليومي.',
           'اختر **GPT4All** إذا كانت أجهزتك محدودة (8 جيجابايت RAM، بدون GPU) — هو الأكثر تسامحاً مع الأنظمة ذات الإمكانيات المنخفضة.',
           'يمكنك تثبيت الثلاثة بالتوازي؛ تتشارك ملفات النماذج GGUF، لذا فإن تكلفة القرص لتجربة تطبيقات متعددة صغيرة.',
         ],
