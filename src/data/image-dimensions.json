@@ -28674,6 +28674,11 @@
     "width": 800,
     "height": 420
   },
+  "/images/lm-studio-jan-gpt4all-comparison-table-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 370
+  },
   "/images/lm-studio-jan-gpt4all-comparison-table-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -28695,6 +28700,16 @@
     "height": 370
   },
   "/images/lm-studio-jan-gpt4all-comparison-table-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 370
+  },
+  "/images/lm-studio-jan-gpt4all-comparison-table-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 370
+  },
+  "/images/lm-studio-jan-gpt4all-comparison-table-pt.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 370
@@ -28754,6 +28769,11 @@
     "width": 800,
     "height": 350
   },
+  "/images/lm-studio-jan-gpt4all-privacy-telemetry-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
   "/images/lm-studio-jan-gpt4all-privacy-telemetry-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -28779,6 +28799,16 @@
     "width": 800,
     "height": 350
   },
+  "/images/lm-studio-jan-gpt4all-privacy-telemetry-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/lm-studio-jan-gpt4all-privacy-telemetry-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
   "/images/lm-studio-jan-gpt4all-privacy-telemetry-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -28788,6 +28818,11 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
+  },
+  "/images/lm-studio-jan-gpt4all-speed-benchmarks-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
   },
   "/images/lm-studio-jan-gpt4all-speed-benchmarks-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -28810,6 +28845,16 @@
     "height": 320
   },
   "/images/lm-studio-jan-gpt4all-speed-benchmarks-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/lm-studio-jan-gpt4all-speed-benchmarks-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/lm-studio-jan-gpt4all-speed-benchmarks-pt.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 320
@@ -28844,6 +28889,11 @@
     "width": 800,
     "height": 350
   },
+  "/images/lm-studio-jan-gpt4all-ux-onboarding-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 310
+  },
   "/images/lm-studio-jan-gpt4all-ux-onboarding-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -28869,10 +28919,25 @@
     "width": 800,
     "height": 310
   },
+  "/images/lm-studio-jan-gpt4all-ux-onboarding-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 310
+  },
+  "/images/lm-studio-jan-gpt4all-ux-onboarding-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 310
+  },
   "/images/lm-studio-jan-gpt4all-ux-onboarding-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 310
+  },
+  "/images/lm-studio-jan-gpt4all-verdict-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
   },
   "/images/lm-studio-jan-gpt4all-verdict-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -28895,6 +28960,16 @@
     "height": 350
   },
   "/images/lm-studio-jan-gpt4all-verdict-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/lm-studio-jan-gpt4all-verdict-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/lm-studio-jan-gpt4all-verdict-pt.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
