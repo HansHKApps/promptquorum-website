@@ -846,6 +846,14 @@ const nextConfig: NextConfig = {
 
     return [
       {
+        // The GEO audit widget is only an iframe embed of /prompt-engineering/seo-meets-ai;
+        // as its own URL it ranked at position ~60 with no value (owner rule 2026-11-02).
+        source: '/widgets/:path*',
+        headers: [
+          { key: 'X-Robots-Tag', value: 'noindex, follow' },
+        ],
+      },
+      {
         source: '/_next/static/:path*',
         headers: [
           { key: 'X-Robots-Tag', value: 'noindex' },
