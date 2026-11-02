@@ -2725,9 +2725,9 @@ schema: {
       designSkin: 'hub',
       theme: 'Best Models',
       title: 'Qwen3.8-27B vs Llama 4 vs Mistral：2026ベンチマーク比較',
-      seoTitle: 'Qwen3.8-27B vs Llama 4 vs Mistral 2026：Qwenが勝つ',
+      seoTitle: 'Qwen vs Llama vs Mistral 2026比較',
       intro: 'Qwen3、Meta Llama 3.x、Mistralは、2026年のローカル推論における3つの支配的なオープンウェイトモデルファミリーです。Qwen3はコーディングで先導----72Bで87% HumanEval、Llama 3.3の88%、Mistral Smallの39%に対して。Qwen3はまた29言語をネイティブにサポートします。Llama 3.3 70Bは英語の一般的な推論（82% MMLU）で先導します。Mistral Small 3.1 24Bはわずか14 GB RAMでほぼ70B品質を提供----3つのファミリーの中で最高の品質対RAM比。正しい選択は、タスクタイプ、言語、利用可能なVRAM次第です。',
-      metaDescription: 'Qwen3.8-27BがCodingで勝利：SWE-bench 61.7%、24 GBで動作。Llama 4 Scout：10Mトークンコンテキスト、~55 GB VRAM。Mistral Small 3.1：79% MMLU・14 GB RAM。タスク別にどれが勝つか。',
+      metaDescription: 'Qwen3.8-27BはSWE-bench Pro 61.7で24 GBに収まります。Llama 4 Scoutは10Mコンテキスト、Mistral Small 3.1はMMLU 79%。用途別に比較します。',
       heroImage: '/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-ja.webp',
       nextStep: {
         text: 'モデルを決めましたか？Qwenをローカルで動かす方法をステップバイステップで解説します。',
@@ -3130,9 +3130,9 @@ schema: {
       designSkin: 'hub',
       theme: 'Best Models',
       title: 'Qwen3.8-27B vs Llama 4 vs Mistral：2026基准对比',
-      seoTitle: 'Qwen3.8-27B vs Llama 4 vs Mistral 2026：Qwen编程胜出',
+      seoTitle: 'Qwen vs Llama vs Mistral 2026对比',
       intro: 'Qwen3、Meta Llama 3.x和Mistral是2026年本地推理的三个主导的开放权重模型族。Qwen3在编码方面领先----72B处87% HumanEval，相对Llama 3.3的88%和Mistral Small的39%。Qwen3也原生支持29种语言。Llama 3.3 70B在英文一般推理中领先（82% MMLU）。Mistral Small 3.1 24B在仅14 GB RAM的情况下提供接近70B的质量----三个族中最佳的质量对RAM比。正确的选择取决于任务类型、语言和可用的VRAM。',
-      metaDescription: 'Qwen3.8-27B编程胜出：SWE-bench 61.7%，24 GB可运行。Llama 4 Scout：10M上下文，~55 GB显存。Mistral Small 3.1：79% MMLU，14 GB内存。各任务哪个模型最强。',
+      metaDescription: 'Qwen3.8-27B在SWE-bench Pro得分61.7，24 GB可运行。Llama 4 Scout支持10M上下文，Mistral Small 3.1的MMLU为79%。按任务对比。',
       heroImage: '/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-zh.webp',
       nextStep: {
         text: '决定好模型了？这里是逐步在本地运行Qwen的方法。',

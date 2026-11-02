@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/whisper-cpp-review-hero-en.webp',
     title: 'Whisper.cpp Review: Local Speech-to-Text in Pure C/C++',
-    seoTitle: 'Whisper.cpp Review: Local STT in C/C++',
+    seoTitle: 'Whisper.cpp Review: MIT, Install & CLI for Local STT',
     intro:
       'whisper.cpp is a C/C++ reimplementation of OpenAI\'s Whisper automatic speech recognition model, created by Georgi Gerganov and now maintained under the [ggml-org GitHub organization](https://github.com/ggml-org/whisper.cpp). It transcribes speech to text entirely on-device, with no Python runtime and no cloud API call, and supports CPU, Apple Silicon (Metal, Core ML) and NVIDIA GPUs (CUDA), among other backends. This review covers its history, how to install and run it, real command-line usage, its MIT license and cost (free), and where it is not the right tool — including a link to our comparison with faster-whisper for readers deciding between the two.',
     metaDescription:
@@ -369,7 +369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/whisper-cpp-review-hero-de.webp',
     title: 'Whisper.cpp-Rezension: Lokale Spracherkennung in reinem C/C++',
-    seoTitle: 'Whisper.cpp-Rezension: Lokale STT in C/C++',
+    seoTitle: 'Whisper.cpp-Rezension: MIT, Setup & CLI für lokale STT',
     intro:
       'whisper.cpp ist eine C/C++-Neuimplementierung von OpenAIs automatischem Spracherkennungsmodell Whisper, geschaffen von Georgi Gerganov und heute unter der [GitHub-Organisation ggml-org](https://github.com/ggml-org/whisper.cpp) gepflegt. Es wandelt Sprache vollständig auf dem Gerät in Text um, ohne Python-Laufzeitumgebung und ohne Cloud-API-Aufruf, und unterstützt unter anderem CPU, Apple Silicon (Metal, Core ML) und NVIDIA-GPUs (CUDA). Diese Rezension behandelt die Geschichte, Installation und Ausführung, echte Kommandozeilenbefehle, die MIT-Lizenz und die Kosten (kostenlos) sowie die Fälle, in denen es nicht das richtige Werkzeug ist – inklusive eines Links zu unserem Vergleich mit faster-whisper für alle, die sich zwischen beiden entscheiden müssen.',
     metaDescription:
@@ -723,11 +723,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/whisper-cpp-review-hero-fr.webp',
     title: 'Whisper.cpp: avis — reconnaissance vocale locale en C/C++ pur',
-    seoTitle: 'Whisper.cpp: avis STT local en C/C++',
+    seoTitle: 'Whisper.cpp : avis, licence MIT, installation et CLI',
     intro:
       'whisper.cpp est une réimplémentation en C/C++ du modèle de reconnaissance vocale Whisper d\'OpenAI, créée par Georgi Gerganov et maintenue aujourd\'hui au sein de l\'[organisation GitHub ggml-org](https://github.com/ggml-org/whisper.cpp). Il transcrit la parole en texte entièrement sur l\'appareil, sans environnement Python ni appel à une API cloud, et prend en charge notamment le CPU, Apple Silicon (Metal, Core ML) et les GPU NVIDIA (CUDA). Cette analyse couvre son histoire, son installation et son exécution, des commandes réelles, sa licence MIT et son coût (gratuit), ainsi que les cas où ce n\'est pas le bon outil — avec un lien vers notre comparatif avec faster-whisper pour les lecteurs qui hésitent entre les deux.',
     metaDescription:
-      'Avis whisper.cpp : le port C/C++ d\'OpenAI Whisper (licence MIT) pour la reconnaissance vocale locale. Installation, commandes CLI, licence, faster-whisper.',
+      'Avis whisper.cpp : le port C/C++ d\'OpenAI Whisper (licence MIT) pour la reconnaissance vocale locale. Installation, commandes CLI, faster-whisper.',
     twitterDescription:
       'Whisper.cpp 2026 : le port C/C++ de Georgi Gerganov pour OpenAI Whisper, reconnaissance vocale locale et hors ligne. Histoire, installation, vraies commandes, licence MIT et limites honnêtes.',
     audience:
@@ -1077,7 +1077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/whisper-cpp-review-hero-es.webp',
     title: 'Whisper.cpp: análisis — reconocimiento de voz local en C/C++ puro',
-    seoTitle: 'Whisper.cpp: análisis de STT local en C/C++',
+    seoTitle: 'Whisper.cpp: análisis, licencia MIT, instalación y CLI',
     intro:
       'whisper.cpp es una reimplementación en C/C++ del modelo de reconocimiento de voz Whisper de OpenAI, creada por Georgi Gerganov y mantenida hoy dentro de la [organización de GitHub ggml-org](https://github.com/ggml-org/whisper.cpp). Transcribe voz a texto íntegramente en el dispositivo, sin entorno de Python ni llamadas a una API en la nube, y admite CPU, Apple Silicon (Metal, Core ML) y GPU NVIDIA (CUDA), entre otros backends. Esta reseña cubre su historia, cómo instalarlo y ejecutarlo, comandos reales, su licencia MIT y su coste (gratis), y dónde no es la herramienta adecuada, con un enlace a nuestra comparativa con faster-whisper para quien dude entre ambos.',
     metaDescription:
@@ -1786,7 +1786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/whisper-cpp-review-hero-pt.webp',
     title: 'Whisper.cpp: análise — reconhecimento de voz local em C/C++ puro',
-    seoTitle: 'Whisper.cpp: análise de STT local em C/C++',
+    seoTitle: 'Whisper.cpp: análise, licença MIT, instalação e CLI local',
     intro:
       'O whisper.cpp é uma reimplementação em C/C++ do modelo de reconhecimento de fala Whisper, da OpenAI, criada por Georgi Gerganov e hoje mantida na [organização ggml-org no GitHub](https://github.com/ggml-org/whisper.cpp). Ele transcreve fala em texto inteiramente no dispositivo, sem ambiente Python e sem chamadas a uma API na nuvem, e oferece suporte a CPU, Apple Silicon (Metal, Core ML) e GPUs NVIDIA (CUDA), entre outros backends. Esta análise cobre sua história, como instalar e executar, uso real da linha de comando, a licença MIT e o custo (gratuito) e onde ele não é a ferramenta certa, com um link para a nossa comparação com o faster-whisper para quem está decidindo entre os dois.',
     metaDescription:

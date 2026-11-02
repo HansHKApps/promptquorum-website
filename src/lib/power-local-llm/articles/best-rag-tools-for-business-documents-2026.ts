@@ -1771,7 +1771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/best-rag-tools-for-business-documents-2026-overview-hero-ja.webp',
     affiliateDisclosure: true,
     title: 'ビジネス文書向けベストRAGツール2026年版：ローカル・プライベートAI比較',
-    seoTitle: 'ビジネス文書向けベストRAGツール2026年版',
+    seoTitle: 'ビジネス文書向けベストローカルRAGツール比較2026',
     intro:
       'PDF、Wordファイル、Excel、契約書、社内ナレッジベース向けに、ベストなローカルRAGプラットフォームを比較します。Ollamaと連携するか、マルチユーザーに対応しているか、引用元を表示できるか、機密性の高いビジネスデータをクラウドに送らずに済むかを基準に評価します。本ガイドでは9つのツールを3つの実践的なカテゴリー（すぐに使えるアプリケーション、AIワークフロービルダー、開発者向けフレームワーク／インフラ）に分類し、ビジネスプロファイルごとに具体的な推奨を示し、実際にビジネス向けRAGスタックに必要なハードウェアを解説します。',
     metaDescription: 'ビジネス文書向けRAGツール2026年版：AnythingLLM、RAGFlow、PrivateGPT、Open WebUI、Dify、LlamaIndexをカテゴリー・用途・必要ハードウェア別に比較。',
@@ -2350,7 +2350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/best-rag-tools-for-business-documents-2026-overview-hero-zh.webp',
     affiliateDisclosure: true,
     title: '2026年商业文档最佳RAG工具：本地与私有AI工具对比',
-    seoTitle: '2026年商业文档最佳本地RAG工具对比',
+    seoTitle: '2026年企业商业文档最佳本地RAG工具排名与对比',
     intro:
       '对比适用于PDF、Word、Excel、合同和内部知识库的最佳本地RAG平台——哪些工具支持Ollama、支持多用户、提供引用来源，并让企业私有数据不出云端。本指南将九款工具归入三个真实类别（开箱即用应用、AI工作流构建平台、开发者框架/基础设施），针对每种企业画像给出具体推荐，并说明企业级RAG技术栈实际需要什么硬件。',
     metaDescription: '2026年商业文档最佳RAG工具对比：AnythingLLM、RAGFlow、PrivateGPT、Open WebUI、Dify、LlamaIndex按类别、使用场景与所需硬件全面比较。',
@@ -4681,7 +4681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/best-rag-tools-for-business-documents-2026-overview-hero-ko.webp',
     affiliateDisclosure: true,
     title: '2026년 기업 문서를 위한 최고의 RAG 도구: 로컬 및 프라이빗 AI 비교',
-    seoTitle: '2026년 기업 문서용 최고의 로컬 RAG 도구',
+    seoTitle: '2026년 기업 문서용 최고의 로컬 RAG 도구 비교 순위',
     intro:
       'PDF, Word 파일, Excel, 계약서, 내부 지식 베이스를 위한 최고의 로컬 RAG 플랫폼을 비교합니다 — 어떤 도구가 Ollama와 함께 작동하고, 멀티 사용자를 지원하며, 인용을 제공하고, 프라이빗한 기업 데이터를 클라우드 밖에 유지하는지 살펴봅니다. 이 가이드는 아홉 가지 도구를 세 가지 실제 범주(즉시 사용 가능한 애플리케이션, AI 워크플로우 빌더, 개발자 프레임워크/인프라)로 분류하고, 각 기업 프로필에 맞는 구체적인 선택을 제시하며, 기업 RAG 스택에 실제로 필요한 하드웨어를 보여줍니다.',
     metaDescription: '2026년 기업 문서용 RAG 도구 비교: AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex를 범주·사용 사례·하드웨어별로 비교합니다.',
