@@ -17300,5 +17300,1275 @@
       "t14": "2026-11-16",
       "t28": "2026-11-30"
     }
+  },
+  {
+    "id": "bccd1ab3-be02-40f5-ac83-c4b58dafa82d",
+    "slug": "/power-local-llm/best-web-hosting",
+    "date": "2026-11-02T18:58:20.008Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Hostinger hosting price verified 2026-08-30: $2.99/mo intro (48-month prepay, $143.52 upfront), renews at $10.99/mo. What the plan actually costs before you sign up.",
+        "new": "Hostinger Premium price checked 2026-11-02: $2.49/mo with a 48-month prepay ($119.52), renewing at $10.99/mo. See the real cost before you sign up."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-web-hosting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "hosting con soporte en español",
+      "mejor hosting barato",
+      "webhosting kosten",
+      "lws vs ovh",
+      "エックスサーバー ロリポップ 比較"
+    ],
+    "baseline": {
+      "position": 8.1,
+      "impressions": 179,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ebf23066-2c3e-47d3-8428-bb42c4e6d94b",
+    "slug": "/de/power-local-llm/best-web-hosting",
+    "date": "2026-11-02T18:58:20.116Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Webhosting Deutschland 2026: Geprüfte Preise",
+        "new": "Webhosting Kosten Deutschland 2026: Preisvergleich"
+      },
+      {
+        "field": "metaDescription",
+        "old": "IONOS, ALL-INKL.COM und Hostinger: Preise geprüft am 30.08.2026 für Webhosting in Deutschland. IONOS verlängert zum 11-fachen des €1/Monat-Einstiegspreises.",
+        "new": "Webhosting Kosten 2026: IONOS, ALL-INKL.COM und Hostinger mit Einstiegs- und Verlängerungspreis, geprüft am 02.11.2026. IONOS verlängert zum 11-fachen."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-web-hosting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "hosting con soporte en español",
+      "mejor hosting barato",
+      "webhosting kosten",
+      "lws vs ovh",
+      "エックスサーバー ロリポップ 比較"
+    ],
+    "baseline": {
+      "position": 14.1,
+      "impressions": 720,
+      "clicks": 1,
+      "ctr": 0.001388888888888889,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b0f86512-3ba8-48b0-9885-6503ecff4e2f",
+    "slug": "/fr/power-local-llm/best-web-hosting",
+    "date": "2026-11-02T18:58:20.224Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Meilleur Hébergeur France 2026 : Prix Vérifiés",
+        "new": "LWS, OVHcloud, Hostinger : comparatif hébergeur 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "o2switch, LWS, Infomaniak, Hostinger : prix vérifiés le 30/08/2026 pour l'hébergement web en France. LWS renouvelle à 2,7x son tarif d'appel — le coût réel avant de s'engager.",
+        "new": "Comparatif hébergeur web 2026 : LWS, OVHcloud, o2switch, Hostinger, Infomaniak. Prix d'appel et de renouvellement lus le 02/11/2026, LWS vs OVH."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-web-hosting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "hosting con soporte en español",
+      "mejor hosting barato",
+      "webhosting kosten",
+      "lws vs ovh",
+      "エックスサーバー ロリポップ 比較"
+    ],
+    "baseline": {
+      "position": 43,
+      "impressions": 127,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a20ef8b9-3c86-4887-a440-3128f1bfc07a",
+    "slug": "/es/power-local-llm/best-web-hosting",
+    "date": "2026-11-02T18:58:20.328Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Mejor hosting en España y Latinoamérica 2026: precios",
+        "new": "Mejor hosting barato y con soporte en español 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Mejor hosting web en España y Sudamérica 2026: Webempresa, Nominalia, DonWeb y Hosting.cl con precios, renovación y ley de datos de cada país.",
+        "new": "Hosting con soporte en español y barato: Hostinger, Raiola, Dinahosting, SiteGround, Webempresa y DonWeb con precios leídos el 2 de noviembre de 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-web-hosting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "hosting con soporte en español",
+      "mejor hosting barato",
+      "webhosting kosten",
+      "lws vs ovh",
+      "エックスサーバー ロリポップ 比較"
+    ],
+    "baseline": {
+      "position": 16.2,
+      "impressions": 921,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "49b487cf-18b3-4f64-b2e6-f9407cf13a39",
+    "slug": "/pt/power-local-llm/best-web-hosting",
+    "date": "2026-11-02T18:58:20.433Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Hospedagem Brasil 2026: Hostinger vs HostGator vs KingHost",
+        "new": "Hospedagem de site barata no Brasil 2026: preços em R$"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Hostinger vs HostGator Brasil vs KingHost vs Locaweb comparados em 2026: preços de entrada e renovação, exigência de CNPJ e adequação à LGPD.",
+        "new": "Hostinger, Locaweb, KingHost e HostGator comparadas em 2026: preço de entrada e de renovação em reais, lidos nos sites em 02/11/2026, e a LGPD."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-web-hosting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "hosting con soporte en español",
+      "mejor hosting barato",
+      "webhosting kosten",
+      "lws vs ovh",
+      "エックスサーバー ロリポップ 比較"
+    ],
+    "baseline": {
+      "position": 19,
+      "impressions": 656,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "9cd15165-2a8e-4876-a132-540c29025570",
+    "slug": "/ar/power-local-llm/best-web-hosting",
+    "date": "2026-11-02T18:58:20.535Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مقارنة Hostinger وArabHosters لاستضافة المواقع في الخليج العربي 2026: الأسعار الفعلية، العملة، والحضور المؤكد في المنطقة، إضافة إلى نظام PDPL السعودي وقانون حماية البيانات الإماراتي.",
+        "new": "مقارنة Hostinger وArabHosters لاستضافة المواقع في الخليج 2026: الأسعار والعملة والحضور المؤكد، مع نظام PDPL السعودي وقانون حماية البيانات الإماراتي."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-web-hosting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "hosting con soporte en español",
+      "mejor hosting barato",
+      "webhosting kosten",
+      "lws vs ovh",
+      "エックスサーバー ロリポップ 比較"
+    ],
+    "baseline": {
+      "position": 6.6,
+      "impressions": 19,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "99cf7ea2-446d-49af-b062-8f480d973cbc",
+    "slug": "/ja/power-local-llm/best-web-hosting",
+    "date": "2026-11-02T18:58:20.637Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026年 レンタルサーバー比較：Xserver vs ロリポップ",
+        "new": "2026年 エックスサーバー ロリポップ 比較：料金"
+      },
+      {
+        "field": "metaDescription",
+        "old": "2026年の日本国内おすすめレンタルサーバー：Xserver（キャンペーン価格月額693円）とロリポップ！（エコノミープラン月額121円、PHP/DB非対応）を比較。確認済み価格、契約期間の注意点、APPI対応について解説。",
+        "new": "エックスサーバー（Xserver）とロリポップ！を2026年11月2日の公式価格で比較。Xserverは月額693円、ロリポップ！は月額121円から。契約期間とWordPress対応の違い、APPI対応を解説。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-web-hosting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "hosting con soporte en español",
+      "mejor hosting barato",
+      "webhosting kosten",
+      "lws vs ovh",
+      "エックスサーバー ロリポップ 比較"
+    ],
+    "baseline": {
+      "position": 19.2,
+      "impressions": 106,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d8edc184-f05e-44d3-9772-f54670af22ec",
+    "slug": "/zh/power-local-llm/best-web-hosting",
+    "date": "2026-11-02T18:58:20.740Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026年最佳网站主机推荐（面向华语读者）",
+        "new": "2026年最佳网站主机推荐：阿里云、腾讯云与Hostinger"
+      },
+      {
+        "field": "metaDescription",
+        "old": "2026年面向华语读者的最佳网站主机：阿里云（限时促销每年38元）、腾讯云（每月35元）、Hostinger（首月2.99美元）。附确认价格及PIPL、数据安全法合规说明。",
+        "new": "2026年面向华语读者的最佳网站主机：阿里云（限时促销每年38元）、腾讯云（每月35元）、Hostinger（首月2.49美元）。附确认价格及PIPL、数据安全法合规说明。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-web-hosting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "hosting con soporte en español",
+      "mejor hosting barato",
+      "webhosting kosten",
+      "lws vs ovh",
+      "エックスサーバー ロリポップ 比較"
+    ],
+    "baseline": {
+      "position": 2.8,
+      "impressions": 6,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7d5873df-6f4a-43b9-bc83-bcb13ee87849",
+    "slug": "/ko/power-local-llm/best-web-hosting",
+    "date": "2026-11-02T18:58:20.843Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "한국 웹 호스팅 2026: Cafe24 vs 가비아 vs 닷홈 vs NHN",
+        "new": "한국 웹 호스팅 2026: Cafe24 가비아 닷홈 비교"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-web-hosting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "hosting con soporte en español",
+      "mejor hosting barato",
+      "webhosting kosten",
+      "lws vs ovh",
+      "エックスサーバー ロリポップ 比較"
+    ],
+    "baseline": {
+      "position": 5.8,
+      "impressions": 330,
+      "clicks": 11,
+      "ctr": 0.03333333333333333,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "80ea3670-db79-4523-9288-8dcd2781cf1a",
+    "slug": "/power-local-llm/best-ai-hr-software-enterprise",
+    "date": "2026-11-02T18:58:20.961Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best AI HR Software for Enterprises (2026)",
+        "new": "Best AI HR Software for Enterprises (2026): Compared"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Compare mainstream AI-HR platforms (Workday, HireVue, Lattice) against a self-hosted local-LLM approach for resume screening, sentiment analysis, and review drafting.",
+        "new": "Enterprise AI HR software compared: Workday, HireVue, Lattice and more, with public prices, EU AI Act dates and a self-hosted option. Not legal advice."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-ai-hr-software-enterprise); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hr software",
+      "ferramentas de ia para rh",
+      "ki-hr-software",
+      "ai人事ソフトウェア"
+    ],
+    "baseline": {
+      "position": 29,
+      "impressions": 476,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "4e1ea895-5446-4ef0-9d9b-345d52e28acd",
+    "slug": "/de/power-local-llm/best-ai-hr-software-enterprise",
+    "date": "2026-11-02T18:58:21.064Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Beste KI-HR-Software für Unternehmen (2026)",
+        "new": "Beste KI-HR-Software für Unternehmen im Vergleich (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Vergleich: KI-HR-Plattformen (Workday, HireVue, Lattice) vs. selbst gehostete lokale LLMs für Lebenslauf-Screening, Stimmungsanalyse und Beurteilungsentwürfe.",
+        "new": "KI-HR-Software im Vergleich: Workday, HireVue, Lattice u. a. mit öffentlichen Preisen, EU-AI-Act-Fristen und Self-Hosting-Option. Keine Rechtsberatung."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-ai-hr-software-enterprise); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hr software",
+      "ferramentas de ia para rh",
+      "ki-hr-software",
+      "ai人事ソフトウェア"
+    ],
+    "baseline": {
+      "position": 4,
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "20839ff6-21ee-4ad7-bd2c-26e6174574b7",
+    "slug": "/fr/power-local-llm/best-ai-hr-software-enterprise",
+    "date": "2026-11-02T18:58:21.168Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Meilleurs logiciels RH IA pour entreprises (2026)",
+        "new": "Logiciels RH IA pour entreprises : comparatif (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Comparatif : plateformes RH IA (Workday, HireVue, Lattice) contre LLM locaux auto-hébergés pour le tri de CV, l'analyse du climat social et la rédaction d'évaluations.",
+        "new": "Logiciels RH IA comparés : Workday, HireVue, Lattice, avec prix publics, échéances de l'AI Act et option auto-hébergée. Pas un conseil juridique."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-ai-hr-software-enterprise); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hr software",
+      "ferramentas de ia para rh",
+      "ki-hr-software",
+      "ai人事ソフトウェア"
+    ],
+    "baseline": {
+      "position": 31,
+      "impressions": 7,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "9c92f38f-e8e4-413b-a757-44882c34622b",
+    "slug": "/ja/power-local-llm/best-ai-hr-software-enterprise",
+    "date": "2026-11-02T18:58:21.270Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "企業向けAI人事ソフト比較（2026）",
+        "new": "企業向けAI人事ソフトウェア比較2026：料金・規制"
+      },
+      {
+        "field": "metaDescription",
+        "old": "AI人事プラットフォーム（Workday、HireVue、Lattice）とセルフホスト型ローカルLLMを比較。履歴書スクリーニング、感情分析、考課下書きの選び方。",
+        "new": "企業向けAI人事ソフトを比較。Workday、HireVue、Lattice等の公開料金、EU AI法の期限、セルフホスト型の選択肢を整理。法的助言ではありません。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-ai-hr-software-enterprise); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hr software",
+      "ferramentas de ia para rh",
+      "ki-hr-software",
+      "ai人事ソフトウェア"
+    ],
+    "baseline": {
+      "position": 13.8,
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "1daa52df-a2b5-45d0-b98f-85ca053f54b5",
+    "slug": "/zh/power-local-llm/best-ai-hr-software-enterprise",
+    "date": "2026-11-02T18:58:21.373Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026年企业AI人力资源软件对比",
+        "new": "企业AI人力资源软件对比2026：价格、合规与自托管"
+      },
+      {
+        "field": "metaDescription",
+        "old": "对比主流AI人力资源平台（Workday、HireVue、Lattice）与自托管本地LLM方案，涵盖简历筛选、情绪分析与绩效评语起草。",
+        "new": "企业AI人力资源软件对比：Workday、HireVue、Lattice等的公开价格、欧盟AI法案时间表及自托管方案，并附合规提示。不构成法律建议。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-ai-hr-software-enterprise); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hr software",
+      "ferramentas de ia para rh",
+      "ki-hr-software",
+      "ai人事ソフトウェア"
+    ],
+    "baseline": {
+      "position": 10.1,
+      "impressions": 44,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8207358d-1f0f-4152-b907-8fec00e931d0",
+    "slug": "/es/power-local-llm/best-ai-hr-software-enterprise",
+    "date": "2026-11-02T18:58:21.473Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Comparativa: plataformas de RR. HH. con IA (Workday, HireVue, Lattice) frente a LLM locales autoalojados para filtrado de CV, análisis de clima y redacción de evaluaciones.",
+        "new": "Software de RR. HH. con IA comparado: Workday, HireVue, Lattice y más, con precios públicos, fechas del AI Act y opción autoalojada. No es asesoría legal."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-ai-hr-software-enterprise); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hr software",
+      "ferramentas de ia para rh",
+      "ki-hr-software",
+      "ai人事ソフトウェア"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a7e83aec-6c84-4638-a522-6cfd6d15cfb4",
+    "slug": "/pt/power-local-llm/best-ai-hr-software-enterprise",
+    "date": "2026-11-02T18:58:21.578Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Melhor software de RH com IA para empresas (2026)",
+        "new": "Ferramentas de IA para RH em empresas: comparativo (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Comparativo: plataformas de RH com IA (Workday, HireVue, Lattice) vs. LLMs locais auto-hospedados para triagem de currículos, análise de sentimento e avaliações.",
+        "new": "Software de RH com IA comparado: Workday, HireVue, Lattice, com preços públicos, prazos do AI Act e opção auto-hospedada. Não é aconselhamento jurídico."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-ai-hr-software-enterprise); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hr software",
+      "ferramentas de ia para rh",
+      "ki-hr-software",
+      "ai人事ソフトウェア"
+    ],
+    "baseline": {
+      "position": 12.4,
+      "impressions": 590,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b688f115-6593-4420-8b63-575f20a967c6",
+    "slug": "/ar/power-local-llm/best-ai-hr-software-enterprise",
+    "date": "2026-11-02T18:58:21.679Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مقارنة بين منصات الموارد البشرية بالذكاء الاصطناعي (Workday، HireVue، Lattice) ونماذج اللغة المحلية المستضافة ذاتيًا لفرز السير الذاتية وتحليل المشاعر وصياغة التقييمات.",
+        "new": "مقارنة برمجيات الموارد البشرية بالذكاء الاصطناعي: Workday وHireVue وLattice مع الأسعار المعلنة ومواعيد قانون الاتحاد الأوروبي. ليست استشارة قانونية."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-ai-hr-software-enterprise); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hr software",
+      "ferramentas de ia para rh",
+      "ki-hr-software",
+      "ai人事ソフトウェア"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "b2bc66cb-17f2-4f90-bc58-96b64cc2ef0a",
+    "slug": "/ko/power-local-llm/best-ai-hr-software-enterprise",
+    "date": "2026-11-02T18:58:21.781Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026년 기업용 AI 인사 소프트웨어 비교",
+        "new": "기업용 AI HR 소프트웨어 비교 2026: 가격·규제"
+      },
+      {
+        "field": "metaDescription",
+        "old": "주요 AI 인사 플랫폼(Workday, HireVue, Lattice)과 자체 호스팅 로컬 LLM 방식을 비교합니다. 이력서 심사, 감정 분석, 인사고과 초안 작성을 중심으로 안내합니다.",
+        "new": "기업용 AI 인사 소프트웨어 비교: Workday, HireVue, Lattice 등의 공개 가격, EU AI법 일정, 자체 호스팅 옵션을 정리합니다. 법률 자문이 아닙니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-ai-hr-software-enterprise); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hr software",
+      "ferramentas de ia para rh",
+      "ki-hr-software",
+      "ai人事ソフトウェア"
+    ],
+    "baseline": {
+      "position": 8.1,
+      "impressions": 38,
+      "clicks": 1,
+      "ctr": 0.02631578947368421,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "598af5c0-0924-41b0-bc87-89af3e44dce6",
+    "slug": "/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
+    "date": "2026-11-02T18:58:21.901Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Compare 8 leading AI cloud providers — DigitalOcean, AWS, CoreWeave, RunPod, Lambda, Google Cloud, Azure, Oracle Cloud — by GPU pricing, availability, and workload fit, sourced 2026-09-05.",
+        "new": "Compare 8 AI clouds, from DigitalOcean and AWS to CoreWeave, RunPod and Lambda, on H100 price, GPU availability and workload fit for AI teams."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (digitalocean-vs-aws-cloud-for-ai-companies); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "digitalocean vs coreweave for gpu hosting",
+      "digitalocean vs runpod",
+      "aws vs coreweave",
+      "runpod vs aws"
+    ],
+    "baseline": {
+      "position": 6,
+      "impressions": 489,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e1d47b3a-f9b1-456c-b9ed-34d139d19e63",
+    "slug": "/de/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
+    "date": "2026-11-02T18:58:22.005Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Vergleich von 8 führenden KI-Cloud-Anbietern — DigitalOcean, AWS, CoreWeave, RunPod, Lambda, Google Cloud, Azure, Oracle Cloud — nach GPU-Preis, Verfügbarkeit und Workload-Eignung, Stand 05.09.2026.",
+        "new": "8 KI-Clouds im Vergleich, von DigitalOcean und AWS bis CoreWeave, RunPod und Lambda: H100-Preis, GPU-Verfügbarkeit und Workload-Eignung für KI-Teams."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (digitalocean-vs-aws-cloud-for-ai-companies); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "digitalocean vs coreweave for gpu hosting",
+      "digitalocean vs runpod",
+      "aws vs coreweave",
+      "runpod vs aws"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "35aa67f8-eb0f-4c02-b742-acc9f4fe6eac",
+    "slug": "/fr/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
+    "date": "2026-11-02T18:58:22.106Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Comparatif de 8 fournisseurs cloud IA majeurs — DigitalOcean, AWS, CoreWeave, RunPod, Lambda, Google Cloud, Azure, Oracle Cloud — par prix GPU, disponibilité et adéquation à la charge, vérifié le 05/09/2026.",
+        "new": "Comparatif de 8 clouds IA, de DigitalOcean et AWS à CoreWeave, RunPod et Lambda : prix du H100, disponibilité des GPU et adéquation aux charges de travail."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (digitalocean-vs-aws-cloud-for-ai-companies); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "digitalocean vs coreweave for gpu hosting",
+      "digitalocean vs runpod",
+      "aws vs coreweave",
+      "runpod vs aws"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "068574cb-e92b-4f88-9f8f-5f08081c66c3",
+    "slug": "/es/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
+    "date": "2026-11-02T18:58:22.209Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Comparativa de 8 proveedores cloud de IA líderes — DigitalOcean, AWS, CoreWeave, RunPod, Lambda, Google Cloud, Azure, Oracle Cloud — por precio de GPU, disponibilidad y ajuste a la carga, verificado 05-09-2026.",
+        "new": "Compara 8 nubes de IA, de DigitalOcean y AWS a CoreWeave, RunPod y Lambda, por precio del H100, disponibilidad de GPU y ajuste a tu carga de trabajo."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (digitalocean-vs-aws-cloud-for-ai-companies); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "digitalocean vs coreweave for gpu hosting",
+      "digitalocean vs runpod",
+      "aws vs coreweave",
+      "runpod vs aws"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "fd7e1c51-cc5f-4813-92f5-8b8117254916",
+    "slug": "/pt/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
+    "date": "2026-11-02T18:58:22.312Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Comparativo de 8 principais provedores de nuvem para IA — DigitalOcean, AWS, CoreWeave, RunPod, Lambda, Google Cloud, Azure, Oracle Cloud — por preço de GPU, disponibilidade e adequação à carga, verificado em 05/09/2026.",
+        "new": "Compare 8 nuvens de IA, do DigitalOcean e da AWS à CoreWeave, RunPod e Lambda, por preço do H100, disponibilidade de GPU e adequação à carga de trabalho."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (digitalocean-vs-aws-cloud-for-ai-companies); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "digitalocean vs coreweave for gpu hosting",
+      "digitalocean vs runpod",
+      "aws vs coreweave",
+      "runpod vs aws"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "acf16c20-b0b4-49b2-86e9-d5c13626cdad",
+    "slug": "/ja/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
+    "date": "2026-11-02T18:58:22.413Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod 2026",
+        "new": "AIクラウド比較：DigitalOcean・AWS・RunPod"
+      },
+      {
+        "field": "metaDescription",
+        "old": "DigitalOcean、AWS、CoreWeave、RunPod、Lambda、Google Cloud、Azure、Oracle Cloudという8大AIクラウドプロバイダーを、GPU価格・可用性・ワークロード適合性で比較。2026-09-05時点で検証。",
+        "new": "DigitalOcean、AWS、CoreWeave、RunPodなどAI向け主要クラウド8社を、H100の料金・入手性・用途への適合性で比較。DigitalOceanとAWSの料金は2026年11月2日に確認。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (digitalocean-vs-aws-cloud-for-ai-companies); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "digitalocean vs coreweave for gpu hosting",
+      "digitalocean vs runpod",
+      "aws vs coreweave",
+      "runpod vs aws"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "72b72b1d-9049-487b-96e9-1fb0982aac98",
+    "slug": "/zh/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
+    "date": "2026-11-02T18:58:22.514Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "DigitalOcean 对比 AWS 对比 CoreWeave 对比 RunPod 2026",
+        "new": "DigitalOcean、AWS、RunPod 对比 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "对比 8 家领先的 AI 云服务商——DigitalOcean、AWS、CoreWeave、RunPod、Lambda、Google Cloud、Azure、Oracle Cloud——从 GPU 价格、可用性和负载适配性出发，核实于 2026-09-05。",
+        "new": "从 H100 价格、可用性和工作负载适配度比较 DigitalOcean、AWS、CoreWeave、RunPod 等 8 家 AI 云服务商。DigitalOcean 与 AWS 价格核对于 2026-11-02。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (digitalocean-vs-aws-cloud-for-ai-companies); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "digitalocean vs coreweave for gpu hosting",
+      "digitalocean vs runpod",
+      "aws vs coreweave",
+      "runpod vs aws"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7a027485-63e2-4971-9fe2-eab32b908208",
+    "slug": "/ar/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
+    "date": "2026-11-02T18:58:22.616Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "DigitalOcean مقابل AWS مقابل CoreWeave مقابل RunPod 2026",
+        "new": "DigitalOcean مقابل AWS وCoreWeave وRunPod 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "مقارنة 8 مزودي سحابة رائدين للذكاء الاصطناعي — DigitalOcean وAWS وCoreWeave وRunPod وLambda وGoogle Cloud وAzure وOracle Cloud — من حيث سعر GPU والتوافر وملاءمة الحمل، تم التحقق بتاريخ 2026-09-05.",
+        "new": "قارن 8 سحابات ذكاء اصطناعي، من DigitalOcean وAWS إلى CoreWeave وRunPod وLambda، من حيث سعر H100 وتوفر GPU وملاءمة حمل العمل."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (digitalocean-vs-aws-cloud-for-ai-companies); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "digitalocean vs coreweave for gpu hosting",
+      "digitalocean vs runpod",
+      "aws vs coreweave",
+      "runpod vs aws"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7f59a89b-1ab6-4dd5-9173-16abfcbbf2ec",
+    "slug": "/ko/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
+    "date": "2026-11-02T18:58:22.720Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "DigitalOcean 대 AWS 대 CoreWeave 대 RunPod 2026",
+        "new": "DigitalOcean·AWS·RunPod AI 클라우드 비교"
+      },
+      {
+        "field": "metaDescription",
+        "old": "DigitalOcean, AWS, CoreWeave, RunPod, Lambda, Google Cloud, Azure, Oracle Cloud라는 8대 AI 클라우드 제공업체를 GPU 가격, 가용성, 워크로드 적합성 기준으로 비교했습니다. 2026-09-05 기준으로 검증했습니다.",
+        "new": "DigitalOcean, AWS, CoreWeave, RunPod 등 AI 클라우드 8곳을 H100 가격, GPU 가용성, 워크로드 적합성으로 비교합니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (digitalocean-vs-aws-cloud-for-ai-companies); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "digitalocean vs coreweave for gpu hosting",
+      "digitalocean vs runpod",
+      "aws vs coreweave",
+      "runpod vs aws"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "090163c7-d6a5-49da-a7a5-7764e49ca402",
+    "slug": "/power-local-llm/us-state-ai-employment-laws-compliance",
+    "date": "2026-11-02T18:58:22.842Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "US State AI Employment Laws 2026: What Applies to Hiring | PromptQuorum",
+        "new": "US State AI Employment Laws 2026: What Applies to Hiring"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Which US state AI employment laws apply to your hiring, screening, and monitoring — Colorado, California, Illinois, Texas, NYC, plus the federal preemption executive order. Interactive state applicability checker included.",
+        "new": "Which US state AI employment laws apply to hiring: Colorado, California, Illinois, Texas and NYC, with dates, scope and the federal order. Not legal advice"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (us-state-ai-employment-laws-compliance); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "state government ai certification compliance deadlines",
+      "ai hiring laws by state"
+    ],
+    "baseline": {
+      "position": 8.19,
+      "impressions": 518,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "3a570969-f670-4fc8-b11f-72ba213639ea",
+    "slug": "/de/power-local-llm/us-state-ai-employment-laws-compliance",
+    "date": "2026-11-02T18:58:22.944Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "US-KI-Arbeitsrecht 2026: Was für Einstellungen gilt | PromptQuorum",
+        "new": "US-KI-Arbeitsrecht 2026: Was für Einstellungen gilt"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Welche US-Bundesstaaten-KI-Arbeitsgesetze gelten für Ihr Einstellungs-, Screening- und Überwachungssystem — Colorado, Kalifornien, Illinois, Texas, NYC, plus die Executive Order zur Bundes-Präemption. Mit interaktivem Prüftool.",
+        "new": "Welche US-KI-Arbeitsgesetze gelten fürs Recruiting: Colorado, Kalifornien, Illinois, Texas, NYC mit Stichtagen und Geltungsbereich. Kein Rechtsrat."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (us-state-ai-employment-laws-compliance); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "state government ai certification compliance deadlines",
+      "ai hiring laws by state"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d1af7eaf-2025-4b36-91b8-e11804e92c2e",
+    "slug": "/fr/power-local-llm/us-state-ai-employment-laws-compliance",
+    "date": "2026-11-02T18:58:23.045Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Lois d'État américaines sur l'IA en emploi 2026 | PromptQuorum",
+        "new": "Lois d'État américaines sur l'IA et l'emploi en 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Quelles lois d'État américaines sur l'IA en emploi s'appliquent à votre recrutement, présélection et surveillance — Colorado, Californie, Illinois, Texas, NYC, plus le décret fédéral de préemption. Outil de vérification interactif inclus.",
+        "new": "Quelles lois d'État américaines sur l'IA s'appliquent au recrutement : Colorado, Californie, Illinois, Texas, NYC, dates, portée. Pas de conseil juridique."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (us-state-ai-employment-laws-compliance); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "state government ai certification compliance deadlines",
+      "ai hiring laws by state"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "67935de8-6216-4d61-9d7b-8da928ca5cdd",
+    "slug": "/es/power-local-llm/us-state-ai-employment-laws-compliance",
+    "date": "2026-11-02T18:58:23.146Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Leyes estatales de IA en el empleo EE. UU. 2026 | PromptQuorum",
+        "new": "Leyes estatales de IA en el empleo en EE. UU. 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qué leyes estatales de IA en el empleo de EE. UU. aplican a tu contratación, selección y monitoreo — Colorado, California, Illinois, Texas, NYC, más la orden ejecutiva federal de preemption. Incluye verificador interactivo por estado.",
+        "new": "Qué leyes estatales de IA aplican a la contratación en EE. UU.: Colorado, California, Illinois, Texas y NYC, con fechas y alcance. No es asesoría legal."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (us-state-ai-employment-laws-compliance); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "state government ai certification compliance deadlines",
+      "ai hiring laws by state"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3b964d51-b897-4497-9b50-674f76310fdd",
+    "slug": "/pt/power-local-llm/us-state-ai-employment-laws-compliance",
+    "date": "2026-11-02T18:58:23.249Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Leis estaduais de IA no emprego EUA 2026 | PromptQuorum",
+        "new": "Leis estaduais de IA no emprego nos EUA 2026: o que vale"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Quais leis estaduais de IA no emprego dos EUA se aplicam à sua contratação, triagem e monitoramento — Colorado, Califórnia, Illinois, Texas, NYC, mais a ordem executiva federal de preemption. Inclui verificador interativo por estado.",
+        "new": "Quais leis estaduais de IA se aplicam à contratação nos EUA: Colorado, Califórnia, Illinois, Texas e NYC, com datas. Não é aconselhamento jurídico."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (us-state-ai-employment-laws-compliance); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "state government ai certification compliance deadlines",
+      "ai hiring laws by state"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0227519e-c2f7-4992-baad-d74a35ea746a",
+    "slug": "/zh/power-local-llm/us-state-ai-employment-laws-compliance",
+    "date": "2026-11-02T18:58:23.352Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "美国各州AI雇佣法2026：招聘适用哪些规定 | PromptQuorum",
+        "new": "美国各州AI雇佣法2026：招聘与筛选适用哪些规定及日期"
+      },
+      {
+        "field": "metaDescription",
+        "old": "哪些美国州级AI雇佣法适用于您的招聘、筛选与监控——科罗拉多、加利福尼亚、伊利诺伊、得克萨斯、纽约市，以及联邦优先权行政令。附交互式州适用性检查工具。",
+        "new": "哪些美国州级AI雇佣法适用于招聘与筛选：科罗拉多、加利福尼亚、伊利诺伊、得克萨斯、纽约市的生效日期与范围，以及联邦行政令的影响。附州适用性检查工具，不构成法律意见。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (us-state-ai-employment-laws-compliance); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "state government ai certification compliance deadlines",
+      "ai hiring laws by state"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "92567c6c-1b68-42e0-a625-0a6e9c28e912",
+    "slug": "/ja/power-local-llm/us-state-ai-employment-laws-compliance",
+    "date": "2026-11-02T18:58:23.455Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "米国州別AI雇用法2026：採用に適用される規制 | PromptQuorum",
+        "new": "米国州別AI雇用法2026：採用に適用される規制と期限"
+      },
+      {
+        "field": "metaDescription",
+        "old": "採用・スクリーニング・モニタリングに適用される米国州別AI雇用法——コロラド州、カリフォルニア州、イリノイ州、テキサス州、NYC、そして連邦の優先権に関する大統領令。インタラクティブな州別適用チェックツール付き。",
+        "new": "採用に適用される米国の州別AI雇用法を整理：コロラド、カリフォルニア、イリノイ、テキサス、NYCの施行日と適用範囲、連邦大統領令の影響。法的助言ではありません。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (us-state-ai-employment-laws-compliance); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "state government ai certification compliance deadlines",
+      "ai hiring laws by state"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7fa9a5a2-2d00-43c1-80c8-42316aae44e4",
+    "slug": "/ko/power-local-llm/us-state-ai-employment-laws-compliance",
+    "date": "2026-11-02T18:58:23.559Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "미국 주별 AI 고용법 2026: 채용에 적용되는 규정 | PromptQuorum",
+        "new": "미국 주별 AI 고용법 2026: 채용에 적용되는 규정"
+      },
+      {
+        "field": "metaDescription",
+        "old": "채용, 심사, 모니터링에 적용되는 미국 주별 AI 고용법——콜로라도, 캘리포니아, 일리노이, 텍사스, 뉴욕시, 그리고 연방 우선권 행정명령. 인터랙티브 주별 적용 확인 도구 포함.",
+        "new": "채용에 적용되는 미국 주별 AI 고용법을 정리합니다: 콜로라도, 캘리포니아, 일리노이, 텍사스, 뉴욕시의 시행일과 범위, 연방 행정명령. 법률 자문이 아닙니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (us-state-ai-employment-laws-compliance); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "state government ai certification compliance deadlines",
+      "ai hiring laws by state"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "97515633-33f4-4a91-86e5-b69e6e0065b3",
+    "slug": "/ar/power-local-llm/us-state-ai-employment-laws-compliance",
+    "date": "2026-11-02T18:58:23.662Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "قوانين الذكاء الاصطناعي للتوظيف في الولايات الأمريكية 2026 | PromptQuorum",
+        "new": "قوانين الذكاء الاصطناعي للتوظيف في ولايات أمريكا 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "أي قوانين الذكاء الاصطناعي للتوظيف على مستوى الولايات الأمريكية تنطبق على التوظيف والفرز والمراقبة لديك — كولورادو وكاليفورنيا وإلينوي وتكساس ونيويورك، إضافة إلى الأمر التنفيذي الفيدرالي بشأن الأسبقية. يتضمن أداة فحص تفاعلية حسب الولاية.",
+        "new": "أي قوانين ولائية للذكاء الاصطناعي تنطبق على التوظيف: كولورادو وكاليفورنيا وإلينوي وتكساس ونيويورك، مع التواريخ والنطاق. ليست استشارة قانونية."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (us-state-ai-employment-laws-compliance); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "state government ai certification compliance deadlines",
+      "ai hiring laws by state"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "334aef8b-1eca-4381-b049-af59959350bf",
+    "slug": "/prompt-engineering/how-prompt-engineering-evolved",
+    "date": "2026-11-02T18:58:23.782Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Prompt Engineering is Dead? How It Evolved Into Context Design (2026)",
+        "new": "Is Prompt Engineering Dead? How It Evolved, 2020–2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Prompt engineering went through 7 distinct phases from GPT-3 (2020) to context design (2026). Complete timeline with 12+ research citations, misconceptions debunked, and why the discipline transformed but isn't dead.",
+        "new": "Prompt engineering is not dead, it changed: a sourced timeline from GPT-3 few-shot prompting (2020) through chain-of-thought and ChatGPT to context design."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (how-prompt-engineering-evolved); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "is prompt engineering dead",
+      "evolution of prompt engineering",
+      "when did prompt engineering start"
+    ],
+    "baseline": {
+      "position": 5.78,
+      "impressions": 236,
+      "clicks": 2,
+      "ctr": 0.00847457627118644,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a14318d5-d481-4cf7-badf-547269bae74d",
+    "slug": "/de/prompt-engineering/how-prompt-engineering-evolved",
+    "date": "2026-11-02T18:58:23.883Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Prompt Engineering: Von Few-Shot zu Context Design 2026",
+        "new": "Ist Prompt Engineering tot? Entwicklung 2020–2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Prompt Engineering: 7 Phasen von GPT-3 (2020) bis Context Design (2026). Zeitleiste, Forschungszitate und warum die Disziplin transformiert, nicht tot ist.",
+        "new": "Prompt Engineering ist nicht tot, sondern gewandelt: belegte Zeitleiste von GPT-3 Few-Shot (2020) über Chain-of-Thought und ChatGPT bis Context Design."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (how-prompt-engineering-evolved); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "is prompt engineering dead",
+      "evolution of prompt engineering",
+      "when did prompt engineering start"
+    ],
+    "baseline": {
+      "position": 25.6,
+      "impressions": 102,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "bb6da08a-b0bc-46b0-b250-8bbbaaef686e",
+    "slug": "/es/prompt-engineering/how-prompt-engineering-evolved",
+    "date": "2026-11-02T18:58:23.988Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "¿Está muerto el prompt engineering? Su evolución en 2026",
+        "new": "¿Ha muerto el prompt engineering? Evolución 2020–2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "El prompt engineering pasó por 7 fases desde GPT-3 (2020) hasta el context design (2026). Línea de tiempo con citas de investigación y mitos desmentidos.",
+        "new": "El prompt engineering no ha muerto, ha cambiado: cronología con fuentes del few-shot de GPT-3 (2020) al chain-of-thought, ChatGPT y el context design."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (how-prompt-engineering-evolved); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "is prompt engineering dead",
+      "evolution of prompt engineering",
+      "when did prompt engineering start"
+    ],
+    "baseline": {
+      "position": 4.65,
+      "impressions": 17,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c9a169e9-e1b6-414d-9da1-dd18bfccd6d5",
+    "slug": "/ar/prompt-engineering/how-prompt-engineering-evolved",
+    "date": "2026-11-02T18:58:24.090Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "هندسة البرومبت: ⁨7⁩ مراحل من ⁨GPT-3⁩ إلى تصميم السياق",
+        "new": "هل انتهت هندسة البرومبت؟ تطورها من 2020 إلى 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "هندسة البرومبت مرّت بـ⁨7⁩ مراحل من ⁨GPT-3⁩ (⁨2020⁩) إلى تصميم السياق (⁨2026⁩). خط زمني شامل مع أكثر من ⁨12⁩ استشهاداً بحثياً وأساطير مدحوضة وتحليل عميق.",
+        "new": "هندسة البرومبت لم تمت بل تغيّرت: خط زمني موثّق من التعلّم بأمثلة قليلة في GPT-3 (2020) إلى سلسلة الأفكار وChatGPT وصولًا إلى تصميم السياق."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (how-prompt-engineering-evolved); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "is prompt engineering dead",
+      "evolution of prompt engineering",
+      "when did prompt engineering start"
+    ],
+    "baseline": {
+      "position": 7,
+      "impressions": 26,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "3b03f1f7-bdd3-4485-8564-d38481ec013a",
+    "slug": "/pt/prompt-engineering/how-prompt-engineering-evolved",
+    "date": "2026-11-02T18:58:24.196Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "O prompt engineering está morto? Sua evolução em 2026",
+        "new": "Prompt engineering morreu? Evolução de 2020 a 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "O prompt engineering passou por 7 fases desde o GPT-3 (2020) até o context design (2026). Linha do tempo com citações de pesquisa e mitos desmentidos.",
+        "new": "O prompt engineering não morreu, mudou: linha do tempo com fontes do few-shot do GPT-3 (2020) ao chain-of-thought, ao ChatGPT e ao context design."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (how-prompt-engineering-evolved); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "is prompt engineering dead",
+      "evolution of prompt engineering",
+      "when did prompt engineering start"
+    ],
+    "baseline": {
+      "position": 5.19,
+      "impressions": 7785,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "934ec891-4943-4333-9c06-ae60ae862c0a",
+    "slug": "/fr/prompt-engineering/how-prompt-engineering-evolved",
+    "date": "2026-11-02T18:58:24.300Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "L'évolution du Prompt Engineering 2020–2026 : De Few-Shot au Context Design",
+        "new": "Le prompt engineering est-il mort ? Évolution 2020–2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "L'ingénierie des prompts a évolué en 7 phases de GPT-3 (2020) au context design (2026). Chronologie complète avec 12+ citations, tableau des jalons et analyse de pourquoi la discipline s'est transformée.",
+        "new": "Le prompt engineering n'est pas mort, il a changé : chronologie sourcée du few-shot de GPT-3 (2020) au chain-of-thought, à ChatGPT puis au context design."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (how-prompt-engineering-evolved); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "is prompt engineering dead",
+      "evolution of prompt engineering",
+      "when did prompt engineering start"
+    ],
+    "baseline": {
+      "position": 8.4,
+      "impressions": 106,
+      "clicks": 4,
+      "ctr": 0.03773584905660377,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d0d2cc30-0f04-4f2e-b628-f34d46fc2626",
+    "slug": "/ja/prompt-engineering/how-prompt-engineering-evolved",
+    "date": "2026-11-02T18:58:24.402Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "プロンプトエンジニアリング進化史 2020–2026：Few-ShottからContext Designへ",
+        "new": "プロンプトエンジニアリングは終わり？進化2020–2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "プロンプトエンジニアリングは7段階で進化（2020年GPT-3から2026年Context Design）。12以上の研究引用、マイルストーン表、分野が変わったが消滅しなかった理由の分析をまとめた完全タイムライン。",
+        "new": "プロンプトエンジニアリングは終わらず形を変えました。GPT-3のフューショット（2020年）から思考の連鎖、ChatGPT、コンテキスト設計までを出典付きで解説します。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (how-prompt-engineering-evolved); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "is prompt engineering dead",
+      "evolution of prompt engineering",
+      "when did prompt engineering start"
+    ],
+    "baseline": {
+      "position": 10.1,
+      "impressions": 104,
+      "clicks": 3,
+      "ctr": 0.028846153846153848,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "56cc8a4d-c465-4309-9364-2de11c1b686c",
+    "slug": "/zh/prompt-engineering/how-prompt-engineering-evolved",
+    "date": "2026-11-02T18:58:24.505Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "提示工程进化2020–2026：从少样本学习到上下文设计完全解析",
+        "new": "提示词工程过时了吗？GPT-3到上下文设计2020–2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "提示工程从2020年GPT-3少样本学习进化到2026年上下文设计，历经7个阶段。完整时间线含12篇以上研究论文、关键里程碑表和学科转变而非消亡的深度分析。",
+        "new": "提示词工程没有消亡而是转型：附来源的时间线，从2020年GPT-3少样本提示，到思维链、ChatGPT与上下文设计，梳理2020至2026年的演变。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (how-prompt-engineering-evolved); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "is prompt engineering dead",
+      "evolution of prompt engineering",
+      "when did prompt engineering start"
+    ],
+    "baseline": {
+      "position": 9.45,
+      "impressions": 33,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "54b4ed83-5afe-47e1-a59d-a9436d9852ab",
+    "slug": "/ko/prompt-engineering/how-prompt-engineering-evolved",
+    "date": "2026-11-02T18:58:24.608Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "프롬프트 엔지니어링은 끝났는가? 컨텍스트 설계로의 진화 (2026)",
+        "new": "프롬프트 엔지니어링은 끝났나? 2020–2026 진화"
+      },
+      {
+        "field": "metaDescription",
+        "old": "프롬프트 엔지니어링은 GPT-3(2020)부터 컨텍스트 설계(2026)까지 7가지 뚜렷한 단계를 거쳐 왔습니다. 12편 이상의 연구 인용을 포함한 완전한 타임라인, 오해 해소, 그리고 이 분야가 어떻게 변화했지만 사라지지 않았는지를 설명합니다.",
+        "new": "프롬프트 엔지니어링은 사라지지 않고 변했습니다. GPT-3 퓨샷(2020)에서 사고 연쇄, ChatGPT, 컨텍스트 설계까지 출처와 함께 정리한 타임라인입니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (how-prompt-engineering-evolved); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "is prompt engineering dead",
+      "evolution of prompt engineering",
+      "when did prompt engineering start"
+    ],
+    "baseline": {
+      "position": 5.8,
+      "impressions": 49,
+      "clicks": 3,
+      "ctr": 0.061224489795918366,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
   }
 ]
