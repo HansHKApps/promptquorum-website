@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local AI stack docker',
       'n8n local LLM RAG',
     ],
-    leadAnswerBlock: '**Warning: the Self-hosted AI Starter Kit has had no update since ' + lastUpdate('en') + ' (a README link fix), so it may be unmaintained — check the repository before relying on it.** It is a free, open-source Docker Compose template from n8n ([github.com/n8n-io/self-hosted-ai-starter-kit](https://github.com/n8n-io/self-hosted-ai-starter-kit)) that bundles n8n (workflow automation with 400+ integrations), Ollama (local LLM inference), Qdrant (vector database), and PostgreSQL under [Apache-2.0](https://github.com/n8n-io/self-hosted-ai-starter-kit/blob/main/LICENSE). It needs no cloud account or API key: a single `docker compose --profile cpu up` (or a GPU-specific profile) starts every bundled service, and the demo workflow it loads is a plain chat with a local Ollama model, not a RAG pipeline.',
+    leadAnswerBlock: '**Warning: the Self-hosted AI Starter Kit has had no update since ' + lastUpdate('en') + ' and may be unmaintained.** It is a free Docker Compose template from n8n that bundles n8n, Ollama, Qdrant and PostgreSQL into one local AI stack, started with a single `docker compose` command.',
     quickAnswerTop: {
       en: {
         question: 'What is the Self-hosted AI Starter Kit and what does it include?',
@@ -337,7 +337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'lokaler KI-Stack Docker',
       'n8n lokales LLM RAG',
     ],
-    leadAnswerBlock: '**Warnung: Das Self-hosted AI Starter Kit hat seit dem ' + lastUpdate('de') + ' kein Update erhalten (eine Korrektur eines README-Links) und wird möglicherweise nicht mehr gepflegt — prüfen Sie das Repository, bevor Sie sich darauf verlassen.** Es ist eine kostenlose, quelloffene Docker-Compose-Vorlage von n8n ([github.com/n8n-io/self-hosted-ai-starter-kit](https://github.com/n8n-io/self-hosted-ai-starter-kit)), die n8n (Workflow-Automatisierung mit über 400 Integrationen), Ollama (lokale LLM-Inferenz), Qdrant (Vektordatenbank) und PostgreSQL unter [Apache-2.0](https://github.com/n8n-io/self-hosted-ai-starter-kit/blob/main/LICENSE) bündelt. Es braucht weder Cloud-Konto noch API-Key: Ein einziger Befehl `docker compose --profile cpu up` (oder ein GPU-spezifisches Profil) startet alle gebündelten Dienste, und der mitgelieferte Demo-Workflow ist ein einfacher Chat mit einem lokalen Ollama-Modell, keine RAG-Pipeline.',
+    leadAnswerBlock: '**Das Self-hosted AI Starter Kit hat seit dem ' + lastUpdate('de') + ' kein Update erhalten und wird möglicherweise nicht mehr gepflegt.** Es ist eine kostenlose Docker-Compose-Vorlage von n8n, die n8n, Ollama, Qdrant und PostgreSQL zu einem lokalen KI-Stack bündelt, gestartet mit einem einzigen `docker compose`-Befehl.',
     quickAnswerTop: {
       de: {
         question: 'Was ist das Self-hosted AI Starter Kit und was ist enthalten?',
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'stack IA locale docker',
       'n8n LLM local RAG',
     ],
-    leadAnswerBlock: '**Avertissement : le Self-hosted AI Starter Kit n\'a reçu aucune mise à jour depuis le ' + lastUpdate('fr') + ' (la correction d\'un lien du README) et n\'est peut-être plus maintenu — vérifiez le dépôt avant de vous y fier.** C\'est un modèle Docker Compose gratuit et open source de n8n ([github.com/n8n-io/self-hosted-ai-starter-kit](https://github.com/n8n-io/self-hosted-ai-starter-kit)) qui réunit n8n (automatisation de workflows, plus de 400 intégrations), Ollama (inférence locale de LLM), Qdrant (base de données vectorielle) et PostgreSQL sous [Apache-2.0](https://github.com/n8n-io/self-hosted-ai-starter-kit/blob/main/LICENSE). Aucun compte cloud ni clé API n\'est nécessaire : une seule commande `docker compose --profile cpu up` (ou un profil GPU) démarre tous les services, et le workflow de démo chargé est un simple chat avec un modèle Ollama local, pas un pipeline RAG.',
+    leadAnswerBlock: '**Le Self-hosted AI Starter Kit n\'a reçu aucune mise à jour depuis le ' + lastUpdate('fr') + ' et n\'est peut-être plus maintenu.** C\'est un modèle Docker Compose gratuit de n8n qui réunit n8n, Ollama, Qdrant et PostgreSQL en une pile IA locale, démarrée par une seule commande `docker compose`.',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que le Self-hosted AI Starter Kit et que contient-il ?',
@@ -931,7 +931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'stack de IA local docker',
       'n8n LLM local RAG',
     ],
-    leadAnswerBlock: '**Advertencia: el Self-hosted AI Starter Kit no ha recibido ninguna actualización desde el ' + lastUpdate('es') + ' (la corrección de un enlace del README), por lo que puede estar sin mantenimiento — revisa el repositorio antes de depender de él.** Es una plantilla Docker Compose gratuita y de código abierto de n8n ([github.com/n8n-io/self-hosted-ai-starter-kit](https://github.com/n8n-io/self-hosted-ai-starter-kit)) que reúne n8n (automatización de workflows con más de 400 integraciones), Ollama (inferencia local de LLM), Qdrant (base de datos vectorial) y PostgreSQL bajo [Apache-2.0](https://github.com/n8n-io/self-hosted-ai-starter-kit/blob/main/LICENSE). No necesita cuenta en la nube ni clave de API: un solo `docker compose --profile cpu up` (o un perfil de GPU) inicia todos los servicios, y el workflow de demostración que carga es un chat sencillo con un modelo local de Ollama, no un pipeline RAG.',
+    leadAnswerBlock: '**El Self-hosted AI Starter Kit no recibe actualizaciones desde el ' + lastUpdate('es') + ' y puede estar sin mantenimiento.** Es una plantilla Docker Compose gratuita de n8n que reúne n8n, Ollama, Qdrant y PostgreSQL en una pila de IA local, iniciada con un solo comando `docker compose`.',
     quickAnswerTop: {
       es: {
         question: '¿Qué es el Self-hosted AI Starter Kit y qué incluye?',
@@ -1228,7 +1228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'stack de IA local docker',
       'n8n LLM local RAG',
     ],
-    leadAnswerBlock: '**Aviso: o Self-hosted AI Starter Kit não recebe nenhuma atualização desde ' + lastUpdate('pt') + ' (a correção de um link do README) e pode estar sem manutenção — confira o repositório antes de depender dele.** É um template Docker Compose gratuito e de código aberto da n8n ([github.com/n8n-io/self-hosted-ai-starter-kit](https://github.com/n8n-io/self-hosted-ai-starter-kit)) que reúne n8n (automação de workflows com mais de 400 integrações), Ollama (inferência local de LLM), Qdrant (banco de dados vetorial) e PostgreSQL sob [Apache-2.0](https://github.com/n8n-io/self-hosted-ai-starter-kit/blob/main/LICENSE). Não exige conta na nuvem nem chave de API: um único `docker compose --profile cpu up` (ou um perfil de GPU) inicia todos os serviços, e o workflow de demonstração carregado é um chat simples com um modelo local do Ollama, não um pipeline RAG.',
+    leadAnswerBlock: '**O Self-hosted AI Starter Kit não recebe atualizações desde ' + lastUpdate('pt') + ' e pode estar sem manutenção.** É um template Docker Compose gratuito da n8n que reúne n8n, Ollama, Qdrant e PostgreSQL em uma stack de IA local, iniciada com um único comando `docker compose`.',
     quickAnswerTop: {
       pt: {
         question: 'O que é o Self-hosted AI Starter Kit e o que ele inclui?',
@@ -1513,7 +1513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Self-hosted AI Starter Kit',
     title: 'Self-Hosted AI Starter Kitレビュー: n8n + Ollama + Qdrantを1つのComposeファイルで',
     seoTitle: 'n8n AI Starter Kitレビュー：導入と制限',
-    intro: 'Self-hosted AI Starter Kit（[github.com/n8n-io/self-hosted-ai-starter-kit](https://github.com/n8n-io/self-hosted-ai-starter-kit)）は、[n8n](https://n8n.io)がキュレーションするオープンソースのDocker Composeテンプレートです。n8nのワークフロー自動化プラットフォーム、ローカルモデル推論用の[Ollama](https://ollama.com)、ベクトルデータベースの[Qdrant](https://qdrant.tech)、そしてPostgreSQLを1つの`docker compose up`コマンドにまとめています。これは単体のアプリケーションではなく、クラウド依存なしでローカルAIエージェント、RAGパイプライン、自動化ワークフローを構築するための、あらかじめ配線済みの出発点です。このレビューでは、実際に何がバンドルされているか、インストール方法、そしてこれらのツールを個別に運用する場合との比較を扱います。',
+    intro: 'Self-hosted AI Starter Kit（[github.com/n8n-io/self-hosted-ai-starter-kit](https://github.com/n8n-io/self-hosted-ai-starter-kit)）は、[n8n](https://n8n.io)がキュレーションするオープンソースのDocker Composeテンプレートで、[Ollama](https://ollama.com)、[Qdrant](https://qdrant.tech)、PostgreSQLをまとめています。単体のアプリではなく、クラウド依存なしでローカルAIエージェントやRAGパイプラインを構築するための出発点です。',
     metaDescription: 'n8n公式のSelf-hosted AI Starter Kitが含む構成（n8n、Ollama、Qdrant、PostgreSQL）、導入手順、デモの内容、n8nが示す「テスト用」の注記を解説します。',
     readTime: '12分で読める',
     targetKeywords: [
@@ -1525,7 +1525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルAIスタック docker',
       'n8n ローカルLLM RAG',
     ],
-    leadAnswerBlock: '**警告：Self-hosted AI Starter Kitは' + lastUpdate('ja') + '以降、更新されていません（READMEのリンク修正のみ）。メンテナンスされていない可能性があるため、利用前にリポジトリを確認してください。** n8nが提供する無料のオープンソースDocker Composeテンプレート（[github.com/n8n-io/self-hosted-ai-starter-kit](https://github.com/n8n-io/self-hosted-ai-starter-kit)）で、n8n（400以上の連携を持つワークフロー自動化）、Ollama（ローカルLLM推論）、Qdrant（ベクトルデータベース）、PostgreSQLを[Apache-2.0](https://github.com/n8n-io/self-hosted-ai-starter-kit/blob/main/LICENSE)ライセンスでまとめています。クラウドアカウントもAPIキーも不要で、`docker compose --profile cpu up`（またはGPU用プロファイル）の1コマンドで全サービスが起動します。読み込まれるデモワークフローはローカルのOllamaモデルとの単純なチャットであり、RAGパイプラインではありません。',
+    leadAnswerBlock: '**警告：Self-hosted AI Starter Kitは' + lastUpdate('ja') + '以降更新がなく、メンテナンスされていない可能性があります。** n8n提供の無料Docker Composeテンプレートで、n8n、Ollama、Qdrant、PostgreSQLをまとめたローカルAI環境を`docker compose`の1コマンドで起動できます。',
     quickAnswerTop: {
       ja: {
         question: 'Self-hosted AI Starter Kitとは何で、何が含まれていますか？',
@@ -1822,7 +1822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '本地 AI 技术栈 docker',
       'n8n 本地LLM RAG',
     ],
-    leadAnswerBlock: '**警告：Self-hosted AI Starter Kit自' + lastUpdate('zh') + '以来没有任何更新（仅修复了一个README链接），可能已无人维护——使用前请先查看仓库。** 它是n8n提供的免费开源Docker Compose模板（[github.com/n8n-io/self-hosted-ai-starter-kit](https://github.com/n8n-io/self-hosted-ai-starter-kit)），在[Apache-2.0](https://github.com/n8n-io/self-hosted-ai-starter-kit/blob/main/LICENSE)许可下打包了n8n（支持400多种集成的工作流自动化）、Ollama（本地LLM推理）、Qdrant（向量数据库）和PostgreSQL。它不需要云账号或API密钥：一条`docker compose --profile cpu up`（或GPU专用profile）命令即可启动所有服务，所加载的演示工作流只是与本地Ollama模型的简单对话，并不是RAG流水线。',
+    leadAnswerBlock: '**警告：Self-hosted AI Starter Kit自' + lastUpdate('zh') + '以来没有更新，可能已无人维护。** 这是n8n提供的免费Docker Compose模板，把n8n、Ollama、Qdrant和PostgreSQL打包成本地AI环境，一条`docker compose`命令即可启动。',
     quickAnswerTop: {
       zh: {
         question: 'Self-hosted AI Starter Kit是什么，包含哪些内容？',
@@ -2119,7 +2119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'حزمة ذكاء اصطناعي محلية docker',
       'n8n نموذج لغوي محلي RAG',
     ],
-    leadAnswerBlock: '**تحذير: لم تصدر أي تحديثات لـ Self-hosted AI Starter Kit منذ ' + lastUpdate('ar') + ' (تصحيح رابط في README فقط)، وقد يكون المشروع بلا صيانة — راجع المستودع قبل الاعتماد عليه.** هو قالب Docker Compose مجاني ومفتوح المصدر من n8n ([github.com/n8n-io/self-hosted-ai-starter-kit](https://github.com/n8n-io/self-hosted-ai-starter-kit)) يجمع n8n (أتمتة سير العمل بأكثر من 400 تكامل) وOllama (استدلال LLM محلي) وQdrant (قاعدة بيانات متجهات) وPostgreSQL بترخيص [Apache-2.0](https://github.com/n8n-io/self-hosted-ai-starter-kit/blob/main/LICENSE). لا يحتاج إلى حساب سحابي ولا مفتاح API: أمر واحد هو `docker compose --profile cpu up` (أو ملف تعريف للـ GPU) يشغّل جميع الخدمات، وسير العمل التجريبي المحمَّل مجرد محادثة بسيطة مع نموذج Ollama محلي وليس مسار RAG.',
+    leadAnswerBlock: '**تحذير: لم يتلقَّ Self-hosted AI Starter Kit أي تحديث منذ ' + lastUpdate('ar') + ' وقد يكون بلا صيانة.** هو قالب Docker Compose مجاني من n8n يجمع n8n وOllama وQdrant وPostgreSQL في حزمة ذكاء اصطناعي محلية تُشغَّل بأمر `docker compose` واحد.',
     quickAnswerTop: {
       ar: {
         question: 'ما هو Self-hosted AI Starter Kit، وماذا يشمل؟',
@@ -2416,7 +2416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '로컬 AI 스택 docker',
       'n8n 로컬 LLM RAG',
     ],
-    leadAnswerBlock: '**경고: Self-hosted AI Starter Kit는 ' + lastUpdate('ko') + ' 이후 업데이트가 없으며(README 링크 수정뿐), 유지보수되지 않을 수 있습니다. 의존하기 전에 저장소를 확인하세요.** n8n이 제공하는 무료 오픈소스 Docker Compose 템플릿([github.com/n8n-io/self-hosted-ai-starter-kit](https://github.com/n8n-io/self-hosted-ai-starter-kit))으로, n8n(400개 이상의 통합을 지원하는 워크플로 자동화), Ollama(로컬 LLM 추론), Qdrant(벡터 데이터베이스), PostgreSQL을 [Apache-2.0](https://github.com/n8n-io/self-hosted-ai-starter-kit/blob/main/LICENSE) 라이선스로 묶었습니다. 클라우드 계정이나 API 키가 필요 없으며, `docker compose --profile cpu up`(또는 GPU 프로필) 명령 하나로 모든 서비스가 시작됩니다. 불러오는 데모 워크플로는 로컬 Ollama 모델과 나누는 단순한 채팅이며 RAG 파이프라인이 아닙니다.',
+    leadAnswerBlock: '**경고: Self-hosted AI Starter Kit는 ' + lastUpdate('ko') + ' 이후 업데이트가 없어 유지보수되지 않을 수 있습니다.** n8n이 제공하는 무료 Docker Compose 템플릿으로, n8n, Ollama, Qdrant, PostgreSQL을 로컬 AI 스택 하나로 묶어 `docker compose` 명령 하나로 시작합니다.',
     quickAnswerTop: {
       ko: {
         question: 'Self-hosted AI Starter Kit는 무엇이며 무엇을 포함하고 있습니까?',
