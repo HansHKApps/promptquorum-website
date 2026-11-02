@@ -397,7 +397,7 @@
       ]
     },
     "best-local-llms-2026": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -415,11 +415,11 @@
       "images": [
         {
           "url": "/images/best-local-llms-2026-ranked-comparison-hero-en.webp",
-          "title": "Top 5 local LLMs ranked for 2026: Qwen3.8-27B leads overall at 89.2% GPQA Diamond and ~24 GB RAM, followed by Gemma 4 26B-A4B (89% AIME, ~15 GB), Qwen2.5-Coder 7B (88% HumanEval, ~5 GB), Phi-4-mini (~2.5 GB), and Gemma 4 E2B (~2 GB)."
+          "title": "Top 5 local LLMs ranked for 2026: Qwen3.8-27B leads overall at 89.2% GPQA Diamond and ~24 GB RAM, followed by Gemma 4 26B-A4B (88.3% AIME, 16–19 GB), Qwen2.5-Coder 7B (88% HumanEval, ~5 GB), Phi-4-mini (~2.5 GB), and Gemma 4 E2B (~2 GB)."
         },
         {
           "url": "/images/best-local-llms-2026-ram-tier-picker-hero-en.webp",
-          "title": "RAM tier picker for local LLMs: Gemma 4 E2B fits ~2 GB, Phi-4-mini ~2.5 GB, Qwen2.5-Coder 7B ~5 GB, Gemma 4 26B-A4B ~15 GB, and Qwen3.8-27B needs ~24 GB."
+          "title": "RAM tier picker for local LLMs: Gemma 4 E2B fits ~2 GB, Phi-4-mini ~2.5 GB, Qwen2.5-Coder 7B ~5 GB, Gemma 4 26B-A4B 16–19 GB, and Qwen3.8-27B needs ~24 GB."
         }
       ]
     },
@@ -884,7 +884,7 @@
       "images": []
     },
     "open-webui-review": {
-      "dateModified": "2026-10-09",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -1292,8 +1292,8 @@
       "images": []
     },
     "local-llm-hardware-guide": {
-      "dateModified": "2026-10-17",
-      "lastFactChecked": "2026-09-01",
+      "dateModified": "2026-11-02",
+      "lastFactChecked": "2026-11-02",
       "publishDate": "2026-04-04",
       "hasSections": true,
       "langs": [
@@ -1314,7 +1314,7 @@
         },
         {
           "url": "/images/gpu-tier-comparison-en.svg",
-          "title": "GPU tier recommendations (street prices): ~$585 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$880 RTX 5070 (12GB, 14B, 90 tok/s), ~$1,450 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4,300–5,000+ RTX 5090 (32GB, 70B, 200 tok/s), $4,699 DGX Spark (128GB, large MoE). GPU choice matters 10× more than CPU."
+          "title": "GPU tier recommendations (street prices): ~$800 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$880 RTX 5070 (12GB, 14B, 90 tok/s), ~$1,450 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4,300–5,000+ RTX 5090 (32GB, 70B, 200 tok/s), $6,950 DGX Spark (128GB, large MoE). GPU choice matters 10× more than CPU."
         },
         {
           "url": "/images/models-for-16gb-vram-en.svg",
@@ -1338,7 +1338,7 @@
         },
         {
           "url": "/images/mac-hardware-comparison-en.svg",
-          "title": "Mac hardware comparison: 8 GB M-series (3-4B models), M3 Pro 16\" (18GB, 7-8B), Mac mini M6 (32GB, 8-14B, $899), M5 Pro (64GB, 32B, $1,699), M5 Max (128GB, 70B at Q4_K_M ~12-15 tok/sec, $2,499), Mac Studio M5 Ultra (up to 512GB, 70B+/GLM-5.3 capacity, $5,499). 16 GB unified is the comfortable minimum for 7B models on a Mac."
+          "title": "Mac hardware comparison: 8 GB M-series (3-4B models), M3 Pro 16\" (18GB, 7-8B), Mac mini M6 (16–32GB, 8-14B, $899), M5 Pro (64GB, 32B, $1,699), M5 Max (128GB, 70B at Q4_K_M ~12-15 tok/sec, $2,499), Mac Studio M5 Ultra (up to 512GB, 70B+/GLM-5.3 capacity, $5,499). 16 GB unified is the comfortable minimum for 7B models on a Mac."
         },
         {
           "url": "/images/server-vs-consumer-en.svg",
@@ -2960,7 +2960,7 @@
       "images": []
     },
     "apple-silicon-m5-local-llm": {
-      "dateModified": "2026-10-11",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -2987,7 +2987,7 @@
       ]
     },
     "apple-silicon-local-llm-guide-2026": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -3009,7 +3009,7 @@
         },
         {
           "url": "/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-en.webp",
-          "title": "24/7 inference: ~$35/year on Mac Mini M6 vs. ~$400/year on a desktop RTX 4090 -- a 10x difference at $0.15/kWh."
+          "title": "24/7 inference, estimated: ~$35/year on Mac Mini M6 vs. ~$400/year on a desktop RTX 4090 -- roughly 10x at $0.15/kWh (illustrative, not measured)."
         }
       ]
     },
@@ -4231,7 +4231,7 @@
       "images": []
     },
     "prompt-engineering-history": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-03-01",
       "hasSections": true,
@@ -4276,7 +4276,7 @@
       ]
     },
     "ai-hallucinations-how-to-stop": {
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-03-22",
       "hasSections": true,
@@ -4949,8 +4949,8 @@
       "images": []
     },
     "chain-of-thought-prompting": {
-      "dateModified": "2026-08-31",
-      "lastFactChecked": "2026-05-03",
+      "dateModified": "2026-11-02",
+      "lastFactChecked": "2026-11-02",
       "publishDate": "2026-03-26",
       "hasSections": true,
       "langs": [
@@ -4967,8 +4967,8 @@
       "images": []
     },
     "prompt-chaining": {
-      "dateModified": null,
-      "lastFactChecked": null,
+      "dateModified": "2026-11-02",
+      "lastFactChecked": "2026-11-02 — Anthropic workflow description, Claude prompting guide, LangChain documentation and the Wu et al. and Khattab et al. papers re-checked against the primary sources",
       "publishDate": "2026-03-26",
       "hasSections": true,
       "langs": [
@@ -4985,15 +4985,15 @@
       "images": [
         {
           "url": "/images/prompt-chaining-basic-flow-en.svg",
-          "title": "Diagram showing how prompt chaining splits a complex task into sequential LLM calls with intermediate outputs feeding the next step."
+          "title": "Diagram of a prompt chain: a complex task is split into sequential LLM calls, and the output of each step feeds the next."
         },
         {
           "url": "/images/prompt-chaining-patterns-en.svg",
-          "title": "Typical prompt chaining patterns: sequential, branching, and map-reduce workflows used in production LLM pipelines."
+          "title": "Common prompt chaining patterns: sequential, branching and map-reduce workflows."
         },
         {
           "url": "/images/prompt-chaining-example-en.svg",
-          "title": "Worked example of a prompt chain: extract entities, classify intent, then generate a structured response in three LLM steps."
+          "title": "Worked example: extract changes, classify them, then write the changelog in three LLM steps."
         }
       ]
     },
@@ -5034,7 +5034,7 @@
       "images": []
     },
     "self-consistency-prompting": {
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-03-26",
       "hasSections": true,
@@ -5172,7 +5172,7 @@
       ]
     },
     "best-prompt-optimization-tools-teams": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-04-10",
       "hasSections": true,
@@ -7410,8 +7410,8 @@
       ]
     },
     "local-whisper-stt-comparison": {
-      "dateModified": "2026-10-17",
-      "lastFactChecked": "2026-10-17",
+      "dateModified": "2026-11-02",
+      "lastFactChecked": "2026-11-02",
       "publishDate": "2026-05-14",
       "hasSections": true,
       "langs": [
@@ -7428,11 +7428,11 @@
       "images": [
         {
           "url": "/images/local-whisper-stt-comparison-2026-model-sizes-hero-en.webp",
-          "title": "Whisper model sizes tiny to large-v3: WER drops from 7.6% to 2.5% while speed drops from 32x to 1x real-time."
+          "title": "Whisper model sizes shared by whisper.cpp and faster-whisper, from tiny to large-v3."
         },
         {
           "url": "/images/local-whisper-stt-comparison-2026-platform-winner-hero-en.webp",
-          "title": "whisper.cpp hits 10x real-time on Apple M5 Pro via Metal; faster-whisper hits 12x on RTX 4070 via CUDA int8."
+          "title": "whisper.cpp and faster-whisper compared by platform: Apple Silicon, NVIDIA GPU and CPU."
         }
       ]
     },
@@ -7999,7 +7999,7 @@
       "images": []
     },
     "best-web-hosting-2026": {
-      "dateModified": "2026-09-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-08-30",
       "hasSections": true,
@@ -8017,7 +8017,7 @@
       "images": []
     },
     "digitalocean-vs-aws-cloud-for-ai-companies": {
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -8161,7 +8161,7 @@
       "images": []
     },
     "langchain-review": {
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -8665,7 +8665,7 @@
       "images": []
     },
     "best-ai-hr-software-enterprise-2026": {
-      "dateModified": "2026-09-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
       "hasSections": true,
@@ -9192,7 +9192,7 @@
       "images": []
     },
     "us-state-ai-employment-laws-compliance": {
-      "dateModified": "2026-09-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
       "hasSections": true,
@@ -10344,7 +10344,7 @@
       "images": []
     },
     "koboldcpp-review": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
@@ -10776,7 +10776,7 @@
       "images": []
     },
     "automatic1111-review": {
-      "dateModified": "2026-09-06",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
@@ -12882,7 +12882,7 @@
       "images": []
     },
     "opencode-review": {
-      "dateModified": "2026-09-12",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,
@@ -13188,7 +13188,7 @@
       "images": []
     },
     "risuai-review": {
-      "dateModified": "2026-09-12",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,
@@ -13332,7 +13332,7 @@
       "images": []
     },
     "odysseus-review": {
-      "dateModified": "2026-09-12",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,
@@ -13656,7 +13656,7 @@
       "images": []
     },
     "stable-diffusion-forge-review": {
-      "dateModified": "2026-09-19",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-19",
       "hasSections": true,

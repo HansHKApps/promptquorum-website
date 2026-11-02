@@ -11,9 +11,49 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "apple-silicon-local-llm-guide-2026",
+        "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
+        "url": "/local-llms/apple-silicon-local-llm-guide-2026",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-m5-local-llm",
+        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
+        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-local-llms-2026",
+        "title": "Best Local LLMs in 2026: Qwen3.8-27B, Gemma 4, and Phi-4-mini Ranked",
+        "url": "/local-llms/best-local-llms-2026",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-llm-hardware-guide",
+        "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
+        "url": "/local-llms/local-llm-hardware-guide",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "nextchat-review",
         "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
         "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "open-webui-review",
+        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
+        "url": "/local-llms/open-webui-review",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -40,46 +80,6 @@
         "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
         "dateModified": "2026-11-02",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "facet-review",
-        "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
-        "url": "/power-local-llm/facet-review",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
-        "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
-        "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-agents-with-mcp",
-        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
-        "url": "/power-local-llm/local-ai-agents-with-mcp",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "pydantic-ai-review",
-        "title": "Pydantic AI Review: Features, Structured Outputs, Alternatives",
-        "url": "/power-local-llm/pydantic-ai-review",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "self-hosted-ai-starter-kit-review",
-        "title": "Self-Hosted AI Starter Kit Review: n8n + Ollama + Qdrant in One Compose File",
-        "url": "/power-local-llm/self-hosted-ai-starter-kit-review",
-        "dateModified": "2026-11-02",
-        "tier": "about"
       }
     ],
     "totalCount": 341,
@@ -96,10 +96,58 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-local-llm-guide-2026",
+        "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
+        "url": "/local-llms/apple-silicon-local-llm-guide-2026",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-m5-local-llm",
+        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
+        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-llm-hardware-guide",
+        "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
+        "url": "/local-llms/local-llm-hardware-guide",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "open-webui-review",
+        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
+        "url": "/local-llms/open-webui-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
         "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
         "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "koboldcpp-review",
+        "title": "KoboldCpp Review: One File, No Install, Built for Roleplay",
+        "url": "/power-local-llm/koboldcpp-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "odysseus-review",
+        "title": "Odysseus Review: The Self-Hosted AI Workspace",
+        "url": "/power-local-llm/odysseus-review",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -118,57 +166,9 @@
         "url": "/power-local-llm/layla-review",
         "dateModified": "2026-10-30",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "70b-models-consumer-hardware",
-        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
-        "url": "/local-llms/70b-models-consumer-hardware",
-        "dateModified": "2026-10-29",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "memoryai-review",
-        "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
-        "url": "/power-local-llm/memoryai-review",
-        "dateModified": "2026-10-28",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "chaterminal-review",
-        "title": "Mobile LM Server Review: Android App for Local Models and a Phone-Hosted API",
-        "url": "/power-local-llm/chaterminal-review",
-        "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "gpt4all-review",
-        "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
-        "url": "/power-local-llm/gpt4all-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llama-app-review",
-        "title": "Llama App Review: llama.cpp Desktop App for Mac and Windows",
-        "url": "/power-local-llm/llama-app-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
       }
     ],
-    "totalCount": 183,
+    "totalCount": 184,
     "capped": true
   },
   "vLLM": {
@@ -182,10 +182,26 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "open-webui-review",
+        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
+        "url": "/local-llms/open-webui-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
         "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
         "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "odysseus-review",
+        "title": "Odysseus Review: The Self-Hosted AI Workspace",
+        "url": "/power-local-llm/odysseus-review",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -234,22 +250,6 @@
         "slug": "litellm-review",
         "title": "LiteLLM Review: One Gateway for 100+ LLM Provider APIs",
         "url": "/power-local-llm/litellm-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-10-24",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
@@ -630,7 +630,7 @@
         "slug": "koboldcpp-review",
         "title": "KoboldCpp Review: One File, No Install, Built for Roleplay",
         "url": "/power-local-llm/koboldcpp-review",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -861,6 +861,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "apple-silicon-local-llm-guide-2026",
+        "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
+        "url": "/local-llms/apple-silicon-local-llm-guide-2026",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "nextchat-review",
         "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
         "url": "/local-llms/nextchat-review",
@@ -900,6 +908,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "opencode-review",
+        "title": "OpenCode Review: The Open-Source Terminal Coding Agent",
+        "url": "/power-local-llm/opencode-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
@@ -914,25 +930,9 @@
         "url": "/power-local-llm/best-local-llm-apps-mac",
         "dateModified": "2026-10-31",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-app-alternatives",
-        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
-        "url": "/power-local-llm/local-llm-app-alternatives",
-        "dateModified": "2026-10-31",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-30",
-        "tier": "about"
       }
     ],
-    "totalCount": 168,
+    "totalCount": 170,
     "capped": true
   },
   "Atomic Chat": {
@@ -1164,6 +1164,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "open-webui-review",
+        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
+        "url": "/local-llms/open-webui-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
         "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
@@ -1209,14 +1217,6 @@
         "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
         "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
         "dateModified": "2026-10-16",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-10-09",
         "tier": "about"
       },
       {
@@ -1307,17 +1307,17 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "gpt4all-review",
-        "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
-        "url": "/power-local-llm/gpt4all-review",
-        "dateModified": "2026-10-24",
+        "slug": "odysseus-review",
+        "title": "Odysseus Review: The Self-Hosted AI Workspace",
+        "url": "/power-local-llm/odysseus-review",
+        "dateModified": "2026-11-02",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "slug": "gpt4all-review",
+        "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
+        "url": "/power-local-llm/gpt4all-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
       }
@@ -1353,18 +1353,18 @@
       },
       {
         "cluster": "local-llms",
-        "slug": "best-local-llm-frontends",
-        "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
-        "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-10-31",
+        "slug": "open-webui-review",
+        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
+        "url": "/local-llms/open-webui-review",
+        "dateModified": "2026-11-02",
         "tier": "mentioned"
       },
       {
         "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-10-09",
+        "slug": "best-local-llm-frontends",
+        "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
+        "url": "/local-llms/best-local-llm-frontends",
+        "dateModified": "2026-10-31",
         "tier": "mentioned"
       },
       {
@@ -1423,6 +1423,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "risuai-review",
+        "title": "RisuAI Review: Open-Source Roleplay Chat Client",
+        "url": "/power-local-llm/risuai-review",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "asiden-review",
         "title": "Asiden Review: Windows 11 AI Desktop Companion With Local and Optional Cloud AI",
         "url": "/power-local-llm/asiden-review",
@@ -1435,14 +1443,6 @@
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
         "dateModified": "2026-09-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "risuai-review",
-        "title": "RisuAI Review: Open-Source Roleplay Chat Client",
-        "url": "/power-local-llm/risuai-review",
-        "dateModified": "2026-09-12",
         "tier": "mentioned"
       },
       {
@@ -2076,7 +2076,7 @@
         "slug": "open-webui-review",
         "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
         "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-10-09",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -2166,19 +2166,19 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "open-webui-review",
+        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
+        "url": "/local-llms/open-webui-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-llm-app-alternatives",
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
         "dateModified": "2026-10-31",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-10-09",
         "tier": "about"
       },
       {
@@ -2207,6 +2207,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "odysseus-review",
+        "title": "Odysseus Review: The Self-Hosted AI Workspace",
+        "url": "/power-local-llm/odysseus-review",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "obscurify-review",
         "title": "Obscurify.ai Review: Anonymous AI Chat With an Optional Local Mode",
         "url": "/power-local-llm/obscurify-review",
@@ -2227,14 +2235,6 @@
         "title": "web-search-mcp Review: Web Search Tool Access for Local LLMs",
         "url": "/power-local-llm/web-search-mcp-review",
         "dateModified": "2026-09-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "odysseus-review",
-        "title": "Odysseus Review: The Self-Hosted AI Workspace",
-        "url": "/power-local-llm/odysseus-review",
-        "dateModified": "2026-09-12",
         "tier": "mentioned"
       }
     ],
@@ -2288,7 +2288,7 @@
         "slug": "risuai-review",
         "title": "RisuAI Review: Open-Source Roleplay Chat Client",
         "url": "/power-local-llm/risuai-review",
-        "dateModified": "2026-09-12",
+        "dateModified": "2026-11-02",
         "tier": "mentioned"
       },
       {
@@ -2339,6 +2339,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "risuai-review",
+        "title": "RisuAI Review: Open-Source Roleplay Chat Client",
+        "url": "/power-local-llm/risuai-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "agnai-review",
         "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
         "url": "/power-local-llm/agnai-review",
@@ -2359,14 +2367,6 @@
         "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
         "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
         "dateModified": "2026-10-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "risuai-review",
-        "title": "RisuAI Review: Open-Source Roleplay Chat Client",
-        "url": "/power-local-llm/risuai-review",
-        "dateModified": "2026-09-12",
         "tier": "about"
       },
       {
@@ -3143,6 +3143,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "opencode-review",
+        "title": "OpenCode Review: The Open-Source Terminal Coding Agent",
+        "url": "/power-local-llm/opencode-review",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "little-coder-review",
         "title": "little-coder Review: A Coding Agent CLI Built for Small Local Models",
         "url": "/power-local-llm/little-coder-review",
@@ -3154,14 +3162,6 @@
         "slug": "atomic-agent-review",
         "title": "Atomic Agent Review: Local AI Agent CLI, Free & MIT-Licensed",
         "url": "/power-local-llm/atomic-agent-review",
-        "dateModified": "2026-09-12",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "opencode-review",
-        "title": "OpenCode Review: The Open-Source Terminal Coding Agent",
-        "url": "/power-local-llm/opencode-review",
         "dateModified": "2026-09-12",
         "tier": "mentioned"
       }
@@ -3319,9 +3319,9 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "gpt-engineer-review",
-        "title": "GPT Engineer Review: Archived on GitHub, App Now Lovable",
-        "url": "/power-local-llm/gpt-engineer-review",
+        "slug": "best-ai-hr-software-enterprise-2026",
+        "title": "Best AI-Powered HR Software for Enterprises 2026: Privacy-First Options Compared",
+        "url": "/power-local-llm/best-ai-hr-software-enterprise",
         "dateModified": "2026-11-02",
         "tier": "mentioned"
       }
@@ -3593,6 +3593,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "odysseus-review",
+        "title": "Odysseus Review: The Self-Hosted AI Workspace",
+        "url": "/power-local-llm/odysseus-review",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "localghost-review",
         "title": "LocalGhost Review: A Personal AI Server You Host Yourself",
         "url": "/power-local-llm/localghost-review",
@@ -3629,14 +3637,6 @@
         "title": "Surf Review: Deta's Open-Source AI Notebook",
         "url": "/power-local-llm/surf-review",
         "dateModified": "2026-09-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "siyuan-review",
-        "title": "SiYuan Review: The Privacy-First, Block-Based Knowledge Base",
-        "url": "/power-local-llm/siyuan-review",
-        "dateModified": "2026-09-18",
         "tier": "mentioned"
       }
     ],
@@ -3975,9 +3975,9 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "self-hosted-ai-starter-kit-review",
-        "title": "Self-Hosted AI Starter Kit Review: n8n + Ollama + Qdrant in One Compose File",
-        "url": "/power-local-llm/self-hosted-ai-starter-kit-review",
+        "slug": "langchain-review",
+        "title": "LangChain Review: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/langchain-review",
         "dateModified": "2026-11-02",
         "tier": "mentioned"
       },
@@ -3986,7 +3986,15 @@
         "slug": "local-whisper-stt-comparison",
         "title": "Whisper.cpp vs faster-whisper 2026: Local STT Benchmarks, Setup & GPU Acceleration",
         "url": "/power-local-llm/local-whisper-stt-comparison",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "self-hosted-ai-starter-kit-review",
+        "title": "Self-Hosted AI Starter Kit Review: n8n + Ollama + Qdrant in One Compose File",
+        "url": "/power-local-llm/self-hosted-ai-starter-kit-review",
+        "dateModified": "2026-11-02",
         "tier": "mentioned"
       },
       {
@@ -4010,14 +4018,6 @@
         "slug": "crewai-review",
         "title": "CrewAI Review: Features, Pricing, Alternatives",
         "url": "/power-local-llm/crewai-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "langchain-review",
-        "title": "LangChain Review: Features, Pricing, Alternatives",
-        "url": "/power-local-llm/langchain-review",
         "dateModified": "2026-09-05",
         "tier": "mentioned"
       },
@@ -4148,7 +4148,7 @@
         "slug": "langchain-review",
         "title": "LangChain Review: Features, Pricing, Alternatives",
         "url": "/power-local-llm/langchain-review",
-        "dateModified": "2026-09-05",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -4535,6 +4535,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "langchain-review",
+        "title": "LangChain Review: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/langchain-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "mission-control-review",
         "title": "Mission Control Review: A Self-Hosted Control Plane for AI Agents",
         "url": "/power-local-llm/mission-control-review",
@@ -4547,14 +4555,6 @@
         "title": "Microsoft Agent Framework Review: Features, Pricing, Alternatives",
         "url": "/power-local-llm/microsoft-agent-framework-review",
         "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "langchain-review",
-        "title": "LangChain Review: Features, Pricing, Alternatives",
-        "url": "/power-local-llm/langchain-review",
-        "dateModified": "2026-09-05",
         "tier": "about"
       },
       {
@@ -4798,7 +4798,7 @@
         "slug": "opencode-review",
         "title": "OpenCode Review: The Open-Source Terminal Coding Agent",
         "url": "/power-local-llm/opencode-review",
-        "dateModified": "2026-09-12",
+        "dateModified": "2026-11-02",
         "tier": "mentioned"
       }
     ],
@@ -5093,6 +5093,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-whisper-stt-comparison",
+        "title": "Whisper.cpp vs faster-whisper 2026: Local STT Benchmarks, Setup & GPU Acceleration",
+        "url": "/power-local-llm/local-whisper-stt-comparison",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "buzz-captions-review",
         "title": "Buzz Review: Free Offline Whisper Transcription and Captions",
         "url": "/power-local-llm/buzz-captions-review",
@@ -5120,14 +5128,6 @@
         "slug": "local-multimodal-pipeline-voice-vision-text",
         "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
         "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-whisper-stt-comparison",
-        "title": "Whisper.cpp vs faster-whisper 2026: Local STT Benchmarks, Setup & GPU Acceleration",
-        "url": "/power-local-llm/local-whisper-stt-comparison",
         "dateModified": "2026-10-17",
         "tier": "about"
       },
@@ -5182,7 +5182,7 @@
         "slug": "local-whisper-stt-comparison",
         "title": "Whisper.cpp vs faster-whisper 2026: Local STT Benchmarks, Setup & GPU Acceleration",
         "url": "/power-local-llm/local-whisper-stt-comparison",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -6808,10 +6808,34 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-m5-local-llm",
+        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
+        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "automatic1111-review",
+        "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
+        "url": "/power-local-llm/automatic1111-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "comfyui-review",
         "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
         "url": "/power-local-llm/comfyui-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "stable-diffusion-forge-review",
+        "title": "Stable Diffusion WebUI Forge Review: Faster, Lower-VRAM AUTOMATIC1111 Fork",
+        "url": "/power-local-llm/stable-diffusion-forge-review",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -6854,30 +6878,6 @@
         "url": "/local-llms/cloud-gpu-rental-comparison-2026",
         "dateModified": "2026-10-16",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-m5-local-llm",
-        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
-        "url": "/local-llms/apple-silicon-m5-local-llm",
-        "dateModified": "2026-10-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "draw-things-review",
-        "title": "Draw Things Review: Local-First Image AI with Optional Cloud",
-        "url": "/power-local-llm/draw-things-review",
-        "dateModified": "2026-10-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-geetmark-review",
-        "title": "Local AI: Offline Chat & Image Review: Free Android App with Stable Diffusion and Prompt Toolkits",
-        "url": "/power-local-llm/local-ai-geetmark-review",
-        "dateModified": "2026-10-09",
-        "tier": "about"
       }
     ],
     "totalCount": 35,
@@ -6890,6 +6890,14 @@
         "slug": "comfyui-review",
         "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
         "url": "/power-local-llm/comfyui-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "automatic1111-review",
+        "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
+        "url": "/power-local-llm/automatic1111-review",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -6956,14 +6964,6 @@
         "url": "/power-local-llm/dreamserver-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "automatic1111-review",
-        "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
-        "url": "/power-local-llm/automatic1111-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
     "totalCount": 24,
@@ -6976,7 +6976,7 @@
         "slug": "automatic1111-review",
         "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
         "url": "/power-local-llm/automatic1111-review",
-        "dateModified": "2026-09-06",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -6984,6 +6984,14 @@
         "slug": "comfyui-review",
         "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
         "url": "/power-local-llm/comfyui-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "stable-diffusion-forge-review",
+        "title": "Stable Diffusion WebUI Forge Review: Faster, Lower-VRAM AUTOMATIC1111 Fork",
+        "url": "/power-local-llm/stable-diffusion-forge-review",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -7017,14 +7025,6 @@
         "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
         "url": "/power-local-llm/local-llm-images-video-compared",
         "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "stable-diffusion-forge-review",
-        "title": "Stable Diffusion WebUI Forge Review: Faster, Lower-VRAM AUTOMATIC1111 Fork",
-        "url": "/power-local-llm/stable-diffusion-forge-review",
-        "dateModified": "2026-09-19",
         "tier": "about"
       },
       {
@@ -7081,6 +7081,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "automatic1111-review",
+        "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
+        "url": "/power-local-llm/automatic1111-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "comfyui-review",
         "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
         "url": "/power-local-llm/comfyui-review",
@@ -7105,14 +7113,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "automatic1111-review",
-        "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
-        "url": "/power-local-llm/automatic1111-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "controlnet-review",
         "title": "ControlNet Review: Structural Control for Stable Diffusion",
         "url": "/power-local-llm/controlnet-review",
@@ -7129,18 +7129,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "draw-things-review",
-        "title": "Draw Things Review: Local-First Image AI with Optional Cloud",
-        "url": "/power-local-llm/draw-things-review",
-        "dateModified": "2026-10-09",
+        "slug": "stable-diffusion-forge-review",
+        "title": "Stable Diffusion WebUI Forge Review: Faster, Lower-VRAM AUTOMATIC1111 Fork",
+        "url": "/power-local-llm/stable-diffusion-forge-review",
+        "dateModified": "2026-11-02",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "stable-diffusion-forge-review",
-        "title": "Stable Diffusion WebUI Forge Review: Faster, Lower-VRAM AUTOMATIC1111 Fork",
-        "url": "/power-local-llm/stable-diffusion-forge-review",
-        "dateModified": "2026-09-19",
+        "slug": "draw-things-review",
+        "title": "Draw Things Review: Local-First Image AI with Optional Cloud",
+        "url": "/power-local-llm/draw-things-review",
+        "dateModified": "2026-10-09",
         "tier": "mentioned"
       },
       {
@@ -7189,10 +7189,10 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-images-video-compared",
-        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-        "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
+        "slug": "automatic1111-review",
+        "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
+        "url": "/power-local-llm/automatic1111-review",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -7200,15 +7200,15 @@
         "slug": "stable-diffusion-forge-review",
         "title": "Stable Diffusion WebUI Forge Review: Faster, Lower-VRAM AUTOMATIC1111 Fork",
         "url": "/power-local-llm/stable-diffusion-forge-review",
-        "dateModified": "2026-09-19",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "automatic1111-review",
-        "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
-        "url": "/power-local-llm/automatic1111-review",
-        "dateModified": "2026-09-06",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -7895,6 +7895,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "risuai-review",
+        "title": "RisuAI Review: Open-Source Roleplay Chat Client",
+        "url": "/power-local-llm/risuai-review",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "swerve-ai-review",
         "title": "Swerve Review: AI Story and Character Chat for iPhone",
         "url": "/power-local-llm/swerve-ai-review",
@@ -7916,14 +7924,6 @@
         "url": "/power-local-llm/local-llm-prompts-for-fiction-writers",
         "dateModified": "2026-10-26",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "risuai-review",
-        "title": "RisuAI Review: Open-Source Roleplay Chat Client",
-        "url": "/power-local-llm/risuai-review",
-        "dateModified": "2026-09-12",
-        "tier": "mentioned"
       }
     ],
     "totalCount": 11,
@@ -7936,7 +7936,7 @@
         "slug": "risuai-review",
         "title": "RisuAI Review: Open-Source Roleplay Chat Client",
         "url": "/power-local-llm/risuai-review",
-        "dateModified": "2026-09-12",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -8364,7 +8364,7 @@
         "slug": "opencode-review",
         "title": "OpenCode Review: The Open-Source Terminal Coding Agent",
         "url": "/power-local-llm/opencode-review",
-        "dateModified": "2026-09-12",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -8646,7 +8646,7 @@
         "slug": "odysseus-review",
         "title": "Odysseus Review: The Self-Hosted AI Workspace",
         "url": "/power-local-llm/odysseus-review",
-        "dateModified": "2026-09-12",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -11734,6 +11734,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-m5-local-llm",
+        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
+        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-mac",
         "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
@@ -11763,14 +11771,6 @@
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
         "dateModified": "2026-10-24",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-m5-local-llm",
-        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
-        "url": "/local-llms/apple-silicon-m5-local-llm",
-        "dateModified": "2026-10-11",
         "tier": "about"
       },
       {
@@ -11895,6 +11895,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "apple-silicon-m5-local-llm",
+        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
+        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "best-vector-database-2026",
         "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
         "url": "/local-llms/best-vector-database",
@@ -11919,6 +11927,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "open-webui-review",
+        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
+        "url": "/local-llms/open-webui-review",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "page-assist-review",
         "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
         "url": "/local-llms/page-assist-review",
@@ -11935,38 +11951,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "automatic1111-review",
+        "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
+        "url": "/power-local-llm/automatic1111-review",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "babyagi-review-autonomous-agent",
         "title": "BabyAGI: What the First AI Agent Became",
         "url": "/power-local-llm/babyagi-review-autonomous-agent",
         "dateModified": "2026-11-02",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
-        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
-        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
-        "dateModified": "2026-11-02",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "facet-review",
-        "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
-        "url": "/power-local-llm/facet-review",
-        "dateModified": "2026-11-02",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "gpt-engineer-review",
-        "title": "GPT Engineer Review: Archived on GitHub, App Now Lovable",
-        "url": "/power-local-llm/gpt-engineer-review",
-        "dateModified": "2026-11-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 247,
+    "totalCount": 248,
     "capped": true
   },
   "Qdrant": {
@@ -12236,7 +12236,7 @@
         "slug": "stable-diffusion-forge-review",
         "title": "Stable Diffusion WebUI Forge Review: Faster, Lower-VRAM AUTOMATIC1111 Fork",
         "url": "/power-local-llm/stable-diffusion-forge-review",
-        "dateModified": "2026-09-19",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -12252,7 +12252,7 @@
         "slug": "automatic1111-review",
         "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
         "url": "/power-local-llm/automatic1111-review",
-        "dateModified": "2026-09-06",
+        "dateModified": "2026-11-02",
         "tier": "mentioned"
       }
     ],
@@ -12699,6 +12699,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "us-state-ai-employment-laws-compliance",
+        "title": "US State AI Employment Laws: What Actually Applies to Your Hiring Process",
+        "url": "/power-local-llm/us-state-ai-employment-laws-compliance",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "shadow-ai-controls-by-company-size",
         "title": "Shadow AI: Which Controls Actually Fit Your Company Size",
         "url": "/power-local-llm/shadow-ai-controls-by-company-size",
@@ -12718,14 +12726,6 @@
         "slug": "ai-generated-content-ip-risk",
         "title": "AI-Generated Content and IP Risk: What You Actually Own, Infringe, and Leak",
         "url": "/power-local-llm/ai-generated-content-ip-risk",
-        "dateModified": "2026-09-03",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "us-state-ai-employment-laws-compliance",
-        "title": "US State AI Employment Laws: What Actually Applies to Your Hiring Process",
-        "url": "/power-local-llm/us-state-ai-employment-laws-compliance",
         "dateModified": "2026-09-03",
         "tier": "mentioned"
       }

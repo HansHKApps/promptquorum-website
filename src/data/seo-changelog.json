@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 0.00004600239212439047,
+      "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
   },
@@ -18750,5 +18750,1342 @@
       "t14": "2026-11-16",
       "t28": "2026-11-30"
     }
+  },
+  {
+    "id": "64269657-9425-4f7b-8a4a-8e7eb93c68fd",
+    "slug": "/local-llms/best-local-llms-2026",
+    "date": "2026-11-02T14:24:37.051Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Best local LLMs 2026: Qwen3.8-27B wins overall (89.2% GPQA Diamond, 24 GB RAM, vision-language). Gemma 4 26B-A4B for reasoning. Qwen2.5-Coder 7B for code. Phi-4-mini for CPU-only.",
+        "new": "Best local LLMs 2026 ranked: Qwen3.8-27B is the best 27B model (89.2% GPQA Diamond, 24 GB). Gemma 4 26B-A4B for reasoning, Qwen2.5-Coder 7B for code."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: query-adapted.",
+    "queries": [
+      "best 27b llm",
+      "best 27b models",
+      "gemma 4 26b vs qwen3.8 27b",
+      "best local llm 2026"
+    ],
+    "baseline": {
+      "position": 6.26,
+      "impressions": 14029,
+      "clicks": 40,
+      "ctr": 0.002851236723929004,
+      "period": "28d to 2026-11-01 (EN URL)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b6e753ce-9028-4b99-a17c-3926cca137a7",
+    "slug": "/de/local-llms/best-local-llms-2026",
+    "date": "2026-11-02T14:24:37.154Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Beste lokale LLMs 2026: Qwen3.8-27B, Gemma 4, Phi-4-mini",
+        "new": "Beste lokale LLMs 2026 im Vergleich: Qwen3.8-27B, Gemma 4"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Beste lokale LLMs 2026: Qwen3.8-27B gewinnt insgesamt (89.2% GPQA Diamond, 24 GB RAM). Gemma 4 26B-A4B für Reasoning. Qwen2.5-Coder 7B für Code. Phi-4-mini für CPU-only.",
+        "new": "Beste lokale LLMs 2026 im Vergleich: Qwen3.8-27B gewinnt (89.2% GPQA Diamond, 24 GB). Gemma 4 26B-A4B für Reasoning, Qwen2.5-Coder 7B für Code."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: query-adapted. No per-locale 28d baseline pulled for this entry.",
+    "queries": [
+      "beste lokale llm",
+      "bestes lokales llm",
+      "lokale llms vergleich",
+      "lokale ki modelle vergleich"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "87ff836c-9535-4ab4-8746-1151dc9f7816",
+    "slug": "/fr/local-llms/best-local-llms-2026",
+    "date": "2026-11-02T14:24:37.259Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Meilleurs LLMs locaux 2026 : Qwen3.8-27B, Gemma 4, Phi-4-mini",
+        "new": "Meilleur LLM local 2026 : Qwen3.8-27B, Gemma 4, Phi-4-mini"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Meilleurs LLMs locaux 2026 : Qwen3.8-27B remporte le global (89,2 % GPQA Diamond, 24 GB RAM). Gemma 4 26B-A4B pour le raisonnement. Qwen2.5-Coder 7B pour le code. Phi-4-mini pour CPU uniquement.",
+        "new": "Meilleur LLM local 2026 : Qwen3.8-27B en tête (89,2 % GPQA Diamond, 24 GB). Gemma 4 26B-A4B pour le raisonnement, Qwen2.5-Coder 7B pour le code."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: query-adapted. No per-locale 28d baseline pulled for this entry.",
+    "queries": [
+      "meilleur llm local 2026"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "5056f437-8556-469b-8788-9f730e952fa1",
+    "slug": "/ja/local-llms/best-local-llms-2026",
+    "date": "2026-11-02T14:24:37.360Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026年 最高のローカルLLM：Qwen3.8-27B、Gemma 4、Phi-4-mini",
+        "new": "2026年ローカルLLMランキング：Qwen3.8とGemma4"
+      },
+      {
+        "field": "metaDescription",
+        "old": "2026年の最高ローカルLLMランキング：Qwen3.8-27B（総合最高、GPQA Diamond 89.2%、約24GB）、Gemma 4 26B-A4B（推論最高）、Qwen2.5-Coder 7B（コード HumanEval 88%）、Phi-4-mini（CPU専用）、Gemma 4 E2B（小型）。",
+        "new": "2026年のローカルLLMランキング。Qwen3.8-27B（GPQA Diamond 89.2%、約24GB）とGemma 4 26B-A4Bを比較し、コード用・CPU用のおすすめモデルも紹介します。"
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: query-adapted. No per-locale 28d baseline pulled for this entry.",
+    "queries": [
+      "gemma4 qwen3.8",
+      "qwen3.8 gemma4",
+      "gemma4 qwen3.8 比較",
+      "ローカルllm ランキング",
+      "ローカルllm 27b"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ceae36cc-bf3d-4cf1-b7d9-e6f1cc0df28d",
+    "slug": "/zh/local-llms/best-local-llms-2026",
+    "date": "2026-11-02T14:24:37.462Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026年最佳本地大语言模型：Qwen3.8-27B、Gemma 4、Phi-4-mini",
+        "new": "2026本地大模型排名：Qwen3.8-27B、Gemma 4"
+      },
+      {
+        "field": "metaDescription",
+        "old": "2026年本地LLM排名：Qwen3.8-27B（综合最佳GPQA Diamond 89.2%、约24GB）、Gemma 4 26B-A4B（推理最佳AIME 89%、约15GB）、Qwen2.5-Coder 7B（代码HumanEval 88%、约5GB）、Phi-4-mini（仅CPU、约2.5GB）、Gemma 4 E2B（约2GB）。",
+        "new": "2026年本地大模型排名：Qwen3.8-27B综合最佳（GPQA Diamond 89.2%，约24GB），Gemma 4 26B-A4B擅长推理，Qwen2.5-Coder 7B擅长代码。"
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0dc5dbd8-cc89-426b-b33d-c4d246831355",
+    "slug": "/es/local-llms/best-local-llms-2026",
+    "date": "2026-11-02T14:24:37.575Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Mejores LLMs Locales 2026: Qwen3.8-27B, Gemma 4, Phi-4-mini",
+        "new": "Mejores LLM locales 2026: Qwen3.8-27B, Gemma 4, Phi-4-mini"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Mejores LLMs locales 2026: Qwen3.8-27B gana en general (89.2% GPQA Diamond, 24 GB RAM). Gemma 4 26B-A4B para razonamiento. Qwen2.5-Coder 7B para código. Phi-4-mini para solo CPU.",
+        "new": "Mejores LLM locales 2026: Qwen3.8-27B gana en general (89.2% GPQA Diamond, 24 GB). Gemma 4 26B-A4B para razonar, Qwen2.5-Coder 7B para código."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "1581338b-c8ca-4f16-8646-445c22211334",
+    "slug": "/pt/local-llms/best-local-llms-2026",
+    "date": "2026-11-02T14:24:37.681Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Melhores LLMs locais 2026: Qwen3.8-27B, Gemma 4, Phi-4-mini",
+        "new": "Melhores LLM locais 2026: Qwen3.8-27B, Gemma 4, Phi-4-mini"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Melhores LLMs locais em 2026: Qwen3.8-27B vence no geral (89.2% GPQA Diamond, 24 GB de RAM). Gemma 4 26B-A4B para raciocínio. Qwen2.5-Coder 7B para código. Phi-4-mini apenas para CPU.",
+        "new": "Melhores LLM locais 2026: Qwen3.8-27B vence no geral (89.2% GPQA Diamond, 24 GB). Gemma 4 26B-A4B para raciocínio, Qwen2.5-Coder 7B para código."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "429aa6c0-83fe-4ac4-81c7-1c5462e56509",
+    "slug": "/ar/local-llms/best-local-llms-2026",
+    "date": "2026-11-02T14:24:37.784Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "أفضل نماذج ⁨LLM⁩ المحلية ⁨2026⁩: ⁨Qwen3.8-27B⁩، ⁨Gemma 4⁩، ⁨Phi-4-mini⁩",
+        "new": "أفضل نماذج ⁨LLM⁩ المحلية ⁨2026⁩: ⁨Qwen3.8-27B⁩ و⁨Gemma 4⁩"
+      },
+      {
+        "field": "metaDescription",
+        "old": "أفضل نماذج ⁨LLM⁩ المحلية ⁨2026⁩: ⁨Qwen3.8-27B⁩ يفوز عموماً (⁨89.2% GPQA Diamond⁩، ⁨24 GB RAM⁩). ⁨Gemma 4 26B-A4B⁩ للاستدلال. ⁨Qwen2.5-Coder 7B⁩ للبرمجة. ⁨Phi-4-mini⁩ لوحدة المعالجة المركزية فقط.",
+        "new": "أفضل نماذج ⁨LLM⁩ المحلية ⁨2026⁩: يتصدر ⁨Qwen3.8-27B⁩ (⁨89.2% GPQA Diamond⁩، ⁨24 GB⁩). ⁨Gemma 4 26B-A4B⁩ للاستدلال و⁨Qwen2.5-Coder 7B⁩ للبرمجة."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2fd64a0b-412e-42bd-af92-db6785008a58",
+    "slug": "/ko/local-llms/best-local-llms-2026",
+    "date": "2026-11-02T14:24:37.884Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026년 최고의 로컬 LLM: Qwen3.8-27B, Gemma 4, Phi-4-mini",
+        "new": "2026 로컬 LLM 순위: Qwen3.8, Gemma 4"
+      },
+      {
+        "field": "metaDescription",
+        "old": "2026년 최고의 로컬 LLM 순위: Qwen3.8-27B, Gemma 4 26B-A4B, Qwen2.5-Coder 7B, Phi-4-mini, Gemma 4 E2B. RAM 요구 사항 및 벤치마크 점수 수록.",
+        "new": "2026년 로컬 LLM 순위: Qwen3.8-27B(GPQA Diamond 89.2%), Gemma 4 26B-A4B, Qwen2.5-Coder 7B, Phi-4-mini 비교."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: query-adapted. No per-locale 28d baseline pulled for this entry.",
+    "queries": [
+      "2026 로컬 llm 순위",
+      "로컬 llm 순위",
+      "llm 벤치마크 순위"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ba521beb-8787-44e4-accd-ecd2322bb838",
+    "slug": "/local-llms/apple-silicon-local-llm-guide-2026",
+    "date": "2026-11-02T14:24:37.993Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Apple Silicon 2026: M6 to M5 Ultra for Local LLMs",
+        "new": "Local LLMs on Apple Silicon 2026: M5 Pro, Max, Ultra, M6"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Apple refreshed Mac mini (M6, M5 Pro) and Mac Studio (M5 Max, M5 Ultra up to 512GB) on Aug 25, 2026. Complete local LLM guide: memory tiers, benchmarks, Mac selection.",
+        "new": "Which Mac runs which local LLM? M6, M5 Pro, M5 Max and M5 Ultra compared by memory, bandwidth and price, with first independent M5 Ultra benchmarks."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: EN 28d CTR 0.41% at pos 6.92; EN title did not say which chip/question it answers and meta described a stale news event. Body: M5 Ultra specs, 512GB availability, Mac mini M6 base memory, first independent benchmark. Earlier SEO changes: 2026-08-29 (EN) and 2026-08-30 (zh). Locale mode: query-adapted.",
+    "queries": [
+      "m5 max local llm",
+      "m5 pro local llm",
+      "apple m6 llm performance",
+      "best llm for m1 mac 32g",
+      "can macbook air m5 run local llm",
+      "local llm macbook air m5",
+      "best local llm for macbook pro m5"
+    ],
+    "baseline": {
+      "position": 6.92,
+      "impressions": 10826,
+      "clicks": 44,
+      "ctr": 0.004064289673009422,
+      "period": "28d 2026-10-05..2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "db1c8f06-b3bb-4b80-99e2-d20020ba26c4",
+    "slug": "/de/local-llms/apple-silicon-local-llm-guide-2026",
+    "date": "2026-11-02T14:24:38.096Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Apple hat Mac mini (M6, M5 Pro) und Mac Studio (M5 Max, M5 Ultra bis 512GB) am 25.8.2026 überarbeitet. Kompletter Leitfaden: Speicher, Benchmarks, Mac-Auswahl.",
+        "new": "Welcher Mac für lokale LLMs? M6, M5 Pro, M5 Max und M5 Ultra im Vergleich: Speicher, Bandbreite, Preis und erste unabhängige M5-Ultra-Tests."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: EN 28d CTR 0.41% at pos 6.92; EN title did not say which chip/question it answers and meta described a stale news event. Body: M5 Ultra specs, 512GB availability, Mac mini M6 base memory, first independent benchmark. Earlier SEO changes: 2026-08-29 (EN) and 2026-08-30 (zh). Locale mode: query-adapted.",
+    "queries": [
+      "m5 pro local llm",
+      "mac studio m5 ultra llm",
+      "apple silicon m6"
+    ],
+    "baseline": {
+      "position": 5.33,
+      "impressions": 917,
+      "clicks": 22,
+      "ctr": 0.023991275899672846,
+      "period": "28d 2026-10-05..2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "bd9b843d-894a-4b67-8bd5-dd2f5554c981",
+    "slug": "/ja/local-llms/apple-silicon-local-llm-guide-2026",
+    "date": "2026-11-02T14:24:38.206Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Apple Silicon 2026：M6からM5 Ultraまで",
+        "new": "Apple Silicon 2026：M6・M5 Ultra"
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: EN 28d CTR 0.41% at pos 6.92; EN title did not say which chip/question it answers and meta described a stale news event. Body: M5 Ultra specs, 512GB availability, Mac mini M6 base memory, first independent benchmark. Earlier SEO changes: 2026-08-29 (EN) and 2026-08-30 (zh). Locale mode: query-adapted.",
+    "queries": [
+      "m5 ultra 消費電力",
+      "m5 ultra llm",
+      "mac mini m6 llm"
+    ],
+    "baseline": {
+      "position": 10.46,
+      "impressions": 521,
+      "clicks": 15,
+      "ctr": 0.028790786948176585,
+      "period": "28d 2026-10-05..2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "4dec6cf1-3051-4bd6-8342-aafa23043501",
+    "slug": "/es/local-llms/apple-silicon-local-llm-guide-2026",
+    "date": "2026-11-02T14:24:38.307Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Apple Silicon 2026: M6 a M5 Ultra para IA Local",
+        "new": "LLM locales en Apple Silicon 2026: M6, M5 Pro, Max y Ultra"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Apple renovó Mac mini (M6, M5 Pro) y Mac Studio (M5 Max, M5 Ultra hasta 512GB) el 25 de agosto de 2026. Guía completa: memoria, benchmarks, qué Mac comprar.",
+        "new": "¿Qué Mac elegir para LLMs locales? M6, M5 Pro, M5 Max y M5 Ultra comparados por memoria, ancho de banda y precio, con las primeras pruebas independientes."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: EN 28d CTR 0.41% at pos 6.92; EN title did not say which chip/question it answers and meta described a stale news event. Body: M5 Ultra specs, 512GB availability, Mac mini M6 base memory, first independent benchmark. Earlier SEO changes: 2026-08-29 (EN) and 2026-08-30 (zh). Locale mode: query-adapted.",
+    "queries": [
+      "apple silicon m6",
+      "apple silicon m5 vs m6",
+      "mac mini m6 local llm"
+    ],
+    "baseline": {
+      "position": 6.2,
+      "impressions": 522,
+      "clicks": 9,
+      "ctr": 0.017241379310344827,
+      "period": "28d 2026-10-05..2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e50cdcc7-d437-49ac-8514-f724137b0562",
+    "slug": "/ar/local-llms/apple-silicon-local-llm-guide-2026",
+    "date": "2026-11-02T14:24:38.408Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "⁨Apple Silicon⁩ ⁨2026⁩: من ⁨M6⁩ إلى ⁨M5 Ultra⁩ لنماذج ⁨LLM⁩",
+        "new": "⁨Apple Silicon⁩ ⁨2026⁩: ⁨M5 Pro⁩ و⁨M5 Max⁩ و⁨M5 Ultra⁩"
+      },
+      {
+        "field": "metaDescription",
+        "old": "حدّثت Apple جهازي Mac mini (⁨M6⁩، ⁨M5 Pro⁩) وMac Studio (⁨M5 Max⁩، ⁨M5 Ultra⁩ حتى ⁨512GB⁩) في ⁨25⁩ أغسطس ⁨2026⁩. دليل كامل: الذاكرة، الاختبارات، اختيار Mac.",
+        "new": "أي Mac يشغّل أي نموذج LLM محلي؟ مقارنة ⁨M6⁩ و⁨M5 Pro⁩ و⁨M5 Max⁩ و⁨M5 Ultra⁩ بالذاكرة والنطاق والسعر مع أول اختبارات مستقلة."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: EN 28d CTR 0.41% at pos 6.92; EN title did not say which chip/question it answers and meta described a stale news event. Body: M5 Ultra specs, 512GB availability, Mac mini M6 base memory, first independent benchmark. Earlier SEO changes: 2026-08-29 (EN) and 2026-08-30 (zh). Locale mode: data-free review.",
+    "baseline": {
+      "position": 11,
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-05..2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8c761cd4-5f37-4150-9ce6-ea99049cf5ab",
+    "slug": "/ko/local-llms/apple-silicon-local-llm-guide-2026",
+    "date": "2026-11-02T14:24:38.516Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Apple Silicon 2026: 로컬 LLM용 M6부터 M5 Ultra까지",
+        "new": "Mac 로컬 LLM 2026: M5 Pro·Max·Ultra·M6"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Apple은 2026년 8월 25일 Mac mini(M6, M5 Pro)와 Mac Studio(M5 Max, 최대 512GB M5 Ultra)를 개편했습니다. 메모리 계층, 벤치마크, Mac 선택을 다루는 완전 가이드.",
+        "new": "M6·M5 Pro·M5 Max·M5 Ultra 맥에서 돌릴 수 있는 로컬 LLM 크기를 메모리, 대역폭, 가격으로 비교하고 독립 벤치마크를 정리했습니다."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: EN 28d CTR 0.41% at pos 6.92; EN title did not say which chip/question it answers and meta described a stale news event. Body: M5 Ultra specs, 512GB availability, Mac mini M6 base memory, first independent benchmark. Earlier SEO changes: 2026-08-29 (EN) and 2026-08-30 (zh). Locale mode: query-adapted.",
+    "queries": [
+      "맥북 llm",
+      "m5 max 128gb llm",
+      "m1 max 64gb llm",
+      "맥미니 m6 로컬 llm"
+    ],
+    "baseline": {
+      "position": 7.36,
+      "impressions": 832,
+      "clicks": 18,
+      "ctr": 0.021634615384615384,
+      "period": "28d 2026-10-05..2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ea703056-3919-421e-9417-011549b32574",
+    "slug": "/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T14:24:38.634Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Whisper.cpp vs faster-whisper 2026: STT Speed Test",
+        "new": "whisper.cpp vs faster-whisper vs Whisper 2026: CPU/GPU"
+      },
+      {
+        "field": "metaDescription",
+        "old": "whisper.cpp runs on CPU and Apple Metal; faster-whisper is 4x faster on GPU with int8. WER benchmarks, model sizes, and real-time transcription steps.",
+        "new": "faster-whisper is up to 4x faster than OpenAI Whisper; whisper.cpp wins on Apple Metal. CPU vs GPU timings, VRAM and WER from published benchmarks."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: query-adapted.",
+    "queries": [
+      "whisper.cpp",
+      "faster whisper vs whisper",
+      "whisper cpu vs gpu",
+      "whisper on cpu",
+      "whisper.cpp vs faster-whisper"
+    ],
+    "baseline": {
+      "position": 4.83,
+      "impressions": 12974,
+      "clicks": 74,
+      "ctr": 0.005703715122552798,
+      "period": "28d to 2026-11-01 (EN URL; queries from 90d)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a1653921-c492-4a7f-839e-ac3d914bb028",
+    "slug": "/de/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T14:24:38.745Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Whisper.cpp vs. faster-whisper 2026: Lokale STT-Benchmarks",
+        "new": "whisper.cpp vs. faster-whisper vs. Whisper 2026: CPU/GPU"
+      },
+      {
+        "field": "metaDescription",
+        "old": "whisper.cpp läuft auf CPU und Apple Metal; faster-whisper ist mit int8 4x schneller auf GPU. WER-Benchmarks, Modellgrößen und Echtzeit-Transkription.",
+        "new": "faster-whisper ist bis zu 4x schneller als OpenAI Whisper, whisper.cpp auf Apple Metal vorn. CPU- vs. GPU-Zeiten, VRAM und WER aus Benchmarks."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "6ab0a71d-0c50-484b-824e-28963c330d30",
+    "slug": "/fr/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T14:24:38.844Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Whisper.cpp vs faster-whisper 2026 : Benchmarks STT",
+        "new": "whisper.cpp vs faster-whisper vs Whisper 2026 : CPU/GPU"
+      },
+      {
+        "field": "metaDescription",
+        "old": "whisper.cpp tourne sur CPU et Apple Metal ; faster-whisper est 4x plus rapide sur GPU avec int8. Benchmarks WER, tailles de modèles, transcription temps réel.",
+        "new": "faster-whisper est jusqu\\'à 4x plus rapide qu\\'OpenAI Whisper ; whisper.cpp gagne sur Apple Metal. Temps CPU vs GPU, VRAM et WER de benchmarks publiés."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7cc47a10-d29c-4558-b625-41f4c1e3e482",
+    "slug": "/ja/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T14:24:38.944Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Whisper.cpp vs faster-whisper 2026：STT速度比較",
+        "new": "Whisper・faster-whisperの違い比較2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "whisper.cppはCPUとApple Metalで動作、faster-whisperはint8使用時GPUで4倍高速。WERベンチマーク、モデルサイズ、リアルタイム文字起こし手順を掲載。",
+        "new": "faster-whisperとは、CTranslate2でOpenAI Whisperを再実装したライブラリで最大4倍高速。whisper.cppとの違いをCPU/GPU速度・VRAM・WERで比較します。"
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: query-adapted. No per-locale 28d baseline pulled for this entry.",
+    "queries": [
+      "faster-whisperとは",
+      "faster-whisper whisper 違い",
+      "whisper faster-whisper 違い",
+      "whisper.cppとは"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "09375346-cd10-424b-bfdc-b81860483f4c",
+    "slug": "/zh/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T14:24:39.045Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Whisper.cpp vs faster-whisper 2026：STT速度对比",
+        "new": "Whisper.cpp与faster-whisper对比2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "whisper.cpp运行于CPU和Apple Metal；faster-whisper在GPU上使用int8可提速4倍。含WER基准、模型大小与实时转录配置。",
+        "new": "faster-whisper比OpenAI Whisper最高快4倍，whisper.cpp在Apple Metal上更有优势。基于公开基准对比CPU与GPU耗时、显存和WER。"
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "12404d57-f925-40ae-a69c-42de99958675",
+    "slug": "/es/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T14:24:39.149Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Whisper.cpp vs faster-whisper 2026: STT local y benchmarks",
+        "new": "whisper.cpp vs faster-whisper vs Whisper 2026: CPU/GPU"
+      },
+      {
+        "field": "metaDescription",
+        "old": "whisper.cpp corre en CPU y Apple Metal; faster-whisper es 4x más rápido en GPU con int8. Benchmarks WER, tamaños de modelo y transcripción en tiempo real.",
+        "new": "faster-whisper es hasta 4x más rápido que OpenAI Whisper; whisper.cpp gana en Apple Metal. Tiempos CPU vs GPU, VRAM y WER de benchmarks publicados."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "373c7098-7c03-438f-9a7a-295343bb65b1",
+    "slug": "/pt/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T14:24:39.251Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Whisper.cpp vs faster-whisper 2026: STT local e benchmarks",
+        "new": "whisper.cpp vs faster-whisper vs Whisper 2026: CPU/GPU"
+      },
+      {
+        "field": "metaDescription",
+        "old": "whisper.cpp roda em CPU e Apple Metal; faster-whisper é 4x mais rápido em GPU com int8. Benchmarks de WER, tamanhos de modelo e transcrição em tempo real.",
+        "new": "faster-whisper é até 4x mais rápido que o OpenAI Whisper; whisper.cpp vence no Apple Metal. Tempos de CPU vs GPU, VRAM e WER de benchmarks publicados."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "43f8854a-b5ca-4d6b-be2b-74ab24f89edd",
+    "slug": "/ar/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T14:24:39.353Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "⁨Whisper.cpp⁩ مقابل ⁨faster-whisper 2026⁩: معايير ⁨STT⁩",
+        "new": "⁨Whisper.cpp⁩ مقابل ⁨faster-whisper 2026⁩: ⁨CPU⁩ و⁨GPU⁩"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Whisper.cpp يعمل على CPU وApple Metal؛ faster-whisper أسرع 4× على GPU بـint8. مقارنة معايير WER وسرعة النسخ الفوري وخطوات الإعداد 2026.",
+        "new": "faster-whisper أسرع حتى 4× من OpenAI Whisper، وwhisper.cpp يتفوق على Apple Metal. أزمنة CPU مقابل GPU وVRAM وWER من معايير منشورة."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "89cd4e74-cdb5-42a4-98ab-00d6dc7e9ad2",
+    "slug": "/ko/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T14:24:39.459Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Whisper.cpp vs faster-whisper 2026: 로컬 STT 및 벤치마크",
+        "new": "로컬 STT 비교: whisper.cpp·faster-whisper"
+      },
+      {
+        "field": "metaDescription",
+        "old": "2026년 로컬 음성 인식을 위한 whisper.cpp와 faster-whisper 비교: WER, GPU vs CPU 속도, Apple Silicon Metal, 실시간 전사. 완전 오프라인 동작.",
+        "new": "로컬 STT 모델 whisper.cpp·faster-whisper 비교: OpenAI Whisper 대비 최대 4배, CPU·GPU(Vulkan·Metal) 시간, WER, 실시간 전사."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: query-adapted. No per-locale 28d baseline pulled for this entry.",
+    "queries": [
+      "로컬 whisper",
+      "로컬 stt 모델",
+      "whisper cpp vulkan",
+      "whisper 실시간 stt"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ea321e7c-f356-4b06-a3f5-ee63e3a78ccd",
+    "slug": "/local-llms/apple-silicon-m5-local-llm",
+    "date": "2026-11-02T15:07:13.917Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "M5 Pro vs M5 Max 2026: 307 vs 614 GB/s Bandwidth & LLM Speed",
+        "new": "M5 Memory Bandwidth 2026: Pro vs Max vs Ultra for LLMs"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Apple M5 memory bandwidth: M5 Pro 307, M5 Max 460–614 GB/s, M5 Ultra 1.2 TB/s. LLM tokens/sec, Ollama speed tips, Mac mini vs Studio vs MacBook Pro.",
+        "new": "M5 memory bandwidth: Pro 307 GB/s, Max 460 or 614 GB/s, Ultra 1.2 TB/s. What each chip means for LLM tokens/sec, plus Mac mini vs Studio vs MacBook Pro."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: EN 28d CTR 0.72% at pos 5.71, volume is spec lookups (m5 max/pro memory bandwidth) and old EN title was over budget with no memory/Ultra term; ~39% AI Overview share so no CTR gain is claimed. Body: 512GB M5 Ultra orderable since 2026-10-28 from $22,299, MacBook Pro 16 M5 Max from $3,899, second independent M5 Ultra benchmark (BGR). Earlier SEO change: 2026-08-28 (coherence-B2, largest query on the page). Locale mode: query-adapted.",
+    "queries": [
+      "m5 max memory bandwidth",
+      "m5 pro memory bandwidth",
+      "m5 max bandwidth",
+      "m5 pro bandwidth",
+      "mac mini m5 pro memory bandwidth"
+    ],
+    "baseline": {
+      "position": 5.71,
+      "impressions": 56077,
+      "clicks": 405,
+      "ctr": 0.007222212315209444,
+      "period": "28d 2026-10-05..2026-11-01 (EN URL)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "56846467-1884-44f9-827e-833848a4373f",
+    "slug": "/de/local-llms/apple-silicon-m5-local-llm",
+    "date": "2026-11-02T15:07:14.018Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "M5 Pro vs M5 Max 2026: Bandbreite 307 vs 614 GB/s",
+        "new": "M5 Speicherbandbreite 2026: Pro vs Max vs Ultra für LLMs"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Apple M5 Speicherbandbreite: M5 Pro 307, M5 Max 460–614 GB/s, M5 Ultra 1,2 TB/s. LLM-Tokens/s, Ollama-Tuning, Mac mini vs. Studio vs. MacBook Pro.",
+        "new": "Apple M5 Speicherbandbreite: Pro 307, Max 460 oder 614 GB/s, Ultra 1,2 TB/s. Was das für LLM-Tokens/s bedeutet – Mac mini vs. Studio vs. MacBook Pro."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: EN 28d CTR 0.72% at pos 5.71, volume is spec lookups (m5 max/pro memory bandwidth) and old EN title was over budget with no memory/Ultra term; ~39% AI Overview share so no CTR gain is claimed. Body: 512GB M5 Ultra orderable since 2026-10-28 from $22,299, MacBook Pro 16 M5 Max from $3,899, second independent M5 Ultra benchmark (BGR). Earlier SEO change: 2026-08-28 (coherence-B2, largest query on the page). Locale mode: query-adapted. Locale baseline (90d figures (2026-08-05..2026-11-01), clicks/impressions only): clicks 27, impressions 638.",
+    "queries": [
+      "m5 max speicherbandbreite",
+      "m5 max vs m5 pro",
+      "m5 pro vs m5 max llm performance"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "4f4de6b2-7c03-4369-bf5c-274691b55679",
+    "slug": "/ja/local-llms/apple-silicon-m5-local-llm",
+    "date": "2026-11-02T15:07:14.118Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "M5 Pro vs Max 2026：帯域幅307/614GB/s",
+        "new": "M5メモリ帯域幅 2026：Pro・Max・Ultra比較"
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: EN 28d CTR 0.72% at pos 5.71, volume is spec lookups (m5 max/pro memory bandwidth) and old EN title was over budget with no memory/Ultra term; ~39% AI Overview share so no CTR gain is claimed. Body: 512GB M5 Ultra orderable since 2026-10-28 from $22,299, MacBook Pro 16 M5 Max from $3,899, second independent M5 Ultra benchmark (BGR). Earlier SEO change: 2026-08-28 (coherence-B2, largest query on the page). Locale mode: query-adapted. Locale baseline (90d figures (2026-08-05..2026-11-01), clicks/impressions only): clicks 8, impressions 344.",
+    "queries": [
+      "m5 max 帯域幅",
+      "m5 max メモリ帯域",
+      "m5 pro m5 max 比較",
+      "m5 max 128gb llm"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d7d78b30-fa7b-4cad-bd19-f5e2cbf9b9d1",
+    "slug": "/es/local-llms/apple-silicon-m5-local-llm",
+    "date": "2026-11-02T15:07:14.219Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Ancho de banda de memoria del Apple M5: M5 Pro 307, M5 Max 460–614 GB/s, M5 Ultra 1,2 TB/s. Tokens/s de LLM y consejos para Ollama.",
+        "new": "Ancho de banda de memoria del Apple M5: M5 Pro 307, M5 Max 460–614 GB/s, M5 Ultra 1,2 TB/s. Tokens/s de LLM, consejos para Ollama y comparativa de Macs."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: EN 28d CTR 0.72% at pos 5.71, volume is spec lookups (m5 max/pro memory bandwidth) and old EN title was over budget with no memory/Ultra term; ~39% AI Overview share so no CTR gain is claimed. Body: 512GB M5 Ultra orderable since 2026-10-28 from $22,299, MacBook Pro 16 M5 Max from $3,899, second independent M5 Ultra benchmark (BGR). Earlier SEO change: 2026-08-28 (coherence-B2, largest query on the page). Locale mode: data-free review. No per-locale baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "19cb610e-9d47-4b9f-bb9d-133bdfb9f891",
+    "slug": "/pt/local-llms/apple-silicon-m5-local-llm",
+    "date": "2026-11-02T15:07:14.319Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Largura de banda de memória do Apple M5: M5 Pro 307, M5 Max 460–614 GB/s, M5 Ultra 1,2 TB/s. Tokens/s de LLM e dicas de Ollama.",
+        "new": "Largura de banda de memória do Apple M5: M5 Pro 307, M5 Max 460–614 GB/s, M5 Ultra 1,2 TB/s. Tokens/s de LLM, dicas de Ollama e comparação de Macs."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: EN 28d CTR 0.72% at pos 5.71, volume is spec lookups (m5 max/pro memory bandwidth) and old EN title was over budget with no memory/Ultra term; ~39% AI Overview share so no CTR gain is claimed. Body: 512GB M5 Ultra orderable since 2026-10-28 from $22,299, MacBook Pro 16 M5 Max from $3,899, second independent M5 Ultra benchmark (BGR). Earlier SEO change: 2026-08-28 (coherence-B2, largest query on the page). Locale mode: data-free review. No per-locale baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "070ca484-1f96-4892-83fd-46f981a980d8",
+    "slug": "/ar/local-llms/apple-silicon-m5-local-llm",
+    "date": "2026-11-02T15:07:14.420Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "عرض نطاق ذاكرة Apple M5: M5 Pro بسرعة 307 وM5 Max من 460 إلى 614 GB/s وM5 Ultra بسرعة 1.2 TB/s. رموز/ثانية ونصائح Ollama وMac mini وMac Studio وMacBook Pro.",
+        "new": "عرض نطاق ذاكرة Apple M5: M5 Pro بسرعة 307 وM5 Max من 460 إلى 614 GB/s وM5 Ultra بسرعة 1.2 TB/s. رموز/ثانية ونصائح Ollama ومقارنة أجهزة Mac."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: EN 28d CTR 0.72% at pos 5.71, volume is spec lookups (m5 max/pro memory bandwidth) and old EN title was over budget with no memory/Ultra term; ~39% AI Overview share so no CTR gain is claimed. Body: 512GB M5 Ultra orderable since 2026-10-28 from $22,299, MacBook Pro 16 M5 Max from $3,899, second independent M5 Ultra benchmark (BGR). Earlier SEO change: 2026-08-28 (coherence-B2, largest query on the page). Locale mode: data-free review. No per-locale baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2fb27861-adc5-4fa1-8638-43b8a3feeb77",
+    "slug": "/ko/local-llms/apple-silicon-m5-local-llm",
+    "date": "2026-11-02T15:07:14.521Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "M5 Pro vs Max 2026: 대역폭 307/614GB/s",
+        "new": "M5 Max 대역폭 2026: Pro·Max·Ultra LLM 비교"
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: EN 28d CTR 0.72% at pos 5.71, volume is spec lookups (m5 max/pro memory bandwidth) and old EN title was over budget with no memory/Ultra term; ~39% AI Overview share so no CTR gain is claimed. Body: 512GB M5 Ultra orderable since 2026-10-28 from $22,299, MacBook Pro 16 M5 Max from $3,899, second independent M5 Ultra benchmark (BGR). Earlier SEO change: 2026-08-28 (coherence-B2, largest query on the page). Locale mode: query-adapted. Locale baseline (90d figures (2026-08-05..2026-11-01), clicks/impressions only): clicks 7, impressions 163.",
+    "queries": [
+      "m5 max 대역폭",
+      "m5 max 메모리 대역폭",
+      "m5 max llm",
+      "m5 max 128gb llm"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "97b5da3a-c365-41e6-9f0e-7940494d95d3",
+    "slug": "/local-llms/local-llm-hardware-guide",
+    "date": "2026-11-02T15:07:14.642Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Local LLM Hardware Requirements: 8GB to 70B by VRAM",
+        "new": "Local LLM Hardware Requirements 2026: Best GPU, VRAM, Mac"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Local LLM system requirements by VRAM: best models for 8, 16 and 24 GB GPUs, exact 70B and GLM-5.3 needs. RTX 50-series, Apple M5, and AI PC builds.",
+        "new": "Best hardware for local LLMs in 2026: VRAM needed from 8 GB to 70B models, best GPU and Mac per budget, RTX 50-series prices and CPU-only limits."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: EN 28d CTR 0.43% at pos 5.59 (~42% AI Overview share); old title lacked Best/2026 and meta did not match \"best hardware\" queries. Body: DGX Spark $6,950, RTX 5060 Ti ~$800, 5070 Ti discontinuation reports, 512GB Mac Studio, Qwen3.8 27B; KO block rebuilt to EN parity; new 8GB-VRAM FAQ. Earlier SEO changes: zh/ja/ko month-drift fixes 2026-08-30 (the 2026-10-17 slug rename is not in the changelog). Locale mode: query-adapted.",
+    "queries": [
+      "best hardware for local llm 2026",
+      "best hardware for local llm",
+      "local llm hardware",
+      "hardware for local llm",
+      "local llm hardware requirements",
+      "local llm gpu requirements"
+    ],
+    "baseline": {
+      "position": 5.59,
+      "impressions": 15765,
+      "clicks": 68,
+      "ctr": 0.004313352362829052,
+      "period": "28d 2026-10-06..2026-11-02 (EN URL)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7112dc5a-8954-40d3-a23a-c692b221b062",
+    "slug": "/de/local-llms/local-llm-hardware-guide",
+    "date": "2026-11-02T15:07:14.742Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Lokale LLM Hardware-Anforderungen: 8GB bis 70B nach VRAM",
+        "new": "Hardware für lokale LLMs 2026: Anforderungen, GPU, VRAM"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Lokale LLM Hardware-Anforderungen nach VRAM: beste Modelle fuer 8-, 16- und 24-GB-GPUs plus exakter Bedarf fuer 70B und GLM-5.3. RTX-50-Serie, Apple M5.",
+        "new": "Hardware für lokale LLMs 2026: So viel VRAM brauchen Modelle von 8 GB bis 70B, beste GPU und Mac je Budget, RTX-50-Preise und CPU-only-Grenzen."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: EN 28d CTR 0.43% at pos 5.59 (~42% AI Overview share); old title lacked Best/2026 and meta did not match \"best hardware\" queries. Body: DGX Spark $6,950, RTX 5060 Ti ~$800, 5070 Ti discontinuation reports, 512GB Mac Studio, Qwen3.8 27B; KO block rebuilt to EN parity; new 8GB-VRAM FAQ. Earlier SEO changes: zh/ja/ko month-drift fixes 2026-08-30 (the 2026-10-17 slug rename is not in the changelog). Locale mode: query-adapted.",
+    "queries": [
+      "lokale llm hardware",
+      "lokales llm hardware",
+      "llm hardware",
+      "hardware für lokale llm"
+    ],
+    "baseline": {
+      "position": 3.96,
+      "impressions": 3253,
+      "clicks": 67,
+      "ctr": 0.0205963725791577,
+      "period": "28d 2026-10-05..2026-11-02 (locale URL)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "1d38ae70-7bf5-48b0-b874-64e0e78fc2c1",
+    "slug": "/fr/local-llms/local-llm-hardware-guide",
+    "date": "2026-11-02T15:07:14.842Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Configuration materielle LLM local : de 8 Go a 70B par VRAM",
+        "new": "Matériel LLM local : besoins de 8 Go à 70B selon la VRAM"
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: EN 28d CTR 0.43% at pos 5.59 (~42% AI Overview share); old title lacked Best/2026 and meta did not match \"best hardware\" queries. Body: DGX Spark $6,950, RTX 5060 Ti ~$800, 5070 Ti discontinuation reports, 512GB Mac Studio, Qwen3.8 27B; KO block rebuilt to EN parity; new 8GB-VRAM FAQ. Earlier SEO changes: zh/ja/ko month-drift fixes 2026-08-30 (the 2026-10-17 slug rename is not in the changelog). Locale mode: data-free review.",
+    "baseline": {
+      "position": 4.96,
+      "impressions": 392,
+      "clicks": 6,
+      "ctr": 0.015306122448979591,
+      "period": "28d 2026-10-05..2026-11-02 (locale URL)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "aca8d327-7d5c-47f5-bb75-c8997d3e81b9",
+    "slug": "/ja/local-llms/local-llm-hardware-guide",
+    "date": "2026-11-02T15:07:14.943Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "ローカルLLMハードウェア要件：8GBから70BまでVRAM別解説",
+        "new": "ローカルLLMのハードウェア要件：8GBから70BまでのVRAM"
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: EN 28d CTR 0.43% at pos 5.59 (~42% AI Overview share); old title lacked Best/2026 and meta did not match \"best hardware\" queries. Body: DGX Spark $6,950, RTX 5060 Ti ~$800, 5070 Ti discontinuation reports, 512GB Mac Studio, Qwen3.8 27B; KO block rebuilt to EN parity; new 8GB-VRAM FAQ. Earlier SEO changes: zh/ja/ko month-drift fixes 2026-08-30 (the 2026-10-17 slug rename is not in the changelog). Locale mode: query-adapted.",
+    "queries": [
+      "ローカルllm ハードウェア",
+      "ローカルllm vram 8gb",
+      "vram 8gb ローカルllm",
+      "ローカルllm 8gb"
+    ],
+    "baseline": {
+      "position": 5.95,
+      "impressions": 2205,
+      "clicks": 73,
+      "ctr": 0.03310657596371882,
+      "period": "28d 2026-10-05..2026-11-02 (locale URL)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "5337e921-9c81-4408-b787-79bcc60b54d2",
+    "slug": "/es/local-llms/local-llm-hardware-guide",
+    "date": "2026-11-02T15:07:15.043Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Requisitos de hardware para LLM locales: de 8GB a 70B por VRAM",
+        "new": "Hardware para LLM locales 2026: requisitos de GPU y VRAM"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Requisitos de hardware para LLM locales por VRAM: mejores modelos para GPU de 8, 16 y 24 GB, además de las necesidades exactas para 70B y GLM-5.3. RTX serie 50, Apple M5.",
+        "new": "Hardware para LLM locales en 2026: VRAM necesaria de 8 GB a 70B, mejores GPU y Mac por presupuesto, precios de la serie RTX 50 y límites de la CPU."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: EN 28d CTR 0.43% at pos 5.59 (~42% AI Overview share); old title lacked Best/2026 and meta did not match \"best hardware\" queries. Body: DGX Spark $6,950, RTX 5060 Ti ~$800, 5070 Ti discontinuation reports, 512GB Mac Studio, Qwen3.8 27B; KO block rebuilt to EN parity; new 8GB-VRAM FAQ. Earlier SEO changes: zh/ja/ko month-drift fixes 2026-08-30 (the 2026-10-17 slug rename is not in the changelog). Locale mode: data-free review.",
+    "baseline": {
+      "position": 4.31,
+      "impressions": 915,
+      "clicks": 11,
+      "ctr": 0.012021857923497269,
+      "period": "28d 2026-10-05..2026-11-02 (locale URL)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "3fac41ed-657d-4137-b1e9-41ed1561484a",
+    "slug": "/pt/local-llms/local-llm-hardware-guide",
+    "date": "2026-11-02T15:07:15.144Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Requisitos de hardware para LLM local por VRAM: melhores modelos para GPUs de 8, 16 e 24 GB e o que 70B e GLM-5.3 precisam. RTX série 50, Apple M5.",
+        "new": "Hardware para LLM local em 2026: VRAM de 8 GB a 70B, qual LLM roda numa RTX 4060 de 8 GB, melhores GPUs e Macs por orçamento e preços da RTX 50."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: EN 28d CTR 0.43% at pos 5.59 (~42% AI Overview share); old title lacked Best/2026 and meta did not match \"best hardware\" queries. Body: DGX Spark $6,950, RTX 5060 Ti ~$800, 5070 Ti discontinuation reports, 512GB Mac Studio, Qwen3.8 27B; KO block rebuilt to EN parity; new 8GB-VRAM FAQ. Earlier SEO changes: zh/ja/ko month-drift fixes 2026-08-30 (the 2026-10-17 slug rename is not in the changelog). Locale mode: query-adapted.",
+    "queries": [
+      "4060 8gb roda qual llm local"
+    ],
+    "baseline": {
+      "position": 5.26,
+      "impressions": 602,
+      "clicks": 6,
+      "ctr": 0.009966777408637873,
+      "period": "28d 2026-10-05..2026-11-02 (locale URL)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7808746e-70b1-4abc-923e-58cf8c63e29f",
+    "slug": "/ar/local-llms/local-llm-hardware-guide",
+    "date": "2026-11-02T15:07:15.246Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "متطلبات عتاد ⁨LLM⁩ المحلي: من ⁨8GB⁩ إلى ⁨70B⁩ حسب ⁨VRAM⁩",
+        "new": "متطلبات عتاد ⁨LLM⁩ المحلي: من ⁨8GB⁩ حتى ⁨70B⁩"
+      },
+      {
+        "field": "metaDescription",
+        "old": "متطلبات عتاد ⁨LLM⁩ المحلي حسب ⁨VRAM⁩: أفضل النماذج لبطاقات ⁨8⁩ و⁨16⁩ و⁨24 GB⁩ إضافة إلى الاحتياجات الدقيقة لـ ⁨70B⁩ و⁨GLM-5.3⁩. ⁨RTX 50-series⁩ و⁨Apple M5⁩.",
+        "new": "متطلبات عتاد ⁨LLM⁩ المحلي حسب ⁨VRAM⁩: أفضل النماذج لبطاقات ⁨8⁩ و⁨16⁩ و⁨24 GB⁩ واحتياجات ⁨70B⁩ و⁨GLM-5.3⁩. ⁨RTX 50-series⁩ و⁨Apple M5⁩."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: EN 28d CTR 0.43% at pos 5.59 (~42% AI Overview share); old title lacked Best/2026 and meta did not match \"best hardware\" queries. Body: DGX Spark $6,950, RTX 5060 Ti ~$800, 5070 Ti discontinuation reports, 512GB Mac Studio, Qwen3.8 27B; KO block rebuilt to EN parity; new 8GB-VRAM FAQ. Earlier SEO changes: zh/ja/ko month-drift fixes 2026-08-30 (the 2026-10-17 slug rename is not in the changelog). Locale mode: data-free review.",
+    "baseline": {
+      "position": 3.56,
+      "impressions": 39,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-05..2026-11-02 (locale URL)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c1cb2e08-0e7a-4b90-b413-240269861cce",
+    "slug": "/power-local-llm/koboldcpp-review",
+    "date": "2026-11-02T15:07:15.353Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "KoboldCpp Review 2026: Download, Setup and GPU Support",
+        "new": "KoboldCpp Review: Download, Setup and GPU Support"
+      },
+      {
+        "field": "metaDescription",
+        "old": "KoboldCpp is a free, AGPL 3.0 single-file local LLM app built on llama.cpp. Download it, pick CUDA, Vulkan or ROCm, and compare it with llama.cpp and Ollama.",
+        "new": "KoboldCpp (also written Kobold CPP) is a free, single-file local LLM app on llama.cpp. Get the Windows, Linux or macOS build and pick CUDA, Vulkan or ROCm."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: 0.11% CTR at pos 7.1, mostly the navigational brand query \"koboldcpp\" (5,613 impr, 4 clicks) which a title cannot fix; typo/long-tail queries (kobold cpp, what is koboldcpp, koboldcpp.exe, is koboldcpp safe) not served. Added Get It table and safety FAQ; v1.123.1 -> v1.124.2. Earlier SEO change: 2026-10-09 geo-meta-optimizer intent alignment (download/install/GPU/vs llama.cpp queries). Locale mode: query-adapted.",
+    "queries": [
+      "koboldcpp",
+      "kobold cpp",
+      "koboldccp",
+      "what is koboldcpp",
+      "koboldcpp releases",
+      "koboldcpp.exe",
+      "is koboldcpp safe",
+      "download koboldcpp"
+    ],
+    "baseline": {
+      "position": 7.1,
+      "impressions": 14702,
+      "clicks": 16,
+      "ctr": 0.0010882873078492722,
+      "period": "28d 2026-10-06..2026-11-02 (EN URL)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "83b06235-33f4-40b6-aa9e-fbae7991f9bd",
+    "slug": "/de/power-local-llm/koboldcpp-review",
+    "date": "2026-11-02T15:07:15.451Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "KoboldCpp-Rezension 2026: Download, Setup und GPU-Support",
+        "new": "KoboldCpp-Rezension: Download, Setup und GPU-Support"
+      },
+      {
+        "field": "metaDescription",
+        "old": "KoboldCpp: kostenlose Single-File-App für lokale LLMs auf llama.cpp-Basis (AGPL 3.0). Download, GPU-Support (CUDA, Vulkan, ROCm) und Vergleich mit llama.cpp.",
+        "new": "KoboldCpp (auch Kobold CPP): kostenlose Single-File-App für lokale LLMs auf llama.cpp-Basis. Build für Windows, Linux, macOS, mit CUDA, Vulkan oder ROCm."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: 0.11% CTR at pos 7.1, mostly the navigational brand query \"koboldcpp\" (5,613 impr, 4 clicks) which a title cannot fix; typo/long-tail queries (kobold cpp, what is koboldcpp, koboldcpp.exe, is koboldcpp safe) not served. Added Get It table and safety FAQ; v1.123.1 -> v1.124.2. Earlier SEO change: 2026-10-09 geo-meta-optimizer intent alignment (download/install/GPU/vs llama.cpp queries). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 1, impressions 649.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "20cafe96-093e-4fe9-be92-fda10e27d897",
+    "slug": "/fr/power-local-llm/koboldcpp-review",
+    "date": "2026-11-02T15:07:15.552Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Avis KoboldCpp 2026 : téléchargement, config et GPU",
+        "new": "Avis KoboldCpp : téléchargement, installation et GPU"
+      },
+      {
+        "field": "metaDescription",
+        "old": "KoboldCpp : appli LLM locale gratuite en un fichier (AGPL 3.0) basée sur llama.cpp. Téléchargement, GPU (CUDA, Vulkan, ROCm), comparaison avec llama.cpp.",
+        "new": "KoboldCpp (aussi écrit Kobold CPP) : appli LLM locale gratuite en un fichier, basée sur llama.cpp. Version Windows, Linux ou macOS, CUDA, Vulkan ou ROCm."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: 0.11% CTR at pos 7.1, mostly the navigational brand query \"koboldcpp\" (5,613 impr, 4 clicks) which a title cannot fix; typo/long-tail queries (kobold cpp, what is koboldcpp, koboldcpp.exe, is koboldcpp safe) not served. Added Get It table and safety FAQ; v1.123.1 -> v1.124.2. Earlier SEO change: 2026-10-09 geo-meta-optimizer intent alignment (download/install/GPU/vs llama.cpp queries). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 2, impressions 526.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "bba52258-4847-4b11-8834-c1e14f5f82d2",
+    "slug": "/ja/power-local-llm/koboldcpp-review",
+    "date": "2026-11-02T15:07:15.652Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "KoboldCppとは:ダウンロードとGPU対応レビュー2026",
+        "new": "KoboldCppとは:ダウンロードとGPU対応の解説"
+      },
+      {
+        "field": "metaDescription",
+        "old": "KoboldCppはllama.cppベースの無料・AGPL 3.0の単一ファイル型ローカルLLMアプリです。インストール不要の導入手順、CUDA/Vulkan/ROCm対応、llama.cppやOllamaとの違いを解説。",
+        "new": "KoboldCpp(Kobold CPP)はllama.cppベースの無料・単一ファイル型ローカルLLMアプリ。Windows・Linux・macOS版の入手方法とCUDA・Vulkan・ROCmの選び方を解説します。"
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: 0.11% CTR at pos 7.1, mostly the navigational brand query \"koboldcpp\" (5,613 impr, 4 clicks) which a title cannot fix; typo/long-tail queries (kobold cpp, what is koboldcpp, koboldcpp.exe, is koboldcpp safe) not served. Added Get It table and safety FAQ; v1.123.1 -> v1.124.2. Earlier SEO change: 2026-10-09 geo-meta-optimizer intent alignment (download/install/GPU/vs llama.cpp queries). Locale mode: query-adapted. Locale baseline (90d figures, clicks/impressions only): clicks 19, impressions 1597.",
+    "queries": [
+      "koboldcpp",
+      "koboldcppとは",
+      "koboldcpp インストール",
+      "koboldcpp ダウンロード",
+      "koboldcpp 使い方",
+      "koboldcpp 日本語",
+      "koboldcpp 小説"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "027d496e-91c3-424f-97f9-2c8f303be1a2",
+    "slug": "/zh/power-local-llm/koboldcpp-review",
+    "date": "2026-11-02T15:07:15.753Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "KoboldCpp评测 2026:下载、使用与GPU支持",
+        "new": "KoboldCpp评测:下载、安装使用与GPU支持"
+      },
+      {
+        "field": "metaDescription",
+        "old": "KoboldCpp是基于llama.cpp的免费单文件本地LLM应用(AGPL 3.0)。涵盖下载方法、CUDA/Vulkan/ROCm支持,以及与llama.cpp、Ollama的对比。",
+        "new": "KoboldCpp(Kobold CPP)是基于llama.cpp的免费单文件本地LLM应用。介绍Windows、Linux、macOS版本的下载方式,以及CUDA、Vulkan、ROCm的选择。"
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: 0.11% CTR at pos 7.1, mostly the navigational brand query \"koboldcpp\" (5,613 impr, 4 clicks) which a title cannot fix; typo/long-tail queries (kobold cpp, what is koboldcpp, koboldcpp.exe, is koboldcpp safe) not served. Added Get It table and safety FAQ; v1.123.1 -> v1.124.2. Earlier SEO change: 2026-10-09 geo-meta-optimizer intent alignment (download/install/GPU/vs llama.cpp queries). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 3, impressions 156.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a553520c-1891-4846-860c-89851889d19b",
+    "slug": "/es/power-local-llm/koboldcpp-review",
+    "date": "2026-11-02T15:07:15.853Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Reseña de KoboldCpp 2026: descarga, uso y soporte GPU",
+        "new": "Reseña de KoboldCpp: descarga, instalación y soporte GPU"
+      },
+      {
+        "field": "metaDescription",
+        "old": "KoboldCpp es una app de LLM local gratuita de un solo archivo (AGPL 3.0) sobre llama.cpp. Descarga, GPU (CUDA, Vulkan, ROCm) y comparación con llama.cpp.",
+        "new": "KoboldCpp (o Kobold CPP): app de LLM local gratuita de un solo archivo sobre llama.cpp. Versiones para Windows, Linux o macOS con CUDA, Vulkan o ROCm."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: 0.11% CTR at pos 7.1, mostly the navigational brand query \"koboldcpp\" (5,613 impr, 4 clicks) which a title cannot fix; typo/long-tail queries (kobold cpp, what is koboldcpp, koboldcpp.exe, is koboldcpp safe) not served. Added Get It table and safety FAQ; v1.123.1 -> v1.124.2. Earlier SEO change: 2026-10-09 geo-meta-optimizer intent alignment (download/install/GPU/vs llama.cpp queries). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 4, impressions 1493.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "84899497-20e6-4d03-95b6-56f967a7841b",
+    "slug": "/pt/power-local-llm/koboldcpp-review",
+    "date": "2026-11-02T15:07:15.953Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Análise do KoboldCpp 2026: download, uso e suporte a GPU",
+        "new": "Análise do KoboldCpp: download, instalação e GPU"
+      },
+      {
+        "field": "metaDescription",
+        "old": "KoboldCpp é um app de LLM local gratuito de arquivo único (AGPL 3.0) sobre o llama.cpp. Download, GPU (CUDA, Vulkan, ROCm) e comparação com o llama.cpp.",
+        "new": "KoboldCpp (ou Kobold CPP): app de LLM local gratuito de arquivo único sobre o llama.cpp. Versões para Windows, Linux ou macOS com CUDA, Vulkan ou ROCm."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: 0.11% CTR at pos 7.1, mostly the navigational brand query \"koboldcpp\" (5,613 impr, 4 clicks) which a title cannot fix; typo/long-tail queries (kobold cpp, what is koboldcpp, koboldcpp.exe, is koboldcpp safe) not served. Added Get It table and safety FAQ; v1.123.1 -> v1.124.2. Earlier SEO change: 2026-10-09 geo-meta-optimizer intent alignment (download/install/GPU/vs llama.cpp queries). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 1, impressions 645.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ef029d9a-ab25-4842-8875-461affc2e718",
+    "slug": "/ar/power-local-llm/koboldcpp-review",
+    "date": "2026-11-02T15:07:16.054Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة KoboldCpp 2026: التحميل ودعم وحدات GPU",
+        "new": "مراجعة KoboldCpp: التحميل ودعم وحدات GPU"
+      },
+      {
+        "field": "metaDescription",
+        "old": "KoboldCpp تطبيق نماذج لغوية محلي مجاني بملف واحد (AGPL 3.0) مبني على llama.cpp. التحميل ودعم CUDA وVulkan وROCm ومقارنته بـ llama.cpp وOllama.",
+        "new": "KoboldCpp (ويُكتب أيضًا Kobold CPP): تطبيق نماذج لغوية محلي مجاني بملف واحد فوق llama.cpp. نسخ Windows وLinux وmacOS مع اختيار CUDA أو Vulkan أو ROCm."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: 0.11% CTR at pos 7.1, mostly the navigational brand query \"koboldcpp\" (5,613 impr, 4 clicks) which a title cannot fix; typo/long-tail queries (kobold cpp, what is koboldcpp, koboldcpp.exe, is koboldcpp safe) not served. Added Get It table and safety FAQ; v1.123.1 -> v1.124.2. Earlier SEO change: 2026-10-09 geo-meta-optimizer intent alignment (download/install/GPU/vs llama.cpp queries). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 0, impressions 42.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "35e38b20-6e25-4fbf-9642-7cf219ba8dab",
+    "slug": "/ko/power-local-llm/koboldcpp-review",
+    "date": "2026-11-02T15:07:16.155Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "KoboldCpp 리뷰 2026: 다운로드와 GPU 지원",
+        "new": "KoboldCpp 리뷰: 다운로드·설치와 GPU 지원"
+      },
+      {
+        "field": "metaDescription",
+        "old": "KoboldCpp는 llama.cpp 기반의 무료 단일 파일 로컬 LLM 앱(AGPL 3.0)입니다. 다운로드, CUDA·Vulkan·ROCm 지원, llama.cpp·Ollama와의 비교를 정리했습니다.",
+        "new": "KoboldCpp(Kobold CPP)는 llama.cpp 기반 무료 단일 파일 로컬 LLM 앱. Windows·Linux·macOS 다운로드와 CUDA·Vulkan·ROCm 선택을 안내합니다."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: 0.11% CTR at pos 7.1, mostly the navigational brand query \"koboldcpp\" (5,613 impr, 4 clicks) which a title cannot fix; typo/long-tail queries (kobold cpp, what is koboldcpp, koboldcpp.exe, is koboldcpp safe) not served. Added Get It table and safety FAQ; v1.123.1 -> v1.124.2. Earlier SEO change: 2026-10-09 geo-meta-optimizer intent alignment (download/install/GPU/vs llama.cpp queries). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 13, impressions 465.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2b7c8c5b-d15f-46a6-b187-76f375592c2e",
+    "slug": "/local-llms/open-webui-review",
+    "date": "2026-11-02T15:07:16.263Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Open WebUI 2026: Self-Hosted ChatGPT UI Review",
+        "new": "What Is Open WebUI? 2026 Review: License, Safety, Setup"
+      },
+      {
+        "field": "metaDescription",
+        "old": "What is Open WebUI? A self-hosted, multi-user ChatGPT-style interface for Ollama and any OpenAI-compatible API, with RAG, plugins, install steps and license.",
+        "new": "Open WebUI is a free, self-hosted ChatGPT-style interface for Ollama and OpenAI-compatible APIs. Custom license, branding clause, safety, Docker setup."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: 28d CTR 0.28% at pos 6.76; head traffic is brand-spelling variants (navigational, ~4,400 impr); title/meta rewritten around definition + license + safety; v0.11.3 -> v0.12.5; license corrected to source-available with branding clause. Earlier SEO change: 2026-10-09 in all 9 locales (meta too long >158, answer-first rewrite, naming variants). Locale mode: query-adapted.",
+    "queries": [
+      "what is open webui",
+      "is open webui free",
+      "is open webui safe",
+      "is open webui open source",
+      "open webui review",
+      "chatbox vs open webui"
+    ],
+    "baseline": {
+      "position": 6.76,
+      "impressions": 11598,
+      "clicks": 33,
+      "ctr": 0.0028453181583031556,
+      "period": "28d 2026-10-06..2026-11-02 (EN URL)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e082c08a-ac31-4845-9814-861adec91d05",
+    "slug": "/de/local-llms/open-webui-review",
+    "date": "2026-11-02T15:07:16.374Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Open-WebUI-Rezension 2026: Selbst gehostetes ChatGPT-UI",
+        "new": "Was ist Open WebUI? Test 2026: Lizenz, Sicherheit, Setup"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Was ist Open WebUI? Selbst gehostete, mehrbenutzerfähige ChatGPT-Oberfläche für Ollama und jede OpenAI-kompatible API mit RAG, Plugins, Installation, Lizenz.",
+        "new": "Open WebUI ist eine kostenlose, selbst gehostete ChatGPT-Oberfläche für Ollama und OpenAI-APIs. Lizenz, Branding-Klausel, Sicherheit und Docker-Setup."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: 28d CTR 0.28% at pos 6.76; head traffic is brand-spelling variants (navigational, ~4,400 impr); title/meta rewritten around definition + license + safety; v0.11.3 -> v0.12.5; license corrected to source-available with branding clause. Earlier SEO change: 2026-10-09 in all 9 locales (meta too long >158, answer-first rewrite, naming variants). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 0, impressions 241.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "b186aaa6-ef22-4c0b-b64d-4cdff011bcdb",
+    "slug": "/fr/local-llms/open-webui-review",
+    "date": "2026-11-02T15:07:16.474Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Open WebUI 2026 : test de l\\'interface ChatGPT auto-hébergée",
+        "new": "Qu\\'est-ce qu\\'Open WebUI ? Test 2026 : licence, sécurité"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qu\\'est-ce qu\\'Open WebUI ? Interface auto-hébergée multi-utilisateur façon ChatGPT pour Ollama et toute API compatible OpenAI : RAG, plugins, licence.",
+        "new": "Open WebUI est une interface gratuite et auto-hébergée façon ChatGPT pour Ollama et les API OpenAI. Licence, clause de marque, sécurité et Docker."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: 28d CTR 0.28% at pos 6.76; head traffic is brand-spelling variants (navigational, ~4,400 impr); title/meta rewritten around definition + license + safety; v0.11.3 -> v0.12.5; license corrected to source-available with branding clause. Earlier SEO change: 2026-10-09 in all 9 locales (meta too long >158, answer-first rewrite, naming variants). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 3, impressions 1218.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d44c89bc-f0bf-48e3-b560-c04b84e0e17c",
+    "slug": "/ja/local-llms/open-webui-review",
+    "date": "2026-11-02T15:07:16.572Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Open WebUI 2026:セルフホスト型ChatGPT UIレビュー",
+        "new": "Open WebUIとは？2026年レビュー：ライセンスと安全性"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Open WebUIとは？OllamaやOpenAI互換APIをChatGPT風のセルフホスト型マルチユーザー画面にするツール。RAG、プラグイン、導入手順、ライセンスを解説します。",
+        "new": "Open WebUIはOllamaやOpenAI互換API向けの無料セルフホスト型ChatGPT風UIです。独自ライセンス、50ユーザーのブランド条項、安全性、Docker導入手順を解説します。"
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: 28d CTR 0.28% at pos 6.76; head traffic is brand-spelling variants (navigational, ~4,400 impr); title/meta rewritten around definition + license + safety; v0.11.3 -> v0.12.5; license corrected to source-available with branding clause. Earlier SEO change: 2026-10-09 in all 9 locales (meta too long >158, answer-first rewrite, naming variants). Locale mode: query-adapted. Locale baseline (90d figures, clicks/impressions only): clicks 28, impressions 2039.",
+    "queries": [
+      "open webui とは",
+      "openwebuiとは",
+      "open webuiとは"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3298403f-a612-4123-9b75-51401d89a67d",
+    "slug": "/zh/local-llms/open-webui-review",
+    "date": "2026-11-02T15:07:16.673Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Open WebUI 2026：自托管 ChatGPT UI 评测",
+        "new": "Open WebUI是什么？2026评测：许可证与安全"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Open WebUI是什么？可为Ollama和任何兼容OpenAI的API提供自托管、多用户的ChatGPT风格界面，含RAG、插件、安装步骤与许可证说明。",
+        "new": "Open WebUI 是面向 Ollama 和兼容 OpenAI 的 API 的免费自托管 ChatGPT 风格界面。涵盖许可证、50 用户品牌条款、安全性与 Docker 部署。"
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: 28d CTR 0.28% at pos 6.76; head traffic is brand-spelling variants (navigational, ~4,400 impr); title/meta rewritten around definition + license + safety; v0.11.3 -> v0.12.5; license corrected to source-available with branding clause. Earlier SEO change: 2026-10-09 in all 9 locales (meta too long >158, answer-first rewrite, naming variants). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 1, impressions 49.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "1218c366-a1ce-48fb-8170-9950603ad122",
+    "slug": "/es/local-llms/open-webui-review",
+    "date": "2026-11-02T15:07:16.773Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Open WebUI 2026: qué es y reseña del ChatGPT autoalojado",
+        "new": "¿Qué es Open WebUI? Reseña 2026: licencia y seguridad"
+      },
+      {
+        "field": "metaDescription",
+        "old": "¿Qué es Open WebUI? Una interfaz autoalojada y multiusuario al estilo ChatGPT para Ollama y cualquier API compatible con OpenAI, con RAG, plugins y licencia.",
+        "new": "Open WebUI es una interfaz gratuita y autoalojada estilo ChatGPT para Ollama y APIs de OpenAI. Licencia, cláusula de marca, seguridad y Docker."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: 28d CTR 0.28% at pos 6.76; head traffic is brand-spelling variants (navigational, ~4,400 impr); title/meta rewritten around definition + license + safety; v0.11.3 -> v0.12.5; license corrected to source-available with branding clause. Earlier SEO change: 2026-10-09 in all 9 locales (meta too long >158, answer-first rewrite, naming variants). Locale mode: query-adapted. Locale baseline (90d figures, clicks/impressions only): clicks 16, impressions 5192.",
+    "queries": [
+      "que es open webui",
+      "open webui que es"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "6c05366d-1a6f-4e04-842c-6027706dcbaa",
+    "slug": "/pt/local-llms/open-webui-review",
+    "date": "2026-11-02T15:07:16.876Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Open WebUI 2026: Avaliação da UI ChatGPT Auto-Hospedada",
+        "new": "O que é Open WebUI? Análise 2026: licença e segurança"
+      },
+      {
+        "field": "metaDescription",
+        "old": "O que é o Open WebUI? Interface auto-hospedada, multiusuário e estilo ChatGPT para Ollama e qualquer API compatível com OpenAI, com RAG, plugins e licença.",
+        "new": "Open WebUI é uma interface gratuita e auto-hospedada estilo ChatGPT para Ollama e APIs da OpenAI. Licença, cláusula de marca, segurança e Docker."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: 28d CTR 0.28% at pos 6.76; head traffic is brand-spelling variants (navigational, ~4,400 impr); title/meta rewritten around definition + license + safety; v0.11.3 -> v0.12.5; license corrected to source-available with branding clause. Earlier SEO change: 2026-10-09 in all 9 locales (meta too long >158, answer-first rewrite, naming variants). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 2, impressions 304.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "06a91454-4627-4ec5-886f-16f33eb58b26",
+    "slug": "/ar/local-llms/open-webui-review",
+    "date": "2026-11-02T15:07:16.976Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Open WebUI 2026: مراجعة واجهة ChatGPT ذاتية الاستضافة",
+        "new": "ما هو Open WebUI؟ مراجعة 2026: الترخيص والأمان"
+      },
+      {
+        "field": "metaDescription",
+        "old": "ما هو Open WebUI؟ واجهة ذاتية الاستضافة متعددة المستخدمين على طراز ChatGPT لـ Ollama وأي واجهة متوافقة مع OpenAI، مع RAG وإضافات وخطوات التثبيت والترخيص.",
+        "new": "Open WebUI واجهة مجانية ذاتية الاستضافة على طراز ChatGPT لـ Ollama وواجهات OpenAI. الترخيص، شرط العلامة التجارية، الأمان، وتثبيت Docker."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: 28d CTR 0.28% at pos 6.76; head traffic is brand-spelling variants (navigational, ~4,400 impr); title/meta rewritten around definition + license + safety; v0.11.3 -> v0.12.5; license corrected to source-available with branding clause. Earlier SEO change: 2026-10-09 in all 9 locales (meta too long >158, answer-first rewrite, naming variants). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 0, impressions 18.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "c48cf6a0-a23f-4bd6-9dd9-498c1c8928d0",
+    "slug": "/ko/local-llms/open-webui-review",
+    "date": "2026-11-02T15:07:17.078Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Open WebUI 2026: 자체 호스팅 ChatGPT UI 리뷰",
+        "new": "Open WebUI란? 2026 리뷰: 라이선스·보안"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Open WebUI란? Ollama와 모든 OpenAI 호환 API를 위한 자체 호스팅 다중 사용자 ChatGPT 스타일 인터페이스. RAG, 플러그인, 설치 방법, 라이선스를 다룹니다.",
+        "new": "Open WebUI(오픈웹UI)는 Ollama와 OpenAI 호환 API용 무료 자체 호스팅 ChatGPT 스타일 인터페이스입니다. 라이선스, 50명 브랜딩 조항, 보안, Docker 설치."
+      }
+    ],
+    "reason": "low-ctr-15 wave 2: 28d CTR 0.28% at pos 6.76; head traffic is brand-spelling variants (navigational, ~4,400 impr); title/meta rewritten around definition + license + safety; v0.11.3 -> v0.12.5; license corrected to source-available with branding clause. Earlier SEO change: 2026-10-09 in all 9 locales (meta too long >158, answer-first rewrite, naming variants). Locale mode: query-adapted. Locale baseline (90d figures, clicks/impressions only): clicks 9, impressions 343.",
+    "queries": [
+      "오픈웹ui",
+      "오픈 웹 ui",
+      "ollama webui"
+    ],
+    "baseline": null,
+    "deployedAt": null
   }
 ]
