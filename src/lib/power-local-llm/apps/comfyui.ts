@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'GPL 3.0',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // github.com/comfyanonymous/ComfyUI README: no fixed minimum VRAM/RAM published (see wiki "Which GPU should I buy for ComfyUI"), but the official portable Windows build explicitly "should work for running on your CPU only", verified 2026-09-13
-  stars: 144576,
+  stars: 144600,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['image'],
