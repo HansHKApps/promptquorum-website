@@ -54,7 +54,8 @@ export const copy: AskCopy = {
   consentTitle: 'Before we start',
   consentParagraphs: [
     'Ask Hans answers your questions with the help of AI (Claude by Anthropic), based on the content of PromptQuorum. For this, your input is sent to our server and to Anthropic. Please do not enter any personal data.',
-    'By choosing “Yes, I agree”, you additionally allow us to record anonymously which topics are asked about and which links are used. We do not store the text of your question. You can still use Ask Hans without giving consent. You can withdraw your consent at any time.',
+    'If you choose “Yes, I agree”, you allow us to record anonymously, for statistics and to improve Ask Hans and our content: the topic of your question, which apps, directory categories and tools Ask Hans looked up to answer it, the language, which links you click and which features you use (for example suggested follow-up questions or starting a new chat), the time, and a random visit ID that is not linked to you. The statistics contain no question or answer text, no IP address and no name. We publish only summed-up numbers.',
+    'Your consent is voluntary. You can use Ask Hans without it, and you can withdraw it at any time with effect for the future. To prove your choice we store its time, the text version and the random visit ID. Regardless of your choice, we count anonymously how often Ask Hans is opened and how many answers are given (totals only: no ID, no text).',
   ],
   consentPrivacyLink: 'More in the privacy policy.',
   consentPrivacyHref: '/privacy',

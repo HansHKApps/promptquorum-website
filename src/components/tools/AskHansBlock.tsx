@@ -6,13 +6,15 @@ import type { Language } from '@/lib/blog/blogContent'
 import { toOutputLocale } from '@/lib/i18n/constants'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { getAskHansTotals } from '@/lib/askhans/totals'
+import { getAskHansReport } from '@/lib/askhans/report'
 import { HUB_TONES } from '@/components/hub-template/palette'
 import { AskHansOpenButton } from './AskHansOpenButton'
+import { AskHansReport } from './AskHansReport'
 import { tAsk } from './ask-hans-block-i18n'
 
 export async function AskHansBlock({ lang }: { lang: Language }) {
   if (process.env.ASK_HANS_ENABLED !== 'true') return null
-  const totals = await getAskHansTotals()
+  const [totals, report] = await Promise.all([getAskHansTotals(), getAskHansReport()])
   const fmt = (n: number) => n.toLocaleString(toOutputLocale(lang))
   const points = [tAsk('point1', lang), tAsk('point2', lang), tAsk('point3', lang)]
   const tone = HUB_TONES.violet
@@ -58,6 +60,7 @@ export async function AskHansBlock({ lang }: { lang: Language }) {
             </div>
           </div>
         </div>
+        <AskHansReport lang={lang} report={report} />
       </div>
     </section>
   )

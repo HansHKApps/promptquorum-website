@@ -67,6 +67,11 @@ console.log(`\nSuggested follow-up questions used: ${total.followup_click ?? 0} 
 console.log('\nTop links clicked (category:link)')
 sum('link:').slice(0, 15).forEach(([k, v]) => console.log(`  ${String(v).padStart(5)}  ${k}`))
 
+console.log('\nApps researched (looked up or recommended; only visitors who said yes)')
+sum('app:').slice(0, 20).forEach(([k, v]) => console.log(`  ${String(v).padStart(5)}  ${k}`))
+console.log('\nDirectory categories researched')
+sum('dircat:').slice(0, 15).forEach(([k, v]) => console.log(`  ${String(v).padStart(5)}  ${k}`))
+
 console.log('\nTools used')
 sum('tool:').forEach(([k, v]) => console.log(`  ${String(v).padStart(5)}  ${k}`))
 
@@ -83,6 +88,23 @@ const life = (await redis.hgetall('askhans:total')) ?? {}
 console.log('\nTotals (anonymous, all visitors, no consent needed)')
 console.log(`  last ${days} days: opened ${total.total_opens ?? 0}   requests ${total.total_requests ?? 0}   answers ${total.total_answers ?? 0}`)
 console.log(`  lifetime${life.since ? ` since ${life.since}` : ''}: opened ${life.opens ?? 0}   requests ${life.requests ?? 0}   answers ${life.answers ?? 0}`)
+
+// Same windows as /mcp-stats: today, yesterday, last 7 / 30 days (UTC days)
+const day = async (n) => (await redis.hgetall(`askhans:day:${new Date(Date.now() - n * 86_400_000).toISOString().slice(0, 10)}`)) ?? {}
+const win = async (from, to) => {
+  const t = { opens: 0, answers: 0 }
+  for (let n = from; n <= to; n++) {
+    const h = await day(n)
+    t.opens += Number(h.total_opens ?? 0)
+    t.answers += Number(h.total_answers ?? 0)
+  }
+  return t
+}
+console.log('\nWindows (UTC days)        opened  answered')
+for (const [name, from, to] of [['today', 0, 0], ['yesterday', 1, 1], ['last 7 days', 0, 6], ['last 30 days', 0, 29]]) {
+  const w = await win(from, to)
+  console.log(`  ${name.padEnd(22)} ${String(w.opens).padStart(6)}  ${String(w.answers).padStart(8)}`)
+}
 
 const yes = total.consent_yes ?? 0
 const no = total.consent_no ?? 0

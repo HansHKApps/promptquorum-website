@@ -54,7 +54,8 @@ export const copy: AskCopy = {
   consentTitle: 'Antes de começar',
   consentParagraphs: [
     'O Ask Hans responde às suas perguntas com a ajuda de IA (Claude, da Anthropic), com base no conteúdo do PromptQuorum. Para isso, o texto que você digita é enviado ao nosso servidor e à Anthropic. Por favor, não informe dados pessoais.',
-    'Com “Sim, concordo”, você também permite que registremos de forma anônima quais temas são perguntados e quais links são usados. O texto da sua pergunta não é armazenado nesse processo. Mesmo sem consentimento, você pode usar o Ask Hans. Você pode revogar seu consentimento a qualquer momento.',
+    'Se você escolher “Sim, concordo”, permite que registremos de forma anônima, para fins estatísticos e para melhorar o Ask Hans e nossos conteúdos: o tema da sua pergunta, quais apps, categorias do diretório e ferramentas o Ask Hans consultou para responder, o idioma, em quais links você clica e quais funções você usa (por exemplo, perguntas de acompanhamento sugeridas ou iniciar uma nova conversa), o horário e um ID de visita aleatório que não está vinculado a você. As estatísticas não contêm o texto da pergunta nem da resposta, endereço IP ou nome. Publicamos apenas números agregados.',
+    'Seu consentimento é voluntário. Você pode usar o Ask Hans sem ele e revogá-lo a qualquer momento, com efeito para o futuro. Como prova da sua decisão, armazenamos o horário, a versão do texto e o ID de visita aleatório. Independentemente da sua escolha, contamos de forma anônima quantas vezes o Ask Hans é aberto e quantas respostas são dadas (apenas totais: sem ID, sem texto).',
   ],
   consentPrivacyLink: 'Saiba mais na Política de Privacidade.',
   consentPrivacyHref: '/pt/privacy',

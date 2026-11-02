@@ -5,7 +5,7 @@
 // Never stored: question/answer text, IP address, names.
 //
 // Keys:
-//   askhans:day:<YYYY-MM-DD>      hash of counters  (q:<cat>, tool:<name>, link:<cat>:<id>, click:<text|panel>:<section>,
+//   askhans:day:<YYYY-MM-DD>      hash of counters  (q:<cat>, tool:<name>, link:<cat>:<id>, app:<slug>, dircat:<key>, click:<text|panel>:<section>,
 //                                 answers_clicked, followup_click, new, lang:<xx>, consent_yes/no/withdrawn)
 //   askhans:visits:<YYYY-MM-DD>   set of anonymous visit IDs (random, not linked to a person)
 //   askhans:consent               list of consent proofs {ts, textVersion, visitId, type}  (capped)
@@ -15,6 +15,7 @@ import { Ratelimit } from '@upstash/ratelimit'
 import { createHash } from 'crypto'
 import { redis } from '@/lib/redis'
 import { isCategoryKey, ASK_HANS_CATEGORIES } from '@/lib/askhans/categories'
+import { cleanTopics } from '@/lib/askhans/topics'
 
 export const runtime = 'nodejs'
 
@@ -75,6 +76,10 @@ export async function POST(req: NextRequest) {
         pipe.hincrby(dayKey, `q:${b.category}`, 1)
         const tools = Array.isArray(b.tools) ? b.tools.filter((t): t is string => typeof t === 'string' && TOOL_NAME.test(t)).slice(0, 10) : []
         for (const t of tools) pipe.hincrby(dayKey, `tool:${t}`, 1)
+        // What was researched: whitelisted directory slugs/categories only (re-validated here, never free text).
+        const topics = cleanTopics(b.topics)
+        for (const a of topics.apps) pipe.hincrby(dayKey, `app:${a}`, 1)
+        for (const c of topics.dirCats) pipe.hincrby(dayKey, `dircat:${c}`, 1)
         if (typeof b.lang === 'string' && /^[a-z]{2}$/.test(b.lang)) pipe.hincrby(dayKey, `lang:${b.lang}`, 1)
         pipe.sadd(`askhans:visits:${day}`, visitId)
         pipe.expire(`askhans:visits:${day}`, DAY_TTL_S)
