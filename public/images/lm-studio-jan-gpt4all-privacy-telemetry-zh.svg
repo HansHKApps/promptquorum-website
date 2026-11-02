@@ -16,17 +16,17 @@
   <text x="136" y="85" font-size="15" font-weight="700" fill="#F4B400" text-anchor="middle">LM Studio</text>
   <!-- Badge circle -->
   <circle cx="136" cy="115" r="24" fill="#F4B400"/>
-  <text x="136" y="112" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">OPT</text>
-  <text x="136" y="122" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">OUT</text>
+  <text x="136" y="112" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">无</text>
+  <text x="136" y="122" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#160;</text>
   <!-- Panel labels -->
-  <text x="136" y="150" font-size="11" fill="#49454F" text-anchor="middle">匿名遥测</text>
-  <text x="136" y="165" font-size="10" fill="#79747E" text-anchor="middle">在设置→隐私中禁用</text>
+  <text x="136" y="150" font-size="11" fill="#49454F" text-anchor="middle">无遥测（据隐私政策）</text>
+  <text x="136" y="165" font-size="10" fill="#79747E" text-anchor="middle">更新检查会发送版本、系统、IP</text>
   <!-- Divider -->
   <line x1="30" y1="172" x2="242" y2="172" stroke="#F7F2FA" stroke-width="1"/>
   <!-- Info lines -->
   <text x="136" y="185" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">提示词离开设备：否</text>
   <text x="136" y="200" font-size="11" fill="#EA4335" text-anchor="middle">源码：专有</text>
-  <text x="136" y="215" font-size="11" fill="#49454F" text-anchor="middle">GDPR合规：✓（可退出）</text>
+  <text x="136" y="215" font-size="11" fill="#49454F" text-anchor="middle">遥测：无（据隐私政策）</text>
   <text x="136" y="230" font-size="11" fill="#34A853" text-anchor="middle">价格：免费</text>
 
   <!-- ── Panel 2: Jan ── -->
@@ -40,13 +40,13 @@
   <text x="392" y="122" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#160;</text>
   <!-- Panel labels -->
   <text x="392" y="150" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">零遥测</text>
-  <text x="392" y="165" font-size="10" fill="#79747E" text-anchor="middle">无分析SDK，AGPL源码。</text>
+  <text x="392" y="165" font-size="10" fill="#79747E" text-anchor="middle">无分析SDK，Apache 2.0源码。</text>
   <!-- Divider -->
   <line x1="286" y1="172" x2="498" y2="172" stroke="#F7F2FA" stroke-width="1"/>
   <!-- Info lines -->
   <text x="392" y="185" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">提示词离开设备：否</text>
-  <text x="392" y="200" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">源码：AGPL（开源）</text>
-  <text x="392" y="215" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">GDPR合规：✓（零遥测）</text>
+  <text x="392" y="200" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">源码：Apache 2.0（开源）</text>
+  <text x="392" y="215" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">遥测：默认无</text>
   <text x="392" y="230" font-size="11" fill="#34A853" text-anchor="middle">价格：免费</text>
 
   <!-- ── Panel 3: GPT4All ── -->
@@ -66,11 +66,11 @@
   <!-- Info lines -->
   <text x="648" y="185" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">提示词离开设备：否</text>
   <text x="648" y="200" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">源码：MIT（开源）</text>
-  <text x="648" y="215" font-size="11" fill="#49454F" text-anchor="middle">GDPR合规：✓（可选加入）</text>
+  <text x="648" y="215" font-size="11" fill="#49454F" text-anchor="middle">遥测：仅可选加入</text>
   <text x="648" y="230" font-size="11" fill="#34A853" text-anchor="middle">价格：免费</text>
 
   <!-- Bottom separator -->
   <line x1="18" y1="270" x2="782" y2="270" stroke="#E8DEF8" stroke-width="1"/>
   <!-- Footer -->
-  <text x="400" y="290" font-size="10" fill="#79747E" text-anchor="middle">Jan是最佳隐私选择：可审计AGPL源码、零遥测、完全离线 · promptquorum.com</text>
+  <text x="400" y="290" font-size="10" fill="#79747E" text-anchor="middle">Jan的可审计性最佳：Apache 2.0源码、默认无遥测、完全离线 · promptquorum.com</text>
 </svg>

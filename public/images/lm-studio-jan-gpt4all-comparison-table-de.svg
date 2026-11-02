@@ -5,7 +5,7 @@
   <!-- Title -->
   <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">LM Studio vs Jan vs GPT4All — Vollständiger Vergleich 2026</text>
   <!-- Subtitle -->
-  <text x="400" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Getestet: Llama 3.3 8B Q4_K_M · Apple M5 MacBook Pro + NVIDIA RTX 4070</text>
+  <text x="400" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Getestet: Llama 3.1 8B Q4_K_M · Apple M5 MacBook Pro + NVIDIA RTX 4070</text>
 
   <!-- Top separator -->
   <line x1="18" y1="54" x2="782" y2="54" stroke="#E8DEF8" stroke-width="1.5"/>
@@ -48,22 +48,22 @@
   <line x1="18" y1="188" x2="782" y2="188" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Row 5: Eingebautes RAG (y=208) -->
-  <text x="20" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Eingebautes RAG</text>
+  <text x="20" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Chat mit lokalen Dateien</text>
   <text x="330" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#34A853" text-anchor="middle">Ja</text>
-  <text x="490" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Ja (Erw.)</text>
-  <text x="650" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#EA4335" text-anchor="middle">Nur Plugin</text>
+  <text x="490" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Ja</text>
+  <text x="650" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#34A853" text-anchor="middle">Ja (LocalDocs)</text>
   <line x1="18" y1="216" x2="782" y2="216" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Row 6: Open Source (y=236) -->
   <text x="20" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Open Source</text>
   <text x="330" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#EA4335" text-anchor="middle">Nein (propr.)</text>
-  <text x="490" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">Ja (AGPL)</text>
+  <text x="490" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">Ja (Apache 2.0)</text>
   <text x="650" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">Ja (MIT)</text>
   <line x1="18" y1="244" x2="782" y2="244" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Row 7: Telemetrie Standard (y=264) -->
   <text x="20" y="264" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Telemetrie Standard</text>
-  <text x="330" y="264" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#F4B400" text-anchor="middle">Anonym Opt-out</text>
+  <text x="330" y="264" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Keine (Policy)</text>
   <text x="490" y="264" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">Keine</text>
   <text x="650" y="264" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Nur Opt-in</text>
   <line x1="18" y1="272" x2="782" y2="272" stroke="#F7F2FA" stroke-width="1"/>
@@ -84,5 +84,5 @@
   <line x1="18" y1="328" x2="782" y2="328" stroke="#E8DEF8" stroke-width="1.5"/>
 
   <!-- Footer -->
-  <text x="400" y="350" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">Alle drei Apps sind kostenlos · Llama 3.3 8B Q4_K_M, 200-Token-Test · promptquorum.com</text>
+  <text x="400" y="350" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">Alle drei Apps sind kostenlos · Llama 3.1 8B Q4_K_M, 200-Token-Test · promptquorum.com</text>
 </svg>

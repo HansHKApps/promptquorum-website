@@ -36,13 +36,13 @@
   <line x1="20" y1="192" x2="780" y2="192" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Row 4 — y=208 -->
-  <text x="20" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="start">Chatear con PDFs sin configuraci&#xf3;n</text>
+  <text x="20" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="start">Adjunta PDFs al chat, sin ajustes</text>
   <rect x="590" y="190" width="180" height="26" rx="13" fill="#6750A4"/>
-  <text x="680" y="207" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">LM Studio</text>
+  <text x="680" y="207" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">LM Studio / Jan</text>
   <line x1="20" y1="228" x2="780" y2="228" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Row 5 — y=244 -->
-  <text x="20" y="244" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="start">Empresa de la UE, cumplimiento de telemetr&#xed;a</text>
+  <text x="20" y="244" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="start">Revisi&#xf3;n de privacidad: c&#xf3;digo auditable</text>
   <rect x="590" y="226" width="180" height="26" rx="13" fill="#34A853"/>
   <text x="680" y="243" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Jan</text>
   <line x1="20" y1="264" x2="780" y2="264" stroke="#F7F2FA" stroke-width="1"/>
@@ -54,5 +54,5 @@
   <line x1="20" y1="300" x2="780" y2="300" stroke="#E8DEF8" stroke-width="1"/>
 
   <!-- Footer -->
-  <text x="400" y="325" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#79747E" text-anchor="middle">Empieza con LM Studio — es la opci&#xf3;n por defecto para el 80% de los usuarios · Las tres comparten archivos de modelo GGUF · promptquorum.com</text>
+  <text x="400" y="325" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#79747E" text-anchor="middle">Empieza con LM Studio — es la opci&#xf3;n por defecto para la mayor&#xed;a · Las tres comparten archivos de modelo GGUF · promptquorum.com</text>
 </svg>

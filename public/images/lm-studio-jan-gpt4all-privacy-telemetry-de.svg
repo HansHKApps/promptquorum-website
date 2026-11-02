@@ -16,17 +16,17 @@
   <text x="136" y="85" font-size="15" font-weight="700" fill="#F4B400" text-anchor="middle">LM Studio</text>
   <!-- Badge circle -->
   <circle cx="136" cy="115" r="24" fill="#F4B400"/>
-  <text x="136" y="112" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">OPT</text>
-  <text x="136" y="122" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">OUT</text>
+  <text x="136" y="112" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">KEINE</text>
+  <text x="136" y="122" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#160;</text>
   <!-- Panel labels -->
-  <text x="136" y="150" font-size="11" fill="#49454F" text-anchor="middle">Anonyme Telemetrie</text>
-  <text x="136" y="165" font-size="10" fill="#79747E" text-anchor="middle">Deaktivieren: Einstellungen → Datenschutz</text>
+  <text x="136" y="150" font-size="11" fill="#49454F" text-anchor="middle">Keine Telemetrie (Richtlinie)</text>
+  <text x="136" y="165" font-size="10" fill="#79747E" text-anchor="middle">Update-Prüfung sendet Version, OS, IP</text>
   <!-- Divider -->
   <line x1="30" y1="172" x2="242" y2="172" stroke="#F7F2FA" stroke-width="1"/>
   <!-- Info lines -->
   <text x="136" y="185" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">Prompts verlassen Gerät: NEIN</text>
   <text x="136" y="200" font-size="11" fill="#EA4335" text-anchor="middle">Quellcode: Proprietär</text>
-  <text x="136" y="215" font-size="11" fill="#49454F" text-anchor="middle">DSGVO-sicher: ✓ (Opt-out)</text>
+  <text x="136" y="215" font-size="11" fill="#49454F" text-anchor="middle">Telemetrie: keine (Richtlinie)</text>
   <text x="136" y="230" font-size="11" fill="#34A853" text-anchor="middle">Preis: Kostenlos</text>
 
   <!-- ── Panel 2: Jan ── -->
@@ -40,13 +40,13 @@
   <text x="392" y="122" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#160;</text>
   <!-- Panel labels -->
   <text x="392" y="150" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">Null Telemetrie</text>
-  <text x="392" y="165" font-size="10" fill="#79747E" text-anchor="middle">Kein Analytics-SDK. AGPL-Quellcode.</text>
+  <text x="392" y="165" font-size="10" fill="#79747E" text-anchor="middle">Kein Analytics-SDK. Apache-2.0-Quellcode.</text>
   <!-- Divider -->
   <line x1="286" y1="172" x2="498" y2="172" stroke="#F7F2FA" stroke-width="1"/>
   <!-- Info lines -->
   <text x="392" y="185" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">Prompts verlassen Gerät: NEIN</text>
-  <text x="392" y="200" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">Quellcode: AGPL (offen)</text>
-  <text x="392" y="215" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">DSGVO-sicher: ✓ (Null)</text>
+  <text x="392" y="200" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">Quellcode: Apache 2.0 (offen)</text>
+  <text x="392" y="215" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">Telemetrie: standardmäßig keine</text>
   <text x="392" y="230" font-size="11" fill="#34A853" text-anchor="middle">Preis: Kostenlos</text>
 
   <!-- ── Panel 3: GPT4All ── -->
@@ -66,11 +66,11 @@
   <!-- Info lines -->
   <text x="648" y="185" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">Prompts verlassen Gerät: NEIN</text>
   <text x="648" y="200" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">Quellcode: MIT (offen)</text>
-  <text x="648" y="215" font-size="11" fill="#49454F" text-anchor="middle">DSGVO-sicher: ✓ (Opt-in)</text>
+  <text x="648" y="215" font-size="11" fill="#49454F" text-anchor="middle">Telemetrie: nur Opt-in</text>
   <text x="648" y="230" font-size="11" fill="#34A853" text-anchor="middle">Preis: Kostenlos</text>
 
   <!-- Bottom separator -->
   <line x1="18" y1="270" x2="782" y2="270" stroke="#E8DEF8" stroke-width="1"/>
   <!-- Footer -->
-  <text x="400" y="290" font-size="10" fill="#79747E" text-anchor="middle">Jan ist die stärkste Datenschutz-Wahl: auditierbarer AGPL-Code, Null-Telemetrie, voll offline · promptquorum.com</text>
+  <text x="400" y="290" font-size="10" fill="#79747E" text-anchor="middle">Jan ist am besten prüfbar: Apache-2.0-Quellcode, standardmäßig keine Telemetrie, voll offline · promptquorum.com</text>
 </svg>

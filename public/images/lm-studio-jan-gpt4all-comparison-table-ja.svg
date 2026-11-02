@@ -5,7 +5,7 @@
   <!-- Title -->
   <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">LM Studio vs Jan vs GPT4All — 2026年完全比較</text>
   <!-- Subtitle -->
-  <text x="400" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">検証：Llama 3.3 8B Q4_K_M · Apple M5 MacBook Pro + NVIDIA RTX 4070</text>
+  <text x="400" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">検証：Llama 3.1 8B Q4_K_M · Apple M5 MacBook Pro + NVIDIA RTX 4070</text>
 
   <!-- Top separator -->
   <line x1="18" y1="54" x2="782" y2="54" stroke="#E8DEF8" stroke-width="1.5"/>
@@ -48,22 +48,22 @@
   <line x1="18" y1="188" x2="782" y2="188" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Row 5: 内蔵RAG (y=208) -->
-  <text x="20" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">内蔵RAG</text>
+  <text x="20" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">ファイルとチャット</text>
   <text x="330" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#34A853" text-anchor="middle">あり</text>
-  <text x="490" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">あり（拡張）</text>
-  <text x="650" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#EA4335" text-anchor="middle">プラグインのみ</text>
+  <text x="490" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">あり</text>
+  <text x="650" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#34A853" text-anchor="middle">あり（LocalDocs）</text>
   <line x1="18" y1="216" x2="782" y2="216" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Row 6: オープンソース (y=236) -->
   <text x="20" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">オープンソース</text>
   <text x="330" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#EA4335" text-anchor="middle">なし（専有）</text>
-  <text x="490" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">あり（AGPL）</text>
+  <text x="490" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">あり（Apache 2.0）</text>
   <text x="650" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">あり（MIT）</text>
   <line x1="18" y1="244" x2="782" y2="244" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Row 7: デフォルトのテレメトリ (y=264) -->
   <text x="20" y="264" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">デフォルトのテレメトリ</text>
-  <text x="330" y="264" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#F4B400" text-anchor="middle">匿名・オプトアウト</text>
+  <text x="330" y="264" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">なし（ポリシー）</text>
   <text x="490" y="264" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">なし</text>
   <text x="650" y="264" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">オプトインのみ</text>
   <line x1="18" y1="272" x2="782" y2="272" stroke="#F7F2FA" stroke-width="1"/>
@@ -84,5 +84,5 @@
   <line x1="18" y1="328" x2="782" y2="328" stroke="#E8DEF8" stroke-width="1.5"/>
 
   <!-- Footer -->
-  <text x="400" y="350" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">3アプリとも無料 · Llama 3.3 8B Q4_K_M、200トークンテスト · promptquorum.com</text>
+  <text x="400" y="350" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">3アプリとも無料 · Llama 3.1 8B Q4_K_M、200トークンテスト · promptquorum.com</text>
 </svg>

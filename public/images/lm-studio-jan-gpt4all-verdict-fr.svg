@@ -36,13 +36,13 @@
   <line x1="20" y1="192" x2="780" y2="192" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Row 4 — y=208 -->
-  <text x="20" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="start">Chatter avec des PDF en natif</text>
+  <text x="20" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="start">Joindre des PDF au chat, sans config</text>
   <rect x="590" y="190" width="180" height="26" rx="13" fill="#6750A4"/>
-  <text x="680" y="207" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">LM Studio</text>
+  <text x="680" y="207" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">LM Studio / Jan</text>
   <line x1="20" y1="228" x2="780" y2="228" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Row 5 — y=244 -->
-  <text x="20" y="244" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="start">Entreprise UE, conformité télémétrie</text>
+  <text x="20" y="244" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="start">Revue vie privée : code auditable</text>
   <rect x="590" y="226" width="180" height="26" rx="13" fill="#34A853"/>
   <text x="680" y="243" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Jan</text>
   <line x1="20" y1="264" x2="780" y2="264" stroke="#F7F2FA" stroke-width="1"/>
@@ -54,5 +54,5 @@
   <line x1="20" y1="300" x2="780" y2="300" stroke="#E8DEF8" stroke-width="1"/>
 
   <!-- Footer -->
-  <text x="400" y="325" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#79747E" text-anchor="middle">Commencez par LM Studio — recommandation par défaut pour 80 % des utilisateurs · promptquorum.com</text>
+  <text x="400" y="325" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#79747E" text-anchor="middle">Commencez par LM Studio — le choix par défaut de la plupart des utilisateurs · promptquorum.com</text>
 </svg>

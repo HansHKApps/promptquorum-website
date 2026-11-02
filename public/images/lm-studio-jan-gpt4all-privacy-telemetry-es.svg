@@ -16,17 +16,17 @@
   <text x="136" y="85" font-size="15" font-weight="700" fill="#F4B400" text-anchor="middle">LM Studio</text>
   <!-- Badge circle -->
   <circle cx="136" cy="115" r="24" fill="#F4B400"/>
-  <text x="136" y="112" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">OPT</text>
-  <text x="136" y="122" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">OUT</text>
+  <text x="136" y="112" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">NADA</text>
+  <text x="136" y="122" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#160;</text>
   <!-- Panel labels -->
-  <text x="136" y="150" font-size="11" fill="#49454F" text-anchor="middle">Telemetr&#xed;a an&#xf3;nima</text>
-  <text x="136" y="165" font-size="10" fill="#79747E" text-anchor="middle">Desactivar en Ajustes → Privacidad</text>
+  <text x="136" y="150" font-size="11" fill="#49454F" text-anchor="middle">Sin telemetr&#xed;a (seg&#xfa;n pol&#xed;tica)</text>
+  <text x="136" y="165" font-size="10" fill="#79747E" text-anchor="middle">Actualizaciones: env&#xed;an versi&#xf3;n, SO, IP</text>
   <!-- Divider -->
   <line x1="30" y1="172" x2="242" y2="172" stroke="#F7F2FA" stroke-width="1"/>
   <!-- Info lines -->
   <text x="136" y="185" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">Los prompts salen del dispositivo: NO</text>
   <text x="136" y="200" font-size="11" fill="#EA4335" text-anchor="middle">C&#xf3;digo fuente: Propietario</text>
-  <text x="136" y="215" font-size="11" fill="#49454F" text-anchor="middle">Seguro para RGPD: ✓ (opt-out)</text>
+  <text x="136" y="215" font-size="11" fill="#49454F" text-anchor="middle">Telemetr&#xed;a: ninguna (pol&#xed;tica)</text>
   <text x="136" y="230" font-size="11" fill="#34A853" text-anchor="middle">Precio: Gratis</text>
 
   <!-- ── Panel 2: Jan ── -->
@@ -40,13 +40,13 @@
   <text x="392" y="122" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#160;</text>
   <!-- Panel labels -->
   <text x="392" y="150" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">Telemetr&#xed;a cero</text>
-  <text x="392" y="165" font-size="10" fill="#79747E" text-anchor="middle">Sin SDK de an&#xe1;lisis. C&#xf3;digo AGPL.</text>
+  <text x="392" y="165" font-size="10" fill="#79747E" text-anchor="middle">Sin SDK de an&#xe1;lisis. C&#xf3;digo Apache 2.0.</text>
   <!-- Divider -->
   <line x1="286" y1="172" x2="498" y2="172" stroke="#F7F2FA" stroke-width="1"/>
   <!-- Info lines -->
   <text x="392" y="185" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">Los prompts salen del dispositivo: NO</text>
-  <text x="392" y="200" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">C&#xf3;digo fuente: AGPL (abierto)</text>
-  <text x="392" y="215" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">Seguro para RGPD: ✓ (cero)</text>
+  <text x="392" y="200" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">C&#xf3;digo fuente: Apache 2.0 (abierto)</text>
+  <text x="392" y="215" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">Telemetr&#xed;a: ninguna por defecto</text>
   <text x="392" y="230" font-size="11" fill="#34A853" text-anchor="middle">Precio: Gratis</text>
 
   <!-- ── Panel 3: GPT4All ── -->
@@ -66,11 +66,11 @@
   <!-- Info lines -->
   <text x="648" y="185" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">Los prompts salen del dispositivo: NO</text>
   <text x="648" y="200" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">C&#xf3;digo fuente: MIT (abierto)</text>
-  <text x="648" y="215" font-size="11" fill="#49454F" text-anchor="middle">Seguro para RGPD: ✓ (opt-in)</text>
+  <text x="648" y="215" font-size="11" fill="#49454F" text-anchor="middle">Telemetr&#xed;a: solo opt-in</text>
   <text x="648" y="230" font-size="11" fill="#34A853" text-anchor="middle">Precio: Gratis</text>
 
   <!-- Bottom separator -->
   <line x1="18" y1="270" x2="782" y2="270" stroke="#E8DEF8" stroke-width="1"/>
   <!-- Footer -->
-  <text x="400" y="290" font-size="10" fill="#79747E" text-anchor="middle">Jan es la opci&#xf3;n m&#xe1;s s&#xf3;lida en privacidad: c&#xf3;digo AGPL auditable, telemetr&#xed;a cero, totalmente sin conexi&#xf3;n · promptquorum.com</text>
+  <text x="400" y="290" font-size="10" fill="#79747E" text-anchor="middle">Jan tiene la configuraci&#xf3;n m&#xe1;s auditable: c&#xf3;digo Apache 2.0, sin telemetr&#xed;a por defecto, sin conexi&#xf3;n · promptquorum.com</text>
 </svg>
