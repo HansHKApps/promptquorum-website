@@ -19,6 +19,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "babyagi-review-autonomous-agent",
+        "title": "BabyAGI: What the First AI Agent Became",
+        "url": "/power-local-llm/babyagi-review-autonomous-agent",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-agents-with-mcp",
         "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
         "url": "/power-local-llm/local-ai-agents-with-mcp",
@@ -70,14 +78,6 @@
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
         "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-10-31",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-mac",
-        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
-        "url": "/power-local-llm/best-local-llm-apps-mac",
         "dateModified": "2026-10-31",
         "tier": "about"
       }
@@ -869,6 +869,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "babyagi-review-autonomous-agent",
+        "title": "BabyAGI: What the First AI Agent Became",
+        "url": "/power-local-llm/babyagi-review-autonomous-agent",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
         "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
         "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
@@ -921,14 +929,6 @@
         "title": "Reins Review: iPhone Chat App for Ollama and LM Studio",
         "url": "/power-local-llm/reins-review",
         "dateModified": "2026-10-30",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-app-non-technical-users",
-        "title": "Best Local AI App for Non-Technical Users (2026)",
-        "url": "/power-local-llm/local-ai-app-non-technical-users",
-        "dateModified": "2026-10-28",
         "tier": "about"
       }
     ],
@@ -4152,6 +4152,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-llm-observability-tools-2026",
+        "title": "Best LLM Observability Tool 2026: Langfuse vs LangSmith vs Helicone",
+        "url": "/local-llms/best-llm-observability-tools",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "milvus-review",
         "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
@@ -4213,14 +4221,6 @@
         "title": "Qdrant Review: The Self-Hosted Vector Database for RAG",
         "url": "/power-local-llm/qdrant-review",
         "dateModified": "2026-09-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "docker-model-runner-review",
-        "title": "Docker Model Runner Review: Local LLMs via the Docker CLI",
-        "url": "/power-local-llm/docker-model-runner-review",
-        "dateModified": "2026-09-12",
         "tier": "about"
       }
     ],
@@ -4526,6 +4526,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-llm-observability-tools-2026",
+        "title": "Best LLM Observability Tool 2026: Langfuse vs LangSmith vs Helicone",
+        "url": "/local-llms/best-llm-observability-tools",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "mission-control-review",
         "title": "Mission Control Review: A Self-Hosted Control Plane for AI Agents",
@@ -4562,14 +4570,6 @@
         "slug": "best-ai-agent-framework-2026",
         "title": "Best AI Agent Framework 2026: LangGraph vs CrewAI vs n8n",
         "url": "/local-llms/best-ai-agent-framework",
-        "dateModified": "2026-08-28",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-llm-observability-tools-2026",
-        "title": "Best LLM Observability Tool 2026: Langfuse vs LangSmith vs Helicone",
-        "url": "/local-llms/best-llm-observability-tools",
         "dateModified": "2026-08-28",
         "tier": "about"
       },
@@ -7774,7 +7774,7 @@
         "slug": "babyagi-review-autonomous-agent",
         "title": "BabyAGI: What the First AI Agent Became",
         "url": "/power-local-llm/babyagi-review-autonomous-agent",
-        "dateModified": "2026-09-02",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -11218,6 +11218,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-llm-observability-tools-2026",
+        "title": "Best LLM Observability Tool 2026: Langfuse vs LangSmith vs Helicone",
+        "url": "/local-llms/best-llm-observability-tools",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-llm-train-operate-compared",
         "title": "Local Model Training & Operations Tools Compared (2026): Fine-Tuning and Observability",
@@ -11231,14 +11239,6 @@
         "title": "Mission Control Review: A Self-Hosted Control Plane for AI Agents",
         "url": "/power-local-llm/mission-control-review",
         "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-llm-observability-tools-2026",
-        "title": "Best LLM Observability Tool 2026: Langfuse vs LangSmith vs Helicone",
-        "url": "/local-llms/best-llm-observability-tools",
-        "dateModified": "2026-08-28",
         "tier": "about"
       },
       {
@@ -11919,6 +11919,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "babyagi-review-autonomous-agent",
+        "title": "BabyAGI: What the First AI Agent Became",
+        "url": "/power-local-llm/babyagi-review-autonomous-agent",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-agents-with-mcp",
         "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
         "url": "/power-local-llm/local-ai-agents-with-mcp",
@@ -11954,14 +11962,6 @@
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
         "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-10-31",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "framework-desktop-local-ai-workstation",
-        "title": "Framework Desktop for Local AI: Specs, Price and Verdict",
-        "url": "/local-llms/framework-desktop-local-ai-workstation",
         "dateModified": "2026-10-31",
         "tier": "mentioned"
       }

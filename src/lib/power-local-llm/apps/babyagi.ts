@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'MIT',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/yoheinakajima/babyagi README: no RAM/GPU requirements stated — a Python script that calls an LLM API, hardware floor depends entirely on the backend the user configures; verified 2026-09-13
-  stars: 22400,
+  stars: 22354,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['agent'],
@@ -36,6 +36,6 @@ export const app: ToolRecord = {
   reviewSlug: 'babyagi-review-autonomous-agent', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v0.1.0', versionSourceUrl: 'https://github.com/yoheinakajima/babyagi/releases/tag/v0.1.0' },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-01-31', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2026-01-31', // GitHub API (latest release or push, whichever is newer), read 2026-11-02
   lastUpstreamUpdateSource: 'https://github.com/yoheinakajima/babyagi',
 }

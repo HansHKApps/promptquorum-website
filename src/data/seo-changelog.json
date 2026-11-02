@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 0.00004600239212439047,
+      "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
   },
@@ -10543,6 +10543,861 @@
       "clicks": 0,
       "ctr": 0,
       "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a93816dc-2f86-4077-899e-478daecca422",
+    "slug": "/local-llms/best-llm-observability-tools",
+    "date": "2026-11-02T13:40:00.611Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best LLM Observability Tool 2026",
+        "new": "Best LLM Observability Tools 2026: Langfuse vs LangSmith"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Langfuse is free to self-host with 33.9k stars, LangSmith is $39/seat plus usage, Helicone is $79. Langfuse now belongs to ClickHouse.",
+        "new": "Best LLM observability tools 2026: Langfuse (free to self-host), LangSmith from $39/seat, Helicone from $79/month, with pricing and trade-offs compared."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas into locale budget (metas 134-190 chars, titles 18-48 vs budget); leads cut from 76-130 words to <=50; Langfuse/Helicone stars refreshed, read dates 2026-11-02, month stamps removed. LangSmith unit-rate wording ($1.50/$1.00) not yet updated (open).",
+    "queries": [
+      "best llm observability platform",
+      "best llm monitoring tools",
+      "langsmith alternatives",
+      "helicone alternatives"
+    ],
+    "baseline": {
+      "position": 8.52,
+      "impressions": 779,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8f28ed2d-ecea-4c0e-9e2c-fc9e7368366c",
+    "slug": "/de/local-llms/best-llm-observability-tools",
+    "date": "2026-11-02T13:40:00.639Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Bestes LLM-Observability-Tool 2026",
+        "new": "Beste LLM-Observability-Tools 2026: Langfuse vs LangSmith"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Langfuse lässt sich mit 33,9k Sternen kostenlos selbst betreiben, LangSmith kostet 39 $ pro Platz plus Nutzung, Helicone 79 $. Langfuse gehört jetzt ClickHouse.",
+        "new": "Beste LLM-Observability-Tools 2026: Langfuse (kostenlos selbst hostbar), LangSmith ab 39 $/Platz, Helicone ab 79 $/Monat im ausführlichen Preisvergleich."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas into locale budget (metas 134-190 chars, titles 18-48 vs budget); leads cut from 76-130 words to <=50; Langfuse/Helicone stars refreshed, read dates 2026-11-02, month stamps removed. LangSmith unit-rate wording ($1.50/$1.00) not yet updated (open).",
+    "queries": [
+      "best llm observability platform",
+      "best llm monitoring tools",
+      "langsmith alternatives",
+      "helicone alternatives"
+    ],
+    "baseline": {
+      "position": 6.07,
+      "impressions": 115,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "1b6cd2b2-7fe2-4451-8b86-824c6a7a1205",
+    "slug": "/fr/local-llms/best-llm-observability-tools",
+    "date": "2026-11-02T13:40:00.667Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Meilleur outil d observabilite LLM 2026",
+        "new": "Observabilité LLM 2026 : Langfuse vs LangSmith vs Helicone"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Langfuse s auto-heberge gratuitement avec 33,9k etoiles, LangSmith coute 39 $ par siege plus la consommation, Helicone 79 $. Langfuse appartient desormais a ClickHouse. Verifie en aout 2026.",
+        "new": "Meilleurs outils d'observabilité LLM 2026 : Langfuse (auto-hébergement gratuit), LangSmith dès 39 $/siège, Helicone dès 79 $/mois comparés en détail."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas into locale budget (metas 134-190 chars, titles 18-48 vs budget); leads cut from 76-130 words to <=50; Langfuse/Helicone stars refreshed, read dates 2026-11-02, month stamps removed. LangSmith unit-rate wording ($1.50/$1.00) not yet updated (open).",
+    "queries": [
+      "best llm observability platform",
+      "best llm monitoring tools",
+      "langsmith alternatives",
+      "helicone alternatives"
+    ],
+    "baseline": {
+      "position": 17.13,
+      "impressions": 92,
+      "clicks": 1,
+      "ctr": 0.010869565217391304,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "12fe6dc0-689b-425f-bc0e-d23939bbd5a2",
+    "slug": "/ja/local-llms/best-llm-observability-tools",
+    "date": "2026-11-02T13:40:00.694Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026年 最適なLLMオブザーバビリティツール",
+        "new": "LLM可観測性ツール比較2026：Langfuse"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Langfuseはスター33,900件で自己ホストが無料、LangSmithは1席39ドルと従量課金、Heliconeは79ドル。LangfuseはClickHouse傘下に。2026年8月時点で確認。",
+        "new": "2026年のLLMオブザーバビリティツール比較：Langfuse（セルフホスト無料）、LangSmithは1席月39ドルから、Heliconeは月79ドルから。料金と得失を比較。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas into locale budget (metas 134-190 chars, titles 18-48 vs budget); leads cut from 76-130 words to <=50; Langfuse/Helicone stars refreshed, read dates 2026-11-02, month stamps removed. LangSmith unit-rate wording ($1.50/$1.00) not yet updated (open).",
+    "queries": [
+      "best llm observability platform",
+      "best llm monitoring tools",
+      "langsmith alternatives",
+      "helicone alternatives"
+    ],
+    "baseline": {
+      "position": 6.17,
+      "impressions": 30,
+      "clicks": 1,
+      "ctr": 0.03333333333333333,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b7b726be-4d26-469c-9eea-c14deb56926f",
+    "slug": "/zh/local-llms/best-llm-observability-tools",
+    "date": "2026-11-02T13:40:00.720Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026年最佳 LLM 可观测性工具",
+        "new": "LLM可观测性工具对比2026:Langfuse"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Langfuse 拥有 3.39 万星标且自托管免费，LangSmith 每席位 39 美元加用量计费，Helicone 79 美元。Langfuse 已被 ClickHouse 收购。",
+        "new": "2026年LLM可观测性工具对比:Langfuse(可免费自托管)、LangSmith每席每月39美元起、Helicone每月79美元起,并比较价格与取舍。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas into locale budget (metas 134-190 chars, titles 18-48 vs budget); leads cut from 76-130 words to <=50; Langfuse/Helicone stars refreshed, read dates 2026-11-02, month stamps removed. LangSmith unit-rate wording ($1.50/$1.00) not yet updated (open).",
+    "queries": [
+      "best llm observability platform",
+      "best llm monitoring tools",
+      "langsmith alternatives",
+      "helicone alternatives"
+    ],
+    "baseline": {
+      "position": 6.18,
+      "impressions": 22,
+      "clicks": 2,
+      "ctr": 0.09090909090909091,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a5007c92-9cea-4d29-8a27-124776e05ecc",
+    "slug": "/es/local-llms/best-llm-observability-tools",
+    "date": "2026-11-02T13:40:00.747Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Mejor herramienta de observabilidad de LLM 2026",
+        "new": "Mejores herramientas de observabilidad LLM 2026: Langfuse"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Langfuse es gratis de autoalojar con 33,9k estrellas, LangSmith cuesta 39 $ por puesto más consumo, Helicone 79 $. Langfuse ya pertenece a ClickHouse.",
+        "new": "Mejores herramientas de observabilidad LLM 2026: Langfuse (autoalojado gratis), LangSmith desde 39 $/puesto y Helicone desde 79 $/mes comparados."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas into locale budget (metas 134-190 chars, titles 18-48 vs budget); leads cut from 76-130 words to <=50; Langfuse/Helicone stars refreshed, read dates 2026-11-02, month stamps removed. LangSmith unit-rate wording ($1.50/$1.00) not yet updated (open).",
+    "queries": [
+      "best llm observability platform",
+      "best llm monitoring tools",
+      "langsmith alternatives",
+      "helicone alternatives"
+    ],
+    "baseline": {
+      "position": 10.34,
+      "impressions": 44,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6c1a1feb-3fe8-464e-a5c1-650397244cb1",
+    "slug": "/pt/local-llms/best-llm-observability-tools",
+    "date": "2026-11-02T13:40:00.774Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Melhor ferramenta de observabilidade de LLM 2026",
+        "new": "Melhores ferramentas de observabilidade LLM 2026: Langfuse"
+      },
+      {
+        "field": "metaDescription",
+        "old": "O Langfuse é gratuito para auto-hospedar e tem 33,9 mil estrelas, o LangSmith custa US$ 39 por assento mais consumo e o Helicone US$ 79. O Langfuse agora pertence à ClickHouse.",
+        "new": "Melhores ferramentas de observabilidade LLM 2026: Langfuse (auto-hospedagem grátis), LangSmith desde US$ 39/assento e Helicone desde US$ 79."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas into locale budget (metas 134-190 chars, titles 18-48 vs budget); leads cut from 76-130 words to <=50; Langfuse/Helicone stars refreshed, read dates 2026-11-02, month stamps removed. LangSmith unit-rate wording ($1.50/$1.00) not yet updated (open).",
+    "queries": [
+      "best llm observability platform",
+      "best llm monitoring tools",
+      "langsmith alternatives",
+      "helicone alternatives"
+    ],
+    "baseline": {
+      "position": 9.5,
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7300b5c4-9381-496d-b88f-68322c104917",
+    "slug": "/ar/local-llms/best-llm-observability-tools",
+    "date": "2026-11-02T13:40:00.801Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "أفضل أداة لمراقبة نماذج اللغة الكبيرة 2026",
+        "new": "أفضل أدوات مراقبة LLM 2026: Langfuse مقابل LangSmith"
+      },
+      {
+        "field": "metaDescription",
+        "old": "الاستضافة الذاتية لـ Langfuse مجانية وله 33.9 ألف نجمة، وLangSmith بـ 39 دولارًا للمقعد إضافة إلى الاستهلاك، وHelicone بـ 79 دولارًا. صار Langfuse ملكًا لـ ClickHouse. جرى.",
+        "new": "أفضل أدوات مراقبة LLM 2026: Langfuse (استضافة ذاتية مجانية)، وLangSmith من 39 دولاراً للمقعد، وHelicone من 79 دولاراً شهرياً، مقارنةً بالأسعار."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas into locale budget (metas 134-190 chars, titles 18-48 vs budget); leads cut from 76-130 words to <=50; Langfuse/Helicone stars refreshed, read dates 2026-11-02, month stamps removed. LangSmith unit-rate wording ($1.50/$1.00) not yet updated (open).",
+    "queries": [
+      "best llm observability platform",
+      "best llm monitoring tools",
+      "langsmith alternatives",
+      "helicone alternatives"
+    ],
+    "baseline": {
+      "position": 14.11,
+      "impressions": 57,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b1bc2e1f-3a01-46a5-bdbc-3b1c5d70a3aa",
+    "slug": "/ko/local-llms/best-llm-observability-tools",
+    "date": "2026-11-02T13:40:00.828Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026년 최고의 LLM 옵저버빌리티 도구",
+        "new": "LLM 관측 도구 비교 2026: Langfuse·LangSmith"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Langfuse는 스타 3만 3,900개에 자체 호스팅이 무료, LangSmith는 좌석당 39달러에 사용량 과금, Helicone은 79달러입니다. Langfuse는 ClickHouse에 인수됐습니다.",
+        "new": "2026 LLM 관측 도구 비교: Langfuse(무료 셀프 호스팅), LangSmith 좌석당 월 39달러부터, Helicone 월 79달러부터, 가격과 장단점 비교."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas into locale budget (metas 134-190 chars, titles 18-48 vs budget); leads cut from 76-130 words to <=50; Langfuse/Helicone stars refreshed, read dates 2026-11-02, month stamps removed. LangSmith unit-rate wording ($1.50/$1.00) not yet updated (open).",
+    "queries": [
+      "best llm observability platform",
+      "best llm monitoring tools",
+      "langsmith alternatives",
+      "helicone alternatives"
+    ],
+    "baseline": {
+      "position": 4.89,
+      "impressions": 19,
+      "clicks": 2,
+      "ctr": 0.10526315789473684,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "eea9d2a5-e76a-43ed-8ef9-6f84f6d7f5d0",
+    "slug": "/local-llms/on-prem-air-gapped-local-llm",
+    "date": "2026-11-02T13:40:00.881Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Air-Gapped Local LLM Deployment",
+        "new": "Air-Gapped LLM Deployment: Architecture, Updates, Security"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Air-gapped local LLM deployment: complete isolation architecture, network security, updates management, and classified data handling.",
+        "new": "How an air-gapped LLM deployment works: isolated architecture, offline model updates and network security for government and regulated data."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas/leads rewritten around \"air-gapped LLM deployment\" (13-36 char titles were out of budget); absolute \"no data exfiltration risk\" intro replaced by a hedged statement in 9 locales.",
+    "queries": [
+      "air gapped llm",
+      "air-gapped llm deployment",
+      "air-gapped deployment",
+      "how do air-gapped ai deployments work"
+    ],
+    "baseline": {
+      "position": 9.83,
+      "impressions": 522,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8538e788-264f-4398-b0c5-6722d531460f",
+    "slug": "/de/local-llms/on-prem-air-gapped-local-llm",
+    "date": "2026-11-02T13:40:00.918Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Air-Gapped Local LLM Bereitstellung",
+        "new": "Air-Gapped-LLM-Betrieb: Architektur, Updates, Sicherheit"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Air-Gapped Local LLM Bereitstellung: komplette Isolierungsarchitektur, Netzwerksicherheit, Update-Verwaltung und Klassifizierungsdaten-Handling.",
+        "new": "So funktioniert ein Air-Gapped-LLM-Betrieb: isolierte Architektur, Offline-Modellupdates und Netzwerksicherheit für Behörden und regulierte Daten."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas/leads rewritten around \"air-gapped LLM deployment\" (13-36 char titles were out of budget); absolute \"no data exfiltration risk\" intro replaced by a hedged statement in 9 locales.",
+    "queries": [
+      "air gapped llm",
+      "air-gapped llm deployment",
+      "air-gapped deployment",
+      "how do air-gapped ai deployments work"
+    ],
+    "baseline": {
+      "position": 13.6,
+      "impressions": 90,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "5afc0838-3f5f-411b-a482-4c48c6505b36",
+    "slug": "/fr/local-llms/on-prem-air-gapped-local-llm",
+    "date": "2026-11-02T13:40:00.949Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Déploiement d'LLM air-gapped isolé",
+        "new": "LLM air-gapped : architecture, mises à jour, sécurité"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Déploiement air-gapped d'LLM local: architecture d'isolement complet, sécurité réseau, gestion des mises à jour et données classifiées.",
+        "new": "Fonctionnement d'un déploiement LLM air-gapped : architecture isolée, mises à jour hors ligne des modèles et sécurité réseau pour les données sensibles."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas/leads rewritten around \"air-gapped LLM deployment\" (13-36 char titles were out of budget); absolute \"no data exfiltration risk\" intro replaced by a hedged statement in 9 locales.",
+    "queries": [
+      "air gapped llm",
+      "air-gapped llm deployment",
+      "air-gapped deployment",
+      "how do air-gapped ai deployments work"
+    ],
+    "baseline": {
+      "position": 11.57,
+      "impressions": 23,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "5a89e1f9-0686-4007-9c77-b8bdb1a3887b",
+    "slug": "/ja/local-llms/on-prem-air-gapped-local-llm",
+    "date": "2026-11-02T13:40:00.976Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "エアギャップローカルLLM デプロイメント",
+        "new": "エアギャップLLM導入：構成・更新・セキュリティ"
+      },
+      {
+        "field": "metaDescription",
+        "old": "エアギャップローカルLLMデプロイメント: 完全隔離アーキテクチャ、ネットワークセキュリティ、更新管理、機密データ処理。",
+        "new": "エアギャップ環境でLLMを動かす仕組み：隔離アーキテクチャ、オフラインでのモデル更新、政府・規制対象データ向けのネットワークセキュリティを解説。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas/leads rewritten around \"air-gapped LLM deployment\" (13-36 char titles were out of budget); absolute \"no data exfiltration risk\" intro replaced by a hedged statement in 9 locales.",
+    "queries": [
+      "air gapped llm",
+      "air-gapped llm deployment",
+      "air-gapped deployment",
+      "how do air-gapped ai deployments work"
+    ],
+    "baseline": {
+      "position": 4.83,
+      "impressions": 36,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "bd8a6a18-0fd5-4ce9-88db-cc28a9e18479",
+    "slug": "/zh/local-llms/on-prem-air-gapped-local-llm",
+    "date": "2026-11-02T13:40:01.003Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "气隙本地LLM部署: 隔离架构与安全指南",
+        "new": "气隙(air-gapped)LLM部署指南:架构、更新与安全"
+      },
+      {
+        "field": "metaDescription",
+        "old": "了解如何在完全隔离的网络环境中部署本地LLM: 包括网络隔离架构设计、模型离线管理、安全更新流程和分类信息保护。适用于政府、军事、金融机构。",
+        "new": "气隙(air-gapped)LLM部署的工作方式:隔离架构、离线模型更新,以及面向政府和受监管数据的网络安全措施、传输流程、日志管理与审计要点。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas/leads rewritten around \"air-gapped LLM deployment\" (13-36 char titles were out of budget); absolute \"no data exfiltration risk\" intro replaced by a hedged statement in 9 locales.",
+    "queries": [
+      "air gapped llm",
+      "air-gapped llm deployment",
+      "air-gapped deployment",
+      "how do air-gapped ai deployments work"
+    ],
+    "baseline": {
+      "position": 11.14,
+      "impressions": 21,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "23ea60c9-9aac-48e1-a04f-7986b3590edc",
+    "slug": "/es/local-llms/on-prem-air-gapped-local-llm",
+    "date": "2026-11-02T13:40:01.030Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Despliegue de LLM Local con Air-Gap",
+        "new": "LLM air-gapped: arquitectura, actualizaciones y seguridad"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Despliegue de LLM local con air-gap: arquitectura de aislamiento completo, seguridad de red, gestión de actualizaciones y manejo de datos clasificados.",
+        "new": "Cómo funciona un despliegue de LLM air-gapped: arquitectura aislada, actualizaciones offline de modelos y seguridad de red para datos sensibles."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas/leads rewritten around \"air-gapped LLM deployment\" (13-36 char titles were out of budget); absolute \"no data exfiltration risk\" intro replaced by a hedged statement in 9 locales.",
+    "queries": [
+      "air gapped llm",
+      "air-gapped llm deployment",
+      "air-gapped deployment",
+      "how do air-gapped ai deployments work"
+    ],
+    "baseline": {
+      "position": 12.34,
+      "impressions": 88,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e2985cb8-2dff-437e-9218-5bc86a9237d4",
+    "slug": "/pt/local-llms/on-prem-air-gapped-local-llm",
+    "date": "2026-11-02T13:40:01.057Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Implantação de LLM Local com Air-Gap",
+        "new": "Implantação de LLM air-gapped: arquitetura e atualizações"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Implantação de LLM local com air-gap: arquitetura de isolamento completo, segurança de rede, gestão de atualizações e tratamento de dados classificados.",
+        "new": "Como funciona uma implantação de LLM air-gapped: arquitetura isolada, atualizações offline de modelos e segurança de rede para dados sensíveis."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas/leads rewritten around \"air-gapped LLM deployment\" (13-36 char titles were out of budget); absolute \"no data exfiltration risk\" intro replaced by a hedged statement in 9 locales.",
+    "queries": [
+      "air gapped llm",
+      "air-gapped llm deployment",
+      "air-gapped deployment",
+      "how do air-gapped ai deployments work"
+    ],
+    "baseline": {
+      "position": 9,
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "20d40bd4-0b17-496b-a3c4-13be7e9ccca7",
+    "slug": "/ar/local-llms/on-prem-air-gapped-local-llm",
+    "date": "2026-11-02T13:40:01.083Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "⁨LLM⁩ محلي معزول (⁨Air-Gap⁩): نشر في بيئات مصنّفة",
+        "new": "نشر LLM معزول الشبكة: البنية والتحديثات والأمان"
+      },
+      {
+        "field": "metaDescription",
+        "old": "النشر المعزول يقطع كل اتصال خارجي للبيانات المصنّفة. بنية عزل كاملة، أمان الشبكة وإدارة التحديثات بلا إنترنت للحكومات والمؤسسات المالية.",
+        "new": "كيف يعمل نشر LLM معزول عن الإنترنت: بنية معزولة وتحديثات نماذج دون اتصال وأمن الشبكة للبيانات الحكومية والخاضعة للتنظيم."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas/leads rewritten around \"air-gapped LLM deployment\" (13-36 char titles were out of budget); absolute \"no data exfiltration risk\" intro replaced by a hedged statement in 9 locales.",
+    "queries": [
+      "air gapped llm",
+      "air-gapped llm deployment",
+      "air-gapped deployment",
+      "how do air-gapped ai deployments work"
+    ],
+    "baseline": {
+      "position": 1,
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "5db0d5f0-a810-46ac-971c-0e29b75de25f",
+    "slug": "/ko/local-llms/on-prem-air-gapped-local-llm",
+    "date": "2026-11-02T13:40:01.110Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "에어갭 로컬 LLM 배포",
+        "new": "에어갭 LLM 배포 가이드: 아키텍처·업데이트·보안"
+      },
+      {
+        "field": "metaDescription",
+        "old": "에어갭 로컬 LLM 배포: 완전 격리 아키텍처, 네트워크 보안, 업데이트 관리, 기밀 데이터 처리.",
+        "new": "에어갭(air-gapped) LLM 배포 방식: 격리 아키텍처, 오프라인 모델 업데이트, 정부·규제 대상 데이터를 위한 네트워크 보안."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas/leads rewritten around \"air-gapped LLM deployment\" (13-36 char titles were out of budget); absolute \"no data exfiltration risk\" intro replaced by a hedged statement in 9 locales.",
+    "queries": [
+      "air gapped llm",
+      "air-gapped llm deployment",
+      "air-gapped deployment",
+      "how do air-gapped ai deployments work"
+    ],
+    "baseline": {
+      "position": 6.22,
+      "impressions": 23,
+      "clicks": 2,
+      "ctr": 0.08695652173913043,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c4882737-1c13-4a57-bbec-d1ec7e233fc1",
+    "slug": "/power-local-llm/babyagi-review-autonomous-agent",
+    "date": "2026-11-02T13:40:01.173Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "BabyAGI: What the First AI Agent Became",
+        "new": "BabyAGI Review: What It Is, License, Local LLM Support"
+      },
+      {
+        "field": "metaDescription",
+        "old": "BabyAGI pioneered autonomous AI agents in 2023, then its creator rebuilt it twice. Here is what runs today, its MIT license, and why it has no local-model support.",
+        "new": "What is BabyAGI? The 2023 agent was rebuilt as functionz in 2024. MIT license, little recent activity and no documented local-model support."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas into budget targeting \"what is babyagi / license / local LLM\"; fr/es/pt leads cut to <=50 words; \"still receiving occasional commits\" corrected (no code change since 2024-10-11, last commit 2026-01-31 docs only) and stale warning callout added in 9 locales.",
+    "queries": [
+      "babyagi",
+      "what is babyagi",
+      "babyagi github"
+    ],
+    "baseline": {
+      "position": 9.2,
+      "impressions": 519,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6ca9e4aa-510c-41e9-b133-89d645f7457d",
+    "slug": "/de/power-local-llm/babyagi-review-autonomous-agent",
+    "date": "2026-11-02T13:40:01.201Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "BabyAGI: MIT-Lizenz, kein lokales Modell",
+        "new": "BabyAGI Test: Was es ist, Lizenz und lokale LLMs"
+      },
+      {
+        "field": "metaDescription",
+        "old": "BabyAGI prägte 2023 autonome KI-Agenten, wurde dann zweimal umgebaut. Was heute läuft, die MIT-Lizenz und warum es kein lokales Modell unterstützt.",
+        "new": "Was ist BabyAGI? Der Agent von 2023 wurde 2024 als functionz neu gebaut. MIT-Lizenz, wenig Aktivität und keine dokumentierte Unterstützung lokaler Modelle."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas into budget targeting \"what is babyagi / license / local LLM\"; fr/es/pt leads cut to <=50 words; \"still receiving occasional commits\" corrected (no code change since 2024-10-11, last commit 2026-01-31 docs only) and stale warning callout added in 9 locales.",
+    "queries": [
+      "babyagi",
+      "what is babyagi",
+      "babyagi github"
+    ],
+    "baseline": {
+      "position": 1,
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d672f865-d742-415d-99ec-53e9e7bba655",
+    "slug": "/fr/power-local-llm/babyagi-review-autonomous-agent",
+    "date": "2026-11-02T13:40:01.227Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "BabyAGI: licence MIT, pas de modèle local",
+        "new": "Avis BabyAGI : définition, licence et LLM locaux"
+      },
+      {
+        "field": "metaDescription",
+        "old": "BabyAGI a pionné les agents IA autonomes en 2023, puis a été reconstruit deux fois. Ce qui fonctionne aujourd'hui, sa licence MIT, et pourquoi aucun modèle local.",
+        "new": "Qu'est-ce que BabyAGI ? L'agent de 2023 a été refondu en functionz en 2024. Licence MIT, peu d'activité et aucun support documenté des modèles locaux."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas into budget targeting \"what is babyagi / license / local LLM\"; fr/es/pt leads cut to <=50 words; \"still receiving occasional commits\" corrected (no code change since 2024-10-11, last commit 2026-01-31 docs only) and stale warning callout added in 9 locales.",
+    "queries": [
+      "babyagi",
+      "what is babyagi",
+      "babyagi github"
+    ],
+    "baseline": {
+      "position": 10.25,
+      "impressions": 4,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ac170cab-e9cf-463e-a01d-e1301742a20f",
+    "slug": "/ja/power-local-llm/babyagi-review-autonomous-agent",
+    "date": "2026-11-02T13:40:01.254Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "BabyAGI：MITライセンス、ローカルモデル非対応",
+        "new": "BabyAGIレビュー：概要・ライセンス・ローカルLLM"
+      },
+      {
+        "field": "metaDescription",
+        "old": "BabyAGIは2023年に自律型AIエージェントを切り拓き、その後2度作り替えられた。現在動くもの、MITライセンス、ローカルモデル非対応の理由を解説。",
+        "new": "BabyAGIとは？2023年のエージェントが2024年にfunctionzとして再構築。MITライセンス、最近の更新は少なく、ローカルモデル対応の記載はなし。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas into budget targeting \"what is babyagi / license / local LLM\"; fr/es/pt leads cut to <=50 words; \"still receiving occasional commits\" corrected (no code change since 2024-10-11, last commit 2026-01-31 docs only) and stale warning callout added in 9 locales.",
+    "queries": [
+      "babyagi",
+      "what is babyagi",
+      "babyagi github"
+    ],
+    "baseline": {
+      "position": 4.33,
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "0dcdf9b2-b62e-4526-96c2-2e661432d4b5",
+    "slug": "/zh/power-local-llm/babyagi-review-autonomous-agent",
+    "date": "2026-11-02T13:40:01.281Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "BabyAGI：MIT许可证，不支持本地模型",
+        "new": "BabyAGI评测:简介、许可证与本地模型支持情况"
+      },
+      {
+        "field": "metaDescription",
+        "old": "BabyAGI在2023年开创了自主AI智能体，之后被重建了两次。本文说明目前运行的版本、MIT许可证，以及为何不支持本地模型。",
+        "new": "BabyAGI是什么?2023年的智能体在2024年重构为functionz。MIT许可证,近期更新很少,没有文档记载的本地模型支持,使用前请核实。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas into budget targeting \"what is babyagi / license / local LLM\"; fr/es/pt leads cut to <=50 words; \"still receiving occasional commits\" corrected (no code change since 2024-10-11, last commit 2026-01-31 docs only) and stale warning callout added in 9 locales.",
+    "queries": [
+      "babyagi",
+      "what is babyagi",
+      "babyagi github"
+    ],
+    "baseline": {
+      "position": 3,
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "859625e4-144d-4999-a2bd-27ba58663b71",
+    "slug": "/es/power-local-llm/babyagi-review-autonomous-agent",
+    "date": "2026-11-02T13:40:01.308Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "BabyAGI: licencia MIT, sin modelo local",
+        "new": "Reseña de BabyAGI: qué es, licencia y LLM locales"
+      },
+      {
+        "field": "metaDescription",
+        "old": "BabyAGI fue pionero en agentes de IA autónomos en 2023 y luego se reconstruyó dos veces. Qué funciona hoy, su licencia MIT y por qué no soporta modelos locales.",
+        "new": "¿Qué es BabyAGI? El agente de 2023 se reconstruyó como functionz en 2024. MIT, poca actividad reciente y sin soporte documentado de modelos locales."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas into budget targeting \"what is babyagi / license / local LLM\"; fr/es/pt leads cut to <=50 words; \"still receiving occasional commits\" corrected (no code change since 2024-10-11, last commit 2026-01-31 docs only) and stale warning callout added in 9 locales.",
+    "queries": [
+      "babyagi",
+      "what is babyagi",
+      "babyagi github"
+    ],
+    "baseline": {
+      "position": 10,
+      "impressions": 9,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a19643ab-635b-4486-8edd-e7e86b3d730b",
+    "slug": "/pt/power-local-llm/babyagi-review-autonomous-agent",
+    "date": "2026-11-02T13:40:01.336Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "BabyAGI: licença MIT, sem modelo local",
+        "new": "Análise do BabyAGI: o que é, licença e LLMs locais"
+      },
+      {
+        "field": "metaDescription",
+        "old": "O BabyAGI foi pioneiro em agentes de IA autônomos em 2023 e depois foi reconstruído duas vezes. O que roda hoje, sua licença MIT e por que não há suporte a modelos locais.",
+        "new": "O que é o BabyAGI? O agente de 2023 foi reconstruído como functionz em 2024. MIT, pouca atividade recente e sem suporte documentado a modelos locais."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas into budget targeting \"what is babyagi / license / local LLM\"; fr/es/pt leads cut to <=50 words; \"still receiving occasional commits\" corrected (no code change since 2024-10-11, last commit 2026-01-31 docs only) and stale warning callout added in 9 locales.",
+    "queries": [
+      "babyagi",
+      "what is babyagi",
+      "babyagi github"
+    ],
+    "baseline": {
+      "position": 3,
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e084ebd1-550e-42e6-b7c7-c626e49a4d49",
+    "slug": "/ar/power-local-llm/babyagi-review-autonomous-agent",
+    "date": "2026-11-02T13:40:01.364Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "BabyAGI: ترخيص MIT، بلا نموذج محلي",
+        "new": "مراجعة BabyAGI: ما هو والترخيص والنماذج المحلية"
+      },
+      {
+        "field": "metaDescription",
+        "old": "ابتكر BabyAGI فكرة عملاء الذكاء الاصطناعي المستقلين في 2023، ثم أُعيد بناؤه مرتين. ما يعمل اليوم، ترخيصه MIT، ولماذا لا يدعم النماذج المحلية.",
+        "new": "ما هو BabyAGI؟ أُعيد بناء وكيل 2023 باسم functionz في 2024. ترخيص MIT ونشاط حديث قليل ولا دعم موثّق للنماذج المحلية."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas into budget targeting \"what is babyagi / license / local LLM\"; fr/es/pt leads cut to <=50 words; \"still receiving occasional commits\" corrected (no code change since 2024-10-11, last commit 2026-01-31 docs only) and stale warning callout added in 9 locales.",
+    "queries": [
+      "babyagi",
+      "what is babyagi",
+      "babyagi github"
+    ],
+    "baseline": {
+      "position": 8,
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "80edf3ae-d850-4774-9632-1ab478005ed6",
+    "slug": "/ko/power-local-llm/babyagi-review-autonomous-agent",
+    "date": "2026-11-02T13:40:01.391Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "BabyAGI: MIT 라이선스, 로컬 모델 미지원",
+        "new": "BabyAGI 리뷰: 개요·라이선스·로컬 LLM 지원"
+      },
+      {
+        "field": "metaDescription",
+        "old": "BabyAGI는 2023년 자율 AI 에이전트를 개척했고, 이후 두 차례 재구축됐다. 지금 작동하는 버전, MIT 라이선스, 로컬 모델을 지원하지 않는 이유를 설명한다.",
+        "new": "BabyAGI란? 2023년 에이전트가 2024년 functionz로 재구축됨. MIT 라이선스, 최근 활동은 적고 로컬 모델 지원은 문서화되지 않음."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 3. Titles/metas into budget targeting \"what is babyagi / license / local LLM\"; fr/es/pt leads cut to <=50 words; \"still receiving occasional commits\" corrected (no code change since 2024-10-11, last commit 2026-01-31 docs only) and stale warning callout added in 9 locales.",
+    "queries": [
+      "babyagi",
+      "what is babyagi",
+      "babyagi github"
+    ],
+    "baseline": {
+      "position": 11.84,
+      "impressions": 51,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
     },
     "deployedAt": null
   }

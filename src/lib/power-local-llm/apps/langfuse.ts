@@ -15,7 +15,7 @@ export const app: ToolRecord = {
   license: 'MIT (core), Enterprise Edition features under a separate commercial license', // GitHub reports license "Other" — repo LICENSE is MIT Expat for most of the codebase with a restricted ee/ directory, verified 2026-09-18
   price: 'freemium',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true },
-  stars: 34755, // github.com/langfuse/langfuse, verified 2026-09-18
+  stars: 36883, // github.com/langfuse/langfuse, verified 2026-09-18
   addedDate: '2026-09-18',
   status: 'listed',
   uses: ['build'],
