@@ -7,7 +7,8 @@
 // docs/INSTALLATION.md (profiles, first-run download sizes, feature requirements, commercial install), docs/THIRD_PARTY_MODELS.md (per-model licences),
 // docs/CONFIGURATION.md (vlm_backend, updates), docs/AGENTS.md (MCP endpoint on by default), docs/DEPLOYMENT.md and viewer.py (binds 0.0.0.0, viewer.password
 // empty by default), and client source (map tiles from tile.openstreetmap.org, Photon geocoder in the GPS edit dialog, update check to api.github.com).
-// Last upstream update: 2026-10-28 (newer of latest release 2026-10-27 and last push 2026-10-28) -> NOT stale (3-month rule).
+// Last upstream update: 2026-10-30 (newer of latest release v1.27.0 2026-10-29 and last push 2026-10-30; re-verified 2026-11-02) -> NOT stale (3-month rule).
+// 2026-11-02 refresh: v1.27.0 docs add a per-user Windows MSI that NO release ships (build with installer\build-msi.ps1 or take the facet-msi CI artifact); 24gb first-run download 19.3 GB; stars 332.
 // Facet is NOT an LLM chat app: its AI is image-quality scoring (TOPIQ/LIQE via pyiqa on GPU/legacy profiles), CLIP or SigLIP 2 embeddings for semantic search,
 // InsightFace faces, MediaPipe blendshapes and BiRefNet saliency. An optional VLM (tags, captions, critique) runs in-process on the 16gb/24gb GPU profiles or
 // on a remote Ollama/OpenAI-compatible server via `vlm_backend` (then that feature leaves the machine). Offline use after the first-run model download is NOT verified.
@@ -21,13 +22,13 @@ export const app: ToolRecord = {
   categories: ['photo-libraries', 'vision-ocr', 'local-search'],
   interfaces: ['web', 'cli'], // web gallery (Angular + FastAPI viewer, installable PWA) on port 5000, scanned and driven by facet.py command-line tools
   locality: 'local', // README: "Everything runs on your machine; no cloud, accounts, or API keys"; optional outbound: update check (GitHub), OSM map tiles, Photon geocoder, model downloads, and a remote Ollama/OpenAI-compatible VLM if you configure vlm_backend
-  platforms: ['linux', 'mac', 'win', 'web'], // README badge: Windows | macOS | Linux | Docker; INSTALLATION.md sends Windows users to Docker (WSL2 for NVIDIA); the gallery is a browser UI
+  platforms: ['linux', 'mac', 'win', 'web'], // README badge: Windows | macOS | Linux | Docker; INSTALLATION.md (2026-11-02) offers Docker (WSL2 for NVIDIA) or a self-built per-user MSI on Windows; the gallery is a browser UI
   worksWith: ['Docker', 'Ollama', 'OpenAI-compatible servers', 'Lightroom', 'darktable', 'digiKam', 'Immich', 'Model Context Protocol (MCP)'], // README + docs INTEROP/IMMICH/AGENTS
   engine: 'builtin', // scoring, face and embedding models are downloaded and run in-process (Hugging Face, PyIQA, InsightFace); optional remote VLM is a configuration choice
   license: 'MIT', // LICENSE file (GitHub API says NOASSERTION); some default model weights (pyiqa TOPIQ/LIQE, InsightFace) are NOT licensed for commercial use, see THIRD_PARTY_MODELS.md
   price: 'free', // README: "Free, local"; no paid tier found. [Edition] in the docs is an access level (edition password), not a paid edition
-  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // docs publish no RAM minimum; legacy profile runs everything on CPU (slower); 8gb/16gb/24gb are NVIDIA VRAM profiles; first-run model download 4.7 GB (legacy) to 19.1 GB (24gb)
-  stars: 322, // GitHub API stargazers_count, read 2026-10-28
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // docs publish no RAM minimum; legacy profile runs everything on CPU (slower); 8gb/16gb/24gb are NVIDIA VRAM profiles; first-run model download 4.7 GB (legacy) to 19.3 GB (24gb)
+  stars: 332, // GitHub API stargazers_count, read 2026-11-02
   addedDate: '2026-10-28',
   status: 'listed',
   uses: ['image', 'serve'],
@@ -37,7 +38,7 @@ export const app: ToolRecord = {
     web: 'https://ncoevoet.github.io/facet/',
   },
   installEffort: 'terminal-setup',
-  installEvidence: 'README Quick Start and docs/INSTALLATION.md checked 2026-10-28: Docker = git clone, copy .env.example to .env and set PHOTOS_DIR, docker compose up -d (GPU profiles use extra compose files); without Docker = git clone, bash install.sh, then python facet.py and python viewer.py; Releases v1.25.0 (2026-10-27) has no binary assets; no .dmg/.exe/store app; first scan downloads models (4.7 GB legacy to 19.1 GB 24gb per the docs)',
+  installEvidence: 'README Quick Start and docs/INSTALLATION.md checked 2026-10-28: Docker = git clone, copy .env.example to .env and set PHOTOS_DIR, docker compose up -d (GPU profiles use extra compose files); without Docker = git clone, bash install.sh, then python facet.py and python viewer.py; Releases v1.27.0 (2026-10-29) has no binary assets; docs/INSTALLATION.md (re-read 2026-11-02) describes a Windows MSI but says no release ships one (build from a clone or take a CI artifact); no .dmg/.exe/store app; first scan downloads models (4.7 GB legacy to 19.3 GB 24gb per the docs)',
   tagline: {
     en: 'Self-hosted photo scoring, culling and gallery that finds your best shots, bursts and duplicates and groups faces on your own machine, installed with Docker or a script',
     de: 'Selbst gehostete Foto-Bewertung, Aussortierung und Galerie, die beste Aufnahmen, Serienbilder und Duplikate findet und Gesichter auf dem eigenen Rechner gruppiert, Installation per Docker oder Skript',
@@ -51,12 +52,12 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'facet-review',
   pqReview: {
-    date: '2026-10-28',
-    version: 'v1.25.0',
+    date: '2026-11-02',
+    version: 'v1.27.0',
     versionSourceUrl: 'https://github.com/ncoevoet/facet/releases',
   },
   verdict: 'Best for photographers and self-hosters comfortable with Docker or a Python setup who want a free, MIT-licensed tool that scores, culls and browses a large local photo library with face grouping and plain-language search; limited by a developer-style install, a viewer that is open to anyone on the network until you set a password, default model weights that are not licensed for commercial use, an optional remote VLM that leaves the machine, and no hands-on testing by PromptQuorum.',
-  lastVerifiedDate: '2026-10-28',
-  lastUpstreamUpdate: '2026-10-28', // GitHub API pushed_at 2026-10-28T08:44Z; latest release v1.25.0 published 2026-10-27
+  lastVerifiedDate: '2026-11-02',
+  lastUpstreamUpdate: '2026-10-30', // GitHub API pushed_at 2026-10-30T21:23Z; latest release v1.27.0 published 2026-10-29
   lastUpstreamUpdateSource: 'https://github.com/ncoevoet/facet',
 }
