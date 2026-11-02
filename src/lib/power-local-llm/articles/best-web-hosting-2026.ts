@@ -876,18 +876,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'monthly',
     publishDate: '2026-08-30',
-    dateModified: '2026-09-03',
-    next_refresh_due: '2026-10-03',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
     title: 'Mejor Hosting Web en España y Latinoamérica 2026',
-    seoTitle: 'Mejor Hosting España y Latinoamérica 2026',
+    seoTitle: 'Mejor hosting en España y Latinoamérica 2026: precios',
     intro:
-      'España y Sudamérica son dos mercados de hosting completamente distintos, con dos marcos legales de protección de datos distintos, y tratarlos como una sola región produce recomendaciones equivocadas. Esta guía los mantiene separados: una tabla para España con [Webempresa](https://www.webempresa.com/) y [Nominalia](https://www.nominalia.com/), regida por el RGPD, y una tabla de Sudamérica desglosada por país — [DonWeb](https://www.donweb.com/) en Argentina, [Hosting.cl](https://www.hosting.cl/) en Chile — ya que cada país tiene su propia ley de protección de datos. Cada precio de esta guía se verificó directamente en el sitio del proveedor el 30 de agosto de 2026 — las promociones de hosting cambian rápido, y una moneda tan volátil como el peso argentino convierte cualquier conversión a dólares en una fotografía puntual, no en una cifra estable.',
+      'España y Sudamérica son dos mercados de hosting completamente distintos, con dos marcos legales de protección de datos distintos, y tratarlos como una sola región produce recomendaciones equivocadas. Esta guía los mantiene separados: una tabla para España con [Webempresa](https://www.webempresa.com/) y [Nominalia](https://www.nominalia.com/), regida por el RGPD, y una tabla de Sudamérica desglosada por país — [DonWeb](https://www.donweb.com/) en Argentina, [Hosting.cl](https://www.hosting.cl/) en Chile — ya que cada país tiene su propia ley de protección de datos. Los precios de Webempresa, Nominalia, DonWeb y Hosting.cl se leyeron directamente en el sitio del proveedor el 2 de noviembre de 2026; los de WNPower no se pudieron verificar esa fecha. Las promociones de hosting cambian rápido, y una moneda tan volátil como el peso argentino convierte cualquier conversión a dólares en una fotografía puntual, no en una cifra estable.',
     metaDescription:
-      'Mejor hosting web en España (Webempresa, Nominalia) y Sudamérica (Argentina, Chile, Perú) para 2026. Precios verificados, saltos de renovación y cumplimiento RGPD vs. leyes locales por país.',
+      'Mejor hosting web en España y Sudamérica 2026: Webempresa, Nominalia, DonWeb y Hosting.cl con precios, renovación y ley de datos de cada país.',
     twitterDescription:
-      'España y Sudamérica son dos mercados de hosting distintos con dos leyes de privacidad distintas — esta guía mantiene las tablas y las reglas de cumplimiento separadas. Precios de agosto de 2026, verificados en cada proveedor.',
+      'España y Sudamérica son dos mercados de hosting distintos con dos leyes de privacidad distintas — esta guía mantiene las tablas y las reglas de cumplimiento separadas. Precios leídos en cada proveedor el 2 de noviembre de 2026 (WNPower, sin verificar).',
     affiliateDisclosure: true,
     audience:
       'Lectores que eligen hosting web para un sitio en España o Sudamérica, comparando precio, condiciones de renovación y qué ley de protección de datos aplica en cada país. No requiere experiencia previa con hosting.',
@@ -902,19 +902,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mejor hosting sudamerica',
     ],
     leadAnswerBlock:
-      '**En España, Webempresa (8,95 €/mes, plan específico para WordPress) es la opción de precio estable y Nominalia (1,67 €/mes de entrada, renueva a 6,67 €/mes) es la más barata al inicio pero sube en la renovación. En Sudamérica, DonWeb cubre Argentina (ARS $3.790/mes en promoción, ~US$3-9/mes) y Hosting.cl cubre Chile (CLP $13.325/mes, ~US$14/mes, con condiciones de afiliados confirmadas); WNPower en Perú (US$0,96/mes en promoción, renueva a US$4,37/mes) funciona sobre infraestructura AWS y no es un proveedor totalmente peruano. Colombia no tiene opción confirmada en esta revisión.**',
+      '**En España, Webempresa (plan Maxi de WordPress, 8,94 €/mes con facturación anual y promoción del 75 %) y Nominalia (1,67 € y 6,67 €/mes, sin etiquetar la renovación) tienen precio leído. DonWeb cubre Argentina desde ARS $3.200/mes en promoción y Hosting.cl, Chile, desde CLP $13.325/mes + IVA.**',
     quickAnswerTop: {
       es: {
         question: '¿Cuál es el mejor hosting web para España y Latinoamérica en 2026?',
         answer:
-          'Para España, Webempresa (8,95 €/mes, plan específico para WordPress) es la opción más estable y Nominalia (1,67 €/mes de entrada) es la más barata al inicio pero renueva a 6,67 €/mes. Para Sudamérica, DonWeb atiende Argentina (ARS $3.790/mes en promoción) y Hosting.cl atiende Chile (CLP $13.325/mes, unos US$14/mes). WNPower en Perú (US$0,96/mes en promoción, renueva a US$4,37/mes) funciona sobre infraestructura AWS en lugar de servidores propios en el país. España está bajo el RGPD; Argentina, Chile y Colombia tienen cada uno su propia ley de protección de datos.',
+          'Para España, Webempresa (plan Maxi de WordPress, 8,94 €/mes con facturación anual y promoción del 75 %, sin IVA; precio normal 429 €/año) y Nominalia (1,67 € y 6,67 €/mes, sin etiquetar cuál es la renovación). Para Sudamérica, DonWeb atiende Argentina (desde ARS $3.200/mes en promoción a 48 meses, IVA incluido) y Hosting.cl atiende Chile (CLP $13.325/mes + IVA). WNPower en Perú funciona sobre infraestructura AWS en lugar de servidores propios en el país y su página no muestra precios de hosting. España está bajo el RGPD; Argentina, Chile y Colombia tienen cada uno su propia ley de protección de datos.',
         bullets: [
-          'Webempresa: 8,95 €/mes plan WordPress, comisión 25% fija, cookie de 90 días',
-          'Nominalia: 1,67 €/mes de entrada renueva a 6,67 €/mes — una subida de 4 veces',
-          'DonWeb (Argentina): ARS $3.790/mes en promoción, ~US$3-9/mes, cifra puntual por FX',
+          'Webempresa: plan Maxi de WordPress a 8,94 €/mes con facturación anual y promoción del 75 % (sin IVA)',
+          'Nominalia: su plan WordPress muestra 1,67 €/mes y 6,67 €/mes sin etiquetar cuál es la renovación',
+          'DonWeb (Argentina): desde ARS $3.200/mes en promoción a 48 meses (regular ARS $11.900/mes, IVA incluido)',
           'Hosting.cl (Chile): CLP $13.325/mes, comisión confirmada del 25% en el primer pago',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -937,14 +937,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.webempresa.com/',
         productName: 'Hosting Webempresa',
         productCategory: 'hosting',
-        priceRange: '8.95/mes',
+        priceRange: '8.94/mes',
         label: 'Ver precios de Webempresa',
       },
       {
         url: 'https://www.donweb.com/',
         productName: 'Hosting DonWeb (Argentina)',
         productCategory: 'hosting',
-        priceRange: 'ARS 3.790/mes promo',
+        priceRange: 'ARS 3.200/mes promo',
         label: 'Ver precios de DonWeb',
       },
       {
@@ -961,11 +961,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**España y Sudamérica se presentan en dos tablas separadas** — proveedores distintos, monedas distintas y leyes de protección de datos distintas. No los trate como una sola región.',
-          '**Opción estable en España: Webempresa** — 8,95 €/mes, pero es el plan específico para WordPress. Podría existir un plan de hosting compartido genérico más barato por separado; aquí no se afirma ninguna cifra para ese plan.',
-          '**Opción más barata al inicio en España: Nominalia** — 1,67 €/mes de entrada, pero renueva a 6,67 €/mes, una subida de 4 veces. Su nivel "Microhosting" gratuito viene incluido con la compra de un dominio, no es un plan de hosting independiente.',
-          '**Argentina: DonWeb** — ARS $3.790/mes en promoción (regular ARS $11.990/mes), aproximadamente US$3-9/mes. El peso argentino es muy volátil — esa cifra en dólares es una fotografía de agosto de 2026, no un número estable.',
+          '**España: Webempresa** — plan Maxi de WordPress a 8,94 €/mes con facturación anual y una promoción del 75 %, sin IVA; el precio normal anual es 429 € (unos 35,75 €/mes) y su página no indica el precio de renovación. Podría existir un plan de hosting compartido genérico más barato por separado; aquí no se afirma ninguna cifra para ese plan.',
+          '**España: Nominalia** — su plan WordPress muestra dos precios mensuales, 1,67 € y 6,67 €, y su página no etiqueta cuál es la tarifa de entrada ni cuál la de renovación; presupueste el más alto. Su nivel "Microhosting" gratuito viene incluido con la compra de un dominio, no es un plan de hosting independiente.',
+          '**Argentina: DonWeb** — plan Personal desde ARS $3.200/mes en promoción a 48 meses (ARS $3.600/mes a 12 meses; regular ARS $11.900/mes, IVA incluido). Según su página, al renovar a 1 año el plan Personal pasa a ARS $13.250/mes. El peso argentino es muy volátil: convierta a dólares con el tipo de cambio del día.',
           '**Chile: Hosting.cl** — CLP $159.900/año + IVA (unos CLP $13.325/mes, ~US$14/mes), con condiciones de afiliados confirmadas. HostingPlus es más barato (~US$6/mes), pero el estado de su programa de afiliados no está confirmado, por lo que no se presenta como opción monetizada aquí.',
-          '**Perú: WNPower** — 0,96 US$/mes en promoción, renueva a 4,37 US$/mes. Es de fundación argentina y funciona sobre infraestructura AWS, por lo que no es un proveedor "totalmente local" en Perú — no se confirmó ninguna alternativa peruana más local en esta revisión.',
+          '**Perú: WNPower** — su página de hosting no muestra precios, así que no se pudo verificar el 2 de noviembre de 2026 la cifra anterior (0,96 US$/mes en promoción, 4,37 US$/mes de renovación, leída el 30 de agosto de 2026). Es de fundación argentina y funciona sobre infraestructura AWS, por lo que no es un proveedor "totalmente local" en Perú — no se confirmó ninguna alternativa peruana más local en esta revisión.',
           '**Colombia no tiene opción confirmada.** La página de precios de ColombiaHosting se renderiza con JavaScript y su precio no pudo verificarse — se excluye en lugar de estimarse.',
           '**El RGPD aplica solo a España.** Sudamérica funciona con leyes nacionales separadas — la LFPDPPP de México, la Ley 25.326 de Argentina, la Ley 1581 de Colombia y la Ley 19.628 de Chile — ninguna de ellas es el RGPD.',
           '**Un sitio necesita más que su plan de hosting.** Una base de datos separada (Neon, Supabase), una copia de seguridad externa (Backblaze B2, Cloudflare R2, Wasabi) y una forma segura de compartir archivos grandes son tres decisiones que la mayoría de los propietarios de sitios enfrentan tarde o temprano — cubiertas abajo con precios verificados directamente.',
@@ -975,29 +975,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'spain-providers',
         title: 'España: Proveedores de Hosting',
         content:
-          'Dos proveedores tienen precios confirmados y programas de afiliados activos para el mercado español. La cifra de 8,95 €/mes de [Webempresa](https://www.webempresa.com/) corresponde específicamente a su plan de hosting para WordPress — podría existir un plan de hosting compartido genérico más barato en paralelo, pero aquí no se afirma ninguna cifra separada sin verificarla. Los 1,67 €/mes de [Nominalia](https://www.nominalia.com/) son solo una tarifa de entrada; renueva a 6,67 €/mes, una subida de 4 veces que conviene presupuestar. Nominalia también anuncia un nivel "Microhosting" gratuito, pero viene incluido con la compra de un dominio en lugar de ser un plan de hosting independiente real, así que no se trata como tal aquí. Raiola Networks es un proveedor español conocido, pero su precio actual no se confirmó en esta revisión, por lo que se deja fuera en lugar de estimarlo.',
+          'Dos proveedores tienen precios leídos el 2 de noviembre de 2026 y programas de afiliados para el mercado español. [Webempresa](https://www.webempresa.com/) muestra su plan Maxi de WordPress a 8,94 €/mes con facturación anual y una promoción del 75 % (precio normal 429 €/año, unos 35,75 €/mes), sin IVA, y su página no indica el precio de renovación. [Nominalia](https://www.nominalia.com/) muestra dos precios mensuales para su plan WordPress, 1,67 € y 6,67 €, sin etiquetar cuál es la entrada y cuál la renovación; conviene presupuestar el más alto. Nominalia también anuncia un nivel "Microhosting" gratuito, pero viene incluido con la compra de un dominio en lugar de ser un plan de hosting independiente real, así que no se trata como tal aquí. Raiola Networks es un proveedor español conocido, pero su precio actual no se confirmó en esta revisión, por lo que se deja fuera en lugar de estimarlo.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Para España, Webempresa (8,95 €/mes, plan WordPress) es la opción de precio más estable y Nominalia (1,67 €/mes de entrada, renueva a 6,67 €/mes) es la más barata al inicio pero sube fuerte en la renovación.',
+            text: 'Para España, Webempresa (plan Maxi de WordPress, 8,94 €/mes con facturación anual y promoción del 75 %) tiene un precio normal de 429 €/año, y Nominalia muestra 1,67 € y 6,67 €/mes sin etiquetar cuál es la renovación.',
           },
           {
             type: 'plain-terms',
-            text: 'Un proveedor tiene un precio claro que se mantiene casi igual. El otro parece mucho más barato el primer día, y luego prácticamente se cuadruplica cuando termina el periodo de introducción — decida cuál pesa más en su presupuesto antes de contratar.',
+            text: 'Los precios que ve hoy no son necesariamente los del segundo año: uno es una promoción del 75 % sobre un precio anual normal mucho mayor, y el otro no indica cuál de sus dos cifras es la renovación — decida con el precio más alto antes de contratar.',
           },
         ],
         columns: ['Proveedor', 'Precio', 'Programa', 'Comisión', 'Cookie'],
         rows: [
           {
             'Proveedor': '[Webempresa](https://www.webempresa.com/)',
-            'Precio': '8,95 €/mes (plan WordPress)',
+            'Precio': '8,94 €/mes (Maxi WP, promo −75 %, sin IVA)',
             'Programa': 'Afiliado directo',
             'Comisión': '25% fija',
             'Cookie': '90 días',
           },
           {
             'Proveedor': '[Nominalia](https://www.nominalia.com/)',
-            'Precio': '1,67 €/mes → 6,67 €/mes renov.',
+            'Precio': '1,67 € y 6,67 €/mes (sin etiquetar)',
             'Programa': 'Awin',
             'Comisión': '30% hosting / 10% SSL',
             'Cookie': '30 días',
@@ -1008,7 +1008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.webempresa.com/',
             productName: 'Hosting Webempresa',
             productCategory: 'hosting',
-            priceRange: '8.95/mes',
+            priceRange: '8.94/mes',
             label: 'Ver precios de Webempresa',
           },
           {
@@ -1024,7 +1024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'south-america-providers',
         title: 'Sudamérica: Hosting por País',
         content:
-          'Sudamérica no es un solo mercado de hosting — cada país que sigue tiene su propio proveedor confirmado, y Colombia no tiene ninguno. Las cifras en pesos argentinos usan una moneda muy volátil: la estimación en dólares aquí es una fotografía del tipo de cambio de agosto de 2026, y conviene verificar la tasa actual antes de tratarla como estable. [Hosting.cl](https://www.hosting.cl/) en Chile es la opción destacada porque sus condiciones de afiliados están confirmadas; HostingPlus tiene un precio menor, alrededor de US$6/mes, pero no se pudo confirmar el estado de su programa de afiliados, por lo que no lleva enlace de afiliado aquí. [WNPower](https://www.wnpower.com/) en Perú es de fundación argentina y funciona sobre infraestructura basada en AWS en lugar de servidores dedicados en Perú — algo importante si el hosting "totalmente local" le importa; no se confirmó ninguna alternativa peruana más local. ColombiaHosting queda excluido por completo: su página de precios se renderiza con JavaScript y el precio no pudo verificarse.',
+          'Sudamérica no es un solo mercado de hosting — cada país que sigue tiene su propio proveedor confirmado, y Colombia no tiene ninguno. Las cifras en pesos argentinos usan una moneda muy volátil: convierta a dólares con el tipo de cambio del día de la compra. [Hosting.cl](https://www.hosting.cl/) en Chile es la opción destacada porque sus condiciones de afiliados están confirmadas; HostingPlus tiene un precio menor, alrededor de US$6/mes, pero no se pudo confirmar el estado de su programa de afiliados, por lo que no lleva enlace de afiliado aquí. [WNPower](https://www.wnpower.com/) en Perú es de fundación argentina y funciona sobre infraestructura basada en AWS en lugar de servidores dedicados en Perú — algo importante si el hosting "totalmente local" le importa; no se confirmó ninguna alternativa peruana más local. ColombiaHosting queda excluido por completo: su página de precios se renderiza con JavaScript y el precio no pudo verificarse.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1040,7 +1040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'País': 'Argentina',
             'Proveedor': '[DonWeb](https://www.donweb.com/)',
-            'Precio': 'ARS $3.790/mes promo (~US$3-9)',
+            'Precio': 'ARS $3.200/mes promo (48 meses)',
             'Programa': 'Programa de referidos',
             'Comisión': 'Hasta US$2.000/nivel',
             'Cookie': 'Retención 45 días',
@@ -1056,7 +1056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'País': 'Perú',
             'Proveedor': '[WNPower](https://www.wnpower.com/)',
-            'Precio': 'US$0,96/mes → US$4,37/mes',
+            'Precio': 'No verificado (ant. US$0,96 → 4,37)',
             'Programa': 'Afiliado directo',
             'Comisión': '10% recurrente, sin tope',
             'Cookie': 'No especificada',
@@ -1065,7 +1065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'El peso argentino es muy volátil. La cifra de ~US$3-9/mes para DonWeb es una conversión puntual de agosto de 2026, no un precio estable — verifique el tipo de cambio actual antes de presupuestar sobre esa base.',
+            text: 'El peso argentino es muy volátil. Los precios de DonWeb están en pesos argentinos (con IVA incluido, según su página); convierta a dólares con el tipo de cambio actual antes de presupuestar.',
           },
         ],
         affiliateLinks: [
@@ -1073,7 +1073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.donweb.com/',
             productName: 'Hosting DonWeb (Argentina)',
             productCategory: 'hosting',
-            priceRange: 'ARS 3.790/mes promo',
+            priceRange: 'ARS 3.200/mes promo',
             label: 'Ver precios de DonWeb',
           },
           {
@@ -1152,7 +1152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Para España, elija [Webempresa](https://www.webempresa.com/) si un precio estable le importa más que la cifra inicial más baja, y [Nominalia](https://www.nominalia.com/) solo si ya presupuestó la subida de renovación a 6,67 €/mes. Para Sudamérica, [DonWeb](https://www.donweb.com/) (Argentina), [Hosting.cl](https://www.hosting.cl/) (Chile) y [WNPower](https://www.wnpower.com/) (Perú, sobre infraestructura AWS) son las opciones confirmadas en esta revisión — Colombia no tiene ninguna hasta que se pueda verificar un precio. Sea cual sea su país, verifique la ley de protección de datos de ese país en concreto en lugar de asumir que aplica el RGPD u otra ley distinta.',
+          'Para España, elija [Webempresa](https://www.webempresa.com/) si prefiere conocer el precio normal anual (429 € en el plan Maxi) además de la promoción, y [Nominalia](https://www.nominalia.com/) solo si ya presupuestó el precio más alto de 6,67 €/mes. Para Sudamérica, [DonWeb](https://www.donweb.com/) (Argentina), [Hosting.cl](https://www.hosting.cl/) (Chile) y [WNPower](https://www.wnpower.com/) (Perú, sobre infraestructura AWS) son las opciones confirmadas en esta revisión — Colombia no tiene ninguna hasta que se pueda verificar un precio. Sea cual sea su país, verifique la ley de protección de datos de ese país en concreto en lugar de asumir que aplica el RGPD u otra ley distinta.',
       },
       faq: {
         id: 'faq',
@@ -1160,7 +1160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Cuál es el mejor hosting web en España en 2026?',
-            a: 'Webempresa (8,95 €/mes, plan específico para WordPress) es la opción de precio más estable, con cookie de afiliado de 90 días y comisión fija del 25%. Nominalia es más barato al inicio, a 1,67 €/mes, pero renueva a 6,67 €/mes — una subida de 4 veces que conviene presupuestar antes de contratar.',
+            a: 'Webempresa (plan Maxi de WordPress, 8,94 €/mes con facturación anual y una promoción del 75 %, sin IVA) tiene un precio normal anual de 429 € y su página no indica la renovación; la cookie de afiliado de 90 días y la comisión fija del 25 % corresponden a la revisión del 30 de agosto de 2026 y no se volvieron a verificar. Nominalia muestra 1,67 €/mes y 6,67 €/mes para su plan WordPress sin etiquetar cuál es la entrada y cuál la renovación — presupueste el más alto antes de contratar.',
           },
           {
             q: '¿El Microhosting gratuito de Nominalia es un plan de hosting real?',
@@ -1168,7 +1168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuál es el mejor hosting web para Argentina?',
-            a: 'DonWeb es la opción confirmada, a ARS $3.790/mes en promoción (regular ARS $11.990/mes), aproximadamente US$3-9/mes. Como el peso argentino es muy volátil, trate esa cifra en dólares como una fotografía de agosto de 2026 y verifique el tipo de cambio actual antes de presupuestar.',
+            a: 'DonWeb es la opción confirmada: el plan Personal cuesta desde ARS $3.200/mes en promoción a 48 meses (ARS $3.600/mes a 12 meses; regular ARS $11.900/mes, IVA incluido), y su página indica que al renovar a 1 año pasa a ARS $13.250/mes. Como el peso argentino es muy volátil, convierta a dólares con el tipo de cambio actual antes de presupuestar.',
           },
           {
             q: '¿Cuál es el mejor hosting web para Chile?',
@@ -1176,7 +1176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿WNPower es una empresa de hosting nativa de Perú?',
-            a: 'No del todo. WNPower es de fundación argentina y su infraestructura funciona sobre AWS en lugar de servidores dedicados en Perú. Sigue siendo la opción confirmada para precios en Perú (US$0,96/mes en promoción, renovando a US$4,37/mes) — no se confirmó ninguna alternativa peruana más local en esta revisión.',
+            a: 'No del todo. WNPower es de fundación argentina y su infraestructura funciona sobre AWS en lugar de servidores dedicados en Perú. Sigue siendo la opción identificada para Perú, pero su página de hosting no muestra precios y las cifras de agosto de 2026 (US$0,96/mes en promoción, US$4,37/mes de renovación) no se pudieron verificar el 2 de noviembre de 2026 — no se confirmó ninguna alternativa peruana más local en esta revisión.',
           },
           {
             q: '¿Hay un hosting recomendado para Colombia?',
@@ -1204,11 +1204,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         items: [
-          '[Webempresa](https://www.webempresa.com/) — precio del plan de hosting WordPress y condiciones de afiliados, verificado directamente en Webempresa, 2026-08-30.',
-          '[Nominalia](https://www.nominalia.com/) — precios de entrada y renovación, verificado directamente en Nominalia, 2026-08-30.',
-          '[DonWeb](https://www.donweb.com/) — precio de promoción y precio regular en ARS para Argentina, verificado directamente en DonWeb, 2026-08-30.',
-          '[Hosting.cl](https://www.hosting.cl/) — precio anual en CLP y condiciones de afiliados para Chile, verificado directamente en Hosting.cl, 2026-08-30.',
-          '[WNPower](https://www.wnpower.com/) — precios de entrada y renovación para Perú, verificado directamente en WNPower, 2026-08-30.',
+          '[Webempresa](https://www.webempresa.com/) — precio del plan de hosting WordPress y condiciones de afiliados, precio leído directamente en Webempresa el 2026-11-02 (las condiciones de afiliado son del 2026-08-30 y no se volvieron a verificar).',
+          '[Nominalia](https://www.nominalia.com/) — precios de entrada y renovación, leído directamente en Nominalia el 2026-11-02; la página no etiqueta cuál de los dos precios es el de renovación.',
+          '[DonWeb](https://www.donweb.com/) — precio de promoción y precio regular en ARS para Argentina, leído directamente en DonWeb el 2026-11-02.',
+          '[Hosting.cl](https://www.hosting.cl/) — precio anual en CLP y condiciones de afiliados para Chile, precio anual leído directamente en Hosting.cl el 2026-11-02 (las condiciones de afiliado son del 2026-08-30 y no se volvieron a verificar).',
+          '[WNPower](https://www.wnpower.com/) — precios de entrada y renovación para Perú, cifras del 2026-08-30; el 2026-11-02 la página de hosting de WNPower no mostraba precios, por lo que no se pudieron verificar.',
           '[Precios de Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — verificado directamente el 03-09-2026: US$6,95/TB al mes, primeros 10 GB gratis, salida gratuita hasta 3x los datos almacenados.',
           '[Precios de Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — verificado directamente el 03-09-2026: US$0,015/GB al mes en almacenamiento estándar, sin tarifas de salida, nivel gratuito de 10 GB.',
           '[Precios de Wasabi](https://wasabi.com/pricing/) — verificado directamente el 03-09-2026: US$7,99/TB al mes fijo, sin tarifas separadas de salida o de API.',
@@ -1228,8 +1228,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'monthly',
     publishDate: '2026-08-30',
-    dateModified: '2026-09-03',
-    next_refresh_due: '2026-10-03',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
     title: 'Melhor Hospedagem de Site no Brasil 2026: Hostinger e Alternativas',
@@ -1254,13 +1254,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'hospedagem lgpd brasil',
     ],
     leadAnswerBlock:
-      '**A Hostinger ($2,99/mês de entrada, com pré-pagamento obrigatório de 48 meses, renovando a $10,99/mês) é a única opção desta página que uma pessoa no Brasil sem CNPJ consegue contratar através do link do PromptQuorum. HostGator Brasil, KingHost e Locaweb são provedores brasileiros reais e conhecidos, que valem a pena comparar diretamente nos próprios sites, mas nenhum dos programas de afiliados deles é acessível sem CNPJ e Nota Fiscal, então aparecem aqui apenas como referência.**',
+      '**A Hostinger (US$ 2,49/mês de entrada com pré-pagamento de 48 meses, US$ 119,52 à vista, renovando a US$ 10,99/mês) é a única opção desta página que uma pessoa no Brasil sem CNPJ consegue contratar. HostGator Brasil, KingHost e Locaweb exigem CNPJ e Nota Fiscal nos programas de afiliados.**',
     affiliateLinks: [
       {
         url: 'https://www.hostinger.com/',
         productName: 'Hospedagem Hostinger',
         productCategory: 'hosting',
-        priceRange: '2.99-10.99/mo',
+        priceRange: '2.49-10.99/mo',
         label: 'Ver preços da Hostinger',
       },
     ],
@@ -1283,7 +1283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**A Hostinger é a única opção realmente acessível aqui sem CNPJ.** O valor anunciado de $2,99/mês exige pré-pagamento de 48 meses ($143,52 à vista) e renova a $10,99/mês — um salto de cerca de 3,7 vezes. É a única provedora desta página com uma oferta funcional e monetizável para o PromptQuorum.',
+          '**A Hostinger é a única opção realmente acessível aqui sem CNPJ.** O valor anunciado de US$ 2,49/mês exige pré-pagamento de 48 meses (US$ 119,52 à vista) e renova a US$ 10,99/mês — um salto de cerca de 4,4 vezes. É a única provedora desta página com uma oferta funcional e monetizável para o PromptQuorum.',
           '**HostGator Brasil, KingHost e Locaweb são opções reais — mas apenas menções editoriais.** Os programas de afiliados dessas empresas exigem CNPJ e Nota Fiscal, que o PromptQuorum não possui, então nenhum link aqui gera comissão com essas três.',
           '**A KingHost (R$9,99/mês de entrada) não divulga o preço de renovação** na própria página de preços — reserve orçamento para um aumento e confirme o valor antes de contratar.',
           '**Na Locaweb (R$5,90/mês) não fica claro se o valor é promocional ou padrão** — confirme o preço atual diretamente no site da Locaweb antes de comparar com as demais.',
@@ -1311,8 +1311,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Provedor': 'Hostinger',
-            'Preço de entrada': '$2,99/mês (pré-pago 48 meses)',
-            'Preço de renovação': '$10,99/mês (~3,7x)',
+            'Preço de entrada': '$2,49/mês (pré-pago 48 meses)',
+            'Preço de renovação': '$10,99/mês (~4,4x)',
             'Exige CNPJ': 'Não — acessível sem CNPJ',
           },
           {
@@ -1407,7 +1407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Por que a Hostinger renova a quase 4x o preço anunciado?',
-            a: 'O valor de $2,99/mês da Hostinger é um preço promocional vinculado a um pré-pagamento de 48 meses ($143,52 à vista). Depois desse período, o plano renova pelo valor padrão de $10,99/mês — um aumento de cerca de 3,7 vezes. Considere o preço de renovação, não o anunciado, ao comparar o custo total.',
+            a: 'O valor de $2,49/mês da Hostinger é um preço promocional vinculado a um pré-pagamento de 48 meses ($119,52 à vista). Depois desse período, o plano renova pelo valor padrão de $10,99/mês — um aumento de cerca de 4,4 vezes. Considere o preço de renovação, não o anunciado, ao comparar o custo total.',
           },
           {
             q: 'A HostGator Brasil é a mesma empresa da HostGator dos Estados Unidos?',
@@ -1443,7 +1443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         items: [
-          '[Preços da Hostinger](https://www.hostinger.com/) — verificado diretamente na Hostinger em 30/08/2026. O valor de $2,99/mês de entrada exige pré-pagamento de 48 meses; renova a $10,99/mês.',
+          '[Preços da Hostinger](https://www.hostinger.com/) — verificado diretamente na Hostinger em 02/11/2026. O valor de $2,49/mês de entrada exige pré-pagamento de 48 meses; renova a $10,99/mês.',
           'Preço da HostGator Brasil (faixa de R$10-15/mês de entrada) — não reverificado de forma independente nesta análise; baseado em fontes de terceiros/históricas. Confirme o preço atual no próprio site da HostGator Brasil antes de contratar.',
           'Preço da KingHost (R$9,99/mês de entrada) — verificado na página de preços da KingHost em 30/08/2026. O preço de renovação não é informado pelo provedor.',
           'Preço da Locaweb (R$5,90/mês) — verificado na página de preços da Locaweb em 30/08/2026. Não fica claro pela própria página se é um valor promocional ou padrão.',

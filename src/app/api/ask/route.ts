@@ -9,7 +9,7 @@
 //   {t:'text', v}            answer text delta
 //   {t:'tool', v}            a tool is being used (name only)
 //   {t:'category', v}        category key for the marketing panel
-//   {t:'done', category, tools}
+//   {t:'done', category, tools, topics}   topics = whitelisted directory apps/categories looked up
 //   {t:'error', code}        code: disabled | unavailable | rate | limit | refused | failed
 
 import { NextRequest } from 'next/server'
@@ -22,6 +22,7 @@ import { buildSystemPrompt } from '@/lib/askhans/system-prompt'
 import { generateFollowups } from '@/lib/askhans/followups'
 import { missingSourcesMarkdown } from '@/lib/askhans/sources'
 import { bumpTotals } from '@/lib/askhans/totals'
+import { mergeTopics, type AnswerTopics } from '@/lib/askhans/topics'
 import { buildToolDefinitions, runTool, SET_CATEGORY_TOOL } from '@/lib/askhans/tools'
 
 export const runtime = 'nodejs'
@@ -148,6 +149,7 @@ export async function POST(req: NextRequest): Promise<Response> {
   return ndjson(async (send) => {
     const messages: Anthropic.MessageParam[] = history.map((m) => ({ role: m.role, content: m.content }))
     const toolsUsed: string[] = []
+    const topics: AnswerTopics = { apps: [], dirCats: [] }
     let category = 'default'
     let toolCalls = 0
     let emittedText = false
@@ -239,6 +241,7 @@ export async function POST(req: NextRequest): Promise<Response> {
           }
           const outcome = await runTool(use.name, use.input, { lang })
           if (outcome.pages) Object.assign(pageTitles, outcome.pages)
+          if (outcome.topics) mergeTopics(topics, outcome.topics)
           if (outcome.category) {
             category = outcome.category
             send({ t: 'category', v: category })
@@ -265,7 +268,7 @@ export async function POST(req: NextRequest): Promise<Response> {
         }
       }
       if (spoken.trim()) await bumpTotals('answers')
-      send({ t: 'done', category, tools: [...new Set(toolsUsed)] })
+      send({ t: 'done', category, tools: [...new Set(toolsUsed)], topics })
     } catch (err) {
       console.error('[askhans] model call failed', err instanceof Error ? `${err.name}: ${err.message}` : err)
       send({ t: 'error', code: classify(err) })

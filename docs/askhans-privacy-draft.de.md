@@ -35,10 +35,11 @@ gespeichert. Mit dem Schließen des Tabs sind sie weg. `[PRÜFEN]` §25 TDDDG: S
 für die gewünschte Funktion (§25 Abs. 2 Nr. 2 TDDDG) — bestätigen.
 
 **d) Anonyme Nutzungsstatistik — nur mit Ihrer Einwilligung („Ja, einverstanden“).**
-Erfasst werden: gewählte Themenkategorie, verwendete Werkzeuge (z. B. „App-Suche“), Sprache, Zeitpunkt, angeklickte Links
+Erfasst werden: gewählte Themenkategorie, verwendete Werkzeuge (z. B. „App-Suche“), nachgeschlagene Apps und Verzeichnis-Kategorien (nur Werte aus unserem eigenen Verzeichnis, nie Freitext; bei Empfehlungs-Werkzeugen die ersten drei Treffer), Sprache, Zeitpunkt, angeklickte Links
 (Kategorie und Link-Kennung), ob und in welchen Bereich der Website (nur der erste Pfadabschnitt, z. B. „power-local-llm“) ein Link
 aus einer Antwort angeklickt wurde, Klicks auf „Neu“ und eine zufällige, anonyme Besuchs-ID, die keiner Person zugeordnet ist.
-**Nicht erfasst werden:** Fragetext, Antworttext, IP-Adresse, Namen.
+**Nicht erfasst werden:** Fragetext, Antworttext, IP-Adresse, Namen. Veröffentlicht werden nur zusammengefasste Zahlen (Seite /mcp-stats). Zwecke: Statistik, Verbesserung von Ask Hans und der Inhalte.
+`[PRÜFEN]` Einwilligungstext Version 2026-11-02-draft-2 (neu: Nennung der nachgeschlagenen Apps/Kategorien, Zwecke, Freiwilligkeit, Widerruf mit Wirkung für die Zukunft, Hinweis auf die Gesamtzähler ohne Einwilligung) juristisch freigeben.
 
 **d2) Anonyme Gesamtzähler — für alle Besucher, ohne Einwilligung.** Es werden nur drei Summen hochgezählt (Anzahl
 geöffneter Fenster, gestellter Anfragen und gegebener Antworten), ohne Besuchs-ID, ohne Text, ohne IP-Adresse. Sie dienen der
