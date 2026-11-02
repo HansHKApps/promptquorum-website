@@ -90,7 +90,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Licensing: AGPL-3.0-or-later, an open-source copyleft license',
           `Repository: [github.com/odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus), over ${ST.en('odysseus', 'bare')} stars per the GitHub API`,
         ],
-        note: 'AGPL-3.0-or-later requires that anyone who runs a modified version of Odysseus as a network service also make their modified source code available to users of that service. This matters if you plan to fork Odysseus and offer it as a hosted product to others — running an unmodified copy for personal or internal use does not trigger that obligation. Review the [full license text](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) if this applies to your use case.',
+        note: 'AGPL-3.0-or-later is a copyleft license with a network-use provision (section 13): if you modify the program and let other people interact with it over a network, the license sets conditions about offering them the corresponding source. Whether and how it applies depends on your setup, and the license text is authoritative. Read the [full license text](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) if you plan to host a modified version for others. This is general information, not legal advice.',
       },
       whoMadeIt: {
         id: 'who-made-odysseus',
@@ -179,7 +179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Odysseus vs. Other Self-Hosted AI Workspaces',
         content: 'Odysseus is one of several self-hosted, open-source tools that combine chat with additional productivity or agent features. Here is how it compares to others in that same space — see the [Local LLM Software Directory](/directory) for the full catalog.',
         items: [
-          '**[Msty](https://msty.app)** — a desktop-first local AI chat app with a simpler, single-app install (no Docker required) but a narrower feature set than Odysseus\'s email/calendar/document bundle; see the [Msty review](/power-local-llm/msty-review).',
+          '**[Msty](https://msty.app)** — a desktop-first local AI chat app installed as a single app (no Docker required); compare its feature list with Odysseus\'s email, calendar and document tools on each project\'s site, and see the [Msty review](/power-local-llm/msty-review).',
           '**[AnythingLLM](https://anythingllm.com)** — a self-hosted, open-source workspace focused on retrieval-augmented generation (RAG) and document chat rather than Odysseus\'s broader email/calendar/research scope; see the [AnythingLLM review](/power-local-llm/anythingllm-review).',
           '**[Khoj](https://khoj.dev)** — a self-hosted, open-source "second brain" assistant focused on personal knowledge search and notes, a narrower productivity focus than Odysseus\'s all-in-one workspace; see the [Khoj review](/power-local-llm/khoj-ai-second-brain-review).',
           '**[LibreChat](https://librechat.ai)** — a self-hosted, open-source chat interface supporting many model providers, with a plugin/agent system but without Odysseus\'s built-in email and calendar tools; see the [LibreChat review](/power-local-llm/librechat-review).',
@@ -226,7 +226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Mistake 3: Treating AGPL-3.0-or-later the same as a permissive license like MIT',
-            content: 'AGPL-3.0-or-later is a copyleft license with network-use obligations: if you run a modified version of Odysseus as a service other people use, you generally must make your modified source available to them. Review the [license text](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) before building a commercial product on a fork.',
+            content: 'AGPL-3.0-or-later is a copyleft license, not a permissive one like MIT, and it includes a network-use provision: if you modify Odysseus and let other people interact with it over a network, the license sets conditions about offering them the corresponding source. Read the [license text](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) before building a commercial product on a fork. This is general information, not legal advice.',
           },
           {
             title: 'Mistake 4: Assuming Odysseus requires local models to function',
@@ -241,7 +241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'What is Odysseus?', a: 'Odysseus ([github.com/odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus)) is a free, open-source, self-hosted AI workspace combining chat, agents, deep research, and document/email/notes/calendar tools, deployed via Docker on your own hardware.' },
           { q: 'Who made Odysseus?', a: 'Odysseus was started by content creator Felix Kjellberg (PewDiePie), as reported by multiple independent outlets. The repository has since moved to the community-run `odysseus-dev` GitHub organization.' },
           { q: 'Is Odysseus free?', a: 'Yes. Odysseus is free, open-source software. Any cost comes from your own hosting hardware or from an API provider you choose to connect, not from Odysseus itself.' },
-          { q: 'What license does Odysseus use?', a: 'AGPL-3.0-or-later, per the repository\'s [LICENSE file](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE). This is a copyleft license with obligations if you run a modified version as a network service for others.' },
+          { q: 'What license does Odysseus use?', a: 'AGPL-3.0-or-later, per the repository\'s [LICENSE file](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE). This is a copyleft license with obligations if you run a modified version as a network service for others. This is general information, not legal advice.' },
           { q: 'How do I install Odysseus?', a: 'Clone the repository (`git clone https://github.com/odysseus-dev/odysseus.git`), copy the example environment file (`cp .env.example .env`), then run `docker compose up -d --build`. The workspace is then reachable at `http://localhost:7011`, and the first admin password is printed in `docker compose logs odysseus`.' },
           { q: 'Does Odysseus require a local AI model?', a: 'No. Odysseus works with local model backends (Ollama, llama.cpp, vLLM) or with API providers (OpenAI, OpenRouter) — you configure which one to use in the `.env` file.' },
           { q: 'How many GitHub stars does Odysseus have?', a: `Over ${ST.en('odysseus', 'bare')}, per the [GitHub API](https://api.github.com/repos/odysseus-dev/odysseus). The count changes frequently, so check the repository for the current figure.` },
@@ -360,7 +360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Lizenzierung: AGPL-3.0-or-later, eine quelloffene Copyleft-Lizenz',
           `Repository: [github.com/odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus), über ${ST.de('odysseus', 'bare')} Sterne laut GitHub API`,
         ],
-        note: 'AGPL-3.0-or-later verlangt, dass jeder, der eine modifizierte Version von Odysseus als Netzwerkdienst betreibt, den geänderten Quellcode auch den Nutzern dieses Dienstes zugänglich macht. Das ist relevant, wenn Sie Odysseus forken und als gehostetes Produkt für andere anbieten möchten — der Betrieb einer unveränderten Kopie für den persönlichen oder internen Gebrauch löst diese Pflicht nicht aus. Prüfen Sie den [vollständigen Lizenztext](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE), falls dies für Ihren Anwendungsfall zutrifft.',
+        note: 'AGPL-3.0-or-later ist eine Copyleft-Lizenz mit einer Bestimmung zur Netzwerknutzung (Abschnitt 13): Wenn Sie das Programm ändern und andere Personen über ein Netzwerk damit interagieren lassen, knüpft die Lizenz Bedingungen an das Anbieten des entsprechenden Quellcodes. Ob und wie das auf Sie zutrifft, hängt von Ihrem Einsatz ab; maßgeblich ist der Lizenztext. Lesen Sie den [vollständigen Lizenztext](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE), wenn Sie eine geänderte Version für andere hosten möchten. Dies sind allgemeine Informationen, keine Rechtsberatung.',
       },
       whoMadeIt: {
         id: 'who-made-odysseus',
@@ -449,7 +449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Odysseus vs. andere selbstgehostete KI-Arbeitsbereiche',
         content: 'Odysseus ist eines von mehreren selbstgehosteten, quelloffenen Tools, die Chat mit zusätzlichen Produktivitäts- oder Agentenfunktionen verbinden. So schneidet es im Vergleich zu anderen Optionen in diesem Bereich ab — den vollständigen Katalog finden Sie im [lokalen KI-Software-Verzeichnis](/de/directory).',
         items: [
-          '**[Msty](https://msty.app)** — eine Desktop-first-lokale-KI-Chat-App mit einfacherer Einzel-App-Installation (kein Docker nötig), aber einem schmaleren Funktionsumfang als Odysseus\' E-Mail-/Kalender-/Dokumentenpaket; siehe den [Msty Review](/de/power-local-llm/msty-review).',
+          '**[Msty](https://msty.app)** — eine Desktop-first-Chat-App für lokale KI mit Installation als einzelne App (kein Docker nötig); vergleichen Sie ihren Funktionsumfang mit den E-Mail-, Kalender- und Dokumentenwerkzeugen von Odysseus auf der Website des jeweiligen Projekts und siehe den [Msty Review](/de/power-local-llm/msty-review).',
           '**[AnythingLLM](https://anythingllm.com)** — ein selbstgehosteter, quelloffener Arbeitsbereich mit Fokus auf Retrieval-Augmented Generation (RAG) und Dokumenten-Chat statt Odysseus\' breiterem E-Mail-/Kalender-/Recherche-Umfang; siehe den [AnythingLLM Review](/de/power-local-llm/anythingllm-review).',
           '**[Khoj](https://khoj.dev)** — ein selbstgehosteter, quelloffener „Second Brain"-Assistent mit Fokus auf persönliche Wissenssuche und Notizen, ein schmalerer Produktivitätsfokus als Odysseus\' All-in-One-Arbeitsbereich; siehe den [Khoj Review](/de/power-local-llm/khoj-ai-second-brain-review).',
           '**[LibreChat](https://librechat.ai)** — eine selbstgehostete, quelloffene Chat-Oberfläche mit Unterstützung vieler Modellanbieter und einem Plugin-/Agenten-System, aber ohne Odysseus\' eingebaute E-Mail- und Kalender-Tools; siehe den [LibreChat Review](/de/power-local-llm/librechat-review).',
@@ -496,7 +496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Fehler 3: AGPL-3.0-or-later mit einer freizügigen Lizenz wie MIT gleichsetzen',
-            content: 'AGPL-3.0-or-later ist eine Copyleft-Lizenz mit Netzwerknutzungspflichten: Wenn Sie eine modifizierte Version von Odysseus als Dienst betreiben, den andere Personen nutzen, müssen Sie in der Regel Ihren geänderten Quellcode zugänglich machen. Prüfen Sie den [Lizenztext](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE), bevor Sie ein kommerzielles Produkt auf einem Fork aufbauen.',
+            content: 'AGPL-3.0-or-later ist eine Copyleft-Lizenz und keine freizügige wie MIT; sie enthält eine Bestimmung zur Netzwerknutzung: Wenn Sie Odysseus ändern und andere Personen über ein Netzwerk damit interagieren lassen, knüpft die Lizenz Bedingungen an das Anbieten des entsprechenden Quellcodes. Lesen Sie den [Lizenztext](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE), bevor Sie ein kommerzielles Produkt auf einem Fork aufbauen. Dies sind allgemeine Informationen, keine Rechtsberatung.',
           },
           {
             title: 'Fehler 4: Annehmen, Odysseus benötige zwingend lokale Modelle',
@@ -511,7 +511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Was ist Odysseus?', a: 'Odysseus ([github.com/odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus)) ist ein kostenloser, quelloffener, selbstgehosteter KI-Arbeitsbereich, der Chat, Agenten, Tiefenrecherche und Dokument-/E-Mail-/Notiz-/Kalender-Tools vereint und per Docker auf eigener Hardware bereitgestellt wird.' },
           { q: 'Wer hat Odysseus entwickelt?', a: 'Odysseus wurde vom Content-Creator Felix Kjellberg (PewDiePie) gestartet, wie mehrere unabhängige Medien berichteten. Das Repository ist inzwischen in die Community-GitHub-Organisation `odysseus-dev` umgezogen.' },
           { q: 'Ist Odysseus kostenlos?', a: 'Ja. Odysseus ist kostenlose, quelloffene Software. Kosten entstehen höchstens durch Ihre eigene Hosting-Hardware oder durch einen API-Anbieter, den Sie anbinden — nicht durch Odysseus selbst.' },
-          { q: 'Welche Lizenz verwendet Odysseus?', a: 'AGPL-3.0-or-later, laut der [LICENSE-Datei](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) des Repositorys. Dies ist eine Copyleft-Lizenz mit Pflichten, falls Sie eine modifizierte Version als Netzwerkdienst für andere betreiben.' },
+          { q: 'Welche Lizenz verwendet Odysseus?', a: 'AGPL-3.0-or-later, laut der [LICENSE-Datei](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) des Repositorys. Dies ist eine Copyleft-Lizenz mit Pflichten, falls Sie eine modifizierte Version als Netzwerkdienst für andere betreiben. Dies sind allgemeine Informationen, keine Rechtsberatung.' },
           { q: 'Wie installiere ich Odysseus?', a: 'Klonen Sie das Repository (`git clone https://github.com/odysseus-dev/odysseus.git`), kopieren Sie die Beispiel-Umgebungsdatei (`cp .env.example .env`) und führen Sie dann `docker compose up -d --build` aus. Der Arbeitsbereich ist danach unter `http://localhost:7011` erreichbar, und das erste Admin-Passwort steht in `docker compose logs odysseus`.' },
           { q: 'Benötigt Odysseus ein lokales KI-Modell?', a: 'Nein. Odysseus funktioniert mit lokalen Modell-Backends (Ollama, llama.cpp, vLLM) oder mit API-Anbietern (OpenAI, OpenRouter) — Sie konfigurieren in der `.env`-Datei, welches genutzt wird.' },
           { q: 'Wie viele GitHub-Sterne hat Odysseus?', a: `Über ${ST.de('odysseus', 'bare')}, laut [GitHub API](https://api.github.com/repos/odysseus-dev/odysseus). Der Wert ändert sich häufig; den aktuellen Stand finden Sie im Repository.` },
@@ -630,7 +630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Licence : AGPL-3.0-or-later, une licence open source à copyleft',
           `Dépôt : [github.com/odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus), plus de ${ST.fr('odysseus', 'bare')} étoiles selon l'API GitHub`,
         ],
-        note: 'L\'AGPL-3.0-or-later exige que toute personne exécutant une version modifiée d\'Odysseus en tant que service réseau rende également le code source modifié disponible aux utilisateurs de ce service. Cela compte si vous prévoyez de forker Odysseus pour l\'offrir en tant que produit hébergé à d\'autres — l\'exécution d\'une copie non modifiée à usage personnel ou interne ne déclenche pas cette obligation. Consultez le [texte complet de la licence](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) si cela s\'applique à votre cas d\'usage.',
+        note: 'L\'AGPL-3.0-or-later est une licence à copyleft comportant une disposition sur l\'usage en réseau (section 13) : si vous modifiez le programme et laissez d\'autres personnes interagir avec lui via un réseau, la licence fixe des conditions concernant la mise à disposition du code source correspondant. Son application dépend de votre situation ; le texte de la licence fait foi. Lisez le [texte complet de la licence](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) si vous prévoyez d\'héberger une version modifiée pour d\'autres. Il s\'agit d\'informations générales, pas d\'un conseil juridique.',
       },
       whoMadeIt: {
         id: 'who-made-odysseus',
@@ -719,7 +719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Odysseus face aux autres espaces de travail IA auto-hébergés',
         content: 'Odysseus fait partie de plusieurs outils auto-hébergés et open source combinant le chat avec des fonctionnalités de productivité ou d\'agents supplémentaires. Voici comment il se compare à d\'autres options dans ce même domaine — consultez le [répertoire des logiciels d\'IA locale](/fr/directory) pour le catalogue complet.',
         items: [
-          '**[Msty](https://msty.app)** — une application de chat IA locale desktop-first avec une installation plus simple en une seule application (pas besoin de Docker), mais un ensemble de fonctionnalités plus restreint que le pack e-mail/calendrier/documents d\'Odysseus ; voir la [review de Msty](/fr/power-local-llm/msty-review).',
+          '**[Msty](https://msty.app)** — une application de chat IA locale orientée desktop, installée comme application unique (pas de Docker requis) ; comparez ses fonctionnalités avec les outils e-mail, calendrier et documents d\'Odysseus sur le site de chaque projet, et voir la [review de Msty](/fr/power-local-llm/msty-review).',
           '**[AnythingLLM](https://anythingllm.com)** — un espace de travail auto-hébergé et open source axé sur la génération augmentée par récupération (RAG) et le chat de documents plutôt que sur le périmètre plus large e-mail/calendrier/recherche d\'Odysseus ; voir la [review d\'AnythingLLM](/fr/power-local-llm/anythingllm-review).',
           '**[Khoj](https://khoj.dev)** — un assistant « second cerveau » auto-hébergé et open source axé sur la recherche de connaissances personnelles et les notes, un périmètre de productivité plus restreint que l\'espace de travail tout-en-un d\'Odysseus ; voir la [review de Khoj](/fr/power-local-llm/khoj-ai-second-brain-review).',
           '**[LibreChat](https://librechat.ai)** — une interface de chat auto-hébergée et open source prenant en charge de nombreux fournisseurs de modèles, avec un système de plugins/agents, mais sans les outils intégrés d\'e-mail et de calendrier d\'Odysseus ; voir la [review de LibreChat](/fr/power-local-llm/librechat-review).',
@@ -766,7 +766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Erreur 3 : assimiler l\'AGPL-3.0-or-later à une licence permissive comme MIT',
-            content: 'L\'AGPL-3.0-or-later est une licence à copyleft avec des obligations liées à l\'usage en réseau : si vous exploitez une version modifiée d\'Odysseus comme service utilisé par d\'autres personnes, vous devez généralement rendre votre code source modifié accessible. Consultez le [texte de la licence](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) avant de construire un produit commercial sur un fork.',
+            content: 'L\'AGPL-3.0-or-later est une licence à copyleft, et non une licence permissive comme MIT ; elle comporte une disposition sur l\'usage en réseau : si vous modifiez Odysseus et laissez d\'autres personnes interagir avec lui via un réseau, la licence fixe des conditions concernant la mise à disposition du code source correspondant. Consultez le [texte de la licence](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) avant de construire un produit commercial sur un fork. Il s\'agit d\'informations générales, pas d\'un conseil juridique.',
           },
           {
             title: 'Erreur 4 : penser qu\'Odysseus nécessite des modèles locaux pour fonctionner',
@@ -781,7 +781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Qu\'est-ce qu\'Odysseus ?', a: 'Odysseus ([github.com/odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus)) est un espace de travail IA gratuit, open source et auto-hébergé combinant chat, agents, recherche approfondie et outils de documents/e-mail/notes/calendrier, déployé via Docker sur votre propre matériel.' },
           { q: 'Qui a créé Odysseus ?', a: 'Odysseus a été lancé par le créateur de contenu Felix Kjellberg (PewDiePie), comme l\'ont rapporté plusieurs médias indépendants. Le dépôt a depuis migré vers l\'organisation communautaire GitHub `odysseus-dev`.' },
           { q: 'Odysseus est-il gratuit ?', a: 'Oui. Odysseus est un logiciel gratuit et open source. Un coût éventuel provient de votre propre matériel d\'hébergement ou d\'un fournisseur d\'API que vous choisissez de connecter, pas d\'Odysseus lui-même.' },
-          { q: 'Quelle licence Odysseus utilise-t-il ?', a: 'AGPL-3.0-or-later, selon le [fichier LICENSE](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) du dépôt. C\'est une licence à copyleft avec des obligations si vous exploitez une version modifiée comme service réseau pour d\'autres personnes.' },
+          { q: 'Quelle licence Odysseus utilise-t-il ?', a: 'AGPL-3.0-or-later, selon le [fichier LICENSE](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) du dépôt. C\'est une licence à copyleft avec des obligations si vous exploitez une version modifiée comme service réseau pour d\'autres personnes. Il s\'agit d\'informations générales, pas d\'un conseil juridique.' },
           { q: 'Comment installer Odysseus ?', a: 'Clonez le dépôt (`git clone https://github.com/odysseus-dev/odysseus.git`), copiez le fichier d\'environnement d\'exemple (`cp .env.example .env`), puis lancez `docker compose up -d --build`. L\'espace de travail est ensuite accessible sur `http://localhost:7011`, et le premier mot de passe admin s\'affiche dans `docker compose logs odysseus`.' },
           { q: 'Odysseus nécessite-t-il un modèle IA local ?', a: 'Non. Odysseus fonctionne avec des moteurs de modèles locaux (Ollama, llama.cpp, vLLM) ou avec des fournisseurs d\'API (OpenAI, OpenRouter) — vous configurez celui à utiliser dans le fichier `.env`.' },
           { q: 'Combien d\'étoiles GitHub Odysseus a-t-il ?', a: `Plus de ${ST.fr('odysseus', 'bare')}, selon l'[GitHub API](https://api.github.com/repos/odysseus-dev/odysseus). Ce chiffre évolue souvent ; consultez le dépôt pour la valeur actuelle.` },
@@ -900,7 +900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Licencia: AGPL-3.0-or-later, una licencia de código abierto con copyleft',
           `Repositorio: [github.com/odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus), más de ${ST.es('odysseus', 'bare')} estrellas según la API de GitHub`,
         ],
-        note: 'AGPL-3.0-or-later exige que cualquiera que ejecute una versión modificada de Odysseus como servicio de red también ponga a disposición el código fuente modificado a los usuarios de ese servicio. Esto importa si planea bifurcar (fork) Odysseus para ofrecerlo como producto alojado a terceros — ejecutar una copia sin modificar para uso personal o interno no activa esa obligación. Revise el [texto completo de la licencia](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) si esto aplica a su caso de uso.',
+        note: 'AGPL-3.0-or-later es una licencia con copyleft que incluye una disposición sobre el uso en red (sección 13): si modifica el programa y permite que otras personas interactúen con él a través de una red, la licencia establece condiciones sobre ofrecerles el código fuente correspondiente. Si se aplica y cómo depende de su caso; el texto de la licencia es el que prevalece. Lea el [texto completo de la licencia](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) si planea alojar una versión modificada para terceros. Esto es información general, no asesoramiento jurídico.',
       },
       whoMadeIt: {
         id: 'who-made-odysseus',
@@ -989,7 +989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Odysseus frente a otros espacios de trabajo de IA autoalojados',
         content: 'Odysseus es una de varias herramientas autoalojadas y de código abierto que combinan chat con funciones adicionales de productividad o de agentes. Así se compara con otras opciones en ese mismo espacio — consulte el [directorio de software de IA local](/es/directory) para el catálogo completo.',
         items: [
-          '**[Msty](https://msty.app)** — una app de chat de IA local orientada primero al escritorio, con una instalación más simple de una sola aplicación (sin necesidad de Docker), pero con un conjunto de funciones más reducido que el paquete de correo/calendario/documentos de Odysseus; vea la [review de Msty](/es/power-local-llm/msty-review).',
+          '**[Msty](https://msty.app)** — una app de chat de IA local orientada al escritorio, que se instala como una sola aplicación (sin Docker); compare sus funciones con las herramientas de correo, calendario y documentos de Odysseus en el sitio de cada proyecto, y vea la [review de Msty](/es/power-local-llm/msty-review).',
           '**[AnythingLLM](https://anythingllm.com)** — un espacio de trabajo autoalojado y de código abierto centrado en la generación aumentada por recuperación (RAG) y el chat de documentos, en lugar del alcance más amplio de correo/calendario/investigación de Odysseus; vea la [review de AnythingLLM](/es/power-local-llm/anythingllm-review).',
           '**[Khoj](https://khoj.dev)** — un asistente autoalojado y de código abierto tipo "segundo cerebro" centrado en la búsqueda de conocimiento personal y las notas, un enfoque de productividad más reducido que el espacio de trabajo todo en uno de Odysseus; vea la [review de Khoj](/es/power-local-llm/khoj-ai-second-brain-review).',
           '**[LibreChat](https://librechat.ai)** — una interfaz de chat autoalojada y de código abierto compatible con muchos proveedores de modelos, con un sistema de plugins/agentes, pero sin las herramientas integradas de correo y calendario de Odysseus; vea la [review de LibreChat](/es/power-local-llm/librechat-review).',
@@ -1036,7 +1036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Error 3: tratar AGPL-3.0-or-later igual que una licencia permisiva como MIT',
-            content: 'AGPL-3.0-or-later es una licencia con copyleft y obligaciones de uso en red: si ejecuta una versión modificada de Odysseus como un servicio que usan otras personas, generalmente debe poner a disposición su código fuente modificado. Revise el [texto de la licencia](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) antes de construir un producto comercial sobre un fork.',
+            content: 'AGPL-3.0-or-later es una licencia con copyleft, no permisiva como MIT, e incluye una disposición sobre el uso en red: si modifica Odysseus y permite que otras personas interactúen con él a través de una red, la licencia establece condiciones sobre ofrecerles el código fuente correspondiente. Revise el [texto de la licencia](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) antes de construir un producto comercial sobre un fork. Esto es información general, no asesoramiento jurídico.',
           },
           {
             title: 'Error 4: suponer que Odysseus requiere modelos locales para funcionar',
@@ -1051,7 +1051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Qué es Odysseus?', a: 'Odysseus ([github.com/odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus)) es un espacio de trabajo de IA gratuito, de código abierto y autoalojado que combina chat, agentes, investigación profunda y herramientas de documentos/correo/notas/calendario, desplegado mediante Docker en su propio hardware.' },
           { q: '¿Quién creó Odysseus?', a: 'Odysseus lo inició el creador de contenido Felix Kjellberg (PewDiePie), según informaron varios medios independientes. El repositorio se ha trasladado desde entonces a la organización comunitaria de GitHub `odysseus-dev`.' },
           { q: '¿Es gratuito Odysseus?', a: 'Sí. Odysseus es software gratuito y de código abierto. Cualquier coste proviene de su propio hardware de alojamiento o de un proveedor de API que decida conectar, no de Odysseus en sí.' },
-          { q: '¿Qué licencia usa Odysseus?', a: 'AGPL-3.0-or-later, según el [archivo LICENSE](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) del repositorio. Es una licencia con copyleft y obligaciones si ejecuta una versión modificada como servicio de red para otros.' },
+          { q: '¿Qué licencia usa Odysseus?', a: 'AGPL-3.0-or-later, según el [archivo LICENSE](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) del repositorio. Es una licencia con copyleft y obligaciones si ejecuta una versión modificada como servicio de red para otros. Esto es información general, no asesoramiento jurídico.' },
           { q: '¿Cómo instalo Odysseus?', a: 'Clona el repositorio (`git clone https://github.com/odysseus-dev/odysseus.git`), copia el archivo de entorno de ejemplo (`cp .env.example .env`) y ejecuta `docker compose up -d --build`. El espacio de trabajo queda accesible en `http://localhost:7011`, y la primera contraseña de administrador aparece en `docker compose logs odysseus`.' },
           { q: '¿Odysseus requiere un modelo de IA local?', a: 'No. Odysseus funciona con motores de modelos locales (Ollama, llama.cpp, vLLM) o con proveedores de API (OpenAI, OpenRouter) — usted configura cuál usar en el archivo `.env`.' },
           { q: '¿Cuántas estrellas de GitHub tiene Odysseus?', a: `Más de ${ST.es('odysseus', 'bare')}, según la [GitHub API](https://api.github.com/repos/odysseus-dev/odysseus). La cifra cambia con frecuencia; consulta el repositorio para el valor actual.` },
@@ -1170,7 +1170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Licenciamento: AGPL-3.0-or-later, uma licença de código aberto com copyleft',
           `Repositório: [github.com/odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus), mais de ${ST.pt('odysseus', 'bare')} estrelas segundo a API do GitHub`,
         ],
-        note: 'A AGPL-3.0-or-later exige que qualquer pessoa que rode uma versão modificada do Odysseus como serviço de rede também disponibilize o código-fonte modificado aos usuários desse serviço. Isso importa se você planeja bifurcar (fork) o Odysseus para oferecê-lo como produto hospedado a terceiros — rodar uma cópia não modificada para uso pessoal ou interno não aciona essa obrigação. Revise o [texto completo da licença](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) se isso se aplicar ao seu caso de uso.',
+        note: 'A AGPL-3.0-or-later é uma licença com copyleft que inclui uma disposição sobre uso em rede (seção 13): se você modificar o programa e permitir que outras pessoas interajam com ele por uma rede, a licença estabelece condições sobre oferecer a elas o código-fonte correspondente. Se e como isso se aplica depende do seu caso; o texto da licença é o que prevalece. Leia o [texto completo da licença](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) se você planeja hospedar uma versão modificada para terceiros. Isto é informação geral, não aconselhamento jurídico.',
       },
       whoMadeIt: {
         id: 'who-made-odysseus',
@@ -1259,7 +1259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Odysseus vs. outros espaços de trabalho de IA auto-hospedados',
         content: 'O Odysseus é uma de várias ferramentas auto-hospedadas e de código aberto que combinam chat com recursos adicionais de produtividade ou de agentes. Veja como ele se compara a outras opções nesse mesmo espaço — consulte o [diretório de software de IA local](/pt/directory) para o catálogo completo.',
         items: [
-          '**[Msty](https://msty.app)** — um app de chat de IA local com foco em desktop, com instalação mais simples em um único aplicativo (sem necessidade de Docker), mas um conjunto de recursos mais restrito que o pacote de e-mail/calendário/documentos do Odysseus; veja a [review do Msty](/pt/power-local-llm/msty-review).',
+          '**[Msty](https://msty.app)** — um app de chat de IA local com foco em desktop, instalado como um único aplicativo (sem necessidade de Docker); compare os recursos dele com as ferramentas de e-mail, calendário e documentos do Odysseus no site de cada projeto, e veja a [review do Msty](/pt/power-local-llm/msty-review).',
           '**[AnythingLLM](https://anythingllm.com)** — um espaço de trabalho auto-hospedado e de código aberto focado em geração aumentada por recuperação (RAG) e chat de documentos, em vez do escopo mais amplo de e-mail/calendário/pesquisa do Odysseus; veja a [review do AnythingLLM](/pt/power-local-llm/anythingllm-review).',
           '**[Khoj](https://khoj.dev)** — um assistente "segundo cérebro" auto-hospedado e de código aberto, focado em busca de conhecimento pessoal e notas, um foco de produtividade mais restrito que o espaço de trabalho tudo em um do Odysseus; veja a [review do Khoj](/pt/power-local-llm/khoj-ai-second-brain-review).',
           '**[LibreChat](https://librechat.ai)** — uma interface de chat auto-hospedada e de código aberto com suporte a muitos provedores de modelo, com um sistema de plugins/agentes, mas sem as ferramentas integradas de e-mail e calendário do Odysseus; veja a [review do LibreChat](/pt/power-local-llm/librechat-review).',
@@ -1306,7 +1306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Erro 3: tratar a AGPL-3.0-or-later como se fosse uma licença permissiva como a MIT',
-            content: 'A AGPL-3.0-or-later é uma licença com copyleft e obrigações de uso em rede: se você rodar uma versão modificada do Odysseus como serviço usado por outras pessoas, geralmente precisa disponibilizar seu código-fonte modificado. Revise o [texto da licença](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) antes de construir um produto comercial sobre um fork.',
+            content: 'A AGPL-3.0-or-later é uma licença com copyleft, não permissiva como a MIT, e inclui uma disposição sobre uso em rede: se você modificar o Odysseus e permitir que outras pessoas interajam com ele por uma rede, a licença estabelece condições sobre oferecer a elas o código-fonte correspondente. Revise o [texto da licença](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) antes de construir um produto comercial sobre um fork. Isto é informação geral, não aconselhamento jurídico.',
           },
           {
             title: 'Erro 4: presumir que o Odysseus exige modelos locais para funcionar',
@@ -1321,7 +1321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'O que é o Odysseus?', a: 'Odysseus ([github.com/odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus)) é um espaço de trabalho de IA gratuito, de código aberto e auto-hospedado que combina chat, agentes, pesquisa aprofundada e ferramentas de documentos/e-mail/notas/calendário, implantado via Docker no seu próprio hardware.' },
           { q: 'Quem criou o Odysseus?', a: 'O Odysseus foi iniciado pelo criador de conteúdo Felix Kjellberg (PewDiePie), segundo relatado por vários veículos independentes. O repositório desde então mudou para a organização comunitária do GitHub `odysseus-dev`.' },
           { q: 'O Odysseus é gratuito?', a: 'Sim. O Odysseus é software gratuito e de código aberto. Qualquer custo vem do seu próprio hardware de hospedagem ou de um provedor de API que você escolher conectar, não do Odysseus em si.' },
-          { q: 'Qual licença o Odysseus usa?', a: 'AGPL-3.0-or-later, segundo o [arquivo LICENSE](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) do repositório. É uma licença com copyleft e obrigações caso você rode uma versão modificada como serviço de rede para outras pessoas.' },
+          { q: 'Qual licença o Odysseus usa?', a: 'AGPL-3.0-or-later, segundo o [arquivo LICENSE](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) do repositório. É uma licença com copyleft e obrigações caso você rode uma versão modificada como serviço de rede para outras pessoas. Isto é informação geral, não aconselhamento jurídico.' },
           { q: 'Como instalo o Odysseus?', a: 'Clone o repositório (`git clone https://github.com/odysseus-dev/odysseus.git`), copie o arquivo de ambiente de exemplo (`cp .env.example .env`) e execute `docker compose up -d --build`. O espaço de trabalho fica acessível em `http://localhost:7011`, e a primeira senha de administrador aparece em `docker compose logs odysseus`.' },
           { q: 'O Odysseus exige um modelo de IA local?', a: 'Não. O Odysseus funciona com back-ends de modelo local (Ollama, llama.cpp, vLLM) ou com provedores de API (OpenAI, OpenRouter) — você configura qual usar no arquivo `.env`.' },
           { q: 'Quantas estrelas no GitHub o Odysseus tem?', a: `Mais de ${ST.pt('odysseus', 'bare')}, segundo a [GitHub API](https://api.github.com/repos/odysseus-dev/odysseus). O número muda com frequência; consulte o repositório para o valor atual.` },
@@ -1440,7 +1440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ライセンス: AGPL-3.0-or-later、オープンソースのコピーレフトライセンス',
           `リポジトリ: [github.com/odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus)、GitHub APIによれば${ST.ja('odysseus', 'bare')}を超えるスター`,
         ],
-        note: 'AGPL-3.0-or-laterは、Odysseusの改変版をネットワークサービスとして運用する人に対し、そのサービスの利用者にも改変済みソースコードを提供することを義務付けます。これは、Odysseusをフォークして他者向けのホスト型製品として提供する予定がある場合に関係します — 個人利用や社内利用のために未改変のコピーを運用する場合はこの義務は発生しません。該当する場合は[完全なライセンス文書](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE)を確認してください。',
+        note: 'AGPL-3.0-or-laterはネットワーク利用に関する条項（第13条）を持つコピーレフトライセンスです。プログラムを改変し、他の人がネットワーク経由で利用できるようにする場合、対応するソースコードの提供について条件が定められています。適用の有無や内容は利用形態によって異なり、ライセンス本文が優先されます。改変版を他者向けにホストする予定がある場合は[完全なライセンス文書](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE)をお読みください。これは一般的な情報であり、法的助言ではありません。',
       },
       whoMadeIt: {
         id: 'who-made-odysseus',
@@ -1529,7 +1529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Odysseus対他のセルフホスト型AIワークスペース',
         content: 'Odysseusは、チャットに追加の生産性機能やエージェント機能を組み合わせた、セルフホスト型のオープンソースツールの1つです。同じ領域の他の選択肢との比較は以下の通りです — 完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/directory)を参照してください。',
         items: [
-          '**[Msty](https://msty.app)** — デスクトップファーストのローカルAIチャットアプリで、Docker不要のよりシンプルな単一アプリインストールが可能だが、Odysseusのメール/カレンダー/文書のバンドルより機能セットは狭い。[Mstyレビュー](/ja/power-local-llm/msty-review)を参照。',
+          '**[Msty](https://msty.app)** — デスクトップ向けのローカルAIチャットアプリで、単一アプリとしてインストールします（Docker不要）。機能はOdysseusのメール/カレンダー/文書ツールと各プロジェクトのサイトで比較してください。[Mstyレビュー](/ja/power-local-llm/msty-review)も参照。',
           '**[AnythingLLM](https://anythingllm.com)** — Odysseusのより広いメール/カレンダー/リサーチの範囲ではなく、検索拡張生成（RAG）と文書チャットに重点を置いたセルフホスト型のオープンソースワークスペース。[AnythingLLMレビュー](/ja/power-local-llm/anythingllm-review)を参照。',
           '**[Khoj](https://khoj.dev)** — 個人の知識検索とメモに重点を置いた、セルフホスト型のオープンソース「セカンドブレイン」アシスタントで、Odysseusのオールインワンワークスペースより生産性面での焦点は狭い。[Khojレビュー](/ja/power-local-llm/khoj-ai-second-brain-review)を参照。',
           '**[LibreChat](https://librechat.ai)** — 多くのモデルプロバイダーに対応した、セルフホスト型のオープンソースチャットインターフェースで、プラグイン/エージェントシステムを備えるが、Odysseusの内蔵メール・カレンダーツールはない。[LibreChatレビュー](/ja/power-local-llm/librechat-review)を参照。',
@@ -1576,7 +1576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '間違い3: AGPL-3.0-or-laterをMITのような許可的ライセンスと同じように扱う',
-            content: 'AGPL-3.0-or-laterは、ネットワーク利用に関する義務を伴うコピーレフトライセンスです。Odysseusの改変版を他者が利用するサービスとして運用する場合、一般に改変後のソースコードを提供する必要があります。フォークをもとに商用製品を構築する前に[ライセンス文書](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE)を確認してください。',
+            content: 'AGPL-3.0-or-laterはMITのような許容的ライセンスではなくコピーレフトライセンスで、ネットワーク利用に関する条項があります。Odysseusを改変し、他の人がネットワーク経由で利用できるようにする場合、対応するソースコードの提供について条件が定められています。フォークをもとに商用製品を構築する前に[ライセンス文書](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE)を確認してください。これは一般的な情報であり、法的助言ではありません。',
           },
           {
             title: '間違い4: Odysseusの動作にローカルモデルが必須だと思い込む',
@@ -1591,7 +1591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Odysseusとは何ですか？', a: 'Odysseus（[github.com/odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus)）は、チャット、エージェント、ディープリサーチ、文書/メール/メモ/カレンダーツールを統合した、無料でオープンソースのセルフホスト型AIワークスペースで、自分のハードウェア上でDocker経由でデプロイします。' },
           { q: '誰がOdysseusを作りましたか？', a: '複数の独立系メディアが報じたとおり、Odysseusはコンテンツクリエイターの Felix Kjellberg（PewDiePie）が開始しました。リポジトリはその後、コミュニティ運営のGitHub組織`odysseus-dev`に移管されました。' },
           { q: 'Odysseusは無料ですか？', a: 'はい。Odysseusは無料のオープンソースソフトウェアです。費用が発生するとすれば、自分のホスティング用ハードウェアか、接続を選んだ場合のAPIプロバイダーからであり、Odysseus自体からではありません。' },
-          { q: 'Odysseusはどのライセンスを使っていますか？', a: 'リポジトリの[LICENSEファイル](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE)によればAGPL-3.0-or-laterです。これは、改変版を他者向けのネットワークサービスとして運用する場合に義務を伴うコピーレフトライセンスです。' },
+          { q: 'Odysseusはどのライセンスを使っていますか？', a: 'リポジトリの[LICENSEファイル](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE)によればAGPL-3.0-or-laterです。これは、改変版を他者向けのネットワークサービスとして運用する場合に義務を伴うコピーレフトライセンスです。これは一般的な情報であり、法的助言ではありません。' },
           { q: 'Odysseusはどうインストールしますか？', a: 'リポジトリをクローンし(`git clone https://github.com/odysseus-dev/odysseus.git`)、サンプルの環境ファイルをコピーして(`cp .env.example .env`)、`docker compose up -d --build`を実行します。その後、ワークスペースは`http://localhost:7011`で利用でき、最初の管理者パスワードは`docker compose logs odysseus`に表示されます。' },
           { q: 'Odysseusにはローカルなaiモデルが必要ですか？', a: 'いいえ。Odysseusはローカルモデルバックエンド（Ollama、llama.cpp、vLLM）またはAPIプロバイダー（OpenAI、OpenRouter）で動作し、どちらを使うかは`.env`ファイルで設定します。' },
           { q: 'OdysseusのGitHubスター数はいくつですか？', a: `[GitHub API](https://api.github.com/repos/odysseus-dev/odysseus)によれば${ST.ja('odysseus', 'bare')}を超えています。数値は頻繁に変わるため、最新の値はリポジトリで確認してください。` },
@@ -1710,7 +1710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '许可：AGPL-3.0-or-later，一种开源的copyleft许可证',
           `仓库：[github.com/odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus)，根据 GitHub API，star 超过 ${ST.zh('odysseus', 'bare')}`,
         ],
-        note: 'AGPL-3.0-or-later要求，任何将Odysseus的修改版本作为网络服务运行的人，也必须向该服务的用户提供修改后的源代码。如果你计划分叉（fork）Odysseus并将其作为托管产品提供给他人，这一点就很重要——为个人或内部使用而运行未修改的副本不会触发这一义务。如果这适用于你的用例，请查看[完整许可证文本](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE)。',
+        note: 'AGPL-3.0-or-later是一种带有网络使用条款（第13条）的copyleft许可证：如果你修改了该程序并让其他人通过网络与之交互，许可证会就向他们提供相应源代码设定条件。是否适用以及如何适用取决于你的具体情况，以许可证文本为准。如果你打算为他人托管修改版本，请阅读[完整许可证文本](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE)。以上为一般性信息，不构成法律意见。',
       },
       whoMadeIt: {
         id: 'who-made-odysseus',
@@ -1799,7 +1799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Odysseus与其他自托管AI工作空间的对比',
         content: 'Odysseus是众多将聊天与额外生产力或代理功能相结合的自托管开源工具之一。以下是它在这一领域与其他选项的对比——完整目录请参阅[本地AI软件目录](/zh/directory)。',
         items: [
-          '**[Msty](https://msty.app)** — 一款以桌面为先的本地AI聊天应用，安装更简单（单一应用，无需Docker），但功能集比Odysseus的邮件/日历/文档组合要窄；参阅[Msty评测](/zh/power-local-llm/msty-review)。',
+          '**[Msty](https://msty.app)** — 一款以桌面为先的本地AI聊天应用，以单一应用方式安装（无需Docker）；请在各项目官网上对比其功能与Odysseus的邮件、日历和文档工具，并参阅[Msty评测](/zh/power-local-llm/msty-review)。',
           '**[AnythingLLM](https://anythingllm.com)** — 一款自托管的开源工作空间，专注于检索增强生成（RAG）和文档聊天，而非Odysseus更广泛的邮件/日历/研究范围；参阅[AnythingLLM评测](/zh/power-local-llm/anythingllm-review)。',
           '**[Khoj](https://khoj.dev)** — 一款自托管的开源"第二大脑"助手，专注于个人知识搜索和笔记，其生产力定位比Odysseus的一体化工作空间要窄；参阅[Khoj评测](/zh/power-local-llm/khoj-ai-second-brain-review)。',
           '**[LibreChat](https://librechat.ai)** — 一款自托管的开源聊天界面，支持众多模型提供方，具备插件/代理系统，但没有Odysseus内置的邮件和日历工具；参阅[LibreChat评测](/zh/power-local-llm/librechat-review)。',
@@ -1846,7 +1846,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '错误3：把AGPL-3.0-or-later等同于MIT这样的宽松许可证',
-            content: 'AGPL-3.0-or-later是一种带有网络使用义务的copyleft许可证：如果你将Odysseus的修改版本作为供他人使用的服务运行，通常必须提供你修改后的源代码。在基于分叉构建商业产品之前，请查阅[许可证文本](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE)。',
+            content: 'AGPL-3.0-or-later是copyleft许可证，而非MIT这样的宽松许可证，并包含网络使用条款：如果你修改了Odysseus并让其他人通过网络与之交互，许可证会就向他们提供相应源代码设定条件。在基于分叉构建商业产品之前，请查阅[许可证文本](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE)。以上为一般性信息，不构成法律意见。',
           },
           {
             title: '错误4：认为Odysseus的运行必须依赖本地模型',
@@ -1861,7 +1861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Odysseus是什么？', a: 'Odysseus（[github.com/odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus)）是一款免费、开源、自托管的AI工作空间，整合了聊天、代理、深度研究以及文档/邮件/笔记/日历工具，通过Docker部署在你自己的硬件上。' },
           { q: '谁开发了Odysseus？', a: '正如多家独立媒体所报道的，Odysseus由内容创作者Felix Kjellberg（PewDiePie）发起。该仓库此后已迁移至社区运营的GitHub组织`odysseus-dev`。' },
           { q: 'Odysseus免费吗？', a: '是的。Odysseus是免费的开源软件。任何费用都来自你自己的托管硬件，或者你选择连接的API提供方，而非来自Odysseus本身。' },
-          { q: 'Odysseus使用什么许可证？', a: '根据仓库的[LICENSE文件](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE)，为AGPL-3.0-or-later。这是一种copyleft许可证，如果你将修改版本作为面向他人的网络服务运行，则需要承担相应义务。' },
+          { q: 'Odysseus使用什么许可证？', a: '根据仓库的[LICENSE文件](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE)，为AGPL-3.0-or-later。这是一种copyleft许可证，如果你将修改版本作为面向他人的网络服务运行，则需要承担相应义务。以上为一般性信息，不构成法律意见。' },
           { q: '如何安装Odysseus？', a: '克隆仓库（`git clone https://github.com/odysseus-dev/odysseus.git`），复制示例环境文件（`cp .env.example .env`），然后运行 `docker compose up -d --build`。之后即可通过 `http://localhost:7011` 访问工作空间，首个管理员密码会显示在 `docker compose logs odysseus` 中。' },
           { q: 'Odysseus需要本地AI模型吗？', a: '不需要。Odysseus支持本地模型后端（Ollama、llama.cpp、vLLM）或API提供方（OpenAI、OpenRouter）——你在`.env`文件中配置使用哪一种。' },
           { q: 'Odysseus有多少GitHub star？', a: `根据 [GitHub API](https://api.github.com/repos/odysseus-dev/odysseus)，超过 ${ST.zh('odysseus', 'bare')}。该数字经常变化，请以仓库中的当前数值为准。` },
@@ -1980,7 +1980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الترخيص: AGPL-3.0-or-later، وهي رخصة مفتوحة المصدر من نوع copyleft',
           `المستودع: [github.com/odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus)، أكثر من ${ST.ar('odysseus', 'bare')} نجمة بحسب واجهة GitHub البرمجية`,
         ],
-        note: 'تشترط رخصة AGPL-3.0-or-later على أي شخص يشغّل نسخة معدّلة من Odysseus كخدمة شبكية أن يتيح أيضاً الكود المصدري المعدّل لمستخدمي تلك الخدمة. هذا مهم إذا كنت تخطط لعمل نسخة متفرعة (fork) من Odysseus وتقديمها كمنتج مستضاف لآخرين — تشغيل نسخة غير معدّلة للاستخدام الشخصي أو الداخلي لا يستوجب هذا الالتزام. راجع [النص الكامل للرخصة](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) إذا كان هذا ينطبق على حالة استخدامك.',
+        note: 'AGPL-3.0-or-later رخصة copyleft تتضمن حكماً يتعلق بالاستخدام الشبكي (البند 13): إذا عدّلت البرنامج وأتحت لآخرين التفاعل معه عبر شبكة، فإن الرخصة تضع شروطاً بشأن تزويدهم بالكود المصدري المقابل. وينطبق ذلك أو لا بحسب حالتك، والمرجع هو نص الرخصة. اطّلع على [النص الكامل للرخصة](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) إذا كنت تخطط لاستضافة نسخة معدّلة لآخرين. هذه معلومات عامة وليست مشورة قانونية.',
       },
       whoMadeIt: {
         id: 'who-made-odysseus',
@@ -2069,7 +2069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Odysseus مقابل مساحات عمل ذكاء اصطناعي أخرى ذاتية الاستضافة',
         content: 'Odysseus هي واحدة من عدة أدوات ذاتية الاستضافة ومفتوحة المصدر تجمع بين الدردشة وميزات إنتاجية أو وكلاء إضافية. إليك كيف تُقارَن بخيارات أخرى في هذا المجال نفسه — راجع [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) للحصول على الكتالوج الكامل.',
         items: [
-          '**[Msty](https://msty.app)** — تطبيق دردشة ذكاء اصطناعي محلي يُركّز على سطح المكتب، بتثبيت أبسط في تطبيق واحد (لا حاجة إلى Docker)، لكن بمجموعة ميزات أضيق من حزمة البريد الإلكتروني/التقويم/المستندات في Odysseus؛ راجع [مراجعة Msty](/ar/power-local-llm/msty-review).',
+          '**[Msty](https://msty.app)** — تطبيق دردشة ذكاء اصطناعي محلي يُركّز على سطح المكتب ويُثبَّت كتطبيق واحد (لا حاجة إلى Docker)؛ قارن ميزاته بأدوات البريد والتقويم والمستندات في Odysseus على موقع كل مشروع، وراجع [مراجعة Msty](/ar/power-local-llm/msty-review).',
           '**[AnythingLLM](https://anythingllm.com)** — مساحة عمل ذاتية الاستضافة ومفتوحة المصدر تركز على التوليد المعزّز بالاسترجاع (RAG) والدردشة حول المستندات بدلاً من النطاق الأوسع للبريد الإلكتروني/التقويم/البحث في Odysseus؛ راجع [مراجعة AnythingLLM](/ar/power-local-llm/anythingllm-review).',
           '**[Khoj](https://khoj.dev)** — مساعد "دماغ ثانٍ" ذاتي الاستضافة ومفتوح المصدر يركز على البحث في المعرفة الشخصية والملاحظات، بتركيز إنتاجي أضيق من مساحة عمل Odysseus الشاملة؛ راجع [مراجعة Khoj](/ar/power-local-llm/khoj-ai-second-brain-review).',
           '**[LibreChat](https://librechat.ai)** — واجهة دردشة ذاتية الاستضافة ومفتوحة المصدر تدعم العديد من مزودي النماذج، مع نظام إضافات/وكلاء، لكن بدون أدوات البريد الإلكتروني والتقويم المدمجة في Odysseus؛ راجع [مراجعة LibreChat](/ar/power-local-llm/librechat-review).',
@@ -2116,7 +2116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'الخطأ 3: معاملة رخصة AGPL-3.0-or-later معاملة رخصة متساهلة مثل MIT',
-            content: 'رخصة AGPL-3.0-or-later هي رخصة copyleft تتضمن التزامات متعلقة بالاستخدام الشبكي: إذا شغّلت نسخة معدّلة من Odysseus كخدمة يستخدمها آخرون، يجب عليك عموماً إتاحة الكود المصدري المعدّل الخاص بك. راجع [نص الرخصة](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) قبل بناء منتج تجاري على نسخة متفرعة (fork).',
+            content: 'AGPL-3.0-or-later رخصة copyleft وليست متساهلة مثل MIT، وتتضمن حكماً يتعلق بالاستخدام الشبكي: إذا عدّلت Odysseus وأتحت لآخرين التفاعل معه عبر شبكة، فإن الرخصة تضع شروطاً بشأن تزويدهم بالكود المصدري المقابل. راجع [نص الرخصة](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) قبل بناء منتج تجاري على نسخة متفرعة (fork). هذه معلومات عامة وليست مشورة قانونية.',
           },
           {
             title: 'الخطأ 4: افتراض أن Odysseus يتطلب نماذج محلية لكي يعمل',
@@ -2131,7 +2131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ما هو Odysseus؟', a: 'Odysseus ([github.com/odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus)) هي مساحة عمل ذكاء اصطناعي مجانية ومفتوحة المصدر وذاتية الاستضافة تجمع بين الدردشة والوكلاء والبحث المعمّق وأدوات المستندات/البريد الإلكتروني/الملاحظات/التقويم، تُنشَر عبر Docker على جهازك الخاص.' },
           { q: 'من طوّر Odysseus؟', a: 'بدأ Odysseus صانع المحتوى فيليكس كيلبرغ (PewDiePie)، وفقاً لما أفادت به عدة وسائل إعلام مستقلة. وقد انتقل المستودع منذ ذلك الحين إلى منظمة GitHub المجتمعية `odysseus-dev`.' },
           { q: 'هل Odysseus مجاني؟', a: 'نعم. Odysseus برنامج مجاني ومفتوح المصدر. أي تكلفة تأتي من جهاز الاستضافة الخاص بك أو من مزود واجهة برمجة تطبيقات تختار ربطه، وليس من Odysseus نفسه.' },
-          { q: 'ما الرخصة التي يستخدمها Odysseus؟', a: 'AGPL-3.0-or-later، وفقاً لـ[ملف LICENSE](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) الخاص بالمستودع. وهي رخصة copyleft تتضمن التزامات إذا شغّلت نسخة معدّلة كخدمة شبكية لآخرين.' },
+          { q: 'ما الرخصة التي يستخدمها Odysseus؟', a: 'AGPL-3.0-or-later، وفقاً لـ[ملف LICENSE](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE) الخاص بالمستودع. وهي رخصة copyleft تتضمن التزامات إذا شغّلت نسخة معدّلة كخدمة شبكية لآخرين. هذه معلومات عامة وليست مشورة قانونية.' },
           { q: 'كيف أثبّت Odysseus؟', a: 'استنسخ المستودع (`git clone https://github.com/odysseus-dev/odysseus.git`)، وانسخ ملف البيئة النموذجي (`cp .env.example .env`)، ثم شغّل `docker compose up -d --build`. بعدها تصبح مساحة العمل متاحة على `http://localhost:7011`، وتظهر كلمة مرور المسؤول الأولى في `docker compose logs odysseus`.' },
           { q: 'هل يتطلب Odysseus نموذج ذكاء اصطناعي محلياً؟', a: 'لا. يعمل Odysseus مع محركات نماذج محلية (Ollama وllama.cpp وvLLM) أو مع مزودي واجهات برمجة التطبيقات (OpenAI وOpenRouter) — تُهيّئ في ملف `.env` أيّهما تريد استخدامه.' },
           { q: 'كم عدد نجوم GitHub التي حصل عليها Odysseus؟', a: `أكثر من ${ST.ar('odysseus', 'bare')}، بحسب [GitHub API](https://api.github.com/repos/odysseus-dev/odysseus). يتغيّر الرقم باستمرار، لذا راجع المستودع لمعرفة القيمة الحالية.` },
@@ -2250,7 +2250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '라이선스: AGPL-3.0-or-later, 오픈소스 카피레프트 라이선스',
           `저장소: [github.com/odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus), GitHub API 기준 스타 ${ST.ko('odysseus', 'bare')}개 이상`,
         ],
-        note: 'AGPL-3.0-or-later는 Odysseus의 수정 버전을 네트워크 서비스로 운영하는 사람이 해당 서비스 사용자에게도 수정된 소스 코드를 제공하도록 요구합니다. Odysseus를 포크해서 타인에게 호스팅 제품으로 제공할 계획이라면 이 점이 중요합니다 — 개인 또는 내부 용도로 수정하지 않은 사본을 실행하는 경우에는 이 의무가 발생하지 않습니다. 해당된다면 [전체 라이선스 텍스트](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE)를 검토하세요.',
+        note: 'AGPL-3.0-or-later는 네트워크 사용 조항(제13조)이 있는 카피레프트 라이선스입니다. 프로그램을 수정하고 다른 사람이 네트워크를 통해 이를 이용하게 하는 경우, 해당 소스 코드를 제공하는 것에 관한 조건을 정하고 있습니다. 적용 여부와 방식은 사용 환경에 따라 다르며 라이선스 원문이 기준입니다. 수정 버전을 타인을 위해 호스팅할 계획이라면 [전체 라이선스 텍스트](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE)를 읽어 보세요. 이는 일반 정보이며 법률 자문이 아닙니다.',
       },
       whoMadeIt: {
         id: 'who-made-odysseus',
@@ -2339,7 +2339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Odysseus 대 다른 셀프 호스팅 AI 워크스페이스',
         content: 'Odysseus는 채팅에 추가적인 생산성 또는 에이전트 기능을 결합한 여러 셀프 호스팅 오픈소스 도구 중 하나입니다. 같은 영역의 다른 옵션들과 어떻게 비교되는지 아래에 정리했습니다 — 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
         items: [
-          '**[Msty](https://msty.app)** — 데스크톱 우선의 로컬 AI 채팅 앱으로, 단일 앱 설치가 더 간단하지만(Docker 불필요) Odysseus의 이메일/캘린더/문서 묶음보다 기능 범위가 좁음; [Msty 리뷰](/ko/power-local-llm/msty-review) 참고.',
+          '**[Msty](https://msty.app)** — 데스크톱 우선의 로컬 AI 채팅 앱으로, 단일 앱으로 설치합니다(Docker 불필요). 기능은 각 프로젝트 사이트에서 Odysseus의 이메일/캘린더/문서 도구와 비교해 보시고, [Msty 리뷰](/ko/power-local-llm/msty-review)도 참고하세요.',
           '**[AnythingLLM](https://anythingllm.com)** — Odysseus의 더 넓은 이메일/캘린더/리서치 범위 대신 검색 증강 생성(RAG)과 문서 채팅에 초점을 맞춘 셀프 호스팅 오픈소스 워크스페이스; [AnythingLLM 리뷰](/ko/power-local-llm/anythingllm-review) 참고.',
           '**[Khoj](https://khoj.dev)** — 개인 지식 검색과 메모에 초점을 맞춘 셀프 호스팅 오픈소스 "두 번째 뇌" 비서로, Odysseus의 올인원 워크스페이스보다 생산성 초점이 좁음; [Khoj 리뷰](/ko/power-local-llm/khoj-ai-second-brain-review) 참고.',
           '**[LibreChat](https://librechat.ai)** — 많은 모델 제공업체를 지원하는 셀프 호스팅 오픈소스 채팅 인터페이스로, 플러그인/에이전트 시스템을 갖췄지만 Odysseus의 내장 이메일 및 캘린더 도구는 없음; [LibreChat 리뷰](/ko/power-local-llm/librechat-review) 참고.',
@@ -2386,7 +2386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '실수 3: AGPL-3.0-or-later를 MIT 같은 허용적 라이선스와 동일하게 취급하기',
-            content: 'AGPL-3.0-or-later는 네트워크 사용 관련 의무가 있는 카피레프트 라이선스입니다. Odysseus의 수정 버전을 다른 사람이 사용하는 서비스로 운영한다면 일반적으로 수정된 소스 코드를 공개해야 합니다. 포크를 기반으로 상업용 제품을 만들기 전에 [라이선스 텍스트](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE)를 검토하세요.',
+            content: 'AGPL-3.0-or-later는 MIT 같은 허용적 라이선스가 아니라 카피레프트 라이선스이며, 네트워크 사용 조항을 포함합니다. Odysseus를 수정하고 다른 사람이 네트워크를 통해 이를 이용하게 하는 경우, 해당 소스 코드를 제공하는 것에 관한 조건을 정하고 있습니다. 포크를 기반으로 상업용 제품을 만들기 전에 [라이선스 텍스트](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE)를 검토하세요. 이는 일반 정보이며 법률 자문이 아닙니다.',
           },
           {
             title: '실수 4: Odysseus가 작동하려면 로컬 모델이 필요하다고 여기기',
@@ -2401,7 +2401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Odysseus는 무엇인가요?', a: 'Odysseus([github.com/odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus))는 채팅, 에이전트, 심층 리서치, 문서/이메일/메모/캘린더 도구를 결합한 무료 오픈소스 셀프 호스팅 AI 워크스페이스로, 자신의 하드웨어에서 Docker를 통해 배포합니다.' },
           { q: 'Odysseus는 누가 만들었나요?', a: '여러 독립 매체가 보도한 바에 따르면 Odysseus는 콘텐츠 크리에이터 펠릭스 셸버그(PewDiePie)가 시작했습니다. 저장소는 이후 커뮤니티 운영 GitHub 조직 `odysseus-dev`로 이전되었습니다.' },
           { q: 'Odysseus는 무료인가요?', a: '네. Odysseus는 무료 오픈소스 소프트웨어입니다. 비용이 발생한다면 자체 호스팅 하드웨어나 연결하기로 선택한 API 제공업체에서 발생하며, Odysseus 자체에서 발생하지 않습니다.' },
-          { q: 'Odysseus는 어떤 라이선스를 사용하나요?', a: '저장소의 [LICENSE 파일](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE)에 따라 AGPL-3.0-or-later입니다. 이는 수정 버전을 타인을 위한 네트워크 서비스로 운영할 경우 의무가 따르는 카피레프트 라이선스입니다.' },
+          { q: 'Odysseus는 어떤 라이선스를 사용하나요?', a: '저장소의 [LICENSE 파일](https://github.com/odysseus-dev/odysseus/blob/main/LICENSE)에 따라 AGPL-3.0-or-later입니다. 이는 수정 버전을 타인을 위한 네트워크 서비스로 운영할 경우 의무가 따르는 카피레프트 라이선스입니다. 이는 일반 정보이며 법률 자문이 아닙니다.' },
           { q: 'Odysseus는 어떻게 설치하나요?', a: '저장소를 클론하고(`git clone https://github.com/odysseus-dev/odysseus.git`), 예시 환경 파일을 복사한(`cp .env.example .env`) 뒤 `docker compose up -d --build`를 실행합니다. 이후 워크스페이스는 `http://localhost:7011`에서 사용할 수 있으며, 첫 관리자 비밀번호는 `docker compose logs odysseus`에 출력됩니다.' },
           { q: 'Odysseus는 로컬 AI 모델이 필요한가요?', a: '아니요. Odysseus는 로컬 모델 백엔드(Ollama, llama.cpp, vLLM) 또는 API 제공업체(OpenAI, OpenRouter)와 작동하며, 어느 쪽을 사용할지는 `.env` 파일에서 설정합니다.' },
           { q: 'Odysseus의 GitHub 스타 수는 몇 개인가요?', a: `[GitHub API](https://api.github.com/repos/odysseus-dev/odysseus) 기준 ${ST.ko('odysseus', 'bare')}개 이상입니다. 수치는 자주 바뀌므로 현재 값은 저장소에서 확인하시기 바랍니다.` },
