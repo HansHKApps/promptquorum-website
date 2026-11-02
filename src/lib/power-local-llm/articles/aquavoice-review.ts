@@ -1144,7 +1144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: ['Avalon 1.5'],
     current_hardware_mentioned: [],
-    leadAnswerBlock: "**O AquaVoice é um app de ditado por voz que insere o que você diz no app ativo; para o trabalho com IA, o valor dele é o contexto: você fala com muito mais detalhe do que digitaria.** No MacBook do autor foi estável; a janela de destino deve estar ativa.",
+    leadAnswerBlock: "**O AquaVoice é um app de ditado por voz que insere o que você diz no app ativo; para IA, o valor dele é o contexto: você fala com muito mais detalhe do que digitaria.** No MacBook do autor foi estável; a janela de destino deve estar ativa.",
     quickAnswerTop: {
       pt: {
         question: 'Vale a pena usar o AquaVoice para ditar prompts de IA?',
