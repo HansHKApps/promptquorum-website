@@ -382,7 +382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'Zentrale Erkenntnisse',
         items: [
-          '**Die Self-Hosted-vs-Managed-Entscheidung betrifft die Betriebshoheit, nicht Produkt-Features.** Self-Hosting, wenn ein Platform-Team die Infrastruktur bereits betreibt und Data Residency physische Kontrolle erfordert; Managed, wenn Time-to-Production und ein Anbieter-DPA wichtiger sind als Infrastruktureigentum.',
+          '**Die Self-Hosted-vs-Managed-Entscheidung betrifft die Betriebshoheit, nicht Produkt-Features.** Entscheidend ist, wer die Infrastruktur betreibt und wie streng die Data Residency ist.',
           '**Mandantentrennung zwischen Geschäftsbereichen ist eine reine Enterprise-Fragestellung.** Ein Einzelteam-Prototyp muss nie beantworten, ob Vektoren der Rechtsabteilung in die Suchergebnisse des Marketings gelangen können — eine Enterprise-Plattform für mehrere Geschäftsbereiche schon, und die Antwort hängt vom Namespace-Design ab, nicht von der Marketingseite des Anbieters.',
           '**Kapazitätsplanung verändert sich ab etwa 100 Millionen Vektoren grundlegend.** Index-Build-Zeit, das Verhältnis von Arbeitsspeicher zu Festplatte und die Sharding-Strategie verhalten sich in dieser Größenordnung anders als in einer Demo mit 10.000 Datensätzen.',
           '**Committed-Use-Preise lohnen sich zu verhandeln, sobald das Volumen planbar ist.** Enterprise-SaaS-Anbieter dieser Kategorie bieten häufig Rabatte für reservierte Kapazität gegenüber dem Listenpreis — die genaue Zahl und die True-up-Bedingungen schriftlich von jedem Anbieter einholen, statt einen Standardsatz anzunehmen.',
@@ -676,7 +676,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'Points clés',
         items: [
-          '**La décision auto-hébergé vs managé porte sur la propriété des opérations, pas sur les fonctionnalités du produit.** Auto-hébergez si une équipe plateforme exploite déjà l\'infrastructure et que la résidence des données exige un contrôle physique ; achetez en managé si le temps de mise en production et un DPA fournisseur comptent plus que la propriété de la pile.',
+          '**La décision auto-hébergé vs managé porte sur la propriété des opérations, pas sur les fonctionnalités du produit.** Tout dépend de qui exploite l\'infrastructure et de la résidence des données.',
           '**L\'isolation multi-tenant entre directions métier est une problématique propre à l\'entreprise.** Un prototype RAG mono-équipe n\'a jamais à répondre à « les vecteurs du service juridique peuvent-ils fuiter dans les résultats du marketing » — une plateforme entreprise desservant plusieurs directions, si, et la réponse dépend de la conception des namespaces, pas de la page marketing du fournisseur.',
           '**La planification de capacité change de nature au-delà d\'environ 100 millions de vecteurs.** Le temps de construction de l\'index, l\'arbitrage mémoire vs disque et la stratégie de sharding se comportent différemment à cette échelle que dans une démo à 10 000 enregistrements.',
           '**La tarification committed-use vaut la peine d\'être négociée une fois le volume prévisible.** Les fournisseurs SaaS entreprise de cette catégorie proposent couramment des remises sur capacité réservée par rapport au tarif catalogue — obtenez le chiffre exact et les conditions de true-up par écrit auprès de chaque fournisseur plutôt que de supposer un taux standard.',
@@ -970,7 +970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'Puntos Clave',
         items: [
-          '**La decisión autoalojada vs gestionada es sobre la propiedad de las operaciones, no sobre funcionalidades del producto.** Autoaloje si un equipo de plataforma ya opera la infraestructura y la residencia de datos exige control físico; compre gestionado si el tiempo de puesta en producción y un DPA del proveedor importan más que poseer la pila.',
+          '**La decisión autoalojada vs gestionada es sobre la propiedad de las operaciones, no sobre funcionalidades del producto.** Depende de quién opera la infraestructura y de la residencia de datos.',
           '**El aislamiento multiinquilino entre unidades de negocio es una preocupación exclusivamente empresarial.** Un prototipo RAG de un solo equipo nunca tiene que responder si los vectores de Legal pueden filtrarse a los resultados de búsqueda de Marketing — una plataforma empresarial que sirve a varias unidades de negocio sí, y la respuesta depende del diseño de namespaces, no de la página de marketing del proveedor.',
           '**La planificación de capacidad cambia de forma a partir de aproximadamente 100 millones de vectores.** El tiempo de construcción del índice, el equilibrio memoria-disco y la estrategia de sharding se comportan de forma distinta a esa escala que en una demo con 10.000 registros.',
           '**Vale la pena negociar precios de uso comprometido una vez que el volumen sea predecible.** Los proveedores SaaS empresariales de esta categoría suelen ofrecer descuentos por capacidad reservada frente al precio de lista — obtenga la cifra exacta y los términos de ajuste por escrito de cada proveedor en lugar de asumir una tasa estándar.',
@@ -1264,7 +1264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'Principais Conclusões',
         items: [
-          '**A decisão self-hosted vs. gerenciado é sobre propriedade das operações, não sobre funcionalidades do produto.** Hospede internamente se uma equipe de plataforma já opera a infraestrutura e residência de dados exige controle físico; compre gerenciado se tempo até a produção e um DPA do fornecedor importam mais que possuir a stack.',
+          '**A decisão self-hosted vs. gerenciado é sobre propriedade das operações, não sobre funcionalidades do produto.** Depende de quem opera a infraestrutura e da residência de dados.',
           '**Isolamento multi-tenant entre unidades de negócio é uma preocupação exclusivamente empresarial.** Um protótipo RAG de uma única equipe nunca precisa responder se os vetores do Jurídico podem vazar para os resultados de busca do Marketing — uma plataforma corporativa que atende várias unidades precisa, e a resposta depende do design de namespaces, não da página de marketing do fornecedor.',
           '**O planejamento de capacidade muda de forma a partir de cerca de 100 milhões de vetores.** Tempo de construção do índice, o trade-off memória vs. disco e a estratégia de sharding se comportam de modo diferente nessa escala do que numa demo com 10 mil registros.',
           '**Vale a pena negociar preços de uso comprometido assim que o volume for previsível.** Fornecedores SaaS empresariais nessa categoria costumam oferecer descontos por capacidade reservada frente ao preço de tabela — obtenha o número exato e os termos de ajuste por escrito de cada fornecedor em vez de assumir uma taxa padrão.',
