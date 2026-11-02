@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'How Bandwidth Becomes Tokens per Second', anchor: '#bandwidth-to-speed' },
       { label: 'Mac mini M5 Pro: New Budget Entry Point', anchor: '#mac-mini-m5-pro' },
       { label: 'Mac Studio M5 Max 36GB: Base Configuration', anchor: '#mac-studio-m5-max-64gb' },
-      { label: 'Mac Studio M5 Max 48–128GB: Best Value', anchor: '#mac-studio-m5-max-128gb' },
+      { label: 'Mac Studio M5 Max 48–128GB: Good Value', anchor: '#mac-studio-m5-max-128gb' },
       { label: 'Mac Studio M5 Ultra: Maximum Performance', anchor: '#mac-studio-m5-ultra' },
       { label: 'MacBook Pro 16" M5 Max: Portable Option', anchor: '#macbook-pro-m5-max' },
       { label: 'Verdict Box: Our Picks', anchor: '#verdict' },
@@ -47,7 +47,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
         en: {
           question: 'Which Apple Silicon Mac is best for running local LLMs in 2026?',
-          answer: 'Memory bandwidth sets local LLM speed: M5 Pro 307 GB/s, M5 Max 460–614 GB/s, M5 Ultra up to 1.2 TB/s. Mac mini M5 Pro ($1,699, up to 64 GB) is the cheapest M5 Pro machine. Mac Studio M5 Max ($2,499, up to 128 GB) is the best value for Llama 3.3 70B. Mac Studio M5 Ultra ($5,499, up to 512 GB) is the top tier. All are available now; the 512 GB M5 Ultra has been orderable since October 28, 2026 (from $22,299).',
+          answer: 'Memory bandwidth sets local LLM speed: M5 Pro 307 GB/s, M5 Max 460–614 GB/s, M5 Ultra up to 1.2 TB/s. Mac mini M5 Pro ($1,699, up to 64 GB) is the cheapest M5 Pro machine. Mac Studio M5 Max ($2,499, up to 128 GB) is a good-value option for Llama 3.3 70B. Mac Studio M5 Ultra ($5,499, up to 512 GB) is the top tier. All are available now; the 512 GB M5 Ultra has been orderable since October 28, 2026 (from $22,299).',
           bullets: [
             'Bandwidth: M5 153.6 GB/s · M5 Pro 307 · M5 Max 460 or 614 · M5 Ultra up to 1.2 TB/s',
             'Mac mini M5 Pro ($1,699): up to 64 GB, 307 GB/s — cheapest M5 Pro machine',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         de: {
           question: 'Welcher Apple Silicon Mac eignet sich 2026 am besten für lokale LLMs?',
-          answer: 'Die Speicherbandbreite bestimmt das Tempo lokaler LLMs: M5 Pro 307 GB/s, M5 Max 460–614 GB/s, M5 Ultra bis 1,2 TB/s. Der Mac mini M5 Pro (1.699 $, bis 64 GB) ist der günstigste M5-Pro-Mac. Der Mac Studio M5 Max (2.499 $, bis 128 GB) bietet das beste Preis-Leistungs-Verhältnis für Llama 3.3 70B. Der Mac Studio M5 Ultra (5.499 $, bis 512 GB) ist die Spitzenstufe. Alle sind erhältlich; der M5 Ultra mit 512 GB ist seit dem 28. Oktober 2026 bestellbar (ab 22.299 $).',
+          answer: 'Die Speicherbandbreite bestimmt das Tempo lokaler LLMs: M5 Pro 307 GB/s, M5 Max 460–614 GB/s, M5 Ultra bis 1,2 TB/s. Der Mac mini M5 Pro (1.699 $, bis 64 GB) ist der günstigste M5-Pro-Mac. Der Mac Studio M5 Max (2.499 $, bis 128 GB) bietet ein gutes Preis-Leistungs-Verhältnis für Llama 3.3 70B. Der Mac Studio M5 Ultra (5.499 $, bis 512 GB) ist die Spitzenstufe. Alle sind erhältlich; der M5 Ultra mit 512 GB ist seit dem 28. Oktober 2026 bestellbar (ab 22.299 $).',
           bullets: [
             'Bandbreite: M5 153,6 GB/s · M5 Pro 307 · M5 Max 460 oder 614 · M5 Ultra bis 1,2 TB/s',
             'Mac mini M5 Pro (1.699 $): bis 64 GB, 307 GB/s — günstigster M5-Pro-Mac',
@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         fr: {
           question: 'Quel Mac Apple Silicon est le meilleur pour les LLM locaux en 2026 ?',
-          answer: 'La bande passante mémoire détermine la vitesse des LLM locaux : M5 Pro 307 Go/s, M5 Max 460–614 Go/s, M5 Ultra jusqu\'à 1,2 To/s. Le Mac mini M5 Pro (1 699 $, jusqu\'à 64 Go) est le Mac M5 Pro le moins cher. Le Mac Studio M5 Max (2 499 $, jusqu\'à 128 Go) offre le meilleur rapport qualité-prix pour Llama 3.3 70B. Le Mac Studio M5 Ultra (5 499 $, jusqu\'à 512 Go) est le haut de gamme. Tous sont disponibles ; le M5 Ultra 512 Go est commandable depuis le 28 octobre 2026 (à partir de 22 299 $).',
+          answer: 'La bande passante mémoire détermine la vitesse des LLM locaux : M5 Pro 307 Go/s, M5 Max 460–614 Go/s, M5 Ultra jusqu\'à 1,2 To/s. Le Mac mini M5 Pro (1 699 $, jusqu\'à 64 Go) est le Mac M5 Pro le moins cher. Le Mac Studio M5 Max (2 499 $, jusqu\'à 128 Go) offre un bon rapport qualité-prix pour Llama 3.3 70B. Le Mac Studio M5 Ultra (5 499 $, jusqu\'à 512 Go) est le haut de gamme. Tous sont disponibles ; le M5 Ultra 512 Go est commandable depuis le 28 octobre 2026 (à partir de 22 299 $).',
           bullets: [
             'Bande passante : M5 153,6 Go/s · M5 Pro 307 · M5 Max 460 ou 614 · M5 Ultra jusqu\'à 1,2 To/s',
             'Mac mini M5 Pro (1 699 $) : jusqu\'à 64 Go, 307 Go/s — Mac M5 Pro le moins cher',
@@ -86,7 +86,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         ja: {
           question: '2026年にローカルLLMを動かすのに最適なApple SiliconのMacはどれですか？',
-          answer: 'ローカルLLMの速度はメモリ帯域幅で決まります：M5 Pro 307 GB/s、M5 Max 460〜614 GB/s、M5 Ultra 最大1.2 TB/s。Mac mini M5 Pro（1,699ドル、最大64 GB）は最安のM5 Pro搭載Mac。Mac Studio M5 Max（2,499ドル、最大128 GB）はLlama 3.3 70Bに最適なコストパフォーマンス。Mac Studio M5 Ultra（5,499ドル、最大512 GB）は最上位モデル。すべて購入可能で、512 GBのM5 Ultraも2026年10月28日から注文できます（22,299ドルから）。',
+          answer: 'ローカルLLMの速度はメモリ帯域幅で決まります：M5 Pro 307 GB/s、M5 Max 460〜614 GB/s、M5 Ultra 最大1.2 TB/s。Mac mini M5 Pro（1,699ドル、最大64 GB）は最安のM5 Pro搭載Mac。Mac Studio M5 Max（2,499ドル、最大128 GB）はLlama 3.3 70Bに良好なコストパフォーマンス。Mac Studio M5 Ultra（5,499ドル、最大512 GB）は最上位モデル。すべて購入可能で、512 GBのM5 Ultraも2026年10月28日から注文できます（22,299ドルから）。',
           bullets: [
             '帯域幅：M5 153.6 GB/s · M5 Pro 307 · M5 Max 460または614 · M5 Ultra 最大1.2 TB/s',
             'Mac mini M5 Pro（1,699ドル）：最大64 GB、307 GB/s — 最安のM5 Pro搭載Mac',
@@ -99,7 +99,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         zh: {
           question: '2026年哪款Apple Silicon Mac最适合运行本地LLM？',
-          answer: '内存带宽决定本地LLM速度：M5 Pro 307 GB/s，M5 Max 460–614 GB/s，M5 Ultra最高1.2 TB/s。Mac mini M5 Pro（$1,699，最高64 GB）是最便宜的M5 Pro机型。Mac Studio M5 Max（$2,499，最高128 GB）是运行Llama 3.3 70B性价比最高的选择。Mac Studio M5 Ultra（$5,499，最高512 GB）是旗舰级配置。均已有货，512 GB版M5 Ultra自2026年10月28日起可订购（$22,299起）。',
+          answer: '内存带宽决定本地LLM速度：M5 Pro 307 GB/s，M5 Max 460–614 GB/s，M5 Ultra最高1.2 TB/s。Mac mini M5 Pro（$1,699，最高64 GB）是最便宜的M5 Pro机型。Mac Studio M5 Max（$2,499，最高128 GB）是运行Llama 3.3 70B高性价比的选择。Mac Studio M5 Ultra（$5,499，最高512 GB）是旗舰级配置。均已有货，512 GB版M5 Ultra自2026年10月28日起可订购（$22,299起）。',
           bullets: [
             '带宽：M5 153.6 GB/s · M5 Pro 307 · M5 Max 460或614 · M5 Ultra最高1.2 TB/s',
             'Mac mini M5 Pro（$1,699）：最高64 GB，307 GB/s — 最便宜的M5 Pro机型',
@@ -112,7 +112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         es: {
           question: '¿Qué Mac con Apple Silicon es mejor para ejecutar LLMs locales en 2026?',
-          answer: 'El ancho de banda de memoria determina la velocidad de los LLM locales: M5 Pro 307 GB/s, M5 Max 460–614 GB/s, M5 Ultra hasta 1,2 TB/s. El Mac mini M5 Pro (1.699 $, hasta 64 GB) es el Mac con M5 Pro más barato. El Mac Studio M5 Max (2.499 $, hasta 128 GB) ofrece la mejor relación calidad-precio para Llama 3.3 70B. El Mac Studio M5 Ultra (5.499 $, hasta 512 GB) es el tope de gama. Todos están disponibles; el M5 Ultra de 512 GB se puede pedir desde el 28 de octubre de 2026 (desde 22.299 $).',
+          answer: 'El ancho de banda de memoria determina la velocidad de los LLM locales: M5 Pro 307 GB/s, M5 Max 460–614 GB/s, M5 Ultra hasta 1,2 TB/s. El Mac mini M5 Pro (1.699 $, hasta 64 GB) es el Mac con M5 Pro más barato. El Mac Studio M5 Max (2.499 $, hasta 128 GB) ofrece la buena relación calidad-precio para Llama 3.3 70B. El Mac Studio M5 Ultra (5.499 $, hasta 512 GB) es el tope de gama. Todos están disponibles; el M5 Ultra de 512 GB se puede pedir desde el 28 de octubre de 2026 (desde 22.299 $).',
           bullets: [
             'Ancho de banda: M5 153,6 GB/s · M5 Pro 307 · M5 Max 460 o 614 · M5 Ultra hasta 1,2 TB/s',
             'Mac mini M5 Pro (1.699 $): hasta 64 GB, 307 GB/s — el Mac con M5 Pro más barato',
@@ -125,7 +125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         pt: {
           question: 'Qual Mac com Apple Silicon é melhor para rodar LLMs locais em 2026?',
-          answer: 'A largura de banda da memória define a velocidade dos LLMs locais: M5 Pro 307 GB/s, M5 Max 460–614 GB/s, M5 Ultra até 1,2 TB/s. O Mac mini M5 Pro (US$1.699, até 64 GB) é o Mac com M5 Pro mais barato. O Mac Studio M5 Max (US$2.499, até 128 GB) tem o melhor custo-benefício para Llama 3.3 70B. O Mac Studio M5 Ultra (US$5.499, até 512 GB) é o topo de linha. Todos estão disponíveis; o M5 Ultra de 512 GB pode ser encomendado desde 28 de outubro de 2026 (a partir de US$22.299).',
+          answer: 'A largura de banda da memória define a velocidade dos LLMs locais: M5 Pro 307 GB/s, M5 Max 460–614 GB/s, M5 Ultra até 1,2 TB/s. O Mac mini M5 Pro (US$1.699, até 64 GB) é o Mac com M5 Pro mais barato. O Mac Studio M5 Max (US$2.499, até 128 GB) tem o bom custo-benefício para Llama 3.3 70B. O Mac Studio M5 Ultra (US$5.499, até 512 GB) é o topo de linha. Todos estão disponíveis; o M5 Ultra de 512 GB pode ser encomendado desde 28 de outubro de 2026 (a partir de US$22.299).',
           bullets: [
             'Largura de banda: M5 153,6 GB/s · M5 Pro 307 · M5 Max 460 ou 614 · M5 Ultra até 1,2 TB/s',
             'Mac mini M5 Pro (US$1.699): até 64 GB, 307 GB/s — Mac com M5 Pro mais barato',
@@ -138,7 +138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         ar: {
           question: 'أي Mac بشريحة Apple Silicon هو الأفضل لتشغيل نماذج اللغة المحلية في 2026؟',
-          answer: 'يحدد عرض نطاق الذاكرة سرعة نماذج اللغة المحلية: M5 Pro بسرعة 307 GB/s، وM5 Max من 460 إلى 614 GB/s، وM5 Ultra حتى 1.2 TB/s. يُعد Mac mini بمعالج M5 Pro (1,699 دولار، حتى 64 GB) أرخص جهاز بمعالج M5 Pro. ويقدّم Mac Studio بمعالج M5 Max (2,499 دولار، حتى 128 GB) أفضل قيمة لتشغيل Llama 3.3 70B. أما Mac Studio بمعالج M5 Ultra (5,499 دولار، حتى 512 GB) فهو الفئة العليا. جميعها متاحة الآن، وإصدار M5 Ultra بسعة 512 GB متاح للطلب منذ 28 أكتوبر 2026 (من 22,299 دولار).',
+          answer: 'يحدد عرض نطاق الذاكرة سرعة نماذج اللغة المحلية: M5 Pro بسرعة 307 GB/s، وM5 Max من 460 إلى 614 GB/s، وM5 Ultra حتى 1.2 TB/s. يُعد Mac mini بمعالج M5 Pro (1,699 دولار، حتى 64 GB) أرخص جهاز بمعالج M5 Pro. ويقدّم Mac Studio بمعالج M5 Max (2,499 دولار، حتى 128 GB) قيمة جيدة لتشغيل Llama 3.3 70B. أما Mac Studio بمعالج M5 Ultra (5,499 دولار، حتى 512 GB) فهو الفئة العليا. جميعها متاحة الآن، وإصدار M5 Ultra بسعة 512 GB متاح للطلب منذ 28 أكتوبر 2026 (من 22,299 دولار).',
           bullets: [
             'عرض النطاق: M5 بسرعة 153.6 GB/s · M5 Pro 307 · M5 Max 460 أو 614 · M5 Ultra حتى 1.2 TB/s',
             'Mac mini M5 Pro (1,699 دولار): حتى 64 GB، 307 GB/s — أرخص جهاز M5 Pro',
@@ -151,7 +151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         ko: {
           question: '2026년 로컬 LLM 실행에 가장 적합한 Apple Silicon Mac은?',
-          answer: '로컬 LLM 속도는 메모리 대역폭이 결정합니다: M5 Pro 307GB/s, M5 Max 460–614GB/s, M5 Ultra 최대 1.2TB/s. Mac mini M5 Pro($1,699, 최대 64GB)는 가장 저렴한 M5 Pro Mac입니다. Mac Studio M5 Max($2,499, 최대 128GB)는 Llama 3.3 70B 실행에 가장 뛰어난 가성비를 제공합니다. Mac Studio M5 Ultra($5,499, 최대 512GB)는 최상위 등급입니다. 모두 구매할 수 있으며, 512GB M5 Ultra는 2026년 10월 28일부터 주문할 수 있습니다($22,299부터).',
+          answer: '로컬 LLM 속도는 메모리 대역폭이 결정합니다: M5 Pro 307GB/s, M5 Max 460–614GB/s, M5 Ultra 최대 1.2TB/s. Mac mini M5 Pro($1,699, 최대 64GB)는 가장 저렴한 M5 Pro Mac입니다. Mac Studio M5 Max($2,499, 최대 128GB)는 Llama 3.3 70B 실행에 높은 가성비를 제공합니다. Mac Studio M5 Ultra($5,499, 최대 512GB)는 최상위 등급입니다. 모두 구매할 수 있으며, 512GB M5 Ultra는 2026년 10월 28일부터 주문할 수 있습니다($22,299부터).',
           bullets: [
             '대역폭: M5 153.6GB/s · M5 Pro 307 · M5 Max 460 또는 614 · M5 Ultra 최대 1.2TB/s',
             'Mac mini M5 Pro($1,699): 최대 64GB, 307GB/s — 가장 저렴한 M5 Pro Mac',
@@ -215,7 +215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Configuration': 'Mac mini M5 Pro 24GB', 'Chip': 'M5 Pro', 'GPU Cores': '16', 'Memory': '24GB unified', 'Bandwidth': '307 GB/s', 'Price': '$1,699', 'Best For': 'Cheapest M5 Pro, 7B–14B' },
           { 'Configuration': 'Mac mini M5 Pro 64GB', 'Chip': 'M5 Pro', 'GPU Cores': '20', 'Memory': '64GB unified', 'Bandwidth': '307 GB/s', 'Price': '$2,699', 'Best For': '30B models, cheapest 64GB' },
           { 'Configuration': 'Mac Studio M5 Max 36GB', 'Chip': 'M5 Max', 'GPU Cores': '32', 'Memory': '36GB unified', 'Bandwidth': '460 GB/s', 'Price': '$2,499', 'Best For': 'Budget desktop entry' },
-          { 'Configuration': 'Mac Studio M5 Max 64GB', 'Chip': 'M5 Max', 'GPU Cores': '40', 'Memory': '64GB unified', 'Bandwidth': '614 GB/s', 'Price': '$3,499', 'Best For': '70B Q4, best value' },
+          { 'Configuration': 'Mac Studio M5 Max 64GB', 'Chip': 'M5 Max', 'GPU Cores': '40', 'Memory': '64GB unified', 'Bandwidth': '614 GB/s', 'Price': '$3,499', 'Best For': '70B Q4, good value' },
           { 'Configuration': 'Mac Studio M5 Max 128GB', 'Chip': 'M5 Max', 'GPU Cores': '40', 'Memory': '128GB unified', 'Bandwidth': '614 GB/s', 'Price': '$5,099', 'Best For': '70B Q5, power users' },
           { 'Configuration': 'Mac Studio M5 Ultra 96GB', 'Chip': 'M5 Ultra', 'GPU Cores': '64', 'Memory': '96GB unified', 'Bandwidth': 'Up to 1.2 TB/s', 'Price': '$5,499', 'Best For': 'Largest local models' },
           { 'Configuration': 'Mac Studio M5 Ultra 512GB', 'Chip': 'M5 Ultra', 'GPU Cores': '80', 'Memory': '512GB unified', 'Bandwidth': 'Up to 1.2 TB/s', 'Price': '$22,299', 'Best For': 'Massive models, orderable Oct 28' },
@@ -341,8 +341,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mac-studio-m5-max-128gb': {
         id: 'mac-studio-m5-max-128gb',
-        title: 'Mac Studio M5 Max 48GB–128GB: Best Value for 70B Local LLM',
-        content: 'The 40-core GPU Mac Studio M5 Max starts at $3,099 (48GB) and configures up to 128GB for $5,099. This is the tier that delivers the "best value for 70B" positioning: 64GB is available at $3,499 within this tier, with the full 614 GB/s of bandwidth. Shipping since September 22, 2026.',
+        title: 'Mac Studio M5 Max 48GB–128GB: Good Value for 70B Local LLM',
+        content: 'The 40-core GPU Mac Studio M5 Max starts at $3,099 (48GB) and configures up to 128GB for $5,099. This is the tier that delivers the "good value for 70B" positioning: 64GB is available at $3,499 within this tier, with the full 614 GB/s of bandwidth. Shipping since September 22, 2026.',
         items: [
           '**CPU:** 18-core M5 Max',
           '**GPU:** 40-core M5 Max GPU',
@@ -445,7 +445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Cut through the options with these clear recommendations based on use case.',
         items: [
           '**🏆 💰 CHEAPEST M5 PRO: Mac mini M5 Pro ($1,699, shipping now)**\n• Why: First-ever M5 Pro Mac mini. Undercuts every prior way to get M5 Pro, including MacBook Pro. 24GB base handles 7B–14B; configure to 64GB for 30B.\n• Who: Budget-conscious first-time Apple Silicon buyers.\n• [Buy on Apple Store →](https://www.apple.com/mac-mini/)',
-          '**🥇 BEST VALUE FOR 70B: Mac Studio M5 Max 64GB ($3,499, shipping now)**\n• Why: Runs Llama 3.3 70B Q4 at an estimated 9–12 tokens/sec with the full 614 GB/s. Desktop cooling means no thermal throttle.\n• Who: Developers standardizing on a 70B workflow without portability needs.\n• [Buy on Apple Store →](https://www.apple.com/mac-studio/)',
+          '**🥇 GOOD VALUE FOR 70B: Mac Studio M5 Max 64GB ($3,499, shipping now)**\n• Why: Runs Llama 3.3 70B Q4 at an estimated 9–12 tokens/sec with the full 614 GB/s. Desktop cooling means no thermal throttle.\n• Who: Developers standardizing on a 70B workflow without portability needs.\n• [Buy on Apple Store →](https://www.apple.com/mac-studio/)',
           '**🔥 MAXIMUM POWER: Mac Studio M5 Ultra 96GB ($5,499, shipping now)**\n• Why: Top tier. Up to 1.2 TB/s bandwidth — double M5 Max. 512GB configuration (orderable since October 28, 2026, from $22,299) covers the largest local models.\n• Status: first independent measurements are in (MacStories: 48 tokens/sec on Qwen3.8 27B vs 59 on an RTX 5090).\n• [Buy on Apple Store →](https://www.apple.com/mac-studio/)',
           '**💼 BEST PORTABLE: MacBook Pro 16" M5 Max (from $3,899; 460 GB/s with the 32-core GPU, 614 GB/s with the 40-core GPU)**\n• Why: Same M5 Max silicon as Mac Studio in a laptop with a Liquid Retina XDR display. Accept 10–15% lower sustained speed from thermal throttling.\n• Alternative: a Mac Studio M5 Max starts at $2,499 and has better sustained cooling if portability is not needed.\n• [Buy on Apple Store →](https://www.apple.com/macbook-pro/)',
         ],
@@ -558,7 +558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**You need workstation upgradeability:** Mac Studio RAM and storage are fixed at purchase. PCs allow incremental upgrades. For 5+ year ownership, PC may be cheaper long-term.',
           '**You demand triple-digit tokens/sec on small models:** RTX 4090 hits 90–120 tokens/sec on Llama 8B. M5 Max is estimated at 75–100. For high-throughput inference (serving multiple users), NVIDIA still wins.',
           '**You don\'t already use macOS:** Switching ecosystems from Windows/Linux just for local LLM isn\'t worth it unless you also want macOS for other reasons.',
-          '**You need 24/7 production inference:** Mac Studio is excellent but designed for bursts. For continuous inference SLA, enterprise NVIDIA workstations are safer bet.',
+          '**You need 24/7 production inference:** Mac Studio can run long jobs, but it is a desktop machine without an enterprise SLA or on-site support tier. If you need a contractual continuous-inference SLA, compare enterprise workstations and servers (including NVIDIA-based ones) that offer that support.',
         ],
       },
       faq: {
@@ -638,7 +638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Cómo el ancho de banda se convierte en tokens por segundo', anchor: '#bandwidth-to-speed' },
       { label: 'Mac mini M5 Pro: nueva entrada económica', anchor: '#mac-mini-m5-pro' },
       { label: 'Mac Studio M5 Max 36 GB: configuración base', anchor: '#mac-studio-m5-max-64gb' },
-      { label: 'Mac Studio M5 Max 48–128 GB: mejor relación calidad-precio', anchor: '#mac-studio-m5-max-128gb' },
+      { label: 'Mac Studio M5 Max 48–128 GB: buena relación calidad-precio', anchor: '#mac-studio-m5-max-128gb' },
       { label: 'Mac Studio M5 Ultra: máximo rendimiento', anchor: '#mac-studio-m5-ultra' },
       { label: 'MacBook Pro 16" M5 Max: opción portátil', anchor: '#macbook-pro-m5-max' },
       { label: 'Nuestras recomendaciones', anchor: '#verdict' },
@@ -704,7 +704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Configuración': 'Mac mini M5 Pro 24 GB', 'Chip': 'M5 Pro', 'Núcleos GPU': '16', 'Memoria': '24GB unificada', 'Ancho de banda': '307 GB/s', 'Precio': '1.699 $', 'Ideal para': 'M5 Pro más barato, 7B–14B' },
           { 'Configuración': 'Mac mini M5 Pro 64 GB', 'Chip': 'M5 Pro', 'Núcleos GPU': '20', 'Memoria': '64GB unificada', 'Ancho de banda': '307 GB/s', 'Precio': '2.699 $', 'Ideal para': 'Modelos 30B, 64 GB más barato' },
           { 'Configuración': 'Mac Studio M5 Max 36 GB', 'Chip': 'M5 Max', 'Núcleos GPU': '32', 'Memoria': '36GB unificada', 'Ancho de banda': '460 GB/s', 'Precio': '2.499 $', 'Ideal para': 'Entrada de escritorio económica' },
-          { 'Configuración': 'Mac Studio M5 Max 64 GB', 'Chip': 'M5 Max', 'Núcleos GPU': '40', 'Memoria': '64GB unificada', 'Ancho de banda': '614 GB/s', 'Precio': '3.499 $', 'Ideal para': '70B Q4, mejor valor' },
+          { 'Configuración': 'Mac Studio M5 Max 64 GB', 'Chip': 'M5 Max', 'Núcleos GPU': '40', 'Memoria': '64GB unificada', 'Ancho de banda': '614 GB/s', 'Precio': '3.499 $', 'Ideal para': '70B Q4, buen valor' },
           { 'Configuración': 'Mac Studio M5 Max 128 GB', 'Chip': 'M5 Max', 'Núcleos GPU': '40', 'Memoria': '128GB unificada', 'Ancho de banda': '614 GB/s', 'Precio': '5.099 $', 'Ideal para': '70B Q5, usuarios avanzados' },
           { 'Configuración': 'Mac Studio M5 Ultra 96 GB', 'Chip': 'M5 Ultra', 'Núcleos GPU': '64', 'Memoria': '96GB unificada', 'Ancho de banda': 'Hasta 1,2 TB/s', 'Precio': '5.499 $', 'Ideal para': 'Los modelos locales más grandes' },
           { 'Configuración': 'Mac Studio M5 Ultra 512 GB', 'Chip': 'M5 Ultra', 'Núcleos GPU': '80', 'Memoria': '512GB unificada', 'Ancho de banda': 'Hasta 1,2 TB/s', 'Precio': '22.299 $', 'Ideal para': 'Modelos enormes, pedido desde 28 oct.' },
@@ -830,8 +830,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mac-studio-m5-max-128gb': {
         id: 'mac-studio-m5-max-128gb',
-        title: 'Mac Studio M5 Max 48–128 GB: mejor valor para LLM local 70B',
-        content: 'El Mac Studio M5 Max con GPU de 40 núcleos parte de 3.099 $ (48 GB) y se configura hasta 128 GB por 5.099 $. Este es el nivel que cumple el posicionamiento de «mejor valor para 70B»: 64 GB cuestan 3.499 $ con los 614 GB/s completos. En envío desde el 22 de septiembre de 2026.',
+        title: 'Mac Studio M5 Max 48–128 GB: buen valor para LLM local 70B',
+        content: 'El Mac Studio M5 Max con GPU de 40 núcleos parte de 3.099 $ (48 GB) y se configura hasta 128 GB por 5.099 $. Este es el nivel que cumple el posicionamiento de «buen valor para 70B»: 64 GB cuestan 3.499 $ con los 614 GB/s completos. En envío desde el 22 de septiembre de 2026.',
         items: [
           '**CPU:** M5 Max de 18 núcleos',
           '**GPU:** GPU M5 Max de 40 núcleos',
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Recomendaciones claras según el caso de uso.',
         items: [
           '**🏆 💰 M5 PRO MÁS BARATO: Mac mini M5 Pro (1.699 $, disponible)**\n• Por qué: primer Mac mini con M5 Pro. Queda por debajo de cualquier forma anterior de conseguir un M5 Pro, incluido el MacBook Pro. La base de 24 GB sirve para 7B–14B; con 64 GB, para 30B.\n• Para quién: compradores primerizos de Apple Silicon con presupuesto ajustado.\n• [Comprar en Apple Store →](https://www.apple.com/mac-mini/)',
-          '**🥇 MEJOR VALOR PARA 70B: Mac Studio M5 Max 64 GB (3.499 $, disponible)**\n• Por qué: ejecuta Llama 3.3 70B Q4 a unos 9–12 tokens/s estimados con los 614 GB/s completos. La refrigeración de escritorio evita la limitación térmica.\n• Para quién: desarrolladores que estandarizan un flujo de trabajo 70B sin necesidad de portabilidad.\n• [Comprar en Apple Store →](https://www.apple.com/mac-studio/)',
+          '**🥇 BUEN VALOR PARA 70B: Mac Studio M5 Max 64 GB (3.499 $, disponible)**\n• Por qué: ejecuta Llama 3.3 70B Q4 a unos 9–12 tokens/s estimados con los 614 GB/s completos. La refrigeración de escritorio evita la limitación térmica.\n• Para quién: desarrolladores que estandarizan un flujo de trabajo 70B sin necesidad de portabilidad.\n• [Comprar en Apple Store →](https://www.apple.com/mac-studio/)',
           '**🔥 MÁXIMA POTENCIA: Mac Studio M5 Ultra 96 GB (5.499 $, disponible)**\n• Por qué: nivel superior. Hasta 1,2 TB/s de ancho de banda, el doble que el M5 Max. La configuración de 512 GB (se puede pedir desde el 28 de octubre de 2026, desde 22.299 $) cubre los modelos locales más grandes.\n• Estado: ya hay primeras mediciones independientes (MacStories: 48 tokens/s con Qwen3.8 27B frente a 59 en una RTX 5090).\n• [Comprar en Apple Store →](https://www.apple.com/mac-studio/)',
           '**💼 MEJOR PORTÁTIL: MacBook Pro 16" M5 Max (desde 3.899 $; 460 GB/s con la GPU de 32 núcleos, 614 GB/s con la de 40)**\n• Por qué: el mismo silicio M5 Max del Mac Studio en un portátil con pantalla Liquid Retina XDR. Asume un 10–15 % menos de velocidad sostenida por la limitación térmica.\n• Alternativa: el Mac Studio M5 Max empieza en 2.499 $ y ofrece mejor refrigeración sostenida si no necesitas portabilidad.\n• [Comprar en Apple Store →](https://www.apple.com/macbook-pro/)',
         ],
@@ -1047,7 +1047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Necesitas poder actualizar la estación de trabajo:** la RAM y el almacenamiento del Mac Studio son fijos en la compra. Los PC permiten mejoras graduales. Con más de 5 años de uso, el PC puede salir más barato.',
           '**Exiges tokens/s de tres cifras con modelos pequeños:** la RTX 4090 alcanza 90–120 tokens/s con Llama 8B. Para el M5 Max se estiman 75–100. Para alto rendimiento (varios usuarios), NVIDIA sigue ganando.',
           '**No usas macOS:** cambiar de ecosistema desde Windows/Linux solo por LLM local no compensa, salvo que también quieras macOS por otros motivos.',
-          '**Necesitas inferencia de producción 24/7:** el Mac Studio es excelente pero está pensado para ráfagas. Para inferencia continua con SLA, las workstations NVIDIA empresariales son más seguras.',
+          '**Necesitas inferencia de producción 24/7:** el Mac Studio puede ejecutar trabajos largos, pero es un equipo de sobremesa sin SLA empresarial ni soporte in situ. Si necesitas un SLA contractual de inferencia continua, compara estaciones de trabajo y servidores empresariales (incluidos los basados en NVIDIA) que ofrezcan ese soporte.',
         ],
       },
       faq: {
@@ -1139,7 +1139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'كيف يتحول عرض النطاق إلى رموز في الثانية', anchor: '#bandwidth-to-speed' },
       { label: 'Mac mini M5 Pro: نقطة دخول اقتصادية جديدة', anchor: '#mac-mini-m5-pro' },
       { label: 'Mac Studio M5 Max بسعة 36 GB: التهيئة الأساسية', anchor: '#mac-studio-m5-max-64gb' },
-      { label: 'Mac Studio M5 Max بسعة 48–128 GB: أفضل قيمة', anchor: '#mac-studio-m5-max-128gb' },
+      { label: 'Mac Studio M5 Max بسعة 48–128 GB: قيمة جيدة', anchor: '#mac-studio-m5-max-128gb' },
       { label: 'Mac Studio M5 Ultra: أقصى أداء', anchor: '#mac-studio-m5-ultra' },
       { label: 'MacBook Pro 16 بوصة M5 Max: خيار محمول', anchor: '#macbook-pro-m5-max' },
       { label: 'توصياتنا', anchor: '#verdict' },
@@ -1205,7 +1205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'التهيئة': 'Mac mini M5 Pro 24 GB', 'الشريحة': 'M5 Pro', 'أنوية GPU': '16', 'الذاكرة': '24GB موحدة', 'عرض النطاق': '307 GB/s', 'السعر': '$1,699', 'الأنسب لـ': 'أرخص M5 Pro، نماذج 7B–14B' },
           { 'التهيئة': 'Mac mini M5 Pro 64 GB', 'الشريحة': 'M5 Pro', 'أنوية GPU': '20', 'الذاكرة': '64GB موحدة', 'عرض النطاق': '307 GB/s', 'السعر': '$2,699', 'الأنسب لـ': 'نماذج 30B، أرخص 64 GB' },
           { 'التهيئة': 'Mac Studio M5 Max 36 GB', 'الشريحة': 'M5 Max', 'أنوية GPU': '32', 'الذاكرة': '36GB موحدة', 'عرض النطاق': '460 GB/s', 'السعر': '$2,499', 'الأنسب لـ': 'دخول مكتبي اقتصادي' },
-          { 'التهيئة': 'Mac Studio M5 Max 64 GB', 'الشريحة': 'M5 Max', 'أنوية GPU': '40', 'الذاكرة': '64GB موحدة', 'عرض النطاق': '614 GB/s', 'السعر': '$3,499', 'الأنسب لـ': '70B Q4، أفضل قيمة' },
+          { 'التهيئة': 'Mac Studio M5 Max 64 GB', 'الشريحة': 'M5 Max', 'أنوية GPU': '40', 'الذاكرة': '64GB موحدة', 'عرض النطاق': '614 GB/s', 'السعر': '$3,499', 'الأنسب لـ': '70B Q4، قيمة جيدة' },
           { 'التهيئة': 'Mac Studio M5 Max 128 GB', 'الشريحة': 'M5 Max', 'أنوية GPU': '40', 'الذاكرة': '128GB موحدة', 'عرض النطاق': '614 GB/s', 'السعر': '$5,099', 'الأنسب لـ': '70B Q5، للمستخدمين المتقدمين' },
           { 'التهيئة': 'Mac Studio M5 Ultra 96 GB', 'الشريحة': 'M5 Ultra', 'أنوية GPU': '64', 'الذاكرة': '96GB موحدة', 'عرض النطاق': 'حتى 1.2 TB/s', 'السعر': '$5,499', 'الأنسب لـ': 'أكبر النماذج المحلية' },
           { 'التهيئة': 'Mac Studio M5 Ultra 512 GB', 'الشريحة': 'M5 Ultra', 'أنوية GPU': '80', 'الذاكرة': '512GB موحدة', 'عرض النطاق': 'حتى 1.2 TB/s', 'السعر': '22,299$', 'الأنسب لـ': 'نماذج ضخمة، الطلب منذ 28 أكتوبر' },
@@ -1331,8 +1331,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mac-studio-m5-max-128gb': {
         id: 'mac-studio-m5-max-128gb',
-        title: 'Mac Studio M5 Max بسعة 48–128 GB: أفضل قيمة للـ LLM المحلي 70B',
-        content: 'يبدأ Mac Studio M5 Max بمعالج رسوميات 40 نواة من 3,099 دولار (48 GB) ويُضبط حتى 128 GB مقابل 5,099 دولار. هذه هي الفئة التي تحقق وصف «أفضل قيمة لـ 70B»: تتوفر 64 GB بسعر 3,499 دولار مع عرض النطاق الكامل 614 GB/s. يُشحن منذ 22 سبتمبر 2026.',
+        title: 'Mac Studio M5 Max بسعة 48–128 GB: قيمة جيدة للـ LLM المحلي 70B',
+        content: 'يبدأ Mac Studio M5 Max بمعالج رسوميات 40 نواة من 3,099 دولار (48 GB) ويُضبط حتى 128 GB مقابل 5,099 دولار. هذه هي الفئة التي تحقق وصف «قيمة جيدة لـ 70B»: تتوفر 64 GB بسعر 3,499 دولار مع عرض النطاق الكامل 614 GB/s. يُشحن منذ 22 سبتمبر 2026.',
         items: [
           '**المعالج:** M5 Max بـ 18 نواة',
           '**وحدة الرسوميات:** M5 Max GPU بـ 40 نواة',
@@ -1435,7 +1435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'توصيات واضحة بحسب حالة الاستخدام.',
         items: [
           '**🏆 💰 أرخص M5 Pro: Mac mini M5 Pro (1,699 دولار، متاح)**\n• السبب: أول Mac mini بشريحة M5 Pro. أقل من أي طريقة سابقة للحصول على M5 Pro بما فيها MacBook Pro. تكفي 24 GB الأساسية لنماذج 7B–14B؛ وتكفي 64 GB لنماذج 30B.\n• لمن: مشترو Apple Silicon للمرة الأولى الذين يراعون الميزانية.\n• [اشترِ من Apple Store ←](https://www.apple.com/mac-mini/)',
-          '**🥇 أفضل قيمة لـ 70B: Mac Studio M5 Max بسعة 64 GB (3,499 دولار، متاح)**\n• السبب: يشغّل Llama 3.3 70B Q4 بسرعة تقديرية 9–12 رمزًا/ثانية مع عرض النطاق الكامل 614 GB/s. يمنع التبريد المكتبي الخنق الحراري.\n• لمن: مطورون يوحّدون سير عمل 70B دون حاجة إلى قابلية الحمل.\n• [اشترِ من Apple Store ←](https://www.apple.com/mac-studio/)',
+          '**🥇 قيمة جيدة لـ 70B: Mac Studio M5 Max بسعة 64 GB (3,499 دولار، متاح)**\n• السبب: يشغّل Llama 3.3 70B Q4 بسرعة تقديرية 9–12 رمزًا/ثانية مع عرض النطاق الكامل 614 GB/s. يمنع التبريد المكتبي الخنق الحراري.\n• لمن: مطورون يوحّدون سير عمل 70B دون حاجة إلى قابلية الحمل.\n• [اشترِ من Apple Store ←](https://www.apple.com/mac-studio/)',
           '**🔥 أقصى قوة: Mac Studio M5 Ultra بسعة 96 GB (5,499 دولار، متاح)**\n• السبب: الفئة العليا. عرض نطاق يصل إلى 1.2 TB/s — ضعف M5 Max. تغطي تهيئة 512 GB (متاحة للطلب منذ 28 أكتوبر 2026 من 22,299 دولار) أكبر النماذج المحلية.\n• الحالة: توفرت أولى القياسات المستقلة (MacStories: 48 رمزًا/ثانية مع Qwen3.8 27B مقابل 59 على RTX 5090).\n• [اشترِ من Apple Store ←](https://www.apple.com/mac-studio/)',
           '**💼 أفضل خيار محمول: MacBook Pro 16 بوصة M5 Max (بدءًا من 3,899 دولار؛ 460 GB/s مع معالج الرسوميات 32 نواة، و614 GB/s مع الـ 40 نواة)**\n• السبب: سيليكون M5 Max نفسه الموجود في Mac Studio في حاسوب محمول بشاشة Liquid Retina XDR. اقبل انخفاضًا بنسبة 10–15% في السرعة المستمرة بسبب الخنق الحراري.\n• البديل: يبدأ Mac Studio M5 Max من 2,499 دولار ويوفر تبريدًا مستمرًا أفضل إن لم تحتج إلى قابلية الحمل.\n• [اشترِ من Apple Store ←](https://www.apple.com/macbook-pro/)',
         ],
@@ -1548,7 +1548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**تحتاج إلى قابلية ترقية محطة العمل:** ذاكرة Mac Studio وتخزينه ثابتان عند الشراء. تسمح أجهزة PC بترقيات تدريجية. لملكية 5 سنوات فأكثر قد يكون PC أرخص على المدى الطويل.',
           '**تطلب أرقامًا من ثلاث خانات في الرموز/ثانية مع النماذج الصغيرة:** تبلغ RTX 4090 سرعة 90–120 رمزًا/ثانية مع Llama 8B. ويُقدَّر M5 Max بـ 75–100. وللإنتاجية العالية (عدة مستخدمين) لا تزال NVIDIA تتفوق.',
           '**لا تستخدم macOS أصلًا:** لا يستحق التحول من Windows/Linux للـ LLM المحلي وحده، ما لم ترغب في macOS لأسباب أخرى.',
-          '**تحتاج استدلالًا إنتاجيًا 24/7:** Mac Studio ممتاز لكنه مصمم للدفعات. للاستدلال المتواصل باتفاقية مستوى خدمة، محطات NVIDIA المؤسسية خيار أضمن.',
+          '**تحتاج استدلالًا إنتاجيًا 24/7:** يمكن لـ Mac Studio تشغيل مهام طويلة، لكنه جهاز مكتبي بلا اتفاقية مستوى خدمة مؤسسية ولا دعم في الموقع. إذا احتجت إلى اتفاقية مستوى خدمة تعاقدية للاستدلال المتواصل، فقارن محطات العمل والخوادم المؤسسية (بما فيها المبنية على NVIDIA) التي توفر هذا الدعم.',
         ],
       },
       faq: {
@@ -1641,7 +1641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Como a largura de banda vira tokens por segundo', anchor: '#bandwidth-to-speed' },
       { label: 'Mac mini M5 Pro: nova entrada econômica', anchor: '#mac-mini-m5-pro' },
       { label: 'Mac Studio M5 Max 36 GB: configuração básica', anchor: '#mac-studio-m5-max-64gb' },
-      { label: 'Mac Studio M5 Max 48–128 GB: melhor custo-benefício', anchor: '#mac-studio-m5-max-128gb' },
+      { label: 'Mac Studio M5 Max 48–128 GB: bom custo-benefício', anchor: '#mac-studio-m5-max-128gb' },
       { label: 'Mac Studio M5 Ultra: desempenho máximo', anchor: '#mac-studio-m5-ultra' },
       { label: 'MacBook Pro 16" M5 Max: opção portátil', anchor: '#macbook-pro-m5-max' },
       { label: 'Nossas recomendações', anchor: '#verdict' },
@@ -1707,7 +1707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Configuração': 'Mac mini M5 Pro 24 GB', 'Chip': 'M5 Pro', 'Núcleos GPU': '16', 'Memória': '24GB unificada', 'Largura de banda': '307 GB/s', 'Preço': 'US$1.699', 'Ideal para': 'M5 Pro mais barato, 7B–14B' },
           { 'Configuração': 'Mac mini M5 Pro 64 GB', 'Chip': 'M5 Pro', 'Núcleos GPU': '20', 'Memória': '64GB unificada', 'Largura de banda': '307 GB/s', 'Preço': 'US$2.699', 'Ideal para': 'Modelos 30B, 64 GB mais barato' },
           { 'Configuração': 'Mac Studio M5 Max 36 GB', 'Chip': 'M5 Max', 'Núcleos GPU': '32', 'Memória': '36GB unificada', 'Largura de banda': '460 GB/s', 'Preço': 'US$2.499', 'Ideal para': 'Entrada econômica de mesa' },
-          { 'Configuração': 'Mac Studio M5 Max 64 GB', 'Chip': 'M5 Max', 'Núcleos GPU': '40', 'Memória': '64GB unificada', 'Largura de banda': '614 GB/s', 'Preço': 'US$3.499', 'Ideal para': '70B Q4, melhor custo-benefício' },
+          { 'Configuração': 'Mac Studio M5 Max 64 GB', 'Chip': 'M5 Max', 'Núcleos GPU': '40', 'Memória': '64GB unificada', 'Largura de banda': '614 GB/s', 'Preço': 'US$3.499', 'Ideal para': '70B Q4, bom custo-benefício' },
           { 'Configuração': 'Mac Studio M5 Max 128 GB', 'Chip': 'M5 Max', 'Núcleos GPU': '40', 'Memória': '128GB unificada', 'Largura de banda': '614 GB/s', 'Preço': 'US$5.099', 'Ideal para': '70B Q5, usuários avançados' },
           { 'Configuração': 'Mac Studio M5 Ultra 96 GB', 'Chip': 'M5 Ultra', 'Núcleos GPU': '64', 'Memória': '96GB unificada', 'Largura de banda': 'Até 1,2 TB/s', 'Preço': 'US$5.499', 'Ideal para': 'Maiores modelos locais' },
           { 'Configuração': 'Mac Studio M5 Ultra 512 GB', 'Chip': 'M5 Ultra', 'Núcleos GPU': '80', 'Memória': '512GB unificada', 'Largura de banda': 'Até 1,2 TB/s', 'Preço': 'US$22.299', 'Ideal para': 'Modelos gigantes, pedido desde 28 out.' },
@@ -1833,8 +1833,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mac-studio-m5-max-128gb': {
         id: 'mac-studio-m5-max-128gb',
-        title: 'Mac Studio M5 Max 48–128 GB: melhor custo-benefício para LLM local 70B',
-        content: 'O Mac Studio M5 Max com GPU de 40 núcleos começa em US$3.099 (48 GB) e pode ser configurado até 128 GB por US$5.099. É o nível que cumpre o posicionamento de «melhor custo-benefício para 70B»: 64 GB custam US$3.499 com os 614 GB/s completos. Enviado desde 22 de setembro de 2026.',
+        title: 'Mac Studio M5 Max 48–128 GB: bom custo-benefício para LLM local 70B',
+        content: 'O Mac Studio M5 Max com GPU de 40 núcleos começa em US$3.099 (48 GB) e pode ser configurado até 128 GB por US$5.099. É o nível que cumpre o posicionamento de «bom custo-benefício para 70B»: 64 GB custam US$3.499 com os 614 GB/s completos. Enviado desde 22 de setembro de 2026.',
         items: [
           '**CPU:** M5 Max de 18 núcleos',
           '**GPU:** GPU M5 Max de 40 núcleos',
@@ -1937,7 +1937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Recomendações claras conforme o caso de uso.',
         items: [
           '**🏆 💰 M5 PRO MAIS BARATO: Mac mini M5 Pro (US$1.699, disponível)**\n• Por quê: primeiro Mac mini com M5 Pro. Fica abaixo de qualquer forma anterior de ter um M5 Pro, inclusive o MacBook Pro. A base de 24 GB atende 7B–14B; configurado com 64 GB, atende 30B.\n• Para quem: compradores do primeiro Apple Silicon atentos ao orçamento.\n• [Comprar na Apple Store →](https://www.apple.com/mac-mini/)',
-          '**🥇 MELHOR CUSTO-BENEFÍCIO PARA 70B: Mac Studio M5 Max 64 GB (US$3.499, disponível)**\n• Por quê: roda Llama 3.3 70B Q4 a cerca de 9–12 tokens/s estimados com os 614 GB/s completos. A refrigeração de desktop evita limitação térmica.\n• Para quem: desenvolvedores que padronizam um fluxo 70B sem necessidade de portabilidade.\n• [Comprar na Apple Store →](https://www.apple.com/mac-studio/)',
+          '**🥇 BOM CUSTO-BENEFÍCIO PARA 70B: Mac Studio M5 Max 64 GB (US$3.499, disponível)**\n• Por quê: roda Llama 3.3 70B Q4 a cerca de 9–12 tokens/s estimados com os 614 GB/s completos. A refrigeração de desktop evita limitação térmica.\n• Para quem: desenvolvedores que padronizam um fluxo 70B sem necessidade de portabilidade.\n• [Comprar na Apple Store →](https://www.apple.com/mac-studio/)',
           '**🔥 POTÊNCIA MÁXIMA: Mac Studio M5 Ultra 96 GB (US$5.499, disponível)**\n• Por quê: nível de topo. Até 1,2 TB/s de largura de banda — o dobro do M5 Max. A configuração de 512 GB (encomendável desde 28 de outubro de 2026, a partir de US$22.299) atende os maiores modelos locais.\n• Situação: já há as primeiras medições independentes (MacStories: 48 tokens/s com Qwen3.8 27B contra 59 em uma RTX 5090).\n• [Comprar na Apple Store →](https://www.apple.com/mac-studio/)',
           '**💼 MELHOR PORTÁTIL: MacBook Pro 16" M5 Max (a partir de US$3.899; 460 GB/s com a GPU de 32 núcleos, 614 GB/s com a de 40)**\n• Por quê: o mesmo silício M5 Max do Mac Studio em um notebook com tela Liquid Retina XDR. Aceite 10–15 % menos de velocidade sustentada pela limitação térmica.\n• Alternativa: o Mac Studio M5 Max começa em US$2.499 e tem melhor refrigeração sustentada se você não precisa de portabilidade.\n• [Comprar na Apple Store →](https://www.apple.com/macbook-pro/)',
         ],
@@ -2050,7 +2050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Você precisa poder fazer upgrade:** a RAM e o armazenamento do Mac Studio são fixos na compra. PCs permitem upgrades graduais. Em 5+ anos de uso, o PC pode sair mais barato.',
           '**Você exige tokens/s de três dígitos em modelos pequenos:** a RTX 4090 chega a 90–120 tokens/s com Llama 8B. Para o M5 Max, estimam-se 75–100. Para alto throughput (vários usuários), a NVIDIA ainda vence.',
           '**Você ainda não usa macOS:** trocar de ecossistema saindo de Windows/Linux só por LLM local não compensa, a menos que você queira o macOS por outros motivos.',
-          '**Você precisa de inferência de produção 24/7:** o Mac Studio é excelente, mas pensado para picos. Para inferência contínua com SLA, estações NVIDIA corporativas são mais seguras.',
+          '**Você precisa de inferência de produção 24/7:** o Mac Studio consegue rodar tarefas longas, mas é um computador de mesa sem SLA corporativo nem suporte presencial. Se você precisa de um SLA contratual de inferência contínua, compare estações de trabalho e servidores corporativos (inclusive os baseados em NVIDIA) que ofereçam esse suporte.',
         ],
       },
       faq: {
@@ -2142,7 +2142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Wie aus Bandbreite Tokens pro Sekunde werden', anchor: '#bandwidth-to-speed' },
       { label: 'Mac mini M5 Pro: neuer günstiger Einstieg', anchor: '#mac-mini-m5-pro' },
       { label: 'Mac Studio M5 Max 36 GB: Basiskonfiguration', anchor: '#mac-studio-m5-max-64gb' },
-      { label: 'Mac Studio M5 Max 48–128 GB: bestes Preis-Leistungs-Verhältnis', anchor: '#mac-studio-m5-max-128gb' },
+      { label: 'Mac Studio M5 Max 48–128 GB: gutes Preis-Leistungs-Verhältnis', anchor: '#mac-studio-m5-max-128gb' },
       { label: 'Mac Studio M5 Ultra: maximale Leistung', anchor: '#mac-studio-m5-ultra' },
       { label: 'MacBook Pro 16" M5 Max: mobile Option', anchor: '#macbook-pro-m5-max' },
       { label: 'Unsere Empfehlungen', anchor: '#verdict' },
@@ -2334,7 +2334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mac-studio-m5-max-128gb': {
         id: 'mac-studio-m5-max-128gb',
-        title: 'Mac Studio M5 Max 48–128 GB: bestes Preis-Leistungs-Verhältnis für lokale 70B-LLMs',
+        title: 'Mac Studio M5 Max 48–128 GB: gutes Preis-Leistungs-Verhältnis für lokale 70B-LLMs',
         content: 'Der Mac Studio M5 Max mit 40-Kern-GPU startet bei 3.099 $ (48 GB) und lässt sich bis 128 GB für 5.099 $ konfigurieren. Diese Stufe liefert das Versprechen „bester Wert für 70B“: 64 GB gibt es hier für 3.499 $ mit den vollen 614 GB/s Bandbreite. Seit dem 22. September 2026 lieferbar.',
         items: [
           '**CPU:** 18-Kern-M5-Max',
@@ -2438,7 +2438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Klare Empfehlungen je nach Einsatzzweck.',
         items: [
           '**🏆 💰 GÜNSTIGSTER M5 PRO: Mac mini M5 Pro (1.699 $, lieferbar)**\n• Warum: erster Mac mini mit M5 Pro. Unterbietet jede bisherige Möglichkeit, einen M5 Pro zu bekommen, auch das MacBook Pro. 24 GB Basis reichen für 7B–14B; mit 64 GB konfiguriert für 30B.\n• Für wen: preisbewusste Einsteiger in Apple Silicon.\n• [Im Apple Store kaufen →](https://www.apple.com/mac-mini/)',
-          '**🥇 BESTER WERT FÜR 70B: Mac Studio M5 Max 64 GB (3.499 $, lieferbar)**\n• Warum: führt Llama 3.3 70B Q4 mit geschätzt 9–12 Tokens/s bei den vollen 614 GB/s aus. Die Desktop-Kühlung verhindert thermisches Drosseln.\n• Für wen: Entwickler, die einen 70B-Workflow ohne Mobilitätsbedarf standardisieren.\n• [Im Apple Store kaufen →](https://www.apple.com/mac-studio/)',
+          '**🥇 GUTES PREIS-LEISTUNGS-VERHÄLTNIS FÜR 70B: Mac Studio M5 Max 64 GB (3.499 $, lieferbar)**\n• Warum: führt Llama 3.3 70B Q4 mit geschätzt 9–12 Tokens/s bei den vollen 614 GB/s aus. Die Desktop-Kühlung verhindert thermisches Drosseln.\n• Für wen: Entwickler, die einen 70B-Workflow ohne Mobilitätsbedarf standardisieren.\n• [Im Apple Store kaufen →](https://www.apple.com/mac-studio/)',
           '**🔥 MAXIMALE LEISTUNG: Mac Studio M5 Ultra 96 GB (5.499 $, lieferbar)**\n• Warum: Spitzenstufe. Bis zu 1,2 TB/s Bandbreite — doppelt so viel wie der M5 Max. Die 512-GB-Konfiguration (seit dem 28. Oktober 2026 bestellbar, ab 22.299 $) deckt die größten lokalen Modelle ab.\n• Status: erste unabhängige Messungen liegen vor (MacStories: 48 Tokens/s mit Qwen3.8 27B vs. 59 auf einer RTX 5090).\n• [Im Apple Store kaufen →](https://www.apple.com/mac-studio/)',
           '**💼 BESTE MOBILE OPTION: MacBook Pro 16" M5 Max (ab 3.899 $; 460 GB/s mit 32-Kern-GPU, 614 GB/s mit 40-Kern-GPU)**\n• Warum: dasselbe M5-Max-Silizium wie im Mac Studio im Notebook mit Liquid-Retina-XDR-Display. Rechnen Sie mit 10–15 % weniger Dauertempo durch thermisches Drosseln.\n• Alternative: Der Mac Studio M5 Max beginnt bei 2.499 $ und bietet bessere Dauerkühlung, wenn Sie keine Mobilität brauchen.\n• [Im Apple Store kaufen →](https://www.apple.com/macbook-pro/)',
         ],
@@ -2551,7 +2551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sie brauchen Aufrüstbarkeit:** RAM und Speicher des Mac Studio sind beim Kauf fest. PCs erlauben schrittweise Upgrades. Bei 5+ Jahren Nutzung kann der PC langfristig günstiger sein.',
           '**Sie verlangen dreistellige Tokens/s bei kleinen Modellen:** Die RTX 4090 erreicht 90–120 Tokens/s mit Llama 8B. Für den M5 Max sind 75–100 geschätzt. Bei hohem Durchsatz (mehrere Nutzer) gewinnt NVIDIA weiterhin.',
           '**Sie nutzen macOS bisher nicht:** Der Wechsel von Windows/Linux allein für lokale LLMs lohnt sich nicht, es sei denn, Sie wollen macOS auch aus anderen Gründen.',
-          '**Sie brauchen 24/7-Produktionsinferenz:** Der Mac Studio ist ausgezeichnet, aber für Lastspitzen gedacht. Für kontinuierliche Inferenz mit SLA sind NVIDIA-Workstations in Unternehmensqualität die sicherere Wahl.',
+          '**Sie brauchen 24/7-Produktionsinferenz:** Der Mac Studio kann lange Jobs ausführen, ist aber ein Desktop-Gerät ohne Enterprise-SLA oder Vor-Ort-Support. Wenn Sie ein vertragliches SLA für kontinuierliche Inferenz benötigen, vergleichen Sie Enterprise-Workstations und -Server (auch NVIDIA-basierte), die diesen Support bieten.',
         ],
       },
       faq: {
@@ -2630,7 +2630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'De la bande passante aux tokens par seconde', anchor: '#bandwidth-to-speed' },
       { label: 'Mac mini M5 Pro : nouvelle entrée économique', anchor: '#mac-mini-m5-pro' },
       { label: 'Mac Studio M5 Max 36 Go : configuration de base', anchor: '#mac-studio-m5-max-64gb' },
-      { label: 'Mac Studio M5 Max 48–128 Go : meilleur rapport qualité-prix', anchor: '#mac-studio-m5-max-128gb' },
+      { label: 'Mac Studio M5 Max 48–128 Go : bon rapport qualité-prix', anchor: '#mac-studio-m5-max-128gb' },
       { label: 'Mac Studio M5 Ultra : performance maximale', anchor: '#mac-studio-m5-ultra' },
       { label: 'MacBook Pro 16" M5 Max : option portable', anchor: '#macbook-pro-m5-max' },
       { label: 'Nos sélections', anchor: '#verdict' },
@@ -2696,7 +2696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Configuration': 'Mac mini M5 Pro 24 Go', 'Puce': 'M5 Pro', 'Cœurs GPU': '16', 'Mémoire': '24 Go unifiée', 'Bande passante': '307 Go/s', 'Prix': '1 699 $', 'Idéal pour': 'M5 Pro le moins cher, 7B–14B' },
           { 'Configuration': 'Mac mini M5 Pro 64 Go', 'Puce': 'M5 Pro', 'Cœurs GPU': '20', 'Mémoire': '64 Go unifiée', 'Bande passante': '307 Go/s', 'Prix': '2 699 $', 'Idéal pour': 'Modèles 30B, 64 Go le moins cher' },
           { 'Configuration': 'Mac Studio M5 Max 36 Go', 'Puce': 'M5 Max', 'Cœurs GPU': '32', 'Mémoire': '36 Go unifiée', 'Bande passante': '460 Go/s', 'Prix': '2 499 $', 'Idéal pour': 'Entrée de gamme bureau' },
-          { 'Configuration': 'Mac Studio M5 Max 64 Go', 'Puce': 'M5 Max', 'Cœurs GPU': '40', 'Mémoire': '64 Go unifiée', 'Bande passante': '614 Go/s', 'Prix': '3 499 $', 'Idéal pour': '70B Q4, meilleur rapport' },
+          { 'Configuration': 'Mac Studio M5 Max 64 Go', 'Puce': 'M5 Max', 'Cœurs GPU': '40', 'Mémoire': '64 Go unifiée', 'Bande passante': '614 Go/s', 'Prix': '3 499 $', 'Idéal pour': '70B Q4, bon rapport' },
           { 'Configuration': 'Mac Studio M5 Max 128 Go', 'Puce': 'M5 Max', 'Cœurs GPU': '40', 'Mémoire': '128 Go unifiée', 'Bande passante': '614 Go/s', 'Prix': '5 099 $', 'Idéal pour': '70B Q5, utilisateurs avancés' },
           { 'Configuration': 'Mac Studio M5 Ultra 96 Go', 'Puce': 'M5 Ultra', 'Cœurs GPU': '64', 'Mémoire': '96 Go unifiée', 'Bande passante': 'Jusqu\'à 1,2 To/s', 'Prix': '5 499 $', 'Idéal pour': 'Les plus gros modèles locaux' },
           { 'Configuration': 'Mac Studio M5 Ultra 512 Go', 'Puce': 'M5 Ultra', 'Cœurs GPU': '80', 'Mémoire': '512 Go unifiée', 'Bande passante': 'Jusqu\'à 1,2 To/s', 'Prix': '10 000+ $ (est.)', 'Idéal pour': 'Modèles géants, livraison fin oct.' },
@@ -2822,8 +2822,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mac-studio-m5-max-128gb': {
         id: 'mac-studio-m5-max-128gb',
-        title: 'Mac Studio M5 Max 48–128 Go : meilleur rapport qualité-prix pour le LLM local 70B',
-        content: 'Le Mac Studio M5 Max à GPU 40 cœurs démarre à 3 099 $ (48 Go) et se configure jusqu\'à 128 Go pour 5 099 $. C\'est le niveau qui tient la promesse « meilleur rapport pour le 70B » : 64 Go coûtent 3 499 $ avec les 614 Go/s complets. Livré depuis le 22 septembre 2026.',
+        title: 'Mac Studio M5 Max 48–128 Go : bon rapport qualité-prix pour le LLM local 70B',
+        content: 'Le Mac Studio M5 Max à GPU 40 cœurs démarre à 3 099 $ (48 Go) et se configure jusqu\'à 128 Go pour 5 099 $. C\'est le niveau qui tient la promesse « bon rapport pour le 70B » : 64 Go coûtent 3 499 $ avec les 614 Go/s complets. Livré depuis le 22 septembre 2026.',
         items: [
           '**CPU :** M5 Max 18 cœurs',
           '**GPU :** GPU M5 Max 40 cœurs',
@@ -2926,7 +2926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Des recommandations claires selon l\'usage.',
         items: [
           '**🏆 💰 M5 PRO LE MOINS CHER : Mac mini M5 Pro (1 699 $, disponible)**\n• Pourquoi : premier Mac mini avec M5 Pro. Moins cher que toute autre façon d\'obtenir un M5 Pro, MacBook Pro compris. 24 Go de base pour 7B–14B ; configuré à 64 Go pour 30B.\n• Pour qui : premiers acheteurs d\'Apple Silicon soucieux du budget.\n• [Acheter sur l\'Apple Store →](https://www.apple.com/mac-mini/)',
-          '**🥇 MEILLEUR RAPPORT POUR LE 70B : Mac Studio M5 Max 64 Go (3 499 $, disponible)**\n• Pourquoi : exécute Llama 3.3 70B Q4 à environ 9–12 tokens/s estimés avec les 614 Go/s complets. Le refroidissement de bureau évite le bridage thermique.\n• Pour qui : développeurs standardisant un flux 70B sans besoin de portabilité.\n• [Acheter sur l\'Apple Store →](https://www.apple.com/mac-studio/)',
+          '**🥇 BON RAPPORT POUR LE 70B : Mac Studio M5 Max 64 Go (3 499 $, disponible)**\n• Pourquoi : exécute Llama 3.3 70B Q4 à environ 9–12 tokens/s estimés avec les 614 Go/s complets. Le refroidissement de bureau évite le bridage thermique.\n• Pour qui : développeurs standardisant un flux 70B sans besoin de portabilité.\n• [Acheter sur l\'Apple Store →](https://www.apple.com/mac-studio/)',
           '**🔥 PUISSANCE MAXIMALE : Mac Studio M5 Ultra 96 Go (5 499 $, disponible)**\n• Pourquoi : niveau haut de gamme. Jusqu\'à 1,2 To/s de bande passante, le double du M5 Max. La configuration 512 Go (commandable depuis le 28 octobre 2026, à partir de 22 299 $) couvre les plus gros modèles locaux.\n• Statut : premières mesures indépendantes disponibles (MacStories : 48 tokens/s avec Qwen3.8 27B contre 59 sur une RTX 5090).\n• [Acheter sur l\'Apple Store →](https://www.apple.com/mac-studio/)',
           '**💼 MEILLEUR PORTABLE : MacBook Pro 16" M5 Max (dès 3 899 $ ; 460 Go/s avec le GPU 32 cœurs, 614 Go/s avec le GPU 40 cœurs)**\n• Pourquoi : le même silicium M5 Max que le Mac Studio dans un portable à écran Liquid Retina XDR. Acceptez 10–15 % de vitesse soutenue en moins à cause du bridage thermique.\n• Alternative : le Mac Studio M5 Max démarre à 2 499 $ et refroidit mieux en charge soutenue si la portabilité est inutile.\n• [Acheter sur l\'Apple Store →](https://www.apple.com/macbook-pro/)',
         ],
@@ -3039,7 +3039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Vous avez besoin d\'évolutivité :** la RAM et le stockage du Mac Studio sont fixés à l\'achat. Les PC permettent des mises à niveau progressives. Sur 5 ans et plus, le PC peut revenir moins cher.',
           '**Vous exigez des tokens/s à trois chiffres sur petits modèles :** la RTX 4090 atteint 90–120 tokens/s sur Llama 8B. Le M5 Max est estimé à 75–100. Pour un débit élevé (plusieurs utilisateurs), NVIDIA gagne encore.',
           '**Vous n\'utilisez pas déjà macOS :** changer d\'écosystème depuis Windows/Linux uniquement pour le LLM local ne vaut pas la peine, sauf si vous voulez aussi macOS pour d\'autres raisons.',
-          '**Vous avez besoin d\'inférence de production 24/7 :** le Mac Studio est excellent mais conçu pour des pics d\'usage. Pour une inférence continue sous SLA, les stations NVIDIA professionnelles sont plus sûres.',
+          '**Vous avez besoin d\'inférence de production 24/7 :** le Mac Studio peut exécuter de longues tâches, mais c\'est une machine de bureau sans SLA d\'entreprise ni support sur site. Si vous avez besoin d\'un SLA contractuel pour l\'inférence continue, comparez les stations de travail et serveurs professionnels (y compris ceux à base de NVIDIA) qui offrent ce support.',
         ],
       },
       faq: {
@@ -3174,7 +3174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '帯域幅からトークン/秒へ', anchor: '#bandwidth-to-speed' },
       { label: 'Mac mini M5 Pro：新しい低価格の入り口', anchor: '#mac-mini-m5-pro' },
       { label: 'Mac Studio M5 Max 36GB：基本構成', anchor: '#mac-studio-m5-max-64gb' },
-      { label: 'Mac Studio M5 Max 48〜128GB：最高のコスパ', anchor: '#mac-studio-m5-max-128gb' },
+      { label: 'Mac Studio M5 Max 48〜128GB：コスパ良好', anchor: '#mac-studio-m5-max-128gb' },
       { label: 'Mac Studio M5 Ultra：最大性能', anchor: '#mac-studio-m5-ultra' },
       { label: 'MacBook Pro 16インチ M5 Max：持ち運べる選択肢', anchor: '#macbook-pro-m5-max' },
       { label: 'おすすめ構成', anchor: '#verdict' },
@@ -3240,7 +3240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '構成': 'Mac mini M5 Pro 24GB', 'チップ': 'M5 Pro', 'GPUコア': '16', 'メモリ': '24GB ユニファイド', '帯域幅': '307 GB/s', '価格': '$1,699', '向いている用途': '最安M5 Pro、7B〜14B' },
           { '構成': 'Mac mini M5 Pro 64GB', 'チップ': 'M5 Pro', 'GPUコア': '20', 'メモリ': '64GB ユニファイド', '帯域幅': '307 GB/s', '価格': '$2,699', '向いている用途': '30Bモデル、最安64GB' },
           { '構成': 'Mac Studio M5 Max 36GB', 'チップ': 'M5 Max', 'GPUコア': '32', 'メモリ': '36GB ユニファイド', '帯域幅': '460 GB/s', '価格': '$2,499', '向いている用途': '低価格デスクトップ入門' },
-          { '構成': 'Mac Studio M5 Max 64GB', 'チップ': 'M5 Max', 'GPUコア': '40', 'メモリ': '64GB ユニファイド', '帯域幅': '614 GB/s', '価格': '$3,499', '向いている用途': '70B Q4、コスパ最良' },
+          { '構成': 'Mac Studio M5 Max 64GB', 'チップ': 'M5 Max', 'GPUコア': '40', 'メモリ': '64GB ユニファイド', '帯域幅': '614 GB/s', '価格': '$3,499', '向いている用途': '70B Q4、コスパ良好' },
           { '構成': 'Mac Studio M5 Max 128GB', 'チップ': 'M5 Max', 'GPUコア': '40', 'メモリ': '128GB ユニファイド', '帯域幅': '614 GB/s', '価格': '$5,099', '向いている用途': '70B Q5、パワーユーザー' },
           { '構成': 'Mac Studio M5 Ultra 96GB', 'チップ': 'M5 Ultra', 'GPUコア': '64', 'メモリ': '96GB ユニファイド', '帯域幅': '最大1.2 TB/s', '価格': '$5,499', '向いている用途': '最大級のローカルモデル' },
           { '構成': 'Mac Studio M5 Ultra 512GB', 'チップ': 'M5 Ultra', 'GPUコア': '80', 'メモリ': '512GB ユニファイド', '帯域幅': '最大1.2 TB/s', '価格': '$22,299', '向いている用途': '巨大モデル、10月28日から注文可' },
@@ -3366,8 +3366,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mac-studio-m5-max-128gb': {
         id: 'mac-studio-m5-max-128gb',
-        title: 'Mac Studio M5 Max 48〜128GB：70Bローカル運用で最高のコスパ',
-        content: '40コアGPUのMac Studio M5 Maxは3,099ドル（48GB）から、最大128GBで5,099ドルまで構成できます。「70Bに最高のコスパ」を実現するのはこの構成です。64GBは3,499ドルで、帯域幅は614GB/sをフルに活かせます。2026年9月22日から出荷中。',
+        title: 'Mac Studio M5 Max 48〜128GB：70Bローカル運用でコスパ良好',
+        content: '40コアGPUのMac Studio M5 Maxは3,099ドル（48GB）から、最大128GBで5,099ドルまで構成できます。「70Bにコスパ良好」を実現するのはこの構成です。64GBは3,499ドルで、帯域幅は614GB/sをフルに活かせます。2026年9月22日から出荷中。',
         items: [
           '**CPU：** 18コアM5 Max',
           '**GPU：** 40コアM5 Max GPU',
@@ -3470,7 +3470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '用途別に、選択肢をはっきり整理します。',
         items: [
           '**🏆 💰 最安のM5 Pro：Mac mini M5 Pro（1,699ドル、出荷中）**\n• 理由：初のM5 Pro搭載Mac mini。MacBook Proを含むどの手段よりも安くM5 Proを入手できます。24GBの基本構成は7B〜14B向け、64GBにすれば30B向けです。\n• 対象：予算重視で初めてApple Siliconを買う方。\n• [Apple Storeで購入 →](https://www.apple.com/mac-mini/)',
-          '**🥇 70B向け最高のコスパ：Mac Studio M5 Max 64GB（3,499ドル、出荷中）**\n• 理由：614GB/sをフルに活かし、Llama 3.3 70B Q4を推定約9〜12トークン/秒で実行します。デスクトップ冷却のためサーマルスロットリングがありません。\n• 対象：携帯性が不要で、70Bのワークフローに標準化したい開発者。\n• [Apple Storeで購入 →](https://www.apple.com/mac-studio/)',
+          '**🥇 70B向けコスパ良好：Mac Studio M5 Max 64GB（3,499ドル、出荷中）**\n• 理由：614GB/sをフルに活かし、Llama 3.3 70B Q4を推定約9〜12トークン/秒で実行します。デスクトップ冷却のためサーマルスロットリングがありません。\n• 対象：携帯性が不要で、70Bのワークフローに標準化したい開発者。\n• [Apple Storeで購入 →](https://www.apple.com/mac-studio/)',
           '**🔥 最大パワー：Mac Studio M5 Ultra 96GB（5,499ドル、出荷中）**\n• 理由：最上位。帯域幅は最大1.2TB/sでM5 Maxの2倍。512GB構成（2026年10月28日から注文可能、22,299ドルから）は最大級のローカルモデルに対応します。\n• 状況：初の独立実測が公開されています（MacStories：Qwen3.8 27Bで48トークン/秒、RTX 5090は59）。\n• [Apple Storeで購入 →](https://www.apple.com/mac-studio/)',
           '**💼 最高の携帯性：MacBook Pro 16インチ M5 Max（3,899ドル〜、32コアGPUで460GB/s、40コアGPUで614GB/s）**\n• 理由：Mac Studioと同じM5 MaxシリコンをLiquid Retina XDRディスプレイ搭載のノートで。サーマルスロットリングによる持続速度の10〜15%低下は許容してください。\n• 代替：携帯性が不要なら、Mac Studio M5 Maxは2,499ドルからで、持続冷却にも優れます。\n• [Apple Storeで購入 →](https://www.apple.com/macbook-pro/)',
         ],
@@ -3583,7 +3583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**ワークステーションの拡張性が必要：** Mac StudioのRAMとストレージは購入時に固定されます。PCは段階的にアップグレードできます。5年以上使うなら、PCのほうが長期的に安くなることがあります。',
           '**小型モデルで3桁のトークン/秒が必要：** RTX 4090はLlama 8Bで90〜120トークン/秒に達します。M5 Maxは推定75〜100です。複数ユーザーへの高スループット提供ではNVIDIAが依然優位です。',
           '**もともとmacOSを使っていない：** ローカルLLMのためだけにWindows/LinuxからmacOSへ移行する価値は、他の理由でmacOSを使いたい場合を除き、ありません。',
-          '**24時間365日の本番推論が必要：** Mac Studioは優秀ですが、バースト的な利用を想定した設計です。SLA付きの連続推論には、エンタープライズ向けNVIDIAワークステーションが安全です。',
+          '**24時間365日の本番推論が必要：** Mac Studioは長時間のジョブも実行できますが、エンタープライズ向けSLAやオンサイトサポートのないデスクトップ機です。契約上のSLAが必要な連続推論では、そのサポートを提供するエンタープライズ向けワークステーションやサーバー（NVIDIA搭載機を含む）を比較してください。',
         ],
       },
       faq: {
@@ -3662,7 +3662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '带宽如何转化为每秒token数', anchor: '#bandwidth-to-speed' },
       { label: 'Mac mini M5 Pro：全新的低价入门选择', anchor: '#mac-mini-m5-pro' },
       { label: 'Mac Studio M5 Max 36GB：基础配置', anchor: '#mac-studio-m5-max-64gb' },
-      { label: 'Mac Studio M5 Max 48–128GB：最佳性价比', anchor: '#mac-studio-m5-max-128gb' },
+      { label: 'Mac Studio M5 Max 48–128GB：高性价比', anchor: '#mac-studio-m5-max-128gb' },
       { label: 'Mac Studio M5 Ultra：最强性能', anchor: '#mac-studio-m5-ultra' },
       { label: 'MacBook Pro 16英寸M5 Max：便携之选', anchor: '#macbook-pro-m5-max' },
       { label: '我们的推荐', anchor: '#verdict' },
@@ -3728,7 +3728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '配置': 'Mac mini M5 Pro 24GB', '芯片': 'M5 Pro', 'GPU核心': '16', '内存': '24GB 统一内存', '带宽': '307 GB/s', '价格': '$1,699', '适合': '最便宜的M5 Pro，7B–14B' },
           { '配置': 'Mac mini M5 Pro 64GB', '芯片': 'M5 Pro', 'GPU核心': '20', '内存': '64GB 统一内存', '带宽': '307 GB/s', '价格': '$2,699', '适合': '30B模型，最便宜的64GB' },
           { '配置': 'Mac Studio M5 Max 36GB', '芯片': 'M5 Max', 'GPU核心': '32', '内存': '36GB 统一内存', '带宽': '460 GB/s', '价格': '$2,499', '适合': '入门级桌面' },
-          { '配置': 'Mac Studio M5 Max 64GB', '芯片': 'M5 Max', 'GPU核心': '40', '内存': '64GB 统一内存', '带宽': '614 GB/s', '价格': '$3,499', '适合': '70B Q4，最佳性价比' },
+          { '配置': 'Mac Studio M5 Max 64GB', '芯片': 'M5 Max', 'GPU核心': '40', '内存': '64GB 统一内存', '带宽': '614 GB/s', '价格': '$3,499', '适合': '70B Q4，高性价比' },
           { '配置': 'Mac Studio M5 Max 128GB', '芯片': 'M5 Max', 'GPU核心': '40', '内存': '128GB 统一内存', '带宽': '614 GB/s', '价格': '$5,099', '适合': '70B Q5，高阶用户' },
           { '配置': 'Mac Studio M5 Ultra 96GB', '芯片': 'M5 Ultra', 'GPU核心': '64', '内存': '96GB 统一内存', '带宽': '最高1.2 TB/s', '价格': '$5,499', '适合': '最大的本地模型' },
           { '配置': 'Mac Studio M5 Ultra 512GB', '芯片': 'M5 Ultra', 'GPU核心': '80', '内存': '512GB 统一内存', '带宽': '最高1.2 TB/s', '价格': '$22,299', '适合': '超大模型，10月28日起可订购' },
@@ -3854,8 +3854,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mac-studio-m5-max-128gb': {
         id: 'mac-studio-m5-max-128gb',
-        title: 'Mac Studio M5 Max 48–128GB：70B本地LLM的最佳性价比',
-        content: '40核GPU的Mac Studio M5 Max起价$3,099（48GB），最高可配到128GB，售价$5,099。“70B最佳性价比”正是由这一档实现的：64GB为$3,499，且享有完整的614GB/s带宽。自2026年9月22日起发货。',
+        title: 'Mac Studio M5 Max 48–128GB：70B本地LLM的高性价比',
+        content: '40核GPU的Mac Studio M5 Max起价$3,099（48GB），最高可配到128GB，售价$5,099。“70B高性价比”正是由这一档实现的：64GB为$3,499，且享有完整的614GB/s带宽。自2026年9月22日起发货。',
         items: [
           '**CPU：**18核M5 Max',
           '**GPU：**40核M5 Max GPU',
@@ -3958,7 +3958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '按使用场景给出明确的推荐。',
         items: [
           '**🏆 💰 最便宜的M5 Pro：Mac mini M5 Pro（$1,699，现货发售）**\n• 原因：首款M5 Pro Mac mini，比包括MacBook Pro在内的任何获得M5 Pro的方式都便宜。24GB基础款可运行7B–14B，配到64GB可运行30B。\n• 适合：注重预算、首次购买Apple Silicon的用户。\n• [在Apple Store购买 →](https://www.apple.com/mac-mini/)',
-          '**🥇 70B最佳性价比：Mac Studio M5 Max 64GB（$3,499，现货发售）**\n• 原因：以完整614GB/s带宽运行Llama 3.3 70B Q4，估计约9–12 token/秒。桌面级散热意味着不会热降频。\n• 适合：不需要便携、标准化70B工作流的开发者。\n• [在Apple Store购买 →](https://www.apple.com/mac-studio/)',
+          '**🥇 70B高性价比：Mac Studio M5 Max 64GB（$3,499，现货发售）**\n• 原因：以完整614GB/s带宽运行Llama 3.3 70B Q4，估计约9–12 token/秒。桌面级散热意味着不会热降频。\n• 适合：不需要便携、标准化70B工作流的开发者。\n• [在Apple Store购买 →](https://www.apple.com/mac-studio/)',
           '**🔥 最强性能：Mac Studio M5 Ultra 96GB（$5,499，现货发售）**\n• 原因：旗舰档位。带宽最高1.2TB/s——是M5 Max的两倍。512GB配置（自2026年10月28日起可订购，$22,299起）面向最大的本地模型。\n• 状态：已有首批独立实测（MacStories：Qwen3.8 27B为48 token/秒，RTX 5090为59）。\n• [在Apple Store购买 →](https://www.apple.com/mac-studio/)',
           '**💼 最佳便携：MacBook Pro 16英寸M5 Max（$3,899起；32核GPU为460GB/s，40核GPU为614GB/s）**\n• 原因：与Mac Studio同款M5 Max芯片，装在配Liquid Retina XDR显示屏的笔记本里。需接受因热降频导致持续速度下降10–15%。\n• 替代方案：如果不需要便携，Mac Studio M5 Max起价$2,499，持续散热更好。\n• [在Apple Store购买 →](https://www.apple.com/macbook-pro/)',
         ],
@@ -4071,7 +4071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**你需要工作站可升级：**Mac Studio的内存和存储在购买时即固定。PC允许逐步升级。使用5年以上，PC长期可能更便宜。',
           '**你要求小模型达到三位数的每秒token数：**RTX 4090在Llama 8B上可达90–120 token/秒。M5 Max估计为75–100。对于高吞吐推理（服务多用户），NVIDIA仍然领先。',
           '**你本来就不使用macOS：**仅为本地LLM从Windows/Linux切换生态不值得，除非你出于其他原因也想用macOS。',
-          '**你需要7×24小时生产级推理：**Mac Studio很出色，但为突发使用而设计。对于有SLA要求的持续推理，企业级NVIDIA工作站更稳妥。',
+          '**你需要7×24小时生产级推理：**Mac Studio可以运行长时间任务，但它是没有企业级SLA和上门支持的桌面设备。如果需要合同约定SLA的持续推理，请比较提供此类支持的企业级工作站和服务器（包括基于NVIDIA的方案）。',
         ],
       },
       faq: {
@@ -4150,7 +4150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '대역폭이 초당 토큰이 되는 과정', anchor: '#bandwidth-to-speed' },
       { label: 'Mac mini M5 Pro: 새로운 저가 진입점', anchor: '#mac-mini-m5-pro' },
       { label: 'Mac Studio M5 Max 36GB: 기본 구성', anchor: '#mac-studio-m5-max-64gb' },
-      { label: 'Mac Studio M5 Max 48–128GB: 최고 가성비', anchor: '#mac-studio-m5-max-128gb' },
+      { label: 'Mac Studio M5 Max 48–128GB: 높은 가성비', anchor: '#mac-studio-m5-max-128gb' },
       { label: 'Mac Studio M5 Ultra: 최고 성능', anchor: '#mac-studio-m5-ultra' },
       { label: 'MacBook Pro 16인치 M5 Max: 휴대용 선택지', anchor: '#macbook-pro-m5-max' },
       { label: '추천 구성', anchor: '#verdict' },
@@ -4216,7 +4216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '구성': 'Mac mini M5 Pro 24GB', '칩': 'M5 Pro', 'GPU 코어': '16', '메모리': '24GB 통합', '대역폭': '307 GB/s', '가격': '$1,699', '추천 용도': '최저가 M5 Pro, 7B–14B' },
           { '구성': 'Mac mini M5 Pro 64GB', '칩': 'M5 Pro', 'GPU 코어': '20', '메모리': '64GB 통합', '대역폭': '307 GB/s', '가격': '$2,699', '추천 용도': '30B 모델, 최저가 64GB' },
           { '구성': 'Mac Studio M5 Max 36GB', '칩': 'M5 Max', 'GPU 코어': '32', '메모리': '36GB 통합', '대역폭': '460 GB/s', '가격': '$2,499', '추천 용도': '저가 데스크톱 입문' },
-          { '구성': 'Mac Studio M5 Max 64GB', '칩': 'M5 Max', 'GPU 코어': '40', '메모리': '64GB 통합', '대역폭': '614 GB/s', '가격': '$3,499', '추천 용도': '70B Q4, 최고 가성비' },
+          { '구성': 'Mac Studio M5 Max 64GB', '칩': 'M5 Max', 'GPU 코어': '40', '메모리': '64GB 통합', '대역폭': '614 GB/s', '가격': '$3,499', '추천 용도': '70B Q4, 높은 가성비' },
           { '구성': 'Mac Studio M5 Max 128GB', '칩': 'M5 Max', 'GPU 코어': '40', '메모리': '128GB 통합', '대역폭': '614 GB/s', '가격': '$5,099', '추천 용도': '70B Q5, 파워 유저' },
           { '구성': 'Mac Studio M5 Ultra 96GB', '칩': 'M5 Ultra', 'GPU 코어': '64', '메모리': '96GB 통합', '대역폭': '최대 1.2 TB/s', '가격': '$5,499', '추천 용도': '최대 규모 로컬 모델' },
           { '구성': 'Mac Studio M5 Ultra 512GB', '칩': 'M5 Ultra', 'GPU 코어': '80', '메모리': '512GB 통합', '대역폭': '최대 1.2 TB/s', '가격': '$22,299', '추천 용도': '초대형 모델, 10월 28일부터 주문' },
@@ -4342,8 +4342,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mac-studio-m5-max-128gb': {
         id: 'mac-studio-m5-max-128gb',
-        title: 'Mac Studio M5 Max 48–128GB: 70B 로컬 LLM 최고 가성비',
-        content: '40코어 GPU Mac Studio M5 Max는 $3,099(48GB)부터 시작하며 최대 128GB까지 $5,099로 구성할 수 있습니다. \'70B 최고 가성비\'라는 포지션을 실제로 충족하는 등급이며, 64GB는 $3,499에 614GB/s 전체 대역폭으로 제공됩니다. 2026년 9월 22일부터 출하 중입니다.',
+        title: 'Mac Studio M5 Max 48–128GB: 70B 로컬 LLM 높은 가성비',
+        content: '40코어 GPU Mac Studio M5 Max는 $3,099(48GB)부터 시작하며 최대 128GB까지 $5,099로 구성할 수 있습니다. \'70B 높은 가성비\'라는 포지션을 실제로 충족하는 등급이며, 64GB는 $3,499에 614GB/s 전체 대역폭으로 제공됩니다. 2026년 9월 22일부터 출하 중입니다.',
         items: [
           '**CPU:** 18코어 M5 Max',
           '**GPU:** 40코어 M5 Max GPU',
@@ -4446,7 +4446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '사용 사례별로 명확한 추천을 정리했습니다.',
         items: [
           '**🏆 💰 최저가 M5 PRO: Mac mini M5 Pro($1,699, 출하 중)**\n• 이유: 최초의 M5 Pro Mac mini. MacBook Pro를 포함해 M5 Pro를 얻는 기존 어떤 방법보다 저렴합니다. 24GB 기본은 7B–14B, 64GB로 구성하면 30B를 다룹니다.\n• 대상: 예산을 중시하는 첫 Apple Silicon 구매자.\n• [Apple Store에서 구매 →](https://www.apple.com/mac-mini/)',
-          '**🥇 70B 최고 가성비: Mac Studio M5 Max 64GB($3,499, 출하 중)**\n• 이유: 614GB/s 전체 대역폭으로 Llama 3.3 70B Q4를 추정 약 9–12토큰/초로 실행합니다. 데스크톱 냉각 덕분에 열 스로틀링이 없습니다.\n• 대상: 휴대성이 필요 없고 70B 워크플로로 표준화하려는 개발자.\n• [Apple Store에서 구매 →](https://www.apple.com/mac-studio/)',
+          '**🥇 70B 높은 가성비: Mac Studio M5 Max 64GB($3,499, 출하 중)**\n• 이유: 614GB/s 전체 대역폭으로 Llama 3.3 70B Q4를 추정 약 9–12토큰/초로 실행합니다. 데스크톱 냉각 덕분에 열 스로틀링이 없습니다.\n• 대상: 휴대성이 필요 없고 70B 워크플로로 표준화하려는 개발자.\n• [Apple Store에서 구매 →](https://www.apple.com/mac-studio/)',
           '**🔥 최고 성능: Mac Studio M5 Ultra 96GB($5,499, 출하 중)**\n• 이유: 최상위 등급. 최대 1.2TB/s 대역폭으로 M5 Max의 두 배입니다. 512GB 구성(2026년 10월 28일부터 주문 가능, $22,299부터)은 가장 큰 로컬 모델을 다룹니다.\n• 상태: 첫 독립 측정값이 나왔습니다(MacStories: Qwen3.8 27B에서 48토큰/초, RTX 5090은 59).\n• [Apple Store에서 구매 →](https://www.apple.com/mac-studio/)',
           '**💼 최고의 휴대용: MacBook Pro 16인치 M5 Max($3,899부터, 32코어 GPU 460GB/s, 40코어 GPU 614GB/s)**\n• 이유: Mac Studio와 같은 M5 Max 실리콘을 Liquid Retina XDR 디스플레이 노트북에 담았습니다. 열 스로틀링으로 지속 속도가 10–15% 낮아지는 점은 감수해야 합니다.\n• 대안: 휴대성이 필요 없다면 Mac Studio M5 Max는 $2,499부터이며 더 나은 지속 냉각을 제공합니다.\n• [Apple Store에서 구매 →](https://www.apple.com/macbook-pro/)',
         ],
@@ -4559,7 +4559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**워크스테이션 업그레이드가 필요한 경우:** Mac Studio의 RAM과 저장 장치는 구매 시 고정됩니다. PC는 단계적으로 업그레이드할 수 있습니다. 5년 이상 사용한다면 PC가 장기적으로 더 저렴할 수 있습니다.',
           '**소형 모델에서 세 자릿수 토큰/초를 원하는 경우:** RTX 4090은 Llama 8B에서 90–120토큰/초에 도달합니다. M5 Max는 75–100으로 추정됩니다. 여러 사용자를 서비스하는 고처리량 추론에서는 여전히 NVIDIA가 앞섭니다.',
           '**macOS를 이미 쓰고 있지 않은 경우:** 로컬 LLM만을 위해 Windows/Linux에서 생태계를 바꾸는 것은, 다른 이유로도 macOS를 원하는 경우가 아니라면 가치가 없습니다.',
-          '**24시간 운영 환경 추론이 필요한 경우:** Mac Studio는 훌륭하지만 단발성 사용에 맞춰 설계되었습니다. SLA가 있는 연속 추론에는 엔터프라이즈 NVIDIA 워크스테이션이 더 안전합니다.',
+          '**24시간 운영 환경 추론이 필요한 경우:** Mac Studio는 긴 작업도 실행할 수 있지만, 엔터프라이즈 SLA나 현장 지원이 없는 데스크톱 장비입니다. 계약상 SLA가 필요한 연속 추론이라면 해당 지원을 제공하는 엔터프라이즈 워크스테이션과 서버(NVIDIA 기반 포함)를 비교하십시오.',
         ],
       },
       faq: {
