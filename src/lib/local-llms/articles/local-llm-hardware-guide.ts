@@ -185,6 +185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-en.webp',
           imageCaption: 'VRAM calculator showing the formula (Model Size × Bits) ÷ 8, with examples: 8B Q4_K_M = 4.7 GB, 13B Q5_K_M = 9.1 GB, 70B Q4_K_M = 40 GB. Q4_K_M is the recommended sweet spot for most hardware.',
+          imageAlt: 'Local LLM hardware requirements: VRAM calculator formula (model size × bits ÷ 8) for GPU and Mac',
         },
         kvCache: {
           id: 'kv-cache',
@@ -226,6 +227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           image: '/images/gpu-tier-comparison-en.svg',
           imageCaption: 'GPU tier recommendations (street prices): ~$800 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$880 RTX 5070 (12GB, 14B, 90 tok/s), ~$1,450 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4,300–5,000+ RTX 5090 (32GB, 70B, 200 tok/s), $6,950 DGX Spark (128GB, large MoE). GPU choice matters 10× more than CPU.',
+          imageAlt: 'Local LLM GPU tier chart: RTX 5060 Ti to RTX 5090 and DGX Spark by VRAM, street price and speed',
         },
         vramTiers: {
           id: 'vram-tiers',
@@ -273,6 +275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           image: '/images/models-for-16gb-vram-en.svg',
           imageCaption: 'Bar chart showing which models fit in 16 GB VRAM: Mistral Small 3.1 24B Q4_K_M (13 GB ✅), Devstral Small 24B Q4_K_M (16 GB ✅), Qwen3 14B Q8_0 (15 GB ✅), Llama 3.3 70B Q4_K_M (39 GB ❌). Best choice: Mistral Small 3.1 24B for 55 tok/sec.',
+          imageAlt: 'Bar chart of which local LLM models fit in 16 GB of GPU VRAM and which 70B models do not',
         },
         modelsFor12GB: {
           id: 'models-12gb',
@@ -319,6 +322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           image: '/images/rtx4090-70b-reality-en.svg',
           imageCaption: 'VRAM requirements vs RTX 4090 24 GB limit: Qwen 3.6 27B Q4_K_M (16 GB ✅), DeepSeek-R1 32B Q4_K_M (19 GB ✅), Qwen3 32B Q5_K_M (21 GB ✅), Llama 3.3 70B Q4_K_M (39 GB ❌ -- exceeds 24 GB by 63%). Sweet spot: 27-32B models at Q4-Q5.',
+          imageAlt: 'Local LLM VRAM needs against the RTX 4090 24 GB limit: 27–32B models fit, 70B Q4_K_M does not',
         },
         cpuRam: {
           id: 'cpu-ram',
@@ -353,6 +357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           image: '/images/cpu-inference-speed-en.svg',
           imageCaption: 'CPU-only inference speeds on Ryzen 9 7950X: Gemma 2 2B Q8_0 (28 tok/sec fastest), Phi-4 Mini Q4_K_M (25 tok/sec best choice), Llama 3.1 8B Q8_0 (8 tok/sec). A used RTX 3060 ($285) achieves 5-8× faster.',
+          imageAlt: 'Local LLM CPU-only inference speeds on a Ryzen 9 7950X compared with a used RTX 3060 GPU',
         },
         storage: {
           id: 'storage',
@@ -379,6 +384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Budget', 'GPU', 'CPU', 'RAM', 'Models', 'Cost'],
           image: '/images/budget-builds-en.svg',
           imageCaption: 'Three build configurations: $1500 entry-level (RTX 4070 Ti, i7 13700, 16GB) for 7-13B models, $2500 solid build (RTX 4080, i7 14700K, 32GB) for 13-30B, $4000 high-end (2× RTX 4090, Ryzen 9, 128GB) for any model. Mid-level offers best value.',
+          imageAlt: 'Three local LLM hardware builds from an entry-level 16 GB GPU PC to a dual-GPU high-end workstation',
         },
         cantAffordHardware: {
           id: 'cant-afford-hardware',
@@ -419,6 +425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           image: '/images/llamacpp-speed-flags-en.svg',
           imageCaption: 'Default llama.cpp config: ~40 tok/sec. Optimized (--n-gpu-layers 99 + --ctx-size 2048 + --flash-attn): ~90 tok/sec -- a 125% speed improvement on RTX 4070 Ti running Llama 3.1 8B Q4_K_M.',
+          imageAlt: 'Local LLM speed on an RTX 4070 Ti: default llama.cpp settings against optimized GPU offload flags',
         },
         mac: {
           id: 'mac-hardware',
@@ -441,6 +448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Mac', 'GPU Memory', 'Best For', 'Limitation'],
           image: '/images/mac-hardware-comparison-en.svg',
           imageCaption: 'Mac hardware comparison: 8 GB M-series (3-4B models), M3 Pro 16" (18GB, 7-8B), Mac mini M6 (16–32GB, 8-14B, $899), M5 Pro (64GB, 32B, $1,699), M5 Max (128GB, 70B at Q4_K_M ~12-15 tok/sec, $2,499), Mac Studio M5 Ultra (up to 512GB, 70B+/GLM-5.3 capacity, $5,499). 16 GB unified is the comfortable minimum for 7B models on a Mac.',
+          imageAlt: 'Local LLM hardware on Mac: unified memory tiers from the 8 GB M-series to the Mac Studio M5 Ultra',
         },
         serverVsConsumer: {
           id: 'server-vs-consumer',
@@ -455,6 +463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           image: '/images/server-vs-consumer-en.svg',
           imageCaption: 'Consumer vs server hardware: RTX 5090 (~$4,300–5,000+ street, 32GB, single-user, part-time) vs RTX 6000 Ada ($7,000+, 48GB, multi-user, 24/7 duty). Start with consumer hardware; upgrade to server-grade only if running production services.',
+          imageAlt: 'Local LLM hardware compared: consumer RTX 5090 against server-grade RTX 6000 Ada for single-user or 24/7 use',
         },
         dgxSpark: {
           id: 'dgx-spark',
@@ -1025,6 +1034,7 @@ schema: {
           ],
           image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-es.webp',
           imageCaption: 'Calculadora de VRAM mostrando la fórmula (Tamaño del modelo × Bits) ÷ 8, con ejemplos: 8B Q4_K_M = 4,7 GB, 13B Q5_K_M = 9,1 GB, 70B Q4_K_M = 40 GB. Q4_K_M es el punto óptimo recomendado para la mayoría del hardware.',
+          imageAlt: 'Requisitos de hardware para LLM locales: fórmula de la calculadora de VRAM (tamaño × bits ÷ 8) para GPU y Mac',
         },
         kvCache: {
           id: 'kv-cache',
@@ -1066,6 +1076,7 @@ schema: {
           ],
           image: '/images/gpu-tier-comparison-es.svg',
           imageCaption: 'Recomendaciones de niveles de GPU (precios de calle): ~$800 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$880 RTX 5070 (12GB, 14B, 90 tok/s), ~$1.450 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4.300–5.000+ RTX 5090 (32GB, 70B, 200 tok/s), $6.950 DGX Spark (128GB, MoE grande). La elección de GPU importa 10× más que la CPU.',
+          imageAlt: 'Niveles de GPU para LLM locales: de la RTX 5060 Ti a la RTX 5090 y la DGX Spark según VRAM, precio y velocidad',
         },
         vramTiers: {
           id: 'vram-tiers',
@@ -1113,6 +1124,7 @@ schema: {
           ],
           image: '/images/models-for-16gb-vram-es.svg',
           imageCaption: 'Gráfico de barras que muestra qué modelos caben en 16 GB de VRAM: Mistral Small 3.1 24B Q4_K_M (13 GB ✅), Devstral Small 24B Q4_K_M (16 GB ✅), Qwen3 14B Q8_0 (15 GB ✅), Llama 3.3 70B Q4_K_M (39 GB ❌). Mejor elección: Mistral Small 3.1 24B a 55 tok/seg.',
+          imageAlt: 'Gráfico de barras de qué modelos LLM locales caben en 16 GB de VRAM de GPU y cuáles de 70B no caben',
         },
         modelsFor12GB: {
           id: 'models-12gb',
@@ -1159,6 +1171,7 @@ schema: {
           ],
           image: '/images/rtx4090-70b-reality-es.svg',
           imageCaption: 'Requisitos de VRAM frente al límite de 24 GB de la RTX 4090: Qwen 3.6 27B Q4_K_M (16 GB ✅), DeepSeek-R1 32B Q4_K_M (19 GB ✅), Qwen3 32B Q5_K_M (21 GB ✅), Llama 3.3 70B Q4_K_M (39 GB ❌ -- excede 24 GB en un 63%). Punto óptimo: modelos de 27-32B en Q4-Q5.',
+          imageAlt: 'VRAM de LLM locales frente al límite de 24 GB de la RTX 4090: los modelos de 27–32B caben, el de 70B Q4_K_M no',
         },
         cpuRam: {
           id: 'cpu-ram',
@@ -1193,6 +1206,7 @@ schema: {
           ],
           image: '/images/cpu-inference-speed-es.svg',
           imageCaption: 'Velocidades de inferencia solo por CPU en Ryzen 9 7950X: Gemma 2 2B Q8_0 (28 tok/seg, el más rápido), Phi-4 Mini Q4_K_M (25 tok/seg, mejor opción), Llama 3.1 8B Q8_0 (8 tok/seg). Una RTX 3060 usada ($285) logra 5-8× más rápido.',
+          imageAlt: 'Velocidad de LLM locales solo con CPU en un Ryzen 9 7950X, comparada con una GPU RTX 3060 usada',
         },
         storage: {
           id: 'storage',
@@ -1219,6 +1233,7 @@ schema: {
           columns: ['Presupuesto', 'GPU', 'CPU', 'RAM', 'Modelos', 'Coste'],
           image: '/images/budget-builds-es.svg',
           imageCaption: 'Tres configuraciones de equipo: $1500 de nivel de entrada (RTX 4070 Ti, i7 13700, 16GB) para modelos de 7-13B, $2500 configuración sólida (RTX 4080, i7 14700K, 32GB) para 13-30B, $4000 de gama alta (2× RTX 4090, Ryzen 9, 128GB) para cualquier modelo. El nivel medio ofrece la mejor relación calidad-precio.',
+          imageAlt: 'Tres configuraciones de hardware para LLM locales: de un PC de entrada con GPU de 16 GB a una estación con dos GPU',
         },
         cantAffordHardware: {
           id: 'cant-afford-hardware',
@@ -1259,6 +1274,7 @@ schema: {
           ],
           image: '/images/llamacpp-speed-flags-es.svg',
           imageCaption: 'Configuración por defecto de llama.cpp: ~40 tok/seg. Optimizada (--n-gpu-layers 99 + --ctx-size 2048 + --flash-attn): ~90 tok/seg -- una mejora de velocidad del 125% en la RTX 4070 Ti ejecutando Llama 3.1 8B Q4_K_M.',
+          imageAlt: 'Velocidad de LLM locales en una RTX 4070 Ti: ajustes por defecto de llama.cpp frente a opciones optimizadas de GPU',
         },
         mac: {
           id: 'mac-hardware',
@@ -1281,6 +1297,7 @@ schema: {
           columns: ['Mac', 'Memoria GPU', 'Mejor para', 'Limitación'],
           image: '/images/mac-hardware-comparison-es.svg',
           imageCaption: 'Comparación de hardware Mac: serie M 8 GB (modelos de 3-4B), M3 Pro 16" (18GB, 7-8B), Mac mini M6 (16–32GB, 8-14B, $899), M5 Pro (64GB, 32B, $1.699), M5 Max (128GB, 70B en Q4_K_M ~12-15 tok/seg, $2.499), Mac Studio M5 Ultra (hasta 512GB, capacidad para GLM-5.3, $5.499). 16 GB unificada es el mínimo cómodo para modelos de 7B en un Mac.',
+          imageAlt: 'Hardware para LLM locales en Mac: niveles de memoria unificada, de la serie M de 8 GB al Mac Studio M5 Ultra',
         },
         serverVsConsumer: {
           id: 'server-vs-consumer',
@@ -1295,6 +1312,7 @@ schema: {
           ],
           image: '/images/server-vs-consumer-es.svg',
           imageCaption: 'Hardware de consumo vs servidor: RTX 5090 (~$4.300–5.000+ de calle, 32GB, monousuario, tiempo parcial) vs RTX 6000 Ada ($7.000+, 48GB, multiusuario, servicio 24/7). Empieza con hardware de consumo; sube a grado servidor solo si ejecutas servicios de producción.',
+          imageAlt: 'Hardware para LLM locales: RTX 5090 de consumo frente a RTX 6000 Ada de servidor, uso individual o 24/7',
         },
         dgxSpark: {
           id: 'dgx-spark',
@@ -1865,6 +1883,7 @@ schema: {
           ],
           image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-ar.webp',
           imageCaption: 'حاسبة VRAM تُظهر الصيغة (حجم النموذج × البتات) ÷ 8، مع أمثلة: 8B Q4_K_M = 4.7 GB، 13B Q5_K_M = 9.1 GB، 70B Q4_K_M = 40 GB. Q4_K_M هي النقطة المثالية الموصى بها لمعظم العتاد.',
+          imageAlt: 'عتاد LLM المحلي: صيغة حاسبة VRAM (حجم النموذج × البتات ÷ 8) لبطاقات GPU وأجهزة Mac',
         },
         kvCache: {
           id: 'kv-cache',
@@ -1906,6 +1925,7 @@ schema: {
           ],
           image: '/images/gpu-tier-comparison-ar.svg',
           imageCaption: 'توصيات مستويات GPU (أسعار السوق): ~$800 RTX 5060 Ti (16GB، 7-13B، 60 tok/s)، ~$880 RTX 5070 (12GB، 14B، 90 tok/s)، ~$1,450 RTX 5080 (16GB، 14-32B، 130 tok/s)، ~$4,300–5,000+ RTX 5090 (32GB، 70B، 200 tok/s)، $6,950 DGX Spark (128GB، MoE كبير). اختيار GPU يهم 10× أكثر من CPU.',
+          imageAlt: 'مستويات GPU لتشغيل LLM محلي: من RTX 5060 Ti إلى RTX 5090 وDGX Spark بحسب VRAM والسعر والسرعة',
         },
         vramTiers: {
           id: 'vram-tiers',
@@ -1953,6 +1973,7 @@ schema: {
           ],
           image: '/images/models-for-16gb-vram-ar.svg',
           imageCaption: 'مخطط شريطي يُظهر أي النماذج تتسع في 16 GB VRAM: Mistral Small 3.1 24B Q4_K_M (13 GB ✅)، Devstral Small 24B Q4_K_M (16 GB ✅)، Qwen3 14B Q8_0 (15 GB ✅)، Llama 3.3 70B Q4_K_M (39 GB ❌). أفضل خيار: Mistral Small 3.1 24B بسرعة 55 tok/sec.',
+          imageAlt: 'مخطط شريطي للنماذج التي تتسع في 16 GB من VRAM لـ LLM المحلي وللنماذج 70B التي لا تتسع',
         },
         modelsFor12GB: {
           id: 'models-12gb',
@@ -1999,6 +2020,7 @@ schema: {
           ],
           image: '/images/rtx4090-70b-reality-ar.svg',
           imageCaption: 'متطلبات VRAM مقابل حد RTX 4090 24 GB: Qwen 3.6 27B Q4_K_M (16 GB ✅)، DeepSeek-R1 32B Q4_K_M (19 GB ✅)، Qwen3 32B Q5_K_M (21 GB ✅)، Llama 3.3 70B Q4_K_M (39 GB ❌ -- يتجاوز 24 GB بنسبة 63%). النقطة المثالية: نماذج 27-32B عند Q4-Q5.',
+          imageAlt: 'متطلبات VRAM لنماذج LLM المحلية مقابل حد 24 GB في RTX 4090: نماذج 27–32B تتسع ونموذج 70B Q4_K_M لا يتسع',
         },
         cpuRam: {
           id: 'cpu-ram',
@@ -2033,6 +2055,7 @@ schema: {
           ],
           image: '/images/cpu-inference-speed-ar.svg',
           imageCaption: 'سرعات الاستدلال على CPU فقط بمعالج Ryzen 9 7950X: Gemma 2 2B Q8_0 (28 tok/sec الأسرع)، Phi-4 Mini Q4_K_M (25 tok/sec أفضل خيار)، Llama 3.1 8B Q8_0 (8 tok/sec). تحقق RTX 3060 مستعملة ($285) سرعة أعلى 5-8×.',
+          imageAlt: 'سرعة استدلال LLM المحلي على CPU فقط في Ryzen 9 7950X مقارنة ببطاقة RTX 3060 مستعملة',
         },
         storage: {
           id: 'storage',
@@ -2059,6 +2082,7 @@ schema: {
           columns: ['الميزانية', 'GPU', 'CPU', 'الذاكرة', 'النماذج', 'التكلفة'],
           image: '/images/budget-builds-ar.svg',
           imageCaption: 'ثلاثة تكوينات بناء: $1500 لمستوى المدخل (RTX 4070 Ti، i7 13700، 16GB) لنماذج 7-13B، $2500 بناء متين (RTX 4080، i7 14700K، 32GB) لـ 13-30B، $4000 راقٍ (2× RTX 4090، Ryzen 9، 128GB) لأي نموذج. يقدم المستوى المتوسط أفضل قيمة.',
+          imageAlt: 'ثلاثة تكوينات عتاد لـ LLM المحلي: من جهاز مبتدئ ببطاقة GPU بسعة 16 GB إلى محطة عمل بوحدتي GPU',
         },
         cantAffordHardware: {
           id: 'cant-afford-hardware',
@@ -2099,6 +2123,7 @@ schema: {
           ],
           image: '/images/llamacpp-speed-flags-ar.svg',
           imageCaption: 'إعداد llama.cpp الافتراضي: ~40 tok/sec. المُحسّن (--n-gpu-layers 99 + --ctx-size 2048 + --flash-attn): ~90 tok/sec -- تحسّن سرعة بنسبة 125% على RTX 4070 Ti يشغّل Llama 3.1 8B Q4_K_M.',
+          imageAlt: 'سرعة LLM المحلي على RTX 4070 Ti: إعدادات llama.cpp الافتراضية مقابل خيارات GPU المُحسّنة',
         },
         mac: {
           id: 'mac-hardware',
@@ -2121,6 +2146,7 @@ schema: {
           columns: ['Mac', 'ذاكرة GPU', 'الأفضل لـ', 'القيد'],
           image: '/images/mac-hardware-comparison-ar.svg',
           imageCaption: 'مقارنة عتاد Mac: سلسلة M بذاكرة 8 GB (نماذج 3-4B)، M3 Pro 16" (18GB، 7-8B)، Mac mini M6 (16–32GB، 8-14B، $899)، M5 Pro (64GB، 32B، $1,699)، M5 Max (128GB، 70B عند Q4_K_M ~12-15 tok/sec، $2,499)، Mac Studio M5 Ultra (حتى 512GB، سعة لـ GLM-5.3، $5,499). 16 GB موحدة هو الحد الأدنى المريح لنماذج 7B على Mac.',
+          imageAlt: 'عتاد Mac لـ LLM المحلي: مستويات الذاكرة الموحدة من سلسلة M بسعة 8 GB إلى Mac Studio M5 Ultra',
         },
         serverVsConsumer: {
           id: 'server-vs-consumer',
@@ -2135,6 +2161,7 @@ schema: {
           ],
           image: '/images/server-vs-consumer-ar.svg',
           imageCaption: 'العتاد الاستهلاكي مقابل الخادم: RTX 5090 (~$4,300–5,000+ في السوق 32GB، مستخدم واحد، جزئي الوقت) مقابل RTX 6000 Ada ($7,000+، 48GB، متعدد المستخدمين، عمل 24/7). ابدأ بالعتاد الاستهلاكي؛ رقِّ إلى فئة الخادم فقط إذا كنت تشغّل خدمات إنتاجية.',
+          imageAlt: 'عتاد LLM المحلي: RTX 5090 للمستهلك مقابل RTX 6000 Ada للخوادم',
         },
         dgxSpark: {
           id: 'dgx-spark',
@@ -2705,6 +2732,7 @@ schema: {
           ],
           image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-pt.webp',
           imageCaption: 'Calculadora de VRAM mostrando a fórmula (Tamanho do Modelo × Bits) ÷ 8, com exemplos: 8B Q4_K_M = 4,7 GB, 13B Q5_K_M = 9,1 GB, 70B Q4_K_M = 40 GB. O Q4_K_M é o ponto ideal recomendado para a maioria dos hardwares.',
+          imageAlt: 'Requisitos de hardware para LLM local: fórmula da calculadora de VRAM (tamanho × bits ÷ 8) para placa de vídeo e Mac',
         },
         kvCache: {
           id: 'kv-cache',
@@ -2746,6 +2774,7 @@ schema: {
           ],
           image: '/images/gpu-tier-comparison-pt.svg',
           imageCaption: 'Recomendações de faixas de GPU (preços de rua): ~$800 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$880 RTX 5070 (12GB, 14B, 90 tok/s), ~$1,450 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4,300–5,000+ RTX 5090 (32GB, 70B, 200 tok/s), $6,950 DGX Spark (128GB, grande MoE). A escolha da GPU importa 10× mais que a CPU.',
+          imageAlt: 'Faixas de placa de vídeo para LLM local: da RTX 5060 Ti à RTX 5090 e ao DGX Spark por VRAM, preço e velocidade',
         },
         vramTiers: {
           id: 'vram-tiers',
@@ -2793,6 +2822,7 @@ schema: {
           ],
           image: '/images/models-for-16gb-vram-pt.svg',
           imageCaption: 'Gráfico de barras mostrando quais modelos cabem em 16 GB de VRAM: Mistral Small 3.1 24B Q4_K_M (13 GB ✅), Devstral Small 24B Q4_K_M (16 GB ✅), Qwen3 14B Q8_0 (15 GB ✅), Llama 3.3 70B Q4_K_M (39 GB ❌). Melhor escolha: Mistral Small 3.1 24B a 55 tok/sec.',
+          imageAlt: 'Gráfico de barras dos modelos de LLM local que cabem em 16 GB de VRAM e dos de 70B que não cabem',
         },
         modelsFor12GB: {
           id: 'models-12gb',
@@ -2839,6 +2869,7 @@ schema: {
           ],
           image: '/images/rtx4090-70b-reality-pt.svg',
           imageCaption: 'Requisitos de VRAM vs limite de 24 GB da RTX 4090: Qwen 3.6 27B Q4_K_M (16 GB ✅), DeepSeek-R1 32B Q4_K_M (19 GB ✅), Qwen3 32B Q5_K_M (21 GB ✅), Llama 3.3 70B Q4_K_M (39 GB ❌ -- excede 24 GB em 63%). Ponto ideal: modelos 27-32B em Q4-Q5.',
+          imageAlt: 'VRAM de LLM local frente ao limite de 24 GB da RTX 4090: modelos de 27–32B cabem, o 70B Q4_K_M não',
         },
         cpuRam: {
           id: 'cpu-ram',
@@ -2873,6 +2904,7 @@ schema: {
           ],
           image: '/images/cpu-inference-speed-pt.svg',
           imageCaption: 'Velocidades de inferência apenas por CPU no Ryzen 9 7950X: Gemma 2 2B Q8_0 (28 tok/sec mais rápido), Phi-4 Mini Q4_K_M (25 tok/sec melhor escolha), Llama 3.1 8B Q8_0 (8 tok/sec). Uma RTX 3060 usada ($285) atinge 5-8× mais rápido.',
+          imageAlt: 'Velocidade de LLM local só com CPU em um Ryzen 9 7950X, comparada a uma RTX 3060 usada',
         },
         storage: {
           id: 'storage',
@@ -2899,6 +2931,7 @@ schema: {
           columns: ['Orçamento', 'GPU', 'CPU', 'RAM', 'Modelos', 'Custo'],
           image: '/images/budget-builds-pt.svg',
           imageCaption: 'Três configurações de montagem: $1500 de entrada (RTX 4070 Ti, i7 13700, 16GB) para modelos 7-13B, $2500 montagem sólida (RTX 4080, i7 14700K, 32GB) para 13-30B, $4000 topo de linha (2× RTX 4090, Ryzen 9, 128GB) para qualquer modelo. O nível intermediário oferece o melhor custo-benefício.',
+          imageAlt: 'Três montagens de hardware para LLM local: de um PC de entrada com 16 GB de VRAM a uma estação com duas placas de vídeo',
         },
         cantAffordHardware: {
           id: 'cant-afford-hardware',
@@ -2939,6 +2972,7 @@ schema: {
           ],
           image: '/images/llamacpp-speed-flags-pt.svg',
           imageCaption: 'Config padrão do llama.cpp: ~40 tok/sec. Otimizada (--n-gpu-layers 99 + --ctx-size 2048 + --flash-attn): ~90 tok/sec -- uma melhoria de 125% na velocidade na RTX 4070 Ti rodando o Llama 3.1 8B Q4_K_M.',
+          imageAlt: 'Velocidade de LLM local em uma RTX 4070 Ti: configuração padrão do llama.cpp contra opções otimizadas de GPU',
         },
         mac: {
           id: 'mac-hardware',
@@ -2961,6 +2995,7 @@ schema: {
           columns: ['Mac', 'Memória de GPU', 'Melhor Para', 'Limitação'],
           image: '/images/mac-hardware-comparison-pt.svg',
           imageCaption: 'Comparação de hardware Mac: série M 8 GB (modelos 3-4B), M3 Pro 16" (18GB, 7-8B), Mac mini M6 (16–32GB, 8-14B, $899), M5 Pro (64GB, 32B, $1.699), M5 Max (128GB, 70B em Q4_K_M ~12-15 tok/sec, $2.499), Mac Studio M5 Ultra (até 512GB, capacidade para GLM-5.3, $5.499). 16 GB unificada é o mínimo confortável para modelos 7B em um Mac.',
+          imageAlt: 'Hardware para LLM local no Mac: níveis de memória unificada, da série M de 8 GB ao Mac Studio M5 Ultra',
         },
         serverVsConsumer: {
           id: 'server-vs-consumer',
@@ -2975,6 +3010,7 @@ schema: {
           ],
           image: '/images/server-vs-consumer-pt.svg',
           imageCaption: 'Hardware de consumidor vs servidor: RTX 5090 (~$4,300–5,000+ de rua, 32GB, monousuário, meio período) vs RTX 6000 Ada ($7,000+, 48GB, multiusuário, regime 24/7). Comece com hardware de consumo; migre para nível servidor apenas se rodar serviços de produção.',
+          imageAlt: 'Hardware para LLM local: RTX 5090 de consumidor contra RTX 6000 Ada de servidor, uso individual ou 24/7',
         },
         dgxSpark: {
           id: 'dgx-spark',
@@ -3545,6 +3581,7 @@ schema: {
           ],
           image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-de.webp',
           imageCaption: 'VRAM-Rechner mit der Formel (Modellgroesse × Bits) ÷ 8, mit Beispielen: 8B Q4_K_M = 4,7 GB, 13B Q5_K_M = 9,1 GB, 70B Q4_K_M = 40 GB. Q4_K_M ist der empfohlene Sweetspot fuer die meiste Hardware.',
+          imageAlt: 'Hardware-Anforderungen für lokale LLMs: VRAM-Rechner mit der Formel (Modellgröße × Bits) ÷ 8 für GPU und Mac',
         },
         kvCache: {
           id: 'kv-cache',
@@ -3586,6 +3623,7 @@ schema: {
           ],
           image: '/images/gpu-tier-comparison-de.svg',
           imageCaption: 'GPU-Stufenempfehlungen (Strassenpreise): ~$800 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$880 RTX 5070 (12GB, 14B, 90 tok/s), ~$1.450 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4.300–5.000+ RTX 5090 (32GB, 70B, 200 tok/s), $6.950 DGX Spark (128GB, grosse MoE). Die GPU-Wahl ist 10x wichtiger als die CPU.',
+          imageAlt: 'GPU-Stufen für lokale LLMs: von der RTX 5060 Ti bis zur RTX 5090 und DGX Spark nach VRAM, Preis und Tempo',
         },
         vramTiers: {
           id: 'vram-tiers',
@@ -3633,6 +3671,7 @@ schema: {
           ],
           image: '/images/models-for-16gb-vram-de.svg',
           imageCaption: 'Balkendiagramm, welche Modelle in 16 GB VRAM passen: Mistral Small 3.1 24B Q4_K_M (13 GB ✅), Devstral Small 24B Q4_K_M (16 GB ✅), Qwen3 14B Q8_0 (15 GB ✅), Llama 3.3 70B Q4_K_M (39 GB ❌). Beste Wahl: Mistral Small 3.1 24B fuer 55 tok/sec.',
+          imageAlt: 'Balkendiagramm: Welche lokalen LLMs in 16 GB GPU-VRAM passen und welche 70B-Modelle nicht',
         },
         modelsFor12GB: {
           id: 'models-12gb',
@@ -3679,6 +3718,7 @@ schema: {
           ],
           image: '/images/rtx4090-70b-reality-de.svg',
           imageCaption: 'VRAM-Anforderungen vs. RTX-4090-24-GB-Grenze: Qwen 3.6 27B Q4_K_M (16 GB ✅), DeepSeek-R1 32B Q4_K_M (19 GB ✅), Qwen3 32B Q5_K_M (21 GB ✅), Llama 3.3 70B Q4_K_M (39 GB ❌ -- ueberschreitet 24 GB um 63 %). Sweetspot: 27-32B-Modelle bei Q4-Q5.',
+          imageAlt: 'VRAM-Bedarf lokaler LLMs gegenüber dem 24-GB-Limit der RTX 4090: 27–32B-Modelle passen, 70B Q4_K_M nicht',
         },
         cpuRam: {
           id: 'cpu-ram',
@@ -3713,6 +3753,7 @@ schema: {
           ],
           image: '/images/cpu-inference-speed-de.svg',
           imageCaption: 'CPU-only-Inferenzgeschwindigkeiten auf Ryzen 9 7950X: Gemma 2 2B Q8_0 (28 tok/sec am schnellsten), Phi-4 Mini Q4_K_M (25 tok/sec beste Wahl), Llama 3.1 8B Q8_0 (8 tok/sec). Eine gebrauchte RTX 3060 ($285) erreicht 5-8x schneller.',
+          imageAlt: 'Geschwindigkeit lokaler LLMs nur auf der CPU eines Ryzen 9 7950X im Vergleich zu einer gebrauchten RTX 3060',
         },
         storage: {
           id: 'storage',
@@ -3739,6 +3780,7 @@ schema: {
           columns: ['Budget', 'GPU', 'CPU', 'RAM', 'Models', 'Cost'],
           image: '/images/budget-builds-de.svg',
           imageCaption: 'Drei Build-Konfigurationen: $1500 Einstiegsklasse (RTX 4070 Ti, i7 13700, 16GB) fuer 7-13B-Modelle, $2500 solider Build (RTX 4080, i7 14700K, 32GB) fuer 13-30B, $4000 High-End (2× RTX 4090, Ryzen 9, 128GB) fuer jedes Modell. Die Mittelklasse bietet das beste Preis-Leistungs-Verhaeltnis.',
+          imageAlt: 'Drei Hardware-Konfigurationen für lokale LLMs: vom Einsteiger-PC mit 16-GB-GPU bis zur Dual-GPU-Workstation',
         },
         cantAffordHardware: {
           id: 'cant-afford-hardware',
@@ -3779,6 +3821,7 @@ schema: {
           ],
           image: '/images/llamacpp-speed-flags-de.svg',
           imageCaption: 'Standard-llama.cpp-Konfiguration: ~40 tok/sec. Optimiert (--n-gpu-layers 99 + --ctx-size 2048 + --flash-attn): ~90 tok/sec -- eine Geschwindigkeitssteigerung von 125 % auf der RTX 4070 Ti bei Llama 3.1 8B Q4_K_M.',
+          imageAlt: 'Tempo lokaler LLMs auf einer RTX 4070 Ti: llama.cpp-Standard im Vergleich zu optimierten GPU-Optionen',
         },
         mac: {
           id: 'mac-hardware',
@@ -3801,6 +3844,7 @@ schema: {
           columns: ['Mac', 'GPU Memory', 'Best For', 'Limitation'],
           image: '/images/mac-hardware-comparison-de.svg',
           imageCaption: 'Mac-Hardware-Vergleich: 8 GB M-Serie (3-4B-Modelle), M3 Pro 16" (18GB, 7-8B), Mac mini M6 (16–32GB, 8-14B, $899), M5 Pro (64GB, 32B, $1.699), M5 Max (128GB, 70B bei Q4_K_M ~12-15 tok/sec, $2.499), Mac Studio M5 Ultra (bis 512GB, GLM-5.3-Kapazitaet, $5.499). 16 GB unified ist das komfortable Minimum fuer 7B-Modelle auf einem Mac.',
+          imageAlt: 'Mac-Hardware für lokale LLMs: Stufen des einheitlichen Speichers von der 8-GB-M-Serie bis zum Mac Studio M5 Ultra',
         },
         serverVsConsumer: {
           id: 'server-vs-consumer',
@@ -3815,6 +3859,7 @@ schema: {
           ],
           image: '/images/server-vs-consumer-de.svg',
           imageCaption: 'Consumer- vs. Server-Hardware: RTX 5090 (~$4.300–5.000+ Strasse, 32GB, Einzelnutzer, Teilzeit) vs. RTX 6000 Ada ($7.000+, 48GB, Multi-User, 24/7-Betrieb). Beginne mit Consumer-Hardware; ruestest nur auf Server-Klasse auf, wenn du Produktionsdienste betreibst.',
+          imageAlt: 'Hardware für lokale LLMs im Vergleich: RTX 5090 für Endkunden gegen RTX 6000 Ada für Server',
         },
         dgxSpark: {
           id: 'dgx-spark',
@@ -4385,6 +4430,7 @@ schema: {
           ],
           image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-fr.webp',
           imageCaption: 'Calculateur de VRAM montrant la formule (taille du modele x bits) / 8, avec exemples : 8B Q4_K_M = 4,7 Go, 13B Q5_K_M = 9,1 Go, 70B Q4_K_M = 40 Go. Q4_K_M est le point ideal recommande pour la plupart du materiel.',
+          imageAlt: 'Besoins en matériel pour LLM local : calculatrice de VRAM selon la formule (taille × bits) ÷ 8 pour GPU et Mac',
         },
         kvCache: {
           id: 'kv-cache',
@@ -4426,6 +4472,7 @@ schema: {
           ],
           image: '/images/gpu-tier-comparison-fr.svg',
           imageCaption: 'Recommandations de paliers de GPU (prix de rue) : ~$800 RTX 5060 Ti (16 Go, 7-13B, 60 tok/s), ~$880 RTX 5070 (12 Go, 14B, 90 tok/s), ~$1,450 RTX 5080 (16 Go, 14-32B, 130 tok/s), ~$4,300-5,000+ RTX 5090 (32 Go, 70B, 200 tok/s), $6,950 DGX Spark (128 Go, grand MoE). Le choix du GPU compte 10x plus que le CPU.',
+          imageAlt: 'Niveaux de GPU pour LLM local : de la RTX 5060 Ti à la RTX 5090 et au DGX Spark selon VRAM, prix et vitesse',
         },
         vramTiers: {
           id: 'vram-tiers',
@@ -4473,6 +4520,7 @@ schema: {
           ],
           image: '/images/models-for-16gb-vram-fr.svg',
           imageCaption: 'Graphique a barres montrant quels modeles tiennent dans 16 Go de VRAM : Mistral Small 3.1 24B Q4_K_M (13 Go ✅), Devstral Small 24B Q4_K_M (16 Go ✅), Qwen3 14B Q8_0 (15 Go ✅), Llama 3.3 70B Q4_K_M (39 Go ❌). Meilleur choix : Mistral Small 3.1 24B pour 55 tok/sec.',
+          imageAlt: 'Histogramme des modèles de LLM local qui tiennent dans 16 Go de VRAM GPU et des modèles 70B qui n\'y tiennent pas',
         },
         modelsFor12GB: {
           id: 'models-12gb',
@@ -4519,6 +4567,7 @@ schema: {
           ],
           image: '/images/rtx4090-70b-reality-fr.svg',
           imageCaption: 'Besoins en VRAM vs limite de 24 Go de la RTX 4090 : Qwen 3.6 27B Q4_K_M (16 Go ✅), DeepSeek-R1 32B Q4_K_M (19 Go ✅), Qwen3 32B Q5_K_M (21 Go ✅), Llama 3.3 70B Q4_K_M (39 Go ❌ -- depasse 24 Go de 63 %). Point ideal : modeles 27-32B en Q4-Q5.',
+          imageAlt: 'VRAM d\'un LLM local face à la limite de 24 Go de la RTX 4090 : les modèles 27–32B tiennent, le 70B Q4_K_M non',
         },
         cpuRam: {
           id: 'cpu-ram',
@@ -4553,6 +4602,7 @@ schema: {
           ],
           image: '/images/cpu-inference-speed-fr.svg',
           imageCaption: 'Vitesses d\'inference CPU seul sur Ryzen 9 7950X : Gemma 2 2B Q8_0 (28 tok/sec le plus rapide), Phi-4 Mini Q4_K_M (25 tok/sec meilleur choix), Llama 3.1 8B Q8_0 (8 tok/sec). Une RTX 3060 d\'occasion ($285) atteint 5-8x plus vite.',
+          imageAlt: 'Vitesse d\'un LLM local sur CPU seul avec un Ryzen 9 7950X, comparée à une RTX 3060 d\'occasion',
         },
         storage: {
           id: 'storage',
@@ -4579,6 +4629,7 @@ schema: {
           columns: ['Budget', 'GPU', 'CPU', 'RAM', 'Models', 'Cost'],
           image: '/images/budget-builds-fr.svg',
           imageCaption: 'Trois configurations : $1500 entree de gamme (RTX 4070 Ti, i7 13700, 16 Go) pour modeles 7-13B, $2500 solide (RTX 4080, i7 14700K, 32 Go) pour 13-30B, $4000 haut de gamme (2× RTX 4090, Ryzen 9, 128 Go) pour tout modele. Le milieu de gamme offre le meilleur rapport qualite-prix.',
+          imageAlt: 'Trois configurations de matériel pour LLM local : du PC d\'entrée avec GPU 16 Go à la station à deux GPU',
         },
         cantAffordHardware: {
           id: 'cant-afford-hardware',
@@ -4619,6 +4670,7 @@ schema: {
           ],
           image: '/images/llamacpp-speed-flags-fr.svg',
           imageCaption: 'Config llama.cpp par defaut : ~40 tok/sec. Optimisee (--n-gpu-layers 99 + --ctx-size 2048 + --flash-attn) : ~90 tok/sec -- une amelioration de vitesse de 125 % sur RTX 4070 Ti faisant tourner Llama 3.1 8B Q4_K_M.',
+          imageAlt: 'Vitesse d\'un LLM local sur RTX 4070 Ti : réglages par défaut de llama.cpp contre options GPU optimisées',
         },
         mac: {
           id: 'mac-hardware',
@@ -4642,6 +4694,7 @@ schema: {
           columns: ['Mac', 'GPU Memory', 'Best For', 'Limitation'],
           image: '/images/mac-hardware-comparison-fr.svg',
           imageCaption: 'Comparaison du materiel Mac : serie M 8 Go (modeles 3-4B), M3 Pro 16" (18 Go, 7-8B), Mac mini M6 (16–32 Go, 8-14B, 899 $), M5 Pro (64 Go, 32B, 1 699 $), M5 Max (128 Go, 70B en Q4_K_M ~12-15 tok/sec, 2 499 $), Mac Studio M5 Ultra (jusqu\'a 512 Go, capacite GLM-5.3, 5 499 $). 16 Go unifies est le minimum confortable pour les modeles 7B sur un Mac.',
+          imageAlt: 'Matériel Mac pour LLM local : niveaux de mémoire unifiée, de la série M 8 Go au Mac Studio M5 Ultra',
         },
         serverVsConsumer: {
           id: 'server-vs-consumer',
@@ -4656,6 +4709,7 @@ schema: {
           ],
           image: '/images/server-vs-consumer-fr.svg',
           imageCaption: 'Materiel grand public vs serveur : RTX 5090 (~$4,300-5,000+ rue, 32 Go, mono-utilisateur, temps partiel) vs RTX 6000 Ada ($7,000+, 48 Go, multi-utilisateur, service 24h/24). Commencez par du materiel grand public ; passez au niveau serveur uniquement pour des services de production.',
+          imageAlt: 'Matériel pour LLM local : RTX 5090 grand public face à la RTX 6000 Ada serveur, usage individuel ou 24/7',
         },
         dgxSpark: {
           id: 'dgx-spark',
@@ -5226,6 +5280,7 @@ schema: {
           ],
           image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-ja.webp',
           imageCaption: '計算式（モデルサイズ × ビット数）÷ 8 を示すVRAM計算機、例付き：8B Q4_K_M = 4.7 GB、13B Q5_K_M = 9.1 GB、70B Q4_K_M = 40 GB。Q4_K_Mはほとんどのハードウェアで推奨されるスイートスポットです。',
+          imageAlt: 'ローカルLLMハードウェア：GPU・Mac向けVRAM計算式（モデルサイズ×ビット数÷8）',
         },
         kvCache: {
           id: 'kv-cache',
@@ -5267,6 +5322,7 @@ schema: {
           ],
           image: '/images/gpu-tier-comparison-ja.svg',
           imageCaption: 'GPUティアの推奨（実勢価格）：約$800 RTX 5060 Ti（16GB、7-13B、60 tok/s）、約$880 RTX 5070（12GB、14B、90 tok/s）、約$1,450 RTX 5080（16GB、14-32B、130 tok/s）、約$4,300〜5,000以上 RTX 5090（32GB、70B、200 tok/s）、$6,950 DGX Spark（128GB、大規模MoE）。GPUの選択はCPUより10倍重要です。',
+          imageAlt: 'ローカルLLM向けGPUの価格帯別ガイド：RTX 5060 TiからRTX 5090、DGX SparkまでVRAMと速度で比較',
         },
         vramTiers: {
           id: 'vram-tiers',
@@ -5314,6 +5370,7 @@ schema: {
           ],
           image: '/images/models-for-16gb-vram-ja.svg',
           imageCaption: '16 GB VRAMに収まるモデルを示す棒グラフ：Mistral Small 3.1 24B Q4_K_M（13 GB ✅）、Devstral Small 24B Q4_K_M（16 GB ✅）、Qwen3 14B Q8_0（15 GB ✅）、Llama 3.3 70B Q4_K_M（39 GB ❌）。ベストな選択肢：55 tok/secのMistral Small 3.1 24B。',
+          imageAlt: 'ローカルLLMが16GB VRAMのGPUに収まるモデルと、収まらない70Bモデルを示す棒グラフ',
         },
         modelsFor12GB: {
           id: 'models-12gb',
@@ -5360,6 +5417,7 @@ schema: {
           ],
           image: '/images/rtx4090-70b-reality-ja.svg',
           imageCaption: 'VRAM要件 vs RTX 4090 24 GB上限：Qwen 3.6 27B Q4_K_M（16 GB ✅）、DeepSeek-R1 32B Q4_K_M（19 GB ✅）、Qwen3 32B Q5_K_M（21 GB ✅）、Llama 3.3 70B Q4_K_M（39 GB ❌ — 24 GBを63%超過）。スイートスポット：Q4〜Q5での27〜32Bモデル。',
+          imageAlt: 'ローカルLLMのVRAM要件とRTX 4090の24GB上限：27〜32Bは収まり、70B Q4_K_Mは収まらない',
         },
         cpuRam: {
           id: 'cpu-ram',
@@ -5394,6 +5452,7 @@ schema: {
           ],
           image: '/images/cpu-inference-speed-ja.svg',
           imageCaption: 'Ryzen 9 7950XでのCPUのみの推論速度：Gemma 2 2B Q8_0（28 tok/sec、最速）、Phi-4 Mini Q4_K_M（25 tok/sec、ベストな選択肢）、Llama 3.1 8B Q8_0（8 tok/sec）。中古のRTX 3060（$285）は5〜8倍高速を達成します。',
+          imageAlt: 'ローカルLLMのCPUのみ推論速度：Ryzen 9 7950Xと中古RTX 3060の比較',
         },
         storage: {
           id: 'storage',
@@ -5420,6 +5479,7 @@ schema: {
           columns: ['Budget', 'GPU', 'CPU', 'RAM', 'Models', 'Cost'],
           image: '/images/budget-builds-ja.svg',
           imageCaption: '3つの構成：$1500のエントリーレベル（RTX 4070 Ti、i7 13700、16GB）は7〜13Bモデル向け、$2500のしっかりした構成（RTX 4080、i7 14700K、32GB）は13〜30B向け、$4000のハイエンド（2× RTX 4090、Ryzen 9、128GB）は任意のモデル向け。中間レベルが最良の価値を提供します。',
+          imageAlt: 'ローカルLLMハードウェアの3構成：16GB GPUのエントリーPCからデュアルGPUワークステーションまで',
         },
         cantAffordHardware: {
           id: 'cant-afford-hardware',
@@ -5460,6 +5520,7 @@ schema: {
           ],
           image: '/images/llamacpp-speed-flags-ja.svg',
           imageCaption: 'デフォルトのllama.cpp設定：約40 tok/sec。最適化（--n-gpu-layers 99 + --ctx-size 2048 + --flash-attn）：約90 tok/sec — Llama 3.1 8B Q4_K_Mを実行するRTX 4070 Tiで125%の速度向上。',
+          imageAlt: 'ローカルLLMの速度（RTX 4070 Ti）：llama.cpp既定設定と最適化したGPUオプションの比較',
         },
         mac: {
           id: 'mac-hardware',
@@ -5482,6 +5543,7 @@ schema: {
           columns: ['Mac', 'GPU Memory', 'Best For', 'Limitation'],
           image: '/images/mac-hardware-comparison-ja.svg',
           imageCaption: 'Macハードウェア比較：8 GB Mシリーズ（3〜4Bモデル）、M3 Pro 16"（18GB、7〜8B）、Mac mini M6（16〜32GB、8-14B、$899）、M5 Pro（64GB、32B、$1,699）、M5 Max（128GB、70BをQ4_K_Mで約12〜15 tok/sec、$2,499）、Mac Studio M5 Ultra（最大512GB、GLM-5.3級の容量、$5,499）。16 GBユニファイドがMacで7Bモデルを使うための快適な最小値です。',
+          imageAlt: 'MacでローカルLLMを動かすハードウェア：8GB Mシリーズ〜Mac Studio M5 Ultraのユニファイドメモリ階層',
         },
         serverVsConsumer: {
           id: 'server-vs-consumer',
@@ -5496,6 +5558,7 @@ schema: {
           ],
           image: '/images/server-vs-consumer-ja.svg',
           imageCaption: 'コンシューマー vs サーバーハードウェア：RTX 5090（実勢約$4,300〜5,000以上、32GB、シングルユーザー、パートタイム）vs RTX 6000 Ada（$7,000以上、48GB、マルチユーザー、24時間365日の稼働）。コンシューマーハードウェアから始め、本番サービスを実行する場合のみサーバーグレードにアップグレードしましょう。',
+          imageAlt: 'ローカルLLMハードウェアの比較：個人向けRTX 5090とサーバー向けRTX 6000 Ada',
         },
         dgxSpark: {
           id: 'dgx-spark',
@@ -6066,6 +6129,7 @@ schema: {
           ],
           image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-zh.webp',
           imageCaption: '显存计算器展示公式 (Model Size × Bits) ÷ 8，示例：8B Q4_K_M = 4.7 GB，13B Q5_K_M = 9.1 GB，70B Q4_K_M = 40 GB。Q4_K_M 是大多数硬件推荐的甜点。',
+          imageAlt: '本地LLM硬件：GPU与Mac的VRAM计算公式（模型大小×位数÷8）',
         },
         kvCache: {
           id: 'kv-cache',
@@ -6107,6 +6171,7 @@ schema: {
           ],
           image: '/images/gpu-tier-comparison-zh.svg',
           imageCaption: 'GPU 档位推荐（街价）：~$800 RTX 5060 Ti（16GB，7-13B，60 tok/s），~$880 RTX 5070（12GB，14B，90 tok/s），~$1,450 RTX 5080（16GB，14-32B，130 tok/s），~$4,300–5,000+ RTX 5090（32GB，70B，200 tok/s），$6,950 DGX Spark（128GB，大型 MoE）。GPU 选择比 CPU 重要 10 倍。',
+          imageAlt: '本地LLM硬件之GPU档位推荐：从RTX 5060 Ti到RTX 5090和DGX Spark的VRAM、价格与速度',
         },
         vramTiers: {
           id: 'vram-tiers',
@@ -6154,6 +6219,7 @@ schema: {
           ],
           image: '/images/models-for-16gb-vram-zh.svg',
           imageCaption: '柱状图显示哪些模型能装入 16 GB 显存：Mistral Small 3.1 24B Q4_K_M（13 GB ✅），Devstral Small 24B Q4_K_M（16 GB ✅），Qwen3 14B Q8_0（15 GB ✅），Llama 3.3 70B Q4_K_M（39 GB ❌）。最佳选择：Mistral Small 3.1 24B，55 tok/sec。',
+          imageAlt: '柱状图：16GB VRAM的GPU能运行哪些本地LLM模型，哪些70B模型放不下',
         },
         modelsFor12GB: {
           id: 'models-12gb',
@@ -6200,6 +6266,7 @@ schema: {
           ],
           image: '/images/rtx4090-70b-reality-zh.svg',
           imageCaption: '显存要求 vs RTX 4090 24 GB 上限：Qwen 3.6 27B Q4_K_M（16 GB ✅），DeepSeek-R1 32B Q4_K_M（19 GB ✅），Qwen3 32B Q5_K_M（21 GB ✅），Llama 3.3 70B Q4_K_M（39 GB ❌——超出 24 GB 达 63%）。甜点：27-32B 模型在 Q4-Q5。',
+          imageAlt: '本地LLM的VRAM需求与RTX 4090的24GB上限：27–32B模型可运行，70B Q4_K_M放不下',
         },
         cpuRam: {
           id: 'cpu-ram',
@@ -6234,6 +6301,7 @@ schema: {
           ],
           image: '/images/cpu-inference-speed-zh.svg',
           imageCaption: 'Ryzen 9 7950X 上的纯CPU推理速度：Gemma 2 2B Q8_0（28 tok/sec 最快），Phi-4 Mini Q4_K_M（25 tok/sec 最佳选择），Llama 3.1 8B Q8_0（8 tok/sec）。二手 RTX 3060（$285）快 5-8 倍。',
+          imageAlt: '本地LLM仅用CPU的推理速度：Ryzen 9 7950X与二手RTX 3060对比',
         },
         storage: {
           id: 'storage',
@@ -6260,6 +6328,7 @@ schema: {
           columns: ['预算', 'GPU', 'CPU', '内存', '模型', '成本'],
           image: '/images/budget-builds-zh.svg',
           imageCaption: '三种配置方案：$1500 入门级（RTX 4070 Ti，i7 13700，16GB）用于 7-13B 模型，$2500 稳健配置（RTX 4080，i7 14700K，32GB）用于 13-30B，$4000 高端（2× RTX 4090，Ryzen 9，128GB）用于任意模型。中端提供最佳性价比。',
+          imageAlt: '本地LLM硬件的三种配置：从16GB GPU入门主机到双GPU高端工作站',
         },
         cantAffordHardware: {
           id: 'cant-afford-hardware',
@@ -6300,6 +6369,7 @@ schema: {
           ],
           image: '/images/llamacpp-speed-flags-zh.svg',
           imageCaption: '默认 llama.cpp 配置：~40 tok/sec。优化后（--n-gpu-layers 99 + --ctx-size 2048 + --flash-attn）：~90 tok/sec——在运行 Llama 3.1 8B Q4_K_M 的 RTX 4070 Ti 上提速 125%。',
+          imageAlt: 'RTX 4070 Ti上本地LLM的速度：llama.cpp默认设置与优化后的GPU参数对比',
         },
         mac: {
           id: 'mac-hardware',
@@ -6322,6 +6392,7 @@ schema: {
           columns: ['Mac', 'GPU内存', '最适合', '局限'],
           image: '/images/mac-hardware-comparison-zh.svg',
           imageCaption: 'Mac 硬件对比：8 GB M 系列（3-4B 模型），M3 Pro 16"（18GB，7-8B），Mac mini M6（16–32GB，8-14B，$899），M5 Pro（64GB，32B，$1,699），M5 Max（128GB，Q4_K_M 下的 70B ~12-15 tok/sec，$2,499），Mac Studio M5 Ultra（最高 512GB，具备 GLM-5.3 级容量，$5,499）。16 GB 统一内存是 Mac 上 7B 模型的舒适最低配置。',
+          imageAlt: 'Mac上的本地LLM硬件：从8GB M系列到Mac Studio M5 Ultra的统一内存档位',
         },
         serverVsConsumer: {
           id: 'server-vs-consumer',
@@ -6336,6 +6407,7 @@ schema: {
           ],
           image: '/images/server-vs-consumer-zh.svg',
           imageCaption: '消费级 vs 服务器硬件：RTX 5090（街价 ~$4,300–5,000+，32GB，单用户，兼职）vs RTX 6000 Ada（$7,000+，48GB，多用户，24/7 工作负荷）。从消费级硬件起步；仅在运行生产服务时升级到服务器级。',
+          imageAlt: '本地LLM硬件对比：消费级RTX 5090与服务器级RTX 6000 Ada',
         },
         dgxSpark: {
           id: 'dgx-spark',
@@ -6905,6 +6977,7 @@ schema: {
           ],
           image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-ko.webp',
           imageCaption: 'VRAM 계산기: 공식 (모델 크기 × 비트 수) ÷ 8, 예시 — 8B Q4_K_M = 4.7GB, 13B Q5_K_M = 9.1GB, 70B Q4_K_M = 40GB. Q4_K_M이 대부분의 하드웨어에서 권장되는 최적 지점입니다.',
+          imageAlt: '로컬 LLM 하드웨어: GPU와 Mac을 위한 VRAM 계산 공식(모델 크기 × 비트 수 ÷ 8)',
         },
         kvCache: {
           id: 'kv-cache',
@@ -6946,6 +7019,7 @@ schema: {
           ],
           image: '/images/gpu-tier-comparison-en.svg',
           imageCaption: 'GPU 티어 권장 사항(실거래가): ~$800 RTX 5060 Ti(16GB, 7~13B, 60 tok/s), ~$880 RTX 5070(12GB, 14B, 90 tok/s), ~$1,450 RTX 5080(16GB, 14~32B, 130 tok/s), ~$4,300~5,000+ RTX 5090(32GB, 70B, 200 tok/s), $6,950 DGX Spark(128GB, 대형 MoE). GPU 선택은 CPU보다 10배 더 중요합니다.',
+          imageAlt: '로컬 LLM용 GPU 등급 가이드: RTX 5060 Ti부터 RTX 5090, DGX Spark까지 VRAM·가격·속도 비교',
         },
         vramTiers: {
           id: 'vram-tiers',
@@ -6993,6 +7067,7 @@ schema: {
           ],
           image: '/images/models-for-16gb-vram-en.svg',
           imageCaption: '16GB VRAM에 적합한 모델 막대 차트: Mistral Small 3.1 24B Q4_K_M(13GB ✅), Devstral Small 24B Q4_K_M(16GB ✅), Qwen3 14B Q8_0(15GB ✅), Llama 3.3 70B Q4_K_M(39GB ❌). 최선의 선택: 55 tok/sec의 Mistral Small 3.1 24B.',
+          imageAlt: '16GB VRAM GPU에 들어가는 로컬 LLM 모델과 들어가지 않는 70B 모델을 보여 주는 막대 차트',
         },
         modelsFor12GB: {
           id: 'models-12gb',
@@ -7039,6 +7114,7 @@ schema: {
           ],
           image: '/images/rtx4090-70b-reality-en.svg',
           imageCaption: 'RTX 4090 24GB 한도 대비 VRAM 요구 사항: Qwen 3.6 27B Q4_K_M(16GB ✅), DeepSeek-R1 32B Q4_K_M(19GB ✅), Qwen3 32B Q5_K_M(21GB ✅), Llama 3.3 70B Q4_K_M(39GB ❌ — 24GB를 63% 초과). 최적 지점: Q4~Q5의 27~32B 모델.',
+          imageAlt: '로컬 LLM의 VRAM 요구량과 RTX 4090의 24GB 한계: 27~32B는 가능, 70B Q4_K_M은 불가',
         },
         cpuRam: {
           id: 'cpu-ram',
@@ -7073,6 +7149,7 @@ schema: {
           ],
           image: '/images/cpu-inference-speed-en.svg',
           imageCaption: 'Ryzen 9 7950X에서의 CPU 전용 추론 속도: Gemma 2 2B Q8_0(28 tok/sec 최고), Phi-4 Mini Q4_K_M(25 tok/sec 최선의 선택), Llama 3.1 8B Q8_0(8 tok/sec). 중고 RTX 3060($285)은 5~8배 더 빠른 속도를 달성합니다.',
+          imageAlt: '로컬 LLM의 CPU 전용 추론 속도: Ryzen 9 7950X와 중고 RTX 3060 비교',
         },
         storage: {
           id: 'storage',
@@ -7099,6 +7176,7 @@ schema: {
           columns: ['예산', 'GPU', 'CPU', 'RAM', '모델', '평가'],
           image: '/images/budget-builds-en.svg',
           imageCaption: '세 가지 빌드 구성: $1500 입문형(RTX 4070 Ti, i7 13700, 16GB) — 7~13B 모델, $2500 탄탄한 빌드(RTX 4080, i7 14700K, 32GB) — 13~30B, $4000 고급형(2× RTX 4090, Ryzen 9, 128GB) — 모든 모델. 중급 빌드가 최고의 가성비.',
+          imageAlt: '로컬 LLM 하드웨어 구성 3가지: 16GB GPU 입문용 PC부터 듀얼 GPU 워크스테이션까지',
         },
         cantAffordHardware: {
           id: 'cant-afford-hardware',
@@ -7139,6 +7217,7 @@ schema: {
           ],
           image: '/images/llamacpp-speed-flags-en.svg',
           imageCaption: '기본 llama.cpp 설정: ~40 tok/sec. 최적화(--n-gpu-layers 99 + --ctx-size 2048 + --flash-attn): ~90 tok/sec — Llama 3.1 8B Q4_K_M을 실행하는 RTX 4070 Ti에서 125% 속도 향상.',
+          imageAlt: 'RTX 4070 Ti에서의 로컬 LLM 속도: llama.cpp 기본 설정과 최적화된 GPU 옵션 비교',
         },
         mac: {
           id: 'mac-hardware',
@@ -7159,6 +7238,7 @@ schema: {
           columns: ['Mac', 'GPU 메모리', '최적 용도', '제한'],
           image: '/images/mac-hardware-comparison-en.svg',
           imageCaption: 'Mac 하드웨어 비교: M3 MacBook Pro 16"(18GB, 7B), Mac mini M6(16~32GB, 8~14B, $899), M5 Pro(64GB, 30B, $1,699), M5 Max(128GB, Q4_K_M에서 70B, $2,499), Mac Studio M5 Ultra(최대 512GB, GLM-5.3급 용량, $5,499). M5 Max는 듀얼 RTX 4090 데스크톱에 필적하는 70B 모델을 처리하는 최초의 Mac입니다.',
+          imageAlt: 'Mac용 로컬 LLM 하드웨어: 8GB M 시리즈부터 Mac Studio M5 Ultra까지 통합 메모리 단계',
         },
         serverVsConsumer: {
           id: 'server-vs-consumer',
@@ -7173,6 +7253,7 @@ schema: {
           ],
           image: '/images/server-vs-consumer-en.svg',
           imageCaption: '소비자용 vs 서버용 하드웨어: RTX 4090(~$2,300, 중고/EOL, 24GB, 단일 사용자, 부분 시간) vs RTX 6000 Ada($5000+, 48GB, 다중 사용자, 24/7). 소비자용 하드웨어로 시작하고, 프로덕션 서비스를 운영할 때만 서버급으로 업그레이드하십시오.',
+          imageAlt: '로컬 LLM 하드웨어 비교: 개인용 RTX 5090과 서버용 RTX 6000 Ada',
         },
         dgxSpark: {
           id: 'dgx-spark',

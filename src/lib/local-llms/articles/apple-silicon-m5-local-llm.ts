@@ -224,6 +224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-m5-local-llm-config-comparison-hero-en.webp',
         imageCaption: 'Mac Studio no longer offers an M5 Pro tier -- the Mac mini is now the cheapest way to get an M5 Pro chip.',
+        imageAlt: 'Apple Silicon local LLM configs: Mac Studio has no M5 Pro tier, so the Mac mini is the cheapest way to get an M5 Pro',
       },
       'memory-bandwidth': {
         id: 'memory-bandwidth',
@@ -476,6 +477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-en.webp',
         imageCaption: 'Apple\'s advantage grows with model size; NVIDIA\'s advantage grows with raw speed and ecosystem breadth.',
+        imageAlt: 'Apple Silicon versus NVIDIA PC for local LLM: Apple\'s edge grows with model size, NVIDIA\'s with raw speed and ecosystem',
       },
       'inference-engines': {
         id: 'inference-engines',
@@ -711,6 +713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-m5-local-llm-config-comparison-hero-es.webp',
         imageCaption: 'El Mac Studio ya no ofrece nivel M5 Pro: el Mac mini es ahora la forma más barata de conseguir un chip M5 Pro.',
+        imageAlt: 'Apple Silicon para LLM local: el Mac Studio ya no ofrece nivel M5 Pro y el Mac mini es la forma más barata de tenerlo',
       },
       'memory-bandwidth': {
         id: 'memory-bandwidth',
@@ -963,6 +966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-es.webp',
         imageCaption: 'La ventaja de Apple crece con el tamaño del modelo; la de NVIDIA crece con la velocidad bruta y la amplitud del ecosistema.',
+        imageAlt: 'Apple Silicon frente a PC con NVIDIA para LLM local: Apple gana con modelos grandes y NVIDIA en velocidad bruta',
       },
       'inference-engines': {
         id: 'inference-engines',
@@ -1210,6 +1214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-m5-local-llm-config-comparison-hero-ar.webp',
         imageCaption: 'لم يعد Mac Studio يقدّم فئة M5 Pro — أصبح Mac mini أرخص طريقة للحصول على شريحة M5 Pro.',
+        imageAlt: 'Apple Silicon لـ LLM المحلي: لا يقدّم Mac Studio فئة M5 Pro، وMac mini أرخص طريقة للحصول على شريحة M5 Pro',
       },
       'memory-bandwidth': {
         id: 'memory-bandwidth',
@@ -1462,6 +1467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-ar.webp',
         imageCaption: 'تزداد ميزة Apple مع حجم النموذج؛ وتزداد ميزة NVIDIA مع السرعة الخام واتساع المنظومة.',
+        imageAlt: 'Apple Silicon مقابل حاسوب NVIDIA لـ LLM المحلي: تتفوق Apple مع النماذج الكبيرة وNVIDIA في السرعة الخام',
       },
       'inference-engines': {
         id: 'inference-engines',
@@ -1710,6 +1716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-m5-local-llm-config-comparison-hero-pt.webp',
         imageCaption: 'O Mac Studio não oferece mais o nível M5 Pro: o Mac mini é agora o jeito mais barato de ter um chip M5 Pro.',
+        imageAlt: 'Apple Silicon para LLM local: o Mac Studio não tem nível M5 Pro e o Mac mini é o jeito mais barato de ter um M5 Pro',
       },
       'memory-bandwidth': {
         id: 'memory-bandwidth',
@@ -1962,6 +1969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-pt.webp',
         imageCaption: 'A vantagem da Apple cresce com o tamanho do modelo; a da NVIDIA cresce com a velocidade bruta e a amplitude do ecossistema.',
+        imageAlt: 'Apple Silicon versus PC com NVIDIA para LLM local: a Apple vence com modelos grandes e a NVIDIA em velocidade bruta',
       },
       'inference-engines': {
         id: 'inference-engines',
@@ -2209,6 +2217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-m5-local-llm-config-comparison-hero-de.webp',
         imageCaption: 'Der Mac Studio bietet keine M5-Pro-Stufe mehr — der Mac mini ist jetzt der günstigste Weg zu einem M5-Pro-Chip.',
+        imageAlt: 'Apple Silicon für lokale LLMs: Der Mac Studio hat keine M5-Pro-Stufe, der Mac mini ist der günstigste Weg zum M5 Pro',
       },
       'memory-bandwidth': {
         id: 'memory-bandwidth',
@@ -2461,6 +2470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-de.webp',
         imageCaption: 'Apples Vorteil wächst mit der Modellgröße; der Vorteil von NVIDIA wächst mit Rohtempo und Ökosystembreite.',
+        imageAlt: 'Apple Silicon gegen NVIDIA-PC für lokale LLMs: Apple punktet bei großen Modellen, NVIDIA bei Rohtempo und Ökosystem',
       },
       'inference-engines': {
         id: 'inference-engines',
@@ -2695,6 +2705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-m5-local-llm-config-comparison-hero-fr.webp',
         imageCaption: 'Le Mac Studio ne propose plus de niveau M5 Pro : le Mac mini est désormais le moyen le moins cher d\'obtenir une puce M5 Pro.',
+        imageAlt: 'Apple Silicon pour LLM local : le Mac Studio n\'a plus de M5 Pro, le Mac mini est le moyen le moins cher d\'en avoir un',
       },
       'memory-bandwidth': {
         id: 'memory-bandwidth',
@@ -2947,6 +2958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-fr.webp',
         imageCaption: 'L\'avantage d\'Apple grandit avec la taille du modèle ; celui de NVIDIA grandit avec la vitesse brute et l\'étendue de l\'écosystème.',
+        imageAlt: 'Apple Silicon face à un PC NVIDIA pour LLM local : Apple l\'emporte sur les gros modèles, NVIDIA sur la vitesse brute',
       },
       'inference-engines': {
         id: 'inference-engines',
@@ -3237,6 +3249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-m5-local-llm-config-comparison-hero-ja.webp',
         imageCaption: 'Mac StudioにはM5 Pro構成がなくなり、Mac miniがM5 Proを最も安く入手できる方法になりました。',
+        imageAlt: 'ローカルLLM向けApple Silicon：Mac StudioにM5 Pro構成はなく、M5 ProはMac miniが最安',
       },
       'memory-bandwidth': {
         id: 'memory-bandwidth',
@@ -3489,6 +3502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-ja.webp',
         imageCaption: 'Appleの優位性はモデルが大きいほど拡大し、NVIDIAの優位性は生の速度とエコシステムの広さで拡大します。',
+        imageAlt: 'ローカルLLM向けApple SiliconとNVIDIA PC：Appleは大型モデル、NVIDIAは速度に強み',
       },
       'inference-engines': {
         id: 'inference-engines',
@@ -3723,6 +3737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-m5-local-llm-config-comparison-hero-zh.webp',
         imageCaption: 'Mac Studio不再提供M5 Pro档位——Mac mini现在是获得M5 Pro芯片最便宜的方式。',
+        imageAlt: '本地LLM的Apple Silicon：Mac Studio没有M5 Pro档，Mac mini是入手M5 Pro最便宜的方式',
       },
       'memory-bandwidth': {
         id: 'memory-bandwidth',
@@ -3975,6 +3990,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-zh.webp',
         imageCaption: '模型越大，苹果的优势越大；原始速度和生态广度方面，NVIDIA的优势更大。',
+        imageAlt: '本地LLM的Apple Silicon与NVIDIA PC对比：Apple擅长大模型，NVIDIA擅长原始速度',
       },
       'inference-engines': {
         id: 'inference-engines',
@@ -4209,6 +4225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-m5-local-llm-config-comparison-hero-ko.webp',
         imageCaption: 'Mac Studio는 더 이상 M5 Pro 등급을 제공하지 않으며, 이제 Mac mini가 M5 Pro 칩을 가장 저렴하게 얻는 방법입니다.',
+        imageAlt: '로컬 LLM용 Apple Silicon: Mac Studio에는 M5 Pro 구성이 없고 Mac mini가 M5 Pro 최저가입니다',
       },
       'memory-bandwidth': {
         id: 'memory-bandwidth',
@@ -4461,6 +4478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-ko.webp',
         imageCaption: '모델이 클수록 Apple의 이점이 커지고, 순수 속도와 생태계의 폭에서는 NVIDIA의 이점이 커집니다.',
+        imageAlt: '로컬 LLM용 Apple Silicon과 NVIDIA PC: Apple은 큰 모델에, NVIDIA는 원시 속도에 강합니다',
       },
       'inference-engines': {
         id: 'inference-engines',

@@ -105,7 +105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Unified memory: entire RAM available (16GB to 512GB depending on chip). RTX 4090: discrete VRAM only (24GB hard limit).',
           'Metal acceleration: GPU inference without CUDA dependency or proprietary drivers.',
           'Power efficiency: 20–100W under load vs 300W+ for desktop GPU. Enables fanless or near-silent operation.',
-          'Silence: MacBook Air is fanless; Apple lists 5 dBA at idle for Mac mini. Desktop GPU towers are 70+ dB under load.',
+          'Silence: MacBook Air is fanless; Apple lists 5 dBA at idle for Mac mini.',
           'No driver management: Metal works out of the box on macOS. No CUDA version conflicts, no NVIDIA driver updates.',
           'Hardware cost: M5 Pro Mac Mini ($1,699) with 64GB config vs dual-GPU setup ($4000+) for equivalent model capacity.',
         ],
@@ -174,6 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-en.webp',
         imageCaption: 'When buying, prioritize memory bandwidth over GPU core count -- it is the real bottleneck for LLM inference.',
+        imageAlt: 'Apple Silicon local LLM guide, M1 to M6: memory bandwidth, not GPU core count, sets LLM inference speed',
       },
       powerThermals: {
         id: 'power-thermals',
@@ -186,12 +187,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Setup': 'Mac Mini M5 Pro', 'Power (idle)': '5W', 'Power (LLM load)': '40–60W', 'Noise': 'Quiet (fan rarely spins)', 'Heat': 'Cool' },
           { 'Setup': 'Mac Studio M5 Max', 'Power (idle)': '10W', 'Power (LLM load)': '60–100W', 'Noise': 'Quiet', 'Heat': 'Cool' },
           { 'Setup': 'Mac Studio M5 Ultra', 'Power (idle)': '10W', 'Power (LLM load)': 'Max 480W continuous (Apple)', 'Noise': 'Quiet', 'Heat': 'Cool' },
-          { 'Setup': 'Desktop RTX 4090', 'Power (idle)': '50W', 'Power (LLM load)': '350–450W', 'Noise': 'Loud (3 fans)', 'Heat': 'Hot' },
+          { 'Setup': 'Desktop RTX 4090', 'Power (idle)': '50W', 'Power (LLM load)': '350–450W', 'Noise': 'Audible fan noise under load', 'Heat': 'Hot' },
           { 'Setup': 'Desktop RTX 3060', 'Power (idle)': '30W', 'Power (LLM load)': '170–200W', 'Noise': 'Moderate', 'Heat': 'Warm' },
         ],
         note: 'Estimated annual electricity cost at $0.15/kWh for a 24/7 AI server (illustrative, not measured; real cost depends on duty cycle): Mac Mini M6 (~$35/year) vs Desktop RTX 4090 (~$400/year). Idle and LLM-load wattages are PromptQuorum estimates, not measurements and not Apple specifications; Apple lists maximum continuous power of 155W for Mac mini and 480W for Mac Studio.',
         image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-en.webp',
         imageCaption: '24/7 inference, estimated: ~$35/year on Mac Mini M6 vs. ~$400/year on a desktop RTX 4090 -- roughly 10x at $0.15/kWh (illustrative, not measured).',
+        imageAlt: 'Apple Silicon: estimated yearly electricity cost of a Mac Mini M6 versus a desktop RTX 4090 running local LLMs 24/7',
       },
       scenarios: {
         id: 'scenarios',
@@ -269,10 +271,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Yes, especially for 34B+ models. Apple Silicon is one of the few consumer options that runs 70B models without complex multi-GPU setups, and the new Mac Studio M5 Ultra is one of the few that fit 120B+ models. For 8B models that fit in NVIDIA VRAM, RTX 4090 is faster but costs more to operate. Most local LLM users settle on Mac mini M5 Pro 64GB ($1,699) as the value-performance sweet spot.',
           },
           {
-            q: 'Can I run Apple Silicon LLMs on a MacBook Air?',
+            q: 'Can a MacBook Air M5 run local LLMs?',
             a: 'Yes, with limitations. MacBook Air M5 (16–32GB) runs 7–13B models comfortably. Thermal throttling kicks in after 10–15 minutes of sustained inference on the fanless design. For occasional use: fine. For always-on inference: Mac Mini M5 Pro is a better fit.',
           },
-            { q: 'How fast is the Apple M6 for local LLMs?', a: 'Apple has published only relative claims: up to 4x faster AI performance and 40% faster CPU than the M4 Mac mini. In Apple\'s August 2026 refresh the M6 debuted in the Mac mini only ($899 for 16GB, up to 32GB, up to 170 GB/s). Because generation speed follows memory bandwidth, expect it to land near the M5 base chip rather than M5 Pro; we have not verified independent M6 tok/s figures yet.' },
+            { q: 'What is the Apple M6 local LLM performance?', a: 'Apple has published only relative claims: up to 4x faster AI performance and 40% faster CPU than the M4 Mac mini. In Apple\'s August 2026 refresh the M6 debuted in the Mac mini only ($899 for 16GB, up to 32GB, up to 170 GB/s). Because generation speed follows memory bandwidth, expect it to land near the M5 base chip rather than M5 Pro; we have not verified independent M6 tok/s figures yet.' },
             { q: 'What is the best local LLM setup for an M1 Mac with 32GB?', a: 'An M1 Pro or M1 Max with 32GB (200 GB/s and 400 GB/s) fits 13B models at Q4 comfortably, which is the sweet spot in the chip table above; an M1 Max with 64GB reaches 34B at Q4. The original M1 tops out at 16GB, so stay at 7B Q4 there.' },
             { q: 'How does the M3 Ultra compare to the M5 Max for local LLMs?', a: 'An M3 Ultra beats an M5 Max on memory capacity (up to 512GB versus 128GB), which is what lets it hold the largest models. On speed, BGR reported that an M5 Max MacBook Pro performed similarly to an M3 Ultra Mac Studio on its 27B test, and the M5 Ultra about 30–40% better than the M3 Ultra on average. A 48GB M5 Pro sits below both and is the sweet spot for most people who want headroom without Ultra pricing.' },
         ],
@@ -413,7 +415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Memoria unificada: toda la RAM disponible (de 16GB a 512GB según el chip). RTX 4090: solo VRAM discreta (límite duro de 24GB).',
           'Aceleración Metal: inferencia GPU sin dependencia de CUDA ni drivers propietarios.',
           'Eficiencia energética: 20–100W bajo carga vs 300W+ para GPU de escritorio. Permite operación sin ventilador o casi silenciosa.',
-          'Silencio: el MacBook Air no tiene ventilador; Apple indica 5 dBA en reposo para el Mac mini. Las torres con GPU de escritorio superan los 70 dB bajo carga.',
+          'Silencio: el MacBook Air no tiene ventilador; Apple indica 5 dBA en reposo para el Mac mini.',
           'Sin gestión de drivers: Metal funciona de forma nativa en macOS. Sin conflictos de versión CUDA, sin actualizaciones de drivers NVIDIA.',
           'Costo de hardware: Mac Mini M5 Pro ($1.200) con configuración de 64GB vs configuración dual-GPU ($4.000+) para capacidad de modelo equivalente.',
         ],
@@ -483,6 +485,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       
         image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-es.webp',
         imageCaption: 'Al comprar, prioriza el ancho de banda de memoria sobre el número de núcleos de GPU — es el verdadero cuello de botella en la inferencia de LLM.',
+        imageAlt: 'Apple Silicon para LLMs locales, M1 a M6: el ancho de banda de memoria limita la inferencia más que los núcleos GPU',
       },
       powerThermals: {
         id: 'power-thermals',
@@ -495,13 +498,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Configuración': 'Mac Mini M5 Pro', 'Consumo (reposo)': '5W', 'Consumo (LLM)': '40–60W', 'Ruido': 'Silencioso (ventilador raramente activo)', 'Calor': 'Fresco' },
           { 'Configuración': 'Mac Studio M5 Max', 'Consumo (reposo)': '10W', 'Consumo (LLM)': '60–100W', 'Ruido': 'Silencioso', 'Calor': 'Fresco' },
           { 'Configuración': 'Mac Studio M5 Ultra', 'Consumo (reposo)': '10W', 'Consumo (LLM)': 'Máx. 480W continuos (Apple)', 'Ruido': 'Silencioso', 'Calor': 'Fresco' },
-          { 'Configuración': 'RTX 4090 de escritorio', 'Consumo (reposo)': '50W', 'Consumo (LLM)': '350–450W', 'Ruido': 'Ruidoso (3 ventiladores)', 'Calor': 'Caliente' },
+          { 'Configuración': 'RTX 4090 de escritorio', 'Consumo (reposo)': '50W', 'Consumo (LLM)': '350–450W', 'Ruido': 'Ruido de ventiladores audible bajo carga', 'Calor': 'Caliente' },
           { 'Configuración': 'RTX 3060 de escritorio', 'Consumo (reposo)': '30W', 'Consumo (LLM)': '170–200W', 'Ruido': 'Moderado', 'Calor': 'Tibio' },
         ],
         note: 'Costo anual estimado de electricidad a $0,15/kWh para un servidor IA 24/7 (orientativo, no medido; el costo real depende del uso): Mac Mini M6 (~$35/año) vs RTX 4090 de escritorio (~$400/año). Las cifras de consumo en reposo y bajo carga son estimaciones de PromptQuorum, no mediciones ni especificaciones de Apple; Apple indica un consumo continuo máximo de 155W para Mac mini y 480W para Mac Studio. Los precios pueden variar según tu país.',
 
         image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-es.webp',
         imageCaption: 'Inferencia 24/7, estimada: ~35 $/año en Mac Mini M6 frente a ~400 $/año en una RTX 4090 de escritorio — aproximadamente 10x a 0,15 $/kWh (orientativo, no medido).',
+        imageAlt: 'Apple Silicon: coste anual estimado de electricidad de un Mac Mini M6 frente a una RTX 4090 de escritorio con LLMs locales',
       },
       scenarios: {
         id: 'scenarios',
@@ -579,11 +583,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Sí, especialmente para modelos de 34B+. Apple Silicon es una de las pocas opciones de consumo que ejecuta modelos 70B sin configuraciones multi-GPU complejas, y el nuevo Mac Studio M5 Ultra es uno de los pocos que aloja modelos de 120B+. Para modelos 8B que caben en VRAM de NVIDIA, el RTX 4090 es más rápido pero cuesta más operar. La mayoría de usuarios de LLMs locales terminan eligiendo Mac mini M5 Pro 64GB ($1.699) como el punto óptimo de rendimiento-precio.',
           },
           {
-            q: '¿Puedo ejecutar LLMs de Apple Silicon en un MacBook Air?',
+            q: '¿Puede un MacBook Air M5 ejecutar LLMs locales?',
             a: 'Sí, con limitaciones. MacBook Air M5 (16–32GB) ejecuta modelos 7–13B cómodamente. El throttling térmico aparece después de 10–15 minutos de inferencia continua en el diseño sin ventilador. Para uso ocasional: perfecto. Para inferencia siempre activa: Mac Mini M5 Pro es más adecuado.',
           },
           {
-            q: '¿Qué tan rápido es el Apple M6 para LLMs locales?',
+            q: '¿Cuál es el rendimiento del Apple M6 con LLMs locales?',
             a: 'Apple solo ha publicado afirmaciones relativas: hasta 4x más rendimiento de IA y un 40% más de CPU que el Mac mini M4. En la renovación de agosto de 2026 el M6 debutó solo en el Mac mini ($899 con 16GB, hasta 32GB, hasta 170 GB/s). Como la velocidad de generación sigue al ancho de banda de memoria, cabe esperar que quede cerca del M5 base y no del M5 Pro; aún no hemos verificado cifras independientes de tok/s del M6.',
           },
           {
@@ -726,7 +730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ذاكرة موحدة: كل الذاكرة متاحة (من 16GB إلى 512GB حسب الشريحة). RTX 4090: VRAM منفصلة فقط (حد صارم 24GB).',
           'تسريع Metal: استدلال GPU دون اعتماد على CUDA أو برامج تشغيل مملوكة.',
           'كفاءة الطاقة: 30–70 واط تحت الحمل مقابل 300 واط فأكثر لكرت رسوميات سطح المكتب. يتيح تشغيلًا بلا مروحة أو شبه صامت.',
-          'الصمت: MacBook Air بلا مروحة، وتذكر Apple مستوى 5 dBA في الخمول لجهاز Mac mini. أما أبراج كروت رسوميات سطح المكتب فتتجاوز 70 ديسيبل تحت الحمل.',
+          'الصمت: MacBook Air بلا مروحة، وتذكر Apple مستوى 5 dBA في الخمول لجهاز Mac mini.',
           'بلا إدارة برامج تشغيل: يعمل Metal أصليًا على macOS. لا تعارض إصدارات CUDA، ولا تحديثات برامج تشغيل NVIDIA.',
           'تكلفة العتاد: Mac Mini M5 Pro (1,200 دولار) بتهيئة 64GB مقابل تهيئة كرتي رسوميات (4,000 دولار فأكثر) لسعة نموذج مكافئة.',
         ],
@@ -796,6 +800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       
         image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ar.webp',
         imageCaption: 'عند الشراء، أعطِ الأولوية لعرض النطاق الترددي للذاكرة على عدد أنوية GPU — فهو عنق الزجاجة الحقيقي في استدلال LLM.',
+        imageAlt: 'Apple Silicon لنماذج LLM المحلية من M1 إلى M6: عرض النطاق الترددي للذاكرة يحدد سرعة الاستدلال أكثر من أنوية GPU',
       },
       powerThermals: {
         id: 'power-thermals',
@@ -808,13 +813,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'التهيئة': 'Mac Mini M5 Pro', 'الاستهلاك (خمول)': '5W', 'الاستهلاك (LLM)': '40–60W', 'الضوضاء': 'صامت (المروحة نادرًا ما تنشط)', 'الحرارة': 'بارد' },
           { 'التهيئة': 'Mac Studio M5 Max', 'الاستهلاك (خمول)': '10W', 'الاستهلاك (LLM)': '60–100W', 'الضوضاء': 'صامت', 'الحرارة': 'بارد' },
           { 'التهيئة': 'Mac Studio M5 Ultra', 'الاستهلاك (خمول)': '10W', 'الاستهلاك (LLM)': 'حتى 480W مستمرة (Apple)', 'الضوضاء': 'صامت', 'الحرارة': 'بارد' },
-          { 'التهيئة': 'RTX 4090 مكتبي', 'الاستهلاك (خمول)': '50W', 'الاستهلاك (LLM)': '350–450W', 'الضوضاء': 'صاخب (3 مراوح)', 'الحرارة': 'ساخن' },
+          { 'التهيئة': 'RTX 4090 مكتبي', 'الاستهلاك (خمول)': '50W', 'الاستهلاك (LLM)': '350–450W', 'الضوضاء': 'ضجيج مراوح مسموع تحت الحمل', 'الحرارة': 'ساخن' },
           { 'التهيئة': 'RTX 3060 مكتبي', 'الاستهلاك (خمول)': '30W', 'الاستهلاك (LLM)': '170–200W', 'الضوضاء': 'متوسط', 'الحرارة': 'دافئ' },
         ],
         note: 'التكلفة السنوية التقديرية للكهرباء بسعر 0.15 دولار/kWh لخادم ذكاء اصطناعي على مدار الساعة (تقدير توضيحي دون قياس؛ التكلفة الفعلية تعتمد على نمط الاستخدام): Mac Mini M6 (نحو 35 دولارًا سنويًا) مقابل RTX 4090 المكتبي (نحو 400 دولار سنويًا). أرقام استهلاك الخمول وتحت الحمل هي تقديرات من PromptQuorum وليست قياسات أو مواصفات من Apple؛ وتذكر Apple حدًا أقصى للاستهلاك المستمر قدره 155W لـ Mac mini و480W لـ Mac Studio. قد تتفاوت الأسعار حسب بلدك.',
 
         image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-ar.webp',
         imageCaption: 'الاستدلال على مدار الساعة (تقدير): نحو 35 دولاراً سنوياً لجهاز Mac Mini M6 مقابل نحو 400 دولار سنوياً لبطاقة RTX 4090 لسطح المكتب — فرق يقارب 10 أضعاف عند 0.15 دولار/kWh (تقدير توضيحي دون قياس).',
+        imageAlt: 'Apple Silicon: التكلفة السنوية التقديرية للكهرباء لجهاز Mac Mini M6 مقابل RTX 4090 المكتبية في تشغيل LLM محلي',
       },
       scenarios: {
         id: 'scenarios',
@@ -892,11 +898,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'نعم، خاصةً لنماذج 34B فأكثر. Apple Silicon من القلائل بين عتاد المستهلك الذي يشغّل نماذج 70B دون تهيئات تعدد كروت رسوميات معقّدة، وMac Studio M5 Ultra الجديد من القلائل القادرة على استيعاب نماذج 120B فأكثر. أما لنماذج 8B التي تتسع في VRAM الخاصة بـ NVIDIA، فيكون RTX 4090 أسرع لكنه أغلى في التشغيل. ينتهي معظم مستخدمي نماذج LLM المحلية باختيار Mac mini M5 Pro 64GB (1,699 دولار) كنقطة مثلى للأداء مقابل السعر.',
           },
           {
-            q: 'هل يمكنني تشغيل نماذج LLM على Apple Silicon في MacBook Air؟',
+            q: 'هل يستطيع MacBook Air M5 تشغيل نماذج LLM المحلية؟',
             a: 'نعم، مع قيود. يشغّل MacBook Air M5 (16–32GB) نماذج 7–13B بأريحية. يظهر خنق حراري بعد 10–15 دقيقة من الاستدلال المستمر في التصميم بلا مروحة. للاستخدام العرضي: مثالي. أما للاستدلال دائم التشغيل: فإن Mac Mini M5 Pro أنسب.',
           },
           {
-            q: 'ما مدى سرعة Apple M6 مع نماذج LLM المحلية؟',
+            q: 'ما أداء Apple M6 مع نماذج LLM المحلية؟',
             a: 'لم تنشر Apple سوى ادعاءات نسبية: أداء ذكاء اصطناعي أسرع حتى 4 أضعاف ومعالج أسرع بنسبة 40% مقارنةً بـ Mac mini M4. وفي تحديث أغسطس 2026 ظهرت M6 لأول مرة في Mac mini فقط (899 دولارًا لسعة 16GB، حتى 32GB، وبعرض نطاق حتى 170 GB/s). ولأن سرعة التوليد تتبع عرض نطاق الذاكرة، يُتوقع أن تقترب من M5 الأساسي لا من M5 Pro؛ ولم نتحقق بعد من أرقام tok/s مستقلة لـ M6.',
           },
           {
@@ -1045,7 +1051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Memória unificada: toda a RAM disponível (de 16 GB a 512 GB conforme o chip). RTX 4090: apenas VRAM discreta (limite rígido de 24 GB).',
           'Aceleração Metal: inferência GPU sem dependência de CUDA ou drivers proprietários.',
           'Eficiência energética: 20-100 W sob carga vs 300 W+ para GPU de mesa. Permite operação sem ventilador ou quase silenciosa.',
-          'Silêncio: o MacBook Air não tem ventilador; a Apple indica 5 dBA em repouso para o Mac mini. Torres com GPU de mesa atingem 70+ dB sob carga.',
+          'Silêncio: o MacBook Air não tem ventilador; a Apple indica 5 dBA em repouso para o Mac mini.',
           'Sem gerenciamento de drivers: Metal funciona nativamente no macOS. Sem conflitos de versão CUDA, sem atualizações de driver NVIDIA.',
           'Custo de hardware: Mac Mini M5 Pro (US$ 1.200) com configuração de 64 GB vs configuração dual-GPU (US$ 4.000+) para capacidade de modelo equivalente.',
         ],
@@ -1115,6 +1121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       
         image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-pt.webp',
         imageCaption: 'Ao comprar, priorize a largura de banda de memória em vez do número de núcleos da GPU — esse é o verdadeiro gargalo da inferência de LLM.',
+        imageAlt: 'Apple Silicon para LLMs locais, do M1 ao M6: a largura de banda de memória limita a inferência mais que os núcleos da GPU',
       },
       powerThermals: {
         id: 'power-thermals',
@@ -1127,13 +1134,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Configuração': 'Mac Mini M5 Pro', 'Consumo (repouso)': '5 W', 'Consumo (LLM)': '40-60 W', 'Ruído': 'Silencioso (ventilador raramente ativo)', 'Calor': 'Fresco' },
           { 'Configuração': 'Mac Studio M5 Max', 'Consumo (repouso)': '10 W', 'Consumo (LLM)': '60-100 W', 'Ruído': 'Silencioso', 'Calor': 'Fresco' },
           { 'Configuração': 'Mac Studio M5 Ultra', 'Consumo (repouso)': '10 W', 'Consumo (LLM)': 'Máx. 480 W contínuos (Apple)', 'Ruído': 'Silencioso', 'Calor': 'Fresco' },
-          { 'Configuração': 'RTX 4090 de mesa', 'Consumo (repouso)': '50 W', 'Consumo (LLM)': '350-450 W', 'Ruído': 'Barulhento (3 ventiladores)', 'Calor': 'Quente' },
+          { 'Configuração': 'RTX 4090 de mesa', 'Consumo (repouso)': '50 W', 'Consumo (LLM)': '350-450 W', 'Ruído': 'Ruído de ventoinhas audível sob carga', 'Calor': 'Quente' },
           { 'Configuração': 'RTX 3060 de mesa', 'Consumo (repouso)': '30 W', 'Consumo (LLM)': '170-200 W', 'Ruído': 'Moderado', 'Calor': 'Morno' },
         ],
         note: 'Custo anual estimado de eletricidade a US$ 0,15/kWh para um servidor de IA 24/7 (ilustrativo, não medido; o custo real depende do uso): Mac Mini M6 (~US$ 35/ano) vs RTX 4090 de mesa (~US$ 400/ano). Os valores de consumo em repouso e sob carga são estimativas da PromptQuorum, não medições nem especificações da Apple; a Apple indica consumo contínuo máximo de 155 W para o Mac mini e 480 W para o Mac Studio.',
 
         image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-pt.webp',
         imageCaption: 'Inferência 24/7, estimada: ~US$35/ano no Mac Mini M6 vs. ~US$400/ano em uma RTX 4090 de mesa — cerca de 10x a US$0,15/kWh (ilustrativo, não medido).',
+        imageAlt: 'Apple Silicon: custo anual estimado de energia de um Mac Mini M6 versus uma RTX 4090 de mesa em LLMs locais 24/7',
       },
       scenarios: {
         id: 'scenarios',
@@ -1211,11 +1219,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Sim, especialmente para modelos de 34B+. O Apple Silicon é uma das poucas opções de consumo que roda modelos 70B sem configurações multi-GPU complexas, e o novo Mac Studio M5 Ultra é um dos poucos que comporta modelos de 120B+. Para modelos 8B que cabem na VRAM da NVIDIA, o RTX 4090 é mais rápido, mas custa mais para operar. A maioria dos usuários de LLM local opta pelo Mac mini M5 Pro 64 GB (US$ 1.699) como ponto ideal de desempenho-custo.',
           },
           {
-            q: 'Posso rodar LLMs do Apple Silicon em um MacBook Air?',
+            q: 'Um MacBook Air M5 consegue rodar LLMs locais?',
             a: 'Sim, com limitações. MacBook Air M5 (16-32 GB) roda modelos 7-13B confortavelmente. O throttling térmico ocorre após 10-15 minutos de inferência contínua no design sem ventilador. Para uso ocasional: ótimo. Para inferência sempre ativa: Mac Mini M5 Pro é mais adequado.',
           },
           {
-            q: 'Qual é a velocidade do Apple M6 com LLMs locais?',
+            q: 'Qual é o desempenho do Apple M6 com LLMs locais?',
             a: 'A Apple publicou apenas afirmações relativas: até 4x mais desempenho de IA e CPU 40% mais rápida que o Mac mini M4. Na renovação de agosto de 2026, o M6 estreou apenas no Mac mini (US$ 899 com 16 GB, até 32 GB, até 170 GB/s). Como a velocidade de geração acompanha a largura de banda da memória, espere algo próximo do M5 base, e não do M5 Pro; ainda não verificamos números independentes de tok/s do M6.',
           },
           {
@@ -1410,7 +1418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Einheitlicher Speicher: Der gesamte RAM ist verfügbar (16–512 GB je nach Chip). RTX 4090: nur diskreter VRAM (24 GB hartkodiert).',
           'Metal-Beschleunigung: GPU-Inferencing ohne CUDA-Abhängigkeit oder proprietäre Treiber-Updates.',
           'Stromeffizienz: 20–100 W unter Last versus 300 W+ für Desktop-GPU. Ermöglicht lüfterloses oder fast lautloses Betrieb.',
-          'Stille: Das MacBook Air ist lüfterlos; für den Mac mini nennt Apple 5 dBA im Leerlauf. Desktop-GPU-Systeme haben 70+ dB unter Last.',
+          'Stille: Das MacBook Air ist lüfterlos; für den Mac mini nennt Apple 5 dBA im Leerlauf.',
           'Keine Treiberverwaltung: Metal funktioniert out-of-the-box auf macOS. Keine CUDA-Versionskonflikte, keine NVIDIA-Treiber-Updates erforderlich.',
           'Hardwarekosten: M5-Pro-Mac-mini (1.699 $) mit 64-GB-Speicher versus Dual-GPU-Setup (4.000 $+) für entsprechende Modellkapazität.',
         ],
@@ -1479,6 +1487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       
         image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-de.webp',
         imageCaption: 'Priorisieren Sie beim Kauf die Speicherbandbreite über die Anzahl der GPU-Kerne — sie ist der eigentliche Engpass bei der LLM-Inferenz.',
+        imageAlt: 'Apple Silicon für lokale LLMs, M1 bis M6: Die Speicherbandbreite begrenzt die Inferenz stärker als die GPU-Kerne',
       },
       powerThermals: {
         id: 'power-thermals',
@@ -1491,13 +1500,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Setup': 'Mac mini M5 Pro', 'Stromverbrauch (Idle)': '5W', 'Stromverbrauch (LLM)': '40–60W', 'Lautstärke': 'Leise (Lüfter selten)', 'Wärmestrahlung': 'Kühl' },
           { 'Setup': 'Mac Studio M5 Max', 'Stromverbrauch (Idle)': '10W', 'Stromverbrauch (LLM)': '60–100W', 'Lautstärke': 'Leise', 'Wärmestrahlung': 'Kühl' },
           { 'Setup': 'Mac Studio M5 Ultra', 'Stromverbrauch (Idle)': '10W', 'Stromverbrauch (LLM)': 'Max. 480W Dauerlast (Apple)', 'Lautstärke': 'Leise', 'Wärmestrahlung': 'Kühl' },
-          { 'Setup': 'Desktop RTX 4090', 'Stromverbrauch (Idle)': '50W', 'Stromverbrauch (LLM)': '350–450W', 'Lautstärke': 'Laut (3 Lüfter)', 'Wärmestrahlung': 'Heiß' },
+          { 'Setup': 'Desktop RTX 4090', 'Stromverbrauch (Idle)': '50W', 'Stromverbrauch (LLM)': '350–450W', 'Lautstärke': 'Lüftergeräusch unter Last hörbar', 'Wärmestrahlung': 'Heiß' },
           { 'Setup': 'Desktop RTX 3060', 'Stromverbrauch (Idle)': '30W', 'Stromverbrauch (LLM)': '170–200W', 'Lautstärke': 'Moderat', 'Wärmestrahlung': 'Warm' },
         ],
         note: 'Geschätzte jährliche Stromkosten bei 0,15$/kWh für einen 24/7-KI-Server (Richtwert, nicht gemessen; die tatsächlichen Kosten hängen von der Auslastung ab): Mac mini M6 (~35$/Jahr) vs. Desktop RTX 4090 (~400$/Jahr). Die Leerlauf- und Lastwerte sind Schätzungen von PromptQuorum, keine Messungen und keine Apple-Spezifikationen; Apple nennt eine maximale Dauerleistung von 155W für den Mac mini und 480W für den Mac Studio.',
 
         image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-de.webp',
         imageCaption: '24/7-Inferenz, geschätzt: ~35 $/Jahr bei Mac Mini M6 vs. ~400 $/Jahr bei einer Desktop-RTX 4090 — etwa das Zehnfache bei 0,15 $/kWh (Richtwert, nicht gemessen).',
+        imageAlt: 'Apple Silicon: geschätzte jährliche Stromkosten eines Mac Mini M6 gegenüber einer Desktop-RTX 4090 bei lokalen LLMs',
       },
       scenarios: {
         id: 'scenarios',
@@ -1542,8 +1552,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Ändert der M5 Ultra mit bis zu 512 GB Speicher etwas?', a: 'Ja. Der M5 Ultra (Mac Studio, ab 5.499 $ mit 96 GB, 1,2 TB/s Bandbreite, bis 512 GB ab 22.299 $) führt 70B-Modelle in FP16 (unquantisiert, ohne Quantisierungsverlust) aus und ermöglicht erstmals 120B+-Modelle auf Verbraucher-Hardware. Der erste von uns geprüfte unabhängige Test (BGR, 21. September 2026, 256-GB-Modell) maß rund 55 tok/s mit einem 4-Bit-Qwen-3.8-27B gegenüber rund 40 auf einem M3 Ultra. PromptQuorum hat keine eigenen M5-Ultra-Benchmarks durchgeführt.' },
           { q: 'Brauche ich Ollama, MLX oder llama.cpp?', a: 'Beginnen Sie mit Ollama (am einfachsten). Wenn Sie schnellere Inferenz oder Fine-Tuning brauchen, wechseln Sie zu MLX. Für plattformübergreifende Kompatibilität nutzen Sie llama.cpp. Alle drei laufen auf Apple Silicon.' },
           { q: 'Lohnt sich Apple Silicon für lokale LLMs im Jahr 2026?', a: 'Ja, besonders für Modelle ab 34B. Apple Silicon ist eine der wenigen Verbraucher-Optionen, die 70B-Modelle ohne komplexe Multi-GPU-Setups ausführt, und der Mac Studio M5 Ultra ist eine der wenigen, die 120B+-Modelle fasst. Bei 8B-Modellen, die in NVIDIA-VRAM passen, ist die RTX 4090 schneller, im Betrieb aber teurer.' },
-          { q: 'Kann ich lokale LLMs auf einem MacBook Air ausführen?', a: 'Ja, mit Einschränkungen. Ein MacBook Air M5 (16–32 GB) führt 7–13B-Modelle komfortabel aus. Bei dauerhafter Inferenz setzt nach 10–15 Minuten thermisches Throttling ein, weil das Design lüfterlos ist. Für gelegentliche Nutzung: gut. Für Dauerbetrieb: ein Mac mini M5 Pro passt besser.' },
-          { q: 'Wie schnell ist der Apple M6 für lokale LLMs?', a: 'Apple hat nur relative Angaben veröffentlicht: bis zu 4x KI-Leistung und 40 % schnellere CPU gegenüber dem Mac mini M4. Beim Refresh im August 2026 debütierte der M6 nur im Mac mini (899 $ mit 16 GB, bis 32 GB, bis zu 170 GB/s). Da die Generierungsgeschwindigkeit der Speicherbandbreite folgt, ist ein Niveau nahe am M5 Basis zu erwarten, nicht am M5 Pro; unabhängige tok/s-Werte für den M6 haben wir noch nicht geprüft.' },
+          { q: 'Kann ein MacBook Air M5 lokale LLMs ausführen?', a: 'Ja, mit Einschränkungen. Ein MacBook Air M5 (16–32 GB) führt 7–13B-Modelle komfortabel aus. Bei dauerhafter Inferenz setzt nach 10–15 Minuten thermisches Throttling ein, weil das Design lüfterlos ist. Für gelegentliche Nutzung: gut. Für Dauerbetrieb: ein Mac mini M5 Pro passt besser.' },
+          { q: 'Wie ist die Leistung des Apple M6 bei lokalen LLMs?', a: 'Apple hat nur relative Angaben veröffentlicht: bis zu 4x KI-Leistung und 40 % schnellere CPU gegenüber dem Mac mini M4. Beim Refresh im August 2026 debütierte der M6 nur im Mac mini (899 $ mit 16 GB, bis 32 GB, bis zu 170 GB/s). Da die Generierungsgeschwindigkeit der Speicherbandbreite folgt, ist ein Niveau nahe am M5 Basis zu erwarten, nicht am M5 Pro; unabhängige tok/s-Werte für den M6 haben wir noch nicht geprüft.' },
           { q: 'Welche lokale LLM-Konfiguration passt zu einem M1 Mac mit 32 GB?', a: 'Ein M1 Pro oder M1 Max mit 32 GB (200 GB/s bzw. 400 GB/s) führt 13B-Modelle in Q4 komfortabel aus, das Optimum in der Chip-Tabelle oben; ein M1 Max mit 64 GB erreicht 34B in Q4. Der ursprüngliche M1 endet bei 16 GB, dort bleiben Sie bei 7B Q4.' },
           { q: 'Wie schneidet der M3 Ultra im Vergleich zum M5 Max bei lokalen LLMs ab?', a: 'Ein M3 Ultra schlägt einen M5 Max bei der Speicherkapazität (bis 512 GB gegenüber 128 GB) und fasst deshalb die größten Modelle. Bei der Geschwindigkeit berichtete BGR, ein MacBook Pro mit M5 Max habe im 27B-Test ähnlich wie ein Mac Studio mit M3 Ultra abgeschnitten, der M5 Ultra liege im Schnitt 30–40 % über dem M3 Ultra. Ein M5 Pro mit 48 GB liegt unter beiden und ist das Optimum für alle, die Reserve ohne Ultra-Preise wollen.' },
         ],
@@ -1680,7 +1690,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mémoire unifiée : RAM entière disponible (16–512 GB selon la puce). RTX 4090 : VRAM discret uniquement (24 GB codé en dur).',
           'Accélération Metal : inférence GPU sans dépendance CUDA ni pilotes propriétaires.',
           'Efficacité énergétique : 20–100 W sous charge vs 300 W+ pour GPU de bureau. Permet opération sans ventilateur ou presque silencieuse.',
-          'Silence : le MacBook Air est sans ventilateur ; Apple indique 5 dBA au repos pour le Mac mini. Systèmes GPU de bureau 70+ dB sous charge.',
+          'Silence : le MacBook Air est sans ventilateur ; Apple indique 5 dBA au repos pour le Mac mini.',
           'Pas de gestion de pilotes : Metal fonctionne prêt à l\'emploi sur macOS. Pas de conflits version CUDA, pas mise à jour pilotes NVIDIA.',
           'Coût matériel : Mac mini M5 Pro (1 699 $) avec 64 Go vs configuration dual-GPU (4 000 $+) pour capacité modèle équivalente.',
         ],
@@ -1749,6 +1759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       
         image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-fr.webp',
         imageCaption: 'Lors de l\'achat, privilégiez la bande passante mémoire au nombre de cœurs GPU — c\'est le véritable goulot d\'étranglement pour l\'inférence LLM.',
+        imageAlt: 'Apple Silicon pour LLMs locaux, du M1 au M6 : la bande passante mémoire limite l\'inférence plus que les cœurs GPU',
       },
       powerThermals: {
         id: 'power-thermals',
@@ -1761,13 +1772,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Configuration': 'Mac mini M5 Pro', 'Puissance (ralenti)': '5W', 'Puissance (LLM)': '40–60W', 'Bruit': 'Calme (ventilateur rare)', 'Chaleur': 'Frais' },
           { 'Configuration': 'Mac Studio M5 Max', 'Puissance (ralenti)': '10W', 'Puissance (LLM)': '60–100W', 'Bruit': 'Calme', 'Chaleur': 'Frais' },
           { 'Configuration': 'Mac Studio M5 Ultra', 'Puissance (ralenti)': '10W', 'Puissance (LLM)': 'Max 480W en continu (Apple)', 'Bruit': 'Calme', 'Chaleur': 'Frais' },
-          { 'Configuration': 'Desktop RTX 4090', 'Puissance (ralenti)': '50W', 'Puissance (LLM)': '350–450W', 'Bruit': 'Bruyant (3 ventilateurs)', 'Chaleur': 'Chaud' },
+          { 'Configuration': 'Desktop RTX 4090', 'Puissance (ralenti)': '50W', 'Puissance (LLM)': '350–450W', 'Bruit': 'Bruit de ventilateurs audible sous charge', 'Chaleur': 'Chaud' },
           { 'Configuration': 'Desktop RTX 3060', 'Puissance (ralenti)': '30W', 'Puissance (LLM)': '170–200W', 'Bruit': 'Modéré', 'Chaleur': 'Tiède' },
         ],
         note: 'Coût d\'électricité annuel estimé à 0,15$/kWh pour un serveur IA 24/7 (indicatif, non mesuré ; le coût réel dépend de l\'usage) : Mac mini M6 (~35$/an) vs Desktop RTX 4090 (~400$/an). Les consommations au repos et en charge sont des estimations de PromptQuorum, pas des mesures ni des caractéristiques Apple ; Apple indique une puissance continue maximale de 155W pour le Mac mini et 480W pour le Mac Studio.',
 
         image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-fr.webp',
         imageCaption: 'Inférence 24/7, estimée : ~35 $/an sur Mac Mini M6 contre ~400 $/an sur une RTX 4090 de bureau — environ un facteur 10 à 0,15 $/kWh (indicatif, non mesuré).',
+        imageAlt: 'Apple Silicon : coût annuel estimé d\'électricité d\'un Mac Mini M6 face à une RTX 4090 de bureau pour des LLMs locaux',
       },
       scenarios: {
         id: 'scenarios',
@@ -1812,8 +1824,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Le M5 Ultra avec jusqu\'à 512 Go change-t-il quelque chose ?', a: 'Oui. Le M5 Ultra (Mac Studio, à partir de 5 499 $ avec 96 Go, 1.2 TB/s de bande passante, jusqu\'à 512 Go à partir de 22 299 $) exécute les modèles 70B en FP16 (non quantifié, sans perte due à la quantification) et permet pour la première fois les modèles 120B+ sur matériel grand public. Le premier test indépendant que nous avons vérifié (BGR, 21 septembre 2026, modèle 256 Go) a mesuré environ 55 tok/s sur un Qwen 3.8 27B en 4 bits contre environ 40 sur un M3 Ultra. PromptQuorum n\'a pas réalisé ses propres benchmarks du M5 Ultra.' },
           { q: 'Ai-je besoin d\'Ollama, MLX ou llama.cpp ?', a: 'Commencez avec Ollama (le plus simple). Si vous avez besoin d\'une inférence plus rapide ou de fine-tuning, passez à MLX. Pour une compatibilité multiplateforme, utilisez llama.cpp. Les trois fonctionnent sur Apple Silicon.' },
           { q: 'Apple Silicon vaut-il le coup pour les LLMs locaux en 2026 ?', a: 'Oui, surtout pour les modèles 34B+. Apple Silicon est l\'une des rares options grand public qui exécutent les modèles 70B sans configuration multi-GPU complexe, et le Mac Studio M5 Ultra est l\'un des rares qui accueillent des modèles 120B+. Pour les modèles 8B qui tiennent dans la VRAM NVIDIA, la RTX 4090 est plus rapide mais coûte plus cher à exploiter.' },
-          { q: 'Peut-on faire tourner des LLMs locaux sur un MacBook Air ?', a: 'Oui, avec des limites. Un MacBook Air M5 (16–32 Go) exécute confortablement les modèles 7–13B. Le throttling thermique apparaît après 10–15 minutes d\'inférence continue sur ce design sans ventilateur. Pour un usage occasionnel : parfait. Pour de l\'inférence permanente : un Mac mini M5 Pro est plus adapté.' },
-          { q: 'Quelle vitesse attendre de l\'Apple M6 pour les LLMs locaux ?', a: 'Apple n\'a publié que des affirmations relatives : jusqu\'à 4x de performance IA et un CPU 40 % plus rapide que le Mac mini M4. Lors du renouvellement d\'août 2026, le M6 n\'a débuté que dans le Mac mini (899 $ avec 16 Go, jusqu\'à 32 Go, jusqu\'à 170 GB/s). La vitesse de génération suivant la bande passante mémoire, attendez-vous à un niveau proche du M5 de base plutôt que du M5 Pro ; nous n\'avons pas encore vérifié de chiffres tok/s indépendants pour le M6.' },
+          { q: 'Un MacBook Air M5 peut-il faire tourner des LLMs locaux ?', a: 'Oui, avec des limites. Un MacBook Air M5 (16–32 Go) exécute confortablement les modèles 7–13B. Le throttling thermique apparaît après 10–15 minutes d\'inférence continue sur ce design sans ventilateur. Pour un usage occasionnel : parfait. Pour de l\'inférence permanente : un Mac mini M5 Pro est plus adapté.' },
+          { q: 'Quelles performances attendre de l\'Apple M6 pour les LLMs locaux ?', a: 'Apple n\'a publié que des affirmations relatives : jusqu\'à 4x de performance IA et un CPU 40 % plus rapide que le Mac mini M4. Lors du renouvellement d\'août 2026, le M6 n\'a débuté que dans le Mac mini (899 $ avec 16 Go, jusqu\'à 32 Go, jusqu\'à 170 GB/s). La vitesse de génération suivant la bande passante mémoire, attendez-vous à un niveau proche du M5 de base plutôt que du M5 Pro ; nous n\'avons pas encore vérifié de chiffres tok/s indépendants pour le M6.' },
           { q: 'Quelle configuration LLM locale pour un Mac M1 avec 32 Go ?', a: 'Un M1 Pro ou M1 Max avec 32 Go (200 GB/s et 400 GB/s) exécute confortablement les modèles 13B en Q4, soit l\'optimum du tableau des puces ci-dessus ; un M1 Max 64 Go atteint le 34B en Q4. Le M1 d\'origine plafonne à 16 Go : restez sur du 7B Q4.' },
           { q: 'Comment le M3 Ultra se compare-t-il au M5 Max pour les LLMs locaux ?', a: 'Un M3 Ultra dépasse un M5 Max en capacité mémoire (jusqu\'à 512 Go contre 128 Go), ce qui lui permet d\'accueillir les plus gros modèles. Côté vitesse, BGR a indiqué qu\'un MacBook Pro M5 Max avait des performances proches d\'un Mac Studio M3 Ultra sur son test 27B, et que le M5 Ultra était en moyenne 30–40 % meilleur que le M3 Ultra. Un M5 Pro 48 Go se situe en dessous des deux et reste l\'optimum pour qui veut de la marge sans tarif Ultra.' },
         ],
@@ -1925,7 +1937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '統一メモリ：RAM全体を利用可能（チップにより16～512GB）。RTX 4090：離散VRAMのみ（ハード24GB上限）。',
           'Metal加速：CUDA依存性や独自ドライバなしのGPU推論。',
           '電力効率：負荷時20～100W対デスクトップGPU 300W+。ファンレスまたはほぼ無音運用可能。',
-          '静寂：MacBook Airはファンレスで、Mac miniはApple公表でアイドル時5 dBAです。デスクトップGPUタワーは負荷時70+ dBです。',
+          '静寂：MacBook Airはファンレスで、Mac miniはApple公表でアイドル時5 dBAです。',
           'ドライバ管理なし：MetalはmacOSで既成事実。CUDA version conflicts無し、NVIDIAドライバ更新無し。',
           'ハード費用：M5 Pro Mac mini（1,699ドル）と64GB構成対デュアルGPUセットアップ（4,000ドル+）相応モデル容量。',
         ],
@@ -1976,6 +1988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       
         image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ja.webp',
         imageCaption: '購入時はGPUコア数よりもメモリ帯域幅を優先してください — それがLLM推論の真のボトルネックです。',
+        imageAlt: 'Apple SiliconのローカルLLM、M1〜M6：推論速度はGPUコア数よりメモリ帯域幅で決まる',
       },
       powerThermals: {
         id: 'power-thermals',
@@ -1988,13 +2001,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'セットアップ': 'Mac mini M5 Pro', '消費電力（アイドル）': '5W', '消費電力（LLM）': '40–60W', 'ノイズ': '静か（ファン少）', '熱': '冷たい' },
           { 'セットアップ': 'Mac Studio M5 Max', '消費電力（アイドル）': '10W', '消費電力（LLM）': '60–100W', 'ノイズ': '静か', '熱': '冷たい' },
           { 'セットアップ': 'Mac Studio M5 Ultra', '消費電力（アイドル）': '10W', '消費電力（LLM）': '最大480W連続（Apple）', 'ノイズ': '静か', '熱': '冷たい' },
-          { 'セットアップ': 'デスクトップRTX 4090', '消費電力（アイドル）': '50W', '消費電力（LLM）': '350–450W', 'ノイズ': 'うるさい（3ファン）', '熱': '熱い' },
+          { 'セットアップ': 'デスクトップRTX 4090', '消費電力（アイドル）': '50W', '消費電力（LLM）': '350–450W', 'ノイズ': '負荷時はファン音が聞こえる', '熱': '熱い' },
           { 'セットアップ': 'デスクトップRTX 3060', '消費電力（アイドル）': '30W', '消費電力（LLM）': '170–200W', 'ノイズ': '中程度', '熱': '暖かい' },
         ],
         note: '年間電力費用の推定（0.15ドル/kWh、24時間365日のAIサーバー。目安であり実測ではなく、実際の費用は使用状況によります）：Mac mini M6（~35ドル/年）対デスクトップRTX 4090（~400ドル/年）。アイドル時と負荷時の電力値はPromptQuorumの推定で、実測値でもApple仕様でもありません。Appleは最大連続電力をMac miniで155W、Mac Studioで480Wと公表しています。',
 
         image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-ja.webp',
         imageCaption: '24時間365日の推論（推定）：Mac Mini M6で年間約35ドル、デスクトップRTX 4090で年間約400ドル — 0.15ドル/kWhで約10倍の差（目安、実測なし）。',
+        imageAlt: 'Apple Silicon：Mac Mini M6とデスクトップRTX 4090のローカルLLM常時推論の年間電気代（推定）',
       },
       scenarios: {
         id: 'scenarios',
@@ -2058,8 +2072,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'OllamaとMLXとllama.cppどれ使う？', a: 'Ollama（最簡単）から開始。高速推論またはファインチューニング必要ならMLXに切り替え。クロスプラットフォーム互換性必要ならllama.cpp。すべてApple Siliconで動作。' },
           { q: 'M5 Ultraが最大512GBメモリで何変わる？', a: 'はい、変わります。M5 Ultra（Mac Studio、96GBで5,499ドルから、1.2 TB/s、最大512GBは22,299ドルから）は70BモデルをFP16（量子化なし、量子化による劣化なし）で実行でき、民生用ハードウェアとして初めて120B+モデルに対応します。確認できた最初の独立テスト（BGR、2026年9月21日、256GBモデル）では、4ビットQwen 3.8 27Bが約55 tok/sで、M3 Ultraの約40 tok/sを上回りました。PromptQuorumは独自のM5 Ultraベンチマークを実施していません。' },
           { q: '2026年にApple Siliconはローカルに価値？', a: 'はい、特に34B+モデルなら。Apple Siliconは複雑なマルチGPUセットアップなしで70Bモデルを実行できる数少ない民生ハードウェアの一つであり、Mac Studio M5 Ultraは120B+モデルを収容できる数少ない民生用ハードウェアの一つです。24GB NVIDIAに収まる8Bモデルではマシン高速ですが、運用費高。ほぼユーザーはMac mini M5 Pro 64GB（1,699ドル）をベスト value-performanceとして落ち着く。' },
-          { q: 'MacBook AirでApple Silicon LLMsを実行できる？', a: 'はい、制限あり。MacBook Air M5（16～32GB）は7～13Bモデル快適実行。熱スロットル15分以上持続推論後開始、ファンレス設計。時々使用：問題なし。常時推論：Mac mini M5 Proが最適。' },
-          { q: 'Apple M6はローカルLLMでどのくらい速い？', a: 'Appleが公開しているのは相対的な主張のみで、M4 Mac mini比でAI性能最大4倍、CPU 40%高速です。2026年8月の刷新では、M6はMac miniにのみ搭載されました（899ドル、16GB、最大32GB、最大170 GB/s）。生成速度はメモリ帯域幅に比例するため、M5 ProではなくベースのM5に近い水準と予想されます。M6の独立したtok/s数値は未確認です。' },
+          { q: 'MacBook Air M5でローカルLLMを実行できる？', a: 'はい、制限あり。MacBook Air M5（16～32GB）は7～13Bモデル快適実行。熱スロットル15分以上持続推論後開始、ファンレス設計。時々使用：問題なし。常時推論：Mac mini M5 Proが最適。' },
+          { q: 'Apple M6のローカルLLM性能はどのくらい？', a: 'Appleが公開しているのは相対的な主張のみで、M4 Mac mini比でAI性能最大4倍、CPU 40%高速です。2026年8月の刷新では、M6はMac miniにのみ搭載されました（899ドル、16GB、最大32GB、最大170 GB/s）。生成速度はメモリ帯域幅に比例するため、M5 ProではなくベースのM5に近い水準と予想されます。M6の独立したtok/s数値は未確認です。' },
           { q: '32GBのM1 MacにはどんなローカルLLM構成が最適？', a: '32GBのM1 ProまたはM1 Max（200 GB/sと400 GB/s）は、上のチップ比較表の最適点である13B Q4モデルを余裕をもって実行できます。64GBのM1 Maxなら34B Q4まで届きます。無印のM1は最大16GBなので、7B Q4が目安です。' },
           { q: 'ローカルLLMでM3 UltraとM5 Maxはどう違う？', a: 'M3 Ultraはメモリ容量でM5 Maxを上回り（最大512GB対128GB）、最大級のモデルを収容できます。速度についてBGRは、27BテストでM5 Max搭載MacBook ProがM3 Ultra搭載Mac Studioと同程度の性能で、M5 Ultraは平均でM3 Ultraより30～40%優れていたと報告しています。48GBのM5 Proは両者の下に位置し、Ultraの価格なしで余裕を求める人に最適です。' },
           { q: '日本の規制要件を検討すべき？', a: 'ローカルLLMを導入する場合は、METIのAIガバナンス指針などの確認をお勧めします。データをオンプレミスのデバイスに留めることで対応を進めやすくなる場合がありますが、適合を保証するものではなく、個別の状況によります。' },
@@ -2179,7 +2193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '统一内存：整个RAM可用（视芯片为16-512GB）。RTX 4090：仅限离散VRAM（24GB硬限制）。',
           'Metal加速：无CUDA依赖或专有驱动的GPU推理。',
           '功耗效率：负载时20-100W对比台式GPU的300W+。支持无风扇或近乎无声操作。',
-          '静音：MacBook Air无风扇；Apple标称Mac mini空闲时为5 dBA。台式GPU塔在负载下70+ dB。',
+          '静音：MacBook Air无风扇；Apple标称Mac mini空闲时为5 dBA。',
           '无驱动管理：Metal在macOS上开箱即用。无CUDA版本冲突，无NVIDIA驱动更新。',
           '硬件成本：M5 Pro Mac mini（1,699美元）配64GB对比相当模型容量的双GPU设置（4,000美元+）。',
         ],
@@ -2230,6 +2244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       
         image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-zh.webp',
         imageCaption: '购买时应优先考虑内存带宽而非GPU核心数量 — 这才是LLM推理的真正瓶颈。',
+        imageAlt: 'Apple Silicon本地LLM指南，M1至M6：推理速度取决于内存带宽而非GPU核心数',
       },
       memoryForWorkload: {
         id: 'memory-by-workload',
@@ -2261,13 +2276,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '配置': 'Mac mini M5 Pro', '功耗（空闲）': '5W', '功耗（LLM）': '40–60W', '噪声': '安静（风扇少转）', '温度': '凉爽' },
           { '配置': 'Mac Studio M5 Max', '功耗（空闲）': '10W', '功耗（LLM）': '60–100W', '噪声': '安静', '温度': '凉爽' },
           { '配置': 'Mac Studio M5 Ultra', '功耗（空闲）': '10W', '功耗（LLM）': '最高480W持续（Apple）', '噪声': '安静', '温度': '凉爽' },
-          { '配置': '台式RTX 4090', '功耗（空闲）': '50W', '功耗（LLM）': '350–450W', '噪声': '嘈杂（3个风扇）', '温度': '炎热' },
+          { '配置': '台式RTX 4090', '功耗（空闲）': '50W', '功耗（LLM）': '350–450W', '噪声': '负载下风扇噪音明显', '温度': '炎热' },
           { '配置': '台式RTX 3060', '功耗（空闲）': '30W', '功耗（LLM）': '170–200W', '噪声': '适中', '温度': '温暖' },
         ],
         note: '年度电费估算（0.15美元/kWh，24/7 AI服务器；示意值，非实测，实际费用取决于使用情况）：Mac mini M6（~35美元/年）对比台式RTX 4090（~400美元/年）。空闲和负载功耗为PromptQuorum的估算值，并非实测值，也不是Apple规格；Apple标称最大持续功率：Mac mini为155W，Mac Studio为480W。',
 
         image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-zh.webp',
         imageCaption: '全天候推理（估算）：Mac Mini M6每年约35美元，台式RTX 4090每年约400美元 — 按0.15美元/kWh计算相差约10倍（示意值，非实测）。',
+        imageAlt: 'Apple Silicon本地LLM：Mac Mini M6与台式RTX 4090全天候推理的年度电费估算对比',
       },
       scenarios: {
         id: 'scenarios',
@@ -2335,8 +2351,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '需要Ollama、MLX还是llama.cpp？', a: '从Ollama（最简单）开始。如需更快推理或微调，切换至MLX。如需跨平台兼容性，使用llama.cpp。三者均可在Apple Silicon上运行。' },
           { q: 'M5 Ultra最高512GB内存会改变什么？', a: '会。M5 Ultra（Mac Studio，96GB起5,499美元，带宽1.2 TB/s，最高512GB起价22,299美元）以FP16（未量化，无量化损失）运行70B模型，并首次在消费级硬件上启用120B+模型。我们核实的首个独立测试（BGR，2026年9月21日，256GB机型）显示，4位Qwen 3.8 27B约55 tok/s，M3 Ultra约40 tok/s。PromptQuorum未自行进行M5 Ultra基准测试。' },
           { q: '2026年Apple Silicon对本地LLM值得投资吗？', a: '值得，特别是34B+模型。Apple Silicon是少数能在无多GPU复杂性前提下运行70B模型的消费级硬件之一，而Mac Studio M5 Ultra是少数能容纳120B+模型的消费级硬件之一。对于适配24GB NVIDIA VRAM的8B模型，RTX 4090更快但运营成本高。大多数本地LLM用户倾向于Mac mini M5 Pro 64GB（1,699美元）作为性价比最优选择。' },
-          { q: '能否在MacBook Air上运行Apple Silicon LLM？', a: '可以，但有限制。MacBook Air M5（16-32GB）能舒适运行7-13B模型。在无风扇设计下，15分钟持续推理后开始热节流。偶尔使用：没问题。持续推理：Mac mini M5 Pro更合适。' },
-          { q: 'Apple M6运行本地LLM有多快？', a: 'Apple仅公布了相对宣称：AI性能比M4 Mac mini最高提升4倍，CPU快40%。在2026年8月的更新中，M6只出现在Mac mini上（899美元，16GB，最高32GB，带宽最高170 GB/s）。由于生成速度取决于内存带宽，预计接近M5基础版而非M5 Pro；M6的独立tok/s数据我们尚未核实。' },
+          { q: 'MacBook Air M5能运行本地LLM吗？', a: '可以，但有限制。MacBook Air M5（16-32GB）能舒适运行7-13B模型。在无风扇设计下，15分钟持续推理后开始热节流。偶尔使用：没问题。持续推理：Mac mini M5 Pro更合适。' },
+          { q: 'Apple M6的本地LLM性能如何？', a: 'Apple仅公布了相对宣称：AI性能比M4 Mac mini最高提升4倍，CPU快40%。在2026年8月的更新中，M6只出现在Mac mini上（899美元，16GB，最高32GB，带宽最高170 GB/s）。由于生成速度取决于内存带宽，预计接近M5基础版而非M5 Pro；M6的独立tok/s数据我们尚未核实。' },
           { q: '32GB的M1 Mac适合什么本地LLM配置？', a: '32GB的M1 Pro或M1 Max（带宽200 GB/s和400 GB/s）可以从容运行13B Q4模型，这也是上方芯片对比表中的最优点；64GB的M1 Max可达34B Q4。原版M1最高只有16GB，建议使用7B Q4。' },
           { q: '本地LLM上，M3 Ultra和M5 Max相比如何？', a: 'M3 Ultra在内存容量上胜过M5 Max（最高512GB对128GB），因此能装下最大的模型。速度方面，BGR报告称在27B测试中M5 Max的MacBook Pro与M3 Ultra的Mac Studio表现相近，而M5 Ultra平均比M3 Ultra高30-40%。48GB的M5 Pro低于两者，是想要余量又不想付Ultra价格的用户的最优点。' },
           { q: '在中国使用需要考虑什么？', a: '本地运行LLM可以让数据留在设备上，有助于满足《数据安全法》等法规对数据处理的要求，但是否合规取决于具体场景，不构成法律意见，企业应咨询法律专业人士。另请确认Apple Silicon产品在中国大陆的采购渠道与可用性。' },
@@ -2478,7 +2494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '통합 메모리: 전체 RAM 사용 가능(칩에 따라 16GB–512GB). RTX 4090: 독립형 VRAM만 사용(24GB 하드 한계).',
           'Metal 가속: CUDA 의존성이나 독점 드라이버 없이 GPU 추론 가능.',
           '전력 효율: 부하 시 20–100W 대 데스크탑 GPU 300W 이상. 팬리스 또는 거의 무음 운용이 가능합니다.',
-          '정숙성: MacBook Air는 팬리스이며, Mac mini는 Apple 공시 기준 유휴 시 5 dBA입니다. 데스크탑 GPU 타워는 부하 시 70dB 이상입니다.',
+          '정숙성: MacBook Air는 팬리스이며, Mac mini는 Apple 공시 기준 유휴 시 5 dBA입니다.',
           '드라이버 관리 불필요: Metal은 macOS에서 즉시 작동합니다. CUDA 버전 충돌이나 NVIDIA 드라이버 업데이트가 필요 없습니다.',
           '하드웨어 비용: M5 Pro Mac Mini($1,699)와 64GB 구성 대 동등한 모델 용량의 듀얼 GPU 설정($4,000 이상).',
         ],
@@ -2548,6 +2564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       
         image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ko.webp',
         imageCaption: '구매 시 GPU 코어 수보다 메모리 대역폭을 우선하세요 — 이것이 LLM 추론의 진짜 병목입니다.',
+        imageAlt: 'Apple Silicon 로컬 LLM, M1~M6: 추론 속도는 GPU 코어 수보다 메모리 대역폭이 좌우합니다',
       },
       powerThermals: {
         id: 'power-thermals',
@@ -2560,13 +2577,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '구성': 'Mac Mini M5 Pro', '소비 전력 (유휴)': '5W', '소비 전력 (LLM)': '40–60W', '소음': '조용함 (팬이 거의 안 돌아감)', '발열': '시원함' },
           { '구성': 'Mac Studio M5 Max', '소비 전력 (유휴)': '10W', '소비 전력 (LLM)': '60–100W', '소음': '조용함', '발열': '시원함' },
           { '구성': 'Mac Studio M5 Ultra', '소비 전력 (유휴)': '10W', '소비 전력 (LLM)': '최대 480W 연속 (Apple)', '소음': '조용함', '발열': '시원함' },
-          { '구성': '데스크탑 RTX 4090', '소비 전력 (유휴)': '50W', '소비 전력 (LLM)': '350–450W', '소음': '시끄러움 (팬 3개)', '발열': '뜨거움' },
+          { '구성': '데스크탑 RTX 4090', '소비 전력 (유휴)': '50W', '소비 전력 (LLM)': '350–450W', '소음': '부하 시 팬 소음이 들림', '발열': '뜨거움' },
           { '구성': '데스크탑 RTX 3060', '소비 전력 (유휴)': '30W', '소비 전력 (LLM)': '170–200W', '소음': '보통', '발열': '따뜻함' },
         ],
         note: '$0.15/kWh 기준 연간 전기 요금 추정, 24/7 AI 서버(예시값이며 실측이 아니고, 실제 요금은 사용 패턴에 따라 다릅니다): Mac Mini M6(~$35/년) 대 데스크탑 RTX 4090(~$400/년). 유휴 및 부하 시 전력 수치는 PromptQuorum의 추정치이며 실측값도 Apple 사양도 아닙니다. Apple은 최대 연속 전력을 Mac mini 155W, Mac Studio 480W로 공시합니다.',
 
         image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-ko.webp',
         imageCaption: '24/7 추론(추정): Mac Mini M6는 연간 약 $35, 데스크톱 RTX 4090은 연간 약 $400 — $0.15/kWh 기준 약 10배 차이(예시값, 실측 아님).',
+        imageAlt: 'Apple Silicon 로컬 LLM: Mac Mini M6와 데스크톱 RTX 4090의 24/7 추론 연간 전기료 추정 비교',
       },
       scenarios: {
         id: 'scenarios',
@@ -2644,11 +2662,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: '예, 특히 34B 이상의 모델에 적합합니다. Apple Silicon은 복잡한 멀티 GPU 설정 없이 70B 모델을 실행할 수 있는 몇 안 되는 소비자 하드웨어 중 하나이며, Mac Studio M5 Ultra는 120B 이상의 모델을 수용할 수 있는 몇 안 되는 소비자 하드웨어 중 하나입니다. NVIDIA VRAM에 맞는 8B 모델은 RTX 4090이 더 빠르지만 운영 비용이 더 높습니다. 대부분의 로컬 LLM 사용자는 Mac mini M5 Pro 64GB($1,699)를 가성비 최적점으로 선택합니다.',
           },
           {
-            q: 'MacBook Air에서 Apple Silicon LLM을 실행할 수 있습니까?',
+            q: 'MacBook Air M5에서 로컬 LLM을 실행할 수 있습니까?',
             a: '예, 단 제한이 있습니다. MacBook Air M5(16–32GB)는 7–13B 모델을 편안하게 실행합니다. 팬리스 설계 특성상 10–15분 지속 추론 후 열 스로틀링이 발생합니다. 가끔 사용: 문제없습니다. 상시 추론: Mac Mini M5 Pro가 더 적합합니다.',
           },
           {
-            q: 'Apple M6는 로컬 LLM에서 얼마나 빠릅니까?',
+            q: 'Apple M6의 로컬 LLM 성능은 어느 정도입니까?',
             a: 'Apple은 상대적 주장만 공개했습니다. M4 Mac mini 대비 AI 성능 최대 4배, CPU 40% 향상입니다. 2026년 8월 개편에서 M6는 Mac mini에만 도입되었습니다($899, 16GB, 최대 32GB, 최대 170 GB/s). 생성 속도는 메모리 대역폭을 따르므로 M5 Pro가 아니라 M5 기본 칩에 가까울 것으로 예상되며, M6의 독립 tok/s 수치는 아직 확인하지 못했습니다.',
           },
           {
