@@ -20,7 +20,7 @@ export const app: ToolRecord = {
   license: 'MIT',
   price: 'freemium', // core agent is free/open source; OpenCode Zen is a paid hosted model marketplace
   hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/sst/opencode README: a terminal-first coding agent supporting 75+ model providers (local and cloud); no hardware minimum is published for the CLI/desktop app itself — verified 2026-09-13
-  stars: 204337, // github.com/anomalyco/opencode, verified via GitHub API 2026-09-05
+  stars: 223987, // github.com/anomalyco/opencode, verified via GitHub API 2026-11-02
   addedDate: '2026-09-05',
   status: 'listed',
   uses: ['code', 'agent'],
@@ -39,7 +39,7 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
   compare: { localLlm: true, agentMode: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
-  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2026-11-02', // GitHub API (latest release v1.19.5 on 2026-10-28, last push 2026-11-02), read 2026-11-02
   lastUpstreamUpdateSource: 'https://github.com/anomalyco/opencode',
   reviewSlug: 'opencode-review', // dedicated PromptQuorum review — pinned to #1 in the article index
 }

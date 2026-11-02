@@ -12825,5 +12825,348 @@
       "period": "28d to 2026-11-01"
     },
     "deployedAt": null
+  },
+  {
+    "id": "f8cd95f5-ea62-496b-b494-e435d594d870",
+    "slug": "/power-local-llm/opencode-review",
+    "date": "2026-11-02T12:48:55.699Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "OpenCode is a free, open-source terminal AI coding agent connecting to 75+ model providers, including local Ollama and LM Studio backends. Here is how it works.",
+        "new": "Free, open-source (MIT) terminal AI coding agent: 75+ providers, local Ollama, LM Studio and llama.cpp, beta desktop app, v1 vs v2 install commands."
+      },
+      {
+        "field": "sections",
+        "old": "no v1/v2, desktop-app or llama.cpp coverage; Zen priced as paid marketplace",
+        "new": "added versions + desktopApp sections, llama.cpp/Ollama items, 5 FAQs, OpenCode Console pricing"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh (review-top100 pilot rank 2): typed 200,000 stars replaced by directory data, v1/v2 install lines, desktop app (beta), llama.cpp, Zen->OpenCode Console pricing fix, 5 new FAQs (desktop, v1 vs v2, llama.cpp, vs LM Studio, is it local), lead cut to 44 words, meta rewritten. GSC: top queries are navigational (opencode review, opencode, is opencode local, opencode vs lm studio).",
+    "queries": [
+      "opencode review",
+      "opencode",
+      "opencode terminal",
+      "is opencode local",
+      "opencode vs lm studio",
+      "opencode @ai-sdk/openai-compatible config example"
+    ],
+    "baseline": {
+      "position": 6.9,
+      "impressions": 4379,
+      "clicks": 6,
+      "ctr": 0.0013701758392327015,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d5144e14-949a-47a5-b342-f7b3f5181234",
+    "slug": "/de/power-local-llm/opencode-review",
+    "date": "2026-11-02T12:48:55.728Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "OpenCode ist ein kostenloser, quelloffener Terminal-KI-Coding-Agent mit Anbindung an 75+ Modellanbieter, einschließlich lokaler Ollama- und LM-Studio-Backends. So funktioniert es.",
+        "new": "Kostenloser, quelloffener (MIT) Terminal-KI-Coding-Agent: 75+ Anbieter, lokal mit Ollama, LM Studio, llama.cpp, Desktop-App (Beta), v1 vs. v2."
+      },
+      {
+        "field": "sections",
+        "old": "no v1/v2, desktop-app or llama.cpp coverage; Zen priced as paid marketplace",
+        "new": "added versions + desktopApp sections, llama.cpp/Ollama items, 5 FAQs, OpenCode Console pricing"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (data-free or thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "opencode review",
+      "opencode",
+      "opencode erfahrungen",
+      "opencode lokale modelle",
+      "ist opencode kostenlos"
+    ],
+    "baseline": {
+      "position": 7.19,
+      "impressions": 455,
+      "clicks": 2,
+      "ctr": 0.004395604395604396,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e13e4752-a178-4a4c-b9e7-d50614515594",
+    "slug": "/fr/power-local-llm/opencode-review",
+    "date": "2026-11-02T12:48:55.756Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "OpenCode est un agent de codage IA gratuit, open source, en ligne de commande, connecté à 75+ fournisseurs de modèles, dont Ollama et LM Studio en local. Voici comment il fonctionne.",
+        "new": "Agent de codage IA gratuit, open source (MIT) pour le terminal : 75+ fournisseurs, Ollama, LM Studio et llama.cpp en local, app de bureau bêta, v1 vs v2."
+      },
+      {
+        "field": "sections",
+        "old": "no v1/v2, desktop-app or llama.cpp coverage; Zen priced as paid marketplace",
+        "new": "added versions + desktopApp sections, llama.cpp/Ollama items, 5 FAQs, OpenCode Console pricing"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (data-free or thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "open code",
+      "opencode avis",
+      "avis opencode",
+      "c'est quoi opencode",
+      "opencode"
+    ],
+    "baseline": {
+      "position": 7.28,
+      "impressions": 1798,
+      "clicks": 9,
+      "ctr": 0.005005561735261402,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8dcade84-a0a0-49ee-9826-e3fb44f3113a",
+    "slug": "/es/power-local-llm/opencode-review",
+    "date": "2026-11-02T12:48:55.783Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "OpenCode es un agente de codificación IA gratuito y open source por línea de comandos, conectado a 75+ proveedores de modelos, incluidos Ollama y LM Studio en local.",
+        "new": "Agente de programación con IA gratuito y open source (MIT) para terminal: 75+ proveedores, Ollama, LM Studio y llama.cpp en local, app beta, v1 vs v2."
+      },
+      {
+        "field": "sections",
+        "old": "no v1/v2, desktop-app or llama.cpp coverage; Zen priced as paid marketplace",
+        "new": "added versions + desktopApp sections, llama.cpp/Ollama items, 5 FAQs, OpenCode Console pricing"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (data-free or thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "opencode",
+      "instalar opencode",
+      "opencode 2 que es?",
+      "opencode zen base url",
+      "opencode es seguro?"
+    ],
+    "baseline": {
+      "position": 7.73,
+      "impressions": 1256,
+      "clicks": 3,
+      "ctr": 0.0023885350318471337,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b6b81eaa-77ad-4694-bc69-fe2dff921029",
+    "slug": "/pt/power-local-llm/opencode-review",
+    "date": "2026-11-02T12:48:55.814Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "OpenCode é um agente de codificação com IA gratuito e open source via linha de comando, conectado a 75+ provedores de modelos, incluindo Ollama e LM Studio locais.",
+        "new": "Agente de programação com IA gratuito e open source (MIT) para terminal: 75+ provedores, Ollama, LM Studio e llama.cpp locais, app beta, v1 vs v2."
+      },
+      {
+        "field": "sections",
+        "old": "no v1/v2, desktop-app or llama.cpp coverage; Zen priced as paid marketplace",
+        "new": "added versions + desktopApp sections, llama.cpp/Ollama items, 5 FAQs, OpenCode Console pricing"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (data-free or thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "agentes para opencode"
+    ],
+    "baseline": {
+      "position": 9.01,
+      "impressions": 177,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a25b6c7b-add2-47fd-872f-a36fff71fffb",
+    "slug": "/ja/power-local-llm/opencode-review",
+    "date": "2026-11-02T12:48:55.842Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "OpenCodeレビュー2026：ターミナルAIエージェント＋ローカルモデル",
+        "new": "OpenCodeレビュー2026：ターミナルAI＋ローカルモデル"
+      },
+      {
+        "field": "metaDescription",
+        "old": "OpenCodeは無料・オープンソースのターミナルAIコーディングエージェントで、Ollama・LM Studioを含む75以上のモデルプロバイダーに接続できます。仕組みを解説します。",
+        "new": "無料のオープンソース(MIT)ターミナルAIコーディングエージェント。75以上のプロバイダー、ローカルOllama・LM Studio・llama.cpp、ベータ版デスクトップアプリ、v1とv2の違い。"
+      },
+      {
+        "field": "sections",
+        "old": "no v1/v2, desktop-app or llama.cpp coverage; Zen priced as paid marketplace",
+        "new": "added versions + desktopApp sections, llama.cpp/Ollama items, 5 FAQs, OpenCode Console pricing"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (data-free or thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "opencode review",
+      "opencode",
+      "opencode ローカルモデル",
+      "opencode local ai"
+    ],
+    "baseline": {
+      "position": 9.55,
+      "impressions": 214,
+      "clicks": 6,
+      "ctr": 0.028037383177570093,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "55b2e96b-e15d-4bcf-9078-8624004d74c3",
+    "slug": "/zh/power-local-llm/opencode-review",
+    "date": "2026-11-02T12:48:55.869Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "OpenCode 是一款免费开源的终端 AI 编码代理，可连接 75 个以上的模型提供方，包括本地部署的 Ollama 和 LM Studio。以下是其具体工作方式。",
+        "new": "免费开源（MIT）的终端 AI 编码代理：75+ 提供方、本地 Ollama、LM Studio 与 llama.cpp、测试版桌面应用，以及 v1 与 v2 安装命令对比。"
+      },
+      {
+        "field": "sections",
+        "old": "no v1/v2, desktop-app or llama.cpp coverage; Zen priced as paid marketplace",
+        "new": "added versions + desktopApp sections, llama.cpp/Ollama items, 5 FAQs, OpenCode Console pricing"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (data-free or thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "opencode 评测",
+      "opencode review",
+      "opencode 官网"
+    ],
+    "baseline": {
+      "position": 9.28,
+      "impressions": 97,
+      "clicks": 4,
+      "ctr": 0.041237113402061855,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "da51fb33-a0bb-4ca3-8c80-d04afa6353e7",
+    "slug": "/ar/power-local-llm/opencode-review",
+    "date": "2026-11-02T12:48:55.896Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة OpenCode 2026: وكيل ذكاء اصطناعي للطرفية + نماذج محلية",
+        "new": "مراجعة OpenCode 2026: وكيل برمجة للطرفية + نماذج محلية"
+      },
+      {
+        "field": "metaDescription",
+        "old": "OpenCode وكيل برمجة بالذكاء الاصطناعي مجاني ومفتوح المصدر عبر الطرفية، يتصل بأكثر من 75 مزوّد نماذج، منها Ollama وLM Studio محليًا. إليك كيف يعمل.",
+        "new": "وكيل برمجة بالذكاء الاصطناعي مجاني ومفتوح المصدر (MIT) للطرفية: أكثر من 75 مزوّدًا، وOllama وLM Studio وllama.cpp محليًا، وتطبيق تجريبي، وv1 مقابل v2."
+      },
+      {
+        "field": "sections",
+        "old": "no v1/v2, desktop-app or llama.cpp coverage; Zen priced as paid marketplace",
+        "new": "added versions + desktopApp sections, llama.cpp/Ollama items, 5 FAQs, OpenCode Console pricing"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (data-free or thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "ما هو opencode",
+      "هل opencode مجاني"
+    ],
+    "baseline": {
+      "position": 7.86,
+      "impressions": 340,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "de16fe70-1520-40ca-ab1b-559b2f6423a7",
+    "slug": "/ko/power-local-llm/opencode-review",
+    "date": "2026-11-02T12:48:55.923Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "OpenCode는 무료 오픈소스 터미널 AI 코딩 에이전트로, Ollama·LM Studio를 포함한 75개 이상의 모델 제공업체에 연결됩니다. 작동 방식을 소개합니다.",
+        "new": "무료 오픈소스(MIT) 터미널 AI 코딩 에이전트: 75개 이상 제공업체, 로컬 Ollama·LM Studio·llama.cpp, 베타 데스크톱 앱, v1과 v2 설치 명령 비교."
+      },
+      {
+        "field": "sections",
+        "old": "no v1/v2, desktop-app or llama.cpp coverage; Zen priced as paid marketplace",
+        "new": "added versions + desktopApp sections, llama.cpp/Ollama items, 5 FAQs, OpenCode Console pricing"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (data-free or thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "opencode 후기",
+      "opencode zen 후기",
+      "opencode review",
+      "opencode go 후기",
+      "오픈코드 무료"
+    ],
+    "baseline": {
+      "position": 6.12,
+      "impressions": 475,
+      "clicks": 11,
+      "ctr": 0.023157894736842106,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
   }
 ]
