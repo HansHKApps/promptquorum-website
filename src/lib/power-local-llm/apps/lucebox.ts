@@ -21,11 +21,12 @@ export const app: ToolRecord = {
   license: 'Apache-2.0',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: false, variesByModel: true }, // hand-tuned kernels per GPU family (NVIDIA Ampere+/CUDA 12+, AMD RDNA3+/ROCm 6+) and per model — VRAM floor is documented per-model in benchmarks (e.g. ~14.6GiB for a 33B model) rather than one fixed number, verified 2026-09-18
-  stars: 2867, // verified via GitHub API 2026-09-18
+  stars: 2970, // verified via GitHub API 2026-11-02
   addedDate: '2026-09-18',
   status: 'listed',
   uses: ['serve', 'build'],
-  url: 'github.com/Luce-Org/lucebox',
+  url: 'lucebox.com', // official website (company + hardware + blog) found 2026-11-02; repo moved to storeLinks.github
+  storeLinks: { github: 'https://github.com/Luce-Org/lucebox' },
   tagline: {
     en: 'Local LLM inference server with hand-tuned kernels and speculative decoding for specific consumer GPUs',
     de: 'Lokaler LLM-Inferenz-Server mit handoptimierten Kernels und spekulativem Decoding für bestimmte Consumer-GPUs',
@@ -40,7 +41,7 @@ export const app: ToolRecord = {
   reviewSlug: 'lucebox-review', // dedicated PromptQuorum review — added 2026-09-19
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { openaiApi: true, nvidiaGpu: true, amdGpu: true, distributed: true },
-  lastVerifiedDate: '2026-09-18',
-  lastUpstreamUpdate: '2026-10-15', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastVerifiedDate: '2026-11-02',
+  lastUpstreamUpdate: '2026-11-01', // GitHub API: latest push/commit on main 2026-11-01T23:24:38Z; repo has no releases or tags; read 2026-11-02
   lastUpstreamUpdateSource: 'https://github.com/Luce-Org/lucebox',
 }
