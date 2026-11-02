@@ -435,7 +435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Alle neun Plattformen in diesem Leitfaden verbinden sich über dieselben Schnittstellen — Modbus TCP/RTU, MQTT, REST. Ihre Plattformwahl bestimmt nicht, welche Geräte Sie erreichen können, sondern wie Sie mit diesen Daten interagieren.',
+          'Alle neun Plattformen nutzen dieselben Schnittstellen — Modbus TCP/RTU, MQTT, REST. Die Plattformwahl bestimmt, wie Sie mit den Daten arbeiten, nicht welche Geräte Sie erreichen.',
           'Home Assistant hat die größte Community und das breiteste vorkonfigurierte Integrations-Ökosystem — die Standardempfehlung für alle, die allgemeine Automatisierung plus Solar-Monitoring wollen.',
           'EVCC ist zweckgebaut für PV-Überschuss-Laden des E-Autos und unterstützt Hunderte Geräte. Die Software ist kostenlos, viele kommerzielle Wallboxen brauchen aber ein kostenpflichtiges Sponsor-Token.',
           'ioBroker ist die stärkste Alternative zu Home Assistant für DACH-Nutzer — ein großes Node.js-basiertes Adapter-Ökosystem mit engagierter deutschsprachiger Community-Unterstützung.',
@@ -2637,7 +2637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Todas as nove plataformas neste guia se conectam pelas mesmas interfaces — Modbus TCP/RTU, MQTT, REST. A escolha da plataforma não determina quais dispositivos você pode acessar; ela determina como você interage com eles.',
+          'Todas as nove plataformas usam as mesmas interfaces — Modbus TCP/RTU, MQTT, REST. A escolha define como você usa os dados, não quais dispositivos acessa.',
           'Home Assistant tem a maior comunidade e o mais amplo ecossistema de integrações pré-construídas — a recomendação padrão para quem quer automação geral mais monitoramento solar.',
           'O EVCC é feito para carregar o carro elétrico com excedente fotovoltaico e é compatível com centenas de dispositivos. O software é gratuito, mas muitos carregadores comerciais exigem um token de patrocinador pago.',
           'ioBroker é a alternativa mais forte ao Home Assistant para usuários da região DACH (Alemanha, Áustria, Suíça) — um grande ecossistema de adaptadores baseado em Node.js com suporte de comunidade em idioma alemão.',
