@@ -19,7 +19,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'whisper.cpp is a C/C++ reimplementation of OpenAI\'s Whisper automatic speech recognition model, created by Georgi Gerganov and now maintained under the [ggml-org GitHub organization](https://github.com/ggml-org/whisper.cpp). It transcribes speech to text entirely on-device, with no Python runtime and no cloud API call, and supports CPU, Apple Silicon (Metal, Core ML) and NVIDIA GPUs (CUDA), among other backends. This review covers its history, how to install and run it, real command-line usage, its MIT license and cost (free), and where it is not the right tool — including a link to our comparison with faster-whisper for readers deciding between the two.',
     metaDescription:
-      'Whisper.cpp review: the MIT-licensed C/C++ port of OpenAI Whisper for local speech-to-text. History, install steps, real CLI commands, license, and when to use faster-whisper instead.',
+      'Whisper.cpp review: the MIT-licensed C/C++ port of OpenAI Whisper for local speech-to-text. Install steps, CLI commands, license, and faster-whisper.',
     twitterDescription:
       'Whisper.cpp review 2026: Georgi Gerganov\'s C/C++ port of OpenAI Whisper for offline, on-device speech-to-text. History, setup, real commands, MIT license, and honest limits.',
     audience:
@@ -373,7 +373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'whisper.cpp ist eine C/C++-Neuimplementierung von OpenAIs automatischem Spracherkennungsmodell Whisper, geschaffen von Georgi Gerganov und heute unter der [GitHub-Organisation ggml-org](https://github.com/ggml-org/whisper.cpp) gepflegt. Es wandelt Sprache vollständig auf dem Gerät in Text um, ohne Python-Laufzeitumgebung und ohne Cloud-API-Aufruf, und unterstützt unter anderem CPU, Apple Silicon (Metal, Core ML) und NVIDIA-GPUs (CUDA). Diese Rezension behandelt die Geschichte, Installation und Ausführung, echte Kommandozeilenbefehle, die MIT-Lizenz und die Kosten (kostenlos) sowie die Fälle, in denen es nicht das richtige Werkzeug ist – inklusive eines Links zu unserem Vergleich mit faster-whisper für alle, die sich zwischen beiden entscheiden müssen.',
     metaDescription:
-      'Whisper.cpp-Rezension: der MIT-lizenzierte C/C++-Port von OpenAI Whisper für lokale Spracherkennung. Geschichte, Installation, echte CLI-Befehle, Lizenz und wann faster-whisper die bessere Wahl ist.',
+      'Whisper.cpp-Rezension: C/C++-Port von OpenAI Whisper (MIT) für lokale Spracherkennung. Installation, CLI-Befehle, Lizenz und Vergleich mit faster-whisper.',
     twitterDescription:
       'Whisper.cpp-Rezension 2026: Georgi Gerganovs C/C++-Port von OpenAI Whisper für lokale, offline Spracherkennung. Geschichte, Setup, echte Befehle, MIT-Lizenz und ehrliche Grenzen.',
     audience:
@@ -727,7 +727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'whisper.cpp est une réimplémentation en C/C++ du modèle de reconnaissance vocale Whisper d\'OpenAI, créée par Georgi Gerganov et maintenue aujourd\'hui au sein de l\'[organisation GitHub ggml-org](https://github.com/ggml-org/whisper.cpp). Il transcrit la parole en texte entièrement sur l\'appareil, sans environnement Python ni appel à une API cloud, et prend en charge notamment le CPU, Apple Silicon (Metal, Core ML) et les GPU NVIDIA (CUDA). Cette analyse couvre son histoire, son installation et son exécution, des commandes réelles, sa licence MIT et son coût (gratuit), ainsi que les cas où ce n\'est pas le bon outil — avec un lien vers notre comparatif avec faster-whisper pour les lecteurs qui hésitent entre les deux.',
     metaDescription:
-      'Avis whisper.cpp : le port C/C++ sous licence MIT d\'OpenAI Whisper pour la reconnaissance vocale locale. Histoire, installation, vraies commandes, licence, et quand préférer faster-whisper.',
+      'Avis whisper.cpp : le port C/C++ d\'OpenAI Whisper (licence MIT) pour la reconnaissance vocale locale. Installation, commandes CLI, licence, faster-whisper.',
     twitterDescription:
       'Whisper.cpp 2026 : le port C/C++ de Georgi Gerganov pour OpenAI Whisper, reconnaissance vocale locale et hors ligne. Histoire, installation, vraies commandes, licence MIT et limites honnêtes.',
     audience:
@@ -1081,7 +1081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'whisper.cpp es una reimplementación en C/C++ del modelo de reconocimiento de voz Whisper de OpenAI, creada por Georgi Gerganov y mantenida hoy dentro de la [organización de GitHub ggml-org](https://github.com/ggml-org/whisper.cpp). Transcribe voz a texto íntegramente en el dispositivo, sin entorno de Python ni llamadas a una API en la nube, y admite CPU, Apple Silicon (Metal, Core ML) y GPU NVIDIA (CUDA), entre otros backends. Esta reseña cubre su historia, cómo instalarlo y ejecutarlo, comandos reales, su licencia MIT y su coste (gratis), y dónde no es la herramienta adecuada, con un enlace a nuestra comparativa con faster-whisper para quien dude entre ambos.',
     metaDescription:
-      'Análisis de whisper.cpp: el port en C/C++ con licencia MIT de OpenAI Whisper para reconocimiento de voz local. Historia, instalación, comandos reales, licencia y cuándo usar faster-whisper.',
+      'Análisis de whisper.cpp: el port en C/C++ de OpenAI Whisper (licencia MIT) para voz a texto local. Instalación, comandos CLI, licencia y faster-whisper.',
     twitterDescription:
       'Whisper.cpp 2026: el port en C/C++ de Georgi Gerganov para OpenAI Whisper, reconocimiento de voz local y sin conexión. Historia, instalación, comandos reales, licencia MIT y límites honestos.',
     audience:
@@ -1435,7 +1435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'whisper.cppは、OpenAIの音声認識モデルWhisperをC/C++で再実装したもので、Georgi Gerganovが作成し、現在は[GitHub組織ggml-org](https://github.com/ggml-org/whisper.cpp)の下で保守されています。Pythonランタイムもクラウドの API呼び出しも使わず、音声をすべて端末上でテキストに変換し、CPU、Apple Silicon（Metal、Core ML）、NVIDIA GPU（CUDA）などに対応します。本レビューでは、歴史、インストールと実行方法、実際のコマンド、MITライセンスと費用（無料）、向かない場面を扱い、faster-whisperとの選択に迷う方向けに当サイトの比較記事へのリンクも載せています。',
     metaDescription:
-      'whisper.cppレビュー:OpenAI WhisperのMITライセンスC/C++移植版によるローカル音声認識。歴史、インストール手順、実際のCLIコマンド、ライセンス、faster-whisperを選ぶべき場面を解説。',
+      'whisper.cppレビュー:OpenAI WhisperのMIT版C/C++移植によるローカル音声認識。インストール、CLIコマンド、ライセンス、faster-whisperとの比較。',
     twitterDescription:
       'whisper.cppレビュー2026:Georgi Gerganov氏によるOpenAI WhisperのC/C++移植版。オフラインでデバイス上の音声認識を実現。歴史、セットアップ、実際のコマンド、MITライセンス、正直な限界を解説。',
     audience:
@@ -1790,7 +1790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O whisper.cpp é uma reimplementação em C/C++ do modelo de reconhecimento de fala Whisper, da OpenAI, criada por Georgi Gerganov e hoje mantida na [organização ggml-org no GitHub](https://github.com/ggml-org/whisper.cpp). Ele transcreve fala em texto inteiramente no dispositivo, sem ambiente Python e sem chamadas a uma API na nuvem, e oferece suporte a CPU, Apple Silicon (Metal, Core ML) e GPUs NVIDIA (CUDA), entre outros backends. Esta análise cobre sua história, como instalar e executar, uso real da linha de comando, a licença MIT e o custo (gratuito) e onde ele não é a ferramenta certa, com um link para a nossa comparação com o faster-whisper para quem está decidindo entre os dois.',
     metaDescription:
-      'Análise do whisper.cpp: o port em C/C++ com licença MIT do OpenAI Whisper para reconhecimento de voz local. História, instalação, comandos reais, licença e quando usar o faster-whisper.',
+      'Análise do whisper.cpp: o port em C/C++ do OpenAI Whisper (licença MIT) para voz em texto local. Instalação, comandos CLI, licença e faster-whisper.',
     twitterDescription:
       'Whisper.cpp 2026: o port em C/C++ de Georgi Gerganov para o OpenAI Whisper, reconhecimento de voz local e offline. História, instalação, comandos reais, licença MIT e limites honestos.',
     audience:
@@ -2144,7 +2144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'whisper.cpp هو إعادة تنفيذ بلغة C/C++ لنموذج التعرف على الكلام Whisper من OpenAI، أنشأه Georgi Gerganov ويُصان اليوم ضمن [منظمة ggml-org على GitHub](https://github.com/ggml-org/whisper.cpp). يحوّل الكلام إلى نص بالكامل على الجهاز، دون بيئة Python ودون استدعاء أي واجهة سحابية، ويدعم المعالج المركزي وApple Silicon (Metal وCore ML) وبطاقات NVIDIA الرسومية (CUDA) وغيرها من الواجهات الخلفية. تغطي هذه المراجعة تاريخه وطريقة تثبيته وتشغيله وأوامر سطر أوامر فعلية ورخصة MIT وتكلفته (مجاني) والحالات التي لا يكون فيها الأداة المناسبة، مع رابط إلى مقارنتنا مع faster-whisper لمن يتردد بين الاثنين.',
     metaDescription:
-      'مراجعة whisper.cpp: نسخة C/C++ من OpenAI Whisper برخصة MIT لتحويل الكلام إلى نص محليًا. التاريخ، خطوات التثبيت، أوامر CLI حقيقية، الرخصة، ومتى تختار faster-whisper بدلًا منه.',
+      'مراجعة whisper.cpp: نسخة C/C++ من OpenAI Whisper برخصة MIT لتحويل الكلام إلى نص محليًا. التثبيت، أوامر CLI، الرخصة، ومقارنته بـ faster-whisper.',
     twitterDescription:
       'مراجعة whisper.cpp 2026: نسخة Georgi Gerganov بلغة C/C++ من OpenAI Whisper لتحويل الكلام إلى نص محليًا وبلا اتصال. التاريخ، الإعداد، أوامر حقيقية، رخصة MIT، وحدود صريحة.',
     audience:
@@ -2853,7 +2853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'whisper.cpp는 OpenAI의 음성 인식 모델 Whisper를 C/C++로 다시 구현한 프로젝트로, Georgi Gerganov가 만들었으며 현재 [GitHub 조직 ggml-org](https://github.com/ggml-org/whisper.cpp)에서 관리됩니다. Python 런타임이나 클라우드 API 호출 없이 음성을 기기 안에서 텍스트로 변환하며, CPU, Apple Silicon(Metal, Core ML), NVIDIA GPU(CUDA) 등 여러 백엔드를 지원합니다. 이 리뷰는 역사, 설치와 실행 방법, 실제 명령줄 사용법, MIT 라이선스와 비용(무료), 적합하지 않은 경우를 다루며, 두 도구 사이에서 고민하는 독자를 위해 faster-whisper와의 비교 글 링크도 담았습니다.',
     metaDescription:
-      'whisper.cpp 리뷰: OpenAI Whisper를 MIT 라이선스로 C/C++ 포팅한 로컬 음성 인식 도구. 역사, 설치 단계, 실제 CLI 명령어, 라이선스, faster-whisper를 선택해야 할 때를 정리했습니다.',
+      'whisper.cpp 리뷰: OpenAI Whisper의 MIT 라이선스 C/C++ 포팅. 설치 방법, CLI 명령어, 라이선스, faster-whisper와의 비교를 정리했습니다.',
     twitterDescription:
       'whisper.cpp 리뷰 2026: Georgi Gerganov가 만든 OpenAI Whisper의 C/C++ 포팅 버전으로 로컬·오프라인 음성 인식을 구현합니다. 역사, 설치, 실제 명령어, MIT 라이선스, 솔직한 한계를 정리했습니다.',
     audience:

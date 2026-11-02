@@ -2102,7 +2102,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
       designSkin: 'hub',
       theme: 'GPU 구매 가이드',
       title: '로컬 LLM에 VRAM이 얼마나 필요합니까? 7B~70B 차트 (2026)',
-      seoTitle: '로컬 LLM에 VRAM이 얼마나 필요합니까? 7B~70B 차트 (2026)',
+      seoTitle: '로컬 LLM에 VRAM은 얼마나? 7B~70B 차트 (2026)',
       intro: '**7B 모델에는 8GB VRAM이 필요하고, 13B~22B에는 12~16GB, 70B에는 Q4 기준 40~48GB가 필요합니다.** 2026년 4월 기준, 이 수치는 Q4(4비트) 양자화를 가정합니다. Q5 이상에서는 70B 모델에 50GB 이상을 예상해야 합니다. 완전 정밀도(FP32) 모델은 VRAM이 2~3배 더 필요하며, 소비자용 GPU에서는 거의 실용적이지 않습니다. 공식은 다음과 같습니다: 모델 크기(십억 단위) × 2바이트(FP32) ÷ 양자화 계수.',
       metaDescription: '로컬 LLM에 필요한 정확한 VRAM: 7B는 6~8GB, 13B는 10~14GB, 70B는 Q4에서 40~48GB. Q2~Q8 양자화, 배치 크기, 컨텍스트별 차트 포함.',
       heroImage: '/images/how-much-vram-local-llm-vram-by-size-hero-ko.webp',
