@@ -18776,7 +18776,11 @@
       "ctr": 0.002851236723929004,
       "period": "28d to 2026-11-01 (EN URL)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "b6e753ce-9028-4b99-a17c-3926cca137a7",
@@ -18802,7 +18806,11 @@
       "lokale ki modelle vergleich"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "87ff836c-9535-4ab4-8746-1151dc9f7816",
@@ -18825,7 +18833,11 @@
       "meilleur llm local 2026"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "5056f437-8556-469b-8788-9f730e952fa1",
@@ -18852,7 +18864,11 @@
       "ローカルllm 27b"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "ceae36cc-bf3d-4cf1-b7d9-e6f1cc0df28d",
@@ -18872,7 +18888,11 @@
     ],
     "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "0dc5dbd8-cc89-426b-b33d-c4d246831355",
@@ -18892,7 +18912,11 @@
     ],
     "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "1581338b-c8ca-4f16-8646-445c22211334",
@@ -18912,7 +18936,11 @@
     ],
     "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "429aa6c0-83fe-4ac4-81c7-1c5462e56509",
@@ -18932,7 +18960,11 @@
     ],
     "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "2fd64a0b-412e-42bd-af92-db6785008a58",
@@ -18957,7 +18989,11 @@
       "llm 벤치마크 순위"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "ba521beb-8787-44e4-accd-ecd2322bb838",
@@ -18992,7 +19028,11 @@
       "ctr": 0.004064289673009422,
       "period": "28d 2026-10-05..2026-11-01"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "db1c8f06-b3bb-4b80-99e2-d20020ba26c4",
@@ -19018,7 +19058,11 @@
       "ctr": 0.023991275899672846,
       "period": "28d 2026-10-05..2026-11-01"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "bd9b843d-894a-4b67-8bd5-dd2f5554c981",
@@ -19044,7 +19088,11 @@
       "ctr": 0.028790786948176585,
       "period": "28d 2026-10-05..2026-11-01"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "4dec6cf1-3051-4bd6-8342-aafa23043501",
@@ -19075,7 +19123,11 @@
       "ctr": 0.017241379310344827,
       "period": "28d 2026-10-05..2026-11-01"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "e50cdcc7-d437-49ac-8514-f724137b0562",
@@ -19101,7 +19153,11 @@
       "ctr": 0,
       "period": "28d 2026-10-05..2026-11-01"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "8c761cd4-5f37-4150-9ce6-ea99049cf5ab",
@@ -19133,7 +19189,11 @@
       "ctr": 0.021634615384615384,
       "period": "28d 2026-10-05..2026-11-01"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "ea703056-3919-421e-9417-011549b32574",
@@ -19166,7 +19226,11 @@
       "ctr": 0.005703715122552798,
       "period": "28d to 2026-11-01 (EN URL; queries from 90d)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "a1653921-c492-4a7f-839e-ac3d914bb028",
@@ -19186,7 +19250,11 @@
     ],
     "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "6ab0a71d-0c50-484b-824e-28963c330d30",
@@ -19206,7 +19274,11 @@
     ],
     "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "7cc47a10-d29c-4558-b625-41f4c1e3e482",
@@ -19232,7 +19304,11 @@
       "whisper.cppとは"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "09375346-cd10-424b-bfdc-b81860483f4c",
@@ -19252,7 +19328,11 @@
     ],
     "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "12404d57-f925-40ae-a69c-42de99958675",
@@ -19272,7 +19352,11 @@
     ],
     "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "373c7098-7c03-438f-9a7a-295343bb65b1",
@@ -19292,7 +19376,11 @@
     ],
     "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "43f8854a-b5ca-4d6b-be2b-74ab24f89edd",
@@ -19312,7 +19400,11 @@
     ],
     "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "89cd4e74-cdb5-42a4-98ab-00d6dc7e9ad2",
@@ -19338,7 +19430,11 @@
       "whisper 실시간 stt"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "ea321e7c-f356-4b06-a3f5-ee63e3a78ccd",
@@ -19371,7 +19467,11 @@
       "ctr": 0.007222212315209444,
       "period": "28d 2026-10-05..2026-11-01 (EN URL)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "56846467-1884-44f9-827e-833848a4373f",
@@ -19396,7 +19496,11 @@
       "m5 pro vs m5 max llm performance"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "4f4de6b2-7c03-4369-bf5c-274691b55679",
@@ -19417,7 +19521,11 @@
       "m5 max 128gb llm"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "d7d78b30-fa7b-4cad-bd19-f5e2cbf9b9d1",
@@ -19432,7 +19540,11 @@
     ],
     "reason": "low-ctr-15 wave 2: EN 28d CTR 0.72% at pos 5.71, volume is spec lookups (m5 max/pro memory bandwidth) and old EN title was over budget with no memory/Ultra term; ~39% AI Overview share so no CTR gain is claimed. Body: 512GB M5 Ultra orderable since 2026-10-28 from $22,299, MacBook Pro 16 M5 Max from $3,899, second independent M5 Ultra benchmark (BGR). Earlier SEO change: 2026-08-28 (coherence-B2, largest query on the page). Locale mode: data-free review. No per-locale baseline pulled for this entry.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "19cb610e-9d47-4b9f-bb9d-133bdfb9f891",
@@ -19447,7 +19559,11 @@
     ],
     "reason": "low-ctr-15 wave 2: EN 28d CTR 0.72% at pos 5.71, volume is spec lookups (m5 max/pro memory bandwidth) and old EN title was over budget with no memory/Ultra term; ~39% AI Overview share so no CTR gain is claimed. Body: 512GB M5 Ultra orderable since 2026-10-28 from $22,299, MacBook Pro 16 M5 Max from $3,899, second independent M5 Ultra benchmark (BGR). Earlier SEO change: 2026-08-28 (coherence-B2, largest query on the page). Locale mode: data-free review. No per-locale baseline pulled for this entry.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "070ca484-1f96-4892-83fd-46f981a980d8",
@@ -19462,7 +19578,11 @@
     ],
     "reason": "low-ctr-15 wave 2: EN 28d CTR 0.72% at pos 5.71, volume is spec lookups (m5 max/pro memory bandwidth) and old EN title was over budget with no memory/Ultra term; ~39% AI Overview share so no CTR gain is claimed. Body: 512GB M5 Ultra orderable since 2026-10-28 from $22,299, MacBook Pro 16 M5 Max from $3,899, second independent M5 Ultra benchmark (BGR). Earlier SEO change: 2026-08-28 (coherence-B2, largest query on the page). Locale mode: data-free review. No per-locale baseline pulled for this entry.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "2fb27861-adc5-4fa1-8638-43b8a3feeb77",
@@ -19483,7 +19603,11 @@
       "m5 max 128gb llm"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "97b5da3a-c365-41e6-9f0e-7940494d95d3",
@@ -19517,7 +19641,11 @@
       "ctr": 0.004313352362829052,
       "period": "28d 2026-10-06..2026-11-02 (EN URL)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "7112dc5a-8954-40d3-a23a-c692b221b062",
@@ -19549,7 +19677,11 @@
       "ctr": 0.0205963725791577,
       "period": "28d 2026-10-05..2026-11-02 (locale URL)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "1d38ae70-7bf5-48b0-b874-64e0e78fc2c1",
@@ -19570,7 +19702,11 @@
       "ctr": 0.015306122448979591,
       "period": "28d 2026-10-05..2026-11-02 (locale URL)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "aca8d327-7d5c-47f5-bb75-c8997d3e81b9",
@@ -19597,7 +19733,11 @@
       "ctr": 0.03310657596371882,
       "period": "28d 2026-10-05..2026-11-02 (locale URL)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "5337e921-9c81-4408-b787-79bcc60b54d2",
@@ -19623,7 +19763,11 @@
       "ctr": 0.012021857923497269,
       "period": "28d 2026-10-05..2026-11-02 (locale URL)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "3fac41ed-657d-4137-b1e9-41ed1561484a",
@@ -19647,7 +19791,11 @@
       "ctr": 0.009966777408637873,
       "period": "28d 2026-10-05..2026-11-02 (locale URL)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "7808746e-70b1-4abc-923e-58cf8c63e29f",
@@ -19673,7 +19821,11 @@
       "ctr": 0,
       "period": "28d 2026-10-05..2026-11-02 (locale URL)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "c1cb2e08-0e7a-4b90-b413-240269861cce",
@@ -19709,7 +19861,11 @@
       "ctr": 0.0010882873078492722,
       "period": "28d 2026-10-06..2026-11-02 (EN URL)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "83b06235-33f4-40b6-aa9e-fbae7991f9bd",
@@ -19729,7 +19885,11 @@
     ],
     "reason": "low-ctr-15 wave 2: 0.11% CTR at pos 7.1, mostly the navigational brand query \"koboldcpp\" (5,613 impr, 4 clicks) which a title cannot fix; typo/long-tail queries (kobold cpp, what is koboldcpp, koboldcpp.exe, is koboldcpp safe) not served. Added Get It table and safety FAQ; v1.123.1 -> v1.124.2. Earlier SEO change: 2026-10-09 geo-meta-optimizer intent alignment (download/install/GPU/vs llama.cpp queries). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 1, impressions 649.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "20cafe96-093e-4fe9-be92-fda10e27d897",
@@ -19749,7 +19909,11 @@
     ],
     "reason": "low-ctr-15 wave 2: 0.11% CTR at pos 7.1, mostly the navigational brand query \"koboldcpp\" (5,613 impr, 4 clicks) which a title cannot fix; typo/long-tail queries (kobold cpp, what is koboldcpp, koboldcpp.exe, is koboldcpp safe) not served. Added Get It table and safety FAQ; v1.123.1 -> v1.124.2. Earlier SEO change: 2026-10-09 geo-meta-optimizer intent alignment (download/install/GPU/vs llama.cpp queries). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 2, impressions 526.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "bba52258-4847-4b11-8834-c1e14f5f82d2",
@@ -19778,7 +19942,11 @@
       "koboldcpp 小説"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "027d496e-91c3-424f-97f9-2c8f303be1a2",
@@ -19798,7 +19966,11 @@
     ],
     "reason": "low-ctr-15 wave 2: 0.11% CTR at pos 7.1, mostly the navigational brand query \"koboldcpp\" (5,613 impr, 4 clicks) which a title cannot fix; typo/long-tail queries (kobold cpp, what is koboldcpp, koboldcpp.exe, is koboldcpp safe) not served. Added Get It table and safety FAQ; v1.123.1 -> v1.124.2. Earlier SEO change: 2026-10-09 geo-meta-optimizer intent alignment (download/install/GPU/vs llama.cpp queries). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 3, impressions 156.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "a553520c-1891-4846-860c-89851889d19b",
@@ -19818,7 +19990,11 @@
     ],
     "reason": "low-ctr-15 wave 2: 0.11% CTR at pos 7.1, mostly the navigational brand query \"koboldcpp\" (5,613 impr, 4 clicks) which a title cannot fix; typo/long-tail queries (kobold cpp, what is koboldcpp, koboldcpp.exe, is koboldcpp safe) not served. Added Get It table and safety FAQ; v1.123.1 -> v1.124.2. Earlier SEO change: 2026-10-09 geo-meta-optimizer intent alignment (download/install/GPU/vs llama.cpp queries). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 4, impressions 1493.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "84899497-20e6-4d03-95b6-56f967a7841b",
@@ -19838,7 +20014,11 @@
     ],
     "reason": "low-ctr-15 wave 2: 0.11% CTR at pos 7.1, mostly the navigational brand query \"koboldcpp\" (5,613 impr, 4 clicks) which a title cannot fix; typo/long-tail queries (kobold cpp, what is koboldcpp, koboldcpp.exe, is koboldcpp safe) not served. Added Get It table and safety FAQ; v1.123.1 -> v1.124.2. Earlier SEO change: 2026-10-09 geo-meta-optimizer intent alignment (download/install/GPU/vs llama.cpp queries). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 1, impressions 645.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "ef029d9a-ab25-4842-8875-461affc2e718",
@@ -19858,7 +20038,11 @@
     ],
     "reason": "low-ctr-15 wave 2: 0.11% CTR at pos 7.1, mostly the navigational brand query \"koboldcpp\" (5,613 impr, 4 clicks) which a title cannot fix; typo/long-tail queries (kobold cpp, what is koboldcpp, koboldcpp.exe, is koboldcpp safe) not served. Added Get It table and safety FAQ; v1.123.1 -> v1.124.2. Earlier SEO change: 2026-10-09 geo-meta-optimizer intent alignment (download/install/GPU/vs llama.cpp queries). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 0, impressions 42.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "35e38b20-6e25-4fbf-9642-7cf219ba8dab",
@@ -19878,7 +20062,11 @@
     ],
     "reason": "low-ctr-15 wave 2: 0.11% CTR at pos 7.1, mostly the navigational brand query \"koboldcpp\" (5,613 impr, 4 clicks) which a title cannot fix; typo/long-tail queries (kobold cpp, what is koboldcpp, koboldcpp.exe, is koboldcpp safe) not served. Added Get It table and safety FAQ; v1.123.1 -> v1.124.2. Earlier SEO change: 2026-10-09 geo-meta-optimizer intent alignment (download/install/GPU/vs llama.cpp queries). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 13, impressions 465.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "2b7c8c5b-d15f-46a6-b187-76f375592c2e",
@@ -19912,7 +20100,11 @@
       "ctr": 0.0028453181583031556,
       "period": "28d 2026-10-06..2026-11-02 (EN URL)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "e082c08a-ac31-4845-9814-861adec91d05",
@@ -19932,7 +20124,11 @@
     ],
     "reason": "low-ctr-15 wave 2: 28d CTR 0.28% at pos 6.76; head traffic is brand-spelling variants (navigational, ~4,400 impr); title/meta rewritten around definition + license + safety; v0.11.3 -> v0.12.5; license corrected to source-available with branding clause. Earlier SEO change: 2026-10-09 in all 9 locales (meta too long >158, answer-first rewrite, naming variants). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 0, impressions 241.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "b186aaa6-ef22-4c0b-b64d-4cdff011bcdb",
@@ -19952,7 +20148,11 @@
     ],
     "reason": "low-ctr-15 wave 2: 28d CTR 0.28% at pos 6.76; head traffic is brand-spelling variants (navigational, ~4,400 impr); title/meta rewritten around definition + license + safety; v0.11.3 -> v0.12.5; license corrected to source-available with branding clause. Earlier SEO change: 2026-10-09 in all 9 locales (meta too long >158, answer-first rewrite, naming variants). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 3, impressions 1218.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "d44c89bc-f0bf-48e3-b560-c04b84e0e17c",
@@ -19977,7 +20177,11 @@
       "open webuiとは"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "3298403f-a612-4123-9b75-51401d89a67d",
@@ -19997,7 +20201,11 @@
     ],
     "reason": "low-ctr-15 wave 2: 28d CTR 0.28% at pos 6.76; head traffic is brand-spelling variants (navigational, ~4,400 impr); title/meta rewritten around definition + license + safety; v0.11.3 -> v0.12.5; license corrected to source-available with branding clause. Earlier SEO change: 2026-10-09 in all 9 locales (meta too long >158, answer-first rewrite, naming variants). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 1, impressions 49.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "1218c366-a1ce-48fb-8170-9950603ad122",
@@ -20021,7 +20229,11 @@
       "open webui que es"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "6c05366d-1a6f-4e04-842c-6027706dcbaa",
@@ -20041,7 +20253,11 @@
     ],
     "reason": "low-ctr-15 wave 2: 28d CTR 0.28% at pos 6.76; head traffic is brand-spelling variants (navigational, ~4,400 impr); title/meta rewritten around definition + license + safety; v0.11.3 -> v0.12.5; license corrected to source-available with branding clause. Earlier SEO change: 2026-10-09 in all 9 locales (meta too long >158, answer-first rewrite, naming variants). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 2, impressions 304.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "06a91454-4627-4ec5-886f-16f33eb58b26",
@@ -20061,7 +20277,11 @@
     ],
     "reason": "low-ctr-15 wave 2: 28d CTR 0.28% at pos 6.76; head traffic is brand-spelling variants (navigational, ~4,400 impr); title/meta rewritten around definition + license + safety; v0.11.3 -> v0.12.5; license corrected to source-available with branding clause. Earlier SEO change: 2026-10-09 in all 9 locales (meta too long >158, answer-first rewrite, naming variants). Locale mode: data-free review. Locale baseline (90d figures, clicks/impressions only): clicks 0, impressions 18.",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "c48cf6a0-a23f-4bd6-9dd9-498c1c8928d0",
@@ -20086,7 +20306,11 @@
       "ollama webui"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "a94ba00f-d81d-43cd-aa75-dc5a07567df0",
@@ -20118,7 +20342,11 @@
       "ctr": 0.002296211251435132,
       "period": "28d to 2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "c7e1b660-3afc-454e-9633-0657bea52850",
@@ -20150,7 +20378,11 @@
       "ctr": 0,
       "period": "28d to 2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "88d7627f-9517-4282-92e1-c6792a147353",
@@ -20182,7 +20414,11 @@
       "ctr": 0,
       "period": "28d to 2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "d59633e4-7bc3-45cf-8022-52a7010f73b8",
@@ -20214,7 +20450,11 @@
       "ctr": 0,
       "period": "28d to 2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "21881c18-9c43-4c42-801b-6f4871c628ff",
@@ -20246,7 +20486,11 @@
       "ctr": 0,
       "period": "28d to 2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "86941d05-da29-4e57-be3f-9e661d64bb1f",
@@ -20278,7 +20522,11 @@
       "ctr": 0,
       "period": "28d to 2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "80ec1114-c1fe-488b-9a0b-e16f330eab9d",
@@ -20310,7 +20558,11 @@
       "ctr": 0,
       "period": "28d to 2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "f03add85-bea5-4079-b0e5-ec12e8118db0",
@@ -20342,7 +20594,11 @@
       "ctr": 0,
       "period": "28d to 2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   },
   {
     "id": "96f58c2a-038e-4a42-acb2-d8cee78a57a2",
@@ -20374,6 +20630,10 @@
       "ctr": 0,
       "period": "28d to 2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-02",
+    "measure": {
+      "t14": "2026-11-16",
+      "t28": "2026-11-30"
+    }
   }
 ]
