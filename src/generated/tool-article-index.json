@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 184,
+    "totalCount": 185,
     "capped": true
   },
   "vLLM": {
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 101,
+    "totalCount": 102,
     "capped": true
   },
   "LocalAI": {
@@ -932,7 +932,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 170,
+    "totalCount": 171,
     "capped": true
   },
   "Atomic Chat": {
@@ -4972,7 +4972,7 @@
         "slug": "hermes-agent-review-2026",
         "title": "Hermes Agent Review: Self-Hosted AI Agent",
         "url": "/power-local-llm/hermes-agent-review",
-        "dateModified": "2026-09-03",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
