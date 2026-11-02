@@ -1,21 +1,27 @@
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { starsFor } from '@/lib/power-local-llm/app-facts'
+
+const ST = {
+  en: starsFor('en'), de: starsFor('de'), fr: starsFor('fr'), ja: starsFor('ja'), zh: starsFor('zh'),
+  es: starsFor('es'), pt: starsFor('pt'), ar: starsFor('ar'), ko: starsFor('ko'),
+}
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-19',
+    next_refresh_due: '2027-05-02',
     publishDate: '2026-09-19',
-    dateModified: '2026-09-19',
+    dateModified: '2026-11-02',
     educationalLevel: 'Intermediate',
     audience: 'People who already know Stable Diffusion basics and want faster inference, lower VRAM use, and built-in ControlNet/Flux support compared to the original AUTOMATIC1111 WebUI',
     primaryTerm: 'Stable Diffusion WebUI Forge',
     title: 'Stable Diffusion WebUI Forge Review: Faster, Lower-VRAM AUTOMATIC1111 Fork',
-    seoTitle: 'Stable Diffusion WebUI Forge Review',
+    seoTitle: 'Stable Diffusion WebUI Forge Review: Status and Setup',
     intro: 'Stable Diffusion WebUI Forge ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) is a free, open-source local image-generation web app — a fork of [AUTOMATIC1111\'s Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) built by [lllyasviel](https://github.com/lllyasviel), the creator of ControlNet. It re-architects how the original WebUI manages GPU memory and executes models, aiming for faster inference and lower VRAM use on the same hardware, while staying compatible with much of the original WebUI\'s extension ecosystem. This review covers what Forge actually changes, how to install and run it, and how it compares to the AUTOMATIC1111 WebUI it is built on.',
-    metaDescription: 'Stable Diffusion WebUI Forge is a free, open-source AUTOMATIC1111 fork by ControlNet creator lllyasviel, built for faster, lower-VRAM local image generation.',
+    metaDescription: 'Stable Diffusion WebUI Forge review: the AUTOMATIC1111 fork by ControlNet creator lllyasviel, verified maintenance status, Flux, install, license.',
     readTime: '11 min read',
     targetKeywords: [
       'Stable Diffusion WebUI Forge review',
@@ -24,20 +30,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Forge Flux support',
       'local Stable Diffusion WebUI',
     ],
-    leadAnswerBlock: '**Stable Diffusion WebUI Forge ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) is a free, open-source local Stable Diffusion web app, licensed AGPL-3.0, built by [lllyasviel](https://github.com/lllyasviel) (the creator of ControlNet) as a fork on top of [AUTOMATIC1111\'s Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui).** Its own README describes it as "a platform on top of Stable Diffusion WebUI" built to optimize resource management and inference speed, named after how Minecraft Forge sits on top of Minecraft. It ships a rebuilt UNet-patching backend for lower VRAM use, built-in ControlNet and LoRA support, Flux model support via NF4/GGUF quantization, and a Gradio 4 interface, while remaining compatible with much of the original WebUI\'s extension ecosystem. It runs on Windows, macOS, and Linux, needs a GPU for practical use, and has no paid tier.',
+    leadAnswerBlock: '**Warning: Stable Diffusion WebUI Forge has had no update since 31 July 2025 (latest GitHub release 5 February 2024), so it may be unmaintained — check before relying on it.** **Forge is a free, open-source (AGPL-3.0) fork of the AUTOMATIC1111 WebUI for local image generation, built by lllyasviel.**',
     quickAnswerTop: {
       en: {
         question: 'What is Stable Diffusion WebUI Forge and how much does it cost?',
-        answer: 'Stable Diffusion WebUI Forge is a free, open-source (AGPL-3.0) local image-generation web app — a fork of AUTOMATIC1111\'s Stable Diffusion WebUI built by lllyasviel, the creator of ControlNet. It re-architects GPU memory handling for faster inference and lower VRAM use, adds built-in ControlNet, LoRA, and Flux support, and has no paid tier.',
+        answer: 'Stable Diffusion WebUI Forge is a free, open-source (AGPL-3.0) local image-generation web app — a fork of AUTOMATIC1111\'s Stable Diffusion WebUI built by lllyasviel, the creator of ControlNet. It rebuilds GPU memory handling for faster inference and lower VRAM use, adds built-in ControlNet, LoRA, and Flux support, and has no paid tier. It has had no update since 31 July 2025, so it may be unmaintained.',
         bullets: [
           'Free and open-source under the AGPL-3.0 license, no account or subscription required',
           'Built by lllyasviel (creator of ControlNet) as a fork on top of AUTOMATIC1111\'s Stable Diffusion WebUI',
           'Rebuilt UNet-patching ("Forge") backend targets faster inference and lower VRAM use on the same hardware as the original WebUI',
           'Built-in ControlNet and IP-Adapter support, LoRA support, and Flux model support via NF4/GGUF quantization',
           'Runs on Windows, macOS, and Linux; a GPU is strongly recommended, with no single documented VRAM floor',
-          'GitHub repository ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) shows roughly 13,000 stars as of September 2026',
+          `GitHub repository ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) shows roughly ${ST.en('stable-diffusion-forge', 'bare')} stars; the last push was on 31 July 2025 and the latest GitHub release is dated 5 February 2024`,
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -71,6 +77,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ships built-in ControlNet and IP-Adapter support, LoRA support, and Flux model support (NF4/GGUF quantization) with no extra extensions needed',
           'Uses a Gradio 4 interface, with a Windows one-click package plus manual git-clone setup for macOS and Linux',
           'Runs on Windows, macOS, and Linux; a GPU is strongly recommended, with no single documented VRAM minimum — it depends on the checkpoint and resolution',
+          'Maintenance: no update since 31 July 2025 (last push, `py3.12` branch); the last commit on `main` is from 26 June 2025, and the latest GitHub release is dated 5 February 2024',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'No update since 31 July 2025 (latest GitHub release 5 February 2024). Forge may be unmaintained: check that it still works for your GPU and model before you rely on it.',
+          },
         ],
       },
       overview: {
@@ -90,16 +103,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       history: {
         id: 'forge-history',
         title: "Forge's Project History and Version Milestones",
-        content: '**Forge\'s GitHub repository was created on January 14, 2024**, and lllyasviel has continued pushing updates since, though at a visibly slower pace than in its first year. As of this review, GitHub\'s API shows the repository\'s most recent code push was July 31, 2025 — worth knowing if you are evaluating how actively maintained the project currently is.',
+        content: '**Forge\'s GitHub repository was created on January 14, 2024**, and it has had no update since July 31, 2025: GitHub\'s API shows that date as the last code push (to the `py3.12` branch), and the last commit on `main` is from June 26, 2025.',
         numberedItems: [
           { title: 'January 14, 2024 — Repository created', whyItMatters: 'lllyasviel opens the stable-diffusion-webui-forge repository as a fork/platform on top of AUTOMATIC1111\'s Stable Diffusion WebUI, establishing Forge as a from-day-one derivative of the existing WebUI ecosystem rather than an independent project.' },
           { title: 'February 5, 2024 — First packaged release', whyItMatters: 'The GitHub Releases page\'s "latest" tag publishes a downloadable, pre-packaged Windows build, giving users an installer-style option alongside the manual git-clone workflow.' },
           { title: 'July 22, 2024 — "previous_versions" release published', whyItMatters: 'Preserves older installer builds as Forge\'s packaged download continued to change, so users on older CUDA/PyTorch combinations still had a working build to fall back on.' },
           { title: 'September 7, 2024 — Flux Realistic sampler added', whyItMatters: 'Per the project\'s own NEWS.md, a new sampler tuned for Flux models shipped alongside Forge\'s built-in Flux support via NF4/GGUF quantization.' },
           { title: 'October 28, 2024 — "sd35" branch work begins (PR #2183)', whyItMatters: 'Per NEWS.md, work started on a branch evaluating Stable Diffusion 3.5 support, quantization methods, and sampling techniques ahead of a possible merge into the main branch.' },
-          { title: 'July 31, 2025 — Most recent code push (per GitHub API)', whyItMatters: 'The newest commit activity this review could confirm on the main repository as of its publish date — useful context for judging current development pace before relying on Forge for a workflow that needs frequent updates.' },
+          { title: 'July 31, 2025 — Most recent code push (per GitHub API)', whyItMatters: 'The newest commit activity on any branch (the `py3.12` branch, "Fix XYZ grid with Pillow >=10.0.0"); the last commit on `main` is from June 26, 2025. No commits or releases have followed, so treat Forge as possibly unmaintained.' },
         ],
-        note: 'Forge\'s own NEWS.md documented a planned migration to Gradio 5, originally targeted for around March 2025 with a June 2025 fallback date; this review found no confirmation in the repository that the migration has completed. The repository was not archived and stayed publicly listed as of this review, with roughly 13,000 GitHub stars, 1,700+ forks, and over 1,100 open issues — but check the [repository\'s commit history](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) directly for the current pace of updates before assuming active weekly development.',
+        note: `Forge's own NEWS.md documented a planned migration to Gradio 5, originally targeted for around March 2025 with a June 2025 fallback date; the README still points to a Gradio 4 guide, and this review found no confirmation that the migration has completed. The repository is not archived and stays publicly listed, with roughly ${ST.en('stable-diffusion-forge', 'bare')} GitHub stars, 1,700+ forks, and over 1,100 open issues — but with no commits since July 31, 2025, do not assume active development. Check the [repository's commit history](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) for the current state.`,
       },
       features: {
         id: 'what-forge-does',
@@ -172,7 +185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspect': 'ControlNet / IP-Adapter', 'Forge': 'Built in, no extension needed', 'AUTOMATIC1111 WebUI': 'Requires the separate ControlNet extension' },
           { 'Aspect': 'Flux model support', 'Forge': 'Built in, with NF4/GGUF quantization', 'AUTOMATIC1111 WebUI': 'Depends on community extensions, not native' },
           { 'Aspect': 'Extension ecosystem', 'Forge': 'Compatible with much of it, but narrower', 'AUTOMATIC1111 WebUI': 'The largest, most mature SD extension ecosystem' },
-          { 'Aspect': 'Recent commit activity', 'Forge': 'Most recent push found: July 31, 2025', 'AUTOMATIC1111 WebUI': 'Check the project\'s own commit history directly' },
+          { 'Aspect': 'Recent commit activity', 'Forge': 'No push since July 31, 2025; latest GitHub release February 5, 2024', 'AUTOMATIC1111 WebUI': 'No update since March 2, 2026; last release v1.10.1 (February 9, 2025)' },
         ],
         note: 'If your priority is faster inference and lower VRAM use with ControlNet and Flux support out of the box, Forge\'s rebuilt backend is the reason to choose it. If your priority is the widest possible extension ecosystem, or you rely on an extension Forge does not yet support, the original AUTOMATIC1111 WebUI is worth evaluating directly at its [GitHub repository](https://github.com/AUTOMATIC1111/stable-diffusion-webui). Both are free, open-source, and installed the same way (packaged Windows build or git clone); verify current compatibility for any specific extension you depend on before switching.',
       },
@@ -194,7 +207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Wait, or look elsewhere, if',
             list: [
-              'You need guaranteed, frequent active development — this review found the repository\'s most recent code push was July 31, 2025, notably slower than in its first year',
+              'You need guaranteed, frequent active development — Forge has had no update since July 31, 2025, and its latest GitHub release is dated February 5, 2024',
               'You depend on a specific AUTOMATIC1111 extension that Forge does not support — verify compatibility before switching your whole workflow',
               'You want a beginner-focused, simplified interface rather than the full Stable Diffusion WebUI parameter set — see Fooocus in the competitors section below',
               'You need official support guarantees rather than community/issue-tracker support — Forge\'s support channel is GitHub Issues, typical of an open-source project rather than a commercial vendor with an SLA',
@@ -209,7 +222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Forge is one of several local, open-source interfaces for Stable Diffusion and related image models. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/directory) for the full catalog, and the dedicated [Forge vs. AUTOMATIC1111 WebUI comparison](#forge-vs-automatic1111) above for the closest head-to-head.',
         items: [
           '**[AUTOMATIC1111 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** — the original project Forge is built on top of, with the largest extension ecosystem; see the dedicated comparison section above and the [AUTOMATIC1111 review](/power-local-llm/automatic1111-review) for full details.',
-          '**[ComfyUI](https://github.com/comfyanonymous/ComfyUI)** — a node-based interface for the same underlying Stable Diffusion/Flux models, trading Forge\'s more familiar tab-based UI for a visual workflow graph with finer low-level control; see the [ComfyUI review](/power-local-llm/comfyui-review).',
+          '**[ComfyUI](https://github.com/comfy-org/ComfyUI)** — a node-based interface for the same underlying Stable Diffusion/Flux models, trading Forge\'s more familiar tab-based UI for a visual workflow graph with finer low-level control; see the [ComfyUI review](/power-local-llm/comfyui-review).',
           '**[Fooocus](https://github.com/lllyasviel/Fooocus)** — also created by lllyasviel, but built for the opposite goal: a simplified, opinionated interface aimed at beginners who want good results with minimal parameter tuning, rather than Forge\'s full WebUI parameter set; see the [Fooocus review](/power-local-llm/fooocus-review).',
           '**[InvokeAI](https://github.com/invoke-ai/InvokeAI)** — another polished, actively developed local Stable Diffusion UI with a strong focus on a unified canvas workflow and a more curated feature set than the WebUI-derived tools; see the [InvokeAI review](/power-local-llm/invokeai-review).',
         ],
@@ -234,7 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Mistake 4: Assuming the project ships frequent, active updates',
-            content: 'GitHub\'s API shows the repository\'s most recent code push was July 31, 2025 as of this review — check the [repository\'s commit history](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) directly for the current pace of development before assuming weekly or monthly releases.',
+            content: 'Forge has had no update since July 31, 2025, per GitHub\'s API, and the last commit on `main` is from June 26, 2025 — check the [repository\'s commit history](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) directly before assuming weekly or monthly releases.',
           },
         ],
       },
@@ -251,7 +264,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Does Forge include ControlNet?', a: 'Yes, built in. Forge ships full ControlNet and IP-Adapter support along with the preprocessing tools they rely on, so you do not need to install the separate ControlNet extension the original AUTOMATIC1111 WebUI requires.' },
           { q: 'What platforms does Forge support?', a: 'Windows, macOS, and Linux. Windows has a packaged, one-click build available from GitHub Releases; macOS and Linux are set up via a manual git-clone-and-script install, the same pattern the original AUTOMATIC1111 WebUI uses.' },
           { q: 'Who created Stable Diffusion WebUI Forge?', a: 'Forge was created by [lllyasviel](https://github.com/lllyasviel) (Lyumin Zhang), who is also the creator of ControlNet and of Fooocus, another local Stable Diffusion interface.' },
-          { q: 'Is Forge still actively maintained?', a: 'Development has slowed compared to Forge\'s first year. GitHub\'s API shows the repository\'s most recent code push was July 31, 2025, as of this review. The repository was not archived and remained publicly listed — check its [commit history](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) directly for the current status before relying on frequent updates.' },
+          { q: 'Is Forge still actively maintained?', a: 'No update has been published since July 31, 2025 (the last push, to the `py3.12` branch); the last commit on `main` is from June 26, 2025, and the latest GitHub release is dated February 5, 2024. The repository is not archived, but treat Forge as possibly unmaintained and check its [commit history](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) before relying on it.' },
+          { q: 'What should I use instead of Forge?', a: 'If you want actively developed tools, compare ComfyUI, InvokeAI and SD.Next, which all had pushes on 2026-11-02 per the GitHub API. The original AUTOMATIC1111 WebUI has had no update since March 2, 2026, so it is not a more active choice either; see the [AUTOMATIC1111 review](/power-local-llm/automatic1111-review).' },
         ],
       },
       sources: {
@@ -283,16 +297,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-19',
+    next_refresh_due: '2027-05-02',
     publishDate: '2026-09-19',
-    dateModified: '2026-09-19',
+    dateModified: '2026-11-02',
     educationalLevel: 'Intermediate',
     audience: 'Menschen, die die Grundlagen von Stable Diffusion bereits kennen und im Vergleich zur ursprünglichen AUTOMATIC1111-WebUI schnellere Inferenz, geringeren VRAM-Verbrauch sowie integrierte ControlNet-/Flux-Unterstützung wollen',
     primaryTerm: 'Stable Diffusion WebUI Forge',
     title: 'Stable Diffusion WebUI Forge Review: Schnellerer, VRAM-sparender AUTOMATIC1111-Fork',
-    seoTitle: 'Stable Diffusion WebUI Forge Review',
+    seoTitle: 'Stable Diffusion WebUI Forge Review: Status und Setup',
     intro: 'Stable Diffusion WebUI Forge ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) ist eine kostenlose, quelloffene lokale Webanwendung zur Bildgenerierung — ein Fork von [AUTOMATIC1111s Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui), entwickelt von [lllyasviel](https://github.com/lllyasviel), dem Erfinder von ControlNet. Forge baut die Art und Weise, wie die ursprüngliche WebUI den GPU-Speicher verwaltet und Modelle ausführt, neu auf, mit dem Ziel schnellerer Inferenz und geringeren VRAM-Verbrauchs auf derselben Hardware — bei weitgehender Kompatibilität mit dem Erweiterungs-Ökosystem der ursprünglichen WebUI. Diese Review beschreibt, was Forge tatsächlich ändert, wie man es installiert und ausführt, und wie es sich im Vergleich zur AUTOMATIC1111-WebUI schlägt, auf der es aufbaut.',
-    metaDescription: 'Stable Diffusion WebUI Forge ist ein kostenloser, quelloffener AUTOMATIC1111-Fork von ControlNet-Erfinder lllyasviel für schnellere, VRAM-sparende lokale Bildgenerierung.',
+    metaDescription: 'Forge-Review: der AUTOMATIC1111-Fork von ControlNet-Entwickler lllyasviel, geprüfter Wartungsstatus, Flux-Unterstützung, Setup, Lizenz und Alternativen.',
     readTime: '11 Min. Lesezeit',
     targetKeywords: [
       'Stable Diffusion WebUI Forge Review',
@@ -301,20 +315,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Forge Flux Unterstützung',
       'lokale Stable Diffusion WebUI',
     ],
-    leadAnswerBlock: '**Stable Diffusion WebUI Forge ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) ist eine kostenlose, quelloffene lokale Stable-Diffusion-Webanwendung unter der AGPL-3.0-Lizenz, entwickelt von [lllyasviel](https://github.com/lllyasviel) (dem Erfinder von ControlNet) als Fork auf Basis von [AUTOMATIC1111s Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui).** Die README beschreibt das Projekt als "eine Plattform auf Basis der Stable Diffusion WebUI", die Ressourcenverwaltung und Inferenzgeschwindigkeit optimieren soll — benannt danach, wie Minecraft Forge auf Minecraft aufbaut. Forge bringt ein neu gebautes UNet-Patching-Backend für geringeren VRAM-Verbrauch, integrierte ControlNet- und LoRA-Unterstützung, Flux-Modell-Unterstützung über NF4-/GGUF-Quantisierung sowie eine Gradio-4-Oberfläche mit, während es mit einem Großteil des Erweiterungs-Ökosystems der ursprünglichen WebUI kompatibel bleibt. Es läuft unter Windows, macOS und Linux, benötigt für den praktischen Einsatz eine GPU und hat keine kostenpflichtige Stufe.',
+    leadAnswerBlock: '**Warnung: Stable Diffusion WebUI Forge hat seit dem 31. Juli 2025 kein Update erhalten (neuestes GitHub-Release 5. Februar 2024) und ist womöglich ungepflegt — prüfen Sie es vor dem Einsatz.** **Forge ist ein kostenloser, quelloffener (AGPL-3.0) Fork der AUTOMATIC1111-WebUI für lokale Bildgenerierung, entwickelt von lllyasviel.**',
     quickAnswerTop: {
       de: {
         question: 'Was ist Stable Diffusion WebUI Forge und wie viel kostet es?',
-        answer: 'Stable Diffusion WebUI Forge ist eine kostenlose, quelloffene (AGPL-3.0) lokale Webanwendung zur Bildgenerierung — ein Fork von AUTOMATIC1111s Stable Diffusion WebUI, entwickelt von lllyasviel, dem Erfinder von ControlNet. Es baut die GPU-Speicherverwaltung für schnellere Inferenz und geringeren VRAM-Verbrauch neu auf, bringt integrierte ControlNet-, LoRA- und Flux-Unterstützung mit und hat keine kostenpflichtige Stufe.',
+        answer: 'Stable Diffusion WebUI Forge ist eine kostenlose, quelloffene (AGPL-3.0) lokale Web-App zur Bildgenerierung — ein Fork von AUTOMATIC1111s Stable Diffusion WebUI, entwickelt von lllyasviel, dem Schöpfer von ControlNet. Sie baut die GPU-Speicherverwaltung für schnellere Inferenz und geringeren VRAM-Bedarf um, bringt ControlNet, LoRA und Flux eingebaut mit und hat keine Bezahlstufe. Seit dem 31. Juli 2025 gab es kein Update; sie ist womöglich ungepflegt.',
         bullets: [
           'Kostenlos und quelloffen unter der AGPL-3.0-Lizenz, kein Konto oder Abonnement erforderlich',
           'Entwickelt von lllyasviel (Erfinder von ControlNet) als Fork auf Basis von AUTOMATIC1111s Stable Diffusion WebUI',
           'Neu gebautes UNet-Patching-("Forge"-)Backend zielt auf schnellere Inferenz und geringeren VRAM-Verbrauch auf derselben Hardware wie die ursprüngliche WebUI',
           'Integrierte ControlNet- und IP-Adapter-Unterstützung, LoRA-Unterstützung sowie Flux-Modell-Unterstützung über NF4-/GGUF-Quantisierung',
           'Läuft unter Windows, macOS und Linux; eine GPU wird dringend empfohlen, ohne dokumentierte feste VRAM-Untergrenze',
-          'Das GitHub-Repository ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) zeigt Stand September 2026 rund 13.000 Sterne',
+          `Das GitHub-Repository ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) zeigt rund ${ST.de('stable-diffusion-forge', 'bare')} Sterne; der letzte Push erfolgte am 31. Juli 2025, das neueste GitHub-Release datiert vom 5. Februar 2024`,
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -348,6 +362,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Bringt integrierte ControlNet- und IP-Adapter-Unterstützung, LoRA-Unterstützung sowie Flux-Modell-Unterstützung (NF4-/GGUF-Quantisierung) mit, ohne zusätzliche Erweiterungen',
           'Nutzt eine Gradio-4-Oberfläche, mit einem Windows-Ein-Klick-Paket sowie manuellem Git-Clone-Setup für macOS und Linux',
           'Läuft unter Windows, macOS und Linux; eine GPU wird dringend empfohlen, ohne dokumentierte feste VRAM-Untergrenze — abhängig von Checkpoint und Auflösung',
+          'Wartung: kein Update seit dem 31. Juli 2025 (letzter Push, Branch `py3.12`); der letzte Commit auf `main` stammt vom 26. Juni 2025, das neueste GitHub-Release datiert vom 5. Februar 2024',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Kein Update seit dem 31. Juli 2025 (neuestes GitHub-Release 5. Februar 2024). Forge ist womöglich ungepflegt: Prüfen Sie, ob es mit Ihrer GPU und Ihrem Modell noch funktioniert, bevor Sie sich darauf verlassen.',
+          },
         ],
       },
       overview: {
@@ -367,16 +388,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       history: {
         id: 'forge-history',
         title: 'Forges Projektgeschichte und Versions-Meilensteine',
-        content: '**Das GitHub-Repository von Forge wurde am 14. Januar 2024 erstellt**, und lllyasviel hat seitdem kontinuierlich Updates veröffentlicht — wenn auch in spürbar geringerem Tempo als im ersten Jahr. Stand dieser Review zeigt die GitHub-API den letzten Code-Push am 31. Juli 2025 — wichtig zu wissen, wenn Sie einschätzen wollen, wie aktiv das Projekt derzeit gepflegt wird.',
+        content: '**Forges GitHub-Repository wurde am 14. Januar 2024 angelegt**, und seit dem 31. Juli 2025 gab es kein Update: Die GitHub-API zeigt dieses Datum als letzten Code-Push (auf den Branch `py3.12`), der letzte Commit auf `main` stammt vom 26. Juni 2025.',
         numberedItems: [
           { title: '14. Januar 2024 — Repository erstellt', whyItMatters: 'lllyasviel eröffnet das Repository stable-diffusion-webui-forge als Fork/Plattform auf Basis von AUTOMATIC1111s Stable Diffusion WebUI — Forge ist von Anfang an ein Derivat des bestehenden WebUI-Ökosystems, kein eigenständiges Projekt.' },
           { title: '5. Februar 2024 — Erster paketierter Release', whyItMatters: 'Der "latest"-Tag auf der GitHub-Releases-Seite veröffentlicht einen herunterladbaren, vorpaketierten Windows-Build und bietet damit neben dem manuellen Git-Clone-Workflow eine installer-ähnliche Option.' },
           { title: '22. Juli 2024 — Release "previous_versions" veröffentlicht', whyItMatters: 'Bewahrt ältere Installer-Builds, während sich Forges paketierter Download weiterentwickelt — Nutzer mit älteren CUDA-/PyTorch-Kombinationen hatten so weiterhin einen funktionierenden Build.' },
           { title: '7. September 2024 — Sampler "Flux Realistic" hinzugefügt', whyItMatters: 'Laut Forges eigener NEWS.md kam ein neuer, auf Flux-Modelle abgestimmter Sampler zusammen mit der integrierten Flux-Unterstützung über NF4-/GGUF-Quantisierung hinzu.' },
           { title: '28. Oktober 2024 — Arbeit am Branch "sd35" beginnt (PR #2183)', whyItMatters: 'Laut NEWS.md begann die Arbeit an einem Branch zur Prüfung von Stable-Diffusion-3.5-Unterstützung, Quantisierungsmethoden und Sampling-Techniken vor einem möglichen Merge in den Hauptzweig.' },
-          { title: '31. Juli 2025 — Letzter Code-Push (laut GitHub-API)', whyItMatters: 'Die neueste Commit-Aktivität im Haupt-Repository, die diese Review zum Zeitpunkt der Veröffentlichung bestätigen konnte — relevant, um das aktuelle Entwicklungstempo einzuschätzen, bevor Sie sich für einen Workflow, der häufige Updates braucht, auf Forge verlassen.' },
+          { title: '31. Juli 2025 — Letzter Code-Push (laut GitHub-API)', whyItMatters: 'Die neueste Commit-Aktivität in irgendeinem Branch (Branch `py3.12`, „Fix XYZ grid with Pillow >=10.0.0“); der letzte Commit auf `main` stammt vom 26. Juni 2025. Es folgten weder Commits noch Releases; behandeln Sie Forge daher als möglicherweise ungepflegt.' },
         ],
-        note: 'Forges eigene NEWS.md dokumentierte eine geplante Migration zu Gradio 5, ursprünglich für etwa März 2025 angepeilt, mit Juni 2025 als Ausweichtermin; diese Review fand im Repository keine Bestätigung, dass die Migration abgeschlossen ist. Das Repository wurde nicht archiviert und blieb zum Zeitpunkt dieser Review öffentlich gelistet, mit rund 13.000 GitHub-Sternen, über 1.700 Forks und mehr als 1.100 offenen Issues — prüfen Sie die [Commit-Historie des Repositorys](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) direkt, bevor Sie von aktiver wöchentlicher Entwicklung ausgehen.',
+        note: `Forges eigene NEWS.md dokumentierte eine geplante Migration auf Gradio 5, ursprünglich für etwa März 2025 mit einem Ausweichtermin im Juni 2025 vorgesehen; das README verweist weiterhin auf eine Gradio-4-Anleitung, und diese Review fand keine Bestätigung, dass die Migration abgeschlossen ist. Das Repository ist nicht archiviert und bleibt öffentlich gelistet, mit rund ${ST.de('stable-diffusion-forge', 'bare')} GitHub-Sternen, über 1.700 Forks und über 1.100 offenen Issues — doch ohne Commits seit dem 31. Juli 2025 sollten Sie nicht von aktiver Entwicklung ausgehen. Den aktuellen Stand zeigt die [Commit-Historie des Repositorys](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main).`,
       },
       features: {
         id: 'what-forge-does',
@@ -449,7 +470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspekt': 'ControlNet / IP-Adapter', 'Forge': 'Eingebaut, keine Erweiterung nötig', 'AUTOMATIC1111 WebUI': 'Erfordert die separate ControlNet-Erweiterung' },
           { 'Aspekt': 'Flux-Modell-Unterstützung', 'Forge': 'Eingebaut, mit NF4-/GGUF-Quantisierung', 'AUTOMATIC1111 WebUI': 'Abhängig von Community-Erweiterungen, nicht nativ' },
           { 'Aspekt': 'Erweiterungs-Ökosystem', 'Forge': 'Mit weiten Teilen kompatibel, aber schmaler', 'AUTOMATIC1111 WebUI': 'Das größte, reifste SD-Erweiterungs-Ökosystem' },
-          { 'Aspekt': 'Aktuelle Commit-Aktivität', 'Forge': 'Letzter gefundener Push: 31. Juli 2025', 'AUTOMATIC1111 WebUI': 'Commit-Historie des Projekts direkt prüfen' },
+          { 'Aspekt': 'Aktuelle Commit-Aktivität', 'Forge': 'Kein Push seit dem 31. Juli 2025; neuestes GitHub-Release 5. Februar 2024', 'AUTOMATIC1111 WebUI': 'Kein Update seit dem 2. März 2026; letztes Release v1.10.1 (9. Februar 2025)' },
         ],
         note: 'Wenn Ihnen schnellere Inferenz und geringerer VRAM-Verbrauch mit eingebauter ControlNet- und Flux-Unterstützung wichtiger sind, ist Forges neu gebautes Backend der Grund, sich dafür zu entscheiden. Wenn Ihnen das breitestmögliche Erweiterungs-Ökosystem wichtiger ist oder Sie auf eine Erweiterung angewiesen sind, die Forge noch nicht unterstützt, lohnt sich ein direkter Blick auf die ursprüngliche AUTOMATIC1111-WebUI in ihrem [GitHub-Repository](https://github.com/AUTOMATIC1111/stable-diffusion-webui). Beide sind kostenlos, quelloffen und werden auf demselben Weg installiert (paketierter Windows-Build oder Git Clone); prüfen Sie die aktuelle Kompatibilität jeder Erweiterung, auf die Sie angewiesen sind, bevor Sie wechseln.',
       },
@@ -471,7 +492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Warten Sie oder schauen Sie sich anderswo um, wenn',
             list: [
-              'Sie garantiert häufige, aktive Weiterentwicklung brauchen — diese Review fand als letzten Code-Push im Repository den 31. Juli 2025, spürbar langsamer als im ersten Projektjahr',
+              'Sie brauchen garantierte, häufige aktive Entwicklung — Forge hat seit dem 31. Juli 2025 kein Update erhalten, und sein neuestes GitHub-Release datiert vom 5. Februar 2024',
               'Sie von einer bestimmten AUTOMATIC1111-Erweiterung abhängen, die Forge nicht unterstützt — prüfen Sie die Kompatibilität, bevor Sie Ihren gesamten Workflow umstellen',
               'Sie eine einsteigerfreundliche, vereinfachte Oberfläche statt des vollen Parameterumfangs der Stable Diffusion WebUI wollen — siehe Fooocus im Abschnitt Wettbewerber unten',
               'Sie offizielle Support-Garantien statt Community-/Issue-Tracker-Support benötigen — Forges Support-Kanal sind GitHub Issues, typisch für ein Open-Source-Projekt statt einen kommerziellen Anbieter mit SLA',
@@ -486,7 +507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Forge ist eine von mehreren lokalen, quelloffenen Oberflächen für Stable Diffusion und verwandte Bildmodelle. So schlägt es sich im Vergleich zu anderen Optionen in diesem Bereich — das vollständige Verzeichnis finden Sie im [Local LLM Software Directory](/directory), den direkten Vergleich im Abschnitt [Forge vs. AUTOMATIC1111 WebUI](#forge-vs-automatic1111) weiter oben.',
         items: [
           '**[AUTOMATIC1111 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** — das ursprüngliche Projekt, auf dem Forge aufbaut, mit dem größten Erweiterungs-Ökosystem; siehe den ausführlichen Vergleichsabschnitt oben sowie das [AUTOMATIC1111-Review](/power-local-llm/automatic1111-review) für alle Details.',
-          '**[ComfyUI](https://github.com/comfyanonymous/ComfyUI)** — eine knotenbasierte Oberfläche für dieselben zugrunde liegenden Stable-Diffusion-/Flux-Modelle, die Forges vertrautere Tab-basierte Oberfläche gegen einen visuellen Workflow-Graphen mit feinerer Low-Level-Kontrolle eintauscht; siehe das [ComfyUI-Review](/power-local-llm/comfyui-review).',
+          '**[ComfyUI](https://github.com/comfy-org/ComfyUI)** — eine knotenbasierte Oberfläche für dieselben zugrunde liegenden Stable-Diffusion-/Flux-Modelle, die Forges vertrautere Tab-basierte Oberfläche gegen einen visuellen Workflow-Graphen mit feinerer Low-Level-Kontrolle eintauscht; siehe das [ComfyUI-Review](/power-local-llm/comfyui-review).',
           '**[Fooocus](https://github.com/lllyasviel/Fooocus)** — ebenfalls von lllyasviel entwickelt, aber mit gegenteiligem Ziel: eine vereinfachte, meinungsstarke Oberfläche für Einsteiger, die gute Ergebnisse mit minimaler Parameter-Feinjustierung wollen, statt Forges vollem WebUI-Parameterumfang; siehe das [Fooocus-Review](/power-local-llm/fooocus-review).',
           '**[InvokeAI](https://github.com/invoke-ai/InvokeAI)** — eine weitere ausgereifte, aktiv weiterentwickelte lokale Stable-Diffusion-Oberfläche mit starkem Fokus auf einen einheitlichen Canvas-Workflow und einem stärker kuratierten Funktionsumfang als die WebUI-abgeleiteten Tools; siehe das [InvokeAI-Review](/power-local-llm/invokeai-review).',
         ],
@@ -511,7 +532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Fehler 4: Annehmen, das Projekt veröffentliche häufig aktive Updates',
-            content: 'Die GitHub-API zeigt als letzten Code-Push im Repository den 31. Juli 2025, Stand dieser Review — prüfen Sie die [Commit-Historie des Repositorys](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) direkt, bevor Sie von wöchentlichen oder monatlichen Releases ausgehen.',
+            content: 'Forge hat laut GitHub-API seit dem 31. Juli 2025 kein Update erhalten, und der letzte Commit auf `main` stammt vom 26. Juni 2025 — prüfen Sie die [Commit-Historie des Repositorys](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) direkt, bevor Sie wöchentliche oder monatliche Releases erwarten.',
           },
         ],
       },
@@ -528,7 +549,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Enthält Forge ControlNet?', a: 'Ja, eingebaut. Forge bringt vollständige ControlNet- und IP-Adapter-Unterstützung samt der dafür nötigen Preprocessing-Tools mit, sodass Sie nicht die separate ControlNet-Erweiterung der ursprünglichen AUTOMATIC1111-WebUI installieren müssen.' },
           { q: 'Welche Plattformen unterstützt Forge?', a: 'Windows, macOS und Linux. Für Windows gibt es einen paketierten Ein-Klick-Build über GitHub Releases; macOS und Linux werden über ein manuelles Git-Clone-und-Skript-Setup eingerichtet, demselben Muster wie bei der ursprünglichen AUTOMATIC1111-WebUI.' },
           { q: 'Wer hat Stable Diffusion WebUI Forge entwickelt?', a: 'Forge wurde von [lllyasviel](https://github.com/lllyasviel) (Lyumin Zhang) entwickelt, der auch ControlNet und Fooocus, eine weitere lokale Stable-Diffusion-Oberfläche, geschaffen hat.' },
-          { q: 'Wird Forge noch aktiv gepflegt?', a: 'Die Weiterentwicklung hat sich gegenüber dem ersten Projektjahr verlangsamt. Die GitHub-API zeigt als letzten Code-Push im Repository den 31. Juli 2025, Stand dieser Review. Das Repository wurde nicht archiviert und blieb öffentlich gelistet — prüfen Sie die [Commit-Historie](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) direkt für den aktuellen Status, bevor Sie sich auf häufige Updates verlassen.' },
+          { q: 'Wird Forge noch aktiv gepflegt?', a: 'Seit dem 31. Juli 2025 wurde kein Update veröffentlicht (letzter Push auf den Branch `py3.12`); der letzte Commit auf `main` stammt vom 26. Juni 2025, und das neueste GitHub-Release datiert vom 5. Februar 2024. Das Repository ist nicht archiviert, doch Forge sollte als möglicherweise ungepflegt gelten; prüfen Sie die [Commit-Historie](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main), bevor Sie sich darauf verlassen.' },
+          { q: 'Was sollte ich statt Forge verwenden?', a: 'Wer aktiv entwickelte Tools möchte, sollte ComfyUI, InvokeAI und SD.Next vergleichen, die laut GitHub-API alle am 2026-11-02 Pushes hatten. Die ursprüngliche AUTOMATIC1111-WebUI hat seit dem 2. März 2026 kein Update erhalten und ist daher ebenfalls keine aktivere Wahl; siehe die [AUTOMATIC1111-Review](/power-local-llm/automatic1111-review).' },
         ],
       },
       sources: {
@@ -560,16 +582,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-19',
+    next_refresh_due: '2027-05-02',
     publishDate: '2026-09-19',
-    dateModified: '2026-09-19',
+    dateModified: '2026-11-02',
     educationalLevel: 'Intermediate',
     audience: 'Les personnes qui connaissent déjà les bases de Stable Diffusion et souhaitent une inférence plus rapide, une consommation de VRAM réduite, et une prise en charge intégrée de ControlNet/Flux par rapport à la WebUI AUTOMATIC1111 d\'origine',
     primaryTerm: 'Stable Diffusion WebUI Forge',
     title: 'Stable Diffusion WebUI Forge Avis: le fork AUTOMATIC1111 plus rapide et moins gourmand en VRAM',
-    seoTitle: 'Stable Diffusion WebUI Forge Avis',
+    seoTitle: 'Stable Diffusion WebUI Forge Avis : état et installation',
     intro: 'Stable Diffusion WebUI Forge ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) est une application web locale gratuite et open source pour la génération d\'images — un fork de la [WebUI Stable Diffusion d\'AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui) créé par [lllyasviel](https://github.com/lllyasviel), le créateur de ControlNet. Le projet repense la gestion de la mémoire GPU et l\'exécution des modèles de la WebUI d\'origine, visant une inférence plus rapide et une consommation de VRAM réduite sur le même matériel, tout en restant compatible avec une grande partie de l\'écosystème d\'extensions de la WebUI d\'origine. Cet avis couvre ce que Forge change concrètement, comment l\'installer et l\'utiliser, et comment il se compare à la WebUI AUTOMATIC1111 sur laquelle il est bâti.',
-    metaDescription: 'Stable Diffusion WebUI Forge est un fork AUTOMATIC1111 gratuit et open source créé par lllyasviel, créateur de ControlNet, pour une génération d\'images locale plus rapide et moins gourmande en VRAM.',
+    metaDescription: 'Avis Forge : le fork d\'AUTOMATIC1111 de lllyasviel (créateur de ControlNet), état de maintenance vérifié, Flux, installation, licence et alternatives.',
     readTime: '11 min de lecture',
     targetKeywords: [
       'Stable Diffusion WebUI Forge avis',
@@ -578,20 +600,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Forge support Flux',
       'WebUI Stable Diffusion locale',
     ],
-    leadAnswerBlock: '**Stable Diffusion WebUI Forge ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) est une application web locale Stable Diffusion gratuite et open source, sous licence AGPL-3.0, créée par [lllyasviel](https://github.com/lllyasviel) (le créateur de ControlNet) comme un fork bâti sur la [WebUI Stable Diffusion d\'AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui).** Son propre README la décrit comme « une plateforme construite au-dessus de Stable Diffusion WebUI », conçue pour optimiser la gestion des ressources et la vitesse d\'inférence — un nom inspiré de la façon dont Minecraft Forge se greffe sur Minecraft. Elle embarque un backend de « unet patching » reconstruit pour réduire l\'usage de VRAM, un support intégré de ControlNet et LoRA, un support des modèles Flux via quantification NF4/GGUF, et une interface Gradio 4, tout en restant compatible avec une grande partie de l\'écosystème d\'extensions de la WebUI d\'origine. Elle fonctionne sous Windows, macOS et Linux, nécessite un GPU pour un usage pratique, et n\'a aucune offre payante.',
+    leadAnswerBlock: '**Avertissement : Forge n\'a reçu aucune mise à jour depuis le 31 juillet 2025 (dernière release GitHub : 5 février 2024) ; il n\'est peut-être plus maintenu — vérifiez avant usage.** **Stable Diffusion WebUI Forge est un fork gratuit et open source (AGPL-3.0) d\'AUTOMATIC1111, créé par lllyasviel.**',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que Stable Diffusion WebUI Forge et combien ça coûte ?',
-        answer: 'Stable Diffusion WebUI Forge est une application web locale de génération d\'images gratuite et open source (AGPL-3.0) — un fork de la WebUI Stable Diffusion d\'AUTOMATIC1111 créé par lllyasviel, le créateur de ControlNet. Elle repense la gestion de la mémoire GPU pour une inférence plus rapide et une VRAM réduite, ajoute un support intégré de ControlNet, LoRA et Flux, et n\'a aucune offre payante.',
+        answer: 'Stable Diffusion WebUI Forge est une application web locale gratuite et open source (AGPL-3.0) de génération d\'images — un fork de Stable Diffusion WebUI d\'AUTOMATIC1111 créé par lllyasviel, le créateur de ControlNet. Elle reconstruit la gestion de la mémoire GPU pour une inférence plus rapide et moins de VRAM, intègre ControlNet, LoRA et Flux, et n\'a pas de formule payante. Elle n\'a reçu aucune mise à jour depuis le 31 juillet 2025 et n\'est peut-être plus maintenue.',
         bullets: [
           'Gratuit et open source sous licence AGPL-3.0, sans compte ni abonnement requis',
           'Créé par lllyasviel (créateur de ControlNet) comme un fork bâti sur la WebUI Stable Diffusion d\'AUTOMATIC1111',
           'Le backend « Forge » de unet patching, reconstruit, vise une inférence plus rapide et une VRAM réduite sur le même matériel que la WebUI d\'origine',
           'Support intégré de ControlNet et IP-Adapter, support de LoRA, et support des modèles Flux via quantification NF4/GGUF',
           'Fonctionne sous Windows, macOS et Linux ; un GPU est fortement recommandé, sans seuil de VRAM minimal officiellement documenté',
-          'Le dépôt GitHub ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) affiche environ 13 000 étoiles en septembre 2026',
+          `Le dépôt GitHub ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) affiche environ ${ST.fr('stable-diffusion-forge', 'bare')} étoiles ; le dernier push date du 31 juillet 2025 et la dernière release GitHub du 5 février 2024`,
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -625,6 +647,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Embarque un support intégré de ControlNet et IP-Adapter, un support LoRA, et un support des modèles Flux (quantification NF4/GGUF) sans extension supplémentaire',
           'Utilise une interface Gradio 4, avec un paquet Windows en un clic et une installation manuelle par clonage Git pour macOS et Linux',
           'Fonctionne sous Windows, macOS et Linux ; un GPU est fortement recommandé, sans minimum de VRAM officiellement documenté — cela dépend du checkpoint et de la résolution',
+          'Maintenance : aucune mise à jour depuis le 31 juillet 2025 (dernier push, branche `py3.12`) ; le dernier commit sur `main` date du 26 juin 2025, et la dernière release GitHub du 5 février 2024',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Aucune mise à jour depuis le 31 juillet 2025 (dernière release GitHub : 5 février 2024). Forge n\'est peut-être plus maintenu : vérifiez qu\'il fonctionne encore avec votre GPU et votre modèle avant de vous y fier.',
+          },
         ],
       },
       overview: {
@@ -644,16 +673,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       history: {
         id: 'forge-history',
         title: 'Historique du projet Forge et jalons de versions',
-        content: '**Le dépôt GitHub de Forge a été créé le 14 janvier 2024**, et lllyasviel a continué à publier des mises à jour depuis, à un rythme visiblement plus lent que lors de sa première année. Au moment de cet avis, l\'API GitHub indique que le dernier push de code du dépôt date du 31 juillet 2025 — une information utile pour évaluer le niveau de maintenance actuel du projet.',
+        content: '**Le dépôt GitHub de Forge a été créé le 14 janvier 2024**, et il n\'a reçu aucune mise à jour depuis le 31 juillet 2025 : l\'API GitHub indique cette date comme dernier push de code (sur la branche `py3.12`), et le dernier commit sur `main` date du 26 juin 2025.',
         numberedItems: [
           { title: '14 janvier 2024 — Création du dépôt', whyItMatters: 'lllyasviel ouvre le dépôt stable-diffusion-webui-forge comme un fork/plateforme bâti sur la WebUI Stable Diffusion d\'AUTOMATIC1111, établissant Forge dès le premier jour comme un dérivé de l\'écosystème WebUI existant plutôt qu\'un projet indépendant.' },
           { title: '5 février 2024 — Première release packagée', whyItMatters: 'Le tag « latest » de la page GitHub Releases publie un build Windows préemballé téléchargeable, offrant une option proche d\'un installateur en plus du flux de travail manuel par clonage Git.' },
           { title: '22 juillet 2024 — Publication de la release « previous_versions »', whyItMatters: 'Conserve des builds d\'installation plus anciens à mesure que le téléchargement packagé de Forge évoluait, laissant aux utilisateurs de combinaisons CUDA/PyTorch plus anciennes un build fonctionnel de secours.' },
           { title: '7 septembre 2024 — Ajout du sampler « Flux Realistic »', whyItMatters: 'Selon le NEWS.md du projet, un nouveau sampler adapté aux modèles Flux est arrivé en même temps que le support Flux intégré de Forge via quantification NF4/GGUF.' },
           { title: '28 octobre 2024 — Début des travaux sur la branche « sd35 » (PR #2183)', whyItMatters: 'Selon le NEWS.md, des travaux ont commencé sur une branche évaluant le support de Stable Diffusion 3.5, les méthodes de quantification et les techniques d\'échantillonnage, en vue d\'une éventuelle fusion dans la branche principale.' },
-          { title: '31 juillet 2025 — Dernier push de code (selon l\'API GitHub)', whyItMatters: 'L\'activité de commit la plus récente que cet avis a pu confirmer sur le dépôt principal à la date de sa publication — un repère utile pour juger du rythme de développement actuel avant de s\'appuyer sur Forge pour un usage nécessitant des mises à jour fréquentes.' },
+          { title: '31 juillet 2025 — Dernier push de code (selon l\'API GitHub)', whyItMatters: 'L\'activité de commit la plus récente sur n\'importe quelle branche (branche `py3.12`, « Fix XYZ grid with Pillow >=10.0.0 ») ; le dernier commit sur `main` date du 26 juin 2025. Aucun commit ni release n\'a suivi : considérez Forge comme potentiellement non maintenu.' },
         ],
-        note: 'Le NEWS.md de Forge a documenté une migration prévue vers Gradio 5, initialement visée pour mars 2025 environ avec une échéance de secours en juin 2025 ; cet avis n\'a trouvé dans le dépôt aucune confirmation que cette migration est achevée. Le dépôt n\'a pas été archivé et restait publiquement listé au moment de cet avis, avec environ 13 000 étoiles GitHub, plus de 1 700 forks et plus de 1 100 issues ouvertes — mais consultez directement l\'[historique des commits du dépôt](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) avant de supposer un développement hebdomadaire actif.',
+        note: `Le NEWS.md de Forge documentait une migration prévue vers Gradio 5, visée vers mars 2025 avec une date de repli en juin 2025 ; le README renvoie toujours à un guide Gradio 4, et cette revue n'a trouvé aucune confirmation que la migration soit terminée. Le dépôt n'est pas archivé et reste public, avec environ ${ST.fr('stable-diffusion-forge', 'bare')} étoiles GitHub, plus de 1 700 forks et plus de 1 100 issues ouvertes — mais sans commit depuis le 31 juillet 2025, ne supposez pas un développement actif. Consultez l'[historique des commits du dépôt](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) pour l'état actuel.`,
       },
       features: {
         id: 'what-forge-does',
@@ -726,7 +755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspect': 'ControlNet / IP-Adapter', 'Forge': 'Intégré, aucune extension nécessaire', 'WebUI AUTOMATIC1111': 'Nécessite l\'extension ControlNet séparée' },
           { 'Aspect': 'Support des modèles Flux', 'Forge': 'Intégré, avec quantification NF4/GGUF', 'WebUI AUTOMATIC1111': 'Dépend d\'extensions communautaires, non natif' },
           { 'Aspect': 'Écosystème d\'extensions', 'Forge': 'Compatible avec une grande partie, mais plus restreint', 'WebUI AUTOMATIC1111': 'L\'écosystème d\'extensions SD le plus vaste et mature' },
-          { 'Aspect': 'Activité de commits récente', 'Forge': 'Dernier push trouvé : 31 juillet 2025', 'WebUI AUTOMATIC1111': 'Vérifiez directement l\'historique des commits du projet' },
+          { 'Aspect': 'Activité de commits récente', 'Forge': 'Aucun push depuis le 31 juillet 2025 ; dernière release GitHub du 5 février 2024', 'WebUI AUTOMATIC1111': 'Aucune mise à jour depuis le 2 mars 2026 ; dernière release v1.10.1 (9 février 2025)' },
         ],
         note: 'Si votre priorité est une inférence plus rapide et une VRAM réduite avec ControlNet et Flux intégrés d\'office, le backend reconstruit de Forge est la raison de le choisir. Si votre priorité est l\'écosystème d\'extensions le plus vaste possible, ou si vous dépendez d\'une extension que Forge ne prend pas encore en charge, la WebUI AUTOMATIC1111 d\'origine mérite d\'être évaluée directement sur son [dépôt GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui). Les deux sont gratuits, open source, et s\'installent de la même façon (build Windows packagé ou clonage Git) ; vérifiez la compatibilité actuelle de toute extension dont vous dépendez avant de changer.',
       },
@@ -748,7 +777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Attendez, ou regardez ailleurs, si',
             list: [
-              'Vous avez besoin d\'un développement actif et fréquent garanti — cet avis a constaté que le dernier push de code du dépôt datait du 31 juillet 2025, nettement plus lent que lors de sa première année',
+              'Vous avez besoin d\'un développement actif garanti et fréquent — Forge n\'a reçu aucune mise à jour depuis le 31 juillet 2025, et sa dernière release GitHub date du 5 février 2024',
               'Vous dépendez d\'une extension AUTOMATIC1111 spécifique que Forge ne prend pas en charge — vérifiez la compatibilité avant de basculer tout votre workflow',
               'Vous voulez une interface simplifiée orientée débutants plutôt que l\'ensemble complet des paramètres de la WebUI Stable Diffusion — voir Fooocus dans la section concurrents ci-dessous',
               'Vous avez besoin de garanties de support officiel plutôt que d\'un support communautaire via le suivi des issues — le canal de support de Forge est GitHub Issues, typique d\'un projet open source plutôt que d\'un fournisseur commercial avec SLA',
@@ -763,7 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Forge est l\'une des nombreuses interfaces locales et open source pour Stable Diffusion et les modèles d\'images apparentés. Voici comment il se positionne par rapport à d\'autres options de ce domaine — consultez le [Local LLM Software Directory](/directory) pour le catalogue complet, et la comparaison dédiée [Forge vs. WebUI AUTOMATIC1111](#forge-vs-automatic1111) ci-dessus pour la confrontation la plus directe.',
         items: [
           '**[WebUI Stable Diffusion AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** — le projet d\'origine sur lequel Forge est construit, avec l\'écosystème d\'extensions le plus vaste ; voir la section de comparaison dédiée ci-dessus et l\'[avis AUTOMATIC1111](/power-local-llm/automatic1111-review) pour tous les détails.',
-          '**[ComfyUI](https://github.com/comfyanonymous/ComfyUI)** — une interface basée sur des nœuds pour les mêmes modèles Stable Diffusion/Flux sous-jacents, échangeant l\'interface à onglets plus familière de Forge contre un graphe de workflow visuel offrant un contrôle bas niveau plus fin ; voir l\'[avis ComfyUI](/power-local-llm/comfyui-review).',
+          '**[ComfyUI](https://github.com/comfy-org/ComfyUI)** — une interface basée sur des nœuds pour les mêmes modèles Stable Diffusion/Flux sous-jacents, échangeant l\'interface à onglets plus familière de Forge contre un graphe de workflow visuel offrant un contrôle bas niveau plus fin ; voir l\'[avis ComfyUI](/power-local-llm/comfyui-review).',
           '**[Fooocus](https://github.com/lllyasviel/Fooocus)** — également créé par lllyasviel, mais dans un but opposé : une interface simplifiée et très cadrée pour les débutants voulant de bons résultats avec un réglage minimal des paramètres, plutôt que l\'ensemble complet des paramètres de la WebUI de Forge ; voir l\'[avis Fooocus](/power-local-llm/fooocus-review).',
           '**[InvokeAI](https://github.com/invoke-ai/InvokeAI)** — une autre interface Stable Diffusion locale aboutie et activement développée, fortement axée sur un workflow de canevas unifié et un ensemble de fonctionnalités plus cadré que les outils dérivés de la WebUI ; voir l\'[avis InvokeAI](/power-local-llm/invokeai-review).',
         ],
@@ -788,7 +817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Erreur 4 : supposer que le projet publie des mises à jour fréquentes et actives',
-            content: 'L\'API GitHub indique que le dernier push de code du dépôt date du 31 juillet 2025 au moment de cet avis — consultez directement l\'[historique des commits du dépôt](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) avant de supposer des releases hebdomadaires ou mensuelles.',
+            content: 'Forge n\'a reçu aucune mise à jour depuis le 31 juillet 2025, selon l\'API GitHub, et le dernier commit sur `main` date du 26 juin 2025 — consultez directement l\'[historique des commits du dépôt](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) avant de supposer des releases hebdomadaires ou mensuelles.',
           },
         ],
       },
@@ -805,7 +834,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Forge inclut-il ControlNet ?', a: 'Oui, intégré. Forge embarque le support complet de ControlNet et IP-Adapter ainsi que les outils de prétraitement dont ils dépendent, donc vous n\'avez pas besoin d\'installer l\'extension ControlNet séparée requise par la WebUI AUTOMATIC1111 d\'origine.' },
           { q: 'Quelles plateformes Forge prend-il en charge ?', a: 'Windows, macOS et Linux. Windows dispose d\'un build packagé en un clic disponible via GitHub Releases ; macOS et Linux s\'installent via un clonage Git manuel plus script, le même schéma que la WebUI AUTOMATIC1111 d\'origine.' },
           { q: 'Qui a créé Stable Diffusion WebUI Forge ?', a: 'Forge a été créé par [lllyasviel](https://github.com/lllyasviel) (Lyumin Zhang), également créateur de ControlNet et de Fooocus, une autre interface Stable Diffusion locale.' },
-          { q: 'Forge est-il encore activement maintenu ?', a: 'Le développement a ralenti par rapport à la première année de Forge. L\'API GitHub indique que le dernier push de code du dépôt date du 31 juillet 2025 au moment de cet avis. Le dépôt n\'a pas été archivé et restait publiquement listé — consultez directement son [historique de commits](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) pour le statut actuel avant de compter sur des mises à jour fréquentes.' },
+          { q: 'Forge est-il encore activement maintenu ?', a: 'Aucune mise à jour n\'a été publiée depuis le 31 juillet 2025 (dernier push, sur la branche `py3.12`) ; le dernier commit sur `main` date du 26 juin 2025, et la dernière release GitHub du 5 février 2024. Le dépôt n\'est pas archivé, mais considérez Forge comme potentiellement non maintenu et consultez son [historique des commits](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) avant de vous y fier.' },
+          { q: 'Que choisir à la place de Forge ?', a: 'Si vous voulez des outils activement développés, comparez ComfyUI, InvokeAI et SD.Next, qui ont tous reçu des pushes le 2026-11-02 selon l\'API GitHub. L\'interface AUTOMATIC1111 d\'origine n\'a reçu aucune mise à jour depuis le 2 mars 2026 et n\'est donc pas un choix plus actif ; voir l\'[avis AUTOMATIC1111](/power-local-llm/automatic1111-review).' },
         ],
       },
       sources: {
@@ -837,16 +867,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-19',
+    next_refresh_due: '2027-05-02',
     publishDate: '2026-09-19',
-    dateModified: '2026-09-19',
+    dateModified: '2026-11-02',
     educationalLevel: 'Intermediate',
     audience: 'すでにStable Diffusionの基本を理解しており、オリジナルのAUTOMATIC1111 WebUIと比べて高速な推論、低VRAM消費、そして標準搭載のControlNet/Fluxサポートを求める人',
     primaryTerm: 'Stable Diffusion WebUI Forge',
     title: 'Stable Diffusion WebUI Forgeレビュー：高速・低VRAMなAUTOMATIC1111フォーク',
     seoTitle: 'Stable Diffusion WebUI Forgeレビュー',
     intro: 'Stable Diffusion WebUI Forge（[github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)）は、無料・オープンソースのローカル画像生成Webアプリで、ControlNetの作者である[lllyasviel](https://github.com/lllyasviel)が[AUTOMATIC1111のStable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)をフォークして構築したものです。元のWebUIのGPUメモリ管理とモデル実行方式を作り直し、同じハードウェアでより高速な推論とより低いVRAM消費を目指しながら、元のWebUIの拡張機能エコシステムの多くと互換性を保っています。このレビューでは、Forgeが実際に何を変えているのか、インストール・実行方法、そして構築元であるAUTOMATIC1111 WebUIとの比較を解説します。',
-    metaDescription: 'Stable Diffusion WebUI Forgeは、ControlNetの作者lllyasviel氏による無料・オープンソースのAUTOMATIC1111フォークで、高速かつ低VRAMなローカル画像生成を実現します。',
+    metaDescription: 'Forgeのレビュー。ControlNet作者lllyasvielによるAUTOMATIC1111フォークの保守状況、Flux対応、導入方法、ライセンスを解説します。',
     readTime: '11分で読めます',
     targetKeywords: [
       'Stable Diffusion WebUI Forge レビュー',
@@ -855,20 +885,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Forge Flux 対応',
       'ローカル Stable Diffusion WebUI',
     ],
-    leadAnswerBlock: '**Stable Diffusion WebUI Forge（[github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)）は、AGPL-3.0ライセンスの無料・オープンソースのローカルStable Diffusion Webアプリで、ControlNetの作者である[lllyasviel](https://github.com/lllyasviel)が[AUTOMATIC1111のStable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)をフォークして構築しました。** 公式READMEでは「Stable Diffusion WebUI上に構築されたプラットフォーム」と説明されており、リソース管理と推論速度の最適化を目的としています。名称はMinecraft ForgeがMinecraft上に構築されているのと同じ発想に由来します。低VRAM化を狙って作り直されたUNetパッチングバックエンド、標準搭載のControlNetとLoRAサポート、NF4/GGUF量子化によるFluxモデル対応、そしてGradio 4インターフェースを備えつつ、元のWebUIの拡張機能エコシステムの多くと互換性を保っています。Windows、macOS、Linuxで動作し、実用的な利用にはGPUが必要で、有料プランはありません。',
+    leadAnswerBlock: '**警告:Stable Diffusion WebUI Forgeは2025年7月31日以降更新されておらず(最新のGitHubリリースは2024年2月5日)、メンテナンスされていない可能性があります。利用前に確認してください。** **Forgeは、lllyasvielが開発した、ローカル画像生成向けの無料のオープンソース(AGPL-3.0)のAUTOMATIC1111 WebUIフォークです。**',
     quickAnswerTop: {
       ja: {
         question: 'Stable Diffusion WebUI Forgeとは何で、価格はいくらですか？',
-        answer: 'Stable Diffusion WebUI Forgeは、無料・オープンソース（AGPL-3.0）のローカル画像生成Webアプリで、ControlNetの作者lllyasviel氏によるAUTOMATIC1111 Stable Diffusion WebUIのフォークです。GPUメモリの扱いを再構築して高速推論と低VRAM消費を実現し、ControlNet・LoRA・Fluxの標準対応を追加していますが、有料プランはありません。',
+        answer: 'Stable Diffusion WebUI Forgeは、無料のオープンソース(AGPL-3.0)のローカル画像生成Webアプリで、ControlNetの作者lllyasvielが作ったAUTOMATIC1111のStable Diffusion WebUIのフォークです。GPUメモリの扱いを作り直して推論を高速化しVRAM使用量を減らし、ControlNet、LoRA、Fluxを標準で備え、有料プランはありません。2025年7月31日以降更新がなく、メンテナンスされていない可能性があります。',
         bullets: [
           'AGPL-3.0ライセンスの無料・オープンソース、アカウントやサブスクリプション不要',
           'ControlNetの作者lllyasviel氏が、AUTOMATIC1111のStable Diffusion WebUIをフォークして構築',
           '作り直された「Forge」UNetパッチングバックエンドは、元のWebUIと同じハードウェアでより高速な推論と低VRAM消費を目指す',
           'ControlNetとIP-Adapterの標準サポート、LoRAサポート、NF4/GGUF量子化によるFluxモデル対応',
           'Windows、macOS、Linuxで動作。GPUが強く推奨されるが、公式に文書化された単一のVRAM下限はない',
-          'GitHubリポジトリ（[github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)）は2026年9月時点で約13,000スターを記録',
+          `GitHubリポジトリ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge))のスターは約${ST.ja('stable-diffusion-forge', 'bare')}で、最後のプッシュは2025年7月31日、最新のGitHubリリースは2024年2月5日付です`,
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -902,6 +932,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '追加の拡張機能なしで、標準搭載のControlNetとIP-Adapterサポート、LoRAサポート、Fluxモデル対応（NF4/GGUF量子化）を提供します',
           'Gradio 4インターフェースを採用し、Windows向けのワンクリックパッケージとmacOS・Linux向けの手動git clone設定を用意しています',
           'Windows、macOS、Linuxで動作します。GPUが強く推奨されますが、単一の文書化されたVRAM最低要件はなく、チェックポイントと解像度に依存します',
+          '保守状況:2025年7月31日以降更新なし(最後のプッシュは`py3.12`ブランチ)。`main`の最後のコミットは2025年6月26日、最新のGitHubリリースは2024年2月5日付です',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '2025年7月31日以降更新なし(最新のGitHubリリースは2024年2月5日)。Forgeはメンテナンスされていない可能性があります。頼る前に、お使いのGPUとモデルで動作することを確認してください。',
+          },
         ],
       },
       overview: {
@@ -921,16 +958,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       history: {
         id: 'forge-history',
         title: 'Forgeのプロジェクト履歴とバージョンの節目',
-        content: '**Forgeのリポジトリは2024年1月14日にGitHub上で作成され**、以降lllyasviel氏がアップデートを続けていますが、最初の1年と比べると明らかにペースは落ちています。このレビュー時点で、GitHubのAPIによればリポジトリへの最新のコードプッシュは2025年7月31日で、現在のメンテナンス状況を評価するうえで知っておく価値があります。',
+        content: '**ForgeのGitHubリポジトリは2024年1月14日に作成されました。** 2025年7月31日以降は更新がなく、GitHub APIはこの日付を最後のコードプッシュ(`py3.12`ブランチ)として示しており、`main`の最後のコミットは2025年6月26日です。',
         numberedItems: [
           { title: '2024年1月14日 — リポジトリ作成', whyItMatters: 'lllyasviel氏がAUTOMATIC1111のStable Diffusion WebUIをフォーク/プラットフォーム化するstable-diffusion-webui-forgeリポジトリを開設し、Forgeが独立プロジェクトではなく初日から既存WebUIエコシステムの派生物であることを確立しました。' },
           { title: '2024年2月5日 — 最初のパッケージ版リリース', whyItMatters: 'GitHub Releasesページの「latest」タグで、ダウンロード可能な事前パッケージ済みWindowsビルドが公開され、手動のgit cloneによるワークフローに加えてインストーラー的な選択肢が加わりました。' },
           { title: '2024年7月22日 — リリース「previous_versions」公開', whyItMatters: 'Forgeのパッケージ版ダウンロードが変化し続ける中、古いインストーラービルドを保存し、古いCUDA/PyTorchの組み合わせを使うユーザーにも動作するビルドを残しました。' },
           { title: '2024年9月7日 — サンプラー「Flux Realistic」追加', whyItMatters: 'プロジェクト独自のNEWS.mdによれば、NF4/GGUF量子化によるForge標準搭載のFlux対応とあわせて、Fluxモデル向けに調整された新しいサンプラーが追加されました。' },
           { title: '2024年10月28日 — ブランチ「sd35」の作業開始（PR #2183）', whyItMatters: 'NEWS.mdによれば、メインブランチへの統合を視野に、Stable Diffusion 3.5対応、量子化手法、サンプリング技術を検証するブランチの作業が始まりました。' },
-          { title: '2025年7月31日 — 最新のコードプッシュ（GitHub APIより）', whyItMatters: 'このレビュー公開時点でメインリポジトリにおいて確認できた最新のコミット活動です。頻繁な更新を必要とするワークフローでForgeに依存する前に、現在の開発ペースを判断する上で参考になります。' },
+          { title: '2025年7月31日 — 最新のコードプッシュ（GitHub APIより）', whyItMatters: 'いずれかのブランチにおける最新のコミット活動(`py3.12`ブランチ、"Fix XYZ grid with Pillow >=10.0.0")。`main`の最後のコミットは2025年6月26日です。その後コミットもリリースもないため、Forgeはメンテナンスされていない可能性があるものとして扱ってください。' },
         ],
-        note: 'ForgeのNEWS.mdには、当初2025年3月頃を目標とし、2025年6月をバックアッププランとするGradio 5への移行計画が記載されていましたが、このレビューではリポジトリ内にその移行が完了したことを確認する記述は見つかりませんでした。リポジトリはアーカイブされておらず、このレビュー時点で公開リスト上に残っており、約13,000のGitHubスター、1,700以上のフォーク、1,100件を超えるオープンなissueがありますが、活発な週次開発が行われていると想定する前に、[リポジトリのコミット履歴](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main)を直接確認してください。',
+        note: `ForgeのNEWS.mdには、2025年3月ごろを目標(代替期限は2025年6月)としたGradio 5への移行予定が記載されていましたが、READMEは今もGradio 4のガイドを案内しており、本レビューでは移行が完了した確認は取れませんでした。リポジトリはアーカイブされておらず公開されたままで、GitHubスターは約${ST.ja('stable-diffusion-forge', 'bare')}、フォークは1,700超、オープンなIssueは1,100件超ですが、2025年7月31日以降コミットがないため、活発な開発が続いていると想定しないでください。現在の状態は[リポジトリのコミット履歴](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main)で確認してください。`,
       },
       features: {
         id: 'what-forge-does',
@@ -1003,7 +1040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '項目': 'ControlNet / IP-Adapter', 'Forge': '標準搭載、拡張機能不要', 'AUTOMATIC1111 WebUI': '別途ControlNet拡張機能が必要' },
           { '項目': 'Fluxモデル対応', 'Forge': 'NF4/GGUF量子化込みで標準搭載', 'AUTOMATIC1111 WebUI': 'コミュニティ拡張機能に依存、非標準' },
           { '項目': '拡張機能エコシステム', 'Forge': '多くと互換性があるがやや狭い', 'AUTOMATIC1111 WebUI': '最大かつ最も成熟したSD拡張機能エコシステム' },
-          { '項目': '最近のコミット活動', 'Forge': '確認できた最新プッシュ：2025年7月31日', 'AUTOMATIC1111 WebUI': 'プロジェクト自身のコミット履歴を直接確認してください' },
+          { '項目': '最近のコミット活動', 'Forge': '2025年7月31日以降プッシュなし。最新のGitHubリリースは2024年2月5日', 'AUTOMATIC1111 WebUI': '2026年3月2日以降更新なし。最新リリースはv1.10.1(2025年2月9日)' },
         ],
         note: '標準搭載のControlNetとFluxサポートによる高速推論と低VRAM消費を重視するなら、Forgeの作り直されたバックエンドがそれを選ぶ理由になります。最大限に広い拡張機能エコシステムを重視する、またはForgeがまだ対応していない拡張機能に依存している場合は、元のAUTOMATIC1111 WebUIを[GitHubリポジトリ](https://github.com/AUTOMATIC1111/stable-diffusion-webui)で直接検討する価値があります。どちらも無料・オープンソースで、インストール方法も同じ（パッケージ版Windowsビルドまたはgit clone）です。切り替える前に、依存している特定の拡張機能の現在の互換性を確認してください。',
       },
@@ -1025,7 +1062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'こんな人は導入を待つか、他を検討すべき',
             list: [
-              '保証された頻繁で活発な開発が必要 — このレビューではリポジトリへの最新のコードプッシュが2025年7月31日であることが確認され、最初の1年に比べて明らかに遅くなっています',
+              '保証された頻繁な活発開発が必要——Forgeは2025年7月31日以降更新されておらず、最新のGitHubリリースは2024年2月5日付です',
               'Forgeが対応していない特定のAUTOMATIC1111拡張機能に依存している — ワークフロー全体を切り替える前に互換性を確認してください',
               'Stable Diffusion WebUIのフルパラメータセットではなく、初心者向けのシンプルなインターフェースを求めている — 下記の競合セクションのFooocusを参照してください',
               'コミュニティ／issueトラッカーによるサポートではなく、公式のサポート保証が必要 — Forgeのサポートチャネルはオープンソースプロジェクトに典型的なGitHub Issuesであり、SLA付きの商用ベンダーではありません',
@@ -1040,7 +1077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Forgeは、Stable Diffusionおよび関連する画像モデル向けの、ローカルでオープンソースなインターフェースの一つです。この分野の他の選択肢と比べてどう位置づけられるかを見てみましょう。全カタログは[ローカルLLMソフトウェアディレクトリ](/directory)を、最も直接的な比較は上記の[Forge対AUTOMATIC1111 WebUI](#forge-vs-automatic1111)専用セクションをご覧ください。',
         items: [
           '**[AUTOMATIC1111 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** — Forgeが構築元とするオリジナルプロジェクトで、最大の拡張機能エコシステムを持ちます。詳細は上記の専用比較セクションと[AUTOMATIC1111レビュー](/power-local-llm/automatic1111-review)をご覧ください。',
-          '**[ComfyUI](https://github.com/comfyanonymous/ComfyUI)** — 同じ基盤となるStable Diffusion/Fluxモデル向けのノードベースインターフェースで、Forgeのより馴染みのあるタブベースUIの代わりに、より細かい低レベル制御ができるビジュアルワークフローグラフを採用しています。[ComfyUIレビュー](/power-local-llm/comfyui-review)をご覧ください。',
+          '**[ComfyUI](https://github.com/comfy-org/ComfyUI)** — 同じ基盤となるStable Diffusion/Fluxモデル向けのノードベースインターフェースで、Forgeのより馴染みのあるタブベースUIの代わりに、より細かい低レベル制御ができるビジュアルワークフローグラフを採用しています。[ComfyUIレビュー](/power-local-llm/comfyui-review)をご覧ください。',
           '**[Fooocus](https://github.com/lllyasviel/Fooocus)** — 同じくlllyasviel氏が作成しましたが、目的は正反対です。Forgeのフルパラメータセットではなく、最小限のパラメータ調整で良い結果を求める初心者向けの、シンプルで方向性の明確なインターフェースです。[Fooocusレビュー](/power-local-llm/fooocus-review)をご覧ください。',
           '**[InvokeAI](https://github.com/invoke-ai/InvokeAI)** — 統一されたキャンバスワークフローに強く焦点を当てた、もう一つの洗練された、活発に開発が続くローカルStable Diffusion UIで、WebUI派生ツールよりも厳選された機能セットを持ちます。[InvokeAIレビュー](/power-local-llm/invokeai-review)をご覧ください。',
         ],
@@ -1065,7 +1102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '誤解4：プロジェクトが頻繁で活発なアップデートを出し続けていると思い込む',
-            content: 'このレビュー時点で、GitHubのAPIによればリポジトリへの最新のコードプッシュは2025年7月31日です。週次や月次でのリリースを前提にする前に、[リポジトリのコミット履歴](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main)を直接確認してください。',
+            content: 'GitHub APIによれば、Forgeは2025年7月31日以降更新されておらず、`main`の最後のコミットは2025年6月26日です。毎週や毎月のリリースを想定する前に、[リポジトリのコミット履歴](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main)を直接確認してください。',
           },
         ],
       },
@@ -1082,7 +1119,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ForgeにはControlNetが含まれていますか？', a: 'はい、標準搭載されています。ForgeはControlNetとIP-Adapterの完全なサポート、およびそれらが依存する前処理ツールを同梱しているため、元のAUTOMATIC1111 WebUIが必要とする別途のControlNet拡張機能をインストールする必要はありません。' },
           { q: 'Forgeはどのプラットフォームに対応していますか？', a: 'Windows、macOS、Linuxに対応しています。Windows向けにはGitHub Releasesからワンクリックのパッケージ版ビルドが利用でき、macOSとLinuxは手動のgit clone＋スクリプトによるセットアップで、元のAUTOMATIC1111 WebUIと同じパターンです。' },
           { q: 'Stable Diffusion WebUI Forgeを作ったのは誰ですか？', a: 'Forgeは、ControlNetおよび別のローカルStable DiffusionインターフェースであるFooocusの作者でもある[lllyasviel](https://github.com/lllyasviel)（Lyumin Zhang氏）によって作られました。' },
-          { q: 'Forgeは今も活発にメンテナンスされていますか？', a: 'Forgeの最初の1年と比べると、開発のペースは落ちています。このレビュー時点で、GitHubのAPIによればリポジトリへの最新のコードプッシュは2025年7月31日です。リポジトリはアーカイブされておらず、公開リスト上に残っています。頻繁なアップデートを前提にする前に、[コミット履歴](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main)を直接確認して現在の状況を把握してください。' },
+          { q: 'Forgeは今も活発にメンテナンスされていますか？', a: '2025年7月31日以降、更新は公開されていません(最後のプッシュは`py3.12`ブランチ)。`main`の最後のコミットは2025年6月26日、最新のGitHubリリースは2024年2月5日付です。リポジトリはアーカイブされていませんが、Forgeはメンテナンスされていない可能性があるものとして扱い、頼る前に[コミット履歴](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main)を確認してください。' },
+          { q: 'Forgeの代わりに何を使えばよいですか?', a: '積極的に開発されているツールを求めるなら、GitHub APIによれば2026-11-02にいずれもプッシュがあったComfyUI、InvokeAI、SD.Nextを比較してください。元のAUTOMATIC1111 WebUIも2026年3月2日以降更新がないため、より活発な選択肢ではありません。[AUTOMATIC1111レビュー](/power-local-llm/automatic1111-review)をご覧ください。' },
         ],
       },
       sources: {
@@ -1114,16 +1152,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-19',
+    next_refresh_due: '2027-05-02',
     publishDate: '2026-09-19',
-    dateModified: '2026-09-19',
+    dateModified: '2026-11-02',
     educationalLevel: 'Intermediate',
     audience: '已经了解Stable Diffusion基础知识，希望相比原版AUTOMATIC1111 WebUI获得更快推理速度、更低显存占用，以及内置ControlNet/Flux支持的用户',
     primaryTerm: 'Stable Diffusion WebUI Forge',
     title: 'Stable Diffusion WebUI Forge评测：更快、更省显存的AUTOMATIC1111分支',
     seoTitle: 'Stable Diffusion WebUI Forge评测',
     intro: 'Stable Diffusion WebUI Forge（[github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)）是一款免费、开源的本地图像生成Web应用——它是[AUTOMATIC1111的Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)的一个分支，由ControlNet的作者[lllyasviel](https://github.com/lllyasviel)开发。它重新设计了原版WebUI管理GPU显存和执行模型的方式，目标是在相同硬件上实现更快的推理速度和更低的显存占用，同时保持与原版WebUI扩展生态的大部分兼容性。本评测介绍Forge实际改变了什么、如何安装和运行，以及它与所基于的AUTOMATIC1111 WebUI相比如何。',
-    metaDescription: 'Stable Diffusion WebUI Forge是ControlNet作者lllyasviel开发的免费开源AUTOMATIC1111分支，专为更快、更省显存的本地图像生成而打造。',
+    metaDescription: 'Stable Diffusion WebUI Forge评测：ControlNet作者lllyasviel的AUTOMATIC1111分支，经核实的维护状态、Flux支持、安装方式与许可证。',
     readTime: '11分钟阅读',
     targetKeywords: [
       'Stable Diffusion WebUI Forge 评测',
@@ -1132,20 +1170,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Forge Flux 支持',
       '本地 Stable Diffusion WebUI',
     ],
-    leadAnswerBlock: '**Stable Diffusion WebUI Forge（[github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)）是一款采用AGPL-3.0许可证的免费开源本地Stable Diffusion Web应用，由ControlNet的作者[lllyasviel](https://github.com/lllyasviel)在[AUTOMATIC1111的Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)基础上分支开发而成。** 其README将其描述为"构建在Stable Diffusion WebUI之上的平台"，旨在优化资源管理和推理速度——项目名称的灵感来自Minecraft Forge之于Minecraft的关系。它内置了重构的UNet补丁后端以降低显存占用、内置ControlNet和LoRA支持、通过NF4/GGUF量化支持Flux模型，并采用Gradio 4界面，同时保持与原版WebUI扩展生态大部分的兼容性。它支持Windows、macOS和Linux，实际使用需要GPU，且没有付费套餐。',
+    leadAnswerBlock: '**警告：Stable Diffusion WebUI Forge 自 2025 年 7 月 31 日起没有更新（最新 GitHub release 为 2024 年 2 月 5 日），可能已无人维护——使用前请先确认。** **Forge 是由 lllyasviel 开发的免费开源（AGPL-3.0）AUTOMATIC1111 WebUI 分支，用于本地图像生成。**',
     quickAnswerTop: {
       zh: {
         question: 'Stable Diffusion WebUI Forge是什么，价格是多少？',
-        answer: 'Stable Diffusion WebUI Forge是一款免费、开源（AGPL-3.0）的本地图像生成Web应用——由ControlNet作者lllyasviel开发的AUTOMATIC1111 Stable Diffusion WebUI分支。它重新设计了GPU显存管理机制以实现更快推理和更低显存占用，新增了内置ControlNet、LoRA和Flux支持，且没有付费套餐。',
+        answer: 'Stable Diffusion WebUI Forge 是一款免费开源（AGPL-3.0）的本地图像生成网页应用，是 ControlNet 作者 lllyasviel 基于 AUTOMATIC1111 的 Stable Diffusion WebUI 创建的分支。它重构了 GPU 内存管理，以实现更快的推理和更低的显存占用，内置 ControlNet、LoRA 和 Flux 支持，没有付费层级。它自 2025 年 7 月 31 日起没有更新，可能已无人维护。',
         bullets: [
           '在AGPL-3.0许可证下免费且开源，无需账户或订阅',
           '由ControlNet作者lllyasviel在AUTOMATIC1111的Stable Diffusion WebUI基础上分支开发',
           '重构的"Forge" UNet补丁后端旨在相同硬件上实现比原版WebUI更快的推理和更低的显存占用',
           '内置ControlNet与IP-Adapter支持、LoRA支持，以及通过NF4/GGUF量化实现的Flux模型支持',
           '支持Windows、macOS和Linux；强烈建议使用GPU，官方未记录单一的显存下限',
-          'GitHub仓库（[github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)）截至2026年9月约有13,000颗星',
+          `GitHub 仓库（[github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)）约有 ${ST.zh('stable-diffusion-forge', 'bare')} 个 star；最后一次推送是在 2025 年 7 月 31 日，最新的 GitHub release 日期为 2024 年 2 月 5 日`,
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1179,6 +1217,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '内置ControlNet和IP-Adapter支持、LoRA支持，以及Flux模型支持（NF4/GGUF量化），无需额外扩展',
           '采用Gradio 4界面，Windows提供一键打包版本，macOS和Linux则需手动克隆仓库进行设置',
           '支持Windows、macOS和Linux；强烈建议使用GPU，官方未记录单一固定的显存下限——具体取决于所用模型和分辨率',
+          '维护状态：自 2025 年 7 月 31 日起没有更新（最后一次推送在 `py3.12` 分支）；`main` 的最后一次提交是 2025 年 6 月 26 日，最新的 GitHub release 日期为 2024 年 2 月 5 日',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '自 2025 年 7 月 31 日起没有更新（最新 GitHub release 为 2024 年 2 月 5 日）。Forge 可能已无人维护：在依赖它之前，请确认它仍能在你的 GPU 和模型上正常运行。',
+          },
         ],
       },
       overview: {
@@ -1198,16 +1243,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       history: {
         id: 'forge-history',
         title: 'Forge的项目历史与版本里程碑',
-        content: '**Forge的GitHub仓库创建于2024年1月14日**，lllyasviel此后持续推送更新，但节奏明显比项目第一年放缓。截至本评测时，GitHub API显示该仓库最近一次代码推送是在2025年7月31日——如果你想评估该项目目前的维护活跃度，这一点值得了解。',
+        content: '**Forge 的 GitHub 仓库创建于 2024 年 1 月 14 日**，自 2025 年 7 月 31 日起没有更新：GitHub API 显示这一天是最后一次代码推送（推送到 `py3.12` 分支），`main` 的最后一次提交是 2025 年 6 月 26 日。',
         numberedItems: [
           { title: '2024年1月14日 — 仓库创建', whyItMatters: 'lllyasviel开设stable-diffusion-webui-forge仓库，将其定位为构建在AUTOMATIC1111的Stable Diffusion WebUI之上的分支/平台，从第一天起就确立了Forge是现有WebUI生态的衍生项目，而非独立项目。' },
           { title: '2024年2月5日 — 首个打包版本发布', whyItMatters: 'GitHub Releases页面的"latest"标签发布了可下载的预打包Windows构建版本，在手动克隆仓库的工作流之外提供了类似安装程序的选项。' },
           { title: '2024年7月22日 — 发布"previous_versions"版本', whyItMatters: '在Forge的打包下载持续演变的同时保留旧版安装构建，让使用较旧CUDA/PyTorch组合的用户仍有可用的备用版本。' },
           { title: '2024年9月7日 — 新增"Flux Realistic"采样器', whyItMatters: '根据项目自身的NEWS.md，一个针对Flux模型调优的新采样器与Forge通过NF4/GGUF量化实现的内置Flux支持一同发布。' },
           { title: '2024年10月28日 — "sd35"分支工作启动（PR #2183）', whyItMatters: '根据NEWS.md，项目开始在一个分支上评估Stable Diffusion 3.5支持、量化方法和采样技术，为可能合并入主分支做准备。' },
-          { title: '2025年7月31日 — 最近一次代码推送（据GitHub API）', whyItMatters: '本评测截至发布日期在主仓库中能够确认的最新提交活动——在依赖Forge进行需要频繁更新的工作流之前，这是判断当前开发节奏的有用参考。' },
+          { title: '2025年7月31日 — 最近一次代码推送（据GitHub API）', whyItMatters: '任一分支上最新的提交活动（`py3.12` 分支，“Fix XYZ grid with Pillow >=10.0.0”）；`main` 的最后一次提交是 2025 年 6 月 26 日。此后既没有提交也没有 release，因此应将 Forge 视为可能已无人维护。' },
         ],
-        note: 'Forge自己的NEWS.md记录了一项计划中的Gradio 5迁移，最初目标定在2025年3月左右，备用日期为2025年6月；本评测未在仓库中找到该迁移已完成的确认信息。截至本评测时，该仓库未被归档，仍在公开列表中，拥有约13,000颗GitHub星标、超过1,700个复刻（fork）以及超过1,100个未解决的issue——但在假设项目处于活跃的每周开发状态之前，请直接查看[仓库的提交历史](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main)。',
+        note: `Forge 自己的 NEWS.md 记录了迁移到 Gradio 5 的计划，原定于 2025 年 3 月前后，备选时间为 2025 年 6 月；README 仍指向 Gradio 4 的指南，本评测也没有找到迁移已完成的确认。仓库没有被归档，仍公开可见，约有 ${ST.zh('stable-diffusion-forge', 'bare')} 个 GitHub star、1,700 多个 fork 和 1,100 多个未解决的 issue——但自 2025 年 7 月 31 日起没有提交，请不要假设仍在积极开发。请查看[仓库的提交历史](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main)了解当前状态。`,
       },
       features: {
         id: 'what-forge-does',
@@ -1280,7 +1325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '方面': 'ControlNet / IP-Adapter', 'Forge': '内置，无需扩展', 'AUTOMATIC1111 WebUI': '需要单独的ControlNet扩展' },
           { '方面': 'Flux模型支持', 'Forge': '内置支持，配合NF4/GGUF量化', 'AUTOMATIC1111 WebUI': '依赖社区扩展，非原生支持' },
           { '方面': '扩展生态', 'Forge': '兼容大部分，但范围较窄', 'AUTOMATIC1111 WebUI': '最大、最成熟的SD扩展生态' },
-          { '方面': '近期提交活跃度', 'Forge': '发现的最新推送：2025年7月31日', 'AUTOMATIC1111 WebUI': '请直接查看该项目自己的提交历史' },
+          { '方面': '近期提交活跃度', 'Forge': '自 2025 年 7 月 31 日起没有推送；最新 GitHub release 为 2024 年 2 月 5 日', 'AUTOMATIC1111 WebUI': '自 2026 年 3 月 2 日起没有更新；最新版本 v1.10.1（2025 年 2 月 9 日）' },
         ],
         note: '如果你更看重开箱即用的ControlNet和Flux支持带来的更快推理和更低显存占用，Forge重构的后端就是选择它的理由。如果你更看重尽可能广泛的扩展生态，或依赖某个Forge尚不支持的扩展，那么原版AUTOMATIC1111 WebUI值得在其[GitHub仓库](https://github.com/AUTOMATIC1111/stable-diffusion-webui)中直接评估。两者都是免费、开源的，安装方式也相同（打包版Windows构建或克隆仓库）；切换前请核实你所依赖的具体扩展的当前兼容性。',
       },
@@ -1302,7 +1347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '以下情况建议观望或考虑其他方案',
             list: [
-              '你需要有保障的、频繁且活跃的开发——本评测发现该仓库最近一次代码推送为2025年7月31日，明显慢于项目第一年',
+              '你需要有保证的、频繁的积极开发——Forge 自 2025 年 7 月 31 日起没有更新，最新的 GitHub release 日期为 2024 年 2 月 5 日',
               '你依赖某个Forge不支持的特定AUTOMATIC1111扩展——在切换整个工作流之前请先核实兼容性',
               '你想要一个面向初学者的简化界面，而不是Stable Diffusion WebUI完整的参数集——请参见下文竞品部分中的Fooocus',
               '你需要官方的支持保障，而非社区/issue跟踪器式的支持——Forge的支持渠道是GitHub Issues，这是开源项目的典型方式，而非提供SLA的商业厂商',
@@ -1317,7 +1362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Forge是面向Stable Diffusion及相关图像模型的多款本地开源界面之一。以下是它与该领域其他选项相比的定位——完整目录请见[本地LLM软件目录](/directory)，最直接的正面对比请见上方专门的[Forge对比AUTOMATIC1111 WebUI](#forge-vs-automatic1111)章节。',
         items: [
           '**[AUTOMATIC1111 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** — Forge所基于的原始项目，拥有最大的扩展生态；详见上方专门的对比章节和[AUTOMATIC1111评测](/power-local-llm/automatic1111-review)。',
-          '**[ComfyUI](https://github.com/comfyanonymous/ComfyUI)** — 面向同样底层Stable Diffusion/Flux模型的节点式界面，以Forge更熟悉的标签页式界面为代价，换取更精细的底层控制的可视化工作流图；详见[ComfyUI评测](/power-local-llm/comfyui-review)。',
+          '**[ComfyUI](https://github.com/comfy-org/ComfyUI)** — 面向同样底层Stable Diffusion/Flux模型的节点式界面，以Forge更熟悉的标签页式界面为代价，换取更精细的底层控制的可视化工作流图；详见[ComfyUI评测](/power-local-llm/comfyui-review)。',
           '**[Fooocus](https://github.com/lllyasviel/Fooocus)** — 同样由lllyasviel开发，但目标相反：为希望以最少参数调整获得良好结果的初学者打造的简化、观点鲜明的界面，而非Forge完整的WebUI参数集；详见[Fooocus评测](/power-local-llm/fooocus-review)。',
           '**[InvokeAI](https://github.com/invoke-ai/InvokeAI)** — 另一款打磨精良、持续积极开发的本地Stable Diffusion界面，强调统一的画布工作流，功能集也比源自WebUI的工具更为精简；详见[InvokeAI评测](/power-local-llm/invokeai-review)。',
         ],
@@ -1342,7 +1387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '误区4：认为项目会持续发布频繁而活跃的更新',
-            content: '截至本评测时，GitHub API显示该仓库最近一次代码推送是在2025年7月31日——在假设项目保持每周或每月发布节奏之前，请直接查看[仓库的提交历史](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main)。',
+            content: '根据 GitHub API，Forge 自 2025 年 7 月 31 日起没有更新，`main` 的最后一次提交是 2025 年 6 月 26 日——在假设会有每周或每月发布之前，请直接查看[仓库的提交历史](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main)。',
           },
         ],
       },
@@ -1359,7 +1404,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Forge包含ControlNet吗？', a: '是的，内置提供。Forge随附完整的ControlNet和IP-Adapter支持，以及它们所依赖的预处理工具，因此你无需安装原版AUTOMATIC1111 WebUI所要求的单独ControlNet扩展。' },
           { q: 'Forge支持哪些平台？', a: 'Windows、macOS和Linux。Windows可通过GitHub Releases获取一键打包版本；macOS和Linux通过手动克隆仓库加脚本的方式设置，这与原版AUTOMATIC1111 WebUI所采用的模式相同。' },
           { q: '是谁创建了Stable Diffusion WebUI Forge？', a: 'Forge由[lllyasviel](https://github.com/lllyasviel)（张律闵）创建，他同时也是ControlNet以及另一款本地Stable Diffusion界面Fooocus的作者。' },
-          { q: 'Forge目前仍在积极维护吗？', a: '相比Forge的第一年，开发节奏已经放缓。截至本评测时，GitHub API显示该仓库最近一次代码推送是在2025年7月31日。该仓库未被归档，仍处于公开列表中——在依赖频繁更新之前，请直接查看[提交历史](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main)了解当前状态。' },
+          { q: 'Forge目前仍在积极维护吗？', a: '自 2025 年 7 月 31 日起没有发布任何更新（最后一次推送在 `py3.12` 分支）；`main` 的最后一次提交是 2025 年 6 月 26 日，最新的 GitHub release 日期为 2024 年 2 月 5 日。仓库没有被归档，但应将 Forge 视为可能已无人维护，并在依赖它之前查看其[提交历史](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main)。' },
+          { q: '用什么来替代 Forge？', a: '如果想要仍在积极开发的工具，请比较 ComfyUI、InvokeAI 和 SD.Next，根据 GitHub API，它们都在 2026-11-02 有推送。原版 AUTOMATIC1111 WebUI 自 2026 年 3 月 2 日起也没有更新，因此同样不是更活跃的选择；请参阅 [AUTOMATIC1111 评测](/power-local-llm/automatic1111-review)。' },
         ],
       },
       sources: {
@@ -1391,16 +1437,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-19',
+    next_refresh_due: '2027-05-02',
     publishDate: '2026-09-19',
-    dateModified: '2026-09-19',
+    dateModified: '2026-11-02',
     educationalLevel: 'Intermediate',
     audience: 'Personas que ya conocen los fundamentos de Stable Diffusion y buscan una inferencia más rápida, menor uso de VRAM y soporte integrado de ControlNet/Flux frente a la WebUI original de AUTOMATIC1111',
     primaryTerm: 'Stable Diffusion WebUI Forge',
     title: 'Stable Diffusion WebUI Forge, análisis: el fork de AUTOMATIC1111 más rápido y con menos VRAM',
-    seoTitle: 'Stable Diffusion WebUI Forge: análisis',
+    seoTitle: 'Stable Diffusion WebUI Forge: análisis y estado actual',
     intro: 'Stable Diffusion WebUI Forge ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) es una aplicación web local gratuita y de código abierto para generación de imágenes — un fork de la [WebUI de Stable Diffusion de AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui) creado por [lllyasviel](https://github.com/lllyasviel), el creador de ControlNet. Reformula cómo la WebUI original gestiona la memoria de la GPU y ejecuta los modelos, con el objetivo de lograr una inferencia más rápida y un menor uso de VRAM en el mismo hardware, manteniendo a la vez compatibilidad con gran parte del ecosistema de extensiones de la WebUI original. Este análisis cubre qué cambia realmente Forge, cómo instalarlo y ejecutarlo, y cómo se compara con la WebUI de AUTOMATIC1111 sobre la que está construido.',
-    metaDescription: 'Stable Diffusion WebUI Forge es un fork gratuito y de código abierto de AUTOMATIC1111 creado por lllyasviel, autor de ControlNet, para una generación de imágenes local más rápida y con menos VRAM.',
+    metaDescription: 'Análisis de Forge: el fork de AUTOMATIC1111 de lllyasviel (creador de ControlNet), estado de mantenimiento verificado, Flux, instalación y licencia.',
     readTime: '11 min de lectura',
     targetKeywords: [
       'Stable Diffusion WebUI Forge análisis',
@@ -1409,20 +1455,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Forge soporte Flux',
       'WebUI Stable Diffusion local',
     ],
-    leadAnswerBlock: '**Stable Diffusion WebUI Forge ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) es una aplicación web local de Stable Diffusion gratuita y de código abierto, con licencia AGPL-3.0, creada por [lllyasviel](https://github.com/lllyasviel) (el creador de ControlNet) como un fork construido sobre la [WebUI de Stable Diffusion de AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui).** Su propio README la describe como "una plataforma construida sobre Stable Diffusion WebUI" diseñada para optimizar la gestión de recursos y la velocidad de inferencia, con un nombre inspirado en cómo Minecraft Forge se construye sobre Minecraft. Incorpora un backend de parcheo de UNet reconstruido para reducir el uso de VRAM, soporte integrado de ControlNet y LoRA, soporte de modelos Flux mediante cuantización NF4/GGUF, y una interfaz Gradio 4, manteniendo compatibilidad con gran parte del ecosistema de extensiones de la WebUI original. Funciona en Windows, macOS y Linux, requiere una GPU para un uso práctico y no tiene ningún plan de pago.',
+    leadAnswerBlock: '**Aviso: Forge no recibe actualizaciones desde el 31 de julio de 2025 (última release de GitHub: 5 de febrero de 2024) y puede estar sin mantenimiento — compruébalo antes de usarlo.** **Stable Diffusion WebUI Forge es un fork gratuito y open source (AGPL-3.0) de AUTOMATIC1111, creado por lllyasviel.**',
     quickAnswerTop: {
       es: {
         question: '¿Qué es Stable Diffusion WebUI Forge y cuánto cuesta?',
-        answer: 'Stable Diffusion WebUI Forge es una aplicación web local de generación de imágenes gratuita y de código abierto (AGPL-3.0) — un fork de la WebUI de Stable Diffusion de AUTOMATIC1111 creado por lllyasviel, el creador de ControlNet. Reformula la gestión de memoria de la GPU para lograr una inferencia más rápida y un menor uso de VRAM, añade soporte integrado de ControlNet, LoRA y Flux, y no tiene ningún plan de pago.',
+        answer: 'Stable Diffusion WebUI Forge es una aplicación web local de generación de imágenes, gratuita y open source (AGPL-3.0): un fork de Stable Diffusion WebUI de AUTOMATIC1111 creado por lllyasviel, el creador de ControlNet. Reconstruye la gestión de memoria de la GPU para una inferencia más rápida y un menor uso de VRAM, incorpora ControlNet, LoRA y Flux, y no tiene plan de pago. No recibe actualizaciones desde el 31 de julio de 2025, por lo que puede estar sin mantenimiento.',
         bullets: [
           'Gratuito y de código abierto bajo la licencia AGPL-3.0, sin necesidad de cuenta ni suscripción',
           'Creado por lllyasviel (creador de ControlNet) como un fork construido sobre la WebUI de Stable Diffusion de AUTOMATIC1111',
           'El backend "Forge" de parcheo de UNet, reconstruido, busca una inferencia más rápida y menos VRAM en el mismo hardware que la WebUI original',
           'Soporte integrado de ControlNet e IP-Adapter, soporte de LoRA, y soporte de modelos Flux mediante cuantización NF4/GGUF',
           'Funciona en Windows, macOS y Linux; se recomienda encarecidamente una GPU, sin un mínimo de VRAM documentado de forma oficial',
-          'El repositorio de GitHub ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) muestra aproximadamente 13.000 estrellas a septiembre de 2026',
+          `El repositorio de GitHub ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) muestra unas ${ST.es('stable-diffusion-forge', 'bare')} estrellas; el último push fue el 31 de julio de 2025 y la última release de GitHub es del 5 de febrero de 2024`,
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1456,6 +1502,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Incorpora soporte integrado de ControlNet e IP-Adapter, soporte de LoRA, y soporte de modelos Flux (cuantización NF4/GGUF) sin necesidad de extensiones adicionales',
           'Utiliza una interfaz Gradio 4, con un paquete de un clic para Windows y una instalación manual mediante clonado con Git para macOS y Linux',
           'Funciona en Windows, macOS y Linux; se recomienda encarecidamente una GPU, sin un mínimo de VRAM único documentado — depende del modelo y la resolución',
+          'Mantenimiento: sin actualizaciones desde el 31 de julio de 2025 (último push, rama `py3.12`); el último commit en `main` es del 26 de junio de 2025 y la última release de GitHub es del 5 de febrero de 2024',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Sin actualizaciones desde el 31 de julio de 2025 (última release de GitHub: 5 de febrero de 2024). Forge puede estar sin mantenimiento: comprueba que sigue funcionando con tu GPU y tu modelo antes de depender de él.',
+          },
         ],
       },
       overview: {
@@ -1475,16 +1528,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       history: {
         id: 'forge-history',
         title: 'Historia del proyecto Forge y sus hitos de versión',
-        content: '**El repositorio de GitHub de Forge se creó el 14 de enero de 2024**, y lllyasviel ha seguido publicando actualizaciones desde entonces, aunque a un ritmo visiblemente más lento que en su primer año. Al momento de este análisis, la API de GitHub muestra que la última publicación de código en el repositorio fue el 31 de julio de 2025 — un dato útil si estás evaluando qué tan activamente se mantiene el proyecto actualmente.',
+        content: '**El repositorio de GitHub de Forge se creó el 14 de enero de 2024** y no recibe actualizaciones desde el 31 de julio de 2025: la API de GitHub muestra esa fecha como el último push de código (a la rama `py3.12`), y el último commit en `main` es del 26 de junio de 2025.',
         numberedItems: [
           { title: '14 de enero de 2024 — Se crea el repositorio', whyItMatters: 'lllyasviel abre el repositorio stable-diffusion-webui-forge como un fork/plataforma construido sobre la WebUI de Stable Diffusion de AUTOMATIC1111, estableciendo desde el primer día a Forge como un derivado del ecosistema de WebUI existente, no como un proyecto independiente.' },
           { title: '5 de febrero de 2024 — Primer lanzamiento empaquetado', whyItMatters: 'La etiqueta "latest" de la página de GitHub Releases publica una compilación de Windows preempaquetada y descargable, ofreciendo una opción similar a un instalador junto al flujo manual de clonado con Git.' },
           { title: '22 de julio de 2024 — Se publica la versión "previous_versions"', whyItMatters: 'Conserva compilaciones de instalación anteriores a medida que la descarga empaquetada de Forge seguía cambiando, dejando a los usuarios con combinaciones de CUDA/PyTorch más antiguas una compilación funcional a la que recurrir.' },
           { title: '7 de septiembre de 2024 — Se añade el sampler "Flux Realistic"', whyItMatters: 'Según el propio NEWS.md del proyecto, se lanzó un nuevo sampler ajustado para modelos Flux junto con el soporte integrado de Flux de Forge mediante cuantización NF4/GGUF.' },
           { title: '28 de octubre de 2024 — Comienza el trabajo en la rama "sd35" (PR #2183)', whyItMatters: 'Según el NEWS.md, comenzó el trabajo en una rama para evaluar el soporte de Stable Diffusion 3.5, métodos de cuantización y técnicas de muestreo, de cara a una posible fusión con la rama principal.' },
-          { title: '31 de julio de 2025 — Última publicación de código (según la API de GitHub)', whyItMatters: 'La actividad de commits más reciente que este análisis pudo confirmar en el repositorio principal hasta su fecha de publicación — un contexto útil para valorar el ritmo actual de desarrollo antes de depender de Forge para un flujo de trabajo que necesite actualizaciones frecuentes.' },
+          { title: '31 de julio de 2025 — Última publicación de código (según la API de GitHub)', whyItMatters: 'La actividad de commits más reciente en cualquier rama (rama `py3.12`, «Fix XYZ grid with Pillow >=10.0.0»); el último commit en `main` es del 26 de junio de 2025. No ha habido commits ni releases posteriores, así que trata Forge como posiblemente sin mantenimiento.' },
         ],
-        note: 'El propio NEWS.md de Forge documentó una migración prevista a Gradio 5, inicialmente prevista para alrededor de marzo de 2025 con una fecha de respaldo en junio de 2025; este análisis no encontró en el repositorio confirmación de que esa migración se haya completado. El repositorio no estaba archivado y seguía listado públicamente en el momento de este análisis, con aproximadamente 13.000 estrellas en GitHub, más de 1.700 forks y más de 1.100 issues abiertas — pero conviene revisar directamente el [historial de commits del repositorio](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) antes de asumir un desarrollo semanal activo.',
+        note: `El NEWS.md de Forge documentaba una migración prevista a Gradio 5, con objetivo hacia marzo de 2025 y fecha alternativa en junio de 2025; el README sigue apuntando a una guía de Gradio 4 y esta reseña no encontró confirmación de que la migración se haya completado. El repositorio no está archivado y sigue listado públicamente, con unas ${ST.es('stable-diffusion-forge', 'bare')} estrellas en GitHub, más de 1.700 forks y más de 1.100 issues abiertas, pero sin commits desde el 31 de julio de 2025, así que no des por hecho un desarrollo activo. Consulta el [historial de commits del repositorio](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) para ver el estado actual.`,
       },
       features: {
         id: 'what-forge-does',
@@ -1557,7 +1610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspecto': 'ControlNet / IP-Adapter', 'Forge': 'Integrado, sin necesidad de extensión', 'AUTOMATIC1111 WebUI': 'Requiere la extensión ControlNet aparte' },
           { 'Aspecto': 'Soporte de modelos Flux', 'Forge': 'Integrado, con cuantización NF4/GGUF', 'AUTOMATIC1111 WebUI': 'Depende de extensiones de la comunidad, no nativo' },
           { 'Aspecto': 'Ecosistema de extensiones', 'Forge': 'Compatible con gran parte, pero más reducido', 'AUTOMATIC1111 WebUI': 'El ecosistema de extensiones SD más grande y maduro' },
-          { 'Aspecto': 'Actividad reciente de commits', 'Forge': 'Última publicación encontrada: 31 de julio de 2025', 'AUTOMATIC1111 WebUI': 'Revisa directamente el historial de commits del proyecto' },
+          { 'Aspecto': 'Actividad reciente de commits', 'Forge': 'Sin push desde el 31 de julio de 2025; última release de GitHub del 5 de febrero de 2024', 'AUTOMATIC1111 WebUI': 'Sin actualizaciones desde el 2 de marzo de 2026; última release v1.10.1 (9 de febrero de 2025)' },
         ],
         note: 'Si tu prioridad es una inferencia más rápida y un menor uso de VRAM con soporte de ControlNet y Flux listo para usar, el backend reconstruido de Forge es la razón para elegirlo. Si tu prioridad es el ecosistema de extensiones más amplio posible, o dependes de una extensión que Forge aún no soporta, vale la pena evaluar directamente la WebUI original de AUTOMATIC1111 en su [repositorio de GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui). Ambas son gratuitas, de código abierto y se instalan de la misma manera (compilación empaquetada de Windows o clonado con Git); verifica la compatibilidad actual de cualquier extensión de la que dependas antes de cambiar.',
       },
@@ -1579,7 +1632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Espera, o busca otra opción, si',
             list: [
-              'Necesitas un desarrollo activo y frecuente garantizado — este análisis encontró que la última publicación de código del repositorio fue el 31 de julio de 2025, notablemente más lenta que en su primer año',
+              'Necesitas un desarrollo activo garantizado y frecuente — Forge no recibe actualizaciones desde el 31 de julio de 2025 y su última release de GitHub es del 5 de febrero de 2024',
               'Dependes de una extensión concreta de AUTOMATIC1111 que Forge no soporta — verifica la compatibilidad antes de cambiar todo tu flujo de trabajo',
               'Quieres una interfaz simplificada orientada a principiantes en lugar del conjunto completo de parámetros de Stable Diffusion WebUI — mira Fooocus en la sección de competidores más abajo',
               'Necesitas garantías de soporte oficial en lugar de soporte comunitario a través del seguimiento de issues — el canal de soporte de Forge es GitHub Issues, algo típico de un proyecto de código abierto y no de un proveedor comercial con SLA',
@@ -1594,7 +1647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Forge es una de varias interfaces locales y de código abierto para Stable Diffusion y modelos de imagen relacionados. Así se posiciona frente a otras opciones de este espacio — consulta el [Directorio de Software LLM Local](/directory) para el catálogo completo, y la comparación dedicada [Forge frente a AUTOMATIC1111 WebUI](#forge-vs-automatic1111) más arriba para el enfrentamiento más directo.',
         items: [
           '**[AUTOMATIC1111 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** — el proyecto original sobre el que se construye Forge, con el ecosistema de extensiones más grande; consulta la sección de comparación dedicada más arriba y el [análisis de AUTOMATIC1111](/power-local-llm/automatic1111-review) para todos los detalles.',
-          '**[ComfyUI](https://github.com/comfyanonymous/ComfyUI)** — una interfaz basada en nodos para los mismos modelos subyacentes de Stable Diffusion/Flux, que cambia la interfaz de pestañas más familiar de Forge por un grafo de flujo de trabajo visual con un control de bajo nivel más fino; consulta el [análisis de ComfyUI](/power-local-llm/comfyui-review).',
+          '**[ComfyUI](https://github.com/comfy-org/ComfyUI)** — una interfaz basada en nodos para los mismos modelos subyacentes de Stable Diffusion/Flux, que cambia la interfaz de pestañas más familiar de Forge por un grafo de flujo de trabajo visual con un control de bajo nivel más fino; consulta el [análisis de ComfyUI](/power-local-llm/comfyui-review).',
           '**[Fooocus](https://github.com/lllyasviel/Fooocus)** — también creado por lllyasviel, pero con el objetivo opuesto: una interfaz simplificada y con criterios propios, pensada para principiantes que quieren buenos resultados con un ajuste mínimo de parámetros, en lugar del conjunto completo de parámetros de la WebUI de Forge; consulta el [análisis de Fooocus](/power-local-llm/fooocus-review).',
           '**[InvokeAI](https://github.com/invoke-ai/InvokeAI)** — otra interfaz local de Stable Diffusion pulida y activamente desarrollada, con un fuerte enfoque en un flujo de trabajo de lienzo unificado y un conjunto de funciones más curado que las herramientas derivadas de la WebUI; consulta el [análisis de InvokeAI](/power-local-llm/invokeai-review).',
         ],
@@ -1619,7 +1672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Error 4: suponer que el proyecto publica actualizaciones frecuentes y activas',
-            content: 'La API de GitHub muestra que la última publicación de código del repositorio fue el 31 de julio de 2025 al momento de este análisis — revisa directamente el [historial de commits del repositorio](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) antes de asumir lanzamientos semanales o mensuales.',
+            content: 'Forge no recibe actualizaciones desde el 31 de julio de 2025, según la API de GitHub, y el último commit en `main` es del 26 de junio de 2025 — consulta directamente el [historial de commits del repositorio](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) antes de suponer releases semanales o mensuales.',
           },
         ],
       },
@@ -1636,7 +1689,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Forge incluye ControlNet?', a: 'Sí, integrado. Forge incorpora soporte completo de ControlNet e IP-Adapter junto con las herramientas de preprocesamiento de las que dependen, por lo que no necesitas instalar la extensión ControlNet aparte que requiere la WebUI original de AUTOMATIC1111.' },
           { q: '¿Qué plataformas admite Forge?', a: 'Windows, macOS y Linux. Windows cuenta con una compilación empaquetada de un clic disponible en GitHub Releases; macOS y Linux se configuran mediante una instalación manual con clonado de Git y script, el mismo patrón que usa la WebUI original de AUTOMATIC1111.' },
           { q: '¿Quién creó Stable Diffusion WebUI Forge?', a: 'Forge fue creado por [lllyasviel](https://github.com/lllyasviel) (Lyumin Zhang), también creador de ControlNet y de Fooocus, otra interfaz local de Stable Diffusion.' },
-          { q: '¿Se sigue manteniendo Forge activamente?', a: 'El desarrollo se ha ralentizado en comparación con el primer año de Forge. La API de GitHub muestra que la última publicación de código del repositorio fue el 31 de julio de 2025 al momento de este análisis. El repositorio no estaba archivado y seguía listado públicamente — revisa directamente su [historial de commits](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) para conocer el estado actual antes de contar con actualizaciones frecuentes.' },
+          { q: '¿Se sigue manteniendo Forge activamente?', a: 'No se ha publicado ninguna actualización desde el 31 de julio de 2025 (último push, a la rama `py3.12`); el último commit en `main` es del 26 de junio de 2025 y la última release de GitHub es del 5 de febrero de 2024. El repositorio no está archivado, pero trata Forge como posiblemente sin mantenimiento y consulta su [historial de commits](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) antes de depender de él.' },
+          { q: '¿Qué puedo usar en lugar de Forge?', a: 'Si quieres herramientas con desarrollo activo, compara ComfyUI, InvokeAI y SD.Next, que según la API de GitHub tuvieron pushes el 2026-11-02. La WebUI original de AUTOMATIC1111 no recibe actualizaciones desde el 2 de marzo de 2026, así que tampoco es una opción más activa; consulta la [reseña de AUTOMATIC1111](/power-local-llm/automatic1111-review).' },
         ],
       },
       sources: {
@@ -1668,16 +1722,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-19',
+    next_refresh_due: '2027-05-02',
     publishDate: '2026-09-19',
-    dateModified: '2026-09-19',
+    dateModified: '2026-11-02',
     educationalLevel: 'Intermediate',
     audience: 'Pessoas que já conhecem o básico de Stable Diffusion e querem inferência mais rápida, menor uso de VRAM e suporte integrado a ControlNet/Flux em comparação com a WebUI original do AUTOMATIC1111',
     primaryTerm: 'Stable Diffusion WebUI Forge',
     title: 'Stable Diffusion WebUI Forge: análise do fork mais rápido e leve em VRAM do AUTOMATIC1111',
-    seoTitle: 'Stable Diffusion WebUI Forge: análise',
+    seoTitle: 'Stable Diffusion WebUI Forge: análise e status atual',
     intro: 'Stable Diffusion WebUI Forge ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) é um aplicativo web local, gratuito e de código aberto para geração de imagens — um fork da [WebUI de Stable Diffusion do AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui) criado por [lllyasviel](https://github.com/lllyasviel), o criador do ControlNet. Ele reformula a maneira como a WebUI original gerencia a memória da GPU e executa os modelos, buscando inferência mais rápida e menor uso de VRAM no mesmo hardware, mantendo compatibilidade com boa parte do ecossistema de extensões da WebUI original. Esta análise cobre o que o Forge realmente muda, como instalá-lo e executá-lo, e como ele se compara à WebUI AUTOMATIC1111 sobre a qual foi construído.',
-    metaDescription: 'Stable Diffusion WebUI Forge é um fork gratuito e de código aberto do AUTOMATIC1111 criado por lllyasviel, autor do ControlNet, para geração de imagens local mais rápida e com menos VRAM.',
+    metaDescription: 'Análise do Forge: o fork do AUTOMATIC1111 criado por lllyasviel (autor do ControlNet), status de manutenção verificado, Flux, instalação e licença.',
     readTime: '11 min de leitura',
     targetKeywords: [
       'Stable Diffusion WebUI Forge análise',
@@ -1686,20 +1740,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Forge suporte Flux',
       'WebUI Stable Diffusion local',
     ],
-    leadAnswerBlock: '**Stable Diffusion WebUI Forge ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) é um aplicativo web local de Stable Diffusion gratuito e de código aberto, licenciado sob AGPL-3.0, criado por [lllyasviel](https://github.com/lllyasviel) (o criador do ControlNet) como um fork construído sobre a [WebUI de Stable Diffusion do AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui).** Seu próprio README o descreve como "uma plataforma construída sobre a Stable Diffusion WebUI", criada para otimizar o gerenciamento de recursos e a velocidade de inferência — nome inspirado em como o Minecraft Forge se apoia sobre o Minecraft. Ele traz um backend de "patching" de UNet reconstruído para reduzir o uso de VRAM, suporte integrado a ControlNet e LoRA, suporte a modelos Flux via quantização NF4/GGUF, e uma interface Gradio 4, mantendo compatibilidade com boa parte do ecossistema de extensões da WebUI original. Funciona em Windows, macOS e Linux, precisa de uma GPU para uso prático e não tem nenhum plano pago.',
+    leadAnswerBlock: '**Aviso: o Forge não recebe atualizações desde 31 de julho de 2025 (última release do GitHub: 5 de fevereiro de 2024) e pode estar sem manutenção — confira antes de usar.** **O Stable Diffusion WebUI Forge é um fork gratuito e open source (AGPL-3.0) do AUTOMATIC1111, criado por lllyasviel.**',
     quickAnswerTop: {
       pt: {
         question: 'O que é o Stable Diffusion WebUI Forge e quanto custa?',
-        answer: 'Stable Diffusion WebUI Forge é um aplicativo web local de geração de imagens gratuito e de código aberto (AGPL-3.0) — um fork da WebUI de Stable Diffusion do AUTOMATIC1111 criado por lllyasviel, o criador do ControlNet. Ele reformula o gerenciamento de memória da GPU para inferência mais rápida e menor uso de VRAM, adiciona suporte integrado a ControlNet, LoRA e Flux, e não tem nenhum plano pago.',
+        answer: 'O Stable Diffusion WebUI Forge é um aplicativo web local de geração de imagens, gratuito e open source (AGPL-3.0): um fork do Stable Diffusion WebUI do AUTOMATIC1111 criado por lllyasviel, o criador do ControlNet. Ele reconstrói o gerenciamento de memória da GPU para inferência mais rápida e menor uso de VRAM, traz ControlNet, LoRA e Flux integrados e não tem plano pago. Ele não recebe atualizações desde 31 de julho de 2025 e pode estar sem manutenção.',
         bullets: [
           'Gratuito e de código aberto sob a licença AGPL-3.0, sem necessidade de conta ou assinatura',
           'Criado por lllyasviel (criador do ControlNet) como um fork construído sobre a WebUI de Stable Diffusion do AUTOMATIC1111',
           'O backend "Forge" de patching de UNet, reconstruído, busca inferência mais rápida e menos VRAM no mesmo hardware que a WebUI original',
           'Suporte integrado a ControlNet e IP-Adapter, suporte a LoRA e suporte a modelos Flux via quantização NF4/GGUF',
           'Funciona em Windows, macOS e Linux; uma GPU é fortemente recomendada, sem um mínimo de VRAM oficialmente documentado',
-          'O repositório no GitHub ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) mostra cerca de 13.000 estrelas em setembro de 2026',
+          `O repositório no GitHub ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) mostra cerca de ${ST.pt('stable-diffusion-forge', 'bare')} estrelas; o último push foi em 31 de julho de 2025 e a última release do GitHub é de 5 de fevereiro de 2024`,
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1733,6 +1787,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Traz suporte integrado a ControlNet e IP-Adapter, suporte a LoRA e suporte a modelos Flux (quantização NF4/GGUF) sem precisar de extensões extras',
           'Usa uma interface Gradio 4, com um pacote de um clique para Windows e configuração manual via clonagem do repositório para macOS e Linux',
           'Funciona em Windows, macOS e Linux; uma GPU é fortemente recomendada, sem um mínimo de VRAM único documentado — depende do checkpoint e da resolução',
+          'Manutenção: sem atualizações desde 31 de julho de 2025 (último push, branch `py3.12`); o último commit na `main` é de 26 de junho de 2025 e a última release do GitHub é de 5 de fevereiro de 2024',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Sem atualizações desde 31 de julho de 2025 (última release do GitHub: 5 de fevereiro de 2024). O Forge pode estar sem manutenção: confirme que ele ainda funciona com sua GPU e seu modelo antes de depender dele.',
+          },
         ],
       },
       overview: {
@@ -1752,16 +1813,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       history: {
         id: 'forge-history',
         title: 'Histórico do projeto Forge e marcos de versão',
-        content: '**O repositório do Forge no GitHub foi criado em 14 de janeiro de 2024**, e o lllyasviel continuou publicando atualizações desde então, embora em um ritmo visivelmente mais lento do que no primeiro ano. No momento desta análise, a API do GitHub mostra que o push de código mais recente no repositório foi em 31 de julho de 2025 — informação útil se você está avaliando o quão ativamente o projeto é mantido atualmente.',
+        content: '**O repositório do Forge no GitHub foi criado em 14 de janeiro de 2024** e não recebe atualizações desde 31 de julho de 2025: a API do GitHub mostra essa data como o último push de código (na branch `py3.12`), e o último commit na `main` é de 26 de junho de 2025.',
         numberedItems: [
           { title: '14 de janeiro de 2024 — Repositório criado', whyItMatters: 'O lllyasviel abre o repositório stable-diffusion-webui-forge como um fork/plataforma construído sobre a WebUI de Stable Diffusion do AUTOMATIC1111, estabelecendo desde o primeiro dia o Forge como um derivado do ecossistema WebUI existente, não um projeto independente.' },
           { title: '5 de fevereiro de 2024 — Primeiro lançamento empacotado', whyItMatters: 'A tag "latest" da página de GitHub Releases publica um build de Windows pré-empacotado para download, oferecendo uma opção semelhante a um instalador além do fluxo manual de clonagem do repositório.' },
           { title: '22 de julho de 2024 — Lançamento "previous_versions" publicado', whyItMatters: 'Preserva builds de instalador mais antigos à medida que o download empacotado do Forge continuava mudando, deixando usuários com combinações mais antigas de CUDA/PyTorch com um build funcional para recorrer.' },
           { title: '7 de setembro de 2024 — Sampler "Flux Realistic" adicionado', whyItMatters: 'Segundo o próprio NEWS.md do projeto, um novo sampler ajustado para modelos Flux foi lançado junto com o suporte integrado a Flux do Forge via quantização NF4/GGUF.' },
           { title: '28 de outubro de 2024 — Início do trabalho na branch "sd35" (PR #2183)', whyItMatters: 'Segundo o NEWS.md, começou o trabalho em uma branch avaliando o suporte ao Stable Diffusion 3.5, métodos de quantização e técnicas de amostragem, visando uma possível fusão com a branch principal.' },
-          { title: '31 de julho de 2025 — Push de código mais recente (segundo a API do GitHub)', whyItMatters: 'A atividade de commit mais recente que esta análise conseguiu confirmar no repositório principal até a data de publicação — um contexto útil para avaliar o ritmo atual de desenvolvimento antes de depender do Forge para um fluxo de trabalho que precise de atualizações frequentes.' },
+          { title: '31 de julho de 2025 — Push de código mais recente (segundo a API do GitHub)', whyItMatters: 'A atividade de commits mais recente em qualquer branch (branch `py3.12`, "Fix XYZ grid with Pillow >=10.0.0"); o último commit na `main` é de 26 de junho de 2025. Não houve commits nem releases depois, então trate o Forge como possivelmente sem manutenção.' },
         ],
-        note: 'O próprio NEWS.md do Forge documentou uma migração planejada para o Gradio 5, inicialmente prevista para cerca de março de 2025, com uma data alternativa em junho de 2025; esta análise não encontrou no repositório confirmação de que essa migração foi concluída. O repositório não estava arquivado e permanecia publicamente listado no momento desta análise, com cerca de 13.000 estrelas no GitHub, mais de 1.700 forks e mais de 1.100 issues abertas — mas verifique diretamente o [histórico de commits do repositório](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) antes de presumir um desenvolvimento semanal ativo.',
+        note: `O NEWS.md do Forge documentava uma migração planejada para o Gradio 5, prevista para cerca de março de 2025 com data alternativa em junho de 2025; o README ainda aponta para um guia do Gradio 4 e esta análise não encontrou confirmação de que a migração tenha sido concluída. O repositório não está arquivado e continua listado publicamente, com cerca de ${ST.pt('stable-diffusion-forge', 'bare')} estrelas no GitHub, mais de 1.700 forks e mais de 1.100 issues abertas — mas sem commits desde 31 de julho de 2025, não presuma desenvolvimento ativo. Consulte o [histórico de commits do repositório](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) para ver o estado atual.`,
       },
       features: {
         id: 'what-forge-does',
@@ -1834,7 +1895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspecto': 'ControlNet / IP-Adapter', 'Forge': 'Integrado, sem precisar de extensão', 'AUTOMATIC1111 WebUI': 'Exige a extensão ControlNet separada' },
           { 'Aspecto': 'Suporte a modelos Flux', 'Forge': 'Integrado, com quantização NF4/GGUF', 'AUTOMATIC1111 WebUI': 'Depende de extensões da comunidade, não nativo' },
           { 'Aspecto': 'Ecossistema de extensões', 'Forge': 'Compatível com boa parte, mas mais restrito', 'AUTOMATIC1111 WebUI': 'O ecossistema de extensões de SD mais amplo e maduro' },
-          { 'Aspecto': 'Atividade recente de commits', 'Forge': 'Último push encontrado: 31 de julho de 2025', 'AUTOMATIC1111 WebUI': 'Verifique diretamente o histórico de commits do projeto' },
+          { 'Aspecto': 'Atividade recente de commits', 'Forge': 'Sem push desde 31 de julho de 2025; última release do GitHub de 5 de fevereiro de 2024', 'AUTOMATIC1111 WebUI': 'Sem atualizações desde 2 de março de 2026; última release v1.10.1 (9 de fevereiro de 2025)' },
         ],
         note: 'Se sua prioridade é inferência mais rápida e menor uso de VRAM com suporte a ControlNet e Flux já integrado, o backend reconstruído do Forge é o motivo para escolhê-lo. Se sua prioridade é o ecossistema de extensões mais amplo possível, ou você depende de uma extensão que o Forge ainda não suporta, vale a pena avaliar diretamente a WebUI original do AUTOMATIC1111 no [repositório do GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui). Ambos são gratuitos, de código aberto e instalados da mesma forma (build empacotado para Windows ou clonagem do repositório); confirme a compatibilidade atual de qualquer extensão da qual você dependa antes de trocar.',
       },
@@ -1856,7 +1917,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Espere, ou procure outra opção, se',
             list: [
-              'Você precisa de desenvolvimento ativo e frequente garantido — esta análise constatou que o push de código mais recente do repositório foi em 31 de julho de 2025, visivelmente mais lento do que no primeiro ano',
+              'Você precisa de desenvolvimento ativo garantido e frequente — o Forge não recebe atualizações desde 31 de julho de 2025 e sua última release do GitHub é de 5 de fevereiro de 2024',
               'Você depende de uma extensão específica do AUTOMATIC1111 que o Forge não suporta — confirme a compatibilidade antes de trocar todo o seu fluxo de trabalho',
               'Você quer uma interface simplificada voltada para iniciantes, em vez do conjunto completo de parâmetros da Stable Diffusion WebUI — veja o Fooocus na seção de concorrentes abaixo',
               'Você precisa de garantias de suporte oficial em vez de suporte da comunidade via rastreamento de issues — o canal de suporte do Forge é o GitHub Issues, típico de um projeto de código aberto, não de um fornecedor comercial com SLA',
@@ -1871,7 +1932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'O Forge é uma entre várias interfaces locais e de código aberto para Stable Diffusion e modelos de imagem relacionados. Veja como ele se posiciona em relação a outras opções desse espaço — consulte o [Diretório de Software de LLM Local](/directory) para o catálogo completo, e a comparação dedicada [Forge vs. AUTOMATIC1111 WebUI](#forge-vs-automatic1111) acima para o confronto mais direto.',
         items: [
           '**[AUTOMATIC1111 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** — o projeto original sobre o qual o Forge é construído, com o maior ecossistema de extensões; veja a seção de comparação dedicada acima e a [análise do AUTOMATIC1111](/power-local-llm/automatic1111-review) para todos os detalhes.',
-          '**[ComfyUI](https://github.com/comfyanonymous/ComfyUI)** — uma interface baseada em nós para os mesmos modelos Stable Diffusion/Flux subjacentes, trocando a interface em abas mais familiar do Forge por um grafo de fluxo de trabalho visual com controle de baixo nível mais refinado; veja a [análise do ComfyUI](/power-local-llm/comfyui-review).',
+          '**[ComfyUI](https://github.com/comfy-org/ComfyUI)** — uma interface baseada em nós para os mesmos modelos Stable Diffusion/Flux subjacentes, trocando a interface em abas mais familiar do Forge por um grafo de fluxo de trabalho visual com controle de baixo nível mais refinado; veja a [análise do ComfyUI](/power-local-llm/comfyui-review).',
           '**[Fooocus](https://github.com/lllyasviel/Fooocus)** — também criado por lllyasviel, mas com objetivo oposto: uma interface simplificada e opinativa voltada a iniciantes que querem bons resultados com ajuste mínimo de parâmetros, em vez do conjunto completo de parâmetros da WebUI do Forge; veja a [análise do Fooocus](/power-local-llm/fooocus-review).',
           '**[InvokeAI](https://github.com/invoke-ai/InvokeAI)** — outra interface local de Stable Diffusion polida e ativamente desenvolvida, com forte foco em um fluxo de trabalho de canvas unificado e um conjunto de recursos mais curado do que as ferramentas derivadas da WebUI; veja a [análise do InvokeAI](/power-local-llm/invokeai-review).',
         ],
@@ -1896,7 +1957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Erro 4: supor que o projeto lança atualizações frequentes e ativas',
-            content: 'A API do GitHub mostra que o push de código mais recente do repositório foi em 31 de julho de 2025 no momento desta análise — confira diretamente o [histórico de commits do repositório](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) antes de presumir lançamentos semanais ou mensais.',
+            content: 'O Forge não recebe atualizações desde 31 de julho de 2025, segundo a API do GitHub, e o último commit na `main` é de 26 de junho de 2025 — consulte diretamente o [histórico de commits do repositório](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) antes de presumir releases semanais ou mensais.',
           },
         ],
       },
@@ -1913,7 +1974,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'O Forge inclui o ControlNet?', a: 'Sim, integrado. O Forge traz suporte completo a ControlNet e IP-Adapter, junto com as ferramentas de pré-processamento das quais eles dependem, então você não precisa instalar a extensão ControlNet separada exigida pela WebUI original do AUTOMATIC1111.' },
           { q: 'Quais plataformas o Forge suporta?', a: 'Windows, macOS e Linux. O Windows tem um build empacotado de um clique disponível pelo GitHub Releases; macOS e Linux são configurados via clonagem manual do repositório mais script, o mesmo padrão usado pela WebUI original do AUTOMATIC1111.' },
           { q: 'Quem criou o Stable Diffusion WebUI Forge?', a: 'O Forge foi criado por [lllyasviel](https://github.com/lllyasviel) (Lyumin Zhang), que também é o criador do ControlNet e do Fooocus, outra interface local de Stable Diffusion.' },
-          { q: 'O Forge ainda é mantido ativamente?', a: 'O desenvolvimento desacelerou em comparação ao primeiro ano do Forge. A API do GitHub mostra que o push de código mais recente do repositório foi em 31 de julho de 2025 no momento desta análise. O repositório não estava arquivado e permanecia publicamente listado — confira diretamente seu [histórico de commits](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) para o status atual antes de contar com atualizações frequentes.' },
+          { q: 'O Forge ainda é mantido ativamente?', a: 'Nenhuma atualização foi publicada desde 31 de julho de 2025 (último push, na branch `py3.12`); o último commit na `main` é de 26 de junho de 2025 e a última release do GitHub é de 5 de fevereiro de 2024. O repositório não está arquivado, mas trate o Forge como possivelmente sem manutenção e consulte seu [histórico de commits](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) antes de depender dele.' },
+          { q: 'O que usar no lugar do Forge?', a: 'Se você quer ferramentas com desenvolvimento ativo, compare ComfyUI, InvokeAI e SD.Next, que, segundo a API do GitHub, tiveram pushes em 2026-11-02. A WebUI original do AUTOMATIC1111 não recebe atualizações desde 2 de março de 2026, então também não é uma opção mais ativa; veja a [análise do AUTOMATIC1111](/power-local-llm/automatic1111-review).' },
         ],
       },
       sources: {
@@ -1945,16 +2007,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-19',
+    next_refresh_due: '2027-05-02',
     publishDate: '2026-09-19',
-    dateModified: '2026-09-19',
+    dateModified: '2026-11-02',
     educationalLevel: 'Intermediate',
     audience: 'الأشخاص الذين يعرفون بالفعل أساسيات Stable Diffusion ويريدون استدلالًا أسرع واستهلاكًا أقل لذاكرة الفيديو (VRAM) ودعمًا مدمجًا لـ ControlNet وFlux مقارنة بواجهة AUTOMATIC1111 الأصلية',
     primaryTerm: 'Stable Diffusion WebUI Forge',
     title: 'مراجعة Stable Diffusion WebUI Forge: نسخة أسرع وأقل استهلاكًا لذاكرة الفيديو من AUTOMATIC1111',
-    seoTitle: 'مراجعة Stable Diffusion WebUI Forge',
+    seoTitle: 'مراجعة Stable Diffusion WebUI Forge: الحالة والتثبيت',
     intro: 'Stable Diffusion WebUI Forge ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) هو تطبيق ويب محلي مجاني ومفتوح المصدر لتوليد الصور — وهو نسخة مشتقة (fork) من [واجهة Stable Diffusion الخاصة بـ AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui) طوّرها [lllyasviel](https://github.com/lllyasviel)، مبتكر ControlNet. يعيد المشروع هيكلة الطريقة التي تدير بها الواجهة الأصلية ذاكرة معالج الرسومات (GPU) وتنفيذ النماذج، بهدف تحقيق استدلال أسرع واستهلاك أقل لذاكرة الفيديو على نفس العتاد، مع الحفاظ على التوافق مع الجزء الأكبر من منظومة إضافات الواجهة الأصلية. تتناول هذه المراجعة ما الذي يغيّره Forge فعليًا، وكيفية تثبيته وتشغيله، وكيف يقارَن بواجهة AUTOMATIC1111 التي بُني عليها.',
-    metaDescription: 'Stable Diffusion WebUI Forge هو نسخة مشتقة مجانية ومفتوحة المصدر من AUTOMATIC1111 طوّرها lllyasviel مبتكر ControlNet، لتوليد صور محلي أسرع وأقل استهلاكًا لذاكرة الفيديو.',
+    metaDescription: 'مراجعة Forge: نسخة AUTOMATIC1111 المتفرعة من lllyasviel مبتكر ControlNet، وحالة صيانتها الموثّقة، ودعم Flux، والتثبيت، والترخيص.',
     readTime: '11 دقيقة قراءة',
     targetKeywords: [
       'مراجعة Stable Diffusion WebUI Forge',
@@ -1963,20 +2025,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'دعم Flux في Forge',
       'واجهة Stable Diffusion محلية',
     ],
-    leadAnswerBlock: '**Stable Diffusion WebUI Forge ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) هو تطبيق ويب محلي مجاني ومفتوح المصدر لـ Stable Diffusion، مرخّص بموجب AGPL-3.0، طوّره [lllyasviel](https://github.com/lllyasviel) (مبتكر ControlNet) كنسخة مشتقة مبنية على [واجهة Stable Diffusion الخاصة بـ AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui).** يصفه ملف README الخاص به بأنه "منصة مبنية فوق Stable Diffusion WebUI"، صُمّمت لتحسين إدارة الموارد وسرعة الاستدلال — واسم المشروع مستوحى من فكرة أن Minecraft Forge يُبنى فوق Minecraft. يقدّم Forge خلفية (backend) معاد بناؤها لـ"ترقيع" UNet لخفض استهلاك ذاكرة الفيديو، ودعمًا مدمجًا لـ ControlNet وLoRA، ودعمًا لنماذج Flux عبر التكميم بصيغتي NF4/GGUF، وواجهة مبنية على Gradio 4، مع الحفاظ على توافق واسع مع منظومة إضافات الواجهة الأصلية. يعمل على Windows وmacOS وLinux، ويحتاج إلى معالج رسومات للاستخدام العملي، وليس له أي خطة مدفوعة.',
+    leadAnswerBlock: '**تحذير: لم يتلقَّ Stable Diffusion WebUI Forge أي تحديث منذ 31 يوليو 2025 (آخر إصدار على GitHub بتاريخ 5 فبراير 2024)، وقد يكون غير مصان — تحقق قبل الاعتماد عليه.** **Forge نسخة مجانية ومفتوحة المصدر (AGPL-3.0) متفرعة من واجهة AUTOMATIC1111 لتوليد الصور محليًا، طوّرها lllyasviel.**',
     quickAnswerTop: {
       ar: {
         question: 'ما هو Stable Diffusion WebUI Forge وكم تكلفته؟',
-        answer: 'Stable Diffusion WebUI Forge هو تطبيق ويب محلي مجاني ومفتوح المصدر (AGPL-3.0) لتوليد الصور — نسخة مشتقة من واجهة Stable Diffusion الخاصة بـ AUTOMATIC1111 طوّرها lllyasviel، مبتكر ControlNet. يعيد هيكلة إدارة ذاكرة معالج الرسومات لتحقيق استدلال أسرع واستهلاك أقل لذاكرة الفيديو، ويضيف دعمًا مدمجًا لـ ControlNet وLoRA وFlux، وليس له أي خطة مدفوعة.',
+        answer: 'Stable Diffusion WebUI Forge تطبيق ويب محلي مجاني ومفتوح المصدر (AGPL-3.0) لتوليد الصور، وهو نسخة متفرعة من Stable Diffusion WebUI الخاصة بـ AUTOMATIC1111 طوّرها lllyasviel، مبتكر ControlNet. يعيد بناء إدارة ذاكرة المعالج الرسومي لاستدلال أسرع واستهلاك أقل لذاكرة الفيديو، ويضم ControlNet وLoRA وFlux مدمجة، وليس له مستوى مدفوع. لم يتلقَّ أي تحديث منذ 31 يوليو 2025، وقد يكون غير مصان.',
         bullets: [
           'مجاني ومفتوح المصدر بموجب ترخيص AGPL-3.0، دون الحاجة إلى حساب أو اشتراك',
           'طوّره lllyasviel (مبتكر ControlNet) كنسخة مشتقة مبنية على واجهة Stable Diffusion الخاصة بـ AUTOMATIC1111',
           'خلفية "Forge" المعاد بناؤها لترقيع UNet تستهدف استدلالًا أسرع واستهلاكًا أقل لذاكرة الفيديو على نفس عتاد الواجهة الأصلية',
           'دعم مدمج لـ ControlNet وIP-Adapter، ودعم LoRA، ودعم نماذج Flux عبر التكميم بصيغتي NF4/GGUF',
           'يعمل على Windows وmacOS وLinux؛ يُنصح بشدة باستخدام معالج رسومات، دون حد أدنى موثّق رسميًا لذاكرة الفيديو',
-          'يُظهر مستودع GitHub ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) نحو 13,000 نجمة اعتبارًا من سبتمبر 2026',
+          `يُظهر مستودع GitHub ([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)) نحو ${ST.ar('stable-diffusion-forge', 'bare')} نجمة؛ وكانت آخر دفعة تعديلات في 31 يوليو 2025، وأحدث إصدار على GitHub بتاريخ 5 فبراير 2024`,
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -2010,6 +2072,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يقدّم دعمًا مدمجًا لـ ControlNet وIP-Adapter، ودعم LoRA، ودعم نماذج Flux (تكميم NF4/GGUF) دون الحاجة إلى إضافات إضافية',
           'يستخدم واجهة Gradio 4، مع حزمة تثبيت بنقرة واحدة لنظام Windows وإعداد يدوي عبر استنساخ Git لنظامي macOS وLinux',
           'يعمل على Windows وmacOS وLinux؛ يُنصح بشدة باستخدام معالج رسومات، دون حد أدنى موثّق لذاكرة الفيديو — الأمر يعتمد على نقطة التفتيش (checkpoint) ودقة الصورة',
+          'الصيانة: لا تحديث منذ 31 يوليو 2025 (آخر دفعة، فرع `py3.12`)؛ وآخر التزام على `main` بتاريخ 26 يونيو 2025، وأحدث إصدار على GitHub بتاريخ 5 فبراير 2024',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'لا تحديث منذ 31 يوليو 2025 (آخر إصدار على GitHub بتاريخ 5 فبراير 2024). قد يكون Forge غير مصان: تأكد أنه ما زال يعمل مع بطاقتك الرسومية ونموذجك قبل أن تعتمد عليه.',
+          },
         ],
       },
       overview: {
@@ -2029,16 +2098,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       history: {
         id: 'forge-history',
         title: 'تاريخ مشروع Forge ومحطات إصداراته',
-        content: '**أُنشئ مستودع Forge على GitHub في 14 يناير 2024**، واستمر lllyasviel في نشر التحديثات منذ ذلك الحين، وإن كان بوتيرة أبطأ بوضوح مقارنة بسنته الأولى. حتى وقت إعداد هذه المراجعة، تُظهر واجهة برمجة تطبيقات GitHub أن آخر دفعة كود إلى المستودع كانت في 31 يوليو 2025 — وهو أمر يستحق المعرفة إذا كنت تقيّم مدى نشاط صيانة المشروع حاليًا.',
+        content: '**أُنشئ مستودع Forge على GitHub في 14 يناير 2024**، ولم يتلقَّ أي تحديث منذ 31 يوليو 2025: تُظهر واجهة GitHub البرمجية هذا التاريخ آخر دفعة شيفرة (إلى فرع `py3.12`)، وآخر التزام على `main` بتاريخ 26 يونيو 2025.',
         numberedItems: [
           { title: '14 يناير 2024 — إنشاء المستودع', whyItMatters: 'يفتح lllyasviel مستودع stable-diffusion-webui-forge كنسخة مشتقة/منصة مبنية فوق واجهة Stable Diffusion الخاصة بـ AUTOMATIC1111، مما يؤسس منذ اليوم الأول أن Forge امتداد لمنظومة الواجهة القائمة بالفعل وليس مشروعًا مستقلًا.' },
           { title: '5 فبراير 2024 — أول إصدار معبّأ', whyItMatters: 'ينشر وسم "latest" في صفحة GitHub Releases نسخة Windows مُعبّأة مسبقًا وقابلة للتنزيل، مما يوفر خيارًا شبيهًا ببرنامج تثبيت إلى جانب سير العمل اليدوي عبر استنساخ Git.' },
           { title: '22 يوليو 2024 — نشر إصدار "previous_versions"', whyItMatters: 'يحافظ على نسخ تثبيت أقدم بينما استمر تغيّر النسخة المعبّأة القابلة للتنزيل من Forge، تاركًا للمستخدمين ذوي توليفات CUDA/PyTorch الأقدم نسخة عاملة يمكن الرجوع إليها.' },
           { title: '7 سبتمبر 2024 — إضافة أداة أخذ العينات "Flux Realistic"', whyItMatters: 'وفقًا لملف NEWS.md الخاص بالمشروع، صدرت أداة أخذ عينات جديدة مُعدّة لنماذج Flux إلى جانب دعم Forge المدمج لـ Flux عبر التكميم بصيغتي NF4/GGUF.' },
           { title: '28 أكتوبر 2024 — بدء العمل على فرع "sd35" (طلب السحب رقم 2183)', whyItMatters: 'وفقًا لملف NEWS.md، بدأ العمل على فرع لتقييم دعم Stable Diffusion 3.5، وطرق التكميم، وتقنيات أخذ العينات، تمهيدًا لدمج محتمل في الفرع الرئيسي.' },
-          { title: '31 يوليو 2025 — أحدث دفعة كود (وفقًا لواجهة برمجة تطبيقات GitHub)', whyItMatters: 'أحدث نشاط تعديلات (commits) تمكّنت هذه المراجعة من تأكيده في المستودع الرئيسي حتى تاريخ نشرها — سياق مفيد للحكم على وتيرة التطوير الحالية قبل الاعتماد على Forge في سير عمل يحتاج إلى تحديثات متكررة.' },
+          { title: '31 يوليو 2025 — أحدث دفعة كود (وفقًا لواجهة برمجة تطبيقات GitHub)', whyItMatters: 'أحدث نشاط التزامات في أي فرع (فرع `py3.12`، "Fix XYZ grid with Pillow >=10.0.0")؛ وآخر التزام على `main` بتاريخ 26 يونيو 2025. لم تتبعه التزامات ولا إصدارات، لذا تعامل مع Forge على أنه قد يكون غير مصان.' },
         ],
-        note: 'وثّق ملف NEWS.md الخاص بـ Forge خطة ترحيل مخططة إلى Gradio 5، كان الهدف الأولي منها حوالي مارس 2025 مع تاريخ احتياطي في يونيو 2025؛ ولم تجد هذه المراجعة في المستودع ما يؤكد اكتمال هذا الترحيل. لم يُؤرشف المستودع وظل مُدرَجًا للعامة حتى وقت إعداد هذه المراجعة، بنحو 13,000 نجمة على GitHub، وأكثر من 1,700 تفرّع (fork)، وأكثر من 1,100 مشكلة مفتوحة — لكن تحقق مباشرة من [سجل تعديلات المستودع](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) قبل افتراض وجود تطوير أسبوعي نشط.',
+        note: `وثّق ملف NEWS.md الخاص بـ Forge خطة للانتقال إلى Gradio 5، كان مستهدفًا نحو مارس 2025 مع موعد بديل في يونيو 2025؛ وما زال README يشير إلى دليل Gradio 4، ولم تجد هذه المراجعة تأكيدًا بأن الانتقال اكتمل. المستودع غير مؤرشف وما زال مدرجًا علنًا، بنحو ${ST.ar('stable-diffusion-forge', 'bare')} نجمة على GitHub وأكثر من 1,700 نسخة متفرعة وأكثر من 1,100 مشكلة مفتوحة — لكن مع غياب أي التزامات منذ 31 يوليو 2025 لا تفترض وجود تطوير نشط. راجع [سجل التزامات المستودع](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) لمعرفة الحالة الراهنة.`,
       },
       features: {
         id: 'what-forge-does',
@@ -2111,7 +2180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الجانب': 'ControlNet / IP-Adapter', 'Forge': 'مدمج، دون الحاجة إلى إضافة', 'AUTOMATIC1111 WebUI': 'يتطلب إضافة ControlNet المنفصلة' },
           { 'الجانب': 'دعم نماذج Flux', 'Forge': 'مدمج، مع تكميم NF4/GGUF', 'AUTOMATIC1111 WebUI': 'يعتمد على إضافات المجتمع، وليس مدمجًا أصليًا' },
           { 'الجانب': 'منظومة الإضافات', 'Forge': 'متوافق مع جزء كبير منها لكنها أضيق نطاقًا', 'AUTOMATIC1111 WebUI': 'أكبر منظومة إضافات SD وأكثرها نضجًا' },
-          { 'الجانب': 'نشاط التعديلات الأخير', 'Forge': 'آخر دفعة تم رصدها: 31 يوليو 2025', 'AUTOMATIC1111 WebUI': 'تحقق مباشرة من سجل تعديلات المشروع نفسه' },
+          { 'الجانب': 'نشاط التعديلات الأخير', 'Forge': 'لا دفعات منذ 31 يوليو 2025؛ وأحدث إصدار على GitHub بتاريخ 5 فبراير 2024', 'AUTOMATIC1111 WebUI': 'لا تحديث منذ 2 مارس 2026؛ وآخر إصدار v1.10.1 (9 فبراير 2025)' },
         ],
         note: 'إذا كانت أولويتك استدلالًا أسرع واستهلاكًا أقل لذاكرة الفيديو مع دعم مدمج لـ ControlNet وFlux، فإن الخلفية المعاد بناؤها في Forge هي السبب الذي يجعله الخيار الأفضل. أما إذا كانت أولويتك أوسع منظومة إضافات ممكنة، أو كنت تعتمد على إضافة لا يدعمها Forge بعد، فتستحق واجهة AUTOMATIC1111 الأصلية أن تُقيَّم مباشرة في [مستودعها على GitHub](https://github.com/AUTOMATIC1111/stable-diffusion-webui). كلاهما مجاني ومفتوح المصدر، ويُثبّت بنفس الطريقة (نسخة Windows معبّأة أو استنساخ Git)؛ تحقق من التوافق الحالي لأي إضافة تعتمد عليها قبل التبديل.',
       },
@@ -2133,7 +2202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'انتظر، أو ابحث عن بديل، إذا',
             list: [
-              'كنت تحتاج إلى تطوير نشط ومتكرر مضمون — وجدت هذه المراجعة أن آخر دفعة كود إلى المستودع كانت في 31 يوليو 2025، وهي أبطأ بوضوح مقارنة بسنته الأولى',
+              'تحتاج إلى تطوير نشط ومتكرر مضمون — لم يتلقَّ Forge أي تحديث منذ 31 يوليو 2025، وأحدث إصدار له على GitHub بتاريخ 5 فبراير 2024',
               'كنت تعتمد على إضافة معيّنة من AUTOMATIC1111 لا يدعمها Forge — تحقق من التوافق قبل تبديل سير عملك بالكامل',
               'كنت تريد واجهة مبسطة موجهة للمبتدئين بدلًا من المجموعة الكاملة من معاملات واجهة Stable Diffusion — راجع Fooocus في قسم المنافسين أدناه',
               'كنت تحتاج إلى ضمانات دعم رسمية بدلًا من الدعم المجتمعي عبر تتبّع المشكلات — قناة الدعم في Forge هي GitHub Issues، وهذا نمط اعتيادي لمشروع مفتوح المصدر وليس لمزوّد تجاري باتفاقية مستوى خدمة (SLA)',
@@ -2148,7 +2217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Forge هو واحد من عدة واجهات محلية ومفتوحة المصدر لـ Stable Diffusion ونماذج الصور المرتبطة به. إليك كيف يقارَن بالخيارات الأخرى في هذا المجال — راجع [دليل برمجيات الذكاء الاصطناعي المحلي](/directory) للحصول على الكتالوج الكامل، والقسم المخصص [Forge مقابل AUTOMATIC1111 WebUI](#forge-vs-automatic1111) أعلاه للمقارنة الأكثر مباشرة.',
         items: [
           '**[AUTOMATIC1111 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** — المشروع الأصلي الذي بُني Forge فوقه، ويملك أكبر منظومة إضافات؛ راجع قسم المقارنة المخصص أعلاه و[مراجعة AUTOMATIC1111](/power-local-llm/automatic1111-review) لجميع التفاصيل.',
-          '**[ComfyUI](https://github.com/comfyanonymous/ComfyUI)** — واجهة قائمة على العُقد لنفس نماذج Stable Diffusion/Flux الأساسية، تستبدل واجهة Forge الأكثر إلفة القائمة على علامات التبويب بمخطط سير عمل بصري يوفر تحكمًا أدق على المستوى المنخفض؛ راجع [مراجعة ComfyUI](/power-local-llm/comfyui-review).',
+          '**[ComfyUI](https://github.com/comfy-org/ComfyUI)** — واجهة قائمة على العُقد لنفس نماذج Stable Diffusion/Flux الأساسية، تستبدل واجهة Forge الأكثر إلفة القائمة على علامات التبويب بمخطط سير عمل بصري يوفر تحكمًا أدق على المستوى المنخفض؛ راجع [مراجعة ComfyUI](/power-local-llm/comfyui-review).',
           '**[Fooocus](https://github.com/lllyasviel/Fooocus)** — طوّره lllyasviel أيضًا، لكن بهدف معاكس: واجهة مبسطة وذات توجه واضح موجهة للمبتدئين الذين يريدون نتائج جيدة بأقل قدر من ضبط المعاملات، بدلًا من مجموعة معاملات Forge الكاملة؛ راجع [مراجعة Fooocus](/power-local-llm/fooocus-review).',
           '**[InvokeAI](https://github.com/invoke-ai/InvokeAI)** — واجهة محلية أخرى مصقولة ونشطة التطوير لـ Stable Diffusion، تركّز بقوة على سير عمل لوحة رسم موحّدة ومجموعة ميزات أكثر انتقائية من الأدوات المشتقة من الواجهة الأصلية؛ راجع [مراجعة InvokeAI](/power-local-llm/invokeai-review).',
         ],
@@ -2173,7 +2242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'الخطأ 4: افتراض أن المشروع يصدر تحديثات متكررة ونشطة',
-            content: 'تُظهر واجهة برمجة تطبيقات GitHub أن آخر دفعة كود إلى المستودع كانت في 31 يوليو 2025 وقت إعداد هذه المراجعة — تحقق مباشرة من [سجل تعديلات المستودع](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) قبل افتراض إصدارات أسبوعية أو شهرية.',
+            content: 'لم يتلقَّ Forge أي تحديث منذ 31 يوليو 2025 بحسب واجهة GitHub البرمجية، وآخر التزام على `main` بتاريخ 26 يونيو 2025 — راجع [سجل التزامات المستودع](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) مباشرة قبل افتراض إصدارات أسبوعية أو شهرية.',
           },
         ],
       },
@@ -2190,7 +2259,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل يتضمن Forge ControlNet؟', a: 'نعم، بشكل مدمج. يقدّم Forge دعمًا كاملًا لـ ControlNet وIP-Adapter إلى جانب أدوات المعالجة المسبقة التي يعتمدان عليها، لذا لست بحاجة إلى تثبيت إضافة ControlNet المنفصلة التي تتطلبها واجهة AUTOMATIC1111 الأصلية.' },
           { q: 'ما المنصات التي يدعمها Forge؟', a: 'Windows وmacOS وLinux. تتوفر لنظام Windows نسخة معبّأة بتثبيت بنقرة واحدة عبر GitHub Releases؛ أما macOS وLinux فيتم إعدادهما عبر استنساخ Git يدوي وتشغيل سكربت، وهو نفس النمط الذي تستخدمه واجهة AUTOMATIC1111 الأصلية.' },
           { q: 'من طوّر Stable Diffusion WebUI Forge؟', a: 'طوّر Forge [lllyasviel](https://github.com/lllyasviel) (Lyumin Zhang)، وهو أيضًا مبتكر ControlNet وFooocus، وهي واجهة محلية أخرى لـ Stable Diffusion.' },
-          { q: 'هل لا يزال Forge يُصان بنشاط؟', a: 'تباطأت وتيرة التطوير مقارنة بالسنة الأولى لـ Forge. تُظهر واجهة برمجة تطبيقات GitHub أن آخر دفعة كود إلى المستودع كانت في 31 يوليو 2025 وقت إعداد هذه المراجعة. لم يُؤرشف المستودع وظل مُدرَجًا للعامة — تحقق مباشرة من [سجل التعديلات](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) لمعرفة الحالة الراهنة قبل الاعتماد على تحديثات متكررة.' },
+          { q: 'هل لا يزال Forge يُصان بنشاط؟', a: 'لم يُنشر أي تحديث منذ 31 يوليو 2025 (آخر دفعة إلى فرع `py3.12`)؛ وآخر التزام على `main` بتاريخ 26 يونيو 2025، وأحدث إصدار على GitHub بتاريخ 5 فبراير 2024. المستودع غير مؤرشف، لكن تعامل مع Forge على أنه قد يكون غير مصان وراجع [سجل التزاماته](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main) قبل الاعتماد عليه.' },
+          { q: 'ماذا أستخدم بدلًا من Forge؟', a: 'إن أردت أدوات تُطوَّر بنشاط فقارن ComfyUI وInvokeAI وSD.Next، وقد تلقّت جميعها دفعات تعديلات في 2026-11-02 بحسب واجهة GitHub البرمجية. أما واجهة AUTOMATIC1111 الأصلية فلم تتلقَّ أي تحديث منذ 2 مارس 2026، فليست أنشط منه؛ انظر [مراجعة AUTOMATIC1111](/power-local-llm/automatic1111-review).' },
         ],
       },
       sources: {
@@ -2222,16 +2292,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-19',
+    next_refresh_due: '2027-05-02',
     publishDate: '2026-09-19',
-    dateModified: '2026-09-19',
+    dateModified: '2026-11-02',
     educationalLevel: 'Intermediate',
     audience: 'Stable Diffusion의 기본을 이미 알고 있으며, 기존 AUTOMATIC1111 WebUI보다 더 빠른 추론 속도와 낮은 VRAM 사용량, 그리고 기본 내장된 ControlNet/Flux 지원을 원하는 사람',
     primaryTerm: 'Stable Diffusion WebUI Forge',
     title: 'Stable Diffusion WebUI Forge 리뷰: 더 빠르고 VRAM을 아끼는 AUTOMATIC1111 포크',
     seoTitle: 'Stable Diffusion WebUI Forge 리뷰',
     intro: 'Stable Diffusion WebUI Forge([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge))는 무료 오픈소스 로컬 이미지 생성 웹 앱으로, ControlNet 제작자인 [lllyasviel](https://github.com/lllyasviel)이 [AUTOMATIC1111의 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)를 포크해 만든 프로젝트입니다. 원본 WebUI가 GPU 메모리를 관리하고 모델을 실행하는 방식을 재설계해, 동일한 하드웨어에서 더 빠른 추론과 더 낮은 VRAM 사용을 목표로 하면서도 원본 WebUI의 확장 프로그램 생태계 대부분과의 호환성을 유지합니다. 이 리뷰에서는 Forge가 실제로 무엇을 바꾸는지, 설치와 실행 방법, 그리고 기반이 된 AUTOMATIC1111 WebUI와의 비교를 다룹니다.',
-    metaDescription: 'Stable Diffusion WebUI Forge는 ControlNet 제작자 lllyasviel이 만든 무료 오픈소스 AUTOMATIC1111 포크로, 더 빠르고 VRAM을 절약하는 로컬 이미지 생성을 위해 설계되었습니다.',
+    metaDescription: 'Forge 리뷰. ControlNet 제작자 lllyasviel의 AUTOMATIC1111 포크로, 확인된 유지보수 상태와 Flux 지원, 설치법, 라이선스를 다룹니다.',
     readTime: '11분 읽기',
     targetKeywords: [
       'Stable Diffusion WebUI Forge 리뷰',
@@ -2240,20 +2310,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Forge Flux 지원',
       '로컬 Stable Diffusion WebUI',
     ],
-    leadAnswerBlock: '**Stable Diffusion WebUI Forge([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge))는 AGPL-3.0 라이선스의 무료 오픈소스 로컬 Stable Diffusion 웹 앱으로, ControlNet 제작자인 [lllyasviel](https://github.com/lllyasviel)이 [AUTOMATIC1111의 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)를 포크해 만들었습니다.** 공식 README는 이를 "Stable Diffusion WebUI 위에 구축된 플랫폼"으로 설명하며, 리소스 관리와 추론 속도 최적화를 목표로 한다고 밝히고 있습니다. 이름은 Minecraft Forge가 Minecraft 위에 구축된 방식에서 착안했습니다. Forge는 VRAM 사용량을 낮추기 위해 새로 구축한 UNet 패칭 백엔드, 기본 내장된 ControlNet 및 LoRA 지원, NF4/GGUF 양자화를 통한 Flux 모델 지원, 그리고 Gradio 4 인터페이스를 제공하며, 원본 WebUI의 확장 프로그램 생태계 대부분과 호환됩니다. Windows, macOS, Linux에서 실행되며, 실질적인 사용을 위해서는 GPU가 필요하고, 유료 플랜은 없습니다.',
+    leadAnswerBlock: '**경고: Stable Diffusion WebUI Forge는 2025년 7월 31일 이후 업데이트가 없으며(최신 GitHub 릴리스 2024년 2월 5일) 유지보수되지 않을 수 있습니다. 사용 전에 확인하시기 바랍니다.** **Forge는 lllyasviel이 만든, 로컬 이미지 생성용 무료 오픈소스(AGPL-3.0) AUTOMATIC1111 WebUI 포크입니다.**',
     quickAnswerTop: {
       ko: {
         question: 'Stable Diffusion WebUI Forge란 무엇이며 가격은 얼마인가요?',
-        answer: 'Stable Diffusion WebUI Forge는 무료 오픈소스(AGPL-3.0) 로컬 이미지 생성 웹 앱으로, ControlNet 제작자 lllyasviel이 만든 AUTOMATIC1111 Stable Diffusion WebUI의 포크입니다. GPU 메모리 처리 방식을 재설계해 더 빠른 추론과 더 낮은 VRAM 사용을 실현하며, ControlNet, LoRA, Flux를 기본 지원하도록 추가했고, 유료 플랜은 없습니다.',
+        answer: 'Stable Diffusion WebUI Forge는 무료 오픈소스(AGPL-3.0) 로컬 이미지 생성 웹 앱으로, ControlNet 제작자 lllyasviel이 AUTOMATIC1111의 Stable Diffusion WebUI를 기반으로 만든 포크입니다. GPU 메모리 관리를 새로 만들어 더 빠른 추론과 낮은 VRAM 사용을 목표로 하고, ControlNet, LoRA, Flux를 기본 지원하며 유료 요금제는 없습니다. 2025년 7월 31일 이후 업데이트가 없어 유지보수되지 않을 수 있습니다.',
         bullets: [
           'AGPL-3.0 라이선스 아래 무료이자 오픈소스이며, 계정이나 구독이 필요 없음',
           'ControlNet 제작자인 lllyasviel이 AUTOMATIC1111의 Stable Diffusion WebUI를 포크해 개발',
           '새로 구축된 "Forge" UNet 패칭 백엔드는 원본 WebUI와 동일한 하드웨어에서 더 빠른 추론과 더 낮은 VRAM 사용을 목표로 함',
           'ControlNet 및 IP-Adapter 기본 지원, LoRA 지원, NF4/GGUF 양자화를 통한 Flux 모델 지원',
           'Windows, macOS, Linux에서 실행됨. GPU를 강력히 권장하며, 공식적으로 문서화된 단일 VRAM 최소 사양은 없음',
-          'GitHub 저장소([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge))는 2026년 9월 기준 약 13,000개의 스타를 기록',
+          `GitHub 저장소([github.com/lllyasviel/stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge))의 스타는 약 ${ST.ko('stable-diffusion-forge', 'bare')}개이며, 마지막 푸시는 2025년 7월 31일, 최신 GitHub 릴리스는 2024년 2월 5일자입니다`,
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -2287,6 +2357,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '추가 확장 프로그램 없이 ControlNet 및 IP-Adapter 기본 지원, LoRA 지원, Flux 모델 지원(NF4/GGUF 양자화)을 제공합니다',
           'Gradio 4 인터페이스를 사용하며, Windows용 원클릭 패키지와 macOS·Linux용 수동 git clone 설정을 제공합니다',
           'Windows, macOS, Linux에서 실행됩니다. GPU를 강력히 권장하며, 문서화된 단일 VRAM 최소 사양은 없습니다. 체크포인트와 해상도에 따라 다릅니다',
+          '유지보수: 2025년 7월 31일 이후 업데이트 없음(마지막 푸시는 `py3.12` 브랜치). `main`의 마지막 커밋은 2025년 6월 26일이고 최신 GitHub 릴리스는 2024년 2월 5일자입니다',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '2025년 7월 31일 이후 업데이트 없음(최신 GitHub 릴리스 2024년 2월 5일). Forge는 유지보수되지 않을 수 있습니다. 의존하기 전에 사용 중인 GPU와 모델에서 여전히 작동하는지 확인하시기 바랍니다.',
+          },
         ],
       },
       overview: {
@@ -2306,16 +2383,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       history: {
         id: 'forge-history',
         title: 'Forge의 프로젝트 역사와 버전 주요 이정표',
-        content: '**Forge의 GitHub 저장소는 2024년 1월 14일에 생성되었으며**, lllyasviel은 이후에도 계속 업데이트를 진행해 왔지만 첫 1년에 비해 속도는 눈에 띄게 느려졌습니다. 이 리뷰 작성 시점 기준으로 GitHub API에 따르면 저장소에 대한 가장 최근 코드 푸시는 2025년 7월 31일이었습니다. 현재 프로젝트가 얼마나 활발히 유지 관리되고 있는지 평가할 때 알아두면 유용한 정보입니다.',
+        content: '**Forge의 GitHub 저장소는 2024년 1월 14일에 만들어졌습니다.** 2025년 7월 31일 이후 업데이트가 없으며, GitHub API는 이 날짜를 마지막 코드 푸시(`py3.12` 브랜치)로 보여 주고, `main`의 마지막 커밋은 2025년 6월 26일입니다.',
         numberedItems: [
           { title: '2024년 1월 14일 — 저장소 생성', whyItMatters: 'lllyasviel이 AUTOMATIC1111의 Stable Diffusion WebUI를 기반으로 한 포크/플랫폼으로 stable-diffusion-webui-forge 저장소를 개설하며, Forge가 독립 프로젝트가 아니라 처음부터 기존 WebUI 생태계의 파생물임을 확립했습니다.' },
           { title: '2024년 2월 5일 — 첫 패키지 릴리스', whyItMatters: 'GitHub Releases 페이지의 "latest" 태그가 다운로드 가능한 사전 패키지 Windows 빌드를 공개하여, 수동 git clone 워크플로 외에 설치 프로그램에 가까운 옵션을 제공했습니다.' },
           { title: '2024년 7월 22일 — "previous_versions" 릴리스 공개', whyItMatters: 'Forge의 패키지 다운로드가 계속 변경되는 가운데 이전 설치 빌드를 보존해, 더 오래된 CUDA/PyTorch 조합을 사용하는 사용자에게도 작동하는 빌드를 남겨두었습니다.' },
           { title: '2024년 9월 7일 — 샘플러 "Flux Realistic" 추가', whyItMatters: '프로젝트 자체 NEWS.md에 따르면, Flux 모델에 맞춰 조정된 새로운 샘플러가 NF4/GGUF 양자화를 통한 Forge의 기본 Flux 지원과 함께 출시되었습니다.' },
           { title: '2024년 10월 28일 — "sd35" 브랜치 작업 시작(PR #2183)', whyItMatters: 'NEWS.md에 따르면, 메인 브랜치에 병합될 가능성을 염두에 두고 Stable Diffusion 3.5 지원, 양자화 방식, 샘플링 기법을 평가하는 브랜치 작업이 시작되었습니다.' },
-          { title: '2025년 7월 31일 — 가장 최근 코드 푸시(GitHub API 기준)', whyItMatters: '이 리뷰가 발행 시점까지 메인 저장소에서 확인할 수 있었던 가장 최근 커밋 활동입니다. 잦은 업데이트가 필요한 워크플로에 Forge를 사용하기 전에 현재 개발 속도를 판단하는 데 유용한 참고 자료입니다.' },
+          { title: '2025년 7월 31일 — 가장 최근 코드 푸시(GitHub API 기준)', whyItMatters: '모든 브랜치를 통틀어 가장 최근의 커밋 활동(`py3.12` 브랜치, "Fix XYZ grid with Pillow >=10.0.0"). `main`의 마지막 커밋은 2025년 6월 26일입니다. 이후 커밋도 릴리스도 없으므로 Forge는 유지보수되지 않을 수 있는 프로젝트로 취급하시기 바랍니다.' },
         ],
-        note: 'Forge의 NEWS.md에는 애초 2025년 3월경을 목표로 하고 2025년 6월을 예비 일정으로 삼은 Gradio 5 마이그레이션 계획이 기록되어 있었지만, 이 리뷰는 저장소 내에서 해당 마이그레이션이 완료되었다는 확인을 찾지 못했습니다. 이 저장소는 이 리뷰 작성 시점에 보관 처리(archive)되지 않았고 공개 목록에 남아 있었으며, 약 13,000개의 GitHub 스타, 1,700개 이상의 포크, 1,100건이 넘는 미해결 이슈를 보유하고 있었습니다. 다만 활발한 주간 개발이 이루어지고 있다고 가정하기 전에 [저장소의 커밋 히스토리](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main)를 직접 확인하세요.',
+        note: `Forge의 NEWS.md에는 2025년 3월경(대체 시점 2025년 6월)을 목표로 한 Gradio 5 이전 계획이 적혀 있었지만, README는 지금도 Gradio 4 가이드를 안내하고 있으며 이 리뷰는 이전이 완료되었다는 확인을 찾지 못했습니다. 저장소는 보관(archived) 처리되지 않고 공개 상태이며, GitHub 스타 약 ${ST.ko('stable-diffusion-forge', 'bare')}개, 포크 1,700개 이상, 열린 이슈 1,100건 이상이 있지만, 2025년 7월 31일 이후 커밋이 없으므로 활발한 개발이 이어진다고 가정하지 마시기 바랍니다. 현재 상태는 [저장소의 커밋 기록](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main)에서 확인하시기 바랍니다.`,
       },
       features: {
         id: 'what-forge-does',
@@ -2388,7 +2465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '항목': 'ControlNet / IP-Adapter', 'Forge': '기본 내장, 확장 프로그램 불필요', 'AUTOMATIC1111 WebUI': '별도의 ControlNet 확장 프로그램 필요' },
           { '항목': 'Flux 모델 지원', 'Forge': 'NF4/GGUF 양자화와 함께 기본 내장', 'AUTOMATIC1111 WebUI': '커뮤니티 확장 프로그램에 의존, 네이티브 아님' },
           { '항목': '확장 프로그램 생태계', 'Forge': '대부분과 호환되지만 범위는 더 좁음', 'AUTOMATIC1111 WebUI': '가장 크고 성숙한 SD 확장 프로그램 생태계' },
-          { '항목': '최근 커밋 활동', 'Forge': '확인된 가장 최근 푸시: 2025년 7월 31일', 'AUTOMATIC1111 WebUI': '프로젝트 자체 커밋 히스토리를 직접 확인' },
+          { '항목': '최근 커밋 활동', 'Forge': '2025년 7월 31일 이후 푸시 없음. 최신 GitHub 릴리스는 2024년 2월 5일', 'AUTOMATIC1111 WebUI': '2026년 3월 2일 이후 업데이트 없음. 마지막 릴리스 v1.10.1(2025년 2월 9일)' },
         ],
         note: '기본 내장된 ControlNet 및 Flux 지원과 함께 더 빠른 추론과 더 낮은 VRAM 사용이 우선순위라면, Forge의 재구축된 백엔드가 이를 선택할 이유가 됩니다. 가능한 한 폭넓은 확장 프로그램 생태계가 우선순위이거나, Forge가 아직 지원하지 않는 확장 프로그램에 의존하고 있다면, 원본 AUTOMATIC1111 WebUI를 [GitHub 저장소](https://github.com/AUTOMATIC1111/stable-diffusion-webui)에서 직접 검토해볼 가치가 있습니다. 두 프로젝트 모두 무료이자 오픈소스이며 설치 방식도 동일합니다(패키지 Windows 빌드 또는 git clone). 전환하기 전에 의존하고 있는 특정 확장 프로그램의 현재 호환성을 확인하세요.',
       },
@@ -2410,7 +2487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '다음과 같다면 도입을 미루거나 다른 대안을 찾으세요',
             list: [
-              '보장된 활발하고 잦은 개발이 필요한 경우 — 이 리뷰가 확인한 바에 따르면 저장소의 가장 최근 코드 푸시는 2025년 7월 31일로, 첫 1년에 비해 눈에 띄게 느려졌습니다',
+              '보장된 잦은 활발한 개발이 필요하다 — Forge는 2025년 7월 31일 이후 업데이트가 없고, 최신 GitHub 릴리스는 2024년 2월 5일자입니다',
               'Forge가 지원하지 않는 특정 AUTOMATIC1111 확장 프로그램에 의존하고 있는 경우 — 전체 워크플로를 전환하기 전에 호환성을 확인하세요',
               'Stable Diffusion WebUI의 전체 매개변수 세트가 아니라 초보자 친화적인 단순화된 인터페이스를 원하는 경우 — 아래 경쟁 제품 섹션의 Fooocus를 참고하세요',
               '커뮤니티/이슈 트래커 방식의 지원이 아니라 공식적인 지원 보장이 필요한 경우 — Forge의 지원 채널은 GitHub Issues로, SLA를 제공하는 상업적 공급업체가 아니라 오픈소스 프로젝트에 흔한 방식입니다',
@@ -2425,7 +2502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Forge는 Stable Diffusion 및 관련 이미지 모델을 위한 여러 로컬 오픈소스 인터페이스 중 하나입니다. 이 분야의 다른 옵션들과 비교했을 때 Forge가 어디에 위치하는지 살펴보세요. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/directory)를, 가장 직접적인 비교는 위의 전용 섹션인 [Forge 대 AUTOMATIC1111 WebUI](#forge-vs-automatic1111)를 참고하세요.',
         items: [
           '**[AUTOMATIC1111 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** — Forge가 그 위에 구축된 원본 프로젝트로, 가장 큰 확장 프로그램 생태계를 갖추고 있습니다. 자세한 내용은 위의 전용 비교 섹션과 [AUTOMATIC1111 리뷰](/power-local-llm/automatic1111-review)를 참고하세요.',
-          '**[ComfyUI](https://github.com/comfyanonymous/ComfyUI)** — 동일한 기반 Stable Diffusion/Flux 모델을 위한 노드 기반 인터페이스로, Forge의 더 익숙한 탭 기반 UI 대신 더 세밀한 저수준 제어가 가능한 시각적 워크플로 그래프를 제공합니다. [ComfyUI 리뷰](/power-local-llm/comfyui-review)를 참고하세요.',
+          '**[ComfyUI](https://github.com/comfy-org/ComfyUI)** — 동일한 기반 Stable Diffusion/Flux 모델을 위한 노드 기반 인터페이스로, Forge의 더 익숙한 탭 기반 UI 대신 더 세밀한 저수준 제어가 가능한 시각적 워크플로 그래프를 제공합니다. [ComfyUI 리뷰](/power-local-llm/comfyui-review)를 참고하세요.',
           '**[Fooocus](https://github.com/lllyasviel/Fooocus)** — 마찬가지로 lllyasviel이 만들었지만 목표는 정반대입니다. Forge의 전체 WebUI 매개변수 세트 대신, 최소한의 매개변수 조정으로 좋은 결과를 원하는 초보자를 위한 단순하고 뚜렷한 지향성을 가진 인터페이스입니다. [Fooocus 리뷰](/power-local-llm/fooocus-review)를 참고하세요.',
           '**[InvokeAI](https://github.com/invoke-ai/InvokeAI)** — 통합된 캔버스 워크플로에 강하게 초점을 맞추고, WebUI 파생 도구보다 더 정제된 기능 세트를 갖춘 또 다른 완성도 높고 활발히 개발 중인 로컬 Stable Diffusion UI입니다. [InvokeAI 리뷰](/power-local-llm/invokeai-review)를 참고하세요.',
         ],
@@ -2450,7 +2527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '실수 4: 프로젝트가 잦고 활발한 업데이트를 계속 내놓고 있다고 가정하는 것',
-            content: '이 리뷰 작성 시점 기준, GitHub API에 따르면 저장소의 가장 최근 코드 푸시는 2025년 7월 31일입니다. 매주 또는 매달 릴리스가 이루어진다고 가정하기 전에 [저장소의 커밋 히스토리](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main)를 직접 확인하세요.',
+            content: 'GitHub API에 따르면 Forge는 2025년 7월 31일 이후 업데이트가 없고 `main`의 마지막 커밋은 2025년 6월 26일입니다. 주간 또는 월간 릴리스를 기대하기 전에 [저장소의 커밋 기록](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main)을 직접 확인하시기 바랍니다.',
           },
         ],
       },
@@ -2467,7 +2544,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Forge에는 ControlNet이 포함되어 있나요?', a: '네, 기본 내장되어 있습니다. Forge는 ControlNet과 IP-Adapter에 대한 완전한 지원과 이를 뒷받침하는 전처리 도구를 함께 제공하므로, 원본 AUTOMATIC1111 WebUI가 요구하는 별도의 ControlNet 확장 프로그램을 설치할 필요가 없습니다.' },
           { q: 'Forge는 어떤 플랫폼을 지원하나요?', a: 'Windows, macOS, Linux를 지원합니다. Windows는 GitHub Releases를 통해 원클릭 패키지 빌드를 제공하며, macOS와 Linux는 수동 git clone 및 스크립트 방식으로 설정합니다. 이는 원본 AUTOMATIC1111 WebUI가 사용하는 것과 동일한 방식입니다.' },
           { q: 'Stable Diffusion WebUI Forge는 누가 만들었나요?', a: 'Forge는 [lllyasviel](https://github.com/lllyasviel)(Lyumin Zhang)이 만들었으며, 그는 ControlNet과 또 다른 로컬 Stable Diffusion 인터페이스인 Fooocus의 제작자이기도 합니다.' },
-          { q: 'Forge는 지금도 활발히 유지 관리되고 있나요?', a: 'Forge의 첫 1년에 비해 개발 속도는 느려졌습니다. 이 리뷰 작성 시점 기준, GitHub API에 따르면 저장소의 가장 최근 코드 푸시는 2025년 7월 31일입니다. 이 저장소는 보관 처리(archive)되지 않았고 공개 목록에 남아 있습니다. 잦은 업데이트를 기대하기 전에 [커밋 히스토리](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main)를 직접 확인해 현재 상태를 파악하세요.' },
+          { q: 'Forge는 지금도 활발히 유지 관리되고 있나요?', a: '2025년 7월 31일 이후 공개된 업데이트가 없습니다(마지막 푸시는 `py3.12` 브랜치). `main`의 마지막 커밋은 2025년 6월 26일이고 최신 GitHub 릴리스는 2024년 2월 5일자입니다. 저장소는 보관 처리되지 않았지만 Forge는 유지보수되지 않을 수 있는 프로젝트로 취급하고, 의존하기 전에 [커밋 기록](https://github.com/lllyasviel/stable-diffusion-webui-forge/commits/main)을 확인하시기 바랍니다.' },
+          { q: 'Forge 대신 무엇을 써야 하나요?', a: '활발히 개발되는 도구를 원한다면 GitHub API 기준으로 모두 2026-11-02에 푸시가 있었던 ComfyUI, InvokeAI, SD.Next를 비교해 보시기 바랍니다. 원본 AUTOMATIC1111 WebUI도 2026년 3월 2일 이후 업데이트가 없어 더 활발한 선택지가 아닙니다. [AUTOMATIC1111 리뷰](/power-local-llm/automatic1111-review)를 참고하십시오.' },
         ],
       },
       sources: {

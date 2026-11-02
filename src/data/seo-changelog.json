@@ -13836,5 +13836,365 @@
       "period": "28d to 2026-11-01"
     },
     "deployedAt": null
+  },
+  {
+    "id": "3fbc31fb-3fdd-4e12-adb5-e7a69f753797",
+    "slug": "/power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-02T14:52:43.348Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Stable Diffusion WebUI Forge Review",
+        "new": "Stable Diffusion WebUI Forge Review: Status and Setup"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Stable Diffusion WebUI Forge is a free, open-source AUTOMATIC1111 fork by ControlNet creator lllyasviel, built for faster, lower-VRAM local image generation.",
+        "new": "Stable Diffusion WebUI Forge review: the AUTOMATIC1111 fork by ControlNet creator lllyasviel, verified maintenance status, Flux, install, license."
+      },
+      {
+        "field": "sections",
+        "old": "no stale warning; soft \"slowed\" maintenance wording; no alternatives FAQ",
+        "new": "stale warning in lead and TL;DR callout, explicit maintenance statements in history/comparison/FAQ, new alternatives FAQ"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh (review-top100 pilot rank 5): dead-project warning added (no update since 2025-07-31, main last commit 2025-06-26, latest release 2024-02-05), maintenance statements made explicit and cross-checked with AUTOMATIC1111 (no update since 2026-03-02), alternatives pointer FAQ, typed star count replaced by directory data, lead cut to 48 words, meta and titles within budget. GSC: top queries are navigational (stable diffusion webui forge, webui forge).",
+    "queries": [
+      "stable diffusion webui forge",
+      "webui forge",
+      "stable diffusion forge",
+      "forge webui",
+      "lllyasviel/stable-diffusion-webui-forge",
+      "stable-diffusion-webui-forge"
+    ],
+    "baseline": {
+      "position": 5.48,
+      "impressions": 6749,
+      "clicks": 42,
+      "ctr": 0.0062231441695065936,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "927e3f0f-4c9e-4411-a110-09084549acb2",
+    "slug": "/de/power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-02T14:52:43.379Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Stable Diffusion WebUI Forge Review",
+        "new": "Stable Diffusion WebUI Forge Review: Status und Setup"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Stable Diffusion WebUI Forge ist ein kostenloser, quelloffener AUTOMATIC1111-Fork von ControlNet-Erfinder lllyasviel für schnellere, VRAM-sparende lokale Bildgenerierung.",
+        "new": "Forge-Review: der AUTOMATIC1111-Fork von ControlNet-Entwickler lllyasviel, geprüfter Wartungsstatus, Flux-Unterstützung, Setup, Lizenz und Alternativen."
+      },
+      {
+        "field": "sections",
+        "old": "no stale warning; soft \"slowed\" maintenance wording; no alternatives FAQ",
+        "new": "stale warning in lead and TL;DR callout, explicit maintenance statements in history/comparison/FAQ, new alternatives FAQ"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "webui forge",
+      "lllyasviel/stable-diffusion-webui-forge",
+      "automatic1111 / forge",
+      "automatic1111 forge"
+    ],
+    "baseline": {
+      "position": 5.3,
+      "impressions": 630,
+      "clicks": 6,
+      "ctr": 0.009523809523809525,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "085275a5-7c06-43da-8b52-b8ba64bc9478",
+    "slug": "/fr/power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-02T14:52:43.407Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Stable Diffusion WebUI Forge Avis",
+        "new": "Stable Diffusion WebUI Forge Avis : état et installation"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Stable Diffusion WebUI Forge est un fork AUTOMATIC1111 gratuit et open source créé par lllyasviel, créateur de ControlNet, pour une génération d'images locale plus rapide et moins gourmande en VRAM.",
+        "new": "Avis Forge : le fork d'AUTOMATIC1111 de lllyasviel (créateur de ControlNet), état de maintenance vérifié, Flux, installation, licence et alternatives."
+      },
+      {
+        "field": "sections",
+        "old": "no stale warning; soft \"slowed\" maintenance wording; no alternatives FAQ",
+        "new": "stale warning in lead and TL;DR callout, explicit maintenance statements in history/comparison/FAQ, new alternatives FAQ"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "lllyasviel/stable-diffusion-webui-forge",
+      "stable diffusion webui forge",
+      "webui forge",
+      "forge webui"
+    ],
+    "baseline": {
+      "position": 5.66,
+      "impressions": 158,
+      "clicks": 1,
+      "ctr": 0.006329113924050633,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6050368e-f9c8-45d2-803e-dc3f05583c86",
+    "slug": "/es/power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-02T14:52:43.435Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Stable Diffusion WebUI Forge: análisis",
+        "new": "Stable Diffusion WebUI Forge: análisis y estado actual"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Stable Diffusion WebUI Forge es un fork gratuito y de código abierto de AUTOMATIC1111 creado por lllyasviel, autor de ControlNet, para una generación de imágenes local más rápida y con menos VRAM.",
+        "new": "Análisis de Forge: el fork de AUTOMATIC1111 de lllyasviel (creador de ControlNet), estado de mantenimiento verificado, Flux, instalación y licencia."
+      },
+      {
+        "field": "sections",
+        "old": "no stale warning; soft \"slowed\" maintenance wording; no alternatives FAQ",
+        "new": "stale warning in lead and TL;DR callout, explicit maintenance statements in history/comparison/FAQ, new alternatives FAQ"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "stable diffusion webui forge",
+      "stable diffusion forge",
+      "webui forge",
+      "forge webui"
+    ],
+    "baseline": {
+      "position": 5.41,
+      "impressions": 804,
+      "clicks": 3,
+      "ctr": 0.0037313432835820895,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "13fcbfb1-294b-43c9-91e3-01ece94fc0e4",
+    "slug": "/pt/power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-02T14:52:43.463Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Stable Diffusion WebUI Forge: análise",
+        "new": "Stable Diffusion WebUI Forge: análise e status atual"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Stable Diffusion WebUI Forge é um fork gratuito e de código aberto do AUTOMATIC1111 criado por lllyasviel, autor do ControlNet, para geração de imagens local mais rápida e com menos VRAM.",
+        "new": "Análise do Forge: o fork do AUTOMATIC1111 criado por lllyasviel (autor do ControlNet), status de manutenção verificado, Flux, instalação e licença."
+      },
+      {
+        "field": "sections",
+        "old": "no stale warning; soft \"slowed\" maintenance wording; no alternatives FAQ",
+        "new": "stale warning in lead and TL;DR callout, explicit maintenance statements in history/comparison/FAQ, new alternatives FAQ"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "stable diffusion webui forge",
+      "webui forge",
+      "forge webui",
+      "stable diffusion forge"
+    ],
+    "baseline": {
+      "position": 8.63,
+      "impressions": 230,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e1f3bce7-6aa0-45ee-b53c-15c2f055e0e5",
+    "slug": "/ja/power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-02T14:52:43.492Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Stable Diffusion WebUI Forgeは、ControlNetの作者lllyasviel氏による無料・オープンソースのAUTOMATIC1111フォークで、高速かつ低VRAMなローカル画像生成を実現します。",
+        "new": "Forgeのレビュー。ControlNet作者lllyasvielによるAUTOMATIC1111フォークの保守状況、Flux対応、導入方法、ライセンスを解説します。"
+      },
+      {
+        "field": "sections",
+        "old": "no stale warning; soft \"slowed\" maintenance wording; no alternatives FAQ",
+        "new": "stale warning in lead and TL;DR callout, explicit maintenance statements in history/comparison/FAQ, new alternatives FAQ"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "stable diffusion webui forge",
+      "webui forge",
+      "sd-forge"
+    ],
+    "baseline": {
+      "position": 6.43,
+      "impressions": 125,
+      "clicks": 3,
+      "ctr": 0.024,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "87505f5f-622e-4d5d-8fe6-ead3d71509b7",
+    "slug": "/zh/power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-02T14:52:43.521Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Stable Diffusion WebUI Forge是ControlNet作者lllyasviel开发的免费开源AUTOMATIC1111分支，专为更快、更省显存的本地图像生成而打造。",
+        "new": "Stable Diffusion WebUI Forge评测：ControlNet作者lllyasviel的AUTOMATIC1111分支，经核实的维护状态、Flux支持、安装方式与许可证。"
+      },
+      {
+        "field": "sections",
+        "old": "no stale warning; soft \"slowed\" maintenance wording; no alternatives FAQ",
+        "new": "stale warning in lead and TL;DR callout, explicit maintenance statements in history/comparison/FAQ, new alternatives FAQ"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "webui forge",
+      "forge webui"
+    ],
+    "baseline": {
+      "position": 5.53,
+      "impressions": 81,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b9d9f9a6-b914-49e1-8cfb-93131714aea0",
+    "slug": "/ar/power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-02T14:52:43.550Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Stable Diffusion WebUI Forge",
+        "new": "مراجعة Stable Diffusion WebUI Forge: الحالة والتثبيت"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Stable Diffusion WebUI Forge هو نسخة مشتقة مجانية ومفتوحة المصدر من AUTOMATIC1111 طوّرها lllyasviel مبتكر ControlNet، لتوليد صور محلي أسرع وأقل استهلاكًا لذاكرة الفيديو.",
+        "new": "مراجعة Forge: نسخة AUTOMATIC1111 المتفرعة من lllyasviel مبتكر ControlNet، وحالة صيانتها الموثّقة، ودعم Flux، والتثبيت، والترخيص."
+      },
+      {
+        "field": "sections",
+        "old": "no stale warning; soft \"slowed\" maintenance wording; no alternatives FAQ",
+        "new": "stale warning in lead and TL;DR callout, explicit maintenance statements in history/comparison/FAQ, new alternatives FAQ"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "stable diffusion forge",
+      "forge webui"
+    ],
+    "baseline": {
+      "position": 14.07,
+      "impressions": 41,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7e12c26f-3cea-4519-b98d-71728d048d88",
+    "slug": "/ko/power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-02T14:52:43.579Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Stable Diffusion WebUI Forge는 ControlNet 제작자 lllyasviel이 만든 무료 오픈소스 AUTOMATIC1111 포크로, 더 빠르고 VRAM을 절약하는 로컬 이미지 생성을 위해 설계되었습니다.",
+        "new": "Forge 리뷰. ControlNet 제작자 lllyasviel의 AUTOMATIC1111 포크로, 확인된 유지보수 상태와 Flux 지원, 설치법, 라이선스를 다룹니다."
+      },
+      {
+        "field": "sections",
+        "old": "no stale warning; soft \"slowed\" maintenance wording; no alternatives FAQ",
+        "new": "stale warning in lead and TL;DR callout, explicit maintenance statements in history/comparison/FAQ, new alternatives FAQ"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "stable diffusion webui forge",
+      "webui forge",
+      "lllyasviel/stable-diffusion-webui-forge",
+      "sd webui forge"
+    ],
+    "baseline": {
+      "position": 5.45,
+      "impressions": 475,
+      "clicks": 7,
+      "ctr": 0.014736842105263158,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
   }
 ]
