@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'MIT',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // pure orchestration library (langchain.com); no local inference or fixed hardware floor of its own — entirely dependent on the backend (Ollama, llama.cpp, vLLM, LM Studio) the developer wires it to, checked 2026-09-13
-  stars: 145635,
+  stars: 148881, // github.com/langchain-ai/langchain, GitHub API 2026-11-02
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['agent', 'build'],
@@ -35,6 +35,6 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'langchain-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-10-15', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2026-11-02', // GitHub API (latest release langchain-core==1.7.3 on 2026-10-29, last push 2026-11-02), read 2026-11-02
   lastUpstreamUpdateSource: 'https://github.com/langchain-ai/langchain',
 }

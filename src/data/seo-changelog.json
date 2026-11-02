@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 4.600239212439047e-05,
+      "ctr": 0.00004600239212439047,
       "period": "last 90 days"
     }
   },
@@ -12459,6 +12459,2099 @@
       "impressions": 920,
       "clicks": 0,
       "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "5a86b001-7963-4809-8293-574cb4af7aac",
+    "slug": "/power-local-llm/risuai-review",
+    "date": "2026-11-02T10:14:43.725Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "RisuAI is a free, open-source (GPL-3.0) roleplay chat client with a web app, Tauri desktop app, and self-hosted server. Verified facts, install steps, and comparisons for 2026.",
+        "new": "Free, open-source (GPL-3.0) roleplay chat client: web app, desktop, Docker. Verified install steps, Android status, pricing and SillyTavern comparison."
+      },
+      {
+        "field": "targetKeywords",
+        "old": "'RisuAI review', 'RisuAI install', 'RisuAI vs SillyTavern', 'RisuAI Lorebook', 'open-source roleplay chat client',",
+        "new": "'RisuAI review', 'RisuAI install', 'RisuAI vs SillyTavern', 'RisuAI Lorebook', 'open-source roleplay chat client', 'RisuAI Android', 'RisuAI Docker',"
+      },
+      {
+        "field": "sections",
+        "old": "no Android/iPhone, Docker or README-extras sections",
+        "new": "added extraFeatures, mobile, docker sections + 3 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "117-word lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh (review-top100 pilot): version/last-update + typed star count replaced by directory data, new sections (Android/iPhone, Docker, README extras), lead answer cut to 41 words for Rule 31/36, meta rewritten around Android/Docker coverage. GSC: top query is the bare product name (navigational).",
+    "queries": [
+      "risuai",
+      "risu ai",
+      "risuai android",
+      "risuai app",
+      "risuai vs sillytavern",
+      "hypamemory"
+    ],
+    "baseline": {
+      "position": 7.4,
+      "impressions": 3801,
+      "clicks": 7,
+      "ctr": 0.001841620626151013,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "63e890c7-8339-4d93-847a-e464d1d6c974",
+    "slug": "/de/power-local-llm/risuai-review",
+    "date": "2026-11-02T10:14:43.759Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "RisuAI Review: Client, Installation & Preise",
+        "new": "RisuAI Review: Rollenspiel-Client, Installation & Preise"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RisuAI ist ein kostenloser, quelloffener (GPL-3.0) Rollenspiel-Chat-Client mit Web-App, Tauri-Desktop-App und selbst gehostetem Server. Geprüfte Fakten, Installation und Vergleiche für 2026.",
+        "new": "Kostenloser, quelloffener (GPL-3.0) Rollenspiel-Chat-Client: Web, Desktop, Docker. Geprüfte Installation, Android-Status, Preise, SillyTavern-Vergleich."
+      },
+      {
+        "field": "sections",
+        "old": "no Android/iPhone, Docker or README-extras sections",
+        "new": "added extraFeatures, mobile, docker sections + 3 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "117-word lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: title/meta brought inside locale budget (data-free review for this locale, too few queries), new sections translated, lead answer shortened.",
+    "queries": [
+      "risuai",
+      "risu ai"
+    ],
+    "baseline": {
+      "position": 6.05,
+      "impressions": 196,
+      "clicks": 2,
+      "ctr": 0.01020408163265306,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "436d4278-5d76-41d2-81f0-031534450d7a",
+    "slug": "/fr/power-local-llm/risuai-review",
+    "date": "2026-11-02T10:14:43.788Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Avis RisuAI: client, installation et tarifs",
+        "new": "Avis RisuAI : client de jeu de rôle, installation, tarifs"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RisuAI est un client de chat de jeu de rôle gratuit et open source (GPL-3.0) avec application web, application de bureau Tauri et serveur auto-hébergé. Faits vérifiés, installation et comparaisons pour 2026.",
+        "new": "Client de chat de jeu de rôle gratuit et open source (GPL-3.0) : web, bureau, Docker. Installation vérifiée, Android, tarifs et comparatif SillyTavern."
+      },
+      {
+        "field": "sections",
+        "old": "no Android/iPhone, Docker or README-extras sections",
+        "new": "added extraFeatures, mobile, docker sections + 3 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "117-word lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: title/meta brought inside locale budget (data-free review for this locale, too few queries), new sections translated, lead answer shortened.",
+    "queries": [
+      "risuai",
+      "risuai android"
+    ],
+    "baseline": {
+      "position": 6.1,
+      "impressions": 127,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a8becfa3-6a52-428b-b50d-6451c15a060d",
+    "slug": "/es/power-local-llm/risuai-review",
+    "date": "2026-11-02T10:14:43.816Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Reseña RisuAI: cliente, instalación y precios",
+        "new": "Reseña de RisuAI: cliente de rol, instalación y precios"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RisuAI es un cliente de chat de rol gratuito y de código abierto (GPL-3.0) con app web, app de escritorio Tauri y servidor autoalojado. Datos verificados, instalación y comparativas para 2026.",
+        "new": "Cliente de chat de rol gratuito y open source (GPL-3.0): web, escritorio, Docker. Instalación verificada, Android, precios y comparativa con SillyTavern."
+      },
+      {
+        "field": "sections",
+        "old": "no Android/iPhone, Docker or README-extras sections",
+        "new": "added extraFeatures, mobile, docker sections + 3 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "117-word lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: title/meta brought inside locale budget (data-free review for this locale, too few queries), new sections translated, lead answer shortened.",
+    "queries": [
+      "risuai",
+      "risu ai",
+      "risuai android",
+      "hypamemory"
+    ],
+    "baseline": {
+      "position": 6.1,
+      "impressions": 430,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "05481ba3-3a0c-4308-ad38-8ad19e3219b2",
+    "slug": "/pt/power-local-llm/risuai-review",
+    "date": "2026-11-02T10:14:43.844Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Análise RisuAI: cliente, instalação e preços",
+        "new": "Análise do RisuAI: cliente de roleplay, instalação, preços"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RisuAI é um cliente de chat de roleplay gratuito e open source (GPL-3.0) com app web, app desktop Tauri e servidor autogerenciado. Fatos verificados, instalação e comparações para 2026.",
+        "new": "Cliente de chat de roleplay gratuito e open source (GPL-3.0): web, desktop, Docker. Instalação verificada, Android, preços e comparação com SillyTavern."
+      },
+      {
+        "field": "sections",
+        "old": "no Android/iPhone, Docker or README-extras sections",
+        "new": "added extraFeatures, mobile, docker sections + 3 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "117-word lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: title/meta brought inside locale budget (data-free review for this locale, too few queries), new sections translated, lead answer shortened.",
+    "queries": [
+      "risuai",
+      "risu ai"
+    ],
+    "baseline": {
+      "position": 6.5,
+      "impressions": 34,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a172be66-8404-4a94-ac68-c098938813a6",
+    "slug": "/ja/power-local-llm/risuai-review",
+    "date": "2026-11-02T10:14:43.872Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "RisuAIレビュー:クライアント・導入・料金",
+        "new": "RisuAIレビュー:ロールプレイ用クライアントの導入・料金"
+      },
+      {
+        "field": "sections",
+        "old": "no Android/iPhone, Docker or README-extras sections",
+        "new": "added extraFeatures, mobile, docker sections + 3 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "117-word lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: title/meta brought inside locale budget (data-free review for this locale, too few queries), new sections translated, lead answer shortened.",
+    "queries": [
+      "risuai"
+    ],
+    "baseline": {
+      "position": 3.08,
+      "impressions": 13,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c6309d70-3d25-4888-9916-31ed53a25665",
+    "slug": "/zh/power-local-llm/risuai-review",
+    "date": "2026-11-02T10:14:43.900Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "RisuAI评测:客户端、安装与定价",
+        "new": "RisuAI评测:角色扮演聊天客户端的安装与定价"
+      },
+      {
+        "field": "sections",
+        "old": "no Android/iPhone, Docker or README-extras sections",
+        "new": "added extraFeatures, mobile, docker sections + 3 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "117-word lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: title/meta brought inside locale budget (data-free review for this locale, too few queries), new sections translated, lead answer shortened.",
+    "queries": [
+      "risuai",
+      "risuai 中文"
+    ],
+    "baseline": {
+      "position": 6.1,
+      "impressions": 41,
+      "clicks": 3,
+      "ctr": 0.07317073170731707,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "eae09d3d-83ca-475e-9244-00375a7d1384",
+    "slug": "/ar/power-local-llm/risuai-review",
+    "date": "2026-11-02T10:14:43.928Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة RisuAI: العميل والتثبيت والأسعار",
+        "new": "مراجعة RisuAI: عميل لعب الأدوار والتثبيت والأسعار"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RisuAI هو عميل دردشة مجاني ومفتوح المصدر (GPL-3.0) للعب الأدوار، يوفر تطبيق ويب وتطبيق سطح مكتب Tauri وخادمًا مستضافًا ذاتيًا. حقائق موثقة وخطوات تثبيت ومقارنات لعام 2026.",
+        "new": "عميل دردشة مجاني ومفتوح المصدر (GPL-3.0) للعب الأدوار: ويب وسطح مكتب وDocker. تثبيت موثّق وحالة Android والأسعار ومقارنة مع SillyTavern."
+      },
+      {
+        "field": "sections",
+        "old": "no Android/iPhone, Docker or README-extras sections",
+        "new": "added extraFeatures, mobile, docker sections + 3 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "117-word lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: title/meta brought inside locale budget (data-free review for this locale, too few queries), new sections translated, lead answer shortened.",
+    "queries": [
+      "risuai"
+    ],
+    "baseline": {
+      "position": 7.3,
+      "impressions": 52,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8030a3cd-2aba-436b-84ae-887e14d431ee",
+    "slug": "/ko/power-local-llm/risuai-review",
+    "date": "2026-11-02T10:14:43.956Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "RisuAI 리뷰: 클라이언트, 설치, 가격",
+        "new": "RisuAI 리뷰: 모바일 사용, 무료 여부, 가격, 설치법"
+      },
+      {
+        "field": "metaDescription",
+        "old": "RisuAI는 웹 앱, Tauri 데스크톱 앱, 자체 호스팅 서버를 갖춘 무료 오픈소스(GPL-3.0) 롤플레이 채팅 클라이언트입니다. 2026년 검증된 사실, 설치 단계, 비교 정보.",
+        "new": "RisuAI는 웹 앱, Tauri 데스크톱 앱, Docker 자체 호스팅을 지원하는 무료 오픈소스(GPL-3.0) 롤플레이 클라이언트입니다. 모바일 사용, 가격, 설치 단계를 정리했습니다."
+      },
+      {
+        "field": "targetKeywords",
+        "old": "'RisuAI 리뷰', 'RisuAI 설치', 'RisuAI vs SillyTavern', 'RisuAI Lorebook', '오픈소스 롤플레이 채팅 클라이언트',",
+        "new": "'RisuAI 리뷰', 'RisuAI 모바일', 'RisuAI 무료', 'RisuAI 가격', 'RisuAI 다운로드', 'RisuAI 로컬',"
+      },
+      {
+        "field": "sections",
+        "old": "no Android/iPhone, Docker or README-extras sections",
+        "new": "added extraFeatures, mobile, docker sections + 3 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "117-word lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: ko title/meta/keywords adapted to ko queries (모바일, 무료, 가격, 로컬, 다운로드) plus the same new sections and lead-answer shortening.",
+    "queries": [
+      "risuai",
+      "risuai 모바일",
+      "risu ai 무료",
+      "risu ai 가격",
+      "risuai 로컬",
+      "risuai 다운로드"
+    ],
+    "baseline": {
+      "position": 6.44,
+      "impressions": 4988,
+      "clicks": 25,
+      "ctr": 0.005012028869286287,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "f8cd95f5-ea62-496b-b494-e435d594d870",
+    "slug": "/power-local-llm/opencode-review",
+    "date": "2026-11-02T12:48:55.699Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "OpenCode is a free, open-source terminal AI coding agent connecting to 75+ model providers, including local Ollama and LM Studio backends. Here is how it works.",
+        "new": "Free, open-source (MIT) terminal AI coding agent: 75+ providers, local Ollama, LM Studio and llama.cpp, beta desktop app, v1 vs v2 install commands."
+      },
+      {
+        "field": "sections",
+        "old": "no v1/v2, desktop-app or llama.cpp coverage; Zen priced as paid marketplace",
+        "new": "added versions + desktopApp sections, llama.cpp/Ollama items, 5 FAQs, OpenCode Console pricing"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh (review-top100 pilot rank 2): typed 200,000 stars replaced by directory data, v1/v2 install lines, desktop app (beta), llama.cpp, Zen->OpenCode Console pricing fix, 5 new FAQs (desktop, v1 vs v2, llama.cpp, vs LM Studio, is it local), lead cut to 44 words, meta rewritten. GSC: top queries are navigational (opencode review, opencode, is opencode local, opencode vs lm studio).",
+    "queries": [
+      "opencode review",
+      "opencode",
+      "opencode terminal",
+      "is opencode local",
+      "opencode vs lm studio",
+      "opencode @ai-sdk/openai-compatible config example"
+    ],
+    "baseline": {
+      "position": 6.9,
+      "impressions": 4379,
+      "clicks": 6,
+      "ctr": 0.0013701758392327015,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d5144e14-949a-47a5-b342-f7b3f5181234",
+    "slug": "/de/power-local-llm/opencode-review",
+    "date": "2026-11-02T12:48:55.728Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "OpenCode ist ein kostenloser, quelloffener Terminal-KI-Coding-Agent mit Anbindung an 75+ Modellanbieter, einschließlich lokaler Ollama- und LM-Studio-Backends. So funktioniert es.",
+        "new": "Kostenloser, quelloffener (MIT) Terminal-KI-Coding-Agent: 75+ Anbieter, lokal mit Ollama, LM Studio, llama.cpp, Desktop-App (Beta), v1 vs. v2."
+      },
+      {
+        "field": "sections",
+        "old": "no v1/v2, desktop-app or llama.cpp coverage; Zen priced as paid marketplace",
+        "new": "added versions + desktopApp sections, llama.cpp/Ollama items, 5 FAQs, OpenCode Console pricing"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (data-free or thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "opencode review",
+      "opencode",
+      "opencode erfahrungen",
+      "opencode lokale modelle",
+      "ist opencode kostenlos"
+    ],
+    "baseline": {
+      "position": 7.19,
+      "impressions": 455,
+      "clicks": 2,
+      "ctr": 0.004395604395604396,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e13e4752-a178-4a4c-b9e7-d50614515594",
+    "slug": "/fr/power-local-llm/opencode-review",
+    "date": "2026-11-02T12:48:55.756Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "OpenCode est un agent de codage IA gratuit, open source, en ligne de commande, connecté à 75+ fournisseurs de modèles, dont Ollama et LM Studio en local. Voici comment il fonctionne.",
+        "new": "Agent de codage IA gratuit, open source (MIT) pour le terminal : 75+ fournisseurs, Ollama, LM Studio et llama.cpp en local, app de bureau bêta, v1 vs v2."
+      },
+      {
+        "field": "sections",
+        "old": "no v1/v2, desktop-app or llama.cpp coverage; Zen priced as paid marketplace",
+        "new": "added versions + desktopApp sections, llama.cpp/Ollama items, 5 FAQs, OpenCode Console pricing"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (data-free or thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "open code",
+      "opencode avis",
+      "avis opencode",
+      "c'est quoi opencode",
+      "opencode"
+    ],
+    "baseline": {
+      "position": 7.28,
+      "impressions": 1798,
+      "clicks": 9,
+      "ctr": 0.005005561735261402,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8dcade84-a0a0-49ee-9826-e3fb44f3113a",
+    "slug": "/es/power-local-llm/opencode-review",
+    "date": "2026-11-02T12:48:55.783Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "OpenCode es un agente de codificación IA gratuito y open source por línea de comandos, conectado a 75+ proveedores de modelos, incluidos Ollama y LM Studio en local.",
+        "new": "Agente de programación con IA gratuito y open source (MIT) para terminal: 75+ proveedores, Ollama, LM Studio y llama.cpp en local, app beta, v1 vs v2."
+      },
+      {
+        "field": "sections",
+        "old": "no v1/v2, desktop-app or llama.cpp coverage; Zen priced as paid marketplace",
+        "new": "added versions + desktopApp sections, llama.cpp/Ollama items, 5 FAQs, OpenCode Console pricing"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (data-free or thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "opencode",
+      "instalar opencode",
+      "opencode 2 que es?",
+      "opencode zen base url",
+      "opencode es seguro?"
+    ],
+    "baseline": {
+      "position": 7.73,
+      "impressions": 1256,
+      "clicks": 3,
+      "ctr": 0.0023885350318471337,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b6b81eaa-77ad-4694-bc69-fe2dff921029",
+    "slug": "/pt/power-local-llm/opencode-review",
+    "date": "2026-11-02T12:48:55.814Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "OpenCode é um agente de codificação com IA gratuito e open source via linha de comando, conectado a 75+ provedores de modelos, incluindo Ollama e LM Studio locais.",
+        "new": "Agente de programação com IA gratuito e open source (MIT) para terminal: 75+ provedores, Ollama, LM Studio e llama.cpp locais, app beta, v1 vs v2."
+      },
+      {
+        "field": "sections",
+        "old": "no v1/v2, desktop-app or llama.cpp coverage; Zen priced as paid marketplace",
+        "new": "added versions + desktopApp sections, llama.cpp/Ollama items, 5 FAQs, OpenCode Console pricing"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (data-free or thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "agentes para opencode"
+    ],
+    "baseline": {
+      "position": 9.01,
+      "impressions": 177,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a25b6c7b-add2-47fd-872f-a36fff71fffb",
+    "slug": "/ja/power-local-llm/opencode-review",
+    "date": "2026-11-02T12:48:55.842Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "OpenCodeレビュー2026：ターミナルAIエージェント＋ローカルモデル",
+        "new": "OpenCodeレビュー2026：ターミナルAI＋ローカルモデル"
+      },
+      {
+        "field": "metaDescription",
+        "old": "OpenCodeは無料・オープンソースのターミナルAIコーディングエージェントで、Ollama・LM Studioを含む75以上のモデルプロバイダーに接続できます。仕組みを解説します。",
+        "new": "無料のオープンソース(MIT)ターミナルAIコーディングエージェント。75以上のプロバイダー、ローカルOllama・LM Studio・llama.cpp、ベータ版デスクトップアプリ、v1とv2の違い。"
+      },
+      {
+        "field": "sections",
+        "old": "no v1/v2, desktop-app or llama.cpp coverage; Zen priced as paid marketplace",
+        "new": "added versions + desktopApp sections, llama.cpp/Ollama items, 5 FAQs, OpenCode Console pricing"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (data-free or thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "opencode review",
+      "opencode",
+      "opencode ローカルモデル",
+      "opencode local ai"
+    ],
+    "baseline": {
+      "position": 9.55,
+      "impressions": 214,
+      "clicks": 6,
+      "ctr": 0.028037383177570093,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "55b2e96b-e15d-4bcf-9078-8624004d74c3",
+    "slug": "/zh/power-local-llm/opencode-review",
+    "date": "2026-11-02T12:48:55.869Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "OpenCode 是一款免费开源的终端 AI 编码代理，可连接 75 个以上的模型提供方，包括本地部署的 Ollama 和 LM Studio。以下是其具体工作方式。",
+        "new": "免费开源（MIT）的终端 AI 编码代理：75+ 提供方、本地 Ollama、LM Studio 与 llama.cpp、测试版桌面应用，以及 v1 与 v2 安装命令对比。"
+      },
+      {
+        "field": "sections",
+        "old": "no v1/v2, desktop-app or llama.cpp coverage; Zen priced as paid marketplace",
+        "new": "added versions + desktopApp sections, llama.cpp/Ollama items, 5 FAQs, OpenCode Console pricing"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (data-free or thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "opencode 评测",
+      "opencode review",
+      "opencode 官网"
+    ],
+    "baseline": {
+      "position": 9.28,
+      "impressions": 97,
+      "clicks": 4,
+      "ctr": 0.041237113402061855,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "da51fb33-a0bb-4ca3-8c80-d04afa6353e7",
+    "slug": "/ar/power-local-llm/opencode-review",
+    "date": "2026-11-02T12:48:55.896Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة OpenCode 2026: وكيل ذكاء اصطناعي للطرفية + نماذج محلية",
+        "new": "مراجعة OpenCode 2026: وكيل برمجة للطرفية + نماذج محلية"
+      },
+      {
+        "field": "metaDescription",
+        "old": "OpenCode وكيل برمجة بالذكاء الاصطناعي مجاني ومفتوح المصدر عبر الطرفية، يتصل بأكثر من 75 مزوّد نماذج، منها Ollama وLM Studio محليًا. إليك كيف يعمل.",
+        "new": "وكيل برمجة بالذكاء الاصطناعي مجاني ومفتوح المصدر (MIT) للطرفية: أكثر من 75 مزوّدًا، وOllama وLM Studio وllama.cpp محليًا، وتطبيق تجريبي، وv1 مقابل v2."
+      },
+      {
+        "field": "sections",
+        "old": "no v1/v2, desktop-app or llama.cpp coverage; Zen priced as paid marketplace",
+        "new": "added versions + desktopApp sections, llama.cpp/Ollama items, 5 FAQs, OpenCode Console pricing"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (data-free or thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "ما هو opencode",
+      "هل opencode مجاني"
+    ],
+    "baseline": {
+      "position": 7.86,
+      "impressions": 340,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "de16fe70-1520-40ca-ab1b-559b2f6423a7",
+    "slug": "/ko/power-local-llm/opencode-review",
+    "date": "2026-11-02T12:48:55.923Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "OpenCode는 무료 오픈소스 터미널 AI 코딩 에이전트로, Ollama·LM Studio를 포함한 75개 이상의 모델 제공업체에 연결됩니다. 작동 방식을 소개합니다.",
+        "new": "무료 오픈소스(MIT) 터미널 AI 코딩 에이전트: 75개 이상 제공업체, 로컬 Ollama·LM Studio·llama.cpp, 베타 데스크톱 앱, v1과 v2 설치 명령 비교."
+      },
+      {
+        "field": "sections",
+        "old": "no v1/v2, desktop-app or llama.cpp coverage; Zen priced as paid marketplace",
+        "new": "added versions + desktopApp sections, llama.cpp/Ollama items, 5 FAQs, OpenCode Console pricing"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (data-free or thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "opencode 후기",
+      "opencode zen 후기",
+      "opencode review",
+      "opencode go 후기",
+      "오픈코드 무료"
+    ],
+    "baseline": {
+      "position": 6.12,
+      "impressions": 475,
+      "clicks": 11,
+      "ctr": 0.023157894736842106,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "35eb0a37-7e87-46f5-b712-b214871bcfe8",
+    "slug": "/power-local-llm/odysseus-review",
+    "date": "2026-11-02T14:06:08.771Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Odysseus Review: Self-Hosted AI Workspace Guide",
+        "new": "Odysseus Review: Self-Hosted AI Workspace, Docker Setup"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Odysseus is a free, open-source, self-hosted AI workspace for chat, agents, research, and documents, started by Felix Kjellberg (PewDiePie). Install steps, features, and license for 2026.",
+        "new": "Free, open-source (AGPL-3.0) self-hosted AI workspace by PewDiePie: Docker install on port 7011, Apple Silicon setup, image tags, license and features."
+      },
+      {
+        "field": "sections",
+        "old": "port 7000, typed stars, no production/Apple Silicon coverage",
+        "new": "port 7011, directory star count, install code block, production + appleSilicon sections, 5 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh (review-top100 pilot rank 3): stale 87,156 stars/860 forks replaced by directory data, default port corrected 7000->7011 (compose file), install code block (top query is the exact git clone command), production section (branches, GHCR image tags, security flags), Apple Silicon/native section, 5 new FAQs, lead cut to 48 words, meta and title rewritten.",
+    "queries": [
+      "odysseus github",
+      "odysseus workspace",
+      "git clone https://github.com/odysseus-dev/odysseus.git && cd odysseus",
+      "odysseus dev",
+      "odysseus llm",
+      "odysseus-dev"
+    ],
+    "baseline": {
+      "position": 6.2,
+      "impressions": 7922,
+      "clicks": 24,
+      "ctr": 0.003029537995455693,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "3a308c79-e7e4-49bc-86a5-cce3bb6ffde7",
+    "slug": "/de/power-local-llm/odysseus-review",
+    "date": "2026-11-02T14:06:08.799Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Odysseus ist ein kostenloser, quelloffener, selbstgehosteter KI-Arbeitsbereich für Chat, Agenten, Recherche und Dokumente, gestartet von Felix Kjellberg (PewDiePie). Installation, Funktionen und Lizenz für 2026.",
+        "new": "Kostenloser, quelloffener (AGPL-3.0) KI-Arbeitsbereich zum Selbsthosten, gestartet von PewDiePie: Docker-Installation, Port 7011, Apple Silicon, Lizenz."
+      },
+      {
+        "field": "sections",
+        "old": "port 7000, typed stars, no production/Apple Silicon coverage",
+        "new": "port 7011, directory star count, install code block, production + appleSilicon sections, 5 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "odysseus dev",
+      "odysseus git"
+    ],
+    "baseline": {
+      "position": 8.22,
+      "impressions": 102,
+      "clicks": 1,
+      "ctr": 0.00980392156862745,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "1317f41b-3adb-4c4c-9847-488cae15aa58",
+    "slug": "/fr/power-local-llm/odysseus-review",
+    "date": "2026-11-02T14:06:08.826Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Odysseus est un espace de travail IA gratuit, open source et auto-hébergé pour le chat, les agents, la recherche et les documents, lancé par Felix Kjellberg (PewDiePie). Installation, fonctionnalités et licence pour 2026.",
+        "new": "Espace de travail IA gratuit et open source (AGPL-3.0) à auto-héberger, lancé par PewDiePie : installation Docker, port 7011, Apple Silicon, licence."
+      },
+      {
+        "field": "sections",
+        "old": "port 7000, typed stars, no production/Apple Silicon coverage",
+        "new": "port 7011, directory star count, install code block, production + appleSilicon sections, 5 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "odysseus ia",
+      "odysseus llm",
+      "odysseus-dev/odysseus",
+      "odysseus dev"
+    ],
+    "baseline": {
+      "position": 5.14,
+      "impressions": 84,
+      "clicks": 1,
+      "ctr": 0.011904761904761904,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "bb4563f5-4909-4b2b-b5cd-ab00c1bcdebb",
+    "slug": "/es/power-local-llm/odysseus-review",
+    "date": "2026-11-02T14:06:08.855Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Odysseus es un espacio de trabajo de IA gratuito, de código abierto y autoalojado para chat, agentes, investigación y documentos, iniciado por Felix Kjellberg (PewDiePie). Pasos de instalación, funciones y licencia para 2026.",
+        "new": "Espacio de trabajo de IA gratuito y open source (AGPL-3.0) autoalojado, creado por PewDiePie: instalación con Docker, puerto 7011, Apple Silicon, licencia."
+      },
+      {
+        "field": "sections",
+        "old": "port 7000, typed stars, no production/Apple Silicon coverage",
+        "new": "port 7011, directory star count, install code block, production + appleSilicon sections, 5 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "odysseus ia",
+      "odysseus-dev",
+      "odysseus",
+      "odysseus software"
+    ],
+    "baseline": {
+      "position": 6.15,
+      "impressions": 201,
+      "clicks": 1,
+      "ctr": 0.004975124378109453,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "507854ae-30e2-4ba5-a63a-73f96ab134b5",
+    "slug": "/pt/power-local-llm/odysseus-review",
+    "date": "2026-11-02T14:06:08.884Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Odysseus é um espaço de trabalho de IA gratuito, de código aberto e auto-hospedado para chat, agentes, pesquisa e documentos, iniciado por Felix Kjellberg (PewDiePie). Passos de instalação, recursos e licença para 2026.",
+        "new": "Espaço de trabalho de IA gratuito e open source (AGPL-3.0) auto-hospedado, criado por PewDiePie: instalação com Docker, porta 7011, Apple Silicon, licença."
+      },
+      {
+        "field": "sections",
+        "old": "port 7000, typed stars, no production/Apple Silicon coverage",
+        "new": "port 7011, directory star count, install code block, production + appleSilicon sections, 5 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "no query rows in window"
+    ],
+    "baseline": {
+      "position": 5.5,
+      "impressions": 6,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e89af407-9e7f-46f9-b06c-4f74c9c06c2d",
+    "slug": "/ja/power-local-llm/odysseus-review",
+    "date": "2026-11-02T14:06:08.916Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Odysseusは、Felix Kjellberg（PewDiePie）が始めた、チャット・エージェント・リサーチ・文書向けの無料オープンソースのセルフホスト型AIワークスペースです。2026年版のインストール手順、機能、ライセンス。",
+        "new": "無料のオープンソース(AGPL-3.0)でセルフホストできるAIワークスペース。PewDiePie発。Docker導入、ポート7011、Apple Silicon、ライセンスを解説。"
+      },
+      {
+        "field": "sections",
+        "old": "port 7000, typed stars, no production/Apple Silicon coverage",
+        "new": "port 7011, directory star count, install code block, production + appleSilicon sections, 5 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "odysseus",
+      "odysseus llm"
+    ],
+    "baseline": {
+      "position": 7.09,
+      "impressions": 11,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c7f1e7d1-1fe9-41c2-ba98-c15f34fdc182",
+    "slug": "/zh/power-local-llm/odysseus-review",
+    "date": "2026-11-02T14:06:08.946Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Odysseus评测：自托管AI工作空间",
+        "new": "Odysseus评测：自托管AI工作空间与Docker部署"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Odysseus是一款由Felix Kjellberg（PewDiePie）发起的免费开源自托管AI工作空间，面向聊天、代理、研究和文档。2026年安装步骤、功能与许可证一览。",
+        "new": "免费开源（AGPL-3.0）、可自托管的 AI 工作空间，由 PewDiePie 发起。含 Docker 安装、端口 7011、Apple Silicon 部署与许可证说明。"
+      },
+      {
+        "field": "sections",
+        "old": "port 7000, typed stars, no production/Apple Silicon coverage",
+        "new": "port 7011, directory star count, install code block, production + appleSilicon sections, 5 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "odysseus dev"
+    ],
+    "baseline": {
+      "position": 4.41,
+      "impressions": 22,
+      "clicks": 1,
+      "ctr": 0.045454545454545456,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "61af31b2-deae-47db-9b07-54c85c27f3f9",
+    "slug": "/ar/power-local-llm/odysseus-review",
+    "date": "2026-11-02T14:06:08.980Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Odysseus هي مساحة عمل ذكاء اصطناعي مجانية ومفتوحة المصدر وذاتية الاستضافة للدردشة والوكلاء والبحث والمستندات، بدأها فيليكس كيلبرغ (PewDiePie). خطوات التثبيت والميزات والرخصة لعام 2026.",
+        "new": "مساحة عمل ذكاء اصطناعي مجانية ومفتوحة المصدر (AGPL-3.0) ذاتية الاستضافة، بدأها PewDiePie: تثبيت Docker والمنفذ 7011 وApple Silicon والترخيص والميزات."
+      },
+      {
+        "field": "sections",
+        "old": "port 7000, typed stars, no production/Apple Silicon coverage",
+        "new": "port 7011, directory star count, install code block, production + appleSilicon sections, 5 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "no query rows in window"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "98800e55-9610-4ba4-88a0-ed6b01094d27",
+    "slug": "/ko/power-local-llm/odysseus-review",
+    "date": "2026-11-02T14:06:09.011Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Odysseus는 펠릭스 셸버그(PewDiePie)가 시작한, 채팅·에이전트·리서치·문서용 무료 오픈소스 셀프 호스팅 AI 워크스페이스입니다. 2026년 설치 단계, 기능, 라이선스를 정리했습니다.",
+        "new": "무료 오픈소스(AGPL-3.0) 자체 호스팅 AI 워크스페이스, PewDiePie가 시작. Docker 설치, 포트 7011, Apple Silicon 실행법, 라이선스를 정리했습니다."
+      },
+      {
+        "field": "sections",
+        "old": "port 7000, typed stars, no production/Apple Silicon coverage",
+        "new": "port 7011, directory star count, install code block, production + appleSilicon sections, 5 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same content update as EN (thin-data locale, queries not adapted literally), lead shortened, meta within locale budget.",
+    "queries": [
+      "odysseus",
+      "odysseus ai",
+      "오디세우스 ai"
+    ],
+    "baseline": {
+      "position": 8.61,
+      "impressions": 185,
+      "clicks": 3,
+      "ctr": 0.016216216216216217,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d40aef52-9d2d-4d12-849b-db588794d7ed",
+    "slug": "/power-local-llm/automatic1111-review",
+    "date": "2026-11-02T14:39:55.106Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "AUTOMATIC1111 review 2026: what Stable Diffusion WebUI actually is, verified maintenance status (last commit and release dates), AGPL-3.0 license, ControlNet extension, hardware needs, and how it compares with Forge, ComfyUI, and InvokeAI.",
+        "new": "AUTOMATIC1111 review: what Stable Diffusion WebUI is, its verified maintenance status, AGPL-3.0 license, ControlNet, hardware needs and alternatives."
+      },
+      {
+        "field": "sections",
+        "old": "Forge and ControlNet presented as maintained; no stale warning; stale open-issue/star counts",
+        "new": "stale warning in lead and TL;DR callout, maintenance table with Forge and ControlNet rows, verdict not softened, 2 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh (review-top100 pilot rank 4): upstream dead-project warning added (no update since 2026-03-02, last release v1.10.1 2025-02-09), Forge and ControlNet-extension status corrected from GitHub API (Forge last push 2025-07-31, sd-webui-controlnet 2024-08-12), typed star count and open-issue count updated, verdict not softened, 2 new FAQs, lead cut to 49 words, meta rewritten. GSC: top queries are navigational (automatic1111).",
+    "queries": [
+      "automatic1111",
+      "stable diffusion automatic1111",
+      "self-hosted stable diffusion (automatic1111, forge, comfyui)",
+      "stable diffusion webui (automatic1111)",
+      "what is automatic1111"
+    ],
+    "baseline": {
+      "position": 7.59,
+      "impressions": 5416,
+      "clicks": 17,
+      "ctr": 0.003138847858197932,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "faccfa3a-3f7e-4b96-b906-40ebc7a06ee2",
+    "slug": "/de/power-local-llm/automatic1111-review",
+    "date": "2026-11-02T14:39:55.135Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "AUTOMATIC1111-Rezension 2026: was Stable Diffusion WebUI tatsächlich ist, verifizierter Wartungsstatus (letzte Commits und Release-Daten), AGPL-3.0-Lizenz, ControlNet-Extension, Hardware-Bedarf und Vergleich mit Forge, ComfyUI und InvokeAI.",
+        "new": "AUTOMATIC1111-Review: Was Stable Diffusion WebUI ist, geprüfter Wartungsstatus, AGPL-3.0-Lizenz, ControlNet, Hardwarebedarf und Alternativen im Vergleich."
+      },
+      {
+        "field": "sections",
+        "old": "Forge and ControlNet presented as maintained; no stale warning; stale open-issue/star counts",
+        "new": "stale warning in lead and TL;DR callout, maintenance table with Forge and ControlNet rows, verdict not softened, 2 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (thin or navigational query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "no query rows in window"
+    ],
+    "baseline": {
+      "position": 5.99,
+      "impressions": 85,
+      "clicks": 1,
+      "ctr": 0.011764705882352941,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6e2e64d7-9818-4294-aecb-177d8b6d8ca3",
+    "slug": "/fr/power-local-llm/automatic1111-review",
+    "date": "2026-11-02T14:39:55.164Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Avis AUTOMATIC1111 2026 : ce qu'est réellement Stable Diffusion WebUI, état de maintenance vérifié (dates de commits et de versions), licence AGPL-3.0, extension ControlNet, besoins matériels et comparaison avec Forge, ComfyUI et InvokeAI.",
+        "new": "Avis AUTOMATIC1111 : ce qu'est Stable Diffusion WebUI, état de maintenance vérifié, licence AGPL-3.0, ControlNet, matériel requis et alternatives."
+      },
+      {
+        "field": "sections",
+        "old": "Forge and ControlNet presented as maintained; no stale warning; stale open-issue/star counts",
+        "new": "stale warning in lead and TL;DR callout, maintenance table with Forge and ControlNet rows, verdict not softened, 2 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (thin or navigational query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "automatic1111",
+      "automatic 1111",
+      "stable diffusion webui"
+    ],
+    "baseline": {
+      "position": 6.03,
+      "impressions": 516,
+      "clicks": 5,
+      "ctr": 0.009689922480620155,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8286a73e-dd73-4e16-9552-d96759d62206",
+    "slug": "/es/power-local-llm/automatic1111-review",
+    "date": "2026-11-02T14:39:55.192Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Reseña de AUTOMATIC1111 2026: qué es realmente Stable Diffusion WebUI, estado de mantenimiento verificado (fechas de commits y releases), licencia AGPL-3.0, extensión ControlNet, requisitos de hardware y comparación con Forge, ComfyUI e InvokeAI.",
+        "new": "Reseña de AUTOMATIC1111: qué es Stable Diffusion WebUI, estado de mantenimiento verificado, licencia AGPL-3.0, ControlNet, hardware y alternativas."
+      },
+      {
+        "field": "sections",
+        "old": "Forge and ControlNet presented as maintained; no stale warning; stale open-issue/star counts",
+        "new": "stale warning in lead and TL;DR callout, maintenance table with Forge and ControlNet rows, verdict not softened, 2 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (thin or navigational query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "automatic1111",
+      "automatic 1111",
+      "automatic1111 webui",
+      "a1111"
+    ],
+    "baseline": {
+      "position": 7.77,
+      "impressions": 854,
+      "clicks": 4,
+      "ctr": 0.00468384074941452,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d1ad13b3-3a5f-43a8-b2db-8c1cdae3d093",
+    "slug": "/pt/power-local-llm/automatic1111-review",
+    "date": "2026-11-02T14:39:55.220Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Análise do AUTOMATIC1111 2026: o que o Stable Diffusion WebUI realmente é, status de manutenção verificado (datas de commits e releases), licença AGPL-3.0, extensão ControlNet, requisitos de hardware e comparação com Forge, ComfyUI e InvokeAI.",
+        "new": "Análise do AUTOMATIC1111: o que é o Stable Diffusion WebUI, status de manutenção verificado, licença AGPL-3.0, ControlNet, hardware e alternativas."
+      },
+      {
+        "field": "sections",
+        "old": "Forge and ControlNet presented as maintained; no stale warning; stale open-issue/star counts",
+        "new": "stale warning in lead and TL;DR callout, maintenance table with Forge and ControlNet rows, verdict not softened, 2 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (thin or navigational query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "automatic1111",
+      "automatic1111 webui",
+      "automatic 1111",
+      "a1111"
+    ],
+    "baseline": {
+      "position": 6.2,
+      "impressions": 444,
+      "clicks": 1,
+      "ctr": 0.0022522522522522522,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6c3fcd1a-0736-4654-8c04-049dbe3fc889",
+    "slug": "/ja/power-local-llm/automatic1111-review",
+    "date": "2026-11-02T14:39:55.248Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "AUTOMATIC1111レビュー: Stable Diffusion WebUIガイド",
+        "new": "AUTOMATIC1111レビュー:導入と保守状況"
+      },
+      {
+        "field": "metaDescription",
+        "old": "AUTOMATIC1111レビュー2026: Stable Diffusion WebUIとは実際に何か、検証済みのメンテナンス状況（最終コミット・リリース日）、AGPL-3.0ライセンス、ControlNet拡張機能、ハードウェア要件、Forge・ComfyUI・InvokeAIとの比較。",
+        "new": "AUTOMATIC1111とは何か、保守状況の検証結果、AGPL-3.0ライセンス、ControlNet、必要なハードウェア、代替ツールとの比較を解説するレビューです。"
+      },
+      {
+        "field": "sections",
+        "old": "Forge and ControlNet presented as maintained; no stale warning; stale open-issue/star counts",
+        "new": "stale warning in lead and TL;DR callout, maintenance table with Forge and ControlNet rows, verdict not softened, 2 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (thin or navigational query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "automatic1111",
+      "automatic1111 stable diffusion webui",
+      "automatic1111とは"
+    ],
+    "baseline": {
+      "position": 8.56,
+      "impressions": 1073,
+      "clicks": 6,
+      "ctr": 0.005591798695246971,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "51d3a001-6a4a-4e8a-a25d-b3d78b8cb8f9",
+    "slug": "/zh/power-local-llm/automatic1111-review",
+    "date": "2026-11-02T14:39:55.275Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "AUTOMATIC1111评测：Stable Diffusion WebUI指南",
+        "new": "AUTOMATIC1111评测：安装、维护状态与替代品"
+      },
+      {
+        "field": "metaDescription",
+        "old": "AUTOMATIC1111评测2026：Stable Diffusion WebUI究竟是什么、经过核实的维护状态（最后提交与发布日期）、AGPL-3.0许可、ControlNet扩展、硬件需求，以及与Forge、ComfyUI、InvokeAI的对比。",
+        "new": "AUTOMATIC1111评测：Stable Diffusion WebUI 是什么、经核实的维护状态、AGPL-3.0 许可证、ControlNet、硬件需求以及可选替代品对比。"
+      },
+      {
+        "field": "sections",
+        "old": "Forge and ControlNet presented as maintained; no stale warning; stale open-issue/star counts",
+        "new": "stale warning in lead and TL;DR callout, maintenance table with Forge and ControlNet rows, verdict not softened, 2 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (thin or navigational query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "automatic1111"
+    ],
+    "baseline": {
+      "position": 5.17,
+      "impressions": 41,
+      "clicks": 2,
+      "ctr": 0.04878048780487805,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "00ca6311-c413-498b-8cdb-b9e3ded32f16",
+    "slug": "/ar/power-local-llm/automatic1111-review",
+    "date": "2026-11-02T14:39:55.303Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة AUTOMATIC1111 2026: ما هو Stable Diffusion WebUI فعليًا، وحالة الصيانة الموثقة (تواريخ آخر تحديثات وإصدارات)، وترخيص AGPL-3.0، وإضافة ControlNet، ومتطلبات العتاد، ومقارنته مع Forge وComfyUI وInvokeAI.",
+        "new": "مراجعة AUTOMATIC1111: ما هي واجهة Stable Diffusion WebUI، وحالة صيانتها الموثّقة، وترخيص AGPL-3.0، وControlNet، ومتطلبات العتاد، ومقارنتها بالبدائل."
+      },
+      {
+        "field": "sections",
+        "old": "Forge and ControlNet presented as maintained; no stale warning; stale open-issue/star counts",
+        "new": "stale warning in lead and TL;DR callout, maintenance table with Forge and ControlNet rows, verdict not softened, 2 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (thin or navigational query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "no query rows in window"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "65b4ceb1-772a-444d-829b-c3dfc34e1668",
+    "slug": "/ko/power-local-llm/automatic1111-review",
+    "date": "2026-11-02T14:39:55.330Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "AUTOMATIC1111 리뷰: Stable Diffusion WebUI 가이드",
+        "new": "AUTOMATIC1111 리뷰: 설치, 유지보수 상태, 대안"
+      },
+      {
+        "field": "metaDescription",
+        "old": "AUTOMATIC1111 리뷰 2026: Stable Diffusion WebUI가 실제로 무엇인지, 검증된 유지보수 상태(마지막 커밋·릴리스 날짜), AGPL-3.0 라이선스, ControlNet 확장 기능, 하드웨어 요구 사항, Forge·ComfyUI·InvokeAI와의 비교.",
+        "new": "AUTOMATIC1111이 무엇인지, 확인된 유지보수 상태, AGPL-3.0 라이선스, ControlNet, 필요한 하드웨어, 대안과의 비교를 정리한 리뷰입니다."
+      },
+      {
+        "field": "sections",
+        "old": "Forge and ControlNet presented as maintained; no stale warning; stale open-issue/star counts",
+        "new": "stale warning in lead and TL;DR callout, maintenance table with Forge and ControlNet rows, verdict not softened, 2 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (thin or navigational query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "automatic1111",
+      "stable diffusion webui",
+      "automatic1111 webui"
+    ],
+    "baseline": {
+      "position": 5.47,
+      "impressions": 426,
+      "clicks": 11,
+      "ctr": 0.025821596244131457,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "3fbc31fb-3fdd-4e12-adb5-e7a69f753797",
+    "slug": "/power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-02T14:52:43.348Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Stable Diffusion WebUI Forge Review",
+        "new": "Stable Diffusion WebUI Forge Review: Status and Setup"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Stable Diffusion WebUI Forge is a free, open-source AUTOMATIC1111 fork by ControlNet creator lllyasviel, built for faster, lower-VRAM local image generation.",
+        "new": "Stable Diffusion WebUI Forge review: the AUTOMATIC1111 fork by ControlNet creator lllyasviel, verified maintenance status, Flux, install, license."
+      },
+      {
+        "field": "sections",
+        "old": "no stale warning; soft \"slowed\" maintenance wording; no alternatives FAQ",
+        "new": "stale warning in lead and TL;DR callout, explicit maintenance statements in history/comparison/FAQ, new alternatives FAQ"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh (review-top100 pilot rank 5): dead-project warning added (no update since 2025-07-31, main last commit 2025-06-26, latest release 2024-02-05), maintenance statements made explicit and cross-checked with AUTOMATIC1111 (no update since 2026-03-02), alternatives pointer FAQ, typed star count replaced by directory data, lead cut to 48 words, meta and titles within budget. GSC: top queries are navigational (stable diffusion webui forge, webui forge).",
+    "queries": [
+      "stable diffusion webui forge",
+      "webui forge",
+      "stable diffusion forge",
+      "forge webui",
+      "lllyasviel/stable-diffusion-webui-forge",
+      "stable-diffusion-webui-forge"
+    ],
+    "baseline": {
+      "position": 5.48,
+      "impressions": 6749,
+      "clicks": 42,
+      "ctr": 0.0062231441695065936,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "927e3f0f-4c9e-4411-a110-09084549acb2",
+    "slug": "/de/power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-02T14:52:43.379Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Stable Diffusion WebUI Forge Review",
+        "new": "Stable Diffusion WebUI Forge Review: Status und Setup"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Stable Diffusion WebUI Forge ist ein kostenloser, quelloffener AUTOMATIC1111-Fork von ControlNet-Erfinder lllyasviel für schnellere, VRAM-sparende lokale Bildgenerierung.",
+        "new": "Forge-Review: der AUTOMATIC1111-Fork von ControlNet-Entwickler lllyasviel, geprüfter Wartungsstatus, Flux-Unterstützung, Setup, Lizenz und Alternativen."
+      },
+      {
+        "field": "sections",
+        "old": "no stale warning; soft \"slowed\" maintenance wording; no alternatives FAQ",
+        "new": "stale warning in lead and TL;DR callout, explicit maintenance statements in history/comparison/FAQ, new alternatives FAQ"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "webui forge",
+      "lllyasviel/stable-diffusion-webui-forge",
+      "automatic1111 / forge",
+      "automatic1111 forge"
+    ],
+    "baseline": {
+      "position": 5.3,
+      "impressions": 630,
+      "clicks": 6,
+      "ctr": 0.009523809523809525,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "085275a5-7c06-43da-8b52-b8ba64bc9478",
+    "slug": "/fr/power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-02T14:52:43.407Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Stable Diffusion WebUI Forge Avis",
+        "new": "Stable Diffusion WebUI Forge Avis : état et installation"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Stable Diffusion WebUI Forge est un fork AUTOMATIC1111 gratuit et open source créé par lllyasviel, créateur de ControlNet, pour une génération d'images locale plus rapide et moins gourmande en VRAM.",
+        "new": "Avis Forge : le fork d'AUTOMATIC1111 de lllyasviel (créateur de ControlNet), état de maintenance vérifié, Flux, installation, licence et alternatives."
+      },
+      {
+        "field": "sections",
+        "old": "no stale warning; soft \"slowed\" maintenance wording; no alternatives FAQ",
+        "new": "stale warning in lead and TL;DR callout, explicit maintenance statements in history/comparison/FAQ, new alternatives FAQ"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "lllyasviel/stable-diffusion-webui-forge",
+      "stable diffusion webui forge",
+      "webui forge",
+      "forge webui"
+    ],
+    "baseline": {
+      "position": 5.66,
+      "impressions": 158,
+      "clicks": 1,
+      "ctr": 0.006329113924050633,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6050368e-f9c8-45d2-803e-dc3f05583c86",
+    "slug": "/es/power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-02T14:52:43.435Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Stable Diffusion WebUI Forge: análisis",
+        "new": "Stable Diffusion WebUI Forge: análisis y estado actual"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Stable Diffusion WebUI Forge es un fork gratuito y de código abierto de AUTOMATIC1111 creado por lllyasviel, autor de ControlNet, para una generación de imágenes local más rápida y con menos VRAM.",
+        "new": "Análisis de Forge: el fork de AUTOMATIC1111 de lllyasviel (creador de ControlNet), estado de mantenimiento verificado, Flux, instalación y licencia."
+      },
+      {
+        "field": "sections",
+        "old": "no stale warning; soft \"slowed\" maintenance wording; no alternatives FAQ",
+        "new": "stale warning in lead and TL;DR callout, explicit maintenance statements in history/comparison/FAQ, new alternatives FAQ"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "stable diffusion webui forge",
+      "stable diffusion forge",
+      "webui forge",
+      "forge webui"
+    ],
+    "baseline": {
+      "position": 5.41,
+      "impressions": 804,
+      "clicks": 3,
+      "ctr": 0.0037313432835820895,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "13fcbfb1-294b-43c9-91e3-01ece94fc0e4",
+    "slug": "/pt/power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-02T14:52:43.463Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Stable Diffusion WebUI Forge: análise",
+        "new": "Stable Diffusion WebUI Forge: análise e status atual"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Stable Diffusion WebUI Forge é um fork gratuito e de código aberto do AUTOMATIC1111 criado por lllyasviel, autor do ControlNet, para geração de imagens local mais rápida e com menos VRAM.",
+        "new": "Análise do Forge: o fork do AUTOMATIC1111 criado por lllyasviel (autor do ControlNet), status de manutenção verificado, Flux, instalação e licença."
+      },
+      {
+        "field": "sections",
+        "old": "no stale warning; soft \"slowed\" maintenance wording; no alternatives FAQ",
+        "new": "stale warning in lead and TL;DR callout, explicit maintenance statements in history/comparison/FAQ, new alternatives FAQ"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "stable diffusion webui forge",
+      "webui forge",
+      "forge webui",
+      "stable diffusion forge"
+    ],
+    "baseline": {
+      "position": 8.63,
+      "impressions": 230,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e1f3bce7-6aa0-45ee-b53c-15c2f055e0e5",
+    "slug": "/ja/power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-02T14:52:43.492Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Stable Diffusion WebUI Forgeは、ControlNetの作者lllyasviel氏による無料・オープンソースのAUTOMATIC1111フォークで、高速かつ低VRAMなローカル画像生成を実現します。",
+        "new": "Forgeのレビュー。ControlNet作者lllyasvielによるAUTOMATIC1111フォークの保守状況、Flux対応、導入方法、ライセンスを解説します。"
+      },
+      {
+        "field": "sections",
+        "old": "no stale warning; soft \"slowed\" maintenance wording; no alternatives FAQ",
+        "new": "stale warning in lead and TL;DR callout, explicit maintenance statements in history/comparison/FAQ, new alternatives FAQ"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "stable diffusion webui forge",
+      "webui forge",
+      "sd-forge"
+    ],
+    "baseline": {
+      "position": 6.43,
+      "impressions": 125,
+      "clicks": 3,
+      "ctr": 0.024,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "87505f5f-622e-4d5d-8fe6-ead3d71509b7",
+    "slug": "/zh/power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-02T14:52:43.521Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Stable Diffusion WebUI Forge是ControlNet作者lllyasviel开发的免费开源AUTOMATIC1111分支，专为更快、更省显存的本地图像生成而打造。",
+        "new": "Stable Diffusion WebUI Forge评测：ControlNet作者lllyasviel的AUTOMATIC1111分支，经核实的维护状态、Flux支持、安装方式与许可证。"
+      },
+      {
+        "field": "sections",
+        "old": "no stale warning; soft \"slowed\" maintenance wording; no alternatives FAQ",
+        "new": "stale warning in lead and TL;DR callout, explicit maintenance statements in history/comparison/FAQ, new alternatives FAQ"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "webui forge",
+      "forge webui"
+    ],
+    "baseline": {
+      "position": 5.53,
+      "impressions": 81,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b9d9f9a6-b914-49e1-8cfb-93131714aea0",
+    "slug": "/ar/power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-02T14:52:43.550Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Stable Diffusion WebUI Forge",
+        "new": "مراجعة Stable Diffusion WebUI Forge: الحالة والتثبيت"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Stable Diffusion WebUI Forge هو نسخة مشتقة مجانية ومفتوحة المصدر من AUTOMATIC1111 طوّرها lllyasviel مبتكر ControlNet، لتوليد صور محلي أسرع وأقل استهلاكًا لذاكرة الفيديو.",
+        "new": "مراجعة Forge: نسخة AUTOMATIC1111 المتفرعة من lllyasviel مبتكر ControlNet، وحالة صيانتها الموثّقة، ودعم Flux، والتثبيت، والترخيص."
+      },
+      {
+        "field": "sections",
+        "old": "no stale warning; soft \"slowed\" maintenance wording; no alternatives FAQ",
+        "new": "stale warning in lead and TL;DR callout, explicit maintenance statements in history/comparison/FAQ, new alternatives FAQ"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "stable diffusion forge",
+      "forge webui"
+    ],
+    "baseline": {
+      "position": 14.07,
+      "impressions": 41,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7e12c26f-3cea-4519-b98d-71728d048d88",
+    "slug": "/ko/power-local-llm/stable-diffusion-forge-review",
+    "date": "2026-11-02T14:52:43.579Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Stable Diffusion WebUI Forge는 ControlNet 제작자 lllyasviel이 만든 무료 오픈소스 AUTOMATIC1111 포크로, 더 빠르고 VRAM을 절약하는 로컬 이미지 생성을 위해 설계되었습니다.",
+        "new": "Forge 리뷰. ControlNet 제작자 lllyasviel의 AUTOMATIC1111 포크로, 확인된 유지보수 상태와 Flux 지원, 설치법, 라이선스를 다룹니다."
+      },
+      {
+        "field": "sections",
+        "old": "no stale warning; soft \"slowed\" maintenance wording; no alternatives FAQ",
+        "new": "stale warning in lead and TL;DR callout, explicit maintenance statements in history/comparison/FAQ, new alternatives FAQ"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "stable diffusion webui forge",
+      "webui forge",
+      "lllyasviel/stable-diffusion-webui-forge",
+      "sd webui forge"
+    ],
+    "baseline": {
+      "position": 5.45,
+      "impressions": 475,
+      "clicks": 7,
+      "ctr": 0.014736842105263158,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d9e1e3ff-72f4-4a54-85df-f065c317391e",
+    "slug": "/power-local-llm/langchain-review",
+    "date": "2026-11-02T15:19:07.883Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "LangChain is a free, MIT-licensed framework for LLM apps, RAG, and agents from VC-backed LangChain Inc. Verified pricing, code examples, and company history.",
+        "new": "LangChain is a free, MIT-licensed framework for LLM apps, RAG and agents from LangChain Inc. Verified LangSmith pricing, code examples and funding rounds."
+      },
+      {
+        "field": "sections",
+        "old": "unverified funding total/valuation, LCU/LSU and LangGraph Platform pricing, LANGCHAIN_TRACING_V2",
+        "new": "funding from primary posts, LSU $1.00 and LangSmith Deployment, LANGSMITH_TRACING, version FAQ, 3 sources"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead over 50 words in most locales (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh (review-top100 wave 1, rank 6): unverified \"$260M raised\", \"$200M Series A valuation\" and \"incorporated January 2023\" removed; funding rebuilt from LangChain primary announcements (seed 2023-04-04, Series A 2024-02-15, Series B 2025-10-20); LangSmith overage now LSU $1.00 and LangSmith Deployment per pricing page; tracing env vars LANGSMITH_TRACING/LANGSMITH_API_KEY; unverified \"700+ integrations\" softened; typed stars replaced by directory data; lead cut to 39 words; 2 titles/9 metas within budget. GSC: top queries navigational (langchain, is langchain free, langchain pricing).",
+    "queries": [
+      "langchain",
+      "is langchain free",
+      "langchain pricing",
+      "vagrant vs langchain",
+      "cypress vs langchain",
+      "langchain vs vault"
+    ],
+    "baseline": {
+      "position": 8.97,
+      "impressions": 4699,
+      "clicks": 5,
+      "ctr": 0.0010640561821664183,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "fff2220d-dde3-4c8f-8524-a1d51f1001d8",
+    "slug": "/de/power-local-llm/langchain-review",
+    "date": "2026-11-02T15:19:07.916Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LangChain: Funktionen, Preise & MIT-Lizenz",
+        "new": "LangChain Review: Funktionen, Preise & MIT-Lizenz"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LangChain ist ein kostenloses, MIT-lizenziertes Framework für LLM-Apps, RAG und Agenten von LangChain Inc. Geprüfte Preise, Code-Beispiele und Firmengeschichte.",
+        "new": "LangChain: kostenloses, MIT-lizenziertes Framework für LLM-Apps, RAG und Agenten von LangChain Inc. Geprüfte LangSmith-Preise, Codebeispiele, Finanzierung."
+      },
+      {
+        "field": "sections",
+        "old": "unverified funding total/valuation, LCU/LSU and LangGraph Platform pricing, LANGCHAIN_TRACING_V2",
+        "new": "funding from primary posts, LSU $1.00 and LangSmith Deployment, LANGSMITH_TRACING, version FAQ, 3 sources"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead over 50 words in most locales (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), lead shortened, meta and title within locale budget.",
+    "queries": [
+      "langgraph",
+      "was ist langchain"
+    ],
+    "baseline": {
+      "position": 6.86,
+      "impressions": 29,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "2ab40eab-fa3a-4be9-bd2d-3d1ba7bd6e27",
+    "slug": "/fr/power-local-llm/langchain-review",
+    "date": "2026-11-02T15:19:07.944Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LangChain: fonctionnalités et tarifs (guide)",
+        "new": "Avis LangChain : fonctionnalités, tarifs et alternatives"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LangChain est un framework gratuit sous licence MIT pour applications LLM, RAG et agents, édité par LangChain Inc. Tarifs vérifiés, exemples de code et historique de l'entreprise.",
+        "new": "LangChain : framework gratuit sous licence MIT pour apps LLM, RAG et agents, par LangChain Inc. Tarifs LangSmith vérifiés, exemples de code, financement."
+      },
+      {
+        "field": "sections",
+        "old": "unverified funding total/valuation, LCU/LSU and LangGraph Platform pricing, LANGCHAIN_TRACING_V2",
+        "new": "funding from primary posts, LSU $1.00 and LangSmith Deployment, LANGSMITH_TRACING, version FAQ, 3 sources"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead over 50 words in most locales (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), lead shortened, meta and title within locale budget.",
+    "queries": [
+      "langchain",
+      "agence développeurs langchain"
+    ],
+    "baseline": {
+      "position": 16.42,
+      "impressions": 43,
+      "clicks": 1,
+      "ctr": 0.023255813953488372,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "38146a2e-d8ce-4049-bf60-64c976745a9a",
+    "slug": "/es/power-local-llm/langchain-review",
+    "date": "2026-11-02T15:19:07.971Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LangChain: reseña de funciones y precios",
+        "new": "LangChain: reseña de funciones, precios y alternativas"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LangChain es un framework gratuito con licencia MIT para apps LLM, RAG y agentes, de LangChain Inc. Precios verificados, ejemplos de código e historia de la empresa.",
+        "new": "LangChain: framework gratuito con licencia MIT para apps LLM, RAG y agentes, de LangChain Inc. Precios de LangSmith verificados, código y financiación."
+      },
+      {
+        "field": "sections",
+        "old": "unverified funding total/valuation, LCU/LSU and LangGraph Platform pricing, LANGCHAIN_TRACING_V2",
+        "new": "funding from primary posts, LSU $1.00 and LangSmith Deployment, LANGSMITH_TRACING, version FAQ, 3 sources"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead over 50 words in most locales (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), lead shortened, meta and title within locale budget.",
+    "queries": [
+      "langchain",
+      "langchain que es",
+      "qué es langchain",
+      "langsmith"
+    ],
+    "baseline": {
+      "position": 12.57,
+      "impressions": 203,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b9a8a50d-76c6-4751-a5a9-c64d9c301984",
+    "slug": "/pt/power-local-llm/langchain-review",
+    "date": "2026-11-02T15:19:07.999Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LangChain: análise de recursos e preços",
+        "new": "LangChain: análise de recursos, preços e alternativas"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LangChain é um framework gratuito e MIT para apps LLM, RAG e agentes, da LangChain Inc. Preços verificados, exemplos de código e histórico da empresa.",
+        "new": "LangChain: framework gratuito com licença MIT para apps LLM, RAG e agentes, da LangChain Inc. Preços do LangSmith verificados, código e financiamento."
+      },
+      {
+        "field": "sections",
+        "old": "unverified funding total/valuation, LCU/LSU and LangGraph Platform pricing, LANGCHAIN_TRACING_V2",
+        "new": "funding from primary posts, LSU $1.00 and LangSmith Deployment, LANGSMITH_TRACING, version FAQ, 3 sources"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead over 50 words in most locales (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), lead shortened, meta and title within locale budget.",
+    "queries": [
+      "langchain",
+      "langchain o que é",
+      "o que é langchain"
+    ],
+    "baseline": {
+      "position": 8.52,
+      "impressions": 46,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6995b51a-1d77-4afe-8ece-3fd99cc04282",
+    "slug": "/ja/power-local-llm/langchain-review",
+    "date": "2026-11-02T15:19:08.026Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "LangChainはLLMアプリ・RAG・エージェント向けの無料・MITライセンスフレームワーク（開発元はLangChain Inc.）。検証済みの料金、コード例、企業沿革を掲載。",
+        "new": "無料でMITライセンスのLLMアプリ・RAG・エージェント向けフレームワークLangChainを解説。LangSmithの料金、コード例、資金調達ラウンドを確認済みの情報で紹介します。"
+      },
+      {
+        "field": "sections",
+        "old": "unverified funding total/valuation, LCU/LSU and LangGraph Platform pricing, LANGCHAIN_TRACING_V2",
+        "new": "funding from primary posts, LSU $1.00 and LangSmith Deployment, LANGSMITH_TRACING, version FAQ, 3 sources"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead over 50 words in most locales (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), lead shortened, meta and title within locale budget.",
+    "queries": [
+      "langchain",
+      "langchain とは",
+      "langchain 料金",
+      "langchain ai"
+    ],
+    "baseline": {
+      "position": 14.87,
+      "impressions": 289,
+      "clicks": 3,
+      "ctr": 0.010380622837370242,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a2edc802-6209-4766-a2a2-de2fd19a16df",
+    "slug": "/zh/power-local-llm/langchain-review",
+    "date": "2026-11-02T15:19:08.053Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LangChain 评测：功能、定价与替代方案",
+        "new": "LangChain评测：功能、定价、替代方案与开源许可"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LangChain 是面向 LLM 应用、RAG 与智能体的免费 MIT 许可开源框架，由风投支持的 LangChain Inc. 开发。内含已核实的定价、代码示例与公司历史。",
+        "new": "LangChain 是免费、MIT 许可的 LLM 应用、RAG 与智能体框架，由 LangChain Inc. 开发。已核实 LangSmith 定价、代码示例和融资轮次。"
+      },
+      {
+        "field": "sections",
+        "old": "unverified funding total/valuation, LCU/LSU and LangGraph Platform pricing, LANGCHAIN_TRACING_V2",
+        "new": "funding from primary posts, LSU $1.00 and LangSmith Deployment, LANGSMITH_TRACING, version FAQ, 3 sources"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead over 50 words in most locales (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), lead shortened, meta and title within locale budget.",
+    "queries": [
+      "langchain"
+    ],
+    "baseline": {
+      "position": 9.58,
+      "impressions": 65,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6abf4774-ab7f-49b5-9a7b-af4fee2cfb7c",
+    "slug": "/ar/power-local-llm/langchain-review",
+    "date": "2026-11-02T15:19:08.080Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة LangChain: المزايا والأسعار",
+        "new": "مراجعة LangChain: المزايا والأسعار والبدائل"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LangChain إطار مجاني برخصة MIT لتطبيقات LLM وRAG والوكلاء، من تطوير LangChain Inc. أسعار موثّقة، أمثلة برمجية، وتاريخ الشركة.",
+        "new": "LangChain إطار مجاني بترخيص MIT لتطبيقات النماذج اللغوية وRAG والوكلاء من LangChain Inc. أسعار LangSmith الموثّقة وأمثلة الشيفرة وجولات التمويل."
+      },
+      {
+        "field": "sections",
+        "old": "unverified funding total/valuation, LCU/LSU and LangGraph Platform pricing, LANGCHAIN_TRACING_V2",
+        "new": "funding from primary posts, LSU $1.00 and LangSmith Deployment, LANGSMITH_TRACING, version FAQ, 3 sources"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead over 50 words in most locales (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), lead shortened, meta and title within locale budget.",
+    "queries": [
+      "no query rows in window"
+    ],
+    "baseline": {
+      "position": 8,
+      "impressions": 9,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "2b1cfa33-19c8-4a75-8d2c-b9310acd30ce",
+    "slug": "/ko/power-local-llm/langchain-review",
+    "date": "2026-11-02T15:19:08.107Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LangChain 리뷰: 기능과 가격 총정리",
+        "new": "LangChain 리뷰: 기능, 가격, 대안, 오픈소스 라이선스"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LangChain은 LLM 앱, RAG, 에이전트를 위한 무료 MIT 라이선스 프레임워크로, LangChain Inc.가 개발합니다. 검증된 가격, 코드 예제, 기업 연혁을 다룹니다.",
+        "new": "LangChain은 LLM 앱, RAG, 에이전트를 위한 무료 MIT 라이선스 프레임워크입니다. LangChain Inc.의 확인된 LangSmith 가격, 코드 예시, 투자 라운드를 정리했습니다."
+      },
+      {
+        "field": "sections",
+        "old": "unverified funding total/valuation, LCU/LSU and LangGraph Platform pricing, LANGCHAIN_TRACING_V2",
+        "new": "funding from primary posts, LSU $1.00 and LangSmith Deployment, LANGSMITH_TRACING, version FAQ, 3 sources"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead over 50 words in most locales (Rule 31 fail)",
+        "new": "short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (navigational or thin query data, not adapted literally), lead shortened, meta and title within locale budget.",
+    "queries": [
+      "langchain",
+      "langchain 2026",
+      "langchain gui",
+      "langchain inc"
+    ],
+    "baseline": {
+      "position": 10.69,
+      "impressions": 109,
+      "clicks": 1,
+      "ctr": 0.009174311926605505,
       "period": "28d to 2026-11-01"
     },
     "deployedAt": null
