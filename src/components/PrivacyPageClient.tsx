@@ -112,6 +112,8 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
             <P>{t.privacyAltLookupNote}</P>
             <H3>{t.privacyMcpTitle}</H3>
             <P>{t.privacyMcpNote}</P>
+            <H3>{t.privacyAskHansTitle}</H3>
+            <P>{t.privacyAskHansNote}</P>
             <P>{t.privacyHostingNote}</P>
             <P>{t.privacyConsentLogNote}</P>
             <P>{t.privacyS2Closure}</P>
@@ -181,6 +183,12 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
                     <Td>{t.privacyS4Row7Role}</Td>
                     <Td>{t.privacyS4Row7Data}</Td>
                     <Td>{t.privacyS4Row7Loc}</Td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <Td><strong>{t.privacyS4Row8Proc}</strong></Td>
+                    <Td>{t.privacyS4Row8Role}</Td>
+                    <Td>{t.privacyS4Row8Data}</Td>
+                    <Td>{t.privacyS4Row8Loc}</Td>
                   </tr>
                 </tbody>
               </table>
