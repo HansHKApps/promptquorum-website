@@ -49,12 +49,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
       { label: 'Comparison Table', anchor: '#comparison-table' },
+      { label: 'LM Studio vs GPT4All vs Jan Head to Head', anchor: '#head-to-head' },
       { label: 'Which One Should You Pick?', anchor: '#which-one' },
       { label: 'Model Library Depth', anchor: '#model-library' },
       { label: 'Privacy & Telemetry', anchor: '#privacy-telemetry' },
       { label: 'Cross-Platform Support', anchor: '#cross-platform' },
       { label: 'Verdict by Use Case', anchor: '#verdict' },
+      { label: 'Where Ollama and AnythingLLM Fit', anchor: '#ollama-anythingllm' },
+      { label: 'Regional Notes: Privacy Reviews', anchor: '#regional-context' },
       { label: 'FAQ', anchor: '#faq' },
+      { label: 'Sources', anchor: '#sources' },
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
@@ -82,6 +86,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Criterion': 'Min RAM (4B model)', 'LM Studio': '6 GB', 'Jan': '6 GB', 'GPT4All': '4 GB' },
         ],
         columns: ['Criterion', '[LM Studio](https://lmstudio.ai)', '[Jan](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
+      },
+      headToHead: {
+        id: 'head-to-head',
+        title: 'LM Studio vs GPT4All vs Jan: Who Wins Head to Head?',
+        content: '**LM Studio beats GPT4All on model access and update pace; GPT4All keeps the lightest requirements and an MIT licence. Jan beats both on openness and privacy defaults.**',
+        items: [
+          '**LM Studio vs GPT4All** — LM Studio shows Hugging Face models in its built-in browser and its changelog lists builds 0.4.26 to 0.4.28 in October 2026. GPT4All runs with 4 GB RAM and is MIT-licensed, but its latest release is v3.10.0 from 25 February 2025. Choose LM Studio unless the MIT licence or the 4 GB RAM floor decides it.',
+          '**LM Studio vs Jan** — LM Studio has the larger in-app model browser; it is closed source, although its privacy policy states there is no telemetry. Jan is Apache 2.0, has no telemetry by default and published v0.8.6, v0.8.7 and v0.8.8 between 9 and 28 October 2026. Choose Jan when open source matters more than the larger model browser.',
+          '**Jan vs GPT4All** — Both are open source (Apache 2.0 and MIT). Jan is actively maintained and can also connect to cloud providers and MCP servers; GPT4All has the lighter hardware requirements and a built-in LocalDocs feature. Choose Jan for a maintained app, and GPT4All only when its 4 GB RAM floor or MIT licence is a hard requirement.',
+        ],
       },
       whichOne: {
         id: 'which-one',
@@ -156,6 +170,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'You can install all three side-by-side; they share GGUF model files, so the disk cost of trying multiple apps is small.',
         ],
       },
+      ollamaAnythingllm: {
+        id: 'ollama-anythingllm',
+        title: 'Where Do Ollama and AnythingLLM Fit Next to These Three?',
+        content: '**Ollama and AnythingLLM solve different problems than these three desktop apps.** Ollama is a runtime you drive from the command line or an API; AnythingLLM is a document-chat interface that connects to a local model server.',
+        items: [
+          '**Ollama** — pick it when you want a background model server for scripts and other tools. See [Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) for the runtime-versus-desktop-app trade-off.',
+          '**AnythingLLM** — pick it when document chat is the main job and you want workspaces and more control than a chat app offers. See [AnythingLLM vs PrivateGPT vs Open WebUI](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) and [Local AI apps with built-in RAG](/power-local-llm/local-ai-app-with-built-in-rag).',
+          '**Individual reviews** — [LM Studio review](/power-local-llm/lm-studio-review), [Jan review](/power-local-llm/jan-review) and [GPT4All review](/power-local-llm/gpt4all-review) cover each app in more depth.',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'Regional Notes: Privacy Reviews in the EU, Japan and China',
+        content: '**Running any of these apps locally keeps prompts on your own device, which simplifies a privacy review but does not make a deployment compliant by itself.** The three apps behave the same everywhere; the rules around them differ by region.',
+        items: [
+          '**EU and DACH (GDPR)** — with purely local inference no prompt data goes to an external LLM provider, so there is usually no processor contract to sign for that step. Your own lawful basis, records of processing and security measures still apply. German public bodies and operators of critical infrastructure should check which building blocks of the [BSI IT-Grundschutz](https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/IT-Grundschutz/it-grundschutz_node.html) apply to their setup.',
+          '**France and French-speaking Europe (CNIL)** — the CNIL publishes [guidance on artificial intelligence and personal data](https://www.cnil.fr/fr/intelligence-artificielle); read it before processing sensitive professional data (health, legal, financial) with any local AI app.',
+          '**Japan (METI)** — the Ministry of Economy, Trade and Industry (METI) and the Ministry of Internal Affairs and Communications publish AI Guidelines for Business that many companies use as a reference for internal AI rules; check the current version.',
+          '**China (Data Security Law and PIPL)** — the Data Security Law and the Personal Information Protection Law, both in force since 2021, set rules for data handling and cross-border transfers. Local inference avoids sending prompts abroad, but classification and security obligations still apply.',
+          '**Document every deployment** — record the app version, the model file hash and the telemetry setting, and download installers only from the official release pages (verify checksums where published).',
+        ],
+        callouts: [
+          {
+            type: 'info',
+            text: 'This section is general information, not legal advice. Involve your data-protection officer or counsel for regulated data.',
+          },
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Frequently Asked Questions',
@@ -163,6 +205,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Are LM Studio, Jan, and GPT4All free?',
             a: 'All three apps are 100% free for personal and commercial use. Jan and GPT4All are open source (Apache 2.0 and MIT respectively); LM Studio is free but proprietary.',
+          },
+          {
+            q: 'Is LM Studio better than GPT4All?',
+            a: 'For most people, yes. LM Studio has a larger in-app model browser and is updated regularly. GPT4All is the better fit only on machines with very little RAM or when you need an MIT-licensed code base.',
+          },
+          {
+            q: 'Is GPT4All still maintained?',
+            a: 'GPT4All has published no release since v3.10.0 on 25 February 2025, and the last commit to its main repository dates from 27 May 2025 (GitHub). It still installs and runs, but new features, model-catalogue updates and fixes should not be expected. Jan and LM Studio both published several releases in October 2026.',
+          },
+          {
+            q: 'Which is better, LM Studio or Jan?',
+            a: 'LM Studio has the larger model browser. Jan is open source (Apache 2.0), has no telemetry by default and also connects to cloud providers and MCP servers. Pick LM Studio for library size, and Jan when open source or privacy defaults matter more.',
+          },
+          {
+            q: 'Which app gets updates most often in 2026?',
+            a: 'Jan and LM Studio. Jan published v0.8.6, v0.8.7 and v0.8.8 between 9 and 28 October 2026, and LM Studio\'s changelog lists builds 0.4.26 to 0.4.28 in October 2026. GPT4All\'s latest release is v3.10.0 from 25 February 2025. Check each project\'s release page for the current state.',
           },
           {
             q: 'Do these apps work fully offline?',
@@ -196,6 +254,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Should I install all three?',
             a: 'For research or comparison purposes, yes — they share GGUF files so the disk cost is mostly just the app binaries. For daily use, pick one and stick with it; switching apps mid-workflow disrupts your prompt history and chat threads.',
           },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        links: [
+          { url: 'https://lmstudio.ai/changelog/lmstudio', title: 'LM Studio Changelog', description: 'Official release notes, used to confirm builds 0.4.26 to 0.4.28 in October 2026.' },
+          { url: 'https://lmstudio.ai/blog/free-for-work', title: 'LM Studio is free for use at work', description: 'Official announcement of 8 July 2025 that removed the separate commercial-licence requirement.' },
+          { url: 'https://lmstudio.ai/docs/app/basics/rag', title: 'LM Studio: Chat with Documents', description: 'Official documentation on attaching documents to a chat and when retrieval (RAG) is used.' },
+          { url: 'https://github.com/janhq/jan', title: 'Jan on GitHub', description: 'Project README stating the Apache 2.0 licence, the local API server, MCP support and cloud-provider integrations.' },
+          { url: 'https://github.com/janhq/jan/releases', title: 'Jan releases', description: 'Release list used to confirm v0.8.6 (9 October), v0.8.7 (20 October) and v0.8.8 (28 October 2026).' },
+          { url: 'https://www.jan.ai/docs/desktop/file-upload', title: 'Jan: File upload', description: 'Official documentation on attaching images and documents in a chat.' },
+          { url: 'https://github.com/nomic-ai/gpt4all/releases', title: 'GPT4All releases', description: 'Release list used to confirm v3.10.0 (25 February 2025) as the latest release.' },
+          { url: 'https://github.com/nomic-ai/gpt4all', title: 'GPT4All on GitHub', description: 'Repository (MIT licence) whose last push dates from 27 May 2025 according to the GitHub API.' },
+          { url: 'https://docs.gpt4all.io/gpt4all_desktop/localdocs.html', title: 'GPT4All: LocalDocs', description: 'Official documentation of the LocalDocs feature for chatting with files on your device.' },
         ],
       },
       relatedReading: {
@@ -271,13 +344,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Wichtigste Erkenntnisse', anchor: '#key-takeaways' },
       { label: 'Vergleichstabelle', anchor: '#comparison-table' },
+      { label: 'LM Studio vs GPT4All vs Jan im direkten Vergleich', anchor: '#head-to-head' },
       { label: 'Welche App sollten Sie wählen?', anchor: '#which-one' },
       { label: 'Tiefe der Modell-Bibliothek', anchor: '#model-library' },
       { label: 'Datenschutz & Telemetrie', anchor: '#privacy-telemetry' },
       { label: 'Plattform-Unterstützung', anchor: '#cross-platform' },
       { label: 'Verdikt nach Anwendungsfall', anchor: '#verdict' },
+      { label: 'Wo Ollama und AnythingLLM einzuordnen sind', anchor: '#ollama-anythingllm' },
       { label: 'DACH-Kontext', anchor: '#regional-context' },
       { label: 'FAQ', anchor: '#faq' },
+      { label: 'Quellen', anchor: '#sources' },
       { label: 'Weiterführende Literatur', anchor: '#related-reading' },
     ],
     sections: {
@@ -305,6 +381,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Kriterium': 'Min. RAM (4B-Modell)', 'LM Studio': '6 GB', 'Jan': '6 GB', 'GPT4All': '4 GB' },
         ],
         columns: ['Kriterium', '[LM Studio](https://lmstudio.ai)', '[Jan](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
+      },
+      headToHead: {
+        id: 'head-to-head',
+        title: 'LM Studio vs GPT4All vs Jan: Wer gewinnt im direkten Vergleich?',
+        content: '**LM Studio schlägt GPT4All bei Modellzugang und Update-Tempo; GPT4All behält die geringsten Anforderungen und eine MIT-Lizenz. Jan schlägt beide bei Offenheit und Datenschutz-Voreinstellungen.**',
+        items: [
+          '**LM Studio vs GPT4All** — LM Studio zeigt Hugging-Face-Modelle in seinem eingebauten Browser, und sein Changelog nennt für Oktober 2026 die Builds 0.4.26 bis 0.4.28. GPT4All läuft mit 4 GB RAM und steht unter MIT-Lizenz, doch seine jüngste Version ist v3.10.0 vom 25. Februar 2025. Wählen Sie LM Studio, es sei denn, die MIT-Lizenz oder die 4-GB-RAM-Untergrenze gibt den Ausschlag.',
+          '**LM Studio vs Jan** — LM Studio hat den größeren App-internen Modell-Browser; es ist Closed Source, laut Datenschutzerklärung gibt es jedoch keine Telemetrie. Jan steht unter Apache 2.0, hat standardmäßig keine Telemetrie und veröffentlichte v0.8.6, v0.8.7 und v0.8.8 zwischen dem 9. und 28. Oktober 2026. Wählen Sie Jan, wenn Open Source wichtiger ist als der größere Modell-Browser.',
+          '**Jan vs GPT4All** — Beide sind Open Source (Apache 2.0 und MIT). Jan wird aktiv gepflegt und kann sich auch mit Cloud-Anbietern und MCP-Servern verbinden; GPT4All hat die geringeren Hardware-Anforderungen und eine eingebaute LocalDocs-Funktion. Wählen Sie Jan für eine gepflegte App und GPT4All nur, wenn die 4-GB-RAM-Untergrenze oder die MIT-Lizenz eine harte Anforderung ist.',
+        ],
       },
       whichOne: {
         id: 'which-one',
@@ -379,15 +465,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Sie können alle drei Apps parallel installieren; sie teilen sich GGUF-Modelldateien, sodass die Festplattenkosten beim Ausprobieren mehrerer Apps gering bleiben.',
         ],
       },
+      ollamaAnythingllm: {
+        id: 'ollama-anythingllm',
+        title: 'Wo passen Ollama und AnythingLLM neben diese drei Apps?',
+        content: '**Ollama und AnythingLLM lösen andere Probleme als diese drei Desktop-Apps.** Ollama ist eine Laufzeitumgebung, die Sie über die Kommandozeile oder eine API steuern; AnythingLLM ist eine Oberfläche für Dokumenten-Chat, die sich mit einem lokalen Modellserver verbindet.',
+        items: [
+          '**Ollama** — wählen Sie es, wenn Sie einen Modellserver im Hintergrund für Skripte und andere Tools brauchen. Den Unterschied zwischen Laufzeitumgebung und Desktop-App beschreibt [Ollama vs LM Studio](/de/local-llms/ollama-vs-lm-studio).',
+          '**AnythingLLM** — wählen Sie es, wenn Dokumenten-Chat die Hauptaufgabe ist und Sie Workspaces und mehr Kontrolle brauchen, als eine Chat-App bietet. Siehe [AnythingLLM vs PrivateGPT vs Open WebUI](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) und [Lokale KI-Apps mit eingebautem RAG](/de/power-local-llm/local-ai-app-with-built-in-rag).',
+          '**Einzelne Reviews** — das [LM-Studio-Review](/de/power-local-llm/lm-studio-review), das [Jan-Review](/de/power-local-llm/jan-review) und das [GPT4All-Review](/de/power-local-llm/gpt4all-review) behandeln jede App ausführlicher.',
+        ],
+      },
       regionalContext: {
         id: 'regional-context',
-        title: 'DACH-Kontext: DSGVO, BSI-Grundschutz und Mittelstand',
-        content: '**Für Unternehmen in Deutschland, Österreich und der Schweiz hängt die App-Wahl oft von Compliance- und Audit-Anforderungen ab.** Bei rein lokaler Inferenz verlassen Prompts und Antworten das Gerät in der Regel nicht; Update-Prüfungen und Modellsuche können dennoch technische Daten übertragen. Dies ist keine Rechtsberatung — lassen Sie Ihr Setup von Juristen oder Ihrem Datenschutzbeauftragten prüfen.',
+        title: 'DACH-Kontext: Datenschutzprüfung, BSI IT-Grundschutz und Mittelstand',
+        content: '**Wer eine dieser Apps lokal betreibt, hält Prompts auf dem eigenen Gerät. Das vereinfacht eine Datenschutzprüfung, macht einen Einsatz aber nicht von selbst konform.** Die drei Apps verhalten sich überall gleich; die Regeln drumherum unterscheiden sich je nach Land.',
         items: [
-          '**DSGVO Artikel 28 (Auftragsverarbeitung)**: Bei rein lokaler Inferenz ist in der Regel kein externer Auftragsverarbeiter für die Inferenz beteiligt; ob dennoch ein AV-Vertrag nötig ist, etwa wegen Update- oder Download-Verkehr, sollte Ihr Datenschutzbeauftragter klären. Telemetrie: LM Studio laut Datenschutzerklärung keine (Update-Prüfung und Modellsuche übertragen aber technische Daten), GPT4All nur auf Opt-in, Jan standardmäßig keine (optionale Analytics).',
-          '**BSI und IT-Grundschutz**: Ob ein lokaler Einsatz bestimmte Bausteine des IT-Grundschutz-Kompendiums erfüllt, ist eine organisatorische Bewertung. Der einsehbare Quellcode von Jan (Apache 2.0) kann Prüfungen erleichtern; die Einstufung nehmen Sie bzw. Ihre Informationssicherheitsbeauftragten vor.',
-          '**Mittelstand**: Für kleine und mittlere Unternehmen kann ein lokaler Einsatz auf vorhandenen Office-Laptops attraktiv sein; beachten Sie, dass GPT4All seit Februar 2025 nicht mehr aktualisiert wurde. LM Studio ist eine Option, wenn bereits NVIDIA-Workstations vorhanden sind.',
-          '**Dokumentation für Audits**: Halten Sie Modell-Hashes, App-Versionen und Telemetrie-Einstellungen gemeinsam mit der Risikoanalyse fest, und lassen Sie die Einordnung rechtlich prüfen.',
+          '**DSGVO** — Bei rein lokaler Inferenz geht kein Prompt an einen externen LLM-Anbieter, daher entfällt für diesen Schritt in der Regel ein Auftragsverarbeitungsvertrag. Rechtsgrundlage, Verzeichnis der Verarbeitungstätigkeiten und technische und organisatorische Maßnahmen bleiben Ihre Aufgabe. In Österreich und der Schweiz gilt zusätzlich das jeweilige nationale Datenschutzrecht.',
+          '**BSI IT-Grundschutz** — Behörden und Betreiber kritischer Infrastrukturen sollten prüfen, welche Bausteine des [BSI IT-Grundschutz](https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/IT-Grundschutz/it-grundschutz_node.html) für ihr Setup gelten. Das ergibt sich aus der eigenen Risikoanalyse. Ist Quellcode-Einsicht wichtig, hat Jan einsehbaren Apache 2.0-Quellcode.',
+          '**Mittelstand: einfacher Einstieg** — Für kleine und mittlere Unternehmen mit Office-Laptops (8 GB RAM, keine GPU) hat GPT4All die niedrigste Einstiegshürde. Beachten Sie jedoch, dass seine jüngste Version v3.10.0 vom 25. Februar 2025 stammt.',
+          '**Mittelstand: vorhandene Hardware** — Stehen bereits NVIDIA-Workstations im Haus, etwa in Konstruktion oder Engineering, ist LM Studio die schnellste der drei Apps. Es ist Closed Source; laut Datenschutzerklärung gibt es keine Telemetrie.',
+          '**Jeden Einsatz dokumentieren** — Halten Sie App-Version, Hash der Modelldatei und Telemetrie-Einstellung fest und laden Sie Installer nur von den offiziellen Release-Seiten (Prüfsummen vergleichen, wo veröffentlicht).',
+        ],
+        callouts: [
+          {
+            type: 'info',
+            text: 'Dieser Abschnitt ist eine allgemeine Information und keine Rechtsberatung. Beziehen Sie bei regulierten Daten Ihre Datenschutzbeauftragte bzw. Ihren Datenschutzbeauftragten oder eine Rechtsberatung ein.',
+          },
         ],
       },
       faq: {
@@ -397,6 +500,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Sind LM Studio, Jan und GPT4All kostenlos?',
             a: 'Alle drei Apps sind zu 100 % kostenlos für die private und kommerzielle Nutzung. Jan und GPT4All sind quelloffen (Apache 2.0 bzw. MIT); LM Studio ist kostenlos, aber proprietär.',
+          },
+          {
+            q: 'Ist LM Studio besser als GPT4All?',
+            a: 'Für die meisten Nutzer ja. LM Studio hat einen größeren App-internen Modell-Browser und wird regelmäßig aktualisiert. GPT4All passt nur auf Rechnern mit sehr wenig RAM besser oder wenn Sie eine MIT-lizenzierte Codebasis brauchen.',
+          },
+          {
+            q: 'Wird GPT4All noch gepflegt?',
+            a: 'GPT4All hat seit v3.10.0 am 25. Februar 2025 keine neue Version veröffentlicht, und der letzte Commit im Haupt-Repository stammt vom 27. Mai 2025 (GitHub). Die App lässt sich weiterhin installieren und starten, doch neue Funktionen, Aktualisierungen des Modellkatalogs und Korrekturen sind nicht zu erwarten. Jan und LM Studio haben im Oktober 2026 beide mehrere Versionen veröffentlicht.',
+          },
+          {
+            q: 'Was ist besser, LM Studio oder Jan?',
+            a: 'LM Studio hat den größeren Modell-Browser. Jan ist Open Source (Apache 2.0), hat standardmäßig keine Telemetrie und verbindet sich auch mit Cloud-Anbietern und MCP-Servern. Wählen Sie LM Studio für die Bibliotheksgröße und Jan, wenn Open Source oder Datenschutz-Voreinstellungen wichtiger sind.',
+          },
+          {
+            q: 'Welche App erhält 2026 am häufigsten Updates?',
+            a: 'Jan und LM Studio. Jan hat v0.8.6, v0.8.7 und v0.8.8 zwischen dem 9. und 28. Oktober 2026 veröffentlicht, und das Changelog von LM Studio nennt die Builds 0.4.26 bis 0.4.28 im Oktober 2026. Die jüngste Version von GPT4All ist v3.10.0 vom 25. Februar 2025. Den aktuellen Stand finden Sie jeweils auf der Release-Seite des Projekts.',
           },
           {
             q: 'Funktionieren diese Apps vollständig offline?',
@@ -438,6 +557,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Sind diese Apps für den deutschen Mittelstand geeignet?',
             a: 'Das hängt vom Einsatz ab. GPT4All hat die geringsten Anforderungen für Office-Laptops (8 GB RAM, keine GPU), wurde aber seit Februar 2025 nicht mehr aktualisiert. LM Studio passt, wenn bereits NVIDIA-Workstations vorhanden sind, Jan bei Wunsch nach prüfbarem Quellcode. Klären Sie IT-Sicherheit und Datenschutz mit Ihren Verantwortlichen.',
           },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Quellen',
+        links: [
+          { url: 'https://lmstudio.ai/changelog/lmstudio', title: 'LM Studio Changelog', description: 'Offizielle Release Notes, herangezogen zur Bestätigung der Builds 0.4.26 bis 0.4.28 im Oktober 2026.' },
+          { url: 'https://lmstudio.ai/blog/free-for-work', title: 'LM Studio is free for use at work', description: 'Offizielle Ankündigung vom 8. Juli 2025, mit der die separate Lizenzpflicht für die berufliche Nutzung entfiel.' },
+          { url: 'https://lmstudio.ai/docs/app/basics/rag', title: 'LM Studio: Chat with Documents', description: 'Offizielle Dokumentation zum Anhängen von Dokumenten an einen Chat und dazu, wann Retrieval (RAG) zum Einsatz kommt.' },
+          { url: 'https://github.com/janhq/jan', title: 'Jan auf GitHub', description: 'Projekt-README mit Angabe der Apache-2.0-Lizenz, des lokalen API-Servers, der MCP-Unterstützung und der Cloud-Anbieter-Integrationen.' },
+          { url: 'https://github.com/janhq/jan/releases', title: 'Jan Releases', description: 'Release-Liste, herangezogen zur Bestätigung von v0.8.6 (9. Oktober), v0.8.7 (20. Oktober) und v0.8.8 (28. Oktober 2026).' },
+          { url: 'https://www.jan.ai/docs/desktop/file-upload', title: 'Jan: File upload', description: 'Offizielle Dokumentation zum Anhängen von Bildern und Dokumenten in einem Chat.' },
+          { url: 'https://github.com/nomic-ai/gpt4all/releases', title: 'GPT4All Releases', description: 'Release-Liste, herangezogen zur Bestätigung von v3.10.0 (25. Februar 2025) als jüngster Version.' },
+          { url: 'https://github.com/nomic-ai/gpt4all', title: 'GPT4All auf GitHub', description: 'Repository (MIT-Lizenz), dessen letzter Push laut GitHub-API vom 27. Mai 2025 stammt.' },
+          { url: 'https://docs.gpt4all.io/gpt4all_desktop/localdocs.html', title: 'GPT4All: LocalDocs', description: 'Offizielle Dokumentation der LocalDocs-Funktion zum Chatten mit Dateien auf Ihrem Gerät.' },
         ],
       },
       relatedReading: {
@@ -511,13 +645,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Points clés', anchor: '#key-takeaways' },
       { label: 'Tableau comparatif', anchor: '#comparison-table' },
+      { label: 'LM Studio vs GPT4All vs Jan : le duel', anchor: '#head-to-head' },
       { label: 'Laquelle choisir ?', anchor: '#which-one' },
       { label: 'Profondeur de la bibliothèque de modèles', anchor: '#model-library' },
       { label: 'Confidentialité et télémétrie', anchor: '#privacy-telemetry' },
       { label: 'Plateformes prises en charge', anchor: '#cross-platform' },
       { label: 'Verdict par cas d\'usage', anchor: '#verdict' },
+      { label: 'Où se placent Ollama et AnythingLLM', anchor: '#ollama-anythingllm' },
       { label: 'Considérations pour les francophones', anchor: '#regional-context' },
       { label: 'FAQ', anchor: '#faq' },
+      { label: 'Sources', anchor: '#sources' },
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
     sections: {
@@ -546,6 +683,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Critère': 'RAM min. (modèle 4B)', 'LM Studio': '6 Go', 'Jan': '6 Go', 'GPT4All': '4 Go' },
         ],
         columns: ['Critère', '[LM Studio](https://lmstudio.ai)', '[Jan](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
+      },
+      headToHead: {
+        id: 'head-to-head',
+        title: 'LM Studio vs GPT4All vs Jan : qui l\'emporte en duel ?',
+        content: '**LM Studio devance GPT4All en accès aux modèles et en rythme de mises à jour ; GPT4All garde les exigences les plus légères et une licence MIT. Jan devance les deux en ouverture et en réglages par défaut côté vie privée.**',
+        items: [
+          '**LM Studio vs GPT4All** — LM Studio affiche les modèles Hugging Face dans son navigateur intégré, et son journal des modifications mentionne les builds 0.4.26 à 0.4.28 en octobre 2026. GPT4All tourne avec 4 Go de RAM et est sous licence MIT, mais sa dernière version est la v3.10.0 du 25 février 2025. Choisissez LM Studio, sauf si la licence MIT ou le plancher de 4 Go de RAM tranche.',
+          '**LM Studio vs Jan** — LM Studio propose le plus grand navigateur de modèles intégré ; son code est fermé, bien que sa politique de confidentialité indique l\'absence de télémétrie. Jan est sous Apache 2.0, n\'a pas de télémétrie par défaut et a publié les v0.8.6, v0.8.7 et v0.8.8 entre le 9 et le 28 octobre 2026. Choisissez Jan quand l\'open source compte plus que le plus grand navigateur de modèles.',
+          '**Jan vs GPT4All** — Les deux sont open source (Apache 2.0 et MIT). Jan est activement maintenue et peut aussi se connecter à des fournisseurs cloud et à des serveurs MCP ; GPT4All a les exigences matérielles les plus légères et une fonction LocalDocs intégrée. Choisissez Jan pour une app maintenue, et GPT4All seulement si son plancher de 4 Go de RAM ou sa licence MIT est une exigence ferme.',
+        ],
       },
       whichOne: {
         id: 'which-one',
@@ -620,15 +767,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Vous pouvez installer les trois côte à côte ; elles partagent les fichiers GGUF, donc le coût disque d\'essayer plusieurs apps reste minime.',
         ],
       },
+      ollamaAnythingllm: {
+        id: 'ollama-anythingllm',
+        title: 'Où se placent Ollama et AnythingLLM à côté de ces trois apps ?',
+        content: '**Ollama et AnythingLLM résolvent d\'autres problèmes que ces trois apps de bureau.** Ollama est un runtime que l\'on pilote en ligne de commande ou via une API ; AnythingLLM est une interface de chat documentaire qui se connecte à un serveur de modèles local.',
+        items: [
+          '**Ollama** — à choisir pour un serveur de modèles en arrière-plan, destiné aux scripts et à d\'autres outils. Voir [Ollama vs LM Studio](/fr/local-llms/ollama-vs-lm-studio) pour l\'arbitrage runtime ou app de bureau.',
+          '**AnythingLLM** — à choisir quand le chat documentaire est la tâche principale et que vous voulez des espaces de travail et plus de contrôle qu\'une app de chat. Voir [AnythingLLM vs PrivateGPT vs Open WebUI](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) et [Apps IA locales avec RAG intégré](/fr/power-local-llm/local-ai-app-with-built-in-rag).',
+          '**Tests individuels** — le [test de LM Studio](/fr/power-local-llm/lm-studio-review), le [test de Jan](/fr/power-local-llm/jan-review) et le [test de GPT4All](/fr/power-local-llm/gpt4all-review) détaillent chaque app plus en profondeur.',
+        ],
+      },
       regionalContext: {
         id: 'regional-context',
-        title: 'Considérations pour les francophones : RGPD, CNIL et déploiement entreprise',
-        content: '**Pour les entreprises en France, en Belgique et en Suisse romande, le critère décisif est souvent la conformité réglementaire.** En inférence purement locale, les prompts et réponses restent en principe sur l\'appareil ; les vérifications de mise à jour et la recherche de modèles peuvent toutefois transmettre des données techniques. Ceci n\'est pas un conseil juridique — faites valider votre configuration par un juriste ou votre DPO.',
+        title: 'Notes pour les francophones : RGPD, CNIL et usage en entreprise',
+        content: '**Faire tourner ces apps en local garde vos prompts sur votre propre appareil, ce qui simplifie une revue vie privée mais ne rend pas un déploiement conforme à lui seul.** Les trois apps se comportent de la même façon partout ; ce sont les règles autour qui varient selon le pays.',
         items: [
-          '**RGPD et position de la CNIL** : la CNIL encourage l\'inférence locale pour les données professionnelles sensibles, mais la conformité d\'un déploiement dépend de votre analyse (base légale, mesures techniques et organisationnelles, AIPD le cas échéant). Télémétrie : LM Studio (aucune selon sa politique de confidentialité, hors vérification de mise à jour et recherche de modèles), Jan (aucune par défaut, analytique optionnelle), GPT4All (opt-in).',
-          '**Sous-traitance (article 28 RGPD)** : en inférence purement locale, aucun sous-traitant LLM n\'intervient en principe pour le calcul ; faites confirmer par votre DPO si un contrat reste nécessaire. Consignez version de l\'app, hash du modèle et état de la télémétrie dans le registre des traitements.',
-          '**Audits open source** : le code de Jan (Apache 2.0) peut être audité par un DPO ou une administration ; LM Studio est propriétaire et GPT4All n\'a plus de version depuis février 2025.',
-          '**Petites structures** : GPT4All fonctionne sans droits administrateur et avec peu de mémoire, mais n\'est plus mis à jour ; Jan ou LM Studio sont préférables pour un usage durable.',
+          '**RGPD et sous-traitance (article 28)** — avec une inférence purement locale, aucune donnée de prompt ne part vers un fournisseur de LLM externe : il n\'y a donc en général pas de contrat de sous-traitance à signer pour cette étape. Votre base légale, votre registre des traitements et vos mesures de sécurité restent à traiter. À valider avec votre délégué à la protection des données.',
+          '**CNIL** — la CNIL publie des [recommandations sur l\'intelligence artificielle](https://www.cnil.fr/fr/intelligence-artificielle) et les données personnelles ; lisez-les avant de traiter des données professionnelles sensibles (santé, juridique, finance) avec une app d\'IA locale.',
+          '**Belgique et Suisse romande** — mêmes questions à se poser ; en Suisse, la nLPD s\'applique en plus aux données personnelles, notamment pour les flux transfrontaliers.',
+          '**Cas d\'usage francophones** — rédaction et marketing créatif (LM Studio pour la vitesse), discussion avec des PDF et documents (LM Studio ou Jan, qui les joignent dans un chat), revue de code source par un DPO ou une administration (Jan, code Apache 2.0 auditable), parcs informatiques anciens ou postes verrouillés sans droits administrateur (GPT4All, avec ses 4 Go de RAM minimum, mais sans nouvelle version depuis le 25 février 2025).',
+          '**Documentez chaque déploiement** — notez la version de l\'app, l\'empreinte (hash) du fichier de modèle et le réglage de la télémétrie, et téléchargez les installeurs uniquement depuis les pages de versions officielles (vérifiez les sommes de contrôle quand elles sont publiées).',
+        ],
+        callouts: [
+          {
+            type: 'info',
+            text: 'Cette section est une information générale, pas un avis juridique. Associez votre délégué à la protection des données ou un conseil juridique pour les données réglementées.',
+          },
         ],
       },
       faq: {
@@ -638,6 +802,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'LM Studio, Jan et GPT4All sont-elles gratuites ?',
             a: 'Les trois apps sont 100 % gratuites pour usage personnel et commercial. Jan et GPT4All sont open source (Apache 2.0 et MIT respectivement) ; LM Studio est gratuite mais propriétaire.',
+          },
+          {
+            q: 'LM Studio est-elle meilleure que GPT4All ?',
+            a: 'Pour la plupart des gens, oui. LM Studio propose un navigateur de modèles intégré plus grand et est mise à jour régulièrement. GPT4All convient mieux seulement sur des machines avec très peu de RAM ou si vous avez besoin d\'une base de code sous licence MIT.',
+          },
+          {
+            q: 'GPT4All est-elle encore maintenue ?',
+            a: 'GPT4All n\'a publié aucune version depuis la v3.10.0 du 25 février 2025, et le dernier commit de son dépôt principal date du 27 mai 2025 (GitHub). Elle s\'installe et fonctionne toujours, mais n\'attendez ni nouvelles fonctions, ni mises à jour du catalogue de modèles, ni correctifs. Jan et LM Studio ont tous deux publié plusieurs versions en octobre 2026.',
+          },
+          {
+            q: 'Laquelle est meilleure, LM Studio ou Jan ?',
+            a: 'LM Studio dispose du plus grand navigateur de modèles. Jan est open source (Apache 2.0), n\'a pas de télémétrie par défaut et se connecte aussi à des fournisseurs cloud et à des serveurs MCP. Choisissez LM Studio pour la taille de la bibliothèque, et Jan quand l\'open source ou les réglages de confidentialité par défaut comptent davantage.',
+          },
+          {
+            q: 'Quelle app reçoit le plus de mises à jour en 2026 ?',
+            a: 'Jan et LM Studio. Jan a publié les v0.8.6, v0.8.7 et v0.8.8 entre le 9 et le 28 octobre 2026, et le journal des modifications de LM Studio liste les builds 0.4.26 à 0.4.28 en octobre 2026. La dernière version de GPT4All est la v3.10.0 du 25 février 2025. Consultez la page des versions de chaque projet pour l\'état actuel.',
           },
           {
             q: 'Ces apps fonctionnent-elles entièrement hors ligne ?',
@@ -671,6 +851,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Faut-il installer les trois ?',
             a: 'Pour comparer ou faire de la veille, oui — elles partagent les GGUF, le coût disque se limite aux binaires. Pour l\'usage quotidien, choisissez-en une et restez-y ; changer d\'app en cours de workflow casse l\'historique des prompts et les fils de discussion.',
           },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        links: [
+          { url: 'https://lmstudio.ai/changelog/lmstudio', title: 'Journal des modifications de LM Studio', description: 'Notes de version officielles, utilisées pour confirmer les builds 0.4.26 à 0.4.28 en octobre 2026.' },
+          { url: 'https://lmstudio.ai/blog/free-for-work', title: 'LM Studio est gratuite pour le travail', description: 'Annonce officielle du 8 juillet 2025 supprimant l\'exigence de licence commerciale distincte.' },
+          { url: 'https://lmstudio.ai/docs/app/basics/rag', title: 'LM Studio : discuter avec des documents', description: 'Documentation officielle sur la jonction de documents à un chat et sur les cas où la récupération (RAG) est utilisée.' },
+          { url: 'https://github.com/janhq/jan', title: 'Jan sur GitHub', description: 'README du projet indiquant la licence Apache 2.0, le serveur d\'API local, la prise en charge de MCP et les intégrations de fournisseurs cloud.' },
+          { url: 'https://github.com/janhq/jan/releases', title: 'Versions de Jan', description: 'Liste des versions utilisée pour confirmer la v0.8.6 (9 octobre), la v0.8.7 (20 octobre) et la v0.8.8 (28 octobre 2026).' },
+          { url: 'https://www.jan.ai/docs/desktop/file-upload', title: 'Jan : envoi de fichiers', description: 'Documentation officielle sur la jonction d\'images et de documents à un chat.' },
+          { url: 'https://github.com/nomic-ai/gpt4all/releases', title: 'Versions de GPT4All', description: 'Liste des versions utilisée pour confirmer la v3.10.0 (25 février 2025) comme dernière version.' },
+          { url: 'https://github.com/nomic-ai/gpt4all', title: 'GPT4All sur GitHub', description: 'Dépôt (licence MIT) dont le dernier push date du 27 mai 2025 selon l\'API GitHub.' },
+          { url: 'https://docs.gpt4all.io/gpt4all_desktop/localdocs.html', title: 'GPT4All : LocalDocs', description: 'Documentation officielle de la fonction LocalDocs pour discuter avec les fichiers de votre appareil.' },
         ],
       },
       relatedReading: {
@@ -744,14 +939,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: '重要ポイント', anchor: '#key-takeaways' },
       { label: '比較表', anchor: '#comparison-table' },
+      { label: 'LM Studio vs GPT4All vs Jan 直接対決', anchor: '#head-to-head' },
       { label: 'どれを選ぶべきか', anchor: '#which-one' },
       { label: 'モデルライブラリの深さ', anchor: '#model-library' },
       { label: 'プライバシーとテレメトリ', anchor: '#privacy-telemetry' },
       { label: 'クロスプラットフォーム対応', anchor: '#cross-platform' },
       { label: 'ユースケース別の結論', anchor: '#verdict' },
+      { label: 'OllamaとAnythingLLMの位置づけ', anchor: '#ollama-anythingllm' },
       { label: '日本ユーザーのための活用ポイント', anchor: '#regional-context' },
       { label: '実践Tips', anchor: '#practical-tips' },
       { label: 'よくある質問', anchor: '#faq' },
+      { label: '出典', anchor: '#sources' },
       { label: '関連資料', anchor: '#related-reading' },
     ],
     sections: {
@@ -779,6 +977,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '基準': '最低RAM（4Bモデル）', 'LM Studio': '6 GB', 'Jan': '6 GB', 'GPT4All': '4 GB' },
         ],
         columns: ['基準', '[LM Studio](https://lmstudio.ai)', '[Jan](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
+      },
+      headToHead: {
+        id: 'head-to-head',
+        title: 'LM Studio vs GPT4All vs Jan：直接対決の勝者は？',
+        content: '**LM Studioはモデルへのアクセスと更新ペースでGPT4Allを上回り、GPT4Allは最も軽い動作要件とMITライセンスを維持しています。Janはオープン性とプライバシーのデフォルト設定で両者を上回ります。**',
+        items: [
+          '**LM Studio vs GPT4All** — LM Studioは内蔵ブラウザでHugging Faceのモデルを表示でき、変更履歴には2026年10月のビルド0.4.26〜0.4.28が記載されています。GPT4Allは4 GB RAMで動作し、MITライセンスですが、最新リリースは2025年2月25日のv3.10.0です。MITライセンスか4 GB RAMという下限が決め手にならない限り、LM Studioを選んでください。',
+          '**LM Studio vs Jan** — LM Studioはアプリ内のモデルブラウザが大きい一方、クローズドソースです（ただしプライバシーポリシーではテレメトリなしと明記）。JanはApache 2.0でデフォルトのテレメトリがなく、2026年10月9日〜28日にv0.8.6、v0.8.7、v0.8.8を公開しました。大きなモデルブラウザよりオープンソースを重視するならJanを選んでください。',
+          '**Jan vs GPT4All** — どちらもオープンソース（Apache 2.0とMIT）です。Janは活発にメンテナンスされ、クラウドプロバイダーやMCPサーバーにも接続できます。GPT4Allはハードウェア要件が軽く、LocalDocs機能を内蔵しています。メンテナンスされているアプリならJan、4 GB RAMの下限またはMITライセンスが必須条件の場合にのみGPT4Allを選んでください。',
+        ],
       },
       whichOne: {
         id: 'which-one',
@@ -853,14 +1061,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '3アプリは並行インストール可能。GGUFモデルファイルを共有するため、複数試すディスクコストは小さく抑えられます。',
         ],
       },
+      ollamaAnythingllm: {
+        id: 'ollama-anythingllm',
+        title: 'この3つの隣で、OllamaとAnythingLLMはどこに位置しますか？',
+        content: '**OllamaとAnythingLLMは、この3つのデスクトップアプリとは別の課題を解決します。** OllamaはコマンドラインやAPIから操作するランタイム、AnythingLLMはローカルのモデルサーバーに接続するドキュメントチャット用のインターフェースです。',
+        items: [
+          '**Ollama** — スクリプトや他のツール向けに、バックグラウンドのモデルサーバーが欲しいときに選びます。ランタイムとデスクトップアプリのトレードオフは [Ollama vs LM Studio](/ja/local-llms/ollama-vs-lm-studio) を参照してください。',
+          '**AnythingLLM** — ドキュメントチャットが主な用途で、ワークスペースやチャットアプリ以上の制御が欲しいときに選びます。[AnythingLLM vs PrivateGPT vs Open WebUI](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) と [RAG内蔵のローカルAIアプリ](/ja/power-local-llm/local-ai-app-with-built-in-rag) を参照してください。',
+          '**個別レビュー** — [LM Studioレビュー](/ja/power-local-llm/lm-studio-review)、[Janレビュー](/ja/power-local-llm/jan-review)、[GPT4Allレビュー](/ja/power-local-llm/gpt4all-review) で各アプリをさらに詳しく解説しています。',
+        ],
+      },
       regionalContext: {
         id: 'regional-context',
-        title: '日本ユーザーのための活用ポイント：METIガイドラインと東アジア展開',
-        content: '**日本企業がローカルLLMデスクトップアプリを選ぶ際は、METI（経済産業省）のAIガバナンス指針への対応や、東アジア圏のデータ主権要件が判断材料になることがあります。** 完全ローカル推論ではプロンプトや出力は原則として端末内にとどまりますが、アップデート確認やモデル検索では技術的なデータが送信される場合があります。これは法的助言ではありません。構成は弁護士またはデータ保護の担当者に確認してください。',
+        title: '日本ユーザーのための地域別メモ：プライバシー審査の進め方',
+        content: '**3つのアプリをローカルで動かすとプロンプトは自分の端末内に留まるため、プライバシー審査は簡単になりますが、それだけで配備の適合が決まるわけではありません。** アプリの動作はどこでも同じで、周辺のルールだけが地域によって異なります。',
         items: [
-          '**METI AIガバナンス**：経産省の「AI事業者ガイドライン」は、機微情報を扱う場面でのリスク管理を求めています。ローカル推論はその対策の一つになり得ますが、要件を満たすかは各社の評価によります。テレメトリ：LM Studio（プライバシーポリシー上なし、ただしアップデート確認とモデル検索あり）、Jan（デフォルトでなし、任意の分析あり）、GPT4All（オプトイン）。',
-          '**監査と文書化**：アプリのバージョン、モデルのSHA-256ハッシュ、テレメトリ設定を記録し、リスク評価書と一緒に保管してください。Janはソースコード（Apache 2.0）を確認できます。',
-          '**保守状況**：GPT4Allは2025年2月以降リリースがないため、業務利用では注意が必要です。',
+          '**日本（経済産業省）** — [経済産業省](https://www.meti.go.jp/)と総務省は「AI事業者ガイドライン」を公表しており、社内のAI利用ルールを作る際の参考資料として使う企業があります。企業でローカルAIアプリを導入する場合は、最新版を確認したうえで、自社の方針に沿って使い方を決めてください。',
+          '**アジア太平洋地域** — 国や地域によって、個人データの国外移転やデータの保管場所に関するルールは異なります。ローカル推論はプロンプトを国外のクラウドLLMに送らない構成にできますが、データの分類や安全管理などの自社の責任は残ります。展開先の国ごとに確認してください。',
+          '**グローバル** — EUのGDPRなど、各地域の個人データ保護の枠組みは、ローカル推論でも自社の適法性の根拠、処理記録、安全管理措置の検討が必要になります。海外拠点を持つ場合は、拠点ごとの担当者と確認してください。',
+          '**配備ごとに記録する** — アプリのバージョン、モデルファイルのハッシュ、テレメトリの設定を記録し、インストーラーは公式のリリースページからのみ入手してください（チェックサムが公開されている場合は検証します）。',
+        ],
+        callouts: [
+          {
+            type: 'info',
+            text: 'このセクションは一般的な情報であり法的助言ではありません。規制対象のデータを扱う場合は、社内のデータ保護責任者や弁護士に相談してください。',
+          },
         ],
       },
       practicalTips: {
@@ -882,6 +1107,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'LM Studio、Jan、GPT4Allは無料ですか？',
             a: '3アプリとも個人利用・商用利用ともに100 %無料です。JanとGPT4Allはオープンソース（それぞれApache 2.0とMIT）、LM Studioは無料ですがプロプライエタリです。',
+          },
+          {
+            q: 'LM StudioはGPT4Allより優れていますか？',
+            a: 'ほとんどの人にとってはそうです。LM Studioはアプリ内のモデルブラウザが大きく、定期的に更新されています。GPT4Allが適しているのは、RAMが非常に少ないマシンか、MITライセンスのコードベースが必要な場合に限られます。',
+          },
+          {
+            q: 'GPT4Allはまだメンテナンスされていますか？',
+            a: 'GPT4Allは2025年2月25日のv3.10.0以降リリースを公開しておらず、メインリポジトリへの最後のコミットは2025年5月27日です（GitHub）。インストールも動作もしますが、新機能、モデルカタログの更新、修正は期待できません。JanとLM Studioは、2026年10月にどちらも複数のリリースを公開しました。',
+          },
+          {
+            q: 'LM StudioとJanではどちらが優れていますか？',
+            a: 'LM Studioのほうがモデルブラウザが大きいです。Janはオープンソース（Apache 2.0）で、デフォルトのテレメトリがなく、クラウドプロバイダーやMCPサーバーにも接続できます。ライブラリの規模ならLM Studio、オープンソースやプライバシーのデフォルト設定を重視するならJanを選んでください。',
+          },
+          {
+            q: '2026年に最も頻繁にアップデートされるアプリはどれですか？',
+            a: 'JanとLM Studioです。Janは2026年10月9日〜28日にv0.8.6、v0.8.7、v0.8.8を公開し、LM Studioの変更履歴には2026年10月のビルド0.4.26〜0.4.28が載っています。GPT4Allの最新リリースは2025年2月25日のv3.10.0です。最新の状況は各プロジェクトのリリースページで確認してください。',
           },
           {
             q: 'これらのアプリは完全にオフラインで動きますか？',
@@ -915,6 +1156,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '3つすべてインストールすべきですか？',
             a: '調査・比較目的ならイエス — GGUFファイルを共有するため、ディスクコストは主にアプリのバイナリ分だけです。日常使いでは1つを選んで使い続けてください。途中で切り替えると、プロンプト履歴やチャットスレッドが断絶します。',
           },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '出典',
+        links: [
+          { url: 'https://lmstudio.ai/changelog/lmstudio', title: 'LM Studio 変更履歴', description: '公式リリースノート。2026年10月のビルド0.4.26〜0.4.28の確認に使用。' },
+          { url: 'https://lmstudio.ai/blog/free-for-work', title: 'LM Studioが業務利用でも無料に', description: '別途商用ライセンスの要件を廃止した2025年7月8日の公式発表。' },
+          { url: 'https://lmstudio.ai/docs/app/basics/rag', title: 'LM Studio：ドキュメントとのチャット', description: 'チャットへの文書の添付と、検索拡張生成（RAG）が使われる条件についての公式ドキュメント。' },
+          { url: 'https://github.com/janhq/jan', title: 'GitHub上のJan', description: 'Apache 2.0ライセンス、ローカルAPIサーバー、MCP対応、クラウドプロバイダー連携を記載したプロジェクトのREADME。' },
+          { url: 'https://github.com/janhq/jan/releases', title: 'Janのリリース', description: 'v0.8.6（10月9日）、v0.8.7（10月20日）、v0.8.8（2026年10月28日）の確認に使用したリリース一覧。' },
+          { url: 'https://www.jan.ai/docs/desktop/file-upload', title: 'Jan：ファイルのアップロード', description: 'チャットへの画像や文書の添付についての公式ドキュメント。' },
+          { url: 'https://github.com/nomic-ai/gpt4all/releases', title: 'GPT4Allのリリース', description: 'v3.10.0（2025年2月25日）が最新リリースであることの確認に使用したリリース一覧。' },
+          { url: 'https://github.com/nomic-ai/gpt4all', title: 'GitHub上のGPT4All', description: 'リポジトリ（MITライセンス）。GitHub APIによると最後のプッシュは2025年5月27日。' },
+          { url: 'https://docs.gpt4all.io/gpt4all_desktop/localdocs.html', title: 'GPT4All：LocalDocs', description: '端末上のファイルとチャットするLocalDocs機能の公式ドキュメント。' },
         ],
       },
       relatedReading: {
@@ -988,14 +1244,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: '核心要点', anchor: '#key-takeaways' },
       { label: '对比表格', anchor: '#comparison-table' },
+      { label: 'LM Studio、GPT4All、Jan正面对比', anchor: '#head-to-head' },
       { label: '应该选哪一个？', anchor: '#which-one' },
       { label: '模型库深度', anchor: '#model-library' },
       { label: '隐私与遥测', anchor: '#privacy-telemetry' },
       { label: '跨平台支持', anchor: '#cross-platform' },
       { label: '按用例的最终判定', anchor: '#verdict' },
+      { label: 'Ollama与AnythingLLM的定位', anchor: '#ollama-anythingllm' },
       { label: '中国企业的应用方案', anchor: '#regional-context' },
       { label: '实用建议', anchor: '#practical-tips' },
       { label: '常见问题', anchor: '#faq' },
+      { label: '来源', anchor: '#sources' },
       { label: '延伸阅读', anchor: '#related-reading' },
     ],
     sections: {
@@ -1023,6 +1282,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '维度': '最低RAM（4B模型）', 'LM Studio': '6 GB', 'Jan': '6 GB', 'GPT4All': '4 GB' },
         ],
         columns: ['维度', '[LM Studio](https://lmstudio.ai)', '[Jan](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
+      },
+      headToHead: {
+        id: 'head-to-head',
+        title: 'LM Studio、GPT4All与Jan正面对比：谁胜出？',
+        content: '**LM Studio在模型获取和更新节奏上胜过GPT4All；GPT4All保留最低的硬件要求和MIT许可证。Jan在开放性和隐私默认设置上胜过另外两款。**',
+        items: [
+          '**LM Studio vs GPT4All**——LM Studio内置浏览器可显示Hugging Face模型，其更新日志列出了2026年10月的0.4.26至0.4.28版本。GPT4All 4 GB RAM即可运行，采用MIT许可证，但其最新版本是2025年2月25日的v3.10.0。除非MIT许可证或4 GB RAM下限是决定性因素，否则选LM Studio。',
+          '**LM Studio vs Jan**——LM Studio的应用内模型浏览器更大；它是闭源软件，但其隐私政策称无遥测。Jan采用Apache 2.0许可证，默认无遥测，并在2026年10月9日至28日间发布了v0.8.6、v0.8.7和v0.8.8。当开源比更大的模型浏览器更重要时，选Jan。',
+          '**Jan vs GPT4All**——两者都是开源的（分别为Apache 2.0和MIT）。Jan持续维护，还能连接云端服务商和MCP服务器；GPT4All硬件要求更低，并内置LocalDocs功能。想要持续维护的应用选Jan；仅当4 GB RAM下限或MIT许可证是硬性要求时才选GPT4All。',
+        ],
       },
       whichOne: {
         id: 'which-one',
@@ -1097,14 +1366,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '可以并排安装三款；它们共享GGUF模型文件，因此尝试多款应用的磁盘成本很低。',
         ],
       },
+      ollamaAnythingllm: {
+        id: 'ollama-anythingllm',
+        title: 'Ollama和AnythingLLM与这三款应用是什么关系？',
+        content: '**Ollama和AnythingLLM解决的问题与这三款桌面应用不同。** Ollama是通过命令行或API驱动的运行时；AnythingLLM是连接本地模型服务器的文档对话界面。',
+        items: [
+          '**Ollama**——当你需要为脚本和其他工具提供后台模型服务器时选它。运行时与桌面应用的取舍见[Ollama vs LM Studio](/zh/local-llms/ollama-vs-lm-studio)。',
+          '**AnythingLLM**——当文档对话是主要任务，且你需要工作区和比聊天应用更多的控制时选它。见[AnythingLLM vs PrivateGPT vs Open WebUI](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)和[内置RAG的本地AI应用](/zh/power-local-llm/local-ai-app-with-built-in-rag)。',
+          '**单独评测**——[LM Studio评测](/zh/power-local-llm/lm-studio-review)、[Jan评测](/zh/power-local-llm/jan-review)和[GPT4All评测](/zh/power-local-llm/gpt4all-review)对每款应用有更深入的介绍。',
+        ],
+      },
       regionalContext: {
         id: 'regional-context',
-        title: '中国企业的应用方案：数据安全法、跨境数据与企业部署',
-        content: '**在中国大陆、港澳台及华语地区，选择应用时常需考虑《数据安全法》《个人信息保护法》等合规要求。** 纯本地推理时提示词与输出原则上留在本机，但更新检查和模型搜索可能传输技术数据。以下不构成法律建议，请交由律师或数据合规负责人审核。',
+        title: '中文用户须知：数据安全法、跨境数据与企业部署',
+        content: '**三款应用在本地运行时，提示词留在你自己的设备上，这会简化隐私审查，但本身并不能决定一次部署是否合规。** 应用在各地表现相同，差异在于外部规则。',
         items: [
-          '**合规评估**：本地推理可能有助于满足内部数据管控要求，但是否符合相关法律由您自行评估。遥测：LM Studio（隐私政策称无，但更新检查与模型搜索会传输数据）、Jan（默认无，可选分析）、GPT4All（需主动开启）。',
-          '**审计与记录**：记录应用版本、模型SHA-256哈希和遥测设置；Jan的源代码（Apache 2.0）可供审计。',
-          '**维护状态**：GPT4All自2025年2月以来没有新版本，用于业务时需谨慎。',
+          '**中国（数据安全法）**——《数据安全法》和《个人信息保护法》均自2021年起施行，对数据处理和数据出境作出规定。本地推理避免把提示词发送到境外，但数据分类分级和安全保护等义务依然适用。',
+          '**亚太地区（数据跨境）**——各国和地区对数据出境的要求不同，常见路径包括安全评估、标准合同或认证等。具体适用哪一种，取决于数据类型和业务场景，请以主管部门的最新规定和你自己的评估为准。',
+          '**企业部署**——金融、医疗、法律等行业若需要审阅源代码，可优先考虑Jan（Apache 2.0源码可审计）。已有NVIDIA工作站的设计或工程团队可选LM Studio获得更高速度。办公电脑配置较低（8 GB RAM、无独显）时，可考虑GPT4All，但请注意它自2025年2月起没有新版本。',
+          '**记录每次部署**——记录应用版本、模型文件哈希和遥测设置，并只从官方发布页面下载安装包（有公布校验和时请核对）。',
+        ],
+        callouts: [
+          {
+            type: 'info',
+            text: '本节为一般性信息，不构成法律建议。涉及受监管数据时，请让数据保护负责人或法律顾问参与评估。',
+          },
         ],
       },
       practicalTips: {
@@ -1126,6 +1412,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'LM Studio、Jan和GPT4All都是免费的吗？',
             a: '三款应用均100 %免费，可用于个人和商业用途。Jan和GPT4All是开源的（分别为Apache 2.0和MIT许可证）；LM Studio免费但为专有软件。',
+          },
+          {
+            q: 'LM Studio比GPT4All更好吗？',
+            a: '对大多数人来说是的。LM Studio应用内模型浏览器更大，并且定期更新。GPT4All仅更适合内存很小的机器，或需要MIT许可证代码库的情况。',
+          },
+          {
+            q: 'GPT4All还在维护吗？',
+            a: 'GPT4All自2025年2月25日的v3.10.0以来没有发布新版本，其主仓库的最后一次提交在2025年5月27日（GitHub）。它仍可安装和运行，但不应期待新功能、模型目录更新和修复。Jan和LM Studio在2026年10月都发布了多个版本。',
+          },
+          {
+            q: 'LM Studio和Jan哪个更好？',
+            a: 'LM Studio的模型浏览器更大。Jan是开源的（Apache 2.0），默认无遥测，还能连接云端服务商和MCP服务器。重视模型库规模选LM Studio，开源或隐私默认设置更重要时选Jan。',
+          },
+          {
+            q: '哪款应用2026年更新最频繁？',
+            a: 'Jan和LM Studio。Jan在2026年10月9日至28日间发布了v0.8.6、v0.8.7和v0.8.8，LM Studio的更新日志列出了2026年10月的0.4.26至0.4.28版本。GPT4All的最新版本是2025年2月25日的v3.10.0。请查看各项目的发布页面了解最新状态。',
           },
           {
             q: '这些应用能完全离线工作吗？',
@@ -1159,6 +1461,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '应该装三款都装吗？',
             a: '出于研究或对比目的——是。它们共享GGUF文件，所以磁盘成本主要只是应用二进制。日常使用就选一款坚持下去；中途切换会打乱提示词历史和聊天线程。',
           },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '来源',
+        links: [
+          { url: 'https://lmstudio.ai/changelog/lmstudio', title: 'LM Studio更新日志', description: '官方发布说明，用于确认2026年10月的0.4.26至0.4.28版本。' },
+          { url: 'https://lmstudio.ai/blog/free-for-work', title: 'LM Studio可免费用于工作', description: '2025年7月8日的官方公告，取消了单独的商业许可要求。' },
+          { url: 'https://lmstudio.ai/docs/app/basics/rag', title: 'LM Studio：与文档对话', description: '官方文档，说明如何在聊天中附加文档以及何时使用检索（RAG）。' },
+          { url: 'https://github.com/janhq/jan', title: 'GitHub上的Jan', description: '项目README，说明Apache 2.0许可证、本地API服务器、MCP支持和云端服务商集成。' },
+          { url: 'https://github.com/janhq/jan/releases', title: 'Jan发布页', description: '用于确认v0.8.6（10月9日）、v0.8.7（10月20日）和v0.8.8（2026年10月28日）的发布列表。' },
+          { url: 'https://www.jan.ai/docs/desktop/file-upload', title: 'Jan：文件上传', description: '官方文档，说明如何在聊天中附加图片和文档。' },
+          { url: 'https://github.com/nomic-ai/gpt4all/releases', title: 'GPT4All发布页', description: '用于确认v3.10.0（2025年2月25日）为最新版本的发布列表。' },
+          { url: 'https://github.com/nomic-ai/gpt4all', title: 'GitHub上的GPT4All', description: '代码仓库（MIT许可证），据GitHub API，其最后一次推送在2025年5月27日。' },
+          { url: 'https://docs.gpt4all.io/gpt4all_desktop/localdocs.html', title: 'GPT4All：LocalDocs', description: '官方文档，介绍与设备上的文件对话的LocalDocs功能。' },
         ],
       },
       relatedReading: {
@@ -1232,12 +1549,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Puntos clave', anchor: '#key-takeaways' },
       { label: 'Tabla comparativa', anchor: '#comparison-table' },
+      { label: 'LM Studio vs GPT4All vs Jan cara a cara', anchor: '#head-to-head' },
       { label: '¿Cuál deberías elegir?', anchor: '#which-one' },
       { label: 'Profundidad de la biblioteca de modelos', anchor: '#model-library' },
       { label: 'Privacidad y telemetría', anchor: '#privacy-telemetry' },
       { label: 'Soporte multiplataforma', anchor: '#cross-platform' },
       { label: 'Veredicto por caso de uso', anchor: '#verdict' },
+      { label: 'Dónde encajan Ollama y AnythingLLM', anchor: '#ollama-anythingllm' },
       { label: 'FAQ', anchor: '#faq' },
+      { label: 'Fuentes', anchor: '#sources' },
       { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
@@ -1265,6 +1585,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Criterio': 'RAM mínima (modelo 4B)', 'LM Studio': '6 GB', 'Jan': '6 GB', 'GPT4All': '4 GB' },
         ],
         columns: ['Criterio', '[LM Studio](https://lmstudio.ai)', '[Jan](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
+      },
+      headToHead: {
+        id: 'head-to-head',
+        title: 'LM Studio vs GPT4All vs Jan: ¿quién gana cara a cara?',
+        content: '**LM Studio supera a GPT4All en acceso a modelos y ritmo de actualizaciones; GPT4All conserva los requisitos más ligeros y una licencia MIT. Jan supera a ambas en apertura y privacidad por defecto.**',
+        items: [
+          '**LM Studio vs GPT4All** — LM Studio muestra modelos de Hugging Face en su navegador integrado y su registro de cambios lista las compilaciones 0.4.26 a 0.4.28 en octubre de 2026. GPT4All funciona con 4 GB de RAM y tiene licencia MIT, pero su última versión es la v3.10.0 del 25 de febrero de 2025. Elige LM Studio salvo que decidan la licencia MIT o el mínimo de 4 GB de RAM.',
+          '**LM Studio vs Jan** — LM Studio tiene el navegador de modelos integrado más grande; es de código cerrado, aunque su política de privacidad indica que no hay telemetría. Jan es Apache 2.0, no tiene telemetría por defecto y publicó la v0.8.6, la v0.8.7 y la v0.8.8 entre el 9 y el 28 de octubre de 2026. Elige Jan cuando el open source importe más que el navegador de modelos más grande.',
+          '**Jan vs GPT4All** — Las dos son open source (Apache 2.0 y MIT). Jan se mantiene activamente y también puede conectarse a proveedores en la nube y servidores MCP; GPT4All tiene los requisitos de hardware más ligeros y una función integrada de LocalDocs. Elige Jan si quieres una app mantenida, y GPT4All solo cuando su mínimo de 4 GB de RAM o su licencia MIT sean un requisito firme.',
+        ],
       },
       whichOne: {
         id: 'which-one',
@@ -1339,6 +1669,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Puedes instalar las tres en paralelo; comparten archivos de modelo GGUF, por lo que el coste en disco de probar varias apps es pequeño.',
         ],
       },
+      ollamaAnythingllm: {
+        id: 'ollama-anythingllm',
+        title: '¿Dónde encajan Ollama y AnythingLLM junto a estas tres?',
+        content: '**Ollama y AnythingLLM resuelven problemas distintos a los de estas tres apps de escritorio.** Ollama es un runtime que manejas desde la línea de comandos o una API; AnythingLLM es una interfaz de chat con documentos que se conecta a un servidor de modelos local.',
+        items: [
+          '**Ollama** — elígelo cuando quieras un servidor de modelos en segundo plano para scripts y otras herramientas. Consulta [Ollama vs LM Studio](/es/local-llms/ollama-vs-lm-studio) para ver el equilibrio entre runtime y app de escritorio.',
+          '**AnythingLLM** — elígelo cuando el chat con documentos sea la tarea principal y quieras espacios de trabajo y más control del que ofrece una app de chat. Consulta [AnythingLLM vs PrivateGPT vs Open WebUI](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) y [Apps de IA local con RAG integrado](/es/power-local-llm/local-ai-app-with-built-in-rag).',
+          '**Reseñas individuales** — la [reseña de LM Studio](/es/power-local-llm/lm-studio-review), la [reseña de Jan](/es/power-local-llm/jan-review) y la [reseña de GPT4All](/es/power-local-llm/gpt4all-review) cubren cada app con más detalle.',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Preguntas frecuentes',
@@ -1346,6 +1686,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '¿Son gratuitas LM Studio, Jan y GPT4All?',
             a: 'Las tres apps son 100 % gratuitas para uso personal y comercial. Jan y GPT4All son open source (Apache 2.0 y MIT respectivamente); LM Studio es gratuita pero propietaria.',
+          },
+          {
+            q: '¿Es LM Studio mejor que GPT4All?',
+            a: 'Para la mayoría de las personas, sí. LM Studio tiene un navegador de modelos integrado más grande y se actualiza con regularidad. GPT4All encaja mejor solo en equipos con muy poca RAM o cuando necesitas una base de código con licencia MIT.',
+          },
+          {
+            q: '¿Se sigue manteniendo GPT4All?',
+            a: 'GPT4All no ha publicado ninguna versión desde la v3.10.0 del 25 de febrero de 2025, y el último commit a su repositorio principal data del 27 de mayo de 2025 (GitHub). Sigue instalándose y funcionando, pero no deben esperarse nuevas funciones, actualizaciones del catálogo de modelos ni correcciones. Jan y LM Studio publicaron varias versiones en octubre de 2026.',
+          },
+          {
+            q: '¿Cuál es mejor, LM Studio o Jan?',
+            a: 'LM Studio tiene el navegador de modelos más grande. Jan es open source (Apache 2.0), no tiene telemetría por defecto y además se conecta a proveedores en la nube y servidores MCP. Elige LM Studio por el tamaño de la biblioteca, y Jan cuando importen más el open source o la privacidad por defecto.',
+          },
+          {
+            q: '¿Cuál app recibe actualizaciones más frecuentes en 2026?',
+            a: 'Jan y LM Studio. Jan publicó la v0.8.6, la v0.8.7 y la v0.8.8 entre el 9 y el 28 de octubre de 2026, y el changelog de LM Studio recoge las compilaciones 0.4.26 a 0.4.28 en octubre de 2026. La última versión de GPT4All es la v3.10.0 del 25 de febrero de 2025. Consulta la página de versiones de cada proyecto para ver el estado actual.',
           },
           {
             q: '¿Estas apps funcionan completamente sin conexión?',
@@ -1379,6 +1735,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Debería instalar las tres?',
             a: 'Para investigación o comparación, sí — comparten archivos GGUF, por lo que el coste en disco se limita básicamente a los binarios de las apps. Para uso diario, elige una y mantenla; cambiar de app a mitad de un flujo de trabajo interrumpe el historial de prompts y los hilos de chat.',
           },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        links: [
+          { url: 'https://lmstudio.ai/changelog/lmstudio', title: 'Changelog de LM Studio', description: 'Notas de versión oficiales, usadas para confirmar las compilaciones 0.4.26 a 0.4.28 en octubre de 2026.' },
+          { url: 'https://lmstudio.ai/blog/free-for-work', title: 'LM Studio es gratuita para uso laboral', description: 'Anuncio oficial del 8 de julio de 2025 que eliminó el requisito de licencia comercial independiente.' },
+          { url: 'https://lmstudio.ai/docs/app/basics/rag', title: 'LM Studio: chatear con documentos', description: 'Documentación oficial sobre cómo adjuntar documentos a un chat y cuándo se usa la recuperación (RAG).' },
+          { url: 'https://github.com/janhq/jan', title: 'Jan en GitHub', description: 'README del proyecto que indica la licencia Apache 2.0, el servidor de API local, el soporte MCP y las integraciones con proveedores en la nube.' },
+          { url: 'https://github.com/janhq/jan/releases', title: 'Versiones de Jan', description: 'Lista de versiones usada para confirmar la v0.8.6 (9 de octubre), la v0.8.7 (20 de octubre) y la v0.8.8 (28 de octubre de 2026).' },
+          { url: 'https://www.jan.ai/docs/desktop/file-upload', title: 'Jan: subida de archivos', description: 'Documentación oficial sobre cómo adjuntar imágenes y documentos en un chat.' },
+          { url: 'https://github.com/nomic-ai/gpt4all/releases', title: 'Versiones de GPT4All', description: 'Lista de versiones usada para confirmar la v3.10.0 (25 de febrero de 2025) como la última versión.' },
+          { url: 'https://github.com/nomic-ai/gpt4all', title: 'GPT4All en GitHub', description: 'Repositorio (licencia MIT) cuyo último push data del 27 de mayo de 2025 según la API de GitHub.' },
+          { url: 'https://docs.gpt4all.io/gpt4all_desktop/localdocs.html', title: 'GPT4All: LocalDocs', description: 'Documentación oficial de la función LocalDocs para chatear con archivos de tu dispositivo.' },
         ],
       },
       relatedReading: {
@@ -1452,12 +1823,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: '핵심 요약', anchor: '#key-takeaways' },
       { label: '비교 표', anchor: '#comparison-table' },
+      { label: 'LM Studio vs GPT4All vs Jan 직접 비교', anchor: '#head-to-head' },
       { label: '어떤 것을 선택해야 합니까?', anchor: '#which-one' },
       { label: '모델 라이브러리 깊이', anchor: '#model-library' },
       { label: '개인정보 및 텔레메트리', anchor: '#privacy-telemetry' },
       { label: '크로스플랫폼 지원', anchor: '#cross-platform' },
       { label: '사용 사례별 판정', anchor: '#verdict' },
+      { label: 'Ollama와 AnythingLLM의 위치', anchor: '#ollama-anythingllm' },
       { label: '자주 묻는 질문', anchor: '#faq' },
+      { label: '출처', anchor: '#sources' },
       { label: '관련 자료', anchor: '#related-reading' },
     ],
     sections: {
@@ -1485,6 +1859,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '기준': '최소 RAM(4B 모델)', 'LM Studio': '6 GB', 'Jan': '6 GB', 'GPT4All': '4 GB' },
         ],
         columns: ['기준', '[LM Studio](https://lmstudio.ai)', '[Jan](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
+      },
+      headToHead: {
+        id: 'head-to-head',
+        title: 'LM Studio vs GPT4All vs Jan: 직접 비교하면 누가 이깁니까?',
+        content: '**LM Studio는 모델 접근성과 업데이트 속도에서 GPT4All을 앞서고, GPT4All은 가장 낮은 사양 요구와 MIT 라이선스를 유지합니다. Jan은 개방성과 개인정보 보호 기본값에서 둘 다 앞섭니다.**',
+        items: [
+          '**LM Studio vs GPT4All** — LM Studio는 내장 브라우저에 Hugging Face 모델을 표시하며, 변경 내역에는 2026년 10월의 0.4.26부터 0.4.28까지 빌드가 기재되어 있습니다. GPT4All은 RAM 4 GB로 실행되며 MIT 라이선스이지만, 최신 릴리스는 2025년 2월 25일의 v3.10.0입니다. MIT 라이선스나 RAM 4 GB 하한이 결정 요인이 아니라면 LM Studio를 선택하십시오.',
+          '**LM Studio vs Jan** — LM Studio는 앱 내 모델 브라우저가 더 큽니다. 비공개 소스이지만 개인정보 처리방침상 텔레메트리는 없습니다. Jan은 Apache 2.0이고 기본적으로 텔레메트리가 없으며, 2026년 10월 9일부터 28일 사이에 v0.8.6, v0.8.7, v0.8.8을 공개했습니다. 더 큰 모델 브라우저보다 오픈소스가 더 중요하다면 Jan을 선택하십시오.',
+          '**Jan vs GPT4All** — 둘 다 오픈소스(Apache 2.0과 MIT)입니다. Jan은 활발히 유지보수되며 클라우드 제공자와 MCP 서버에도 연결할 수 있습니다. GPT4All은 하드웨어 요구 사양이 더 낮고 LocalDocs 기능을 내장하고 있습니다. 유지보수되는 앱이 필요하면 Jan을, RAM 4 GB 하한이나 MIT 라이선스가 필수 조건일 때만 GPT4All을 선택하십시오.',
+        ],
       },
       whichOne: {
         id: 'which-one',
@@ -1559,6 +1943,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '세 가지를 병렬로 설치할 수 있습니다. GGUF 모델 파일을 공유하므로 여러 앱을 시도하는 디스크 비용은 작습니다.',
         ],
       },
+      ollamaAnythingllm: {
+        id: 'ollama-anythingllm',
+        title: 'Ollama와 AnythingLLM은 이 세 앱과 어떤 관계입니까?',
+        content: '**Ollama와 AnythingLLM은 이 세 데스크톱 앱과는 다른 문제를 해결합니다.** Ollama는 명령줄이나 API로 제어하는 런타임이고, AnythingLLM은 로컬 모델 서버에 연결하는 문서 채팅 인터페이스입니다.',
+        items: [
+          '**Ollama** — 스크립트와 다른 도구를 위한 백그라운드 모델 서버가 필요할 때 선택하십시오. 런타임과 데스크톱 앱의 장단점은 [Ollama vs LM Studio](/ko/local-llms/ollama-vs-lm-studio)를 참고하십시오.',
+          '**AnythingLLM** — 문서 채팅이 주된 용도이고 채팅 앱보다 워크스페이스와 더 많은 제어가 필요할 때 선택하십시오. [AnythingLLM vs PrivateGPT vs Open WebUI](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)와 [RAG 내장 로컬 AI 앱](/ko/power-local-llm/local-ai-app-with-built-in-rag)을 참고하십시오.',
+          '**개별 리뷰** — [LM Studio 리뷰](/ko/power-local-llm/lm-studio-review), [Jan 리뷰](/ko/power-local-llm/jan-review), [GPT4All 리뷰](/ko/power-local-llm/gpt4all-review)에서 각 앱을 더 자세히 다룹니다.',
+        ],
+      },
       faq: {
         id: 'faq',
         title: '자주 묻는 질문',
@@ -1566,6 +1960,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'LM Studio, Jan, GPT4All은 무료입니까?',
             a: '세 앱 모두 개인 및 상업적 사용에 100% 무료입니다. Jan과 GPT4All은 오픈소스(각각 Apache 2.0, MIT)이고 LM Studio는 무료이지만 독점입니다.',
+          },
+          {
+            q: 'LM Studio가 GPT4All보다 낫습니까?',
+            a: '대부분의 사용자에게는 그렇습니다. LM Studio는 앱 내 모델 브라우저가 더 크며 정기적으로 업데이트됩니다. GPT4All이 더 적합한 경우는 RAM이 매우 적은 기기이거나 MIT 라이선스 코드 기반이 필요할 때뿐입니다.',
+          },
+          {
+            q: 'GPT4All은 아직 유지 관리되고 있습니까?',
+            a: 'GPT4All은 2025년 2월 25일의 v3.10.0 이후 릴리스를 공개하지 않았고, 기본 저장소의 마지막 커밋은 2025년 5월 27일(GitHub)입니다. 설치와 실행은 여전히 되지만 새 기능, 모델 카탈로그 업데이트, 수정은 기대하기 어렵습니다. Jan과 LM Studio는 2026년 10월에 각각 여러 차례 릴리스를 공개했습니다.',
+          },
+          {
+            q: 'LM Studio와 Jan 중 어느 쪽이 더 낫습니까?',
+            a: 'LM Studio는 모델 브라우저가 더 큽니다. Jan은 오픈소스(Apache 2.0)이고 기본적으로 텔레메트리가 없으며 클라우드 제공자와 MCP 서버에도 연결합니다. 라이브러리 크기가 중요하면 LM Studio를, 오픈소스나 개인정보 보호 기본값이 더 중요하면 Jan을 선택하십시오.',
+          },
+          {
+            q: '2026년에 어떤 앱이 가장 자주 업데이트됩니까?',
+            a: 'Jan과 LM Studio입니다. Jan은 2026년 10월 9일부터 28일 사이에 v0.8.6, v0.8.7, v0.8.8을 공개했고, LM Studio의 변경 내역에는 2026년 10월에 0.4.26부터 0.4.28까지 빌드가 올라 있습니다. GPT4All의 최신 릴리스는 2025년 2월 25일의 v3.10.0입니다. 현재 상태는 각 프로젝트의 릴리스 페이지에서 확인하십시오.',
           },
           {
             q: '이 앱들은 완전히 오프라인으로 작동합니까?',
@@ -1599,6 +2009,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '세 가지 모두 설치해야 합니까?',
             a: '연구나 비교를 위해서라면 예 — GGUF 파일을 공유하므로 디스크 비용은 기본적으로 앱 바이너리로 제한됩니다. 일상적인 사용에서는 하나를 선택하고 유지하십시오. 워크플로 중간에 앱을 변경하면 프롬프트 기록과 채팅 스레드가 중단됩니다.',
           },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        links: [
+          { url: 'https://lmstudio.ai/changelog/lmstudio', title: 'LM Studio 변경 내역', description: '공식 릴리스 노트. 2026년 10월의 빌드 0.4.26~0.4.28 확인에 사용했습니다.' },
+          { url: 'https://lmstudio.ai/blog/free-for-work', title: 'LM Studio, 업무용 무료 제공', description: '별도 상업 라이선스 요구 사항을 없앤 2025년 7월 8일의 공식 발표.' },
+          { url: 'https://lmstudio.ai/docs/app/basics/rag', title: 'LM Studio: 문서와 채팅', description: '채팅에 문서를 첨부하는 방법과 검색(RAG)이 사용되는 경우에 대한 공식 문서.' },
+          { url: 'https://github.com/janhq/jan', title: 'GitHub의 Jan', description: 'Apache 2.0 라이선스, 로컬 API 서버, MCP 지원, 클라우드 제공자 연동을 명시한 프로젝트 README.' },
+          { url: 'https://github.com/janhq/jan/releases', title: 'Jan 릴리스', description: 'v0.8.6(10월 9일), v0.8.7(10월 20일), v0.8.8(2026년 10월 28일) 확인에 사용한 릴리스 목록.' },
+          { url: 'https://www.jan.ai/docs/desktop/file-upload', title: 'Jan: 파일 업로드', description: '채팅에 이미지와 문서를 첨부하는 방법에 대한 공식 문서.' },
+          { url: 'https://github.com/nomic-ai/gpt4all/releases', title: 'GPT4All 릴리스', description: 'v3.10.0(2025년 2월 25일)이 최신 릴리스임을 확인하는 데 사용한 릴리스 목록.' },
+          { url: 'https://github.com/nomic-ai/gpt4all', title: 'GitHub의 GPT4All', description: 'GitHub API에 따르면 마지막 푸시가 2025년 5월 27일인 저장소(MIT 라이선스).' },
+          { url: 'https://docs.gpt4all.io/gpt4all_desktop/localdocs.html', title: 'GPT4All: LocalDocs', description: '기기의 파일과 채팅하는 LocalDocs 기능에 대한 공식 문서.' },
         ],
       },
       relatedReading: {
@@ -1672,12 +2097,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Pontos principais', anchor: '#key-takeaways' },
       { label: 'Tabela comparativa', anchor: '#comparison-table' },
+      { label: 'LM Studio vs GPT4All vs Jan frente a frente', anchor: '#head-to-head' },
       { label: 'Qual você deve escolher?', anchor: '#which-one' },
       { label: 'Profundidade da biblioteca de modelos', anchor: '#model-library' },
       { label: 'Privacidade e telemetria', anchor: '#privacy-telemetry' },
       { label: 'Suporte multiplataforma', anchor: '#cross-platform' },
       { label: 'Veredito por caso de uso', anchor: '#verdict' },
+      { label: 'Onde entram o Ollama e o AnythingLLM', anchor: '#ollama-anythingllm' },
       { label: 'FAQ', anchor: '#faq' },
+      { label: 'Fontes', anchor: '#sources' },
       { label: 'Leituras relacionadas', anchor: '#related-reading' },
     ],
     sections: {
@@ -1705,6 +2133,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Criterion': 'RAM mínima (modelo 4B)', 'LM Studio': '6 GB', 'Jan': '6 GB', 'GPT4All': '4 GB' },
         ],
         columns: ['Criterion', '[LM Studio](https://lmstudio.ai)', '[Jan](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
+      },
+      headToHead: {
+        id: 'head-to-head',
+        title: 'LM Studio vs GPT4All vs Jan: quem vence frente a frente?',
+        content: '**O LM Studio supera o GPT4All em acesso a modelos e ritmo de atualização; o GPT4All mantém os requisitos mais leves e a licença MIT. O Jan supera os dois em abertura e padrões de privacidade.**',
+        items: [
+          '**LM Studio vs GPT4All** — O LM Studio mostra modelos do Hugging Face em seu navegador integrado, e seu changelog lista as builds 0.4.26 a 0.4.28 em outubro de 2026. O GPT4All roda com 4 GB de RAM e é licenciado sob MIT, mas sua versão mais recente é a v3.10.0, de 25 de fevereiro de 2025. Escolha o LM Studio, a menos que a licença MIT ou o piso de 4 GB de RAM decida.',
+          '**LM Studio vs Jan** — O LM Studio tem o navegador de modelos integrado maior; é de código fechado, embora sua política de privacidade afirme que não há telemetria. O Jan é Apache 2.0, não tem telemetria por padrão e publicou as versões v0.8.6, v0.8.7 e v0.8.8 entre 9 e 28 de outubro de 2026. Escolha o Jan quando o open source importar mais que o navegador de modelos maior.',
+          '**Jan vs GPT4All** — Os dois são open source (Apache 2.0 e MIT). O Jan é mantido ativamente e também pode se conectar a provedores de nuvem e servidores MCP; o GPT4All tem os requisitos de hardware mais leves e um recurso LocalDocs integrado. Escolha o Jan para um app mantido, e o GPT4All apenas quando o piso de 4 GB de RAM ou a licença MIT for requisito firme.',
+        ],
       },
       whichOne: {
         id: 'which-one',
@@ -1779,6 +2217,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Você pode instalar os três lado a lado; eles compartilham arquivos de modelo GGUF, então o custo em disco de testar vários apps é pequeno.',
         ],
       },
+      ollamaAnythingllm: {
+        id: 'ollama-anythingllm',
+        title: 'Onde entram o Ollama e o AnythingLLM ao lado desses três?',
+        content: '**O Ollama e o AnythingLLM resolvem problemas diferentes dos desses três apps de desktop.** O Ollama é um runtime que você controla pela linha de comando ou por uma API; o AnythingLLM é uma interface de chat com documentos que se conecta a um servidor de modelos local.',
+        items: [
+          '**Ollama** — escolha-o quando quiser um servidor de modelos em segundo plano para scripts e outras ferramentas. Veja [Ollama vs LM Studio](/pt/local-llms/ollama-vs-lm-studio) para entender a diferença entre runtime e app de desktop.',
+          '**AnythingLLM** — escolha-o quando o chat com documentos for a tarefa principal e você quiser workspaces e mais controle do que um app de chat oferece. Veja [AnythingLLM vs PrivateGPT vs Open WebUI](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) e [Apps de IA local com RAG integrado](/pt/power-local-llm/local-ai-app-with-built-in-rag).',
+          '**Análises individuais** — a [análise do LM Studio](/pt/power-local-llm/lm-studio-review), a [análise do Jan](/pt/power-local-llm/jan-review) e a [análise do GPT4All](/pt/power-local-llm/gpt4all-review) cobrem cada app com mais profundidade.',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Perguntas frequentes',
@@ -1786,6 +2234,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'O LM Studio, o Jan e o GPT4All são gratuitos?',
             a: 'Os três apps são 100% gratuitos para uso pessoal e comercial. O Jan e o GPT4All são open source (Apache 2.0 e MIT respectivamente); o LM Studio é gratuito, mas proprietário.',
+          },
+          {
+            q: 'O LM Studio é melhor que o GPT4All?',
+            a: 'Para a maioria das pessoas, sim. O LM Studio tem um navegador de modelos integrado maior e é atualizado com regularidade. O GPT4All é a melhor opção apenas em máquinas com muito pouca RAM ou quando você precisa de uma base de código com licença MIT.',
+          },
+          {
+            q: 'O GPT4All ainda é mantido?',
+            a: 'O GPT4All não publica uma versão desde a v3.10.0, de 25 de fevereiro de 2025, e o último commit no repositório principal é de 27 de maio de 2025 (GitHub). Ele ainda instala e roda, mas não se deve esperar novos recursos, atualizações do catálogo de modelos nem correções. O Jan e o LM Studio publicaram várias versões em outubro de 2026.',
+          },
+          {
+            q: 'Qual é melhor, LM Studio ou Jan?',
+            a: 'O LM Studio tem o maior navegador de modelos. O Jan é open source (Apache 2.0), não tem telemetria por padrão e também se conecta a provedores de nuvem e servidores MCP. Escolha o LM Studio pelo tamanho da biblioteca, e o Jan quando open source ou padrões de privacidade importarem mais.',
+          },
+          {
+            q: 'Qual app recebe atualizações com mais frequência em 2026?',
+            a: 'O Jan e o LM Studio. O Jan publicou as versões v0.8.6, v0.8.7 e v0.8.8 entre 9 e 28 de outubro de 2026, e o changelog do LM Studio lista as builds 0.4.26 a 0.4.28 em outubro de 2026. A versão mais recente do GPT4All é a v3.10.0, de 25 de fevereiro de 2025. Consulte a página de lançamentos de cada projeto para ver o estado atual.',
           },
           {
             q: 'Esses apps funcionam totalmente offline?',
@@ -1819,6 +2283,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Devo instalar os três?',
             a: 'Para pesquisa ou comparação, sim — eles compartilham arquivos GGUF, então o custo em disco se limita basicamente aos binários dos apps. Para uso diário, escolha um e mantenha-o; trocar de app no meio de um fluxo de trabalho interrompe o histórico de prompts e os tópicos de chat.',
           },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fontes',
+        links: [
+          { url: 'https://lmstudio.ai/changelog/lmstudio', title: 'Changelog do LM Studio', description: 'Notas de versão oficiais, usadas para confirmar as builds 0.4.26 a 0.4.28 em outubro de 2026.' },
+          { url: 'https://lmstudio.ai/blog/free-for-work', title: 'LM Studio é gratuito para uso profissional', description: 'Anúncio oficial de 8 de julho de 2025 que eliminou a exigência de licença comercial separada.' },
+          { url: 'https://lmstudio.ai/docs/app/basics/rag', title: 'LM Studio: chat com documentos', description: 'Documentação oficial sobre como anexar documentos a um chat e quando a recuperação (RAG) é usada.' },
+          { url: 'https://github.com/janhq/jan', title: 'Jan no GitHub', description: 'README do projeto que informa a licença Apache 2.0, o servidor de API local, o suporte a MCP e as integrações com provedores de nuvem.' },
+          { url: 'https://github.com/janhq/jan/releases', title: 'Versões do Jan', description: 'Lista de versões usada para confirmar a v0.8.6 (9 de outubro), a v0.8.7 (20 de outubro) e a v0.8.8 (28 de outubro de 2026).' },
+          { url: 'https://www.jan.ai/docs/desktop/file-upload', title: 'Jan: envio de arquivos', description: 'Documentação oficial sobre como anexar imagens e documentos em um chat.' },
+          { url: 'https://github.com/nomic-ai/gpt4all/releases', title: 'Versões do GPT4All', description: 'Lista de versões usada para confirmar a v3.10.0 (25 de fevereiro de 2025) como a mais recente.' },
+          { url: 'https://github.com/nomic-ai/gpt4all', title: 'GPT4All no GitHub', description: 'Repositório (licença MIT) cujo último push é de 27 de maio de 2025, segundo a API do GitHub.' },
+          { url: 'https://docs.gpt4all.io/gpt4all_desktop/localdocs.html', title: 'GPT4All: LocalDocs', description: 'Documentação oficial do recurso LocalDocs para conversar com arquivos no seu dispositivo.' },
         ],
       },
       relatedReading: {
@@ -1892,12 +2371,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
       { label: 'جدول المقارنة', anchor: '#comparison-table' },
+      { label: 'LM Studio مقابل GPT4All مقابل Jan وجهاً لوجه', anchor: '#head-to-head' },
       { label: 'أيّها يجب أن تختار؟', anchor: '#which-one' },
       { label: 'عمق مكتبة النماذج', anchor: '#model-library' },
       { label: 'الخصوصية والقياس عن بُعد', anchor: '#privacy-telemetry' },
       { label: 'الدعم عبر المنصات', anchor: '#cross-platform' },
       { label: 'الحكم حسب حالة الاستخدام', anchor: '#verdict' },
+      { label: 'أين يقع Ollama وAnythingLLM', anchor: '#ollama-anythingllm' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
+      { label: 'المصادر', anchor: '#sources' },
       { label: 'قراءة ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
@@ -1926,6 +2408,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'المعيار': 'الحد الأدنى من RAM (نموذج 4B)', 'LM Studio': '6 جيجابايت', 'Jan': '6 جيجابايت', 'GPT4All': '4 جيجابايت' },
         ],
         columns: ['المعيار', '[LM Studio](https://lmstudio.ai)', '[Jan](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
+      },
+      headToHead: {
+        id: 'head-to-head',
+        title: 'LM Studio مقابل GPT4All مقابل Jan: من يفوز وجهاً لوجه؟',
+        content: '**LM Studio يتفوق على GPT4All في الوصول إلى النماذج ووتيرة التحديث؛ ويحتفظ GPT4All بأخف متطلبات وبترخيص MIT. أما Jan فيتفوق على الاثنين في الانفتاح وإعدادات الخصوصية الافتراضية.**',
+        items: [
+          '**LM Studio مقابل GPT4All** — يعرض LM Studio نماذج Hugging Face في متصفحه المدمج، ويذكر سجل التغييرات فيه الإصدارات من 0.4.26 إلى 0.4.28 في أكتوبر 2026. أما GPT4All فيعمل بـ4 جيجابايت RAM، وهو بترخيص MIT، لكن أحدث إصدار له هو v3.10.0 بتاريخ 25 فبراير 2025. اختر LM Studio ما لم يحسم الأمرَ ترخيص MIT أو حد الـ4 جيجابايت RAM.',
+          '**LM Studio مقابل Jan** — لدى LM Studio متصفح نماذج مدمج أكبر؛ وهو مغلق المصدر، مع أن سياسة الخصوصية فيه تنص على عدم وجود قياس عن بُعد. Jan بترخيص Apache 2.0، وبلا قياس عن بُعد افتراضياً، ونشر v0.8.6 وv0.8.7 وv0.8.8 بين 9 و28 أكتوبر 2026. اختر Jan حين يهمك المصدر المفتوح أكثر من متصفح النماذج الأكبر.',
+          '**Jan مقابل GPT4All** — كلاهما مفتوح المصدر (Apache 2.0 وMIT). يُصان Jan بنشاط ويمكنه أيضاً الاتصال بمزوّدي السحابة وخوادم MCP؛ أما GPT4All فمتطلبات عتاده أخف وفيه ميزة LocalDocs مدمجة. اختر Jan لتطبيق يُصان، ولا تختر GPT4All إلا إذا كان حد الـ4 جيجابايت RAM أو ترخيص MIT شرطاً لا غنى عنه.',
+        ],
       },
       whichOne: {
         id: 'which-one',
@@ -2000,6 +2492,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يمكنك تثبيت الثلاثة بالتوازي؛ تتشارك ملفات النماذج GGUF، لذا فإن تكلفة القرص لتجربة تطبيقات متعددة صغيرة.',
         ],
       },
+      ollamaAnythingllm: {
+        id: 'ollama-anythingllm',
+        title: 'أين يقع Ollama وAnythingLLM مقارنةً بهذه التطبيقات الثلاثة؟',
+        content: '**يحلّ Ollama وAnythingLLM مشكلات مختلفة عن تطبيقات سطح المكتب الثلاثة هذه.** Ollama بيئة تشغيل تتحكم بها من سطر الأوامر أو عبر API؛ أما AnythingLLM فهو واجهة للدردشة مع المستندات تتصل بخادم نماذج محلي.',
+        items: [
+          '**Ollama** — اختره حين تريد خادم نماذج في الخلفية للسكريبتات والأدوات الأخرى. راجع [Ollama مقابل LM Studio](/ar/local-llms/ollama-vs-lm-studio) لمقايضة بيئة التشغيل مقابل تطبيق سطح المكتب.',
+          '**AnythingLLM** — اختره حين تكون الدردشة مع المستندات هي المهمة الرئيسية وتريد مساحات عمل وتحكماً أكبر مما يقدمه تطبيق دردشة. راجع [AnythingLLM مقابل PrivateGPT مقابل Open WebUI](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) و[تطبيقات الذكاء الاصطناعي المحلي مع RAG مدمج](/ar/power-local-llm/local-ai-app-with-built-in-rag).',
+          '**المراجعات الفردية** — [مراجعة LM Studio](/ar/power-local-llm/lm-studio-review) و[مراجعة Jan](/ar/power-local-llm/jan-review) و[مراجعة GPT4All](/ar/power-local-llm/gpt4all-review) تتناول كل تطبيق بمزيد من العمق.',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'الأسئلة الشائعة',
@@ -2007,6 +2509,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'هل تطبيقات LM Studio وJan وGPT4All مجانية؟',
             a: 'الثلاثة مجانية 100% للاستخدام الشخصي والتجاري. Jan وGPT4All مفتوحا المصدر (Apache 2.0 وMIT على التوالي)؛ LM Studio مجاني لكن مملوك.',
+          },
+          {
+            q: 'هل LM Studio أفضل من GPT4All؟',
+            a: 'لمعظم الناس، نعم. لدى LM Studio متصفح نماذج مدمج أكبر ويُحدَّث بانتظام. GPT4All أنسب فقط على الأجهزة ذات ذاكرة RAM قليلة جداً أو حين تحتاج قاعدة شفرة بترخيص MIT.',
+          },
+          {
+            q: 'هل GPT4All لا يزال مُصاناً؟',
+            a: 'لم يصدر GPT4All أي إصدار منذ v3.10.0 في 25 فبراير 2025، وآخر commit في مستودعه الرئيسي يعود إلى 27 مايو 2025 (GitHub). لا يزال يُثبَّت ويعمل، لكن لا ينبغي توقّع ميزات جديدة أو تحديثات لكتالوج النماذج أو إصلاحات. أما Jan وLM Studio فقد نشرا عدة إصدارات في أكتوبر 2026.',
+          },
+          {
+            q: 'أيهما أفضل، LM Studio أم Jan؟',
+            a: 'لدى LM Studio متصفح نماذج أكبر. Jan مفتوح المصدر (Apache 2.0)، وبلا قياس عن بُعد افتراضياً، ويتصل أيضاً بمزوّدي السحابة وخوادم MCP. اختر LM Studio لحجم المكتبة، واختر Jan حين يهمك المصدر المفتوح أو إعدادات الخصوصية أكثر.',
+          },
+          {
+            q: 'أيّ تطبيق يحصل على تحديثات أكثر تواتراً في 2026؟',
+            a: 'Jan وLM Studio. نشر Jan الإصدارات v0.8.6 وv0.8.7 وv0.8.8 بين 9 و28 أكتوبر 2026، ويذكر سجل تغييرات LM Studio إصدارات من 0.4.26 إلى 0.4.28 في أكتوبر 2026. أما أحدث إصدار من GPT4All فهو v3.10.0 بتاريخ 25 فبراير 2025. راجع صفحة الإصدارات لكل مشروع لمعرفة الوضع الحالي.',
           },
           {
             q: 'هل تعمل هذه التطبيقات بشكل كامل بدون اتصال؟',
@@ -2040,6 +2558,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'هل يجب أن أثبّت الثلاثة؟',
             a: 'للبحث أو المقارنة، نعم — تتشارك ملفات GGUF، لذا فإن تكلفة القرص تقتصر أساساً على ثنائيات التطبيقات. للاستخدام اليومي، اختر واحداً وحافظ عليه؛ تغيير التطبيقات في منتصف سير عمل يُعطّل سجل الـprompts وخيوط الدردشة.',
           },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'المصادر',
+        links: [
+          { url: 'https://lmstudio.ai/changelog/lmstudio', title: 'سجل تغييرات LM Studio', description: 'ملاحظات الإصدار الرسمية، استُخدمت لتأكيد الإصدارات من 0.4.26 إلى 0.4.28 في أكتوبر 2026.' },
+          { url: 'https://lmstudio.ai/blog/free-for-work', title: 'LM Studio مجاني للاستخدام في العمل', description: 'الإعلان الرسمي بتاريخ 8 يوليو 2025 الذي أسقط اشتراط الترخيص التجاري المنفصل.' },
+          { url: 'https://lmstudio.ai/docs/app/basics/rag', title: 'LM Studio: الدردشة مع المستندات', description: 'التوثيق الرسمي لإرفاق المستندات بالمحادثة ومتى يُستخدم الاسترجاع (RAG).' },
+          { url: 'https://github.com/janhq/jan', title: 'Jan على GitHub', description: 'ملف README للمشروع الذي يذكر ترخيص Apache 2.0 وخادم API المحلي ودعم MCP وتكاملات مزوّدي السحابة.' },
+          { url: 'https://github.com/janhq/jan/releases', title: 'إصدارات Jan', description: 'قائمة الإصدارات المستخدمة لتأكيد v0.8.6 (9 أكتوبر) وv0.8.7 (20 أكتوبر) وv0.8.8 (28 أكتوبر 2026).' },
+          { url: 'https://www.jan.ai/docs/desktop/file-upload', title: 'Jan: رفع الملفات', description: 'التوثيق الرسمي لإرفاق الصور والمستندات بالمحادثة.' },
+          { url: 'https://github.com/nomic-ai/gpt4all/releases', title: 'إصدارات GPT4All', description: 'قائمة الإصدارات المستخدمة لتأكيد v3.10.0 (25 فبراير 2025) كأحدث إصدار.' },
+          { url: 'https://github.com/nomic-ai/gpt4all', title: 'GPT4All على GitHub', description: 'المستودع (ترخيص MIT) الذي يعود آخر push فيه إلى 27 مايو 2025 وفق GitHub API.' },
+          { url: 'https://docs.gpt4all.io/gpt4all_desktop/localdocs.html', title: 'GPT4All: LocalDocs', description: 'التوثيق الرسمي لميزة LocalDocs للدردشة مع الملفات الموجودة على جهازك.' },
         ],
       },
       relatedReading: {
