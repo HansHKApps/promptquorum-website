@@ -15,10 +15,10 @@ export const app: ToolRecord = {
   platforms: ['mac', 'win', 'linux', 'web'],
   worksWith: ['Ollama', 'OpenAI API'],
   engine: 'external',
-  license: 'BSD 3-Clause',
+  license: 'Source-available (Open WebUI License, BSD-3-based with branding clause)', // LICENSE file on main (read 2026-11-02): BSD-style terms + clause 4 forbids removing "Open WebUI" branding above 50 end users per rolling 30 days without written permission or an Enterprise license; GitHub API reports NOASSERTION. Plain BSD-3-Clause applied only through v0.6.5.
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/open-webui/open-webui README and docs.openwebui.com/getting-started: installable via pip/Docker/Kubernetes with "lightweight installs for low-resource" setups mentioned, but no numeric RAM/VRAM minimum is published for the UI container itself, which is provider-agnostic (Ollama or any OpenAI-compatible API) — verified 2026-09-13
-  stars: 156548,
+  stars: 157539,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat'],
@@ -38,6 +38,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { dockerDeploy: true, ollama: true, customEndpoint: true, mcp: true, fileChat: true, multiUser: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2026-11-02', // GitHub API (latest release v0.12.5 on 2026-10-29, last push 2026-11-02 — newer wins), read 2026-11-02
   lastUpstreamUpdateSource: 'https://github.com/open-webui/open-webui',
 }
