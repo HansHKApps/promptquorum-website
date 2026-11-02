@@ -13499,5 +13499,342 @@
       "period": "28d to 2026-11-01"
     },
     "deployedAt": null
+  },
+  {
+    "id": "d40aef52-9d2d-4d12-849b-db588794d7ed",
+    "slug": "/power-local-llm/automatic1111-review",
+    "date": "2026-11-02T14:39:55.106Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "AUTOMATIC1111 review 2026: what Stable Diffusion WebUI actually is, verified maintenance status (last commit and release dates), AGPL-3.0 license, ControlNet extension, hardware needs, and how it compares with Forge, ComfyUI, and InvokeAI.",
+        "new": "AUTOMATIC1111 review: what Stable Diffusion WebUI is, its verified maintenance status, AGPL-3.0 license, ControlNet, hardware needs and alternatives."
+      },
+      {
+        "field": "sections",
+        "old": "Forge and ControlNet presented as maintained; no stale warning; stale open-issue/star counts",
+        "new": "stale warning in lead and TL;DR callout, maintenance table with Forge and ControlNet rows, verdict not softened, 2 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh (review-top100 pilot rank 4): upstream dead-project warning added (no update since 2026-03-02, last release v1.10.1 2025-02-09), Forge and ControlNet-extension status corrected from GitHub API (Forge last push 2025-07-31, sd-webui-controlnet 2024-08-12), typed star count and open-issue count updated, verdict not softened, 2 new FAQs, lead cut to 49 words, meta rewritten. GSC: top queries are navigational (automatic1111).",
+    "queries": [
+      "automatic1111",
+      "stable diffusion automatic1111",
+      "self-hosted stable diffusion (automatic1111, forge, comfyui)",
+      "stable diffusion webui (automatic1111)",
+      "what is automatic1111"
+    ],
+    "baseline": {
+      "position": 7.59,
+      "impressions": 5416,
+      "clicks": 17,
+      "ctr": 0.003138847858197932,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "faccfa3a-3f7e-4b96-b906-40ebc7a06ee2",
+    "slug": "/de/power-local-llm/automatic1111-review",
+    "date": "2026-11-02T14:39:55.135Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "AUTOMATIC1111-Rezension 2026: was Stable Diffusion WebUI tatsächlich ist, verifizierter Wartungsstatus (letzte Commits und Release-Daten), AGPL-3.0-Lizenz, ControlNet-Extension, Hardware-Bedarf und Vergleich mit Forge, ComfyUI und InvokeAI.",
+        "new": "AUTOMATIC1111-Review: Was Stable Diffusion WebUI ist, geprüfter Wartungsstatus, AGPL-3.0-Lizenz, ControlNet, Hardwarebedarf und Alternativen im Vergleich."
+      },
+      {
+        "field": "sections",
+        "old": "Forge and ControlNet presented as maintained; no stale warning; stale open-issue/star counts",
+        "new": "stale warning in lead and TL;DR callout, maintenance table with Forge and ControlNet rows, verdict not softened, 2 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (thin or navigational query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "no query rows in window"
+    ],
+    "baseline": {
+      "position": 5.99,
+      "impressions": 85,
+      "clicks": 1,
+      "ctr": 0.011764705882352941,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6e2e64d7-9818-4294-aecb-177d8b6d8ca3",
+    "slug": "/fr/power-local-llm/automatic1111-review",
+    "date": "2026-11-02T14:39:55.164Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Avis AUTOMATIC1111 2026 : ce qu'est réellement Stable Diffusion WebUI, état de maintenance vérifié (dates de commits et de versions), licence AGPL-3.0, extension ControlNet, besoins matériels et comparaison avec Forge, ComfyUI et InvokeAI.",
+        "new": "Avis AUTOMATIC1111 : ce qu'est Stable Diffusion WebUI, état de maintenance vérifié, licence AGPL-3.0, ControlNet, matériel requis et alternatives."
+      },
+      {
+        "field": "sections",
+        "old": "Forge and ControlNet presented as maintained; no stale warning; stale open-issue/star counts",
+        "new": "stale warning in lead and TL;DR callout, maintenance table with Forge and ControlNet rows, verdict not softened, 2 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (thin or navigational query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "automatic1111",
+      "automatic 1111",
+      "stable diffusion webui"
+    ],
+    "baseline": {
+      "position": 6.03,
+      "impressions": 516,
+      "clicks": 5,
+      "ctr": 0.009689922480620155,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8286a73e-dd73-4e16-9552-d96759d62206",
+    "slug": "/es/power-local-llm/automatic1111-review",
+    "date": "2026-11-02T14:39:55.192Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Reseña de AUTOMATIC1111 2026: qué es realmente Stable Diffusion WebUI, estado de mantenimiento verificado (fechas de commits y releases), licencia AGPL-3.0, extensión ControlNet, requisitos de hardware y comparación con Forge, ComfyUI e InvokeAI.",
+        "new": "Reseña de AUTOMATIC1111: qué es Stable Diffusion WebUI, estado de mantenimiento verificado, licencia AGPL-3.0, ControlNet, hardware y alternativas."
+      },
+      {
+        "field": "sections",
+        "old": "Forge and ControlNet presented as maintained; no stale warning; stale open-issue/star counts",
+        "new": "stale warning in lead and TL;DR callout, maintenance table with Forge and ControlNet rows, verdict not softened, 2 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (thin or navigational query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "automatic1111",
+      "automatic 1111",
+      "automatic1111 webui",
+      "a1111"
+    ],
+    "baseline": {
+      "position": 7.77,
+      "impressions": 854,
+      "clicks": 4,
+      "ctr": 0.00468384074941452,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d1ad13b3-3a5f-43a8-b2db-8c1cdae3d093",
+    "slug": "/pt/power-local-llm/automatic1111-review",
+    "date": "2026-11-02T14:39:55.220Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Análise do AUTOMATIC1111 2026: o que o Stable Diffusion WebUI realmente é, status de manutenção verificado (datas de commits e releases), licença AGPL-3.0, extensão ControlNet, requisitos de hardware e comparação com Forge, ComfyUI e InvokeAI.",
+        "new": "Análise do AUTOMATIC1111: o que é o Stable Diffusion WebUI, status de manutenção verificado, licença AGPL-3.0, ControlNet, hardware e alternativas."
+      },
+      {
+        "field": "sections",
+        "old": "Forge and ControlNet presented as maintained; no stale warning; stale open-issue/star counts",
+        "new": "stale warning in lead and TL;DR callout, maintenance table with Forge and ControlNet rows, verdict not softened, 2 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (thin or navigational query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "automatic1111",
+      "automatic1111 webui",
+      "automatic 1111",
+      "a1111"
+    ],
+    "baseline": {
+      "position": 6.2,
+      "impressions": 444,
+      "clicks": 1,
+      "ctr": 0.0022522522522522522,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6c3fcd1a-0736-4654-8c04-049dbe3fc889",
+    "slug": "/ja/power-local-llm/automatic1111-review",
+    "date": "2026-11-02T14:39:55.248Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "AUTOMATIC1111レビュー: Stable Diffusion WebUIガイド",
+        "new": "AUTOMATIC1111レビュー:導入と保守状況"
+      },
+      {
+        "field": "metaDescription",
+        "old": "AUTOMATIC1111レビュー2026: Stable Diffusion WebUIとは実際に何か、検証済みのメンテナンス状況（最終コミット・リリース日）、AGPL-3.0ライセンス、ControlNet拡張機能、ハードウェア要件、Forge・ComfyUI・InvokeAIとの比較。",
+        "new": "AUTOMATIC1111とは何か、保守状況の検証結果、AGPL-3.0ライセンス、ControlNet、必要なハードウェア、代替ツールとの比較を解説するレビューです。"
+      },
+      {
+        "field": "sections",
+        "old": "Forge and ControlNet presented as maintained; no stale warning; stale open-issue/star counts",
+        "new": "stale warning in lead and TL;DR callout, maintenance table with Forge and ControlNet rows, verdict not softened, 2 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (thin or navigational query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "automatic1111",
+      "automatic1111 stable diffusion webui",
+      "automatic1111とは"
+    ],
+    "baseline": {
+      "position": 8.56,
+      "impressions": 1073,
+      "clicks": 6,
+      "ctr": 0.005591798695246971,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "51d3a001-6a4a-4e8a-a25d-b3d78b8cb8f9",
+    "slug": "/zh/power-local-llm/automatic1111-review",
+    "date": "2026-11-02T14:39:55.275Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "AUTOMATIC1111评测：Stable Diffusion WebUI指南",
+        "new": "AUTOMATIC1111评测：安装、维护状态与替代品"
+      },
+      {
+        "field": "metaDescription",
+        "old": "AUTOMATIC1111评测2026：Stable Diffusion WebUI究竟是什么、经过核实的维护状态（最后提交与发布日期）、AGPL-3.0许可、ControlNet扩展、硬件需求，以及与Forge、ComfyUI、InvokeAI的对比。",
+        "new": "AUTOMATIC1111评测：Stable Diffusion WebUI 是什么、经核实的维护状态、AGPL-3.0 许可证、ControlNet、硬件需求以及可选替代品对比。"
+      },
+      {
+        "field": "sections",
+        "old": "Forge and ControlNet presented as maintained; no stale warning; stale open-issue/star counts",
+        "new": "stale warning in lead and TL;DR callout, maintenance table with Forge and ControlNet rows, verdict not softened, 2 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (thin or navigational query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "automatic1111"
+    ],
+    "baseline": {
+      "position": 5.17,
+      "impressions": 41,
+      "clicks": 2,
+      "ctr": 0.04878048780487805,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "00ca6311-c413-498b-8cdb-b9e3ded32f16",
+    "slug": "/ar/power-local-llm/automatic1111-review",
+    "date": "2026-11-02T14:39:55.303Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مراجعة AUTOMATIC1111 2026: ما هو Stable Diffusion WebUI فعليًا، وحالة الصيانة الموثقة (تواريخ آخر تحديثات وإصدارات)، وترخيص AGPL-3.0، وإضافة ControlNet، ومتطلبات العتاد، ومقارنته مع Forge وComfyUI وInvokeAI.",
+        "new": "مراجعة AUTOMATIC1111: ما هي واجهة Stable Diffusion WebUI، وحالة صيانتها الموثّقة، وترخيص AGPL-3.0، وControlNet، ومتطلبات العتاد، ومقارنتها بالبدائل."
+      },
+      {
+        "field": "sections",
+        "old": "Forge and ControlNet presented as maintained; no stale warning; stale open-issue/star counts",
+        "new": "stale warning in lead and TL;DR callout, maintenance table with Forge and ControlNet rows, verdict not softened, 2 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (thin or navigational query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "no query rows in window"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "65b4ceb1-772a-444d-829b-c3dfc34e1668",
+    "slug": "/ko/power-local-llm/automatic1111-review",
+    "date": "2026-11-02T14:39:55.330Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "AUTOMATIC1111 리뷰: Stable Diffusion WebUI 가이드",
+        "new": "AUTOMATIC1111 리뷰: 설치, 유지보수 상태, 대안"
+      },
+      {
+        "field": "metaDescription",
+        "old": "AUTOMATIC1111 리뷰 2026: Stable Diffusion WebUI가 실제로 무엇인지, 검증된 유지보수 상태(마지막 커밋·릴리스 날짜), AGPL-3.0 라이선스, ControlNet 확장 기능, 하드웨어 요구 사항, Forge·ComfyUI·InvokeAI와의 비교.",
+        "new": "AUTOMATIC1111이 무엇인지, 확인된 유지보수 상태, AGPL-3.0 라이선스, ControlNet, 필요한 하드웨어, 대안과의 비교를 정리한 리뷰입니다."
+      },
+      {
+        "field": "sections",
+        "old": "Forge and ControlNet presented as maintained; no stale warning; stale open-issue/star counts",
+        "new": "stale warning in lead and TL;DR callout, maintenance table with Forge and ControlNet rows, verdict not softened, 2 FAQs"
+      },
+      {
+        "field": "leadAnswerBlock",
+        "old": "long lead without warning (Rule 31 fail)",
+        "new": "Warning segment plus short answer-first lead (25-50 words / CJK exempt)"
+      }
+    ],
+    "reason": "Page-updater refresh: same corrections as EN (thin or navigational query data, not adapted literally), stale warning added, lead shortened, meta and title within locale budget.",
+    "queries": [
+      "automatic1111",
+      "stable diffusion webui",
+      "automatic1111 webui"
+    ],
+    "baseline": {
+      "position": 5.47,
+      "impressions": 426,
+      "clicks": 11,
+      "ctr": 0.025821596244131457,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
   }
 ]

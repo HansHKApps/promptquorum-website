@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'AGPL 3.0',
   price: 'free',
   hardware: { ramGb: 16, vramGb: 4, cpuOnly: true }, // per github.com/AUTOMATIC1111/stable-diffusion-webui wiki Troubleshooting page: "The program needs 16gb of regular RAM to run smoothly" (8GB workable with a swap/page file), 4GB VRAM baseline tier with --medvram/--lowvram flags, CPU-only mode also supported (much slower); verified 2026-09-13
-  stars: 164800,
+  stars: 165224, // github.com/AUTOMATIC1111/stable-diffusion-webui, GitHub API 2026-11-02
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['image'],
@@ -38,6 +38,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { inpainting: true, extensions: true, lowVram: true, apiServer: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-03-02', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2026-03-02', // GitHub API (latest release v1.10.1 on 2025-02-09; last push, dev branch, 2026-03-02), re-read 2026-11-02
   lastUpstreamUpdateSource: 'https://github.com/AUTOMATIC1111/stable-diffusion-webui',
 }
