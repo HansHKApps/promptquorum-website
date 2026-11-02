@@ -884,7 +884,7 @@
       "images": []
     },
     "open-webui-review": {
-      "dateModified": "2026-10-09",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -1292,8 +1292,8 @@
       "images": []
     },
     "local-llm-hardware-guide": {
-      "dateModified": "2026-10-17",
-      "lastFactChecked": "2026-09-01",
+      "dateModified": "2026-11-02",
+      "lastFactChecked": "2026-11-02",
       "publishDate": "2026-04-04",
       "hasSections": true,
       "langs": [
@@ -1314,7 +1314,7 @@
         },
         {
           "url": "/images/gpu-tier-comparison-en.svg",
-          "title": "GPU tier recommendations (street prices): ~$585 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$880 RTX 5070 (12GB, 14B, 90 tok/s), ~$1,450 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4,300–5,000+ RTX 5090 (32GB, 70B, 200 tok/s), $4,699 DGX Spark (128GB, large MoE). GPU choice matters 10× more than CPU."
+          "title": "GPU tier recommendations (street prices): ~$800 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$880 RTX 5070 (12GB, 14B, 90 tok/s), ~$1,450 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4,300–5,000+ RTX 5090 (32GB, 70B, 200 tok/s), $6,950 DGX Spark (128GB, large MoE). GPU choice matters 10× more than CPU."
         },
         {
           "url": "/images/models-for-16gb-vram-en.svg",
@@ -1338,7 +1338,7 @@
         },
         {
           "url": "/images/mac-hardware-comparison-en.svg",
-          "title": "Mac hardware comparison: 8 GB M-series (3-4B models), M3 Pro 16\" (18GB, 7-8B), Mac mini M6 (32GB, 8-14B, $899), M5 Pro (64GB, 32B, $1,699), M5 Max (128GB, 70B at Q4_K_M ~12-15 tok/sec, $2,499), Mac Studio M5 Ultra (up to 512GB, 70B+/GLM-5.3 capacity, $5,499). 16 GB unified is the comfortable minimum for 7B models on a Mac."
+          "title": "Mac hardware comparison: 8 GB M-series (3-4B models), M3 Pro 16\" (18GB, 7-8B), Mac mini M6 (16–32GB, 8-14B, $899), M5 Pro (64GB, 32B, $1,699), M5 Max (128GB, 70B at Q4_K_M ~12-15 tok/sec, $2,499), Mac Studio M5 Ultra (up to 512GB, 70B+/GLM-5.3 capacity, $5,499). 16 GB unified is the comfortable minimum for 7B models on a Mac."
         },
         {
           "url": "/images/server-vs-consumer-en.svg",
@@ -2960,7 +2960,7 @@
       "images": []
     },
     "apple-silicon-m5-local-llm": {
-      "dateModified": "2026-10-11",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -3009,7 +3009,7 @@
         },
         {
           "url": "/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-en.webp",
-          "title": "24/7 inference: ~$35/year on Mac Mini M6 vs. ~$400/year on a desktop RTX 4090 -- a 10x difference at $0.15/kWh."
+          "title": "24/7 inference, estimated: ~$35/year on Mac Mini M6 vs. ~$400/year on a desktop RTX 4090 -- roughly 10x at $0.15/kWh (illustrative, not measured)."
         }
       ]
     },
@@ -7428,11 +7428,11 @@
       "images": [
         {
           "url": "/images/local-whisper-stt-comparison-2026-model-sizes-hero-en.webp",
-          "title": "Whisper model sizes tiny to large-v3: WER drops from 7.6% to 2.5% while speed drops from 32x to 1x real-time."
+          "title": "Whisper model sizes shared by whisper.cpp and faster-whisper, from tiny to large-v3."
         },
         {
           "url": "/images/local-whisper-stt-comparison-2026-platform-winner-hero-en.webp",
-          "title": "whisper.cpp hits 10x real-time on Apple M5 Pro via Metal; faster-whisper hits 12x on RTX 4070 via CUDA int8."
+          "title": "whisper.cpp and faster-whisper compared by platform: Apple Silicon, NVIDIA GPU and CPU."
         }
       ]
     },
@@ -10344,7 +10344,7 @@
       "images": []
     },
     "koboldcpp-review": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
@@ -13332,7 +13332,7 @@
       "images": []
     },
     "odysseus-review": {
-      "dateModified": "2026-09-12",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,

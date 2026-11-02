@@ -9236,81 +9236,81 @@
   {
     "lang": "en",
     "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-    "excerpt": "What is Open WebUI? A self-hosted, multi-user ChatGPT-style interface for Ollama and any OpenAI-compatible API, with RAG, plugins, install steps and license.",
+    "excerpt": "Open WebUI is a free, self-hosted ChatGPT-style interface for Ollama and OpenAI-compatible APIs. Custom license, branding clause, safety, Docker setup.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-11-02",
     "url": "/local-llms/open-webui-review",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Open WebUI 2026: Die selbst gehostete ChatGPT-Oberfläche für Ollama und jedes KI-Modell",
-    "excerpt": "Was ist Open WebUI? Selbst gehostete, mehrbenutzerfähige ChatGPT-Oberfläche für Ollama und jede OpenAI-kompatible API mit RAG, Plugins, Installation, Lizenz.",
+    "excerpt": "Open WebUI ist eine kostenlose, selbst gehostete ChatGPT-Oberfläche für Ollama und OpenAI-APIs. Lizenz, Branding-Klausel, Sicherheit und Docker-Setup.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-11-02",
     "url": "/de/local-llms/open-webui-review",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "Open WebUI en 2026 : l'interface ChatGPT auto-hébergée pour Ollama et tous les modèles d'IA",
-    "excerpt": "Qu'est-ce qu'Open WebUI ? Interface auto-hébergée multi-utilisateur façon ChatGPT pour Ollama et toute API compatible OpenAI : RAG, plugins, licence.",
+    "excerpt": "Open WebUI est une interface gratuite et auto-hébergée façon ChatGPT pour Ollama et les API OpenAI. Licence, clause de marque, sécurité et Docker.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-11-02",
     "url": "/fr/local-llms/open-webui-review",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "Open WebUI 2026年版:Ollamaとあらゆるモデルに対応するセルフホスト型ChatGPTインターフェース",
-    "excerpt": "Open WebUIとは？OllamaやOpenAI互換APIをChatGPT風のセルフホスト型マルチユーザー画面にするツール。RAG、プラグイン、導入手順、ライセンスを解説します。",
+    "excerpt": "Open WebUIはOllamaやOpenAI互換API向けの無料セルフホスト型ChatGPT風UIです。独自ライセンス、50ユーザーのブランド条項、安全性、Docker導入手順を解説します。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-11-02",
     "url": "/ja/local-llms/open-webui-review",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "Open WebUI 2026：面向 Ollama 和任意 AI 模型的自托管 ChatGPT 界面",
-    "excerpt": "Open WebUI是什么？可为Ollama和任何兼容OpenAI的API提供自托管、多用户的ChatGPT风格界面，含RAG、插件、安装步骤与许可证说明。",
+    "excerpt": "Open WebUI 是面向 Ollama 和兼容 OpenAI 的 API 的免费自托管 ChatGPT 风格界面。涵盖许可证、50 用户品牌条款、安全性与 Docker 部署。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-11-02",
     "url": "/zh/local-llms/open-webui-review",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "Open WebUI en 2026: la interfaz ChatGPT autoalojada para Ollama y cualquier modelo de IA",
-    "excerpt": "¿Qué es Open WebUI? Una interfaz autoalojada y multiusuario al estilo ChatGPT para Ollama y cualquier API compatible con OpenAI, con RAG, plugins y licencia.",
+    "excerpt": "Open WebUI es una interfaz gratuita y autoalojada estilo ChatGPT para Ollama y APIs de OpenAI. Licencia, cláusula de marca, seguridad y Docker.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-11-02",
     "url": "/es/local-llms/open-webui-review",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "Open WebUI em 2026: A Interface ChatGPT Auto-Hospedada para Ollama e Qualquer Modelo de IA",
-    "excerpt": "O que é o Open WebUI? Interface auto-hospedada, multiusuário e estilo ChatGPT para Ollama e qualquer API compatível com OpenAI, com RAG, plugins e licença.",
+    "excerpt": "Open WebUI é uma interface gratuita e auto-hospedada estilo ChatGPT para Ollama e APIs da OpenAI. Licença, cláusula de marca, segurança e Docker.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-11-02",
     "url": "/pt/local-llms/open-webui-review",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "Open WebUI في 2026: واجهة ChatGPT ذاتية الاستضافة لـ Ollama وأي نموذج ذكاء اصطناعي",
-    "excerpt": "ما هو Open WebUI؟ واجهة ذاتية الاستضافة متعددة المستخدمين على طراز ChatGPT لـ Ollama وأي واجهة متوافقة مع OpenAI، مع RAG وإضافات وخطوات التثبيت والترخيص.",
+    "excerpt": "Open WebUI واجهة مجانية ذاتية الاستضافة على طراز ChatGPT لـ Ollama وواجهات OpenAI. الترخيص، شرط العلامة التجارية، الأمان، وتثبيت Docker.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-11-02",
     "url": "/ar/local-llms/open-webui-review",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "Open WebUI 2026: Ollama와 모든 AI 모델을 위한 자체 호스팅 ChatGPT 인터페이스",
-    "excerpt": "Open WebUI란? Ollama와 모든 OpenAI 호환 API를 위한 자체 호스팅 다중 사용자 ChatGPT 스타일 인터페이스. RAG, 플러그인, 설치 방법, 라이선스를 다룹니다.",
+    "excerpt": "Open WebUI(오픈웹UI)는 Ollama와 OpenAI 호환 API용 무료 자체 호스팅 ChatGPT 스타일 인터페이스입니다. 라이선스, 50명 브랜딩 조항, 보안, Docker 설치.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-11-02",
     "url": "/ko/local-llms/open-webui-review",
     "cluster": "local-llms"
   },
@@ -10694,18 +10694,18 @@
   {
     "lang": "en",
     "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
-    "excerpt": "Local LLM system requirements by VRAM: best models for 8, 16 and 24 GB GPUs, exact 70B and GLM-5.3 needs. RTX 50-series, Apple M5, and AI PC builds.",
+    "excerpt": "Best hardware for local LLMs in 2026: VRAM needed from 8 GB to 70B models, best GPU and Mac per budget, RTX 50-series prices and CPU-only limits.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-02",
     "url": "/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Lokale-LLM-Hardware: GPU vs. Mini-PC vs. Mac im Vergleich",
-    "excerpt": "Lokale LLM Hardware-Anforderungen nach VRAM: beste Modelle fuer 8-, 16- und 24-GB-GPUs plus exakter Bedarf fuer 70B und GLM-5.3. RTX-50-Serie, Apple M5.",
+    "excerpt": "Hardware für lokale LLMs 2026: So viel VRAM brauchen Modelle von 8 GB bis 70B, beste GPU und Mac je Budget, RTX-50-Preise und CPU-only-Grenzen.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-02",
     "url": "/de/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
@@ -10714,7 +10714,7 @@
     "title": "Materiel pour LLM local : GPU, mini PC et Mac compares",
     "excerpt": "Besoins materiels LLM local par VRAM : meilleurs modeles pour GPU 8, 16 et 24 Go plus ce qu'exigent exactement le 70B et GLM-5.3. RTX serie 50, Apple M5.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-02",
     "url": "/fr/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
@@ -10723,7 +10723,7 @@
     "title": "ローカルLLMハードウェア：GPU vs ミニPC vs Mac 比較",
     "excerpt": "VRAM別ローカルLLMハードウェア要件：8、16、24 GB GPU向けベストモデルと70BおよびGLM-5.3をローカルで動かすために必要なもの。RTX 50シリーズ、Apple M5。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-02",
     "url": "/ja/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
@@ -10732,34 +10732,34 @@
     "title": "本地LLM硬件：GPU vs 迷你PC vs Mac 对比",
     "excerpt": "对比GPU、迷你PC和Mac运行本地LLM：性价比、显存需求(8B–70B)、实测速度。附RTX 50系列与Apple M5选购建议，助你不花冤枉钱。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-02",
     "url": "/zh/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "Hardware para LLM locales: GPU vs Mini PC vs Mac comparados",
-    "excerpt": "Requisitos de hardware para LLM locales por VRAM: mejores modelos para GPU de 8, 16 y 24 GB, además de las necesidades exactas para 70B y GLM-5.3. RTX serie 50, Apple M5.",
+    "excerpt": "Hardware para LLM locales en 2026: VRAM necesaria de 8 GB a 70B, mejores GPU y Mac por presupuesto, precios de la serie RTX 50 y límites de la CPU.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-02",
     "url": "/es/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "Hardware para LLM Local: GPU vs Mini PC vs Mac Comparados",
-    "excerpt": "Requisitos de hardware para LLM local por VRAM: melhores modelos para GPUs de 8, 16 e 24 GB e o que 70B e GLM-5.3 precisam. RTX série 50, Apple M5.",
+    "excerpt": "Hardware para LLM local em 2026: VRAM de 8 GB a 70B, qual LLM roda numa RTX 4060 de 8 GB, melhores GPUs e Macs por orçamento e preços da RTX 50.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-02",
     "url": "/pt/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "عتاد ⁨LLM⁩ المحلي: مقارنة بين ⁨GPU⁩ و⁨Mini PC⁩ و⁨Mac⁩",
-    "excerpt": "متطلبات عتاد ⁨LLM⁩ المحلي حسب ⁨VRAM⁩: أفضل النماذج لبطاقات ⁨8⁩ و⁨16⁩ و⁨24 GB⁩ إضافة إلى الاحتياجات الدقيقة لـ ⁨70B⁩ و⁨GLM-5.3⁩. ⁨RTX 50-series⁩ و⁨Apple M5⁩.",
+    "excerpt": "متطلبات عتاد ⁨LLM⁩ المحلي حسب ⁨VRAM⁩: أفضل النماذج لبطاقات ⁨8⁩ و⁨16⁩ و⁨24 GB⁩ واحتياجات ⁨70B⁩ و⁨GLM-5.3⁩. ⁨RTX 50-series⁩ و⁨Apple M5⁩.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-02",
     "url": "/ar/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
@@ -10768,7 +10768,7 @@
     "title": "로컬 LLM 하드웨어: GPU vs 미니 PC vs Mac 비교",
     "excerpt": "VRAM별 LLM 하드웨어 요구 사항: 8, 16, 24GB GPU를 위한 최적 모델과 70B 및 GLM-5.3에 정확히 필요한 사양. RTX 50 시리즈, Apple M5.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-02",
     "url": "/ko/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
@@ -15392,16 +15392,16 @@
   {
     "lang": "en",
     "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
-    "excerpt": "Apple M5 memory bandwidth: M5 Pro 307, M5 Max 460–614 GB/s, M5 Ultra 1.2 TB/s. LLM tokens/sec, Ollama speed tips, Mac mini vs Studio vs MacBook Pro.",
+    "excerpt": "M5 memory bandwidth: Pro 307 GB/s, Max 460 or 614 GB/s, Ultra 1.2 TB/s. What each chip means for LLM tokens/sec, plus Mac mini vs Studio vs MacBook Pro.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-11",
+    "dateModified": "2026-11-02",
     "url": "/local-llms/apple-silicon-m5-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Apple Silicon für lokale LLMs 2026: M5 Pro vs. M5 Max vs. Mac Studio im Vergleich",
-    "excerpt": "Apple M5 Speicherbandbreite: M5 Pro 307, M5 Max 460–614 GB/s, M5 Ultra 1,2 TB/s. LLM-Tokens/s, Ollama-Tuning, Mac mini vs. Studio vs. MacBook Pro.",
+    "excerpt": "Apple M5 Speicherbandbreite: Pro 307, Max 460 oder 614 GB/s, Ultra 1,2 TB/s. Was das für LLM-Tokens/s bedeutet – Mac mini vs. Studio vs. MacBook Pro.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-05-18",
     "url": "/de/local-llms/apple-silicon-m5-local-llm",
@@ -15437,7 +15437,7 @@
   {
     "lang": "es",
     "title": "Apple Silicon para LLM local 2026: M5 Pro vs M5 Max vs Mac Studio comparados",
-    "excerpt": "Ancho de banda de memoria del Apple M5: M5 Pro 307, M5 Max 460–614 GB/s, M5 Ultra 1,2 TB/s. Tokens/s de LLM y consejos para Ollama.",
+    "excerpt": "Ancho de banda de memoria del Apple M5: M5 Pro 307, M5 Max 460–614 GB/s, M5 Ultra 1,2 TB/s. Tokens/s de LLM, consejos para Ollama y comparativa de Macs.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-05-18",
     "url": "/es/local-llms/apple-silicon-m5-local-llm",
@@ -15446,16 +15446,16 @@
   {
     "lang": "pt",
     "title": "Apple Silicon para LLM local 2026: M5 Pro vs M5 Max vs Mac Studio comparados",
-    "excerpt": "Largura de banda de memória do Apple M5: M5 Pro 307, M5 Max 460–614 GB/s, M5 Ultra 1,2 TB/s. Tokens/s de LLM e dicas de Ollama.",
+    "excerpt": "Largura de banda de memória do Apple M5: M5 Pro 307, M5 Max 460–614 GB/s, M5 Ultra 1,2 TB/s. Tokens/s de LLM, dicas de Ollama e comparação de Macs.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-11",
+    "dateModified": "2026-11-02",
     "url": "/pt/local-llms/apple-silicon-m5-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "Apple Silicon لـ LLM المحلي 2026: M5 Pro مقابل M5 Max مقابل Mac Studio",
-    "excerpt": "عرض نطاق ذاكرة Apple M5: M5 Pro بسرعة 307 وM5 Max من 460 إلى 614 GB/s وM5 Ultra بسرعة 1.2 TB/s. رموز/ثانية ونصائح Ollama وMac mini وMac Studio وMacBook Pro.",
+    "excerpt": "عرض نطاق ذاكرة Apple M5: M5 Pro بسرعة 307 وM5 Max من 460 إلى 614 GB/s وM5 Ultra بسرعة 1.2 TB/s. رموز/ثانية ونصائح Ollama ومقارنة أجهزة Mac.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-05-18",
     "url": "/ar/local-llms/apple-silicon-m5-local-llm",
@@ -24464,7 +24464,7 @@
   {
     "lang": "en",
     "title": "Whisper.cpp vs faster-whisper 2026: Local STT Benchmarks, Setup & GPU Acceleration",
-    "excerpt": "faster-whisper is up to 4x faster than OpenAI Whisper; whisper.cpp wins on Apple Metal. CPU vs GPU timings, VRAM and WER from published benchmarks.",
+    "excerpt": "faster-whisper is up to 4x faster than OpenAI Whisper; whisper.cpp adds Apple Metal. CPU vs GPU timings, VRAM and WER from published benchmarks.",
     "publishDate": "2026-05-14",
     "dateModified": "2026-11-02",
     "url": "/power-local-llm/local-whisper-stt-comparison",
@@ -24473,7 +24473,7 @@
   {
     "lang": "de",
     "title": "Whisper.cpp vs faster-whisper 2026: Lokale STT-Benchmarks, Setup & GPU-Beschleunigung",
-    "excerpt": "faster-whisper ist bis zu 4x schneller als OpenAI Whisper, whisper.cpp auf Apple Metal vorn. CPU- vs. GPU-Zeiten, VRAM und WER aus Benchmarks.",
+    "excerpt": "faster-whisper ist bis zu 4x schneller als OpenAI Whisper, whisper.cpp bringt Apple Metal mit. CPU- vs. GPU-Zeiten, VRAM und WER aus Benchmarks.",
     "publishDate": "2026-05-14",
     "dateModified": "2026-11-02",
     "url": "/de/power-local-llm/local-whisper-stt-comparison",
@@ -24482,7 +24482,7 @@
   {
     "lang": "fr",
     "title": "Whisper.cpp vs faster-whisper 2026 : Benchmarks STT local, configuration & accélération GPU",
-    "excerpt": "faster-whisper est jusqu'à 4x plus rapide qu'OpenAI Whisper ; whisper.cpp gagne sur Apple Metal. Temps CPU vs GPU, VRAM et WER de benchmarks publiés.",
+    "excerpt": "faster-whisper est jusqu'à 4x plus rapide qu'OpenAI Whisper ; whisper.cpp ajoute Apple Metal. Temps CPU vs GPU, VRAM et WER de benchmarks publiés.",
     "publishDate": "2026-05-14",
     "dateModified": "2026-11-02",
     "url": "/fr/power-local-llm/local-whisper-stt-comparison",
@@ -24500,7 +24500,7 @@
   {
     "lang": "zh",
     "title": "本地语音识别2026：Whisper.cpp vs faster-whisper — 基准测试、安装配置、GPU加速",
-    "excerpt": "faster-whisper比OpenAI Whisper最高快4倍，whisper.cpp在Apple Metal上更有优势。基于公开基准对比CPU与GPU耗时、显存和WER。",
+    "excerpt": "faster-whisper比OpenAI Whisper最高快4倍，whisper.cpp支持Apple Metal。基于公开基准对比CPU与GPU耗时、显存和WER。",
     "publishDate": "2026-05-14",
     "dateModified": "2026-11-02",
     "url": "/zh/power-local-llm/local-whisper-stt-comparison",
@@ -24509,7 +24509,7 @@
   {
     "lang": "es",
     "title": "Whisper.cpp vs faster-whisper 2026: Benchmarks STT local, configuración y aceleración GPU",
-    "excerpt": "faster-whisper es hasta 4x más rápido que OpenAI Whisper; whisper.cpp gana en Apple Metal. Tiempos CPU vs GPU, VRAM y WER de benchmarks publicados.",
+    "excerpt": "faster-whisper es hasta 4x más rápido que OpenAI Whisper; whisper.cpp añade Apple Metal. Tiempos CPU vs GPU, VRAM y WER de benchmarks publicados.",
     "publishDate": "2026-05-14",
     "dateModified": "2026-11-02",
     "url": "/es/power-local-llm/local-whisper-stt-comparison",
@@ -24518,7 +24518,7 @@
   {
     "lang": "pt",
     "title": "Whisper.cpp vs faster-whisper 2026: Benchmarks de STT local, configuração e aceleração de GPU",
-    "excerpt": "faster-whisper é até 4x mais rápido que o OpenAI Whisper; whisper.cpp vence no Apple Metal. Tempos de CPU vs GPU, VRAM e WER de benchmarks publicados.",
+    "excerpt": "faster-whisper é até 4x mais rápido que o OpenAI Whisper; whisper.cpp traz o Apple Metal. Tempos de CPU vs GPU, VRAM e WER de benchmarks publicados.",
     "publishDate": "2026-05-14",
     "dateModified": "2026-11-02",
     "url": "/pt/power-local-llm/local-whisper-stt-comparison",
@@ -24527,7 +24527,7 @@
   {
     "lang": "ar",
     "title": "⁨Whisper.cpp⁩ مقابل ⁨faster-whisper 2026⁩: معايير ⁨STT⁩ المحلية والإعداد وتسريع ⁨GPU⁩",
-    "excerpt": "faster-whisper أسرع حتى 4× من OpenAI Whisper، وwhisper.cpp يتفوق على Apple Metal. أزمنة CPU مقابل GPU وVRAM وWER من معايير منشورة.",
+    "excerpt": "faster-whisper أسرع حتى 4× من OpenAI Whisper، وwhisper.cpp يضيف دعم Apple Metal. أزمنة CPU مقابل GPU وVRAM وWER من معايير منشورة.",
     "publishDate": "2026-05-14",
     "dateModified": "2026-11-02",
     "url": "/ar/power-local-llm/local-whisper-stt-comparison",
@@ -37019,81 +37019,81 @@
   {
     "lang": "en",
     "title": "KoboldCpp Review: One File, No Install, Built for Roleplay",
-    "excerpt": "KoboldCpp is a free, AGPL 3.0 single-file local LLM app built on llama.cpp. Download it, pick CUDA, Vulkan or ROCm, and compare it with llama.cpp and Ollama.",
+    "excerpt": "KoboldCpp (also written Kobold CPP) is a free, single-file local LLM app on llama.cpp. Get the Windows, Linux or macOS build and pick CUDA, Vulkan or ROCm.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-02",
     "url": "/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "KoboldCpp-Rezension: Eine Datei, keine Installation, für Rollenspiel gebaut",
-    "excerpt": "KoboldCpp: kostenlose Single-File-App für lokale LLMs auf llama.cpp-Basis (AGPL 3.0). Download, GPU-Support (CUDA, Vulkan, ROCm) und Vergleich mit llama.cpp.",
+    "excerpt": "KoboldCpp (auch Kobold CPP): kostenlose Single-File-App für lokale LLMs auf llama.cpp-Basis. Build für Windows, Linux, macOS, mit CUDA, Vulkan oder ROCm.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-02",
     "url": "/de/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "KoboldCpp: un seul fichier, aucune installation, pensé pour le jeu de rôle",
-    "excerpt": "KoboldCpp : appli LLM locale gratuite en un fichier (AGPL 3.0) basée sur llama.cpp. Téléchargement, GPU (CUDA, Vulkan, ROCm), comparaison avec llama.cpp.",
+    "excerpt": "KoboldCpp (aussi écrit Kobold CPP) : appli LLM locale gratuite en un fichier, basée sur llama.cpp. Version Windows, Linux ou macOS, CUDA, Vulkan ou ROCm.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-02",
     "url": "/fr/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "KoboldCpp レビュー：単一ファイル、インストール不要、ロールプレイ特化",
-    "excerpt": "KoboldCppはllama.cppベースの無料・AGPL 3.0の単一ファイル型ローカルLLMアプリです。インストール不要の導入手順、CUDA/Vulkan/ROCm対応、llama.cppやOllamaとの違いを解説。",
+    "excerpt": "KoboldCpp(Kobold CPP)はllama.cppベースの無料・単一ファイル型ローカルLLMアプリ。Windows・Linux・macOS版の入手方法とCUDA・Vulkan・ROCmの選び方を解説します。",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-02",
     "url": "/ja/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "KoboldCpp 评测:单文件、免安装,专为角色扮演打造",
-    "excerpt": "KoboldCpp是基于llama.cpp的免费单文件本地LLM应用(AGPL 3.0)。涵盖下载方法、CUDA/Vulkan/ROCm支持,以及与llama.cpp、Ollama的对比。",
+    "excerpt": "KoboldCpp(Kobold CPP)是基于llama.cpp的免费单文件本地LLM应用。介绍Windows、Linux、macOS版本的下载方式,以及CUDA、Vulkan、ROCm的选择。",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-02",
     "url": "/zh/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "KoboldCpp: un solo archivo, sin instalación, pensado para el rol",
-    "excerpt": "KoboldCpp es una app de LLM local gratuita de un solo archivo (AGPL 3.0) sobre llama.cpp. Descarga, GPU (CUDA, Vulkan, ROCm) y comparación con llama.cpp.",
+    "excerpt": "KoboldCpp (o Kobold CPP): app de LLM local gratuita de un solo archivo sobre llama.cpp. Versiones para Windows, Linux o macOS con CUDA, Vulkan o ROCm.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-02",
     "url": "/es/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "KoboldCpp: um arquivo só, sem instalação, feito para roleplay",
-    "excerpt": "KoboldCpp é um app de LLM local gratuito de arquivo único (AGPL 3.0) sobre o llama.cpp. Download, GPU (CUDA, Vulkan, ROCm) e comparação com o llama.cpp.",
+    "excerpt": "KoboldCpp (ou Kobold CPP): app de LLM local gratuito de arquivo único sobre o llama.cpp. Versões para Windows, Linux ou macOS com CUDA, Vulkan ou ROCm.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-02",
     "url": "/pt/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "مراجعة KoboldCpp: ملف واحد، بلا تثبيت، مصمم للعب الأدوار",
-    "excerpt": "KoboldCpp تطبيق نماذج لغوية محلي مجاني بملف واحد (AGPL 3.0) مبني على llama.cpp. التحميل ودعم CUDA وVulkan وROCm ومقارنته بـ llama.cpp وOllama.",
+    "excerpt": "KoboldCpp (ويُكتب أيضًا Kobold CPP): تطبيق نماذج لغوية محلي مجاني بملف واحد فوق llama.cpp. نسخ Windows وLinux وmacOS مع اختيار CUDA أو Vulkan أو ROCm.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-02",
     "url": "/ar/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "KoboldCpp 리뷰: 파일 하나, 설치 불필요, 롤플레이 특화",
-    "excerpt": "KoboldCpp는 llama.cpp 기반의 무료 단일 파일 로컬 LLM 앱(AGPL 3.0)입니다. 다운로드, CUDA·Vulkan·ROCm 지원, llama.cpp·Ollama와의 비교를 정리했습니다.",
+    "excerpt": "KoboldCpp(Kobold CPP)는 llama.cpp 기반 무료 단일 파일 로컬 LLM 앱. Windows·Linux·macOS 다운로드와 CUDA·Vulkan·ROCm 선택을 안내합니다.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-02",
     "url": "/ko/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
@@ -50465,81 +50465,81 @@
   {
     "lang": "en",
     "title": "Odysseus Review: The Self-Hosted AI Workspace",
-    "excerpt": "Odysseus is a free, open-source, self-hosted AI workspace for chat, agents, research, and documents, started by Felix Kjellberg (PewDiePie). Install steps, features, and license for 2026.",
+    "excerpt": "Odysseus (odysseus-dev on GitHub) is a free, open-source AI workspace you self-host. Docker and native install steps, default port, Ollama setup, license.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-11-02",
     "url": "/power-local-llm/odysseus-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Odysseus Review: Der selbstgehostete KI-Arbeitsbereich",
-    "excerpt": "Odysseus ist ein kostenloser, quelloffener, selbstgehosteter KI-Arbeitsbereich für Chat, Agenten, Recherche und Dokumente, gestartet von Felix Kjellberg (PewDiePie). Installation, Funktionen und Lizenz für 2026.",
+    "excerpt": "Odysseus: kostenloser, quelloffener KI-Arbeitsbereich zum Selbsthosten (odysseus-dev auf GitHub). Installation mit Docker oder nativ, Port, Ollama, Lizenz.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-11-02",
     "url": "/de/power-local-llm/odysseus-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Odysseus Review: l'espace de travail IA auto-hébergé",
-    "excerpt": "Odysseus est un espace de travail IA gratuit, open source et auto-hébergé pour le chat, les agents, la recherche et les documents, lancé par Felix Kjellberg (PewDiePie). Installation, fonctionnalités et licence pour 2026.",
+    "excerpt": "Odysseus (odysseus-dev sur GitHub) est un espace de travail IA gratuit et open source à auto-héberger. Installation Docker ou native, port, Ollama.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-11-02",
     "url": "/fr/power-local-llm/odysseus-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "Odysseusレビュー: セルフホスト型AIワークスペース",
-    "excerpt": "Odysseusは、Felix Kjellberg（PewDiePie）が始めた、チャット・エージェント・リサーチ・文書向けの無料オープンソースのセルフホスト型AIワークスペースです。2026年版のインストール手順、機能、ライセンス。",
+    "excerpt": "Odysseusは無料のオープンソース・セルフホスト型AIワークスペース。GitHub odysseus-devのDockerとネイティブの導入手順、既定ポート、Ollama連携、ライセンスを解説。",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-11-02",
     "url": "/ja/power-local-llm/odysseus-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "Odysseus评测：自托管AI工作空间",
-    "excerpt": "Odysseus是一款由Felix Kjellberg（PewDiePie）发起的免费开源自托管AI工作空间，面向聊天、代理、研究和文档。2026年安装步骤、功能与许可证一览。",
+    "excerpt": "Odysseus是免费开源的自托管AI工作空间（GitHub：odysseus-dev）。涵盖Docker与原生安装步骤、默认端口、Ollama连接和许可证，附2026年信息。",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-11-02",
     "url": "/zh/power-local-llm/odysseus-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Odysseus Review: el espacio de trabajo de IA autoalojado",
-    "excerpt": "Odysseus es un espacio de trabajo de IA gratuito, de código abierto y autoalojado para chat, agentes, investigación y documentos, iniciado por Felix Kjellberg (PewDiePie). Pasos de instalación, funciones y licencia para 2026.",
+    "excerpt": "Qué es Odysseus (odysseus-dev en GitHub): un espacio de trabajo de IA gratuito y de código abierto, autoalojado. Instalación con Docker o nativa y puerto.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-11-02",
     "url": "/es/power-local-llm/odysseus-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Odysseus Review: o espaço de trabalho de IA auto-hospedado",
-    "excerpt": "Odysseus é um espaço de trabalho de IA gratuito, de código aberto e auto-hospedado para chat, agentes, pesquisa e documentos, iniciado por Felix Kjellberg (PewDiePie). Passos de instalação, recursos e licença para 2026.",
+    "excerpt": "Odysseus é um espaço de trabalho de IA gratuito e de código aberto para auto-hospedar (odysseus-dev no GitHub). Instalação com Docker ou nativa e porta.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-11-02",
     "url": "/pt/power-local-llm/odysseus-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "مراجعة Odysseus: مساحة عمل الذكاء الاصطناعي ذاتية الاستضافة",
-    "excerpt": "Odysseus هي مساحة عمل ذكاء اصطناعي مجانية ومفتوحة المصدر وذاتية الاستضافة للدردشة والوكلاء والبحث والمستندات، بدأها فيليكس كيلبرغ (PewDiePie). خطوات التثبيت والميزات والرخصة لعام 2026.",
+    "excerpt": "Odysseus مساحة عمل ذكاء اصطناعي مجانية ومفتوحة المصدر وذاتية الاستضافة (odysseus-dev على GitHub). التثبيت عبر Docker أو أصلياً، Ollama، الرخصة.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-11-02",
     "url": "/ar/power-local-llm/odysseus-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "Odysseus 리뷰: 셀프 호스팅 AI 워크스페이스",
-    "excerpt": "Odysseus는 펠릭스 셸버그(PewDiePie)가 시작한, 채팅·에이전트·리서치·문서용 무료 오픈소스 셀프 호스팅 AI 워크스페이스입니다. 2026년 설치 단계, 기능, 라이선스를 정리했습니다.",
+    "excerpt": "Odysseus(오디세우스)는 GitHub odysseus-dev의 무료 오픈소스 셀프 호스팅 AI 워크스페이스입니다. Docker·네이티브 설치, 기본 포트, Ollama, 라이선스 안내.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-11-02",
     "url": "/ko/power-local-llm/odysseus-review",
     "cluster": "power-local-llm"
   },
