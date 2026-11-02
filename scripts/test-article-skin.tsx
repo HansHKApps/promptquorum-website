@@ -9,7 +9,9 @@ import { renderToStaticMarkup } from 'react-dom/server'
 import { PowerLocalLLMPostClient } from '../src/components/PowerLocalLLMPostClient'
 import { LocalLLMsPostClient } from '../src/components/LocalLLMsPostClient'
 import { PromptEngineeringPostClient } from '../src/components/PromptEngineeringPostClient'
-import { ARTICLES, LOCAL_LLM_ARTICLES, PE_ARTICLES } from './_skin-articles'
+import { SmartHomePostClient } from '../src/components/SmartHomePostClient'
+import { BalconySolarPostClient } from '../src/components/BalconySolarPostClient'
+import { ARTICLES, LOCAL_LLM_ARTICLES, PE_ARTICLES, SMART_HOME_ARTICLES, BALCONY_ARTICLES } from './_skin-articles'
 import { resolveAll } from '../src/components/local-ai-directory/directory-i18n'
 
 const strip = (h: string) => h.replace(/<span class="hub-h1-hl[^"]*">([^<]*)<\/span>/g, '$1').replace(/\sclass="[^"]*"/g, '')
@@ -82,6 +84,24 @@ for (const [slug, data] of Object.entries(PE_ARTICLES)) {
     if (!/hub-violet/.test(on)) fail(`${slug}/${lang}: hub skin applied no hub tokens`)
     for (const hook of ['key-takeaways']) {
       if (off.includes(hook) && !on.includes(hook)) fail(`${slug}/${lang}: lost hook .${hook}`)
+    }
+  }
+}
+// /smart-home/* and /balcony-solar/* render through their own clients; the flag is added for the "on" render.
+for (const [Client, set] of [[SmartHomePostClient, SMART_HOME_ARTICLES], [BalconySolarPostClient, BALCONY_ARTICLES]] as const) {
+  for (const [slug, data] of Object.entries(set)) {
+    for (const lang of Object.keys(data)) {
+      const { designSkin: _drop, ...plain } = (data as any)[lang]
+      const mk = (a: unknown) =>
+        renderToStaticMarkup(<Client slug={slug} lang={lang as any} articleData={{ [lang]: a } as any} availableLangs={Object.keys(data)} />)
+      const off = mk(plain)
+      const on = mk({ ...plain, designSkin: 'hub' })
+      if (strip(off) !== strip(on)) fail(`${slug}/${lang}: DOM differs beyond class attributes`)
+      if (/(?<![a-z])hub-(violet|indigo|rose|azure|orchid|new)/.test(off)) fail(`${slug}/${lang}: default skin leaks hub tokens`)
+      if (!/hub-violet/.test(on)) fail(`${slug}/${lang}: hub skin applied no hub tokens`)
+      for (const hook of ['key-takeaways']) {
+        if (off.includes(hook) && !on.includes(hook)) fail(`${slug}/${lang}: lost hook .${hook}`)
+      }
     }
   }
 }
