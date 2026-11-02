@@ -18750,5 +18750,293 @@
       "t14": "2026-11-16",
       "t28": "2026-11-30"
     }
+  },
+  {
+    "id": "a94ba00f-d81d-43cd-aa75-dc5a07567df0",
+    "slug": "/power-local-llm/hermes-agent-review",
+    "date": "2026-11-02T19:47:57.699Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Hermes Agent Review: Self-Hosted AI Agent",
+        "new": "Hermes Agent Review: Self-Hosted AI Agent, Risks, Setup"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Hermes Agent (Nous Research, MIT license): self-hosted AI agent with a self-improving skill loop and persistent memory. What it does, how to run it, and who should self-host it.",
+        "new": "Hermes Agent by Nous Research is a free, MIT-licensed, self-hosted AI agent with memory and skills. Setup, local models via Ollama, and its CVE history."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5. Titles/metas into locale budget; verified rebuild against primary sources 2026-11-02: removed unverified Feb 2026 release date, Hermes 4.3 local default, 200+ OpenRouter models and email channel; local models via custom endpoint (Ollama); CVE count 45; funding stated as press-reported. Baseline from EN only (other locales no GSC data pulled; 28d to 2026-11-02; many EN queries are quoted automated operators).",
+    "queries": [
+      "hermes agent license",
+      "hermes agent self-hosted",
+      "hermes agent hardware requirements",
+      "hermes agent nous research review"
+    ],
+    "baseline": {
+      "position": 7.06,
+      "impressions": 871,
+      "clicks": 2,
+      "ctr": 0.002296211251435132,
+      "period": "28d to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c7e1b660-3afc-454e-9633-0657bea52850",
+    "slug": "/de/power-local-llm/hermes-agent-review",
+    "date": "2026-11-02T19:47:57.727Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Hermes Agent Review: Selbst gehosteter KI-Agent",
+        "new": "Hermes Agent Review: Selbst gehosteter KI-Agent, Risiken"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Hermes Agent (Nous Research, MIT-Lizenz): selbst gehosteter KI-Agent mit selbstverbessernder Skill-Loop und persistentem Gedächtnis. Funktion, Betrieb und Zielgruppe im Überblick.",
+        "new": "Hermes Agent von Nous Research: kostenloser, MIT-lizenzierter KI-Agent zum Selbsthosten mit Gedächtnis und Skills. Setup mit Ollama und CVE-Historie."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5. Titles/metas into locale budget; verified rebuild against primary sources 2026-11-02: removed unverified Feb 2026 release date, Hermes 4.3 local default, 200+ OpenRouter models and email channel; local models via custom endpoint (Ollama); CVE count 45; funding stated as press-reported. Baseline from EN only (other locales no GSC data pulled; 28d to 2026-11-02; many EN queries are quoted automated operators).",
+    "queries": [
+      "hermes agent license",
+      "hermes agent self-hosted",
+      "hermes agent hardware requirements",
+      "hermes agent nous research review"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "88d7627f-9517-4282-92e1-c6792a147353",
+    "slug": "/fr/power-local-llm/hermes-agent-review",
+    "date": "2026-11-02T19:47:57.755Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Hermes Agent: agent IA auto-hébergé",
+        "new": "Hermes Agent : avis, agent IA auto-hébergé et risques"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Hermes Agent (Nous Research, licence MIT) : agent IA auto-hébergé avec boucle de compétences auto-améliorante et mémoire persistante. Fonctionnement, installation et public visé.",
+        "new": "Hermes Agent (Nous Research) : agent IA auto-hébergé sous licence MIT, avec mémoire et compétences. Installation, Ollama en local et historique des CVE."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5. Titles/metas into locale budget; verified rebuild against primary sources 2026-11-02: removed unverified Feb 2026 release date, Hermes 4.3 local default, 200+ OpenRouter models and email channel; local models via custom endpoint (Ollama); CVE count 45; funding stated as press-reported. Baseline from EN only (other locales no GSC data pulled; 28d to 2026-11-02; many EN queries are quoted automated operators).",
+    "queries": [
+      "hermes agent license",
+      "hermes agent self-hosted",
+      "hermes agent hardware requirements",
+      "hermes agent nous research review"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d59633e4-7bc3-45cf-8022-52a7010f73b8",
+    "slug": "/ja/power-local-llm/hermes-agent-review",
+    "date": "2026-11-02T19:47:57.782Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Hermes Agentレビュー：セルフホスト型AIエージェント",
+        "new": "Hermes Agentレビュー：セットアップとリスク"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Hermes Agent（Nous Research、MITライセンス）：自己改善型スキルループと永続メモリを備えたセルフホスト型AIエージェント。機能・実行方法・向いているユーザーを解説。",
+        "new": "Nous ResearchのHermes Agentは、MITライセンスで無料のセルフホスト型AIエージェントです。記憶とスキル、Ollamaでのローカル実行、CVE履歴を解説します。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5. Titles/metas into locale budget; verified rebuild against primary sources 2026-11-02: removed unverified Feb 2026 release date, Hermes 4.3 local default, 200+ OpenRouter models and email channel; local models via custom endpoint (Ollama); CVE count 45; funding stated as press-reported. Baseline from EN only (other locales no GSC data pulled; 28d to 2026-11-02; many EN queries are quoted automated operators).",
+    "queries": [
+      "hermes agent license",
+      "hermes agent self-hosted",
+      "hermes agent hardware requirements",
+      "hermes agent nous research review"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "21881c18-9c43-4c42-801b-6f4871c628ff",
+    "slug": "/zh/power-local-llm/hermes-agent-review",
+    "date": "2026-11-02T19:47:57.809Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Hermes Agent评测：自托管AI代理",
+        "new": "Hermes Agent评测：自托管AI代理、风险与部署"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Hermes Agent（Nous Research，MIT许可证）：具备自我改进技能循环与持久记忆的自托管AI代理。功能、运行方式与适用人群一览。",
+        "new": "Hermes Agent（Nous Research）是免费、MIT许可的自托管AI代理，具备记忆与技能。含部署方式、通过Ollama运行本地模型及CVE漏洞记录。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5. Titles/metas into locale budget; verified rebuild against primary sources 2026-11-02: removed unverified Feb 2026 release date, Hermes 4.3 local default, 200+ OpenRouter models and email channel; local models via custom endpoint (Ollama); CVE count 45; funding stated as press-reported. Baseline from EN only (other locales no GSC data pulled; 28d to 2026-11-02; many EN queries are quoted automated operators).",
+    "queries": [
+      "hermes agent license",
+      "hermes agent self-hosted",
+      "hermes agent hardware requirements",
+      "hermes agent nous research review"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "86941d05-da29-4e57-be3f-9e661d64bb1f",
+    "slug": "/es/power-local-llm/hermes-agent-review",
+    "date": "2026-11-02T19:47:57.836Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Hermes Agent: agente de IA autoalojado",
+        "new": "Hermes Agent: agente de IA autoalojado, riesgos y uso"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Hermes Agent (Nous Research, licencia MIT): agente de IA autoalojado con bucle de habilidades autosuperador y memoria persistente. Qué hace, cómo ejecutarlo y a quién le conviene.",
+        "new": "Hermes Agent (Nous Research) es un agente de IA autoalojado, gratuito y con licencia MIT. Instalación, modelos locales con Ollama e historial de CVE."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5. Titles/metas into locale budget; verified rebuild against primary sources 2026-11-02: removed unverified Feb 2026 release date, Hermes 4.3 local default, 200+ OpenRouter models and email channel; local models via custom endpoint (Ollama); CVE count 45; funding stated as press-reported. Baseline from EN only (other locales no GSC data pulled; 28d to 2026-11-02; many EN queries are quoted automated operators).",
+    "queries": [
+      "hermes agent license",
+      "hermes agent self-hosted",
+      "hermes agent hardware requirements",
+      "hermes agent nous research review"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "80ec1114-c1fe-488b-9a0b-e16f330eab9d",
+    "slug": "/pt/power-local-llm/hermes-agent-review",
+    "date": "2026-11-02T19:47:57.863Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Hermes Agent: agente de IA auto-hospedado",
+        "new": "Hermes Agent: agente de IA auto-hospedado, riscos e setup"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Hermes Agent (Nous Research, licença MIT): agente de IA auto-hospedado com loop de habilidades autoaperfeiçoável e memória persistente. O que faz, como rodar e para quem é indicado.",
+        "new": "Hermes Agent, da Nous Research: agente de IA gratuito, MIT e auto-hospedável, com memória e habilidades. Setup, modelos locais com Ollama e CVEs."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5. Titles/metas into locale budget; verified rebuild against primary sources 2026-11-02: removed unverified Feb 2026 release date, Hermes 4.3 local default, 200+ OpenRouter models and email channel; local models via custom endpoint (Ollama); CVE count 45; funding stated as press-reported. Baseline from EN only (other locales no GSC data pulled; 28d to 2026-11-02; many EN queries are quoted automated operators).",
+    "queries": [
+      "hermes agent license",
+      "hermes agent self-hosted",
+      "hermes agent hardware requirements",
+      "hermes agent nous research review"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "f03add85-bea5-4079-b0e5-ec12e8118db0",
+    "slug": "/ar/power-local-llm/hermes-agent-review",
+    "date": "2026-11-02T19:47:57.890Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Hermes Agent: وكيل ذكاء اصطناعي ذاتي الاستضافة",
+        "new": "مراجعة Hermes Agent: وكيل ذاتي الاستضافة والمخاطر"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Hermes Agent (Nous Research، ترخيص MIT): وكيل ذكاء اصطناعي ذاتي الاستضافة بحلقة مهارات ذاتية التحسين وذاكرة دائمة. ما يفعله، وكيفية تشغيله، ولمن يناسب.",
+        "new": "Hermes Agent من Nous Research: وكيل ذكاء اصطناعي مجاني بترخيص MIT وذاتي الاستضافة بذاكرة ومهارات. الإعداد، والنماذج المحلية عبر Ollama، وثغرات CVE."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5. Titles/metas into locale budget; verified rebuild against primary sources 2026-11-02: removed unverified Feb 2026 release date, Hermes 4.3 local default, 200+ OpenRouter models and email channel; local models via custom endpoint (Ollama); CVE count 45; funding stated as press-reported. Baseline from EN only (other locales no GSC data pulled; 28d to 2026-11-02; many EN queries are quoted automated operators).",
+    "queries": [
+      "hermes agent license",
+      "hermes agent self-hosted",
+      "hermes agent hardware requirements",
+      "hermes agent nous research review"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "96f58c2a-038e-4a42-acb2-d8cee78a57a2",
+    "slug": "/ko/power-local-llm/hermes-agent-review",
+    "date": "2026-11-02T19:47:57.917Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Hermes Agent 리뷰: 셀프 호스팅 AI 에이전트",
+        "new": "Hermes Agent 리뷰: 셀프 호스팅 에이전트, 위험, 설정"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Hermes Agent(Nous Research, MIT 라이선스): 자기개선형 스킬 루프와 영구 메모리를 갖춘 셀프 호스팅 AI 에이전트. 기능, 실행 방법, 적합한 대상을 정리했다.",
+        "new": "Hermes Agent는 Nous Research의 MIT 라이선스 셀프 호스팅 AI 에이전트다. 메모리와 스킬, Ollama 로컬 모델 설정, CVE 이력을 정리했다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 5. Titles/metas into locale budget; verified rebuild against primary sources 2026-11-02: removed unverified Feb 2026 release date, Hermes 4.3 local default, 200+ OpenRouter models and email channel; local models via custom endpoint (Ollama); CVE count 45; funding stated as press-reported. Baseline from EN only (other locales no GSC data pulled; 28d to 2026-11-02; many EN queries are quoted automated operators).",
+    "queries": [
+      "hermes agent license",
+      "hermes agent self-hosted",
+      "hermes agent hardware requirements",
+      "hermes agent nous research review"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-02"
+    },
+    "deployedAt": null
   }
 ]

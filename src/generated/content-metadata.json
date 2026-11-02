@@ -4231,7 +4231,7 @@
       "images": []
     },
     "prompt-engineering-history": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-03-01",
       "hasSections": true,
@@ -4276,7 +4276,7 @@
       ]
     },
     "ai-hallucinations-how-to-stop": {
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-03-22",
       "hasSections": true,
@@ -4949,8 +4949,8 @@
       "images": []
     },
     "chain-of-thought-prompting": {
-      "dateModified": "2026-08-31",
-      "lastFactChecked": "2026-05-03",
+      "dateModified": "2026-11-02",
+      "lastFactChecked": "2026-11-02",
       "publishDate": "2026-03-26",
       "hasSections": true,
       "langs": [
@@ -4967,8 +4967,8 @@
       "images": []
     },
     "prompt-chaining": {
-      "dateModified": null,
-      "lastFactChecked": null,
+      "dateModified": "2026-11-02",
+      "lastFactChecked": "2026-11-02 — Anthropic workflow description, Claude prompting guide, LangChain documentation and the Wu et al. and Khattab et al. papers re-checked against the primary sources",
       "publishDate": "2026-03-26",
       "hasSections": true,
       "langs": [
@@ -4985,15 +4985,15 @@
       "images": [
         {
           "url": "/images/prompt-chaining-basic-flow-en.svg",
-          "title": "Diagram showing how prompt chaining splits a complex task into sequential LLM calls with intermediate outputs feeding the next step."
+          "title": "Diagram of a prompt chain: a complex task is split into sequential LLM calls, and the output of each step feeds the next."
         },
         {
           "url": "/images/prompt-chaining-patterns-en.svg",
-          "title": "Typical prompt chaining patterns: sequential, branching, and map-reduce workflows used in production LLM pipelines."
+          "title": "Common prompt chaining patterns: sequential, branching and map-reduce workflows."
         },
         {
           "url": "/images/prompt-chaining-example-en.svg",
-          "title": "Worked example of a prompt chain: extract entities, classify intent, then generate a structured response in three LLM steps."
+          "title": "Worked example: extract changes, classify them, then write the changelog in three LLM steps."
         }
       ]
     },
@@ -5034,7 +5034,7 @@
       "images": []
     },
     "self-consistency-prompting": {
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-03-26",
       "hasSections": true,
@@ -5172,7 +5172,7 @@
       ]
     },
     "best-prompt-optimization-tools-teams": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-04-10",
       "hasSections": true,
@@ -5777,7 +5777,7 @@
   },
   "power-local-llm": {
     "hermes-agent-review-2026": {
-      "dateModified": "2026-09-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
       "hasSections": true,
@@ -7999,7 +7999,7 @@
       "images": []
     },
     "best-web-hosting-2026": {
-      "dateModified": "2026-09-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-08-30",
       "hasSections": true,
@@ -8017,7 +8017,7 @@
       "images": []
     },
     "digitalocean-vs-aws-cloud-for-ai-companies": {
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -8161,7 +8161,7 @@
       "images": []
     },
     "langchain-review": {
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -8665,7 +8665,7 @@
       "images": []
     },
     "best-ai-hr-software-enterprise-2026": {
-      "dateModified": "2026-09-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
       "hasSections": true,
@@ -9192,7 +9192,7 @@
       "images": []
     },
     "us-state-ai-employment-laws-compliance": {
-      "dateModified": "2026-09-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
       "hasSections": true,
@@ -10776,7 +10776,7 @@
       "images": []
     },
     "automatic1111-review": {
-      "dateModified": "2026-09-06",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
@@ -12882,7 +12882,7 @@
       "images": []
     },
     "opencode-review": {
-      "dateModified": "2026-09-12",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,
@@ -13188,7 +13188,7 @@
       "images": []
     },
     "risuai-review": {
-      "dateModified": "2026-09-12",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,
@@ -13332,7 +13332,7 @@
       "images": []
     },
     "odysseus-review": {
-      "dateModified": "2026-09-12",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,
@@ -13656,7 +13656,7 @@
       "images": []
     },
     "stable-diffusion-forge-review": {
-      "dateModified": "2026-09-19",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-19",
       "hasSections": true,
