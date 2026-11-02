@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle" direction="rtl">LM Studio مقابل Jan مقابل GPT4All — الخصوصية والقياس عن بُعد</text>
+  <!-- Subtitle -->
+  <text x="400" y="46" font-size="11" fill="#79747E" text-anchor="middle" direction="rtl">لا يرسل أيٌّ من التطبيقات الثلاثة prompts أو مخرجات النموذج إلى أي خادم</text>
+  <!-- Top separator -->
+  <line x1="18" y1="54" x2="782" y2="54" stroke="#E8DEF8" stroke-width="1"/>
+
+  <!-- ── Panel 1: LM Studio ── -->
+  <rect x="18" y="62" width="236" height="200" fill="#FFFBF0" stroke="#F4B400" stroke-width="2" rx="6"/>
+  <rect x="18" y="62" width="236" height="4" fill="#F4B400" rx="3"/>
+  <!-- App name -->
+  <text x="136" y="85" font-size="15" font-weight="700" fill="#F4B400" text-anchor="middle">LM Studio</text>
+  <!-- Badge circle -->
+  <circle cx="136" cy="115" r="24" fill="#F4B400"/>
+  <text x="136" y="112" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" direction="rtl">لا شيء</text>
+  <text x="136" y="122" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#160;</text>
+  <!-- Panel labels -->
+  <text x="136" y="150" font-size="11" fill="#49454F" text-anchor="middle" direction="rtl">بلا قياس عن بُعد (وفق السياسة)</text>
+  <text x="136" y="165" font-size="10" fill="#79747E" text-anchor="middle" direction="rtl">فحص التحديثات يرسل الإصدار والنظام وIP</text>
+  <!-- Divider -->
+  <line x1="30" y1="172" x2="242" y2="172" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Info lines -->
+  <text x="136" y="185" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle" direction="rtl">الـprompts تغادر الجهاز: لا</text>
+  <text x="136" y="200" font-size="11" fill="#EA4335" text-anchor="middle" direction="rtl">الشفرة المصدرية: مملوكة</text>
+  <text x="136" y="215" font-size="11" fill="#49454F" text-anchor="middle" direction="rtl">القياس عن بُعد: لا شيء (وفق السياسة)</text>
+  <text x="136" y="230" font-size="11" fill="#34A853" text-anchor="middle" direction="rtl">السعر: مجاني</text>
+
+  <!-- ── Panel 2: Jan ── -->
+  <rect x="274" y="62" width="236" height="200" fill="#F0FFF4" stroke="#34A853" stroke-width="2" rx="6"/>
+  <rect x="274" y="62" width="236" height="4" fill="#34A853" rx="3"/>
+  <!-- App name -->
+  <text x="392" y="85" font-size="15" font-weight="700" fill="#34A853" text-anchor="middle">Jan</text>
+  <!-- Badge circle -->
+  <circle cx="392" cy="115" r="24" fill="#34A853"/>
+  <text x="392" y="112" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" direction="rtl">صفر</text>
+  <text x="392" y="122" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#160;</text>
+  <!-- Panel labels -->
+  <text x="392" y="150" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle" direction="rtl">بلا قياس عن بُعد</text>
+  <text x="392" y="165" font-size="10" fill="#79747E" text-anchor="middle" direction="rtl">بلا SDK للتحليل. شفرة Apache 2.0.</text>
+  <!-- Divider -->
+  <line x1="286" y1="172" x2="498" y2="172" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Info lines -->
+  <text x="392" y="185" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle" direction="rtl">الـprompts تغادر الجهاز: لا</text>
+  <text x="392" y="200" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle" direction="rtl">الشفرة المصدرية: Apache 2.0 (مفتوحة)</text>
+  <text x="392" y="215" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle" direction="rtl">القياس عن بُعد: لا شيء افتراضياً</text>
+  <text x="392" y="230" font-size="11" fill="#34A853" text-anchor="middle" direction="rtl">السعر: مجاني</text>
+
+  <!-- ── Panel 3: GPT4All ── -->
+  <rect x="530" y="62" width="236" height="200" fill="#F7F2FA" stroke="#6750A4" stroke-width="2" rx="6"/>
+  <rect x="530" y="62" width="236" height="4" fill="#6750A4" rx="3"/>
+  <!-- App name -->
+  <text x="648" y="85" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">GPT4All</text>
+  <!-- Badge circle -->
+  <circle cx="648" cy="115" r="24" fill="#6750A4"/>
+  <text x="648" y="112" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" direction="rtl">اشتراك</text>
+  <text x="648" y="122" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" direction="rtl">اختياري</text>
+  <!-- Panel labels -->
+  <text x="648" y="150" font-size="11" fill="#49454F" text-anchor="middle" direction="rtl">اشتراك اختياري فقط</text>
+  <text x="648" y="165" font-size="10" fill="#79747E" text-anchor="middle" direction="rtl">معطّل افتراضياً. شفرة MIT.</text>
+  <!-- Divider -->
+  <line x1="542" y1="172" x2="754" y2="172" stroke="#E8DEF8" stroke-width="1"/>
+  <!-- Info lines -->
+  <text x="648" y="185" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle" direction="rtl">الـprompts تغادر الجهاز: لا</text>
+  <text x="648" y="200" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle" direction="rtl">الشفرة المصدرية: MIT (مفتوحة)</text>
+  <text x="648" y="215" font-size="11" fill="#49454F" text-anchor="middle" direction="rtl">القياس عن بُعد: اشتراك اختياري فقط</text>
+  <text x="648" y="230" font-size="11" fill="#34A853" text-anchor="middle" direction="rtl">السعر: مجاني</text>
+
+  <!-- Bottom separator -->
+  <line x1="18" y1="270" x2="782" y2="270" stroke="#E8DEF8" stroke-width="1"/>
+  <!-- Footer -->
+  <text x="400" y="290" font-size="10" fill="#79747E" text-anchor="middle" direction="rtl">Jan الأكثر قابلية للتدقيق: شفرة Apache 2.0، بلا قياس عن بُعد افتراضياً، ويعمل دون اتصال بالكامل · promptquorum.com</text>
+</svg>

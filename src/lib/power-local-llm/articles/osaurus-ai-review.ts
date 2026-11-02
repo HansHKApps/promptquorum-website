@@ -290,7 +290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Atomic Chat Review](/power-local-llm/atomic-chat-review) — a free, cross-platform local AI chat app that bundles its own inference engine.',
-          '[LM Studio vs. Jan vs. GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — how self-contained local chat apps compare to a backend-dependent app like Osaurus.',
+          '[LM Studio vs. Jan vs. GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — how self-contained local chat apps compare to a backend-dependent app like Osaurus.',
           '[Easiest Local AI App for Windows, Mac, and Linux](/power-local-llm/easiest-local-ai-app-windows-mac-linux) — a broader look at no-setup local chat apps across platforms.',
           '[Loci AI Review](/power-local-llm/loci-ai-review-offline-local-ai) — another offline-first local AI app compared on platform and privacy terms.',
           '[Local LLM Software Directory](/directory) — the full catalog of local AI tools this article belongs to.',
@@ -588,7 +588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Atomic-Chat-Rezension](/de/power-local-llm/atomic-chat-review) — eine kostenlose, plattformübergreifende lokale KI-Chat-App mit eigener Inferenz-Engine.',
-          '[LM Studio vs. Jan vs. GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — wie eigenständige lokale Chat-Apps im Vergleich zu einer Backend-abhängigen App wie Osaurus abschneiden.',
+          '[LM Studio vs. Jan vs. GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — wie eigenständige lokale Chat-Apps im Vergleich zu einer Backend-abhängigen App wie Osaurus abschneiden.',
           '[Die einfachste lokale KI-App für Windows, Mac und Linux](/de/power-local-llm/easiest-local-ai-app-windows-mac-linux) — ein breiterer Blick auf lokale Chat-Apps ohne Einrichtungsaufwand über mehrere Plattformen.',
           '[Loci-AI-Rezension](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine weitere Offline-First-KI-App im Vergleich zu Plattform- und Datenschutzbedingungen.',
           '[Verzeichnis lokaler KI-Software](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
@@ -884,7 +884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           '[Avis Atomic Chat](/fr/power-local-llm/atomic-chat-review) — une application de chat IA locale gratuite et multiplateforme intégrant son propre moteur d\'inférence.',
-          '[LM Studio vs. Jan vs. GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — comment des applications de chat local autonomes se comparent à une application dépendante d\'un backend comme Osaurus.',
+          '[LM Studio vs. Jan vs. GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — comment des applications de chat local autonomes se comparent à une application dépendante d\'un backend comme Osaurus.',
           '[L\'application IA locale la plus simple pour Windows, Mac et Linux](/fr/power-local-llm/easiest-local-ai-app-windows-mac-linux) — un aperçu plus large des applications de chat local sans configuration sur plusieurs plateformes.',
           '[Avis Loci AI](/fr/power-local-llm/loci-ai-review-offline-local-ai) — une autre application IA hors ligne comparée sur les critères de plateforme et de confidentialité.',
           '[Répertoire de logiciels IA locale](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
@@ -1180,7 +1180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[Atomic Chatレビュー](/ja/power-local-llm/atomic-chat-review) — 独自の推論エンジンを搭載した無料でクロスプラットフォームのローカルAIチャットアプリ。',
-          '[LM Studio vs. Jan vs. GPT4All](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 自己完結型のローカルチャットアプリが、Osaurusのようなバックエンド依存型アプリとどう比較されるか。',
+          '[LM Studio vs. Jan vs. GPT4All](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — 自己完結型のローカルチャットアプリが、Osaurusのようなバックエンド依存型アプリとどう比較されるか。',
           '[Windows、Mac、Linux向けの最も簡単なローカルAIアプリ](/ja/power-local-llm/easiest-local-ai-app-windows-mac-linux) — 複数プラットフォームでセットアップ不要のローカルチャットアプリを幅広く紹介。',
           '[Loci AIレビュー](/ja/power-local-llm/loci-ai-review-offline-local-ai) — プラットフォームとプライバシーの観点で比較した、もう1つのオフラインファーストAIアプリ。',
           '[ローカルLLMソフトウェアディレクトリ](/ja/directory) — この記事が属するローカルAIツールの完全なカタログ。',
@@ -1476,7 +1476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[Atomic Chat 评测](/zh/power-local-llm/atomic-chat-review) — 一款自带推理引擎的免费跨平台本地 AI 聊天应用。',
-          '[LM Studio vs. Jan vs. GPT4All](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 自包含本地聊天应用与像 Osaurus 这样依赖后端的应用相比如何。',
+          '[LM Studio vs. Jan vs. GPT4All](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — 自包含本地聊天应用与像 Osaurus 这样依赖后端的应用相比如何。',
           '[适用于 Windows、Mac 和 Linux 的最简单本地 AI 应用](/zh/power-local-llm/easiest-local-ai-app-windows-mac-linux) — 更广泛地介绍跨平台的免设置本地聊天应用。',
           '[Loci AI 评测](/zh/power-local-llm/loci-ai-review-offline-local-ai) — 另一款按平台和隐私条款对比的离线优先 AI 应用。',
           '[本地 LLM 软件目录](/zh/directory) — 本文所属的本地 AI 工具完整目录。',
@@ -1772,7 +1772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Reseña de Atomic Chat](/es/power-local-llm/atomic-chat-review) — una app de chat de IA local gratuita y multiplataforma que incluye su propio motor de inferencia.',
-          '[LM Studio vs. Jan vs. GPT4All](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — cómo se comparan las apps de chat local autónomas frente a una app dependiente de backend como Osaurus.',
+          '[LM Studio vs. Jan vs. GPT4All](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — cómo se comparan las apps de chat local autónomas frente a una app dependiente de backend como Osaurus.',
           '[La app de IA local más sencilla para Windows, Mac y Linux](/es/power-local-llm/easiest-local-ai-app-windows-mac-linux) — una mirada más amplia a las apps de chat local sin configuración en varias plataformas.',
           '[Reseña de Loci AI](/es/power-local-llm/loci-ai-review-offline-local-ai) — otra app de IA sin conexión comparada en términos de plataforma y privacidad.',
           '[Directorio de software LLM local](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
@@ -2068,7 +2068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Análise do Atomic Chat](/pt/power-local-llm/atomic-chat-review) — um app de chat de IA local gratuito e multiplataforma que traz seu próprio motor de inferência.',
-          '[LM Studio vs. Jan vs. GPT4All](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — como apps de chat local autocontidos se comparam a um app dependente de backend como o Osaurus.',
+          '[LM Studio vs. Jan vs. GPT4All](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — como apps de chat local autocontidos se comparam a um app dependente de backend como o Osaurus.',
           '[O app de IA local mais simples para Windows, Mac e Linux](/pt/power-local-llm/easiest-local-ai-app-windows-mac-linux) — um panorama mais amplo de apps de chat local sem configuração em várias plataformas.',
           '[Análise do Loci AI](/pt/power-local-llm/loci-ai-review-offline-local-ai) — outro app de IA offline-first comparado em termos de plataforma e privacidade.',
           '[Diretório de software de LLM local](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
@@ -2364,7 +2364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[مراجعة Atomic Chat](/ar/power-local-llm/atomic-chat-review) — تطبيق دردشة ذكاء اصطناعي محلي مجاني ومتعدد المنصات يتضمن محرك استدلال خاصًا به.',
-          '[LM Studio مقابل Jan مقابل GPT4All](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — كيف تقارَن تطبيقات الدردشة المحلية المستقلة بذاتها مع تطبيق يعتمد على خلفية مثل Osaurus.',
+          '[LM Studio مقابل Jan مقابل GPT4All](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — كيف تقارَن تطبيقات الدردشة المحلية المستقلة بذاتها مع تطبيق يعتمد على خلفية مثل Osaurus.',
           '[أسهل تطبيق ذكاء اصطناعي محلي لـ Windows وMac وLinux](/ar/power-local-llm/easiest-local-ai-app-windows-mac-linux) — نظرة أوسع على تطبيقات الدردشة المحلية بدون إعداد عبر منصات متعددة.',
           '[مراجعة Loci AI](/ar/power-local-llm/loci-ai-review-offline-local-ai) — تطبيق ذكاء اصطناعي آخر يعمل بدون اتصال بالدرجة الأولى، مقارَن من حيث المنصة والخصوصية.',
           '[دليل برامج LLM المحلية](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
@@ -2660,7 +2660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[Atomic Chat 리뷰](/ko/power-local-llm/atomic-chat-review) — 자체 추론 엔진을 탑재한 무료 크로스플랫폼 로컬 AI 채팅 앱.',
-          '[LM Studio vs. Jan vs. GPT4All](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 독립적인 로컬 채팅 앱이 Osaurus 같은 백엔드 의존형 앱과 어떻게 비교되는지.',
+          '[LM Studio vs. Jan vs. GPT4All](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — 독립적인 로컬 채팅 앱이 Osaurus 같은 백엔드 의존형 앱과 어떻게 비교되는지.',
           '[Windows, Mac, Linux용 가장 쉬운 로컬 AI 앱](/ko/power-local-llm/easiest-local-ai-app-windows-mac-linux) — 여러 플랫폼에서 설정이 필요 없는 로컬 채팅 앱을 폭넓게 살펴봅니다.',
           '[Loci AI 리뷰](/ko/power-local-llm/loci-ai-review-offline-local-ai) — 플랫폼과 개인정보 보호 측면에서 비교한 또 다른 오프라인 우선 AI 앱.',
           '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그.',

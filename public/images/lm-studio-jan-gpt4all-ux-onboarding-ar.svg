@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 310" width="800" height="310" role="img" aria-label="LM Studio مقابل Jan مقابل GPT4All — التهيئة: النقرات حتى أول محادثة">
+  <rect width="800" height="310" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle" direction="rtl">LM Studio مقابل Jan مقابل GPT4All — التهيئة: النقرات حتى أول محادثة</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle" direction="rtl">قِيس من التثبيت الجديد إلى أول رد في الدردشة مع نموذج 8B موصى به</text>
+
+  <!-- Top separator -->
+  <line x1="20" y1="54" x2="780" y2="54" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Column headers -->
+  <text x="270" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="start" direction="rtl">الخطوة</text>
+  <text x="330" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">LM Studio</text>
+  <text x="490" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Jan</text>
+  <text x="650" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">GPT4All</text>
+
+  <!-- Header underline -->
+  <line x1="20" y1="78" x2="780" y2="78" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: Download installer (y=96) -->
+  <text x="270" y="96" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="start" direction="rtl">تنزيل المثبّت</text>
+  <text x="330" y="96" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="middle" direction="rtl">نعم</text>
+  <text x="490" y="96" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="middle" direction="rtl">نعم</text>
+  <text x="650" y="96" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="middle" direction="rtl">نعم</text>
+  <line x1="20" y1="108" x2="780" y2="108" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Admin rights needed? (y=124) -->
+  <text x="270" y="124" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="start" direction="rtl">هل يلزم صلاحيات مسؤول؟</text>
+  <text x="330" y="124" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#34A853" text-anchor="middle" direction="rtl">لا</text>
+  <text x="490" y="124" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#34A853" text-anchor="middle" direction="rtl">لا</text>
+  <text x="650" y="124" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#34A853" text-anchor="middle" direction="rtl">لا</text>
+  <line x1="20" y1="136" x2="780" y2="136" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: Suggested model at launch (y=152) -->
+  <text x="270" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="start" direction="rtl">نموذج مقترح عند التشغيل</text>
+  <text x="330" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#34A853" text-anchor="middle" direction="rtl">نعم</text>
+  <text x="490" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#34A853" text-anchor="middle" direction="rtl">نعم</text>
+  <text x="650" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#34A853" text-anchor="middle" direction="rtl">نعم</text>
+  <line x1="20" y1="164" x2="780" y2="164" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Time to first reply (y=180) -->
+  <text x="270" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="start" direction="rtl">الوقت حتى أول رد (8B)</text>
+  <text x="330" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="middle" direction="rtl">~3 دقائق</text>
+  <text x="490" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="middle" direction="rtl">~3 دقائق</text>
+  <text x="650" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#34A853" text-anchor="middle" direction="rtl">~دقيقتان</text>
+  <line x1="20" y1="192" x2="780" y2="192" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: Total clicks to first chat (y=208) — special highlight -->
+  <text x="270" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="start" direction="rtl">إجمالي النقرات حتى أول محادثة</text>
+  <text x="330" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#F4B400" text-anchor="middle">6</text>
+  <text x="490" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">5</text>
+  <!-- GPT4All winner badge background -->
+  <rect x="621" y="194" width="58" height="22" rx="11" fill="#34A853"/>
+  <text x="650" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">4 ✓</text>
+
+  <!-- Bottom prominent divider -->
+  <line x1="20" y1="220" x2="780" y2="220" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Footer -->
+  <text x="400" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle" direction="rtl">GPT4All الأبسط في التهيئة — 4 نقرات ودقيقتان · الثلاثة: لا حاجة إلى GPU أو صلاحيات مسؤول · promptquorum.com</text>
+</svg>

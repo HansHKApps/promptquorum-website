@@ -357,7 +357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[LM Studio vs Jan vs GPT4All: Full Comparison](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — in-depth feature and benchmark comparison of all three apps.',
+          '[LM Studio vs Jan vs GPT4All: Full Comparison](/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — in-depth feature and benchmark comparison of all three apps.',
           '[Best Local AI App for Low-End PCs](/power-local-llm/best-local-ai-app-low-end-pc) — model and app recommendations for computers with 8 GB or less RAM.',
           '[Best Local AI App for Non-Technical Users](/power-local-llm/local-ai-app-non-technical-users) — user-experience comparison focused on onboarding, documentation, and error handling.',
           '[How to Run AI on a Tablet (iPad and Android)](/power-local-llm/run-ai-on-tablet-ipad-android) — local AI options for touch-screen devices.',
@@ -726,7 +726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Literatur',
         items: [
-          '[LM Studio vs Jan vs GPT4All: Vollständiger Vergleich](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — detaillierter Funktions- und Benchmark-Vergleich aller drei Apps.',
+          '[LM Studio vs Jan vs GPT4All: Vollständiger Vergleich](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — detaillierter Funktions- und Benchmark-Vergleich aller drei Apps.',
           '[Beste lokale AI-App für Low-End-PCs](/de/power-local-llm/best-local-ai-app-low-end-pc) — Modell- und App-Empfehlungen für Computer mit 8 GB oder weniger RAM.',
           '[Beste lokale AI-App für nicht-technische Benutzer](/de/power-local-llm/local-ai-app-non-technical-users) — UX-Vergleich mit Fokus auf Onboarding, Dokumentation und Fehlerbehandlung.',
           '[AI auf einem Tablet ausführen (iPad und Android)](/de/power-local-llm/run-ai-on-tablet-ipad-android) — lokale AI-Optionen für Touch-Screen-Geräte.',
@@ -1146,7 +1146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[LM Studio vs Jan vs GPT4All : Comparaison complète](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — comparaison approfondie des fonctionnalités et benchmarks des trois applications.',
+          '[LM Studio vs Jan vs GPT4All : Comparaison complète](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — comparaison approfondie des fonctionnalités et benchmarks des trois applications.',
           '[Meilleure application IA locale pour PC bas de gamme](/fr/power-local-llm/best-local-ai-app-low-end-pc) — recommandations de modèles et d\'applications pour ordinateurs avec 8 GB ou moins de RAM.',
           '[Meilleure application IA locale pour utilisateurs non-techniques](/fr/power-local-llm/local-ai-app-non-technical-users) — comparaison de l\'expérience utilisateur axée sur l\'intégration, la documentation et la gestion des erreurs.',
           '[Exécuter l\'IA sur une tablette (iPad et Android)](/fr/power-local-llm/run-ai-on-tablet-ipad-android) — options IA locales pour appareils tactiles.',
@@ -1562,7 +1562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連読み物',
         items: [
-          '[LM Studio vs Jan vs GPT4All : 完全比較](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 3つのアプリの機能とベンチマークの詳細比較。',
+          '[LM Studio vs Jan vs GPT4All : 完全比較](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — 3つのアプリの機能とベンチマークの詳細比較。',
           '[低スペックPC向けベストローカルAIアプリ](/ja/power-local-llm/best-local-ai-app-low-end-pc) — RAM 8 GB以下のコンピュータ向けモデルとアプリ推奨。',
           '[非技術ユーザー向けベストローカルAIアプリ](/ja/power-local-llm/local-ai-app-non-technical-users) — オンボーディング、ドキュメント、エラーハンドリングに重点を置いたUX比較。',
           '[タブレットでAIを実行する（iPadとAndroid）](/ja/power-local-llm/run-ai-on-tablet-ipad-android) — タッチスクリーンデバイス向けローカルAIオプション。',
@@ -1982,7 +1982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[LM Studio vs Jan vs GPT4All : 完整对比](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 三个应用的功能和基准的深入对比。',
+          '[LM Studio vs Jan vs GPT4All : 完整对比](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — 三个应用的功能和基准的深入对比。',
           '[低端PC最佳本地AI应用](/zh/power-local-llm/best-local-ai-app-low-end-pc) — RAM 8 GB或更少的计算机模型和应用推荐。',
           '[非技术用户最佳本地AI应用](/zh/power-local-llm/local-ai-app-non-technical-users) — 重点关于入职、文档和错误处理的用户体验对比。',
           '[在平板电脑上运行AI（iPad和Android）](/zh/power-local-llm/run-ai-on-tablet-ipad-android) — 触屏设备本地AI选项。',
@@ -2406,7 +2406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[LM Studio vs Jan vs GPT4All: comparación completa](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — comparación detallada de funciones y benchmarks de las tres aplicaciones.',
+          '[LM Studio vs Jan vs GPT4All: comparación completa](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — comparación detallada de funciones y benchmarks de las tres aplicaciones.',
           '[Mejor aplicación de IA local para PC de gama baja](/es/power-local-llm/best-local-ai-app-low-end-pc) — recomendaciones de modelos y aplicaciones para computadoras con 8 GB de RAM o menos.',
           '[Mejor aplicación de IA local para usuarios no técnicos](/es/power-local-llm/local-ai-app-non-technical-users) — comparación de experiencia de usuario centrada en incorporación, documentación y manejo de errores.',
           '[Cómo ejecutar IA en una tableta (iPad y Android)](/es/power-local-llm/run-ai-on-tablet-ipad-android) — opciones de IA local para dispositivos de pantalla táctil.',
@@ -2796,7 +2796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[LM Studio vs Jan vs GPT4All: comparação completa](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — comparação detalhada de recursos e benchmarks dos três aplicativos.',
+          '[LM Studio vs Jan vs GPT4All: comparação completa](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — comparação detalhada de recursos e benchmarks dos três aplicativos.',
           '[Melhor aplicativo de IA local para PCs de baixo desempenho](/pt/power-local-llm/best-local-ai-app-low-end-pc) — recomendações de modelos e aplicativos para computadores com 8 GB de RAM ou menos.',
           '[Melhor aplicativo de IA local para usuários não técnicos](/pt/power-local-llm/local-ai-app-non-technical-users) — comparação de experiência do usuário focada em integração, documentação e tratamento de erros.',
           '[Como executar IA em um tablet (iPad e Android)](/pt/power-local-llm/run-ai-on-tablet-ipad-android) — opções de IA local para dispositivos de tela sensível ao toque.',
@@ -3186,7 +3186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءة ذات صلة',
         items: [
-          '[LM Studio مقابل Jan مقابل GPT4All: مقارنة كاملة](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — مقارنة تفصيلية للميزات والمعايير القياسية للتطبيقات الثلاثة.',
+          '[LM Studio مقابل Jan مقابل GPT4All: مقارنة كاملة](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — مقارنة تفصيلية للميزات والمعايير القياسية للتطبيقات الثلاثة.',
           '[أفضل تطبيق ذكاء اصطناعي محلي لأجهزة الحاسوب ذات الإمكانيات المنخفضة](/ar/power-local-llm/best-local-ai-app-low-end-pc) — توصيات النماذج والتطبيقات للحواسيب ذات 8 جيجابايت RAM أو أقل.',
           '[أفضل تطبيق ذكاء اصطناعي محلي للمستخدمين غير التقنيين](/ar/power-local-llm/local-ai-app-non-technical-users) — مقارنة تجربة المستخدم مركّزة على الإعداد والتوثيق ومعالجة الأخطاء.',
           '[كيفية تشغيل الذكاء الاصطناعي على جهاز لوحي (iPad وAndroid)](/ar/power-local-llm/run-ai-on-tablet-ipad-android) — خيارات الذكاء الاصطناعي المحلي لأجهزة الشاشة اللمسية.',
@@ -3576,7 +3576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽기',
         items: [
-          '[LM Studio vs Jan vs GPT4All: 전체 비교](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 세 가지 앱의 상세 기능 및 벤치마크 비교.',
+          '[LM Studio vs Jan vs GPT4All: 전체 비교](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — 세 가지 앱의 상세 기능 및 벤치마크 비교.',
           '[저사양 PC를 위한 최고의 로컬 AI 앱](/ko/power-local-llm/best-local-ai-app-low-end-pc) — 8 GB RAM 이하 컴퓨터를 위한 모델 및 앱 추천.',
           '[비전문가를 위한 최고의 로컬 AI 앱](/ko/power-local-llm/local-ai-app-non-technical-users) — 온보딩, 문서화, 오류 처리에 집중한 사용자 경험 비교.',
           '[태블릿(iPad 및 Android)에서 AI 실행하기](/ko/power-local-llm/run-ai-on-tablet-ipad-android) — 터치 스크린 기기를 위한 로컬 AI 옵션.',

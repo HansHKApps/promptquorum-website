@@ -614,6 +614,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026',
+        destination: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026',
+        destination: '/:lang/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
+        permanent: true,
+      },
+      {
         source: '/power-local-llm/hermes-agent-review-2026',
         destination: '/power-local-llm/hermes-agent-review',
         permanent: true,

@@ -48,7 +48,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         text: 'Open-source ChatGPT alternatives run AI language models on your own computer or a free cloud plan instead of paying OpenAI $20/month.',
       },
     ],
-    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026',
+    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
     sections: {
       tldr: {
         isTldr: true,
@@ -399,7 +399,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         text: 'Open-Source-ChatGPT-Alternativen führen KI-Sprachmodelle auf dem eigenen Computer oder in einem kostenlosen Cloud-Tarif aus, statt 20 $/Monat an OpenAI zu zahlen.',
       },
     ],
-    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026',
+    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
     sections: {
       tldr: {
         isTldr: true,
@@ -712,7 +712,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         text: 'Les alternatives open source à ChatGPT exécutent des modèles de langage sur votre ordinateur ou via une offre cloud gratuite, au lieu de payer 20 $/mois à OpenAI.',
       },
     ],
-    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026',
+    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
     sections: {
       tldr: {
         isTldr: true,
@@ -1025,7 +1025,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         text: 'オープンソースのChatGPT代替は、OpenAIに月額20ドルを払う代わりに、自分のパソコンや無料のクラウドプランでAI言語モデルを動かします。',
       },
     ],
-    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026',
+    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
     sections: {
       tldr: {
         isTldr: true,
@@ -1338,7 +1338,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         text: 'Las alternativas open source a ChatGPT ejecutan modelos de lenguaje en tu ordenador o en un plan de nube gratuito, en lugar de pagar 20 $/mes a OpenAI.',
       },
     ],
-    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026',
+    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
     sections: {
       tldr: {
         isTldr: true,
@@ -1651,7 +1651,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         text: '开源的ChatGPT替代方案在你自己的电脑或免费云计划上运行AI语言模型，而不是每月向OpenAI支付20美元。',
       },
     ],
-    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026',
+    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
     sections: {
       tldr: {
         isTldr: true,
@@ -1964,7 +1964,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         text: 'As alternativas open source ao ChatGPT rodam modelos de linguagem no seu computador ou em um plano de nuvem gratuito, em vez de pagar US$ 20/mês à OpenAI.',
       },
     ],
-    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026',
+    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
     sections: {
       tldr: {
         isTldr: true,
@@ -2277,7 +2277,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         text: 'بدائل ChatGPT المفتوحة المصدر تشغّل نماذج اللغة على جهازك أو ضمن خطة سحابية مجانية بدلاً من دفع 20 دولاراً شهرياً لـOpenAI.',
       },
     ],
-    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026',
+    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
     sections: {
       tldr: {
         isTldr: true,
@@ -2590,7 +2590,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         text: 'ChatGPT 오픈소스 대안은 OpenAI에 월 20달러를 내는 대신 내 컴퓨터나 무료 클라우드 플랜에서 AI 언어 모델을 실행합니다.',
       },
     ],
-    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026',
+    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
     sections: {
       tldr: {
         isTldr: true,

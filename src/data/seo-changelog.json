@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 0.00004600239212439047,
+      "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
   },
@@ -7738,7 +7738,7 @@
   },
   {
     "id": "da6c44a5-c52e-4bda-997d-67f476eb3487",
-    "slug": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
+    "slug": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
     "date": "2026-11-02T10:16:42.395Z",
     "fields": [
       {
@@ -7774,7 +7774,7 @@
   },
   {
     "id": "ac28892c-eaa9-4311-a6de-abc35b624daf",
-    "slug": "/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
+    "slug": "/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
     "date": "2026-11-02T10:16:42.502Z",
     "fields": [
       {
@@ -7799,7 +7799,7 @@
   },
   {
     "id": "9ab59ffb-7acb-4bfe-b7f5-326155a8bd8a",
-    "slug": "/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
+    "slug": "/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
     "date": "2026-11-02T10:16:42.609Z",
     "fields": [
       {
@@ -7823,7 +7823,7 @@
   },
   {
     "id": "33c5a2da-673a-44ab-8955-ec3615059355",
-    "slug": "/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
+    "slug": "/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
     "date": "2026-11-02T10:16:42.717Z",
     "fields": [
       {
@@ -7848,7 +7848,7 @@
   },
   {
     "id": "58355713-542c-4501-a1c9-70563c6223d7",
-    "slug": "/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
+    "slug": "/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
     "date": "2026-11-02T10:16:42.822Z",
     "fields": [
       {
@@ -7878,7 +7878,7 @@
   },
   {
     "id": "27c86fa3-bef5-4812-9aac-33f78a339453",
-    "slug": "/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
+    "slug": "/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
     "date": "2026-11-02T10:16:42.925Z",
     "fields": [
       {
@@ -7903,7 +7903,7 @@
   },
   {
     "id": "ef43e758-67fe-4a68-8b52-3cca6446f0d1",
-    "slug": "/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
+    "slug": "/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
     "date": "2026-11-02T10:16:43.029Z",
     "fields": [
       {

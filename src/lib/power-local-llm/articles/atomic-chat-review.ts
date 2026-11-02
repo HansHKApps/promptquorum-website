@@ -374,7 +374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[LM Studio vs. Jan vs. GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — how Atomic Chat\'s closest desktop-only alternatives compare.',
+          '[LM Studio vs. Jan vs. GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — how Atomic Chat\'s closest desktop-only alternatives compare.',
           '[Easiest Local AI App for Windows, Mac, and Linux](/power-local-llm/easiest-local-ai-app-windows-mac-linux) — a broader look at no-setup local chat apps.',
           '[Best Local LLM Apps for Android](/power-local-llm/best-local-llm-apps-android-2026) — mobile-focused local AI apps beyond Atomic Chat.',
           '[Best Local LLM Apps for iPhone](/power-local-llm/best-local-llm-apps-iphone-2026) — iOS-specific local AI app options.',
@@ -755,7 +755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[LM Studio مقابل Jan مقابل GPT4All](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — كيف تقارن أقرب بدائل Atomic Chat المخصصة لسطح المكتب فقط.',
+          '[LM Studio مقابل Jan مقابل GPT4All](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — كيف تقارن أقرب بدائل Atomic Chat المخصصة لسطح المكتب فقط.',
           '[أسهل تطبيق ذكاء اصطناعي محلي لـ Windows وMac وLinux](/ar/power-local-llm/easiest-local-ai-app-windows-mac-linux) — نظرة أوسع على تطبيقات الدردشة المحلية بدون إعداد.',
           '[أفضل تطبيقات LLM محلية لأندرويد](/ar/power-local-llm/best-local-llm-apps-android-2026) — تطبيقات ذكاء اصطناعي محلية موجهة للجوال بخلاف Atomic Chat.',
           '[أفضل تطبيقات LLM محلية لآيفون](/ar/power-local-llm/best-local-llm-apps-iphone-2026) — خيارات تطبيقات ذكاء اصطناعي محلية خاصة بـ iOS.',
@@ -1136,7 +1136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[LM Studio vs. Jan vs. GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — wie sich Atomic Chats nächste, nur auf Desktop laufende Alternativen vergleichen.',
+          '[LM Studio vs. Jan vs. GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — wie sich Atomic Chats nächste, nur auf Desktop laufende Alternativen vergleichen.',
           '[Einfachste lokale KI-App für Windows, Mac und Linux](/de/power-local-llm/easiest-local-ai-app-windows-mac-linux) — ein breiterer Blick auf lokale Chat-Apps ohne Einrichtungsaufwand.',
           '[Beste lokale LLM-Apps für Android](/de/power-local-llm/best-local-llm-apps-android-2026) — mobil-fokussierte lokale KI-Apps neben Atomic Chat.',
           '[Beste lokale LLM-Apps für iPhone](/de/power-local-llm/best-local-llm-apps-iphone-2026) — iOS-spezifische lokale KI-App-Optionen.',
@@ -1517,7 +1517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[LM Studio frente a Jan frente a GPT4All](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — cómo se comparan las alternativas de escritorio más cercanas a Atomic Chat.',
+          '[LM Studio frente a Jan frente a GPT4All](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — cómo se comparan las alternativas de escritorio más cercanas a Atomic Chat.',
           '[La app de IA local más fácil para Windows, Mac y Linux](/es/power-local-llm/easiest-local-ai-app-windows-mac-linux) — una mirada más amplia a las apps de chat local sin configuración.',
           '[Mejores apps de LLM local para Android](/es/power-local-llm/best-local-llm-apps-android-2026) — apps de IA local enfocadas al móvil más allá de Atomic Chat.',
           '[Mejores apps de LLM local para iPhone](/es/power-local-llm/best-local-llm-apps-iphone-2026) — opciones de apps de IA local específicas de iOS.',
@@ -1898,7 +1898,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[LM Studio vs. Jan vs. GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — comment se comparent les alternatives d\'Atomic Chat réservées au bureau.',
+          '[LM Studio vs. Jan vs. GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — comment se comparent les alternatives d\'Atomic Chat réservées au bureau.',
           '[L\'app d\'IA locale la plus simple pour Windows, Mac et Linux](/fr/power-local-llm/easiest-local-ai-app-windows-mac-linux) — un aperçu plus large des applications de chat local sans installation complexe.',
           '[Meilleures apps de LLM local pour Android](/fr/power-local-llm/best-local-llm-apps-android-2026) — des applications d\'IA locale axées mobile au-delà d\'Atomic Chat.',
           '[Meilleures apps de LLM local pour iPhone](/fr/power-local-llm/best-local-llm-apps-iphone-2026) — des options d\'applications d\'IA locale spécifiques à iOS.',
@@ -2279,7 +2279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[LM Studio vs. Jan vs. GPT4All](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — Atomic Chatに最も近いデスクトップ専用の代替アプリとの比較。',
+          '[LM Studio vs. Jan vs. GPT4All](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — Atomic Chatに最も近いデスクトップ専用の代替アプリとの比較。',
           '[Windows・Mac・Linux向けの最も簡単なローカルAIアプリ](/ja/power-local-llm/easiest-local-ai-app-windows-mac-linux) — セットアップ不要のローカルチャットアプリの幅広い紹介。',
           '[Android向けベストローカルLLMアプリ](/ja/power-local-llm/best-local-llm-apps-android-2026) — Atomic Chat以外のモバイル向けローカルAIアプリ。',
           '[iPhone向けベストローカルLLMアプリ](/ja/power-local-llm/best-local-llm-apps-iphone-2026) — iOS向けのローカルAIアプリの選択肢。',
@@ -2660,7 +2660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[LM Studio vs. Jan vs. GPT4All](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — como as alternativas de desktop mais próximas do Atomic Chat se comparam.',
+          '[LM Studio vs. Jan vs. GPT4All](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — como as alternativas de desktop mais próximas do Atomic Chat se comparam.',
           '[O app de IA local mais fácil para Windows, Mac e Linux](/pt/power-local-llm/easiest-local-ai-app-windows-mac-linux) — um panorama mais amplo de apps de chat local sem configuração.',
           '[Melhores apps de LLM local para Android](/pt/power-local-llm/best-local-llm-apps-android-2026) — apps de IA local voltados para celular além do Atomic Chat.',
           '[Melhores apps de LLM local para iPhone](/pt/power-local-llm/best-local-llm-apps-iphone-2026) — opções de apps de IA local específicos para iOS.',
@@ -3041,7 +3041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[LM Studio 对比 Jan 对比 GPT4All](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 了解 Atomic Chat 最接近的纯桌面替代方案之间的对比。',
+          '[LM Studio 对比 Jan 对比 GPT4All](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — 了解 Atomic Chat 最接近的纯桌面替代方案之间的对比。',
           '[适用于 Windows、Mac 和 Linux 的最简单本地 AI 应用](/zh/power-local-llm/easiest-local-ai-app-windows-mac-linux) — 更全面地了解免配置的本地聊天应用。',
           '[最佳 Android 本地 LLM 应用](/zh/power-local-llm/best-local-llm-apps-android-2026) — Atomic Chat 之外的移动端本地 AI 应用。',
           '[最佳 iPhone 本地 LLM 应用](/zh/power-local-llm/best-local-llm-apps-iphone-2026) — 针对 iOS 的本地 AI 应用选择。',
@@ -3422,7 +3422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[LM Studio 대 Jan 대 GPT4All](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — Atomic Chat과 가장 가까운 데스크톱 전용 대안들의 비교.',
+          '[LM Studio 대 Jan 대 GPT4All](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — Atomic Chat과 가장 가까운 데스크톱 전용 대안들의 비교.',
           '[Windows, Mac, Linux용 가장 쉬운 로컬 AI 앱](/ko/power-local-llm/easiest-local-ai-app-windows-mac-linux) — 설정이 필요 없는 로컬 채팅 앱 전반을 살펴봅니다.',
           '[안드로이드용 최고의 로컬 LLM 앱](/ko/power-local-llm/best-local-llm-apps-android-2026) — Atomic Chat 외의 모바일 중심 로컬 AI 앱.',
           '[아이폰용 최고의 로컬 LLM 앱](/ko/power-local-llm/best-local-llm-apps-iphone-2026) — iOS 전용 로컬 AI 앱 옵션.',

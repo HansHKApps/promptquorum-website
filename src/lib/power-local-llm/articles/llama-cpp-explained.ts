@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[SGLang Explained](/power-local-llm/sglang-explained) — a GPU-backed serving engine built around RadixAttention cache reuse and engine-level structured output, aimed at production serving rather than llama.cpp\'s single-machine and edge focus.',
           '[llama.cpp vs. Ollama vs. vLLM: Speed, Batching & GPU Benchmarks](/local-llms/llamacpp-vs-ollama-vs-vllm) — a dedicated throughput and setup-complexity comparison across the same three engines.',
           '[Enterprise LLM Inference Servers: vLLM, TGI, and NIM](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — a deeper look at production-grade serving engines that compete with llama.cpp for high-throughput workloads.',
-          '[LM Studio vs. Jan vs. GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — how graphical desktop apps compare to running an engine like llama.cpp directly.',
+          '[LM Studio vs. Jan vs. GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — how graphical desktop apps compare to running an engine like llama.cpp directly.',
           '[Local LLM Software Directory](/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
@@ -548,7 +548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[SGLang erklärt](/de/power-local-llm/sglang-explained) — eine GPU-gestützte Serving-Engine rund um RadixAttention-Cache-Wiederverwendung und Structured Output auf Engine-Ebene, für Produktions-Serving statt llama.cpps Fokus auf Einzelgeräte und Edge.',
           '[llama.cpp vs. Ollama vs. vLLM: Geschwindigkeit, Batching & GPU-Benchmarks](/de/local-llms/llamacpp-vs-ollama-vs-vllm) — ein eigener Durchsatz- und Setup-Komplexitätsvergleich derselben drei Engines.',
           '[Enterprise-LLM-Inferenz-Server: vLLM, TGI und NIM](/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — ein tieferer Blick auf produktionsreife Serving-Engines, die mit llama.cpp bei Hochdurchsatz-Workloads konkurrieren.',
-          '[LM Studio vs. Jan vs. GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — wie grafische Desktop-Apps im Vergleich zur direkten Nutzung einer Engine wie llama.cpp abschneiden.',
+          '[LM Studio vs. Jan vs. GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — wie grafische Desktop-Apps im Vergleich zur direkten Nutzung einer Engine wie llama.cpp abschneiden.',
           '[Local LLM Software Directory](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
@@ -819,7 +819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp vs. Ollama vs. vLLM : vitesse, batching et benchmarks GPU](/fr/local-llms/llamacpp-vs-ollama-vs-vllm) — une comparaison dédiée du débit et de la complexité d\'installation entre ces trois mêmes moteurs.',
           '[Serveurs d\'inférence LLM d\'entreprise : vLLM, TGI et NIM](/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — un regard plus approfondi sur les moteurs de serving prêts pour la production qui concurrencent llama.cpp sur les charges à haut débit.',
-          '[LM Studio vs. Jan vs. GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — comment les applications de bureau graphiques se comparent à l\'utilisation directe d\'un moteur comme llama.cpp.',
+          '[LM Studio vs. Jan vs. GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — comment les applications de bureau graphiques se comparent à l\'utilisation directe d\'un moteur comme llama.cpp.',
           '[Répertoire des logiciels de LLM local](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
         ],
       },
@@ -1090,7 +1090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp vs. Ollama vs. vLLM：速度・バッチ処理・GPUベンチマーク](/ja/local-llms/llamacpp-vs-ollama-vs-vllm) — 同じ3つのエンジンのスループットとセットアップの複雑さを専門的に比較。',
           '[エンタープライズLLM推論サーバー：vLLM、TGI、NIM](/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — 高スループット用途でllama.cppと競合する本番向けサービングエンジンをより深く解説。',
-          '[LM Studio vs. Jan vs. GPT4All](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — グラフィカルなデスクトップアプリとllama.cppのようなエンジンを直接使う場合の比較。',
+          '[LM Studio vs. Jan vs. GPT4All](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — グラフィカルなデスクトップアプリとllama.cppのようなエンジンを直接使う場合の比較。',
           '[ローカルLLMソフトウェアディレクトリ](/ja/directory) — 本記事が属するローカルAIツールの全カタログ。',
         ],
       },
@@ -1361,7 +1361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp vs. Ollama vs. vLLM：速度、批处理与GPU基准测试](/zh/local-llms/llamacpp-vs-ollama-vs-vllm) — 针对这三款引擎吞吐量与配置复杂度的专项对比。',
           '[企业级LLM推理服务器：vLLM、TGI与NIM](/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — 深入探讨在高吞吐量场景中与llama.cpp竞争的生产级服务引擎。',
-          '[LM Studio vs. Jan vs. GPT4All](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 图形化桌面应用与直接使用llama.cpp这类引擎的对比。',
+          '[LM Studio vs. Jan vs. GPT4All](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — 图形化桌面应用与直接使用llama.cpp这类引擎的对比。',
           '[本地LLM软件目录](/zh/directory) — 本文所属的完整本地AI工具目录。',
         ],
       },
@@ -1632,7 +1632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp vs. Ollama vs. vLLM: velocidad, batching y benchmarks de GPU](/es/local-llms/llamacpp-vs-ollama-vs-vllm) — una comparativa dedicada de rendimiento y complejidad de configuración entre estos mismos tres motores.',
           '[Servidores de inferencia LLM empresariales: vLLM, TGI y NIM](/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — una mirada más profunda a los motores de servicio de nivel de producción que compiten con llama.cpp en cargas de alto rendimiento.',
-          '[LM Studio vs. Jan vs. GPT4All](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — cómo se comparan las apps de escritorio gráficas frente a usar directamente un motor como llama.cpp.',
+          '[LM Studio vs. Jan vs. GPT4All](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — cómo se comparan las apps de escritorio gráficas frente a usar directamente un motor como llama.cpp.',
           '[Directorio de software de LLM local](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
@@ -1903,7 +1903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp vs. Ollama vs. vLLM: velocidade, batching e benchmarks de GPU](/pt/local-llms/llamacpp-vs-ollama-vs-vllm) — uma comparação dedicada de throughput e complexidade de configuração entre esses mesmos três mecanismos.',
           '[Servidores de inferência LLM empresariais: vLLM, TGI e NIM](/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — um olhar mais profundo sobre mecanismos de serving de nível de produção que competem com o llama.cpp em cargas de alto throughput.',
-          '[LM Studio vs. Jan vs. GPT4All](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — como apps de desktop gráficos se comparam ao uso direto de um mecanismo como o llama.cpp.',
+          '[LM Studio vs. Jan vs. GPT4All](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — como apps de desktop gráficos se comparam ao uso direto de um mecanismo como o llama.cpp.',
           '[Diretório de software de LLM local](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
@@ -2174,7 +2174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp مقابل Ollama مقابل vLLM: السرعة والمعالجة الدفعية واختبارات أداء الرسوميات](/ar/local-llms/llamacpp-vs-ollama-vs-vllm) — مقارنة مخصصة للإنتاجية وتعقيد الإعداد بين هذه المحركات الثلاثة نفسها.',
           '[خوادم استدلال النماذج اللغوية المؤسسية: vLLM وTGI وNIM](/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — نظرة أعمق على محركات الخدمة الجاهزة للإنتاج التي تنافس llama.cpp في أحمال العمل عالية الإنتاجية.',
-          '[LM Studio مقابل Jan مقابل GPT4All](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — كيف تُقارن تطبيقات سطح المكتب الرسومية باستخدام محرك مثل llama.cpp مباشرة.',
+          '[LM Studio مقابل Jan مقابل GPT4All](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — كيف تُقارن تطبيقات سطح المكتب الرسومية باستخدام محرك مثل llama.cpp مباشرة.',
           '[دليل برمجيات النماذج اللغوية المحلية](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال.',
         ],
       },
@@ -2445,7 +2445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp vs. Ollama vs. vLLM: 속도, 배치 처리, GPU 벤치마크](/ko/local-llms/llamacpp-vs-ollama-vs-vllm) — 동일한 세 엔진의 처리량과 설정 복잡도를 전문적으로 비교한 글.',
           '[엔터프라이즈 LLM 추론 서버: vLLM, TGI, NIM](/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — 고처리량 워크로드에서 llama.cpp와 경쟁하는 프로덕션급 서빙 엔진을 더 깊이 살펴본 글.',
-          '[LM Studio vs. Jan vs. GPT4All](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 그래픽 데스크톱 앱이 llama.cpp 같은 엔진을 직접 사용하는 것과 어떻게 비교되는지.',
+          '[LM Studio vs. Jan vs. GPT4All](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — 그래픽 데스크톱 앱이 llama.cpp 같은 엔진을 직접 사용하는 것과 어떻게 비교되는지.',
           '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },

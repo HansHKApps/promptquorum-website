@@ -90,7 +90,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Includes a `trtllm-serve` command for standing up an OpenAI-compatible endpoint directly from a built engine',
           'Supports many popular open model families, though exact per-model support and required conversion steps vary by TensorRT-LLM release — check the project\'s [supported-models documentation](https://github.com/NVIDIA/TensorRT-LLM) before committing to a model',
         ],
-        note: 'TensorRT-LLM is infrastructure for NVIDIA hardware, not a consumer chat app — there is no graphical installer and no cross-vendor GPU support. If you want a point-and-click local chat app instead, tools like [Ollama or LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) are built for that use case; see the comparison sections below.',
+        note: 'TensorRT-LLM is infrastructure for NVIDIA hardware, not a consumer chat app — there is no graphical installer and no cross-vendor GPU support. If you want a point-and-click local chat app instead, tools like [Ollama or LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all) are built for that use case; see the comparison sections below.',
       },
       howItWorks: {
         id: 'how-tensorrt-llm-works',
@@ -206,7 +206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Avoid using TensorRT-LLM if',
             list: [
-              'You want to run a model on your own laptop or desktop for personal chat — [Ollama or LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) fit that need far better',
+              'You want to run a model on your own laptop or desktop for personal chat — [Ollama or LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all) fit that need far better',
               'Your hardware is not NVIDIA — TensorRT-LLM has no CPU, AMD, Intel, or Apple Silicon backend at all, unlike vLLM or llama.cpp',
               'You want to iterate quickly across many different models without a per-model, per-GPU compile step slowing you down — vLLM\'s direct-load approach is a better fit',
               'Your team does not have spare capacity to own a CUDA/TensorRT build pipeline and would rather pay for a supported, prebuilt deployment — NVIDIA NIM is built for that trade instead',
@@ -385,7 +385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Enthält den Befehl `trtllm-serve`, um direkt aus einer gebauten Engine einen OpenAI-kompatiblen Endpunkt bereitzustellen',
           'Unterstützt viele beliebte offene Modellfamilien, wobei die genaue Unterstützung pro Modell und nötige Konvertierungsschritte je nach TensorRT-LLM-Release variieren — vor der Modellwahl die [Dokumentation zu unterstützten Modellen](https://github.com/NVIDIA/TensorRT-LLM) des Projekts prüfen',
         ],
-        note: 'TensorRT-LLM ist Infrastruktur für NVIDIA-Hardware, keine Consumer-Chat-App — es gibt keinen grafischen Installer und keine herstellerübergreifende GPU-Unterstützung. Wer stattdessen eine Point-and-Click-Chat-App möchte, findet in [Ollama oder LM Studio](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) den passenden Anwendungsfall; siehe die Vergleichsabschnitte weiter unten.',
+        note: 'TensorRT-LLM ist Infrastruktur für NVIDIA-Hardware, keine Consumer-Chat-App — es gibt keinen grafischen Installer und keine herstellerübergreifende GPU-Unterstützung. Wer stattdessen eine Point-and-Click-Chat-App möchte, findet in [Ollama oder LM Studio](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all) den passenden Anwendungsfall; siehe die Vergleichsabschnitte weiter unten.',
       },
       howItWorks: {
         id: 'how-tensorrt-llm-works',
@@ -501,7 +501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'TensorRT-LLM meiden, wenn',
             list: [
-              'Ein Modell auf dem eigenen Laptop oder Desktop für den persönlichen Chat laufen soll — [Ollama oder LM Studio](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) passen dafür deutlich besser',
+              'Ein Modell auf dem eigenen Laptop oder Desktop für den persönlichen Chat laufen soll — [Ollama oder LM Studio](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all) passen dafür deutlich besser',
               'Die Hardware nicht von NVIDIA stammt — TensorRT-LLM hat überhaupt kein Backend für CPU, AMD, Intel oder Apple Silicon, anders als vLLM oder llama.cpp',
               'Schnelle Iteration über viele verschiedene Modelle gewünscht ist, ohne dass ein Kompilierungsschritt pro Modell und GPU bremst — der Direktlade-Ansatz von vLLM passt hier besser',
               'Das Team keine freie Kapazität hat, eine CUDA-/TensorRT-Build-Pipeline zu betreiben, und lieber für ein unterstütztes, vorgefertigtes Deployment zahlt — dafür ist NVIDIA NIM gebaut',
@@ -680,7 +680,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Inclut une commande `trtllm-serve` pour déployer directement un point de terminaison compatible OpenAI à partir d\'un moteur construit',
           'Prend en charge de nombreuses familles de modèles ouverts populaires, bien que le support exact par modèle et les étapes de conversion nécessaires varient selon la version de TensorRT-LLM — vérifiez la [documentation des modèles pris en charge](https://github.com/NVIDIA/TensorRT-LLM) du projet avant de choisir un modèle',
         ],
-        note: 'TensorRT-LLM est une infrastructure pour matériel NVIDIA, pas une application de chat grand public — il n\'y a pas d\'installateur graphique ni de prise en charge GPU multi-constructeurs. Pour une application de chat locale en un clic, des outils comme [Ollama ou LM Studio](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) sont conçus pour cet usage ; voir les sections de comparaison ci-dessous.',
+        note: 'TensorRT-LLM est une infrastructure pour matériel NVIDIA, pas une application de chat grand public — il n\'y a pas d\'installateur graphique ni de prise en charge GPU multi-constructeurs. Pour une application de chat locale en un clic, des outils comme [Ollama ou LM Studio](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all) sont conçus pour cet usage ; voir les sections de comparaison ci-dessous.',
       },
       howItWorks: {
         id: 'how-tensorrt-llm-works',
@@ -796,7 +796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Évitez TensorRT-LLM si',
             list: [
-              'Vous voulez exécuter un modèle sur votre propre ordinateur portable ou de bureau pour un chat personnel — [Ollama ou LM Studio](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) répondent bien mieux à ce besoin',
+              'Vous voulez exécuter un modèle sur votre propre ordinateur portable ou de bureau pour un chat personnel — [Ollama ou LM Studio](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all) répondent bien mieux à ce besoin',
               'Votre matériel n\'est pas NVIDIA — TensorRT-LLM n\'a aucun backend CPU, AMD, Intel ou Apple Silicon, contrairement à vLLM ou llama.cpp',
               'Vous voulez itérer rapidement sur de nombreux modèles différents sans qu\'une étape de compilation par modèle et par GPU ne vous ralentisse — l\'approche de chargement direct de vLLM convient mieux',
               'Votre équipe n\'a pas la capacité disponible pour gérer un pipeline de build CUDA/TensorRT et préfère payer pour un déploiement pris en charge et prêt à l\'emploi — NVIDIA NIM est conçu pour ce compromis',
@@ -974,7 +974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Incluye un comando `trtllm-serve` para levantar directamente un endpoint compatible con OpenAI a partir de un motor ya construido',
           'Admite muchas familias populares de modelos abiertos, aunque el soporte exacto por modelo y los pasos de conversión necesarios varían según la versión de TensorRT-LLM — revisa la [documentación de modelos soportados](https://github.com/NVIDIA/TensorRT-LLM) del proyecto antes de elegir un modelo',
         ],
-        note: 'TensorRT-LLM es infraestructura para hardware de NVIDIA, no una app de chat para consumidores — no hay instalador gráfico ni soporte de GPU multifabricante. Si buscas una app de chat local para instalar con un clic, herramientas como [Ollama o LM Studio](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) están hechas para ese caso de uso; ver las secciones de comparación más abajo.',
+        note: 'TensorRT-LLM es infraestructura para hardware de NVIDIA, no una app de chat para consumidores — no hay instalador gráfico ni soporte de GPU multifabricante. Si buscas una app de chat local para instalar con un clic, herramientas como [Ollama o LM Studio](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all) están hechas para ese caso de uso; ver las secciones de comparación más abajo.',
       },
       howItWorks: {
         id: 'how-tensorrt-llm-works',
@@ -1090,7 +1090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Evita TensorRT-LLM si',
             list: [
-              'Quieres ejecutar un modelo en tu propio portátil o escritorio para chat personal — [Ollama o LM Studio](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) encajan mucho mejor con esa necesidad',
+              'Quieres ejecutar un modelo en tu propio portátil o escritorio para chat personal — [Ollama o LM Studio](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all) encajan mucho mejor con esa necesidad',
               'Tu hardware no es de NVIDIA — TensorRT-LLM no tiene ningún backend de CPU, AMD, Intel o Apple Silicon, a diferencia de vLLM o llama.cpp',
               'Quieres iterar rápidamente en muchos modelos distintos sin que un paso de compilación por modelo y por GPU te ralentice — el enfoque de carga directa de vLLM encaja mejor',
               'Tu equipo no tiene capacidad disponible para mantener una canalización de compilación CUDA/TensorRT y prefiere pagar por un despliegue ya construido y con soporte — NVIDIA NIM está diseñado para ese intercambio',
@@ -1268,7 +1268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Inclui um comando `trtllm-serve` para levantar diretamente um endpoint compatível com OpenAI a partir de um motor já construído',
           'Suporta muitas famílias populares de modelos abertos, embora o suporte exato por modelo e as etapas de conversão necessárias variem conforme a versão do TensorRT-LLM — verifique a [documentação de modelos suportados](https://github.com/NVIDIA/TensorRT-LLM) do projeto antes de escolher um modelo',
         ],
-        note: 'TensorRT-LLM é infraestrutura para hardware NVIDIA, não um app de chat para consumidores — não há instalador gráfico nem suporte a GPU multi-fabricante. Se você quer um app de chat local para instalar com um clique, ferramentas como [Ollama ou LM Studio](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) são feitas para esse caso de uso; veja as seções de comparação abaixo.',
+        note: 'TensorRT-LLM é infraestrutura para hardware NVIDIA, não um app de chat para consumidores — não há instalador gráfico nem suporte a GPU multi-fabricante. Se você quer um app de chat local para instalar com um clique, ferramentas como [Ollama ou LM Studio](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all) são feitas para esse caso de uso; veja as seções de comparação abaixo.',
       },
       howItWorks: {
         id: 'how-tensorrt-llm-works',
@@ -1384,7 +1384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Evite o TensorRT-LLM se',
             list: [
-              'Você quer rodar um modelo no seu próprio notebook ou desktop para chat pessoal — [Ollama ou LM Studio](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) atendem muito melhor a essa necessidade',
+              'Você quer rodar um modelo no seu próprio notebook ou desktop para chat pessoal — [Ollama ou LM Studio](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all) atendem muito melhor a essa necessidade',
               'Seu hardware não é da NVIDIA — o TensorRT-LLM não tem nenhum backend para CPU, AMD, Intel ou Apple Silicon, ao contrário do vLLM ou do llama.cpp',
               'Você quer iterar rapidamente em muitos modelos diferentes sem que uma etapa de compilação por modelo e por GPU te atrase — a abordagem de carregamento direto do vLLM se encaixa melhor',
               'Sua equipe não tem capacidade sobrando para manter um pipeline de build CUDA/TensorRT e prefere pagar por uma implantação pronta e com suporte — o NVIDIA NIM é feito para essa troca',
@@ -1562,7 +1562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ビルド済みエンジンから直接OpenAI互換エンドポイントを立ち上げる`trtllm-serve`コマンドを含む',
           '多くの人気オープンモデルファミリーをサポートしているが、モデルごとの正確なサポート状況や必要な変換手順はTensorRT-LLMのリリースによって異なる — モデルを決める前にプロジェクトの[サポートモデルに関するドキュメント](https://github.com/NVIDIA/TensorRT-LLM)を確認すること',
         ],
-        note: 'TensorRT-LLMはNVIDIAハードウェア向けのインフラであり、コンシューマー向けチャットアプリではない — グラフィカルなインストーラーもベンダー横断のGPUサポートも存在しない。ワンクリックで使えるローカルチャットアプリが欲しい場合は、[OllamaやLM Studio](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)のようなツールがその用途向けに作られている。下記の比較セクションを参照。',
+        note: 'TensorRT-LLMはNVIDIAハードウェア向けのインフラであり、コンシューマー向けチャットアプリではない — グラフィカルなインストーラーもベンダー横断のGPUサポートも存在しない。ワンクリックで使えるローカルチャットアプリが欲しい場合は、[OllamaやLM Studio](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all)のようなツールがその用途向けに作られている。下記の比較セクションを参照。',
       },
       howItWorks: {
         id: 'how-tensorrt-llm-works',
@@ -1678,7 +1678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'TensorRT-LLMを避けるべき場合',
             list: [
-              '個人のチャット用に自分のノートPCやデスクトップでモデルを動かしたい場合 — [OllamaやLM Studio](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)の方がはるかに適している',
+              '個人のチャット用に自分のノートPCやデスクトップでモデルを動かしたい場合 — [OllamaやLM Studio](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all)の方がはるかに適している',
               'ハードウェアがNVIDIA製ではない場合 — TensorRT-LLMには、vLLMやllama.cppとは異なり、CPU、AMD、Intel、Apple Silicon向けのバックエンドが一切存在しない',
               'モデルごと・GPUごとのコンパイル工程に足を引っ張られず、多くの異なるモデルを素早く試したい場合 — vLLMの直接読み込み方式の方が適している',
               'チームにCUDA/TensorRTのビルドパイプラインを保有する余力がなく、サポート付きの構築済みデプロイに対価を払いたい場合 — NVIDIA NIMがそのトレードオフのために作られている',
@@ -1856,7 +1856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '包含`trtllm-serve`命令,可直接从已构建的引擎启动一个OpenAI兼容端点',
           '支持许多流行的开放模型系列,但具体每个模型的支持情况及所需的转换步骤会因TensorRT-LLM版本而异——在选定模型前请查阅该项目的[支持模型文档](https://github.com/NVIDIA/TensorRT-LLM)',
         ],
-        note: 'TensorRT-LLM是面向NVIDIA硬件的基础设施,而非消费级聊天应用——它没有图形化安装程序,也不支持跨厂商GPU。如果你想要的是一键式的本地聊天应用,像[Ollama或LM Studio](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)这样的工具正是为该用例而设计;参见下方的对比章节。',
+        note: 'TensorRT-LLM是面向NVIDIA硬件的基础设施,而非消费级聊天应用——它没有图形化安装程序,也不支持跨厂商GPU。如果你想要的是一键式的本地聊天应用,像[Ollama或LM Studio](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all)这样的工具正是为该用例而设计;参见下方的对比章节。',
       },
       howItWorks: {
         id: 'how-tensorrt-llm-works',
@@ -1972,7 +1972,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '在以下情况下应避免使用TensorRT-LLM',
             list: [
-              '你想在自己的笔记本电脑或台式机上运行模型用于个人聊天——[Ollama或LM Studio](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)更能满足这种需求',
+              '你想在自己的笔记本电脑或台式机上运行模型用于个人聊天——[Ollama或LM Studio](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all)更能满足这种需求',
               '你的硬件不是NVIDIA的——与vLLM或llama.cpp不同,TensorRT-LLM完全没有CPU、AMD、Intel或Apple Silicon的后端',
               '你想在许多不同模型间快速迭代,而不希望每个模型、每个GPU的编译步骤拖慢速度——vLLM的直接加载方式更合适',
               '你的团队没有余力自行维护CUDA/TensorRT构建流水线,更愿意为受支持的预构建部署付费——NVIDIA NIM正是为这种权衡而设计的',
@@ -2150,7 +2150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '빌드된 엔진에서 곧바로 OpenAI 호환 엔드포인트를 실행할 수 있는 `trtllm-serve` 명령 포함',
           '많은 인기 오픈 모델 계열을 지원하지만, 모델별 정확한 지원 범위와 필요한 변환 단계는 TensorRT-LLM 릴리스에 따라 다름 — 모델을 정하기 전에 프로젝트의 [지원 모델 문서](https://github.com/NVIDIA/TensorRT-LLM)를 확인할 것',
         ],
-        note: 'TensorRT-LLM은 NVIDIA 하드웨어를 위한 인프라이며 일반 소비자용 채팅 앱이 아닙니다 — 그래픽 설치 프로그램도, 여러 제조사 GPU에 대한 지원도 없습니다. 원클릭으로 사용할 수 있는 로컬 채팅 앱을 원한다면 [Ollama나 LM Studio](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) 같은 도구가 바로 그 용도를 위해 만들어졌습니다. 아래 비교 섹션을 참고하세요.',
+        note: 'TensorRT-LLM은 NVIDIA 하드웨어를 위한 인프라이며 일반 소비자용 채팅 앱이 아닙니다 — 그래픽 설치 프로그램도, 여러 제조사 GPU에 대한 지원도 없습니다. 원클릭으로 사용할 수 있는 로컬 채팅 앱을 원한다면 [Ollama나 LM Studio](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all) 같은 도구가 바로 그 용도를 위해 만들어졌습니다. 아래 비교 섹션을 참고하세요.',
       },
       howItWorks: {
         id: 'how-tensorrt-llm-works',
@@ -2266,7 +2266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'TensorRT-LLM을 피해야 하는 경우',
             list: [
-              '개인 채팅을 위해 자신의 노트북이나 데스크톱에서 모델을 실행하고 싶은 경우 — [Ollama나 LM Studio](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)가 그 요구에 훨씬 더 적합함',
+              '개인 채팅을 위해 자신의 노트북이나 데스크톱에서 모델을 실행하고 싶은 경우 — [Ollama나 LM Studio](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all)가 그 요구에 훨씬 더 적합함',
               '하드웨어가 NVIDIA 제품이 아닌 경우 — vLLM이나 llama.cpp와 달리 TensorRT-LLM에는 CPU, AMD, Intel, Apple Silicon용 백엔드가 전혀 없음',
               '모델별, GPU별 컴파일 단계에 발목 잡히지 않고 여러 모델을 빠르게 반복 실험하고 싶은 경우 — vLLM의 직접 로드 방식이 더 적합함',
               '팀에 CUDA/TensorRT 빌드 파이프라인을 직접 운영할 여력이 없어 지원되는 사전 구축 배포에 비용을 지불하는 편을 선호하는 경우 — NVIDIA NIM이 바로 그런 트레이드오프를 위해 만들어짐',
@@ -2444,7 +2444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تتضمن أمر `trtllm-serve` لإنشاء نقطة نهاية متوافقة مع OpenAI مباشرة من محرك تم بناؤه',
           'تدعم العديد من عائلات النماذج المفتوحة الشائعة، رغم أن الدعم الدقيق لكل نموذج وخطوات التحويل اللازمة تختلف بحسب إصدار TensorRT-LLM — يُنصح بمراجعة [وثائق النماذج المدعومة](https://github.com/NVIDIA/TensorRT-LLM) الخاصة بالمشروع قبل الالتزام بنموذج معين',
         ],
-        note: 'TensorRT-LLM بنية تحتية لعتاد NVIDIA، وليست تطبيق دردشة موجّهًا للمستهلكين — فلا يوجد مثبِّت رسومي ولا دعم لوحدات GPU من مورّدين متعددين. أما إذا كنت تريد تطبيق دردشة محلي جاهز بنقرة واحدة، فأدوات مثل [Ollama أو LM Studio](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) مصمَّمة لهذا الاستخدام؛ راجع أقسام المقارنة أدناه.',
+        note: 'TensorRT-LLM بنية تحتية لعتاد NVIDIA، وليست تطبيق دردشة موجّهًا للمستهلكين — فلا يوجد مثبِّت رسومي ولا دعم لوحدات GPU من مورّدين متعددين. أما إذا كنت تريد تطبيق دردشة محلي جاهز بنقرة واحدة، فأدوات مثل [Ollama أو LM Studio](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all) مصمَّمة لهذا الاستخدام؛ راجع أقسام المقارنة أدناه.',
       },
       howItWorks: {
         id: 'how-tensorrt-llm-works',
@@ -2560,7 +2560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'تجنّب استخدام TensorRT-LLM إذا',
             list: [
-              'كنت تريد تشغيل نموذج على حاسوبك المحمول أو المكتبي الخاص للدردشة الشخصية — [Ollama أو LM Studio](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) يناسبان هذه الحاجة بشكل أفضل بكثير',
+              'كنت تريد تشغيل نموذج على حاسوبك المحمول أو المكتبي الخاص للدردشة الشخصية — [Ollama أو LM Studio](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all) يناسبان هذه الحاجة بشكل أفضل بكثير',
               'لم يكن عتادك من NVIDIA — فلا تملك TensorRT-LLM أي خلفية لوحدة المعالجة المركزية أو AMD أو Intel أو Apple Silicon على الإطلاق، على عكس vLLM أو llama.cpp',
               'كنت تريد التكرار السريع عبر نماذج مختلفة كثيرة دون أن تبطئك خطوة تجميع لكل نموذج ولكل وحدة GPU — أسلوب التحميل المباشر في vLLM أنسب هنا',
               'لم يكن لدى فريقك سعة إضافية لامتلاك خط أنابيب بناء CUDA/TensorRT وتفضل الدفع مقابل نشر جاهز ومدعوم — NVIDIA NIM مصمَّمة لهذه المقايضة بدلًا من ذلك',

@@ -209,7 +209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Jan vs. Other Local Chat Apps',
         content: 'Jan is one of several apps that combine local model inference with optional cloud connections in a single interface. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/directory) for the full catalog, and the dedicated [Jan vs. GPT4All comparison](#jan-vs-gpt4all) above for the closest head-to-head.',
         items: [
-          '**[LM Studio](https://lmstudio.ai)** — a local-model-focused chat and model-management app with a polished built-in model browser; see the [LM Studio vs. Jan vs. GPT4All comparison](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) for a direct three-way comparison that already covers Jan against this app in detail.',
+          '**[LM Studio](https://lmstudio.ai)** — a local-model-focused chat and model-management app with a polished built-in model browser; see the [LM Studio vs. Jan vs. GPT4All comparison](/power-local-llm/lm-studio-vs-jan-vs-gpt4all) for a direct three-way comparison that already covers Jan against this app in detail.',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — an open-source local chat client from Nomic AI; see the dedicated comparison section above.',
           '**[Msty](https://msty.ai)** — a closed-source desktop app that also blends local and cloud model chat, with added features like side-by-side model comparison and document RAG; see the [Msty review](/power-local-llm/msty-review) for full details.',
           '**[Enchanted](https://github.com/AugustDev/enchanted)** — an open-source native Mac/iOS client built specifically for [Ollama](https://ollama.com); narrower in platform scope than Jan but native to Apple platforms. See the [Enchanted review](/power-local-llm/enchanted-review).',
@@ -278,7 +278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Jan\'s directory entry alongside other chat clients covered above.',
-          '[LM Studio vs. Jan vs. GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — a direct three-way comparison covering Jan against two other local-only chat clients in detail.',
+          '[LM Studio vs. Jan vs. GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — a direct three-way comparison covering Jan against two other local-only chat clients in detail.',
           '[Msty Review](/power-local-llm/msty-review) — a closed-source alternative that blends local and cloud model chat with additional side-by-side comparison and RAG features.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — a deeper look at RAG-focused tools if document search is the feature you care about most.',
         ],
@@ -492,7 +492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Jan vs. andere lokale Chat-Apps',
         content: 'Jan ist eine von mehreren Apps, die lokale Modell-Inferenz mit optionalen Cloud-Verbindungen in einer einzigen Oberfläche vereinen. So schneidet es im Vergleich zu anderen Optionen in diesem Bereich ab — siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen Katalog und den eigenen [Jan-vs.-GPT4All-Vergleich](#jan-vs-gpt4all) oben für den direktesten Vergleich.',
         items: [
-          '**[LM Studio](https://lmstudio.ai)** — eine auf lokale Modelle fokussierte Chat- und Modellverwaltungs-App mit einem ausgereiften eingebauten Modell-Browser; siehe den [Vergleich LM Studio vs. Jan vs. GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) für einen direkten Dreiervergleich, der Jan bereits im Detail gegen diese App vergleicht.',
+          '**[LM Studio](https://lmstudio.ai)** — eine auf lokale Modelle fokussierte Chat- und Modellverwaltungs-App mit einem ausgereiften eingebauten Modell-Browser; siehe den [Vergleich LM Studio vs. Jan vs. GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all) für einen direkten Dreiervergleich, der Jan bereits im Detail gegen diese App vergleicht.',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — ein quelloffener lokaler Chat-Client von Nomic AI; siehe den eigenen Vergleichsabschnitt oben.',
           '**[Msty](https://msty.ai)** — eine Closed-Source-Desktop-App, die ebenfalls lokalen und Cloud-Modell-Chat vereint, mit zusätzlichen Funktionen wie Modellvergleich nebeneinander und Dokument-RAG; siehe die [Msty Review](/de/power-local-llm/msty-review) für alle Details.',
           '**[Enchanted](https://github.com/AugustDev/enchanted)** — ein quelloffener, nativer Mac/iOS-Client, speziell für [Ollama](https://ollama.com) gebaut; im Plattformumfang enger als Jan, aber nativ für Apple-Plattformen. Siehe die [Enchanted Review](/de/power-local-llm/enchanted-review).',
@@ -561,7 +561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Lokales KI-Software-Verzeichnis 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Jans Verzeichniseintrag neben anderen oben behandelten Chat-Clients.',
-          '[LM Studio vs. Jan vs. GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — ein direkter Dreiervergleich, der Jan im Detail gegen zwei andere rein lokale Chat-Clients stellt.',
+          '[LM Studio vs. Jan vs. GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — ein direkter Dreiervergleich, der Jan im Detail gegen zwei andere rein lokale Chat-Clients stellt.',
           '[Msty Review](/de/power-local-llm/msty-review) — eine Closed-Source-Alternative, die lokalen und Cloud-Modell-Chat mit zusätzlichem Modellvergleich nebeneinander und RAG-Funktionen vereint.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — ein tieferer Blick auf RAG-fokussierte Tools, falls Dokumentensuche die Funktion ist, die Ihnen am wichtigsten ist.',
         ],
@@ -775,7 +775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Jan face aux autres apps de chat local',
         content: 'Jan fait partie de plusieurs applications qui combinent inférence de modèles locaux et connexions cloud optionnelles dans une interface unique. Voici comment elle se positionne face à d\'autres options dans ce domaine — consultez le [Répertoire des logiciels d\'IA locale](/fr/directory) pour le catalogue complet, et la [comparaison dédiée Jan vs. GPT4All](#jan-vs-gpt4all) ci-dessus pour le face-à-face le plus proche.',
         items: [
-          '**[LM Studio](https://lmstudio.ai)** — une application de chat et de gestion de modèles axée sur le local, avec un navigateur de modèles intégré soigné ; consultez la [comparaison LM Studio vs. Jan vs. GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) pour une comparaison directe à trois qui couvre déjà Jan face à cette application en détail.',
+          '**[LM Studio](https://lmstudio.ai)** — une application de chat et de gestion de modèles axée sur le local, avec un navigateur de modèles intégré soigné ; consultez la [comparaison LM Studio vs. Jan vs. GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all) pour une comparaison directe à trois qui couvre déjà Jan face à cette application en détail.',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — un client de chat local open source de Nomic AI ; voir la section de comparaison dédiée ci-dessus.',
           '**[Msty](https://msty.ai)** — une application de bureau à source fermée qui combine également chat local et cloud, avec des fonctionnalités supplémentaires comme la comparaison de modèles côte à côte et le RAG documentaire ; voir l\'[avis Msty](/fr/power-local-llm/msty-review) pour tous les détails.',
           '**[Enchanted](https://github.com/AugustDev/enchanted)** — un client natif Mac/iOS open source conçu spécifiquement pour [Ollama](https://ollama.com) ; de portée plateforme plus restreinte que Jan mais natif aux plateformes Apple. Voir l\'[avis Enchanted](/fr/power-local-llm/enchanted-review).',
@@ -844,7 +844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           '[Répertoire des logiciels d\'IA locale 2026](/fr/directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant la fiche de Jan aux côtés d\'autres clients de chat couverts ci-dessus.',
-          '[LM Studio vs. Jan vs. GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — une comparaison directe à trois qui met Jan face à deux autres clients de chat purement locaux en détail.',
+          '[LM Studio vs. Jan vs. GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — une comparaison directe à trois qui met Jan face à deux autres clients de chat purement locaux en détail.',
           '[Avis Msty](/fr/power-local-llm/msty-review) — une alternative à source fermée qui combine chat local et cloud avec des fonctionnalités supplémentaires de comparaison côte à côte et de RAG.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — un regard plus approfondi sur les outils axés RAG si la recherche documentaire est la fonctionnalité qui vous intéresse le plus.',
         ],
@@ -1058,7 +1058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Jan vs. 他のローカルチャットアプリ',
         content: 'Janは、ローカルモデル推論とオプションのクラウド接続を1つのインターフェースに組み合わせた、いくつかのアプリのうちの1つです。この分野の他の選択肢との位置づけを以下にまとめます — 全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を、最も近い一騎打ち比較は上記の[Jan vs. GPT4All比較](#jan-vs-gpt4all)を参照してください。',
         items: [
-          '**[LM Studio](https://lmstudio.ai)** — 洗練された内蔵モデルブラウザを備えた、ローカルモデル中心のチャット・モデル管理アプリ。このアプリとJanを詳しく比較した[LM Studio vs. Jan vs. GPT4All比較](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)を参照してください。',
+          '**[LM Studio](https://lmstudio.ai)** — 洗練された内蔵モデルブラウザを備えた、ローカルモデル中心のチャット・モデル管理アプリ。このアプリとJanを詳しく比較した[LM Studio vs. Jan vs. GPT4All比較](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all)を参照してください。',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — Nomic AIによるオープンソースのローカルチャットクライアント。上記の専用比較セクションを参照してください。',
           '**[Msty](https://msty.ai)** — ローカルとクラウドのモデルチャットを組み合わせたクローズドソースのデスクトップアプリで、モデルの並列比較やドキュメントRAGなどの機能も追加されている。詳細は[Msty レビュー](/ja/power-local-llm/msty-review)を参照。',
           '**[Enchanted](https://github.com/AugustDev/enchanted)** — [Ollama](https://ollama.com)専用に構築されたオープンソースのネイティブMac/iOSクライアント。プラットフォーム対応範囲はJanより狭いが、Appleプラットフォームにネイティブ対応している。[Enchanted レビュー](/ja/power-local-llm/enchanted-review)を参照。',
@@ -1127,7 +1127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[ローカルLLMソフトウェアディレクトリ 2026](/ja/directory) — この記事が属する、ローカルAIツールの完全なカタログ。上記で扱った他のチャットクライアントと並んでJanのディレクトリ項目も掲載。',
-          '[LM Studio vs. Jan vs. GPT4All](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — Janを他の2つのローカル専用チャットクライアントと詳しく比較した三者比較。',
+          '[LM Studio vs. Jan vs. GPT4All](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — Janを他の2つのローカル専用チャットクライアントと詳しく比較した三者比較。',
           '[Msty レビュー](/ja/power-local-llm/msty-review) — ローカルとクラウドのモデルチャットを組み合わせ、並列比較やRAG機能を追加したクローズドソースの選択肢。',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — ドキュメント検索が最も気になる機能であれば、RAG中心のツールをより深く掘り下げた記事。',
         ],
@@ -1341,7 +1341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Jan 与其他本地聊天应用对比',
         content: 'Jan 是若干将本地模型推理与可选云端连接结合在单一界面中的应用之一。以下是它在这一领域中与其他选项相比的定位——完整目录请参见[本地 LLM 软件目录](/zh/directory)，最直接的正面对比请参见上文的[Jan vs. GPT4All 对比](#jan-vs-gpt4all)。',
         items: [
-          '**[LM Studio](https://lmstudio.ai)** — 一款以本地模型为重点的聊天与模型管理应用，内置精美的模型浏览器；关于它与 Jan 的详细对比，请参见[LM Studio vs. Jan vs. GPT4All 对比](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)。',
+          '**[LM Studio](https://lmstudio.ai)** — 一款以本地模型为重点的聊天与模型管理应用，内置精美的模型浏览器；关于它与 Jan 的详细对比，请参见[LM Studio vs. Jan vs. GPT4All 对比](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all)。',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — Nomic AI 出品的开源本地聊天客户端；详见上文的专门对比部分。',
           '**[Msty](https://msty.ai)** — 一款闭源桌面应用，同样融合了本地与云端模型聊天，并增加了模型并列比较、文档 RAG 等功能；详见[Msty 评测](/zh/power-local-llm/msty-review)。',
           '**[Enchanted](https://github.com/AugustDev/enchanted)** — 一款专为[Ollama](https://ollama.com)打造的开源原生 Mac/iOS 客户端；平台覆盖范围比 Jan 窄，但原生适配 Apple 平台。详见[Enchanted 评测](/zh/power-local-llm/enchanted-review)。',
@@ -1410,7 +1410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[2026本地LLM软件目录](/zh/directory) — 本文所属的本地 AI 工具完整目录，包括上文提到的其他聊天客户端及 Jan 自己的目录条目。',
-          '[LM Studio vs. Jan vs. GPT4All](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 一篇详细的三方对比文章，将 Jan 与另外两款纯本地聊天客户端进行了对比。',
+          '[LM Studio vs. Jan vs. GPT4All](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — 一篇详细的三方对比文章，将 Jan 与另外两款纯本地聊天客户端进行了对比。',
           '[Msty 评测](/zh/power-local-llm/msty-review) — 一款融合本地与云端模型聊天的闭源替代品，并附加了模型并列比较与 RAG 功能。',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 如果文档搜索是你最关心的功能，这篇文章深入探讨了以 RAG 为重点的工具。',
         ],
@@ -1624,7 +1624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Jan frente a otras apps de chat local',
         content: 'Jan es una de varias apps que combinan inferencia de modelos locales con conexiones opcionales a la nube en una sola interfaz. Así se posiciona frente a otras opciones en este espacio — consulta el [Directorio de Software de LLM Local](/es/directory) para el catálogo completo, y la [comparación dedicada Jan vs. GPT4All](#jan-vs-gpt4all) más arriba para el enfrentamiento más cercano.',
         items: [
-          '**[LM Studio](https://lmstudio.ai)** — una app de chat y gestión de modelos centrada en lo local, con un navegador de modelos integrado muy pulido; consulta la [comparación LM Studio vs. Jan vs. GPT4All](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) para una comparación directa a tres que ya cubre a Jan frente a esta app en detalle.',
+          '**[LM Studio](https://lmstudio.ai)** — una app de chat y gestión de modelos centrada en lo local, con un navegador de modelos integrado muy pulido; consulta la [comparación LM Studio vs. Jan vs. GPT4All](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all) para una comparación directa a tres que ya cubre a Jan frente a esta app en detalle.',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — un cliente de chat local open source de Nomic AI; consulta la sección de comparación dedicada más arriba.',
           '**[Msty](https://msty.ai)** — una app de escritorio de código cerrado que también combina chat local y en la nube, con funciones añadidas como comparación de modelos en paralelo y RAG documental; consulta la [reseña de Msty](/es/power-local-llm/msty-review) para todos los detalles.',
           '**[Enchanted](https://github.com/AugustDev/enchanted)** — un cliente nativo de Mac/iOS open source construido específicamente para [Ollama](https://ollama.com); de alcance de plataforma más estrecho que Jan, pero nativo en plataformas Apple. Consulta la [reseña de Enchanted](/es/power-local-llm/enchanted-review).',
@@ -1693,7 +1693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Directorio de Software de LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de Jan en el directorio junto a otros clientes de chat cubiertos anteriormente.',
-          '[LM Studio vs. Jan vs. GPT4All](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — una comparación directa a tres bandas que analiza a Jan frente a otros dos clientes de chat solo locales en detalle.',
+          '[LM Studio vs. Jan vs. GPT4All](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — una comparación directa a tres bandas que analiza a Jan frente a otros dos clientes de chat solo locales en detalle.',
           '[Reseña de Msty](/es/power-local-llm/msty-review) — una alternativa de código cerrado que combina chat local y en la nube con funciones adicionales de comparación en paralelo y RAG.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — un análisis más profundo de herramientas centradas en RAG si la búsqueda de documentos es la función que más te importa.',
         ],
@@ -1907,7 +1907,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Jan em comparação com outros apps de chat local',
         content: 'O Jan é um entre vários aplicativos que combinam inferência de modelos locais com conexões opcionais à nuvem em uma única interface. Veja como ele se posiciona em relação a outras opções nesse espaço — consulte o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo, e a [comparação dedicada Jan vs. GPT4All](#jan-vs-gpt4all) acima para o confronto mais direto.',
         items: [
-          '**[LM Studio](https://lmstudio.ai)** — um aplicativo de chat e gerenciamento de modelos focado no local, com um navegador de modelos embutido bastante refinado; veja a [comparação LM Studio vs. Jan vs. GPT4All](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) para uma comparação direta entre três apps que já cobre o Jan em detalhe frente a esse aplicativo.',
+          '**[LM Studio](https://lmstudio.ai)** — um aplicativo de chat e gerenciamento de modelos focado no local, com um navegador de modelos embutido bastante refinado; veja a [comparação LM Studio vs. Jan vs. GPT4All](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all) para uma comparação direta entre três apps que já cobre o Jan em detalhe frente a esse aplicativo.',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — um cliente de chat local open source da Nomic AI; veja a seção de comparação dedicada acima.',
           '**[Msty](https://msty.ai)** — um aplicativo de desktop de código fechado que também combina chat local e na nuvem, com recursos adicionais como comparação de modelos lado a lado e RAG de documentos; veja a [análise do Msty](/pt/power-local-llm/msty-review) para todos os detalhes.',
           '**[Enchanted](https://github.com/AugustDev/enchanted)** — um cliente nativo de Mac/iOS open source, construído especificamente para o [Ollama](https://ollama.com); com escopo de plataforma mais restrito que o Jan, mas nativo nas plataformas Apple. Veja a [análise do Enchanted](/pt/power-local-llm/enchanted-review).',
@@ -1976,7 +1976,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Jan no diretório ao lado de outros clientes de chat cobertos acima.',
-          '[LM Studio vs. Jan vs. GPT4All](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — uma comparação direta entre três clientes de chat puramente locais, cobrindo o Jan em detalhe.',
+          '[LM Studio vs. Jan vs. GPT4All](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — uma comparação direta entre três clientes de chat puramente locais, cobrindo o Jan em detalhe.',
           '[Análise do Msty](/pt/power-local-llm/msty-review) — uma alternativa de código fechado que combina chat local e na nuvem com recursos adicionais de comparação lado a lado e RAG.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — um olhar mais aprofundado sobre ferramentas focadas em RAG, caso a busca em documentos seja o recurso que mais importa para você.',
         ],
@@ -2190,7 +2190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Jan مقابل تطبيقات الدردشة المحلية الأخرى',
         content: 'Jan هو أحد عدة تطبيقات تجمع بين استدلال النماذج المحلية والاتصالات السحابية الاختيارية في واجهة واحدة. إليك كيف يتموضع مقارنة بخيارات أخرى في هذا المجال — راجع [دليل برمجيات LLM المحلية](/ar/directory) للاطلاع على الكتالوج الكامل، و[المقارنة المخصصة بين Jan وGPT4All](#jan-vs-gpt4all) أعلاه للمواجهة الأقرب مباشرة.',
         items: [
-          '**[LM Studio](https://lmstudio.ai)** — تطبيق دردشة وإدارة نماذج يركز على المحلي مع متصفح نماذج مدمج مصقول جيدًا؛ راجع [مقارنة LM Studio مقابل Jan مقابل GPT4All](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) لمقارنة ثلاثية مباشرة تغطي بالفعل Jan مقابل هذا التطبيق بالتفصيل.',
+          '**[LM Studio](https://lmstudio.ai)** — تطبيق دردشة وإدارة نماذج يركز على المحلي مع متصفح نماذج مدمج مصقول جيدًا؛ راجع [مقارنة LM Studio مقابل Jan مقابل GPT4All](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all) لمقارنة ثلاثية مباشرة تغطي بالفعل Jan مقابل هذا التطبيق بالتفصيل.',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — عميل دردشة محلي مفتوح المصدر من Nomic AI؛ راجع قسم المقارنة المخصص أعلاه.',
           '**[Msty](https://msty.ai)** — تطبيق سطح مكتب مغلق المصدر يجمع أيضًا بين الدردشة المحلية والسحابية، مع ميزات إضافية مثل مقارنة النماذج جنبًا إلى جنب وRAG للمستندات؛ راجع [مراجعة Msty](/ar/power-local-llm/msty-review) لكل التفاصيل.',
           '**[Enchanted](https://github.com/AugustDev/enchanted)** — عميل Mac/iOS أصلي مفتوح المصدر مُصمَّم خصيصًا لـ [Ollama](https://ollama.com)؛ نطاق المنصات أضيق من Jan لكنه أصلي في منصات Apple. راجع [مراجعة Enchanted](/ar/power-local-llm/enchanted-review).',
@@ -2259,7 +2259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[دليل برمجيات LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل Jan في الدليل إلى جانب عملاء الدردشة الآخرين المذكورين أعلاه.',
-          '[LM Studio مقابل Jan مقابل GPT4All](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — مقارنة ثلاثية مباشرة تقارن Jan بعميلي دردشة محليين آخرين بالتفصيل.',
+          '[LM Studio مقابل Jan مقابل GPT4All](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — مقارنة ثلاثية مباشرة تقارن Jan بعميلي دردشة محليين آخرين بالتفصيل.',
           '[مراجعة Msty](/ar/power-local-llm/msty-review) — بديل مغلق المصدر يجمع بين الدردشة المحلية والسحابية مع ميزات إضافية للمقارنة جنبًا إلى جنب وRAG.',
           '[AnythingLLM مقابل PrivateGPT مقابل Open WebUI RAG](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — نظرة أعمق على الأدوات التي تركز على RAG إذا كان البحث في المستندات هو الميزة التي تهمك أكثر.',
         ],
@@ -2473,7 +2473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Jan과 다른 로컬 채팅 앱 비교',
         content: 'Jan은 로컬 모델 추론과 선택적 클라우드 연결을 하나의 인터페이스에 결합한 여러 앱 중 하나입니다. 이 분야의 다른 옵션들과 비교했을 때 Jan이 어디에 위치하는지 살펴보겠습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를, 가장 가까운 정면 비교는 위의 [Jan vs. GPT4All 비교](#jan-vs-gpt4all)를 참고하십시오.',
         items: [
-          '**[LM Studio](https://lmstudio.ai)** — 완성도 높은 내장 모델 브라우저를 갖춘, 로컬 모델 중심의 채팅 및 모델 관리 앱입니다. 이 앱과 Jan을 자세히 비교한 [LM Studio vs. Jan vs. GPT4All 비교](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)를 참고하십시오.',
+          '**[LM Studio](https://lmstudio.ai)** — 완성도 높은 내장 모델 브라우저를 갖춘, 로컬 모델 중심의 채팅 및 모델 관리 앱입니다. 이 앱과 Jan을 자세히 비교한 [LM Studio vs. Jan vs. GPT4All 비교](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all)를 참고하십시오.',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — Nomic AI가 만든 오픈소스 로컬 채팅 클라이언트입니다. 위의 전용 비교 섹션을 참고하십시오.',
           '**[Msty](https://msty.ai)** — 로컬과 클라우드 모델 채팅을 함께 결합한 폐쇄형 소스 데스크톱 앱으로, 모델 나란히 비교와 문서 RAG 같은 추가 기능을 갖추고 있습니다. 자세한 내용은 [Msty 리뷰](/ko/power-local-llm/msty-review)를 참고하십시오.',
           '**[Enchanted](https://github.com/AugustDev/enchanted)** — [Ollama](https://ollama.com) 전용으로 구축된 오픈소스 네이티브 Mac/iOS 클라이언트입니다. 플랫폼 범위는 Jan보다 좁지만 Apple 플랫폼에 네이티브로 최적화되어 있습니다. [Enchanted 리뷰](/ko/power-local-llm/enchanted-review)를 참고하십시오.',
@@ -2542,7 +2542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 채팅 클라이언트와 함께 Jan의 디렉터리 항목도 포함합니다.',
-          '[LM Studio vs. Jan vs. GPT4All](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — Jan을 다른 두 로컬 전용 채팅 클라이언트와 자세히 비교한 세 갈래 비교 글입니다.',
+          '[LM Studio vs. Jan vs. GPT4All](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all) — Jan을 다른 두 로컬 전용 채팅 클라이언트와 자세히 비교한 세 갈래 비교 글입니다.',
           '[Msty 리뷰](/ko/power-local-llm/msty-review) — 로컬과 클라우드 모델 채팅을 결합하고 나란히 비교와 RAG 기능을 추가한 폐쇄형 소스 대안입니다.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 문서 검색이 가장 관심 있는 기능이라면, RAG 중심 도구를 더 깊이 다룬 글입니다.',
         ],
