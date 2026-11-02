@@ -173,12 +173,13 @@ Examples: "Ollama vs LM Studio," "Best Local LLM Frontends," "One-Click Installe
 
 ### Step 0: Ingest GSC Query Data (MANDATORY FIRST STEP)
 
-**Before touching any content, ask the operator for Google Search Console data for the page being updated.** Asking is not optional. With GSC data, the update is aligned to what real users actually search for. If the operator confirms no GSC data exists (new page, too few impressions), the refresh still runs — in **No-GSC mode**, with the Data-Free Meta Review below replacing the query analyses.
+**Before touching any content, pull Google Search Console data for the page being updated, automatically, with the `gsc` MCP tool (`mcp__gsc__page_stats`, `mcp__gsc__query`). The operator does not paste anything (owner rule 2026-11-02).** Pulling is not optional. With GSC data, the update is aligned to what real users actually search for. If the tool returns no data (new page, too few impressions), say so and the refresh still runs — in **No-GSC mode**, with the Data-Free Meta Review below replacing the query analyses.
 
-**What to provide:**
-- GSC Performance report filtered to the specific page URL
-- Time range: last 28 days (or last 7 days if freshness is critical)
-- Include: Queries, Clicks, Impressions, CTR, Position
+**How to pull (window rule, owner 2026-11-02: 28 days first; if the 28-day pull has no usable data, use 3 months):**
+- Exact live URL `https://www.promptquorum.com/<cluster>/<slug>` (no trailing slash, EN unprefixed, other locales `/de|fr|ja|zh|es|pt|ar|ko/...`, never `?lang=`)
+- `page_stats`: 28 days, top 20 queries; one parallel call per locale URL for full 9-locale updates. "No usable data" = no rows, or impressions but an empty `top_queries` (Google anonymises low-volume queries per URL), or <500 impressions -> `days: 90`
+- Empty `top_queries` ladder: `mcp__gsc__query` dims `[query]` + `page_equals` 28 d -> same 90 d -> dims `[page,query]` + `page_contains:<slug>` 90 d (attribute queries to locales by page key). Say which rung and window was used; also pull country and device
+- Show a short table first (clicks, impressions, CTR, position, top queries), print the window dates, mark the last 1-2 days provisional
 
 **What Claude Code must do with this data:**
 
@@ -204,7 +205,7 @@ Examples: "Ollama vs LM Studio," "Best Local LLM Frontends," "One-Click Installe
 | 10,506 US impressions, 0 clicks | US queries are likely informational/version-check — check if title signals "latest" or "updated" |
 | Mobile CTR 3.4% vs Desktop CTR 0.07% | Desktop impressions are low-intent bulk queries — don't optimize for them, focus on mobile-intent queries |
 
-**Run the coverage check on the pasted data (mandatory when GSC data exists):** save the page's queries as a CSV and run
+**Run the coverage check on the pulled data (mandatory when GSC data exists):** save the page's queries as a CSV and run
 
 ```bash
 node scripts/query-coverage.mjs <page-url> --queries-file <gsc-queries.csv> --top=20 [--locales=en,de,...] [--interactive]
@@ -212,9 +213,9 @@ node scripts/query-coverage.mjs <page-url> --queries-file <gsc-queries.csv> --to
 
 It grades every query A–D against the title, meta, H1, H2s, lead and FAQ questions, prints the gaps, proposes fix options (title / meta / H2 / FAQ / lead) and, with `--interactive`, records the options you confirm as a fix plan in `docs/seo-tracking/fix-plans/`. Apply the plan in this run, then re-run the script: the Step 4 checkboxes "top 5 queries are answered" and "title contains words from the top queries" are satisfied only when the targeted queries reach grade A. Matching is lexical, so judge synonyms by hand. Tag locale-specific queries (`de:...` or a `locale` CSV column); never translate query wording literally.
 
-**Log the change so it can be measured** (Step 6): `npm run seo:log -- --slug <path> --queries "q1|q2" --position P --impressions N --clicks C --period "<window>" --field ... --old ... --new ...`. Deploys are on demand, so record the live date after shipping with `npm run seo:log -- --mark-deployed --all-pending --date YYYY-MM-DD`. At T+14 and T+28 re-export GSC (Pages and Queries) and run `npm run seo:measure -- --export pages.csv --exported YYYY-MM-DD [--queries-export queries.csv] --write`; `npm run seo:measure -- --status` lists what is due. A change logged without a baseline cannot be measured.
+**Log the change so it can be measured** (Step 6): `npm run seo:log -- --slug <path> --queries "q1|q2" --position P --impressions N --clicks C --period "<window>" --field ... --old ... --new ...`. Deploys are on demand, so record the live date after shipping with `npm run seo:log -- --mark-deployed --all-pending --date YYYY-MM-DD`. At T+14 and T+28 Claude pulls the numbers itself with the `gsc` tool (`mcp__gsc__query`, `page_equals` per due page; CSV columns `page,clicks,impressions,position` and `query,clicks,impressions,position`; see the automatic measurement paragraph in `/geo-meta-optimizer`), then runs `npm run seo:measure -- --export pages.csv --exported YYYY-MM-DD [--queries-export queries.csv] --write`; `npm run seo:measure -- --status` lists what is due. A change logged without a baseline cannot be measured.
 
-**If no GSC data is provided:** Ask the operator once. If they provide data → run the analyses above. If they confirm none exists → switch to No-GSC mode below and run the FULL refresh process anyway (Steps 1–6 all still run). Never stop the update, and never skip the meta review, because data is missing. Never fabricate query data.
+**If no GSC data comes back (after the 28 d -> 90 d -> ladder):** do not ask the operator to paste. Data returned → run the analyses above. Empty → switch to No-GSC mode below and run the FULL refresh process anyway (Steps 1–6 all still run). Never stop the update, and never skip the meta review, because data is missing. Never fabricate query data.
 
 #### No-GSC mode: the Data-Free Meta Review
 
