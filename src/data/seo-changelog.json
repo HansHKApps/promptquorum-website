@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 4.600239212439047e-05,
+      "ctr": 0.00004600239212439047,
       "period": "last 90 days"
     }
   },
@@ -11695,6 +11695,739 @@
       "clicks": 0,
       "ctr": 0,
       "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "5df63b76-68fd-4e4b-8f02-fbfa9c454efd",
+    "slug": "/power-local-llm/pydantic-ai-review",
+    "date": "2026-11-02T14:40:44.127Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pydantic AI is the Pydantic team's free, MIT-licensed Python agent framework — type-safe structured outputs, dependency injection, model-agnostic support. Verified GitHub data and install steps.",
+        "new": "Pydantic AI review: the Pydantic team's free, MIT-licensed Python agent framework. Type-safe outputs, install steps, pricing, license and alternatives."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (pydantic-ai-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "pydantic ai",
+      "pydantic ai review",
+      "is pydantic ai open source",
+      "pydantic ai license",
+      "pydantic ai que es",
+      "pydantic alternatives"
+    ],
+    "baseline": {
+      "position": 7.75,
+      "impressions": 1403,
+      "clicks": 5,
+      "ctr": 0.003563791874554526,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "38332cf6-e3c4-4e9e-b068-83349c16eed9",
+    "slug": "/de/power-local-llm/pydantic-ai-review",
+    "date": "2026-11-02T14:40:44.241Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pydantic AI ist das kostenlose, MIT-lizenzierte Python-Agenten-Framework des Pydantic-Teams — typsichere Structured Outputs, Dependency Injection, modellunabhängige Unterstützung. Verifizierte GitHub-Daten und Installationsschritte.",
+        "new": "Was ist Pydantic AI? Das kostenlose MIT-Python-Agenten-Framework des Pydantic-Teams: typsichere Ausgaben, Installation, Lizenz und Alternativen."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (pydantic-ai-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "pydantic ai",
+      "pydantic ai review",
+      "is pydantic ai open source",
+      "pydantic ai license",
+      "pydantic ai que es",
+      "pydantic alternatives"
+    ],
+    "baseline": {
+      "position": 6.05,
+      "impressions": 188,
+      "clicks": 2,
+      "ctr": 0.010638297872340425,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "f8f20fca-fbb1-49b0-a47a-7700648d08ff",
+    "slug": "/fr/power-local-llm/pydantic-ai-review",
+    "date": "2026-11-02T14:40:44.347Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Pydantic AI Review: Agents typés & Alternatives",
+        "new": "Pydantic AI Review : agents Python typés et alternatives"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Pydantic AI est le framework Python d'agents gratuit et sous licence MIT de l'équipe Pydantic — sorties structurées typées, injection de dépendances, support multi-modèles. Données GitHub vérifiées et étapes d'installation.",
+        "new": "Qu'est-ce que Pydantic AI ? Le framework d'agents Python gratuit (MIT) de l'équipe Pydantic : sorties typées, installation, licence et alternatives."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (pydantic-ai-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "pydantic ai",
+      "pydantic ai review",
+      "is pydantic ai open source",
+      "pydantic ai license",
+      "pydantic ai que es",
+      "pydantic alternatives"
+    ],
+    "baseline": {
+      "position": 8.47,
+      "impressions": 195,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "0c4d637f-d6eb-4bb4-af61-70afe7168e59",
+    "slug": "/es/power-local-llm/pydantic-ai-review",
+    "date": "2026-11-02T14:40:44.456Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Pydantic AI Review: Agentes con Tipos Seguros y Alternativas",
+        "new": "Pydantic AI Review: Agentes Tipados y Alternativas"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Pydantic AI es el framework Python de agentes gratuito y con licencia MIT del equipo de Pydantic — salidas estructuradas con tipos seguros, inyección de dependencias, soporte agnóstico del modelo. Datos de GitHub verificados y pasos de instalación.",
+        "new": "Qué es Pydantic AI: el framework Python de agentes gratuito (MIT) del equipo de Pydantic. Salidas tipadas, instalación, licencia y alternativas."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (pydantic-ai-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "pydantic ai",
+      "pydantic ai review",
+      "is pydantic ai open source",
+      "pydantic ai license",
+      "pydantic ai que es",
+      "pydantic alternatives"
+    ],
+    "baseline": {
+      "position": 6.86,
+      "impressions": 275,
+      "clicks": 3,
+      "ctr": 0.01090909090909091,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "93f08c48-d317-4549-a022-d0fc95a1bea1",
+    "slug": "/pt/power-local-llm/pydantic-ai-review",
+    "date": "2026-11-02T14:40:44.563Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Pydantic AI Review: Agentes com Tipos Seguros e Alternativas",
+        "new": "Pydantic AI Review: Agentes Tipados e Alternativas"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Pydantic AI é o framework Python de agentes gratuito e licenciado sob MIT da equipe Pydantic — saídas estruturadas com tipos seguros, injeção de dependências, suporte agnóstico de modelo. Dados do GitHub verificados e passos de instalação.",
+        "new": "O que é o Pydantic AI: framework Python de agentes gratuito (MIT) da equipe Pydantic. Saídas tipadas, instalação, licença, preço e alternativas."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (pydantic-ai-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "pydantic ai",
+      "pydantic ai review",
+      "is pydantic ai open source",
+      "pydantic ai license",
+      "pydantic ai que es",
+      "pydantic alternatives"
+    ],
+    "baseline": {
+      "position": 3,
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "058b8238-2d1b-4fb8-ad68-5c8870b3d3de",
+    "slug": "/ja/power-local-llm/pydantic-ai-review",
+    "date": "2026-11-02T14:40:44.670Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pydantic AIは、Pydanticチームによる無料・MITライセンスのPythonエージェントフレームワーク——型安全なStructured Outputs、依存性注入、モデル非依存のサポート。検証済みGitHubデータとインストール手順。",
+        "new": "Pydantic AIは、Pydanticチームによる無料のMITライセンスPythonエージェントフレームワーク。型安全な出力、導入手順、料金、代替ツールを解説。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (pydantic-ai-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "pydantic ai",
+      "pydantic ai review",
+      "is pydantic ai open source",
+      "pydantic ai license",
+      "pydantic ai que es",
+      "pydantic alternatives"
+    ],
+    "baseline": {
+      "position": 6.61,
+      "impressions": 64,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "1888635b-1f61-4637-a474-b9bd8223e7ba",
+    "slug": "/ar/power-local-llm/pydantic-ai-review",
+    "date": "2026-11-02T14:40:44.776Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pydantic AI هو إطار عمل Python المجاني برخصة MIT من فريق Pydantic للوكلاء — مخرجات منظّمة آمنة النوع، حَقن التبعيات، دعم مستقل عن النموذج. بيانات GitHub موثّقة وخطوات التثبيت.",
+        "new": "مراجعة Pydantic AI: إطار عمل Python المجاني برخصة MIT من فريق Pydantic. مخرجات آمنة النوع وخطوات التثبيت والترخيص والبدائل."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (pydantic-ai-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "pydantic ai",
+      "pydantic ai review",
+      "is pydantic ai open source",
+      "pydantic ai license",
+      "pydantic ai que es",
+      "pydantic alternatives"
+    ],
+    "baseline": {
+      "position": 6.83,
+      "impressions": 723,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8a83ed71-7d88-4d8c-b209-6f28176dd589",
+    "slug": "/ko/power-local-llm/pydantic-ai-review",
+    "date": "2026-11-02T14:40:44.885Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pydantic AI는 Pydantic 팀의 무료 MIT 라이선스 Python 에이전트 프레임워크입니다 — 타입 안전 구조화 출력, 의존성 주입, 모델 독립적 지원. 검증된 GitHub 데이터와 설치 단계.",
+        "new": "Pydantic AI는 Pydantic 팀의 무료 MIT 라이선스 Python 에이전트 프레임워크입니다. 타입 안전 출력, 설치 단계, 라이선스, 대안을 다룹니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (pydantic-ai-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "pydantic ai",
+      "pydantic ai review",
+      "is pydantic ai open source",
+      "pydantic ai license",
+      "pydantic ai que es",
+      "pydantic alternatives"
+    ],
+    "baseline": {
+      "position": 5.99,
+      "impressions": 150,
+      "clicks": 4,
+      "ctr": 0.02666666666666667,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "1bb3c6e7-4a62-493c-8aa7-082840dbf2f2",
+    "slug": "/ja/power-local-llm/facet-review",
+    "date": "2026-11-02T14:40:45.026Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Facetレビュー：写真をローカルで採点・選別・閲覧する無料ツール",
+        "new": "Facetレビュー：写真をローカルで採点・選別・閲覧できるツール"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (facet-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "facet",
+      "facet github"
+    ],
+    "baseline": {
+      "position": 23.8,
+      "impressions": 87,
+      "clicks": 2,
+      "ctr": 0.022988505747126436,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "47fcfea4-ddc6-4361-a9f8-f9ba0b5babd3",
+    "slug": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
+    "date": "2026-11-02T14:40:45.148Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Self-hosted vs managed vector databases at enterprise scale: multi-tenant isolation, SLA and security posture, billions-of-vectors capacity planning, committed-use pricing, and a vendor procurement checklist.",
+        "new": "Self-hosted vs managed vector database for enterprise RAG: SLA and SSO tiers by vendor, multi-tenant isolation, migration and a procurement checklist."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (enterprise-rag-vector-database-deployment-guide); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "self hosted vector database",
+      "zilliz cloud vs pinecone for an enterprise rag deployment",
+      "vector database with soc 2 and gdpr compliance for enterprise",
+      "vector database migration for enterprise"
+    ],
+    "baseline": {
+      "position": 6.55,
+      "impressions": 1018,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "3dc26767-e660-4533-9845-24802d258b3f",
+    "slug": "/de/power-local-llm/enterprise-rag-vector-database-deployment-guide",
+    "date": "2026-11-02T14:40:45.255Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Self-Hosted vs. Managed Vektordatenbanken für Unternehmen: Mandantentrennung, SLA und Sicherheitsniveau, Kapazitätsplanung bei Milliarden Vektoren, Committed-Use-Preise und eine Checkliste für die Beschaffung.",
+        "new": "Self-Hosted vs. Managed Vektordatenbank für Enterprise-RAG: SLA- und SSO-Stufen je Anbieter, Mandantentrennung, Migration und Beschaffungs-Checkliste."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (enterprise-rag-vector-database-deployment-guide); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "self hosted vector database",
+      "zilliz cloud vs pinecone for an enterprise rag deployment",
+      "vector database with soc 2 and gdpr compliance for enterprise",
+      "vector database migration for enterprise"
+    ],
+    "baseline": {
+      "position": 5.2,
+      "impressions": 34,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "f54255a4-8b52-45f8-92b6-64ebb83e8227",
+    "slug": "/fr/power-local-llm/enterprise-rag-vector-database-deployment-guide",
+    "date": "2026-11-02T14:40:45.363Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Base vectorielle entreprise : auto-hébergée ou managée (2026)",
+        "new": "Base vectorielle entreprise : auto-hébergée/managée (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Bases de données vectorielles auto-hébergées vs managées à l'échelle entreprise : isolation multi-tenant, SLA et posture de sécurité, planification pour des milliards de vecteurs, tarification committed-use et checklist d'achat.",
+        "new": "Base vectorielle auto-hébergée ou managée pour le RAG d'entreprise : paliers SLA et SSO par fournisseur, multi-tenant, migration et checklist d'achat."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (enterprise-rag-vector-database-deployment-guide); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "self hosted vector database",
+      "zilliz cloud vs pinecone for an enterprise rag deployment",
+      "vector database with soc 2 and gdpr compliance for enterprise",
+      "vector database migration for enterprise"
+    ],
+    "baseline": {
+      "position": 6.9,
+      "impressions": 8,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "43234450-acbb-4f0a-b37c-17cf4a78a4cb",
+    "slug": "/es/power-local-llm/enterprise-rag-vector-database-deployment-guide",
+    "date": "2026-11-02T14:40:45.476Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Base Vectorial Empresarial: Autoalojada o Gestionada (2026)",
+        "new": "Base Vectorial Empresarial: Autoalojada/Gestionada (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Bases de datos vectoriales autoalojadas vs gestionadas a escala empresarial: aislamiento multiinquilino, SLA y postura de seguridad, planificación para miles de millones de vectores, precios de uso comprometido y checklist de compra.",
+        "new": "Base vectorial autoalojada o gestionada para RAG empresarial: niveles de SLA y SSO por proveedor, multiinquilino, migración y lista de compra."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (enterprise-rag-vector-database-deployment-guide); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "self hosted vector database",
+      "zilliz cloud vs pinecone for an enterprise rag deployment",
+      "vector database with soc 2 and gdpr compliance for enterprise",
+      "vector database migration for enterprise"
+    ],
+    "baseline": {
+      "position": 16.6,
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "15367d79-842b-4e85-ac7b-b56bb30d71c4",
+    "slug": "/pt/power-local-llm/enterprise-rag-vector-database-deployment-guide",
+    "date": "2026-11-02T14:40:45.582Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Banco Vetorial Empresarial: Self-Hosted ou Gerenciado (2026)",
+        "new": "Banco Vetorial Empresarial: Self-Hosted/Gerenciado (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Bancos de dados vetoriais self-hosted vs. gerenciados em escala empresarial: isolamento multi-tenant, SLA e postura de segurança, planejamento para bilhões de vetores, preços de uso comprometido e checklist de compra.",
+        "new": "Banco vetorial self-hosted ou gerenciado para RAG empresarial: níveis de SLA e SSO por fornecedor, multi-tenant, migração e checklist de compra."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (enterprise-rag-vector-database-deployment-guide); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "self hosted vector database",
+      "zilliz cloud vs pinecone for an enterprise rag deployment",
+      "vector database with soc 2 and gdpr compliance for enterprise",
+      "vector database migration for enterprise"
+    ],
+    "baseline": {
+      "position": 9,
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "bd7410d1-8358-47c9-9fa2-99418a2ddf02",
+    "slug": "/ja/power-local-llm/enterprise-rag-vector-database-deployment-guide",
+    "date": "2026-11-02T14:40:45.691Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "エンタープライズベクトルDB：セルフホストvsマネージド(2026)",
+        "new": "エンタープライズベクトルDB：セルフvsマネージド(2026)"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (enterprise-rag-vector-database-deployment-guide); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "self hosted vector database",
+      "zilliz cloud vs pinecone for an enterprise rag deployment",
+      "vector database with soc 2 and gdpr compliance for enterprise",
+      "vector database migration for enterprise"
+    ],
+    "baseline": {
+      "position": 8.3,
+      "impressions": 6,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "66ee1320-8a80-4e1f-a3ae-5ed8ddba940e",
+    "slug": "/zh/power-local-llm/enterprise-rag-vector-database-deployment-guide",
+    "date": "2026-11-02T14:40:45.797Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "企业级自托管 vs 托管向量数据库对比：多租户隔离、SLA与安全态势、数十亿向量容量规划、承诺用量定价，以及供应商采购清单。",
+        "new": "企业级RAG向量数据库自托管与托管云对比：各供应商SLA与SSO套餐等级、多租户隔离、数十亿向量容量规划、供应商锁定与迁移策略、采购检查清单。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (enterprise-rag-vector-database-deployment-guide); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "self hosted vector database",
+      "zilliz cloud vs pinecone for an enterprise rag deployment",
+      "vector database with soc 2 and gdpr compliance for enterprise",
+      "vector database migration for enterprise"
+    ],
+    "baseline": {
+      "position": 15.4,
+      "impressions": 24,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "73e12d30-9546-4109-a45f-fa7e3c160ae9",
+    "slug": "/ar/power-local-llm/enterprise-rag-vector-database-deployment-guide",
+    "date": "2026-11-02T14:40:45.910Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "قواعد بيانات المتجهات المُستضافة ذاتيًا مقابل المُدارة على نطاق المؤسسات: العزل متعدد المستأجرين، اتفاقيات مستوى الخدمة والوضع الأمني، تخطيط السعة لمليارات المتجهات، تسعير الاستخدام الملتزم، وقائمة تحقق لشراء الموردين.",
+        "new": "قاعدة بيانات المتجهات المستضافة ذاتيًا أم المُدارة لـ RAG المؤسسي: مستويات SLA وSSO لكل مزوّد، وعزل المستأجرين، والترحيل، وقائمة التحقق من الشراء."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (enterprise-rag-vector-database-deployment-guide); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "self hosted vector database",
+      "zilliz cloud vs pinecone for an enterprise rag deployment",
+      "vector database with soc 2 and gdpr compliance for enterprise",
+      "vector database migration for enterprise"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "235933aa-eb85-4b96-a49c-719f94933b82",
+    "slug": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+    "date": "2026-11-02T14:40:46.038Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "vLLM vs TGI vs NVIDIA NIM vs Ollama for enterprise inference: multi-GPU throughput, Kubernetes deployment, licensing cost, and support model compared.",
+        "new": "vLLM vs TGI vs NVIDIA NIM vs Ollama for enterprise LLM inference: multi-GPU, Kubernetes, licensing cost, and why TGI is now in maintenance mode."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (enterprise-llm-inference-servers-vllm-tgi-nim); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "enterprise llm inference",
+      "how do vllm and tensorrt-llm compare",
+      "ai inference server comparison",
+      "nvidia nim vs vllm"
+    ],
+    "baseline": {
+      "position": 6.97,
+      "impressions": 576,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a2e130b2-d227-445b-88eb-5dcec0953e1a",
+    "slug": "/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+    "date": "2026-11-02T14:40:46.147Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "vLLM vs TGI vs NVIDIA NIM vs Ollama für Enterprise-Inferenz: Multi-GPU-Durchsatz, Kubernetes-Bereitstellung, Lizenzkosten und Support-Modell im Vergleich.",
+        "new": "vLLM vs TGI vs NVIDIA NIM vs Ollama für Enterprise-Inferenz: Multi-GPU-Betrieb, Kubernetes, Lizenzkosten und warum TGI jetzt im Wartungsmodus ist."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (enterprise-llm-inference-servers-vllm-tgi-nim); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "enterprise llm inference",
+      "how do vllm and tensorrt-llm compare",
+      "ai inference server comparison",
+      "nvidia nim vs vllm"
+    ],
+    "baseline": {
+      "position": 6.3,
+      "impressions": 6,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b5f02aec-9017-44c9-aad8-89af091c4def",
+    "slug": "/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+    "date": "2026-11-02T14:40:46.255Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "vLLM vs TGI vs NVIDIA NIM vs Ollama pour l'inférence en entreprise : débit multi-GPU, déploiement Kubernetes, coût de licence et modèle de support comparés.",
+        "new": "vLLM, TGI, NVIDIA NIM et Ollama pour l'inférence en entreprise : multi-GPU, Kubernetes, coût des licences et pourquoi TGI est en mode maintenance."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (enterprise-llm-inference-servers-vllm-tgi-nim); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "enterprise llm inference",
+      "how do vllm and tensorrt-llm compare",
+      "ai inference server comparison",
+      "nvidia nim vs vllm"
+    ],
+    "baseline": {
+      "position": 10.6,
+      "impressions": 74,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "82849d8e-d6f0-4a48-af73-01a4c4acc2ad",
+    "slug": "/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+    "date": "2026-11-02T14:40:46.372Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Servidores de inferencia empresarial 2026: vLLM vs TGI vs NIM",
+        "new": "Servidores de inferencia 2026: vLLM vs TGI vs NIM"
+      },
+      {
+        "field": "metaDescription",
+        "old": "vLLM vs TGI vs NVIDIA NIM vs Ollama para inferencia empresarial: rendimiento multi-GPU, despliegue en Kubernetes, coste de licencia y modelo de soporte comparados.",
+        "new": "vLLM, TGI, NVIDIA NIM y Ollama para inferencia empresarial: multi-GPU, Kubernetes, coste de licencias y por qué TGI está en modo de mantenimiento."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (enterprise-llm-inference-servers-vllm-tgi-nim); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "enterprise llm inference",
+      "how do vllm and tensorrt-llm compare",
+      "ai inference server comparison",
+      "nvidia nim vs vllm"
+    ],
+    "baseline": {
+      "position": 7,
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "63008ebf-c1eb-4adb-9224-50cccfee8eeb",
+    "slug": "/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+    "date": "2026-11-02T14:40:46.481Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "vLLM vs TGI vs NVIDIA NIM vs Ollama para inferência corporativa: throughput multi-GPU, deploy no Kubernetes, custo de licenciamento e modelo de suporte comparados.",
+        "new": "vLLM, TGI, NVIDIA NIM e Ollama para inferência corporativa: multi-GPU, Kubernetes, custo de licenças e por que o TGI está em modo de manutenção."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (enterprise-llm-inference-servers-vllm-tgi-nim); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "enterprise llm inference",
+      "how do vllm and tensorrt-llm compare",
+      "ai inference server comparison",
+      "nvidia nim vs vllm"
+    ],
+    "baseline": {
+      "position": 8.7,
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "df760bda-c9b1-4e23-bf41-a1b3216b43dd",
+    "slug": "/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+    "date": "2026-11-02T14:40:46.587Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "vLLM対TGI対NVIDIA NIM対Ollamaをエンタープライズ推論で比較:マルチGPUスループット、Kubernetes展開、ライセンス費用、サポート体制を検証。",
+        "new": "vLLM、TGI、NVIDIA NIM、Ollamaをエンタープライズ推論で比較。マルチGPU、Kubernetes、ライセンス費用、TGIがメンテナンスモードである理由。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (enterprise-llm-inference-servers-vllm-tgi-nim); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "enterprise llm inference",
+      "how do vllm and tensorrt-llm compare",
+      "ai inference server comparison",
+      "nvidia nim vs vllm"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "1925fb2a-8baa-4fad-a844-d620f1cbd865",
+    "slug": "/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+    "date": "2026-11-02T14:40:46.692Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "vLLM对比TGI对比NVIDIA NIM对比Ollama企业级推理:多GPU吞吐量、Kubernetes部署、许可成本与支持模式对比。",
+        "new": "vLLM、TGI、NVIDIA NIM 与 Ollama 企业推理对比：多 GPU、Kubernetes、许可成本，以及 TGI 为何进入维护模式。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (enterprise-llm-inference-servers-vllm-tgi-nim); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "enterprise llm inference",
+      "how do vllm and tensorrt-llm compare",
+      "ai inference server comparison",
+      "nvidia nim vs vllm"
+    ],
+    "baseline": {
+      "position": 9.6,
+      "impressions": 14,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "9575a3f5-5d50-400f-a8f3-df0a0d451873",
+    "slug": "/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+    "date": "2026-11-02T14:40:46.800Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مقارنة vLLM وTGI وNVIDIA NIM وOllama للاستدلال المؤسسي: الإنتاجية متعددة وحدات المعالجة الرسومية، نشر Kubernetes، تكلفة الترخيص، ونموذج الدعم.",
+        "new": "مقارنة vLLM وTGI وNVIDIA NIM وOllama للاستدلال المؤسسي: عدة GPU وKubernetes وتكلفة التراخيص ولماذا دخل TGI وضع الصيانة."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (enterprise-llm-inference-servers-vllm-tgi-nim); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "enterprise llm inference",
+      "how do vllm and tensorrt-llm compare",
+      "ai inference server comparison",
+      "nvidia nim vs vllm"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2c434139-0372-4aa3-be37-b78b2d258bc2",
+    "slug": "/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+    "date": "2026-11-02T14:40:46.907Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "vLLM vs TGI vs NVIDIA NIM vs Ollama 엔터프라이즈 추론 비교: 멀티 GPU 처리량, Kubernetes 배포, 라이선스 비용, 지원 모델을 검토합니다.",
+        "new": "엔터프라이즈 추론용 vLLM, TGI, NVIDIA NIM, Ollama 비교: 멀티 GPU, Kubernetes, 라이선스 비용, TGI가 유지보수 모드인 이유."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4 (enterprise-llm-inference-servers-vllm-tgi-nim); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "enterprise llm inference",
+      "how do vllm and tensorrt-llm compare",
+      "ai inference server comparison",
+      "nvidia nim vs vllm"
+    ],
+    "baseline": {
+      "position": 2,
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
     },
     "deployedAt": null
   }
