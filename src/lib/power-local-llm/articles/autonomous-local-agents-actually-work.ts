@@ -133,7 +133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Run cadence:** each task ran 3 times per stack across the 30-day window, with a fresh prompt each time. Outcome graded as "complete unattended", "complete with supervision", "partial", or "stalled / failed".',
           '**Supervision metric:** number of approvals required per task and the share of approvals where we rejected the proposed action. A high reject rate signals the harness is generating noise the human has to filter.',
           '**Honesty constraint:** ranges, not invented exact percentages. "Reliable across all 5 tasks" means 13–15 of 15 runs landed; "fails on long horizons" means 3–6 of 15 runs landed without intervention. The verdicts are conservative — when a stack worked but only with non-trivial intervention, it counts as a failure for unattended-task purposes.',
-          'Tool-call reliability is the layer underneath all of this. For the model-side comparison, see [Best Local Models for Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026); the protocol layer is covered in [Connect Ollama to Databases and APIs With MCP](/power-local-llm/local-ai-agents-with-mcp-2026).',
+          'Tool-call reliability is the layer underneath all of this. For the model-side comparison, see [Best Local Models for Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026); the protocol layer is covered in [Connect Ollama to Databases and APIs With MCP](/power-local-llm/local-ai-agents-with-mcp).',
         ],
       },
       realityTable: {
@@ -480,7 +480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Hermes Agent Review 2026](/power-local-llm/hermes-agent-review) — Nous Research\'s MIT-licensed autonomous agent with persistent memory, a self-improving skill loop, and messaging-platform access (Telegram, Discord, Slack, WhatsApp, Signal, email).',
-          '[Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026](/power-local-llm/local-ai-agents-with-mcp-2026) — what enables agents under the hood; protocol layer for filesystem, database, browser, and GitHub tools.',
+          '[Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026](/power-local-llm/local-ai-agents-with-mcp) — what enables agents under the hood; protocol layer for filesystem, database, browser, and GitHub tools.',
           '[Best Local Models for Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026) — the model layer; head-to-head benchmarks for the tool-callers recommended above (Qwen3-Coder, Gemma 4, GLM-4.7, Llama 3.3).',
           '[Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local) — adjacent harness comparison for coding-shaped work.',
           '[BabyAGI in 2026: What the First AI Agent Became](/power-local-llm/babyagi-review-autonomous-agent) — the history of one of the earliest viral autonomous-agent projects, and why it has no local-model support.',
@@ -618,7 +618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Cadencia de ejecución:** cada tarea se ejecutó 3 veces por stack durante el período de 30 días, con un prompt nuevo cada vez. El resultado se calificó como "completo sin supervisión", "completo con supervisión", "parcial" o "bloqueado / fallido".',
           '**Métrica de supervisión:** número de aprobaciones requeridas por tarea y la proporción de aprobaciones en las que rechazamos la acción propuesta. Una tasa de rechazo alta indica que el harness genera ruido que el humano debe filtrar.',
           '**Restricción de honestidad:** rangos, no porcentajes exactos inventados. "Fiable en las 5 tareas" significa 13–15 de 15 ejecuciones completadas; "falla en horizontes largos" significa 3–6 de 15 ejecuciones completadas sin intervención. Los veredictos son conservadores: cuando un stack funcionó pero solo con intervención no trivial, se cuenta como fallo a efectos de tareas sin supervisión.',
-          'La fiabilidad de las llamadas a herramientas es la capa subyacente a todo esto. Para la comparativa del lado del modelo, consulta [Mejores modelos locales para tool calling en 2026](/es/power-local-llm/best-local-models-tool-calling-2026); la capa de protocolo se trata en [Conectar Ollama a bases de datos y APIs con MCP](/es/power-local-llm/local-ai-agents-with-mcp-2026).',
+          'La fiabilidad de las llamadas a herramientas es la capa subyacente a todo esto. Para la comparativa del lado del modelo, consulta [Mejores modelos locales para tool calling en 2026](/es/power-local-llm/best-local-models-tool-calling-2026); la capa de protocolo se trata en [Conectar Ollama a bases de datos y APIs con MCP](/es/power-local-llm/local-ai-agents-with-mcp).',
         ],
       },
       realityTable: {
@@ -964,7 +964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Conectar Ollama a bases de datos y APIs con MCP: configuración de agentes locales 2026](/es/power-local-llm/local-ai-agents-with-mcp-2026) — lo que habilita a los agentes bajo el capó; capa de protocolo para herramientas de sistema de archivos, base de datos, navegador y GitHub.',
+          '[Conectar Ollama a bases de datos y APIs con MCP: configuración de agentes locales 2026](/es/power-local-llm/local-ai-agents-with-mcp) — lo que habilita a los agentes bajo el capó; capa de protocolo para herramientas de sistema de archivos, base de datos, navegador y GitHub.',
           '[Mejores modelos locales para tool calling en 2026](/es/power-local-llm/best-local-models-tool-calling-2026) — la capa del modelo; benchmarks cara a cara de los tool-callers recomendados (Qwen3-Coder, Gemma 4, GLM-4.7, Llama 3.3).',
           '[Continue.dev vs Cline vs Aider: mejor agente de codificación local en 2026](/es/power-local-llm/continue-dev-vs-cline-vs-aider-local) — comparativa de harnesses adyacentes para trabajo de tipo codificación.',
           '[BabyAGI en 2026: del script viral al framework de funciones](/es/power-local-llm/babyagi-review-autonomous-agent) — la historia de uno de los primeros proyectos virales de agentes autónomos, y por qué no soporta modelos locales.',
@@ -1115,7 +1115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Cadence de test :** chaque tâche s\'est exécutée 3 fois par stack sur la fenêtre de 30 jours, avec un nouveau prompt chaque fois. Le résultat évalué comme « complet sans surveillance », « complet avec supervision », « partiel », ou « bloqué / échoué ».',
           '**Métrique de supervision :** nombre d\'approbations nécessaires par tâche et la part des approbations où nous avons rejeté l\'action proposée. Un taux de rejet élevé signale que le harness génère du bruit que l\'humain doit filtrer.',
           '**Contrainte d\'honnêteté :** des plages, pas des pourcentages exactement inventés. « Fiable sur les 5 tâches » signifie 13–15 des 15 exécutions atterrissent ; « échoue sur les longs horizons » signifie 3–6 des 15 exécutions atterrissent sans intervention. Les verdicts sont conservateurs — quand un stack fonctionnait mais seulement avec une intervention non-triviale, cela compte comme un échec pour les besoins de tâches sans surveillance.',
-          'La fiabilité des appels d\'outils est la couche sous-jacente à tout cela. Pour la comparaison côté modèle, voir [Meilleurs modèles locaux pour Tool Calling en 2026](/fr/power-local-llm/best-local-models-tool-calling-2026) ; la couche de protocole est couverte dans [Connecter Ollama aux bases de données et API avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp-2026).',
+          'La fiabilité des appels d\'outils est la couche sous-jacente à tout cela. Pour la comparaison côté modèle, voir [Meilleurs modèles locaux pour Tool Calling en 2026](/fr/power-local-llm/best-local-models-tool-calling-2026) ; la couche de protocole est couverte dans [Connecter Ollama aux bases de données et API avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp).',
         ],
       },
       realityTable: {
@@ -1461,7 +1461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Connecter Ollama aux bases de données et API avec MCP : Configuration locale des agents 2026](/fr/power-local-llm/local-ai-agents-with-mcp-2026) — ce qui active les agents sous le capot ; couche de protocole pour les outils système de fichiers, base de données, navigateur, et GitHub.',
+          '[Connecter Ollama aux bases de données et API avec MCP : Configuration locale des agents 2026](/fr/power-local-llm/local-ai-agents-with-mcp) — ce qui active les agents sous le capot ; couche de protocole pour les outils système de fichiers, base de données, navigateur, et GitHub.',
           '[Meilleurs modèles locaux pour Tool Calling en 2026](/fr/power-local-llm/best-local-models-tool-calling-2026) — la couche modèle ; benchmarks tête-à-tête pour les outils de tool-calling recommandés ci-dessus (Qwen3-Coder, Gemma 4, GLM-4.7, Llama 3.3).',
           '[Continue.dev vs Cline vs Aider : Meilleur agent de codage local en 2026](/fr/power-local-llm/continue-dev-vs-cline-vs-aider-local) — comparaison de harness adjacent pour le travail de type codage.',
           '[BabyAGI en 2026 : du script viral au framework de fonctions](/fr/power-local-llm/babyagi-review-autonomous-agent) — l\'histoire de l\'un des tout premiers projets viraux d\'agent autonome, et pourquoi il ne prend pas en charge les modèles locaux.',
@@ -2041,7 +2041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Run-Kadenz:** jede Aufgabe lief 3 Mal pro Stack über das 30-Tage-Fenster, mit einem frischen Prompt jedes Mal. Ergebnis bewertet als „vollständig unbeaufsichtigt", „vollständig mit Überwachung", „teilweise" oder „stagniert/fehlgeschlagen".',
           '**Überwachungs-Metrik:** Anzahl der pro Aufgabe erforderlichen Approvals und der Anteil der Approvals, bei denen wir die vorgeschlagene Aktion abgelehnt haben. Eine hohe Reject-Rate signalisiert, dass der Harness Rauschen erzeugt, das der Mensch filtern muss.',
           '**Ehrlichkeitszwang:** Bereiche, keine erfundenen exakten Prozentsätze. „Zuverlässig über alle 5 Aufgaben" bedeutet 13–15 von 15 Durchläufen landen; „fehlschlagen über lange Horizonte" bedeutet 3–6 von 15 Durchläufen landen ohne Eingriff. Die Verdikt sind konservativ — wenn ein Stack funktionierte, aber nur mit nicht trivialem Eingriff, zählt es als Fehler für unbeaufsichtigte-Aufgabe-Zwecke.',
-          'Tool-Call-Zuverlässigkeit ist die Schicht darunter. Für die Modell-seitige Vergleich, siehe [Beste lokale Modelle für Tool Calling in 2026](/de/power-local-llm/best-local-models-tool-calling-2026); die Protokoll-Schicht wird behandelt in [Ollama mit Datenbanken und APIs über MCP verbinden](/de/power-local-llm/local-ai-agents-with-mcp-2026).',
+          'Tool-Call-Zuverlässigkeit ist die Schicht darunter. Für die Modell-seitige Vergleich, siehe [Beste lokale Modelle für Tool Calling in 2026](/de/power-local-llm/best-local-models-tool-calling-2026); die Protokoll-Schicht wird behandelt in [Ollama mit Datenbanken und APIs über MCP verbinden](/de/power-local-llm/local-ai-agents-with-mcp).',
         ],
       },
       realityTable: {
@@ -2387,7 +2387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Ollama mit Datenbanken und APIs über MCP verbinden: Lokale Agent-Einrichtung 2026](/de/power-local-llm/local-ai-agents-with-mcp-2026) — was Agenten unter der Haube ermöglicht; Protokoll-Schicht für Dateisystem, Datenbank, Browser und GitHub-Tools.',
+          '[Ollama mit Datenbanken und APIs über MCP verbinden: Lokale Agent-Einrichtung 2026](/de/power-local-llm/local-ai-agents-with-mcp) — was Agenten unter der Haube ermöglicht; Protokoll-Schicht für Dateisystem, Datenbank, Browser und GitHub-Tools.',
           '[Beste lokale Modelle für Tool Calling in 2026](/de/power-local-llm/best-local-models-tool-calling-2026) — die Modell-Schicht; Kopf-an-Kopf-Benchmarks für die oben empfohlenen Tool-Caller (Qwen3-Coder, Gemma 4, GLM-4.7, Llama 3.3).',
           '[Continue.dev vs Cline vs Aider: Bester lokaler Coding-Agent in 2026](/de/power-local-llm/continue-dev-vs-cline-vs-aider-local) — angrenzender Harness-Vergleich für Code-formige Arbeit.',
           '[BabyAGI 2026: Vom viralen Skript zum Function-Framework](/de/power-local-llm/babyagi-review-autonomous-agent) — die Geschichte eines der frühesten viralen Projekte für autonome Agenten und warum es keine lokalen Modelle unterstützt.',
@@ -2768,7 +2768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       relatedReading: {
         title: '相关阅读',
         items: [
-          '[连接Ollama到数据库和API：本地代理设置2026](/zh/power-local-llm/local-ai-agents-with-mcp-2026) — 代理工作原理；数据库、文件系统、浏览器Tool的协议层。',
+          '[连接Ollama到数据库和API：本地代理设置2026](/zh/power-local-llm/local-ai-agents-with-mcp) — 代理工作原理；数据库、文件系统、浏览器Tool的协议层。',
           '[2026年最佳本地Tool-calling模型](/zh/power-local-llm/best-local-models-tool-calling-2026) — 模型层；推荐Tool-caller基准测试。',
           '[Continue.dev vs Cline vs Aider：2026年最佳本地代理](/zh/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 代码工作比较。',
           '[BabyAGI 2026：从爆红脚本到函数框架](/zh/power-local-llm/babyagi-review-autonomous-agent) — 最早爆红的自主智能体项目之一的历史，以及它为何不支持本地模型。',
@@ -2977,7 +2977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Cadência de execução:** cada tarefa rodou 3 vezes por stack ao longo da janela de 30 dias, com um prompt novo a cada vez. Resultado avaliado como "completo sem supervisão", "completo com supervisão", "parcial" ou "travado / falhou".',
           '**Métrica de supervisão:** número de aprovações necessárias por tarefa e a proporção de aprovações em que rejeitamos a ação proposta. Uma alta taxa de rejeição sinaliza que o harness está gerando ruído que o humano precisa filtrar.',
           '**Restrição de honestidade:** faixas, não percentuais exatos inventados. "Confiável em todas as 5 tarefas" significa que 13–15 de 15 execuções foram concluídas; "falha em horizontes longos" significa que 3–6 de 15 execuções foram concluídas sem intervenção. Os vereditos são conservadores — quando um stack funcionou, mas apenas com intervenção não trivial, conta como uma falha para fins de tarefa sem supervisão.',
-          'A confiabilidade das chamadas de ferramentas é a camada subjacente a tudo isso. Para a comparação do lado do modelo, veja [Melhores modelos locais para tool calling em 2026](/pt/power-local-llm/best-local-models-tool-calling-2026); a camada de protocolo é coberta em [Conecte o Ollama a bancos de dados e APIs com MCP](/pt/power-local-llm/local-ai-agents-with-mcp-2026).',
+          'A confiabilidade das chamadas de ferramentas é a camada subjacente a tudo isso. Para a comparação do lado do modelo, veja [Melhores modelos locais para tool calling em 2026](/pt/power-local-llm/best-local-models-tool-calling-2026); a camada de protocolo é coberta em [Conecte o Ollama a bancos de dados e APIs com MCP](/pt/power-local-llm/local-ai-agents-with-mcp).',
         ],
       },
       realityTable: {
@@ -3323,7 +3323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Conecte o Ollama a bancos de dados e APIs com MCP: configuração de agente local 2026](/pt/power-local-llm/local-ai-agents-with-mcp-2026) — o que habilita os agentes por baixo dos panos; camada de protocolo para ferramentas de sistema de arquivos, banco de dados, navegador e GitHub.',
+          '[Conecte o Ollama a bancos de dados e APIs com MCP: configuração de agente local 2026](/pt/power-local-llm/local-ai-agents-with-mcp) — o que habilita os agentes por baixo dos panos; camada de protocolo para ferramentas de sistema de arquivos, banco de dados, navegador e GitHub.',
           '[Melhores modelos locais para tool calling em 2026](/pt/power-local-llm/best-local-models-tool-calling-2026) — a camada do modelo; benchmarks cara a cara dos tool-callers recomendados acima (Qwen3-Coder, Gemma 4, GLM-4.7, Llama 3.3).',
           '[Continue.dev vs Cline vs Aider: melhor agente de codificação local em 2026](/pt/power-local-llm/continue-dev-vs-cline-vs-aider-local) — comparação de harnesses adjacentes para trabalho no formato de codificação.',
           '[BabyAGI em 2026: do script viral ao framework de funções](/pt/power-local-llm/babyagi-review-autonomous-agent) — a história de um dos primeiros projetos virais de agente autônomo, e por que ele não suporta modelos locais.',
@@ -3474,7 +3474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**وتيرة التشغيل:** نُفّذت كل مهمة 3 مرات لكل إطار خلال فترة الثلاثين يوماً بموجّه جديد في كل مرة. صُنّفت النتيجة "مكتملة دون إشراف"، أو "مكتملة بإشراف"، أو "جزئية"، أو "متوقفة/فاشلة".',
           '**مقياس الإشراف:** عدد الموافقات المطلوبة لكل مهمة ونسبة الموافقات التي رفضنا فيها الإجراء المقترح. معدل رفض مرتفع يشير لأن الإطار يُولّد ضوضاء يجب على البشر تصفيتها.',
           '**قيد الأمانة:** نطاقات لا نسب مئوية مخترعة. "موثوق في المهام الخمس" يعني 13–15 من 15 تشغيلاً مكتملاً؛ "يفشل في الآفاق الطويلة" يعني 3–6 من 15 تشغيلاً مكتملاً دون تدخل. الأحكام محافظة — حين نجح إطار لكن بتدخل غير بسيط، يُعدّ فاشلاً لأغراض المهام غير الخاضعة للإشراف.',
-          'موثوقية استدعاء الأدوات هي الطبقة الأساسية لكل هذا. للمقارنة من جانب النماذج، راجع [أفضل النماذج المحلية لاستدعاء الأدوات في 2026](/ar/power-local-llm/best-local-models-tool-calling-2026)؛ وطبقة البروتوكول مغطّاة في [ربط Ollama بقواعد البيانات وواجهات برمجة التطبيقات عبر MCP](/ar/power-local-llm/local-ai-agents-with-mcp-2026).',
+          'موثوقية استدعاء الأدوات هي الطبقة الأساسية لكل هذا. للمقارنة من جانب النماذج، راجع [أفضل النماذج المحلية لاستدعاء الأدوات في 2026](/ar/power-local-llm/best-local-models-tool-calling-2026)؛ وطبقة البروتوكول مغطّاة في [ربط Ollama بقواعد البيانات وواجهات برمجة التطبيقات عبر MCP](/ar/power-local-llm/local-ai-agents-with-mcp).',
         ],
       },
       realityTable: {
@@ -3820,7 +3820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[ربط Ollama بقواعد البيانات وواجهات برمجة التطبيقات عبر MCP: إعداد الوكيل المحلي 2026](/ar/power-local-llm/local-ai-agents-with-mcp-2026) — ما يُمكّن الوكلاء تحت السطح؛ طبقة البروتوكول لأدوات نظام الملفات وقاعدة البيانات والمتصفح وGitHub.',
+          '[ربط Ollama بقواعد البيانات وواجهات برمجة التطبيقات عبر MCP: إعداد الوكيل المحلي 2026](/ar/power-local-llm/local-ai-agents-with-mcp) — ما يُمكّن الوكلاء تحت السطح؛ طبقة البروتوكول لأدوات نظام الملفات وقاعدة البيانات والمتصفح وGitHub.',
           '[أفضل النماذج المحلية لاستدعاء الأدوات في 2026](/ar/power-local-llm/best-local-models-tool-calling-2026) — طبقة النموذج؛ معايير مقارنة مباشرة لأدوات الاستدعاء الموصى بها (Qwen3-Coder وGemma 4 وGLM-4.7 وLlama 3.3).',
           '[Continue.dev مقابل Cline مقابل Aider: أفضل وكيل برمجة محلي في 2026](/ar/power-local-llm/continue-dev-vs-cline-vs-aider-local) — مقارنة الأطر المجاورة لعمل ذي طابع برمجي.',
           '[BabyAGI في 2026: من نص برمجي منتشر إلى إطار وظائف](/ar/power-local-llm/babyagi-review-autonomous-agent) — تاريخ أحد أوائل مشاريع العملاء المستقلين المنتشرة بسرعة، ولماذا لا يدعم النماذج المحلية.',
@@ -3971,7 +3971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**실행 빈도:** 각 작업은 30일 기간 동안 스택당 3번 실행되었으며, 매번 새로운 프롬프트를 사용하였습니다. 결과는 "감독 없이 완료", "감독 포함 완료", "부분적", "막힘/실패"로 채점하였습니다.',
           '**감독 지표:** 작업당 필요한 승인 횟수와 제안된 행동을 거부한 승인 비율. 높은 거부율은 하네스가 인간이 필터링해야 하는 노이즈를 생성하고 있음을 나타냅니다.',
           '**정직성 제약:** 정확한 수치가 아닌 범위. "5가지 작업 모두에서 신뢰할 수 있음"은 15번의 실행 중 13–15번이 완료됨을 의미합니다. "긴 계획 범위에서 실패"는 개입 없이 15번 실행 중 3–6번이 완료됨을 의미합니다. 평가는 보수적입니다. 스택이 작동하였지만 사소하지 않은 개입을 통해서만 작동한 경우, 무감독 작업 목적으로는 실패로 계산합니다.',
-          'Tool 호출 신뢰성은 이 모든 것의 기반이 되는 레이어입니다. 모델 측 비교는 [2026년 Tool Calling을 위한 최고의 로컬 모델](/ko/power-local-llm/best-local-models-tool-calling-2026)을 참조하십시오. 프로토콜 레이어는 [MCP로 Ollama를 데이터베이스와 API에 연결하기](/ko/power-local-llm/local-ai-agents-with-mcp-2026)에서 다룹니다.',
+          'Tool 호출 신뢰성은 이 모든 것의 기반이 되는 레이어입니다. 모델 측 비교는 [2026년 Tool Calling을 위한 최고의 로컬 모델](/ko/power-local-llm/best-local-models-tool-calling-2026)을 참조하십시오. 프로토콜 레이어는 [MCP로 Ollama를 데이터베이스와 API에 연결하기](/ko/power-local-llm/local-ai-agents-with-mcp)에서 다룹니다.',
         ],
       },
       realityTable: {
@@ -4317,7 +4317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[MCP로 Ollama를 데이터베이스와 API에 연결하기: 2026년 로컬 에이전트 설정](/ko/power-local-llm/local-ai-agents-with-mcp-2026) — 에이전트를 지원하는 것. 파일 시스템, 데이터베이스, 브라우저, GitHub 도구를 위한 프로토콜 레이어.',
+          '[MCP로 Ollama를 데이터베이스와 API에 연결하기: 2026년 로컬 에이전트 설정](/ko/power-local-llm/local-ai-agents-with-mcp) — 에이전트를 지원하는 것. 파일 시스템, 데이터베이스, 브라우저, GitHub 도구를 위한 프로토콜 레이어.',
           '[2026년 Tool Calling을 위한 최고의 로컬 모델](/ko/power-local-llm/best-local-models-tool-calling-2026) — 모델 레이어. 권장 tool-caller(Qwen3-Coder, Gemma 4, GLM-4.7, Llama 3.3)의 직접 벤치마크 비교.',
           '[Continue.dev vs Cline vs Aider: 2026년 최고의 로컬 코딩 에이전트](/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 코딩 유형 작업을 위한 인접 하네스 비교.',
           '[BabyAGI 2026: 바이럴 스크립트에서 함수 프레임워크로](/ko/power-local-llm/babyagi-review-autonomous-agent) — 가장 초기에 바이럴이 된 자율 에이전트 프로젝트 중 하나의 역사와, 로컬 모델을 지원하지 않는 이유.',

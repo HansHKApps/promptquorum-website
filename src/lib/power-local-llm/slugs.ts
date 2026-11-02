@@ -35,7 +35,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'bodega-one-code-review':                 'bodega-one-code-review-2026',
 
   // Category 4 — Local AI Agents & Tool Use
-  'local-ai-agents-with-mcp-2026':               'local-ai-agents-with-mcp-2026',
+  'local-ai-agents-with-mcp':               'local-ai-agents-with-mcp',
   'best-local-models-tool-calling-2026':         'best-local-models-tool-calling-2026',
   'autonomous-local-agents-actually-work':       'autonomous-local-agents-actually-work',
   'autogpt-local-review':                   'autogpt-local-review-2026',

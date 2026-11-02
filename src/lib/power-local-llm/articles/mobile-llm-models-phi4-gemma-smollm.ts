@@ -328,7 +328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Llama 3.2 3B is the only model in this lineup with broad tool-calling support reliable enough for on-device agent workflows — see [Local AI Agents with MCP 2026](/power-local-llm/local-ai-agents-with-mcp-2026) for the agent layer. Phi-4 Mini and SmolLM 2 can technically tool-call but Llama 3.2 3B is the only one production-ready in 2026.',
+            text: 'Llama 3.2 3B is the only model in this lineup with broad tool-calling support reliable enough for on-device agent workflows — see [Local AI Agents with MCP 2026](/power-local-llm/local-ai-agents-with-mcp) for the agent layer. Phi-4 Mini and SmolLM 2 can technically tool-call but Llama 3.2 3B is the only one production-ready in 2026.',
           },
         ],
       },
@@ -948,7 +948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Llama 3.2 3B es el único modelo de este grupo con soporte de tool calling lo suficientemente fiable para flujos de trabajo de agentes en el dispositivo — consulta [Agentes de IA locales con MCP 2026](/es/power-local-llm/local-ai-agents-with-mcp-2026). Phi-4 Mini y SmolLM 2 técnicamente pueden hacer tool calling, pero Llama 3.2 3B es el único listo para producción en 2026.',
+            text: 'Llama 3.2 3B es el único modelo de este grupo con soporte de tool calling lo suficientemente fiable para flujos de trabajo de agentes en el dispositivo — consulta [Agentes de IA locales con MCP 2026](/es/power-local-llm/local-ai-agents-with-mcp). Phi-4 Mini y SmolLM 2 técnicamente pueden hacer tool calling, pero Llama 3.2 3B es el único listo para producción en 2026.',
           },
         ],
       },
@@ -1581,7 +1581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'O Llama 3.2 3B é o único modelo deste grupo com suporte de tool calling confiável o suficiente para fluxos de trabalho de agentes no dispositivo — veja [Agentes de IA locais com MCP 2026](/pt/power-local-llm/local-ai-agents-with-mcp-2026). O Phi-4 Mini e o SmolLM 2 podem tecnicamente fazer tool calling, mas o Llama 3.2 3B é o único pronto para produção em 2026.',
+            text: 'O Llama 3.2 3B é o único modelo deste grupo com suporte de tool calling confiável o suficiente para fluxos de trabalho de agentes no dispositivo — veja [Agentes de IA locais com MCP 2026](/pt/power-local-llm/local-ai-agents-with-mcp). O Phi-4 Mini e o SmolLM 2 podem tecnicamente fazer tool calling, mas o Llama 3.2 3B é o único pronto para produção em 2026.',
           },
         ],
       },
@@ -2215,7 +2215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Llama 3.2 3B ist das einzige Modell in diesem Vergleich mit breiter Tool-Calling-Unterstützung, die für On-Device-Agent-Workflows zuverlässig genug ist – weitere Informationen unter [Lokale KI-Agenten mit MCP 2026](/de/power-local-llm/local-ai-agents-with-mcp-2026). Phi-4 Mini und SmolLM 2 können technisch Tool Calls ausführen, aber Llama 3.2 3B ist 2026 das einzige produktionsreife Modell dafür.',
+            text: 'Llama 3.2 3B ist das einzige Modell in diesem Vergleich mit breiter Tool-Calling-Unterstützung, die für On-Device-Agent-Workflows zuverlässig genug ist – weitere Informationen unter [Lokale KI-Agenten mit MCP 2026](/de/power-local-llm/local-ai-agents-with-mcp). Phi-4 Mini und SmolLM 2 können technisch Tool Calls ausführen, aber Llama 3.2 3B ist 2026 das einzige produktionsreife Modell dafür.',
           },
         ],
       },
@@ -2843,7 +2843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Llama 3.2 3B est le seul modèle de cette sélection avec un support du tool calling suffisamment fiable pour les workflows d\'agents on-device — voir [Agents IA locaux avec MCP 2026](/fr/power-local-llm/local-ai-agents-with-mcp-2026). Phi-4 Mini et SmolLM 2 peuvent techniquement faire du tool calling mais Llama 3.2 3B est le seul prêt pour la production en 2026.',
+            text: 'Llama 3.2 3B est le seul modèle de cette sélection avec un support du tool calling suffisamment fiable pour les workflows d\'agents on-device — voir [Agents IA locaux avec MCP 2026](/fr/power-local-llm/local-ai-agents-with-mcp). Phi-4 Mini et SmolLM 2 peuvent techniquement faire du tool calling mais Llama 3.2 3B est le seul prêt pour la production en 2026.',
           },
         ],
       },
@@ -3463,7 +3463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Llama 3.2 3Bはこのラインナップで唯一、オンデバイスエージェントワークフローに十分信頼性の高いtool callingをサポートするモデルです — [ローカルAIエージェントとMCP 2026](/ja/power-local-llm/local-ai-agents-with-mcp-2026)を参照してください。Phi-4 MiniとSmolLM 2は技術的にtool callが可能ですが、Llama 3.2 3Bのみが2026年で本番運用可能です。',
+            text: 'Llama 3.2 3Bはこのラインナップで唯一、オンデバイスエージェントワークフローに十分信頼性の高いtool callingをサポートするモデルです — [ローカルAIエージェントとMCP 2026](/ja/power-local-llm/local-ai-agents-with-mcp)を参照してください。Phi-4 MiniとSmolLM 2は技術的にtool callが可能ですが、Llama 3.2 3Bのみが2026年で本番運用可能です。',
           },
         ],
       },
@@ -4083,7 +4083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Llama 3.2 3B是此列表中唯一tool calling支持足够可靠，能用于端侧Agent工作流的模型——参考[本地AI Agent与MCP 2026](/zh/power-local-llm/local-ai-agents-with-mcp-2026)。Phi-4 Mini和SmolLM 2在技术上可以进行tool call，但Llama 3.2 3B是2026年唯一达到生产可用水平的。',
+            text: 'Llama 3.2 3B是此列表中唯一tool calling支持足够可靠，能用于端侧Agent工作流的模型——参考[本地AI Agent与MCP 2026](/zh/power-local-llm/local-ai-agents-with-mcp)。Phi-4 Mini和SmolLM 2在技术上可以进行tool call，但Llama 3.2 3B是2026年唯一达到生产可用水平的。',
           },
         ],
       },

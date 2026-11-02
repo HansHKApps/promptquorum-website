@@ -48,6 +48,17 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Year dropped from the slug (2026-11-02): local-ai-agents-with-mcp-2026 -> local-ai-agents-with-mcp (all 9 locales).
+      {
+        source: '/power-local-llm/local-ai-agents-with-mcp-2026',
+        destination: '/power-local-llm/local-ai-agents-with-mcp',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/local-ai-agents-with-mcp-2026',
+        destination: '/:lang/power-local-llm/local-ai-agents-with-mcp',
+        permanent: true,
+      },
       // Local AI workstation pages moved from Software (/power-local-llm) to Hardware (/local-llms) on 2026-11-01.
       {
         source: '/power-local-llm/:slug(local-ai-workstations-strix-halo-vs-dgx-spark|nvidia-dgx-spark-local-ai-workstation|amd-ryzen-ai-halo-local-ai-workstation|framework-desktop-local-ai-workstation|hp-z2-mini-g1a-local-ai-workstation|gmktec-evo-x2-local-ai-workstation|minisforum-ms-s1-max-local-ai-workstation)',

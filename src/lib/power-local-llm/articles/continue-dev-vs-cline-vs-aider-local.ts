@@ -497,7 +497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Replace GitHub Copilot With a Local LLM](/power-local-llm/replace-github-copilot-with-local-llm) — broader replacement context, including cost and privacy math.',
           '[Best Local Coding Models in 2026](/power-local-llm/best-local-coding-models-2026) — the model side of the equation: Qwen3-Coder vs DeepSeek vs Codestral on real benchmarks.',
-          '[Local AI Agents With MCP in 2026](/power-local-llm/local-ai-agents-with-mcp-2026) — for users who want extended tool calling beyond the harnesses above.',
+          '[Local AI Agents With MCP in 2026](/power-local-llm/local-ai-agents-with-mcp) — for users who want extended tool calling beyond the harnesses above.',
           '[Best Local Models for Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026) — adjacent technical depth on tool-call reliability.',
           '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm) — the inference engine layer beneath all three harnesses.',
           '[Bodega One Code Review (2026)](/power-local-llm/bodega-one-code-review) — a standalone BYOLLM IDE that bundles editor, chat, and agent instead of extending VS Code like the tools above.',
@@ -1001,7 +1001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[GitHub Copilot durch einen lokalen LLM ersetzen](/de/power-local-llm/replace-github-copilot-with-local-llm) — breiterer Ersatz-Kontext, einschließlich Kosten und Privacy-Mathematik.',
           '[Best Local Coding Models in 2026](/de/power-local-llm/best-local-coding-models-2026) — die Modell-Seite der Gleichung: Qwen3-Coder vs DeepSeek vs Codestral auf realen Benchmarks.',
-          '[Local AI Agents With MCP in 2026](/de/power-local-llm/local-ai-agents-with-mcp-2026) — für Nutzer, die erweiterte Tool-Calling jenseits der obigen Harnesses möchten.',
+          '[Local AI Agents With MCP in 2026](/de/power-local-llm/local-ai-agents-with-mcp) — für Nutzer, die erweiterte Tool-Calling jenseits der obigen Harnesses möchten.',
           '[Best Local Models for Tool Calling in 2026](/de/power-local-llm/best-local-models-tool-calling-2026) — angrenzende technische Tiefe auf Tool-Call-Zuverlässigkeit.',
           '[llama.cpp vs Ollama vs vLLM](/de/local-llms/llamacpp-vs-ollama-vs-vllm) — die Inference-Engine-Schicht unter allen drei Harnesses.',
           '[Power Local LLM Hub](/power-local-llm) — vollständige Anleitung-Bibliothek.',
@@ -1504,7 +1504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Remplacer GitHub Copilot avec un LLM local](/fr/power-local-llm/replace-github-copilot-with-local-llm) — contexte de remplacement plus large, y compris le calcul des coûts et de la confidentialité.',
           '[Meilleurs modèles de codage locaux 2026](/fr/power-local-llm/best-local-coding-models-2026) — le côté modèle de l\'équation : Qwen3-Coder vs DeepSeek vs Codestral sur les benchmarks réels.',
-          '[Agents IA locaux avec MCP en 2026](/fr/power-local-llm/local-ai-agents-with-mcp-2026) — pour les utilisateurs qui veulent des appels d\'outils étendus au-delà des outils ci-dessus.',
+          '[Agents IA locaux avec MCP en 2026](/fr/power-local-llm/local-ai-agents-with-mcp) — pour les utilisateurs qui veulent des appels d\'outils étendus au-delà des outils ci-dessus.',
           '[Meilleurs modèles locaux pour les appels d\'outils 2026](/fr/power-local-llm/best-local-models-tool-calling-2026) — profondeur technique adjacente sur la fiabilité des appels d\'outils.',
           '[llama.cpp vs Ollama vs vLLM](/fr/local-llms/llamacpp-vs-ollama-vs-vllm) — la couche du moteur d\'inférence sous les trois outils.',
           '[Hub Power Local LLM](/power-local-llm) — bibliothèque de guide complète.',
@@ -2006,7 +2006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[GitHub Copilot をローカル LLM に置き換える](/ja/power-local-llm/replace-github-copilot-with-local-llm) — より広い交換コンテキスト、コストとプライバシー数学を含む。',
           '[2026 年ベストローカルコーディングモデル](/ja/power-local-llm/best-local-coding-models-2026) — 方程式のモデル側：実際のベンチマーク上の Qwen3-Coder vs DeepSeek vs Codestral。',
-          '[2026 年 MCP を備えたローカル AI エージェント](/ja/power-local-llm/local-ai-agents-with-mcp-2026) — 上記のツールを超えた拡張ツール呼び出しを希望するユーザー向け。',
+          '[2026 年 MCP を備えたローカル AI エージェント](/ja/power-local-llm/local-ai-agents-with-mcp) — 上記のツールを超えた拡張ツール呼び出しを希望するユーザー向け。',
           '[2026 年ツール呼び出しのベストローカルモデル](/ja/power-local-llm/best-local-models-tool-calling-2026) — ツール呼び出し信頼性に関する隣接する技術的深さ。',
           '[llama.cpp vs Ollama vs vLLM](/ja/local-llms/llamacpp-vs-ollama-vs-vllm) — 3 つのツール下の推論エンジン層。',
           '[Power Local LLM ハブ](/power-local-llm) — 完全なガイドライブラリ。',
@@ -2508,7 +2508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[使用本地 LLM 替换 GitHub Copilot](/zh/power-local-llm/replace-github-copilot-with-local-llm) — 更广泛的替换背景，包括成本和隐私数学。',
           '[2026 年最佳本地编码模型](/zh/power-local-llm/best-local-coding-models-2026) — 方程式的模型端：实际基准上的 Qwen3-Coder vs DeepSeek vs Codestral。',
-          '[2026 年 MCP 的本地 AI 代理](/zh/power-local-llm/local-ai-agents-with-mcp-2026) — 对于想要上述工具之外的扩展工具调用的用户。',
+          '[2026 年 MCP 的本地 AI 代理](/zh/power-local-llm/local-ai-agents-with-mcp) — 对于想要上述工具之外的扩展工具调用的用户。',
           '[2026 年工具调用的最佳本地模型](/zh/power-local-llm/best-local-models-tool-calling-2026) — 工具调用可靠性的相邻技术深度。',
           '[llama.cpp vs Ollama vs vLLM](/zh/local-llms/llamacpp-vs-ollama-vs-vllm) — 三个工具下的推论引擎层。',
           '[Power Local LLM Hub](/power-local-llm) — 完整的指南库。',
@@ -3011,7 +3011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Reemplazar GitHub Copilot con un LLM local](/es/power-local-llm/replace-github-copilot-with-local-llm) — contexto más amplio de sustitución, incluidos los cálculos de coste y privacidad.',
           '[Mejores modelos de código local en 2026](/es/power-local-llm/best-local-coding-models-2026) — el lado del modelo en la ecuación: Qwen3-Coder vs DeepSeek vs Codestral en benchmarks reales.',
-          '[Agentes de IA local con MCP en 2026](/es/power-local-llm/local-ai-agents-with-mcp-2026) — para usuarios que quieren llamadas a herramientas extendidas más allá de las herramientas anteriores.',
+          '[Agentes de IA local con MCP en 2026](/es/power-local-llm/local-ai-agents-with-mcp) — para usuarios que quieren llamadas a herramientas extendidas más allá de las herramientas anteriores.',
           '[Mejores modelos locales para llamadas a herramientas en 2026](/es/power-local-llm/best-local-models-tool-calling-2026) — profundidad técnica adyacente sobre fiabilidad de llamadas a herramientas.',
           '[llama.cpp vs Ollama vs vLLM](/es/local-llms/llamacpp-vs-ollama-vs-vllm) — la capa del motor de inferencia bajo las tres herramientas.',
           '[Hub Power Local LLM](/power-local-llm) — biblioteca completa de guías.',
@@ -3527,7 +3527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Substituir o GitHub Copilot por um LLM local](/pt/power-local-llm/replace-github-copilot-with-local-llm) — contexto mais amplo de substituição, incluindo os cálculos de custo e privacidade.',
           '[Melhores modelos de código local em 2026](/pt/power-local-llm/best-local-coding-models-2026) — o lado do modelo na equação: Qwen3-Coder vs DeepSeek vs Codestral em benchmarks reais.',
-          '[Agentes de IA local com MCP em 2026](/pt/power-local-llm/local-ai-agents-with-mcp-2026) — para usuários que querem chamadas de ferramentas estendidas além das ferramentas acima.',
+          '[Agentes de IA local com MCP em 2026](/pt/power-local-llm/local-ai-agents-with-mcp) — para usuários que querem chamadas de ferramentas estendidas além das ferramentas acima.',
           '[Melhores modelos locais para chamadas de ferramentas em 2026](/pt/power-local-llm/best-local-models-tool-calling-2026) — profundidade técnica adjacente sobre confiabilidade de chamadas de ferramentas.',
           '[llama.cpp vs Ollama vs vLLM](/pt/local-llms/llamacpp-vs-ollama-vs-vllm) — a camada do motor de inferência sob as três ferramentas.',
           '[Hub Power Local LLM](/power-local-llm) — biblioteca completa de guias.',
@@ -4043,7 +4043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[استبدال GitHub Copilot بنموذج لغوي محلي](/ar/power-local-llm/replace-github-copilot-with-local-llm) — سياق أوسع للاستبدال، بما في ذلك حسابات التكلفة والخصوصية.',
           '[أفضل نماذج البرمجة المحلية في 2026](/ar/power-local-llm/best-local-coding-models-2026) — الجانب النموذجي في المعادلة: Qwen3-Coder مقابل DeepSeek مقابل Codestral في المعايير القياسية الحقيقية.',
-          '[وكلاء الذكاء الاصطناعي المحلي مع MCP في 2026](/ar/power-local-llm/local-ai-agents-with-mcp-2026) — للمستخدمين الذين يريدون استدعاءات أدوات موسّعة تتجاوز الأدوات السابقة.',
+          '[وكلاء الذكاء الاصطناعي المحلي مع MCP في 2026](/ar/power-local-llm/local-ai-agents-with-mcp) — للمستخدمين الذين يريدون استدعاءات أدوات موسّعة تتجاوز الأدوات السابقة.',
           '[أفضل النماذج المحلية لاستدعاءات الأدوات في 2026](/ar/power-local-llm/best-local-models-tool-calling-2026) — عمق تقني مجاور حول موثوقية استدعاءات الأدوات.',
           '[llama.cpp مقابل Ollama مقابل vLLM](/ar/local-llms/llamacpp-vs-ollama-vs-vllm) — طبقة محرك الاستدلال تحت الأدوات الثلاثة.',
           '[مركز Power Local LLM](/power-local-llm) — المكتبة الكاملة من الأدلة.',
@@ -4559,7 +4559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[GitHub Copilot을 로컬 LLM으로 교체하기](/ko/power-local-llm/replace-github-copilot-with-local-llm) — 비용 및 개인정보 보호 계산을 포함한 더 넓은 교체 컨텍스트.',
           '[2026년 최고의 로컬 코딩 모델](/ko/power-local-llm/best-local-coding-models-2026) — 방정식의 모델 측: 실제 벤치마크에서 Qwen3-Coder vs DeepSeek vs Codestral.',
-          '[2026년 MCP를 사용한 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp-2026) — 이러한 도구를 넘어서 확장된 도구 호출을 원하는 사용자를 위해.',
+          '[2026년 MCP를 사용한 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp) — 이러한 도구를 넘어서 확장된 도구 호출을 원하는 사용자를 위해.',
           '[2026년 도구 호출을 위한 최고의 로컬 모델](/ko/power-local-llm/best-local-models-tool-calling-2026) — 도구 호출 신뢰성에 관한 인접 기술적 심층 분석.',
           '[llama.cpp vs Ollama vs vLLM](/ko/local-llms/llamacpp-vs-ollama-vs-vllm) — 세 도구 아래의 추론 엔진 계층.',
           '[Power Local LLM 허브](/power-local-llm) — 전체 가이드 라이브러리.',

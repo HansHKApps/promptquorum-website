@@ -11,6 +11,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-agents-with-mcp",
+        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
+        "url": "/power-local-llm/local-ai-agents-with-mcp",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "hillnote-review",
         "title": "Hillnote Review: Local-First Markdown Notes With On-Device AI",
         "url": "/power-local-llm/hillnote-review",
@@ -70,14 +78,6 @@
         "slug": "agnai-review",
         "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
         "url": "/power-local-llm/agnai-review",
-        "dateModified": "2026-10-30",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-10-30",
         "tier": "about"
       }
@@ -860,6 +860,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-agents-with-mcp",
+        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
+        "url": "/power-local-llm/local-ai-agents-with-mcp",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
@@ -921,14 +929,6 @@
         "title": "Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)",
         "url": "/power-local-llm/local-llm-prompts-for-fiction-writers",
         "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "lm-mini-review",
-        "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
-        "url": "/power-local-llm/lm-mini-review",
-        "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],
@@ -2686,6 +2686,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-agents-with-mcp",
+        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
+        "url": "/power-local-llm/local-ai-agents-with-mcp",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
@@ -2748,14 +2756,6 @@
         "url": "/power-local-llm/local-llm-code-development-compared",
         "dateModified": "2026-09-21",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "pearai-review",
-        "title": "PearAI Review: The Free VS Code Fork With a Rocky Start",
-        "url": "/power-local-llm/pearai-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
       }
     ],
     "totalCount": 44,
@@ -2769,6 +2769,14 @@
         "title": "Cline Review: The Open-Source Agent That Grew From Claude Dev",
         "url": "/power-local-llm/cline-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-agents-with-mcp",
+        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
+        "url": "/power-local-llm/local-ai-agents-with-mcp",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -2833,14 +2841,6 @@
         "title": "Bodega One Code Review: A Local-First BYOLLM Coding IDE",
         "url": "/power-local-llm/bodega-one-code-review",
         "dateModified": "2026-09-03",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-models-tool-calling-2026",
-        "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
-        "url": "/power-local-llm/best-local-models-tool-calling-2026",
-        "dateModified": "2026-09-01",
         "tier": "about"
       }
     ],
@@ -8081,6 +8081,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-agents-with-mcp",
+        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
+        "url": "/power-local-llm/local-ai-agents-with-mcp",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "agnai-review",
         "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
         "url": "/power-local-llm/agnai-review",
@@ -8116,14 +8124,6 @@
         "slug": "local-ai-agents-business-workflows-eu-compliance",
         "title": "Local AI Agents for Business Workflows: EU Compliance Guide (2026)",
         "url": "/power-local-llm/local-ai-agents-business-workflows-eu-compliance",
-        "dateModified": "2026-08-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-agents-with-mcp-2026",
-        "title": "Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026",
-        "url": "/power-local-llm/local-ai-agents-with-mcp-2026",
         "dateModified": "2026-08-27",
         "tier": "about"
       },
@@ -11895,6 +11895,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-agents-with-mcp",
+        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
+        "url": "/power-local-llm/local-ai-agents-with-mcp",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "evershelf-review",
         "title": "EverShelf Review: Self-Hosted Pantry Manager with Optional AI",
         "url": "/power-local-llm/evershelf-review",
@@ -11954,14 +11962,6 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-30",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "cloak-local-ai-review",
-        "title": "Cloak: Local AI Review: Offline AI Chat for iPhone and Mac",
-        "url": "/power-local-llm/cloak-local-ai-review",
         "dateModified": "2026-10-30",
         "tier": "mentioned"
       }

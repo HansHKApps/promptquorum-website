@@ -132,7 +132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Distinction from a chat assistant.** A chat assistant answers questions; an agent takes actions. ChatGPT-style "summarise this email" returns text; an agent reads the inbox, classifies messages, drafts replies, and queues them for approval. Different surface, different risk profile.',
           '**Why "local" matters specifically for business workflows:** data residency is provable (the bytes never leave your network), the audit trail is end-to-end (the same log captures the model invocation, the tool call, and the result), and there is no third-party processor in the chain. The compliance argument writes itself when the architecture itself eliminates entire risk categories.',
           '**Where local agents fit in the org:** wherever a workflow handles personal data (GDPR), employee data (Works Council), confidential third-party data (NDAs, §203 StGB), or regulated business data (financial, health, legal). Local agents do not improve workflows that touch only public data — there, cloud agents are usually faster and cheaper.',
-          'For the protocol layer that makes most of this practical, see [Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026](/power-local-llm/local-ai-agents-with-mcp-2026).',
+          'For the protocol layer that makes most of this practical, see [Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026](/power-local-llm/local-ai-agents-with-mcp).',
         ],
       },
       workflowTemplates: {
@@ -354,7 +354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Local RAG for Private Business Data](/power-local-llm/local-rag-for-private-business-data) — the GDPR-compliant data-side architecture that feeds the same audit pipeline.',
-          '[Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026](/power-local-llm/local-ai-agents-with-mcp-2026) — the protocol layer for filesystem, database, browser, and GitHub tools.',
+          '[Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026](/power-local-llm/local-ai-agents-with-mcp) — the protocol layer for filesystem, database, browser, and GitHub tools.',
           '[Local AI Agents in 2026: What Actually Works (And What Still Fails)](/power-local-llm/autonomous-local-agents-actually-work) — honest reliability comparison across the four agent runtimes recommended above.',
           '[Replace Zapier With Local AI Agents](/power-local-llm/replace-zapier-with-local-ai-agents) — n8n + Ollama workflow templates for the deterministic-shape end of the agent spectrum.',
           '[Best Local Models for Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026) — head-to-head benchmarks for the models recommended in this guide.',
@@ -489,7 +489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Abgrenzung zu Chat-Assistenten.** Ein Chat-Assistent beantwortet Fragen; ein Agent führt Aktionen aus. ChatGPT-artige "fasse diese E-Mail zusammen" gibt Text zurück; ein Agent liest den Posteingang, klassifiziert Nachrichten, entwirft Antworten und stellt sie zur Freigabe in eine Warteschlange. Andere Oberfläche, anderes Risikoprofil.',
           '**Warum "lokal" speziell für Geschäftsworkflows zählt:** Datenresidenz ist nachweisbar (die Bytes verlassen Ihr Netzwerk nie), der Audit-Trail ist Ende-zu-Ende (dasselbe Log erfasst die Modellausführung, den Tool-Aufruf und das Ergebnis), und es gibt keinen Drittauftragsverarbeiter in der Kette. Das Compliance-Argument schreibt sich von selbst, wenn die Architektur ganze Risikokategorien eliminiert.',
           '**Wo lokale Agenten in der Organisation hineinpassen:** überall dort, wo ein Workflow personenbezogene Daten (DSGVO), Mitarbeiterdaten (Betriebsrat), vertrauliche Drittdaten (NDAs, §203 StGB) oder regulierte Geschäftsdaten (Finanzwesen, Gesundheit, Recht) verarbeitet. Lokale Agenten verbessern keine Workflows, die nur öffentliche Daten berühren — dort sind Cloud-Agenten meist schneller und billiger.',
-          'Für die Protokollebene, die das praktisch macht, siehe [Ollama mit Datenbanken und APIs über MCP verbinden: Lokale Agent-Einrichtung 2026](/de/power-local-llm/local-ai-agents-with-mcp-2026).',
+          'Für die Protokollebene, die das praktisch macht, siehe [Ollama mit Datenbanken und APIs über MCP verbinden: Lokale Agent-Einrichtung 2026](/de/power-local-llm/local-ai-agents-with-mcp).',
         ],
       },
       workflowTemplates: {
@@ -669,7 +669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Lektüre',
         items: [
           '[Lokales RAG für vertrauliche Geschäftsdaten](/de/power-local-llm/local-rag-for-private-business-data) — die DSGVO-konforme Datenseiten-Architektur, die dieselbe Audit-Pipeline speist.',
-          '[Ollama mit Datenbanken und APIs über MCP verbinden: Lokale Agent-Einrichtung 2026](/de/power-local-llm/local-ai-agents-with-mcp-2026) — die Protokollebene für Dateisystem-, Datenbank-, Browser- und GitHub-Tools.',
+          '[Ollama mit Datenbanken und APIs über MCP verbinden: Lokale Agent-Einrichtung 2026](/de/power-local-llm/local-ai-agents-with-mcp) — die Protokollebene für Dateisystem-, Datenbank-, Browser- und GitHub-Tools.',
           '[Lokale KI-Agenten 2026: Was tatsächlich funktioniert (und was noch scheitert)](/de/power-local-llm/autonomous-local-agents-actually-work) — ehrlicher Zuverlässigkeitsvergleich über die vier oben empfohlenen Agent-Runtimes.',
           '[Zapier durch lokale KI-Agenten ersetzen](/de/power-local-llm/replace-zapier-with-local-ai-agents) — n8n + Ollama Workflow-Vorlagen für das deterministisch geformte Ende des Agent-Spektrums.',
           '[Beste lokale Modelle für Tool-Calling 2026](/de/power-local-llm/best-local-models-tool-calling-2026) — Head-to-Head-Benchmarks für die in diesem Leitfaden empfohlenen Modelle.',
@@ -804,7 +804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Distinction avec un assistant conversationnel.** Un assistant répond aux questions ; un agent agit. Un "résume cet e-mail" façon ChatGPT renvoie du texte ; un agent lit la boîte, classifie les messages, rédige des réponses et les met en file d\'attente pour validation. Surface différente, profil de risque différent.',
           '**Pourquoi le local compte spécifiquement pour les workflows métier :** la résidence des données est démontrable (les octets ne quittent jamais le réseau), la traçabilité d\'audit est de bout en bout (le même journal capture l\'invocation du modèle, l\'appel d\'outil et le résultat), et il n\'y a aucun sous-traitant tiers dans la chaîne. L\'argument de conformité s\'écrit de lui-même quand l\'architecture élimine des catégories entières de risque.',
           '**Où les agents locaux trouvent leur place dans l\'organisation :** partout où un workflow traite des données personnelles (RGPD), des données salariales (comité d\'entreprise), des données tierces confidentielles (NDA, secret professionnel), ou des données métier régulées (finance, santé, juridique). Les agents locaux n\'améliorent pas les workflows ne touchant que des données publiques — là, les agents cloud sont généralement plus rapides et moins coûteux.',
-          'Pour la couche protocolaire qui rend tout cela pratique, voir [Connecter Ollama aux bases de données et APIs avec MCP : configuration d\'agent local 2026](/fr/power-local-llm/local-ai-agents-with-mcp-2026).',
+          'Pour la couche protocolaire qui rend tout cela pratique, voir [Connecter Ollama aux bases de données et APIs avec MCP : configuration d\'agent local 2026](/fr/power-local-llm/local-ai-agents-with-mcp).',
         ],
       },
       workflowTemplates: {
@@ -976,7 +976,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Pour aller plus loin',
         items: [
           '[RAG local pour données métier confidentielles](/fr/power-local-llm/local-rag-for-private-business-data) — l\'architecture côté données conforme RGPD qui alimente la même pipeline d\'audit.',
-          '[Connecter Ollama aux bases de données et APIs avec MCP : configuration d\'agent local 2026](/fr/power-local-llm/local-ai-agents-with-mcp-2026) — la couche protocolaire pour les outils système de fichiers, base de données, navigateur et GitHub.',
+          '[Connecter Ollama aux bases de données et APIs avec MCP : configuration d\'agent local 2026](/fr/power-local-llm/local-ai-agents-with-mcp) — la couche protocolaire pour les outils système de fichiers, base de données, navigateur et GitHub.',
           '[Agents IA locaux 2026 : ce qui fonctionne réellement (et ce qui échoue encore)](/fr/power-local-llm/autonomous-local-agents-actually-work) — comparaison honnête de fiabilité entre les quatre runtimes recommandés ci-dessus.',
           '[Remplacer Zapier par des agents IA locaux](/fr/power-local-llm/replace-zapier-with-local-ai-agents) — modèles de workflows n8n + Ollama pour le bout déterministe du spectre des agents.',
           '[Meilleurs modèles locaux pour le tool-calling 2026](/fr/power-local-llm/best-local-models-tool-calling-2026) — benchmarks tête-à-tête pour les modèles recommandés dans ce guide.',
@@ -1111,7 +1111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**チャットアシスタントとの区別。** チャットアシスタントは質問に答え、エージェントはアクションを実行。ChatGPT形式の「このメールを要約して」はテキストを返す；エージェントは受信箱を読み、メッセージを分類し、返信ドラフトを作成し、承認待ちにキューイング。表面が異なり、リスクプロファイルも異なる。',
           '**「ローカル」が業務ワークフローで特に重要な理由：** データレジデンシーが立証可能（バイトはネットワークを出ない）、監査トレイルがエンドツーエンド（同一ログがモデル呼び出し・ツール呼び出し・結果を記録）、チェーン内に第三者サブプロセッサーが存在しない。アーキテクチャ自体がリスクカテゴリーを丸ごと除去するため、コンプライアンス論理は自明となる。',
           '**ローカルエージェントが組織内で適合する場所：** 個人情報（GDPR）、従業員データ（Betriebsrat）、第三者機密データ（NDA、§203 StGB）、または規制対象業務データ（金融、医療、法務）を扱うワークフローすべて。公開データのみを扱うワークフローでは、ローカルエージェントは改善をもたらしません——その場合、クラウドエージェントが通常より高速で安価。',
-          '実用化を可能にするプロトコル層については [MCPでOllamaをデータベース・APIに接続：ローカルエージェントセットアップ 2026](/ja/power-local-llm/local-ai-agents-with-mcp-2026) を参照。',
+          '実用化を可能にするプロトコル層については [MCPでOllamaをデータベース・APIに接続：ローカルエージェントセットアップ 2026](/ja/power-local-llm/local-ai-agents-with-mcp) を参照。',
         ],
       },
       workflowTemplates: {
@@ -1283,7 +1283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[プライベート業務データ向けローカルRAG](/ja/power-local-llm/local-rag-for-private-business-data) — 同じ監査パイプラインを供給するGDPR準拠データ側アーキテクチャ。',
-          '[MCPでOllamaをデータベース・APIに接続：ローカルエージェントセットアップ2026](/ja/power-local-llm/local-ai-agents-with-mcp-2026) — ファイルシステム、データベース、ブラウザ、GitHubツール用のプロトコル層。',
+          '[MCPでOllamaをデータベース・APIに接続：ローカルエージェントセットアップ2026](/ja/power-local-llm/local-ai-agents-with-mcp) — ファイルシステム、データベース、ブラウザ、GitHubツール用のプロトコル層。',
           '[ローカルAIエージェント2026：実際に動くもの（そしてまだ失敗するもの）](/ja/power-local-llm/autonomous-local-agents-actually-work) — 上記推奨4ランタイム横断の正直な信頼性比較。',
           '[ZapierをローカルAIエージェントで置き換える](/ja/power-local-llm/replace-zapier-with-local-ai-agents) — エージェントスペクトルの決定論的形側のn8n + Ollamaワークフローテンプレート。',
           '[Tool-Calling向け2026年最高のローカルモデル](/ja/power-local-llm/best-local-models-tool-calling-2026) — 本ガイド推奨モデルの対面ベンチマーク。',
@@ -1418,7 +1418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**与聊天助手的区别。** 聊天助手回答问题；智能体执行动作。ChatGPT式的"总结这封邮件"返回文本；智能体读取收件箱、分类邮件、起草回复并排队等待批准。表面不同，风险画像不同。',
           '**为什么"本地"对业务工作流尤其重要：** 数据驻留可证明（字节永不离开网络）、审计跟踪端到端（同一日志记录模型调用、工具调用和结果）、链中无第三方处理者。当架构本身消除了整类风险时，合规论证不言自明。',
           '**本地智能体在组织中的位置：** 任何处理个人数据（GDPR）、员工数据（员工代表会）、第三方机密数据（保密协议、§203 StGB）或受监管业务数据（金融、医疗、法律）的工作流。本地智能体不会改善仅涉及公开数据的工作流——那里云智能体通常更快更便宜。',
-          '使其实际可行的协议层，请参阅[通过MCP将Ollama连接到数据库和API：本地智能体设置2026](/zh/power-local-llm/local-ai-agents-with-mcp-2026)。',
+          '使其实际可行的协议层，请参阅[通过MCP将Ollama连接到数据库和API：本地智能体设置2026](/zh/power-local-llm/local-ai-agents-with-mcp)。',
         ],
       },
       workflowTemplates: {
@@ -1590,7 +1590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[本地RAG用于私密业务数据](/zh/power-local-llm/local-rag-for-private-business-data) — 供给同一审计管道的GDPR合规数据侧架构。',
-          '[通过MCP将Ollama连接到数据库和API：本地智能体设置2026](/zh/power-local-llm/local-ai-agents-with-mcp-2026) — 文件系统、数据库、浏览器和GitHub工具的协议层。',
+          '[通过MCP将Ollama连接到数据库和API：本地智能体设置2026](/zh/power-local-llm/local-ai-agents-with-mcp) — 文件系统、数据库、浏览器和GitHub工具的协议层。',
           '[2026本地AI智能体：实际有效的（与仍会失败的）](/zh/power-local-llm/autonomous-local-agents-actually-work) — 上述4个推荐运行时的诚实可靠性对比。',
           '[用本地AI智能体替代Zapier](/zh/power-local-llm/replace-zapier-with-local-ai-agents) — 智能体光谱确定性形态端的n8n + Ollama工作流模板。',
           '[2026年最佳本地工具调用模型](/zh/power-local-llm/best-local-models-tool-calling-2026) — 本指南推荐模型的对比基准。',
@@ -1736,7 +1736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Distinción frente a un asistente de chat.** Un asistente de chat responde preguntas; un agente ejecuta acciones. Un "resume este correo" al estilo ChatGPT devuelve texto; un agente lee la bandeja de entrada, clasifica mensajes, redacta respuestas y las encola para aprobación. Superficie distinta, perfil de riesgo distinto.',
           '**Por qué "local" importa específicamente para los flujos de trabajo empresariales:** la residencia de datos es demostrable (los bytes nunca salen de tu red), el rastro de auditoría es de extremo a extremo (el mismo registro captura la invocación del modelo, la llamada a la herramienta y el resultado), y no hay ningún subencargado tercero en la cadena. El argumento de cumplimiento se escribe solo cuando la arquitectura elimina categorías enteras de riesgo.',
           '**Dónde encajan los agentes locales en la organización:** en cualquier flujo de trabajo que maneje datos personales (GDPR), datos de empleados (Consejo de Empresa), datos confidenciales de terceros (NDA, §203 StGB) o datos empresariales regulados (financiero, salud, legal). Los agentes locales no mejoran flujos de trabajo que solo tocan datos públicos; ahí los agentes en la nube suelen ser más rápidos y baratos.',
-          'Para la capa de protocolo que hace todo esto práctico, consulta [Conectar Ollama a bases de datos y APIs con MCP: configuración de agente local 2026](/es/power-local-llm/local-ai-agents-with-mcp-2026).',
+          'Para la capa de protocolo que hace todo esto práctico, consulta [Conectar Ollama a bases de datos y APIs con MCP: configuración de agente local 2026](/es/power-local-llm/local-ai-agents-with-mcp).',
         ],
       },
       workflowTemplates: {
@@ -1958,7 +1958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[RAG local para datos empresariales privados](/es/power-local-llm/local-rag-for-private-business-data) — la arquitectura del lado de los datos conforme con el GDPR que alimenta el mismo pipeline de auditoría.',
-          '[Conectar Ollama a bases de datos y APIs con MCP: configuración de agente local 2026](/es/power-local-llm/local-ai-agents-with-mcp-2026) — la capa de protocolo para herramientas de sistema de archivos, base de datos, navegador y GitHub.',
+          '[Conectar Ollama a bases de datos y APIs con MCP: configuración de agente local 2026](/es/power-local-llm/local-ai-agents-with-mcp) — la capa de protocolo para herramientas de sistema de archivos, base de datos, navegador y GitHub.',
           '[Agentes de IA locales en 2026: lo que realmente funciona (y lo que aún falla)](/es/power-local-llm/autonomous-local-agents-actually-work) — comparativa honesta de fiabilidad entre los cuatro runtimes recomendados anteriormente.',
           '[Sustituir Zapier con agentes de IA locales](/es/power-local-llm/replace-zapier-with-local-ai-agents) — plantillas de flujos de trabajo n8n + Ollama para el extremo determinista del espectro de agentes.',
           '[Los mejores modelos locales para tool-calling en 2026](/es/power-local-llm/best-local-models-tool-calling-2026) — benchmarks comparativos para los modelos recomendados en esta guía.',
@@ -2100,7 +2100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Distinção em relação às ferramentas de automação.** n8n, Zapier e Make.com são fluxos de trabalho determinísticos. Um agente é não-determinístico: o modelo decide qual ferramenta invocar e com quais argumentos conforme a entrada e o estado da conversa.',
           '**Por que "local" importa especificamente para os fluxos de trabalho empresariais:** a residência dos dados é demonstrável (os bytes nunca saem da sua rede), o rastro de auditoria é de ponta a ponta, e não há sub-processador terceiro na cadeia.',
           '**Onde os agentes locais se encaixam na organização:** em qualquer fluxo de trabalho que lide com dados pessoais (LGPD/GDPR), dados de funcionários, dados confidenciais de terceiros (NDA) ou dados empresariais regulados (financeiro, saúde, jurídico).',
-          'Para a camada de protocolo que torna tudo isso prático, consulte [Conectar Ollama a bancos de dados e APIs com MCP: configuração de agente local 2026](/pt/power-local-llm/local-ai-agents-with-mcp-2026).',
+          'Para a camada de protocolo que torna tudo isso prático, consulte [Conectar Ollama a bancos de dados e APIs com MCP: configuração de agente local 2026](/pt/power-local-llm/local-ai-agents-with-mcp).',
         ],
       },
       workflowTemplates: {
@@ -2293,7 +2293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[RAG local para dados empresariais privados](/pt/power-local-llm/local-rag-for-private-business-data) — a arquitetura do lado dos dados conforme com LGPD/GDPR que alimenta o mesmo pipeline de auditoria.',
-          '[Conectar Ollama a bancos de dados e APIs com MCP: configuração de agente local 2026](/pt/power-local-llm/local-ai-agents-with-mcp-2026) — a camada de protocolo para ferramentas de sistema de arquivos, banco de dados, navegador e GitHub.',
+          '[Conectar Ollama a bancos de dados e APIs com MCP: configuração de agente local 2026](/pt/power-local-llm/local-ai-agents-with-mcp) — a camada de protocolo para ferramentas de sistema de arquivos, banco de dados, navegador e GitHub.',
           '[Agentes de IA locais em 2026: o que realmente funciona (e o que ainda falha)](/pt/power-local-llm/autonomous-local-agents-actually-work) — comparativo honesto de confiabilidade entre os quatro runtimes recomendados.',
           '[Substituir Zapier com agentes de IA locais](/pt/power-local-llm/replace-zapier-with-local-ai-agents) — modelos de fluxos de trabalho n8n + Ollama para o extremo determinista do espectro de agentes.',
           '[Os melhores modelos locais para tool-calling em 2026](/pt/power-local-llm/best-local-models-tool-calling-2026) — benchmarks comparativos para os modelos recomendados neste guia.',
@@ -2435,7 +2435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**التمييز عن أدوات الأتمتة.** أدوات مثل n8n وZapier عبارة عن سير عمل حتمية: محفّزات صريحة، وفروع صريحة، وإجراءات صريحة. الوكيل غير حتمي: النموذج يقرر أي أداة يستدعي وبأي معطيات بناءً على المدخلات وحالة المحادثة. استخدم الأتمتة حين يكون المسار ثابتاً؛ استخدم الوكيل حين يتغير المسار بحسب المدخلات.',
           '**لماذا "المحلي" مهم تحديداً لسير العمل المؤسسي:** إقامة البيانات قابلة للإثبات (البايتات لا تغادر شبكتك قط)، وأثر التدقيق من طرف إلى طرف (نفس السجل يلتقط استدعاء النموذج واستدعاء الأداة والنتيجة)، ولا يوجد معالِج فرعي خارجي في السلسلة. حجة الامتثال تكتب نفسها حين تُزيل البنية فئات كاملة من المخاطر.',
           '**أين تتناسب وكلاء الذكاء الاصطناعي المحلي في المؤسسة:** في أي سير عمل يتعامل مع بيانات شخصية (GDPR)، أو بيانات موظفين، أو بيانات سرية لأطراف ثالثة (NDA)، أو بيانات تجارية منظّمة (مالية وصحية وقانونية). الوكلاء المحليون لا يُحسّنون سير العمل الذي لا يمس سوى البيانات العامة؛ هناك الوكلاء السحابيون عادةً أسرع وأقل تكلفةً.',
-          'للطبقة البروتوكولية التي تجعل هذا عملياً، راجع [ربط Ollama بقواعد البيانات وAPIs مع MCP: إعداد وكيل محلي 2026](/ar/power-local-llm/local-ai-agents-with-mcp-2026).',
+          'للطبقة البروتوكولية التي تجعل هذا عملياً، راجع [ربط Ollama بقواعد البيانات وAPIs مع MCP: إعداد وكيل محلي 2026](/ar/power-local-llm/local-ai-agents-with-mcp).',
         ],
       },
       workflowTemplates: {
@@ -2642,7 +2642,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءة ذات صلة',
         items: [
           '[RAG محلي للبيانات التجارية الخاصة](/ar/power-local-llm/local-rag-for-private-business-data) — بنية جانب البيانات المتوافقة مع GDPR التي تُغذّي نفس خط أنابيب التدقيق.',
-          '[ربط Ollama بقواعد البيانات وAPIs مع MCP: إعداد وكيل محلي 2026](/ar/power-local-llm/local-ai-agents-with-mcp-2026) — طبقة البروتوكول لأدوات نظام الملفات وقاعدة البيانات والمتصفح وGitHub.',
+          '[ربط Ollama بقواعد البيانات وAPIs مع MCP: إعداد وكيل محلي 2026](/ar/power-local-llm/local-ai-agents-with-mcp) — طبقة البروتوكول لأدوات نظام الملفات وقاعدة البيانات والمتصفح وGitHub.',
           '[وكلاء الذكاء الاصطناعي المحلي في 2026: ما يعمل فعلاً (وما لا يزال يخفق)](/ar/power-local-llm/autonomous-local-agents-actually-work) — مقارنة موثوقية صادقة بين بيئات التشغيل الأربع الموصى بها.',
           '[استبدال Zapier بوكلاء الذكاء الاصطناعي المحلي](/ar/power-local-llm/replace-zapier-with-local-ai-agents) — قوالب سير عمل n8n + Ollama للطرف الحتمي من طيف الوكلاء.',
           '[أفضل النماذج المحلية لاستدعاء الأدوات في 2026](/ar/power-local-llm/best-local-models-tool-calling-2026) — معايير مقارنية للنماذج الموصى بها في هذا الدليل.',
@@ -2798,7 +2798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**채팅 어시스턴트와의 차이점.** 채팅 어시스턴트는 질문에 답합니다. 에이전트는 작업을 실행합니다. ChatGPT 스타일의 "이 이메일을 요약해줘"는 텍스트를 반환합니다. 에이전트는 받은 편지함을 읽고, 메시지를 분류하고, 응답 초안을 작성하고, 승인을 위해 대기열에 넣습니다. 다른 표면, 다른 위험 프로파일.',
           '**"로컬"이 기업 워크플로에 특히 중요한 이유:** 데이터 거주지를 증명할 수 있습니다(바이트가 네트워크를 벗어나지 않음), 감사 추적이 종단 간(end-to-end)으로 이루어지며(동일한 로그가 모델 호출, 도구 호출, 결과를 캡처), 체인에 제3자 하위 처리자가 없습니다. 아키텍처가 전체 위험 범주를 제거할 때 규정 준수 논거는 저절로 작성됩니다.',
           '**조직에서 로컬 에이전트가 적합한 곳:** 개인 데이터(GDPR), 직원 데이터(사업장 협의회), 기밀 제3자 데이터(NDA, §203 StGB), 또는 규제된 비즈니스 데이터(금융, 의료, 법률)를 처리하는 모든 워크플로. 공공 데이터만 처리하는 워크플로에는 로컬 에이전트가 개선을 가져오지 않습니다. 그런 경우에는 클라우드 에이전트가 대체로 더 빠르고 저렴합니다.',
-          '이것을 실용적으로 만드는 프로토콜 레이어에 대해서는 [MCP로 Ollama를 데이터베이스와 API에 연결하기: 로컬 에이전트 설정 2026](/ko/power-local-llm/local-ai-agents-with-mcp-2026)을 참조하십시오.',
+          '이것을 실용적으로 만드는 프로토콜 레이어에 대해서는 [MCP로 Ollama를 데이터베이스와 API에 연결하기: 로컬 에이전트 설정 2026](/ko/power-local-llm/local-ai-agents-with-mcp)을 참조하십시오.',
         ],
       },
       workflowTemplates: {
@@ -3020,7 +3020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[개인 비즈니스 데이터를 위한 로컬 RAG](/ko/power-local-llm/local-rag-for-private-business-data) — 동일한 감사 파이프라인에 공급하는 GDPR 준수 데이터 측면 아키텍처.',
-          '[MCP로 Ollama를 데이터베이스와 API에 연결하기: 로컬 에이전트 설정 2026](/ko/power-local-llm/local-ai-agents-with-mcp-2026) — 파일 시스템, 데이터베이스, 브라우저, GitHub 도구를 위한 프로토콜 레이어.',
+          '[MCP로 Ollama를 데이터베이스와 API에 연결하기: 로컬 에이전트 설정 2026](/ko/power-local-llm/local-ai-agents-with-mcp) — 파일 시스템, 데이터베이스, 브라우저, GitHub 도구를 위한 프로토콜 레이어.',
           '[2026년 로컬 AI 에이전트: 실제로 작동하는 것과 아직 실패하는 것](/ko/power-local-llm/autonomous-local-agents-actually-work) — 위에서 권장된 4가지 런타임 간의 정직한 신뢰성 비교.',
           '[Zapier를 로컬 AI 에이전트로 교체하기](/ko/power-local-llm/replace-zapier-with-local-ai-agents) — 에이전트 스펙트럼의 결정론적 끝을 위한 n8n + Ollama 워크플로 템플릿.',
           '[2026년 tool-calling을 위한 최고의 로컬 모델](/ko/power-local-llm/best-local-models-tool-calling-2026) — 이 가이드에서 권장된 모델에 대한 비교 벤치마크.',

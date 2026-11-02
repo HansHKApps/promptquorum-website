@@ -1002,7 +1002,7 @@ const HUB_THEMES: Array<{
     colorBadge: 'bg-orange-50 text-orange-700 border-orange-200',
     colorDot: 'bg-orange-400',
     slugs: [
-      'local-ai-agents-with-mcp-2026',
+      'local-ai-agents-with-mcp',
       'best-local-models-tool-calling-2026',
       'autonomous-local-agents-actually-work',
       'replace-zapier-with-local-ai-agents',

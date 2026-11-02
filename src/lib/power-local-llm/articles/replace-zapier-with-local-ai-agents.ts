@@ -163,7 +163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'tip',
-            text: 'For tool-calling agents (the model decides which API to call), see [local AI agents with MCP in 2026](/power-local-llm/local-ai-agents-with-mcp-2026). MCP is what enables an agent to autonomously chain Gmail, Notion, and file APIs without you wiring each step in n8n.',
+            text: 'For tool-calling agents (the model decides which API to call), see [local AI agents with MCP in 2026](/power-local-llm/local-ai-agents-with-mcp). MCP is what enables an agent to autonomously chain Gmail, Notion, and file APIs without you wiring each step in n8n.',
           },
         ],
       },
@@ -479,7 +479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local AI Agents With MCP in 2026: Connect Ollama to Databases and APIs](/power-local-llm/local-ai-agents-with-mcp-2026) — what enables truly autonomous local agents (vs the fixed n8n pipelines here).',
+          '[Local AI Agents With MCP in 2026: Connect Ollama to Databases and APIs](/power-local-llm/local-ai-agents-with-mcp) — what enables truly autonomous local agents (vs the fixed n8n pipelines here).',
           '[Autonomous Local Agents: Do They Actually Work in 2026?](/power-local-llm/autonomous-local-agents-actually-work) — context for limitations of LLM-driven decision making.',
           '[Replace Grammarly and Notion AI With a Local LLM](/power-local-llm/replace-grammarly-notion-ai-with-local) — adjacent SaaS-replacement guide.',
           '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) — sizing your machine for n8n + Ollama and beyond.',
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'tip',
-            text: 'Für Tool-Calling-Agenten (das Modell entscheidet, welche API aufgerufen wird), siehe [lokale KI-Agenten mit MCP in 2026](/de/power-local-llm/local-ai-agents-with-mcp-2026). MCP ermöglicht es einem Agenten, Gmail, Notion und Datei-APIs autonom zu verketten, ohne dass Sie jeden Schritt in n8n verdrahten müssen.',
+            text: 'Für Tool-Calling-Agenten (das Modell entscheidet, welche API aufgerufen wird), siehe [lokale KI-Agenten mit MCP in 2026](/de/power-local-llm/local-ai-agents-with-mcp). MCP ermöglicht es einem Agenten, Gmail, Notion und Datei-APIs autonom zu verketten, ohne dass Sie jeden Schritt in n8n verdrahten müssen.',
           },
         ],
       },
@@ -960,7 +960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Empfohlene Lektüre',
         items: [
-          '[Lokale KI-Agenten mit MCP in 2026: Ollama mit Datenbanken und APIs verbinden](/de/power-local-llm/local-ai-agents-with-mcp-2026) — was wahrhaft autonome lokale Agenten ermöglicht (vs die festen n8n-Pipelines hier).',
+          '[Lokale KI-Agenten mit MCP in 2026: Ollama mit Datenbanken und APIs verbinden](/de/power-local-llm/local-ai-agents-with-mcp) — was wahrhaft autonome lokale Agenten ermöglicht (vs die festen n8n-Pipelines hier).',
           '[Autonome lokale Agenten: Funktionieren sie 2026 wirklich?](/de/power-local-llm/autonomous-local-agents-actually-work) — Kontext für Grenzen von LLM-gesteuerten Entscheidungen.',
           '[Grammarly und Notion AI durch lokales LLM ersetzen](/de/power-local-llm/replace-grammarly-notion-ai-with-local) — benachbarter SaaS-Ersatz-Leitfaden.',
           '[Local LLM Hardware Guide](/de/local-llms/local-llm-hardware-guide) — Dimensionierung Ihrer Maschine für n8n + Ollama und darüber hinaus.',
@@ -1125,7 +1125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'tip',
-            text: 'Pour les agents d\'appel d\'outils (le modèle décide quelle API appeler), voir [agents IA locaux avec MCP en 2026](/fr/power-local-llm/local-ai-agents-with-mcp-2026). MCP est ce qui permet à un agent de chaîner Gmail, Notion et les APIs de fichiers de manière autonome.',
+            text: 'Pour les agents d\'appel d\'outils (le modèle décide quelle API appeler), voir [agents IA locaux avec MCP en 2026](/fr/power-local-llm/local-ai-agents-with-mcp). MCP est ce qui permet à un agent de chaîner Gmail, Notion et les APIs de fichiers de manière autonome.',
           },
         ],
       },
@@ -1441,7 +1441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures recommandées',
         items: [
-          '[Agents IA locaux avec MCP en 2026 : connecter Ollama aux bases de données et APIs](/fr/power-local-llm/local-ai-agents-with-mcp-2026) — ce qui rend possibles les vrais agents locaux autonomes (par rapport aux pipelines n8n fixes ici).',
+          '[Agents IA locaux avec MCP en 2026 : connecter Ollama aux bases de données et APIs](/fr/power-local-llm/local-ai-agents-with-mcp) — ce qui rend possibles les vrais agents locaux autonomes (par rapport aux pipelines n8n fixes ici).',
           '[Agents locaux autonomes : fonctionnent-ils réellement en 2026 ?](/fr/power-local-llm/autonomous-local-agents-actually-work) — contexte des limites de la prise de décision pilotée par LLM.',
           '[Remplacer Grammarly et Notion AI avec un LLM local](/fr/power-local-llm/replace-grammarly-notion-ai-with-local) — guide de remplacement SaaS adjacent.',
           '[Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide) — dimensionner votre machine pour n8n + Ollama et au-delà.',
@@ -1606,7 +1606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'tip',
-            text: 'ツール呼び出しエージェント (モデルがAPI選択判断) については、[2026年ローカルAIエージェント MCP版](/ja/power-local-llm/local-ai-agents-with-mcp-2026) 参照。MCP は真の自律型エージェント (n8n の固定パイプライン vs)。',
+            text: 'ツール呼び出しエージェント (モデルがAPI選択判断) については、[2026年ローカルAIエージェント MCP版](/ja/power-local-llm/local-ai-agents-with-mcp) 参照。MCP は真の自律型エージェント (n8n の固定パイプライン vs)。',
           },
         ],
       },
@@ -1922,7 +1922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '推奨読み物',
         items: [
-          '[2026年ローカル AI エージェント MCP版：Ollama をデータベース・API と接続](/ja/power-local-llm/local-ai-agents-with-mcp-2026) — what enables true autonomous local agent (vs fixed n8n pipeline here)。',
+          '[2026年ローカル AI エージェント MCP版：Ollama をデータベース・API と接続](/ja/power-local-llm/local-ai-agents-with-mcp) — what enables true autonomous local agent (vs fixed n8n pipeline here)。',
           '[autonomous local agent 本当に 2026 で work？](/ja/power-local-llm/autonomous-local-agents-actually-work) — LLM-driven decision-making の限界 context。',
           '[Grammarly・Notion AI をローカル LLM に置き換え](/ja/power-local-llm/replace-grammarly-notion-ai-with-local) — adjacent SaaS-replacement guide。',
           '[ローカル LLM ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) — n8n + Ollama 用マシン size、beyond。',
@@ -2087,7 +2087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'tip',
-            text: '对于工具调用代理（模型决定调用哪个 API），见 [2026 年 MCP 本地 AI 代理](/zh/power-local-llm/local-ai-agents-with-mcp-2026)。MCP 使代理能自主链接 Gmail、Notion 和文件 API。',
+            text: '对于工具调用代理（模型决定调用哪个 API），见 [2026 年 MCP 本地 AI 代理](/zh/power-local-llm/local-ai-agents-with-mcp)。MCP 使代理能自主链接 Gmail、Notion 和文件 API。',
           },
         ],
       },
@@ -2403,7 +2403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '推荐阅读',
         items: [
-          '[2026 年本地 AI 代理 MCP：连接 Ollama 到数据库和 API](/zh/power-local-llm/local-ai-agents-with-mcp-2026) —— 什么启用真正自主本地代理(vs 此处固定 n8n 管道)。',
+          '[2026 年本地 AI 代理 MCP：连接 Ollama 到数据库和 API](/zh/power-local-llm/local-ai-agents-with-mcp) —— 什么启用真正自主本地代理(vs 此处固定 n8n 管道)。',
           '[自主本地代理：2026 年真的动吗？](/zh/power-local-llm/autonomous-local-agents-actually-work) —— LLM 驱动决策制定限制的背景。',
           '[用本地 LLM 替代 Grammarly 和 Notion AI](/zh/power-local-llm/replace-grammarly-notion-ai-with-local) —— 相邻 SaaS 替代指南。',
           '[本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide) —— 为 n8n + Ollama 及超越的机器尺寸。',
@@ -2568,7 +2568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'tip',
-            text: 'Para agentes de llamada a herramientas (el modelo decide qué API llamar), consulta [agentes de IA locales con MCP en 2026](/es/power-local-llm/local-ai-agents-with-mcp-2026). MCP es lo que permite a un agente encadenar Gmail, Notion y APIs de archivos de forma autónoma sin que tú conectes cada paso en n8n.',
+            text: 'Para agentes de llamada a herramientas (el modelo decide qué API llamar), consulta [agentes de IA locales con MCP en 2026](/es/power-local-llm/local-ai-agents-with-mcp). MCP es lo que permite a un agente encadenar Gmail, Notion y APIs de archivos de forma autónoma sin que tú conectes cada paso en n8n.',
           },
         ],
       },
@@ -2884,7 +2884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Agentes de IA locales con MCP en 2026: conecta Ollama a bases de datos y APIs](/es/power-local-llm/local-ai-agents-with-mcp-2026) — qué habilita los verdaderos agentes locales autónomos (vs los pipelines fijos de n8n aquí).',
+          '[Agentes de IA locales con MCP en 2026: conecta Ollama a bases de datos y APIs](/es/power-local-llm/local-ai-agents-with-mcp) — qué habilita los verdaderos agentes locales autónomos (vs los pipelines fijos de n8n aquí).',
           '[Agentes locales autónomos: ¿realmente funcionan en 2026?](/es/power-local-llm/autonomous-local-agents-actually-work) — contexto sobre las limitaciones de la toma de decisiones guiada por LLM.',
           '[Reemplaza Grammarly y Notion AI con un LLM local](/es/power-local-llm/replace-grammarly-notion-ai-with-local) — guía adyacente de reemplazo de SaaS.',
           '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) — dimensiona tu máquina para n8n + Ollama y más allá.',
@@ -3062,7 +3062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'tip',
-            text: 'Para agentes de chamada de ferramentas (o modelo decide qual API chamar), consulte [agentes de IA locais com MCP em 2026](/pt/power-local-llm/local-ai-agents-with-mcp-2026). O MCP é o que permite a um agente encadear APIs de Gmail, Notion e arquivos de forma autônoma sem que você conecte cada etapa no n8n.',
+            text: 'Para agentes de chamada de ferramentas (o modelo decide qual API chamar), consulte [agentes de IA locais com MCP em 2026](/pt/power-local-llm/local-ai-agents-with-mcp). O MCP é o que permite a um agente encadear APIs de Gmail, Notion e arquivos de forma autônoma sem que você conecte cada etapa no n8n.',
           },
         ],
       },
@@ -3378,7 +3378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Agentes de IA locais com MCP em 2026: conecte o Ollama a bancos de dados e APIs](/pt/power-local-llm/local-ai-agents-with-mcp-2026) — o que habilita os verdadeiros agentes locais autônomos (vs os pipelines fixos do n8n aqui).',
+          '[Agentes de IA locais com MCP em 2026: conecte o Ollama a bancos de dados e APIs](/pt/power-local-llm/local-ai-agents-with-mcp) — o que habilita os verdadeiros agentes locais autônomos (vs os pipelines fixos do n8n aqui).',
           '[Agentes locais autônomos: eles realmente funcionam em 2026?](/pt/power-local-llm/autonomous-local-agents-actually-work) — contexto sobre as limitações da tomada de decisão guiada por LLM.',
           '[Substitua o Grammarly e o Notion AI por um LLM local](/pt/power-local-llm/replace-grammarly-notion-ai-with-local) — guia adjacente de substituição de SaaS.',
           '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide) — dimensione sua máquina para n8n + Ollama e além.',
@@ -3675,7 +3675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءة ذات صلة',
         items: [
-          '[وكلاء ذكاء اصطناعي محليون مع MCP في 2026: اربط Ollama بقواعد البيانات وAPIs](/ar/power-local-llm/local-ai-agents-with-mcp-2026) — ما الذي يُتيح الوكلاء المحليين الحقيقيين المستقلين (مقابل خطوط أنابيب n8n الثابتة هنا).',
+          '[وكلاء ذكاء اصطناعي محليون مع MCP في 2026: اربط Ollama بقواعد البيانات وAPIs](/ar/power-local-llm/local-ai-agents-with-mcp) — ما الذي يُتيح الوكلاء المحليين الحقيقيين المستقلين (مقابل خطوط أنابيب n8n الثابتة هنا).',
           '[الوكلاء المحليون المستقلون: هل يعملون فعلًا في 2026؟](/ar/power-local-llm/autonomous-local-agents-actually-work) — سياق حول قيود اتخاذ القرار المُوجَّه بـ LLM.',
           '[استبدل Grammarly وNotion AI بنموذج LLM محلي](/ar/power-local-llm/replace-grammarly-notion-ai-with-local) — دليل استبدال SaaS مجاور.',
           '[دليل أجهزة LLM المحلية](/ar/local-llms/local-llm-hardware-guide) — حجّم جهازك لـ n8n + Ollama وما بعد.',
@@ -3853,7 +3853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'tip',
-            text: '도구 호출 에이전트(모델이 어떤 API를 호출할지 결정하는)에 대해서는 [2026년 MCP를 활용한 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp-2026)를 참조하십시오. MCP는 에이전트가 n8n에서 각 단계를 직접 연결하지 않고도 Gmail, Notion, 파일 API를 자율적으로 연결할 수 있게 합니다.',
+            text: '도구 호출 에이전트(모델이 어떤 API를 호출할지 결정하는)에 대해서는 [2026년 MCP를 활용한 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp)를 참조하십시오. MCP는 에이전트가 n8n에서 각 단계를 직접 연결하지 않고도 Gmail, Notion, 파일 API를 자율적으로 연결할 수 있게 합니다.',
           },
         ],
       },
@@ -4169,7 +4169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽기',
         items: [
-          '[2026년 MCP를 활용한 로컬 AI 에이전트: Ollama를 데이터베이스와 API에 연결](/ko/power-local-llm/local-ai-agents-with-mcp-2026) — 진정한 로컬 자율 에이전트를 가능하게 하는 것(대 여기서의 고정 n8n 파이프라인).',
+          '[2026년 MCP를 활용한 로컬 AI 에이전트: Ollama를 데이터베이스와 API에 연결](/ko/power-local-llm/local-ai-agents-with-mcp) — 진정한 로컬 자율 에이전트를 가능하게 하는 것(대 여기서의 고정 n8n 파이프라인).',
           '[자율 로컬 에이전트: 2026년에 실제로 작동합니까?](/ko/power-local-llm/autonomous-local-agents-actually-work) — LLM 기반 의사 결정의 한계에 대한 컨텍스트.',
           '[로컬 LLM으로 Grammarly와 Notion AI 교체](/ko/power-local-llm/replace-grammarly-notion-ai-with-local) — 인접 SaaS 교체 가이드.',
           '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) — n8n + Ollama 이상을 위한 기기 사이즈 조정.',
