@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'MIT',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // pure Python agent framework/library — depends entirely on whichever LLM backend the user configures (Ollama, vLLM, hosted API, etc.); no fixed hardware floor of its own documented at ai.pydantic.dev. Verified 2026-09-13
-  stars: 19720,
+  stars: 20997,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['build'],
@@ -37,6 +37,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
   compare: { ollama: true, mcp: true, multiAgent: true, toolCalling: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2026-10-30', // GitHub release v2.64.0 (latest substantive upstream update; later main commits are CI/test only), read 2026-11-02
   lastUpstreamUpdateSource: 'https://github.com/pydantic/pydantic-ai',
 }
