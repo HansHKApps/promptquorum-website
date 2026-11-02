@@ -1231,7 +1231,7 @@ rows: [
             { type: 'plain-terms', text: 'Uma GPU econômica para IA é uma placa de vídeo que custa menos de R$ 2.200, mas ainda tem memória de vídeo (VRAM) suficiente para rodar um modelo de IA capaz numa velocidade utilizável no seu próprio computador.' },
           ],
           items: [
-            '**Melhor opção por orçamento:** Menos de R$ 2.000 — RX 6700 XT 12GB (R$ 1.800–2.300, a mais barata, atrito de configuração AMD) ou RTX A4000 16GB se a encontrar abaixo de R$ 1.700 (melhor VRAM por real gasto). ~R$ 1.800 usada — RTX 3060 12 GB (melhor opção usada geral). ~US$ 800 nova — RTX 5060 Ti 16GB (melhor opção nova, mais margem de VRAM). Menos de R$ 4.600 — RTX 4070 Super 12GB (a mais rápida, 25–30 tok/s).',
+            '**Melhor opção por orçamento:** Menos de R$ 2.000 — RX 6700 XT 12GB (R$ 1.800–2.300, a mais barata) ou RTX A4000 16GB abaixo de R$ 1.700. ~R$ 1.800 usada — RTX 3060 12 GB (melhor opção usada geral). ~US$ 800 nova — RTX 5060 Ti 16GB (melhor opção nova, mais margem de VRAM). Menos de R$ 4.600 — RTX 4070 Super 12GB (a mais rápida, 25–30 tok/s).',
             '**RTX 3060 12 GB** (R$ 1.800-2.200 usada): Roda todos os modelos 7B-8B em Q4/Q5 e a maioria dos densos 13B-14B em Q4. Melhor opção econômica usada.',
             '**RTX 5060 Ti 16GB** (~US$ 800 nova): Placa de geração atual com 4 GB a mais de VRAM que a 3060 — roda modelos 13B-14B com folga para janelas de contexto maiores. Melhor opção nova econômica.',
             '**RTX 3060 6 GB**: Limitada a modelos 3B (Phi-4 Mini, Llama 3.2 3B). Insuficiente para 7B.',
