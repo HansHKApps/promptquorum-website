@@ -181,6 +181,8 @@ Examples: "Ollama vs LM Studio," "Best Local LLM Frontends," "One-Click Installe
 - Empty `top_queries` ladder: `mcp__gsc__query` dims `[query]` + `page_equals` 28 d -> same 90 d -> dims `[page,query]` + `page_contains:<slug>` 90 d (attribute queries to locales by page key). Say which rung and window was used; also pull country and device
 - Show a short table first (clicks, impressions, CTR, position, top queries), print the window dates, mark the last 1-2 days provisional
 
+**Per-locale rule (owner 2026-11-02):** every language is judged on its own queries. Pull each locale URL separately (28 d, then 90 d, then the `[page,query]` + `page_contains` ladder, attributing rows by page key). Enough = at least 3 target queries with a combined 30+ impressions after removing noise (typos, brand misspellings, operator/off-topic queries) → adapt that locale's title, meta, headings, FAQ questions and `targetKeywords` to the words searchers use in that language (never a literal translation of another locale's queries). Not enough → data-free review for that locale, labelled as such; it may borrow intent, not wording. Report one row per locale (window, impressions, clicks, queries visible, target queries kept, decision, fields changed) and log each locale's queries separately.
+
 **What Claude Code must do with this data:**
 
 1. **Identify the top 10-20 queries by impressions** — these are the searches Google is testing this page for. The page content must answer these queries directly.

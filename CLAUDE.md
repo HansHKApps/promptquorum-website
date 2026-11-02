@@ -462,6 +462,7 @@ The `gsc` MCP tool is connected. I never paste GSC data by hand; Claude pulls it
 
 1. First call the `gsc` tool `page_stats` for that page's live URL: **last 28 days, top 20 queries. If the 28-day pull has no usable data (no rows, impressions but empty `top_queries`, or <500 impressions), use 3 months (90 days).** If `top_queries` is still empty, fall back to `mcp__gsc__query` (`[query]` with `page_equals`, then `[page,query]` with `page_contains:<slug>` over 90 days) and say which window/rung produced the data.
 2. Show a short table first: clicks, impressions, CTR, position, then the top queries, with the window dates.
+   **Per language:** pull each locale's queries separately. If a locale has enough (3+ target queries, 30+ combined impressions, noise removed), adapt that locale's text (title, meta, headings, FAQ, keywords) to its own queries; if not, data-free review for that locale. Never translate another locale's query wording literally. Report one row per locale.
 3. Use that data as input for the edit (never ask me to paste GSC data).
 4. Use the exact live URL form, starting with `https://www.promptquorum.com/`, no trailing slash,
    English unprefixed, other locales as `/de|fr|ja|zh|es|pt|ar|ko/...`. Never `?lang=`.
