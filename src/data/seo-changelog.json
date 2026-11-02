@@ -504,7 +504,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 0.00004600239212439047,
+      "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
   },
@@ -6605,6 +6605,36 @@
       "t14": "2026-11-14",
       "t28": "2026-11-28"
     }
+  },
+  {
+    "id": "00e8fd1c-b453-4bd5-84be-c0bd58f4e2d8",
+    "slug": "/prompt-engineering/prompt-governance-in-production",
+    "date": "2026-11-02T08:41:38.045Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Set up prompt governance with 3 roles (Author, Reviewer, Approver), 3 review gates, rollback procedures, and audit trails. NIST AI RMF and EU AI Act ready.",
+        "new": "Prompt governance best practices for production: 3 roles, 3 review gates, rollback, audit trails and tool options. Mapped to NIST AI RMF and EU AI Act."
+      }
+    ],
+    "reason": "GSC 90d: 683 impr, 0 clicks, pos 25.6 (ranking/coverage problem). Added system-prompt/orchestration, enterprise controls, best-practices sections + platform/software tools H2 + 4 FAQs; meta now names best practices + tool options; removed stale EU AI Act 2026 claim (Omnibus 2026/1744)",
+    "queries": [
+      "prompt governance",
+      "enterprise prompt governance",
+      "prompt governance best practices",
+      "prompt governance platform",
+      "prompt governance software",
+      "system prompt governance",
+      "prompt orchestration governance"
+    ],
+    "baseline": {
+      "position": 25.61,
+      "impressions": 683,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "90d 2026-08-05 to 2026-11-02"
+    },
+    "deployedAt": null
   },
   {
     "id": "860ea068-2181-4e9a-aacd-e397958a194a",
