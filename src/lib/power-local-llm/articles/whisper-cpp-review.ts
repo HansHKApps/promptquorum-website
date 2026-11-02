@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper large-v3', 'Whisper base', 'Whisper tiny'],
     current_hardware_mentioned: ['Apple Silicon', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**whisper.cpp is a free, MIT-licensed C/C++ reimplementation of OpenAI\'s Whisper speech-to-text model, created by Georgi Gerganov, that runs transcription entirely on-device with no Python dependency.** It supports CPU (with AVX2/NEON optimizations), Apple Metal and Core ML, NVIDIA CUDA, Vulkan, and several other backends, so one codebase covers x86 and ARM CPUs, Apple Silicon and CUDA GPUs. For a side-by-side look at it and faster-whisper, see our [whisper.cpp vs faster-whisper comparison](/power-local-llm/local-whisper-stt-comparison).',
+      '**whisper.cpp is a free, MIT-licensed C/C++ port of OpenAI\'s Whisper speech-to-text model that runs transcription on-device without Python.** It supports CPU, Apple Metal, Core ML, CUDA and Vulkan. Compare it with faster-whisper in our [whisper.cpp vs faster-whisper comparison](/power-local-llm/local-whisper-stt-comparison).',
     quickAnswerTop: {
       en: {
         question: 'What is whisper.cpp and is it worth using for local speech-to-text?',
@@ -394,7 +394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper large-v3', 'Whisper base', 'Whisper tiny'],
     current_hardware_mentioned: ['Apple Silicon', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**whisper.cpp ist eine kostenlose, MIT-lizenzierte C/C++-Neuimplementierung von OpenAIs Whisper-Spracherkennungsmodell, geschaffen von Georgi Gerganov, die die Transkription vollständig auf dem Gerät ohne Python-Abhängigkeit ausführt.** Es unterstützt CPU (mit AVX2/NEON-Optimierungen), Apple Metal und Core ML, NVIDIA CUDA, Vulkan und weitere Backends, sodass eine Codebasis x86- und ARM-CPUs, Apple Silicon und CUDA-GPUs abdeckt. Einen direkten Blick auf whisper.cpp und faster-whisper bietet unser [Vergleich whisper.cpp vs. faster-whisper](/de/power-local-llm/local-whisper-stt-comparison).',
+      '**whisper.cpp ist ein kostenloser, MIT-lizenzierter C/C++-Port von OpenAIs Whisper-Spracherkennung, der die Transkription ohne Python auf dem Gerät ausführt.** Unterstützt werden CPU, Apple Metal, Core ML, CUDA und Vulkan. Den Vergleich mit faster-whisper finden Sie im [Vergleich whisper.cpp vs. faster-whisper](/de/power-local-llm/local-whisper-stt-comparison).',
     quickAnswerTop: {
       de: {
         question: 'Was ist whisper.cpp und lohnt sich der Einsatz für lokale Spracherkennung?',
@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper large-v3', 'Whisper base', 'Whisper tiny'],
     current_hardware_mentioned: ['Apple Silicon', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**whisper.cpp est une réimplémentation gratuite, sous licence MIT, en C/C++ du modèle de reconnaissance vocale Whisper d\'OpenAI, créée par Georgi Gerganov, qui exécute la transcription entièrement sur l\'appareil sans dépendance à Python.** Il prend en charge le CPU (optimisations AVX2/NEON), Apple Metal et Core ML, NVIDIA CUDA, Vulkan et d\'autres backends : une même base de code couvre les CPU x86 et ARM, Apple Silicon et les GPU CUDA. Pour une vue côte à côte avec faster-whisper, voir notre [comparatif whisper.cpp vs faster-whisper](/fr/power-local-llm/local-whisper-stt-comparison).',
+      '**whisper.cpp est un portage C/C++ gratuit, sous licence MIT, du modèle de reconnaissance vocale Whisper d\'OpenAI, qui transcrit sur l\'appareil sans Python.** Il prend en charge CPU, Apple Metal, Core ML, CUDA et Vulkan. Comparez-le à faster-whisper dans notre [comparatif whisper.cpp vs faster-whisper](/fr/power-local-llm/local-whisper-stt-comparison).',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que whisper.cpp et vaut-il le coup pour la reconnaissance vocale locale ?',
@@ -1102,7 +1102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper large-v3', 'Whisper base', 'Whisper tiny'],
     current_hardware_mentioned: ['Apple Silicon', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**whisper.cpp es una reimplementación gratuita, con licencia MIT, en C/C++ del modelo de voz a texto Whisper de OpenAI, creada por Georgi Gerganov, que ejecuta la transcripción íntegramente en el dispositivo sin depender de Python.** Admite CPU (con optimizaciones AVX2/NEON), Apple Metal y Core ML, NVIDIA CUDA, Vulkan y otros backends, de modo que una sola base de código cubre CPU x86 y ARM, Apple Silicon y GPU CUDA. Para verlo junto a faster-whisper, consulta nuestra [comparativa whisper.cpp vs faster-whisper](/es/power-local-llm/local-whisper-stt-comparison).',
+      '**whisper.cpp es un port gratuito en C/C++, con licencia MIT, del modelo de voz a texto Whisper de OpenAI que transcribe en el dispositivo sin Python.** Admite CPU, Apple Metal, Core ML, CUDA y Vulkan. Compáralo con faster-whisper en nuestra [comparativa whisper.cpp vs faster-whisper](/es/power-local-llm/local-whisper-stt-comparison).',
     quickAnswerTop: {
       es: {
         question: '¿Qué es whisper.cpp y merece la pena para reconocimiento de voz local?',
@@ -1811,7 +1811,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper large-v3', 'Whisper base', 'Whisper tiny'],
     current_hardware_mentioned: ['Apple Silicon', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**O whisper.cpp é uma reimplementação gratuita, com licença MIT, em C/C++ do modelo de fala para texto Whisper, da OpenAI, criada por Georgi Gerganov, que executa a transcrição inteiramente no dispositivo, sem dependência de Python.** Ele oferece suporte a CPU (com otimizações AVX2/NEON), Apple Metal e Core ML, NVIDIA CUDA, Vulkan e outros backends, de modo que uma só base de código cobre CPUs x86 e ARM, Apple Silicon e GPUs CUDA. Para vê-lo ao lado do faster-whisper, consulte a nossa [comparação whisper.cpp vs faster-whisper](/pt/power-local-llm/local-whisper-stt-comparison).',
+      '**O whisper.cpp é um port gratuito em C/C++, com licença MIT, do modelo de fala para texto Whisper, da OpenAI, que transcreve no dispositivo sem Python.** Ele oferece suporte a CPU, Apple Metal, Core ML, CUDA e Vulkan. Compare-o com o faster-whisper na nossa [comparação whisper.cpp vs faster-whisper](/pt/power-local-llm/local-whisper-stt-comparison).',
     quickAnswerTop: {
       pt: {
         question: 'O que é o whisper.cpp e vale a pena usá-lo para reconhecimento de voz local?',
@@ -2165,7 +2165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper large-v3', 'Whisper base', 'Whisper tiny'],
     current_hardware_mentioned: ['Apple Silicon', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**whisper.cpp إعادة تنفيذ مجانية بترخيص MIT بلغة C/C++ لنموذج Whisper من OpenAI لتحويل الكلام إلى نص، أنشأه Georgi Gerganov، ويجري النسخ بالكامل على الجهاز دون الاعتماد على Python.** يدعم المعالج المركزي (بتحسينات AVX2/NEON) وApple Metal وCore ML وNVIDIA CUDA وVulkan وواجهات خلفية أخرى، فتغطي قاعدة شيفرة واحدة معالجات x86 وARM وApple Silicon وبطاقات CUDA. لرؤيته جنبًا إلى جنب مع faster-whisper راجع [مقارنة whisper.cpp مقابل faster-whisper](/ar/power-local-llm/local-whisper-stt-comparison).',
+      '**whisper.cpp نسخة C/C++ مجانية بترخيص MIT من نموذج Whisper لتحويل الكلام إلى نص من OpenAI، تعمل على الجهاز دون Python.** تدعم المعالج المركزي وApple Metal وCore ML وCUDA وVulkan. قارنه بـ faster-whisper في [مقارنة whisper.cpp مقابل faster-whisper](/ar/power-local-llm/local-whisper-stt-comparison).',
     quickAnswerTop: {
       ar: {
         question: 'ما هو whisper.cpp وهل يستحق الاستخدام لتحويل الكلام إلى نص محليًا؟',

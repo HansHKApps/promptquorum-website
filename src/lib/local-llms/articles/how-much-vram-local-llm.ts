@@ -1648,7 +1648,7 @@ schema: {
       title: 'VRAM-Richtlinie: 7B=4GB, 70B=42GB (2026 Guide)',
       seoTitle: 'Lokale-LLM-VRAM: 7B=4GB, 13B=8GB, 70B=42GB (2026)',
       intro: '**Ein 7B-Modell benötigt etwa 4 GB VRAM für die Gewichte bei Q4 (4-Bit); 13B etwa 8 GB; 22B etwa 13 GB; 70B etwa 42 GB.** Das sind reine Gewichtsgrößen -- rechnen Sie 1-2 GB Puffer für Kontext (KV-Cache) und System dazu, mehr bei langem Kontextfenster. Bei Q5 (5-Bit) liegen die Werte etwa 15-20% höher, bei Q8 (8-Bit) etwa 75%. Volle Präzision (FP32) benötigt das 4-fache der Q4-Größe und ist auf Consumer-GPUs kaum praktikabel. Die Formel: Modellgröße (Milliarden) × Byte pro Parameter (≈0,6 für Q4, ≈0,7 für Q5, ≈1,05 für Q8) -- verifiziert anhand echter GGUF-Dateigrößen auf Hugging Face.',
-      metaDescription: 'Echter VRAM-Bedarf bei Q4, verifiziert anhand echter GGUF-Dateigrößen: 7B braucht ~4GB, 13B ~8GB, 22B ~13GB, 70B ~42GB. Kostenloser Rechner und Q5/Q8-Tabellen.',
+      metaDescription: 'Echter VRAM-Bedarf bei Q4 laut echten GGUF-Dateigrößen: 7B ~4GB, 13B ~8GB, 22B ~13GB, 70B ~42GB. Kostenloser Rechner und Q5/Q8-Tabellen.',
       heroImage: '/images/how-much-vram-local-llm-vram-by-size-hero-de.webp',
       nextStep: {
         text: 'Sie kennen Ihr VRAM-Budget. Wählen Sie jetzt die richtige GPU dafür.',
