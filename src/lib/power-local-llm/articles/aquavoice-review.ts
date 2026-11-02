@@ -52,7 +52,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: ['Avalon 1.5'],
     current_hardware_mentioned: [],
-    leadAnswerBlock: "**AquaVoice is a voice-dictation app that inserts what you say, as text, into whichever app is active — and for AI work its value is context: you speak far more detail per request than you would type.** In the author's own use on a MacBook it was stable, handled German, English, French and Russian, and had two quirks: the target window must be active, and it occasionally drifted into translation mode until the language was locked in settings.",
+    leadAnswerBlock: "**AquaVoice is a voice-dictation app that types what you say into the active app, and for AI work its value is context: you speak far more detail per request than you would type.** On the author's MacBook it was stable; the target window must be active.",
     quickAnswerTop: {
       en: {
         question: 'Is AquaVoice worth using to dictate AI prompts?',
@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     disclosureNote: 'Offenlegung: AquaVoice hat PromptQuorum für diese Rezension kostenlosen Zugang zum Produkt gewährt. PromptQuorum erhält von AquaVoice weder eine Zahlung noch eine Provision. Die Meinungen und die hier beschriebene Nutzung sind die des Autors.',
     title: 'AquaVoice-Rezension: Preise, Datenschutz und Diktat für KI-Prompts',
     seoTitle: 'AquaVoice-Rezension: Preise, Datenschutz und KI-Diktat',
-    intro: "AquaVoice (Aqua) ist eine Diktier-App unter [aquavoice.com](https://aquavoice.com/), die gesprochene Sprache in Echtzeit in Text umwandelt und in die App einfügt, in der Sie gerade arbeiten. Diese Rezension beruht auf der täglichen Nutzung durch den Autor, der damit Prompts in Claude Code und Nachrichten in WhatsApp diktiert. Das zentrale Argument ist einfach: Sprechen ist schneller als Tippen, daher enthält eine diktierte Anfrage mehr Kontext, und mehr Kontext führt zu einer besseren Antwort der KI.",
+    intro: "AquaVoice (Aqua) ist eine Diktier-App unter [aquavoice.com](https://aquavoice.com/), die Sprache in Echtzeit in Text umwandelt und in die aktive App einfügt. Die Rezension beruht auf der täglichen Nutzung des Autors für Prompts in Claude Code und Nachrichten in WhatsApp.",
     metaDescription: 'AquaVoice-Rezension: aktuelle Tarife, was die Datenschutzseiten zu Hosting und Daten sagen, Plattformen und Alltagseinsatz beim Diktieren von KI-Prompts.',
     readTime: '7 Min. Lesezeit',
     targetKeywords: [
@@ -325,7 +325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: ['Avalon 1.5'],
     current_hardware_mentioned: [],
-    leadAnswerBlock: "**AquaVoice ist eine Diktier-App, die Gesprochenes als Text in die jeweils aktive App einfügt – und für die Arbeit mit KI liegt ihr Wert im Kontext: Sie sprechen pro Anfrage deutlich mehr Details, als Sie tippen würden.** In der eigenen Nutzung des Autors auf einem MacBook lief sie stabil, kam mit Deutsch, Englisch, Französisch und Russisch zurecht und hatte zwei Eigenheiten: Das Zielfenster muss aktiv sein, und gelegentlich rutschte sie in den Übersetzungsmodus, bis die Sprache in den Einstellungen fest eingestellt wurde.",
+    leadAnswerBlock: "**AquaVoice ist eine Diktier-App, die Gesprochenes als Text in die aktive App einfügt – für die Arbeit mit KI liegt der Wert im Kontext: Sie sprechen pro Anfrage deutlich mehr Details, als Sie tippen würden.** Auf dem MacBook des Autors lief sie stabil; das Zielfenster muss aktiv sein.",
     quickAnswerTop: {
       de: {
         question: 'Lohnt sich AquaVoice zum Diktieren von KI-Prompts?',
@@ -585,7 +585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     disclosureNote: 'Transparence : AquaVoice a donné à PromptQuorum un accès gratuit au produit pour cet avis. PromptQuorum ne reçoit ni paiement ni commission de la part d’AquaVoice. Les opinions et l’usage décrits ici sont ceux de l’auteur.',
     title: 'Avis sur AquaVoice : tarifs, confidentialité et dictée pour vos prompts IA',
     seoTitle: 'Avis AquaVoice : tarifs, confidentialité et dictée IA',
-    intro: "AquaVoice (Aqua) est une application de dictée vocale, disponible sur [aquavoice.com](https://aquavoice.com/), qui transforme la parole en texte en temps réel et l’insère dans l’application dans laquelle vous travaillez. Cet avis repose sur l’usage quotidien de l’auteur, qui dicte des prompts dans Claude Code et des messages dans WhatsApp. Son argument central est simple : parler est plus rapide que taper, donc une demande dictée contient plus de contexte, et plus de contexte donne une meilleure réponse de l’IA.",
+    intro: "AquaVoice (Aqua) est une application de dictée vocale, sur [aquavoice.com](https://aquavoice.com/), qui transforme la parole en texte en temps réel dans l’application active. Cet avis repose sur l’usage quotidien de l’auteur : prompts dans Claude Code et messages dans WhatsApp.",
     metaDescription: 'Avis AquaVoice : tarifs actuels, ce que disent les pages de confidentialité sur l’hébergement, plateformes et usage quotidien pour dicter des prompts IA.',
     readTime: '7 min de lecture',
     targetKeywords: [
@@ -598,7 +598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: ['Avalon 1.5'],
     current_hardware_mentioned: [],
-    leadAnswerBlock: "**AquaVoice est une application de dictée vocale qui insère ce que vous dites, sous forme de texte, dans l’application active — et pour le travail avec l’IA, sa valeur tient au contexte : vous donnez bien plus de détails par demande que vous n’en taperiez.** Dans l’usage personnel de l’auteur sur un MacBook, elle s’est montrée stable, a géré l’allemand, l’anglais, le français et le russe, et présente deux particularités : la fenêtre cible doit être active, et elle a parfois basculé en mode traduction jusqu’à ce que la langue soit verrouillée dans les réglages.",
+    leadAnswerBlock: "**AquaVoice est une application de dictée vocale qui insère votre voix, en texte, dans l’application active ; pour l’IA, sa valeur est le contexte : vous donnez bien plus de détails par demande qu’en tapant.** Sur le MacBook de l’auteur, elle est restée stable.",
     quickAnswerTop: {
       fr: {
         question: 'AquaVoice vaut-elle la peine pour dicter des prompts IA ?',
@@ -871,7 +871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: ['Avalon 1.5'],
     current_hardware_mentioned: [],
-    leadAnswerBlock: "**AquaVoice es una app de dictado por voz que inserta lo que dices, como texto, en la app que esté activa; para el trabajo con IA su valor es el contexto: hablas con mucho más detalle por petición del que teclearías.** En el uso propio del autor en un MacBook fue estable, manejó alemán, inglés, francés y ruso, y tuvo dos peculiaridades: la ventana de destino debe estar activa y, en ocasiones, derivó al modo de traducción hasta que se fijó el idioma en los ajustes.",
+    leadAnswerBlock: "**AquaVoice es una app de dictado por voz que inserta lo que dices en la app activa; para el trabajo con IA su valor es el contexto: hablas con mucho más detalle del que teclearías.** En el MacBook del autor fue estable; la ventana de destino debe estar activa.",
     quickAnswerTop: {
       es: {
         question: '¿Vale la pena usar AquaVoice para dictar prompts de IA?',
@@ -1144,7 +1144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: ['Avalon 1.5'],
     current_hardware_mentioned: [],
-    leadAnswerBlock: "**O AquaVoice é um app de ditado por voz que insere o que você diz, como texto, no app que estiver ativo; para o trabalho com IA, o valor dele é o contexto: você fala com muito mais detalhe por pedido do que digitaria.** No uso do próprio autor em um MacBook, ele foi estável, lidou com alemão, inglês, francês e russo e teve duas peculiaridades: a janela de destino precisa estar ativa e, de vez em quando, ele passou para o modo de tradução até que o idioma fosse fixado nas configurações.",
+    leadAnswerBlock: "**O AquaVoice é um app de ditado por voz que insere o que você diz no app ativo; para o trabalho com IA, o valor dele é o contexto: você fala com muito mais detalhe do que digitaria.** No MacBook do autor foi estável; a janela de destino deve estar ativa.",
     quickAnswerTop: {
       pt: {
         question: 'Vale a pena usar o AquaVoice para ditar prompts de IA?',
@@ -1963,7 +1963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: ['Avalon 1.5'],
     current_hardware_mentioned: [],
-    leadAnswerBlock: "**AquaVoice تطبيق للإملاء الصوتي يُدرج ما تقوله، كنص، في أي تطبيق نشط — وقيمته في أعمال الذكاء الاصطناعي هي السياق: فأنت تتحدث بتفاصيل أكثر بكثير في كل طلب مما كنت ستكتبه.** في الاستخدام الشخصي للكاتب على MacBook كان التطبيق مستقرًا، وتعامل مع الألمانية والإنجليزية والفرنسية والروسية، وظهرت له ملاحظتان: يجب أن تكون النافذة المستهدفة نشطة، وأحيانًا انزلق التطبيق إلى وضع الترجمة حتى تم تثبيت اللغة في الإعدادات.",
+    leadAnswerBlock: "**AquaVoice تطبيق للإملاء الصوتي يُدرج ما تقوله، كنص، في أي تطبيق نشط — وقيمته في أعمال الذكاء الاصطناعي هي السياق: فأنت تتحدث بتفاصيل أكثر بكثير في كل طلب مما كنت ستكتبه.** على MacBook الخاص بالكاتب كان التطبيق مستقرًا، ويجب أن تكون النافذة المستهدفة نشطة.",
     quickAnswerTop: {
       ar: {
         question: 'هل يستحق AquaVoice الاستخدام لإملاء أوامر الذكاء الاصطناعي؟',
