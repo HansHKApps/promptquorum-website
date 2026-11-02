@@ -18,7 +18,7 @@ export const app: ToolRecord = {
   license: 'Apache-2.0',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true },
-  stars: 29319, // github.com/chroma-core/chroma, verified 2026-09-18
+  stars: 29622, // github.com/chroma-core/chroma, verified 2026-09-18
   addedDate: '2026-09-18',
   status: 'listed',
   uses: ['build', 'docs'],

@@ -27,6 +27,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "weaviate-review",
+        "title": "Weaviate Review: The Self-Hostable Vector Database for RAG",
+        "url": "/power-local-llm/weaviate-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "hillnote-review",
         "title": "Hillnote Review: Local-First Markdown Notes With On-Device AI",
         "url": "/power-local-llm/hillnote-review",
@@ -70,14 +78,6 @@
         "slug": "best-local-llm-apps-mac",
         "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
         "url": "/power-local-llm/best-local-llm-apps-mac",
-        "dateModified": "2026-10-31",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-app-alternatives",
-        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
-        "url": "/power-local-llm/local-llm-app-alternatives",
         "dateModified": "2026-10-31",
         "tier": "about"
       }
@@ -3873,6 +3873,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "milvus-review",
+        "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
+        "url": "/power-local-llm/milvus-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "dify-ai-workflow-builder-review",
         "title": "Dify Review: Open-Source LLMOps Platform vs. LangChain, Flowise",
         "url": "/power-local-llm/dify-ai-workflow-builder-review",
@@ -3900,14 +3908,6 @@
         "slug": "chroma-review",
         "title": "Chroma Review: Open-Source Vector Database for AI and RAG",
         "url": "/power-local-llm/chroma-review",
-        "dateModified": "2026-09-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "milvus-review",
-        "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
-        "url": "/power-local-llm/milvus-review",
         "dateModified": "2026-09-18",
         "tier": "about"
       },
@@ -4115,18 +4115,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "weaviate-review",
-        "title": "Weaviate Review: The Self-Hostable Vector Database for RAG",
-        "url": "/power-local-llm/weaviate-review",
-        "dateModified": "2026-09-19",
+        "slug": "milvus-review",
+        "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
+        "url": "/power-local-llm/milvus-review",
+        "dateModified": "2026-11-02",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "milvus-review",
-        "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
-        "url": "/power-local-llm/milvus-review",
-        "dateModified": "2026-09-18",
+        "slug": "weaviate-review",
+        "title": "Weaviate Review: The Self-Hostable Vector Database for RAG",
+        "url": "/power-local-llm/weaviate-review",
+        "dateModified": "2026-11-02",
         "tier": "mentioned"
       },
       {
@@ -4149,6 +4149,14 @@
         "title": "LangChain Review: Features, Pricing, Alternatives",
         "url": "/power-local-llm/langchain-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "milvus-review",
+        "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
+        "url": "/power-local-llm/milvus-review",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -4196,14 +4204,6 @@
         "slug": "langchain-chatchat-review",
         "title": "Langchain-Chatchat Review: Self-Hosted RAG and Agent Framework",
         "url": "/power-local-llm/langchain-chatchat-review",
-        "dateModified": "2026-09-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "milvus-review",
-        "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
-        "url": "/power-local-llm/milvus-review",
         "dateModified": "2026-09-18",
         "tier": "about"
       },
@@ -10750,6 +10750,22 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-vector-database-2026",
+        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
+        "url": "/local-llms/best-vector-database",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "weaviate-review",
+        "title": "Weaviate Review: The Self-Hostable Vector Database for RAG",
+        "url": "/power-local-llm/weaviate-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "enterprise-rag-vector-database-deployment-guide-2026",
         "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
@@ -10763,14 +10779,6 @@
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
         "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "weaviate-review",
-        "title": "Weaviate Review: The Self-Hostable Vector Database for RAG",
-        "url": "/power-local-llm/weaviate-review",
-        "dateModified": "2026-09-19",
         "tier": "about"
       },
       {
@@ -10795,14 +10803,6 @@
         "title": "txtai Review: The Embedded Vector Database That Skips the Server",
         "url": "/power-local-llm/txtai-embedded-vector-database-review",
         "dateModified": "2026-09-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-vector-database-2026",
-        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
-        "url": "/local-llms/best-vector-database",
-        "dateModified": "2026-09-01",
         "tier": "about"
       },
       {
@@ -11524,7 +11524,7 @@
         "slug": "milvus-review",
         "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
         "url": "/power-local-llm/milvus-review",
-        "dateModified": "2026-09-18",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -11564,7 +11564,7 @@
         "slug": "weaviate-review",
         "title": "Weaviate Review: The Self-Hostable Vector Database for RAG",
         "url": "/power-local-llm/weaviate-review",
-        "dateModified": "2026-09-19",
+        "dateModified": "2026-11-02",
         "tier": "mentioned"
       },
       {
@@ -11895,6 +11895,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "best-vector-database-2026",
+        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
+        "url": "/local-llms/best-vector-database",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "mram-in-memory-computing-local-ai-2026",
         "title": "MRAM and In-Memory Computing: The Next Leap for On-Device AI?",
         "url": "/local-llms/mram-in-memory-computing-local-ai",
@@ -11914,6 +11922,14 @@
         "slug": "local-ai-agents-with-mcp",
         "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
         "url": "/power-local-llm/local-ai-agents-with-mcp",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "milvus-review",
+        "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
+        "url": "/power-local-llm/milvus-review",
         "dateModified": "2026-11-02",
         "tier": "mentioned"
       },
@@ -11948,22 +11964,6 @@
         "url": "/local-llms/framework-desktop-local-ai-workstation",
         "dateModified": "2026-10-31",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-mac",
-        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
-        "url": "/power-local-llm/best-local-llm-apps-mac",
-        "dateModified": "2026-10-31",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "acdsee-photo-studio-ultimate-review",
-        "title": "ACDSee Photo Studio Ultimate 2027 Review: Photo Editor With Local and Cloud AI",
-        "url": "/power-local-llm/acdsee-photo-studio-ultimate-review",
-        "dateModified": "2026-10-30",
-        "tier": "mentioned"
       }
     ],
     "totalCount": 245,
@@ -11977,6 +11977,30 @@
         "title": "Qdrant Review: The Self-Hosted Vector Database for RAG",
         "url": "/power-local-llm/qdrant-review",
         "dateModified": "2026-09-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-vector-database-2026",
+        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
+        "url": "/local-llms/best-vector-database",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "milvus-review",
+        "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
+        "url": "/power-local-llm/milvus-review",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "weaviate-review",
+        "title": "Weaviate Review: The Self-Hostable Vector Database for RAG",
+        "url": "/power-local-llm/weaviate-review",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -12021,34 +12045,10 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "weaviate-review",
-        "title": "Weaviate Review: The Self-Hostable Vector Database for RAG",
-        "url": "/power-local-llm/weaviate-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "chroma-review",
         "title": "Chroma Review: Open-Source Vector Database for AI and RAG",
         "url": "/power-local-llm/chroma-review",
         "dateModified": "2026-09-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "milvus-review",
-        "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
-        "url": "/power-local-llm/milvus-review",
-        "dateModified": "2026-09-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "anythingllm-review",
-        "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
-        "url": "/power-local-llm/anythingllm-review",
-        "dateModified": "2026-09-11",
         "tier": "about"
       }
     ],
@@ -12408,7 +12408,15 @@
         "slug": "weaviate-review",
         "title": "Weaviate Review: The Self-Hostable Vector Database for RAG",
         "url": "/power-local-llm/weaviate-review",
-        "dateModified": "2026-09-19",
+        "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-vector-database-2026",
+        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
+        "url": "/local-llms/best-vector-database",
+        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {
@@ -12457,14 +12465,6 @@
         "title": "Haystack Review: deepset's RAG Framework vs. LangChain and LlamaIndex",
         "url": "/power-local-llm/haystack-deepset-rag-framework-review",
         "dateModified": "2026-09-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-vector-database-2026",
-        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
-        "url": "/local-llms/best-vector-database",
-        "dateModified": "2026-09-01",
         "tier": "about"
       },
       {

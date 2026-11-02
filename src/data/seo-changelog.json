@@ -8592,5 +8592,860 @@
       "period": "28d to 2026-11-01"
     },
     "deployedAt": null
+  },
+  {
+    "id": "96a2229b-242f-45e5-81d6-4cdf75538bcb",
+    "slug": "/local-llms/best-vector-database",
+    "date": "2026-11-02T12:26:21.417Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best Vector Database 2026",
+        "new": "Best Vector Database 2026: Qdrant vs Pinecone vs Chroma"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qdrant has 34.2k stars and a free-forever cloud tier, Pinecone starts at $20/month, Weaviate added a no-expiry free tier in June 2026. All four now have one.",
+        "new": "Best vector database 2026: Qdrant (35k+ GitHub stars, free-forever cloud tier), Pinecone from $20/month, Weaviate and Chroma compared for RAG."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Titles/metas into locale budget (EN seoTitle was 25 chars, metas 140-171); head terms \"best vector database 2026\", \"qdrant vs chroma\" in title; leads cut to <=50 words; month snapshots removed; stars refreshed (Qdrant 35,383, Chroma 29,622, Weaviate 16,934); pricing re-read from vendor pages 2026-11-02.",
+    "queries": [
+      "best vector database 2026",
+      "chromadb alternatives",
+      "qdrant vs chroma",
+      "self hosted vector database"
+    ],
+    "baseline": {
+      "position": 12.72,
+      "impressions": 875,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "775c83ee-1fb5-4c79-9f36-dfc359d03286",
+    "slug": "/de/local-llms/best-vector-database",
+    "date": "2026-11-02T12:26:21.448Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Beste Vektordatenbank 2026",
+        "new": "Beste Vektordatenbank 2026: Qdrant vs Pinecone vs Chroma"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qdrant hat 34.242 Sterne und eine dauerhaft kostenlose Cloud-Stufe, Pinecone startet bei 20 $/Monat, Weaviate hat im Juni 2026 eine unbefristete Gratisstufe ergänzt. Alle vier haben jetzt eine.",
+        "new": "Beste Vektordatenbank 2026: Qdrant (35k+ GitHub-Sterne, dauerhaft gratis in der Cloud), Pinecone ab 20 $/Monat, Weaviate und Chroma für RAG im Vergleich."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Titles/metas into locale budget (EN seoTitle was 25 chars, metas 140-171); head terms \"best vector database 2026\", \"qdrant vs chroma\" in title; leads cut to <=50 words; month snapshots removed; stars refreshed (Qdrant 35,383, Chroma 29,622, Weaviate 16,934); pricing re-read from vendor pages 2026-11-02.",
+    "queries": [
+      "best vector database 2026",
+      "chromadb alternatives",
+      "qdrant vs chroma",
+      "self hosted vector database"
+    ],
+    "baseline": {
+      "position": 9.26,
+      "impressions": 47,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "53779180-50e8-49af-af61-9e6d0b4f71d8",
+    "slug": "/fr/local-llms/best-vector-database",
+    "date": "2026-11-02T12:26:21.476Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Meilleure base de donnees vectorielle 2026",
+        "new": "Meilleure base vectorielle 2026 : Qdrant vs Pinecone"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qdrant compte 34 242 etoiles et un palier cloud gratuit a vie, Pinecone demarre a 20 $/mois, Weaviate a ajoute un palier gratuit sans expiration en juin 2026. Les quatre en ont un desormais. Verifie en aout 2026.",
+        "new": "Meilleure base vectorielle 2026 : Qdrant (35k+ étoiles GitHub, cloud gratuit à vie), Pinecone dès 20 $/mois, Weaviate et Chroma comparés pour le RAG."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Titles/metas into locale budget (EN seoTitle was 25 chars, metas 140-171); head terms \"best vector database 2026\", \"qdrant vs chroma\" in title; leads cut to <=50 words; month snapshots removed; stars refreshed (Qdrant 35,383, Chroma 29,622, Weaviate 16,934); pricing re-read from vendor pages 2026-11-02.",
+    "queries": [
+      "best vector database 2026",
+      "chromadb alternatives",
+      "qdrant vs chroma",
+      "self hosted vector database"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7709dd96-4695-47c8-b748-f197ad84d51b",
+    "slug": "/ja/local-llms/best-vector-database",
+    "date": "2026-11-02T12:26:21.505Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026年 最適なベクトルデータベース",
+        "new": "ベクトルDB比較2026：Qdrant・Pinecone"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qdrantはスター34,242件で永続無料のクラウド枠、Pineconeは月20ドルから、Weaviateは2026年6月に無期限の無料枠を追加。4製品すべてに無料枠があります。2026年8月時点で確認。",
+        "new": "2026年のベクトルデータベース比較：Qdrant（GitHubスター35k超、永年無料のクラウド枠）、Pineconeは月20ドルから、WeaviateとChromaもRAG向けに比較。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Titles/metas into locale budget (EN seoTitle was 25 chars, metas 140-171); head terms \"best vector database 2026\", \"qdrant vs chroma\" in title; leads cut to <=50 words; month snapshots removed; stars refreshed (Qdrant 35,383, Chroma 29,622, Weaviate 16,934); pricing re-read from vendor pages 2026-11-02.",
+    "queries": [
+      "best vector database 2026",
+      "chromadb alternatives",
+      "qdrant vs chroma",
+      "self hosted vector database"
+    ],
+    "baseline": {
+      "position": 15.26,
+      "impressions": 35,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "141628f5-473e-4681-8221-729ff8c92820",
+    "slug": "/zh/local-llms/best-vector-database",
+    "date": "2026-11-02T12:26:21.533Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026年最佳向量数据库",
+        "new": "最佳向量数据库2026：Qdrant vs Pinecone"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qdrant 拥有 34,242 星标和永久免费的云层级，Pinecone 每月 20 美元起，Weaviate 于 2026 年 6 月新增了不过期的免费层级。四者现在都有。",
+        "new": "2026年最佳向量数据库对比:Qdrant(GitHub星标3.5万+,云端永久免费层)、Pinecone每月20美元起,以及Weaviate和Chroma的RAG适用性。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Titles/metas into locale budget (EN seoTitle was 25 chars, metas 140-171); head terms \"best vector database 2026\", \"qdrant vs chroma\" in title; leads cut to <=50 words; month snapshots removed; stars refreshed (Qdrant 35,383, Chroma 29,622, Weaviate 16,934); pricing re-read from vendor pages 2026-11-02.",
+    "queries": [
+      "best vector database 2026",
+      "chromadb alternatives",
+      "qdrant vs chroma",
+      "self hosted vector database"
+    ],
+    "baseline": {
+      "position": 4.14,
+      "impressions": 21,
+      "clicks": 2,
+      "ctr": 0.09523809523809523,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "90f96d4e-2dbb-43c4-93c7-a507ef6bb8a8",
+    "slug": "/es/local-llms/best-vector-database",
+    "date": "2026-11-02T12:26:21.561Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Mejor base de datos vectorial 2026",
+        "new": "Mejor base de datos vectorial 2026: Qdrant vs Pinecone"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qdrant tiene 34.242 estrellas y un nivel gratuito permanente en la nube, Pinecone arranca en 20 $/mes y Weaviate añadió un nivel gratuito sin caducidad en junio de 2026. Los cuatro ya tienen uno.",
+        "new": "Mejor base de datos vectorial 2026: Qdrant (35k+ estrellas en GitHub, nube gratis), Pinecone desde 20 $/mes, Weaviate y Chroma comparados para RAG."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Titles/metas into locale budget (EN seoTitle was 25 chars, metas 140-171); head terms \"best vector database 2026\", \"qdrant vs chroma\" in title; leads cut to <=50 words; month snapshots removed; stars refreshed (Qdrant 35,383, Chroma 29,622, Weaviate 16,934); pricing re-read from vendor pages 2026-11-02.",
+    "queries": [
+      "best vector database 2026",
+      "chromadb alternatives",
+      "qdrant vs chroma",
+      "self hosted vector database"
+    ],
+    "baseline": {
+      "position": 9.78,
+      "impressions": 68,
+      "clicks": 1,
+      "ctr": 0.014705882352941176,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "76a33316-8caf-4779-8b9c-d4bd38bbda2d",
+    "slug": "/pt/local-llms/best-vector-database",
+    "date": "2026-11-02T12:26:21.588Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Melhor banco de dados vetorial 2026",
+        "new": "Melhor banco vetorial 2026: Qdrant vs Pinecone vs Chroma"
+      },
+      {
+        "field": "metaDescription",
+        "old": "O Qdrant tem 34.242 estrelas e um nível gratuito permanente na nuvem, o Pinecone começa em US$ 20/mês e o Weaviate ganhou um nível gratuito sem expiração em junho de 2026. Os quatro já têm um.",
+        "new": "Melhor banco vetorial 2026: Qdrant (35k+ estrelas no GitHub, nuvem grátis), Pinecone desde US$ 20/mês, Weaviate e Chroma comparados para RAG."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Titles/metas into locale budget (EN seoTitle was 25 chars, metas 140-171); head terms \"best vector database 2026\", \"qdrant vs chroma\" in title; leads cut to <=50 words; month snapshots removed; stars refreshed (Qdrant 35,383, Chroma 29,622, Weaviate 16,934); pricing re-read from vendor pages 2026-11-02.",
+    "queries": [
+      "best vector database 2026",
+      "chromadb alternatives",
+      "qdrant vs chroma",
+      "self hosted vector database"
+    ],
+    "baseline": {
+      "position": 6,
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "298583f3-3f5c-481a-b968-2c937335fc31",
+    "slug": "/ar/local-llms/best-vector-database",
+    "date": "2026-11-02T12:26:21.616Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "أفضل قاعدة بيانات متجهية 2026",
+        "new": "أفضل قاعدة بيانات متجهية 2026: Qdrant مقابل Pinecone"
+      },
+      {
+        "field": "metaDescription",
+        "old": "يملك Qdrant‏ 34,242 نجمة وطبقة سحابية مجانية دائمًا، ويبدأ Pinecone من 20 دولارًا شهريًا، وأضاف Weaviate طبقة مجانية بلا انتهاء في يونيو 2026. الأربعة جميعًا لديها واحدة الآن. جرى.",
+        "new": "أفضل قاعدة بيانات متجهية 2026: Qdrant (أكثر من 35 ألف نجمة، طبقة مجانية دائماً)، وPinecone من 20 دولاراً شهرياً، مع Weaviate وChroma لـ RAG."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Titles/metas into locale budget (EN seoTitle was 25 chars, metas 140-171); head terms \"best vector database 2026\", \"qdrant vs chroma\" in title; leads cut to <=50 words; month snapshots removed; stars refreshed (Qdrant 35,383, Chroma 29,622, Weaviate 16,934); pricing re-read from vendor pages 2026-11-02.",
+    "queries": [
+      "best vector database 2026",
+      "chromadb alternatives",
+      "qdrant vs chroma",
+      "self hosted vector database"
+    ],
+    "baseline": {
+      "position": 9.5,
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8dc038dc-2bde-409a-9288-1e02814636f7",
+    "slug": "/ko/local-llms/best-vector-database",
+    "date": "2026-11-02T12:26:21.644Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026년 최고의 벡터 데이터베이스",
+        "new": "최고의 벡터 DB 2026: Qdrant vs Pinecone"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qdrant는 스타 34,242개에 영구 무료 클라우드 등급, Pinecone은 월 20달러부터, Weaviate는 2026년 6월 만료 없는 무료 등급을 추가했습니다. 이제 넷 다 무료 등급이 있습니다.",
+        "new": "2026 최고의 벡터 데이터베이스: Qdrant(GitHub 스타 3.5만+, 영구 무료 클라우드), Pinecone 월 20달러부터, Weaviate와 Chroma를 RAG 기준으로 비교."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Titles/metas into locale budget (EN seoTitle was 25 chars, metas 140-171); head terms \"best vector database 2026\", \"qdrant vs chroma\" in title; leads cut to <=50 words; month snapshots removed; stars refreshed (Qdrant 35,383, Chroma 29,622, Weaviate 16,934); pricing re-read from vendor pages 2026-11-02.",
+    "queries": [
+      "best vector database 2026",
+      "chromadb alternatives",
+      "qdrant vs chroma",
+      "self hosted vector database"
+    ],
+    "baseline": {
+      "position": 6.19,
+      "impressions": 27,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c0bb1378-53da-41d2-b97a-6b8da62e0834",
+    "slug": "/power-local-llm/weaviate-review",
+    "date": "2026-11-02T12:26:21.727Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Weaviate Review: Self-Hosted Vector DB",
+        "new": "Weaviate Review 2026: License, Pricing and Self-Hosting"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Weaviate is an open-source, self-hostable vector database for RAG and semantic search. Verified license, install steps, and features for 2026.",
+        "new": "Weaviate review: BSD-3 core plus paid-license features, Docker and Kubernetes self-hosting, a free cloud tier and Flex from $45/month. Facts for 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Title/meta/lead rewritten around license, pricing and self-hosting (queries: weaviate license, weaviate reviews); leads <=50 words; v1.40 Namespaces GA added, Docker tag 1.40.3, stars refreshed, month snapshots removed.",
+    "queries": [
+      "weaviate",
+      "weaviate reviews",
+      "weaviate license",
+      "self hosted vector database"
+    ],
+    "baseline": {
+      "position": 7.93,
+      "impressions": 1268,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "28984b00-e0a3-4fe6-8b10-35f3df68720a",
+    "slug": "/de/power-local-llm/weaviate-review",
+    "date": "2026-11-02T12:26:21.755Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Weaviate-Rezension: Self-Hosted Vektor-DB",
+        "new": "Weaviate Test 2026: Lizenz, Preise und Self-Hosting"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Weaviate ist eine Open-Source-Vektordatenbank zum Selbsthosten für RAG und semantische Suche. Lizenz, Installation und Funktionen im Rezension 2026.",
+        "new": "Weaviate im Test: BSD-3-Kern plus kostenpflichtige Lizenzfunktionen, Self-Hosting mit Docker und Kubernetes, kostenlose Cloud-Stufe und Flex ab 45 $/Monat."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Title/meta/lead rewritten around license, pricing and self-hosting (queries: weaviate license, weaviate reviews); leads <=50 words; v1.40 Namespaces GA added, Docker tag 1.40.3, stars refreshed, month snapshots removed.",
+    "queries": [
+      "weaviate",
+      "weaviate reviews",
+      "weaviate license",
+      "self hosted vector database"
+    ],
+    "baseline": {
+      "position": 6.96,
+      "impressions": 53,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e843288c-3c46-4099-83dd-29d88425101d",
+    "slug": "/fr/power-local-llm/weaviate-review",
+    "date": "2026-11-02T12:26:21.783Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Weaviate: base vectorielle auto-hébergée",
+        "new": "Avis Weaviate 2026 : licence, prix et auto-hébergement"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Weaviate est une base de données vectorielle open source et auto-hébergeable pour le RAG et la recherche sémantique. Licence, installation et fonctionnalités 2026.",
+        "new": "Avis Weaviate : cœur BSD-3 et fonctions sous licence payante, auto-hébergement Docker et Kubernetes, offre cloud gratuite et Flex dès 45 $/mois en 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Title/meta/lead rewritten around license, pricing and self-hosting (queries: weaviate license, weaviate reviews); leads <=50 words; v1.40 Namespaces GA added, Docker tag 1.40.3, stars refreshed, month snapshots removed.",
+    "queries": [
+      "weaviate",
+      "weaviate reviews",
+      "weaviate license",
+      "self hosted vector database"
+    ],
+    "baseline": {
+      "position": 6.89,
+      "impressions": 28,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d1f48520-9e49-4466-8580-1a54dc9df232",
+    "slug": "/ja/power-local-llm/weaviate-review",
+    "date": "2026-11-02T12:26:21.810Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Weaviateレビュー: セルフホスト型ベクトルDB",
+        "new": "Weaviateレビュー2026：ライセンスと料金"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Weaviateはオープンソースでセルフホスト可能なRAG・セマンティック検索用ベクトルDB。ライセンス、インストール手順、2026年の機能を検証。",
+        "new": "Weaviateレビュー：BSD-3のコアと有償ライセンス機能、DockerとKubernetesでのセルフホスト、無料クラウド枠、Flexは月45ドルから。2026年の最新情報。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Title/meta/lead rewritten around license, pricing and self-hosting (queries: weaviate license, weaviate reviews); leads <=50 words; v1.40 Namespaces GA added, Docker tag 1.40.3, stars refreshed, month snapshots removed.",
+    "queries": [
+      "weaviate",
+      "weaviate reviews",
+      "weaviate license",
+      "self hosted vector database"
+    ],
+    "baseline": {
+      "position": 7.12,
+      "impressions": 32,
+      "clicks": 3,
+      "ctr": 0.09375,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "51360187-d822-44ea-9759-484eb9da665b",
+    "slug": "/zh/power-local-llm/weaviate-review",
+    "date": "2026-11-02T12:26:21.838Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Weaviate评测：自托管向量数据库",
+        "new": "Weaviate评测2026:许可证、定价与自托管"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Weaviate是开源、可自托管的RAG与语义搜索向量数据库。本文核实其许可证、安装步骤及2026年功能。",
+        "new": "Weaviate评测:BSD-3核心加付费许可功能,支持Docker和Kubernetes自托管,云端有免费层,Flex每月45美元起。2026年最新事实。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Title/meta/lead rewritten around license, pricing and self-hosting (queries: weaviate license, weaviate reviews); leads <=50 words; v1.40 Namespaces GA added, Docker tag 1.40.3, stars refreshed, month snapshots removed.",
+    "queries": [
+      "weaviate",
+      "weaviate reviews",
+      "weaviate license",
+      "self hosted vector database"
+    ],
+    "baseline": {
+      "position": 7.18,
+      "impressions": 22,
+      "clicks": 1,
+      "ctr": 0.045454545454545456,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "5dc86251-7905-4554-8a29-8a757dd7b4d3",
+    "slug": "/es/power-local-llm/weaviate-review",
+    "date": "2026-11-02T12:26:21.866Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Weaviate: base de datos vectorial self-hosted",
+        "new": "Weaviate: análisis 2026 de licencia y autoalojamiento"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Weaviate es una base de datos vectorial de código abierto y autoalojable para RAG y búsqueda semántica. Licencia, instalación y funciones en 2026.",
+        "new": "Análisis de Weaviate: núcleo BSD-3 más funciones de pago, autoalojamiento con Docker y Kubernetes, nube con plan gratuito y Flex desde 45 $/mes en 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Title/meta/lead rewritten around license, pricing and self-hosting (queries: weaviate license, weaviate reviews); leads <=50 words; v1.40 Namespaces GA added, Docker tag 1.40.3, stars refreshed, month snapshots removed.",
+    "queries": [
+      "weaviate",
+      "weaviate reviews",
+      "weaviate license",
+      "self hosted vector database"
+    ],
+    "baseline": {
+      "position": 6.97,
+      "impressions": 96,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c8cc05c9-84f8-4138-a5c9-1b75d3536dcd",
+    "slug": "/pt/power-local-llm/weaviate-review",
+    "date": "2026-11-02T12:26:21.893Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Weaviate: banco vetorial self-hosted",
+        "new": "Weaviate: análise 2026 de licença, preços e hospedagem"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Weaviate é um banco de dados vetorial de código aberto e auto-hospedável para RAG e busca semântica. Licença, instalação e recursos verificados em 2026.",
+        "new": "Análise do Weaviate: núcleo BSD-3 e recursos de licença paga, auto-hospedagem com Docker e Kubernetes, nuvem grátis e Flex desde US$ 45/mês em 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Title/meta/lead rewritten around license, pricing and self-hosting (queries: weaviate license, weaviate reviews); leads <=50 words; v1.40 Namespaces GA added, Docker tag 1.40.3, stars refreshed, month snapshots removed.",
+    "queries": [
+      "weaviate",
+      "weaviate reviews",
+      "weaviate license",
+      "self hosted vector database"
+    ],
+    "baseline": {
+      "position": 6.46,
+      "impressions": 13,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c12dbb10-00c9-43f8-9ca2-a2378e1636c5",
+    "slug": "/ar/power-local-llm/weaviate-review",
+    "date": "2026-11-02T12:26:21.921Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Weaviate: قاعدة بيانات متجهية ذاتية الاستضافة",
+        "new": "مراجعة Weaviate 2026: الترخيص والأسعار والاستضافة"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Weaviate قاعدة بيانات متجهية مفتوحة المصدر وقابلة للاستضافة الذاتية لـ RAG والبحث الدلالي. الترخيص وخطوات التثبيت والميزات لعام 2026.",
+        "new": "مراجعة Weaviate: نواة BSD-3 مع ميزات بترخيص مدفوع، واستضافة ذاتية عبر Docker وKubernetes، وطبقة سحابية مجانية وFlex بدءاً من 45 دولاراً شهرياً."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Title/meta/lead rewritten around license, pricing and self-hosting (queries: weaviate license, weaviate reviews); leads <=50 words; v1.40 Namespaces GA added, Docker tag 1.40.3, stars refreshed, month snapshots removed.",
+    "queries": [
+      "weaviate",
+      "weaviate reviews",
+      "weaviate license",
+      "self hosted vector database"
+    ],
+    "baseline": {
+      "position": 14.33,
+      "impressions": 6,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "681a2735-5af5-40f8-94da-f5205503d912",
+    "slug": "/ko/power-local-llm/weaviate-review",
+    "date": "2026-11-02T12:26:21.949Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Weaviate 리뷰: 셀프 호스팅 벡터 DB",
+        "new": "Weaviate 리뷰 2026: 라이선스·가격·셀프호스팅"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Weaviate는 RAG와 시맨틱 검색을 위한 오픈소스 셀프 호스팅 벡터 데이터베이스입니다. 라이선스, 설치 절차, 2026년 기준 기능을 검증했습니다.",
+        "new": "Weaviate 리뷰: BSD-3 코어와 유료 라이선스 기능, Docker·Kubernetes 셀프 호스팅, 무료 클라우드 티어, Flex 월 45달러부터. 2026년 기준 정보."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Title/meta/lead rewritten around license, pricing and self-hosting (queries: weaviate license, weaviate reviews); leads <=50 words; v1.40 Namespaces GA added, Docker tag 1.40.3, stars refreshed, month snapshots removed.",
+    "queries": [
+      "weaviate",
+      "weaviate reviews",
+      "weaviate license",
+      "self hosted vector database"
+    ],
+    "baseline": {
+      "position": 6.97,
+      "impressions": 143,
+      "clicks": 2,
+      "ctr": 0.013986013986013986,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a794585f-d033-47c5-b031-9333fe2f3656",
+    "slug": "/power-local-llm/milvus-review",
+    "date": "2026-11-02T12:26:22.020Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Milvus Review: Open-Source Vector Database",
+        "new": "What Is Milvus? Open-Source Vector Database Review 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Milvus is a free, open-source, self-hostable vector database for RAG and similarity search, from a single pip install to Kubernetes clusters. Verified facts for 2026.",
+        "new": "Milvus review: free Apache-2.0 vector database for RAG, from pip-installed Milvus Lite to Kubernetes. Milvus 3.0 adds lake-native search. Facts for 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Title targets \"what is Milvus\"; metas into budget; leads <=50 words; Milvus 3.0 (2026-07-29) timeline item added, 2.6.x updated to 2.6.26, stars refreshed, month snapshots removed.",
+    "queries": [
+      "what is milvus",
+      "milvus",
+      "open-source milvus"
+    ],
+    "baseline": {
+      "position": 10.47,
+      "impressions": 730,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a6b3938d-3246-4d01-a03b-d866ac99a205",
+    "slug": "/de/power-local-llm/milvus-review",
+    "date": "2026-11-02T12:26:22.048Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Milvus Review: Quelloffene Vektordatenbank",
+        "new": "Was ist Milvus? Vektordatenbank im Test 2026 erklärt"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Milvus ist eine kostenlose, quelloffene, selbst hostbare Vektordatenbank für RAG und Ähnlichkeitssuche, von einem einzelnen pip install bis zu Kubernetes-Clustern. Geprüfte Fakten für 2026.",
+        "new": "Milvus im Test: kostenlose Apache-2.0-Vektordatenbank für RAG, von Milvus Lite per pip bis Kubernetes. Milvus 3.0 bringt Lake-native-Suche (2026)."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Title targets \"what is Milvus\"; metas into budget; leads <=50 words; Milvus 3.0 (2026-07-29) timeline item added, 2.6.x updated to 2.6.26, stars refreshed, month snapshots removed.",
+    "queries": [
+      "what is milvus",
+      "milvus",
+      "open-source milvus"
+    ],
+    "baseline": {
+      "position": 12.36,
+      "impressions": 28,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c2a5fabf-b21f-4a10-9248-2737ed8c1cfe",
+    "slug": "/fr/power-local-llm/milvus-review",
+    "date": "2026-11-02T12:26:22.075Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Milvus Avis: base de données vectorielle open source",
+        "new": "Qu'est-ce que Milvus ? Avis sur la base vectorielle 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Milvus est une base de données vectorielle gratuite, open source et auto-hébergeable pour le RAG et la recherche par similarité, d'un simple pip install à des clusters Kubernetes. Faits vérifiés pour 2026.",
+        "new": "Avis Milvus : base vectorielle Apache-2.0 gratuite pour le RAG, de Milvus Lite (pip) à Kubernetes. Milvus 3.0 ajoute la recherche lake-native."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Title targets \"what is Milvus\"; metas into budget; leads <=50 words; Milvus 3.0 (2026-07-29) timeline item added, 2.6.x updated to 2.6.26, stars refreshed, month snapshots removed.",
+    "queries": [
+      "what is milvus",
+      "milvus",
+      "open-source milvus"
+    ],
+    "baseline": {
+      "position": 9.71,
+      "impressions": 7,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c00f7cdc-c0f7-4b8a-b0ae-746b1ecf5872",
+    "slug": "/ja/power-local-llm/milvus-review",
+    "date": "2026-11-02T12:26:22.102Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Milvusレビュー：オープンソースベクトルデータベース",
+        "new": "Milvusとは？ベクトルDBレビュー2026年版"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Milvusは無料・オープンソースのセルフホスト可能なベクトルデータベースで、RAGや類似検索に対応し、pip installひとつからKubernetesクラスターまで対応します。2026年時点で検証済みの事実を紹介します。",
+        "new": "Milvusレビュー：RAG向けの無料Apache-2.0ベクトルDB。pipで入るMilvus LiteからKubernetesまで対応。Milvus 3.0でレイクネイティブ検索を追加。2026年版。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Title targets \"what is Milvus\"; metas into budget; leads <=50 words; Milvus 3.0 (2026-07-29) timeline item added, 2.6.x updated to 2.6.26, stars refreshed, month snapshots removed.",
+    "queries": [
+      "what is milvus",
+      "milvus",
+      "open-source milvus"
+    ],
+    "baseline": {
+      "position": 14.67,
+      "impressions": 9,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7dd9225b-8965-4f5a-96a3-573579394791",
+    "slug": "/zh/power-local-llm/milvus-review",
+    "date": "2026-11-02T12:26:22.130Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Milvus 评测：开源向量数据库",
+        "new": "Milvus是什么?向量数据库评测与指南2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Milvus 是一款免费开源、可自托管的向量数据库，适用于 RAG 与相似度检索，从单条 pip install 到 Kubernetes 集群均可部署。2026 年事实核实版。",
+        "new": "Milvus评测:免费的Apache-2.0向量数据库,适用于RAG,从pip安装的Milvus Lite到Kubernetes。Milvus 3.0新增湖原生检索。2026年事实。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Title targets \"what is Milvus\"; metas into budget; leads <=50 words; Milvus 3.0 (2026-07-29) timeline item added, 2.6.x updated to 2.6.26, stars refreshed, month snapshots removed.",
+    "queries": [
+      "what is milvus",
+      "milvus",
+      "open-source milvus"
+    ],
+    "baseline": {
+      "position": 6.26,
+      "impressions": 39,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "913af05d-c7ac-4446-a3ce-27ecb304bb10",
+    "slug": "/es/power-local-llm/milvus-review",
+    "date": "2026-11-02T12:26:22.158Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Reseña de Milvus: Base de Datos Vectorial de Código Abierto",
+        "new": "¿Qué es Milvus? Análisis de la base vectorial 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Milvus es una base de datos vectorial gratuita, de código abierto y autoalojable para RAG y búsqueda de similitud, desde un simple pip install hasta clústeres de Kubernetes. Datos verificados para 2026.",
+        "new": "Análisis de Milvus: base vectorial Apache-2.0 gratuita para RAG, de Milvus Lite con pip a Kubernetes. Milvus 3.0 añade búsqueda lake-native. Datos de 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Title targets \"what is Milvus\"; metas into budget; leads <=50 words; Milvus 3.0 (2026-07-29) timeline item added, 2.6.x updated to 2.6.26, stars refreshed, month snapshots removed.",
+    "queries": [
+      "what is milvus",
+      "milvus",
+      "open-source milvus"
+    ],
+    "baseline": {
+      "position": 8.69,
+      "impressions": 99,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e2233b00-890f-46bb-b9b2-6d9234147539",
+    "slug": "/pt/power-local-llm/milvus-review",
+    "date": "2026-11-02T12:26:22.186Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Milvus: Análise do Banco de Dados Vetorial Open Source",
+        "new": "O que é o Milvus? Análise do banco vetorial 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Milvus é um banco de dados vetorial gratuito, de código aberto e self-hostable para RAG e busca por similaridade, de um simples pip install até clusters Kubernetes. Fatos verificados para 2026.",
+        "new": "Análise do Milvus: banco vetorial Apache-2.0 gratuito para RAG, do Milvus Lite via pip ao Kubernetes. O Milvus 3.0 traz busca lake-native. Fatos de 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Title targets \"what is Milvus\"; metas into budget; leads <=50 words; Milvus 3.0 (2026-07-29) timeline item added, 2.6.x updated to 2.6.26, stars refreshed, month snapshots removed.",
+    "queries": [
+      "what is milvus",
+      "milvus",
+      "open-source milvus"
+    ],
+    "baseline": {
+      "position": 8.32,
+      "impressions": 34,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "160ab079-cfdd-478a-983b-880099732766",
+    "slug": "/ar/power-local-llm/milvus-review",
+    "date": "2026-11-02T12:26:22.214Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Milvus: قاعدة بيانات متجهية مفتوحة المصدر",
+        "new": "ما هو Milvus؟ مراجعة قاعدة البيانات المتجهية 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Milvus قاعدة بيانات متجهية مجانية ومفتوحة المصدر وقابلة للاستضافة الذاتية لـ RAG والبحث بالتشابه، من أمر pip install واحد إلى عناقيد Kubernetes. حقائق موثقة لعام 2026.",
+        "new": "مراجعة Milvus: قاعدة بيانات متجهية مجانية بترخيص Apache-2.0 لـ RAG، من Milvus Lite إلى Kubernetes. يضيف Milvus 3.0 البحث الأصلي للبحيرات."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Title targets \"what is Milvus\"; metas into budget; leads <=50 words; Milvus 3.0 (2026-07-29) timeline item added, 2.6.x updated to 2.6.26, stars refreshed, month snapshots removed.",
+    "queries": [
+      "what is milvus",
+      "milvus",
+      "open-source milvus"
+    ],
+    "baseline": {
+      "position": 13.2,
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a6a168df-81b7-4398-9f6b-cde3dbffb85b",
+    "slug": "/ko/power-local-llm/milvus-review",
+    "date": "2026-11-02T12:26:22.241Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Milvus 리뷰: 오픈소스 벡터 데이터베이스",
+        "new": "Milvus란? 무료 오픈소스 벡터 DB 리뷰 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Milvus는 단일 pip install부터 Kubernetes 클러스터까지 지원하는 RAG와 유사도 검색용 무료 오픈소스 셀프 호스팅 벡터 데이터베이스입니다. 2026년 기준 검증된 사실.",
+        "new": "Milvus 리뷰: RAG용 무료 Apache-2.0 벡터 DB, pip로 설치하는 Milvus Lite부터 Kubernetes까지. Milvus 3.0에서 레이크 네이티브 검색 추가."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 2. Title targets \"what is Milvus\"; metas into budget; leads <=50 words; Milvus 3.0 (2026-07-29) timeline item added, 2.6.x updated to 2.6.26, stars refreshed, month snapshots removed.",
+    "queries": [
+      "what is milvus",
+      "milvus",
+      "open-source milvus"
+    ],
+    "baseline": {
+      "position": 12.61,
+      "impressions": 154,
+      "clicks": 1,
+      "ctr": 0.006493506493506494,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
   }
 ]
