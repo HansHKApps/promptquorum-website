@@ -184,7 +184,7 @@ https://www.promptquorum.com/local-llms/mcp-vs-api-explained
 https://www.promptquorum.com/local-llms/minisforum-ms-s1-max-local-ai-workstation
 https://www.promptquorum.com/local-llms/mlx-vs-ollama-vs-llama-cpp-mac
 https://www.promptquorum.com/local-llms/mobile-local-llms
-https://www.promptquorum.com/local-llms/mram-in-memory-computing-local-ai-2026
+https://www.promptquorum.com/local-llms/mram-in-memory-computing-local-ai
 https://www.promptquorum.com/local-llms/multi-gpu-local-llms
 https://www.promptquorum.com/local-llms/multilingual-local-llms
 https://www.promptquorum.com/local-llms/multimodal-local-llms
@@ -455,7 +455,7 @@ https://www.promptquorum.com/power-local-llm/llm-vision-review
 https://www.promptquorum.com/power-local-llm/lm-mini-review
 https://www.promptquorum.com/power-local-llm/lm-playground-review
 https://www.promptquorum.com/power-local-llm/lm-studio-review
-https://www.promptquorum.com/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026
+https://www.promptquorum.com/power-local-llm/lm-studio-vs-jan-vs-gpt4all
 https://www.promptquorum.com/power-local-llm/lmdeploy-review
 https://www.promptquorum.com/power-local-llm/local-ai-agents-business-workflows-eu-compliance
 https://www.promptquorum.com/power-local-llm/local-ai-agents-with-mcp
