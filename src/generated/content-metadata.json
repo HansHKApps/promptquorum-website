@@ -397,7 +397,7 @@
       ]
     },
     "best-local-llms-2026": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -415,11 +415,11 @@
       "images": [
         {
           "url": "/images/best-local-llms-2026-ranked-comparison-hero-en.webp",
-          "title": "Top 5 local LLMs ranked for 2026: Qwen3.8-27B leads overall at 89.2% GPQA Diamond and ~24 GB RAM, followed by Gemma 4 26B-A4B (89% AIME, ~15 GB), Qwen2.5-Coder 7B (88% HumanEval, ~5 GB), Phi-4-mini (~2.5 GB), and Gemma 4 E2B (~2 GB)."
+          "title": "Top 5 local LLMs ranked for 2026: Qwen3.8-27B leads overall at 89.2% GPQA Diamond and ~24 GB RAM, followed by Gemma 4 26B-A4B (88.3% AIME, 16–19 GB), Qwen2.5-Coder 7B (88% HumanEval, ~5 GB), Phi-4-mini (~2.5 GB), and Gemma 4 E2B (~2 GB)."
         },
         {
           "url": "/images/best-local-llms-2026-ram-tier-picker-hero-en.webp",
-          "title": "RAM tier picker for local LLMs: Gemma 4 E2B fits ~2 GB, Phi-4-mini ~2.5 GB, Qwen2.5-Coder 7B ~5 GB, Gemma 4 26B-A4B ~15 GB, and Qwen3.8-27B needs ~24 GB."
+          "title": "RAM tier picker for local LLMs: Gemma 4 E2B fits ~2 GB, Phi-4-mini ~2.5 GB, Qwen2.5-Coder 7B ~5 GB, Gemma 4 26B-A4B 16–19 GB, and Qwen3.8-27B needs ~24 GB."
         }
       ]
     },
@@ -2987,7 +2987,7 @@
       ]
     },
     "apple-silicon-local-llm-guide-2026": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -7410,8 +7410,8 @@
       ]
     },
     "local-whisper-stt-comparison": {
-      "dateModified": "2026-10-17",
-      "lastFactChecked": "2026-10-17",
+      "dateModified": "2026-11-02",
+      "lastFactChecked": "2026-11-02",
       "publishDate": "2026-05-14",
       "hasSections": true,
       "langs": [

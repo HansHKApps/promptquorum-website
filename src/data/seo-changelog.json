@@ -18750,5 +18750,594 @@
       "t14": "2026-11-16",
       "t28": "2026-11-30"
     }
+  },
+  {
+    "id": "64269657-9425-4f7b-8a4a-8e7eb93c68fd",
+    "slug": "/local-llms/best-local-llms-2026",
+    "date": "2026-11-02T14:24:37.051Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Best local LLMs 2026: Qwen3.8-27B wins overall (89.2% GPQA Diamond, 24 GB RAM, vision-language). Gemma 4 26B-A4B for reasoning. Qwen2.5-Coder 7B for code. Phi-4-mini for CPU-only.",
+        "new": "Best local LLMs 2026 ranked: Qwen3.8-27B is the best 27B model (89.2% GPQA Diamond, 24 GB). Gemma 4 26B-A4B for reasoning, Qwen2.5-Coder 7B for code."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: query-adapted.",
+    "queries": [
+      "best 27b llm",
+      "best 27b models",
+      "gemma 4 26b vs qwen3.8 27b",
+      "best local llm 2026"
+    ],
+    "baseline": {
+      "position": 6.26,
+      "impressions": 14029,
+      "clicks": 40,
+      "ctr": 0.002851236723929004,
+      "period": "28d to 2026-11-01 (EN URL)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b6e753ce-9028-4b99-a17c-3926cca137a7",
+    "slug": "/de/local-llms/best-local-llms-2026",
+    "date": "2026-11-02T14:24:37.154Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Beste lokale LLMs 2026: Qwen3.8-27B, Gemma 4, Phi-4-mini",
+        "new": "Beste lokale LLMs 2026 im Vergleich: Qwen3.8-27B, Gemma 4"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Beste lokale LLMs 2026: Qwen3.8-27B gewinnt insgesamt (89.2% GPQA Diamond, 24 GB RAM). Gemma 4 26B-A4B für Reasoning. Qwen2.5-Coder 7B für Code. Phi-4-mini für CPU-only.",
+        "new": "Beste lokale LLMs 2026 im Vergleich: Qwen3.8-27B gewinnt (89.2% GPQA Diamond, 24 GB). Gemma 4 26B-A4B für Reasoning, Qwen2.5-Coder 7B für Code."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: query-adapted. No per-locale 28d baseline pulled for this entry.",
+    "queries": [
+      "beste lokale llm",
+      "bestes lokales llm",
+      "lokale llms vergleich",
+      "lokale ki modelle vergleich"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "87ff836c-9535-4ab4-8746-1151dc9f7816",
+    "slug": "/fr/local-llms/best-local-llms-2026",
+    "date": "2026-11-02T14:24:37.259Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Meilleurs LLMs locaux 2026 : Qwen3.8-27B, Gemma 4, Phi-4-mini",
+        "new": "Meilleur LLM local 2026 : Qwen3.8-27B, Gemma 4, Phi-4-mini"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Meilleurs LLMs locaux 2026 : Qwen3.8-27B remporte le global (89,2 % GPQA Diamond, 24 GB RAM). Gemma 4 26B-A4B pour le raisonnement. Qwen2.5-Coder 7B pour le code. Phi-4-mini pour CPU uniquement.",
+        "new": "Meilleur LLM local 2026 : Qwen3.8-27B en tête (89,2 % GPQA Diamond, 24 GB). Gemma 4 26B-A4B pour le raisonnement, Qwen2.5-Coder 7B pour le code."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: query-adapted. No per-locale 28d baseline pulled for this entry.",
+    "queries": [
+      "meilleur llm local 2026"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "5056f437-8556-469b-8788-9f730e952fa1",
+    "slug": "/ja/local-llms/best-local-llms-2026",
+    "date": "2026-11-02T14:24:37.360Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026年 最高のローカルLLM：Qwen3.8-27B、Gemma 4、Phi-4-mini",
+        "new": "2026年ローカルLLMランキング：Qwen3.8とGemma4"
+      },
+      {
+        "field": "metaDescription",
+        "old": "2026年の最高ローカルLLMランキング：Qwen3.8-27B（総合最高、GPQA Diamond 89.2%、約24GB）、Gemma 4 26B-A4B（推論最高）、Qwen2.5-Coder 7B（コード HumanEval 88%）、Phi-4-mini（CPU専用）、Gemma 4 E2B（小型）。",
+        "new": "2026年のローカルLLMランキング。Qwen3.8-27B（GPQA Diamond 89.2%、約24GB）とGemma 4 26B-A4Bを比較し、コード用・CPU用のおすすめモデルも紹介します。"
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: query-adapted. No per-locale 28d baseline pulled for this entry.",
+    "queries": [
+      "gemma4 qwen3.8",
+      "qwen3.8 gemma4",
+      "gemma4 qwen3.8 比較",
+      "ローカルllm ランキング",
+      "ローカルllm 27b"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ceae36cc-bf3d-4cf1-b7d9-e6f1cc0df28d",
+    "slug": "/zh/local-llms/best-local-llms-2026",
+    "date": "2026-11-02T14:24:37.462Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026年最佳本地大语言模型：Qwen3.8-27B、Gemma 4、Phi-4-mini",
+        "new": "2026本地大模型排名：Qwen3.8-27B、Gemma 4"
+      },
+      {
+        "field": "metaDescription",
+        "old": "2026年本地LLM排名：Qwen3.8-27B（综合最佳GPQA Diamond 89.2%、约24GB）、Gemma 4 26B-A4B（推理最佳AIME 89%、约15GB）、Qwen2.5-Coder 7B（代码HumanEval 88%、约5GB）、Phi-4-mini（仅CPU、约2.5GB）、Gemma 4 E2B（约2GB）。",
+        "new": "2026年本地大模型排名：Qwen3.8-27B综合最佳（GPQA Diamond 89.2%，约24GB），Gemma 4 26B-A4B擅长推理，Qwen2.5-Coder 7B擅长代码。"
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0dc5dbd8-cc89-426b-b33d-c4d246831355",
+    "slug": "/es/local-llms/best-local-llms-2026",
+    "date": "2026-11-02T14:24:37.575Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Mejores LLMs Locales 2026: Qwen3.8-27B, Gemma 4, Phi-4-mini",
+        "new": "Mejores LLM locales 2026: Qwen3.8-27B, Gemma 4, Phi-4-mini"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Mejores LLMs locales 2026: Qwen3.8-27B gana en general (89.2% GPQA Diamond, 24 GB RAM). Gemma 4 26B-A4B para razonamiento. Qwen2.5-Coder 7B para código. Phi-4-mini para solo CPU.",
+        "new": "Mejores LLM locales 2026: Qwen3.8-27B gana en general (89.2% GPQA Diamond, 24 GB). Gemma 4 26B-A4B para razonar, Qwen2.5-Coder 7B para código."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "1581338b-c8ca-4f16-8646-445c22211334",
+    "slug": "/pt/local-llms/best-local-llms-2026",
+    "date": "2026-11-02T14:24:37.681Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Melhores LLMs locais 2026: Qwen3.8-27B, Gemma 4, Phi-4-mini",
+        "new": "Melhores LLM locais 2026: Qwen3.8-27B, Gemma 4, Phi-4-mini"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Melhores LLMs locais em 2026: Qwen3.8-27B vence no geral (89.2% GPQA Diamond, 24 GB de RAM). Gemma 4 26B-A4B para raciocínio. Qwen2.5-Coder 7B para código. Phi-4-mini apenas para CPU.",
+        "new": "Melhores LLM locais 2026: Qwen3.8-27B vence no geral (89.2% GPQA Diamond, 24 GB). Gemma 4 26B-A4B para raciocínio, Qwen2.5-Coder 7B para código."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "429aa6c0-83fe-4ac4-81c7-1c5462e56509",
+    "slug": "/ar/local-llms/best-local-llms-2026",
+    "date": "2026-11-02T14:24:37.784Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "أفضل نماذج ⁨LLM⁩ المحلية ⁨2026⁩: ⁨Qwen3.8-27B⁩، ⁨Gemma 4⁩، ⁨Phi-4-mini⁩",
+        "new": "أفضل نماذج ⁨LLM⁩ المحلية ⁨2026⁩: ⁨Qwen3.8-27B⁩ و⁨Gemma 4⁩"
+      },
+      {
+        "field": "metaDescription",
+        "old": "أفضل نماذج ⁨LLM⁩ المحلية ⁨2026⁩: ⁨Qwen3.8-27B⁩ يفوز عموماً (⁨89.2% GPQA Diamond⁩، ⁨24 GB RAM⁩). ⁨Gemma 4 26B-A4B⁩ للاستدلال. ⁨Qwen2.5-Coder 7B⁩ للبرمجة. ⁨Phi-4-mini⁩ لوحدة المعالجة المركزية فقط.",
+        "new": "أفضل نماذج ⁨LLM⁩ المحلية ⁨2026⁩: يتصدر ⁨Qwen3.8-27B⁩ (⁨89.2% GPQA Diamond⁩، ⁨24 GB⁩). ⁨Gemma 4 26B-A4B⁩ للاستدلال و⁨Qwen2.5-Coder 7B⁩ للبرمجة."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2fd64a0b-412e-42bd-af92-db6785008a58",
+    "slug": "/ko/local-llms/best-local-llms-2026",
+    "date": "2026-11-02T14:24:37.884Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026년 최고의 로컬 LLM: Qwen3.8-27B, Gemma 4, Phi-4-mini",
+        "new": "2026 로컬 LLM 순위: Qwen3.8, Gemma 4"
+      },
+      {
+        "field": "metaDescription",
+        "old": "2026년 최고의 로컬 LLM 순위: Qwen3.8-27B, Gemma 4 26B-A4B, Qwen2.5-Coder 7B, Phi-4-mini, Gemma 4 E2B. RAM 요구 사항 및 벤치마크 점수 수록.",
+        "new": "2026년 로컬 LLM 순위: Qwen3.8-27B(GPQA Diamond 89.2%), Gemma 4 26B-A4B, Qwen2.5-Coder 7B, Phi-4-mini 비교."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.29% at pos 6.26; every locale title/meta was over budget (EN meta 179 chars) so snippets truncated before model names. Also fact fixes (Gemma 4 26B-A4B AIME 88.3%, 256K ctx, 16-19 GB; licences; Phi-4-mini MMLU 67.3%). Earlier SEO change: 2026-08-28 month label removed from EN title (no other changelog entries; 2026-10-17 refresh not logged). Locale mode: query-adapted. No per-locale 28d baseline pulled for this entry.",
+    "queries": [
+      "2026 로컬 llm 순위",
+      "로컬 llm 순위",
+      "llm 벤치마크 순위"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ba521beb-8787-44e4-accd-ecd2322bb838",
+    "slug": "/local-llms/apple-silicon-local-llm-guide-2026",
+    "date": "2026-11-02T14:24:37.993Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Apple Silicon 2026: M6 to M5 Ultra for Local LLMs",
+        "new": "Local LLMs on Apple Silicon 2026: M5 Pro, Max, Ultra, M6"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Apple refreshed Mac mini (M6, M5 Pro) and Mac Studio (M5 Max, M5 Ultra up to 512GB) on Aug 25, 2026. Complete local LLM guide: memory tiers, benchmarks, Mac selection.",
+        "new": "Which Mac runs which local LLM? M6, M5 Pro, M5 Max and M5 Ultra compared by memory, bandwidth and price, with first independent M5 Ultra benchmarks."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: EN 28d CTR 0.41% at pos 6.92; EN title did not say which chip/question it answers and meta described a stale news event. Body: M5 Ultra specs, 512GB availability, Mac mini M6 base memory, first independent benchmark. Earlier SEO changes: 2026-08-29 (EN) and 2026-08-30 (zh). Locale mode: query-adapted.",
+    "queries": [
+      "m5 max local llm",
+      "m5 pro local llm",
+      "apple m6 llm performance",
+      "best llm for m1 mac 32g",
+      "can macbook air m5 run local llm",
+      "local llm macbook air m5",
+      "best local llm for macbook pro m5"
+    ],
+    "baseline": {
+      "position": 6.92,
+      "impressions": 10826,
+      "clicks": 44,
+      "ctr": 0.004064289673009422,
+      "period": "28d 2026-10-05..2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "db1c8f06-b3bb-4b80-99e2-d20020ba26c4",
+    "slug": "/de/local-llms/apple-silicon-local-llm-guide-2026",
+    "date": "2026-11-02T14:24:38.096Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Apple hat Mac mini (M6, M5 Pro) und Mac Studio (M5 Max, M5 Ultra bis 512GB) am 25.8.2026 überarbeitet. Kompletter Leitfaden: Speicher, Benchmarks, Mac-Auswahl.",
+        "new": "Welcher Mac für lokale LLMs? M6, M5 Pro, M5 Max und M5 Ultra im Vergleich: Speicher, Bandbreite, Preis und erste unabhängige M5-Ultra-Tests."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: EN 28d CTR 0.41% at pos 6.92; EN title did not say which chip/question it answers and meta described a stale news event. Body: M5 Ultra specs, 512GB availability, Mac mini M6 base memory, first independent benchmark. Earlier SEO changes: 2026-08-29 (EN) and 2026-08-30 (zh). Locale mode: query-adapted.",
+    "queries": [
+      "m5 pro local llm",
+      "mac studio m5 ultra llm",
+      "apple silicon m6"
+    ],
+    "baseline": {
+      "position": 5.33,
+      "impressions": 917,
+      "clicks": 22,
+      "ctr": 0.023991275899672846,
+      "period": "28d 2026-10-05..2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "bd9b843d-894a-4b67-8bd5-dd2f5554c981",
+    "slug": "/ja/local-llms/apple-silicon-local-llm-guide-2026",
+    "date": "2026-11-02T14:24:38.206Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Apple Silicon 2026：M6からM5 Ultraまで",
+        "new": "Apple Silicon 2026：M6・M5 Ultra"
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: EN 28d CTR 0.41% at pos 6.92; EN title did not say which chip/question it answers and meta described a stale news event. Body: M5 Ultra specs, 512GB availability, Mac mini M6 base memory, first independent benchmark. Earlier SEO changes: 2026-08-29 (EN) and 2026-08-30 (zh). Locale mode: query-adapted.",
+    "queries": [
+      "m5 ultra 消費電力",
+      "m5 ultra llm",
+      "mac mini m6 llm"
+    ],
+    "baseline": {
+      "position": 10.46,
+      "impressions": 521,
+      "clicks": 15,
+      "ctr": 0.028790786948176585,
+      "period": "28d 2026-10-05..2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "4dec6cf1-3051-4bd6-8342-aafa23043501",
+    "slug": "/es/local-llms/apple-silicon-local-llm-guide-2026",
+    "date": "2026-11-02T14:24:38.307Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Apple Silicon 2026: M6 a M5 Ultra para IA Local",
+        "new": "LLM locales en Apple Silicon 2026: M6, M5 Pro, Max y Ultra"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Apple renovó Mac mini (M6, M5 Pro) y Mac Studio (M5 Max, M5 Ultra hasta 512GB) el 25 de agosto de 2026. Guía completa: memoria, benchmarks, qué Mac comprar.",
+        "new": "¿Qué Mac elegir para LLMs locales? M6, M5 Pro, M5 Max y M5 Ultra comparados por memoria, ancho de banda y precio, con las primeras pruebas independientes."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: EN 28d CTR 0.41% at pos 6.92; EN title did not say which chip/question it answers and meta described a stale news event. Body: M5 Ultra specs, 512GB availability, Mac mini M6 base memory, first independent benchmark. Earlier SEO changes: 2026-08-29 (EN) and 2026-08-30 (zh). Locale mode: query-adapted.",
+    "queries": [
+      "apple silicon m6",
+      "apple silicon m5 vs m6",
+      "mac mini m6 local llm"
+    ],
+    "baseline": {
+      "position": 6.2,
+      "impressions": 522,
+      "clicks": 9,
+      "ctr": 0.017241379310344827,
+      "period": "28d 2026-10-05..2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e50cdcc7-d437-49ac-8514-f724137b0562",
+    "slug": "/ar/local-llms/apple-silicon-local-llm-guide-2026",
+    "date": "2026-11-02T14:24:38.408Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "⁨Apple Silicon⁩ ⁨2026⁩: من ⁨M6⁩ إلى ⁨M5 Ultra⁩ لنماذج ⁨LLM⁩",
+        "new": "⁨Apple Silicon⁩ ⁨2026⁩: ⁨M5 Pro⁩ و⁨M5 Max⁩ و⁨M5 Ultra⁩"
+      },
+      {
+        "field": "metaDescription",
+        "old": "حدّثت Apple جهازي Mac mini (⁨M6⁩، ⁨M5 Pro⁩) وMac Studio (⁨M5 Max⁩، ⁨M5 Ultra⁩ حتى ⁨512GB⁩) في ⁨25⁩ أغسطس ⁨2026⁩. دليل كامل: الذاكرة، الاختبارات، اختيار Mac.",
+        "new": "أي Mac يشغّل أي نموذج LLM محلي؟ مقارنة ⁨M6⁩ و⁨M5 Pro⁩ و⁨M5 Max⁩ و⁨M5 Ultra⁩ بالذاكرة والنطاق والسعر مع أول اختبارات مستقلة."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: EN 28d CTR 0.41% at pos 6.92; EN title did not say which chip/question it answers and meta described a stale news event. Body: M5 Ultra specs, 512GB availability, Mac mini M6 base memory, first independent benchmark. Earlier SEO changes: 2026-08-29 (EN) and 2026-08-30 (zh). Locale mode: data-free review.",
+    "baseline": {
+      "position": 11,
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-05..2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8c761cd4-5f37-4150-9ce6-ea99049cf5ab",
+    "slug": "/ko/local-llms/apple-silicon-local-llm-guide-2026",
+    "date": "2026-11-02T14:24:38.516Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Apple Silicon 2026: 로컬 LLM용 M6부터 M5 Ultra까지",
+        "new": "Mac 로컬 LLM 2026: M5 Pro·Max·Ultra·M6"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Apple은 2026년 8월 25일 Mac mini(M6, M5 Pro)와 Mac Studio(M5 Max, 최대 512GB M5 Ultra)를 개편했습니다. 메모리 계층, 벤치마크, Mac 선택을 다루는 완전 가이드.",
+        "new": "M6·M5 Pro·M5 Max·M5 Ultra 맥에서 돌릴 수 있는 로컬 LLM 크기를 메모리, 대역폭, 가격으로 비교하고 독립 벤치마크를 정리했습니다."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: EN 28d CTR 0.41% at pos 6.92; EN title did not say which chip/question it answers and meta described a stale news event. Body: M5 Ultra specs, 512GB availability, Mac mini M6 base memory, first independent benchmark. Earlier SEO changes: 2026-08-29 (EN) and 2026-08-30 (zh). Locale mode: query-adapted.",
+    "queries": [
+      "맥북 llm",
+      "m5 max 128gb llm",
+      "m1 max 64gb llm",
+      "맥미니 m6 로컬 llm"
+    ],
+    "baseline": {
+      "position": 7.36,
+      "impressions": 832,
+      "clicks": 18,
+      "ctr": 0.021634615384615384,
+      "period": "28d 2026-10-05..2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ea703056-3919-421e-9417-011549b32574",
+    "slug": "/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T14:24:38.634Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Whisper.cpp vs faster-whisper 2026: STT Speed Test",
+        "new": "whisper.cpp vs faster-whisper vs Whisper 2026: CPU/GPU"
+      },
+      {
+        "field": "metaDescription",
+        "old": "whisper.cpp runs on CPU and Apple Metal; faster-whisper is 4x faster on GPU with int8. WER benchmarks, model sizes, and real-time transcription steps.",
+        "new": "faster-whisper is up to 4x faster than OpenAI Whisper; whisper.cpp wins on Apple Metal. CPU vs GPU timings, VRAM and WER from published benchmarks."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: query-adapted.",
+    "queries": [
+      "whisper.cpp",
+      "faster whisper vs whisper",
+      "whisper cpu vs gpu",
+      "whisper on cpu",
+      "whisper.cpp vs faster-whisper"
+    ],
+    "baseline": {
+      "position": 4.83,
+      "impressions": 12974,
+      "clicks": 74,
+      "ctr": 0.005703715122552798,
+      "period": "28d to 2026-11-01 (EN URL; queries from 90d)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a1653921-c492-4a7f-839e-ac3d914bb028",
+    "slug": "/de/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T14:24:38.745Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Whisper.cpp vs. faster-whisper 2026: Lokale STT-Benchmarks",
+        "new": "whisper.cpp vs. faster-whisper vs. Whisper 2026: CPU/GPU"
+      },
+      {
+        "field": "metaDescription",
+        "old": "whisper.cpp läuft auf CPU und Apple Metal; faster-whisper ist mit int8 4x schneller auf GPU. WER-Benchmarks, Modellgrößen und Echtzeit-Transkription.",
+        "new": "faster-whisper ist bis zu 4x schneller als OpenAI Whisper, whisper.cpp auf Apple Metal vorn. CPU- vs. GPU-Zeiten, VRAM und WER aus Benchmarks."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "6ab0a71d-0c50-484b-824e-28963c330d30",
+    "slug": "/fr/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T14:24:38.844Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Whisper.cpp vs faster-whisper 2026 : Benchmarks STT",
+        "new": "whisper.cpp vs faster-whisper vs Whisper 2026 : CPU/GPU"
+      },
+      {
+        "field": "metaDescription",
+        "old": "whisper.cpp tourne sur CPU et Apple Metal ; faster-whisper est 4x plus rapide sur GPU avec int8. Benchmarks WER, tailles de modèles, transcription temps réel.",
+        "new": "faster-whisper est jusqu\\'à 4x plus rapide qu\\'OpenAI Whisper ; whisper.cpp gagne sur Apple Metal. Temps CPU vs GPU, VRAM et WER de benchmarks publiés."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7cc47a10-d29c-4558-b625-41f4c1e3e482",
+    "slug": "/ja/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T14:24:38.944Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Whisper.cpp vs faster-whisper 2026：STT速度比較",
+        "new": "Whisper・faster-whisperの違い比較2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "whisper.cppはCPUとApple Metalで動作、faster-whisperはint8使用時GPUで4倍高速。WERベンチマーク、モデルサイズ、リアルタイム文字起こし手順を掲載。",
+        "new": "faster-whisperとは、CTranslate2でOpenAI Whisperを再実装したライブラリで最大4倍高速。whisper.cppとの違いをCPU/GPU速度・VRAM・WERで比較します。"
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: query-adapted. No per-locale 28d baseline pulled for this entry.",
+    "queries": [
+      "faster-whisperとは",
+      "faster-whisper whisper 違い",
+      "whisper faster-whisper 違い",
+      "whisper.cppとは"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "09375346-cd10-424b-bfdc-b81860483f4c",
+    "slug": "/zh/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T14:24:39.045Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Whisper.cpp vs faster-whisper 2026：STT速度对比",
+        "new": "Whisper.cpp与faster-whisper对比2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "whisper.cpp运行于CPU和Apple Metal；faster-whisper在GPU上使用int8可提速4倍。含WER基准、模型大小与实时转录配置。",
+        "new": "faster-whisper比OpenAI Whisper最高快4倍，whisper.cpp在Apple Metal上更有优势。基于公开基准对比CPU与GPU耗时、显存和WER。"
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "12404d57-f925-40ae-a69c-42de99958675",
+    "slug": "/es/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T14:24:39.149Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Whisper.cpp vs faster-whisper 2026: STT local y benchmarks",
+        "new": "whisper.cpp vs faster-whisper vs Whisper 2026: CPU/GPU"
+      },
+      {
+        "field": "metaDescription",
+        "old": "whisper.cpp corre en CPU y Apple Metal; faster-whisper es 4x más rápido en GPU con int8. Benchmarks WER, tamaños de modelo y transcripción en tiempo real.",
+        "new": "faster-whisper es hasta 4x más rápido que OpenAI Whisper; whisper.cpp gana en Apple Metal. Tiempos CPU vs GPU, VRAM y WER de benchmarks publicados."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "373c7098-7c03-438f-9a7a-295343bb65b1",
+    "slug": "/pt/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T14:24:39.251Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Whisper.cpp vs faster-whisper 2026: STT local e benchmarks",
+        "new": "whisper.cpp vs faster-whisper vs Whisper 2026: CPU/GPU"
+      },
+      {
+        "field": "metaDescription",
+        "old": "whisper.cpp roda em CPU e Apple Metal; faster-whisper é 4x mais rápido em GPU com int8. Benchmarks de WER, tamanhos de modelo e transcrição em tempo real.",
+        "new": "faster-whisper é até 4x mais rápido que o OpenAI Whisper; whisper.cpp vence no Apple Metal. Tempos de CPU vs GPU, VRAM e WER de benchmarks publicados."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "43f8854a-b5ca-4d6b-be2b-74ab24f89edd",
+    "slug": "/ar/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T14:24:39.353Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "⁨Whisper.cpp⁩ مقابل ⁨faster-whisper 2026⁩: معايير ⁨STT⁩",
+        "new": "⁨Whisper.cpp⁩ مقابل ⁨faster-whisper 2026⁩: ⁨CPU⁩ و⁨GPU⁩"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Whisper.cpp يعمل على CPU وApple Metal؛ faster-whisper أسرع 4× على GPU بـint8. مقارنة معايير WER وسرعة النسخ الفوري وخطوات الإعداد 2026.",
+        "new": "faster-whisper أسرع حتى 4× من OpenAI Whisper، وwhisper.cpp يتفوق على Apple Metal. أزمنة CPU مقابل GPU وVRAM وWER من معايير منشورة."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: data-free review. No per-locale 28d baseline pulled for this entry.",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "89cd4e74-cdb5-42a4-98ab-00d6dc7e9ad2",
+    "slug": "/ko/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T14:24:39.459Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Whisper.cpp vs faster-whisper 2026: 로컬 STT 및 벤치마크",
+        "new": "로컬 STT 비교: whisper.cpp·faster-whisper"
+      },
+      {
+        "field": "metaDescription",
+        "old": "2026년 로컬 음성 인식을 위한 whisper.cpp와 faster-whisper 비교: WER, GPU vs CPU 속도, Apple Silicon Metal, 실시간 전사. 완전 오프라인 동작.",
+        "new": "로컬 STT 모델 whisper.cpp·faster-whisper 비교: OpenAI Whisper 대비 최대 4배, CPU·GPU(Vulkan·Metal) 시간, WER, 실시간 전사."
+      }
+    ],
+    "reason": "low-ctr-15 wave 1: 28d CTR 0.57% at pos 4.83; head/adjacent queries (whisper.cpp, faster whisper vs whisper, whisper cpu vs gpu) not named in title/meta; old seoTitle implied own testing (\"STT Speed Test\"). Body: CTranslate2 v4.8.4, OpenAI Whisper benchmark rows, 2 new FAQs. Earlier SEO change: 2026-08-28 body-only coherence fix (logged under the -2026 slug). Locale mode: query-adapted. No per-locale 28d baseline pulled for this entry.",
+    "queries": [
+      "로컬 whisper",
+      "로컬 stt 모델",
+      "whisper cpp vulkan",
+      "whisper 실시간 stt"
+    ],
+    "baseline": null,
+    "deployedAt": null
   }
 ]
