@@ -458,7 +458,7 @@ https://www.promptquorum.com/power-local-llm/lm-studio-review
 https://www.promptquorum.com/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026
 https://www.promptquorum.com/power-local-llm/lmdeploy-review
 https://www.promptquorum.com/power-local-llm/local-ai-agents-business-workflows-eu-compliance
-https://www.promptquorum.com/power-local-llm/local-ai-agents-with-mcp-2026
+https://www.promptquorum.com/power-local-llm/local-ai-agents-with-mcp
 https://www.promptquorum.com/power-local-llm/local-ai-app-non-technical-users
 https://www.promptquorum.com/power-local-llm/local-ai-app-with-built-in-rag
 https://www.promptquorum.com/power-local-llm/local-ai-behind-firewall-offline-2026
