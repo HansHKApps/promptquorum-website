@@ -45,4 +45,9 @@ Not pushed, merged or deployed. Entries logged with `seo:log` (all pending, no `
 - Above-fold (Rule 31 lead 25-50 words / bold lead) still fails on pages whose leads this run did not touch: `second-me-review`, `best-rag-tools-for-business-documents-2026`, `qwen-vs-llama-vs-mistral` (non-CJK locales mostly). Needs its own lead pass.
 - `seo:gate:changed`: remaining findings are `A5` html lang (known gap), `C1c` image alt (shared-component gap, see above), `B1` article headline vs title/h1 (44, mostly pre-existing pattern), `A4` second-me canonical (`/second-me-review` vs file slug `-2026`; pre-existing slug mapping).
 - `validate:models:strict` fails repo-wide (1457 stale-model hits outside this run's files).
-- risk-checker: see final section below.
+
+### Final gates (2026-11-02)
+- Build: pass (last full build before the final text-only budget-gpus compliance edit; that edit passes esbuild and the commit-hook type-check).
+- `validate-meta-budgets:changed` 0 over budget; `seo:gate:changed` A2 clean except the AR how-much-vram title (bidi marks inflate the count, known); remaining A4/A5/B1/C1c as listed above.
+- Above-fold, 9 changed pages x 9 locales (`budget-gpus`, `how-much-vram`, `whisper-cpp-review`, `hardware guide`, `apple guide`, `m5`, `whisper comparison`, `odysseus`, `open-webui`): all pass after lead/takeaway trims. `second-me-review`, `best-rag-tools...`, `qwen-vs-llama-vs-mistral` still fail Rule 31 (leads not touched this run).
+- Risk gate: ran `scripts/risk-scan.mjs` triage on all 12 changed articles plus a manual review of the CRITICAL hits; **not** a full sentence-by-sentence risk-checker audit of every locale block. Fixed: `best-budget-gpus-local-llm` en/pt "fully compliant"/"em conformidade total" GDPR/LGPD claims (R1) now hedged with "not legal advice". The two best-rag CRITICAL hits are the FAQ question "Is local RAG automatically private and GDPR-compliant?" whose answer is "not automatically" (false positive). Many HIGH scan hits remain in untouched pre-existing text (apple guide ja/zh/ko "estimate, not measured" notes, zh "BGR 实测 ~55 tok/s", whisper comparison, hardware guide); they were not triaged one by one.

@@ -7886,7 +7886,7 @@
   {
     "lang": "ja",
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral：2026ベンチマーク比較",
-    "excerpt": "Qwen3.8-27BがCodingで勝利：SWE-bench 61.7%、24 GBで動作。Llama 4 Scout：10Mトークンコンテキスト、~55 GB VRAM。Mistral Small 3.1：79% MMLU・14 GB RAM。タスク別にどれが勝つか。",
+    "excerpt": "Qwen3.8-27BはSWE-bench Pro 61.7で24 GBに収まります。Llama 4 Scoutは10Mコンテキスト、Mistral Small 3.1はMMLU 79%。用途別に比較します。",
     "publishDate": "2026-04-04",
     "dateModified": "2026-10-17",
     "url": "/ja/local-llms/qwen-vs-llama-vs-mistral",
@@ -7895,7 +7895,7 @@
   {
     "lang": "zh",
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral：2026基准对比",
-    "excerpt": "Qwen3.8-27B编程胜出：SWE-bench 61.7%，24 GB可运行。Llama 4 Scout：10M上下文，~55 GB显存。Mistral Small 3.1：79% MMLU，14 GB内存。各任务哪个模型最强。",
+    "excerpt": "Qwen3.8-27B在SWE-bench Pro得分61.7，24 GB可运行。Llama 4 Scout支持10M上下文，Mistral Small 3.1的MMLU为79%。按任务对比。",
     "publishDate": "2026-04-04",
     "dateModified": "2026-10-17",
     "url": "/zh/local-llms/qwen-vs-llama-vs-mistral",
@@ -12809,7 +12809,7 @@
   {
     "lang": "de",
     "title": "Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB & Alternativen",
-    "excerpt": "Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB (270–300 € gebraucht) betreibt Qwen3 14B mit 9–12 Tok/s. Günstiger: RX 6700 XT. Neu: RTX 5060 Ti 16GB. Komplette Speed-Tabelle.",
+    "excerpt": "Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB (270–300 € gebraucht) betreibt Qwen3 14B mit 9–12 Tok/s. Neu: RTX 5060 Ti 16GB. Mit Speed-Tabelle.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-09-01",
     "url": "/de/local-llms/best-budget-gpus-local-llm",
@@ -12818,7 +12818,7 @@
   {
     "lang": "fr",
     "title": "Meilleur GPU économique pour LLM locaux 2026 : RTX 3060 12GB et alternatives",
-    "excerpt": "Meilleur GPU économique pour LLM locaux 2026 : la RTX 3060 12GB (270–300 € d'occasion) fait tourner Qwen3 14B à 9–12 tok/s. Moins cher : RX 6700 XT. Neuf : RTX 5060 Ti 16GB. Tableau de vitesses complet.",
+    "excerpt": "Meilleur GPU économique pour LLM locaux 2026 : RTX 3060 12GB (270–300 € d'occasion), Qwen3 14B à 9–12 tok/s. Neuf : RTX 5060 Ti 16GB. Tableau complet.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-09-01",
     "url": "/fr/local-llms/best-budget-gpus-local-llm",
@@ -12827,7 +12827,7 @@
   {
     "lang": "ja",
     "title": "ローカルLLM向けの最高のバジェットGPU",
-    "excerpt": "RTX 3060 12GB（中古約2万5千円）はローカルLLMを7種実行：Qwen3 14B（9-12トークン/秒）、Qwen3 8B（16-20トークン/秒）、Gemma 4 E12B、Mistral Small。VRAMと速度の早見表を掲載。",
+    "excerpt": "RTX 3060 12GB（中古約$270–300）でローカルLLMを7種実行：Qwen3 14B（9-12トークン/秒）、Qwen3 8B（16-20トークン/秒）ほか。VRAMと速度の早見表付き。",
     "publishDate": "2026-04-05",
     "dateModified": "2026-09-01",
     "url": "/ja/local-llms/best-budget-gpus-local-llm",
@@ -12836,7 +12836,7 @@
   {
     "lang": "zh",
     "title": "本地LLM的最佳预算GPU",
-    "excerpt": "RTX 3060 12GB（二手约1400-1800元）可跑7款本地LLM：Qwen3 14B（9-12令牌/秒）、Qwen3 8B（16-20令牌/秒）、Gemma 4 E12B、Mistral Small。附完整VRAM与速度对照表。",
+    "excerpt": "RTX 3060 12GB（二手约$270–300）可跑7款本地LLM：Qwen3 14B（9-12令牌/秒）、Qwen3 8B（16-20令牌/秒）等。附VRAM与速度对照表。",
     "publishDate": "2026-04-05",
     "dateModified": "2026-09-01",
     "url": "/zh/local-llms/best-budget-gpus-local-llm",
@@ -12863,7 +12863,7 @@
   {
     "lang": "ar",
     "title": "أفضل ⁨GPU⁩ اقتصادية لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: ⁨RTX 3060 12GB⁩",
-    "excerpt": "أفضل ⁨GPU⁩ اقتصادية لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: ⁨RTX 3060 12GB⁩ (⁨200⁩–⁨250⁩$ مستعملة) تشغّل ⁨Qwen3 14B⁩ بـ ⁨9⁩–⁨12 tok⁩/ث. الأرخص: ⁨RX 6700 XT⁩. أفضل ⁨VRAM⁩ لكل دولار: ⁨RTX A4000⁩.",
+    "excerpt": "أفضل GPU اقتصادية لـ LLM المحلية 2026: RTX 3060 12GB (270–300$ مستعملة) تشغّل Qwen3 14B بـ 9–12 tok/ث. الأرخص: RX 6700 XT. الأفضل VRAM/$: RTX A4000.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-09-01",
     "url": "/ar/local-llms/best-budget-gpus-local-llm",
@@ -13043,7 +13043,7 @@
   {
     "lang": "en",
     "title": "How Much VRAM for Local LLM? 7B to 70B Charts (2026)",
-    "excerpt": "Real VRAM by model size at Q4, verified against actual GGUF file sizes: 7B needs ~4GB, 13B ~8GB, 22B ~13GB, 70B ~42GB. Free calculator plus Q5/Q8 charts and the GB-per-billion formula.",
+    "excerpt": "Real VRAM by model size at Q4, based on actual GGUF file sizes: 7B needs ~4GB, 13B ~8GB, 22B ~13GB, 70B ~42GB. Free calculator plus Q5/Q8 charts.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-08-28",
     "url": "/local-llms/how-much-vram-local-llm",
@@ -13052,7 +13052,7 @@
   {
     "lang": "de",
     "title": "VRAM-Richtlinie: 7B=4GB, 70B=42GB (2026 Guide)",
-    "excerpt": "Echter VRAM-Bedarf bei Q4 laut echten GGUF-Dateigrößen: 7B ~4GB, 13B ~8GB, 22B ~13GB, 70B ~42GB. Kostenloser Rechner und Q5/Q8-Tabellen.",
+    "excerpt": "Echter VRAM-Bedarf bei Q4 laut echten GGUF-Dateigrößen: 7B ~4GB, 13B ~8GB, 22B ~13GB, 70B ~42GB. Kostenloser Rechner, Q5/Q8-Tabellen und Formel.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-08-28",
     "url": "/de/local-llms/how-much-vram-local-llm",
@@ -13061,7 +13061,7 @@
   {
     "lang": "fr",
     "title": "Règle empirique VRAM : 7B=4GB, 70B=42GB (Guide 2026)",
-    "excerpt": "VRAM réelle par taille en Q4, vérifiée à partir de tailles de fichiers GGUF réels : 7B ~4 GB, 13B ~8 GB, 22B ~13 GB, 70B ~42 GB. Calculatrice gratuite, tableaux Q5/Q8 et la formule GB par milliard.",
+    "excerpt": "VRAM réelle par taille en Q4, d'après des fichiers GGUF réels : 7B ~4 GB, 13B ~8 GB, 22B ~13 GB, 70B ~42 GB. Calculatrice gratuite, tableaux Q5/Q8.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-08-28",
     "url": "/fr/local-llms/how-much-vram-local-llm",
@@ -13088,7 +13088,7 @@
   {
     "lang": "es",
     "title": "¿Cuánta VRAM para un LLM local? Tablas 7B a 70B (2026)",
-    "excerpt": "VRAM real por tamaño en Q4, verificada contra tamaños reales de archivos GGUF: 7B necesita ~4 GB, 13B ~8 GB, 22B ~13 GB, 70B ~42 GB. Calculadora gratis, tablas Q5/Q8 y la fórmula GB por mil millones.",
+    "excerpt": "VRAM real por tamaño en Q4, según archivos GGUF reales: 7B ~4 GB, 13B ~8 GB, 22B ~13 GB, 70B ~42 GB. Calculadora gratis, tablas Q5/Q8 y fórmula.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-08-28",
     "url": "/es/local-llms/how-much-vram-local-llm",
@@ -13097,7 +13097,7 @@
   {
     "lang": "pt",
     "title": "Quanta VRAM para um LLM local? Tabelas de 7B a 70B (2026)",
-    "excerpt": "VRAM real por tamanho em Q4, verificada contra tamanhos reais de arquivos GGUF: 7B precisa de ~4 GB, 13B de ~8 GB, 22B de ~13 GB, 70B de ~42 GB. Calculadora grátis, tabelas Q5/Q8 e a fórmula GB por bilhão.",
+    "excerpt": "VRAM real por tamanho em Q4, com base em arquivos GGUF reais: 7B ~4 GB, 13B ~8 GB, 22B ~13 GB, 70B ~42 GB. Calculadora grátis e tabelas Q5/Q8.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-08-28",
     "url": "/pt/local-llms/how-much-vram-local-llm",
@@ -13106,7 +13106,7 @@
   {
     "lang": "ar",
     "title": "كم تحتاج من ⁨VRAM⁩ لنموذج ⁨LLM⁩ محلي؟ جداول من ⁨7B⁩ إلى ⁨70B⁩ (⁨2026⁩)",
-    "excerpt": "⁨VRAM⁩ الحقيقية حسب الحجم في ⁨Q4⁩، تم التحقق منها مقابل أحجام ملفات ⁨GGUF⁩ الحقيقية: ⁨7B⁩ تحتاج ⁨~4 GB⁩ و⁨13B⁩ ⁨~8 GB⁩ و⁨22B⁩ ⁨~13 GB⁩ و⁨70B⁩ ⁨~42 GB⁩. حاسبة مجانية وجداول ⁨Q5/Q8⁩ ومعادلة ⁨GB⁩ لكل مليار.",
+    "excerpt": "VRAM الحقيقية حسب حجم النموذج في Q4 بحسب أحجام ملفات GGUF: 7B ~4 GB و13B ~8 GB و22B ~13 GB و70B ~42 GB. حاسبة مجانية وجداول Q5/Q8.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-08-28",
     "url": "/ar/local-llms/how-much-vram-local-llm",
@@ -29180,7 +29180,7 @@
   {
     "lang": "fr",
     "title": "Second Me Review: entraînez votre propre IA en local",
-    "excerpt": "Second Me sur GitHub : projet open source (Apache 2.0) qui entraîne une IA personnelle sur vos données avec GraphRAG et llama.cpp (Qwen2.5). Ce qu'il fait.",
+    "excerpt": "Second Me sur GitHub : projet open source (Apache 2.0) qui entraîne une IA personnelle sur vos données via GraphRAG et llama.cpp (Qwen2.5). Ce qu'il fait.",
     "publishDate": "2026-09-03",
     "dateModified": "2026-09-03",
     "url": "/fr/power-local-llm/second-me-review",
@@ -33635,7 +33635,7 @@
   {
     "lang": "fr",
     "title": "Whisper.cpp: avis — reconnaissance vocale locale en C/C++ pur",
-    "excerpt": "Avis whisper.cpp : le port C/C++ d'OpenAI Whisper (licence MIT) pour la reconnaissance vocale locale. Installation, commandes CLI, licence, faster-whisper.",
+    "excerpt": "Avis whisper.cpp : le port C/C++ d'OpenAI Whisper (licence MIT) pour la reconnaissance vocale locale. Installation, commandes CLI, faster-whisper.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-11-02",
     "url": "/fr/power-local-llm/whisper-cpp-review",
