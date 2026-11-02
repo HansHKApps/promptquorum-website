@@ -31,7 +31,7 @@ export const app: ToolRecord = {
   },
   installEffort: 'installer',
   installOn: ['ios'],
-  installEvidence: 'App Store listing id6754301136: free iPhone app, 116.9 MB, iOS 18.0+, version 1.32.0; getswerve.com links the App Store build and offers Android/web only as waitlists. checked 2026-10-17',
+  installEvidence: 'App Store listing id6754301136: free iPhone app, 121.4 MB, iOS 18.0+, version 1.33.0; getswerve.com links the App Store build and offers Android/web only as waitlists. checked 2026-11-02',
   tagline: {
     en: 'Cloud AI story and character chat for iPhone with community characters, branching and pinned memory',
     de: 'Cloud-KI-Story- und Charakter-Chat für das iPhone mit Community-Charakteren, Verzweigungen und fixiertem Gedächtnis',
@@ -45,14 +45,14 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'swerve-ai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: {
-    date: '2026-10-17', // 1.32.0 = version shown on the App Store listing and iTunes lookup on that date (released 2026-10-07)
-    version: '1.32.0',
+    date: '2026-11-02', // 1.33.0 = version shown on the App Store listing and iTunes lookup on that date (released 2026-10-23)
+    version: '1.33.0',
     versionSourceUrl: 'https://apps.apple.com/us/app/swerve-ai-chat/id6754301136',
   },
   // Comparison attributes from the App Store description ("bring several characters into the same story"); lorebooks are not
   // stated (pinned memory is a different feature), so that key is left unset rather than false.
   compare: { groupChats: true },
-  lastVerifiedDate: '2026-10-17',
-  lastUpstreamUpdate: '2026-10-07', // iTunes lookup currentVersionReleaseDate 2026-10-07T02:10:24Z (1.32.0), read 2026-10-17 — not stale
+  lastVerifiedDate: '2026-11-02',
+  lastUpstreamUpdate: '2026-10-23', // iTunes lookup currentVersionReleaseDate 2026-10-23T19:30:02Z (1.33.0) and App Store version history, read 2026-11-02 — not stale
   lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/swerve-ai-chat/id6754301136',
 }
