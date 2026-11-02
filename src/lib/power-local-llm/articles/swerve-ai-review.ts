@@ -49,7 +49,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories is a free, closed-source iPhone app for roleplay chats and branching stories; it is an online service, not a local-AI app.** Per its App Store listing it needs iOS 18.0 or later. This review covers version 1.33.0, last updated October 23, 2026, and rests on public sources only, not on hands-on testing.',
+      '**Swerve: AI Chat & Stories is a free, closed-source iPhone app for roleplay chats and branching stories, run as an online service, not local AI.** Reviewed version: 1.33.0, updated October 23, 2026, from public sources only, without hands-on testing.',
     quickAnswerTop: {
       en: {
         question: 'Is Swerve worth installing for AI character chat and stories on an iPhone?',
@@ -385,7 +385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories ist eine kostenlose, nicht quelloffene iPhone-App zum Chatten mit KI-Charakteren und für verzweigte Geschichten; sie ist ein Online-Dienst, keine lokale KI-App.** Laut App-Store-Eintrag setzt sie iOS 18.0 oder neuer voraus. Diese Rezension behandelt Version 1.33.0, zuletzt aktualisiert am 23. Oktober 2026, und beruht auf Eintrag, Website, Datenschutzhinweis und Nutzungsbedingungen, nicht auf praktischen Tests.',
+      '**Swerve: AI Chat & Stories ist eine kostenlose, nicht quelloffene iPhone-App für KI-Charakter-Chats und verzweigte Geschichten, als Online-Dienst statt lokaler KI.** Geprüfte Version: 1.33.0, aktualisiert am 23. Oktober 2026, nur aus öffentlichen Quellen, ohne praktische Tests.',
     quickAnswerTop: {
       de: {
         question: 'Lohnt sich Swerve für KI-Charakter-Chat und Geschichten auf dem iPhone?',
@@ -724,7 +724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories est une application iPhone gratuite et propriétaire pour discuter avec des personnages IA et jouer des histoires à embranchements ; c’est un service en ligne, pas une application d’IA locale.** Selon sa fiche App Store, elle exige iOS 18.0 ou version ultérieure. Ce test porte sur la version 1.33.0, mise à jour pour la dernière fois le 23 octobre 2026, et repose sur la fiche publique, le site, l’avis de confidentialité et les conditions, pas sur des essais pratiques.',
+      '**Swerve: AI Chat & Stories est une appli iPhone gratuite et propriétaire de chat avec personnages IA et d’histoires à embranchements, en service en ligne, pas en IA locale.** Version testée : 1.33.0, mise à jour le 23 octobre 2026, d’après des sources publiques, sans essais pratiques.',
     quickAnswerTop: {
       fr: {
         question: 'Swerve vaut-il l’installation pour le chat avec personnages IA et les histoires sur iPhone ?',
@@ -1735,7 +1735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories es una app gratuita y de código cerrado para iPhone con la que chatear con personajes de IA y jugar historias con ramificaciones; es un servicio en línea, no una app de IA local.** Según su ficha de la App Store, requiere iOS 18.0 o posterior. Esta reseña cubre la versión 1.33.0, actualizada por última vez el 23 de octubre de 2026, y se basa en la ficha pública, el sitio web, el aviso de privacidad y los términos, no en pruebas prácticas.',
+      '**Swerve: AI Chat & Stories es una app gratuita y de código cerrado para iPhone de chat con personajes de IA e historias ramificadas, como servicio en línea, no IA local.** Versión analizada: 1.33.0, actualizada el 23 de octubre de 2026, según fuentes públicas, sin pruebas prácticas.',
     quickAnswerTop: {
       es: {
         question: '¿Vale la pena instalar Swerve para chatear con personajes de IA y jugar historias en el iPhone?',
@@ -2071,7 +2071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories é um app gratuito e de código fechado para iPhone para conversar com personagens de IA e jogar histórias com ramificações; é um serviço online, não um app de IA local.** Segundo a página da App Store, ele exige iOS 18.0 ou posterior. Esta análise cobre a versão 1.33.0, atualizada pela última vez em 23 de outubro de 2026, e se baseia na página pública, no site, no aviso de privacidade e nos termos, não em testes práticos.',
+      '**Swerve: AI Chat & Stories é um app gratuito e de código fechado para iPhone de chat com personagens de IA e histórias ramificadas, como serviço online, não IA local.** Versão analisada: 1.33.0, atualizada em 23 de outubro de 2026, com base em fontes públicas, sem testes práticos.',
     quickAnswerTop: {
       pt: {
         question: 'Vale a pena instalar o Swerve para chat com personagens de IA e histórias no iPhone?',
@@ -2407,7 +2407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories تطبيق iPhone مجاني ومغلق المصدر للدردشة مع شخصيات الذكاء الاصطناعي ولعب قصص متفرعة؛ وهو خدمة عبر الإنترنت وليس تطبيق ذكاء اصطناعي محليًا.** وفق صفحته في App Store يتطلب iOS 18.0 أو أحدث. تغطي هذه المراجعة الإصدار 1.33.0 الذي حُدّث آخر مرة في 23 أكتوبر 2026، وتعتمد على الصفحة العامة والموقع الرسمي وإشعار الخصوصية والشروط، لا على اختبار عملي.',
+      '**Swerve: AI Chat & Stories تطبيق iPhone مجاني ومغلق المصدر للدردشة مع شخصيات الذكاء الاصطناعي وقصص متفرعة، كخدمة عبر الإنترنت لا ذكاء اصطناعيًا محليًا.** الإصدار المراجَع: 1.33.0، حُدّث في 23 أكتوبر 2026، اعتمادًا على مصادر عامة فقط ودون اختبار عملي.',
     quickAnswerTop: {
       ar: {
         question: 'هل يستحق Swerve التثبيت للدردشة مع شخصيات الذكاء الاصطناعي ولعب القصص على iPhone؟',
