@@ -28,7 +28,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'GPT Engineer',
     title: 'GPT Engineer Review: Archived on GitHub, App Now Lovable',
     seoTitle: 'GPT Engineer: Archived on GitHub, App Now Lovable',
-    intro: "GPT Engineer is a free, open-source (MIT licensed) Python command-line tool, originally built by [Anton Osika](https://github.com/AntonOsika), that generates an entire codebase from a natural-language prompt file and supports an \"improve\" mode for iterating on existing code — at [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer). **The repository is archived (read-only) as of this review** — GitHub marks it archived, its own GitHub description reads \"CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)\", and its README points visitors elsewhere: to [gptengineer.app](https://gptengineer.app) for \"the evolution that is an opinionated, managed service,\" and to [Aider](/power-local-llm/aider-review) for \"a well maintained hackable CLI.\" The commercial platform at gptengineer.app has since been rebranded as [Lovable](https://lovable.dev), and the old domain now redirects there.",
+    intro: "GPT Engineer is a free, open-source (MIT licensed) Python command-line tool, originally built by [Anton Osika](https://github.com/AntonOsika), that generates an entire codebase from a natural-language prompt file and supports an \"improve\" mode for iterating on existing code — at [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer). **The repository is archived (read-only) as of this review** — GitHub marks it archived, its own GitHub description reads \"CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)\", and its README points visitors elsewhere: to [gptengineer.app](https://gptengineer.app) for \"the evolution that is an opinionated, managed service,\" and to [Aider](/power-local-llm/aider-review) for \"a well maintained hackable CLI.\"",
     metaDescription: "GPT Engineer's GitHub repo is archived (MIT, last release 0.3.1 in 2024), and gptengineer.app is now Lovable. Its README recommends Aider instead.",
     readTime: '10 min read',
     targetKeywords: [
@@ -39,7 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GPT Engineer alternatives',
       'gpt engineer github',
     ],
-    leadAnswerBlock: "GPT Engineer is a free, MIT-licensed Python command-line tool at [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) that turns a natural-language prompt file into a generated codebase, and can also \"improve\" existing code from a prompt describing the change. **As of this review, the GitHub repository is archived — GitHub's read-only flag, not merely a slow-moving project.** It has over " + st.en('gpt-engineer', 'bare') + " GitHub stars and 7,200 forks, its last PyPI release was `gpt-engineer` 0.3.1 in June 2024, and its own README directs visitors to [gptengineer.app](https://gptengineer.app) (the commercial platform, since rebranded as [Lovable](https://lovable.dev)) or to [Aider](/power-local-llm/aider-review) for a maintained hackable CLI.",
+    leadAnswerBlock: "GPT Engineer is a free, MIT-licensed Python command-line tool at [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) that turns a prompt file into a codebase. **Its repository is archived (read-only); the last code change was merged on " + upd('gpt-engineer', 'en') + ".**",
     quickAnswerTop: {
       en: {
         question: 'Is GPT Engineer still maintained, and should I use it in 2026?',
@@ -294,7 +294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'GPT Engineer',
     title: 'GPT Engineer Review: Auf GitHub archiviert, App jetzt Lovable',
     seoTitle: 'GPT Engineer: Auf GitHub archiviert, App jetzt Lovable',
-    intro: "GPT Engineer ist ein kostenloses, quelloffenes (MIT-lizenziertes) Python-Kommandozeilentool, ursprünglich von [Anton Osika](https://github.com/AntonOsika) entwickelt, das aus einer Prompt-Datei in natürlicher Sprache eine vollständige Codebasis generiert und einen \"Improve\"-Modus zur iterativen Weiterentwicklung bestehenden Codes bietet — unter [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer). **Das Repository ist zum Zeitpunkt dieser Bewertung archiviert (nur lesbar)** — GitHub kennzeichnet es als archiviert, die eigene GitHub-Beschreibung lautet \"CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)\", und die README verweist Besucher an anderer Stelle hin: an [gptengineer.app](https://gptengineer.app) für \"die Weiterentwicklung als eigenständiger, verwalteter Dienst\" und an [Aider](/de/power-local-llm/aider-review) für \"eine gut gepflegte, hackbare CLI\". Die kommerzielle Plattform unter gptengineer.app wurde inzwischen in [Lovable](https://lovable.dev) umbenannt; die alte Domain leitet dorthin weiter.",
+    intro: "GPT Engineer ist ein kostenloses, quelloffenes (MIT-lizenziertes) Python-Kommandozeilentool, ursprünglich von [Anton Osika](https://github.com/AntonOsika) entwickelt, das aus einer Prompt-Datei in natürlicher Sprache eine vollständige Codebasis generiert und einen \"Improve\"-Modus zur iterativen Weiterentwicklung bestehenden Codes bietet — unter [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer). **Das Repository ist zum Zeitpunkt dieser Bewertung archiviert (nur lesbar)** — GitHub kennzeichnet es als archiviert, die eigene GitHub-Beschreibung lautet \"CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)\", und die README verweist Besucher an anderer Stelle hin: an [gptengineer.app](https://gptengineer.app) für \"die Weiterentwicklung als eigenständiger, verwalteter Dienst\" und an [Aider](/de/power-local-llm/aider-review) für \"eine gut gepflegte, hackbare CLI\".",
     metaDescription: "GPT Engineers GitHub-Repo ist archiviert (MIT, letztes Release 0.3.1 im Jahr 2024), gptengineer.app heißt jetzt Lovable. Die README empfiehlt Aider.",
     readTime: '10 Min. Lesezeit',
     targetKeywords: [
@@ -305,7 +305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GPT Engineer Alternativen',
       'gpt engineer github',
     ],
-    leadAnswerBlock: "GPT Engineer ist ein kostenloses, MIT-lizenziertes Python-Kommandozeilentool unter [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer), das aus einer Prompt-Datei in natürlicher Sprache eine generierte Codebasis erzeugt und bestehenden Code anhand einer Prompt-Beschreibung \"verbessern\" kann. **Zum Zeitpunkt dieser Bewertung ist das GitHub-Repository archiviert — GitHubs schreibgeschütztes Kennzeichen, nicht bloß ein langsam voranschreitendes Projekt.** Es hat über " + st.de('gpt-engineer', 'bare') + " GitHub-Stars und 7.200 Forks, das letzte PyPI-Release war `gpt-engineer` 0.3.1 im Juni 2024, und die eigene README verweist Besucher an [gptengineer.app](https://gptengineer.app) (die kommerzielle Plattform, inzwischen in [Lovable](https://lovable.dev) umbenannt) oder an [Aider](/de/power-local-llm/aider-review) für eine gepflegte, hackbare CLI.",
+    leadAnswerBlock: "GPT Engineer ist ein kostenloses, MIT-lizenziertes Python-Kommandozeilentool unter [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer), das aus einer Prompt-Datei eine Codebasis erzeugt. **Das Repository ist archiviert (nur lesbar); die letzte Codeänderung wurde am " + upd('gpt-engineer', 'de') + " gemergt.**",
     quickAnswerTop: {
       de: {
         question: 'Wird GPT Engineer noch gepflegt, und sollte ich es 2026 verwenden?',
@@ -560,7 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'GPT Engineer',
     title: 'GPT Engineer : archivé sur GitHub, l’app est devenue Lovable',
     seoTitle: 'GPT Engineer : archivé sur GitHub, l’app est Lovable',
-    intro: "GPT Engineer est un outil en ligne de commande Python gratuit et open source (licence MIT), créé à l'origine par [Anton Osika](https://github.com/AntonOsika), qui génère une base de code complète à partir d'un fichier de prompt en langage naturel et propose un mode \"improve\" pour faire évoluer du code existant — sur [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer). **Le dépôt est archivé (lecture seule) au moment de cette évaluation** — GitHub le marque comme archivé, sa propre description GitHub indique \"CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)\", et son README oriente les visiteurs ailleurs : vers [gptengineer.app](https://gptengineer.app) pour \"l'évolution en tant que service géré et normatif\", et vers [Aider](/fr/power-local-llm/aider-review) pour \"une CLI hackable bien maintenue\". La plateforme commerciale de gptengineer.app a depuis été renommée [Lovable](https://lovable.dev), et l'ancien domaine y redirige désormais.",
+    intro: "GPT Engineer est un outil en ligne de commande Python gratuit et open source (licence MIT), créé à l'origine par [Anton Osika](https://github.com/AntonOsika), qui génère une base de code complète à partir d'un fichier de prompt en langage naturel et propose un mode \"improve\" pour faire évoluer du code existant — sur [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer). **Le dépôt est archivé (lecture seule) au moment de cette évaluation** — GitHub le marque comme archivé, sa propre description GitHub indique \"CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)\", et son README oriente les visiteurs ailleurs : vers [gptengineer.app](https://gptengineer.app) pour \"l'évolution en tant que service géré et normatif\", et vers [Aider](/fr/power-local-llm/aider-review) pour \"une CLI hackable bien maintenue\".",
     metaDescription: "Le dépôt GitHub de GPT Engineer est archivé (MIT, dernière version 0.3.1 en 2024) et gptengineer.app est devenu Lovable. Son README recommande Aider.",
     readTime: '10 min de lecture',
     targetKeywords: [
@@ -571,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'alternatives à GPT Engineer',
       'gpt engineer github',
     ],
-    leadAnswerBlock: "GPT Engineer est un outil en ligne de commande Python gratuit sous licence MIT, disponible sur [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer), qui transforme un fichier de prompt en langage naturel en une base de code générée, et peut aussi \"améliorer\" du code existant à partir d'un prompt décrivant le changement souhaité. **Au moment de cette évaluation, le dépôt GitHub est archivé — l'état lecture seule de GitHub, pas simplement un projet qui ralentit.** Il compte plus de " + st.fr('gpt-engineer', 'bare') + " étoiles GitHub et 7 200 forks, sa dernière publication PyPI était `gpt-engineer` 0.3.1 en juin 2024, et son propre README oriente les visiteurs vers [gptengineer.app](https://gptengineer.app) (la plateforme commerciale, depuis renommée [Lovable](https://lovable.dev)) ou vers [Aider](/fr/power-local-llm/aider-review) pour une CLI hackable bien maintenue.",
+    leadAnswerBlock: "GPT Engineer est un outil en ligne de commande Python gratuit sous licence MIT, disponible sur [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer), qui génère une base de code à partir d'un fichier de prompt. **Son dépôt est archivé (lecture seule) ; la dernière modification de code a été fusionnée le " + upd('gpt-engineer', 'fr') + ".**",
     quickAnswerTop: {
       fr: {
         question: 'GPT Engineer est-il encore maintenu, et faut-il l\'utiliser en 2026 ?',
@@ -826,7 +826,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'GPT Engineer',
     title: 'GPT Engineer: archivado en GitHub, la app ahora es Lovable',
     seoTitle: 'GPT Engineer: archivado en GitHub, la app es Lovable',
-    intro: "GPT Engineer es una herramienta de línea de comandos en Python gratuita y de código abierto (licencia MIT), creada originalmente por [Anton Osika](https://github.com/AntonOsika), que genera una base de código completa a partir de un archivo de prompt en lenguaje natural y ofrece un modo \"improve\" para iterar sobre código existente — en [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer). **El repositorio está archivado (solo lectura) al momento de esta evaluación** — GitHub lo marca como archivado, su propia descripción en GitHub dice \"CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)\", y su README dirige a los visitantes a otros lugares: a [gptengineer.app](https://gptengineer.app) para \"la evolución como servicio gestionado y con criterio propio\", y a [Aider](/es/power-local-llm/aider-review) para \"una CLI hackeable bien mantenida\". La plataforma comercial de gptengineer.app se ha renombrado desde entonces como [Lovable](https://lovable.dev), y el dominio antiguo redirige ahora allí.",
+    intro: "GPT Engineer es una herramienta de línea de comandos en Python gratuita y de código abierto (licencia MIT), creada originalmente por [Anton Osika](https://github.com/AntonOsika), que genera una base de código completa a partir de un archivo de prompt en lenguaje natural y ofrece un modo \"improve\" para iterar sobre código existente — en [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer). **El repositorio está archivado (solo lectura) al momento de esta evaluación** — GitHub lo marca como archivado, su propia descripción en GitHub dice \"CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)\", y su README dirige a los visitantes a otros lugares: a [gptengineer.app](https://gptengineer.app) para \"la evolución como servicio gestionado y con criterio propio\", y a [Aider](/es/power-local-llm/aider-review) para \"una CLI hackeable bien mantenida\".",
     metaDescription: "El repositorio de GPT Engineer en GitHub está archivado (MIT, última versión 0.3.1 en 2024) y gptengineer.app ahora es Lovable. Su README recomienda Aider.",
     readTime: '10 min de lectura',
     targetKeywords: [
@@ -837,7 +837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'alternativas a GPT Engineer',
       'gpt engineer github',
     ],
-    leadAnswerBlock: "GPT Engineer es una herramienta de línea de comandos en Python gratuita bajo licencia MIT, disponible en [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer), que convierte un archivo de prompt en lenguaje natural en una base de código generada, y también puede \"mejorar\" código existente a partir de un prompt que describa el cambio. **Al momento de esta evaluación, el repositorio de GitHub está archivado — el estado de solo lectura de GitHub, no simplemente un proyecto que avanza lento.** Tiene más de " + st.es('gpt-engineer', 'bare') + " estrellas en GitHub y 7.200 forks, su último lanzamiento en PyPI fue `gpt-engineer` 0.3.1 en junio de 2024, y su propio README dirige a los visitantes hacia [gptengineer.app](https://gptengineer.app) (la plataforma comercial, renombrada desde entonces como [Lovable](https://lovable.dev)) o hacia [Aider](/es/power-local-llm/aider-review) para una CLI hackeable bien mantenida.",
+    leadAnswerBlock: "GPT Engineer es una herramienta de línea de comandos en Python, gratuita y con licencia MIT, disponible en [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer), que genera una base de código desde un archivo de prompt. **Su repositorio está archivado (solo lectura); el último cambio de código se fusionó el " + upd('gpt-engineer', 'es') + ".**",
     quickAnswerTop: {
       es: {
         question: '¿Sigue manteniéndose GPT Engineer, y debería usarlo en 2026?',
@@ -1092,7 +1092,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'GPT Engineer',
     title: 'GPT Engineer: arquivado no GitHub, o app virou Lovable',
     seoTitle: 'GPT Engineer: arquivado no GitHub, app virou Lovable',
-    intro: "GPT Engineer é uma ferramenta de linha de comando em Python gratuita e de código aberto (licença MIT), criada originalmente por [Anton Osika](https://github.com/AntonOsika), que gera uma base de código completa a partir de um arquivo de prompt em linguagem natural e oferece um modo \"improve\" para iterar sobre código existente — em [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer). **O repositório está arquivado (somente leitura) no momento desta avaliação** — o GitHub o marca como arquivado, sua própria descrição no GitHub diz \"CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)\", e seu README direciona os visitantes para outros lugares: para [gptengineer.app](https://gptengineer.app) para \"a evolução como um serviço gerenciado e opinativo\", e para [Aider](/pt/power-local-llm/aider-review) para \"uma CLI hackeável bem mantida\". A plataforma comercial do gptengineer.app foi renomeada desde então como [Lovable](https://lovable.dev), e o domínio antigo agora redireciona para lá.",
+    intro: "GPT Engineer é uma ferramenta de linha de comando em Python gratuita e de código aberto (licença MIT), criada originalmente por [Anton Osika](https://github.com/AntonOsika), que gera uma base de código completa a partir de um arquivo de prompt em linguagem natural e oferece um modo \"improve\" para iterar sobre código existente — em [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer). **O repositório está arquivado (somente leitura) no momento desta avaliação** — o GitHub o marca como arquivado, sua própria descrição no GitHub diz \"CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)\", e seu README direciona os visitantes para outros lugares: para [gptengineer.app](https://gptengineer.app) para \"a evolução como um serviço gerenciado e opinativo\", e para [Aider](/pt/power-local-llm/aider-review) para \"uma CLI hackeável bem mantida\".",
     metaDescription: "O repositório do GPT Engineer no GitHub está arquivado (MIT, última versão 0.3.1 em 2024) e o gptengineer.app virou Lovable. O README recomenda o Aider.",
     readTime: '10 min de leitura',
     targetKeywords: [
@@ -1103,7 +1103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'alternativas ao GPT Engineer',
       'gpt engineer github',
     ],
-    leadAnswerBlock: "GPT Engineer é uma ferramenta de linha de comando em Python gratuita sob licença MIT, disponível em [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer), que transforma um arquivo de prompt em linguagem natural em uma base de código gerada, e também pode \"melhorar\" código existente a partir de um prompt que descreva a mudança. **No momento desta avaliação, o repositório do GitHub está arquivado — o estado somente leitura do GitHub, não apenas um projeto que avança devagar.** Tem mais de " + st.pt('gpt-engineer', 'bare') + " estrelas no GitHub e 7.200 forks, seu último lançamento no PyPI foi `gpt-engineer` 0.3.1 em junho de 2024, e seu próprio README direciona os visitantes para [gptengineer.app](https://gptengineer.app) (a plataforma comercial, renomeada desde então como [Lovable](https://lovable.dev)) ou para [Aider](/pt/power-local-llm/aider-review) para uma CLI hackeável bem mantida.",
+    leadAnswerBlock: "GPT Engineer é uma ferramenta de linha de comando em Python, gratuita e com licença MIT, disponível em [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer), que gera uma base de código de um arquivo de prompt. **Seu repositório está arquivado (somente leitura); a última alteração de código foi mesclada em " + upd('gpt-engineer', 'pt') + ".**",
     quickAnswerTop: {
       pt: {
         question: 'O GPT Engineer ainda é mantido, e devo usá-lo em 2026?',
@@ -1358,7 +1358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'GPT Engineer',
     title: 'GPT Engineerレビュー：アーカイブ済み、アプリはLovableに',
     seoTitle: 'GPT Engineer：アーカイブ、アプリはLovableに',
-    intro: "GPT Engineerは、[Anton Osika](https://github.com/AntonOsika)氏によって元々開発された、無料でオープンソース（MITライセンス）のPythonコマンドラインツールで、自然言語のプロンプトファイルから完全なコードベースを生成し、既存コードを反復改善する「improve」モードも備える — [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)で公開。**本レビュー時点で、このリポジトリはアーカイブ（読み取り専用）されている。** GitHubはこれをアーカイブ済みとマークし、GitHub上の説明文自体も「CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)」と記載しており、READMEは訪問者を他所へ案内している — 「意見の反映された、マネージドサービスとしての進化形」として[gptengineer.app](https://gptengineer.app)へ、「よく整備されたハッカブルなCLI」として[Aider](/ja/power-local-llm/aider-review)へ。gptengineer.appの商用プラットフォームはその後[Lovable](https://lovable.dev)に改称され、旧ドメインは現在そちらへリダイレクトされる。",
+    intro: "GPT Engineerは、[Anton Osika](https://github.com/AntonOsika)氏によって元々開発された、無料でオープンソース（MITライセンス）のPythonコマンドラインツールで、自然言語のプロンプトファイルから完全なコードベースを生成し、既存コードを反復改善する「improve」モードも備える — [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)で公開。**本レビュー時点で、このリポジトリはアーカイブ（読み取り専用）されている。** GitHubはこれをアーカイブ済みとマークし、GitHub上の説明文自体も「CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)」と記載しており、READMEは訪問者を他所へ案内している — 「意見の反映された、マネージドサービスとしての進化形」として[gptengineer.app](https://gptengineer.app)へ、「よく整備されたハッカブルなCLI」として[Aider](/ja/power-local-llm/aider-review)へ。",
     metaDescription: "GPT EngineerのGitHubリポジトリはアーカイブ済み（MIT、最終リリース0.3.1は2024年）。gptengineer.appはLovableに改称。READMEはAiderを推奨。",
     readTime: '10分で読了',
     targetKeywords: [
@@ -1369,7 +1369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GPT Engineer 代替',
       'gpt engineer github',
     ],
-    leadAnswerBlock: "GPT Engineerは[github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)で公開されている無料のMITライセンスPythonコマンドラインツールで、自然言語のプロンプトファイルを生成されたコードベースに変換し、変更内容を記したプロンプトから既存コードを「改善」することもできる。**本レビュー時点で、GitHubリポジトリはアーカイブされている — 単に更新が遅い状態ではなく、GitHubの読み取り専用状態である。** " + st.ja('gpt-engineer', 'bare') + "を超えるGitHubスターと7,200のフォークを持ち、最後のPyPIリリースは2024年6月の`gpt-engineer` 0.3.1で、README自体が訪問者を[gptengineer.app](https://gptengineer.app)（商用プラットフォームで、その後[Lovable](https://lovable.dev)に改称）または[Aider](/ja/power-local-llm/aider-review)（よく整備されたハッカブルなCLI）へ案内している。",
+    leadAnswerBlock: "GPT Engineerは[github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)で公開されている無料のMITライセンスPython CLIで、プロンプトファイルからコードベースを生成する。**リポジトリはアーカイブ済み（読み取り専用）で、最後のコード変更は" + upd('gpt-engineer', 'ja') + "にマージされた。**",
     quickAnswerTop: {
       ja: {
         question: 'GPT Engineerはまだ保守されていますか、2026年に使うべきですか？',
@@ -1624,7 +1624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'GPT Engineer',
     title: 'GPT Engineer评测：GitHub已归档，应用现为Lovable',
     seoTitle: 'GPT Engineer：已归档，应用现为Lovable',
-    intro: "GPT Engineer是一款免费、开源（MIT许可）的Python命令行工具，最初由[Anton Osika](https://github.com/AntonOsika)开发，能够根据一个自然语言提示文件生成完整代码库，并提供“improve”模式用于对现有代码进行迭代 — 项目地址为[github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)。**截至本评测时，该仓库已被归档（只读状态）** — GitHub将其标记为已归档，其GitHub自身的描述写着“CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)”，其README将访客引导至别处：引导至[gptengineer.app](https://gptengineer.app)，称其为“作为一个有主见的托管服务的演进版本”，并引导至[Aider](/zh/power-local-llm/aider-review)，称其为“维护良好、可黑客化的CLI”。gptengineer.app背后的商业平台后来已更名为[Lovable](https://lovable.dev)，旧域名现在会重定向到那里。",
+    intro: "GPT Engineer是一款免费、开源（MIT许可）的Python命令行工具，最初由[Anton Osika](https://github.com/AntonOsika)开发，能够根据一个自然语言提示文件生成完整代码库，并提供“improve”模式用于对现有代码进行迭代 — 项目地址为[github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)。**截至本评测时，该仓库已被归档（只读状态）** — GitHub将其标记为已归档，其GitHub自身的描述写着“CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)”，其README将访客引导至别处：引导至[gptengineer.app](https://gptengineer.app)，称其为“作为一个有主见的托管服务的演进版本”，并引导至[Aider](/zh/power-local-llm/aider-review)，称其为“维护良好、可黑客化的CLI”。",
     metaDescription: "GPT Engineer的GitHub仓库已归档（MIT，最后发布0.3.1于2024年），gptengineer.app已更名为Lovable。其README推荐Aider。",
     readTime: '阅读需10分钟',
     targetKeywords: [
@@ -1635,7 +1635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GPT Engineer 替代方案',
       'gpt engineer github',
     ],
-    leadAnswerBlock: "GPT Engineer是一款免费的MIT许可Python命令行工具，托管在[github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)，能将一个自然语言提示文件转换为生成的代码库，也可以根据描述变更内容的提示“改进”现有代码。**截至本评测时，该GitHub仓库已被归档——这是GitHub的只读状态，而不仅仅是一个开发缓慢的项目。** 它拥有超过" + st.zh('gpt-engineer', 'bare') + "个GitHub星标和7,200个复刻（fork），最后一次PyPI发布是2024年6月的`gpt-engineer` 0.3.1，其自身README将访客引导至[gptengineer.app](https://gptengineer.app)（商业平台，后来更名为[Lovable](https://lovable.dev)）或[Aider](/zh/power-local-llm/aider-review)（维护良好、可黑客化的CLI）。",
+    leadAnswerBlock: "GPT Engineer是一款免费的MIT许可Python命令行工具，托管在[github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)，能根据提示文件生成代码库。**其仓库已归档（只读），最后一次代码变更合并于" + upd('gpt-engineer', 'zh') + "。**",
     quickAnswerTop: {
       zh: {
         question: 'GPT Engineer还在维护吗？2026年我应该使用它吗？',
@@ -1890,7 +1890,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'GPT Engineer',
     title: 'مراجعة GPT Engineer: مؤرشف على GitHub والتطبيق أصبح Lovable',
     seoTitle: 'GPT Engineer: مؤرشف على GitHub والتطبيق أصبح Lovable',
-    intro: "GPT Engineer هي أداة سطر أوامر مجانية ومفتوحة المصدر (برخصة MIT) بلغة Python، طوّرها في الأصل [Anton Osika](https://github.com/AntonOsika)، تُنشئ قاعدة كود كاملة من ملف تعليمات بلغة طبيعية، وتوفر وضع «improve» لتكرار العمل على الكود الحالي — على [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer). **المستودع مؤرشف (للقراءة فقط) وقت إعداد هذه المراجعة** — يضع GitHub عليه علامة الأرشفة، ووصفه الخاص على GitHub يقول «CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)»، ويوجّه ملف README الزوّار إلى أماكن أخرى: إلى [gptengineer.app](https://gptengineer.app) باعتباره «التطور كخدمة مُدارة ذات رؤية محددة»، وإلى [Aider](/ar/power-local-llm/aider-review) باعتبارها «واجهة سطر أوامر قابلة للتعديل ومُصانة جيدًا». أُعيدت تسمية المنصة التجارية على gptengineer.app لاحقًا إلى [Lovable](https://lovable.dev)، ويعيد النطاق القديم الآن التوجيه إليها.",
+    intro: "GPT Engineer هي أداة سطر أوامر مجانية ومفتوحة المصدر (برخصة MIT) بلغة Python، طوّرها في الأصل [Anton Osika](https://github.com/AntonOsika)، تُنشئ قاعدة كود كاملة من ملف تعليمات بلغة طبيعية، وتوفر وضع «improve» لتكرار العمل على الكود الحالي — على [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer). **المستودع مؤرشف (للقراءة فقط) وقت إعداد هذه المراجعة** — يضع GitHub عليه علامة الأرشفة، ووصفه الخاص على GitHub يقول «CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)»، ويوجّه ملف README الزوّار إلى أماكن أخرى: إلى [gptengineer.app](https://gptengineer.app) باعتباره «التطور كخدمة مُدارة ذات رؤية محددة»، وإلى [Aider](/ar/power-local-llm/aider-review) باعتبارها «واجهة سطر أوامر قابلة للتعديل ومُصانة جيدًا».",
     metaDescription: "مستودع GPT Engineer على GitHub مؤرشف (MIT، آخر إصدار 0.3.1 في 2024) وتطبيق gptengineer.app أصبح Lovable. يوصي ملف README بـ Aider.",
     readTime: '10 دقائق للقراءة',
     targetKeywords: [
@@ -1901,7 +1901,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'بدائل GPT Engineer',
       'gpt engineer github',
     ],
-    leadAnswerBlock: "GPT Engineer هي أداة سطر أوامر مجانية بلغة Python برخصة MIT، متاحة على [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)، تحوّل ملف تعليمات بلغة طبيعية إلى قاعدة كود مُولَّدة، ويمكنها أيضًا «تحسين» كود موجود بناءً على تعليمات تصف التغيير. **وقت إعداد هذه المراجعة، مستودع GitHub مؤرشف — وهي حالة القراءة فقط في GitHub، وليست مجرد مشروع يتقدم ببطء.** للمستودع أكثر من " + st.ar('gpt-engineer', 'bare') + " نجمة على GitHub و7,200 عملية fork، وكان آخر إصدار على PyPI هو `gpt-engineer` 0.3.1 في يونيو 2024، ويوجّه ملف README الخاص به الزوّار إلى [gptengineer.app](https://gptengineer.app) (المنصة التجارية، التي أُعيدت تسميتها لاحقًا إلى [Lovable](https://lovable.dev)) أو إلى [Aider](/ar/power-local-llm/aider-review) لواجهة سطر أوامر مُصانة جيدًا وقابلة للتعديل.",
+    leadAnswerBlock: "GPT Engineer أداة سطر أوامر مجانية بلغة Python برخصة MIT على [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)، تُنشئ قاعدة كود من ملف تعليمات. **المستودع مؤرشف (للقراءة فقط)، وآخر تغيير في الكود دُمج في " + upd('gpt-engineer', 'ar') + ".**",
     quickAnswerTop: {
       ar: {
         question: 'هل ما زال GPT Engineer مُصانًا، وهل يجب استخدامه في 2026؟',
@@ -2156,7 +2156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'GPT Engineer',
     title: 'GPT Engineer 리뷰: GitHub 아카이브, 앱은 Lovable로',
     seoTitle: 'GPT Engineer: GitHub 아카이브, 앱은 Lovable로',
-    intro: "GPT Engineer는 [Anton Osika](https://github.com/AntonOsika)가 처음 만든 무료 오픈소스(MIT 라이선스) Python 명령줄 도구로, 자연어 프롬프트 파일 하나로 전체 코드베이스를 생성하며, 기존 코드를 반복적으로 개선하는 \"improve\" 모드도 지원한다 — [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)에서 제공. **본 리뷰 시점 기준, 이 저장소는 아카이브(읽기 전용)된 상태다.** GitHub는 이를 아카이브됨으로 표시하고 있으며, GitHub 자체 설명에도 \"CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)\"라고 적혀 있고, README는 방문자를 다른 곳으로 안내한다 — \"의견이 반영된 관리형 서비스로의 진화\"로서 [gptengineer.app](https://gptengineer.app)을, \"잘 관리되는 해킹 가능한 CLI\"로서 [Aider](/ko/power-local-llm/aider-review)를 추천한다. gptengineer.app의 상업용 플랫폼은 이후 [Lovable](https://lovable.dev)로 이름이 바뀌었고, 이전 도메인은 이제 그쪽으로 리다이렉트된다.",
+    intro: "GPT Engineer는 [Anton Osika](https://github.com/AntonOsika)가 처음 만든 무료 오픈소스(MIT 라이선스) Python 명령줄 도구로, 자연어 프롬프트 파일 하나로 전체 코드베이스를 생성하며, 기존 코드를 반복적으로 개선하는 \"improve\" 모드도 지원한다 — [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)에서 제공. **본 리뷰 시점 기준, 이 저장소는 아카이브(읽기 전용)된 상태다.** GitHub는 이를 아카이브됨으로 표시하고 있으며, GitHub 자체 설명에도 \"CLI platform to experiment with codegen. Precursor to: [lovable.dev](https://lovable.dev)\"라고 적혀 있고, README는 방문자를 다른 곳으로 안내한다 — \"의견이 반영된 관리형 서비스로의 진화\"로서 [gptengineer.app](https://gptengineer.app)을, \"잘 관리되는 해킹 가능한 CLI\"로서 [Aider](/ko/power-local-llm/aider-review)를 추천한다.",
     metaDescription: "GPT Engineer 저장소는 아카이브되었고(MIT, 릴리스 0.3.1은 2024년) 앱은 Lovable로 바뀌었다. README는 Aider를 추천한다.",
     readTime: '10분 소요',
     targetKeywords: [
@@ -2167,7 +2167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GPT Engineer 대안',
       'gpt engineer github',
     ],
-    leadAnswerBlock: "GPT Engineer는 [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)에서 제공되는 무료 MIT 라이선스 Python 명령줄 도구로, 자연어 프롬프트 파일을 생성된 코드베이스로 전환하며, 변경 내용을 설명하는 프롬프트로 기존 코드를 \"개선\"할 수도 있다. **본 리뷰 시점 기준, GitHub 저장소는 아카이브된 상태다 — 단순히 느리게 진행되는 프로젝트가 아니라 GitHub의 읽기 전용 상태다.** " + st.ko('gpt-engineer', 'bare') + "개 넘는 GitHub 스타와 7,200개 이상의 포크를 기록했으며, 마지막 PyPI 릴리스는 2024년 6월의 `gpt-engineer` 0.3.1이었고, 자체 README는 방문자를 [gptengineer.app](https://gptengineer.app)(상업용 플랫폼, 이후 [Lovable](https://lovable.dev)로 이름이 바뀜)이나 [Aider](/ko/power-local-llm/aider-review)(잘 관리되는 해킹 가능한 CLI)로 안내한다.",
+    leadAnswerBlock: "GPT Engineer는 [github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)에서 제공되는 무료 MIT 라이선스 Python 명령줄 도구로, 프롬프트 파일 하나로 전체 코드베이스를 생성한다. **저장소는 아카이브(읽기 전용)되었으며, 마지막 코드 변경은 " + upd('gpt-engineer', 'ko') + "에 병합되었다.**",
     quickAnswerTop: {
       ko: {
         question: 'GPT Engineer는 아직 유지보수되고 있나요? 2026년에 사용해도 될까요?',
