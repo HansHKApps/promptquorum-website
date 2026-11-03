@@ -21674,5 +21674,305 @@
     ],
     "baseline": null,
     "deployedAt": null
+  },
+  {
+    "id": "37fb5b2c-1d1b-483e-83ec-b68fa90e0e0f",
+    "slug": "/de/power-local-llm/best-web-hosting",
+    "date": "2026-11-03T05:19:44.094Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Webhosting Kosten 2026: IONOS, ALL-INKL.COM und Hostinger mit Einstiegs- und Verlängerungspreis, geprüft am 02.11.2026. IONOS verlängert zum 11-fachen.",
+        "new": "Webhosting Kosten 2026: IONOS, ALL-INKL.COM, Hostinger mit Einstiegs- und Verlängerungspreis, geprüft 02.11.2026. IONOS: 11-fach (laut Anbieter)."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-web-hosting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "hosting kosten",
+      "hosting con soporte en español",
+      "lws vs ovh"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2908abb2-284f-47d0-a9e7-7db31ee9ac3a",
+    "slug": "/zh/power-local-llm/best-web-hosting",
+    "date": "2026-11-03T05:19:44.197Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "2026年面向华语读者的网站主机价格：阿里云（限时促销每年38元）、腾讯云（每月35元）、Hostinger（首月2.49美元）。附确认价格及PIPL、数据安全法合规说明。",
+        "new": "2026年面向华语读者的网站主机价格：阿里云（限时促销每年38元）、腾讯云（每月35元）、Hostinger（需一次预付48个月，每月2.49美元起，续费每月10.99美元）。附PIPL与数据安全法说明。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-web-hosting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "hosting kosten",
+      "hosting con soporte en español",
+      "lws vs ovh"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "fe2d0b62-bb6f-4022-9cb7-02eefa84fdcd",
+    "slug": "/power-local-llm/best-ai-hr-software-enterprise",
+    "date": "2026-11-03T05:19:44.313Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best AI HR Software for Enterprises (2026): Compared",
+        "new": "AI HR Software for Enterprises (2026): Options Compared"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-ai-hr-software-enterprise); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hr software",
+      "ki-hr-software",
+      "software rrhh ia"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9a86f606-9a03-4aa7-a27e-d8447328fe95",
+    "slug": "/de/power-local-llm/best-ai-hr-software-enterprise",
+    "date": "2026-11-03T05:19:44.413Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Beste KI-HR-Software für Unternehmen im Vergleich (2026)",
+        "new": "KI-HR-Software für Unternehmen im Vergleich (2026)"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-ai-hr-software-enterprise); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hr software",
+      "ki-hr-software",
+      "software rrhh ia"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "1950cb7d-3682-4660-9b64-a4947b37f08c",
+    "slug": "/es/power-local-llm/best-ai-hr-software-enterprise",
+    "date": "2026-11-03T05:19:44.518Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Mejor software de RR. HH. con IA para empresas (2026)",
+        "new": "Software de RR. HH. con IA para empresas: opciones (2026)"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-ai-hr-software-enterprise); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hr software",
+      "ki-hr-software",
+      "software rrhh ia"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "885f2043-1c0f-4c85-84ce-04c01e646293",
+    "slug": "/ar/power-local-llm/best-ai-hr-software-enterprise",
+    "date": "2026-11-03T05:19:44.620Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "أفضل برمجيات الموارد البشرية بالذكاء الاصطناعي (2026)",
+        "new": "برمجيات الموارد البشرية بالذكاء الاصطناعي: مقارنة (2026)"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-ai-hr-software-enterprise); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hr software",
+      "ki-hr-software",
+      "software rrhh ia"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "5c88d9f0-56af-4f59-ab12-e865efcc30a0",
+    "slug": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+    "date": "2026-11-03T05:19:44.740Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pinecone ($20/mo Builder, $50/mo Standard), Weaviate Cloud ($45/mo Flex), Qdrant (free-forever self-host tier), Chroma (open-source + $250/mo Team) compared for RAG vector search in 2026.",
+        "new": "Pinecone ($20/mo Builder), Weaviate Cloud ($45/mo Flex), Qdrant (free to self-host) and Chroma (open source) compared for RAG vector search in 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (pinecone-vs-weaviate-vs-qdrant-vs-chroma); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "qdrant vs pinecone",
+      "pinecone vs weaviate",
+      "self hosted vector database"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "91f1c958-a865-4f0a-9c1d-7b5c11d5210b",
+    "slug": "/de/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+    "date": "2026-11-03T05:19:44.846Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pinecone (20 $/Mon. Builder, 50 $/Mon. Standard), Weaviate Cloud (45 $/Mon. Flex), Qdrant (kostenlose Self-Host-Stufe für immer), Chroma (Open Source + 250 $/Mon. Team) im Vergleich für RAG-Vektorsuche 2026.",
+        "new": "Pinecone (20 $/Mon. Builder), Weaviate Cloud (45 $/Mon. Flex), Qdrant (Self-Hosting kostenlos), Chroma (Open Source) im Vergleich für RAG-Vektorsuche 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (pinecone-vs-weaviate-vs-qdrant-vs-chroma); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "qdrant vs pinecone",
+      "pinecone vs weaviate",
+      "self hosted vector database"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "22dc2b2e-94c9-444d-891c-6f64851fabcd",
+    "slug": "/fr/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+    "date": "2026-11-03T05:19:44.948Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pinecone (20 $/mois Builder, 50 $/mois Standard), Weaviate Cloud (45 $/mois Flex), Qdrant (palier auto-hébergé gratuit à vie), Chroma (open source + 250 $/mois Team) comparés pour la recherche vectorielle RAG en 2026.",
+        "new": "Pinecone (20 $/mois Builder), Weaviate Cloud (45 $/mois Flex), Qdrant (auto-hébergement gratuit), Chroma (open source) comparés pour le RAG en 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (pinecone-vs-weaviate-vs-qdrant-vs-chroma); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "qdrant vs pinecone",
+      "pinecone vs weaviate",
+      "self hosted vector database"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2cb48576-cdd6-4c13-882f-0ec0f9349ecd",
+    "slug": "/es/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+    "date": "2026-11-03T05:19:45.050Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pinecone ($20/mes Builder, $50/mes Standard), Weaviate Cloud ($45/mes Flex), Qdrant (nivel self-hosted gratis para siempre), Chroma (open source + $250/mes Team) comparados para búsqueda vectorial RAG en 2026.",
+        "new": "Pinecone ($20/mes Builder), Weaviate Cloud ($45/mes Flex), Qdrant (self-hosting gratis) y Chroma (open source) comparados para búsqueda RAG en 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (pinecone-vs-weaviate-vs-qdrant-vs-chroma); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "qdrant vs pinecone",
+      "pinecone vs weaviate",
+      "self hosted vector database"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "eb14107d-9dbb-4bc6-b7c2-f74e5a5f6161",
+    "slug": "/ja/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+    "date": "2026-11-03T05:19:45.153Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pinecone（Builder月20ドル、Standard月50ドル）、Weaviate Cloud（Flex月45ドル）、Qdrant（永久無料のセルフホスト層）、Chroma（オープンソース＋Team月250ドル）を2026年のRAGベクトル検索向けに比較。",
+        "new": "Pinecone（Builder月20ドル）、Weaviate Cloud（Flex月45ドル）、Qdrant（セルフホストは無料）、Chroma（オープンソース）を2026年のRAGベクトル検索向けに比較。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (pinecone-vs-weaviate-vs-qdrant-vs-chroma); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "qdrant vs pinecone",
+      "pinecone vs weaviate",
+      "self hosted vector database"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9e3d0c73-e28b-46c7-a9aa-d0f17e5ec0bc",
+    "slug": "/zh/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+    "date": "2026-11-03T05:19:45.258Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pinecone（Builder每月20美元，Standard每月50美元）、Weaviate Cloud（Flex每月45美元）、Qdrant（永久免费自托管层）、Chroma（开源+Team每月250美元）——2026年RAG向量搜索对比。",
+        "new": "Pinecone（Builder每月20美元）、Weaviate Cloud（Flex每月45美元）、Qdrant（自托管免费）、Chroma（开源）——2026年RAG向量搜索对比。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (pinecone-vs-weaviate-vs-qdrant-vs-chroma); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "qdrant vs pinecone",
+      "pinecone vs weaviate",
+      "self hosted vector database"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "6f1be860-4fac-4fed-8db7-907e5e92105d",
+    "slug": "/pt/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+    "date": "2026-11-03T05:19:45.362Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pinecone ($20/mês Builder, $50/mês Standard), Weaviate Cloud ($45/mês Flex), Qdrant (camada self-hosted gratuita para sempre), Chroma (open source + $250/mês Team) comparados para busca vetorial RAG em 2026.",
+        "new": "Pinecone ($20/mês Builder), Weaviate Cloud ($45/mês Flex), Qdrant (self-hosting gratuito) e Chroma (open source) comparados para busca RAG em 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (pinecone-vs-weaviate-vs-qdrant-vs-chroma); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "qdrant vs pinecone",
+      "pinecone vs weaviate",
+      "self hosted vector database"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "5646de03-b9d1-4415-a887-701431b26a42",
+    "slug": "/ar/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+    "date": "2026-11-03T05:19:45.467Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مقارنة Pinecone (20$/شهرياً Builder، 50$/شهرياً Standard) وWeaviate Cloud (45$/شهرياً Flex) وQdrant (طبقة استضافة ذاتية مجانية للأبد) وChroma (مفتوح المصدر + 250$/شهرياً Team) للبحث المتجهي RAG في 2026.",
+        "new": "مقارنة Pinecone (20$/شهرياً Builder) وWeaviate Cloud (45$/شهرياً Flex) وQdrant (استضافة ذاتية مجانية) وChroma (مفتوح المصدر) لـ RAG في 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (pinecone-vs-weaviate-vs-qdrant-vs-chroma); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "qdrant vs pinecone",
+      "pinecone vs weaviate",
+      "self hosted vector database"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7dce49a4-cb65-4fc6-bfab-11a5b5b499e2",
+    "slug": "/ko/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+    "date": "2026-11-03T05:19:45.569Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pinecone(Builder 월 20달러, Standard 월 50달러), Weaviate Cloud(Flex 월 45달러), Qdrant(영구 무료 셀프호스팅 계층), Chroma(오픈소스 + Team 월 250달러)를 2026년 RAG 벡터 검색 기준으로 비교합니다.",
+        "new": "Pinecone(Builder 월 20달러), Weaviate Cloud(Flex 월 45달러), Qdrant(셀프호스팅 무료), Chroma(오픈소스)의 2026년 RAG 벡터 검색 비교."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (pinecone-vs-weaviate-vs-qdrant-vs-chroma); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "qdrant vs pinecone",
+      "pinecone vs weaviate",
+      "self hosted vector database"
+    ],
+    "baseline": null,
+    "deployedAt": null
   }
 ]
