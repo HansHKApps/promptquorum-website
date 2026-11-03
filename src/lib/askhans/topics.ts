@@ -35,7 +35,8 @@ export function topicsFromToolInput(input: unknown): AnswerTopics {
 
 // Tools whose goal / query is free text: the structured topic is what they returned (the shortlist), not the input.
 const SHORTLIST_TOOLS = new Set(['find_best_apps', 'search_apps', 'recommend_stack', 'find_local_alternative', 'get_app_alternatives'])
-const SHORTLIST_SIZE = 3
+// Only the top result: counting the whole shortlist put up to 3 apps and 3 categories on a single question.
+const SHORTLIST_SIZE = 1
 const APP_BY_SLUG = new Map(localAiApps.map((a) => [a.slug, a]))
 
 function collectSlugs(node: unknown, out: string[], depth = 0): void {
@@ -49,7 +50,7 @@ function collectSlugs(node: unknown, out: string[], depth = 0): void {
   for (const v of Object.values(o)) collectSlugs(v, out, depth + 1)
 }
 
-/** For shortlist tools: the top apps of the result and their main directory category. */
+/** For shortlist tools: the top app of the result and its main directory category. */
 export function topicsFromToolResult(name: string, result: unknown): AnswerTopics {
   const out: AnswerTopics = { apps: [], dirCats: [] }
   if (!SHORTLIST_TOOLS.has(name)) return out
