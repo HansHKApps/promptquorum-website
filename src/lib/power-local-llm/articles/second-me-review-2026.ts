@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'train your own AI locally',
       'Second Me vs Khoj',
     ],
-    leadAnswerBlock: 'Second Me is a free, open-source (Apache 2.0) project on GitHub that lets you train a personalized AI — the project calls it your "Second Me" — from your own personal data and memories, instead of relying on a generic chatbot with no context about you. It runs locally via llama.cpp, uses Microsoft\'s GraphRAG to organize your data, and starts from Qwen2.5-series base models.',
+    leadAnswerBlock: '**Second Me is a free, open-source (Apache 2.0) GitHub project for training a personalized AI on your own data and memories. It runs locally via llama.cpp, uses Microsoft\'s GraphRAG to organize your data, and starts from Qwen2.5-series base models.**',
     quickAnswerTop: {
       en: {
         question: 'What is Second Me and how is it different from a normal chatbot?',
@@ -248,7 +248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'eigene KI lokal trainieren',
       'Second Me vs Khoj',
     ],
-    leadAnswerBlock: 'Second Me ist ein kostenloses, quelloffenes (Apache 2.0) GitHub-Projekt, mit dem Sie eine personalisierte KI — das Projekt nennt sie Ihr "Second Me" — aus Ihren eigenen Daten und Erinnerungen trainieren, statt sich auf einen generischen Chatbot ohne Kontext über Sie zu verlassen. Es läuft lokal über llama.cpp, nutzt Microsofts GraphRAG zur Organisation Ihrer Daten und startet von Basismodellen der Qwen2.5-Serie.',
+    leadAnswerBlock: '**Second Me ist ein kostenloses, quelloffenes (Apache 2.0) GitHub-Projekt, mit dem Sie eine personalisierte KI aus Ihren eigenen Daten und Erinnerungen trainieren. Es läuft lokal über llama.cpp, nutzt Microsofts GraphRAG zur Organisation Ihrer Daten und startet von Basismodellen der Qwen2.5-Serie.**',
     quickAnswerTop: {
       de: {
         question: 'Was ist Second Me und wie unterscheidet es sich von einem normalen Chatbot?',
@@ -471,7 +471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'entraîner sa propre IA en local',
       'Second Me vs Khoj',
     ],
-    leadAnswerBlock: 'Second Me est un projet GitHub gratuit et open source (Apache 2.0) qui permet d\'entraîner une IA personnalisée — le projet l\'appelle votre « Second Me » — à partir de vos propres données et souvenirs, au lieu de dépendre d\'un chatbot générique sans contexte sur vous. Il fonctionne en local via llama.cpp, utilise GraphRAG de Microsoft pour organiser vos données, et part de modèles de base de la série Qwen2.5.',
+    leadAnswerBlock: '**Second Me est un projet GitHub gratuit et open source (Apache 2.0) pour entraîner une IA personnalisée à partir de vos données et souvenirs. Il fonctionne en local via llama.cpp, utilise GraphRAG de Microsoft pour organiser vos données et part de modèles de base Qwen2.5.**',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que Second Me et en quoi diffère-t-il d\'un chatbot classique ?',
@@ -694,7 +694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '自分のAIをローカルで訓練',
       'Second Me vs Khoj',
     ],
-    leadAnswerBlock: 'Second Meは、無料でオープンソース（Apache 2.0）のGitHubプロジェクトで、自分についての文脈を持たない汎用チャットボットに頼る代わりに、自分自身のデータと記憶からパーソナライズされたAI——プロジェクトはこれを「Second Me」と呼びます——を訓練できます。llama.cppを通じてローカルで動作し、MicrosoftのGraphRAGでデータを整理し、Qwen2.5シリーズのベースモデルから始まります。',
+    leadAnswerBlock: '**Second Meは、自分のデータと記憶から個人向けAIを訓練できる無料のオープンソース（Apache 2.0）GitHubプロジェクトです。llama.cppでローカル動作し、GraphRAGとQwen2.5系モデルを使います。**',
     quickAnswerTop: {
       ja: {
         question: 'Second Meとは何で、通常のチャットボットとどう違うのですか？',
@@ -917,7 +917,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '本地训练自己的AI',
       'Second Me vs Khoj',
     ],
-    leadAnswerBlock: 'Second Me是一个免费、开源（Apache 2.0）的GitHub项目，让你用自己的数据和记忆训练一个个性化AI——项目称之为你的"Second Me"——而不是依赖对你毫无了解的通用聊天机器人。它通过llama.cpp在本地运行，使用微软的GraphRAG组织你的数据，并从Qwen2.5系列基础模型出发。',
+    leadAnswerBlock: '**Second Me是一个免费开源（Apache 2.0）的GitHub项目，可用你自己的数据和记忆训练个性化AI。它通过llama.cpp在本地运行，用微软GraphRAG整理数据，以Qwen2.5系列模型为基础。**',
     quickAnswerTop: {
       zh: {
         question: 'Second Me是什么，与普通聊天机器人有何不同？',
@@ -1140,7 +1140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'entrenar tu propia IA en local',
       'Second Me vs Khoj',
     ],
-    leadAnswerBlock: 'Second Me es un proyecto de GitHub gratuito y de código abierto (Apache 2.0) que te permite entrenar una IA personalizada — el proyecto la llama tu "Second Me" — a partir de tus propios datos y recuerdos, en lugar de depender de un chatbot genérico sin contexto sobre ti. Funciona en local mediante llama.cpp, usa GraphRAG de Microsoft para organizar tus datos, y parte de modelos base de la serie Qwen2.5.',
+    leadAnswerBlock: '**Second Me es un proyecto de GitHub gratuito y de código abierto (Apache 2.0) para entrenar una IA personalizada con tus propios datos y recuerdos. Funciona en local con llama.cpp, usa GraphRAG de Microsoft para organizar tus datos y parte de modelos base de la serie Qwen2.5.**',
     quickAnswerTop: {
       es: {
         question: '¿Qué es Second Me y en qué se diferencia de un chatbot normal?',
@@ -1363,7 +1363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'treinar sua própria IA localmente',
       'Second Me vs Khoj',
     ],
-    leadAnswerBlock: 'O Second Me é um projeto gratuito e open source (Apache 2.0) no GitHub que permite treinar uma IA personalizada — o projeto a chama de seu "Second Me" — a partir dos seus próprios dados e memórias, em vez de depender de um chatbot genérico sem contexto sobre você. Ele roda localmente via llama.cpp, usa o GraphRAG da Microsoft para organizar seus dados, e parte de modelos base da série Qwen2.5.',
+    leadAnswerBlock: '**O Second Me é um projeto gratuito e open source (Apache 2.0) no GitHub para treinar uma IA personalizada com seus próprios dados e memórias. Ele roda localmente via llama.cpp, usa o GraphRAG da Microsoft para organizar seus dados e parte de modelos base da série Qwen2.5.**',
     quickAnswerTop: {
       pt: {
         question: 'O que é o Second Me e como ele difere de um chatbot comum?',
@@ -1586,7 +1586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تدريب ذكائك الاصطناعي الخاص محليًا',
       'Second Me مقابل Khoj',
     ],
-    leadAnswerBlock: 'Second Me هو مشروع مجاني ومفتوح المصدر (Apache 2.0) على GitHub يتيح لك تدريب ذكاء اصطناعي شخصي — يسميه المشروع "Second Me" الخاص بك — من بياناتك وذكرياتك الخاصة، بدلاً من الاعتماد على روبوت محادثة عام لا يعرف عنك شيئًا. يعمل محليًا عبر llama.cpp، ويستخدم GraphRAG من Microsoft لتنظيم بياناتك، وينطلق من نماذج أساس من سلسلة Qwen2.5.',
+    leadAnswerBlock: '**Second Me هو مشروع مجاني ومفتوح المصدر (Apache 2.0) على GitHub لتدريب ذكاء اصطناعي شخصي من بياناتك وذكرياتك الخاصة. يعمل محليًا عبر llama.cpp، ويستخدم GraphRAG من Microsoft لتنظيم بياناتك، وينطلق من نماذج أساس من سلسلة Qwen2.5.**',
     quickAnswerTop: {
       ar: {
         question: 'ما هو Second Me وكيف يختلف عن روبوت محادثة عادي؟',
@@ -1809,7 +1809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '내 AI 로컬에서 훈련하기',
       'Second Me vs Khoj',
     ],
-    leadAnswerBlock: 'Second Me는 무료 오픈소스(Apache 2.0) GitHub 프로젝트로, 자신에 대한 맥락이 없는 범용 챗봇에 의존하는 대신 자신의 데이터와 기억으로 개인화된 AI — 프로젝트는 이를 당신의 "Second Me"라고 부릅니다 — 를 훈련할 수 있게 해줍니다. llama.cpp를 통해 로컬에서 실행되며, Microsoft의 GraphRAG로 데이터를 정리하고, Qwen2.5 시리즈 베이스 모델에서 시작합니다.',
+    leadAnswerBlock: '**Second Me는 자신의 데이터와 기억으로 개인화 AI를 훈련하는 무료 오픈소스(Apache 2.0) GitHub 프로젝트입니다. llama.cpp로 로컬 실행하며 GraphRAG로 데이터를 정리하고 Qwen2.5 계열 모델에서 시작합니다.**',
     quickAnswerTop: {
       ko: {
         question: 'Second Me란 무엇이며 일반 챗봇과 어떻게 다른가요?',
