@@ -16,10 +16,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-27',
     affiliateDisclosure: true,
-    title: 'Pinecone vs Weaviate vs Qdrant vs Chroma: Best Vector DB (2026)',
+    title: 'Pinecone vs Weaviate vs Qdrant vs Chroma: Vector Database Comparison (2026)',
     seoTitle: 'Pinecone vs Weaviate vs Qdrant vs Chroma (2026)',
     intro: 'Vector databases store embeddings and run similarity search for RAG (retrieval-augmented generation) pipelines. Pinecone, Weaviate, Qdrant, and Chroma solve that same problem with four different tradeoffs on self-hosting, pricing, and operational effort. This guide compares current pricing, licenses, and deployment models across all four, checked against each vendor\'s pricing page on 2026-11-03 and each project\'s GitHub repository.',
-    metaDescription: 'Pinecone ($20/mo Builder, $50/mo Standard), Weaviate Cloud ($45/mo Flex), Qdrant (free-forever self-host tier), Chroma (open-source + $250/mo Team) compared for RAG vector search in 2026.',
+    metaDescription: 'Pinecone ($20/mo Builder), Weaviate Cloud ($45/mo Flex), Qdrant (free to self-host) and Chroma (open source) compared for RAG vector search in 2026.',
     publishDate: '2026-08-27',
     dateModified: '2026-11-03',
     readTime: '15 min read',
@@ -34,13 +34,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'self-hosted vector database',
       'pinecone pricing',
     ],
-    leadAnswerBlock: '**The best vector database for RAG in 2026 depends on whether you self-host or use managed cloud: Qdrant is a strong fit for teams with ops capacity (free-forever cloud tier, Apache 2.0 self-hosting), while Pinecone suits teams that want zero infrastructure work ($20/mo Builder tier, no server to manage).** There is no single "best" — Weaviate and Chroma each fit specific middle-ground use cases covered below.',
+    leadAnswerBlock: '**The right vector database for RAG depends on whether you self-host or use managed cloud: Qdrant suits teams with ops capacity (free to self-host, free cloud tier with inactivity limits), Pinecone suits teams that want no infrastructure ($20/mo Builder).** No single option wins; Weaviate and Chroma fit middle-ground cases.',
     quickAnswerTop: {
       en: {
         question: 'Which vector database should I use: Pinecone, Weaviate, Qdrant, or Chroma?',
-        answer: 'Use Qdrant if you can self-host and want a free tier (0.5 vCPU/1GB RAM/4GB disk, free forever per Qdrant\'s pricing page) plus a Rust-based engine. Use Pinecone if you want zero infrastructure management and are fine with cloud-only, usage-based billing starting at $20/month. Use Weaviate if you want a hybrid option with both self-hosted (BSD-3-Clause, free) and managed cloud (from $45/month). Use Chroma if you are a solo developer or prototyping — it runs embedded in a Python process with no server at all.',
+        answer: 'Use Qdrant if you can self-host and want a free tier (0.5 vCPU/1GB RAM/4GB disk, with inactivity limits per Qdrant\'s documentation) plus a Rust-based engine. Use Pinecone if you want zero infrastructure management and are fine with cloud-only, usage-based billing starting at $20/month. Use Weaviate if you want a hybrid option with both self-hosted (BSD-3-Clause, free) and managed cloud (from $45/month). Use Chroma if you are a solo developer or prototyping — it runs embedded in a Python process with no server at all.',
         bullets: [
-          'Qdrant: Rust, Apache 2.0, free self-hosted or free-forever cloud tier (0.5 vCPU/1GB RAM/4GB disk)',
+          'Qdrant: Rust, Apache 2.0, free self-hosted or a free cloud tier with inactivity limits (0.5 vCPU/1GB RAM/4GB disk)',
           'Pinecone: cloud-only, no self-hosted option, Starter free tier (2GB storage) then $20/mo Builder or $50/mo Standard',
           'Weaviate: Go, BSD-3-Clause, free self-hosted or Weaviate Cloud from $45/mo (Flex tier; a free cloud tier also exists)',
           'Chroma: Python/Rust core, Apache 2.0, free self-hosted/embedded or Chroma Cloud from $0 + usage (Starter) to $250/mo (Team)',
@@ -68,7 +68,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     affiliateLinks: [
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone', productCategory: 'dev-tool', priceRange: 'Free–$50/mo+', label: 'See Pinecone Pricing →' },
-      { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: 'Free forever tier', label: 'Try Qdrant Free →' },
+      { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: 'Free tier (inactivity limits apply)', label: 'Try Qdrant Free →' },
       { url: 'https://weaviate.io/pricing', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: 'From $45/mo', label: 'See Weaviate Pricing →' },
       { url: 'https://www.trychroma.com/pricing', productName: 'Chroma', productCategory: 'dev-tool', priceRange: 'Free–$250/mo+', label: 'See Chroma Pricing →' },
     ],
@@ -78,12 +78,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'TL;DR — Vector Database Comparison',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qdrant is a strong fit for self-hosting with a free-forever cloud tier; Pinecone suits zero-infrastructure managed cloud; Weaviate and Chroma fill specific middle-ground niches.' },
+          { type: 'one-sentence', text: 'Qdrant is a strong fit for self-hosting with a free cloud tier (inactivity limits apply); Pinecone suits zero-infrastructure managed cloud; Weaviate and Chroma fill specific middle-ground niches.' },
           { type: 'plain-terms', text: 'A vector database stores the numerical "fingerprints" (embeddings) of your documents so an AI app can quickly find the most relevant ones — the retrieval half of RAG (retrieval-augmented generation).' },
         ],
         items: [
           'Qdrant, Weaviate, and Chroma are open-source and free to self-host. Pinecone is cloud-only — there is no self-hosted Pinecone at any price.',
-          'Qdrant Cloud lists a free-forever tier (0.5 vCPU / 1GB RAM / 4GB disk, checked 2026-11-03) with no credit card required; per Qdrant\'s docs, inactive free clusters are suspended after 1 week and deleted after 4 weeks.',
+          'Qdrant Cloud lists a free tier (0.5 vCPU / 1GB RAM / 4GB disk, checked 2026-11-03) with no credit card required; per Qdrant\'s docs, inactive free clusters are suspended after 1 week and deleted after 4 weeks.',
           'Pinecone Starter is free (2GB storage, 2M writes/mo, 1M reads/mo); paid tiers start at $20/month flat (Builder) or $50/month minimum usage (Standard).',
           'Weaviate Cloud has a free tier (no credit card: 1 cluster, 100,000 objects, 1GB memory, 10GB disk, best-effort availability). The paid Flex tier starts at $45/month and Premium is listed from $400/month, checked on weaviate.io/pricing on 2026-11-03.',
           'Chroma Cloud Starter is $0/month plus usage-based billing (writes, storage, queries); Team tier is $250/month plus usage.',
@@ -132,7 +132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'If unsure, start with self-hosted Qdrant on a small VM or Docker container.',
-            whyItMatters: 'Qdrant\'s free-forever cloud tier and lightweight Rust binary make it a low-risk starting point — you can migrate to Pinecone or Weaviate Cloud later if you decide managed cloud is worth the recurring cost.',
+            whyItMatters: 'Qdrant\'s free cloud tier and lightweight Rust binary make it a low-risk starting point — you can migrate to Pinecone or Weaviate Cloud later if you decide managed cloud is worth the recurring cost.',
           },
         ],
       },
@@ -177,7 +177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'weaviate',
         title: 'Weaviate: Self-Hosted or Managed Cloud',
         content: [
-          '**[Weaviate](https://weaviate.io/pricing) is open-source (BSD-3-Clause) and free to self-host, and Weaviate Cloud also offers a free tier (no credit card required) before the paid Flex plan, checked on weaviate.io/pricing on 2026-11-03.** Weaviate Cloud restructured its pricing in October 2025: the old $25/month Serverless tier was retired and replaced by a $45/month Flex tier minimum, which is still the current pricing as of this article\'s 2026-11-03 verification.',
+          '**[Weaviate](https://weaviate.io/pricing) is open-source (BSD-3-Clause) and free to self-host, and Weaviate Cloud also offers a free tier (no credit card required) before the paid Flex plan, checked on weaviate.io/pricing on 2026-11-03.**',
           'Weaviate Cloud Free: $0, 1 cluster, 100,000 objects, 1GB memory, 10GB disk, best-effort availability, no backup retention. Flex: from $45/month, pay-as-you-go, shared infrastructure, 99.5% SLA. Premium: sold via sales, listed from $400/month, 99.9% SLA (shared) or 99.95% (dedicated), Bring Your Own Cloud, HIPAA-eligible, choice of shared or dedicated deployment. Self-hosted Weaviate has no cost beyond your own infrastructure — it is the same BSD-3-Clause code that runs Weaviate Cloud.',
           `Weaviate's GitHub repository shows ${S.en('weaviate')} stars as of 2026-09-18 (verified via GitHub's public API), the smallest of the three open-source options here, though still an actively maintained project with regular releases.`,
           'Weaviate has a company-facing partner ecosystem (Technology Alliance Partners, Systems Integrators, Value-Added Resellers) rather than an individual content-creator affiliate program — no per-referral commission structure was found on weaviate.io as of this verification date.',
@@ -194,14 +194,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'qdrant',
         title: 'Qdrant: Rust-Based Self-Hosting, Free Cloud Tier',
         content: [
-          '**[Qdrant](https://qdrant.tech/pricing/) is open-source (Apache 2.0), written in Rust, and has a free-forever Qdrant Cloud tier (the vendor\'s wording) (0.5 vCPU / 1GB RAM / 4GB disk, verified on qdrant.tech/pricing 2026-11-03) with no fixed time limit and no card required; inactive free clusters are suspended and later deleted (see below).** Self-hosting is free at any scale — you pay only for your own infrastructure.',
+          '**[Qdrant](https://qdrant.tech/pricing/) is open-source (Apache 2.0), written in Rust, and has a free Qdrant Cloud tier (0.5 vCPU / 1GB RAM / 4GB disk, verified on qdrant.tech/pricing 2026-11-03) with no fixed time limit and no card required; inactive free clusters are suspended and later deleted (see below).** Self-hosting is free at any scale — you pay only for your own infrastructure.',
           'Free tier: 0.5 vCPU, 1GB RAM, 4GB disk, single-node cluster, free cloud inference with selected embedding models. Standard: usage-based pricing beyond the free tier, dedicated resources, flexible scaling, 99.5% uptime SLA — Qdrant does not publish a flat monthly minimum for Standard, unlike Pinecone or Weaviate. Premium: minimum spend required (amount not published), SSO, private VPC links, 99.9% uptime SLA. Hybrid Cloud and Private Cloud: custom pricing for data-residency and regulatory needs.',
           `Qdrant's GitHub repository shows ${S.en('qdrant')} stars (PromptQuorum directory data, checked 2026-09-18), the highest star count of the three open-source options. Qdrant announced a $50M Series B on 2026-03-12 ([Qdrant announcement](https://qdrant.tech/blog/series-b-announcement/)).`,
           'Qdrant\'s partner page lists cloud infrastructure partners (AWS, Google Cloud, Microsoft Azure, Oracle Cloud, DigitalOcean, and others for managed deployment) and a startup discount program, not an individual content-creator affiliate program.',
         ],
         items: [
           'Self-hosted: free, Apache 2.0, unlimited',
-          'Cloud free tier: 0.5 vCPU / 1GB RAM / 4GB disk, free forever, no card required',
+          'Cloud free tier: 0.5 vCPU / 1GB RAM / 4GB disk, no card required',
           'Standard: usage-based, no published flat monthly minimum, dedicated resources, 99.5% SLA',
           'Premium: minimum spend (unpublished amount), SSO, private VPC links, 99.9% SLA',
           `${S.en('qdrant')} GitHub stars (verified 2026-09-18) — highest of the three open-source options`,
@@ -239,7 +239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { Service: 'Pinecone', 'Free tier': 'Starter: 2GB, no minimum', 'Entry paid tier': '$20/mo Builder flat', 'Self-hosted fallback': 'None — cloud-only' },
           { Service: 'Weaviate Cloud', 'Free tier': 'Free: $0, 100,000 objects, 1GB memory', 'Entry paid tier': '$45/mo Flex minimum', 'Self-hosted fallback': 'Yes — free, BSD-3-Clause' },
-          { Service: 'Qdrant Cloud', 'Free tier': '0.5 vCPU/1GB, forever', 'Entry paid tier': 'Usage-based, no published minimum', 'Self-hosted fallback': 'Yes — free, Apache 2.0' },
+          { Service: 'Qdrant Cloud', 'Free tier': '0.5 vCPU/1GB (inactivity limits apply)', 'Entry paid tier': 'Usage-based, no published minimum', 'Self-hosted fallback': 'Yes — free, Apache 2.0' },
         ],
       },
       tcoComparison: {
@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is Qdrant the same as Weaviate?',
-            a: `No. Both are open-source, self-hostable vector databases with hybrid search, but Qdrant is written in Rust (Apache 2.0) and Weaviate is written in Go (BSD-3-Clause). Qdrant has more GitHub stars (${S.en('qdrant')} vs ${S.en('weaviate')}, verified 2026-09-18) and a free-forever cloud tier (0.5 vCPU/1GB RAM/4GB disk); Weaviate has a broader module ecosystem for built-in vectorization and reranking, and its own free cloud tier is limited to 100,000 objects.`,
+            a: `No. Both are open-source, self-hostable vector databases with hybrid search, but Qdrant is written in Rust (Apache 2.0) and Weaviate is written in Go (BSD-3-Clause). Qdrant has more GitHub stars (${S.en('qdrant')} vs ${S.en('weaviate')}, verified 2026-09-18) and a free cloud tier (0.5 vCPU/1GB RAM/4GB disk); Weaviate has a broader module ecosystem for built-in vectorization and reranking, and its own free cloud tier is limited to 100,000 objects.`,
           },
           {
             q: 'Do Pinecone, Weaviate, Qdrant, or Chroma have affiliate programs?',
@@ -402,8 +402,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone Pricing', description: 'Official pricing page — basis for Starter/Builder/Standard/Enterprise tier limits, verified 2026-11-03.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone Partners', description: 'Official partners page — basis for confirming the public content-creator Affiliate Program, distinct from the Solution Partner and Referral programs.' },
-          { url: 'https://weaviate.io/pricing', title: 'Weaviate Cloud Pricing', description: 'Official pricing page — basis for Free/Flex/Premium tier limits, re-checked 2026-11-03; the October 2025 pricing-update blog post explains the Flex restructure.' },
-          { url: 'https://qdrant.tech/pricing/', title: 'Qdrant Pricing', description: 'Official pricing page — basis for the free-forever tier specs (0.5 vCPU/1GB RAM/4GB disk) and Standard/Premium tier structure. Re-checked 2026-11-03.' },
+          { url: 'https://weaviate.io/pricing', title: 'Weaviate Cloud Pricing', description: 'Official pricing page — basis for Free/Flex/Premium tier limits, re-checked 2026-11-03.' },
+          { url: 'https://qdrant.tech/pricing/', title: 'Qdrant Pricing', description: 'Official pricing page — basis for the free-tier specs (0.5 vCPU/1GB RAM/4GB disk) and Standard/Premium tier structure. Re-checked 2026-11-03.' },
           { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Qdrant Capacity Planning', description: 'Official guidance on sharding a collection once past roughly 1 million vectors — basis for the self-hosting scale ceiling described in the How to Choose section.' },
           { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant: Minimal RAM to Serve 1M Vectors', description: 'Basis for the ~6–7GB RAM per million 1,536-dimension vectors (in-memory HNSW) versus ~1.2GB per million with disk-backed (mmap) storage.' },
           { url: 'https://qdrant.tech/blog/series-b-announcement/', title: 'Qdrant: Series B Announcement', description: 'Official announcement of the $50M Series B (2026-03-12).' },
@@ -420,8 +420,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Pinecone vs Weaviate vs Qdrant vs Chroma: Best Vector DB (2026)',
-      description: 'Pinecone ($20/mo Builder, $50/mo Standard), Weaviate Cloud ($45/mo Flex), Qdrant (free-forever self-host tier), Chroma (open-source + $250/mo Team) compared for RAG vector search in 2026.',
+      headline: 'Pinecone vs Weaviate vs Qdrant vs Chroma: Vector Database Comparison (2026)',
+      description: 'Pinecone ($20/mo Builder, $50/mo Standard), Weaviate Cloud ($45/mo Flex), Qdrant (free to self-host), Chroma (open-source + $250/mo Team) compared for RAG vector search in 2026.',
       datePublished: '2026-08-27',
       dateModified: '2026-11-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -457,7 +457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Pinecone', description: 'Cloud-only managed vector database. Free Starter tier (2GB); Builder $20/month flat; Standard $50/month minimum usage-based.' },
         { '@type': 'ListItem', position: 2, name: 'Weaviate', description: 'Open-source (BSD-3-Clause) self-hosted or Weaviate Cloud. Free cloud tier (100,000 objects); Flex from $45/month minimum.' },
-        { '@type': 'ListItem', position: 3, name: 'Qdrant', description: 'Open-source (Apache 2.0), Rust-based. Free self-hosted or free-forever Qdrant Cloud tier (0.5 vCPU/1GB RAM/4GB disk).' },
+        { '@type': 'ListItem', position: 3, name: 'Qdrant', description: 'Open-source (Apache 2.0), Rust-based. Free self-hosted or a free Qdrant Cloud tier with inactivity limits (0.5 vCPU/1GB RAM/4GB disk).' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Open-source (Apache 2.0) embedded or client-server vector database. Free self-hosted; Chroma Cloud from $0 + usage to $250/month Team.' },
       ],
       inLanguage: 'en',
@@ -471,10 +471,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-27',
     affiliateDisclosure: true,
-    title: 'Pinecone vs Weaviate vs Qdrant vs Chroma: Beste Vektordatenbank (2026)',
+    title: 'Pinecone vs Weaviate vs Qdrant vs Chroma: Vektordatenbank-Vergleich (2026)',
     seoTitle: 'Pinecone vs Weaviate vs Qdrant vs Chroma (2026)',
     intro: 'Vektordatenbanken speichern Embeddings und führen Ähnlichkeitssuche für RAG-Pipelines (Retrieval-Augmented Generation) durch. Pinecone, Weaviate, Qdrant und Chroma lösen dasselbe Problem mit vier unterschiedlichen Kompromissen bei Self-Hosting, Preisgestaltung und Betriebsaufwand. Dieser Leitfaden vergleicht aktuelle Preise, Lizenzen und Deployment-Modelle aller vier Anbieter, geprüft anhand der jeweiligen Preisseite am 03.11.2026 und des GitHub-Repositorys des jeweiligen Projekts.',
-    metaDescription: 'Pinecone (20 $/Mon. Builder, 50 $/Mon. Standard), Weaviate Cloud (45 $/Mon. Flex), Qdrant (kostenlose Self-Host-Stufe für immer), Chroma (Open Source + 250 $/Mon. Team) im Vergleich für RAG-Vektorsuche 2026.',
+    metaDescription: 'Pinecone (20 $/Mon. Builder), Weaviate Cloud (45 $/Mon. Flex), Qdrant (Self-Hosting kostenlos), Chroma (Open Source) im Vergleich für RAG-Vektorsuche 2026.',
     publishDate: '2026-08-27',
     dateModified: '2026-11-03',
     readTime: '15 Min. Lesezeit',
@@ -489,13 +489,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'selbst gehostete vektordatenbank',
       'pinecone preise',
     ],
-    leadAnswerBlock: '**Die beste Vektordatenbank für RAG hängt 2026 davon ab, ob Sie selbst hosten oder Managed Cloud nutzen: Qdrant passt gut zu Teams mit Ops-Kapazität (kostenlose Cloud-Stufe für immer, Self-Hosting unter Apache 2.0), während Pinecone zu Teams passt, die null Infrastrukturarbeit wollen (20 $/Monat Builder-Stufe, kein Server zu verwalten).** Es gibt kein einziges „Bestes" — Weaviate und Chroma passen jeweils zu spezifischen Zwischenlösungen, die unten behandelt werden.',
+    leadAnswerBlock: '**Die passende Vektordatenbank für RAG hängt davon ab, ob Sie selbst hosten oder Managed Cloud nutzen: Qdrant passt zu Teams mit Ops-Kapazität (Self-Hosting kostenlos, kostenlose Cloud-Stufe mit Inaktivitätslimits), Pinecone zu Teams ohne Infrastrukturaufwand (Builder ab 20 $/Monat).** Eine einzige beste Wahl gibt es nicht; Weaviate und Chroma decken Zwischenfälle ab.',
     quickAnswerTop: {
       de: {
         question: 'Welche Vektordatenbank sollte ich verwenden: Pinecone, Weaviate, Qdrant oder Chroma?',
-        answer: 'Verwenden Sie Qdrant, wenn Sie selbst hosten können und eine kostenlose Stufe wollen (0,5 vCPU/1GB RAM/4GB Disk, laut Qdrant-Preisseite für immer kostenlos) plus eine Rust-basierte Engine. Verwenden Sie Pinecone, wenn Sie null Infrastrukturverwaltung wollen und mit Cloud-only und nutzungsbasierter Abrechnung ab 20 $/Monat einverstanden sind. Verwenden Sie Weaviate, wenn Sie eine Hybrid-Option mit sowohl Self-Hosted (BSD-3-Clause, kostenlos) als auch Managed Cloud (ab 45 $/Monat) wollen. Verwenden Sie Chroma, wenn Sie Solo-Entwickler sind oder prototypisieren — es läuft eingebettet in einem Python-Prozess ohne Server.',
+        answer: 'Verwenden Sie Qdrant, wenn Sie selbst hosten können und eine kostenlose Stufe wollen (0,5 vCPU/1GB RAM/4GB Disk, mit Inaktivitätslimits laut Qdrant-Dokumentation) plus eine Rust-basierte Engine. Verwenden Sie Pinecone, wenn Sie null Infrastrukturverwaltung wollen und mit Cloud-only und nutzungsbasierter Abrechnung ab 20 $/Monat einverstanden sind. Verwenden Sie Weaviate, wenn Sie eine Hybrid-Option mit sowohl Self-Hosted (BSD-3-Clause, kostenlos) als auch Managed Cloud (ab 45 $/Monat) wollen. Verwenden Sie Chroma, wenn Sie Solo-Entwickler sind oder prototypisieren — es läuft eingebettet in einem Python-Prozess ohne Server.',
         bullets: [
-          'Qdrant: Rust, Apache 2.0, kostenloses Self-Hosting oder für immer kostenlose Cloud-Stufe (0,5 vCPU/1GB RAM/4GB Disk)',
+          'Qdrant: Rust, Apache 2.0, kostenloses Self-Hosting oder kostenlose Cloud-Stufe mit Inaktivitätslimits (0,5 vCPU/1GB RAM/4GB Disk)',
           'Pinecone: nur Cloud, keine Self-Hosted-Option, kostenlose Starter-Stufe (2GB Storage), dann 20 $/Mon. Builder oder 50 $/Mon. Standard',
           'Weaviate: Go, BSD-3-Clause, kostenloses Self-Hosting oder Weaviate Cloud ab 45 $/Mon. (Flex-Stufe; zusätzlich gibt es eine kostenlose Cloud-Stufe)',
           'Chroma: Python/Rust-Kern, Apache 2.0, kostenlos self-hosted/embedded oder Chroma Cloud ab 0 $ + Nutzung (Starter) bis 250 $/Mon. (Team)',
@@ -523,7 +523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     affiliateLinks: [
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone', productCategory: 'dev-tool', priceRange: 'Kostenlos–50 $/Mon.+', label: 'Pinecone-Preise ansehen →' },
-      { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: 'Für immer kostenlose Stufe', label: 'Qdrant kostenlos testen →' },
+      { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: 'Kostenlose Stufe (mit Inaktivitätslimits)', label: 'Qdrant kostenlos testen →' },
       { url: 'https://weaviate.io/pricing', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: 'Ab 45 $/Mon.', label: 'Weaviate-Preise ansehen →' },
       { url: 'https://www.trychroma.com/pricing', productName: 'Chroma', productCategory: 'dev-tool', priceRange: 'Kostenlos–250 $/Mon.+', label: 'Chroma-Preise ansehen →' },
     ],
@@ -533,12 +533,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Zusammenfassung — Vektordatenbank-Vergleich',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qdrant passt gut zum Self-Hosting und bietet eine für immer kostenlose Cloud-Stufe; Pinecone passt zu Managed Cloud ohne Infrastruktur; Weaviate und Chroma decken spezifische Nischen ab.' },
+          { type: 'one-sentence', text: 'Qdrant passt gut zum Self-Hosting und bietet eine kostenlose Cloud-Stufe (mit Inaktivitätslimits); Pinecone passt zu Managed Cloud ohne Infrastruktur; Weaviate und Chroma decken spezifische Nischen ab.' },
           { type: 'plain-terms', text: 'Eine Vektordatenbank speichert die numerischen „Fingerabdrücke" (Embeddings) Ihrer Dokumente, damit eine KI-Anwendung schnell die relevantesten findet — die Retrieval-Hälfte von RAG (Retrieval-Augmented Generation).' },
         ],
         items: [
           'Qdrant, Weaviate und Chroma sind Open Source und kostenlos selbst hostbar. Pinecone ist nur Cloud — es gibt kein self-hostetes Pinecone zu irgendeinem Preis.',
-          'Qdrant Cloud führt eine für immer kostenlose Stufe (0,5 vCPU / 1GB RAM / 4GB Disk, geprüft 03.11.2026) ohne Kreditkarte; laut Qdrant-Dokumentation werden inaktive kostenlose Cluster nach 1 Woche ausgesetzt und nach 4 Wochen gelöscht.',
+          'Qdrant Cloud führt eine kostenlose Stufe (0,5 vCPU / 1GB RAM / 4GB Disk, geprüft 03.11.2026) ohne Kreditkarte; laut Qdrant-Dokumentation werden inaktive kostenlose Cluster nach 1 Woche ausgesetzt und nach 4 Wochen gelöscht.',
           'Pinecone Starter ist kostenlos (2GB Storage, 2 Mio. Writes/Mon., 1 Mio. Reads/Mon.); bezahlte Stufen starten bei 20 $/Monat flat (Builder) oder 50 $/Monat Mindestnutzung (Standard).',
           'Weaviate Cloud hat eine kostenlose Stufe (ohne Kreditkarte: 1 Cluster, 100.000 Objekte, 1GB Arbeitsspeicher, 10GB Disk, Verfügbarkeit nach bestem Bemühen). Die bezahlte Flex-Stufe startet bei 45 $/Monat, Premium wird ab 400 $/Monat ausgewiesen, geprüft auf weaviate.io/pricing am 03.11.2026.',
           'Chroma Cloud Starter kostet 0 $/Monat plus nutzungsbasierte Abrechnung (Writes, Storage, Queries); die Team-Stufe kostet 250 $/Monat plus Nutzung.',
@@ -587,7 +587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Im Zweifel: mit self-hostedem Qdrant auf einer kleinen VM oder einem Docker-Container starten.',
-            whyItMatters: 'Qdrants für immer kostenlose Cloud-Stufe und das leichtgewichtige Rust-Binary machen es nach unserer Einschätzung zu einem risikoarmen Startpunkt — Sie können später zu Pinecone oder Weaviate Cloud migrieren, wenn sich Managed Cloud als lohnend erweist.',
+            whyItMatters: 'Qdrants kostenlose Cloud-Stufe und das leichtgewichtige Rust-Binary machen es nach unserer Einschätzung zu einem risikoarmen Startpunkt — Sie können später zu Pinecone oder Weaviate Cloud migrieren, wenn sich Managed Cloud als lohnend erweist.',
           },
         ],
       },
@@ -632,7 +632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'weaviate',
         title: 'Weaviate: Self-Hosted oder Managed Cloud',
         content: [
-          '**[Weaviate](https://weaviate.io/pricing) ist Open Source (BSD-3-Clause) und kostenlos selbst hostbar, und Weaviate Cloud bietet vor dem bezahlten Flex-Tarif ebenfalls eine kostenlose Stufe (ohne Kreditkarte), geprüft auf weaviate.io/pricing am 03.11.2026.** Weaviate Cloud hat seine Preise im Oktober 2025 umstrukturiert: Die alte 25-$/Monat-Serverless-Stufe wurde durch eine 45-$/Monat-Flex-Stufe als Minimum ersetzt, die zum Stand der Verifizierung dieses Artikels am 03.11.2026 noch aktuell ist.',
+          '**[Weaviate](https://weaviate.io/pricing) ist Open Source (BSD-3-Clause) und kostenlos selbst hostbar, und Weaviate Cloud bietet vor dem bezahlten Flex-Tarif ebenfalls eine kostenlose Stufe (ohne Kreditkarte), geprüft auf weaviate.io/pricing am 03.11.2026.**',
           'Weaviate Cloud Free: 0 $, 1 Cluster, 100.000 Objekte, 1GB Arbeitsspeicher, 10GB Disk, Verfügbarkeit nach bestem Bemühen, keine Backup-Aufbewahrung. Flex: ab 45 $/Monat, nutzungsbasiert, geteilte Infrastruktur, 99,5% SLA. Premium: über den Vertrieb, ab 400 $/Monat ausgewiesen, 99,9% SLA (geteilt) bzw. 99,95% (dediziert), Bring Your Own Cloud, HIPAA-fähig, Wahl zwischen geteiltem oder dediziertem Deployment. Self-Hosted Weaviate kostet nichts außer eigener Infrastruktur — es ist derselbe BSD-3-Clause-Code, der Weaviate Cloud betreibt.',
           `Weaviates GitHub-Repository zeigt ${S.de('weaviate')} Sterne zum Stand 18.09.2026 (verifiziert über GitHubs öffentliche API), das kleinste der drei Open-Source-Optionen hier, aber dennoch ein aktiv gepflegtes Projekt mit regelmäßigen Releases.`,
           'Weaviate hat ein unternehmensseitiges Partner-Ökosystem (Technology Alliance Partners, Systems Integrators, Value-Added Reseller) statt eines individuellen Content-Creator-Affiliate-Programms — zum Stand dieser Verifizierung wurde keine Provisionsstruktur pro Empfehlung auf weaviate.io gefunden.',
@@ -649,14 +649,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'qdrant',
         title: 'Qdrant: Rust-basiertes Self-Hosting, kostenlose Cloud-Stufe',
         content: [
-          '**[Qdrant](https://qdrant.tech/pricing/) ist Open Source (Apache 2.0), in Rust geschrieben, und hat eine für immer kostenlose Qdrant-Cloud-Stufe (0,5 vCPU / 1GB RAM / 4GB Disk, verifiziert auf qdrant.tech/pricing am 03.11.2026) ohne festes Zeitlimit und ohne Kreditkarte; inaktive kostenlose Cluster werden ausgesetzt und später gelöscht (siehe unten).** Self-Hosting ist in jedem Umfang kostenlos — Sie zahlen nur für eigene Infrastruktur.',
+          '**[Qdrant](https://qdrant.tech/pricing/) ist Open Source (Apache 2.0), in Rust geschrieben, und hat eine kostenlose Qdrant-Cloud-Stufe (0,5 vCPU / 1GB RAM / 4GB Disk, verifiziert auf qdrant.tech/pricing am 03.11.2026) ohne festes Zeitlimit und ohne Kreditkarte; inaktive kostenlose Cluster werden ausgesetzt und später gelöscht (siehe unten).** Self-Hosting ist in jedem Umfang kostenlos — Sie zahlen nur für eigene Infrastruktur.',
           'Kostenlose Stufe: 0,5 vCPU, 1GB RAM, 4GB Disk, Single-Node-Cluster, kostenlose Cloud-Inferenz mit ausgewählten Embedding-Modellen. Standard: nutzungsbasierte Preise über die kostenlose Stufe hinaus, dedizierte Ressourcen, flexible Skalierung, 99,5% Uptime-SLA — Qdrant veröffentlicht anders als Pinecone oder Weaviate kein flaches Monatsminimum für Standard. Premium: Mindestausgabe erforderlich (Betrag nicht veröffentlicht), SSO, private VPC-Links, 99,9% Uptime-SLA. Hybrid Cloud und Private Cloud: individuelle Preise für Datenresidenz- und Regulierungsanforderungen.',
           `Qdrants GitHub-Repository zeigt ${S.de('qdrant')} Sterne (Daten aus dem PromptQuorum-Verzeichnis, geprüft am 18.09.2026) — die höchste Sternezahl der drei Open-Source-Optionen. Qdrant hat am 12.03.2026 eine Series-B-Finanzierung über 50 Mio. $ angekündigt ([Qdrant-Ankündigung](https://qdrant.tech/blog/series-b-announcement/)).`,
           'Qdrants Partnerseite listet Cloud-Infrastruktur-Partner (AWS, Google Cloud, Microsoft Azure, Oracle Cloud, DigitalOcean und andere für Managed Deployment) und ein Startup-Rabattprogramm, kein individuelles Content-Creator-Affiliate-Programm.',
         ],
         items: [
           'Self-Hosted: kostenlos, Apache 2.0, unbegrenzt',
-          'Kostenlose Cloud-Stufe: 0,5 vCPU / 1GB RAM / 4GB Disk, für immer kostenlos, keine Kreditkarte nötig',
+          'Kostenlose Cloud-Stufe: 0,5 vCPU / 1GB RAM / 4GB Disk, keine Kreditkarte nötig',
           'Standard: nutzungsbasiert, kein veröffentlichtes flaches Monatsminimum, dedizierte Ressourcen, 99,5% SLA',
           'Premium: Mindestausgabe (unveröffentlichter Betrag), SSO, private VPC-Links, 99,9% SLA',
           `${S.de('qdrant')} GitHub-Sterne (verifiziert 18.09.2026) — höchste der drei Open-Source-Optionen`,
@@ -694,7 +694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { Dienst: 'Pinecone', 'Kostenlose Stufe': 'Starter: 2GB, kein Minimum', 'Einstiegsstufe bezahlt': '20 $/Mon. Builder flat', 'Self-Hosted-Fallback': 'Keiner — nur Cloud' },
           { Dienst: 'Weaviate Cloud', 'Kostenlose Stufe': 'Free: 0 $, 100.000 Objekte, 1GB Arbeitsspeicher', 'Einstiegsstufe bezahlt': '45 $/Mon. Flex Minimum', 'Self-Hosted-Fallback': 'Ja — kostenlos, BSD-3-Clause' },
-          { Dienst: 'Qdrant Cloud', 'Kostenlose Stufe': '0,5 vCPU/1GB, für immer', 'Einstiegsstufe bezahlt': 'Nutzungsbasiert, kein veröffentlichtes Minimum', 'Self-Hosted-Fallback': 'Ja — kostenlos, Apache 2.0' },
+          { Dienst: 'Qdrant Cloud', 'Kostenlose Stufe': '0,5 vCPU/1GB (Inaktivitätslimits)', 'Einstiegsstufe bezahlt': 'Nutzungsbasiert, kein veröffentlichtes Minimum', 'Self-Hosted-Fallback': 'Ja — kostenlos, Apache 2.0' },
         ],
       },
       tcoComparison: {
@@ -767,14 +767,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Ist Pinecone besser als Weaviate?', a: 'Keines ist in jeder Situation besser. Pinecone ist nur Cloud ohne Self-Hosted-Option, was einfacher ist, wenn Sie null Infrastrukturarbeit wollen, aber eine Einschränkung, wenn Sie Kontrolle über Datenresidenz brauchen. Weaviate bietet sowohl eine kostenlose Self-Hosted-Version als auch eine Managed-Cloud-Option, was mehr Flexibilität gibt, aber Weaviate Cloud hat ebenfalls eine kostenlose Stufe (100.000 Objekte), mit bezahltem Flex ab 45 $/Monat.' },
           { q: 'Wie viel kostet es, 1 Million Vektoren zu speichern und abzufragen?', a: 'Grobe Schätzungen (illustrativ): Pinecone Standard liegt je nach Abfragevolumen bei etwa 50–150 $/Monat (nahe am 50-$/Monat-Minimum). Weaviate Cloud Flex bleibt in diesem Umfang nahe an seinem 45-$/Monat-Minimum. Self-Hosted Qdrant oder Weaviate auf einer kleinen VM kostet etwa 50–80 $/Monat an Infrastruktur plus Ops-Arbeit, was die 12-Monats-Gesamtkosten bei genau 1 Mio. Vektoren typischerweise höher macht als Managed Cloud, sobald Arbeitszeit mitgerechnet wird — siehe den vollständigen TCO-Vergleich oben für die Begründung.' },
           { q: 'Wie migriere ich von Chroma zu Qdrant?', a: 'Exportieren Sie Vektoren und deren Metadaten aus Chroma mit dessen Python-Client (collection.get() mit include=["embeddings","metadatas","documents"]), laden Sie sie dann batchweise in eine Qdrant-Collection mit der upsert()-Methode des Qdrant-Python-Clients hoch und ordnen dabei Chromas Metadatenfelder Qdrants Payload-Struktur zu. Beide verwenden Standard-Embedding-Formate, sodass die Vektoren selbst keine Transformation benötigen — nur der clientseitige Code und das Collection-Schema ändern sich.' },
-          { q: 'Ist Qdrant dasselbe wie Weaviate?', a: `Nein. Beide sind Open Source, self-hostbare Vektordatenbanken mit Hybrid-Suche, aber Qdrant ist in Rust geschrieben (Apache 2.0) und Weaviate in Go (BSD-3-Clause). Qdrant hat mehr GitHub-Sterne (${S.de('qdrant')} vs. ${S.de('weaviate')}, verifiziert 18.09.2026) und eine für immer kostenlose Cloud-Stufe (0,5 vCPU/1GB RAM/4GB Disk); Weaviate hat ein breiteres Modul-Ökosystem für eingebaute Vektorisierung und Reranking, und seine eigene kostenlose Cloud-Stufe ist auf 100.000 Objekte begrenzt.` },
+          { q: 'Ist Qdrant dasselbe wie Weaviate?', a: `Nein. Beide sind Open Source, self-hostbare Vektordatenbanken mit Hybrid-Suche, aber Qdrant ist in Rust geschrieben (Apache 2.0) und Weaviate in Go (BSD-3-Clause). Qdrant hat mehr GitHub-Sterne (${S.de('qdrant')} vs. ${S.de('weaviate')}, verifiziert 18.09.2026) und eine kostenlose Cloud-Stufe (0,5 vCPU/1GB RAM/4GB Disk); Weaviate hat ein breiteres Modul-Ökosystem für eingebaute Vektorisierung und Reranking, und seine eigene kostenlose Cloud-Stufe ist auf 100.000 Objekte begrenzt.` },
           { q: 'Haben Pinecone, Weaviate, Qdrant oder Chroma Affiliate-Programme?', a: 'Pinecone betreibt ein echtes öffentliches Affiliate-Programm für Content-Creator, bestätigt direkt auf pinecone.io/partners, getrennt von seinem unternehmensseitigen Solution-Partner- und Referral-Programm. Weaviate und Qdrant unterhalten unternehmensseitige Technology-/Solution-/Reseller-Partner-Ökosysteme statt individueller Affiliate-Programme. Für Chromas Vektordatenbank ([trychroma.com](https://trychroma.com)) wurde kein Affiliate-Programm gefunden. PromptQuorum ist derzeit in keinem dieser Programme angemeldet — jeder Link auf dieser Seite ist ein reiner Produkt-Link.' },
           { q: 'Kann Chroma in Produktion eingesetzt werden?', a: 'Ja, außerhalb seines Embedded-Single-Process-Modus. Chromas Client-Server-Modus und das Managed Chroma Cloud (Starter ab 0 $ + Nutzung, Team bei 250 $/Monat + Nutzung) unterstützen beide Multi-Service-Produktions-Deployments. Der Embedded-Modus speziell — bei dem Chroma in einem Python-Prozess ohne separaten Server läuft — sollte auf Solo-Projekte und Prototypen beschränkt bleiben, nicht auf geteilte Produktions-Workloads.' },
           { q: 'Was ist der reale Unterschied zwischen Self-Hosted- und Serverless-/Managed-Preisen?', a: 'Self-Hosted-Preise sind Infrastrukturkosten (eine VM oder ein Server) plus eigene Ops-Zeit für Patching, Monitoring und Backups — keine Gebühren pro Abfrage. Managed-/Serverless-Preise (Pinecone, Weaviate Cloud, Qdrant Cloud) berechnen eine monatliche Gebühr plus nutzungsbasierte Raten für Storage, Reads und Writes, wobei der Anbieter den gesamten Betrieb übernimmt. Self-Hosting gewinnt bei reinen Dollarkosten meist erst, wenn das Volumen groß genug ist, dass Ops-Arbeit nur einen kleinen Bruchteil der Rechnung ausmacht, oder wenn ein bestehendes Ops-Team den Server bereits mit nahezu null Grenzkosten betreibt.' },
           { q: 'Welche Vektordatenbank hat die meisten GitHub-Sterne?', a: `Zum Stand 18.09.2026, verifiziert direkt über GitHubs öffentliche API: Qdrant hat ${S.de('qdrant')} Sterne, Chroma hat ${S.de('chroma')} Sterne, und Weaviate hat ${S.de('weaviate')} Sterne. Pinecone ist Closed Source und hat kein öffentliches GitHub-Repository zum Vergleich. Die Sternezahl spiegelt Entwickler-Mindshare wider, nicht zwangsläufig die Produktionstauglichkeit für eine bestimmte Workload.` },
           { q: 'Brauche ich eine Vektordatenbank, wenn ich nur ein paar Tausend Dokumente habe?', a: 'Wahrscheinlich nicht. Unter etwa 10.000 Vektoren bewältigt die pgvector-Erweiterung für PostgreSQL Ähnlichkeitssuche gut, wenn Sie bereits Postgres betreiben, ohne einen neuen Dienst zu Ihrem Stack hinzuzufügen. Dedizierte Vektordatenbanken wie Pinecone, Weaviate, Qdrant und Chroma rechtfertigen ihren Betriebsaufwand erst, wenn Vektoranzahl, Abfragevolumen oder Filterkomplexität übersteigen, was pgvectors Indexierung effizient bewältigen kann.' },
-          { q: 'Muss ich bei der Verwendung dieser Vektordatenbanken die DSGVO beachten?', a: 'Bei Self-Hosted Qdrant oder Weaviate liegt die Datenverarbeitung vollständig auf Ihrer eigenen Infrastruktur, was die Erfüllung von DSGVO-Artikel-28-Auftragsverarbeitungspflichten vereinfacht, wenn Sie zusätzlich Zugriffskontrollen, Verschlüsselung und Protokollierung gemäß den BSI-Grundschutz-Katalogen umsetzen. Bei Managed-Cloud-Optionen (Pinecone, Weaviate Cloud, Qdrant Cloud) hängt die DSGVO-Konformität vom Serverstandort des jeweiligen Anbieters und dessen Auftragsverarbeitungsvertrag (AVV) ab — prüfen Sie dies direkt beim Anbieter vor dem Einsatz mit personenbezogenen Daten.' },
-          { q: 'Ist eine dieser Vektordatenbanken für den deutschen Mittelstand geeignet?', a: 'Self-Hosted Qdrant ist für den deutschen Mittelstand oft die pragmatischste Wahl: kostenlos, Apache 2.0, läuft auf bereits vorhandener On-Premise-Infrastruktur und gibt volle Kontrolle über Datenresidenz — relevant für Mittelständler mit BSI-Grundschutz-Anforderungen oder Kunden, die deutsche Datenhaltung verlangen. Managed-Cloud-Optionen wie Weaviate Cloud Flex (ab 45 $/Monat) sind eine Alternative für Mittelständler ohne eigene DevOps-Kapazität, sollten aber vorab auf Serverstandort und AVV-Konditionen geprüft werden.' },
+          { q: 'Muss ich bei der Verwendung dieser Vektordatenbanken die DSGVO beachten?', a: 'Bei selbst gehostetem Qdrant oder Weaviate verarbeitet kein externer Anbieter die Daten, sodass für diese Komponente keine Auftragsverarbeitung nach Art. 28 DSGVO mit einem Datenbankanbieter nötig ist; die übrigen DSGVO-Pflichten (Rechtsgrundlage, TOMs, ggf. DSFA) bleiben bei Ihnen. Bei Managed-Cloud-Optionen (Pinecone, Weaviate Cloud, Qdrant Cloud) hängt es vom Serverstandort und vom AVV des Anbieters ab. Das ist keine Rechtsberatung.' },
+          { q: 'Ist eine dieser Vektordatenbanken für den deutschen Mittelstand geeignet?', a: 'Self-Hosted Qdrant kann für den deutschen Mittelstand eine naheliegende Option sein: kostenlos, Apache 2.0, läuft auf bereits vorhandener On-Premise-Infrastruktur und gibt volle Kontrolle über Datenresidenz — relevant für Mittelständler mit BSI-Grundschutz-Anforderungen oder Kunden, die deutsche Datenhaltung verlangen. Managed-Cloud-Optionen wie Weaviate Cloud Flex (ab 45 $/Monat) sind eine Alternative für Mittelständler ohne eigene DevOps-Kapazität, sollten aber vorab auf Serverstandort und AVV-Konditionen geprüft werden.' },
         ],
       },
       relatedReading: {
@@ -794,8 +794,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone-Preise', description: 'Offizielle Preisseite — Basis für Starter-/Builder-/Standard-/Enterprise-Stufenlimits, verifiziert 03.11.2026.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone-Partner', description: 'Offizielle Partnerseite — Basis für die Bestätigung des öffentlichen Content-Creator-Affiliate-Programms, getrennt von Solution-Partner- und Referral-Programm.' },
-          { url: 'https://weaviate.io/pricing', title: 'Weaviate-Cloud-Preise', description: 'Offizielle Preisseite — Basis für die Free-/Flex-/Premium-Stufenlimits, erneut geprüft am 03.11.2026; der Preisumstellungs-Blogpost vom Oktober 2025 erklärt die Flex-Umstellung.' },
-          { url: 'https://qdrant.tech/pricing/', title: 'Qdrant-Preise', description: 'Offizielle Preisseite — Basis für die Spezifikationen der für immer kostenlosen Stufe (0,5 vCPU/1GB RAM/4GB Disk) und die Standard-/Premium-Stufenstruktur. Erneut geprüft am 03.11.2026.' },
+          { url: 'https://weaviate.io/pricing', title: 'Weaviate-Cloud-Preise', description: 'Offizielle Preisseite — Basis für die Free-/Flex-/Premium-Stufenlimits, erneut geprüft am 03.11.2026.' },
+          { url: 'https://qdrant.tech/pricing/', title: 'Qdrant-Preise', description: 'Offizielle Preisseite — Basis für die Spezifikationen der kostenlosen Stufe (0,5 vCPU/1GB RAM/4GB Disk) und die Standard-/Premium-Stufenstruktur. Erneut geprüft am 03.11.2026.' },
           { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Qdrant-Kapazitätsplanung', description: 'Offizielle Hinweise zur Shardierung einer Collection ab etwa 1 Million Vektoren — Basis für die im Abschnitt „Wie Sie wählen sollten" beschriebene Obergrenze für Self-Hosting-Skalierung.' },
           { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant: minimaler RAM für 1 Mio. Vektoren', description: 'Basis für die ~6–7GB RAM je Million 1.536-dimensionaler Vektoren (In-Memory-HNSW) gegenüber ~1,2GB je Million bei plattenbasiertem (mmap) Speicher.' },
           { url: 'https://qdrant.tech/blog/series-b-announcement/', title: 'Qdrant: Series-B-Ankündigung', description: 'Offizielle Ankündigung der Series-B-Finanzierung über 50 Mio. $ (12.03.2026).' },
@@ -812,8 +812,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Pinecone vs Weaviate vs Qdrant vs Chroma: Beste Vektordatenbank (2026)',
-      description: 'Pinecone (20 $/Mon. Builder, 50 $/Mon. Standard), Weaviate Cloud (45 $/Mon. Flex), Qdrant (kostenlose Self-Host-Stufe für immer), Chroma (Open Source + 250 $/Mon. Team) im Vergleich für RAG-Vektorsuche 2026.',
+      headline: 'Pinecone vs Weaviate vs Qdrant vs Chroma: Vektordatenbank-Vergleich (2026)',
+      description: 'Pinecone (20 $/Mon. Builder, 50 $/Mon. Standard), Weaviate Cloud (45 $/Mon. Flex), Qdrant (Self-Hosting kostenlos), Chroma (Open Source + 250 $/Mon. Team) im Vergleich für RAG-Vektorsuche 2026.',
       datePublished: '2026-08-27',
       dateModified: '2026-11-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -842,7 +842,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Pinecone', description: 'Nur-Cloud Managed-Vektordatenbank. Kostenlose Starter-Stufe (2GB); Builder 20 $/Monat flat; Standard 50 $/Monat Mindestnutzung.' },
         { '@type': 'ListItem', position: 2, name: 'Weaviate', description: 'Open Source (BSD-3-Clause) Self-Hosted oder Weaviate Cloud. Kostenlose Cloud-Stufe (100.000 Objekte); Flex ab 45 $/Monat Minimum.' },
-        { '@type': 'ListItem', position: 3, name: 'Qdrant', description: 'Open Source (Apache 2.0), Rust-basiert. Kostenlos self-hosted oder für immer kostenlose Qdrant-Cloud-Stufe (0,5 vCPU/1GB RAM/4GB Disk).' },
+        { '@type': 'ListItem', position: 3, name: 'Qdrant', description: 'Open Source (Apache 2.0), Rust-basiert. Kostenlos self-hosted oder kostenlose Qdrant-Cloud-Stufe mit Inaktivitätslimits (0,5 vCPU/1GB RAM/4GB Disk).' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Open Source (Apache 2.0) Embedded- oder Client-Server-Vektordatenbank. Kostenlos self-hosted; Chroma Cloud ab 0 $ + Nutzung bis 250 $/Monat Team.' },
       ],
       inLanguage: 'de',
@@ -856,10 +856,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-27',
     affiliateDisclosure: true,
-    title: 'Pinecone vs Weaviate vs Qdrant vs Chroma : Meilleure base vectorielle (2026)',
+    title: 'Pinecone vs Weaviate vs Qdrant vs Chroma : Comparatif des bases vectorielles (2026)',
     seoTitle: 'Pinecone vs Weaviate vs Qdrant vs Chroma (2026)',
     intro: 'Les bases de données vectorielles stockent des embeddings et exécutent une recherche par similarité pour les pipelines RAG (retrieval-augmented generation). Pinecone, Weaviate, Qdrant et Chroma résolvent ce même problème avec quatre compromis différents sur l\'auto-hébergement, la tarification et l\'effort opérationnel. Ce guide compare les prix, licences et modèles de déploiement actuels des quatre solutions, vérifiés sur la page de tarification de chaque éditeur le 03/11/2026 et sur le dépôt GitHub de chaque projet.',
-    metaDescription: 'Pinecone (20 $/mois Builder, 50 $/mois Standard), Weaviate Cloud (45 $/mois Flex), Qdrant (palier auto-hébergé gratuit à vie), Chroma (open source + 250 $/mois Team) comparés pour la recherche vectorielle RAG en 2026.',
+    metaDescription: 'Pinecone (20 $/mois Builder), Weaviate Cloud (45 $/mois Flex), Qdrant (auto-hébergement gratuit), Chroma (open source) comparés pour le RAG en 2026.',
     publishDate: '2026-08-27',
     dateModified: '2026-11-03',
     readTime: '15 min de lecture',
@@ -874,13 +874,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'base de données vectorielle auto-hébergée',
       'tarifs pinecone',
     ],
-    leadAnswerBlock: '**La meilleure base de données vectorielle pour le RAG en 2026 dépend du choix entre auto-hébergement et cloud managé : Qdrant convient bien aux équipes ayant une capacité ops (palier cloud gratuit à vie, auto-hébergement sous Apache 2.0), tandis que Pinecone convient aux équipes qui veulent zéro travail d\'infrastructure (palier Builder à 20 $/mois, aucun serveur à gérer).** Il n\'existe pas de « meilleure » solution unique — Weaviate et Chroma répondent chacun à des cas d\'usage intermédiaires spécifiques détaillés ci-dessous.',
+    leadAnswerBlock: '**La base vectorielle adaptée au RAG dépend du choix entre auto-hébergement et cloud managé : Qdrant convient aux équipes ayant des capacités ops (auto-hébergement gratuit, palier gratuit à limites d\'inactivité), Pinecone à celles sans infrastructure (Builder à 20 $/mois).** Aucune ne l\'emporte partout ; Weaviate et Chroma couvrent d\'autres cas.',
     quickAnswerTop: {
       fr: {
         question: 'Quelle base de données vectorielle utiliser : Pinecone, Weaviate, Qdrant ou Chroma ?',
-        answer: 'Utilisez Qdrant si vous pouvez auto-héberger et voulez un palier gratuit (0,5 vCPU/1 Go RAM/4 Go disque, gratuit à vie selon la page tarifaire de Qdrant) ainsi qu\'un moteur basé sur Rust. Utilisez Pinecone si vous voulez zéro gestion d\'infrastructure et acceptez un modèle cloud uniquement avec facturation à l\'usage à partir de 20 $/mois. Utilisez Weaviate si vous voulez une option hybride avec à la fois auto-hébergement (BSD-3-Clause, gratuit) et cloud managé (à partir de 45 $/mois). Utilisez Chroma si vous êtes développeur solo ou en phase de prototypage — il s\'exécute intégré dans un processus Python sans serveur.',
+        answer: 'Utilisez Qdrant si vous pouvez auto-héberger et voulez un palier gratuit (0,5 vCPU/1 Go RAM/4 Go disque, avec des limites d\'inactivité selon la documentation de Qdrant) ainsi qu\'un moteur basé sur Rust. Utilisez Pinecone si vous voulez zéro gestion d\'infrastructure et acceptez un modèle cloud uniquement avec facturation à l\'usage à partir de 20 $/mois. Utilisez Weaviate si vous voulez une option hybride avec à la fois auto-hébergement (BSD-3-Clause, gratuit) et cloud managé (à partir de 45 $/mois). Utilisez Chroma si vous êtes développeur solo ou en phase de prototypage — il s\'exécute intégré dans un processus Python sans serveur.',
         bullets: [
-          'Qdrant : Rust, Apache 2.0, auto-hébergement gratuit ou palier cloud gratuit à vie (0,5 vCPU/1 Go RAM/4 Go disque)',
+          'Qdrant : Rust, Apache 2.0, auto-hébergement gratuit ou palier cloud gratuit avec limites d\'inactivité (0,5 vCPU/1 Go RAM/4 Go disque)',
           'Pinecone : cloud uniquement, aucune option auto-hébergée, palier Starter gratuit (2 Go de stockage) puis 20 $/mois Builder ou 50 $/mois Standard',
           'Weaviate : Go, BSD-3-Clause, auto-hébergement gratuit ou Weaviate Cloud à partir de 45 $/mois (palier Flex ; il existe aussi un palier cloud gratuit)',
           'Chroma : cœur Python/Rust, Apache 2.0, auto-hébergé/embarqué gratuit ou Chroma Cloud de 0 $ + usage (Starter) à 250 $/mois (Team)',
@@ -908,7 +908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     affiliateLinks: [
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone', productCategory: 'dev-tool', priceRange: 'Gratuit–50 $/mois+', label: 'Voir les tarifs Pinecone →' },
-      { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: 'Palier gratuit à vie', label: 'Essayer Qdrant gratuitement →' },
+      { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: 'Palier gratuit (limites d\'inactivité)', label: 'Essayer Qdrant gratuitement →' },
       { url: 'https://weaviate.io/pricing', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: 'Dès 45 $/mois', label: 'Voir les tarifs Weaviate →' },
       { url: 'https://www.trychroma.com/pricing', productName: 'Chroma', productCategory: 'dev-tool', priceRange: 'Gratuit–250 $/mois+', label: 'Voir les tarifs Chroma →' },
     ],
@@ -918,12 +918,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Points clés — comparatif des bases de données vectorielles',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qdrant convient bien à l\'auto-hébergement avec un palier cloud gratuit à vie ; Pinecone convient au cloud managé sans infrastructure ; Weaviate et Chroma couvrent des niches spécifiques.' },
+          { type: 'one-sentence', text: 'Qdrant convient bien à l\'auto-hébergement avec un palier cloud gratuit (limites d\'inactivité) ; Pinecone convient au cloud managé sans infrastructure ; Weaviate et Chroma couvrent des niches spécifiques.' },
           { type: 'plain-terms', text: 'Une base de données vectorielle stocke les « empreintes » numériques (embeddings) de vos documents afin qu\'une application IA puisse rapidement trouver les plus pertinents — la partie retrieval du RAG (retrieval-augmented generation).' },
         ],
         items: [
           'Qdrant, Weaviate et Chroma sont open source et gratuits en auto-hébergement. Pinecone est cloud uniquement — il n\'existe pas de version auto-hébergée de Pinecone, à aucun prix.',
-          'Qdrant Cloud annonce un palier gratuit à vie (0,5 vCPU / 1 Go RAM / 4 Go disque, vérifié le 03/11/2026) sans carte bancaire ; selon la documentation de Qdrant, les clusters gratuits inactifs sont suspendus après 1 semaine et supprimés après 4 semaines.',
+          'Qdrant Cloud annonce un palier gratuit (0,5 vCPU / 1 Go RAM / 4 Go disque, vérifié le 03/11/2026) sans carte bancaire ; selon la documentation de Qdrant, les clusters gratuits inactifs sont suspendus après 1 semaine et supprimés après 4 semaines.',
           'Pinecone Starter est gratuit (2 Go de stockage, 2M écritures/mois, 1M lectures/mois) ; les paliers payants démarrent à 20 $/mois forfaitaire (Builder) ou 50 $/mois d\'usage minimum (Standard).',
           'Weaviate Cloud propose un palier gratuit (sans carte bancaire : 1 cluster, 100 000 objets, 1 Go de mémoire, 10 Go de disque, disponibilité au mieux). Le palier Flex payant démarre à 45 $/mois et Premium est indiqué à partir de 400 $/mois, vérifié sur weaviate.io/pricing le 03/11/2026.',
           'Chroma Cloud Starter coûte 0 $/mois plus facturation à l\'usage (écritures, stockage, requêtes) ; le palier Team coûte 250 $/mois plus usage.',
@@ -964,7 +964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           { title: 'Optez pour l\'auto-hébergement si : vous exploitez déjà d\'autres infrastructures (Kubernetes, stack Docker Compose), avez besoin d\'un contrôle total sur la résidence des données, ou votre volume de vecteurs est assez important pour que la facturation cloud à l\'usage coûte plus cher qu\'une VM.', whyItMatters: 'L\'auto-hébergement élimine totalement la facturation par requête — une application RAG active peut générer des millions d\'unités de lecture/écriture par mois, ce qui s\'accumule rapidement en tarification cloud à l\'usage.' },
           { title: 'Optez pour le cloud managé si : vous êtes une petite équipe sans DevOps dédié, voulez livrer en jours plutôt qu\'en semaines, ou votre volume de vecteurs est assez faible pour qu\'un palier gratuit ou d\'entrée de gamme suffise.', whyItMatters: 'Le cloud managé échange une facture mensuelle prévisible contre zéro charge opérationnelle — pas de correctifs, pas de stratégie de sauvegarde à concevoir, pas d\'astreinte pour une panne de base de données.' },
-          { title: 'En cas de doute, commencez par Qdrant auto-hébergé sur une petite VM ou un conteneur Docker.', whyItMatters: 'Le palier cloud gratuit à vie de Qdrant et son binaire Rust léger en font, à notre avis, un point de départ à faible risque — vous pourrez migrer vers Pinecone ou Weaviate Cloud plus tard si le cloud managé s\'avère rentable.' },
+          { title: 'En cas de doute, commencez par Qdrant auto-hébergé sur une petite VM ou un conteneur Docker.', whyItMatters: 'Le palier cloud gratuit de Qdrant et son binaire Rust léger en font, à notre avis, un point de départ à faible risque — vous pourrez migrer vers Pinecone ou Weaviate Cloud plus tard si le cloud managé s\'avère rentable.' },
         ],
       },
       selfHostedComparison: {
@@ -1008,7 +1008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'weaviate',
         title: 'Weaviate : auto-hébergé ou cloud managé',
         content: [
-          '**[Weaviate](https://weaviate.io/pricing) est open source (BSD-3-Clause) et gratuit en auto-hébergement, et Weaviate Cloud propose aussi un palier gratuit (sans carte bancaire) avant l\'offre Flex payante, vérifié sur weaviate.io/pricing le 03/11/2026.** Weaviate Cloud a restructuré ses tarifs en octobre 2025 : l\'ancien palier Serverless à 25 $/mois a été remplacé par un palier Flex à 45 $/mois minimum, toujours en vigueur à la date de vérification de cet article, le 03/11/2026.',
+          '**[Weaviate](https://weaviate.io/pricing) est open source (BSD-3-Clause) et gratuit en auto-hébergement, et Weaviate Cloud propose aussi un palier gratuit (sans carte bancaire) avant l\'offre Flex payante, vérifié sur weaviate.io/pricing le 03/11/2026.**',
           'Weaviate Cloud Free : 0 $, 1 cluster, 100 000 objets, 1 Go de mémoire, 10 Go de disque, disponibilité au mieux, pas de conservation des sauvegardes. Flex : à partir de 45 $/mois, paiement à l\'usage, infrastructure partagée, SLA 99,5 %. Premium : via l\'équipe commerciale, indiqué à partir de 400 $/mois, SLA 99,9 % (partagé) ou 99,95 % (dédié), Bring Your Own Cloud, éligible HIPAA, choix entre déploiement partagé ou dédié. Weaviate auto-hébergé ne coûte rien au-delà de votre propre infrastructure — c\'est le même code BSD-3-Clause qui fait tourner Weaviate Cloud.',
           `Le dépôt GitHub de Weaviate affiche ${S.fr('weaviate')} étoiles au 18/09/2026 (vérifié via l'API publique de GitHub), la plus faible des trois options open source ici, mais toujours un projet activement maintenu avec des sorties régulières.`,
           'Weaviate dispose d\'un écosystème de partenaires destiné aux entreprises (Technology Alliance Partners, intégrateurs, revendeurs à valeur ajoutée) plutôt que d\'un programme d\'affiliation individuel pour créateurs de contenu — aucune structure de commission par recommandation n\'a été trouvée sur weaviate.io à la date de cette vérification.',
@@ -1025,14 +1025,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'qdrant',
         title: 'Qdrant : auto-hébergement basé sur Rust, palier cloud gratuit',
         content: [
-          '**[Qdrant](https://qdrant.tech/pricing/) est open source (Apache 2.0), écrit en Rust, et propose un palier Qdrant Cloud gratuit à vie (0,5 vCPU / 1 Go RAM / 4 Go disque, vérifié sur qdrant.tech/pricing le 03/11/2026) sans limite de temps fixe et sans carte bancaire ; les clusters gratuits inactifs sont suspendus puis supprimés (voir ci-dessous).** L\'auto-hébergement est gratuit à toute échelle — vous ne payez que votre propre infrastructure.',
+          '**[Qdrant](https://qdrant.tech/pricing/) est open source (Apache 2.0), écrit en Rust, et propose un palier Qdrant Cloud gratuit (0,5 vCPU / 1 Go RAM / 4 Go disque, vérifié sur qdrant.tech/pricing le 03/11/2026) sans limite de temps fixe et sans carte bancaire ; les clusters gratuits inactifs sont suspendus puis supprimés (voir ci-dessous).** L\'auto-hébergement est gratuit à toute échelle — vous ne payez que votre propre infrastructure.',
           'Palier gratuit : 0,5 vCPU, 1 Go RAM, 4 Go disque, cluster à nœud unique, inférence cloud gratuite avec certains modèles d\'embedding. Standard : tarification à l\'usage au-delà du palier gratuit, ressources dédiées, mise à l\'échelle flexible, SLA de disponibilité 99,5 % — contrairement à Pinecone ou Weaviate, Qdrant ne publie pas de minimum mensuel forfaitaire pour Standard. Premium : dépense minimale requise (montant non publié), SSO, liens VPC privés, SLA de disponibilité 99,9 %. Hybrid Cloud et Private Cloud : tarification personnalisée pour les besoins de résidence des données et de réglementation.',
           `Le dépôt GitHub de Qdrant affiche ${S.fr('qdrant')} étoiles (données du répertoire PromptQuorum, vérifiées le 18/09/2026) — le plus élevé des trois options open source. Qdrant a annoncé le 12/03/2026 une série B de 50 M$ ([annonce de Qdrant](https://qdrant.tech/blog/series-b-announcement/)).`,
           'La page partenaires de Qdrant liste des partenaires d\'infrastructure cloud (AWS, Google Cloud, Microsoft Azure, Oracle Cloud, DigitalOcean et d\'autres pour le déploiement managé) et un programme de réduction pour startups, pas un programme d\'affiliation individuel pour créateurs de contenu.',
         ],
         items: [
           'Auto-hébergé : gratuit, Apache 2.0, illimité',
-          'Palier cloud gratuit : 0,5 vCPU / 1 Go RAM / 4 Go disque, gratuit à vie, sans carte bancaire',
+          'Palier cloud gratuit : 0,5 vCPU / 1 Go RAM / 4 Go disque, sans carte bancaire',
           'Standard : à l\'usage, aucun minimum mensuel forfaitaire publié, ressources dédiées, SLA 99,5 %',
           'Premium : dépense minimale (montant non publié), SSO, liens VPC privés, SLA 99,9 %',
           `${S.fr('qdrant')} étoiles GitHub (vérifié le 18/09/2026) — la plus élevée des trois options open source`,
@@ -1070,7 +1070,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { Service: 'Pinecone', 'Palier gratuit': 'Starter : 2 Go, sans minimum', 'Palier payant d\'entrée': '20 $/mois Builder forfaitaire', 'Alternative auto-hébergée': 'Aucune — cloud uniquement' },
           { Service: 'Weaviate Cloud', 'Palier gratuit': 'Free : 0 $, 100 000 objets, 1 Go de mémoire', 'Palier payant d\'entrée': '45 $/mois Flex', 'Alternative auto-hébergée': 'Oui — gratuit, BSD-3-Clause' },
-          { Service: 'Qdrant Cloud', 'Palier gratuit': '0,5 vCPU/1 Go, à vie', 'Palier payant d\'entrée': 'À l\'usage, aucun minimum publié', 'Alternative auto-hébergée': 'Oui — gratuit, Apache 2.0' },
+          { Service: 'Qdrant Cloud', 'Palier gratuit': '0,5 vCPU/1 Go (limites d\'inactivité)', 'Palier payant d\'entrée': 'À l\'usage, aucun minimum publié', 'Alternative auto-hébergée': 'Oui — gratuit, Apache 2.0' },
         ],
       },
       tcoComparison: {
@@ -1128,7 +1128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Pinecone est-il meilleur que Weaviate ?', a: 'Aucun des deux n\'est meilleur dans toutes les situations. Pinecone est cloud uniquement sans option auto-hébergée, ce qui est plus simple si vous voulez zéro travail d\'infrastructure mais une limite si vous avez besoin de contrôler la résidence des données. Weaviate propose à la fois une version auto-hébergée gratuite et une option cloud managé, offrant plus de flexibilité, mais Weaviate Cloud propose aussi un palier gratuit (100 000 objets), avec Flex payant à partir de 45 $/mois.' },
           { q: 'Combien coûte le stockage et l\'interrogation d\'1 million de vecteurs ?', a: 'Estimations approximatives (à titre indicatif): Pinecone Standard se situe autour de 50–150 $/mois selon le volume de requêtes (proche du minimum de 50 $/mois). Weaviate Cloud Flex reste proche de son minimum de 45 $/mois à cette échelle. Qdrant ou Weaviate auto-hébergés sur une petite VM coûtent environ 50–80 $/mois d\'infrastructure plus la main-d\'œuvre d\'exploitation, ce qui rend typiquement le total sur 12 mois plus élevé que le cloud managé à exactement 1M de vecteurs une fois la main-d\'œuvre comptée — voir le comparatif TCO complet ci-dessus pour le raisonnement.' },
           { q: 'Comment migrer de Chroma vers Qdrant ?', a: 'Exportez les vecteurs et leurs métadonnées depuis Chroma via son client Python (collection.get() avec include=["embeddings","metadatas","documents"]), puis chargez-les par lots dans une collection Qdrant via la méthode upsert() du client Python de Qdrant, en associant les champs de métadonnées de Chroma à la structure de payload de Qdrant. Les deux utilisent des formats d\'embedding standard, donc les vecteurs eux-mêmes n\'ont besoin d\'aucune transformation — seuls le code côté client et le schéma de collection changent.' },
-          { q: 'Qdrant est-il la même chose que Weaviate ?', a: `Non. Les deux sont des bases de données vectorielles open source, auto-hébergeables, avec recherche hybride, mais Qdrant est écrit en Rust (Apache 2.0) et Weaviate en Go (BSD-3-Clause). Qdrant a plus d'étoiles GitHub (${S.fr('qdrant')} contre ${S.fr('weaviate')}, vérifié le 18/09/2026) et un palier cloud gratuit à vie (0,5 vCPU/1 Go RAM/4 Go de disque) ; Weaviate a un écosystème de modules plus large pour la vectorisation et le reranking intégrés, et son propre palier cloud gratuit est limité à 100 000 objets.` },
+          { q: 'Qdrant est-il la même chose que Weaviate ?', a: `Non. Les deux sont des bases de données vectorielles open source, auto-hébergeables, avec recherche hybride, mais Qdrant est écrit en Rust (Apache 2.0) et Weaviate en Go (BSD-3-Clause). Qdrant a plus d'étoiles GitHub (${S.fr('qdrant')} contre ${S.fr('weaviate')}, vérifié le 18/09/2026) et un palier cloud gratuit (0,5 vCPU/1 Go RAM/4 Go de disque) ; Weaviate a un écosystème de modules plus large pour la vectorisation et le reranking intégrés, et son propre palier cloud gratuit est limité à 100 000 objets.` },
           { q: 'Pinecone, Weaviate, Qdrant ou Chroma ont-ils des programmes d\'affiliation ?', a: 'Pinecone gère un véritable programme d\'affiliation public pour créateurs de contenu, confirmé directement sur pinecone.io/partners, distinct de ses programmes Solution Partner et Referral destinés aux entreprises. Weaviate et Qdrant maintiennent des écosystèmes de partenaires technologie/solution/revente destinés aux entreprises plutôt que des programmes d\'affiliation individuels. Aucun programme d\'affiliation n\'a été trouvé pour la base de données vectorielle de Chroma ([trychroma.com](https://trychroma.com)). PromptQuorum n\'est actuellement inscrit à aucun de ces programmes — chaque lien de cette page est un simple lien produit.' },
           { q: 'Chroma peut-il être utilisé en production ?', a: 'Oui, en dehors de son mode embarqué mono-processus. Le mode client-serveur de Chroma et le Chroma Cloud managé (Starter dès 0 $ + usage, Team à 250 $/mois + usage) prennent tous deux en charge les déploiements de production multi-services. Le mode embarqué spécifiquement — où Chroma s\'exécute dans un processus Python sans serveur séparé — doit rester réservé aux projets solo et prototypes, pas aux charges de production partagées.' },
           { q: 'Quelle est la vraie différence entre tarification auto-hébergée et serverless/managée ?', a: 'La tarification auto-hébergée correspond au coût d\'infrastructure (une VM ou un serveur) plus votre propre temps d\'exploitation pour les correctifs, la surveillance et les sauvegardes — aucun frais par requête. La tarification managée/serverless (Pinecone, Weaviate Cloud, Qdrant Cloud) facture un abonnement mensuel plus des tarifs à l\'usage pour le stockage, les lectures et les écritures, l\'éditeur gérant toute l\'exploitation. L\'auto-hébergement l\'emporte généralement en coût brut seulement quand le volume est assez important pour que la main-d\'œuvre d\'exploitation ne représente qu\'une petite fraction de la facture, ou quand une équipe ops existante exploite déjà le serveur à coût marginal quasi nul.' },
@@ -1153,8 +1153,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: 'https://www.pinecone.io/pricing/', title: 'Tarifs Pinecone', description: 'Page de tarification officielle — base des limites des paliers Starter/Builder/Standard/Enterprise, vérifiée le 03/11/2026.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Partenaires Pinecone', description: 'Page partenaires officielle — base de confirmation du programme d\'affiliation public pour créateurs de contenu, distinct des programmes Solution Partner et Referral.' },
-          { url: 'https://weaviate.io/pricing', title: 'Tarifs Weaviate Cloud', description: 'Page de tarification officielle — base des limites des paliers Free/Flex/Premium, revérifiée le 03/11/2026 ; l\'article de blog sur la refonte tarifaire d\'octobre 2025 explique la restructuration Flex.' },
-          { url: 'https://qdrant.tech/pricing/', title: 'Tarifs Qdrant', description: 'Page de tarification officielle — base des spécifications du palier gratuit à vie (0,5 vCPU/1 Go RAM/4 Go disque) et de la structure des paliers Standard/Premium. Revérifiée le 03/11/2026.' },
+          { url: 'https://weaviate.io/pricing', title: 'Tarifs Weaviate Cloud', description: 'Page de tarification officielle — base des limites des paliers Free/Flex/Premium, revérifiée le 03/11/2026.' },
+          { url: 'https://qdrant.tech/pricing/', title: 'Tarifs Qdrant', description: 'Page de tarification officielle — base des spécifications du palier gratuit (0,5 vCPU/1 Go RAM/4 Go disque) et de la structure des paliers Standard/Premium. Revérifiée le 03/11/2026.' },
           { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Dimensionnement des capacités Qdrant', description: 'Recommandation officielle de partitionner une collection au-delà d\'environ 1 million de vecteurs — base du plafond de mise à l\'échelle de l\'auto-hébergement décrit dans la section « Comment choisir ».' },
           { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant : RAM minimale pour 1 million de vecteurs', description: 'Base des ~6–7 Go de RAM par million de vecteurs à 1 536 dimensions (HNSW en mémoire), contre ~1,2 Go par million en stockage sur disque (mmap).' },
           { url: 'https://qdrant.tech/blog/series-b-announcement/', title: 'Qdrant : annonce de la série B', description: 'Annonce officielle de la série B de 50 M$ (12/03/2026).' },
@@ -1171,8 +1171,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Pinecone vs Weaviate vs Qdrant vs Chroma : Meilleure base vectorielle (2026)',
-      description: 'Pinecone (20 $/mois Builder, 50 $/mois Standard), Weaviate Cloud (45 $/mois Flex), Qdrant (palier auto-hébergé gratuit à vie), Chroma (open source + 250 $/mois Team) comparés pour la recherche vectorielle RAG en 2026.',
+      headline: 'Pinecone vs Weaviate vs Qdrant vs Chroma : Comparatif des bases vectorielles (2026)',
+      description: 'Pinecone (20 $/mois Builder, 50 $/mois Standard), Weaviate Cloud (45 $/mois Flex), Qdrant (auto-hébergement gratuit), Chroma (open source + 250 $/mois Team) comparés pour la recherche vectorielle RAG en 2026.',
       datePublished: '2026-08-27',
       dateModified: '2026-11-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1201,7 +1201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Pinecone', description: 'Base de données vectorielle managée, cloud uniquement. Palier Starter gratuit (2 Go) ; Builder 20 $/mois forfaitaire ; Standard 50 $/mois d\'usage minimum.' },
         { '@type': 'ListItem', position: 2, name: 'Weaviate', description: 'Open source (BSD-3-Clause) auto-hébergé ou Weaviate Cloud. Palier cloud gratuit (100 000 objets) ; Flex à partir de 45 $/mois minimum.' },
-        { '@type': 'ListItem', position: 3, name: 'Qdrant', description: 'Open source (Apache 2.0), basé sur Rust. Auto-hébergé gratuit ou palier Qdrant Cloud gratuit à vie (0,5 vCPU/1 Go RAM/4 Go disque).' },
+        { '@type': 'ListItem', position: 3, name: 'Qdrant', description: 'Open source (Apache 2.0), basé sur Rust. Auto-hébergé gratuit ou palier Qdrant Cloud gratuit avec limites d\'inactivité (0,5 vCPU/1 Go RAM/4 Go disque).' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Base de données vectorielle open source (Apache 2.0) embarquée ou client-serveur. Auto-hébergée gratuite ; Chroma Cloud de 0 $ + usage à 250 $/mois Team.' },
       ],
       inLanguage: 'fr',
@@ -1215,10 +1215,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-27',
     affiliateDisclosure: true,
-    title: 'Pinecone vs Weaviate vs Qdrant vs Chroma: Mejor Base de Datos Vectorial (2026)',
+    title: 'Pinecone vs Weaviate vs Qdrant vs Chroma: Comparativa de bases de datos vectoriales (2026)',
     seoTitle: 'Pinecone vs Weaviate vs Qdrant vs Chroma (2026)',
     intro: 'Las bases de datos vectoriales almacenan embeddings y ejecutan búsqueda por similitud para pipelines de RAG (retrieval-augmented generation). Pinecone, Weaviate, Qdrant y Chroma resuelven ese mismo problema con cuatro compromisos distintos en self-hosting, precios y esfuerzo operativo. Esta guía compara precios, licencias y modelos de despliegue actuales de las cuatro, verificados en la página de precios de cada proveedor el 03/11/2026 y en el repositorio de GitHub de cada proyecto.',
-    metaDescription: 'Pinecone ($20/mes Builder, $50/mes Standard), Weaviate Cloud ($45/mes Flex), Qdrant (nivel self-hosted gratis para siempre), Chroma (open source + $250/mes Team) comparados para búsqueda vectorial RAG en 2026.',
+    metaDescription: 'Pinecone ($20/mes Builder), Weaviate Cloud ($45/mes Flex), Qdrant (self-hosting gratis) y Chroma (open source) comparados para búsqueda RAG en 2026.',
     publishDate: '2026-08-27',
     dateModified: '2026-11-03',
     readTime: '15 min de lectura',
@@ -1233,13 +1233,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'base de datos vectorial self-hosted',
       'precios de pinecone',
     ],
-    leadAnswerBlock: '**La mejor base de datos vectorial para RAG en 2026 depende de si haces self-hosting o usas cloud gestionado: Qdrant encaja bien con equipos con capacidad de ops (nivel cloud gratis para siempre, self-hosting con Apache 2.0), mientras que Pinecone encaja con equipos que quieren cero trabajo de infraestructura (nivel Builder de $20/mes, sin servidor que gestionar).** No existe un único "mejor" — Weaviate y Chroma cubren cada uno casos de uso intermedios específicos que se explican abajo.',
+    leadAnswerBlock: '**La base vectorial adecuada para RAG depende de si haces self-hosting o usas cloud gestionado: Qdrant encaja con equipos de ops (self-hosting gratis, nivel gratuito con límites por inactividad) y Pinecone con equipos sin infraestructura (Builder a $20/mes).** Ninguna opción gana siempre; Weaviate y Chroma cubren casos intermedios.',
     quickAnswerTop: {
       es: {
         question: '¿Qué base de datos vectorial debería usar: Pinecone, Weaviate, Qdrant o Chroma?',
-        answer: 'Usa Qdrant si puedes hacer self-hosting y quieres un nivel gratuito (0.5 vCPU/1GB RAM/4GB disco, gratis para siempre según la página de precios de Qdrant) más un motor basado en Rust. Usa Pinecone si quieres cero gestión de infraestructura y aceptas un modelo solo en la nube con facturación por uso desde $20/mes. Usa Weaviate si quieres una opción híbrida con self-hosted (BSD-3-Clause, gratis) y cloud gestionado (desde $45/mes). Usa Chroma si eres desarrollador solo o estás prototipando — se ejecuta embebido dentro de un proceso Python sin servidor.',
+        answer: 'Usa Qdrant si puedes hacer self-hosting y quieres un nivel gratuito (0.5 vCPU/1GB RAM/4GB disco, con límites por inactividad según la documentación de Qdrant) más un motor basado en Rust. Usa Pinecone si quieres cero gestión de infraestructura y aceptas un modelo solo en la nube con facturación por uso desde $20/mes. Usa Weaviate si quieres una opción híbrida con self-hosted (BSD-3-Clause, gratis) y cloud gestionado (desde $45/mes). Usa Chroma si eres desarrollador solo o estás prototipando — se ejecuta embebido dentro de un proceso Python sin servidor.',
         bullets: [
-          'Qdrant: Rust, Apache 2.0, self-hosting gratis o nivel cloud gratis para siempre (0.5 vCPU/1GB RAM/4GB disco)',
+          'Qdrant: Rust, Apache 2.0, self-hosting gratis o nivel cloud gratuito con límites por inactividad (0.5 vCPU/1GB RAM/4GB disco)',
           'Pinecone: solo cloud, sin opción self-hosted, nivel Starter gratis (2GB de almacenamiento) y luego $20/mes Builder o $50/mes Standard',
           'Weaviate: Go, BSD-3-Clause, self-hosting gratis o Weaviate Cloud desde $45/mes (nivel Flex; también existe un nivel cloud gratuito)',
           'Chroma: núcleo Python/Rust, Apache 2.0, self-hosted/embebido gratis o Chroma Cloud desde $0 + uso (Starter) hasta $250/mes (Team)',
@@ -1267,7 +1267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     affiliateLinks: [
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone', productCategory: 'dev-tool', priceRange: 'Gratis–$50/mes+', label: 'Ver precios de Pinecone →' },
-      { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: 'Nivel gratis para siempre', label: 'Probar Qdrant gratis →' },
+      { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: 'Nivel gratuito (límites por inactividad)', label: 'Probar Qdrant gratis →' },
       { url: 'https://weaviate.io/pricing', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: 'Desde $45/mes', label: 'Ver precios de Weaviate →' },
       { url: 'https://www.trychroma.com/pricing', productName: 'Chroma', productCategory: 'dev-tool', priceRange: 'Gratis–$250/mes+', label: 'Ver precios de Chroma →' },
     ],
@@ -1277,12 +1277,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Puntos clave — comparación de bases de datos vectoriales',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qdrant encaja bien en self-hosting con un nivel cloud gratis para siempre; Pinecone encaja en cloud gestionado sin infraestructura; Weaviate y Chroma cubren nichos específicos intermedios.' },
+          { type: 'one-sentence', text: 'Qdrant encaja bien en self-hosting con un nivel cloud gratuito (límites por inactividad); Pinecone encaja en cloud gestionado sin infraestructura; Weaviate y Chroma cubren nichos específicos intermedios.' },
           { type: 'plain-terms', text: 'Una base de datos vectorial almacena las "huellas" numéricas (embeddings) de tus documentos para que una app de IA encuentre rápidamente las más relevantes — la mitad de retrieval del RAG (retrieval-augmented generation).' },
         ],
         items: [
           'Qdrant, Weaviate y Chroma son open source y gratis para self-hosting. Pinecone es solo cloud — no existe un Pinecone self-hosted a ningún precio.',
-          'Qdrant Cloud ofrece un nivel gratis para siempre (0.5 vCPU / 1GB RAM / 4GB disco, verificado el 03/11/2026) sin tarjeta de crédito; según la documentación de Qdrant, los clústeres gratuitos inactivos se suspenden tras 1 semana y se eliminan tras 4 semanas.',
+          'Qdrant Cloud ofrece un nivel gratuito (0.5 vCPU / 1GB RAM / 4GB disco, verificado el 03/11/2026) sin tarjeta de crédito; según la documentación de Qdrant, los clústeres gratuitos inactivos se suspenden tras 1 semana y se eliminan tras 4 semanas.',
           'Pinecone Starter es gratis (2GB de almacenamiento, 2M escrituras/mes, 1M lecturas/mes); los niveles pagos empiezan en $20/mes fijo (Builder) o $50/mes de uso mínimo (Standard).',
           'Weaviate Cloud tiene un nivel gratuito (sin tarjeta: 1 clúster, 100,000 objetos, 1GB de memoria, 10GB de disco, disponibilidad de mejor esfuerzo). El nivel Flex de pago empieza en $45/mes y Premium figura desde $400/mes, comprobado en weaviate.io/pricing el 03/11/2026.',
           'Chroma Cloud Starter cuesta $0/mes más facturación por uso (escrituras, almacenamiento, consultas); el nivel Team cuesta $250/mes más uso.',
@@ -1323,7 +1323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           { title: 'Ve con self-hosted si: ya operas otra infraestructura (Kubernetes, stack de Docker Compose), necesitas control total de residencia de datos, o tu volumen de vectores es lo bastante grande como para que la facturación cloud por uso cueste más que una VM.', whyItMatters: 'El self-hosting elimina por completo la facturación por consulta — una app RAG activa puede generar millones de unidades de lectura/escritura al mes, lo que se acumula rápido con precios cloud por uso.' },
           { title: 'Ve con cloud gestionado si: eres un equipo pequeño sin DevOps dedicado, quieres lanzar en días y no semanas, o tu volumen de vectores es lo bastante pequeño como para que un nivel gratuito o de entrada te cubra.', whyItMatters: 'El cloud gestionado cambia una factura mensual predecible por cero carga operativa — sin parches, sin diseñar estrategia de respaldo, sin guardia para una caída de base de datos.' },
-          { title: 'Si tienes dudas, empieza con Qdrant self-hosted en una VM pequeña o un contenedor Docker.', whyItMatters: 'El nivel cloud gratis para siempre de Qdrant y su binario Rust ligero lo convierten, en nuestra valoración, en un punto de partida de bajo riesgo — puedes migrar a Pinecone o Weaviate Cloud después si decides que el cloud gestionado vale el costo recurrente.' },
+          { title: 'Si tienes dudas, empieza con Qdrant self-hosted en una VM pequeña o un contenedor Docker.', whyItMatters: 'El nivel cloud gratuito de Qdrant y su binario Rust ligero lo convierten, en nuestra valoración, en un punto de partida de bajo riesgo — puedes migrar a Pinecone o Weaviate Cloud después si decides que el cloud gestionado vale el costo recurrente.' },
         ],
       },
       selfHostedComparison: {
@@ -1367,7 +1367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'weaviate',
         title: 'Weaviate: self-hosted o cloud gestionado',
         content: [
-          '**[Weaviate](https://weaviate.io/pricing) es open source (BSD-3-Clause) y gratis para self-hosting, y Weaviate Cloud también ofrece un nivel gratuito (sin tarjeta) antes del plan Flex de pago, comprobado en weaviate.io/pricing el 03/11/2026.** Weaviate Cloud reestructuró sus precios en octubre de 2025: el antiguo nivel Serverless de $25/mes fue reemplazado por un nivel Flex de $45/mes mínimo, que sigue siendo el precio actual al verificar este artículo el 03/11/2026.',
+          '**[Weaviate](https://weaviate.io/pricing) es open source (BSD-3-Clause) y gratis para self-hosting, y Weaviate Cloud también ofrece un nivel gratuito (sin tarjeta) antes del plan Flex de pago, comprobado en weaviate.io/pricing el 03/11/2026.**',
           'Weaviate Cloud Free: $0, 1 clúster, 100,000 objetos, 1GB de memoria, 10GB de disco, disponibilidad de mejor esfuerzo, sin retención de copias de seguridad. Flex: desde $45/mes, pago por uso, infraestructura compartida, SLA de 99.5%. Premium: vía ventas, desde $400/mes según la página, SLA de 99.9% (compartido) o 99.95% (dedicado), Bring Your Own Cloud, elegible para HIPAA, elección de despliegue compartido o dedicado. Weaviate self-hosted no cuesta nada más allá de tu propia infraestructura — es el mismo código BSD-3-Clause que ejecuta Weaviate Cloud.',
           `El repositorio de GitHub de Weaviate muestra ${S.es('weaviate')} estrellas al 18/09/2026 (verificado vía la API pública de GitHub), la menor de las tres opciones open source aquí, aunque sigue siendo un proyecto mantenido activamente con lanzamientos regulares.`,
           'Weaviate tiene un ecosistema de socios orientado a empresas (Technology Alliance Partners, integradores de sistemas, revendedores de valor agregado) en lugar de un programa de afiliados individual para creadores de contenido — no se encontró estructura de comisión por referido en weaviate.io a la fecha de esta verificación.',
@@ -1384,14 +1384,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'qdrant',
         title: 'Qdrant: self-hosting basado en Rust, nivel cloud gratis',
         content: [
-          '**[Qdrant](https://qdrant.tech/pricing/) es open source (Apache 2.0), escrito en Rust, y tiene un nivel de Qdrant Cloud gratis para siempre (0.5 vCPU / 1GB RAM / 4GB disco, verificado en qdrant.tech/pricing el 03/11/2026) sin límite de tiempo fijo ni tarjeta requerida; los clústeres gratuitos inactivos se suspenden y luego se eliminan (véase abajo).** El self-hosting es gratis a cualquier escala — solo pagas por tu propia infraestructura.',
+          '**[Qdrant](https://qdrant.tech/pricing/) es open source (Apache 2.0), escrito en Rust, y tiene un nivel gratuito de Qdrant Cloud (0.5 vCPU / 1GB RAM / 4GB disco, verificado en qdrant.tech/pricing el 03/11/2026) sin límite de tiempo fijo ni tarjeta requerida; los clústeres gratuitos inactivos se suspenden y luego se eliminan (véase abajo).** El self-hosting es gratis a cualquier escala — solo pagas por tu propia infraestructura.',
           'Nivel gratuito: 0.5 vCPU, 1GB RAM, 4GB disco, clúster de un solo nodo, inferencia cloud gratuita con modelos de embedding seleccionados. Standard: precios por uso más allá del nivel gratuito, recursos dedicados, escalado flexible, SLA de uptime 99.5% — a diferencia de Pinecone o Weaviate, Qdrant no publica un mínimo mensual fijo para Standard. Premium: gasto mínimo requerido (monto no publicado), SSO, enlaces VPC privados, SLA de uptime 99.9%. Hybrid Cloud y Private Cloud: precio personalizado para necesidades de residencia de datos y regulación.',
           `El repositorio de GitHub de Qdrant muestra ${S.es('qdrant')} estrellas (datos del directorio de PromptQuorum, verificados el 18/09/2026), el recuento más alto de las tres opciones open source. Qdrant anunció el 12/03/2026 una ronda Serie B de $50M ([anuncio de Qdrant](https://qdrant.tech/blog/series-b-announcement/)).`,
           'La página de socios de Qdrant lista socios de infraestructura cloud (AWS, Google Cloud, Microsoft Azure, Oracle Cloud, DigitalOcean y otros para despliegue gestionado) y un programa de descuentos para startups, no un programa de afiliados individual para creadores de contenido.',
         ],
         items: [
           'Self-hosted: gratis, Apache 2.0, ilimitado',
-          'Nivel cloud gratuito: 0.5 vCPU / 1GB RAM / 4GB disco, gratis para siempre, sin tarjeta requerida',
+          'Nivel cloud gratuito: 0.5 vCPU / 1GB RAM / 4GB disco, sin tarjeta requerida',
           'Standard: por uso, sin mínimo mensual fijo publicado, recursos dedicados, SLA 99.5%',
           'Premium: gasto mínimo (monto no publicado), SSO, enlaces VPC privados, SLA 99.9%',
           `${S.es('qdrant')} estrellas en GitHub (verificado 18/09/2026) — la mayor de las tres opciones open source`,
@@ -1429,7 +1429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { Servicio: 'Pinecone', 'Nivel gratuito': 'Starter: 2GB, sin mínimo', 'Nivel pago de entrada': '$20/mes Builder fijo', 'Alternativa self-hosted': 'Ninguna — solo cloud' },
           { Servicio: 'Weaviate Cloud', 'Nivel gratuito': 'Free: $0, 100,000 objetos, 1GB de memoria', 'Nivel pago de entrada': '$45/mes mínimo Flex', 'Alternativa self-hosted': 'Sí — gratis, BSD-3-Clause' },
-          { Servicio: 'Qdrant Cloud', 'Nivel gratuito': '0.5 vCPU/1GB, para siempre', 'Nivel pago de entrada': 'Por uso, sin mínimo publicado', 'Alternativa self-hosted': 'Sí — gratis, Apache 2.0' },
+          { Servicio: 'Qdrant Cloud', 'Nivel gratuito': '0.5 vCPU/1GB (límites por inactividad)', 'Nivel pago de entrada': 'Por uso, sin mínimo publicado', 'Alternativa self-hosted': 'Sí — gratis, Apache 2.0' },
         ],
       },
       tcoComparison: {
@@ -1487,7 +1487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Es Pinecone mejor que Weaviate?', a: 'Ninguno es mejor en toda situación. Pinecone es solo cloud sin opción self-hosted, lo que es más simple si quieres cero trabajo de infraestructura pero una limitación si necesitas control de residencia de datos. Weaviate ofrece tanto una versión self-hosted gratuita como una opción de cloud gestionado, dando más flexibilidad, pero Weaviate Cloud también tiene un nivel gratuito (100,000 objetos), con Flex de pago desde $45/mes.' },
           { q: '¿Cuánto cuesta almacenar y consultar 1 millón de vectores?', a: 'Estimaciones aproximadas (ilustrativas): Pinecone Standard se ubica cerca de $50–150/mes según el volumen de consultas (cerca del mínimo de $50/mes). Weaviate Cloud Flex se mantiene cerca de su mínimo de $45/mes a esta escala. Qdrant o Weaviate self-hosted en una VM pequeña cuestan aproximadamente $50–80/mes en infraestructura más mano de obra de ops, lo que típicamente hace el total a 12 meses más alto que el cloud gestionado a exactamente 1M de vectores una vez contada la mano de obra — ver la comparación completa de TCO arriba para el razonamiento.' },
           { q: '¿Cómo migro de Chroma a Qdrant?', a: 'Exporta los vectores y sus metadatos desde Chroma usando su cliente de Python (collection.get() con include=["embeddings","metadatas","documents"]), luego súbelos por lotes a una colección de Qdrant usando el método upsert() del cliente Python de Qdrant, mapeando los campos de metadatos de Chroma a la estructura de payload de Qdrant. Ambos usan formatos de embedding estándar, así que los vectores en sí no necesitan transformación — solo cambian el código del lado del cliente y el esquema de la colección.' },
-          { q: '¿Es Qdrant lo mismo que Weaviate?', a: `No. Ambas son bases de datos vectoriales open source, self-hosteables, con búsqueda híbrida, pero Qdrant está escrita en Rust (Apache 2.0) y Weaviate en Go (BSD-3-Clause). Qdrant tiene más estrellas en GitHub (${S.es('qdrant')} frente a ${S.es('weaviate')}, verificado 18/09/2026) y un nivel cloud gratis para siempre (0.5 vCPU/1GB RAM/4GB de disco); Weaviate tiene un ecosistema de módulos más amplio para vectorización y reranking integrados, y su propio nivel cloud gratuito está limitado a 100,000 objetos.` },
+          { q: '¿Es Qdrant lo mismo que Weaviate?', a: `No. Ambas son bases de datos vectoriales open source, self-hosteables, con búsqueda híbrida, pero Qdrant está escrita en Rust (Apache 2.0) y Weaviate en Go (BSD-3-Clause). Qdrant tiene más estrellas en GitHub (${S.es('qdrant')} frente a ${S.es('weaviate')}, verificado 18/09/2026) y un nivel cloud gratuito (0.5 vCPU/1GB RAM/4GB de disco); Weaviate tiene un ecosistema de módulos más amplio para vectorización y reranking integrados, y su propio nivel cloud gratuito está limitado a 100,000 objetos.` },
           { q: '¿Pinecone, Weaviate, Qdrant o Chroma tienen programas de afiliados?', a: 'Pinecone tiene un programa de afiliados público real para creadores de contenido, confirmado directamente en pinecone.io/partners, separado de sus programas de Solution Partner y Referral orientados a empresas. Weaviate y Qdrant mantienen ecosistemas de socios de tecnología/solución/reventa orientados a empresas en lugar de programas de afiliados individuales. No se encontró programa de afiliados para la base de datos vectorial de Chroma ([trychroma.com](https://trychroma.com)). PromptQuorum no está actualmente inscrito en ninguno de estos programas — cada enlace en esta página es un enlace de producto simple.' },
           { q: '¿Se puede usar Chroma en producción?', a: 'Sí, fuera de su modo embebido de un solo proceso. El modo cliente-servidor de Chroma y el Chroma Cloud gestionado (Starter desde $0 + uso, Team a $250/mes + uso) soportan ambos despliegues de producción multiservicio. El modo embebido específicamente — donde Chroma corre dentro de un proceso Python sin servidor separado — es mejor reservarlo para proyectos solo y prototipos, no cargas de producción compartidas.' },
           { q: '¿Cuál es la diferencia real entre precios self-hosted y serverless/gestionado?', a: 'El precio self-hosted es costo de infraestructura (una VM o servidor) más tu propio tiempo de ops para parches, monitoreo y respaldos — sin tarifas por consulta. El precio gestionado/serverless (Pinecone, Weaviate Cloud, Qdrant Cloud) cobra una tarifa mensual más tarifas por uso de almacenamiento, lecturas y escrituras, con el proveedor manejando toda la operación. El self-hosting tiende a ganar en costo bruto en dólares solo cuando el volumen es lo bastante grande como para que la mano de obra de ops sea una fracción pequeña de la factura, o cuando un equipo de ops existente ya opera el servidor a costo marginal casi nulo.' },
@@ -1512,8 +1512,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: 'https://www.pinecone.io/pricing/', title: 'Precios de Pinecone', description: 'Página de precios oficial — base de los límites de los niveles Starter/Builder/Standard/Enterprise, verificado 03/11/2026.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Socios de Pinecone', description: 'Página oficial de socios — base para confirmar el programa de afiliados público para creadores de contenido, separado de los programas Solution Partner y Referral.' },
-          { url: 'https://weaviate.io/pricing', title: 'Precios de Weaviate Cloud', description: 'Página de precios oficial — base de los límites de los niveles Free/Flex/Premium, comprobada de nuevo el 03/11/2026; la publicación de blog sobre la reestructuración de precios de octubre de 2025 explica el cambio a Flex.' },
-          { url: 'https://qdrant.tech/pricing/', title: 'Precios de Qdrant', description: 'Página de precios oficial — base de las especificaciones del nivel gratis para siempre (0.5 vCPU/1GB RAM/4GB disco) y la estructura de niveles Standard/Premium. Reverificada el 03/11/2026.' },
+          { url: 'https://weaviate.io/pricing', title: 'Precios de Weaviate Cloud', description: 'Página de precios oficial — base de los límites de los niveles Free/Flex/Premium, comprobada de nuevo el 03/11/2026.' },
+          { url: 'https://qdrant.tech/pricing/', title: 'Precios de Qdrant', description: 'Página de precios oficial — base de las especificaciones del nivel gratuito (0.5 vCPU/1GB RAM/4GB disco) y la estructura de niveles Standard/Premium. Reverificada el 03/11/2026.' },
           { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Planificación de capacidad de Qdrant', description: 'Guía oficial sobre cuándo fragmentar (sharding) una colección al superar aproximadamente 1 millón de vectores — base del techo de escala de self-hosting descrito en la sección Cómo elegir.' },
           { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant: RAM mínima para servir 1M de vectores', description: 'Base de los aproximadamente 6-7GB de RAM por millón de vectores de 1.536 dimensiones (HNSW en memoria) frente a ~1.2GB por millón con almacenamiento respaldado en disco (mmap).' },
           { url: 'https://qdrant.tech/blog/series-b-announcement/', title: 'Qdrant: anuncio de la Serie B', description: 'Anuncio oficial de la ronda Serie B de $50M (12/03/2026).' },
@@ -1530,8 +1530,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Pinecone vs Weaviate vs Qdrant vs Chroma: Mejor Base de Datos Vectorial (2026)',
-      description: 'Pinecone ($20/mes Builder, $50/mes Standard), Weaviate Cloud ($45/mes Flex), Qdrant (nivel self-hosted gratis para siempre), Chroma (open source + $250/mes Team) comparados para búsqueda vectorial RAG en 2026.',
+      headline: 'Pinecone vs Weaviate vs Qdrant vs Chroma: Comparativa de bases de datos vectoriales (2026)',
+      description: 'Pinecone ($20/mes Builder, $50/mes Standard), Weaviate Cloud ($45/mes Flex), Qdrant (self-hosting gratis), Chroma (open source + $250/mes Team) comparados para búsqueda vectorial RAG en 2026.',
       datePublished: '2026-08-27',
       dateModified: '2026-11-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1560,7 +1560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Pinecone', description: 'Base de datos vectorial gestionada, solo cloud. Nivel Starter gratis (2GB); Builder $20/mes fijo; Standard $50/mes de uso mínimo.' },
         { '@type': 'ListItem', position: 2, name: 'Weaviate', description: 'Open source (BSD-3-Clause) self-hosted o Weaviate Cloud. Nivel cloud gratuito (100,000 objetos); Flex desde $45/mes mínimo.' },
-        { '@type': 'ListItem', position: 3, name: 'Qdrant', description: 'Open source (Apache 2.0), basado en Rust. Self-hosted gratis o nivel Qdrant Cloud gratis para siempre (0.5 vCPU/1GB RAM/4GB disco).' },
+        { '@type': 'ListItem', position: 3, name: 'Qdrant', description: 'Open source (Apache 2.0), basado en Rust. Self-hosted gratis o nivel gratuito de Qdrant Cloud con límites por inactividad (0.5 vCPU/1GB RAM/4GB disco).' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Base de datos vectorial open source (Apache 2.0) embebida o cliente-servidor. Self-hosted gratis; Chroma Cloud desde $0 + uso hasta $250/mes Team.' },
       ],
       inLanguage: 'es',
@@ -1574,10 +1574,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-27',
     affiliateDisclosure: true,
-    title: 'Pinecone vs Weaviate vs Qdrant vs Chroma：最適なベクトルDB（2026年）',
+    title: 'Pinecone vs Weaviate vs Qdrant vs Chroma：ベクトルDB比較（2026年）',
     seoTitle: 'Pinecone vs Weaviate vs Qdrant vs Chroma（2026年）',
     intro: 'ベクトルデータベースはエンベディングを保存し、RAG（retrieval-augmented generation）パイプライン向けに類似検索を実行します。Pinecone、Weaviate、Qdrant、Chromaは同じ課題を、セルフホスト・価格・運用負荷という4つの異なるトレードオフで解決します。本ガイドでは、各社の料金ページ（2026年11月3日確認）と各プロジェクトのGitHubリポジトリで確認した最新の料金・ライセンス・デプロイモデルを比較します。',
-    metaDescription: 'Pinecone（Builder月20ドル、Standard月50ドル）、Weaviate Cloud（Flex月45ドル）、Qdrant（永久無料のセルフホスト層）、Chroma（オープンソース＋Team月250ドル）を2026年のRAGベクトル検索向けに比較。',
+    metaDescription: 'Pinecone（Builder月20ドル）、Weaviate Cloud（Flex月45ドル）、Qdrant（セルフホストは無料）、Chroma（オープンソース）を2026年のRAGベクトル検索向けに比較。',
     publishDate: '2026-08-27',
     dateModified: '2026-11-03',
     readTime: '15分で読める',
@@ -1592,13 +1592,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'セルフホスト型ベクトルデータベース',
       'pinecone 料金',
     ],
-    leadAnswerBlock: '**2026年のRAG向け最適なベクトルデータベースは、セルフホストかマネージドクラウドかによって異なります。運用体制があるチームにはQdrant（無料クラウド層は期限なし、Apache 2.0でセルフホスト可能）が有力で、インフラ運用ゼロを望むチームにはPinecone（サーバー管理不要のBuilder層：月20ドル）が向いています。** 唯一の「ベスト」は存在しません——WeaviateとChromaはそれぞれ以下で説明する特定の中間ユースケースに適しています。',
+    leadAnswerBlock: '**RAG向けに適したベクトルデータベースは、セルフホストかマネージドクラウドかによって異なります。運用体制があるチームにはQdrant（Apache 2.0でセルフホストは無料、クラウドの無料層には非アクティブ時の制限あり）が有力で、インフラ運用ゼロを望むチームにはPinecone（サーバー管理不要のBuilder層：月20ドル）が向いています。** 唯一の「ベスト」は存在しません——WeaviateとChromaはそれぞれ以下で説明する特定の中間ユースケースに適しています。',
     quickAnswerTop: {
       ja: {
         question: 'Pinecone、Weaviate、Qdrant、Chromaのどれを使うべきですか？',
-        answer: 'セルフホスト可能で、無料枠（0.5 vCPU/1GB RAM/4GBディスク、Qdrantの料金ページでは永久無料）とRustベースのエンジンが欲しいならQdrantを使ってください。インフラ管理ゼロを望み、月20ドルからの使用量ベース課金のクラウド専用でよいならPineconeを使ってください。セルフホスト（BSD-3-Clause、無料）とマネージドクラウド（月45ドルから）の両方を持つハイブリッドな選択肢が欲しいならWeaviateを使ってください。ソロ開発者またはプロトタイピング中ならChromaを使ってください——サーバーなしでPythonプロセス内に埋め込んで動作します。',
+        answer: 'セルフホスト可能で、無料枠（0.5 vCPU/1GB RAM/4GBディスク、非アクティブ時の制限あり、Qdrantのドキュメントによる）とRustベースのエンジンが欲しいならQdrantを使ってください。インフラ管理ゼロを望み、月20ドルからの使用量ベース課金のクラウド専用でよいならPineconeを使ってください。セルフホスト（BSD-3-Clause、無料）とマネージドクラウド（月45ドルから）の両方を持つハイブリッドな選択肢が欲しいならWeaviateを使ってください。ソロ開発者またはプロトタイピング中ならChromaを使ってください——サーバーなしでPythonプロセス内に埋め込んで動作します。',
         bullets: [
-          'Qdrant：Rust、Apache 2.0、無料セルフホストまたは永久無料のクラウド層（0.5 vCPU/1GB RAM/4GBディスク）',
+          'Qdrant：Rust、Apache 2.0、無料セルフホストまたは非アクティブ時の制限付き無料クラウド層（0.5 vCPU/1GB RAM/4GBディスク）',
           'Pinecone：クラウド専用、セルフホストオプションなし、無料Starter層（2GBストレージ）の後、月20ドルBuilderまたは月50ドルStandard',
           'Weaviate：Go、BSD-3-Clause、無料セルフホストまたはWeaviate Cloud月45ドルから（Flex層。無料のクラウド層もあり）',
           'Chroma：Python/Rustコア、Apache 2.0、無料のセルフホスト/組み込みまたはChroma Cloud月0ドル+従量課金（Starter）〜月250ドル（Team）',
@@ -1626,7 +1626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     affiliateLinks: [
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone', productCategory: 'dev-tool', priceRange: '無料〜月50ドル+', label: 'Pineconeの料金を見る →' },
-      { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: '永久無料層', label: 'Qdrantを無料で試す →' },
+      { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: '無料層（非アクティブ時の制限あり）', label: 'Qdrantを無料で試す →' },
       { url: 'https://weaviate.io/pricing', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: '月45ドルから', label: 'Weaviateの料金を見る →' },
       { url: 'https://www.trychroma.com/pricing', productName: 'Chroma', productCategory: 'dev-tool', priceRange: '無料〜月250ドル+', label: 'Chromaの料金を見る →' },
     ],
@@ -1641,7 +1641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Qdrant、Weaviate、Chromaはオープンソースで無料でセルフホストできます。Pineconeはクラウド専用——どの価格帯でもセルフホスト版のPineconeは存在しません。',
-          'Qdrant Cloudには永久無料をうたう層があります（0.5 vCPU / 1GB RAM / 4GBディスク、2026年11月3日確認）。クレジットカードは不要で、Qdrantのドキュメントによれば非アクティブな無料クラスターは1週間後に停止、4週間後に削除されます。',
+          'Qdrant Cloudには無料層があります（0.5 vCPU / 1GB RAM / 4GBディスク、2026年11月3日確認）。クレジットカードは不要で、Qdrantのドキュメントによれば非アクティブな無料クラスターは1週間後に停止、4週間後に削除されます。',
           'Pinecone Starterは無料（2GBストレージ、月200万書き込み、月100万読み取り）。有料層は月20ドル定額（Builder）または月50ドル最低使用量（Standard）から開始。',
           'Weaviate Cloudには無料層があります（クレジットカード不要：1クラスター、100,000オブジェクト、メモリ1GB、ディスク10GB、ベストエフォートの可用性）。有料のFlex層は月45ドルから、Premiumは月400ドルからと記載されています（2026年11月3日にweaviate.io/pricingで確認）。',
           'Chroma Cloud Starterは月0ドル+従量課金（書き込み、ストレージ、クエリ）。Team層は月250ドル+従量課金。',
@@ -1682,7 +1682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           { title: 'セルフホストが適する場合：既に他のインフラ（Kubernetes、Docker Composeスタック）を運用している、データレジデンシーの完全な制御が必要、またはベクトル量が多く従量課金クラウドがVMより高くつく規模である。', whyItMatters: 'セルフホストはクエリごとの課金を完全に排除します——アクティブなRAGアプリは月に数百万の読み書きユニットを生成しうるため、従量課金クラウド料金では急速に膨らみます。' },
           { title: 'マネージドクラウドが適する場合：専属DevOpsのいない小規模チーム、週単位ではなく日単位でリリースしたい、またはベクトル量が少なく無料/エントリー層で十分な場合。', whyItMatters: 'マネージドクラウドは予測可能な月額請求と引き換えに運用負荷をゼロにします——パッチ適用不要、バックアップ戦略の設計不要、データベース障害のオンコール不要。' },
-          { title: '迷ったら、まず小さなVMまたはDockerコンテナでセルフホストのQdrantから始めてください。', whyItMatters: 'Qdrantの永久無料クラウド層と軽量なRustバイナリは、当サイトの評価ではリスクの低い出発点です——マネージドクラウドの価値が確認できれば、後でPineconeやWeaviate Cloudに移行できます。' },
+          { title: '迷ったら、まず小さなVMまたはDockerコンテナでセルフホストのQdrantから始めてください。', whyItMatters: 'Qdrantの無料クラウド層と軽量なRustバイナリは、当サイトの評価ではリスクの低い出発点です——マネージドクラウドの価値が確認できれば、後でPineconeやWeaviate Cloudに移行できます。' },
         ],
       },
       selfHostedComparison: {
@@ -1726,7 +1726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'weaviate',
         title: 'Weaviate：セルフホストまたはマネージドクラウド',
         content: [
-          '**[Weaviate](https://weaviate.io/pricing)はオープンソース（BSD-3-Clause）で無料でセルフホストでき、Weaviate Cloudにも有料のFlexプランの前に無料層（クレジットカード不要）があります（2026年11月3日にweaviate.io/pricingで確認）。** Weaviate Cloudは2025年10月に料金を再構築しました。旧来の月25ドルのServerless層は月45ドル最低のFlex層に置き換えられ、この記事の確認日である2026年11月3日時点でも現行です。',
+          '**[Weaviate](https://weaviate.io/pricing)はオープンソース（BSD-3-Clause）で無料でセルフホストでき、Weaviate Cloudにも有料のFlexプランの前に無料層（クレジットカード不要）があります（2026年11月3日にweaviate.io/pricingで確認）。**',
           'Weaviate Cloud Free：0ドル、1クラスター、100,000オブジェクト、メモリ1GB、ディスク10GB、ベストエフォートの可用性、バックアップ保持なし。Flex：月45ドルから、従量課金、共有インフラ、SLA 99.5%。Premium：営業経由、月400ドルからと記載、SLA 99.9%（共有）または99.95%（専用）、Bring Your Own Cloud、HIPAA対応可能、共有または専用デプロイの選択。セルフホスト版Weaviateは自社インフラ以外の費用がかかりません——Weaviate Cloudを動かしているのと同じBSD-3-Clauseコードです。',
           `WeaviateのGitHubリポジトリは2026年9月18日時点で${S.ja('weaviate')}スターを示しています（GitHub公開API経由で確認）——ここで扱う3つのオープンソース選択肢の中で最も少ないものの、定期的なリリースを伴う活発に保守されているプロジェクトです。`,
           'Weaviateには個人向けコンテンツクリエイター向けアフィリエイトプログラムではなく、企業向けパートナーエコシステム（Technology Alliance Partners、システムインテグレーター、付加価値リセラー）があります——この確認時点でweaviate.io上に紹介ごとのコミッション体系は見つかりませんでした。',
@@ -1743,14 +1743,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'qdrant',
         title: 'Qdrant：Rustベースのセルフホスト、無料クラウド層',
         content: [
-          '**[Qdrant](https://qdrant.tech/pricing/)はオープンソース（Apache 2.0）でRustで書かれており、固定の期限なし・カード登録不要の永久無料のQdrant Cloud層があります（0.5 vCPU / 1GB RAM / 4GBディスク、2026年11月3日にqdrant.tech/pricingで確認）。非アクティブな無料クラスターは停止後に削除されます（下記参照）。** セルフホストはどの規模でも無料です——支払うのは自社インフラ分のみです。',
+          '**[Qdrant](https://qdrant.tech/pricing/)はオープンソース（Apache 2.0）でRustで書かれており、固定の期限なし・カード登録不要の無料のQdrant Cloud層があります（0.5 vCPU / 1GB RAM / 4GBディスク、2026年11月3日にqdrant.tech/pricingで確認）。非アクティブな無料クラスターは停止後に削除されます（下記参照）。** セルフホストはどの規模でも無料です——支払うのは自社インフラ分のみです。',
           '無料層：0.5 vCPU、1GB RAM、4GBディスク、シングルノードクラスタ、選択したエンベディングモデルでの無料クラウド推論。Standard：無料層を超えた従量課金、専用リソース、柔軟なスケーリング、稼働率SLA 99.5%——PineconeやWeaviateと異なり、QdrantはStandardの月額最低料金を公開していません。Premium：最低利用額が必要（金額非公開）、SSO、プライベートVPCリンク、稼働率SLA 99.9%。Hybrid CloudとPrivate Cloud：データレジデンシーや規制要件向けの個別見積もり。',
           `QdrantのGitHubリポジトリは${S.ja('qdrant')}スターで（PromptQuorumディレクトリのデータ、2026年9月18日確認）、オープンソース3製品の中で最多です。Qdrantは2026年3月12日に5,000万ドルのシリーズB調達を発表しました（[Qdrantの発表](https://qdrant.tech/blog/series-b-announcement/)）。`,
           'Qdrantのパートナーページには、クラウドインフラパートナー（AWS、Google Cloud、Microsoft Azure、Oracle Cloud、DigitalOcean、その他マネージドデプロイ向け）とスタートアップ割引プログラムが記載されていますが、個人向けコンテンツクリエイターアフィリエイトプログラムはありません。',
         ],
         items: [
           'セルフホスト：無料、Apache 2.0、無制限',
-          '無料クラウド層：0.5 vCPU / 1GB RAM / 4GBディスク、永久無料、カード登録不要',
+          '無料クラウド層：0.5 vCPU / 1GB RAM / 4GBディスク、カード登録不要',
           'Standard：従量課金、公開された月額最低料金なし、専用リソース、SLA 99.5%',
           'Premium：最低利用額（金額非公開）、SSO、プライベートVPCリンク、SLA 99.9%',
           `GitHubスター${S.ja('qdrant')}（2026年9月18日確認）——3つのオープンソース選択肢の中で最多`,
@@ -1788,7 +1788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { サービス: 'Pinecone', '無料層': 'Starter：2GB、最低料金なし', 'エントリー有料層': '月20ドルBuilder定額', 'セルフホストの代替': 'なし——クラウド専用' },
           { サービス: 'Weaviate Cloud', '無料層': 'Free：0ドル、100,000オブジェクト、メモリ1GB', 'エントリー有料層': '月45ドル最低Flex', 'セルフホストの代替': 'あり——無料、BSD-3-Clause' },
-          { サービス: 'Qdrant Cloud', '無料層': '0.5 vCPU/1GB、永久', 'エントリー有料層': '従量課金、公開最低料金なし', 'セルフホストの代替': 'あり——無料、Apache 2.0' },
+          { サービス: 'Qdrant Cloud', '無料層': '0.5 vCPU/1GB（非アクティブ時の制限あり）', 'エントリー有料層': '従量課金、公開最低料金なし', 'セルフホストの代替': 'あり——無料、Apache 2.0' },
         ],
       },
       tcoComparison: {
@@ -1846,7 +1846,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'PineconeはWeaviateより優れていますか？', a: 'どちらもあらゆる状況で優れているわけではありません。Pineconeはセルフホストオプションのないクラウド専用で、インフラ作業ゼロを望むならよりシンプルですが、データレジデンシー制御が必要なら制約となります。Weaviateは無料のセルフホスト版とマネージドクラウドオプションの両方を提供し、より柔軟ただしWeaviate Cloudにも無料層（100,000オブジェクト）があり、有料のFlexは月45ドルからです。' },
           { q: '100万ベクトルの保存とクエリにはいくらかかりますか？', a: '概算（参考値）：Pinecone Standardはクエリ量に応じて月50〜150ドル程度（月50ドルの最低料金付近）。Weaviate Cloud Flexはこの規模で月45ドルの最低料金付近にとどまります。セルフホストのQdrantまたはWeaviateを小型VMで運用すると、インフラで月約50〜80ドルに加えて運用の人件費がかかり、人件費を計上するとちょうど100万ベクトルでの12ヶ月合計はマネージドクラウドより高くなることが多いです——理由については上記の完全なTCO比較を参照してください。' },
           { q: 'ChromaからQdrantへの移行方法は？', a: 'Chromaのpythonクライアント（include=["embeddings","metadatas","documents"]付きのcollection.get()）でベクトルとそのメタデータをエクスポートし、Qdrantのpythonクライアントのupsert()メソッドを使ってQdrantコレクションにバッチアップロードし、Chromaのメタデータフィールドをqdrantのペイロード構造にマッピングします。どちらも標準的なエンベディング形式を使用するため、ベクトル自体には変換が不要です——クライアント側のコードとコレクションスキーマのみが変わります。' },
-          { q: 'QdrantとWeaviateは同じものですか？', a: `いいえ。どちらもオープンソースでセルフホスト可能なハイブリッド検索対応のベクトルデータベースですが、QdrantはRustで書かれ（Apache 2.0）、WeaviateはGoで書かれています（BSD-3-Clause）。QdrantはGitHubスターが多く（${S.ja('qdrant')}対${S.ja('weaviate')}、2026年9月18日確認）、有効期限のない無料のクラウド層（0.5 vCPU/1GB RAM/4GBディスク）を持ちます。Weaviateは組み込みのベクトル化とリランキングのためのより幅広いモジュールエコシステムを持ち、独自の無料クラウド層は100,000オブジェクトまでです。` },
+          { q: 'QdrantとWeaviateは同じものですか？', a: `いいえ。どちらもオープンソースでセルフホスト可能なハイブリッド検索対応のベクトルデータベースですが、QdrantはRustで書かれ（Apache 2.0）、WeaviateはGoで書かれています（BSD-3-Clause）。QdrantはGitHubスターが多く（${S.ja('qdrant')}対${S.ja('weaviate')}、2026年9月18日確認）、無料のクラウド層（0.5 vCPU/1GB RAM/4GBディスク、非アクティブ時の制限あり）を持ちます。Weaviateは組み込みのベクトル化とリランキングのためのより幅広いモジュールエコシステムを持ち、独自の無料クラウド層は100,000オブジェクトまでです。` },
           { q: 'Pinecone、Weaviate、Qdrant、Chromaにはアフィリエイトプログラムがありますか？', a: 'Pineconeはコンテンツクリエイター向けの実在する公開アフィリエイトプログラムを運営しており、pinecone.io/partnersで直接確認済みです。企業向けのSolution PartnerプログラムやReferralプログラムとは別のものです。WeaviateとQdrantは個人向けアフィリエイトプログラムではなく、企業向けのテクノロジー/ソリューション/リセラーパートナーエコシステムを維持しています。Chromaのベクトルデータベース（trychroma.com）にはアフィリエイトプログラムは見つかりませんでした。PromptQuorumは現在これらいずれのプログラムにも登録していません——本ページのすべてのリンクは単なる製品リンクです。' },
           { q: 'Chromaは本番環境で使用できますか？', a: 'はい、組み込みのシングルプロセスモード以外では可能です。Chromaのクライアント・サーバーモードとマネージドのChroma Cloud（Starter月0ドル+従量課金、Team月250ドル+従量課金）はどちらもマルチサービス本番デプロイをサポートします。組み込みモード（Chromaが別サーバーなしで1つのPythonプロセス内で動作するもの）に限っては、共有本番負荷ではなくソロプロジェクトとプロトタイプに限定するのが最適です。' },
           { q: 'セルフホストとサーバーレス/マネージド料金の実際の違いは何ですか？', a: 'セルフホスト料金は、パッチ適用・監視・バックアップのための自身の運用時間に加えたインフラコスト（VMやサーバー）であり、クエリごとの料金はありません。マネージド/サーバーレス料金（Pinecone、Weaviate Cloud、Qdrant Cloud）は月額料金に加え、ストレージ・読み取り・書き込みの従量課金レートを請求し、ベンダーがすべての運用を担当します。セルフホストが純粋なドルコストで勝るのは、通常、規模が大きく運用の人件費が請求のごく一部にすぎない場合、または既存の運用チームが限界費用ほぼゼロでサーバーを既に運用している場合に限られます。' },
@@ -1871,8 +1871,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone料金ページ', description: '公式料金ページ——Starter/Builder/Standard/Enterprise各層の上限の根拠、2026年11月3日確認。' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pineconeパートナー', description: '公式パートナーページ——Solution PartnerプログラムやReferralプログラムとは別の、公開コンテンツクリエイターアフィリエイトプログラム確認の根拠。' },
-          { url: 'https://weaviate.io/pricing', title: 'Weaviate Cloud料金ページ', description: '公式料金ページ——Free/Flex/Premium各層の上限の根拠。2026年11月3日に再確認。2025年10月の料金改定ブログ記事がFlexへの再構築を説明。' },
-          { url: 'https://qdrant.tech/pricing/', title: 'Qdrant料金ページ', description: '公式料金ページ——永久無料層の仕様（0.5 vCPU/1GB RAM/4GBディスク）とStandard/Premium層構造の根拠。2026年11月3日に再確認。' },
+          { url: 'https://weaviate.io/pricing', title: 'Weaviate Cloud料金ページ', description: '公式料金ページ——Free/Flex/Premium各層の上限の根拠。2026年11月3日に再確認。' },
+          { url: 'https://qdrant.tech/pricing/', title: 'Qdrant料金ページ', description: '公式料金ページ——無料層の仕様（0.5 vCPU/1GB RAM/4GBディスク）とStandard/Premium層構造の根拠。2026年11月3日に再確認。' },
           { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Qdrantのキャパシティ計画', description: 'コレクションが約100万ベクトルを超えたらシャーディングするという公式の推奨——「どう選ぶか」セクションで説明したセルフホストのスケーリング天井の根拠。' },
           { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant：100万ベクトルに必要な最小RAM', description: '1,536次元（HNSWをメモリ上に保持）で100万ベクトルあたり約6〜7GBのRAM、ディスク上のストレージ（mmap）なら100万ベクトルあたり約1.2GBという数値の根拠。' },
           { url: 'https://qdrant.tech/blog/series-b-announcement/', title: 'Qdrant：シリーズB発表', description: '5,000万ドルのシリーズB調達に関する公式発表（2026年3月12日）。' },
@@ -1889,8 +1889,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Pinecone vs Weaviate vs Qdrant vs Chroma：最適なベクトルDB（2026年）',
-      description: 'Pinecone（Builder月20ドル、Standard月50ドル）、Weaviate Cloud（Flex月45ドル）、Qdrant（永久無料のセルフホスト層）、Chroma（オープンソース＋Team月250ドル）を2026年のRAGベクトル検索向けに比較。',
+      headline: 'Pinecone vs Weaviate vs Qdrant vs Chroma：ベクトルDB比較（2026年）',
+      description: 'Pinecone（Builder月20ドル、Standard月50ドル）、Weaviate Cloud（Flex月45ドル）、Qdrant（セルフホストは無料）、Chroma（オープンソース＋Team月250ドル）を2026年のRAGベクトル検索向けに比較。',
       datePublished: '2026-08-27',
       dateModified: '2026-11-03',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1919,7 +1919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Pinecone', description: 'クラウド専用のマネージドベクトルデータベース。無料Starter層（2GB）、Builder月20ドル定額、Standard月50ドル最低使用量。' },
         { '@type': 'ListItem', position: 2, name: 'Weaviate', description: 'オープンソース（BSD-3-Clause）のセルフホストまたはWeaviate Cloud。無料のクラウド層（100,000オブジェクト）、Flexは月45ドル最低から。' },
-        { '@type': 'ListItem', position: 3, name: 'Qdrant', description: 'オープンソース（Apache 2.0）、Rustベース。無料セルフホストまたは永久無料のQdrant Cloud層（0.5 vCPU/1GB RAM/4GBディスク）。' },
+        { '@type': 'ListItem', position: 3, name: 'Qdrant', description: 'オープンソース（Apache 2.0）、Rustベース。無料セルフホストまたは非アクティブ時の制限付き無料のQdrant Cloud層（0.5 vCPU/1GB RAM/4GBディスク）。' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'オープンソース（Apache 2.0）の組み込みまたはクライアント・サーバー型ベクトルデータベース。無料セルフホスト、Chroma Cloudは月0ドル+従量課金からTeam月250ドルまで。' },
       ],
       inLanguage: 'ja',
@@ -1933,10 +1933,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-27',
     affiliateDisclosure: true,
-    title: 'Pinecone vs Weaviate vs Qdrant vs Chroma：2026年最佳向量数据库',
+    title: 'Pinecone vs Weaviate vs Qdrant vs Chroma：2026年向量数据库对比',
     seoTitle: 'Pinecone vs Weaviate vs Qdrant vs Chroma（2026）',
     intro: '向量数据库存储嵌入（embeddings）并为RAG（检索增强生成）流水线执行相似度搜索。Pinecone、Weaviate、Qdrant和Chroma以自托管、定价和运维负担四种不同的权衡解决同一个问题。本指南对比了四者当前的定价、许可证和部署模式，已对照各厂商官方定价页面（2026年11月3日核实）及各项目的GitHub仓库进行核实。',
-    metaDescription: 'Pinecone（Builder每月20美元，Standard每月50美元）、Weaviate Cloud（Flex每月45美元）、Qdrant（永久免费自托管层）、Chroma（开源+Team每月250美元）——2026年RAG向量搜索对比。',
+    metaDescription: 'Pinecone（Builder每月20美元）、Weaviate Cloud（Flex每月45美元）、Qdrant（自托管免费）、Chroma（开源）——2026年RAG向量搜索对比。',
     publishDate: '2026-08-27',
     dateModified: '2026-11-03',
     readTime: '阅读约15分钟',
@@ -1945,19 +1945,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: '向量数据库对比',
     targetKeywords: [
       'pinecone vs weaviate vs qdrant vs chroma',
-      '2026年最佳向量数据库',
+      '2026年向量数据库对比',
       'RAG向量数据库',
       'qdrant vs weaviate',
       '自托管向量数据库',
       'pinecone定价',
     ],
-    leadAnswerBlock: '**2026年RAG的最佳向量数据库取决于自托管还是使用托管云：对于有运维能力的团队，Qdrant是不错的选择（免费云层永久免费，Apache 2.0自托管）；对于希望零基础设施工作的团队，Pinecone更合适（Builder层每月20美元，无需管理服务器）。**没有单一的"最佳"——Weaviate和Chroma各自适合下文详述的特定中间使用场景。',
+    leadAnswerBlock: '**适合RAG的向量数据库取决于自托管还是使用托管云：对于有运维能力的团队，Qdrant是不错的选择（Apache 2.0自托管免费，免费云层有闲置限制）；对于希望零基础设施工作的团队，Pinecone更合适（Builder层每月20美元，无需管理服务器）。**没有单一的"最佳"——Weaviate和Chroma各自适合下文详述的特定中间使用场景。',
     quickAnswerTop: {
       zh: {
         question: '应该使用Pinecone、Weaviate、Qdrant还是Chroma？',
-        answer: '如果你可以自托管并想要免费层（0.5 vCPU/1GB内存/4GB硬盘，据Qdrant定价页面永久免费）加上基于Rust的引擎，使用Qdrant。如果你想要零基础设施管理并接受纯云端、从每月20美元起的按量计费，使用Pinecone。如果你想要同时具备自托管（BSD-3-Clause，免费）和托管云（每月45美元起）的混合方案，使用Weaviate。如果你是独立开发者或正在做原型开发，使用Chroma——它可以在Python进程内嵌入运行，无需服务器。',
+        answer: '如果你可以自托管并想要免费层（0.5 vCPU/1GB内存/4GB硬盘，据Qdrant文档有闲置限制）加上基于Rust的引擎，使用Qdrant。如果你想要零基础设施管理并接受纯云端、从每月20美元起的按量计费，使用Pinecone。如果你想要同时具备自托管（BSD-3-Clause，免费）和托管云（每月45美元起）的混合方案，使用Weaviate。如果你是独立开发者或正在做原型开发，使用Chroma——它可以在Python进程内嵌入运行，无需服务器。',
         bullets: [
-          'Qdrant：Rust、Apache 2.0，免费自托管或永久免费云层（0.5 vCPU/1GB内存/4GB硬盘）',
+          'Qdrant：Rust、Apache 2.0，免费自托管或有闲置限制的免费云层（0.5 vCPU/1GB内存/4GB硬盘）',
           'Pinecone：仅云端，无自托管选项，免费Starter层（2GB存储），之后为每月20美元Builder或每月50美元Standard',
           'Weaviate：Go、BSD-3-Clause，免费自托管或Weaviate Cloud每月45美元起（Flex层；另有免费云层）',
           'Chroma：Python/Rust核心，Apache 2.0，免费自托管/嵌入式或Chroma Cloud从0美元+按量（Starter）到每月250美元（Team）',
@@ -1985,7 +1985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     affiliateLinks: [
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone', productCategory: 'dev-tool', priceRange: '免费–$50/月+', label: '查看Pinecone定价 →' },
-      { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: '永久免费层', label: '免费试用Qdrant →' },
+      { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: '免费层（有闲置限制）', label: '免费试用Qdrant →' },
       { url: 'https://weaviate.io/pricing', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: '$45/月起', label: '查看Weaviate定价 →' },
       { url: 'https://www.trychroma.com/pricing', productName: 'Chroma', productCategory: 'dev-tool', priceRange: '免费–$250/月+', label: '查看Chroma定价 →' },
     ],
@@ -1995,12 +1995,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '核心要点 — 向量数据库对比',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qdrant适合自托管并提供永久免费的云层；Pinecone适合零基础设施的托管云；Weaviate和Chroma各自覆盖特定的细分场景。' },
+          { type: 'one-sentence', text: 'Qdrant适合自托管并提供免费云层（有闲置限制）；Pinecone适合零基础设施的托管云；Weaviate和Chroma各自覆盖特定的细分场景。' },
           { type: 'plain-terms', text: '向量数据库存储你文档的数字"指纹"（嵌入），让AI应用能快速找到最相关的内容——这是RAG（检索增强生成）中检索的那一半。' },
         ],
         items: [
           'Qdrant、Weaviate和Chroma都是开源的，可免费自托管。Pinecone仅提供云端服务——不存在任何价位的自托管版Pinecone。',
-          'Qdrant Cloud标注有永久免费层级（0.5 vCPU / 1GB内存 / 4GB硬盘，于2026年11月3日核实），无需信用卡；据Qdrant文档，不活跃的免费集群在1周后被暂停，4周后被删除。',
+          'Qdrant Cloud标注有免费层级（0.5 vCPU / 1GB内存 / 4GB硬盘，于2026年11月3日核实），无需信用卡；据Qdrant文档，不活跃的免费集群在1周后被暂停，4周后被删除。',
           'Pinecone Starter免费（2GB存储、每月200万次写入、每月100万次读取）；付费层级从每月20美元固定价（Builder）或每月50美元最低用量（Standard）起。',
           'Weaviate Cloud有免费层（无需信用卡：1个集群、100,000个对象、1GB内存、10GB磁盘、尽力而为的可用性）。付费Flex层每月45美元起，Premium标注为每月400美元起（2026年11月3日在weaviate.io/pricing核实）。',
           'Chroma Cloud Starter每月0美元加按量计费（写入、存储、查询）；Team层每月250美元加按量计费。',
@@ -2015,7 +2015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**如果你有DevOps能力并想避免按请求计费，就自托管；如果你想在不运维数据库的情况下上线，就用托管云。**这是在比较具体产品之前需要做出的第一个决定——它能立即排除一半的选项。',
           '自托管（Qdrant、Weaviate或Chroma）意味着你在自己的基础设施上运行数据库。你为计算资源和自己的时间付费，没有按查询计费的费用，并完全掌控数据驻留。成本是真实存在的：必须有人打补丁、监控、备份和扩容。',
           '托管云（Pinecone，或用Weaviate Cloud/Qdrant Cloud代替自托管）意味着厂商运营基础设施。你支付月费加使用量费用，正常运行时间、扩容和打补丁都是厂商的问题。成本是随使用量增长的持续账单，你也依赖厂商的可靠性。',
-          '**自托管确实存在一个上限，但这个上限比多数人想象的要远。**Qdrant自己的容量规划文档建议，一旦集合超过大约100万条向量，就应开始考虑分片；其公布的内存消耗数据显示，在1,536维（OpenAI嵌入尺寸）下，完全驻留内存的HNSW索引每百万条向量大约需要6–7GB内存——若接受磁盘支持（mmap）存储并付出少量速度代价，则每百万条低至约1.2GB。实际上，一台配备32GB以上内存的单节点，在多节点分布式方案值得承担额外运维复杂度之前，就能容纳数千万条向量；对于超出单人原型规模的任何场景，Chroma的嵌入模式（单个Python进程，而非服务器）是最早需要被替换掉的。',
+          '**自托管确实存在一个实际的上限。**Qdrant自己的容量规划文档建议，一旦集合超过大约100万条向量，就应开始考虑分片；其公布的内存消耗数据显示，在1,536维（OpenAI嵌入尺寸）下，完全驻留内存的HNSW索引每百万条向量大约需要6–7GB内存——若接受磁盘支持（mmap）存储并付出少量速度代价，则每百万条低至约1.2GB。实际上，一台配备32GB以上内存的单节点，在多节点分布式方案值得承担额外运维复杂度之前，就能容纳数千万条向量；对于超出单人原型规模的任何场景，Chroma的嵌入模式（单个Python进程，而非服务器）是最早需要被替换掉的。',
         ],
         decisionBlock: {
           title: '自托管还是托管云？',
@@ -2041,7 +2041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           { title: '适合自托管的情况：你已经运行其他基础设施（Kubernetes、Docker Compose技术栈）、需要完全掌控数据驻留，或你的向量量足够大，按量计费的云成本会超过一台虚拟机的成本。', whyItMatters: '自托管彻底消除按查询计费——一个活跃的RAG应用每月可能产生数百万个读写单元，在按量计费的云定价下会迅速累积。' },
           { title: '适合托管云的情况：你是没有专职DevOps的小团队、想要按天而非按周上线，或你的向量量小到免费层或入门层就够用。', whyItMatters: '托管云用可预测的月度账单换取零运维负担——无需打补丁，无需设计备份策略，无需为数据库故障值班。' },
-          { title: '如果拿不准，先在小型虚拟机或Docker容器上从自托管Qdrant开始。', whyItMatters: 'Qdrant的永久免费云层和轻量级Rust二进制文件在我们看来使其成为风险较低的起点——如果发现托管云更划算，之后可以迁移到Pinecone或Weaviate Cloud。' },
+          { title: '如果拿不准，先在小型虚拟机或Docker容器上从自托管Qdrant开始。', whyItMatters: 'Qdrant的免费云层和轻量级Rust二进制文件在我们看来使其成为风险较低的起点——如果发现托管云更划算，之后可以迁移到Pinecone或Weaviate Cloud。' },
         ],
       },
       selfHostedComparison: {
@@ -2085,8 +2085,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'weaviate',
         title: 'Weaviate：自托管或托管云',
         content: [
-          '**[Weaviate](https://weaviate.io/pricing)是开源的（BSD-3-Clause），可免费自托管；Weaviate Cloud在付费Flex方案之前也提供免费层（无需信用卡）（2026年11月3日在weaviate.io/pricing核实）。**Weaviate Cloud于2025年10月重新调整了定价：旧的每月25美元Serverless层被最低每月45美元的Flex层取代，截至本文2026年11月3日的核实日期仍是现行价格。',
-          'Weaviate Cloud Free：0美元，1个集群，100,000个对象，1GB内存，10GB磁盘，尽力而为的可用性，不保留备份。Flex：每月45美元起，按量付费，共享基础设施，99.5%SLA。Premium：通过销售，标注为每月400美元起，99.9%SLA（共享）或99.95%（专用），Bring Your Own Cloud，符合HIPAA要求，可选择共享或专用部署。自托管Weaviate除了自己的基础设施成本外不收取任何费用——它运行的正是驱动Weaviate Cloud的同一套BSD-3-Clause代码。',
+          '**[Weaviate](https://weaviate.io/pricing)是开源的（BSD-3-Clause），可免费自托管；Weaviate Cloud在付费Flex方案之前也提供免费层（无需信用卡）（2026年11月3日在weaviate.io/pricing核实）。**',
+          'Weaviate Cloud Free：0美元，1个集群，100,000个对象，1GB内存，10GB磁盘，尽力而为的可用性，不保留备份。Flex：每月45美元起，按量付费，共享基础设施，99.5%SLA。Premium：通过销售，标注为每月400美元起，99.9%SLA（共享）或99.95%（专用），Bring Your Own Cloud，具备HIPAA适用资格（以Weaviate定价页面为准；是否合规取决于你自身的BAA与安全措施），可选择共享或专用部署。自托管Weaviate除了自己的基础设施成本外不收取任何费用——它运行的正是驱动Weaviate Cloud的同一套BSD-3-Clause代码。',
           `Weaviate的GitHub仓库截至2026年9月18日显示${S.zh('weaviate')}颗星（通过GitHub公开API核实）——这里三个开源选项中最少的，但仍是一个有定期发布的活跃维护项目。`,
           'Weaviate拥有面向企业的合作伙伴生态系统（技术联盟合作伙伴、系统集成商、增值经销商），而非面向个人内容创作者的联盟计划——截至本次核实日期，未在weaviate.io上找到按推荐计佣的结构。',
         ],
@@ -2094,7 +2094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '自托管：免费，BSD-3-Clause，无限制',
           'Cloud Free：0美元，无需信用卡，100,000个对象，1GB内存，10GB磁盘，尽力而为的可用性',
           'Cloud Flex：每月45美元最低消费，共享基础设施，99.5%SLA',
-          'Cloud Premium：通过销售每月400美元起，99.9%SLA（共享）或99.95%（专用），BYOC，符合HIPAA要求',
+          'Cloud Premium：通过销售每月400美元起，99.9%SLA（共享）或99.95%（专用），BYOC，具备HIPAA适用资格（以Weaviate定价页面为准；是否合规取决于你自身的BAA与安全措施）',
           `GitHub星标${S.zh('weaviate')}（2026年9月18日核实）`,
         ],
       },
@@ -2102,14 +2102,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'qdrant',
         title: 'Qdrant：基于Rust的自托管方案，免费云层',
         content: [
-          '**[Qdrant](https://qdrant.tech/pricing/)是开源的（Apache 2.0），用Rust编写，拥有一个标注为永久免费的Qdrant Cloud层（0.5 vCPU / 1GB内存 / 4GB硬盘，于2026年11月3日在qdrant.tech/pricing核实），无固定时间限制，无需信用卡；不活跃的免费集群会被暂停并在之后删除（见下文）。**自托管在任何规模下都是免费的——你只需为自己的基础设施付费。',
+          '**[Qdrant](https://qdrant.tech/pricing/)是开源的（Apache 2.0），用Rust编写，拥有一个免费的Qdrant Cloud层（0.5 vCPU / 1GB内存 / 4GB硬盘，于2026年11月3日在qdrant.tech/pricing核实），无固定时间限制，无需信用卡；不活跃的免费集群会被暂停并在之后删除（见下文）。**自托管在任何规模下都是免费的——你只需为自己的基础设施付费。',
           '免费层：0.5 vCPU、1GB内存、4GB硬盘、单节点集群，可使用精选嵌入模型的免费云推理。Standard：超出免费层后按量计费，专用资源，弹性扩容，99.5%正常运行时间SLA——与Pinecone或Weaviate不同，Qdrant没有公布Standard层的固定月度最低消费。Premium：需要最低消费额（金额未公开）、SSO、私有VPC链接、99.9%正常运行时间SLA。Hybrid Cloud和Private Cloud：面向数据驻留和监管需求的定制定价。',
           `Qdrant的GitHub仓库有${S.zh('qdrant')}星标（PromptQuorum目录数据，2026年9月18日核实），是三款开源方案中最多的。Qdrant于2026年3月12日宣布完成5000万美元B轮融资（[Qdrant官方公告](https://qdrant.tech/blog/series-b-announcement/)）。`,
           'Qdrant的合作伙伴页面列出了云基础设施合作伙伴（AWS、Google Cloud、Microsoft Azure、Oracle Cloud、DigitalOcean等用于托管部署的伙伴）和一个初创企业折扣计划，而非面向个人内容创作者的联盟计划。',
         ],
         items: [
           '自托管：免费，Apache 2.0，无限制',
-          '免费云层：0.5 vCPU / 1GB内存 / 4GB硬盘，永久免费，无需信用卡',
+          '免费云层：0.5 vCPU / 1GB内存 / 4GB硬盘，无需信用卡',
           'Standard：按量计费，未公布固定月度最低消费，专用资源，99.5%SLA',
           'Premium：最低消费额（金额未公开）、SSO、私有VPC链接、99.9%SLA',
           `GitHub星标${S.zh('qdrant')}（2026年9月18日核实）——三个开源选项中最多`,
@@ -2147,7 +2147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 服务: 'Pinecone', '免费层': 'Starter：2GB，无最低消费', '入门付费层': '每月20美元Builder固定价', '自托管备选方案': '无——仅云端' },
           { 服务: 'Weaviate Cloud', '免费层': 'Free：0美元，100,000个对象，1GB内存', '入门付费层': '每月45美元最低Flex', '自托管备选方案': '有——免费，BSD-3-Clause' },
-          { 服务: 'Qdrant Cloud', '免费层': '0.5 vCPU/1GB，永久', '入门付费层': '按量计费，未公布最低消费', '自托管备选方案': '有——免费，Apache 2.0' },
+          { 服务: 'Qdrant Cloud', '免费层': '0.5 vCPU/1GB（有闲置限制）', '入门付费层': '按量计费，未公布最低消费', '自托管备选方案': '有——免费，Apache 2.0' },
         ],
       },
       tcoComparison: {
@@ -2205,7 +2205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Pinecone比Weaviate更好吗？', a: '两者都不是在所有情况下都更好。Pinecone仅提供云端服务、没有自托管选项，如果你想要零基础设施工作会更简单，但如果你需要控制数据驻留则是一种局限。Weaviate同时提供免费自托管版本和托管云选项，灵活性更高，但Weaviate Cloud也有免费层（100,000个对象），付费Flex每月45美元起。' },
           { q: '存储和查询100万个向量要多少钱？', a: '粗略估算（仅供参考）：Pinecone Standard根据查询量在每月50–150美元左右（接近每月50美元的最低消费）。Weaviate Cloud Flex在这个规模下接近每月45美元的最低消费。自托管的Qdrant或Weaviate在小型虚拟机上运行，基础设施费用约为每月50–80美元，加上运维人工成本，一旦计入人工成本，恰好在100万向量规模下的12个月总额通常会高于托管云——具体原因见上文完整的TCO对比。' },
           { q: '如何从Chroma迁移到Qdrant？', a: '使用Chroma的Python客户端（带include=["embeddings","metadatas","documents"]参数的collection.get()）导出向量及其元数据，然后使用Qdrant Python客户端的upsert()方法批量上传到Qdrant集合，同时将Chroma的元数据字段映射到Qdrant的payload结构。两者都使用标准的嵌入格式，因此向量本身无需转换——只有客户端代码和集合模式需要更改。' },
-          { q: 'Qdrant和Weaviate是一样的吗？', a: `不一样。两者都是支持混合搜索的开源、可自托管向量数据库，但Qdrant用Rust编写（Apache 2.0），Weaviate用Go编写（BSD-3-Clause）。Qdrant的GitHub星标更多（${S.zh('qdrant')}对${S.zh('weaviate')}，2026年9月18日核实），并拥有无期限的免费云层（0.5 vCPU/1GB RAM/4GB磁盘）；Weaviate拥有更广泛的模块生态系统用于内置向量化和重排序，其自有免费云层限于100,000个对象。` },
+          { q: 'Qdrant和Weaviate是一样的吗？', a: `不一样。两者都是支持混合搜索的开源、可自托管向量数据库，但Qdrant用Rust编写（Apache 2.0），Weaviate用Go编写（BSD-3-Clause）。Qdrant的GitHub星标更多（${S.zh('qdrant')}对${S.zh('weaviate')}，2026年9月18日核实），并拥有免费云层（有闲置限制）（0.5 vCPU/1GB RAM/4GB磁盘）；Weaviate拥有更广泛的模块生态系统用于内置向量化和重排序，其自有免费云层限于100,000个对象。` },
           { q: 'Pinecone、Weaviate、Qdrant或Chroma有联盟计划吗？', a: 'Pinecone为内容创作者运营着一个真实的公开联盟计划，已在pinecone.io/partners直接确认，与其面向企业的Solution Partner和Referral计划分开。Weaviate和Qdrant维护的是面向企业的技术/解决方案/经销商合作伙伴生态系统，而非面向个人的联盟计划。未找到Chroma向量数据库（trychroma.com）的联盟计划。PromptQuorum目前未加入这些计划中的任何一个——本页面的每个链接都只是普通产品链接。' },
           { q: 'Chroma可以用于生产环境吗？', a: '可以，除了其嵌入式单进程模式之外。Chroma的客户端-服务器模式和托管的Chroma Cloud（Starter从0美元+按量计费起，Team每月250美元+按量计费）都支持多服务生产部署。特别是嵌入式模式——即Chroma在没有独立服务器的单个Python进程内运行——最好只用于独立项目和原型，而非共享生产负载。' },
           { q: '自托管定价和无服务器/托管定价的真正区别是什么？', a: '自托管定价是基础设施成本（虚拟机或服务器）加上你自己用于打补丁、监控和备份的运维时间——没有按查询计费的费用。托管/无服务器定价（Pinecone、Weaviate Cloud、Qdrant Cloud）按月收费加上存储、读取和写入的按量计费费率，由厂商负责所有运维。自托管通常只有在规模足够大、运维人工只占账单的一小部分时，或现有运维团队已经以接近零的边际成本运行该服务器时，才能在纯美元成本上胜出。' },
@@ -2230,8 +2230,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone定价', description: '官方定价页面——Starter/Builder/Standard/Enterprise各层级上限的依据，2026年11月3日核实。' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone合作伙伴', description: '官方合作伙伴页面——用于确认公开内容创作者联盟计划的依据，与Solution Partner和Referral计划分开。' },
-          { url: 'https://weaviate.io/pricing', title: 'Weaviate Cloud定价', description: '官方定价页面——Free/Flex/Premium各层级上限的依据，已于2026年11月3日重新核实；2025年10月定价调整博客文章说明了Flex的重组。' },
-          { url: 'https://qdrant.tech/pricing/', title: 'Qdrant定价', description: '官方定价页面——永久免费层规格（0.5 vCPU/1GB内存/4GB硬盘）和Standard/Premium层级结构的依据。2026年11月3日重新核实。' },
+          { url: 'https://weaviate.io/pricing', title: 'Weaviate Cloud定价', description: '官方定价页面——Free/Flex/Premium各层级上限的依据，已于2026年11月3日重新核实。' },
+          { url: 'https://qdrant.tech/pricing/', title: 'Qdrant定价', description: '官方定价页面——免费层规格（0.5 vCPU/1GB内存/4GB硬盘）和Standard/Premium层级结构的依据。2026年11月3日重新核实。' },
           { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Qdrant容量规划', description: '官方指南，说明集合超过约100万条向量后应开始分片——How to Choose部分所述自托管规模上限的依据。' },
           { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant：服务100万条向量所需的最小内存', description: '1,536维向量每百万条约需6–7GB内存（内存驻留HNSW）、磁盘支持（mmap）存储下每百万条约1.2GB这一数据的出处。' },
           { url: 'https://qdrant.tech/blog/series-b-announcement/', title: 'Qdrant：B轮融资公告', description: '5000万美元B轮融资的官方公告（2026年3月12日）。' },
@@ -2248,8 +2248,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Pinecone vs Weaviate vs Qdrant vs Chroma：2026年最佳向量数据库',
-      description: 'Pinecone（Builder每月20美元，Standard每月50美元）、Weaviate Cloud（Flex每月45美元）、Qdrant（永久免费自托管层）、Chroma（开源+Team每月250美元）——2026年RAG向量搜索对比。',
+      headline: 'Pinecone vs Weaviate vs Qdrant vs Chroma：2026年向量数据库对比',
+      description: 'Pinecone（Builder每月20美元，Standard每月50美元）、Weaviate Cloud（Flex每月45美元）、Qdrant（自托管免费）、Chroma（开源+Team每月250美元）——2026年RAG向量搜索对比。',
       datePublished: '2026-08-27',
       dateModified: '2026-11-03',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -2278,7 +2278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Pinecone', description: '纯云端托管向量数据库。免费Starter层（2GB）；Builder每月20美元固定价；Standard每月50美元最低用量。' },
         { '@type': 'ListItem', position: 2, name: 'Weaviate', description: '开源（BSD-3-Clause）自托管或Weaviate Cloud。免费云层（100,000个对象）；Flex每月45美元最低消费起。' },
-        { '@type': 'ListItem', position: 3, name: 'Qdrant', description: '开源（Apache 2.0），基于Rust。免费自托管或永久免费的Qdrant Cloud层（0.5 vCPU/1GB内存/4GB硬盘）。' },
+        { '@type': 'ListItem', position: 3, name: 'Qdrant', description: '开源（Apache 2.0），基于Rust。免费自托管或有闲置限制的免费Qdrant Cloud层（0.5 vCPU/1GB内存/4GB硬盘）。' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: '开源（Apache 2.0）嵌入式或客户端-服务器向量数据库。免费自托管；Chroma Cloud从0美元+按量计费到每月250美元Team层。' },
       ],
       inLanguage: 'zh',
@@ -2292,10 +2292,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-27',
     affiliateDisclosure: true,
-    title: 'Pinecone vs Weaviate vs Qdrant vs Chroma: Melhor Banco de Dados Vetorial (2026)',
+    title: 'Pinecone vs Weaviate vs Qdrant vs Chroma: Comparativo de bancos de dados vetoriais (2026)',
     seoTitle: 'Pinecone vs Weaviate vs Qdrant vs Chroma (2026)',
     intro: 'Bancos de dados vetoriais armazenam embeddings e executam busca por similaridade para pipelines de RAG (retrieval-augmented generation). Pinecone, Weaviate, Qdrant e Chroma resolvem o mesmo problema com quatro trade-offs diferentes em self-hosting, preços e esforço operacional. Este guia compara preços, licenças e modelos de deploy atuais dos quatro, verificados na página de preços de cada fornecedor em 03/11/2026 e no repositório GitHub de cada projeto.',
-    metaDescription: 'Pinecone ($20/mês Builder, $50/mês Standard), Weaviate Cloud ($45/mês Flex), Qdrant (camada self-hosted gratuita para sempre), Chroma (open source + $250/mês Team) comparados para busca vetorial RAG em 2026.',
+    metaDescription: 'Pinecone ($20/mês Builder), Weaviate Cloud ($45/mês Flex), Qdrant (self-hosting gratuito) e Chroma (open source) comparados para busca RAG em 2026.',
     publishDate: '2026-08-27',
     dateModified: '2026-11-03',
     readTime: '15 min de leitura',
@@ -2310,13 +2310,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'banco de dados vetorial self-hosted',
       'preços do pinecone',
     ],
-    leadAnswerBlock: '**O melhor banco de dados vetorial para RAG em 2026 depende de você fazer self-hosting ou usar cloud gerenciada: o Qdrant é uma boa opção para equipes com capacidade de operações (camada cloud gratuita para sempre, self-hosting com Apache 2.0), enquanto o Pinecone serve para equipes que querem zero trabalho de infraestrutura (camada Builder de $20/mês, sem servidor para gerenciar).** Não existe um único "melhor" — Weaviate e Chroma atendem cada um a casos de uso intermediários específicos detalhados abaixo.',
+    leadAnswerBlock: '**O banco vetorial adequado para RAG depende de você fazer self-hosting ou usar cloud gerenciada: o Qdrant serve a equipes de operações (self-hosting gratuito, camada gratuita com limites por inatividade) e o Pinecone a equipes sem infraestrutura (Builder a $20/mês).** Nenhuma opção vence sempre; Weaviate e Chroma cobrem casos intermediários.',
     quickAnswerTop: {
       pt: {
         question: 'Qual banco de dados vetorial devo usar: Pinecone, Weaviate, Qdrant ou Chroma?',
-        answer: 'Use o Qdrant se você pode fazer self-hosting e quer uma camada gratuita (0,5 vCPU/1GB RAM/4GB de disco, gratuita para sempre segundo a página de preços do Qdrant) além de um motor baseado em Rust. Use o Pinecone se você quer zero gerenciamento de infraestrutura e aceita um modelo somente na nuvem com cobrança por uso a partir de $20/mês. Use o Weaviate se você quer uma opção híbrida com self-hosted (BSD-3-Clause, gratuito) e cloud gerenciada (a partir de $45/mês). Use o Chroma se você é desenvolvedor solo ou está prototipando — ele roda embutido dentro de um processo Python, sem servidor.',
+        answer: 'Use o Qdrant se você pode fazer self-hosting e quer uma camada gratuita (0,5 vCPU/1GB RAM/4GB de disco, com limites por inatividade segundo a documentação do Qdrant) além de um motor baseado em Rust. Use o Pinecone se você quer zero gerenciamento de infraestrutura e aceita um modelo somente na nuvem com cobrança por uso a partir de $20/mês. Use o Weaviate se você quer uma opção híbrida com self-hosted (BSD-3-Clause, gratuito) e cloud gerenciada (a partir de $45/mês). Use o Chroma se você é desenvolvedor solo ou está prototipando — ele roda embutido dentro de um processo Python, sem servidor.',
         bullets: [
-          'Qdrant: Rust, Apache 2.0, self-hosting gratuito ou camada cloud gratuita para sempre (0,5 vCPU/1GB RAM/4GB de disco)',
+          'Qdrant: Rust, Apache 2.0, self-hosting gratuito ou camada cloud gratuita com limites por inatividade (0,5 vCPU/1GB RAM/4GB de disco)',
           'Pinecone: somente cloud, sem opção self-hosted, camada Starter gratuita (2GB de armazenamento), depois $20/mês Builder ou $50/mês Standard',
           'Weaviate: Go, BSD-3-Clause, self-hosting gratuito ou Weaviate Cloud a partir de $45/mês (camada Flex; também existe uma camada cloud gratuita)',
           'Chroma: núcleo Python/Rust, Apache 2.0, self-hosted/embutido gratuito ou Chroma Cloud de $0 + uso (Starter) até $250/mês (Team)',
@@ -2344,7 +2344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     affiliateLinks: [
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone', productCategory: 'dev-tool', priceRange: 'Grátis–$50/mês+', label: 'Ver preços do Pinecone →' },
-      { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: 'Camada gratuita para sempre', label: 'Testar o Qdrant grátis →' },
+      { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: 'Camada gratuita (limites por inatividade)', label: 'Testar o Qdrant grátis →' },
       { url: 'https://weaviate.io/pricing', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: 'A partir de $45/mês', label: 'Ver preços do Weaviate →' },
       { url: 'https://www.trychroma.com/pricing', productName: 'Chroma', productCategory: 'dev-tool', priceRange: 'Grátis–$250/mês+', label: 'Ver preços do Chroma →' },
     ],
@@ -2354,12 +2354,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Pontos principais — comparação de bancos de dados vetoriais',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'O Qdrant é uma boa opção para self-hosting, com camada cloud gratuita para sempre; o Pinecone serve para cloud gerenciada sem infraestrutura; Weaviate e Chroma cobrem nichos específicos.' },
+          { type: 'one-sentence', text: 'O Qdrant é uma boa opção para self-hosting, com camada cloud gratuita (limites por inatividade); o Pinecone serve para cloud gerenciada sem infraestrutura; Weaviate e Chroma cobrem nichos específicos.' },
           { type: 'plain-terms', text: 'Um banco de dados vetorial armazena as "impressões digitais" numéricas (embeddings) dos seus documentos para que um app de IA encontre rapidamente os mais relevantes — a parte de retrieval do RAG (retrieval-augmented generation).' },
         ],
         items: [
           'Qdrant, Weaviate e Chroma são open source e gratuitos para self-hosting. O Pinecone é somente cloud — não existe uma versão self-hosted do Pinecone a nenhum preço.',
-          'O Qdrant Cloud apresenta uma camada gratuita para sempre (0,5 vCPU / 1GB RAM / 4GB de disco, verificado em 03/11/2026) sem cartão de crédito; segundo a documentação do Qdrant, clusters gratuitos inativos são suspensos após 1 semana e excluídos após 4 semanas.',
+          'O Qdrant Cloud apresenta uma camada gratuita (0,5 vCPU / 1GB RAM / 4GB de disco, verificado em 03/11/2026) sem cartão de crédito; segundo a documentação do Qdrant, clusters gratuitos inativos são suspensos após 1 semana e excluídos após 4 semanas.',
           'O Pinecone Starter é gratuito (2GB de armazenamento, 2M gravações/mês, 1M leituras/mês); as camadas pagas começam em $20/mês fixo (Builder) ou $50/mês de uso mínimo (Standard).',
           'O Weaviate Cloud tem uma camada gratuita (sem cartão: 1 cluster, 100.000 objetos, 1GB de memória, 10GB de disco, disponibilidade de melhor esforço). A camada Flex paga começa em $45/mês e a Premium consta a partir de $400/mês, verificado em weaviate.io/pricing em 03/11/2026.',
           'O Chroma Cloud Starter custa $0/mês mais cobrança por uso (gravações, armazenamento, consultas); a camada Team custa $250/mês mais uso.',
@@ -2378,7 +2378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           { title: 'Vá de self-hosted se: você já opera outra infraestrutura (Kubernetes, stack Docker Compose), precisa de controle total de residência de dados, ou seu volume de vetores é grande o suficiente para que a cobrança cloud por uso custe mais que uma VM.', whyItMatters: 'O self-hosting elimina completamente a cobrança por consulta — um app RAG ativo pode gerar milhões de unidades de leitura/gravação por mês, o que se acumula rápido em preços cloud por uso.' },
           { title: 'Vá de cloud gerenciada se: você é uma equipe pequena sem DevOps dedicado, quer lançar em dias e não semanas, ou seu volume de vetores é pequeno o suficiente para que uma camada gratuita ou de entrada seja suficiente.', whyItMatters: 'A cloud gerenciada troca uma fatura mensal previsível por zero carga operacional — sem patches, sem estratégia de backup para projetar, sem plantão para uma falha de banco de dados.' },
-          { title: 'Se estiver em dúvida, comece com o Qdrant self-hosted em uma VM pequena ou container Docker.', whyItMatters: 'A camada cloud gratuita para sempre do Qdrant e seu binário Rust leve o tornam, na nossa avaliação, um ponto de partida de baixo risco — você pode migrar para Pinecone ou Weaviate Cloud depois, se decidir que a cloud gerenciada vale o custo recorrente.' },
+          { title: 'Se estiver em dúvida, comece com o Qdrant self-hosted em uma VM pequena ou container Docker.', whyItMatters: 'A camada cloud gratuita do Qdrant e seu binário Rust leve o tornam, na nossa avaliação, um ponto de partida de baixo risco — você pode migrar para Pinecone ou Weaviate Cloud depois, se decidir que a cloud gerenciada vale o custo recorrente.' },
         ],
       },
       selfHostedComparison: {
@@ -2422,7 +2422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'weaviate',
         title: 'Weaviate: self-hosted ou cloud gerenciada',
         content: [
-          '**O [Weaviate](https://weaviate.io/pricing) é open source (BSD-3-Clause) e gratuito para self-hosting, e o Weaviate Cloud também oferece uma camada gratuita (sem cartão) antes do plano Flex pago, verificado em weaviate.io/pricing em 03/11/2026.** O Weaviate Cloud reestruturou seus preços em outubro de 2025: a antiga camada Serverless de $25/mês foi substituída por uma camada Flex de $45/mês mínimo, que ainda é o preço atual na data de verificação deste artigo, 03/11/2026.',
+          '**O [Weaviate](https://weaviate.io/pricing) é open source (BSD-3-Clause) e gratuito para self-hosting, e o Weaviate Cloud também oferece uma camada gratuita (sem cartão) antes do plano Flex pago, verificado em weaviate.io/pricing em 03/11/2026.**',
           'Weaviate Cloud Free: $0, 1 cluster, 100.000 objetos, 1GB de memória, 10GB de disco, disponibilidade de melhor esforço, sem retenção de backups. Flex: a partir de $45/mês, pagamento por uso, infraestrutura compartilhada, SLA de 99,5%. Premium: via vendas, a partir de $400/mês segundo a página, SLA de 99,9% (compartilhado) ou 99,95% (dedicado), Bring Your Own Cloud, elegível para HIPAA, escolha entre deploy compartilhado ou dedicado. O Weaviate self-hosted não custa nada além da sua própria infraestrutura — é o mesmo código BSD-3-Clause que roda o Weaviate Cloud.',
           `O repositório GitHub do Weaviate mostra ${S.pt('weaviate')} estrelas em 18/09/2026 (verificado via a API pública do GitHub), a menor das três opções open source aqui, embora ainda seja um projeto mantido ativamente com lançamentos regulares.`,
           'O Weaviate tem um ecossistema de parceiros voltado a empresas (Technology Alliance Partners, integradores de sistemas, revendedores de valor agregado) em vez de um programa de afiliados individual para criadores de conteúdo — nenhuma estrutura de comissão por indicação foi encontrada em weaviate.io na data desta verificação.',
@@ -2439,14 +2439,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'qdrant',
         title: 'Qdrant: self-hosting baseado em Rust, camada cloud gratuita',
         content: [
-          '**O [Qdrant](https://qdrant.tech/pricing/) é open source (Apache 2.0), escrito em Rust, e tem uma camada Qdrant Cloud gratuita para sempre (0,5 vCPU / 1GB RAM / 4GB de disco, verificado em qdrant.tech/pricing em 03/11/2026) sem limite de tempo fixo e sem necessidade de cartão; clusters gratuitos inativos são suspensos e depois excluídos (veja abaixo).** O self-hosting é gratuito em qualquer escala — você paga apenas pela sua própria infraestrutura.',
+          '**O [Qdrant](https://qdrant.tech/pricing/) é open source (Apache 2.0), escrito em Rust, e tem uma camada Qdrant Cloud gratuita (0,5 vCPU / 1GB RAM / 4GB de disco, verificado em qdrant.tech/pricing em 03/11/2026) sem limite de tempo fixo e sem necessidade de cartão; clusters gratuitos inativos são suspensos e depois excluídos (veja abaixo).** O self-hosting é gratuito em qualquer escala — você paga apenas pela sua própria infraestrutura.',
           'Camada gratuita: 0,5 vCPU, 1GB RAM, 4GB de disco, cluster de nó único, inferência cloud gratuita com modelos de embedding selecionados. Standard: preços por uso além da camada gratuita, recursos dedicados, escalonamento flexível, SLA de uptime de 99,5% — diferente de Pinecone ou Weaviate, o Qdrant não publica um mínimo mensal fixo para o Standard. Premium: gasto mínimo exigido (valor não publicado), SSO, links VPC privados, SLA de uptime de 99,9%. Hybrid Cloud e Private Cloud: preço personalizado para necessidades de residência de dados e regulação.',
           `O repositório GitHub do Qdrant mostra ${S.pt('qdrant')} estrelas (dados do diretório do PromptQuorum, verificados em 18/09/2026), a maior contagem entre as três opções open source. O Qdrant anunciou em 12/03/2026 uma rodada Série B de $50M ([anúncio do Qdrant](https://qdrant.tech/blog/series-b-announcement/)).`,
           'A página de parceiros do Qdrant lista parceiros de infraestrutura cloud (AWS, Google Cloud, Microsoft Azure, Oracle Cloud, DigitalOcean e outros para deploy gerenciado) e um programa de desconto para startups, não um programa de afiliados individual para criadores de conteúdo.',
         ],
         items: [
           'Self-hosted: gratuito, Apache 2.0, ilimitado',
-          'Camada cloud gratuita: 0,5 vCPU / 1GB RAM / 4GB de disco, gratuita para sempre, sem necessidade de cartão',
+          'Camada cloud gratuita: 0,5 vCPU / 1GB RAM / 4GB de disco, sem necessidade de cartão',
           'Standard: por uso, sem mínimo mensal fixo publicado, recursos dedicados, SLA 99,5%',
           'Premium: gasto mínimo (valor não publicado), SSO, links VPC privados, SLA 99,9%',
           `${S.pt('qdrant')} estrelas no GitHub (verificado em 18/09/2026) — a maior das três opções open source`,
@@ -2484,7 +2484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { Serviço: 'Pinecone', 'Camada gratuita': 'Starter: 2GB, sem mínimo', 'Camada paga de entrada': '$20/mês Builder fixo', 'Alternativa self-hosted': 'Nenhuma — somente cloud' },
           { Serviço: 'Weaviate Cloud', 'Camada gratuita': 'Free: $0, 100.000 objetos, 1GB de memória', 'Camada paga de entrada': '$45/mês mínimo Flex', 'Alternativa self-hosted': 'Sim — gratuito, BSD-3-Clause' },
-          { Serviço: 'Qdrant Cloud', 'Camada gratuita': '0,5 vCPU/1GB, para sempre', 'Camada paga de entrada': 'Por uso, sem mínimo publicado', 'Alternativa self-hosted': 'Sim — gratuito, Apache 2.0' },
+          { Serviço: 'Qdrant Cloud', 'Camada gratuita': '0,5 vCPU/1GB (limites por inatividade)', 'Camada paga de entrada': 'Por uso, sem mínimo publicado', 'Alternativa self-hosted': 'Sim — gratuito, Apache 2.0' },
         ],
       },
       tcoComparison: {
@@ -2542,7 +2542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'O Pinecone é melhor que o Weaviate?', a: 'Nenhum dos dois é melhor em toda situação. O Pinecone é somente cloud, sem opção self-hosted, o que é mais simples se você quer zero trabalho de infraestrutura, mas uma limitação se você precisa de controle sobre residência de dados. O Weaviate oferece tanto uma versão self-hosted gratuita quanto uma opção de cloud gerenciada, dando mais flexibilidade, mas o Weaviate Cloud também tem uma camada gratuita (100.000 objetos), com Flex pago a partir de $45/mês.' },
           { q: 'Quanto custa armazenar e consultar 1 milhão de vetores?', a: 'Estimativas aproximadas (ilustrativas): o Pinecone Standard fica em torno de $50–150/mês dependendo do volume de consultas (perto do mínimo de $50/mês). O Weaviate Cloud Flex fica perto do seu mínimo de $45/mês nessa escala. Qdrant ou Weaviate self-hosted em uma VM pequena custam aproximadamente $50–80/mês em infraestrutura mais mão de obra de operações, o que tipicamente torna o total em 12 meses mais alto que a cloud gerenciada em exatamente 1M de vetores uma vez contada a mão de obra — veja a comparação completa de TCO acima para o raciocínio.' },
           { q: 'Como migro do Chroma para o Qdrant?', a: 'Exporte os vetores e seus metadados do Chroma usando o cliente Python dele (collection.get() com include=["embeddings","metadatas","documents"]), depois faça upload em lote para uma coleção do Qdrant usando o método upsert() do cliente Python do Qdrant, mapeando os campos de metadados do Chroma para a estrutura de payload do Qdrant. Ambos usam formatos de embedding padrão, então os vetores em si não precisam de transformação — apenas o código do lado do cliente e o esquema da coleção mudam.' },
-          { q: 'O Qdrant é a mesma coisa que o Weaviate?', a: `Não. Ambos são bancos de dados vetoriais open source, self-hosteáveis, com busca híbrida, mas o Qdrant é escrito em Rust (Apache 2.0) e o Weaviate em Go (BSD-3-Clause). O Qdrant tem mais estrelas no GitHub (${S.pt('qdrant')} contra ${S.pt('weaviate')}, verificado em 18/09/2026) e uma camada cloud gratuita para sempre (0,5 vCPU/1GB RAM/4GB de disco); o Weaviate tem um ecossistema de módulos mais amplo para vetorização e reranking embutidos, e sua própria camada cloud gratuita é limitada a 100.000 objetos.` },
+          { q: 'O Qdrant é a mesma coisa que o Weaviate?', a: `Não. Ambos são bancos de dados vetoriais open source, self-hosteáveis, com busca híbrida, mas o Qdrant é escrito em Rust (Apache 2.0) e o Weaviate em Go (BSD-3-Clause). O Qdrant tem mais estrelas no GitHub (${S.pt('qdrant')} contra ${S.pt('weaviate')}, verificado em 18/09/2026) e uma camada cloud gratuita (0,5 vCPU/1GB RAM/4GB de disco); o Weaviate tem um ecossistema de módulos mais amplo para vetorização e reranking embutidos, e sua própria camada cloud gratuita é limitada a 100.000 objetos.` },
           { q: 'Pinecone, Weaviate, Qdrant ou Chroma têm programas de afiliados?', a: 'O Pinecone opera um programa de afiliados público real para criadores de conteúdo, confirmado diretamente em pinecone.io/partners, separado de seus programas Solution Partner e Referral voltados a empresas. Weaviate e Qdrant mantêm ecossistemas de parceiros de tecnologia/solução/revenda voltados a empresas em vez de programas de afiliados individuais. Nenhum programa de afiliados foi encontrado para o banco de dados vetorial do Chroma ([trychroma.com](https://trychroma.com)). A PromptQuorum não está atualmente inscrita em nenhum desses programas — cada link nesta página é um simples link de produto.' },
           { q: 'O Chroma pode ser usado em produção?', a: 'Sim, fora do seu modo embutido de processo único. O modo cliente-servidor do Chroma e o Chroma Cloud gerenciado (Starter a partir de $0 + uso, Team a $250/mês + uso) suportam ambos deploys de produção multisserviço. O modo embutido especificamente — onde o Chroma roda dentro de um processo Python sem servidor separado — é melhor mantido para projetos solo e protótipos, não cargas de produção compartilhadas.' },
           { q: 'Qual é a diferença real entre preços self-hosted e serverless/gerenciado?', a: 'O preço self-hosted é o custo de infraestrutura (uma VM ou servidor) mais seu próprio tempo de operações para patches, monitoramento e backups — sem taxas por consulta. O preço gerenciado/serverless (Pinecone, Weaviate Cloud, Qdrant Cloud) cobra uma taxa mensal mais taxas por uso de armazenamento, leituras e gravações, com o fornecedor cuidando de toda a operação. O self-hosting tende a vencer em custo bruto em dólares apenas quando o volume é grande o suficiente para que a mão de obra de operações seja uma fração pequena da fatura, ou quando uma equipe de operações existente já opera o servidor a custo marginal quase nulo.' },
@@ -2567,8 +2567,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: 'https://www.pinecone.io/pricing/', title: 'Preços do Pinecone', description: 'Página de preços oficial — base para os limites das camadas Starter/Builder/Standard/Enterprise, verificado em 03/11/2026.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Parceiros do Pinecone', description: 'Página oficial de parceiros — base para confirmar o programa de afiliados público para criadores de conteúdo, separado dos programas Solution Partner e Referral.' },
-          { url: 'https://weaviate.io/pricing', title: 'Preços do Weaviate Cloud', description: 'Página de preços oficial — base para os limites das camadas Free/Flex/Premium, verificada novamente em 03/11/2026; o post do blog sobre a reestruturação de preços de outubro de 2025 explica a mudança para Flex.' },
-          { url: 'https://qdrant.tech/pricing/', title: 'Preços do Qdrant', description: 'Página de preços oficial — base para as especificações da camada gratuita para sempre (0,5 vCPU/1GB RAM/4GB de disco) e a estrutura de camadas Standard/Premium. Reverificada em 03/11/2026.' },
+          { url: 'https://weaviate.io/pricing', title: 'Preços do Weaviate Cloud', description: 'Página de preços oficial — base para os limites das camadas Free/Flex/Premium, verificada novamente em 03/11/2026.' },
+          { url: 'https://qdrant.tech/pricing/', title: 'Preços do Qdrant', description: 'Página de preços oficial — base para as especificações da camada gratuita (0,5 vCPU/1GB RAM/4GB de disco) e a estrutura de camadas Standard/Premium. Reverificada em 03/11/2026.' },
           { url: 'https://qdrant.tech/blog/series-b-announcement/', title: 'Qdrant: anúncio da Série B', description: 'Anúncio oficial da rodada Série B de $50M (12/03/2026).' },
           { url: 'https://qdrant.tech/documentation/cloud/create-cluster/', title: 'Qdrant Cloud: criar um cluster', description: 'Base das afirmações sobre a camada gratuita: não exige cartão de crédito; clusters gratuitos inativos são suspensos após 1 semana e excluídos após 4 semanas.' },
           { url: 'https://github.com/qdrant/qdrant-client', title: 'Cliente Python do Qdrant', description: 'Base do modo local (em memória ou em disco) que funciona sem servidor Qdrant.' },
@@ -2583,8 +2583,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Pinecone vs Weaviate vs Qdrant vs Chroma: Melhor Banco de Dados Vetorial (2026)',
-      description: 'Pinecone ($20/mês Builder, $50/mês Standard), Weaviate Cloud ($45/mês Flex), Qdrant (camada self-hosted gratuita para sempre), Chroma (open source + $250/mês Team) comparados para busca vetorial RAG em 2026.',
+      headline: 'Pinecone vs Weaviate vs Qdrant vs Chroma: Comparativo de bancos de dados vetoriais (2026)',
+      description: 'Pinecone ($20/mês Builder, $50/mês Standard), Weaviate Cloud ($45/mês Flex), Qdrant (self-hosting gratuito), Chroma (open source + $250/mês Team) comparados para busca vetorial RAG em 2026.',
       datePublished: '2026-08-27',
       dateModified: '2026-11-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2613,7 +2613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Pinecone', description: 'Banco de dados vetorial gerenciado, somente cloud. Camada Starter gratuita (2GB); Builder $20/mês fixo; Standard $50/mês de uso mínimo.' },
         { '@type': 'ListItem', position: 2, name: 'Weaviate', description: 'Open source (BSD-3-Clause) self-hosted ou Weaviate Cloud. Camada cloud gratuita (100.000 objetos); Flex a partir de $45/mês mínimo.' },
-        { '@type': 'ListItem', position: 3, name: 'Qdrant', description: 'Open source (Apache 2.0), baseado em Rust. Self-hosted gratuito ou camada Qdrant Cloud gratuita para sempre (0,5 vCPU/1GB RAM/4GB de disco).' },
+        { '@type': 'ListItem', position: 3, name: 'Qdrant', description: 'Open source (Apache 2.0), baseado em Rust. Self-hosted gratuito ou camada Qdrant Cloud gratuita com limites por inatividade (0,5 vCPU/1GB RAM/4GB de disco).' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Banco de dados vetorial open source (Apache 2.0) embutido ou cliente-servidor. Self-hosted gratuito; Chroma Cloud de $0 + uso até $250/mês Team.' },
       ],
       inLanguage: 'pt-BR',
@@ -2627,10 +2627,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-27',
     affiliateDisclosure: true,
-    title: 'Pinecone مقابل Weaviate مقابل Qdrant مقابل Chroma: أفضل قاعدة بيانات متجهية (2026)',
+    title: 'Pinecone مقابل Weaviate مقابل Qdrant مقابل Chroma: مقارنة قواعد البيانات المتجهية (2026)',
     seoTitle: 'Pinecone مقابل Weaviate مقابل Qdrant مقابل Chroma (2026)',
     intro: 'تخزّن قواعد البيانات المتجهية (vector databases) الـ embeddings وتنفّذ بحث التشابه لأنابيب RAG (retrieval-augmented generation). تحل Pinecone وWeaviate وQdrant وChroma المشكلة نفسها بأربع مفاضلات مختلفة في الاستضافة الذاتية (self-hosting) والتسعير والجهد التشغيلي. يقارن هذا الدليل الأسعار والتراخيص ونماذج النشر الحالية للأربعة جميعاً، وتم التحقق منها مقابل صفحة تسعير كل مزود بتاريخ 03/11/2026 ومستودع GitHub الخاص بكل مشروع.',
-    metaDescription: 'مقارنة Pinecone (20$/شهرياً Builder، 50$/شهرياً Standard) وWeaviate Cloud (45$/شهرياً Flex) وQdrant (طبقة استضافة ذاتية مجانية للأبد) وChroma (مفتوح المصدر + 250$/شهرياً Team) للبحث المتجهي RAG في 2026.',
+    metaDescription: 'مقارنة Pinecone (20$/شهرياً Builder) وWeaviate Cloud (45$/شهرياً Flex) وQdrant (استضافة ذاتية مجانية) وChroma (مفتوح المصدر) لـ RAG في 2026.',
     publishDate: '2026-08-27',
     dateModified: '2026-11-03',
     readTime: '15 دقائق للقراءة',
@@ -2645,13 +2645,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'قاعدة بيانات متجهية ذاتية الاستضافة',
       'أسعار pinecone',
     ],
-    leadAnswerBlock: '**تعتمد أفضل قاعدة بيانات متجهية لـ RAG في 2026 على ما إذا كنت ستستضيف ذاتياً (self-host) أو تستخدم السحابة المُدارة: تناسب Qdrant الفرق التي تملك قدرة تشغيلية (طبقة سحابية مجانية للأبد، واستضافة ذاتية بترخيص Apache 2.0)، بينما تناسب Pinecone الفرق التي تريد صفر عمل بنية تحتية (طبقة Builder بـ 20$/شهرياً، دون خادم لإدارته).** لا توجد "أفضل" واحدة — تخدم Weaviate وChroma كل منهما حالات استخدام وسيطة محددة موضحة أدناه.',
+    leadAnswerBlock: '**تعتمد قاعدة البيانات المتجهية المناسبة لـ RAG على الاستضافة الذاتية أو السحابة المُدارة: تناسب Qdrant الفرق ذات القدرة التشغيلية (استضافة ذاتية مجانية وطبقة سحابية مجانية بقيود عدم النشاط)، وPinecone الفرق دون بنية تحتية (Builder بـ 20$/شهرياً).** لا يوجد خيار يتفوق دائماً؛ وتغطي Weaviate وChroma حالات وسيطة.',
     quickAnswerTop: {
       ar: {
         question: 'ما قاعدة البيانات المتجهية التي يجب أن أستخدمها: Pinecone أم Weaviate أم Qdrant أم Chroma؟',
-        answer: 'استخدم Qdrant إذا كان بإمكانك الاستضافة الذاتية وتريد طبقة مجانية (0.5 vCPU/1GB RAM/4GB قرص، مجانية للأبد وفق صفحة أسعار Qdrant) بالإضافة إلى محرك مبني على Rust. استخدم Pinecone إذا كنت تريد صفر إدارة للبنية التحتية وتقبل نموذجاً سحابياً بالكامل مع فوترة حسب الاستخدام تبدأ من 20$/شهرياً. استخدم Weaviate إذا كنت تريد خياراً هجيناً يجمع بين الاستضافة الذاتية (BSD-3-Clause، مجانية) والسحابة المُدارة (تبدأ من 45$/شهرياً). استخدم Chroma إذا كنت مطوراً منفرداً أو تقوم بعمل نموذج أولي — فهو يعمل مضمّناً داخل عملية Python واحدة دون خادم.',
+        answer: 'استخدم Qdrant إذا كان بإمكانك الاستضافة الذاتية وتريد طبقة مجانية (0.5 vCPU/1GB RAM/4GB قرص، مع قيود عدم النشاط وفق وثائق Qdrant) بالإضافة إلى محرك مبني على Rust. استخدم Pinecone إذا كنت تريد صفر إدارة للبنية التحتية وتقبل نموذجاً سحابياً بالكامل مع فوترة حسب الاستخدام تبدأ من 20$/شهرياً. استخدم Weaviate إذا كنت تريد خياراً هجيناً يجمع بين الاستضافة الذاتية (BSD-3-Clause، مجانية) والسحابة المُدارة (تبدأ من 45$/شهرياً). استخدم Chroma إذا كنت مطوراً منفرداً أو تقوم بعمل نموذج أولي — فهو يعمل مضمّناً داخل عملية Python واحدة دون خادم.',
         bullets: [
-          'Qdrant: Rust، Apache 2.0، استضافة ذاتية مجانية أو طبقة سحابية مجانية للأبد (0.5 vCPU/1GB RAM/4GB قرص)',
+          'Qdrant: Rust، Apache 2.0، استضافة ذاتية مجانية أو طبقة سحابية مجانية بقيود عدم النشاط (0.5 vCPU/1GB RAM/4GB قرص)',
           'Pinecone: سحابي فقط، لا يوجد خيار استضافة ذاتية، طبقة Starter مجانية (2GB تخزين)، ثم 20$/شهرياً Builder أو 50$/شهرياً Standard',
           'Weaviate: Go، BSD-3-Clause، استضافة ذاتية مجانية أو Weaviate Cloud تبدأ من 45$/شهرياً (طبقة Flex؛ وتوجد أيضاً طبقة سحابية مجانية)',
           'Chroma: نواة Python/Rust، Apache 2.0، استضافة ذاتية/مضمّنة مجانية أو Chroma Cloud من 0$ + استخدام (Starter) حتى 250$/شهرياً (Team)',
@@ -2679,7 +2679,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     affiliateLinks: [
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone', productCategory: 'dev-tool', priceRange: 'مجاني–50$/شهرياً+', label: 'عرض أسعار Pinecone ←' },
-      { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: 'طبقة مجانية للأبد', label: 'جرّب Qdrant مجاناً ←' },
+      { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: 'طبقة مجانية (بقيود عدم النشاط)', label: 'جرّب Qdrant مجاناً ←' },
       { url: 'https://weaviate.io/pricing', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: 'من 45$/شهرياً', label: 'عرض أسعار Weaviate ←' },
       { url: 'https://www.trychroma.com/pricing', productName: 'Chroma', productCategory: 'dev-tool', priceRange: 'مجاني–250$/شهرياً+', label: 'عرض أسعار Chroma ←' },
     ],
@@ -2689,12 +2689,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'النقاط الرئيسية — مقارنة قواعد البيانات المتجهية',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'تناسب Qdrant الاستضافة الذاتية مع طبقة سحابية مجانية للأبد؛ وتناسب Pinecone السحابة المُدارة دون بنية تحتية؛ بينما تغطي Weaviate وChroma تخصصات محددة.' },
+          { type: 'one-sentence', text: 'تناسب Qdrant الاستضافة الذاتية مع طبقة سحابية مجانية (بقيود عدم النشاط)؛ وتناسب Pinecone السحابة المُدارة دون بنية تحتية؛ بينما تغطي Weaviate وChroma تخصصات محددة.' },
           { type: 'plain-terms', text: 'تخزّن قاعدة البيانات المتجهية "بصمات" رقمية (embeddings) لمستنداتك حتى يتمكن تطبيق الذكاء الاصطناعي من إيجاد الأكثر صلة بسرعة — وهذا هو نصف الاسترجاع (retrieval) في RAG (retrieval-augmented generation).' },
         ],
         items: [
           'Qdrant وWeaviate وChroma مفتوحة المصدر ومجانية للاستضافة الذاتية. أما Pinecone فهي سحابية فقط — لا يوجد إصدار مستضاف ذاتياً من Pinecone بأي سعر.',
-          'تذكر Qdrant Cloud طبقة مجانية للأبد (0.5 vCPU / 1GB RAM / 4GB قرص، تم التحقق بتاريخ 03/11/2026) دون بطاقة ائتمان؛ ووفق وثائق Qdrant تُعلَّق العناقيد المجانية غير النشطة بعد أسبوع وتُحذف بعد 4 أسابيع.',
+          'تذكر Qdrant Cloud طبقة مجانية (0.5 vCPU / 1GB RAM / 4GB قرص، تم التحقق بتاريخ 03/11/2026) دون بطاقة ائتمان؛ ووفق وثائق Qdrant تُعلَّق العناقيد المجانية غير النشطة بعد أسبوع وتُحذف بعد 4 أسابيع.',
           'طبقة Pinecone Starter مجانية (2GB تخزين، 2 مليون كتابة/شهرياً، 1 مليون قراءة/شهرياً)؛ تبدأ الطبقات المدفوعة من 20$/شهرياً ثابتة (Builder) أو 50$/شهرياً كحد أدنى للاستخدام (Standard).',
           'تمتلك Weaviate Cloud طبقة مجانية (دون بطاقة ائتمان: عنقود واحد، 100,000 كائن، ذاكرة 1GB، قرص 10GB، توافر بأفضل جهد). تبدأ طبقة Flex المدفوعة من 45$/شهرياً وتُدرج Premium ابتداءً من 400$/شهرياً، تم التحقق على weaviate.io/pricing بتاريخ 03/11/2026.',
           'تكلف طبقة Chroma Cloud Starter صفر دولار/شهرياً بالإضافة إلى الفوترة حسب الاستخدام (كتابة، تخزين، استعلامات)؛ وتكلف طبقة Team 250$/شهرياً بالإضافة إلى الاستخدام.',
@@ -2713,7 +2713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           { title: 'اختر الاستضافة الذاتية إذا: كنت تشغّل بالفعل بنية تحتية أخرى (Kubernetes، حزمة Docker Compose)، أو تحتاج إلى تحكم كامل في مكان تخزين البيانات، أو كان حجم المتجهات لديك كبيراً بما يكفي بحيث تكلف الفوترة السحابية حسب الاستخدام أكثر من خادم افتراضي.', whyItMatters: 'تلغي الاستضافة الذاتية الفوترة لكل استعلام تماماً — يمكن لتطبيق RAG نشط أن يولّد ملايين وحدات القراءة/الكتابة شهرياً، وهو ما يتراكم بسرعة في التسعير السحابي القائم على الاستخدام.' },
           { title: 'اختر السحابة المُدارة إذا: كنت فريقاً صغيراً دون DevOps مخصص، أو تريد الإطلاق خلال أيام لا أسابيع، أو كان حجم المتجهات لديك صغيراً بما يكفي بحيث تغطيك طبقة مجانية أو أساسية.', whyItMatters: 'تستبدل السحابة المُدارة فاتورة شهرية يمكن التنبؤ بها بصفر عبء تشغيلي — دون تصحيحات، ودون تصميم استراتيجية نسخ احتياطي، ودون مناوبة لتعطل قاعدة بيانات.' },
-          { title: 'إذا لم تكن متأكداً، ابدأ باستضافة Qdrant ذاتياً على خادم افتراضي صغير أو حاوية Docker.', whyItMatters: 'تجعل طبقة Qdrant السحابية المجانية للأبد وملفها التنفيذي الخفيف المبني على Rust منها نقطة البداية الأقل خطورة — يمكنك الانتقال لاحقاً إلى Pinecone أو Weaviate Cloud إذا قررت أن السحابة المُدارة تستحق التكلفة المتكررة.' },
+          { title: 'إذا لم تكن متأكداً، ابدأ باستضافة Qdrant ذاتياً على خادم افتراضي صغير أو حاوية Docker.', whyItMatters: 'تجعل طبقة Qdrant السحابية المجانية وملفها التنفيذي الخفيف المبني على Rust منها نقطة البداية الأقل خطورة — يمكنك الانتقال لاحقاً إلى Pinecone أو Weaviate Cloud إذا قررت أن السحابة المُدارة تستحق التكلفة المتكررة.' },
         ],
       },
       selfHostedComparison: {
@@ -2757,7 +2757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'weaviate',
         title: 'Weaviate: استضافة ذاتية أو سحابة مُدارة',
         content: [
-          '**[Weaviate](https://weaviate.io/pricing) مفتوحة المصدر (BSD-3-Clause) ومجانية للاستضافة الذاتية، كما تقدم Weaviate Cloud طبقة مجانية (دون بطاقة ائتمان) قبل خطة Flex المدفوعة، تم التحقق على weaviate.io/pricing بتاريخ 03/11/2026.** أعادت Weaviate Cloud هيكلة أسعارها في أكتوبر 2025: استُبدلت طبقة Serverless القديمة بسعر 25$/شهرياً بطبقة Flex بحد أدنى 45$/شهرياً، وهي لا تزال السعر الحالي حتى تاريخ التحقق من هذه المقالة في 03/11/2026.',
+          '**[Weaviate](https://weaviate.io/pricing) مفتوحة المصدر (BSD-3-Clause) ومجانية للاستضافة الذاتية، كما تقدم Weaviate Cloud طبقة مجانية (دون بطاقة ائتمان) قبل خطة Flex المدفوعة، تم التحقق على weaviate.io/pricing بتاريخ 03/11/2026.**',
           'Weaviate Cloud Free: 0$، عنقود واحد، 100,000 كائن، ذاكرة 1GB، قرص 10GB، توافر بأفضل جهد، دون الاحتفاظ بالنسخ الاحتياطية. Flex: من 45$/شهرياً، الدفع حسب الاستخدام، بنية تحتية مشتركة، SLA بنسبة 99.5%. Premium: عبر المبيعات، مُدرجة ابتداءً من 400$/شهرياً، SLA بنسبة 99.9% (مشترك) أو 99.95% (مخصص)، Bring Your Own Cloud، مؤهلة لـ HIPAA، اختيار بين النشر المشترك أو المخصص. الاستضافة الذاتية لـ Weaviate لا تكلف شيئاً باستثناء بنيتك التحتية الخاصة — فهي نفس شيفرة BSD-3-Clause التي تشغّل Weaviate Cloud.',
           `يُظهر مستودع Weaviate على GitHub ${S.ar('weaviate')} نجمة حتى 18/09/2026 (تم التحقق عبر واجهة برمجة التطبيقات العامة لـ GitHub)، وهو الأقل من بين الخيارات الثلاثة مفتوحة المصدر هنا، رغم أنه لا يزال مشروعاً يُصان بنشاط مع إصدارات منتظمة.`,
           'تمتلك Weaviate منظومة شراكة موجهة للشركات (شركاء تحالف تقني، مُكاملو أنظمة، موزعون بقيمة مضافة) بدلاً من برنامج شراكة تسويقية فردي لصانعي المحتوى — لم يُعثر على أي هيكل عمولة لكل إحالة على weaviate.io حتى تاريخ هذا التحقق.',
@@ -2774,14 +2774,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'qdrant',
         title: 'Qdrant: استضافة ذاتية مبنية على Rust، طبقة سحابية مجانية',
         content: [
-          '**[Qdrant](https://qdrant.tech/pricing/) مفتوحة المصدر (Apache 2.0)، مكتوبة بلغة Rust، وتمتلك طبقة Qdrant Cloud مجانية للأبد وفق صفحة الأسعار (0.5 vCPU / 1GB RAM / 4GB قرص، تم التحقق على qdrant.tech/pricing بتاريخ 03/11/2026) دون حد زمني ثابت ودون الحاجة لبطاقة ائتمان؛ وتُعلَّق العناقيد المجانية غير النشطة ثم تُحذف لاحقاً (انظر أدناه).** الاستضافة الذاتية مجانية عند أي حجم — تدفع فقط مقابل بنيتك التحتية الخاصة.',
+          '**[Qdrant](https://qdrant.tech/pricing/) مفتوحة المصدر (Apache 2.0)، مكتوبة بلغة Rust، وتمتلك طبقة Qdrant Cloud مجانية (0.5 vCPU / 1GB RAM / 4GB قرص، تم التحقق على qdrant.tech/pricing بتاريخ 03/11/2026) دون حد زمني ثابت ودون الحاجة لبطاقة ائتمان؛ وتُعلَّق العناقيد المجانية غير النشطة ثم تُحذف لاحقاً (انظر أدناه).** الاستضافة الذاتية مجانية عند أي حجم — تدفع فقط مقابل بنيتك التحتية الخاصة.',
           'الطبقة المجانية: 0.5 vCPU، 1GB RAM، 4GB قرص، عنقود بعقدة واحدة، استدلال سحابي مجاني مع نماذج embedding مختارة. Standard: تسعير حسب الاستخدام بعد الطبقة المجانية، موارد مخصصة، توسع مرن، SLA لوقت التشغيل بنسبة 99.5% — بخلاف Pinecone أو Weaviate، لا تنشر Qdrant حداً أدنى شهرياً ثابتاً لطبقة Standard. Premium: يتطلب حداً أدنى للإنفاق (المبلغ غير معلن)، SSO، روابط VPC خاصة، SLA لوقت التشغيل بنسبة 99.9%. Hybrid Cloud وPrivate Cloud: تسعير مخصص لاحتياجات مكان تخزين البيانات والتنظيم.',
           `يُظهر مستودع Qdrant على GitHub ${S.ar('qdrant')} نجمة (بيانات دليل PromptQuorum، تم التحقق منها بتاريخ 18/09/2026)، وهو أعلى عدد بين خيارات المصدر المفتوح الثلاثة. أعلنت Qdrant بتاريخ 12/03/2026 عن جولة تمويل من الفئة B بقيمة 50 مليون دولار ([إعلان Qdrant](https://qdrant.tech/blog/series-b-announcement/)).`,
           'تسرد صفحة شركاء Qdrant شركاء البنية التحتية السحابية (AWS، Google Cloud، Microsoft Azure، Oracle Cloud، DigitalOcean وغيرها للنشر المُدار) وبرنامج خصم للشركات الناشئة، وليس برنامج شراكة تسويقية فردياً لصانعي المحتوى.',
         ],
         items: [
           'استضافة ذاتية: مجانية، Apache 2.0، غير محدودة',
-          'الطبقة السحابية المجانية: 0.5 vCPU / 1GB RAM / 4GB قرص، مجانية للأبد، دون الحاجة لبطاقة ائتمان',
+          'الطبقة السحابية المجانية: 0.5 vCPU / 1GB RAM / 4GB قرص، دون الحاجة لبطاقة ائتمان',
           'Standard: حسب الاستخدام، دون حد أدنى شهري ثابت معلن، موارد مخصصة، SLA 99.5%',
           'Premium: حد أدنى للإنفاق (المبلغ غير معلن)، SSO، روابط VPC خاصة، SLA 99.9%',
           `${S.ar('qdrant')} نجمة على GitHub (تم التحقق بتاريخ 18/09/2026) — الأعلى بين الخيارات الثلاثة مفتوحة المصدر`,
@@ -2819,7 +2819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { الخدمة: 'Pinecone', 'الطبقة المجانية': 'Starter: 2GB، دون حد أدنى', 'الطبقة المدفوعة الأساسية': '20$/شهرياً Builder ثابتة', 'بديل الاستضافة الذاتية': 'لا يوجد — سحابية فقط' },
           { الخدمة: 'Weaviate Cloud', 'الطبقة المجانية': 'Free: 0$، 100,000 كائن، ذاكرة 1GB', 'الطبقة المدفوعة الأساسية': '45$/شهرياً كحد أدنى Flex', 'بديل الاستضافة الذاتية': 'نعم — مجانية، BSD-3-Clause' },
-          { الخدمة: 'Qdrant Cloud', 'الطبقة المجانية': '0.5 vCPU/1GB، للأبد', 'الطبقة المدفوعة الأساسية': 'حسب الاستخدام، دون حد أدنى معلن', 'بديل الاستضافة الذاتية': 'نعم — مجانية، Apache 2.0' },
+          { الخدمة: 'Qdrant Cloud', 'الطبقة المجانية': '0.5 vCPU/1GB (بقيود عدم النشاط)', 'الطبقة المدفوعة الأساسية': 'حسب الاستخدام، دون حد أدنى معلن', 'بديل الاستضافة الذاتية': 'نعم — مجانية، Apache 2.0' },
         ],
       },
       tcoComparison: {
@@ -2877,7 +2877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل Pinecone أفضل من Weaviate؟', a: 'لا أحد منهما أفضل في كل موقف. Pinecone سحابية فقط دون خيار استضافة ذاتية، وهو ما يجعلها أبسط إذا أردت صفر عمل بنية تحتية لكنه قيد إذا احتجت التحكم في مكان تخزين البيانات. تقدم Weaviate نسخة استضافة ذاتية مجانية وخيار سحابة مُدارة معاً، ما يمنح مرونة أكبر، لكن Weaviate Cloud تمتلك أيضاً طبقة مجانية (100,000 كائن)، مع Flex المدفوعة من 45$/شهرياً.' },
           { q: 'كم تكلفة تخزين والاستعلام عن مليون متجه؟', a: 'تقديرات تقريبية (توضيحية): يقع Pinecone Standard قرب 50–150$/شهرياً حسب حجم الاستعلام (قرب الحد الأدنى البالغ 50$/شهرياً). تبقى Weaviate Cloud Flex قريبة من حدها الأدنى البالغ 45$/شهرياً عند هذا الحجم. تكلّف Qdrant أو Weaviate بالاستضافة الذاتية على خادم افتراضي صغير حوالي 50–80$/شهرياً في البنية التحتية بالإضافة إلى عمالة التشغيل، ما يجعل الإجمالي لـ 12 شهراً عند مليون متجه بالضبط أعلى عادةً من السحابة المُدارة بمجرد احتساب العمالة — انظر مقارنة إجمالي تكلفة الملكية الكاملة أعلاه للتفسير.' },
           { q: 'كيف أنتقل من Chroma إلى Qdrant؟', a: 'صدّر المتجهات وبياناتها الوصفية من Chroma باستخدام عميل Python الخاص به (collection.get() مع include=["embeddings","metadatas","documents"])، ثم ارفعها على دفعات إلى مجموعة Qdrant باستخدام طريقة upsert() في عميل Python الخاص بـ Qdrant، مع تعيين حقول البيانات الوصفية في Chroma إلى بنية الحمولة (payload) في Qdrant. يستخدم كلاهما صيغ embedding قياسية، لذا لا تحتاج المتجهات نفسها إلى أي تحويل — فقط الشيفرة على جانب العميل ومخطط المجموعة يتغيران.' },
-          { q: 'هل Qdrant هي نفسها Weaviate؟', a: `لا. كلاهما قاعدتا بيانات متجهية مفتوحتا المصدر وقابلتان للاستضافة الذاتية مع بحث هجين، لكن Qdrant مكتوبة بلغة Rust (Apache 2.0) وWeaviate مكتوبة بلغة Go (BSD-3-Clause). تمتلك Qdrant نجوماً أكثر على GitHub (${S.ar('qdrant')} مقابل ${S.ar('weaviate')}، تم التحقق بتاريخ 18/09/2026) وطبقة سحابية مجانية للأبد (0.5 vCPU/1GB RAM/4GB قرص)؛ بينما تمتلك Weaviate منظومة وحدات أوسع للـ vectorization وإعادة الترتيب المدمجَين، وطبقتها السحابية المجانية محدودة بـ 100,000 كائن.` },
+          { q: 'هل Qdrant هي نفسها Weaviate؟', a: `لا. كلاهما قاعدتا بيانات متجهية مفتوحتا المصدر وقابلتان للاستضافة الذاتية مع بحث هجين، لكن Qdrant مكتوبة بلغة Rust (Apache 2.0) وWeaviate مكتوبة بلغة Go (BSD-3-Clause). تمتلك Qdrant نجوماً أكثر على GitHub (${S.ar('qdrant')} مقابل ${S.ar('weaviate')}، تم التحقق بتاريخ 18/09/2026) وطبقة سحابية مجانية (0.5 vCPU/1GB RAM/4GB قرص)؛ بينما تمتلك Weaviate منظومة وحدات أوسع للـ vectorization وإعادة الترتيب المدمجَين، وطبقتها السحابية المجانية محدودة بـ 100,000 كائن.` },
           { q: 'هل تمتلك Pinecone وWeaviate وQdrant وChroma برامج شراكة تسويقية؟', a: 'تدير Pinecone برنامج شراكة تسويقية عاماً حقيقياً لصانعي المحتوى، تم تأكيده مباشرة على pinecone.io/partners، منفصلاً عن برنامجيها Solution Partner وReferral الموجهين للشركات. تحافظ Weaviate وQdrant على منظومات شراكة تقنية/حلول/إعادة بيع موجهة للشركات بدلاً من برامج شراكة تسويقية فردية. لم يُعثر على برنامج شراكة تسويقية لقاعدة بيانات Chroma المتجهية ([trychroma.com](https://trychroma.com)). PromptQuorum غير مسجلة حالياً في أي من هذه البرامج — كل رابط في هذه الصفحة هو مجرد رابط منتج عادي.' },
           { q: 'هل يمكن استخدام Chroma في الإنتاج؟', a: 'نعم، خارج وضعها المضمّن أحادي العملية. يدعم وضع عميل-خادم في Chroma وChroma Cloud المُدارة (Starter من 0$ + استخدام، Team بـ 250$/شهرياً + استخدام) كلاهما النشر الإنتاجي متعدد الخدمات. أما الوضع المضمّن تحديداً — حيث تعمل Chroma داخل عملية Python واحدة دون خادم منفصل — فمن الأفضل الاحتفاظ به للمشاريع المنفردة والنماذج الأولية، لا للأحمال الإنتاجية المشتركة.' },
           { q: 'ما الفرق الحقيقي بين تسعير الاستضافة الذاتية والتسعير serverless/المُدار؟', a: 'تسعير الاستضافة الذاتية هو تكلفة البنية التحتية (خادم افتراضي أو خادم) بالإضافة إلى وقت تشغيلك الخاص للتصحيحات والمراقبة والنسخ الاحتياطي — دون رسوم لكل استعلام. يفرض التسعير المُدار/serverless (Pinecone، Weaviate Cloud، Qdrant Cloud) رسوماً شهرية بالإضافة إلى أسعار قائمة على الاستخدام للتخزين والقراءات والكتابات، مع تولي المزوّد كل عمليات التشغيل. تميل الاستضافة الذاتية للفوز في التكلفة الخام بالدولار فقط عندما يكون الحجم كبيراً بما يكفي بحيث تكون عمالة التشغيل جزءاً صغيراً من الفاتورة، أو عندما يشغّل فريق تشغيل قائم بالفعل الخادم بتكلفة هامشية تكاد تكون معدومة.' },
@@ -2902,8 +2902,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: 'https://www.pinecone.io/pricing/', title: 'أسعار Pinecone', description: 'صفحة الأسعار الرسمية — أساس حدود طبقات Starter/Builder/Standard/Enterprise، تم التحقق بتاريخ 03/11/2026.' },
           { url: 'https://www.pinecone.io/partners/', title: 'شركاء Pinecone', description: 'صفحة الشركاء الرسمية — أساس تأكيد برنامج الشراكة التسويقية العام لصانعي المحتوى، منفصل عن برنامجي Solution Partner وReferral.' },
-          { url: 'https://weaviate.io/pricing', title: 'أسعار Weaviate Cloud', description: 'صفحة الأسعار الرسمية — أساس حدود طبقات Free/Flex/Premium، أُعيد التحقق منها في 03/11/2026؛ وتشرح مقالة المدونة عن إعادة هيكلة الأسعار في أكتوبر 2025 الانتقال إلى Flex.' },
-          { url: 'https://qdrant.tech/pricing/', title: 'أسعار Qdrant', description: 'صفحة الأسعار الرسمية — أساس مواصفات الطبقة المجانية للأبد (0.5 vCPU/1GB RAM/4GB قرص) وبنية طبقتَي Standard/Premium. أُعيد التحقق منها بتاريخ 03/11/2026.' },
+          { url: 'https://weaviate.io/pricing', title: 'أسعار Weaviate Cloud', description: 'صفحة الأسعار الرسمية — أساس حدود طبقات Free/Flex/Premium، أُعيد التحقق منها في 03/11/2026.' },
+          { url: 'https://qdrant.tech/pricing/', title: 'أسعار Qdrant', description: 'صفحة الأسعار الرسمية — أساس مواصفات الطبقة المجانية (0.5 vCPU/1GB RAM/4GB قرص) وبنية طبقتَي Standard/Premium. أُعيد التحقق منها بتاريخ 03/11/2026.' },
           { url: 'https://qdrant.tech/blog/series-b-announcement/', title: 'Qdrant: إعلان الجولة B', description: 'الإعلان الرسمي عن جولة التمويل من الفئة B بقيمة 50 مليون دولار (12/03/2026).' },
           { url: 'https://qdrant.tech/documentation/cloud/create-cluster/', title: 'Qdrant Cloud: إنشاء عنقود', description: 'أساس العبارات الخاصة بالطبقة المجانية: لا حاجة إلى بطاقة ائتمان؛ تُعلَّق العناقيد المجانية غير النشطة بعد أسبوع وتُحذف بعد 4 أسابيع.' },
           { url: 'https://github.com/qdrant/qdrant-client', title: 'عميل Python لـ Qdrant', description: 'أساس الوضع المحلي (في الذاكرة أو على القرص) الذي يعمل دون خادم Qdrant.' },
@@ -2918,8 +2918,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Pinecone مقابل Weaviate مقابل Qdrant مقابل Chroma: أفضل قاعدة بيانات متجهية (2026)',
-      description: 'مقارنة Pinecone (20$/شهرياً Builder، 50$/شهرياً Standard) وWeaviate Cloud (45$/شهرياً Flex) وQdrant (طبقة استضافة ذاتية مجانية للأبد) وChroma (مفتوح المصدر + 250$/شهرياً Team) للبحث المتجهي RAG في 2026.',
+      headline: 'Pinecone مقابل Weaviate مقابل Qdrant مقابل Chroma: مقارنة قواعد البيانات المتجهية (2026)',
+      description: 'مقارنة Pinecone (20$/شهرياً Builder، 50$/شهرياً Standard) وWeaviate Cloud (45$/شهرياً Flex) وQdrant (استضافة ذاتية مجانية) وChroma (مفتوح المصدر + 250$/شهرياً Team) للبحث المتجهي RAG في 2026.',
       datePublished: '2026-08-27',
       dateModified: '2026-11-03',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -2948,7 +2948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Pinecone', description: 'قاعدة بيانات متجهية مُدارة، سحابية فقط. طبقة Starter مجانية (2GB)؛ Builder بـ 20$/شهرياً ثابتة؛ Standard بـ 50$/شهرياً كحد أدنى للاستخدام.' },
         { '@type': 'ListItem', position: 2, name: 'Weaviate', description: 'مفتوحة المصدر (BSD-3-Clause)، استضافة ذاتية أو Weaviate Cloud. طبقة سحابية مجانية (100,000 كائن)؛ Flex من 45$/شهرياً كحد أدنى.' },
-        { '@type': 'ListItem', position: 3, name: 'Qdrant', description: 'مفتوحة المصدر (Apache 2.0)، مبنية على Rust. استضافة ذاتية مجانية أو طبقة Qdrant Cloud مجانية للأبد (0.5 vCPU/1GB RAM/4GB قرص).' },
+        { '@type': 'ListItem', position: 3, name: 'Qdrant', description: 'مفتوحة المصدر (Apache 2.0)، مبنية على Rust. استضافة ذاتية مجانية أو طبقة Qdrant Cloud مجانية بقيود عدم النشاط (0.5 vCPU/1GB RAM/4GB قرص).' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'قاعدة بيانات متجهية مفتوحة المصدر (Apache 2.0)، مضمّنة أو عميل-خادم. استضافة ذاتية مجانية؛ Chroma Cloud من 0$ + استخدام حتى 250$/شهرياً Team.' },
       ],
       inLanguage: 'ar',
@@ -2962,10 +2962,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-27',
     affiliateDisclosure: true,
-    title: 'Pinecone vs Weaviate vs Qdrant vs Chroma: 최고의 벡터 DB (2026)',
+    title: 'Pinecone vs Weaviate vs Qdrant vs Chroma: 벡터 DB 비교 (2026)',
     seoTitle: 'Pinecone vs Weaviate vs Qdrant vs Chroma (2026)',
     intro: '벡터 데이터베이스는 임베딩을 저장하고 RAG(retrieval-augmented generation) 파이프라인을 위한 유사도 검색을 실행합니다. Pinecone, Weaviate, Qdrant, Chroma는 셀프호스팅, 가격, 운영 부담이라는 서로 다른 네 가지 트레이드오프로 동일한 문제를 해결합니다. 본 가이드는 각 벤더의 공식 가격 페이지(2026년 11월 3일 확인)와 각 프로젝트의 GitHub 저장소로 검증한 최신 가격, 라이선스, 배포 모델을 비교합니다.',
-    metaDescription: 'Pinecone(Builder 월 20달러, Standard 월 50달러), Weaviate Cloud(Flex 월 45달러), Qdrant(영구 무료 셀프호스팅 계층), Chroma(오픈소스 + Team 월 250달러)를 2026년 RAG 벡터 검색 기준으로 비교합니다.',
+    metaDescription: 'Pinecone(Builder 월 20달러), Weaviate Cloud(Flex 월 45달러), Qdrant(셀프호스팅 무료), Chroma(오픈소스)의 2026년 RAG 벡터 검색 비교.',
     publishDate: '2026-08-27',
     dateModified: '2026-11-03',
     readTime: '15분 읽기',
@@ -2980,13 +2980,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '셀프호스팅 벡터 데이터베이스',
       'pinecone 가격',
     ],
-    leadAnswerBlock: '**2026년 RAG를 위한 최고의 벡터 데이터베이스는 셀프호스팅과 매니지드 클라우드 중 무엇을 선택하느냐에 따라 달라집니다. 운영 역량을 갖춘 팀에는 Qdrant가 적합하며(영구 무료 클라우드 계층, Apache 2.0 셀프호스팅), 인프라 작업을 전혀 원하지 않는 팀에는 Pinecone이 적합합니다(관리할 서버 없이 월 20달러 Builder 계층).** 단 하나의 "최선"은 존재하지 않습니다 — Weaviate와 Chroma는 각각 아래에서 설명하는 특정 중간 사용 사례에 적합합니다.',
+    leadAnswerBlock: '**RAG에 맞는 벡터 데이터베이스는 셀프호스팅과 매니지드 클라우드 중 무엇을 택하느냐에 따라 달라집니다. 운영 역량이 있는 팀에는 Qdrant(셀프호스팅 무료, 무료 클라우드 계층에는 비활성 제한 있음), 관리할 인프라를 원치 않는 팀에는 Pinecone(Builder 월 20달러)이 적합합니다.** 모든 경우에 이기는 선택지는 없으며, Weaviate와 Chroma는 중간 사례에 적합합니다.',
     quickAnswerTop: {
       ko: {
         question: 'Pinecone, Weaviate, Qdrant, Chroma 중 어떤 벡터 데이터베이스를 사용해야 합니까?',
-        answer: '셀프호스팅이 가능하고 무료 계층(0.5 vCPU/1GB RAM/4GB 디스크, Qdrant 가격 페이지 기준 영구 무료)과 Rust 기반 엔진을 원한다면 Qdrant를 사용하십시오. 인프라 관리를 전혀 원하지 않고 월 20달러부터 시작하는 사용량 기반 과금의 클라우드 전용 서비스를 받아들일 수 있다면 Pinecone을 사용하십시오. 셀프호스팅(BSD-3-Clause, 무료)과 매니지드 클라우드(월 45달러부터)를 모두 갖춘 하이브리드 옵션을 원한다면 Weaviate를 사용하십시오. 1인 개발자이거나 프로토타이핑 중이라면 Chroma를 사용하십시오 — 서버 없이 Python 프로세스 안에 내장되어 실행됩니다.',
+        answer: '셀프호스팅이 가능하고 무료 계층(0.5 vCPU/1GB RAM/4GB 디스크, 비활성 제한 있음, Qdrant 문서 기준)과 Rust 기반 엔진을 원한다면 Qdrant를 사용하십시오. 인프라 관리를 전혀 원하지 않고 월 20달러부터 시작하는 사용량 기반 과금의 클라우드 전용 서비스를 받아들일 수 있다면 Pinecone을 사용하십시오. 셀프호스팅(BSD-3-Clause, 무료)과 매니지드 클라우드(월 45달러부터)를 모두 갖춘 하이브리드 옵션을 원한다면 Weaviate를 사용하십시오. 1인 개발자이거나 프로토타이핑 중이라면 Chroma를 사용하십시오 — 서버 없이 Python 프로세스 안에 내장되어 실행됩니다.',
         bullets: [
-          'Qdrant: Rust, Apache 2.0, 무료 셀프호스팅 또는 영구 무료 클라우드 계층(0.5 vCPU/1GB RAM/4GB 디스크)',
+          'Qdrant: Rust, Apache 2.0, 무료 셀프호스팅 또는 비활성 제한이 있는 무료 클라우드 계층(0.5 vCPU/1GB RAM/4GB 디스크)',
           'Pinecone: 클라우드 전용, 셀프호스팅 옵션 없음, 무료 Starter 계층(2GB 저장공간) 이후 월 20달러 Builder 또는 월 50달러 Standard',
           'Weaviate: Go, BSD-3-Clause, 무료 셀프호스팅 또는 월 45달러부터 시작하는 Weaviate Cloud(Flex 계층; 무료 클라우드 계층도 있음)',
           'Chroma: Python/Rust 코어, Apache 2.0, 무료 셀프호스팅/임베디드 또는 월 0달러+사용량(Starter)부터 월 250달러(Team)까지의 Chroma Cloud',
@@ -3014,7 +3014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     affiliateLinks: [
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone', productCategory: 'dev-tool', priceRange: '무료–$50/월+', label: 'Pinecone 가격 보기 →' },
-      { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: '영구 무료 계층', label: 'Qdrant 무료로 시작하기 →' },
+      { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: '무료 계층(비활성 제한 있음)', label: 'Qdrant 무료로 시작하기 →' },
       { url: 'https://weaviate.io/pricing', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: '$45/월부터', label: 'Weaviate 가격 보기 →' },
       { url: 'https://www.trychroma.com/pricing', productName: 'Chroma', productCategory: 'dev-tool', priceRange: '무료–$250/월+', label: 'Chroma 가격 보기 →' },
     ],
@@ -3024,12 +3024,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '핵심 내용 — 벡터 데이터베이스 비교',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qdrant는 영구 무료 클라우드 계층을 갖춘 셀프호스팅에 적합하고, Pinecone은 인프라 없는 매니지드 클라우드에 적합하며, Weaviate와 Chroma는 각각 특정 틈새 영역을 담당합니다.' },
+          { type: 'one-sentence', text: 'Qdrant는 무료 클라우드 계층(비활성 제한 있음)을 갖춘 셀프호스팅에 적합하고, Pinecone은 인프라 없는 매니지드 클라우드에 적합하며, Weaviate와 Chroma는 각각 특정 틈새 영역을 담당합니다.' },
           { type: 'plain-terms', text: '벡터 데이터베이스는 문서의 숫자 "지문"(임베딩)을 저장하여 AI 앱이 가장 관련성 높은 항목을 빠르게 찾을 수 있게 합니다 — RAG(retrieval-augmented generation)에서 검색(retrieval)에 해당하는 부분입니다.' },
         ],
         items: [
           'Qdrant, Weaviate, Chroma는 모두 오픈소스이며 셀프호스팅이 무료입니다. Pinecone은 클라우드 전용입니다 — 어떤 가격대에도 셀프호스팅 버전의 Pinecone은 존재하지 않습니다.',
-          'Qdrant Cloud는 영구 무료 계층(0.5 vCPU / 1GB RAM / 4GB 디스크, 2026년 11월 3일 확인)을 안내하며 신용카드가 필요 없습니다. Qdrant 문서에 따르면 비활성 무료 클러스터는 1주 후 일시 중지되고 4주 후 삭제됩니다.',
+          'Qdrant Cloud는 무료 계층(0.5 vCPU / 1GB RAM / 4GB 디스크, 2026년 11월 3일 확인)을 안내하며 신용카드가 필요 없습니다. Qdrant 문서에 따르면 비활성 무료 클러스터는 1주 후 일시 중지되고 4주 후 삭제됩니다.',
           'Pinecone Starter는 무료입니다(2GB 저장공간, 월 200만 쓰기, 월 100만 읽기). 유료 계층은 월 20달러 정액(Builder) 또는 월 50달러 최소 사용량(Standard)부터 시작합니다.',
           'Weaviate Cloud에는 무료 계층이 있습니다(신용카드 불필요: 클러스터 1개, 객체 100,000개, 메모리 1GB, 디스크 10GB, 최선 노력형 가용성). 유료 Flex 계층은 월 45달러부터, Premium은 월 400달러부터로 표기되어 있습니다(2026년 11월 3일 weaviate.io/pricing에서 확인).',
           'Chroma Cloud Starter는 월 0달러에 사용량 기반 과금(쓰기, 저장, 쿼리)이 추가되며, Team 계층은 월 250달러에 사용량이 추가됩니다.',
@@ -3048,7 +3048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           { title: '셀프호스팅이 적합한 경우: 이미 다른 인프라(Kubernetes, Docker Compose 스택)를 운영 중이거나, 데이터 레지던시에 대한 완전한 통제가 필요하거나, 벡터 규모가 커서 사용량 기반 클라우드 과금이 VM보다 비용이 더 들 정도인 경우.', whyItMatters: '셀프호스팅은 쿼리당 과금을 완전히 없앱니다 — 활발한 RAG 앱은 매달 수백만 개의 읽기/쓰기 유닛을 생성할 수 있으며, 이는 사용량 기반 클라우드 요금에서 빠르게 누적됩니다.' },
           { title: '매니지드 클라우드가 적합한 경우: 전담 DevOps가 없는 소규모 팀이거나, 몇 주가 아닌 며칠 만에 출시하고 싶거나, 벡터 규모가 작아 무료 또는 진입 계층으로 충분한 경우.', whyItMatters: '매니지드 클라우드는 예측 가능한 월 청구서와 맞바꾸어 운영 부담을 제로로 만듭니다 — 패치도, 백업 전략 설계도, 데이터베이스 장애를 위한 대기 근무도 필요 없습니다.' },
-          { title: '확신이 없다면 소규모 VM이나 Docker 컨테이너에서 셀프호스팅 Qdrant로 시작하십시오.', whyItMatters: 'Qdrant의 영구 무료 클라우드 계층과 가벼운 Rust 바이너리는 저희 평가로는 위험이 낮은 출발점입니다 — 매니지드 클라우드가 그만한 가치가 있다고 판단되면 나중에 Pinecone이나 Weaviate Cloud로 마이그레이션할 수 있습니다.' },
+          { title: '확신이 없다면 소규모 VM이나 Docker 컨테이너에서 셀프호스팅 Qdrant로 시작하십시오.', whyItMatters: 'Qdrant의 무료 클라우드 계층과 가벼운 Rust 바이너리는 저희 평가로는 위험이 낮은 출발점입니다 — 매니지드 클라우드가 그만한 가치가 있다고 판단되면 나중에 Pinecone이나 Weaviate Cloud로 마이그레이션할 수 있습니다.' },
         ],
       },
       selfHostedComparison: {
@@ -3092,8 +3092,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'weaviate',
         title: 'Weaviate: 셀프호스팅 또는 매니지드 클라우드',
         content: [
-          '**[Weaviate](https://weaviate.io/pricing)는 오픈소스(BSD-3-Clause)이며 셀프호스팅이 무료이고, Weaviate Cloud도 유료 Flex 플랜 이전에 무료 계층(신용카드 불필요)을 제공합니다(2026년 11월 3일 weaviate.io/pricing에서 확인).** Weaviate Cloud는 2025년 10월 가격 구조를 개편했습니다. 기존 월 25달러 Serverless 계층이 최소 월 45달러의 Flex 계층으로 대체되었으며, 본 기사의 확인 시점인 2026년 11월 3일 기준으로도 여전히 현재 가격입니다.',
-          'Weaviate Cloud Free: 0달러, 클러스터 1개, 객체 100,000개, 메모리 1GB, 디스크 10GB, 최선 노력형 가용성, 백업 보존 없음. Flex: 월 45달러부터, 종량제, 공유 인프라, 99.5% SLA. Premium: 영업팀 경유, 월 400달러부터로 표기, 99.9% SLA(공유) 또는 99.95%(전용), Bring Your Own Cloud, HIPAA 준수 가능, 공유 또는 전용 배포 선택 가능. 셀프호스팅 Weaviate는 자체 인프라 비용 외에는 아무 비용도 들지 않습니다 — Weaviate Cloud를 구동하는 것과 동일한 BSD-3-Clause 코드입니다.',
+          '**[Weaviate](https://weaviate.io/pricing)는 오픈소스(BSD-3-Clause)이며 셀프호스팅이 무료이고, Weaviate Cloud도 유료 Flex 플랜 이전에 무료 계층(신용카드 불필요)을 제공합니다(2026년 11월 3일 weaviate.io/pricing에서 확인).**',
+          'Weaviate Cloud Free: 0달러, 클러스터 1개, 객체 100,000개, 메모리 1GB, 디스크 10GB, 최선 노력형 가용성, 백업 보존 없음. Flex: 월 45달러부터, 종량제, 공유 인프라, 99.5% SLA. Premium: 영업팀 경유, 월 400달러부터로 표기, 99.9% SLA(공유) 또는 99.95%(전용), Bring Your Own Cloud, HIPAA 적용 가능, 공유 또는 전용 배포 선택 가능. 셀프호스팅 Weaviate는 자체 인프라 비용 외에는 아무 비용도 들지 않습니다 — Weaviate Cloud를 구동하는 것과 동일한 BSD-3-Clause 코드입니다.',
           `Weaviate의 GitHub 저장소는 2026년 9월 18일 기준 ${S.ko('weaviate')}개의 스타를 보유하고 있습니다(GitHub 공개 API로 확인) — 여기서 다룬 세 개의 오픈소스 옵션 중 가장 적지만, 정기적인 릴리스와 함께 활발히 유지 관리되는 프로젝트입니다.`,
           'Weaviate는 개인 콘텐츠 제작자를 위한 제휴 프로그램이 아니라 기업 대상 파트너 생태계(Technology Alliance Partners, 시스템 통합업체, 부가가치 리셀러)를 갖추고 있습니다 — 이번 확인 시점을 기준으로 weaviate.io에서 추천당 수수료 구조는 발견되지 않았습니다.',
         ],
@@ -3101,7 +3101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '셀프호스팅: 무료, BSD-3-Clause, 무제한',
           'Cloud Free: 0달러, 신용카드 불필요, 객체 100,000개, 메모리 1GB, 디스크 10GB, 최선 노력형 가용성',
           'Cloud Flex: 월 45달러 최소, 공유 인프라, 99.5% SLA',
-          'Cloud Premium: 영업팀 경유 월 400달러부터, 99.9% SLA(공유) 또는 99.95%(전용), BYOC, HIPAA 준수 가능',
+          'Cloud Premium: 영업팀 경유 월 400달러부터, 99.9% SLA(공유) 또는 99.95%(전용), BYOC, HIPAA 적용 가능',
           `GitHub 스타 ${S.ko('weaviate')}개(2026년 9월 18일 확인)`,
         ],
       },
@@ -3109,14 +3109,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'qdrant',
         title: 'Qdrant: Rust 기반 셀프호스팅, 무료 클라우드 계층',
         content: [
-          '**[Qdrant](https://qdrant.tech/pricing/)는 오픈소스(Apache 2.0)이며 Rust로 작성되었고, 고정된 기간 제한이나 카드 등록 없이 영구 무료로 안내된 Qdrant Cloud 계층(0.5 vCPU / 1GB RAM / 4GB 디스크, qdrant.tech/pricing에서 2026년 11월 3일 확인)을 제공합니다. 비활성 무료 클러스터는 일시 중지된 뒤 삭제됩니다(아래 참조).** 셀프호스팅은 어떤 규모에서도 무료입니다 — 자체 인프라 비용만 지불하면 됩니다.',
+          '**[Qdrant](https://qdrant.tech/pricing/)는 오픈소스(Apache 2.0)이며 Rust로 작성되었고, 고정된 기간 제한이나 카드 등록 없이 이용할 수 있는 무료 Qdrant Cloud 계층(0.5 vCPU / 1GB RAM / 4GB 디스크, qdrant.tech/pricing에서 2026년 11월 3일 확인)을 제공합니다. 비활성 무료 클러스터는 일시 중지된 뒤 삭제됩니다(아래 참조).** 셀프호스팅은 어떤 규모에서도 무료입니다 — 자체 인프라 비용만 지불하면 됩니다.',
           '무료 계층: 0.5 vCPU, 1GB RAM, 4GB 디스크, 단일 노드 클러스터, 선택된 임베딩 모델에 대한 무료 클라우드 추론. Standard: 무료 계층을 초과하면 사용량 기반 요금, 전용 리소스, 유연한 확장, 99.5% 가동률 SLA — Pinecone이나 Weaviate와 달리 Qdrant는 Standard 계층의 고정 월 최소 요금을 공개하지 않습니다. Premium: 최소 지출 요건 있음(금액 비공개), SSO, 프라이빗 VPC 링크, 99.9% 가동률 SLA. Hybrid Cloud와 Private Cloud: 데이터 레지던시 및 규제 요구사항을 위한 맞춤 가격.',
           `Qdrant의 GitHub 저장소는 스타 ${S.ko('qdrant')}개를 기록했으며(PromptQuorum 디렉터리 데이터, 2026년 9월 18일 확인) 오픈소스 세 가지 중 가장 많습니다. Qdrant는 2026년 3월 12일 5,000만 달러 규모의 시리즈 B 투자 유치를 발표했습니다([Qdrant 공식 발표](https://qdrant.tech/blog/series-b-announcement/)).`,
           'Qdrant의 파트너 페이지에는 클라우드 인프라 파트너(AWS, Google Cloud, Microsoft Azure, Oracle Cloud, DigitalOcean 등 매니지드 배포용)와 스타트업 할인 프로그램이 나열되어 있으며, 개인 콘텐츠 제작자를 위한 제휴 프로그램은 없습니다.',
         ],
         items: [
           '셀프호스팅: 무료, Apache 2.0, 무제한',
-          '무료 클라우드 계층: 0.5 vCPU / 1GB RAM / 4GB 디스크, 영구 무료, 카드 등록 불필요',
+          '무료 클라우드 계층: 0.5 vCPU / 1GB RAM / 4GB 디스크, 카드 등록 불필요',
           'Standard: 사용량 기반, 공개된 고정 월 최소 요금 없음, 전용 리소스, 99.5% SLA',
           'Premium: 최소 지출(금액 비공개), SSO, 프라이빗 VPC 링크, 99.9% SLA',
           `GitHub 스타 ${S.ko('qdrant')}개(2026년 9월 18일 확인) — 세 개의 오픈소스 옵션 중 최다`,
@@ -3154,7 +3154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 서비스: 'Pinecone', '무료 계층': 'Starter: 2GB, 최소 요금 없음', '진입 유료 계층': '월 20달러 Builder 정액', '셀프호스팅 대안': '없음 — 클라우드 전용' },
           { 서비스: 'Weaviate Cloud', '무료 계층': 'Free: 0달러, 객체 100,000개, 메모리 1GB', '진입 유료 계층': '월 45달러 최소 Flex', '셀프호스팅 대안': '있음 — 무료, BSD-3-Clause' },
-          { 서비스: 'Qdrant Cloud', '무료 계층': '0.5 vCPU/1GB, 영구', '진입 유료 계층': '사용량 기반, 공개된 최소 요금 없음', '셀프호스팅 대안': '있음 — 무료, Apache 2.0' },
+          { 서비스: 'Qdrant Cloud', '무료 계층': '0.5 vCPU/1GB (비활성 제한 있음)', '진입 유료 계층': '사용량 기반, 공개된 최소 요금 없음', '셀프호스팅 대안': '있음 — 무료, Apache 2.0' },
         ],
       },
       tcoComparison: {
@@ -3212,7 +3212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Pinecone이 Weaviate보다 낫습니까?', a: '어느 쪽도 모든 상황에서 더 낫다고 할 수는 없습니다. Pinecone은 셀프호스팅 옵션이 없는 클라우드 전용 서비스로, 인프라 작업을 전혀 원하지 않는다면 더 단순하지만 데이터 레지던시 통제가 필요하다면 제약이 됩니다. Weaviate는 무료 셀프호스팅 버전과 매니지드 클라우드 옵션을 모두 제공해 더 큰 유연성을 주지만, 다만 Weaviate Cloud에도 무료 계층(객체 100,000개)이 있으며, 유료 Flex는 월 45달러부터입니다.' },
           { q: '벡터 100만 개를 저장하고 조회하는 데 비용이 얼마나 듭니까?', a: '대략적인 추정치(예시): Pinecone Standard는 쿼리량에 따라 월 50~150달러 수준입니다(월 50달러 최소 요금에 근접). Weaviate Cloud Flex는 이 규모에서 월 45달러 최소 요금에 근접합니다. 소규모 VM에서 셀프호스팅하는 Qdrant나 Weaviate는 인프라 비용이 월 약 50~80달러이며 여기에 운영 인건비가 더해지는데, 인건비를 계산에 넣으면 정확히 벡터 100만 개 규모의 12개월 총액이 일반적으로 매니지드 클라우드보다 높아집니다 — 그 근거는 위의 전체 TCO 비교를 참조하십시오.' },
           { q: 'Chroma에서 Qdrant로 어떻게 마이그레이션합니까?', a: 'Chroma의 Python 클라이언트(include=["embeddings","metadatas","documents"]가 포함된 collection.get())로 벡터와 메타데이터를 내보낸 다음, Qdrant Python 클라이언트의 upsert() 메서드로 Qdrant 컬렉션에 배치 업로드하면서 Chroma의 메타데이터 필드를 Qdrant의 payload 구조에 매핑합니다. 두 시스템 모두 표준 임베딩 형식을 사용하므로 벡터 자체는 변환이 필요 없습니다 — 클라이언트 측 코드와 컬렉션 스키마만 바뀝니다.' },
-          { q: 'Qdrant와 Weaviate는 같은 것입니까?', a: `아닙니다. 둘 다 하이브리드 검색을 지원하는 오픈소스 셀프호스팅 벡터 데이터베이스이지만, Qdrant는 Rust로 작성되었고(Apache 2.0), Weaviate는 Go로 작성되었습니다(BSD-3-Clause). Qdrant는 GitHub 스타가 더 많으며(${S.ko('qdrant')}개 대 ${S.ko('weaviate')}개, 2026년 9월 18일 확인) 만료 기한이 없는 무료 클라우드 계층(0.5 vCPU/1GB RAM/4GB 디스크)을 갖고 있습니다. Weaviate는 내장 벡터화 및 재순위 지정을 위한 더 넓은 모듈 생태계를 갖추었고, 자체 무료 클라우드 계층은 객체 100,000개로 제한됩니다.` },
+          { q: 'Qdrant와 Weaviate는 같은 것입니까?', a: `아닙니다. 둘 다 하이브리드 검색을 지원하는 오픈소스 셀프호스팅 벡터 데이터베이스이지만, Qdrant는 Rust로 작성되었고(Apache 2.0), Weaviate는 Go로 작성되었습니다(BSD-3-Clause). Qdrant는 GitHub 스타가 더 많으며(${S.ko('qdrant')}개 대 ${S.ko('weaviate')}개, 2026년 9월 18일 확인) 무료 클라우드 계층(0.5 vCPU/1GB RAM/4GB 디스크, 비활성 제한 있음)을 갖고 있습니다. Weaviate는 내장 벡터화 및 재순위 지정을 위한 더 넓은 모듈 생태계를 갖추었고, 자체 무료 클라우드 계층은 객체 100,000개로 제한됩니다.` },
           { q: 'Pinecone, Weaviate, Qdrant, Chroma에는 제휴 프로그램이 있습니까?', a: 'Pinecone은 콘텐츠 제작자를 위한 실제 공개 제휴 프로그램을 운영하고 있으며, pinecone.io/partners에서 직접 확인했습니다. 이는 기업 대상인 Solution Partner 및 Referral 프로그램과는 별개입니다. Weaviate와 Qdrant는 개인 대상 제휴 프로그램이 아니라 기업 대상 기술/솔루션/리셀러 파트너 생태계를 유지하고 있습니다. Chroma의 벡터 데이터베이스(trychroma.com)에 대한 제휴 프로그램은 발견되지 않았습니다. PromptQuorum은 현재 이들 프로그램 중 어디에도 가입되어 있지 않습니다 — 이 페이지의 모든 링크는 단순 제품 링크입니다.' },
           { q: 'Chroma를 프로덕션에서 사용할 수 있습니까?', a: '네, 임베디드 단일 프로세스 모드를 벗어난 경우라면 가능합니다. Chroma의 클라이언트-서버 모드와 매니지드 Chroma Cloud(Starter는 월 0달러+사용량부터, Team은 월 250달러+사용량)는 모두 다중 서비스 프로덕션 배포를 지원합니다. 특히 Chroma가 별도 서버 없이 단일 Python 프로세스 안에서 실행되는 임베디드 모드는 공유 프로덕션 부하가 아니라 1인 프로젝트와 프로토타입에 한정하는 것이 가장 좋습니다.' },
           { q: '셀프호스팅 가격과 서버리스/매니지드 가격의 실질적인 차이는 무엇입니까?', a: '셀프호스팅 가격은 인프라 비용(VM 또는 서버)에 패치, 모니터링, 백업을 위한 자신의 운영 시간을 더한 것으로, 쿼리당 요금은 없습니다. 매니지드/서버리스 가격(Pinecone, Weaviate Cloud, Qdrant Cloud)은 월 요금에 저장, 읽기, 쓰기에 대한 사용량 기반 요율을 더해 부과하며, 벤더가 모든 운영을 담당합니다. 셀프호스팅은 규모가 충분히 커서 운영 인건비가 청구서의 작은 부분에 불과하거나, 기존 운영 팀이 이미 거의 제로에 가까운 한계 비용으로 서버를 운영하고 있는 경우에만 순수 달러 비용에서 우위를 보이는 경향이 있습니다.' },
@@ -3237,8 +3237,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone 가격', description: '공식 가격 페이지 — Starter/Builder/Standard/Enterprise 계층 한도의 근거, 2026년 11월 3일 확인.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone 파트너', description: '공식 파트너 페이지 — Solution Partner 및 Referral 프로그램과 별개인 공개 콘텐츠 제작자 제휴 프로그램 확인의 근거.' },
-          { url: 'https://weaviate.io/pricing', title: 'Weaviate Cloud 가격', description: '공식 가격 페이지 — Free/Flex/Premium 계층 한도의 근거이며 2026년 11월 3일 재확인. 2025년 10월 가격 개편 블로그 게시글이 Flex 개편을 설명.' },
-          { url: 'https://qdrant.tech/pricing/', title: 'Qdrant 가격', description: '공식 가격 페이지 — 영구 무료 계층 사양(0.5 vCPU/1GB RAM/4GB 디스크)과 Standard/Premium 계층 구조의 근거. 2026년 11월 3일 재확인.' },
+          { url: 'https://weaviate.io/pricing', title: 'Weaviate Cloud 가격', description: '공식 가격 페이지 — Free/Flex/Premium 계층 한도의 근거이며 2026년 11월 3일 재확인.' },
+          { url: 'https://qdrant.tech/pricing/', title: 'Qdrant 가격', description: '공식 가격 페이지 — 무료 계층 사양(0.5 vCPU/1GB RAM/4GB 디스크)과 Standard/Premium 계층 구조의 근거. 2026년 11월 3일 재확인.' },
           { url: 'https://qdrant.tech/blog/series-b-announcement/', title: 'Qdrant: 시리즈 B 발표', description: '5,000만 달러 시리즈 B 투자 유치에 관한 공식 발표(2026년 3월 12일).' },
           { url: 'https://qdrant.tech/documentation/cloud/create-cluster/', title: 'Qdrant Cloud: 클러스터 생성', description: '무료 계층 관련 서술의 근거: 신용카드 불필요, 비활성 무료 클러스터는 1주 후 일시 중지되고 4주 후 삭제.' },
           { url: 'https://github.com/qdrant/qdrant-client', title: 'Qdrant Python 클라이언트', description: 'Qdrant 서버 없이 실행되는 로컬 모드(메모리 또는 디스크)의 근거.' },
@@ -3253,8 +3253,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Pinecone vs Weaviate vs Qdrant vs Chroma: 최고의 벡터 DB (2026)',
-      description: 'Pinecone(Builder 월 20달러, Standard 월 50달러), Weaviate Cloud(Flex 월 45달러), Qdrant(영구 무료 셀프호스팅 계층), Chroma(오픈소스 + Team 월 250달러)를 2026년 RAG 벡터 검색 기준으로 비교합니다.',
+      headline: 'Pinecone vs Weaviate vs Qdrant vs Chroma: 벡터 DB 비교 (2026)',
+      description: 'Pinecone(Builder 월 20달러, Standard 월 50달러), Weaviate Cloud(Flex 월 45달러), Qdrant(셀프호스팅 무료), Chroma(오픈소스 + Team 월 250달러)를 2026년 RAG 벡터 검색 기준으로 비교합니다.',
       datePublished: '2026-08-27',
       dateModified: '2026-11-03',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -3283,7 +3283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Pinecone', description: '클라우드 전용 매니지드 벡터 데이터베이스. 무료 Starter 계층(2GB); Builder 월 20달러 정액; Standard 월 50달러 최소 사용량.' },
         { '@type': 'ListItem', position: 2, name: 'Weaviate', description: '오픈소스(BSD-3-Clause) 셀프호스팅 또는 Weaviate Cloud. 무료 클라우드 계층(객체 100,000개); Flex는 월 45달러 최소부터.' },
-        { '@type': 'ListItem', position: 3, name: 'Qdrant', description: '오픈소스(Apache 2.0), Rust 기반. 무료 셀프호스팅 또는 영구 무료 Qdrant Cloud 계층(0.5 vCPU/1GB RAM/4GB 디스크).' },
+        { '@type': 'ListItem', position: 3, name: 'Qdrant', description: '오픈소스(Apache 2.0), Rust 기반. 무료 셀프호스팅 또는 비활성 제한이 있는 무료 Qdrant Cloud 계층(0.5 vCPU/1GB RAM/4GB 디스크).' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: '오픈소스(Apache 2.0) 임베디드 또는 클라이언트-서버 벡터 데이터베이스. 무료 셀프호스팅; Chroma Cloud는 월 0달러+사용량부터 월 250달러 Team까지.' },
       ],
       inLanguage: 'ko',
