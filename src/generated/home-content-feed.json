@@ -7859,7 +7859,7 @@
   {
     "lang": "en",
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Local LLM Comparison 2026",
-    "excerpt": "Qwen3.8-27B wins coding: 61.7 SWE-bench Pro, fits 24 GB. Llama 4 Scout: 10M context, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU on 14 GB. Which model wins per task?",
+    "excerpt": "Qwen3.8-27B wins coding: 61.7 SWE-bench Pro, fits 24 GB. Llama 4 Scout: 10M context, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU on 14 GB. Best per task?",
     "publishDate": "2026-04-04",
     "dateModified": "2026-10-17",
     "url": "/local-llms/qwen-vs-llama-vs-mistral",
@@ -7886,7 +7886,7 @@
   {
     "lang": "ja",
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral：2026ベンチマーク比較",
-    "excerpt": "Qwen3.8-27BがCodingで勝利：SWE-bench 61.7%、24 GBで動作。Llama 4 Scout：10Mトークンコンテキスト、~55 GB VRAM。Mistral Small 3.1：79% MMLU・14 GB RAM。タスク別にどれが勝つか。",
+    "excerpt": "Qwen3.8-27BはSWE-bench Pro 61.7で24 GBに収まります。Llama 4 Scoutは10Mコンテキスト、Mistral Small 3.1はMMLU 79%。用途別に比較します。",
     "publishDate": "2026-04-04",
     "dateModified": "2026-10-17",
     "url": "/ja/local-llms/qwen-vs-llama-vs-mistral",
@@ -7895,7 +7895,7 @@
   {
     "lang": "zh",
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral：2026基准对比",
-    "excerpt": "Qwen3.8-27B编程胜出：SWE-bench 61.7%，24 GB可运行。Llama 4 Scout：10M上下文，~55 GB显存。Mistral Small 3.1：79% MMLU，14 GB内存。各任务哪个模型最强。",
+    "excerpt": "Qwen3.8-27B在SWE-bench Pro得分61.7，24 GB可运行。Llama 4 Scout支持10M上下文，Mistral Small 3.1的MMLU为79%。按任务对比。",
     "publishDate": "2026-04-04",
     "dateModified": "2026-10-17",
     "url": "/zh/local-llms/qwen-vs-llama-vs-mistral",
@@ -7904,7 +7904,7 @@
   {
     "lang": "es",
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Comparativa de LLM Local 2026",
-    "excerpt": "Qwen3.8-27B gana en código: 61,7 SWE-bench Pro, cabe en 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU en 14 GB. Qué modelo gana.",
+    "excerpt": "Qwen3.8-27B gana en código: 61,7 SWE-bench Pro, cabe en 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU en 14 GB.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-10-17",
     "url": "/es/local-llms/qwen-vs-llama-vs-mistral",
@@ -7913,7 +7913,7 @@
   {
     "lang": "pt",
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Comparação de LLM Local 2026",
-    "excerpt": "Qwen3.8-27B vence em código: 61,7 SWE-bench Pro, cabe em 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU em 14 GB. Qual modelo vence.",
+    "excerpt": "Qwen3.8-27B vence em código: 61,7 SWE-bench Pro, cabe em 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU em 14 GB.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-10-17",
     "url": "/pt/local-llms/qwen-vs-llama-vs-mistral",
@@ -7931,7 +7931,7 @@
   {
     "lang": "ko",
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: 로컬 LLM 비교 2026",
-    "excerpt": "Qwen3.8-27B: 61.7 SWE-bench Pro, 24GB 최고 성능. Llama 4 Scout: MoE, 10M 컨텍스트, ~55GB VRAM. Mistral Small 3.1: 79% MMLU. 작업별 최적 모델 비교 포함.",
+    "excerpt": "Qwen3.8-27B 61.7 SWE-bench Pro(24GB), Llama 4 Scout 10M 컨텍스트, Mistral 79% MMLU. 작업별 비교.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-10-17",
     "url": "/ko/local-llms/qwen-vs-llama-vs-mistral",
@@ -9290,7 +9290,7 @@
   {
     "lang": "pt",
     "title": "Open WebUI em 2026: A Interface ChatGPT Auto-Hospedada para Ollama e Qualquer Modelo de IA",
-    "excerpt": "Open WebUI é uma interface gratuita e auto-hospedada estilo ChatGPT para Ollama e APIs da OpenAI. Licença, cláusula de marca, segurança e Docker.",
+    "excerpt": "Open WebUI é uma interface gratuita e auto-hospedada estilo ChatGPT para Ollama e APIs compatíveis com OpenAI. Licença, marca, segurança e Docker.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-11-02",
     "url": "/pt/local-llms/open-webui-review",
@@ -9299,7 +9299,7 @@
   {
     "lang": "ar",
     "title": "Open WebUI في 2026: واجهة ChatGPT ذاتية الاستضافة لـ Ollama وأي نموذج ذكاء اصطناعي",
-    "excerpt": "Open WebUI واجهة مجانية ذاتية الاستضافة على طراز ChatGPT لـ Ollama وواجهات OpenAI. الترخيص، شرط العلامة التجارية، الأمان، وتثبيت Docker.",
+    "excerpt": "Open WebUI واجهة مجانية ذاتية الاستضافة على طراز ChatGPT لـ Ollama وواجهات متوافقة مع OpenAI. الترخيص، العلامة التجارية، الأمان، Docker.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-11-02",
     "url": "/ar/local-llms/open-webui-review",
@@ -10711,8 +10711,8 @@
   },
   {
     "lang": "fr",
-    "title": "Materiel pour LLM local : GPU, mini PC et Mac compares",
-    "excerpt": "Besoins materiels LLM local par VRAM : meilleurs modeles pour GPU 8, 16 et 24 Go plus ce qu'exigent exactement le 70B et GLM-5.3. RTX serie 50, Apple M5.",
+    "title": "Matériel pour LLM local : GPU, mini PC et Mac comparés",
+    "excerpt": "Besoins matériels LLM local par VRAM : meilleurs modèles pour GPU 8, 16 et 24 Go plus ce qu'exigent exactement le 70B et GLM-5.3. RTX série 50, Apple M5.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-11-02",
     "url": "/fr/local-llms/local-llm-hardware-guide",
@@ -10730,7 +10730,7 @@
   {
     "lang": "zh",
     "title": "本地LLM硬件：GPU vs 迷你PC vs Mac 对比",
-    "excerpt": "对比GPU、迷你PC和Mac运行本地LLM：性价比、显存需求(8B–70B)、实测速度。附RTX 50系列与Apple M5选购建议，助你不花冤枉钱。",
+    "excerpt": "对比GPU、迷你PC和Mac运行本地LLM：性价比、显存需求(8B–70B)、速度参考。附RTX 50系列与Apple M5选购建议，助你不花冤枉钱。",
     "publishDate": "2026-04-04",
     "dateModified": "2026-11-02",
     "url": "/zh/local-llms/local-llm-hardware-guide",
@@ -12800,7 +12800,7 @@
   {
     "lang": "en",
     "title": "Best Budget GPU for Local LLMs 2026: RTX 3060 12GB & Alternatives",
-    "excerpt": "Best budget GPU for local LLMs 2026: RTX 3060 12GB ($270–300 used) runs Qwen3 14B at 9–12 tok/s. New: RTX 5060 Ti 16GB. Cheaper: RX 6700 XT. Full speed table.",
+    "excerpt": "Best budget GPU for local LLMs 2026: RTX 3060 12GB ($290–330 used) runs Qwen3 14B at 9–12 tok/s. New: RTX 5060 Ti 16GB. Cheaper: RX 6700 XT.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-09-01",
     "url": "/local-llms/best-budget-gpus-local-llm",
@@ -12809,7 +12809,7 @@
   {
     "lang": "de",
     "title": "Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB & Alternativen",
-    "excerpt": "Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB (270–300 € gebraucht) betreibt Qwen3 14B mit 9–12 Tok/s. Günstiger: RX 6700 XT. Neu: RTX 5060 Ti 16GB. Komplette Speed-Tabelle.",
+    "excerpt": "Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB (290–330 $ gebraucht) betreibt Qwen3 14B mit 9–12 Tok/s. Neu: RTX 5060 Ti 16GB. Mit Speed-Tabelle.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-09-01",
     "url": "/de/local-llms/best-budget-gpus-local-llm",
@@ -12818,7 +12818,7 @@
   {
     "lang": "fr",
     "title": "Meilleur GPU économique pour LLM locaux 2026 : RTX 3060 12GB et alternatives",
-    "excerpt": "Meilleur GPU économique pour LLM locaux 2026 : la RTX 3060 12GB (270–300 € d'occasion) fait tourner Qwen3 14B à 9–12 tok/s. Moins cher : RX 6700 XT. Neuf : RTX 5060 Ti 16GB. Tableau de vitesses complet.",
+    "excerpt": "Meilleur GPU économique pour LLM locaux 2026 : RTX 3060 12GB (290–330 $ d'occasion), Qwen3 14B à 9–12 tok/s. Neuf : RTX 5060 Ti 16GB. Tableau complet.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-09-01",
     "url": "/fr/local-llms/best-budget-gpus-local-llm",
@@ -12827,7 +12827,7 @@
   {
     "lang": "ja",
     "title": "ローカルLLM向けの最高のバジェットGPU",
-    "excerpt": "RTX 3060 12GB（中古約2万5千円）はローカルLLMを7種実行：Qwen3 14B（9-12トークン/秒）、Qwen3 8B（16-20トークン/秒）、Gemma 4 E12B、Mistral Small。VRAMと速度の早見表を掲載。",
+    "excerpt": "RTX 3060 12GB（中古約$290–330）でローカルLLMを7種実行：Qwen3 14B（9-12トークン/秒）、Qwen3 8B（16-20トークン/秒）ほか。VRAMと速度の早見表付き。",
     "publishDate": "2026-04-05",
     "dateModified": "2026-09-01",
     "url": "/ja/local-llms/best-budget-gpus-local-llm",
@@ -12836,7 +12836,7 @@
   {
     "lang": "zh",
     "title": "本地LLM的最佳预算GPU",
-    "excerpt": "RTX 3060 12GB（二手约1400-1800元）可跑7款本地LLM：Qwen3 14B（9-12令牌/秒）、Qwen3 8B（16-20令牌/秒）、Gemma 4 E12B、Mistral Small。附完整VRAM与速度对照表。",
+    "excerpt": "RTX 3060 12GB（二手约$290–330）可跑7款本地LLM：Qwen3 14B（9-12令牌/秒）、Qwen3 8B（16-20令牌/秒）等。附VRAM与速度对照表。",
     "publishDate": "2026-04-05",
     "dateModified": "2026-09-01",
     "url": "/zh/local-llms/best-budget-gpus-local-llm",
@@ -12845,7 +12845,7 @@
   {
     "lang": "es",
     "title": "Mejor GPU económica para LLMs locales 2026: RTX 3060 12GB",
-    "excerpt": "Mejor GPU económica para LLMs locales 2026: RTX 3060 12GB ($270–300 usada) ejecuta Qwen3 14B a 9–12 tok/s. Más barata: RX 6700 XT. Mejor VRAM/$: RTX A4000.",
+    "excerpt": "Mejor GPU económica para LLMs locales 2026: RTX 3060 12GB ($290–330 usada) ejecuta Qwen3 14B a 9–12 tok/s. Más barata: RX 6700 XT. Nueva: RTX 5060 Ti 16GB.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-09-01",
     "url": "/es/local-llms/best-budget-gpus-local-llm",
@@ -12854,7 +12854,7 @@
   {
     "lang": "pt",
     "title": "Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB",
-    "excerpt": "Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB (R$ 1.800–2.200 usada) roda Qwen3 14B a 9–12 tok/s. Nova: RTX 5060 Ti 16 GB. Mais barata: RX 6700 XT.",
+    "excerpt": "Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB (US$ 290–330 usada) roda Qwen3 14B a 9–12 tok/s. Nova: RTX 5060 Ti 16 GB. Barata: RX 6700 XT.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-09-01",
     "url": "/pt/local-llms/best-budget-gpus-local-llm",
@@ -12863,7 +12863,7 @@
   {
     "lang": "ar",
     "title": "أفضل ⁨GPU⁩ اقتصادية لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: ⁨RTX 3060 12GB⁩",
-    "excerpt": "أفضل ⁨GPU⁩ اقتصادية لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: ⁨RTX 3060 12GB⁩ (⁨200⁩–⁨250⁩$ مستعملة) تشغّل ⁨Qwen3 14B⁩ بـ ⁨9⁩–⁨12 tok⁩/ث. الأرخص: ⁨RX 6700 XT⁩. أفضل ⁨VRAM⁩ لكل دولار: ⁨RTX A4000⁩.",
+    "excerpt": "أفضل GPU اقتصادية لـ LLM المحلية 2026: RTX 3060 12GB (290–330$ مستعملة) تشغّل Qwen3 14B بـ 9–12 tok/ث. الأرخص: RX 6700 XT. الجديدة: RTX 5060 Ti 16GB.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-09-01",
     "url": "/ar/local-llms/best-budget-gpus-local-llm",
@@ -12872,7 +12872,7 @@
   {
     "lang": "ko",
     "title": "2026 로컬 LLM 최고의 예산형 GPU: RTX 3060 12GB",
-    "excerpt": "RTX 3060 12GB: Qwen3 8B(초당 16-20토큰), Qwen3 14B(초당 9-12토큰), Gemma 4 E12B, Mistral Small, DeepSeek-R1. VRAM 및 속도 벤치마크를 포함한 전체 모델 표.",
+    "excerpt": "RTX 3060 12GB: Qwen3 8B 초당 16-20토큰, 14B 초당 9-12토큰. 예산별 GPU 추천과 가격 비교 정리.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-04-05",
     "url": "/ko/local-llms/best-budget-gpus-local-llm",
@@ -13043,7 +13043,7 @@
   {
     "lang": "en",
     "title": "How Much VRAM for Local LLM? 7B to 70B Charts (2026)",
-    "excerpt": "Real VRAM by model size at Q4, verified against actual GGUF file sizes: 7B needs ~4GB, 13B ~8GB, 22B ~13GB, 70B ~42GB. Free calculator plus Q5/Q8 charts and the GB-per-billion formula.",
+    "excerpt": "Real VRAM by model size at Q4, based on actual GGUF file sizes: 7B needs ~4GB, 13B ~8GB, 22B ~13GB, 70B ~42GB. Free calculator plus Q5/Q8 charts.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-08-28",
     "url": "/local-llms/how-much-vram-local-llm",
@@ -13052,7 +13052,7 @@
   {
     "lang": "de",
     "title": "VRAM-Richtlinie: 7B=4GB, 70B=42GB (2026 Guide)",
-    "excerpt": "Echter VRAM-Bedarf bei Q4, verifiziert anhand echter GGUF-Dateigrößen: 7B braucht ~4GB, 13B ~8GB, 22B ~13GB, 70B ~42GB. Kostenloser Rechner und Q5/Q8-Tabellen.",
+    "excerpt": "Echter VRAM-Bedarf bei Q4 laut echten GGUF-Dateigrößen: 7B ~4GB, 13B ~8GB, 22B ~13GB, 70B ~42GB. Kostenloser Rechner, Q5/Q8-Tabellen und Formel.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-08-28",
     "url": "/de/local-llms/how-much-vram-local-llm",
@@ -13061,7 +13061,7 @@
   {
     "lang": "fr",
     "title": "Règle empirique VRAM : 7B=4GB, 70B=42GB (Guide 2026)",
-    "excerpt": "VRAM réelle par taille en Q4, vérifiée à partir de tailles de fichiers GGUF réels : 7B ~4 GB, 13B ~8 GB, 22B ~13 GB, 70B ~42 GB. Calculatrice gratuite, tableaux Q5/Q8 et la formule GB par milliard.",
+    "excerpt": "VRAM réelle par taille en Q4, d'après des fichiers GGUF réels : 7B ~4 GB, 13B ~8 GB, 22B ~13 GB, 70B ~42 GB. Calculatrice gratuite, tableaux Q5/Q8.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-08-28",
     "url": "/fr/local-llms/how-much-vram-local-llm",
@@ -13088,7 +13088,7 @@
   {
     "lang": "es",
     "title": "¿Cuánta VRAM para un LLM local? Tablas 7B a 70B (2026)",
-    "excerpt": "VRAM real por tamaño en Q4, verificada contra tamaños reales de archivos GGUF: 7B necesita ~4 GB, 13B ~8 GB, 22B ~13 GB, 70B ~42 GB. Calculadora gratis, tablas Q5/Q8 y la fórmula GB por mil millones.",
+    "excerpt": "VRAM real por tamaño en Q4, según archivos GGUF reales: 7B ~4 GB, 13B ~8 GB, 22B ~13 GB, 70B ~42 GB. Calculadora gratis, tablas Q5/Q8 y fórmula.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-08-28",
     "url": "/es/local-llms/how-much-vram-local-llm",
@@ -13097,7 +13097,7 @@
   {
     "lang": "pt",
     "title": "Quanta VRAM para um LLM local? Tabelas de 7B a 70B (2026)",
-    "excerpt": "VRAM real por tamanho em Q4, verificada contra tamanhos reais de arquivos GGUF: 7B precisa de ~4 GB, 13B de ~8 GB, 22B de ~13 GB, 70B de ~42 GB. Calculadora grátis, tabelas Q5/Q8 e a fórmula GB por bilhão.",
+    "excerpt": "VRAM real por tamanho em Q4, com base em arquivos GGUF reais: 7B ~4 GB, 13B ~8 GB, 22B ~13 GB, 70B ~42 GB. Calculadora grátis e tabelas Q5/Q8.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-08-28",
     "url": "/pt/local-llms/how-much-vram-local-llm",
@@ -13106,7 +13106,7 @@
   {
     "lang": "ar",
     "title": "كم تحتاج من ⁨VRAM⁩ لنموذج ⁨LLM⁩ محلي؟ جداول من ⁨7B⁩ إلى ⁨70B⁩ (⁨2026⁩)",
-    "excerpt": "⁨VRAM⁩ الحقيقية حسب الحجم في ⁨Q4⁩، تم التحقق منها مقابل أحجام ملفات ⁨GGUF⁩ الحقيقية: ⁨7B⁩ تحتاج ⁨~4 GB⁩ و⁨13B⁩ ⁨~8 GB⁩ و⁨22B⁩ ⁨~13 GB⁩ و⁨70B⁩ ⁨~42 GB⁩. حاسبة مجانية وجداول ⁨Q5/Q8⁩ ومعادلة ⁨GB⁩ لكل مليار.",
+    "excerpt": "VRAM الحقيقية حسب حجم النموذج في Q4 بحسب أحجام ملفات GGUF: 7B ~4 GB و13B ~8 GB و22B ~13 GB و70B ~42 GB. حاسبة مجانية وجداول Q5/Q8.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-08-28",
     "url": "/ar/local-llms/how-much-vram-local-llm",
@@ -15394,7 +15394,7 @@
     "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
     "excerpt": "M5 memory bandwidth: Pro 307 GB/s, Max 460 or 614 GB/s, Ultra 1.2 TB/s. What each chip means for LLM tokens/sec, plus Mac mini vs Studio vs MacBook Pro.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/local-llms/apple-silicon-m5-local-llm",
     "cluster": "local-llms"
   },
@@ -15448,7 +15448,7 @@
     "title": "Apple Silicon para LLM local 2026: M5 Pro vs M5 Max vs Mac Studio comparados",
     "excerpt": "Largura de banda de memória do Apple M5: M5 Pro 307, M5 Max 460–614 GB/s, M5 Ultra 1,2 TB/s. Tokens/s de LLM, dicas de Ollama e comparação de Macs.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/pt/local-llms/apple-silicon-m5-local-llm",
     "cluster": "local-llms"
   },
@@ -25598,7 +25598,7 @@
   {
     "lang": "en",
     "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
-    "excerpt": "Best RAG tools for business documents 2026: AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex compared by category, use case, and hardware needed.",
+    "excerpt": "Best RAG tools for business documents 2026: AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex compared by category, use case and hardware.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-08-26",
     "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
@@ -25607,7 +25607,7 @@
   {
     "lang": "de",
     "title": "Beste RAG-Tools für Geschäftsdokumente 2026: Lokale und private KI im Vergleich",
-    "excerpt": "Beste RAG-Tools für Geschäftsdokumente 2026: AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex im Vergleich nach Kategorie, Anwendungsfall und benötigter Hardware.",
+    "excerpt": "Beste RAG-Tools für Geschäftsdokumente 2026: AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex nach Kategorie, Einsatz, Hardware.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-08-26",
     "url": "/de/power-local-llm/best-rag-tools-for-business-documents-2026",
@@ -25616,7 +25616,7 @@
   {
     "lang": "fr",
     "title": "Meilleurs outils RAG pour documents professionnels 2026 : IA locale et privée comparée",
-    "excerpt": "Meilleurs outils RAG pour documents professionnels 2026 : AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex comparés par catégorie, cas d'usage et matériel requis.",
+    "excerpt": "Meilleurs outils RAG pour documents pro 2026 : AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex comparés par catégorie, usage et matériel.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-08-26",
     "url": "/fr/power-local-llm/best-rag-tools-for-business-documents-2026",
@@ -25643,7 +25643,7 @@
   {
     "lang": "es",
     "title": "Mejores herramientas RAG para documentos empresariales 2026: IA local y privada comparada",
-    "excerpt": "Mejores herramientas RAG para documentos empresariales 2026: AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify y LlamaIndex comparadas por categoría, caso de uso y hardware necesario.",
+    "excerpt": "Mejores herramientas RAG para documentos empresariales 2026: AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex por categoría, uso y hardware.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-08-26",
     "url": "/es/power-local-llm/best-rag-tools-for-business-documents-2026",
@@ -25670,7 +25670,7 @@
   {
     "lang": "ko",
     "title": "2026년 기업 문서를 위한 최고의 RAG 도구: 로컬 및 프라이빗 AI 비교",
-    "excerpt": "2026년 기업 문서용 RAG 도구 비교: AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex를 범주, 사용 사례, 필요한 하드웨어별로 비교합니다.",
+    "excerpt": "2026년 기업 문서용 RAG 도구 비교: AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex를 범주·사용 사례·하드웨어별로 비교합니다.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-08-26",
     "url": "/ko/power-local-llm/best-rag-tools-for-business-documents-2026",
@@ -29162,7 +29162,7 @@
   {
     "lang": "en",
     "title": "Second Me Review: Train Your Own Personal AI Locally",
-    "excerpt": "Second Me is an open-source (Apache 2.0) project for training a personal AI from your own data, using GraphRAG and llama.cpp with Qwen2.5 base models. Here is what it actually does.",
+    "excerpt": "Second Me on GitHub: open-source (Apache 2.0) project that trains a personal AI on your own data with GraphRAG and llama.cpp on Qwen2.5. What it does.",
     "publishDate": "2026-09-03",
     "dateModified": "2026-09-03",
     "url": "/power-local-llm/second-me-review",
@@ -29171,7 +29171,7 @@
   {
     "lang": "de",
     "title": "Second Me Review: Trainieren Sie Ihre eigene KI lokal",
-    "excerpt": "Second Me ist ein Open-Source-Projekt (Apache 2.0) zum Trainieren einer persönlichen KI aus Ihren eigenen Daten, mit GraphRAG und llama.cpp auf Qwen2.5-Basismodellen. Was es wirklich tut.",
+    "excerpt": "Second Me auf GitHub: Open-Source-Projekt (Apache 2.0), das mit GraphRAG und llama.cpp auf Qwen2.5 eine persönliche KI aus Ihren Daten trainiert.",
     "publishDate": "2026-09-03",
     "dateModified": "2026-09-03",
     "url": "/de/power-local-llm/second-me-review",
@@ -29180,7 +29180,7 @@
   {
     "lang": "fr",
     "title": "Second Me Review: entraînez votre propre IA en local",
-    "excerpt": "Second Me est un projet open source (Apache 2.0) pour entraîner une IA personnelle à partir de vos données, avec GraphRAG et llama.cpp sur des modèles de base Qwen2.5. Ce qu'il fait réellement.",
+    "excerpt": "Second Me sur GitHub : projet open source (Apache 2.0) qui entraîne une IA personnelle sur vos données via GraphRAG et llama.cpp (Qwen2.5). Ce qu'il fait.",
     "publishDate": "2026-09-03",
     "dateModified": "2026-09-03",
     "url": "/fr/power-local-llm/second-me-review",
@@ -29189,7 +29189,7 @@
   {
     "lang": "ja",
     "title": "Second Meレビュー：自分専用のAIをローカルで訓練する",
-    "excerpt": "Second Meは、GraphRAGとllama.cppを使い、Qwen2.5ベースモデル上で自分のデータからパーソナルAIを訓練するオープンソース（Apache 2.0）プロジェクトです。実際に何をするのかを解説します。",
+    "excerpt": "Second MeのGitHubプロジェクトを解説。GraphRAGとllama.cppでQwen2.5上に自分のデータからパーソナルAIを訓練するオープンソース（Apache 2.0）です。",
     "publishDate": "2026-09-03",
     "dateModified": "2026-09-03",
     "url": "/ja/power-local-llm/second-me-review",
@@ -29207,7 +29207,7 @@
   {
     "lang": "es",
     "title": "Second Me Review: entrena tu propia IA en local",
-    "excerpt": "Second Me es un proyecto de código abierto (Apache 2.0) para entrenar una IA personal con tus propios datos, usando GraphRAG y llama.cpp sobre modelos base Qwen2.5. Esto es lo que realmente hace.",
+    "excerpt": "Second Me en GitHub: proyecto de código abierto (Apache 2.0) que entrena una IA personal con tus datos usando GraphRAG y llama.cpp (Qwen2.5). Qué hace.",
     "publishDate": "2026-09-03",
     "dateModified": "2026-09-03",
     "url": "/es/power-local-llm/second-me-review",
@@ -29216,7 +29216,7 @@
   {
     "lang": "pt",
     "title": "Second Me Review: treine sua própria IA localmente",
-    "excerpt": "O Second Me é um projeto open source (Apache 2.0) para treinar uma IA pessoal a partir dos seus próprios dados, usando GraphRAG e llama.cpp em modelos base Qwen2.5. Veja o que ele realmente faz.",
+    "excerpt": "Second Me no GitHub: projeto open source (Apache 2.0) que treina uma IA pessoal com seus dados usando GraphRAG e llama.cpp (Qwen2.5). O que ele faz.",
     "publishDate": "2026-09-03",
     "dateModified": "2026-09-03",
     "url": "/pt/power-local-llm/second-me-review",
@@ -29225,7 +29225,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Second Me: درّب ذكاءك الاصطناعي الخاص محليًا",
-    "excerpt": "Second Me هو مشروع مفتوح المصدر (Apache 2.0) لتدريب ذكاء اصطناعي شخصي من بياناتك الخاصة، باستخدام GraphRAG وllama.cpp على نماذج أساس Qwen2.5. إليك ما يفعله فعليًا.",
+    "excerpt": "Second Me على GitHub: مشروع مفتوح المصدر (Apache 2.0) لتدريب ذكاء اصطناعي شخصي من بياناتك بـ GraphRAG وllama.cpp على Qwen2.5. ماذا يفعل فعليًا.",
     "publishDate": "2026-09-03",
     "dateModified": "2026-09-03",
     "url": "/ar/power-local-llm/second-me-review",
@@ -29234,7 +29234,7 @@
   {
     "lang": "ko",
     "title": "Second Me 리뷰: 나만의 AI를 로컬에서 훈련하기",
-    "excerpt": "Second Me는 GraphRAG와 llama.cpp를 사용해 Qwen2.5 베이스 모델 위에서 자신의 데이터로 개인 AI를 훈련하는 오픈소스(Apache 2.0) 프로젝트입니다. 실제로 무엇을 하는지 알아봅니다.",
+    "excerpt": "Second Me GitHub 리뷰: GraphRAG와 llama.cpp로 Qwen2.5 위에서 내 데이터로 개인 AI를 훈련하는 오픈소스(Apache 2.0) 프로젝트입니다.",
     "publishDate": "2026-09-03",
     "dateModified": "2026-09-03",
     "url": "/ko/power-local-llm/second-me-review",
@@ -33617,36 +33617,36 @@
   {
     "lang": "en",
     "title": "Whisper.cpp Review: Local Speech-to-Text in Pure C/C++",
-    "excerpt": "Whisper.cpp review: the MIT-licensed C/C++ port of OpenAI Whisper for local speech-to-text. History, install steps, real CLI commands, license, and when to use faster-whisper instead.",
+    "excerpt": "Whisper.cpp review: the MIT-licensed C/C++ port of OpenAI Whisper for local speech-to-text. Install steps, CLI commands, license, and faster-whisper.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-11-02",
     "url": "/power-local-llm/whisper-cpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Whisper.cpp-Rezension: Lokale Spracherkennung in reinem C/C++",
-    "excerpt": "Whisper.cpp-Rezension: der MIT-lizenzierte C/C++-Port von OpenAI Whisper für lokale Spracherkennung. Geschichte, Installation, echte CLI-Befehle, Lizenz und wann faster-whisper die bessere Wahl ist.",
+    "excerpt": "Whisper.cpp-Rezension: C/C++-Port von OpenAI Whisper (MIT) für lokale Spracherkennung. Installation, CLI-Befehle, Lizenz und Vergleich mit faster-whisper.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-11-02",
     "url": "/de/power-local-llm/whisper-cpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Whisper.cpp: avis — reconnaissance vocale locale en C/C++ pur",
-    "excerpt": "Avis whisper.cpp : le port C/C++ sous licence MIT d'OpenAI Whisper pour la reconnaissance vocale locale. Histoire, installation, vraies commandes, licence, et quand préférer faster-whisper.",
+    "excerpt": "Avis whisper.cpp : le port C/C++ d'OpenAI Whisper (licence MIT) pour la reconnaissance vocale locale. Installation, commandes CLI, faster-whisper.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-11-02",
     "url": "/fr/power-local-llm/whisper-cpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "whisper.cppレビュー:純粋なC/C++によるローカル音声認識",
-    "excerpt": "whisper.cppレビュー:OpenAI WhisperのMITライセンスC/C++移植版によるローカル音声認識。歴史、インストール手順、実際のCLIコマンド、ライセンス、faster-whisperを選ぶべき場面を解説。",
+    "excerpt": "whisper.cppレビュー:OpenAI WhisperのMIT版C/C++移植によるローカル音声認識。インストール、CLIコマンド、ライセンス、faster-whisperとの比較。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-11-02",
     "url": "/ja/power-local-llm/whisper-cpp-review",
     "cluster": "power-local-llm"
   },
@@ -33655,43 +33655,43 @@
     "title": "whisper.cpp评测:纯C/C++本地语音识别",
     "excerpt": "whisper.cpp评测:采用MIT许可证的OpenAI Whisper C/C++移植版,用于本地语音识别。历史、安装步骤、真实CLI命令、许可证,以及何时应选择faster-whisper。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-11-02",
     "url": "/zh/power-local-llm/whisper-cpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Whisper.cpp: análisis — reconocimiento de voz local en C/C++ puro",
-    "excerpt": "Análisis de whisper.cpp: el port en C/C++ con licencia MIT de OpenAI Whisper para reconocimiento de voz local. Historia, instalación, comandos reales, licencia y cuándo usar faster-whisper.",
+    "excerpt": "Análisis de whisper.cpp: el port en C/C++ de OpenAI Whisper (licencia MIT) para voz a texto local. Instalación, comandos CLI, licencia y faster-whisper.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-11-02",
     "url": "/es/power-local-llm/whisper-cpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Whisper.cpp: análise — reconhecimento de voz local em C/C++ puro",
-    "excerpt": "Análise do whisper.cpp: o port em C/C++ com licença MIT do OpenAI Whisper para reconhecimento de voz local. História, instalação, comandos reais, licença e quando usar o faster-whisper.",
+    "excerpt": "Análise do whisper.cpp: o port em C/C++ do OpenAI Whisper (licença MIT) para voz em texto local. Instalação, comandos CLI, licença e faster-whisper.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-11-02",
     "url": "/pt/power-local-llm/whisper-cpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "مراجعة whisper.cpp: تحويل الكلام إلى نص محليًا بلغة C/C++ خالصة",
-    "excerpt": "مراجعة whisper.cpp: نسخة C/C++ من OpenAI Whisper برخصة MIT لتحويل الكلام إلى نص محليًا. التاريخ، خطوات التثبيت، أوامر CLI حقيقية، الرخصة، ومتى تختار faster-whisper بدلًا منه.",
+    "excerpt": "مراجعة whisper.cpp: نسخة C/C++ من OpenAI Whisper برخصة MIT لتحويل الكلام إلى نص محليًا. التثبيت، أوامر CLI، الرخصة، ومقارنته بـ faster-whisper.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-11-02",
     "url": "/ar/power-local-llm/whisper-cpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "whisper.cpp 리뷰: 순수 C/C++로 구현한 로컬 음성 인식",
-    "excerpt": "whisper.cpp 리뷰: OpenAI Whisper를 MIT 라이선스로 C/C++ 포팅한 로컬 음성 인식 도구. 역사, 설치 단계, 실제 CLI 명령어, 라이선스, faster-whisper를 선택해야 할 때를 정리했습니다.",
+    "excerpt": "whisper.cpp 리뷰: OpenAI Whisper의 MIT 라이선스 C/C++ 포팅. 설치 방법, CLI 명령어, 라이선스, faster-whisper와의 비교를 정리했습니다.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-11-02",
     "url": "/ko/power-local-llm/whisper-cpp-review",
     "cluster": "power-local-llm"
   },

@@ -109,9 +109,11 @@ async function check(url) {
   const add = (id, msg) => findings.push(`${id}: ${msg}`)
   const lang = localeOf(url)
   let html
+  let finalUrl = url
   try {
     const res = await fetch(url, { redirect: 'follow', headers: { 'user-agent': 'pq-seo-gate/1.0' } })
     if (!res.ok) return [`FETCH: HTTP ${res.status}`]
+    finalUrl = res.url || url // canonical is checked against the post-redirect URL (e.g. legacy -2026 file names 301 to the final slug)
     html = await res.text()
   } catch (e) {
     return [`FETCH: ${e.message}`]
@@ -147,7 +149,7 @@ async function check(url) {
 
   const canonTag = (html.match(/<link\b[^>]*rel="canonical"[^>]*>/i) ?? [''])[0]
   const canonical = attr(canonTag, 'href')
-  const here = new URL(url)
+  const here = new URL(finalUrl)
   const expectCanon = `https://www.promptquorum.com${here.pathname}`
   if (!canonical) add('A4', 'no rel=canonical')
   else if (canonical.replace(/\/$/, '') !== expectCanon.replace(/\/$/, '')) add('A4', `canonical ${canonical} != ${expectCanon}`)
