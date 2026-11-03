@@ -46,10 +46,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         updatedDate: '2026-11-02',
       },
-      de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      zh: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
     },
     toc: [
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
@@ -203,7 +199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'RAG Pipeline', whyItMatters: 'Embedding model + Llama 3.1 8B + ChromaDB fits entirely in 36GB M5 Pro unified memory. No GPU limitations.' },
           { title: 'Voice Assistant', whyItMatters: 'Whisper Metal + Ollama Llama + Piper TTS = 1.2s latency on M5 Pro. Quiet Mac mini suitable for an always-on setup.' },
           { title: 'Multimodal', whyItMatters: 'Whisper + LLaVA 7B vision + Llama 3.1 8B reasoning = all fit in 36GB, simultaneous processing.' },
-          { title: 'Private Writing', whyItMatters: 'Llama 3.3 70B Q5 on M5 Max 128GB = highest quality, fully offline, no API costs, zero privacy leakage. On the new Mac Studio M5 Ultra (up to 512GB), 120B+ models become possible for users who need maximum quality.' },
+          { title: 'Private Writing', whyItMatters: 'Llama 3.3 70B Q5 on M5 Max 128GB = high quality for long-form writing, runs offline once the model is downloaded, no per-token API costs, and prompts stay on the device during inference. On the new Mac Studio M5 Ultra (up to 512GB), 120B+ models become possible for users who want more headroom.' },
         ],
       },
       whichMac: {
@@ -330,19 +326,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ctaText: '¿Ejecutas un LLM en Apple Silicon? Compara la salida de tu modelo M5 local con GPT-4, Claude, Gemini y otros 22 modelos en la nube en un solo despacho con PromptQuorum — descubre dónde tu configuración local iguala la calidad de la nube y dónde se queda corta.',
     leadAnswerBlock: '**Apple Silicon no tiene un límite de VRAM aparte: el modelo puede usar toda la memoria unificada, desde 16GB (Mac mini M6) hasta 512GB (Mac Studio M5 Ultra). Velocidades estimadas: 15–20 tok/s con modelos 34B en M5 Pro (64GB) y 12–18 tok/s con modelos 70B en M5 Max (128GB).**',
     quickAnswerTop: {
-      en: {
-        question: 'What Apple Silicon Mac should I buy for local LLMs in 2026?',
-        answer: 'Buy the maximum memory configuration your budget allows: 36GB M5 Pro (Mac Mini, $800–1200) runs 13–34B models comfortably. 64GB M5 Pro (MacBook Pro, $1500–2500) is the sweet spot for portable AI workstations. 128GB M5 Max (Mac Studio, $3000–5000) is the only consumer hardware that runs 70B models at usable speed without multi-GPU complexity. Apple Silicon memory cannot be upgraded after purchase.',
-        bullets: [
-          'M5 Pro 64GB: best value, runs Llama 3.3 70B Q4 at 15–20 tok/s, $1200–1500',
-          'M5 Max 128GB: max quality, runs Llama 3.3 70B Q5 at 12–16 tok/s, $3000+',
-          'M5 base 32GB: adequate for 13B models, entry point, $800',
-          'Do not buy less than 36GB — models outgrow 32GB within 12 months',
-          'Metal GPU acceleration (automatic in Ollama, MLX, llama.cpp) requires zero configuration',
-          'Power cost: $35–55/year for 24/7 inference vs $300–400/year for desktop RTX 4090',
-        ],
-        updatedDate: '2026-05-15',
-      },
       es: {
         question: '¿Qué Mac Apple Silicon debo comprar para LLMs locales en 2026?',
         answer: 'Compra la configuración de memoria máxima que tu presupuesto permita: el Mac mini M6 parte de $899 con 16GB (modelos 7–8B) y llega a 32GB (modelos 13B). Un Mac mini o MacBook Pro M5 Pro de 64GB (desde $1.699) es el punto óptimo para modelos 34B y estaciones de trabajo de IA portátiles. El Mac Studio M5 Max de 128GB ($2.499) ejecuta modelos 70B sin complejidad multi-GPU. El Mac Studio M5 Ultra ($5.499 con 96GB, hasta 512GB desde $22.299) es una de las pocas opciones de consumo que aloja modelos de 120B+. La memoria de Apple Silicon no se puede actualizar después de la compra. Los precios son de lista en EE. UU. y pueden variar según tu país.',
@@ -357,10 +340,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         updatedDate: '2026-11-02',
       },
-      de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      zh: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
     },
     toc: [
       { label: 'Puntos clave', anchor: '#key-takeaways' },
@@ -515,7 +494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Pipeline RAG', whyItMatters: 'Modelo de embedding + Llama 3.1 8B + ChromaDB cabe completamente en los 36GB de memoria unificada del M5 Pro. Sin limitaciones de GPU.' },
           { title: 'Asistente de voz', whyItMatters: 'Whisper Metal + Ollama Llama + Piper TTS = 1,2s de latencia en M5 Pro. Mac mini silencioso, adecuado para una configuración siempre activa.' },
           { title: 'Multimodal', whyItMatters: 'Whisper + LLaVA 7B visión + Llama 3.1 8B razonamiento = todo cabe en 36GB, procesamiento simultáneo.' },
-          { title: 'Escritura privada', whyItMatters: 'Llama 3.3 70B Q5 en M5 Max 128GB = máxima calidad, completamente offline, sin costos de API, cero filtración de datos. En el nuevo Mac Studio M5 Ultra (hasta 512GB), los modelos de 120B+ son posibles para quien necesite calidad máxima.' },
+          { title: 'Escritura privada', whyItMatters: 'Llama 3.3 70B Q5 en M5 Max 128GB = alta calidad para escritura extensa, funciona sin conexión una vez descargado el modelo, sin costos de API por token y con los prompts en el dispositivo durante la inferencia. En el nuevo Mac Studio M5 Ultra (hasta 512GB), los modelos de 120B+ son posibles para quien quiera más margen.' },
         ],
       },
       whichMac: {
@@ -830,7 +809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'خط أنابيب RAG', whyItMatters: 'نموذج تضمين + Llama 3.1 8B + ChromaDB يتسع كاملًا في 36GB من الذاكرة الموحدة لـ M5 Pro. دون قيود GPU.' },
           { title: 'مساعد صوتي', whyItMatters: 'Whisper Metal + Ollama Llama + Piper TTS = زمن استجابة 1.2 ثانية على M5 Pro. Mac mini الهادئ مناسب للتهيئة دائمة التشغيل.' },
           { title: 'متعدد الوسائط', whyItMatters: 'Whisper + LLaVA 7B رؤية + Llama 3.1 8B استدلال = الكل يتسع في 36GB، معالجة متزامنة.' },
-          { title: 'كتابة خاصة', whyItMatters: 'Llama 3.3 70B Q5 على M5 Max 128GB = أقصى جودة، دون اتصال بالكامل، بلا تكاليف API، وصفر تسرّب بيانات. وعلى Mac Studio M5 Ultra الجديد (حتى 512GB)، تصبح نماذج 120B فأكثر ممكنة لمن يحتاج أقصى جودة.' },
+          { title: 'كتابة خاصة', whyItMatters: 'Llama 3.3 70B Q5 على M5 Max 128GB = جودة عالية للكتابة الطويلة، ويعمل دون اتصال بعد تنزيل النموذج، بلا تكاليف API لكل رمز، وتبقى الموجّهات على الجهاز أثناء الاستدلال. وعلى Mac Studio M5 Ultra الجديد (حتى 512GB)، تصبح نماذج 120B فأكثر ممكنة لمن يريد هامشًا أكبر.' },
         ],
       },
       whichMac: {
@@ -979,7 +958,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ctaText: 'Você está rodando um LLM no Apple Silicon? Compare a saída do seu modelo M5 local com GPT-4, Claude, Gemini e outros 22 modelos na nuvem em um único despacho com o PromptQuorum.',
     leadAnswerBlock: '**O Apple Silicon não tem limite de VRAM separado: o modelo usa toda a memória unificada, de 16 GB (Mac mini M6) a 512 GB (Mac Studio M5 Ultra). Estimativa de velocidade: 15-20 tok/s (34B, M5 Pro 64 GB) e 12-18 tok/s (70B, M5 Max 128 GB).**',
     quickAnswerTop: {
-      en: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       pt: {
         question: 'Qual Mac Apple Silicon devo comprar para LLMs locais em 2026?',
         answer: 'Compre a configuração de memória máxima que seu orçamento permitir: o Mac mini M6 começa em US$ 899 com 16 GB (modelos 7-8B) e vai até 32 GB (modelos 13B). Um Mac mini ou MacBook Pro M5 Pro de 64 GB (a partir de US$ 1.699) é o ponto ideal para modelos 34B e estações de trabalho de IA portáteis. O Mac Studio M5 Max de 128 GB (US$ 2.499) roda modelos 70B sem a complexidade multi-GPU. O Mac Studio M5 Ultra (US$ 5.499 com 96 GB, até 512 GB a partir de US$ 22.299) é uma das poucas opções de consumo que comporta modelos de 120B+. A memória do Apple Silicon não pode ser atualizada após a compra. Preços de tabela nos EUA; no Brasil podem variar bastante devido a impostos de importação.',
@@ -993,10 +971,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         updatedDate: '2026-11-02',
       },
-      de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      zh: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
     },
     toc: [
       { label: 'Pontos-chave', anchor: '#key-takeaways' },
@@ -1151,7 +1125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Pipeline RAG', whyItMatters: 'Modelo de embedding + Llama 3.1 8B + ChromaDB cabe inteiramente nos 36 GB de memória unificada do M5 Pro. Sem limitações de GPU.' },
           { title: 'Assistente de voz', whyItMatters: 'Whisper Metal + Ollama Llama + Piper TTS = 1,2 s de latência no M5 Pro. Mac mini silencioso, adequado para uma configuração sempre ativa.' },
           { title: 'Multimodal', whyItMatters: 'Whisper + LLaVA 7B visão + Llama 3.1 8B raciocínio = tudo cabe em 36 GB, processamento simultâneo.' },
-          { title: 'Escrita privada', whyItMatters: 'Llama 3.3 70B Q5 no M5 Max 128 GB = maior qualidade, totalmente offline, sem custos de API, zero vazamento de privacidade. No novo Mac Studio M5 Ultra (até 512 GB), modelos de 120B+ se tornam possíveis para quem precisa de qualidade máxima.' },
+          { title: 'Escrita privada', whyItMatters: 'Llama 3.3 70B Q5 no M5 Max 128 GB = alta qualidade para textos longos, funciona offline depois que o modelo é baixado, sem custos de API por token e com os prompts permanecendo no dispositivo durante a inferência. No novo Mac Studio M5 Ultra (até 512 GB), modelos de 120B+ se tornam possíveis para quem quer mais margem.' },
         ],
       },
       whichMac: {
@@ -1299,19 +1273,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     targetKeywords: ['Apple Silicon LLM', 'M5 Pro M5 Max', 'M5 Ultra LLM', 'M6 lokales LLM', 'MacBook Air M5 lokales LLM', 'einheitlicher Speicher vs VRAM'],
     leadAnswerBlock: '**Apple Silicon hat keine getrennte VRAM-Grenze: Das Modell kann den gesamten einheitlichen Speicher nutzen, von 16 GB (Mac mini M6) bis 512 GB (Mac Studio M5 Ultra). Geschätzte Geschwindigkeit: 15–20 tok/s bei 34B-Modellen auf dem M5 Pro (64 GB) und 12–18 tok/s bei 70B-Modellen auf dem M5 Max (128 GB).**',
     quickAnswerTop: {
-      en: {
-        question: 'What Apple Silicon Mac should I buy for local LLMs in 2026?',
-        answer: 'Buy the maximum memory configuration your budget allows: 36GB M5 Pro (Mac Mini, $800–1200) runs 13–34B models comfortably. 64GB M5 Pro (MacBook Pro, $1500–2500) is the sweet spot for portable AI workstations. 128GB M5 Max (Mac Studio, $3000–5000) is the only consumer hardware that runs 70B models at usable speed without multi-GPU complexity. Apple Silicon memory cannot be upgraded after purchase.',
-        bullets: [
-          'M5 Pro 64GB: best value, runs Llama 3.3 70B Q4 at 15–20 tok/s, $1200–1500',
-          'M5 Max 128GB: max quality, runs Llama 3.3 70B Q5 at 12–16 tok/s, $3000+',
-          'M5 base 32GB: adequate for 13B models, entry point, $800',
-          'Do not buy less than 36GB — models outgrow 32GB within 12 months',
-          'Metal GPU acceleration (automatic in Ollama, MLX, llama.cpp) requires zero configuration',
-          'Power cost: $35–55/year for 24/7 inference vs $300–400/year for desktop RTX 4090',
-        ],
-        updatedDate: '2026-05-15',
-      },
       de: {
         question: 'Welchen Apple-Silicon-Mac sollte ich 2026 für lokale LLMs kaufen?',
         answer: 'Kaufen Sie die maximale Speicherkonfiguration, die Ihr Budget zulässt: Der Mac mini M6 startet bei 899 $ mit 16 GB (7–8B-Modelle) und geht bis 32 GB (13B-Modelle). Ein Mac mini oder MacBook Pro M5 Pro mit 64 GB (ab 1.699 $) ist der ideale Punkt für 34B-Modelle und tragbare KI-Workstations. Der Mac Studio M5 Max mit 128 GB (2.499 $) führt 70B-Modelle ohne Multi-GPU-Komplexität aus. Der Mac Studio M5 Ultra (5.499 $ mit 96 GB, bis 512 GB ab 22.299 $) ist eine der wenigen Verbraucher-Optionen, die 120B+-Modelle fassen. Apple-Silicon-Speicher kann nach dem Kauf nicht aufgerüstet werden. US-Listenpreise; Preise in Deutschland können abweichen.',
@@ -1325,45 +1286,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Geschätzte Stromkosten: ca. 35–55 $/Jahr für 24/7-Inferencing vs. 300–400 $/Jahr für Desktop RTX 4090 (Richtwert, nicht gemessen)',
         ],
         updatedDate: '2026-11-02',
-      },
-      fr: {
-        question: 'Quel Mac Apple Silicon dois-je acheter pour les LLMs locaux en 2026 ?',
-        answer: 'Achetez la configuration mémoire maximale de votre budget : 36 GB M5 Pro (Mac mini, 900–1 200 €) exécute confortablement les modèles 13–34B. 64 GB M5 Pro (MacBook Pro, 1 500–2 500 €) est le point idéal pour les stations de travail IA portables. 128 GB M5 Max (Mac Studio, 3 000–5 000 €) est le seul matériel grand public qui exécute les modèles 70B à une vitesse utilisable sans la complexité multi-GPU. La mémoire Apple Silicon ne peut pas être mise à niveau après l\'achat.',
-        bullets: [
-          'M5 Pro 64 GB : meilleur rapport qualité-prix, exécute Llama 3.3 70B Q4 à 15–20 tok/s, 1 200–1 500 €',
-          'M5 Max 128 GB : qualité maximale, exécute Llama 3.3 70B Q5 à 12–16 tok/s, 3 000 €+',
-          'M5 base 32 GB : adéquat pour les modèles 13B, point d\'entrée, 900 €',
-          'N\'achetez pas moins de 36 GB — les modèles dépassent 32 GB en 12 mois',
-          'L\'accélération GPU Metal (automatique dans Ollama, MLX, llama.cpp) ne nécessite aucune configuration',
-          'Coût d\'électricité : 35–45 €/an pour l\'inférence 24/7 vs. 300–350 €/an pour RTX 4090 de bureau',
-        ],
-        updatedDate: '2026-05-15',
-      },
-      ja: {
-        question: '2026年にローカルLLMs用に購入すべきApple SiliconのMacは？',
-        answer: '予算が許す範囲内で最大メモリ構成を購入してください：36GB M5 Pro（Mac mini、¥99,800～132,000）は13～34Bモデルを快適に実行します。64GB M5 Pro（MacBook Pro、¥165,000～275,000）はポータブルAIワークステーションの最適地点です。128GB M5 Max（Mac Studio、¥330,000～550,000）は、マルチGPU複雑性なしで使用可能な速度で70Bモデルを実行できる唯一の民生用ハードウェアです。Apple Siliconメモリは購入後にアップグレードできません。',
-        bullets: [
-          'M5 Pro 64GB：最高のコストパフォーマンス、Llama 3.3 70B Q4を15～20 tok/sで実行、¥132,000～165,000',
-          'M5 Max 128GB：最高品質、Llama 3.3 70B Q5を12～16 tok/sで実行、¥330,000以上',
-          'M5ベース32GB：13Bモデルに適切、エントリーポイント、¥99,800',
-          '36GB未満を購入しないでください——モデルは12ヶ月以内に32GBを超えます',
-          'Metal GPU加速（Ollama、MLX、llama.cpp自動）はゼロ設定が必要',
-          '電力コスト：24/7推論で年¥3,850～5,500対デスクトップRTX 4090の年¥33,000～38,500',
-        ],
-        updatedDate: '2026-05-15',
-      },
-      zh: {
-        question: '2026年本地LLM应该购买什么Apple Silicon Mac？',
-        answer: '购买预算范围内的最大内存配置：36GB M5 Pro（Mac mini，¥8,999–10,999）舒适地运行13–34B模型。64GB M5 Pro（MacBook Pro，¥14,999–24,999）是便携式AI工作站的最佳选择。128GB M5 Max（Mac Studio，¥29,999–49,999）是唯一能以可用速度运行70B模型而无需多GPU复杂性的消费级硬件。Apple Silicon内存购买后无法升级。',
-        bullets: [
-          'M5 Pro 64GB：最佳性价比，以15–20 tok/s运行Llama 3.3 70B Q4，¥10,999–14,999',
-          'M5 Max 128GB：最高质量，以12–16 tok/s运行Llama 3.3 70B Q5，¥29,999以上',
-          'M5基础32GB：适合13B模型，入门级，¥8,999',
-          '不要购买少于36GB的配置——模型会在12个月内超出32GB',
-          'Metal GPU加速（在Ollama、MLX、llama.cpp中自动）无需配置',
-          '电力成本：24/7推理每年约¥245–275对比台式RTX 4090每年¥2,100–2,400',
-        ],
-        updatedDate: '2026-05-15',
       },
     },
     toc: [
@@ -1479,7 +1401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'M5 Basis (150 GB/s) → ~25–30 tok/s (Schätzung) auf Llama 3.1 8B Q4',
           'Mac mini M6 (bis 170 GB/s) → ähnlicher Bereich wie M5 Basis, dank höherer Bandbreite etwas höher. Apple veröffentlicht nur relative Angaben (bis zu 4x KI-Leistung gegenüber dem Mac mini M4); unabhängige tok/s-Werte für den M6 haben wir nicht geprüft.',
-          'M5 Pro (307 GB/s) → ~50–60 tok/s (Schätzung) auf Llama 3.1 8B Q4 (2× schneller als M5 Basis wegen 2× Bandbreite)',
+          'M5 Pro (307 GB/s) → ~45–55 tok/s (Schätzung) auf Llama 3.1 8B Q4 (2× schneller als M5 Basis wegen 2× Bandbreite)',
           'M5 Max (614 GB/s) → ~100–120 tok/s (Schätzung) auf Llama 3.1 8B Q4',
           'M5 Ultra (1,2 TB/s, Apple-Angabe) → BGR maß rund 55 tok/s mit einem 4-Bit-Qwen-3.8-27B gegenüber rund 40 auf einem M3 Ultra (rund 819 GB/s). Das sind etwa 1,4× mehr Generierungsgeschwindigkeit bei etwa 1,5× mehr Bandbreite — stimmig mit bandbreitenbegrenzter Inferenz.',
           'Fazit: M5 Pro ist genau 2× schneller als M5 Basis beim gleichen Modell, da die Bandbreite verdoppelt wurde. Beim Kauf sollten Sie die Bandbreite gegenüber GPU-Kernzahl priorisieren.',
@@ -1513,11 +1435,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'scenarios',
         title: 'Echte Anwenderszenarien auf Apple Silicon',
         numberedItems: [
-          { title: 'Coding-Agent', whyItMatters: 'Llama 3.1 8B auf M5 Pro liefert 50 tok/s (Schätzung), Code-Vervollständigung in 1–2 Sekunden. Läuft lautlos im Hintergrund auf MacBook Pro.' },
+          { title: 'Coding-Agent', whyItMatters: 'Llama 3.1 8B auf M5 Pro liefert 45–55 tok/s (Schätzung), Code-Vervollständigung in 1–2 Sekunden. Läuft lautlos im Hintergrund auf MacBook Pro.' },
           { title: 'RAG-Pipeline', whyItMatters: 'Embedding-Modell + Llama 3.1 8B + ChromaDB passt vollständig in 36GB M5-Pro-Speicher. Keine GPU-Grenzen.' },
           { title: 'Sprachassistent', whyItMatters: 'Whisper Metal + Ollama Llama + Piper TTS = 1,2s Latenz auf M5 Pro. Leises Mac mini für ein Always-On-Setup geeignet.' },
           { title: 'Multimodal', whyItMatters: 'Whisper + LLaVA 7B Vision + Llama 3.1 8B Reasoning = alle passen in 36GB, gleichzeitige Verarbeitung.' },
-          { title: 'Private Schrift', whyItMatters: 'Llama 3.3 70B Q5 auf M5 Max 128GB = höchste Qualität, vollständig offline, keine API-Kosten, null Datenlecks. Auf dem neuen Mac Studio M5 Ultra (bis 512GB) werden 120B+-Modelle möglich für maximale Qualitätsansprüche.' },
+          { title: 'Private Schrift', whyItMatters: 'Llama 3.3 70B Q5 auf M5 Max 128GB = hohe Qualität für längere Texte, läuft nach dem Modell-Download offline, keine API-Kosten pro Token, und Ihre Prompts bleiben bei der Inferenz auf dem Gerät. Auf dem neuen Mac Studio M5 Ultra (bis 512GB) werden 120B+-Modelle möglich, wenn Sie mehr Spielraum brauchen.' },
         ],
       },
       whichMac: {
@@ -1525,9 +1447,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Welchen Mac sollten Sie kaufen?',
         items: [
           'Ab 899 $: Mac mini M6 (16 GB, bis 32 GB gegen Aufpreis) → Modelle 7–13B, bis 170 GB/s Bandbreite, seit 22.9.2026 erhältlich',
-          '1.699$: Mac mini M5 Pro (64GB) → bis zu 34B-Modelle bei 40–50 tok/s (Schätzung)',
+          '1.699$: Mac mini M5 Pro (64GB) → bis zu 34B-Modelle bei 15–20 tok/s (Schätzung)',
           '1.500–2.500€: MacBook Pro M5 Pro (64GB) → tragbare KI-Workstation, gleiche Leistung wie Mac mini',
-          '2.499$: Mac Studio M5 Max (128GB) → 70B-Modelle bei 15–20 tok/s (Schätzung), Always-On-Server',
+          '2.499$: Mac Studio M5 Max (128GB) → 70B-Modelle bei 12–18 tok/s (Schätzung), Always-On-Server',
           'Von 5.499 $ (96 GB) bis 22.299 $ und mehr (512 GB): Mac Studio M5 Ultra → einer der wenigen Verbraucher-Macs für 120B+-Modelle; 512-GB-Konfiguration seit 28.10.2026 bestellbar',
           'Kritisch: Der Speicher ist beim Kauf fixiert und kann nicht aufgerüstet werden — kaufen Sie die größte Konfiguration, die zu Budget und geplanten Modellen passt. Allein die 512-GB-Option des M5 Ultra kostet 15.500 $ Aufpreis ([MacRumors](https://www.macrumors.com/2026/10/28/mac-studio-m5-ultra-512gb-ram/)). US-Listenpreise; Preise in Deutschland können abweichen.',
         ],
@@ -1603,12 +1525,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     targetKeywords: ['Apple Silicon LLM', 'M5 Pro M5 Max', 'M5 Ultra LLM', 'M6 LLM local', 'MacBook Air M5 LLM local', 'mémoire unifiée vs VRAM'],
     leadAnswerBlock: '**Apple Silicon n\'a pas de limite de VRAM séparée : le modèle utilise toute la mémoire unifiée, de 16 Go (Mac mini M6) à 512 Go (Mac Studio M5 Ultra). Vitesses estimées : 15–20 tok/s (34B, M5 Pro 64 Go) et 12–18 tok/s (70B, M5 Max 128 Go).**',
     quickAnswerTop: {
-      en: {
-        question: 'What Apple Silicon Mac should I buy for local LLMs in 2026?',
-        answer: 'Buy the maximum memory configuration your budget allows: 36GB M5 Pro (Mac Mini, $800–1200) runs 13–34B models comfortably. 64GB M5 Pro (MacBook Pro, $1500–2500) is the sweet spot for portable AI workstations. 128GB M5 Max (Mac Studio, $3000–5000) is the only consumer hardware that runs 70B models at usable speed without multi-GPU complexity. Apple Silicon memory cannot be upgraded after purchase.',
-        bullets: ['M5 Pro 64GB: best value', 'M5 Max 128GB: max quality', 'M5 base 32GB: adequate for 13B models', 'Do not buy less than 36GB', 'Metal GPU acceleration (automatic)', 'Power cost efficient'],
-        updatedDate: '2026-05-15',
-      },
       fr: {
         question: 'Quel Mac Apple Silicon dois-je acheter pour les LLMs locaux en 2026 ?',
         answer: 'Achetez la configuration mémoire maximale de votre budget : le Mac mini M6 démarre à 899 $ avec 16 Go (modèles 7–8B) et monte à 32 Go (modèles 13B). Un Mac mini ou MacBook Pro M5 Pro 64 Go (à partir de 1 699 $) est le point idéal pour les modèles 34B et les stations de travail IA portables. Le Mac Studio M5 Max 128 Go (2 499 $) exécute les modèles 70B sans complexité multi-GPU. Le Mac Studio M5 Ultra (5 499 $ avec 96 Go, jusqu\'à 512 Go à partir de 22 299 $) est l\'une des rares options grand public qui exécutent les modèles 120B+. La mémoire Apple Silicon ne peut pas être mise à niveau après l\'achat. Prix catalogue américains ; les prix en France peuvent différer.',
@@ -1622,21 +1538,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         updatedDate: '2026-11-02',
       },
-      de: {
-        question: 'Welchen Apple-Silicon-Mac sollte ich 2026 für lokale LLMs kaufen?',
-        answer: 'Kaufen Sie die maximale Speicherkonfiguration, die Ihr Budget zulässt: 36 GB M5 Pro (Mac mini, 900–1.200 €) führt 13–34B-Modelle komfortabel aus. 64 GB M5 Pro (MacBook Pro, 1.500–2.500 €) ist der ideale Punkt für tragbare KI-Workstations. 128 GB M5 Max (Mac Studio, 3.000–5.000 €) ist die einzige Verbraucher-Hardware, die 70B-Modelle mit nutzbarer Geschwindigkeit ohne Multi-GPU-Komplexität ausführt. Apple-Silicon-Speicher kann nach dem Kauf nicht aufgerüstet werden.',
-        bullets: [
-          'M5 Pro 64 GB: bestes Preis-Leistungs-Verhältnis, führt Llama 3.3 70B Q4 bei 15–20 tok/s aus, 1.200–1.500 €',
-          'M5 Max 128 GB: maximale Qualität, führt Llama 3.3 70B Q5 bei 12–16 tok/s aus, ab 3.000 €',
-          'M5 Basis 32 GB: ausreichend für 13B-Modelle, Einstiegspunkt, ca. 900 €',
-          'Kaufen Sie nicht weniger als 36 GB — Modelle wachsen aus 32 GB innerhalb von 12 Monaten',
-          'Metal-GPU-Beschleunigung (automatisch in Ollama, MLX, llama.cpp) erfordert keine Konfiguration',
-          'Stromkosten: ca. 35–45 €/Jahr für 24/7-Inferencing vs. 300–350 €/Jahr für Desktop RTX 4090',
-        ],
-        updatedDate: '2026-05-15',
-      },
-      ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      zh: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
     },
     toc: [
       { label: 'Points clés', anchor: '#key-takeaways' },
@@ -1751,7 +1652,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'M5 base (150 GB/s) → ~25–30 tok/s (estimation) Llama 3.1 8B Q4',
           'Mac mini M6 (jusqu\'à 170 GB/s) → plage similaire au M5 base, légèrement supérieure grâce à la bande passante accrue. Apple ne publie que des affirmations relatives (jusqu\'à 4x de performance IA par rapport au Mac mini M4) et nous n\'avons pas vérifié de chiffres tok/s indépendants pour le M6.',
-          'M5 Pro (307 GB/s) → ~50–60 tok/s (estimation) Llama 3.1 8B Q4 (2× M5 base cause 2× bande passante)',
+          'M5 Pro (307 GB/s) → ~45–55 tok/s (estimation) Llama 3.1 8B Q4 (2× M5 base cause 2× bande passante)',
           'M5 Max (614 GB/s) → ~100–120 tok/s (estimation) Llama 3.1 8B Q4',
           'M5 Ultra (1.2 TB/s, spécification Apple) → BGR a mesuré environ 55 tok/s sur un Qwen 3.8 27B en 4 bits contre environ 40 sur un M3 Ultra (environ 819 GB/s). Soit environ 1,4× de vitesse de génération pour environ 1,5× de bande passante — cohérent avec une inférence limitée par la bande passante.',
           'Leçon : priorisez bande passante sur cœurs GPU lors de l\'achat.',
@@ -1785,11 +1686,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'scenarios',
         title: 'Scénarios utilisateurs réels sur Apple Silicon',
         numberedItems: [
-          { title: 'Agent de codage', whyItMatters: 'Llama 3.1 8B sur M5 Pro livre 50 tok/s (estimation), complément code en 1–2 secondes. Fonctionne silencieusement en arrière-plan sur MacBook Pro.' },
+          { title: 'Agent de codage', whyItMatters: 'Llama 3.1 8B sur M5 Pro livre 45–55 tok/s (estimation), complément code en 1–2 secondes. Fonctionne silencieusement en arrière-plan sur MacBook Pro.' },
           { title: 'Pipeline RAG', whyItMatters: 'Modèle embedding + Llama 3.1 8B + ChromaDB rentre entièrement mémoire unifiée 36GB M5 Pro. Aucune limite GPU.' },
           { title: 'Assistant vocal', whyItMatters: 'Whisper Metal + Ollama Llama + Piper TTS = latence 1,2s sur M5 Pro. Mac mini silencieux, adapté à un setup always-on.' },
           { title: 'Multimodal', whyItMatters: 'Whisper + LLaVA 7B vision + Llama 3.1 8B reasoning = tout rentre 36GB, traitement simultané.' },
-          { title: 'Écriture privée', whyItMatters: 'Llama 3.3 70B Q5 sur M5 Max 128GB = qualité maximale, entièrement hors ligne, aucun coût API, zéro fuite données. Sur le nouveau Mac Studio M5 Ultra (jusqu\'à 512GB), les modèles 120B+ deviennent possibles pour les besoins de qualité maximale.' },
+          { title: 'Écriture privée', whyItMatters: 'Llama 3.3 70B Q5 sur M5 Max 128GB = haute qualité pour la rédaction longue, fonctionne hors ligne une fois le modèle téléchargé, aucun coût d\'API par token, et vos prompts restent sur l\'appareil pendant l\'inférence. Sur le nouveau Mac Studio M5 Ultra (jusqu\'à 512GB), les modèles 120B+ deviennent possibles si vous voulez plus de marge.' },
         ],
       },
       whichMac: {
@@ -1797,9 +1698,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quel Mac acheter ?',
         items: [
           'À partir de 899 $ : Mac mini M6 (16 GB, jusqu\'à 32 GB moyennant supplément) → modèles 7–13B, jusqu\'à 170 GB/s, en vente depuis le 22/9/2026',
-          '1 699$ : Mac mini M5 Pro (64GB) → jusqu\'à 34B modèles à 40–50 tok/s (estimation)',
+          '1 699$ : Mac mini M5 Pro (64GB) → jusqu\'à 34B modèles à 15–20 tok/s (estimation)',
           '1 500–2 500€ : MacBook Pro M5 Pro (64GB) → station travail IA portable, même perf Mac mini',
-          '2 499$ : Mac Studio M5 Max (128GB) → modèles 70B à 15–20 tok/s (estimation), serveur always-on',
+          '2 499$ : Mac Studio M5 Max (128GB) → modèles 70B à 12–18 tok/s (estimation), serveur always-on',
           'De 5 499 $ (96 GB) à 22 299 $ et plus (512 GB) : Mac Studio M5 Ultra → l\'un des rares Macs grand public pour modèles 120B+ ; configuration 512 Go commandable depuis le 28/10/2026',
           'Critique : la mémoire est fixée à l\'achat et ne peut pas être mise à niveau, achetez donc la plus grande configuration compatible avec votre budget et vos modèles. L\'option 512 Go du M5 Ultra ajoute à elle seule 15 500 $ ([MacRumors](https://www.macrumors.com/2026/10/28/mac-studio-m5-ultra-512gb-ram/)). Prix catalogue américains ; les prix en France peuvent différer.',
         ],
@@ -1881,10 +1782,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: ['Mac mini M6（899ドル、16GB、最大32GB）：7～13Bモデルのエントリーポイント、最大170 GB/s帯域幅、2026年9月22日から販売', 'Mac mini M5 Pro（64GB、1,699ドル）：34Bモデルの最高コストパフォーマンス', 'Mac Studio M5 Max（128GB、2,499ドル）：70Bモデルを12～18 tok/sで実行（推定）', 'Mac Studio M5 Ultra（96GBは5,499ドルから、512GBは22,299ドルから）：120B+モデルに対応する数少ない民生用Macの一つ、1.2 TB/s、512GBは2026年10月28日から注文可', '8Bより大きいモデルを使うなら36GB以上を推奨（モデルは12か月で32GBを超え、Mac mini M6は最大32GB）', 'Metal GPU加速は自動'],
         updatedDate: '2026-11-02',
       },
-      en: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      zh: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
     },
     toc: [
       { label: '重要ポイント', anchor: '#key-takeaways' },
@@ -2018,7 +1915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'RAG パイプライン', whyItMatters: 'Embedding model + Llama 3.1 8B + ChromaDB完全36GB M5 Pro統一メモリ適合。GPU制限なし。' },
           { title: 'ボイス アシスタント', whyItMatters: 'Whisper Metal + Ollama Llama + Piper TTS = M5 Proで1.2秒遅延。静かなMac miniがalways-on運用に向いています。' },
           { title: 'マルチモーダル', whyItMatters: 'Whisper + LLaVA 7B vision + Llama 3.1 8B reasoning = 36GB全対応、同時処理。' },
-          { title: 'プライベート ライティング', whyItMatters: 'Llama 3.3 70B Q5 on M5 Max 128GB = 最高品質、完全オフライン、APIコスト無し、ゼロデータ漏出。新しいMac Studio M5 Ultra（最大512GB）では、最高品質を求めるユーザー向けに120B+モデルも可能になります。' },
+          { title: 'プライベート ライティング', whyItMatters: 'Llama 3.3 70B Q5 on M5 Max 128GB = 長文執筆に十分な高品質、モデルのダウンロード後はオフラインで動作、トークン従量のAPIコストなし、推論中のプロンプトは端末内に留まります。新しいMac Studio M5 Ultra（最大512GB）では、より余裕を求めるユーザー向けに120B+モデルも可能になります。' },
         ],
       },
       whichMac: {
@@ -2136,10 +2033,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: ['Mac mini M6（16GB起899美元，最高32GB）：7-13B模型入门选择，带宽最高170 GB/s，2026年9月22日起发售', 'Mac mini M5 Pro（64GB，1,699美元）：34B模型最佳性价比', 'Mac Studio M5 Max（128GB，2,499美元）：以12-18 tok/s运行70B模型', 'Mac Studio M5 Ultra（96GB起5,499美元；512GB起22,299美元）：少数支持120B+模型的消费级Mac之一，带宽1.2 TB/s，512GB配置自2026年10月28日起可订购', '运行8B以上模型建议36GB起——模型会在12个月内超出32GB，而Mac mini M6最高仅32GB', 'Metal GPU加速自动'],
         updatedDate: '2026-11-02',
       },
-      en: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
     },
     toc: [
       { label: '核心要点', anchor: '#key-takeaways' },
@@ -2238,7 +2131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mac mini M6（最高170 GB/s）→ 与M5基础相近，因带宽略高而稍快。Apple仅公布相对宣称（较M4 Mac mini AI性能最高提升4倍），M6的独立tok/s数据我们尚未核实。',
           'M5 Pro（307 GB/s）→ Llama 3.1 8B Q4时~50-60 tok/s（估算）（由于带宽翻倍为M5基础的2倍）',
           'M5 Max（614 GB/s）→ Llama 3.1 8B Q4时~100-120 tok/s（估算）',
-          'M5 Ultra（1.2 TB/s，Apple规格）→ BGR用4位Qwen 3.8 27B实测约55 tok/s，M3 Ultra（约819 GB/s）约40 tok/s。带宽约高1.5倍，生成速度约高1.4倍，与受带宽限制的推理相符。',
+          'M5 Ultra（1.2 TB/s，Apple规格）→ BGR报告称，用4位Qwen 3.8 27B测得约55 tok/s，M3 Ultra（约819 GB/s）约40 tok/s。带宽约高1.5倍，生成速度约高1.4倍，与受带宽限制的推理相符。',
           '经验教训：购买时优先考虑带宽而非GPU核心。',
         ],
       
@@ -2258,7 +2151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**64GB** — 34B 级别模型，约 40-50 tok/s（估算）。M5 Pro（307 GB/s）是这一档的主力选择。',
           '**128GB** — 70B 模型，约 15-20 tok/s（估算）。需要 M5 Max（614 GB/s）。',
           '**带宽决定速度：** M5 基础 150 GB/s、M6 170 GB/s、M5 Pro 307 GB/s、M5 Max 614 GB/s。同一个模型，带宽大致翻倍，token/s 也大致翻倍。',
-          '**M5 Ultra 的内存带宽为 1.2 TB/s（Apple 规格）**，BGR 在 256GB 机型上实测 4 位 Qwen 3.8 27B 约 55 tok/s，M3 Ultra 约 40 tok/s。',
+          '**M5 Ultra 的内存带宽为 1.2 TB/s（Apple 规格）**，BGR 报告称，在 256GB 机型上用 4 位 Qwen 3.8 27B 测得约 55 tok/s，M3 Ultra 约 40 tok/s。',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: '本地大模型选 Mac 时，32GB 对应 13B 级模型、64GB 对应 34B、128GB 对应 70B，而生成速度由内存带宽决定。' },
@@ -2293,7 +2186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'RAG管道', whyItMatters: '嵌入模型 + Llama 3.1 8B + ChromaDB完全适合36GB M5 Pro统一内存。无GPU限制。' },
           { title: '语音助手', whyItMatters: 'Whisper Metal + Ollama Llama + Piper TTS = M5 Pro上1.2秒延迟。安静的Mac mini适合常开设置。' },
           { title: '多模态', whyItMatters: 'Whisper + LLaVA 7B视觉 + Llama 3.1 8B推理 = 全部适合36GB，同时处理。' },
-          { title: '私密写作', whyItMatters: 'M5 Max 128GB上的Llama 3.3 70B Q5 = 最高质量，完全离线，无API成本，零数据泄露。在全新Mac Studio M5 Ultra（最高512GB）上，追求最高质量的用户还可运行120B+模型。' },
+          { title: '私密写作', whyItMatters: 'M5 Max 128GB上的Llama 3.3 70B Q5 = 适合长文写作的高质量，模型下载后可离线运行，无按token计费的API成本，推理时提示词保留在本机。在全新Mac Studio M5 Ultra（最高512GB）上，需要更多余量的用户还可运行120B+模型。' },
         ],
       },
       whichMac: {
@@ -2343,7 +2236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '个人做视频剪辑、三维和本地大模型，M5、M5 Pro、M5 Max 该怎么选？', a: '按最吃资源的那一项定档。只做日常问答和写作，M5 基础版加 32GB 就够。要跑 34B 级模型或做较重的剪辑，选 M5 Pro 加 64GB——它的 307 GB/s 带宽是基础版的两倍。要跑 70B 模型或做三维渲染，才需要 M5 Max 加 128GB（614 GB/s）。注意三种用途的瓶颈不同：剪辑看媒体引擎和 GPU 核心，三维看 GPU 与容量，大模型几乎只看内存带宽和容量。' },
           { q: '32GB 还是 64GB 更合适？', a: '看你要跑多大的模型。32GB 能稳妥地跑 13B 以内，适合日常问答、写作和代码补全；64GB 才能跑到 34B 级别，是想认真用本地大模型的实际起点。Mac 的内存无法在购买后升级，因此如果预算允许且打算长期使用，64GB 比 32GB 更保险。如果只把本地模型当辅助工具，32GB 完全够用，把预算留给存储更划算。' },
           { q: 'Mac mini M5 Pro 64GB 能跑什么模型？', a: '可以跑到 34B 级别的模型，速度约 40-50 tok/s（估算）。它的内存带宽为 307 GB/s，是 M5 基础版 150 GB/s 的两倍，在 Llama 3.1 8B Q4 上约 50-60 tok/s（估算）。64GB 统一内存全部可供模型使用，没有独立显卡那样的显存上限，所以能装下 24GB 显存的 NVIDIA 显卡装不下的模型。' },
-          { q: 'M5 Ultra 的内存带宽是多少？', a: 'Apple 在 Mac Studio 规格页公布的 M5 Ultra 内存带宽为 1.2 TB/s；作为参考，M5 Max 为 460-614 GB/s（视配置而定）。BGR 在 256GB 机型上用 4 位 Qwen 3.8 27B 实测约 55 tok/s，同一测试中 M3 Ultra（带宽约 819 GB/s）约 40 tok/s——带宽约高 1.5 倍，生成速度约高 1.4 倍。PromptQuorum 未自行测试 M5 Ultra。512GB 配置决定它能装下多大的模型，但装得下不等于跑得快。' },
+          { q: 'M5 Ultra 的内存带宽是多少？', a: 'Apple 在 Mac Studio 规格页公布的 M5 Ultra 内存带宽为 1.2 TB/s；作为参考，M5 Max 为 460-614 GB/s（视配置而定）。BGR 报告称，在 256GB 机型上用 4 位 Qwen 3.8 27B 测得约 55 tok/s，同一测试中 M3 Ultra（带宽约 819 GB/s）约 40 tok/s——带宽约高 1.5 倍，生成速度约高 1.4 倍。PromptQuorum 未自行测试 M5 Ultra。512GB 配置决定它能装下多大的模型，但装得下不等于跑得快。' },
           { q: 'Apple于2026年8月25日为Mac mini和Mac Studio发布了什么？', a: 'Apple以全新M6芯片（899美元，16GB，可选配至32GB）和M5 Pro（1,699美元，最高64GB）更新了Mac mini，并以M5 Max（2,499美元，最高128GB）和M5 Ultra（5,499美元，96GB起，最高512GB）更新了Mac Studio。全部自2026年9月22日起发售；M5 Ultra的512GB配置自2026年10月28日起可订购，起价22,299美元。' },
           { q: 'M5 Pro或M5 Max哪个更适合本地LLM？', a: 'M5 Pro（64GB）提供最佳价值——运行34B模型良好且起价1,699美元。M5 Max（起价2,499美元）仅在定期需要70B模型时才值得。大多数用户对M5 Pro满意。' },
           { q: '购买Mac后可升级内存吗？', a: '不可以。Apple Silicon内存焊接，无法升级。购买时在预算范围内选择最大内存。' },
@@ -2410,19 +2303,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ctaText: 'Apple Silicon에서 LLM을 실행 중이십니까? PromptQuorum으로 로컬 M5 모델 출력을 GPT-4, Claude, Gemini 등 22개 클라우드 모델과 한 번에 비교해 보십시오. 로컬 설정이 클라우드 품질과 어디서 일치하고 어디서 부족한지 확인할 수 있습니다.',
     leadAnswerBlock: '**Apple Silicon에는 별도의 VRAM 한계가 없어 모델이 통합 메모리 전체를 사용할 수 있습니다(16GB Mac mini M6부터 512GB Mac Studio M5 Ultra까지). 추정 속도는 M5 Pro(64GB)에서 34B 모델 15–20 tok/s, M5 Max(128GB)에서 70B 모델 12–18 tok/s입니다.**',
     quickAnswerTop: {
-      en: {
-        question: '2026년 로컬 LLM을 위해 어떤 Apple Silicon Mac을 구입해야 합니까?',
-        answer: '예산이 허용하는 최대 메모리 구성을 구매하십시오. 36GB M5 Pro(Mac Mini, $800–1200)는 13–34B 모델을 편안하게 실행합니다. 64GB M5 Pro(MacBook Pro, $1500–2500)는 휴대용 AI 워크스테이션의 최적 선택입니다. 128GB M5 Max(Mac Studio, $3000–5000)는 멀티 GPU 복잡성 없이 70B 모델을 사용 가능한 속도로 실행할 수 있는 유일한 소비자 하드웨어입니다. Apple Silicon 메모리는 구매 후 업그레이드할 수 없습니다.',
-        bullets: [
-          'M5 Pro 64GB: 최고 가성비, Llama 3.3 70B Q4를 15–20 tok/s로 실행, $1200–1500',
-          'M5 Max 128GB: 최고 품질, Llama 3.3 70B Q5를 12–16 tok/s로 실행, $3000 이상',
-          'M5 기본 32GB: 13B 모델에 적합, 입문 모델, $800',
-          '36GB 미만은 구매하지 마십시오 — 모델이 12개월 내에 32GB를 초과합니다',
-          'Metal GPU 가속(Ollama, MLX, llama.cpp에서 자동)은 설정이 필요 없습니다',
-          '추정 전력 비용: 24/7 추론 시 연간 $35–55 대 데스크탑 RTX 4090의 연간 $300–400(예시값, 실측 아님)',
-        ],
-        updatedDate: '2026-05-15',
-      },
       ko: {
         question: '2026년 로컬 LLM용으로 어떤 Apple Silicon Mac을 구매해야 합니까?',
         answer: '예산이 허용하는 최대 메모리 구성을 구매하십시오. Mac mini M6는 $899에 16GB(7–8B 모델)로 시작하며 32GB(13B 모델)까지 선택할 수 있습니다. 64GB Mac mini 또는 MacBook Pro M5 Pro($1,699부터)는 34B 모델과 휴대용 AI 워크스테이션의 최적 선택입니다. 128GB Mac Studio M5 Max($2,499)는 멀티 GPU 복잡성 없이 70B 모델을 실행합니다. Mac Studio M5 Ultra(96GB $5,499, 최대 512GB는 $22,299부터)는 120B 이상의 모델을 실행할 수 있는 몇 안 되는 소비자 하드웨어 중 하나입니다. Apple Silicon 메모리는 구매 후 업그레이드할 수 없습니다. 가격은 미국 정가이며 국가별로 다를 수 있습니다.',
@@ -2436,10 +2316,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         updatedDate: '2026-11-02',
       },
-      de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
-      zh: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
     },
     toc: [
       { label: '핵심 요약', anchor: '#key-takeaways' },
@@ -2594,7 +2470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'RAG 파이프라인', whyItMatters: '임베딩 모델 + Llama 3.1 8B + ChromaDB가 M5 Pro의 36GB 통합 메모리에 완전히 맞습니다. GPU 한계가 없습니다.' },
           { title: '음성 비서', whyItMatters: 'Whisper Metal + Ollama Llama + Piper TTS = M5 Pro에서 1.2초 지연. 조용한 Mac mini가 상시 가동 설정에 적합합니다.' },
           { title: '멀티모달', whyItMatters: 'Whisper + LLaVA 7B 비전 + Llama 3.1 8B 추론 = 모두 36GB에 맞으며 동시 처리가 가능합니다.' },
-          { title: '개인 문서 작성', whyItMatters: 'M5 Max 128GB의 Llama 3.3 70B Q5 = 최고 품질, 완전 오프라인, API 비용 없음, 데이터 유출 제로. 새로운 Mac Studio M5 Ultra(최대 512GB)에서는 최고 품질이 필요한 사용자를 위해 120B 이상의 모델도 가능해집니다.' },
+          { title: '개인 문서 작성', whyItMatters: 'M5 Max 128GB의 Llama 3.3 70B Q5 = 장문 작성에 충분한 고품질, 모델 다운로드 후 오프라인 실행 가능, 토큰당 API 비용 없음, 추론 중 프롬프트는 기기에 머뭅니다. 새로운 Mac Studio M5 Ultra(최대 512GB)에서는 더 여유가 필요한 사용자를 위해 120B 이상의 모델도 가능해집니다.' },
         ],
       },
       whichMac: {
