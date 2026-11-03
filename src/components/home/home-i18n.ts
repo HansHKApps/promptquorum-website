@@ -356,6 +356,19 @@ const HOME_UI = {
     pt: 'Como assistentes de IA usam este site →', ar: 'كيف تستخدم مساعدات الذكاء الاصطناعي هذا الموقع ←',
     ko: 'AI 어시스턴트가 이 사이트를 사용하는 방법 보기 →',
   },
+  /** Links to /askhans (Ask Hans usage statistics). Shown only while Ask Hans is switched on. */
+  statAskHansCalls: {
+    en: 'Ask Hans answers', de: 'Ask-Hans-Antworten', fr: 'Réponses d\'Ask Hans',
+    ja: 'Ask Hansの回答数', zh: 'Ask Hans 回答数', es: 'Respuestas de Ask Hans',
+    pt: 'Respostas do Ask Hans', ar: 'إجابات Ask Hans', ko: 'Ask Hans 답변 수',
+  },
+  statAskHansCallsHint: {
+    en: 'See how Ask Hans is used →', de: 'So wird Ask Hans genutzt →',
+    fr: 'Comment Ask Hans est utilisé →', ja: 'Ask Hansの利用状況を見る →',
+    zh: '查看 Ask Hans 的使用情况 →', es: 'Cómo se usa Ask Hans →',
+    pt: 'Como o Ask Hans é usado →', ar: 'كيف يُستخدم Ask Hans ←',
+    ko: 'Ask Hans 이용 현황 보기 →',
+  },
 
   // --- Recent Mentions ---
   mentionsTitle: {

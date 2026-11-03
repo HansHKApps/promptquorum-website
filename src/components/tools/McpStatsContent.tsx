@@ -12,7 +12,6 @@ import { HUB_TONES, type HubTone } from '@/components/hub-template/palette'
 import { t as tTools } from './tools-i18n'
 import { t } from './mcp-stats-i18n'
 import { CopyEndpointButton } from './CopyEndpointButton'
-import { AskHansBlock } from './AskHansBlock'
 import { NEW_TOOL_COPY, TOOL_GROUPS, TOOL_GROUP_OF, tDocs, toolAsk, type ToolGroup } from './mcp-docs-i18n'
 
 // Title/description of the first eight tools come from mcp-stats-i18n.ts; the
@@ -192,8 +191,6 @@ export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: 
           </div>
         </div>
       </section>
-
-      <AskHansBlock lang={lang} />
 
       {/* Jump bar */}
       <div className="border-b border-border bg-white">

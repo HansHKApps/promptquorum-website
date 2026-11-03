@@ -1,6 +1,6 @@
 // Ask Hans — aggregated usage totals (server only). Anonymous counters: no visitor ID, no text, no IP.
 // They count everything (not only visitors who agreed to the detailed statistics) so the numbers are honest
-// totals, e.g. for the /mcp-stats block and later for a public statistics page.
+// totals, e.g. for the /askhans page and the homepage tile.
 //
 //   askhans:total        hash  { requests, answers, opens, since }   lifetime
 //   askhans:day:<date>   hash  same field names, per UTC day (shared with the consent-based counters)
