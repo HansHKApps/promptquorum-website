@@ -1,4 +1,4 @@
-// UI strings for the "Ask Hans" block on /mcp-stats (all 9 locales). Same lookup pattern as mcp-stats-i18n.ts.
+// UI strings for the "Ask Hans" block on /askhans (all 9 locales). Same lookup pattern as mcp-stats-i18n.ts.
 // "Ask Hans", "PromptQuorum" and "MCP" stay as-is in every language (product and protocol names).
 
 import type { Language } from '@/lib/blog/blogContent'
@@ -8,6 +8,22 @@ type Dict = Record<Language, string>
 const ASK_UI = {
   eyebrow: {
     en: 'Ask Hans', de: 'Ask Hans', fr: 'Ask Hans', ja: 'Ask Hans', zh: 'Ask Hans', es: 'Ask Hans', pt: 'Ask Hans', ar: 'Ask Hans', ko: 'Ask Hans',
+  },
+  pageMetaTitle: {
+    en: 'Ask Hans: AI Assistant Statistics', de: 'Ask Hans: Statistik des KI-Assistenten', fr: "Ask Hans : statistiques de l'assistant IA",
+    ja: 'Ask Hans：AIアシスタントの利用統計', zh: 'Ask Hans：AI 助手使用统计', es: 'Ask Hans: estadísticas del asistente de IA',
+    pt: 'Ask Hans: estatísticas do assistente de IA', ar: 'Ask Hans: إحصاءات مساعد الذكاء الاصطناعي', ko: 'Ask Hans: AI 어시스턴트 이용 통계',
+  },
+  pageMetaDescription: {
+    en: "Ask Hans is PromptQuorum's AI assistant for local AI apps. See how often it is used: questions answered, topics, apps and tools, as anonymous statistics.",
+    de: 'Ask Hans ist der KI-Assistent von PromptQuorum für lokale KI-Apps. Sehen Sie, wie oft er genutzt wird: beantwortete Fragen, Themen, Apps und Werkzeuge als anonyme Statistik.',
+    fr: "Ask Hans est l'assistant IA de PromptQuorum pour les applications d'IA locale. Découvrez son utilisation : questions traitées, thèmes, applications et outils, en statistiques anonymes.",
+    ja: 'Ask HansはローカルAIアプリに詳しいPromptQuorumのAIアシスタントです。回答数、テーマ、アプリ、ツールなどの利用状況を匿名の統計で確認できます。',
+    zh: 'Ask Hans 是 PromptQuorum 面向本地 AI 应用的 AI 助手。查看它的使用情况：已回答的问题、主题、应用和工具，均为匿名统计。',
+    es: 'Ask Hans es el asistente de IA de PromptQuorum para apps de IA local. Consulta cuánto se usa: preguntas respondidas, temas, apps y herramientas, en estadísticas anónimas.',
+    pt: 'O Ask Hans é o assistente de IA do PromptQuorum para apps de IA local. Veja o quanto ele é usado: perguntas respondidas, temas, apps e ferramentas, em estatísticas anônimas.',
+    ar: 'Ask Hans هو مساعد الذكاء الاصطناعي في PromptQuorum لتطبيقات الذكاء الاصطناعي المحلي. اطّلع على حجم استخدامه: الأسئلة المُجاب عنها والمواضيع والتطبيقات والأدوات في إحصاءات مجهولة.',
+    ko: 'Ask Hans는 로컬 AI 앱을 다루는 PromptQuorum의 AI 어시스턴트입니다. 답변한 질문, 주제, 앱, 도구 등 이용 현황을 익명 통계로 확인하세요.',
   },
   title: {
     en: 'Ask Hans: PromptQuorum in plain words',
@@ -21,15 +37,15 @@ const ASK_UI = {
     ko: 'Ask Hans: PromptQuorum에 쉬운 말로 질문하세요',
   },
   body: {
-    en: 'Ask Hans is the AI assistant of PromptQuorum. Tell it what you want to do and which computer you have. It looks up the app directory, guides and hands-on tests with the same tools this MCP server offers, then recommends apps, compares them and checks them against your hardware.',
-    de: 'Ask Hans ist der KI-Assistent von PromptQuorum. Sagen Sie ihm, was Sie vorhaben und welchen Computer Sie haben. Er durchsucht Verzeichnis, Guides und Praxistests mit denselben Werkzeugen, die auch dieser MCP-Server anbietet, empfiehlt Apps, vergleicht sie und prüft sie gegen Ihre Hardware.',
-    fr: "Ask Hans est l'assistant IA de PromptQuorum. Indiquez-lui ce que vous souhaitez faire et de quel ordinateur vous disposez. Il consulte l'annuaire, les guides et les tests pratiques avec les mêmes outils que ce serveur MCP, puis recommande des applications, les compare et les confronte à votre matériel.",
-    ja: 'Ask HansはPromptQuorumのAIアシスタントです。やりたいことと使っているパソコンを伝えると、このMCPサーバーと同じツールでディレクトリ、ガイド、実機テストを調べ、アプリの推薦、比較、お使いのハードウェアとの適合確認を行います。',
-    zh: 'Ask Hans 是 PromptQuorum 的 AI 助手。告诉它你想做什么、用的是什么电脑，它会通过与本 MCP 服务器相同的工具查阅目录、指南和实测，然后推荐应用、进行比较，并对照你的硬件做适配检查。',
-    es: 'Ask Hans es el asistente de IA de PromptQuorum. Cuéntale qué quieres hacer y qué equipo tienes. Consulta el directorio, las guías y las pruebas prácticas con las mismas herramientas que ofrece este servidor MCP, y después recomienda apps, las compara y las contrasta con tu hardware.',
-    pt: 'O Ask Hans é o assistente de IA do PromptQuorum. Diga a ele o que você quer fazer e qual computador você tem. Ele consulta o diretório, os guias e os testes práticos com as mesmas ferramentas que este servidor MCP oferece, e depois recomenda apps, compara e confere com o seu hardware.',
-    ar: 'Ask Hans هو مساعد الذكاء الاصطناعي في PromptQuorum. أخبره بما تريد فعله وبنوع جهازك. يبحث في الدليل والأدلة والاختبارات العملية بالأدوات نفسها التي يوفرها خادم MCP هذا، ثم يوصي بالتطبيقات ويقارن بينها ويتحقق من ملاءمتها لعتادك.',
-    ko: 'Ask Hans는 PromptQuorum의 AI 어시스턴트입니다. 하려는 일과 사용 중인 컴퓨터를 알려 주십시오. 이 MCP 서버와 같은 도구로 디렉터리, 가이드, 실사용 테스트를 조회한 뒤 앱을 추천하고, 비교하고, 사용 중인 하드웨어와 맞는지 확인합니다.',
+    en: 'Ask Hans is the AI assistant of PromptQuorum. Tell it what you want to do and which computer you have. It looks up the app directory, guides and hands-on tests with the same tools the PromptQuorum MCP server offers, then recommends apps, compares them and checks them against your hardware.',
+    de: 'Ask Hans ist der KI-Assistent von PromptQuorum. Sagen Sie ihm, was Sie vorhaben und welchen Computer Sie haben. Er durchsucht Verzeichnis, Guides und Praxistests mit denselben Werkzeugen, die auch der MCP-Server von PromptQuorum anbietet, empfiehlt Apps, vergleicht sie und prüft sie gegen Ihre Hardware.',
+    fr: "Ask Hans est l'assistant IA de PromptQuorum. Indiquez-lui ce que vous souhaitez faire et de quel ordinateur vous disposez. Il consulte l'annuaire, les guides et les tests pratiques avec les mêmes outils que le serveur MCP de PromptQuorum, puis recommande des applications, les compare et les confronte à votre matériel.",
+    ja: 'Ask HansはPromptQuorumのAIアシスタントです。やりたいことと使っているパソコンを伝えると、PromptQuorumのMCPサーバーと同じツールでディレクトリ、ガイド、実機テストを調べ、アプリの推薦、比較、お使いのハードウェアとの適合確認を行います。',
+    zh: 'Ask Hans 是 PromptQuorum 的 AI 助手。告诉它你想做什么、用的是什么电脑，它会通过与 PromptQuorum 的 MCP 服务器相同的工具查阅目录、指南和实测，然后推荐应用、进行比较，并对照你的硬件做适配检查。',
+    es: 'Ask Hans es el asistente de IA de PromptQuorum. Cuéntale qué quieres hacer y qué equipo tienes. Consulta el directorio, las guías y las pruebas prácticas con las mismas herramientas que ofrece el servidor MCP de PromptQuorum, y después recomienda apps, las compara y las contrasta con tu hardware.',
+    pt: 'O Ask Hans é o assistente de IA do PromptQuorum. Diga a ele o que você quer fazer e qual computador você tem. Ele consulta o diretório, os guias e os testes práticos com as mesmas ferramentas que o servidor MCP do PromptQuorum oferece, e depois recomenda apps, compara e confere com o seu hardware.',
+    ar: 'Ask Hans هو مساعد الذكاء الاصطناعي في PromptQuorum. أخبره بما تريد فعله وبنوع جهازك. يبحث في الدليل والأدلة والاختبارات العملية بالأدوات نفسها التي يوفرها خادم MCP الخاص بـ PromptQuorum، ثم يوصي بالتطبيقات ويقارن بينها ويتحقق من ملاءمتها لعتادك.',
+    ko: 'Ask Hans는 PromptQuorum의 AI 어시스턴트입니다. 하려는 일과 사용 중인 컴퓨터를 알려 주십시오. PromptQuorum의 MCP 서버와 같은 도구로 디렉터리, 가이드, 실사용 테스트를 조회한 뒤 앱을 추천하고, 비교하고, 사용 중인 하드웨어와 맞는지 확인합니다.',
   },
   point1: {
     en: 'Recommends one app and says why, instead of listing ten.',
@@ -118,15 +134,15 @@ const ASK_UI = {
     ko: 'Ask Hans 이용 리포트',
   },
   reportIntro: {
-    en: 'Same time windows as the MCP usage report below. Totals count every visitor; the breakdowns count only visitors who agreed to anonymous statistics. Never stored: names, IP addresses, question text.',
-    de: 'Dieselben Zeiträume wie im MCP-Nutzungsbericht weiter unten. Die Summen zählen alle Besucher; die Aufschlüsselungen zählen nur Besucher, die der anonymen Statistik zugestimmt haben. Nie gespeichert: Namen, IP-Adressen, Fragetext.',
-    fr: "Mêmes périodes que le rapport d'utilisation MCP ci-dessous. Les totaux comptent tous les visiteurs ; les répartitions ne comptent que les visiteurs ayant accepté les statistiques anonymes. Jamais enregistrés : noms, adresses IP, texte des questions.",
-    ja: '下のMCP利用レポートと同じ期間です。合計はすべての訪問者を対象とし、内訳は匿名統計に同意した訪問者のみを対象とします。氏名、IPアドレス、質問文は保存しません。',
-    zh: '时间区间与下方 MCP 使用报告相同。合计统计所有访客；明细仅统计同意匿名统计的访客。绝不保存：姓名、IP 地址、提问内容。',
-    es: 'Los mismos periodos que el informe de uso de MCP de más abajo. Los totales cuentan a todos los visitantes; los desgloses solo cuentan a quienes aceptaron las estadísticas anónimas. Nunca se guardan nombres, direcciones IP ni el texto de las preguntas.',
-    pt: 'Os mesmos períodos do relatório de uso do MCP abaixo. Os totais contam todos os visitantes; os detalhamentos contam apenas visitantes que aceitaram as estatísticas anônimas. Nunca são armazenados nomes, endereços IP nem o texto das perguntas.',
-    ar: 'الفترات الزمنية نفسها المستخدمة في تقرير استخدام MCP أدناه. تشمل الإجماليات جميع الزوار، أما التفاصيل فتشمل فقط الزوار الذين وافقوا على الإحصاءات المجهولة. لا نخزّن أبدًا الأسماء ولا عناوين IP ولا نص الأسئلة.',
-    ko: '아래 MCP 이용 리포트와 같은 기간입니다. 합계는 모든 방문자를 집계하고, 세부 항목은 익명 통계에 동의한 방문자만 집계합니다. 이름, IP 주소, 질문 내용은 저장하지 않습니다.',
+    en: 'Totals count every visitor; the breakdowns count only visitors who agreed to anonymous statistics. Never stored: names, IP addresses, question text.',
+    de: 'Die Summen zählen alle Besucher; die Aufschlüsselungen zählen nur Besucher, die der anonymen Statistik zugestimmt haben. Nie gespeichert: Namen, IP-Adressen, Fragetext.',
+    fr: "Les totaux comptent tous les visiteurs ; les répartitions ne comptent que les visiteurs ayant accepté les statistiques anonymes. Jamais enregistrés : noms, adresses IP, texte des questions.",
+    ja: '合計はすべての訪問者を対象とし、内訳は匿名統計に同意した訪問者のみを対象とします。氏名、IPアドレス、質問文は保存しません。',
+    zh: '合计统计所有访客；明细仅统计同意匿名统计的访客。绝不保存：姓名、IP 地址、提问内容。',
+    es: 'Los totales cuentan a todos los visitantes; los desgloses solo cuentan a quienes aceptaron las estadísticas anónimas. Nunca se guardan nombres, direcciones IP ni el texto de las preguntas.',
+    pt: 'Os totais contam todos os visitantes; os detalhamentos contam apenas visitantes que aceitaram as estatísticas anônimas. Nunca são armazenados nomes, endereços IP nem o texto das perguntas.',
+    ar: 'تشمل الإجماليات جميع الزوار، أما التفاصيل فتشمل فقط الزوار الذين وافقوا على الإحصاءات المجهولة. لا نخزّن أبدًا الأسماء ولا عناوين IP ولا نص الأسئلة.',
+    ko: '합계는 모든 방문자를 집계하고, 세부 항목은 익명 통계에 동의한 방문자만 집계합니다. 이름, IP 주소, 질문 내용은 저장하지 않습니다.',
   },
   colToday: {
     en: 'Today (UTC)',

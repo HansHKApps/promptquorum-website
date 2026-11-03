@@ -1,4 +1,4 @@
-// Ask Hans usage report on /mcp-stats: the same windows as the MCP usage table (today, yesterday, 7 days, 30 days,
+// Ask Hans usage report on /askhans: the same windows as the MCP usage table (today, yesterday, 7 days, 30 days,
 // all time) plus what was asked and researched (topics, apps, directory categories, tools, languages).
 // Data: src/lib/askhans/report.ts. Plain server component, no chart library.
 
