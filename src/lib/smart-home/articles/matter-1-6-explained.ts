@@ -4,8 +4,9 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     publishDate: '2026-07-16',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-04-18',
     theme: '2026 Protocols & Regulation',
     heroImage: '/images/matter-1-6-explained-overview-hero-en.webp',
@@ -17,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     // commissioning, Joint Fabric (multi-admin/multi-ecosystem device sharing), and Thermostat
     // Suggestions. Reframed below to reflect that, rather than crediting 1.6 with the energy work.
     title: 'Matter 1.6 & 1.6.1 Explained: Release Date, Features (2026)',
-    seoTitle: 'Matter 1.6 & 1.6.1 Explained (2026)',
+    seoTitle: 'Matter 1.6 & 1.6.1 Explained: Release Date & Features',
     intro:
       'Matter 1.6, released June 17, 2026, introduced NFC-based device setup, Joint Fabric (letting multiple ecosystems co-administer the same device), and Thermostat Suggestions. Matter 1.6.1, a maintenance release published in September 2026, is now the latest version: it finalizes Groupcast and adds optional chime volume and mute controls. Energy-management device types arrived earlier, across Matter 1.3-1.5, and are covered elsewhere in this cluster. This article explains what changed in 1.6 and 1.6.1 and how it differs from the general protocol primer and local-control guide already on this site.',
     metaDescription:
@@ -39,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'matter device types 2027',
     ],
     leadAnswerBlock:
-      '**Matter 1.6 (released June 17, 2026 by the Connectivity Standards Alliance) added NFC-based commissioning, Joint Fabric multi-ecosystem device sharing, and Thermostat Suggestions; Matter 1.6.1, a maintenance release published in September 2026, is the latest version and finalizes Groupcast.** Existing 1.x-certified devices remain compatible. Energy-management device types (inverters, batteries, heat pumps) were added earlier, across Matter 1.3-1.5 — 1.6 is a setup and multi-ecosystem release, not an energy-focused one.',
+      '**Matter 1.6 (released June 17, 2026) added NFC-based commissioning, Joint Fabric multi-ecosystem sharing, and Thermostat Suggestions; Matter 1.6.1, a September 2026 maintenance release, is the latest version and finalizes Groupcast.** Existing 1.x devices remain compatible.',
     quickAnswerTop: {
       en: {
         question: "What's new in Matter 1.6?",
@@ -51,7 +52,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Distinct from Thread (the networking layer) and from this cluster\'s general protocol primer and local-control guide',
           'Energy-management device types (inverters, batteries, heat pumps) arrived earlier, in Matter 1.3-1.5 — not new in 1.6',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -120,10 +121,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Do I need to update my existing Matter devices?', a: 'No — existing 1.x-certified devices continue working without any update. New capabilities like NFC setup or Joint Fabric only matter if you\'re buying new hardware or a new controller that implements them.' },
           { q: 'What is the biggest practical change in Matter 1.6?', a: 'Joint Fabric — it lets multiple user-authorized controllers co-administer a single shared Matter network, so a device can be genuinely shared across ecosystems instead of belonging to whichever hub commissioned it first. NFC setup and Thermostat Suggestions are the other two headline additions. Energy-management device types (inverters, batteries, heat pumps) are not new in this release — see the Matter inverter/heat-pump integration guide for that earlier work.' },
           { q: 'Does this affect Thread?', a: 'Thread is the networking layer Matter often runs over; Matter 1.6 is a change to the Matter application layer, not to Thread itself. See the Thread and Wi-Fi 7 routers guide for networking-layer changes.' },
-          { q: 'Is my hub software compatible with Matter 1.6?', a: 'Hub software needs its own update to support a new spec release — it isn\'t automatic. Home Assistant announced Matter Server 9.1.0 with Matter 1.6.0 support in July 2026 ([report](https://alternativeto.net/news/2026/7/home-assistant-matter-server-9-1-0-adds-support-for-matter-1-6-0/)), and Matter 1.6.1 Groupcast support is still in development on the [Open Home Foundation roadmap](https://github.com/OpenHomeFoundation/roadmap/issues/216). Check your specific hub\'s current release notes rather than assuming day-one support.' },
+          { q: 'Is my hub software compatible with Matter 1.6?', a: 'Hub software needs its own update to support a new spec release — it isn\'t automatic. Home Assistant announced Matter Server 9.1.0 with Matter 1.6.0 support in July 2026 ([report](https://alternativeto.net/news/2026/7/home-assistant-matter-server-9-1-0-adds-support-for-matter-1-6-0/)), and Matter 1.6.1 Groupcast support shipped in Matter Server App 9.3.0 on October 30, 2026 ([Open Home Foundation roadmap](https://github.com/OpenHomeFoundation/roadmap/issues/216)). Check your specific hub\'s current release notes rather than assuming day-one support.' },
           { q: 'How is this different from the general Matter/Thread/Zigbee explainer on this site?', a: 'That article explains the protocols conceptually and compares them. This article covers what specifically changed in Matter 1.6 — a narrower, update-focused scope.' },
           { q: 'Where can I check the current official spec version?', a: 'The Connectivity Standards Alliance ([csa-iot.org](https://csa-iot.org)) publishes and announces the current Matter specification directly — check there rather than relying on secondary sources or marketing materials for the exact version number.' },
-          { q: 'Do all Matter controllers support Matter 1.6 immediately?', a: 'No — a spec release being published doesn\'t mean every hub implements it on day one. Home Assistant added Matter 1.6.0 support in July 2026 and is still working on 1.6.1 Groupcast; Apple Home, Google Home, and SmartThings each have independent rollout timelines this article does not track — check your specific controller\'s current release notes.' },
+          { q: 'Do all Matter controllers support Matter 1.6 immediately?', a: 'No — a spec release being published doesn\'t mean every hub implements it on day one. Home Assistant added Matter 1.6.0 support in July 2026 and added 1.6.1 Groupcast in Matter Server App 9.3.0 on October 30, 2026; Apple Home, Google Home, and SmartThings each have independent rollout timelines this article does not track — check your specific controller\'s current release notes.' },
           { q: 'Does this change how Matter devices are commissioned?', a: 'Not for existing methods — QR-code and Bluetooth commissioning still work the same way. Matter 1.6 adds NFC as an additional commissioning option; it doesn\'t remove or change the existing process. See the local-control guide for the commissioning walkthrough.' },
           { q: 'When was Matter 1.6 released?', a: 'Matter 1.6 was released on June 17, 2026 by the Connectivity Standards Alliance. Matter 1.6.1, a maintenance release, followed with specification documents published in September 2026 on the [CSA specifications page](https://csa-iot.org/developer-resource/specifications-download-request/).' },
           { q: 'What is new in Matter 1.6.1?', a: 'Matter 1.6.1 is a maintenance release with no new device types. It finalizes Groupcast — the recommended way to control groups of devices at once instead of sending delayed one-by-one commands — and adds optional volume and mute controls for doorbell chimes, as reported by [Matter Alpha](https://www.matteralpha.com/industry-news/matter-1-6-1-finalizes-groupcast-and-adds-chime-sound-controls). Chime controls need manufacturer firmware and platform support.' },
@@ -151,7 +152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-10-18',
+      dateModified: '2026-11-03',
       about: [{ '@type': 'Thing', name: 'Matter smart home protocol' }, { '@type': 'Thing', name: 'Matter device types' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -175,13 +176,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   de: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     publishDate: '2026-07-16',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-04-18',
     theme: '2026 Protocols & Regulation',
     heroImage: '/images/matter-1-6-explained-overview-hero-de.webp',
     title: 'Matter 1.6 & 1.6.1 erklärt: Release-Datum, Neuerungen (2026)',
-    seoTitle: 'Matter 1.6 & 1.6.1 erklärt (2026)',
+    seoTitle: 'Matter 1.6 & 1.6.1 erklärt: Release-Datum & Neuerungen',
     intro:
       'Matter 1.6, veröffentlicht am 17. Juni 2026, brachte NFC-basiertes Geräte-Setup, Joint Fabric (mehrere Ökosysteme verwalten dasselbe Gerät gemeinsam) und Thermostat-Vorschläge. Matter 1.6.1, ein im September 2026 veröffentlichtes Wartungs-Release, ist jetzt die neueste Version: Es schließt Groupcast ab und ergänzt optionale Lautstärke- und Stummschaltungs-Steuerung für Gongs. Energiemanagement-Gerätetypen kamen bereits früher, in Matter 1.3-1.5, und werden an anderer Stelle in diesem Cluster behandelt. Dieser Artikel erklärt, was sich in 1.6 und 1.6.1 geändert hat und wie sich das vom allgemeinen Protokoll-Grundlagenartikel und dem Leitfaden zur lokalen Steuerung auf dieser Website unterscheidet.',
     metaDescription:
@@ -200,7 +202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'matter geraetetypen 2027',
     ],
     leadAnswerBlock:
-      '**Matter 1.6 (veröffentlicht am 17. Juni 2026 von der Connectivity Standards Alliance) fügte NFC-basiertes Commissioning, Joint-Fabric-Geräteteilung über mehrere Ökosysteme und Thermostat-Vorschläge hinzu; Matter 1.6.1, ein im September 2026 veröffentlichtes Wartungs-Release, ist die neueste Version und schließt Groupcast ab.** Bestehende 1.x-zertifizierte Geräte bleiben kompatibel. Energiemanagement-Gerätetypen (Wechselrichter, Batterien, Wärmepumpen) kamen bereits früher, in Matter 1.3-1.5 — 1.6 ist ein Setup- und Mehr-Ökosystem-Release, kein energiefokussiertes.',
+      '**Matter 1.6 (veröffentlicht am 17. Juni 2026) brachte NFC-Commissioning, Joint Fabric für Mehr-Ökosystem-Geräte und Thermostat-Vorschläge; Matter 1.6.1, ein Wartungs-Release vom September 2026, ist die neueste Version und schließt Groupcast ab.** Bestehende 1.x-Geräte bleiben kompatibel.',
     quickAnswerTop: {
       de: {
         question: 'Was ist neu in Matter 1.6?',
@@ -212,7 +214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Zu unterscheiden von Thread (der Netzwerkschicht) und vom allgemeinen Protokoll-Grundlagenartikel und Leitfaden zur lokalen Steuerung dieses Clusters',
           'Energiemanagement-Gerätetypen (Wechselrichter, Batterien, Wärmepumpen) kamen bereits früher, in Matter 1.3-1.5 — nicht neu in 1.6',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -281,10 +283,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Muss ich meine bestehenden Matter-Geräte aktualisieren?', a: 'Nein — bestehende 1.x-zertifizierte Geräte funktionieren ohne jedes Update weiter. Neue Fähigkeiten wie NFC-Setup oder Joint Fabric spielen nur eine Rolle, wenn du neue Hardware oder einen neuen Controller kaufst, der sie implementiert.' },
           { q: 'Was ist die größte praktische Änderung in Matter 1.6?', a: 'Joint Fabric — damit können mehrere vom Nutzer autorisierte Controller ein gemeinsames Matter-Netzwerk gemeinsam verwalten, sodass ein Gerät wirklich über Ökosysteme hinweg geteilt werden kann, statt dem Hub zu gehören, der es zuerst eingerichtet hat. NFC-Setup und Thermostat-Vorschläge sind die beiden anderen wichtigsten Neuerungen. Energiemanagement-Gerätetypen (Wechselrichter, Batterien, Wärmepumpen) sind in diesem Release nicht neu — siehe den Matter-Wechselrichter-/Wärmepumpen-Integrationsleitfaden für diese frühere Arbeit.' },
           { q: 'Betrifft das Thread?', a: 'Thread ist die Netzwerkschicht, über die Matter oft läuft; Matter 1.6 ist eine Änderung der Matter-Anwendungsschicht, nicht von Thread selbst. Siehe den Leitfaden zu Thread und Wi-Fi-7-Routern für Änderungen auf Netzwerkebene.' },
-          { q: 'Ist meine Hub-Software mit Matter 1.6 kompatibel?', a: 'Hub-Software braucht ein eigenes Update, um ein neues Spezifikations-Release zu unterstützen — das passiert nicht automatisch. Home Assistant hat im Juli 2026 Matter Server 9.1.0 mit Unterstützung für Matter 1.6.0 angekündigt ([Bericht](https://alternativeto.net/news/2026/7/home-assistant-matter-server-9-1-0-adds-support-for-matter-1-6-0/)); die Unterstützung für Matter-1.6.1-Groupcast ist noch in Entwicklung ([Open-Home-Foundation-Roadmap](https://github.com/OpenHomeFoundation/roadmap/issues/216)). Prüfen Sie die aktuellen Release Notes Ihres Hubs, statt von Day-One-Support auszugehen.' },
+          { q: 'Ist meine Hub-Software mit Matter 1.6 kompatibel?', a: 'Hub-Software braucht ein eigenes Update, um ein neues Spezifikations-Release zu unterstützen — das passiert nicht automatisch. Home Assistant hat im Juli 2026 Matter Server 9.1.0 mit Unterstützung für Matter 1.6.0 angekündigt ([Bericht](https://alternativeto.net/news/2026/7/home-assistant-matter-server-9-1-0-adds-support-for-matter-1-6-0/)); die Unterstützung für Matter-1.6.1-Groupcast kam am 30. Oktober 2026 mit der Matter Server App 9.3.0 ([Open-Home-Foundation-Roadmap](https://github.com/OpenHomeFoundation/roadmap/issues/216)). Prüfen Sie die aktuellen Release Notes Ihres Hubs, statt von Day-One-Support auszugehen.' },
           { q: 'Wie unterscheidet sich das vom allgemeinen Matter/Thread/Zigbee-Erklärartikel auf dieser Seite?', a: 'Dieser Artikel erklärt die Protokolle konzeptionell und vergleicht sie. Dieser Artikel hier behandelt, was sich konkret in Matter 1.6 geändert hat — ein engerer, update-fokussierter Umfang.' },
           { q: 'Wo kann ich die aktuelle offizielle Spezifikationsversion prüfen?', a: 'Die Connectivity Standards Alliance ([csa-iot.org](https://csa-iot.org)) veröffentlicht und kündigt die aktuelle Matter-Spezifikation direkt an — prüfe dort, statt dich auf Sekundärquellen oder Marketingmaterial für die genaue Versionsnummer zu verlassen.' },
-          { q: 'Unterstützen alle Matter-Controller Matter 1.6 sofort?', a: 'Nein — dass ein Spezifikations-Release erscheint, heißt nicht, dass jeder Hub es am ersten Tag umsetzt. Home Assistant unterstützt Matter 1.6.0 seit Juli 2026 und arbeitet noch an 1.6.1-Groupcast; Apple Home, Google Home und SmartThings haben jeweils eigene Rollout-Zeitpläne, die dieser Artikel nicht verfolgt — prüfen Sie die aktuellen Release Notes Ihres Controllers.' },
+          { q: 'Unterstützen alle Matter-Controller Matter 1.6 sofort?', a: 'Nein — dass ein Spezifikations-Release erscheint, heißt nicht, dass jeder Hub es am ersten Tag umsetzt. Home Assistant unterstützt Matter 1.6.0 seit Juli 2026 und hat 1.6.1-Groupcast am 30. Oktober 2026 mit der Matter Server App 9.3.0 ergänzt; Apple Home, Google Home und SmartThings haben jeweils eigene Rollout-Zeitpläne, die dieser Artikel nicht verfolgt — prüfen Sie die aktuellen Release Notes Ihres Controllers.' },
           { q: 'Ändert das, wie Matter-Geräte eingerichtet werden?', a: 'Nicht für bestehende Methoden — QR-Code- und Bluetooth-Commissioning funktionieren weiterhin genauso. Matter 1.6 fügt NFC als zusätzliche Commissioning-Option hinzu; es entfernt oder ändert nicht den bestehenden Prozess. Siehe den Leitfaden zur lokalen Steuerung für die Commissioning-Anleitung.' },
           { q: 'Wann wurde Matter 1.6 veröffentlicht?', a: 'Matter 1.6 wurde am 17. Juni 2026 von der Connectivity Standards Alliance veröffentlicht. Matter 1.6.1, ein Wartungs-Release, folgte mit Spezifikationsdokumenten, die im September 2026 auf der [CSA-Spezifikationsseite](https://csa-iot.org/developer-resource/specifications-download-request/) bereitgestellt wurden.' },
           { q: 'Was ist neu in Matter 1.6.1?', a: 'Matter 1.6.1 ist ein Wartungs-Release ohne neue Gerätetypen. Es schließt Groupcast ab — den empfohlenen Weg, Gerätegruppen gleichzeitig zu steuern, statt verzögerter Einzelbefehle — und ergänzt optionale Lautstärke- und Stummschaltungs-Steuerung für Türklingel-Gongs, wie [Matter Alpha](https://www.matteralpha.com/industry-news/matter-1-6-1-finalizes-groupcast-and-adds-chime-sound-controls) berichtet. Die Gong-Steuerung erfordert Hersteller-Firmware und Plattform-Unterstützung.' },
@@ -312,7 +314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-10-18',
+      dateModified: '2026-11-03',
       about: [{ '@type': 'Thing', name: 'Matter Smart-Home-Protokoll' }, { '@type': 'Thing', name: 'Matter-Gerätetypen' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -336,13 +338,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   fr: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     publishDate: '2026-07-16',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-04-18',
     theme: '2026 Protocols & Regulation',
     heroImage: '/images/matter-1-6-explained-overview-hero-fr.webp',
     title: 'Matter 1.6 et 1.6.1 expliqués : date de sortie, nouveautés (2026)',
-    seoTitle: 'Matter 1.6 et 1.6.1 expliqués (2026)',
+    seoTitle: 'Matter 1.6 et 1.6.1 expliqués : date de sortie, nouveautés',
     intro:
       'Matter 1.6, publié le 17 juin 2026, a introduit la configuration des appareils par NFC, Joint Fabric (plusieurs écosystèmes co-administrent le même appareil) et les suggestions de thermostat. Matter 1.6.1, une version de maintenance publiée en septembre 2026, est désormais la dernière : elle finalise Groupcast et ajoute des commandes optionnelles de volume et de sourdine pour les carillons. Les types d’appareils de gestion d’énergie sont arrivés plus tôt, dans Matter 1.3-1.5, et sont traités ailleurs dans ce cluster. Cet article explique ce qui a changé dans 1.6 et 1.6.1 et en quoi il se distingue de l’article général sur les protocoles et du guide du contrôle local de ce site.',
     metaDescription:
@@ -361,7 +364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'types appareils matter 2027',
     ],
     leadAnswerBlock:
-      '**Matter 1.6 (publié le 17 juin 2026 par la Connectivity Standards Alliance) a ajouté la mise en service par NFC, le partage d’appareils entre écosystèmes avec Joint Fabric et les suggestions de thermostat ; Matter 1.6.1, une version de maintenance publiée en septembre 2026, est la dernière version et finalise Groupcast.** Les appareils certifiés 1.x existants restent compatibles. Les types d’appareils de gestion d’énergie (onduleurs, batteries, pompes à chaleur) ont été ajoutés plus tôt, dans Matter 1.3-1.5 — 1.6 est une version centrée sur la configuration et le multi-écosystème, pas sur l’énergie.',
+      '**Matter 1.6 (publié le 17 juin 2026) a ajouté la mise en service par NFC, Joint Fabric pour le multi-écosystème et les suggestions de thermostat ; Matter 1.6.1, version de maintenance de septembre 2026, est la dernière et finalise Groupcast.** Les appareils 1.x existants restent compatibles.',
     quickAnswerTop: {
       fr: {
         question: 'Quelles sont les nouveautés de Matter 1.6 ?',
@@ -373,7 +376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Distinct de Thread (la couche réseau) et du guide général sur les protocoles et du guide de contrôle local de ce cluster",
           "Les types d'appareils de gestion énergétique (onduleurs, batteries, pompes à chaleur) sont arrivés plus tôt, dans Matter 1.3-1.5 — pas nouveaux dans la 1.6",
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -442,10 +445,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Dois-je mettre à jour mes appareils Matter existants ?', a: "Non — les appareils déjà certifiés 1.x continuent de fonctionner sans aucune mise à jour. Les nouvelles capacités comme la configuration NFC ou Joint Fabric ne comptent que si vous achetez du nouveau matériel ou un nouveau contrôleur qui les implémente." },
           { q: 'Quel est le plus grand changement pratique dans Matter 1.6 ?', a: "Joint Fabric — il permet à plusieurs contrôleurs autorisés par l'utilisateur de co-administrer un même réseau Matter partagé, afin qu'un appareil puisse être véritablement partagé entre écosystèmes plutôt qu'appartenir au hub qui l'a appairé en premier. La configuration NFC et les Suggestions de thermostat sont les deux autres ajouts phares. Les types d'appareils de gestion énergétique (onduleurs, batteries, pompes à chaleur) ne sont pas nouveaux dans cette version — voir le guide d'intégration Matter onduleur/pompe à chaleur pour ce travail antérieur." },
           { q: 'Cela affecte-t-il Thread ?', a: "Thread est la couche réseau sur laquelle Matter fonctionne souvent ; Matter 1.6 est un changement de la couche applicative de Matter, pas de Thread lui-même. Voir le guide sur Thread et les routeurs Wi-Fi 7 pour les changements au niveau réseau." },
-          { q: 'Mon logiciel de hub est-il compatible avec Matter 1.6 ?', a: 'Le logiciel du hub a besoin de sa propre mise à jour pour prendre en charge une nouvelle version de la spécification — ce n’est pas automatique. Home Assistant a annoncé en juillet 2026 Matter Server 9.1.0 avec la prise en charge de Matter 1.6.0 ([article](https://alternativeto.net/news/2026/7/home-assistant-matter-server-9-1-0-adds-support-for-matter-1-6-0/)), et la prise en charge de Groupcast de Matter 1.6.1 est encore en développement ([feuille de route de l’Open Home Foundation](https://github.com/OpenHomeFoundation/roadmap/issues/216)). Consultez les notes de version de votre hub plutôt que de supposer un support dès le premier jour.' },
+          { q: 'Mon logiciel de hub est-il compatible avec Matter 1.6 ?', a: 'Le logiciel du hub a besoin de sa propre mise à jour pour prendre en charge une nouvelle version de la spécification — ce n’est pas automatique. Home Assistant a annoncé en juillet 2026 Matter Server 9.1.0 avec la prise en charge de Matter 1.6.0 ([article](https://alternativeto.net/news/2026/7/home-assistant-matter-server-9-1-0-adds-support-for-matter-1-6-0/)), et la prise en charge de Groupcast de Matter 1.6.1 est arrivée le 30 octobre 2026 avec Matter Server App 9.3.0 ([feuille de route de l’Open Home Foundation](https://github.com/OpenHomeFoundation/roadmap/issues/216)). Consultez les notes de version de votre hub plutôt que de supposer un support dès le premier jour.' },
           { q: "En quoi cela diffère-t-il de l'explicatif général Matter/Thread/Zigbee de ce site ?", a: 'Cet article explique les protocoles de manière conceptuelle et les compare. Cet article-ci couvre ce qui a spécifiquement changé dans Matter 1.6 — une portée plus étroite, centrée sur la mise à jour.' },
           { q: 'Où puis-je vérifier la version officielle actuelle de la spécification ?', a: "La Connectivity Standards Alliance ([csa-iot.org](https://csa-iot.org)) publie et annonce directement la spécification Matter actuelle — vérifiez là plutôt que de vous fier à des sources secondaires ou du matériel marketing pour le numéro de version exact." },
-          { q: 'Tous les contrôleurs Matter prennent-ils en charge Matter 1.6 immédiatement ?', a: 'Non — la publication d’une version de la spécification ne signifie pas que chaque hub l’implémente dès le premier jour. Home Assistant prend en charge Matter 1.6.0 depuis juillet 2026 et travaille encore sur Groupcast de 1.6.1 ; Apple Home, Google Home et SmartThings ont chacun leur propre calendrier de déploiement, que cet article ne suit pas — consultez les notes de version actuelles de votre contrôleur.' },
+          { q: 'Tous les contrôleurs Matter prennent-ils en charge Matter 1.6 immédiatement ?', a: 'Non — la publication d’une version de la spécification ne signifie pas que chaque hub l’implémente dès le premier jour. Home Assistant prend en charge Matter 1.6.0 depuis juillet 2026 et a ajouté Groupcast de 1.6.1 le 30 octobre 2026 avec Matter Server App 9.3.0 ; Apple Home, Google Home et SmartThings ont chacun leur propre calendrier de déploiement, que cet article ne suit pas — consultez les notes de version actuelles de votre contrôleur.' },
           { q: 'Cela change-t-il la façon dont les appareils Matter sont appairés ?', a: "Pas pour les méthodes existantes — l'appairage par QR code et Bluetooth fonctionne toujours de la même manière. Matter 1.6 ajoute le NFC comme option d'appairage supplémentaire ; cela ne supprime ni ne modifie le processus existant. Voir le guide de contrôle local pour le tutoriel d'appairage." },
           { q: 'Quand Matter 1.6 est-il sorti ?', a: 'Matter 1.6 a été publié le 17 juin 2026 par la Connectivity Standards Alliance. Matter 1.6.1, une version de maintenance, a suivi avec des documents de spécification publiés en septembre 2026 sur la [page des spécifications du CSA](https://csa-iot.org/developer-resource/specifications-download-request/).' },
           { q: 'Quelles sont les nouveautés de Matter 1.6.1 ?', a: 'Matter 1.6.1 est une version de maintenance sans nouveau type d’appareil. Elle finalise Groupcast — la méthode recommandée pour piloter des groupes d’appareils en une fois au lieu de commandes retardées une par une — et ajoute des commandes optionnelles de volume et de sourdine pour les carillons de sonnette, selon [Matter Alpha](https://www.matteralpha.com/industry-news/matter-1-6-1-finalizes-groupcast-and-adds-chime-sound-controls). Les commandes de carillon exigent un firmware du fabricant et la prise en charge par la plateforme.' },
@@ -473,7 +476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-10-18',
+      dateModified: '2026-11-03',
       about: [{ '@type': 'Thing', name: 'Protocole maison connectée Matter' }, { '@type': 'Thing', name: "Types d'appareils Matter" }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -497,8 +500,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ja: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     publishDate: '2026-07-16',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-04-18',
     theme: '2026 Protocols & Regulation',
     heroImage: '/images/matter-1-6-explained-overview-hero-ja.webp',
@@ -534,7 +538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Thread（ネットワーク層）や、このクラスターの一般的なプロトコル解説・ローカル制御ガイドとは異なる',
           'エネルギー管理デバイスタイプ（インバーター、バッテリー、ヒートポンプ）はMatter 1.3〜1.5にかけて既に導入済み — 1.6での新機能ではない',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -603,10 +607,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '既存のMatterデバイスを更新する必要がありますか？', a: 'いいえ — 既存の1.x認証デバイスは更新なしで動作し続けます。NFCセットアップやJoint Fabricなどの新機能は、それらを実装した新しいハードウェアや新しいコントローラーを購入する場合にのみ関係します。' },
           { q: 'Matter 1.6における最大の実用的な変更点は何ですか？', a: 'Joint Fabricです — 複数のユーザー承認済みコントローラーが単一の共有Matterネットワークを共同管理できるようになり、デバイスは最初にコミッショニングしたハブに属するのではなく、真にエコシステム間で共有できるようになります。NFCセットアップとサーモスタット提案が他の2つの主要な追加機能です。エネルギー管理デバイスタイプ（インバーター、バッテリー、ヒートポンプ）は今回のリリースでは新しくありません — その以前の作業についてはMatterインバーター/ヒートポンプ統合ガイドを参照してください。' },
           { q: 'これはThreadに影響しますか？', a: 'ThreadはMatterがしばしば動作するネットワーク層です。Matter 1.6はMatterのアプリケーション層の変更であり、Thread自体の変更ではありません。ネットワーク層の変更についてはThreadとWi-Fi 7ルーターのガイドを参照してください。' },
-          { q: '私のハブソフトウェアはMatter 1.6と互換性がありますか？', a: 'ハブのソフトウェアが新しい仕様リリースに対応するには、独自のアップデートが必要で、自動ではありません。Home Assistantは2026年7月にMatter 1.6.0に対応したMatter Server 9.1.0を発表しており（[報道](https://alternativeto.net/news/2026/7/home-assistant-matter-server-9-1-0-adds-support-for-matter-1-6-0/)）、Matter 1.6.1のGroupcast対応は開発中です（[Open Home Foundationのロードマップ](https://github.com/OpenHomeFoundation/roadmap/issues/216)）。初日からの対応を前提にせず、お使いのハブの最新リリースノートを確認してください。' },
+          { q: '私のハブソフトウェアはMatter 1.6と互換性がありますか？', a: 'ハブのソフトウェアが新しい仕様リリースに対応するには、独自のアップデートが必要で、自動ではありません。Home Assistantは2026年7月にMatter 1.6.0に対応したMatter Server 9.1.0を発表しており（[報道](https://alternativeto.net/news/2026/7/home-assistant-matter-server-9-1-0-adds-support-for-matter-1-6-0/)）、Matter 1.6.1のGroupcast対応は2026年10月30日のMatter Server App 9.3.0で提供されました（[Open Home Foundationのロードマップ](https://github.com/OpenHomeFoundation/roadmap/issues/216)）。初日からの対応を前提にせず、お使いのハブの最新リリースノートを確認してください。' },
           { q: 'このサイトの一般的なMatter/Thread/Zigbee解説とはどう違いますか？', a: 'その記事はプロトコルを概念的に説明し、比較しています。この記事はMatter 1.6で具体的に何が変わったかを扱っています — より狭い、更新に焦点を当てた範囲です。' },
           { q: '現在の公式仕様バージョンはどこで確認できますか？', a: 'Connectivity Standards Alliance（csa-iot.org）が現在のMatter仕様を直接公開・発表しています — 正確なバージョン番号については、二次情報源やマーケティング資料に頼るのではなく、そこで確認してください。' },
-          { q: 'すべてのMatterコントローラーがMatter 1.6を即座にサポートしますか？', a: 'いいえ。仕様がリリースされても、すべてのハブが初日から実装するわけではありません。Home Assistantは2026年7月からMatter 1.6.0に対応し、1.6.1のGroupcastには引き続き取り組んでいます。Apple Home、Google Home、SmartThingsはそれぞれ独自の展開スケジュールを持ち、この記事では追跡していません。お使いのコントローラーの最新リリースノートを確認してください。' },
+          { q: 'すべてのMatterコントローラーがMatter 1.6を即座にサポートしますか？', a: 'いいえ。仕様がリリースされても、すべてのハブが初日から実装するわけではありません。Home Assistantは2026年7月からMatter 1.6.0に対応し、2026年10月30日にMatter Server App 9.3.0で1.6.1のGroupcastにも対応しました。Apple Home、Google Home、SmartThingsはそれぞれ独自の展開スケジュールを持ち、この記事では追跡していません。お使いのコントローラーの最新リリースノートを確認してください。' },
           { q: 'Matterデバイスのコミッショニング方法は変わりますか？', a: '既存の方法については変わりません — QRコードとBluetoothによるコミッショニングは引き続き同じように機能します。Matter 1.6は追加のコミッショニングオプションとしてNFCを加えるだけで、既存のプロセスを削除したり変更したりするものではありません。コミッショニングの手順についてはローカル制御ガイドを参照してください。' },
           { q: 'Matter 1.6はいつリリースされましたか？', a: 'Matter 1.6は2026年6月17日にConnectivity Standards Allianceによってリリースされました。メンテナンスリリースのMatter 1.6.1がそれに続き、仕様書は2026年9月に[CSAの仕様ページ](https://csa-iot.org/developer-resource/specifications-download-request/)で公開されました。' },
           { q: 'Matter 1.6.1の新機能は何ですか？', a: 'Matter 1.6.1は新しいデバイスタイプのないメンテナンスリリースです。デバイスグループを遅延なく一括制御する推奨方式のGroupcastを確定させ、[Matter Alpha](https://www.matteralpha.com/industry-news/matter-1-6-1-finalizes-groupcast-and-adds-chime-sound-controls)の報道によれば、ドアベルチャイムの音量・ミュート制御（オプション）を追加します。チャイム制御にはメーカーのファームウェアとプラットフォーム側の対応が必要です。' },
@@ -634,7 +638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-10-18',
+      dateModified: '2026-11-03',
       about: [{ '@type': 'Thing', name: 'Matterスマートホームプロトコル' }, { '@type': 'Thing', name: 'Matterデバイスタイプ' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -658,8 +662,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   zh: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     publishDate: '2026-07-16',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-04-18',
     theme: '2026 Protocols & Regulation',
     heroImage: '/images/matter-1-6-explained-overview-hero-zh.webp',
@@ -695,7 +700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '这与Thread（网络层）以及本系列的通用协议入门文章和本地控制指南不同',
           '能源管理设备类型（逆变器、电池、热泵）在更早的Matter 1.3-1.5中就已出现——1.6中并非新增',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -764,10 +769,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '我需要更新现有的Matter设备吗？', a: '不需要——现有的1.x认证设备无需任何更新即可继续工作。NFC设置或Joint Fabric等新功能只有在你购买实现了这些功能的新硬件或新控制器时才有意义。' },
           { q: 'Matter 1.6中最大的实际变化是什么？', a: 'Joint Fabric——它让多个经用户授权的控制器能够共同管理同一个共享的Matter网络，使设备能够真正在生态系统间共享，而不是归属于最先配对它的中枢。NFC设置和温控器建议是另外两项主要新增功能。能源管理设备类型（逆变器、电池、热泵）在此次发布中并非新增——有关这项更早的工作，请参见Matter逆变器/热泵集成指南。' },
           { q: '这会影响Thread吗？', a: 'Thread是Matter经常运行于其上的网络层；Matter 1.6是对Matter应用层的更改，而不是对Thread本身的更改。有关网络层的变化，请参见Thread和Wi-Fi 7路由器指南。' },
-          { q: '我的中枢软件与Matter 1.6兼容吗？', a: '中枢软件需要自己的更新才能支持新的规范版本，这不是自动的。Home Assistant 于 2026 年 7 月宣布发布支持 Matter 1.6.0 的 Matter Server 9.1.0（[报道](https://alternativeto.net/news/2026/7/home-assistant-matter-server-9-1-0-adds-support-for-matter-1-6-0/)），而 Matter 1.6.1 的 Groupcast 支持仍在开发中（[Open Home Foundation 路线图](https://github.com/OpenHomeFoundation/roadmap/issues/216)）。请查看您所用中枢的最新发布说明，不要默认首日即支持。' },
+          { q: '我的中枢软件与Matter 1.6兼容吗？', a: '中枢软件需要自己的更新才能支持新的规范版本，这不是自动的。Home Assistant 于 2026 年 7 月宣布发布支持 Matter 1.6.0 的 Matter Server 9.1.0（[报道](https://alternativeto.net/news/2026/7/home-assistant-matter-server-9-1-0-adds-support-for-matter-1-6-0/)），而 Matter 1.6.1 的 Groupcast 支持已于 2026 年 10 月 30 日随 Matter Server App 9.3.0 发布（[Open Home Foundation 路线图](https://github.com/OpenHomeFoundation/roadmap/issues/216)）。请查看您所用中枢的最新发布说明，不要默认首日即支持。' },
           { q: '这与本站通用的Matter/Thread/Zigbee解说文章有何不同？', a: '那篇文章从概念上解释了这些协议并进行了比较。本文则专门介绍Matter 1.6具体改变了什么——范围更窄，专注于更新内容。' },
           { q: '我在哪里可以查看当前的官方规范版本？', a: '连接标准联盟（csa-iot.org）会直接发布并公告当前的Matter规范——请在那里查阅确切的版本号，而不是依赖二手来源或营销材料。' },
-          { q: '所有Matter控制器都会立即支持Matter 1.6吗？', a: '不是——规范发布并不意味着每个中枢首日就能实现。Home Assistant 自 2026 年 7 月起支持 Matter 1.6.0，仍在开发 1.6.1 的 Groupcast；Apple Home、Google Home 和 SmartThings 各有独立的推出时间表，本文不做跟踪——请查看您所用控制器的最新发布说明。' },
+          { q: '所有Matter控制器都会立即支持Matter 1.6吗？', a: '不是——规范发布并不意味着每个中枢首日就能实现。Home Assistant 自 2026 年 7 月起支持 Matter 1.6.0，并已于 2026 年 10 月 30 日随 Matter Server App 9.3.0 加入 1.6.1 的 Groupcast；Apple Home、Google Home 和 SmartThings 各有独立的推出时间表，本文不做跟踪——请查看您所用控制器的最新发布说明。' },
           { q: '这会改变Matter设备的配对方式吗？', a: '对现有方法不会——二维码和蓝牙配对方式仍照常运作。Matter 1.6新增NFC作为额外的配对选项；它不会移除或改变现有流程。有关配对步骤，请参见本地控制指南。' },
           { q: 'Matter 1.6 是什么时候发布的？', a: 'Matter 1.6 由连接标准联盟于 2026 年 6 月 17 日发布。维护版本 Matter 1.6.1 随后推出，规范文档于 2026 年 9 月发布在 [CSA 规范页面](https://csa-iot.org/developer-resource/specifications-download-request/)。' },
           { q: 'Matter 1.6.1 有什么新内容？', a: 'Matter 1.6.1 是不含新设备类型的维护版本。它正式确定了 Groupcast——一次性控制设备组、取代逐个延迟发送命令的推荐方式——并按 [Matter Alpha](https://www.matteralpha.com/industry-news/matter-1-6-1-finalizes-groupcast-and-adds-chime-sound-controls) 的报道新增可选的门铃音量与静音控制。门铃控制需要制造商固件和平台支持。' },
@@ -795,7 +800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-10-18',
+      dateModified: '2026-11-03',
       about: [{ '@type': 'Thing', name: 'Matter智能家居协议' }, { '@type': 'Thing', name: 'Matter设备类型' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -819,13 +824,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   es: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     publishDate: '2026-07-16',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-04-18',
     theme: '2026 Protocols & Regulation',
     heroImage: '/images/matter-1-6-explained-overview-hero-es.webp',
     title: 'Matter 1.6 y 1.6.1 explicados: fecha de lanzamiento y novedades (2026)',
-    seoTitle: 'Matter 1.6 y 1.6.1 explicados (2026)',
+    seoTitle: 'Matter 1.6 y 1.6.1 explicados: fecha y novedades',
     intro:
       'Matter 1.6, publicado el 17 de junio de 2026, introdujo la configuración de dispositivos por NFC, Joint Fabric (varios ecosistemas administran juntos el mismo dispositivo) y las sugerencias de termostato. Matter 1.6.1, una versión de mantenimiento publicada en septiembre de 2026, es ahora la última: finaliza Groupcast y añade controles opcionales de volumen y silencio para timbres. Los tipos de dispositivos de gestión de energía llegaron antes, en Matter 1.3-1.5, y se tratan en otra parte de este clúster. Este artículo explica qué cambió en 1.6 y 1.6.1 y en qué se diferencia del artículo general sobre protocolos y de la guía de control local de este sitio.',
     metaDescription:
@@ -844,7 +850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'tipos dispositivos matter 2027',
     ],
     leadAnswerBlock:
-      '**Matter 1.6 (publicado el 17 de junio de 2026 por la Connectivity Standards Alliance) añadió la puesta en marcha por NFC, el uso compartido de dispositivos entre ecosistemas con Joint Fabric y las sugerencias de termostato; Matter 1.6.1, una versión de mantenimiento publicada en septiembre de 2026, es la última versión y finaliza Groupcast.** Los dispositivos certificados 1.x existentes siguen siendo compatibles. Los tipos de dispositivos de gestión de energía (inversores, baterías, bombas de calor) se añadieron antes, en Matter 1.3-1.5 — 1.6 es una versión de configuración y multiecosistema, no centrada en la energía.',
+      '**Matter 1.6 (publicado el 17 de junio de 2026) añadió la puesta en marcha por NFC, Joint Fabric para varios ecosistemas y sugerencias de termostato; Matter 1.6.1, versión de mantenimiento de septiembre de 2026, es la última y finaliza Groupcast.** Los dispositivos 1.x existentes siguen siendo compatibles.',
     quickAnswerTop: {
       es: {
         question: '¿Qué hay de nuevo en Matter 1.6?',
@@ -856,7 +862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Se distingue de Thread (la capa de red) y de la guía general de protocolos y la guía de control local de este clúster',
           'Los tipos de dispositivos de gestión energética (inversores, baterías, bombas de calor) llegaron antes, en Matter 1.3-1.5 — no son nuevos en la 1.6',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -925,10 +931,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Necesito actualizar mis dispositivos Matter existentes?', a: 'No — los dispositivos ya certificados en 1.x siguen funcionando sin ninguna actualización. Las nuevas capacidades como la configuración NFC o Joint Fabric solo importan si compras hardware nuevo o un nuevo controlador que las implemente.' },
           { q: '¿Cuál es el cambio práctico más importante en Matter 1.6?', a: 'Joint Fabric — permite que varios controladores autorizados por el usuario coadministren una única red Matter compartida, de modo que un dispositivo pueda compartirse genuinamente entre ecosistemas en lugar de pertenecer al hub que lo emparejó primero. La configuración NFC y las Sugerencias de termostato son las otras dos novedades principales. Los tipos de dispositivos de gestión energética (inversores, baterías, bombas de calor) no son nuevos en este lanzamiento — consulta la guía de integración Matter de inversor/bomba de calor para ese trabajo anterior.' },
           { q: '¿Afecta esto a Thread?', a: 'Thread es la capa de red sobre la que a menudo funciona Matter; Matter 1.6 es un cambio en la capa de aplicación de Matter, no en Thread en sí. Consulta la guía de Thread y routers Wi-Fi 7 para los cambios a nivel de red.' },
-          { q: '¿Es compatible el software de mi hub con Matter 1.6?', a: 'El software del hub necesita su propia actualización para admitir una nueva versión de la especificación; no es automático. Home Assistant anunció en julio de 2026 Matter Server 9.1.0 con compatibilidad con Matter 1.6.0 ([informe](https://alternativeto.net/news/2026/7/home-assistant-matter-server-9-1-0-adds-support-for-matter-1-6-0/)), y la compatibilidad con Groupcast de Matter 1.6.1 sigue en desarrollo ([hoja de ruta de la Open Home Foundation](https://github.com/OpenHomeFoundation/roadmap/issues/216)). Consulta las notas de versión de tu hub en lugar de suponer soporte desde el primer día.' },
+          { q: '¿Es compatible el software de mi hub con Matter 1.6?', a: 'El software del hub necesita su propia actualización para admitir una nueva versión de la especificación; no es automático. Home Assistant anunció en julio de 2026 Matter Server 9.1.0 con compatibilidad con Matter 1.6.0 ([informe](https://alternativeto.net/news/2026/7/home-assistant-matter-server-9-1-0-adds-support-for-matter-1-6-0/)), y la compatibilidad con Groupcast de Matter 1.6.1 llegó el 30 de octubre de 2026 con Matter Server App 9.3.0 ([hoja de ruta de la Open Home Foundation](https://github.com/OpenHomeFoundation/roadmap/issues/216)). Consulta las notas de versión de tu hub en lugar de suponer soporte desde el primer día.' },
           { q: '¿En qué se diferencia esto del explicativo general de Matter/Thread/Zigbee de este sitio?', a: 'Ese artículo explica los protocolos de forma conceptual y los compara. Este artículo cubre qué cambió específicamente en Matter 1.6 — un alcance más estrecho, centrado en la actualización.' },
           { q: '¿Dónde puedo verificar la versión oficial actual de la especificación?', a: 'La Connectivity Standards Alliance ([csa-iot.org](https://csa-iot.org)) publica y anuncia directamente la especificación Matter actual — verifica allí en lugar de depender de fuentes secundarias o material de marketing para el número de versión exacto.' },
-          { q: '¿Todos los controladores Matter soportan Matter 1.6 de inmediato?', a: 'No — que se publique una versión de la especificación no significa que todos los hubs la implementen el primer día. Home Assistant admite Matter 1.6.0 desde julio de 2026 y sigue trabajando en Groupcast de 1.6.1; Apple Home, Google Home y SmartThings tienen cada uno su propio calendario de despliegue, que este artículo no sigue — consulta las notas de versión actuales de tu controlador.' },
+          { q: '¿Todos los controladores Matter soportan Matter 1.6 de inmediato?', a: 'No — que se publique una versión de la especificación no significa que todos los hubs la implementen el primer día. Home Assistant admite Matter 1.6.0 desde julio de 2026 y añadió Groupcast de 1.6.1 el 30 de octubre de 2026 con Matter Server App 9.3.0; Apple Home, Google Home y SmartThings tienen cada uno su propio calendario de despliegue, que este artículo no sigue — consulta las notas de versión actuales de tu controlador.' },
           { q: '¿Cambia esto la forma en que se emparejan los dispositivos Matter?', a: 'No para los métodos existentes — el emparejamiento por código QR y Bluetooth sigue funcionando igual. Matter 1.6 añade NFC como una opción de emparejamiento adicional; no elimina ni cambia el proceso existente. Consulta la guía de control local para el recorrido de emparejamiento.' },
           { q: '¿Cuándo se lanzó Matter 1.6?', a: 'Matter 1.6 fue publicado el 17 de junio de 2026 por la Connectivity Standards Alliance. Matter 1.6.1, una versión de mantenimiento, siguió con documentos de especificación publicados en septiembre de 2026 en la [página de especificaciones del CSA](https://csa-iot.org/developer-resource/specifications-download-request/).' },
           { q: '¿Qué novedades trae Matter 1.6.1?', a: 'Matter 1.6.1 es una versión de mantenimiento sin nuevos tipos de dispositivo. Finaliza Groupcast — la forma recomendada de controlar grupos de dispositivos a la vez en lugar de comandos retrasados uno a uno — y añade controles opcionales de volumen y silencio para timbres, según [Matter Alpha](https://www.matteralpha.com/industry-news/matter-1-6-1-finalizes-groupcast-and-adds-chime-sound-controls). Los controles del timbre requieren firmware del fabricante y compatibilidad de la plataforma.' },
@@ -956,7 +962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-10-18',
+      dateModified: '2026-11-03',
       about: [{ '@type': 'Thing', name: 'Protocolo de hogar inteligente Matter' }, { '@type': 'Thing', name: 'Tipos de dispositivos Matter' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -980,13 +986,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   pt: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     publishDate: '2026-07-16',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-04-18',
     theme: '2026 Protocols & Regulation',
     heroImage: '/images/matter-1-6-explained-overview-hero-pt.webp',
     title: 'Matter 1.6 e 1.6.1 explicados: data de lançamento e novidades (2026)',
-    seoTitle: 'Matter 1.6 e 1.6.1 explicados (2026)',
+    seoTitle: 'Matter 1.6 e 1.6.1 explicados: data e novas funções',
     intro:
       'O Matter 1.6, lançado em 17 de junho de 2026, trouxe a configuração de dispositivos por NFC, o Joint Fabric (vários ecossistemas administram o mesmo dispositivo em conjunto) e as sugestões de termostato. O Matter 1.6.1, uma versão de manutenção publicada em setembro de 2026, é agora a mais recente: finaliza o Groupcast e adiciona controles opcionais de volume e silêncio para campainhas. Os tipos de dispositivos de gestão de energia chegaram antes, no Matter 1.3-1.5, e são tratados em outro ponto deste cluster. Este artigo explica o que mudou no 1.6 e no 1.6.1 e como ele se diferencia do artigo geral sobre protocolos e do guia de controle local deste site.',
     metaDescription:
@@ -1005,7 +1012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'tipos dispositivos matter 2027',
     ],
     leadAnswerBlock:
-      '**O Matter 1.6 (lançado em 17 de junho de 2026 pela Connectivity Standards Alliance) adicionou o comissionamento por NFC, o compartilhamento de dispositivos entre ecossistemas com Joint Fabric e as sugestões de termostato; o Matter 1.6.1, uma versão de manutenção publicada em setembro de 2026, é a versão mais recente e finaliza o Groupcast.** Os dispositivos certificados 1.x existentes continuam compatíveis. Os tipos de dispositivos de gestão de energia (inversores, baterias, bombas de calor) foram adicionados antes, no Matter 1.3-1.5 — o 1.6 é uma versão de configuração e multiecossistema, não focada em energia.',
+      '**O Matter 1.6 (lançado em 17 de junho de 2026) adicionou comissionamento por NFC, Joint Fabric para vários ecossistemas e sugestões de termostato; o Matter 1.6.1, versão de manutenção de setembro de 2026, é a mais recente e finaliza o Groupcast.** Dispositivos 1.x existentes continuam compatíveis.',
     quickAnswerTop: {
       pt: {
         question: 'O que há de novo no Matter 1.6?',
@@ -1017,7 +1024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Diferente do Thread (a camada de rede) e do guia geral de protocolos e do guia de controle local deste cluster',
           'Os tipos de dispositivos de gestão de energia (inversores, baterias, bombas de calor) chegaram antes, no Matter 1.3-1.5 — não são novos no 1.6',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1086,10 +1093,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Preciso atualizar meus dispositivos Matter existentes?', a: 'Não — dispositivos já certificados em 1.x continuam funcionando sem nenhuma atualização. Novas capacidades como configuração NFC ou Joint Fabric só importam se você comprar hardware novo ou um novo controlador que as implemente.' },
           { q: 'Qual é a maior mudança prática no Matter 1.6?', a: 'Joint Fabric — permite que vários controladores autorizados pelo usuário coadministrem uma única rede Matter compartilhada, para que um dispositivo possa ser genuinamente compartilhado entre ecossistemas em vez de pertencer ao hub que o comissionou primeiro. Configuração NFC e Sugestões de termostato são as outras duas principais novidades. Os tipos de dispositivos de gestão de energia (inversores, baterias, bombas de calor) não são novos neste lançamento — veja o guia de integração Matter de inversor/bomba de calor para esse trabalho anterior.' },
           { q: 'Isso afeta o Thread?', a: 'O Thread é a camada de rede sobre a qual o Matter frequentemente funciona; o Matter 1.6 é uma mudança na camada de aplicação do Matter, não no Thread em si. Veja o guia de Thread e roteadores Wi-Fi 7 para mudanças no nível de rede.' },
-          { q: 'Meu software de hub é compatível com o Matter 1.6?', a: 'O software do hub precisa de uma atualização própria para suportar uma nova versão da especificação — isso não é automático. O Home Assistant anunciou em julho de 2026 o Matter Server 9.1.0 com suporte ao Matter 1.6.0 ([reportagem](https://alternativeto.net/news/2026/7/home-assistant-matter-server-9-1-0-adds-support-for-matter-1-6-0/)), e o suporte ao Groupcast do Matter 1.6.1 ainda está em desenvolvimento ([roteiro da Open Home Foundation](https://github.com/OpenHomeFoundation/roadmap/issues/216)). Consulte as notas de versão atuais do seu hub em vez de presumir suporte desde o primeiro dia.' },
+          { q: 'Meu software de hub é compatível com o Matter 1.6?', a: 'O software do hub precisa de uma atualização própria para suportar uma nova versão da especificação — isso não é automático. O Home Assistant anunciou em julho de 2026 o Matter Server 9.1.0 com suporte ao Matter 1.6.0 ([reportagem](https://alternativeto.net/news/2026/7/home-assistant-matter-server-9-1-0-adds-support-for-matter-1-6-0/)), e o suporte ao Groupcast do Matter 1.6.1 chegou em 30 de outubro de 2026 com o Matter Server App 9.3.0 ([roteiro da Open Home Foundation](https://github.com/OpenHomeFoundation/roadmap/issues/216)). Consulte as notas de versão atuais do seu hub em vez de presumir suporte desde o primeiro dia.' },
           { q: 'Como isso difere do explicativo geral de Matter/Thread/Zigbee deste site?', a: 'Aquele artigo explica os protocolos de forma conceitual e os compara. Este artigo cobre o que especificamente mudou no Matter 1.6 — um escopo mais restrito, focado na atualização.' },
           { q: 'Onde posso verificar a versão oficial atual da especificação?', a: 'A Connectivity Standards Alliance ([csa-iot.org](https://csa-iot.org)) publica e anuncia diretamente a especificação Matter atual — verifique lá em vez de confiar em fontes secundárias ou materiais de marketing para o número exato da versão.' },
-          { q: 'Todos os controladores Matter suportam o Matter 1.6 imediatamente?', a: 'Não — a publicação de uma versão da especificação não significa que todo hub a implemente no primeiro dia. O Home Assistant suporta o Matter 1.6.0 desde julho de 2026 e ainda trabalha no Groupcast do 1.6.1; Apple Home, Google Home e SmartThings têm cronogramas de lançamento independentes, que este artigo não acompanha — consulte as notas de versão atuais do seu controlador.' },
+          { q: 'Todos os controladores Matter suportam o Matter 1.6 imediatamente?', a: 'Não — a publicação de uma versão da especificação não significa que todo hub a implemente no primeiro dia. O Home Assistant suporta o Matter 1.6.0 desde julho de 2026 e adicionou o Groupcast do 1.6.1 em 30 de outubro de 2026 com o Matter Server App 9.3.0; Apple Home, Google Home e SmartThings têm cronogramas de lançamento independentes, que este artigo não acompanha — consulte as notas de versão atuais do seu controlador.' },
           { q: 'Isso muda a forma como os dispositivos Matter são comissionados?', a: 'Não para os métodos existentes — o comissionamento por código QR e Bluetooth continua funcionando da mesma forma. O Matter 1.6 adiciona o NFC como uma opção adicional de comissionamento; ele não remove nem altera o processo existente. Veja o guia de controle local para o passo a passo de comissionamento.' },
           { q: 'Quando o Matter 1.6 foi lançado?', a: 'O Matter 1.6 foi lançado em 17 de junho de 2026 pela Connectivity Standards Alliance. O Matter 1.6.1, uma versão de manutenção, veio em seguida, com documentos de especificação publicados em setembro de 2026 na [página de especificações da CSA](https://csa-iot.org/developer-resource/specifications-download-request/).' },
           { q: 'O que há de novo no Matter 1.6.1?', a: 'O Matter 1.6.1 é uma versão de manutenção sem novos tipos de dispositivo. Ele finaliza o Groupcast — a forma recomendada de controlar grupos de dispositivos ao mesmo tempo, em vez de comandos atrasados um a um — e adiciona controles opcionais de volume e silêncio para campainhas, conforme o [Matter Alpha](https://www.matteralpha.com/industry-news/matter-1-6-1-finalizes-groupcast-and-adds-chime-sound-controls). Os controles da campainha exigem firmware do fabricante e suporte da plataforma.' },
@@ -1117,7 +1124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-10-18',
+      dateModified: '2026-11-03',
       about: [{ '@type': 'Thing', name: 'Protocolo de casa inteligente Matter' }, { '@type': 'Thing', name: 'Tipos de dispositivos Matter' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1141,13 +1148,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ar: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     publishDate: '2026-07-16',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-04-18',
     theme: '2026 Protocols & Regulation',
     heroImage: '/images/matter-1-6-explained-overview-hero-ar.webp',
     title: 'شرح Matter 1.6 و1.6.1: تاريخ الإصدار والميزات (⁨2026⁩)',
-    seoTitle: 'شرح Matter 1.6 و1.6.1 (⁨2026⁩)',
+    seoTitle: 'شرح Matter 1.6 و1.6.1: تاريخ الإصدار والميزات',
     intro:
       'قدّم Matter 1.6، الذي صدر في 17 يونيو 2026، الإعداد القائم على NFC، وJoint Fabric (الذي تدير بموجبه عدة أنظمة متكاملة الجهاز نفسه معًا)، واقتراحات الثرموستات. أما Matter 1.6.1، وهو إصدار صيانة نُشر في سبتمبر 2026، فهو الآن أحدث نسخة: يُنهي Groupcast ويضيف عناصر تحكم اختيارية في مستوى صوت جرس الباب وكتمه. أُضيفت أنواع أجهزة إدارة الطاقة قبل ذلك في Matter 1.3-1.5، وتُغطّى في موضع آخر من هذه المجموعة. يشرح هذا المقال ما تغيّر في 1.6 و1.6.1، وكيف يختلف عن المقال العام حول البروتوكولات ودليل التحكم المحلي على هذا الموقع.',
     metaDescription:
@@ -1166,7 +1174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'أنواع أجهزة matter 2027',
     ],
     leadAnswerBlock:
-      '**أضاف Matter 1.6 (الذي أصدره تحالف معايير الاتصال في 17 يونيو 2026) التفويض القائم على NFC، ومشاركة الأجهزة بين الأنظمة المتكاملة عبر Joint Fabric، واقتراحات الثرموستات؛ أما Matter 1.6.1، وهو إصدار صيانة نُشر في سبتمبر 2026، فهو أحدث نسخة ويُنهي Groupcast.** تبقى الأجهزة المعتمدة بإصدار 1.x متوافقة. أُضيفت أنواع أجهزة إدارة الطاقة (العاكسات والبطاريات ومضخات الحرارة) قبل ذلك في Matter 1.3-1.5 — فالإصدار 1.6 يركّز على الإعداد وتعدد الأنظمة المتكاملة، لا على الطاقة.',
+      '**أضاف Matter 1.6 (صدر في 17 يونيو 2026) التهيئة عبر NFC وJoint Fabric لمشاركة الأجهزة بين المنظومات واقتراحات الثرموستات؛ وMatter 1.6.1، إصدار صيانة من سبتمبر 2026، هو الأحدث ويستكمل Groupcast.** تبقى أجهزة 1.x الحالية متوافقة.',
     quickAnswerTop: {
       ar: {
         question: 'ما الجديد في Matter 1.6؟',
@@ -1178,7 +1186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يختلف عن Thread (طبقة الشبكة) وعن الشرح العام للبروتوكولات ودليل التحكم المحلي لهذه المجموعة',
           'وصلت أنواع أجهزة إدارة الطاقة (العاكسات، البطاريات، مضخات الحرارة) سابقًا، في Matter 1.3-1.5 — وليست جديدة في 1.6',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1247,10 +1255,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل أحتاج إلى تحديث أجهزة Matter الحالية لدي؟', a: 'لا — تستمر الأجهزة المعتمدة بالفعل في إصدار 1.x في العمل دون أي تحديث. لا تهم القدرات الجديدة مثل إعداد NFC أو Joint Fabric إلا إذا اشتريت أجهزة جديدة أو وحدة تحكم جديدة تنفذها.' },
           { q: 'ما هو أكبر تغيير عملي في Matter 1.6؟', a: 'Joint Fabric — الذي يتيح لعدة وحدات تحكم مصرح بها من المستخدم إدارة شبكة Matter مشتركة واحدة معًا، بحيث يمكن مشاركة الجهاز فعليًا بين الأنظمة البيئية بدلًا من انتمائه لأي محور قام بتفويضه أولًا. إعداد NFC واقتراحات الترموستات هما الإضافتان الرئيسيتان الأخريان. لا تُعد أنواع أجهزة إدارة الطاقة (العاكسات، البطاريات، مضخات الحرارة) جديدة في هذا الإصدار — راجع دليل تكامل Matter للعاكس/مضخة الحرارة لمعرفة ذلك العمل السابق.' },
           { q: 'هل يؤثر هذا على Thread؟', a: 'Thread هي طبقة الشبكة التي غالبًا ما يعمل Matter فوقها؛ Matter 1.6 هو تغيير في طبقة تطبيق Matter، وليس في Thread نفسه. راجع دليل Thread وأجهزة توجيه Wi-Fi 7 للتغييرات على مستوى الشبكة.' },
-          { q: 'هل برنامج المحور لدي متوافق مع Matter 1.6؟', a: 'يحتاج برنامج المحور إلى تحديث خاص به لدعم إصدار مواصفة جديد — وهذا ليس تلقائيًا. أعلنت Home Assistant في يوليو 2026 عن Matter Server 9.1.0 بدعم Matter 1.6.0 ([تقرير](https://alternativeto.net/news/2026/7/home-assistant-matter-server-9-1-0-adds-support-for-matter-1-6-0/))، أما دعم Groupcast في Matter 1.6.1 فلا يزال قيد التطوير ([خارطة طريق Open Home Foundation](https://github.com/OpenHomeFoundation/roadmap/issues/216)). تحقق من ملاحظات الإصدار الحالية لمحورك بدلًا من افتراض الدعم في اليوم الأول.' },
+          { q: 'هل برنامج المحور لدي متوافق مع Matter 1.6؟', a: 'يحتاج برنامج المحور إلى تحديث خاص به لدعم إصدار مواصفة جديد — وهذا ليس تلقائيًا. أعلنت Home Assistant في يوليو 2026 عن Matter Server 9.1.0 بدعم Matter 1.6.0 ([تقرير](https://alternativeto.net/news/2026/7/home-assistant-matter-server-9-1-0-adds-support-for-matter-1-6-0/))، أما دعم Groupcast في Matter 1.6.1 فقد وصل في 30 أكتوبر 2026 مع Matter Server App 9.3.0 ([خارطة طريق Open Home Foundation](https://github.com/OpenHomeFoundation/roadmap/issues/216)). تحقق من ملاحظات الإصدار الحالية لمحورك بدلًا من افتراض الدعم في اليوم الأول.' },
           { q: 'كيف يختلف هذا عن الشرح العام لـ Matter/Thread/Zigbee على هذا الموقع؟', a: 'يشرح ذلك المقال البروتوكولات على المستوى المفاهيمي ويقارن بينها. يغطي هذا المقال ما تغير تحديدًا في Matter 1.6 — نطاق أضيق يركز على التحديث.' },
           { q: 'أين يمكنني التحقق من إصدار المواصفة الرسمي الحالي؟', a: 'ينشر تحالف معايير الاتصال ([csa-iot.org](https://csa-iot.org)) ويعلن مباشرة عن مواصفة Matter الحالية — تحقق من هناك بدلًا من الاعتماد على مصادر ثانوية أو مواد تسويقية لمعرفة رقم الإصدار الدقيق.' },
-          { q: 'هل تدعم جميع وحدات تحكم Matter، Matter 1.6 فورًا؟', a: 'لا — نشر إصدار مواصفة لا يعني أن كل محور ينفذه في اليوم الأول. تدعم Home Assistant إصدار Matter 1.6.0 منذ يوليو 2026 وما زالت تعمل على Groupcast في 1.6.1؛ ولكل من Apple Home وGoogle Home وSmartThings جدول طرح مستقل لا يتتبعه هذا المقال — تحقق من ملاحظات الإصدار الحالية لوحدة التحكم لديك.' },
+          { q: 'هل تدعم جميع وحدات تحكم Matter، Matter 1.6 فورًا؟', a: 'لا — نشر إصدار مواصفة لا يعني أن كل محور ينفذه في اليوم الأول. تدعم Home Assistant إصدار Matter 1.6.0 منذ يوليو 2026 وأضافت Groupcast في 1.6.1 في 30 أكتوبر 2026 مع Matter Server App 9.3.0؛ ولكل من Apple Home وGoogle Home وSmartThings جدول طرح مستقل لا يتتبعه هذا المقال — تحقق من ملاحظات الإصدار الحالية لوحدة التحكم لديك.' },
           { q: 'هل يغيّر هذا كيفية تفويض أجهزة Matter؟', a: 'ليس بالنسبة للطرق الحالية — لا يزال التفويض عبر رمز QR والبلوتوث يعمل بنفس الطريقة. يضيف Matter 1.6 تقنية NFC كخيار تفويض إضافي؛ فهو لا يزيل أو يغيّر العملية الحالية. راجع دليل التحكم المحلي للاطلاع على خطوات التفويض.' },
           { q: 'متى صدر Matter 1.6؟', a: 'صدر Matter 1.6 في 17 يونيو 2026 عن تحالف معايير الاتصال. ثم تبعه Matter 1.6.1، وهو إصدار صيانة، بوثائق مواصفات نُشرت في سبتمبر 2026 على [صفحة مواصفات CSA](https://csa-iot.org/developer-resource/specifications-download-request/).' },
           { q: 'ما الجديد في Matter 1.6.1؟', a: 'Matter 1.6.1 إصدار صيانة بلا أنواع أجهزة جديدة. يُنهي Groupcast — الطريقة الموصى بها للتحكم في مجموعات الأجهزة دفعة واحدة بدل أوامر متأخرة واحدًا تلو الآخر — ويضيف عناصر تحكم اختيارية في مستوى صوت جرس الباب وكتمه، بحسب [Matter Alpha](https://www.matteralpha.com/industry-news/matter-1-6-1-finalizes-groupcast-and-adds-chime-sound-controls). تتطلب عناصر تحكم الجرس برنامجًا ثابتًا من الشركة المصنّعة ودعمًا من المنصة.' },
@@ -1278,7 +1286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-10-18',
+      dateModified: '2026-11-03',
       about: [{ '@type': 'Thing', name: 'بروتوكول المنزل الذكي Matter' }, { '@type': 'Thing', name: 'أنواع أجهزة Matter' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1302,13 +1310,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ko: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     publishDate: '2026-07-16',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-04-18',
     theme: '2026 Protocols & Regulation',
     heroImage: '/images/matter-1-6-explained-overview-hero-ko.webp',
     title: 'Matter 1.6과 1.6.1 해설: 출시일과 새 기능 (2026)',
-    seoTitle: 'Matter 1.6과 1.6.1 해설 (2026)',
+    seoTitle: 'Matter 1.6과 1.6.1 해설: 출시일과 새 기능',
     intro:
       '2026년 6월 17일 출시된 Matter 1.6은 NFC 기반 기기 설정, Joint Fabric(여러 에코시스템이 같은 기기를 함께 관리), 온도조절기 제안(Thermostat Suggestions)을 도입했습니다. 2026년 9월에 공개된 유지보수 릴리스인 Matter 1.6.1이 현재 최신 버전으로, Groupcast를 확정하고 초인종 차임의 볼륨·음소거 제어(선택 사항)를 추가했습니다. 에너지 관리 기기 유형은 그보다 앞서 Matter 1.3~1.5에서 도입되었으며 이 클러스터의 다른 글에서 다룹니다. 이 글은 1.6과 1.6.1에서 무엇이 바뀌었는지, 그리고 이 사이트의 일반 프로토콜 입문 글 및 로컬 제어 가이드와 어떻게 다른지 설명합니다.',
     metaDescription:
@@ -1327,7 +1336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'matter 기기 유형 2027',
     ],
     leadAnswerBlock:
-      '**Matter 1.6(2026년 6월 17일 Connectivity Standards Alliance 출시)은 NFC 기반 커미셔닝, Joint Fabric을 통한 멀티 에코시스템 기기 공유, 온도조절기 제안을 추가했습니다. 2026년 9월 공개된 유지보수 릴리스인 Matter 1.6.1이 최신 버전이며 Groupcast를 확정했습니다.** 기존 1.x 인증 기기는 계속 호환됩니다. 에너지 관리 기기 유형(인버터, 배터리, 히트펌프)은 그보다 앞서 Matter 1.3~1.5에서 추가되었으며, 1.6은 설정과 멀티 에코시스템 중심의 릴리스이지 에너지 중심이 아닙니다.',
+      '**Matter 1.6(2026년 6월 17일 출시)은 NFC 커미셔닝, 다중 에코시스템용 Joint Fabric, 온도조절기 제안을 추가했고, 2026년 9월 유지보수 릴리스인 Matter 1.6.1이 최신 버전으로 Groupcast를 확정했습니다.** 기존 1.x 기기는 계속 호환됩니다.',
     quickAnswerTop: {
       ko: {
         question: 'Matter 1.6의 새로운 점은 무엇인가요?',
@@ -1339,7 +1348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Thread(네트워킹 계층)와 이 클러스터의 일반 프로토콜 입문 글 및 로컬 제어 가이드와는 별개',
           '에너지 관리 기기 유형(인버터, 배터리, 히트펌프)은 Matter 1.3~1.5에서 이미 도입됨 — 1.6에서 새로운 것이 아님',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1408,10 +1417,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '기존 Matter 기기를 업데이트해야 하나요?', a: '아니요 — 기존의 1.x 인증 기기는 어떤 업데이트도 없이 계속 작동합니다. NFC 설정이나 Joint Fabric 같은 새로운 기능은 그것을 구현한 새 하드웨어나 새 컨트롤러를 구매하는 경우에만 중요합니다.' },
           { q: 'Matter 1.6에서 가장 큰 실질적 변화는 무엇인가요?', a: 'Joint Fabric입니다 — 여러 사용자 승인 컨트롤러가 하나의 공유 Matter 네트워크를 공동 관리할 수 있게 하여, 기기가 처음 커미셔닝한 허브에 속하는 대신 생태계 간에 진정으로 공유될 수 있습니다. NFC 설정과 온도조절기 제안이 다른 두 가지 주요 추가 기능입니다. 에너지 관리 기기 유형(인버터, 배터리, 히트펌프)은 이번 릴리스에서 새로운 것이 아닙니다 — 그 이전 작업에 대해서는 Matter 인버터/히트펌프 통합 가이드를 참고하세요.' },
           { q: '이것이 Thread에 영향을 미치나요?', a: 'Thread는 Matter가 종종 그 위에서 실행되는 네트워킹 계층입니다; Matter 1.6은 Thread 자체가 아니라 Matter 애플리케이션 계층의 변경입니다. 네트워크 계층 변경 사항은 Thread 및 Wi-Fi 7 라우터 가이드를 참고하세요.' },
-          { q: '제 허브 소프트웨어가 Matter 1.6과 호환되나요?', a: '허브 소프트웨어가 새 사양 릴리스를 지원하려면 자체 업데이트가 필요하며, 자동으로 되지 않습니다. Home Assistant는 2026년 7월 Matter 1.6.0을 지원하는 Matter Server 9.1.0을 발표했고([보도](https://alternativeto.net/news/2026/7/home-assistant-matter-server-9-1-0-adds-support-for-matter-1-6-0/)), Matter 1.6.1의 Groupcast 지원은 아직 개발 중입니다([Open Home Foundation 로드맵](https://github.com/OpenHomeFoundation/roadmap/issues/216)). 출시 첫날부터 지원될 것이라고 가정하지 말고 사용 중인 허브의 최신 릴리스 노트를 확인하세요.' },
+          { q: '제 허브 소프트웨어가 Matter 1.6과 호환되나요?', a: '허브 소프트웨어가 새 사양 릴리스를 지원하려면 자체 업데이트가 필요하며, 자동으로 되지 않습니다. Home Assistant는 2026년 7월 Matter 1.6.0을 지원하는 Matter Server 9.1.0을 발표했고([보도](https://alternativeto.net/news/2026/7/home-assistant-matter-server-9-1-0-adds-support-for-matter-1-6-0/)), Matter 1.6.1의 Groupcast 지원은 2026년 10월 30일 Matter Server App 9.3.0으로 제공되었습니다([Open Home Foundation 로드맵](https://github.com/OpenHomeFoundation/roadmap/issues/216)). 출시 첫날부터 지원될 것이라고 가정하지 말고 사용 중인 허브의 최신 릴리스 노트를 확인하세요.' },
           { q: '이 사이트의 일반적인 Matter/Thread/Zigbee 설명 글과 어떻게 다른가요?', a: '그 글은 프로토콜을 개념적으로 설명하고 비교합니다. 이 글은 Matter 1.6에서 구체적으로 무엇이 바뀌었는지를 다룹니다 — 더 좁고 업데이트에 초점을 맞춘 범위입니다.' },
           { q: '현재 공식 사양 버전은 어디서 확인할 수 있나요?', a: '연결 표준 연합([csa-iot.org](https://csa-iot.org))이 현재 Matter 사양을 직접 발표하고 공지합니다 — 정확한 버전 번호는 2차 자료나 마케팅 자료에 의존하지 말고 그곳에서 확인하세요.' },
-          { q: '모든 Matter 컨트롤러가 Matter 1.6을 즉시 지원하나요?', a: '아니요. 사양이 공개되었다고 해서 모든 허브가 첫날부터 구현하는 것은 아닙니다. Home Assistant는 2026년 7월부터 Matter 1.6.0을 지원하며 1.6.1의 Groupcast는 계속 작업 중입니다. Apple Home, Google Home, SmartThings는 각자 별도의 출시 일정이 있으며 이 글에서는 추적하지 않습니다. 사용 중인 컨트롤러의 최신 릴리스 노트를 확인하세요.' },
+          { q: '모든 Matter 컨트롤러가 Matter 1.6을 즉시 지원하나요?', a: '아니요. 사양이 공개되었다고 해서 모든 허브가 첫날부터 구현하는 것은 아닙니다. Home Assistant는 2026년 7월부터 Matter 1.6.0을 지원하며 2026년 10월 30일 Matter Server App 9.3.0에서 1.6.1의 Groupcast도 지원합니다. Apple Home, Google Home, SmartThings는 각자 별도의 출시 일정이 있으며 이 글에서는 추적하지 않습니다. 사용 중인 컨트롤러의 최신 릴리스 노트를 확인하세요.' },
           { q: '이것이 Matter 기기가 커미셔닝되는 방식을 바꾸나요?', a: '기존 방식에는 아니요 — QR 코드 및 블루투스 커미셔닝은 여전히 동일하게 작동합니다. Matter 1.6은 추가 커미셔닝 옵션으로 NFC를 추가합니다; 기존 프로세스를 제거하거나 변경하지 않습니다. 커미셔닝 안내는 로컬 제어 가이드를 참고하세요.' },
           { q: 'Matter 1.6은 언제 출시되었나요?', a: 'Matter 1.6은 2026년 6월 17일 Connectivity Standards Alliance가 출시했습니다. 유지보수 릴리스인 Matter 1.6.1이 뒤따랐으며, 사양 문서는 2026년 9월 [CSA 사양 페이지](https://csa-iot.org/developer-resource/specifications-download-request/)에 공개되었습니다.' },
           { q: 'Matter 1.6.1의 새로운 점은 무엇인가요?', a: 'Matter 1.6.1은 새로운 기기 유형이 없는 유지보수 릴리스입니다. 기기 그룹을 지연 없이 한꺼번에 제어하는 권장 방식인 Groupcast를 확정하고, [Matter Alpha](https://www.matteralpha.com/industry-news/matter-1-6-1-finalizes-groupcast-and-adds-chime-sound-controls) 보도에 따르면 초인종 차임의 볼륨·음소거 제어(선택 사항)를 추가합니다. 차임 제어에는 제조사 펌웨어와 플랫폼 지원이 필요합니다.' },
@@ -1439,7 +1448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-10-18',
+      dateModified: '2026-11-03',
       about: [{ '@type': 'Thing', name: 'Matter 스마트홈 프로토콜' }, { '@type': 'Thing', name: 'Matter 기기 유형' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },

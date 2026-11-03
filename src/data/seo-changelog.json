@@ -20635,5 +20635,280 @@
       "t14": "2026-11-16",
       "t28": "2026-11-30"
     }
+  },
+  {
+    "id": "f6aa1035-6ddc-40af-a076-dbfab8d2743f",
+    "slug": "/smart-home/matter-1-6-explained",
+    "date": "2026-11-03T04:33:39.742Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Matter 1.6 & 1.6.1 Explained (2026)",
+        "new": "Matter 1.6 & 1.6.1 Explained: Release Date & Features"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 7. Titles into locale budget, leads cut to <=50 words, Home Assistant Matter 1.6.1 Groupcast status corrected (shipped in Matter Server App 9.3.0 on 2026-10-30 per OHF roadmap issue 216), hub skin. Baseline EN only (28d to 2026-11-03).",
+    "queries": [
+      "matter 1.6",
+      "matter 1.6 release date",
+      "latest matter version",
+      "matter 1.6.1"
+    ],
+    "baseline": {
+      "position": 7.62,
+      "impressions": 1429,
+      "clicks": 12,
+      "ctr": 0.008397480755773267,
+      "period": "28d to 2026-11-03"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "1faa1625-d4ea-44e3-b20d-ac4de831730f",
+    "slug": "/de/smart-home/matter-1-6-explained",
+    "date": "2026-11-03T04:33:39.774Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Matter 1.6 & 1.6.1 erklärt (2026)",
+        "new": "Matter 1.6 & 1.6.1 erklärt: Release-Datum & Neuerungen"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 7. Titles into locale budget, leads cut to <=50 words, Home Assistant Matter 1.6.1 Groupcast status corrected (shipped in Matter Server App 9.3.0 on 2026-10-30 per OHF roadmap issue 216), hub skin. Baseline EN only (28d to 2026-11-03).",
+    "queries": [
+      "matter 1.6",
+      "matter 1.6 release date",
+      "latest matter version",
+      "matter 1.6.1"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-03"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "436f43e0-da85-4319-b780-f8daaa627cf4",
+    "slug": "/fr/smart-home/matter-1-6-explained",
+    "date": "2026-11-03T04:33:39.805Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Matter 1.6 et 1.6.1 expliqués (2026)",
+        "new": "Matter 1.6 et 1.6.1 expliqués : date de sortie, nouveautés"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 7. Titles into locale budget, leads cut to <=50 words, Home Assistant Matter 1.6.1 Groupcast status corrected (shipped in Matter Server App 9.3.0 on 2026-10-30 per OHF roadmap issue 216), hub skin. Baseline EN only (28d to 2026-11-03).",
+    "queries": [
+      "matter 1.6",
+      "matter 1.6 release date",
+      "latest matter version",
+      "matter 1.6.1"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-03"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b2ed38b9-9051-4489-a4bb-e8356e30778e",
+    "slug": "/es/smart-home/matter-1-6-explained",
+    "date": "2026-11-03T04:33:39.836Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Matter 1.6 y 1.6.1 explicados (2026)",
+        "new": "Matter 1.6 y 1.6.1 explicados: fecha y novedades"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 7. Titles into locale budget, leads cut to <=50 words, Home Assistant Matter 1.6.1 Groupcast status corrected (shipped in Matter Server App 9.3.0 on 2026-10-30 per OHF roadmap issue 216), hub skin. Baseline EN only (28d to 2026-11-03).",
+    "queries": [
+      "matter 1.6",
+      "matter 1.6 release date",
+      "latest matter version",
+      "matter 1.6.1"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-03"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "828e3a05-a6b1-45e9-9905-269e72830cf9",
+    "slug": "/pt/smart-home/matter-1-6-explained",
+    "date": "2026-11-03T04:33:39.866Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Matter 1.6 e 1.6.1 explicados (2026)",
+        "new": "Matter 1.6 e 1.6.1 explicados: data e novas funções"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 7. Titles into locale budget, leads cut to <=50 words, Home Assistant Matter 1.6.1 Groupcast status corrected (shipped in Matter Server App 9.3.0 on 2026-10-30 per OHF roadmap issue 216), hub skin. Baseline EN only (28d to 2026-11-03).",
+    "queries": [
+      "matter 1.6",
+      "matter 1.6 release date",
+      "latest matter version",
+      "matter 1.6.1"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-03"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "8b626405-90c8-4996-bcf5-a82655a0d1a4",
+    "slug": "/ar/smart-home/matter-1-6-explained",
+    "date": "2026-11-03T04:33:39.897Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "شرح Matter 1.6 و1.6.1 (⁨2026⁩)",
+        "new": "شرح Matter 1.6 و1.6.1: تاريخ الإصدار والميزات"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 7. Titles into locale budget, leads cut to <=50 words, Home Assistant Matter 1.6.1 Groupcast status corrected (shipped in Matter Server App 9.3.0 on 2026-10-30 per OHF roadmap issue 216), hub skin. Baseline EN only (28d to 2026-11-03).",
+    "queries": [
+      "matter 1.6",
+      "matter 1.6 release date",
+      "latest matter version",
+      "matter 1.6.1"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-03"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "dc6b1218-b78b-4ea6-bf32-cea186d6320f",
+    "slug": "/ko/smart-home/matter-1-6-explained",
+    "date": "2026-11-03T04:33:39.927Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Matter 1.6과 1.6.1 해설 (2026)",
+        "new": "Matter 1.6과 1.6.1 해설: 출시일과 새 기능"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 7. Titles into locale budget, leads cut to <=50 words, Home Assistant Matter 1.6.1 Groupcast status corrected (shipped in Matter Server App 9.3.0 on 2026-10-30 per OHF roadmap issue 216), hub skin. Baseline EN only (28d to 2026-11-03).",
+    "queries": [
+      "matter 1.6",
+      "matter 1.6 release date",
+      "latest matter version",
+      "matter 1.6.1"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-03"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b7ed0dbd-285f-45bf-ba39-d8bd139b3cf8",
+    "slug": "/balcony-solar/kleines-kraftwerk-balcony-solar",
+    "date": "2026-11-03T04:33:39.971Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Kleines Kraftwerk Balcony Solar Company Profile",
+        "new": "Kleines Kraftwerk Company Profile: Kits and Suppliers"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Company profile for Kleines Kraftwerk: history, ownership, and product range in the balcony solar market.",
+        "new": "Company profile of Kleines Kraftwerk, the Achim-based balcony solar seller: ownership, kit lineup by output, confirmed component suppliers and market."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 7. EN title/meta into budget, zh and pt meta lengthened into budget, hub skin. Almost all impressions are the brand query kleineskraftwerk (official shop expected to win the click). Baseline EN only (28d to 2026-11-03).",
+    "queries": [
+      "kleineskraftwerk",
+      "kleines kraftwerk",
+      "kleines kraftwerk.de",
+      "kleines balkonkraftwerk"
+    ],
+    "baseline": {
+      "position": 6.48,
+      "impressions": 3763,
+      "clicks": 2,
+      "ctr": 0.0005314908317831517,
+      "period": "28d to 2026-11-03"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ff4657b3-70ee-4263-a125-6f99f4c35e42",
+    "slug": "/zh/balcony-solar/kleines-kraftwerk-balcony-solar",
+    "date": "2026-11-03T04:33:40.000Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Kleines Kraftwerk公司档案:详细介绍其成立背景、发展历程、股权结构,以及在德国阳台光伏市场的产品线与主要供应商合作情况。",
+        "new": "Kleines Kraftwerk公司档案：介绍其成立背景、发展历程、股权结构，以及在德国阳台光伏市场的产品线、主要供应商与已确认的销售市场情况。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 7. EN title/meta into budget, zh and pt meta lengthened into budget, hub skin. Almost all impressions are the brand query kleineskraftwerk (official shop expected to win the click). Baseline EN only (28d to 2026-11-03).",
+    "queries": [
+      "kleineskraftwerk",
+      "kleines kraftwerk",
+      "kleines kraftwerk.de",
+      "kleines balkonkraftwerk"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-03"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e9d5973b-fb18-4260-9068-e96ac35474d8",
+    "slug": "/pt/balcony-solar/kleines-kraftwerk-balcony-solar",
+    "date": "2026-11-03T04:33:40.031Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Perfil da empresa Kleines Kraftwerk: história, estrutura societária e linha de produtos no mercado de energia solar de varanda na Alemanha.",
+        "new": "Perfil da empresa Kleines Kraftwerk: história, estrutura societária e linha de produtos e fornecedores no mercado de energia solar de varanda na Alemanha."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 7. EN title/meta into budget, zh and pt meta lengthened into budget, hub skin. Almost all impressions are the brand query kleineskraftwerk (official shop expected to win the click). Baseline EN only (28d to 2026-11-03).",
+    "queries": [
+      "kleineskraftwerk",
+      "kleines kraftwerk",
+      "kleines kraftwerk.de",
+      "kleines balkonkraftwerk"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-03"
+    },
+    "deployedAt": null
   }
 ]
