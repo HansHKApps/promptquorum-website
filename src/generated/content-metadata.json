@@ -1330,7 +1330,7 @@
         },
         {
           "url": "/images/budget-builds-en.svg",
-          "title": "Three build configurations: $1500 entry-level (RTX 4070 Ti, i7 13700, 16GB) for 7-13B models, $2500 solid build (RTX 4080, i7 14700K, 32GB) for 13-30B, $4000 high-end (2× RTX 4090, Ryzen 9, 128GB) for any model. Mid-level offers best value."
+          "title": "Three build configurations: $1500 entry-level (RTX 4070 Ti, i7 13700, 16GB) for 7-13B models, $2500 solid build (RTX 4080, i7 14700K, 32GB) for 13-30B, $6,500+ high-end (2× RTX 4090, Ryzen 9, 128GB) for any model. Mid-level offers best value."
         },
         {
           "url": "/images/llamacpp-speed-flags-en.svg",
@@ -2101,7 +2101,7 @@
         },
         {
           "url": "/images/best-budget-gpus-local-llm-gpu-comparison-hero-en.webp",
-          "title": "RTX 3060 12GB ($270-300 used) beats RTX 4060 Ti, RTX A4000, RTX 4070 Super, and RX 6700 XT on VRAM-per-dollar."
+          "title": "RTX 3060 12GB ($290–330 used) beats RTX 4060 Ti, RTX A4000, RTX 4070 Super, and RX 6700 XT on VRAM-per-dollar."
         }
       ]
     },
@@ -2173,7 +2173,7 @@
         },
         {
           "url": "/images/how-much-vram-local-llm-quantization-tradeoff-hero-en.webp",
-          "title": "Q4 is the sweet spot for most users — 87.5% smaller than FP32 with only ~1% accuracy loss."
+          "title": "Q4 is the sweet spot for most users — 87.5% smaller than FP32 with usually only a modest quality loss."
         }
       ]
     },
@@ -2960,7 +2960,7 @@
       "images": []
     },
     "apple-silicon-m5-local-llm": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -9588,7 +9588,7 @@
       "images": []
     },
     "whisper-cpp-review": {
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,

@@ -21674,5 +21674,506 @@
     ],
     "baseline": null,
     "deployedAt": null
+  },
+  {
+    "id": "9fed930a-15af-4e83-a382-4bbef715206a",
+    "slug": "/power-local-llm/second-me-review",
+    "date": "2026-11-02T20:47:28.712Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Second Me is an open-source (Apache 2.0) project for training a personal AI from your own data, using GraphRAG and llama.cpp with Qwen2.5 base models. Here is what it actually does.",
+        "new": "Second Me on GitHub: open-source (Apache 2.0) project that trains a personal AI on your own data with GraphRAG and llama.cpp on Qwen2.5. What it does."
+      }
+    ],
+    "reason": "Over-budget metaDescription (8 of 9 locales); lead with 'Second Me on GitHub'; Open WebUI licence label hedged (BSD-3 + branding clause)",
+    "queries": [
+      "second me github",
+      "second me",
+      "secondme"
+    ],
+    "baseline": {
+      "position": 6.1,
+      "impressions": 297,
+      "clicks": 1,
+      "ctr": 0.003367003367003367,
+      "period": "90d to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a2eca726-3b11-4465-b7c7-554090cc23c2",
+    "slug": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+    "date": "2026-11-02T20:47:28.815Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Best RAG tools for business documents 2026: AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex compared by category, use case, and hardware needed.",
+        "new": "Best RAG tools for business documents 2026: AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex compared by category, use case and hardware."
+      }
+    ],
+    "reason": "Over-budget metaDescription (en/de/fr/es/ko); Open WebUI licence label hedged; no GSC data",
+    "queries": [
+      "best rag tools for business documents"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "656462aa-c251-4e4c-9884-8eb214b08349",
+    "slug": "/local-llms/qwen-vs-llama-vs-mistral",
+    "date": "2026-11-02T20:47:28.918Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Qwen3.8-27B vs Llama 4 vs Mistral 2026: 어느 LLM이 최고인가?",
+        "new": "Qwen vs Llama vs Mistral 2026 비교"
+      }
+    ],
+    "reason": "ko seoTitle/metaDescription over budget; stale pt hardware-guide link fixed",
+    "queries": [
+      "llama vs qwen",
+      "qwen vs llama",
+      "mistral vs qwen"
+    ],
+    "baseline": {
+      "position": 5.14,
+      "impressions": 28463,
+      "clicks": 134,
+      "ctr": 0.0047078663528089095,
+      "period": "90d to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "2f6ed0c6-83f6-496a-b182-a38eb97f30fb",
+    "slug": "/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-02T20:47:29.021Z",
+    "fields": [
+      {
+        "field": "leadAnswerBlock + 5060 Ti price",
+        "old": "5060 Ti $570-600, ~40% over MSRP, lead 82-92 words",
+        "new": "5060 Ti ~$800, ~85% over MSRP, lead 33-50 words"
+      }
+    ],
+    "reason": "Sync RTX 5060 Ti ~$800 (~85% over MSRP) with hardware guide; leads cut to 25-50 words; ja/zh leadAnswerBlock added; ko metas inside budget",
+    "queries": [
+      "best budget llm gpu",
+      "budget gpu for local llm",
+      "cheap gpu for llm"
+    ],
+    "baseline": {
+      "position": 5.58,
+      "impressions": 16634,
+      "clicks": 86,
+      "ctr": 0.005170133461584706,
+      "period": "28d to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ca6e00a8-2a77-4630-b3e7-8742e250a11e",
+    "slug": "/local-llms/how-much-vram-local-llm",
+    "date": "2026-11-02T20:47:29.122Z",
+    "fields": [
+      {
+        "field": "leadAnswerBlock + dual-5090 FAQ",
+        "old": "2x5090 = 48GB; lead 54-64 words",
+        "new": "2x5090 = 64GB; lead 31-50 words"
+      }
+    ],
+    "reason": "Leads cut to 25-50 words; leadAnswerBlock added fr/de/ja/zh; dual-5090 FAQ fixed to 32GB each; ko seoTitle inside budget",
+    "queries": [
+      "4gb vram llm",
+      "64 gb vram"
+    ],
+    "baseline": {
+      "position": 5.43,
+      "impressions": 4302,
+      "clicks": 7,
+      "ctr": 0.0016271501627150163,
+      "period": "28d to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "0e7c41e9-df59-4afe-876e-cab25df75fc3",
+    "slug": "/power-local-llm/whisper-cpp-review",
+    "date": "2026-11-02T20:47:29.225Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Whisper.cpp review: the MIT-licensed C/C++ port of OpenAI Whisper for local speech-to-text. History, install steps, real CLI commands, license, and when to use faster-whisper instead.",
+        "new": "Whisper.cpp review: the MIT-licensed C/C++ port of OpenAI Whisper for local speech-to-text. Install steps, CLI commands, license, and faster-whisper."
+      }
+    ],
+    "reason": "Refresh to v1.9.5; removed unsupported compiled-binary, Pi 5 and PromptQuorum-benchmark claims; added safe-to-download and v1.9.4/1.9.5 FAQs, SoftwareApplication schema; metas inside budget",
+    "queries": [
+      "whisper.cpp",
+      "whisper cpp review",
+      "is whisper.cpp safe"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d7d883c1-1792-40a4-89f5-af69570702a7",
+    "slug": "/local-llms/local-llm-hardware-guide",
+    "date": "2026-11-02T20:47:29.329Z",
+    "fields": [
+      {
+        "field": "metaDescription (zh)",
+        "old": "显存需求(8B–70B)、实测速度",
+        "new": "显存需求(8B–70B)、速度参考"
+      }
+    ],
+    "reason": "Risk residual fixes (VRAM only-number, single-flag, offline FAQ, DE RTX-40), Qwen3.6 superlatives removed, DE/FR accents restored, ZH meta no longer implies testing",
+    "queries": [
+      "local llm gpu requirements"
+    ],
+    "baseline": {
+      "position": 5.59,
+      "impressions": 16036,
+      "clicks": 69,
+      "ctr": 0.0043028186580194566,
+      "period": "28d to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "85bd3488-2be4-4091-b6e5-872c72394dfa",
+    "slug": "/local-llms/apple-silicon-local-llm-guide-2026",
+    "date": "2026-11-02T20:47:29.434Z",
+    "fields": [
+      {
+        "field": "quickAnswerTop + tok/s (de, fr)",
+        "old": "50-60 / 40-50 / 15-20 tok/s",
+        "new": "45-55 / 15-20 / 12-18 tok/s"
+      }
+    ],
+    "reason": "Removed cross-language quickAnswerTop entries; harmonized DE/FR tok/s with EN",
+    "queries": [
+      "m5 max local llm",
+      "m5 pro local llm"
+    ],
+    "baseline": {
+      "position": 6.88,
+      "impressions": 10384,
+      "clicks": 41,
+      "ctr": 0.003948382126348228,
+      "period": "28d to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "20710896-23ce-4ef3-89b7-d3f803e5ba7e",
+    "slug": "/local-llms/apple-silicon-m5-local-llm",
+    "date": "2026-11-02T20:47:29.537Z",
+    "fields": [
+      {
+        "field": "headings/labels/answer text",
+        "old": "Best Value / designed for bursts, enterprise NVIDIA safer bet",
+        "new": "Good Value / desktop machine without enterprise SLA"
+      }
+    ],
+    "reason": "Hedged 'best value' and 'enterprise NVIDIA safer bet / designed for bursts' wording in 9 locales; prices unchanged (Apple store prices unverifiable)",
+    "queries": [
+      "m5 max memory bandwidth",
+      "m5 pro memory bandwidth",
+      "m5 max local llm performance"
+    ],
+    "baseline": {
+      "position": 5.69,
+      "impressions": 55062,
+      "clicks": 403,
+      "ctr": 0.0073190221931640695,
+      "period": "28d to 2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "135934bc-671c-412e-9075-22c101ca8650",
+    "slug": "/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-02T20:47:29.640Z",
+    "fields": [
+      {
+        "field": "body+imageAlt",
+        "old": "Pi 5 ~0.5x, ~200 ms, never leave your home network, no imageAlt",
+        "new": "figures hedged/community-reported, WER sourced to Whisper paper, imageAlt on both images"
+      }
+    ],
+    "reason": "Risk fix: unsourced Pi 5 timings, ~200 ms latency, insanely-fast-whisper claim, home-network wording, WER attribution; imageAlt added",
+    "queries": [
+      "whisper.cpp vs faster-whisper",
+      "faster whisper vs whisper"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "61066210-a22a-4f4e-a463-72d19934ee37",
+    "slug": "/power-local-llm/odysseus-review",
+    "date": "2026-11-02T20:47:29.742Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "AGPL requires...; Msty narrower feature set",
+        "new": "AGPL network-use provision as licence facts + not legal advice; Msty factual"
+      }
+    ],
+    "reason": "Hedged AGPL wording, not-legal-advice note, factual Msty line",
+    "queries": [
+      "odysseus ai review",
+      "odysseus dev"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9ad375f0-56a7-4ce4-ba65-5ebe1b9ce78f",
+    "slug": "/local-llms/open-webui-review",
+    "date": "2026-11-02T20:47:29.845Z",
+    "fields": [
+      {
+        "field": "body+faq",
+        "old": "Open WebUI License (BSD-derived); still permissive; polished consumer-style UI",
+        "new": "Open WebUI License (BSD-3 + branding clause); factual wording; not legal advice"
+      }
+    ],
+    "reason": "Licence label BSD-3 + branding clause, removed 'still permissive', neutral competitor characterisation, not-legal-advice note, pt/ar/ko fixes",
+    "queries": [
+      "open webui",
+      "open webui review",
+      "is open webui open source"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a637db2a-bc16-4a2e-9214-45af026f5875",
+    "slug": "/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-03T04:59:50.302Z",
+    "fields": [
+      {
+        "field": "prices + body",
+        "old": "RTX 3060 used $270-300; mixed EUR/R$/JPY",
+        "new": "RTX 3060 used $290-330; USD throughout, hedged"
+      }
+    ],
+    "reason": "Round 2: used prices verified from asking-price trackers (RTX 3060 $290-330, 6700 XT $175-315, 4060 Ti ~$300-425 if in stock); EUR/R$/JPY/CNY cells converted to USD; GDPR/LGPD, R13/R17 risk fixes; lead trims",
+    "queries": [
+      "best budget llm gpu",
+      "budget gpu for local llm",
+      "cheap gpu for llm"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "96c23619-00fb-4e63-8893-71b257caa008",
+    "slug": "/local-llms/how-much-vram-local-llm",
+    "date": "2026-11-03T04:59:50.411Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "MoE rows by active params; batch=32 ~32x VRAM",
+        "new": "MoE by total params; KV cache scales per request"
+      }
+    ],
+    "reason": "Round 2: de GDPR CRITICAL fixed; accuracy-loss numbers hedged; MoE rows by total params; batch-size KV-cache correction; GGUF size sources",
+    "queries": [
+      "4gb vram llm",
+      "64 gb vram"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7873a4be-d5b7-46cf-8bfc-7959f40509df",
+    "slug": "/local-llms/apple-silicon-m5-local-llm",
+    "date": "2026-11-03T04:59:50.521Z",
+    "fields": [
+      {
+        "field": "prices + body",
+        "old": "Mac Studio M5 Max $2,499 for 70B; undated comparison prices",
+        "new": "from $2,499 (70B needs 64GB, $3,499); approximate street prices labelled"
+      }
+    ],
+    "reason": "Round 2: Mac prices verified via press (M5 Max 36/48/64/128GB, mini M5 Pro), 70B config fix, risk hedges, R9 sysctl warning, dateModified 2026-11-03",
+    "queries": [
+      "m5 max memory bandwidth",
+      "m5 pro memory bandwidth"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "20e6a04f-7966-4c0e-ba9d-26b847358a8a",
+    "slug": "/local-llms/local-llm-hardware-guide",
+    "date": "2026-11-03T04:59:50.635Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "unsourced tok/s, 2x4090 build $4000",
+        "new": "caveated tok/s, build $6,500+"
+      }
+    ],
+    "reason": "Round 2: DGX Spark LMSYS source linked, speed claims attributed as community reports, build-table/30B-fit/5060 Ti variant consistency, fr accents, superlatives softened",
+    "queries": [
+      "local llm gpu requirements"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "12555451-fd6f-4301-b582-e589ed9008c8",
+    "slug": "/local-llms/apple-silicon-local-llm-guide-2026",
+    "date": "2026-11-03T04:59:50.746Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "zero privacy leakage; zh 实测",
+        "new": "prompts stay on device during inference; BGR报告称"
+      }
+    ],
+    "reason": "Round 2: R13 absolutes hedged in 9 locales; zh BGR figure attributed",
+    "queries": [
+      "m5 max local llm",
+      "m5 pro local llm"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "de6c5673-00d2-45bc-a8fe-caca297902b5",
+    "slug": "/power-local-llm/second-me-review",
+    "date": "2026-11-03T04:59:50.860Z",
+    "fields": [
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead 57-72 words",
+        "new": "lead 36-47 words"
+      }
+    ],
+    "reason": "Rule 31 lead 25-50 words in 9 locales; titles lengthened",
+    "queries": [
+      "second me github",
+      "second me"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a493eec5-d143-4881-9149-03b158de02ca",
+    "slug": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+    "date": "2026-11-03T04:59:50.971Z",
+    "fields": [
+      {
+        "field": "leadAnswerBlock + body",
+        "old": "'the best RAG tool', 'no telemetry'",
+        "new": "editorial top pick, check telemetry settings"
+      }
+    ],
+    "reason": "Rule 31 leads; R13/R11/R5/R2/R1 risk fixes in 9 locales; fr CNIL attribution removed",
+    "queries": [
+      "best rag tools for business documents"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9900bf8a-0ef0-46dd-8442-3d9b116617c0",
+    "slug": "/local-llms/qwen-vs-llama-vs-mistral",
+    "date": "2026-11-03T04:59:51.085Z",
+    "fields": [
+      {
+        "field": "leadAnswerBlock + regionalContext",
+        "old": "ensuring GDPR compliance; Lyubimov, N.",
+        "new": "hedged, not legal advice; Jimenez et al."
+      }
+    ],
+    "reason": "Leads added/shortened (de/ja/zh had none); regionalContext GDPR/METI/CAC rewritten (R1 CRITICAL); fr fabricated author fixed; arXiv ids verified; speed FAQ de-fabricated",
+    "queries": [
+      "llama vs qwen",
+      "qwen vs llama",
+      "mistral vs qwen"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ed8e9014-7bb5-43dc-8e96-9ee13932ad06",
+    "slug": "/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-03T04:59:51.201Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "saves $120-480/month; WER within 0.1%",
+        "new": "about $12-50/month; very close, not guaranteed identical"
+      }
+    ],
+    "reason": "Round 2: cost sentence fixed (10x error), WER/accuracy claims hedged, VAD consistency, faster-whisper/CTranslate2 dates, ja duplicates removed, locale fixes",
+    "queries": [
+      "whisper.cpp vs faster-whisper",
+      "faster whisper vs whisper"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e7696483-c88a-4489-b203-2537918f3a53",
+    "slug": "/local-llms/open-webui-review",
+    "date": "2026-11-03T04:59:51.318Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "v0.6.6 April 19 2025; LobeChat Apache 2.0",
+        "new": "v0.6.6 May 5 2025; LobeHub licence"
+      }
+    ],
+    "reason": "Round 2: LobeChat licence, v0.6.6 date (May 5 2025), permission-or-Enterprise wording, pt/ar/ko locale fixes, author Person",
+    "queries": [
+      "open webui",
+      "open webui review"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "015e918b-23f5-438a-8f55-9b42c1815f3e",
+    "slug": "/power-local-llm/odysseus-review",
+    "date": "2026-11-03T04:59:51.431Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "all self-hosted open-source tools",
+        "new": "licences differ, check each"
+      }
+    ],
+    "reason": "Round 2: Msty not open-source fix (competitors intro)",
+    "queries": [
+      "odysseus ai review"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "32adde7e-51f8-4d60-856c-d3439abc01d3",
+    "slug": "/power-local-llm/whisper-cpp-review",
+    "date": "2026-11-03T04:59:51.539Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "no close free equivalent; ~4x throughput",
+        "new": "few close equivalents; up to ~4x per README"
+      }
+    ],
+    "reason": "Round 2: verdict/table hedges after risk audit; facts re-verified against GitHub",
+    "queries": [
+      "whisper.cpp",
+      "whisper cpp review"
+    ],
+    "baseline": null,
+    "deployedAt": null
   }
 ]
