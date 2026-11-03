@@ -123,7 +123,7 @@ export function AskHansReport({ lang, report }: { lang: Language; report: AskHan
             </table>
           </div>
           <p className="border-t border-border px-4 py-2.5 text-xs text-text-secondary">
-            {tAsk('sampleLabel', lang)}: <span dir="ltr" className="font-semibold tabular-nums">{fmt(report.sampled.last30)} / {fmt(report.windows.answers.last30)}</span> ({tMcp('tableLast30', lang)})
+            {tAsk('sampleLabel', lang)}: <span dir="ltr" className="font-semibold tabular-nums">{fmt(report.sampled.last30)} / {fmt(report.sampledOf.last30)}</span> ({tMcp('tableLast30', lang)})
           </p>
         </div>
 
