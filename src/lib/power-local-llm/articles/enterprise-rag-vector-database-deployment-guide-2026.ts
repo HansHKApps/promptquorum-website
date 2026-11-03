@@ -114,7 +114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dataResidencySla: {
         id: 'data-residency-sla',
         title: 'What Data Residency, SLA, and Security Posture Should Enterprises Require From a Managed Vector Database Vendor?',
-        content: '**A managed vector database vendor\'s own SOC 2 Type II report, published sub-processor list, and regional data residency options determine whether it can sit inside a regulated data pipeline — not its query latency benchmark.** Vector embeddings frequently encode the substance of confidential documents (contracts, patient notes, source code), so the vendor handling them inherits the same compliance obligations as any other processor of that data.',
+        content: '**A managed vector database vendor\'s own SOC 2 Type II report, published sub-processor list, and regional data residency options determine whether it can sit inside a regulated data pipeline — not its query latency benchmark.** Vector embeddings frequently encode the substance of confidential documents (contracts, patient notes, source code), so the vendor handling them is subject to processor obligations (e.g. GDPR Art. 28/32).',
         items: [
           '**Data residency:** confirm which cloud regions the vendor actually offers for vector storage — not just for the marketing site — and whether an EU-only or country-specific residency commitment is contractually guaranteed, not just technically available. See [Data Residency & Sovereign AI: EU/GDPR Enterprise LLM Deployment](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) for the underlying GDPR cross-border transfer requirements this decision sits inside.',
           '**SLA uptime:** published SLAs differ by plan tier. The vendors\' public pricing pages list, for example, 99.5% on Qdrant Cloud Standard and Weaviate Cloud Flex, 99.9% on Qdrant Cloud Premium and Weaviate Cloud Premium (shared), and 99.95% on Pinecone Enterprise, Zilliz Cloud Enterprise and Weaviate Cloud Premium (dedicated). Get the exact percentage, the remedy credits and whether the SLA covers query latency in writing from each vendor, because a pricing-page figure is not a contract.',
@@ -135,10 +135,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Vendor': 'Pinecone', 'Listed SLA': 'Enterprise: 99.95%', 'Security by tier': 'SSO: Standard+ / audit logs, private endpoints: Enterprise' },
           { 'Vendor': 'Zilliz Cloud', 'Listed SLA': 'Enterprise: 99.95%', 'Security by tier': 'Enterprise: audit logs, SAML SSO, granular RBAC' },
           { 'Vendor': 'Qdrant Cloud', 'Listed SLA': 'Standard 99.5% / Premium 99.9%', 'Security by tier': 'Premium: SSO, private VPC links; audit logs not listed' },
-          { 'Vendor': 'Weaviate Cloud', 'Listed SLA': 'Flex 99.5% / Premium 99.9–99.95%', 'Security by tier': 'SOC 2 audited (vendor-stated); HIPAA: Premium Dedicated' },
+          { 'Vendor': 'Weaviate Cloud', 'Listed SLA': 'Flex 99.5% / Premium 99.9–99.95%', 'Security by tier': 'SOC 2 audited and HIPAA support on Premium Dedicated (both vendor-stated)' },
         ],
         callouts: [
           { type: 'note', text: 'Read from each vendor\'s public pricing page when this section was written; plans, prices and tier boundaries change, and "not listed" means the pricing page does not say, not that the feature is absent. Confirm every item in the contract or order form. Self-hosting removes the plan tiers but moves SSO, audit logging and uptime onto your own team. Pricing pages (checked 2026-11-03): [Pinecone](https://www.pinecone.io/pricing/), [Zilliz Cloud](https://zilliz.com/pricing), [Qdrant](https://qdrant.tech/pricing/), [Weaviate](https://weaviate.io/pricing/serverless).' },
+          { type: 'note', text: 'This section is general information and not legal advice; have your own counsel confirm GDPR and data-residency requirements.' },
         ],
       },
       scaleOps: {
@@ -226,7 +227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Vendor': 'pgvector (PostgreSQL)', 'Deployment': 'Postgres extension: self-hosted or managed Postgres', 'Enterprise-relevant strength': 'No extra system if you already run Postgres' },
         ],
         callouts: [
-          { type: 'note', text: '**Actian VectorAI DB (added on the vendor\'s suggestion).** [Actian VectorAI DB](https://www.actian.com/databases/vectorai-db/) is a self-hosted vector database for RAG and AI-agent memory that, according to Actian, keeps data on infrastructure you control: on-premises, air-gapped with no outbound network requirement, at the edge, or in your own cloud. Actian describes it as a single Docker container (Kubernetes, Helm, and Terraform compatible) with Python and JavaScript SDKs, HNSW/IVF indexing with quantization, hybrid search, and native Prometheus metrics, and it is also available through AWS Marketplace; see [Actian\'s pricing page](https://www.actian.com/databases/vectorai-db-pricing/). These are vendor-stated capabilities that PromptQuorum has not independently tested, so verify them in a pilot against the procurement checklist above. **No affiliate relationship:** the Actian links are plain links, not affiliate links, and PromptQuorum earns no commission from them.' },
+          { type: 'note', text: '**Actian VectorAI DB (added on the vendor\'s suggestion).** [Actian VectorAI DB](https://www.actian.com/databases/vectorai-db/) is a self-hosted vector database for RAG and AI-agent memory that, according to Actian, keeps data on infrastructure you control: on-premises, air-gapped with no outbound network requirement, at the edge, or in your own cloud. Actian describes it as a single Docker container (Kubernetes, Helm, and Terraform compatible) with Python and JavaScript SDKs, HNSW/IVF indexing with quantization, hybrid search, and native Prometheus metrics, and it is also available through AWS Marketplace; see [Actian\'s pricing page](https://www.actian.com/databases/vectorai-db-pricing/). These are vendor-stated capabilities that PromptQuorum has not independently tested, so verify them in a pilot against the procurement checklist above. **No affiliate relationship:** no link on this page is an affiliate link, and PromptQuorum earns no commission from any of them.' },
           { type: 'note', text: 'For a feature-by-feature comparison of Pinecone, Weaviate, Qdrant, and Chroma aimed at developers choosing for a single RAG application, see [Pinecone vs Weaviate vs Qdrant vs Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma). This section covers only the enterprise-relevant deployment and scale angle each vendor adds on top of that.' },
         ],
       },
@@ -253,7 +254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Designing a shared collection with metadata filtering for multi-tenant isolation without a dedicated test suite for filter bugs.** A single missed filter condition becomes a cross-tenant data leak, and this class of bug is invisible in normal functional testing.',
           '**Signing a committed-use contract before volume is predictable.** A 12-month committed-use floor negotiated on optimistic growth projections often costs more than pay-as-you-go would have if actual volume comes in lower.',
           '**Assuming a vector database export is a portable backup.** Without the underlying source documents and the embedding pipeline that generated each vector, an export is not a usable disaster-recovery asset — the index itself has to be rebuilt regardless.',
-          '**Treating the vendor evaluation as feature-comparison-only and skipping Milvus/Zilliz Cloud** because the developer-facing comparison guides most teams start from do not cover it — and then discovering at 500 million vectors that the chosen platform was not designed for this scale tier.',
+          '**Treating the vendor evaluation as feature-comparison-only and skipping Milvus/Zilliz Cloud** because the developer-facing comparison guides most teams start from do not cover it — and then discovering at 500 million vectors that the chosen platform\'s documented deployment limits do not cover this scale tier.',
         ],
       },
       faq: {
@@ -408,7 +409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dataResidencySla: {
         id: 'data-residency-sla',
         title: 'Welche Data Residency, SLA und Sicherheitsniveau sollten Unternehmen von einem Managed-Vektordatenbank-Anbieter verlangen?',
-        content: '**Der eigene SOC-2-Type-II-Report des Anbieters, die veröffentlichte Sub-Processor-Liste und die regionalen Data-Residency-Optionen entscheiden, ob eine Managed-Vektordatenbank in eine regulierte Datenpipeline passt — nicht die Query-Latenz.** Vektor-Embeddings kodieren häufig den Inhalt vertraulicher Dokumente (Verträge, Patientennotizen, Quellcode), sodass der verarbeitende Anbieter dieselben Compliance-Pflichten übernimmt wie jeder andere Auftragsverarbeiter dieser Daten.',
+        content: '**Der eigene SOC-2-Type-II-Report des Anbieters, die veröffentlichte Sub-Processor-Liste und die regionalen Data-Residency-Optionen entscheiden, ob eine Managed-Vektordatenbank in eine regulierte Datenpipeline passt — nicht die Query-Latenz.** Vektor-Embeddings kodieren häufig den Inhalt vertraulicher Dokumente (Verträge, Patientennotizen, Quellcode), sodass der verarbeitende Anbieter Auftragsverarbeiter-Pflichten unterliegt (z. B. Art. 28/32 DSGVO).',
         items: [
           '**Data Residency:** klären, welche Cloud-Regionen der Anbieter tatsächlich für die Vektorspeicherung anbietet — nicht nur auf der Marketingseite —, und ob eine EU-only- oder länderspezifische Residency vertraglich zugesichert ist, nicht nur technisch verfügbar. Siehe [Data Residency & Sovereign AI: EU/GDPR Enterprise LLM Deployment](/de/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) für die zugrunde liegenden DSGVO-Anforderungen zum grenzüberschreitenden Datentransfer.',
           '**SLA-Verfügbarkeit:** veröffentlichte SLAs unterscheiden sich je nach Tarifstufe. Die öffentlichen Preisseiten der Anbieter nennen zum Beispiel 99,5 % bei Qdrant Cloud Standard und Weaviate Cloud Flex, 99,9 % bei Qdrant Cloud Premium und Weaviate Cloud Premium (Shared) sowie 99,95 % bei Pinecone Enterprise, Zilliz Cloud Enterprise und Weaviate Cloud Premium (Dedicated). Den genauen Prozentsatz, die Ersatzleistungen und ob das SLA die Query-Latenz abdeckt, schriftlich vom jeweiligen Anbieter einholen — eine Zahl auf der Preisseite ist kein Vertrag.',
@@ -429,10 +430,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Anbieter': 'Pinecone', 'Genanntes SLA': 'Enterprise: 99,95 %', 'Sicherheit je Stufe': 'SSO ab Standard / Audit-Logs, Private Endpoints: Enterprise' },
           { 'Anbieter': 'Zilliz Cloud', 'Genanntes SLA': 'Enterprise: 99,95 %', 'Sicherheit je Stufe': 'Enterprise: Audit-Logs, SAML-SSO, granulares RBAC' },
           { 'Anbieter': 'Qdrant Cloud', 'Genanntes SLA': 'Standard 99,5 % / Premium 99,9 %', 'Sicherheit je Stufe': 'Premium: SSO, private VPC-Links; Audit-Logs nicht genannt' },
-          { 'Anbieter': 'Weaviate Cloud', 'Genanntes SLA': 'Flex 99,5 % / Premium 99,9–99,95 %', 'Sicherheit je Stufe': 'SOC 2 auditiert (laut Anbieter); HIPAA: Premium Dedicated' },
+          { 'Anbieter': 'Weaviate Cloud', 'Genanntes SLA': 'Flex 99,5 % / Premium 99,9–99,95 %', 'Sicherheit je Stufe': 'SOC 2 auditiert und HIPAA-Unterstützung bei Premium Dedicated (beides laut Anbieter)' },
         ],
         callouts: [
           { type: 'note', text: 'Gelesen von der öffentlichen Preisseite des jeweiligen Anbieters, als dieser Abschnitt geschrieben wurde; Tarife, Preise und Stufengrenzen ändern sich, und „nicht genannt“ heißt, dass die Preisseite dazu nichts sagt — nicht, dass die Funktion fehlt. Jeden Punkt im Vertrag oder Bestellformular bestätigen lassen. Beim Self-Hosting entfallen die Tarifstufen, SSO, Audit-Logging und Verfügbarkeit liegen dann aber beim eigenen Team. Preisseiten (geprüft am 2026-11-03): [Pinecone](https://www.pinecone.io/pricing/), [Zilliz Cloud](https://zilliz.com/pricing), [Qdrant](https://qdrant.tech/pricing/), [Weaviate](https://weaviate.io/pricing/serverless).' },
+          { type: 'note', text: 'Dieser Abschnitt ist eine allgemeine Information und keine Rechtsberatung; lassen Sie DSGVO- und Data-Residency-Anforderungen von Ihrer eigenen Rechtsberatung bestätigen.' },
         ],
       },
       scaleOps: {
@@ -520,7 +522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Anbieter': 'pgvector (PostgreSQL)', 'Deployment': 'Postgres-Erweiterung: selbst gehostet oder Managed Postgres', 'Enterprise-relevante Stärke': 'Kein zusätzliches System, wenn Postgres schon läuft' },
         ],
         callouts: [
-          { type: 'note', text: '**Actian VectorAI DB (auf Anregung des Anbieters aufgenommen).** [Actian VectorAI DB](https://www.actian.com/databases/vectorai-db/) ist eine selbst gehostete Vektordatenbank für RAG und KI-Agenten-Speicher, die laut Actian die Daten auf Infrastruktur hält, die Sie kontrollieren: On-Premises, Air-Gap ohne ausgehende Netzwerkverbindung, am Edge oder in Ihrer eigenen Cloud. Actian beschreibt sie als einzelnen Docker-Container (kompatibel mit Kubernetes, Helm und Terraform) mit Python- und JavaScript-SDKs, HNSW/IVF-Indexierung mit Quantisierung, Hybridsuche und nativen Prometheus-Metriken; sie ist außerdem über den AWS Marketplace erhältlich, siehe [Preisseite von Actian](https://www.actian.com/databases/vectorai-db-pricing/). Dies sind Herstellerangaben, die PromptQuorum nicht unabhängig getestet hat – prüfen Sie sie in einem Pilotprojekt anhand der obigen Beschaffungs-Checkliste. **Keine Affiliate-Beziehung:** Die Actian-Links sind normale Links, keine Affiliate-Links, und PromptQuorum erhält dafür keine Provision.' },
+          { type: 'note', text: '**Actian VectorAI DB (auf Anregung des Anbieters aufgenommen).** [Actian VectorAI DB](https://www.actian.com/databases/vectorai-db/) ist eine selbst gehostete Vektordatenbank für RAG und KI-Agenten-Speicher, die laut Actian die Daten auf Infrastruktur hält, die Sie kontrollieren: On-Premises, Air-Gap ohne ausgehende Netzwerkverbindung, am Edge oder in Ihrer eigenen Cloud. Actian beschreibt sie als einzelnen Docker-Container (kompatibel mit Kubernetes, Helm und Terraform) mit Python- und JavaScript-SDKs, HNSW/IVF-Indexierung mit Quantisierung, Hybridsuche und nativen Prometheus-Metriken; sie ist außerdem über den AWS Marketplace erhältlich, siehe [Preisseite von Actian](https://www.actian.com/databases/vectorai-db-pricing/). Dies sind Herstellerangaben, die PromptQuorum nicht unabhängig getestet hat – prüfen Sie sie in einem Pilotprojekt anhand der obigen Beschaffungs-Checkliste. **Keine Affiliate-Beziehung:** Kein Link auf dieser Seite ist ein Affiliate-Link, und PromptQuorum erhält für keinen davon eine Provision.' },
           { type: 'note', text: 'Für einen Feature-für-Feature-Vergleich von Pinecone, Weaviate, Qdrant und Chroma für Entwickler, die für eine einzelne RAG-Anwendung wählen, siehe [Pinecone vs Weaviate vs Qdrant vs Chroma](/de/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma). Dieser Abschnitt behandelt nur den Enterprise-relevanten Deployment- und Skalierungsaspekt, den jeder Anbieter zusätzlich bietet.' },
         ],
       },
@@ -547,7 +549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Eine gemeinsame Collection mit Metadatenfilterung für Mandantentrennung entwerfen, ohne eigene Testsuite für Filterfehler.** Eine einzige übersehene Filterbedingung wird zum mandantenübergreifenden Datenleck, und diese Fehlerklasse ist im normalen funktionalen Testen unsichtbar.',
           '**Einen Committed-Use-Vertrag unterschreiben, bevor das Volumen planbar ist.** Ein 12-Monats-Sockel, verhandelt auf Basis optimistischer Wachstumsprognosen, kostet oft mehr als Pay-as-you-go, wenn das tatsächliche Volumen niedriger ausfällt.',
           '**Annehmen, ein Vektordatenbank-Export sei ein portables Backup.** Ohne die zugrunde liegenden Quelldokumente und die Embedding-Pipeline, die jeden Vektor erzeugt hat, ist ein Export kein brauchbares Disaster-Recovery-Asset — der Index selbst muss ohnehin neu aufgebaut werden.',
-          '**Die Anbieterbewertung nur als Feature-Vergleich behandeln und Milvus/Zilliz Cloud auslassen**, weil die entwicklerorientierten Vergleichsleitfäden, von denen die meisten Teams starten, es nicht abdecken — und dann bei 500 Millionen Vektoren feststellen, dass die gewählte Plattform nicht für diese Größenordnung konzipiert war.',
+          '**Die Anbieterbewertung nur als Feature-Vergleich behandeln und Milvus/Zilliz Cloud auslassen**, weil die entwicklerorientierten Vergleichsleitfäden, von denen die meisten Teams starten, es nicht abdecken — und dann bei 500 Millionen Vektoren feststellen, dass die dokumentierten Einsatzgrenzen der gewählten Plattform diese Größenordnung nicht abdecken.',
         ],
       },
       faq: {
@@ -702,7 +704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dataResidencySla: {
         id: 'data-residency-sla',
         title: 'Quelle résidence des données, SLA et posture de sécurité les entreprises doivent-elles exiger d\'un fournisseur de base vectorielle managée ?',
-        content: '**Le propre rapport SOC 2 Type II du fournisseur, sa liste de sous-traitants publiée et ses options de résidence régionale des données déterminent s\'il peut s\'insérer dans un pipeline de données réglementé — pas son benchmark de latence de requête.** Les embeddings vectoriels encodent souvent la substance de documents confidentiels (contrats, notes patients, code source), donc le fournisseur qui les traite hérite des mêmes obligations de conformité que tout autre sous-traitant de ces données.',
+        content: '**Le propre rapport SOC 2 Type II du fournisseur, sa liste de sous-traitants publiée et ses options de résidence régionale des données déterminent s\'il peut s\'insérer dans un pipeline de données réglementé — pas son benchmark de latence de requête.** Les embeddings vectoriels encodent souvent la substance de documents confidentiels (contrats, notes patients, code source), donc le fournisseur qui les traite est soumis aux obligations du sous-traitant (p. ex. art. 28 et 32 du RGPD).',
         items: [
           '**Résidence des données :** confirmez quelles régions cloud le fournisseur propose réellement pour le stockage vectoriel — pas seulement sur le site marketing — et si un engagement de résidence UE-uniquement ou spécifique à un pays est contractuellement garanti, pas seulement techniquement disponible. Voir [Résidence des données et IA souveraine : déploiement LLM entreprise UE/RGPD](/fr/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) pour les exigences RGPD de transfert transfrontalier sous-jacentes à cette décision.',
           '**Disponibilité SLA :** les SLA publiés varient selon le palier. Les pages tarifaires publiques des fournisseurs indiquent par exemple 99,5 % pour Qdrant Cloud Standard et Weaviate Cloud Flex, 99,9 % pour Qdrant Cloud Premium et Weaviate Cloud Premium (partagé), et 99,95 % pour Pinecone Enterprise, Zilliz Cloud Enterprise et Weaviate Cloud Premium (dédié). Obtenez par écrit auprès de chaque fournisseur le pourcentage exact, les crédits de remédiation et la couverture éventuelle de la latence de requête, car un chiffre de page tarifaire n\'est pas un contrat.',
@@ -723,10 +725,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Fournisseur': 'Pinecone', 'SLA indiqué': 'Enterprise : 99,95 %', 'Sécurité par palier': 'SSO dès Standard / audit, endpoints privés : Enterprise' },
           { 'Fournisseur': 'Zilliz Cloud', 'SLA indiqué': 'Enterprise : 99,95 %', 'Sécurité par palier': 'Enterprise : audit, SSO SAML, RBAC granulaire' },
           { 'Fournisseur': 'Qdrant Cloud', 'SLA indiqué': 'Standard 99,5 % / Premium 99,9 %', 'Sécurité par palier': 'Premium : SSO, liens VPC privés ; audit non indiqué' },
-          { 'Fournisseur': 'Weaviate Cloud', 'SLA indiqué': 'Flex 99,5 % / Premium 99,9–99,95 %', 'Sécurité par palier': 'SOC 2 audité (selon l\'éditeur) ; HIPAA : Premium dédié' },
+          { 'Fournisseur': 'Weaviate Cloud', 'SLA indiqué': 'Flex 99,5 % / Premium 99,9–99,95 %', 'Sécurité par palier': 'SOC 2 audité et prise en charge HIPAA sur Premium dédié (les deux selon l\'éditeur)' },
         ],
         callouts: [
           { type: 'note', text: 'Relevé sur la page tarifaire publique de chaque fournisseur au moment de la rédaction de cette section ; les offres, les prix et les limites de palier changent, et « non indiqué » signifie que la page ne le précise pas, non que la fonction est absente. Faites confirmer chaque point dans le contrat ou le bon de commande. L\'auto-hébergement supprime les paliers, mais reporte SSO, journalisation d\'audit et disponibilité sur votre propre équipe. Pages de tarifs (vérifiées le 2026-11-03) : [Pinecone](https://www.pinecone.io/pricing/), [Zilliz Cloud](https://zilliz.com/pricing), [Qdrant](https://qdrant.tech/pricing/), [Weaviate](https://weaviate.io/pricing/serverless).' },
+          { type: 'note', text: 'Cette section est une information générale et non un conseil juridique ; faites confirmer les exigences du RGPD et de résidence des données par votre propre conseil.' },
         ],
       },
       scaleOps: {
@@ -814,7 +817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Fournisseur': 'pgvector (PostgreSQL)', 'Déploiement': 'Extension Postgres : auto-hébergé ou Postgres managé', 'Force pertinente entreprise': 'Aucun système en plus si Postgres tourne déjà' },
         ],
         callouts: [
-          { type: 'note', text: '**Actian VectorAI DB (ajouté à la suggestion du fournisseur).** [Actian VectorAI DB](https://www.actian.com/databases/vectorai-db/) est une base de données vectorielle auto-hébergée pour le RAG et la mémoire d\'agents IA qui, selon Actian, conserve les données sur une infrastructure que vous contrôlez : sur site, en air-gap sans exigence de connexion sortante, en edge ou dans votre propre cloud. Actian la décrit comme un conteneur Docker unique (compatible Kubernetes, Helm et Terraform) avec des SDK Python et JavaScript, une indexation HNSW/IVF avec quantification, une recherche hybride et des métriques Prometheus natives ; elle est aussi disponible via AWS Marketplace, voir la [page de tarifs d\'Actian](https://www.actian.com/databases/vectorai-db-pricing/). Ces capacités sont déclarées par le fournisseur et n\'ont pas été testées de manière indépendante par PromptQuorum : vérifiez-les lors d\'un pilote avec la checklist d\'achat ci-dessus. **Aucune relation d\'affiliation :** les liens Actian sont de simples liens, pas des liens d\'affiliation, et PromptQuorum ne perçoit aucune commission.' },
+          { type: 'note', text: '**Actian VectorAI DB (ajouté à la suggestion du fournisseur).** [Actian VectorAI DB](https://www.actian.com/databases/vectorai-db/) est une base de données vectorielle auto-hébergée pour le RAG et la mémoire d\'agents IA qui, selon Actian, conserve les données sur une infrastructure que vous contrôlez : sur site, en air-gap sans exigence de connexion sortante, en edge ou dans votre propre cloud. Actian la décrit comme un conteneur Docker unique (compatible Kubernetes, Helm et Terraform) avec des SDK Python et JavaScript, une indexation HNSW/IVF avec quantification, une recherche hybride et des métriques Prometheus natives ; elle est aussi disponible via AWS Marketplace, voir la [page de tarifs d\'Actian](https://www.actian.com/databases/vectorai-db-pricing/). Ces capacités sont déclarées par le fournisseur et n\'ont pas été testées de manière indépendante par PromptQuorum : vérifiez-les lors d\'un pilote avec la checklist d\'achat ci-dessus. **Aucune relation d\'affiliation :** aucun lien de cette page n\'est un lien d\'affiliation, et PromptQuorum ne perçoit aucune commission sur aucun d\'entre eux.' },
           { type: 'note', text: 'Pour une comparaison fonctionnalité par fonctionnalité de Pinecone, Weaviate, Qdrant et Chroma destinée aux développeurs choisissant pour une seule application RAG, voir [Pinecone vs Weaviate vs Qdrant vs Chroma](/fr/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma). Cette section couvre uniquement l\'angle déploiement et échelle pertinent pour l\'entreprise que chaque fournisseur ajoute en plus.' },
         ],
       },
@@ -841,7 +844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Concevoir une collection partagée avec filtrage par métadonnées pour l\'isolation multi-tenant sans suite de tests dédiée aux bugs de filtrage.** Une seule condition de filtre oubliée devient une fuite de données inter-tenants, et cette classe de bug est invisible dans les tests fonctionnels normaux.',
           '**Signer un contrat committed-use avant que le volume soit prévisible.** Un plancher engagé sur 12 mois négocié sur des projections de croissance optimistes coûte souvent plus cher que le pay-as-you-go si le volume réel se révèle inférieur.',
           '**Supposer qu\'un export de base vectorielle est une sauvegarde portable.** Sans les documents source sous-jacents et le pipeline d\'embedding qui a généré chaque vecteur, un export n\'est pas un actif de reprise après sinistre exploitable — l\'index lui-même doit être reconstruit de toute façon.',
-          '**Traiter l\'évaluation fournisseur comme une simple comparaison de fonctionnalités et sauter Milvus/Zilliz Cloud** parce que les guides comparatifs orientés développeurs par lesquels la plupart des équipes commencent ne le couvrent pas — pour découvrir ensuite à 500 millions de vecteurs que la plateforme choisie n\'était pas conçue pour cette échelle.',
+          '**Traiter l\'évaluation fournisseur comme une simple comparaison de fonctionnalités et sauter Milvus/Zilliz Cloud** parce que les guides comparatifs orientés développeurs par lesquels la plupart des équipes commencent ne le couvrent pas — pour découvrir ensuite à 500 millions de vecteurs que les limites de déploiement documentées de la plateforme choisie ne couvrent pas cette échelle.',
         ],
       },
       faq: {
@@ -996,7 +999,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dataResidencySla: {
         id: 'data-residency-sla',
         title: '¿Qué Residencia de Datos, SLA y Postura de Seguridad Deben Exigir las Empresas a un Proveedor de Base de Datos Vectorial Gestionada?',
-        content: '**El informe SOC 2 Type II propio del proveedor, su lista de subprocesadores publicada y sus opciones de residencia regional de datos determinan si puede encajar en un pipeline de datos regulado — no el benchmark de latencia de consultas.** Los embeddings vectoriales suelen codificar el contenido de documentos confidenciales (contratos, notas de pacientes, código fuente), así que el proveedor que los procesa hereda las mismas obligaciones de cumplimiento que cualquier otro procesador de esos datos.',
+        content: '**El informe SOC 2 Type II propio del proveedor, su lista de subprocesadores publicada y sus opciones de residencia regional de datos determinan si puede encajar en un pipeline de datos regulado — no el benchmark de latencia de consultas.** Los embeddings vectoriales suelen codificar el contenido de documentos confidenciales (contratos, notas de pacientes, código fuente), así que el proveedor que los procesa está sujeto a las obligaciones del encargado del tratamiento (p. ej., arts. 28 y 32 del RGPD).',
         items: [
           '**Residencia de datos:** confirme qué regiones cloud ofrece realmente el proveedor para el almacenamiento vectorial — no solo en la página de marketing — y si un compromiso de residencia exclusiva de UE o específica de país está garantizado contractualmente, no solo disponible técnicamente. Vea [Residencia de Datos e IA Soberana: Despliegue de LLM Empresarial UE/RGPD](/es/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) para los requisitos subyacentes del RGPD sobre transferencias transfronterizas en los que se apoya esta decisión.',
           '**Disponibilidad del SLA:** los SLA publicados varían según el nivel del plan. Las páginas de precios públicas de los proveedores indican, por ejemplo, 99,5% en Qdrant Cloud Standard y Weaviate Cloud Flex, 99,9% en Qdrant Cloud Premium y Weaviate Cloud Premium (compartido) y 99,95% en Pinecone Enterprise, Zilliz Cloud Enterprise y Weaviate Cloud Premium (dedicado). Obtenga por escrito de cada proveedor el porcentaje exacto, los créditos de compensación y si el SLA cubre la latencia de consultas, porque una cifra de página de precios no es un contrato.',
@@ -1017,10 +1020,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Proveedor': 'Pinecone', 'SLA indicado': 'Enterprise: 99,95%', 'Seguridad por nivel': 'SSO: Standard+ / auditoría, endpoints privados: Enterprise' },
           { 'Proveedor': 'Zilliz Cloud', 'SLA indicado': 'Enterprise: 99,95%', 'Seguridad por nivel': 'Enterprise: auditoría, SSO SAML, RBAC granular' },
           { 'Proveedor': 'Qdrant Cloud', 'SLA indicado': 'Standard 99,5% / Premium 99,9%', 'Seguridad por nivel': 'Premium: SSO, enlaces VPC privados; auditoría no indicada' },
-          { 'Proveedor': 'Weaviate Cloud', 'SLA indicado': 'Flex 99,5% / Premium 99,9–99,95%', 'Seguridad por nivel': 'SOC 2 auditado (según proveedor); HIPAA: Premium dedicado' },
+          { 'Proveedor': 'Weaviate Cloud', 'SLA indicado': 'Flex 99,5% / Premium 99,9–99,95%', 'Seguridad por nivel': 'SOC 2 auditado y compatibilidad con HIPAA en Premium dedicado (ambos según el proveedor)' },
         ],
         callouts: [
           { type: 'note', text: 'Leído en la página de precios pública de cada proveedor al redactar esta sección; los planes, precios y límites de nivel cambian, y «no indicado» significa que la página de precios no lo dice, no que la función no exista. Confirme cada punto en el contrato o formulario de pedido. Autoalojar elimina los niveles de plan, pero traslada SSO, registro de auditoría y disponibilidad a su propio equipo. Páginas de precios (verificadas el 2026-11-03): [Pinecone](https://www.pinecone.io/pricing/), [Zilliz Cloud](https://zilliz.com/pricing), [Qdrant](https://qdrant.tech/pricing/), [Weaviate](https://weaviate.io/pricing/serverless).' },
+          { type: 'note', text: 'Esta sección es información general y no asesoramiento jurídico; haga que su propio asesor jurídico confirme los requisitos del RGPD y de residencia de datos.' },
         ],
       },
       scaleOps: {
@@ -1108,7 +1112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Proveedor': 'pgvector (PostgreSQL)', 'Despliegue': 'Extensión de Postgres: autoalojada o Postgres gestionado', 'Fortaleza relevante para empresas': 'Sin sistema adicional si ya usa Postgres' },
         ],
         callouts: [
-          { type: 'note', text: '**Actian VectorAI DB (añadido por sugerencia del proveedor).** [Actian VectorAI DB](https://www.actian.com/databases/vectorai-db/) es una base de datos vectorial autoalojada para RAG y memoria de agentes de IA que, según Actian, mantiene los datos en infraestructura que usted controla: on-premises, en air-gap sin requisito de red saliente, en el edge o en su propia nube. Actian la describe como un único contenedor Docker (compatible con Kubernetes, Helm y Terraform) con SDK de Python y JavaScript, indexación HNSW/IVF con cuantización, búsqueda híbrida y métricas nativas de Prometheus; también está disponible en AWS Marketplace, consulte la [página de precios de Actian](https://www.actian.com/databases/vectorai-db-pricing/). Son capacidades declaradas por el proveedor que PromptQuorum no ha probado de forma independiente: verifíquelas en un piloto con la lista de verificación de compras anterior. **Sin relación de afiliación:** los enlaces de Actian son enlaces normales, no de afiliado, y PromptQuorum no recibe comisión por ellos.' },
+          { type: 'note', text: '**Actian VectorAI DB (añadido por sugerencia del proveedor).** [Actian VectorAI DB](https://www.actian.com/databases/vectorai-db/) es una base de datos vectorial autoalojada para RAG y memoria de agentes de IA que, según Actian, mantiene los datos en infraestructura que usted controla: on-premises, en air-gap sin requisito de red saliente, en el edge o en su propia nube. Actian la describe como un único contenedor Docker (compatible con Kubernetes, Helm y Terraform) con SDK de Python y JavaScript, indexación HNSW/IVF con cuantización, búsqueda híbrida y métricas nativas de Prometheus; también está disponible en AWS Marketplace, consulte la [página de precios de Actian](https://www.actian.com/databases/vectorai-db-pricing/). Son capacidades declaradas por el proveedor que PromptQuorum no ha probado de forma independiente: verifíquelas en un piloto con la lista de verificación de compras anterior. **Sin relación de afiliación:** ningún enlace de esta página es un enlace de afiliado, y PromptQuorum no recibe comisión por ninguno de ellos.' },
           { type: 'note', text: 'Para una comparación funcionalidad por funcionalidad de Pinecone, Weaviate, Qdrant y Chroma dirigida a desarrolladores que eligen para una sola aplicación RAG, vea [Pinecone vs Weaviate vs Qdrant vs Chroma](/es/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma). Esta sección cubre solo el ángulo de despliegue y escala relevante para empresas que cada proveedor añade además.' },
         ],
       },
@@ -1135,7 +1139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Diseñar una colección compartida con filtrado por metadatos para el aislamiento multiinquilino sin una suite de pruebas dedicada a errores de filtrado.** Una sola condición de filtro omitida se convierte en una fuga de datos entre inquilinos, y esta clase de error es invisible en las pruebas funcionales normales.',
           '**Firmar un contrato de uso comprometido antes de que el volumen sea predecible.** Un mínimo comprometido a 12 meses negociado sobre proyecciones de crecimiento optimistas a menudo cuesta más de lo que habría costado el pago por uso si el volumen real resulta menor.',
           '**Asumir que una exportación de base de datos vectorial es un backup portable.** Sin los documentos fuente subyacentes y el pipeline de embedding que generó cada vector, una exportación no es un activo de recuperación ante desastres utilizable — el índice mismo tiene que reconstruirse de todos modos.',
-          '**Tratar la evaluación de proveedores como solo comparación de funcionalidades y saltarse Milvus/Zilliz Cloud** porque las guías comparativas orientadas a desarrolladores de las que parten la mayoría de equipos no lo cubren — para luego descubrir a 500 millones de vectores que la plataforma elegida no fue diseñada para este nivel de escala.',
+          '**Tratar la evaluación de proveedores como solo comparación de funcionalidades y saltarse Milvus/Zilliz Cloud** porque las guías comparativas orientadas a desarrolladores de las que parten la mayoría de equipos no lo cubren — para luego descubrir a 500 millones de vectores que los límites de despliegue documentados de la plataforma elegida no cubren este nivel de escala.',
         ],
       },
       faq: {
@@ -1290,7 +1294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dataResidencySla: {
         id: 'data-residency-sla',
         title: 'Que Residência de Dados, SLA e Postura de Segurança as Empresas Devem Exigir de um Fornecedor de Banco de Dados Vetorial Gerenciado?',
-        content: '**O relatório SOC 2 Type II próprio do fornecedor, sua lista de subprocessadores publicada e suas opções de residência regional de dados determinam se ele pode fazer parte de um pipeline de dados regulado — não seu benchmark de latência de query.** Embeddings vetoriais frequentemente codificam o conteúdo de documentos confidenciais (contratos, prontuários, código-fonte), então o fornecedor que os processa herda as mesmas obrigações de compliance de qualquer outro processador desses dados.',
+        content: '**O relatório SOC 2 Type II próprio do fornecedor, sua lista de subprocessadores publicada e suas opções de residência regional de dados determinam se ele pode fazer parte de um pipeline de dados regulado — não seu benchmark de latência de query.** Embeddings vetoriais frequentemente codificam o conteúdo de documentos confidenciais (contratos, prontuários, código-fonte), então o fornecedor que os processa está sujeito às obrigações do operador (p. ex., arts. 28 e 32 do GDPR).',
         items: [
           '**Residência de dados:** confirme quais regiões de nuvem o fornecedor realmente oferece para armazenamento vetorial — não apenas no site de marketing — e se um compromisso de residência exclusiva na UE ou específica de país é garantido contratualmente, não apenas tecnicamente disponível. Veja [Residência de Dados e IA Soberana: Implantação de LLM Empresarial UE/GDPR](/pt/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) para os requisitos subjacentes de transferência transfronteiriça do GDPR nos quais essa decisão se apoia.',
           '**Disponibilidade do SLA:** os SLAs publicados variam conforme o nível do plano. As páginas de preços públicas dos fornecedores listam, por exemplo, 99,5% no Qdrant Cloud Standard e no Weaviate Cloud Flex, 99,9% no Qdrant Cloud Premium e no Weaviate Cloud Premium (compartilhado) e 99,95% no Pinecone Enterprise, no Zilliz Cloud Enterprise e no Weaviate Cloud Premium (dedicado). Obtenha por escrito de cada fornecedor o percentual exato, os créditos de compensação e se o SLA cobre a latência de consultas, pois um número de página de preços não é um contrato.',
@@ -1311,10 +1315,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Fornecedor': 'Pinecone', 'SLA listado': 'Enterprise: 99,95%', 'Segurança por nível': 'SSO: Standard+ / auditoria, endpoints privados: Enterprise' },
           { 'Fornecedor': 'Zilliz Cloud', 'SLA listado': 'Enterprise: 99,95%', 'Segurança por nível': 'Enterprise: auditoria, SSO SAML, RBAC granular' },
           { 'Fornecedor': 'Qdrant Cloud', 'SLA listado': 'Standard 99,5% / Premium 99,9%', 'Segurança por nível': 'Premium: SSO, links VPC privados; auditoria não listada' },
-          { 'Fornecedor': 'Weaviate Cloud', 'SLA listado': 'Flex 99,5% / Premium 99,9–99,95%', 'Segurança por nível': 'SOC 2 auditado (fornecedor); HIPAA: Premium dedicado' },
+          { 'Fornecedor': 'Weaviate Cloud', 'SLA listado': 'Flex 99,5% / Premium 99,9–99,95%', 'Segurança por nível': 'SOC 2 auditado e suporte a HIPAA no Premium dedicado (ambos segundo o fornecedor)' },
         ],
         callouts: [
           { type: 'note', text: 'Lido na página de preços pública de cada fornecedor quando esta seção foi escrita; planos, preços e limites de nível mudam, e «não listado» significa que a página de preços não informa, não que o recurso não exista. Confirme cada item no contrato ou formulário de pedido. O self-hosting elimina os níveis de plano, mas transfere SSO, log de auditoria e disponibilidade para a sua própria equipe. Páginas de preços (verificadas em 2026-11-03): [Pinecone](https://www.pinecone.io/pricing/), [Zilliz Cloud](https://zilliz.com/pricing), [Qdrant](https://qdrant.tech/pricing/), [Weaviate](https://weaviate.io/pricing/serverless).' },
+          { type: 'note', text: 'Esta seção é informação geral e não aconselhamento jurídico; peça ao seu próprio advogado que confirme os requisitos do GDPR/LGPD e de residência de dados.' },
         ],
       },
       scaleOps: {
@@ -1402,7 +1407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Fornecedor': 'pgvector (PostgreSQL)', 'Implantação': 'Extensão do Postgres: self-hosted ou Postgres gerenciado', 'Força relevante para empresas': 'Sem sistema extra se você já usa Postgres' },
         ],
         callouts: [
-          { type: 'note', text: '**Actian VectorAI DB (adicionado por sugestão do fornecedor).** [Actian VectorAI DB](https://www.actian.com/databases/vectorai-db/) é um banco de dados vetorial self-hosted para RAG e memória de agentes de IA que, segundo a Actian, mantém os dados em infraestrutura sob seu controle: on-premises, em air-gap sem exigência de rede de saída, no edge ou na sua própria nuvem. A Actian o descreve como um único contêiner Docker (compatível com Kubernetes, Helm e Terraform) com SDKs de Python e JavaScript, indexação HNSW/IVF com quantização, busca híbrida e métricas nativas do Prometheus; também está disponível pelo AWS Marketplace, veja a [página de preços da Actian](https://www.actian.com/databases/vectorai-db-pricing/). São capacidades declaradas pelo fornecedor que a PromptQuorum não testou de forma independente: verifique-as em um piloto com a checklist de compras acima. **Sem relação de afiliação:** os links da Actian são links comuns, não de afiliado, e a PromptQuorum não recebe comissão por eles.' },
+          { type: 'note', text: '**Actian VectorAI DB (adicionado por sugestão do fornecedor).** [Actian VectorAI DB](https://www.actian.com/databases/vectorai-db/) é um banco de dados vetorial self-hosted para RAG e memória de agentes de IA que, segundo a Actian, mantém os dados em infraestrutura sob seu controle: on-premises, em air-gap sem exigência de rede de saída, no edge ou na sua própria nuvem. A Actian o descreve como um único contêiner Docker (compatível com Kubernetes, Helm e Terraform) com SDKs de Python e JavaScript, indexação HNSW/IVF com quantização, busca híbrida e métricas nativas do Prometheus; também está disponível pelo AWS Marketplace, veja a [página de preços da Actian](https://www.actian.com/databases/vectorai-db-pricing/). São capacidades declaradas pelo fornecedor que a PromptQuorum não testou de forma independente: verifique-as em um piloto com a checklist de compras acima. **Sem relação de afiliação:** nenhum link desta página é um link de afiliado, e a PromptQuorum não recebe comissão por nenhum deles.' },
           { type: 'note', text: 'Para uma comparação funcionalidade por funcionalidade de Pinecone, Weaviate, Qdrant e Chroma voltada a desenvolvedores escolhendo para uma única aplicação RAG, veja [Pinecone vs Weaviate vs Qdrant vs Chroma](/pt/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma). Esta seção cobre apenas o ângulo de implantação e escala relevante para empresas que cada fornecedor adiciona.' },
         ],
       },
@@ -1429,7 +1434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Projetar uma coleção compartilhada com filtragem por metadados para isolamento multi-tenant sem uma suíte de testes dedicada a bugs de filtro.** Uma única condição de filtro esquecida vira um vazamento de dados entre tenants, e essa classe de bug é invisível em testes funcionais normais.',
           '**Assinar um contrato de uso comprometido antes de o volume ser previsível.** Um piso comprometido de 12 meses negociado sobre projeções de crescimento otimistas frequentemente custa mais do que pay-as-you-go teria custado se o volume real vier menor.',
           '**Assumir que uma exportação de banco de dados vetorial é um backup portável.** Sem os documentos-fonte subjacentes e o pipeline de embedding que gerou cada vetor, uma exportação não é um ativo de recuperação de desastres utilizável — o índice em si precisa ser reconstruído de qualquer forma.',
-          '**Tratar a avaliação de fornecedores apenas como comparação de funcionalidades e pular Milvus/Zilliz Cloud** porque os guias comparativos voltados a desenvolvedores dos quais a maioria das equipes parte não cobrem isso — e depois descobrir aos 500 milhões de vetores que a plataforma escolhida não foi projetada para esse nível de escala.',
+          '**Tratar a avaliação de fornecedores apenas como comparação de funcionalidades e pular Milvus/Zilliz Cloud** porque os guias comparativos voltados a desenvolvedores dos quais a maioria das equipes parte não cobrem isso — e depois descobrir aos 500 milhões de vetores que os limites de implantação documentados da plataforma escolhida não cobrem esse nível de escala.',
         ],
       },
       faq: {
@@ -1584,7 +1589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dataResidencySla: {
         id: 'data-residency-sla',
         title: 'マネージドベクトルDBベンダーにどのデータレジデンシー、SLA、セキュリティ体制を求めるべきか？',
-        content: '**マネージドベクトルDBベンダーが規制対象のデータパイプラインに組み込めるかどうかを決めるのは、ベンダー自身のSOC 2 Type IIレポート、公開されたサブプロセッサーリスト、地域データレジデンシーオプションであり、クエリレイテンシのベンチマークではない。** ベクトル埋め込みは契約書、患者記録、ソースコードなど機密文書の内容をエンコードすることが多く、これを処理するベンダーは他のデータ処理者と同じコンプライアンス義務を負う。',
+        content: '**マネージドベクトルDBベンダーが規制対象のデータパイプラインに組み込めるかどうかを決めるのは、ベンダー自身のSOC 2 Type IIレポート、公開されたサブプロセッサーリスト、地域データレジデンシーオプションであり、クエリレイテンシのベンチマークではない。** ベクトル埋め込みは契約書、患者記録、ソースコードなど機密文書の内容をエンコードすることが多く、これを処理するベンダーは処理者としての義務（例：GDPR第28条・第32条）の対象となる。',
         items: [
           '**データレジデンシー：** マーケティングサイトだけでなく、ベクトルストレージ用にベンダーが実際に提供しているクラウドリージョンを確認し、EU限定または国別のレジデンシーが技術的に可能なだけでなく契約上保証されているかを確認する。EU/GDPRの越境移転要件については[データレジデンシーとソブリンAI：EU/GDPRエンタープライズLLM導入](/ja/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise)を参照。',
           '**SLA稼働率：** 公開されているSLAはプランの等級によって異なります。各ベンダーの公開料金ページには、たとえばQdrant Cloud StandardとWeaviate Cloud Flexで99.5%、Qdrant Cloud PremiumとWeaviate Cloud Premium（共有）で99.9%、Pinecone Enterprise、Zilliz Cloud Enterprise、Weaviate Cloud Premium（専有）で99.95%と記載されています。料金ページの数値は契約ではないため、正確なパーセンテージ、補償クレジット、クエリレイテンシが対象かどうかを各ベンダーから書面で入手してください。',
@@ -1605,10 +1610,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ベンダー': 'Pinecone', '記載のSLA': 'Enterprise：99.95%', '等級別のセキュリティ': 'SSO：Standard以上／監査ログ・プライベートEP：Enterprise' },
           { 'ベンダー': 'Zilliz Cloud', '記載のSLA': 'Enterprise：99.95%', '等級別のセキュリティ': 'Enterprise：監査ログ、SAML SSO、詳細なRBAC' },
           { 'ベンダー': 'Qdrant Cloud', '記載のSLA': 'Standard 99.5%／Premium 99.9%', '等級別のセキュリティ': 'Premium：SSO、プライベートVPCリンク。監査ログは記載なし' },
-          { 'ベンダー': 'Weaviate Cloud', '記載のSLA': 'Flex 99.5%／Premium 99.9〜99.95%', '等級別のセキュリティ': 'SOC 2監査済み（ベンダー表記）。HIPAA：Premium専有' },
+          { 'ベンダー': 'Weaviate Cloud', '記載のSLA': 'Flex 99.5%／Premium 99.9〜99.95%', '等級別のセキュリティ': 'SOC 2監査済み、およびPremium専有でHIPAA対応（いずれもベンダー表記）' },
         ],
         callouts: [
           { type: 'note', text: 'この節の執筆時に各ベンダーの公開料金ページから確認した内容です。プラン、価格、等級の境界は変わり、「記載なし」は料金ページに書かれていないという意味であり、機能がないという意味ではありません。各項目は契約書または注文書で確認してください。セルフホストでは料金プランの等級はなくなりますが、SSO、監査ログ、稼働率の責任は自社チームに移ります。 料金ページ（2026-11-03確認）： [Pinecone](https://www.pinecone.io/pricing/), [Zilliz Cloud](https://zilliz.com/pricing), [Qdrant](https://qdrant.tech/pricing/), [Weaviate](https://weaviate.io/pricing/serverless).' },
+          { type: 'note', text: 'この節は一般的な情報であり法的助言ではありません。GDPRおよびデータレジデンシーの要件は、ご自身の法務担当者にご確認ください。' },
         ],
       },
       scaleOps: {
@@ -1696,7 +1702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ベンダー': 'pgvector（PostgreSQL）', '導入形態': 'Postgres拡張：セルフホストまたはマネージドPostgres', 'エンタープライズ関連の強み': 'Postgresが既にあれば追加システム不要' },
         ],
         callouts: [
-          { type: 'note', text: '**Actian VectorAI DB（ベンダーの提案により追加）。** [Actian VectorAI DB](https://www.actian.com/databases/vectorai-db/)は、RAGやAIエージェントのメモリ向けのセルフホスト型ベクトルデータベースで、Actianによれば、オンプレミス、外部ネットワーク接続を必要としないエアギャップ環境、エッジ、または自社クラウドなど、自社で管理するインフラ上にデータを保持します。Actianは、これを単一のDockerコンテナ（Kubernetes、Helm、Terraform互換）として説明しており、PythonおよびJavaScript SDK、量子化付きHNSW/IVFインデックス、ハイブリッド検索、ネイティブのPrometheusメトリクスを備え、AWS Marketplaceでも提供されています。[Actianの料金ページ](https://www.actian.com/databases/vectorai-db-pricing/)をご覧ください。これらはベンダーが述べる機能であり、PromptQuorumが独自に検証したものではないため、上記の調達チェックリストに沿ってパイロットで確認してください。**アフィリエイト関係なし：** Actianへのリンクは通常のリンクであり、アフィリエイトリンクではなく、PromptQuorumはこれらから報酬を得ていません。' },
+          { type: 'note', text: '**Actian VectorAI DB（ベンダーの提案により追加）。** [Actian VectorAI DB](https://www.actian.com/databases/vectorai-db/)は、RAGやAIエージェントのメモリ向けのセルフホスト型ベクトルデータベースで、Actianによれば、オンプレミス、外部ネットワーク接続を必要としないエアギャップ環境、エッジ、または自社クラウドなど、自社で管理するインフラ上にデータを保持します。Actianは、これを単一のDockerコンテナ（Kubernetes、Helm、Terraform互換）として説明しており、PythonおよびJavaScript SDK、量子化付きHNSW/IVFインデックス、ハイブリッド検索、ネイティブのPrometheusメトリクスを備え、AWS Marketplaceでも提供されています。[Actianの料金ページ](https://www.actian.com/databases/vectorai-db-pricing/)をご覧ください。これらはベンダーが述べる機能であり、PromptQuorumが独自に検証したものではないため、上記の調達チェックリストに沿ってパイロットで確認してください。**アフィリエイト関係なし：** このページのリンクはいずれもアフィリエイトリンクではなく、PromptQuorumはそのどれからも報酬を得ていません。' },
           { type: 'note', text: '単一のRAGアプリケーション向けに選ぶ開発者向けのPinecone、Weaviate、Qdrant、Chromaの機能比較は[Pinecone vs Weaviate vs Qdrant vs Chroma](/ja/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma)を参照。本セクションでは各ベンダーが追加で提供するエンタープライズ関連の導入・規模の観点のみを扱う。' },
         ],
       },
@@ -1723,7 +1729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**フィルタリングバグ専用のテストスイートなしに、マルチテナント分離のためにメタデータフィルタリング付き共有コレクションを設計する。** 見落とされたフィルタ条件が1つあるだけでテナント間データ漏洩になり、この種のバグは通常の機能テストでは見えない。',
           '**量が予測可能になる前にコミット利用型契約に署名する。** 楽観的な成長予測に基づいて交渉された12ヶ月のコミット下限は、実際の量が下回った場合、従量課金より高くつくことが多い。',
           '**ベクトルデータベースのエクスポートが持ち運び可能なバックアップだと想定する。** 元の文書と各ベクトルを生成した埋め込みパイプラインがなければ、エクスポートは使用可能なディザスタリカバリ資産ではない — インデックス自体はいずれにせよ再構築が必要である。',
-          '**多くのチームが起点とする開発者向け比較ガイドがMilvus/Zilliz Cloudを扱っていないため、ベンダー評価を機能比較のみとして扱い、これらを省略する。** その結果、5億ベクトルの段階で選んだプラットフォームがこの規模向けに設計されていなかったことに気づくことになる。',
+          '**多くのチームが起点とする開発者向け比較ガイドがMilvus/Zilliz Cloudを扱っていないため、ベンダー評価を機能比較のみとして扱い、これらを省略する。** その結果、5億ベクトルの段階で選んだプラットフォームの公開されている導入上限がこの規模をカバーしていないことに気づくことになる。',
         ],
       },
       faq: {
@@ -1878,7 +1884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dataResidencySla: {
         id: 'data-residency-sla',
         title: '企业应向托管向量数据库供应商要求怎样的数据驻留、SLA和安全态势？',
-        content: '**决定一家托管向量数据库供应商能否进入受监管数据管道的，是其自身的SOC 2 Type II报告、公开的分包处理者名单和区域数据驻留选项，而不是查询延迟基准。** 向量嵌入常常编码了机密文档的实质内容（合同、患者记录、源代码），因此处理这些数据的供应商承担着与其他数据处理者同样的合规义务。',
+        content: '**决定一家托管向量数据库供应商能否进入受监管数据管道的，是其自身的SOC 2 Type II报告、公开的分包处理者名单和区域数据驻留选项，而不是查询延迟基准。** 向量嵌入常常编码了机密文档的实质内容（合同、患者记录、源代码），因此处理这些数据的供应商须承担处理者义务（例如GDPR第28条、第32条）。',
         items: [
           '**数据驻留：** 确认供应商实际提供的向量存储云区域（而非仅在营销网站上宣称），以及仅限欧盟或特定国家的驻留承诺是否具有合同约束力，而不只是技术上可用。参见[数据驻留与主权AI：欧盟/GDPR企业级LLM部署](/zh/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise)了解这一决策所依托的GDPR跨境传输要求。',
           '**SLA可用性：** 公开的SLA因套餐等级而异。各供应商的公开定价页列出的例子包括：Qdrant Cloud Standard和Weaviate Cloud Flex为99.5%，Qdrant Cloud Premium和Weaviate Cloud Premium（共享）为99.9%，Pinecone Enterprise、Zilliz Cloud Enterprise和Weaviate Cloud Premium（专用）为99.95%。定价页上的数字不是合同，应从每个供应商处以书面形式获取确切百分比、补偿额度，以及SLA是否覆盖查询延迟。',
@@ -1899,10 +1905,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '供应商': 'Pinecone', '列示的SLA': 'Enterprise：99.95%', '各等级的安全功能': 'SSO：Standard起／审计日志、私有端点：Enterprise' },
           { '供应商': 'Zilliz Cloud', '列示的SLA': 'Enterprise：99.95%', '各等级的安全功能': 'Enterprise：审计日志、SAML SSO、细粒度RBAC' },
           { '供应商': 'Qdrant Cloud', '列示的SLA': 'Standard 99.5%／Premium 99.9%', '各等级的安全功能': 'Premium：SSO、私有VPC链接；审计日志未列示' },
-          { '供应商': 'Weaviate Cloud', '列示的SLA': 'Flex 99.5%／Premium 99.9–99.95%', '各等级的安全功能': 'SOC 2已审计（供应商表述）；HIPAA：Premium专用' },
+          { '供应商': 'Weaviate Cloud', '列示的SLA': 'Flex 99.5%／Premium 99.9–99.95%', '各等级的安全功能': 'SOC 2已审计，且Premium专用版支持HIPAA（均为供应商表述）' },
         ],
         callouts: [
           { type: 'note', text: '内容取自撰写本节时各供应商的公开定价页；套餐、价格和等级边界会变化，“未列示”表示定价页没有说明，并不表示该功能不存在。请在合同或订单中逐项确认。自托管没有套餐等级之分，但SSO、审计日志和可用性的责任会转到你自己的团队身上。 定价页面（2026-11-03核查）： [Pinecone](https://www.pinecone.io/pricing/), [Zilliz Cloud](https://zilliz.com/pricing), [Qdrant](https://qdrant.tech/pricing/), [Weaviate](https://weaviate.io/pricing/serverless).' },
+          { type: 'note', text: '本节为一般性信息，不构成法律建议；请由贵方自己的法律顾问确认GDPR及数据驻留要求。' },
         ],
       },
       scaleOps: {
@@ -1990,7 +1997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '供应商': 'pgvector（PostgreSQL）', '部署方式': 'Postgres扩展：自托管或托管Postgres', '企业相关优势': '已在用Postgres时无需新增系统' },
         ],
         callouts: [
-          { type: 'note', text: '**Actian VectorAI DB（应供应商建议添加）。** [Actian VectorAI DB](https://www.actian.com/databases/vectorai-db/)是面向RAG和AI智能体记忆的自托管向量数据库，据Actian称，它将数据保留在您可控的基础设施上：本地部署、无需出站网络的气隙环境、边缘或您自己的云。Actian将其描述为单个Docker容器（兼容Kubernetes、Helm和Terraform），提供Python和JavaScript SDK、带量化的HNSW/IVF索引、混合搜索和原生Prometheus指标，也可通过AWS Marketplace获取，详见[Actian定价页面](https://www.actian.com/databases/vectorai-db-pricing/)。这些是供应商声称的功能，PromptQuorum未进行独立测试，请对照上方采购清单通过试点自行验证。**无联盟关系：** Actian的链接是普通链接，不是联盟链接，PromptQuorum不会从中获得佣金。' },
+          { type: 'note', text: '**Actian VectorAI DB（应供应商建议添加）。** [Actian VectorAI DB](https://www.actian.com/databases/vectorai-db/)是面向RAG和AI智能体记忆的自托管向量数据库，据Actian称，它将数据保留在您可控的基础设施上：本地部署、无需出站网络的气隙环境、边缘或您自己的云。Actian将其描述为单个Docker容器（兼容Kubernetes、Helm和Terraform），提供Python和JavaScript SDK、带量化的HNSW/IVF索引、混合搜索和原生Prometheus指标，也可通过AWS Marketplace获取，详见[Actian定价页面](https://www.actian.com/databases/vectorai-db-pricing/)。这些是供应商声称的功能，PromptQuorum未进行独立测试，请对照上方采购清单通过试点自行验证。**无联盟关系：** 本页面上的任何链接都不是联盟链接，PromptQuorum不会从其中任何一个获得佣金。' },
           { type: 'note', text: '如需查看面向为单一RAG应用选型的开发者的Pinecone、Weaviate、Qdrant与Chroma逐功能对比，参见[Pinecone vs Weaviate vs Qdrant vs Chroma](/zh/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma)。本节仅涵盖每家供应商额外提供的企业相关部署与规模视角。' },
         ],
       },
@@ -2017,7 +2024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**为多租户隔离设计带元数据过滤的共享集合，却没有专门测试过滤逻辑错误的测试套件。** 一个被遗漏的过滤条件就会变成跨租户数据泄漏，而这类错误在常规功能测试中是不可见的。',
           '**在用量可预测之前签署承诺用量合同。** 基于乐观增长预测谈判的12个月承诺下限，如果实际用量低于预期，往往比按量付费更贵。',
           '**假设向量数据库导出就是可移植的备份。** 如果没有底层源文档以及生成每个向量的嵌入管道，导出并不是可用的灾难恢复资产——无论如何都需要重建索引本身。',
-          '**将供应商评估仅当作功能对比，跳过Milvus/Zilliz Cloud**，因为大多数团队起步所依据的面向开发者的比较指南并未涵盖它——结果在达到5亿向量时才发现所选平台并非为这一规模而设计。',
+          '**将供应商评估仅当作功能对比，跳过Milvus/Zilliz Cloud**，因为大多数团队起步所依据的面向开发者的比较指南并未涵盖它——结果在达到5亿向量时才发现所选平台文档中公布的部署上限并未覆盖这一规模。',
         ],
       },
       faq: {
@@ -2172,7 +2179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dataResidencySla: {
         id: 'data-residency-sla',
         title: 'ما إقامة البيانات واتفاقية مستوى الخدمة والوضع الأمني التي يجب أن تطلبها المؤسسات من مزوّد قاعدة بيانات متجهات مُدارة؟',
-        content: '**تقرير SOC 2 Type II الخاص بالمزوّد نفسه، وقائمة المعالجين الفرعيين المنشورة، وخيارات إقامة البيانات الإقليمية هي التي تحدد ما إذا كان بإمكانه الاندماج ضمن مسار بيانات خاضع للتنظيم — وليس معيار زمن استعلامه.** غالبًا ما تُرمّز المتجهات مضمون مستندات سرية (عقود، ملاحظات مرضى، شيفرة مصدرية)، لذا يرث المزوّد الذي يعالجها نفس التزامات الامتثال التي يتحملها أي معالج آخر لتلك البيانات.',
+        content: '**تقرير SOC 2 Type II الخاص بالمزوّد نفسه، وقائمة المعالجين الفرعيين المنشورة، وخيارات إقامة البيانات الإقليمية هي التي تحدد ما إذا كان بإمكانه الاندماج ضمن مسار بيانات خاضع للتنظيم — وليس معيار زمن استعلامه.** غالبًا ما تُرمّز المتجهات مضمون مستندات سرية (عقود، ملاحظات مرضى، شيفرة مصدرية)، لذا يخضع المزوّد الذي يعالجها لالتزامات المعالِج (مثل المادتين 28 و32 من اللائحة العامة لحماية البيانات GDPR).',
         items: [
           '**إقامة البيانات:** تأكّد من المناطق السحابية التي يوفرها المزوّد فعليًا لتخزين المتجهات — وليس فقط في موقعه التسويقي — وما إذا كان التزام إقامة البيانات المقتصر على الاتحاد الأوروبي أو دولة معينة مضمونًا تعاقديًا، لا متاحًا تقنيًا فحسب. راجع [إقامة البيانات والذكاء الاصطناعي السيادي: نشر LLM المؤسسي في الاتحاد الأوروبي وGDPR](/ar/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) لمتطلبات GDPR الخاصة بنقل البيانات عبر الحدود التي يستند إليها هذا القرار.',
           '**توفر اتفاقية مستوى الخدمة:** تختلف الاتفاقيات المنشورة حسب مستوى الخطة. تذكر صفحات الأسعار العامة لدى المزوّدين مثلًا 99.5% في Qdrant Cloud Standard وWeaviate Cloud Flex، و99.9% في Qdrant Cloud Premium وWeaviate Cloud Premium (مشترك)، و99.95% في Pinecone Enterprise وZilliz Cloud Enterprise وWeaviate Cloud Premium (مخصص). احصل كتابةً من كل مزوّد على النسبة الدقيقة وائتمانات التعويض وما إذا كانت الاتفاقية تغطي زمن الاستعلام، لأن رقم صفحة الأسعار ليس عقدًا.',
@@ -2193,10 +2200,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'المزوّد': 'Pinecone', 'الاتفاقية المذكورة': 'Enterprise: 99.95%', 'الأمان حسب المستوى': 'SSO: من Standard / التدقيق والنقاط الخاصة: Enterprise' },
           { 'المزوّد': 'Zilliz Cloud', 'الاتفاقية المذكورة': 'Enterprise: 99.95%', 'الأمان حسب المستوى': 'Enterprise: سجلات تدقيق، SAML SSO، RBAC دقيق' },
           { 'المزوّد': 'Qdrant Cloud', 'الاتفاقية المذكورة': 'Standard 99.5% / Premium 99.9%', 'الأمان حسب المستوى': 'Premium: SSO وروابط VPC خاصة؛ التدقيق غير مذكور' },
-          { 'المزوّد': 'Weaviate Cloud', 'الاتفاقية المذكورة': 'Flex 99.5% / Premium 99.9–99.95%', 'الأمان حسب المستوى': 'SOC 2 مدقَّق (بحسب المزوّد)؛ HIPAA: Premium مخصص' },
+          { 'المزوّد': 'Weaviate Cloud', 'الاتفاقية المذكورة': 'Flex 99.5% / Premium 99.9–99.95%', 'الأمان حسب المستوى': 'SOC 2 مدقَّق ودعم HIPAA في Premium المخصص (كلاهما بحسب المزوّد)' },
         ],
         callouts: [
           { type: 'note', text: 'قُرئت من صفحة الأسعار العامة لكل مزوّد عند كتابة هذا القسم؛ تتغير الخطط والأسعار وحدود المستويات، ويعني «غير مذكور» أن صفحة الأسعار لا تذكره وليس أن الميزة غير موجودة. أكّد كل بند في العقد أو نموذج الطلب. تلغي الاستضافة الذاتية مستويات الخطط، لكنها تنقل مسؤولية SSO وسجلات التدقيق والتوفر إلى فريقك. صفحات الأسعار (تم التحقق في 2026-11-03): [Pinecone](https://www.pinecone.io/pricing/), [Zilliz Cloud](https://zilliz.com/pricing), [Qdrant](https://qdrant.tech/pricing/), [Weaviate](https://weaviate.io/pricing/serverless).' },
+          { type: 'note', text: 'هذا القسم معلومات عامة وليس استشارة قانونية؛ اطلب من مستشارك القانوني تأكيد متطلبات GDPR وإقامة البيانات.' },
         ],
       },
       scaleOps: {
@@ -2284,7 +2292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'المزوّد': 'pgvector (PostgreSQL)', 'النشر': 'امتداد Postgres: استضافة ذاتية أو Postgres مُدار', 'الميزة ذات الصلة بالمؤسسات': 'لا نظام إضافي إن كنت تشغّل Postgres' },
         ],
         callouts: [
-          { type: 'note', text: '**Actian VectorAI DB (أُضيف بناءً على اقتراح المزوّد).** [Actian VectorAI DB](https://www.actian.com/databases/vectorai-db/) قاعدة بيانات متجهات ذاتية الاستضافة لـ RAG وذاكرة وكلاء الذكاء الاصطناعي، وهي بحسب Actian تُبقي البيانات على بنية تحتية تتحكم بها: داخل المؤسسة، أو في بيئة معزولة (air-gapped) دون اشتراط اتصال شبكي صادر، أو على الحافة، أو في سحابتك الخاصة. تصفها Actian بأنها حاوية Docker واحدة (متوافقة مع Kubernetes وHelm وTerraform) مع حزم SDK لـ Python وJavaScript، وفهرسة HNSW/IVF مع التكميم، وبحث هجين، ومقاييس Prometheus أصلية، كما أنها متاحة عبر AWS Marketplace، راجع [صفحة أسعار Actian](https://www.actian.com/databases/vectorai-db-pricing/). هذه قدرات يصرّح بها المزوّد ولم تختبرها PromptQuorum بشكل مستقل، لذا تحقق منها في مشروع تجريبي وفق قائمة التحقق للمشتريات أعلاه. **لا توجد علاقة أفلييت:** روابط Actian روابط عادية وليست روابط أفلييت، ولا تتقاضى PromptQuorum أي عمولة عنها.' },
+          { type: 'note', text: '**Actian VectorAI DB (أُضيف بناءً على اقتراح المزوّد).** [Actian VectorAI DB](https://www.actian.com/databases/vectorai-db/) قاعدة بيانات متجهات ذاتية الاستضافة لـ RAG وذاكرة وكلاء الذكاء الاصطناعي، وهي بحسب Actian تُبقي البيانات على بنية تحتية تتحكم بها: داخل المؤسسة، أو في بيئة معزولة (air-gapped) دون اشتراط اتصال شبكي صادر، أو على الحافة، أو في سحابتك الخاصة. تصفها Actian بأنها حاوية Docker واحدة (متوافقة مع Kubernetes وHelm وTerraform) مع حزم SDK لـ Python وJavaScript، وفهرسة HNSW/IVF مع التكميم، وبحث هجين، ومقاييس Prometheus أصلية، كما أنها متاحة عبر AWS Marketplace، راجع [صفحة أسعار Actian](https://www.actian.com/databases/vectorai-db-pricing/). هذه قدرات يصرّح بها المزوّد ولم تختبرها PromptQuorum بشكل مستقل، لذا تحقق منها في مشروع تجريبي وفق قائمة التحقق للمشتريات أعلاه. **لا توجد علاقة أفلييت:** لا يوجد أي رابط في هذه الصفحة هو رابط أفلييت، ولا تتقاضى PromptQuorum أي عمولة عن أي منها.' },
           { type: 'note', text: 'للاطلاع على مقارنة تفصيلية بين الميزات لكل من Pinecone وWeaviate وQdrant وChroma موجهة للمطورين الذين يختارون لتطبيق RAG واحد، راجع [Pinecone vs Weaviate vs Qdrant vs Chroma](/ar/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma). يغطي هذا القسم فقط زاوية النشر والمقياس ذات الصلة بالمؤسسات التي يضيفها كل مزوّد فوق ذلك.' },
         ],
       },
@@ -2311,7 +2319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**تصميم مجموعة مشتركة مع تصفية بالبيانات الوصفية للعزل متعدد المستأجرين دون مجموعة اختبارات مخصصة لأخطاء التصفية.** شرط تصفية واحد مفقود يتحول إلى تسرّب بيانات بين المستأجرين، وهذا النوع من الأخطاء غير مرئي في الاختبار الوظيفي العادي.',
           '**توقيع عقد استخدام ملتزم قبل أن يصبح الحجم قابلًا للتنبؤ.** غالبًا ما يكلف حد أدنى ملتزم به لمدة 12 شهرًا تم التفاوض عليه بناءً على توقعات نمو متفائلة أكثر مما كان سيكلفه الدفع حسب الاستخدام إذا جاء الحجم الفعلي أقل.',
           '**افتراض أن تصدير قاعدة بيانات المتجهات هو نسخة احتياطية قابلة للنقل.** بدون المستندات المصدرية الأساسية ومسار التضمين الذي ولّد كل متجه، لا يُعد التصدير أصلًا صالحًا للتعافي من الكوارث — يجب إعادة بناء الفهرس نفسه على أي حال.',
-          '**التعامل مع تقييم الموردين كمقارنة ميزات فقط وتخطي Milvus/Zilliz Cloud** لأن أدلة المقارنة الموجهة للمطورين التي تبدأ منها معظم الفرق لا تغطيها — لتكتشف عند 500 مليون متجه أن المنصة المختارة لم تُصمم لهذا المستوى من الحجم.',
+          '**التعامل مع تقييم الموردين كمقارنة ميزات فقط وتخطي Milvus/Zilliz Cloud** لأن أدلة المقارنة الموجهة للمطورين التي تبدأ منها معظم الفرق لا تغطيها — لتكتشف عند 500 مليون متجه أن حدود النشر الموثّقة للمنصة المختارة لا تغطي هذا المستوى من الحجم.',
         ],
       },
       faq: {
@@ -2466,7 +2474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dataResidencySla: {
         id: 'data-residency-sla',
         title: '기업은 매니지드 벡터 데이터베이스 벤더에게 어떤 데이터 레지던시, SLA, 보안 태세를 요구해야 할까요?',
-        content: '**매니지드 벡터 데이터베이스 벤더가 규제 대상 데이터 파이프라인에 들어갈 수 있는지를 결정하는 것은 쿼리 지연 시간 벤치마크가 아니라 벤더 자체의 SOC 2 Type II 보고서, 공개된 하위 처리자 목록, 지역 데이터 레지던시 옵션입니다.** 벡터 임베딩은 계약서, 환자 기록, 소스 코드 등 기밀 문서의 내용을 인코딩하는 경우가 많으므로, 이를 처리하는 벤더는 해당 데이터를 처리하는 다른 어떤 처리자와도 동일한 컴플라이언스 의무를 지게 됩니다.',
+        content: '**매니지드 벡터 데이터베이스 벤더가 규제 대상 데이터 파이프라인에 들어갈 수 있는지를 결정하는 것은 쿼리 지연 시간 벤치마크가 아니라 벤더 자체의 SOC 2 Type II 보고서, 공개된 하위 처리자 목록, 지역 데이터 레지던시 옵션입니다.** 벡터 임베딩은 계약서, 환자 기록, 소스 코드 등 기밀 문서의 내용을 인코딩하는 경우가 많으므로, 이를 처리하는 벤더는 처리자로서의 의무(예: GDPR 제28조·제32조)를 지게 됩니다.',
         items: [
           '**데이터 레지던시:** 마케팅 사이트뿐 아니라 벡터 저장을 위해 벤더가 실제로 제공하는 클라우드 리전을 확인하고, EU 전용이나 특정 국가 레지던시 약속이 기술적으로 가능한 수준을 넘어 계약상 보장되는지 확인하십시오. 이 결정의 근거가 되는 GDPR 국경 간 이전 요건은 [데이터 레지던시와 주권 AI: EU/GDPR 기업용 LLM 배포](/ko/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise)를 참조하십시오.',
           '**SLA 가용성:** 공개된 SLA는 요금제 등급에 따라 다릅니다. 벤더의 공개 요금 페이지에는 예를 들어 Qdrant Cloud Standard와 Weaviate Cloud Flex는 99.5%, Qdrant Cloud Premium과 Weaviate Cloud Premium(공유)은 99.9%, Pinecone Enterprise, Zilliz Cloud Enterprise, Weaviate Cloud Premium(전용)은 99.95%로 기재되어 있습니다. 요금 페이지의 수치는 계약이 아니므로, 정확한 퍼센트, 보상 크레딧, SLA가 쿼리 지연 시간을 포함하는지를 각 벤더로부터 서면으로 받으십시오.',
@@ -2487,10 +2495,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '벤더': 'Pinecone', '기재된 SLA': 'Enterprise: 99.95%', '등급별 보안 기능': 'SSO: Standard 이상 / 감사 로그·프라이빗 EP: Enterprise' },
           { '벤더': 'Zilliz Cloud', '기재된 SLA': 'Enterprise: 99.95%', '등급별 보안 기능': 'Enterprise: 감사 로그, SAML SSO, 세분화된 RBAC' },
           { '벤더': 'Qdrant Cloud', '기재된 SLA': 'Standard 99.5% / Premium 99.9%', '등급별 보안 기능': 'Premium: SSO, 프라이빗 VPC 링크; 감사 로그 기재 없음' },
-          { '벤더': 'Weaviate Cloud', '기재된 SLA': 'Flex 99.5% / Premium 99.9–99.95%', '등급별 보안 기능': 'SOC 2 감사 완료(벤더 표기); HIPAA: Premium 전용' },
+          { '벤더': 'Weaviate Cloud', '기재된 SLA': 'Flex 99.5% / Premium 99.9–99.95%', '등급별 보안 기능': 'SOC 2 감사 완료 및 Premium 전용에서 HIPAA 지원(둘 다 벤더 표기)' },
         ],
         callouts: [
           { type: 'note', text: '이 섹션을 작성할 때 각 벤더의 공개 요금 페이지에서 확인한 내용입니다. 요금제, 가격, 등급 경계는 바뀔 수 있으며, “기재 없음”은 요금 페이지에 언급이 없다는 뜻이지 기능이 없다는 뜻이 아닙니다. 모든 항목을 계약서 또는 주문서에서 확인하십시오. 자체 호스팅에는 요금제 등급이 없지만 SSO, 감사 로그, 가동 시간의 책임이 자사 팀으로 넘어옵니다. 가격 페이지(2026-11-03 확인): [Pinecone](https://www.pinecone.io/pricing/), [Zilliz Cloud](https://zilliz.com/pricing), [Qdrant](https://qdrant.tech/pricing/), [Weaviate](https://weaviate.io/pricing/serverless).' },
+          { type: 'note', text: '이 섹션은 일반 정보이며 법률 자문이 아닙니다. GDPR 및 데이터 레지던시 요건은 자사 법률 자문을 통해 확인하세요.' },
         ],
       },
       scaleOps: {
@@ -2578,7 +2587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '벤더': 'pgvector(PostgreSQL)', '배포 방식': 'Postgres 확장: 자체 호스팅 또는 매니지드 Postgres', '기업 관련 강점': '이미 Postgres를 쓴다면 추가 시스템 불필요' },
         ],
         callouts: [
-          { type: 'note', text: '**Actian VectorAI DB(벤더의 제안으로 추가).** [Actian VectorAI DB](https://www.actian.com/databases/vectorai-db/)는 RAG와 AI 에이전트 메모리를 위한 자체 호스팅 벡터 데이터베이스로, Actian에 따르면 온프레미스, 외부 네트워크 연결이 필요 없는 에어갭, 엣지 또는 자체 클라우드 등 사용자가 통제하는 인프라에 데이터를 보관합니다. Actian은 이를 단일 Docker 컨테이너(Kubernetes, Helm, Terraform 호환)로 설명하며, Python 및 JavaScript SDK, 양자화를 지원하는 HNSW/IVF 인덱싱, 하이브리드 검색, 기본 Prometheus 메트릭을 제공하고 AWS Marketplace에서도 이용할 수 있습니다. [Actian 가격 페이지](https://www.actian.com/databases/vectorai-db-pricing/)를 참조하세요. 이는 벤더가 밝힌 기능이며 PromptQuorum이 독립적으로 테스트하지 않았으므로, 위의 조달 체크리스트에 따라 파일럿에서 검증하세요. **제휴 관계 없음:** Actian 링크는 일반 링크이며 제휴(어필리에이트) 링크가 아니고, PromptQuorum은 이로부터 수수료를 받지 않습니다.' },
+          { type: 'note', text: '**Actian VectorAI DB(벤더의 제안으로 추가).** [Actian VectorAI DB](https://www.actian.com/databases/vectorai-db/)는 RAG와 AI 에이전트 메모리를 위한 자체 호스팅 벡터 데이터베이스로, Actian에 따르면 온프레미스, 외부 네트워크 연결이 필요 없는 에어갭, 엣지 또는 자체 클라우드 등 사용자가 통제하는 인프라에 데이터를 보관합니다. Actian은 이를 단일 Docker 컨테이너(Kubernetes, Helm, Terraform 호환)로 설명하며, Python 및 JavaScript SDK, 양자화를 지원하는 HNSW/IVF 인덱싱, 하이브리드 검색, 기본 Prometheus 메트릭을 제공하고 AWS Marketplace에서도 이용할 수 있습니다. [Actian 가격 페이지](https://www.actian.com/databases/vectorai-db-pricing/)를 참조하세요. 이는 벤더가 밝힌 기능이며 PromptQuorum이 독립적으로 테스트하지 않았으므로, 위의 조달 체크리스트에 따라 파일럿에서 검증하세요. **제휴 관계 없음:** 이 페이지의 어떤 링크도 제휴(어필리에이트) 링크가 아니며, PromptQuorum은 그 어떤 링크로부터도 수수료를 받지 않습니다.' },
           { type: 'note', text: '단일 RAG 애플리케이션을 위해 선택하는 개발자를 위한 Pinecone, Weaviate, Qdrant, Chroma의 기능별 비교는 [Pinecone vs Weaviate vs Qdrant vs Chroma](/ko/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma)를 참조하십시오. 이 섹션은 각 벤더가 추가로 제공하는 기업 관련 배포 및 규모 측면만 다룹니다.' },
         ],
       },
@@ -2605,7 +2614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**필터링 버그 전용 테스트 스위트 없이 멀티테넌트 격리를 위해 메타데이터 필터링을 사용한 공유 컬렉션을 설계합니다.** 놓친 필터 조건 하나가 테넌트 간 데이터 유출로 이어지며, 이런 종류의 버그는 일반적인 기능 테스트에서는 보이지 않습니다.',
           '**규모가 예측 가능해지기 전에 약정 사용량 계약에 서명합니다.** 낙관적인 성장 예측을 기반으로 협상한 12개월 약정 하한선은, 실제 규모가 더 낮게 나오면 종량제보다 더 비쌀 때가 많습니다.',
           '**벡터 데이터베이스 내보내기가 이동 가능한 백업이라고 가정합니다.** 기반이 되는 원본 문서와 각 벡터를 생성한 임베딩 파이프라인이 없으면, 내보내기는 사용 가능한 재해 복구 자산이 아닙니다 — 인덱스 자체는 어차피 재구축해야 합니다.',
-          '**대부분의 팀이 시작점으로 삼는 개발자 대상 비교 가이드가 다루지 않는다는 이유로 벤더 평가를 기능 비교로만 취급하고 Milvus/Zilliz Cloud를 건너뜁니다.** 그 결과 5억 벡터에 이르러서야 선택한 플랫폼이 이 규모용으로 설계되지 않았음을 발견하게 됩니다.',
+          '**대부분의 팀이 시작점으로 삼는 개발자 대상 비교 가이드가 다루지 않는다는 이유로 벤더 평가를 기능 비교로만 취급하고 Milvus/Zilliz Cloud를 건너뜁니다.** 그 결과 5억 벡터에 이르러서야 선택한 플랫폼의 문서화된 배포 한도가 이 규모를 포괄하지 않음을 발견하게 됩니다.',
         ],
       },
       faq: {
