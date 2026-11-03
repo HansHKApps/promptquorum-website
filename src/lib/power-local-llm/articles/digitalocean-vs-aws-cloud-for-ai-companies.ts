@@ -1474,7 +1474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'runpod vs digitalocean',
     ],
     leadAnswerBlock:
-      '**[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets) est un bon point de départ pour une petite entreprise IA ou en croissance : une console qui n\'exige aucune configuration de politiques IAM pour lancer un premier GPU Droplet, et un H100 à la demande à $4,41/h. [AWS](https://aws.amazon.com/ec2/instance-types/p5/), à $6,88/h par GPU, devient le choix par défaut dès que l\'échelle entreprise ou son catalogue de services compte.**',
+      '**[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets) convient pour démarrer : une console sans configuration IAM pour lancer un premier GPU Droplet, et un H100 à la demande à $4,41/h. [AWS](https://aws.amazon.com/ec2/instance-types/p5/), à $6,88/h par GPU, devient le choix par défaut quand l\'échelle entreprise ou son catalogue de services compte.**',
     affiliateLinks: [
       {
         url: 'https://www.digitalocean.com/products/gpu-droplets',
@@ -2180,7 +2180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'runpod vs digitalocean',
     ],
     leadAnswerBlock:
-      '**[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets) es un buen punto de partida para una empresa de IA pequeña o en crecimiento: una consola que no exige configurar políticas IAM para lanzar un primer GPU Droplet, y un H100 bajo demanda a $4.41/h. [AWS](https://aws.amazon.com/ec2/instance-types/p5/), a $6.88/h por GPU, es la opción por defecto cuando importan la escala empresarial o su catálogo de servicios.**',
+      '**[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets) es un buen punto de partida: una consola sin configurar políticas IAM para lanzar un primer GPU Droplet y un H100 bajo demanda a $4.41/h. [AWS](https://aws.amazon.com/ec2/instance-types/p5/), a $6.88/h por GPU, es la opción por defecto cuando importan la escala empresarial o su catálogo de servicios.**',
     affiliateLinks: [
       {
         url: 'https://www.digitalocean.com/products/gpu-droplets',
@@ -2886,7 +2886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'runpod vs digitalocean',
     ],
     leadAnswerBlock:
-      '**O [DigitalOcean](https://www.digitalocean.com/products/gpu-droplets) é um bom ponto de partida para uma empresa de IA pequena ou em crescimento: um console que não exige configurar políticas IAM para iniciar um primeiro GPU Droplet, e um H100 sob demanda a $4,41/h. A [AWS](https://aws.amazon.com/ec2/instance-types/p5/), a $6,88/h por GPU, é a escolha padrão quando a escala corporativa ou o catálogo de serviços importa.**',
+      '**O [DigitalOcean](https://www.digitalocean.com/products/gpu-droplets) é um bom ponto de partida: um console sem configurar políticas IAM para iniciar um primeiro GPU Droplet e um H100 sob demanda a $4,41/h. A [AWS](https://aws.amazon.com/ec2/instance-types/p5/), a $6,88/h por GPU, é a escolha padrão quando a escala corporativa ou o catálogo de serviços importa.**',
     affiliateLinks: [
       {
         url: 'https://www.digitalocean.com/products/gpu-droplets',

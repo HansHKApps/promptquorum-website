@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Les plateformes RH IA courantes et une pile de LLM local auto-hébergée résolvent des problèmes différents, pas des versions concurrentes du même.** Les plateformes sont la voie la plus rapide ; l\'auto-hébergement, quand les données candidats ou collaborateurs ne peuvent pas quitter votre infrastructure.',
+          '**Les plateformes RH IA courantes et un LLM local auto-hébergé résolvent des problèmes différents.** Les plateformes sont la voie la plus rapide ; l\'auto-hébergement, quand les données ne peuvent pas quitter votre infrastructure.',
           '**Le tri de CV, l\'analyse de climat social et la rédaction d\'évaluations sont les cas les plus solides pour l\'auto-hébergement** — chacun touche régulièrement des données (identité candidat, texte sincère des collaborateurs, contenu d\'évaluation confidentiel) qu\'une entreprise peut préférer ne pas confier à une API tierce.',
           '**L\'IA en recrutement et RH est une catégorie à haut risque sous le règlement IA de l\'UE**, et des juridictions américaines comme New York exigent des audits de biais indépendants pour les outils de recrutement automatisés — cela s\'applique à tout flux de tri ou de notation assisté par IA, commercial ou auto-hébergé.',
           '**Ceci n\'est pas un conseil juridique.** Les obligations d\'audit de biais, de notification aux candidats et les règles pour systèmes à haut risque varient selon la juridiction et évoluent — consultez un conseil juridique qualifié avant tout déploiement d\'IA en recrutement ou RH.',
