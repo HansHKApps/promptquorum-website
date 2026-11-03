@@ -21494,5 +21494,185 @@
       "period": "90d 2026-08-05..2026-11-02"
     },
     "deployedAt": null
+  },
+  {
+    "id": "409d636e-124f-472a-841c-077c0a6cf7f5",
+    "slug": "/prompt-bites/q4-k-m-vs-q8-0",
+    "date": "2026-11-03T04:00:03.283Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Use Q4_K_M with 8 GB VRAM or less. Use Q8_0 with 12+ GB. Q4_K_M delivers 95% of Q8_0 quality at half the size. Quick answer from PromptQuorum.",
+        "new": "Q4_K_M for 8 GB VRAM or less, Q8_0 for 12+ GB. On Llama 3 8B, Q4_K_M is 4.58 GiB at +2.8% perplexity vs f16; Q8_0 is 7.96 GiB at +0.02%. Sourced."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (q4-k-m-vs-q8-0); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "q4_k_m vs q8_0"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "14027d45-fdc7-45ee-9a1c-0f52c44a34d6",
+    "slug": "/de/prompt-bites/q4-k-m-vs-q8-0",
+    "date": "2026-11-03T04:00:03.378Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M bei 8 GB VRAM oder weniger, Q8_0 ab 12+ GB. Q4_K_M liefert 95 % der Q8_0-Qualität bei halbem Dateivolumen. Schnelle Antwort von PromptQuorum.",
+        "new": "Q4_K_M bei 8 GB VRAM oder weniger, Q8_0 ab 12+ GB. Bei Llama 3 8B ist Q4_K_M 4,58 GiB groß (+2,8 % Perplexität vs. f16), Q8_0 7,96 GiB (+0,02 %)."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (q4-k-m-vs-q8-0); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "q4_k_m vs q8_0"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "1b0ef4f5-b2ee-4876-8f77-8899a027699b",
+    "slug": "/fr/prompt-bites/q4-k-m-vs-q8-0",
+    "date": "2026-11-03T04:00:03.473Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Utilisez Q4_K_M avec 8 Go de VRAM ou moins. Utilisez Q8_0 avec 12+ Go. Q4_K_M offre 95 % de la qualité de Q8_0 à la moitié de la taille. Réponse rapide.",
+        "new": "Q4_K_M avec 8 Go de VRAM ou moins, Q8_0 dès 12 Go. Sur Llama 3 8B, Q4_K_M fait 4,58 GiB (+2,8 % de perplexité vs f16), Q8_0 7,96 GiB (+0,02 %)."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (q4-k-m-vs-q8-0); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "q4_k_m vs q8_0"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3162bedd-bca2-4b56-b320-3254ef9b026a",
+    "slug": "/ja/prompt-bites/q4-k-m-vs-q8-0",
+    "date": "2026-11-03T04:00:03.567Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "VRAM 8 GB以下ならQ4_K_M、12 GB以上ならQ8_0。Q4_K_MはQ8_0の95%の品質を半分のサイズで実現します。",
+        "new": "VRAM 8 GB以下ならQ4_K_M、12 GB以上ならQ8_0。Llama 3 8Bではf16比でQ4_K_Mは4.58 GiB・パープレキシティ+2.8%、Q8_0は7.96 GiB・+0.02%です。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (q4-k-m-vs-q8-0); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "q4_k_m vs q8_0"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "215261e5-bd3a-4a2a-a095-2c620e0d783b",
+    "slug": "/zh/prompt-bites/q4-k-m-vs-q8-0",
+    "date": "2026-11-03T04:00:03.660Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "显存8 GB或更少用Q4_K_M，12 GB以上用Q8_0。Q4_K_M以约一半文件大小提供Q8_0 95%的质量。",
+        "new": "显存8 GB或更少用Q4_K_M，12 GB以上用Q8_0。在Llama 3 8B上，Q4_K_M为4.58 GiB，困惑度比f16高2.8%；Q8_0为7.96 GiB，仅高0.02%。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (q4-k-m-vs-q8-0); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "q4_k_m vs q8_0"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a387dbc5-fec0-4c04-a349-4e4e0b41f8a2",
+    "slug": "/pt/prompt-bites/q4-k-m-vs-q8-0",
+    "date": "2026-11-03T04:00:03.753Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Use Q4_K_M com 8 GB de VRAM ou menos. Use Q8_0 com 12+ GB. Q4_K_M oferece 95% da qualidade do Q8_0 à metade do tamanho. Resposta rápida do PromptQuorum.",
+        "new": "Q4_K_M com 8 GB de VRAM ou menos, Q8_0 com 12+ GB. No Llama 3 8B, Q4_K_M tem 4,58 GiB (+2,8% de perplexidade vs f16); Q8_0 tem 7,96 GiB (+0,02%)."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (q4-k-m-vs-q8-0); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "q4_k_m vs q8_0"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "def1e348-51ba-428a-a8fa-0fd543ab43e1",
+    "slug": "/es/prompt-bites/q4-k-m-vs-q8-0",
+    "date": "2026-11-03T04:00:03.848Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Usa Q4_K_M con 8 GB de VRAM o menos. Usa Q8_0 con 12+ GB. Q4_K_M ofrece el 95% de la calidad de Q8_0 a la mitad del tamaño. Respuesta rápida de PromptQuorum.",
+        "new": "Q4_K_M con 8 GB de VRAM o menos, Q8_0 con 12+ GB. En Llama 3 8B, Q4_K_M ocupa 4,58 GiB (+2,8 % de perplejidad vs f16); Q8_0 ocupa 7,96 GiB (+0,02 %)."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (q4-k-m-vs-q8-0); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "q4_k_m vs q8_0"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d753592b-222f-47b1-b921-63ffcd5d155f",
+    "slug": "/ar/prompt-bites/q4-k-m-vs-q8-0",
+    "date": "2026-11-03T04:00:03.941Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "استخدم ⁨Q4⁩_⁨K⁩_⁨M⁩ مع ⁨8 GB VRAM⁩ أو أقل، و⁨Q8⁩_⁨0⁩ مع ⁨12+ GB⁩. يوفر ⁨Q4⁩_⁨K⁩_⁨M⁩ ⁨95%⁩ من جودة ⁨Q8⁩_⁨0⁩ بنصف الحجم.",
+        "new": "استخدم Q4_K_M مع 8 GB VRAM أو أقل، وQ8_0 مع 12+ GB. في Llama 3 8B حجم Q4_K_M هو 4.58 GiB (حيرة أعلى بـ 2.8% من f16) وحجم Q8_0 هو 7.96 GiB (+0.02%)."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (q4-k-m-vs-q8-0); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "q4_k_m vs q8_0"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3ed985ce-00a2-4302-9e69-018856043969",
+    "slug": "/ko/prompt-bites/q4-k-m-vs-q8-0",
+    "date": "2026-11-03T04:00:04.035Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "VRAM 8 GB 이하는 Q4_K_M, 12 GB 이상은 Q8_0을 사용하십시오. Q4_K_M은 절반 크기로 Q8_0 품질의 95%를 제공합니다.",
+        "new": "VRAM 8 GB 이하는 Q4_K_M, 12 GB 이상은 Q8_0. Llama 3 8B: Q4_K_M 4.58 GiB(퍼플렉시티 +2.8%), Q8_0 7.96 GiB(+0.02%)."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (q4-k-m-vs-q8-0); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "q4_k_m vs q8_0"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3c61db13-26fc-42af-bdf0-584b036b5eef",
+    "slug": "/ar/prompt-bites/what-is-q4-k-m-quantization",
+    "date": "2026-11-03T04:00:04.140Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "⁨Q4⁩_⁨K⁩_⁨M⁩ يوفر جودة أعلى بـ ⁨5⁩–⁨8%⁩ من ⁨Q4⁩_⁨0⁩ بنفس حجم الملف. نموذج ⁨7B⁩ يحتاج ~⁨5.5 GB VRAM⁩. استخدمه افتراضيًا في ⁨Ollama⁩ بدلًا من ⁨Q4⁩_⁨0⁩ أو ⁨Q8⁩_⁨0⁩.",
+        "new": "Q4_K_M تكميم 4-bit من عائلة k-quant بجودة متوسطة: حيرة أقل من Q4_0 وحجم أصغر من Q8_0. ملف Llama 3.1 8B بصيغته 4.58 GiB. استخدمه افتراضيًا في Ollama."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (what-is-q4-k-m-quantization); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "what is q4_k_m quantization"
+    ],
+    "baseline": null,
+    "deployedAt": null
   }
 ]
