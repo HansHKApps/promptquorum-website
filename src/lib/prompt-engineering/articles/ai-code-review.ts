@@ -12,6 +12,7 @@ const OG_SLUG = keyToSlug('ai-code-review');
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-04-29',
       last_full_refresh: '2026-10-30',
@@ -624,6 +625,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     de: {
+      designSkin: 'hub',
       theme: 'Use Cases',
       heroImage: '/images/ai-code-review-overview-hero-de.webp',
       title: 'KI-Code-Review 2026: Die besten Tools im Ranking (CodeRabbit, Greptile, Snyk) + Prompt-Framework',
@@ -1235,6 +1237,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     es: {
+      designSkin: 'hub',
       theme: 'Use Cases',
       heroImage: '/images/ai-code-review-overview-hero-es.webp',
       title: 'Revisión de Código con IA 2026: Ranking de Herramientas (CodeRabbit, Greptile, Snyk) + Framework de Prompts',
@@ -1846,6 +1849,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     ar: {
+      designSkin: 'hub',
       theme: 'Use Cases',
       heroImage: '/images/ai-code-review-overview-hero-ar.webp',
       title: 'مراجعة الكود بالذكاء الاصطناعي ⁨2026⁩: أفضل الأدوات مرتبة (⁨CodeRabbit⁩، ⁨Greptile⁩، ⁨Snyk⁩) + إطار التعليمات',
@@ -2457,6 +2461,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     pt: {
+      designSkin: 'hub',
       theme: 'Use Cases',
       heroImage: '/images/ai-code-review-overview-hero-pt.webp',
       title: 'Revisão de Código com IA 2026: Melhores Ferramentas (CodeRabbit, Greptile, Snyk) + Framework de Prompts',
@@ -3068,6 +3073,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     fr: {
+      designSkin: 'hub',
       theme: 'Use Cases',
       heroImage: '/images/ai-code-review-overview-hero-fr.webp',
       title: 'Révision de code par IA en 2026 : classement des outils (CodeRabbit, Greptile, Snyk) + framework de prompts',
@@ -3679,6 +3685,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     ja: {
+      designSkin: 'hub',
       theme: 'Use Cases',
       heroImage: '/images/ai-code-review-overview-hero-ja.webp',
       title: 'AI コードレビュー2026：おすすめツール比較（CodeRabbit、Greptile、Snyk）とプロンプトフレームワーク',
@@ -4290,6 +4297,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     zh: {
+      designSkin: 'hub',
       theme: 'Use Cases',
       heroImage: '/images/ai-code-review-overview-hero-zh.webp',
       title: 'AI 代码审查 2026：工具排名（CodeRabbit、Greptile、Snyk）与提示框架',
@@ -4901,6 +4909,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-29',
     last_full_refresh: '2026-10-30',

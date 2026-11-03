@@ -22175,5 +22175,207 @@
     ],
     "baseline": null,
     "deployedAt": null
+  },
+  {
+    "id": "9aba6d59-be40-4713-a4ed-5d428bf8a41e",
+    "slug": "/es/power-local-llm/hiwaifu-review",
+    "date": "2026-11-03T07:20:01.052Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "HiWaifu (Hi Waifu) es una app freemium 18+ de chat con personajes de IA para iPhone. Versión 3.10.1: acceso, versión web, precios, privacidad y alternativas.",
+        "new": "HiWaifu (Hi Waifu): app freemium 18+ de chat con personajes de IA para iPhone. Versión 3.10.1: acceso, versión web, precios, privacidad y alternativas."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 9. es/ar meta into budget; leads cut to <=50 words; warning added that the App Store listing could not be found on 2026-11-03 (lookup empty in 8 storefronts, page 404). Almost all impressions are the brand query hiwaifu. Baseline DE only (28d to 2026-11-03).",
+    "queries": [
+      "hiwaifu",
+      "hi waifu",
+      "hiwaifu review"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-03"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "04a9c24d-b864-496d-8b2c-cddedc4dc542",
+    "slug": "/ar/power-local-llm/hiwaifu-review",
+    "date": "2026-11-03T07:20:01.239Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "HiWaifu (Hi Waifu) تطبيق مجاني مع مشتريات +18 لدردشة الشخصيات بالذكاء الاصطناعي للآيفون. الإصدار 3.10.1: الدخول والنسخة الويب والأسعار والخصوصية والبدائل.",
+        "new": "HiWaifu (Hi Waifu) تطبيق مجاني مع مشتريات +18 لدردشة الشخصيات بالذكاء الاصطناعي للآيفون. الإصدار 3.10.1: الدخول والأسعار والخصوصية والبدائل."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 9. es/ar meta into budget; leads cut to <=50 words; warning added that the App Store listing could not be found on 2026-11-03 (lookup empty in 8 storefronts, page 404). Almost all impressions are the brand query hiwaifu. Baseline DE only (28d to 2026-11-03).",
+    "queries": [
+      "hiwaifu",
+      "hi waifu",
+      "hiwaifu review"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-03"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "61e18819-fe54-4cdb-a239-3885ad004687",
+    "slug": "/power-local-llm/best-web-hosting",
+    "date": "2026-11-03T07:20:01.353Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Hostinger Premium price checked 2026-11-02: $2.49/mo with a 48-month prepay ($119.52), renewing at $10.99/mo. See the real cost before you sign up.",
+        "new": "Hostinger Premium price checked 2026-11-03: $2.49/mo with a 48-month prepay ($119.52), renewing at $10.99/mo. See the real cost before you sign up."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 9. Prices re-read from provider pages on 2026-11-03 in all nine editions; affiliate-programme wording (programme/commission/cookie columns and sentences) removed because PromptQuorum has no affiliate programme. No GSC baseline pulled for this page.",
+    "queries": [
+      "best web hosting",
+      "web hosting comparison"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-03"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "467447ac-7797-483a-ae31-ec47d1cd95ec",
+    "slug": "/ja/power-local-llm/best-web-hosting",
+    "date": "2026-11-03T07:20:01.385Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "エックスサーバー（Xserver）とロリポップ！を2026年11月2日の公式価格で比較。Xserverは月額693円、ロリポップ！は月額121円から。契約期間とWordPress対応の違い、APPI対応を解説。",
+        "new": "エックスサーバー（Xserver）とロリポップ！を2026年11月3日の公式価格で比較。Xserverは月額693円、ロリポップ！は月額121円から。契約期間とWordPress対応の違い、APPI対応を解説。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 9. Prices re-read from provider pages on 2026-11-03 in all nine editions; affiliate-programme wording (programme/commission/cookie columns and sentences) removed because PromptQuorum has no affiliate programme. No GSC baseline pulled for this page.",
+    "queries": [
+      "best web hosting",
+      "web hosting comparison"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-03"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "34e45339-3152-4bc4-801b-11df76fe6aab",
+    "slug": "/zh/power-local-llm/best-web-hosting",
+    "date": "2026-11-03T07:20:01.416Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "2026年面向华语读者的最佳网站主机：阿里云（限时促销每年38元）、腾讯云（每月35元）、Hostinger（首月2.49美元）。附确认价格及PIPL、数据安全法合规说明。",
+        "new": "2026年面向华语读者的最佳网站主机：阿里云（限时促销每年38元）、腾讯云（每月45元）、Hostinger（首月2.49美元）。附确认价格及PIPL、数据安全法合规说明。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 9. Prices re-read from provider pages on 2026-11-03 in all nine editions; affiliate-programme wording (programme/commission/cookie columns and sentences) removed because PromptQuorum has no affiliate programme. No GSC baseline pulled for this page.",
+    "queries": [
+      "best web hosting",
+      "web hosting comparison"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-03"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "195b91e0-fd80-4128-8977-3277bfbf4e1c",
+    "slug": "/es/power-local-llm/best-web-hosting",
+    "date": "2026-11-03T07:20:01.479Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Hosting con soporte en español y barato: Hostinger, Raiola, Dinahosting, SiteGround, Webempresa y DonWeb con precios leídos el 2 de noviembre de 2026.",
+        "new": "Hosting con soporte en español y barato: Hostinger, Raiola, Dinahosting, SiteGround, Webempresa y DonWeb con precios leídos el 3 de noviembre de 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 9. Prices re-read from provider pages on 2026-11-03 in all nine editions; affiliate-programme wording (programme/commission/cookie columns and sentences) removed because PromptQuorum has no affiliate programme. No GSC baseline pulled for this page.",
+    "queries": [
+      "best web hosting",
+      "web hosting comparison"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-03"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c8a085f2-6a25-40fe-a0f9-56bea30dfe52",
+    "slug": "/pt/power-local-llm/best-web-hosting",
+    "date": "2026-11-03T07:20:01.539Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Hostinger, Locaweb, KingHost e HostGator comparadas em 2026: preço de entrada e de renovação em reais, lidos nos sites em 02/11/2026, e a LGPD.",
+        "new": "Hostinger, Locaweb, KingHost e HostGator comparadas em 2026: preço de entrada e de renovação em reais, lidos nos sites em 03/11/2026, e a LGPD."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 9. Prices re-read from provider pages on 2026-11-03 in all nine editions; affiliate-programme wording (programme/commission/cookie columns and sentences) removed because PromptQuorum has no affiliate programme. No GSC baseline pulled for this page.",
+    "queries": [
+      "best web hosting",
+      "web hosting comparison"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-03"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e474c4fa-78cf-4ac8-ab16-511d8a03d793",
+    "slug": "/ko/power-local-llm/best-web-hosting",
+    "date": "2026-11-03T07:20:01.583Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Cafe24 vs 가비아 vs 닷홈 vs NHN Hosting 2026년 비교: 실제 원화 요금과 왜 어느 곳도 공개 제휴 프로그램을 운영하지 않는지 설명합니다.",
+        "new": "Cafe24, 가비아, 닷홈, NHN Hosting 2026년 비교: 2026-11-03에 확인한 원화 요금과 선택 기준을 정리했습니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 9. Prices re-read from provider pages on 2026-11-03 in all nine editions; affiliate-programme wording (programme/commission/cookie columns and sentences) removed because PromptQuorum has no affiliate programme. No GSC baseline pulled for this page.",
+    "queries": [
+      "best web hosting",
+      "web hosting comparison"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-03"
+    },
+    "deployedAt": null
   }
 ]

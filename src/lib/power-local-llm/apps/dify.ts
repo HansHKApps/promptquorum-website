@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'Modified Apache 2.0',
   price: 'freemium',
   hardware: { ramGb: 4, vramGb: null, cpuOnly: true }, // docs.dify.ai self-host Docker Compose quick-start: stated minimum "CPU >= 2 Core" and "RAM >= 4 GiB" for the self-hosted stack itself; no GPU required unless the user's chosen model backend needs one, verified 2026-09-13
-  stars: 159956,
+  stars: 160294,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['build', 'agent', 'docs'],
@@ -39,6 +39,6 @@ export const app: ToolRecord = {
   // multiVector confirmed via docker/docker-compose.yaml + docker/.env.example: separate service profiles for weaviate (default), qdrant, pgvector, pgvecto-rs, chroma, oceanbase, couchbase, and others.
   compare: { visualBuilder: true, localLlm: true, agents: true, multiVector: true, dockerDeploy: true, apiServer: true, mcp: true, toolCalling: true },
   lastVerifiedDate: '2026-10-30',
-  lastUpstreamUpdate: '2026-10-30', // GitHub API (latest release or push, whichever is newer), read 2026-10-30; latest tagged release 1.18.0 on 2026-10-23
+  lastUpstreamUpdate: '2026-11-03', // GitHub API (latest release or push, whichever is newer), read 2026-11-03; latest tagged release 1.18.0 on 2026-10-23
   lastUpstreamUpdateSource: 'https://github.com/langgenius/dify',
 }

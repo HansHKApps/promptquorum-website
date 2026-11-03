@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     heroImage: '/images/hiwaifu-review-hero-en.webp',
@@ -43,7 +43,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'Apple Vision Pro'],
     leadAnswerBlock:
-      '**HiWaifu is a freemium, closed-source roleplay app for iPhone and iPad with AI characters, and it appears to be a cloud service rather than a local one.** The App Store listing does not say where the AI model runs, and it rates the app 18+. This review covers version 3.10.1 and is based on the public listing and privacy notice, not hands-on testing.',
+      '**HiWaifu is a freemium, closed-source roleplay app for iPhone and iPad with AI characters, and it appears to be a cloud service, not a local one.** The App Store listing does not say where the model runs and rates the app 18+. This review covers version 3.10.1.',
     quickAnswerTop: {
       en: {
         question: 'Is HiWaifu a local AI app, and is it worth trying for character roleplay?',
@@ -92,7 +92,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Price: free to download, with in-app purchases for a subscription, a season pass and consumable packs.',
           'Platform: iPhone and iPad with iOS or iPadOS 15.0 or later.',
           'Openness: closed source; no public repository was found.',
-          'Maintenance: at least eight releases between 26 June and 2 October 2026, so no stale-project warning applies.',
+          'Maintenance: at least eight releases between 26 June and 2 October 2026, but the App Store listing could not be found on 3 November 2026 (see the warning above).',
+        ],
+        callouts: [
+          { type: 'warning', text: 'On 3 November 2026 the App Store lookup for this app returned no result in eight storefronts and the listing page returned an error, so HiWaifu may have been removed from the App Store. Check that it is still available before you install or subscribe. The review below describes version 3.10.1 as listed on 17 October 2026.' },
         ],
       },
       getItHiwaifu: {
@@ -269,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     heroImage: '/images/hiwaifu-review-hero-de.webp',
@@ -299,7 +302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'Apple Vision Pro'],
     leadAnswerBlock:
-      '**HiWaifu ist eine Freemium-App mit geschlossenem Quellcode für Rollenspiele mit KI-Charakteren auf iPhone und iPad und scheint ein Cloud-Dienst statt einer lokalen Lösung zu sein.** Der App-Store-Eintrag sagt nicht, wo das KI-Modell läuft, und stuft die App ab 18 ein. Diese Rezension behandelt Version 3.10.1 und stützt sich auf den öffentlichen Eintrag und die Datenschutzerklärung, nicht auf eigene Tests.',
+      '**HiWaifu ist eine Freemium-App mit geschlossenem Quellcode für Rollenspiele mit KI-Charakteren auf iPhone und iPad und scheint ein Cloud-Dienst zu sein, keine lokale Lösung.** Der App-Store-Eintrag nennt nicht, wo das Modell läuft, und stuft die App ab 18 ein. Besprochen wird Version 3.10.1.',
     quickAnswerTop: {
       de: {
         question: 'Ist HiWaifu eine lokale KI-App, und lohnt sie sich für Charakter-Rollenspiele?',
@@ -348,7 +351,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Preis: kostenloser Download mit In-App-Käufen für ein Abo, einen Saisonpass und Verbrauchspakete.',
           'Plattform: iPhone und iPad mit iOS oder iPadOS 15.0 oder neuer.',
           'Offenheit: Quellcode geschlossen; ein öffentliches Repository wurde nicht gefunden.',
-          'Pflege: mindestens acht Veröffentlichungen zwischen dem 26. Juni und dem 2. Oktober 2026, daher gilt keine Warnung vor einem eingeschlafenen Projekt.',
+          'Pflege: mindestens acht Veröffentlichungen zwischen dem 26. Juni und dem 2. Oktober 2026, der App-Store-Eintrag war am 3. November 2026 aber nicht auffindbar (siehe Warnung oben).',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Am 3. November 2026 lieferte die App-Store-Abfrage für diese App in acht Storefronts kein Ergebnis und die Eintragsseite meldete einen Fehler; HiWaifu wurde möglicherweise aus dem App Store entfernt. Prüfen Sie vor Installation oder Abo, ob die App noch verfügbar ist. Die Rezension beschreibt Version 3.10.1 laut Eintrag vom 17. Oktober 2026.' },
         ],
       },
       getItHiwaifu: {
@@ -525,7 +531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     heroImage: '/images/hiwaifu-review-hero-fr.webp',
@@ -555,7 +561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'Apple Vision Pro'],
     leadAnswerBlock:
-      '**HiWaifu est une appli freemium à code fermé pour jouer des rôles avec des personnages IA sur iPhone et iPad, et elle semble être un service cloud plutôt que local.** La fiche App Store n\'indique pas où tourne le modèle d\'IA et classe l\'appli 18+. Cet avis porte sur la version 3.10.1 et repose sur la fiche publique et la politique de confidentialité, pas sur des tests pratiques.',
+      '**HiWaifu est une appli freemium à code fermé pour jouer des rôles avec des personnages IA sur iPhone et iPad, et semble être un service cloud, pas local.** La fiche App Store n’indique pas où tourne le modèle et classe l’appli 18+. Cet avis porte sur la version 3.10.1.',
     quickAnswerTop: {
       fr: {
         question: 'HiWaifu est-elle une appli d\'IA locale, et vaut-elle le coup pour le jeu de rôle avec personnages ?',
@@ -604,7 +610,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Prix : téléchargement gratuit, avec achats intégrés pour un abonnement, un pass de saison et des packs consommables.',
           'Plateforme : iPhone et iPad sous iOS ou iPadOS 15.0 ou ultérieur.',
           'Ouverture : code fermé ; aucun dépôt public trouvé.',
-          'Maintenance : au moins huit versions entre le 26 juin et le 2 octobre 2026, donc aucun avertissement de projet délaissé.',
+          'Maintenance : au moins huit versions entre le 26 juin et le 2 octobre 2026, mais la fiche App Store était introuvable le 3 novembre 2026 (voir l’avertissement ci-dessus).',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Le 3 novembre 2026, la recherche App Store pour cette appli n’a donné aucun résultat dans huit boutiques nationales et la page de la fiche a renvoyé une erreur : HiWaifu a peut-être été retirée de l’App Store. Vérifiez qu’elle est toujours disponible avant de l’installer ou de vous abonner. L’avis décrit la version 3.10.1 telle qu’affichée le 17 octobre 2026.' },
         ],
       },
       getItHiwaifu: {
@@ -781,7 +790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     heroImage: '/images/hiwaifu-review-hero-ja.webp',
@@ -860,7 +869,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '料金:ダウンロードは無料で、サブスクリプション、シーズンパス、消費型パックのアプリ内課金あり。',
           '対応環境:iOS／iPadOS 15.0以降のiPhoneとiPad。',
           'オープン性:クローズドソースで、公開リポジトリは見つかりませんでした。',
-          'メンテナンス:2026年6月26日から10月2日までに少なくとも8回リリースされており、放置プロジェクトの警告は該当しません。',
+          'メンテナンス:2026年6月26日から10月2日までに少なくとも8回リリースされていますが、2026年11月3日にはApp Storeの掲載ページが見つかりませんでした（上の警告を参照）。',
+        ],
+        callouts: [
+          { type: 'warning', text: '2026年11月3日に、このアプリのApp Store検索は8つのストアフロントで結果が返らず、掲載ページもエラーでした。HiWaifuはApp Storeから削除された可能性があります。インストールや購読の前に、まだ入手できるか確認してください。本レビューは2026年10月17日の掲載内容（バージョン3.10.1）に基づきます。' },
         ],
       },
       getItHiwaifu: {
@@ -1037,7 +1049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     heroImage: '/images/hiwaifu-review-hero-zh.webp',
@@ -1116,7 +1128,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '价格：免费下载，应用内购买包括订阅、赛季通行证和消耗型礼包。',
           '平台：iPhone和iPad，需iOS或iPadOS 15.0或更高版本。',
           '开放性：闭源；未找到公开代码仓库。',
-          '维护：2026年6月26日至10月2日至少发布了八个版本，因此不适用项目停更警告。',
+          '维护：2026年6月26日至10月2日至少发布了八个版本，但 2026年11月3日未能找到其 App Store 页面（见上方警告）。',
+        ],
+        callouts: [
+          { type: 'warning', text: '2026年11月3日，针对该应用的 App Store 查询在八个国家/地区商店均无结果，应用页面也返回错误，HiWaifu 可能已从 App Store 下架。安装或订阅前请确认它是否仍可获取。本评测描述的是 2026年10月17日列出的 3.10.1 版本。' },
         ],
       },
       getItHiwaifu: {
@@ -1293,7 +1308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     heroImage: '/images/hiwaifu-review-hero-es.webp',
@@ -1302,7 +1317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'HiWaifu es una app para iPhone y iPad de rol y chat con personajes de IA, construida en torno a una biblioteca comunitaria de unos 10 millones de personajes. Esta reseña recoge lo que documentan su ficha de la App Store y su aviso de privacidad, lo que sigue sin estar claro y cómo se compara con las herramientas de rol locales y autoalojadas.',
     metaDescription:
-      'HiWaifu (Hi Waifu) es una app freemium 18+ de chat con personajes de IA para iPhone. Versión 3.10.1: acceso, versión web, precios, privacidad y alternativas.',
+      'HiWaifu (Hi Waifu): app freemium 18+ de chat con personajes de IA para iPhone. Versión 3.10.1: acceso, versión web, precios, privacidad y alternativas.',
     twitterDescription:
       'Reseña de HiWaifu: app iOS freemium de chat con personajes de IA. Versión 3.10.1, funciones, precios, edad mínima, privacidad, puntos sin verificar y alternativas locales de rol.',
     audience:
@@ -1323,7 +1338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'Apple Vision Pro'],
     leadAnswerBlock:
-      '**HiWaifu es una app freemium de código cerrado para hacer rol con personajes de IA en iPhone y iPad, y parece un servicio en la nube y no una app local.** La ficha de la App Store no indica dónde se ejecuta el modelo de IA y la clasifica como 18+. Esta reseña cubre la versión 3.10.1 y se basa en la ficha pública y el aviso de privacidad, no en pruebas prácticas.',
+      '**HiWaifu es una app freemium de código cerrado para hacer rol con personajes de IA en iPhone y iPad, y parece un servicio en la nube, no local.** La ficha no indica dónde se ejecuta el modelo y la clasifica como 18+. Esta reseña cubre la versión 3.10.1.',
     quickAnswerTop: {
       es: {
         question: '¿Es HiWaifu una app de IA local y merece la pena para el rol con personajes?',
@@ -1372,7 +1387,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Precio: descarga gratuita, con compras dentro de la app de una suscripción, un pase de temporada y paquetes consumibles.',
           'Plataforma: iPhone y iPad con iOS o iPadOS 15.0 o posterior.',
           'Apertura: código cerrado; no se encontró ningún repositorio público.',
-          'Mantenimiento: al menos ocho versiones entre el 26 de junio y el 2 de octubre de 2026, así que no se aplica la advertencia de proyecto abandonado.',
+          'Mantenimiento: al menos ocho versiones entre el 26 de junio y el 2 de octubre de 2026, pero la ficha de la App Store no se encontró el 3 de noviembre de 2026 (consulta la advertencia de arriba).',
+        ],
+        callouts: [
+          { type: 'warning', text: 'El 3 de noviembre de 2026, la consulta a la App Store de esta app no devolvió resultados en ocho tiendas nacionales y la página de la ficha devolvió un error, por lo que HiWaifu podría haber sido retirada de la App Store. Comprueba que sigue disponible antes de instalarla o suscribirte. La reseña describe la versión 3.10.1 tal como figuraba el 17 de octubre de 2026.' },
         ],
       },
       getItHiwaifu: {
@@ -1549,7 +1567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     heroImage: '/images/hiwaifu-review-hero-pt.webp',
@@ -1579,7 +1597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'Apple Vision Pro'],
     leadAnswerBlock:
-      '**O HiWaifu é um app freemium de código fechado para fazer roleplay com personagens de IA no iPhone e no iPad, e parece ser um serviço na nuvem, não local.** A página da App Store não diz onde o modelo de IA roda e classifica o app como 18+. Esta análise cobre a versão 3.10.1 e se baseia na página pública e no aviso de privacidade, não em testes práticos.',
+      '**O HiWaifu é um app freemium de código fechado para roleplay com personagens de IA no iPhone e no iPad, e parece ser um serviço na nuvem, não local.** A página não diz onde o modelo roda e classifica o app como 18+. Esta análise cobre a versão 3.10.1.',
     quickAnswerTop: {
       pt: {
         question: 'O HiWaifu é um app de IA local e vale a pena para roleplay com personagens?',
@@ -1628,7 +1646,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Preço: download gratuito, com compras no app de uma assinatura, um passe de temporada e pacotes consumíveis.',
           'Plataforma: iPhone e iPad com iOS ou iPadOS 15.0 ou posterior.',
           'Abertura: código fechado; nenhum repositório público foi encontrado.',
-          'Manutenção: pelo menos oito versões entre 26 de junho e 2 de outubro de 2026, então não se aplica o alerta de projeto abandonado.',
+          'Manutenção: pelo menos oito versões entre 26 de junho e 2 de outubro de 2026, mas a página da App Store não foi encontrada em 3 de novembro de 2026 (veja o alerta acima).',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Em 3 de novembro de 2026, a consulta à App Store por este app não retornou resultado em oito lojas nacionais e a página do app retornou erro, então o HiWaifu pode ter sido removido da App Store. Confirme que ele ainda está disponível antes de instalar ou assinar. A análise descreve a versão 3.10.1 como listada em 17 de outubro de 2026.' },
         ],
       },
       getItHiwaifu: {
@@ -1805,7 +1826,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     heroImage: '/images/hiwaifu-review-hero-ar.webp',
@@ -1814,7 +1835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'HiWaifu تطبيق للآيفون والآيباد للعب الأدوار والدردشة مع شخصيات الذكاء الاصطناعي، مبني حول مكتبة مجتمعية تضم نحو 10 ملايين شخصية. تعرض هذه المراجعة ما توثقه صفحة App Store وإشعار الخصوصية، وما يبقى غير واضح، وكيف يقارن التطبيق بأدوات لعب الأدوار المحلية والمستضافة ذاتيًا.',
     metaDescription:
-      'HiWaifu (Hi Waifu) تطبيق مجاني مع مشتريات +18 لدردشة الشخصيات بالذكاء الاصطناعي للآيفون. الإصدار 3.10.1: الدخول والنسخة الويب والأسعار والخصوصية والبدائل.',
+      'HiWaifu (Hi Waifu) تطبيق مجاني مع مشتريات +18 لدردشة الشخصيات بالذكاء الاصطناعي للآيفون. الإصدار 3.10.1: الدخول والأسعار والخصوصية والبدائل.',
     twitterDescription:
       'مراجعة HiWaifu: تطبيق iOS مجاني مع مشتريات لدردشة الشخصيات بالذكاء الاصطناعي. الإصدار 3.10.1 والميزات والأسعار والفئة العمرية والخصوصية والنقاط غير المؤكدة وبدائل محلية.',
     audience:
@@ -1835,7 +1856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'Apple Vision Pro'],
     leadAnswerBlock:
-      '**HiWaifu تطبيق مجاني مع مشتريات داخلية ومغلق المصدر للعب الأدوار مع شخصيات الذكاء الاصطناعي على الآيفون والآيباد، ويبدو خدمة سحابية لا تطبيقًا محليًا.** لا تذكر صفحة App Store أين يعمل نموذج الذكاء الاصطناعي، وتصنّف التطبيق +18. تغطي هذه المراجعة الإصدار 3.10.1 وتستند إلى الصفحة العامة وإشعار الخصوصية، لا إلى اختبار عملي.',
+      '**HiWaifu تطبيق مجاني مع مشتريات داخلية ومغلق المصدر للعب الأدوار مع شخصيات الذكاء الاصطناعي على الآيفون والآيباد، ويبدو خدمة سحابية لا تطبيقًا محليًا.** لا تذكر صفحة App Store أين يعمل النموذج، وتصنّف التطبيق +18. تغطي هذه المراجعة الإصدار 3.10.1.',
     quickAnswerTop: {
       ar: {
         question: 'هل HiWaifu تطبيق ذكاء اصطناعي محلي، وهل يستحق التجربة للعب الأدوار مع الشخصيات؟',
@@ -1884,7 +1905,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'السعر: تنزيل مجاني مع مشتريات داخلية لاشتراك وتصريح موسمي وحزم استهلاكية.',
           'المنصة: iPhone وiPad بنظام iOS أو iPadOS 15.0 أو أحدث.',
           'الانفتاح: مغلق المصدر؛ لم نعثر على مستودع عام.',
-          'الصيانة: ثمانية إصدارات على الأقل بين 26 يونيو و2 أكتوبر 2026، لذا لا ينطبق تحذير المشروع المتوقف.',
+          'الصيانة: ثمانية إصدارات على الأقل بين 26 يونيو و2 أكتوبر 2026، لكن صفحة App Store لم تُوجد في 3 نوفمبر 2026 (انظر التحذير أعلاه).',
+        ],
+        callouts: [
+          { type: 'warning', text: 'في 3 نوفمبر 2026 لم يُرجِع استعلام App Store لهذا التطبيق أي نتيجة في ثمانية متاجر وطنية، وأعادت صفحة التطبيق خطأً، فقد يكون HiWaifu قد أُزيل من App Store. تأكد من أنه ما زال متاحًا قبل التثبيت أو الاشتراك. تصف المراجعة الإصدار 3.10.1 كما كان مدرجًا في 17 أكتوبر 2026.' },
         ],
       },
       getItHiwaifu: {
@@ -2061,7 +2085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     heroImage: '/images/hiwaifu-review-hero-ko.webp',
@@ -2140,7 +2164,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '가격: 다운로드는 무료이며 구독, 시즌 패스, 소모성 팩의 앱 내 구입이 있습니다.',
           '플랫폼: iOS 또는 iPadOS 15.0 이상의 iPhone과 iPad.',
           '공개 여부: 비공개 소스이며 공개 저장소는 찾지 못했습니다.',
-          '유지보수: 2026년 6월 26일부터 10월 2일까지 최소 8회 릴리스되어 방치 프로젝트 경고는 해당되지 않습니다.',
+          '유지보수: 2026년 6월 26일부터 10월 2일까지 최소 8회 릴리스되었으나, 2026년 11월 3일에는 App Store 페이지를 찾을 수 없었습니다(위 경고 참조).',
+        ],
+        callouts: [
+          { type: 'warning', text: '2026년 11월 3일에 이 앱에 대한 App Store 조회는 8개 국가 스토어에서 결과가 없었고 앱 페이지도 오류를 반환했습니다. HiWaifu가 App Store에서 삭제되었을 수 있습니다. 설치나 구독 전에 아직 이용 가능한지 확인하세요. 이 리뷰는 2026년 10월 17일에 표시된 3.10.1 버전을 설명합니다.' },
         ],
       },
       getItHiwaifu: {
