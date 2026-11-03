@@ -8,6 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
     theme: 'Balcony Solar Money Pages',
@@ -118,6 +119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-de.webp',
     title: 'Kleines Kraftwerk: Gründer, Sets und Versand im Überblick',
@@ -226,6 +228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-fr.webp',
     title: 'Kleines Kraftwerk : fondateurs, kits et livraison',
@@ -334,6 +337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-ja.webp',
     title: 'Kleines Kraftwerk:創業者・キット・配送',
@@ -442,6 +446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-zh.webp',
     title: 'Kleines Kraftwerk:创始人、套件与配送',
@@ -550,6 +555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-es.webp',
     title: 'Kleines Kraftwerk: fundadores, kits y envíos en Alemania',
@@ -658,6 +664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-pt.webp',
     title: 'Kleines Kraftwerk: fundadores, kits e entrega na Alemanha',
@@ -766,6 +773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-ar.webp',
     title: 'Kleines Kraftwerk: المؤسسان والأطقم والشحن',
@@ -874,6 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-ko.webp',
     title: 'Kleines Kraftwerk: 창업자·키트·배송 정보',

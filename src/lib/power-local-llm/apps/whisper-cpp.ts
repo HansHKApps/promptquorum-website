@@ -18,11 +18,11 @@ export const app: ToolRecord = {
   license: 'MIT',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true, variesByModel: true }, // per github.com/ggerganov/whisper.cpp README "Memory usage" table — CPU-only inference works across every model size (tiny ~273MB RAM up to large ~3.9GB RAM), with optional Metal/CUDA/Vulkan acceleration; no single fixed RAM floor since it scales with the chosen model size, verified 2026-09-13
-  stars: 53400,
+  stars: 54868,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['audio'],
-  url: 'github.com/ggerganov/whisper.cpp',
+  url: 'github.com/ggml-org/whisper.cpp', // repo moved from ggerganov/ to the ggml-org organization (GitHub redirects the old path)
   tagline: {
     en: 'Local speech recognition optimized for CPU and GPU',
     de: 'Lokale Spracherkennung, optimiert für CPU und GPU',
@@ -35,9 +35,10 @@ export const app: ToolRecord = {
     ko: 'CPU 및 GPU에 최적화된 로컬 음성 인식',
   },
   reviewSlug: 'whisper-cpp-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-11-02', version: 'v1.9.5', versionSourceUrl: 'https://github.com/ggml-org/whisper.cpp/releases/tag/v1.9.5' }, // v1.9.5 published 2026-10-06 per the GitHub releases API, read 2026-11-02
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { realtime: true, cpuUsable: true, apiServer: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-10-12', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2026-10-30', // GitHub API pushed_at 2026-10-30 (newer than release v1.9.5, 2026-10-06), read 2026-11-02
   lastUpstreamUpdateSource: 'https://github.com/ggml-org/whisper.cpp',
 }

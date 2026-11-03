@@ -6,3 +6,8 @@ export const LOCAL_LLM_ARTICLES: Record<string, Record<string, unknown>> = { 'be
 import { article as peDev } from '../src/lib/prompt-engineering/articles/pe-for-developers-workflow'
 import { article as peReview } from '../src/lib/prompt-engineering/articles/prompt-review-workflow-for-teams'
 export const PE_ARTICLES: Record<string, Record<string, unknown>> = { 'pe-for-developers-workflow': peDev as any, 'prompt-review-workflow-for-teams': peReview as any }
+import { article as smartMatter } from '../src/lib/smart-home/articles/matter-1-6-explained'
+import { article as balconyKw } from '../src/lib/balcony-solar/articles/kleines-kraftwerk-balcony-solar'
+// Smart-home and balcony-solar articles do not carry the flag yet; the test adds it for the "on" render.
+export const SMART_HOME_ARTICLES: Record<string, Record<string, unknown>> = { 'matter-1-6-explained': smartMatter as any }
+export const BALCONY_ARTICLES: Record<string, Record<string, unknown>> = { 'kleines-kraftwerk-balcony-solar': balconyKw as any }
