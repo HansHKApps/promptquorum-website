@@ -6,9 +6,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-en.webp',
     title: 'Q4_K_M vs Q8_0: Which Should You Pick?',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-03',
     seoTitle: 'Q4_K_M vs Q8_0: Which? 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Use Q4_K_M with 8 GB VRAM or less. Use Q8_0 with 12+ GB. Q4_K_M delivers 95% of Q8_0 quality at half the size. Quick answer from PromptQuorum.',
+    metaDescription: 'Q4_K_M for 8 GB VRAM or less, Q8_0 for 12+ GB. On Llama 3 8B, Q4_K_M is 4.58 GiB at +2.8% perplexity vs f16; Q8_0 is 7.96 GiB at +0.02%. Sourced.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
@@ -23,13 +23,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Q4_K_M vs Q8_0: which should you pick?',
-        answer: 'Use Q4_K_M if you have 8 GB VRAM or less. Use Q8_0 if you have 12+ GB. Q4_K_M delivers 95% of Q8_0 quality at roughly half the file size.',
+        answer: 'Use Q4_K_M with 8 GB VRAM or less and Q8_0 with 12+ GB. For Llama 3 8B, Q4_K_M is 4.58 GiB and Q8_0 is 7.96 GiB; Q8_0 stays closer to full precision.',
         bullets: [
-          'Q4_K_M: ~5–6 GB for 7B models, ideal for 8 GB VRAM',
-          'Q8_0: ~8–9 GB for 7B models, needs 12+ GB VRAM',
-          'Quality difference is under 5% in real-world use',
+          'Q4_K_M: 4.58 GiB for Llama 3.1 8B, about 5.1 GiB with a 4k KV cache (calculated)',
+          'Q8_0: 7.95 GiB for Llama 3.1 8B, about 8.5 GiB with a 4k KV cache (calculated)',
+          'Perplexity vs f16 on Llama 3 8B: Q4_K_M +2.8%, Q8_0 +0.02% (llama.cpp, calculated)',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -37,31 +37,32 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '8 GB VRAM or less: use Q4_K_M — delivers 95% of Q8_0 quality at roughly half the file size',
-          '12+ GB VRAM: Q8_0 is worth it for near-full-precision quality with no speed penalty',
+          '8 GB VRAM or less: use Q4_K_M — its 8B file is 4.58 GiB, while Q8_0 (7.95 GiB) no longer fits once a KV cache is added',
+          '12+ GB VRAM: Q8_0 is worth it for near-f16 output, but it is slower: 50.93 versus 71.93 tokens/s for Llama 3.1 8B in the llama.cpp quantize README',
           'For most users running Ollama daily, Q4_K_M is the right choice',
         ],
       },
       body1: {
         title: 'The Quick Verdict',
         content: [
-          '<strong>Q8_0 preserves ~99% of full-precision quality. Q4_K_M preserves ~92%.</strong> The 7-point gap is invisible in chat, coding, and summarization — three tasks that cover 95% of local LLM use. Q8_0 only pulls ahead on long-form factual recall, multi-step math, and code requiring exact syntax over 500+ lines.',
-          'Q4_K_M is the right default because the extra quality from Q8_0 only shows up in edge cases: long-form generation with exact factual recall, or mathematical reasoning that requires higher precision. For everything else, Q4_K_M matches Q8_0 in practice.',
-          'If you are already using Q4_K_M and your results feel wrong, the issue is almost never the quantization — it is the model size or prompt structure.',
+          '<strong>On Llama 3 8B, Q8_0 is practically identical to f16 by perplexity, and Q4_K_M adds a small increase.</strong> llama.cpp\'s perplexity test on wikitext gives 6.2332 for f16, 6.2343 for Q8_0 and 6.4071 for Q4_K_M without an importance matrix: +0.02% and +2.8% (calculated; <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp perplexity README</a>). Perplexity is a language-modelling score, not a task benchmark, so it does not show how much a particular chat, coding or summarization task changes.',
+          'Q4_K_M is the usual default because the Llama 3.1 8B file is 4.58 GiB instead of 7.95 GiB and stays close to f16 on that test. Choose Q8_0 when memory is not the limit. We did not measure task quality ourselves; if one task matters to you, run both quantizations on it.',
+          'If your results feel wrong on Q4_K_M, check the model size and prompt structure first: the measured perplexity gap to f16 is small.',
         ],
       },
       body2: {
         title: 'Side-by-Side Comparison',
         content: [
-          'The table below compares Q4_K_M and Q8_0 for a 7B model. Both formats work with Ollama, LM Studio, and llama.cpp without any special configuration.',
+          'The table uses Llama 3.1 8B file sizes from the <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/quantize/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp quantize README</a>, a calculated KV cache (32 layers, 8 key-value heads, head dimension 128, f16: 0.5 GiB for 4,096 tokens) and Llama 3 8B perplexity from the llama.cpp perplexity README. Both formats work with Ollama, LM Studio, and llama.cpp without any special configuration.',
           'For context on what Q4_K_M means and how k-quant compression works, see the <a href="/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M explained guide</a>. For the full quantization reference, see <a href="/local-llms/quantization-levels-comparison" class="text-primary hover:underline">quantization levels compared</a>.',
-          '<strong>Three tasks reveal Q4_K_M\'s quality gap: long-document recall (50+ pages), multi-step math with intermediate state, and code generation over 300+ lines.</strong> For these, Q8_0\'s extra precision prevents the small drift errors that compound across long outputs. For everything else — chat, code under 200 lines, Q&A, summarization — the gap is invisible. For a refresher before deciding, see <a href="/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">what Q4_K_M means</a>.',
+          '<strong>None of the sources above tests long-document recall, multi-step math or long code generation, so this page makes no claim about them.</strong> Q8_0 has lower perplexity than Q4_K_M, so if you have the memory it is the safer choice for tasks where small errors matter. For a refresher, see <a href="/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">what Q4_K_M means</a>.',
         ],
         columns: ['Metric', 'Q4_K_M', 'Q8_0'],
         rows: [
-          { 'Metric': 'File size (7B model)', 'Q4_K_M': '~4.1 GB', 'Q8_0': '~7.7 GB' },
-          { 'Metric': 'VRAM needed (7B)', 'Q4_K_M': '5–6 GB', 'Q8_0': '8–9 GB' },
-          { 'Metric': 'Quality vs full precision', 'Q4_K_M': '~92%', 'Q8_0': '~99%' },
+          { 'Metric': 'File size (Llama 3.1 8B)', 'Q4_K_M': '4.58 GiB', 'Q8_0': '7.95 GiB' },
+          { 'Metric': 'VRAM with 4k KV cache (calculated, without runtime overhead)', 'Q4_K_M': '~5.1 GiB', 'Q8_0': '~8.5 GiB' },
+          { 'Metric': 'Perplexity, Llama 3 8B (f16: 6.23)', 'Q4_K_M': '6.41 (+2.8%)', 'Q8_0': '6.23 (+0.02%)' },
+          { 'Metric': 'Tokens/s, Llama 3.1 8B (README)', 'Q4_K_M': '71.93', 'Q8_0': '50.93' },
           { 'Metric': 'Best for', 'Q4_K_M': '6–8 GB VRAM', 'Q8_0': '12+ GB VRAM' },
         ],
       },
@@ -71,11 +72,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Is Q8_0 noticeably better than Q4_K_M?',
-            a: 'Only in edge cases — complex multi-step math, exact quote recall from long documents, or very long outputs. For chat, coding, and summarization (which covers 95% of usage), most users cannot tell the difference.',
+            a: 'Possibly, but these sources do not show where. Q8_0 has less quantization error: +0.02% perplexity vs f16 on Llama 3 8B, against +2.8% for Q4_K_M (llama.cpp, calculated). Perplexity does not measure chat, coding or summarization quality directly, so test both on your own task.',
           },
           {
             q: 'Does Q8_0 run faster than Q4_K_M?',
-            a: 'No. Q8_0 is larger and requires more memory bandwidth, making it slightly slower per token than Q4_K_M. Speed and quality both favor Q4_K_M for VRAM-constrained setups. See <a href="/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">what Q4_K_M means</a> for the underlying reason.',
+            a: 'No. Q8_0 is larger and needs more memory bandwidth per token. The llama.cpp quantize README lists 71.93 tokens/s for Q4_K_M and 50.93 tokens/s for Q8_0 on Llama 3.1 8B (speeds depend on hardware). See <a href="/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">what Q4_K_M means</a> for the underlying reason.',
           },
           {
             q: 'Can I switch between Q4_K_M and Q8_0 for different tasks?',
@@ -83,7 +84,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'What about Q4_K_S — is it worth using instead of Q4_K_M?',
-            a: 'Q4_K_S saves about 300 MB versus Q4_K_M but delivers lower quality. Only use Q4_K_S if you are very tight on VRAM and cannot fit Q4_K_M. In almost all cases, Q4_K_M is the better choice.',
+            a: 'Q4_K_S is 0.22 GiB smaller than Q4_K_M (4.36 vs 4.58 GiB for Llama 3.1 8B) and has higher perplexity (6.50 vs 6.41 on Llama 3 8B without an importance matrix). Use Q4_K_S only if Q4_K_M does not fit; otherwise Q4_K_M is the better choice.',
           },
         ],
       },
@@ -94,21 +95,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-de.webp',
     title: 'Q4_K_M vs. Q8_0: Was sollten Sie wählen?',
     seoTitle: 'Q4_K_M vs. Q8_0: Wählen 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Q4_K_M bei 8 GB VRAM oder weniger, Q8_0 ab 12+ GB. Q4_K_M liefert 95 % der Q8_0-Qualität bei halbem Dateivolumen. Schnelle Antwort von PromptQuorum.',
+    metaDescription: 'Q4_K_M bei 8 GB VRAM oder weniger, Q8_0 ab 12+ GB. Bei Llama 3 8B ist Q4_K_M 4,58 GiB groß (+2,8 % Perplexität vs. f16), Q8_0 7,96 GiB (+0,02 %).',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       de: {
         question: 'Q4_K_M vs. Q8_0: Was sollten Sie wählen?',
-        answer: 'Verwenden Sie Q4_K_M bei 8 GB VRAM oder weniger. Verwenden Sie Q8_0 bei 12+ GB. Q4_K_M liefert 95 % der Q8_0-Qualität bei ungefähr halbem Dateivolumen.',
+        answer: 'Verwenden Sie Q4_K_M bei 8 GB VRAM oder weniger und Q8_0 bei 12+ GB. Bei Llama 3 8B ist Q4_K_M 4,58 GiB und Q8_0 7,96 GiB groß; Q8_0 bleibt näher an der vollen Präzision.',
         bullets: [
-          'Q4_K_M: ~5–6 GB für 7B-Modelle, ideal für 8 GB VRAM',
-          'Q8_0: ~8–9 GB für 7B-Modelle, benötigt 12+ GB VRAM',
-          'Qualitätsunterschied unter 5 % im realen Einsatz',
+          'Q4_K_M: 4,58 GiB für Llama 3.1 8B, etwa 5,1 GiB mit 4k-KV-Cache (berechnet)',
+          'Q8_0: 7,95 GiB für Llama 3.1 8B, etwa 8,5 GiB mit 4k-KV-Cache (berechnet)',
+          'Perplexität vs. f16 bei Llama 3 8B: Q4_K_M +2,8 %, Q8_0 +0,02 % (llama.cpp, berechnet)',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -116,31 +117,32 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '8 GB VRAM oder weniger: Q4_K_M verwenden — liefert 95 % der Q8_0-Qualität bei ungefähr halbem Dateivolumen',
-          '12+ GB VRAM: Q8_0 lohnt sich für nahezu vollpräzise Qualität ohne Geschwindigkeitsverlust',
+          '8 GB VRAM oder weniger: Q4_K_M verwenden — die 8B-Datei ist 4,58 GiB groß, Q8_0 (7,95 GiB) passt mit KV-Cache nicht mehr',
+          '12+ GB VRAM: Q8_0 lohnt sich für nahezu f16-nahe Ausgaben, ist aber langsamer: 50,93 gegenüber 71,93 Tokens/s bei Llama 3.1 8B laut llama.cpp-Quantize-README',
           'Für die meisten Benutzer, die Ollama täglich nutzen, ist Q4_K_M die richtige Wahl',
         ],
       },
       body1: {
         title: 'Das schnelle Fazit',
         content: [
-          '<strong>Q8_0 erreicht ~99 % der vollpräzisen Qualität. Q4_K_M erreicht ~92 %.</strong> Der 7-Punkte-Abstand ist unsichtbar bei Chat, Coding und Zusammenfassung — drei Aufgaben, die 95 % der lokalen LLM-Nutzung abdecken. Q8_0 zieht nur bei langem faktischem Abruf, mehrstufiger Mathematik und Code vor, der exakte Syntax über 500+ Zeilen erfordert.',
-          'Q4_K_M ist der richtige Standard, weil die zusätzliche Qualität von Q8_0 nur in Randfällen auftaucht: lange Textgenerierung mit exaktem Faktenrückruf oder mathematisches Schlussfolgern, das höhere Präzision erfordert. Für alles andere entspricht Q4_K_M Q8_0 in der Praxis.',
-          'Wenn Sie bereits Q4_K_M verwenden und Ihre Ergebnisse falsch erscheinen, liegt das Problem fast nie an der Quantisierung — es liegt an der Modellgröße oder Prompt-Struktur.',
+          '<strong>Bei Llama 3 8B ist Q8_0 laut Perplexität praktisch identisch mit f16, Q4_K_M erhöht sie leicht.</strong> Der Perplexitätstest von llama.cpp auf wikitext ergibt 6,2332 für f16, 6,2343 für Q8_0 und 6,4071 für Q4_K_M ohne Importance-Matrix: +0,02 % bzw. +2,8 % (berechnet; <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp-Perplexity-README</a>). Perplexität ist ein Sprachmodell-Maß, kein Aufgaben-Benchmark; sie zeigt daher nicht, wie stark sich eine bestimmte Chat-, Coding- oder Zusammenfassungsaufgabe ändert.',
+          'Q4_K_M ist der übliche Standard, weil die Datei von Llama 3.1 8B nur 4,58 statt 7,95 GiB groß ist und in diesem Test nah an f16 bleibt. Wählen Sie Q8_0, wenn Speicher nicht der Engpass ist. Wir haben die Aufgabenqualität nicht selbst gemessen; wenn eine Aufgabe für Sie wichtig ist, testen Sie beide Quantisierungen damit.',
+          'Wenn Ihre Ergebnisse mit Q4_K_M schlecht wirken, prüfen Sie zuerst Modellgröße und Prompt-Struktur: Die gemessene Perplexitätslücke zu f16 ist klein.',
         ],
       },
       body2: {
         title: 'Direkter Vergleich',
         content: [
-          'Die folgende Tabelle vergleicht Q4_K_M und Q8_0 für ein 7B-Modell. Beide Formate funktionieren mit Ollama, LM Studio und llama.cpp ohne spezielle Konfiguration.',
+          'Die Tabelle nutzt Dateigrößen von Llama 3.1 8B aus dem <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/quantize/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp-Quantize-README</a>, einen berechneten KV-Cache (32 Schichten, 8 Key-Value-Köpfe, Kopfdimension 128, f16: 0,5 GiB für 4.096 Tokens) und die Perplexität von Llama 3 8B aus dem llama.cpp-Perplexity-README. Beide Formate funktionieren mit Ollama, LM Studio und llama.cpp ohne spezielle Konfiguration.',
           'Für Kontext zu Q4_K_M und K-Quant-Kompression, siehe den <a href="/de/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M Erklärungsleitfaden</a>. Für die vollständige Quantisierungsreferenz, siehe <a href="/de/local-llms/quantization-levels-comparison" class="text-primary hover:underline">Quantisierungsstufen verglichen</a>.',
-          '<strong>Drei Aufgaben offenbaren Q4_K_Ms Qualitätslücke: Abruf langer Dokumente (50+ Seiten), mehrstufige Mathematik mit Zwischenzustand und Code-Generierung über 300+ Zeilen.</strong> Für diese verhindert Q8_0s höhere Präzision die kleinen Drift-Fehler, die sich über lange Ausgaben akkumulieren. Für alles andere — Chat, Code unter 200 Zeilen, Q&A, Zusammenfassung — ist die Lücke unsichtbar. Für eine Auffrischung, siehe <a href="/de/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">was Q4_K_M bedeutet</a>.',
+          '<strong>Keine der obigen Quellen testet Abruf aus langen Dokumenten, mehrstufige Mathematik oder lange Code-Generierung; diese Seite trifft dazu daher keine Aussage.</strong> Q8_0 hat eine niedrigere Perplexität als Q4_K_M; wenn Sie den Speicher haben, ist es bei Aufgaben, in denen kleine Fehler zählen, die sicherere Wahl. Zur Auffrischung siehe <a href="/de/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">was Q4_K_M bedeutet</a>.',
         ],
         columns: ['Metrik', 'Q4_K_M', 'Q8_0'],
         rows: [
-          { 'Metrik': 'Dateigröße (7B-Modell)', 'Q4_K_M': '~4,1 GB', 'Q8_0': '~7,7 GB' },
-          { 'Metrik': 'VRAM benötigt (7B)', 'Q4_K_M': '5–6 GB', 'Q8_0': '8–9 GB' },
-          { 'Metrik': 'Qualität vs. vollpräzise', 'Q4_K_M': '~92 %', 'Q8_0': '~99 %' },
+          { 'Metrik': 'Dateigröße (Llama 3.1 8B)', 'Q4_K_M': '4,58 GiB', 'Q8_0': '7,95 GiB' },
+          { 'Metrik': 'VRAM mit 4k-KV-Cache (berechnet, ohne Laufzeit-Overhead)', 'Q4_K_M': '~5,1 GiB', 'Q8_0': '~8,5 GiB' },
+          { 'Metrik': 'Perplexität, Llama 3 8B (f16: 6,23)', 'Q4_K_M': '6,41 (+2,8 %)', 'Q8_0': '6,23 (+0,02 %)' },
+          { 'Metrik': 'Tokens/s, Llama 3.1 8B (README)', 'Q4_K_M': '71,93', 'Q8_0': '50,93' },
           { 'Metrik': 'Am besten für', 'Q4_K_M': '6–8 GB VRAM', 'Q8_0': '12+ GB VRAM' },
         ],
       },
@@ -150,11 +152,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Ist Q8_0 merklich besser als Q4_K_M?',
-            a: 'Nur in Randfällen — komplexe mehrstufige Mathematik, exakter Zitatrückruf aus langen Dokumenten oder sehr lange Ausgaben. Bei Chat, Coding und Zusammenfassung (95 % der Nutzung) können die meisten Benutzer den Unterschied nicht feststellen.',
+            a: 'Möglicherweise, aber diese Quellen zeigen nicht, wo. Q8_0 hat weniger Quantisierungsfehler: +0,02 % Perplexität vs. f16 bei Llama 3 8B gegenüber +2,8 % bei Q4_K_M (llama.cpp, berechnet). Perplexität misst die Qualität bei Chat, Coding oder Zusammenfassung nicht direkt; testen Sie daher beide mit Ihrer eigenen Aufgabe.',
           },
           {
             q: 'Ist Q8_0 schneller als Q4_K_M?',
-            a: 'Nein. Q8_0 ist größer und erfordert mehr Speicherbandbreite, was es pro Token leicht langsamer macht als Q4_K_M. Geschwindigkeit und Qualität begünstigen beide Q4_K_M für VRAM-begrenzte Setups. Siehe <a href="/de/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">was Q4_K_M bedeutet</a> für den Hintergrund.',
+            a: 'Nein. Q8_0 ist größer und braucht pro Token mehr Speicherbandbreite. Das llama.cpp-Quantize-README nennt für Llama 3.1 8B 71,93 Tokens/s bei Q4_K_M und 50,93 Tokens/s bei Q8_0 (die Geschwindigkeit hängt von der Hardware ab). Siehe <a href="/de/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">was Q4_K_M bedeutet</a> für den Hintergrund.',
           },
           {
             q: 'Kann ich für verschiedene Aufgaben zwischen Q4_K_M und Q8_0 wechseln?',
@@ -162,7 +164,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Was ist mit Q4_K_S — lohnt es sich statt Q4_K_M zu nutzen?',
-            a: 'Q4_K_S spart etwa 300 MB gegenüber Q4_K_M, liefert aber niedrigere Qualität. Verwenden Sie Q4_K_S nur, wenn Ihr VRAM sehr knapp ist und Q4_K_M nicht passt. In fast allen Fällen ist Q4_K_M die bessere Wahl.',
+            a: 'Q4_K_S ist 0,22 GiB kleiner als Q4_K_M (4,36 vs. 4,58 GiB bei Llama 3.1 8B) und hat eine höhere Perplexität (6,50 vs. 6,41 bei Llama 3 8B ohne Importance-Matrix). Verwenden Sie Q4_K_S nur, wenn Q4_K_M nicht passt; sonst ist Q4_K_M die bessere Wahl.',
           },
         ],
       },
@@ -173,21 +175,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-fr.webp',
     title: 'Q4_K_M ou Q8_0 : lequel choisir ?',
     seoTitle: 'Q4_K_M ou Q8_0 2026 : lequel ? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Utilisez Q4_K_M avec 8 Go de VRAM ou moins. Utilisez Q8_0 avec 12+ Go. Q4_K_M offre 95 % de la qualité de Q8_0 à la moitié de la taille. Réponse rapide.',
+    metaDescription: 'Q4_K_M avec 8 Go de VRAM ou moins, Q8_0 dès 12 Go. Sur Llama 3 8B, Q4_K_M fait 4,58 GiB (+2,8 % de perplexité vs f16), Q8_0 7,96 GiB (+0,02 %).',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       fr: {
         question: 'Q4_K_M ou Q8_0 : lequel choisir ?',
-        answer: 'Utilisez Q4_K_M avec 8 Go de VRAM ou moins. Utilisez Q8_0 avec 12+ Go. Q4_K_M offre 95 % de la qualité de Q8_0 à environ la moitié de la taille.',
+        answer: 'Utilisez Q4_K_M avec 8 Go de VRAM ou moins et Q8_0 avec 12+ Go. Pour Llama 3 8B, Q4_K_M fait 4,58 GiB et Q8_0 7,96 GiB ; Q8_0 reste plus proche de la pleine précision.',
         bullets: [
-          'Q4_K_M : ~5–6 Go pour les modèles 7B, idéal pour 8 Go de VRAM',
-          'Q8_0 : ~8–9 Go pour les modèles 7B, nécessite 12+ Go de VRAM',
-          'Différence de qualité inférieure à 5 % en usage réel',
+          'Q4_K_M : 4,58 GiB pour Llama 3.1 8B, environ 5,1 GiB avec un cache KV de 4k (calculé)',
+          'Q8_0 : 7,95 GiB pour Llama 3.1 8B, environ 8,5 GiB avec un cache KV de 4k (calculé)',
+          'Perplexité vs f16 sur Llama 3 8B : Q4_K_M +2,8 %, Q8_0 +0,02 % (llama.cpp, calculé)',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -195,31 +197,32 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '8 Go de VRAM ou moins : utiliser Q4_K_M — offre 95 % de la qualité de Q8_0 à environ la moitié de la taille',
-          '12+ Go de VRAM : Q8_0 vaut le coup pour une qualité quasi pleine précision sans perte de vitesse',
+          '8 Go de VRAM ou moins : utiliser Q4_K_M — son fichier 8B fait 4,58 GiB, alors que Q8_0 (7,95 GiB) ne tient plus une fois le cache KV ajouté',
+          '12+ Go de VRAM : Q8_0 vaut le coup pour une sortie proche de f16, mais il est plus lent : 50,93 contre 71,93 tokens/s pour Llama 3.1 8B dans le README de quantize de llama.cpp',
           'Pour la plupart des utilisateurs Ollama au quotidien, Q4_K_M est le bon choix',
         ],
       },
       body1: {
         title: 'Le verdict rapide',
         content: [
-          '<strong>Q8_0 atteint ~99 % de la qualité pleine précision. Q4_K_M atteint ~92 %.</strong> L\'écart de 7 points est invisible en chat, code et résumé — trois tâches qui couvrent 95 % de l\'usage local LLM. Q8_0 ne prend l\'avantage que sur le rappel factuel long, les mathématiques multi-étapes et le code nécessitant une syntaxe exacte sur 500+ lignes.',
-          'Q4_K_M est le bon choix par défaut car la qualité supplémentaire de Q8_0 ne se manifeste que dans des cas limites : génération longue avec rappel factuel exact, ou raisonnement mathématique nécessitant une précision élevée. Pour tout le reste, Q4_K_M équivaut à Q8_0 en pratique.',
-          'Si vous utilisez déjà Q4_K_M et que vos résultats semblent incorrects, le problème n\'est presque jamais la quantisation — c\'est la taille du modèle ou la structure du prompt.',
+          '<strong>Sur Llama 3 8B, Q8_0 est pratiquement identique à f16 en perplexité, et Q4_K_M ajoute une petite hausse.</strong> Le test de perplexité de llama.cpp sur wikitext donne 6,2332 pour f16, 6,2343 pour Q8_0 et 6,4071 pour Q4_K_M sans matrice d\'importance : +0,02 % et +2,8 % (calculé ; <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">README perplexity de llama.cpp</a>). La perplexité est un score de modélisation du langage, pas un benchmark de tâches ; elle ne montre donc pas dans quelle mesure une tâche précise de chat, de code ou de résumé change.',
+          'Q4_K_M est le choix par défaut courant car le fichier de Llama 3.1 8B fait 4,58 GiB au lieu de 7,95 GiB et reste proche de f16 sur ce test. Choisissez Q8_0 quand la mémoire n\'est pas la limite. Nous n\'avons pas mesuré nous-mêmes la qualité par tâche ; si une tâche compte pour vous, essayez les deux quantisations dessus.',
+          'Si vos résultats paraissent mauvais avec Q4_K_M, vérifiez d\'abord la taille du modèle et la structure du prompt : l\'écart de perplexité mesuré avec f16 est faible.',
         ],
       },
       body2: {
         title: 'Comparaison côte à côte',
         content: [
-          'Le tableau ci-dessous compare Q4_K_M et Q8_0 pour un modèle 7B. Les deux formats fonctionnent avec Ollama, LM Studio et llama.cpp sans configuration particulière.',
+          'Le tableau utilise les tailles de fichier de Llama 3.1 8B du <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/quantize/README.md" class="text-primary hover:underline" rel="noopener noreferrer">README de quantize de llama.cpp</a>, un cache KV calculé (32 couches, 8 têtes clé-valeur, dimension de tête 128, f16 : 0,5 GiB pour 4 096 tokens) et la perplexité de Llama 3 8B du README perplexity de llama.cpp. Les deux formats fonctionnent avec Ollama, LM Studio et llama.cpp sans configuration particulière.',
           'Pour comprendre Q4_K_M et la compression k-quant, voir le <a href="/fr/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">guide explicatif Q4_K_M</a>. Pour la référence complète, voir <a href="/fr/local-llms/quantization-levels-comparison" class="text-primary hover:underline">les niveaux de quantisation comparés</a>.',
-          '<strong>Trois tâches révèlent l\'écart de Q4_K_M : rappel de longs documents (50+ pages), calcul multi-étapes avec état intermédiaire, et génération de code sur 300+ lignes.</strong> Pour celles-ci, la précision supplémentaire de Q8_0 prévient les petites erreurs de dérive qui s\'accumulent sur de longues sorties. Pour tout le reste — chat, code sous 200 lignes, Q&R, résumé — l\'écart est invisible. Pour un rappel avant de décider, voir <a href="/fr/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">ce que signifie Q4_K_M</a>.',
+          '<strong>Aucune des sources ci-dessus ne teste le rappel sur de longs documents, les mathématiques multi-étapes ou la génération de long code ; cette page n\'affirme donc rien à ce sujet.</strong> Q8_0 a une perplexité plus basse que Q4_K_M ; si vous avez la mémoire, c\'est le choix le plus sûr pour les tâches où les petites erreurs comptent. Pour un rappel, voir <a href="/fr/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">ce que signifie Q4_K_M</a>.',
         ],
         columns: ['Métrique', 'Q4_K_M', 'Q8_0'],
         rows: [
-          { 'Métrique': 'Taille du fichier (7B)', 'Q4_K_M': '~4,1 Go', 'Q8_0': '~7,7 Go' },
-          { 'Métrique': 'VRAM nécessaire (7B)', 'Q4_K_M': '5–6 Go', 'Q8_0': '8–9 Go' },
-          { 'Métrique': 'Qualité vs pleine précision', 'Q4_K_M': '~92 %', 'Q8_0': '~99 %' },
+          { 'Métrique': 'Taille du fichier (Llama 3.1 8B)', 'Q4_K_M': '4,58 GiB', 'Q8_0': '7,95 GiB' },
+          { 'Métrique': 'VRAM avec cache KV 4k (calculé, hors surcoût d\'exécution)', 'Q4_K_M': '~5,1 GiB', 'Q8_0': '~8,5 GiB' },
+          { 'Métrique': 'Perplexité, Llama 3 8B (f16 : 6,23)', 'Q4_K_M': '6,41 (+2,8 %)', 'Q8_0': '6,23 (+0,02 %)' },
+          { 'Métrique': 'Tokens/s, Llama 3.1 8B (README)', 'Q4_K_M': '71,93', 'Q8_0': '50,93' },
           { 'Métrique': 'Idéal pour', 'Q4_K_M': '6–8 Go de VRAM', 'Q8_0': '12+ Go de VRAM' },
         ],
       },
@@ -229,11 +232,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Q8_0 est-il sensiblement meilleur que Q4_K_M ?',
-            a: 'Seulement dans des cas limites — calcul multi-étapes complexe, rappel de citations exactes dans de longs documents, ou très longues sorties. Pour le chat, le code et la synthèse (95 % des usages), la plupart des utilisateurs ne font pas la différence.',
+            a: 'Peut-être, mais ces sources ne montrent pas où. Q8_0 a moins d\'erreur de quantisation : +0,02 % de perplexité vs f16 sur Llama 3 8B, contre +2,8 % pour Q4_K_M (llama.cpp, calculé). La perplexité ne mesure pas directement la qualité en chat, code ou résumé ; testez donc les deux sur votre propre tâche.',
           },
           {
             q: 'Q8_0 est-il plus rapide que Q4_K_M ?',
-            a: 'Non. Q8_0 est plus lourd et nécessite plus de bande passante mémoire, ce qui le rend légèrement plus lent par token que Q4_K_M. Vitesse et qualité favorisent tous deux Q4_K_M pour les setups contraints en VRAM. Voir <a href="/fr/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">ce que signifie Q4_K_M</a> pour la raison sous-jacente.',
+            a: 'Non. Q8_0 est plus lourd et demande plus de bande passante mémoire par token. Le README de quantize de llama.cpp indique 71,93 tokens/s pour Q4_K_M et 50,93 tokens/s pour Q8_0 sur Llama 3.1 8B (la vitesse dépend du matériel). Voir <a href="/fr/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">ce que signifie Q4_K_M</a> pour la raison de fond.',
           },
           {
             q: 'Puis-je alterner entre Q4_K_M et Q8_0 selon les tâches ?',
@@ -241,7 +244,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Et Q4_K_S — vaut-il mieux l\'utiliser à la place de Q4_K_M ?',
-            a: 'Q4_K_S économise environ 300 Mo par rapport à Q4_K_M mais offre une qualité moindre. N\'utilisez Q4_K_S que si votre VRAM est très limité et que Q4_K_M ne rentre pas. Dans presque tous les cas, Q4_K_M est le meilleur choix.',
+            a: 'Q4_K_S est plus petit de 0,22 GiB que Q4_K_M (4,36 contre 4,58 GiB pour Llama 3.1 8B) et a une perplexité plus élevée (6,50 contre 6,41 sur Llama 3 8B sans matrice d\'importance). N\'utilisez Q4_K_S que si Q4_K_M ne tient pas ; sinon Q4_K_M est le meilleur choix.',
           },
         ],
       },
@@ -252,21 +255,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-ja.webp',
     title: 'Q4_K_M vs Q8_0：どちらを選ぶべきですか？',
     seoTitle: 'Q4_K_M vs Q8_0：2026年の選び方',
-    metaDescription: 'VRAM 8 GB以下ならQ4_K_M、12 GB以上ならQ8_0。Q4_K_MはQ8_0の95%の品質を半分のサイズで実現します。',
+    metaDescription: 'VRAM 8 GB以下ならQ4_K_M、12 GB以上ならQ8_0。Llama 3 8Bではf16比でQ4_K_Mは4.58 GiB・パープレキシティ+2.8%、Q8_0は7.96 GiB・+0.02%です。',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       ja: {
         question: 'Q4_K_MとQ8_0：どちらを選ぶべきですか？',
-        answer: 'VRAMが8 GB以下ならQ4_K_Mを使用してください。12 GB以上あるならQ8_0を使用してください。Q4_K_Mはおよそ半分のファイルサイズでQ8_0の95%の品質を提供します。',
+        answer: 'VRAMが8 GB以下ならQ4_K_M、12 GB以上ならQ8_0を使用してください。Llama 3 8BではQ4_K_Mが4.58 GiB、Q8_0が7.96 GiBで、Q8_0のほうが完全精度に近い結果になります。',
         bullets: [
-          'Q4_K_M：7Bモデルで~5–6 GB、8 GB VRAMに最適',
-          'Q8_0：7Bモデルで~8–9 GB、12+ GB VRAM必要',
-          '実際の使用では品質差は5%未満',
+          'Q4_K_M：Llama 3.1 8Bで4.58 GiB、4k KVキャッシュ込みで約5.1 GiB（計算値）',
+          'Q8_0：Llama 3.1 8Bで7.95 GiB、4k KVキャッシュ込みで約8.5 GiB（計算値）',
+          'Llama 3 8Bのf16比パープレキシティ：Q4_K_M +2.8%、Q8_0 +0.02%（llama.cpp、計算値）',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -274,31 +277,32 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '8 GB VRAM以下：Q4_K_Mを使用 — ほぼ半分のファイルサイズでQ8_0の95%の品質を提供',
-          '12+ GB VRAM：Q8_0はスピードペナルティなしでほぼ完全精度の品質に値します',
+          'VRAM 8 GB以下：Q4_K_Mを使用 — 8Bファイルは4.58 GiBで、Q8_0（7.95 GiB）はKVキャッシュを加えると収まりません',
+          'VRAM 12 GB以上：f16に近い出力が必要ならQ8_0に価値がありますが、速度は遅くなります。llama.cppのquantize READMEではLlama 3.1 8Bで50.93対71.93 tokens/sです',
           'Ollamaを毎日使用するほとんどのユーザーにとって、Q4_K_Mが正しい選択です',
         ],
       },
       body1: {
         title: '簡潔な結論',
         content: [
-          '<strong>Q8_0は完全精度品質の約99%を維持します。Q4_K_Mは約92%です。</strong>この7ポイントの差はチャット、コーディング、要約では見えません — ローカルLLM使用の95%をカバーする3つのタスクです。Q8_0が優位に立つのは、長文の事実想起、複数ステップの数学、500行以上の正確な構文が必要なコードのみです。',
-          'Q4_K_Mが正しいデフォルトである理由は、Q8_0の追加品質が現れるのがエッジケースのみだからです：正確な事実想起を必要とする長文生成、または高精度を必要とする数学的推論。他のすべてに対して、Q4_K_Mは実際にはQ8_0と同等です。',
-          'すでにQ4_K_Mを使用していて結果がおかしく感じる場合、問題はほとんどの場合量化ではありません — モデルのサイズやプロンプト構造にあります。',
+          '<strong>Llama 3 8Bでは、パープレキシティ上Q8_0はf16とほぼ同一で、Q4_K_Mはわずかに増加します。</strong>llama.cppのwikitextパープレキシティテストでは、f16が6.2332、Q8_0が6.2343、Q4_K_M（重要度行列なし）が6.4071で、それぞれ+0.02%と+2.8%です（計算値、<a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp perplexity README</a>）。パープレキシティは言語モデリングの指標でありタスクのベンチマークではないため、特定のチャット・コーディング・要約タスクがどれだけ変わるかは示しません。',
+          'Q4_K_Mが標準的なデフォルトなのは、Llama 3.1 8Bのファイルが7.95 GiBではなく4.58 GiBで済み、このテストでf16に近い値を保つためです。メモリが制約でない場合はQ8_0を選んでください。当サイトではタスク品質を自前で測定していません。重要なタスクがある場合は、両方の量子化で試してください。',
+          'Q4_K_Mで結果がおかしいと感じる場合は、まずモデルサイズとプロンプト構造を確認してください。測定されたf16とのパープレキシティ差は小さいです。',
         ],
       },
       body2: {
         title: '並列比較',
         content: [
-          '以下の表は7BモデルのQ4_K_MとQ8_0を比較しています。両フォーマットは特別な設定なしにOllama、LM Studio、llama.cppで動作します。',
+          'この表は、<a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/quantize/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp quantize README</a>のLlama 3.1 8Bのファイルサイズ、計算によるKVキャッシュ（32層、キー・バリューヘッド8、ヘッド次元128、f16で4,096トークンあたり0.5 GiB）、llama.cpp perplexity READMEのLlama 3 8Bのパープレキシティを使用しています。両フォーマットは特別な設定なしにOllama、LM Studio、llama.cppで動作します。',
           'Q4_K_Mとk-quant圧縮について理解するには、<a href="/ja/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M解説ガイド</a>を参照してください。完全な量化リファレンスは<a href="/ja/local-llms/quantization-levels-comparison" class="text-primary hover:underline">量化レベル比較</a>を参照してください。',
-          '<strong>Q4_K_Mの品質ギャップを明らかにする3つのタスク：長文書の想起（50ページ以上）、中間状態を伴う複数ステップの数学、300行以上のコード生成です。</strong>これらにおいて、Q8_0の追加精度は長い出力で積み重なる小さなドリフトエラーを防ぎます。他のすべて — チャット、200行未満のコード、Q&A、要約 — ではギャップは見えません。決定前の復習は<a href="/ja/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_Mの意味</a>を参照してください。',
+          '<strong>上記の出典のいずれも、長文書の想起、複数ステップの数学、長いコード生成を検証していないため、本ページはそれらについて主張しません。</strong>Q8_0はQ4_K_Mよりパープレキシティが低いため、メモリに余裕があり小さな誤差が重要なタスクでは、より安全な選択です。おさらいは<a href="/ja/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_Mの意味</a>を参照してください。',
         ],
         columns: ['指標', 'Q4_K_M', 'Q8_0'],
         rows: [
-          { '指標': 'ファイルサイズ（7Bモデル）', 'Q4_K_M': '~4.1 GB', 'Q8_0': '~7.7 GB' },
-          { '指標': 'VRAM必要量（7B）', 'Q4_K_M': '5–6 GB', 'Q8_0': '8–9 GB' },
-          { '指標': '完全精度に対する品質', 'Q4_K_M': '~92%', 'Q8_0': '~99%' },
+          { '指標': 'ファイルサイズ（Llama 3.1 8B）', 'Q4_K_M': '4.58 GiB', 'Q8_0': '7.95 GiB' },
+          { '指標': '4k KVキャッシュ込みVRAM（計算値、実行時オーバーヘッド除く）', 'Q4_K_M': '約5.1 GiB', 'Q8_0': '約8.5 GiB' },
+          { '指標': 'パープレキシティ、Llama 3 8B（f16：6.23）', 'Q4_K_M': '6.41（+2.8%）', 'Q8_0': '6.23（+0.02%）' },
+          { '指標': 'Tokens/s、Llama 3.1 8B（README）', 'Q4_K_M': '71.93', 'Q8_0': '50.93' },
           { '指標': '最適な対象', 'Q4_K_M': '6–8 GB VRAM', 'Q8_0': '12+ GB VRAM' },
         ],
       },
@@ -308,11 +312,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Q8_0はQ4_K_Mより明らかに優れていますか？',
-            a: 'エッジケースのみです — 複雑な複数ステップの数学、長文書からの正確な引用想起、または非常に長い出力。チャット、コーディング、要約（使用の95%をカバー）では、ほとんどのユーザーは違いがわかりません。',
+            a: 'あり得ますが、これらの出典ではどこで差が出るかは分かりません。Q8_0は量子化誤差が小さく、Llama 3 8Bのf16比パープレキシティは+0.02%で、Q4_K_Mの+2.8%より小さいです（llama.cpp、計算値）。パープレキシティはチャット・コーディング・要約の品質を直接測るものではないため、ご自身のタスクで両方を試してください。',
           },
           {
             q: 'Q8_0はQ4_K_Mより速いですか？',
-            a: 'いいえ。Q8_0はより大きく、より多くのメモリ帯域幅を必要とするため、トークンあたりわずかにQ4_K_Mより遅いです。速度と品質の両方がVRAM制限のセットアップではQ4_K_Mを支持します。基本的な理由については<a href="/ja/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_Mの意味</a>を参照してください。',
+            a: 'いいえ。Q8_0はより大きく、トークンあたりより多くのメモリ帯域幅を必要とします。llama.cppのquantize READMEでは、Llama 3.1 8BでQ4_K_Mが71.93 tokens/s、Q8_0が50.93 tokens/sと記載されています（速度はハードウェアによって異なります）。基本的な理由については<a href="/ja/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_Mの意味</a>を参照してください。',
           },
           {
             q: '異なるタスクでQ4_K_MとQ8_0を切り替えられますか？',
@@ -320,7 +324,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Q4_K_Sはどうですか — Q4_K_Mの代わりに使う価値はありますか？',
-            a: 'Q4_K_SはQ4_K_Mと比べて約300 MB節約できますが、品質が低くなります。VRAMが非常に制限されていてQ4_K_Mが収まらない場合にのみQ4_K_Sを使用してください。ほぼすべてのケースでQ4_K_Mの方が良い選択です。',
+            a: 'Q4_K_SはQ4_K_Mより0.22 GiB小さく（Llama 3.1 8Bで4.36対4.58 GiB）、パープレキシティは高くなります（Llama 3 8B、重要度行列なしで6.50対6.41）。Q4_K_Mが収まらない場合にのみQ4_K_Sを使用してください。それ以外はQ4_K_Mが良い選択です。',
           },
         ],
       },
@@ -331,21 +335,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-zh.webp',
     title: 'Q4_K_M与Q8_0：该如何选择？',
     seoTitle: 'Q4_K_M对比Q8_0：2026年选择指南',
-    metaDescription: '显存8 GB或更少用Q4_K_M，12 GB以上用Q8_0。Q4_K_M以约一半文件大小提供Q8_0 95%的质量。',
+    metaDescription: '显存8 GB或更少用Q4_K_M，12 GB以上用Q8_0。在Llama 3 8B上，Q4_K_M为4.58 GiB，困惑度比f16高2.8%；Q8_0为7.96 GiB，仅高0.02%。',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       zh: {
         question: 'Q4_K_M和Q8_0：该选哪个？',
-        answer: 'VRAM为8 GB或更少时使用Q4_K_M。VRAM为12 GB以上时使用Q8_0。Q4_K_M以约一半的文件大小提供Q8_0 95%的质量。',
+        answer: '显存为8 GB或更少时使用Q4_K_M，12 GB以上时使用Q8_0。在Llama 3 8B上，Q4_K_M为4.58 GiB，Q8_0为7.96 GiB；Q8_0更接近完整精度。',
         bullets: [
-          'Q4_K_M：7B模型约5–6 GB，适合8 GB显存',
-          'Q8_0：7B模型约8–9 GB，需12+ GB显存',
-          '实际使用中质量差异不足5%',
+          'Q4_K_M：Llama 3.1 8B为4.58 GiB，含4k KV缓存约5.1 GiB（计算值）',
+          'Q8_0：Llama 3.1 8B为7.95 GiB，含4k KV缓存约8.5 GiB（计算值）',
+          'Llama 3 8B相对f16的困惑度：Q4_K_M +2.8%，Q8_0 +0.02%（llama.cpp，计算值）',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -353,31 +357,32 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '8 GB显存或更少：使用Q4_K_M——以约一半的文件大小提供Q8_0 95%的质量',
-          '12+ GB显存：Q8_0可提供接近完整精度的质量且无速度损失',
+          '显存8 GB或更少：使用Q4_K_M——其8B文件为4.58 GiB，而Q8_0（7.95 GiB）加上KV缓存后就放不下了',
+          '显存12 GB以上：想要接近f16的输出时Q8_0值得选，但速度更慢：llama.cpp quantize README中Llama 3.1 8B为50.93对71.93 tokens/秒',
           '对于大多数日常使用Ollama的用户，Q4_K_M是正确的选择',
         ],
       },
       body1: {
         title: '快速结论',
         content: [
-          '<strong>Q8_0保持完整精度质量的约99%。Q4_K_M约为92%。</strong>这7个百分点的差距在聊天、编程和摘要中是不可见的——这三个任务涵盖了95%的本地LLM使用场景。Q8_0只在长篇事实回忆、多步数学推理以及需要500行以上精确语法的代码生成上表现更好。',
-          'Q4_K_M是正确的默认选择，因为Q8_0的额外质量仅在边缘情况下出现：需要精确事实回忆的长篇生成，或需要更高精度的数学推理。对于其他所有情况，Q4_K_M在实践中与Q8_0持平。',
-          '如果您已经在使用Q4_K_M但结果感觉不对，问题几乎从不在于量化——而在于模型大小或提示词结构。',
+          '<strong>在Llama 3 8B上，按困惑度衡量Q8_0与f16几乎相同，而Q4_K_M略有上升。</strong>llama.cpp在wikitext上的困惑度测试中，f16为6.2332，Q8_0为6.2343，Q4_K_M（无重要性矩阵）为6.4071，即分别高出0.02%和2.8%（计算值；<a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp perplexity README</a>）。困惑度是语言建模指标，不是任务基准，因此无法说明某个具体的聊天、编程或摘要任务会变化多少。',
+          'Q4_K_M是常用默认选项，因为Llama 3.1 8B的文件为4.58 GiB而非7.95 GiB，并且在该测试中仍接近f16。内存不是限制时选择Q8_0。我们没有自行测量任务质量；如果某项任务对你很重要，请用两种量化分别试一下。',
+          '如果用Q4_K_M时结果不理想，请先检查模型大小和提示词结构：实测的与f16的困惑度差距很小。',
         ],
       },
       body2: {
         title: '并排对比',
         content: [
-          '下表比较了7B模型的Q4_K_M和Q8_0。两种格式都可与Ollama、LM Studio和llama.cpp配合使用，无需特殊配置。',
+          '该表使用<a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/quantize/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp quantize README</a>中Llama 3.1 8B的文件大小、计算得出的KV缓存（32层、8个键值头、头维度128、f16下4,096个token为0.5 GiB），以及llama.cpp perplexity README中Llama 3 8B的困惑度。两种格式都可与Ollama、LM Studio和llama.cpp配合使用，无需特殊配置。',
           '关于Q4_K_M的含义和k-quant压缩原理，请参阅<a href="/zh/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M详解指南</a>。完整量化参考请查看<a href="/zh/local-llms/quantization-levels-comparison" class="text-primary hover:underline">量化级别比较</a>。',
-          '<strong>三个任务揭示了Q4_K_M的质量差距：长文档回忆（50页以上）、带中间状态的多步数学推理，以及超过300行的代码生成。</strong>对于这些任务，Q8_0的额外精度可防止在长输出中累积的小误差漂移。对于其他所有情况——聊天、200行以内的代码、问答、摘要——差距是不可见的。决策前的回顾请参阅<a href="/zh/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M的含义</a>。',
+          '<strong>上述来源均未测试长文档回忆、多步数学或长代码生成，因此本页对这些场景不作断言。</strong>Q8_0的困惑度低于Q4_K_M，所以如果内存足够，对于小误差也很重要的任务它是更稳妥的选择。回顾请见<a href="/zh/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M的含义</a>。',
         ],
         columns: ['指标', 'Q4_K_M', 'Q8_0'],
         rows: [
-          { '指标': '文件大小（7B模型）', 'Q4_K_M': '~4.1 GB', 'Q8_0': '~7.7 GB' },
-          { '指标': '所需显存（7B）', 'Q4_K_M': '5–6 GB', 'Q8_0': '8–9 GB' },
-          { '指标': '对比完整精度的质量', 'Q4_K_M': '~92%', 'Q8_0': '~99%' },
+          { '指标': '文件大小（Llama 3.1 8B）', 'Q4_K_M': '4.58 GiB', 'Q8_0': '7.95 GiB' },
+          { '指标': '含4k KV缓存的显存（计算值，不含运行时开销）', 'Q4_K_M': '约5.1 GiB', 'Q8_0': '约8.5 GiB' },
+          { '指标': '困惑度，Llama 3 8B（f16：6.23）', 'Q4_K_M': '6.41（+2.8%）', 'Q8_0': '6.23（+0.02%）' },
+          { '指标': 'Tokens/秒，Llama 3.1 8B（README）', 'Q4_K_M': '71.93', 'Q8_0': '50.93' },
           { '指标': '最适合', 'Q4_K_M': '6–8 GB显存', 'Q8_0': '12+ GB显存' },
         ],
       },
@@ -387,11 +392,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Q8_0明显优于Q4_K_M吗？',
-            a: '仅在边缘情况下——复杂的多步数学、从长文档精确引用，或非常长的输出。对于聊天、编程和摘要（涵盖95%的使用场景），大多数用户无法分辨差异。',
+            a: '可能，但这些来源并未显示差异出现在哪里。Q8_0的量化误差更小：在Llama 3 8B上相对f16的困惑度为+0.02%，而Q4_K_M为+2.8%（llama.cpp，计算值）。困惑度并不直接衡量聊天、编程或摘要的质量，请在自己的任务上试用两者。',
           },
           {
             q: 'Q8_0比Q4_K_M快吗？',
-            a: '不。Q8_0更大，需要更多内存带宽，使其每token略慢于Q4_K_M。对于显存受限的配置，速度和质量都有利于Q4_K_M。底层原因请参阅<a href="/zh/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M的含义</a>。',
+            a: '不。Q8_0更大，每个token需要更多内存带宽。llama.cpp quantize README给出Llama 3.1 8B上Q4_K_M为71.93 tokens/秒，Q8_0为50.93 tokens/秒（速度取决于硬件）。根本原因请见<a href="/zh/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M的含义</a>。',
           },
           {
             q: '我能在不同任务间切换Q4_K_M和Q8_0吗？',
@@ -399,7 +404,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Q4_K_S怎么样——值得用它代替Q4_K_M吗？',
-            a: 'Q4_K_S比Q4_K_M节省约300 MB，但质量更低。仅在显存非常紧张且Q4_K_M放不下时才使用Q4_K_S。几乎所有情况下，Q4_K_M是更好的选择。',
+            a: 'Q4_K_S比Q4_K_M小0.22 GiB（Llama 3.1 8B上为4.36对4.58 GiB），困惑度更高（Llama 3 8B、无重要性矩阵时为6.50对6.41）。只有在Q4_K_M放不下时才使用Q4_K_S；否则Q4_K_M是更好的选择。',
           },
         ],
       },
@@ -410,21 +415,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-pt.webp',
     title: 'Q4_K_M vs Q8_0: qual escolher?',
     seoTitle: 'Q4_K_M vs Q8_0: qual? 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Use Q4_K_M com 8 GB de VRAM ou menos. Use Q8_0 com 12+ GB. Q4_K_M oferece 95% da qualidade do Q8_0 à metade do tamanho. Resposta rápida do PromptQuorum.',
+    metaDescription: 'Q4_K_M com 8 GB de VRAM ou menos, Q8_0 com 12+ GB. No Llama 3 8B, Q4_K_M tem 4,58 GiB (+2,8% de perplexidade vs f16); Q8_0 tem 7,96 GiB (+0,02%).',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       pt: {
         question: 'Q4_K_M vs Q8_0: qual escolher?',
-        answer: 'Use Q4_K_M com 8 GB de VRAM ou menos. Use Q8_0 com 12+ GB. Q4_K_M oferece 95% da qualidade do Q8_0 aproximadamente à metade do tamanho de arquivo.',
+        answer: 'Use Q4_K_M com 8 GB de VRAM ou menos e Q8_0 com 12+ GB. No Llama 3 8B, Q4_K_M tem 4,58 GiB e Q8_0 tem 7,96 GiB; Q8_0 fica mais perto da precisão total.',
         bullets: [
-          'Q4_K_M: ~5–6 GB para modelos 7B, ideal para 8 GB de VRAM',
-          'Q8_0: ~8–9 GB para modelos 7B, precisa de 12+ GB de VRAM',
-          'A diferença de qualidade é inferior a 5% no uso real',
+          'Q4_K_M: 4,58 GiB para o Llama 3.1 8B, cerca de 5,1 GiB com cache KV de 4k (calculado)',
+          'Q8_0: 7,95 GiB para o Llama 3.1 8B, cerca de 8,5 GiB com cache KV de 4k (calculado)',
+          'Perplexidade vs f16 no Llama 3 8B: Q4_K_M +2,8%, Q8_0 +0,02% (llama.cpp, calculado)',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -432,31 +437,32 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '8 GB de VRAM ou menos: use Q4_K_M — oferece 95% da qualidade do Q8_0 aproximadamente à metade do tamanho de arquivo',
-          '12+ GB de VRAM: Q8_0 vale a pena para qualidade quase de precisão total sem penalidade de velocidade',
+          '8 GB de VRAM ou menos: use Q4_K_M — o arquivo 8B tem 4,58 GiB, enquanto o Q8_0 (7,95 GiB) já não cabe com o cache KV',
+          '12+ GB de VRAM: Q8_0 vale a pena para saída próxima de f16, mas é mais lento: 50,93 contra 71,93 tokens/s no Llama 3.1 8B, segundo o README do quantize do llama.cpp',
           'Para a maioria dos usuários que usam Ollama diariamente, Q4_K_M é a escolha certa',
         ],
       },
       body1: {
         title: 'O veredicto rápido',
         content: [
-          '<strong>Q8_0 mantém ~99% da qualidade de precisão total. Q4_K_M mantém ~92%.</strong> A diferença de 7 pontos é invisível em chat, codificação e resumo — três tarefas que cobrem 95% do uso de LLM local. Q8_0 só se sobressai em recuperação factual de documentos longos, matemática de múltiplas etapas e código que requer sintaxe exata em 500+ linhas.',
-          'Q4_K_M é a opção padrão correta porque a qualidade extra do Q8_0 só aparece em casos extremos: geração longa com recuperação factual exata ou raciocínio matemático que requer maior precisão. Para todo o resto, Q4_K_M equivale ao Q8_0 na prática.',
-          'Se você já está usando Q4_K_M e seus resultados parecem errados, o problema quase nunca é a quantização — é o tamanho do modelo ou a estrutura do prompt.',
+          '<strong>No Llama 3 8B, o Q8_0 é praticamente idêntico ao f16 em perplexidade, e o Q4_K_M acrescenta um pequeno aumento.</strong> O teste de perplexidade do llama.cpp em wikitext dá 6,2332 para f16, 6,2343 para Q8_0 e 6,4071 para Q4_K_M sem matriz de importância: +0,02% e +2,8% (calculado; <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">README de perplexity do llama.cpp</a>). Perplexidade é uma pontuação de modelagem de linguagem, não um benchmark de tarefas; por isso não mostra quanto muda uma tarefa específica de chat, código ou resumo.',
+          'Q4_K_M é o padrão usual porque o arquivo do Llama 3.1 8B tem 4,58 GiB em vez de 7,95 GiB e fica próximo do f16 nesse teste. Escolha Q8_0 quando a memória não for o limite. Não medimos a qualidade por tarefa por conta própria; se uma tarefa é importante para você, teste as duas quantizações nela.',
+          'Se os resultados parecem ruins com Q4_K_M, verifique primeiro o tamanho do modelo e a estrutura do prompt: a diferença de perplexidade medida em relação ao f16 é pequena.',
         ],
       },
       body2: {
         title: 'Comparação lado a lado',
         content: [
-          'A tabela abaixo compara Q4_K_M e Q8_0 para um modelo 7B. Ambos os formatos funcionam com Ollama, LM Studio e llama.cpp sem nenhuma configuração especial.',
+          'A tabela usa tamanhos de arquivo do Llama 3.1 8B do <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/quantize/README.md" class="text-primary hover:underline" rel="noopener noreferrer">README do quantize do llama.cpp</a>, um cache KV calculado (32 camadas, 8 cabeças chave-valor, dimensão de cabeça 128, f16: 0,5 GiB para 4.096 tokens) e a perplexidade do Llama 3 8B do README de perplexity do llama.cpp. Ambos os formatos funcionam com Ollama, LM Studio e llama.cpp sem nenhuma configuração especial.',
           'Para contexto sobre o que Q4_K_M significa e como funciona a compressão k-quant, veja o <a href="/pt/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">guia explicativo do Q4_K_M</a>. Para a referência completa de quantização, veja <a href="/pt/local-llms/quantization-levels-comparison" class="text-primary hover:underline">níveis de quantização comparados</a>.',
-          '<strong>Três tarefas revelam a lacuna de qualidade do Q4_K_M: recuperação de documentos longos (50+ páginas), matemática de múltiplas etapas com estado intermediário e geração de código com 300+ linhas.</strong> Para essas tarefas, a precisão extra do Q8_0 evita os pequenos erros de deriva que se acumulam em saídas longas. Para todo o resto — chat, código com menos de 200 linhas, perguntas e respostas, resumo — a lacuna é invisível. Para uma revisão antes de decidir, veja <a href="/pt/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">o que Q4_K_M significa</a>.',
+          '<strong>Nenhuma das fontes acima testa recuperação em documentos longos, matemática de várias etapas ou geração de código longo; por isso esta página não afirma nada sobre isso.</strong> Q8_0 tem perplexidade menor que Q4_K_M; se você tem a memória, é a escolha mais segura para tarefas em que pequenos erros importam. Para relembrar, veja <a href="/pt/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">o que Q4_K_M significa</a>.',
         ],
         columns: ['Métrica', 'Q4_K_M', 'Q8_0'],
         rows: [
-          { 'Métrica': 'Tamanho do arquivo (modelo 7B)', 'Q4_K_M': '~4,1 GB', 'Q8_0': '~7,7 GB' },
-          { 'Métrica': 'VRAM necessária (7B)', 'Q4_K_M': '5–6 GB', 'Q8_0': '8–9 GB' },
-          { 'Métrica': 'Qualidade vs precisão total', 'Q4_K_M': '~92%', 'Q8_0': '~99%' },
+          { 'Métrica': 'Tamanho do arquivo (Llama 3.1 8B)', 'Q4_K_M': '4,58 GiB', 'Q8_0': '7,95 GiB' },
+          { 'Métrica': 'VRAM com cache KV de 4k (calculado, sem overhead de execução)', 'Q4_K_M': '~5,1 GiB', 'Q8_0': '~8,5 GiB' },
+          { 'Métrica': 'Perplexidade, Llama 3 8B (f16: 6,23)', 'Q4_K_M': '6,41 (+2,8%)', 'Q8_0': '6,23 (+0,02%)' },
+          { 'Métrica': 'Tokens/s, Llama 3.1 8B (README)', 'Q4_K_M': '71,93', 'Q8_0': '50,93' },
           { 'Métrica': 'Melhor para', 'Q4_K_M': '6–8 GB VRAM', 'Q8_0': '12+ GB VRAM' },
         ],
       },
@@ -466,11 +472,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Q8_0 é notavelmente melhor que Q4_K_M?',
-            a: 'Apenas em casos extremos — matemática complexa de múltiplas etapas, recuperação de citações exatas em documentos longos ou saídas muito longas. Para chat, codificação e resumo (que cobrem 95% do uso), a maioria dos usuários não percebe a diferença.',
+            a: 'Possivelmente, mas essas fontes não mostram onde. Q8_0 tem menos erro de quantização: +0,02% de perplexidade vs f16 no Llama 3 8B, contra +2,8% do Q4_K_M (llama.cpp, calculado). Perplexidade não mede diretamente a qualidade em chat, código ou resumo; teste os dois na sua própria tarefa.',
           },
           {
             q: 'Q8_0 é mais rápido que Q4_K_M?',
-            a: 'Não. Q8_0 é maior e requer mais largura de banda de memória, tornando-o levemente mais lento por token que Q4_K_M. Velocidade e qualidade favorecem Q4_K_M para configurações com VRAM limitada. Veja <a href="/pt/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">o que Q4_K_M significa</a> para o motivo subjacente.',
+            a: 'Não. Q8_0 é maior e exige mais largura de banda de memória por token. O README do quantize do llama.cpp lista 71,93 tokens/s para Q4_K_M e 50,93 tokens/s para Q8_0 no Llama 3.1 8B (a velocidade depende do hardware). Veja <a href="/pt/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">o que Q4_K_M significa</a> para o motivo de fundo.',
           },
           {
             q: 'Posso alternar entre Q4_K_M e Q8_0 para diferentes tarefas?',
@@ -478,7 +484,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'E Q4_K_S — vale a pena usar em vez de Q4_K_M?',
-            a: 'Q4_K_S economiza cerca de 300 MB em relação ao Q4_K_M, mas oferece qualidade inferior. Use Q4_K_S apenas se sua VRAM for muito limitada e Q4_K_M não couber. Em quase todos os casos, Q4_K_M é a melhor escolha.',
+            a: 'Q4_K_S é 0,22 GiB menor que Q4_K_M (4,36 contra 4,58 GiB no Llama 3.1 8B) e tem perplexidade maior (6,50 contra 6,41 no Llama 3 8B sem matriz de importância). Use Q4_K_S apenas se Q4_K_M não couber; caso contrário, Q4_K_M é a melhor escolha.',
           },
         ],
       },
@@ -489,21 +495,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-es.webp',
     title: 'Q4_K_M vs Q8_0: ¿cuál elegir?',
     seoTitle: 'Q4_K_M vs Q8_0: ¿cuál? 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Usa Q4_K_M con 8 GB de VRAM o menos. Usa Q8_0 con 12+ GB. Q4_K_M ofrece el 95% de la calidad de Q8_0 a la mitad del tamaño. Respuesta rápida de PromptQuorum.',
+    metaDescription: 'Q4_K_M con 8 GB de VRAM o menos, Q8_0 con 12+ GB. En Llama 3 8B, Q4_K_M ocupa 4,58 GiB (+2,8 % de perplejidad vs f16); Q8_0 ocupa 7,96 GiB (+0,02 %).',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       es: {
         question: 'Q4_K_M vs Q8_0: ¿cuál elegir?',
-        answer: 'Usa Q4_K_M con 8 GB de VRAM o menos. Usa Q8_0 con 12+ GB. Q4_K_M ofrece el 95% de la calidad de Q8_0 aproximadamente a la mitad del tamaño de archivo.',
+        answer: 'Usa Q4_K_M con 8 GB de VRAM o menos y Q8_0 con 12+ GB. En Llama 3 8B, Q4_K_M ocupa 4,58 GiB y Q8_0 7,96 GiB; Q8_0 queda más cerca de la precisión completa.',
         bullets: [
-          'Q4_K_M: ~5–6 GB para modelos 7B, ideal para 8 GB de VRAM',
-          'Q8_0: ~8–9 GB para modelos 7B, necesita 12+ GB de VRAM',
-          'La diferencia de calidad es inferior al 5% en uso real',
+          'Q4_K_M: 4,58 GiB para Llama 3.1 8B, unos 5,1 GiB con caché KV de 4k (calculado)',
+          'Q8_0: 7,95 GiB para Llama 3.1 8B, unos 8,5 GiB con caché KV de 4k (calculado)',
+          'Perplejidad vs f16 en Llama 3 8B: Q4_K_M +2,8 %, Q8_0 +0,02 % (llama.cpp, calculado)',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -511,31 +517,32 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '8 GB de VRAM o menos: usa Q4_K_M — ofrece el 95% de la calidad de Q8_0 aproximadamente a la mitad del tamaño de archivo',
-          '12+ GB de VRAM: Q8_0 vale la pena para calidad casi de plena precisión sin penalización de velocidad',
+          '8 GB de VRAM o menos: usa Q4_K_M — su archivo 8B ocupa 4,58 GiB, mientras que Q8_0 (7,95 GiB) ya no cabe al añadir la caché KV',
+          '12+ GB de VRAM: Q8_0 vale la pena para una salida cercana a f16, pero es más lento: 50,93 frente a 71,93 tokens/s en Llama 3.1 8B según el README de quantize de llama.cpp',
           'Para la mayoría de usuarios que usan Ollama a diario, Q4_K_M es la elección correcta',
         ],
       },
       body1: {
         title: 'El veredicto rápido',
         content: [
-          '<strong>Q8_0 mantiene ~99% de la calidad de plena precisión. Q4_K_M mantiene ~92%.</strong> La diferencia de 7 puntos es invisible en chat, programación y resúmenes — tres tareas que cubren el 95% del uso de LLMs locales. Q8_0 solo aventaja en recuperación factual de documentos largos, matemáticas de múltiples pasos y código que requiere sintaxis exacta en más de 500 líneas.',
-          'Q4_K_M es la opción predeterminada correcta porque la calidad extra de Q8_0 solo aparece en casos extremos: generación larga con recuperación factual exacta, o razonamiento matemático que requiere mayor precisión. Para todo lo demás, Q4_K_M iguala a Q8_0 en la práctica.',
-          'Si ya usas Q4_K_M y los resultados parecen incorrectos, el problema casi nunca es la cuantización — es el tamaño del modelo o la estructura del prompt.',
+          '<strong>En Llama 3 8B, Q8_0 es prácticamente idéntico a f16 en perplejidad, y Q4_K_M añade un pequeño aumento.</strong> La prueba de perplejidad de llama.cpp en wikitext da 6,2332 para f16, 6,2343 para Q8_0 y 6,4071 para Q4_K_M sin matriz de importancia: +0,02 % y +2,8 % (calculado; <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">README de perplexity de llama.cpp</a>). La perplejidad es una puntuación de modelado de lenguaje, no un benchmark de tareas, así que no indica cuánto cambia una tarea concreta de chat, programación o resumen.',
+          'Q4_K_M es el valor predeterminado habitual porque el archivo de Llama 3.1 8B ocupa 4,58 GiB en lugar de 7,95 GiB y se mantiene cerca de f16 en esa prueba. Elige Q8_0 cuando la memoria no sea el límite. No hemos medido la calidad por tarea por nuestra cuenta; si una tarea te importa, prueba ambas cuantizaciones con ella.',
+          'Si los resultados con Q4_K_M parecen malos, revisa primero el tamaño del modelo y la estructura del prompt: la diferencia de perplejidad medida frente a f16 es pequeña.',
         ],
       },
       body2: {
         title: 'Comparación lado a lado',
         content: [
-          'La tabla siguiente compara Q4_K_M y Q8_0 para un modelo 7B. Ambos formatos funcionan con Ollama, LM Studio y llama.cpp sin configuración especial.',
+          'La tabla usa tamaños de archivo de Llama 3.1 8B del <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/quantize/README.md" class="text-primary hover:underline" rel="noopener noreferrer">README de quantize de llama.cpp</a>, una caché KV calculada (32 capas, 8 cabezas clave-valor, dimensión de cabeza 128, f16: 0,5 GiB para 4.096 tokens) y la perplejidad de Llama 3 8B del README de perplexity de llama.cpp. Ambos formatos funcionan con Ollama, LM Studio y llama.cpp sin configuración especial.',
           'Para entender Q4_K_M y cómo funciona la compresión k-quant, consulta la <a href="/es/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">guía explicativa de Q4_K_M</a>. Para la referencia completa de cuantización, consulta <a href="/es/local-llms/quantization-levels-comparison" class="text-primary hover:underline">niveles de cuantización comparados</a>.',
-          '<strong>Tres tareas revelan la brecha de calidad de Q4_K_M: recuperación de documentos largos (50+ páginas), matemáticas de múltiples pasos con estado intermedio, y generación de código en más de 300 líneas.</strong> Para estos casos, la precisión extra de Q8_0 previene los pequeños errores de deriva que se acumulan en salidas largas. Para todo lo demás — chat, código de menos de 200 líneas, preguntas y respuestas, resúmenes — la brecha es invisible. Para un repaso antes de decidir, consulta <a href="/es/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">qué significa Q4_K_M</a>.',
+          '<strong>Ninguna de las fuentes anteriores prueba la recuperación en documentos largos, las matemáticas de varios pasos ni la generación de código largo; por eso esta página no afirma nada al respecto.</strong> Q8_0 tiene menor perplejidad que Q4_K_M; si tienes la memoria, es la opción más segura para tareas en las que importan los errores pequeños. Para repasar, consulta <a href="/es/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">qué significa Q4_K_M</a>.',
         ],
         columns: ['Métrica', 'Q4_K_M', 'Q8_0'],
         rows: [
-          { 'Métrica': 'Tamaño de archivo (modelo 7B)', 'Q4_K_M': '~4,1 GB', 'Q8_0': '~7,7 GB' },
-          { 'Métrica': 'VRAM necesaria (7B)', 'Q4_K_M': '5–6 GB', 'Q8_0': '8–9 GB' },
-          { 'Métrica': 'Calidad vs plena precisión', 'Q4_K_M': '~92%', 'Q8_0': '~99%' },
+          { 'Métrica': 'Tamaño de archivo (Llama 3.1 8B)', 'Q4_K_M': '4,58 GiB', 'Q8_0': '7,95 GiB' },
+          { 'Métrica': 'VRAM con caché KV de 4k (calculado, sin sobrecarga de ejecución)', 'Q4_K_M': '~5,1 GiB', 'Q8_0': '~8,5 GiB' },
+          { 'Métrica': 'Perplejidad, Llama 3 8B (f16: 6,23)', 'Q4_K_M': '6,41 (+2,8 %)', 'Q8_0': '6,23 (+0,02 %)' },
+          { 'Métrica': 'Tokens/s, Llama 3.1 8B (README)', 'Q4_K_M': '71,93', 'Q8_0': '50,93' },
           { 'Métrica': 'Mejor para', 'Q4_K_M': '6–8 GB VRAM', 'Q8_0': '12+ GB VRAM' },
         ],
       },
@@ -545,11 +552,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Es Q8_0 notablemente mejor que Q4_K_M?',
-            a: 'Solo en casos extremos — matemáticas complejas de múltiples pasos, recuperación de citas exactas en documentos largos, o salidas muy largas. Para chat, programación y resúmenes (que cubren el 95% del uso), la mayoría de usuarios no nota la diferencia.',
+            a: 'Posiblemente, pero estas fuentes no muestran dónde. Q8_0 tiene menos error de cuantización: +0,02 % de perplejidad vs f16 en Llama 3 8B, frente a +2,8 % de Q4_K_M (llama.cpp, calculado). La perplejidad no mide directamente la calidad en chat, programación o resumen; prueba ambos en tu propia tarea.',
           },
           {
             q: '¿Es Q8_0 más rápido que Q4_K_M?',
-            a: 'No. Q8_0 es más grande y requiere más ancho de banda de memoria, lo que lo hace ligeramente más lento por token que Q4_K_M. Tanto la velocidad como la calidad favorecen a Q4_K_M en configuraciones con VRAM limitada. Consulta <a href="/es/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">qué significa Q4_K_M</a> para la razón subyacente.',
+            a: 'No. Q8_0 es más grande y necesita más ancho de banda de memoria por token. El README de quantize de llama.cpp indica 71,93 tokens/s para Q4_K_M y 50,93 tokens/s para Q8_0 en Llama 3.1 8B (la velocidad depende del hardware). Consulta <a href="/es/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">qué significa Q4_K_M</a> para ver la razón de fondo.',
           },
           {
             q: '¿Puedo alternar entre Q4_K_M y Q8_0 para diferentes tareas?',
@@ -557,7 +564,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Y Q4_K_S — vale la pena usarlo en lugar de Q4_K_M?',
-            a: 'Q4_K_S ahorra unos 300 MB respecto a Q4_K_M pero ofrece menor calidad. Usa Q4_K_S solo si tu VRAM es muy limitada y Q4_K_M no cabe. En casi todos los casos, Q4_K_M es la mejor elección.',
+            a: 'Q4_K_S es 0,22 GiB más pequeño que Q4_K_M (4,36 frente a 4,58 GiB en Llama 3.1 8B) y tiene mayor perplejidad (6,50 frente a 6,41 en Llama 3 8B sin matriz de importancia). Usa Q4_K_S solo si Q4_K_M no cabe; si no, Q4_K_M es la mejor opción.',
           },
         ],
       },
@@ -568,21 +575,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-ar.webp',
     title: '⁨Q4⁩_⁨K⁩_⁨M⁩ مقابل ⁨Q8⁩_⁨0⁩: أيهما تختار؟',
     seoTitle: '⁨Q4⁩_⁨K⁩_⁨M⁩ مقابل ⁨Q8⁩_⁨0⁩ ⁨2026⁩: أيهما تختار؟',
-    metaDescription: 'استخدم ⁨Q4⁩_⁨K⁩_⁨M⁩ مع ⁨8 GB VRAM⁩ أو أقل، و⁨Q8⁩_⁨0⁩ مع ⁨12+ GB⁩. يوفر ⁨Q4⁩_⁨K⁩_⁨M⁩ ⁨95%⁩ من جودة ⁨Q8⁩_⁨0⁩ بنصف الحجم.',
+    metaDescription: 'استخدم Q4_K_M مع 8 GB VRAM أو أقل، وQ8_0 مع 12+ GB. في Llama 3 8B حجم Q4_K_M هو 4.58 GiB (حيرة أعلى بـ 2.8% من f16) وحجم Q8_0 هو 7.96 GiB (+0.02%).',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       ar: {
         question: 'Q4_K_M مقابل Q8_0: أيهما تختار؟',
-        answer: 'استخدم Q4_K_M مع 8 GB من VRAM أو أقل. استخدم Q8_0 مع 12+ GB. يوفر Q4_K_M حوالي 95% من جودة Q8_0 بنصف حجم الملف تقريبًا.',
+        answer: 'استخدم Q4_K_M مع 8 GB من VRAM أو أقل، وQ8_0 مع 12+ GB. في Llama 3 8B حجم Q4_K_M هو 4.58 GiB وحجم Q8_0 هو 7.96 GiB، ويبقى Q8_0 أقرب إلى الدقة الكاملة.',
         bullets: [
-          'Q4_K_M: ~5–6 GB لنماذج 7B، مثالي لـ 8 GB VRAM',
-          'Q8_0: ~8–9 GB لنماذج 7B، يحتاج 12+ GB VRAM',
-          'فارق الجودة أقل من 5% في الاستخدام الفعلي',
+          'Q4_K_M: ‏4.58 GiB لنموذج Llama 3.1 8B، وحوالي 5.1 GiB مع ذاكرة KV بسياق 4k (محسوب)',
+          'Q8_0: ‏7.95 GiB لنموذج Llama 3.1 8B، وحوالي 8.5 GiB مع ذاكرة KV بسياق 4k (محسوب)',
+          'الحيرة (perplexity) نسبةً إلى f16 في Llama 3 8B: ‏Q4_K_M ‏+2.8%، وQ8_0 ‏+0.02% (llama.cpp، محسوب)',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -590,31 +597,32 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '8 GB VRAM أو أقل: استخدم Q4_K_M — يوفر 95% من جودة Q8_0 بنصف حجم الملف تقريبًا',
-          '12+ GB VRAM: يستحق Q8_0 العناء للحصول على جودة شبه كاملة بدون عقوبة في السرعة',
+          '8 GB VRAM أو أقل: استخدم Q4_K_M — حجم ملف 8B فيه 4.58 GiB، بينما لا يتسع Q8_0 (7.95 GiB) بعد إضافة ذاكرة KV',
+          '12+ GB VRAM: يستحق Q8_0 العناء للحصول على مخرجات قريبة من f16، لكنه أبطأ: 50.93 مقابل 71.93 رمزًا/ثانية لـ Llama 3.1 8B في ملف README الخاص بـ quantize في llama.cpp',
           'لمعظم المستخدمين الذين يستخدمون Ollama يوميًا، Q4_K_M هو الاختيار الصحيح',
         ],
       },
       body1: {
         title: 'الحكم السريع',
         content: [
-          '<strong>يحافظ Q8_0 على حوالي 99% من جودة الدقة الكاملة، بينما يحافظ Q4_K_M على حوالي 92%.</strong> الفارق البالغ 7 نقاط غير مرئي في الدردشة والبرمجة والتلخيص — وهي المهام الثلاث التي تغطي 95% من استخدام نماذج اللغة المحلية. لا يتفوق Q8_0 إلا في استرجاع الحقائق من المستندات الطويلة والرياضيات متعددة الخطوات وتوليد الكود الذي يتطلب بناءً صحيحًا في 500+ سطر.',
-          'يُعدّ Q4_K_M الخيار الافتراضي الصحيح لأن الجودة الإضافية لـ Q8_0 تظهر فقط في الحالات القصوى: التوليد الطويل مع استرجاع دقيق للحقائق، أو الاستدلال الرياضي الذي يتطلب دقة أعلى. لكل شيء آخر، يعادل Q4_K_M أداء Q8_0 عمليًا.',
-          'إذا كنت تستخدم Q4_K_M بالفعل وبدت النتائج خاطئة، فالمشكلة في الغالب ليست في الكميّة — بل في حجم النموذج أو بنية الموجّه.',
+          '<strong>في Llama 3 8B يكاد Q8_0 يطابق f16 من حيث الحيرة (perplexity)، ويضيف Q4_K_M زيادة صغيرة.</strong> يعطي اختبار الحيرة في llama.cpp على wikitext القيمة 6.2332 لـ f16 و6.2343 لـ Q8_0 و6.4071 لـ Q4_K_M دون مصفوفة أهمية، أي +0.02% و+2.8% (محسوب؛ <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">ملف README الخاص بـ perplexity في llama.cpp</a>). الحيرة مقياس لنمذجة اللغة وليست اختبار أداء للمهام، لذا لا تُظهر مقدار تغيّر مهمة محددة في الدردشة أو البرمجة أو التلخيص.',
+          'Q4_K_M هو الخيار الافتراضي المعتاد لأن ملف Llama 3.1 8B يبلغ 4.58 GiB بدلًا من 7.95 GiB ويبقى قريبًا من f16 في هذا الاختبار. اختر Q8_0 عندما لا تكون الذاكرة هي القيد. لم نقِس جودة المهام بأنفسنا؛ إذا كانت مهمة معينة تهمك، فجرّب التكميمين عليها.',
+          'إذا بدت نتائجك سيئة مع Q4_K_M، فتحقق أولًا من حجم النموذج وبنية الـ prompt: فارق الحيرة المقيس عن f16 صغير.',
         ],
       },
       body2: {
         title: 'مقارنة جانبًا إلى جانب',
         content: [
-          'يقارن الجدول التالي Q4_K_M و Q8_0 لنموذج 7B. كلا الصيغتين تعملان مع Ollama و LM Studio و llama.cpp دون أي إعداد خاص.',
+          'يستخدم الجدول أحجام ملفات Llama 3.1 8B من <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/quantize/README.md" class="text-primary hover:underline" rel="noopener noreferrer">ملف README الخاص بـ quantize في llama.cpp</a>، وذاكرة KV محسوبة (32 طبقة، و8 رؤوس مفتاح-قيمة، وبُعد رأس 128، بدقة f16: ‏0.5 GiB لكل 4,096 رمز)، وحيرة Llama 3 8B من ملف README الخاص بـ perplexity في llama.cpp. تعمل الصيغتان مع Ollama وLM Studio وllama.cpp دون أي إعداد خاص.',
           'لفهم ماهية Q4_K_M وكيف تعمل ضغط k-quant، راجع <a href="/ar/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">دليل شرح Q4_K_M</a>. للمرجع الكامل حول الكميّة، راجع <a href="/ar/local-llms/quantization-levels-comparison" class="text-primary hover:underline">مستويات الكميّة مقارنةً</a>.',
-          '<strong>ثلاث مهام تكشف فجوة الجودة في Q4_K_M: استرجاع المستندات الطويلة (50+ صفحة)، والرياضيات متعددة الخطوات مع حالات وسيطة، وتوليد الكود الذي يتجاوز 300 سطر.</strong> في هذه الحالات، تمنع الدقة الإضافية في Q8_0 أخطاء الانجراف الصغيرة التي تتراكم في المخرجات الطويلة. لكل شيء آخر — الدردشة والكود الأقل من 200 سطر والأسئلة والأجوبة والتلخيص — الفجوة غير مرئية. للمراجعة قبل اتخاذ القرار، راجع <a href="/ar/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">ماذا يعني Q4_K_M</a>.',
+          '<strong>لا يختبر أي من المصادر أعلاه استرجاع المستندات الطويلة أو الرياضيات متعددة الخطوات أو توليد الشيفرة الطويلة، لذلك لا تقدّم هذه الصفحة أي ادعاء بشأنها.</strong> للحيرة في Q8_0 قيمة أقل منها في Q4_K_M، فإن توفرت لديك الذاكرة فهو الخيار الأكثر أمانًا للمهام التي تهمّ فيها الأخطاء الصغيرة. للمراجعة، راجع <a href="/ar/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">معنى Q4_K_M</a>.',
         ],
         columns: ['المقياس', 'Q4_K_M', 'Q8_0'],
         rows: [
-          { 'المقياس': 'حجم الملف (نموذج 7B)', 'Q4_K_M': '~4.1 GB', 'Q8_0': '~7.7 GB' },
-          { 'المقياس': 'VRAM المطلوبة (7B)', 'Q4_K_M': '5–6 GB', 'Q8_0': '8–9 GB' },
-          { 'المقياس': 'الجودة مقارنةً بالدقة الكاملة', 'Q4_K_M': '~92%', 'Q8_0': '~99%' },
+          { 'المقياس': 'حجم الملف (Llama 3.1 8B)', 'Q4_K_M': '4.58 GiB', 'Q8_0': '7.95 GiB' },
+          { 'المقياس': 'VRAM مع ذاكرة KV بسياق 4k (محسوب، دون الحمل الإضافي لوقت التشغيل)', 'Q4_K_M': '~5.1 GiB', 'Q8_0': '~8.5 GiB' },
+          { 'المقياس': 'الحيرة، Llama 3 8B (‏f16: ‏6.23)', 'Q4_K_M': '6.41 (+2.8%)', 'Q8_0': '6.23 (+0.02%)' },
+          { 'المقياس': 'رمز/ثانية، Llama 3.1 8B (README)', 'Q4_K_M': '71.93', 'Q8_0': '50.93' },
           { 'المقياس': 'الأنسب لـ', 'Q4_K_M': '6–8 GB VRAM', 'Q8_0': '12+ GB VRAM' },
         ],
       },
@@ -624,11 +632,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'هل يتفوق Q8_0 بشكل ملحوظ على Q4_K_M؟',
-            a: 'فقط في الحالات القصوى — الرياضيات المعقدة متعددة الخطوات، واسترجاع الاقتباسات الدقيقة من المستندات الطويلة، أو المخرجات الطويلة جدًا. في الدردشة والبرمجة والتلخيص (التي تغطي 95% من الاستخدام)، لا يلاحظ معظم المستخدمين الفرق.',
+            a: 'ربما، لكن هذه المصادر لا تبيّن أين. يحمل Q8_0 خطأ تكميم أقل: حيرة أعلى بـ 0.02% فقط من f16 في Llama 3 8B مقابل 2.8% لـ Q4_K_M (llama.cpp، محسوب). لا تقيس الحيرة جودة الدردشة أو البرمجة أو التلخيص مباشرة، لذا جرّب الاثنين على مهمتك الخاصة.',
           },
           {
             q: 'هل Q8_0 أسرع من Q4_K_M؟',
-            a: 'لا. Q8_0 أكبر حجمًا ويتطلب نطاق ترددي أعلى للذاكرة، مما يجعله أبطأ قليلًا لكل رمز مقارنةً بـ Q4_K_M. السرعة والجودة كلاهما يصبّان في صالح Q4_K_M في الإعدادات ذات VRAM المحدودة. راجع <a href="/ar/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">ماذا يعني Q4_K_M</a> للسبب الجوهري.',
+            a: 'لا. Q8_0 أكبر حجمًا ويحتاج نطاقًا ترددّيًا أعلى للذاكرة لكل رمز. يذكر ملف README الخاص بـ quantize في llama.cpp القيمة 71.93 رمزًا/ثانية لـ Q4_K_M و50.93 رمزًا/ثانية لـ Q8_0 في Llama 3.1 8B (تعتمد السرعة على العتاد). راجع <a href="/ar/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">معنى Q4_K_M</a> لمعرفة السبب الأساسي.',
           },
           {
             q: 'هل يمكنني التبديل بين Q4_K_M و Q8_0 لمهام مختلفة؟',
@@ -636,7 +644,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'وماذا عن Q4_K_S — هل يستحق استخدامه بدلًا من Q4_K_M؟',
-            a: 'يوفر Q4_K_S حوالي 300 MB مقارنةً بـ Q4_K_M لكنه يقدم جودة أدنى. استخدم Q4_K_S فقط إذا كانت VRAM لديك محدودة جدًا ولا يتسع Q4_K_M. في الغالب الأعم، Q4_K_M هو الاختيار الأفضل.',
+            a: 'Q4_K_S أصغر من Q4_K_M بمقدار 0.22 GiB (4.36 مقابل 4.58 GiB في Llama 3.1 8B) وحيرته أعلى (6.50 مقابل 6.41 في Llama 3 8B دون مصفوفة أهمية). استخدم Q4_K_S فقط إذا لم يتسع Q4_K_M؛ وإلا فـ Q4_K_M هو الخيار الأفضل.',
           },
         ],
       },
@@ -647,21 +655,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-ko.webp',
     title: 'Q4_K_M vs Q8_0: 어느 것을 선택해야 합니까?',
     seoTitle: 'Q4_K_M vs Q8_0: 2026년 선택 가이드',
-    metaDescription: 'VRAM 8 GB 이하는 Q4_K_M, 12 GB 이상은 Q8_0을 사용하십시오. Q4_K_M은 절반 크기로 Q8_0 품질의 95%를 제공합니다.',
+    metaDescription: 'VRAM 8 GB 이하는 Q4_K_M, 12 GB 이상은 Q8_0. Llama 3 8B: Q4_K_M 4.58 GiB(퍼플렉시티 +2.8%), Q8_0 7.96 GiB(+0.02%).',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       ko: {
         question: 'Q4_K_M vs Q8_0: 어느 것을 선택해야 합니까?',
-        answer: 'VRAM이 8 GB 이하이면 Q4_K_M을 사용하십시오. 12 GB 이상이면 Q8_0을 사용하십시오. Q4_K_M은 약 절반의 파일 크기로 Q8_0 품질의 95%를 제공합니다.',
+        answer: 'VRAM이 8 GB 이하이면 Q4_K_M을, 12 GB 이상이면 Q8_0을 사용하십시오. Llama 3 8B에서 Q4_K_M은 4.58 GiB, Q8_0은 7.96 GiB이며 Q8_0이 완전 정밀도에 더 가깝습니다.',
         bullets: [
-          'Q4_K_M: 7B 모델에서 ~5–6 GB, 8 GB VRAM에 최적',
-          'Q8_0: 7B 모델에서 ~8–9 GB, 12+ GB VRAM 필요',
-          '실제 사용에서 품질 차이는 5% 미만입니다',
+          'Q4_K_M: Llama 3.1 8B 기준 4.58 GiB, 4k KV 캐시 포함 약 5.1 GiB (계산값)',
+          'Q8_0: Llama 3.1 8B 기준 7.95 GiB, 4k KV 캐시 포함 약 8.5 GiB (계산값)',
+          'Llama 3 8B의 f16 대비 퍼플렉시티: Q4_K_M +2.8%, Q8_0 +0.02% (llama.cpp, 계산값)',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -669,41 +677,42 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '8 GB VRAM 이하: Q4_K_M을 사용하십시오 — 약 절반의 파일 크기로 Q8_0 품질의 95%를 제공합니다',
-          '12+ GB VRAM: Q8_0은 속도 손실 없이 거의 완전 정밀도에 가까운 품질을 위해 선택할 가치가 있습니다',
+          'VRAM 8 GB 이하: Q4_K_M을 사용하십시오 — 8B 파일이 4.58 GiB인 반면 Q8_0(7.95 GiB)은 KV 캐시를 더하면 들어가지 않습니다',
+          'VRAM 12 GB 이상: f16에 가까운 출력을 원하면 Q8_0이 가치가 있지만 더 느립니다. llama.cpp quantize README에서 Llama 3.1 8B는 50.93 대 71.93 tokens/s입니다',
           '매일 Ollama를 사용하는 대부분의 사용자에게 Q4_K_M이 올바른 선택입니다',
         ],
       },
       body1: {
         title: '빠른 결론',
         content: [
-          '<strong>Q8_0은 완전 정밀도 품질의 ~99%를 유지합니다. Q4_K_M은 ~92%입니다.</strong> 이 7포인트 차이는 채팅, 코딩, 요약에서는 눈에 보이지 않습니다. 이 세 가지 작업이 로컬 LLM 사용의 95%를 차지합니다. Q8_0이 우위를 보이는 경우는 장문 사실 회상, 다단계 수학, 그리고 500줄 이상의 정확한 구문이 필요한 코드뿐입니다.',
-          'Q4_K_M이 올바른 기본값인 이유는 Q8_0의 추가 품질이 엣지 케이스에서만 나타나기 때문입니다: 정확한 사실 회상이 필요한 장문 생성, 또는 높은 정밀도가 필요한 수학적 추론. 그 외 모든 상황에서 Q4_K_M은 실제로 Q8_0과 동등합니다.',
-          '이미 Q4_K_M을 사용하고 있는데 결과가 올바르지 않게 느껴진다면, 문제는 거의 항상 양자화가 아닌 모델 크기나 프롬프트 구조에 있습니다.',
+          '<strong>Llama 3 8B에서 퍼플렉시티 기준으로 Q8_0은 f16과 사실상 같고, Q4_K_M은 소폭 높아집니다.</strong> llama.cpp의 wikitext 퍼플렉시티 테스트에서 f16은 6.2332, Q8_0은 6.2343, Q4_K_M(중요도 행렬 없음)은 6.4071로, 각각 +0.02%와 +2.8%입니다(계산값, <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp perplexity README</a>). 퍼플렉시티는 언어 모델링 지표이지 작업 벤치마크가 아니므로, 특정 채팅·코딩·요약 작업이 얼마나 달라지는지는 보여주지 않습니다.',
+          'Q4_K_M이 일반적인 기본값인 이유는 Llama 3.1 8B 파일이 7.95 GiB가 아니라 4.58 GiB이고, 이 테스트에서 f16에 가깝게 유지되기 때문입니다. 메모리가 제약이 아니라면 Q8_0을 선택하십시오. 작업 품질은 직접 측정하지 않았습니다. 중요한 작업이 있다면 두 양자화를 모두 그 작업에서 시험해 보십시오.',
+          'Q4_K_M에서 결과가 이상하게 느껴지면 먼저 모델 크기와 프롬프트 구조를 확인하십시오. 측정된 f16과의 퍼플렉시티 차이는 작습니다.',
         ],
       },
       body2: {
         title: '나란히 비교',
         content: [
-          '아래 표는 7B 모델에 대한 Q4_K_M과 Q8_0을 비교합니다. 두 형식 모두 특별한 설정 없이 Ollama, LM Studio, llama.cpp에서 작동합니다.',
+          '이 표는 <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/quantize/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp quantize README</a>의 Llama 3.1 8B 파일 크기, 계산한 KV 캐시(32개 레이어, 키-값 헤드 8개, 헤드 차원 128, f16에서 4,096토큰당 0.5 GiB), llama.cpp perplexity README의 Llama 3 8B 퍼플렉시티를 사용합니다. 두 형식 모두 특별한 설정 없이 Ollama, LM Studio, llama.cpp에서 작동합니다.',
           'Q4_K_M의 의미와 k-quant 압축이 어떻게 작동하는지 이해하려면 <a href="/ko/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M 설명 가이드</a>를 참조하십시오. 전체 양자화 참조 자료는 <a href="/ko/local-llms/quantization-levels-comparison" class="text-primary hover:underline">양자화 레벨 비교</a>를 참조하십시오.',
-          '<strong>세 가지 작업이 Q4_K_M의 품질 차이를 드러냅니다: 장문 문서 회상(50+ 페이지), 중간 상태가 있는 다단계 수학, 300줄 이상의 코드 생성.</strong> 이러한 경우 Q8_0의 추가 정밀도는 긴 출력에서 누적되는 작은 드리프트 오류를 방지합니다. 그 외 모든 것 — 채팅, 200줄 미만의 코드, 질문과 답변, 요약 — 에서는 차이가 보이지 않습니다. 결정 전 복습을 위해 <a href="/ko/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M의 의미</a>를 참조하십시오.',
+          '<strong>위 출처 중 어느 것도 긴 문서 회상, 다단계 수학, 긴 코드 생성을 시험하지 않았으므로 이 페이지는 그에 대해 주장하지 않습니다.</strong> Q8_0은 Q4_K_M보다 퍼플렉시티가 낮으므로, 메모리가 있다면 작은 오류가 중요한 작업에서 더 안전한 선택입니다. 복습은 <a href="/ko/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M의 의미</a>를 참조하십시오.',
         ],
         columns: ['지표', 'Q4_K_M', 'Q8_0'],
         rows: [
-          { '지표': '파일 크기 (7B 모델)', 'Q4_K_M': '~4.1 GB', 'Q8_0': '~7.7 GB' },
-          { '지표': '필요 VRAM (7B)', 'Q4_K_M': '5–6 GB', 'Q8_0': '8–9 GB' },
-          { '지표': '완전 정밀도 대비 품질', 'Q4_K_M': '~92%', 'Q8_0': '~99%' },
+          { '지표': '파일 크기 (Llama 3.1 8B)', 'Q4_K_M': '4.58 GiB', 'Q8_0': '7.95 GiB' },
+          { '지표': '4k KV 캐시 포함 VRAM (계산값, 런타임 오버헤드 제외)', 'Q4_K_M': '약 5.1 GiB', 'Q8_0': '약 8.5 GiB' },
+          { '지표': '퍼플렉시티, Llama 3 8B (f16: 6.23)', 'Q4_K_M': '6.41 (+2.8%)', 'Q8_0': '6.23 (+0.02%)' },
+          { '지표': 'Tokens/s, Llama 3.1 8B (README)', 'Q4_K_M': '71.93', 'Q8_0': '50.93' },
           { '지표': '최적 VRAM', 'Q4_K_M': '6–8 GB VRAM', 'Q8_0': '12+ GB VRAM' },
         ],
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Q4_K_M은 VRAM이 8 GB 이하인 환경에서 Q8_0 품질의 95%를 절반 크기로 제공하는 최적의 양자화 형식입니다.',
+            text: 'Q4_K_M은 VRAM이 8 GB 이하인 환경에서 파일 크기를 4.58 GiB(Llama 3.1 8B)로 줄여 주는 기본 양자화 형식이며, Llama 3 8B에서 f16 대비 퍼플렉시티는 +2.8%입니다.',
           },
           {
             type: 'plain-terms',
-            text: 'Q4_K_M은 더 작은 파일(7B 모델 기준 약 4.1 GB)을 사용하며 Q8_0(약 7.7 GB)보다 덜 정확하지만, 채팅, 코딩, 요약 등 일상적인 작업에서는 그 차이가 거의 눈에 보이지 않습니다.',
+            text: 'Q4_K_M은 Q8_0(7.95 GiB)보다 작은 파일(4.58 GiB)을 사용하지만 퍼플렉시티가 더 높고(6.41 대 6.23), 일상적인 작업에서 그 차이가 체감되는지는 이 출처들로는 확인되지 않습니다.',
           },
         ],
       },
@@ -713,11 +722,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Q8_0은 Q4_K_M보다 눈에 띄게 우수합니까?',
-            a: '엣지 케이스에서만 그렇습니다. 복잡한 다단계 수학, 장문 문서의 정확한 인용 회상, 또는 매우 긴 출력의 경우가 해당됩니다. 채팅, 코딩, 요약(사용의 95%를 차지)에서는 대부분의 사용자가 차이를 인식하지 못합니다.',
+            a: '가능성은 있지만 이 출처들로는 어디서 차이가 나는지 알 수 없습니다. Q8_0은 양자화 오류가 더 적어, Llama 3 8B에서 f16 대비 퍼플렉시티가 +0.02%이고 Q4_K_M은 +2.8%입니다(llama.cpp, 계산값). 퍼플렉시티는 채팅·코딩·요약 품질을 직접 측정하지 않으므로 직접 하는 작업에서 둘 다 시험해 보십시오.',
           },
           {
             q: 'Q8_0이 Q4_K_M보다 빠릅니까?',
-            a: '아닙니다. Q8_0은 더 크고 더 많은 메모리 대역폭을 필요로 하여 토큰당 Q4_K_M보다 약간 더 느립니다. VRAM이 제한된 환경에서는 속도와 품질 모두 Q4_K_M이 유리합니다. 근본적인 이유는 <a href="/ko/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M의 의미</a>를 참조하십시오.',
+            a: '아닙니다. Q8_0은 더 크고 토큰당 더 많은 메모리 대역폭을 필요로 합니다. llama.cpp quantize README는 Llama 3.1 8B에서 Q4_K_M 71.93 tokens/s, Q8_0 50.93 tokens/s로 기재합니다(속도는 하드웨어에 따라 다릅니다). 근본적인 이유는 <a href="/ko/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M의 의미</a>를 참조하십시오.',
           },
           {
             q: '작업에 따라 Q4_K_M과 Q8_0을 전환할 수 있습니까?',
@@ -725,7 +734,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Q4_K_S는 어떻습니까? Q4_K_M 대신 사용할 가치가 있습니까?',
-            a: 'Q4_K_S는 Q4_K_M에 비해 약 300 MB를 절약하지만 품질이 더 낮습니다. VRAM이 매우 부족하여 Q4_K_M이 맞지 않는 경우에만 Q4_K_S를 사용하십시오. 거의 모든 경우에 Q4_K_M이 더 나은 선택입니다.',
+            a: 'Q4_K_S는 Q4_K_M보다 0.22 GiB 작고(Llama 3.1 8B에서 4.36 대 4.58 GiB) 퍼플렉시티가 더 높습니다(Llama 3 8B, 중요도 행렬 없음에서 6.50 대 6.41). Q4_K_M이 들어가지 않을 때만 Q4_K_S를 사용하십시오. 그 외에는 Q4_K_M이 더 나은 선택입니다.',
           },
         ],
       },
