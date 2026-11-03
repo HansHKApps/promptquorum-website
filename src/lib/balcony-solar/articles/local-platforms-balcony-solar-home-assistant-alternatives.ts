@@ -46,7 +46,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EVCC: built for PV-surplus EV charging, supports hundreds of devices, free software (sponsor token for many commercial chargers)',
           'ioBroker: large DACH community, Node.js-based, adapters for many German-market inverters',
           'Solar Assistant: commercial, Raspberry Pi image, €59 one-time — monitoring first, settings control on supported inverters, MQTT output',
-          'openHAB: Java-based, enterprise-grade framework — steeper learning curve than HA or ioBroker',
+          'openHAB: Java-based, rule-driven framework; many users find the learning curve steeper than Home Assistant or ioBroker',
           'Grafana + InfluxDB: dashboards and historical analytics only — no control capability',
         ],
         updatedDate: '2026-11-03',
@@ -85,7 +85,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**All nine platforms in this guide communicate with balcony solar hardware over one of the same three local protocols: Modbus TCP/RTU, MQTT, or a device\'s local REST API.** Your choice of platform does not change which physical devices you can reach — it changes the tooling you use to read and act on that data. Understanding which protocol your specific device exposes is the upstream question before choosing a platform; the companion article [No-Cloud Balcony Solar: Monitor Your System With Home Assistant](/balcony-solar/home-assistant-balcony-solar-no-cloud) covers the hardware-level protocol decision (which interface a given brand exposes, and how to verify it). This article assumes a local interface exists and focuses on which software platform to run on top of it.',
           '**Modbus RTU (RS-485 serial) and Modbus TCP (Ethernet/WiFi)** are the most common read-and-write interfaces on solar inverters and battery systems. Most platforms connect to Modbus TCP natively. Modbus RTU typically requires a serial-to-USB adapter or an ESPHome bridge device (see ESPHome profile below).',
-          '**MQTT** is the lightweight publish/subscribe messaging protocol that most local-API balcony solar devices use for real-time status broadcast. Nearly every platform in this guide can subscribe to an MQTT topic, making it the most broadly compatible connection path when a device supports it.',
+          '**MQTT** is the lightweight publish/subscribe messaging protocol that most local-API balcony solar devices use for real-time status broadcast. Nearly every platform in this guide can subscribe to an MQTT topic, making it the widely supported connection path when a device supports it.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Home Assistant, ioBroker, EVCC, openHAB, and Solar Assistant all connect over the same Modbus and MQTT protocols — the platform choice determines how you use that data, not whether you can reach the device.' },
@@ -112,7 +112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Each profile gives the licence, the latest release with its date, a concrete solar example and a best-fit profile.** Versions and dates come from the projects\' own release pages and registries; check your exact inverter or battery model against each platform\'s integration list before you commit.',
           '**Home Assistant** — Open source (Apache 2.0), local-first, Python-based. Latest release 2026.10.4 (24 Oct 2026). Runs on Home Assistant Green, a Raspberry Pi 4 or 5, an x86-64 machine or a VM; Home Assistant Yellow is no longer manufactured. Core integrations such as SMA and Fronius poll the inverter on your network, and Modbus, MQTT and REST are supported; check the integration list for your exact model. *Example*: A Zendure SolarFlow publishes state of charge and power flow through its local API; a community HACS integration reads it and an automation starts the dishwasher when PV output passes 400 W. *Best for*: A common default — large community, 1,500+ listed integrations, active control and automation.',
-          '**openHAB** — Open source (EPL 2.0), local-first, Java-based. Latest stable release 5.2.3 (10 Oct 2026). The official Modbus binding reads and writes over Modbus TCP and serial (RTU), and an HTTP binding covers REST devices. Things can be set up in the web UI or in text files; the learning curve is steeper than Home Assistant or ioBroker. *Example*: Poll a Fronius inverter\'s local Solar API every 10 seconds and trigger a rule that shifts a buffer-heater schedule to the midday production peak. *Best for*: Power users and integrators who want a strict automation framework, or who already run openHAB.',
+          '**openHAB** — Open source (EPL 2.0), local-first, Java-based. Latest stable release 5.2.3 (10 Oct 2026). The official Modbus binding reads and writes over Modbus TCP and serial (RTU), and an HTTP binding covers REST devices. Things can be set up in the web UI or in text files; many users find the learning curve steeper than Home Assistant or ioBroker. *Example*: Poll a Fronius inverter\'s local Solar API every 10 seconds and trigger a rule that shifts a buffer-heater schedule to the midday production peak. *Best for*: Power users and integrators who want a strict automation framework, or who already run openHAB.',
           '**ioBroker** — Open source (MIT), local-first, Node.js-based. js-controller 7.2.5 (5 Oct 2026). It has a large German-language community. Adapters: Modbus 9.2.2 (23 Oct 2026), MQTT 9.0.2 (30 Oct 2026), SMA Energy Meter 1.4.0 (11 Sep 2026), Fronius 2.2.0 (7 Mar 2026) and OpenDTU 3.1.0 (2 Dec 2024), which reads Hoymiles inverters through an [OpenDTU](https://github.com/tbnobody/OpenDTU) device (v26.9.28, 28 Sep 2026). **The Fronius and OpenDTU adapters have had no release for more than three months — check their repositories before you rely on them.** The VIS dashboard needs no separate tool. *Example*: Read a Sungrow inverter through the Modbus adapter and show daily battery state of charge as a bar chart in VIS. *Best for*: DACH users already in the ioBroker ecosystem, or anyone who prefers German-language documentation and forums.',
           '**Node-RED** — Open source (Apache 2.0), local-first, Node.js-based visual flow editor. Latest release 5.0.9 (21 Oct 2026). MQTT and HTTP nodes are built in; Modbus TCP/RTU comes from the community package node-red-contrib-modbus (5.62.1, 25 Oct 2026). Usually a companion to Home Assistant or ioBroker for data transformation or automation rather than a standalone platform. *Example*: Pull data from a Hoymiles microinverter via MQTT, compute 15-minute averages, and push the result to an InfluxDB instance for Grafana. *Best for*: Users who prefer visual flow programming or need custom data-transformation logic between two systems.',
           '**EVCC** — Open source (MIT), local-first, documentation in German and English. Latest release 0.318.2 (1 Nov 2026). Built for PV-surplus charging of EVs, heat pumps and home batteries; it works with hundreds of devices, including Fronius, SMA, Sungrow and Victron (check [docs.evcc.io](https://docs.evcc.io) for your model). The software is free, but many commercial EV chargers need a sponsor token (€50 per year or €150 lifetime, per the [EVCC sponsorship page](https://docs.evcc.io/en/sponsorship)). Publishes data via MQTT for Home Assistant or ioBroker. *Example*: A Fronius inverter and a Volkswagen ID.4 are registered in EVCC, which tracks the PV surplus and adjusts the charge rate to keep grid import low. *Best for*: EV owners with balcony solar who want surplus charging without a general automation platform.',
@@ -148,7 +148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             Protocols: 'Modbus, MQTT, REST',
             'Setup difficulty': 'High',
             Cost: 'Free',
-            'Best for': 'Enterprise-grade framework, existing openHAB deployments',
+            'Best for': 'Rule-driven framework, existing openHAB deployments',
           },
           {
             Platform: 'ioBroker',
@@ -261,7 +261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'trade-note',
         title: 'Trade Note: Hardware Tariffs',
         content: [
-          '**The platforms in this guide are software with no direct exposure to trade tariffs.** The hardware they connect to is a different matter. The EU has restricted EU funding for projects using inverters from suppliers classed as high-risk since 1 May 2026; this applies to publicly funded projects, not to private purchases, and it says nothing about any brand named in this guide ([pv magazine](https://www.pv-magazine.com/2026/05/04/eu-funding-ban-on-high-risk-inverters-including-chinese-suppliers-extends-to-bess/)). We found no EU anti-dumping case on Chinese inverters or lithium storage batteries.',
+          '**The platforms in this guide are software with no direct exposure to trade tariffs.** The hardware they connect to is a different matter. The EU has restricted EU funding for projects using inverters from suppliers classed as high-risk since 1 May 2026; this applies to publicly funded projects, not to private purchases, and it says nothing about any brand named in this guide ([pv magazine](https://www.pv-magazine.com/2026/05/04/eu-funding-ban-on-high-risk-inverters-including-chinese-suppliers-extends-to-bess/)). No EU anti-dumping case on Chinese inverters or lithium storage batteries was identified in our search (checked 2026-11-03).',
           'Platform choice is trade-neutral — the software runs on any hardware once it is connected. Hardware prices and rules can change on short notice, so check current prices and the legal position when you buy.',
         ],
       },
@@ -275,7 +275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What is ioBroker and is it better than Home Assistant for German users?',
-            a: 'ioBroker is an open-source home automation platform written in Node.js with a very strong DACH (German-speaking) community. It is not inherently more capable than Home Assistant — both support Modbus, MQTT, and REST — but German-language documentation, forums, and adapter support are significantly stronger in the ioBroker community. If you are already running ioBroker, there is no strong reason to migrate to Home Assistant solely for solar integration.',
+            a: 'ioBroker is an open-source home automation platform written in Node.js with a very strong DACH (German-speaking) community. It is not inherently more capable than Home Assistant — both support Modbus, MQTT, and REST — but German-language documentation and forums are more extensive in the ioBroker community in our assessment; compare the community pages yourself. If you are already running ioBroker, there is no strong reason to migrate to Home Assistant solely for solar integration.',
           },
           {
             q: 'Can I use EVCC without Home Assistant?',
@@ -286,7 +286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Solar Assistant needs no coding, and Victron Venus OS needs none on Victron hardware. Home Assistant, ioBroker, and EVCC can be configured through a web UI and YAML-style templates without general-purpose programming. openHAB has a steeper learning curve. Node-RED uses visual flow programming and ESPHome uses YAML firmware definitions; neither requires traditional programming, but both are harder to learn than Home Assistant or ioBroker.',
           },
           {
-            q: 'Which platform is best for zero-feed-in or surplus control?',
+            q: 'Which platforms support zero-feed-in or surplus control?',
             a: 'EVCC is built to route PV surplus to an EV, a heat pump or a home battery, which keeps grid import low, and its template system and device library make that faster to configure than building the logic yourself. Home Assistant can reach similar results through automations, and ioBroker through scripts or its scheduler.',
           },
           {
@@ -319,7 +319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Home Assistant vs ioBroker vs openHAB — how do they differ?',
-            a: 'All three are free, open source and run locally: Home Assistant (Apache 2.0, Python), ioBroker (MIT, Node.js) and openHAB (EPL 2.0, Java). Home Assistant lists 1,500+ integrations, ioBroker a large German-language community and adapter model, and openHAB a strict rule framework with a steeper learning curve. All three connect over Modbus and MQTT, so the choice is about ecosystem and effort, not device reach.',
+            a: 'All three are free, open source and run locally: Home Assistant (Apache 2.0, Python), ioBroker (MIT, Node.js) and openHAB (EPL 2.0, Java). Home Assistant lists 1,500+ integrations, ioBroker a large German-language community and adapter model, and openHAB a strict rule framework that many users find has a steeper learning curve. All three connect over Modbus and MQTT, so the choice is about ecosystem and effort, not device reach.',
           },
         ],
       },
@@ -415,7 +415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EVCC: zweckgebaut für PV-Überschuss-Laden des E-Autos, unterstützt Hunderte Geräte, kostenlose Software (Sponsor-Token für viele kommerzielle Wallboxen)',
           'ioBroker: große DACH-Community, Node.js-basiert, Adapter für viele in Deutschland verbreitete Wechselrichter',
           'Solar Assistant: kommerziell, Raspberry-Pi-Image, einmalig 59 € — vor allem Monitoring, Einstellungen bei unterstützten Wechselrichtern, MQTT-Ausgabe',
-          'openHAB: Java-basiert, unternehmenstaugliches Framework — steilere Lernkurve als HA oder ioBroker',
+          'openHAB: Java-basiertes, regelgesteuertes Framework; viele Nutzer empfinden die Lernkurve als steiler als bei Home Assistant oder ioBroker',
           'Grafana + InfluxDB: nur Dashboards und historische Analysen — keine Steuerungsfunktion',
         ],
         updatedDate: '2026-11-03',
@@ -454,7 +454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Alle neun Plattformen in diesem Leitfaden kommunizieren mit Balkonkraftwerk-Hardware über eines der drei lokalen Protokolle: Modbus TCP/RTU, MQTT oder eine geräteeigene lokale REST-API.** Ihre Plattformwahl ändert nicht, welche physischen Geräte Sie erreichen — sie ändert das Werkzeug, mit dem Sie die Daten auslesen und darauf reagieren. Welches Protokoll Ihr spezifisches Gerät bereitstellt, ist die vorgelagerte Frage vor der Plattformwahl; der Begleitartikel [Balkonkraftwerk ohne Cloud: Überwachung mit Home Assistant](/de/balcony-solar/home-assistant-balcony-solar-no-cloud) behandelt die Hardware-seitige Protokollentscheidung. Dieser Artikel setzt voraus, dass eine lokale Schnittstelle vorhanden ist, und konzentriert sich darauf, welche Software-Plattform darüber zu betreiben ist.',
           '**Modbus RTU (RS-485 seriell) und Modbus TCP (Ethernet/WLAN)** sind die häufigsten Lese-Schreib-Schnittstellen bei Solar-Wechselrichtern und Batteriesystemen. Die meisten Plattformen verbinden sich nativ mit Modbus TCP. Modbus RTU erfordert in der Regel einen Seriell-auf-USB-Adapter oder ein ESPHome-Bridge-Gerät (siehe ESPHome-Profil unten).',
-          '**MQTT** ist das leichtgewichtige Publish-Subscribe-Messaging-Protokoll, das die meisten Local-API-Balkonkraftwerk-Geräte für Echtzeit-Statusmeldungen verwenden. Fast jede Plattform in diesem Leitfaden kann einen MQTT-Topic abonnieren, was MQTT zum am breitesten kompatiblen Verbindungsweg macht, wenn ein Gerät es unterstützt.',
+          '**MQTT** ist das leichtgewichtige Publish-Subscribe-Messaging-Protokoll, das die meisten Local-API-Balkonkraftwerk-Geräte für Echtzeit-Statusmeldungen verwenden. Fast jede Plattform in diesem Leitfaden kann einen MQTT-Topic abonnieren, was MQTT zu einem weit verbreitet unterstützten Verbindungsweg macht, wenn ein Gerät es unterstützt.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Home Assistant, ioBroker, EVCC, openHAB und Solar Assistant verbinden sich alle über dieselben Modbus- und MQTT-Protokolle — die Plattformwahl bestimmt, wie Sie die Daten nutzen, nicht ob Sie das Gerät erreichen.' },
@@ -481,7 +481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Jedes Profil nennt Lizenz, aktuelle Version mit Datum, ein konkretes Solar-Beispiel und das passende Nutzerprofil.** Versionen und Daten stammen von den Release-Seiten und Registries der Projekte; prüfen Sie Ihr genaues Wechselrichter- oder Speichermodell in der Integrationsliste der jeweiligen Plattform, bevor Sie sich festlegen.',
           '**Home Assistant** — Open Source (Apache 2.0), lokal ausgelegt, Python-basiert. Aktuelle Version 2026.10.4 (24.10.2026). Läuft auf Home Assistant Green, einem Raspberry Pi 4 oder 5, einem x86-64-Rechner oder in einer VM; Home Assistant Yellow wird nicht mehr gefertigt. Kern-Integrationen wie SMA und Fronius fragen den Wechselrichter im lokalen Netz ab, dazu kommen Modbus, MQTT und REST; prüfen Sie die Integrationsliste für Ihr genaues Modell. *Beispiel*: Ein Zendure SolarFlow veröffentlicht Ladestand und Leistungsfluss über seine lokale API; eine HACS-Community-Integration liest die Werte aus, und eine Automatisierung startet die Spülmaschine, wenn die PV-Leistung 400 W überschreitet. *Ideal für*: Ein verbreiteter Standard — große Community, über 1.500 gelistete Integrationen, aktive Steuerung und Automatisierung.',
-          '**openHAB** — Open Source (EPL 2.0), lokal ausgelegt, Java-basiert. Aktuelle stabile Version 5.2.3 (10.10.2026). Das offizielle Modbus-Binding liest und schreibt über Modbus TCP und seriell (RTU), ein HTTP-Binding deckt REST-Geräte ab. Things lassen sich in der Web-Oberfläche oder in Textdateien einrichten; die Lernkurve ist steiler als bei Home Assistant oder ioBroker. *Beispiel*: Die lokale Solar API eines Fronius-Wechselrichters alle 10 Sekunden abfragen und per Regel den Zeitplan eines Pufferspeichers auf die Mittagsspitze der Erzeugung legen. *Ideal für*: Power-User und Integratoren, die ein striktes Automatisierungs-Framework wollen oder bereits openHAB betreiben.',
+          '**openHAB** — Open Source (EPL 2.0), lokal ausgelegt, Java-basiert. Aktuelle stabile Version 5.2.3 (10.10.2026). Das offizielle Modbus-Binding liest und schreibt über Modbus TCP und seriell (RTU), ein HTTP-Binding deckt REST-Geräte ab. Things lassen sich in der Web-Oberfläche oder in Textdateien einrichten; viele Nutzer empfinden die Lernkurve als steiler als bei Home Assistant oder ioBroker. *Beispiel*: Die lokale Solar API eines Fronius-Wechselrichters alle 10 Sekunden abfragen und per Regel den Zeitplan eines Pufferspeichers auf die Mittagsspitze der Erzeugung legen. *Ideal für*: Power-User und Integratoren, die ein striktes Automatisierungs-Framework wollen oder bereits openHAB betreiben.',
           '**ioBroker** — Open Source (MIT), lokal ausgelegt, Node.js-basiert. js-controller 7.2.5 (5.10.2026). Es hat eine große deutschsprachige Community. Adapter: Modbus 9.2.2 (23.10.2026), MQTT 9.0.2 (30.10.2026), SMA Energy Meter 1.4.0 (11.9.2026), Fronius 2.2.0 (7.3.2026) und OpenDTU 3.1.0 (2.12.2024), der Hoymiles-Wechselrichter über ein [OpenDTU](https://github.com/tbnobody/OpenDTU)-Gerät ausliest (v26.9.28, 28.9.2026). **Für die Adapter Fronius und OpenDTU gab es seit mehr als drei Monaten kein Release — prüfen Sie deren Repositories, bevor Sie sich darauf verlassen.** Das VIS-Dashboard braucht kein separates Tool. *Beispiel*: Einen Sungrow-Wechselrichter über den Modbus-Adapter auslesen und den täglichen Batterieladestand als Balkendiagramm in VIS anzeigen. *Ideal für*: DACH-Nutzer, die bereits ioBroker einsetzen oder deutschsprachige Dokumentation und Foren bevorzugen.',
           '**Node-RED** — Open Source (Apache 2.0), lokal ausgelegt, Node.js-basierter visueller Flow-Editor. Aktuelle Version 5.0.9 (21.10.2026). MQTT- und HTTP-Nodes sind eingebaut; Modbus TCP/RTU kommt über das Community-Paket node-red-contrib-modbus (5.62.1, 25.10.2026). Meist Begleiter von Home Assistant oder ioBroker für Datenverarbeitung oder Automatisierung, nicht eigenständige Plattform. *Beispiel*: Daten eines Hoymiles-Mikrowechselrichters per MQTT abrufen, 15-Minuten-Mittelwerte berechnen und in eine InfluxDB-Instanz für Grafana schreiben. *Ideal für*: Nutzer, die visuelle Flow-Programmierung bevorzugen oder eigene Datentransformation zwischen zwei Systemen brauchen.',
           '**EVCC** — Open Source (MIT), lokal ausgelegt, Dokumentation auf Deutsch und Englisch. Aktuelle Version 0.318.2 (1.11.2026). Gebaut für PV-Überschuss-Laden von E-Autos, Wärmepumpen und Heimspeichern; funktioniert mit Hunderten Geräten, darunter Fronius, SMA, Sungrow und Victron (Ihr Modell unter [docs.evcc.io](https://docs.evcc.io) prüfen). Die Software ist kostenlos, viele kommerzielle Wallboxen brauchen aber ein Sponsor-Token (50 € pro Jahr oder 150 € lebenslang, laut [EVCC-Sponsoring-Seite](https://docs.evcc.io/en/sponsorship)). Veröffentlicht Daten per MQTT für Home Assistant oder ioBroker. *Beispiel*: Ein Fronius-Wechselrichter und ein Volkswagen ID.4 sind in EVCC eingetragen; EVCC verfolgt den PV-Überschuss und passt die Ladeleistung an, um den Netzbezug niedrig zu halten. *Ideal für*: E-Auto-Fahrer mit Balkonkraftwerk, die Überschuss-Laden ohne allgemeine Automatisierungsplattform wollen.',
@@ -517,7 +517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             Protokolle: 'Modbus, MQTT, REST',
             Einrichtungsschwierigkeit: 'Hoch',
             Kosten: 'Kostenlos',
-            'Ideal für': 'Unternehmenstaugliches Framework, bestehende openHAB-Installationen',
+            'Ideal für': 'Regelgesteuertes Framework, bestehende openHAB-Installationen',
           },
           {
             Plattform: 'ioBroker',
@@ -630,7 +630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'trade-note',
         title: 'Handelspolitischer Hinweis',
         content: [
-          '**Die Plattformen in diesem Leitfaden sind Software ohne direkte Zollexposition.** Die Hardware, mit der sie sich verbinden, ist eine andere Sache. Die EU beschränkt seit dem 1. Mai 2026 EU-Fördermittel für Projekte mit Wechselrichtern von Lieferanten, die als Hochrisiko eingestuft sind; das betrifft öffentlich geförderte Projekte, nicht private Käufe, und sie sagt nichts über eine der in diesem Leitfaden genannten Marken aus ([pv magazine](https://www.pv-magazine.com/2026/05/04/eu-funding-ban-on-high-risk-inverters-including-chinese-suppliers-extends-to-bess/)). Ein EU-Antidumpingverfahren zu chinesischen Wechselrichtern oder Lithium-Speicherbatterien haben wir nicht gefunden.',
+          '**Die Plattformen in diesem Leitfaden sind Software ohne direkte Zollexposition.** Die Hardware, mit der sie sich verbinden, ist eine andere Sache. Die EU beschränkt seit dem 1. Mai 2026 EU-Fördermittel für Projekte mit Wechselrichtern von Lieferanten, die als Hochrisiko eingestuft sind; das betrifft öffentlich geförderte Projekte, nicht private Käufe, und sie sagt nichts über eine der in diesem Leitfaden genannten Marken aus ([pv magazine](https://www.pv-magazine.com/2026/05/04/eu-funding-ban-on-high-risk-inverters-including-chinese-suppliers-extends-to-bess/)). Ein EU-Antidumpingverfahren zu chinesischen Wechselrichtern oder Lithium-Speicherbatterien wurde bei unserer Suche nicht gefunden (geprüft am 03.11.2026).',
           'Die Plattformwahl ist zollneutral — die Software läuft auf jeder Hardware, sobald sie verbunden ist. Hardwarepreise und Regeln können sich kurzfristig ändern; prüfen Sie beim Kauf aktuelle Preise und die Rechtslage.',
         ],
       },
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was ist ioBroker und ist es besser als Home Assistant für deutsche Nutzer?',
-            a: 'ioBroker ist eine Open-Source-Heimautomatisierungsplattform in Node.js mit einer sehr starken DACH-Community. Es ist nicht grundsätzlich leistungsfähiger als Home Assistant — beide unterstützen Modbus, MQTT und REST — aber deutschsprachige Dokumentation, Foren und Adapter-Support sind in der ioBroker-Community deutlich stärker ausgeprägt. Wenn Sie bereits ioBroker betreiben, gibt es keinen zwingenden Grund, allein wegen Solar zu Home Assistant zu migrieren.',
+            a: 'ioBroker ist eine Open-Source-Heimautomatisierungsplattform in Node.js mit einer sehr starken DACH-Community. Es ist nicht grundsätzlich leistungsfähiger als Home Assistant — beide unterstützen Modbus, MQTT und REST — aber deutschsprachige Dokumentation und Foren sind in der ioBroker-Community nach unserer Einschätzung umfangreicher; vergleichen Sie die Community-Seiten selbst. Wenn Sie bereits ioBroker betreiben, gibt es keinen zwingenden Grund, allein wegen Solar zu Home Assistant zu migrieren.',
           },
           {
             q: 'Kann ich EVCC ohne Home Assistant nutzen?',
@@ -655,7 +655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Solar Assistant erfordert kein Programmieren, ebenso Victron Venus OS auf Victron-Hardware. Home Assistant, ioBroker und EVCC lassen sich über eine Web-Oberfläche und YAML-ähnliche Vorlagen ohne allgemeines Programmieren konfigurieren. openHAB hat eine steilere Lernkurve. Node-RED nutzt visuelle Flows, ESPHome YAML-Firmware-Definitionen; beides erfordert kein klassisches Programmieren, ist aber schwerer zu lernen als Home Assistant oder ioBroker.',
           },
           {
-            q: 'Welche Plattform ist am besten für Nulleinspeisung oder Überschusssteuerung?',
+            q: 'Welche Plattformen unterstützen Nulleinspeisung oder Überschusssteuerung?',
             a: 'EVCC ist darauf ausgelegt, PV-Überschuss an ein E-Auto, eine Wärmepumpe oder einen Heimspeicher zu leiten und so den Netzbezug niedrig zu halten; Vorlagensystem und Gerätebibliothek machen die Einrichtung schneller, als die Logik selbst zu bauen. Home Assistant erreicht Ähnliches über Automatisierungen, ioBroker über Skripte oder den Scheduler.',
           },
           {
@@ -688,7 +688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Home Assistant vs. ioBroker vs. openHAB — worin unterscheiden sie sich?',
-            a: 'Alle drei sind kostenlos, Open Source und laufen lokal: Home Assistant (Apache 2.0, Python), ioBroker (MIT, Node.js) und openHAB (EPL 2.0, Java). Home Assistant listet über 1.500 Integrationen, ioBroker eine große deutschsprachige Community und ein Adapter-Modell, openHAB ein striktes Regel-Framework mit steilerer Lernkurve. Alle verbinden sich über Modbus und MQTT; die Wahl hängt also von Ökosystem und Aufwand ab, nicht von der Geräte-Reichweite.',
+            a: 'Alle drei sind kostenlos, Open Source und laufen lokal: Home Assistant (Apache 2.0, Python), ioBroker (MIT, Node.js) und openHAB (EPL 2.0, Java). Home Assistant listet über 1.500 Integrationen, ioBroker eine große deutschsprachige Community und ein Adapter-Modell, openHAB ein striktes Regel-Framework, dessen Lernkurve viele Nutzer als steiler empfinden. Alle verbinden sich über Modbus und MQTT; die Wahl hängt also von Ökosystem und Aufwand ab, nicht von der Geräte-Reichweite.',
           },
         ],
       },
@@ -783,7 +783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EVCC: مخصصة لشحن السيارة الكهربائية بفائض الطاقة الشمسية، وتدعم مئات الأجهزة، والبرنامج مجاني (ومعظم الشواحن التجارية تتطلب رمز راعٍ)',
           'ioBroker: مجتمع DACH كبير، يعتمد Node.js، محولات للعواكس الشائعة في السوق الألمانية',
           'Solar Assistant: تجاري، صورة Raspberry Pi، دفعة واحدة 59 يورو — للمراقبة أساساً، مع تغيير الإعدادات في العاكسات المدعومة، وإخراج MQTT',
-          'openHAB: يعتمد Java، إطار عمل احترافي على مستوى المؤسسات — منحنى تعلم أكثر حدة من HA أو ioBroker',
+          'openHAB: إطار عمل قائم على Java وعلى القواعد؛ يرى كثير من المستخدمين أن منحنى التعلم أشد انحداراً من Home Assistant أو ioBroker',
           'Grafana + InfluxDB: لوحات التحكم والتحليلات التاريخية فقط — لا قدرة على التحكم',
         ],
         updatedDate: '2026-11-03',
@@ -822,7 +822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**جميع المنصات التسع في هذا الدليل تتواصل مع أجهزة الطاقة الشمسية في الشرفة عبر أحد نفس البروتوكولات المحلية الثلاثة: Modbus TCP/RTU أو MQTT أو REST API المحلية للجهاز.** اختيارك للمنصة لا يغير الأجهزة الفيزيائية التي يمكنك الوصول إليها — بل يغير الأدوات التي تستخدمها لقراءة تلك البيانات والتصرف بناءً عليها. فهم البروتوكول الذي يكشفه جهازك المحدد هو السؤال الأولي قبل اختيار المنصة؛ المقال المرافق [الطاقة الشمسية في الشرفة بدون سحابة: مراقبة نظامك مع Home Assistant](/ar/balcony-solar/home-assistant-balcony-solar-no-cloud) يغطي قرار البروتوكول على مستوى الأجهزة (الواجهة التي تكشفها ماركة بعينها وكيفية التحقق منها). يفترض هذا المقال وجود واجهة محلية ويركز على أي منصة برمجية تشغّل فوقها.',
           '**Modbus RTU (سيريال RS-485) وModbus TCP (Ethernet/WiFi)** هما الواجهتان الأكثر شيوعاً للقراءة والكتابة في أنظمة العواكس الشمسية والبطاريات. معظم المنصات تتصل بـ Modbus TCP بشكل أصلي. Modbus RTU يتطلب عادةً محول من سيريال إلى USB أو جهاز جسر ESPHome (انظر ملف تعريف ESPHome أدناه).',
-          '**MQTT** هو بروتوكول المراسلة الخفيف الوزن القائم على النشر والاشتراك الذي تستخدمه معظم أجهزة الطاقة الشمسية في الشرفة ذات الـ API المحلية لبث الحالة في الوقت الفعلي. تكاد كل منصة في هذا الدليل تستطيع الاشتراك في موضوع MQTT، مما يجعله مسار الاتصال الأوسع توافقاً عندما يدعمه الجهاز.',
+          '**MQTT** هو بروتوكول المراسلة الخفيف الوزن القائم على النشر والاشتراك الذي تستخدمه معظم أجهزة الطاقة الشمسية في الشرفة ذات الـ API المحلية لبث الحالة في الوقت الفعلي. تكاد كل منصة في هذا الدليل تستطيع الاشتراك في موضوع MQTT، مما يجعله مسار اتصال واسع الدعم عندما يدعمه الجهاز.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Home Assistant وioBroker وEVCC وopenHAB وSolar Assistant تتصل جميعها عبر نفس بروتوكولات Modbus وMQTT — اختيار المنصة يحدد كيفية استخدامك للبيانات، وليس ما إذا كان بإمكانك الوصول إلى الجهاز.' },
@@ -849,7 +849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**يعرض كل ملف تعريفي الترخيص وأحدث إصدار بتاريخه ومثالاً شمسياً ملموساً والمستخدم الأنسب.** الإصدارات والتواريخ مأخوذة من صفحات الإصدارات وسجلات المشاريع نفسها؛ تحقق من طراز عاكسك أو بطاريتك في قائمة التكاملات لكل منصة قبل أن تقرر.',
           '**Home Assistant** — مفتوحة المصدر (Apache 2.0)، محلية أولاً، مبنية على Python. أحدث إصدار 2026.10.4 (24 أكتوبر 2026). تعمل على Home Assistant Green أو Raspberry Pi 4 أو 5 أو جهاز x86-64 أو آلة افتراضية؛ أما Home Assistant Yellow فلم يعد يُصنَّع. التكاملات الأساسية مثل SMA وFronius تستعلم من العاكس عبر شبكتك المحلية، وتُدعم Modbus وMQTT وREST؛ راجع قائمة التكاملات لطرازك بالتحديد. *مثال*: يعلن Zendure SolarFlow حالة الشحن وتدفق الطاقة عبر واجهته المحلية؛ يقرؤها تكامل مجتمعي من HACS وتشغّل أتمتة غسالة الصحون عندما يتجاوز إنتاج الألواح 400 واط. *الأنسب لـ*: خيار افتراضي شائع — مجتمع كبير وأكثر من 1500 تكامل مدرجة وتحكم وأتمتة فعّالان.',
-          '**openHAB** — مفتوحة المصدر (EPL 2.0)، محلية أولاً، مبنية على Java. أحدث إصدار مستقر 5.2.3 (10 أكتوبر 2026). يقرأ ربط Modbus الرسمي ويكتب عبر Modbus TCP والتسلسلي (RTU)، ويغطي ربط HTTP أجهزة REST. يمكن إعداد Things من واجهة الويب أو من ملفات نصية؛ ومنحنى التعلم أشد انحداراً من Home Assistant أو ioBroker. *مثال*: استعلام Solar API المحلية لعاكس Fronius كل 10 ثوانٍ وتشغيل قاعدة تنقل جدول سخان التخزين إلى ذروة الإنتاج وقت الظهيرة. *الأنسب لـ*: المستخدمين المتقدمين والمُدمجين الذين يريدون إطار أتمتة صارماً، أو الذين يستخدمون openHAB بالفعل.',
+          '**openHAB** — مفتوحة المصدر (EPL 2.0)، محلية أولاً، مبنية على Java. أحدث إصدار مستقر 5.2.3 (10 أكتوبر 2026). يقرأ ربط Modbus الرسمي ويكتب عبر Modbus TCP والتسلسلي (RTU)، ويغطي ربط HTTP أجهزة REST. يمكن إعداد Things من واجهة الويب أو من ملفات نصية؛ ويرى كثير من المستخدمين أن منحنى التعلم أشد انحداراً من Home Assistant أو ioBroker. *مثال*: استعلام Solar API المحلية لعاكس Fronius كل 10 ثوانٍ وتشغيل قاعدة تنقل جدول سخان التخزين إلى ذروة الإنتاج وقت الظهيرة. *الأنسب لـ*: المستخدمين المتقدمين والمُدمجين الذين يريدون إطار أتمتة صارماً، أو الذين يستخدمون openHAB بالفعل.',
           '**ioBroker** — مفتوحة المصدر (MIT)، محلية أولاً، مبنية على Node.js. js-controller 7.2.5 (5 أكتوبر 2026). لها مجتمع كبير ناطق بالألمانية. المحوّلات: Modbus 9.2.2 (23 أكتوبر 2026)، وMQTT 9.0.2 (30 أكتوبر 2026)، وSMA Energy Meter 1.4.0 (11 سبتمبر 2026)، وFronius 2.2.0 (7 مارس 2026)، وOpenDTU 3.1.0 (2 ديسمبر 2024) الذي يقرأ عاكسات Hoymiles عبر جهاز [OpenDTU](https://github.com/tbnobody/OpenDTU) (الإصدار v26.9.28 بتاريخ 28 سبتمبر 2026). **لم يصدر لمحوّلَي Fronius وOpenDTU إصدار منذ أكثر من ثلاثة أشهر — راجع مستودعيهما قبل الاعتماد عليهما.** لوحة VIS لا تحتاج أداة منفصلة. *مثال*: قراءة عاكس Sungrow عبر محوّل Modbus وعرض مستوى شحن البطارية اليومي كمخطط أعمدة في VIS. *الأنسب لـ*: مستخدمي DACH الذين يعملون على ioBroker بالفعل، أو من يفضّل التوثيق والمنتديات بالألمانية.',
           '**Node-RED** — مفتوحة المصدر (Apache 2.0)، محلية أولاً، محرر تدفقات مرئي مبني على Node.js. أحدث إصدار 5.0.9 (21 أكتوبر 2026). عقد MQTT وHTTP مدمجة؛ أما Modbus TCP/RTU فتأتي من الحزمة المجتمعية node-red-contrib-modbus (5.62.1 بتاريخ 25 أكتوبر 2026). تُستخدم عادة رفيقاً لـ Home Assistant أو ioBroker لتحويل البيانات أو الأتمتة، لا منصة مستقلة. *مثال*: جلب بيانات عاكس Hoymiles الصغير عبر MQTT وحساب متوسطات كل 15 دقيقة وكتابتها في InfluxDB لعرضها في Grafana. *الأنسب لـ*: من يفضّل البرمجة المرئية بالتدفقات أو يحتاج منطق تحويل بيانات مخصصاً بين نظامين.',
           '**EVCC** — مفتوحة المصدر (MIT)، محلية أولاً، وثائقها بالألمانية والإنجليزية. أحدث إصدار 0.318.2 (1 نوفمبر 2026). مصممة للشحن بفائض الطاقة الشمسية للسيارات الكهربائية والمضخات الحرارية وبطاريات المنزل؛ وتعمل مع مئات الأجهزة، منها Fronius وSMA وSungrow وVictron (راجع طرازك في [docs.evcc.io](https://docs.evcc.io)). البرنامج مجاني، لكن كثيراً من الشواحن التجارية يتطلب رمز راعٍ (50 يورو سنوياً أو 150 يورو مدى الحياة، بحسب [صفحة رعاية EVCC](https://docs.evcc.io/en/sponsorship)). تنشر البيانات عبر MQTT إلى Home Assistant أو ioBroker. *مثال*: يُسجَّل عاكس Fronius وسيارة Volkswagen ID.4 في EVCC، التي تتتبع فائض الإنتاج وتضبط قدرة الشحن لإبقاء السحب من الشبكة منخفضاً. *الأنسب لـ*: أصحاب السيارات الكهربائية مع طاقة شمسية في الشرفة ممن يريدون الشحن بالفائض دون منصة أتمتة عامة.',
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'البروتوكولات': 'Modbus, MQTT, REST',
             'صعوبة الإعداد': 'عالية',
             'التكلفة': 'مجاني',
-            'الأنسب لـ': 'إطار عمل احترافي على مستوى المؤسسات، تثبيتات openHAB القائمة',
+            'الأنسب لـ': 'إطار عمل قائم على القواعد، تثبيتات openHAB القائمة',
           },
           {
             'المنصة': 'ioBroker',
@@ -998,7 +998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'trade-note',
         title: 'ملاحظة تجارية: الرسوم الجمركية على الأجهزة',
         content: [
-          '**المنصات في هذا الدليل برمجيات لا تتأثر مباشرة بالرسوم الجمركية.** أما العتاد الذي تتصل به فمسألة أخرى. ويقيّد الاتحاد الأوروبي منذ 1 مايو 2026 التمويل الأوروبي للمشاريع التي تستخدم عاكسات من موردين مصنّفين عالي المخاطر؛ وهذا يخص المشاريع الممولة من المال العام لا المشتريات الخاصة، ولا تقول شيئاً عن أي علامة مذكورة في هذا الدليل ([pv magazine](https://www.pv-magazine.com/2026/05/04/eu-funding-ban-on-high-risk-inverters-including-chinese-suppliers-extends-to-bess/)). ولم نعثر على قضية إغراق أوروبية بشأن العاكسات الصينية أو بطاريات التخزين الليثيومية.',
+          '**المنصات في هذا الدليل برمجيات لا تتأثر مباشرة بالرسوم الجمركية.** أما العتاد الذي تتصل به فمسألة أخرى. ويقيّد الاتحاد الأوروبي منذ 1 مايو 2026 التمويل الأوروبي للمشاريع التي تستخدم عاكسات من موردين مصنّفين عالي المخاطر؛ وهذا يخص المشاريع الممولة من المال العام لا المشتريات الخاصة، ولا تقول شيئاً عن أي علامة مذكورة في هذا الدليل ([pv magazine](https://www.pv-magazine.com/2026/05/04/eu-funding-ban-on-high-risk-inverters-including-chinese-suppliers-extends-to-bess/)). ولم تُحدَّد في بحثنا أي قضية إغراق أوروبية بشأن العاكسات الصينية أو بطاريات التخزين الليثيومية (تم التحقق في 2026-11-03).',
           'اختيار المنصة محايد جمركياً — يعمل البرنامج على أي عتاد بعد توصيله. وقد تتغير أسعار العتاد وقواعده بسرعة، فتحقق من الأسعار الحالية والوضع القانوني عند الشراء.',
         ],
       },
@@ -1012,7 +1012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما هو ioBroker وهل هو أفضل من Home Assistant للمستخدمين الألمان؟',
-            a: 'ioBroker هي منصة أتمتة منزلية مفتوحة المصدر مكتوبة بـ Node.js مع مجتمع DACH (الناطق بالألمانية) قوي جداً. ليست أكثر قدرة بطبيعتها من Home Assistant — كلتاهما تدعمان Modbus وMQTT وREST — لكن الوثائق والمنتديات ودعم المحولات باللغة الألمانية أقوى بشكل ملحوظ في مجتمع ioBroker. إذا كنت تشغّل ioBroker بالفعل، لا يوجد سبب قوي للانتقال إلى Home Assistant فقط من أجل تكامل الطاقة الشمسية.',
+            a: 'ioBroker هي منصة أتمتة منزلية مفتوحة المصدر مكتوبة بـ Node.js مع مجتمع DACH (الناطق بالألمانية) قوي جداً. ليست أكثر قدرة بطبيعتها من Home Assistant — كلتاهما تدعمان Modbus وMQTT وREST — لكن الوثائق والمنتديات باللغة الألمانية أوسع في مجتمع ioBroker بحسب تقييمنا؛ قارن صفحات المجتمع بنفسك. إذا كنت تشغّل ioBroker بالفعل، لا يوجد سبب قوي للانتقال إلى Home Assistant فقط من أجل تكامل الطاقة الشمسية.',
           },
           {
             q: 'هل يمكنني استخدام EVCC بدون Home Assistant؟',
@@ -1023,7 +1023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Solar Assistant لا يتطلب برمجة، وكذلك Victron Venus OS على عتاد Victron. يمكن إعداد Home Assistant وioBroker وEVCC عبر واجهة ويب وقوالب شبيهة بـ YAML دون برمجة عامة. ولدى openHAB منحنى تعلم أشد انحداراً. يستخدم Node-RED البرمجة المرئية بالتدفقات، ويستخدم ESPHome تعريفات برنامج ثابت بـ YAML؛ وكلاهما لا يتطلب برمجة تقليدية، لكنهما أصعب في التعلم من Home Assistant أو ioBroker.',
           },
           {
-            q: 'أي منصة هي الأفضل للتحكم في الحد الصفري للتغذية أو الفائض؟',
+            q: 'أي المنصات تدعم التحكم في الحد الصفري للتغذية أو الفائض؟',
             a: 'صُممت EVCC لتوجيه فائض الطاقة الشمسية إلى سيارة كهربائية أو مضخة حرارية أو بطارية منزلية، مما يبقي السحب من الشبكة منخفضاً؛ ويجعل نظام القوالب ومكتبة الأجهزة الإعداد أسرع من بناء المنطق بنفسك. ويمكن لـ Home Assistant بلوغ نتائج مشابهة عبر الأتمتة، ولـ ioBroker عبر النصوص البرمجية أو المجدول.',
           },
           {
@@ -1056,7 +1056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Home Assistant أم ioBroker أم openHAB — ما الفرق؟',
-            a: 'الثلاثة مجانية ومفتوحة المصدر وتعمل محلياً: Home Assistant (Apache 2.0، Python) وioBroker (MIT، Node.js) وopenHAB (EPL 2.0، Java). لدى Home Assistant أكثر من 1500 تكامل مدرجة، ولدى ioBroker مجتمع ألماني كبير ونموذج محوّلات، ولدى openHAB إطار قواعد صارم بمنحنى تعلم أشد انحداراً. وكلها تتصل عبر Modbus وMQTT، فالاختيار يتعلق بالمنظومة والجهد لا بمدى الوصول إلى الأجهزة.',
+            a: 'الثلاثة مجانية ومفتوحة المصدر وتعمل محلياً: Home Assistant (Apache 2.0، Python) وioBroker (MIT، Node.js) وopenHAB (EPL 2.0، Java). لدى Home Assistant أكثر من 1500 تكامل مدرجة، ولدى ioBroker مجتمع ألماني كبير ونموذج محوّلات، ولدى openHAB إطار قواعد صارم يرى كثير من المستخدمين أن منحنى تعلمه أشد انحداراً. وكلها تتصل عبر Modbus وMQTT، فالاختيار يتعلق بالمنظومة والجهد لا بمدى الوصول إلى الأجهزة.',
           },
         ],
       },
@@ -1156,7 +1156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EVCC: pensado para cargar el VE con excedente fotovoltaico, compatible con cientos de dispositivos, software gratuito (token de patrocinador para muchos cargadores comerciales)',
           'ioBroker: comunidad DACH grande, basado en Node.js, adaptadores para muchos inversores del mercado alemán',
           'Solar Assistant: comercial, imagen para Raspberry Pi, 59 € de pago único — sobre todo monitoreo, ajustes en inversores compatibles, salida MQTT',
-          'openHAB: basado en Java, framework de nivel empresarial — curva de aprendizaje más pronunciada que HA o ioBroker',
+          'openHAB: framework basado en Java y en reglas; muchos usuarios consideran que su curva de aprendizaje es más pronunciada que la de Home Assistant o ioBroker',
           'Grafana + InfluxDB: solo dashboards y análisis histórico — sin capacidad de control',
         ],
         updatedDate: '2026-11-03',
@@ -1195,7 +1195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Las nueve plataformas de esta guía se comunican con el hardware de solar de balcón mediante uno de los mismos tres protocolos locales: Modbus TCP/RTU, MQTT o la API REST local del dispositivo.** Tu elección de plataforma no cambia a qué dispositivos físicos puedes acceder — cambia las herramientas que usas para leer y actuar sobre esos datos. Entender qué protocolo expone tu dispositivo específico es la pregunta previa antes de elegir una plataforma; el artículo complementario [Solar de Balcón Sin Nube: Monitorea tu Sistema con Home Assistant](/es/balcony-solar/home-assistant-balcony-solar-no-cloud) cubre la decisión de protocolo a nivel de hardware (qué interfaz expone una marca determinada y cómo verificarlo). Este artículo asume que existe una interfaz local y se enfoca en qué plataforma de software ejecutar sobre ella.',
           '**Modbus RTU (serie RS-485) y Modbus TCP (Ethernet/WiFi)** son las interfaces de lectura y escritura más comunes en inversores solares y sistemas de baterías. La mayoría de las plataformas se conectan a Modbus TCP de forma nativa. Modbus RTU generalmente requiere un adaptador de serie a USB o un dispositivo puente ESPHome (ver perfil de ESPHome a continuación).',
-          '**MQTT** es el protocolo de mensajería publicar/suscribir ligero que utilizan la mayoría de los dispositivos de solar de balcón con API local para la transmisión de estado en tiempo real. Casi todas las plataformas de esta guía pueden suscribirse a un topic MQTT, lo que lo convierte en la ruta de conexión más ampliamente compatible cuando un dispositivo lo admite.',
+          '**MQTT** es el protocolo de mensajería publicar/suscribir ligero que utilizan la mayoría de los dispositivos de solar de balcón con API local para la transmisión de estado en tiempo real. Casi todas las plataformas de esta guía pueden suscribirse a un topic MQTT, lo que lo convierte en una ruta de conexión ampliamente admitida cuando un dispositivo lo admite.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Home Assistant, ioBroker, EVCC, openHAB y Solar Assistant se conectan todos mediante los mismos protocolos Modbus y MQTT — la elección de plataforma determina cómo usas esos datos, no si puedes acceder al dispositivo.' },
@@ -1222,7 +1222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Cada perfil indica la licencia, la última versión con su fecha, un ejemplo solar concreto y el perfil de usuario ideal.** Las versiones y fechas proceden de las páginas de lanzamientos y los registros de los propios proyectos; comprueba el modelo exacto de tu inversor o batería en la lista de integraciones de cada plataforma antes de decidirte.',
           '**Home Assistant** — Código abierto (Apache 2.0), pensado para uso local, basado en Python. Última versión 2026.10.4 (24 oct 2026). Funciona en Home Assistant Green, una Raspberry Pi 4 o 5, un equipo x86-64 o una máquina virtual; Home Assistant Yellow ya no se fabrica. Integraciones nativas como SMA y Fronius consultan el inversor en tu red, y se admiten Modbus, MQTT y REST; comprueba la lista de integraciones para tu modelo exacto. *Ejemplo*: un Zendure SolarFlow publica el estado de carga y el flujo de potencia mediante su API local; una integración comunitaria de HACS los lee y una automatización pone en marcha el lavavajillas cuando la producción fotovoltaica supera los 400 W. *Ideal para*: una opción predeterminada habitual — comunidad grande, más de 1.500 integraciones listadas, control y automatización activos.',
-          '**openHAB** — Código abierto (EPL 2.0), pensado para uso local, basado en Java. Última versión estable 5.2.3 (10 oct 2026). El binding oficial de Modbus lee y escribe por Modbus TCP y serie (RTU), y un binding HTTP cubre dispositivos REST. Los Things se configuran en la interfaz web o en archivos de texto; la curva de aprendizaje es más pronunciada que en Home Assistant o ioBroker. *Ejemplo*: consultar cada 10 segundos la API Solar local de un inversor Fronius y activar una regla que traslada el horario de un calentador de acumulación al pico de producción del mediodía. *Ideal para*: usuarios avanzados e integradores que quieren un marco de automatización estricto o que ya usan openHAB.',
+          '**openHAB** — Código abierto (EPL 2.0), pensado para uso local, basado en Java. Última versión estable 5.2.3 (10 oct 2026). El binding oficial de Modbus lee y escribe por Modbus TCP y serie (RTU), y un binding HTTP cubre dispositivos REST. Los Things se configuran en la interfaz web o en archivos de texto; muchos usuarios consideran que la curva de aprendizaje es más pronunciada que en Home Assistant o ioBroker. *Ejemplo*: consultar cada 10 segundos la API Solar local de un inversor Fronius y activar una regla que traslada el horario de un calentador de acumulación al pico de producción del mediodía. *Ideal para*: usuarios avanzados e integradores que quieren un marco de automatización estricto o que ya usan openHAB.',
           '**ioBroker** — Código abierto (MIT), pensado para uso local, basado en Node.js. js-controller 7.2.5 (5 oct 2026). Tiene una gran comunidad en alemán. Adaptadores: Modbus 9.2.2 (23 oct 2026), MQTT 9.0.2 (30 oct 2026), SMA Energy Meter 1.4.0 (11 sep 2026), Fronius 2.2.0 (7 mar 2026) y OpenDTU 3.1.0 (2 dic 2024), que lee inversores Hoymiles mediante un dispositivo [OpenDTU](https://github.com/tbnobody/OpenDTU) (v26.9.28, 28 sep 2026). **Los adaptadores de Fronius y OpenDTU llevan más de tres meses sin publicar versión — revisa sus repositorios antes de depender de ellos.** El panel VIS no necesita una herramienta aparte. *Ejemplo*: leer un inversor Sungrow con el adaptador Modbus y mostrar el estado de carga diario de la batería como gráfico de barras en VIS. *Ideal para*: usuarios DACH que ya usan ioBroker o que prefieren documentación y foros en alemán.',
           '**Node-RED** — Código abierto (Apache 2.0), pensado para uso local, editor visual de flujos basado en Node.js. Última versión 5.0.9 (21 oct 2026). Los nodos MQTT y HTTP vienen incluidos; Modbus TCP/RTU llega con el paquete comunitario node-red-contrib-modbus (5.62.1, 25 oct 2026). Suele ser un complemento de Home Assistant o ioBroker para transformar datos o automatizar, más que una plataforma independiente. *Ejemplo*: obtener datos de un microinversor Hoymiles por MQTT, calcular promedios de 15 minutos y enviar el resultado a una instancia de InfluxDB para Grafana. *Ideal para*: quienes prefieren la programación visual de flujos o necesitan lógica de transformación de datos entre dos sistemas.',
           '**EVCC** — Código abierto (MIT), pensado para uso local, documentación en alemán e inglés. Última versión 0.318.2 (1 nov 2026). Diseñado para cargar con excedente fotovoltaico vehículos eléctricos, bombas de calor y baterías domésticas; funciona con cientos de dispositivos, entre ellos Fronius, SMA, Sungrow y Victron (comprueba tu modelo en [docs.evcc.io](https://docs.evcc.io)). El software es gratuito, pero muchos cargadores comerciales requieren un token de patrocinador (50 € al año o 150 € de por vida, según la [página de patrocinio de EVCC](https://docs.evcc.io/en/sponsorship)). Publica datos por MQTT para Home Assistant o ioBroker. *Ejemplo*: un inversor Fronius y un Volkswagen ID.4 se registran en EVCC, que sigue el excedente fotovoltaico y ajusta la potencia de carga para mantener bajo el consumo de red. *Ideal para*: propietarios de coche eléctrico con solar de balcón que quieren carga con excedente sin una plataforma de automatización general.',
@@ -1258,7 +1258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Protocolos': 'Modbus, MQTT, REST',
             'Dificultad de configuración': 'Alta',
             'Costo': 'Gratuito',
-            'Ideal para': 'Framework de nivel empresarial, instalaciones de openHAB existentes',
+            'Ideal para': 'Framework basado en reglas, instalaciones de openHAB existentes',
           },
           {
             'Plataforma': 'ioBroker',
@@ -1371,7 +1371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'trade-note',
         title: 'Nota sobre aranceles comerciales',
         content: [
-          '**Las plataformas de esta guía son software sin exposición directa a aranceles.** El hardware al que se conectan es otra cosa. Desde el 1 de mayo de 2026 la UE restringe la financiación europea de proyectos que usan inversores de proveedores clasificados como de alto riesgo; esto afecta a proyectos con fondos públicos, no a compras privadas, y no dice nada sobre ninguna marca citada en esta guía ([pv magazine](https://www.pv-magazine.com/2026/05/04/eu-funding-ban-on-high-risk-inverters-including-chinese-suppliers-extends-to-bess/)). No hemos encontrado ningún procedimiento antidumping de la UE sobre inversores chinos o baterías de litio de almacenamiento.',
+          '**Las plataformas de esta guía son software sin exposición directa a aranceles.** El hardware al que se conectan es otra cosa. Desde el 1 de mayo de 2026 la UE restringe la financiación europea de proyectos que usan inversores de proveedores clasificados como de alto riesgo; esto afecta a proyectos con fondos públicos, no a compras privadas, y no dice nada sobre ninguna marca citada en esta guía ([pv magazine](https://www.pv-magazine.com/2026/05/04/eu-funding-ban-on-high-risk-inverters-including-chinese-suppliers-extends-to-bess/)). En nuestra búsqueda no se identificó ningún procedimiento antidumping de la UE sobre inversores chinos o baterías de litio de almacenamiento (comprobado el 03/11/2026).',
           'La elección de la plataforma es neutral en términos arancelarios: el software funciona en cualquier hardware una vez conectado. Los precios y las normas del hardware pueden cambiar con poco aviso; comprueba los precios actuales y la situación legal al comprar.',
         ],
       },
@@ -1385,7 +1385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué es ioBroker y es mejor que Home Assistant para usuarios alemanes?',
-            a: 'ioBroker es una plataforma de automatización del hogar de código abierto escrita en Node.js con una comunidad DACH (de habla alemana) muy fuerte. No es inherentemente más capaz que Home Assistant — ambos admiten Modbus, MQTT y REST — pero la documentación en alemán, los foros y el soporte de adaptadores son significativamente más fuertes en la comunidad de ioBroker. Si ya usas ioBroker, no hay una razón sólida para migrar a Home Assistant solo por la integración solar.',
+            a: 'ioBroker es una plataforma de automatización del hogar de código abierto escrita en Node.js con una comunidad DACH (de habla alemana) muy fuerte. No es inherentemente más capaz que Home Assistant — ambos admiten Modbus, MQTT y REST — pero la documentación en alemán y los foros son más extensos en la comunidad de ioBroker según nuestra valoración; compara tú mismo las páginas de las comunidades. Si ya usas ioBroker, no hay una razón sólida para migrar a Home Assistant solo por la integración solar.',
           },
           {
             q: '¿Puedo usar EVCC sin Home Assistant?',
@@ -1396,7 +1396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Solar Assistant no requiere programar, ni Victron Venus OS en hardware Victron. Home Assistant, ioBroker y EVCC se configuran con una interfaz web y plantillas tipo YAML sin programación general. openHAB tiene una curva de aprendizaje más pronunciada. Node-RED usa programación visual de flujos y ESPHome definiciones de firmware en YAML; ninguno requiere programación tradicional, pero ambos son más difíciles de aprender que Home Assistant o ioBroker.',
           },
           {
-            q: '¿Qué plataforma es mejor para inyección cero o control de excedente?',
+            q: '¿Qué plataformas admiten inyección cero o control de excedente?',
             a: 'EVCC está pensado para dirigir el excedente fotovoltaico a un coche eléctrico, una bomba de calor o una batería doméstica, lo que mantiene bajo el consumo de red; su sistema de plantillas y su biblioteca de dispositivos hacen la configuración más rápida que construir la lógica uno mismo. Home Assistant logra resultados parecidos con automatizaciones, e ioBroker con scripts o su planificador.',
           },
           {
@@ -1429,7 +1429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Home Assistant, ioBroker u openHAB — ¿en qué se diferencian?',
-            a: 'Los tres son gratuitos, de código abierto y funcionan en local: Home Assistant (Apache 2.0, Python), ioBroker (MIT, Node.js) y openHAB (EPL 2.0, Java). Home Assistant lista más de 1.500 integraciones, ioBroker una gran comunidad en alemán y un modelo de adaptadores, y openHAB un marco de reglas estricto con una curva de aprendizaje más pronunciada. Todos se conectan por Modbus y MQTT; la elección depende del ecosistema y del esfuerzo, no del alcance de dispositivos.',
+            a: 'Los tres son gratuitos, de código abierto y funcionan en local: Home Assistant (Apache 2.0, Python), ioBroker (MIT, Node.js) y openHAB (EPL 2.0, Java). Home Assistant lista más de 1.500 integraciones, ioBroker una gran comunidad en alemán y un modelo de adaptadores, y openHAB un marco de reglas estricto cuya curva de aprendizaje muchos usuarios consideran más pronunciada. Todos se conectan por Modbus y MQTT; la elección depende del ecosistema y del esfuerzo, no del alcance de dispositivos.',
           },
         ],
       },
@@ -1525,7 +1525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EVCC : conçu pour la recharge du VE avec le surplus PV, compatible avec des centaines d\'appareils, logiciel gratuit (jeton de sponsor pour beaucoup de bornes commerciales)',
           'ioBroker : grande communauté DACH, basé sur Node.js, adaptateurs pour de nombreux onduleurs du marché germanophone',
           'Solar Assistant : commercial, image Raspberry Pi, 59 € en une fois — surtout du suivi, réglages sur les onduleurs pris en charge, sortie MQTT',
-          'openHAB : basé sur Java, framework de niveau entreprise — courbe d\'apprentissage plus raide que HA ou ioBroker',
+          'openHAB : framework basé sur Java et sur des règles ; beaucoup d\'utilisateurs trouvent la courbe d\'apprentissage plus raide que celle de Home Assistant ou ioBroker',
           'Grafana + InfluxDB : tableaux de bord et analyses historiques uniquement — aucune capacité de contrôle',
         ],
         updatedDate: '2026-11-03',
@@ -1564,7 +1564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Les neuf plateformes de ce guide communiquent avec le matériel solaire balcon via l\'un des trois mêmes protocoles locaux : Modbus TCP/RTU, MQTT ou l\'API REST locale d\'un appareil.** Le choix de plateforme ne modifie pas les appareils physiques accessibles — il modifie l\'outillage utilisé pour lire ces données et agir en conséquence. Identifier le protocole exposé par votre appareil spécifique est la question préalable au choix de plateforme ; l\'article compagnon [Solaire balcon sans cloud : surveiller votre système avec Home Assistant](/fr/balcony-solar/home-assistant-balcony-solar-no-cloud) couvre la décision de protocole au niveau matériel. Cet article part du principe qu\'une interface locale existe et se concentre sur le logiciel à exécuter par-dessus.',
           '**Modbus RTU (série RS-485) et Modbus TCP (Ethernet/WiFi)** sont les interfaces lecture-écriture les plus répandues sur les onduleurs solaires et les systèmes de batteries. La plupart des plateformes se connectent nativement à Modbus TCP. Modbus RTU nécessite généralement un adaptateur série-vers-USB ou un appareil pont ESPHome (voir le profil ESPHome ci-dessous).',
-          '**MQTT** est le protocole de messagerie publish/subscribe léger qu\'utilisent la plupart des appareils solaires balcon à API locale pour la diffusion d\'état en temps réel. Presque toutes les plateformes de ce guide peuvent s\'abonner à un topic MQTT, ce qui en fait le chemin de connexion le plus largement compatible lorsqu\'un appareil le prend en charge.',
+          '**MQTT** est le protocole de messagerie publish/subscribe léger qu\'utilisent la plupart des appareils solaires balcon à API locale pour la diffusion d\'état en temps réel. Presque toutes les plateformes de ce guide peuvent s\'abonner à un topic MQTT, ce qui en fait un chemin de connexion largement pris en charge lorsqu\'un appareil le prend en charge.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Home Assistant, ioBroker, EVCC, openHAB et Solar Assistant se connectent tous via les mêmes protocoles Modbus et MQTT — le choix de plateforme détermine la façon dont vous utilisez ces données, non si vous pouvez atteindre l\'appareil.' },
@@ -1591,7 +1591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Chaque profil indique la licence, la dernière version avec sa date, un exemple solaire concret et le profil d\'utilisateur adapté.** Les versions et dates proviennent des pages de publication et des registres des projets ; vérifiez votre modèle exact d\'onduleur ou de batterie dans la liste d\'intégrations de chaque plateforme avant de vous décider.',
           '**Home Assistant** — Open source (Apache 2.0), conçu pour le local, basé sur Python. Dernière version 2026.10.4 (24 oct. 2026). Fonctionne sur Home Assistant Green, un Raspberry Pi 4 ou 5, une machine x86-64 ou une VM ; Home Assistant Yellow n\'est plus fabriqué. Des intégrations natives comme SMA et Fronius interrogent l\'onduleur sur votre réseau, et Modbus, MQTT et REST sont pris en charge ; vérifiez la liste d\'intégrations pour votre modèle exact. *Exemple* : un Zendure SolarFlow publie l\'état de charge et les flux de puissance via son API locale ; une intégration communautaire HACS les lit et une automatisation lance le lave-vaisselle quand la production PV dépasse 400 W. *Idéal pour* : un choix par défaut courant — grande communauté, plus de 1 500 intégrations listées, pilotage et automatisation actifs.',
-          '**openHAB** — Open source (EPL 2.0), conçu pour le local, basé sur Java. Dernière version stable 5.2.3 (10 oct. 2026). Le binding Modbus officiel lit et écrit en Modbus TCP et en série (RTU), et un binding HTTP couvre les appareils REST. Les Things se configurent dans l\'interface web ou dans des fichiers texte ; la courbe d\'apprentissage est plus raide que pour Home Assistant ou ioBroker. *Exemple* : interroger toutes les 10 secondes l\'API Solar locale d\'un onduleur Fronius et déclencher une règle qui décale le programme d\'un ballon tampon vers le pic de production de midi. *Idéal pour* : utilisateurs avancés et intégrateurs qui veulent un cadre d\'automatisation strict, ou qui utilisent déjà openHAB.',
+          '**openHAB** — Open source (EPL 2.0), conçu pour le local, basé sur Java. Dernière version stable 5.2.3 (10 oct. 2026). Le binding Modbus officiel lit et écrit en Modbus TCP et en série (RTU), et un binding HTTP couvre les appareils REST. Les Things se configurent dans l\'interface web ou dans des fichiers texte ; beaucoup d\'utilisateurs trouvent la courbe d\'apprentissage plus raide que pour Home Assistant ou ioBroker. *Exemple* : interroger toutes les 10 secondes l\'API Solar locale d\'un onduleur Fronius et déclencher une règle qui décale le programme d\'un ballon tampon vers le pic de production de midi. *Idéal pour* : utilisateurs avancés et intégrateurs qui veulent un cadre d\'automatisation strict, ou qui utilisent déjà openHAB.',
           '**ioBroker** — Open source (MIT), conçu pour le local, basé sur Node.js. js-controller 7.2.5 (5 oct. 2026). Il dispose d\'une grande communauté germanophone. Adaptateurs : Modbus 9.2.2 (23 oct. 2026), MQTT 9.0.2 (30 oct. 2026), SMA Energy Meter 1.4.0 (11 sept. 2026), Fronius 2.2.0 (7 mars 2026) et OpenDTU 3.1.0 (2 déc. 2024), qui lit les onduleurs Hoymiles via un appareil [OpenDTU](https://github.com/tbnobody/OpenDTU) (v26.9.28, 28 sept. 2026). **Les adaptateurs Fronius et OpenDTU n\'ont pas eu de publication depuis plus de trois mois — consultez leurs dépôts avant de vous y fier.** Le tableau de bord VIS ne nécessite pas d\'outil séparé. *Exemple* : lire un onduleur Sungrow via l\'adaptateur Modbus et afficher l\'état de charge quotidien de la batterie en histogramme dans VIS. *Idéal pour* : utilisateurs DACH déjà sous ioBroker, ou ceux qui préfèrent la documentation et les forums en allemand.',
           '**Node-RED** — Open source (Apache 2.0), conçu pour le local, éditeur de flux visuel basé sur Node.js. Dernière version 5.0.9 (21 oct. 2026). Les nœuds MQTT et HTTP sont intégrés ; Modbus TCP/RTU vient du paquet communautaire node-red-contrib-modbus (5.62.1, 25 oct. 2026). Généralement un complément de Home Assistant ou d\'ioBroker pour la transformation de données ou l\'automatisation, plutôt qu\'une plateforme autonome. *Exemple* : récupérer les données d\'un micro-onduleur Hoymiles via MQTT, calculer des moyennes sur 15 minutes et les envoyer vers une instance InfluxDB pour Grafana. *Idéal pour* : utilisateurs qui préfèrent la programmation visuelle ou ont besoin d\'une logique de transformation de données entre deux systèmes.',
           '**EVCC** — Open source (MIT), conçu pour le local, documentation en allemand et en anglais. Dernière version 0.318.2 (1 nov. 2026). Conçu pour la recharge avec le surplus PV des véhicules électriques, pompes à chaleur et batteries domestiques ; fonctionne avec des centaines d\'appareils, dont Fronius, SMA, Sungrow et Victron (vérifiez votre modèle sur [docs.evcc.io](https://docs.evcc.io)). Le logiciel est gratuit, mais beaucoup de bornes commerciales exigent un jeton de sponsor (50 € par an ou 150 € à vie, selon la [page de parrainage EVCC](https://docs.evcc.io/en/sponsorship)). Publie les données via MQTT pour Home Assistant ou ioBroker. *Exemple* : un onduleur Fronius et une Volkswagen ID.4 sont déclarés dans EVCC, qui suit le surplus PV et ajuste la puissance de charge pour garder le soutirage réseau bas. *Idéal pour* : propriétaires de véhicule électrique avec solaire balcon qui veulent la recharge au surplus sans plateforme d\'automatisation générale.',
@@ -1627,7 +1627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Protocoles': 'Modbus, MQTT, REST',
             'Difficulté de configuration': 'Élevée',
             'Coût': 'Gratuit',
-            'Idéal pour': 'Framework niveau entreprise, déploiements openHAB existants',
+            'Idéal pour': 'Framework à base de règles, déploiements openHAB existants',
           },
           {
             'Plateforme': 'ioBroker',
@@ -1740,7 +1740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'trade-note',
         title: 'Note commerciale : droits de douane matériels',
         content: [
-          '**Les plateformes de ce guide sont des logiciels sans exposition directe aux droits de douane.** Le matériel auquel elles se connectent est une autre affaire . Depuis le 1er mai 2026, l\'UE restreint les financements européens pour les projets utilisant des onduleurs de fournisseurs classés à haut risque ; cela concerne les projets financés par des fonds publics, pas les achats de particuliers, et elle ne dit rien d\'une marque citée dans ce guide ([pv magazine](https://www.pv-magazine.com/2026/05/04/eu-funding-ban-on-high-risk-inverters-including-chinese-suppliers-extends-to-bess/)). Nous n\'avons trouvé aucune procédure antidumping de l\'UE sur les onduleurs chinois ou les batteries lithium de stockage.',
+          '**Les plateformes de ce guide sont des logiciels sans exposition directe aux droits de douane.** Le matériel auquel elles se connectent est une autre affaire . Depuis le 1er mai 2026, l\'UE restreint les financements européens pour les projets utilisant des onduleurs de fournisseurs classés à haut risque ; cela concerne les projets financés par des fonds publics, pas les achats de particuliers, et elle ne dit rien d\'une marque citée dans ce guide ([pv magazine](https://www.pv-magazine.com/2026/05/04/eu-funding-ban-on-high-risk-inverters-including-chinese-suppliers-extends-to-bess/)). Aucune procédure antidumping de l\'UE sur les onduleurs chinois ou les batteries lithium de stockage n\'a été identifiée lors de notre recherche (vérifié le 03/11/2026).',
           'Le choix de la plateforme est neutre sur le plan douanier — le logiciel fonctionne sur n\'importe quel matériel une fois connecté. Les prix et les règles du matériel peuvent changer rapidement ; vérifiez les prix actuels et la situation juridique à l\'achat.',
         ],
       },
@@ -1754,7 +1754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qu\'est-ce qu\'ioBroker et est-il meilleur que Home Assistant pour les utilisateurs germanophones ?',
-            a: 'ioBroker est une plateforme d\'automatisation domestique open source écrite en Node.js avec une très forte communauté DACH (germanophone). Elle n\'est pas intrinsèquement plus capable que Home Assistant — les deux prennent en charge Modbus, MQTT et REST — mais la documentation, les forums et le support des adaptateurs en allemand sont significativement plus développés dans la communauté ioBroker. Si vous utilisez déjà ioBroker, il n\'y a pas de raison impérieuse de migrer vers Home Assistant uniquement pour l\'intégration solaire.',
+            a: 'ioBroker est une plateforme d\'automatisation domestique open source écrite en Node.js avec une très forte communauté DACH (germanophone). Elle n\'est pas intrinsèquement plus capable que Home Assistant — les deux prennent en charge Modbus, MQTT et REST — mais la documentation et les forums en allemand sont plus étendus dans la communauté ioBroker selon notre évaluation ; comparez vous-même les pages des communautés. Si vous utilisez déjà ioBroker, il n\'y a pas de raison impérieuse de migrer vers Home Assistant uniquement pour l\'intégration solaire.',
           },
           {
             q: 'Puis-je utiliser EVCC sans Home Assistant ?',
@@ -1765,7 +1765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Solar Assistant ne demande aucun codage, ni Victron Venus OS sur du matériel Victron. Home Assistant, ioBroker et EVCC se configurent via une interface web et des modèles de type YAML sans programmation générale. openHAB a une courbe d\'apprentissage plus raide. Node-RED utilise la programmation par flux visuels et ESPHome des définitions de firmware en YAML ; ni l\'un ni l\'autre n\'exige de programmation classique, mais tous deux sont plus difficiles à apprendre que Home Assistant ou ioBroker.',
           },
           {
-            q: 'Quelle plateforme est la meilleure pour le contrôle zéro-injection ou sur surplus ?',
+            q: 'Quelles plateformes prennent en charge le contrôle zéro-injection ou sur surplus ?',
             a: 'EVCC est conçu pour diriger le surplus PV vers un véhicule électrique, une pompe à chaleur ou une batterie domestique, ce qui garde le soutirage réseau bas ; son système de modèles et sa bibliothèque d\'appareils rendent la configuration plus rapide que de construire la logique soi-même. Home Assistant obtient des résultats similaires avec des automatisations, et ioBroker avec des scripts ou son planificateur.',
           },
           {
@@ -1798,7 +1798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Home Assistant, ioBroker ou openHAB — quelles différences ?',
-            a: 'Les trois sont gratuits, open source et fonctionnent en local : Home Assistant (Apache 2.0, Python), ioBroker (MIT, Node.js) et openHAB (EPL 2.0, Java). Home Assistant liste plus de 1 500 intégrations, ioBroker une grande communauté germanophone et un modèle d\'adaptateurs, openHAB un cadre de règles strict avec une courbe d\'apprentissage plus raide. Tous se connectent en Modbus et MQTT ; le choix tient donc à l\'écosystème et à l\'effort, pas à la portée des appareils.',
+            a: 'Les trois sont gratuits, open source et fonctionnent en local : Home Assistant (Apache 2.0, Python), ioBroker (MIT, Node.js) et openHAB (EPL 2.0, Java). Home Assistant liste plus de 1 500 intégrations, ioBroker une grande communauté germanophone et un modèle d\'adaptateurs, openHAB un cadre de règles strict dont beaucoup d\'utilisateurs trouvent la courbe d\'apprentissage plus raide. Tous se connectent en Modbus et MQTT ; le choix tient donc à l\'écosystème et à l\'effort, pas à la portée des appareils.',
           },
         ],
       },
@@ -1894,7 +1894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EVCC：PV余剰でのEV充電に特化、数百台のデバイスに対応、ソフトウェアは無料（多くの商用充電器ではスポンサートークンが必要）',
           'ioBroker：DACH 圏に大きなコミュニティあり。Node.js ベース。多くのドイツ市場向けインバーターのアダプターあり',
           'Solar Assistant：商用、Raspberry Piイメージ、買い切り€59 — モニタリング中心、対応インバーターでは設定変更も可、MQTT出力',
-          'openHAB：Java ベース。エンタープライズグレードのフレームワーク — HA や ioBroker より学習曲線が急',
+          'openHAB：Java ベースのルール駆動型フレームワーク。多くのユーザーが Home Assistant や ioBroker より学習曲線が急だと感じています',
           'Grafana + InfluxDB：ダッシュボードと過去データ分析のみ — 制御機能なし',
         ],
         updatedDate: '2026-11-03',
@@ -1933,7 +1933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**このガイドの9つのプラットフォームはすべて、バルコニー太陽光ハードウェアとの通信に同じ3つのローカルプロトコルのいずれかを使用します：Modbus TCP/RTU、MQTT、またはデバイスのローカル REST API。** プラットフォームの選択は、物理的にどのデバイスに到達できるかを変えるのではなく、そのデータを読み取り活用するためのツールを変えます。使用するデバイスが公開しているプロトコルを把握することがプラットフォーム選択の前の上流の問いです。関連記事 [クラウド不要のバルコニー太陽光：Home Assistant でシステムをモニタリングする](/ja/balcony-solar/home-assistant-balcony-solar-no-cloud) でハードウェアレベルのプロトコル決定（各ブランドが公開するインターフェースとその確認方法）を解説しています。この記事ではローカルインターフェースが存在する前提で、その上で動かすソフトウェアプラットフォームの選択に焦点を当てます。',
           '**Modbus RTU（RS-485 シリアル）と Modbus TCP（Ethernet/WiFi）** は、太陽光インバーターや蓄電システムで最も一般的な読み書きインターフェースです。ほとんどのプラットフォームは Modbus TCP にネイティブ対応しています。Modbus RTU には通常、シリアル-USB アダプターまたは ESPHome ブリッジデバイスが必要です（下記 ESPHome のプロフィールを参照）。',
-          '**MQTT** は、ローカル API 対応のバルコニー太陽光デバイスがリアルタイムのステータス配信に使用する軽量なパブリッシュ/サブスクライブメッセージプロトコルです。このガイドのほぼすべてのプラットフォームが MQTT トピックをサブスクライブできるため、デバイスが対応していれば最も広く互換性のある接続方法です。',
+          '**MQTT** は、ローカル API 対応のバルコニー太陽光デバイスがリアルタイムのステータス配信に使用する軽量なパブリッシュ/サブスクライブメッセージプロトコルです。このガイドのほぼすべてのプラットフォームが MQTT トピックをサブスクライブできるため、デバイスが対応していれば広くサポートされている接続方法です。',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Home Assistant、ioBroker、EVCC、openHAB、Solar Assistant はいずれも同じ Modbus と MQTT プロトコルで接続します — プラットフォームの選択はそのデータをどう使うかを決めるものであり、デバイスに到達できるかどうかではありません。' },
@@ -1960,7 +1960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**各プロフィールでは、ライセンス、最新リリースとその日付、具体的な太陽光の例、向いているユーザーを示します。** バージョンと日付は各プロジェクトのリリースページやレジストリに基づいています。導入前に、お使いのインバーターや蓄電池のモデルが各プラットフォームの連携リストにあるか確認してください。',
           '**Home Assistant** — オープンソース（Apache 2.0）、ローカル重視、Pythonベース。最新リリースは2026.10.4（2026年10月24日）。Home Assistant Green、Raspberry Pi 4/5、x86-64マシン、VMで動作します。Home Assistant Yellowはすでに製造終了です。SMAやFroniusなどの標準連携はローカルネットワーク上のインバーターを取得し、Modbus、MQTT、RESTにも対応します。お使いのモデルは連携リストで確認してください。*例*：Zendure SolarFlowがローカルAPIで充電状態と電力フローを公開し、HACSのコミュニティ連携が読み取り、PV出力が400Wを超えたら食器洗い機を起動するオートメーションを実行。*向いている人*：定番の選択肢。大きなコミュニティと1,500以上の掲載インテグレーション、能動的な制御と自動化。',
-          '**openHAB** — オープンソース（EPL 2.0）、ローカル重視、Javaベース。最新の安定版は5.2.3（2026年10月10日）。公式Modbusバインディングは、Modbus TCPとシリアル（RTU）で読み書きでき、HTTPバインディングでRESTデバイスにも対応します。ThingsはウェブUIでもテキストファイルでも設定でき、学習曲線はHome AssistantやioBrokerより急です。*例*：FroniusインバーターのローカルSolar APIを10秒ごとに取得し、蓄熱ヒーターのスケジュールを正午の発電ピークに合わせるルールを実行。*向いている人*：厳格な自動化フレームワークを求める上級者やインテグレーター、すでにopenHABを使っている人。',
+          '**openHAB** — オープンソース（EPL 2.0）、ローカル重視、Javaベース。最新の安定版は5.2.3（2026年10月10日）。公式Modbusバインディングは、Modbus TCPとシリアル（RTU）で読み書きでき、HTTPバインディングでRESTデバイスにも対応します。ThingsはウェブUIでもテキストファイルでも設定でき、多くのユーザーはHome AssistantやioBrokerより学習曲線が急だと感じています。*例*：FroniusインバーターのローカルSolar APIを10秒ごとに取得し、蓄熱ヒーターのスケジュールを正午の発電ピークに合わせるルールを実行。*向いている人*：厳格な自動化フレームワークを求める上級者やインテグレーター、すでにopenHABを使っている人。',
           '**ioBroker** — オープンソース（MIT）、ローカル重視、Node.jsベース。js-controller 7.2.5（2026年10月5日）。ドイツ語圏の大きなコミュニティがあります。アダプター：Modbus 9.2.2（2026年10月23日）、MQTT 9.0.2（2026年10月30日）、SMA Energy Meter 1.4.0（2026年9月11日）、Fronius 2.2.0（2026年3月7日）、OpenDTU 3.1.0（2024年12月2日。[OpenDTU](https://github.com/tbnobody/OpenDTU)デバイス経由でHoymilesインバーターを読み取り、OpenDTU本体はv26.9.28、2026年9月28日）。**FroniusとOpenDTUのアダプターは3か月以上リリースがありません。依存する前にリポジトリを確認してください。** VISダッシュボードは別ツール不要です。*例*：ModbusアダプターでSungrowインバーターを読み取り、日次の蓄電池充電状態をVISの棒グラフで表示。*向いている人*：すでにioBrokerを使っているDACH圏ユーザー、ドイツ語のドキュメントやフォーラムを好む人。',
           '**Node-RED** — オープンソース（Apache 2.0）、ローカル重視、Node.jsベースのビジュアルフローエディター。最新リリースは5.0.9（2026年10月21日）。MQTTとHTTPのノードは標準搭載で、Modbus TCP/RTUはコミュニティパッケージnode-red-contrib-modbus（5.62.1、2026年10月25日）で利用します。単独のプラットフォームというより、Home AssistantやioBrokerと組み合わせてデータ変換や自動化を担うのが一般的です。*例*：HoymilesマイクロインバーターのデータをMQTTで取得し、15分平均を計算してGrafana用のInfluxDBに書き込み。*向いている人*：ビジュアルなフロー設計を好む人、2つのシステム間で独自のデータ変換が必要な人。',
           '**EVCC** — オープンソース（MIT）、ローカル重視、ドキュメントはドイツ語と英語。最新リリースは0.318.2（2026年11月1日）。EV、ヒートポンプ、家庭用蓄電池をPV余剰で充電するための仕組みで、Fronius、SMA、Sungrow、Victronなど数百台のデバイスに対応します（お使いのモデルは[docs.evcc.io](https://docs.evcc.io)で確認）。ソフトウェアは無料ですが、多くの商用EV充電器にはスポンサートークン（年€50または永久€150、[EVCCスポンサーシップのページ](https://docs.evcc.io/en/sponsorship)による）が必要です。データはMQTTでHome AssistantやioBrokerに公開できます。*例*：FroniusインバーターとVolkswagen ID.4をEVCCに登録すると、EVCCがPV余剰を追跡し、系統からの受電が少なくなるよう充電電力を調整。*向いている人*：汎用の自動化基盤なしで余剰充電をしたい、バルコニー太陽光とEVの所有者。',
@@ -1996,7 +1996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'プロトコル': 'Modbus, MQTT, REST',
             '設定難易度': '高',
             'コスト': '無料',
-            '最適な用途': 'エンタープライズグレードのフレームワーク、既存の openHAB 環境',
+            '最適な用途': 'ルール駆動型フレームワーク、既存の openHAB 環境',
           },
           {
             'プラットフォーム': 'ioBroker',
@@ -2109,7 +2109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'trade-note',
         title: 'ハードウェア関税についての注記',
         content: [
-          '**本ガイドのプラットフォームはソフトウェアであり、関税の直接の影響を受けません。** 接続先のハードウェアについては別の話です。EUは2026年5月1日から、高リスクと分類された供給元のインバーターを使うプロジェクトへのEU資金提供を制限しています。対象は公的資金のプロジェクトで、個人の購入は対象外で、本ガイドに挙げたどのブランドについても何も述べていません（[pv magazine](https://www.pv-magazine.com/2026/05/04/eu-funding-ban-on-high-risk-inverters-including-chinese-suppliers-extends-to-bess/)）。中国製インバーターやリチウム蓄電池に対するEUのアンチダンピング案件は確認できませんでした。',
+          '**本ガイドのプラットフォームはソフトウェアであり、関税の直接の影響を受けません。** 接続先のハードウェアについては別の話です。EUは2026年5月1日から、高リスクと分類された供給元のインバーターを使うプロジェクトへのEU資金提供を制限しています。対象は公的資金のプロジェクトで、個人の購入は対象外で、本ガイドに挙げたどのブランドについても何も述べていません（[pv magazine](https://www.pv-magazine.com/2026/05/04/eu-funding-ban-on-high-risk-inverters-including-chinese-suppliers-extends-to-bess/)）。中国製インバーターやリチウム蓄電池に対するEUのアンチダンピング案件は、当方の調査では確認されませんでした（2026年11月3日確認）。',
           'プラットフォームの選択は関税に左右されません。接続さえできれば、ソフトウェアはどのハードウェアでも動きます。ハードウェアの価格や規則は急に変わり得るため、購入時に最新の価格と法的状況を確認してください。',
         ],
       },
@@ -2123,7 +2123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ioBroker とは何ですか？ドイツ語ユーザーにとって Home Assistant より優れていますか？',
-            a: 'ioBroker は Node.js で書かれたオープンソースのホームオートメーションプラットフォームで、DACH（ドイツ語圏）コミュニティが非常に充実しています。Home Assistant より本質的に高機能なわけではありません — 両方とも Modbus、MQTT、REST をサポートしています — しかしドイツ語のドキュメント、フォーラム、アダプターサポートは ioBroker コミュニティの方が格段に充実しています。すでに ioBroker を運用している場合、太陽光インテグレーションのためだけに Home Assistant に移行する強い理由はありません。',
+            a: 'ioBroker は Node.js で書かれたオープンソースのホームオートメーションプラットフォームで、DACH（ドイツ語圏）コミュニティが非常に充実しています。Home Assistant より本質的に高機能なわけではありません — 両方とも Modbus、MQTT、REST をサポートしています — しかしドイツ語のドキュメントとフォーラムは、当方の評価では ioBroker コミュニティの方が豊富です。各コミュニティのページをご自身で比較してください。すでに ioBroker を運用している場合、太陽光インテグレーションのためだけに Home Assistant に移行する強い理由はありません。',
           },
           {
             q: 'Home Assistant なしで EVCC を使えますか？',
@@ -2134,7 +2134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Solar Assistantはコーディング不要で、Victron機器上のVictron Venus OSも不要です。Home Assistant、ioBroker、EVCCは、ウェブUIとYAML風のテンプレートで、汎用のプログラミングなしに設定できます。openHABは学習曲線が急です。Node-REDはビジュアルなフロー設計、ESPHomeはYAMLでファームウェアを定義します。どちらも従来型のプログラミングは不要ですが、Home AssistantやioBrokerより習得は難しくなります。',
           },
           {
-            q: 'ゼロフィードインや余剰制御に最適なプラットフォームはどれですか？',
+            q: 'ゼロフィードインや余剰制御に対応するプラットフォームはどれですか？',
             a: 'EVCCは、PV余剰をEV、ヒートポンプ、家庭用蓄電池に振り向けて系統からの受電を抑えるよう設計されており、テンプレートとデバイスライブラリにより、自分でロジックを組むより早く設定できます。Home Assistantもオートメーションで、ioBrokerもスクリプトやスケジューラーで同様の結果を得られます。',
           },
           {
@@ -2167,7 +2167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Home Assistant、ioBroker、openHABの違いは？',
-            a: '3つとも無料のオープンソースで、ローカルで動作します。Home Assistant（Apache 2.0、Python）、ioBroker（MIT、Node.js）、openHAB（EPL 2.0、Java）です。Home Assistantは1,500以上のインテグレーションを掲載し、ioBrokerはドイツ語圏の大きなコミュニティとアダプター方式、openHABは厳格なルールの枠組みで学習曲線は急です。いずれもModbusとMQTTで接続するため、選択はエコシステムと手間で決まり、接続できるデバイスの範囲では決まりません。',
+            a: '3つとも無料のオープンソースで、ローカルで動作します。Home Assistant（Apache 2.0、Python）、ioBroker（MIT、Node.js）、openHAB（EPL 2.0、Java）です。Home Assistantは1,500以上のインテグレーションを掲載し、ioBrokerはドイツ語圏の大きなコミュニティとアダプター方式、openHABは厳格なルールの枠組みで、多くのユーザーが学習曲線は急だと感じています。いずれもModbusとMQTTで接続するため、選択はエコシステムと手間で決まり、接続できるデバイスの範囲では決まりません。',
           },
         ],
       },
@@ -2267,7 +2267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EVCC: 태양광 잉여 전력 전기차 충전 전용, 수백 종 기기 지원, 소프트웨어 무료(많은 상용 충전기는 스폰서 토큰 필요)',
           'ioBroker: 큰 DACH 커뮤니티, Node.js 기반, 많은 독일 시장 인버터용 어댑터',
           'Solar Assistant: 상용, Raspberry Pi 이미지, 1회 €59 — 모니터링 중심, 지원 인버터는 설정 변경 가능, MQTT 출력',
-          'openHAB: Java 기반, 엔터프라이즈급 프레임워크 — HA나 ioBroker보다 가파른 학습 곡선',
+          'openHAB: Java 기반의 규칙 중심 프레임워크. 많은 사용자가 Home Assistant나 ioBroker보다 학습 곡선이 가파르다고 느낍니다',
           'Grafana + InfluxDB: 대시보드 및 과거 분석 전용 — 제어 기능 없음',
         ],
         updatedDate: '2026-11-03',
@@ -2306,7 +2306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**이 가이드의 9개 플랫폼 모두 발코니 태양광 하드웨어와 동일한 세 가지 로컬 프로토콜 중 하나를 통해 통신합니다: Modbus TCP/RTU, MQTT 또는 장치의 로컬 REST API.** 플랫폼 선택은 어떤 물리적 장치에 접근할 수 있는지를 바꾸지 않습니다 — 그 데이터를 읽고 처리하는 데 사용하는 도구를 바꿉니다. 특정 장치가 어떤 프로토콜을 제공하는지는 플랫폼 선택 전에 먼저 확인해야 할 사항입니다. 관련 문서 [클라우드 없는 발코니 태양광: Home Assistant로 시스템 모니터링](/ko/balcony-solar/home-assistant-balcony-solar-no-cloud)에서 하드웨어 수준의 프로토콜 결정을 다룹니다. 이 문서는 로컬 인터페이스가 존재한다고 가정하고 그 위에서 실행할 소프트웨어 플랫폼에 초점을 맞춥니다.',
           '**Modbus RTU(RS-485 직렬)와 Modbus TCP(이더넷/WiFi)**는 태양광 인버터 및 배터리 시스템에서 가장 일반적인 읽기-쓰기 인터페이스입니다. 대부분의 플랫폼은 Modbus TCP에 기본적으로 연결됩니다. Modbus RTU는 일반적으로 직렬-USB 어댑터 또는 ESPHome 브릿지 장치가 필요합니다(아래 ESPHome 프로필 참조).',
-          '**MQTT**는 대부분의 로컬 API 발코니 태양광 장치가 실시간 상태 방송에 사용하는 경량 발행/구독 메시징 프로토콜입니다. 이 가이드의 거의 모든 플랫폼이 MQTT 토픽을 구독할 수 있어, 장치가 지원하는 경우 가장 광범위하게 호환되는 연결 경로입니다.',
+          '**MQTT**는 대부분의 로컬 API 발코니 태양광 장치가 실시간 상태 방송에 사용하는 경량 발행/구독 메시징 프로토콜입니다. 이 가이드의 거의 모든 플랫폼이 MQTT 토픽을 구독할 수 있어, 장치가 지원하는 경우 널리 지원되는 연결 경로입니다.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Home Assistant, ioBroker, EVCC, openHAB, Solar Assistant 모두 동일한 Modbus 및 MQTT 프로토콜로 연결됩니다 — 플랫폼 선택은 장치에 접근할 수 있는지가 아니라 그 데이터를 어떻게 사용하는지를 결정합니다.' },
@@ -2333,7 +2333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**각 프로필은 라이선스, 날짜가 포함된 최신 릴리스, 구체적인 태양광 예시, 적합한 사용자를 보여 줍니다.** 버전과 날짜는 각 프로젝트의 릴리스 페이지와 레지스트리에서 가져왔습니다. 결정하기 전에 각 플랫폼의 연동 목록에서 사용 중인 인버터나 배터리의 정확한 모델을 확인하세요.',
           '**Home Assistant** — 오픈소스(Apache 2.0), 로컬 우선, Python 기반. 최신 릴리스 2026.10.4(2026년 10월 24일). Home Assistant Green, Raspberry Pi 4 또는 5, x86-64 장비, VM에서 실행됩니다. Home Assistant Yellow는 더 이상 생산되지 않습니다. SMA, Fronius 같은 기본 연동은 로컬 네트워크의 인버터를 폴링하며 Modbus, MQTT, REST도 지원합니다. 정확한 모델은 연동 목록에서 확인하세요. *예시*: Zendure SolarFlow가 로컬 API로 충전 상태와 전력 흐름을 게시하고, 커뮤니티 HACS 연동이 이를 읽어 태양광 출력이 400 W를 넘으면 자동화가 식기세척기를 시작합니다. *적합한 사용자*: 기본 선택지 — 최대 커뮤니티, 최다 연동, 능동 제어와 자동화.',
-          '**openHAB** — 오픈소스(EPL 2.0), 로컬 우선, Java 기반. 최신 안정 릴리스 5.2.3(2026년 10월 10일). 공식 Modbus 바인딩은 Modbus TCP와 시리얼(RTU)로 읽기와 쓰기를 지원하고, HTTP 바인딩은 REST 기기를 다룹니다. Things는 웹 UI나 텍스트 파일로 설정할 수 있으며, 학습 곡선은 Home Assistant나 ioBroker보다 가파릅니다. *예시*: Fronius 인버터의 로컬 Solar API를 10초마다 폴링하고, 규칙으로 온수 버퍼 히터 일정을 정오 발전 피크로 옮깁니다. *적합한 사용자*: 엄격한 자동화 프레임워크를 원하는 고급 사용자와 통합 업체, 이미 openHAB을 쓰는 사용자.',
+          '**openHAB** — 오픈소스(EPL 2.0), 로컬 우선, Java 기반. 최신 안정 릴리스 5.2.3(2026년 10월 10일). 공식 Modbus 바인딩은 Modbus TCP와 시리얼(RTU)로 읽기와 쓰기를 지원하고, HTTP 바인딩은 REST 기기를 다룹니다. Things는 웹 UI나 텍스트 파일로 설정할 수 있으며, 많은 사용자가 학습 곡선이 Home Assistant나 ioBroker보다 가파르다고 느낍니다. *예시*: Fronius 인버터의 로컬 Solar API를 10초마다 폴링하고, 규칙으로 온수 버퍼 히터 일정을 정오 발전 피크로 옮깁니다. *적합한 사용자*: 엄격한 자동화 프레임워크를 원하는 고급 사용자와 통합 업체, 이미 openHAB을 쓰는 사용자.',
           '**ioBroker** — 오픈소스(MIT), 로컬 우선, Node.js 기반. js-controller 7.2.5(2026년 10월 5일). 독일어권 커뮤니티가 큽니다. 어댑터: Modbus 9.2.2(2026년 10월 23일), MQTT 9.0.2(2026년 10월 30일), SMA Energy Meter 1.4.0(2026년 9월 11일), Fronius 2.2.0(2026년 3월 7일), OpenDTU 3.1.0(2024년 12월 2일, [OpenDTU](https://github.com/tbnobody/OpenDTU) 장치를 통해 Hoymiles 인버터를 읽음, OpenDTU 자체는 v26.9.28, 2026년 9월 28일). **Fronius와 OpenDTU 어댑터는 3개월 넘게 릴리스가 없습니다. 의존하기 전에 저장소를 확인하세요.** VIS 대시보드는 별도 도구가 필요 없습니다. *예시*: Modbus 어댑터로 Sungrow 인버터를 읽고 VIS에서 일일 배터리 충전 상태를 막대 차트로 표시합니다. *적합한 사용자*: 이미 ioBroker를 쓰는 DACH 사용자, 독일어 문서와 포럼을 선호하는 사용자.',
           '**Node-RED** — 오픈소스(Apache 2.0), 로컬 우선, Node.js 기반 시각적 플로우 편집기. 최신 릴리스 5.0.9(2026년 10월 21일). MQTT와 HTTP 노드는 내장되어 있고, Modbus TCP/RTU는 커뮤니티 패키지 node-red-contrib-modbus(5.62.1, 2026년 10월 25일)로 제공됩니다. 독립 플랫폼이라기보다 Home Assistant나 ioBroker의 데이터 변환·자동화 보조 도구로 쓰는 경우가 많습니다. *예시*: Hoymiles 마이크로 인버터 데이터를 MQTT로 가져와 15분 평균을 계산하고 Grafana용 InfluxDB에 기록합니다. *적합한 사용자*: 시각적 플로우 프로그래밍을 선호하거나 두 시스템 사이에 맞춤 데이터 변환이 필요한 사용자.',
           '**EVCC** — 오픈소스(MIT), 로컬 우선, 문서는 독일어와 영어 제공. 최신 릴리스 0.318.2(2026년 11월 1일). 전기차, 히트펌프, 가정용 배터리를 태양광 잉여 전력으로 충전하도록 만들어졌으며 Fronius, SMA, Sungrow, Victron을 포함해 수백 종의 기기와 작동합니다(모델은 [docs.evcc.io](https://docs.evcc.io)에서 확인). 소프트웨어는 무료이지만 많은 상용 전기차 충전기는 스폰서 토큰(연 €50 또는 평생 €150, [EVCC 후원 페이지](https://docs.evcc.io/en/sponsorship) 기준)이 필요합니다. Home Assistant나 ioBroker용으로 MQTT를 통해 데이터를 게시합니다. *예시*: Fronius 인버터와 Volkswagen ID.4를 EVCC에 등록하면 EVCC가 태양광 잉여 전력을 추적하고 충전 속도를 조절해 계통 수전량을 낮게 유지합니다. *적합한 사용자*: 범용 자동화 플랫폼 없이 잉여 전력 충전을 원하는 발코니 태양광과 전기차 소유자.',
@@ -2369,7 +2369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '프로토콜': 'Modbus, MQTT, REST',
             '설정 난이도': '높음',
             '비용': '무료',
-            '적합한 사용자': '엔터프라이즈급 프레임워크, 기존 openHAB 배포',
+            '적합한 사용자': '규칙 중심 프레임워크, 기존 openHAB 배포',
           },
           {
             '플랫폼': 'ioBroker',
@@ -2482,7 +2482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'trade-note',
         title: '무역 참고: 하드웨어 관세',
         content: [
-          '**이 가이드의 플랫폼은 관세의 직접적인 영향을 받지 않는 소프트웨어입니다.** 연결되는 하드웨어는 다릅니다. EU는 2026년 5월 1일부터 고위험으로 분류된 공급업체의 인버터를 쓰는 프로젝트에 대한 EU 자금 지원을 제한하고 있으며, 이는 공공 자금 프로젝트에 해당하고 개인 구매에는 적용되지 않으며, 이 가이드에 언급된 어떤 브랜드에 대해서도 말하는 바가 없습니다([pv magazine](https://www.pv-magazine.com/2026/05/04/eu-funding-ban-on-high-risk-inverters-including-chinese-suppliers-extends-to-bess/)). 중국산 인버터나 리튬 저장 배터리에 대한 EU 반덤핑 사건은 찾지 못했습니다.',
+          '**이 가이드의 플랫폼은 관세의 직접적인 영향을 받지 않는 소프트웨어입니다.** 연결되는 하드웨어는 다릅니다. EU는 2026년 5월 1일부터 고위험으로 분류된 공급업체의 인버터를 쓰는 프로젝트에 대한 EU 자금 지원을 제한하고 있으며, 이는 공공 자금 프로젝트에 해당하고 개인 구매에는 적용되지 않으며, 이 가이드에 언급된 어떤 브랜드에 대해서도 말하는 바가 없습니다([pv magazine](https://www.pv-magazine.com/2026/05/04/eu-funding-ban-on-high-risk-inverters-including-chinese-suppliers-extends-to-bess/)). 중국산 인버터나 리튬 저장 배터리에 대한 EU 반덤핑 사건은 저희 검색에서 확인되지 않았습니다(2026년 11월 3일 확인).',
           '플랫폼 선택은 관세와 무관합니다. 연결만 되면 소프트웨어는 어떤 하드웨어에서든 실행됩니다. 하드웨어 가격과 규정은 갑자기 바뀔 수 있으므로 구매 시 현재 가격과 법적 상황을 확인하세요.',
         ],
       },
@@ -2496,7 +2496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ioBroker란 무엇이며 독일 사용자에게 Home Assistant보다 낫습니까?',
-            a: 'ioBroker는 매우 강력한 DACH(독일어권) 커뮤니티를 갖춘 Node.js로 작성된 오픈 소스 홈 자동화 플랫폼입니다. 본질적으로 Home Assistant보다 더 유능하지 않습니다 — 둘 다 Modbus, MQTT, REST를 지원합니다 — 그러나 독일어 문서, 포럼, 어댑터 지원이 ioBroker 커뮤니티에서 훨씬 강합니다. 이미 ioBroker를 운영하고 있다면, 태양광 통합만을 위해 Home Assistant로 마이그레이션할 강력한 이유가 없습니다.',
+            a: 'ioBroker는 매우 강력한 DACH(독일어권) 커뮤니티를 갖춘 Node.js로 작성된 오픈 소스 홈 자동화 플랫폼입니다. 본질적으로 Home Assistant보다 더 유능하지 않습니다 — 둘 다 Modbus, MQTT, REST를 지원합니다 — 그러나 독일어 문서와 포럼은 저희 평가로는 ioBroker 커뮤니티가 더 풍부합니다. 커뮤니티 페이지를 직접 비교해 보십시오. 이미 ioBroker를 운영하고 있다면, 태양광 통합만을 위해 Home Assistant로 마이그레이션할 강력한 이유가 없습니다.',
           },
           {
             q: 'Home Assistant 없이 EVCC를 사용할 수 있습니까?',
@@ -2507,7 +2507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Solar Assistant는 코딩이 필요 없고, Victron 하드웨어의 Victron Venus OS도 마찬가지입니다. Home Assistant, ioBroker, EVCC는 웹 UI와 YAML 형식의 템플릿으로 범용 프로그래밍 없이 설정할 수 있습니다. openHAB은 학습 곡선이 더 가파릅니다. Node-RED는 시각적 플로우 프로그래밍을, ESPHome은 YAML 펌웨어 정의를 사용합니다. 둘 다 전통적인 프로그래밍은 필요 없지만 Home Assistant나 ioBroker보다 배우기 어렵습니다.',
           },
           {
-            q: '계통 역송 제로 또는 잉여 제어에 어떤 플랫폼이 가장 좋습니까?',
+            q: '계통 역송 제로 또는 잉여 제어를 지원하는 플랫폼은 무엇입니까?',
             a: 'EVCC는 태양광 잉여 전력을 전기차, 히트펌프, 가정용 배터리로 보내 계통 수전량을 낮게 유지하도록 설계되어 있으며, 템플릿 시스템과 기기 라이브러리 덕분에 직접 로직을 만드는 것보다 설정이 빠릅니다. Home Assistant는 자동화로, ioBroker는 스크립트나 스케줄러로 비슷한 결과를 낼 수 있습니다.',
           },
           {
@@ -2540,7 +2540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Home Assistant, ioBroker, openHAB은 어떻게 다른가요?',
-            a: '셋 모두 무료 오픈소스이며 로컬에서 실행됩니다. Home Assistant(Apache 2.0, Python), ioBroker(MIT, Node.js), openHAB(EPL 2.0, Java)입니다. Home Assistant는 1,500개 이상의 통합을 게시하고 있고, ioBroker는 큰 독일어 커뮤니티와 어댑터 방식을 갖추며, openHAB은 엄격한 규칙 프레임워크로 학습 곡선이 가파릅니다. 셋 다 Modbus와 MQTT로 연결하므로 선택은 기기 범위가 아니라 생태계와 노력에 달려 있습니다.',
+            a: '셋 모두 무료 오픈소스이며 로컬에서 실행됩니다. Home Assistant(Apache 2.0, Python), ioBroker(MIT, Node.js), openHAB(EPL 2.0, Java)입니다. Home Assistant는 1,500개 이상의 통합을 게시하고 있고, ioBroker는 큰 독일어 커뮤니티와 어댑터 방식을 갖추며, openHAB은 엄격한 규칙 프레임워크로, 많은 사용자가 학습 곡선이 가파르다고 느낍니다. 셋 다 Modbus와 MQTT로 연결하므로 선택은 기기 범위가 아니라 생태계와 노력에 달려 있습니다.',
           },
         ],
       },
@@ -2635,7 +2635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EVCC: feito para carregar o VE com excedente fotovoltaico, compatível com centenas de dispositivos, software gratuito (token de patrocinador para muitos carregadores comerciais)',
           'ioBroker: grande comunidade DACH, baseado em Node.js, adaptadores para muitos inversores do mercado alemão',
           'Solar Assistant: comercial, imagem para Raspberry Pi, €59 pagamento único — foco em monitoramento, ajustes em inversores compatíveis, saída MQTT',
-          'openHAB: baseado em Java, framework de nível empresarial — curva de aprendizado mais íngreme que HA ou ioBroker',
+          'openHAB: framework baseado em Java e em regras; muitos usuários consideram a curva de aprendizado mais íngreme que a do Home Assistant ou do ioBroker',
           'Grafana + InfluxDB: apenas painéis e análises históricas — sem capacidade de controle',
         ],
         updatedDate: '2026-11-03',
@@ -2674,7 +2674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Todas as nove plataformas neste guia se comunicam com hardware de solar de varanda por um dos mesmos três protocolos locais: Modbus TCP/RTU, MQTT ou a API REST local de um dispositivo.** Sua escolha de plataforma não muda quais dispositivos físicos você pode acessar — muda as ferramentas que você usa para ler e agir sobre esses dados. Entender qual protocolo seu dispositivo específico expõe é a pergunta anterior à escolha da plataforma; o artigo complementar [Solar de Varanda Sem Nuvem: Monitore Seu Sistema com Home Assistant](/pt/balcony-solar/home-assistant-balcony-solar-no-cloud) cobre a decisão de protocolo no nível do hardware (qual interface uma determinada marca expõe e como verificá-la). Este artigo pressupõe que uma interface local existe e se concentra em qual plataforma de software executar sobre ela.',
           '**Modbus RTU (serial RS-485) e Modbus TCP (Ethernet/WiFi)** são as interfaces de leitura e escrita mais comuns em inversores solares e sistemas de bateria. A maioria das plataformas se conecta ao Modbus TCP nativamente. Modbus RTU geralmente requer um adaptador serial-para-USB ou um dispositivo bridge ESPHome (veja o perfil do ESPHome abaixo).',
-          '**MQTT** é o protocolo de mensageria publicar/assinar leve que a maioria dos dispositivos de solar de varanda com API local usa para transmissão de status em tempo real. Quase todas as plataformas neste guia podem se inscrever em um tópico MQTT, tornando-o o caminho de conexão mais amplamente compatível quando um dispositivo o suporta.',
+          '**MQTT** é o protocolo de mensageria publicar/assinar leve que a maioria dos dispositivos de solar de varanda com API local usa para transmissão de status em tempo real. Quase todas as plataformas neste guia podem se inscrever em um tópico MQTT, tornando-o um caminho de conexão amplamente suportado quando um dispositivo o suporta.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Home Assistant, ioBroker, EVCC, openHAB e Solar Assistant se conectam pelos mesmos protocolos Modbus e MQTT — a escolha da plataforma determina como você usa esses dados, não se você pode acessar o dispositivo.' },
@@ -2701,7 +2701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Cada perfil traz a licença, a versão mais recente com a data, um exemplo solar concreto e o perfil de usuário ideal.** Versões e datas vêm das páginas de lançamento e dos registros dos próprios projetos; confira o modelo exato do seu inversor ou bateria na lista de integrações de cada plataforma antes de decidir.',
           '**Home Assistant** — Código aberto (Apache 2.0), voltado ao uso local, baseado em Python. Versão mais recente 2026.10.4 (24 out. 2026). Roda no Home Assistant Green, num Raspberry Pi 4 ou 5, num computador x86-64 ou numa VM; o Home Assistant Yellow não é mais fabricado. Integrações nativas como SMA e Fronius consultam o inversor na sua rede, e há suporte a Modbus, MQTT e REST; confira a lista de integrações para o seu modelo exato. *Exemplo*: um Zendure SolarFlow publica o estado de carga e o fluxo de potência pela API local; uma integração comunitária do HACS lê esses valores e uma automação liga a lava-louças quando a geração fotovoltaica passa de 400 W. *Ideal para*: um padrão comum — grande comunidade, mais de 1.500 integrações listadas, controle e automação ativos.',
-          '**openHAB** — Código aberto (EPL 2.0), voltado ao uso local, baseado em Java. Versão estável mais recente 5.2.3 (10 out. 2026). O binding oficial de Modbus lê e grava por Modbus TCP e serial (RTU), e um binding HTTP cobre dispositivos REST. Os Things podem ser configurados na interface web ou em arquivos de texto; a curva de aprendizado é mais íngreme que a do Home Assistant ou do ioBroker. *Exemplo*: consultar a Solar API local de um inversor Fronius a cada 10 segundos e disparar uma regra que move o horário de um aquecedor de acumulação para o pico de geração do meio-dia. *Ideal para*: usuários avançados e integradores que querem um framework de automação rígido ou que já usam o openHAB.',
+          '**openHAB** — Código aberto (EPL 2.0), voltado ao uso local, baseado em Java. Versão estável mais recente 5.2.3 (10 out. 2026). O binding oficial de Modbus lê e grava por Modbus TCP e serial (RTU), e um binding HTTP cobre dispositivos REST. Os Things podem ser configurados na interface web ou em arquivos de texto; muitos usuários consideram a curva de aprendizado mais íngreme que a do Home Assistant ou do ioBroker. *Exemplo*: consultar a Solar API local de um inversor Fronius a cada 10 segundos e disparar uma regra que move o horário de um aquecedor de acumulação para o pico de geração do meio-dia. *Ideal para*: usuários avançados e integradores que querem um framework de automação rígido ou que já usam o openHAB.',
           '**ioBroker** — Código aberto (MIT), voltado ao uso local, baseado em Node.js. js-controller 7.2.5 (5 out. 2026). Tem uma grande comunidade em alemão. Adaptadores: Modbus 9.2.2 (23 out. 2026), MQTT 9.0.2 (30 out. 2026), SMA Energy Meter 1.4.0 (11 set. 2026), Fronius 2.2.0 (7 mar. 2026) e OpenDTU 3.1.0 (2 dez. 2024), que lê inversores Hoymiles por meio de um dispositivo [OpenDTU](https://github.com/tbnobody/OpenDTU) (v26.9.28, 28 set. 2026). **Os adaptadores Fronius e OpenDTU estão há mais de três meses sem lançamento — confira os repositórios antes de depender deles.** O painel VIS dispensa uma ferramenta separada. *Exemplo*: ler um inversor Sungrow pelo adaptador Modbus e mostrar o estado de carga diário da bateria num gráfico de barras no VIS. *Ideal para*: usuários DACH que já usam o ioBroker ou preferem documentação e fóruns em alemão.',
           '**Node-RED** — Código aberto (Apache 2.0), voltado ao uso local, editor visual de fluxos baseado em Node.js. Versão mais recente 5.0.9 (21 out. 2026). Os nós MQTT e HTTP já vêm incluídos; Modbus TCP/RTU vem do pacote comunitário node-red-contrib-modbus (5.62.1, 25 out. 2026). Costuma ser um complemento do Home Assistant ou do ioBroker para transformar dados ou automatizar, mais do que uma plataforma independente. *Exemplo*: obter dados de um microinversor Hoymiles por MQTT, calcular médias de 15 minutos e enviar o resultado a uma instância do InfluxDB para o Grafana. *Ideal para*: quem prefere programação visual de fluxos ou precisa de lógica de transformação de dados entre dois sistemas.',
           '**EVCC** — Código aberto (MIT), voltado ao uso local, documentação em alemão e inglês. Versão mais recente 0.318.2 (1 nov. 2026). Feito para carregar com excedente fotovoltaico veículos elétricos, bombas de calor e baterias residenciais; funciona com centenas de dispositivos, incluindo Fronius, SMA, Sungrow e Victron (confira o seu modelo em [docs.evcc.io](https://docs.evcc.io)). O software é gratuito, mas muitos carregadores comerciais exigem um token de patrocinador (€50 por ano ou €150 vitalício, segundo a [página de patrocínio do EVCC](https://docs.evcc.io/en/sponsorship)). Publica dados por MQTT para o Home Assistant ou o ioBroker. *Exemplo*: um inversor Fronius e um Volkswagen ID.4 são registrados no EVCC, que acompanha o excedente fotovoltaico e ajusta a potência de carga para manter baixo o consumo da rede. *Ideal para*: donos de carro elétrico com solar de varanda que querem carga por excedente sem uma plataforma de automação geral.',
@@ -2737,7 +2737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Protocolos': 'Modbus, MQTT, REST',
             'Dificuldade de configuração': 'Alta',
             'Custo': 'Gratuito',
-            'Ideal para': 'Framework de nível empresarial, instalações openHAB existentes',
+            'Ideal para': 'Framework baseado em regras, instalações openHAB existentes',
           },
           {
             'Plataforma': 'ioBroker',
@@ -2850,7 +2850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'trade-note',
         title: 'Nota Comercial: Tarifas de Hardware',
         content: [
-          '**As plataformas deste guia são software, sem exposição direta a tarifas comerciais.** O hardware a que se conectam é outra história. Desde 1.º de maio de 2026, a UE restringe o financiamento europeu de projetos que usam inversores de fornecedores classificados como de alto risco; isso vale para projetos com recursos públicos, não para compras de particulares, e não diz nada sobre nenhuma marca citada neste guia ([pv magazine](https://www.pv-magazine.com/2026/05/04/eu-funding-ban-on-high-risk-inverters-including-chinese-suppliers-extends-to-bess/)). Não encontramos nenhum processo antidumping da UE sobre inversores chineses ou baterias de lítio de armazenamento.',
+          '**As plataformas deste guia são software, sem exposição direta a tarifas comerciais.** O hardware a que se conectam é outra história. Desde 1.º de maio de 2026, a UE restringe o financiamento europeu de projetos que usam inversores de fornecedores classificados como de alto risco; isso vale para projetos com recursos públicos, não para compras de particulares, e não diz nada sobre nenhuma marca citada neste guia ([pv magazine](https://www.pv-magazine.com/2026/05/04/eu-funding-ban-on-high-risk-inverters-including-chinese-suppliers-extends-to-bess/)). Nenhum processo antidumping da UE sobre inversores chineses ou baterias de lítio de armazenamento foi identificado em nossa pesquisa (verificado em 03/11/2026).',
           'A escolha da plataforma é neutra em termos tarifários — o software roda em qualquer hardware depois de conectado. Preços e regras do hardware podem mudar de uma hora para outra; confira os preços atuais e a situação legal na hora de comprar.',
         ],
       },
@@ -2864,7 +2864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'O que é ioBroker e é melhor que Home Assistant para usuários alemães?',
-            a: 'ioBroker é uma plataforma de automação residencial de código aberto escrita em Node.js com uma comunidade DACH (países de língua alemã) muito forte. Não é inerentemente mais capaz que o Home Assistant — ambos suportam Modbus, MQTT e REST — mas documentação, fóruns e suporte de adaptadores em idioma alemão são significativamente mais fortes na comunidade ioBroker. Se você já usa ioBroker, não há motivo forte para migrar para o Home Assistant apenas por causa da integração solar.',
+            a: 'ioBroker é uma plataforma de automação residencial de código aberto escrita em Node.js com uma comunidade DACH (países de língua alemã) muito forte. Não é inerentemente mais capaz que o Home Assistant — ambos suportam Modbus, MQTT e REST — mas a documentação e os fóruns em alemão são mais extensos na comunidade ioBroker, em nossa avaliação; compare você mesmo as páginas das comunidades. Se você já usa ioBroker, não há motivo forte para migrar para o Home Assistant apenas por causa da integração solar.',
           },
           {
             q: 'Posso usar EVCC sem Home Assistant?',
@@ -2875,7 +2875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'O Solar Assistant não exige programação, nem o Victron Venus OS em hardware Victron. Home Assistant, ioBroker e EVCC podem ser configurados por interface web e modelos do tipo YAML, sem programação geral. O openHAB tem uma curva de aprendizado mais íngreme. O Node-RED usa programação visual de fluxos e o ESPHome usa definições de firmware em YAML; nenhum exige programação tradicional, mas ambos são mais difíceis de aprender que o Home Assistant ou o ioBroker.',
           },
           {
-            q: 'Qual plataforma é melhor para controle de injeção zero ou excedente?',
+            q: 'Quais plataformas suportam controle de injeção zero ou excedente?',
             a: 'O EVCC foi feito para direcionar o excedente fotovoltaico a um carro elétrico, uma bomba de calor ou uma bateria residencial, o que mantém baixo o consumo da rede; o sistema de modelos e a biblioteca de dispositivos tornam a configuração mais rápida do que montar a lógica por conta própria. O Home Assistant chega a resultados parecidos com automações, e o ioBroker com scripts ou seu agendador.',
           },
           {
@@ -2908,7 +2908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Home Assistant, ioBroker ou openHAB — qual é a diferença?',
-            a: 'Os três são gratuitos, de código aberto e rodam localmente: Home Assistant (Apache 2.0, Python), ioBroker (MIT, Node.js) e openHAB (EPL 2.0, Java). O Home Assistant lista mais de 1.500 integrações, o ioBroker uma grande comunidade em alemão e um modelo de adaptadores, e o openHAB um framework de regras rígido com curva de aprendizado mais íngreme. Todos se conectam por Modbus e MQTT; a escolha depende de ecossistema e esforço, não do alcance de dispositivos.',
+            a: 'Os três são gratuitos, de código aberto e rodam localmente: Home Assistant (Apache 2.0, Python), ioBroker (MIT, Node.js) e openHAB (EPL 2.0, Java). O Home Assistant lista mais de 1.500 integrações, o ioBroker uma grande comunidade em alemão e um modelo de adaptadores, e o openHAB um framework de regras rígido cuja curva de aprendizado muitos usuários consideram mais íngreme. Todos se conectam por Modbus e MQTT; a escolha depende de ecossistema e esforço, não do alcance de dispositivos.',
           },
         ],
       },
@@ -3009,7 +3009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EVCC：专为光伏余电给电动车充电而设计，支持数百种设备，软件免费（许多商用充电桩需要赞助令牌）',
           'ioBroker：德语区社区庞大，基于 Node.js，有大量针对德国市场逆变器的适配器',
           'Solar Assistant：商业软件，Raspberry Pi镜像，一次性€59 — 以监控为主，受支持的逆变器可修改设置，提供MQTT输出',
-          'openHAB：基于 Java，企业级框架——学习曲线比 HA 或 ioBroker 更陡',
+          'openHAB：基于 Java 的规则驱动框架；许多用户认为其学习曲线比 Home Assistant 或 ioBroker 更陡',
           'Grafana + InfluxDB：仅提供仪表板与历史分析——不具备控制功能',
         ],
         updatedDate: '2026-11-03',
@@ -3048,7 +3048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**本指南中的全部九个平台均通过以下三种本地协议之一与阳台光伏硬件通信：Modbus TCP/RTU、MQTT，或设备的本地 REST API。** 您对平台的选择不会改变能接入哪些物理设备——它改变的是您用于读取和处理数据的工具。了解您的具体设备暴露的是哪种协议，是选择平台前的前置问题；配套文章[无云阳台光伏：使用 Home Assistant 监控系统](/zh/balcony-solar/home-assistant-balcony-solar-no-cloud)涵盖了硬件层面的协议选择（各品牌暴露的接口及验证方法）。本文假设本地接口已存在，重点讨论在此之上应运行哪个软件平台。',
           '**Modbus RTU（RS-485 串行）和 Modbus TCP（以太网/WiFi）** 是太阳能逆变器和储能系统上最常见的读写接口。大多数平台可原生连接 Modbus TCP。Modbus RTU 通常需要串口转 USB 适配器或 ESPHome 桥接设备（见下方 ESPHome 简介）。',
-          '**MQTT** 是大多数本地 API 阳台光伏设备用于实时状态广播的轻量级发布/订阅消息协议。本指南中几乎每个平台都可以订阅 MQTT 主题，使其成为设备支持时兼容性最广的连接路径。',
+          '**MQTT** 是大多数本地 API 阳台光伏设备用于实时状态广播的轻量级发布/订阅消息协议。本指南中几乎每个平台都可以订阅 MQTT 主题，使其成为设备支持时被广泛支持的连接路径。',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Home Assistant、ioBroker、EVCC、openHAB 和 Solar Assistant 均通过相同的 Modbus 和 MQTT 协议连接——平台选择决定您如何使用数据，而非能否接触到设备。' },
@@ -3075,7 +3075,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**每个平台的介绍包含许可证、最新版本及发布日期、一个具体的光伏示例和适合的用户类型。** 版本和日期来自各项目自己的发布页面和软件仓库；决定之前，请在各平台的集成列表中核对您的逆变器或电池的具体型号。',
           '**Home Assistant** — 开源（Apache 2.0），本地优先，基于Python。最新版本2026.10.4（2026年10月24日）。可运行在Home Assistant Green、Raspberry Pi 4或5、x86-64设备或虚拟机上；Home Assistant Yellow已停产。SMA、Fronius等核心集成会在本地网络中轮询逆变器，同时支持Modbus、MQTT和REST；具体型号请查看集成列表。*示例*：Zendure SolarFlow通过本地API发布电量和功率流，社区HACS集成读取这些数据，当光伏输出超过400 W时，自动化启动洗碗机。*适合*：常见的默认选择 — 社区大，列出 1500 多个集成，支持主动控制和自动化。',
-          '**openHAB** — 开源（EPL 2.0），本地优先，基于Java。最新稳定版5.2.3（2026年10月10日）。官方Modbus绑定可通过Modbus TCP和串口（RTU）读写，HTTP绑定可覆盖REST设备。Things可在网页界面或文本文件中配置；学习曲线比Home Assistant或ioBroker更陡。*示例*：每10秒轮询Fronius逆变器的本地Solar API，并触发规则，把缓冲加热器的运行时段移到正午发电高峰。*适合*：想要严格自动化框架的高级用户和集成商，或已在使用openHAB的用户。',
+          '**openHAB** — 开源（EPL 2.0），本地优先，基于Java。最新稳定版5.2.3（2026年10月10日）。官方Modbus绑定可通过Modbus TCP和串口（RTU）读写，HTTP绑定可覆盖REST设备。Things可在网页界面或文本文件中配置；许多用户认为学习曲线比Home Assistant或ioBroker更陡。*示例*：每10秒轮询Fronius逆变器的本地Solar API，并触发规则，把缓冲加热器的运行时段移到正午发电高峰。*适合*：想要严格自动化框架的高级用户和集成商，或已在使用openHAB的用户。',
           '**ioBroker** — 开源（MIT），本地优先，基于Node.js。js-controller 7.2.5（2026年10月5日）。拥有庞大的德语社区。适配器：Modbus 9.2.2（2026年10月23日）、MQTT 9.0.2（2026年10月30日）、SMA Energy Meter 1.4.0（2026年9月11日）、Fronius 2.2.0（2026年3月7日）和OpenDTU 3.1.0（2024年12月2日，通过[OpenDTU](https://github.com/tbnobody/OpenDTU)设备读取Hoymiles逆变器，OpenDTU本身为v26.9.28，2026年9月28日）。**Fronius和OpenDTU适配器已超过三个月没有新版本 — 依赖它们之前请先查看其代码仓库。** VIS仪表板无需另外的工具。*示例*：通过Modbus适配器读取Sungrow逆变器，并在VIS中用柱状图显示每日电池电量。*适合*：已使用ioBroker的DACH用户，或偏好德语文档和论坛的用户。',
           '**Node-RED** — 开源（Apache 2.0），本地优先，基于Node.js的可视化流程编辑器。最新版本5.0.9（2026年10月21日）。MQTT和HTTP节点内置；Modbus TCP/RTU来自社区软件包node-red-contrib-modbus（5.62.1，2026年10月25日）。通常作为Home Assistant或ioBroker的数据转换或自动化搭档，而不是独立平台。*示例*：通过MQTT获取Hoymiles微型逆变器数据，计算15分钟平均值，并写入InfluxDB供Grafana使用。*适合*：偏好可视化流程编程，或需要在两个系统间做自定义数据转换的用户。',
           '**EVCC** — 开源（MIT），本地优先，文档提供德语和英语。最新版本0.318.2（2026年11月1日）。专为用光伏余电给电动车、热泵和家用电池充电而设计；支持数百种设备，包括Fronius、SMA、Sungrow和Victron（具体型号请在[docs.evcc.io](https://docs.evcc.io)核对）。软件免费，但许多商用电动车充电桩需要赞助令牌（每年€50或终身€150，依据[EVCC赞助页面](https://docs.evcc.io/en/sponsorship)）。可通过MQTT向Home Assistant或ioBroker发布数据。*示例*：Fronius逆变器和大众ID.4登记到EVCC后，EVCC跟踪光伏余电并调整充电功率，使电网取电保持较低。*适合*：拥有阳台光伏的电动车车主，想要余电充电但不想用通用自动化平台。',
@@ -3111,7 +3111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '协议': 'Modbus, MQTT, REST',
             '配置难度': '高',
             '费用': '免费',
-            '最适合': '企业级框架，现有 openHAB 部署',
+            '最适合': '规则驱动框架，现有 openHAB 部署',
           },
           {
             '平台': 'ioBroker',
@@ -3224,7 +3224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'trade-note',
         title: '贸易说明：硬件关税',
         content: [
-          '**本指南中的平台是软件，不直接受关税影响。** 它们所连接的硬件则不同。自2026年5月1日起，欧盟限制对使用被列为高风险供应商逆变器的项目提供欧盟资金；这针对公共资助的项目，不涉及个人购买，也不涉及本指南提到的任何品牌（[pv magazine](https://www.pv-magazine.com/2026/05/04/eu-funding-ban-on-high-risk-inverters-including-chinese-suppliers-extends-to-bess/)）。我们没有找到欧盟针对中国逆变器或锂储能电池的反倾销案件。',
+          '**本指南中的平台是软件，不直接受关税影响。** 它们所连接的硬件则不同。自2026年5月1日起，欧盟限制对使用被列为高风险供应商逆变器的项目提供欧盟资金；这针对公共资助的项目，不涉及个人购买，也不涉及本指南提到的任何品牌（[pv magazine](https://www.pv-magazine.com/2026/05/04/eu-funding-ban-on-high-risk-inverters-including-chinese-suppliers-extends-to-bess/)）。在我们的检索中未发现欧盟针对中国逆变器或锂储能电池的反倾销案件（2026年11月3日核查）。',
           '平台选择与关税无关 — 只要连接成功，软件可在任何硬件上运行。硬件价格和规则可能在短期内变化，购买时请核对当前价格和法律状况。',
         ],
       },
@@ -3238,7 +3238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ioBroker 是什么？它比 Home Assistant 更适合德语区用户吗？',
-            a: 'ioBroker 是一个基于 Node.js 编写的开源家庭自动化平台，拥有非常强大的德语区社区。它并不本质上比 Home Assistant 更强大——两者都支持 Modbus、MQTT 和 REST——但德语文档、论坛和适配器支持在 ioBroker 社区中明显更强。如果您已在运行 ioBroker，没有充分理由仅为了太阳能集成而迁移到 Home Assistant。',
+            a: 'ioBroker 是一个基于 Node.js 编写的开源家庭自动化平台，拥有非常强大的德语区社区。它并不本质上比 Home Assistant 更强大——两者都支持 Modbus、MQTT 和 REST——但按我们的评估，德语文档和论坛在 ioBroker 社区中更为丰富；请自行比较各社区页面。如果您已在运行 ioBroker，没有充分理由仅为了太阳能集成而迁移到 Home Assistant。',
           },
           {
             q: '我可以不使用 Home Assistant 而单独使用 EVCC 吗？',
@@ -3249,7 +3249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Solar Assistant无需编程，Victron硬件上的Victron Venus OS同样无需编程。Home Assistant、ioBroker和EVCC可通过网页界面和类似YAML的模板配置，无需通用编程。openHAB的学习曲线更陡。Node-RED使用可视化流程编程，ESPHome使用YAML定义固件；两者都不需要传统编程，但都比Home Assistant或ioBroker更难上手。',
           },
           {
-            q: '哪个平台最适合零输出或余电控制？',
+            q: '哪些平台支持零输出或余电控制？',
             a: 'EVCC的设计目的就是把光伏余电引向电动车、热泵或家用电池，从而降低电网取电；其模板系统和设备库比自己搭建逻辑配置更快。Home Assistant可通过自动化实现类似效果，ioBroker可通过脚本或内置调度器实现。',
           },
           {
@@ -3282,7 +3282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Home Assistant、ioBroker和openHAB有何区别？',
-            a: '三者都免费、开源并在本地运行：Home Assistant（Apache 2.0，Python）、ioBroker（MIT，Node.js）和openHAB（EPL 2.0，Java）。Home Assistant列出1500多个集成，ioBroker有庞大的德语社区和适配器模式，openHAB是严格的规则框架，学习曲线更陡。三者都通过Modbus和MQTT连接，因此选择取决于生态和投入，而不是能连接多少设备。',
+            a: '三者都免费、开源并在本地运行：Home Assistant（Apache 2.0，Python）、ioBroker（MIT，Node.js）和openHAB（EPL 2.0，Java）。Home Assistant列出1500多个集成，ioBroker有庞大的德语社区和适配器模式，openHAB是严格的规则框架，许多用户认为学习曲线更陡。三者都通过Modbus和MQTT连接，因此选择取决于生态和投入，而不是能连接多少设备。',
           },
         ],
       },
