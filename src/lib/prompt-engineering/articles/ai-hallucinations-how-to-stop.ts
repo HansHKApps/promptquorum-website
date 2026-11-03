@@ -13,6 +13,7 @@ const OG_SLUG = keyToSlug('ai-hallucinations-how-to-stop');
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Fundamentals',
       title: 'AI Hallucinations: Why AI Makes Things Up — and How to Stop Them',
       intro: 'Large language models state false things fluently and with confidence. These errors, called hallucinations, range from invented citations to fabricated facts.',
@@ -384,6 +385,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Fundamentals',
       title: 'KI-Halluzinationen: Warum KI Dinge erfindet — und wie man sie stoppt',
       seoTitle: 'KI-Halluzinationen: Erkennen und reduzieren 2026',
@@ -713,6 +715,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     es: {
+      designSkin: 'hub',
       theme: 'Fundamentals',
       title: 'Alucinaciones de IA: Por qué la IA inventa cosas — y cómo detenerlas',
       intro: 'Los modelos de lenguaje afirman cosas falsas con fluidez y seguridad. Estos errores, llamados alucinaciones, van desde citas inventadas hasta datos fabricados.',
@@ -1043,6 +1046,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     ar: {
+      designSkin: 'hub',
       theme: 'Fundamentals',
       title: 'هلوسات الذكاء الاصطناعي: لماذا تخترع الذكاء الاصطناعي الأشياء — وكيف توقفها',
       intro: 'تذكر النماذج اللغوية الكبيرة معلومات خاطئة بطلاقة وثقة. وتُسمّى هذه الأخطاء هلوسة، وهي تتراوح بين اقتباسات مختلقة ووقائع ملفّقة.',
@@ -1372,6 +1376,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     pt: {
+      designSkin: 'hub',
       theme: 'Fundamentals',
       title: 'Alucinações de IA: Por que a IA inventa coisas — e como pará-las',
       intro: 'Os modelos de linguagem afirmam coisas falsas com fluência e confiança. Esses erros, chamados de alucinações, vão de citações inventadas a fatos fabricados.',
@@ -1710,6 +1715,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     fr: {
+      designSkin: 'hub',
       theme: 'Fundamentals',
       title: 'Hallucinations IA: Pourquoi l\'IA Invente des Choses — et Comment les Arrêter',
       seoTitle: 'Hallucinations IA : détecter et les réduire 2026',
@@ -2039,6 +2045,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'Fundamentals',
       title: 'AIハルシネーション：AIがなぜ物を作り出すのか — そしてそれを止める方法',
       seoTitle: 'AI幻覚2026：LLMが作り出す誤情報の検出・削減ガイド',
@@ -2367,6 +2374,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: 'Fundamentals',
       title: 'AI幻觉：为什么AI会编造东西——以及如何停止它们',
       seoTitle: 'AI幻觉2026：LLM为何产生虚假信息及实用检测与减少方法',
@@ -2695,6 +2703,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     theme: 'Fundamentals',
     title: 'AI 환각: AI가 사실을 꾸며내는 이유와 이를 막는 방법',

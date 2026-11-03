@@ -8,6 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       last_full_refresh: '2026-11-02',
       next_refresh_due: '2027-05-02',
@@ -270,6 +271,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     de: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
       heroImage: '/images/self-consistency-prompting-overview-hero-de.webp',
@@ -604,6 +606,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     es: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
       heroImage: '/images/self-consistency-prompting-overview-hero-es.webp',
@@ -921,6 +924,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     ar: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
       heroImage: '/images/self-consistency-prompting-overview-hero-ar.webp',
@@ -1238,6 +1242,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     pt: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
       heroImage: '/images/self-consistency-prompting-overview-hero-pt.webp',
@@ -1555,6 +1560,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     fr: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
       heroImage: '/images/self-consistency-prompting-overview-hero-fr.webp',
@@ -1871,6 +1877,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     ja: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
       heroImage: '/images/self-consistency-prompting-overview-hero-ja.webp',
@@ -2131,6 +2138,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     zh: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
       heroImage: '/images/self-consistency-prompting-overview-hero-zh.webp',
@@ -2391,6 +2399,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
   ko: {
+    designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
     heroImage: '/images/self-consistency-prompting-overview-hero-ko.webp',

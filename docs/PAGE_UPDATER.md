@@ -527,7 +527,7 @@ Run this against the **live or locally built HTML** of every locale URL of the p
 
 ### Step 4.9: Hub Skin (design only — mandatory for every new and updated article)
 
-Articles reached from a cluster hub should look like the hub. **Owner rule 2026-11-01: every NEW article and every updated article in `local-llms` / `power-local-llm` ships on the new design — no new or refreshed page may stay on the old design.** Set the skin flag **on every locale object of that article**, in the same run that creates or updates it:
+Articles reached from a cluster hub should look like the hub. **Owner rule 2026-11-01: every NEW article and every updated article in `local-llms` / `power-local-llm` / `prompt-engineering` ships on the new design — no new or refreshed page may stay on the old design.** Set the skin flag **on every locale object of that article**, in the same run that creates or updates it:
 
 ```ts
 designSkin: 'hub',
@@ -539,7 +539,7 @@ Rules:
 - The flag is set when you create a new article (from the first commit, all 9 locales) and on every page-updater run. Do not add it to pages you did not create or update. Run `npm run check:page-updater` before finishing; an `INCOMPLETE` line is a failed run.
 - Set it in all 9 locales or none (parity, same as Step 5.5).
 - Do not touch the speakable hooks (`.article-intro`, `.key-takeaways`, `h1`, `h2`) or move the first answer block.
-- Supported renderers: `PowerLocalLLMPostClient` and `LocalLLMsPostClient` (`/local-llms/*`); other clusters are wired in later. The flag is ignored by a renderer that does not support it, so setting it early is harmless.
+- Supported renderers: `PowerLocalLLMPostClient`, `LocalLLMsPostClient` (`/local-llms/*`) and `PromptEngineeringPostClient` (`/prompt-engineering/*`); other clusters are wired in later. The flag is ignored by a renderer that does not support it, so setting it early is harmless.
 - Verify: `npm run test:article-skin` (same HTML with and without the flag, class attributes aside). Then run Step 4.8 as usual. Above-the-fold: the lead answer must still render in the first viewport (`npm run test:above-fold`).
 - Roll back by deleting the line. Nothing else changes.
 

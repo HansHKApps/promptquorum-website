@@ -11,6 +11,7 @@ const OG_SLUG = keyToSlug('best-prompt-optimization-tools-teams');
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tools & Platforms',
     heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-en.webp',
     title: 'Best Prompt Optimization Tools for Teams',
@@ -538,6 +539,7 @@ tests:
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tools & Plattformen',
     heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-de.webp',
     title: 'Die besten Prompt-Optimierungs-Tools für Teams',
@@ -1006,6 +1008,7 @@ tests:
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tools & Platforms',
     heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-es.webp',
     title: 'Mejores herramientas de optimización de prompts para equipos',
@@ -1496,6 +1499,7 @@ tests:
   },
 
   pt: {
+    designSkin: 'hub',
     theme: 'Tools & Platforms',
     heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-pt.webp',
     title: 'Melhores ferramentas de otimização de prompts para equipes',
@@ -1986,6 +1990,7 @@ tests:
   },
 
   fr: {
+    designSkin: 'hub',
     theme: 'Outils & Plateformes',
     heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-fr.webp',
     title: 'Meilleures outils d\'optimisation d\'invites pour les équipes',
@@ -2437,6 +2442,7 @@ tests:
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'ツール & プラットフォーム',
     heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-ja.webp',
     title: 'チームのためのベストプロンプト最適化ツール',
@@ -2888,6 +2894,7 @@ tests:
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: '工具与平台',
     heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-zh.webp',
     title: '2026年团队提示优化最佳工具',
@@ -3383,6 +3390,7 @@ tests:
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Tools & Platforms',
     heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-ar.webp',
     title: 'أفضل أدوات تحسين التعليمات للفرق',
@@ -3871,6 +3879,7 @@ tests:
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Tools & Platforms',
     heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-ko.webp',
     title: '팀을 위한 최고의 프롬프트 최적화 도구',

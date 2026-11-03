@@ -12,6 +12,7 @@ const OG_SLUG = keyToSlug('seo-meets-ai');
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
       heroImage: '/images/seo-meets-ai-overview-hero-en.webp',
@@ -585,6 +586,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     de: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
       heroImage: '/images/seo-meets-ai-overview-hero-de.webp',
@@ -1199,6 +1201,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     es: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
       heroImage: '/images/seo-meets-ai-overview-hero-es.webp',
@@ -1777,6 +1780,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     ar: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
       heroImage: '/images/seo-meets-ai-overview-hero-ar.webp',
@@ -2355,6 +2359,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     pt: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
       heroImage: '/images/seo-meets-ai-overview-hero-pt.webp',
@@ -2933,6 +2938,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     fr: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
       heroImage: '/images/seo-meets-ai-overview-hero-fr.webp',
@@ -3514,6 +3520,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     ja: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
       heroImage: '/images/seo-meets-ai-overview-hero-ja.webp',
@@ -4096,6 +4103,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     zh: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
       heroImage: '/images/seo-meets-ai-overview-hero-zh.webp',
@@ -4684,6 +4692,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     ko: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
       heroImage: '/images/seo-meets-ai-overview-hero-ko.webp',
