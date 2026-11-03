@@ -25192,8 +25192,8 @@
   },
   {
     "lang": "en",
-    "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Best Vector DB (2026)",
-    "excerpt": "Pinecone ($20/mo Builder, $50/mo Standard), Weaviate Cloud ($45/mo Flex), Qdrant (free-forever self-host tier), Chroma (open-source + $250/mo Team) compared for RAG vector search in 2026.",
+    "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Vector Database Comparison (2026)",
+    "excerpt": "Pinecone ($20/mo Builder), Weaviate Cloud ($45/mo Flex), Qdrant (free to self-host) and Chroma (open source) compared for RAG vector search in 2026.",
     "publishDate": "2026-08-27",
     "dateModified": "2026-11-03",
     "url": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
@@ -25201,8 +25201,8 @@
   },
   {
     "lang": "de",
-    "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Beste Vektordatenbank (2026)",
-    "excerpt": "Pinecone (20 $/Mon. Builder, 50 $/Mon. Standard), Weaviate Cloud (45 $/Mon. Flex), Qdrant (kostenlose Self-Host-Stufe für immer), Chroma (Open Source + 250 $/Mon. Team) im Vergleich für RAG-Vektorsuche 2026.",
+    "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Vektordatenbank-Vergleich (2026)",
+    "excerpt": "Pinecone (20 $/Mon. Builder), Weaviate Cloud (45 $/Mon. Flex), Qdrant (Self-Hosting kostenlos), Chroma (Open Source) im Vergleich für RAG-Vektorsuche 2026.",
     "publishDate": "2026-08-27",
     "dateModified": "2026-11-03",
     "url": "/de/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
@@ -25210,8 +25210,8 @@
   },
   {
     "lang": "fr",
-    "title": "Pinecone vs Weaviate vs Qdrant vs Chroma : Meilleure base vectorielle (2026)",
-    "excerpt": "Pinecone (20 $/mois Builder, 50 $/mois Standard), Weaviate Cloud (45 $/mois Flex), Qdrant (palier auto-hébergé gratuit à vie), Chroma (open source + 250 $/mois Team) comparés pour la recherche vectorielle RAG en 2026.",
+    "title": "Pinecone vs Weaviate vs Qdrant vs Chroma : Comparatif des bases vectorielles (2026)",
+    "excerpt": "Pinecone (20 $/mois Builder), Weaviate Cloud (45 $/mois Flex), Qdrant (auto-hébergement gratuit), Chroma (open source) comparés pour le RAG en 2026.",
     "publishDate": "2026-08-27",
     "dateModified": "2026-11-03",
     "url": "/fr/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
@@ -25219,8 +25219,8 @@
   },
   {
     "lang": "ja",
-    "title": "Pinecone vs Weaviate vs Qdrant vs Chroma：最適なベクトルDB（2026年）",
-    "excerpt": "Pinecone（Builder月20ドル、Standard月50ドル）、Weaviate Cloud（Flex月45ドル）、Qdrant（永久無料のセルフホスト層）、Chroma（オープンソース＋Team月250ドル）を2026年のRAGベクトル検索向けに比較。",
+    "title": "Pinecone vs Weaviate vs Qdrant vs Chroma：ベクトルDB比較（2026年）",
+    "excerpt": "Pinecone（Builder月20ドル）、Weaviate Cloud（Flex月45ドル）、Qdrant（セルフホストは無料）、Chroma（オープンソース）を2026年のRAGベクトル検索向けに比較。",
     "publishDate": "2026-08-27",
     "dateModified": "2026-11-03",
     "url": "/ja/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
@@ -25228,8 +25228,8 @@
   },
   {
     "lang": "zh",
-    "title": "Pinecone vs Weaviate vs Qdrant vs Chroma：2026年最佳向量数据库",
-    "excerpt": "Pinecone（Builder每月20美元，Standard每月50美元）、Weaviate Cloud（Flex每月45美元）、Qdrant（永久免费自托管层）、Chroma（开源+Team每月250美元）——2026年RAG向量搜索对比。",
+    "title": "Pinecone vs Weaviate vs Qdrant vs Chroma：2026年向量数据库对比",
+    "excerpt": "Pinecone（Builder每月20美元）、Weaviate Cloud（Flex每月45美元）、Qdrant（自托管免费）、Chroma（开源）——2026年RAG向量搜索对比。",
     "publishDate": "2026-08-27",
     "dateModified": "2026-11-03",
     "url": "/zh/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
@@ -25237,8 +25237,8 @@
   },
   {
     "lang": "es",
-    "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Mejor Base de Datos Vectorial (2026)",
-    "excerpt": "Pinecone ($20/mes Builder, $50/mes Standard), Weaviate Cloud ($45/mes Flex), Qdrant (nivel self-hosted gratis para siempre), Chroma (open source + $250/mes Team) comparados para búsqueda vectorial RAG en 2026.",
+    "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Comparativa de bases de datos vectoriales (2026)",
+    "excerpt": "Pinecone ($20/mes Builder), Weaviate Cloud ($45/mes Flex), Qdrant (self-hosting gratis) y Chroma (open source) comparados para búsqueda RAG en 2026.",
     "publishDate": "2026-08-27",
     "dateModified": "2026-11-03",
     "url": "/es/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
@@ -25246,8 +25246,8 @@
   },
   {
     "lang": "pt",
-    "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Melhor Banco de Dados Vetorial (2026)",
-    "excerpt": "Pinecone ($20/mês Builder, $50/mês Standard), Weaviate Cloud ($45/mês Flex), Qdrant (camada self-hosted gratuita para sempre), Chroma (open source + $250/mês Team) comparados para busca vetorial RAG em 2026.",
+    "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Comparativo de bancos de dados vetoriais (2026)",
+    "excerpt": "Pinecone ($20/mês Builder), Weaviate Cloud ($45/mês Flex), Qdrant (self-hosting gratuito) e Chroma (open source) comparados para busca RAG em 2026.",
     "publishDate": "2026-08-27",
     "dateModified": "2026-11-03",
     "url": "/pt/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
@@ -25255,8 +25255,8 @@
   },
   {
     "lang": "ar",
-    "title": "Pinecone مقابل Weaviate مقابل Qdrant مقابل Chroma: أفضل قاعدة بيانات متجهية (2026)",
-    "excerpt": "مقارنة Pinecone (20$/شهرياً Builder، 50$/شهرياً Standard) وWeaviate Cloud (45$/شهرياً Flex) وQdrant (طبقة استضافة ذاتية مجانية للأبد) وChroma (مفتوح المصدر + 250$/شهرياً Team) للبحث المتجهي RAG في 2026.",
+    "title": "Pinecone مقابل Weaviate مقابل Qdrant مقابل Chroma: مقارنة قواعد البيانات المتجهية (2026)",
+    "excerpt": "مقارنة Pinecone (20$/شهرياً Builder) وWeaviate Cloud (45$/شهرياً Flex) وQdrant (استضافة ذاتية مجانية) وChroma (مفتوح المصدر) لـ RAG في 2026.",
     "publishDate": "2026-08-27",
     "dateModified": "2026-11-03",
     "url": "/ar/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
@@ -25264,8 +25264,8 @@
   },
   {
     "lang": "ko",
-    "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: 최고의 벡터 DB (2026)",
-    "excerpt": "Pinecone(Builder 월 20달러, Standard 월 50달러), Weaviate Cloud(Flex 월 45달러), Qdrant(영구 무료 셀프호스팅 계층), Chroma(오픈소스 + Team 월 250달러)를 2026년 RAG 벡터 검색 기준으로 비교합니다.",
+    "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: 벡터 DB 비교 (2026)",
+    "excerpt": "Pinecone(Builder 월 20달러), Weaviate Cloud(Flex 월 45달러), Qdrant(셀프호스팅 무료), Chroma(오픈소스)의 2026년 RAG 벡터 검색 비교.",
     "publishDate": "2026-08-27",
     "dateModified": "2026-11-03",
     "url": "/ko/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
@@ -25681,7 +25681,7 @@
     "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
     "excerpt": "Self-hosted vs managed vector database for enterprise RAG: SLA and SSO tiers by vendor, multi-tenant isolation, migration and a procurement checklist.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -25690,7 +25690,7 @@
     "title": "Vektordatenbank für Unternehmen: Self-Hosted vs. Managed Cloud (2026)",
     "excerpt": "Self-Hosted vs. Managed Vektordatenbank für Enterprise-RAG: SLA- und SSO-Stufen je Anbieter, Mandantentrennung, Migration und Beschaffungs-Checkliste.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/de/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -25699,7 +25699,7 @@
     "title": "Base de données vectorielle en entreprise : auto-hébergée ou managée (2026)",
     "excerpt": "Base vectorielle auto-hébergée ou managée pour le RAG d'entreprise : paliers SLA et SSO par fournisseur, multi-tenant, migration et checklist d'achat.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/fr/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -25708,7 +25708,7 @@
     "title": "エンタープライズRAGベクトルDB導入：セルフホスト vs マネージド(2026)",
     "excerpt": "エンタープライズ規模のセルフホスト vs マネージドベクトルDB：マルチテナント分離、SLAとセキュリティ体制、数十億ベクトルの容量計画、コミット利用型課金、ベンダー調達チェックリスト。",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/ja/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -25717,7 +25717,7 @@
     "title": "企业级RAG向量数据库部署：自托管 vs 托管云(2026)",
     "excerpt": "企业级RAG向量数据库自托管与托管云对比：各供应商SLA与SSO套餐等级、多租户隔离、数十亿向量容量规划、供应商锁定与迁移策略、采购检查清单。",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/zh/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -25726,7 +25726,7 @@
     "title": "Base de Datos Vectorial para Empresas: ¿Autoalojada o Gestionada? (2026)",
     "excerpt": "Base vectorial autoalojada o gestionada para RAG empresarial: niveles de SLA y SSO por proveedor, multiinquilino, migración y lista de compra.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/es/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -25735,7 +25735,7 @@
     "title": "Banco de Dados Vetorial para Empresas: Self-Hosted ou Gerenciado? (2026)",
     "excerpt": "Banco vetorial self-hosted ou gerenciado para RAG empresarial: níveis de SLA e SSO por fornecedor, multi-tenant, migração e checklist de compra.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/pt/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -25744,7 +25744,7 @@
     "title": "نشر قاعدة بيانات المتجهات للمؤسسات: استضافة ذاتية أم مُدارة؟ (2026)",
     "excerpt": "قاعدة بيانات المتجهات المستضافة ذاتيًا أم المُدارة لـ RAG المؤسسي: مستويات SLA وSSO لكل مزوّد، وعزل المستأجرين، والترحيل، وقائمة التحقق من الشراء.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/ar/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -25753,7 +25753,7 @@
     "title": "기업용 RAG 벡터 데이터베이스 배포: 자체 호스팅 vs 매니지드(2026)",
     "excerpt": "기업 규모의 자체 호스팅 vs 매니지드 벡터 데이터베이스 비교: 멀티테넌트 격리, SLA와 보안 태세, 수십억 벡터 용량 계획, 약정 사용량 요금제, 벤더 조달 체크리스트.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/ko/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -26488,8 +26488,8 @@
   },
   {
     "lang": "en",
-    "title": "Best Web Hosting 2026: Verified Pricing",
-    "excerpt": "Hostinger Premium price checked 2026-11-03: $2.49/mo with a 48-month prepay ($119.52), renewing at $10.99/mo. See the real cost before you sign up.",
+    "title": "Web Hosting Pricing 2026: Hostinger Intro vs. Renewal Price",
+    "excerpt": "Hostinger Premium price read 2026-11-03: $2.49/mo with a 48-month prepay ($119.52), renewing at $10.99/mo. See the real cost before you sign up.",
     "publishDate": "2026-08-30",
     "dateModified": "2026-11-03",
     "url": "/power-local-llm/best-web-hosting",
@@ -26497,8 +26497,8 @@
   },
   {
     "lang": "de",
-    "title": "Beste Webhosting-Anbieter in Deutschland 2026",
-    "excerpt": "Webhosting Kosten 2026: IONOS, ALL-INKL.COM und Hostinger mit Einstiegs- und Verlängerungspreis, geprüft am 02.11.2026. IONOS verlängert zum 11-fachen.",
+    "title": "Webhosting in Deutschland 2026: Preise im Vergleich",
+    "excerpt": "Webhosting Kosten 2026: IONOS, ALL-INKL.COM, Hostinger mit Einstiegs- und Verlängerungspreis, geprüft 02.11.2026. IONOS: 11-fach (laut Anbieter).",
     "publishDate": "2026-08-30",
     "dateModified": "2026-11-03",
     "url": "/de/power-local-llm/best-web-hosting",
@@ -26506,7 +26506,7 @@
   },
   {
     "lang": "fr",
-    "title": "Meilleur Hébergeur Web en France 2026",
+    "title": "Hébergement Web en France 2026 : Prix et Renouvellement",
     "excerpt": "Comparatif hébergeur web 2026 : LWS, OVHcloud, o2switch, Hostinger, Infomaniak. Prix d'appel et de renouvellement lus le 02/11/2026, LWS vs OVH.",
     "publishDate": "2026-08-30",
     "dateModified": "2026-11-03",
@@ -26515,8 +26515,8 @@
   },
   {
     "lang": "ja",
-    "title": "2026年 日本国内 おすすめレンタルサーバー比較",
-    "excerpt": "エックスサーバー（Xserver）とロリポップ！を2026年11月3日の公式価格で比較。Xserverは月額693円、ロリポップ！は月額121円から。契約期間とWordPress対応の違い、APPI対応を解説。",
+    "title": "2026年 日本国内 レンタルサーバー料金比較",
+    "excerpt": "エックスサーバー（Xserver）とロリポップ！を2026年11月2日の公式価格で比較。Xserverは月額693円、ロリポップ！は月額121円から。契約期間とWordPress対応の違い、APPI対応を解説。",
     "publishDate": "2026-08-30",
     "dateModified": "2026-11-03",
     "url": "/ja/power-local-llm/best-web-hosting",
@@ -26524,8 +26524,8 @@
   },
   {
     "lang": "zh",
-    "title": "2026年面向全球华语读者的最佳网站主机",
-    "excerpt": "2026年面向华语读者的最佳网站主机：阿里云（限时促销每年38元）、腾讯云（每月45元）、Hostinger（首月2.49美元）。附确认价格及PIPL、数据安全法合规说明。",
+    "title": "2026年面向全球华语读者的网站主机价格与续费对比",
+    "excerpt": "2026年面向华语读者的网站主机价格：阿里云（限时促销每年38元）、腾讯云（每月35元）、Hostinger（需一次预付48个月，每月2.49美元起，续费每月10.99美元）。附PIPL与数据安全法说明。",
     "publishDate": "2026-08-30",
     "dateModified": "2026-11-03",
     "url": "/zh/power-local-llm/best-web-hosting",
@@ -26533,8 +26533,8 @@
   },
   {
     "lang": "es",
-    "title": "Mejor Hosting Barato y con Soporte en Español 2026: España y Latinoamérica",
-    "excerpt": "Hosting con soporte en español y barato: Hostinger, Raiola, Dinahosting, SiteGround, Webempresa y DonWeb con precios leídos el 3 de noviembre de 2026.",
+    "title": "Hosting con Soporte en Español 2026: Precios y Renovación",
+    "excerpt": "Hosting con soporte en español y barato: Hostinger, Raiola, Dinahosting, SiteGround, Webempresa y DonWeb con precios leídos el 2 de noviembre de 2026.",
     "publishDate": "2026-08-30",
     "dateModified": "2026-11-03",
     "url": "/es/power-local-llm/best-web-hosting",
@@ -26542,8 +26542,8 @@
   },
   {
     "lang": "pt",
-    "title": "Melhor Hospedagem de Site no Brasil 2026: Hostinger e Alternativas",
-    "excerpt": "Hostinger, Locaweb, KingHost e HostGator comparadas em 2026: preço de entrada e de renovação em reais, lidos nos sites em 03/11/2026, e a LGPD.",
+    "title": "Hospedagem de Site no Brasil 2026: Preços de Entrada e Renovação",
+    "excerpt": "Hostinger, Locaweb, KingHost e HostGator comparadas em 2026: preço de entrada e de renovação em reais, lidos nos sites em 02/11/2026, e a LGPD.",
     "publishDate": "2026-08-30",
     "dateModified": "2026-11-03",
     "url": "/pt/power-local-llm/best-web-hosting",
@@ -26551,8 +26551,8 @@
   },
   {
     "lang": "ar",
-    "title": "أفضل استضافة مواقع في الخليج العربي 2026: Hostinger مقابل ArabHosters",
-    "excerpt": "مقارنة Hostinger وArabHosters لاستضافة المواقع في الخليج 2026: الأسعار والعملة والحضور المؤكد، مع نظام PDPL السعودي وقانون حماية البيانات الإماراتي.",
+    "title": "استضافة مواقع في الخليج العربي 2026: مقارنة أسعار Hostinger وArabHosters",
+    "excerpt": "مقارنة Hostinger وArabHosters لاستضافة المواقع في الخليج 2026: الأسعار والعملة، مع نظام PDPL السعودي وقانون حماية البيانات الإماراتي.",
     "publishDate": "2026-08-30",
     "dateModified": "2026-11-03",
     "url": "/ar/power-local-llm/best-web-hosting",
@@ -26560,8 +26560,8 @@
   },
   {
     "lang": "ko",
-    "title": "2026년 한국 웹 호스팅 추천: Cafe24 vs 가비아 vs 닷홈",
-    "excerpt": "Cafe24, 가비아, 닷홈, NHN Hosting 2026년 비교: 2026-11-03에 확인한 원화 요금과 선택 기준을 정리했습니다.",
+    "title": "2026년 한국 웹 호스팅 요금: Cafe24·가비아·닷홈",
+    "excerpt": "Cafe24 vs 가비아 vs 닷홈 vs NHN Hosting 2026년 비교: 시작 원화 요금과 적합한 용도를 정리했습니다.",
     "publishDate": "2026-08-30",
     "dateModified": "2026-11-03",
     "url": "/ko/power-local-llm/best-web-hosting",
@@ -26569,7 +26569,7 @@
   },
   {
     "lang": "en",
-    "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: Best Cloud for AI Companies in 2026",
+    "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: Cloud for AI Companies Compared in 2026",
     "excerpt": "Compare 8 AI clouds, from DigitalOcean and AWS to CoreWeave, RunPod and Lambda, on H100 price, GPU availability and workload fit for AI teams.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-11-03",
@@ -26578,7 +26578,7 @@
   },
   {
     "lang": "de",
-    "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: Die beste Cloud für KI-Unternehmen 2026",
+    "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: Cloud für KI-Unternehmen im Vergleich 2026",
     "excerpt": "8 KI-Clouds im Vergleich, von DigitalOcean und AWS bis CoreWeave, RunPod und Lambda: H100-Preis, GPU-Verfügbarkeit und Workload-Eignung für KI-Teams.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-11-03",
@@ -26587,7 +26587,7 @@
   },
   {
     "lang": "fr",
-    "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod : le meilleur cloud pour les entreprises IA en 2026",
+    "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod : comparatif des clouds pour entreprises IA en 2026",
     "excerpt": "Comparatif de 8 clouds IA, de DigitalOcean et AWS à CoreWeave, RunPod et Lambda : prix du H100, disponibilité des GPU et adéquation aux charges de travail.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-11-03",
@@ -26596,7 +26596,7 @@
   },
   {
     "lang": "ja",
-    "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod：2026年AI企業に最適なクラウド",
+    "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod：2026年AI企業向けクラウド比較",
     "excerpt": "DigitalOcean、AWS、CoreWeave、RunPodなどAI向け主要クラウド8社を、H100の料金・入手性・用途への適合性で比較。DigitalOceanとAWSの料金は2026年11月2日に確認。",
     "publishDate": "2026-09-05",
     "dateModified": "2026-11-03",
@@ -26605,7 +26605,7 @@
   },
   {
     "lang": "zh",
-    "title": "DigitalOcean 对比 AWS 对比 CoreWeave 对比 RunPod：2026 年 AI 公司最佳云服务",
+    "title": "DigitalOcean 对比 AWS 对比 CoreWeave 对比 RunPod：2026 年 AI 公司云服务对比",
     "excerpt": "从 H100 价格、可用性和工作负载适配度比较 DigitalOcean、AWS、CoreWeave、RunPod 等 8 家 AI 云服务商。DigitalOcean 与 AWS 价格核对于 2026-11-02。",
     "publishDate": "2026-09-05",
     "dateModified": "2026-11-03",
@@ -26614,7 +26614,7 @@
   },
   {
     "lang": "es",
-    "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: la mejor nube para empresas de IA en 2026",
+    "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: comparativa de nubes para empresas de IA en 2026",
     "excerpt": "Compara 8 nubes de IA, de DigitalOcean y AWS a CoreWeave, RunPod y Lambda, por precio del H100, disponibilidad de GPU y ajuste a tu carga de trabajo.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-11-03",
@@ -26623,7 +26623,7 @@
   },
   {
     "lang": "pt",
-    "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: a melhor nuvem para empresas de IA em 2026",
+    "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: comparativo de nuvens para empresas de IA em 2026",
     "excerpt": "Compare 8 nuvens de IA, do DigitalOcean e da AWS à CoreWeave, RunPod e Lambda, por preço do H100, disponibilidade de GPU e adequação à carga de trabalho.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-11-03",
@@ -26632,7 +26632,7 @@
   },
   {
     "lang": "ar",
-    "title": "DigitalOcean مقابل AWS مقابل CoreWeave مقابل RunPod: أفضل سحابة لشركات الذكاء الاصطناعي في 2026",
+    "title": "DigitalOcean مقابل AWS مقابل CoreWeave مقابل RunPod: مقارنة السحابات لشركات الذكاء الاصطناعي في 2026",
     "excerpt": "قارن 8 سحابات ذكاء اصطناعي، من DigitalOcean وAWS إلى CoreWeave وRunPod وLambda، من حيث سعر H100 وتوفر GPU وملاءمة حمل العمل.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-11-03",
@@ -26641,7 +26641,7 @@
   },
   {
     "lang": "ko",
-    "title": "DigitalOcean 대 AWS 대 CoreWeave 대 RunPod: 2026년 AI 기업을 위한 최고의 클라우드",
+    "title": "DigitalOcean 대 AWS 대 CoreWeave 대 RunPod: 2026년 AI 기업용 클라우드 비교",
     "excerpt": "DigitalOcean, AWS, CoreWeave, RunPod 등 AI 클라우드 8곳을 H100 가격, GPU 가용성, 워크로드 적합성으로 비교합니다.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-11-03",
@@ -29485,28 +29485,28 @@
   },
   {
     "lang": "en",
-    "title": "Best AI-Powered HR Software for Enterprises 2026: Privacy-First Options Compared",
+    "title": "AI-Powered HR Software for Enterprises 2026: Privacy-First Options Compared",
     "excerpt": "Enterprise AI HR software compared: Workday, HireVue, Lattice and more, with public prices, EU AI Act dates and a self-hosted option. Not legal advice.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/power-local-llm/best-ai-hr-software-enterprise",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
-    "title": "Beste KI-HR-Software für Unternehmen 2026: Privacy-First-Optionen im Vergleich",
+    "title": "KI-HR-Software für Unternehmen 2026: Privacy-First-Optionen im Vergleich",
     "excerpt": "KI-HR-Software im Vergleich: Workday, HireVue, Lattice u. a. mit öffentlichen Preisen, EU-AI-Act-Fristen und Self-Hosting-Option. Keine Rechtsberatung.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/de/power-local-llm/best-ai-hr-software-enterprise",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
-    "title": "Meilleurs logiciels RH IA pour entreprises 2026 : options axées confidentialité",
+    "title": "Logiciels RH IA pour entreprises 2026 : options axées confidentialité comparées",
     "excerpt": "Logiciels RH IA comparés : Workday, HireVue, Lattice, avec prix publics, échéances de l'AI Act et option auto-hébergée. Pas un conseil juridique.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/fr/power-local-llm/best-ai-hr-software-enterprise",
     "cluster": "power-local-llm"
   },
@@ -29515,52 +29515,52 @@
     "title": "企業向けAI人事ソフト2026：プライバシー重視の選択肢を比較",
     "excerpt": "企業向けAI人事ソフトを比較。Workday、HireVue、Lattice等の公開料金、EU AI法の期限、セルフホスト型の選択肢を整理。法的助言ではありません。",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/ja/power-local-llm/best-ai-hr-software-enterprise",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
-    "title": "2026年企业AI人力资源软件推荐：隐私优先方案对比",
+    "title": "2026年企业AI人力资源软件：隐私优先方案对比",
     "excerpt": "企业AI人力资源软件对比：Workday、HireVue、Lattice等的公开价格、欧盟AI法案时间表及自托管方案，并附合规提示。不构成法律建议。",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/zh/power-local-llm/best-ai-hr-software-enterprise",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
-    "title": "Mejor software de RR. HH. con IA para empresas 2026: opciones que priorizan la privacidad",
+    "title": "Software de RR. HH. con IA para empresas 2026: opciones que priorizan la privacidad comparadas",
     "excerpt": "Software de RR. HH. con IA comparado: Workday, HireVue, Lattice y más, con precios públicos, fechas del AI Act y opción autoalojada. No es asesoría legal.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/es/power-local-llm/best-ai-hr-software-enterprise",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
-    "title": "Melhor software de RH com IA para empresas 2026: opções focadas em privacidade",
+    "title": "Software de RH com IA para empresas 2026: opções focadas em privacidade comparadas",
     "excerpt": "Software de RH com IA comparado: Workday, HireVue, Lattice, com preços públicos, prazos do AI Act e opção auto-hospedada. Não é aconselhamento jurídico.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/pt/power-local-llm/best-ai-hr-software-enterprise",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
-    "title": "أفضل برمجيات الموارد البشرية المدعومة بالذكاء الاصطناعي للمؤسسات 2026: خيارات تُراعي الخصوصية",
+    "title": "برمجيات الموارد البشرية المدعومة بالذكاء الاصطناعي للمؤسسات 2026: مقارنة خيارات تُراعي الخصوصية",
     "excerpt": "مقارنة برمجيات الموارد البشرية بالذكاء الاصطناعي: Workday وHireVue وLattice مع الأسعار المعلنة ومواعيد قانون الاتحاد الأوروبي. ليست استشارة قانونية.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/ar/power-local-llm/best-ai-hr-software-enterprise",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
-    "title": "2026년 기업용 AI 인사 소프트웨어 추천: 프라이버시 우선 옵션 비교",
+    "title": "2026년 기업용 AI 인사 소프트웨어: 프라이버시 우선 옵션 비교",
     "excerpt": "기업용 AI 인사 소프트웨어 비교: Workday, HireVue, Lattice 등의 공개 가격, EU AI법 일정, 자체 호스팅 옵션을 정리합니다. 법률 자문이 아닙니다.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/ko/power-local-llm/best-ai-hr-software-enterprise",
     "cluster": "power-local-llm"
   },
@@ -31837,7 +31837,7 @@
     "title": "US State AI Employment Laws: What Actually Applies to Your Hiring Process",
     "excerpt": "Which US state AI employment laws apply to hiring: Colorado, California, Illinois, Texas and NYC, with dates, scope and the federal order. Not legal advice",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/power-local-llm/us-state-ai-employment-laws-compliance",
     "cluster": "power-local-llm"
   },
@@ -31846,7 +31846,7 @@
     "title": "US-KI-Arbeitsrecht nach Bundesstaat: Was für Ihren Einstellungsprozess tatsächlich gilt",
     "excerpt": "Welche US-KI-Arbeitsgesetze gelten fürs Recruiting: Colorado, Kalifornien, Illinois, Texas, NYC mit Stichtagen und Geltungsbereich. Kein Rechtsrat.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/de/power-local-llm/us-state-ai-employment-laws-compliance",
     "cluster": "power-local-llm"
   },
@@ -31855,7 +31855,7 @@
     "title": "Lois d'État américaines sur l'IA en emploi : ce qui s'applique réellement à votre recrutement",
     "excerpt": "Quelles lois d'État américaines sur l'IA s'appliquent au recrutement : Colorado, Californie, Illinois, Texas, NYC, dates, portée. Pas de conseil juridique.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/fr/power-local-llm/us-state-ai-employment-laws-compliance",
     "cluster": "power-local-llm"
   },
@@ -31864,7 +31864,7 @@
     "title": "米国州別AI雇用法：採用プロセスに実際に適用されるものは何か",
     "excerpt": "採用に適用される米国の州別AI雇用法を整理：コロラド、カリフォルニア、イリノイ、テキサス、NYCの施行日と適用範囲、連邦大統領令の影響。法的助言ではありません。",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/ja/power-local-llm/us-state-ai-employment-laws-compliance",
     "cluster": "power-local-llm"
   },
@@ -31873,7 +31873,7 @@
     "title": "美国各州AI雇佣法：您的招聘流程究竟适用哪些规定",
     "excerpt": "哪些美国州级AI雇佣法适用于招聘与筛选：科罗拉多、加利福尼亚、伊利诺伊、得克萨斯、纽约市的生效日期与范围，以及联邦行政令的影响。附州适用性检查工具，不构成法律意见。",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/zh/power-local-llm/us-state-ai-employment-laws-compliance",
     "cluster": "power-local-llm"
   },
@@ -31882,7 +31882,7 @@
     "title": "Leyes estatales de IA en el empleo en EE. UU.: qué aplica realmente a tu proceso de contratación",
     "excerpt": "Qué leyes estatales de IA aplican a la contratación en EE. UU.: Colorado, California, Illinois, Texas y NYC, con fechas y alcance. No es asesoría legal.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/es/power-local-llm/us-state-ai-employment-laws-compliance",
     "cluster": "power-local-llm"
   },
@@ -31891,7 +31891,7 @@
     "title": "Leis estaduais de IA no emprego nos EUA: o que realmente se aplica ao seu processo de contratação",
     "excerpt": "Quais leis estaduais de IA se aplicam à contratação nos EUA: Colorado, Califórnia, Illinois, Texas e NYC, com datas. Não é aconselhamento jurídico.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/pt/power-local-llm/us-state-ai-employment-laws-compliance",
     "cluster": "power-local-llm"
   },
@@ -31900,7 +31900,7 @@
     "title": "قوانين الذكاء الاصطناعي للتوظيف في ولايات أمريكا: ما الذي ينطبق فعليًا على عملية التوظيف لديك",
     "excerpt": "أي قوانين ولائية للذكاء الاصطناعي تنطبق على التوظيف: كولورادو وكاليفورنيا وإلينوي وتكساس ونيويورك، مع التواريخ والنطاق. ليست استشارة قانونية.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/ar/power-local-llm/us-state-ai-employment-laws-compliance",
     "cluster": "power-local-llm"
   },
@@ -31909,7 +31909,7 @@
     "title": "미국 주별 AI 고용법: 채용 프로세스에 실제로 적용되는 것은 무엇인가",
     "excerpt": "채용에 적용되는 미국 주별 AI 고용법을 정리합니다: 콜로라도, 캘리포니아, 일리노이, 텍사스, 뉴욕시의 시행일과 범위, 연방 행정명령. 법률 자문이 아닙니다.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/ko/power-local-llm/us-state-ai-employment-laws-compliance",
     "cluster": "power-local-llm"
   },
@@ -67798,28 +67798,28 @@
   },
   {
     "lang": "en",
-    "title": "Best Local Platforms for Balcony Solar & Battery Storage (2026)",
+    "title": "Local Platforms for Balcony Solar & Battery Storage Compared (2026)",
     "excerpt": "Compare Home Assistant, ioBroker, openHAB, EVCC, Solar Assistant and Node-RED for balcony solar: protocols, control vs. monitoring, setup effort and cost.",
     "publishDate": "2026-07-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
     "cluster": "balcony-solar"
   },
   {
     "lang": "de",
-    "title": "Beste lokale Plattformen für Balkonkraftwerk & Batteriespeicher (2026)",
+    "title": "Lokale Plattformen für Balkonkraftwerk & Batteriespeicher im Vergleich (2026)",
     "excerpt": "Alternativen zu Home Assistant und EVCC fürs Balkonkraftwerk: ioBroker, openHAB, Node-RED und Solar Assistant im Vergleich – lokal, mit Kosten und Aufwand.",
     "publishDate": "2026-07-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/de/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
     "cluster": "balcony-solar"
   },
   {
     "lang": "fr",
-    "title": "Meilleures plateformes locales pour solaire balcon et stockage batterie (2026)",
+    "title": "Plateformes locales pour solaire balcon et stockage batterie : comparatif (2026)",
     "excerpt": "Alternatives à Home Assistant et EVCC pour le solaire balcon : ioBroker, openHAB, Node-RED et Solar Assistant comparés, en local, avec coût et effort.",
     "publishDate": "2026-07-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/fr/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
     "cluster": "balcony-solar"
   },
@@ -67828,52 +67828,52 @@
     "title": "バルコニー太陽光・蓄電システム向けローカルプラットフォーム比較（2026年版）",
     "excerpt": "バルコニー太陽光向けに、Home AssistantとEVCCの代替としてioBroker、openHAB、Node-RED、Solar Assistantを比較。ローカル運用、コスト、設定の手間を整理。",
     "publishDate": "2026-07-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/ja/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
     "cluster": "balcony-solar"
   },
   {
     "lang": "zh",
-    "title": "阳台光伏与储能系统最佳本地平台对比（2026）",
+    "title": "阳台光伏与储能系统本地平台对比（2026）",
     "excerpt": "阳台光伏的本地平台对比：Home Assistant与EVCC的替代方案ioBroker、openHAB、Node-RED、Solar Assistant，涵盖本地运行、费用与配置难度。",
     "publishDate": "2026-07-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/zh/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
     "cluster": "balcony-solar"
   },
   {
     "lang": "es",
-    "title": "Mejores Plataformas Locales para Solar de Balcón y Almacenamiento de Baterías (2026)",
+    "title": "Plataformas Locales para Solar de Balcón y Almacenamiento de Baterías: Comparativa (2026)",
     "excerpt": "Alternativas a Home Assistant y EVCC para solar de balcón: ioBroker, openHAB, Node-RED y Solar Assistant comparados, en local, con coste y esfuerzo.",
     "publishDate": "2026-07-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/es/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
     "cluster": "balcony-solar"
   },
   {
     "lang": "pt",
-    "title": "Melhores Plataformas Locais para Solar de Varanda e Armazenamento de Energia (2026)",
+    "title": "Plataformas Locais para Solar de Varanda e Armazenamento de Energia: Comparativo (2026)",
     "excerpt": "Alternativas ao Home Assistant e ao EVCC para solar de varanda: ioBroker, openHAB, Node-RED e Solar Assistant comparados, em local, com custo e esforço.",
     "publishDate": "2026-07-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/pt/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
     "cluster": "balcony-solar"
   },
   {
     "lang": "ar",
-    "title": "أفضل المنصات المحلية لنظام الشرفة الشمسية والتخزين بالبطاريات (2026)",
+    "title": "مقارنة المنصات المحلية لنظام الشرفة الشمسية والتخزين بالبطاريات (2026)",
     "excerpt": "قارن بدائل Home Assistant وEVCC للطاقة الشمسية في الشرفة: ioBroker وopenHAB وNode-RED وSolar Assistant، مع التشغيل المحلي والتكلفة وجهد الإعداد.",
     "publishDate": "2026-07-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/ar/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
     "cluster": "balcony-solar"
   },
   {
     "lang": "ko",
-    "title": "발코니 태양광 및 배터리 저장 장치를 위한 최고의 로컬 플랫폼 (2026)",
+    "title": "발코니 태양광 및 배터리 저장 장치용 로컬 플랫폼 비교 (2026)",
     "excerpt": "발코니 태양광용 Home Assistant와 EVCC 대안으로 ioBroker, openHAB, Node-RED, Solar Assistant를 로컬 운영, 비용, 설정 난이도로 비교합니다.",
     "publishDate": "2026-07-03",
-    "dateModified": "2026-11-02",
+    "dateModified": "2026-11-03",
     "url": "/ko/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
     "cluster": "balcony-solar"
   },

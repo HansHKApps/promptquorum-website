@@ -3320,9 +3320,9 @@
       {
         "cluster": "power-local-llm",
         "slug": "best-ai-hr-software-enterprise-2026",
-        "title": "Best AI-Powered HR Software for Enterprises 2026: Privacy-First Options Compared",
+        "title": "AI-Powered HR Software for Enterprises 2026: Privacy-First Options Compared",
         "url": "/power-local-llm/best-ai-hr-software-enterprise",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "mentioned"
       }
     ],
@@ -10752,7 +10752,7 @@
       {
         "cluster": "power-local-llm",
         "slug": "pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
-        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Best Vector DB (2026)",
+        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Vector Database Comparison (2026)",
         "url": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
         "dateModified": "2026-11-03",
         "tier": "about"
@@ -10762,14 +10762,6 @@
         "slug": "best-vector-database-2026",
         "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
         "url": "/local-llms/best-vector-database",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
-        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
-        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -10820,6 +10812,14 @@
         "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
         "dateModified": "2026-08-26",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
+        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
+        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
+        "dateModified": "2026-11-03",
+        "tier": "mentioned"
       }
     ],
     "totalCount": 19,
@@ -11532,7 +11532,7 @@
         "slug": "enterprise-rag-vector-database-deployment-guide-2026",
         "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
         "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -11912,8 +11912,16 @@
       {
         "cluster": "power-local-llm",
         "slug": "best-web-hosting-2026",
-        "title": "Best Web Hosting 2026: Verified Pricing",
+        "title": "Web Hosting Pricing 2026: Hostinger Intro vs. Renewal Price",
         "url": "/power-local-llm/best-web-hosting",
+        "dateModified": "2026-11-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
+        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
+        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
         "dateModified": "2026-11-03",
         "tier": "mentioned"
       },
@@ -11928,8 +11936,16 @@
       {
         "cluster": "power-local-llm",
         "slug": "pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
-        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Best Vector DB (2026)",
+        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Vector Database Comparison (2026)",
         "url": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+        "dateModified": "2026-11-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "us-state-ai-employment-laws-compliance",
+        "title": "US State AI Employment Laws: What Actually Applies to Your Hiring Process",
+        "url": "/power-local-llm/us-state-ai-employment-laws-compliance",
         "dateModified": "2026-11-03",
         "tier": "mentioned"
       },
@@ -11946,22 +11962,6 @@
         "slug": "mram-in-memory-computing-local-ai-2026",
         "title": "MRAM and In-Memory Computing: The Next Leap for On-Device AI?",
         "url": "/local-llms/mram-in-memory-computing-local-ai",
-        "dateModified": "2026-11-02",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "nextchat-review",
-        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
-        "url": "/local-llms/nextchat-review",
-        "dateModified": "2026-11-02",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
         "dateModified": "2026-11-02",
         "tier": "mentioned"
       }
@@ -11981,8 +11981,16 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
+        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
+        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
-        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Best Vector DB (2026)",
+        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Vector Database Comparison (2026)",
         "url": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
         "dateModified": "2026-11-03",
         "tier": "about"
@@ -11992,14 +12000,6 @@
         "slug": "best-vector-database-2026",
         "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
         "url": "/local-llms/best-vector-database",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
-        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
-        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -12413,8 +12413,16 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
+        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
+        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
-        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Best Vector DB (2026)",
+        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Vector Database Comparison (2026)",
         "url": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
         "dateModified": "2026-11-03",
         "tier": "about"
@@ -12424,14 +12432,6 @@
         "slug": "best-vector-database-2026",
         "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
         "url": "/local-llms/best-vector-database",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
-        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
-        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -12702,7 +12702,7 @@
         "slug": "us-state-ai-employment-laws-compliance",
         "title": "US State AI Employment Laws: What Actually Applies to Your Hiring Process",
         "url": "/power-local-llm/us-state-ai-employment-laws-compliance",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "mentioned"
       },
       {
