@@ -585,7 +585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       commercialPlatforms: {
         id: 'commercial-platforms',
-        title: 'Marktführende KI-HR-Plattformen im Vergleich',
+        title: 'Gängige KI-HR-Plattformen im Vergleich',
         content:
           '**Diese Plattformen sind reale, aktuell aktive Produkte mit öffentlich dokumentierten KI-Funktionen — keine der folgenden Beschreibungen ist ein PromptQuorum-Testergebnis, und keine sollte als Bewertung des Bias-Audit- oder Compliance-Status eines Anbieters gelesen werden.** Aktuellen Funktionsumfang und Audit-Dokumentation direkt beim jeweiligen Anbieter vor dem Kauf prüfen.',
         items: [
@@ -619,7 +619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'regulatory-risk',
         title: 'Regulatorisches Risiko: EU-KI-Gesetz und Bias-Audit-Gesetze',
         content:
-          '**KI bei Recruiting- und HR-Entscheidungen ist eine regulierte Kategorie, kein gewöhnlicher Softwarekauf — dies gilt für jede Plattform und jeden Ansatz in diesem Leitfaden gleichermaßen, marktführend oder selbst gehostet.** Nach dem EU-KI-Gesetz (Verordnung (EU) 2024/1689) gelten KI-Systeme für Recruiting, Bewerber-Screening und Leistungsbewertung von Beschäftigten nach Anhang III als hochriskant, was Pflichten zu Risikomanagement, menschlicher Aufsicht und technischer Dokumentation mit sich bringt. Zusätzlich verlangt die New Yorker Local Law 144 von Arbeitgebern, die ein "automatisiertes Einstellungsentscheidungs-Werkzeug" zur wesentlichen Unterstützung einer Einstellungsentscheidung in NYC einsetzen, ein unabhängiges Bias-Audit in Auftrag zu geben, eine Ergebniszusammenfassung zu veröffentlichen und Bewerber zu informieren — mehrere weitere US-Bundesstaaten und -Städte haben vergleichbare Anforderungen eingeführt oder verabschiedet. Für in Deutschland/DACH tätige Unternehmen gelten zusätzlich die DSGVO-Anforderungen an die Verarbeitung von Bewerber- und Mitarbeiterdaten sowie, je nach Land, Mitbestimmungsrechte des Betriebsrats bei der Einführung KI-gestützter Bewertungssysteme.',
+          '**KI bei Recruiting- und HR-Entscheidungen ist eine regulierte Kategorie, kein gewöhnlicher Softwarekauf — dies gilt für jede Plattform und jeden Ansatz in diesem Leitfaden gleichermaßen, ob Standardplattform oder selbst gehostet.** Nach dem EU-KI-Gesetz (Verordnung (EU) 2024/1689) gelten KI-Systeme für Recruiting, Bewerber-Screening und Leistungsbewertung von Beschäftigten nach Anhang III als hochriskant, was Pflichten zu Risikomanagement, menschlicher Aufsicht und technischer Dokumentation mit sich bringt. Zusätzlich verlangt die New Yorker Local Law 144 von Arbeitgebern, die ein "automatisiertes Einstellungsentscheidungs-Werkzeug" zur wesentlichen Unterstützung einer Einstellungsentscheidung in NYC einsetzen, ein unabhängiges Bias-Audit in Auftrag zu geben, eine Ergebniszusammenfassung zu veröffentlichen und Bewerber zu informieren — mehrere weitere US-Bundesstaaten und -Städte haben vergleichbare Anforderungen eingeführt oder verabschiedet. Für in Deutschland/DACH tätige Unternehmen gelten zusätzlich die DSGVO-Anforderungen an die Verarbeitung von Bewerber- und Mitarbeiterdaten sowie, je nach Land, Mitbestimmungsrechte des Betriebsrats bei der Einführung KI-gestützter Bewertungssysteme.',
         items: [
           '**Dies ist keine Rechtsberatung.** Welche Regeln gelten, hängt vom Rechtsraum, dem konkreten Workflow und dem Gewicht ab, das die KI-Ausgabe in der finalen Entscheidung erhält — Pflichten unterscheiden sich je Gesetz und ändern sich mit der Zeit.',
           'Die Angabe eines Anbieters, sein Produkt umfasse "Bias-Tests" oder "Fairness-Funktionen", ist nicht gleichbedeutend damit, dass Ihr konkreter Einsatz eine spezifische gesetzliche Audit-Pflicht in einem bestimmten Rechtsraum erfüllt — aktuelle Audit-Dokumentation und rechtliche Anwendbarkeit direkt mit Rechtsberatung und dem Anbieter prüfen, nicht anhand von Marketingtexten.',
@@ -887,7 +887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       commercialPlatforms: {
         id: 'commercial-platforms',
-        title: 'Plateformes RH IA leaders comparées',
+        title: 'Plateformes RH IA courantes comparées',
         content:
           '**Ces plateformes sont des produits réels et actuellement actifs avec des fonctionnalités IA documentées publiquement — aucune des descriptions ci-dessous n\'est un résultat de test PromptQuorum, et aucune ne doit être lue comme une validation du statut d\'audit de biais ou de conformité d\'un éditeur.** Vérifiez le périmètre fonctionnel actuel et la documentation d\'audit directement auprès de chaque éditeur avant tout achat.',
         items: [
@@ -1322,7 +1322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: 'AI支援の履歴書スクリーニングは合法ですか？', a: '合法になり得ますが、無制限ではなく規制対象です。EU AI法の下では、候補者スクリーニングに使われるAIは附属書IIIで高リスクに分類され、リスク管理と人間による監督に関する義務が課されます。米国ではニューヨーク市などの法域が、自動雇用意思決定ツールに独立したバイアス監査と候補者通知を義務付けています。本記事は法的助言ではありません——導入前に、商用・セルフホストを問わず、貴社の具体的な法域とワークフローに関する最新の要件を労働法弁護士に確認してください。' },
-          { q: '実際に現在稼働している大手AI人事プラットフォームはどれですか？', a: 'Workday（AI支援のスキルマッチングを備えた採用/ATS）、HireVue（AI支援の構造化面接評価）、Paradox（Oliviaというブランド名の面接日程調整用対話型AI）、LatticeとFive15（AI支援の考課下書き）、Culture Amp（従業員サーベイテキストのAI分析）、Textio（求人票・考課向けのAI言語分析）、Eightfold AI（AI主導のタレントマッチング）はいずれも公開されたAI機能を持つ、現在実際に稼働している製品です。製品機能は変化するため、最新の機能範囲は各ベンダーに直接確認してください。' },
+          { q: '実際に現在稼働している大手AI人事プラットフォームはどれですか？', a: 'Workday（AI支援のスキルマッチングを備えた採用/ATS）、HireVue（AI支援の構造化面接評価）、Paradox（Oliviaというブランド名の面接日程調整用対話型AI）、Latticeと15Five（AI支援の考課下書き）、Culture Amp（従業員サーベイテキストのAI分析）、Textio（求人票・考課向けのAI言語分析）、Eightfold AI（AI主導のタレントマッチング）はいずれも公開されたAI機能を持つ、現在実際に稼働している製品です。製品機能は変化するため、最新の機能範囲は各ベンダーに直接確認してください。' },
           { q: 'セルフホスト型ローカルLLMはWorkdayのようなATSを置き換えられますか？', a: 'いいえ——本ガイドではセルフホストを完全なATSの代替として位置づけていません。データをサードパーティのインフラから遠ざけることが最も重要な特定のワークフロー（履歴書フィールドの抽出・スコアリング、感情分析、考課下書き支援）に対象を絞った代替策です。多くの企業はどちらかを置き換えるのではなく、両方を並行して運用します。' },
           { q: 'HR AIワークフローをセルフホストすればGDPRやEU AI法を自動的に満たしますか？', a: 'いいえ。セルフホストはデータフロー図からサードパーティのデータ処理者を一つ取り除くという意味では重要ですが、それだけですべての適用義務を満たすわけではありません——EU AI法の高リスクシステムに対するリスク管理・人間監督・文書化に関する要件は、モデルがどこで動作するかにかかわらず適用されます。より完全な統制セットについては[GDPR準拠ローカルRAGガイド](/ja/power-local-llm/local-rag-for-private-business-data)を参照し、具体的な導入については弁護士に相談してください。' },
           { q: 'NYC Local Law 144とは何で、ニューヨーク市外にも適用されますか？', a: 'Local Law 144は、ニューヨーク市の採用判断を実質的に支援するために自動雇用意思決定ツールを使用する前に、雇用主が独立したバイアス監査を実施し、結果の概要を公表し、候補者に通知することを義務付けるニューヨーク市の条例です。ニューヨーク市に関連する雇用判断に適用され、他の複数の米国の州・都市も同様の要件を導入または可決しています——本記事は法的助言ではありません、貴社の具体的な採用拠点への現行の適用可能性は弁護士に確認してください。' },
@@ -1527,7 +1527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'regulatory-risk',
         title: '监管风险：欧盟AI法案与偏见审计法',
         content:
-          '**用于招聘和HR决策的AI是受监管的类别，而非普通软件采购——这一点对本指南中所有平台和方案（无论主流还是自托管）同样适用。** 根据欧盟AI法案（第（EU）2024/1689号条例），用于招聘、候选人筛选和员工绩效评估的AI系统在附件III中被归类为高风险，需承担风险管理、人工监督和技术文档方面的义务。另外，纽约市Local Law 144要求使用"自动化就业决策工具"实质性辅助纽约市招聘决策的雇主委托独立偏见审计、公布结果摘要并告知候选人，美国其他多个州和城市也已引入或通过类似要求。在中国大陆运营的企业还需关注《数据安全法》对涉及员工个人信息的数据处理活动的相关要求，本地推理有助于将相关数据保留在境内基础设施上。',
+          '**用于招聘和HR决策的AI是受监管的类别，而非普通软件采购——这一点对本指南中所有平台和方案（无论主流还是自托管）同样适用。** 根据欧盟AI法案（第（EU）2024/1689号条例），用于招聘、候选人筛选和员工绩效评估的AI系统在附件III中被归类为高风险，需承担风险管理、人工监督和技术文档方面的义务。另外，纽约市Local Law 144要求使用"自动化就业决策工具"实质性辅助纽约市招聘决策的雇主委托独立偏见审计、公布结果摘要并告知候选人，美国其他多个州和城市也已引入或通过类似要求。在中国大陆运营的企业还需关注《个人信息保护法》等法律对员工和候选人个人信息处理的要求；本地推理可以减少数据离开自有基础设施的环节，但并不自动满足相关法律义务，具体请咨询当地律师。',
         items: [
           '**本文不构成法律意见。** 具体适用哪些规则取决于司法辖区、具体工作流以及AI输出在最终决策中所占的权重——不同法律的义务各不相同且会随时间变化。',
           '供应商声称其产品包含"偏见测试"或"公平性功能"，并不等同于你的具体部署满足特定司法辖区的法定审计要求——请直接与律师及供应商核实当前审计文档和法律适用性，而非依据营销文案。',
@@ -1693,7 +1693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Software de RR. HH. con IA comparado: Workday, HireVue, Lattice y más, con precios públicos, fechas del AI Act y opción autoalojada. No es asesoría legal.',
     twitterDescription:
-      'Software de RR. HH. con IA comparado: plataformas líderes vs. LLM locales autoalojados para filtrado de CV, análisis de clima laboral y redacción de evaluaciones.',
+      'Software de RR. HH. con IA comparado: plataformas habituales vs. LLM locales autoalojados para filtrado de CV, análisis de clima laboral y redacción de evaluaciones.',
     affiliateDisclosure: true,
     current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
@@ -1718,9 +1718,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       es: {
         question: '¿Cuál es el mejor software de RR. HH. con IA para empresas que necesitan controlar hacia dónde van los datos de empleados y candidatos?',
         answer:
-          'No hay una única mejor respuesta: depende del flujo de trabajo y de los datos que hay detrás. Las plataformas líderes (Workday para ATS/filtrado, HireVue para evaluación de entrevistas, Paradox para programación, Lattice o 15Five para evaluaciones de desempeño, Culture Amp para clima laboral) son la vía más rápida hacia producción e incluyen su propio alojamiento de IA. Para los flujos que tocan los datos más sensibles de candidatos y empleados —datos personales del CV, borradores de evaluación confidenciales, texto sincero de encuestas de clima— un LLM local autoalojado mantiene ese contenido en infraestructura que tú controlas, a costa de construir y mantener la pila tú mismo.',
+          'No hay una única mejor respuesta: depende del flujo de trabajo y de los datos que hay detrás. Las plataformas habituales (Workday para ATS/filtrado, HireVue para evaluación de entrevistas, Paradox para programación, Lattice o 15Five para evaluaciones de desempeño, Culture Amp para clima laboral) son la vía más rápida hacia producción e incluyen su propio alojamiento de IA. Para los flujos que tocan los datos más sensibles de candidatos y empleados —datos personales del CV, borradores de evaluación confidenciales, texto sincero de encuestas de clima— un LLM local autoalojado mantiene ese contenido en infraestructura que tú controlas, a costa de construir y mantener la pila tú mismo.',
         bullets: [
-          'Las plataformas líderes empaquetan alojamiento de IA, soporte e integraciones: despliegue más rápido, pero los datos salen de tu infraestructura',
+          'Las plataformas habituales empaquetan alojamiento de IA, soporte e integraciones: despliegue más rápido, pero los datos salen de tu infraestructura',
           'Los LLM locales autoalojados mantienen datos de candidatos, texto de clima laboral y borradores de evaluación en infraestructura que controlas',
           'La IA en reclutamiento/RR. HH. es de alto riesgo bajo el Reglamento de IA de la UE y está sujeta a leyes de auditoría de sesgo como la Local Law 144 de Nueva York',
           'La decisión final debe seguir siendo humana en el filtrado, la puntuación y los resultados de desempeño: nunca automatización total',
@@ -1760,7 +1760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Las plataformas líderes de RR. HH. con IA (Workday, HireVue, Lattice) gestionan el filtrado de CV, la programación de entrevistas y las evaluaciones de desempeño en infraestructura del proveedor, mientras que una pila de LLM local autoalojada mantiene datos de candidatos, clima laboral y borradores de evaluación en infraestructura controlada por la empresa.',
+            text: 'Las plataformas habituales de RR. HH. con IA (Workday, HireVue, Lattice) gestionan el filtrado de CV, la programación de entrevistas y las evaluaciones de desempeño en infraestructura del proveedor, mientras que una pila de LLM local autoalojada mantiene datos de candidatos, clima laboral y borradores de evaluación en infraestructura controlada por la empresa.',
           },
           {
             type: 'plain-terms',
@@ -1774,7 +1774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Clasificación del Reglamento de IA de la UE:** los sistemas de IA usados para reclutamiento, filtrado de candidatos y evaluación del desempeño de trabajadores se clasifican como de alto riesgo bajo el Anexo III del Reglamento (UE) 2024/1689.',
           '**Local Law 144 de Nueva York:** exige una auditoría de sesgo independiente, resultados publicados y notificación a candidatos para toda "herramienta automatizada de decisión de empleo" usada para asistir sustancialmente decisiones de contratación en Nueva York.',
-          '**Plataformas líderes comparadas aquí:** Workday, HireVue, Paradox (Olivia), Lattice, 15Five, Culture Amp, Textio y Eightfold AI —cada una un producto real y actualmente activo, no hipotético.',
+          '**Plataformas habituales comparadas aquí:** Workday, HireVue, Paradox (Olivia), Lattice, 15Five, Culture Amp, Textio y Eightfold AI —cada una un producto real y actualmente activo, no hipotético.',
           '**Rango de costo de infraestructura autoalojada:** aproximadamente entre 0,34 y 4,29 $/hora por GPU en la nube bajo demanda, de la clase RTX 4090 a H100 (páginas de precios de RunPod y Lambda), adecuado para un piloto de modelo de tamaño medio (7-32 mil millones de parámetros), sin contar el tiempo de ingeniería.',
           '**Esto no es asesoramiento legal** —las obligaciones regulatorias para la IA en reclutamiento y RR. HH. varían según la jurisdicción y cambian con el tiempo; verifica los requisitos vigentes con un abogado antes del despliegue.',
         ],
@@ -1797,7 +1797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       commercialPlatforms: {
         id: 'commercial-platforms',
-        title: 'Plataformas líderes de RR. HH. con IA comparadas',
+        title: 'Plataformas habituales de RR. HH. con IA comparadas',
         content:
           '**Estas plataformas son productos reales y actualmente activos con funciones de IA documentadas públicamente —ninguna de las descripciones a continuación es un resultado de pruebas de PromptQuorum, y ninguna debe leerse como un respaldo al estado de auditoría de sesgo o cumplimiento de un proveedor.** Verifica el alcance de funciones y la documentación de auditoría vigentes directamente con cada proveedor antes de comprar.',
         items: [
@@ -1873,7 +1873,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost-comparison',
         title: 'Costos: suscripción SaaS vs. infraestructura autoalojada',
         content:
-          '**Las plataformas líderes cobran por empleado o por puesto, típicamente mediante una cotización empresarial personalizada; la infraestructura autoalojada cambia esa suscripción predecible por cómputo de pago por uso más tiempo de ingeniería.** Ninguna opción es universalmente más barata: la respuesta depende de la escala del despliegue, la capacidad de ingeniería interna y cuánto valore tu organización mantener los datos de candidatos y empleados fuera de infraestructura de terceros.',
+          '**Las plataformas habituales cobran por empleado o por puesto, típicamente mediante una cotización empresarial personalizada; la infraestructura autoalojada cambia esa suscripción predecible por cómputo de pago por uso más tiempo de ingeniería.** Ninguna opción es universalmente más barata: la respuesta depende de la escala del despliegue, la capacidad de ingeniería interna y cuánto valore tu organización mantener los datos de candidatos y empleados fuera de infraestructura de terceros.',
         columns: ['Criterio', 'Plataforma líder', 'Pila autoalojada'],
         rows: [
           { 'Criterio': 'Modelo de precios', 'Plataforma líder': 'Por empleado/puesto, cotización empresarial personalizada', 'Pila autoalojada': 'Cómputo de pago por uso + tiempo de ingeniería' },
@@ -1887,7 +1887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'decision-guide',
         title: '¿Qué enfoque conviene a tu equipo?',
         content:
-          '**La mayoría de las empresas ejecutan ambas vías a la vez, no eligen una en exclusiva —plataformas líderes para programación y flujos amplios de ATS, autoalojamiento para los datos más sensibles.** Usa los perfiles siguientes por flujo, no por empresa.',
+          '**La mayoría de las empresas ejecutan ambas vías a la vez, no eligen una en exclusiva —plataformas habituales para programación y flujos amplios de ATS, autoalojamiento para los datos más sensibles.** Usa los perfiles siguientes por flujo, no por empresa.',
         items: [
           '**Equipo de RR. HH. pequeño, sin soporte de ingeniería dedicado:** usa una plataforma líder para todo el flujo —la carga de configuración y mantenimiento del autoalojamiento no vale la pena a esta escala.',
           '**Empresa con equipo interno de ingeniería de ML/plataforma y fuerte escrutinio de cumplimiento sobre datos de candidatos:** autoaloja específicamente el filtrado de CV y el análisis de clima laboral; mantén la programación de entrevistas en una plataforma líder donde la sensibilidad de los datos es menor.',
@@ -1930,7 +1930,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Es legal el filtrado de CV asistido por IA?', a: 'Puede serlo, pero está regulado en lugar de ser irrestricto. Bajo el Reglamento de IA de la UE, la IA usada para filtrar candidatos se clasifica como de alto riesgo en el Anexo III, con obligaciones de gestión de riesgos y supervisión humana. En EE. UU., jurisdicciones como Nueva York exigen una auditoría de sesgo independiente y notificación a candidatos para herramientas automatizadas de decisión de empleo. Esto no es asesoramiento legal —verifica los requisitos vigentes para tu jurisdicción y flujo específicos con un abogado laboral antes de desplegar cualquier herramienta de filtrado, comercial o autoalojada.' },
-          { q: '¿Qué plataformas líderes de RR. HH. con IA están realmente en uso activo hoy?', a: 'Workday (reclutamiento/ATS con emparejamiento de habilidades asistido por IA), HireVue (evaluación de entrevistas estructuradas asistida por IA), Paradox (IA conversacional para programación de entrevistas, comercializada como Olivia), Lattice y 15Five (ayuda de redacción de evaluaciones asistida por IA), Culture Amp (análisis de IA del texto de encuestas de empleados), Textio (análisis de lenguaje con IA para ofertas de empleo y evaluaciones) y Eightfold AI (emparejamiento de talento impulsado por IA) son todos productos reales y actualmente activos con funciones de IA documentadas públicamente. Verifica el alcance de funciones vigente directamente con cada proveedor, ya que las capacidades del producto cambian.' },
+          { q: '¿Qué plataformas habituales de RR. HH. con IA están realmente en uso activo hoy?', a: 'Workday (reclutamiento/ATS con emparejamiento de habilidades asistido por IA), HireVue (evaluación de entrevistas estructuradas asistida por IA), Paradox (IA conversacional para programación de entrevistas, comercializada como Olivia), Lattice y 15Five (ayuda de redacción de evaluaciones asistida por IA), Culture Amp (análisis de IA del texto de encuestas de empleados), Textio (análisis de lenguaje con IA para ofertas de empleo y evaluaciones) y Eightfold AI (emparejamiento de talento impulsado por IA) son todos productos reales y actualmente activos con funciones de IA documentadas públicamente. Verifica el alcance de funciones vigente directamente con cada proveedor, ya que las capacidades del producto cambian.' },
           { q: '¿Puede un LLM local autoalojado reemplazar un ATS como Workday?', a: 'No —el autoalojamiento no se presenta en esta guía como un reemplazo completo de ATS. Es una alternativa dirigida a los flujos específicos donde más importa mantener los datos fuera de infraestructura de terceros: extracción y puntuación de campos de CV, análisis de clima laboral y ayuda para redactar evaluaciones. La mayoría de las empresas ejecutan ambas vías juntas en lugar de reemplazar una con la otra.' },
           { q: '¿Autoalojar un flujo de IA de RR. HH. cumple automáticamente con el RGPD o el Reglamento de IA de la UE?', a: 'No. El autoalojamiento elimina un encargado del tratamiento de terceros del mapa de flujo de datos, lo cual es relevante, pero no cumple por sí solo todas las obligaciones aplicables —los requisitos de gestión de riesgos, supervisión humana y documentación del Reglamento de IA de la UE para sistemas de alto riesgo aplican sin importar dónde se ejecute el modelo. Consulta la guía dedicada de [RAG local conforme al RGPD](/es/power-local-llm/local-rag-for-private-business-data) para el conjunto completo de controles, y consulta con un abogado para tu despliegue específico.' },
           { q: '¿Qué es la Local Law 144 de Nueva York y aplica fuera de la ciudad de Nueva York?', a: 'La Local Law 144 es una ordenanza de la ciudad de Nueva York que exige a los empleadores encargar una auditoría de sesgo independiente, publicar un resumen de resultados y notificar a los candidatos antes de usar una herramienta automatizada de decisión de empleo para asistir sustancialmente una decisión de contratación en Nueva York. Aplica a decisiones de empleo relacionadas con la ciudad de Nueva York, y varios otros estados y ciudades de EE. UU. han introducido o aprobado requisitos comparables —esto no es asesoramiento legal, verifica la aplicabilidad vigente a tus ubicaciones de contratación específicas con un abogado.' },
@@ -1995,7 +1995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Software de RH com IA comparado: Workday, HireVue, Lattice, com preços públicos, prazos do AI Act e opção auto-hospedada. Não é aconselhamento jurídico.',
     twitterDescription:
-      'Software de RH com IA comparado: plataformas líderes vs. LLMs locais auto-hospedados para triagem de currículos, análise de clima e redação de avaliações.',
+      'Software de RH com IA comparado: plataformas usuais vs. LLMs locais auto-hospedados para triagem de currículos, análise de clima e redação de avaliações.',
     affiliateDisclosure: true,
     current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
@@ -2020,9 +2020,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pt: {
         question: 'Qual é o melhor software de RH com IA para empresas que precisam controlar para onde vão os dados de funcionários e candidatos?',
         answer:
-          'Não existe uma única resposta melhor — depende do fluxo de trabalho e dos dados envolvidos. Plataformas líderes (Workday para ATS/triagem, HireVue para avaliação de entrevistas, Paradox para agendamento, Lattice ou 15Five para avaliações de desempenho, Culture Amp para clima organizacional) são o caminho mais rápido para produção e já incluem hospedagem própria de IA. Para fluxos que tocam nos dados mais sensíveis de candidatos e funcionários — dados pessoais do currículo, rascunhos confidenciais de avaliação, texto sincero de pesquisas de clima — um LLM local auto-hospedado mantém esse conteúdo em infraestrutura que você controla, ao custo de construir e manter a pilha você mesmo.',
+          'Não existe uma única resposta melhor — depende do fluxo de trabalho e dos dados envolvidos. Plataformas usuais (Workday para ATS/triagem, HireVue para avaliação de entrevistas, Paradox para agendamento, Lattice ou 15Five para avaliações de desempenho, Culture Amp para clima organizacional) são o caminho mais rápido para produção e já incluem hospedagem própria de IA. Para fluxos que tocam nos dados mais sensíveis de candidatos e funcionários — dados pessoais do currículo, rascunhos confidenciais de avaliação, texto sincero de pesquisas de clima — um LLM local auto-hospedado mantém esse conteúdo em infraestrutura que você controla, ao custo de construir e manter a pilha você mesmo.',
         bullets: [
-          'Plataformas líderes empacotam hospedagem de IA, suporte e integrações — implantação mais rápida, mas os dados saem da sua infraestrutura',
+          'Plataformas usuais empacotam hospedagem de IA, suporte e integrações — implantação mais rápida, mas os dados saem da sua infraestrutura',
           'LLMs locais auto-hospedados mantêm dados de candidatos, texto de clima organizacional e rascunhos de avaliação em infraestrutura que você controla',
           'A IA em recrutamento/RH é classificada como alto risco pelo AI Act da UE e está sujeita a leis de auditoria de viés como a Local Law 144 de Nova York',
           'A decisão final deve permanecer humana na triagem, pontuação e resultados de desempenho — nunca automação total',
@@ -2035,7 +2035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Principais conclusões', anchor: '#key-takeaways' },
       { label: 'Fatos rápidos', anchor: '#quick-facts' },
       { label: 'Onde a IA atua nos fluxos de RH', anchor: '#use-case-map' },
-      { label: 'Plataformas líderes de RH com IA comparadas', anchor: '#commercial-platforms' },
+      { label: 'Plataformas usuais de RH com IA comparadas', anchor: '#commercial-platforms' },
       { label: 'Plataformas de RH com IA em resumo', anchor: '#platform-table' },
       { label: 'Risco regulatório: AI Act da UE e auditorias de viés', anchor: '#regulatory-risk' },
       { label: 'A alternativa auto-hospedada', anchor: '#self-hosted-approach' },
@@ -2062,7 +2062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Plataformas líderes de RH com IA (Workday, HireVue, Lattice) lidam com triagem de currículos, agendamento de entrevistas e avaliações de desempenho na infraestrutura do fornecedor, enquanto uma pilha de LLM local auto-hospedada mantém dados de candidatos, dados de clima organizacional e rascunhos de avaliação em infraestrutura controlada pela empresa.',
+            text: 'Plataformas usuais de RH com IA (Workday, HireVue, Lattice) lidam com triagem de currículos, agendamento de entrevistas e avaliações de desempenho na infraestrutura do fornecedor, enquanto uma pilha de LLM local auto-hospedada mantém dados de candidatos, dados de clima organizacional e rascunhos de avaliação em infraestrutura controlada pela empresa.',
           },
           {
             type: 'plain-terms',
@@ -2076,7 +2076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Classificação do AI Act da UE:** sistemas de IA usados para recrutamento, triagem de candidatos e avaliação de desempenho de trabalhadores são classificados como alto risco no Anexo III do Regulamento (UE) 2024/1689.',
           '**Local Law 144 de Nova York:** exige auditoria de viés independente, resultados publicados e notificação a candidatos para qualquer "ferramenta automatizada de decisão de emprego" usada para apoiar substancialmente decisões de contratação em Nova York.',
-          '**Plataformas líderes comparadas aqui:** Workday, HireVue, Paradox (Olivia), Lattice, 15Five, Culture Amp, Textio e Eightfold AI — todos produtos reais e atualmente ativos, não hipotéticos.',
+          '**Plataformas usuais comparadas aqui:** Workday, HireVue, Paradox (Olivia), Lattice, 15Five, Culture Amp, Textio e Eightfold AI — todos produtos reais e atualmente ativos, não hipotéticos.',
           '**Faixa de custo da infraestrutura auto-hospedada:** aproximadamente US$ 0,34–4,29/hora por GPU em nuvem sob demanda, da classe RTX 4090 à H100 (páginas de preços da RunPod e da Lambda), adequada para um piloto de modelo de porte médio (7–32 bilhões de parâmetros), antes de contar o tempo de engenharia.',
           '**Isto não é aconselhamento jurídico** — obrigações regulatórias para IA em recrutamento e RH variam por jurisdição e mudam com o tempo; verifique os requisitos atuais com um advogado antes da implantação.',
         ],
@@ -2099,7 +2099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       commercialPlatforms: {
         id: 'commercial-platforms',
-        title: 'Plataformas líderes de RH com IA comparadas',
+        title: 'Plataformas usuais de RH com IA comparadas',
         content:
           '**Essas plataformas são produtos reais e atualmente ativos, com recursos de IA documentados publicamente — nenhuma das descrições abaixo é resultado de teste da PromptQuorum, e nenhuma deve ser lida como um aval ao status de auditoria de viés ou conformidade de um fornecedor.** Verifique o escopo de recursos e a documentação de auditoria atuais diretamente com cada fornecedor antes da compra.',
         items: [
@@ -2175,7 +2175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost-comparison',
         title: 'Custo: assinatura SaaS vs. infraestrutura auto-hospedada',
         content:
-          '**Plataformas líderes cobram por funcionário ou por licença, geralmente via cotação corporativa personalizada; a infraestrutura auto-hospedada troca essa assinatura previsível por computação sob demanda mais tempo de engenharia.** Nenhuma opção é universalmente mais barata — a resposta depende da escala de implantação, da capacidade de engenharia interna e de quanto sua organização valoriza manter dados de candidatos e funcionários fora de infraestrutura de terceiros.',
+          '**Plataformas usuais cobram por funcionário ou por licença, geralmente via cotação corporativa personalizada; a infraestrutura auto-hospedada troca essa assinatura previsível por computação sob demanda mais tempo de engenharia.** Nenhuma opção é universalmente mais barata — a resposta depende da escala de implantação, da capacidade de engenharia interna e de quanto sua organização valoriza manter dados de candidatos e funcionários fora de infraestrutura de terceiros.',
         columns: ['Critério', 'Plataforma líder', 'Pilha auto-hospedada'],
         rows: [
           { 'Critério': 'Modelo de preços', 'Plataforma líder': 'Por funcionário/licença, cotação corporativa personalizada', 'Pilha auto-hospedada': 'Computação sob demanda + tempo de engenharia' },
@@ -2189,7 +2189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'decision-guide',
         title: 'Qual abordagem combina com sua equipe?',
         content:
-          '**A maioria das empresas roda os dois caminhos ao mesmo tempo, sem escolher um exclusivamente — plataformas líderes para agendamento e fluxos amplos de ATS, auto-hospedagem para os dados mais sensíveis.** Use os perfis abaixo por fluxo, não por empresa.',
+          '**A maioria das empresas roda os dois caminhos ao mesmo tempo, sem escolher um exclusivamente — plataformas usuais para agendamento e fluxos amplos de ATS, auto-hospedagem para os dados mais sensíveis.** Use os perfis abaixo por fluxo, não por empresa.',
         items: [
           '**Equipe de RH pequena, sem suporte de engenharia dedicado:** use uma plataforma líder para todo o fluxo — o esforço de configuração e manutenção da auto-hospedagem não compensa nessa escala.',
           '**Empresa com equipe interna de engenharia de ML/plataforma e forte escrutínio de compliance sobre dados de candidatos:** auto-hospede especificamente a triagem de currículos e a análise de sentimento; mantenha o agendamento de entrevistas em uma plataforma líder, onde a sensibilidade dos dados é menor.',
@@ -2232,7 +2232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'A triagem de currículos assistida por IA é legal?', a: 'Pode ser, mas é regulada, não irrestrita. Sob o AI Act da UE, a IA usada para triagem de candidatos é classificada como alto risco no Anexo III, com obrigações de gestão de riscos e supervisão humana. Nos EUA, jurisdições como Nova York exigem auditoria de viés independente e notificação a candidatos para ferramentas automatizadas de decisão de emprego. Isto não é aconselhamento jurídico — verifique os requisitos vigentes para sua jurisdição e fluxo específicos com um advogado trabalhista antes de implantar qualquer ferramenta de triagem, comercial ou auto-hospedada.' },
-          { q: 'Quais plataformas líderes de RH com IA estão realmente em uso ativo hoje?', a: 'Workday (recrutamento/ATS com correspondência de habilidades assistida por IA), HireVue (avaliação de entrevista estruturada assistida por IA), Paradox (IA conversacional para agendamento de entrevistas, com a marca Olivia), Lattice e 15Five (ajuda de redação de avaliações assistida por IA), Culture Amp (análise de IA do texto de pesquisas com funcionários), Textio (análise de linguagem por IA para vagas e avaliações) e Eightfold AI (correspondência de talentos guiada por IA) são todos produtos reais e atualmente ativos, com recursos de IA documentados publicamente. Verifique o escopo de recursos atual diretamente com cada fornecedor, já que as capacidades do produto mudam.' },
+          { q: 'Quais plataformas usuais de RH com IA estão realmente em uso ativo hoje?', a: 'Workday (recrutamento/ATS com correspondência de habilidades assistida por IA), HireVue (avaliação de entrevista estruturada assistida por IA), Paradox (IA conversacional para agendamento de entrevistas, com a marca Olivia), Lattice e 15Five (ajuda de redação de avaliações assistida por IA), Culture Amp (análise de IA do texto de pesquisas com funcionários), Textio (análise de linguagem por IA para vagas e avaliações) e Eightfold AI (correspondência de talentos guiada por IA) são todos produtos reais e atualmente ativos, com recursos de IA documentados publicamente. Verifique o escopo de recursos atual diretamente com cada fornecedor, já que as capacidades do produto mudam.' },
           { q: 'Um LLM local auto-hospedado pode substituir um ATS como o Workday?', a: 'Não — a auto-hospedagem não é apresentada neste guia como substituição completa de ATS. É uma alternativa direcionada aos fluxos específicos em que manter os dados fora de infraestrutura de terceiros mais importa: extração e pontuação de campos de currículo, análise de sentimento e ajuda na redação de avaliações. A maioria das empresas roda os dois caminhos juntos, em vez de substituir um pelo outro.' },
           { q: 'Auto-hospedar um fluxo de IA de RH satisfaz automaticamente o GDPR ou a LGPD?', a: 'Não. A auto-hospedagem remove um operador de dados terceiro do mapa de fluxo de dados, o que é relevante, mas não satisfaz automaticamente todas as obrigações aplicáveis — os requisitos de gestão de riscos, supervisão humana e documentação do AI Act da UE para sistemas de alto risco se aplicam independentemente de onde o modelo roda, e a LGPD continua exigindo base legal, finalidade e direitos do titular respeitados. Veja o guia dedicado [RAG local em conformidade com o RGPD](/pt/power-local-llm/local-rag-for-private-business-data) para o conjunto completo de controles, e consulte um advogado para sua implantação específica.' },
           { q: 'O que é a Local Law 144 de Nova York e ela se aplica fora de Nova York?', a: 'A Local Law 144 é uma lei municipal de Nova York que exige que empregadores contratem uma auditoria de viés independente, publiquem um resumo dos resultados e notifiquem os candidatos antes de usar uma ferramenta automatizada de decisão de emprego para apoiar substancialmente uma decisão de contratação em Nova York. Ela se aplica a decisões de emprego ligadas a Nova York; vários outros estados e cidades dos EUA introduziram ou aprovaram exigências comparáveis — isto não é aconselhamento jurídico, verifique a aplicabilidade vigente aos seus locais específicos de contratação com um advogado.' },
@@ -2297,7 +2297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'مقارنة برمجيات الموارد البشرية بالذكاء الاصطناعي: Workday وHireVue وLattice مع الأسعار المعلنة ومواعيد قانون الاتحاد الأوروبي. ليست استشارة قانونية.',
     twitterDescription:
-      'مقارنة برمجيات الموارد البشرية بالذكاء الاصطناعي: المنصات الرائدة مقابل نماذج اللغة المحلية المستضافة ذاتيًا لفرز السير الذاتية وتحليل المشاعر وصياغة التقييمات.',
+      'مقارنة برمجيات الموارد البشرية بالذكاء الاصطناعي: المنصات الشائعة مقابل نماذج اللغة المحلية المستضافة ذاتيًا لفرز السير الذاتية وتحليل المشاعر وصياغة التقييمات.',
     affiliateDisclosure: true,
     current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
@@ -2322,9 +2322,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ar: {
         question: 'ما أفضل برنامج موارد بشرية بالذكاء الاصطناعي للمؤسسات التي تحتاج للتحكم في وجهة بيانات الموظفين والمرشحين؟',
         answer:
-          'لا توجد إجابة واحدة أفضل — الأمر يعتمد على سير العمل والبيانات وراءه. تُعد المنصات الرائدة (Workday لنظام التتبع/الفرز، وHireVue لتقييم المقابلات، وParadox للجدولة، وLattice أو 15Five لتقييمات الأداء، وCulture Amp لتحليل المشاعر) المسار الأسرع للإنتاج وتتضمن استضافة الذكاء الاصطناعي الخاصة بها. أما بالنسبة لسير العمل الذي يلامس أكثر بيانات المرشحين والموظفين حساسية — بيانات السيرة الذاتية الشخصية، ومسودات التقييم السرية، ونصوص استطلاعات المشاعر الصادقة — فإن نموذج اللغة المحلي المستضاف ذاتيًا يُبقي هذا المحتوى على بنية تحتية تتحكم بها أنت، مقابل عناء بناء الحزمة وصيانتها بنفسك.',
+          'لا توجد إجابة واحدة أفضل — الأمر يعتمد على سير العمل والبيانات وراءه. تُعد المنصات الشائعة (Workday لنظام التتبع/الفرز، وHireVue لتقييم المقابلات، وParadox للجدولة، وLattice أو 15Five لتقييمات الأداء، وCulture Amp لتحليل المشاعر) المسار الأسرع للإنتاج وتتضمن استضافة الذكاء الاصطناعي الخاصة بها. أما بالنسبة لسير العمل الذي يلامس أكثر بيانات المرشحين والموظفين حساسية — بيانات السيرة الذاتية الشخصية، ومسودات التقييم السرية، ونصوص استطلاعات المشاعر الصادقة — فإن نموذج اللغة المحلي المستضاف ذاتيًا يُبقي هذا المحتوى على بنية تحتية تتحكم بها أنت، مقابل عناء بناء الحزمة وصيانتها بنفسك.',
         bullets: [
-          'تجمع المنصات الرائدة استضافة الذكاء الاصطناعي والدعم والتكاملات معًا — أسرع نشرًا، لكن البيانات تغادر بنيتك التحتية',
+          'تجمع المنصات الشائعة استضافة الذكاء الاصطناعي والدعم والتكاملات معًا — أسرع نشرًا، لكن البيانات تغادر بنيتك التحتية',
           'تُبقي نماذج اللغة المحلية المستضافة ذاتيًا بيانات المرشحين ونصوص المشاعر ومسودات التقييم على بنية تحتية تتحكم بها أنت',
           'يُصنَّف الذكاء الاصطناعي في التوظيف/الموارد البشرية عالي المخاطر بموجب قانون الذكاء الاصطناعي الأوروبي، ويخضع لقوانين تدقيق التحيز مثل قانون نيويورك المحلي رقم 144',
           'يجب أن يبقى القرار النهائي بشريًا دائمًا في الفرز والتقييم ونتائج الأداء — لا أتمتة كاملة أبدًا',
@@ -2337,7 +2337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'أهم النقاط', anchor: '#key-takeaways' },
       { label: 'حقائق سريعة', anchor: '#quick-facts' },
       { label: 'أين يتدخل الذكاء الاصطناعي في سير عمل الموارد البشرية', anchor: '#use-case-map' },
-      { label: 'مقارنة منصات الموارد البشرية الرائدة بالذكاء الاصطناعي', anchor: '#commercial-platforms' },
+      { label: 'مقارنة منصات الموارد البشرية الشائعة بالذكاء الاصطناعي', anchor: '#commercial-platforms' },
       { label: 'منصات الموارد البشرية بالذكاء الاصطناعي في لمحة', anchor: '#platform-table' },
       { label: 'المخاطر التنظيمية: قانون الذكاء الاصطناعي الأوروبي وتدقيق التحيز', anchor: '#regulatory-risk' },
       { label: 'البديل المستضاف ذاتيًا', anchor: '#self-hosted-approach' },
@@ -2354,7 +2354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**تحل منصات الموارد البشرية الرائدة بالذكاء الاصطناعي وحزمة نموذج لغوي محلي مستضافة ذاتيًا مشكلتين مختلفتين، لا نسختين متنافستين من المشكلة نفسها.** تُعد Workday وHireVue وParadox وLattice وCulture Amp المسار الأسرع للإنتاج؛ والاستضافة الذاتية هي الحل عندما لا يمكن لبيانات المرشحين أو الموظفين مغادرة بنيتك التحتية.',
+          '**تحل منصات الموارد البشرية الشائعة بالذكاء الاصطناعي وحزمة نموذج لغوي محلي مستضافة ذاتيًا مشكلتين مختلفتين، لا نسختين متنافستين من المشكلة نفسها.** تُعد Workday وHireVue وParadox وLattice وCulture Amp المسار الأسرع للإنتاج؛ والاستضافة الذاتية هي الحل عندما لا يمكن لبيانات المرشحين أو الموظفين مغادرة بنيتك التحتية.',
           '**يُعد فرز السير الذاتية وتحليل المشاعر وصياغة التقييمات أقوى المرشحين للاستضافة الذاتية** — إذ يلامس كل منها بانتظام بيانات (هوية المرشح، نصوص الموظفين الصادقة، محتوى التقييم السري) قد تفضل الشركة عدم إرسالها إلى واجهة برمجة تطبيقات تابعة لجهة خارجية.',
           '**يُعد الذكاء الاصطناعي في التوظيف والموارد البشرية فئة عالية المخاطر بموجب قانون الذكاء الاصطناعي الأوروبي**، وتتطلب ولايات قضائية أمريكية، بما فيها مدينة نيويورك، تدقيقات تحيز مستقلة لأدوات التوظيف الآلية — وينطبق ذلك على أي سير عمل فرز أو تقييم بمساعدة الذكاء الاصطناعي، تجاريًا كان أو مستضافًا ذاتيًا.',
           '**هذا ليس استشارة قانونية.** تختلف التزامات تدقيق التحيز، ومتطلبات إشعار المرشحين، وقواعد الأنظمة عالية المخاطر باختلاف الولاية القضائية وتتغير مع الوقت — استشر محاميًا مؤهلًا قبل نشر أي نظام ذكاء اصطناعي في التوظيف أو الموارد البشرية.',
@@ -2364,7 +2364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'تتولى منصات الموارد البشرية الرائدة بالذكاء الاصطناعي (Workday، HireVue، Lattice) فرز السير الذاتية وجدولة المقابلات وتقييمات الأداء على بنية تحتية المزود، بينما تُبقي حزمة نموذج لغوي محلي مستضافة ذاتيًا بيانات المرشحين وبيانات المشاعر ومسودات التقييم على بنية تحتية تتحكم بها الشركة.',
+            text: 'تتولى منصات الموارد البشرية الشائعة بالذكاء الاصطناعي (Workday، HireVue، Lattice) فرز السير الذاتية وجدولة المقابلات وتقييمات الأداء على بنية تحتية المزود، بينما تُبقي حزمة نموذج لغوي محلي مستضافة ذاتيًا بيانات المرشحين وبيانات المشاعر ومسودات التقييم على بنية تحتية تتحكم بها الشركة.',
           },
           {
             type: 'plain-terms',
@@ -2378,7 +2378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**تصنيف قانون الذكاء الاصطناعي الأوروبي:** تُصنَّف أنظمة الذكاء الاصطناعي المستخدمة في التوظيف وفرز المرشحين وتقييم أداء العاملين على أنها عالية المخاطر بموجب الملحق الثالث من اللائحة (EU) 2024/1689.',
           '**قانون نيويورك المحلي رقم 144:** يشترط تدقيق تحيز مستقل ونشر النتائج وإشعار المرشحين لأي "أداة قرار توظيف آلية" تُستخدم للمساعدة الجوهرية في قرارات التوظيف داخل مدينة نيويورك.',
-          '**المنصات الرائدة التي تمت مقارنتها هنا:** Workday وHireVue وParadox (Olivia) وLattice و15Five وCulture Amp وTextio وEightfold AI — جميعها منتجات حقيقية ونشطة حاليًا، وليست افتراضية.',
+          '**المنصات الشائعة التي تمت مقارنتها هنا:** Workday وHireVue وParadox (Olivia) وLattice و15Five وCulture Amp وTextio وEightfold AI — جميعها منتجات حقيقية ونشطة حاليًا، وليست افتراضية.',
           '**نطاق تكلفة البنية التحتية المستضافة ذاتيًا:** حوالي 0.34–4.29 دولارًا في الساعة لوحدات GPU سحابية عند الطلب من فئة RTX 4090 إلى H100 (صفحتا أسعار RunPod وLambda)، مناسبة لتجربة نموذج متوسط الحجم (7–32 مليار معلمة)، دون احتساب وقت الهندسة.',
           '**هذا ليس استشارة قانونية** — تختلف الالتزامات التنظيمية للذكاء الاصطناعي في التوظيف والموارد البشرية باختلاف الولاية القضائية وتتغير مع الوقت؛ تحقق من المتطلبات الحالية مع محامٍ قبل النشر.',
         ],
@@ -2401,7 +2401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       commercialPlatforms: {
         id: 'commercial-platforms',
-        title: 'مقارنة منصات الموارد البشرية الرائدة بالذكاء الاصطناعي',
+        title: 'مقارنة منصات الموارد البشرية الشائعة بالذكاء الاصطناعي',
         content:
           '**هذه منصات حقيقية ونشطة حاليًا بميزات ذكاء اصطناعي موثقة علنًا — لا يمثل أي من الأوصاف أدناه نتيجة اختبار من PromptQuorum، ولا ينبغي قراءة أي منها كتصديق على حالة تدقيق التحيز أو الامتثال لأي مزود.** تحقق من نطاق الميزات الحالي ووثائق التدقيق مباشرة مع كل مزود قبل الشراء.',
         items: [
@@ -2435,7 +2435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'regulatory-risk',
         title: 'المخاطر التنظيمية: قانون الذكاء الاصطناعي الأوروبي وقوانين تدقيق التحيز',
         content:
-          '**الذكاء الاصطناعي المستخدم في قرارات التوظيف والموارد البشرية فئة خاضعة للتنظيم، لا شراء برمجيات عادي — وينطبق هذا بالتساوي على كل منصة ونهج في هذا الدليل، تجاريًا كان أو مستضافًا ذاتيًا.** بموجب قانون الذكاء الاصطناعي الأوروبي (اللائحة (EU) 2024/1689)، تُصنَّف أنظمة الذكاء الاصطناعي المستخدمة في التوظيف وفرز المرشحين وتقييم أداء العاملين على أنها عالية المخاطر في الملحق الثالث، مما يستتبع التزامات إدارة المخاطر والرقابة البشرية والتوثيق التقني. وبشكل منفصل، يشترط قانون نيويورك المحلي رقم 144 على أصحاب العمل الذين يستخدمون "أداة قرار توظيف آلية" للمساعدة الجوهرية في قرار توظيف داخل مدينة نيويورك أن يطلبوا تدقيق تحيز مستقلًا، وأن ينشروا ملخص النتائج، وأن يُشعروا المرشحين — وقد استحدثت أو أقرت عدة ولايات ومدن أمريكية أخرى متطلبات مماثلة. وفي منطقة الخليج، تدفع اعتبارات سيادة البيانات وقوانين حماية البيانات الإقليمية، مثل نظام حماية البيانات الشخصية السعودي وقانون حماية البيانات الإماراتي، نحو الاهتمام المتزايد بحلول الذكاء الاصطناعي المحلية أو ذات السيادة.',
+          '**الذكاء الاصطناعي المستخدم في قرارات التوظيف والموارد البشرية فئة خاضعة للتنظيم، لا شراء برمجيات عادي — وينطبق هذا بالتساوي على كل منصة ونهج في هذا الدليل، تجاريًا كان أو مستضافًا ذاتيًا.** بموجب قانون الذكاء الاصطناعي الأوروبي (اللائحة (EU) 2024/1689)، تُصنَّف أنظمة الذكاء الاصطناعي المستخدمة في التوظيف وفرز المرشحين وتقييم أداء العاملين على أنها عالية المخاطر في الملحق الثالث، مما يستتبع التزامات إدارة المخاطر والرقابة البشرية والتوثيق التقني. وبشكل منفصل، يشترط قانون نيويورك المحلي رقم 144 على أصحاب العمل الذين يستخدمون "أداة قرار توظيف آلية" للمساعدة الجوهرية في قرار توظيف داخل مدينة نيويورك أن يطلبوا تدقيق تحيز مستقلًا، وأن ينشروا ملخص النتائج، وأن يُشعروا المرشحين — وقد استحدثت أو أقرت عدة ولايات ومدن أمريكية أخرى متطلبات مماثلة. وفي منطقة الخليج، قد تنطبق أنظمة حماية البيانات الشخصية في كل دولة (مثل نظام حماية البيانات الشخصية في السعودية وقانون حماية البيانات الشخصية في الإمارات) على بيانات المرشحين والموظفين؛ لا يغطي هذا المقال تفاصيلها، فتحقق من المتطلبات الحالية من المصادر الرسمية ومع مستشار قانوني محلي.',
         items: [
           '**هذا ليس استشارة قانونية.** تعتمد القواعد المعمول بها على الولاية القضائية وسير العمل المحدد ومدى ثقل مخرجات الذكاء الاصطناعي في القرار النهائي — وتختلف الالتزامات باختلاف القانون وتتغير مع الوقت.',
           'إعلان أحد المزودين أن منتجه يتضمن "اختبارات تحيز" أو "ميزات إنصاف" لا يعني أن نشرك المحدد يستوفي متطلب تدقيق قانوني محدد لولاية قضائية معينة — تحقق من وثائق التدقيق الحالية والانطباق القانوني مباشرة مع محامٍ والمزود، لا من مواد تسويقية.',
@@ -2477,7 +2477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost-comparison',
         title: 'التكلفة: اشتراك SaaS مقابل البنية التحتية المستضافة ذاتيًا',
         content:
-          '**تفرض المنصات الرائدة رسومًا لكل موظف أو مقعد، عادةً عبر عرض سعر مخصص للمؤسسات؛ وتستبدل البنية التحتية المستضافة ذاتيًا هذا الاشتراك القابل للتنبؤ بحوسبة مدفوعة حسب الاستخدام إضافة إلى وقت الهندسة.** لا يوجد خيار أرخص دائمًا — تعتمد الإجابة على نطاق النشر وقدرة الهندسة الداخلية ومدى أهمية إبقاء بيانات المرشحين والموظفين بعيدًا عن بنية تحتية تابعة لجهة خارجية بالنسبة لمؤسستك.',
+          '**تفرض المنصات الشائعة رسومًا لكل موظف أو مقعد، عادةً عبر عرض سعر مخصص للمؤسسات؛ وتستبدل البنية التحتية المستضافة ذاتيًا هذا الاشتراك القابل للتنبؤ بحوسبة مدفوعة حسب الاستخدام إضافة إلى وقت الهندسة.** لا يوجد خيار أرخص دائمًا — تعتمد الإجابة على نطاق النشر وقدرة الهندسة الداخلية ومدى أهمية إبقاء بيانات المرشحين والموظفين بعيدًا عن بنية تحتية تابعة لجهة خارجية بالنسبة لمؤسستك.',
         columns: ['المعيار', 'المنصة الرائدة', 'الحزمة المستضافة ذاتيًا'],
         rows: [
           { 'المعيار': 'نموذج التسعير', 'المنصة الرائدة': 'لكل موظف/مقعد، عرض سعر مخصص للمؤسسات', 'الحزمة المستضافة ذاتيًا': 'حوسبة مدفوعة حسب الاستخدام + وقت هندسة' },
@@ -2491,7 +2491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'decision-guide',
         title: 'أي نهج يناسب فريقك؟',
         content:
-          '**تُشغّل معظم المؤسسات المسارين معًا، لا تختار أحدهما حصريًا — المنصات الرائدة للجدولة وسير عمل نظام تتبع المتقدمين الواسع، والاستضافة الذاتية للبيانات الأكثر حساسية.** استخدم الملفات التالية على مستوى سير العمل، لا على مستوى الشركة.',
+          '**تُشغّل معظم المؤسسات المسارين معًا، لا تختار أحدهما حصريًا — المنصات الشائعة للجدولة وسير عمل نظام تتبع المتقدمين الواسع، والاستضافة الذاتية للبيانات الأكثر حساسية.** استخدم الملفات التالية على مستوى سير العمل، لا على مستوى الشركة.',
         items: [
           '**فريق موارد بشرية صغير بلا دعم هندسي مخصص:** استخدم منصة رائدة لسير العمل بأكمله — لا يستحق عبء إعداد الاستضافة الذاتية وصيانتها هذا الحجم.',
           '**مؤسسة لديها فريق هندسة تعلم آلي/منصات داخلي وتدقيق امتثال صارم على بيانات المرشحين:** استضف ذاتيًا فرز السير الذاتية وتحليل المشاعر تحديدًا؛ وأبقِ جدولة المقابلات على منصة رائدة حيث تكون حساسية البيانات أقل.',
@@ -2534,7 +2534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'هل فرز السير الذاتية بمساعدة الذكاء الاصطناعي قانوني؟', a: 'يمكن أن يكون كذلك، لكنه منظَّم لا غير مقيد. بموجب قانون الذكاء الاصطناعي الأوروبي، يُصنَّف الذكاء الاصطناعي المستخدم لفرز المرشحين على أنه عالي المخاطر في الملحق الثالث، مع التزامات إدارة المخاطر والرقابة البشرية. في الولايات المتحدة، تشترط ولايات قضائية مثل مدينة نيويورك تدقيق تحيز مستقل وإشعار المرشحين لأدوات قرار التوظيف الآلية. هذا ليس استشارة قانونية — تحقق من المتطلبات الحالية لولايتك القضائية وسير عملك المحدد مع محامي عمل قبل نشر أي أداة فرز، تجارية كانت أو مستضافة ذاتيًا.' },
-          { q: 'ما هي منصات الموارد البشرية الرائدة بالذكاء الاصطناعي المستخدمة فعليًا وبشكل نشط اليوم؟', a: 'Workday (توظيف/نظام تتبع متقدمين بمطابقة مهارات بمساعدة الذكاء الاصطناعي)، وHireVue (تقييم مقابلات منظمة بمساعدة الذكاء الاصطناعي)، وParadox (ذكاء اصطناعي تحاوري لجدولة المقابلات، يحمل اسم Olivia)، وLattice وFive15 (مساعدة صياغة تقييمات بمعونة الذكاء الاصطناعي)، وCulture Amp (تحليل ذكاء اصطناعي لنصوص استطلاعات الموظفين)، وTextio (تحليل لغوي بالذكاء الاصطناعي لإعلانات الوظائف والتقييمات)، وEightfold AI (مطابقة مواهب مدعومة بالذكاء الاصطناعي) — جميعها منتجات حقيقية ونشطة حاليًا بميزات ذكاء اصطناعي موثقة علنًا. تحقق من نطاق الميزات الحالي مباشرة مع كل مزود، لأن قدرات المنتج تتغير.' },
+          { q: 'ما هي منصات الموارد البشرية الشائعة بالذكاء الاصطناعي المستخدمة فعليًا وبشكل نشط اليوم؟', a: 'Workday (توظيف/نظام تتبع متقدمين بمطابقة مهارات بمساعدة الذكاء الاصطناعي)، وHireVue (تقييم مقابلات منظمة بمساعدة الذكاء الاصطناعي)، وParadox (ذكاء اصطناعي تحاوري لجدولة المقابلات، يحمل اسم Olivia)، وLattice و15Five (مساعدة صياغة تقييمات بمعونة الذكاء الاصطناعي)، وCulture Amp (تحليل ذكاء اصطناعي لنصوص استطلاعات الموظفين)، وTextio (تحليل لغوي بالذكاء الاصطناعي لإعلانات الوظائف والتقييمات)، وEightfold AI (مطابقة مواهب مدعومة بالذكاء الاصطناعي) — جميعها منتجات حقيقية ونشطة حاليًا بميزات ذكاء اصطناعي موثقة علنًا. تحقق من نطاق الميزات الحالي مباشرة مع كل مزود، لأن قدرات المنتج تتغير.' },
           { q: 'هل يمكن لنموذج لغوي محلي مستضاف ذاتيًا أن يحل محل نظام تتبع متقدمين مثل Workday؟', a: 'لا — لا يُقدَّم هذا الدليل الاستضافة الذاتية كبديل كامل لنظام تتبع المتقدمين. إنه بديل موجَّه لسير العمل المحدد حيث يهم أكثر إبقاء البيانات بعيدة عن بنية تحتية تابعة لجهة خارجية: استخراج حقول السيرة الذاتية وتقييمها، وتحليل المشاعر، ومساعدة صياغة التقييمات. تُشغّل معظم المؤسسات المسارين معًا بدلاً من استبدال أحدهما بالآخر.' },
           { q: 'هل تستضافة سير عمل ذكاء اصطناعي للموارد البشرية ذاتيًا يستوفي تلقائيًا اللائحة العامة لحماية البيانات أو قانون الذكاء الاصطناعي الأوروبي؟', a: 'لا. تزيل الاستضافة الذاتية جهة معالجة بيانات تابعة لجهة خارجية واحدة من خريطة تدفق البيانات، وهو أمر مهم، لكنه لا يستوفي تلقائيًا كل الالتزامات المعمول بها — تنطبق متطلبات إدارة المخاطر والرقابة البشرية والتوثيق الخاصة بقانون الذكاء الاصطناعي الأوروبي للأنظمة عالية المخاطر بغض النظر عن مكان تشغيل النموذج. راجع الدليل المخصص [نظام RAG محلي متوافق مع اللائحة العامة لحماية البيانات](/ar/power-local-llm/local-rag-for-private-business-data) لمجموعة الضوابط الكاملة، واستشر محاميًا لنشرك المحدد.' },
           { q: 'ما هو قانون نيويورك المحلي رقم 144، وهل ينطبق خارج مدينة نيويورك؟', a: 'قانون نيويورك المحلي رقم 144 قانون بلدي في مدينة نيويورك يشترط على أصحاب العمل تكليف تدقيق تحيز مستقل، ونشر ملخص للنتائج، وإشعار المرشحين قبل استخدام أداة قرار توظيف آلية للمساعدة الجوهرية في قرار توظيف داخل مدينة نيويورك. ينطبق على قرارات التوظيف المرتبطة بمدينة نيويورك؛ وقد استحدثت أو أقرت عدة ولايات ومدن أمريكية أخرى متطلبات مماثلة — هذا ليس استشارة قانونية، تحقق من الانطباق الحالي على مواقع توظيفك المحددة مع محامٍ.' },
