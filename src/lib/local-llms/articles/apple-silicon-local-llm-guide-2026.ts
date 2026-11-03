@@ -199,7 +199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'RAG Pipeline', whyItMatters: 'Embedding model + Llama 3.1 8B + ChromaDB fits entirely in 36GB M5 Pro unified memory. No GPU limitations.' },
           { title: 'Voice Assistant', whyItMatters: 'Whisper Metal + Ollama Llama + Piper TTS = 1.2s latency on M5 Pro. Quiet Mac mini suitable for an always-on setup.' },
           { title: 'Multimodal', whyItMatters: 'Whisper + LLaVA 7B vision + Llama 3.1 8B reasoning = all fit in 36GB, simultaneous processing.' },
-          { title: 'Private Writing', whyItMatters: 'Llama 3.3 70B Q5 on M5 Max 128GB = highest quality, fully offline, no API costs, zero privacy leakage. On the new Mac Studio M5 Ultra (up to 512GB), 120B+ models become possible for users who need maximum quality.' },
+          { title: 'Private Writing', whyItMatters: 'Llama 3.3 70B Q5 on M5 Max 128GB = high quality for long-form writing, runs offline once the model is downloaded, no per-token API costs, and prompts stay on the device during inference. On the new Mac Studio M5 Ultra (up to 512GB), 120B+ models become possible for users who want more headroom.' },
         ],
       },
       whichMac: {
@@ -494,7 +494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Pipeline RAG', whyItMatters: 'Modelo de embedding + Llama 3.1 8B + ChromaDB cabe completamente en los 36GB de memoria unificada del M5 Pro. Sin limitaciones de GPU.' },
           { title: 'Asistente de voz', whyItMatters: 'Whisper Metal + Ollama Llama + Piper TTS = 1,2s de latencia en M5 Pro. Mac mini silencioso, adecuado para una configuración siempre activa.' },
           { title: 'Multimodal', whyItMatters: 'Whisper + LLaVA 7B visión + Llama 3.1 8B razonamiento = todo cabe en 36GB, procesamiento simultáneo.' },
-          { title: 'Escritura privada', whyItMatters: 'Llama 3.3 70B Q5 en M5 Max 128GB = máxima calidad, completamente offline, sin costos de API, cero filtración de datos. En el nuevo Mac Studio M5 Ultra (hasta 512GB), los modelos de 120B+ son posibles para quien necesite calidad máxima.' },
+          { title: 'Escritura privada', whyItMatters: 'Llama 3.3 70B Q5 en M5 Max 128GB = alta calidad para escritura extensa, funciona sin conexión una vez descargado el modelo, sin costos de API por token y con los prompts en el dispositivo durante la inferencia. En el nuevo Mac Studio M5 Ultra (hasta 512GB), los modelos de 120B+ son posibles para quien quiera más margen.' },
         ],
       },
       whichMac: {
@@ -809,7 +809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'خط أنابيب RAG', whyItMatters: 'نموذج تضمين + Llama 3.1 8B + ChromaDB يتسع كاملًا في 36GB من الذاكرة الموحدة لـ M5 Pro. دون قيود GPU.' },
           { title: 'مساعد صوتي', whyItMatters: 'Whisper Metal + Ollama Llama + Piper TTS = زمن استجابة 1.2 ثانية على M5 Pro. Mac mini الهادئ مناسب للتهيئة دائمة التشغيل.' },
           { title: 'متعدد الوسائط', whyItMatters: 'Whisper + LLaVA 7B رؤية + Llama 3.1 8B استدلال = الكل يتسع في 36GB، معالجة متزامنة.' },
-          { title: 'كتابة خاصة', whyItMatters: 'Llama 3.3 70B Q5 على M5 Max 128GB = أقصى جودة، دون اتصال بالكامل، بلا تكاليف API، وصفر تسرّب بيانات. وعلى Mac Studio M5 Ultra الجديد (حتى 512GB)، تصبح نماذج 120B فأكثر ممكنة لمن يحتاج أقصى جودة.' },
+          { title: 'كتابة خاصة', whyItMatters: 'Llama 3.3 70B Q5 على M5 Max 128GB = جودة عالية للكتابة الطويلة، ويعمل دون اتصال بعد تنزيل النموذج، بلا تكاليف API لكل رمز، وتبقى الموجّهات على الجهاز أثناء الاستدلال. وعلى Mac Studio M5 Ultra الجديد (حتى 512GB)، تصبح نماذج 120B فأكثر ممكنة لمن يريد هامشًا أكبر.' },
         ],
       },
       whichMac: {
@@ -1125,7 +1125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Pipeline RAG', whyItMatters: 'Modelo de embedding + Llama 3.1 8B + ChromaDB cabe inteiramente nos 36 GB de memória unificada do M5 Pro. Sem limitações de GPU.' },
           { title: 'Assistente de voz', whyItMatters: 'Whisper Metal + Ollama Llama + Piper TTS = 1,2 s de latência no M5 Pro. Mac mini silencioso, adequado para uma configuração sempre ativa.' },
           { title: 'Multimodal', whyItMatters: 'Whisper + LLaVA 7B visão + Llama 3.1 8B raciocínio = tudo cabe em 36 GB, processamento simultâneo.' },
-          { title: 'Escrita privada', whyItMatters: 'Llama 3.3 70B Q5 no M5 Max 128 GB = maior qualidade, totalmente offline, sem custos de API, zero vazamento de privacidade. No novo Mac Studio M5 Ultra (até 512 GB), modelos de 120B+ se tornam possíveis para quem precisa de qualidade máxima.' },
+          { title: 'Escrita privada', whyItMatters: 'Llama 3.3 70B Q5 no M5 Max 128 GB = alta qualidade para textos longos, funciona offline depois que o modelo é baixado, sem custos de API por token e com os prompts permanecendo no dispositivo durante a inferência. No novo Mac Studio M5 Ultra (até 512 GB), modelos de 120B+ se tornam possíveis para quem quer mais margem.' },
         ],
       },
       whichMac: {
@@ -1439,7 +1439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'RAG-Pipeline', whyItMatters: 'Embedding-Modell + Llama 3.1 8B + ChromaDB passt vollständig in 36GB M5-Pro-Speicher. Keine GPU-Grenzen.' },
           { title: 'Sprachassistent', whyItMatters: 'Whisper Metal + Ollama Llama + Piper TTS = 1,2s Latenz auf M5 Pro. Leises Mac mini für ein Always-On-Setup geeignet.' },
           { title: 'Multimodal', whyItMatters: 'Whisper + LLaVA 7B Vision + Llama 3.1 8B Reasoning = alle passen in 36GB, gleichzeitige Verarbeitung.' },
-          { title: 'Private Schrift', whyItMatters: 'Llama 3.3 70B Q5 auf M5 Max 128GB = höchste Qualität, vollständig offline, keine API-Kosten, null Datenlecks. Auf dem neuen Mac Studio M5 Ultra (bis 512GB) werden 120B+-Modelle möglich für maximale Qualitätsansprüche.' },
+          { title: 'Private Schrift', whyItMatters: 'Llama 3.3 70B Q5 auf M5 Max 128GB = hohe Qualität für längere Texte, läuft nach dem Modell-Download offline, keine API-Kosten pro Token, und Ihre Prompts bleiben bei der Inferenz auf dem Gerät. Auf dem neuen Mac Studio M5 Ultra (bis 512GB) werden 120B+-Modelle möglich, wenn Sie mehr Spielraum brauchen.' },
         ],
       },
       whichMac: {
@@ -1690,7 +1690,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Pipeline RAG', whyItMatters: 'Modèle embedding + Llama 3.1 8B + ChromaDB rentre entièrement mémoire unifiée 36GB M5 Pro. Aucune limite GPU.' },
           { title: 'Assistant vocal', whyItMatters: 'Whisper Metal + Ollama Llama + Piper TTS = latence 1,2s sur M5 Pro. Mac mini silencieux, adapté à un setup always-on.' },
           { title: 'Multimodal', whyItMatters: 'Whisper + LLaVA 7B vision + Llama 3.1 8B reasoning = tout rentre 36GB, traitement simultané.' },
-          { title: 'Écriture privée', whyItMatters: 'Llama 3.3 70B Q5 sur M5 Max 128GB = qualité maximale, entièrement hors ligne, aucun coût API, zéro fuite données. Sur le nouveau Mac Studio M5 Ultra (jusqu\'à 512GB), les modèles 120B+ deviennent possibles pour les besoins de qualité maximale.' },
+          { title: 'Écriture privée', whyItMatters: 'Llama 3.3 70B Q5 sur M5 Max 128GB = haute qualité pour la rédaction longue, fonctionne hors ligne une fois le modèle téléchargé, aucun coût d\'API par token, et vos prompts restent sur l\'appareil pendant l\'inférence. Sur le nouveau Mac Studio M5 Ultra (jusqu\'à 512GB), les modèles 120B+ deviennent possibles si vous voulez plus de marge.' },
         ],
       },
       whichMac: {
@@ -1915,7 +1915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'RAG パイプライン', whyItMatters: 'Embedding model + Llama 3.1 8B + ChromaDB完全36GB M5 Pro統一メモリ適合。GPU制限なし。' },
           { title: 'ボイス アシスタント', whyItMatters: 'Whisper Metal + Ollama Llama + Piper TTS = M5 Proで1.2秒遅延。静かなMac miniがalways-on運用に向いています。' },
           { title: 'マルチモーダル', whyItMatters: 'Whisper + LLaVA 7B vision + Llama 3.1 8B reasoning = 36GB全対応、同時処理。' },
-          { title: 'プライベート ライティング', whyItMatters: 'Llama 3.3 70B Q5 on M5 Max 128GB = 最高品質、完全オフライン、APIコスト無し、ゼロデータ漏出。新しいMac Studio M5 Ultra（最大512GB）では、最高品質を求めるユーザー向けに120B+モデルも可能になります。' },
+          { title: 'プライベート ライティング', whyItMatters: 'Llama 3.3 70B Q5 on M5 Max 128GB = 長文執筆に十分な高品質、モデルのダウンロード後はオフラインで動作、トークン従量のAPIコストなし、推論中のプロンプトは端末内に留まります。新しいMac Studio M5 Ultra（最大512GB）では、より余裕を求めるユーザー向けに120B+モデルも可能になります。' },
         ],
       },
       whichMac: {
@@ -2131,7 +2131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mac mini M6（最高170 GB/s）→ 与M5基础相近，因带宽略高而稍快。Apple仅公布相对宣称（较M4 Mac mini AI性能最高提升4倍），M6的独立tok/s数据我们尚未核实。',
           'M5 Pro（307 GB/s）→ Llama 3.1 8B Q4时~50-60 tok/s（估算）（由于带宽翻倍为M5基础的2倍）',
           'M5 Max（614 GB/s）→ Llama 3.1 8B Q4时~100-120 tok/s（估算）',
-          'M5 Ultra（1.2 TB/s，Apple规格）→ BGR用4位Qwen 3.8 27B实测约55 tok/s，M3 Ultra（约819 GB/s）约40 tok/s。带宽约高1.5倍，生成速度约高1.4倍，与受带宽限制的推理相符。',
+          'M5 Ultra（1.2 TB/s，Apple规格）→ BGR报告称，用4位Qwen 3.8 27B测得约55 tok/s，M3 Ultra（约819 GB/s）约40 tok/s。带宽约高1.5倍，生成速度约高1.4倍，与受带宽限制的推理相符。',
           '经验教训：购买时优先考虑带宽而非GPU核心。',
         ],
       
@@ -2151,7 +2151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**64GB** — 34B 级别模型，约 40-50 tok/s（估算）。M5 Pro（307 GB/s）是这一档的主力选择。',
           '**128GB** — 70B 模型，约 15-20 tok/s（估算）。需要 M5 Max（614 GB/s）。',
           '**带宽决定速度：** M5 基础 150 GB/s、M6 170 GB/s、M5 Pro 307 GB/s、M5 Max 614 GB/s。同一个模型，带宽大致翻倍，token/s 也大致翻倍。',
-          '**M5 Ultra 的内存带宽为 1.2 TB/s（Apple 规格）**，BGR 在 256GB 机型上实测 4 位 Qwen 3.8 27B 约 55 tok/s，M3 Ultra 约 40 tok/s。',
+          '**M5 Ultra 的内存带宽为 1.2 TB/s（Apple 规格）**，BGR 报告称，在 256GB 机型上用 4 位 Qwen 3.8 27B 测得约 55 tok/s，M3 Ultra 约 40 tok/s。',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: '本地大模型选 Mac 时，32GB 对应 13B 级模型、64GB 对应 34B、128GB 对应 70B，而生成速度由内存带宽决定。' },
@@ -2186,7 +2186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'RAG管道', whyItMatters: '嵌入模型 + Llama 3.1 8B + ChromaDB完全适合36GB M5 Pro统一内存。无GPU限制。' },
           { title: '语音助手', whyItMatters: 'Whisper Metal + Ollama Llama + Piper TTS = M5 Pro上1.2秒延迟。安静的Mac mini适合常开设置。' },
           { title: '多模态', whyItMatters: 'Whisper + LLaVA 7B视觉 + Llama 3.1 8B推理 = 全部适合36GB，同时处理。' },
-          { title: '私密写作', whyItMatters: 'M5 Max 128GB上的Llama 3.3 70B Q5 = 最高质量，完全离线，无API成本，零数据泄露。在全新Mac Studio M5 Ultra（最高512GB）上，追求最高质量的用户还可运行120B+模型。' },
+          { title: '私密写作', whyItMatters: 'M5 Max 128GB上的Llama 3.3 70B Q5 = 适合长文写作的高质量，模型下载后可离线运行，无按token计费的API成本，推理时提示词保留在本机。在全新Mac Studio M5 Ultra（最高512GB）上，需要更多余量的用户还可运行120B+模型。' },
         ],
       },
       whichMac: {
@@ -2236,7 +2236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '个人做视频剪辑、三维和本地大模型，M5、M5 Pro、M5 Max 该怎么选？', a: '按最吃资源的那一项定档。只做日常问答和写作，M5 基础版加 32GB 就够。要跑 34B 级模型或做较重的剪辑，选 M5 Pro 加 64GB——它的 307 GB/s 带宽是基础版的两倍。要跑 70B 模型或做三维渲染，才需要 M5 Max 加 128GB（614 GB/s）。注意三种用途的瓶颈不同：剪辑看媒体引擎和 GPU 核心，三维看 GPU 与容量，大模型几乎只看内存带宽和容量。' },
           { q: '32GB 还是 64GB 更合适？', a: '看你要跑多大的模型。32GB 能稳妥地跑 13B 以内，适合日常问答、写作和代码补全；64GB 才能跑到 34B 级别，是想认真用本地大模型的实际起点。Mac 的内存无法在购买后升级，因此如果预算允许且打算长期使用，64GB 比 32GB 更保险。如果只把本地模型当辅助工具，32GB 完全够用，把预算留给存储更划算。' },
           { q: 'Mac mini M5 Pro 64GB 能跑什么模型？', a: '可以跑到 34B 级别的模型，速度约 40-50 tok/s（估算）。它的内存带宽为 307 GB/s，是 M5 基础版 150 GB/s 的两倍，在 Llama 3.1 8B Q4 上约 50-60 tok/s（估算）。64GB 统一内存全部可供模型使用，没有独立显卡那样的显存上限，所以能装下 24GB 显存的 NVIDIA 显卡装不下的模型。' },
-          { q: 'M5 Ultra 的内存带宽是多少？', a: 'Apple 在 Mac Studio 规格页公布的 M5 Ultra 内存带宽为 1.2 TB/s；作为参考，M5 Max 为 460-614 GB/s（视配置而定）。BGR 在 256GB 机型上用 4 位 Qwen 3.8 27B 实测约 55 tok/s，同一测试中 M3 Ultra（带宽约 819 GB/s）约 40 tok/s——带宽约高 1.5 倍，生成速度约高 1.4 倍。PromptQuorum 未自行测试 M5 Ultra。512GB 配置决定它能装下多大的模型，但装得下不等于跑得快。' },
+          { q: 'M5 Ultra 的内存带宽是多少？', a: 'Apple 在 Mac Studio 规格页公布的 M5 Ultra 内存带宽为 1.2 TB/s；作为参考，M5 Max 为 460-614 GB/s（视配置而定）。BGR 报告称，在 256GB 机型上用 4 位 Qwen 3.8 27B 测得约 55 tok/s，同一测试中 M3 Ultra（带宽约 819 GB/s）约 40 tok/s——带宽约高 1.5 倍，生成速度约高 1.4 倍。PromptQuorum 未自行测试 M5 Ultra。512GB 配置决定它能装下多大的模型，但装得下不等于跑得快。' },
           { q: 'Apple于2026年8月25日为Mac mini和Mac Studio发布了什么？', a: 'Apple以全新M6芯片（899美元，16GB，可选配至32GB）和M5 Pro（1,699美元，最高64GB）更新了Mac mini，并以M5 Max（2,499美元，最高128GB）和M5 Ultra（5,499美元，96GB起，最高512GB）更新了Mac Studio。全部自2026年9月22日起发售；M5 Ultra的512GB配置自2026年10月28日起可订购，起价22,299美元。' },
           { q: 'M5 Pro或M5 Max哪个更适合本地LLM？', a: 'M5 Pro（64GB）提供最佳价值——运行34B模型良好且起价1,699美元。M5 Max（起价2,499美元）仅在定期需要70B模型时才值得。大多数用户对M5 Pro满意。' },
           { q: '购买Mac后可升级内存吗？', a: '不可以。Apple Silicon内存焊接，无法升级。购买时在预算范围内选择最大内存。' },
@@ -2470,7 +2470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'RAG 파이프라인', whyItMatters: '임베딩 모델 + Llama 3.1 8B + ChromaDB가 M5 Pro의 36GB 통합 메모리에 완전히 맞습니다. GPU 한계가 없습니다.' },
           { title: '음성 비서', whyItMatters: 'Whisper Metal + Ollama Llama + Piper TTS = M5 Pro에서 1.2초 지연. 조용한 Mac mini가 상시 가동 설정에 적합합니다.' },
           { title: '멀티모달', whyItMatters: 'Whisper + LLaVA 7B 비전 + Llama 3.1 8B 추론 = 모두 36GB에 맞으며 동시 처리가 가능합니다.' },
-          { title: '개인 문서 작성', whyItMatters: 'M5 Max 128GB의 Llama 3.3 70B Q5 = 최고 품질, 완전 오프라인, API 비용 없음, 데이터 유출 제로. 새로운 Mac Studio M5 Ultra(최대 512GB)에서는 최고 품질이 필요한 사용자를 위해 120B 이상의 모델도 가능해집니다.' },
+          { title: '개인 문서 작성', whyItMatters: 'M5 Max 128GB의 Llama 3.3 70B Q5 = 장문 작성에 충분한 고품질, 모델 다운로드 후 오프라인 실행 가능, 토큰당 API 비용 없음, 추론 중 프롬프트는 기기에 머뭅니다. 새로운 Mac Studio M5 Ultra(최대 512GB)에서는 더 여유가 필요한 사용자를 위해 120B 이상의 모델도 가능해집니다.' },
         ],
       },
       whichMac: {
