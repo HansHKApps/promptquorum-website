@@ -11,17 +11,17 @@
       },
       {
         "cluster": "local-llms",
-        "slug": "apple-silicon-local-llm-guide-2026",
-        "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
-        "url": "/local-llms/apple-silicon-local-llm-guide-2026",
-        "dateModified": "2026-11-02",
+        "slug": "apple-silicon-m5-local-llm",
+        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
+        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
         "cluster": "local-llms",
-        "slug": "apple-silicon-m5-local-llm",
-        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
-        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "slug": "apple-silicon-local-llm-guide-2026",
+        "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
+        "url": "/local-llms/apple-silicon-local-llm-guide-2026",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -97,17 +97,17 @@
       },
       {
         "cluster": "local-llms",
-        "slug": "apple-silicon-local-llm-guide-2026",
-        "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
-        "url": "/local-llms/apple-silicon-local-llm-guide-2026",
-        "dateModified": "2026-11-02",
+        "slug": "apple-silicon-m5-local-llm",
+        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
+        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
         "cluster": "local-llms",
-        "slug": "apple-silicon-m5-local-llm",
-        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
-        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "slug": "apple-silicon-local-llm-guide-2026",
+        "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
+        "url": "/local-llms/apple-silicon-local-llm-guide-2026",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -551,6 +551,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "local-llm-hardware-guide",
+        "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
+        "url": "/local-llms/local-llm-hardware-guide",
+        "dateModified": "2026-11-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "70b-models-consumer-hardware",
         "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
         "url": "/local-llms/70b-models-consumer-hardware",
@@ -564,17 +572,9 @@
         "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "aiclient2api-review",
-        "title": "AIClient2API Review: One Local Proxy for Every AI Protocol",
-        "url": "/power-local-llm/aiclient2api-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "ExLlamaV2": {
@@ -6812,7 +6812,7 @@
         "slug": "apple-silicon-m5-local-llm",
         "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
         "url": "/local-llms/apple-silicon-m5-local-llm",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -11738,7 +11738,7 @@
         "slug": "apple-silicon-m5-local-llm",
         "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
         "url": "/local-llms/apple-silicon-m5-local-llm",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -11898,7 +11898,7 @@
         "slug": "apple-silicon-m5-local-llm",
         "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
         "url": "/local-llms/apple-silicon-m5-local-llm",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "mentioned"
       },
       {

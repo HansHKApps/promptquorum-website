@@ -37,14 +37,22 @@ Not pushed, merged or deployed. Entries logged with `seo:log` (all pending, no `
 - Whisper comparison: `imageAlt` on both images (9 locales); unsourced Pi 5 timings, "~200 ms", insanely-fast-whisper claim and "never leave your home network" hedged; WER sourced to the Whisper paper (tiny-medium; large-v3 values marked approximate).
 - Odysseus + open-webui-review: AGPL wording hedged, "not legal advice" added, Msty/Open WebUI/LibreChat/LobeChat lines made factual. open-webui non-EN blocks read in full (de, es by the editing agent; fr, pt, ar, ja, zh, ko by a second line-by-line review): pt lead inversion, pt/ar "OpenAI APIs" -> OpenAI-compatible, ar "semi-open-source", ko intro and "50명 이상" -> "50명 초과" fixed.
 
-### Open / not done
-- **Mac prices NOT verified.** Apple store pages returned no USD prices and no 48 GB / 128 GB Mac Studio M5 Max entries (the page showed 36 GB/512 GB and 64 GB/1 TB). Mac mini M5 Pro 64 GB/1 TB was listed without a usable price. Prices on `apple-silicon-m5-local-llm` are unchanged. The page's own summary says "Mac Studio M5 Max ($2,499, up to 128 GB) ... 70B" although $2,499 is the 36 GB base and its tables put 70B at 64 GB ($3,499) / 128 GB ($5,099); needs Hans to check Apple's store.
-- Not changed on purpose: "0.5-2 s" real-time latency bullets and the "Audio never leaves your machine" bullet in the whisper comparison (outside the listed items; still unsourced). Open WebUI table cell keeps the requested label without an OSI note.
-- Open WebUI cosmetic: `author` is `Organization` in ja/zh/ar/ko (EN/fr/pt use Person), mixed quote styles in pt/ar/zh.
-- budget-gpus: de TLDR says used RTX 3060 "170-250 $", leads say 270-300 (de/fr lead in EUR); pre-existing inconsistency not reconciled. 4070 Super ($550-700) and 4060 Ti ($420-530) are not in the hardware guide, so unchecked.
-- Above-fold (Rule 31 lead 25-50 words / bold lead) still fails on pages whose leads this run did not touch: `second-me-review`, `best-rag-tools-for-business-documents-2026`, `qwen-vs-llama-vs-mistral` (non-CJK locales mostly). Needs its own lead pass.
-- `seo:gate:changed`: remaining findings are `A5` html lang (known gap), `C1c` image alt (shared-component gap, see above), `B1` article headline vs title/h1 (44, mostly pre-existing pattern), `A4` second-me canonical (`/second-me-review` vs file slug `-2026`; pre-existing slug mapping).
-- `validate:models:strict` fails repo-wide (1457 stale-model hits outside this run's files).
+### Round 2 (2026-11-03): previously open items, now handled
+- **Mac prices:** press-verified (9to5Mac, Macworld, MacRumors, kingy.ai): Mac Studio M5 Max 36 GB $2,499 / 48 GB $3,099 / 64 GB $3,499 / 128 GB $5,099, M5 Ultra 96 GB $5,499 / 512 GB $22,299, Mac mini M5 Pro 24 GB $1,699, MacBook Pro 16" M5 Max from $3,899. Apple's own store pages show no USD prices, so there is no Apple primary-source confirmation. Mac mini M5 Pro 64 GB could not be confirmed as $2,699 and now reads "from $2,699" with a note to check Apple's store. The 70B inconsistency is fixed in 9 locales (70B needs 64 GB, $3,499).
+- **GPU prices:** RTX 3060 used $290-330, RX 6700 XT used $175-315, RTX 4060 Ti 8 GB new about $300-425 "if still in stock", RTX 4070 Super $550-700 "if still in stock" (asking-price sources: ResalePrices, BestValueGPU, GPUDojo, SellGPU; not sold-listing data, and the text says so). A2000, 2080, 3090, 4070 Ti, Mac mini $599 and AMD mini PC prices stayed unverified. All EUR/R$/JPY/CNY price cells in best-budget-gpus were USD digits relabelled and are now USD.
+- **Full risk-checker audits** (9 locales, JSON-LD) on all 12 pages, with CRITICAL and HIGH findings fixed in the same language: best-budget-gpus (GDPR/LGPD "fully compliant", R13, zh/ja unsourced policy claims), how-much-vram (de GDPR "mandatory" CRITICAL, unsourced accuracy-loss numbers, wrong NVLink/batch/MoE statements), qwen-vs-llama-vs-mistral (GDPR/METI/CAC guarantees, fabricated fr author, two wrong arXiv ids; arXiv 2310.06770, 2107.03374, 2412.15115, 2310.06825 checked against arxiv.org), best-rag (R13/R11/R5/R2/R1, fr CNIL attribution removed), hardware guide, apple guide, M5 page, whisper comparison (cost sentence off by ~10x, invented WER claim), open-webui (LobeChat licence, v0.6.6 release date May 5 2025), odysseus (Msty is not open source).
+- whisper facts re-verified with `gh api`: v1.9.4 (2026-09-11) and v1.9.5 (2026-10-06) notes, pushed_at 2026-10-30, MIT, repo move to ggml-org. Not confirmed: that ggml-org was founded by Georgi Gerganov (the page does not rely on it).
+- Rule 31 leads: second-me, best-rag, qwen (de/ja/zh had no `leadAnswerBlock`) fixed; above-fold now passes on all 12 pages in 9 locales except as listed below.
+- The seo gate's canonical check followed the original URL, not the redirect (false A4 on `-2026` file names). Fixed in `scripts/check-page-seo-gate.mjs`.
+- ko JSON-LD `url` in best-budget-gpus and qwen-vs-llama-vs-mistral pointed to the EN URL; now `/ko/...`.
+- SVGs `budget-builds-en.svg` and `budget-builds-es.svg`: $4000 -> $6,500+ (table and image now agree).
+
+### Still open
+- Amazon/Newegg `affiliateLinks` on best-budget-gpus (untagged search links, `affiliateDisclosure: true`): your decision whether to keep.
+- Unverified prices listed above; Mac prices lack Apple primary-source confirmation.
+- how-much-vram still has partly uncited generalisations in de/ja/zh; qwen page benchmark-table figures ("Qwen3 72B", "Qwen3 3B" look like phantom model names) need a model-name refresh; R5 "Best/Winner" editorial labels left as MEDIUM on several pages.
+- `validate:models:strict` fails repo-wide (1,457 stale-model hits outside this run's files): not addressed.
+- `seo:gate` leftovers: A5 html lang (known gap), C1c image alt (shared-component gap), B1 article headline vs title/h1 (pre-existing pattern), AR title length inflated by bidi marks.
 
 ### Final gates (2026-11-02)
 - Build: pass (last full build before the final text-only budget-gpus compliance edit; that edit passes esbuild and the commit-hook type-check).

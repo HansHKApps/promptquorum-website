@@ -20649,5 +20649,232 @@
     ],
     "baseline": null,
     "deployedAt": null
+  },
+  {
+    "id": "a637db2a-bc16-4a2e-9214-45af026f5875",
+    "slug": "/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-03T04:59:50.302Z",
+    "fields": [
+      {
+        "field": "prices + body",
+        "old": "RTX 3060 used $270-300; mixed EUR/R$/JPY",
+        "new": "RTX 3060 used $290-330; USD throughout, hedged"
+      }
+    ],
+    "reason": "Round 2: used prices verified from asking-price trackers (RTX 3060 $290-330, 6700 XT $175-315, 4060 Ti ~$300-425 if in stock); EUR/R$/JPY/CNY cells converted to USD; GDPR/LGPD, R13/R17 risk fixes; lead trims",
+    "queries": [
+      "best budget llm gpu",
+      "budget gpu for local llm",
+      "cheap gpu for llm"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "96c23619-00fb-4e63-8893-71b257caa008",
+    "slug": "/local-llms/how-much-vram-local-llm",
+    "date": "2026-11-03T04:59:50.411Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "MoE rows by active params; batch=32 ~32x VRAM",
+        "new": "MoE by total params; KV cache scales per request"
+      }
+    ],
+    "reason": "Round 2: de GDPR CRITICAL fixed; accuracy-loss numbers hedged; MoE rows by total params; batch-size KV-cache correction; GGUF size sources",
+    "queries": [
+      "4gb vram llm",
+      "64 gb vram"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7873a4be-d5b7-46cf-8bfc-7959f40509df",
+    "slug": "/local-llms/apple-silicon-m5-local-llm",
+    "date": "2026-11-03T04:59:50.521Z",
+    "fields": [
+      {
+        "field": "prices + body",
+        "old": "Mac Studio M5 Max $2,499 for 70B; undated comparison prices",
+        "new": "from $2,499 (70B needs 64GB, $3,499); approximate street prices labelled"
+      }
+    ],
+    "reason": "Round 2: Mac prices verified via press (M5 Max 36/48/64/128GB, mini M5 Pro), 70B config fix, risk hedges, R9 sysctl warning, dateModified 2026-11-03",
+    "queries": [
+      "m5 max memory bandwidth",
+      "m5 pro memory bandwidth"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "20e6a04f-7966-4c0e-ba9d-26b847358a8a",
+    "slug": "/local-llms/local-llm-hardware-guide",
+    "date": "2026-11-03T04:59:50.635Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "unsourced tok/s, 2x4090 build $4000",
+        "new": "caveated tok/s, build $6,500+"
+      }
+    ],
+    "reason": "Round 2: DGX Spark LMSYS source linked, speed claims attributed as community reports, build-table/30B-fit/5060 Ti variant consistency, fr accents, superlatives softened",
+    "queries": [
+      "local llm gpu requirements"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "12555451-fd6f-4301-b582-e589ed9008c8",
+    "slug": "/local-llms/apple-silicon-local-llm-guide-2026",
+    "date": "2026-11-03T04:59:50.746Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "zero privacy leakage; zh 实测",
+        "new": "prompts stay on device during inference; BGR报告称"
+      }
+    ],
+    "reason": "Round 2: R13 absolutes hedged in 9 locales; zh BGR figure attributed",
+    "queries": [
+      "m5 max local llm",
+      "m5 pro local llm"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "de6c5673-00d2-45bc-a8fe-caca297902b5",
+    "slug": "/power-local-llm/second-me-review",
+    "date": "2026-11-03T04:59:50.860Z",
+    "fields": [
+      {
+        "field": "leadAnswerBlock",
+        "old": "lead 57-72 words",
+        "new": "lead 36-47 words"
+      }
+    ],
+    "reason": "Rule 31 lead 25-50 words in 9 locales; titles lengthened",
+    "queries": [
+      "second me github",
+      "second me"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a493eec5-d143-4881-9149-03b158de02ca",
+    "slug": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+    "date": "2026-11-03T04:59:50.971Z",
+    "fields": [
+      {
+        "field": "leadAnswerBlock + body",
+        "old": "'the best RAG tool', 'no telemetry'",
+        "new": "editorial top pick, check telemetry settings"
+      }
+    ],
+    "reason": "Rule 31 leads; R13/R11/R5/R2/R1 risk fixes in 9 locales; fr CNIL attribution removed",
+    "queries": [
+      "best rag tools for business documents"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9900bf8a-0ef0-46dd-8442-3d9b116617c0",
+    "slug": "/local-llms/qwen-vs-llama-vs-mistral",
+    "date": "2026-11-03T04:59:51.085Z",
+    "fields": [
+      {
+        "field": "leadAnswerBlock + regionalContext",
+        "old": "ensuring GDPR compliance; Lyubimov, N.",
+        "new": "hedged, not legal advice; Jimenez et al."
+      }
+    ],
+    "reason": "Leads added/shortened (de/ja/zh had none); regionalContext GDPR/METI/CAC rewritten (R1 CRITICAL); fr fabricated author fixed; arXiv ids verified; speed FAQ de-fabricated",
+    "queries": [
+      "llama vs qwen",
+      "qwen vs llama",
+      "mistral vs qwen"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ed8e9014-7bb5-43dc-8e96-9ee13932ad06",
+    "slug": "/power-local-llm/local-whisper-stt-comparison",
+    "date": "2026-11-03T04:59:51.201Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "saves $120-480/month; WER within 0.1%",
+        "new": "about $12-50/month; very close, not guaranteed identical"
+      }
+    ],
+    "reason": "Round 2: cost sentence fixed (10x error), WER/accuracy claims hedged, VAD consistency, faster-whisper/CTranslate2 dates, ja duplicates removed, locale fixes",
+    "queries": [
+      "whisper.cpp vs faster-whisper",
+      "faster whisper vs whisper"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e7696483-c88a-4489-b203-2537918f3a53",
+    "slug": "/local-llms/open-webui-review",
+    "date": "2026-11-03T04:59:51.318Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "v0.6.6 April 19 2025; LobeChat Apache 2.0",
+        "new": "v0.6.6 May 5 2025; LobeHub licence"
+      }
+    ],
+    "reason": "Round 2: LobeChat licence, v0.6.6 date (May 5 2025), permission-or-Enterprise wording, pt/ar/ko locale fixes, author Person",
+    "queries": [
+      "open webui",
+      "open webui review"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "015e918b-23f5-438a-8f55-9b42c1815f3e",
+    "slug": "/power-local-llm/odysseus-review",
+    "date": "2026-11-03T04:59:51.431Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "all self-hosted open-source tools",
+        "new": "licences differ, check each"
+      }
+    ],
+    "reason": "Round 2: Msty not open-source fix (competitors intro)",
+    "queries": [
+      "odysseus ai review"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "32adde7e-51f8-4d60-856c-d3439abc01d3",
+    "slug": "/power-local-llm/whisper-cpp-review",
+    "date": "2026-11-03T04:59:51.539Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "no close free equivalent; ~4x throughput",
+        "new": "few close equivalents; up to ~4x per README"
+      }
+    ],
+    "reason": "Round 2: verdict/table hedges after risk audit; facts re-verified against GitHub",
+    "queries": [
+      "whisper.cpp",
+      "whisper cpp review"
+    ],
+    "baseline": null,
+    "deployedAt": null
   }
 ]
