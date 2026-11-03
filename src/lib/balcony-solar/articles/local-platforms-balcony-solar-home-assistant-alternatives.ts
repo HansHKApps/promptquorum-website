@@ -2332,7 +2332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '플랫폼별 분석',
         content: [
           '**각 프로필은 라이선스, 날짜가 포함된 최신 릴리스, 구체적인 태양광 예시, 적합한 사용자를 보여 줍니다.** 버전과 날짜는 각 프로젝트의 릴리스 페이지와 레지스트리에서 가져왔습니다. 결정하기 전에 각 플랫폼의 연동 목록에서 사용 중인 인버터나 배터리의 정확한 모델을 확인하세요.',
-          '**Home Assistant** — 오픈소스(Apache 2.0), 로컬 우선, Python 기반. 최신 릴리스 2026.10.4(2026년 10월 24일). Home Assistant Green, Raspberry Pi 4 또는 5, x86-64 장비, VM에서 실행됩니다. Home Assistant Yellow는 더 이상 생산되지 않습니다. SMA, Fronius 같은 기본 연동은 로컬 네트워크의 인버터를 폴링하며 Modbus, MQTT, REST도 지원합니다. 정확한 모델은 연동 목록에서 확인하세요. *예시*: Zendure SolarFlow가 로컬 API로 충전 상태와 전력 흐름을 게시하고, 커뮤니티 HACS 연동이 이를 읽어 태양광 출력이 400 W를 넘으면 자동화가 식기세척기를 시작합니다. *적합한 사용자*: 기본 선택지 — 최대 커뮤니티, 최다 연동, 능동 제어와 자동화.',
+          '**Home Assistant** — 오픈소스(Apache 2.0), 로컬 우선, Python 기반. 최신 릴리스 2026.10.4(2026년 10월 24일). Home Assistant Green, Raspberry Pi 4 또는 5, x86-64 장비, VM에서 실행됩니다. Home Assistant Yellow는 더 이상 생산되지 않습니다. SMA, Fronius 같은 기본 연동은 로컬 네트워크의 인버터를 폴링하며 Modbus, MQTT, REST도 지원합니다. 정확한 모델은 연동 목록에서 확인하세요. *예시*: Zendure SolarFlow가 로컬 API로 충전 상태와 전력 흐름을 게시하고, 커뮤니티 HACS 연동이 이를 읽어 태양광 출력이 400 W를 넘으면 자동화가 식기세척기를 시작합니다. *적합한 사용자*: 기본 선택지 — 큰 커뮤니티, 게시된 연동 1,500개 이상, 능동 제어와 자동화.',
           '**openHAB** — 오픈소스(EPL 2.0), 로컬 우선, Java 기반. 최신 안정 릴리스 5.2.3(2026년 10월 10일). 공식 Modbus 바인딩은 Modbus TCP와 시리얼(RTU)로 읽기와 쓰기를 지원하고, HTTP 바인딩은 REST 기기를 다룹니다. Things는 웹 UI나 텍스트 파일로 설정할 수 있으며, 많은 사용자가 학습 곡선이 Home Assistant나 ioBroker보다 가파르다고 느낍니다. *예시*: Fronius 인버터의 로컬 Solar API를 10초마다 폴링하고, 규칙으로 온수 버퍼 히터 일정을 정오 발전 피크로 옮깁니다. *적합한 사용자*: 엄격한 자동화 프레임워크를 원하는 고급 사용자와 통합 업체, 이미 openHAB을 쓰는 사용자.',
           '**ioBroker** — 오픈소스(MIT), 로컬 우선, Node.js 기반. js-controller 7.2.5(2026년 10월 5일). 독일어권 커뮤니티가 큽니다. 어댑터: Modbus 9.2.2(2026년 10월 23일), MQTT 9.0.2(2026년 10월 30일), SMA Energy Meter 1.4.0(2026년 9월 11일), Fronius 2.2.0(2026년 3월 7일), OpenDTU 3.1.0(2024년 12월 2일, [OpenDTU](https://github.com/tbnobody/OpenDTU) 장치를 통해 Hoymiles 인버터를 읽음, OpenDTU 자체는 v26.9.28, 2026년 9월 28일). **Fronius와 OpenDTU 어댑터는 3개월 넘게 릴리스가 없습니다. 의존하기 전에 저장소를 확인하세요.** VIS 대시보드는 별도 도구가 필요 없습니다. *예시*: Modbus 어댑터로 Sungrow 인버터를 읽고 VIS에서 일일 배터리 충전 상태를 막대 차트로 표시합니다. *적합한 사용자*: 이미 ioBroker를 쓰는 DACH 사용자, 독일어 문서와 포럼을 선호하는 사용자.',
           '**Node-RED** — 오픈소스(Apache 2.0), 로컬 우선, Node.js 기반 시각적 플로우 편집기. 최신 릴리스 5.0.9(2026년 10월 21일). MQTT와 HTTP 노드는 내장되어 있고, Modbus TCP/RTU는 커뮤니티 패키지 node-red-contrib-modbus(5.62.1, 2026년 10월 25일)로 제공됩니다. 독립 플랫폼이라기보다 Home Assistant나 ioBroker의 데이터 변환·자동화 보조 도구로 쓰는 경우가 많습니다. *예시*: Hoymiles 마이크로 인버터 데이터를 MQTT로 가져와 15분 평균을 계산하고 Grafana용 InfluxDB에 기록합니다. *적합한 사용자*: 시각적 플로우 프로그래밍을 선호하거나 두 시스템 사이에 맞춤 데이터 변환이 필요한 사용자.',
@@ -2536,7 +2536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ioBroker의 대안에는 무엇이 있나요?',
-            a: '주요 범용 대안은 Home Assistant(최대 커뮤니티와 연동 생태계)와 openHAB(엄격한 규칙 기반 프레임워크)이며, Node-RED는 보조 도구로 쓰입니다. 모두 Modbus와 MQTT를 사용하므로 바꿔도 연결할 수 있는 기기는 달라지지 않지만, 어댑터, 스크립트, 대시보드를 다시 만들어야 합니다. ioBroker가 이미 시스템을 운영 중이라면 태양광만을 이유로 옮길 이유는 거의 없습니다.',
+            a: '주요 범용 대안은 Home Assistant(큰 커뮤니티와 풍부한 연동 생태계)와 openHAB(엄격한 규칙 기반 프레임워크)이며, Node-RED는 보조 도구로 쓰입니다. 모두 Modbus와 MQTT를 사용하므로 바꿔도 연결할 수 있는 기기는 달라지지 않지만, 어댑터, 스크립트, 대시보드를 다시 만들어야 합니다. ioBroker가 이미 시스템을 운영 중이라면 태양광만을 이유로 옮길 이유는 거의 없습니다.',
           },
           {
             q: 'Home Assistant, ioBroker, openHAB은 어떻게 다른가요?',
