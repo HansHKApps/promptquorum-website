@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/kleines-kraftwerk-balcony-solar-timeline-en.svg',
         imageCaption: 'Founding year per ADAC (2026); first-year sales per Weser-Kurier (2023); headcount per ADAC (2026).',
         imageAlt: 'Timeline of Kleines Kraftwerk, a balcony solar retailer: founded in Achim in 2022, more than 25,000 units sold in the first year, more than 100 employees in 2026.',
-        content: 'The company was founded in 2022 by Markus Struck and Sebastian Hirt (ADAC press release, 9 September 2026). Weser-Kurier reported on 25 August 2023 that Struck had started selling from his garage via eBay Kleinanzeigen, that more than 25,000 units were sold within a year, and that the company had ten employees. Since 2024 it has cooperated strategically with Anker SOLIX. In September 2026 ADAC reported more than 100 employees across Achim, Berlin and the Elsdorf logistics centre, plus a new cooperation with ADAC SE for balcony power plants.',
+        content: 'The company was founded in 2022 by Markus Struck and Sebastian Hirt ([ADAC press release](https://presse.adac.de/meldungen/adac-se/das-unternehmen/adac-se-und-kleines-kraftwerk-starten-kooperation-fuer-balkonkraftwerke.html), 9 September 2026). [Weser-Kurier](https://www.weser-kurier.de/landkreis-verden/stadt-achim/achimer-unternehmen-verkauft-25-000-balkonkraftwerke-in-einem-jahr-doc7ro28rco4zl1kkv9c7ds) reported on 25 August 2023 that Struck had started selling from his garage via eBay Kleinanzeigen, that more than 25,000 units were sold within a year, and that the company had ten employees. Since 2024 it has cooperated strategically with Anker SOLIX. In September 2026 ADAC reported more than 100 employees across Achim, Berlin and the Elsdorf logistics centre, plus a new cooperation with ADAC SE for balcony power plants.',
       },
       lineup: {
         title: 'Kit Lineup and Prices',
@@ -68,7 +68,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Kit': 'Quattro XL', 'Modules': '4 × TopCon, 2000 Wp', 'Inverter / storage': 'Solarbank 4 Pro, 5.0 kWh', 'Price (EUR)': '€1,899' },
           { 'Kit': 'Okta XL', 'Modules': '8 × TopCon, 4000 Wp', 'Inverter / storage': 'Solarbank 4 Pro, 5.0 kWh', 'Price (EUR)': '€2,269' },
         ],
-        note: 'The 800 W inverter kits are the plain plug-in option. The Okta XL (4000 Wp, 8 modules) exceeds the 2 kW module limit for the simplified plug-in rule described below, so check with your grid operator or an electrician before treating it as a plug-in device.',
+        note: 'The 800 W inverter kits are the plain plug-in option. The Okta XL (4000 Wp, 8 modules) exceeds the 2 kW module limit for the simplified plug-in rule described below, so check with your grid operator or an electrician before treating it as a plug-in device. Install plug-in kits according to the manufacturer\'s instructions and leave mains-side work to a qualified electrician where required.',
       },
       markets: {
         title: 'Confirmed Market',
@@ -82,7 +82,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/kleines-kraftwerk-balcony-solar-position-en.svg',
         imageCaption: 'Retailer layer: storage from Anker SOLIX, own mounting systems, assembly into kits.',
         imageAlt: 'Diagram placing Kleines Kraftwerk in the balcony solar supply chain: battery and inverter makers such as Anker SOLIX (storage) on one level, and the kit reseller with its own mounting systems on the next.',
-        content: 'Kleines Kraftwerk sits in the retailer layer of the balcony solar chain. Anker SOLIX supplies the Solarbank storage, the inverter is sold under the model name HMS-800-2WB (the shop page does not name its maker), and the company develops and produces its own stainless-steel mounting systems in Germany (StartupMag, 24 April 2024). It does not build solar modules or batteries itself.',
+        content: 'Kleines Kraftwerk sits in the retailer layer of the balcony solar chain. Anker SOLIX supplies the Solarbank storage, the inverter is sold under the model name HMS-800-2WB (the shop page does not name its maker), and the company develops and produces its own stainless-steel mounting systems in Germany ([StartupMag](https://www.startupmag.de/kleines-kraftwerk-solarpanels-ueberall-anbringen/), 24 April 2024). It does not build solar modules or batteries itself.',
       },
       partners: {
         title: 'Confirmed Component Suppliers',
@@ -158,7 +158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/kleines-kraftwerk-balcony-solar-timeline-en.svg',
         imageCaption: 'Gründungsjahr laut ADAC (2026); Absatz im ersten Jahr laut Weser-Kurier (2023); Mitarbeiterzahl laut ADAC (2026).',
         imageAlt: 'Zeitstrahl des Balkonkraftwerk-Händlers Kleines Kraftwerk: 2022 in Achim gegründet, im ersten Jahr über 25.000 verkaufte Einheiten, 2026 über 100 Mitarbeitende.',
-        content: 'Das Unternehmen wurde 2022 von Markus Struck und Sebastian Hirt gegründet (Pressemitteilung des ADAC vom 9. September 2026). Der Weser-Kurier berichtete am 25. August 2023, Struck habe den Verkauf aus seiner Garage über eBay Kleinanzeigen begonnen, innerhalb eines Jahres seien mehr als 25.000 Stück verkauft worden und das Unternehmen habe zehn Mitarbeiter. Seit 2024 kooperiert es strategisch mit Anker SOLIX. Im September 2026 nannte der ADAC mehr als 100 Mitarbeitende an den Standorten Achim, Berlin und im Logistikzentrum Elsdorf sowie eine neue Kooperation mit der ADAC SE für Balkonkraftwerke.',
+        content: 'Das Unternehmen wurde 2022 von Markus Struck und Sebastian Hirt gegründet ([Pressemitteilung des ADAC](https://presse.adac.de/meldungen/adac-se/das-unternehmen/adac-se-und-kleines-kraftwerk-starten-kooperation-fuer-balkonkraftwerke.html) vom 9. September 2026). Der [Weser-Kurier](https://www.weser-kurier.de/landkreis-verden/stadt-achim/achimer-unternehmen-verkauft-25-000-balkonkraftwerke-in-einem-jahr-doc7ro28rco4zl1kkv9c7ds) berichtete am 25. August 2023, Struck habe den Verkauf aus seiner Garage über eBay Kleinanzeigen begonnen, innerhalb eines Jahres seien mehr als 25.000 Stück verkauft worden und das Unternehmen habe zehn Mitarbeiter. Seit 2024 kooperiert es strategisch mit Anker SOLIX. Im September 2026 nannte der ADAC mehr als 100 Mitarbeitende an den Standorten Achim, Berlin und im Logistikzentrum Elsdorf sowie eine neue Kooperation mit der ADAC SE für Balkonkraftwerke.',
       },
       lineup: {
         title: 'Set-Angebot und Preise',
@@ -176,7 +176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Set': 'Quattro XL', 'Module': '4 × TopCon, 2000 Wp', 'Wechselrichter / Speicher': 'Solarbank 4 Pro, 5,0 kWh', 'Preis (EUR)': '1.899 €' },
           { 'Set': 'Okta XL', 'Module': '8 × TopCon, 4000 Wp', 'Wechselrichter / Speicher': 'Solarbank 4 Pro, 5,0 kWh', 'Preis (EUR)': '2.269 €' },
         ],
-        note: 'Die Sets mit 800-W-Wechselrichter sind die einfache Steckerlösung. Das Set Okta XL (4000 Wp, 8 Module) überschreitet die Modulgrenze von 2 kW der unten beschriebenen vereinfachten Steckerregel; klären Sie mit Ihrem Netzbetreiber oder einer Elektrofachkraft, ob es als Steckersolargerät gelten kann.',
+        note: 'Die Sets mit 800-W-Wechselrichter sind die einfache Steckerlösung. Das Set Okta XL (4000 Wp, 8 Module) überschreitet die Modulgrenze von 2 kW der unten beschriebenen vereinfachten Steckerregel; klären Sie mit Ihrem Netzbetreiber oder einer Elektrofachkraft, ob es als Steckersolargerät gelten kann. Installieren Sie Steckersolargeräte nach der Anleitung des Herstellers und überlassen Sie netzseitige Arbeiten, wo erforderlich, einer Elektrofachkraft.',
       },
       markets: {
         title: 'Bestätigter Markt',
@@ -190,7 +190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/kleines-kraftwerk-balcony-solar-position-en.svg',
         imageCaption: 'Händlerebene: Speicher von Anker SOLIX, eigene Halterungssysteme, Zusammenstellung zu Sets.',
         imageAlt: 'Diagramm zur Einordnung von Kleines Kraftwerk in der Balkonkraftwerk-Lieferkette: Batterie- und Wechselrichterhersteller wie Anker SOLIX (Speicher) auf einer Ebene, der Set-Händler mit eigenen Halterungssystemen auf der nächsten.',
-        content: 'Kleines Kraftwerk steht auf der Händlerebene der Balkonsolar-Lieferkette. Anker SOLIX liefert die Solarbank-Speicher, der Wechselrichter wird unter der Modellbezeichnung HMS-800-2WB verkauft (die Shop-Seite nennt keinen Hersteller), und das Unternehmen entwickelt und produziert eigene Halterungssysteme aus Edelstahl in Deutschland (StartupMag, 24. April 2024). Solarmodule oder Batterien baut es nicht selbst.',
+        content: 'Kleines Kraftwerk steht auf der Händlerebene der Balkonsolar-Lieferkette. Anker SOLIX liefert die Solarbank-Speicher, der Wechselrichter wird unter der Modellbezeichnung HMS-800-2WB verkauft (die Shop-Seite nennt keinen Hersteller), und das Unternehmen entwickelt und produziert eigene Halterungssysteme aus Edelstahl in Deutschland ([StartupMag](https://www.startupmag.de/kleines-kraftwerk-solarpanels-ueberall-anbringen/), 24. April 2024). Solarmodule oder Batterien baut es nicht selbst.',
       },
       partners: {
         title: 'Bestätigte Komponentenlieferanten',
@@ -218,7 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Liefert Kleines Kraftwerk nach Österreich oder in die Schweiz?', a: 'Laut eigenem Shop nicht: Dort steht „Versand nur innerhalb Deutschlands“. Österreich und die Schweiz sind nicht als Lieferziele genannt.' },
           { q: 'Liefert Kleines Kraftwerk nach Portugal oder Brasilien?', a: 'Nein. Der Shop versendet nur innerhalb Deutschlands. Die Sets sind zudem für das deutsche Netz und seine Regeln ausgelegt; Netzspannung, Netzfrequenz und Regeln können im Ausland abweichen. Die dortigen Bedingungen beschreibt [Balkonsolar in Portugal und Brasilien](/de/balcony-solar/balcony-solar-portugal-brazil).' },
           { q: 'Was stellt Kleines Kraftwerk selbst her?', a: 'Eigene Produkte sind die Halterungssysteme, die das Unternehmen in Deutschland entwickelt und produziert. Der Speicher stammt von Anker SOLIX; den Hersteller des Wechselrichters HMS-800-2WB nennt der Shop nicht.' },
-          { q: 'Wie bewerten Kunden Kleines Kraftwerk?', a: 'Das [Trusted-Shops-Profil](https://www.trustedshops.de/bewertung/info_XD3B6DCA273FCBA459DFE911522B51AA2.html) zeigt 4,54 von 5 (geprüft am 3. November 2026). Trusted Shops kennzeichnet die Zusammenfassung des Profils als automatisch von einem KI-System aus Kundenbewertungen erstellt; sie ist eine Meinungszusammenfassung, keine Tatsachenfeststellung von uns. Lies vor deiner Entscheidung die einzelnen Bewertungen, auch zu Lieferung und Service.' },
+          { q: 'Wie bewerten Kunden Kleines Kraftwerk?', a: 'Das [Trusted-Shops-Profil](https://www.trustedshops.de/bewertung/info_XD3B6DCA273FCBA459DFE911522B51AA2.html) zeigt 4,54 von 5 (geprüft am 3. November 2026). Trusted Shops kennzeichnet die Zusammenfassung des Profils als automatisch von einem KI-System aus Kundenbewertungen erstellt; sie ist eine Meinungszusammenfassung, keine Tatsachenfeststellung von uns. Lesen Sie vor Ihrer Entscheidung die einzelnen Bewertungen, auch zu Lieferung und Service.' },
           { q: 'Muss ich ein Set von Kleines Kraftwerk anmelden?', a: 'Ja. Jedes Steckersolargerät in Deutschland muss im Marktstammdatenregister der Bundesnetzagentur eingetragen werden; eine gesonderte Meldung beim Netzbetreiber entfällt für Geräte innerhalb der Grenzen von 2 kW und 800 VA, sofern keine Einspeisevergütung beansprucht wird.' },
           { q: 'Ist das Set Okta XL mit 4000 Wp ein Steckersolargerät?', a: 'Seine 4000 Wp Modulleistung überschreiten die 2-kW-Grenze des [§ 8 Abs. 5a EEG](https://www.gesetze-im-internet.de/eeg_2014/__8.html), die vereinfachten Steckerregeln erfassen es in der angebotenen Form daher nicht. Fragen Sie Ihren Netzbetreiber oder eine Elektrofachkraft, was gilt.' },
         ],
@@ -266,7 +266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/kleines-kraftwerk-balcony-solar-timeline-en.svg',
         imageCaption: 'Année de fondation selon l\'ADAC (2026) ; ventes de la première année selon le Weser-Kurier (2023) ; effectifs selon l\'ADAC (2026).',
         imageAlt: 'Chronologie de Kleines Kraftwerk, enseigne de solaire de balcon : fondée à Achim en 2022, plus de 25 000 unités vendues la première année, plus de 100 salariés en 2026.',
-        content: 'L\'entreprise a été fondée en 2022 par Markus Struck et Sebastian Hirt (communiqué de l\'ADAC du 9 septembre 2026). Le Weser-Kurier rapportait le 25 août 2023 que Struck avait commencé à vendre depuis son garage via eBay Kleinanzeigen, que plus de 25 000 unités avaient été vendues en un an et que l\'entreprise comptait dix salariés. Depuis 2024, elle coopère stratégiquement avec Anker SOLIX. En septembre 2026, l\'ADAC mentionnait plus de 100 salariés répartis entre Achim, Berlin et le centre logistique d\'Elsdorf, ainsi qu\'une nouvelle coopération avec ADAC SE pour les centrales de balcon.',
+        content: 'L\'entreprise a été fondée en 2022 par Markus Struck et Sebastian Hirt ([communiqué de l\'ADAC](https://presse.adac.de/meldungen/adac-se/das-unternehmen/adac-se-und-kleines-kraftwerk-starten-kooperation-fuer-balkonkraftwerke.html) du 9 septembre 2026). Le [Weser-Kurier](https://www.weser-kurier.de/landkreis-verden/stadt-achim/achimer-unternehmen-verkauft-25-000-balkonkraftwerke-in-einem-jahr-doc7ro28rco4zl1kkv9c7ds) rapportait le 25 août 2023 que Struck avait commencé à vendre depuis son garage via eBay Kleinanzeigen, que plus de 25 000 unités avaient été vendues en un an et que l\'entreprise comptait dix salariés. Depuis 2024, elle coopère stratégiquement avec Anker SOLIX. En septembre 2026, l\'ADAC mentionnait plus de 100 salariés répartis entre Achim, Berlin et le centre logistique d\'Elsdorf, ainsi qu\'une nouvelle coopération avec ADAC SE pour les centrales de balcon.',
       },
       lineup: {
         title: 'Gamme de kits et prix',
@@ -284,7 +284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Kit': 'Quattro XL', 'Modules': '4 × TopCon, 2000 Wp', 'Onduleur / stockage': 'Solarbank 4 Pro, 5.0 kWh', 'Prix (EUR)': '1 899 €' },
           { 'Kit': 'Okta XL', 'Modules': '8 × TopCon, 4000 Wp', 'Onduleur / stockage': 'Solarbank 4 Pro, 5.0 kWh', 'Prix (EUR)': '2 269 €' },
         ],
-        note: 'Les kits à onduleur de 800 W constituent l\'option enfichable simple. L\'Okta XL (4000 Wc, 8 modules) dépasse la limite de modules de 2 kW de la règle simplifiée décrite ci-dessous ; renseignez-vous auprès de votre gestionnaire de réseau ou d\'un électricien avant de le traiter comme un appareil enfichable.',
+        note: 'Les kits à onduleur de 800 W constituent l\'option enfichable simple. L\'Okta XL (4000 Wc, 8 modules) dépasse la limite de modules de 2 kW de la règle simplifiée décrite ci-dessous ; renseignez-vous auprès de votre gestionnaire de réseau ou d\'un électricien avant de le traiter comme un appareil enfichable. Installez les kits enfichables selon les instructions du fabricant et confiez les travaux côté réseau à un électricien qualifié lorsque c\'est requis.',
       },
       markets: {
         title: 'Marché confirmé',
@@ -298,7 +298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/kleines-kraftwerk-balcony-solar-position-en.svg',
         imageCaption: 'Niveau revendeur : stockage Anker SOLIX, systèmes de fixation propres, assemblage en kits.',
         imageAlt: 'Schéma situant Kleines Kraftwerk dans la chaîne du solaire de balcon : fabricants de batteries et d\'onduleurs comme Anker SOLIX (stockage) à un niveau, revendeur de kits avec systèmes de fixation propres au niveau suivant.',
-        content: 'Kleines Kraftwerk se situe au niveau revendeur de la chaîne du solaire de balcon. Anker SOLIX fournit les stockages Solarbank, l\'onduleur est vendu sous la référence HMS-800-2WB (la page de la boutique n\'en nomme pas le fabricant), et l\'entreprise développe et fabrique en Allemagne ses propres systèmes de fixation en acier inoxydable (StartupMag, 24 avril 2024). Elle ne fabrique ni modules solaires ni batteries.',
+        content: 'Kleines Kraftwerk se situe au niveau revendeur de la chaîne du solaire de balcon. Anker SOLIX fournit les stockages Solarbank, l\'onduleur est vendu sous la référence HMS-800-2WB (la page de la boutique n\'en nomme pas le fabricant), et l\'entreprise développe et fabrique en Allemagne ses propres systèmes de fixation en acier inoxydable ([StartupMag](https://www.startupmag.de/kleines-kraftwerk-solarpanels-ueberall-anbringen/), 24 avril 2024). Elle ne fabrique ni modules solaires ni batteries.',
       },
       partners: {
         title: 'Fournisseurs de composants confirmés',
@@ -374,7 +374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/kleines-kraftwerk-balcony-solar-timeline-en.svg',
         imageCaption: '創業年はADAC(2026年)、初年度の販売数はWeser-Kurier(2023年)、従業員数はADAC(2026年)による。',
         imageAlt: 'ベランダ太陽光販売会社Kleines Kraftwerkの沿革:2022年にAchimで創業、初年度に25,000台以上を販売、2026年に従業員100人以上。',
-        content: '同社は2022年にMarkus StruckとSebastian Hirtが創業しました(ADACのプレスリリース、2026年9月9日)。Weser-Kurierは2023年8月25日、Struckが自宅ガレージからeBay Kleinanzeigen経由で販売を始め、1年で2万5千台超を販売し、従業員は10人だったと報じました。2024年からAnker SOLIXと戦略的に提携しています。2026年9月にADACは、Achim、ベルリン、Elsdorf物流センターで従業員100人超と伝え、ADAC SEとのバルコニー発電キットでの新たな提携も発表しました。',
+        content: '同社は2022年にMarkus StruckとSebastian Hirtが創業しました([ADACのプレスリリース](https://presse.adac.de/meldungen/adac-se/das-unternehmen/adac-se-und-kleines-kraftwerk-starten-kooperation-fuer-balkonkraftwerke.html)、2026年9月9日)。[Weser-Kurier](https://www.weser-kurier.de/landkreis-verden/stadt-achim/achimer-unternehmen-verkauft-25-000-balkonkraftwerke-in-einem-jahr-doc7ro28rco4zl1kkv9c7ds)は2023年8月25日、Struckが自宅ガレージからeBay Kleinanzeigen経由で販売を始め、1年で2万5千台超を販売し、従業員は10人だったと報じました。2024年からAnker SOLIXと戦略的に提携しています。2026年9月にADACは、Achim、ベルリン、Elsdorf物流センターで従業員100人超と伝え、ADAC SEとのバルコニー発電キットでの新たな提携も発表しました。',
       },
       lineup: {
         title: 'キットのラインナップと価格',
@@ -392,7 +392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'キット': 'Quattro XL', 'モジュール': '4 × TopCon, 2000 Wp', 'インバーター/蓄電': 'Solarbank 4 Pro, 5.0 kWh', '価格(EUR)': '€1,899' },
           { 'キット': 'Okta XL', 'モジュール': '8 × TopCon, 4000 Wp', 'インバーター/蓄電': 'Solarbank 4 Pro, 5.0 kWh', '価格(EUR)': '€2,269' },
         ],
-        note: '800 Wインバーター付きのキットが標準的なプラグイン式です。Okta XL(4000 Wp、モジュール8枚)は、後述の簡易ルールのモジュール上限2 kWを超えるため、プラグイン式機器として扱う前に系統運用者または電気工事士に確認してください。',
+        note: '800 Wインバーター付きのキットが標準的なプラグイン式です。Okta XL(4000 Wp、モジュール8枚)は、後述の簡易ルールのモジュール上限2 kWを超えるため、プラグイン式機器として扱う前に系統運用者または電気工事士に確認してください。プラグイン式キットはメーカーの説明書に従って設置し、必要な場合は電源側の作業を有資格の電気工事士に任せてください。',
       },
       markets: {
         title: '確認済みの市場',
@@ -406,7 +406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/kleines-kraftwerk-balcony-solar-position-en.svg',
         imageCaption: '販売会社の層:蓄電池はAnker SOLIX、取付システムは自社、キットとして組み合わせ。',
         imageAlt: 'ベランダ太陽光のサプライチェーンにおけるKleines Kraftwerkの位置づけ図:Anker SOLIX(蓄電池)などのバッテリー・インバーターメーカーの層と、自社の取付システムを持つキット販売会社の層。',
-        content: 'Kleines Kraftwerkはバルコニーソーラーのサプライチェーンで販売会社の層に位置します。蓄電池のSolarbankはAnker SOLIXが供給し、インバーターは型番HMS-800-2WBで販売されています(ショップのページにメーカー名はありません)。同社はステンレス製の取付システムをドイツで自社開発・製造しています(StartupMag、2024年4月24日)。ソーラーモジュールや電池は自社製造していません。',
+        content: 'Kleines Kraftwerkはバルコニーソーラーのサプライチェーンで販売会社の層に位置します。蓄電池のSolarbankはAnker SOLIXが供給し、インバーターは型番HMS-800-2WBで販売されています(ショップのページにメーカー名はありません)。同社はステンレス製の取付システムをドイツで自社開発・製造しています([StartupMag](https://www.startupmag.de/kleines-kraftwerk-solarpanels-ueberall-anbringen/)、2024年4月24日)。ソーラーモジュールや電池は自社製造していません。',
       },
       partners: {
         title: '確認済みの部品サプライヤー',
@@ -482,7 +482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/kleines-kraftwerk-balcony-solar-timeline-en.svg',
         imageCaption: '成立年份依据ADAC(2026年);首年销量依据Weser-Kurier(2023年);员工人数依据ADAC(2026年)。',
         imageAlt: '阳台光伏零售商Kleines Kraftwerk的发展时间线:2022年在Achim成立,首年售出2.5万多套,2026年员工100多人。',
-        content: '公司由Markus Struck和Sebastian Hirt于2022年创立(ADAC新闻稿,2026年9月9日)。Weser-Kurier在2023年8月25日报道,Struck最初在自家车库通过eBay Kleinanzeigen销售,一年内售出超过25,000套,公司有十名员工。自2024年起,公司与Anker SOLIX开展战略合作。2026年9月,ADAC称公司在Achim、柏林和Elsdorf物流中心共有100多名员工,并与ADAC SE就阳台电站启动了新的合作。',
+        content: '公司由Markus Struck和Sebastian Hirt于2022年创立([ADAC新闻稿](https://presse.adac.de/meldungen/adac-se/das-unternehmen/adac-se-und-kleines-kraftwerk-starten-kooperation-fuer-balkonkraftwerke.html),2026年9月9日)。[Weser-Kurier](https://www.weser-kurier.de/landkreis-verden/stadt-achim/achimer-unternehmen-verkauft-25-000-balkonkraftwerke-in-einem-jahr-doc7ro28rco4zl1kkv9c7ds)在2023年8月25日报道,Struck最初在自家车库通过eBay Kleinanzeigen销售,一年内售出超过25,000套,公司有十名员工。自2024年起,公司与Anker SOLIX开展战略合作。2026年9月,ADAC称公司在Achim、柏林和Elsdorf物流中心共有100多名员工,并与ADAC SE就阳台电站启动了新的合作。',
       },
       lineup: {
         title: '套件产品线与价格',
@@ -500,7 +500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '套件': 'Quattro XL', '组件': '4 × TopCon, 2000 Wp', '逆变器/储能': 'Solarbank 4 Pro, 5.0 kWh', '价格(EUR)': '€1,899' },
           { '套件': 'Okta XL', '组件': '8 × TopCon, 4000 Wp', '逆变器/储能': 'Solarbank 4 Pro, 5.0 kWh', '价格(EUR)': '€2,269' },
         ],
-        note: '搭配800 W逆变器的套件是标准的即插即用方案。Okta XL(4000 Wp,8块组件)超出下文简化规则的2 kW组件上限,在将其视为即插即用设备之前,请先向电网运营商或电工咨询。',
+        note: '搭配800 W逆变器的套件是标准的即插即用方案。Okta XL(4000 Wp,8块组件)超出下文简化规则的2 kW组件上限,在将其视为即插即用设备之前,请先向电网运营商或电工咨询。即插即用套件应按制造商说明书安装，必要时电网侧工作应交由具备资质的电工完成。',
       },
       markets: {
         title: '已确认市场',
@@ -514,7 +514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/kleines-kraftwerk-balcony-solar-position-en.svg',
         imageCaption: '零售商层级:储能来自Anker SOLIX,自有安装支架系统,组装成套件。',
         imageAlt: 'Kleines Kraftwerk在阳台光伏供应链中的位置示意图:一层是Anker SOLIX(储能)等电池和逆变器制造商,下一层是拥有自有安装支架系统的套件零售商。',
-        content: 'Kleines Kraftwerk位于阳台光伏供应链的零售商层级。Solarbank储能由Anker SOLIX提供,逆变器以型号HMS-800-2WB销售(商店页面未注明制造商),公司在德国自行研发和生产不锈钢安装支架系统(StartupMag,2024年4月24日)。公司自己不生产光伏组件或电池。',
+        content: 'Kleines Kraftwerk位于阳台光伏供应链的零售商层级。Solarbank储能由Anker SOLIX提供,逆变器以型号HMS-800-2WB销售(商店页面未注明制造商),公司在德国自行研发和生产不锈钢安装支架系统([StartupMag](https://www.startupmag.de/kleines-kraftwerk-solarpanels-ueberall-anbringen/),2024年4月24日)。公司自己不生产光伏组件或电池。',
       },
       partners: {
         title: '已确认的零部件供应商',
@@ -590,7 +590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/kleines-kraftwerk-balcony-solar-timeline-en.svg',
         imageCaption: 'Año de fundación según el ADAC (2026); ventas del primer año según Weser-Kurier (2023); plantilla según el ADAC (2026).',
         imageAlt: 'Cronología de Kleines Kraftwerk, tienda de solar de balcón: fundada en Achim en 2022, más de 25.000 unidades vendidas el primer año, más de 100 empleados en 2026.',
-        content: 'La empresa fue fundada en 2022 por Markus Struck y Sebastian Hirt (nota de prensa del ADAC del 9 de septiembre de 2026). Weser-Kurier informó el 25 de agosto de 2023 de que Struck había empezado a vender desde su garaje a través de eBay Kleinanzeigen, de que se habían vendido más de 25.000 unidades en un año y de que la empresa tenía diez empleados. Desde 2024 coopera estratégicamente con Anker SOLIX. En septiembre de 2026 el ADAC citó más de 100 empleados entre Achim, Berlín y el centro logístico de Elsdorf, además de una nueva cooperación con ADAC SE para centrales de balcón.',
+        content: 'La empresa fue fundada en 2022 por Markus Struck y Sebastian Hirt ([nota de prensa del ADAC](https://presse.adac.de/meldungen/adac-se/das-unternehmen/adac-se-und-kleines-kraftwerk-starten-kooperation-fuer-balkonkraftwerke.html) del 9 de septiembre de 2026). [Weser-Kurier](https://www.weser-kurier.de/landkreis-verden/stadt-achim/achimer-unternehmen-verkauft-25-000-balkonkraftwerke-in-einem-jahr-doc7ro28rco4zl1kkv9c7ds) informó el 25 de agosto de 2023 de que Struck había empezado a vender desde su garaje a través de eBay Kleinanzeigen, de que se habían vendido más de 25.000 unidades en un año y de que la empresa tenía diez empleados. Desde 2024 coopera estratégicamente con Anker SOLIX. En septiembre de 2026 el ADAC citó más de 100 empleados entre Achim, Berlín y el centro logístico de Elsdorf, además de una nueva cooperación con ADAC SE para centrales de balcón.',
       },
       lineup: {
         title: 'Gama de kits y precios',
@@ -608,7 +608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Kit': 'Quattro XL', 'Módulos': '4 × TopCon, 2000 Wp', 'Inversor / batería': 'Solarbank 4 Pro, 5.0 kWh', 'Precio (EUR)': '1.899 €' },
           { 'Kit': 'Okta XL', 'Módulos': '8 × TopCon, 4000 Wp', 'Inversor / batería': 'Solarbank 4 Pro, 5.0 kWh', 'Precio (EUR)': '2.269 €' },
         ],
-        note: 'Los kits con inversor de 800 W son la opción enchufable sencilla. El Okta XL (4000 Wp, 8 módulos) supera el límite de módulos de 2 kW de la regla simplificada descrita abajo; consulta con tu gestor de red o con un electricista antes de tratarlo como equipo enchufable.',
+        note: 'Los kits con inversor de 800 W son la opción enchufable sencilla. El Okta XL (4000 Wp, 8 módulos) supera el límite de módulos de 2 kW de la regla simplificada descrita abajo; consulta con tu gestor de red o con un electricista antes de tratarlo como equipo enchufable. Instala los kits enchufables según las instrucciones del fabricante y deja los trabajos del lado de la red a un electricista cualificado cuando sea necesario.',
       },
       markets: {
         title: 'Mercado confirmado',
@@ -622,7 +622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/kleines-kraftwerk-balcony-solar-position-en.svg',
         imageCaption: 'Nivel de minorista: almacenamiento de Anker SOLIX, sistemas de montaje propios, ensamblaje en kits.',
         imageAlt: 'Diagrama que sitúa a Kleines Kraftwerk en la cadena del solar de balcón: fabricantes de baterías e inversores como Anker SOLIX (almacenamiento) en un nivel y el minorista de kits con sistemas de montaje propios en el siguiente.',
-        content: 'Kleines Kraftwerk se sitúa en el nivel de minorista de la cadena del solar de balcón. Anker SOLIX suministra los sistemas de almacenamiento Solarbank, el inversor se vende con la referencia HMS-800-2WB (la página de la tienda no nombra al fabricante) y la empresa desarrolla y fabrica en Alemania sus propios sistemas de montaje de acero inoxidable (StartupMag, 24 de abril de 2024). No fabrica módulos solares ni baterías.',
+        content: 'Kleines Kraftwerk se sitúa en el nivel de minorista de la cadena del solar de balcón. Anker SOLIX suministra los sistemas de almacenamiento Solarbank, el inversor se vende con la referencia HMS-800-2WB (la página de la tienda no nombra al fabricante) y la empresa desarrolla y fabrica en Alemania sus propios sistemas de montaje de acero inoxidable ([StartupMag](https://www.startupmag.de/kleines-kraftwerk-solarpanels-ueberall-anbringen/), 24 de abril de 2024). No fabrica módulos solares ni baterías.',
       },
       partners: {
         title: 'Proveedores de componentes confirmados',
@@ -698,7 +698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/kleines-kraftwerk-balcony-solar-timeline-en.svg',
         imageCaption: 'Ano de fundação conforme o ADAC (2026); vendas do primeiro ano conforme o Weser-Kurier (2023); quadro de funcionários conforme o ADAC (2026).',
         imageAlt: 'Linha do tempo da Kleines Kraftwerk, loja de energia solar de varanda: fundada em Achim em 2022, mais de 25.000 unidades vendidas no primeiro ano, mais de 100 funcionários em 2026.',
-        content: 'A empresa foi fundada em 2022 por Markus Struck e Sebastian Hirt (comunicado do ADAC de 9 de setembro de 2026). O Weser-Kurier relatou em 25 de agosto de 2023 que Struck começou a vender da própria garagem pelo eBay Kleinanzeigen, que mais de 25.000 unidades foram vendidas em um ano e que a empresa tinha dez funcionários. Desde 2024 ela coopera estrategicamente com a Anker SOLIX. Em setembro de 2026, o ADAC citou mais de 100 funcionários entre Achim, Berlim e o centro logístico de Elsdorf, além de uma nova cooperação com a ADAC SE para usinas de varanda.',
+        content: 'A empresa foi fundada em 2022 por Markus Struck e Sebastian Hirt ([comunicado do ADAC](https://presse.adac.de/meldungen/adac-se/das-unternehmen/adac-se-und-kleines-kraftwerk-starten-kooperation-fuer-balkonkraftwerke.html) de 9 de setembro de 2026). O [Weser-Kurier](https://www.weser-kurier.de/landkreis-verden/stadt-achim/achimer-unternehmen-verkauft-25-000-balkonkraftwerke-in-einem-jahr-doc7ro28rco4zl1kkv9c7ds) relatou em 25 de agosto de 2023 que Struck começou a vender da própria garagem pelo eBay Kleinanzeigen, que mais de 25.000 unidades foram vendidas em um ano e que a empresa tinha dez funcionários. Desde 2024 ela coopera estrategicamente com a Anker SOLIX. Em setembro de 2026, o ADAC citou mais de 100 funcionários entre Achim, Berlim e o centro logístico de Elsdorf, além de uma nova cooperação com a ADAC SE para usinas de varanda.',
       },
       lineup: {
         title: 'Linha de kits e preços',
@@ -716,7 +716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Kit': 'Quattro XL', 'Módulos': '4 × TopCon, 2000 Wp', 'Inversor / bateria': 'Solarbank 4 Pro, 5.0 kWh', 'Preço (EUR)': '€ 1.899' },
           { 'Kit': 'Okta XL', 'Módulos': '8 × TopCon, 4000 Wp', 'Inversor / bateria': 'Solarbank 4 Pro, 5.0 kWh', 'Preço (EUR)': '€ 2.269' },
         ],
-        note: 'Os kits com inversor de 800 W são a opção plug-in simples. O Okta XL (4000 Wp, 8 módulos) ultrapassa o limite de módulos de 2 kW da regra simplificada descrita abaixo; consulte a operadora da rede ou um eletricista antes de tratá-lo como equipamento plug-in.',
+        note: 'Os kits com inversor de 800 W são a opção plug-in simples. O Okta XL (4000 Wp, 8 módulos) ultrapassa o limite de módulos de 2 kW da regra simplificada descrita abaixo; consulte a operadora da rede ou um eletricista antes de tratá-lo como equipamento plug-in. Instale os kits plug-in conforme as instruções do fabricante e deixe os trabalhos do lado da rede a um eletricista qualificado quando exigido.',
       },
       markets: {
         title: 'Mercado confirmado',
@@ -730,7 +730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/kleines-kraftwerk-balcony-solar-position-en.svg',
         imageCaption: 'Camada de varejo: armazenamento da Anker SOLIX, sistemas de fixação próprios, montagem em kits.',
         imageAlt: 'Diagrama que situa a Kleines Kraftwerk na cadeia da energia solar de varanda: fabricantes de baterias e inversores como a Anker SOLIX (armazenamento) em um nível e o revendedor de kits com sistemas de fixação próprios no seguinte.',
-        content: 'A Kleines Kraftwerk ocupa a camada de varejo da cadeia de energia solar de varanda. A Anker SOLIX fornece o armazenamento Solarbank, o inversor é vendido com a designação HMS-800-2WB (a página da loja não cita o fabricante) e a empresa desenvolve e produz na Alemanha seus próprios sistemas de fixação em aço inoxidável (StartupMag, 24 de abril de 2024). Ela não fabrica módulos solares nem baterias.',
+        content: 'A Kleines Kraftwerk ocupa a camada de varejo da cadeia de energia solar de varanda. A Anker SOLIX fornece o armazenamento Solarbank, o inversor é vendido com a designação HMS-800-2WB (a página da loja não cita o fabricante) e a empresa desenvolve e produz na Alemanha seus próprios sistemas de fixação em aço inoxidável ([StartupMag](https://www.startupmag.de/kleines-kraftwerk-solarpanels-ueberall-anbringen/), 24 de abril de 2024). Ela não fabrica módulos solares nem baterias.',
       },
       partners: {
         title: 'Fornecedores de componentes confirmados',
@@ -806,7 +806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/kleines-kraftwerk-balcony-solar-timeline-en.svg',
         imageCaption: 'سنة التأسيس وفق ADAC (2026)؛ مبيعات السنة الأولى وفق Weser-Kurier (2023)؛ عدد الموظفين وفق ADAC (2026).',
         imageAlt: 'الجدول الزمني لمتجر الطاقة الشمسية للشرفات Kleines Kraftwerk: تأسس في أخيم عام 2022، وبيع أكثر من 25,000 وحدة في السنة الأولى، وأكثر من 100 موظف في 2026.',
-        content: 'تأسست الشركة عام 2022 على يد ماركوس شترونك وسيباستيان هيرت (بيان ADAC الصحفي، 9 سبتمبر 2026). ذكرت Weser-Kurier في 25 أغسطس 2023 أن شترونك بدأ البيع من مرآبه عبر eBay Kleinanzeigen، وأن أكثر من 25,000 وحدة بيعت خلال عام، وأن عدد موظفي الشركة عشرة. ومنذ 2024 تتعاون الشركة استراتيجيًا مع Anker SOLIX. وفي سبتمبر 2026 ذكرت ADAC أن لديها أكثر من 100 موظف بين أخيم وبرلين والمركز اللوجستي في Elsdorf، إضافة إلى تعاون جديد مع ADAC SE لمحطات الشرفات.',
+        content: 'تأسست الشركة عام 2022 على يد ماركوس شترونك وسيباستيان هيرت ([بيان ADAC الصحفي](https://presse.adac.de/meldungen/adac-se/das-unternehmen/adac-se-und-kleines-kraftwerk-starten-kooperation-fuer-balkonkraftwerke.html)، 9 سبتمبر 2026). ذكرت [Weser-Kurier](https://www.weser-kurier.de/landkreis-verden/stadt-achim/achimer-unternehmen-verkauft-25-000-balkonkraftwerke-in-einem-jahr-doc7ro28rco4zl1kkv9c7ds) في 25 أغسطس 2023 أن شترونك بدأ البيع من مرآبه عبر eBay Kleinanzeigen، وأن أكثر من 25,000 وحدة بيعت خلال عام، وأن عدد موظفي الشركة عشرة. ومنذ 2024 تتعاون الشركة استراتيجيًا مع Anker SOLIX. وفي سبتمبر 2026 ذكرت ADAC أن لديها أكثر من 100 موظف بين أخيم وبرلين والمركز اللوجستي في Elsdorf، إضافة إلى تعاون جديد مع ADAC SE لمحطات الشرفات.',
       },
       lineup: {
         title: 'تشكيلة الأطقم والأسعار',
@@ -824,7 +824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الطقم': 'Quattro XL', 'الألواح': '4 × TopCon, 2000 Wp', 'العاكس / التخزين': 'Solarbank 4 Pro, 5.0 kWh', 'السعر (EUR)': '€1,899' },
           { 'الطقم': 'Okta XL', 'الألواح': '8 × TopCon, 4000 Wp', 'العاكس / التخزين': 'Solarbank 4 Pro, 5.0 kWh', 'السعر (EUR)': '€2,269' },
         ],
-        note: 'أطقم العاكس 800 W هي الخيار البسيط الجاهز للتوصيل. أما Okta XL (4000 Wp، 8 ألواح) فيتجاوز حد الألواح البالغ 2 kW في القاعدة المبسطة الموضحة أدناه؛ استشر مشغل الشبكة أو كهربائيًا مؤهلًا قبل التعامل معه كجهاز جاهز للتوصيل.',
+        note: 'أطقم العاكس 800 W هي الخيار البسيط الجاهز للتوصيل. أما Okta XL (4000 Wp، 8 ألواح) فيتجاوز حد الألواح البالغ 2 kW في القاعدة المبسطة الموضحة أدناه؛ استشر مشغل الشبكة أو كهربائيًا مؤهلًا قبل التعامل معه كجهاز جاهز للتوصيل. ركّب أطقم التوصيل الجاهز وفق تعليمات الشركة المصنّعة، واترك الأعمال على جانب الشبكة لكهربائي مؤهل حيثما يلزم.',
       },
       markets: {
         title: 'السوق المؤكد',
@@ -838,7 +838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/kleines-kraftwerk-balcony-solar-position-en.svg',
         imageCaption: 'طبقة التجزئة: تخزين من Anker SOLIX، وأنظمة تثبيت خاصة، وتجميع في أطقم.',
         imageAlt: 'مخطط يوضح موقع Kleines Kraftwerk في سلسلة توريد الطاقة الشمسية للشرفات: مصنّعو البطاريات والعاكسات مثل Anker SOLIX (التخزين) في مستوى، وبائع الأطقم بأنظمة تثبيته الخاصة في المستوى التالي.',
-        content: 'تقع Kleines Kraftwerk في طبقة التجزئة من سلسلة توريد الطاقة الشمسية للشرفات. توفر Anker SOLIX وحدات التخزين Solarbank، ويُباع العاكس بالطراز HMS-800-2WB (ولا تذكر صفحة المتجر الشركة المصنّعة)، وتطور الشركة وتنتج في ألمانيا أنظمة تثبيت خاصة بها من الفولاذ المقاوم للصدأ (StartupMag، 24 أبريل 2024). ولا تصنّع الشركة ألواحًا شمسية أو بطاريات.',
+        content: 'تقع Kleines Kraftwerk في طبقة التجزئة من سلسلة توريد الطاقة الشمسية للشرفات. توفر Anker SOLIX وحدات التخزين Solarbank، ويُباع العاكس بالطراز HMS-800-2WB (ولا تذكر صفحة المتجر الشركة المصنّعة)، وتطور الشركة وتنتج في ألمانيا أنظمة تثبيت خاصة بها من الفولاذ المقاوم للصدأ ([StartupMag](https://www.startupmag.de/kleines-kraftwerk-solarpanels-ueberall-anbringen/)، 24 أبريل 2024). ولا تصنّع الشركة ألواحًا شمسية أو بطاريات.',
       },
       partners: {
         title: 'موردو المكونات المؤكدون',
@@ -914,7 +914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/kleines-kraftwerk-balcony-solar-timeline-en.svg',
         imageCaption: '설립 연도는 ADAC(2026), 첫해 판매량은 Weser-Kurier(2023), 직원 수는 ADAC(2026) 기준.',
         imageAlt: '베란다 태양광 판매업체 Kleines Kraftwerk 연혁: 2022년 Achim에서 설립, 첫해 25,000대 이상 판매, 2026년 직원 100명 이상.',
-        content: '회사는 2022년 Markus Struck과 Sebastian Hirt가 설립했습니다(ADAC 보도자료, 2026년 9월 9일). Weser-Kurier는 2023년 8월 25일, Struck이 자택 차고에서 eBay Kleinanzeigen을 통해 판매를 시작했고 1년 만에 2만 5천 대 넘게 팔았으며 직원은 10명이라고 보도했습니다. 2024년부터 Anker SOLIX와 전략적으로 협력하고 있습니다. 2026년 9월 ADAC는 Achim, 베를린, Elsdorf 물류센터에 걸쳐 직원이 100명이 넘는다고 전했고, 발코니 발전 키트를 위한 ADAC SE와의 새 협력도 밝혔습니다.',
+        content: '회사는 2022년 Markus Struck과 Sebastian Hirt가 설립했습니다([ADAC 보도자료](https://presse.adac.de/meldungen/adac-se/das-unternehmen/adac-se-und-kleines-kraftwerk-starten-kooperation-fuer-balkonkraftwerke.html), 2026년 9월 9일). [Weser-Kurier](https://www.weser-kurier.de/landkreis-verden/stadt-achim/achimer-unternehmen-verkauft-25-000-balkonkraftwerke-in-einem-jahr-doc7ro28rco4zl1kkv9c7ds)는 2023년 8월 25일, Struck이 자택 차고에서 eBay Kleinanzeigen을 통해 판매를 시작했고 1년 만에 2만 5천 대 넘게 팔았으며 직원은 10명이라고 보도했습니다. 2024년부터 Anker SOLIX와 전략적으로 협력하고 있습니다. 2026년 9월 ADAC는 Achim, 베를린, Elsdorf 물류센터에 걸쳐 직원이 100명이 넘는다고 전했고, 발코니 발전 키트를 위한 ADAC SE와의 새 협력도 밝혔습니다.',
       },
       lineup: {
         title: '키트 라인업과 가격',
@@ -932,7 +932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '키트': 'Quattro XL', '모듈': '4 × TopCon, 2000 Wp', '인버터/저장장치': 'Solarbank 4 Pro, 5.0 kWh', '가격(EUR)': '€1,899' },
           { '키트': 'Okta XL', '모듈': '8 × TopCon, 4000 Wp', '인버터/저장장치': 'Solarbank 4 Pro, 5.0 kWh', '가격(EUR)': '€2,269' },
         ],
-        note: '800 W 인버터 키트가 기본적인 플러그인 방식입니다. Okta XL(4000 Wp, 모듈 8장)은 아래 간소화 규정의 모듈 2 kW 상한을 넘으므로, 플러그인 기기로 보기 전에 계통 운영사나 전기 기술자에게 확인하세요.',
+        note: '800 W 인버터 키트가 기본적인 플러그인 방식입니다. Okta XL(4000 Wp, 모듈 8장)은 아래 간소화 규정의 모듈 2 kW 상한을 넘으므로, 플러그인 기기로 보기 전에 계통 운영사나 전기 기술자에게 확인하세요. 플러그인 키트는 제조사 설명서에 따라 설치하고, 필요한 경우 계통 쪽 작업은 자격을 갖춘 전기 기술자에게 맡기세요.',
       },
       markets: {
         title: '확인된 시장',
@@ -946,7 +946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/kleines-kraftwerk-balcony-solar-position-en.svg',
         imageCaption: '소매 단계: 저장장치는 Anker SOLIX, 거치 시스템은 자체, 키트로 조립.',
         imageAlt: '베란다 태양광 공급망에서 Kleines Kraftwerk의 위치 도표: Anker SOLIX(저장장치) 같은 배터리·인버터 제조사 단계와 자체 거치 시스템을 갖춘 키트 판매업체 단계.',
-        content: 'Kleines Kraftwerk는 발코니 태양광 공급망에서 소매 단계에 있습니다. Solarbank 저장장치는 Anker SOLIX가 공급하고, 인버터는 모델명 HMS-800-2WB로 판매됩니다(쇼핑몰 페이지에 제조사 명시 없음). 회사는 스테인리스 거치 시스템을 독일에서 직접 개발·생산합니다(StartupMag, 2024년 4월 24일). 태양광 모듈이나 배터리는 직접 만들지 않습니다.',
+        content: 'Kleines Kraftwerk는 발코니 태양광 공급망에서 소매 단계에 있습니다. Solarbank 저장장치는 Anker SOLIX가 공급하고, 인버터는 모델명 HMS-800-2WB로 판매됩니다(쇼핑몰 페이지에 제조사 명시 없음). 회사는 스테인리스 거치 시스템을 독일에서 직접 개발·생산합니다([StartupMag](https://www.startupmag.de/kleines-kraftwerk-solarpanels-ueberall-anbringen/), 2024년 4월 24일). 태양광 모듈이나 배터리는 직접 만들지 않습니다.',
       },
       partners: {
         title: '확인된 부품 공급업체',
