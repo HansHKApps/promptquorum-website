@@ -719,12 +719,12 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
       {section.image && (
         <figure role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.currentTarget.click() } }} className="my-8 flex flex-col items-center cursor-zoom-in" onClick={() => setLightboxImage({
           src: section.image!,
-          alt: section.imageCaption || (section.title ? `${section.title} diagram` : 'PromptQuorum article diagram'),
+          alt: section.imageAlt || section.imageCaption || (section.title ? `${section.title} diagram` : 'PromptQuorum article diagram'),
           caption: section.imageCaption,
         })}>
           <img
             src={section.image}
-            alt={section.imageCaption || (section.title ? `${section.title} diagram` : 'PromptQuorum article diagram')}
+            alt={section.imageAlt || section.imageCaption || (section.title ? `${section.title} diagram` : 'PromptQuorum article diagram')}
             className="w-full max-w-2xl rounded-lg border border-primary/20 shadow-sm hover:shadow-md transition-shadow"
             loading="lazy"
           />
