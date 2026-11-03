@@ -35,6 +35,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "trilium-notes-review",
+        "title": "Trilium Notes Review: Free Hierarchical Notes With Optional AI",
+        "url": "/power-local-llm/trilium-notes-review",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "vllm-explained",
         "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
         "url": "/power-local-llm/vllm-explained",
@@ -72,17 +80,9 @@
         "url": "/local-llms/nextchat-review",
         "dateModified": "2026-11-02",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-11-02",
-        "tier": "about"
       }
     ],
-    "totalCount": 341,
+    "totalCount": 342,
     "capped": true
   },
   "llama.cpp": {
@@ -869,6 +869,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "trilium-notes-review",
+        "title": "Trilium Notes Review: Free Hierarchical Notes With Optional AI",
+        "url": "/power-local-llm/trilium-notes-review",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "vllm-explained",
         "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
         "url": "/power-local-llm/vllm-explained",
@@ -922,17 +930,9 @@
         "url": "/power-local-llm/local-ai-agents-with-mcp",
         "dateModified": "2026-11-02",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "opencode-review",
-        "title": "OpenCode Review: The Open-Source Terminal Coding Agent",
-        "url": "/power-local-llm/opencode-review",
-        "dateModified": "2026-11-02",
-        "tier": "about"
       }
     ],
-    "totalCount": 171,
+    "totalCount": 172,
     "capped": true
   },
   "Atomic Chat": {
@@ -9945,6 +9945,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "trilium-notes-review",
+        "title": "Trilium Notes Review: Free Hierarchical Notes With Optional AI",
+        "url": "/power-local-llm/trilium-notes-review",
+        "dateModified": "2026-11-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "facet-review",
         "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
         "url": "/power-local-llm/facet-review",
@@ -9990,17 +9998,9 @@
         "url": "/power-local-llm/photoview-review",
         "dateModified": "2026-10-30",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tonfotos-review",
-        "title": "Tonfotos Review: Local Face Recognition Photo Manager",
-        "url": "/power-local-llm/tonfotos-review",
-        "dateModified": "2026-10-30",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "FluidVoice": {
@@ -10217,6 +10217,20 @@
         "title": "Hillnote Review: Local-First Markdown Notes With On-Device AI",
         "url": "/power-local-llm/hillnote-review",
         "dateModified": "2026-11-01",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Trilium Notes": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "trilium-notes-review",
+        "title": "Trilium Notes Review: Free Hierarchical Notes With Optional AI",
+        "url": "/power-local-llm/trilium-notes-review",
+        "dateModified": "2026-11-03",
         "tier": "about"
       }
     ],

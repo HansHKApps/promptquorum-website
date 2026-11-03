@@ -255,6 +255,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'reins':                                   'reins',
   'openvoiceos':                             'openvoiceos',
   'hillnote':                                'hillnote',
+  'trilium-notes':                           'trilium-notes',
   'llm-vision':                              'llm-vision',
   'picoclaw':                                'picoclaw',
   'lyonesse':                                'lyonesse',
