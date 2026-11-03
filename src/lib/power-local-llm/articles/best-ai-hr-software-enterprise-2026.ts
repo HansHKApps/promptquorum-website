@@ -783,7 +783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Logiciels RH IA comparés : Workday, HireVue, Lattice, avec prix publics, échéances de l\'AI Act et option auto-hébergée. Pas un conseil juridique.',
     twitterDescription:
-      'Logiciels RH IA comparés : plateformes leaders vs LLM locaux auto-hébergés pour le tri de CV, l\'analyse du climat social et la rédaction d\'évaluations.',
+      'Logiciels RH IA comparés : plateformes courantes vs LLM locaux auto-hébergés pour le tri de CV, l\'analyse du climat social et la rédaction d\'évaluations.',
     affiliateDisclosure: true,
     current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
@@ -808,9 +808,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fr: {
         question: 'Quel est le meilleur logiciel RH IA pour une entreprise qui doit contrôler où circulent les données de ses collaborateurs et candidats ?',
         answer:
-          'Il n\'existe pas de réponse unique — cela dépend du flux de travail et des données concernées. Les plateformes leaders (Workday pour l\'ATS/tri, HireVue pour l\'évaluation d\'entretiens, Paradox pour la planification, Lattice ou 15Five pour les évaluations de performance, Culture Amp pour le climat social) sont la voie la plus rapide vers la production et intègrent leur propre hébergement IA. Pour les flux touchant les données les plus sensibles — données personnelles des CV, brouillons d\'évaluation confidentiels, texte sincère des enquêtes de climat social — un LLM local auto-hébergé garde ce contenu sur une infrastructure que vous contrôlez, au prix de construire et maintenir la pile vous-même.',
+          'Il n\'existe pas de réponse unique — cela dépend du flux de travail et des données concernées. Les plateformes courantes (Workday pour l\'ATS/tri, HireVue pour l\'évaluation d\'entretiens, Paradox pour la planification, Lattice ou 15Five pour les évaluations de performance, Culture Amp pour le climat social) sont la voie la plus rapide vers la production et intègrent leur propre hébergement IA. Pour les flux touchant les données les plus sensibles — données personnelles des CV, brouillons d\'évaluation confidentiels, texte sincère des enquêtes de climat social — un LLM local auto-hébergé garde ce contenu sur une infrastructure que vous contrôlez, au prix de construire et maintenir la pile vous-même.',
         bullets: [
-          'Les plateformes leaders regroupent hébergement IA, support et intégrations — déploiement le plus rapide, mais les données quittent votre infrastructure',
+          'Les plateformes courantes regroupent hébergement IA, support et intégrations — déploiement le plus rapide, mais les données quittent votre infrastructure',
           'Les LLM locaux auto-hébergés gardent données candidats, texte de climat social et brouillons d\'évaluation sur une infrastructure que vous contrôlez',
           'L\'IA en recrutement/RH est classée à haut risque par le règlement IA de l\'UE et soumise à des lois d\'audit de biais comme la Local Law 144 de New York',
           'La décision finale doit toujours rester humaine pour le tri, la notation et les résultats de performance — jamais d\'automatisation complète',
@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Les plateformes RH IA leaders et une pile de LLM local auto-hébergée résolvent des problèmes différents, pas des versions concurrentes du même.** Les plateformes sont la voie la plus rapide ; l\'auto-hébergement, quand les données candidats ou collaborateurs ne peuvent pas quitter votre infrastructure.',
+          '**Les plateformes RH IA courantes et une pile de LLM local auto-hébergée résolvent des problèmes différents, pas des versions concurrentes du même.** Les plateformes sont la voie la plus rapide ; l\'auto-hébergement, quand les données candidats ou collaborateurs ne peuvent pas quitter votre infrastructure.',
           '**Le tri de CV, l\'analyse de climat social et la rédaction d\'évaluations sont les cas les plus solides pour l\'auto-hébergement** — chacun touche régulièrement des données (identité candidat, texte sincère des collaborateurs, contenu d\'évaluation confidentiel) qu\'une entreprise peut préférer ne pas confier à une API tierce.',
           '**L\'IA en recrutement et RH est une catégorie à haut risque sous le règlement IA de l\'UE**, et des juridictions américaines comme New York exigent des audits de biais indépendants pour les outils de recrutement automatisés — cela s\'applique à tout flux de tri ou de notation assisté par IA, commercial ou auto-hébergé.',
           '**Ceci n\'est pas un conseil juridique.** Les obligations d\'audit de biais, de notification aux candidats et les règles pour systèmes à haut risque varient selon la juridiction et évoluent — consultez un conseil juridique qualifié avant tout déploiement d\'IA en recrutement ou RH.',
@@ -850,7 +850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Les plateformes RH IA leaders (Workday, HireVue, Lattice) gèrent le tri de CV, la planification d\'entretiens et les évaluations de performance sur l\'infrastructure de l\'éditeur, tandis qu\'une pile de LLM local auto-hébergée garde données candidats, climat social et brouillons d\'évaluation sur une infrastructure contrôlée par l\'entreprise.',
+            text: 'Les plateformes RH IA courantes (Workday, HireVue, Lattice) gèrent le tri de CV, la planification d\'entretiens et les évaluations de performance sur l\'infrastructure de l\'éditeur, tandis qu\'une pile de LLM local auto-hébergée garde données candidats, climat social et brouillons d\'évaluation sur une infrastructure contrôlée par l\'entreprise.',
           },
           {
             type: 'plain-terms',
@@ -864,7 +864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Classification règlement IA UE :** les systèmes IA utilisés pour le recrutement, le tri de candidats et l\'évaluation de la performance des travailleurs sont classés à haut risque à l\'annexe III du règlement (UE) 2024/1689.',
           '**Local Law 144 de New York :** exige un audit de biais indépendant, des résultats publiés et une notification aux candidats pour tout « outil automatisé de décision d\'emploi » assistant substantiellement une décision d\'embauche à New York.',
-          '**Plateformes leaders comparées ici :** Workday, HireVue, Paradox (Olivia), Lattice, 15Five, Culture Amp, Textio et Eightfold AI — des produits réels et actuellement actifs, pas hypothétiques.',
+          '**Plateformes courantes comparées ici :** Workday, HireVue, Paradox (Olivia), Lattice, 15Five, Culture Amp, Textio et Eightfold AI — des produits réels et actuellement actifs, pas hypothétiques.',
           '**Fourchette de coût de l\'infrastructure auto-hébergée :** environ 0,34 à 4,29 $/heure pour des GPU cloud à la demande, de la classe RTX 4090 à H100 (pages tarifs de RunPod et Lambda), adaptés à un pilote de modèle de taille moyenne (7 à 32 milliards de paramètres), hors temps d\'ingénierie.',
           '**Ceci n\'est pas un conseil juridique** — les obligations réglementaires pour l\'IA en recrutement et RH varient selon la juridiction et évoluent ; vérifiez les exigences actuelles auprès d\'un conseil juridique avant le déploiement.',
         ],
@@ -874,15 +874,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Où l\'IA intervient réellement dans les flux RH',
         content:
           '**« L\'IA en RH » n\'est pas une seule décision d\'achat — ce sont six flux distincts ou plus, avec des profils de sensibilité des données très différents.** Les traiter comme une seule décision d\'achat est la première erreur que commettent la plupart des entreprises.',
-        columns: ['Flux RH', 'Exemple de plateforme leader', 'Sensibilité des données', 'Adéquation auto-hébergement'],
+        columns: ['Flux RH', 'Exemple de plateforme courante', 'Sensibilité des données', 'Adéquation auto-hébergement'],
         rows: [
-          { 'Flux RH': 'Tri de CV', 'Exemple de plateforme leader': 'Workday, Eightfold AI', 'Sensibilité des données': 'Élevée (données candidat)', 'Adéquation auto-hébergement': 'Forte' },
-          { 'Flux RH': 'Planification d\'entretiens', 'Exemple de plateforme leader': 'Paradox (Olivia)', 'Sensibilité des données': 'Faible-modérée', 'Adéquation auto-hébergement': 'Faible — effort peu rentable' },
-          { 'Flux RH': 'Évaluation d\'entretiens', 'Exemple de plateforme leader': 'HireVue', 'Sensibilité des données': 'Élevée (vidéo/comportement)', 'Adéquation auto-hébergement': 'Modérée' },
-          { 'Flux RH': 'Q&R d\'intégration', 'Exemple de plateforme leader': 'Bots intégrés au SIRH', 'Sensibilité des données': 'Modérée', 'Adéquation auto-hébergement': 'Forte (RAG sur documents)' },
-          { 'Flux RH': 'Analyse du climat social', 'Exemple de plateforme leader': 'Culture Amp', 'Sensibilité des données': 'Élevée (texte libre sincère)', 'Adéquation auto-hébergement': 'Forte' },
-          { 'Flux RH': 'Rédaction d\'évaluations', 'Exemple de plateforme leader': 'Lattice, 15Five', 'Sensibilité des données': 'Élevée (contenu confidentiel)', 'Adéquation auto-hébergement': 'Forte' },
-          { 'Flux RH': 'Q&R politiques RH', 'Exemple de plateforme leader': 'n/a — voir guide séparé', 'Sensibilité des données': 'Élevée', 'Adéquation auto-hébergement': 'Forte — couverte séparément' },
+          { 'Flux RH': 'Tri de CV', 'Exemple de plateforme courante': 'Workday, Eightfold AI', 'Sensibilité des données': 'Élevée (données candidat)', 'Adéquation auto-hébergement': 'Forte' },
+          { 'Flux RH': 'Planification d\'entretiens', 'Exemple de plateforme courante': 'Paradox (Olivia)', 'Sensibilité des données': 'Faible-modérée', 'Adéquation auto-hébergement': 'Faible — effort peu rentable' },
+          { 'Flux RH': 'Évaluation d\'entretiens', 'Exemple de plateforme courante': 'HireVue', 'Sensibilité des données': 'Élevée (vidéo/comportement)', 'Adéquation auto-hébergement': 'Modérée' },
+          { 'Flux RH': 'Q&R d\'intégration', 'Exemple de plateforme courante': 'Bots intégrés au SIRH', 'Sensibilité des données': 'Modérée', 'Adéquation auto-hébergement': 'Forte (RAG sur documents)' },
+          { 'Flux RH': 'Analyse du climat social', 'Exemple de plateforme courante': 'Culture Amp', 'Sensibilité des données': 'Élevée (texte libre sincère)', 'Adéquation auto-hébergement': 'Forte' },
+          { 'Flux RH': 'Rédaction d\'évaluations', 'Exemple de plateforme courante': 'Lattice, 15Five', 'Sensibilité des données': 'Élevée (contenu confidentiel)', 'Adéquation auto-hébergement': 'Forte' },
+          { 'Flux RH': 'Q&R politiques RH', 'Exemple de plateforme courante': 'n/a — voir guide séparé', 'Sensibilité des données': 'Élevée', 'Adéquation auto-hébergement': 'Forte — couverte séparément' },
         ],
       },
       commercialPlatforms: {
@@ -963,27 +963,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost-comparison',
         title: 'Coûts : abonnement SaaS vs infrastructure auto-hébergée',
         content:
-          '**Les plateformes leaders facturent par collaborateur ou par siège, généralement via un devis entreprise sur mesure ; l\'infrastructure auto-hébergée échange cet abonnement prévisible contre du calcul à l\'usage plus du temps d\'ingénierie.** Aucune option n\'est universellement moins chère — la réponse dépend de l\'échelle de déploiement, de la capacité d\'ingénierie interne et de l\'importance que votre organisation accorde au fait de garder les données candidats et collaborateurs hors d\'une infrastructure tierce.',
-        columns: ['Critère', 'Plateforme leader', 'Pile auto-hébergée'],
+          '**Les plateformes courantes facturent par collaborateur ou par siège, généralement via un devis entreprise sur mesure ; l\'infrastructure auto-hébergée échange cet abonnement prévisible contre du calcul à l\'usage plus du temps d\'ingénierie.** Aucune option n\'est universellement moins chère — la réponse dépend de l\'échelle de déploiement, de la capacité d\'ingénierie interne et de l\'importance que votre organisation accorde au fait de garder les données candidats et collaborateurs hors d\'une infrastructure tierce.',
+        columns: ['Critère', 'Plateforme courante', 'Pile auto-hébergée'],
         rows: [
-          { 'Critère': 'Modèle tarifaire', 'Plateforme leader': 'Par collaborateur/siège, devis entreprise sur mesure', 'Pile auto-hébergée': 'Calcul à l\'usage + temps d\'ingénierie' },
-          { 'Critère': 'Fourchette coût GPU cloud', 'Plateforme leader': 'Inclus dans l\'abonnement', 'Pile auto-hébergée': '~0,34-4,29 $/h (RTX 4090 à H100)' },
-          { 'Critère': 'Localisation des données', 'Plateforme leader': 'Infrastructure hébergée par l\'éditeur', 'Pile auto-hébergée': 'Infrastructure que vous contrôlez' },
-          { 'Critère': 'Effort de mise en place', 'Plateforme leader': 'Faible — configurer et démarrer', 'Pile auto-hébergée': 'Élevé — construire, sécuriser, maintenir' },
-          { 'Critère': 'Maintenance continue', 'Plateforme leader': 'Gérée par l\'éditeur', 'Pile auto-hébergée': 'Interne ou sous-traitée' },
+          { 'Critère': 'Modèle tarifaire', 'Plateforme courante': 'Par collaborateur/siège, devis entreprise sur mesure', 'Pile auto-hébergée': 'Calcul à l\'usage + temps d\'ingénierie' },
+          { 'Critère': 'Fourchette coût GPU cloud', 'Plateforme courante': 'Inclus dans l\'abonnement', 'Pile auto-hébergée': '~0,34-4,29 $/h (RTX 4090 à H100)' },
+          { 'Critère': 'Localisation des données', 'Plateforme courante': 'Infrastructure hébergée par l\'éditeur', 'Pile auto-hébergée': 'Infrastructure que vous contrôlez' },
+          { 'Critère': 'Effort de mise en place', 'Plateforme courante': 'Faible — configurer et démarrer', 'Pile auto-hébergée': 'Élevé — construire, sécuriser, maintenir' },
+          { 'Critère': 'Maintenance continue', 'Plateforme courante': 'Gérée par l\'éditeur', 'Pile auto-hébergée': 'Interne ou sous-traitée' },
         ],
       },
       decisionGuide: {
         id: 'decision-guide',
         title: 'Quelle approche convient à votre équipe ?',
         content:
-          '**La plupart des entreprises font tourner les deux approches en parallèle plutôt que de choisir exclusivement l\'une — plateformes leaders pour la planification et les flux ATS larges, auto-hébergement pour les données les plus sensibles.** Utilisez les profils ci-dessous par flux, pas par entreprise.',
+          '**La plupart des entreprises font tourner les deux approches en parallèle plutôt que de choisir exclusivement l\'une — plateformes courantes pour la planification et les flux ATS larges, auto-hébergement pour les données les plus sensibles.** Utilisez les profils ci-dessous par flux, pas par entreprise.',
         items: [
-          '**Petite équipe RH sans support d\'ingénierie dédié :** utiliser une plateforme leader pour l\'ensemble du flux — la charge de mise en place et de maintenance de l\'auto-hébergement ne se justifie pas à cette échelle.',
-          '**Entreprise avec une équipe interne ML/platform engineering et un contrôle de conformité poussé sur les données candidats :** auto-héberger spécifiquement le tri de CV et l\'analyse de climat social ; garder la planification d\'entretiens sur une plateforme leader où la sensibilité des données est moindre.',
+          '**Petite équipe RH sans support d\'ingénierie dédié :** utiliser une plateforme courante pour l\'ensemble du flux — la charge de mise en place et de maintenance de l\'auto-hébergement ne se justifie pas à cette échelle.',
+          '**Entreprise avec une équipe interne ML/platform engineering et un contrôle de conformité poussé sur les données candidats :** auto-héberger spécifiquement le tri de CV et l\'analyse de climat social ; garder la planification d\'entretiens sur une plateforme courante où la sensibilité des données est moindre.',
           '**Entreprise déjà engagée dans des discussions poussées sur les données collaborateurs UE :** l\'auto-hébergement de l\'analyse de climat social et de la rédaction d\'évaluations retire un sous-traitant tiers de la discussion, ce qui peut nettement simplifier ces échanges.',
           '**Renoncer entièrement à l\'auto-hébergement si** votre organisation n\'a pas la capacité d\'ingénierie pour maintenir la pile, ou si le flux concerné (comme la planification d\'entretiens) ne touche pas des données assez sensibles pour justifier l\'effort de construction.',
-          '**En cas de doute, démarrer avec une plateforme leader pour la largeur et piloter l\'auto-hébergement sur un seul flux à haute sensibilité** (tri de CV ou analyse de climat social) avant d\'étendre davantage.',
+          '**En cas de doute, démarrer avec une plateforme courante pour la largeur et piloter l\'auto-hébergement sur un seul flux à haute sensibilité** (tri de CV ou analyse de climat social) avant d\'étendre davantage.',
         ],
       },
       commonMistakes: {
@@ -1020,7 +1020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquentes',
         faqs: [
           { q: 'Le tri de CV assisté par IA est-il légal ?', a: 'Il peut l\'être, mais il est régulé plutôt que libre. Sous le règlement IA de l\'UE, l\'IA utilisée pour le tri de candidats est classée à haut risque à l\'annexe III, avec des obligations de gestion des risques et de supervision humaine. Aux États-Unis, des juridictions comme New York exigent un audit de biais indépendant et une notification aux candidats pour les outils automatisés de décision d\'emploi. Ceci n\'est pas un conseil juridique — vérifiez les exigences actuelles pour votre juridiction et votre flux précis avec un conseil juridique avant tout déploiement, commercial ou auto-hébergé.' },
-          { q: 'Quelles plateformes RH IA leaders sont réellement en usage actif aujourd\'hui ?', a: 'Workday (recrutement/ATS avec appariement de compétences assisté par IA), HireVue (évaluation d\'entretien structurée assistée par IA), Paradox (IA conversationnelle pour la planification d\'entretiens, sous le nom Olivia), Lattice et 15Five (aide à la rédaction d\'évaluations assistée par IA), Culture Amp (analyse IA du texte des enquêtes collaborateurs), Textio (analyse linguistique IA pour offres d\'emploi et évaluations) et Eightfold AI (appariement de talents assisté par IA) sont tous des produits réels et actuellement actifs avec des fonctionnalités IA documentées publiquement. Vérifiez le périmètre fonctionnel actuel directement auprès de chaque éditeur, les capacités produit évoluant.' },
+          { q: 'Quelles plateformes RH IA courantes sont réellement en usage actif aujourd\'hui ?', a: 'Workday (recrutement/ATS avec appariement de compétences assisté par IA), HireVue (évaluation d\'entretien structurée assistée par IA), Paradox (IA conversationnelle pour la planification d\'entretiens, sous le nom Olivia), Lattice et 15Five (aide à la rédaction d\'évaluations assistée par IA), Culture Amp (analyse IA du texte des enquêtes collaborateurs), Textio (analyse linguistique IA pour offres d\'emploi et évaluations) et Eightfold AI (appariement de talents assisté par IA) sont tous des produits réels et actuellement actifs avec des fonctionnalités IA documentées publiquement. Vérifiez le périmètre fonctionnel actuel directement auprès de chaque éditeur, les capacités produit évoluant.' },
           { q: 'Un LLM local auto-hébergé peut-il remplacer un ATS comme Workday ?', a: 'Non — l\'auto-hébergement n\'est pas positionné dans ce guide comme un remplacement complet d\'ATS. C\'est une alternative ciblée pour les flux précis où garder les données hors d\'une infrastructure tierce compte le plus : extraction et notation de champs de CV, analyse de climat social et aide à la rédaction d\'évaluations. La plupart des entreprises font tourner les deux approches ensemble plutôt que de remplacer l\'une par l\'autre.' },
           { q: 'L\'auto-hébergement d\'un flux RH IA satisfait-il automatiquement le RGPD ou le règlement IA de l\'UE ?', a: 'Non. L\'auto-hébergement retire un sous-traitant tiers de la cartographie des flux de données, ce qui compte, mais ne satisfait pas automatiquement toutes les obligations applicables — les exigences de gestion des risques, de supervision humaine et de documentation du règlement IA de l\'UE pour les systèmes à haut risque s\'appliquent quel que soit l\'endroit où tourne le modèle. Voir le [guide RAG local conforme RGPD](/fr/power-local-llm/local-rag-for-private-business-data) pour l\'ensemble de contrôles complet, et consultez un conseil juridique pour votre déploiement précis.' },
           { q: 'Qu\'est-ce que la Local Law 144 de New York et s\'applique-t-elle hors de New York ?', a: 'La Local Law 144 est une ordonnance municipale de New York exigeant des employeurs qu\'ils commandent un audit de biais indépendant, publient une synthèse des résultats et informent les candidats avant d\'utiliser un outil automatisé de décision d\'emploi pour assister substantiellement une décision d\'embauche à New York. Elle s\'applique aux décisions d\'emploi liées à New York ; plusieurs autres États et villes américains ont introduit ou adopté des exigences comparables — ceci n\'est pas un conseil juridique, vérifiez l\'applicabilité actuelle à vos sites de recrutement précis avec un conseil juridique.' },
@@ -1784,15 +1784,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Dónde interviene realmente la IA en los flujos de RR. HH.',
         content:
           '**"La IA en RR. HH." no es una sola decisión de compra: son seis o más flujos de trabajo distintos con perfiles de sensibilidad de datos muy diferentes.** Tratarlos como una sola decisión de compra es el primer error que comete la mayoría de las empresas.',
-        columns: ['Flujo de RR. HH.', 'Ejemplo de plataforma líder', 'Sensibilidad de datos', 'Aptitud para autoalojamiento'],
+        columns: ['Flujo de RR. HH.', 'Ejemplo de plataforma habitual', 'Sensibilidad de datos', 'Aptitud para autoalojamiento'],
         rows: [
-          { 'Flujo de RR. HH.': 'Filtrado de CV', 'Ejemplo de plataforma líder': 'Workday, Eightfold AI', 'Sensibilidad de datos': 'Alta (datos de candidato)', 'Aptitud para autoalojamiento': 'Fuerte' },
-          { 'Flujo de RR. HH.': 'Programación de entrevistas', 'Ejemplo de plataforma líder': 'Paradox (Olivia)', 'Sensibilidad de datos': 'Baja-moderada', 'Aptitud para autoalojamiento': 'Débil — poco rentable' },
-          { 'Flujo de RR. HH.': 'Evaluación de entrevistas', 'Ejemplo de plataforma líder': 'HireVue', 'Sensibilidad de datos': 'Alta (video/conducta)', 'Aptitud para autoalojamiento': 'Moderada' },
-          { 'Flujo de RR. HH.': 'Preguntas de incorporación', 'Ejemplo de plataforma líder': 'Bots integrados en HRIS', 'Sensibilidad de datos': 'Moderada', 'Aptitud para autoalojamiento': 'Fuerte (RAG sobre documentos)' },
-          { 'Flujo de RR. HH.': 'Análisis de clima laboral', 'Ejemplo de plataforma líder': 'Culture Amp', 'Sensibilidad de datos': 'Alta (texto libre sincero)', 'Aptitud para autoalojamiento': 'Fuerte' },
-          { 'Flujo de RR. HH.': 'Redacción de evaluaciones', 'Ejemplo de plataforma líder': 'Lattice, 15Five', 'Sensibilidad de datos': 'Alta (contenido confidencial)', 'Aptitud para autoalojamiento': 'Fuerte' },
-          { 'Flujo de RR. HH.': 'Preguntas sobre políticas de RR. HH.', 'Ejemplo de plataforma líder': 'n/a — ver guía separada', 'Sensibilidad de datos': 'Alta', 'Aptitud para autoalojamiento': 'Fuerte — cubierta aparte' },
+          { 'Flujo de RR. HH.': 'Filtrado de CV', 'Ejemplo de plataforma habitual': 'Workday, Eightfold AI', 'Sensibilidad de datos': 'Alta (datos de candidato)', 'Aptitud para autoalojamiento': 'Fuerte' },
+          { 'Flujo de RR. HH.': 'Programación de entrevistas', 'Ejemplo de plataforma habitual': 'Paradox (Olivia)', 'Sensibilidad de datos': 'Baja-moderada', 'Aptitud para autoalojamiento': 'Débil — poco rentable' },
+          { 'Flujo de RR. HH.': 'Evaluación de entrevistas', 'Ejemplo de plataforma habitual': 'HireVue', 'Sensibilidad de datos': 'Alta (video/conducta)', 'Aptitud para autoalojamiento': 'Moderada' },
+          { 'Flujo de RR. HH.': 'Preguntas de incorporación', 'Ejemplo de plataforma habitual': 'Bots integrados en HRIS', 'Sensibilidad de datos': 'Moderada', 'Aptitud para autoalojamiento': 'Fuerte (RAG sobre documentos)' },
+          { 'Flujo de RR. HH.': 'Análisis de clima laboral', 'Ejemplo de plataforma habitual': 'Culture Amp', 'Sensibilidad de datos': 'Alta (texto libre sincero)', 'Aptitud para autoalojamiento': 'Fuerte' },
+          { 'Flujo de RR. HH.': 'Redacción de evaluaciones', 'Ejemplo de plataforma habitual': 'Lattice, 15Five', 'Sensibilidad de datos': 'Alta (contenido confidencial)', 'Aptitud para autoalojamiento': 'Fuerte' },
+          { 'Flujo de RR. HH.': 'Preguntas sobre políticas de RR. HH.', 'Ejemplo de plataforma habitual': 'n/a — ver guía separada', 'Sensibilidad de datos': 'Alta', 'Aptitud para autoalojamiento': 'Fuerte — cubierta aparte' },
         ],
       },
       commercialPlatforms: {
@@ -1874,13 +1874,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Costos: suscripción SaaS vs. infraestructura autoalojada',
         content:
           '**Las plataformas habituales cobran por empleado o por puesto, típicamente mediante una cotización empresarial personalizada; la infraestructura autoalojada cambia esa suscripción predecible por cómputo de pago por uso más tiempo de ingeniería.** Ninguna opción es universalmente más barata: la respuesta depende de la escala del despliegue, la capacidad de ingeniería interna y cuánto valore tu organización mantener los datos de candidatos y empleados fuera de infraestructura de terceros.',
-        columns: ['Criterio', 'Plataforma líder', 'Pila autoalojada'],
+        columns: ['Criterio', 'Plataforma habitual', 'Pila autoalojada'],
         rows: [
-          { 'Criterio': 'Modelo de precios', 'Plataforma líder': 'Por empleado/puesto, cotización empresarial personalizada', 'Pila autoalojada': 'Cómputo de pago por uso + tiempo de ingeniería' },
-          { 'Criterio': 'Rango de costo de GPU en la nube', 'Plataforma líder': 'Incluido en la suscripción', 'Pila autoalojada': '~0,34-4,29 $/h (RTX 4090 a H100)' },
-          { 'Criterio': 'Ubicación de los datos', 'Plataforma líder': 'Infraestructura alojada por el proveedor', 'Pila autoalojada': 'Infraestructura que tú controlas' },
-          { 'Criterio': 'Esfuerzo de configuración', 'Plataforma líder': 'Bajo — configurar y listo', 'Pila autoalojada': 'Alto — construir, asegurar, mantener' },
-          { 'Criterio': 'Mantenimiento continuo', 'Plataforma líder': 'Gestionado por el proveedor', 'Pila autoalojada': 'Interno o contratado' },
+          { 'Criterio': 'Modelo de precios', 'Plataforma habitual': 'Por empleado/puesto, cotización empresarial personalizada', 'Pila autoalojada': 'Cómputo de pago por uso + tiempo de ingeniería' },
+          { 'Criterio': 'Rango de costo de GPU en la nube', 'Plataforma habitual': 'Incluido en la suscripción', 'Pila autoalojada': '~0,34-4,29 $/h (RTX 4090 a H100)' },
+          { 'Criterio': 'Ubicación de los datos', 'Plataforma habitual': 'Infraestructura alojada por el proveedor', 'Pila autoalojada': 'Infraestructura que tú controlas' },
+          { 'Criterio': 'Esfuerzo de configuración', 'Plataforma habitual': 'Bajo — configurar y listo', 'Pila autoalojada': 'Alto — construir, asegurar, mantener' },
+          { 'Criterio': 'Mantenimiento continuo', 'Plataforma habitual': 'Gestionado por el proveedor', 'Pila autoalojada': 'Interno o contratado' },
         ],
       },
       decisionGuide: {
@@ -1889,11 +1889,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**La mayoría de las empresas ejecutan ambas vías a la vez, no eligen una en exclusiva —plataformas habituales para programación y flujos amplios de ATS, autoalojamiento para los datos más sensibles.** Usa los perfiles siguientes por flujo, no por empresa.',
         items: [
-          '**Equipo de RR. HH. pequeño, sin soporte de ingeniería dedicado:** usa una plataforma líder para todo el flujo —la carga de configuración y mantenimiento del autoalojamiento no vale la pena a esta escala.',
-          '**Empresa con equipo interno de ingeniería de ML/plataforma y fuerte escrutinio de cumplimiento sobre datos de candidatos:** autoaloja específicamente el filtrado de CV y el análisis de clima laboral; mantén la programación de entrevistas en una plataforma líder donde la sensibilidad de los datos es menor.',
+          '**Equipo de RR. HH. pequeño, sin soporte de ingeniería dedicado:** usa una plataforma habitual para todo el flujo —la carga de configuración y mantenimiento del autoalojamiento no vale la pena a esta escala.',
+          '**Empresa con equipo interno de ingeniería de ML/plataforma y fuerte escrutinio de cumplimiento sobre datos de candidatos:** autoaloja específicamente el filtrado de CV y el análisis de clima laboral; mantén la programación de entrevistas en una plataforma habitual donde la sensibilidad de los datos es menor.',
           '**Empresa ya inmersa en negociaciones sobre datos de empleados de la UE o comité de empresa:** autoalojar el análisis de clima laboral y la redacción de evaluaciones elimina un encargado del tratamiento de terceros de la conversación, lo que puede simplificar sustancialmente esa negociación.',
           '**Evita el autoalojamiento por completo si** tu organización no tiene capacidad de ingeniería para mantener la pila, o si el flujo en cuestión (como la programación de entrevistas) no toca datos lo bastante sensibles como para justificar el esfuerzo de construcción.',
-          '**Si tienes dudas, empieza con una plataforma líder para cubrir amplitud y pilota el autoalojamiento en un flujo de alta sensibilidad** (filtrado de CV o análisis de clima laboral) antes de expandirte más.',
+          '**Si tienes dudas, empieza con una plataforma habitual para cubrir amplitud y pilota el autoalojamiento en un flujo de alta sensibilidad** (filtrado de CV o análisis de clima laboral) antes de expandirte más.',
         ],
       },
       commonMistakes: {
@@ -2086,15 +2086,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Onde a IA realmente atua nos fluxos de RH',
         content:
           '**"IA em RH" não é uma única decisão de compra — são seis ou mais fluxos separados com perfis de sensibilidade de dados muito diferentes.** Tratá-los como uma única decisão de compra é o primeiro erro que a maioria das empresas comete.',
-        columns: ['Fluxo de RH', 'Exemplo de plataforma líder', 'Sensibilidade dos dados', 'Adequação à auto-hospedagem'],
+        columns: ['Fluxo de RH', 'Exemplo de plataforma usual', 'Sensibilidade dos dados', 'Adequação à auto-hospedagem'],
         rows: [
-          { 'Fluxo de RH': 'Triagem de currículos', 'Exemplo de plataforma líder': 'Workday, Eightfold AI', 'Sensibilidade dos dados': 'Alta (dados do candidato)', 'Adequação à auto-hospedagem': 'Forte' },
-          { 'Fluxo de RH': 'Agendamento de entrevistas', 'Exemplo de plataforma líder': 'Paradox (Olivia)', 'Sensibilidade dos dados': 'Baixa-moderada', 'Adequação à auto-hospedagem': 'Fraca — esforço pouco compensador' },
-          { 'Fluxo de RH': 'Avaliação de entrevistas', 'Exemplo de plataforma líder': 'HireVue', 'Sensibilidade dos dados': 'Alta (vídeo/comportamento)', 'Adequação à auto-hospedagem': 'Moderada' },
-          { 'Fluxo de RH': 'Perguntas de onboarding', 'Exemplo de plataforma líder': 'Bots integrados ao HRIS', 'Sensibilidade dos dados': 'Moderada', 'Adequação à auto-hospedagem': 'Forte (RAG sobre documentos)' },
-          { 'Fluxo de RH': 'Análise de sentimento', 'Exemplo de plataforma líder': 'Culture Amp', 'Sensibilidade dos dados': 'Alta (texto livre sincero)', 'Adequação à auto-hospedagem': 'Forte' },
-          { 'Fluxo de RH': 'Redação de avaliações', 'Exemplo de plataforma líder': 'Lattice, 15Five', 'Sensibilidade dos dados': 'Alta (conteúdo confidencial)', 'Adequação à auto-hospedagem': 'Forte' },
-          { 'Fluxo de RH': 'Perguntas sobre políticas de RH', 'Exemplo de plataforma líder': 'n/d — ver guia separado', 'Sensibilidade dos dados': 'Alta', 'Adequação à auto-hospedagem': 'Forte — coberta à parte' },
+          { 'Fluxo de RH': 'Triagem de currículos', 'Exemplo de plataforma usual': 'Workday, Eightfold AI', 'Sensibilidade dos dados': 'Alta (dados do candidato)', 'Adequação à auto-hospedagem': 'Forte' },
+          { 'Fluxo de RH': 'Agendamento de entrevistas', 'Exemplo de plataforma usual': 'Paradox (Olivia)', 'Sensibilidade dos dados': 'Baixa-moderada', 'Adequação à auto-hospedagem': 'Fraca — esforço pouco compensador' },
+          { 'Fluxo de RH': 'Avaliação de entrevistas', 'Exemplo de plataforma usual': 'HireVue', 'Sensibilidade dos dados': 'Alta (vídeo/comportamento)', 'Adequação à auto-hospedagem': 'Moderada' },
+          { 'Fluxo de RH': 'Perguntas de onboarding', 'Exemplo de plataforma usual': 'Bots integrados ao HRIS', 'Sensibilidade dos dados': 'Moderada', 'Adequação à auto-hospedagem': 'Forte (RAG sobre documentos)' },
+          { 'Fluxo de RH': 'Análise de sentimento', 'Exemplo de plataforma usual': 'Culture Amp', 'Sensibilidade dos dados': 'Alta (texto livre sincero)', 'Adequação à auto-hospedagem': 'Forte' },
+          { 'Fluxo de RH': 'Redação de avaliações', 'Exemplo de plataforma usual': 'Lattice, 15Five', 'Sensibilidade dos dados': 'Alta (conteúdo confidencial)', 'Adequação à auto-hospedagem': 'Forte' },
+          { 'Fluxo de RH': 'Perguntas sobre políticas de RH', 'Exemplo de plataforma usual': 'n/d — ver guia separado', 'Sensibilidade dos dados': 'Alta', 'Adequação à auto-hospedagem': 'Forte — coberta à parte' },
         ],
       },
       commercialPlatforms: {
@@ -2176,13 +2176,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Custo: assinatura SaaS vs. infraestrutura auto-hospedada',
         content:
           '**Plataformas usuais cobram por funcionário ou por licença, geralmente via cotação corporativa personalizada; a infraestrutura auto-hospedada troca essa assinatura previsível por computação sob demanda mais tempo de engenharia.** Nenhuma opção é universalmente mais barata — a resposta depende da escala de implantação, da capacidade de engenharia interna e de quanto sua organização valoriza manter dados de candidatos e funcionários fora de infraestrutura de terceiros.',
-        columns: ['Critério', 'Plataforma líder', 'Pilha auto-hospedada'],
+        columns: ['Critério', 'Plataforma usual', 'Pilha auto-hospedada'],
         rows: [
-          { 'Critério': 'Modelo de preços', 'Plataforma líder': 'Por funcionário/licença, cotação corporativa personalizada', 'Pilha auto-hospedada': 'Computação sob demanda + tempo de engenharia' },
-          { 'Critério': 'Faixa de custo de GPU em nuvem', 'Plataforma líder': 'Incluído na assinatura', 'Pilha auto-hospedada': '~US$ 0,34-4,29/h (RTX 4090 a H100)' },
-          { 'Critério': 'Localização dos dados', 'Plataforma líder': 'Infraestrutura hospedada pelo fornecedor', 'Pilha auto-hospedada': 'Infraestrutura que você controla' },
-          { 'Critério': 'Esforço de configuração', 'Plataforma líder': 'Baixo — configurar e começar', 'Pilha auto-hospedada': 'Alto — construir, proteger, manter' },
-          { 'Critério': 'Manutenção contínua', 'Plataforma líder': 'Gerenciada pelo fornecedor', 'Pilha auto-hospedada': 'Interna ou terceirizada' },
+          { 'Critério': 'Modelo de preços', 'Plataforma usual': 'Por funcionário/licença, cotação corporativa personalizada', 'Pilha auto-hospedada': 'Computação sob demanda + tempo de engenharia' },
+          { 'Critério': 'Faixa de custo de GPU em nuvem', 'Plataforma usual': 'Incluído na assinatura', 'Pilha auto-hospedada': '~US$ 0,34-4,29/h (RTX 4090 a H100)' },
+          { 'Critério': 'Localização dos dados', 'Plataforma usual': 'Infraestrutura hospedada pelo fornecedor', 'Pilha auto-hospedada': 'Infraestrutura que você controla' },
+          { 'Critério': 'Esforço de configuração', 'Plataforma usual': 'Baixo — configurar e começar', 'Pilha auto-hospedada': 'Alto — construir, proteger, manter' },
+          { 'Critério': 'Manutenção contínua', 'Plataforma usual': 'Gerenciada pelo fornecedor', 'Pilha auto-hospedada': 'Interna ou terceirizada' },
         ],
       },
       decisionGuide: {
@@ -2191,11 +2191,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A maioria das empresas roda os dois caminhos ao mesmo tempo, sem escolher um exclusivamente — plataformas usuais para agendamento e fluxos amplos de ATS, auto-hospedagem para os dados mais sensíveis.** Use os perfis abaixo por fluxo, não por empresa.',
         items: [
-          '**Equipe de RH pequena, sem suporte de engenharia dedicado:** use uma plataforma líder para todo o fluxo — o esforço de configuração e manutenção da auto-hospedagem não compensa nessa escala.',
-          '**Empresa com equipe interna de engenharia de ML/plataforma e forte escrutínio de compliance sobre dados de candidatos:** auto-hospede especificamente a triagem de currículos e a análise de sentimento; mantenha o agendamento de entrevistas em uma plataforma líder, onde a sensibilidade dos dados é menor.',
+          '**Equipe de RH pequena, sem suporte de engenharia dedicado:** use uma plataforma usual para todo o fluxo — o esforço de configuração e manutenção da auto-hospedagem não compensa nessa escala.',
+          '**Empresa com equipe interna de engenharia de ML/plataforma e forte escrutínio de compliance sobre dados de candidatos:** auto-hospede especificamente a triagem de currículos e a análise de sentimento; mantenha o agendamento de entrevistas em uma plataforma usual, onde a sensibilidade dos dados é menor.',
           '**Empresa já envolvida em negociações profundas sobre dados de funcionários na UE:** auto-hospedar a análise de sentimento e a redação de avaliações remove um operador de dados terceiro da conversa, o que pode simplificar bastante essa negociação.',
           '**Evite a auto-hospedagem por completo se** sua organização não tem capacidade de engenharia para manter a pilha, ou se o fluxo em questão (como agendamento de entrevistas) não toca em dados sensíveis o suficiente para justificar o esforço de construção.',
-          '**Em caso de dúvida, comece com uma plataforma líder para amplitude e faça piloto de auto-hospedagem em um único fluxo de alta sensibilidade** (triagem de currículos ou análise de sentimento) antes de expandir mais.',
+          '**Em caso de dúvida, comece com uma plataforma usual para amplitude e faça piloto de auto-hospedagem em um único fluxo de alta sensibilidade** (triagem de currículos ou análise de sentimento) antes de expandir mais.',
         ],
       },
       commonMistakes: {
@@ -2388,15 +2388,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'أين يتدخل الذكاء الاصطناعي فعليًا في سير عمل الموارد البشرية',
         content:
           '**"الذكاء الاصطناعي في الموارد البشرية" ليس قرار شراء واحدًا — بل ستة سير عمل منفصلة أو أكثر، ذات ملامح حساسية بيانات مختلفة تمامًا.** معاملتها كقرار شراء واحد هو أول خطأ ترتكبه معظم المؤسسات.',
-        columns: ['سير عمل الموارد البشرية', 'مثال منصة رائدة', 'حساسية البيانات', 'ملاءمة الاستضافة الذاتية'],
+        columns: ['سير عمل الموارد البشرية', 'مثال منصة شائعة', 'حساسية البيانات', 'ملاءمة الاستضافة الذاتية'],
         rows: [
-          { 'سير عمل الموارد البشرية': 'فرز السير الذاتية', 'مثال منصة رائدة': 'Workday، Eightfold AI', 'حساسية البيانات': 'عالية (بيانات المرشح)', 'ملاءمة الاستضافة الذاتية': 'قوية' },
-          { 'سير عمل الموارد البشرية': 'جدولة المقابلات', 'مثال منصة رائدة': 'Paradox (Olivia)', 'حساسية البيانات': 'منخفضة إلى متوسطة', 'ملاءمة الاستضافة الذاتية': 'ضعيفة — جهد لا يستحق العائد' },
-          { 'سير عمل الموارد البشرية': 'تقييم المقابلات', 'مثال منصة رائدة': 'HireVue', 'حساسية البيانات': 'عالية (فيديو/سلوك)', 'ملاءمة الاستضافة الذاتية': 'متوسطة' },
-          { 'سير عمل الموارد البشرية': 'أسئلة التأهيل', 'مثال منصة رائدة': 'روبوتات مدمجة في نظام HRIS', 'حساسية البيانات': 'متوسطة', 'ملاءمة الاستضافة الذاتية': 'قوية (RAG على المستندات)' },
-          { 'سير عمل الموارد البشرية': 'تحليل المشاعر', 'مثال منصة رائدة': 'Culture Amp', 'حساسية البيانات': 'عالية (نص حر صادق)', 'ملاءمة الاستضافة الذاتية': 'قوية' },
-          { 'سير عمل الموارد البشرية': 'صياغة التقييمات', 'مثال منصة رائدة': 'Lattice، 15Five', 'حساسية البيانات': 'عالية (محتوى سري)', 'ملاءمة الاستضافة الذاتية': 'قوية' },
-          { 'سير عمل الموارد البشرية': 'أسئلة سياسات الموارد البشرية', 'مثال منصة رائدة': 'لا يوجد — راجع دليلاً منفصلاً', 'حساسية البيانات': 'عالية', 'ملاءمة الاستضافة الذاتية': 'قوية — مغطاة بشكل منفصل' },
+          { 'سير عمل الموارد البشرية': 'فرز السير الذاتية', 'مثال منصة شائعة': 'Workday، Eightfold AI', 'حساسية البيانات': 'عالية (بيانات المرشح)', 'ملاءمة الاستضافة الذاتية': 'قوية' },
+          { 'سير عمل الموارد البشرية': 'جدولة المقابلات', 'مثال منصة شائعة': 'Paradox (Olivia)', 'حساسية البيانات': 'منخفضة إلى متوسطة', 'ملاءمة الاستضافة الذاتية': 'ضعيفة — جهد لا يستحق العائد' },
+          { 'سير عمل الموارد البشرية': 'تقييم المقابلات', 'مثال منصة شائعة': 'HireVue', 'حساسية البيانات': 'عالية (فيديو/سلوك)', 'ملاءمة الاستضافة الذاتية': 'متوسطة' },
+          { 'سير عمل الموارد البشرية': 'أسئلة التأهيل', 'مثال منصة شائعة': 'روبوتات مدمجة في نظام HRIS', 'حساسية البيانات': 'متوسطة', 'ملاءمة الاستضافة الذاتية': 'قوية (RAG على المستندات)' },
+          { 'سير عمل الموارد البشرية': 'تحليل المشاعر', 'مثال منصة شائعة': 'Culture Amp', 'حساسية البيانات': 'عالية (نص حر صادق)', 'ملاءمة الاستضافة الذاتية': 'قوية' },
+          { 'سير عمل الموارد البشرية': 'صياغة التقييمات', 'مثال منصة شائعة': 'Lattice، 15Five', 'حساسية البيانات': 'عالية (محتوى سري)', 'ملاءمة الاستضافة الذاتية': 'قوية' },
+          { 'سير عمل الموارد البشرية': 'أسئلة سياسات الموارد البشرية', 'مثال منصة شائعة': 'لا يوجد — راجع دليلاً منفصلاً', 'حساسية البيانات': 'عالية', 'ملاءمة الاستضافة الذاتية': 'قوية — مغطاة بشكل منفصل' },
         ],
       },
       commercialPlatforms: {
@@ -2478,13 +2478,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'التكلفة: اشتراك SaaS مقابل البنية التحتية المستضافة ذاتيًا',
         content:
           '**تفرض المنصات الشائعة رسومًا لكل موظف أو مقعد، عادةً عبر عرض سعر مخصص للمؤسسات؛ وتستبدل البنية التحتية المستضافة ذاتيًا هذا الاشتراك القابل للتنبؤ بحوسبة مدفوعة حسب الاستخدام إضافة إلى وقت الهندسة.** لا يوجد خيار أرخص دائمًا — تعتمد الإجابة على نطاق النشر وقدرة الهندسة الداخلية ومدى أهمية إبقاء بيانات المرشحين والموظفين بعيدًا عن بنية تحتية تابعة لجهة خارجية بالنسبة لمؤسستك.',
-        columns: ['المعيار', 'المنصة الرائدة', 'الحزمة المستضافة ذاتيًا'],
+        columns: ['المعيار', 'المنصة الشائعة', 'الحزمة المستضافة ذاتيًا'],
         rows: [
-          { 'المعيار': 'نموذج التسعير', 'المنصة الرائدة': 'لكل موظف/مقعد، عرض سعر مخصص للمؤسسات', 'الحزمة المستضافة ذاتيًا': 'حوسبة مدفوعة حسب الاستخدام + وقت هندسة' },
-          { 'المعيار': 'نطاق تكلفة GPU السحابية', 'المنصة الرائدة': 'مدمجة في الاشتراك', 'الحزمة المستضافة ذاتيًا': '~0.34-4.29$/ساعة (من RTX 4090 إلى H100)' },
-          { 'المعيار': 'موقع البيانات', 'المنصة الرائدة': 'بنية تحتية يستضيفها المزود', 'الحزمة المستضافة ذاتيًا': 'بنية تحتية تتحكم بها أنت' },
-          { 'المعيار': 'جهد الإعداد', 'المنصة الرائدة': 'منخفض — إعداد ثم بدء التشغيل', 'الحزمة المستضافة ذاتيًا': 'مرتفع — بناء وتأمين وصيانة' },
-          { 'المعيار': 'الصيانة المستمرة', 'المنصة الرائدة': 'يديرها المزود', 'الحزمة المستضافة ذاتيًا': 'داخلية أو بالتعاقد' },
+          { 'المعيار': 'نموذج التسعير', 'المنصة الشائعة': 'لكل موظف/مقعد، عرض سعر مخصص للمؤسسات', 'الحزمة المستضافة ذاتيًا': 'حوسبة مدفوعة حسب الاستخدام + وقت هندسة' },
+          { 'المعيار': 'نطاق تكلفة GPU السحابية', 'المنصة الشائعة': 'مدمجة في الاشتراك', 'الحزمة المستضافة ذاتيًا': '~0.34-4.29$/ساعة (من RTX 4090 إلى H100)' },
+          { 'المعيار': 'موقع البيانات', 'المنصة الشائعة': 'بنية تحتية يستضيفها المزود', 'الحزمة المستضافة ذاتيًا': 'بنية تحتية تتحكم بها أنت' },
+          { 'المعيار': 'جهد الإعداد', 'المنصة الشائعة': 'منخفض — إعداد ثم بدء التشغيل', 'الحزمة المستضافة ذاتيًا': 'مرتفع — بناء وتأمين وصيانة' },
+          { 'المعيار': 'الصيانة المستمرة', 'المنصة الشائعة': 'يديرها المزود', 'الحزمة المستضافة ذاتيًا': 'داخلية أو بالتعاقد' },
         ],
       },
       decisionGuide: {
@@ -2493,11 +2493,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**تُشغّل معظم المؤسسات المسارين معًا، لا تختار أحدهما حصريًا — المنصات الشائعة للجدولة وسير عمل نظام تتبع المتقدمين الواسع، والاستضافة الذاتية للبيانات الأكثر حساسية.** استخدم الملفات التالية على مستوى سير العمل، لا على مستوى الشركة.',
         items: [
-          '**فريق موارد بشرية صغير بلا دعم هندسي مخصص:** استخدم منصة رائدة لسير العمل بأكمله — لا يستحق عبء إعداد الاستضافة الذاتية وصيانتها هذا الحجم.',
-          '**مؤسسة لديها فريق هندسة تعلم آلي/منصات داخلي وتدقيق امتثال صارم على بيانات المرشحين:** استضف ذاتيًا فرز السير الذاتية وتحليل المشاعر تحديدًا؛ وأبقِ جدولة المقابلات على منصة رائدة حيث تكون حساسية البيانات أقل.',
+          '**فريق موارد بشرية صغير بلا دعم هندسي مخصص:** استخدم منصة شائعة لسير العمل بأكمله — لا يستحق عبء إعداد الاستضافة الذاتية وصيانتها هذا الحجم.',
+          '**مؤسسة لديها فريق هندسة تعلم آلي/منصات داخلي وتدقيق امتثال صارم على بيانات المرشحين:** استضف ذاتيًا فرز السير الذاتية وتحليل المشاعر تحديدًا؛ وأبقِ جدولة المقابلات على منصة شائعة حيث تكون حساسية البيانات أقل.',
           '**شركة منخرطة بالفعل بعمق في مفاوضات بشأن بيانات الموظفين الأوروبيين أو مجلس العمل:** يزيل استضفاء تحليل المشاعر وصياغة التقييمات ذاتيًا جهة معالجة بيانات تابعة لجهة خارجية من النقاش، مما قد يبسّط تلك المفاوضات بشكل ملموس.',
           '**تجنّب الاستضافة الذاتية تمامًا إذا** لم يكن لدى مؤسستك القدرة الهندسية لصيانة الحزمة، أو إذا كان سير العمل المعني (مثل جدولة المقابلات) لا يلامس بيانات حساسة بما يكفي لتبرير جهد البناء.',
-          '**في حال عدم اليقين، ابدأ بمنصة رائدة لتغطية واسعة النطاق، وجرّب الاستضافة الذاتية على سير عمل واحد عالي الحساسية** (فرز السير الذاتية أو تحليل المشاعر) قبل التوسع أكثر.',
+          '**في حال عدم اليقين، ابدأ بمنصة شائعة لتغطية واسعة النطاق، وجرّب الاستضافة الذاتية على سير عمل واحد عالي الحساسية** (فرز السير الذاتية أو تحليل المشاعر) قبل التوسع أكثر.',
         ],
       },
       commonMistakes: {
