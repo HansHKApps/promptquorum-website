@@ -481,7 +481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'KI-HR-Software im Vergleich: Workday, HireVue, Lattice u. a. mit öffentlichen Preisen, EU-AI-Act-Fristen und Self-Hosting-Option. Keine Rechtsberatung.',
     twitterDescription:
-      'KI-HR-Software im Vergleich: Marktführer-Plattformen vs. selbst gehostete lokale LLMs für Screening, Stimmungsanalyse und Beurteilungsentwürfe.',
+      'KI-HR-Software im Vergleich: Gängige Plattformen vs. selbst gehostete lokale LLMs für Screening, Stimmungsanalyse und Beurteilungsentwürfe.',
     affiliateDisclosure: true,
     current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
@@ -506,9 +506,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       de: {
         question: 'Welche KI-gestützte HR-Software eignet sich für Unternehmen, die kontrollieren müssen, wohin Mitarbeiter- und Bewerberdaten fließen?',
         answer:
-          'Es gibt keine einzelne beste Antwort — sie hängt vom jeweiligen Workflow und den dahinterliegenden Daten ab. Marktführer-Plattformen (Workday für ATS/Screening, HireVue für Interview-Bewertung, Paradox für Terminplanung, Lattice oder 15Five für Leistungsbeurteilungen, Culture Amp für Stimmungsanalyse) sind der schnellste Weg zum produktiven Einsatz und bringen ihr eigenes KI-Hosting mit. Für Workflows mit den sensibelsten Bewerber- und Mitarbeiterdaten — Lebenslauf-PII, vertrauliche Beurteilungsentwürfe, ehrliche Stimmungsbefragungstexte — hält ein selbst gehosteter lokaler LLM diese Inhalte auf Infrastruktur, die Sie kontrollieren, allerdings auf Kosten des eigenen Aufbaus und Betriebs des Stacks.',
+          'Es gibt keine einzelne beste Antwort — sie hängt vom jeweiligen Workflow und den dahinterliegenden Daten ab. Gängige Plattformen (Workday für ATS/Screening, HireVue für Interview-Bewertung, Paradox für Terminplanung, Lattice oder 15Five für Leistungsbeurteilungen, Culture Amp für Stimmungsanalyse) sind der schnellste Weg zum produktiven Einsatz und bringen ihr eigenes KI-Hosting mit. Für Workflows mit den sensibelsten Bewerber- und Mitarbeiterdaten — Lebenslauf-PII, vertrauliche Beurteilungsentwürfe, ehrliche Stimmungsbefragungstexte — hält ein selbst gehosteter lokaler LLM diese Inhalte auf Infrastruktur, die Sie kontrollieren, allerdings auf Kosten des eigenen Aufbaus und Betriebs des Stacks.',
         bullets: [
-          'Marktführer-Plattformen bündeln KI-Hosting, Support und Integrationen — am schnellsten einsatzbereit, Daten verlassen die eigene Infrastruktur',
+          'Gängige Plattformen bündeln KI-Hosting, Support und Integrationen — am schnellsten einsatzbereit, Daten verlassen die eigene Infrastruktur',
           'Selbst gehostete lokale LLMs halten Bewerber-PII, Stimmungstexte und Beurteilungsentwürfe auf kontrollierter Infrastruktur',
           'KI im Recruiting/HR ist unter dem EU-KI-Gesetz hochriskant eingestuft und unterliegt Bias-Audit-Gesetzen wie NYC Local Law 144',
           'Die finale Entscheidung muss bei Screening, Bewertung und Leistungsergebnissen immer bei Menschen bleiben — keine Vollautomatisierung',
@@ -538,7 +538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Marktführer-KI-HR-Plattformen und ein selbst gehosteter lokaler LLM-Stack lösen unterschiedliche Probleme, keine konkurrierenden Versionen desselben.** Plattformen sind der schnellste Weg in den Einsatz; Self-Hosting, wenn Bewerber- oder Mitarbeiterdaten die eigene Infrastruktur nicht verlassen dürfen.',
+          '**Gängige KI-HR-Plattformen und ein selbst gehosteter lokaler LLM-Stack lösen unterschiedliche Probleme, keine konkurrierenden Versionen desselben.** Plattformen sind der schnellste Weg in den Einsatz; Self-Hosting, wenn Bewerber- oder Mitarbeiterdaten die eigene Infrastruktur nicht verlassen dürfen.',
           '**Lebenslauf-Screening, Stimmungsanalyse und Beurteilungsentwürfe sind die stärksten Kandidaten für Self-Hosting** — jeder berührt regelmäßig Daten (Bewerber-PII, ehrliche Mitarbeitertexte, vertrauliche Beurteilungsinhalte), die ein Unternehmen möglicherweise nicht von einer Drittanbieter-API verarbeiten lassen möchte.',
           '**KI im Recruiting und HR ist unter dem EU-KI-Gesetz eine Hochrisikokategorie**, und US-Rechtsräume wie New York City verlangen unabhängige Bias-Audits für automatisierte Einstellungswerkzeuge — dies gilt für jeden KI-gestützten Screening- oder Bewertungsworkflow, kommerziell wie selbst gehostet.',
           '**Dies ist keine Rechtsberatung.** Bias-Audit-Pflichten, Bewerber-Informationspflichten und Hochrisiko-Regeln variieren je nach Rechtsraum und ändern sich — vor jedem KI-Einsatz in Recruiting oder HR qualifizierte Rechtsberatung einholen.',
@@ -548,7 +548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Marktführer-KI-HR-Plattformen (Workday, HireVue, Lattice) erledigen Lebenslauf-Screening, Interview-Planung und Leistungsbeurteilungen auf Hersteller-Infrastruktur, während ein selbst gehosteter lokaler LLM-Stack Bewerber-PII, Stimmungsdaten und Beurteilungsentwürfe auf unternehmenskontrollierter Infrastruktur hält.',
+            text: 'Gängige KI-HR-Plattformen (Workday, HireVue, Lattice) erledigen Lebenslauf-Screening, Interview-Planung und Leistungsbeurteilungen auf Hersteller-Infrastruktur, während ein selbst gehosteter lokaler LLM-Stack Bewerber-PII, Stimmungsdaten und Beurteilungsentwürfe auf unternehmenskontrollierter Infrastruktur hält.',
           },
           {
             type: 'plain-terms',
@@ -562,7 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**EU-KI-Gesetz-Einstufung:** KI-Systeme für Recruiting, Bewerber-Screening und Leistungsbewertung von Beschäftigten gelten nach Anhang III der Verordnung (EU) 2024/1689 als hochriskant.',
           '**NYC Local Law 144:** verlangt ein unabhängiges Bias-Audit, veröffentlichte Ergebnisse und Bewerber-Information für jedes "automatisierte Einstellungsentscheidungs-Werkzeug", das Einstellungsentscheidungen in New York City wesentlich unterstützt.',
-          '**Hier verglichene Marktführer-Plattformen:** Workday, HireVue, Paradox (Olivia), Lattice, 15Five, Culture Amp, Textio und Eightfold AI — jeweils reale, aktuell aktive Produkte, keine hypothetischen Beispiele.',
+          '**Hier verglichene gängige Plattformen:** Workday, HireVue, Paradox (Olivia), Lattice, 15Five, Culture Amp, Textio und Eightfold AI — jeweils reale, aktuell aktive Produkte, keine hypothetischen Beispiele.',
           '**Kostenspanne für selbst gehostete Infrastruktur:** etwa 0,34–4,29 $/Stunde für On-Demand-Cloud-GPUs von der RTX-4090- bis zur H100-Klasse (Preisseiten von RunPod und Lambda), geeignet für einen Pilot mit einem mittelgroßen Modell (7–32B Parameter), vor Berücksichtigung des Entwicklungsaufwands.',
           '**Dies ist keine Rechtsberatung** — regulatorische Pflichten für KI in Recruiting und HR variieren je nach Rechtsraum und ändern sich; aktuelle Anforderungen vor dem Einsatz mit Rechtsberatung prüfen.',
         ],
@@ -572,15 +572,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wo KI tatsächlich in HR-Workflows eingreift',
         content:
           '**"KI im HR-Bereich" ist keine einzelne Kaufentscheidung — es sind sechs oder mehr getrennte Workflows mit sehr unterschiedlichen Datenschutzprofilen.** Sie als eine Kaufentscheidung zu behandeln, ist der erste Fehler, den die meisten Unternehmen machen.',
-        columns: ['HR-Workflow', 'Marktführer-Beispiel', 'Datensensibilität', 'Self-Hosting-Eignung'],
+        columns: ['HR-Workflow', 'Beispiel für gängige Plattformen', 'Datensensibilität', 'Self-Hosting-Eignung'],
         rows: [
-          { 'HR-Workflow': 'Lebenslauf-Screening', 'Marktführer-Beispiel': 'Workday, Eightfold AI', 'Datensensibilität': 'Hoch (Bewerber-PII)', 'Self-Hosting-Eignung': 'Stark' },
-          { 'HR-Workflow': 'Interview-Terminplanung', 'Marktführer-Beispiel': 'Paradox (Olivia)', 'Datensensibilität': 'Niedrig-mäßig', 'Self-Hosting-Eignung': 'Schwach — Aufwand lohnt kaum' },
-          { 'HR-Workflow': 'Interview-Bewertung', 'Marktführer-Beispiel': 'HireVue', 'Datensensibilität': 'Hoch (Video/Verhalten)', 'Self-Hosting-Eignung': 'Mäßig' },
-          { 'HR-Workflow': 'Onboarding-Q&A', 'Marktführer-Beispiel': 'HRIS-integrierte Bots', 'Datensensibilität': 'Mäßig', 'Self-Hosting-Eignung': 'Stark (RAG über Dokumente)' },
-          { 'HR-Workflow': 'Stimmungsanalyse', 'Marktführer-Beispiel': 'Culture Amp', 'Datensensibilität': 'Hoch (ehrlicher Freitext)', 'Self-Hosting-Eignung': 'Stark' },
-          { 'HR-Workflow': 'Beurteilungsentwürfe', 'Marktführer-Beispiel': 'Lattice, 15Five', 'Datensensibilität': 'Hoch (vertraulicher Inhalt)', 'Self-Hosting-Eignung': 'Stark' },
-          { 'HR-Workflow': 'HR-Richtlinien-Q&A', 'Marktführer-Beispiel': 'n/a — siehe separater Leitfaden', 'Datensensibilität': 'Hoch', 'Self-Hosting-Eignung': 'Stark — separat behandelt' },
+          { 'HR-Workflow': 'Lebenslauf-Screening', 'Beispiel für gängige Plattformen': 'Workday, Eightfold AI', 'Datensensibilität': 'Hoch (Bewerber-PII)', 'Self-Hosting-Eignung': 'Stark' },
+          { 'HR-Workflow': 'Interview-Terminplanung', 'Beispiel für gängige Plattformen': 'Paradox (Olivia)', 'Datensensibilität': 'Niedrig-mäßig', 'Self-Hosting-Eignung': 'Schwach — Aufwand lohnt kaum' },
+          { 'HR-Workflow': 'Interview-Bewertung', 'Beispiel für gängige Plattformen': 'HireVue', 'Datensensibilität': 'Hoch (Video/Verhalten)', 'Self-Hosting-Eignung': 'Mäßig' },
+          { 'HR-Workflow': 'Onboarding-Q&A', 'Beispiel für gängige Plattformen': 'HRIS-integrierte Bots', 'Datensensibilität': 'Mäßig', 'Self-Hosting-Eignung': 'Stark (RAG über Dokumente)' },
+          { 'HR-Workflow': 'Stimmungsanalyse', 'Beispiel für gängige Plattformen': 'Culture Amp', 'Datensensibilität': 'Hoch (ehrlicher Freitext)', 'Self-Hosting-Eignung': 'Stark' },
+          { 'HR-Workflow': 'Beurteilungsentwürfe', 'Beispiel für gängige Plattformen': 'Lattice, 15Five', 'Datensensibilität': 'Hoch (vertraulicher Inhalt)', 'Self-Hosting-Eignung': 'Stark' },
+          { 'HR-Workflow': 'HR-Richtlinien-Q&A', 'Beispiel für gängige Plattformen': 'n/a — siehe separater Leitfaden', 'Datensensibilität': 'Hoch', 'Self-Hosting-Eignung': 'Stark — separat behandelt' },
         ],
       },
       commercialPlatforms: {
@@ -661,27 +661,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost-comparison',
         title: 'Kosten: SaaS-Abo vs. selbst gehostete Infrastruktur',
         content:
-          '**Marktführer-Plattformen berechnen pro Mitarbeitendem oder Lizenz, meist über ein individuelles Enterprise-Angebot; selbst gehostete Infrastruktur tauscht dieses planbare Abo gegen nutzungsbasierte Rechenleistung plus Entwicklungsaufwand.** Keine Option ist grundsätzlich günstiger — die Antwort hängt von Einsatzgröße, interner Entwicklungskapazität und dem Stellenwert ab, den Ihr Unternehmen dem Fernhalten von Bewerber- und Mitarbeiterdaten von Drittanbieter-Infrastruktur beimisst.',
-        columns: ['Kriterium', 'Marktführer-Plattform', 'Selbst gehosteter Stack'],
+          '**Gängige Plattformen berechnen pro Mitarbeitendem oder Lizenz, meist über ein individuelles Enterprise-Angebot; selbst gehostete Infrastruktur tauscht dieses planbare Abo gegen nutzungsbasierte Rechenleistung plus Entwicklungsaufwand.** Keine Option ist grundsätzlich günstiger — die Antwort hängt von Einsatzgröße, interner Entwicklungskapazität und dem Stellenwert ab, den Ihr Unternehmen dem Fernhalten von Bewerber- und Mitarbeiterdaten von Drittanbieter-Infrastruktur beimisst.',
+        columns: ['Kriterium', 'Gängige Plattform', 'Selbst gehosteter Stack'],
         rows: [
-          { 'Kriterium': 'Preismodell', 'Marktführer-Plattform': 'Pro Mitarbeitendem/Lizenz, individuelles Angebot', 'Selbst gehosteter Stack': 'Nutzungsbasierte Rechenleistung + Entwicklungszeit' },
-          { 'Kriterium': 'Cloud-GPU-Kostenspanne', 'Marktführer-Plattform': 'Im Abo enthalten', 'Selbst gehosteter Stack': '~0,34-4,29 $/Std. (RTX 4090 bis H100)' },
-          { 'Kriterium': 'Datenstandort', 'Marktführer-Plattform': 'Herstellerseitig gehostete Infrastruktur', 'Selbst gehosteter Stack': 'Kontrollierte eigene Infrastruktur' },
-          { 'Kriterium': 'Einrichtungsaufwand', 'Marktführer-Plattform': 'Gering — konfigurieren und starten', 'Selbst gehosteter Stack': 'Hoch — aufbauen, absichern, pflegen' },
-          { 'Kriterium': 'Laufende Wartung', 'Marktführer-Plattform': 'Vom Hersteller verwaltet', 'Selbst gehosteter Stack': 'Intern oder extern beauftragt' },
+          { 'Kriterium': 'Preismodell', 'Gängige Plattform': 'Pro Mitarbeitendem/Lizenz, individuelles Angebot', 'Selbst gehosteter Stack': 'Nutzungsbasierte Rechenleistung + Entwicklungszeit' },
+          { 'Kriterium': 'Cloud-GPU-Kostenspanne', 'Gängige Plattform': 'Im Abo enthalten', 'Selbst gehosteter Stack': '~0,34-4,29 $/Std. (RTX 4090 bis H100)' },
+          { 'Kriterium': 'Datenstandort', 'Gängige Plattform': 'Herstellerseitig gehostete Infrastruktur', 'Selbst gehosteter Stack': 'Kontrollierte eigene Infrastruktur' },
+          { 'Kriterium': 'Einrichtungsaufwand', 'Gängige Plattform': 'Gering — konfigurieren und starten', 'Selbst gehosteter Stack': 'Hoch — aufbauen, absichern, pflegen' },
+          { 'Kriterium': 'Laufende Wartung', 'Gängige Plattform': 'Vom Hersteller verwaltet', 'Selbst gehosteter Stack': 'Intern oder extern beauftragt' },
         ],
       },
       decisionGuide: {
         id: 'decision-guide',
         title: 'Welcher Ansatz passt zu Ihrem Team?',
         content:
-          '**Die meisten Unternehmen fahren beide Wege parallel statt sich exklusiv zu entscheiden — Marktführer-Plattformen für Terminplanung und breite ATS-Workflows, Self-Hosting für die sensibelsten Daten.** Nutzen Sie die folgenden Profile pro Workflow, nicht pro Unternehmen.',
+          '**Die meisten Unternehmen fahren beide Wege parallel statt sich exklusiv zu entscheiden — gängige Plattformen für Terminplanung und breite ATS-Workflows, Self-Hosting für die sensibelsten Daten.** Nutzen Sie die folgenden Profile pro Workflow, nicht pro Unternehmen.',
         items: [
-          '**Kleines HR-Team ohne dedizierte Entwicklungsunterstützung:** eine Marktführer-Plattform für den gesamten Workflow nutzen — der Aufwand für Aufbau und Wartung eines Self-Hosting-Setups lohnt sich in dieser Größenordnung nicht.',
-          '**Unternehmen mit internem ML-/Platform-Engineering-Team und hoher Compliance-Prüfung bei Bewerberdaten:** Lebenslauf-Screening und Stimmungsanalyse gezielt selbst hosten; Interview-Terminplanung auf einer Marktführer-Plattform belassen, wo die Datensensibilität geringer ist.',
+          '**Kleines HR-Team ohne dedizierte Entwicklungsunterstützung:** eine gängige Plattform für den gesamten Workflow nutzen — der Aufwand für Aufbau und Wartung eines Self-Hosting-Setups lohnt sich in dieser Größenordnung nicht.',
+          '**Unternehmen mit internem ML-/Platform-Engineering-Team und hoher Compliance-Prüfung bei Bewerberdaten:** Lebenslauf-Screening und Stimmungsanalyse gezielt selbst hosten; Interview-Terminplanung auf einer gängigen Plattform belassen, wo die Datensensibilität geringer ist.',
           '**Unternehmen, das bereits tief in Betriebsrats- oder EU-Mitarbeiterdaten-Verhandlungen steckt:** Self-Hosting von Stimmungsanalyse und Beurteilungsentwürfen entfernt einen Auftragsverarbeiter aus dem Gespräch, was diese Verhandlung spürbar vereinfachen kann.',
           '**Auf Self-Hosting ganz verzichten, wenn** Ihr Unternehmen keine Entwicklungskapazität zur Pflege des Stacks hat oder der betreffende Workflow (etwa Interview-Terminplanung) keine ausreichend sensiblen Daten berührt, um den Aufwand zu rechtfertigen.',
-          '**Im Zweifel mit einer Marktführer-Plattform für die Breite starten und Self-Hosting an einem hochsensiblen Workflow pilotieren** (Lebenslauf-Screening oder Stimmungsanalyse), bevor weiter ausgebaut wird.',
+          '**Im Zweifel mit einer gängigen Plattform für die Breite starten und Self-Hosting an einem hochsensiblen Workflow pilotieren** (Lebenslauf-Screening oder Stimmungsanalyse), bevor weiter ausgebaut wird.',
         ],
       },
       commonMistakes: {
@@ -718,7 +718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Ist KI-gestütztes Lebenslauf-Screening legal?', a: 'Es kann legal sein, unterliegt aber Regulierung statt völliger Freiheit. Nach dem EU-KI-Gesetz gilt KI für Bewerber-Screening nach Anhang III als hochriskant, mit Pflichten zu Risikomanagement und menschlicher Aufsicht. In den USA verlangen Rechtsräume wie New York City ein unabhängiges Bias-Audit und Bewerber-Information für automatisierte Einstellungswerkzeuge. Dies ist keine Rechtsberatung — aktuelle Anforderungen für Ihren konkreten Rechtsraum und Workflow vor dem Einsatz mit arbeitsrechtlicher Beratung prüfen, kommerziell wie selbst gehostet.' },
-          { q: 'Welche marktführenden KI-HR-Plattformen sind heute tatsächlich im aktiven Einsatz?', a: 'Workday (Recruiting/ATS mit KI-gestütztem Skill-Matching), HireVue (KI-gestützte strukturierte Interview-Bewertung), Paradox (konversationelle KI für Interview-Terminplanung, Markenname Olivia), Lattice und 15Five (KI-gestützte Beurteilungsentwurfshilfe), Culture Amp (KI-Analyse von Mitarbeiterbefragungstexten), Textio (KI-Sprachanalyse für Stellenanzeigen und Beurteilungen) und Eightfold AI (KI-gestütztes Talent-Matching) sind allesamt reale, aktuell aktive Produkte mit öffentlich dokumentierten KI-Funktionen. Aktuellen Funktionsumfang direkt beim jeweiligen Anbieter prüfen, da sich Produktfunktionen ändern.' },
+          { q: 'Welche gängigen KI-HR-Plattformen sind heute tatsächlich im aktiven Einsatz?', a: 'Workday (Recruiting/ATS mit KI-gestütztem Skill-Matching), HireVue (KI-gestützte strukturierte Interview-Bewertung), Paradox (konversationelle KI für Interview-Terminplanung, Markenname Olivia), Lattice und 15Five (KI-gestützte Beurteilungsentwurfshilfe), Culture Amp (KI-Analyse von Mitarbeiterbefragungstexten), Textio (KI-Sprachanalyse für Stellenanzeigen und Beurteilungen) und Eightfold AI (KI-gestütztes Talent-Matching) sind allesamt reale, aktuell aktive Produkte mit öffentlich dokumentierten KI-Funktionen. Aktuellen Funktionsumfang direkt beim jeweiligen Anbieter prüfen, da sich Produktfunktionen ändern.' },
           { q: 'Kann ein selbst gehosteter lokaler LLM ein ATS wie Workday ersetzen?', a: 'Nein — Self-Hosting wird in diesem Leitfaden nicht als vollständiger ATS-Ersatz positioniert. Es ist eine gezielte Alternative für die Workflows, bei denen es am meisten zählt, Daten von Drittanbieter-Infrastruktur fernzuhalten: Feldextraktion und Bewertung aus Lebensläufen, Stimmungsanalyse und Beurteilungsentwurfshilfe. Die meisten Unternehmen fahren beide Wege parallel, statt einen durch den anderen zu ersetzen.' },
           { q: 'Erfüllt Self-Hosting eines HR-KI-Workflows automatisch die DSGVO oder das EU-KI-Gesetz?', a: 'Nein. Self-Hosting entfernt einen Drittanbieter-Auftragsverarbeiter aus der Datenflusslandkarte, was relevant ist, erfüllt aber nicht automatisch jede geltende Pflicht — die Risikomanagement-, Aufsichts- und Dokumentationspflichten des EU-KI-Gesetzes für Hochrisikosysteme gelten unabhängig davon, wo das Modell läuft. Siehe den eigenen [DSGVO-konformen lokalen RAG-Leitfaden](/de/power-local-llm/local-rag-for-private-business-data) für das vollständige Kontrollset, und Rechtsberatung für Ihren konkreten Einsatz einholen.' },
           { q: 'Was ist NYC Local Law 144 und gilt sie außerhalb von New York City?', a: 'Local Law 144 ist eine New Yorker Stadtverordnung, die Arbeitgeber verpflichtet, vor dem Einsatz eines automatisierten Einstellungsentscheidungs-Werkzeugs zur wesentlichen Unterstützung einer Einstellungsentscheidung in NYC ein unabhängiges Bias-Audit in Auftrag zu geben, eine Ergebniszusammenfassung zu veröffentlichen und Bewerber zu informieren. Sie gilt für Einstellungsentscheidungen mit Bezug zu New York City; mehrere weitere US-Bundesstaaten und -Städte haben vergleichbare Anforderungen eingeführt oder verabschiedet — dies ist keine Rechtsberatung, aktuelle Anwendbarkeit auf Ihre konkreten Einstellungsstandorte mit Rechtsberatung prüfen.' },
@@ -921,7 +921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'regulatory-risk',
         title: 'Risque réglementaire : règlement IA de l\'UE et lois d\'audit de biais',
         content:
-          '**L\'IA dans les décisions de recrutement et RH est une catégorie régulée, pas un achat logiciel ordinaire — cela s\'applique à toute plateforme et approche de ce guide, leader ou auto-hébergée.** Sous le règlement IA de l\'UE (règlement (UE) 2024/1689), les systèmes IA utilisés pour le recrutement, le tri de candidats et l\'évaluation de la performance des travailleurs sont classés à haut risque à l\'annexe III, ce qui entraîne des obligations de gestion des risques, de supervision humaine et de documentation technique. Par ailleurs, la Local Law 144 de New York impose aux employeurs utilisant un « outil automatisé de décision d\'emploi » pour assister substantiellement une décision d\'embauche à New York de commander un audit de biais indépendant, d\'en publier une synthèse et d\'en informer les candidats — plusieurs autres États et villes américains ont introduit ou adopté des exigences comparables. La CNIL recommande par ailleurs de privilégier une IA locale lorsque des données professionnelles sensibles sont traitées.',
+          '**L\'IA dans les décisions de recrutement et RH est une catégorie régulée, pas un achat logiciel ordinaire — cela s\'applique à toute plateforme et approche de ce guide, leader ou auto-hébergée.** Sous le règlement IA de l\'UE (règlement (UE) 2024/1689), les systèmes IA utilisés pour le recrutement, le tri de candidats et l\'évaluation de la performance des travailleurs sont classés à haut risque à l\'annexe III, ce qui entraîne des obligations de gestion des risques, de supervision humaine et de documentation technique. Par ailleurs, la Local Law 144 de New York impose aux employeurs utilisant un « outil automatisé de décision d\'emploi » pour assister substantiellement une décision d\'embauche à New York de commander un audit de biais indépendant, d\'en publier une synthèse et d\'en informer les candidats — plusieurs autres États et villes américains ont introduit ou adopté des exigences comparables. Pour les données personnelles de candidats et de salariés, le RGPD s\'applique quel que soit le mode d\'hébergement ; consultez les publications de la CNIL sur l\'IA et les données personnelles et demandez conseil à un juriste avant tout déploiement.',
         items: [
           '**Ceci n\'est pas un conseil juridique.** Les règles applicables dépendent de la juridiction, du flux concerné et du poids accordé à la sortie de l\'IA dans la décision finale — les obligations diffèrent selon la loi et évoluent dans le temps.',
           'Qu\'un éditeur déclare son produit doté de « tests de biais » ou de « fonctionnalités d\'équité » ne signifie pas que votre déploiement spécifique satisfait une exigence légale d\'audit précise d\'une juridiction donnée — vérifiez la documentation d\'audit actuelle et l\'applicabilité juridique directement avec un conseil juridique et l\'éditeur, pas sur la base d\'un argumentaire marketing.',
