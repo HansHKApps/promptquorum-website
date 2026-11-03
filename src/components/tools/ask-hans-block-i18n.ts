@@ -254,6 +254,17 @@ const ASK_UI = {
     ar: 'لغات الأسئلة',
     ko: '질문 언어',
   },
+  breakdownNote: {
+    en: 'The topic is one label per question. Tools, apps and categories show what Ask Hans looked up, so one question can appear in several rows and the tables do not add up to the number of questions. The tables start on the day counting began.',
+    de: 'Das Thema ist ein Label pro Frage. Werkzeuge, Apps und Kategorien zeigen, was Ask Hans nachgeschlagen hat; eine Frage kann daher in mehreren Zeilen erscheinen, und die Tabellen ergeben nicht die Zahl der Fragen. Die Tabellen beginnen an dem Tag, an dem die Zählung startete.',
+    fr: "Le sujet est une étiquette par question. Les outils, applications et catégories indiquent ce qu'Ask Hans a consulté : une question peut donc apparaître sur plusieurs lignes, et les tableaux ne totalisent pas le nombre de questions. Les tableaux commencent le jour du début du comptage.",
+    ja: 'テーマは質問ごとに1つのラベルです。ツール、アプリ、カテゴリはAsk Hansが調べた内容を示すため、1つの質問が複数の行に現れることがあり、各表の合計は質問数と一致しません。表は集計を開始した日から始まります。',
+    zh: '主题是每个问题一个标签。工具、应用和类别显示的是 Ask Hans 查询过的内容，因此一个问题可能出现在多行中，各表合计不等于问题数。表格从开始统计的当天算起。',
+    es: 'El tema es una etiqueta por pregunta. Las herramientas, apps y categorías muestran lo que Ask Hans consultó, así que una pregunta puede aparecer en varias filas y las tablas no suman el número de preguntas. Las tablas empiezan el día en que comenzó el recuento.',
+    pt: 'O tema é um rótulo por pergunta. As ferramentas, apps e categorias mostram o que o Ask Hans consultou, então uma pergunta pode aparecer em várias linhas e as tabelas não somam o número de perguntas. As tabelas começam no dia em que a contagem começou.',
+    ar: 'الموضوع تصنيف واحد لكل سؤال. تعرض الأدوات والتطبيقات والفئات ما بحث عنه Ask Hans، لذا قد يظهر السؤال الواحد في عدة صفوف ولا يساوي مجموع الجداول عدد الأسئلة. تبدأ الجداول من اليوم الذي بدأ فيه العدّ.',
+    ko: '주제는 질문마다 하나의 라벨입니다. 도구, 앱, 카테고리는 Ask Hans가 조회한 내용을 보여 주므로 질문 하나가 여러 행에 나타날 수 있으며, 각 표의 합계는 질문 수와 일치하지 않습니다. 표는 집계를 시작한 날부터 시작됩니다.',
+  },
   noData: {
     en: 'No data yet',
     de: 'Noch keine Daten',

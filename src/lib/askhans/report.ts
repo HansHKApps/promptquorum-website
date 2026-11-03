@@ -27,7 +27,7 @@ export interface AskHansReport {
   windows: { opens: WindowCounts; answers: WindowCounts }
   /** answers per UTC day, oldest first, ending today */
   days: { date: string; answers: number }[]
-  /** visitors who agreed to the anonymous statistics: how many questions they asked, per window */
+  /** visitors who agreed to the anonymous statistics: how many questions they asked, per window (only days from `since`, so never above the answers of the same window) */
   sampled: WindowCounts
   /** breakdowns, busiest (last 30 days) first; sample = consenting visitors only */
   categories: ReportRow[]
@@ -84,6 +84,9 @@ export async function getAskHansReport(): Promise<AskHansReport> {
     perDay.forEach((h, i) => {
       const day = h ?? {}
       const wins = windowsOf(i)
+      // The all-visitor totals only exist from `since`; the consent-based breakdowns started earlier (test days).
+      // Counting them before `since` would put more sampled questions than answers in the same window.
+      const inBreakdown = !totals.since || dates[i] >= totals.since
       const opens = Number(day.total_opens ?? 0) || 0
       const answers = Number(day.total_answers ?? 0) || 0
       report.days[i].answers = answers
@@ -91,6 +94,7 @@ export async function getAskHansReport(): Promise<AskHansReport> {
         report.windows.opens[w] += opens
         report.windows.answers[w] += answers
       }
+      if (!inBreakdown) return
       for (const [field, raw] of Object.entries(day)) {
         const n = Number(raw) || 0
         if (!n) continue

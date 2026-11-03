@@ -29,14 +29,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
-    title: 'Best Web Hosting 2026: Verified Pricing',
-    seoTitle: 'Best Web Hosting 2026: Verified Pricing Comparison',
+    title: 'Web Hosting Pricing 2026: Hostinger Intro vs. Renewal Price',
+    seoTitle: 'Hostinger Pricing 2026: Intro vs. Renewal Cost Compared',
     intro:
-      'Type "best web hosting 2026" into Google and you get a dozen lists quoting the same advertised intro rate, none of which mention what the plan costs once that term runs out. That gap is the whole reason this page exists. We checked [Hostinger](https://www.hostinger.com/)\'s pricing ourselves on 2026-11-03, and the number that actually matters — the renewal rate — sits right next to the sticker price below, not buried in a footnote. If you are here for GPU compute instead of website hosting, you want the [Cloud GPU Rental Guide](/power-local-llm/cloud-gpu-rental-guide-2026), not this page. A wider multi-provider comparison is next once more hosts are re-verified the same way. Beyond the website hosting plan itself, this page also covers the related hosting decisions most site owners eventually run into: hosting a database separately, backing up a site off-site, sharing large files or datasets safely, and where AI/LLM hosting fits alongside all of it.',
+      'This page puts the renewal rate right next to the advertised intro rate. We read [Hostinger](https://www.hostinger.com/)\'s US storefront on 2026-11-03, and the number that matters for budgeting past the first term, the renewal rate, sits next to the sticker price below, not in a footnote. If you are here for GPU compute instead of website hosting, you want the [Cloud GPU Rental Guide](/power-local-llm/cloud-gpu-rental-guide-2026), not this page. A wider multi-provider comparison is next once more hosts are re-verified the same way. Beyond the website hosting plan itself, this page also covers the related hosting decisions most site owners eventually run into: hosting a database separately, backing up a site off-site, sharing large files or datasets safely, and where AI/LLM hosting fits alongside all of it.',
     metaDescription:
-      'Hostinger Premium price checked 2026-11-03: $2.49/mo with a 48-month prepay ($119.52), renewing at $10.99/mo. See the real cost before you sign up.',
+      'Hostinger Premium price read 2026-11-03: $2.49/mo with a 48-month prepay ($119.52), renewing at $10.99/mo. See the real cost before you sign up.',
     twitterDescription:
-      'Most hosting roundups quote the intro price and skip the renewal. Here is the one provider we verified directly, with both numbers, checked 2026-11-03.',
+      'Hosting prices rise at renewal. Here is the one provider whose price we read from its own storefront on 2026-11-03, with both the intro and the renewal number.',
     affiliateDisclosure: true,
     audience:
       'Buyers evaluating shared or budget web hosting for a small site or blog, who want the real renewal price alongside the advertised intro price before committing to a long prepay term.',
@@ -51,7 +51,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'shared hosting cost 2026',
     ],
     leadAnswerBlock:
-      '**Hostinger advertises $2.49/mo for its Premium shared hosting plan, but that price requires a 48-month prepay ($119.52 upfront) and renews at $10.99/mo — a 4.4x jump. That is the only shared-hosting provider on this page whose pricing we verified directly on 2026-11-03.**',
+      '**Hostinger advertises $2.49/mo for its Premium shared hosting plan, but that price requires a 48-month prepay ($119.52 upfront) and renews at $10.99/mo — a 4.4x jump. It is the only shared-hosting provider on this page whose price was read from the vendor\'s own storefront (2026-11-03).**',
     affiliateLinks: [
       {
         url: 'https://www.hostinger.com/',
@@ -95,11 +95,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Hostinger is the only provider on this page with pricing we verified directly** — $2.49/mo intro rate, but only with a 48-month prepay ($119.52 upfront); the plan renews at $10.99/mo, a 4.4x jump.',
+          '**Hostinger is the only provider on this page whose price we read from its own storefront** — $2.49/mo intro rate, but only with a 48-month prepay ($119.52 upfront); the plan renews at $10.99/mo, a 4.4x jump.',
           '**The intro price is not the real annual cost.** Budget for the $10.99/mo renewal rate from year five onward, not the $2.49/mo headline figure.',
           '**This page intentionally excludes other well-known hosts.** Bluehost, SiteGround, HostGator, GoDaddy, and Namecheap were not re-verified this pass, so they are left out rather than repeated from stale or unconfirmed figures.',
           '**Web hosting is not AI/GPU cloud hosting.** If you need compute for running or fine-tuning a local LLM, see the separate [Cloud GPU Rental Guide](/power-local-llm/cloud-gpu-rental-guide-2026) — this page is about hosting a website, not renting a GPU.',
-          '**A website needs more than the plan it is hosted on.** A separate managed database (Neon, Supabase), an off-site backup (Backblaze B2, Cloudflare R2, Wasabi), and a safe way to share large files are three decisions most site owners eventually face — covered below with directly checked pricing.',
+          '**A website needs more than the plan it is hosted on.** A separate managed database (Neon, Supabase), an off-site backup (Backblaze B2, Cloudflare R2, Wasabi), and a safe way to share large files are three decisions most site owners eventually face — covered below with vendor-page pricing.',
         ],
       },
       quickFacts: {
@@ -126,7 +126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'It is like a gym membership that is cheap only if you pay for four years up front, then triples once that period ends. The sticker price and the real price are two different numbers.',
+            text: 'It is like a gym membership that is cheap only if you pay for four years up front, then rises 4.4x once that period ends. The sticker price and the real price are two different numbers.',
           },
         ],
         columns: ['Provider', 'Intro price', 'Prepay term', 'Renewal price'],
@@ -170,7 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'database-hosting',
         title: 'Hosting a Database Separately',
         content:
-          'Shared web hosting like the Hostinger plan on this page bundles a single MySQL database sized to the same disk quota as the rest of the account — enough for a blog or small CMS, not for an application with its own user table, analytics events, or the vector/embedding storage an AI feature needs. For that, a managed database is a separate product from web hosting. **[Neon](https://neon.com/pricing)** runs on serverless Postgres and offers a free tier — 100 compute-hours per project per month, 1 GB storage per project, 5 GB egress, checked directly on neon.com 2026-11-03 — that suspends to zero cost when idle, then bills usage-based compute (from $0.106/CU-hour) and storage ($0.35/GB-month) beyond the free tier with no monthly minimum. **[Supabase](https://supabase.com/pricing)** offers a comparable free tier — 500 MB database, 1 GB file storage, 50,000 monthly active users, 5 GB egress, across up to 2 projects, checked directly on supabase.com 2026-11-03 — but a free project pauses after 7 days of inactivity and gets no automated backups; the Pro plan ($25/mo) removes both limits. Move to a separate managed database once a site needs more than the single bundled MySQL instance shared hosting provides — it is an addition to web hosting, not a replacement for it.',
+          'Shared web hosting like the Hostinger plan on this page bundles a single MySQL database sized to the same disk quota as the rest of the account — enough for a blog or small CMS, not for an application with its own user table, analytics events, or the vector/embedding storage an AI feature needs. For that, a managed database is a separate product from web hosting. **[Neon](https://neon.com/pricing)** runs on serverless Postgres and offers a free tier — 100 compute-hours per project per month, 1 GB storage per project, 5 GB egress, read from neon.com on 2026-11-03 — that suspends to zero cost when idle, then bills usage-based compute (from $0.106/CU-hour) and storage ($0.35/GB-month) beyond the free tier with no monthly minimum. **[Supabase](https://supabase.com/pricing)** offers a comparable free tier — 500 MB database, 1 GB file storage, 50,000 monthly active users, 5 GB egress, across up to 2 projects, read from supabase.com on 2026-09-03 — but a free project pauses after 7 days of inactivity and gets no automated backups; the Pro plan ($25/mo) removes both limits. Move to a separate managed database once a site needs more than the single bundled MySQL instance shared hosting provides — it is an addition to web hosting, not a replacement for it.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -186,7 +186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'backups',
         title: 'Backing Up Your Site and Data',
         content:
-          'The standard rule is 3-2-1: keep 3 copies of the data, on 2 different types of storage, with 1 copy off-site. A backup that lives only on the same server as the website does not count, since a single provider outage or account issue takes out the site and the backup together. Most shared hosting plans, including Hostinger\'s, include some automatic backup feature, but check the retention window (how many days back a restore can reach) and whether restoring is self-service or requires a support ticket before relying on it as the only copy. For the off-site copy, object storage priced by the gigabyte is the standard option: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** charges $6.95/TB/month with the first 10 GB free and free egress up to 3x the average data stored, checked directly 2026-11-03; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** charges $0.015/GB-month (about $15/TB/month) but with zero egress fees at any volume and a free tier covering 10 GB of storage, checked directly 2026-11-03; **[Wasabi](https://wasabi.com/pricing/)** charges a flat $7.99/TB/month pay-as-you-go rate with no separate egress or API request fees, checked directly 2026-11-03. For a small site, any of the three costs well under $1/month to keep a full off-site backup.',
+          'The standard rule is 3-2-1: keep 3 copies of the data, on 2 different types of storage, with 1 copy off-site. A backup that lives only on the same server as the website does not count, since a single provider outage or account issue takes out the site and the backup together. Most shared hosting plans, including Hostinger\'s, include some automatic backup feature, but check the retention window (how many days back a restore can reach) and whether restoring is self-service or requires a support ticket before relying on it as the only copy. For the off-site copy, object storage priced by the gigabyte is the standard option: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** charges $6.95/TB/month with the first 10 GB free and free egress up to 3x the average data stored, read from the vendor\'s pricing page on 2026-09-03; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** charges $0.015/GB-month (about $15/TB/month) but with zero egress fees at any volume and a free tier covering 10 GB of storage, read from the vendor\'s pricing page on 2026-09-03; **[Wasabi](https://wasabi.com/pricing/)** charges a flat $7.99/TB/month pay-as-you-go rate with no separate egress or API request fees, read from the vendor\'s pricing page on 2026-09-03. For a small site, any of the three costs well under $1/month to keep a full off-site backup.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -202,13 +202,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'data-sharing',
         title: 'Sharing and Transferring Data Safely',
         content:
-          'Emailing a file attachment is the least secure and least reliable way to share data past a few megabytes — most inboxes cap attachments around 20-25 MB, and the file then sits unencrypted in multiple inboxes indefinitely. A better default is a time-limited, expiring link: the same object storage services covered above for backups (Backblaze B2, Cloudflare R2, Wasabi) can each generate a "presigned URL" — a link granting temporary access to one specific file that expires automatically after a set time, without making the whole storage bucket public. When sharing files with a hosting or database provider\'s support team to diagnose an issue, never put a database password or API key inside the file itself — rotate that credential once the file is no longer needed, since a support ticket or a shared link can outlive the person it was meant for. For recurring large-file sharing, such as video or datasets, Cloudflare R2\'s zero-egress-fee pricing avoids the surprise bill that a per-gigabyte egress charge can produce once a shared link has been downloaded many times.',
+          'Emailing a file attachment is a weak way to share data past a few megabytes — most inboxes cap attachments around 20-25 MB, and the file then sits unencrypted in multiple inboxes indefinitely. A better default is a time-limited, expiring link: the same object storage services covered above for backups (Backblaze B2, Cloudflare R2, Wasabi) can each generate a "presigned URL" — a link granting temporary access to one specific file that expires automatically after a set time, without making the whole storage bucket public. When sharing files with a hosting or database provider\'s support team to diagnose an issue, never put a database password or API key inside the file itself — rotate that credential once the file is no longer needed, since a support ticket or a shared link can outlive the person it was meant for. For recurring large-file sharing, such as video or datasets, Cloudflare R2\'s zero-egress-fee pricing avoids the surprise bill that a per-gigabyte egress charge can produce once a shared link has been downloaded many times.',
       },
       choosingARegion: {
         id: 'choosing-a-region',
         title: 'Choosing a Region',
         content:
-          'This page covers a global provider rather than one jurisdiction, so there is no single data-residency rule to point to. If that matters for your project — EU personal data under GDPR is the common case — pick a host with a data center in your own region and get a signed data processing agreement before you sign up, not after signing up and finding out the hard way.',
+          'This page covers a global provider rather than one jurisdiction, so there is no single data-residency rule to point to. If that matters for your project — EU personal data under GDPR is the common case — pick a host with a data center in your own region and get a signed data processing agreement before you sign up, not after. This is not legal advice: check your own compliance requirements with a qualified adviser.',
       },
       verdict: {
         id: 'verdict',
@@ -221,11 +221,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sources',
         items: [
           '[Hostinger Pricing](https://www.hostinger.com/) — checked directly on hostinger.com, 2026-11-03: $2.49/mo intro (48-month prepay, $119.52 upfront), $10.99/mo renewal.',
-          '[Backblaze B2 Pricing](https://www.backblaze.com/cloud-storage/pricing) — checked directly 2026-11-03: $6.95/TB/month, first 10 GB free, free egress up to 3x stored data.',
-          '[Cloudflare R2 Pricing](https://developers.cloudflare.com/r2/pricing/) — checked directly 2026-11-03: $0.015/GB-month standard storage, zero egress fees, 10 GB free tier.',
-          '[Wasabi Pricing](https://wasabi.com/pricing/) — checked directly 2026-11-03: $7.99/TB/month flat pay-as-you-go, no separate egress or API fees.',
-          '[Neon Pricing](https://neon.com/pricing) — checked directly 2026-11-03: free tier 100 CU-hours/project/month, 1 GB storage/project, 5 GB egress; paid compute from $0.106/CU-hour.',
-          '[Supabase Pricing](https://supabase.com/pricing) — checked directly 2026-11-03: free tier 500 MB database, 1 GB storage, 50,000 MAUs; Pro plan $25/month.',
+          '[Backblaze B2 Pricing](https://www.backblaze.com/cloud-storage/pricing) — read from the vendor\'s pricing page on 2026-09-03: $6.95/TB/month, first 10 GB free, free egress up to 3x stored data.',
+          '[Cloudflare R2 Pricing](https://developers.cloudflare.com/r2/pricing/) — read from the vendor\'s pricing page on 2026-09-03: $0.015/GB-month standard storage, zero egress fees, 10 GB free tier.',
+          '[Wasabi Pricing](https://wasabi.com/pricing/) — read from the vendor\'s pricing page on 2026-09-03: $7.99/TB/month flat pay-as-you-go, no separate egress or API fees.',
+          '[Neon Pricing](https://neon.com/pricing) — read from the vendor\'s pricing page on 2026-11-03: free tier 100 CU-hours/project/month, 1 GB storage/project, 5 GB egress; paid compute from $0.106/CU-hour.',
+          '[Supabase Pricing](https://supabase.com/pricing) — read from the vendor\'s pricing page on 2026-09-03: free tier 500 MB database, 1 GB storage, 50,000 MAUs; Pro plan $25/month.',
         ],
       },
       faq: {
@@ -254,7 +254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How much does off-site backup storage actually cost?',
-            a: 'Object storage from Backblaze B2 ($6.95/TB/month), Cloudflare R2 (about $15/TB/month, zero egress fees), or Wasabi ($7.99/TB/month flat) — all checked directly 2026-11-03 — costs well under $1/month to store a full backup of a typical small site, far less than the cost of losing the only copy to a single provider outage.',
+            a: 'Object storage from Backblaze B2 ($6.95/TB/month), Cloudflare R2 (about $15/TB/month, zero egress fees), or Wasabi ($7.99/TB/month flat) — all read from the vendor\'s pricing page on 2026-09-03 — costs well under $1/month to store a full backup of a typical small site, far less than the cost of losing the only copy to a single provider outage.',
           },
           {
             q: 'What is the safest way to share a large file or dataset?',
@@ -283,14 +283,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
-    title: 'Beste Webhosting-Anbieter in Deutschland 2026',
+    title: 'Webhosting in Deutschland 2026: Preise im Vergleich',
     seoTitle: 'Webhosting Kosten Deutschland 2026: Preisvergleich',
     intro:
-      'Webhosting für den deutschen Markt hat eigene Anbieter und einen eigenen regulatorischen Rahmen — DSGVO plus BSI-Grundschutz — den ein allgemeiner globaler Hosting-Vergleich nicht abdeckt. Diese Seite behandelt drei Anbieter mit am 02.11.2026 direkt geprüften Preisen: [IONOS](https://www.ionos.de/), [ALL-INKL.COM](https://all-inkl.com/) und [Hostinger](https://www.hostinger.com/). Preissprünge bei der Verlängerung stehen direkt neben dem Einstiegspreis, nicht versteckt weiter unten — genau der Trick, an dem die meisten Hosting-Vergleiche vorbeischauen. Über den reinen Webhosting-Tarif hinaus behandelt diese Seite auch die verwandten Entscheidungen, vor denen die meisten Website-Betreiber irgendwann stehen: eine separate Datenbank hosten, ein Offsite-Backup einrichten, große Dateien oder Datensätze sicher teilen, und wo KI-/LLM-Hosting in dieses Gesamtbild passt.',
+      'Webhosting für den deutschen Markt hat eigene Anbieter und einen eigenen regulatorischen Rahmen — die DSGVO sowie der Referenzstandard BSI-Grundschutz — den ein allgemeiner globaler Hosting-Vergleich nicht abdeckt. Diese Seite behandelt drei Anbieter mit am 02.11.2026 von den Anbieterseiten abgelesenen Preisen: [IONOS](https://www.ionos.de/), [ALL-INKL.COM](https://all-inkl.com/) und [Hostinger](https://www.hostinger.com/). Preissprünge bei der Verlängerung stehen direkt neben dem Einstiegspreis, nicht weiter unten. Über den reinen Webhosting-Tarif hinaus behandelt diese Seite auch die verwandten Entscheidungen, vor denen die meisten Website-Betreiber irgendwann stehen: eine separate Datenbank hosten, ein Offsite-Backup einrichten, große Dateien oder Datensätze sicher teilen, und wo KI-/LLM-Hosting in dieses Gesamtbild passt.',
     metaDescription:
-      'Webhosting Kosten 2026: IONOS, ALL-INKL.COM und Hostinger mit Einstiegs- und Verlängerungspreis, geprüft am 02.11.2026. IONOS verlängert zum 11-fachen.',
+      'Webhosting Kosten 2026: IONOS, ALL-INKL.COM, Hostinger mit Einstiegs- und Verlängerungspreis, geprüft 02.11.2026. IONOS: 11-fach (laut Anbieter).',
     twitterDescription:
-      'IONOS wirbt mit €1/Monat, verlängert dann zu €11/Monat — das 11-fache. Drei Webhosting-Anbieter für Deutschland, geprüfte Preise, Stand 02.11.2026.',
+      'IONOS wirbt mit €1/Monat, verlängert laut Anbieterseite auf €11/Monat — das 11-fache. Drei Webhosting-Anbieter für Deutschland, geprüfte Preise, Stand 02.11.2026.',
     affiliateDisclosure: true,
     audience:
       'Käufer, die Webhosting für eine Website oder ein kleines Unternehmen im deutschen Markt auswählen und den tatsächlichen Verlängerungspreis sowie eine DSGVO-Einschätzung für in Deutschland gehostete Optionen suchen.',
@@ -331,15 +331,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     quickAnswerTop: {
       de: {
-        question: 'Welcher deutsche Webhosting-Anbieter hat den besten tatsächlichen (nicht nur Einstiegs-) Preis?',
+        question: 'Welcher deutsche Webhosting-Anbieter nennt den geringsten Preissprung bei der Verlängerung?',
         answer:
-          'ALL-INKL.COM hat den geringsten Preissprung bei der Verlängerung: der erste Monat ist kostenlos, danach ein fester Satz von €4,95/Monat ohne Mindestvertragslaufzeit. IONOS wirbt mit dem niedrigsten Einstiegspreis von €1/Monat, verlängert aber nach 12 Monaten auf €11/Monat — ein Anstieg um das 11-fache, der steilste Sprung der drei Anbieter. Hostinger zeigt auf dem deutschen Shop Euro-Preise: 2,49 €/Monat Einstieg (Tarif Premium, 48 Monate Vorauszahlung), Verlängerung 9,99 €/Monat.',
+          'ALL-INKL.COM nennt auf seiner Anbieterseite keinen Preissprung bei der Verlängerung: der erste Monat ist kostenlos, danach €4,95/Monat ohne Mindestvertragslaufzeit. IONOS wirbt mit €1/Monat im ersten Jahr und verlängert laut Anbieterseite (02.11.2026) nach 12 Monaten auf €11/Monat — ein Anstieg um das 11-fache, der unter den drei geprüften Anbietern größte Verlängerungssprung. Hostinger zeigt auf dem deutschen Shop Euro-Preise: 2,49 €/Monat Einstieg (Tarif Premium, 48 Monate Vorauszahlung), Verlängerung 9,99 €/Monat.',
         bullets: [
           'IONOS: €1/Monat Einstieg (12 Monate), Verlängerung €11/Monat (11-fach)',
           'ALL-INKL.COM: 1. Monat kostenlos, danach €4,95/Monat fest, keine Mindestlaufzeit',
           'Hostinger Premium: 2,49 €/Monat Einstieg (48 Monate) / 9,99 €/Monat Verlängerung',
           'IONOS: einmalig 10 € Einrichtung, Preise inkl. MwSt. laut Anbieterseite',
-          'Direkt geprüft, 02.11.2026',
+          'Laut Anbieterseiten, 02.11.2026',
         ],
         updatedDate: '2026-11',
       },
@@ -365,9 +365,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**Der €1/Monat-Einstiegspreis von IONOS verlängert sich auf €11/Monat — das 11-fache** nach den ersten 12 Monaten. Kalkulieren Sie ab dem zweiten Jahr mit €11/Monat, nicht mit €1/Monat.',
-          '**ALL-INKL.COM hat die mildesten Konditionen:** der erste Monat ist kostenlos, danach ein fester Satz von €4,95/Monat ohne Mindestvertragslaufzeit — kein Mehrjahres-Vorauskauf und kein steiler Verlängerungssprung.',
+          '**ALL-INKL.COM nennt keinen Verlängerungssprung:** der erste Monat ist kostenlos, danach €4,95/Monat ohne Mindestvertragslaufzeit (laut Anbieterseite, 02.11.2026).',
           '**Hostinger zeigt in Deutschland Euro-Preise.** Der Tarif Premium kostet 2,49 €/Monat bei 48 Monaten Vorauszahlung (119,52 € im Voraus) und verlängert sich auf 9,99 €/Monat, also etwa das Vierfache.',
-          '**Ein deutscher Hoster vereinfacht die DSGVO-Konformität für regulierte Branchen** (Recht, Medizin, Finanzen), ersetzt aber keinen ordnungsgemäßen Auftragsverarbeitungsvertrag nach Art. 28 — siehe Abschnitt Compliance unten.',
+          '**Ein deutscher Hoster kann Fragen zu Datenresidenz und anwendbarem Recht vereinfachen,** ersetzt aber keinen Auftragsverarbeitungsvertrag nach Art. 28 DSGVO und ist keine Rechtsberatung — siehe Abschnitt Compliance unten.',
           '**Dies ist Standard-Webhosting, keine GPU-Cloud-Rechenleistung.** IONOS und Hetzner bieten auch GPU-Cloud-Produkte für KI-Workloads an, separat behandelt in unserem [DSGVO-Cloud-GPU-Vergleich](/de/local-llms/eu-cloud-gpu-gdpr-2026) — der IONOS-Tarif auf dieser Seite ist deren Standard-Webhosting-Stufe, keine GPU-Rechenleistung.',
           '**Eine Website braucht mehr als nur den Hosting-Tarif.** Eine separate Datenbank (Neon, Supabase), ein Offsite-Backup (Backblaze B2, Cloudflare R2, Wasabi) und ein sicherer Weg, große Dateien zu teilen, sind drei Entscheidungen, vor denen die meisten Website-Betreiber irgendwann stehen — unten mit direkt geprüften Preisen behandelt.',
         ],
@@ -380,22 +380,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**ALL-INKL.COM:** 1. Monat kostenlos, danach €4,95/Monat fest, keine Mindestlaufzeit.',
           '**Hostinger:** Premium 2,49 €/Monat Einstieg (48-monatige Vorauszahlung, 119,52 € im Voraus), Verlängerung 9,99 €/Monat. Unlimited: 3,49 €/Monat, Verlängerung 16,99 €/Monat.',
           '**Diesmal ausgeschlossen:** netcup und Hostpoint — Preise nicht erneut geprüft.',
-          '**Alle Preise direkt auf der jeweiligen Anbieter-Website geprüft, 02.11.2026.**',
+          '**Alle Preise von den jeweiligen Anbieter-Websites abgelesen, 02.11.2026.**',
         ],
       },
       comparisonTable: {
         id: 'comparison-table',
         title: 'Webhosting Deutschland: Geprüfte Preise',
         content:
-          'Vier Zeilen, direkt auf den jeweiligen Anbieter-Websites geprüft am 02.11.2026, alle in EUR wie auf dem deutschen Shop angezeigt. [IONOS](https://www.ionos.de/) nennt Preise inklusive MwSt. und 10 € einmalige Einrichtung; [ALL-INKL.COM](https://all-inkl.com/) nennt 19 % MwSt. im Preis; [Hostinger](https://www.hostinger.com/de/webhosting) zeigt 48-Monats-Preise ohne Angabe zur MwSt. Der große Unterschied fällt sofort auf: IONOS lockt am günstigsten, springt danach aber am steilsten.',
+          'Vier Zeilen, von den jeweiligen Anbieter-Websites abgelesen am 02.11.2026, alle in EUR wie auf dem deutschen Shop angezeigt. [IONOS](https://www.ionos.de/) nennt Preise inklusive MwSt. und 10 € einmalige Einrichtung; [ALL-INKL.COM](https://all-inkl.com/) nennt 19 % MwSt. im Preis; [Hostinger](https://www.hostinger.com/de/webhosting) zeigt 48-Monats-Preise ohne Angabe zur MwSt. Der große Unterschied: IONOS wirbt mit €1/Monat im ersten Jahr (ALL-INKL.COM nennt den ersten Monat kostenlos), zeigt unter den drei geprüften Anbietern aber den größten Verlängerungssprung (11-fach, laut Anbieterseite).',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'IONOS verlängert nach einem €1/Monat-Einstiegsjahr auf €11/Monat — das 11-fache — während ALL-INKL.COM bei einem festen Satz von €4,95/Monat ohne Mindestlaufzeit und ohne vergleichbaren Sprung bleibt.',
+            text: 'IONOS verlängert nach einem €1/Monat-Einstiegsjahr auf €11/Monat — das 11-fache — während ALL-INKL.COM laut Anbieterseite €4,95/Monat ohne Mindestlaufzeit nennt und keinen vergleichbaren Sprung angibt.',
           },
           {
             type: 'plain-terms',
-            text: 'IONOS ist die im ersten Jahr günstige Wohnung, deren Miete sich bei Verlängerung verdreifacht. ALL-INKL.COM ist der Festpreis-Mietvertrag, der die ganze Zeit über gleich bleibt.',
+            text: 'IONOS ist die im ersten Jahr günstige Wohnung, deren Miete sich bei Verlängerung auf das Elffache erhöht. ALL-INKL.COM nennt einen Festpreis ohne Mindestlaufzeit.',
           },
         ],
         columns: ['Anbieter', 'Einstiegspreis', 'Laufzeit', 'Verlängerungspreis'],
@@ -465,7 +465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'database-hosting',
         title: 'Eine separate Datenbank hosten',
         content:
-          'Shared Webhosting wie der IONOS- oder ALL-INKL.COM-Tarif auf dieser Seite bündelt eine einzelne MySQL-Datenbank im selben Speicherkontingent wie der Rest des Kontos — ausreichend für einen Blog oder ein kleines CMS, nicht für eine Anwendung mit eigener Nutzertabelle, Analytics-Ereignissen oder dem Vektor-/Embedding-Speicher, den eine KI-Funktion braucht. Dafür ist eine verwaltete Datenbank ein eigenes Produkt, getrennt vom Webhosting. **[Neon](https://neon.com/pricing)** läuft auf serverlosem Postgres und bietet eine kostenlose Stufe — 100 Rechenstunden pro Projekt und Monat, 0,5 GB Speicher pro Projekt, 5 GB Egress, direkt auf neon.com am 03.09.2026 geprüft —, die sich bei Inaktivität auf Null-Kosten stellt und danach nutzungsbasiert abrechnet (Rechenleistung ab $0,106/CU-Stunde, Speicher $0,35/GB-Monat) ohne Monatsminimum. **[Supabase](https://supabase.com/pricing)** bietet eine vergleichbare kostenlose Stufe — 500 MB Datenbank, 1 GB Dateispeicher, 50.000 monatlich aktive Nutzer, 5 GB Egress, über bis zu 2 Projekte, direkt auf supabase.com am 03.09.2026 geprüft —, aber ein kostenloses Projekt pausiert nach 7 Tagen Inaktivität und erhält keine automatischen Backups; der Pro-Tarif ($25/Monat) hebt beide Grenzen auf. Ein Wechsel zu einer separaten verwalteten Datenbank lohnt sich, sobald eine Website mehr braucht als die eine gebündelte MySQL-Instanz von Shared Hosting — als Ergänzung zum Webhosting, nicht als Ersatz.',
+          'Shared Webhosting wie der IONOS- oder ALL-INKL.COM-Tarif auf dieser Seite bündelt eine einzelne MySQL-Datenbank im selben Speicherkontingent wie der Rest des Kontos — ausreichend für einen Blog oder ein kleines CMS, nicht für eine Anwendung mit eigener Nutzertabelle, Analytics-Ereignissen oder dem Vektor-/Embedding-Speicher, den eine KI-Funktion braucht. Dafür ist eine verwaltete Datenbank ein eigenes Produkt, getrennt vom Webhosting. **[Neon](https://neon.com/pricing)** läuft auf serverlosem Postgres und bietet eine kostenlose Stufe — 100 Rechenstunden pro Projekt und Monat, 1 GB Speicher pro Projekt, 5 GB Egress, laut neon.com am 03.11.2026 —, die sich bei Inaktivität auf Null-Kosten stellt und danach nutzungsbasiert abrechnet (Rechenleistung ab $0,106/CU-Stunde, Speicher $0,35/GB-Monat) ohne Monatsminimum. **[Supabase](https://supabase.com/pricing)** bietet eine vergleichbare kostenlose Stufe — 500 MB Datenbank, 1 GB Dateispeicher, 50.000 monatlich aktive Nutzer, 5 GB Egress, über bis zu 2 Projekte, laut supabase.com am 03.09.2026 —, aber ein kostenloses Projekt pausiert nach 7 Tagen Inaktivität und erhält keine automatischen Backups; der Pro-Tarif ($25/Monat) hebt beide Grenzen auf. Ein Wechsel zu einer separaten verwalteten Datenbank lohnt sich, sobald eine Website mehr braucht als die eine gebündelte MySQL-Instanz von Shared Hosting — als Ergänzung zum Webhosting, nicht als Ersatz.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -481,7 +481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'backups',
         title: 'Backups der eigenen Website und Daten',
         content:
-          'Die Standardregel lautet 3-2-1: 3 Kopien der Daten, auf 2 verschiedenen Speicherarten, mit 1 Kopie außerhalb des Standorts. Ein Backup, das nur auf demselben Server liegt wie die Website, zählt nicht, denn ein Ausfall beim Anbieter oder ein Kontoproblem legt Website und Backup gemeinsam lahm. Die meisten Shared-Hosting-Tarife, einschließlich IONOS und ALL-INKL.COM, enthalten eine automatische Backup-Funktion, aber prüfen Sie das Aufbewahrungsfenster (wie viele Tage zurück eine Wiederherstellung reicht) und ob die Wiederherstellung selbst durchführbar ist oder ein Support-Ticket erfordert, bevor Sie sich darauf als einzige Kopie verlassen. Für die Offsite-Kopie ist nach Gigabyte abgerechneter Objektspeicher die Standardoption: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** berechnet $6,95/TB/Monat, die ersten 10 GB kostenlos, freier Egress bis zum 3-fachen der durchschnittlich gespeicherten Datenmenge, direkt geprüft am 03.09.2026; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** berechnet $0,015/GB-Monat (rund $15/TB/Monat), aber ohne jegliche Egress-Gebühren und mit einer kostenlosen Stufe von 10 GB Speicher, direkt geprüft am 03.09.2026; **[Wasabi](https://wasabi.com/pricing/)** berechnet einen festen Satz von $7,99/TB/Monat ohne separate Egress- oder API-Gebühren, direkt geprüft am 03.09.2026. Für eine kleine Website kostet ein vollständiges Offsite-Backup bei allen drei Anbietern deutlich unter $1/Monat.',
+          'Die Standardregel lautet 3-2-1: 3 Kopien der Daten, auf 2 verschiedenen Speicherarten, mit 1 Kopie außerhalb des Standorts. Ein Backup, das nur auf demselben Server liegt wie die Website, zählt nicht, denn ein Ausfall beim Anbieter oder ein Kontoproblem legt Website und Backup gemeinsam lahm. Die meisten Shared-Hosting-Tarife, einschließlich IONOS und ALL-INKL.COM, enthalten eine automatische Backup-Funktion, aber prüfen Sie das Aufbewahrungsfenster (wie viele Tage zurück eine Wiederherstellung reicht) und ob die Wiederherstellung selbst durchführbar ist oder ein Support-Ticket erfordert, bevor Sie sich darauf als einzige Kopie verlassen. Für die Offsite-Kopie ist nach Gigabyte abgerechneter Objektspeicher die Standardoption: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** berechnet $6,95/TB/Monat, die ersten 10 GB kostenlos, freier Egress bis zum 3-fachen der durchschnittlich gespeicherten Datenmenge, laut Anbieterseite am 03.09.2026; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** berechnet $0,015/GB-Monat (rund $15/TB/Monat), aber ohne jegliche Egress-Gebühren und mit einer kostenlosen Stufe von 10 GB Speicher, laut Anbieterseite am 03.09.2026; **[Wasabi](https://wasabi.com/pricing/)** berechnet einen festen Satz von $7,99/TB/Monat ohne separate Egress- oder API-Gebühren, laut Anbieterseite am 03.09.2026. Für eine kleine Website kostet ein vollständiges Offsite-Backup bei allen drei Anbietern deutlich unter $1/Monat.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -497,32 +497,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'data-sharing',
         title: 'Daten sicher teilen und übertragen',
         content:
-          'Eine Datei per E-Mail-Anhang zu teilen ist die unsicherste und unzuverlässigste Methode ab wenigen Megabyte — die meisten Postfächer begrenzen Anhänge auf etwa 20-25 MB, und die Datei liegt danach unverschlüsselt und unbegrenzt in mehreren Postfächern. Ein besserer Standard ist ein zeitlich begrenzter, ablaufender Link: dieselben Objektspeicher-Dienste, die oben für Backups genannt wurden (Backblaze B2, Cloudflare R2, Wasabi), können jeweils eine "Presigned URL" erzeugen — einen Link, der temporären Zugriff auf genau eine Datei gewährt und nach einer festgelegten Zeit automatisch abläuft, ohne den gesamten Speicher-Bucket öffentlich zu machen. Beim Teilen von Dateien mit dem Support eines Hosting- oder Datenbank-Anbieters zur Fehlerdiagnose sollte niemals ein Datenbank-Passwort oder API-Schlüssel in der Datei selbst stehen — dieses Zugangsdaten sollte rotiert werden, sobald die Datei nicht mehr gebraucht wird, da ein Support-Ticket oder ein geteilter Link länger bestehen kann als der vorgesehene Empfänger. Für wiederkehrendes Teilen großer Dateien, etwa Video oder Datensätze, vermeidet die Null-Egress-Preisgestaltung von Cloudflare R2 die überraschende Rechnung, die eine Egress-Gebühr pro Gigabyte verursachen kann, sobald ein geteilter Link oft heruntergeladen wurde.',
+          'Eine Datei per E-Mail-Anhang zu teilen ist ab wenigen Megabyte eine schwache Methode — die meisten Postfächer begrenzen Anhänge auf etwa 20-25 MB, und die Datei liegt danach unverschlüsselt und unbegrenzt in mehreren Postfächern. Ein besserer Standard ist ein zeitlich begrenzter, ablaufender Link: dieselben Objektspeicher-Dienste, die oben für Backups genannt wurden (Backblaze B2, Cloudflare R2, Wasabi), können jeweils eine "Presigned URL" erzeugen — einen Link, der temporären Zugriff auf genau eine Datei gewährt und nach einer festgelegten Zeit automatisch abläuft, ohne den gesamten Speicher-Bucket öffentlich zu machen. Beim Teilen von Dateien mit dem Support eines Hosting- oder Datenbank-Anbieters zur Fehlerdiagnose sollte niemals ein Datenbank-Passwort oder API-Schlüssel in der Datei selbst stehen — dieses Zugangsdaten sollte rotiert werden, sobald die Datei nicht mehr gebraucht wird, da ein Support-Ticket oder ein geteilter Link länger bestehen kann als der vorgesehene Empfänger. Für wiederkehrendes Teilen großer Dateien, etwa Video oder Datensätze, vermeidet die Null-Egress-Preisgestaltung von Cloudflare R2 die überraschende Rechnung, die eine Egress-Gebühr pro Gigabyte verursachen kann, sobald ein geteilter Link oft heruntergeladen wurde.',
       },
       compliance: {
         id: 'compliance',
         title: 'DSGVO und BSI-Grundschutz',
         content:
-          'Hosting bei einem deutschen Anbieter auf deutschem Boden ist der einfachste Weg, um die Datenresidenz-Erwartungen für Auftragsverarbeitungsverträge nach Art. 28 DSGVO zu erfüllen, besonders für regulierte KMU-Branchen wie Recht, Medizin und Finanzen. Dies vereinfacht die Compliance, statt sie vorzuschreiben — die DSGVO verlangt nicht explizit deutsches Hosting, aber ein deutsches Rechenzentrum beseitigt Unklarheiten darüber, welche Rechtsordnung im Fall eines Vorfalls oder einer Prüfung gilt. Der BSI-Grundschutz (vom Bundesamt für Sicherheit in der Informationstechnik) ist ein im deutschen Markt weit verbreiteter Referenzstandard für die Sicherheitslage eines Anbieters; fragen Sie einen Anbieter, ob die Infrastruktur BSI-Grundschutz-Kontrollen folgt, wenn das für Ihre Branche relevant ist.',
+          'Ein Hoster mit Rechenzentrum in Deutschland kann Fragen zu Datenresidenz und anwendbarem Recht im Auftragsverarbeitungsvertrag nach Art. 28 DSGVO vereinfachen, besonders für regulierte Branchen wie Recht, Medizin und Finanzen. Die DSGVO verlangt jedoch kein deutsches Hosting; ob Ihre Konstellation konform ist, hängt von Rechtsgrundlage, Verträgen und technisch-organisatorischen Maßnahmen ab. Das ist keine Rechtsberatung — klären Sie es mit Ihrem Datenschutzbeauftragten oder einer Rechtsberatung. Der BSI-Grundschutz (vom Bundesamt für Sicherheit in der Informationstechnik) ist ein im deutschen Markt weit verbreiteter Referenzstandard für die Sicherheitslage eines Anbieters; fragen Sie einen Anbieter, ob die Infrastruktur BSI-Grundschutz-Kontrollen folgt, wenn das für Ihre Branche relevant ist.',
       },
       verdict: {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Für die niedrigsten laufenden Kosten ohne Verlängerungsschock ist [ALL-INKL.COMs](https://all-inkl.com/) fester Satz von €4,95/Monat die einfachste Wahl — kein Kleingedrucktes, keine Überraschung im zweiten Jahr. Für den niedrigstmöglichen Preis im ersten Jahr, sofern Sie den Sprung auf €11/Monat fest einplanen, eignet sich [IONOS](https://www.ionos.de/). [Hostinger](https://www.hostinger.com/) passt, wenn Sie denselben Anbieter wie bei einer globalen Website nutzen möchten und mit 48-monatiger Vorauszahlung und einem Verlängerungspreis von 9,99 €/Monat einverstanden sind.',
+          '[ALL-INKL.COMs](https://all-inkl.com/) Preis von €4,95/Monat ohne Mindestlaufzeit (laut Anbieterseite am 02.11.2026) ist eine naheliegende Option, wenn Sie einen Verlängerungssprung vermeiden wollen; prüfen Sie vor Vertragsschluss die aktuellen Konditionen. Für den niedrigsten beworbenen Preis im ersten Jahr, sofern Sie den Sprung auf €11/Monat fest einplanen, eignet sich [IONOS](https://www.ionos.de/). [Hostinger](https://www.hostinger.com/) passt, wenn Sie denselben Anbieter wie bei einer globalen Website nutzen möchten und mit 48-monatiger Vorauszahlung und einem Verlängerungspreis von 9,99 €/Monat einverstanden sind.',
       },
       sources: {
         id: 'sources',
         title: 'Quellen',
         items: [
-          '[IONOS Hosting](https://www.ionos.de/) — direkt auf ionos.de geprüft, 02.11.2026: Tarif Plus €1/Monat Einstieg (12 Monate), €11/Monat danach; einmalig 10 € Einrichtung; Preise inkl. MwSt.',
-          '[ALL-INKL.COM Hosting](https://all-inkl.com/) — direkt auf all-inkl.com geprüft, 02.11.2026: 1. Monat kostenlos, €4,95/Monat fest, keine Mindestlaufzeit.',
-          '[Hostinger-Preise](https://www.hostinger.com/) — direkt auf hostinger.com/de geprüft, 02.11.2026: Premium 2,49 €/Monat (48 Monate, 119,52 € im Voraus), 9,99 €/Monat Verlängerung; Unlimited 3,49 €/Monat, 16,99 €/Monat Verlängerung.',
-          '[Backblaze B2 Preise](https://www.backblaze.com/cloud-storage/pricing) — direkt geprüft 03.09.2026: $6,95/TB/Monat, erste 10 GB kostenlos, freier Egress bis zum 3-fachen der gespeicherten Daten.',
-          '[Cloudflare R2 Preise](https://developers.cloudflare.com/r2/pricing/) — direkt geprüft 03.09.2026: $0,015/GB-Monat Standard-Speicher, keine Egress-Gebühren, kostenlose Stufe 10 GB.',
-          '[Wasabi Preise](https://wasabi.com/pricing/) — direkt geprüft 03.09.2026: $7,99/TB/Monat fest, keine separaten Egress- oder API-Gebühren.',
-          '[Neon Preise](https://neon.com/pricing) — direkt geprüft 03.09.2026: kostenlose Stufe 100 CU-Stunden/Projekt/Monat, 0,5 GB Speicher/Projekt, 5 GB Egress; bezahlte Rechenleistung ab $0,106/CU-Stunde.',
-          '[Supabase Preise](https://supabase.com/pricing) — direkt geprüft 03.09.2026: kostenlose Stufe 500 MB Datenbank, 1 GB Speicher, 50.000 MAUs; Pro-Tarif $25/Monat.',
+          '[IONOS Hosting](https://www.ionos.de/) — laut ionos.de, 02.11.2026: Tarif Plus €1/Monat Einstieg (12 Monate), €11/Monat danach; einmalig 10 € Einrichtung; Preise inkl. MwSt.',
+          '[ALL-INKL.COM Hosting](https://all-inkl.com/) — laut all-inkl.com, 02.11.2026: 1. Monat kostenlos, €4,95/Monat fest, keine Mindestlaufzeit.',
+          '[Hostinger-Preise](https://www.hostinger.com/) — laut hostinger.com/de, 02.11.2026: Premium 2,49 €/Monat (48 Monate, 119,52 € im Voraus), 9,99 €/Monat Verlängerung; Unlimited 3,49 €/Monat, 16,99 €/Monat Verlängerung.',
+          '[Backblaze B2 Preise](https://www.backblaze.com/cloud-storage/pricing) — laut Anbieterseite 03.09.2026: $6,95/TB/Monat, erste 10 GB kostenlos, freier Egress bis zum 3-fachen der gespeicherten Daten.',
+          '[Cloudflare R2 Preise](https://developers.cloudflare.com/r2/pricing/) — laut Anbieterseite 03.09.2026: $0,015/GB-Monat Standard-Speicher, keine Egress-Gebühren, kostenlose Stufe 10 GB.',
+          '[Wasabi Preise](https://wasabi.com/pricing/) — laut Anbieterseite 03.09.2026: $7,99/TB/Monat fest, keine separaten Egress- oder API-Gebühren.',
+          '[Neon Preise](https://neon.com/pricing) — laut Anbieterseite 03.11.2026: kostenlose Stufe 100 CU-Stunden/Projekt/Monat, 1 GB Speicher/Projekt, 5 GB Egress; bezahlte Rechenleistung ab $0,106/CU-Stunde.',
+          '[Supabase Preise](https://supabase.com/pricing) — laut Anbieterseite 03.09.2026: kostenlose Stufe 500 MB Datenbank, 1 GB Speicher, 50.000 MAUs; Pro-Tarif $25/Monat.',
         ],
       },
       faq: {
@@ -538,8 +538,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'IONOS wirbt mit €1/Monat für die ersten 12 Monate, verlängert sich dann auf €11/Monat — ein Anstieg um das 11-fache. Kalkulieren Sie mit dem €11/Monat-Wert, wenn Sie die Gesamtkosten über mehr als ein Jahr vergleichen.',
           },
           {
-            q: 'Welcher deutsche Hosting-Anbieter vermeidet einen Preissprung bei der Verlängerung?',
-            a: 'ALL-INKL.COM. Der erste Monat ist kostenlos, danach wird ein fester Satz von €4,95/Monat berechnet, ohne Mindestvertragslaufzeit und ohne Verlängerungssprung — der Preis im zweiten Monat ist der Preis, den Sie danach jeden Monat zahlen.',
+            q: 'Welcher deutsche Hosting-Anbieter nennt keinen Preissprung bei der Verlängerung?',
+            a: 'ALL-INKL.COM. Laut Anbieterseite am 02.11.2026: erster Monat kostenlos, danach €4,95/Monat ohne Mindestvertragslaufzeit; einen Verlängerungssprung nennt die Seite nicht. Preise können sich ändern — prüfen Sie die aktuelle Anbieterseite.',
           },
           {
             q: 'Rechnet Hostinger in Deutschland in Euro ab?',
@@ -547,7 +547,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Erfüllt deutsches Hosting allein die DSGVO?',
-            a: 'Ein deutscher Hoster vereinfacht Fragen zur Datenresidenz und unterstützt die Erwartungen an einen Auftragsverarbeitungsvertrag nach Art. 28, besonders für regulierte Branchen wie Recht, Medizin und Finanzen — die DSGVO schreibt jedoch nicht rechtlich deutsches Hosting vor. Es beseitigt Unklarheit über die Rechtsordnung, statt eine harte Anforderung zu sein.',
+            a: 'Nein, nicht allein. Ein deutscher Hoster kann Fragen zur Datenresidenz vereinfachen und den Auftragsverarbeitungsvertrag nach Art. 28 erleichtern, die DSGVO schreibt deutsches Hosting aber nicht vor. Das ist keine Rechtsberatung.',
           },
           {
             q: 'Bieten IONOS oder Hetzner GPU-Cloud-Hosting für KI-Workloads an?',
@@ -559,7 +559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was kostet ein Offsite-Backup wirklich?',
-            a: 'Objektspeicher von Backblaze B2 ($6,95/TB/Monat), Cloudflare R2 (rund $15/TB/Monat, keine Egress-Gebühren) oder Wasabi ($7,99/TB/Monat fest) — alle direkt geprüft am 03.09.2026 — kostet für ein vollständiges Backup einer typischen kleinen Website deutlich unter $1/Monat, weit weniger als der Verlust der einzigen Kopie bei einem Anbieterausfall.',
+            a: 'Objektspeicher von Backblaze B2 ($6,95/TB/Monat), Cloudflare R2 (rund $15/TB/Monat, keine Egress-Gebühren) oder Wasabi ($7,99/TB/Monat fest) — alle laut Anbieterseite am 03.09.2026 — kostet für ein vollständiges Backup einer typischen kleinen Website deutlich unter $1/Monat, weit weniger als der Verlust der einzigen Kopie bei einem Anbieterausfall.',
           },
           {
             q: 'Wie teile ich eine große Datei oder einen Datensatz am sichersten?',
@@ -571,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[DSGVO-konforme Cloud-GPU-Anbieter in der EU vergleichen](/de/local-llms/eu-cloud-gpu-gdpr-2026) — Hetzner, IONOS GPU Cloud und andere EU-native GPU-Anbieter für KI-Workloads, unabhängig vom Webhosting.',
+          '[Cloud-GPU-Anbieter in der EU im DSGVO-Kontext vergleichen](/de/local-llms/eu-cloud-gpu-gdpr-2026) — Hetzner, IONOS GPU Cloud und andere EU-native GPU-Anbieter für KI-Workloads, unabhängig vom Webhosting.',
           '[Cloud-GPU-Miete allgemein vergleichen](/de/power-local-llm/cloud-gpu-rental-guide-2026) — RunPod, Lambda Labs und Vast.ai nach Stundenpreis, Verfügbarkeit und Einrichtungszeit.',
           '[Die globale Seite mit geprüften Webhosting-Preisen ansehen](/de/power-local-llm/best-web-hosting) — das weltweite Gegenstück zu dieser Deutschland-Seite.',
         ],
@@ -585,10 +585,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
-    title: 'Meilleur Hébergeur Web en France 2026',
+    title: 'Hébergement Web en France 2026 : Prix et Renouvellement',
     seoTitle: 'LWS, OVHcloud, Hostinger : comparatif hébergeur 2026',
     intro:
-      'L\'hébergement web pour le marché français a ses propres acteurs, ses propres conventions tarifaires, et un contexte réglementaire spécifique — RGPD et recommandations de la CNIL — qu\'un comparatif mondial générique ne couvre pas. Cette page compare quatre hébergeurs dont les tarifs ont été lus directement le 02/11/2026 (Infomaniak : relevé du 30/08/2026, non relu) : [o2switch](https://www.o2switch.fr/), [LWS](https://www.lws.fr/), [Infomaniak](https://www.infomaniak.com/) et [Hostinger](https://www.hostinger.com/). OVHcloud, la marque d\'hébergement française la plus reconnue, fait l\'objet d\'une mention éditoriale plus bas, avec ses prix publics. Au-delà du seul hébergement web, cette page couvre aussi les décisions connexes auxquelles la plupart des propriétaires de site font face tôt ou tard : héberger une base de données à part, sauvegarder hors site, partager de gros fichiers ou jeux de données en toute sécurité, et où se situe l\'hébergement IA/LLM dans cet ensemble.',
+      'L\'hébergement web pour le marché français a ses propres acteurs, ses propres conventions tarifaires, et un contexte réglementaire spécifique — RGPD et recommandations de la CNIL — qu\'un comparatif mondial générique ne couvre pas. Cette page compare quatre hébergeurs dont les tarifs ont été lus directement le 02/11/2026 (Infomaniak : relevé du 30/08/2026, non relu) : [o2switch](https://www.o2switch.fr/), [LWS](https://www.lws.fr/), [Infomaniak](https://www.infomaniak.com/) et [Hostinger](https://www.hostinger.com/). OVHcloud, marque d\'hébergement française bien connue, figure aussi plus bas avec ses tarifs publics lus sur ovhcloud.com le 03/11/2026. Au-delà du seul hébergement web, cette page couvre aussi les décisions connexes auxquelles la plupart des propriétaires de site font face tôt ou tard : héberger une base de données à part, sauvegarder hors site, partager de gros fichiers ou jeux de données en toute sécurité, et où se situe l\'hébergement IA/LLM dans cet ensemble.',
     metaDescription:
       'Comparatif hébergeur web 2026 : LWS, OVHcloud, o2switch, Hostinger, Infomaniak. Prix d\'appel et de renouvellement lus le 02/11/2026, LWS vs OVH.',
     twitterDescription:
@@ -633,9 +633,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     quickAnswerTop: {
       fr: {
-        question: 'Quel hébergeur web français a la tarification la plus honnête ?',
+        question: 'Quels hébergeurs web français affichent clairement leur prix de renouvellement ?',
         answer:
-          'LWS affiche 1,49 € HT/mois la première année et renouvelle à 3,99 € HT/mois. OVHcloud, la marque française la plus connue, affiche 1,59 € HT/mois pour Starter (renouvellement 2,59 € HT) et 2,99 € HT/mois pour Perso pendant 12 mois (renouvellement 5,99 € HT) . Hostinger affiche 2,49 €/mois sur 48 mois et renouvelle à 9,99 €/mois. o2switch affiche 1,86 € HT/mois avec paiement annuel mais ne publie pas son tarif de renouvellement. Infomaniak affichait 10,91 CHF/mois fixe lors du relevé du 30/08/2026, non relu depuis.',
+          'LWS affiche 1,49 € HT/mois la première année et renouvelle à 3,99 € HT/mois. OVHcloud, marque française bien connue, affiche 1,59 € HT/mois pour Starter (renouvellement 2,59 € HT) et 2,99 € HT/mois pour Perso pendant 12 mois (renouvellement 5,99 € HT). Hostinger affiche 2,49 €/mois sur 48 mois et renouvelle à 9,99 €/mois. o2switch affiche 1,86 € HT/mois avec paiement annuel mais ne publie pas son tarif de renouvellement. Infomaniak affichait 10,91 CHF/mois fixe lors du relevé du 30/08/2026, non relu depuis.',
         bullets: [
           'LWS : 1,49 € HT/mois (1ère année), renouvellement à 3,99 € HT/mois',
           'OVHcloud : Starter 1,59 € HT/mois (renouvellement 2,59 € HT), Perso 2,99 € HT/mois (renouvellement 5,99 € HT)',
@@ -666,10 +666,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Infomaniak affichait un prix fixe** — 10,91 CHF/mois en tarif catalogue standard, sans saut au renouvellement, avec un essai gratuit de 30 jours (relevé du 30/08/2026, non relu le 02/11/2026).',
+          '**Infomaniak affichait un prix catalogue** — 10,91 CHF/mois, sans saut annoncé au renouvellement, avec un essai gratuit de 30 jours (page lue le 30/08/2026, non relue depuis ; vérifiez les conditions actuelles).',
           '**LWS : 1,49 € HT/mois la première année, renouvelé à 3,99 € HT/mois** (1,79 € puis 4,79 € TTC), une hausse de 2,7x. Offres supérieures : Starter 3,49 € HT/mois et Performance 6,99 € HT/mois en promotion.',
           '**o2switch fonctionne avec une "Offre Unique" :** 1,86 € HT/mois affiché, paiement annuel ; la page indique un renouvellement « au tarif classique » sans le chiffrer.',
-          '**OVHcloud, la marque d\'hébergement française la plus reconnue : Starter 1,59 € HT/mois (renouvellement 2,59 € HT), Perso 2,99 € HT/mois pendant 12 mois (renouvellement 5,99 € HT).** Mention éditoriale, avec ses prix publics.',
+          '**OVHcloud, marque d\'hébergement française bien connue : Starter 1,59 € HT/mois (renouvellement 2,59 € HT), Perso 2,99 € HT/mois pendant 12 mois (renouvellement 5,99 € HT).** Tarifs publics lus sur ovhcloud.com le 03/11/2026.',
           '**Il s\'agit d\'hébergement web standard, pas de calcul GPU en cloud.** Pour le calcul IA/LLM, voir le [Guide de location de GPU cloud 2026](/fr/power-local-llm/cloud-gpu-rental-guide-2026) séparé.',
           '**Un site a besoin de plus que son seul forfait d\'hébergement.** Une base de données séparée (Neon, Supabase), une sauvegarde hors site (Backblaze B2, Cloudflare R2, Wasabi) et un moyen sûr de partager de gros fichiers sont trois décisions auxquelles la plupart des propriétaires de site font face tôt ou tard — détaillées ci-dessous avec des prix vérifiés directement.',
         ],
@@ -679,10 +679,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'En bref',
         items: [
           '**o2switch :** 1,86 € HT/mois affiché (offre unique, paiement annuel), renouvellement non publié.',
-          '**LWS :** 1,49 € HT/mois (1ère année), renouvellement 3,99 € HT/mois.',
-          '**Infomaniak :** 10,91 CHF/mois en tarif catalogue standard, pas de saut au renouvellement, essai gratuit 30 jours. Entreprise suisse, large clientèle française.',
+          '**LWS :** 1,49 € HT/mois (1ère année), renouvellement 3,99 € HT/mois. ',
+          '**Infomaniak :** 10,91 CHF/mois en tarif catalogue, sans saut annoncé au renouvellement (page du 30/08/2026, non relue), essai gratuit 30 jours. Entreprise suisse. ',
           '**Hostinger :** Premium 2,49 €/mois (prépaiement 48 mois, 119,52 € à l\'avance), renouvellement 9,99 €/mois ; la boutique française affiche des prix en euros.',
-          '**OVHcloud :** mention éditoriale — hébergeur français #1 en notoriété, avec ses prix publics.',
+          '**OVHcloud :** marque française bien connue ; tarifs publics lus sur ovhcloud.com le 03/11/2026.',
           '**Exclu cette fois-ci :** PlanetHoster — tarifs non revérifiés.',
         ],
       },
@@ -690,15 +690,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Hébergement en France : Prix Vérifiés',
         content:
-          'Quatre hébergeurs, un seul patron dans leurs grilles tarifaires : le prix qui accroche n\'est le plus souvent pas celui que vous payez la deuxième année. [Infomaniak](https://www.infomaniak.com/) est la seule exception. Tarifs lus directement sur le site de chaque hébergeur le 02/11/2026 (Infomaniak : 30/08/2026) ; OVHcloud figure avec ses prix publics car c\'est la marque que les lecteurs attendent de voir.',
+          'Quatre hébergeurs, un seul patron dans leurs grilles tarifaires : le prix d\'appel n\'est pas toujours celui que vous payez la deuxième année. [Infomaniak](https://www.infomaniak.com/) est la seule exception annoncée (page lue le 30/08/2026). Tarifs lus directement sur le site de chaque hébergeur le 02/11/2026 (Infomaniak : 30/08/2026) ; OVHcloud figure avec ses prix publics lus le 03/11/2026, car c\'est une marque que les lecteurs s\'attendent à voir.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Infomaniak est le seul hébergeur ici avec un prix fixe et sans saut au renouvellement ; LWS, o2switch et Hostinger augmentent tous après la première période.',
+            text: 'Infomaniak est le seul hébergeur ici dont la page (lue le 30/08/2026) n\'annonce pas de saut au renouvellement ; LWS, OVHcloud et Hostinger affichent un tarif de renouvellement plus élevé ; o2switch ne publie pas le sien.',
           },
           {
             type: 'plain-terms',
-            text: 'Infomaniak facture comme un abonnement qui reste au même prix indéfiniment. Les autres facturent comme une remise de première année qui disparaît une fois la période promotionnelle terminée.',
+            text: 'Infomaniak affiche un prix catalogue sans saut annoncé. Les autres facturent comme une remise de première année qui disparaît une fois la période promotionnelle terminée.',
           },
         ],
         columns: ['Hébergeur', 'Prix an 1', 'Prix renouvellement'],
@@ -776,7 +776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'database-hosting',
         title: 'Héberger une base de données à part',
         content:
-          'L\'hébergement mutualisé, comme les forfaits o2switch, LWS ou Infomaniak de cette page, regroupe une seule base de données MySQL dans le même quota de disque que le reste du compte — suffisant pour un blog ou un petit CMS, pas pour une application avec sa propre table d\'utilisateurs, des événements analytiques, ou le stockage vectoriel/embeddings qu\'exige une fonctionnalité IA. Pour cela, une base de données managée est un produit distinct de l\'hébergement web. **[Neon](https://neon.com/pricing)** fonctionne sur Postgres serverless et propose un palier gratuit — 100 heures de calcul par projet et par mois, 0,5 Go de stockage par projet, 5 Go de sortie, vérifié directement sur neon.com le 03/09/2026 — qui se met en veille à coût nul en cas d\'inactivité, puis facture le calcul à l\'usage (à partir de 0,106$/heure de calcul) et le stockage (0,35$/Go/mois) au-delà du palier gratuit, sans minimum mensuel. **[Supabase](https://supabase.com/pricing)** propose un palier gratuit comparable — 500 Mo de base de données, 1 Go de stockage de fichiers, 50 000 utilisateurs actifs mensuels, 5 Go de sortie, sur 2 projets maximum, vérifié directement sur supabase.com le 03/09/2026 — mais un projet gratuit se met en pause après 7 jours d\'inactivité et ne bénéficie d\'aucune sauvegarde automatique ; le forfait Pro (25$/mois) lève ces deux limites. Passer à une base de données managée séparée devient pertinent dès qu\'un site a besoin de plus que l\'unique instance MySQL groupée avec l\'hébergement mutualisé — en complément de l\'hébergement web, pas en remplacement.',
+          'L\'hébergement mutualisé, comme les forfaits o2switch, LWS ou Infomaniak de cette page, regroupe une seule base de données MySQL dans le même quota de disque que le reste du compte — suffisant pour un blog ou un petit CMS, pas pour une application avec sa propre table d\'utilisateurs, des événements analytiques, ou le stockage vectoriel/embeddings qu\'exige une fonctionnalité IA. Pour cela, une base de données managée est un produit distinct de l\'hébergement web. **[Neon](https://neon.com/pricing)** fonctionne sur Postgres serverless et propose un palier gratuit — 100 heures de calcul par projet et par mois, 0,5 Go de stockage par projet, 5 Go de sortie, lu sur neon.com le 03/09/2026 — qui se met en veille à coût nul en cas d\'inactivité, puis facture le calcul à l\'usage (à partir de 0,106$/heure de calcul) et le stockage (0,35$/Go/mois) au-delà du palier gratuit, sans minimum mensuel. **[Supabase](https://supabase.com/pricing)** propose un palier gratuit comparable — 500 Mo de base de données, 1 Go de stockage de fichiers, 50 000 utilisateurs actifs mensuels, 5 Go de sortie, sur 2 projets maximum, lu sur supabase.com le 03/09/2026 — mais un projet gratuit se met en pause après 7 jours d\'inactivité et ne bénéficie d\'aucune sauvegarde automatique ; le forfait Pro (25$/mois) lève ces deux limites. Passer à une base de données managée séparée devient pertinent dès qu\'un site a besoin de plus que l\'unique instance MySQL groupée avec l\'hébergement mutualisé — en complément de l\'hébergement web, pas en remplacement.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -792,7 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'backups',
         title: 'Sauvegarder son site et ses données',
         content:
-          'La règle standard est 3-2-1 : garder 3 copies des données, sur 2 types de stockage différents, avec 1 copie hors site. Une sauvegarde qui ne vit que sur le même serveur que le site ne compte pas, car une panne chez l\'hébergeur ou un problème de compte emporte le site et la sauvegarde ensemble. La plupart des forfaits d\'hébergement mutualisé, y compris ceux de cette page, incluent une fonction de sauvegarde automatique, mais vérifiez la fenêtre de rétention (combien de jours en arrière une restauration peut remonter) et si la restauration est en libre-service ou nécessite un ticket support avant de s\'y fier comme unique copie. Pour la copie hors site, le stockage objet facturé au gigaoctet est l\'option standard : **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** facture 6,95$/To/mois, les 10 premiers Go gratuits, sortie gratuite jusqu\'à 3x les données stockées en moyenne, vérifié directement le 03/09/2026 ; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** facture 0,015$/Go/mois (environ 15$/To/mois) mais sans aucun frais de sortie et avec un palier gratuit de 10 Go de stockage, vérifié directement le 03/09/2026 ; **[Wasabi](https://wasabi.com/pricing/)** facture un tarif fixe de 7,99$/To/mois sans frais de sortie ou d\'API séparés, vérifié directement le 03/09/2026. Pour un petit site, une sauvegarde hors site complète coûte, avec l\'un ou l\'autre des trois, bien moins d\'1$/mois.',
+          'La règle standard est 3-2-1 : garder 3 copies des données, sur 2 types de stockage différents, avec 1 copie hors site. Une sauvegarde qui ne vit que sur le même serveur que le site ne compte pas, car une panne chez l\'hébergeur ou un problème de compte emporte le site et la sauvegarde ensemble. La plupart des forfaits d\'hébergement mutualisé, y compris ceux de cette page, incluent une fonction de sauvegarde automatique, mais vérifiez la fenêtre de rétention (combien de jours en arrière une restauration peut remonter) et si la restauration est en libre-service ou nécessite un ticket support avant de s\'y fier comme unique copie. Pour la copie hors site, le stockage objet facturé au gigaoctet est l\'option standard : **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** facture 6,95$/To/mois, les 10 premiers Go gratuits, sortie gratuite jusqu\'à 3x les données stockées en moyenne, lu sur la page du fournisseur le 03/09/2026 ; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** facture 0,015$/Go/mois (environ 15$/To/mois) mais sans aucun frais de sortie et avec un palier gratuit de 10 Go de stockage, lu sur la page du fournisseur le 03/09/2026 ; **[Wasabi](https://wasabi.com/pricing/)** facture un tarif fixe de 7,99$/To/mois sans frais de sortie ou d\'API séparés, lu sur la page du fournisseur le 03/09/2026. Pour un petit site, une sauvegarde hors site complète coûte, avec l\'un ou l\'autre des trois, bien moins d\'1$/mois.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -808,19 +808,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'data-sharing',
         title: 'Partager et transférer des données en sécurité',
         content:
-          'Envoyer une pièce jointe par e-mail est la méthode la moins sûre et la moins fiable dès quelques mégaoctets — la plupart des boîtes mail plafonnent les pièces jointes autour de 20-25 Mo, et le fichier reste ensuite non chiffré dans plusieurs boîtes mail indéfiniment. Un meilleur réflexe par défaut est un lien temporaire à expiration : les mêmes services de stockage objet mentionnés plus haut pour les sauvegardes (Backblaze B2, Cloudflare R2, Wasabi) peuvent chacun générer une « URL présignée » — un lien donnant un accès temporaire à un seul fichier précis et qui expire automatiquement après un délai défini, sans rendre public tout le compartiment de stockage. Lors du partage de fichiers avec le support d\'un hébergeur ou d\'un fournisseur de base de données pour diagnostiquer un problème, ne jamais inclure un mot de passe de base de données ou une clé API dans le fichier lui-même — faire tourner ce identifiant une fois le fichier inutile, car un ticket support ou un lien partagé peut survivre à son destinataire prévu. Pour un partage récurrent de gros fichiers, comme des vidéos ou des jeux de données, la tarification sans frais de sortie de Cloudflare R2 évite la facture surprise qu\'un frais de sortie au gigaoctet peut provoquer une fois qu\'un lien partagé a été téléchargé de nombreuses fois.',
+          'Envoyer une pièce jointe par e-mail est une méthode peu adaptée dès quelques mégaoctets — la plupart des boîtes mail plafonnent les pièces jointes autour de 20-25 Mo, et le fichier reste ensuite non chiffré dans plusieurs boîtes mail indéfiniment. Un meilleur réflexe par défaut est un lien temporaire à expiration : les mêmes services de stockage objet mentionnés plus haut pour les sauvegardes (Backblaze B2, Cloudflare R2, Wasabi) peuvent chacun générer une « URL présignée » — un lien donnant un accès temporaire à un seul fichier précis et qui expire automatiquement après un délai défini, sans rendre public tout le compartiment de stockage. Lors du partage de fichiers avec le support d\'un hébergeur ou d\'un fournisseur de base de données pour diagnostiquer un problème, ne jamais inclure un mot de passe de base de données ou une clé API dans le fichier lui-même — faire tourner ce identifiant une fois le fichier inutile, car un ticket support ou un lien partagé peut survivre à son destinataire prévu. Pour un partage récurrent de gros fichiers, comme des vidéos ou des jeux de données, la tarification sans frais de sortie de Cloudflare R2 évite la facture surprise qu\'un frais de sortie au gigaoctet peut provoquer une fois qu\'un lien partagé a été téléchargé de nombreuses fois.',
       },
       compliance: {
         id: 'compliance',
         title: 'RGPD et CNIL',
         content:
-          'La CNIL (Commission Nationale de l\'Informatique et des Libertés) a régulièrement recommandé l\'hébergement au sein de l\'UE ou en France pour les données professionnelles sensibles. Un hébergeur français lève l\'ambiguïté sur la juridiction qui s\'applique en cas de violation de données ou d\'audit réglementaire, ce qui compte pour les secteurs traitant des données de santé, juridiques ou financières. Il s\'agit d\'une recommandation et d\'une simplification pratique, pas d\'une obligation légale stricte — le RGPD n\'exige pas en soi que l\'hébergement soit physiquement situé en France, mais choisir un hébergeur français ou européen évite la complexité supplémentaire des règles de transfert de données transfrontalier.',
+          'Un hébergeur situé en France ou dans l\'UE peut simplifier les questions de juridiction applicable et de transferts hors UE ; le RGPD n\'impose pas à lui seul un hébergement en France. Ceci n\'est pas un conseil juridique : consultez les ressources officielles de la [CNIL sur le cloud](https://www.cnil.fr/fr/cloud-computing) ou un conseil juridique. Choisir un hébergeur français ou européen peut réduire la complexité des règles de transfert de données hors UE, sans pour autant garantir la conformité.',
       },
       verdict: {
         id: 'verdict',
         title: 'Verdict',
         content:
-          '[Infomaniak](https://www.infomaniak.com/) est le choix si un prix fixe et prévisible compte plus qu\'un tarif de première année au plus bas — 10,91 CHF/mois sans saut au renouvellement, et un essai de 30 jours pour tester avant de sortir la carte bancaire. [LWS](https://www.lws.fr/) convient pour le coût de démarrage le plus bas possible, si vous êtes préparé au saut à 3,99 € HT/mois au renouvellement. L\'offre unique d\'[o2switch](https://www.o2switch.fr/) convient aux acheteurs qui veulent éviter la comparaison entre paliers, à condition de demander le tarif de renouvellement avant de commander. Chez OVHcloud, le renouvellement de Starter (2,59 € HT/mois) reste le plus bas du tableau ; les prix sont à confirmer sur [ovhcloud.com](https://ovhcloud.com).',
+          '[Infomaniak](https://www.infomaniak.com/) est une option si un prix catalogue sans saut annoncé compte plus qu\'un tarif de première année au plus bas — 10,91 CHF/mois sans saut annoncé au renouvellement (page lue le 30/08/2026, à reverifier), et un essai de 30 jours pour tester avant de sortir la carte bancaire. [LWS](https://www.lws.fr/) convient pour le coût de démarrage le plus bas possible, si vous êtes préparé au saut à 3,99 € HT/mois au renouvellement. L\'offre unique d\'[o2switch](https://www.o2switch.fr/) convient aux acheteurs qui veulent éviter la comparaison entre paliers, à condition de demander le tarif de renouvellement avant de commander. Chez OVHcloud, le renouvellement de Starter (2,59 € HT/mois) est le plus bas du tableau ; confirmez les prix sur [ovhcloud.com](https://ovhcloud.com).',
       },
       sources: {
         id: 'sources',
@@ -828,14 +828,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[o2switch](https://www.o2switch.fr/) — lu directement sur o2switch.fr, 02/11/2026 : 1,86 € HT/mois, paiement annuel, offre unique ; le renouvellement est annoncé « au tarif classique » sans montant.',
           '[LWS](https://www.lws.fr/) — lu directement sur lws.fr, 02/11/2026 : Perso 1,49 € HT/mois (1,79 € TTC) la première année, prix barré 3,99 € HT/mois ; Starter 3,49 € HT/mois, Performance 6,99 € HT/mois.',
-          '[Infomaniak](https://www.infomaniak.com/) — vérifié directement sur infomaniak.com, 30/08/2026 : 10,91 CHF/mois en tarif catalogue standard, essai gratuit 30 jours, pas de saut au renouvellement.',
+          '[Infomaniak](https://www.infomaniak.com/) — lu sur infomaniak.com, 30/08/2026 (non relu depuis) : 10,91 CHF/mois en tarif catalogue, essai gratuit 30 jours, sans saut annoncé au renouvellement.',
           '[Hostinger](https://www.hostinger.com/) — lu directement sur hostinger.com/fr, 02/11/2026 : Premium 2,49 €/mois (48 mois, 119,52 € à l\'avance), 9,99 €/mois au renouvellement ; Unlimited 3,49 €/mois, 16,99 €/mois au renouvellement.',
-          'OVHcloud ([ovhcloud.com](https://ovhcloud.com)) — mentionné à titre éditorial en tant que marque d\'hébergement française la plus reconnue ; prix lus sur ovhcloud.com le 02/11/2026 (Starter 1,59 € HT/mois, renouvellement 2,59 € HT ; Perso 2,99 € HT/mois pendant 12 mois, renouvellement 5,99 € HT) .',
-          '[Prix Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — vérifié directement le 03/09/2026 : 6,95$/To/mois, 10 premiers Go gratuits, sortie gratuite jusqu\'à 3x les données stockées.',
-          '[Prix Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — vérifié directement le 03/09/2026 : 0,015$/Go/mois en stockage standard, aucun frais de sortie, palier gratuit de 10 Go.',
-          '[Prix Wasabi](https://wasabi.com/pricing/) — vérifié directement le 03/09/2026 : 7,99$/To/mois fixe, sans frais de sortie ou d\'API séparés.',
-          '[Prix Neon](https://neon.com/pricing) — vérifié directement le 03/09/2026 : palier gratuit 100 heures de calcul/projet/mois, 0,5 Go de stockage/projet, 5 Go de sortie ; calcul payant à partir de 0,106$/heure.',
-          '[Prix Supabase](https://supabase.com/pricing) — vérifié directement le 03/09/2026 : palier gratuit 500 Mo de base de données, 1 Go de stockage, 50 000 utilisateurs actifs mensuels ; forfait Pro 25$/mois.',
+          'OVHcloud ([ovhcloud.com](https://ovhcloud.com)) — marque d\'hébergement française bien connue ; prix lus sur ovhcloud.com le 03/11/2026 (Starter 1,59 € HT/mois, renouvellement 2,59 € HT ; Perso 2,99 € HT/mois pendant 12 mois, renouvellement 5,99 € HT).',
+          '[Prix Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — lu sur la page du fournisseur le 03/09/2026 : 6,95$/To/mois, 10 premiers Go gratuits, sortie gratuite jusqu\'à 3x les données stockées.',
+          '[Prix Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — lu sur la page du fournisseur le 03/09/2026 : 0,015$/Go/mois en stockage standard, aucun frais de sortie, palier gratuit de 10 Go.',
+          '[Prix Wasabi](https://wasabi.com/pricing/) — lu sur la page du fournisseur le 03/09/2026 : 7,99$/To/mois fixe, sans frais de sortie ou d\'API séparés.',
+          '[Prix Neon](https://neon.com/pricing) — lu sur la page du fournisseur le 03/09/2026 : palier gratuit 100 heures de calcul/projet/mois, 0,5 Go de stockage/projet, 5 Go de sortie ; calcul payant à partir de 0,106$/heure.',
+          '[Prix Supabase](https://supabase.com/pricing) — lu sur la page du fournisseur le 03/09/2026 : palier gratuit 500 Mo de base de données, 1 Go de stockage, 50 000 utilisateurs actifs mensuels ; forfait Pro 25$/mois.',
         ],
       },
       faq: {
@@ -844,15 +844,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Quel hébergeur français n\'a pas de saut de prix au renouvellement ?',
-            a: 'Infomaniak. Son tarif de 10,91 CHF/mois est un prix catalogue standard, pas un tarif d\'appel réduit, donc il n\'y a pas de saut à la fin de la première période. Un essai gratuit de 30 jours permet aussi de tester le service avant de payer.',
+            a: 'Infomaniak, d\'après sa page lue le 30/08/2026 (non relue depuis) : son tarif de 10,91 CHF/mois est un prix catalogue, sans saut annoncé au renouvellement ; vérifiez les conditions actuelles avant de commander. Un essai gratuit de 30 jours permet aussi de tester le service avant de payer.',
           },
           {
-            q: 'Pourquoi OVHcloud fait-il l\'objet d\'une simple mention éditoriale ?',
-            a: 'OVHcloud est la marque d\'hébergement française la plus reconnue et figure sur cette page pour cette raison, avec ses prix publics lus sur ovhcloud.com. Il est présenté à titre de repère, au même titre que les autres hébergeurs ; la recommandation éditoriale figure dans le verdict.',
+            q: 'Pourquoi OVHcloud figure-t-il dans ce comparatif ?',
+            a: 'OVHcloud est une marque d\'hébergement française bien connue ; ses tarifs publics (Starter, Perso) sont lus sur ovhcloud.com le 03/11/2026 et donnés à titre de référence.',
           },
           {
             q: 'LWS ou OVHcloud : lequel est le moins cher ?',
-            a: 'Au 02/11/2026, l\'offre d\'entrée d\'OVHcloud (Starter, 1,59 € HT/mois, renouvellement 2,59 € HT/mois) est affichée moins chère que l\'offre d\'entrée de LWS (Perso, 1,49 € HT/mois la première année, puis 3,99 € HT/mois) à partir de la deuxième année. Pour une offre comparable, OVHcloud Perso coûte 2,99 € HT/mois pendant 12 mois puis 5,99 € HT/mois, contre 3,49 € HT/mois en promotion chez LWS Starter. Comparez les capacités de chaque offre avant de choisir : les prix seuls ne suffisent pas.',
+            a: 'Selon les relevés (LWS le 02/11/2026, OVHcloud le 03/11/2026), l\'offre d\'entrée d\'OVHcloud (Starter, 1,59 € HT/mois, renouvellement 2,59 € HT/mois) est affichée moins chère que l\'offre d\'entrée de LWS (Perso, 1,49 € HT/mois la première année, puis 3,99 € HT/mois) à partir de la deuxième année. À titre indicatif, OVHcloud Perso coûte 2,99 € HT/mois pendant 12 mois puis 5,99 € HT/mois, contre 3,49 € HT/mois en promotion chez LWS Starter. Comparez les capacités de chaque offre avant de choisir : les prix seuls ne suffisent pas.',
           },
           {
             q: 'LWS ou Hostinger : quelles différences de prix ?',
@@ -868,7 +868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'L\'hébergement français suffit-il à lui seul pour respecter le RGPD ?',
-            a: 'La CNIL a régulièrement recommandé l\'hébergement au sein de l\'UE ou en France pour les données professionnelles sensibles, et un hébergeur français lève l\'ambiguïté sur la juridiction applicable en cas de violation. C\'est une recommandation qui simplifie la conformité, pas une obligation légale stricte imposant que l\'hébergement soit physiquement situé en France.',
+            a: 'Un hébergeur situé en France ou dans l\'UE peut simplifier les questions de juridiction applicable et de transferts hors UE, mais le RGPD n\'impose pas à lui seul un hébergement en France. Ceci n\'est pas un conseil juridique : consultez les ressources de la CNIL ou un conseil juridique.',
           },
           {
             q: 'La base de données incluse dans mon forfait suffit-elle, ou ai-je besoin d\'une base séparée ?',
@@ -876,7 +876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Combien coûte réellement une sauvegarde hors site ?',
-            a: 'Le stockage objet de Backblaze B2 (6,95$/To/mois), Cloudflare R2 (environ 15$/To/mois, sans frais de sortie) ou Wasabi (7,99$/To/mois fixe) — tous vérifiés directement le 03/09/2026 — coûte bien moins d\'1$/mois pour stocker une sauvegarde complète d\'un petit site classique, bien moins que de perdre l\'unique copie lors d\'une panne chez l\'hébergeur.',
+            a: 'Le stockage objet de Backblaze B2 (6,95$/To/mois), Cloudflare R2 (environ 15$/To/mois, sans frais de sortie) ou Wasabi (7,99$/To/mois fixe) — tous lus sur la page de chaque fournisseur le 03/09/2026 — coûte bien moins d\'1$/mois pour stocker une sauvegarde complète d\'un petit site classique, bien moins que de perdre l\'unique copie lors d\'une panne chez l\'hébergeur.',
           },
           {
             q: 'Quel est le moyen le plus sûr de partager un gros fichier ou un jeu de données ?',
@@ -901,14 +901,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
-    title: 'Mejor Hosting Barato y con Soporte en Español 2026: España y Latinoamérica',
-    seoTitle: 'Mejor hosting barato y con soporte en español 2026',
+    title: 'Hosting con Soporte en Español 2026: Precios y Renovación',
+    seoTitle: 'Hosting barato con soporte en español 2026: precios',
     intro:
-      'España y Sudamérica son dos mercados de hosting completamente distintos, con dos marcos legales de protección de datos distintos, y tratarlos como una sola región produce recomendaciones equivocadas. Esta guía los mantiene separados: una tabla para España con [Webempresa](https://www.webempresa.com/) y [Nominalia](https://www.nominalia.com/), regida por el RGPD, y una tabla de Sudamérica desglosada por país — [DonWeb](https://www.donweb.com/) en Argentina, [Hosting.cl](https://www.hosting.cl/) en Chile — ya que cada país tiene su propia ley de protección de datos. Los precios de Webempresa, Nominalia, DonWeb, Hosting.cl y WNPower se leyeron directamente en el sitio del proveedor el 3 de noviembre de 2026. Las promociones de hosting cambian rápido, y una moneda tan volátil como el peso argentino convierte cualquier conversión a dólares en una fotografía puntual, no en una cifra estable.',
+      'España y Sudamérica son dos mercados de hosting completamente distintos, con dos marcos legales de protección de datos distintos, y tratarlos como una sola región produce recomendaciones equivocadas. Esta guía los mantiene separados: una tabla para España con [Webempresa](https://www.webempresa.com/) y [Nominalia](https://www.nominalia.com/), regida por el RGPD, y una tabla de Sudamérica desglosada por país — [DonWeb](https://www.donweb.com/) en Argentina, [Hosting.cl](https://www.hosting.cl/) en Chile — ya que cada país tiene su propia ley de protección de datos. Los precios de Webempresa, Nominalia, DonWeb y Hosting.cl se leyeron directamente en el sitio del proveedor el 2 de noviembre de 2026; los de WNPower no se pudieron verificar esa fecha. Las promociones de hosting cambian rápido, y una moneda tan volátil como el peso argentino convierte cualquier conversión a dólares en una fotografía puntual, no en una cifra estable.',
     metaDescription:
-      'Hosting con soporte en español y barato: Hostinger, Raiola, Dinahosting, SiteGround, Webempresa y DonWeb con precios leídos el 3 de noviembre de 2026.',
+      'Hosting con soporte en español y barato: Hostinger, Raiola, Dinahosting, SiteGround, Webempresa y DonWeb con precios leídos el 2 de noviembre de 2026.',
     twitterDescription:
-      'España y Sudamérica son dos mercados de hosting distintos con dos leyes de privacidad distintas — esta guía mantiene las tablas y las reglas de cumplimiento separadas. Precios leídos en cada proveedor el 3 de noviembre de 2026.',
+      'España y Sudamérica son dos mercados de hosting distintos con dos leyes de privacidad distintas — esta guía mantiene las tablas y las reglas de cumplimiento separadas. Precios leídos en cada proveedor el 2 de noviembre de 2026 (WNPower, sin verificar).',
     affiliateDisclosure: true,
     audience:
       'Lectores que eligen hosting web para un sitio en España o Sudamérica, comparando precio, condiciones de renovación y qué ley de protección de datos aplica en cada país. No requiere experiencia previa con hosting.',
@@ -926,17 +926,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mejor hosting sudamerica',
     ],
     leadAnswerBlock:
-      '**Precios leídos el 3 de noviembre de 2026 en euros: Hostinger Single 1,49 €/mes a 48 meses (renueva a 6,99 €), Dinahosting desde 2,75 €/mes, SiteGround 1,99 €/mes el primer año (renueva a 15,99 €) y Raiola Networks 8,95 €/mes con soporte 24/7 en español.**',
+      '**Precios leídos el 2 de noviembre de 2026 en euros: Hostinger Single 1,49 €/mes a 48 meses (renueva a 6,99 €), Dinahosting desde 2,75 €/mes, SiteGround 1,99 €/mes el primer año (renueva a 15,99 €) y Raiola Networks 8,95 €/mes (soporte 24/7 en español según su página).**',
     quickAnswerTop: {
       es: {
-        question: '¿Cuál es el mejor hosting web para España y Latinoamérica en 2026?',
+        question: '¿Qué hosting web tiene precios leídos para España y Latinoamérica en 2026?',
         answer:
-          'Para España, Webempresa (plan Maxi de WordPress, 8,94 €/mes con facturación anual y promoción del 75 %, sin IVA; precio normal 429 €/año) y Nominalia (1,67 € y 6,67 €/mes, sin etiquetar cuál es la renovación). Para Sudamérica, DonWeb atiende Argentina (desde ARS $3.200/mes en promoción a 48 meses, IVA incluido) y Hosting.cl atiende Chile (CLP $13.325/mes + IVA). WNPower en Perú funciona sobre infraestructura AWS en lugar de servidores propios en el país y muestra su plan Lite desde AR$ 2.530/mes en promoción, en pesos argentinos y sin IVA. España está bajo el RGPD; Argentina, Chile y Colombia tienen cada uno su propia ley de protección de datos.',
+          'Para España, Webempresa (plan Maxi de WordPress, 8,94 €/mes con facturación anual y promoción del 75 %, sin IVA; precio normal 429 €/año) y Nominalia (1,67 € y 6,67 €/mes, sin etiquetar cuál es la renovación). Para Sudamérica, DonWeb atiende Argentina (desde ARS $3.200/mes en promoción a 48 meses, IVA incluido) y Hosting.cl atiende Chile (CLP $13.325/mes + IVA). WNPower en Perú, según su página (lectura del 30 de agosto de 2026), funciona sobre infraestructura AWS en lugar de servidores propios en el país, y su página de hosting no mostraba precios el 2 de noviembre de 2026. El RGPD rige en España y en toda la UE; Argentina, Chile y Colombia tienen cada uno su propia ley de protección de datos.',
         bullets: [
           'Webempresa: plan Maxi de WordPress a 8,94 €/mes con facturación anual y promoción del 75 % (sin IVA)',
           'Nominalia: su plan WordPress muestra 1,67 €/mes y 6,67 €/mes sin etiquetar cuál es la renovación',
           'DonWeb (Argentina): desde ARS $3.200/mes en promoción a 48 meses (regular ARS $11.900/mes, IVA incluido)',
-          'Hosting.cl (Chile): CLP $13.325/mes + IVA (CLP $159.900/año)',
+          'Hosting.cl (Chile): CLP $13.325/mes (CLP $159.900/año + IVA)',
         ],
         updatedDate: '2026-11',
       },
@@ -988,12 +988,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hosting barato con soporte en español:** Raiola Networks indica soporte 24/7 en español (8,95 €/mes sin IVA); Hostinger Single cuesta 1,49 €/mes a 48 meses y renueva a 6,99 €. Compare la renovación, no el primer precio.',
           '**España y Sudamérica se presentan en dos tablas separadas** — proveedores distintos, monedas distintas y leyes de protección de datos distintas. No los trate como una sola región.',
           '**España: Webempresa** — plan Maxi de WordPress a 8,94 €/mes con facturación anual y una promoción del 75 %, sin IVA; el precio normal anual es 429 € (unos 35,75 €/mes) y su página no indica el precio de renovación. Podría existir un plan de hosting compartido genérico más barato por separado; aquí no se afirma ninguna cifra para ese plan.',
-          '**España: Nominalia** — su plan WordPress muestra dos precios mensuales, 1,67 € y 6,67 €, y su página no etiqueta cuál es la tarifa de entrada ni cuál la de renovación; presupueste el más alto. Su nivel "Microhosting" gratuito viene incluido con la compra de un dominio, no es un plan de hosting independiente.',
+          '**España: Nominalia** — su plan WordPress muestra dos precios mensuales, 1,67 € y 6,67 €, y su página no etiqueta cuál es la tarifa de entrada ni cuál la de renovación; presupueste el más alto. Según su página (leída el 2 de noviembre de 2026), su nivel "Microhosting" gratuito viene incluido con la compra de un dominio y no es un plan de hosting independiente.',
           '**Argentina: DonWeb** — plan Personal desde ARS $3.200/mes en promoción a 48 meses (ARS $3.600/mes a 12 meses; regular ARS $11.900/mes, IVA incluido). Según su página, al renovar a 1 año el plan Personal pasa a ARS $13.250/mes. El peso argentino es muy volátil: convierta a dólares con el tipo de cambio del día.',
-          '**Chile: Hosting.cl** — CLP $159.900/año + IVA (unos CLP $13.325/mes, ~US$14/mes), más IVA.',
-          '**Perú: WNPower** — su plan Lite aparece desde AR$ 2.530/mes en promoción (precio regular AR$ 11.499/mes), en pesos argentinos y sin IVA; la página no indica el precio de renovación. Es de fundación argentina y funciona sobre infraestructura AWS, por lo que no es un proveedor "totalmente local" en Perú — no se confirmó ninguna alternativa peruana más local en esta revisión.',
+          '**Chile: Hosting.cl** — CLP $159.900/año + IVA (unos CLP $13.325/mes, ~US$14/mes).',
+          '**Perú: WNPower** — su página de hosting no muestra precios, así que no se pudo verificar el 2 de noviembre de 2026 la cifra anterior (0,96 US$/mes en promoción, 4,37 US$/mes de renovación, leída el 30 de agosto de 2026). Según una lectura anterior de su página (30 de agosto de 2026), es de fundación argentina y funciona sobre infraestructura AWS en lugar de servidores propios en Perú; no se confirmó ninguna alternativa peruana más local en esta revisión.',
           '**Colombia no tiene opción confirmada.** La página de precios de ColombiaHosting se renderiza con JavaScript y su precio no pudo verificarse — se excluye en lugar de estimarse.',
-          '**El RGPD aplica solo a España.** Sudamérica funciona con leyes nacionales separadas — la LFPDPPP de México, la Ley 25.326 de Argentina, la Ley 1581 de Colombia y la Ley 19.628 de Chile — ninguna de ellas es el RGPD.',
+          '**El RGPD se aplica en toda la Unión Europea** y, según su artículo 3(2), también puede alcanzar a responsables fuera de la UE que ofrezcan servicios a personas en la UE. Argentina, Chile y Colombia tienen sus propias leyes (Ley 25.326, Ley 19.628 y Ley 1581); cuál se aplica depende de dónde estén sus usuarios y de su actividad. Esto no es asesoramiento jurídico.',
           '**Un sitio necesita más que su plan de hosting.** Una base de datos separada (Neon, Supabase), una copia de seguridad externa (Backblaze B2, Cloudflare R2, Wasabi) y una forma segura de compartir archivos grandes son tres decisiones que la mayoría de los propietarios de sitios enfrentan tarde o temprano — cubiertas abajo con precios verificados directamente.',
         ],
       },
@@ -1001,7 +1001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'spain-providers',
         title: 'España: Proveedores de Hosting',
         content:
-          'Dos proveedores tienen precios leídos el 3 de noviembre de 2026 para el mercado español. [Webempresa](https://www.webempresa.com/) muestra su plan Maxi de WordPress a 8,94 €/mes con facturación anual y una promoción del 75 % (precio normal 429 €/año, unos 35,75 €/mes), sin IVA, y su página no indica el precio de renovación. [Nominalia](https://www.nominalia.com/) muestra dos precios mensuales para su plan WordPress, 1,67 € y 6,67 €, sin etiquetar cuál es la entrada y cuál la renovación; conviene presupuestar el más alto. Nominalia también anuncia un nivel "Microhosting" gratuito, pero viene incluido con la compra de un dominio en lugar de ser un plan de hosting independiente real, así que no se trata como tal aquí. Raiola Networks, Dinahosting, Hostinger y SiteGround se comparan en la sección siguiente, con soporte y renovación.',
+          'Dos proveedores tienen precios leídos el 2 de noviembre de 2026 para el mercado español. [Webempresa](https://www.webempresa.com/) muestra su plan Maxi de WordPress a 8,94 €/mes con facturación anual y una promoción del 75 % (precio normal 429 €/año, unos 35,75 €/mes), sin IVA, y su página no indica el precio de renovación. [Nominalia](https://www.nominalia.com/) muestra dos precios mensuales para su plan WordPress, 1,67 € y 6,67 €, sin etiquetar cuál es la entrada y cuál la renovación; conviene presupuestar el más alto. Nominalia también anuncia un nivel "Microhosting" gratuito, pero, según su página (leída el 2 de noviembre de 2026), viene incluido con la compra de un dominio en lugar de ser un plan de hosting independiente real, así que no se trata como tal aquí. Raiola Networks, Dinahosting, Hostinger y SiteGround se comparan en la sección siguiente, con soporte y renovación.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1044,11 +1044,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'spanish-support-hosting',
         title: 'Hosting con Soporte en Español: Precios Comparados',
         content:
-          'Cuatro proveedores más, con precios leídos el 3 de noviembre de 2026 en euros. [Hostinger](https://www.hostinger.com/es/hosting-web) muestra el plan Single a 1,49 €/mes con pago anticipado de 48 meses (71,52 € en total) y renovación a 6,99 €/mes; Premium cuesta 2,39 €/mes (renovación 9,99 €) y Unlimited 3,29 €/mes (renovación 16,99 €), y su página no indica el tratamiento del IVA ni el idioma del soporte. [Raiola Networks](https://raiolanetworks.com/hosting-web/) cobra 8,95 €/mes sin IVA en Hosting SSD Inicio, con facturación mensual, dos centros de datos en Madrid y soporte técnico 24/7 en español para España y Latinoamérica según su página. [Dinahosting](https://dinahosting.com/hosting) muestra 2,75 €/mes con contratación anual en los planes Básico y WordPress, que pasan a 5,45 €/mes después del primer periodo, y anuncia soporte 24/7 «en tu idioma» (no nombra el español) con un teléfono gratuito. [SiteGround](https://www.siteground.es/hosting-web.htm) muestra StartUp a 1,99 €/mes durante 12 meses, sin IVA, con renovación a 15,99 €/mes; no se verificó su idioma de soporte. Para elegir un hosting barato, compare siempre el precio de renovación y el plazo de pago anticipado, no el primer precio. Un hosting con soporte en español, en cambio, es una afirmación de cada proveedor que conviene probar antes de pagar: abra el chat o llame antes de contratar y compruebe en qué idioma y en qué horario responden.',
+          'Cuatro proveedores más, con precios leídos el 2 de noviembre de 2026 en euros. [Hostinger](https://www.hostinger.com/es/hosting-web) muestra el plan Single a 1,49 €/mes con pago anticipado de 48 meses (71,52 € en total) y renovación a 6,99 €/mes; Premium cuesta 2,39 €/mes (renovación 9,99 €) y Unlimited 3,29 €/mes (renovación 16,99 €), y su página no indica el tratamiento del IVA ni el idioma del soporte. [Raiola Networks](https://raiolanetworks.com/hosting-web/) cobra 8,95 €/mes sin IVA en Hosting SSD Inicio, con facturación mensual, dos centros de datos en Madrid y soporte técnico 24/7 en español para España y Latinoamérica según su página. [Dinahosting](https://dinahosting.com/hosting) muestra 2,75 €/mes con contratación anual en los planes Básico y WordPress, que pasan a 5,45 €/mes después del primer periodo, y anuncia soporte 24/7 «en tu idioma» (no nombra el español) con un teléfono gratuito. [SiteGround](https://www.siteground.es/hosting-web.htm) muestra StartUp a 1,99 €/mes durante 12 meses, sin IVA, con renovación a 15,99 €/mes; no se verificó su idioma de soporte. Para elegir un hosting barato, compare siempre el precio de renovación y el plazo de pago anticipado, no el primer precio. Un hosting con soporte en español, en cambio, es una afirmación de cada proveedor que conviene probar antes de pagar: abra el chat o llame antes de contratar y compruebe en qué idioma y en qué horario responden.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'El 3 de noviembre de 2026, Raiola Networks (8,95 €/mes sin IVA) indicaba soporte 24/7 en español, Dinahosting (desde 2,75 €/mes, renovación 5,45 €) ofrecía soporte 24/7 «en tu idioma», y Hostinger (1,49 €/mes) y SiteGround (1,99 €/mes) tienen renovaciones de 6,99 € y 15,99 €/mes.',
+            text: 'El 2 de noviembre de 2026, Raiola Networks (8,95 €/mes sin IVA) indicaba soporte 24/7 en español, Dinahosting (desde 2,75 €/mes, renovación 5,45 €) ofrecía soporte 24/7 «en tu idioma», y Hostinger (1,49 €/mes) y SiteGround (1,99 €/mes) tienen renovaciones de 6,99 € y 15,99 €/mes.',
           },
           {
             type: 'plain-terms',
@@ -1091,7 +1091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'south-america-providers',
         title: 'Sudamérica: Hosting por País',
         content:
-          'Sudamérica no es un solo mercado de hosting — cada país que sigue tiene su propio proveedor confirmado, y Colombia no tiene ninguno. Las cifras en pesos argentinos usan una moneda muy volátil: convierta a dólares con el tipo de cambio del día de la compra. [Hosting.cl](https://www.hosting.cl/) en Chile cuesta CLP $159.900/año más IVA (unos CLP $13.325/mes) en su plan Hosting Pyme, el más barato. [WNPower](https://www.wnpower.com/) en Perú es de fundación argentina y funciona sobre infraestructura basada en AWS en lugar de servidores dedicados en Perú, con su plan Lite desde AR$ 2.530/mes en promoción (regular AR$ 11.499, pesos argentinos, sin IVA) — algo importante si el hosting "totalmente local" le importa; no se confirmó ninguna alternativa peruana más local. ColombiaHosting queda excluido por completo: su página de precios se renderiza con JavaScript y el precio no pudo verificarse.',
+          'Sudamérica no es un solo mercado de hosting — cada país que sigue tiene su propio proveedor confirmado, y Colombia no tiene ninguno. Las cifras en pesos argentinos usan una moneda muy volátil: convierta a dólares con el tipo de cambio del día de la compra. [Hosting.cl](https://www.hosting.cl/) en Chile tiene el precio anual leído el 2 de noviembre de 2026. [WNPower](https://www.wnpower.com/) en Perú según una lectura anterior de su página (30 de agosto de 2026) es de fundación argentina y funciona sobre infraestructura basada en AWS en lugar de servidores dedicados en Perú — algo a considerar si el hosting "totalmente local" le importa; no se confirmó ninguna alternativa peruana más local. ColombiaHosting queda excluido por completo: su página de precios se renderiza con JavaScript y el precio no pudo verificarse.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1117,7 +1117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'País': 'Perú',
             'Proveedor': '[WNPower](https://www.wnpower.com/)',
-            'Precio': 'AR$ 2.530/mes promo (Lite, sin IVA)',
+            'Precio': 'No verificado (ant. US$0,96 → 4,37)',
           },
         ],
         callouts: [
@@ -1154,7 +1154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'standard-vs-ai-hosting',
         title: 'Hosting Estándar vs. Hosting Especializado en IA',
         content:
-          'Todos los proveedores de esta página — Webempresa, Nominalia, DonWeb, Hosting.cl y WNPower — venden hosting compartido o de WordPress estándar: una asignación pequeña de CPU, almacenamiento y ancho de banda pensada para servir páginas web, no para ejecutar modelos de IA. Ninguno ofrece GPU, y ninguno está pensado para cargas de inferencia o ajuste fino (fine-tuning) de LLM. Para ejecutar o ajustar finamente un LLM hay tres caminos separados, y ninguno es hosting web estándar: (1) alquilar una GPU por hora y ejecutar el modelo usted mismo — consulte la [guía de PromptQuorum sobre alquiler de GPU en la nube](/es/power-local-llm/cloud-gpu-rental-guide-2026), que compara RunPod, Lambda Labs y Vast.ai por precio por hora, disponibilidad y tiempo de configuración; (2) usar una API de inferencia gestionada, facturada por token o por solicitud, sin necesidad de administrar ninguna GPU; (3) construir una estación de trabajo de IA propia y ser dueño del hardware, lo que cambia una inversión inicial mayor por ninguna factura de alquiler recurrente.',
+          'Todos los proveedores de esta página — Webempresa, Nominalia, DonWeb, Hosting.cl y WNPower — venden hosting compartido o de WordPress estándar: una asignación pequeña de CPU, almacenamiento y ancho de banda pensada para servir páginas web, no para ejecutar modelos de IA. Ninguno anuncia GPU en las páginas leídas, y ninguno está pensado para cargas de inferencia o ajuste fino (fine-tuning) de LLM. Para ejecutar o ajustar finamente un LLM hay tres caminos separados, y ninguno es hosting web estándar: (1) alquilar una GPU por hora y ejecutar el modelo usted mismo — consulte la [guía de PromptQuorum sobre alquiler de GPU en la nube](/es/power-local-llm/cloud-gpu-rental-guide-2026), que compara RunPod, Lambda Labs y Vast.ai por precio por hora, disponibilidad y tiempo de configuración; (2) usar una API de inferencia gestionada, facturada por token o por solicitud, sin necesidad de administrar ninguna GPU; (3) construir una estación de trabajo de IA propia y ser dueño del hardware, lo que cambia una inversión inicial mayor por ninguna factura de alquiler recurrente.',
       },
       hostingTypesExplained: {
         id: 'hosting-types-explained',
@@ -1166,7 +1166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'database-hosting',
         title: 'Alojar una Base de Datos Aparte',
         content:
-          'El hosting compartido, como los planes de Webempresa o Nominalia de esta página, incluye una única base de datos MySQL dentro de la misma cuota de disco que el resto de la cuenta — suficiente para un blog o un CMS pequeño, no para una aplicación con su propia tabla de usuarios, eventos de analítica, o el almacenamiento vectorial/embeddings que necesita una función de IA. Para eso, una base de datos gestionada es un producto separado del hosting web. **[Neon](https://neon.com/pricing)** funciona sobre Postgres sin servidor y ofrece un nivel gratuito — 100 horas de cómputo por proyecto al mes, 0,5 GB de almacenamiento por proyecto, 5 GB de salida, verificado directamente en neon.com el 03-09-2026 — que se suspende a costo cero cuando está inactivo, y luego cobra cómputo por uso (desde US$0,106/hora de cómputo) y almacenamiento (US$0,35/GB al mes) más allá del nivel gratuito, sin mínimo mensual. **[Supabase](https://supabase.com/pricing)** ofrece un nivel gratuito comparable — 500 MB de base de datos, 1 GB de almacenamiento de archivos, 50.000 usuarios activos mensuales, 5 GB de salida, en hasta 2 proyectos, verificado directamente en supabase.com el 03-09-2026 — pero un proyecto gratuito se pausa tras 7 días de inactividad y no tiene copias de seguridad automáticas; el plan Pro (US$25/mes) elimina ambos límites. Pasar a una base de datos gestionada separada tiene sentido en cuanto un sitio necesita más que la única instancia MySQL incluida en el hosting compartido — como complemento del hosting web, no como reemplazo.',
+          'El hosting compartido, como los planes de Webempresa o Nominalia de esta página, incluye una única base de datos MySQL dentro de la misma cuota de disco que el resto de la cuenta — suficiente para un blog o un CMS pequeño, no para una aplicación con su propia tabla de usuarios, eventos de analítica, o el almacenamiento vectorial/embeddings que necesita una función de IA. Para eso, una base de datos gestionada es un producto separado del hosting web. **[Neon](https://neon.com/pricing)** funciona sobre Postgres sin servidor y ofrece un nivel gratuito — 100 horas de cómputo por proyecto al mes, 1 GB de almacenamiento por proyecto, 5 GB de salida, leído en neon.com el 03-11-2026 — que se suspende a costo cero cuando está inactivo, y luego cobra cómputo por uso (desde US$0,106/hora de cómputo) y almacenamiento (US$0,35/GB al mes) más allá del nivel gratuito, sin mínimo mensual. **[Supabase](https://supabase.com/pricing)** ofrece un nivel gratuito comparable — 500 MB de base de datos, 1 GB de almacenamiento de archivos, 50.000 usuarios activos mensuales, 5 GB de salida, en hasta 2 proyectos, leído en supabase.com el 03-09-2026 — pero un proyecto gratuito se pausa tras 7 días de inactividad y no tiene copias de seguridad automáticas; el plan Pro (US$25/mes) elimina ambos límites. Pasar a una base de datos gestionada separada tiene sentido en cuanto un sitio necesita más que la única instancia MySQL incluida en el hosting compartido — como complemento del hosting web, no como reemplazo.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1182,7 +1182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'backups',
         title: 'Copias de Seguridad del Sitio y los Datos',
         content:
-          'La regla estándar es 3-2-1: mantener 3 copias de los datos, en 2 tipos de almacenamiento distintos, con 1 copia fuera del sitio. Una copia de seguridad que vive solo en el mismo servidor que el sitio web no cuenta, porque una caída del proveedor o un problema de cuenta se lleva por delante el sitio y la copia de seguridad juntos. La mayoría de los planes de hosting compartido, incluidos los de esta página, incluyen alguna función de copia de seguridad automática, pero conviene revisar la ventana de retención (cuántos días atrás se puede restaurar) y si restaurar es autoservicio o requiere un ticket de soporte antes de confiar en ella como única copia. Para la copia externa, el almacenamiento de objetos con precio por gigabyte es la opción estándar: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** cobra US$6,95/TB al mes, los primeros 10 GB gratis, salida gratuita hasta 3 veces los datos almacenados en promedio, verificado directamente el 03-09-2026; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** cobra US$0,015/GB al mes (unos US$15/TB al mes) pero sin ninguna tarifa de salida y con un nivel gratuito de 10 GB de almacenamiento, verificado directamente el 03-09-2026; **[Wasabi](https://wasabi.com/pricing/)** cobra una tarifa fija de US$7,99/TB al mes sin tarifas separadas de salida o de API, verificado directamente el 03-09-2026. Para un sitio pequeño, una copia de seguridad externa completa cuesta bastante menos de US$1 al mes con cualquiera de los tres.',
+          'La regla estándar es 3-2-1: mantener 3 copias de los datos, en 2 tipos de almacenamiento distintos, con 1 copia fuera del sitio. Una copia de seguridad que vive solo en el mismo servidor que el sitio web no cuenta, porque una caída del proveedor o un problema de cuenta se lleva por delante el sitio y la copia de seguridad juntos. La mayoría de los planes de hosting compartido, incluidos los de esta página, incluyen alguna función de copia de seguridad automática, pero conviene revisar la ventana de retención (cuántos días atrás se puede restaurar) y si restaurar es autoservicio o requiere un ticket de soporte antes de confiar en ella como única copia. Para la copia externa, el almacenamiento de objetos con precio por gigabyte es la opción estándar: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** cobra US$6,95/TB al mes, los primeros 10 GB gratis, salida gratuita hasta 3 veces los datos almacenados en promedio, leído en la página del proveedor el 03-09-2026; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** cobra US$0,015/GB al mes (unos US$15/TB al mes) pero sin ninguna tarifa de salida y con un nivel gratuito de 10 GB de almacenamiento, leído en la página del proveedor el 03-09-2026; **[Wasabi](https://wasabi.com/pricing/)** cobra una tarifa fija de US$7,99/TB al mes sin tarifas separadas de salida o de API, leído en la página del proveedor el 03-09-2026. Para un sitio pequeño, una copia de seguridad externa completa cuesta bastante menos de US$1 al mes con cualquiera de los tres.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1198,19 +1198,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'data-sharing',
         title: 'Compartir y Transferir Datos con Seguridad',
         content:
-          'Enviar un archivo adjunto por correo es la forma menos segura y menos fiable de compartir datos a partir de unos pocos megabytes — la mayoría de las bandejas de entrada limitan los adjuntos a unos 20-25 MB, y el archivo queda después sin cifrar en varias bandejas de entrada indefinidamente. Una alternativa mejor por defecto es un enlace temporal con caducidad: los mismos servicios de almacenamiento de objetos mencionados arriba para copias de seguridad (Backblaze B2, Cloudflare R2, Wasabi) pueden generar cada uno una "URL prefirmada" — un enlace que concede acceso temporal a un archivo específico y que caduca automáticamente tras un tiempo determinado, sin hacer público todo el depósito de almacenamiento. Al compartir archivos con el soporte de un proveedor de hosting o de base de datos para diagnosticar un problema, nunca se debe incluir una contraseña de base de datos o una clave de API dentro del propio archivo — hay que rotar esa credencial en cuanto el archivo deje de ser necesario, ya que un ticket de soporte o un enlace compartido puede sobrevivir al destinatario previsto. Para compartir archivos grandes de forma recurrente, como vídeo o conjuntos de datos, la tarificación sin tarifas de salida de Cloudflare R2 evita la factura sorpresa que una tarifa de salida por gigabyte puede provocar una vez que un enlace compartido se ha descargado muchas veces.',
+          'Enviar un archivo adjunto por correo es una forma poco adecuada de compartir datos a partir de unos pocos megabytes — la mayoría de las bandejas de entrada limitan los adjuntos a unos 20-25 MB, y el archivo queda después sin cifrar en varias bandejas de entrada indefinidamente. Una alternativa mejor por defecto es un enlace temporal con caducidad: los mismos servicios de almacenamiento de objetos mencionados arriba para copias de seguridad (Backblaze B2, Cloudflare R2, Wasabi) pueden generar cada uno una "URL prefirmada" — un enlace que concede acceso temporal a un archivo específico y que caduca automáticamente tras un tiempo determinado, sin hacer público todo el depósito de almacenamiento. Al compartir archivos con el soporte de un proveedor de hosting o de base de datos para diagnosticar un problema, nunca se debe incluir una contraseña de base de datos o una clave de API dentro del propio archivo — hay que rotar esa credencial en cuanto el archivo deje de ser necesario, ya que un ticket de soporte o un enlace compartido puede sobrevivir al destinatario previsto. Para compartir archivos grandes de forma recurrente, como vídeo o conjuntos de datos, la tarificación sin tarifas de salida de Cloudflare R2 evita la factura sorpresa que una tarifa de salida por gigabyte puede provocar una vez que un enlace compartido se ha descargado muchas veces.',
       },
       dataSovereignty: {
         id: 'data-sovereignty',
         title: 'Protección de Datos: España vs. Sudamérica',
         content:
-          'España y Sudamérica responden a leyes de privacidad distintas, y mezclarlas produce consejos de cumplimiento incorrectos para el mercado en el que no se está. **España** se rige por el RGPD (Reglamento General de Protección de Datos) de la UE — el mismo marco regulatorio que gobierna las decisiones de hosting en toda la Unión Europea, incluida la cuestión de dónde se almacenan y procesan los datos personales. **Sudamérica no tiene una ley única equivalente.** Cada país tiene su propio régimen: la LFPDPPP de México (Ley Federal de Protección de Datos Personales en Posesión de los Particulares), la Ley 25.326 de Argentina, la Ley 1581 de Colombia y la Ley 19.628 de Chile. Son marcos legales distintos del RGPD y distintos entre sí — una elección de hosting que cumple con el RGPD no cumple automáticamente con la Ley 25.326 o la Ley 19.628, y viceversa. Si su sitio maneja datos personales de usuarios en más de uno de estos países, verifique la ley de cada país individualmente en lugar de asumir un estándar único para toda la región.',
+          'España y Sudamérica responden a leyes de privacidad distintas, y mezclarlas produce consejos de cumplimiento incorrectos para el mercado en el que no se está. **España** se rige por el RGPD (Reglamento General de Protección de Datos) de la UE — el mismo marco regulatorio que gobierna las decisiones de hosting en toda la Unión Europea, incluida la cuestión de dónde se almacenan y procesan los datos personales. Según su artículo 3(2), el RGPD también puede alcanzar a responsables fuera de la UE que ofrezcan servicios a personas en la UE. **Sudamérica no tiene una ley única equivalente.** Cada país tiene su propio régimen: la Ley 25.326 de Argentina, la Ley 1581 de Colombia y la Ley 19.628 de Chile (la Ley 21.719, que la modifica en profundidad, figura con entrada en vigor el 1 de diciembre de 2026 según la [ficha legislativa de la BCN](https://www.bcn.cl/balance-legislativo/detalle/ficha_LEY_21719_2024-12-13), así que verifique el estado vigente). Son marcos legales distintos del RGPD y distintos entre sí — una elección de hosting que cumple con el RGPD no cumple automáticamente con la Ley 25.326 o la Ley 19.628, y viceversa. Si su sitio maneja datos personales de usuarios en más de uno de estos países, verifique la ley de cada país individualmente en lugar de asumir un estándar único para toda la región. Esto no es asesoramiento jurídico: consulte a un profesional del derecho para su caso.',
       },
       verdict: {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Para España, elija [Webempresa](https://www.webempresa.com/) si prefiere conocer el precio normal anual (429 € en el plan Maxi) además de la promoción, y [Nominalia](https://www.nominalia.com/) solo si ya presupuestó el precio más alto de 6,67 €/mes. Para Sudamérica, [DonWeb](https://www.donweb.com/) (Argentina), [Hosting.cl](https://www.hosting.cl/) (Chile) y [WNPower](https://www.wnpower.com/) (Perú, sobre infraestructura AWS) son las opciones confirmadas en esta revisión — Colombia no tiene ninguna hasta que se pueda verificar un precio. Sea cual sea su país, verifique la ley de protección de datos de ese país en concreto en lugar de asumir que aplica el RGPD u otra ley distinta.',
+          'Para España, elija [Webempresa](https://www.webempresa.com/) si prefiere conocer el precio normal anual (429 € en el plan Maxi) además de la promoción, y [Nominalia](https://www.nominalia.com/) solo si ya presupuestó el precio más alto de 6,67 €/mes. Para Sudamérica, [DonWeb](https://www.donweb.com/) (Argentina), [Hosting.cl](https://www.hosting.cl/) (Chile) y [WNPower](https://www.wnpower.com/) (Perú) son las opciones confirmadas en esta revisión — Colombia no tiene ninguna hasta que se pueda verificar un precio. Sea cual sea su país, verifique la ley de protección de datos de ese país en concreto en lugar de asumir que aplica el RGPD u otra ley distinta. Esto no es asesoramiento jurídico.',
       },
       faq: {
         id: 'faq',
@@ -1218,35 +1218,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Qué hosting tiene soporte en español?',
-            a: 'Según su propia página, leída el 3 de noviembre de 2026, Raiola Networks ofrece soporte técnico 24/7 en español para España y Latinoamérica (Hosting SSD Inicio, 8,95 €/mes sin IVA, con centros de datos en Madrid). Dinahosting anuncia soporte 24/7 «en tu idioma» y un teléfono gratuito, sin nombrar el español. Hostinger y SiteGround no indican el idioma de soporte en las páginas leídas. Es una afirmación del proveedor: pruebe el chat o el teléfono antes de pagar.',
+            a: 'Según su propia página, leída el 2 de noviembre de 2026, Raiola Networks ofrece soporte técnico 24/7 en español para España y Latinoamérica (Hosting SSD Inicio, 8,95 €/mes sin IVA, con centros de datos en Madrid). Dinahosting anuncia soporte 24/7 «en tu idioma» y un teléfono gratuito, sin nombrar el español. Hostinger y SiteGround no indican el idioma de soporte en las páginas leídas. Es una afirmación del proveedor: pruebe el chat o el teléfono antes de pagar.',
           },
           {
-            q: '¿Cuál es el mejor hosting barato?',
-            a: 'Entre los precios leídos el 3 de noviembre de 2026, Hostinger Single es 1,49 €/mes con pago anticipado de 48 meses (71,52 € en total) y renueva a 6,99 €/mes; SiteGround StartUp es 1,99 €/mes sin IVA durante 12 meses y renueva a 15,99 €/mes; Dinahosting Básico y WordPress son 2,75 €/mes con contrato anual y pasan a 5,45 €. Nominalia muestra 1,67 € y 6,67 €/mes sin etiquetar la renovación. El más barato el primer día no es el más barato al renovar.',
+            q: '¿Qué opciones de hosting barato tienen precio de renovación leído?',
+            a: 'Entre los precios leídos el 2 de noviembre de 2026, Hostinger Single es 1,49 €/mes con pago anticipado de 48 meses (71,52 € en total) y renueva a 6,99 €/mes; SiteGround StartUp es 1,99 €/mes sin IVA durante 12 meses y renueva a 15,99 €/mes; Dinahosting Básico y WordPress son 2,75 €/mes con contrato anual y pasan a 5,45 €. Nominalia muestra 1,67 € y 6,67 €/mes sin etiquetar la renovación. El más barato el primer día no es el más barato al renovar.',
           },
           {
             q: '¿Qué hosting recomiendan para un sitio pequeño o un blog?',
-            a: 'Para un blog o un sitio pequeño basta un plan de hosting compartido o de WordPress. Compare tres cosas antes de contratar: el precio de renovación, cuántos meses se pagan por adelantado y si el soporte responde en su idioma. Los precios leídos el 3 de noviembre de 2026 están en la sección Hosting con Soporte en Español y en la tabla de España de esta guía.',
+            a: 'Para un blog o un sitio pequeño basta un plan de hosting compartido o de WordPress. Compare tres cosas antes de contratar: el precio de renovación, cuántos meses se pagan por adelantado y si el soporte responde en su idioma. Los precios leídos el 2 de noviembre de 2026 están en la sección Hosting con Soporte en Español y en la tabla de España de esta guía.',
           },
           {
-            q: '¿Cuál es el mejor hosting web en España en 2026?',
+            q: '¿Qué hosting web con precio leído hay para España en 2026?',
             a: 'Webempresa (plan Maxi de WordPress, 8,94 €/mes con facturación anual y una promoción del 75 %, sin IVA) tiene un precio normal anual de 429 € y su página no indica la renovación. Nominalia muestra 1,67 €/mes y 6,67 €/mes para su plan WordPress sin etiquetar cuál es la entrada y cuál la renovación — presupueste el más alto antes de contratar.',
           },
           {
             q: '¿El Microhosting gratuito de Nominalia es un plan de hosting real?',
-            a: 'No. El nivel "Microhosting" de Nominalia viene incluido gratis con la compra de un dominio en lugar de venderse como un plan de hosting independiente, por lo que no debería compararse en precio o funciones contra un plan de hosting pagado real.',
+            a: 'No, según la página de Nominalia leída el 2 de noviembre de 2026. El nivel "Microhosting" viene incluido gratis con la compra de un dominio en lugar de venderse como un plan de hosting independiente, por lo que no debería compararse en precio o funciones contra un plan de hosting pagado real.',
           },
           {
-            q: '¿Cuál es el mejor hosting web para Argentina?',
+            q: '¿Qué hosting web con precio leído hay para Argentina?',
             a: 'DonWeb es la opción confirmada: el plan Personal cuesta desde ARS $3.200/mes en promoción a 48 meses (ARS $3.600/mes a 12 meses; regular ARS $11.900/mes, IVA incluido), y su página indica que al renovar a 1 año pasa a ARS $13.250/mes. Como el peso argentino es muy volátil, convierta a dólares con el tipo de cambio actual antes de presupuestar.',
           },
           {
-            q: '¿Cuál es el mejor hosting web para Chile?',
-            a: 'Hosting.cl, a CLP $159.900/año más IVA (unos CLP $13.325/mes, aproximadamente US$14/mes), en su plan Hosting Pyme, el más barato.',
+            q: '¿Qué hosting web con precio leído hay para Chile?',
+            a: 'Hosting.cl, a CLP $159.900/año más IVA (unos CLP $13.325/mes, aproximadamente US$14/mes).',
           },
           {
             q: '¿WNPower es una empresa de hosting nativa de Perú?',
-            a: 'No del todo. WNPower es de fundación argentina y su infraestructura funciona sobre AWS en lugar de servidores dedicados en Perú. Sigue siendo la opción identificada para Perú: el 3 de noviembre de 2026 su plan Lite aparecía desde AR$ 2.530/mes en promoción (regular AR$ 11.499/mes, en pesos argentinos y sin IVA), sin precio de renovación indicado — no se confirmó ninguna alternativa peruana más local en esta revisión.',
+            a: 'No del todo. Según la información de su página leída el 30 de agosto de 2026, WNPower es de fundación argentina y su infraestructura funciona sobre AWS en lugar de servidores dedicados en Perú. Sigue siendo la opción identificada para Perú, pero su página de hosting no muestra precios y las cifras de agosto de 2026 (US$0,96/mes en promoción, US$4,37/mes de renovación) no se pudieron verificar el 2 de noviembre de 2026 — no se confirmó ninguna alternativa peruana más local en esta revisión.',
           },
           {
             q: '¿Hay un hosting recomendado para Colombia?',
@@ -1254,7 +1254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿El RGPD aplica al hosting en Argentina, Chile o Colombia?',
-            a: 'No. El RGPD es un reglamento de la Unión Europea y aplica a España. Argentina, Chile y Colombia tienen cada uno su propia ley de protección de datos — la Ley 25.326, la Ley 19.628 y la Ley 1581 respectivamente — y ninguna de ellas es el RGPD. Una elección de hosting conforme con una no cumple automáticamente con otra.',
+            a: 'El RGPD se aplica en toda la Unión Europea y, según su artículo 3(2), también puede alcanzar a responsables fuera de la UE que ofrezcan servicios a personas en la UE. Argentina, Chile y Colombia tienen sus propias leyes (Ley 25.326, Ley 19.628 y Ley 1581); cuál se aplica depende de dónde estén sus usuarios y de su actividad. Una elección de hosting conforme con una ley no cumple automáticamente con otra. Esto no es asesoramiento jurídico.',
           },
           {
             q: '¿La base de datos incluida en mi plan de hosting es suficiente, o necesito una aparte?',
@@ -1262,7 +1262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuánto cuesta realmente una copia de seguridad externa?',
-            a: 'El almacenamiento de objetos de Backblaze B2 (US$6,95/TB al mes), Cloudflare R2 (unos US$15/TB al mes, sin tarifas de salida) o Wasabi (US$7,99/TB al mes fijo) — todos verificados directamente el 03-09-2026 — cuesta bastante menos de US$1 al mes para guardar una copia de seguridad completa de un sitio pequeño típico, mucho menos que perder la única copia por una caída del proveedor.',
+            a: 'El almacenamiento de objetos de Backblaze B2 (US$6,95/TB al mes), Cloudflare R2 (unos US$15/TB al mes, sin tarifas de salida) o Wasabi (US$7,99/TB al mes fijo) — todos leídos en la página de cada proveedor el 03-09-2026 — cuesta bastante menos de US$1 al mes para guardar una copia de seguridad completa de un sitio pequeño típico, mucho menos que perder la única copia por una caída del proveedor.',
           },
           {
             q: '¿Cuál es la forma más segura de compartir un archivo grande o un conjunto de datos?',
@@ -1274,20 +1274,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         items: [
-          '[Webempresa](https://www.webempresa.com/) — precio del plan de hosting WordPress, leído directamente en Webempresa el 2026-11-03.',
-          '[Nominalia](https://www.nominalia.com/) — precios de entrada y renovación, leído directamente en Nominalia el 2026-11-03; la página no etiqueta cuál de los dos precios es el de renovación.',
-          '[DonWeb](https://www.donweb.com/) — precio de promoción y precio regular en ARS para Argentina, leído directamente en DonWeb el 2026-11-03.',
-          '[Hosting.cl](https://www.hosting.cl/) — precio anual en CLP para Chile, leído directamente en Hosting.cl el 2026-11-03.',
-          '[WNPower](https://www.wnpower.com/) — precios de hosting para Perú en pesos argentinos sin IVA ([página de precios](https://www.wnpower.com/pricing/)), leídos directamente el 2026-11-03; no indica precio de renovación.',
-          '[Hostinger](https://www.hostinger.com/es/hosting-web) — planes Single, Premium y Unlimited a 48 meses y sus renovaciones, leídos directamente el 2026-11-03; la página no indica IVA ni idioma de soporte.',
-          '[Raiola Networks](https://raiolanetworks.com/hosting-web/) — precios mensuales sin IVA, centros de datos en Madrid y soporte 24/7 en español, leídos directamente el 2026-11-03.',
-          '[Dinahosting](https://dinahosting.com/hosting) — precios con contratación anual y renovación, soporte 24/7 «en tu idioma» y teléfono gratuito, leídos directamente el 2026-11-03.',
-          '[SiteGround](https://www.siteground.es/hosting-web.htm) — StartUp, GrowBig y GoGeek a 12 meses y sus renovaciones, sin IVA, leídos directamente el 2026-11-03.',
-          '[Precios de Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — verificado directamente el 03-09-2026: US$6,95/TB al mes, primeros 10 GB gratis, salida gratuita hasta 3x los datos almacenados.',
-          '[Precios de Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — verificado directamente el 03-09-2026: US$0,015/GB al mes en almacenamiento estándar, sin tarifas de salida, nivel gratuito de 10 GB.',
-          '[Precios de Wasabi](https://wasabi.com/pricing/) — verificado directamente el 03-09-2026: US$7,99/TB al mes fijo, sin tarifas separadas de salida o de API.',
-          '[Precios de Neon](https://neon.com/pricing) — verificado directamente el 03-09-2026: nivel gratuito 100 horas de cómputo/proyecto/mes, 0,5 GB de almacenamiento/proyecto, 5 GB de salida; cómputo pago desde US$0,106/hora.',
-          '[Precios de Supabase](https://supabase.com/pricing) — verificado directamente el 03-09-2026: nivel gratuito 500 MB de base de datos, 1 GB de almacenamiento, 50.000 usuarios activos mensuales; plan Pro US$25/mes.',
+          '[Webempresa](https://www.webempresa.com/) — precio del plan de hosting WordPress, leído en la página de Webempresa el 2026-11-02.',
+          '[Nominalia](https://www.nominalia.com/) — precios de entrada y renovación, leído directamente en Nominalia el 2026-11-02; la página no etiqueta cuál de los dos precios es el de renovación.',
+          '[DonWeb](https://www.donweb.com/) — precio de promoción y precio regular en ARS para Argentina, leído directamente en DonWeb el 2026-11-02.',
+          '[Hosting.cl](https://www.hosting.cl/) — precio anual en CLP para Chile, leído en la página de Hosting.cl el 2026-11-02.',
+          '[WNPower](https://www.wnpower.com/) — precios de entrada y renovación para Perú, cifras del 2026-08-30; el 2026-11-02 la página de hosting de WNPower no mostraba precios, por lo que no se pudieron verificar.',
+          '[Hostinger](https://www.hostinger.com/es/hosting-web) — planes Single, Premium y Unlimited a 48 meses y sus renovaciones, leídos directamente el 2026-11-02; la página no indica IVA ni idioma de soporte.',
+          '[Raiola Networks](https://raiolanetworks.com/hosting-web/) — precios mensuales sin IVA, centros de datos en Madrid y soporte 24/7 en español, leídos directamente el 2026-11-02.',
+          '[Dinahosting](https://dinahosting.com/hosting) — precios con contratación anual y renovación, soporte 24/7 «en tu idioma» y teléfono gratuito, leídos directamente el 2026-11-02.',
+          '[SiteGround](https://www.siteground.es/hosting-web.htm) — StartUp, GrowBig y GoGeek a 12 meses y sus renovaciones, sin IVA, leídos directamente el 2026-11-02.',
+          '[Precios de Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — leído en la página del proveedor el 03-09-2026: US$6,95/TB al mes, primeros 10 GB gratis, salida gratuita hasta 3x los datos almacenados.',
+          '[Precios de Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — leído en la página del proveedor el 03-09-2026: US$0,015/GB al mes en almacenamiento estándar, sin tarifas de salida, nivel gratuito de 10 GB.',
+          '[Precios de Wasabi](https://wasabi.com/pricing/) — leído en la página del proveedor el 03-09-2026: US$7,99/TB al mes fijo, sin tarifas separadas de salida o de API.',
+          '[Precios de Neon](https://neon.com/pricing) — leído en la página del proveedor el 03-11-2026: nivel gratuito 100 horas de cómputo/proyecto/mes, 1 GB de almacenamiento/proyecto, 5 GB de salida; cómputo pago desde US$0,106/hora.',
+          '[Precios de Supabase](https://supabase.com/pricing) — leído en la página del proveedor el 03-09-2026: nivel gratuito 500 MB de base de datos, 1 GB de almacenamiento, 50.000 usuarios activos mensuales; plan Pro US$25/mes.',
         ],
       },
       relatedReading: {
@@ -1306,29 +1306,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
-    title: 'Melhor Hospedagem de Site no Brasil 2026: Hostinger e Alternativas',
+    title: 'Hospedagem de Site no Brasil 2026: Preços de Entrada e Renovação',
     seoTitle: 'Hospedagem de site barata no Brasil 2026: preços em R$',
     intro:
-      'A maioria das listas de "melhor hospedagem para o Brasil" ignora o detalhe que decide se você consegue mesmo contratar: a exigência de CNPJ. A [Hostinger](https://www.hostinger.com/br/hospedagem-de-sites) pode ser contratada e paga por qualquer pessoa no Brasil sem CNPJ — já as marcas brasileiras conhecidas [HostGator Brasil](https://www.hostgator.com.br/), [KingHost](https://www.kinghost.com.br/) e [Locaweb](https://www.locaweb.com.br/) valem a pena conhecer e também aparecem na comparação. Este guia compara preços em reais lidos nos sites em 3 de novembro de 2026, o salto no valor de renovação que pega novos clientes da Hostinger de surpresa, e o que a LGPD exige de fato de um provedor de hospedagem em termos de residência de dados.',
+      'Este guia compara preços de entrada e de renovação de hospedagem de site no Brasil, em reais, lidos nos sites dos provedores em 2 de novembro de 2026. [Hostinger](https://www.hostinger.com/br/hospedagem-de-sites), [HostGator Brasil](https://www.hostgator.com.br/), [KingHost](https://www.kinghost.com.br/) e [Locaweb](https://www.locaweb.com.br/) são opções reais. O guia mostra também o salto no valor de renovação da Hostinger e o que a LGPD exige de fato de um provedor de hospedagem em termos de residência de dados.',
     metaDescription:
-      'Hostinger, Locaweb, KingHost e HostGator comparadas em 2026: preço de entrada e de renovação em reais, lidos nos sites em 03/11/2026, e a LGPD.',
+      'Hostinger, Locaweb, KingHost e HostGator comparadas em 2026: preço de entrada e de renovação em reais, lidos nos sites em 02/11/2026, e a LGPD.',
     twitterDescription:
-      'Hospedagem de site no Brasil em 2026: a Hostinger é a única opção aqui que você consegue contratar sem CNPJ — veja quanto custa depois do salto na renovação.',
+      'Hospedagem de site no Brasil em 2026: preços de entrada e de renovação em reais, lidos nos sites de Hostinger, Locaweb, KingHost e HostGator — veja quanto custa depois do salto na renovação.',
     affiliateDisclosure: true,
     audience:
-      'Donos de sites e pequenos negócios no Brasil escolhendo um provedor de hospedagem, incluindo leitores sem CNPJ que precisam saber quais provedores conseguem realmente contratar.',
+      'Donos de sites e pequenos negócios no Brasil escolhendo um provedor de hospedagem, que querem comparar o preço de entrada com o de renovação antes de contratar.',
     readTime: 'Leitura de 9 min',
     educationalLevel: 'Beginner',
     primaryTerm: 'hospedagem de site Brasil',
     targetKeywords: [
       'melhor hospedagem brasil 2026',
       'hostinger vs hostgator brasil',
-      'hospedagem de site sem cnpj',
+      'preço de renovação hospedagem de site',
       'kinghost vs locaweb',
       'hospedagem lgpd brasil',
     ],
     leadAnswerBlock:
-      '**Em 3 de novembro de 2026, a Hostinger mostrava R$ 5,99/mês no plano Single (48 meses, R$ 287,52 à vista) e renovação a R$ 23,99/mês. A Locaweb Go custa R$ 5,90/mês no primeiro ciclo e a KingHost Hospedagem I, R$ 9,99/mês.**',
+      '**Em 2 de novembro de 2026, a Hostinger mostrava R$ 5,99/mês no plano Single (48 meses, R$ 287,52 à vista) e renovação a R$ 23,99/mês. A Locaweb Go custa R$ 5,90/mês no primeiro ciclo e a KingHost Hospedagem I, R$ 9,99/mês.**',
     affiliateLinks: [
       {
         url: 'https://www.hostinger.com/br/hospedagem-de-sites',
@@ -1357,12 +1357,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**A Hostinger mostra preços em reais, mas o valor de entrada exige 48 meses pré-pagos:** o plano Single sai por R$ 5,99/mês e renova a R$ 23,99/mês, cerca de 4 vezes mais (lido em 03/11/2026). Aceita contratação sem CNPJ.',
-          '**HostGator Brasil, KingHost e Locaweb são opções reais de hospedagem brasileira.** São menções editoriais: o PromptQuorum não recebe comissão de nenhum provedor desta página.',
-          '**A KingHost (Hospedagem I a R$ 9,99/mês, II a R$ 15,99, III a R$ 19,99) não informa qual período corresponde a cada valor nem o preço de renovação em reais** (lido em 03/11/2026); a página oferece ciclos mensal, anual e bienal e diz que na renovação vale o preço regular. Confirme antes de contratar.',
-          '**Na Locaweb o valor é promocional:** Go R$ 5,90/mês, Hospedagem I R$ 10,90 e II R$ 16,90 no primeiro ciclo, contra R$ 24,90, R$ 37,90 e R$ 59,90 riscados; o pagamento é integral e antecipado e a página não informa o preço de renovação (lido em 03/11/2026).',
-          '**A página da HostGator Brasil que lemos em 03/11/2026 não exibe valores em reais** (mostra "a partir de" sem número e diz que os planos são pré-pagos, com o desconto mantido até a renovação); por isso não publicamos preço para ela. Veja a tabela de preços no site antes de comparar.',
-          '**Provedores brasileiros com CNPJ simplificam obrigações de residência de dados da LGPD** por padrão, já que já estão sujeitos à jurisdição da ANPD — uma vantagem real sobre a Hostinger para negócios que lidam com dados pessoais regulados no Brasil.',
+          '**A Hostinger mostra preços em reais, mas o valor de entrada exige 48 meses pré-pagos:** o plano Single sai por R$ 5,99/mês e renova a R$ 23,99/mês, cerca de 4 vezes mais (lido em 02/11/2026).',
+          '**HostGator Brasil, KingHost e Locaweb são opções reais.** Os preços abaixo foram lidos nos sites de cada uma.',
+          '**A KingHost (Hospedagem I a R$ 9,99/mês, II a R$ 15,99, III a R$ 19,99) não informa qual período corresponde a cada valor nem o preço de renovação em reais** (lido em 02/11/2026); a página oferece ciclos mensal, anual e bienal e diz que na renovação vale o preço regular. Confirme antes de contratar.',
+          '**Na Locaweb o valor é promocional:** Go R$ 5,90/mês, Hospedagem I R$ 10,90 e II R$ 16,90 no primeiro ciclo, contra R$ 24,90, R$ 37,90 e R$ 59,90 riscados; o pagamento é integral e antecipado e a página não informa o preço de renovação (lido em 02/11/2026).',
+          '**A página da HostGator Brasil que lemos em 02/11/2026 não exibe valores em reais** (mostra "a partir de" sem número e diz que os planos são pré-pagos, com o desconto mantido até a renovação); por isso não publicamos preço para ela. Veja a tabela de preços no site antes de comparar.',
+          '**Um provedor brasileiro pode facilitar a análise de questões de LGPD,** mas a LGPD também alcança provedores estrangeiros que atendem pessoas no Brasil; verifique os termos de LGPD e o acordo de tratamento de dados de qualquer provedor, inclusive a Hostinger. Isto não é aconselhamento jurídico.',
           '**Um site precisa de mais do que o plano de hospedagem.** Um banco de dados separado (Neon, Supabase), um backup externo (Backblaze B2, Cloudflare R2, Wasabi) e uma forma segura de compartilhar arquivos grandes são três decisões que a maioria dos donos de site enfrenta mais cedo ou mais tarde — cobertas abaixo com preços verificados diretamente.',
         ],
       },
@@ -1370,15 +1370,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Hostinger vs HostGator Brasil vs KingHost vs Locaweb em 2026',
         content:
-          'Preços em reais lidos diretamente nos sites em 03/11/2026; veja a seção Fontes para saber o que cada página informava e o que não informava. Os links levam direto aos sites de [Hostinger](https://www.hostinger.com/br/hospedagem-de-sites), [HostGator Brasil](https://www.hostgator.com.br/), [KingHost](https://www.kinghost.com.br/) e [Locaweb](https://www.locaweb.com.br/), sem comissão para o PromptQuorum.',
+          'Preços em reais lidos nos sites em 02/11/2026; veja a seção Fontes para saber o que cada página informava e o que não informava.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Para hospedagem de site no Brasil, a Hostinger aceita contratação sem CNPJ; HostGator Brasil, KingHost e Locaweb são alternativas brasileiras reais para comparar direto nos sites delas.',
+            text: 'Para hospedagem de site no Brasil, a Hostinger Single custa R$ 5,99/mês com pré-pagamento de 48 meses e renova a R$ 23,99/mês; HostGator Brasil, KingHost e Locaweb são alternativas reais, com preços lidos nos sites de cada uma.',
           },
           {
             type: 'plain-terms',
-            text: 'É como escolher entre uma rede internacional e lojas locais: a Hostinger vende para qualquer pessoa com um cartão, e as três hospedagens brasileiras têm planos próprios em reais. O que muda é o preço de renovação, que você deve conferir antes de pagar.',
+            text: 'Pense no preço de entrada como um desconto de primeira compra: o que pesa no orçamento é o valor de renovação, que muda de provedor para provedor e nem sempre aparece na página.',
           },
         ],
         columns: ['Provedor', 'Preço de entrada', 'Preço de renovação'],
@@ -1421,7 +1421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'database-hosting',
         title: 'Hospedar um banco de dados separado',
         content:
-          'A hospedagem compartilhada, como os planos da Hostinger, KingHost ou Locaweb desta página, inclui um único banco de dados MySQL dentro da mesma cota de disco do resto da conta — suficiente para um blog ou um CMS pequeno, não para uma aplicação com tabela de usuários própria, eventos de analytics, ou o armazenamento vetorial/embeddings que uma função de IA exige. Para isso, um banco de dados gerenciado é um produto separado da hospedagem de site. **[Neon](https://neon.com/pricing)** roda sobre Postgres serverless e oferece um nível gratuito — 100 horas de computação por projeto ao mês, 1 GB de armazenamento por projeto, 5 GB de saída, verificado diretamente em neon.com em 03/11/2026 — que suspende a custo zero quando ocioso, e depois cobra computação por uso (a partir de US$0,106/hora de computação) e armazenamento (US$0,35/GB ao mês) além do nível gratuito, sem mínimo mensal. **[Supabase](https://supabase.com/pricing)** oferece um nível gratuito comparável — 500 MB de banco de dados, 1 GB de armazenamento de arquivos, 50.000 usuários ativos mensais, 5 GB de saída, em até 2 projetos, verificado diretamente em supabase.com em 03/11/2026 — mas um projeto gratuito pausa após 7 dias de inatividade e não tem backups automáticos; o plano Pro (US$25/mês) remove ambos os limites. Migrar para um banco de dados gerenciado separado faz sentido assim que um site precisar de mais do que a única instância MySQL incluída na hospedagem compartilhada — como complemento à hospedagem de site, não como substituto.',
+          'A hospedagem compartilhada, como os planos da Hostinger, KingHost ou Locaweb desta página, inclui um único banco de dados MySQL dentro da mesma cota de disco do resto da conta — suficiente para um blog ou um CMS pequeno, não para uma aplicação com tabela de usuários própria, eventos de analytics, ou o armazenamento vetorial/embeddings que uma função de IA exige. Para isso, um banco de dados gerenciado é um produto separado da hospedagem de site. **[Neon](https://neon.com/pricing)** roda sobre Postgres serverless e oferece um nível gratuito — 100 horas de computação por projeto ao mês, 1 GB de armazenamento por projeto, 5 GB de saída, lido em neon.com em 03/11/2026 — que suspende a custo zero quando ocioso, e depois cobra computação por uso (a partir de US$0,106/hora de computação) e armazenamento (US$0,35/GB ao mês) além do nível gratuito, sem mínimo mensal. **[Supabase](https://supabase.com/pricing)** oferece um nível gratuito comparável — 500 MB de banco de dados, 1 GB de armazenamento de arquivos, 50.000 usuários ativos mensais, 5 GB de saída, em até 2 projetos, lido em supabase.com em 03/09/2026 — mas um projeto gratuito pausa após 7 dias de inatividade e não tem backups automáticos; o plano Pro (US$25/mês) remove ambos os limites. Migrar para um banco de dados gerenciado separado faz sentido assim que um site precisar de mais do que a única instância MySQL incluída na hospedagem compartilhada — como complemento à hospedagem de site, não como substituto.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1437,7 +1437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'backups',
         title: 'Backup do seu site e dados',
         content:
-          'A regra padrão é 3-2-1: manter 3 cópias dos dados, em 2 tipos diferentes de armazenamento, com 1 cópia fora do local. Um backup que vive só no mesmo servidor do site não conta, porque uma queda do provedor ou um problema de conta derruba o site e o backup juntos. A maioria dos planos de hospedagem compartilhada, incluindo os desta página, inclui alguma função de backup automático, mas verifique a janela de retenção (quantos dias atrás uma restauração consegue alcançar) e se restaurar é autoatendimento ou exige um ticket de suporte antes de confiar nele como única cópia. Para a cópia externa, armazenamento de objetos cobrado por gigabyte é a opção padrão: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** cobra US$6,95/TB por mês, os primeiros 10 GB grátis, saída gratuita até 3x os dados armazenados em média, verificado diretamente em 03/11/2026; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** cobra US$0,015/GB por mês (cerca de US$15/TB por mês) mas sem nenhuma taxa de saída e com um nível gratuito de 10 GB de armazenamento, verificado diretamente em 03/11/2026; **[Wasabi](https://wasabi.com/pricing/)** cobra uma taxa fixa de US$7,99/TB por mês sem taxas separadas de saída ou de API, verificado diretamente em 03/11/2026. Para um site pequeno, um backup externo completo custa bem menos de US$1 por mês com qualquer um dos três.',
+          'A regra padrão é 3-2-1: manter 3 cópias dos dados, em 2 tipos diferentes de armazenamento, com 1 cópia fora do local. Um backup que vive só no mesmo servidor do site não conta, porque uma queda do provedor ou um problema de conta derruba o site e o backup juntos. A maioria dos planos de hospedagem compartilhada, incluindo os desta página, inclui alguma função de backup automático, mas verifique a janela de retenção (quantos dias atrás uma restauração consegue alcançar) e se restaurar é autoatendimento ou exige um ticket de suporte antes de confiar nele como única cópia. Para a cópia externa, armazenamento de objetos cobrado por gigabyte é a opção padrão: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** cobra US$6,95/TB por mês, os primeiros 10 GB grátis, saída gratuita até 3x os dados armazenados em média, lido na página do provedor em 03/09/2026; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** cobra US$0,015/GB por mês (cerca de US$15/TB por mês) mas sem nenhuma taxa de saída e com um nível gratuito de 10 GB de armazenamento, lido na página do provedor em 03/09/2026; **[Wasabi](https://wasabi.com/pricing/)** cobra uma taxa fixa de US$7,99/TB por mês sem taxas separadas de saída ou de API, lido na página do provedor em 03/09/2026. Para um site pequeno, um backup externo completo custa bem menos de US$1 por mês com qualquer um dos três.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1453,43 +1453,43 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'data-sharing',
         title: 'Compartilhar e transferir dados com segurança',
         content:
-          'Enviar um arquivo anexado por e-mail é a forma menos segura e menos confiável de compartilhar dados a partir de alguns megabytes — a maioria das caixas de entrada limita anexos a cerca de 20-25 MB, e o arquivo fica depois sem criptografia em várias caixas de entrada indefinidamente. Um padrão melhor é um link temporário com expiração: os mesmos serviços de armazenamento de objetos citados acima para backup (Backblaze B2, Cloudflare R2, Wasabi) podem gerar cada um uma "URL pré-assinada" — um link que concede acesso temporário a um arquivo específico e expira automaticamente após um tempo determinado, sem tornar público todo o bucket de armazenamento. Ao compartilhar arquivos com o suporte de um provedor de hospedagem ou banco de dados para diagnosticar um problema, nunca inclua uma senha de banco de dados ou chave de API dentro do próprio arquivo — rotacione essa credencial assim que o arquivo deixar de ser necessário, já que um ticket de suporte ou um link compartilhado pode sobreviver ao destinatário pretendido. Para compartilhamento recorrente de arquivos grandes, como vídeo ou conjuntos de dados, a tarifação sem taxa de saída da Cloudflare R2 evita a conta surpresa que uma taxa de saída por gigabyte pode gerar quando um link compartilhado é baixado muitas vezes.',
+          'Enviar um arquivo anexado por e-mail é uma forma pouco adequada de compartilhar dados a partir de alguns megabytes — a maioria das caixas de entrada limita anexos a cerca de 20-25 MB, e o arquivo fica depois sem criptografia em várias caixas de entrada indefinidamente. Um padrão melhor é um link temporário com expiração: os mesmos serviços de armazenamento de objetos citados acima para backup (Backblaze B2, Cloudflare R2, Wasabi) podem gerar cada um uma "URL pré-assinada" — um link que concede acesso temporário a um arquivo específico e expira automaticamente após um tempo determinado, sem tornar público todo o bucket de armazenamento. Ao compartilhar arquivos com o suporte de um provedor de hospedagem ou banco de dados para diagnosticar um problema, nunca inclua uma senha de banco de dados ou chave de API dentro do próprio arquivo — rotacione essa credencial assim que o arquivo deixar de ser necessário, já que um ticket de suporte ou um link compartilhado pode sobreviver ao destinatário pretendido. Para compartilhamento recorrente de arquivos grandes, como vídeo ou conjuntos de dados, a tarifação sem taxa de saída da Cloudflare R2 evita a conta surpresa que uma taxa de saída por gigabyte pode gerar quando um link compartilhado é baixado muitas vezes.',
       },
       lgpdCompliance: {
         id: 'lgpd-compliance',
         title: 'Residência de dados e LGPD',
         content:
-          'A Lei Geral de Proteção de Dados (LGPD) é fiscalizada pela Autoridade Nacional de Proteção de Dados (ANPD) e rege como dados pessoais de pessoas no Brasil são coletados, armazenados e tratados. Contratar um provedor brasileiro com CNPJ, como HostGator Brasil, KingHost ou Locaweb, simplifica as obrigações de residência de dados e de acordo de tratamento de dados da LGPD, porque o provedor já está registrado no Brasil e sujeito diretamente à fiscalização da ANPD. A Hostinger é uma provedora internacional — ela pode hospedar sites brasileiros normalmente, mas um negócio que lida com dados pessoais regulados deve verificar os termos específicos de LGPD e o acordo de tratamento de dados da Hostinger antes de usá-la para algo além de um site informativo simples.',
+          'A Lei Geral de Proteção de Dados (LGPD) é fiscalizada pela Autoridade Nacional de Proteção de Dados (ANPD) e rege como dados pessoais de pessoas no Brasil são coletados, armazenados e tratados. Um provedor brasileiro pode facilitar a análise de questões de LGPD, mas a LGPD também alcança provedores estrangeiros que atendem pessoas no Brasil; verifique os termos de LGPD e o acordo de tratamento de dados de qualquer provedor, inclusive a Hostinger, se o seu negócio lida com dados pessoais regulados. Isto não é aconselhamento jurídico.',
       },
       verdict: {
         id: 'verdict',
         title: 'Veredito',
         content:
-          'Se você não tem CNPJ, a [Hostinger](https://www.hostinger.com/br/hospedagem-de-sites) é o ponto de partida realista — reserve orçamento para o pré-pagamento de 48 meses e para o salto na renovação (de R$ 5,99 para R$ 23,99/mês no plano Single), em vez de ser pego de surpresa. Se você prefere uma marca brasileira, compare [HostGator Brasil](https://www.hostgator.com.br/), [KingHost](https://www.kinghost.com.br/) e [Locaweb](https://www.locaweb.com.br/) diretamente nos próprios sites antes de decidir; as três são hospedagens brasileiras conhecidas, citadas aqui como menção editorial.',
+          'Se você quer um preço em reais com a renovação publicada, a [Hostinger](https://www.hostinger.com/br/hospedagem-de-sites) é a opção da tabela com esse dado — reserve orçamento para o pré-pagamento de 48 meses e para o salto na renovação (de R$ 5,99 para R$ 23,99/mês no plano Single). Compare também [HostGator Brasil](https://www.hostgator.com.br/), [KingHost](https://www.kinghost.com.br/) e [Locaweb](https://www.locaweb.com.br/) diretamente nos próprios sites antes de decidir; as páginas lidas em 02/11/2026 não informavam o preço de renovação em reais.',
       },
       faq: {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
           {
-            q: 'Qual é a hospedagem de site mais barata do Brasil?',
-            a: 'Entre os preços em reais lidos em 03/11/2026, a Locaweb Go (R$ 5,90/mês no primeiro ciclo) e a Hostinger Single (R$ 5,99/mês com 48 meses pré-pagos) têm os menores valores iniciais, seguidas pela KingHost Hospedagem I (R$ 9,99/mês). O mais barato no primeiro mês não é o mais barato depois: a Hostinger Single renova a R$ 23,99/mês, a Locaweb mostra R$ 24,90 riscado e as páginas da Locaweb e da KingHost não informam a renovação em reais.',
+            q: 'Qual é a hospedagem de site mais barata entre as comparadas aqui?',
+            a: 'Entre os preços em reais lidos em 02/11/2026, a Locaweb Go (R$ 5,90/mês no primeiro ciclo) e a Hostinger Single (R$ 5,99/mês com 48 meses pré-pagos) têm os menores valores iniciais, seguidas pela KingHost Hospedagem I (R$ 9,99/mês). O mais barato no primeiro mês não é o mais barato depois: a Hostinger Single renova a R$ 23,99/mês, a Locaweb mostra R$ 24,90 riscado e as páginas da Locaweb e da KingHost não informam a renovação em reais.',
           },
           {
             q: 'HostGator ou Hostinger: qual compensa mais?',
-            a: 'Não conseguimos comparar o preço em reais: a página da HostGator Brasil lida em 03/11/2026 não exibia valores. Da Hostinger temos o preço (Single R$ 5,99/mês por 48 meses, renovando a R$ 23,99/mês) e a contratação sem CNPJ. Compare o preço cheio da HostGator na tabela de preços dela, o prazo de pré-pagamento e o valor de renovação das duas antes de decidir.',
+            a: 'Não conseguimos comparar o preço em reais: a página da HostGator Brasil lida em 02/11/2026 não exibia valores. Da Hostinger temos o preço (Single R$ 5,99/mês por 48 meses, renovando a R$ 23,99/mês). Compare o preço cheio da HostGator na tabela de preços dela, o prazo de pré-pagamento e o valor de renovação das duas antes de decidir.',
           },
           {
-            q: 'Dá para contratar hospedagem de site no Brasil sem CNPJ?',
-            a: 'Sim, com a Hostinger — ela aceita contratação de pessoa física, sem CNPJ. HostGator Brasil, KingHost e Locaweb também vendem planos no Brasil; confirme nos sites delas se a contratação como pessoa física é aceita.',
+            q: 'A Hostinger cobra em reais no Brasil?',
+            a: 'Sim. A página brasileira lida em 02/11/2026 mostra os planos em reais: Single R$ 5,99/mês (R$ 287,52 por 48 meses), renovando a R$ 23,99/mês. Compare a página de cada provedor antes de contratar.',
           },
           {
             q: 'Por que a Hostinger renova a quase 4x o preço anunciado?',
-            a: 'Na página brasileira lida em 03/11/2026, o plano Single custa R$ 5,99/mês vinculado a um pré-pagamento de 48 meses (R$ 287,52 à vista) e a renovação automática é de R$ 23,99/mês pelo mesmo período, cerca de 4 vezes mais. Premium (R$ 9,99/mês) renova a R$ 38,99 e Unlimited (R$ 12,99/mês) a R$ 64,99. Considere o preço de renovação, não o anunciado, ao comparar o custo total.',
+            a: 'Na página brasileira lida em 02/11/2026, o plano Single custa R$ 5,99/mês vinculado a um pré-pagamento de 48 meses (R$ 287,52 à vista) e a renovação automática é de R$ 23,99/mês pelo mesmo período, cerca de 4 vezes mais. Premium (R$ 9,99/mês) renova a R$ 38,99 e Unlimited (R$ 12,99/mês) a R$ 64,99. Considere o preço de renovação, não o anunciado, ao comparar o custo total.',
           },
           {
-            q: 'A HostGator Brasil é a mesma empresa da HostGator dos Estados Unidos?',
-            a: 'A HostGator Brasil opera sob a marca HostGator para o mercado brasileiro, com preços e suporte próprios. A página que lemos em 03/11/2026 não mostrava valores em reais, só "a partir de" e a informação de que os planos são pré-pagos; por isso não publicamos preço para ela. Confirme o valor vigente diretamente no site da HostGator Brasil antes de contratar.',
+            q: 'Qual é o preço da HostGator Brasil?',
+            a: 'A página da HostGator Brasil que lemos em 02/11/2026 não mostrava valores em reais, só "a partir de" e a informação de que os planos são pré-pagos; por isso não publicamos preço para ela. Confirme o valor vigente diretamente no site da HostGator Brasil antes de contratar.',
           },
           {
             q: 'O que a KingHost não divulga sobre o preço?',
@@ -1497,7 +1497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Hospedagem brasileira ajuda na conformidade com a LGPD?',
-            a: 'Ajuda a simplificar. Um provedor brasileiro com CNPJ, como HostGator Brasil, KingHost ou Locaweb, já está registrado no Brasil e sujeito à fiscalização da ANPD, o que remove ambiguidades sobre residência de dados na LGPD. A Hostinger também pode ser usada, mas verifique os termos específicos de LGPD e o acordo de tratamento de dados dela se você lida com dados pessoais regulados.',
+            a: 'Pode ajudar em parte. A LGPD não exige hospedagem no Brasil; transferências internacionais seguem o art. 33 e dependem de base legal e garantias. Verifique os termos e o acordo de tratamento de dados de cada provedor (isto não é aconselhamento jurídico).',
           },
           {
             q: 'Dá para rodar um LLM local em alguma dessas hospedagens?',
@@ -1509,7 +1509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quanto custa realmente um backup externo?',
-            a: 'Armazenamento de objetos da Backblaze B2 (US$6,95/TB por mês), Cloudflare R2 (cerca de US$15/TB por mês, sem taxas de saída) ou Wasabi (US$7,99/TB por mês fixo) — todos verificados diretamente em 03/11/2026 — custa bem menos de US$1 por mês para guardar um backup completo de um site pequeno típico, muito menos do que perder a única cópia numa queda do provedor.',
+            a: 'Armazenamento de objetos da Backblaze B2 (US$6,95/TB por mês), Cloudflare R2 (cerca de US$15/TB por mês, sem taxas de saída) ou Wasabi (US$7,99/TB por mês fixo) — todos lidos na página de cada provedor em 03/09/2026 — custa bem menos de US$1 por mês para guardar um backup completo de um site pequeno típico, muito menos do que perder a única cópia numa queda do provedor.',
           },
           {
             q: 'Qual é a forma mais segura de compartilhar um arquivo grande ou um conjunto de dados?',
@@ -1521,16 +1521,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         items: [
-          '[Preços da Hostinger](https://www.hostinger.com/br/hospedagem-de-sites) — lidos diretamente na página brasileira em 03/11/2026: Single R$ 5,99/mês (R$ 287,52 por 48 meses), renovação R$ 23,99/mês; Premium R$ 9,99/mês, renovação R$ 38,99; Unlimited R$ 12,99/mês, renovação R$ 64,99.',
-          '[HostGator Brasil](https://www.hostgator.com.br/hospedagem-de-sites) — página lida em 03/11/2026 sem valores em reais (só "a partir de", planos pré-pagos, até 30 dias de reembolso). Nenhum preço publicado aqui.',
-          '[KingHost](https://king.host/hospedagem-de-sites) — lido em 03/11/2026: Hospedagem I R$ 9,99, II R$ 15,99, III R$ 19,99 por mês, ciclos mensal/anual/bienal sem indicar qual valor vale para qual ciclo; renovação ao preço regular, sem valor.',
-          '[Locaweb](https://www.locaweb.com.br/hospedagem-de-sites/) — lido em 03/11/2026: Go R$ 5,90, Hospedagem I R$ 10,90, II R$ 16,90 por mês no primeiro ciclo (riscados R$ 24,90, R$ 37,90, R$ 59,90), pagamento integral e antecipado; renovação não informada.',
+          '[Preços da Hostinger](https://www.hostinger.com/br/hospedagem-de-sites) — lidos diretamente na página brasileira em 02/11/2026: Single R$ 5,99/mês (R$ 287,52 por 48 meses), renovação R$ 23,99/mês; Premium R$ 9,99/mês, renovação R$ 38,99; Unlimited R$ 12,99/mês, renovação R$ 64,99.',
+          '[HostGator Brasil](https://www.hostgator.com.br/hospedagem-de-sites) — página lida em 02/11/2026 sem valores em reais (só "a partir de", planos pré-pagos, até 30 dias de reembolso). Nenhum preço publicado aqui.',
+          '[KingHost](https://king.host/hospedagem-de-sites) — lido em 02/11/2026: Hospedagem I R$ 9,99, II R$ 15,99, III R$ 19,99 por mês, ciclos mensal/anual/bienal sem indicar qual valor vale para qual ciclo; renovação ao preço regular, sem valor.',
+          '[Locaweb](https://www.locaweb.com.br/hospedagem-de-sites/) — lido em 02/11/2026: Go R$ 5,90, Hospedagem I R$ 10,90, II R$ 16,90 por mês no primeiro ciclo (riscados R$ 24,90, R$ 37,90, R$ 59,90), pagamento integral e antecipado; renovação não informada.',
           '[LGPD — Lei Geral de Proteção de Dados (ANPD)](https://www.gov.br/anpd/pt-br) — site oficial da autoridade brasileira de proteção de dados, citado para o enquadramento de LGPD/ANPD acima.',
-          '[Preços da Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — verificado diretamente em 03/11/2026: US$6,95/TB por mês, primeiros 10 GB grátis, saída gratuita até 3x os dados armazenados.',
-          '[Preços da Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — verificado diretamente em 03/11/2026: US$0,015/GB por mês em armazenamento padrão, sem taxas de saída, nível gratuito de 10 GB.',
-          '[Preços da Wasabi](https://wasabi.com/pricing/) — verificado diretamente em 03/11/2026: US$7,99/TB por mês fixo, sem taxas separadas de saída ou de API.',
-          '[Preços da Neon](https://neon.com/pricing) — verificado diretamente em 03/11/2026: nível gratuito 100 horas de computação/projeto/mês, 1 GB de armazenamento/projeto, 5 GB de saída; computação paga a partir de US$0,106/hora.',
-          '[Preços da Supabase](https://supabase.com/pricing) — verificado diretamente em 03/11/2026: nível gratuito 500 MB de banco de dados, 1 GB de armazenamento, 50.000 usuários ativos mensais; plano Pro US$25/mês.',
+          '[Preços da Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — lido na página do provedor em 03/09/2026: US$6,95/TB por mês, primeiros 10 GB grátis, saída gratuita até 3x os dados armazenados.',
+          '[Preços da Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — lido na página do provedor em 03/09/2026: US$0,015/GB por mês em armazenamento padrão, sem taxas de saída, nível gratuito de 10 GB.',
+          '[Preços da Wasabi](https://wasabi.com/pricing/) — lido na página do provedor em 03/09/2026: US$7,99/TB por mês fixo, sem taxas separadas de saída ou de API.',
+          '[Preços da Neon](https://neon.com/pricing) — lido na página do provedor em 03/11/2026: nível gratuito 100 horas de computação/projeto/mês, 1 GB de armazenamento/projeto, 5 GB de saída; computação paga a partir de US$0,106/hora.',
+          '[Preços da Supabase](https://supabase.com/pricing) — lido na página do provedor em 03/09/2026: nível gratuito 500 MB de banco de dados, 1 GB de armazenamento, 50.000 usuários ativos mensais; plano Pro US$25/mês.',
         ],
       },
       relatedReading: {
@@ -1549,14 +1549,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
-    title: 'أفضل استضافة مواقع في الخليج العربي 2026: Hostinger مقابل ArabHosters',
+    title: 'استضافة مواقع في الخليج العربي 2026: مقارنة أسعار Hostinger وArabHosters',
     seoTitle: 'استضافة الخليج العربي 2026: Hostinger و ArabHosters',
     intro:
-      'غالبًا ما تعيد مراجعات الاستضافة الموجهة لمنطقة الخليج نشر أسعار السوق الأمريكي دون التحقق مما إذا كان المزود فعليًا نشطًا ومؤكدًا في منطقة الشرق الأوسط وشمال أفريقيا، أو ما إذا كانت العملة المعروضة عند الدفع تطابق ما يتوقعه القارئ. كل من [Hostinger](https://www.hostinger.com/) و[ArabHosters](https://www.arabhosters.com/) مؤكدان كخيارين نشطين ويمكن الوصول إليهما في الخليج والعالم العربي الأوسع، مع مفاضلات مختلفة: تقدّم Hostinger سعرًا معلنًا منخفضًا مرتبطًا بمدة دفع مسبق طويلة، بينما ArabHosters مزود عربي شامل مقره مصر لكنه يحتسب الفواتير بالدولار الأمريكي رغم هويته الإقليمية. أما GoDaddy وNamecheap فهما مزودان عالميان معروفان تستحق معرفتهما، لكن هذا الدليل لم يعِد تسعيرهما ولم يؤكد حضورًا خاصًا بهما في منطقة الشرق الأوسط وشمال أفريقيا.',
+      'قد تعيد بعض مراجعات الاستضافة الموجهة لمنطقة الخليج نشر أسعار السوق الأمريكي دون التحقق مما إذا كان المزود فعليًا نشطًا ومؤكدًا في منطقة الشرق الأوسط وشمال أفريقيا، أو ما إذا كانت العملة المعروضة عند الدفع تطابق ما يتوقعه القارئ. كل من [Hostinger](https://www.hostinger.com/) و[ArabHosters](https://www.arabhosters.com/) يمكن الوصول إليهما من الخليج والعالم العربي الأوسع، مع مفاضلات مختلفة: تقدّم Hostinger سعرًا معلنًا منخفضًا مرتبطًا بمدة دفع مسبق طويلة، بينما ArabHosters مزود عربي شامل مقره مصر لكنه يحتسب الفواتير بالدولار الأمريكي رغم هويته الإقليمية. أما GoDaddy وNamecheap فهما مزودان عالميان معروفان تستحق معرفتهما، لكن هذا الدليل لم يعِد تسعيرهما.',
     metaDescription:
-      'مقارنة Hostinger وArabHosters لاستضافة المواقع في الخليج 2026: الأسعار والعملة والحضور المؤكد، مع نظام PDPL السعودي وقانون حماية البيانات الإماراتي.',
+      'مقارنة Hostinger وArabHosters لاستضافة المواقع في الخليج 2026: الأسعار والعملة، مع نظام PDPL السعودي وقانون حماية البيانات الإماراتي.',
     twitterDescription:
-      'استضافة المواقع في الخليج العربي 2026: مقارنة Hostinger وArabHosters من حيث السعر الفعلي والحضور المؤكد في المنطقة — وما يتطلبه نظام PDPL السعودي وقانون البيانات الإماراتي.',
+      'استضافة المواقع في الخليج العربي 2026: مقارنة Hostinger وArabHosters من حيث السعر والعملة — وما يتطلبه نظام PDPL السعودي وقانون البيانات الإماراتي.',
     affiliateDisclosure: true,
     audience:
       'أصحاب المواقع والشركات الصغيرة في السعودية والإمارات ومنطقة الخليج الأوسع الذين يختارون مزود استضافة بناءً على السعر والعملة ومدى الملاءمة لحماية البيانات.',
@@ -1571,7 +1571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'pdpl استضافة الإمارات',
     ],
     leadAnswerBlock:
-      '**Hostinger (سعر تمهيدي 2.49 دولار شهريًا مع دفع مسبق لمدة 48 شهرًا، ويتجدد بسعر 10.99 دولار شهريًا) وArabHosters (37.80 دولار سنويًا، نحو 3.15 دولار شهريًا) مؤكدان في الخليج العربي، وكلاهما يحتسب الفواتير بالدولار الأمريكي لا بعملة الخليج المحلية.**',
+      '**يعرض Hostinger سعرًا تمهيديًا 2.49 دولار شهريًا مع دفع مسبق لمدة 48 شهرًا ويتجدد بسعر 10.99 دولار شهريًا، وتبلغ خطة Personal لدى ArabHosters 37.80 دولار سنويًا (نحو 3.15 دولار شهريًا)؛ وكلاهما يحتسب الفواتير بالدولار الأمريكي على الصفحة العالمية التي قُرئت، لا بعملة الخليج المحلية.**',
     affiliateLinks: [
       {
         url: 'https://www.hostinger.com/',
@@ -1607,11 +1607,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Hostinger مؤكد نشاطه في أكثر من 12 دولة في منطقة الشرق الأوسط وشمال أفريقيا.** سعره التمهيدي 2.49 دولار شهريًا يتطلب دفعًا مسبقًا لمدة 48 شهرًا (119.52 دولار مقدمًا) ويتجدد بسعر 10.99 دولار شهريًا — بزيادة تقارب 4.4 أضعاف.',
+          '**يعرض Hostinger سعرًا تمهيديًا 2.49 دولار شهريًا يتطلب دفعًا مسبقًا لمدة 48 شهرًا (119.52 دولار مقدمًا) ويتجدد بسعر 10.99 دولار شهريًا** — بزيادة تقارب 4.4 أضعاف (قُرئ من الصفحة العالمية بتاريخ 2026-11-03).',
           '**ArabHosters مزود عربي شامل مقره مصر.** خطته Personal تبلغ 37.80 دولار سنويًا (نحو 3.15 دولار شهريًا).',
-          '**ArabHosters يحتسب الأسعار بالدولار الأمريكي وليس بعملة الخليج المحلية**، رغم هويته العربية الشاملة — لا تفترض أن سعر الدفع سيكون بالريال السعودي أو الدرهم الإماراتي دون التحقق أولًا.',
-          '**GoDaddy وNamecheap مُدرجان للاطلاع فقط.** لم تتم إعادة تسعير أي منهما ولم يُؤكد حضور خاص بهما في منطقة الشرق الأوسط وشمال أفريقيا.',
-          '**تستثمر منطقة الخليج بنشاط في بنية تحتية سيادية وذات أولوية عربية**، وفق متطلبات PDPL السعودي وقانون حماية البيانات الإماراتي — وهو اتجاه يميل بمرور الوقت لصالح منصات مستضافة إقليميًا وأصيلة اللغة العربية مقارنة بمزودي الاستضافة العالميين العامين.',
+          '**ArabHosters يعرض الأسعار بالدولار الأمريكي (الصفحة التي قُرئت بتاريخ 2026-08-30) وليس بعملة الخليج المحلية**، رغم هويته العربية الشاملة — لا تفترض أن سعر الدفع سيكون بالريال السعودي أو الدرهم الإماراتي دون التحقق أولًا.',
+          '**GoDaddy وNamecheap مُدرجان للاطلاع فقط.** لم تتم إعادة تسعير أي منهما في هذه الجولة.',
+          '**يختلف الإطار القانوني لحماية البيانات في السعودية (PDPL) والإمارات (المرسوم بقانون اتحادي رقم 45 لسنة 2021)،** وقد يؤثر على اختيار مكان الاستضافة؛ راجع قسم حماية البيانات أدناه. هذا ليس استشارة قانونية.',
           '**يحتاج الموقع إلى أكثر من خطة الاستضافة وحدها.** قاعدة بيانات منفصلة (Neon أو Supabase)، ونسخة احتياطية خارج الموقع (Backblaze B2 أو Cloudflare R2 أو Wasabi)، وطريقة آمنة لمشاركة الملفات الكبيرة، هي ثلاثة قرارات يواجهها معظم أصحاب المواقع عاجلًا أم آجلًا — مفصّلة أدناه بأسعار تم التحقق منها مباشرة.',
         ],
       },
@@ -1619,41 +1619,41 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'مقارنة Hostinger وArabHosters وGoDaddy وNamecheap في الخليج',
         content:
-          'تم التحقق من سعر [Hostinger](https://www.hostinger.com/) وسعر [ArabHosters](https://www.arabhosters.com/) بتاريخ 2026-11-03؛ أما GoDaddy وNamecheap فمُدرجان للاطلاع فقط ولم تتم إعادة تسعيرهما أو تأكيد حضورهما في منطقة الشرق الأوسط وشمال أفريقيا هذه المرة.',
+          'قُرئ سعر [Hostinger](https://www.hostinger.com/) من صفحته العالمية بتاريخ 2026-11-03 وسعر [ArabHosters](https://www.arabhosters.com/) بتاريخ 2026-08-30؛ أما GoDaddy وNamecheap فمُدرجان للاطلاع فقط ولم تتم إعادة تسعيرهما هذه المرة.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'بالنسبة لاستضافة المواقع في الخليج العربي، يُعد Hostinger وArabHosters المزودَين المؤكد وصولهما الذاتي إلى منطقة الشرق الأوسط وشمال أفريقيا — وكلاهما يحتسب الفواتير بالدولار الأمريكي وليس بالعملة المحلية.',
+            text: 'بالنسبة لاستضافة المواقع في الخليج العربي، يمكن الوصول إلى Hostinger وArabHosters من المنطقة — وكلاهما يحتسب الفواتير بالدولار الأمريكي على الصفحة العالمية التي قُرئت وليس بالعملة المحلية.',
           },
           {
             type: 'plain-terms',
             text: 'تخيلها كخدمتي توصيل تعملان في مدينتك، لكن لا واحدة منهما تعرض الأسعار بعملتك المحلية عند الدفع — ستدفع بالدولار في الحالتين، لذا قارن المجموع بالدولار وليس رقمًا افتراضيًا بالعملة المحلية.',
           },
         ],
-        columns: ['المزود', 'السعر التمهيدي', 'الحضور في المنطقة', 'العملة'],
+        columns: ['المزود', 'السعر التمهيدي', 'نوع المزود', 'العملة'],
         rows: [
           {
             'المزود': 'Hostinger',
             'السعر التمهيدي': '2.49 دولار/شهر (دفع مسبق 48 شهر)',
-            'الحضور في المنطقة': 'نشط في أكثر من 12 دولة',
+            'نوع المزود': 'مزود عالمي',
             'العملة': 'دولار أمريكي',
           },
           {
             'المزود': 'ArabHosters',
             'السعر التمهيدي': '37.80 دولار/سنة (~3.15 دولار/شهر)',
-            'الحضور في المنطقة': 'عربي شامل، مقره مصر',
+            'نوع المزود': 'عربي شامل، مقره مصر',
             'العملة': 'دولار رغم الهوية الإقليمية',
           },
           {
             'المزود': 'GoDaddy',
             'السعر التمهيدي': 'لم تتم إعادة التسعير هذه المرة',
-            'الحضور في المنطقة': 'عالمي، حضور غير مؤكد للمنطقة',
+            'نوع المزود': 'مزود عالمي',
             'العملة': 'غير محدد — للاطلاع فقط',
           },
           {
             'المزود': 'Namecheap',
             'السعر التمهيدي': 'لم تتم إعادة التسعير هذه المرة',
-            'الحضور في المنطقة': 'عالمي، حضور غير مؤكد للمنطقة',
+            'نوع المزود': 'مزود عالمي',
             'العملة': 'غير محدد — للاطلاع فقط',
           },
         ],
@@ -1674,7 +1674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'database-hosting',
         title: 'استضافة قاعدة بيانات منفصلة',
         content:
-          'تُضمّن الاستضافة المشتركة، مثل خطط Hostinger أو ArabHosters في هذه الصفحة، قاعدة بيانات MySQL واحدة ضمن نفس حصة القرص المخصصة لبقية الحساب — وهذا كافٍ لمدونة أو نظام إدارة محتوى صغير، وليس لتطبيق له جدول مستخدمين خاص أو أحداث تحليلات أو تخزين متجهات/embeddings تحتاجه ميزة ذكاء اصطناعي. لهذا الغرض، تُعد قاعدة البيانات المُدارة منتجًا منفصلًا عن استضافة المواقع. تعمل **[Neon](https://neon.com/pricing)** على Postgres بلا خادم وتقدّم مستوى مجانيًا — 100 ساعة حوسبة لكل مشروع شهريًا، 1 جيجابايت تخزين لكل مشروع، 5 جيجابايت نقل خارجي، تم التحقق منه مباشرة على neon.com بتاريخ 2026-11-03 — يتوقف عن التكلفة تمامًا عند عدم الاستخدام، ثم يحتسب الحوسبة حسب الاستخدام (بدءًا من 0.106 دولار لكل ساعة حوسبة) والتخزين (0.35 دولار لكل جيجابايت شهريًا) بعد تجاوز المستوى المجاني، دون حد أدنى شهري. تقدّم **[Supabase](https://supabase.com/pricing)** مستوى مجانيًا مشابهًا — قاعدة بيانات 500 ميجابايت، تخزين ملفات 1 جيجابايت، 50,000 مستخدم نشط شهريًا، 5 جيجابايت نقل خارجي، عبر مشروعين كحد أقصى، تم التحقق منه مباشرة على supabase.com بتاريخ 2026-11-03 — لكن المشروع المجاني يتوقف مؤقتًا بعد 7 أيام من عدم النشاط ولا يحصل على نسخ احتياطي تلقائي؛ تزيل خطة Pro (25 دولار شهريًا) هذين الحدين. يصبح الانتقال إلى قاعدة بيانات مُدارة منفصلة منطقيًا بمجرد أن يحتاج الموقع أكثر من نسخة MySQL الواحدة المضمّنة في الاستضافة المشتركة — كإضافة لاستضافة الموقع، وليس بديلًا عنها.',
+          'تُضمّن الاستضافة المشتركة، مثل خطط Hostinger أو ArabHosters في هذه الصفحة، قاعدة بيانات MySQL واحدة ضمن نفس حصة القرص المخصصة لبقية الحساب — وهذا كافٍ لمدونة أو نظام إدارة محتوى صغير، وليس لتطبيق له جدول مستخدمين خاص أو أحداث تحليلات أو تخزين متجهات/embeddings تحتاجه ميزة ذكاء اصطناعي. لهذا الغرض، تُعد قاعدة البيانات المُدارة منتجًا منفصلًا عن استضافة المواقع. تعمل **[Neon](https://neon.com/pricing)** على Postgres بلا خادم وتقدّم مستوى مجانيًا — 100 ساعة حوسبة لكل مشروع شهريًا، 0.5 جيجابايت تخزين لكل مشروع، 5 جيجابايت نقل خارجي، تمت قراءته من neon.com بتاريخ 2026-09-03 — يتوقف عن التكلفة تمامًا عند عدم الاستخدام، ثم يحتسب الحوسبة حسب الاستخدام (بدءًا من 0.106 دولار لكل ساعة حوسبة) والتخزين (0.35 دولار لكل جيجابايت شهريًا) بعد تجاوز المستوى المجاني، دون حد أدنى شهري. تقدّم **[Supabase](https://supabase.com/pricing)** مستوى مجانيًا مشابهًا — قاعدة بيانات 500 ميجابايت، تخزين ملفات 1 جيجابايت، 50,000 مستخدم نشط شهريًا، 5 جيجابايت نقل خارجي، عبر مشروعين كحد أقصى، تمت قراءته من supabase.com بتاريخ 2026-09-03 — لكن المشروع المجاني يتوقف مؤقتًا بعد 7 أيام من عدم النشاط ولا يحصل على نسخ احتياطي تلقائي؛ تزيل خطة Pro (25 دولار شهريًا) هذين الحدين. يصبح الانتقال إلى قاعدة بيانات مُدارة منفصلة منطقيًا بمجرد أن يحتاج الموقع أكثر من نسخة MySQL الواحدة المضمّنة في الاستضافة المشتركة — كإضافة لاستضافة الموقع، وليس بديلًا عنها.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1690,7 +1690,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'backups',
         title: 'النسخ الاحتياطي لموقعك وبياناتك',
         content:
-          'القاعدة المعيارية هي 3-2-1: الاحتفاظ بثلاث نسخ من البيانات، على نوعين مختلفين من التخزين، مع نسخة واحدة خارج الموقع. لا تُحتسب النسخة الاحتياطية التي تعيش فقط على نفس خادم الموقع، لأن انقطاع خدمة المزود أو مشكلة في الحساب يعطّل الموقع والنسخة الاحتياطية معًا. تتضمن معظم خطط الاستضافة المشتركة، بما فيها الخطط المذكورة هنا، ميزة نسخ احتياطي تلقائي، لكن تحقق من نافذة الاحتفاظ (عدد الأيام التي يمكن الرجوع إليها عند الاستعادة) وما إذا كانت الاستعادة ذاتية الخدمة أم تتطلب تذكرة دعم فني قبل الاعتماد عليها كنسخة وحيدة. بالنسبة للنسخة خارج الموقع، يُعد التخزين الكائني المحتسَب بالجيجابايت الخيار المعياري: تفرض **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** رسوم 6.95 دولار لكل تيرابايت شهريًا، مع أول 10 جيجابايت مجانًا ونقل خارجي مجاني حتى 3 أضعاف متوسط البيانات المخزنة، تم التحقق منه مباشرة بتاريخ 2026-11-03؛ وتفرض **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** رسوم 0.015 دولار لكل جيجابايت شهريًا (نحو 15 دولارًا لكل تيرابايت شهريًا) لكن دون أي رسوم نقل خارجي على الإطلاق ومع مستوى مجاني بسعة 10 جيجابايت تخزين، تم التحقق منه مباشرة بتاريخ 2026-11-03؛ وتفرض **[Wasabi](https://wasabi.com/pricing/)** رسمًا ثابتًا قدره 7.99 دولار لكل تيرابايت شهريًا دون رسوم نقل خارجي أو رسوم واجهة برمجية منفصلة، تم التحقق منه مباشرة بتاريخ 2026-11-03. لموقع صغير، تكلف نسخة احتياطية كاملة خارج الموقع أقل بكثير من دولار واحد شهريًا مع أي من الثلاثة.',
+          'القاعدة المعيارية هي 3-2-1: الاحتفاظ بثلاث نسخ من البيانات، على نوعين مختلفين من التخزين، مع نسخة واحدة خارج الموقع. لا تُحتسب النسخة الاحتياطية التي تعيش فقط على نفس خادم الموقع، لأن انقطاع خدمة المزود أو مشكلة في الحساب يعطّل الموقع والنسخة الاحتياطية معًا. تتضمن معظم خطط الاستضافة المشتركة، بما فيها الخطط المذكورة هنا، ميزة نسخ احتياطي تلقائي، لكن تحقق من نافذة الاحتفاظ (عدد الأيام التي يمكن الرجوع إليها عند الاستعادة) وما إذا كانت الاستعادة ذاتية الخدمة أم تتطلب تذكرة دعم فني قبل الاعتماد عليها كنسخة وحيدة. بالنسبة للنسخة خارج الموقع، يُعد التخزين الكائني المحتسَب بالجيجابايت الخيار المعياري: تفرض **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** رسوم 6.95 دولار لكل تيرابايت شهريًا، مع أول 10 جيجابايت مجانًا ونقل خارجي مجاني حتى 3 أضعاف متوسط البيانات المخزنة، تمت قراءته من صفحة المزود بتاريخ 2026-09-03؛ وتفرض **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** رسوم 0.015 دولار لكل جيجابايت شهريًا (نحو 15 دولارًا لكل تيرابايت شهريًا) لكن دون أي رسوم نقل خارجي على الإطلاق ومع مستوى مجاني بسعة 10 جيجابايت تخزين، تمت قراءته من صفحة المزود بتاريخ 2026-09-03؛ وتفرض **[Wasabi](https://wasabi.com/pricing/)** رسمًا ثابتًا قدره 7.99 دولار لكل تيرابايت شهريًا دون رسوم نقل خارجي أو رسوم واجهة برمجية منفصلة، تمت قراءته من صفحة المزود بتاريخ 2026-09-03. لموقع صغير، تكلف نسخة احتياطية كاملة خارج الموقع أقل بكثير من دولار واحد شهريًا مع أي من الثلاثة.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1706,27 +1706,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'data-sharing',
         title: 'مشاركة البيانات ونقلها بأمان',
         content:
-          'إرسال ملف كمرفق بريد إلكتروني هو الطريقة الأقل أمانًا والأقل موثوقية لمشاركة البيانات بدءًا من بضعة ميجابايت — إذ تحدّ معظم صناديق البريد المرفقات إلى نحو 20-25 ميجابايت، ويبقى الملف بعدها غير مشفّر في عدة صناديق بريد إلى أجل غير مسمى. البديل الافتراضي الأفضل هو رابط مؤقت ينتهي صلاحيته: يمكن لخدمات التخزين الكائني نفسها المذكورة أعلاه للنسخ الاحتياطي (Backblaze B2 وCloudflare R2 وWasabi) أن تولّد كل منها "رابط URL موقّعًا مسبقًا" — رابط يمنح وصولًا مؤقتًا لملف واحد محدد وينتهي تلقائيًا بعد مدة زمنية محددة، دون جعل حاوية التخزين بأكملها عامة. عند مشاركة ملفات مع دعم مزود استضافة أو قاعدة بيانات لتشخيص مشكلة ما، لا تضع أبدًا كلمة مرور قاعدة بيانات أو مفتاح واجهة برمجية داخل الملف نفسه — بل غيّر تلك البيانات بمجرد أن يصبح الملف غير ضروري، لأن تذكرة الدعم أو الرابط المشترك قد يبقى بعد انتهاء الحاجة إليه من قِبل المستلم المقصود. لمشاركة الملفات الكبيرة بشكل متكرر، مثل الفيديو أو مجموعات البيانات، يتجنب تسعير Cloudflare R2 الخالي من رسوم النقل الخارجي الفاتورة المفاجئة التي قد تسببها رسوم النقل الخارجي لكل جيجابايت بعد تنزيل رابط مشترك عدة مرات.',
+          'إرسال ملف كمرفق بريد إلكتروني طريقة غير مناسبة لمشاركة البيانات بدءًا من بضعة ميجابايت — إذ تحدّ معظم صناديق البريد المرفقات إلى نحو 20-25 ميجابايت، ويبقى الملف بعدها غير مشفّر في عدة صناديق بريد إلى أجل غير مسمى. البديل الافتراضي الأفضل هو رابط مؤقت ينتهي صلاحيته: يمكن لخدمات التخزين الكائني نفسها المذكورة أعلاه للنسخ الاحتياطي (Backblaze B2 وCloudflare R2 وWasabi) أن تولّد كل منها "رابط URL موقّعًا مسبقًا" — رابط يمنح وصولًا مؤقتًا لملف واحد محدد وينتهي تلقائيًا بعد مدة زمنية محددة، دون جعل حاوية التخزين بأكملها عامة. عند مشاركة ملفات مع دعم مزود استضافة أو قاعدة بيانات لتشخيص مشكلة ما، لا تضع أبدًا كلمة مرور قاعدة بيانات أو مفتاح واجهة برمجية داخل الملف نفسه — بل غيّر تلك البيانات بمجرد أن يصبح الملف غير ضروري، لأن تذكرة الدعم أو الرابط المشترك قد يبقى بعد انتهاء الحاجة إليه من قِبل المستلم المقصود. لمشاركة الملفات الكبيرة بشكل متكرر، مثل الفيديو أو مجموعات البيانات، يتجنب تسعير Cloudflare R2 الخالي من رسوم النقل الخارجي الفاتورة المفاجئة التي قد تسببها رسوم النقل الخارجي لكل جيجابايت بعد تنزيل رابط مشترك عدة مرات.',
       },
       dataProtection: {
         id: 'data-protection',
         title: 'حماية البيانات: PDPL السعودي وقانون الإمارات',
         content:
-          'ينظّم نظام حماية البيانات الشخصية (PDPL) في السعودية والمرسوم بقانون اتحادي رقم 45 لسنة 2021 بشأن حماية البيانات الشخصية في الإمارات كيفية جمع البيانات الشخصية للأفراد في كل دولة وتخزينها ونقلها، ويتضمن كلاهما أحكامًا تقيّد أو تشترط نقل البيانات عبر الحدود. لا يُعد Hostinger ولا ArabHosters مزودًا سعوديًا أو إماراتيًا محليًا معتمدًا بموجب PDPL أو القانون الإماراتي بالطريقة التي يكون بها مزود مركز بيانات محلي سعودي أو إماراتي — تحقق من شروط الإقامة ونقل البيانات الخاصة بأي مزود قبل استضافة بيانات شخصية منظّمة. تستثمر منطقة الخليج الأوسع بنشاط في السحابة السيادية والبنية التحتية ذات الأولوية العربية، وهو اتجاه مدفوع جزئيًا بقوانين حماية البيانات هذه؛ هذا التحول مستمر وليس مكتملًا، لذا تحقق من وضع الامتثال الحالي لأي مزود مباشرة بدلًا من افتراضه.',
+          'ينظّم نظام حماية البيانات الشخصية (PDPL) في السعودية والمرسوم بقانون اتحادي رقم 45 لسنة 2021 بشأن حماية البيانات الشخصية في الإمارات كيفية جمع البيانات الشخصية للأفراد في كل دولة وتخزينها ونقلها، ويتضمن كلاهما أحكامًا تقيّد أو تشترط نقل البيانات عبر الحدود. لم نتحقق مما إذا كان Hostinger أو ArabHosters يقدم استضافة في مراكز بيانات داخل السعودية أو الإمارات — تحقق من شروط الإقامة ونقل البيانات الخاصة بأي مزود قبل استضافة بيانات شخصية منظّمة. هذا المحتوى ليس استشارة قانونية؛ راجع مستشارًا قانونيًا مختصًا لحالتك.',
       },
       verdict: {
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'يناسب [Hostinger](https://www.hostinger.com/) القارئ الذي يريد أقل سعر دولاري معلن ولا يمانع الدفع المسبق لمدة 48 شهرًا. يناسب [ArabHosters](https://www.arabhosters.com/) القارئ الذي يفضّل مزودًا عربيًا شاملًا مقره مصر ، مع تقبّل أن التسعير لا يزال بالدولار الأمريكي وليس بالعملة المحلية. يبقى GoDaddy وNamecheap خيارين عالميين معقولين تجدر مقارنتهما مباشرة على موقعيهما — إذ لا يمكن لهذا الدليل تأكيد أسعارهما أو حضورهما في منطقة الشرق الأوسط وشمال أفريقيا.',
+          'يناسب [Hostinger](https://www.hostinger.com/) القارئ الذي يريد أقل سعر دولاري معلن ولا يمانع الدفع المسبق لمدة 48 شهرًا. يناسب [ArabHosters](https://www.arabhosters.com/) القارئ الذي يفضّل مزودًا عربيًا شاملًا مقره مصر، مع تقبّل أن التسعير لا يزال بالدولار الأمريكي وليس بالعملة المحلية. يبقى GoDaddy وNamecheap خيارين عالميين تجدر مقارنتهما مباشرة على موقعيهما — إذ لم يعد هذا الدليل تسعيرهما.',
       },
       faq: {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
           {
-            q: 'هل Hostinger متاح فعليًا في الخليج العربي ومنطقة الشرق الأوسط وشمال أفريقيا؟',
-            a: 'نعم. Hostinger مؤكد نشاطه في أكثر من 12 دولة في منطقة الشرق الأوسط وشمال أفريقيا. سعره التمهيدي 2.49 دولار شهريًا يتطلب دفعًا مسبقًا لمدة 48 شهرًا (119.52 دولار مقدمًا) ويتجدد بسعر 10.99 دولار شهريًا — بزيادة تقارب 4.4 أضعاف — لذا خطط لسعر التجديد وليس السعر المعلن.',
+            q: 'هل يمكن الوصول إلى Hostinger من الخليج العربي؟',
+            a: 'نعم، الصفحة العالمية لـHostinger متاحة للقراء في المنطقة. سعره التمهيدي 2.49 دولار شهريًا يتطلب دفعًا مسبقًا لمدة 48 شهرًا (119.52 دولار مقدمًا) ويتجدد بسعر 10.99 دولار شهريًا — بزيادة تقارب 4.4 أضعاف — لذا خطط لسعر التجديد وليس السعر المعلن.',
           },
           {
             q: 'هل يسعّر ArabHosters بالريال السعودي أو الدرهم الإماراتي؟',
@@ -1734,7 +1734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'لماذا لا تُذكر أسعار GoDaddy وNamecheap في هذا الدليل؟',
-            a: 'لأن هذا الدليل لم يُعِد تسعيرهما في هذه الجولة، ولم يُؤكد حضور خاص بهما في منطقة الشرق الأوسط وشمال أفريقيا. تم إدراجهما للاطلاع كمزودين عالميين معروفين، وليس كتوصيات مسعّرة.',
+            a: 'لأن هذا الدليل لم يُعِد تسعيرهما في هذه الجولة. تم إدراجهما للاطلاع كمزودين عالميين معروفين، وليس كتوصيات مسعّرة.',
           },
           {
             q: 'هل يشترط نظام PDPL السعودي أو القانون الإماراتي استضافة البيانات محليًا؟',
@@ -1750,7 +1750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كم تكلف النسخة الاحتياطية خارج الموقع فعليًا؟',
-            a: 'يكلف التخزين الكائني من Backblaze B2 (6.95 دولار لكل تيرابايت شهريًا) أو Cloudflare R2 (نحو 15 دولارًا لكل تيرابايت شهريًا، دون رسوم نقل خارجي) أو Wasabi (7.99 دولار لكل تيرابايت شهريًا ثابتة) — جميعها تم التحقق منها مباشرة بتاريخ 2026-11-03 — أقل بكثير من دولار واحد شهريًا لتخزين نسخة احتياطية كاملة لموقع صغير نموذجي، وهو أقل بكثير من تكلفة فقدان النسخة الوحيدة عند انقطاع خدمة المزود.',
+            a: 'يكلف التخزين الكائني من Backblaze B2 (6.95 دولار لكل تيرابايت شهريًا) أو Cloudflare R2 (نحو 15 دولارًا لكل تيرابايت شهريًا، دون رسوم نقل خارجي) أو Wasabi (7.99 دولار لكل تيرابايت شهريًا ثابتة) — جميعها قُرئت من صفحة كل مزود بتاريخ 2026-09-03 — أقل بكثير من دولار واحد شهريًا لتخزين نسخة احتياطية كاملة لموقع صغير نموذجي، وهو أقل بكثير من تكلفة فقدان النسخة الوحيدة عند انقطاع خدمة المزود.',
           },
           {
             q: 'ما أأمن طريقة لمشاركة ملف كبير أو مجموعة بيانات؟',
@@ -1762,16 +1762,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         items: [
-          '[أسعار Hostinger](https://www.hostinger.com/) — تم التحقق مباشرة على الصفحة العالمية لـHostinger (خطة Premium) بتاريخ 2026-11-03. السعر التمهيدي 2.49 دولار شهريًا يتطلب دفعًا مسبقًا لمدة 48 شهرًا؛ ويتجدد بسعر 10.99 دولار شهريًا.',
-          '[أسعار ArabHosters](https://www.arabhosters.com/) — تم التحقق مباشرة على ArabHosters بتاريخ 2026-11-03. خطة Personal بسعر 37.80 دولار سنويًا، مسعّرة بالدولار الأمريكي.',
-          'GoDaddy وNamecheap — لم تتم إعادة تسعيرهما ولم يُؤكد حضورهما في منطقة الشرق الأوسط وشمال أفريقيا هذه المرة؛ مذكوران للاطلاع فقط.',
+          '[أسعار Hostinger](https://www.hostinger.com/) — قُرئت من الصفحة العالمية لـHostinger (خطة Premium) بتاريخ 2026-11-03. السعر التمهيدي 2.49 دولار شهريًا يتطلب دفعًا مسبقًا لمدة 48 شهرًا؛ ويتجدد بسعر 10.99 دولار شهريًا.',
+          '[أسعار ArabHosters](https://www.arabhosters.com/) — تم التحقق مباشرة على ArabHosters بتاريخ 2026-08-30. خطة Personal بسعر 37.80 دولار سنويًا، مسعّرة بالدولار الأمريكي.',
+          'GoDaddy وNamecheap — لم تتم إعادة تسعيرهما هذه المرة؛ مذكوران للاطلاع فقط.',
           'نظام حماية البيانات الشخصية السعودي (PDPL) — مصدر إطار حماية البيانات السعودي المذكور أعلاه؛ تحقق من النص الحالي عبر المصادر الحكومية السعودية الرسمية.',
           'المرسوم بقانون اتحادي رقم 45 لسنة 2021 بشأن حماية البيانات الشخصية (الإمارات) — مصدر إطار حماية البيانات الإماراتي المذكور أعلاه؛ تحقق من النص الحالي عبر المصادر الحكومية الإماراتية الرسمية.',
-          '[أسعار Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — تم التحقق منه مباشرة بتاريخ 2026-11-03: 6.95 دولار لكل تيرابايت شهريًا، أول 10 جيجابايت مجانًا، نقل خارجي مجاني حتى 3 أضعاف البيانات المخزنة.',
-          '[أسعار Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — تم التحقق منه مباشرة بتاريخ 2026-11-03: 0.015 دولار لكل جيجابايت شهريًا للتخزين القياسي، دون رسوم نقل خارجي، مستوى مجاني بسعة 10 جيجابايت.',
-          '[أسعار Wasabi](https://wasabi.com/pricing/) — تم التحقق منه مباشرة بتاريخ 2026-11-03: 7.99 دولار لكل تيرابايت شهريًا ثابتة، دون رسوم نقل خارجي أو واجهة برمجية منفصلة.',
-          '[أسعار Neon](https://neon.com/pricing) — تم التحقق منه مباشرة بتاريخ 2026-11-03: مستوى مجاني 100 ساعة حوسبة/مشروع/شهريًا، 1 جيجابايت تخزين/مشروع، 5 جيجابايت نقل خارجي؛ الحوسبة المدفوعة تبدأ من 0.106 دولار لكل ساعة.',
-          '[أسعار Supabase](https://supabase.com/pricing) — تم التحقق منه مباشرة بتاريخ 2026-11-03: مستوى مجاني 500 ميجابايت قاعدة بيانات، 1 جيجابايت تخزين، 50,000 مستخدم نشط شهريًا؛ خطة Pro بسعر 25 دولار شهريًا.',
+          '[أسعار Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — تمت قراءته من صفحة المزود بتاريخ 2026-09-03: 6.95 دولار لكل تيرابايت شهريًا، أول 10 جيجابايت مجانًا، نقل خارجي مجاني حتى 3 أضعاف البيانات المخزنة.',
+          '[أسعار Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — تمت قراءته من صفحة المزود بتاريخ 2026-09-03: 0.015 دولار لكل جيجابايت شهريًا للتخزين القياسي، دون رسوم نقل خارجي، مستوى مجاني بسعة 10 جيجابايت.',
+          '[أسعار Wasabi](https://wasabi.com/pricing/) — تمت قراءته من صفحة المزود بتاريخ 2026-09-03: 7.99 دولار لكل تيرابايت شهريًا ثابتة، دون رسوم نقل خارجي أو واجهة برمجية منفصلة.',
+          '[أسعار Neon](https://neon.com/pricing) — تمت قراءته من صفحة المزود بتاريخ 2026-09-03: مستوى مجاني 100 ساعة حوسبة/مشروع/شهريًا، 0.5 جيجابايت تخزين/مشروع، 5 جيجابايت نقل خارجي؛ الحوسبة المدفوعة تبدأ من 0.106 دولار لكل ساعة.',
+          '[أسعار Supabase](https://supabase.com/pricing) — تمت قراءته من صفحة المزود بتاريخ 2026-09-03: مستوى مجاني 500 ميجابايت قاعدة بيانات، 1 جيجابايت تخزين، 50,000 مستخدم نشط شهريًا؛ خطة Pro بسعر 25 دولار شهريًا.',
         ],
       },
       relatedReading: {
@@ -1791,14 +1791,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
-    title: '2026年 日本国内 おすすめレンタルサーバー比較',
+    title: '2026年 日本国内 レンタルサーバー料金比較',
     seoTitle: '2026年 エックスサーバー ロリポップ 比較：料金',
     intro:
-      '2026年時点で価格を確認できた日本国内のレンタルサーバーは、[Xserver](https://www.xserver.ne.jp/)と[ロリポップ！](https://lolipop.jp/)の2社です。どちらも表示価格だけを見て判断すると誤解を招きます。Xserverのキャンペーン価格は契約期間によって変わり、ロリポップ！の最安プランはそもそもWordPressを動かせません。本記事では価格を比較する前に、各プランで「できること・できないこと」を先に示します。以下のXserverとロリポップ！の価格は2026年11月3日に各社の公式サイトで直接確認したものです。',
+      '2026年時点で価格を確認できる日本国内のレンタルサーバーは、[Xserver](https://www.xserver.ne.jp/)と[ロリポップ！](https://lolipop.jp/)の2社です。どちらも表示価格だけを見て判断すると誤解を招きます。Xserverのキャンペーン価格は契約期間によって変わり、ロリポップ！の最安「エコノミー」プランは、公式プラン比較ページ（2026年11月3日確認）で「シンプルなHTMLサイト向け」とされ、MySQLやWordPress対応の記載がありません。本記事では価格を比較する前に、各プランで「できること・できないこと」を先に示します。価格は2026年11月2日に各社の公式サイトで確認したものです。',
     metaDescription:
-      'エックスサーバー（Xserver）とロリポップ！を2026年11月3日の公式価格で比較。Xserverは月額693円、ロリポップ！は月額121円から。契約期間とWordPress対応の違い、APPI対応を解説。',
+      'エックスサーバー（Xserver）とロリポップ！を2026年11月2日の公式価格で比較。Xserverは月額693円、ロリポップ！は月額121円から。契約期間とWordPress対応の違い、APPI対応を解説。',
     twitterDescription:
-      'Xserver vs ロリポップ！ — ロリポップ！の最安プランはWordPressを動かせないため、本記事では価格より先にプランの機能を比較します。2026年11月に各社公式サイトで確認した最新価格。',
+      'Xserver vs ロリポップ！ — ロリポップ！の最安プランにはWordPress対応の記載がないため、本記事では価格より先にプランの機能を比較します。2026年11月に各社公式サイトで確認した最新価格。',
     affiliateDisclosure: true,
     audience:
       '日本国内向けウェブサイトのレンタルサーバーを選ぶ読者向け。2026年の確認済み価格、契約期間による料金差、どのプランが実際にWordPressに対応しているかを比較する。レンタルサーバーの利用経験は前提としない。',
@@ -1813,7 +1813,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'xserver キャンペーン価格 2026',
     ],
     leadAnswerBlock:
-      '**Xserver（キャンペーン価格 月額693円、最大30%オフ。36ヶ月契約時の通常料金は月額990円）がWordPressに対応できるプランです。ロリポップ！の目玉である月額121円のエコノミープランはPHPとデータベースに対応しておらず、WordPressを動かせません — ほとんどの読者はロリポップ！の上位プランかXserverを選ぶ必要があります。Xserverの現行キャンペーンは2026年11月4日まで実施されます。**',
+      '**Xserver（キャンペーン価格 月額693円、最大30%オフ。36ヶ月契約時の通常料金は月額990円）はWordPressに対応しています。ロリポップ！の月額121円のエコノミープランは、公式プラン比較ページ（2026年11月3日確認）で「シンプルなHTMLサイト向け」とされ、MySQLやWordPress対応の記載がありません — WordPressを使う場合は上位プランかXserverを比較してください。**',
     toc: [
       { label: '要点まとめ', anchor: '#key-takeaways' },
       { label: '日本国内のホスティング事業者', anchor: '#japan-providers' },
@@ -1849,9 +1849,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**WordPressに対応できるのはXserver。** キャンペーン価格は月額693円（最大30%オフ）、2026年11月4日17時まで実施。通常料金は36ヶ月契約で月額990円。',
+          '**本記事で価格を確認した2社のうち、公式ページでWordPress対応を確認できたのはXserverです。** キャンペーン価格は月額693円（最大30%オフ）。通常料金は36ヶ月契約で月額990円。ロリポップ！は月額121円のエコノミーにWordPress対応の記載がないため、WordPressを使う場合は上位プランを公式プラン比較ページで確認してください。',
           '**契約期間によって月額料金が変わる。** Xserverの最安月額は最長期間の契約が前提。12ヶ月契約は36ヶ月契約より月額が高くなる。',
-          '**ロリポップ！の月額121円はWordPress非対応。** エコノミープランはPHPとデータベースに非対応のためWordPressを動かせない。最安価格が自分の用途に使えるとは限らないので、プランの仕様を先に確認する。',
+          '**ロリポップ！の月額121円（エコノミー）にはWordPress対応の記載がない。** 公式プラン比較ページ（2026年11月3日確認）では「シンプルなHTMLサイト向け」とされ、MySQL・WordPress対応の記載がない。最安価格が自分の用途に使えるとは限らないので、プランの仕様を先に確認する。',
           '**GMO ConoHa WING、さくらインターネット、mixhostは今回対象外。** 今回の調査では価格の再確認ができていないため、数値は掲載していない。',
           '**サイトの運用にはホスティングプラン以外も必要になる。** 別途のデータベース（Neon、Supabase）、サイト外バックアップ（Backblaze B2、Cloudflare R2、Wasabi）、大容量ファイルを安全に共有する方法は、多くのサイト運営者が遅かれ早かれ直面する課題であり、以下で直接確認した価格とともに解説する。',
         ],
@@ -1860,15 +1860,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'japan-providers',
         title: '日本国内のホスティング事業者',
         content:
-          '[Xserver](https://www.xserver.ne.jp/)と[ロリポップ！](https://lolipop.jp/)はどちらも2026年時点の価格を確認できた日本国内のレンタルサーバーです。Xserverの月額693円は期間限定のキャンペーン価格（最大30%オフ）で、2026年11月4日17時まで実施されます。この期間を過ぎるか、より短い契約期間を選ぶと、36ヶ月契約に紐づく通常料金の月額990円に近づきます — Xserverでは契約期間が短いほど月額が全体的に高くなります。ロリポップ！の月額121円は最安の「エコノミー」プランの価格ですが、このプランはPHPとデータベースに対応していないため、WordPressの利用が完全に不可能です。WordPressが必要な読者は、月額121円の目玉価格ではなく、ロリポップ！の上位プランとXserverを比較してください。ロリポップ！の公式サイトには、エコノミー121円〜、ライト330円〜、スタンダード605円〜、ハイスピード660円〜、エンタープライズ2,420円〜（いずれも月額、2026年11月3日確認、税込・税抜の表記なし）が掲載されています。Xserverは税込で、スタンダード693円、プレミアム1,386円、ビジネス2,772円（36ヶ月契約のキャンペーン価格）で、初期費用0円、10日間の無料お試しがあります。GMO ConoHa WING、さくらインターネット、mixhostも国内でよく利用されるホスティングですが、今回は価格を再確認できていないため、推測での掲載は行っていません。',
+          '[Xserver](https://www.xserver.ne.jp/)と[ロリポップ！](https://lolipop.jp/)はどちらも2026年時点の価格を確認できます。Xserverの月額693円は期間限定のキャンペーン価格（最大30%オフ）で、適用期間は公式ページで確認してください。キャンペーンが終了するか、より短い契約期間を選ぶと、36ヶ月契約に紐づく通常料金の月額990円に近づきます — Xserverでは契約期間が短いほど月額が全体的に高くなります。ロリポップ！の月額121円は最安の「エコノミー」プランの価格ですが、公式プラン比較ページ（2026年11月3日確認）ではこのプランは「シンプルなHTMLサイト向け」とされ、MySQLやWordPress対応の記載がありません。WordPressが必要な読者は、月額121円の目玉価格ではなく、ロリポップ！の上位プランとXserverを比較してください。ロリポップ！の公式サイトには、エコノミー121円〜、ライト330円〜、スタンダード605円〜、ハイスピード660円〜、エンタープライズ2,420円〜（いずれも月額、2026年11月2日確認、税込・税抜の表記なし）が掲載されています。Xserverは税込で、スタンダード693円、プレミアム1,386円、ビジネス2,772円（36ヶ月契約のキャンペーン価格）で、初期費用0円、10日間の無料お試しがあります。GMO ConoHa WING、さくらインターネット、mixhostも国内でよく利用されるホスティングですが、今回は価格を再確認できていないため、推測での掲載は行っていません。',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Xserver（キャンペーン月額693円、36ヶ月契約の通常価格は月額990円）はWordPressに対応しているが、ロリポップ！の最安である月額121円のエコノミープランはPHP・データベース非対応でWordPressを一切動かせない。',
+            text: 'Xserver（キャンペーン月額693円、36ヶ月契約の通常価格は月額990円）はWordPressに対応しているが、ロリポップ！の最安である月額121円のエコノミープランにはMySQL・WordPress対応の記載がない。',
           },
           {
             type: 'plain-terms',
-            text: 'ページ上の最安値が、必ずしも自分の目的に使えるとは限りません。ロリポップ！の最安プランは、実用的なウェブサイト基盤というより、単純なファイル保管に近いものです。価格だけでなく、そのプランで何ができるかを先に確認しましょう。',
+            text: 'ページ上の最安値が、必ずしも自分の目的に使えるとは限りません。ロリポップ！の最安プランは、公式ページ上では「シンプルなHTMLサイト向け」とされています。価格だけでなく、そのプランで何ができるかを先に確認しましょう。',
           },
         ],
         columns: ['事業者', '価格', 'WordPress'],
@@ -1881,13 +1881,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '事業者': '[ロリポップ！](https://lolipop.jp/)',
             '価格': '121円/月（エコノミー）',
-            'WordPress': '非対応（エコノミー）',
+            'WordPress': '記載なし（エコノミー）',
           },
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'ロリポップ！の月額121円「エコノミー」プランはPHPとデータベースに対応していないため、WordPressは動かせません。WordPressが必要な場合は、エコノミー価格ではなく上位プランとXserverを比較してください。',
+            text: 'ロリポップ！の月額121円「エコノミー」プランは、公式プラン比較ページ（2026年11月3日確認）で「シンプルなHTMLサイト向け」とされ、MySQL・WordPress対応の記載がありません。WordPressが必要な場合は、エコノミー価格ではなく上位プランとXserverを比較してください。',
           },
         ],
         affiliateLinks: [
@@ -1923,7 +1923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'database-hosting',
         title: 'データベースを別途ホスティングする',
         content:
-          'XserverやロリポップのようなプランではMySQLデータベースが1つ、アカウント全体と同じディスク容量の中に含まれています — ブログや小規模なCMSには十分ですが、独自のユーザーテーブルや分析イベント、AI機能に必要なベクトル／embeddingストレージを持つアプリケーションには不十分です。そのためには、ウェブホスティングとは別の製品であるマネージドデータベースが必要です。**[Neon](https://neon.com/pricing)** はサーバーレスPostgres上で動作し、無料枠（プロジェクトあたり月100計算時間、プロジェクトあたり1GBストレージ（全プロジェクト合計20GBまで）、5GBの送信量、2026-11-03にneon.comで直接確認）を提供しており、アイドル時はコストゼロまで自動的に一時停止し、無料枠を超えると使用量に応じて計算（1計算時間あたり0.106ドルから）とストレージ（1GBあたり月0.35ドル）が課金され、月額最低料金はありません。**[Supabase](https://supabase.com/pricing)** も同様の無料枠（データベース500MB、ファイルストレージ1GB、月間アクティブユーザー50,000人、送信量5GB、最大2プロジェクトまで、2026-11-03にsupabase.comで直接確認）を提供していますが、無料プロジェクトは7日間操作がないと一時停止し、自動バックアップもありません — Proプラン（月25ドル）で両方の制限が解除されます。共有ホスティングに含まれる単一のMySQLインスタンス以上のものがサイトに必要になった時点で、別途マネージドデータベースへの移行を検討する価値があります — ウェブホスティングの代替ではなく、その補完としてです。',
+          'XserverやロリポップのようなプランではMySQLデータベースが1つ、アカウント全体と同じディスク容量の中に含まれています — ブログや小規模なCMSには十分ですが、独自のユーザーテーブルや分析イベント、AI機能に必要なベクトル／embeddingストレージを持つアプリケーションには不十分です。そのためには、ウェブホスティングとは別の製品であるマネージドデータベースが必要です。**[Neon](https://neon.com/pricing)** はサーバーレスPostgres上で動作し、無料枠（プロジェクトあたり月100計算時間、プロジェクトあたり1GBストレージ、5GBの送信量、2026-11-03時点のneon.comの記載）を提供しており、アイドル時はコストゼロまで自動的に一時停止し、無料枠を超えると使用量に応じて計算（1計算時間あたり0.106ドルから）とストレージ（1GBあたり月0.35ドル）が課金され、月額最低料金はありません。**[Supabase](https://supabase.com/pricing)** も同様の無料枠（データベース500MB、ファイルストレージ1GB、月間アクティブユーザー50,000人、送信量5GB、最大2プロジェクトまで、2026-09-03時点のsupabase.comの記載）を提供していますが、無料プロジェクトは7日間操作がないと一時停止し、自動バックアップもありません — Proプラン（月25ドル）で両方の制限が解除されます。共有ホスティングに含まれる単一のMySQLインスタンス以上のものがサイトに必要になった時点で、別途マネージドデータベースへの移行を検討する価値があります — ウェブホスティングの代替ではなく、その補完としてです。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1939,7 +1939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'backups',
         title: 'サイトとデータのバックアップ',
         content:
-          '標準的なルールは3-2-1方式です：データのコピーを3つ持ち、2種類の異なるストレージに保存し、そのうち1つはサイト外に置きます。サイトと同じサーバー上にしかないバックアップはカウントされません。プロバイダー側の障害やアカウントの問題が起きれば、サイトとバックアップが同時に失われるためです。本記事のプランを含め、ほとんどの共有ホスティングプランには自動バックアップ機能が含まれていますが、唯一のコピーとして頼る前に、保存期間（何日前まで復元できるか）と、復元がセルフサービスかサポートへの問い合わせが必要かを確認してください。サイト外のコピーには、ギガバイト単位で課金されるオブジェクトストレージが標準的な選択肢です：**[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** は1TBあたり月6.95ドル、最初の10GBは無料、平均保存データ量の3倍まで送信（egress）無料で、2026-11-03に直接確認済み。**[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** は1GBあたり月0.015ドル（1TBあたり約15ドル）ですが、送信量に一切課金がなく、10GBまでの無料枠があり、2026-11-03に直接確認済み。**[Wasabi](https://wasabi.com/pricing/)** は1TBあたり月7.99ドルの固定料金で、送信量やAPIリクエストの個別課金はなく、2026-11-03に直接確認済み。小規模サイトであれば、これら3社のいずれでもサイト外の完全なバックアップを月1ドル未満で維持できます。',
+          '標準的なルールは3-2-1方式です：データのコピーを3つ持ち、2種類の異なるストレージに保存し、そのうち1つはサイト外に置きます。サイトと同じサーバー上にしかないバックアップはカウントされません。プロバイダー側の障害やアカウントの問題が起きれば、サイトとバックアップが同時に失われるためです。本記事のプランを含め、ほとんどの共有ホスティングプランには自動バックアップ機能が含まれていますが、唯一のコピーとして頼る前に、保存期間（何日前まで復元できるか）と、復元がセルフサービスかサポートへの問い合わせが必要かを確認してください。サイト外のコピーには、ギガバイト単位で課金されるオブジェクトストレージが標準的な選択肢です：**[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** は1TBあたり月6.95ドル、最初の10GBは無料、平均保存データ量の3倍まで送信（egress）無料で、2026-09-03時点の各社公式ページの記載。**[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** は1GBあたり月0.015ドル（1TBあたり約15ドル）ですが、送信量に一切課金がなく、10GBまでの無料枠があり、2026-09-03時点の各社公式ページの記載。**[Wasabi](https://wasabi.com/pricing/)** は1TBあたり月7.99ドルの固定料金で、送信量やAPIリクエストの個別課金はなく、2026-09-03時点の各社公式ページの記載。小規模サイトであれば、これら3社のいずれでもサイト外の完全なバックアップを月1ドル未満で維持できます。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1955,43 +1955,43 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'data-sharing',
         title: 'データを安全に共有・転送する',
         content:
-          '数メガバイトを超えるデータをメールに添付して共有するのは、最も安全性と信頼性に欠ける方法です — ほとんどのメールボックスは添付ファイルを20〜25MB程度に制限しており、ファイルはその後、暗号化されないまま複数のメールボックスに無期限に残ります。より良い標準的な方法は、期限付きで自動的に失効するリンクです：バックアップの項で紹介した同じオブジェクトストレージサービス（Backblaze B2、Cloudflare R2、Wasabi）は、それぞれ「署名付きURL」を生成できます — 特定の1ファイルへの一時的なアクセスを許可し、設定した時間が経過すると自動的に失効するリンクで、ストレージバケット全体を公開する必要はありません。問題の診断のためにホスティングやデータベースプロバイダーのサポートとファイルを共有する際は、データベースのパスワードやAPIキーをファイル自体に含めないでください — サポートチケットや共有リンクは想定した受信者よりも長く残る可能性があるため、ファイルが不要になった時点でその認証情報をローテーションしてください。動画やデータセットなど、大容量ファイルを繰り返し共有する場合は、Cloudflare R2の送信量無課金の価格設定が、共有リンクが何度もダウンロードされた際にギガバイト単位の送信課金が引き起こす予想外の請求を回避できます。',
+          '数メガバイトを超えるデータをメールに添付して共有するのは、適した方法ではありません — ほとんどのメールボックスは添付ファイルを20〜25MB程度に制限しており、ファイルはその後、暗号化されないまま複数のメールボックスに無期限に残ります。より良い標準的な方法は、期限付きで自動的に失効するリンクです：バックアップの項で紹介した同じオブジェクトストレージサービス（Backblaze B2、Cloudflare R2、Wasabi）は、それぞれ「署名付きURL」を生成できます — 特定の1ファイルへの一時的なアクセスを許可し、設定した時間が経過すると自動的に失効するリンクで、ストレージバケット全体を公開する必要はありません。問題の診断のためにホスティングやデータベースプロバイダーのサポートとファイルを共有する際は、データベースのパスワードやAPIキーをファイル自体に含めないでください — サポートチケットや共有リンクは想定した受信者よりも長く残る可能性があるため、ファイルが不要になった時点でその認証情報をローテーションしてください。動画やデータセットなど、大容量ファイルを繰り返し共有する場合は、Cloudflare R2の送信量無課金の価格設定が、共有リンクが何度もダウンロードされた際にギガバイト単位の送信課金が引き起こす予想外の請求を回避できます。',
       },
       dataSovereignty: {
         id: 'data-sovereignty',
         title: 'APPI（個人情報保護法）対応',
         content:
-          '日本の個人情報保護の枠組みはAPPI（個人情報の保護に関する法律）であり、企業のAI・データガバナンスについては経済産業省（METI）のガイダンスが補足しています。国内ホスティングを選ぶと、個人情報が国境を越える際にAPPIが求める追加の同意・開示の手続きを避けられるため、越境移転に関する制約への対応が簡単になります。ただし、これはすべてのサイトに国内ホスティングを義務付ける法的な必須事項ではなく、あくまで対応を簡素化するものです。日本国内のユーザーの個人情報を扱っており、国内ホスティングと海外ホスティングのどちらにするか検討している場合は、国内ホスティングが自動的に必須であると決めつけず、経済産業省の企業向けAI・データガバナンスのガイダンスで自社に該当する内容を確認してください。',
+          '日本の個人情報保護の枠組みはAPPI（個人情報の保護に関する法律）であり、この法律を所管する[個人情報保護委員会（PPC）](https://www.ppc.go.jp/personalinfo/)が、法令とガイドラインを公表しています。国内ホスティングを選ぶと、個人情報が国境を越える際にAPPIが求める追加の同意・開示の手続きを避けやすくなる場合があり、越境移転に関する制約への対応が簡単になることがあります。ただし、これはすべてのサイトに国内ホスティングを義務付ける法的な必須事項ではなく、あくまで対応を簡素化するものです。日本国内のユーザーの個人情報を扱っており、国内ホスティングと海外ホスティングのどちらにするか検討している場合は、国内ホスティングが自動的に必須であると決めつけず、個人情報保護委員会の公式ガイドラインで自社に該当する内容を確認してください。本記事は法的助言ではありません。',
       },
       verdict: {
         id: 'verdict',
         title: '結論',
         content:
-          'WordPressやデータベース対応が必要な汎用サイトを運用するなら[Xserver](https://www.xserver.ne.jp/)を選び、長期契約にコミットできるなら2026年11月4日までのキャンペーン価格のうちに契約するとよいでしょう。[ロリポップ！](https://lolipop.jp/)を選ぶ場合は、PHPやデータベースが必要ならエコノミーより上位のプランを選んでください — 月額121円の目玉価格は静的サイトやごく簡易なサイト向けで、WordPressには使えません。',
+          'WordPressやデータベース対応が必要な汎用サイトを運用するなら[Xserver](https://www.xserver.ne.jp/)を選び、長期契約にコミットできるなら、公式ページでキャンペーン価格の適用状況を確認してから契約を検討してください。[ロリポップ！](https://lolipop.jp/)を選ぶ場合は、WordPressやデータベースが必要ならエコノミーより上位のプランを選んでください — 月額121円のエコノミーは公式ページ上「シンプルなHTMLサイト向け」で、WordPress対応の記載がありません。',
       },
       faq: {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
           {
-            q: '2026年、日本国内で一番おすすめのレンタルサーバーは？',
-            a: 'WordPressに対応できるのはXserverです。現行キャンペーン価格は月額693円（最大30%オフ、2026年11月4日まで実施）、36ヶ月契約の通常価格は月額990円です。ロリポップ！は月額121円のエコノミープランでより安価ですが、このプランはWordPressを動かせません。',
+            q: '2026年、本記事で価格を確認した日本国内のレンタルサーバーのうち、WordPressに使えるのは？',
+            a: '本記事で価格を確認した2社のうち、公式ページでWordPress対応を確認できたのはXserverです（36ヶ月契約の通常価格は月額990円）。ロリポップ！の月額121円「エコノミー」にはWordPress対応の記載がありません。上位プランは公式プラン比較ページで確認してください。',
           },
           {
             q: 'エックスサーバーとロリポップ！はどっちがいいですか？',
-            a: 'WordPressやデータベースを使う一般的なサイトならXserver（エックスサーバー）が向いています。36ヶ月契約のスタンダードは通常月額990円、現行キャンペーンで月額693円（税込、2026年11月4日17時まで）、初期費用は0円です。ロリポップ！は月額121円（エコノミー）から選べますが、エコノミーはPHPとデータベースに対応しておらずWordPressを動かせないため、必要なら上位プランと比較してください。',
+            a: 'WordPressやデータベースを使う一般的なサイトならXserver（エックスサーバー）が向いています。36ヶ月契約のスタンダードは通常月額990円、現行キャンペーンで月額693円（税込）、初期費用は0円です。ロリポップ！は月額121円（エコノミー）から選べますが、エコノミーは公式ページ上「シンプルなHTMLサイト向け」でWordPress対応の記載がないため、必要なら上位プランと比較してください。',
           },
           {
             q: 'ロリポップ！の最安プランでWordPressを動かせますか？',
-            a: 'いいえ。ロリポップ！の月額121円「エコノミー」プランはPHPとデータベースに対応していません。WordPressの動作にはどちらも必須です。WordPressが必要な読者は、ロリポップ！の上位プランを選ぶか、Xserverを利用してください。',
+            a: '公式プラン比較ページ（2026年11月3日確認）では、ロリポップ！の月額121円「エコノミー」は「シンプルなHTMLサイト向け」とされ、MySQL・WordPress対応の記載がありません。WordPressが必要な場合は、上位プランを選ぶか、Xserverを利用してください。',
           },
           {
             q: 'なぜXserverの価格は契約期間によって変わるのですか？',
             a: 'Xserverのキャンペーン価格（月額693円、最大30%オフ）も通常価格（月額990円）も、いずれも36ヶ月契約が前提です。Xserverでは契約期間が短いほど月額料金が全体的に高くなるため、広告されている低価格は最長期間の契約にコミットすることが条件になります。',
           },
           {
-            q: 'Xserverの現行キャンペーン価格はいつまでですか？',
-            a: '最大30%オフとなる現行キャンペーンは2026年11月4日17時まで実施されます。キャンペーン価格と終了時期は変更されることがあるため、申し込み前にXserver公式の価格ページで最新の価格を確認してください。',
+            q: 'Xserverのキャンペーン価格の適用期間は？',
+            a: 'キャンペーン価格は公式ページで確認してください。キャンペーン価格と実施期間は変更されることがあるため、申し込み前にXserver公式の価格ページで最新の価格を確認してください。',
           },
           {
             q: 'GMO ConoHa WING、さくらインターネット、mixhostは本記事の対象ですか？',
@@ -1999,7 +1999,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '日本国内向けサイトはAPPI上、国内ホスティングが法的に義務付けられていますか？',
-            a: 'いいえ、すべてのサイトに一律で義務付けられているわけではありません。APPI（個人情報の保護に関する法律）は個人情報の越境移転を制限しており、国内ホスティングはその制約への対応を簡素化しますが、すべてのサイトに必須というわけではありません。自社に該当する内容は経済産業省の企業向けAI・データガバナンスのガイダンスで確認してください。',
+            a: 'いいえ、すべてのサイトに一律で義務付けられているわけではありません。APPI（個人情報の保護に関する法律）は個人情報の越境移転を制限しており、国内ホスティングはその制約への対応を簡素化できる場合がありますが、すべてのサイトに必須というわけではありません。自社に該当する内容は[個人情報保護委員会](https://www.ppc.go.jp/personalinfo/)の公式ガイドラインで確認してください。本記事は法的助言ではありません。',
           },
           {
             q: 'ホスティングプランに含まれるデータベースだけで十分ですか、それとも別途必要ですか？',
@@ -2007,7 +2007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'サイト外バックアップの実際の費用はどれくらいですか？',
-            a: 'Backblaze B2（1TBあたり月6.95ドル）、Cloudflare R2（1TBあたり約15ドル、送信量課金なし）、Wasabi（1TBあたり月7.99ドルの固定料金）のオブジェクトストレージは、いずれも2026-11-03に直接確認済みで、一般的な小規模サイトの完全なバックアップを保存するのに月1ドル未満で済みます。プロバイダー障害で唯一のコピーを失うことに比べればはるかに安価です。',
+            a: 'Backblaze B2（1TBあたり月6.95ドル）、Cloudflare R2（1TBあたり約15ドル、送信量課金なし）、Wasabi（1TBあたり月7.99ドルの固定料金）のオブジェクトストレージは、いずれも2026-09-03時点の各社公式ページの記載で、一般的な小規模サイトの完全なバックアップを保存するのに月1ドル未満で済みます。プロバイダー障害で唯一のコピーを失うことに比べればはるかに安価です。',
           },
           {
             q: '大容量ファイルやデータセットを共有する最も安全な方法は何ですか？',
@@ -2019,13 +2019,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '出典',
         items: [
-          '[Xserver](https://www.xserver.ne.jp/) — キャンペーン価格・通常価格、契約期間の条件を2026-11-03にXserver公式サイトで直接確認（スタンダード990円、プレミアム1,980円、ビジネス3,960円。いずれも36ヶ月契約の通常価格、税込。キャンペーン価格はそれぞれ693円、1,386円、2,772円。キャンペーンは2026-11-04 17時まで）。',
-          '[ロリポップ！](https://lolipop.jp/) — プラン別の月額価格（エコノミー121円〜、ライト330円〜、スタンダード605円〜、ハイスピード660円〜、エンタープライズ2,420円〜）を2026-11-03にロリポップ！公式サイトで直接確認。税込・税抜の表記はなし。公式のプラン一覧では、エコノミーは「シンプルなHTMLサイト向け」とされ、MySQLとWordPressは上位4プランにのみ記載されています。PHPへの言及はどのプランにもありません。',
-          '[Backblaze B2の価格](https://www.backblaze.com/cloud-storage/pricing) — 2026-11-03に直接確認：1TBあたり月6.95ドル、最初の10GBは無料、保存データ量の3倍まで送信無料。',
-          '[Cloudflare R2の価格](https://developers.cloudflare.com/r2/pricing/) — 2026-11-03に直接確認：標準ストレージ1GBあたり月0.015ドル、送信課金なし、10GBの無料枠。',
-          '[Wasabiの価格](https://wasabi.com/pricing/) — 2026-11-03に直接確認：1TBあたり月7.99ドルの固定料金、送信量・APIの個別課金なし。',
-          '[Neonの価格](https://neon.com/pricing) — 2026-11-03に直接確認：無料枠はプロジェクトあたり月100計算時間、プロジェクトあたり1GBストレージ（全プロジェクト合計20GBまで）、5GBの送信量。有料の計算は1計算時間あたり0.106ドルから。',
-          '[Supabaseの価格](https://supabase.com/pricing) — 2026-11-03に直接確認：無料枠はデータベース500MB、ストレージ1GB、月間アクティブユーザー50,000人。Proプランは月25ドル。',
+          '[Xserver](https://www.xserver.ne.jp/) — キャンペーン価格・通常価格、契約期間の条件を2026-11-02にXserver公式サイトで確認（スタンダード990円、プレミアム1,980円、ビジネス3,960円。いずれも36ヶ月契約の通常価格、税込。キャンペーン価格はそれぞれ693円、1,386円、2,772円）。',
+          '[ロリポップ！](https://lolipop.jp/) — プラン別の月額価格（エコノミー121円〜、ライト330円〜、スタンダード605円〜、ハイスピード660円〜、エンタープライズ2,420円〜）を2026-11-02にロリポップ！公式サイトで直接確認。税込・税抜の表記はなし。エコノミーは[公式プラン比較ページ](https://lolipop.jp/service/plan/)で「シンプルなHTMLサイト向け」とされ、MySQL・WordPress対応の記載がないことを2026-11-03に確認。',
+          '[個人情報保護委員会（PPC）：個人情報保護法等](https://www.ppc.go.jp/personalinfo/) — APPIの所管機関による法令・ガイドラインのページ。2026-11-03に確認。',
+          '[Backblaze B2の価格](https://www.backblaze.com/cloud-storage/pricing) — 2026-09-03時点の公式ページの記載：1TBあたり月6.95ドル、最初の10GBは無料、保存データ量の3倍まで送信無料。',
+          '[Cloudflare R2の価格](https://developers.cloudflare.com/r2/pricing/) — 2026-09-03時点の公式ページの記載：標準ストレージ1GBあたり月0.015ドル、送信課金なし、10GBの無料枠。',
+          '[Wasabiの価格](https://wasabi.com/pricing/) — 2026-09-03時点の公式ページの記載：1TBあたり月7.99ドルの固定料金、送信量・APIの個別課金なし。',
+          '[Neonの価格](https://neon.com/pricing) — 2026-11-03時点の公式ページの記載：無料枠はプロジェクトあたり月100計算時間、プロジェクトあたり1GBストレージ、5GBの送信量。有料の計算は1計算時間あたり0.106ドルから。',
+          '[Supabaseの価格](https://supabase.com/pricing) — 2026-09-03時点の公式ページの記載：無料枠はデータベース500MB、ストレージ1GB、月間アクティブユーザー50,000人。Proプランは月25ドル。',
         ],
       },
       relatedReading: {
@@ -2045,14 +2046,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
-    title: '2026年面向全球华语读者的最佳网站主机',
-    seoTitle: '2026年最佳网站主机推荐：阿里云、腾讯云与Hostinger',
+    title: '2026年面向全球华语读者的网站主机价格与续费对比',
+    seoTitle: '2026年网站主机价格对比：阿里云、腾讯云与Hostinger',
     intro:
-      '本指南面向全球华语读者，而不仅仅是中国大陆境内的读者——这两类读者面对的服务商和合规规则并不相同，下文会分开讨论。[阿里云](https://www.alibabacloud.com/)和[腾讯云](https://www.tencentcloud.com/)是面向中国大陆用户的确认价格选择；对于中国大陆以外的读者，[Hostinger](https://www.hostinger.com/) 是全球预算型选择。Hostinger、腾讯云及数据库与存储服务商的价格均于2026年11月3日在官网直接核实；阿里云价格页需要登录或脚本渲染才能读取，沿用2026年8月30日的核实值，限时促销价格尤其需要在下单前再次确认是否仍然有效。',
+      '本指南面向全球华语读者，而不仅仅是中国大陆境内的读者——这两类读者面对的服务商和合规规则并不相同，下文会分开讨论。[阿里云](https://www.alibabacloud.com/)和[腾讯云](https://www.tencentcloud.com/)的价格是面向中国大陆用户的参考价格（2026年8月30日读取自官网）；对于中国大陆以外的读者，[Hostinger](https://www.hostinger.com/)是价格已核实的全球预算型选择（2026年11月3日读取自美国站）。限时促销价格尤其需要在下单前再次确认是否仍然有效。',
     metaDescription:
-      '2026年面向华语读者的最佳网站主机：阿里云（限时促销每年38元）、腾讯云（每月45元）、Hostinger（首月2.49美元）。附确认价格及PIPL、数据安全法合规说明。',
+      '2026年面向华语读者的网站主机价格：阿里云（限时促销每年38元）、腾讯云（每月35元）、Hostinger（需一次预付48个月，每月2.49美元起，续费每月10.99美元）。附PIPL与数据安全法说明。',
     twitterDescription:
-      '阿里云、腾讯云与Hostinger对比——面向大陆用户的合规主机与面向全球华语读者的预算型主机是两个不同的问题，本文分开说明。所有价格均在各服务商官网直接核实。',
+      '阿里云、腾讯云与Hostinger对比——面向大陆用户的主机与面向全球华语读者的预算型主机是两个不同的问题，本文分开说明。价格均读取自各服务商官网。',
     affiliateDisclosure: true,
     audience:
       '面向全球华语读者，无论是为中国大陆用户选择符合PIPL和数据安全法的主机，还是为一般全球受众选择预算型全球主机。不要求具备主机使用经验。',
@@ -2067,17 +2068,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Hostinger vs 阿里云',
     ],
     leadAnswerBlock:
-      '**面向中国大陆用户的主机，阿里云（限时促销每年38元的轻量应用服务器，标准续费约每月45元）和腾讯云（轻量应用服务器每月45元，年付459元约15%折扣）是确认价格的选择。面向全球华语读者的一般受众，Hostinger（首月2.49美元，48个月预付方案，续费每月10.99美元）是全球预算型选择。限时促销价格经常有时间限制——下单前请再次确认是否仍在进行。**',
+      '**面向中国大陆用户的主机，阿里云（限时促销每年38元的轻量应用服务器，标准续费约每月45元）和腾讯云（轻量应用服务器每月35元，12个月预付约有15%折扣）的价格读取自官网（2026年8月30日）。面向全球华语读者的一般受众，Hostinger（预付48个月的每月价2.49美元，续费每月10.99美元，2026年11月3日读取自美国站）是价格已核实的全球预算型选择。限时促销价格经常有时间限制——下单前请再次确认是否仍在进行。**',
     quickAnswerTop: {
       zh: {
-        question: '2026年面向华语读者的最佳网站主机是什么？',
+        question: '2026年面向华语读者的网站主机价格如何？',
         answer:
-          '面向中国大陆用户的主机，阿里云有限时促销价每年38元（约合每月3.2元，库存有限）的2核2GB轻量应用服务器，标准续费约每月45元；腾讯云2核2GB轻量应用服务器标准价为每月45元，年付459元（约15%折扣）。面向中国大陆以外、希望使用全球预算型主机的读者，Hostinger的48个月预付首月价为2.49美元，续费为每月10.99美元。限时促销价格经常变动——下单前请确认实时价格。',
+          '面向中国大陆用户的主机，阿里云有限时促销价每年38元（约合每月3.2元，库存有限）的2核2GB轻量应用服务器，标准续费约每月45元；腾讯云同规格的轻量应用服务器标准价为每月35元，12个月预付约有15%折扣。面向中国大陆以外、希望使用全球预算型主机的读者，Hostinger需一次预付48个月，预付期内每月价为2.49美元，续费为每月10.99美元。限时促销价格经常变动——下单前请确认实时价格。',
         bullets: [
           '阿里云：限时促销每年38元（约每月3.2元），续费约每月45元——需确认是否仍有效',
-          '腾讯云：标准每月45元，年付459元（约15%折扣）',
-          'Hostinger：首月2.49美元（48个月预付），续费每月10.99美元——涨幅明显',
-          '华为云确实存在，但本文未核实其价格，仅作编辑性提及',
+          '腾讯云：标准每月35元，12个月预付约15%折扣',
+          'Hostinger：预付48个月的每月价2.49美元，续费每月10.99美元——涨幅明显',
+          '华为云本轮未核实价格，因此本文不列出其价格',
         ],
         updatedDate: '2026-11',
       },
@@ -2126,9 +2127,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**本指南面向全球华语读者，而非仅限中国大陆居民。** 面向大陆用户的主机和面向全球用户的预算型主机是两个不同的问题，下文分开讨论。',
           '**阿里云：限时促销每年38元**（约每月3.2元，库存有限），2核2GB轻量应用服务器，标准续费约每月45元。限时促销价格经常有时间限制——下单前请确认是否仍在进行。',
-          '**腾讯云：标准每月45元**，2核2GB轻量应用服务器，年付459元（约15%折扣），价格于2026-11-03在腾讯云中国站核实。',
-          '**Hostinger是面向全球读者的预算型选择**，48个月预付首月价2.49美元，续费每月10.99美元——涨幅值得提前预算。',
-          '**华为云确有其事，但未作为推荐列出。** 其价格本轮未获确认，本文仅作编辑性提及。',
+          '**腾讯云：标准每月35元**，同规格轻量应用服务器，12个月预付约有15%折扣（2026年8月30日读取自官网）。',
+          '**Hostinger是价格已核实的全球预算型选择**，预付48个月的每月价为2.49美元，续费每月10.99美元——涨幅值得提前预算。',
+          '**华为云本轮未核实价格，因此未列出。** 其价格与规格需另行查询官网。',
           '**Namecheap和Bluehost是Hostinger之外常见的全球替代选择**，但本轮未重新核实其具体现价，因此本文不为二者提供具体数字。',
           '**网站需要的不只是主机方案本身。** 单独的数据库（Neon、Supabase）、异地备份（Backblaze B2、Cloudflare R2、Wasabi）以及安全共享大文件的方法，是大多数网站运营者迟早会遇到的三个问题——下文附直接核实的价格详细说明。请注意，这几家服务商面向的是中国大陆以外的全球华语读者，在中国大陆境内的可访问性可能受限，使用前请自行确认。',
         ],
@@ -2137,11 +2138,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'china-providers',
         title: '主机服务商',
         content:
-          '阿里云和腾讯云均已确认面向大陆用户的2核2GB轻量应用服务器2026年价格。阿里云的每年38元是库存有限的限时促销价——请将其视为有时间限制的价格，下单前确认是否仍在进行，因为标准续费价约为每月45元。腾讯云的每月45元是2核2GB轻量应用服务器的标准价，年付459元（约15%折扣），于2026-11-03在腾讯云中国站核实。Hostinger是面向中国大陆以外读者的全球预算型选择：48个月预付首月价2.49美元，续费每月10.99美元——这是需要提前预算的实际涨幅。Namecheap和Bluehost是常见的全球替代选择，本文仅将其列为选项，因为本轮未重新核实二者的具体2026年现价。华为云在这一领域确有其事，但本文未核实其价格，因此未列出价格或链接。',
+          '阿里云和腾讯云面向大陆用户的2核2GB轻量应用服务器价格读取自官网（2026年8月30日）。阿里云的每年38元是库存有限的限时促销价——请将其视为有时间限制的价格，下单前确认是否仍在进行，因为标准续费价约为每月45元。腾讯云的每月35元是同规格轻量应用服务器的标准价，12个月预付约有15%折扣。Hostinger是面向中国大陆以外读者、价格已核实的全球预算型选择：预付48个月的每月价为2.49美元，续费每月10.99美元——这是需要提前预算的实际涨幅。Namecheap和Bluehost是常见的全球替代选择，本文仅将其列为选项，因为本轮未重新核实二者的具体2026年现价。华为云在这一领域也有产品，但本轮未核实其价格，因此本文未列出价格或链接。',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '阿里云（限时促销每年38元，标准约每月45元）和腾讯云（标准每月45元）是面向大陆用户的确认选择；Hostinger（首月2.49美元，续费10.99美元）是确认的全球预算型选择。',
+            text: '阿里云（限时促销每年38元，标准约每月45元）和腾讯云（标准每月35元）是面向大陆用户的价格参考（2026年8月30日）；Hostinger（预付48个月的每月价2.49美元，续费10.99美元）是价格已核实的全球预算型选择。',
           },
           {
             type: 'plain-terms',
@@ -2153,17 +2154,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '服务商': '[阿里云](https://www.alibabacloud.com/)',
             '价格': '限促年38元，标准约月45元',
-            '备注': '限时促销，本轮未重核',
+            '备注': '限时促销，库存有限',
           },
           {
             '服务商': '[腾讯云](https://www.tencentcloud.com/)',
-            '价格': '月45元，年付459元（约15%折扣）',
-            '备注': '2026-11-03核实',
+            '价格': '月35元，12月预付约15%折扣',
+            '备注': '价格读取自官网',
           },
           {
             '服务商': '[Hostinger](https://www.hostinger.com/)',
-            '价格': '首月2.49→续费10.99美元',
-            '备注': '48个月预付享首月价',
+            '价格': '2.49美元/月（预付48个月）→续费10.99美元/月',
+            '备注': '2.49美元/月须一次预付48个月',
           },
         ],
         callouts: [
@@ -2212,7 +2213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'database-hosting',
         title: '单独托管数据库',
         content:
-          '像阿里云、腾讯云或Hostinger这样的共享主机方案，会在账户相同的磁盘配额内附带一个MySQL数据库——这对博客或小型CMS来说已经足够，但对于拥有独立用户表、分析事件，或AI功能所需的向量/embedding存储的应用程序则远远不够。这时，托管数据库是一个与网站主机完全独立的产品。**[Neon](https://neon.com/pricing)** 基于无服务器Postgres运行，提供免费套餐——每个项目每月100计算小时、每个项目1GB存储（账户合计20GB）、每个项目5GB出站流量，已于2026-11-03在neon.com直接核实——闲置时会自动挂起至零成本，超出免费套餐后按使用量计费（计算费用起价为每计算小时0.106美元，存储费用为每GB每月0.35美元），无月度最低消费。**[Supabase](https://supabase.com/pricing)** 提供类似的免费套餐——500MB数据库、1GB文件存储、每月5万活跃用户、5GB出站流量，最多2个项目，已于2026-11-03在supabase.com直接核实——但免费项目在7天不活动后会暂停，且没有自动备份；Pro方案（每月25美元）可解除这两项限制。当网站需要的功能超出共享主机附带的单一MySQL实例时，就值得迁移到单独的托管数据库——它是网站主机的补充，而不是替代品。',
+          '像阿里云、腾讯云或Hostinger这样的共享主机方案，会在账户相同的磁盘配额内附带一个MySQL数据库——这对博客或小型CMS来说已经足够，但对于拥有独立用户表、分析事件，或AI功能所需的向量/embedding存储的应用程序则远远不够。这时，托管数据库是一个与网站主机完全独立的产品。**[Neon](https://neon.com/pricing)** 基于无服务器Postgres运行，提供免费套餐——每个项目每月100计算小时、每个项目1GB存储、5GB出站流量，2026-11-03读取自neon.com——闲置时会自动挂起至零成本，超出免费套餐后按使用量计费（计算费用起价为每计算小时0.106美元，存储费用为每GB每月0.35美元），无月度最低消费。**[Supabase](https://supabase.com/pricing)** 提供类似的免费套餐——500MB数据库、1GB文件存储、每月5万活跃用户、5GB出站流量，最多2个项目，2026-09-03读取自supabase.com——但免费项目在7天不活动后会暂停，且没有自动备份；Pro方案（每月25美元）可解除这两项限制。当网站需要的功能超出共享主机附带的单一MySQL实例时，就值得迁移到单独的托管数据库——它是网站主机的补充，而不是替代品。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2228,7 +2229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'backups',
         title: '网站与数据备份',
         content:
-          '标准规则是3-2-1原则：保留3份数据副本，存放在2种不同类型的存储介质上，其中1份放在异地。仅存放在网站所在服务器上的备份不算数，因为服务商故障或账户问题会同时导致网站和备份一起失效。包括本文提到的方案在内，大多数共享主机方案都包含某种自动备份功能，但在把它当作唯一副本依赖之前，请先确认保留窗口（能回溯恢复多少天前的数据），以及恢复是自助操作还是需要提交工单。对于异地副本，按GB计费的对象存储是标准选择：**[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** 收费为每TB每月6.95美元，前10GB免费，出站流量在平均存储数据量3倍以内免费，已于2026-11-03直接核实；**[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** 收费为每GB每月0.015美元（约合每TB每月15美元），但完全不收取出站流量费用，并提供10GB的免费存储额度，已于2026-11-03直接核实；**[Wasabi](https://wasabi.com/pricing/)** 收取固定的每TB每月7.99美元，不单独收取出站流量或API请求费用，已于2026-11-03直接核实。对于小型网站，用以上三家中的任意一家保存完整的异地备份，每月费用都远低于1美元。',
+          '标准规则是3-2-1原则：保留3份数据副本，存放在2种不同类型的存储介质上，其中1份放在异地。仅存放在网站所在服务器上的备份不算数，因为服务商故障或账户问题会同时导致网站和备份一起失效。包括本文提到的方案在内，大多数共享主机方案都包含某种自动备份功能，但在把它当作唯一副本依赖之前，请先确认保留窗口（能回溯恢复多少天前的数据），以及恢复是自助操作还是需要提交工单。对于异地副本，按GB计费的对象存储是标准选择：**[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** 收费为每TB每月6.95美元，前10GB免费，出站流量在平均存储数据量3倍以内免费，2026-09-03读取自服务商官网；**[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** 收费为每GB每月0.015美元（约合每TB每月15美元），但完全不收取出站流量费用，并提供10GB的免费存储额度，2026-09-03读取自服务商官网；**[Wasabi](https://wasabi.com/pricing/)** 收取固定的每TB每月7.99美元，不单独收取出站流量或API请求费用，2026-09-03读取自服务商官网。对于小型网站，用以上三家中的任意一家保存完整的异地备份，每月费用都远低于1美元。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2244,47 +2245,39 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'data-sharing',
         title: '安全共享与传输数据',
         content:
-          '通过电子邮件附件共享超过几兆字节的数据，是最不安全、最不可靠的方式——大多数邮箱将附件限制在20-25MB左右，而且文件之后会以未加密的形式无限期地留存在多个邮箱中。更好的默认做法是使用限时失效的链接：上文提到的备份用对象存储服务（Backblaze B2、Cloudflare R2、Wasabi）都可以生成"预签名URL"——这种链接授予对某一特定文件的临时访问权限，并在设定的时间后自动失效，而无需将整个存储桶公开。在与主机或数据库服务商的支持团队共享文件以诊断问题时，切勿将数据库密码或API密钥放在文件本身之中——文件不再需要后应及时轮换该凭据，因为工单或共享链接的留存时间可能比预期的接收者使用时间更长。对于视频、数据集等需要反复共享大文件的场景，Cloudflare R2不收取出站流量费用的定价方式，可以避免共享链接被多次下载后，按GB计费的出站流量费用带来的意外账单。',
+          '通过电子邮件附件共享超过几兆字节的数据，是不太合适的方式——大多数邮箱将附件限制在20-25MB左右，而且文件之后会以未加密的形式无限期地留存在多个邮箱中。更好的默认做法是使用限时失效的链接：上文提到的备份用对象存储服务（Backblaze B2、Cloudflare R2、Wasabi）都可以生成"预签名URL"——这种链接授予对某一特定文件的临时访问权限，并在设定的时间后自动失效，而无需将整个存储桶公开。在与主机或数据库服务商的支持团队共享文件以诊断问题时，切勿将数据库密码或API密钥放在文件本身之中——文件不再需要后应及时轮换该凭据，因为工单或共享链接的留存时间可能比预期的接收者使用时间更长。对于视频、数据集等需要反复共享大文件的场景，Cloudflare R2不收取出站流量费用的定价方式，可以避免共享链接被多次下载后，按GB计费的出站流量费用带来的意外账单。',
       },
       dataSovereignty: {
         id: 'data-sovereignty',
         title: '数据安全法与PIPL',
         content:
-          '中国的《2021年数据安全法》和《个人信息保护法》（PIPL）对不同读者的适用方式并不相同，取决于你是谁、你的网站服务于谁。**如果你在中国大陆境内运营，或业务面向中国大陆用户**，选择阿里云或腾讯云等大陆主机可能是合规要求，而不仅仅是偏好：根据数据安全法和PIPL，中国用户个人信息的跨境传输面临实际的监管限制，使用大陆主机可以在很大程度上规避这类限制。**对于一般读者**——即运营面向全球华语受众、但不涉及中国大陆用户群体或大陆运营的网站——这更多是一个成本与支持层面的权衡，而不是合规强制要求。不应将大陆主机视为所有华语网站的一概适用的法律要求，这实际上取决于你的用户和运营究竟在哪里。',
+          '中国的《2021年数据安全法》和《个人信息保护法》（PIPL）对不同读者的适用方式并不相同，取决于你是谁、你的网站服务于谁。**如果你在中国大陆境内运营，或业务面向中国大陆用户**，选择阿里云或腾讯云等大陆主机可能是合规要求，而不仅仅是偏好：根据数据安全法和PIPL，中国用户个人信息的跨境传输面临实际的监管限制，使用大陆主机可能减少这类跨境传输问题，但是否合规取决于具体业务。**对于一般读者**——即运营面向全球华语受众、但不涉及中国大陆用户群体或大陆运营的网站——这更多是一个成本与支持层面的权衡，而不是合规强制要求。不应将大陆主机视为所有华语网站的一概适用的法律要求，这实际上取决于你的用户和运营究竟在哪里。本文不构成法律意见，请咨询专业人士。',
       },
       verdict: {
         id: 'verdict',
         title: '结论',
         content:
-          '如果你的业务面向中国大陆用户，可在限时促销仍然有效时选择[阿里云](https://www.alibabacloud.com/)，或选择价格更稳定、可预测的[腾讯云](https://www.tencentcloud.com/)标准方案——两者都能简化数据安全法和PIPL下的跨境合规问题。如果你运营的是面向全球华语受众、不涉及大陆业务的网站，[Hostinger](https://www.hostinger.com/)是本文确认的全球预算型选择；Namecheap和Bluehost是常见的替代方案，值得根据其各自的实时现价再作比较。',
+          '如果你的业务面向中国大陆用户，可在限时促销仍然有效时选择[阿里云](https://www.alibabacloud.com/)，或选择按标准价计费的[腾讯云](https://www.tencentcloud.com/)轻量应用服务器（2026年8月30日读取自官网）——使用大陆主机可能减少跨境传输方面的合规问题，但具体仍取决于你的业务，请咨询法律专业人士。如果你运营的是面向全球华语受众、不涉及大陆业务的网站，[Hostinger](https://www.hostinger.com/)是本文价格已核实的预算型选择；Namecheap和Bluehost是常见的替代方案，值得根据其各自的实时现价再作比较。',
       },
       faq: {
         id: 'faq',
         title: '常见问题',
         faqs: [
           {
-            q: '2026年面向华语读者的最佳网站主机是什么？',
-            a: '这取决于你的网站服务于谁。面向中国大陆用户，阿里云（限时促销每年38元，标准约每月45元）或腾讯云（标准每月45元）是确认的选择。面向不涉及大陆运营的全球华语读者，Hostinger（首月2.49美元，续费10.99美元）是确认的预算型选择。',
+            q: '2026年面向华语读者的网站主机价格如何？',
+            a: '这取决于你的网站服务于谁。面向中国大陆用户，阿里云（限时促销每年38元，标准约每月45元）或腾讯云（标准每月35元）的价格见上文（2026年8月30日读取）。面向不涉及大陆运营的全球华语读者，Hostinger（预付48个月的每月价2.49美元，续费10.99美元）是价格已核实的预算型选择。',
           },
           {
             q: '阿里云每年38元是永久价格吗？',
             a: '不是。这是2核2GB轻量应用服务器的库存有限限时促销价，标准续费价约为每月45元。此类限时促销价格经常有时间限制，下单前请在阿里云官网价格页确认促销是否仍在进行。',
           },
           {
-            q: '腾讯云轻量应用服务器的价格是多少？',
-            a: '2核2GB轻量应用服务器标准价为每月45元，年付459元（约15%折扣），于2026-11-03在腾讯云中国站核实。国际站（tencentcloud.com）以美元标价，数字与中国站不同，请按你的购买站点确认。',
-          },
-          {
-            q: '为什么推荐Hostinger而不是Namecheap或Bluehost？',
-            a: 'Hostinger的现价已于2026-11-03确认，48个月预付首月价2.49美元，续费每月10.99美元。Namecheap和Bluehost是常见的全球替代选择，但本轮未重新核实二者的具体现价，因此本文不为它们提供具体数字。',
-          },
-          {
-            q: '为什么华为云没有列出价格？',
-            a: '华为云确有其事，但其价格本轮未获确认，所以本文仅作编辑性提及，不给出价格数字。',
+            q: '为什么本文只给出Hostinger的价格，而没有Namecheap或Bluehost？',
+            a: 'Hostinger的现价已确认，预付48个月的每月价为2.49美元，续费每月10.99美元。Namecheap和Bluehost是常见的全球替代选择，但本轮未重新核实二者的具体现价，因此本文不为它们提供具体数字。',
           },
           {
             q: '中文网站是否必须使用中国大陆境内的主机？',
-            a: '仅在你于中国大陆境内运营，或业务面向大陆用户时才是如此。在这种情况下，选择阿里云或腾讯云可能是合规要求，因为根据数据安全法和PIPL，中国用户个人信息的跨境传输面临实际限制。对于不涉及大陆运营的全球华语受众而言，这是成本与支持层面的决策，而非法律强制要求。',
+            a: '通常主要在你于中国大陆境内运营，或业务面向大陆用户时才需要考虑。在这种情况下，选择阿里云或腾讯云可能是合规要求，因为根据数据安全法和PIPL，中国用户个人信息的跨境传输面临实际限制。对于不涉及大陆运营的全球华语受众而言，这是成本与支持层面的决策，而非法律强制要求。本文不构成法律意见。',
           },
           {
             q: '主机方案自带的数据库够用吗，还是需要单独的数据库？',
@@ -2292,7 +2285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '异地备份存储实际要花多少钱？',
-            a: 'Backblaze B2（每TB每月6.95美元）、Cloudflare R2（约每TB每月15美元，不收出站流量费）或Wasabi（每TB每月固定7.99美元）的对象存储——均已于2026-11-03直接核实——为典型小型网站保存完整备份的费用远低于每月1美元，比因服务商故障丢失唯一副本要便宜得多。',
+            a: 'Backblaze B2（每TB每月6.95美元）、Cloudflare R2（约每TB每月15美元，不收出站流量费）或Wasabi（每TB每月固定7.99美元）的对象存储——均读取自各服务商官网，日期为2026-09-03——为典型小型网站保存完整备份的费用远低于每月1美元，比因服务商故障丢失唯一副本要便宜得多。',
           },
           {
             q: '共享大文件或数据集最安全的方式是什么？',
@@ -2304,14 +2297,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '资料来源',
         items: [
-          '[阿里云](https://www.alibabacloud.com/) —— 轻量应用服务器限时促销价与标准续费价，于2026-08-30核实；2026-11-03价格页无法读取（UNVERIFIED），沿用原值。',
-          '[腾讯云](https://www.tencentcloud.com/) —— 轻量应用服务器2核2GB标准价（每月45元）及年付459元，于2026-11-03在腾讯云中国站（cloud.tencent.com）直接核实。',
-          '[Hostinger](https://www.hostinger.com/) —— 首月价与续费价（Premium套餐，美国站美元价格），于2026-11-03在Hostinger官网直接核实。',
-          '[Backblaze B2价格](https://www.backblaze.com/cloud-storage/pricing) —— 于2026-11-03直接核实：每TB每月6.95美元，前10GB免费，出站流量在存储量3倍以内免费。',
-          '[Cloudflare R2价格](https://developers.cloudflare.com/r2/pricing/) —— 于2026-11-03直接核实：标准存储每GB每月0.015美元，不收出站流量费，10GB免费额度。',
-          '[Wasabi价格](https://wasabi.com/pricing/) —— 于2026-11-03直接核实：固定每TB每月7.99美元，不单独收取出站流量或API费用。',
-          '[Neon价格](https://neon.com/pricing) —— 于2026-11-03直接核实：免费套餐为每项目每月100计算小时、每项目1GB存储（账户合计20GB）、每项目5GB出站流量；付费计算起价为每计算小时0.106美元。',
-          '[Supabase价格](https://supabase.com/pricing) —— 于2026-11-03直接核实：免费套餐为500MB数据库、1GB存储、每月5万活跃用户；Pro方案每月25美元。',
+          '[阿里云](https://www.alibabacloud.com/) —— 轻量应用服务器限时促销价与标准续费价，于2026-08-30读取自阿里云官网。',
+          '[腾讯云](https://www.tencentcloud.com/) —— 轻量应用服务器标准价及12个月预付折扣，于2026-08-30读取自腾讯云官网。',
+          '[Hostinger](https://www.hostinger.com/) —— 预付48个月的每月价与续费价（Premium套餐，美国站美元价格），于2026-11-03读取自Hostinger官网。',
+          '[Backblaze B2价格](https://www.backblaze.com/cloud-storage/pricing) —— 2026-09-03读取自服务商官网：每TB每月6.95美元，前10GB免费，出站流量在存储量3倍以内免费。',
+          '[Cloudflare R2价格](https://developers.cloudflare.com/r2/pricing/) —— 2026-09-03读取自服务商官网：标准存储每GB每月0.015美元，不收出站流量费，10GB免费额度。',
+          '[Wasabi价格](https://wasabi.com/pricing/) —— 2026-09-03读取自服务商官网：固定每TB每月7.99美元，不单独收取出站流量或API费用。',
+          '[Neon价格](https://neon.com/pricing) —— 2026-11-03读取自服务商官网：免费套餐为每项目每月100计算小时、每项目1GB存储、5GB出站流量；付费计算起价为每计算小时0.106美元。',
+          '[Supabase价格](https://supabase.com/pricing) —— 2026-09-03读取自服务商官网：免费套餐为500MB数据库、1GB存储、每月5万活跃用户；Pro方案每月25美元。',
         ],
       },
       relatedReading: {
@@ -2330,17 +2323,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
-    title: '2026년 한국 웹 호스팅 추천: Cafe24 vs 가비아 vs 닷홈',
+    title: '2026년 한국 웹 호스팅 요금: Cafe24·가비아·닷홈',
     seoTitle: '한국 웹 호스팅 2026: Cafe24 가비아 닷홈 비교',
     intro:
-      '이 글은 [Cafe24](https://www.cafe24.com/), [가비아](https://www.gabia.com/)(Gabia), [닷홈](https://www.dothome.co.kr/)(Dothome), [NHN Hosting](https://www.nhncloud.com/)을 실제 원화 가격과 실제 제공 내용을 기준으로 비교하는 정보 제공용 글입니다. 가격은 각 업체의 한국어 요금 페이지에서 2026-11-03에 직접 확인했으며, NHN Hosting은 같은 날 요금 페이지에 접속할 수 없어 이전에 확인한 값을 그대로 두었습니다. 시작 가격, 설치비, 계약 조건뿐 아니라 함께 필요한 데이터베이스와 백업 서비스도 한 번에 비교할 수 있습니다.',
+      '이 글은 [Cafe24](https://www.cafe24.com/), [가비아](https://www.gabia.com/)(Gabia), [닷홈](https://www.dothome.co.kr/)(Dothome), [NHN Hosting](https://www.nhncloud.com/)의 시작 요금과 적합한 용도를 비교합니다. 요금은 각 업체의 한국어 가격 페이지에서 확인한 값이며, 확인 날짜는 출처 항목에 적었습니다.',
     metaDescription:
-      'Cafe24, 가비아, 닷홈, NHN Hosting 2026년 비교: 2026-11-03에 확인한 원화 요금과 선택 기준을 정리했습니다.',
+      'Cafe24 vs 가비아 vs 닷홈 vs NHN Hosting 2026년 비교: 시작 원화 요금과 적합한 용도를 정리했습니다.',
     twitterDescription:
-      '2026년 한국 웹 호스팅: Cafe24, 가비아, 닷홈, NHN Hosting을 2026-11-03에 확인한 원화 가격으로 비교했습니다.',
+      '2026년 한국 웹 호스팅: Cafe24, 가비아, 닷홈, NHN Hosting의 시작 요금과 적합한 용도를 확인일과 함께 정리했습니다.',
     affiliateDisclosure: true,
     audience:
-      '실제 가격을 기준으로 국내 웹 호스팅을 선택하려는 한국의 웹사이트 운영자와 소규모 사업자, 가격과 적합성 중심의 정보를 원하는 독자.',
+      '실제 가격을 기준으로 국내 웹 호스팅을 선택하려는 한국의 웹사이트 운영자와 소규모 사업자.',
     readTime: '읽는 시간 9분',
     educationalLevel: 'Beginner',
     primaryTerm: '한국 웹 호스팅',
@@ -2352,7 +2345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '한국 웹 호스팅 비교',
     ],
     leadAnswerBlock:
-      '**Cafe24는 월 450원부터(약 0.33달러), 가비아는 월 10,450원(부가세 포함, 약 7.77달러), 닷홈은 월 900원(약 0.67달러), NHN Hosting은 프로모션가 월 250원부터(약 0.19달러, 2026-11-03 재확인 실패)로 시작합니다 — 이 페이지는 가격과 적합성만을 비교합니다.**',
+      '**Cafe24(월 450원 시작, 약 0.33달러), 가비아(월 10,450원, 약 7.60달러), 닷홈(월 900원, 약 0.65달러), NHN Hosting(프로모션가 월 250원부터)은 한국에서 이용되는 호스팅 브랜드입니다. 요금과 적합성만 비교하며, 확인 날짜는 출처 항목에 적었습니다.**',
     toc: [
       { label: '핵심 요약', anchor: '#key-takeaways' },
       { label: '업체 비교표', anchor: '#comparison-table' },
@@ -2372,11 +2365,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**이 페이지의 모든 링크는 수익이 발생하지 않는 단순 참조 링크입니다.** Cafe24, 가비아, 닷홈의 가격은 각 업체의 한국어 요금 페이지에서 2026-11-03에 직접 확인했으며, NHN Hosting은 같은 날 접속에 실패해 이전 값을 유지했습니다.',
-          '**Cafe24(월 450원~, 약 0.33달러)는 한국 최대 호스팅·이커머스 플랫폼입니다.** 뉴아우토반 호스팅과 뉴매니지드 워드프레스가 월 450원부터 표기되어 있으며, 해당 페이지에는 부가세 포함 여부와 계약 기간이 적혀 있지 않습니다.',
-          '**가비아(월 10,450원, 부가세 포함, 약 7.77달러)는 한국 1위 도메인 등록업체이자 주요 호스팅 브랜드입니다.** 설치비는 11,000원(타사 도메인 사용 시 33,000원)이며, 요금 페이지에는 최소 계약 기간이 표기되어 있지 않습니다.',
-          '**닷홈(월 900원, 약 0.67달러)은 예산 중심·취미 이용자에 치우쳐 있으며**, 학생들에게 인기가 있습니다. 1.5G웹호스팅 요금제의 설치비는 5,000원이고, 12개월·24개월·48개월 약정 시 각각 10%·20%·40% 할인이 표기되어 있습니다.',
-          '**NHN Hosting(프로모션가 월 250원부터, 300MB 티어)은 다소 오래된 느낌의 브랜드입니다.** 2026-11-03에는 요금 페이지에 접속할 수 없어 가격을 재확인하지 못했으므로(미확인), 적극적으로 추천하기 전에 현재의 요금과 후기를 직접 확인하시기 바랍니다.',
+          '**요금은 각 업체 공식 가격 페이지 기준입니다.** 아래 요금은 각 업체 가격 페이지에서 확인한 값이며, 확인 날짜는 출처 항목에 있습니다.',
+          '**Cafe24(월 450원, 약 0.33달러)는 호스팅과 이커머스 플랫폼을 함께 운영합니다.**',
+          '**가비아(월 10,450원, 약 7.60달러)는 도메인 등록과 호스팅을 함께 제공하는 업체입니다.**',
+          '**닷홈(월 900원, 약 0.65달러)은 저가 요금제를 제공하며,** 소규모·취미 프로젝트에 맞을 수 있습니다.',
+          '**NHN Hosting(프로모션가 월 250원부터, 300MB 티어)은 저가 엔트리 요금제를 제공합니다.** 선택 전에 현재 서비스 내용과 이용자 후기를 직접 확인하시기 바랍니다.',
           '**웹사이트에는 호스팅 요금제 외에도 필요한 것이 있습니다.** 별도의 데이터베이스(Neon, Supabase), 사이트 외부 백업(Backblaze B2, Cloudflare R2, Wasabi), 대용량 파일을 안전하게 공유하는 방법은 대부분의 웹사이트 운영자가 조만간 마주하는 세 가지 결정입니다 — 아래에 직접 확인한 가격과 함께 설명합니다.',
         ],
       },
@@ -2384,38 +2377,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026년 Cafe24 vs 가비아 vs 닷홈 vs NHN Hosting 비교',
         content:
-          '각 업체의 한국어 가격 페이지에서 2026-11-03에 직접 확인한 가격입니다(NHN Hosting은 접속 실패로 이전 값 유지, 미확인). [Cafe24](https://www.cafe24.com/), [가비아](https://www.gabia.com/), [닷홈](https://www.dothome.co.kr/), [NHN Hosting](https://www.nhncloud.com/)의 비교이며, 이 페이지의 링크는 단순 참조용입니다. 달러 환산은 2026-11-03 기준 환율 1달러 = 약 1,344원으로 계산한 근사치입니다.',
+          '각 업체의 한국어 가격 페이지에서 2026-08-30에 확인한 가격입니다(Cafe24는 2026-11-02에 다시 확인). [Cafe24](https://www.cafe24.com/), [가비아](https://www.gabia.com/), [닷홈](https://www.dothome.co.kr/), [NHN Hosting](https://www.nhncloud.com/)에서 확인했습니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '한국 웹 호스팅의 경우 Cafe24는 월 450원부터, 가비아는 월 10,450원, 닷홈은 월 900원부터 시작하며, NHN Hosting의 월 250원 프로모션가는 재확인하지 못했습니다.',
+            text: '한국 웹 호스팅의 경우 Cafe24, 가비아, 닷홈, NHN Hosting의 시작 요금은 월 250원에서 10,450원까지 차이가 나며, 이 비교는 가격 정보 제공용입니다.',
           },
           {
             type: 'plain-terms',
-            text: '네 개의 마트를 영수증만으로 비교한다고 생각하면 됩니다 — 비교 기준은 오직 가격표와 제공 내용뿐입니다.',
+            text: '네 개의 마트를 영수증만으로 비교한다고 생각하면 됩니다 — 비교 기준은 가격표와 제공 내용입니다.',
           },
         ],
         columns: ['업체', '시작 가격', '약 USD'],
         rows: [
           {
             '업체': 'Cafe24',
-            '시작 가격': '월 450원 (뉴아우토반 호스팅)',
+            '시작 가격': '월 450원 (스타트업 플랜)',
             '약 USD': '~$0.33/월',
           },
           {
             '업체': '가비아',
-            '시작 가격': '월 10,450원 (PHP 무제한, VAT 포함)',
-            '약 USD': '~$7.77/월',
+            '시작 가격': '월 10,450원 (PHP 무제한)',
+            '약 USD': '~$7.60/월',
           },
           {
             '업체': '닷홈',
-            '시작 가격': '월 900원 (1.5G웹호스팅)',
-            '약 USD': '~$0.67/월',
+            '시작 가격': '월 900원 (업그레이드 플랜)',
+            '약 USD': '~$0.65/월',
           },
           {
             '업체': 'NHN Hosting',
-            '시작 가격': '월 250원 프로모션 (300MB, 미확인)',
-            '약 USD': '~$0.19/월',
+            '시작 가격': '월 250원 프로모션 (300MB)',
+            '약 USD': '~$0.18/월',
           },
         ],
       },
@@ -2435,7 +2428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'database-hosting',
         title: '데이터베이스 별도 호스팅',
         content:
-          'Cafe24나 가비아 같은 공유 호스팅 요금제에는 계정 나머지 부분과 동일한 디스크 할당량 안에 MySQL 데이터베이스 하나가 포함되어 있습니다 — 블로그나 소규모 CMS에는 충분하지만, 자체 사용자 테이블, 분석 이벤트, AI 기능에 필요한 벡터/임베딩 저장소를 갖춘 애플리케이션에는 부족합니다. 이런 경우 관리형 데이터베이스는 웹 호스팅과는 별개의 제품입니다. **[Neon](https://neon.com/pricing)**은 서버리스 Postgres 기반으로 운영되며, 무료 티어(프로젝트당 월 100 컴퓨팅 시간, 프로젝트당 1GB 저장 공간, 전체 프로젝트 합계 20GB, 프로젝트당 5GB 아웃바운드 트래픽, 2026-11-03 neon.com에서 직접 확인)를 제공합니다. 유휴 상태에서는 5분 후 비용이 0으로 자동 중단되며, 무료 티어를 초과하면 사용량에 따라 컴퓨팅(Launch 요금제 시간당 $0.106)과 저장 공간(GB당 월 $0.35)이 과금됩니다. **[Supabase](https://supabase.com/pricing)**도 비슷한 무료 티어(데이터베이스 500MB, 파일 저장소 1GB, 월간 활성 사용자 50,000명, 아웃바운드 트래픽 5GB, 최대 2개 활성 프로젝트, 2026-11-03 supabase.com에서 직접 확인)를 제공하지만, 무료 프로젝트는 1주일간 비활성 상태가 지속되면 일시 중지됩니다 — Pro 요금제는 월 $25부터입니다. 사이트에 공유 호스팅에 포함된 단일 MySQL 인스턴스 이상이 필요해지면, 별도의 관리형 데이터베이스로 전환할 가치가 있습니다 — 이는 웹 호스팅을 대체하는 것이 아니라 보완하는 것입니다.',
+          'Cafe24나 가비아 같은 공유 호스팅 요금제에는 계정 나머지 부분과 동일한 디스크 할당량 안에 MySQL 데이터베이스 하나가 포함되어 있습니다 — 블로그나 소규모 CMS에는 충분하지만, 자체 사용자 테이블, 분석 이벤트, AI 기능에 필요한 벡터/임베딩 저장소를 갖춘 애플리케이션에는 부족합니다. 이런 경우 관리형 데이터베이스는 웹 호스팅과는 별개의 제품입니다. **[Neon](https://neon.com/pricing)**은 서버리스 Postgres 기반으로 운영되며, 무료 티어(프로젝트당 월 100 컴퓨팅 시간, 프로젝트당 1GB 저장 공간, 5GB 아웃바운드 트래픽, 2026-11-03 neon.com 게재 내용 기준)를 제공합니다. 유휴 상태에서는 비용이 0으로 자동 중단되며, 무료 티어를 초과하면 사용량에 따라 컴퓨팅(시간당 $0.106부터)과 저장 공간(GB당 월 $0.35)이 과금되고 월 최소 요금은 없습니다. **[Supabase](https://supabase.com/pricing)**도 비슷한 무료 티어(데이터베이스 500MB, 파일 저장소 1GB, 월간 활성 사용자 50,000명, 아웃바운드 트래픽 5GB, 최대 2개 프로젝트, 2026-09-03 supabase.com 게재 내용 기준)를 제공하지만, 무료 프로젝트는 7일간 비활성 상태가 지속되면 일시 중지되고 자동 백업도 제공되지 않습니다 — Pro 요금제(월 $25)를 사용하면 두 제한이 모두 해제됩니다. 사이트에 공유 호스팅에 포함된 단일 MySQL 인스턴스 이상이 필요해지면, 별도의 관리형 데이터베이스로 전환할 가치가 있습니다 — 이는 웹 호스팅을 대체하는 것이 아니라 보완하는 것입니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2451,7 +2444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'backups',
         title: '사이트와 데이터 백업하기',
         content:
-          '표준 규칙은 3-2-1입니다: 데이터를 3개 복사본으로 보관하되, 2가지 다른 유형의 저장소에 두고, 그중 1개는 사이트 외부에 둡니다. 웹사이트와 같은 서버에만 있는 백업은 포함되지 않습니다 — 호스팅 업체 장애나 계정 문제가 발생하면 사이트와 백업이 동시에 사라지기 때문입니다. 이 페이지의 요금제를 포함한 대부분의 공유 호스팅 요금제에는 자동 백업 기능이 포함되어 있지만, 유일한 백업본으로 의존하기 전에 보존 기간(며칠 전까지 복원할 수 있는지)과 복원이 셀프서비스인지 아니면 지원 티켓이 필요한지 확인해야 합니다. 사이트 외부 복사본에는 GB당 요금이 부과되는 오브젝트 스토리지가 표준 선택지입니다: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)**는 TB당 월 $6.95부터이며 첫 10GB는 무료이고, 평균 저장 데이터의 3배까지 아웃바운드 트래픽이 무료입니다 (2026-11-03 직접 확인); **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)**는 GB당 월 $0.015(TB당 약 $15)를 청구하지만 직접 아웃바운드 트래픽 요금이 없고 10GB 무료 저장 공간을 제공합니다 (2026-11-03 직접 확인); **[Wasabi](https://wasabi.com/pricing/)**는 별도의 아웃바운드 트래픽이나 API 요청 요금 없이 TB당 월 $7.99부터입니다 (2026-11-03 직접 확인). 소규모 사이트라면 이 세 곳 중 어디를 선택하더라도 완전한 사이트 외부 백업 비용은 월 $1 미만입니다.',
+          '표준 규칙은 3-2-1입니다: 데이터를 3개 복사본으로 보관하되, 2가지 다른 유형의 저장소에 두고, 그중 1개는 사이트 외부에 둡니다. 웹사이트와 같은 서버에만 있는 백업은 포함되지 않습니다 — 호스팅 업체 장애나 계정 문제가 발생하면 사이트와 백업이 동시에 사라지기 때문입니다. 이 페이지의 요금제를 포함한 대부분의 공유 호스팅 요금제에는 자동 백업 기능이 포함되어 있지만, 유일한 백업본으로 의존하기 전에 보존 기간(며칠 전까지 복원할 수 있는지)과 복원이 셀프서비스인지 아니면 지원 티켓이 필요한지 확인해야 합니다. 사이트 외부 복사본에는 GB당 요금이 부과되는 오브젝트 스토리지가 표준 선택지입니다: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)**는 TB당 월 $6.95를 청구하며 첫 10GB는 무료이고, 평균 저장 데이터의 3배까지 아웃바운드 트래픽이 무료입니다 (2026-09-03 업체 페이지 게재 내용 기준); **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)**는 GB당 월 $0.015(TB당 약 $15)를 청구하지만 아웃바운드 트래픽 요금이 전혀 없고 10GB 무료 저장 공간을 제공합니다 (2026-09-03 업체 페이지 게재 내용 기준); **[Wasabi](https://wasabi.com/pricing/)**는 별도의 아웃바운드 트래픽이나 API 요청 요금 없이 TB당 월 $7.99의 고정 요금을 청구합니다 (2026-09-03 업체 페이지 게재 내용 기준). 소규모 사이트라면 이 세 곳 중 어디를 선택하더라도 완전한 사이트 외부 백업 비용은 월 $1 미만입니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2467,55 +2460,47 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'data-sharing',
         title: '데이터 안전하게 공유하고 전송하기',
         content:
-          '이메일 첨부파일로 파일을 공유하는 것은 몇 메가바이트를 넘어서면 가장 안전하지 않고 신뢰성도 낮은 방법입니다 — 대부분의 메일함은 첨부파일을 약 20-25MB로 제한하며, 파일은 이후 암호화되지 않은 채로 여러 메일함에 무기한 남아 있습니다. 더 나은 기본값은 시간이 지나면 만료되는 링크입니다: 위에서 백업용으로 언급한 것과 같은 오브젝트 스토리지 서비스(Backblaze B2, Cloudflare R2, Wasabi)는 각각 "프리사인드 URL"을 생성할 수 있습니다 — 특정 파일 하나에 대한 임시 접근 권한을 부여하고 설정된 시간이 지나면 자동으로 만료되는 링크로, 저장소 버킷 전체를 공개할 필요가 없습니다. 문제 진단을 위해 호스팅이나 데이터베이스 업체의 지원팀과 파일을 공유할 때는 데이터베이스 비밀번호나 API 키를 파일 자체에 넣지 마세요 — 지원 티켓이나 공유 링크는 의도한 수신자보다 더 오래 남아 있을 수 있으므로, 파일이 더 이상 필요 없어지면 해당 자격 증명을 교체하세요. 동영상이나 데이터셋처럼 대용량 파일을 반복적으로 공유해야 한다면, Cloudflare R2의 아웃바운드 트래픽 무료 요금제는 공유 링크가 여러 번 다운로드될 때 GB당 아웃바운드 요금이 만들어 낼 수 있는 예상치 못한 청구서를 피할 수 있습니다.',
+          '이메일 첨부파일로 파일을 공유하는 것은 몇 메가바이트를 넘어서면 적합하지 않은 방법입니다 — 대부분의 메일함은 첨부파일을 약 20-25MB로 제한하며, 파일은 이후 암호화되지 않은 채로 여러 메일함에 무기한 남아 있습니다. 더 나은 기본값은 시간이 지나면 만료되는 링크입니다: 위에서 백업용으로 언급한 것과 같은 오브젝트 스토리지 서비스(Backblaze B2, Cloudflare R2, Wasabi)는 각각 "프리사인드 URL"을 생성할 수 있습니다 — 특정 파일 하나에 대한 임시 접근 권한을 부여하고 설정된 시간이 지나면 자동으로 만료되는 링크로, 저장소 버킷 전체를 공개할 필요가 없습니다. 문제 진단을 위해 호스팅이나 데이터베이스 업체의 지원팀과 파일을 공유할 때는 데이터베이스 비밀번호나 API 키를 파일 자체에 넣지 마세요 — 지원 티켓이나 공유 링크는 의도한 수신자보다 더 오래 남아 있을 수 있으므로, 파일이 더 이상 필요 없어지면 해당 자격 증명을 교체하세요. 동영상이나 데이터셋처럼 대용량 파일을 반복적으로 공유해야 한다면, Cloudflare R2의 아웃바운드 트래픽 무료 요금제는 공유 링크가 여러 번 다운로드될 때 GB당 아웃바운드 요금이 만들어 낼 수 있는 예상치 못한 청구서를 피할 수 있습니다.',
       },
       pipaCompliance: {
         id: 'pipa-compliance',
         title: '개인정보 보호: PIPA와 개인정보보호위원회',
         content:
-          '한국의 개인정보보호법(PIPA)은 개인정보보호위원회(PIPC)가 집행하며, 한국인 개인정보의 국외 이전을 제한합니다 — 이는 Cloudflare 자체의 South Korea PIPA 트러스트 허브 페이지에서 일반적인 수준으로 확인되는 내용입니다. Cafe24, 가비아, 닷홈, NHN Hosting과 같이 국내에서 호스팅하면 데이터가 애초에 한국을 벗어나지 않으므로 국외 이전 문제 자체를 피할 수 있습니다. 이는 한국인 개인정보를 다루는 사이트라면 어느 업체를 가격 기준으로 최종 선택하든 관계없이, 해외 호스팅 업체 대비 국내 호스팅 업체가 갖는 실질적인 장점입니다.',
+          '한국의 개인정보보호법(PIPA)은 개인정보보호위원회(PIPC)가 집행하며 국외 이전에 대한 요건을 둡니다. 국내 호스팅을 쓰면 호스팅 단계의 국외 이전 문제를 줄일 수 있지만, 사이트 전체의 법 준수 여부는 법적 근거·위탁 계약·보호조치에 달려 있습니다. 법률 자문이 아닙니다. 공식 근거는 [개인정보보호위원회(PIPC)](https://www.pipc.go.kr/) 자료를 확인하세요.',
       },
       verdict: {
         id: 'verdict',
         title: '결론',
         content:
-          '[Cafe24](https://www.cafe24.com/)는 한국 최대 호스팅·이커머스 플랫폼이라는 규모를 감안할 때 일반적인 기업 사이트나 온라인 쇼핑몰에 가장 안전한 기본 선택지입니다. [가비아](https://www.gabia.com/)는 한국 1위 도메인 등록업체와 호스팅을 함께 이용하고 싶고 그만큼 비용을 지불할 의향이 있는 독자에게 적합합니다. [닷홈](https://www.dothome.co.kr/)은 예산 제약이 있거나 취미 프로젝트에 적합하며, [NHN Hosting](https://www.nhncloud.com/)은 다소 오래된 포지셔닝을 고려할 때 선택 전에 최신 요금과 후기를 직접 확인해 볼 가치가 있습니다. 이 결론은 오직 가격과 적합성만을 기준으로 합니다.',
+          '[Cafe24](https://www.cafe24.com/)는 쇼핑몰 기능과 호스팅을 함께 쓰려는 경우 후보가 될 수 있습니다(편집 의견). [가비아](https://www.gabia.com/)는 도메인과 호스팅을 한곳에서 관리하려는 독자에게 맞을 수 있으며, 네 업체 중 시작 요금이 가장 높습니다. [닷홈](https://www.dothome.co.kr/)은 예산 제약이 있거나 취미 프로젝트에 맞을 수 있고, [NHN Hosting](https://www.nhncloud.com/)은 선택 전에 현재 서비스와 후기를 직접 확인해 보시기 바랍니다. 결론은 가격과 적합성만을 기준으로 한 편집 의견입니다.',
       },
       faq: {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           {
-            q: '한국 웹 호스팅 중 가장 저렴한 곳은 어디인가요?',
-            a: '2026-11-03에 확인한 시작 가격 기준으로 Cafe24가 월 450원(약 0.33달러), 닷홈이 월 900원(약 0.67달러), 가비아가 월 10,450원(부가세 포함, 약 7.77달러)입니다. NHN Hosting의 월 250원 프로모션가는 같은 날 요금 페이지에 접속할 수 없어 재확인하지 못했습니다(미확인). 시작 가격은 요금제의 사양과 계약 조건이 서로 다르므로, 설치비와 약정 조건까지 함께 비교하시기 바랍니다.',
-          },
-          {
-            q: 'Cafe24의 월 450원 요금에는 부가세와 계약 기간이 반영되어 있나요?',
-            a: 'Cafe24 호스팅 페이지에는 월 450원부터라는 표기만 있고, 부가세 포함 여부와 계약 기간은 적혀 있지 않습니다. 가입 전에 결제 단계의 최종 금액과 약정 조건을 직접 확인하시기 바랍니다.',
-          },
-          {
             q: '가비아 호스팅 요금은 얼마인가요?',
-            a: '가비아의 무제한 트래픽 기본 PHP 플랜은 월 10,450원(부가세 포함, 약 7.77달러)부터 시작하며, 월 30GB 트래픽 기본 플랜은 월 4,950원입니다. 설치비는 11,000원(타사 도메인 사용 시 33,000원)이고 요금 페이지에는 최소 계약 기간이 표기되어 있지 않습니다. 여기서 비교한 네 업체 중 시작 가격이 가장 높습니다.',
+            a: '가비아의 무제한 트래픽 기본 PHP 플랜은 월 10,450원(약 7.60달러)부터 시작합니다. 이는 여기서 비교한 네 업체 중 가장 높은 시작 가격입니다.',
           },
           {
             q: '닷홈은 취미 프로젝트에 적합한가요?',
-            a: '네, 그것이 닷홈의 주된 적합 용도입니다. 닷홈의 1.5G웹호스팅은 월 900원(약 0.67달러)부터 시작하고 설치비는 5,000원이며, 12개월·24개월·48개월 약정 시 각각 10%·20%·40% 할인이 표기되어 있습니다. 중소기업보다는 학생과 취미 이용자에 더 치우쳐 있습니다.',
+            a: '네, 그것이 닷홈의 주된 적합 용도입니다. 닷홈의 업그레이드 플랜은 월 900원(약 0.65달러)부터 시작하며, 소규모·취미 프로젝트에 맞을 수 있습니다.',
           },
           {
-            q: 'NHN Hosting은 2026년에도 여전히 유효한 선택지인가요?',
-            a: '낮은 시작 가격(300MB 티어 프로모션가 월 250원부터)이 알려져 있지만, 2026-11-03에는 요금 페이지에 접속할 수 없어 현재 가격을 재확인하지 못했습니다(미확인). Cafe24나 가비아에 비해 다소 오래된 느낌의 브랜드로 읽히므로, 프로젝트에서 적극적으로 추천하기 전에 최신 요금과 후기를 직접 확인하시기 바랍니다.',
+            q: 'NHN Hosting의 시작 요금은 얼마인가요?',
+            a: '2026-08-30 NHN Hosting 페이지 기준으로 300MB 티어 프로모션가는 월 250원부터입니다. 선택 전에 현재 서비스 내용과 이용자 후기를 직접 확인하시기 바랍니다.',
           },
           {
             q: 'PIPA는 데이터를 반드시 한국 내에 호스팅하도록 요구하나요?',
-            a: 'Cloudflare의 South Korea PIPA 트러스트 허브 페이지에 따르면, PIPA는 한국인 개인정보의 국외 이전을 제한합니다. Cafe24, 가비아, 닷홈, NHN Hosting과 같은 한국 업체에 국내 호스팅하면 국외 이전 문제 자체를 피할 수 있으며, 이는 한국인 개인정보를 다루는 사이트에 해외 호스팅 업체 대비 실질적인 장점입니다.',
+            a: 'PIPA는 국외 이전에 대한 요건을 두고 있으며(Cloudflare의 [South Korea PIPA 트러스트 허브](https://www.cloudflare.com/trust-hub/compliance-resources/south-korea-pipa/) 참조), 국내 호스팅이 일률적으로 의무라고 단정할 수는 없습니다. 국내 호스팅을 쓰면 호스팅 단계의 국외 이전 문제를 줄일 수 있지만, 사이트 전체의 법 준수 여부는 법적 근거·위탁 계약·보호조치에 달려 있습니다. 법률 자문이 아닙니다. 공식 근거는 [PIPC](https://www.pipc.go.kr/) 자료를 확인하세요.',
           },
           {
             q: '호스팅 요금제에 포함된 데이터베이스로 충분한가요, 아니면 별도로 필요한가요?',
-            a: 'Cafe24나 가비아 요금제에 포함된 MySQL 데이터베이스는 블로그나 소규모 CMS에는 충분합니다. 애플리케이션에 자체 사용자 데이터, 분석 이벤트, 또는 AI 기능을 위한 벡터/임베딩 저장소가 필요해지면 별도의 관리형 데이터베이스를 사용하는 것이 좋습니다 — Neon(프로젝트당 1GB)과 Supabase(500MB) 모두 결제 전에 테스트할 수 있는 무료 티어를 제공합니다. 자세한 내용은 위의 데이터베이스 별도 호스팅을 참고하세요.',
+            a: 'Cafe24나 가비아 요금제에 포함된 MySQL 데이터베이스는 블로그나 소규모 CMS에는 충분합니다. 애플리케이션에 자체 사용자 데이터, 분석 이벤트, 또는 AI 기능을 위한 벡터/임베딩 저장소가 필요해지면 별도의 관리형 데이터베이스를 사용하는 것이 좋습니다 — Neon과 Supabase 모두 결제 전에 테스트할 수 있는 무료 티어를 제공합니다. 자세한 내용은 위의 데이터베이스 별도 호스팅을 참고하세요.',
           },
           {
             q: '사이트 외부 백업은 실제로 얼마가 드나요?',
-            a: 'Backblaze B2(TB당 월 $6.95부터), Cloudflare R2(TB당 약 $15, 직접 아웃바운드 트래픽 요금 없음), Wasabi(TB당 월 $7.99부터) 등 오브젝트 스토리지는 모두 2026-11-03에 직접 확인한 가격 기준으로, 일반적인 소규모 사이트의 전체 백업을 보관하는 데 월 $1 미만이 듭니다 — 호스팅 업체 장애로 유일한 백업본을 잃는 것보다 훨씬 저렴합니다.',
+            a: 'Backblaze B2(TB당 월 $6.95), Cloudflare R2(TB당 약 $15, 아웃바운드 트래픽 요금 없음), Wasabi(TB당 월 $7.99 고정) 등 오브젝트 스토리지는 모두 2026-09-03 업체 페이지 게재 가격 기준으로, 일반적인 소규모 사이트의 전체 백업을 보관하는 데 월 $1 미만이 듭니다 — 호스팅 업체 장애로 유일한 백업본을 잃는 것보다 훨씬 저렴합니다.',
           },
           {
             q: '대용량 파일이나 데이터셋을 가장 안전하게 공유하는 방법은 무엇인가요?',
@@ -2527,17 +2512,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         items: [
-          '[Cafe24 호스팅 요금](https://hosting.cafe24.com/) — 2026-11-03 Cafe24 호스팅 페이지에서 직접 확인(뉴아우토반 호스팅·뉴매니지드 워드프레스 월 450원~, 부가세와 계약 기간은 페이지에 표기되지 않음).',
-          '[가비아 호스팅 요금](https://webhosting.gabia.com/service) — 2026-11-03 가비아에서 직접 확인: 무제한 트래픽 기본 PHP 플랜 월 10,450원(부가세 포함), 월 30GB 트래픽 기본 플랜 월 4,950원, 설치비 11,000원(타사 도메인 사용 시 33,000원), 최소 계약 기간 표기 없음.',
-          '[닷홈 호스팅 요금](https://www.dothome.co.kr/web/product/price.php) — 2026-11-03 닷홈에서 직접 확인: 1.5G웹호스팅 월 900원, 설치비 5,000원, 12개월·24개월·48개월 약정 할인 10%·20%·40%.',
-          '[NHN Hosting](https://www.nhncloud.com/) — 월 250원 프로모션(300MB 티어)은 2026-08-30에 확인한 값이며, 2026-11-03 재확인은 요금 페이지에 접속할 수 없어 실패했습니다(미확인).',
+          '[Cafe24 호스팅 요금](https://www.cafe24.com/) — 2026-11-02 Cafe24 호스팅 페이지에서 직접 확인(뉴아우토반 호스팅·뉴매니지드 워드프레스 월 450원~, 부가세와 계약 기간은 페이지에 표기되지 않음). 2026-08-30에는 스타트업 플랜 월 450원부터로 확인.',
+          '[가비아 호스팅 요금](https://www.gabia.com/) — 2026-08-30 가비아에서 직접 확인(2026-11-02에는 요금 페이지를 읽지 못해 재확인하지 못함). 무제한 트래픽 기본 PHP 플랜 월 10,450원.',
+          '[닷홈 호스팅 요금](https://www.dothome.co.kr/) — 2026-08-30 닷홈에서 직접 확인. 업그레이드 플랜 월 900원.',
+          '[NHN Hosting 요금](https://www.nhncloud.com/) — 2026-08-30 NHN Hosting에서 직접 확인. 300MB 티어 프로모션가 월 250원부터 시작하는 엔트리 리눅스 호스팅.',
           '[Cloudflare — South Korea PIPA 트러스트 허브](https://www.cloudflare.com/trust-hub/compliance-resources/south-korea-pipa/) — PIPA가 한국인 개인정보의 국외 이전을 제한한다는 주장의 출처.',
-          '[Backblaze B2 요금](https://www.backblaze.com/cloud-storage/pricing) — 2026-11-03 직접 확인: TB당 월 $6.95부터, 첫 10GB 무료, 평균 저장 데이터의 3배까지 아웃바운드 트래픽 무료.',
-          '[Cloudflare R2 요금](https://developers.cloudflare.com/r2/pricing/) — 2026-11-03 직접 확인: 표준 저장소 GB당 월 $0.015, 직접 아웃바운드 트래픽 요금 없음, 10GB 무료 티어.',
-          '[Wasabi 요금](https://wasabi.com/pricing/) — 2026-11-03 직접 확인: TB당 월 $7.99부터, 아웃바운드 트래픽과 API 요금 없음.',
-          '[Neon 요금](https://neon.com/pricing) — 2026-11-03 직접 확인: 무료 티어는 프로젝트당 월 100 컴퓨팅 시간, 프로젝트당 1GB 저장 공간(전체 20GB), 프로젝트당 5GB 아웃바운드 트래픽; 유료 컴퓨팅은 Launch 요금제 시간당 $0.106, 저장 공간 GB당 월 $0.35.',
-          '[Supabase 요금](https://supabase.com/pricing) — 2026-11-03 직접 확인: 무료 티어는 데이터베이스 500MB, 저장 공간 1GB, 월간 활성 사용자 50,000명, 2개 활성 프로젝트; Pro 요금제는 월 $25부터.',
-          '[환율 데이터 (open.er-api.com)](https://open.er-api.com/v6/latest/USD) — 2026-11-03 기준 1달러 = 약 1,344원, 달러 환산액은 이 값으로 계산한 근사치.',
+          '[Backblaze B2 요금](https://www.backblaze.com/cloud-storage/pricing) — 2026-09-03 업체 페이지 게재 내용 기준: TB당 월 $6.95, 첫 10GB 무료, 저장 데이터의 3배까지 아웃바운드 트래픽 무료.',
+          '[Cloudflare R2 요금](https://developers.cloudflare.com/r2/pricing/) — 2026-09-03 업체 페이지 게재 내용 기준: 표준 저장소 GB당 월 $0.015, 아웃바운드 트래픽 요금 없음, 10GB 무료 티어.',
+          '[Wasabi 요금](https://wasabi.com/pricing/) — 2026-09-03 업체 페이지 게재 내용 기준: TB당 월 $7.99 고정, 별도의 아웃바운드 트래픽이나 API 요금 없음.',
+          '[Neon 요금](https://neon.com/pricing) — 2026-11-03 업체 페이지 게재 내용 기준: 무료 티어는 프로젝트당 월 100 컴퓨팅 시간, 프로젝트당 1GB 저장 공간, 5GB 아웃바운드 트래픽; 유료 컴퓨팅은 시간당 $0.106부터.',
+          '[Supabase 요금](https://supabase.com/pricing) — 2026-09-03 업체 페이지 게재 내용 기준: 무료 티어는 데이터베이스 500MB, 저장 공간 1GB, 월간 활성 사용자 50,000명; Pro 요금제는 월 $25.',
         ],
       },
       relatedReading: {

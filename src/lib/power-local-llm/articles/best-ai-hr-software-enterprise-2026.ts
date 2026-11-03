@@ -167,13 +167,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-03',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
-    title: 'Best AI-Powered HR Software for Enterprises 2026: Privacy-First Options Compared',
-    seoTitle: 'Best AI HR Software for Enterprises (2026): Compared',
+    title: 'AI-Powered HR Software for Enterprises 2026: Privacy-First Options Compared',
+    seoTitle: 'AI HR Software for Enterprises (2026): Options Compared',
     intro:
       'AI now touches resume screening, interviews, onboarding, sentiment surveys and review drafting. This guide compares the mainstream platforms with a self-hosted option and covers the rules that apply either way (not legal advice).',
     metaDescription:
@@ -334,8 +334,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A self-hosted local-LLM stack does not compete with Workday or Lattice on breadth — it competes on where the data sits, for the specific workflows where that matters most.** For HR policy Q&A over confidential HR documents, see the dedicated [self-hosted internal HR and IT helpdesk bots](/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) guide, which covers RAG-based access-control patterns in depth. This section covers the other four use cases.',
         items: [
-          '**Resume screening:** a local LLM can extract structured fields (skills, years of experience, education) from resume text and score candidates against job-requirement criteria without candidate PII ever reaching a third-party API — the model runs on infrastructure you control, and the extracted output still requires human review before any candidate is advanced or rejected.',
-          '**Employee-sentiment analysis:** internal engagement-survey free text is some of the most candid content a company collects — a local LLM can cluster themes and summarize sentiment across hundreds of responses while the raw comments stay on infrastructure the company controls, as long as the pipeline is not wired to any external API — which also tends to make employees more candid once they trust the confidentiality is real.',
+          '**Resume screening:** a local LLM can extract structured fields (skills, years of experience, education) from resume text and score candidates against job-requirement criteria without sending candidate PII to a third-party API, provided the model and its logs run on infrastructure you control (rented cloud GPUs are third-party processors and need a data-processing agreement) — the model runs on infrastructure you control, and the extracted output still requires human review before any candidate is advanced or rejected.',
+          '**Employee-sentiment analysis:** internal engagement-survey free text is some of the most candid content a company collects — a local LLM can cluster themes and summarize sentiment across hundreds of responses while the raw comments stay on infrastructure the company controls, as long as the pipeline is not wired to any external API.',
           '**Onboarding automation:** a RAG-based onboarding assistant answering new-hire questions over internal handbooks, benefits documents, and IT setup guides uses the same retrieval-and-access-control pattern covered in depth in the [internal HR/IT chatbot guide](/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — this is largely the same architecture applied to a different document set.',
           '**Performance-review drafting assistance:** a local LLM can help a manager turn rough notes into a structured draft review without that confidential, pre-decision content passing through a third-party API — the manager remains the author and the final decision-maker; the model is a drafting aid, not a scorer.',
           'For the full RAG-platform and vector-database comparison behind any of these builds, see [best RAG tools for business documents](/power-local-llm/best-rag-tools-for-business-documents-2026) and [GDPR-compliant local RAG for sensitive documents](/power-local-llm/local-rag-for-private-business-data) for the control set that applies once regulated personal data is involved.',
@@ -444,12 +444,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Best AI-Powered HR Software for Enterprises 2026: Privacy-First Options Compared',
+      headline: 'AI-Powered HR Software for Enterprises 2026: Privacy-First Options Compared',
       description: 'Enterprise AI HR software compared: Workday, HireVue, Lattice and more, with public prices, EU AI Act dates and a self-hosted option. Not legal advice.',
       url: 'https://www.promptquorum.com/power-local-llm/best-ai-hr-software-enterprise',
       inLanguage: 'en',
       datePublished: '2026-09-03',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Advanced',
@@ -460,28 +460,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: '[www.promptquorum.com](https://www.promptquorum.com)' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/power-local-llm](https://www.promptquorum.com/power-local-llm)' },
-        { '@type': 'ListItem', position: 3, name: 'Best AI-Powered HR Software for Enterprises 2026', item: '[www.promptquorum.com/power-local-llm/best-ai-hr-software-enterprise](https://www.promptquorum.com/power-local-llm/best-ai-hr-software-enterprise)' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'AI-Powered HR Software for Enterprises 2026', item: 'https://www.promptquorum.com/power-local-llm/best-ai-hr-software-enterprise' },
       ],
     },
   },
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-03',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
-    title: 'Beste KI-HR-Software für Unternehmen 2026: Privacy-First-Optionen im Vergleich',
-    seoTitle: 'Beste KI-HR-Software für Unternehmen im Vergleich (2026)',
+    title: 'KI-HR-Software für Unternehmen 2026: Privacy-First-Optionen im Vergleich',
+    seoTitle: 'KI-HR-Software für Unternehmen im Vergleich (2026)',
     intro:
       'KI berührt heute Lebenslauf-Screening, Interviews, Onboarding, Stimmungsumfragen und Beurteilungsentwürfe. Dieser Leitfaden vergleicht die gängigen Plattformen mit einer selbst gehosteten Alternative und nennt die Regeln, die in beiden Fällen gelten (keine Rechtsberatung).',
     metaDescription:
       'KI-HR-Software im Vergleich: Workday, HireVue, Lattice u. a. mit öffentlichen Preisen, EU-AI-Act-Fristen und Self-Hosting-Option. Keine Rechtsberatung.',
     twitterDescription:
-      'KI-HR-Software im Vergleich: Marktführer-Plattformen vs. selbst gehostete lokale LLMs für Screening, Stimmungsanalyse und Beurteilungsentwürfe.',
+      'KI-HR-Software im Vergleich: Gängige Plattformen vs. selbst gehostete lokale LLMs für Screening, Stimmungsanalyse und Beurteilungsentwürfe.',
     affiliateDisclosure: true,
     current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
@@ -506,9 +506,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       de: {
         question: 'Welche KI-gestützte HR-Software eignet sich für Unternehmen, die kontrollieren müssen, wohin Mitarbeiter- und Bewerberdaten fließen?',
         answer:
-          'Es gibt keine einzelne beste Antwort — sie hängt vom jeweiligen Workflow und den dahinterliegenden Daten ab. Marktführer-Plattformen (Workday für ATS/Screening, HireVue für Interview-Bewertung, Paradox für Terminplanung, Lattice oder 15Five für Leistungsbeurteilungen, Culture Amp für Stimmungsanalyse) sind der schnellste Weg zum produktiven Einsatz und bringen ihr eigenes KI-Hosting mit. Für Workflows mit den sensibelsten Bewerber- und Mitarbeiterdaten — Lebenslauf-PII, vertrauliche Beurteilungsentwürfe, ehrliche Stimmungsbefragungstexte — hält ein selbst gehosteter lokaler LLM diese Inhalte auf Infrastruktur, die Sie kontrollieren, allerdings auf Kosten des eigenen Aufbaus und Betriebs des Stacks.',
+          'Es gibt keine einzelne beste Antwort — sie hängt vom jeweiligen Workflow und den dahinterliegenden Daten ab. Gängige Plattformen (Workday für ATS/Screening, HireVue für Interview-Bewertung, Paradox für Terminplanung, Lattice oder 15Five für Leistungsbeurteilungen, Culture Amp für Stimmungsanalyse) sind der schnellste Weg zum produktiven Einsatz und bringen ihr eigenes KI-Hosting mit. Für Workflows mit den sensibelsten Bewerber- und Mitarbeiterdaten — Lebenslauf-PII, vertrauliche Beurteilungsentwürfe, ehrliche Stimmungsbefragungstexte — hält ein selbst gehosteter lokaler LLM diese Inhalte auf Infrastruktur, die Sie kontrollieren, allerdings auf Kosten des eigenen Aufbaus und Betriebs des Stacks.',
         bullets: [
-          'Marktführer-Plattformen bündeln KI-Hosting, Support und Integrationen — am schnellsten einsatzbereit, Daten verlassen die eigene Infrastruktur',
+          'Gängige Plattformen bündeln KI-Hosting, Support und Integrationen — am schnellsten einsatzbereit, Daten verlassen die eigene Infrastruktur',
           'Selbst gehostete lokale LLMs halten Bewerber-PII, Stimmungstexte und Beurteilungsentwürfe auf kontrollierter Infrastruktur',
           'KI im Recruiting/HR ist unter dem EU-KI-Gesetz hochriskant eingestuft und unterliegt Bias-Audit-Gesetzen wie NYC Local Law 144',
           'Die finale Entscheidung muss bei Screening, Bewertung und Leistungsergebnissen immer bei Menschen bleiben — keine Vollautomatisierung',
@@ -538,7 +538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Marktführer-KI-HR-Plattformen und ein selbst gehosteter lokaler LLM-Stack lösen unterschiedliche Probleme, keine konkurrierenden Versionen desselben.** Plattformen sind der schnellste Weg in den Einsatz; Self-Hosting, wenn Bewerber- oder Mitarbeiterdaten die eigene Infrastruktur nicht verlassen dürfen.',
+          '**Gängige KI-HR-Plattformen und ein selbst gehosteter lokaler LLM-Stack lösen unterschiedliche Probleme, keine konkurrierenden Versionen desselben.** Plattformen sind der schnellste Weg in den Einsatz; Self-Hosting, wenn Bewerber- oder Mitarbeiterdaten die eigene Infrastruktur nicht verlassen dürfen.',
           '**Lebenslauf-Screening, Stimmungsanalyse und Beurteilungsentwürfe sind die stärksten Kandidaten für Self-Hosting** — jeder berührt regelmäßig Daten (Bewerber-PII, ehrliche Mitarbeitertexte, vertrauliche Beurteilungsinhalte), die ein Unternehmen möglicherweise nicht von einer Drittanbieter-API verarbeiten lassen möchte.',
           '**KI im Recruiting und HR ist unter dem EU-KI-Gesetz eine Hochrisikokategorie**, und US-Rechtsräume wie New York City verlangen unabhängige Bias-Audits für automatisierte Einstellungswerkzeuge — dies gilt für jeden KI-gestützten Screening- oder Bewertungsworkflow, kommerziell wie selbst gehostet.',
           '**Dies ist keine Rechtsberatung.** Bias-Audit-Pflichten, Bewerber-Informationspflichten und Hochrisiko-Regeln variieren je nach Rechtsraum und ändern sich — vor jedem KI-Einsatz in Recruiting oder HR qualifizierte Rechtsberatung einholen.',
@@ -548,7 +548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Marktführer-KI-HR-Plattformen (Workday, HireVue, Lattice) erledigen Lebenslauf-Screening, Interview-Planung und Leistungsbeurteilungen auf Hersteller-Infrastruktur, während ein selbst gehosteter lokaler LLM-Stack Bewerber-PII, Stimmungsdaten und Beurteilungsentwürfe auf unternehmenskontrollierter Infrastruktur hält.',
+            text: 'Gängige KI-HR-Plattformen (Workday, HireVue, Lattice) erledigen Lebenslauf-Screening, Interview-Planung und Leistungsbeurteilungen auf Hersteller-Infrastruktur, während ein selbst gehosteter lokaler LLM-Stack Bewerber-PII, Stimmungsdaten und Beurteilungsentwürfe auf unternehmenskontrollierter Infrastruktur hält.',
           },
           {
             type: 'plain-terms',
@@ -562,7 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**EU-KI-Gesetz-Einstufung:** KI-Systeme für Recruiting, Bewerber-Screening und Leistungsbewertung von Beschäftigten gelten nach Anhang III der Verordnung (EU) 2024/1689 als hochriskant.',
           '**NYC Local Law 144:** verlangt ein unabhängiges Bias-Audit, veröffentlichte Ergebnisse und Bewerber-Information für jedes "automatisierte Einstellungsentscheidungs-Werkzeug", das Einstellungsentscheidungen in New York City wesentlich unterstützt.',
-          '**Hier verglichene Marktführer-Plattformen:** Workday, HireVue, Paradox (Olivia), Lattice, 15Five, Culture Amp, Textio und Eightfold AI — jeweils reale, aktuell aktive Produkte, keine hypothetischen Beispiele.',
+          '**Hier verglichene gängige Plattformen:** Workday, HireVue, Paradox (Olivia), Lattice, 15Five, Culture Amp, Textio und Eightfold AI — jeweils reale, aktuell aktive Produkte, keine hypothetischen Beispiele.',
           '**Kostenspanne für selbst gehostete Infrastruktur:** etwa 0,34–4,29 $/Stunde für On-Demand-Cloud-GPUs von der RTX-4090- bis zur H100-Klasse (Preisseiten von RunPod und Lambda), geeignet für einen Pilot mit einem mittelgroßen Modell (7–32B Parameter), vor Berücksichtigung des Entwicklungsaufwands.',
           '**Dies ist keine Rechtsberatung** — regulatorische Pflichten für KI in Recruiting und HR variieren je nach Rechtsraum und ändern sich; aktuelle Anforderungen vor dem Einsatz mit Rechtsberatung prüfen.',
         ],
@@ -572,20 +572,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wo KI tatsächlich in HR-Workflows eingreift',
         content:
           '**"KI im HR-Bereich" ist keine einzelne Kaufentscheidung — es sind sechs oder mehr getrennte Workflows mit sehr unterschiedlichen Datenschutzprofilen.** Sie als eine Kaufentscheidung zu behandeln, ist der erste Fehler, den die meisten Unternehmen machen.',
-        columns: ['HR-Workflow', 'Marktführer-Beispiel', 'Datensensibilität', 'Self-Hosting-Eignung'],
+        columns: ['HR-Workflow', 'Beispiel für gängige Plattformen', 'Datensensibilität', 'Self-Hosting-Eignung'],
         rows: [
-          { 'HR-Workflow': 'Lebenslauf-Screening', 'Marktführer-Beispiel': 'Workday, Eightfold AI', 'Datensensibilität': 'Hoch (Bewerber-PII)', 'Self-Hosting-Eignung': 'Stark' },
-          { 'HR-Workflow': 'Interview-Terminplanung', 'Marktführer-Beispiel': 'Paradox (Olivia)', 'Datensensibilität': 'Niedrig-mäßig', 'Self-Hosting-Eignung': 'Schwach — Aufwand lohnt kaum' },
-          { 'HR-Workflow': 'Interview-Bewertung', 'Marktführer-Beispiel': 'HireVue', 'Datensensibilität': 'Hoch (Video/Verhalten)', 'Self-Hosting-Eignung': 'Mäßig' },
-          { 'HR-Workflow': 'Onboarding-Q&A', 'Marktführer-Beispiel': 'HRIS-integrierte Bots', 'Datensensibilität': 'Mäßig', 'Self-Hosting-Eignung': 'Stark (RAG über Dokumente)' },
-          { 'HR-Workflow': 'Stimmungsanalyse', 'Marktführer-Beispiel': 'Culture Amp', 'Datensensibilität': 'Hoch (ehrlicher Freitext)', 'Self-Hosting-Eignung': 'Stark' },
-          { 'HR-Workflow': 'Beurteilungsentwürfe', 'Marktführer-Beispiel': 'Lattice, 15Five', 'Datensensibilität': 'Hoch (vertraulicher Inhalt)', 'Self-Hosting-Eignung': 'Stark' },
-          { 'HR-Workflow': 'HR-Richtlinien-Q&A', 'Marktführer-Beispiel': 'n/a — siehe separater Leitfaden', 'Datensensibilität': 'Hoch', 'Self-Hosting-Eignung': 'Stark — separat behandelt' },
+          { 'HR-Workflow': 'Lebenslauf-Screening', 'Beispiel für gängige Plattformen': 'Workday, Eightfold AI', 'Datensensibilität': 'Hoch (Bewerber-PII)', 'Self-Hosting-Eignung': 'Stark' },
+          { 'HR-Workflow': 'Interview-Terminplanung', 'Beispiel für gängige Plattformen': 'Paradox (Olivia)', 'Datensensibilität': 'Niedrig-mäßig', 'Self-Hosting-Eignung': 'Schwach — Aufwand lohnt kaum' },
+          { 'HR-Workflow': 'Interview-Bewertung', 'Beispiel für gängige Plattformen': 'HireVue', 'Datensensibilität': 'Hoch (Video/Verhalten)', 'Self-Hosting-Eignung': 'Mäßig' },
+          { 'HR-Workflow': 'Onboarding-Q&A', 'Beispiel für gängige Plattformen': 'HRIS-integrierte Bots', 'Datensensibilität': 'Mäßig', 'Self-Hosting-Eignung': 'Stark (RAG über Dokumente)' },
+          { 'HR-Workflow': 'Stimmungsanalyse', 'Beispiel für gängige Plattformen': 'Culture Amp', 'Datensensibilität': 'Hoch (ehrlicher Freitext)', 'Self-Hosting-Eignung': 'Stark' },
+          { 'HR-Workflow': 'Beurteilungsentwürfe', 'Beispiel für gängige Plattformen': 'Lattice, 15Five', 'Datensensibilität': 'Hoch (vertraulicher Inhalt)', 'Self-Hosting-Eignung': 'Stark' },
+          { 'HR-Workflow': 'HR-Richtlinien-Q&A', 'Beispiel für gängige Plattformen': 'n/a — siehe separater Leitfaden', 'Datensensibilität': 'Hoch', 'Self-Hosting-Eignung': 'Stark — separat behandelt' },
         ],
       },
       commercialPlatforms: {
         id: 'commercial-platforms',
-        title: 'Marktführende KI-HR-Plattformen im Vergleich',
+        title: 'Gängige KI-HR-Plattformen im Vergleich',
         content:
           '**Diese Plattformen sind reale, aktuell aktive Produkte mit öffentlich dokumentierten KI-Funktionen — keine der folgenden Beschreibungen ist ein PromptQuorum-Testergebnis, und keine sollte als Bewertung des Bias-Audit- oder Compliance-Status eines Anbieters gelesen werden.** Aktuellen Funktionsumfang und Audit-Dokumentation direkt beim jeweiligen Anbieter vor dem Kauf prüfen.',
         items: [
@@ -619,7 +619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'regulatory-risk',
         title: 'Regulatorisches Risiko: EU-KI-Gesetz und Bias-Audit-Gesetze',
         content:
-          '**KI bei Recruiting- und HR-Entscheidungen ist eine regulierte Kategorie, kein gewöhnlicher Softwarekauf — dies gilt für jede Plattform und jeden Ansatz in diesem Leitfaden gleichermaßen, marktführend oder selbst gehostet.** Nach dem EU-KI-Gesetz (Verordnung (EU) 2024/1689) gelten KI-Systeme für Recruiting, Bewerber-Screening und Leistungsbewertung von Beschäftigten nach Anhang III als hochriskant, was Pflichten zu Risikomanagement, menschlicher Aufsicht und technischer Dokumentation mit sich bringt. Zusätzlich verlangt die New Yorker Local Law 144 von Arbeitgebern, die ein "automatisiertes Einstellungsentscheidungs-Werkzeug" zur wesentlichen Unterstützung einer Einstellungsentscheidung in NYC einsetzen, ein unabhängiges Bias-Audit in Auftrag zu geben, eine Ergebniszusammenfassung zu veröffentlichen und Bewerber zu informieren — mehrere weitere US-Bundesstaaten und -Städte haben vergleichbare Anforderungen eingeführt oder verabschiedet. Für in Deutschland/DACH tätige Unternehmen gelten zusätzlich die DSGVO-Anforderungen an die Verarbeitung von Bewerber- und Mitarbeiterdaten sowie, je nach Land, Mitbestimmungsrechte des Betriebsrats bei der Einführung KI-gestützter Bewertungssysteme.',
+          '**KI bei Recruiting- und HR-Entscheidungen ist eine regulierte Kategorie, kein gewöhnlicher Softwarekauf — dies gilt für jede Plattform und jeden Ansatz in diesem Leitfaden gleichermaßen, ob Standardplattform oder selbst gehostet.** Nach dem EU-KI-Gesetz (Verordnung (EU) 2024/1689) gelten KI-Systeme für Recruiting, Bewerber-Screening und Leistungsbewertung von Beschäftigten nach Anhang III als hochriskant, was Pflichten zu Risikomanagement, menschlicher Aufsicht und technischer Dokumentation mit sich bringt. Zusätzlich verlangt die New Yorker Local Law 144 von Arbeitgebern, die ein "automatisiertes Einstellungsentscheidungs-Werkzeug" zur wesentlichen Unterstützung einer Einstellungsentscheidung in NYC einsetzen, ein unabhängiges Bias-Audit in Auftrag zu geben, eine Ergebniszusammenfassung zu veröffentlichen und Bewerber zu informieren — mehrere weitere US-Bundesstaaten und -Städte haben vergleichbare Anforderungen eingeführt oder verabschiedet. Für in Deutschland/DACH tätige Unternehmen gelten zusätzlich die DSGVO-Anforderungen an die Verarbeitung von Bewerber- und Mitarbeiterdaten sowie, je nach Land, Mitbestimmungsrechte des Betriebsrats bei der Einführung KI-gestützter Bewertungssysteme.',
         items: [
           '**Dies ist keine Rechtsberatung.** Welche Regeln gelten, hängt vom Rechtsraum, dem konkreten Workflow und dem Gewicht ab, das die KI-Ausgabe in der finalen Entscheidung erhält — Pflichten unterscheiden sich je Gesetz und ändern sich mit der Zeit.',
           'Die Angabe eines Anbieters, sein Produkt umfasse "Bias-Tests" oder "Fairness-Funktionen", ist nicht gleichbedeutend damit, dass Ihr konkreter Einsatz eine spezifische gesetzliche Audit-Pflicht in einem bestimmten Rechtsraum erfüllt — aktuelle Audit-Dokumentation und rechtliche Anwendbarkeit direkt mit Rechtsberatung und dem Anbieter prüfen, nicht anhand von Marketingtexten.',
@@ -636,8 +636,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Ein selbst gehosteter lokaler LLM-Stack konkurriert nicht in der Breite mit Workday oder Lattice — er konkurriert dort, wo die Daten liegen, für genau die Workflows, bei denen das am meisten zählt.** Für HR-Richtlinien-Q&A über vertrauliche HR-Dokumente siehe den eigenen Leitfaden zu [selbst gehosteten internen HR- und IT-Helpdesk-Bots](/de/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots), der RAG-basierte Zugriffskontrollmuster ausführlich behandelt. Dieser Abschnitt behandelt die anderen vier Anwendungsfälle.',
         items: [
-          '**Lebenslauf-Screening:** ein lokaler LLM kann strukturierte Felder (Kenntnisse, Berufserfahrung, Ausbildung) aus Lebenslauftexten extrahieren und Kandidaten gegen Stellenanforderungen bewerten, ohne dass Bewerber-PII jemals eine Drittanbieter-API erreicht — das Modell läuft auf kontrollierter Infrastruktur, und die extrahierte Ausgabe erfordert weiterhin menschliche Prüfung, bevor ein Kandidat weiterkommt oder abgelehnt wird.',
-          '**Mitarbeiterstimmungsanalyse:** Freitext aus internen Engagement-Befragungen gehört zu den ehrlichsten Inhalten, die ein Unternehmen sammelt — ein lokaler LLM kann Themen clustern und Stimmungen über hunderte Antworten zusammenfassen, während die Rohkommentare auf von Ihnen kontrollierter Infrastruktur bleiben, solange die Pipeline nicht an eine externe API angebunden ist — was tendenziell auch die Offenheit der Mitarbeitenden erhöht, sobald sie der Vertraulichkeit wirklich vertrauen.',
+          '**Lebenslauf-Screening:** ein lokaler LLM kann strukturierte Felder (Kenntnisse, Berufserfahrung, Ausbildung) aus Lebenslauftexten extrahieren und Kandidaten gegen Stellenanforderungen bewerten, ohne Bewerber-PII an eine Drittanbieter-API zu senden, sofern Modell und Logs auf von Ihnen kontrollierter Infrastruktur laufen (gemietete Cloud-GPUs sind Auftragsverarbeiter und erfordern einen AVV nach Art. 28 DSGVO) — das Modell läuft auf kontrollierter Infrastruktur, und die extrahierte Ausgabe erfordert weiterhin menschliche Prüfung, bevor ein Kandidat weiterkommt oder abgelehnt wird.',
+          '**Mitarbeiterstimmungsanalyse:** Freitext aus internen Engagement-Befragungen gehört zu den ehrlichsten Inhalten, die ein Unternehmen sammelt — ein lokaler LLM kann Themen clustern und Stimmungen über hunderte Antworten zusammenfassen, während die Rohkommentare auf von Ihnen kontrollierter Infrastruktur bleiben, solange die Pipeline nicht an eine externe API angebunden ist.',
           '**Onboarding-Automatisierung:** ein RAG-basierter Onboarding-Assistent, der Fragen neuer Mitarbeitender zu internen Handbüchern, Sozialleistungsdokumenten und IT-Setup-Anleitungen beantwortet, nutzt dasselbe Retrieval- und Zugriffskontrollmuster, das im [internen HR/IT-Chatbot-Leitfaden](/de/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) ausführlich behandelt wird — es ist im Wesentlichen dieselbe Architektur, angewandt auf einen anderen Dokumentbestand.',
           '**Beurteilungsentwurf-Unterstützung:** ein lokaler LLM kann einer Führungskraft helfen, grobe Notizen in einen strukturierten Entwurf zu verwandeln, ohne dass dieser vertrauliche, vorentscheidungsrelevante Inhalt eine Drittanbieter-API durchläuft — die Führungskraft bleibt Autor und finale Entscheidungsträgerin; das Modell ist eine Schreibhilfe, kein Bewertungssystem.',
           'Für den vollständigen Vergleich der RAG-Plattformen und Vektordatenbanken hinter diesen Aufbauten siehe [beste RAG-Tools für Geschäftsdokumente](/de/power-local-llm/best-rag-tools-for-business-documents-2026) und [DSGVO-konformes lokales RAG für sensible Dokumente](/de/power-local-llm/local-rag-for-private-business-data) für das Kontrollset, das bei regulierten personenbezogenen Daten greift.',
@@ -661,27 +661,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost-comparison',
         title: 'Kosten: SaaS-Abo vs. selbst gehostete Infrastruktur',
         content:
-          '**Marktführer-Plattformen berechnen pro Mitarbeitendem oder Lizenz, meist über ein individuelles Enterprise-Angebot; selbst gehostete Infrastruktur tauscht dieses planbare Abo gegen nutzungsbasierte Rechenleistung plus Entwicklungsaufwand.** Keine Option ist grundsätzlich günstiger — die Antwort hängt von Einsatzgröße, interner Entwicklungskapazität und dem Stellenwert ab, den Ihr Unternehmen dem Fernhalten von Bewerber- und Mitarbeiterdaten von Drittanbieter-Infrastruktur beimisst.',
-        columns: ['Kriterium', 'Marktführer-Plattform', 'Selbst gehosteter Stack'],
+          '**Gängige Plattformen berechnen pro Mitarbeitendem oder Lizenz, meist über ein individuelles Enterprise-Angebot; selbst gehostete Infrastruktur tauscht dieses planbare Abo gegen nutzungsbasierte Rechenleistung plus Entwicklungsaufwand.** Keine Option ist grundsätzlich günstiger — die Antwort hängt von Einsatzgröße, interner Entwicklungskapazität und dem Stellenwert ab, den Ihr Unternehmen dem Fernhalten von Bewerber- und Mitarbeiterdaten von Drittanbieter-Infrastruktur beimisst.',
+        columns: ['Kriterium', 'Gängige Plattform', 'Selbst gehosteter Stack'],
         rows: [
-          { 'Kriterium': 'Preismodell', 'Marktführer-Plattform': 'Pro Mitarbeitendem/Lizenz, individuelles Angebot', 'Selbst gehosteter Stack': 'Nutzungsbasierte Rechenleistung + Entwicklungszeit' },
-          { 'Kriterium': 'Cloud-GPU-Kostenspanne', 'Marktführer-Plattform': 'Im Abo enthalten', 'Selbst gehosteter Stack': '~0,34-4,29 $/Std. (RTX 4090 bis H100)' },
-          { 'Kriterium': 'Datenstandort', 'Marktführer-Plattform': 'Herstellerseitig gehostete Infrastruktur', 'Selbst gehosteter Stack': 'Kontrollierte eigene Infrastruktur' },
-          { 'Kriterium': 'Einrichtungsaufwand', 'Marktführer-Plattform': 'Gering — konfigurieren und starten', 'Selbst gehosteter Stack': 'Hoch — aufbauen, absichern, pflegen' },
-          { 'Kriterium': 'Laufende Wartung', 'Marktführer-Plattform': 'Vom Hersteller verwaltet', 'Selbst gehosteter Stack': 'Intern oder extern beauftragt' },
+          { 'Kriterium': 'Preismodell', 'Gängige Plattform': 'Pro Mitarbeitendem/Lizenz, individuelles Angebot', 'Selbst gehosteter Stack': 'Nutzungsbasierte Rechenleistung + Entwicklungszeit' },
+          { 'Kriterium': 'Cloud-GPU-Kostenspanne', 'Gängige Plattform': 'Im Abo enthalten', 'Selbst gehosteter Stack': '~0,34-4,29 $/Std. (RTX 4090 bis H100)' },
+          { 'Kriterium': 'Datenstandort', 'Gängige Plattform': 'Herstellerseitig gehostete Infrastruktur', 'Selbst gehosteter Stack': 'Kontrollierte eigene Infrastruktur' },
+          { 'Kriterium': 'Einrichtungsaufwand', 'Gängige Plattform': 'Gering — konfigurieren und starten', 'Selbst gehosteter Stack': 'Hoch — aufbauen, absichern, pflegen' },
+          { 'Kriterium': 'Laufende Wartung', 'Gängige Plattform': 'Vom Hersteller verwaltet', 'Selbst gehosteter Stack': 'Intern oder extern beauftragt' },
         ],
       },
       decisionGuide: {
         id: 'decision-guide',
         title: 'Welcher Ansatz passt zu Ihrem Team?',
         content:
-          '**Die meisten Unternehmen fahren beide Wege parallel statt sich exklusiv zu entscheiden — Marktführer-Plattformen für Terminplanung und breite ATS-Workflows, Self-Hosting für die sensibelsten Daten.** Nutzen Sie die folgenden Profile pro Workflow, nicht pro Unternehmen.',
+          '**Die meisten Unternehmen fahren beide Wege parallel statt sich exklusiv zu entscheiden — gängige Plattformen für Terminplanung und breite ATS-Workflows, Self-Hosting für die sensibelsten Daten.** Nutzen Sie die folgenden Profile pro Workflow, nicht pro Unternehmen.',
         items: [
-          '**Kleines HR-Team ohne dedizierte Entwicklungsunterstützung:** eine Marktführer-Plattform für den gesamten Workflow nutzen — der Aufwand für Aufbau und Wartung eines Self-Hosting-Setups lohnt sich in dieser Größenordnung nicht.',
-          '**Unternehmen mit internem ML-/Platform-Engineering-Team und hoher Compliance-Prüfung bei Bewerberdaten:** Lebenslauf-Screening und Stimmungsanalyse gezielt selbst hosten; Interview-Terminplanung auf einer Marktführer-Plattform belassen, wo die Datensensibilität geringer ist.',
+          '**Kleines HR-Team ohne dedizierte Entwicklungsunterstützung:** eine gängige Plattform für den gesamten Workflow nutzen — der Aufwand für Aufbau und Wartung eines Self-Hosting-Setups lohnt sich in dieser Größenordnung nicht.',
+          '**Unternehmen mit internem ML-/Platform-Engineering-Team und hoher Compliance-Prüfung bei Bewerberdaten:** Lebenslauf-Screening und Stimmungsanalyse gezielt selbst hosten; Interview-Terminplanung auf einer gängigen Plattform belassen, wo die Datensensibilität geringer ist.',
           '**Unternehmen, das bereits tief in Betriebsrats- oder EU-Mitarbeiterdaten-Verhandlungen steckt:** Self-Hosting von Stimmungsanalyse und Beurteilungsentwürfen entfernt einen Auftragsverarbeiter aus dem Gespräch, was diese Verhandlung spürbar vereinfachen kann.',
           '**Auf Self-Hosting ganz verzichten, wenn** Ihr Unternehmen keine Entwicklungskapazität zur Pflege des Stacks hat oder der betreffende Workflow (etwa Interview-Terminplanung) keine ausreichend sensiblen Daten berührt, um den Aufwand zu rechtfertigen.',
-          '**Im Zweifel mit einer Marktführer-Plattform für die Breite starten und Self-Hosting an einem hochsensiblen Workflow pilotieren** (Lebenslauf-Screening oder Stimmungsanalyse), bevor weiter ausgebaut wird.',
+          '**Im Zweifel mit einer gängigen Plattform für die Breite starten und Self-Hosting an einem hochsensiblen Workflow pilotieren** (Lebenslauf-Screening oder Stimmungsanalyse), bevor weiter ausgebaut wird.',
         ],
       },
       commonMistakes: {
@@ -718,7 +718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Ist KI-gestütztes Lebenslauf-Screening legal?', a: 'Es kann legal sein, unterliegt aber Regulierung statt völliger Freiheit. Nach dem EU-KI-Gesetz gilt KI für Bewerber-Screening nach Anhang III als hochriskant, mit Pflichten zu Risikomanagement und menschlicher Aufsicht. In den USA verlangen Rechtsräume wie New York City ein unabhängiges Bias-Audit und Bewerber-Information für automatisierte Einstellungswerkzeuge. Dies ist keine Rechtsberatung — aktuelle Anforderungen für Ihren konkreten Rechtsraum und Workflow vor dem Einsatz mit arbeitsrechtlicher Beratung prüfen, kommerziell wie selbst gehostet.' },
-          { q: 'Welche marktführenden KI-HR-Plattformen sind heute tatsächlich im aktiven Einsatz?', a: 'Workday (Recruiting/ATS mit KI-gestütztem Skill-Matching), HireVue (KI-gestützte strukturierte Interview-Bewertung), Paradox (konversationelle KI für Interview-Terminplanung, Markenname Olivia), Lattice und 15Five (KI-gestützte Beurteilungsentwurfshilfe), Culture Amp (KI-Analyse von Mitarbeiterbefragungstexten), Textio (KI-Sprachanalyse für Stellenanzeigen und Beurteilungen) und Eightfold AI (KI-gestütztes Talent-Matching) sind allesamt reale, aktuell aktive Produkte mit öffentlich dokumentierten KI-Funktionen. Aktuellen Funktionsumfang direkt beim jeweiligen Anbieter prüfen, da sich Produktfunktionen ändern.' },
+          { q: 'Welche gängigen KI-HR-Plattformen sind heute tatsächlich im aktiven Einsatz?', a: 'Workday (Recruiting/ATS mit KI-gestütztem Skill-Matching), HireVue (KI-gestützte strukturierte Interview-Bewertung), Paradox (konversationelle KI für Interview-Terminplanung, Markenname Olivia), Lattice und 15Five (KI-gestützte Beurteilungsentwurfshilfe), Culture Amp (KI-Analyse von Mitarbeiterbefragungstexten), Textio (KI-Sprachanalyse für Stellenanzeigen und Beurteilungen) und Eightfold AI (KI-gestütztes Talent-Matching) sind allesamt reale, aktuell aktive Produkte mit öffentlich dokumentierten KI-Funktionen. Aktuellen Funktionsumfang direkt beim jeweiligen Anbieter prüfen, da sich Produktfunktionen ändern.' },
           { q: 'Kann ein selbst gehosteter lokaler LLM ein ATS wie Workday ersetzen?', a: 'Nein — Self-Hosting wird in diesem Leitfaden nicht als vollständiger ATS-Ersatz positioniert. Es ist eine gezielte Alternative für die Workflows, bei denen es am meisten zählt, Daten von Drittanbieter-Infrastruktur fernzuhalten: Feldextraktion und Bewertung aus Lebensläufen, Stimmungsanalyse und Beurteilungsentwurfshilfe. Die meisten Unternehmen fahren beide Wege parallel, statt einen durch den anderen zu ersetzen.' },
           { q: 'Erfüllt Self-Hosting eines HR-KI-Workflows automatisch die DSGVO oder das EU-KI-Gesetz?', a: 'Nein. Self-Hosting entfernt einen Drittanbieter-Auftragsverarbeiter aus der Datenflusslandkarte, was relevant ist, erfüllt aber nicht automatisch jede geltende Pflicht — die Risikomanagement-, Aufsichts- und Dokumentationspflichten des EU-KI-Gesetzes für Hochrisikosysteme gelten unabhängig davon, wo das Modell läuft. Siehe den eigenen [DSGVO-konformen lokalen RAG-Leitfaden](/de/power-local-llm/local-rag-for-private-business-data) für das vollständige Kontrollset, und Rechtsberatung für Ihren konkreten Einsatz einholen.' },
           { q: 'Was ist NYC Local Law 144 und gilt sie außerhalb von New York City?', a: 'Local Law 144 ist eine New Yorker Stadtverordnung, die Arbeitgeber verpflichtet, vor dem Einsatz eines automatisierten Einstellungsentscheidungs-Werkzeugs zur wesentlichen Unterstützung einer Einstellungsentscheidung in NYC ein unabhängiges Bias-Audit in Auftrag zu geben, eine Ergebniszusammenfassung zu veröffentlichen und Bewerber zu informieren. Sie gilt für Einstellungsentscheidungen mit Bezug zu New York City; mehrere weitere US-Bundesstaaten und -Städte haben vergleichbare Anforderungen eingeführt oder verabschiedet — dies ist keine Rechtsberatung, aktuelle Anwendbarkeit auf Ihre konkreten Einstellungsstandorte mit Rechtsberatung prüfen.' },
@@ -746,12 +746,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Beste KI-HR-Software für Unternehmen 2026: Privacy-First-Optionen im Vergleich',
+      headline: 'KI-HR-Software für Unternehmen 2026: Privacy-First-Optionen im Vergleich',
       description: 'KI-HR-Software im Vergleich: Workday, HireVue, Lattice u. a. mit öffentlichen Preisen, EU-AI-Act-Fristen und Self-Hosting-Option. Keine Rechtsberatung.',
       url: 'https://www.promptquorum.com/de/power-local-llm/best-ai-hr-software-enterprise',
       inLanguage: 'de',
       datePublished: '2026-09-03',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Advanced',
@@ -762,28 +762,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Start', item: '[www.promptquorum.com/de](https://www.promptquorum.com/de)' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/de/power-local-llm](https://www.promptquorum.com/de/power-local-llm)' },
-        { '@type': 'ListItem', position: 3, name: 'Beste KI-HR-Software für Unternehmen 2026', item: '[www.promptquorum.com/de/power-local-llm/best-ai-hr-software-enterprise](https://www.promptquorum.com/de/power-local-llm/best-ai-hr-software-enterprise)' },
+        { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://www.promptquorum.com/de' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/de/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'KI-HR-Software für Unternehmen 2026', item: 'https://www.promptquorum.com/de/power-local-llm/best-ai-hr-software-enterprise' },
       ],
     },
   },
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-03',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
-    title: 'Meilleurs logiciels RH IA pour entreprises 2026 : options axées confidentialité',
+    title: 'Logiciels RH IA pour entreprises 2026 : options axées confidentialité comparées',
     seoTitle: 'Logiciels RH IA pour entreprises : comparatif (2026)',
     intro:
       'L\'IA touche désormais le tri de CV, les entretiens, l\'intégration, les enquêtes de climat social et la rédaction d\'évaluations. Ce guide compare les plateformes courantes à une option auto-hébergée et rappelle les règles applicables dans les deux cas (pas un conseil juridique).',
     metaDescription:
       'Logiciels RH IA comparés : Workday, HireVue, Lattice, avec prix publics, échéances de l\'AI Act et option auto-hébergée. Pas un conseil juridique.',
     twitterDescription:
-      'Logiciels RH IA comparés : plateformes leaders vs LLM locaux auto-hébergés pour le tri de CV, l\'analyse du climat social et la rédaction d\'évaluations.',
+      'Logiciels RH IA comparés : plateformes courantes vs LLM locaux auto-hébergés pour le tri de CV, l\'analyse du climat social et la rédaction d\'évaluations.',
     affiliateDisclosure: true,
     current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
@@ -808,9 +808,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fr: {
         question: 'Quel est le meilleur logiciel RH IA pour une entreprise qui doit contrôler où circulent les données de ses collaborateurs et candidats ?',
         answer:
-          'Il n\'existe pas de réponse unique — cela dépend du flux de travail et des données concernées. Les plateformes leaders (Workday pour l\'ATS/tri, HireVue pour l\'évaluation d\'entretiens, Paradox pour la planification, Lattice ou 15Five pour les évaluations de performance, Culture Amp pour le climat social) sont la voie la plus rapide vers la production et intègrent leur propre hébergement IA. Pour les flux touchant les données les plus sensibles — données personnelles des CV, brouillons d\'évaluation confidentiels, texte sincère des enquêtes de climat social — un LLM local auto-hébergé garde ce contenu sur une infrastructure que vous contrôlez, au prix de construire et maintenir la pile vous-même.',
+          'Il n\'existe pas de réponse unique — cela dépend du flux de travail et des données concernées. Les plateformes courantes (Workday pour l\'ATS/tri, HireVue pour l\'évaluation d\'entretiens, Paradox pour la planification, Lattice ou 15Five pour les évaluations de performance, Culture Amp pour le climat social) sont la voie la plus rapide vers la production et intègrent leur propre hébergement IA. Pour les flux touchant les données les plus sensibles — données personnelles des CV, brouillons d\'évaluation confidentiels, texte sincère des enquêtes de climat social — un LLM local auto-hébergé garde ce contenu sur une infrastructure que vous contrôlez, au prix de construire et maintenir la pile vous-même.',
         bullets: [
-          'Les plateformes leaders regroupent hébergement IA, support et intégrations — déploiement le plus rapide, mais les données quittent votre infrastructure',
+          'Les plateformes courantes regroupent hébergement IA, support et intégrations — déploiement le plus rapide, mais les données quittent votre infrastructure',
           'Les LLM locaux auto-hébergés gardent données candidats, texte de climat social et brouillons d\'évaluation sur une infrastructure que vous contrôlez',
           'L\'IA en recrutement/RH est classée à haut risque par le règlement IA de l\'UE et soumise à des lois d\'audit de biais comme la Local Law 144 de New York',
           'La décision finale doit toujours rester humaine pour le tri, la notation et les résultats de performance — jamais d\'automatisation complète',
@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Les plateformes RH IA leaders et une pile de LLM local auto-hébergée résolvent des problèmes différents, pas des versions concurrentes du même.** Les plateformes sont la voie la plus rapide ; l\'auto-hébergement, quand les données candidats ou collaborateurs ne peuvent pas quitter votre infrastructure.',
+          '**Les plateformes RH IA courantes et un LLM local auto-hébergé résolvent des problèmes différents.** Les plateformes sont la voie la plus rapide ; l\'auto-hébergement, quand les données ne peuvent pas quitter votre infrastructure.',
           '**Le tri de CV, l\'analyse de climat social et la rédaction d\'évaluations sont les cas les plus solides pour l\'auto-hébergement** — chacun touche régulièrement des données (identité candidat, texte sincère des collaborateurs, contenu d\'évaluation confidentiel) qu\'une entreprise peut préférer ne pas confier à une API tierce.',
           '**L\'IA en recrutement et RH est une catégorie à haut risque sous le règlement IA de l\'UE**, et des juridictions américaines comme New York exigent des audits de biais indépendants pour les outils de recrutement automatisés — cela s\'applique à tout flux de tri ou de notation assisté par IA, commercial ou auto-hébergé.',
           '**Ceci n\'est pas un conseil juridique.** Les obligations d\'audit de biais, de notification aux candidats et les règles pour systèmes à haut risque varient selon la juridiction et évoluent — consultez un conseil juridique qualifié avant tout déploiement d\'IA en recrutement ou RH.',
@@ -850,7 +850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Les plateformes RH IA leaders (Workday, HireVue, Lattice) gèrent le tri de CV, la planification d\'entretiens et les évaluations de performance sur l\'infrastructure de l\'éditeur, tandis qu\'une pile de LLM local auto-hébergée garde données candidats, climat social et brouillons d\'évaluation sur une infrastructure contrôlée par l\'entreprise.',
+            text: 'Les plateformes RH IA courantes (Workday, HireVue, Lattice) gèrent le tri de CV, la planification d\'entretiens et les évaluations de performance sur l\'infrastructure de l\'éditeur, tandis qu\'une pile de LLM local auto-hébergée garde données candidats, climat social et brouillons d\'évaluation sur une infrastructure contrôlée par l\'entreprise.',
           },
           {
             type: 'plain-terms',
@@ -864,7 +864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Classification règlement IA UE :** les systèmes IA utilisés pour le recrutement, le tri de candidats et l\'évaluation de la performance des travailleurs sont classés à haut risque à l\'annexe III du règlement (UE) 2024/1689.',
           '**Local Law 144 de New York :** exige un audit de biais indépendant, des résultats publiés et une notification aux candidats pour tout « outil automatisé de décision d\'emploi » assistant substantiellement une décision d\'embauche à New York.',
-          '**Plateformes leaders comparées ici :** Workday, HireVue, Paradox (Olivia), Lattice, 15Five, Culture Amp, Textio et Eightfold AI — des produits réels et actuellement actifs, pas hypothétiques.',
+          '**Plateformes courantes comparées ici :** Workday, HireVue, Paradox (Olivia), Lattice, 15Five, Culture Amp, Textio et Eightfold AI — des produits réels et actuellement actifs, pas hypothétiques.',
           '**Fourchette de coût de l\'infrastructure auto-hébergée :** environ 0,34 à 4,29 $/heure pour des GPU cloud à la demande, de la classe RTX 4090 à H100 (pages tarifs de RunPod et Lambda), adaptés à un pilote de modèle de taille moyenne (7 à 32 milliards de paramètres), hors temps d\'ingénierie.',
           '**Ceci n\'est pas un conseil juridique** — les obligations réglementaires pour l\'IA en recrutement et RH varient selon la juridiction et évoluent ; vérifiez les exigences actuelles auprès d\'un conseil juridique avant le déploiement.',
         ],
@@ -874,20 +874,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Où l\'IA intervient réellement dans les flux RH',
         content:
           '**« L\'IA en RH » n\'est pas une seule décision d\'achat — ce sont six flux distincts ou plus, avec des profils de sensibilité des données très différents.** Les traiter comme une seule décision d\'achat est la première erreur que commettent la plupart des entreprises.',
-        columns: ['Flux RH', 'Exemple de plateforme leader', 'Sensibilité des données', 'Adéquation auto-hébergement'],
+        columns: ['Flux RH', 'Exemple de plateforme courante', 'Sensibilité des données', 'Adéquation auto-hébergement'],
         rows: [
-          { 'Flux RH': 'Tri de CV', 'Exemple de plateforme leader': 'Workday, Eightfold AI', 'Sensibilité des données': 'Élevée (données candidat)', 'Adéquation auto-hébergement': 'Forte' },
-          { 'Flux RH': 'Planification d\'entretiens', 'Exemple de plateforme leader': 'Paradox (Olivia)', 'Sensibilité des données': 'Faible-modérée', 'Adéquation auto-hébergement': 'Faible — effort peu rentable' },
-          { 'Flux RH': 'Évaluation d\'entretiens', 'Exemple de plateforme leader': 'HireVue', 'Sensibilité des données': 'Élevée (vidéo/comportement)', 'Adéquation auto-hébergement': 'Modérée' },
-          { 'Flux RH': 'Q&R d\'intégration', 'Exemple de plateforme leader': 'Bots intégrés au SIRH', 'Sensibilité des données': 'Modérée', 'Adéquation auto-hébergement': 'Forte (RAG sur documents)' },
-          { 'Flux RH': 'Analyse du climat social', 'Exemple de plateforme leader': 'Culture Amp', 'Sensibilité des données': 'Élevée (texte libre sincère)', 'Adéquation auto-hébergement': 'Forte' },
-          { 'Flux RH': 'Rédaction d\'évaluations', 'Exemple de plateforme leader': 'Lattice, 15Five', 'Sensibilité des données': 'Élevée (contenu confidentiel)', 'Adéquation auto-hébergement': 'Forte' },
-          { 'Flux RH': 'Q&R politiques RH', 'Exemple de plateforme leader': 'n/a — voir guide séparé', 'Sensibilité des données': 'Élevée', 'Adéquation auto-hébergement': 'Forte — couverte séparément' },
+          { 'Flux RH': 'Tri de CV', 'Exemple de plateforme courante': 'Workday, Eightfold AI', 'Sensibilité des données': 'Élevée (données candidat)', 'Adéquation auto-hébergement': 'Forte' },
+          { 'Flux RH': 'Planification d\'entretiens', 'Exemple de plateforme courante': 'Paradox (Olivia)', 'Sensibilité des données': 'Faible-modérée', 'Adéquation auto-hébergement': 'Faible — effort peu rentable' },
+          { 'Flux RH': 'Évaluation d\'entretiens', 'Exemple de plateforme courante': 'HireVue', 'Sensibilité des données': 'Élevée (vidéo/comportement)', 'Adéquation auto-hébergement': 'Modérée' },
+          { 'Flux RH': 'Q&R d\'intégration', 'Exemple de plateforme courante': 'Bots intégrés au SIRH', 'Sensibilité des données': 'Modérée', 'Adéquation auto-hébergement': 'Forte (RAG sur documents)' },
+          { 'Flux RH': 'Analyse du climat social', 'Exemple de plateforme courante': 'Culture Amp', 'Sensibilité des données': 'Élevée (texte libre sincère)', 'Adéquation auto-hébergement': 'Forte' },
+          { 'Flux RH': 'Rédaction d\'évaluations', 'Exemple de plateforme courante': 'Lattice, 15Five', 'Sensibilité des données': 'Élevée (contenu confidentiel)', 'Adéquation auto-hébergement': 'Forte' },
+          { 'Flux RH': 'Q&R politiques RH', 'Exemple de plateforme courante': 'n/a — voir guide séparé', 'Sensibilité des données': 'Élevée', 'Adéquation auto-hébergement': 'Forte — couverte séparément' },
         ],
       },
       commercialPlatforms: {
         id: 'commercial-platforms',
-        title: 'Plateformes RH IA leaders comparées',
+        title: 'Plateformes RH IA courantes comparées',
         content:
           '**Ces plateformes sont des produits réels et actuellement actifs avec des fonctionnalités IA documentées publiquement — aucune des descriptions ci-dessous n\'est un résultat de test PromptQuorum, et aucune ne doit être lue comme une validation du statut d\'audit de biais ou de conformité d\'un éditeur.** Vérifiez le périmètre fonctionnel actuel et la documentation d\'audit directement auprès de chaque éditeur avant tout achat.',
         items: [
@@ -921,7 +921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'regulatory-risk',
         title: 'Risque réglementaire : règlement IA de l\'UE et lois d\'audit de biais',
         content:
-          '**L\'IA dans les décisions de recrutement et RH est une catégorie régulée, pas un achat logiciel ordinaire — cela s\'applique à toute plateforme et approche de ce guide, leader ou auto-hébergée.** Sous le règlement IA de l\'UE (règlement (UE) 2024/1689), les systèmes IA utilisés pour le recrutement, le tri de candidats et l\'évaluation de la performance des travailleurs sont classés à haut risque à l\'annexe III, ce qui entraîne des obligations de gestion des risques, de supervision humaine et de documentation technique. Par ailleurs, la Local Law 144 de New York impose aux employeurs utilisant un « outil automatisé de décision d\'emploi » pour assister substantiellement une décision d\'embauche à New York de commander un audit de biais indépendant, d\'en publier une synthèse et d\'en informer les candidats — plusieurs autres États et villes américains ont introduit ou adopté des exigences comparables. La CNIL recommande par ailleurs de privilégier une IA locale lorsque des données professionnelles sensibles sont traitées.',
+          '**L\'IA dans les décisions de recrutement et RH est une catégorie régulée, pas un achat logiciel ordinaire — cela s\'applique à toute plateforme et approche de ce guide, leader ou auto-hébergée.** Sous le règlement IA de l\'UE (règlement (UE) 2024/1689), les systèmes IA utilisés pour le recrutement, le tri de candidats et l\'évaluation de la performance des travailleurs sont classés à haut risque à l\'annexe III, ce qui entraîne des obligations de gestion des risques, de supervision humaine et de documentation technique. Par ailleurs, la Local Law 144 de New York impose aux employeurs utilisant un « outil automatisé de décision d\'emploi » pour assister substantiellement une décision d\'embauche à New York de commander un audit de biais indépendant, d\'en publier une synthèse et d\'en informer les candidats — plusieurs autres États et villes américains ont introduit ou adopté des exigences comparables. Pour les données personnelles de candidats et de salariés, le RGPD s\'applique quel que soit le mode d\'hébergement ; consultez les publications de la CNIL sur l\'IA et les données personnelles et demandez conseil à un juriste avant tout déploiement.',
         items: [
           '**Ceci n\'est pas un conseil juridique.** Les règles applicables dépendent de la juridiction, du flux concerné et du poids accordé à la sortie de l\'IA dans la décision finale — les obligations diffèrent selon la loi et évoluent dans le temps.',
           'Qu\'un éditeur déclare son produit doté de « tests de biais » ou de « fonctionnalités d\'équité » ne signifie pas que votre déploiement spécifique satisfait une exigence légale d\'audit précise d\'une juridiction donnée — vérifiez la documentation d\'audit actuelle et l\'applicabilité juridique directement avec un conseil juridique et l\'éditeur, pas sur la base d\'un argumentaire marketing.',
@@ -938,8 +938,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Une pile de LLM local auto-hébergée ne rivalise pas en largeur avec Workday ou Lattice — elle rivalise sur l\'emplacement des données, pour les flux précis où cela compte le plus.** Pour les Q&R sur les politiques RH portant sur des documents RH confidentiels, voir le guide dédié [bots internes RH et helpdesk IT auto-hébergés](/fr/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots), qui couvre en détail les schémas de contrôle d\'accès fondés sur le RAG. Cette section couvre les quatre autres cas d\'usage.',
         items: [
-          '**Tri de CV :** un LLM local peut extraire des champs structurés (compétences, années d\'expérience, formation) du texte des CV et noter les candidats par rapport aux critères du poste sans que les données personnelles du candidat n\'atteignent jamais une API tierce — le modèle tourne sur une infrastructure que vous contrôlez, et la sortie extraite requiert toujours une revue humaine avant qu\'un candidat ne soit avancé ou écarté.',
-          '**Analyse du climat social :** le texte libre des enquêtes d\'engagement interne figure parmi les contenus les plus sincères qu\'une entreprise collecte — un LLM local peut regrouper des thèmes et résumer le climat social sur des centaines de réponses tandis que les commentaires bruts restent sur une infrastructure que l\'entreprise contrôle, tant que le pipeline n\'est relié à aucune API externe — ce qui tend aussi à rendre les collaborateurs plus francs une fois qu\'ils font réellement confiance à la confidentialité.',
+          '**Tri de CV :** un LLM local peut extraire des champs structurés (compétences, années d\'expérience, formation) du texte des CV et noter les candidats par rapport aux critères du poste sans envoyer les données personnelles du candidat à une API tierce, à condition que le modèle et ses journaux s\'exécutent sur une infrastructure que vous contrôlez (les GPU cloud loués sont des sous-traitants et exigent un contrat au titre de l\'art. 28 RGPD) — le modèle tourne sur une infrastructure que vous contrôlez, et la sortie extraite requiert toujours une revue humaine avant qu\'un candidat ne soit avancé ou écarté.',
+          '**Analyse du climat social :** le texte libre des enquêtes d\'engagement interne figure parmi les contenus les plus sincères qu\'une entreprise collecte — un LLM local peut regrouper des thèmes et résumer le climat social sur des centaines de réponses tandis que les commentaires bruts restent sur une infrastructure que l\'entreprise contrôle, tant que le pipeline n\'est relié à aucune API externe.',
           '**Automatisation de l\'intégration :** un assistant d\'intégration fondé sur le RAG répondant aux questions des nouveaux arrivants sur les livrets d\'accueil internes, les documents d\'avantages sociaux et les guides de configuration IT utilise le même schéma de recherche et de contrôle d\'accès détaillé dans le [guide chatbot interne RH/IT](/fr/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — il s\'agit en grande partie de la même architecture appliquée à un autre ensemble de documents.',
           '**Aide à la rédaction d\'évaluations de performance :** un LLM local peut aider un manager à transformer des notes brutes en un brouillon structuré sans que ce contenu confidentiel et pré-décisionnel ne transite par une API tierce — le manager reste l\'auteur et le décideur final ; le modèle est une aide à la rédaction, pas un système de notation.',
           'Pour le comparatif complet des plateformes RAG et bases vectorielles derrière ces déploiements, voir [meilleurs outils RAG pour documents d\'entreprise](/fr/power-local-llm/best-rag-tools-for-business-documents-2026) et [RAG local conforme RGPD pour documents sensibles](/fr/power-local-llm/local-rag-for-private-business-data) pour l\'ensemble de contrôles applicable dès que des données personnelles régulées sont concernées.',
@@ -963,27 +963,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost-comparison',
         title: 'Coûts : abonnement SaaS vs infrastructure auto-hébergée',
         content:
-          '**Les plateformes leaders facturent par collaborateur ou par siège, généralement via un devis entreprise sur mesure ; l\'infrastructure auto-hébergée échange cet abonnement prévisible contre du calcul à l\'usage plus du temps d\'ingénierie.** Aucune option n\'est universellement moins chère — la réponse dépend de l\'échelle de déploiement, de la capacité d\'ingénierie interne et de l\'importance que votre organisation accorde au fait de garder les données candidats et collaborateurs hors d\'une infrastructure tierce.',
-        columns: ['Critère', 'Plateforme leader', 'Pile auto-hébergée'],
+          '**Les plateformes courantes facturent par collaborateur ou par siège, généralement via un devis entreprise sur mesure ; l\'infrastructure auto-hébergée échange cet abonnement prévisible contre du calcul à l\'usage plus du temps d\'ingénierie.** Aucune option n\'est universellement moins chère — la réponse dépend de l\'échelle de déploiement, de la capacité d\'ingénierie interne et de l\'importance que votre organisation accorde au fait de garder les données candidats et collaborateurs hors d\'une infrastructure tierce.',
+        columns: ['Critère', 'Plateforme courante', 'Pile auto-hébergée'],
         rows: [
-          { 'Critère': 'Modèle tarifaire', 'Plateforme leader': 'Par collaborateur/siège, devis entreprise sur mesure', 'Pile auto-hébergée': 'Calcul à l\'usage + temps d\'ingénierie' },
-          { 'Critère': 'Fourchette coût GPU cloud', 'Plateforme leader': 'Inclus dans l\'abonnement', 'Pile auto-hébergée': '~0,34-4,29 $/h (RTX 4090 à H100)' },
-          { 'Critère': 'Localisation des données', 'Plateforme leader': 'Infrastructure hébergée par l\'éditeur', 'Pile auto-hébergée': 'Infrastructure que vous contrôlez' },
-          { 'Critère': 'Effort de mise en place', 'Plateforme leader': 'Faible — configurer et démarrer', 'Pile auto-hébergée': 'Élevé — construire, sécuriser, maintenir' },
-          { 'Critère': 'Maintenance continue', 'Plateforme leader': 'Gérée par l\'éditeur', 'Pile auto-hébergée': 'Interne ou sous-traitée' },
+          { 'Critère': 'Modèle tarifaire', 'Plateforme courante': 'Par collaborateur/siège, devis entreprise sur mesure', 'Pile auto-hébergée': 'Calcul à l\'usage + temps d\'ingénierie' },
+          { 'Critère': 'Fourchette coût GPU cloud', 'Plateforme courante': 'Inclus dans l\'abonnement', 'Pile auto-hébergée': '~0,34-4,29 $/h (RTX 4090 à H100)' },
+          { 'Critère': 'Localisation des données', 'Plateforme courante': 'Infrastructure hébergée par l\'éditeur', 'Pile auto-hébergée': 'Infrastructure que vous contrôlez' },
+          { 'Critère': 'Effort de mise en place', 'Plateforme courante': 'Faible — configurer et démarrer', 'Pile auto-hébergée': 'Élevé — construire, sécuriser, maintenir' },
+          { 'Critère': 'Maintenance continue', 'Plateforme courante': 'Gérée par l\'éditeur', 'Pile auto-hébergée': 'Interne ou sous-traitée' },
         ],
       },
       decisionGuide: {
         id: 'decision-guide',
         title: 'Quelle approche convient à votre équipe ?',
         content:
-          '**La plupart des entreprises font tourner les deux approches en parallèle plutôt que de choisir exclusivement l\'une — plateformes leaders pour la planification et les flux ATS larges, auto-hébergement pour les données les plus sensibles.** Utilisez les profils ci-dessous par flux, pas par entreprise.',
+          '**La plupart des entreprises font tourner les deux approches en parallèle plutôt que de choisir exclusivement l\'une — plateformes courantes pour la planification et les flux ATS larges, auto-hébergement pour les données les plus sensibles.** Utilisez les profils ci-dessous par flux, pas par entreprise.',
         items: [
-          '**Petite équipe RH sans support d\'ingénierie dédié :** utiliser une plateforme leader pour l\'ensemble du flux — la charge de mise en place et de maintenance de l\'auto-hébergement ne se justifie pas à cette échelle.',
-          '**Entreprise avec une équipe interne ML/platform engineering et un contrôle de conformité poussé sur les données candidats :** auto-héberger spécifiquement le tri de CV et l\'analyse de climat social ; garder la planification d\'entretiens sur une plateforme leader où la sensibilité des données est moindre.',
+          '**Petite équipe RH sans support d\'ingénierie dédié :** utiliser une plateforme courante pour l\'ensemble du flux — la charge de mise en place et de maintenance de l\'auto-hébergement ne se justifie pas à cette échelle.',
+          '**Entreprise avec une équipe interne ML/platform engineering et un contrôle de conformité poussé sur les données candidats :** auto-héberger spécifiquement le tri de CV et l\'analyse de climat social ; garder la planification d\'entretiens sur une plateforme courante où la sensibilité des données est moindre.',
           '**Entreprise déjà engagée dans des discussions poussées sur les données collaborateurs UE :** l\'auto-hébergement de l\'analyse de climat social et de la rédaction d\'évaluations retire un sous-traitant tiers de la discussion, ce qui peut nettement simplifier ces échanges.',
           '**Renoncer entièrement à l\'auto-hébergement si** votre organisation n\'a pas la capacité d\'ingénierie pour maintenir la pile, ou si le flux concerné (comme la planification d\'entretiens) ne touche pas des données assez sensibles pour justifier l\'effort de construction.',
-          '**En cas de doute, démarrer avec une plateforme leader pour la largeur et piloter l\'auto-hébergement sur un seul flux à haute sensibilité** (tri de CV ou analyse de climat social) avant d\'étendre davantage.',
+          '**En cas de doute, démarrer avec une plateforme courante pour la largeur et piloter l\'auto-hébergement sur un seul flux à haute sensibilité** (tri de CV ou analyse de climat social) avant d\'étendre davantage.',
         ],
       },
       commonMistakes: {
@@ -1020,7 +1020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquentes',
         faqs: [
           { q: 'Le tri de CV assisté par IA est-il légal ?', a: 'Il peut l\'être, mais il est régulé plutôt que libre. Sous le règlement IA de l\'UE, l\'IA utilisée pour le tri de candidats est classée à haut risque à l\'annexe III, avec des obligations de gestion des risques et de supervision humaine. Aux États-Unis, des juridictions comme New York exigent un audit de biais indépendant et une notification aux candidats pour les outils automatisés de décision d\'emploi. Ceci n\'est pas un conseil juridique — vérifiez les exigences actuelles pour votre juridiction et votre flux précis avec un conseil juridique avant tout déploiement, commercial ou auto-hébergé.' },
-          { q: 'Quelles plateformes RH IA leaders sont réellement en usage actif aujourd\'hui ?', a: 'Workday (recrutement/ATS avec appariement de compétences assisté par IA), HireVue (évaluation d\'entretien structurée assistée par IA), Paradox (IA conversationnelle pour la planification d\'entretiens, sous le nom Olivia), Lattice et 15Five (aide à la rédaction d\'évaluations assistée par IA), Culture Amp (analyse IA du texte des enquêtes collaborateurs), Textio (analyse linguistique IA pour offres d\'emploi et évaluations) et Eightfold AI (appariement de talents assisté par IA) sont tous des produits réels et actuellement actifs avec des fonctionnalités IA documentées publiquement. Vérifiez le périmètre fonctionnel actuel directement auprès de chaque éditeur, les capacités produit évoluant.' },
+          { q: 'Quelles plateformes RH IA courantes sont réellement en usage actif aujourd\'hui ?', a: 'Workday (recrutement/ATS avec appariement de compétences assisté par IA), HireVue (évaluation d\'entretien structurée assistée par IA), Paradox (IA conversationnelle pour la planification d\'entretiens, sous le nom Olivia), Lattice et 15Five (aide à la rédaction d\'évaluations assistée par IA), Culture Amp (analyse IA du texte des enquêtes collaborateurs), Textio (analyse linguistique IA pour offres d\'emploi et évaluations) et Eightfold AI (appariement de talents assisté par IA) sont tous des produits réels et actuellement actifs avec des fonctionnalités IA documentées publiquement. Vérifiez le périmètre fonctionnel actuel directement auprès de chaque éditeur, les capacités produit évoluant.' },
           { q: 'Un LLM local auto-hébergé peut-il remplacer un ATS comme Workday ?', a: 'Non — l\'auto-hébergement n\'est pas positionné dans ce guide comme un remplacement complet d\'ATS. C\'est une alternative ciblée pour les flux précis où garder les données hors d\'une infrastructure tierce compte le plus : extraction et notation de champs de CV, analyse de climat social et aide à la rédaction d\'évaluations. La plupart des entreprises font tourner les deux approches ensemble plutôt que de remplacer l\'une par l\'autre.' },
           { q: 'L\'auto-hébergement d\'un flux RH IA satisfait-il automatiquement le RGPD ou le règlement IA de l\'UE ?', a: 'Non. L\'auto-hébergement retire un sous-traitant tiers de la cartographie des flux de données, ce qui compte, mais ne satisfait pas automatiquement toutes les obligations applicables — les exigences de gestion des risques, de supervision humaine et de documentation du règlement IA de l\'UE pour les systèmes à haut risque s\'appliquent quel que soit l\'endroit où tourne le modèle. Voir le [guide RAG local conforme RGPD](/fr/power-local-llm/local-rag-for-private-business-data) pour l\'ensemble de contrôles complet, et consultez un conseil juridique pour votre déploiement précis.' },
           { q: 'Qu\'est-ce que la Local Law 144 de New York et s\'applique-t-elle hors de New York ?', a: 'La Local Law 144 est une ordonnance municipale de New York exigeant des employeurs qu\'ils commandent un audit de biais indépendant, publient une synthèse des résultats et informent les candidats avant d\'utiliser un outil automatisé de décision d\'emploi pour assister substantiellement une décision d\'embauche à New York. Elle s\'applique aux décisions d\'emploi liées à New York ; plusieurs autres États et villes américains ont introduit ou adopté des exigences comparables — ceci n\'est pas un conseil juridique, vérifiez l\'applicabilité actuelle à vos sites de recrutement précis avec un conseil juridique.' },
@@ -1048,12 +1048,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Meilleurs logiciels RH IA pour entreprises 2026 : options axées confidentialité',
+      headline: 'Logiciels RH IA pour entreprises 2026 : options axées confidentialité comparées',
       description: 'Logiciels RH IA comparés : Workday, HireVue, Lattice, avec prix publics, échéances de l\'AI Act et option auto-hébergée. Pas un conseil juridique.',
       url: 'https://www.promptquorum.com/fr/power-local-llm/best-ai-hr-software-enterprise',
       inLanguage: 'fr',
       datePublished: '2026-09-03',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Advanced',
@@ -1064,16 +1064,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Accueil', item: '[www.promptquorum.com/fr](https://www.promptquorum.com/fr)' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/fr/power-local-llm](https://www.promptquorum.com/fr/power-local-llm)' },
-        { '@type': 'ListItem', position: 3, name: 'Meilleurs logiciels RH IA pour entreprises 2026', item: '[www.promptquorum.com/fr/power-local-llm/best-ai-hr-software-enterprise](https://www.promptquorum.com/fr/power-local-llm/best-ai-hr-software-enterprise)' },
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.promptquorum.com/fr' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/fr/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'Logiciels RH IA pour entreprises 2026', item: 'https://www.promptquorum.com/fr/power-local-llm/best-ai-hr-software-enterprise' },
       ],
     },
   },
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-03',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
@@ -1240,8 +1240,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**セルフホスト型ローカルLLMスタックは、機能の広さでWorkdayやLatticeと競合するものではありません——データがどこに置かれるかという点で、それが最も重要になる特定のワークフローにおいて競合します。** 機密HR文書に対するHR方針Q&Aについては、RAGベースのアクセス制御パターンを詳しく解説した専用ガイド[セルフホスト型社内HR・ITヘルプデスクボット](/ja/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots)を参照してください。本セクションは他の4つのユースケースを扱います。',
         items: [
-          '**履歴書スクリーニング：** ローカルLLMは履歴書テキストからスキル・経験年数・学歴などの構造化フィールドを抽出し、候補者PIIが一切サードパーティAPIに届くことなく職務要件に照らしてスコアリングできます——モデルは自社管理インフラ上で動作し、抽出結果は候補者を進めるか不採用にするかの前に必ず人間のレビューが必要です。',
-          '**従業員感情分析：** 社内エンゲージメントサーベイの自由記述は企業が収集する中でも最も率直なコンテンツの一つです——ローカルLLMは数百件の回答からテーマをクラスタリングし感情を要約でき、パイプラインが外部APIに接続されていない限り、生のコメントは自社が管理するインフラ上にとどまります。これは機密性が本物だと従業員が信頼するほど、より率直な回答を引き出す傾向もあります。',
+          '**履歴書スクリーニング：** ローカルLLMは履歴書テキストからスキル・経験年数・学歴などの構造化フィールドを抽出し、候補者PIIをサードパーティAPIに送信することなく（ただしモデルとログが自社管理のインフラで動作することが前提で、レンタルのクラウドGPUは外部のデータ処理者にあたりデータ処理契約が必要です）職務要件に照らしてスコアリングできます——モデルは自社管理インフラ上で動作し、抽出結果は候補者を進めるか不採用にするかの前に必ず人間のレビューが必要です。',
+          '**従業員感情分析：** 社内エンゲージメントサーベイの自由記述は企業が収集する中でも最も率直なコンテンツの一つです——ローカルLLMは数百件の回答からテーマをクラスタリングし感情を要約でき、パイプラインが外部APIに接続されていない限り、生のコメントは自社が管理するインフラ上にとどまります。',
           '**オンボーディング自動化：** 社内ハンドブックや福利厚生文書、IT設定ガイドに対して新入社員の質問に答えるRAGベースのオンボーディングアシスタントは、[社内HR/ITチャットボットガイド](/ja/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots)で詳しく解説されているのと同じ検索・アクセス制御パターンを使います——実質的には同じアーキテクチャを別の文書セットに適用したものです。',
           '**人事考課下書き支援：** ローカルLLMは、マネージャーの粗いメモを構造化された下書きに変換する手助けができ、この機密性が高く決定前のコンテンツがサードパーティAPIを通ることはありません——マネージャーが著者であり最終判断者であり続け、モデルはあくまで下書き支援であり採点者ではありません。',
           'これらの構築の背後にあるRAGプラットフォームとベクトルデータベースの全体比較については、[ビジネス文書向けベストRAGツール](/ja/power-local-llm/best-rag-tools-for-business-documents-2026)と、規制対象の個人データが関わる際の統制セットを扱う[機密文書向けGDPR準拠ローカルRAG](/ja/power-local-llm/local-rag-for-private-business-data)を参照してください。',
@@ -1322,7 +1322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: 'AI支援の履歴書スクリーニングは合法ですか？', a: '合法になり得ますが、無制限ではなく規制対象です。EU AI法の下では、候補者スクリーニングに使われるAIは附属書IIIで高リスクに分類され、リスク管理と人間による監督に関する義務が課されます。米国ではニューヨーク市などの法域が、自動雇用意思決定ツールに独立したバイアス監査と候補者通知を義務付けています。本記事は法的助言ではありません——導入前に、商用・セルフホストを問わず、貴社の具体的な法域とワークフローに関する最新の要件を労働法弁護士に確認してください。' },
-          { q: '実際に現在稼働している大手AI人事プラットフォームはどれですか？', a: 'Workday（AI支援のスキルマッチングを備えた採用/ATS）、HireVue（AI支援の構造化面接評価）、Paradox（Oliviaというブランド名の面接日程調整用対話型AI）、LatticeとFive15（AI支援の考課下書き）、Culture Amp（従業員サーベイテキストのAI分析）、Textio（求人票・考課向けのAI言語分析）、Eightfold AI（AI主導のタレントマッチング）はいずれも公開されたAI機能を持つ、現在実際に稼働している製品です。製品機能は変化するため、最新の機能範囲は各ベンダーに直接確認してください。' },
+          { q: '実際に現在稼働している大手AI人事プラットフォームはどれですか？', a: 'Workday（AI支援のスキルマッチングを備えた採用/ATS）、HireVue（AI支援の構造化面接評価）、Paradox（Oliviaというブランド名の面接日程調整用対話型AI）、Latticeと15Five（AI支援の考課下書き）、Culture Amp（従業員サーベイテキストのAI分析）、Textio（求人票・考課向けのAI言語分析）、Eightfold AI（AI主導のタレントマッチング）はいずれも公開されたAI機能を持つ、現在実際に稼働している製品です。製品機能は変化するため、最新の機能範囲は各ベンダーに直接確認してください。' },
           { q: 'セルフホスト型ローカルLLMはWorkdayのようなATSを置き換えられますか？', a: 'いいえ——本ガイドではセルフホストを完全なATSの代替として位置づけていません。データをサードパーティのインフラから遠ざけることが最も重要な特定のワークフロー（履歴書フィールドの抽出・スコアリング、感情分析、考課下書き支援）に対象を絞った代替策です。多くの企業はどちらかを置き換えるのではなく、両方を並行して運用します。' },
           { q: 'HR AIワークフローをセルフホストすればGDPRやEU AI法を自動的に満たしますか？', a: 'いいえ。セルフホストはデータフロー図からサードパーティのデータ処理者を一つ取り除くという意味では重要ですが、それだけですべての適用義務を満たすわけではありません——EU AI法の高リスクシステムに対するリスク管理・人間監督・文書化に関する要件は、モデルがどこで動作するかにかかわらず適用されます。より完全な統制セットについては[GDPR準拠ローカルRAGガイド](/ja/power-local-llm/local-rag-for-private-business-data)を参照し、具体的な導入については弁護士に相談してください。' },
           { q: 'NYC Local Law 144とは何で、ニューヨーク市外にも適用されますか？', a: 'Local Law 144は、ニューヨーク市の採用判断を実質的に支援するために自動雇用意思決定ツールを使用する前に、雇用主が独立したバイアス監査を実施し、結果の概要を公表し、候補者に通知することを義務付けるニューヨーク市の条例です。ニューヨーク市に関連する雇用判断に適用され、他の複数の米国の州・都市も同様の要件を導入または可決しています——本記事は法的助言ではありません、貴社の具体的な採用拠点への現行の適用可能性は弁護士に確認してください。' },
@@ -1355,7 +1355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ja/power-local-llm/best-ai-hr-software-enterprise',
       inLanguage: 'ja',
       datePublished: '2026-09-03',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Advanced',
@@ -1368,21 +1368,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'ホーム', item: '[www.promptquorum.com/ja](https://www.promptquorum.com/ja)' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/ja/power-local-llm](https://www.promptquorum.com/ja/power-local-llm)' },
-        { '@type': 'ListItem', position: 3, name: '企業向けAI人事ソフト2026', item: '[www.promptquorum.com/ja/power-local-llm/best-ai-hr-software-enterprise](https://www.promptquorum.com/ja/power-local-llm/best-ai-hr-software-enterprise)' },
+        { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://www.promptquorum.com/ja' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ja/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: '企業向けAI人事ソフト2026', item: 'https://www.promptquorum.com/ja/power-local-llm/best-ai-hr-software-enterprise' },
       ],
     },
   },
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-03',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
-    title: '2026年企业AI人力资源软件推荐：隐私优先方案对比',
+    title: '2026年企业AI人力资源软件：隐私优先方案对比',
     seoTitle: '企业AI人力资源软件对比2026：价格、合规与自托管',
     intro:
       'AI已涉及简历筛选、面试、入职、员工调研和绩效评语起草。本指南对比主流平台与自托管方案，并说明两种方式都适用的规则（不构成法律建议）。',
@@ -1527,7 +1527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'regulatory-risk',
         title: '监管风险：欧盟AI法案与偏见审计法',
         content:
-          '**用于招聘和HR决策的AI是受监管的类别，而非普通软件采购——这一点对本指南中所有平台和方案（无论主流还是自托管）同样适用。** 根据欧盟AI法案（第（EU）2024/1689号条例），用于招聘、候选人筛选和员工绩效评估的AI系统在附件III中被归类为高风险，需承担风险管理、人工监督和技术文档方面的义务。另外，纽约市Local Law 144要求使用"自动化就业决策工具"实质性辅助纽约市招聘决策的雇主委托独立偏见审计、公布结果摘要并告知候选人，美国其他多个州和城市也已引入或通过类似要求。在中国大陆运营的企业还需关注《数据安全法》对涉及员工个人信息的数据处理活动的相关要求，本地推理有助于将相关数据保留在境内基础设施上。',
+          '**用于招聘和HR决策的AI是受监管的类别，而非普通软件采购——这一点对本指南中所有平台和方案（无论主流还是自托管）同样适用。** 根据欧盟AI法案（第（EU）2024/1689号条例），用于招聘、候选人筛选和员工绩效评估的AI系统在附件III中被归类为高风险，需承担风险管理、人工监督和技术文档方面的义务。另外，纽约市Local Law 144要求使用"自动化就业决策工具"实质性辅助纽约市招聘决策的雇主委托独立偏见审计、公布结果摘要并告知候选人，美国其他多个州和城市也已引入或通过类似要求。在中国大陆运营的企业还需关注《个人信息保护法》等法律对员工和候选人个人信息处理的要求；本地推理可以减少数据离开自有基础设施的环节，但并不自动满足相关法律义务，具体请咨询当地律师。',
         items: [
           '**本文不构成法律意见。** 具体适用哪些规则取决于司法辖区、具体工作流以及AI输出在最终决策中所占的权重——不同法律的义务各不相同且会随时间变化。',
           '供应商声称其产品包含"偏见测试"或"公平性功能"，并不等同于你的具体部署满足特定司法辖区的法定审计要求——请直接与律师及供应商核实当前审计文档和法律适用性，而非依据营销文案。',
@@ -1544,8 +1544,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**自托管本地LLM技术栈并非在功能广度上与Workday或Lattice竞争——它是在数据所在位置最重要的具体工作流上展开竞争。** 关于针对机密HR文档的HR政策问答，请参阅深入介绍基于RAG的访问控制模式的专门指南[自托管内部HR与IT帮助台机器人](/zh/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots)。本节介绍另外四个应用场景。',
         items: [
-          '**简历筛选：** 本地LLM可以从简历文本中提取结构化字段（技能、工作年限、教育背景），并根据职位要求对候选人打分，而候选人PII始终不会到达第三方API——模型运行在企业控制的基础设施上，提取结果在候选人被推进或淘汰前仍需人工审核。',
-          '**员工情绪分析：** 内部敬业度调查的自由文本是企业收集到的最真实的内容之一——本地LLM可以对数百条回复进行主题聚类和情绪摘要，只要该流程未接入任何外部API，原始评论就会保留在企业自行控制的基础设施上——一旦员工真正信任这种保密性，往往也会更愿意坦诚作答。',
+          '**简历筛选：** 本地LLM可以从简历文本中提取结构化字段（技能、工作年限、教育背景），并根据职位要求对候选人打分；前提是模型及其日志运行在企业自行控制的基础设施上（租用的云GPU属于第三方处理方，需要签订数据处理协议），在此前提下可以在不把候选人个人信息发送给第三方API的情况下完成处理——提取结果在候选人被推进或淘汰前仍需人工审核。',
+          '**员工情绪分析：** 内部敬业度调查的自由文本是企业收集到的最真实的内容之一——本地LLM可以对数百条回复进行主题聚类和情绪摘要，只要该流程未接入任何外部API，原始评论就会保留在企业自行控制的基础设施上。',
           '**入职自动化：** 基于RAG、回答新员工关于内部手册、福利文档和IT配置指南问题的入职助手，使用的是[内部HR/IT机器人指南](/zh/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots)中详细介绍的相同检索与访问控制模式——这在很大程度上是同一架构应用于另一批文档。',
           '**绩效评语起草辅助：** 本地LLM可以帮助管理者把粗略笔记整理成结构化草稿，而这些机密、决策前的内容不会经过第三方API——管理者始终是作者和最终决策者；模型只是起草辅助，而非评分者。',
           '关于这些系统背后完整的RAG平台和向量数据库对比，请参阅[面向企业文档的最佳RAG工具](/zh/power-local-llm/best-rag-tools-for-business-documents-2026)，以及涉及受监管个人数据时适用的控制集[面向敏感文档的GDPR合规本地RAG](/zh/power-local-llm/local-rag-for-private-business-data)。',
@@ -1654,12 +1654,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '2026年企业AI人力资源软件推荐：隐私优先方案对比',
+      headline: '2026年企业AI人力资源软件：隐私优先方案对比',
       description: '企业AI人力资源软件对比：Workday、HireVue、Lattice等的公开价格、欧盟AI法案时间表及自托管方案，并附合规提示。不构成法律建议。',
       url: 'https://www.promptquorum.com/zh/power-local-llm/best-ai-hr-software-enterprise',
       inLanguage: 'zh',
       datePublished: '2026-09-03',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Advanced',
@@ -1672,28 +1672,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '首页', item: '[www.promptquorum.com/zh](https://www.promptquorum.com/zh)' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/zh/power-local-llm](https://www.promptquorum.com/zh/power-local-llm)' },
-        { '@type': 'ListItem', position: 3, name: '2026年企业AI人力资源软件推荐', item: '[www.promptquorum.com/zh/power-local-llm/best-ai-hr-software-enterprise](https://www.promptquorum.com/zh/power-local-llm/best-ai-hr-software-enterprise)' },
+        { '@type': 'ListItem', position: 1, name: '首页', item: 'https://www.promptquorum.com/zh' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/zh/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: '2026年企业AI人力资源软件对比', item: 'https://www.promptquorum.com/zh/power-local-llm/best-ai-hr-software-enterprise' },
       ],
     },
   },
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-03',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
-    title: 'Mejor software de RR. HH. con IA para empresas 2026: opciones que priorizan la privacidad',
-    seoTitle: 'Mejor software de RR. HH. con IA para empresas (2026)',
+    title: 'Software de RR. HH. con IA para empresas 2026: opciones que priorizan la privacidad comparadas',
+    seoTitle: 'Software de RR. HH. con IA para empresas: opciones (2026)',
     intro:
       'La IA ya interviene en el filtrado de CV, las entrevistas, la incorporación, las encuestas de clima y la redacción de evaluaciones. Esta guía compara las plataformas habituales con una opción autoalojada y repasa las reglas que se aplican en ambos casos (no es asesoría legal).',
     metaDescription:
       'Software de RR. HH. con IA comparado: Workday, HireVue, Lattice y más, con precios públicos, fechas del AI Act y opción autoalojada. No es asesoría legal.',
     twitterDescription:
-      'Software de RR. HH. con IA comparado: plataformas líderes vs. LLM locales autoalojados para filtrado de CV, análisis de clima laboral y redacción de evaluaciones.',
+      'Software de RR. HH. con IA comparado: plataformas habituales vs. LLM locales autoalojados para filtrado de CV, análisis de clima laboral y redacción de evaluaciones.',
     affiliateDisclosure: true,
     current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
@@ -1718,9 +1718,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       es: {
         question: '¿Cuál es el mejor software de RR. HH. con IA para empresas que necesitan controlar hacia dónde van los datos de empleados y candidatos?',
         answer:
-          'No hay una única mejor respuesta: depende del flujo de trabajo y de los datos que hay detrás. Las plataformas líderes (Workday para ATS/filtrado, HireVue para evaluación de entrevistas, Paradox para programación, Lattice o 15Five para evaluaciones de desempeño, Culture Amp para clima laboral) son la vía más rápida hacia producción e incluyen su propio alojamiento de IA. Para los flujos que tocan los datos más sensibles de candidatos y empleados —datos personales del CV, borradores de evaluación confidenciales, texto sincero de encuestas de clima— un LLM local autoalojado mantiene ese contenido en infraestructura que tú controlas, a costa de construir y mantener la pila tú mismo.',
+          'No hay una única mejor respuesta: depende del flujo de trabajo y de los datos que hay detrás. Las plataformas habituales (Workday para ATS/filtrado, HireVue para evaluación de entrevistas, Paradox para programación, Lattice o 15Five para evaluaciones de desempeño, Culture Amp para clima laboral) son la vía más rápida hacia producción e incluyen su propio alojamiento de IA. Para los flujos que tocan los datos más sensibles de candidatos y empleados —datos personales del CV, borradores de evaluación confidenciales, texto sincero de encuestas de clima— un LLM local autoalojado mantiene ese contenido en infraestructura que tú controlas, a costa de construir y mantener la pila tú mismo.',
         bullets: [
-          'Las plataformas líderes empaquetan alojamiento de IA, soporte e integraciones: despliegue más rápido, pero los datos salen de tu infraestructura',
+          'Las plataformas habituales empaquetan alojamiento de IA, soporte e integraciones: despliegue más rápido, pero los datos salen de tu infraestructura',
           'Los LLM locales autoalojados mantienen datos de candidatos, texto de clima laboral y borradores de evaluación en infraestructura que controlas',
           'La IA en reclutamiento/RR. HH. es de alto riesgo bajo el Reglamento de IA de la UE y está sujeta a leyes de auditoría de sesgo como la Local Law 144 de Nueva York',
           'La decisión final debe seguir siendo humana en el filtrado, la puntuación y los resultados de desempeño: nunca automatización total',
@@ -1760,7 +1760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Las plataformas líderes de RR. HH. con IA (Workday, HireVue, Lattice) gestionan el filtrado de CV, la programación de entrevistas y las evaluaciones de desempeño en infraestructura del proveedor, mientras que una pila de LLM local autoalojada mantiene datos de candidatos, clima laboral y borradores de evaluación en infraestructura controlada por la empresa.',
+            text: 'Las plataformas habituales de RR. HH. con IA (Workday, HireVue, Lattice) gestionan el filtrado de CV, la programación de entrevistas y las evaluaciones de desempeño en infraestructura del proveedor, mientras que una pila de LLM local autoalojada mantiene datos de candidatos, clima laboral y borradores de evaluación en infraestructura controlada por la empresa.',
           },
           {
             type: 'plain-terms',
@@ -1774,7 +1774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Clasificación del Reglamento de IA de la UE:** los sistemas de IA usados para reclutamiento, filtrado de candidatos y evaluación del desempeño de trabajadores se clasifican como de alto riesgo bajo el Anexo III del Reglamento (UE) 2024/1689.',
           '**Local Law 144 de Nueva York:** exige una auditoría de sesgo independiente, resultados publicados y notificación a candidatos para toda "herramienta automatizada de decisión de empleo" usada para asistir sustancialmente decisiones de contratación en Nueva York.',
-          '**Plataformas líderes comparadas aquí:** Workday, HireVue, Paradox (Olivia), Lattice, 15Five, Culture Amp, Textio y Eightfold AI —cada una un producto real y actualmente activo, no hipotético.',
+          '**Plataformas habituales comparadas aquí:** Workday, HireVue, Paradox (Olivia), Lattice, 15Five, Culture Amp, Textio y Eightfold AI —cada una un producto real y actualmente activo, no hipotético.',
           '**Rango de costo de infraestructura autoalojada:** aproximadamente entre 0,34 y 4,29 $/hora por GPU en la nube bajo demanda, de la clase RTX 4090 a H100 (páginas de precios de RunPod y Lambda), adecuado para un piloto de modelo de tamaño medio (7-32 mil millones de parámetros), sin contar el tiempo de ingeniería.',
           '**Esto no es asesoramiento legal** —las obligaciones regulatorias para la IA en reclutamiento y RR. HH. varían según la jurisdicción y cambian con el tiempo; verifica los requisitos vigentes con un abogado antes del despliegue.',
         ],
@@ -1784,20 +1784,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Dónde interviene realmente la IA en los flujos de RR. HH.',
         content:
           '**"La IA en RR. HH." no es una sola decisión de compra: son seis o más flujos de trabajo distintos con perfiles de sensibilidad de datos muy diferentes.** Tratarlos como una sola decisión de compra es el primer error que comete la mayoría de las empresas.',
-        columns: ['Flujo de RR. HH.', 'Ejemplo de plataforma líder', 'Sensibilidad de datos', 'Aptitud para autoalojamiento'],
+        columns: ['Flujo de RR. HH.', 'Ejemplo de plataforma habitual', 'Sensibilidad de datos', 'Aptitud para autoalojamiento'],
         rows: [
-          { 'Flujo de RR. HH.': 'Filtrado de CV', 'Ejemplo de plataforma líder': 'Workday, Eightfold AI', 'Sensibilidad de datos': 'Alta (datos de candidato)', 'Aptitud para autoalojamiento': 'Fuerte' },
-          { 'Flujo de RR. HH.': 'Programación de entrevistas', 'Ejemplo de plataforma líder': 'Paradox (Olivia)', 'Sensibilidad de datos': 'Baja-moderada', 'Aptitud para autoalojamiento': 'Débil — poco rentable' },
-          { 'Flujo de RR. HH.': 'Evaluación de entrevistas', 'Ejemplo de plataforma líder': 'HireVue', 'Sensibilidad de datos': 'Alta (video/conducta)', 'Aptitud para autoalojamiento': 'Moderada' },
-          { 'Flujo de RR. HH.': 'Preguntas de incorporación', 'Ejemplo de plataforma líder': 'Bots integrados en HRIS', 'Sensibilidad de datos': 'Moderada', 'Aptitud para autoalojamiento': 'Fuerte (RAG sobre documentos)' },
-          { 'Flujo de RR. HH.': 'Análisis de clima laboral', 'Ejemplo de plataforma líder': 'Culture Amp', 'Sensibilidad de datos': 'Alta (texto libre sincero)', 'Aptitud para autoalojamiento': 'Fuerte' },
-          { 'Flujo de RR. HH.': 'Redacción de evaluaciones', 'Ejemplo de plataforma líder': 'Lattice, 15Five', 'Sensibilidad de datos': 'Alta (contenido confidencial)', 'Aptitud para autoalojamiento': 'Fuerte' },
-          { 'Flujo de RR. HH.': 'Preguntas sobre políticas de RR. HH.', 'Ejemplo de plataforma líder': 'n/a — ver guía separada', 'Sensibilidad de datos': 'Alta', 'Aptitud para autoalojamiento': 'Fuerte — cubierta aparte' },
+          { 'Flujo de RR. HH.': 'Filtrado de CV', 'Ejemplo de plataforma habitual': 'Workday, Eightfold AI', 'Sensibilidad de datos': 'Alta (datos de candidato)', 'Aptitud para autoalojamiento': 'Fuerte' },
+          { 'Flujo de RR. HH.': 'Programación de entrevistas', 'Ejemplo de plataforma habitual': 'Paradox (Olivia)', 'Sensibilidad de datos': 'Baja-moderada', 'Aptitud para autoalojamiento': 'Débil — poco rentable' },
+          { 'Flujo de RR. HH.': 'Evaluación de entrevistas', 'Ejemplo de plataforma habitual': 'HireVue', 'Sensibilidad de datos': 'Alta (video/conducta)', 'Aptitud para autoalojamiento': 'Moderada' },
+          { 'Flujo de RR. HH.': 'Preguntas de incorporación', 'Ejemplo de plataforma habitual': 'Bots integrados en HRIS', 'Sensibilidad de datos': 'Moderada', 'Aptitud para autoalojamiento': 'Fuerte (RAG sobre documentos)' },
+          { 'Flujo de RR. HH.': 'Análisis de clima laboral', 'Ejemplo de plataforma habitual': 'Culture Amp', 'Sensibilidad de datos': 'Alta (texto libre sincero)', 'Aptitud para autoalojamiento': 'Fuerte' },
+          { 'Flujo de RR. HH.': 'Redacción de evaluaciones', 'Ejemplo de plataforma habitual': 'Lattice, 15Five', 'Sensibilidad de datos': 'Alta (contenido confidencial)', 'Aptitud para autoalojamiento': 'Fuerte' },
+          { 'Flujo de RR. HH.': 'Preguntas sobre políticas de RR. HH.', 'Ejemplo de plataforma habitual': 'n/a — ver guía separada', 'Sensibilidad de datos': 'Alta', 'Aptitud para autoalojamiento': 'Fuerte — cubierta aparte' },
         ],
       },
       commercialPlatforms: {
         id: 'commercial-platforms',
-        title: 'Plataformas líderes de RR. HH. con IA comparadas',
+        title: 'Plataformas habituales de RR. HH. con IA comparadas',
         content:
           '**Estas plataformas son productos reales y actualmente activos con funciones de IA documentadas públicamente —ninguna de las descripciones a continuación es un resultado de pruebas de PromptQuorum, y ninguna debe leerse como un respaldo al estado de auditoría de sesgo o cumplimiento de un proveedor.** Verifica el alcance de funciones y la documentación de auditoría vigentes directamente con cada proveedor antes de comprar.',
         items: [
@@ -1848,8 +1848,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Una pila de LLM local autoalojada no compite en amplitud con Workday o Lattice: compite en dónde residen los datos, para los flujos específicos donde eso más importa.** Para preguntas y respuestas sobre políticas de RR. HH. mediante documentos confidenciales, consulta la guía dedicada [bots internos autoalojados de RR. HH. y helpdesk de TI](/es/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots), que cubre en profundidad los patrones de control de acceso basados en RAG. Esta sección cubre los otros cuatro casos de uso.',
         items: [
-          '**Filtrado de CV:** un LLM local puede extraer campos estructurados (habilidades, años de experiencia, formación) del texto del currículum y puntuar candidatos frente a los criterios del puesto sin que los datos personales del candidato lleguen jamás a una API de terceros —el modelo se ejecuta en infraestructura que controlas, y la salida extraída sigue requiriendo revisión humana antes de avanzar o descartar a un candidato.',
-          '**Análisis de clima laboral:** el texto libre de encuestas internas de compromiso es de lo más sincero que recopila una empresa —un LLM local puede agrupar temas y resumir el clima laboral en cientos de respuestas mientras los comentarios en bruto permanecen en infraestructura que la empresa controla, siempre que la canalización no esté conectada a ninguna API externa —lo que además tiende a hacer que el personal sea más franco una vez que confía en que la confidencialidad es real.',
+          '**Filtrado de CV:** un LLM local puede extraer campos estructurados (habilidades, años de experiencia, formación) del texto del currículum y puntuar candidatos frente a los criterios del puesto sin enviar los datos personales del candidato a una API de terceros, siempre que el modelo y sus registros se ejecuten en infraestructura que controlas (las GPU en la nube alquiladas son encargados del tratamiento y requieren un contrato conforme al art. 28 del RGPD) —el modelo se ejecuta en infraestructura que controlas, y la salida extraída sigue requiriendo revisión humana antes de avanzar o descartar a un candidato.',
+          '**Análisis de clima laboral:** el texto libre de encuestas internas de compromiso es de lo más sincero que recopila una empresa —un LLM local puede agrupar temas y resumir el clima laboral en cientos de respuestas mientras los comentarios en bruto permanecen en infraestructura que la empresa controla, siempre que la canalización no esté conectada a ninguna API externa.',
           '**Automatización de incorporación:** un asistente de incorporación basado en RAG que responde preguntas de nuevos empleados sobre manuales internos, documentos de beneficios y guías de configuración de TI usa el mismo patrón de recuperación y control de acceso cubierto en profundidad en la [guía de chatbot interno de RR. HH./TI](/es/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) —es, en gran medida, la misma arquitectura aplicada a otro conjunto de documentos.',
           '**Asistencia para redactar evaluaciones de desempeño:** un LLM local puede ayudar a un gerente a convertir notas preliminares en un borrador estructurado sin que ese contenido confidencial y previo a la decisión pase por una API de terceros —el gerente sigue siendo el autor y el decisor final; el modelo es una ayuda de redacción, no un evaluador.',
           'Para la comparativa completa de plataformas RAG y bases de datos vectoriales detrás de cualquiera de estas construcciones, consulta [mejores herramientas RAG para documentos empresariales](/es/power-local-llm/best-rag-tools-for-business-documents-2026) y [RAG local conforme al RGPD para documentos sensibles](/es/power-local-llm/local-rag-for-private-business-data) para el conjunto de controles aplicable cuando hay datos personales regulados de por medio.',
@@ -1873,27 +1873,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost-comparison',
         title: 'Costos: suscripción SaaS vs. infraestructura autoalojada',
         content:
-          '**Las plataformas líderes cobran por empleado o por puesto, típicamente mediante una cotización empresarial personalizada; la infraestructura autoalojada cambia esa suscripción predecible por cómputo de pago por uso más tiempo de ingeniería.** Ninguna opción es universalmente más barata: la respuesta depende de la escala del despliegue, la capacidad de ingeniería interna y cuánto valore tu organización mantener los datos de candidatos y empleados fuera de infraestructura de terceros.',
-        columns: ['Criterio', 'Plataforma líder', 'Pila autoalojada'],
+          '**Las plataformas habituales cobran por empleado o por puesto, típicamente mediante una cotización empresarial personalizada; la infraestructura autoalojada cambia esa suscripción predecible por cómputo de pago por uso más tiempo de ingeniería.** Ninguna opción es universalmente más barata: la respuesta depende de la escala del despliegue, la capacidad de ingeniería interna y cuánto valore tu organización mantener los datos de candidatos y empleados fuera de infraestructura de terceros.',
+        columns: ['Criterio', 'Plataforma habitual', 'Pila autoalojada'],
         rows: [
-          { 'Criterio': 'Modelo de precios', 'Plataforma líder': 'Por empleado/puesto, cotización empresarial personalizada', 'Pila autoalojada': 'Cómputo de pago por uso + tiempo de ingeniería' },
-          { 'Criterio': 'Rango de costo de GPU en la nube', 'Plataforma líder': 'Incluido en la suscripción', 'Pila autoalojada': '~0,34-4,29 $/h (RTX 4090 a H100)' },
-          { 'Criterio': 'Ubicación de los datos', 'Plataforma líder': 'Infraestructura alojada por el proveedor', 'Pila autoalojada': 'Infraestructura que tú controlas' },
-          { 'Criterio': 'Esfuerzo de configuración', 'Plataforma líder': 'Bajo — configurar y listo', 'Pila autoalojada': 'Alto — construir, asegurar, mantener' },
-          { 'Criterio': 'Mantenimiento continuo', 'Plataforma líder': 'Gestionado por el proveedor', 'Pila autoalojada': 'Interno o contratado' },
+          { 'Criterio': 'Modelo de precios', 'Plataforma habitual': 'Por empleado/puesto, cotización empresarial personalizada', 'Pila autoalojada': 'Cómputo de pago por uso + tiempo de ingeniería' },
+          { 'Criterio': 'Rango de costo de GPU en la nube', 'Plataforma habitual': 'Incluido en la suscripción', 'Pila autoalojada': '~0,34-4,29 $/h (RTX 4090 a H100)' },
+          { 'Criterio': 'Ubicación de los datos', 'Plataforma habitual': 'Infraestructura alojada por el proveedor', 'Pila autoalojada': 'Infraestructura que tú controlas' },
+          { 'Criterio': 'Esfuerzo de configuración', 'Plataforma habitual': 'Bajo — configurar y listo', 'Pila autoalojada': 'Alto — construir, asegurar, mantener' },
+          { 'Criterio': 'Mantenimiento continuo', 'Plataforma habitual': 'Gestionado por el proveedor', 'Pila autoalojada': 'Interno o contratado' },
         ],
       },
       decisionGuide: {
         id: 'decision-guide',
         title: '¿Qué enfoque conviene a tu equipo?',
         content:
-          '**La mayoría de las empresas ejecutan ambas vías a la vez, no eligen una en exclusiva —plataformas líderes para programación y flujos amplios de ATS, autoalojamiento para los datos más sensibles.** Usa los perfiles siguientes por flujo, no por empresa.',
+          '**La mayoría de las empresas ejecutan ambas vías a la vez, no eligen una en exclusiva —plataformas habituales para programación y flujos amplios de ATS, autoalojamiento para los datos más sensibles.** Usa los perfiles siguientes por flujo, no por empresa.',
         items: [
-          '**Equipo de RR. HH. pequeño, sin soporte de ingeniería dedicado:** usa una plataforma líder para todo el flujo —la carga de configuración y mantenimiento del autoalojamiento no vale la pena a esta escala.',
-          '**Empresa con equipo interno de ingeniería de ML/plataforma y fuerte escrutinio de cumplimiento sobre datos de candidatos:** autoaloja específicamente el filtrado de CV y el análisis de clima laboral; mantén la programación de entrevistas en una plataforma líder donde la sensibilidad de los datos es menor.',
+          '**Equipo de RR. HH. pequeño, sin soporte de ingeniería dedicado:** usa una plataforma habitual para todo el flujo —la carga de configuración y mantenimiento del autoalojamiento no vale la pena a esta escala.',
+          '**Empresa con equipo interno de ingeniería de ML/plataforma y fuerte escrutinio de cumplimiento sobre datos de candidatos:** autoaloja específicamente el filtrado de CV y el análisis de clima laboral; mantén la programación de entrevistas en una plataforma habitual donde la sensibilidad de los datos es menor.',
           '**Empresa ya inmersa en negociaciones sobre datos de empleados de la UE o comité de empresa:** autoalojar el análisis de clima laboral y la redacción de evaluaciones elimina un encargado del tratamiento de terceros de la conversación, lo que puede simplificar sustancialmente esa negociación.',
           '**Evita el autoalojamiento por completo si** tu organización no tiene capacidad de ingeniería para mantener la pila, o si el flujo en cuestión (como la programación de entrevistas) no toca datos lo bastante sensibles como para justificar el esfuerzo de construcción.',
-          '**Si tienes dudas, empieza con una plataforma líder para cubrir amplitud y pilota el autoalojamiento en un flujo de alta sensibilidad** (filtrado de CV o análisis de clima laboral) antes de expandirte más.',
+          '**Si tienes dudas, empieza con una plataforma habitual para cubrir amplitud y pilota el autoalojamiento en un flujo de alta sensibilidad** (filtrado de CV o análisis de clima laboral) antes de expandirte más.',
         ],
       },
       commonMistakes: {
@@ -1930,7 +1930,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Es legal el filtrado de CV asistido por IA?', a: 'Puede serlo, pero está regulado en lugar de ser irrestricto. Bajo el Reglamento de IA de la UE, la IA usada para filtrar candidatos se clasifica como de alto riesgo en el Anexo III, con obligaciones de gestión de riesgos y supervisión humana. En EE. UU., jurisdicciones como Nueva York exigen una auditoría de sesgo independiente y notificación a candidatos para herramientas automatizadas de decisión de empleo. Esto no es asesoramiento legal —verifica los requisitos vigentes para tu jurisdicción y flujo específicos con un abogado laboral antes de desplegar cualquier herramienta de filtrado, comercial o autoalojada.' },
-          { q: '¿Qué plataformas líderes de RR. HH. con IA están realmente en uso activo hoy?', a: 'Workday (reclutamiento/ATS con emparejamiento de habilidades asistido por IA), HireVue (evaluación de entrevistas estructuradas asistida por IA), Paradox (IA conversacional para programación de entrevistas, comercializada como Olivia), Lattice y 15Five (ayuda de redacción de evaluaciones asistida por IA), Culture Amp (análisis de IA del texto de encuestas de empleados), Textio (análisis de lenguaje con IA para ofertas de empleo y evaluaciones) y Eightfold AI (emparejamiento de talento impulsado por IA) son todos productos reales y actualmente activos con funciones de IA documentadas públicamente. Verifica el alcance de funciones vigente directamente con cada proveedor, ya que las capacidades del producto cambian.' },
+          { q: '¿Qué plataformas habituales de RR. HH. con IA están realmente en uso activo hoy?', a: 'Workday (reclutamiento/ATS con emparejamiento de habilidades asistido por IA), HireVue (evaluación de entrevistas estructuradas asistida por IA), Paradox (IA conversacional para programación de entrevistas, comercializada como Olivia), Lattice y 15Five (ayuda de redacción de evaluaciones asistida por IA), Culture Amp (análisis de IA del texto de encuestas de empleados), Textio (análisis de lenguaje con IA para ofertas de empleo y evaluaciones) y Eightfold AI (emparejamiento de talento impulsado por IA) son todos productos reales y actualmente activos con funciones de IA documentadas públicamente. Verifica el alcance de funciones vigente directamente con cada proveedor, ya que las capacidades del producto cambian.' },
           { q: '¿Puede un LLM local autoalojado reemplazar un ATS como Workday?', a: 'No —el autoalojamiento no se presenta en esta guía como un reemplazo completo de ATS. Es una alternativa dirigida a los flujos específicos donde más importa mantener los datos fuera de infraestructura de terceros: extracción y puntuación de campos de CV, análisis de clima laboral y ayuda para redactar evaluaciones. La mayoría de las empresas ejecutan ambas vías juntas en lugar de reemplazar una con la otra.' },
           { q: '¿Autoalojar un flujo de IA de RR. HH. cumple automáticamente con el RGPD o el Reglamento de IA de la UE?', a: 'No. El autoalojamiento elimina un encargado del tratamiento de terceros del mapa de flujo de datos, lo cual es relevante, pero no cumple por sí solo todas las obligaciones aplicables —los requisitos de gestión de riesgos, supervisión humana y documentación del Reglamento de IA de la UE para sistemas de alto riesgo aplican sin importar dónde se ejecute el modelo. Consulta la guía dedicada de [RAG local conforme al RGPD](/es/power-local-llm/local-rag-for-private-business-data) para el conjunto completo de controles, y consulta con un abogado para tu despliegue específico.' },
           { q: '¿Qué es la Local Law 144 de Nueva York y aplica fuera de la ciudad de Nueva York?', a: 'La Local Law 144 es una ordenanza de la ciudad de Nueva York que exige a los empleadores encargar una auditoría de sesgo independiente, publicar un resumen de resultados y notificar a los candidatos antes de usar una herramienta automatizada de decisión de empleo para asistir sustancialmente una decisión de contratación en Nueva York. Aplica a decisiones de empleo relacionadas con la ciudad de Nueva York, y varios otros estados y ciudades de EE. UU. han introducido o aprobado requisitos comparables —esto no es asesoramiento legal, verifica la aplicabilidad vigente a tus ubicaciones de contratación específicas con un abogado.' },
@@ -1958,12 +1958,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Mejor software de RR. HH. con IA para empresas 2026: opciones que priorizan la privacidad',
+      headline: 'Software de RR. HH. con IA para empresas 2026: opciones que priorizan la privacidad comparadas',
       description: 'Software de RR. HH. con IA comparado: Workday, HireVue, Lattice y más, con precios públicos, fechas del AI Act y opción autoalojada. No es asesoría legal.',
       url: 'https://www.promptquorum.com/es/power-local-llm/best-ai-hr-software-enterprise',
       inLanguage: 'es',
       datePublished: '2026-09-03',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Advanced',
@@ -1974,28 +1974,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Inicio', item: '[www.promptquorum.com/es](https://www.promptquorum.com/es)' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/es/power-local-llm](https://www.promptquorum.com/es/power-local-llm)' },
-        { '@type': 'ListItem', position: 3, name: 'Mejor software de RR. HH. con IA para empresas 2026', item: '[www.promptquorum.com/es/power-local-llm/best-ai-hr-software-enterprise](https://www.promptquorum.com/es/power-local-llm/best-ai-hr-software-enterprise)' },
+        { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://www.promptquorum.com/es' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/es/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'Software de RR. HH. con IA para empresas 2026', item: 'https://www.promptquorum.com/es/power-local-llm/best-ai-hr-software-enterprise' },
       ],
     },
   },
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-03',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
-    title: 'Melhor software de RH com IA para empresas 2026: opções focadas em privacidade',
+    title: 'Software de RH com IA para empresas 2026: opções focadas em privacidade comparadas',
     seoTitle: 'Ferramentas de IA para RH em empresas: comparativo (2026)',
     intro:
       'A IA já participa da triagem de currículos, das entrevistas, do onboarding, das pesquisas de clima e da redação de avaliações. Este guia compara as plataformas mais usadas com uma opção auto-hospedada e resume as regras que valem nos dois casos, incluindo a LGPD (não é aconselhamento jurídico).',
     metaDescription:
       'Software de RH com IA comparado: Workday, HireVue, Lattice, com preços públicos, prazos do AI Act e opção auto-hospedada. Não é aconselhamento jurídico.',
     twitterDescription:
-      'Software de RH com IA comparado: plataformas líderes vs. LLMs locais auto-hospedados para triagem de currículos, análise de clima e redação de avaliações.',
+      'Software de RH com IA comparado: plataformas usuais vs. LLMs locais auto-hospedados para triagem de currículos, análise de clima e redação de avaliações.',
     affiliateDisclosure: true,
     current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
@@ -2020,9 +2020,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pt: {
         question: 'Qual é o melhor software de RH com IA para empresas que precisam controlar para onde vão os dados de funcionários e candidatos?',
         answer:
-          'Não existe uma única resposta melhor — depende do fluxo de trabalho e dos dados envolvidos. Plataformas líderes (Workday para ATS/triagem, HireVue para avaliação de entrevistas, Paradox para agendamento, Lattice ou 15Five para avaliações de desempenho, Culture Amp para clima organizacional) são o caminho mais rápido para produção e já incluem hospedagem própria de IA. Para fluxos que tocam nos dados mais sensíveis de candidatos e funcionários — dados pessoais do currículo, rascunhos confidenciais de avaliação, texto sincero de pesquisas de clima — um LLM local auto-hospedado mantém esse conteúdo em infraestrutura que você controla, ao custo de construir e manter a pilha você mesmo.',
+          'Não existe uma única resposta melhor — depende do fluxo de trabalho e dos dados envolvidos. Plataformas usuais (Workday para ATS/triagem, HireVue para avaliação de entrevistas, Paradox para agendamento, Lattice ou 15Five para avaliações de desempenho, Culture Amp para clima organizacional) são o caminho mais rápido para produção e já incluem hospedagem própria de IA. Para fluxos que tocam nos dados mais sensíveis de candidatos e funcionários — dados pessoais do currículo, rascunhos confidenciais de avaliação, texto sincero de pesquisas de clima — um LLM local auto-hospedado mantém esse conteúdo em infraestrutura que você controla, ao custo de construir e manter a pilha você mesmo.',
         bullets: [
-          'Plataformas líderes empacotam hospedagem de IA, suporte e integrações — implantação mais rápida, mas os dados saem da sua infraestrutura',
+          'Plataformas usuais empacotam hospedagem de IA, suporte e integrações — implantação mais rápida, mas os dados saem da sua infraestrutura',
           'LLMs locais auto-hospedados mantêm dados de candidatos, texto de clima organizacional e rascunhos de avaliação em infraestrutura que você controla',
           'A IA em recrutamento/RH é classificada como alto risco pelo AI Act da UE e está sujeita a leis de auditoria de viés como a Local Law 144 de Nova York',
           'A decisão final deve permanecer humana na triagem, pontuação e resultados de desempenho — nunca automação total',
@@ -2035,7 +2035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Principais conclusões', anchor: '#key-takeaways' },
       { label: 'Fatos rápidos', anchor: '#quick-facts' },
       { label: 'Onde a IA atua nos fluxos de RH', anchor: '#use-case-map' },
-      { label: 'Plataformas líderes de RH com IA comparadas', anchor: '#commercial-platforms' },
+      { label: 'Plataformas usuais de RH com IA comparadas', anchor: '#commercial-platforms' },
       { label: 'Plataformas de RH com IA em resumo', anchor: '#platform-table' },
       { label: 'Risco regulatório: AI Act da UE e auditorias de viés', anchor: '#regulatory-risk' },
       { label: 'A alternativa auto-hospedada', anchor: '#self-hosted-approach' },
@@ -2062,7 +2062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Plataformas líderes de RH com IA (Workday, HireVue, Lattice) lidam com triagem de currículos, agendamento de entrevistas e avaliações de desempenho na infraestrutura do fornecedor, enquanto uma pilha de LLM local auto-hospedada mantém dados de candidatos, dados de clima organizacional e rascunhos de avaliação em infraestrutura controlada pela empresa.',
+            text: 'Plataformas usuais de RH com IA (Workday, HireVue, Lattice) lidam com triagem de currículos, agendamento de entrevistas e avaliações de desempenho na infraestrutura do fornecedor, enquanto uma pilha de LLM local auto-hospedada mantém dados de candidatos, dados de clima organizacional e rascunhos de avaliação em infraestrutura controlada pela empresa.',
           },
           {
             type: 'plain-terms',
@@ -2076,7 +2076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Classificação do AI Act da UE:** sistemas de IA usados para recrutamento, triagem de candidatos e avaliação de desempenho de trabalhadores são classificados como alto risco no Anexo III do Regulamento (UE) 2024/1689.',
           '**Local Law 144 de Nova York:** exige auditoria de viés independente, resultados publicados e notificação a candidatos para qualquer "ferramenta automatizada de decisão de emprego" usada para apoiar substancialmente decisões de contratação em Nova York.',
-          '**Plataformas líderes comparadas aqui:** Workday, HireVue, Paradox (Olivia), Lattice, 15Five, Culture Amp, Textio e Eightfold AI — todos produtos reais e atualmente ativos, não hipotéticos.',
+          '**Plataformas usuais comparadas aqui:** Workday, HireVue, Paradox (Olivia), Lattice, 15Five, Culture Amp, Textio e Eightfold AI — todos produtos reais e atualmente ativos, não hipotéticos.',
           '**Faixa de custo da infraestrutura auto-hospedada:** aproximadamente US$ 0,34–4,29/hora por GPU em nuvem sob demanda, da classe RTX 4090 à H100 (páginas de preços da RunPod e da Lambda), adequada para um piloto de modelo de porte médio (7–32 bilhões de parâmetros), antes de contar o tempo de engenharia.',
           '**Isto não é aconselhamento jurídico** — obrigações regulatórias para IA em recrutamento e RH variam por jurisdição e mudam com o tempo; verifique os requisitos atuais com um advogado antes da implantação.',
         ],
@@ -2086,20 +2086,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Onde a IA realmente atua nos fluxos de RH',
         content:
           '**"IA em RH" não é uma única decisão de compra — são seis ou mais fluxos separados com perfis de sensibilidade de dados muito diferentes.** Tratá-los como uma única decisão de compra é o primeiro erro que a maioria das empresas comete.',
-        columns: ['Fluxo de RH', 'Exemplo de plataforma líder', 'Sensibilidade dos dados', 'Adequação à auto-hospedagem'],
+        columns: ['Fluxo de RH', 'Exemplo de plataforma usual', 'Sensibilidade dos dados', 'Adequação à auto-hospedagem'],
         rows: [
-          { 'Fluxo de RH': 'Triagem de currículos', 'Exemplo de plataforma líder': 'Workday, Eightfold AI', 'Sensibilidade dos dados': 'Alta (dados do candidato)', 'Adequação à auto-hospedagem': 'Forte' },
-          { 'Fluxo de RH': 'Agendamento de entrevistas', 'Exemplo de plataforma líder': 'Paradox (Olivia)', 'Sensibilidade dos dados': 'Baixa-moderada', 'Adequação à auto-hospedagem': 'Fraca — esforço pouco compensador' },
-          { 'Fluxo de RH': 'Avaliação de entrevistas', 'Exemplo de plataforma líder': 'HireVue', 'Sensibilidade dos dados': 'Alta (vídeo/comportamento)', 'Adequação à auto-hospedagem': 'Moderada' },
-          { 'Fluxo de RH': 'Perguntas de onboarding', 'Exemplo de plataforma líder': 'Bots integrados ao HRIS', 'Sensibilidade dos dados': 'Moderada', 'Adequação à auto-hospedagem': 'Forte (RAG sobre documentos)' },
-          { 'Fluxo de RH': 'Análise de sentimento', 'Exemplo de plataforma líder': 'Culture Amp', 'Sensibilidade dos dados': 'Alta (texto livre sincero)', 'Adequação à auto-hospedagem': 'Forte' },
-          { 'Fluxo de RH': 'Redação de avaliações', 'Exemplo de plataforma líder': 'Lattice, 15Five', 'Sensibilidade dos dados': 'Alta (conteúdo confidencial)', 'Adequação à auto-hospedagem': 'Forte' },
-          { 'Fluxo de RH': 'Perguntas sobre políticas de RH', 'Exemplo de plataforma líder': 'n/d — ver guia separado', 'Sensibilidade dos dados': 'Alta', 'Adequação à auto-hospedagem': 'Forte — coberta à parte' },
+          { 'Fluxo de RH': 'Triagem de currículos', 'Exemplo de plataforma usual': 'Workday, Eightfold AI', 'Sensibilidade dos dados': 'Alta (dados do candidato)', 'Adequação à auto-hospedagem': 'Forte' },
+          { 'Fluxo de RH': 'Agendamento de entrevistas', 'Exemplo de plataforma usual': 'Paradox (Olivia)', 'Sensibilidade dos dados': 'Baixa-moderada', 'Adequação à auto-hospedagem': 'Fraca — esforço pouco compensador' },
+          { 'Fluxo de RH': 'Avaliação de entrevistas', 'Exemplo de plataforma usual': 'HireVue', 'Sensibilidade dos dados': 'Alta (vídeo/comportamento)', 'Adequação à auto-hospedagem': 'Moderada' },
+          { 'Fluxo de RH': 'Perguntas de onboarding', 'Exemplo de plataforma usual': 'Bots integrados ao HRIS', 'Sensibilidade dos dados': 'Moderada', 'Adequação à auto-hospedagem': 'Forte (RAG sobre documentos)' },
+          { 'Fluxo de RH': 'Análise de sentimento', 'Exemplo de plataforma usual': 'Culture Amp', 'Sensibilidade dos dados': 'Alta (texto livre sincero)', 'Adequação à auto-hospedagem': 'Forte' },
+          { 'Fluxo de RH': 'Redação de avaliações', 'Exemplo de plataforma usual': 'Lattice, 15Five', 'Sensibilidade dos dados': 'Alta (conteúdo confidencial)', 'Adequação à auto-hospedagem': 'Forte' },
+          { 'Fluxo de RH': 'Perguntas sobre políticas de RH', 'Exemplo de plataforma usual': 'n/d — ver guia separado', 'Sensibilidade dos dados': 'Alta', 'Adequação à auto-hospedagem': 'Forte — coberta à parte' },
         ],
       },
       commercialPlatforms: {
         id: 'commercial-platforms',
-        title: 'Plataformas líderes de RH com IA comparadas',
+        title: 'Plataformas usuais de RH com IA comparadas',
         content:
           '**Essas plataformas são produtos reais e atualmente ativos, com recursos de IA documentados publicamente — nenhuma das descrições abaixo é resultado de teste da PromptQuorum, e nenhuma deve ser lida como um aval ao status de auditoria de viés ou conformidade de um fornecedor.** Verifique o escopo de recursos e a documentação de auditoria atuais diretamente com cada fornecedor antes da compra.',
         items: [
@@ -2150,8 +2150,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Uma pilha de LLM local auto-hospedada não compete em amplitude com Workday ou Lattice — ela compete em onde os dados ficam, para os fluxos específicos em que isso mais importa.** Para perguntas e respostas sobre políticas de RH em documentos confidenciais, veja o guia dedicado [bots internos auto-hospedados de RH e helpdesk de TI](/pt/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots), que cobre em profundidade os padrões de controle de acesso baseados em RAG. Esta seção cobre os outros quatro casos de uso.',
         items: [
-          '**Triagem de currículos:** um LLM local pode extrair campos estruturados (habilidades, anos de experiência, formação) do texto do currículo e pontuar candidatos em relação aos critérios da vaga sem que os dados pessoais do candidato jamais cheguem a uma API de terceiros — o modelo roda em infraestrutura que você controla, e a saída extraída ainda exige revisão humana antes de qualquer candidato ser avançado ou eliminado.',
-          '**Análise de sentimento dos funcionários:** o texto livre de pesquisas internas de engajamento está entre o conteúdo mais sincero que uma empresa coleta — um LLM local pode agrupar temas e resumir o sentimento em centenas de respostas enquanto os comentários brutos permanecem em infraestrutura controlada pela empresa, desde que o pipeline não esteja conectado a nenhuma API externa — o que também tende a deixar os funcionários mais francos assim que confiam de fato na confidencialidade.',
+          '**Triagem de currículos:** um LLM local pode extrair campos estruturados (habilidades, anos de experiência, formação) do texto do currículo e pontuar candidatos em relação aos critérios da vaga sem enviar os dados pessoais do candidato a uma API de terceiros, desde que o modelo e seus registros rodem em infraestrutura que você controla (GPUs em nuvem alugadas são operadoras e exigem contrato de tratamento de dados) — o modelo roda em infraestrutura que você controla, e a saída extraída ainda exige revisão humana antes de qualquer candidato ser avançado ou eliminado.',
+          '**Análise de sentimento dos funcionários:** o texto livre de pesquisas internas de engajamento está entre o conteúdo mais sincero que uma empresa coleta — um LLM local pode agrupar temas e resumir o sentimento em centenas de respostas enquanto os comentários brutos permanecem em infraestrutura controlada pela empresa, desde que o pipeline não esteja conectado a nenhuma API externa.',
           '**Automação de onboarding:** um assistente de onboarding baseado em RAG que responde perguntas de novos contratados sobre manuais internos, documentos de benefícios e guias de configuração de TI usa o mesmo padrão de recuperação e controle de acesso detalhado no [guia de chatbot interno de RH/TI](/pt/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — é, em grande parte, a mesma arquitetura aplicada a outro conjunto de documentos.',
           '**Assistência na redação de avaliações de desempenho:** um LLM local pode ajudar um gestor a transformar notas brutas em um rascunho estruturado sem que esse conteúdo confidencial e pré-decisão passe por uma API de terceiros — o gestor continua sendo o autor e o decisor final; o modelo é uma ajuda de redação, não um avaliador.',
           'Para o comparativo completo de plataformas RAG e bancos de dados vetoriais por trás dessas construções, veja [melhores ferramentas RAG para documentos empresariais](/pt/power-local-llm/best-rag-tools-for-business-documents-2026) e [RAG local em conformidade com o RGPD para documentos sensíveis](/pt/power-local-llm/local-rag-for-private-business-data) para o conjunto de controles aplicável quando dados pessoais regulados estão envolvidos.',
@@ -2175,27 +2175,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost-comparison',
         title: 'Custo: assinatura SaaS vs. infraestrutura auto-hospedada',
         content:
-          '**Plataformas líderes cobram por funcionário ou por licença, geralmente via cotação corporativa personalizada; a infraestrutura auto-hospedada troca essa assinatura previsível por computação sob demanda mais tempo de engenharia.** Nenhuma opção é universalmente mais barata — a resposta depende da escala de implantação, da capacidade de engenharia interna e de quanto sua organização valoriza manter dados de candidatos e funcionários fora de infraestrutura de terceiros.',
-        columns: ['Critério', 'Plataforma líder', 'Pilha auto-hospedada'],
+          '**Plataformas usuais cobram por funcionário ou por licença, geralmente via cotação corporativa personalizada; a infraestrutura auto-hospedada troca essa assinatura previsível por computação sob demanda mais tempo de engenharia.** Nenhuma opção é universalmente mais barata — a resposta depende da escala de implantação, da capacidade de engenharia interna e de quanto sua organização valoriza manter dados de candidatos e funcionários fora de infraestrutura de terceiros.',
+        columns: ['Critério', 'Plataforma usual', 'Pilha auto-hospedada'],
         rows: [
-          { 'Critério': 'Modelo de preços', 'Plataforma líder': 'Por funcionário/licença, cotação corporativa personalizada', 'Pilha auto-hospedada': 'Computação sob demanda + tempo de engenharia' },
-          { 'Critério': 'Faixa de custo de GPU em nuvem', 'Plataforma líder': 'Incluído na assinatura', 'Pilha auto-hospedada': '~US$ 0,34-4,29/h (RTX 4090 a H100)' },
-          { 'Critério': 'Localização dos dados', 'Plataforma líder': 'Infraestrutura hospedada pelo fornecedor', 'Pilha auto-hospedada': 'Infraestrutura que você controla' },
-          { 'Critério': 'Esforço de configuração', 'Plataforma líder': 'Baixo — configurar e começar', 'Pilha auto-hospedada': 'Alto — construir, proteger, manter' },
-          { 'Critério': 'Manutenção contínua', 'Plataforma líder': 'Gerenciada pelo fornecedor', 'Pilha auto-hospedada': 'Interna ou terceirizada' },
+          { 'Critério': 'Modelo de preços', 'Plataforma usual': 'Por funcionário/licença, cotação corporativa personalizada', 'Pilha auto-hospedada': 'Computação sob demanda + tempo de engenharia' },
+          { 'Critério': 'Faixa de custo de GPU em nuvem', 'Plataforma usual': 'Incluído na assinatura', 'Pilha auto-hospedada': '~US$ 0,34-4,29/h (RTX 4090 a H100)' },
+          { 'Critério': 'Localização dos dados', 'Plataforma usual': 'Infraestrutura hospedada pelo fornecedor', 'Pilha auto-hospedada': 'Infraestrutura que você controla' },
+          { 'Critério': 'Esforço de configuração', 'Plataforma usual': 'Baixo — configurar e começar', 'Pilha auto-hospedada': 'Alto — construir, proteger, manter' },
+          { 'Critério': 'Manutenção contínua', 'Plataforma usual': 'Gerenciada pelo fornecedor', 'Pilha auto-hospedada': 'Interna ou terceirizada' },
         ],
       },
       decisionGuide: {
         id: 'decision-guide',
         title: 'Qual abordagem combina com sua equipe?',
         content:
-          '**A maioria das empresas roda os dois caminhos ao mesmo tempo, sem escolher um exclusivamente — plataformas líderes para agendamento e fluxos amplos de ATS, auto-hospedagem para os dados mais sensíveis.** Use os perfis abaixo por fluxo, não por empresa.',
+          '**A maioria das empresas roda os dois caminhos ao mesmo tempo, sem escolher um exclusivamente — plataformas usuais para agendamento e fluxos amplos de ATS, auto-hospedagem para os dados mais sensíveis.** Use os perfis abaixo por fluxo, não por empresa.',
         items: [
-          '**Equipe de RH pequena, sem suporte de engenharia dedicado:** use uma plataforma líder para todo o fluxo — o esforço de configuração e manutenção da auto-hospedagem não compensa nessa escala.',
-          '**Empresa com equipe interna de engenharia de ML/plataforma e forte escrutínio de compliance sobre dados de candidatos:** auto-hospede especificamente a triagem de currículos e a análise de sentimento; mantenha o agendamento de entrevistas em uma plataforma líder, onde a sensibilidade dos dados é menor.',
+          '**Equipe de RH pequena, sem suporte de engenharia dedicado:** use uma plataforma usual para todo o fluxo — o esforço de configuração e manutenção da auto-hospedagem não compensa nessa escala.',
+          '**Empresa com equipe interna de engenharia de ML/plataforma e forte escrutínio de compliance sobre dados de candidatos:** auto-hospede especificamente a triagem de currículos e a análise de sentimento; mantenha o agendamento de entrevistas em uma plataforma usual, onde a sensibilidade dos dados é menor.',
           '**Empresa já envolvida em negociações profundas sobre dados de funcionários na UE:** auto-hospedar a análise de sentimento e a redação de avaliações remove um operador de dados terceiro da conversa, o que pode simplificar bastante essa negociação.',
           '**Evite a auto-hospedagem por completo se** sua organização não tem capacidade de engenharia para manter a pilha, ou se o fluxo em questão (como agendamento de entrevistas) não toca em dados sensíveis o suficiente para justificar o esforço de construção.',
-          '**Em caso de dúvida, comece com uma plataforma líder para amplitude e faça piloto de auto-hospedagem em um único fluxo de alta sensibilidade** (triagem de currículos ou análise de sentimento) antes de expandir mais.',
+          '**Em caso de dúvida, comece com uma plataforma usual para amplitude e faça piloto de auto-hospedagem em um único fluxo de alta sensibilidade** (triagem de currículos ou análise de sentimento) antes de expandir mais.',
         ],
       },
       commonMistakes: {
@@ -2232,7 +2232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'A triagem de currículos assistida por IA é legal?', a: 'Pode ser, mas é regulada, não irrestrita. Sob o AI Act da UE, a IA usada para triagem de candidatos é classificada como alto risco no Anexo III, com obrigações de gestão de riscos e supervisão humana. Nos EUA, jurisdições como Nova York exigem auditoria de viés independente e notificação a candidatos para ferramentas automatizadas de decisão de emprego. Isto não é aconselhamento jurídico — verifique os requisitos vigentes para sua jurisdição e fluxo específicos com um advogado trabalhista antes de implantar qualquer ferramenta de triagem, comercial ou auto-hospedada.' },
-          { q: 'Quais plataformas líderes de RH com IA estão realmente em uso ativo hoje?', a: 'Workday (recrutamento/ATS com correspondência de habilidades assistida por IA), HireVue (avaliação de entrevista estruturada assistida por IA), Paradox (IA conversacional para agendamento de entrevistas, com a marca Olivia), Lattice e 15Five (ajuda de redação de avaliações assistida por IA), Culture Amp (análise de IA do texto de pesquisas com funcionários), Textio (análise de linguagem por IA para vagas e avaliações) e Eightfold AI (correspondência de talentos guiada por IA) são todos produtos reais e atualmente ativos, com recursos de IA documentados publicamente. Verifique o escopo de recursos atual diretamente com cada fornecedor, já que as capacidades do produto mudam.' },
+          { q: 'Quais plataformas usuais de RH com IA estão realmente em uso ativo hoje?', a: 'Workday (recrutamento/ATS com correspondência de habilidades assistida por IA), HireVue (avaliação de entrevista estruturada assistida por IA), Paradox (IA conversacional para agendamento de entrevistas, com a marca Olivia), Lattice e 15Five (ajuda de redação de avaliações assistida por IA), Culture Amp (análise de IA do texto de pesquisas com funcionários), Textio (análise de linguagem por IA para vagas e avaliações) e Eightfold AI (correspondência de talentos guiada por IA) são todos produtos reais e atualmente ativos, com recursos de IA documentados publicamente. Verifique o escopo de recursos atual diretamente com cada fornecedor, já que as capacidades do produto mudam.' },
           { q: 'Um LLM local auto-hospedado pode substituir um ATS como o Workday?', a: 'Não — a auto-hospedagem não é apresentada neste guia como substituição completa de ATS. É uma alternativa direcionada aos fluxos específicos em que manter os dados fora de infraestrutura de terceiros mais importa: extração e pontuação de campos de currículo, análise de sentimento e ajuda na redação de avaliações. A maioria das empresas roda os dois caminhos juntos, em vez de substituir um pelo outro.' },
           { q: 'Auto-hospedar um fluxo de IA de RH satisfaz automaticamente o GDPR ou a LGPD?', a: 'Não. A auto-hospedagem remove um operador de dados terceiro do mapa de fluxo de dados, o que é relevante, mas não satisfaz automaticamente todas as obrigações aplicáveis — os requisitos de gestão de riscos, supervisão humana e documentação do AI Act da UE para sistemas de alto risco se aplicam independentemente de onde o modelo roda, e a LGPD continua exigindo base legal, finalidade e direitos do titular respeitados. Veja o guia dedicado [RAG local em conformidade com o RGPD](/pt/power-local-llm/local-rag-for-private-business-data) para o conjunto completo de controles, e consulte um advogado para sua implantação específica.' },
           { q: 'O que é a Local Law 144 de Nova York e ela se aplica fora de Nova York?', a: 'A Local Law 144 é uma lei municipal de Nova York que exige que empregadores contratem uma auditoria de viés independente, publiquem um resumo dos resultados e notifiquem os candidatos antes de usar uma ferramenta automatizada de decisão de emprego para apoiar substancialmente uma decisão de contratação em Nova York. Ela se aplica a decisões de emprego ligadas a Nova York; vários outros estados e cidades dos EUA introduziram ou aprovaram exigências comparáveis — isto não é aconselhamento jurídico, verifique a aplicabilidade vigente aos seus locais específicos de contratação com um advogado.' },
@@ -2260,12 +2260,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Melhor software de RH com IA para empresas 2026: opções focadas em privacidade',
+      headline: 'Software de RH com IA para empresas 2026: opções focadas em privacidade comparadas',
       description: 'Software de RH com IA comparado: Workday, HireVue, Lattice, com preços públicos, prazos do AI Act e opção auto-hospedada. Não é aconselhamento jurídico.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-ai-hr-software-enterprise',
       inLanguage: 'pt-BR',
       datePublished: '2026-09-03',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Advanced',
@@ -2276,28 +2276,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Início', item: '[www.promptquorum.com/pt](https://www.promptquorum.com/pt)' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/pt/power-local-llm](https://www.promptquorum.com/pt/power-local-llm)' },
-        { '@type': 'ListItem', position: 3, name: 'Melhor software de RH com IA para empresas 2026', item: '[www.promptquorum.com/pt/power-local-llm/best-ai-hr-software-enterprise](https://www.promptquorum.com/pt/power-local-llm/best-ai-hr-software-enterprise)' },
+        { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://www.promptquorum.com/pt' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/pt/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'Software de RH com IA para empresas 2026', item: 'https://www.promptquorum.com/pt/power-local-llm/best-ai-hr-software-enterprise' },
       ],
     },
   },
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-03',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
-    title: 'أفضل برمجيات الموارد البشرية المدعومة بالذكاء الاصطناعي للمؤسسات 2026: خيارات تُراعي الخصوصية',
-    seoTitle: 'أفضل برمجيات الموارد البشرية بالذكاء الاصطناعي (2026)',
+    title: 'برمجيات الموارد البشرية المدعومة بالذكاء الاصطناعي للمؤسسات 2026: مقارنة خيارات تُراعي الخصوصية',
+    seoTitle: 'برمجيات الموارد البشرية بالذكاء الاصطناعي: مقارنة (2026)',
     intro:
       'يدخل الذكاء الاصطناعي اليوم في فرز السير الذاتية والمقابلات والتهيئة واستطلاعات الرأي وصياغة التقييمات. يقارن هذا الدليل المنصات الشائعة بخيار مستضاف ذاتيًا ويوضح القواعد التي تسري في الحالتين (ليس استشارة قانونية).',
     metaDescription:
       'مقارنة برمجيات الموارد البشرية بالذكاء الاصطناعي: Workday وHireVue وLattice مع الأسعار المعلنة ومواعيد قانون الاتحاد الأوروبي. ليست استشارة قانونية.',
     twitterDescription:
-      'مقارنة برمجيات الموارد البشرية بالذكاء الاصطناعي: المنصات الرائدة مقابل نماذج اللغة المحلية المستضافة ذاتيًا لفرز السير الذاتية وتحليل المشاعر وصياغة التقييمات.',
+      'مقارنة برمجيات الموارد البشرية بالذكاء الاصطناعي: المنصات الشائعة مقابل نماذج اللغة المحلية المستضافة ذاتيًا لفرز السير الذاتية وتحليل المشاعر وصياغة التقييمات.',
     affiliateDisclosure: true,
     current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
@@ -2322,9 +2322,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ar: {
         question: 'ما أفضل برنامج موارد بشرية بالذكاء الاصطناعي للمؤسسات التي تحتاج للتحكم في وجهة بيانات الموظفين والمرشحين؟',
         answer:
-          'لا توجد إجابة واحدة أفضل — الأمر يعتمد على سير العمل والبيانات وراءه. تُعد المنصات الرائدة (Workday لنظام التتبع/الفرز، وHireVue لتقييم المقابلات، وParadox للجدولة، وLattice أو 15Five لتقييمات الأداء، وCulture Amp لتحليل المشاعر) المسار الأسرع للإنتاج وتتضمن استضافة الذكاء الاصطناعي الخاصة بها. أما بالنسبة لسير العمل الذي يلامس أكثر بيانات المرشحين والموظفين حساسية — بيانات السيرة الذاتية الشخصية، ومسودات التقييم السرية، ونصوص استطلاعات المشاعر الصادقة — فإن نموذج اللغة المحلي المستضاف ذاتيًا يُبقي هذا المحتوى على بنية تحتية تتحكم بها أنت، مقابل عناء بناء الحزمة وصيانتها بنفسك.',
+          'لا توجد إجابة واحدة أفضل — الأمر يعتمد على سير العمل والبيانات وراءه. تُعد المنصات الشائعة (Workday لنظام التتبع/الفرز، وHireVue لتقييم المقابلات، وParadox للجدولة، وLattice أو 15Five لتقييمات الأداء، وCulture Amp لتحليل المشاعر) المسار الأسرع للإنتاج وتتضمن استضافة الذكاء الاصطناعي الخاصة بها. أما بالنسبة لسير العمل الذي يلامس أكثر بيانات المرشحين والموظفين حساسية — بيانات السيرة الذاتية الشخصية، ومسودات التقييم السرية، ونصوص استطلاعات المشاعر الصادقة — فإن نموذج اللغة المحلي المستضاف ذاتيًا يُبقي هذا المحتوى على بنية تحتية تتحكم بها أنت، مقابل عناء بناء الحزمة وصيانتها بنفسك.',
         bullets: [
-          'تجمع المنصات الرائدة استضافة الذكاء الاصطناعي والدعم والتكاملات معًا — أسرع نشرًا، لكن البيانات تغادر بنيتك التحتية',
+          'تجمع المنصات الشائعة استضافة الذكاء الاصطناعي والدعم والتكاملات معًا — أسرع نشرًا، لكن البيانات تغادر بنيتك التحتية',
           'تُبقي نماذج اللغة المحلية المستضافة ذاتيًا بيانات المرشحين ونصوص المشاعر ومسودات التقييم على بنية تحتية تتحكم بها أنت',
           'يُصنَّف الذكاء الاصطناعي في التوظيف/الموارد البشرية عالي المخاطر بموجب قانون الذكاء الاصطناعي الأوروبي، ويخضع لقوانين تدقيق التحيز مثل قانون نيويورك المحلي رقم 144',
           'يجب أن يبقى القرار النهائي بشريًا دائمًا في الفرز والتقييم ونتائج الأداء — لا أتمتة كاملة أبدًا',
@@ -2337,7 +2337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'أهم النقاط', anchor: '#key-takeaways' },
       { label: 'حقائق سريعة', anchor: '#quick-facts' },
       { label: 'أين يتدخل الذكاء الاصطناعي في سير عمل الموارد البشرية', anchor: '#use-case-map' },
-      { label: 'مقارنة منصات الموارد البشرية الرائدة بالذكاء الاصطناعي', anchor: '#commercial-platforms' },
+      { label: 'مقارنة منصات الموارد البشرية الشائعة بالذكاء الاصطناعي', anchor: '#commercial-platforms' },
       { label: 'منصات الموارد البشرية بالذكاء الاصطناعي في لمحة', anchor: '#platform-table' },
       { label: 'المخاطر التنظيمية: قانون الذكاء الاصطناعي الأوروبي وتدقيق التحيز', anchor: '#regulatory-risk' },
       { label: 'البديل المستضاف ذاتيًا', anchor: '#self-hosted-approach' },
@@ -2354,7 +2354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**تحل منصات الموارد البشرية الرائدة بالذكاء الاصطناعي وحزمة نموذج لغوي محلي مستضافة ذاتيًا مشكلتين مختلفتين، لا نسختين متنافستين من المشكلة نفسها.** تُعد Workday وHireVue وParadox وLattice وCulture Amp المسار الأسرع للإنتاج؛ والاستضافة الذاتية هي الحل عندما لا يمكن لبيانات المرشحين أو الموظفين مغادرة بنيتك التحتية.',
+          '**تحل منصات الموارد البشرية الشائعة بالذكاء الاصطناعي وحزمة نموذج لغوي محلي مستضافة ذاتيًا مشكلتين مختلفتين، لا نسختين متنافستين من المشكلة نفسها.** تُعد Workday وHireVue وParadox وLattice وCulture Amp المسار الأسرع للإنتاج؛ والاستضافة الذاتية هي الحل عندما لا يمكن لبيانات المرشحين أو الموظفين مغادرة بنيتك التحتية.',
           '**يُعد فرز السير الذاتية وتحليل المشاعر وصياغة التقييمات أقوى المرشحين للاستضافة الذاتية** — إذ يلامس كل منها بانتظام بيانات (هوية المرشح، نصوص الموظفين الصادقة، محتوى التقييم السري) قد تفضل الشركة عدم إرسالها إلى واجهة برمجة تطبيقات تابعة لجهة خارجية.',
           '**يُعد الذكاء الاصطناعي في التوظيف والموارد البشرية فئة عالية المخاطر بموجب قانون الذكاء الاصطناعي الأوروبي**، وتتطلب ولايات قضائية أمريكية، بما فيها مدينة نيويورك، تدقيقات تحيز مستقلة لأدوات التوظيف الآلية — وينطبق ذلك على أي سير عمل فرز أو تقييم بمساعدة الذكاء الاصطناعي، تجاريًا كان أو مستضافًا ذاتيًا.',
           '**هذا ليس استشارة قانونية.** تختلف التزامات تدقيق التحيز، ومتطلبات إشعار المرشحين، وقواعد الأنظمة عالية المخاطر باختلاف الولاية القضائية وتتغير مع الوقت — استشر محاميًا مؤهلًا قبل نشر أي نظام ذكاء اصطناعي في التوظيف أو الموارد البشرية.',
@@ -2364,7 +2364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'تتولى منصات الموارد البشرية الرائدة بالذكاء الاصطناعي (Workday، HireVue، Lattice) فرز السير الذاتية وجدولة المقابلات وتقييمات الأداء على بنية تحتية المزود، بينما تُبقي حزمة نموذج لغوي محلي مستضافة ذاتيًا بيانات المرشحين وبيانات المشاعر ومسودات التقييم على بنية تحتية تتحكم بها الشركة.',
+            text: 'تتولى منصات الموارد البشرية الشائعة بالذكاء الاصطناعي (Workday، HireVue، Lattice) فرز السير الذاتية وجدولة المقابلات وتقييمات الأداء على بنية تحتية المزود، بينما تُبقي حزمة نموذج لغوي محلي مستضافة ذاتيًا بيانات المرشحين وبيانات المشاعر ومسودات التقييم على بنية تحتية تتحكم بها الشركة.',
           },
           {
             type: 'plain-terms',
@@ -2378,7 +2378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**تصنيف قانون الذكاء الاصطناعي الأوروبي:** تُصنَّف أنظمة الذكاء الاصطناعي المستخدمة في التوظيف وفرز المرشحين وتقييم أداء العاملين على أنها عالية المخاطر بموجب الملحق الثالث من اللائحة (EU) 2024/1689.',
           '**قانون نيويورك المحلي رقم 144:** يشترط تدقيق تحيز مستقل ونشر النتائج وإشعار المرشحين لأي "أداة قرار توظيف آلية" تُستخدم للمساعدة الجوهرية في قرارات التوظيف داخل مدينة نيويورك.',
-          '**المنصات الرائدة التي تمت مقارنتها هنا:** Workday وHireVue وParadox (Olivia) وLattice و15Five وCulture Amp وTextio وEightfold AI — جميعها منتجات حقيقية ونشطة حاليًا، وليست افتراضية.',
+          '**المنصات الشائعة التي تمت مقارنتها هنا:** Workday وHireVue وParadox (Olivia) وLattice و15Five وCulture Amp وTextio وEightfold AI — جميعها منتجات حقيقية ونشطة حاليًا، وليست افتراضية.',
           '**نطاق تكلفة البنية التحتية المستضافة ذاتيًا:** حوالي 0.34–4.29 دولارًا في الساعة لوحدات GPU سحابية عند الطلب من فئة RTX 4090 إلى H100 (صفحتا أسعار RunPod وLambda)، مناسبة لتجربة نموذج متوسط الحجم (7–32 مليار معلمة)، دون احتساب وقت الهندسة.',
           '**هذا ليس استشارة قانونية** — تختلف الالتزامات التنظيمية للذكاء الاصطناعي في التوظيف والموارد البشرية باختلاف الولاية القضائية وتتغير مع الوقت؛ تحقق من المتطلبات الحالية مع محامٍ قبل النشر.',
         ],
@@ -2388,20 +2388,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'أين يتدخل الذكاء الاصطناعي فعليًا في سير عمل الموارد البشرية',
         content:
           '**"الذكاء الاصطناعي في الموارد البشرية" ليس قرار شراء واحدًا — بل ستة سير عمل منفصلة أو أكثر، ذات ملامح حساسية بيانات مختلفة تمامًا.** معاملتها كقرار شراء واحد هو أول خطأ ترتكبه معظم المؤسسات.',
-        columns: ['سير عمل الموارد البشرية', 'مثال منصة رائدة', 'حساسية البيانات', 'ملاءمة الاستضافة الذاتية'],
+        columns: ['سير عمل الموارد البشرية', 'مثال منصة شائعة', 'حساسية البيانات', 'ملاءمة الاستضافة الذاتية'],
         rows: [
-          { 'سير عمل الموارد البشرية': 'فرز السير الذاتية', 'مثال منصة رائدة': 'Workday، Eightfold AI', 'حساسية البيانات': 'عالية (بيانات المرشح)', 'ملاءمة الاستضافة الذاتية': 'قوية' },
-          { 'سير عمل الموارد البشرية': 'جدولة المقابلات', 'مثال منصة رائدة': 'Paradox (Olivia)', 'حساسية البيانات': 'منخفضة إلى متوسطة', 'ملاءمة الاستضافة الذاتية': 'ضعيفة — جهد لا يستحق العائد' },
-          { 'سير عمل الموارد البشرية': 'تقييم المقابلات', 'مثال منصة رائدة': 'HireVue', 'حساسية البيانات': 'عالية (فيديو/سلوك)', 'ملاءمة الاستضافة الذاتية': 'متوسطة' },
-          { 'سير عمل الموارد البشرية': 'أسئلة التأهيل', 'مثال منصة رائدة': 'روبوتات مدمجة في نظام HRIS', 'حساسية البيانات': 'متوسطة', 'ملاءمة الاستضافة الذاتية': 'قوية (RAG على المستندات)' },
-          { 'سير عمل الموارد البشرية': 'تحليل المشاعر', 'مثال منصة رائدة': 'Culture Amp', 'حساسية البيانات': 'عالية (نص حر صادق)', 'ملاءمة الاستضافة الذاتية': 'قوية' },
-          { 'سير عمل الموارد البشرية': 'صياغة التقييمات', 'مثال منصة رائدة': 'Lattice، 15Five', 'حساسية البيانات': 'عالية (محتوى سري)', 'ملاءمة الاستضافة الذاتية': 'قوية' },
-          { 'سير عمل الموارد البشرية': 'أسئلة سياسات الموارد البشرية', 'مثال منصة رائدة': 'لا يوجد — راجع دليلاً منفصلاً', 'حساسية البيانات': 'عالية', 'ملاءمة الاستضافة الذاتية': 'قوية — مغطاة بشكل منفصل' },
+          { 'سير عمل الموارد البشرية': 'فرز السير الذاتية', 'مثال منصة شائعة': 'Workday، Eightfold AI', 'حساسية البيانات': 'عالية (بيانات المرشح)', 'ملاءمة الاستضافة الذاتية': 'قوية' },
+          { 'سير عمل الموارد البشرية': 'جدولة المقابلات', 'مثال منصة شائعة': 'Paradox (Olivia)', 'حساسية البيانات': 'منخفضة إلى متوسطة', 'ملاءمة الاستضافة الذاتية': 'ضعيفة — جهد لا يستحق العائد' },
+          { 'سير عمل الموارد البشرية': 'تقييم المقابلات', 'مثال منصة شائعة': 'HireVue', 'حساسية البيانات': 'عالية (فيديو/سلوك)', 'ملاءمة الاستضافة الذاتية': 'متوسطة' },
+          { 'سير عمل الموارد البشرية': 'أسئلة التأهيل', 'مثال منصة شائعة': 'روبوتات مدمجة في نظام HRIS', 'حساسية البيانات': 'متوسطة', 'ملاءمة الاستضافة الذاتية': 'قوية (RAG على المستندات)' },
+          { 'سير عمل الموارد البشرية': 'تحليل المشاعر', 'مثال منصة شائعة': 'Culture Amp', 'حساسية البيانات': 'عالية (نص حر صادق)', 'ملاءمة الاستضافة الذاتية': 'قوية' },
+          { 'سير عمل الموارد البشرية': 'صياغة التقييمات', 'مثال منصة شائعة': 'Lattice، 15Five', 'حساسية البيانات': 'عالية (محتوى سري)', 'ملاءمة الاستضافة الذاتية': 'قوية' },
+          { 'سير عمل الموارد البشرية': 'أسئلة سياسات الموارد البشرية', 'مثال منصة شائعة': 'لا يوجد — راجع دليلاً منفصلاً', 'حساسية البيانات': 'عالية', 'ملاءمة الاستضافة الذاتية': 'قوية — مغطاة بشكل منفصل' },
         ],
       },
       commercialPlatforms: {
         id: 'commercial-platforms',
-        title: 'مقارنة منصات الموارد البشرية الرائدة بالذكاء الاصطناعي',
+        title: 'مقارنة منصات الموارد البشرية الشائعة بالذكاء الاصطناعي',
         content:
           '**هذه منصات حقيقية ونشطة حاليًا بميزات ذكاء اصطناعي موثقة علنًا — لا يمثل أي من الأوصاف أدناه نتيجة اختبار من PromptQuorum، ولا ينبغي قراءة أي منها كتصديق على حالة تدقيق التحيز أو الامتثال لأي مزود.** تحقق من نطاق الميزات الحالي ووثائق التدقيق مباشرة مع كل مزود قبل الشراء.',
         items: [
@@ -2435,7 +2435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'regulatory-risk',
         title: 'المخاطر التنظيمية: قانون الذكاء الاصطناعي الأوروبي وقوانين تدقيق التحيز',
         content:
-          '**الذكاء الاصطناعي المستخدم في قرارات التوظيف والموارد البشرية فئة خاضعة للتنظيم، لا شراء برمجيات عادي — وينطبق هذا بالتساوي على كل منصة ونهج في هذا الدليل، تجاريًا كان أو مستضافًا ذاتيًا.** بموجب قانون الذكاء الاصطناعي الأوروبي (اللائحة (EU) 2024/1689)، تُصنَّف أنظمة الذكاء الاصطناعي المستخدمة في التوظيف وفرز المرشحين وتقييم أداء العاملين على أنها عالية المخاطر في الملحق الثالث، مما يستتبع التزامات إدارة المخاطر والرقابة البشرية والتوثيق التقني. وبشكل منفصل، يشترط قانون نيويورك المحلي رقم 144 على أصحاب العمل الذين يستخدمون "أداة قرار توظيف آلية" للمساعدة الجوهرية في قرار توظيف داخل مدينة نيويورك أن يطلبوا تدقيق تحيز مستقلًا، وأن ينشروا ملخص النتائج، وأن يُشعروا المرشحين — وقد استحدثت أو أقرت عدة ولايات ومدن أمريكية أخرى متطلبات مماثلة. وفي منطقة الخليج، تدفع اعتبارات سيادة البيانات وقوانين حماية البيانات الإقليمية، مثل نظام حماية البيانات الشخصية السعودي وقانون حماية البيانات الإماراتي، نحو الاهتمام المتزايد بحلول الذكاء الاصطناعي المحلية أو ذات السيادة.',
+          '**الذكاء الاصطناعي المستخدم في قرارات التوظيف والموارد البشرية فئة خاضعة للتنظيم، لا شراء برمجيات عادي — وينطبق هذا بالتساوي على كل منصة ونهج في هذا الدليل، تجاريًا كان أو مستضافًا ذاتيًا.** بموجب قانون الذكاء الاصطناعي الأوروبي (اللائحة (EU) 2024/1689)، تُصنَّف أنظمة الذكاء الاصطناعي المستخدمة في التوظيف وفرز المرشحين وتقييم أداء العاملين على أنها عالية المخاطر في الملحق الثالث، مما يستتبع التزامات إدارة المخاطر والرقابة البشرية والتوثيق التقني. وبشكل منفصل، يشترط قانون نيويورك المحلي رقم 144 على أصحاب العمل الذين يستخدمون "أداة قرار توظيف آلية" للمساعدة الجوهرية في قرار توظيف داخل مدينة نيويورك أن يطلبوا تدقيق تحيز مستقلًا، وأن ينشروا ملخص النتائج، وأن يُشعروا المرشحين — وقد استحدثت أو أقرت عدة ولايات ومدن أمريكية أخرى متطلبات مماثلة. وفي منطقة الخليج، قد تنطبق أنظمة حماية البيانات الشخصية في كل دولة (مثل نظام حماية البيانات الشخصية في السعودية وقانون حماية البيانات الشخصية في الإمارات) على بيانات المرشحين والموظفين؛ لا يغطي هذا المقال تفاصيلها، فتحقق من المتطلبات الحالية من المصادر الرسمية ومع مستشار قانوني محلي.',
         items: [
           '**هذا ليس استشارة قانونية.** تعتمد القواعد المعمول بها على الولاية القضائية وسير العمل المحدد ومدى ثقل مخرجات الذكاء الاصطناعي في القرار النهائي — وتختلف الالتزامات باختلاف القانون وتتغير مع الوقت.',
           'إعلان أحد المزودين أن منتجه يتضمن "اختبارات تحيز" أو "ميزات إنصاف" لا يعني أن نشرك المحدد يستوفي متطلب تدقيق قانوني محدد لولاية قضائية معينة — تحقق من وثائق التدقيق الحالية والانطباق القانوني مباشرة مع محامٍ والمزود، لا من مواد تسويقية.',
@@ -2452,8 +2452,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**لا تتنافس حزمة نموذج لغوي محلي مستضافة ذاتيًا مع Workday أو Lattice في اتساع الميزات — بل تتنافس في مكان وجود البيانات، في سير العمل المحدد الذي يهم فيه ذلك أكثر.** لأسئلة وأجوبة سياسات الموارد البشرية على مستندات موارد بشرية سرية، راجع الدليل المخصص [روبوتات الموارد البشرية ومكتب مساعدة تقنية المعلومات الداخلية المستضافة ذاتيًا](/ar/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots)، الذي يغطي بعمق أنماط التحكم بالوصول القائمة على RAG. يغطي هذا القسم حالات الاستخدام الأربع الأخرى.',
         items: [
-          '**فرز السير الذاتية:** يمكن لنموذج لغوي محلي استخراج حقول منظمة (المهارات، سنوات الخبرة، التعليم) من نص السيرة الذاتية وتقييم المرشحين مقابل معايير الوظيفة دون أن تصل بيانات المرشح الشخصية أبدًا إلى واجهة برمجة تطبيقات تابعة لجهة خارجية — يعمل النموذج على بنية تحتية تتحكم بها أنت، ولا تزال المخرجات المستخرجة تتطلب مراجعة بشرية قبل تقديم أي مرشح أو رفضه.',
-          '**تحليل مشاعر الموظفين:** يُعد النص الحر لاستطلاعات المشاركة الداخلية من أكثر المحتويات صدقًا التي تجمعها الشركة — يمكن لنموذج لغوي محلي تجميع المواضيع وتلخيص المشاعر عبر مئات الردود وما دامت المسارة غير متصلة بأي واجهة برمجة تطبيقات خارجية، تبقى التعليقات الخام على بنية تحتية تتحكم بها الشركة — وهو ما يميل أيضًا إلى جعل الموظفين أكثر صراحة حالما يثقون بأن السرية حقيقية.',
+          '**فرز السير الذاتية:** يمكن لنموذج لغوي محلي استخراج حقول منظمة (المهارات، سنوات الخبرة، التعليم) من نص السيرة الذاتية وتقييم المرشحين مقابل معايير الوظيفة دون إرسال بيانات المرشح الشخصية إلى واجهة برمجة تطبيقات تابعة لجهة خارجية، بشرط أن يعمل النموذج وسجلاته على بنية تحتية تتحكم بها أنت (وحدات GPU السحابية المستأجرة جهات معالجة تابعة لطرف ثالث وتتطلب اتفاقية معالجة بيانات) — يعمل النموذج على بنية تحتية تتحكم بها أنت، ولا تزال المخرجات المستخرجة تتطلب مراجعة بشرية قبل تقديم أي مرشح أو رفضه.',
+          '**تحليل مشاعر الموظفين:** يُعد النص الحر لاستطلاعات المشاركة الداخلية من أكثر المحتويات صدقًا التي تجمعها الشركة — يمكن لنموذج لغوي محلي تجميع المواضيع وتلخيص المشاعر عبر مئات الردود وما دامت المسارة غير متصلة بأي واجهة برمجة تطبيقات خارجية، تبقى التعليقات الخام على بنية تحتية تتحكم بها الشركة.',
           '**أتمتة التأهيل:** مساعد تأهيل قائم على RAG يجيب على أسئلة الموظفين الجدد حول الأدلة الداخلية ومستندات المزايا وأدلة إعداد تقنية المعلومات يستخدم نفس نمط الاسترجاع والتحكم بالوصول الموضح بعمق في [دليل روبوت الموارد البشرية/تقنية المعلومات الداخلي](/ar/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — وهو إلى حد كبير نفس البنية المطبقة على مجموعة مستندات مختلفة.',
           '**مساعدة صياغة تقييمات الأداء:** يمكن لنموذج لغوي محلي مساعدة المدير على تحويل ملاحظات أولية إلى مسودة منظمة دون أن يمر هذا المحتوى السري السابق للقرار عبر واجهة برمجة تطبيقات تابعة لجهة خارجية — يبقى المدير هو الكاتب وصاحب القرار النهائي؛ والنموذج مجرد مساعد صياغة، لا مقيّم.',
           'للمقارنة الكاملة لمنصات RAG وقواعد البيانات المتجهية وراء أي من هذه الأنظمة، راجع [أفضل أدوات RAG لمستندات الأعمال](/ar/power-local-llm/best-rag-tools-for-business-documents-2026) و[نظام RAG محلي متوافق مع اللائحة العامة لحماية البيانات للمستندات الحساسة](/ar/power-local-llm/local-rag-for-private-business-data) لمجموعة الضوابط المعمول بها عند تدخل بيانات شخصية منظمة.',
@@ -2477,27 +2477,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost-comparison',
         title: 'التكلفة: اشتراك SaaS مقابل البنية التحتية المستضافة ذاتيًا',
         content:
-          '**تفرض المنصات الرائدة رسومًا لكل موظف أو مقعد، عادةً عبر عرض سعر مخصص للمؤسسات؛ وتستبدل البنية التحتية المستضافة ذاتيًا هذا الاشتراك القابل للتنبؤ بحوسبة مدفوعة حسب الاستخدام إضافة إلى وقت الهندسة.** لا يوجد خيار أرخص دائمًا — تعتمد الإجابة على نطاق النشر وقدرة الهندسة الداخلية ومدى أهمية إبقاء بيانات المرشحين والموظفين بعيدًا عن بنية تحتية تابعة لجهة خارجية بالنسبة لمؤسستك.',
-        columns: ['المعيار', 'المنصة الرائدة', 'الحزمة المستضافة ذاتيًا'],
+          '**تفرض المنصات الشائعة رسومًا لكل موظف أو مقعد، عادةً عبر عرض سعر مخصص للمؤسسات؛ وتستبدل البنية التحتية المستضافة ذاتيًا هذا الاشتراك القابل للتنبؤ بحوسبة مدفوعة حسب الاستخدام إضافة إلى وقت الهندسة.** لا يوجد خيار أرخص دائمًا — تعتمد الإجابة على نطاق النشر وقدرة الهندسة الداخلية ومدى أهمية إبقاء بيانات المرشحين والموظفين بعيدًا عن بنية تحتية تابعة لجهة خارجية بالنسبة لمؤسستك.',
+        columns: ['المعيار', 'المنصة الشائعة', 'الحزمة المستضافة ذاتيًا'],
         rows: [
-          { 'المعيار': 'نموذج التسعير', 'المنصة الرائدة': 'لكل موظف/مقعد، عرض سعر مخصص للمؤسسات', 'الحزمة المستضافة ذاتيًا': 'حوسبة مدفوعة حسب الاستخدام + وقت هندسة' },
-          { 'المعيار': 'نطاق تكلفة GPU السحابية', 'المنصة الرائدة': 'مدمجة في الاشتراك', 'الحزمة المستضافة ذاتيًا': '~0.34-4.29$/ساعة (من RTX 4090 إلى H100)' },
-          { 'المعيار': 'موقع البيانات', 'المنصة الرائدة': 'بنية تحتية يستضيفها المزود', 'الحزمة المستضافة ذاتيًا': 'بنية تحتية تتحكم بها أنت' },
-          { 'المعيار': 'جهد الإعداد', 'المنصة الرائدة': 'منخفض — إعداد ثم بدء التشغيل', 'الحزمة المستضافة ذاتيًا': 'مرتفع — بناء وتأمين وصيانة' },
-          { 'المعيار': 'الصيانة المستمرة', 'المنصة الرائدة': 'يديرها المزود', 'الحزمة المستضافة ذاتيًا': 'داخلية أو بالتعاقد' },
+          { 'المعيار': 'نموذج التسعير', 'المنصة الشائعة': 'لكل موظف/مقعد، عرض سعر مخصص للمؤسسات', 'الحزمة المستضافة ذاتيًا': 'حوسبة مدفوعة حسب الاستخدام + وقت هندسة' },
+          { 'المعيار': 'نطاق تكلفة GPU السحابية', 'المنصة الشائعة': 'مدمجة في الاشتراك', 'الحزمة المستضافة ذاتيًا': '~0.34-4.29$/ساعة (من RTX 4090 إلى H100)' },
+          { 'المعيار': 'موقع البيانات', 'المنصة الشائعة': 'بنية تحتية يستضيفها المزود', 'الحزمة المستضافة ذاتيًا': 'بنية تحتية تتحكم بها أنت' },
+          { 'المعيار': 'جهد الإعداد', 'المنصة الشائعة': 'منخفض — إعداد ثم بدء التشغيل', 'الحزمة المستضافة ذاتيًا': 'مرتفع — بناء وتأمين وصيانة' },
+          { 'المعيار': 'الصيانة المستمرة', 'المنصة الشائعة': 'يديرها المزود', 'الحزمة المستضافة ذاتيًا': 'داخلية أو بالتعاقد' },
         ],
       },
       decisionGuide: {
         id: 'decision-guide',
         title: 'أي نهج يناسب فريقك؟',
         content:
-          '**تُشغّل معظم المؤسسات المسارين معًا، لا تختار أحدهما حصريًا — المنصات الرائدة للجدولة وسير عمل نظام تتبع المتقدمين الواسع، والاستضافة الذاتية للبيانات الأكثر حساسية.** استخدم الملفات التالية على مستوى سير العمل، لا على مستوى الشركة.',
+          '**تُشغّل معظم المؤسسات المسارين معًا، لا تختار أحدهما حصريًا — المنصات الشائعة للجدولة وسير عمل نظام تتبع المتقدمين الواسع، والاستضافة الذاتية للبيانات الأكثر حساسية.** استخدم الملفات التالية على مستوى سير العمل، لا على مستوى الشركة.',
         items: [
-          '**فريق موارد بشرية صغير بلا دعم هندسي مخصص:** استخدم منصة رائدة لسير العمل بأكمله — لا يستحق عبء إعداد الاستضافة الذاتية وصيانتها هذا الحجم.',
-          '**مؤسسة لديها فريق هندسة تعلم آلي/منصات داخلي وتدقيق امتثال صارم على بيانات المرشحين:** استضف ذاتيًا فرز السير الذاتية وتحليل المشاعر تحديدًا؛ وأبقِ جدولة المقابلات على منصة رائدة حيث تكون حساسية البيانات أقل.',
+          '**فريق موارد بشرية صغير بلا دعم هندسي مخصص:** استخدم منصة شائعة لسير العمل بأكمله — لا يستحق عبء إعداد الاستضافة الذاتية وصيانتها هذا الحجم.',
+          '**مؤسسة لديها فريق هندسة تعلم آلي/منصات داخلي وتدقيق امتثال صارم على بيانات المرشحين:** استضف ذاتيًا فرز السير الذاتية وتحليل المشاعر تحديدًا؛ وأبقِ جدولة المقابلات على منصة شائعة حيث تكون حساسية البيانات أقل.',
           '**شركة منخرطة بالفعل بعمق في مفاوضات بشأن بيانات الموظفين الأوروبيين أو مجلس العمل:** يزيل استضفاء تحليل المشاعر وصياغة التقييمات ذاتيًا جهة معالجة بيانات تابعة لجهة خارجية من النقاش، مما قد يبسّط تلك المفاوضات بشكل ملموس.',
           '**تجنّب الاستضافة الذاتية تمامًا إذا** لم يكن لدى مؤسستك القدرة الهندسية لصيانة الحزمة، أو إذا كان سير العمل المعني (مثل جدولة المقابلات) لا يلامس بيانات حساسة بما يكفي لتبرير جهد البناء.',
-          '**في حال عدم اليقين، ابدأ بمنصة رائدة لتغطية واسعة النطاق، وجرّب الاستضافة الذاتية على سير عمل واحد عالي الحساسية** (فرز السير الذاتية أو تحليل المشاعر) قبل التوسع أكثر.',
+          '**في حال عدم اليقين، ابدأ بمنصة شائعة لتغطية واسعة النطاق، وجرّب الاستضافة الذاتية على سير عمل واحد عالي الحساسية** (فرز السير الذاتية أو تحليل المشاعر) قبل التوسع أكثر.',
         ],
       },
       commonMistakes: {
@@ -2534,7 +2534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'هل فرز السير الذاتية بمساعدة الذكاء الاصطناعي قانوني؟', a: 'يمكن أن يكون كذلك، لكنه منظَّم لا غير مقيد. بموجب قانون الذكاء الاصطناعي الأوروبي، يُصنَّف الذكاء الاصطناعي المستخدم لفرز المرشحين على أنه عالي المخاطر في الملحق الثالث، مع التزامات إدارة المخاطر والرقابة البشرية. في الولايات المتحدة، تشترط ولايات قضائية مثل مدينة نيويورك تدقيق تحيز مستقل وإشعار المرشحين لأدوات قرار التوظيف الآلية. هذا ليس استشارة قانونية — تحقق من المتطلبات الحالية لولايتك القضائية وسير عملك المحدد مع محامي عمل قبل نشر أي أداة فرز، تجارية كانت أو مستضافة ذاتيًا.' },
-          { q: 'ما هي منصات الموارد البشرية الرائدة بالذكاء الاصطناعي المستخدمة فعليًا وبشكل نشط اليوم؟', a: 'Workday (توظيف/نظام تتبع متقدمين بمطابقة مهارات بمساعدة الذكاء الاصطناعي)، وHireVue (تقييم مقابلات منظمة بمساعدة الذكاء الاصطناعي)، وParadox (ذكاء اصطناعي تحاوري لجدولة المقابلات، يحمل اسم Olivia)، وLattice وFive15 (مساعدة صياغة تقييمات بمعونة الذكاء الاصطناعي)، وCulture Amp (تحليل ذكاء اصطناعي لنصوص استطلاعات الموظفين)، وTextio (تحليل لغوي بالذكاء الاصطناعي لإعلانات الوظائف والتقييمات)، وEightfold AI (مطابقة مواهب مدعومة بالذكاء الاصطناعي) — جميعها منتجات حقيقية ونشطة حاليًا بميزات ذكاء اصطناعي موثقة علنًا. تحقق من نطاق الميزات الحالي مباشرة مع كل مزود، لأن قدرات المنتج تتغير.' },
+          { q: 'ما هي منصات الموارد البشرية الشائعة بالذكاء الاصطناعي المستخدمة فعليًا وبشكل نشط اليوم؟', a: 'Workday (توظيف/نظام تتبع متقدمين بمطابقة مهارات بمساعدة الذكاء الاصطناعي)، وHireVue (تقييم مقابلات منظمة بمساعدة الذكاء الاصطناعي)، وParadox (ذكاء اصطناعي تحاوري لجدولة المقابلات، يحمل اسم Olivia)، وLattice و15Five (مساعدة صياغة تقييمات بمعونة الذكاء الاصطناعي)، وCulture Amp (تحليل ذكاء اصطناعي لنصوص استطلاعات الموظفين)، وTextio (تحليل لغوي بالذكاء الاصطناعي لإعلانات الوظائف والتقييمات)، وEightfold AI (مطابقة مواهب مدعومة بالذكاء الاصطناعي) — جميعها منتجات حقيقية ونشطة حاليًا بميزات ذكاء اصطناعي موثقة علنًا. تحقق من نطاق الميزات الحالي مباشرة مع كل مزود، لأن قدرات المنتج تتغير.' },
           { q: 'هل يمكن لنموذج لغوي محلي مستضاف ذاتيًا أن يحل محل نظام تتبع متقدمين مثل Workday؟', a: 'لا — لا يُقدَّم هذا الدليل الاستضافة الذاتية كبديل كامل لنظام تتبع المتقدمين. إنه بديل موجَّه لسير العمل المحدد حيث يهم أكثر إبقاء البيانات بعيدة عن بنية تحتية تابعة لجهة خارجية: استخراج حقول السيرة الذاتية وتقييمها، وتحليل المشاعر، ومساعدة صياغة التقييمات. تُشغّل معظم المؤسسات المسارين معًا بدلاً من استبدال أحدهما بالآخر.' },
           { q: 'هل تستضافة سير عمل ذكاء اصطناعي للموارد البشرية ذاتيًا يستوفي تلقائيًا اللائحة العامة لحماية البيانات أو قانون الذكاء الاصطناعي الأوروبي؟', a: 'لا. تزيل الاستضافة الذاتية جهة معالجة بيانات تابعة لجهة خارجية واحدة من خريطة تدفق البيانات، وهو أمر مهم، لكنه لا يستوفي تلقائيًا كل الالتزامات المعمول بها — تنطبق متطلبات إدارة المخاطر والرقابة البشرية والتوثيق الخاصة بقانون الذكاء الاصطناعي الأوروبي للأنظمة عالية المخاطر بغض النظر عن مكان تشغيل النموذج. راجع الدليل المخصص [نظام RAG محلي متوافق مع اللائحة العامة لحماية البيانات](/ar/power-local-llm/local-rag-for-private-business-data) لمجموعة الضوابط الكاملة، واستشر محاميًا لنشرك المحدد.' },
           { q: 'ما هو قانون نيويورك المحلي رقم 144، وهل ينطبق خارج مدينة نيويورك؟', a: 'قانون نيويورك المحلي رقم 144 قانون بلدي في مدينة نيويورك يشترط على أصحاب العمل تكليف تدقيق تحيز مستقل، ونشر ملخص للنتائج، وإشعار المرشحين قبل استخدام أداة قرار توظيف آلية للمساعدة الجوهرية في قرار توظيف داخل مدينة نيويورك. ينطبق على قرارات التوظيف المرتبطة بمدينة نيويورك؛ وقد استحدثت أو أقرت عدة ولايات ومدن أمريكية أخرى متطلبات مماثلة — هذا ليس استشارة قانونية، تحقق من الانطباق الحالي على مواقع توظيفك المحددة مع محامٍ.' },
@@ -2562,12 +2562,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'أفضل برمجيات الموارد البشرية المدعومة بالذكاء الاصطناعي للمؤسسات 2026: خيارات تُراعي الخصوصية',
+      headline: 'برمجيات الموارد البشرية المدعومة بالذكاء الاصطناعي للمؤسسات 2026: مقارنة خيارات تُراعي الخصوصية',
       description: 'مقارنة برمجيات الموارد البشرية بالذكاء الاصطناعي: Workday وHireVue وLattice مع الأسعار المعلنة ومواعيد قانون الاتحاد الأوروبي. ليست استشارة قانونية.',
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-ai-hr-software-enterprise',
       inLanguage: 'ar',
       datePublished: '2026-09-03',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Advanced',
@@ -2580,21 +2580,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: '[www.promptquorum.com/ar](https://www.promptquorum.com/ar)' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/ar/power-local-llm](https://www.promptquorum.com/ar/power-local-llm)' },
-        { '@type': 'ListItem', position: 3, name: 'أفضل برمجيات الموارد البشرية المدعومة بالذكاء الاصطناعي للمؤسسات 2026', item: '[www.promptquorum.com/ar/power-local-llm/best-ai-hr-software-enterprise](https://www.promptquorum.com/ar/power-local-llm/best-ai-hr-software-enterprise)' },
+        { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://www.promptquorum.com/ar' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ar/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'برمجيات الموارد البشرية المدعومة بالذكاء الاصطناعي للمؤسسات 2026', item: 'https://www.promptquorum.com/ar/power-local-llm/best-ai-hr-software-enterprise' },
       ],
     },
   },
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-03',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
-    title: '2026년 기업용 AI 인사 소프트웨어 추천: 프라이버시 우선 옵션 비교',
+    title: '2026년 기업용 AI 인사 소프트웨어: 프라이버시 우선 옵션 비교',
     seoTitle: '기업용 AI HR 소프트웨어 비교 2026: 가격·규제',
     intro:
       'AI는 이력서 심사, 면접, 온보딩, 직원 설문, 인사고과 초안 작성까지 활용됩니다. 이 가이드는 주요 플랫폼과 자체 호스팅 방식을 비교하고, 어느 쪽이든 적용되는 규칙을 정리합니다(법률 자문이 아닙니다).',
@@ -2756,8 +2756,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**자체 호스팅 로컬 LLM 스택은 기능의 폭에서 Workday나 Lattice와 경쟁하지 않습니다 — 데이터가 어디에 있는지가 가장 중요한 특정 워크플로에서 경쟁합니다.** 기밀 HR 문서에 대한 HR 정책 질의응답은 RAG 기반 접근 제어 패턴을 깊이 다루는 전용 가이드 [자체 호스팅 사내 HR 및 IT 헬프데스크 봇](/ko/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots)을 참고하십시오. 본 섹션은 나머지 네 가지 활용 사례를 다룹니다.',
         items: [
-          '**이력서 심사:** 로컬 LLM은 이력서 텍스트에서 기술, 경력 연수, 학력 등 구조화된 필드를 추출하고 직무 요건에 따라 후보자를 채점할 수 있으며, 후보자 개인정보가 제3자 API에 도달하는 일이 전혀 없습니다 — 모델은 직접 통제하는 인프라에서 실행되며, 추출된 결과는 후보자를 다음 단계로 진행시키거나 탈락시키기 전에 여전히 사람의 검토가 필요합니다.',
-          '**직원 감정 분석:** 사내 몰입도 설문의 자유 서술형 응답은 기업이 수집하는 콘텐츠 중 가장 솔직한 축에 속합니다 — 로컬 LLM은 수백 건의 응답에서 주제를 클러스터링하고 감정을 요약할 수 있으며, 파이프라인이 외부 API에 연결되어 있지 않은 한 원본 코멘트는 기업이 직접 통제하는 인프라에 머무릅니다. 이는 기밀성이 진짜라고 신뢰하게 될수록 직원들이 더 솔직해지는 경향으로도 이어집니다.',
+          '**이력서 심사:** 로컬 LLM은 이력서 텍스트에서 기술, 경력 연수, 학력 등 구조화된 필드를 추출하고 직무 요건에 따라 후보자를 채점할 수 있습니다. 모델과 로그가 직접 통제하는 인프라에서 실행되는 경우에 한해(임대한 클라우드 GPU는 제3자 처리자에 해당하므로 위탁 계약이 필요합니다) 후보자 개인정보를 제3자 API로 보내지 않고도 처리할 수 있으며, 추출된 결과는 후보자를 다음 단계로 진행시키거나 탈락시키기 전에 여전히 사람의 검토가 필요합니다.',
+          '**직원 감정 분석:** 사내 몰입도 설문의 자유 서술형 응답은 기업이 수집하는 콘텐츠 중 가장 솔직한 축에 속합니다 — 로컬 LLM은 수백 건의 응답에서 주제를 클러스터링하고 감정을 요약할 수 있으며, 파이프라인이 외부 API에 연결되어 있지 않은 한 원본 코멘트는 기업이 직접 통제하는 인프라에 머무릅니다.',
           '**온보딩 자동화:** 사내 매뉴얼, 복리후생 문서, IT 설정 가이드에 대해 신입사원 질문에 답하는 RAG 기반 온보딩 어시스턴트는 [사내 HR/IT 챗봇 가이드](/ko/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots)에서 자세히 다루는 것과 동일한 검색 및 접근 제어 패턴을 사용합니다 — 사실상 동일한 아키텍처를 다른 문서 집합에 적용한 것입니다.',
           '**인사고과 초안 작성 지원:** 로컬 LLM은 관리자가 거친 메모를 구조화된 초안으로 정리하는 것을 도울 수 있으며, 이 기밀성이 높고 결정 이전 단계의 콘텐츠가 제3자 API를 거치지 않습니다 — 관리자가 계속 작성자이자 최종 결정권자로 남으며, 모델은 채점자가 아니라 초안 작성 보조 도구입니다.',
           '이러한 구축 이면의 전체 RAG 플랫폼 및 벡터 데이터베이스 비교는 [비즈니스 문서를 위한 최고의 RAG 도구](/ko/power-local-llm/best-rag-tools-for-business-documents-2026)와, 규제 대상 개인정보가 관련될 때 적용되는 통제 체계를 다루는 [민감 문서를 위한 GDPR 준수 로컬 RAG](/ko/power-local-llm/local-rag-for-private-business-data)를 참고하십시오.',
@@ -2866,12 +2866,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '2026년 기업용 AI 인사 소프트웨어 추천: 프라이버시 우선 옵션 비교',
+      headline: '2026년 기업용 AI 인사 소프트웨어: 프라이버시 우선 옵션 비교',
       description: '기업용 AI 인사 소프트웨어 비교: Workday, HireVue, Lattice 등의 공개 가격, EU AI법 일정, 자체 호스팅 옵션을 정리합니다. 법률 자문이 아닙니다.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-ai-hr-software-enterprise',
       inLanguage: 'ko',
       datePublished: '2026-09-03',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Advanced',
@@ -2884,9 +2884,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/ko/power-local-llm](https://www.promptquorum.com/ko/power-local-llm)' },
-        { '@type': 'ListItem', position: 3, name: '2026년 기업용 AI 인사 소프트웨어 추천', item: '[www.promptquorum.com/ko/power-local-llm/best-ai-hr-software-enterprise](https://www.promptquorum.com/ko/power-local-llm/best-ai-hr-software-enterprise)' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: '2026년 기업용 AI 인사 소프트웨어 비교', item: 'https://www.promptquorum.com/ko/power-local-llm/best-ai-hr-software-enterprise' },
       ],
     },
   },

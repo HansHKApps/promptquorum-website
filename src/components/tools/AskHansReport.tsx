@@ -123,7 +123,7 @@ export function AskHansReport({ lang, report }: { lang: Language; report: AskHan
             </table>
           </div>
           <p className="border-t border-border px-4 py-2.5 text-xs text-text-secondary">
-            {tAsk('sampleLabel', lang)}: <span className="font-semibold tabular-nums">{fmt(report.sampled.last30)}</span> ({tMcp('tableLast30', lang)})
+            {tAsk('sampleLabel', lang)}: <span dir="ltr" className="font-semibold tabular-nums">{fmt(report.sampled.last30)} / {fmt(report.windows.answers.last30)}</span> ({tMcp('tableLast30', lang)})
           </p>
         </div>
 
@@ -150,6 +150,7 @@ export function AskHansReport({ lang, report }: { lang: Language; report: AskHan
         <BreakdownTable heading={tAsk('toolsHeading', lang)} firstCol={tAsk('toolsHeading', lang)} rows={report.tools} label={(k) => k} mono lang={lang} />
         <BreakdownTable heading={tAsk('langsHeading', lang)} firstCol={tAsk('langsHeading', lang)} rows={report.langs} label={(k) => k.toUpperCase()} mono lang={lang} />
       </div>
+      <p className="mt-4 max-w-[720px] text-xs leading-relaxed text-text-secondary">{tAsk('breakdownNote', lang)}</p>
     </div>
   )
 }

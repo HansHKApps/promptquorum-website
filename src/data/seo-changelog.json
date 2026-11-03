@@ -21676,6 +21676,306 @@
     "deployedAt": null
   },
   {
+    "id": "37fb5b2c-1d1b-483e-83ec-b68fa90e0e0f",
+    "slug": "/de/power-local-llm/best-web-hosting",
+    "date": "2026-11-03T05:19:44.094Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Webhosting Kosten 2026: IONOS, ALL-INKL.COM und Hostinger mit Einstiegs- und Verlängerungspreis, geprüft am 02.11.2026. IONOS verlängert zum 11-fachen.",
+        "new": "Webhosting Kosten 2026: IONOS, ALL-INKL.COM, Hostinger mit Einstiegs- und Verlängerungspreis, geprüft 02.11.2026. IONOS: 11-fach (laut Anbieter)."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-web-hosting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "hosting kosten",
+      "hosting con soporte en español",
+      "lws vs ovh"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2908abb2-284f-47d0-a9e7-7db31ee9ac3a",
+    "slug": "/zh/power-local-llm/best-web-hosting",
+    "date": "2026-11-03T05:19:44.197Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "2026年面向华语读者的网站主机价格：阿里云（限时促销每年38元）、腾讯云（每月35元）、Hostinger（首月2.49美元）。附确认价格及PIPL、数据安全法合规说明。",
+        "new": "2026年面向华语读者的网站主机价格：阿里云（限时促销每年38元）、腾讯云（每月35元）、Hostinger（需一次预付48个月，每月2.49美元起，续费每月10.99美元）。附PIPL与数据安全法说明。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-web-hosting); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "hosting kosten",
+      "hosting con soporte en español",
+      "lws vs ovh"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "fe2d0b62-bb6f-4022-9cb7-02eefa84fdcd",
+    "slug": "/power-local-llm/best-ai-hr-software-enterprise",
+    "date": "2026-11-03T05:19:44.313Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best AI HR Software for Enterprises (2026): Compared",
+        "new": "AI HR Software for Enterprises (2026): Options Compared"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-ai-hr-software-enterprise); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hr software",
+      "ki-hr-software",
+      "software rrhh ia"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9a86f606-9a03-4aa7-a27e-d8447328fe95",
+    "slug": "/de/power-local-llm/best-ai-hr-software-enterprise",
+    "date": "2026-11-03T05:19:44.413Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Beste KI-HR-Software für Unternehmen im Vergleich (2026)",
+        "new": "KI-HR-Software für Unternehmen im Vergleich (2026)"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-ai-hr-software-enterprise); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hr software",
+      "ki-hr-software",
+      "software rrhh ia"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "1950cb7d-3682-4660-9b64-a4947b37f08c",
+    "slug": "/es/power-local-llm/best-ai-hr-software-enterprise",
+    "date": "2026-11-03T05:19:44.518Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Mejor software de RR. HH. con IA para empresas (2026)",
+        "new": "Software de RR. HH. con IA para empresas: opciones (2026)"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-ai-hr-software-enterprise); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hr software",
+      "ki-hr-software",
+      "software rrhh ia"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "885f2043-1c0f-4c85-84ce-04c01e646293",
+    "slug": "/ar/power-local-llm/best-ai-hr-software-enterprise",
+    "date": "2026-11-03T05:19:44.620Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "أفضل برمجيات الموارد البشرية بالذكاء الاصطناعي (2026)",
+        "new": "برمجيات الموارد البشرية بالذكاء الاصطناعي: مقارنة (2026)"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-ai-hr-software-enterprise); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "ai hr software",
+      "ki-hr-software",
+      "software rrhh ia"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "5c88d9f0-56af-4f59-ab12-e865efcc30a0",
+    "slug": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+    "date": "2026-11-03T05:19:44.740Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pinecone ($20/mo Builder, $50/mo Standard), Weaviate Cloud ($45/mo Flex), Qdrant (free-forever self-host tier), Chroma (open-source + $250/mo Team) compared for RAG vector search in 2026.",
+        "new": "Pinecone ($20/mo Builder), Weaviate Cloud ($45/mo Flex), Qdrant (free to self-host) and Chroma (open source) compared for RAG vector search in 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (pinecone-vs-weaviate-vs-qdrant-vs-chroma); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "qdrant vs pinecone",
+      "pinecone vs weaviate",
+      "self hosted vector database"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "91f1c958-a865-4f0a-9c1d-7b5c11d5210b",
+    "slug": "/de/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+    "date": "2026-11-03T05:19:44.846Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pinecone (20 $/Mon. Builder, 50 $/Mon. Standard), Weaviate Cloud (45 $/Mon. Flex), Qdrant (kostenlose Self-Host-Stufe für immer), Chroma (Open Source + 250 $/Mon. Team) im Vergleich für RAG-Vektorsuche 2026.",
+        "new": "Pinecone (20 $/Mon. Builder), Weaviate Cloud (45 $/Mon. Flex), Qdrant (Self-Hosting kostenlos), Chroma (Open Source) im Vergleich für RAG-Vektorsuche 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (pinecone-vs-weaviate-vs-qdrant-vs-chroma); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "qdrant vs pinecone",
+      "pinecone vs weaviate",
+      "self hosted vector database"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "22dc2b2e-94c9-444d-891c-6f64851fabcd",
+    "slug": "/fr/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+    "date": "2026-11-03T05:19:44.948Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pinecone (20 $/mois Builder, 50 $/mois Standard), Weaviate Cloud (45 $/mois Flex), Qdrant (palier auto-hébergé gratuit à vie), Chroma (open source + 250 $/mois Team) comparés pour la recherche vectorielle RAG en 2026.",
+        "new": "Pinecone (20 $/mois Builder), Weaviate Cloud (45 $/mois Flex), Qdrant (auto-hébergement gratuit), Chroma (open source) comparés pour le RAG en 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (pinecone-vs-weaviate-vs-qdrant-vs-chroma); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "qdrant vs pinecone",
+      "pinecone vs weaviate",
+      "self hosted vector database"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2cb48576-cdd6-4c13-882f-0ec0f9349ecd",
+    "slug": "/es/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+    "date": "2026-11-03T05:19:45.050Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pinecone ($20/mes Builder, $50/mes Standard), Weaviate Cloud ($45/mes Flex), Qdrant (nivel self-hosted gratis para siempre), Chroma (open source + $250/mes Team) comparados para búsqueda vectorial RAG en 2026.",
+        "new": "Pinecone ($20/mes Builder), Weaviate Cloud ($45/mes Flex), Qdrant (self-hosting gratis) y Chroma (open source) comparados para búsqueda RAG en 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (pinecone-vs-weaviate-vs-qdrant-vs-chroma); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "qdrant vs pinecone",
+      "pinecone vs weaviate",
+      "self hosted vector database"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "eb14107d-9dbb-4bc6-b7c2-f74e5a5f6161",
+    "slug": "/ja/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+    "date": "2026-11-03T05:19:45.153Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pinecone（Builder月20ドル、Standard月50ドル）、Weaviate Cloud（Flex月45ドル）、Qdrant（永久無料のセルフホスト層）、Chroma（オープンソース＋Team月250ドル）を2026年のRAGベクトル検索向けに比較。",
+        "new": "Pinecone（Builder月20ドル）、Weaviate Cloud（Flex月45ドル）、Qdrant（セルフホストは無料）、Chroma（オープンソース）を2026年のRAGベクトル検索向けに比較。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (pinecone-vs-weaviate-vs-qdrant-vs-chroma); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "qdrant vs pinecone",
+      "pinecone vs weaviate",
+      "self hosted vector database"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "9e3d0c73-e28b-46c7-a9aa-d0f17e5ec0bc",
+    "slug": "/zh/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+    "date": "2026-11-03T05:19:45.258Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pinecone（Builder每月20美元，Standard每月50美元）、Weaviate Cloud（Flex每月45美元）、Qdrant（永久免费自托管层）、Chroma（开源+Team每月250美元）——2026年RAG向量搜索对比。",
+        "new": "Pinecone（Builder每月20美元）、Weaviate Cloud（Flex每月45美元）、Qdrant（自托管免费）、Chroma（开源）——2026年RAG向量搜索对比。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (pinecone-vs-weaviate-vs-qdrant-vs-chroma); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "qdrant vs pinecone",
+      "pinecone vs weaviate",
+      "self hosted vector database"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "6f1be860-4fac-4fed-8db7-907e5e92105d",
+    "slug": "/pt/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+    "date": "2026-11-03T05:19:45.362Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pinecone ($20/mês Builder, $50/mês Standard), Weaviate Cloud ($45/mês Flex), Qdrant (camada self-hosted gratuita para sempre), Chroma (open source + $250/mês Team) comparados para busca vetorial RAG em 2026.",
+        "new": "Pinecone ($20/mês Builder), Weaviate Cloud ($45/mês Flex), Qdrant (self-hosting gratuito) e Chroma (open source) comparados para busca RAG em 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (pinecone-vs-weaviate-vs-qdrant-vs-chroma); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "qdrant vs pinecone",
+      "pinecone vs weaviate",
+      "self hosted vector database"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "5646de03-b9d1-4415-a887-701431b26a42",
+    "slug": "/ar/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+    "date": "2026-11-03T05:19:45.467Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "مقارنة Pinecone (20$/شهرياً Builder، 50$/شهرياً Standard) وWeaviate Cloud (45$/شهرياً Flex) وQdrant (طبقة استضافة ذاتية مجانية للأبد) وChroma (مفتوح المصدر + 250$/شهرياً Team) للبحث المتجهي RAG في 2026.",
+        "new": "مقارنة Pinecone (20$/شهرياً Builder) وWeaviate Cloud (45$/شهرياً Flex) وQdrant (استضافة ذاتية مجانية) وChroma (مفتوح المصدر) لـ RAG في 2026."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (pinecone-vs-weaviate-vs-qdrant-vs-chroma); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "qdrant vs pinecone",
+      "pinecone vs weaviate",
+      "self hosted vector database"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7dce49a4-cb65-4fc6-bfab-11a5b5b499e2",
+    "slug": "/ko/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+    "date": "2026-11-03T05:19:45.569Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pinecone(Builder 월 20달러, Standard 월 50달러), Weaviate Cloud(Flex 월 45달러), Qdrant(영구 무료 셀프호스팅 계층), Chroma(오픈소스 + Team 월 250달러)를 2026년 RAG 벡터 검색 기준으로 비교합니다.",
+        "new": "Pinecone(Builder 월 20달러), Weaviate Cloud(Flex 월 45달러), Qdrant(셀프호스팅 무료), Chroma(오픈소스)의 2026년 RAG 벡터 검색 비교."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (pinecone-vs-weaviate-vs-qdrant-vs-chroma); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "qdrant vs pinecone",
+      "pinecone vs weaviate",
+      "self hosted vector database"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
     "id": "9fed930a-15af-4e83-a382-4bbef715206a",
     "slug": "/power-local-llm/second-me-review",
     "date": "2026-11-02T20:47:28.712Z",
@@ -22218,156 +22518,6 @@
       "hiwaifu",
       "hi waifu",
       "hiwaifu review"
-    ],
-    "baseline": {
-      "position": 0,
-      "impressions": 0,
-      "clicks": 0,
-      "ctr": 0,
-      "period": "28d to 2026-11-03"
-    },
-    "deployedAt": null
-  },
-  {
-    "id": "61e18819-fe54-4cdb-a239-3885ad004687",
-    "slug": "/power-local-llm/best-web-hosting",
-    "date": "2026-11-03T07:20:01.353Z",
-    "fields": [
-      {
-        "field": "metaDescription",
-        "old": "Hostinger Premium price checked 2026-11-02: $2.49/mo with a 48-month prepay ($119.52), renewing at $10.99/mo. See the real cost before you sign up.",
-        "new": "Hostinger Premium price checked 2026-11-03: $2.49/mo with a 48-month prepay ($119.52), renewing at $10.99/mo. See the real cost before you sign up."
-      }
-    ],
-    "reason": "Zero-click batch 01 round 9. Prices re-read from provider pages on 2026-11-03 in all nine editions; affiliate-programme wording (programme/commission/cookie columns and sentences) removed because PromptQuorum has no affiliate programme. No GSC baseline pulled for this page.",
-    "queries": [
-      "best web hosting",
-      "web hosting comparison"
-    ],
-    "baseline": {
-      "position": 0,
-      "impressions": 0,
-      "clicks": 0,
-      "ctr": 0,
-      "period": "28d to 2026-11-03"
-    },
-    "deployedAt": null
-  },
-  {
-    "id": "467447ac-7797-483a-ae31-ec47d1cd95ec",
-    "slug": "/ja/power-local-llm/best-web-hosting",
-    "date": "2026-11-03T07:20:01.385Z",
-    "fields": [
-      {
-        "field": "metaDescription",
-        "old": "エックスサーバー（Xserver）とロリポップ！を2026年11月2日の公式価格で比較。Xserverは月額693円、ロリポップ！は月額121円から。契約期間とWordPress対応の違い、APPI対応を解説。",
-        "new": "エックスサーバー（Xserver）とロリポップ！を2026年11月3日の公式価格で比較。Xserverは月額693円、ロリポップ！は月額121円から。契約期間とWordPress対応の違い、APPI対応を解説。"
-      }
-    ],
-    "reason": "Zero-click batch 01 round 9. Prices re-read from provider pages on 2026-11-03 in all nine editions; affiliate-programme wording (programme/commission/cookie columns and sentences) removed because PromptQuorum has no affiliate programme. No GSC baseline pulled for this page.",
-    "queries": [
-      "best web hosting",
-      "web hosting comparison"
-    ],
-    "baseline": {
-      "position": 0,
-      "impressions": 0,
-      "clicks": 0,
-      "ctr": 0,
-      "period": "28d to 2026-11-03"
-    },
-    "deployedAt": null
-  },
-  {
-    "id": "34e45339-3152-4bc4-801b-11df76fe6aab",
-    "slug": "/zh/power-local-llm/best-web-hosting",
-    "date": "2026-11-03T07:20:01.416Z",
-    "fields": [
-      {
-        "field": "metaDescription",
-        "old": "2026年面向华语读者的最佳网站主机：阿里云（限时促销每年38元）、腾讯云（每月35元）、Hostinger（首月2.49美元）。附确认价格及PIPL、数据安全法合规说明。",
-        "new": "2026年面向华语读者的最佳网站主机：阿里云（限时促销每年38元）、腾讯云（每月45元）、Hostinger（首月2.49美元）。附确认价格及PIPL、数据安全法合规说明。"
-      }
-    ],
-    "reason": "Zero-click batch 01 round 9. Prices re-read from provider pages on 2026-11-03 in all nine editions; affiliate-programme wording (programme/commission/cookie columns and sentences) removed because PromptQuorum has no affiliate programme. No GSC baseline pulled for this page.",
-    "queries": [
-      "best web hosting",
-      "web hosting comparison"
-    ],
-    "baseline": {
-      "position": 0,
-      "impressions": 0,
-      "clicks": 0,
-      "ctr": 0,
-      "period": "28d to 2026-11-03"
-    },
-    "deployedAt": null
-  },
-  {
-    "id": "195b91e0-fd80-4128-8977-3277bfbf4e1c",
-    "slug": "/es/power-local-llm/best-web-hosting",
-    "date": "2026-11-03T07:20:01.479Z",
-    "fields": [
-      {
-        "field": "metaDescription",
-        "old": "Hosting con soporte en español y barato: Hostinger, Raiola, Dinahosting, SiteGround, Webempresa y DonWeb con precios leídos el 2 de noviembre de 2026.",
-        "new": "Hosting con soporte en español y barato: Hostinger, Raiola, Dinahosting, SiteGround, Webempresa y DonWeb con precios leídos el 3 de noviembre de 2026."
-      }
-    ],
-    "reason": "Zero-click batch 01 round 9. Prices re-read from provider pages on 2026-11-03 in all nine editions; affiliate-programme wording (programme/commission/cookie columns and sentences) removed because PromptQuorum has no affiliate programme. No GSC baseline pulled for this page.",
-    "queries": [
-      "best web hosting",
-      "web hosting comparison"
-    ],
-    "baseline": {
-      "position": 0,
-      "impressions": 0,
-      "clicks": 0,
-      "ctr": 0,
-      "period": "28d to 2026-11-03"
-    },
-    "deployedAt": null
-  },
-  {
-    "id": "c8a085f2-6a25-40fe-a0f9-56bea30dfe52",
-    "slug": "/pt/power-local-llm/best-web-hosting",
-    "date": "2026-11-03T07:20:01.539Z",
-    "fields": [
-      {
-        "field": "metaDescription",
-        "old": "Hostinger, Locaweb, KingHost e HostGator comparadas em 2026: preço de entrada e de renovação em reais, lidos nos sites em 02/11/2026, e a LGPD.",
-        "new": "Hostinger, Locaweb, KingHost e HostGator comparadas em 2026: preço de entrada e de renovação em reais, lidos nos sites em 03/11/2026, e a LGPD."
-      }
-    ],
-    "reason": "Zero-click batch 01 round 9. Prices re-read from provider pages on 2026-11-03 in all nine editions; affiliate-programme wording (programme/commission/cookie columns and sentences) removed because PromptQuorum has no affiliate programme. No GSC baseline pulled for this page.",
-    "queries": [
-      "best web hosting",
-      "web hosting comparison"
-    ],
-    "baseline": {
-      "position": 0,
-      "impressions": 0,
-      "clicks": 0,
-      "ctr": 0,
-      "period": "28d to 2026-11-03"
-    },
-    "deployedAt": null
-  },
-  {
-    "id": "e474c4fa-78cf-4ac8-ab16-511d8a03d793",
-    "slug": "/ko/power-local-llm/best-web-hosting",
-    "date": "2026-11-03T07:20:01.583Z",
-    "fields": [
-      {
-        "field": "metaDescription",
-        "old": "Cafe24 vs 가비아 vs 닷홈 vs NHN Hosting 2026년 비교: 실제 원화 요금과 왜 어느 곳도 공개 제휴 프로그램을 운영하지 않는지 설명합니다.",
-        "new": "Cafe24, 가비아, 닷홈, NHN Hosting 2026년 비교: 2026-11-03에 확인한 원화 요금과 선택 기준을 정리했습니다."
-      }
-    ],
-    "reason": "Zero-click batch 01 round 9. Prices re-read from provider pages on 2026-11-03 in all nine editions; affiliate-programme wording (programme/commission/cookie columns and sentences) removed because PromptQuorum has no affiliate programme. No GSC baseline pulled for this page.",
-    "queries": [
-      "best web hosting",
-      "web hosting comparison"
     ],
     "baseline": {
       "position": 0,
