@@ -36,7 +36,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-05',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -219,7 +219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Best enterprise cloud:** [AWS](https://aws.amazon.com/ec2/instance-types/p5/) — broadest managed-AI catalog and compliance bench.',
           '**Best for Google/TPU workloads:** [Google Cloud](https://cloud.google.com/compute/docs/gpus) — the only provider on this page offering TPUs.',
           '**Best for Microsoft/OpenAI workloads:** [Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — Azure OpenAI Service access.',
-          '**Best alternative for large enterprise compute:** [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — flat pricing, cheapest hyperscaler egress.',
+          '**Best alternative for large enterprise compute:** [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — flat pricing and 10 TB of free outbound transfer per month.',
         ],
       },
       masterComparison: {
@@ -298,7 +298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'H100 pricing': '$10/hr flat',
             'Spot / reserved': 'Universal Credits (volume)',
             'Multi-GPU': '8-GPU bare-metal nodes',
-            'Data transfer': '10 TB free, $0.0085/GB after',
+            'Data transfer': '10 TB free per month',
             'Best use case': 'Cheapest raw enterprise compute',
           },
         ],
@@ -494,9 +494,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'microsoft-azure',
         title: 'Microsoft Azure: Best for Microsoft-Centric AI?',
         content:
-          '**Azure has the highest per-GPU on-demand price on this page, and it can still make sense — even though its raw GPU price is not the lowest — for one specific reason: the [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service).** [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) instances price around $11-13/GPU-hr on-demand — a full 8-GPU node runs roughly $98/hr, in line with AWS and Google Cloud at the node level despite the higher per-GPU headline. Beyond OpenAI access, Azure\'s case rests on enterprise identity (Active Directory), Microsoft 365 integration, existing enterprise procurement relationships, and hybrid infrastructure for companies already running Microsoft-stack workloads on-premises.',
+          '**Among the providers compared on this page, Azure lists the highest on-demand H100 price (about $12.29/GPU-hr, or $98.32/hr for an 8-GPU ND H100 v5 node in East US, per Azure\'s retail prices API on 2026-11-03), and it can still make sense for one specific reason: the [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service).** [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) instances price around $11-13/GPU-hr on-demand — a full 8-GPU node runs roughly $98/hr, in line with AWS and Google Cloud at the node level despite the higher per-GPU headline. Beyond OpenAI access, Azure\'s case rests on enterprise identity (Active Directory), Microsoft 365 integration, existing enterprise procurement relationships, and hybrid infrastructure for companies already running Microsoft-stack workloads on-premises.',
         bestFor: 'Companies whose product depends on the Azure OpenAI Service, or existing Microsoft enterprise customers consolidating procurement onto one vendor.',
-        avoidIf: 'You have no Azure OpenAI Service or Microsoft-ecosystem dependency — the per-GPU rate is the highest on this page with no compensating advantage for a GPU-only workload.',
+        avoidIf: 'You have no Azure OpenAI Service or Microsoft-ecosystem dependency — for a GPU-only workload those ecosystem benefits do not apply, and other providers on this page list lower on-demand GPU rates.',
         costNote: 'At the full 8-GPU node level, Azure\'s roughly $98/hr price is close to AWS and Google Cloud — the higher per-GPU headline matters most for teams renting single or partial GPUs, not full nodes.',
         affiliateLinks: [
           {
@@ -512,10 +512,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'oracle-cloud',
         title: 'Oracle Cloud Infrastructure: The Underrated AI Cloud?',
         content:
-          '**Oracle Cloud Infrastructure is a serious option for companies that care heavily about infrastructure economics on large AI workloads — a less predictable pick that gives this comparison a genuinely different angle.** [OCI](https://www.oracle.com/cloud/compute/gpu/) charges a flat $10/GPU-hr for H100 on-demand across every region — no region-based price variation — and an 8x H100 bare-metal node (BM.GPU.H100.8) runs $80/hr, meaningfully below AWS, Azure, and Google Cloud\'s roughly $98/hr node price. OCI includes 10 TB of free outbound transfer per month before egress charges apply — the cheapest egress of any hyperscaler here (versus 100 GB on AWS/Azure/Google Cloud) — and offers RDMA cluster networking for multi-node training. Beyond compute, OCI\'s traditional strength in enterprise database workloads (Oracle Database, data warehousing) gives it a specific pull for companies already running Oracle-adjacent enterprise systems who want AI infrastructure on the same platform. Its Universal Credits program offers negotiated volume discounts for larger annual commitments, though rates are not published as a standard table.',
+          '**Oracle Cloud Infrastructure is a serious option for companies that care heavily about infrastructure economics on large AI workloads — a less predictable pick that gives this comparison a genuinely different angle.** [OCI](https://www.oracle.com/cloud/compute/gpu/) charges a flat $10/GPU-hr for H100 on-demand across every region — no region-based price variation — and an 8x H100 bare-metal node (BM.GPU.H100.8) runs $80/hr, meaningfully below AWS, Azure, and Google Cloud\'s roughly $98/hr node price. OCI lists the first 10 TB of outbound transfer per month as free (oracle.com/cloud/networking/pricing, checked 2026-11-03), versus 100 GB on Azure (azure.microsoft.com/pricing/details/bandwidth, checked 2026-11-03) — and offers RDMA cluster networking for multi-node training. Beyond compute, OCI\'s traditional strength in enterprise database workloads (Oracle Database, data warehousing) gives it a specific pull for companies already running Oracle-adjacent enterprise systems who want AI infrastructure on the same platform. Its Universal Credits program offers negotiated volume discounts for larger annual commitments, though rates are not published as a standard table.',
         bestFor: 'Companies running large training clusters where flat, predictable per-GPU pricing, low egress, and RDMA networking matter more than a broad managed-AI service catalog — and companies already on Oracle\'s database/enterprise stack.',
         avoidIf: 'You need Oracle\'s specific managed-AI catalog breadth, or want the widest possible instance/region catalog — OCI\'s catalog is narrower than AWS\'s or Google Cloud\'s.',
-        costNote: 'The 10 TB free egress allowance is 100x the 100 GB free tier on AWS, Azure, and Google Cloud — verify the current allowance before budgeting, since free tiers are one of the more frequently adjusted terms across all hyperscalers.',
+        costNote: 'OCI\'s 10 TB monthly free egress allowance is 100x Azure\'s 100 GB free tier (both from the vendors\' pricing pages, checked 2026-11-03) — verify the current allowance before budgeting, since free tiers are one of the more frequently adjusted terms across all hyperscalers.',
         affiliateLinks: [
           {
             url: 'https://www.oracle.com/cloud/compute/gpu/',
@@ -672,8 +672,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Lambda GPU Cloud pricing](https://lambda.ai/service/gpu-cloud) — H100 PCIe $3.29/hr, H100 SXM $4.29/hr, A100 40GB $1.99/hr, A100 80GB $2.79/hr, checked via search 2026-09-05.',
           '[Reuters/Bloomberg: Anthropic-Lambda $35B cloud deal](https://www.bloomberg.com/news/articles/2026-08-31/anthropic-seals-35-billion-cloud-deal-with-nvidia-backed-lambda) — reported 2026-08-31, terms (GPU count, contract length) undisclosed.',
           '[Google Cloud GPU pricing](https://cloud.google.com/compute/docs/gpus) — A3 series (a3-highgpu-8g) roughly $80-90/hr on-demand ($9-11.50/GPU-hr), checked via search 2026-09-05.',
-          '[Microsoft Azure HPC/GPU VMs](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 roughly $11-13/GPU-hr on-demand, full 8-GPU node roughly $98/hr, checked via search 2026-09-05.',
-          '[Oracle Cloud Infrastructure GPU compute](https://www.oracle.com/cloud/compute/gpu/) — flat $10/GPU-hr H100 on-demand, BM.GPU.H100.8 node $80/hr, 10 TB free egress then $0.0085/GB, checked via search 2026-09-05.',
+          '[Microsoft Azure HPC/GPU VMs](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 $98.32/hr for the 8-GPU node in East US, about $12.29/GPU-hr (Azure retail prices API, checked 2026-11-03); prices vary by region.',
+          '[Oracle Cloud Infrastructure GPU compute](https://www.oracle.com/cloud/compute/gpu/) — flat $10/GPU-hr H100 on-demand, BM.GPU.H100.8 node $80/hr, checked via search 2026-09-05; first 10 TB/month outbound free per oracle.com/cloud/networking/pricing, checked 2026-11-03 (the per-GB rate beyond 10 TB was not re-verified).',
           'CoreWeave, RunPod, and Lambda zero-egress-fee policy — checked via search 2026-09-05 against provider pricing pages and third-party GPU cloud comparison sources.',
         ],
       },
@@ -741,7 +741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-05',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -924,7 +924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Beste Enterprise-Cloud:** [AWS](https://aws.amazon.com/ec2/instance-types/p5/) — breitester verwalteter KI-Katalog und tiefste Compliance-Bank.',
           '**Beste Wahl für Google-/TPU-Workloads:** [Google Cloud](https://cloud.google.com/compute/docs/gpus) — der einzige Anbieter auf dieser Seite mit TPUs.',
           '**Beste Wahl für Microsoft-/OpenAI-Workloads:** [Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — Zugang zum Azure OpenAI Service.',
-          '**Beste Alternative für große Enterprise-Rechenleistung:** [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — Pauschalpreise, günstigster Hyperscaler-Egress.',
+          '**Beste Alternative für große Enterprise-Rechenleistung:** [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — Pauschalpreise und 10 TB freier ausgehender Transfer pro Monat.',
         ],
       },
       masterComparison: {
@@ -1003,7 +1003,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'H100-Preis': '$10/Std. pauschal',
             'Spot / reserviert': 'Universal Credits (Volumen)',
             'Multi-GPU': '8-GPU-Bare-Metal-Knoten',
-            Datenübertragung: '10 TB frei, $0,0085/GB danach',
+            Datenübertragung: '10 TB pro Monat frei',
             'Bester Anwendungsfall': 'Günstigste rohe Enterprise-Rechenleistung',
           },
         ],
@@ -1199,9 +1199,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'microsoft-azure',
         title: 'Microsoft Azure: Beste Wahl für Microsoft-zentrierte KI?',
         content:
-          '**Azure hat den höchsten Pro-GPU-On-Demand-Preis auf dieser Seite, und es kann trotzdem sinnvoll sein — auch wenn der reine GPU-Preis nicht der niedrigste ist — aus einem konkreten Grund: dem [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service).** [ND-H100-v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)-Instanzen kosten on-demand rund GPU $11-13/Std. — ein voller 8-GPU-Knoten kostet rund $98/Std., vergleichbar mit AWS und Google Cloud auf Knotenebene trotz des höheren Pro-GPU-Listenpreises. Über den OpenAI-Zugang hinaus stützt sich Azures Fall auf Enterprise-Identität (Active Directory), Microsoft-365-Integration, bestehende Enterprise-Beschaffungsbeziehungen und hybride Infrastruktur für Unternehmen, die bereits Microsoft-Stack-Workloads vor Ort betreiben.',
+          '**Unter den auf dieser Seite verglichenen Anbietern weist Azure den höchsten On-Demand-Preis für H100 aus (rund 12,29 $/GPU-Std. bzw. 98,32 $/Std. für einen 8-GPU-ND-H100-v5-Knoten in East US, laut Azure Retail Prices API am 03.11.2026), und es kann trotzdem aus einem konkreten Grund sinnvoll sein: dem [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service).** [ND-H100-v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)-Instanzen kosten on-demand rund GPU $11-13/Std. — ein voller 8-GPU-Knoten kostet rund $98/Std., vergleichbar mit AWS und Google Cloud auf Knotenebene trotz des höheren Pro-GPU-Listenpreises. Über den OpenAI-Zugang hinaus stützt sich Azures Fall auf Enterprise-Identität (Active Directory), Microsoft-365-Integration, bestehende Enterprise-Beschaffungsbeziehungen und hybride Infrastruktur für Unternehmen, die bereits Microsoft-Stack-Workloads vor Ort betreiben.',
         bestFor: 'Unternehmen, deren Produkt vom Azure OpenAI Service abhängt, oder bestehende Microsoft-Enterprise-Kunden, die die Beschaffung auf einen Anbieter konsolidieren.',
-        avoidIf: 'Sie keine Abhängigkeit vom Azure OpenAI Service oder Microsoft-Ökosystem haben — die Pro-GPU-Rate ist die höchste auf dieser Seite ohne ausgleichenden Vorteil für eine reine GPU-Workload.',
+        avoidIf: 'Sie keine Abhängigkeit vom Azure OpenAI Service oder Microsoft-Ökosystem haben — für eine reine GPU-Workload greifen diese Ökosystem-Vorteile nicht, und andere Anbieter auf dieser Seite weisen niedrigere On-Demand-GPU-Preise aus.',
         costNote: 'Auf Ebene des vollen 8-GPU-Knotens liegt Azures Preis von rund $98/Std. nahe an AWS und Google Cloud — der höhere Pro-GPU-Listenpreis zählt vor allem für Teams, die einzelne oder Teil-GPUs mieten, nicht ganze Knoten.',
         affiliateLinks: [
           {
@@ -1217,10 +1217,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'oracle-cloud',
         title: 'Oracle Cloud Infrastructure: Die unterschätzte KI-Cloud?',
         content:
-          '**Oracle Cloud Infrastructure ist eine ernstzunehmende Option für Unternehmen, denen die Infrastruktur-Ökonomie bei großen KI-Workloads sehr wichtig ist — eine weniger vorhersehbare Wahl, die diesem Vergleich einen wirklich anderen Blickwinkel gibt.** [OCI](https://www.oracle.com/cloud/compute/gpu/) berechnet über alle Regionen hinweg pauschal $10/GPU-Std. für H100 on-demand — keine regionsabhängige Preisschwankung — und ein 8x-H100-Bare-Metal-Knoten (BM.GPU.H100.8) kostet $80/Std., deutlich unter dem rund $98/Std.-Knotenpreis von AWS, Azure und Google Cloud. OCI enthält 10 TB freien ausgehenden Transfer pro Monat, bevor Egress-Gebühren anfallen — der günstigste Egress jedes Hyperscalers hier (gegenüber 100 GB bei AWS/Azure/Google Cloud) — und bietet RDMA-Cluster-Networking für Multi-Node-Training. Über die Rechenleistung hinaus verschafft OCIs traditionelle Stärke bei Enterprise-Datenbank-Workloads (Oracle Database, Data Warehousing) einen speziellen Reiz für Unternehmen, die bereits Oracle-nahe Enterprise-Systeme betreiben und KI-Infrastruktur auf derselben Plattform wollen. Das Universal-Credits-Programm bietet verhandelte Mengenrabatte für größere Jahresverpflichtungen, wobei die Sätze nicht als Standardtabelle veröffentlicht sind.',
+          '**Oracle Cloud Infrastructure ist eine ernstzunehmende Option für Unternehmen, denen die Infrastruktur-Ökonomie bei großen KI-Workloads sehr wichtig ist — eine weniger vorhersehbare Wahl, die diesem Vergleich einen wirklich anderen Blickwinkel gibt.** [OCI](https://www.oracle.com/cloud/compute/gpu/) berechnet über alle Regionen hinweg pauschal $10/GPU-Std. für H100 on-demand — keine regionsabhängige Preisschwankung — und ein 8x-H100-Bare-Metal-Knoten (BM.GPU.H100.8) kostet $80/Std., deutlich unter dem rund $98/Std.-Knotenpreis von AWS, Azure und Google Cloud. OCI weist die ersten 10 TB ausgehenden Transfer pro Monat als kostenlos aus (oracle.com/cloud/networking/pricing, geprüft am 03.11.2026), gegenüber 100 GB bei Azure (azure.microsoft.com/pricing/details/bandwidth, geprüft am 03.11.2026) — und bietet RDMA-Cluster-Networking für Multi-Node-Training. Über die Rechenleistung hinaus verschafft OCIs traditionelle Stärke bei Enterprise-Datenbank-Workloads (Oracle Database, Data Warehousing) einen speziellen Reiz für Unternehmen, die bereits Oracle-nahe Enterprise-Systeme betreiben und KI-Infrastruktur auf derselben Plattform wollen. Das Universal-Credits-Programm bietet verhandelte Mengenrabatte für größere Jahresverpflichtungen, wobei die Sätze nicht als Standardtabelle veröffentlicht sind.',
         bestFor: 'Unternehmen mit großen Trainingsclustern, bei denen pauschale, planbare Pro-GPU-Preise, niedriger Egress und RDMA-Networking wichtiger sind als ein breiter verwalteter KI-Dienstkatalog — und Unternehmen, die bereits auf Oracles Datenbank-/Enterprise-Stack sind.',
         avoidIf: 'Sie Oracles spezifische Breite an verwalteten KI-Diensten brauchen oder den breitestmöglichen Instanz-/Regionskatalog wollen — OCIs Katalog ist schmaler als der von AWS oder Google Cloud.',
-        costNote: 'Das freie Egress-Kontingent von 10 TB ist 100-mal so hoch wie das 100-GB-Freikontingent bei AWS, Azure und Google Cloud — prüfen Sie das aktuelle Kontingent vor der Budgetierung, da Freikontingente zu den häufiger angepassten Bedingungen aller Hyperscaler gehören.',
+        costNote: 'Das freie Egress-Kontingent von OCI mit 10 TB pro Monat ist 100-mal so hoch wie das 100-GB-Freikontingent von Azure (beide laut Preisseiten der Anbieter, geprüft am 03.11.2026) — prüfen Sie das aktuelle Kontingent vor der Budgetierung, da Freikontingente zu den häufiger angepassten Bedingungen aller Hyperscaler gehören.',
         affiliateLinks: [
           {
             url: 'https://www.oracle.com/cloud/compute/gpu/',
@@ -1377,8 +1377,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Lambda GPU-Cloud-Preise](https://lambda.ai/service/gpu-cloud) — H100 PCIe $3,29/Std., H100 SXM $4,29/Std., A100 40GB $1,99/Std., A100 80GB $2,79/Std., geprüft per Websuche am 05.09.2026.',
           '[Reuters/Bloomberg: Anthropic-Lambda-$35-Mrd.-Cloud-Deal](https://www.bloomberg.com/news/articles/2026-08-31/anthropic-seals-35-billion-cloud-deal-with-nvidia-backed-lambda) — gemeldet am 31.08.2026, Bedingungen (GPU-Anzahl, Vertragslaufzeit) nicht offengelegt.',
           '[Google Cloud GPU-Preise](https://cloud.google.com/compute/docs/gpus) — A3-Serie (a3-highgpu-8g) rund $80-90/Std. on-demand ($9-11,50/GPU-Std.), geprüft per Websuche am 05.09.2026.',
-          '[Microsoft Azure HPC/GPU-VMs](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 rund $11-13/GPU-Std. on-demand, voller 8-GPU-Knoten rund $98/Std., geprüft per Websuche am 05.09.2026.',
-          '[Oracle Cloud Infrastructure GPU-Compute](https://www.oracle.com/cloud/compute/gpu/) — pauschal $10/GPU-Std. H100 on-demand, BM.GPU.H100.8-Knoten $80/Std., 10 TB freier Egress dann $0,0085/GB, geprüft per Websuche am 05.09.2026.',
+          '[Microsoft Azure HPC/GPU-VMs](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 98,32 $/Std. für den 8-GPU-Knoten in East US, rund 12,29 $/GPU-Std. (Azure Retail Prices API, geprüft am 03.11.2026); die Preise variieren je nach Region.',
+          '[Oracle Cloud Infrastructure GPU-Compute](https://www.oracle.com/cloud/compute/gpu/) — pauschal $10/GPU-Std. H100 on-demand, BM.GPU.H100.8-Knoten $80/Std., geprüft per Websuche am 05.09.2026; die ersten 10 TB ausgehender Transfer pro Monat kostenlos laut oracle.com/cloud/networking/pricing, geprüft am 03.11.2026 (der Preis pro GB über 10 TB hinaus wurde nicht erneut geprüft).',
           'CoreWeave-, RunPod- und Lambda-Null-Egress-Gebühren-Politik — geprüft per Websuche am 05.09.2026 gegen Preisseiten der Anbieter und Drittanbieter-Vergleichsquellen.',
         ],
       },
@@ -1446,7 +1446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-05',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -1629,7 +1629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Meilleur cloud entreprise :** [AWS](https://aws.amazon.com/ec2/instance-types/p5/) — catalogue IA géré et conformité les plus larges.',
           '**Meilleur choix pour les charges Google/TPU :** [Google Cloud](https://cloud.google.com/compute/docs/gpus) — le seul fournisseur de cette page proposant des TPU.',
           '**Meilleur choix pour les charges Microsoft/OpenAI :** [Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — accès à l\'Azure OpenAI Service.',
-          '**Meilleure alternative pour le calcul entreprise à grande échelle :** [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — tarification fixe, egress hyperscaler le moins cher.',
+          '**Meilleure alternative pour le calcul entreprise à grande échelle :** [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — tarification fixe et 10 To de transfert sortant gratuits par mois.',
         ],
       },
       masterComparison: {
@@ -1708,7 +1708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Prix H100': '$10/h fixe',
             'Spot / réservé': 'Universal Credits (volume)',
             'Multi-GPU': 'Nœuds bare-metal 8 GPU',
-            'Transfert de données': '10 To gratuits, $0,0085/Go après',
+            'Transfert de données': '10 To gratuits par mois',
             'Meilleur cas d\'usage': 'Calcul entreprise brut le moins cher',
           },
         ],
@@ -1904,9 +1904,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'microsoft-azure',
         title: 'Microsoft Azure : le meilleur choix pour l\'IA centrée Microsoft ?',
         content:
-          '**Azure a le prix à la demande par GPU le plus élevé de cette page, et cela peut quand même avoir du sens — même si son prix GPU brut n\'est pas le plus bas — pour une raison précise : l\'[Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service).** Les instances [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) coûtent environ $11-13/h par GPU à la demande — un nœud complet de 8 GPU coûte environ $98/h, comparable à AWS et Google Cloud au niveau du nœud malgré le tarif affiché par GPU plus élevé. Au-delà de l\'accès OpenAI, l\'argument d\'Azure repose sur l\'identité entreprise (Active Directory), l\'intégration Microsoft 365, les relations d\'achat entreprise existantes, et l\'infrastructure hybride pour les entreprises exécutant déjà des charges sur pile Microsoft en local.',
+          '**Parmi les fournisseurs comparés sur cette page, Azure affiche le prix à la demande le plus élevé pour le H100 (environ $12,29/h par GPU, soit $98,32/h pour un nœud ND H100 v5 de 8 GPU en East US, selon l\'API Azure Retail Prices le 03/11/2026), et cela peut quand même avoir du sens pour une raison précise : l\'[Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service).** Les instances [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) coûtent environ $11-13/h par GPU à la demande — un nœud complet de 8 GPU coûte environ $98/h, comparable à AWS et Google Cloud au niveau du nœud malgré le tarif affiché par GPU plus élevé. Au-delà de l\'accès OpenAI, l\'argument d\'Azure repose sur l\'identité entreprise (Active Directory), l\'intégration Microsoft 365, les relations d\'achat entreprise existantes, et l\'infrastructure hybride pour les entreprises exécutant déjà des charges sur pile Microsoft en local.',
         bestFor: 'Entreprises dont le produit dépend de l\'Azure OpenAI Service, ou clientes entreprise Microsoft existantes consolidant leurs achats sur un seul fournisseur.',
-        avoidIf: 'Vous n\'avez aucune dépendance à l\'Azure OpenAI Service ou à l\'écosystème Microsoft — le tarif par GPU est le plus élevé de cette page sans avantage compensatoire pour une charge purement GPU.',
+        avoidIf: 'Vous n\'avez aucune dépendance à l\'Azure OpenAI Service ou à l\'écosystème Microsoft — pour une charge purement GPU, ces avantages d\'écosystème ne s\'appliquent pas, et d\'autres fournisseurs de cette page affichent des tarifs GPU à la demande plus bas.',
         costNote: 'Au niveau du nœud complet de 8 GPU, le prix d\'Azure d\'environ $98/h est proche d\'AWS et Google Cloud — le tarif affiché par GPU plus élevé compte surtout pour les équipes louant des GPU isolés ou partiels, pas des nœuds entiers.',
         affiliateLinks: [
           {
@@ -1922,10 +1922,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'oracle-cloud',
         title: 'Oracle Cloud Infrastructure : le cloud IA sous-estimé ?',
         content:
-          '**Oracle Cloud Infrastructure est une option sérieuse pour les entreprises très attentives à l\'économie d\'infrastructure sur de grandes charges IA — un choix moins prévisible qui donne à ce comparatif un angle réellement différent.** [OCI](https://www.oracle.com/cloud/compute/gpu/) facture un tarif fixe de $10/h par GPU pour le H100 à la demande dans toutes les régions — aucune variation de prix selon la région — et un nœud bare-metal 8x H100 (BM.GPU.H100.8) coûte $80/h, nettement en dessous du prix de nœud d\'environ $98/h chez AWS, Azure et Google Cloud. OCI inclut aussi 10 To de transfert sortant gratuit par mois avant l\'application de frais d\'egress — l\'egress le moins cher de tout hyperscaler ici (contre 100 Go chez AWS/Azure/Google Cloud) — et propose un réseau de cluster RDMA pour l\'entraînement multi-nœuds. Au-delà du calcul, la force traditionnelle d\'OCI dans les charges de base de données entreprise (Oracle Database, entrepôts de données) lui donne un attrait spécifique pour les entreprises exécutant déjà des systèmes entreprise proches d\'Oracle et voulant l\'infrastructure IA sur la même plateforme. Son programme Universal Credits offre des remises de volume négociées pour des engagements annuels plus importants, bien que les taux ne soient pas publiés dans un tableau standard.',
+          '**Oracle Cloud Infrastructure est une option sérieuse pour les entreprises très attentives à l\'économie d\'infrastructure sur de grandes charges IA — un choix moins prévisible qui donne à ce comparatif un angle réellement différent.** [OCI](https://www.oracle.com/cloud/compute/gpu/) facture un tarif fixe de $10/h par GPU pour le H100 à la demande dans toutes les régions — aucune variation de prix selon la région — et un nœud bare-metal 8x H100 (BM.GPU.H100.8) coûte $80/h, nettement en dessous du prix de nœud d\'environ $98/h chez AWS, Azure et Google Cloud. OCI indique les 10 premiers To de transfert sortant par mois comme gratuits (oracle.com/cloud/networking/pricing, vérifié le 03/11/2026), contre 100 Go chez Azure (azure.microsoft.com/pricing/details/bandwidth, vérifié le 03/11/2026) — et propose un réseau de cluster RDMA pour l\'entraînement multi-nœuds. Au-delà du calcul, la force traditionnelle d\'OCI dans les charges de base de données entreprise (Oracle Database, entrepôts de données) lui donne un attrait spécifique pour les entreprises exécutant déjà des systèmes entreprise proches d\'Oracle et voulant l\'infrastructure IA sur la même plateforme. Son programme Universal Credits offre des remises de volume négociées pour des engagements annuels plus importants, bien que les taux ne soient pas publiés dans un tableau standard.',
         bestFor: 'Entreprises gérant de grands clusters d\'entraînement où le prix fixe par GPU, l\'egress bas et le réseau RDMA comptent plus qu\'un large catalogue de services IA gérés — et entreprises déjà sur la pile base de données/entreprise d\'Oracle.',
         avoidIf: 'Vous avez besoin de l\'ampleur du catalogue IA géré spécifique d\'Oracle, ou voulez le catalogue d\'instances/régions le plus large possible — le catalogue d\'OCI est plus étroit que celui d\'AWS ou de Google Cloud.',
-        costNote: 'Le quota d\'egress gratuit de 10 To est 100 fois supérieur au palier gratuit de 100 Go chez AWS, Azure et Google Cloud — vérifiez le quota actuel avant de budgétiser, car les paliers gratuits comptent parmi les conditions les plus fréquemment ajustées de tous les hyperscalers.',
+        costNote: 'Le quota d\'egress gratuit d\'OCI de 10 To par mois est 100 fois supérieur au palier gratuit de 100 Go d\'Azure (les deux issus des pages tarifaires des fournisseurs, vérifiés le 03/11/2026) — vérifiez le quota actuel avant de budgétiser, car les paliers gratuits comptent parmi les conditions les plus fréquemment ajustées de tous les hyperscalers.',
         affiliateLinks: [
           {
             url: 'https://www.oracle.com/cloud/compute/gpu/',
@@ -2082,8 +2082,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Prix Lambda GPU Cloud](https://lambda.ai/service/gpu-cloud) — H100 PCIe $3,29/h, H100 SXM $4,29/h, A100 40 Go $1,99/h, A100 80 Go $2,79/h, vérifié par recherche web le 05/09/2026.',
           '[Reuters/Bloomberg : accord cloud Anthropic-Lambda à $35 Md](https://www.bloomberg.com/news/articles/2026-08-31/anthropic-seals-35-billion-cloud-deal-with-nvidia-backed-lambda) — rapporté le 31/08/2026, conditions (nombre de GPU, durée du contrat) non divulguées.',
           '[Prix GPU Google Cloud](https://cloud.google.com/compute/docs/gpus) — série A3 (a3-highgpu-8g) environ $80-90/h à la demande ($9-11,50/h par GPU), vérifié par recherche web le 05/09/2026.',
-          '[VM HPC/GPU Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 environ $11-13/h par GPU à la demande, nœud complet 8 GPU environ $98/h, vérifié par recherche web le 05/09/2026.',
-          '[Calcul GPU Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — $10/h par GPU fixe H100 à la demande, nœud BM.GPU.H100.8 $80/h, 10 To d\'egress gratuit puis $0,0085/Go, vérifié par recherche web le 05/09/2026.',
+          '[VM HPC/GPU Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 $98,32/h pour le nœud de 8 GPU en East US, environ $12,29/h par GPU (API Azure Retail Prices, vérifié le 03/11/2026) ; les prix varient selon la région.',
+          '[Calcul GPU Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — $10/h par GPU fixe H100 à la demande, nœud BM.GPU.H100.8 $80/h, vérifié par recherche web le 05/09/2026 ; 10 premiers To/mois de transfert sortant gratuits selon oracle.com/cloud/networking/pricing, vérifié le 03/11/2026 (le tarif par Go au-delà de 10 To n\'a pas été revérifié).',
           'Politique de zéro frais d\'egress chez CoreWeave, RunPod et Lambda — vérifié par recherche web le 05/09/2026 face aux pages tarifaires des fournisseurs et à des sources comparatives tierces.',
         ],
       },
@@ -2151,7 +2151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-05',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -2334,7 +2334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mejor nube empresarial:** [AWS](https://aws.amazon.com/ec2/instance-types/p5/) — catálogo de IA gestionado y cumplimiento más amplios.',
           '**Mejor para cargas de Google/TPU:** [Google Cloud](https://cloud.google.com/compute/docs/gpus) — el único proveedor de esta página con TPU.',
           '**Mejor para cargas de Microsoft/OpenAI:** [Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — acceso al Azure OpenAI Service.',
-          '**Mejor alternativa para cómputo empresarial a gran escala:** [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — precios fijos, egress de hyperscaler más barato.',
+          '**Mejor alternativa para cómputo empresarial a gran escala:** [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — precios fijos y 10 TB de transferencia saliente gratis al mes.',
         ],
       },
       masterComparison: {
@@ -2413,7 +2413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Precio H100': '$10/h fijo',
             'Spot / reservado': 'Universal Credits (volumen)',
             'Multi-GPU': 'Nodos bare-metal de 8 GPU',
-            'Transferencia de datos': '10 TB gratis, $0.0085/GB después',
+            'Transferencia de datos': '10 TB gratis al mes',
             'Mejor caso de uso': 'Cómputo empresarial bruto más barato',
           },
         ],
@@ -2609,9 +2609,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'microsoft-azure',
         title: '¿Microsoft Azure es la mejor opción para IA centrada en Microsoft?',
         content:
-          '**Azure tiene el precio bajo demanda por GPU más alto de esta página, y aun así puede tener sentido — aunque su precio de GPU bruto no sea el más bajo — por una razón específica: el [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service).** Las instancias [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) cuestan aproximadamente $11-13/h por GPU bajo demanda — un nodo completo de 8 GPU cuesta aproximadamente $98/h, en línea con AWS y Google Cloud a nivel de nodo pese a la tarifa de lista por GPU más alta. Más allá del acceso a OpenAI, el argumento de Azure se apoya en identidad empresarial (Active Directory), integración con Microsoft 365, relaciones de compra empresarial existentes, e infraestructura híbrida para empresas que ya ejecutan cargas de la pila Microsoft en sitio.',
+          '**Entre los proveedores comparados en esta página, Azure muestra el precio bajo demanda de H100 más alto (aproximadamente $12.29/h por GPU, o $98.32/h por un nodo ND H100 v5 de 8 GPU en East US, según la API Azure Retail Prices el 03/11/2026), y aun así puede tener sentido por una razón específica: el [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service).** Las instancias [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) cuestan aproximadamente $11-13/h por GPU bajo demanda — un nodo completo de 8 GPU cuesta aproximadamente $98/h, en línea con AWS y Google Cloud a nivel de nodo pese a la tarifa de lista por GPU más alta. Más allá del acceso a OpenAI, el argumento de Azure se apoya en identidad empresarial (Active Directory), integración con Microsoft 365, relaciones de compra empresarial existentes, e infraestructura híbrida para empresas que ya ejecutan cargas de la pila Microsoft en sitio.',
         bestFor: 'Empresas cuyo producto depende del Azure OpenAI Service, o clientes empresariales de Microsoft existentes que consolidan sus compras en un solo proveedor.',
-        avoidIf: 'No tiene dependencia del Azure OpenAI Service ni del ecosistema Microsoft — la tarifa por GPU es la más alta de esta página sin ventaja compensatoria para una carga puramente GPU.',
+        avoidIf: 'No tiene dependencia del Azure OpenAI Service ni del ecosistema Microsoft — para una carga puramente GPU esas ventajas del ecosistema no se aplican, y otros proveedores de esta página muestran tarifas GPU bajo demanda más bajas.',
         costNote: 'A nivel de nodo completo de 8 GPU, el precio de Azure de aproximadamente $98/h está cerca de AWS y Google Cloud — la tarifa de lista por GPU más alta importa sobre todo a equipos que alquilan GPU sueltas o parciales, no nodos completos.',
         affiliateLinks: [
           {
@@ -2627,10 +2627,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'oracle-cloud',
         title: '¿Oracle Cloud Infrastructure es la nube de IA subestimada?',
         content:
-          '**Oracle Cloud Infrastructure es una opción seria para empresas muy enfocadas en la economía de infraestructura en grandes cargas de IA — una elección menos predecible que le da a esta comparativa un ángulo genuinamente distinto.** [OCI](https://www.oracle.com/cloud/compute/gpu/) cobra una tarifa fija de $10/h por GPU para H100 bajo demanda en todas las regiones — sin variación de precio por región — y un nodo bare-metal 8x H100 (BM.GPU.H100.8) cuesta $80/h, notablemente por debajo del precio de nodo de aproximadamente $98/h de AWS, Azure y Google Cloud. OCI también incluye 10 TB de transferencia saliente gratis al mes antes de que se apliquen cargos de egress — el egress más barato de cualquier hyperscaler aquí (frente a 100 GB en AWS/Azure/Google Cloud) — y ofrece red de clúster RDMA para entrenamiento multi-nodo. Más allá del cómputo, la fortaleza tradicional de OCI en cargas de bases de datos empresariales (Oracle Database, almacenamiento de datos) le da un atractivo específico para empresas que ya operan sistemas empresariales cercanos a Oracle y quieren infraestructura de IA en la misma plataforma. Su programa Universal Credits ofrece descuentos por volumen negociados para compromisos anuales mayores, aunque las tasas no se publican en una tabla estándar.',
+          '**Oracle Cloud Infrastructure es una opción seria para empresas muy enfocadas en la economía de infraestructura en grandes cargas de IA — una elección menos predecible que le da a esta comparativa un ángulo genuinamente distinto.** [OCI](https://www.oracle.com/cloud/compute/gpu/) cobra una tarifa fija de $10/h por GPU para H100 bajo demanda en todas las regiones — sin variación de precio por región — y un nodo bare-metal 8x H100 (BM.GPU.H100.8) cuesta $80/h, notablemente por debajo del precio de nodo de aproximadamente $98/h de AWS, Azure y Google Cloud. OCI indica como gratuitos los primeros 10 TB de transferencia saliente al mes (oracle.com/cloud/networking/pricing, comprobado el 03/11/2026), frente a 100 GB en Azure (azure.microsoft.com/pricing/details/bandwidth, comprobado el 03/11/2026) — y ofrece red de clúster RDMA para entrenamiento multi-nodo. Más allá del cómputo, la fortaleza tradicional de OCI en cargas de bases de datos empresariales (Oracle Database, almacenamiento de datos) le da un atractivo específico para empresas que ya operan sistemas empresariales cercanos a Oracle y quieren infraestructura de IA en la misma plataforma. Su programa Universal Credits ofrece descuentos por volumen negociados para compromisos anuales mayores, aunque las tasas no se publican en una tabla estándar.',
         bestFor: 'Empresas con grandes clústeres de entrenamiento donde el precio fijo por GPU, el egress bajo y la red RDMA importan más que un amplio catálogo de IA gestionado — y empresas ya en el stack de bases de datos/empresarial de Oracle.',
         avoidIf: 'Necesita la amplitud específica del catálogo de IA gestionado de Oracle, o quiere el catálogo de instancias/regiones más amplio posible — el catálogo de OCI es más limitado que el de AWS o Google Cloud.',
-        costNote: 'La cuota de egress gratis de 10 TB es 100 veces mayor que el nivel gratuito de 100 GB en AWS, Azure y Google Cloud — verifique la cuota actual antes de presupuestar, ya que los niveles gratuitos son una de las condiciones que más se ajustan entre todos los hyperscalers.',
+        costNote: 'La cuota de egress gratis de OCI de 10 TB al mes es 100 veces mayor que el nivel gratuito de 100 GB de Azure (ambos de las páginas de precios de los proveedores, comprobados el 03/11/2026) — verifique la cuota actual antes de presupuestar, ya que los niveles gratuitos están entre las condiciones que más se ajustan en todos los hyperscalers.',
         affiliateLinks: [
           {
             url: 'https://www.oracle.com/cloud/compute/gpu/',
@@ -2787,8 +2787,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Precios de Lambda GPU Cloud](https://lambda.ai/service/gpu-cloud) — H100 PCIe $3.29/h, H100 SXM $4.29/h, A100 40GB $1.99/h, A100 80GB $2.79/h, verificado por búsqueda web el 05-09-2026.',
           '[Reuters/Bloomberg: acuerdo cloud Anthropic-Lambda de $35 mil millones](https://www.bloomberg.com/news/articles/2026-08-31/anthropic-seals-35-billion-cloud-deal-with-nvidia-backed-lambda) — reportado el 31-08-2026, condiciones (número de GPU, duración del contrato) no divulgadas.',
           '[Precios de GPU de Google Cloud](https://cloud.google.com/compute/docs/gpus) — serie A3 (a3-highgpu-8g) aproximadamente $80-90/h bajo demanda ($9-11.50/h por GPU), verificado por búsqueda web el 05-09-2026.',
-          '[VM HPC/GPU de Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 aproximadamente $11-13/h por GPU bajo demanda, nodo completo de 8 GPU aproximadamente $98/h, verificado por búsqueda web el 05-09-2026.',
-          '[Cómputo GPU de Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — $10/h por GPU fijo H100 bajo demanda, nodo BM.GPU.H100.8 $80/h, 10 TB de egress gratis luego $0.0085/GB, verificado por búsqueda web el 05-09-2026.',
+          '[VM HPC/GPU de Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 $98.32/h por el nodo de 8 GPU en East US, aproximadamente $12.29/h por GPU (API Azure Retail Prices, comprobado el 03/11/2026); los precios varían según la región.',
+          '[Cómputo GPU de Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — $10/h por GPU fijo H100 bajo demanda, nodo BM.GPU.H100.8 $80/h, verificado por búsqueda web el 05-09-2026; primeros 10 TB/mes de transferencia saliente gratis según oracle.com/cloud/networking/pricing, comprobado el 03/11/2026 (la tarifa por GB más allá de 10 TB no se volvió a verificar).',
           'Política de cero tarifas de egress en CoreWeave, RunPod y Lambda — verificado por búsqueda web el 05-09-2026 frente a las páginas de precios de los proveedores y fuentes comparativas de terceros.',
         ],
       },
@@ -2856,7 +2856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-05',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -3039,7 +3039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Melhor nuvem empresarial:** [AWS](https://aws.amazon.com/ec2/instance-types/p5/) — catálogo de IA gerenciado e conformidade mais amplos.',
           '**Melhor para cargas Google/TPU:** [Google Cloud](https://cloud.google.com/compute/docs/gpus) — o único provedor desta página com TPUs.',
           '**Melhor para cargas Microsoft/OpenAI:** [Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — acesso ao Azure OpenAI Service.',
-          '**Melhor alternativa para computação empresarial em grande escala:** [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — preços fixos, egress de hyperscaler mais barato.',
+          '**Melhor alternativa para computação empresarial em grande escala:** [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — preços fixos e 10 TB de transferência de saída grátis por mês.',
         ],
       },
       masterComparison: {
@@ -3118,7 +3118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Preço H100': '$10/h fixo',
             'Spot / reservado': 'Universal Credits (volume)',
             'Multi-GPU': 'Nós bare-metal de 8 GPU',
-            'Transferência de dados': '10 TB grátis, $0,0085/GB depois',
+            'Transferência de dados': '10 TB grátis por mês',
             'Melhor caso de uso': 'Computação empresarial bruta mais barata',
           },
         ],
@@ -3314,9 +3314,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'microsoft-azure',
         title: 'Microsoft Azure é a melhor opção para IA centrada em Microsoft?',
         content:
-          '**A Azure tem o preço sob demanda por GPU mais alto desta página, e ainda assim pode fazer sentido — mesmo que seu preço de GPU bruto não seja o mais baixo — por um motivo específico: o [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service).** As instâncias [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) custam cerca de $11-13/h por GPU sob demanda — um nó completo de 8 GPUs custa cerca de $98/h, em linha com AWS e Google Cloud no nível de nó apesar da tarifa de tabela por GPU mais alta. Além do acesso à OpenAI, o argumento da Azure se apoia em identidade empresarial (Active Directory), integração com o Microsoft 365, relacionamentos de compra empresarial existentes, e infraestrutura híbrida para empresas que já rodam cargas da pilha Microsoft on-premises.',
+          '**Entre os provedores comparados nesta página, a Azure exibe o preço sob demanda de H100 mais alto (cerca de $12,29/h por GPU, ou $98,32/h por um nó ND H100 v5 de 8 GPUs em East US, segundo a API Azure Retail Prices em 03/11/2026), e ainda assim pode fazer sentido por um motivo específico: o [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service).** As instâncias [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) custam cerca de $11-13/h por GPU sob demanda — um nó completo de 8 GPUs custa cerca de $98/h, em linha com AWS e Google Cloud no nível de nó apesar da tarifa de tabela por GPU mais alta. Além do acesso à OpenAI, o argumento da Azure se apoia em identidade empresarial (Active Directory), integração com o Microsoft 365, relacionamentos de compra empresarial existentes, e infraestrutura híbrida para empresas que já rodam cargas da pilha Microsoft on-premises.',
         bestFor: 'Empresas cujo produto depende do Azure OpenAI Service, ou clientes empresariais Microsoft existentes consolidando compras em um único fornecedor.',
-        avoidIf: 'Você não tem dependência do Azure OpenAI Service ou do ecossistema Microsoft — a tarifa por GPU é a mais alta desta página sem vantagem compensatória para uma carga puramente GPU.',
+        avoidIf: 'Você não tem dependência do Azure OpenAI Service ou do ecossistema Microsoft — para uma carga puramente GPU esses benefícios do ecossistema não se aplicam, e outros provedores desta página exibem tarifas de GPU sob demanda mais baixas.',
         costNote: 'No nível de nó completo de 8 GPUs, o preço da Azure de cerca de $98/h fica próximo de AWS e Google Cloud — a tarifa de tabela por GPU mais alta importa principalmente para equipes que alugam GPUs isoladas ou parciais, não nós completos.',
         affiliateLinks: [
           {
@@ -3332,10 +3332,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'oracle-cloud',
         title: 'Oracle Cloud Infrastructure é a nuvem de IA subestimada?',
         content:
-          '**A Oracle Cloud Infrastructure é uma opção séria para empresas muito atentas à economia de infraestrutura em grandes cargas de IA — uma escolha menos previsível que dá a este comparativo um ângulo genuinamente diferente.** A [OCI](https://www.oracle.com/cloud/compute/gpu/) cobra uma tarifa fixa de $10/h por GPU para H100 sob demanda em todas as regiões — sem variação de preço por região — e um nó bare-metal 8x H100 (BM.GPU.H100.8) custa $80/h, bem abaixo do preço de nó de cerca de $98/h de AWS, Azure e Google Cloud. A OCI também inclui 10 TB de transferência de saída grátis por mês antes de aplicar taxas de egress — o egress mais barato de qualquer hyperscaler aqui (contra 100 GB na AWS/Azure/Google Cloud) — e oferece rede de cluster RDMA para treinamento multi-nó. Além da computação, a força tradicional da OCI em cargas de banco de dados empresariais (Oracle Database, data warehousing) lhe dá um apelo específico para empresas que já operam sistemas empresariais próximos à Oracle e querem infraestrutura de IA na mesma plataforma. Seu programa Universal Credits oferece descontos de volume negociados para compromissos anuais maiores, embora as taxas não sejam publicadas em uma tabela padrão.',
+          '**A Oracle Cloud Infrastructure é uma opção séria para empresas muito atentas à economia de infraestrutura em grandes cargas de IA — uma escolha menos previsível que dá a este comparativo um ângulo genuinamente diferente.** A [OCI](https://www.oracle.com/cloud/compute/gpu/) cobra uma tarifa fixa de $10/h por GPU para H100 sob demanda em todas as regiões — sem variação de preço por região — e um nó bare-metal 8x H100 (BM.GPU.H100.8) custa $80/h, bem abaixo do preço de nó de cerca de $98/h de AWS, Azure e Google Cloud. A OCI lista os primeiros 10 TB de transferência de saída por mês como grátis (oracle.com/cloud/networking/pricing, verificado em 03/11/2026), contra 100 GB na Azure (azure.microsoft.com/pricing/details/bandwidth, verificado em 03/11/2026) — e oferece rede de cluster RDMA para treinamento multi-nó. Além da computação, a força tradicional da OCI em cargas de banco de dados empresariais (Oracle Database, data warehousing) lhe dá um apelo específico para empresas que já operam sistemas empresariais próximos à Oracle e querem infraestrutura de IA na mesma plataforma. Seu programa Universal Credits oferece descontos de volume negociados para compromissos anuais maiores, embora as taxas não sejam publicadas em uma tabela padrão.',
         bestFor: 'Empresas com grandes clusters de treinamento onde preço fixo por GPU, egress baixo e rede RDMA importam mais do que um amplo catálogo de IA gerenciado — e empresas já na pilha de banco de dados/empresarial da Oracle.',
         avoidIf: 'Você precisa da amplitude específica do catálogo de IA gerenciado da Oracle, ou quer o catálogo de instâncias/regiões mais amplo possível — o catálogo da OCI é mais restrito que o da AWS ou do Google Cloud.',
-        costNote: 'A cota de egress grátis de 10 TB é 100 vezes maior que o nível grátis de 100 GB na AWS, Azure e Google Cloud — verifique a cota atual antes de orçar, já que níveis grátis estão entre as condições mais frequentemente ajustadas de todos os hyperscalers.',
+        costNote: 'A cota de egress grátis de 10 TB por mês da OCI é 100 vezes maior que o nível grátis de 100 GB da Azure (ambos das páginas de preços dos provedores, verificados em 03/11/2026) — verifique a cota atual antes de orçar, pois os níveis grátis estão entre as condições mais ajustadas em todos os hyperscalers.',
         affiliateLinks: [
           {
             url: 'https://www.oracle.com/cloud/compute/gpu/',
@@ -3492,8 +3492,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Preços da Lambda GPU Cloud](https://lambda.ai/service/gpu-cloud) — H100 PCIe $3,29/h, H100 SXM $4,29/h, A100 40GB $1,99/h, A100 80GB $2,79/h, verificado por busca na web em 05/09/2026.',
           '[Reuters/Bloomberg: acordo de nuvem Anthropic-Lambda de $35 bi](https://www.bloomberg.com/news/articles/2026-08-31/anthropic-seals-35-billion-cloud-deal-with-nvidia-backed-lambda) — reportado em 31/08/2026, condições (número de GPUs, duração do contrato) não divulgadas.',
           '[Preços de GPU do Google Cloud](https://cloud.google.com/compute/docs/gpus) — série A3 (a3-highgpu-8g) cerca de $80-90/h sob demanda ($9-11,50/h por GPU), verificado por busca na web em 05/09/2026.',
-          '[VMs HPC/GPU da Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 cerca de $11-13/h por GPU sob demanda, nó completo de 8 GPUs cerca de $98/h, verificado por busca na web em 05/09/2026.',
-          '[Computação GPU da Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — $10/h por GPU fixo H100 sob demanda, nó BM.GPU.H100.8 $80/h, 10 TB de egress grátis depois $0,0085/GB, verificado por busca na web em 05/09/2026.',
+          '[VMs HPC/GPU da Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 $98,32/h pelo nó de 8 GPUs em East US, cerca de $12,29/h por GPU (API Azure Retail Prices, verificado em 03/11/2026); os preços variam conforme a região.',
+          '[Computação GPU da Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — $10/h por GPU fixo H100 sob demanda, nó BM.GPU.H100.8 $80/h, verificado por busca na web em 05/09/2026; primeiros 10 TB/mês de transferência de saída grátis segundo oracle.com/cloud/networking/pricing, verificado em 03/11/2026 (a tarifa por GB acima de 10 TB não foi reverificada).',
           'Política de zero taxas de egress da CoreWeave, RunPod e Lambda — verificado por busca na web em 05/09/2026 frente às páginas de preços dos provedores e fontes comparativas de terceiros.',
         ],
       },
@@ -3561,7 +3561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-05',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -3823,7 +3823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'H100価格': '一律$10/時',
             'スポット／予約': 'Universal Credits（大量利用）',
             'マルチGPU': '8GPUベアメタルノード',
-            'データ転送': '10TB無料、その後$0.0085/GB',
+            'データ転送': '月間10TB無料',
             '最適な利用ケース': '最も安い生のエンタープライズ計算',
           },
         ],
@@ -4019,9 +4019,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'microsoft-azure',
         title: 'Microsoft AzureはMicrosoft中心のAIに最適な選択肢か？',
         content:
-          '**Azureはこのページで最も高いGPUあたりオンデマンド価格を持ちますが、それでも意味を持ちうる具体的な理由が1つあります——生のGPU価格が最も低いわけではないとしても、それは[Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service)です。** [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)インスタンスはオンデマンドで約GPUあたり$11-13/時で、フル8GPUノードは約$98/時と、GPUあたりの表示価格が高いにもかかわらずノードレベルではAWSやGoogle Cloudと同水準です。OpenAIアクセスを超えて、Azureの主張はエンタープライズID（Active Directory）、Microsoft 365統合、既存のエンタープライズ調達関係、そしてすでにオンプレミスでMicrosoftスタックのワークロードを運用している企業向けのハイブリッドインフラに支えられています。',
+          '**このページで比較しているプロバイダーの中で、Azureは最も高いH100オンデマンド価格を掲載しています（Azure Retail Prices APIによる2026年11月3日時点で、East USの8GPU ND H100 v5ノードが1時間あたり$98.32、GPUあたり約$12.29）。それでも具体的な理由が1つあれば意味を持ちえます——[Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service)です。** [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)インスタンスはオンデマンドで約GPUあたり$11-13/時で、フル8GPUノードは約$98/時と、GPUあたりの表示価格が高いにもかかわらずノードレベルではAWSやGoogle Cloudと同水準です。OpenAIアクセスを超えて、Azureの主張はエンタープライズID（Active Directory）、Microsoft 365統合、既存のエンタープライズ調達関係、そしてすでにオンプレミスでMicrosoftスタックのワークロードを運用している企業向けのハイブリッドインフラに支えられています。',
         bestFor: '製品がAzure OpenAI Serviceに依存している企業、または調達を1社に統合しようとしている既存のMicrosoftエンタープライズ顧客。',
-        avoidIf: 'Azure OpenAI ServiceやMicrosoftエコシステムへの依存がない場合——GPUあたりのレートはこのページで最も高く、純粋なGPUワークロードに対する見返りの利点がありません。',
+        avoidIf: 'Azure OpenAI ServiceやMicrosoftエコシステムへの依存がない場合——純粋なGPUワークロードではそのエコシステムの利点は当てはまらず、このページの他のプロバイダーはより低いGPUオンデマンド料金を掲載しています。',
         costNote: 'フル8GPUノードのレベルでは、Azureの約$98/時の価格はAWSやGoogle Cloudに近い水準です——GPUあたりの高い表示価格が重要になるのは、ノード全体ではなく単一または部分的なGPUをレンタルするチームにとってです。',
         affiliateLinks: [
           {
@@ -4037,10 +4037,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'oracle-cloud',
         title: 'Oracle Cloud Infrastructureは過小評価されたAIクラウドか？',
         content:
-          '**Oracle Cloud Infrastructureは、大規模なAIワークロードにおけるインフラ経済性を非常に重視する企業にとって真剣な選択肢であり、この比較に本当に異なる視点を与える、より予測しづらい選択です。** [OCI](https://www.oracle.com/cloud/compute/gpu/)はリージョン間で価格差のない、全リージョン一律のGPUあたり$10/時のオンデマンドH100料金を請求します——8x H100ベアメタルノード（BM.GPU.H100.8）は$80/時で、AWS、Azure、Google Cloudの約$98/時のノード価格を大幅に下回ります。OCIはまた、egress料金が発生する前に月間10TBの無料アウトバウンド転送を含んでいます——他のどのハイパースケーラーよりも安いegress（AWS/Azure/Google Cloudの100GBに対して）——そしてマルチノード学習向けのRDMAクラスタネットワーキングを提供します。計算を超えて、エンタープライズデータベースワークロード（Oracle Database、データウェアハウジング）におけるOCIの伝統的な強みは、すでにOracle系のエンタープライズシステムを運用し、同じプラットフォーム上にAIインフラを求める企業にとって特別な魅力を与えます。OracleのUniversal Creditsプログラムは、より大きな年間コミットメントに対して交渉によるボリューム割引を提供しますが、割引率は標準的な表として公開されていません。',
+          '**Oracle Cloud Infrastructureは、大規模なAIワークロードにおけるインフラ経済性を非常に重視する企業にとって真剣な選択肢であり、この比較に本当に異なる視点を与える、より予測しづらい選択です。** [OCI](https://www.oracle.com/cloud/compute/gpu/)はリージョン間で価格差のない、全リージョン一律のGPUあたり$10/時のオンデマンドH100料金を請求します——8x H100ベアメタルノード（BM.GPU.H100.8）は$80/時で、AWS、Azure、Google Cloudの約$98/時のノード価格を大幅に下回ります。OCIは月間最初の10TBのアウトバウンド転送を無料と記載しています（oracle.com/cloud/networking/pricing、2026年11月3日確認）。一方Azureは100GBです（azure.microsoft.com/pricing/details/bandwidth、2026年11月3日確認）——そしてマルチノード学習向けのRDMAクラスタネットワーキングを提供します。計算を超えて、エンタープライズデータベースワークロード（Oracle Database、データウェアハウジング）におけるOCIの伝統的な強みは、すでにOracle系のエンタープライズシステムを運用し、同じプラットフォーム上にAIインフラを求める企業にとって特別な魅力を与えます。OracleのUniversal Creditsプログラムは、より大きな年間コミットメントに対して交渉によるボリューム割引を提供しますが、割引率は標準的な表として公開されていません。',
         bestFor: '一律のGPUあたり価格、低いegress、RDMAネットワーキングが、幅広いマネージドAIサービスカタログよりも重要な、大規模な学習クラスタを運用する企業、およびすでにOracleのデータベース/エンタープライズスタック上にある企業。',
         avoidIf: 'Oracle特有のマネージドAIカタログの幅が必要な場合、または可能な限り幅広いインスタンス/リージョンのカタログが欲しい場合——OCIのカタログはAWSやGoogle Cloudより狭いです。',
-        costNote: '10TBの無料egress枠は、AWS、Azure、Google Cloudの100GB無料枠の100倍です——無料枠はすべてのハイパースケーラーの中で最も頻繁に調整される条件の1つであるため、予算を組む前に現在の枠を確認してください。',
+        costNote: 'OCIの月間10TBの無料egress枠は、Azureの100GB無料枠の100倍です（いずれも各ベンダーの料金ページ、2026年11月3日確認）——無料枠はすべてのハイパースケーラーの中で最も頻繁に調整される条件の1つであるため、予算を組む前に現在の枠を確認してください。',
         affiliateLinks: [
           {
             url: 'https://www.oracle.com/cloud/compute/gpu/',
@@ -4197,8 +4197,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Lambda GPU Cloud価格](https://lambda.ai/service/gpu-cloud) — H100 PCIe $3.29/時、H100 SXM $4.29/時、A100 40GB $1.99/時、A100 80GB $2.79/時、2026-09-05にウェブ検索で確認。',
           '[Reuters/Bloomberg：Anthropic-Lambdaの$350億クラウド契約](https://www.bloomberg.com/news/articles/2026-08-31/anthropic-seals-35-billion-cloud-deal-with-nvidia-backed-lambda) — 2026-08-31に報道、条件（GPU数、契約期間）は非開示。',
           '[Google Cloud GPU価格](https://cloud.google.com/compute/docs/gpus) — A3シリーズ（a3-highgpu-8g）オンデマンド約$80-90/時（GPUあたり$9-11.50/時）、2026-09-05にウェブ検索で確認。',
-          '[Microsoft Azure HPC/GPU VM](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 オンデマンドGPUあたり約$11-13/時、フル8GPUノード約$98/時、2026-09-05にウェブ検索で確認。',
-          '[Oracle Cloud Infrastructure GPU計算](https://www.oracle.com/cloud/compute/gpu/) — オンデマンドH100 GPUあたり一律$10/時、BM.GPU.H100.8ノード$80/時、10TB無料egressその後$0.0085/GB、2026-09-05にウェブ検索で確認。',
+          '[Microsoft Azure HPC/GPU VM](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 East USの8GPUノードで$98.32/時、GPUあたり約$12.29/時（Azure Retail Prices API、2026-11-03に確認）。価格はリージョンにより異なります。',
+          '[Oracle Cloud Infrastructure GPU計算](https://www.oracle.com/cloud/compute/gpu/) — オンデマンドH100 GPUあたり一律$10/時、BM.GPU.H100.8ノード$80/時、2026-09-05にウェブ検索で確認。月間最初の10TBのアウトバウンド転送は無料（oracle.com/cloud/networking/pricing、2026-11-03に確認。10TB超のGB単価は再確認していません）。',
           'CoreWeave、RunPod、Lambdaのegress料金ゼロ方針 — 2026-09-05にウェブ検索でプロバイダーの価格ページおよび第三者の比較情報源と照合して確認。',
         ],
       },
@@ -4266,7 +4266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-05',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -4528,7 +4528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'H100 价格': '统一$10/小时',
             'Spot / 预留': 'Universal Credits（大批量）',
             '多 GPU': '8 GPU裸金属节点',
-            '数据传输': '10TB免费，之后$0.0085/GB',
+            '数据传输': '每月 10TB 免费',
             '最佳使用场景': '最便宜的原始企业算力',
           },
         ],
@@ -4724,9 +4724,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'microsoft-azure',
         title: 'Microsoft Azure 是以 Microsoft 为中心的 AI 的最佳选择吗？',
         content:
-          '**Azure 拥有本页最高的按需每 GPU 价格，但即便其原始 GPU 价格不是最低的，它仍可能因一个具体理由而值得选择：[Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service)。** [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) 实例按需每 GPU 约 $11-13/小时——完整 8 GPU 节点约为 $98/小时，尽管标价的每 GPU 价格更高，但在节点层面与 AWS 和 Google Cloud 相当。除了 OpenAI 访问之外，Azure 的优势还在于企业身份认证（Active Directory）、Microsoft 365 集成、现有企业采购关系，以及面向已经在本地运行 Microsoft 技术栈负载的企业的混合基础设施。',
+          '**在本页比较的提供商中，Azure 标出的 H100 按需价格最高（根据 Azure Retail Prices API 于 2026-11-03 的数据，East US 的 8 GPU ND H100 v5 节点为 $98.32/小时，约合每 GPU $12.29/小时），但出于一个具体理由它仍可能值得选择：[Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service)。** [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) 实例按需每 GPU 约 $11-13/小时——完整 8 GPU 节点约为 $98/小时，尽管标价的每 GPU 价格更高，但在节点层面与 AWS 和 Google Cloud 相当。除了 OpenAI 访问之外，Azure 的优势还在于企业身份认证（Active Directory）、Microsoft 365 集成、现有企业采购关系，以及面向已经在本地运行 Microsoft 技术栈负载的企业的混合基础设施。',
         bestFor: '产品依赖 Azure OpenAI Service 的公司，或正在将采购整合到单一供应商的现有 Microsoft 企业客户。',
-        avoidIf: '你没有对 Azure OpenAI Service 或 Microsoft 生态的依赖——其每 GPU 价格是本页最高的，而对纯 GPU 负载没有任何补偿性优势。',
+        avoidIf: '你没有对 Azure OpenAI Service 或 Microsoft 生态的依赖——对纯 GPU 负载而言，这些生态优势并不适用，而本页其他提供商标出的按需 GPU 价格更低。',
         costNote: '在完整 8 GPU 节点层面，Azure 约 $98/小时 的价格与 AWS 和 Google Cloud 接近——更高的标价每 GPU 价格，主要影响的是租用单个或部分 GPU 而非整个节点的团队。',
         affiliateLinks: [
           {
@@ -4742,10 +4742,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'oracle-cloud',
         title: 'Oracle Cloud Infrastructure 是被低估的 AI 云吗？',
         content:
-          '**Oracle Cloud Infrastructure 对于非常在意大型 AI 负载基础设施经济性的公司来说是一个严肃的选项——这个不太符合预期的选择为本对比带来了真正不同的视角。** [OCI](https://www.oracle.com/cloud/compute/gpu/) 在所有地区对按需 H100 统一收取每 GPU $10/小时——不存在按地区变化的价格差异——而 8x H100 裸金属节点（BM.GPU.H100.8）为 $80/小时，明显低于 AWS、Azure 和 Google Cloud 约 $98/小时的节点价格。OCI 每月还包含 10 TB 的免费出站流量（超出后才收取 egress 费用）——这是这里所有超大规模云服务商中最便宜的 egress（相比 AWS/Azure/Google Cloud 的 100 GB）——并为多节点训练提供 RDMA 集群网络。除了算力之外，OCI 在企业数据库负载（Oracle Database、数据仓库）方面的传统优势，对已经运行 Oracle 相关企业系统、希望在同一平台上部署 AI 基础设施的公司具有特别吸引力。Oracle 的 Universal Credits 计划为更大规模的年度承诺提供协商性的批量折扣，但折扣比例并未以标准表格公开。',
+          '**Oracle Cloud Infrastructure 对于非常在意大型 AI 负载基础设施经济性的公司来说是一个严肃的选项——这个不太符合预期的选择为本对比带来了真正不同的视角。** [OCI](https://www.oracle.com/cloud/compute/gpu/) 在所有地区对按需 H100 统一收取每 GPU $10/小时——不存在按地区变化的价格差异——而 8x H100 裸金属节点（BM.GPU.H100.8）为 $80/小时，明显低于 AWS、Azure 和 Google Cloud 约 $98/小时的节点价格。OCI 将每月前 10 TB 的出站流量列为免费（oracle.com/cloud/networking/pricing，于 2026-11-03 核实），而 Azure 为 100 GB（azure.microsoft.com/pricing/details/bandwidth，于 2026-11-03 核实）——并为多节点训练提供 RDMA 集群网络。除了算力之外，OCI 在企业数据库负载（Oracle Database、数据仓库）方面的传统优势，对已经运行 Oracle 相关企业系统、希望在同一平台上部署 AI 基础设施的公司具有特别吸引力。Oracle 的 Universal Credits 计划为更大规模的年度承诺提供协商性的批量折扣，但折扣比例并未以标准表格公开。',
         bestFor: '运行大型训练集群、统一每 GPU 价格、低 egress 费用和 RDMA 网络比广泛的托管 AI 服务目录更重要的公司，以及已经在 Oracle 数据库/企业技术栈上的公司。',
         avoidIf: '你需要 Oracle 特有的托管 AI 目录广度，或者想要尽可能广泛的实例/地区目录——OCI 的目录比 AWS 或 Google Cloud 更窄。',
-        costNote: '10 TB 的免费 egress 额度是 AWS、Azure 和 Google Cloud 100 GB 免费额度的 100 倍——免费额度是所有超大规模云服务商中调整最频繁的条款之一，做预算前请核实当前额度。',
+        costNote: 'OCI 每月 10 TB 的免费 egress 额度是 Azure 100 GB 免费额度的 100 倍（均来自各厂商定价页面，于 2026-11-03 核实）——免费额度是所有超大规模云服务商中调整最频繁的条款之一，做预算前请核实当前额度。',
         affiliateLinks: [
           {
             url: 'https://www.oracle.com/cloud/compute/gpu/',
@@ -4902,8 +4902,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Lambda GPU Cloud 价格](https://lambda.ai/service/gpu-cloud) — H100 PCIe $3.29/小时，H100 SXM $4.29/小时，A100 40GB $1.99/小时，A100 80GB $2.79/小时，于 2026-09-05 通过网络搜索核实。',
           '[路透社/彭博社：Anthropic-Lambda 350 亿美元云协议](https://www.bloomberg.com/news/articles/2026-08-31/anthropic-seals-35-billion-cloud-deal-with-nvidia-backed-lambda) — 报道于 2026-08-31，条款（GPU 数量、合同期限）未披露。',
           '[Google Cloud GPU 价格](https://cloud.google.com/compute/docs/gpus) — A3 系列（a3-highgpu-8g）按需约 $80-90/小时（每 GPU $9-11.50/小时），于 2026-09-05 通过网络搜索核实。',
-          '[Microsoft Azure HPC/GPU 虚拟机](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 按需每 GPU 约 $11-13/小时，完整 8 GPU 节点约 $98/小时，于 2026-09-05 通过网络搜索核实。',
-          '[Oracle Cloud Infrastructure GPU 计算](https://www.oracle.com/cloud/compute/gpu/) — 按需 H100 每 GPU 统一 $10/小时，BM.GPU.H100.8 节点 $80/小时，10 TB 免费 egress 之后 $0.0085/GB，于 2026-09-05 通过网络搜索核实。',
+          '[Microsoft Azure HPC/GPU 虚拟机](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 East US 的 8 GPU 节点 $98.32/小时，约每 GPU $12.29/小时（Azure Retail Prices API，于 2026-11-03 核实）；价格因区域而异。',
+          '[Oracle Cloud Infrastructure GPU 计算](https://www.oracle.com/cloud/compute/gpu/) — 按需 H100 每 GPU 统一 $10/小时，BM.GPU.H100.8 节点 $80/小时，于 2026-09-05 通过网络搜索核实；每月前 10 TB 出站流量免费（oracle.com/cloud/networking/pricing，于 2026-11-03 核实；超出 10 TB 后的每 GB 价格未重新核实）。',
           'CoreWeave、RunPod 和 Lambda 的零 egress 费用政策 — 于 2026-09-05 通过网络搜索对照服务商定价页面和第三方比较来源核实。',
         ],
       },
@@ -4971,7 +4971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-05',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -5154,7 +5154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**أفضل سحابة مؤسسية:** [AWS](https://aws.amazon.com/ec2/instance-types/p5/) — أوسع كتالوج ذكاء اصطناعي مُدار وأعمق امتثال.',
           '**الأفضل لأحمال Google/TPU:** [Google Cloud](https://cloud.google.com/compute/docs/gpus) — المزود الوحيد في هذه الصفحة الذي يوفر TPU.',
           '**الأفضل لأحمال Microsoft/OpenAI:** [Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — الوصول إلى Azure OpenAI Service.',
-          '**أفضل بديل لحوسبة المؤسسات الكبيرة:** [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — أسعار ثابتة، أرخص egress بين منصات hyperscaler.',
+          '**أفضل بديل لحوسبة المؤسسات الكبيرة:** [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — أسعار ثابتة و10 تيرابايت من النقل الصادر المجاني شهرياً.',
         ],
       },
       masterComparison: {
@@ -5233,7 +5233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'سعر H100': '$10/ساعة ثابت',
             'سبوت / محجوز': 'Universal Credits (بالحجم)',
             'متعدد GPU': 'عُقد bare-metal بـ8 وحدات',
-            'نقل البيانات': '10 تيرابايت مجاني، ثم $0.0085/جيجابايت',
+            'نقل البيانات': '10 تيرابايت مجاناً شهرياً',
             'أفضل حالة استخدام': 'أرخص حوسبة مؤسسية خام',
           },
         ],
@@ -5429,9 +5429,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'microsoft-azure',
         title: 'هل Microsoft Azure هي الخيار الأفضل للذكاء الاصطناعي المتمحور حول Microsoft؟',
         content:
-          '**تمتلك Azure أعلى سعر عند الطلب لكل GPU في هذه الصفحة، ومع ذلك يمكن أن يكون منطقياً — رغم أن سعر GPU الخام ليس الأقل — لسبب محدد: [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service).** تُسعّر مثيلات [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) حوالي $11-13/ساعة لكل GPU عند الطلب — وتكلف عقدة كاملة بـ8 وحدات GPU حوالي $98/ساعة، بما يتماشى مع AWS وGoogle Cloud على مستوى العقدة رغم ارتفاع السعر المعلن لكل GPU. وبخلاف الوصول إلى OpenAI، تستند حجة Azure إلى الهوية المؤسسية (Active Directory)، وتكامل Microsoft 365، وعلاقات الشراء المؤسسية القائمة، والبنية التحتية الهجينة للشركات التي تشغّل بالفعل أحمال حزمة Microsoft محلياً.',
+          '**من بين مقدّمي الخدمة المقارَنين في هذه الصفحة، تُدرج Azure أعلى سعر لـH100 عند الطلب (حوالي $12.29/ساعة لكل GPU، أو $98.32/ساعة لعقدة ND H100 v5 بـ8 وحدات GPU في East US، وفق Azure Retail Prices API بتاريخ 2026-11-03)، ومع ذلك قد تكون منطقية لسبب محدد: [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service).** تُسعّر مثيلات [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) حوالي $11-13/ساعة لكل GPU عند الطلب — وتكلف عقدة كاملة بـ8 وحدات GPU حوالي $98/ساعة، بما يتماشى مع AWS وGoogle Cloud على مستوى العقدة رغم ارتفاع السعر المعلن لكل GPU. وبخلاف الوصول إلى OpenAI، تستند حجة Azure إلى الهوية المؤسسية (Active Directory)، وتكامل Microsoft 365، وعلاقات الشراء المؤسسية القائمة، والبنية التحتية الهجينة للشركات التي تشغّل بالفعل أحمال حزمة Microsoft محلياً.',
         bestFor: 'الشركات التي يعتمد منتجها على Azure OpenAI Service، أو عملاء Microsoft المؤسسيون الحاليون الذين يوحّدون مشترياتهم على مزود واحد.',
-        avoidIf: 'ليس لديكم اعتماد على Azure OpenAI Service أو منظومة Microsoft — سعر GPU هو الأعلى في هذه الصفحة دون ميزة تعويضية لحمل عمل يعتمد على GPU فقط.',
+        avoidIf: 'ليس لديكم اعتماد على Azure OpenAI Service أو منظومة Microsoft — فبالنسبة لحمل عمل يعتمد على GPU فقط لا تنطبق مزايا المنظومة هذه، وتُدرج جهات أخرى في هذه الصفحة أسعار GPU أقل عند الطلب.',
         costNote: 'على مستوى العقدة الكاملة بـ8 وحدات GPU، يقترب سعر Azure البالغ حوالي $98/ساعة من AWS وGoogle Cloud — يهم السعر المعلن الأعلى لكل GPU بشكل أساسي الفرق التي تؤجر وحدات GPU منفردة أو جزئية، لا عُقداً كاملة.',
         affiliateLinks: [
           {
@@ -5447,10 +5447,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'oracle-cloud',
         title: 'هل Oracle Cloud Infrastructure هي سحابة الذكاء الاصطناعي غير المقدّرة بما يكفي؟',
         content:
-          '**تُعد Oracle Cloud Infrastructure خياراً جاداً للشركات المهتمة كثيراً باقتصاد البنية التحتية في أحمال الذكاء الاصطناعي الكبيرة — خيار أقل قابلية للتنبؤ يمنح هذه المقارنة زاوية مختلفة فعلاً.** تفرض [OCI](https://www.oracle.com/cloud/compute/gpu/) سعراً ثابتاً قدره $10/ساعة لكل GPU لـH100 عند الطلب في جميع المناطق — دون أي تفاوت سعري حسب المنطقة — وتكلف عقدة bare-metal بـ8x H100 (BM.GPU.H100.8) مبلغ $80/ساعة، أقل بكثير من سعر العقدة البالغ حوالي $98/ساعة لدى AWS وAzure وGoogle Cloud. كما تشمل OCI 10 تيرابايت من النقل الصادر المجاني شهرياً قبل تطبيق رسوم egress — أرخص egress بين أي منصة hyperscaler هنا (مقابل 100 جيجابايت لدى AWS/Azure/Google Cloud) — وتوفر شبكة عناقيد RDMA للتدريب متعدد العقد. وبخلاف الحوسبة، تمنح قوة OCI التقليدية في أحمال قواعد البيانات المؤسسية (Oracle Database، مستودعات البيانات) جاذبية خاصة للشركات التي تشغّل بالفعل أنظمة مؤسسية قريبة من Oracle وتريد بنية تحتية للذكاء الاصطناعي على نفس المنصة. يوفر برنامج Universal Credits من Oracle خصومات حجم متفاوض عليها للالتزامات السنوية الأكبر، رغم أن معدلات الخصم غير منشورة في جدول موحد.',
+          '**تُعد Oracle Cloud Infrastructure خياراً جاداً للشركات المهتمة كثيراً باقتصاد البنية التحتية في أحمال الذكاء الاصطناعي الكبيرة — خيار أقل قابلية للتنبؤ يمنح هذه المقارنة زاوية مختلفة فعلاً.** تفرض [OCI](https://www.oracle.com/cloud/compute/gpu/) سعراً ثابتاً قدره $10/ساعة لكل GPU لـH100 عند الطلب في جميع المناطق — دون أي تفاوت سعري حسب المنطقة — وتكلف عقدة bare-metal بـ8x H100 (BM.GPU.H100.8) مبلغ $80/ساعة، أقل بكثير من سعر العقدة البالغ حوالي $98/ساعة لدى AWS وAzure وGoogle Cloud. تُدرج OCI أول 10 تيرابايت من النقل الصادر شهرياً كمجانية (oracle.com/cloud/networking/pricing، تم التحقق بتاريخ 2026-11-03)، مقابل 100 جيجابايت لدى Azure (azure.microsoft.com/pricing/details/bandwidth، تم التحقق بتاريخ 2026-11-03) — وتوفر شبكة عناقيد RDMA للتدريب متعدد العقد. وبخلاف الحوسبة، تمنح قوة OCI التقليدية في أحمال قواعد البيانات المؤسسية (Oracle Database، مستودعات البيانات) جاذبية خاصة للشركات التي تشغّل بالفعل أنظمة مؤسسية قريبة من Oracle وتريد بنية تحتية للذكاء الاصطناعي على نفس المنصة. يوفر برنامج Universal Credits من Oracle خصومات حجم متفاوض عليها للالتزامات السنوية الأكبر، رغم أن معدلات الخصم غير منشورة في جدول موحد.',
         bestFor: 'الشركات التي تدير مجموعات تدريب كبيرة حيث يهم السعر الثابت لكل GPU وانخفاض egress وشبكة RDMA أكثر من كتالوج خدمات ذكاء اصطناعي مُدار واسع — والشركات القائمة بالفعل على حزمة قواعد بيانات/مؤسسة Oracle.',
         avoidIf: 'تحتاجون إلى اتساع كتالوج Oracle المُدار الخاص بالذكاء الاصطناعي، أو تريدون أوسع كتالوج ممكن للمثيلات/المناطق — كتالوج OCI أضيق من كتالوج AWS أو Google Cloud.',
-        costNote: 'حصة egress المجانية البالغة 10 تيرابايت تعادل 100 ضعف الحد المجاني البالغ 100 جيجابايت لدى AWS وAzure وGoogle Cloud — تحققوا من الحصة الحالية قبل وضع الميزانية، إذ تُعد الحدود المجانية من أكثر الشروط تعديلاً بين جميع منصات hyperscaler.',
+        costNote: 'حصة egress المجانية في OCI البالغة 10 تيرابايت شهرياً تعادل 100 ضعف الحد المجاني البالغ 100 جيجابايت لدى Azure (كلاهما من صفحات أسعار المزوّدين، تم التحقق بتاريخ 2026-11-03) — تحققوا من الحصة الحالية قبل وضع الميزانية، إذ تُعد الحدود المجانية من أكثر الشروط تعديلاً بين جميع منصات hyperscaler.',
         affiliateLinks: [
           {
             url: 'https://www.oracle.com/cloud/compute/gpu/',
@@ -5607,8 +5607,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[أسعار Lambda GPU Cloud](https://lambda.ai/service/gpu-cloud) — H100 PCIe بسعر $3.29/ساعة، H100 SXM بسعر $4.29/ساعة، A100 40 جيجابايت بسعر $1.99/ساعة، A100 80 جيجابايت بسعر $2.79/ساعة، تم التحقق عبر بحث الويب بتاريخ 2026-09-05.',
           '[رويترز/بلومبرغ: صفقة Anthropic-Lambda السحابية بقيمة $35 مليار](https://www.bloomberg.com/news/articles/2026-08-31/anthropic-seals-35-billion-cloud-deal-with-nvidia-backed-lambda) — مُبلَّغ عنها بتاريخ 2026-08-31، الشروط (عدد وحدات GPU، مدة العقد) غير معلنة.',
           '[أسعار GPU من Google Cloud](https://cloud.google.com/compute/docs/gpus) — سلسلة A3 (a3-highgpu-8g) حوالي $80-90/ساعة عند الطلب ($9-11.50/ساعة لكل GPU)، تم التحقق عبر بحث الويب بتاريخ 2026-09-05.',
-          '[أجهزة HPC/GPU الافتراضية من Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 حوالي $11-13/ساعة لكل GPU عند الطلب، عقدة كاملة بـ8 وحدات GPU حوالي $98/ساعة، تم التحقق عبر بحث الويب بتاريخ 2026-09-05.',
-          '[حوسبة GPU من Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — سعر ثابت $10/ساعة لكل GPU لـH100 عند الطلب، عقدة BM.GPU.H100.8 بسعر $80/ساعة، 10 تيرابايت egress مجاني ثم $0.0085/GB، تم التحقق عبر بحث الويب بتاريخ 2026-09-05.',
+          '[أجهزة HPC/GPU الافتراضية من Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 بسعر $98.32/ساعة للعقدة ذات 8 وحدات GPU في East US، أي حوالي $12.29/ساعة لكل GPU (Azure Retail Prices API، تم التحقق بتاريخ 2026-11-03)؛ وتختلف الأسعار حسب المنطقة.',
+          '[حوسبة GPU من Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — سعر ثابت $10/ساعة لكل GPU لـH100 عند الطلب، عقدة BM.GPU.H100.8 بسعر $80/ساعة، تم التحقق عبر بحث الويب بتاريخ 2026-09-05؛ أول 10 تيرابايت من النقل الصادر شهرياً مجانية وفق oracle.com/cloud/networking/pricing، تم التحقق بتاريخ 2026-11-03 (لم يُعاد التحقق من سعر الجيجابايت بعد 10 تيرابايت).',
           'سياسة رسوم egress الصفرية لدى CoreWeave وRunPod وLambda — تم التحقق عبر بحث الويب بتاريخ 2026-09-05 مقابل صفحات تسعير المزودين ومصادر مقارنة من طرف ثالث.',
         ],
       },
@@ -5676,7 +5676,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-05',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -5859,7 +5859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**최고의 엔터프라이즈 클라우드:** [AWS](https://aws.amazon.com/ec2/instance-types/p5/) — 가장 폭넓은 관리형 AI 카탈로그와 규정 준수 역량.',
           '**Google/TPU 워크로드에 최적:** [Google Cloud](https://cloud.google.com/compute/docs/gpus) — 이 페이지에서 TPU를 제공하는 유일한 제공업체.',
           '**Microsoft/OpenAI 워크로드에 최적:** [Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — Azure OpenAI Service 접근.',
-          '**대규모 엔터프라이즈 컴퓨팅의 최고 대안:** [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — 고정 가격, 하이퍼스케일러 중 가장 저렴한 egress.',
+          '**대규모 엔터프라이즈 컴퓨팅의 최고 대안:** [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — 고정 가격과 월 10TB 무료 아웃바운드 전송.',
         ],
       },
       masterComparison: {
@@ -5938,7 +5938,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'H100 가격': '시간당 $10 고정',
             'Spot / 예약': 'Universal Credits(대량)',
             '멀티 GPU': '8-GPU 베어메탈 노드',
-            '데이터 전송': '10TB 무료, 이후 GB당 $0.0085',
+            '데이터 전송': '월 10TB 무료',
             '최적의 사용 사례': '가장 저렴한 원시 엔터프라이즈 컴퓨팅',
           },
         ],
@@ -6134,9 +6134,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'microsoft-azure',
         title: 'Microsoft Azure는 Microsoft 중심 AI에 최고의 선택인가요?',
         content:
-          '**Azure는 이 페이지에서 가장 높은 GPU당 온디맨드 가격을 가지고 있지만, 원시 GPU 가격이 가장 낮지 않더라도 여전히 타당할 수 있는 구체적인 이유가 하나 있습니다: [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service)입니다.** [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) 인스턴스는 온디맨드로 GPU당 약 시간당 $11-13이며, 완전한 8-GPU 노드는 약 시간당 $98로, GPU당 표시 가격이 더 높음에도 불구하고 노드 수준에서는 AWS 및 Google Cloud와 비슷합니다. OpenAI 접근을 넘어, Azure의 논리는 엔터프라이즈 아이덴티티(Active Directory), Microsoft 365 통합, 기존 엔터프라이즈 조달 관계, 그리고 이미 온프레미스로 Microsoft 스택 워크로드를 실행 중인 기업을 위한 하이브리드 인프라에 의존합니다.',
+          '**이 페이지에서 비교한 제공업체 중 Azure가 가장 높은 H100 온디맨드 가격을 표시합니다(2026-11-03 Azure Retail Prices API 기준 East US의 8-GPU ND H100 v5 노드 시간당 $98.32, GPU당 약 $12.29). 그럼에도 구체적인 이유 하나로 여전히 타당할 수 있습니다: [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service)입니다.** [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) 인스턴스는 온디맨드로 GPU당 약 시간당 $11-13이며, 완전한 8-GPU 노드는 약 시간당 $98로, GPU당 표시 가격이 더 높음에도 불구하고 노드 수준에서는 AWS 및 Google Cloud와 비슷합니다. OpenAI 접근을 넘어, Azure의 논리는 엔터프라이즈 아이덴티티(Active Directory), Microsoft 365 통합, 기존 엔터프라이즈 조달 관계, 그리고 이미 온프레미스로 Microsoft 스택 워크로드를 실행 중인 기업을 위한 하이브리드 인프라에 의존합니다.',
         bestFor: '제품이 Azure OpenAI Service에 의존하는 기업, 또는 조달을 하나의 공급업체로 통합하려는 기존 Microsoft 엔터프라이즈 고객.',
-        avoidIf: 'Azure OpenAI Service나 Microsoft 생태계에 대한 의존성이 없는 경우 — GPU당 요금이 이 페이지에서 가장 높으면서도 순수 GPU 워크로드에 대한 보상적 이점이 없습니다.',
+        avoidIf: 'Azure OpenAI Service나 Microsoft 생태계에 대한 의존성이 없는 경우 — 순수 GPU 워크로드에는 그 생태계의 이점이 적용되지 않으며, 이 페이지의 다른 제공업체들은 더 낮은 온디맨드 GPU 요금을 표시합니다.',
         costNote: '완전한 8-GPU 노드 수준에서는 Azure의 약 시간당 $98 가격이 AWS 및 Google Cloud와 근접합니다 — GPU당 더 높은 표시 가격은 노드 전체가 아니라 단일 또는 부분 GPU를 대여하는 팀에게 주로 중요합니다.',
         affiliateLinks: [
           {
@@ -6152,10 +6152,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'oracle-cloud',
         title: 'Oracle Cloud Infrastructure는 저평가된 AI 클라우드인가요?',
         content:
-          '**Oracle Cloud Infrastructure는 대규모 AI 워크로드에서 인프라 경제성을 매우 중시하는 기업에게 진지한 선택지입니다 — 이 비교에 진정으로 다른 관점을 제공하는, 다소 예측하기 어려운 선택입니다.** [OCI](https://www.oracle.com/cloud/compute/gpu/)는 모든 지역에서 온디맨드 H100에 대해 GPU당 시간당 $10 고정 요금을 청구합니다 — 지역별 가격 차이가 없습니다 — 그리고 8x H100 베어메탈 노드(BM.GPU.H100.8)는 시간당 $80로, AWS, Azure, Google Cloud의 약 시간당 $98 노드 가격보다 상당히 낮습니다. OCI는 또한 egress 요금이 적용되기 전 월 10TB의 무료 아웃바운드 전송을 포함하며, 이는 여기 있는 어떤 하이퍼스케일러보다도 저렴한 egress입니다(AWS/Azure/Google Cloud의 100GB와 비교). 그리고 다중 노드 학습을 위한 RDMA 클러스터 네트워킹을 제공합니다. 컴퓨팅을 넘어, 엔터프라이즈 데이터베이스 워크로드(Oracle Database, 데이터 웨어하우징)에서 OCI의 전통적인 강점은 이미 Oracle 인접 엔터프라이즈 시스템을 운영 중이며 동일한 플랫폼에서 AI 인프라를 원하는 기업에게 특별한 매력을 제공합니다. Oracle의 Universal Credits 프로그램은 더 큰 연간 약정에 대해 협상된 대량 할인을 제공하지만, 할인율은 표준 표로 공개되어 있지 않습니다.',
+          '**Oracle Cloud Infrastructure는 대규모 AI 워크로드에서 인프라 경제성을 매우 중시하는 기업에게 진지한 선택지입니다 — 이 비교에 진정으로 다른 관점을 제공하는, 다소 예측하기 어려운 선택입니다.** [OCI](https://www.oracle.com/cloud/compute/gpu/)는 모든 지역에서 온디맨드 H100에 대해 GPU당 시간당 $10 고정 요금을 청구합니다 — 지역별 가격 차이가 없습니다 — 그리고 8x H100 베어메탈 노드(BM.GPU.H100.8)는 시간당 $80로, AWS, Azure, Google Cloud의 약 시간당 $98 노드 가격보다 상당히 낮습니다. OCI는 월 처음 10TB의 아웃바운드 전송을 무료로 표기하며(oracle.com/cloud/networking/pricing, 2026-11-03 확인), Azure는 100GB입니다(azure.microsoft.com/pricing/details/bandwidth, 2026-11-03 확인). 그리고 다중 노드 학습을 위한 RDMA 클러스터 네트워킹을 제공합니다. 컴퓨팅을 넘어, 엔터프라이즈 데이터베이스 워크로드(Oracle Database, 데이터 웨어하우징)에서 OCI의 전통적인 강점은 이미 Oracle 인접 엔터프라이즈 시스템을 운영 중이며 동일한 플랫폼에서 AI 인프라를 원하는 기업에게 특별한 매력을 제공합니다. Oracle의 Universal Credits 프로그램은 더 큰 연간 약정에 대해 협상된 대량 할인을 제공하지만, 할인율은 표준 표로 공개되어 있지 않습니다.',
         bestFor: '고정된 GPU당 가격, 낮은 egress, RDMA 네트워킹이 폭넓은 관리형 AI 서비스 카탈로그보다 더 중요한 대규모 학습 클러스터를 운영하는 기업, 그리고 이미 Oracle의 데이터베이스/엔터프라이즈 스택에 있는 기업.',
         avoidIf: 'Oracle 고유의 관리형 AI 카탈로그의 폭이 필요하거나, 가능한 한 넓은 인스턴스/지역 카탈로그를 원하는 경우 — OCI의 카탈로그는 AWS나 Google Cloud보다 좁습니다.',
-        costNote: '10TB 무료 egress 한도는 AWS, Azure, Google Cloud의 100GB 무료 등급보다 100배 큽니다 — 무료 등급은 모든 하이퍼스케일러 중 가장 자주 조정되는 조건 중 하나이므로 예산을 세우기 전에 현재 한도를 확인하십시오.',
+        costNote: 'OCI의 월 10TB 무료 egress 한도는 Azure의 100GB 무료 등급보다 100배 큽니다(둘 다 각 벤더의 가격 페이지 기준, 2026-11-03 확인) — 무료 등급은 모든 하이퍼스케일러 중 가장 자주 조정되는 조건 중 하나이므로 예산을 세우기 전에 현재 한도를 확인하십시오.',
         affiliateLinks: [
           {
             url: 'https://www.oracle.com/cloud/compute/gpu/',
@@ -6312,8 +6312,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Lambda GPU Cloud 가격](https://lambda.ai/service/gpu-cloud) — H100 PCIe 시간당 $3.29, H100 SXM 시간당 $4.29, A100 40GB 시간당 $1.99, A100 80GB 시간당 $2.79, 2026-09-05 웹 검색으로 확인.',
           '[Reuters/Bloomberg: Anthropic-Lambda 350억 달러 클라우드 계약](https://www.bloomberg.com/news/articles/2026-08-31/anthropic-seals-35-billion-cloud-deal-with-nvidia-backed-lambda) — 2026-08-31 보도, 조건(GPU 수량, 계약 기간) 비공개.',
           '[Google Cloud GPU 가격](https://cloud.google.com/compute/docs/gpus) — A3 시리즈(a3-highgpu-8g) 온디맨드 약 시간당 $80-90(GPU당 $9-11.50), 2026-09-05 웹 검색으로 확인.',
-          '[Microsoft Azure HPC/GPU VM](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 온디맨드 GPU당 약 시간당 $11-13, 완전한 8-GPU 노드 약 시간당 $98, 2026-09-05 웹 검색으로 확인.',
-          '[Oracle Cloud Infrastructure GPU 컴퓨팅](https://www.oracle.com/cloud/compute/gpu/) — 온디맨드 H100 GPU당 시간당 $10 고정, BM.GPU.H100.8 노드 시간당 $80, 10TB 무료 egress 이후 $0.0085/GB, 2026-09-05 웹 검색으로 확인.',
+          '[Microsoft Azure HPC/GPU VM](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 East US의 8-GPU 노드 시간당 $98.32, GPU당 약 시간당 $12.29(Azure Retail Prices API, 2026-11-03 확인). 가격은 리전에 따라 다릅니다.',
+          '[Oracle Cloud Infrastructure GPU 컴퓨팅](https://www.oracle.com/cloud/compute/gpu/) — 온디맨드 H100 GPU당 시간당 $10 고정, BM.GPU.H100.8 노드 시간당 $80, 2026-09-05 웹 검색으로 확인. 월 처음 10TB 아웃바운드 전송은 무료(oracle.com/cloud/networking/pricing, 2026-11-03 확인. 10TB 초과분의 GB당 요금은 재확인하지 않음).',
           'CoreWeave, RunPod, Lambda의 제로 egress 요금 정책 — 2026-09-05 웹 검색으로 제공업체 가격 페이지 및 제3자 비교 출처 대조 확인.',
         ],
       },
