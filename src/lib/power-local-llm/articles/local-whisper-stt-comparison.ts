@@ -834,7 +834,7 @@ model = WhisperModel("small", device="cuda", compute_type="float32")`,
       'NVIDIA RTX 3070 Ti',
     ],
     leadAnswerBlock:
-      '**Nutzen Sie whisper.cpp auf Apple Silicon und Embedded-Geräten, faster-whisper auf NVIDIA-GPUs und in Python-Pipelines – beide führen dieselben OpenAI-Whisper-Gewichte aus, die Genauigkeit ist daher im Wesentlichen gleich, und vor allem Geschwindigkeit und Integration unterscheiden sich.**',
+      '**Nutzen Sie whisper.cpp auf Apple Silicon und Embedded-Geräten, faster-whisper auf NVIDIA-GPUs und in Python-Pipelines – beide führen dieselben OpenAI-Whisper-Gewichte aus, die Genauigkeit ist daher im Wesentlichen gleich.**',
     quickAnswerTop: {
       de: {
         question: 'Welches Tool sollte ich für lokale Spracherkennung 2026 verwenden – whisper.cpp oder faster-whisper?',
@@ -1617,7 +1617,7 @@ model = WhisperModel("small", device="cuda", compute_type="float32")`,
       'NVIDIA RTX 3070 Ti',
     ],
     leadAnswerBlock:
-      '**Utilisez whisper.cpp sur Apple Silicon et les appareils embarqués, faster-whisper sur GPU NVIDIA et dans les pipelines Python — les deux exécutent les mêmes poids OpenAI Whisper, donc la précision est pratiquement la même et ce sont surtout la vitesse et l\'intégration qui diffèrent.**',
+      '**Utilisez whisper.cpp sur Apple Silicon et les appareils embarqués, faster-whisper sur GPU NVIDIA et dans les pipelines Python — les deux exécutent les mêmes poids OpenAI Whisper, donc la précision est pratiquement la même.**',
     quickAnswerTop: {
       fr: {
         question: 'Whisper.cpp ou faster-whisper pour la reconnaissance vocale locale en 2026 ?',
@@ -4728,7 +4728,7 @@ model = WhisperModel("small", device="cuda", compute_type="float32")`,
       'NVIDIA RTX 3070 Ti',
     ],
     leadAnswerBlock:
-      '**Use whisper.cpp no Apple Silicon e em dispositivos embarcados, e faster-whisper em GPUs NVIDIA e pipelines Python: os dois executam os mesmos pesos do OpenAI Whisper, então a precisão é praticamente a mesma e mudam principalmente a velocidade e a integração.**',
+      '**Use whisper.cpp no Apple Silicon e em dispositivos embarcados, e faster-whisper em GPUs NVIDIA e pipelines Python: os dois executam os mesmos pesos do OpenAI Whisper, então a precisão é praticamente a mesma.**',
     quickAnswerTop: {
       pt: {
         question: 'Devo usar whisper.cpp ou faster-whisper para reconhecimento de voz local em 2026?',

@@ -449,7 +449,7 @@ schema: {
       heroImage: '/images/best-budget-gpus-local-llm-model-speeds-hero-es.webp',
       publishDate: '2026-04-05',
       dateModified: '2026-09-01',
-      leadAnswerBlock: '**La RTX 3060 12GB (unos $290–330 usada) es la mejor GPU económica para LLMs locales en 2026: ejecuta Qwen3 14B a 9–12 tok/seg en Q4. La RTX 5060 Ti 16GB (unos $800, un 85 % sobre el PVP) es la opción nueva.**',
+      leadAnswerBlock: '**La RTX 3060 12GB (unos $290–330 usada) es la mejor GPU económica para LLMs locales en 2026. La RTX 5060 Ti 16GB (unos $800, 85 % sobre el PVP) es la opción nueva.**',
       nextStep: {
         text: '¿Ya tienes tu GPU? Ahora elige el software adecuado para ejecutar modelos en ella.',
         label: 'Mejores frontends de LLM local 2026 →',
@@ -1905,7 +1905,7 @@ rows: [
       heroImage: '/images/best-budget-gpus-local-llm-model-speeds-hero-fr.webp',
       publishDate: '2026-04-05',
       dateModified: '2026-09-01',
-      leadAnswerBlock: '**La RTX 3060 12GB (290–330 $ d\'occasion) est le meilleur GPU économique pour LLM locaux. La RTX 5060 Ti 16GB (env. 800 $, 85 % au-dessus du tarif conseillé) est le choix neuf.**',
+      leadAnswerBlock: '**La RTX 3060 12GB (290–330 $ d\'occasion) est le meilleur GPU économique pour LLM locaux. La RTX 5060 Ti 16GB (env. 800 $, 85 % au-dessus du prix conseillé) est le choix neuf.**',
       nextStep: { text: 'Votre GPU est prêt ? Choisissez maintenant le bon logiciel pour exécuter vos modèles.', label: 'Meilleures interfaces pour LLM locaux 2026 →', href: '/fr/local-llms/best-local-llm-frontends' },
       audience: 'Débutants exécutant leur premier LLM local sur du matériel grand public',
       readTime: '7 min de lecture',
