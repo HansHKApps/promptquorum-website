@@ -29,6 +29,8 @@ export interface AskHansReport {
   days: { date: string; answers: number }[]
   /** visitors who agreed to the anonymous statistics: how many questions they asked, per window (only days from `since`, so never above the answers of the same window) */
   sampled: WindowCounts
+  /** all-visitor answers over exactly the days `sampled` covers, so sampled / sampledOf is a true consent share */
+  sampledOf: WindowCounts
   /** breakdowns, busiest (last 30 days) first; sample = consenting visitors only */
   categories: ReportRow[]
   apps: ReportRow[]
@@ -52,6 +54,7 @@ function emptyReport(dates: string[]): AskHansReport {
     windows: { opens: zero(), answers: zero() },
     days: dates.map((date) => ({ date, answers: 0 })),
     sampled: zero(),
+    sampledOf: zero(),
     categories: [],
     apps: [],
     dirCats: [],
@@ -84,9 +87,10 @@ export async function getAskHansReport(): Promise<AskHansReport> {
     perDay.forEach((h, i) => {
       const day = h ?? {}
       const wins = windowsOf(i)
-      // The all-visitor totals only exist from `since`; the consent-based breakdowns started earlier (test days).
-      // Counting them before `since` would put more sampled questions than answers in the same window.
-      const inBreakdown = !totals.since || dates[i] >= totals.since
+      // The all-visitor totals only exist from `since`, and `since` itself is a partial day (the counter went live
+      // mid-day) while the consent-based breakdowns started earlier. Both are therefore compared from the day after
+      // `since` only, otherwise sampled questions could exceed answers in the same window.
+      const inBreakdown = !totals.since || dates[i] > totals.since
       const opens = Number(day.total_opens ?? 0) || 0
       const answers = Number(day.total_answers ?? 0) || 0
       report.days[i].answers = answers
@@ -95,6 +99,7 @@ export async function getAskHansReport(): Promise<AskHansReport> {
         report.windows.answers[w] += answers
       }
       if (!inBreakdown) return
+      for (const w of wins) report.sampledOf[w] += answers
       for (const [field, raw] of Object.entries(day)) {
         const n = Number(raw) || 0
         if (!n) continue
