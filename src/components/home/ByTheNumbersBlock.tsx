@@ -2,6 +2,7 @@ import { AppLink as Link } from '@/components/AppLink'
 import type { Language } from '@/lib/blog/blogContent'
 import { getHomeStats } from '@/lib/home/stats'
 import { getMcpUsageSnapshotCached } from '@/lib/mcp/usage'
+import { getAskHansTotals } from '@/lib/askhans/totals'
 import { HomeIcon, type HomeIconName } from './HomeIcon'
 import { SURFACE_CLASS } from './homeSurface'
 import { t } from './home-i18n'
@@ -13,7 +14,10 @@ import { t } from './home-i18n'
 export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang?: Language; layout?: 'card' | 'bar' }) {
   const stats = getHomeStats(lang)
   const mcpUsage = await getMcpUsageSnapshotCached()
+  const askHansOn = process.env.ASK_HANS_ENABLED === 'true'
+  const askHansTotals = askHansOn ? await getAskHansTotals() : null
   const mcpStatsHref = lang === 'en' ? '/mcp-stats' : `/${lang}/mcp-stats`
+  const askHansHref = lang === 'en' ? '/askhans' : `/${lang}/askhans`
   const directoryHref = lang === 'en' ? '/directory' : `/${lang}/directory`
 
   const items: { label: string; value: string; icon: HomeIconName; href?: string; hint?: string; desc?: string }[] = [
@@ -45,12 +49,21 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
       href: mcpStatsHref,
       hint: t('statMcpCallsHint', lang),
     },
+    ...(askHansTotals
+      ? [{
+          label: t('statAskHansCalls', lang),
+          value: askHansTotals.answers.toLocaleString(),
+          icon: 'mcp' as const,
+          href: askHansHref,
+          hint: t('statAskHansCallsHint', lang),
+        }]
+      : []),
   ]
 
   if (layout === 'bar') {
     return (
       <section aria-label={t('statsTitle', lang)} className={`mb-8 rounded-xl border ${SURFACE_CLASS.stat} p-3`}>
-        <dl className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+        <dl className={`grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6 ${items.length > 6 ? 'xl:grid-cols-7' : ''}`}>
           {items.map((item) => {
             const tile = (
               <>
@@ -105,7 +118,7 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
             <Link
               key={item.label}
               href={item.href}
-              className={`${item.href === mcpStatsHref ? 'col-span-2 ' : ''}rounded-lg border border-tone-list-edge bg-tone-list p-3 transition hover:shadow-md hover:-translate-y-0.5`}
+              className={`${item.href === mcpStatsHref || item.href === askHansHref ? 'col-span-2 ' : ''}rounded-lg border border-tone-list-edge bg-tone-list p-3 transition hover:shadow-md hover:-translate-y-0.5`}
             >
               {tile}
             </Link>
