@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 4.600239212439047e-05,
+      "ctr": 0.00004600239212439047,
       "period": "last 90 days"
     }
   },
@@ -20665,7 +20665,11 @@
       "ctr": 0.0004768717215069146,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "5e62e597-10fa-4e24-b1f5-6a7154a8d79a",
@@ -20696,7 +20700,11 @@
       "ctr": 0,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "e651554b-3b9b-4214-92e8-c10f49a1476e",
@@ -20721,7 +20729,11 @@
       "liefern sie auch in die schweiz"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "fb51fba9-3c48-4957-adc2-e80039de891f",
@@ -20746,7 +20758,11 @@
       "liefern sie auch in die schweiz"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "d8bb60d6-287b-4950-9b28-4e3e959c7f80",
@@ -20777,7 +20793,11 @@
       "ctr": 0,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "06e161d6-de07-4a56-8b4c-208f09743e36",
@@ -20808,7 +20828,11 @@
       "ctr": 0,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "f0988e24-3303-4dda-b15c-061db7a1b63e",
@@ -20839,7 +20863,11 @@
       "ctr": 0,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "c55f4b51-4a22-477a-abd5-072d2ca3ab54",
@@ -20864,7 +20892,11 @@
       "liefern sie auch in die schweiz"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "5df3da52-b084-4486-83b9-fecceb32f46f",
@@ -20889,7 +20921,11 @@
       "liefern sie auch in die schweiz"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "712482e3-23eb-48a4-9896-a71d859adde3",
@@ -20921,7 +20957,11 @@
       "ctr": 0.008639308855291577,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "de307fbc-81eb-42dd-8fb2-1e55b43ad01b",
@@ -20953,7 +20993,11 @@
       "ctr": 0,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "5a5bf795-0ce4-4c46-99c9-6ade7bf29a58",
@@ -20979,7 +21023,11 @@
       "home assistant vs iobroker vs openhab"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "71450b69-bd52-4a4a-b39e-a2963165c8a7",
@@ -21011,7 +21059,11 @@
       "ctr": 0,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "57d05cbc-33a2-4f87-b229-fb4531b9c212",
@@ -21043,7 +21095,11 @@
       "ctr": 0,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "45102072-0f43-410f-b511-8cbf1d62975a",
@@ -21075,7 +21131,11 @@
       "ctr": 0,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "cd10f34d-1c3b-49bd-883b-f2f56d5523fa",
@@ -21107,7 +21167,11 @@
       "ctr": 0,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "6f3f9a30-0395-46f2-8ad1-0301412148a9",
@@ -21139,7 +21203,11 @@
       "ctr": 0,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "ba1e72d7-ba82-424f-bb6a-fafffe90b15d",
@@ -21171,7 +21239,11 @@
       "ctr": 0,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "f3959d9b-8fd5-4c66-b57e-b271d2350664",
@@ -21195,7 +21267,11 @@
       "ctr": 0,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "87dcc928-b95d-4fb9-b657-44c480b2ac26",
@@ -21213,7 +21289,11 @@
       "how to choose quantization level llm vram requirements 6gb"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "81913d0f-1be7-4aad-b411-8d76eeed73e2",
@@ -21231,7 +21311,11 @@
       "how to choose quantization level llm vram requirements 6gb"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "e86989e3-078a-4297-b164-9e15439c567b",
@@ -21255,7 +21339,11 @@
       "ctr": 0,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "d6e02be8-cdd2-4447-b31a-e2c152d809cc",
@@ -21279,7 +21367,11 @@
       "ctr": 0,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "d8b55706-815f-489f-9197-1e92abea4eb4",
@@ -21303,7 +21395,11 @@
       "ctr": 0,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "fc436534-2dd2-45cf-8827-89620cadcab7",
@@ -21321,7 +21417,11 @@
       "how to choose quantization level llm vram requirements 6gb"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "4dcd3bd6-7519-4dda-aad0-61ab65250c18",
@@ -21339,7 +21439,11 @@
       "how to choose quantization level llm vram requirements 6gb"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "f13ee706-4d55-458d-82bf-d4d766f6a13e",
@@ -21363,7 +21467,11 @@
       "ctr": 0,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "028c9bcc-e057-43b3-b597-f38738e41705",
@@ -21389,7 +21497,11 @@
       "ctr": 0,
       "period": "28d 2026-10-06..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "d32f2fff-764d-49ba-80dd-c9b87e829e73",
@@ -21415,7 +21527,11 @@
       "ctr": 0.03837471783295711,
       "period": "90d 2026-08-05..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "954bd9b9-0d0e-4e25-85d4-deda15afada6",
@@ -21441,7 +21557,11 @@
       "ctr": 0.023809523809523808,
       "period": "90d 2026-08-05..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "34e7b391-ee05-40b4-b992-0bab2a1e7083",
@@ -21467,7 +21587,11 @@
       "ctr": 0.010948905109489052,
       "period": "90d 2026-08-05..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "0265c06e-13ff-4098-8ae9-dc905965af5a",
@@ -21493,7 +21617,11 @@
       "ctr": 0.015625,
       "period": "90d 2026-08-05..2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "409d636e-124f-472a-841c-077c0a6cf7f5",
@@ -21511,7 +21639,11 @@
       "q4_k_m vs q8_0"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "14027d45-fdc7-45ee-9a1c-0f52c44a34d6",
@@ -21529,7 +21661,11 @@
       "q4_k_m vs q8_0"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "1b0ef4f5-b2ee-4876-8f77-8899a027699b",
@@ -21547,7 +21683,11 @@
       "q4_k_m vs q8_0"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "3162bedd-bca2-4b56-b320-3254ef9b026a",
@@ -21565,7 +21705,11 @@
       "q4_k_m vs q8_0"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "215261e5-bd3a-4a2a-a095-2c620e0d783b",
@@ -21583,7 +21727,11 @@
       "q4_k_m vs q8_0"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "a387dbc5-fec0-4c04-a349-4e4e0b41f8a2",
@@ -21601,7 +21749,11 @@
       "q4_k_m vs q8_0"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "def1e348-51ba-428a-a8fa-0fd543ab43e1",
@@ -21619,7 +21771,11 @@
       "q4_k_m vs q8_0"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "d753592b-222f-47b1-b921-63ffcd5d155f",
@@ -21637,7 +21793,11 @@
       "q4_k_m vs q8_0"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "3ed985ce-00a2-4302-9e69-018856043969",
@@ -21655,7 +21815,11 @@
       "q4_k_m vs q8_0"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "3c61db13-26fc-42af-bdf0-584b036b5eef",
@@ -21673,7 +21837,11 @@
       "what is q4_k_m quantization"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "37fb5b2c-1d1b-483e-83ec-b68fa90e0e0f",
@@ -21693,7 +21861,11 @@
       "lws vs ovh"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "2908abb2-284f-47d0-a9e7-7db31ee9ac3a",
@@ -21713,7 +21885,11 @@
       "lws vs ovh"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "fe2d0b62-bb6f-4022-9cb7-02eefa84fdcd",
@@ -21733,7 +21909,11 @@
       "software rrhh ia"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "9a86f606-9a03-4aa7-a27e-d8447328fe95",
@@ -21753,7 +21933,11 @@
       "software rrhh ia"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "1950cb7d-3682-4660-9b64-a4947b37f08c",
@@ -21773,7 +21957,11 @@
       "software rrhh ia"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "885f2043-1c0f-4c85-84ce-04c01e646293",
@@ -21793,7 +21981,11 @@
       "software rrhh ia"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "5c88d9f0-56af-4f59-ab12-e865efcc30a0",
@@ -21813,7 +22005,11 @@
       "self hosted vector database"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "91f1c958-a865-4f0a-9c1d-7b5c11d5210b",
@@ -21833,7 +22029,11 @@
       "self hosted vector database"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "22dc2b2e-94c9-444d-891c-6f64851fabcd",
@@ -21853,7 +22053,11 @@
       "self hosted vector database"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "2cb48576-cdd6-4c13-882f-0ec0f9349ecd",
@@ -21873,7 +22077,11 @@
       "self hosted vector database"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "eb14107d-9dbb-4bc6-b7c2-f74e5a5f6161",
@@ -21893,7 +22101,11 @@
       "self hosted vector database"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "9e3d0c73-e28b-46c7-a9aa-d0f17e5ec0bc",
@@ -21913,7 +22125,11 @@
       "self hosted vector database"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "6f1be860-4fac-4fed-8db7-907e5e92105d",
@@ -21933,7 +22149,11 @@
       "self hosted vector database"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "5646de03-b9d1-4415-a887-701431b26a42",
@@ -21953,7 +22173,11 @@
       "self hosted vector database"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "7dce49a4-cb65-4fc6-bfab-11a5b5b499e2",
@@ -21973,7 +22197,11 @@
       "self hosted vector database"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "9fed930a-15af-4e83-a382-4bbef715206a",
@@ -21999,7 +22227,11 @@
       "ctr": 0.003367003367003367,
       "period": "90d to 2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "a2eca726-3b11-4465-b7c7-554090cc23c2",
@@ -22017,7 +22249,11 @@
       "best rag tools for business documents"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "656462aa-c251-4e4c-9884-8eb214b08349",
@@ -22043,7 +22279,11 @@
       "ctr": 0.0047078663528089095,
       "period": "90d to 2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "2f6ed0c6-83f6-496a-b182-a38eb97f30fb",
@@ -22069,7 +22309,11 @@
       "ctr": 0.005170133461584706,
       "period": "28d to 2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "ca6e00a8-2a77-4630-b3e7-8742e250a11e",
@@ -22094,7 +22338,11 @@
       "ctr": 0.0016271501627150163,
       "period": "28d to 2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "0e7c41e9-df59-4afe-876e-cab25df75fc3",
@@ -22114,7 +22362,11 @@
       "is whisper.cpp safe"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "d7d883c1-1792-40a4-89f5-af69570702a7",
@@ -22138,7 +22390,11 @@
       "ctr": 0.0043028186580194566,
       "period": "28d to 2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "85bd3488-2be4-4091-b6e5-872c72394dfa",
@@ -22163,7 +22419,11 @@
       "ctr": 0.003948382126348228,
       "period": "28d to 2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "20710896-23ce-4ef3-89b7-d3f803e5ba7e",
@@ -22189,7 +22449,11 @@
       "ctr": 0.0073190221931640695,
       "period": "28d to 2026-11-02"
     },
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "135934bc-671c-412e-9075-22c101ca8650",
@@ -22208,7 +22472,11 @@
       "faster whisper vs whisper"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "61066210-a22a-4f4e-a463-72d19934ee37",
@@ -22227,7 +22495,11 @@
       "odysseus dev"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "9ad375f0-56a7-4ce4-ba65-5ebe1b9ce78f",
@@ -22247,7 +22519,11 @@
       "is open webui open source"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "a637db2a-bc16-4a2e-9214-45af026f5875",
@@ -22267,7 +22543,11 @@
       "cheap gpu for llm"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "96c23619-00fb-4e63-8893-71b257caa008",
@@ -22286,7 +22566,11 @@
       "64 gb vram"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "7873a4be-d5b7-46cf-8bfc-7959f40509df",
@@ -22305,7 +22589,11 @@
       "m5 pro memory bandwidth"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "20e6a04f-7966-4c0e-ba9d-26b847358a8a",
@@ -22323,7 +22611,11 @@
       "local llm gpu requirements"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "12555451-fd6f-4301-b582-e589ed9008c8",
@@ -22342,7 +22634,11 @@
       "m5 pro local llm"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "de6c5673-00d2-45bc-a8fe-caca297902b5",
@@ -22361,7 +22657,11 @@
       "second me"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "a493eec5-d143-4881-9149-03b158de02ca",
@@ -22379,7 +22679,11 @@
       "best rag tools for business documents"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "9900bf8a-0ef0-46dd-8442-3d9b116617c0",
@@ -22399,7 +22703,11 @@
       "mistral vs qwen"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "ed8e9014-7bb5-43dc-8e96-9ee13932ad06",
@@ -22418,7 +22726,11 @@
       "faster whisper vs whisper"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "e7696483-c88a-4489-b203-2537918f3a53",
@@ -22437,7 +22749,11 @@
       "open webui review"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "015e918b-23f5-438a-8f55-9b42c1815f3e",
@@ -22455,7 +22771,11 @@
       "odysseus ai review"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   },
   {
     "id": "32adde7e-51f8-4d60-856c-d3439abc01d3",
@@ -22474,6 +22794,10 @@
       "whisper cpp review"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-03",
+    "measure": {
+      "t14": "2026-11-17",
+      "t28": "2026-12-01"
+    }
   }
 ]
