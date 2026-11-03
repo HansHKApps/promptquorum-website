@@ -229,7 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Tool': '[faster-whisper](https://github.com/SYSTRAN/faster-whisper)',
-            'Best fit': 'Python pipelines on NVIDIA GPUs — CTranslate2 backend, ~4x throughput vs. original Whisper',
+            'Best fit': 'Python pipelines on NVIDIA GPUs — CTranslate2 backend, up to ~4x faster than original Whisper per its README',
             'License': 'MIT',
           },
           {
@@ -303,7 +303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'whisper.cpp succeeds at exactly what it set out to do: bring OpenAI\'s Whisper speech-to-text model to any device that can compile C/C++, without requiring Python, CUDA, or a heavy runtime. That portability — from x86 and ARM CPUs to Apple Silicon to Vulkan- or CUDA-capable GPUs — has no close free equivalent for local, offline transcription, and the MIT license permits commercial use (not legal advice). It is free, actively maintained, and uses the same model weights as upstream Whisper, so accuracy for a given model size follows what OpenAI published. Where it is not the strongest choice is a Python-first, NVIDIA-GPU-only pipeline chasing maximum throughput — faster-whisper\'s CTranslate2 backend is commonly recommended there, as our [comparison](/power-local-llm/local-whisper-stt-comparison) discusses. For everyone else — developers targeting embedded hardware, Apple Silicon, cross-platform apps, or anyone who prefers building native code to maintaining a Python environment — whisper.cpp is a free starting point worth testing on your own audio.',
+          'whisper.cpp succeeds at exactly what it set out to do: bring OpenAI\'s Whisper speech-to-text model to any device that can compile C/C++, without requiring Python, CUDA, or a heavy runtime. That portability — from x86 and ARM CPUs to Apple Silicon to Vulkan- or CUDA-capable GPUs — has few close free equivalents for local, offline transcription, and the MIT license permits commercial use (not legal advice). It is free, actively maintained, and uses the same model weights as upstream Whisper, so accuracy for a given model size follows what OpenAI published. Where it is not the strongest choice is a Python-first, NVIDIA-GPU-only pipeline chasing maximum throughput — faster-whisper\'s CTranslate2 backend is commonly recommended there, as our [comparison](/power-local-llm/local-whisper-stt-comparison) discusses. For everyone else — developers targeting embedded hardware, Apple Silicon, cross-platform apps, or anyone who prefers building native code to maintaining a Python environment — whisper.cpp is a free starting point worth testing on your own audio.',
       },
       sources: {
         id: 'sources',
@@ -583,7 +583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Werkzeug': '[faster-whisper](https://github.com/SYSTRAN/faster-whisper)',
-            'Am besten geeignet für': 'Python-Pipelines auf NVIDIA-GPUs — CTranslate2-Backend, ~4x Durchsatz vs. Original-Whisper',
+            'Am besten geeignet für': 'Python-Pipelines auf NVIDIA-GPUs — CTranslate2-Backend, laut README bis zu ~4x schneller als Original-Whisper',
             'Lizenz': 'MIT',
           },
           {
@@ -657,7 +657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'whisper.cpp erreicht genau das, was es sich vorgenommen hat: OpenAIs Whisper-Spracherkennungsmodell auf jedes Gerät zu bringen, das C/C++ kompilieren kann, ohne Python, CUDA oder eine schwere Laufzeit. Diese Portabilität – von x86- und ARM-CPUs über Apple Silicon bis zu Vulkan- oder CUDA-fähigen GPUs – hat für lokale Offline-Transkription kein vergleichbares kostenloses Gegenstück, und die MIT-Lizenz erlaubt die kommerzielle Nutzung (keine Rechtsberatung). Es ist kostenlos, aktiv gepflegt und nutzt dieselben Modellgewichte wie das ursprüngliche Whisper, sodass die Genauigkeit bei gegebener Modellgröße dem von OpenAI Veröffentlichten folgt. Weniger stark ist es bei einer reinen Python-/NVIDIA-GPU-Pipeline, die maximalen Durchsatz anstrebt – dort wird das CTranslate2-Backend von faster-whisper häufig empfohlen, wie unser [Vergleich](/de/power-local-llm/local-whisper-stt-comparison) darlegt. Für alle anderen – Entwickler mit eingebetteter Hardware, Apple Silicon, plattformübergreifenden Apps oder dem Wunsch, native Software statt einer Python-Umgebung zu pflegen – ist whisper.cpp ein kostenloser Ausgangspunkt, den Sie mit eigenem Audio testen sollten.',
+          'whisper.cpp erreicht genau das, was es sich vorgenommen hat: OpenAIs Whisper-Spracherkennungsmodell auf jedes Gerät zu bringen, das C/C++ kompilieren kann, ohne Python, CUDA oder eine schwere Laufzeit. Diese Portabilität – von x86- und ARM-CPUs über Apple Silicon bis zu Vulkan- oder CUDA-fähigen GPUs – hat für lokale Offline-Transkription nur wenige vergleichbare kostenlose Gegenstücke, und die MIT-Lizenz erlaubt die kommerzielle Nutzung (keine Rechtsberatung). Es ist kostenlos, aktiv gepflegt und nutzt dieselben Modellgewichte wie das ursprüngliche Whisper, sodass die Genauigkeit bei gegebener Modellgröße dem von OpenAI Veröffentlichten folgt. Weniger stark ist es bei einer reinen Python-/NVIDIA-GPU-Pipeline, die maximalen Durchsatz anstrebt – dort wird das CTranslate2-Backend von faster-whisper häufig empfohlen, wie unser [Vergleich](/de/power-local-llm/local-whisper-stt-comparison) darlegt. Für alle anderen – Entwickler mit eingebetteter Hardware, Apple Silicon, plattformübergreifenden Apps oder dem Wunsch, native Software statt einer Python-Umgebung zu pflegen – ist whisper.cpp ein kostenloser Ausgangspunkt, den Sie mit eigenem Audio testen sollten.',
       },
       sources: {
         id: 'sources',
@@ -937,7 +937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Outil': '[faster-whisper](https://github.com/SYSTRAN/faster-whisper)',
-            'Le mieux adapté à': 'Pipelines Python sur GPU NVIDIA — backend CTranslate2, ~4x le débit du Whisper d\'origine',
+            'Le mieux adapté à': 'Pipelines Python sur GPU NVIDIA — backend CTranslate2, jusqu\'à ~4x plus rapide que le Whisper d\'origine selon son README',
             'Licence': 'MIT',
           },
           {
@@ -1011,7 +1011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'whisper.cpp réussit exactement ce qu\'il visait : apporter le modèle de reconnaissance vocale Whisper d\'OpenAI à tout appareil capable de compiler du C/C++, sans exiger Python, CUDA ni runtime lourd. Cette portabilité — des CPU x86 et ARM à Apple Silicon et aux GPU compatibles Vulkan ou CUDA — n\'a pas d\'équivalent gratuit proche pour la transcription locale hors ligne, et la licence MIT autorise l\'usage commercial (ce n\'est pas un conseil juridique). Il est gratuit, activement maintenu et utilise les mêmes poids de modèle que Whisper d\'origine : la précision, à taille de modèle égale, suit ce qu\'OpenAI a publié. Il n\'est pas le plus fort dans un pipeline uniquement Python et GPU NVIDIA qui vise le débit maximal — le backend CTranslate2 de faster-whisper y est couramment recommandé, comme le discute notre [comparatif](/fr/power-local-llm/local-whisper-stt-comparison). Pour tous les autres — développeurs visant le matériel embarqué, Apple Silicon, les applications multiplateformes, ou préférant compiler du code natif plutôt que maintenir un environnement Python — whisper.cpp est un point de départ gratuit à tester sur vos propres fichiers audio.',
+          'whisper.cpp réussit exactement ce qu\'il visait : apporter le modèle de reconnaissance vocale Whisper d\'OpenAI à tout appareil capable de compiler du C/C++, sans exiger Python, CUDA ni runtime lourd. Cette portabilité — des CPU x86 et ARM à Apple Silicon et aux GPU compatibles Vulkan ou CUDA — a peu d\'équivalents gratuits proches pour la transcription locale hors ligne, et la licence MIT autorise l\'usage commercial (ce n\'est pas un conseil juridique). Il est gratuit, activement maintenu et utilise les mêmes poids de modèle que Whisper d\'origine : la précision, à taille de modèle égale, suit ce qu\'OpenAI a publié. Il n\'est pas le plus fort dans un pipeline uniquement Python et GPU NVIDIA qui vise le débit maximal — le backend CTranslate2 de faster-whisper y est couramment recommandé, comme le discute notre [comparatif](/fr/power-local-llm/local-whisper-stt-comparison). Pour tous les autres — développeurs visant le matériel embarqué, Apple Silicon, les applications multiplateformes, ou préférant compiler du code natif plutôt que maintenir un environnement Python — whisper.cpp est un point de départ gratuit à tester sur vos propres fichiers audio.',
       },
       sources: {
         id: 'sources',
@@ -1291,7 +1291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Herramienta': '[faster-whisper](https://github.com/SYSTRAN/faster-whisper)',
-            'Mejor para': 'Pipelines en Python sobre GPU NVIDIA — backend CTranslate2, ~4x el rendimiento del Whisper original',
+            'Mejor para': 'Pipelines en Python sobre GPU NVIDIA — backend CTranslate2, hasta ~4x más rápido que el Whisper original según su README',
             'Licencia': 'MIT',
           },
           {
@@ -1365,7 +1365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'whisper.cpp logra justo lo que se proponía: llevar el modelo de voz a texto Whisper de OpenAI a cualquier dispositivo capaz de compilar C/C++, sin exigir Python, CUDA ni un entorno pesado. Esa portabilidad —de CPU x86 y ARM a Apple Silicon y GPU compatibles con Vulkan o CUDA— no tiene un equivalente gratuito cercano para la transcripción local sin conexión, y la licencia MIT permite el uso comercial (no es asesoramiento legal). Es gratis, se mantiene activamente y usa los mismos pesos de modelo que Whisper original, así que la precisión para un tamaño dado sigue lo publicado por OpenAI. No es la opción más fuerte en un pipeline solo de Python y GPU NVIDIA que busque el máximo rendimiento: el backend CTranslate2 de faster-whisper suele recomendarse ahí, como explica nuestra [comparativa](/es/power-local-llm/local-whisper-stt-comparison). Para todos los demás —desarrolladores con hardware embebido, Apple Silicon, apps multiplataforma, o quien prefiere compilar código nativo antes que mantener un entorno de Python— whisper.cpp es un punto de partida gratuito que conviene probar con tu propio audio.',
+          'whisper.cpp logra justo lo que se proponía: llevar el modelo de voz a texto Whisper de OpenAI a cualquier dispositivo capaz de compilar C/C++, sin exigir Python, CUDA ni un entorno pesado. Esa portabilidad —de CPU x86 y ARM a Apple Silicon y GPU compatibles con Vulkan o CUDA— tiene pocos equivalentes gratuitos cercanos para la transcripción local sin conexión, y la licencia MIT permite el uso comercial (no es asesoramiento legal). Es gratis, se mantiene activamente y usa los mismos pesos de modelo que Whisper original, así que la precisión para un tamaño dado sigue lo publicado por OpenAI. No es la opción más fuerte en un pipeline solo de Python y GPU NVIDIA que busque el máximo rendimiento: el backend CTranslate2 de faster-whisper suele recomendarse ahí, como explica nuestra [comparativa](/es/power-local-llm/local-whisper-stt-comparison). Para todos los demás —desarrolladores con hardware embebido, Apple Silicon, apps multiplataforma, o quien prefiere compilar código nativo antes que mantener un entorno de Python— whisper.cpp es un punto de partida gratuito que conviene probar con tu propio audio.',
       },
       sources: {
         id: 'sources',
@@ -1645,7 +1645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'ツール': '[faster-whisper](https://github.com/SYSTRAN/faster-whisper)',
-            '最適な用途': 'NVIDIA GPU上のPythonパイプライン ー CTranslate2バックエンド、オリジナルWhisper比で約4倍のスループット',
+            '最適な用途': 'NVIDIA GPU上のPythonパイプライン ー CTranslate2バックエンド、READMEによればオリジナルWhisper比で最大約4倍高速',
             'ライセンス': 'MIT',
           },
           {
@@ -1719,7 +1719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '総評',
         content:
-          'whisper.cppは、目指したことを見事に実現しています。C/C++をコンパイルできるあらゆる端末に、Python、CUDA、重いランタイムなしでOpenAIのWhisper音声認識モデルを持ち込めるのです。x86・ARMのCPUからApple Silicon、VulkanやCUDA対応GPUまで広がるこの移植性は、ローカルでオフラインの文字起こしでは無料の類似品が見当たらず、MITライセンスは商用利用も認めています（法的助言ではありません）。無料で活発に保守され、元のWhisperと同じモデルの重みを使うため、同じモデルサイズでの精度はOpenAIの公表内容に準じます。最大のスループットを求めるPython中心・NVIDIA GPU限定のパイプラインでは最有力とは言えず、そこではfaster-whisperのCTranslate2バックエンドがよく推奨されます。詳細は当サイトの[比較記事](/ja/power-local-llm/local-whisper-stt-comparison)をご覧ください。それ以外の方、つまり組み込みハードウェア、Apple Silicon、クロスプラットフォームアプリを狙う開発者や、Python環境の維持よりネイティブコードのビルドを好む方にとって、whisper.cppはお手持ちの音声で試す価値のある無料の出発点です。',
+          'whisper.cppは、目指したことを見事に実現しています。C/C++をコンパイルできるあらゆる端末に、Python、CUDA、重いランタイムなしでOpenAIのWhisper音声認識モデルを持ち込めるのです。x86・ARMのCPUからApple Silicon、VulkanやCUDA対応GPUまで広がるこの移植性は、ローカルでオフラインの文字起こしでは無料の類似品が少なく、MITライセンスは商用利用も認めています（法的助言ではありません）。無料で活発に保守され、元のWhisperと同じモデルの重みを使うため、同じモデルサイズでの精度はOpenAIの公表内容に準じます。最大のスループットを求めるPython中心・NVIDIA GPU限定のパイプラインでは最有力とは言えず、そこではfaster-whisperのCTranslate2バックエンドがよく推奨されます。詳細は当サイトの[比較記事](/ja/power-local-llm/local-whisper-stt-comparison)をご覧ください。それ以外の方、つまり組み込みハードウェア、Apple Silicon、クロスプラットフォームアプリを狙う開発者や、Python環境の維持よりネイティブコードのビルドを好む方にとって、whisper.cppはお手持ちの音声で試す価値のある無料の出発点です。',
       },
       sources: {
         id: 'sources',
@@ -2000,7 +2000,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Ferramenta': '[faster-whisper](https://github.com/SYSTRAN/faster-whisper)',
-            'Melhor para': 'Pipelines Python em GPUs NVIDIA — backend CTranslate2, ~4x o throughput do Whisper original',
+            'Melhor para': 'Pipelines Python em GPUs NVIDIA — backend CTranslate2, até ~4x mais rápido que o Whisper original segundo o README',
             'Licença': 'MIT',
           },
           {
@@ -2074,7 +2074,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito',
         content:
-          'O whisper.cpp cumpre exatamente o que se propôs: levar o modelo de fala para texto Whisper, da OpenAI, a qualquer dispositivo capaz de compilar C/C++, sem exigir Python, CUDA ou um ambiente pesado. Essa portabilidade, de CPUs x86 e ARM a Apple Silicon e GPUs compatíveis com Vulkan ou CUDA, não tem equivalente gratuito próximo para transcrição local offline, e a licença MIT permite uso comercial (não é aconselhamento jurídico). Ele é gratuito, mantido ativamente e usa os mesmos pesos de modelo do Whisper original, então a precisão para um dado tamanho de modelo acompanha o que a OpenAI publicou. Não é a opção mais forte num pipeline só de Python e GPU NVIDIA que busca o throughput máximo: o backend CTranslate2 do faster-whisper costuma ser recomendado ali, como discute a nossa [comparação](/pt/power-local-llm/local-whisper-stt-comparison). Para todos os outros, como desenvolvedores com hardware embarcado, Apple Silicon, apps multiplataforma ou quem prefere compilar código nativo a manter um ambiente Python, o whisper.cpp é um ponto de partida gratuito que vale testar com o seu próprio áudio.',
+          'O whisper.cpp cumpre exatamente o que se propôs: levar o modelo de fala para texto Whisper, da OpenAI, a qualquer dispositivo capaz de compilar C/C++, sem exigir Python, CUDA ou um ambiente pesado. Essa portabilidade, de CPUs x86 e ARM a Apple Silicon e GPUs compatíveis com Vulkan ou CUDA, tem poucos equivalentes gratuitos próximos para transcrição local offline, e a licença MIT permite uso comercial (não é aconselhamento jurídico). Ele é gratuito, mantido ativamente e usa os mesmos pesos de modelo do Whisper original, então a precisão para um dado tamanho de modelo acompanha o que a OpenAI publicou. Não é a opção mais forte num pipeline só de Python e GPU NVIDIA que busca o throughput máximo: o backend CTranslate2 do faster-whisper costuma ser recomendado ali, como discute a nossa [comparação](/pt/power-local-llm/local-whisper-stt-comparison). Para todos os outros, como desenvolvedores com hardware embarcado, Apple Silicon, apps multiplataforma ou quem prefere compilar código nativo a manter um ambiente Python, o whisper.cpp é um ponto de partida gratuito que vale testar com o seu próprio áudio.',
       },
       sources: {
         id: 'sources',
@@ -2354,7 +2354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'الأداة': '[faster-whisper](https://github.com/SYSTRAN/faster-whisper)',
-            'الأنسب لـ': 'خطوط معالجة Python على معالجات NVIDIA GPU — خلفية CTranslate2، أداء أعلى بنحو 4 أضعاف مقارنة بـ Whisper الأصلي',
+            'الأنسب لـ': 'خطوط معالجة Python على معالجات NVIDIA GPU — خلفية CTranslate2، وفق README أسرع حتى نحو 4 أضعاف من Whisper الأصلي',
             'الرخصة': 'MIT',
           },
           {
@@ -2428,7 +2428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'ينجح whisper.cpp في ما أراده تمامًا: جلب نموذج Whisper من OpenAI لتحويل الكلام إلى نص إلى أي جهاز يستطيع تصريف C/C++ دون الحاجة إلى Python أو CUDA أو بيئة تشغيل ثقيلة. وهذه القابلية للنقل — من معالجات x86 وARM إلى Apple Silicon إلى البطاقات الرسومية الداعمة لـ Vulkan أو CUDA — ليس لها بديل مجاني قريب للنسخ المحلي دون اتصال، ويتيح ترخيص MIT الاستخدام التجاري (وهذا ليس استشارة قانونية). وهو مجاني وتتم صيانته بنشاط ويستخدم أوزان Whisper الأصلية نفسها، فتتبع الدقة لحجم نموذج معيّن ما نشرته OpenAI. وليس هو الأقوى في مسار يعتمد على Python وبطاقات NVIDIA فقط ويسعى إلى أقصى إنتاجية — إذ يُوصى عادةً بالواجهة الخلفية CTranslate2 في faster-whisper هناك، كما تناقش [مقارنتنا](/ar/power-local-llm/local-whisper-stt-comparison). أما لسائر الحالات — المطورون الذين يستهدفون العتاد المدمج أو Apple Silicon أو التطبيقات متعددة المنصات، أو من يفضّل بناء شيفرة أصلية على صيانة بيئة Python — فهو نقطة بداية مجانية تستحق التجربة على صوتك أنت.',
+          'ينجح whisper.cpp في ما أراده تمامًا: جلب نموذج Whisper من OpenAI لتحويل الكلام إلى نص إلى أي جهاز يستطيع تصريف C/C++ دون الحاجة إلى Python أو CUDA أو بيئة تشغيل ثقيلة. وهذه القابلية للنقل — من معالجات x86 وARM إلى Apple Silicon إلى البطاقات الرسومية الداعمة لـ Vulkan أو CUDA — لها بدائل مجانية قريبة قليلة للنسخ المحلي دون اتصال، ويتيح ترخيص MIT الاستخدام التجاري (وهذا ليس استشارة قانونية). وهو مجاني وتتم صيانته بنشاط ويستخدم أوزان Whisper الأصلية نفسها، فتتبع الدقة لحجم نموذج معيّن ما نشرته OpenAI. وليس هو الأقوى في مسار يعتمد على Python وبطاقات NVIDIA فقط ويسعى إلى أقصى إنتاجية — إذ يُوصى عادةً بالواجهة الخلفية CTranslate2 في faster-whisper هناك، كما تناقش [مقارنتنا](/ar/power-local-llm/local-whisper-stt-comparison). أما لسائر الحالات — المطورون الذين يستهدفون العتاد المدمج أو Apple Silicon أو التطبيقات متعددة المنصات، أو من يفضّل بناء شيفرة أصلية على صيانة بيئة Python — فهو نقطة بداية مجانية تستحق التجربة على صوتك أنت.',
       },
       sources: {
         id: 'sources',
@@ -2708,7 +2708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             '工具': '[faster-whisper](https://github.com/SYSTRAN/faster-whisper)',
-            '最适合': 'NVIDIA GPU上的Python流水线——CTranslate2后端,吞吐量约为原始Whisper的4倍',
+            '最适合': 'NVIDIA GPU上的Python流水线——CTranslate2后端,据其README最高约比原始Whisper快4倍',
             '许可证': 'MIT',
           },
           {
@@ -2782,7 +2782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          'whisper.cpp 恰好做到了它想做的事：让 OpenAI 的 Whisper 语音转文字模型运行在任何能编译 C/C++ 的设备上，无需 Python、CUDA 或沉重的运行时。这种可移植性——从 x86 和 ARM CPU 到 Apple Silicon，再到支持 Vulkan 或 CUDA 的 GPU——在本地离线转录领域几乎没有同等的免费替代品，MIT 许可证也允许商业使用（不构成法律意见）。它免费、维护活跃，并使用与原版 Whisper 相同的模型权重，因此同一模型规格下的准确度与 OpenAI 公布的一致。在追求极致吞吐、以 Python 和 NVIDIA GPU 为主的流水线中，它并非最强选择——那里常推荐 faster-whisper 的 CTranslate2 后端，我们的[对比文章](/zh/power-local-llm/local-whisper-stt-comparison)也有讨论。对其他所有人——面向嵌入式硬件、Apple Silicon、跨平台应用的开发者，或更愿意构建原生代码而不想维护 Python 环境的人——whisper.cpp 是一个值得用自己的音频试一试的免费起点。',
+          'whisper.cpp 恰好做到了它想做的事：让 OpenAI 的 Whisper 语音转文字模型运行在任何能编译 C/C++ 的设备上，无需 Python、CUDA 或沉重的运行时。这种可移植性——从 x86 和 ARM CPU 到 Apple Silicon，再到支持 Vulkan 或 CUDA 的 GPU——在本地离线转录领域同等的免费替代品不多，MIT 许可证也允许商业使用（不构成法律意见）。它免费、维护活跃，并使用与原版 Whisper 相同的模型权重，因此同一模型规格下的准确度与 OpenAI 公布的一致。在追求极致吞吐、以 Python 和 NVIDIA GPU 为主的流水线中，它并非最强选择——那里常推荐 faster-whisper 的 CTranslate2 后端，我们的[对比文章](/zh/power-local-llm/local-whisper-stt-comparison)也有讨论。对其他所有人——面向嵌入式硬件、Apple Silicon、跨平台应用的开发者，或更愿意构建原生代码而不想维护 Python 环境的人——whisper.cpp 是一个值得用自己的音频试一试的免费起点。',
       },
       sources: {
         id: 'sources',
@@ -3063,7 +3063,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             '도구': '[faster-whisper](https://github.com/SYSTRAN/faster-whisper)',
-            '가장 적합한 경우': 'NVIDIA GPU 위의 Python 파이프라인 — CTranslate2 백엔드, 원본 Whisper 대비 약 4배의 처리량',
+            '가장 적합한 경우': 'NVIDIA GPU 위의 Python 파이프라인 — CTranslate2 백엔드, README에 따르면 원본 Whisper 대비 최대 약 4배 빠름',
             '라이선스': 'MIT',
           },
           {

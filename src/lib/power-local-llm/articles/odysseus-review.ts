@@ -177,7 +177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'odysseus-competitors',
         title: 'Odysseus vs. Other Self-Hosted AI Workspaces',
-        content: 'Odysseus is one of several self-hosted, open-source tools that combine chat with additional productivity or agent features. Here is how it compares to others in that same space — see the [Local LLM Software Directory](/directory) for the full catalog.',
+        content: 'Odysseus is one of several self-hosted or locally run tools that combine chat with additional productivity or agent features. Their licenses differ, so check each project\'s own license page. Here is how it compares to others in that same space — see the [Local LLM Software Directory](/directory) for the full catalog.',
         items: [
           '**[Msty](https://msty.app)** — a desktop-first local AI chat app installed as a single app (no Docker required); compare its feature list with Odysseus\'s email, calendar and document tools on each project\'s site, and see the [Msty review](/power-local-llm/msty-review).',
           '**[AnythingLLM](https://anythingllm.com)** — a self-hosted, open-source workspace focused on retrieval-augmented generation (RAG) and document chat rather than Odysseus\'s broader email/calendar/research scope; see the [AnythingLLM review](/power-local-llm/anythingllm-review).',
@@ -447,7 +447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'odysseus-competitors',
         title: 'Odysseus vs. andere selbstgehostete KI-Arbeitsbereiche',
-        content: 'Odysseus ist eines von mehreren selbstgehosteten, quelloffenen Tools, die Chat mit zusätzlichen Produktivitäts- oder Agentenfunktionen verbinden. So schneidet es im Vergleich zu anderen Optionen in diesem Bereich ab — den vollständigen Katalog finden Sie im [lokalen KI-Software-Verzeichnis](/de/directory).',
+        content: 'Odysseus ist eines von mehreren selbstgehosteten oder lokal betriebenen Tools, die Chat mit zusätzlichen Produktivitäts- oder Agentenfunktionen verbinden. Ihre Lizenzen unterscheiden sich, prüfen Sie daher die Lizenz jedes Projekts auf dessen eigener Seite. So schneidet es im Vergleich zu anderen Optionen in diesem Bereich ab — den vollständigen Katalog finden Sie im [lokalen KI-Software-Verzeichnis](/de/directory).',
         items: [
           '**[Msty](https://msty.app)** — eine Desktop-first-Chat-App für lokale KI mit Installation als einzelne App (kein Docker nötig); vergleichen Sie ihren Funktionsumfang mit den E-Mail-, Kalender- und Dokumentenwerkzeugen von Odysseus auf der Website des jeweiligen Projekts und siehe den [Msty Review](/de/power-local-llm/msty-review).',
           '**[AnythingLLM](https://anythingllm.com)** — ein selbstgehosteter, quelloffener Arbeitsbereich mit Fokus auf Retrieval-Augmented Generation (RAG) und Dokumenten-Chat statt Odysseus\' breiterem E-Mail-/Kalender-/Recherche-Umfang; siehe den [AnythingLLM Review](/de/power-local-llm/anythingllm-review).',
@@ -717,7 +717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'odysseus-competitors',
         title: 'Odysseus face aux autres espaces de travail IA auto-hébergés',
-        content: 'Odysseus fait partie de plusieurs outils auto-hébergés et open source combinant le chat avec des fonctionnalités de productivité ou d\'agents supplémentaires. Voici comment il se compare à d\'autres options dans ce même domaine — consultez le [répertoire des logiciels d\'IA locale](/fr/directory) pour le catalogue complet.',
+        content: 'Odysseus fait partie de plusieurs outils auto-hébergés ou exécutés en local combinant le chat avec des fonctionnalités de productivité ou d\'agents supplémentaires. Leurs licences diffèrent : vérifiez la licence de chaque projet sur sa propre page. Voici comment il se compare à d\'autres options dans ce même domaine — consultez le [répertoire des logiciels d\'IA locale](/fr/directory) pour le catalogue complet.',
         items: [
           '**[Msty](https://msty.app)** — une application de chat IA locale orientée desktop, installée comme application unique (pas de Docker requis) ; comparez ses fonctionnalités avec les outils e-mail, calendrier et documents d\'Odysseus sur le site de chaque projet, et voir la [review de Msty](/fr/power-local-llm/msty-review).',
           '**[AnythingLLM](https://anythingllm.com)** — un espace de travail auto-hébergé et open source axé sur la génération augmentée par récupération (RAG) et le chat de documents plutôt que sur le périmètre plus large e-mail/calendrier/recherche d\'Odysseus ; voir la [review d\'AnythingLLM](/fr/power-local-llm/anythingllm-review).',
@@ -987,7 +987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'odysseus-competitors',
         title: 'Odysseus frente a otros espacios de trabajo de IA autoalojados',
-        content: 'Odysseus es una de varias herramientas autoalojadas y de código abierto que combinan chat con funciones adicionales de productividad o de agentes. Así se compara con otras opciones en ese mismo espacio — consulte el [directorio de software de IA local](/es/directory) para el catálogo completo.',
+        content: 'Odysseus es una de varias herramientas autoalojadas o ejecutadas en local que combinan chat con funciones adicionales de productividad o de agentes. Sus licencias difieren, así que consulta la licencia de cada proyecto en su propia página. Así se compara con otras opciones en ese mismo espacio — consulte el [directorio de software de IA local](/es/directory) para el catálogo completo.',
         items: [
           '**[Msty](https://msty.app)** — una app de chat de IA local orientada al escritorio, que se instala como una sola aplicación (sin Docker); compare sus funciones con las herramientas de correo, calendario y documentos de Odysseus en el sitio de cada proyecto, y vea la [review de Msty](/es/power-local-llm/msty-review).',
           '**[AnythingLLM](https://anythingllm.com)** — un espacio de trabajo autoalojado y de código abierto centrado en la generación aumentada por recuperación (RAG) y el chat de documentos, en lugar del alcance más amplio de correo/calendario/investigación de Odysseus; vea la [review de AnythingLLM](/es/power-local-llm/anythingllm-review).',
@@ -1257,7 +1257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'odysseus-competitors',
         title: 'Odysseus vs. outros espaços de trabalho de IA auto-hospedados',
-        content: 'O Odysseus é uma de várias ferramentas auto-hospedadas e de código aberto que combinam chat com recursos adicionais de produtividade ou de agentes. Veja como ele se compara a outras opções nesse mesmo espaço — consulte o [diretório de software de IA local](/pt/directory) para o catálogo completo.',
+        content: 'O Odysseus é uma de várias ferramentas auto-hospedadas ou executadas localmente que combinam chat com recursos adicionais de produtividade ou de agentes. As licenças delas diferem, então confira a licença de cada projeto na página própria. Veja como ele se compara a outras opções nesse mesmo espaço — consulte o [diretório de software de IA local](/pt/directory) para o catálogo completo.',
         items: [
           '**[Msty](https://msty.app)** — um app de chat de IA local com foco em desktop, instalado como um único aplicativo (sem necessidade de Docker); compare os recursos dele com as ferramentas de e-mail, calendário e documentos do Odysseus no site de cada projeto, e veja a [review do Msty](/pt/power-local-llm/msty-review).',
           '**[AnythingLLM](https://anythingllm.com)** — um espaço de trabalho auto-hospedado e de código aberto focado em geração aumentada por recuperação (RAG) e chat de documentos, em vez do escopo mais amplo de e-mail/calendário/pesquisa do Odysseus; veja a [review do AnythingLLM](/pt/power-local-llm/anythingllm-review).',
@@ -1527,7 +1527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'odysseus-competitors',
         title: 'Odysseus対他のセルフホスト型AIワークスペース',
-        content: 'Odysseusは、チャットに追加の生産性機能やエージェント機能を組み合わせた、セルフホスト型のオープンソースツールの1つです。同じ領域の他の選択肢との比較は以下の通りです — 完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/directory)を参照してください。',
+        content: 'Odysseusは、チャットに追加の生産性機能やエージェント機能を組み合わせた、セルフホスト型またはローカル実行型のツールの1つです。ライセンスはツールごとに異なるため、各プロジェクトの公式ページでご確認ください。同じ領域の他の選択肢との比較は以下の通りです — 完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/directory)を参照してください。',
         items: [
           '**[Msty](https://msty.app)** — デスクトップ向けのローカルAIチャットアプリで、単一アプリとしてインストールします（Docker不要）。機能はOdysseusのメール/カレンダー/文書ツールと各プロジェクトのサイトで比較してください。[Mstyレビュー](/ja/power-local-llm/msty-review)も参照。',
           '**[AnythingLLM](https://anythingllm.com)** — Odysseusのより広いメール/カレンダー/リサーチの範囲ではなく、検索拡張生成（RAG）と文書チャットに重点を置いたセルフホスト型のオープンソースワークスペース。[AnythingLLMレビュー](/ja/power-local-llm/anythingllm-review)を参照。',
@@ -1797,7 +1797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'odysseus-competitors',
         title: 'Odysseus与其他自托管AI工作空间的对比',
-        content: 'Odysseus是众多将聊天与额外生产力或代理功能相结合的自托管开源工具之一。以下是它在这一领域与其他选项的对比——完整目录请参阅[本地AI软件目录](/zh/directory)。',
+        content: 'Odysseus是众多将聊天与额外生产力或代理功能相结合的自托管或本地运行工具之一。它们的许可证各不相同，请以各项目官方页面为准。以下是它在这一领域与其他选项的对比——完整目录请参阅[本地AI软件目录](/zh/directory)。',
         items: [
           '**[Msty](https://msty.app)** — 一款以桌面为先的本地AI聊天应用，以单一应用方式安装（无需Docker）；请在各项目官网上对比其功能与Odysseus的邮件、日历和文档工具，并参阅[Msty评测](/zh/power-local-llm/msty-review)。',
           '**[AnythingLLM](https://anythingllm.com)** — 一款自托管的开源工作空间，专注于检索增强生成（RAG）和文档聊天，而非Odysseus更广泛的邮件/日历/研究范围；参阅[AnythingLLM评测](/zh/power-local-llm/anythingllm-review)。',
@@ -2067,7 +2067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'odysseus-competitors',
         title: 'Odysseus مقابل مساحات عمل ذكاء اصطناعي أخرى ذاتية الاستضافة',
-        content: 'Odysseus هي واحدة من عدة أدوات ذاتية الاستضافة ومفتوحة المصدر تجمع بين الدردشة وميزات إنتاجية أو وكلاء إضافية. إليك كيف تُقارَن بخيارات أخرى في هذا المجال نفسه — راجع [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) للحصول على الكتالوج الكامل.',
+        content: 'Odysseus هي واحدة من عدة أدوات ذاتية الاستضافة أو تعمل محليًا تجمع بين الدردشة وميزات إنتاجية أو وكلاء إضافية. تختلف تراخيصها، فراجع ترخيص كل مشروع في صفحته الرسمية. إليك كيف تُقارَن بخيارات أخرى في هذا المجال نفسه — راجع [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) للحصول على الكتالوج الكامل.',
         items: [
           '**[Msty](https://msty.app)** — تطبيق دردشة ذكاء اصطناعي محلي يُركّز على سطح المكتب ويُثبَّت كتطبيق واحد (لا حاجة إلى Docker)؛ قارن ميزاته بأدوات البريد والتقويم والمستندات في Odysseus على موقع كل مشروع، وراجع [مراجعة Msty](/ar/power-local-llm/msty-review).',
           '**[AnythingLLM](https://anythingllm.com)** — مساحة عمل ذاتية الاستضافة ومفتوحة المصدر تركز على التوليد المعزّز بالاسترجاع (RAG) والدردشة حول المستندات بدلاً من النطاق الأوسع للبريد الإلكتروني/التقويم/البحث في Odysseus؛ راجع [مراجعة AnythingLLM](/ar/power-local-llm/anythingllm-review).',
@@ -2337,7 +2337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'odysseus-competitors',
         title: 'Odysseus 대 다른 셀프 호스팅 AI 워크스페이스',
-        content: 'Odysseus는 채팅에 추가적인 생산성 또는 에이전트 기능을 결합한 여러 셀프 호스팅 오픈소스 도구 중 하나입니다. 같은 영역의 다른 옵션들과 어떻게 비교되는지 아래에 정리했습니다 — 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
+        content: 'Odysseus는 채팅에 추가적인 생산성 또는 에이전트 기능을 결합한 여러 셀프 호스팅 또는 로컬 실행 도구 중 하나입니다. 라이선스는 도구마다 다르므로 각 프로젝트의 공식 페이지에서 확인하십시오. 같은 영역의 다른 옵션들과 어떻게 비교되는지 아래에 정리했습니다 — 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
         items: [
           '**[Msty](https://msty.app)** — 데스크톱 우선의 로컬 AI 채팅 앱으로, 단일 앱으로 설치합니다(Docker 불필요). 기능은 각 프로젝트 사이트에서 Odysseus의 이메일/캘린더/문서 도구와 비교해 보시고, [Msty 리뷰](/ko/power-local-llm/msty-review)도 참고하세요.',
           '**[AnythingLLM](https://anythingllm.com)** — Odysseus의 더 넓은 이메일/캘린더/리서치 범위 대신 검색 증강 생성(RAG)과 문서 채팅에 초점을 맞춘 셀프 호스팅 오픈소스 워크스페이스; [AnythingLLM 리뷰](/ko/power-local-llm/anythingllm-review) 참고.',
