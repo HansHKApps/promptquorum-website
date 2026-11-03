@@ -13,6 +13,8 @@ import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMSection } from '@/lib/local-llms/types'
 import type { PromptBiteArticle } from '@/lib/prompt-bites/types'
+import { renderHubTitle } from '@/components/article-skin/HubTitle'
+import { resolveSkin, getSkinClasses, type ArticleSkin } from '@/components/article-skin/skin'
 
 interface Props {
   slug: string
@@ -461,10 +463,11 @@ function BodySection({ section, lang }: { section: LLMSection; lang: Language })
   )
 }
 
-function TldrSection({ items, lang }: { items: string[]; lang: Language }) {
+function TldrSection({ items, lang, skin }: { items: string[]; lang: Language; skin: ArticleSkin }) {
+  const hub = skin === 'hub'
   return (
-    <div className="rounded-xl bg-primary/5 border border-primary/20 p-5 mb-8">
-      <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">{KEY_TAKEAWAYS_LABEL[lang]}</p>
+    <div className={hub ? 'rounded-xl bg-hub-violet-tint border border-hub-violet-edge p-5 mb-8' : 'rounded-xl bg-primary/5 border border-primary/20 p-5 mb-8'}>
+      <p className={hub ? 'text-xs font-bold uppercase tracking-widest text-hub-violet-ink mb-3' : 'text-xs font-bold uppercase tracking-widest text-primary mb-3'}>{KEY_TAKEAWAYS_LABEL[lang]}</p>
       <ul className="space-y-2">
         {items.map((item, i) => (
           <li key={i} className="flex gap-2 text-sm text-text-secondary">
@@ -521,6 +524,9 @@ export function PromptBitesPostClient({ slug, lang, articleData, availableLangs,
   const parentArticle = (article as any).parentArticle as string | undefined
   const siblingBites = (article as any).siblingBites as string[] | undefined
 
+  const skin = resolveSkin((article as any).designSkin)
+  const skinCls = getSkinClasses(skin, 'violet')
+  const hub = skin === 'hub'
   const tldrSection = sections['tldr']
   const faqSection = sections['faq']
   const bodySections = Object.entries(sections).filter(
@@ -528,7 +534,7 @@ export function PromptBitesPostClient({ slug, lang, articleData, availableLangs,
   )
 
   return (
-    <div className="min-h-screen bg-surface pt-24 pb-20 px-4 sm:px-6">
+    <div className={`min-h-screen ${hub ? skinCls.page : 'bg-surface'} pt-24 pb-20 px-4 sm:px-6`}>
       <div className="max-w-2xl mx-auto">
 
         {/* Breadcrumb + language switcher */}
@@ -553,12 +559,12 @@ export function PromptBitesPostClient({ slug, lang, articleData, availableLangs,
 
         {/* Title */}
         <h1 className="prompt-bite-h1 text-3xl sm:text-4xl font-bold text-text-primary mb-3 leading-tight">
-          {article.title}
+          {renderHubTitle(article.title ?? '', skin, lang)}
         </h1>
 
         {/* Lead Answer Block — canonical definition for AI crawlers */}
         {article.leadAnswerBlock && (
-          <div className="bg-primary/5 border-l-4 border-primary rounded-r-xl px-5 py-4 mb-6">
+          <div className={skinCls.leadBlock}>
             <p
               className="text-text-primary font-semibold leading-relaxed"
               dangerouslySetInnerHTML={{ __html: mdLinksToHtml(article.leadAnswerBlock, lang) }}
@@ -571,7 +577,7 @@ export function PromptBitesPostClient({ slug, lang, articleData, availableLangs,
           <div className="mb-8">
             <time
               dateTime={(article as any).dateModified ?? (article as any).publishDate}
-              className="inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-300 text-emerald-700 px-2.5 py-0.5 rounded-full text-xs font-semibold"
+              className={hub ? skinCls.updatedBadge : 'inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-300 text-emerald-700 px-2.5 py-0.5 rounded-full text-xs font-semibold'}
             >
               <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
@@ -630,8 +636,8 @@ export function PromptBitesPostClient({ slug, lang, articleData, availableLangs,
 
         {/* Quick Answer block */}
         {quickAnswer && (
-          <div className="rounded-xl border-2 border-primary/20 bg-primary/5 p-6 mb-8">
-            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">
+          <div className={hub ? 'rounded-xl border-2 border-hub-violet-edge bg-hub-violet-tint p-6 mb-8' : 'rounded-xl border-2 border-primary/20 bg-primary/5 p-6 mb-8'}>
+            <p className={hub ? 'text-xs font-bold uppercase tracking-widest text-hub-violet-ink mb-3' : 'text-xs font-bold uppercase tracking-widest text-primary mb-3'}>
               {QUICK_ANSWER_LABEL[lang]}
             </p>
             <p className="prompt-bite-answer text-text-primary leading-relaxed mb-4">
@@ -666,7 +672,7 @@ export function PromptBitesPostClient({ slug, lang, articleData, availableLangs,
 
         {/* TLDR */}
         {tldrSection?.isTldr && tldrSection.items && tldrSection.items.length > 0 && tldrSection.items[0] !== 'TBD' && (
-          <TldrSection items={tldrSection.items} lang={lang} />
+          <TldrSection items={tldrSection.items} lang={lang} skin={skin} />
         )}
 
         {/* Body sections */}

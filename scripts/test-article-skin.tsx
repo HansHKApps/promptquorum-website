@@ -11,7 +11,8 @@ import { LocalLLMsPostClient } from '../src/components/LocalLLMsPostClient'
 import { PromptEngineeringPostClient } from '../src/components/PromptEngineeringPostClient'
 import { SmartHomePostClient } from '../src/components/SmartHomePostClient'
 import { BalconySolarPostClient } from '../src/components/BalconySolarPostClient'
-import { ARTICLES, LOCAL_LLM_ARTICLES, PE_ARTICLES, SMART_HOME_ARTICLES, BALCONY_ARTICLES } from './_skin-articles'
+import { PromptBitesPostClient } from '../src/components/PromptBitesPostClient'
+import { ARTICLES, LOCAL_LLM_ARTICLES, PE_ARTICLES, SMART_HOME_ARTICLES, BALCONY_ARTICLES, PROMPT_BITES_ARTICLES } from './_skin-articles'
 import { resolveAll } from '../src/components/local-ai-directory/directory-i18n'
 
 const strip = (h: string) => h.replace(/<span class="hub-h1-hl[^"]*">([^<]*)<\/span>/g, '$1').replace(/\sclass="[^"]*"/g, '')
@@ -88,7 +89,7 @@ for (const [slug, data] of Object.entries(PE_ARTICLES)) {
   }
 }
 // /smart-home/* and /balcony-solar/* render through their own clients; the flag is added for the "on" render.
-for (const [Client, set] of [[SmartHomePostClient, SMART_HOME_ARTICLES], [BalconySolarPostClient, BALCONY_ARTICLES]] as const) {
+for (const [Client, set] of [[SmartHomePostClient, SMART_HOME_ARTICLES], [BalconySolarPostClient, BALCONY_ARTICLES], [PromptBitesPostClient, PROMPT_BITES_ARTICLES]] as const) {
   for (const [slug, data] of Object.entries(set)) {
     for (const lang of Object.keys(data)) {
       const { designSkin: _drop, ...plain } = (data as any)[lang]

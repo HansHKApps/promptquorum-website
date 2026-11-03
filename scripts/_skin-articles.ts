@@ -10,4 +10,6 @@ import { article as smartMatter } from '../src/lib/smart-home/articles/matter-1-
 import { article as balconyKw } from '../src/lib/balcony-solar/articles/kleines-kraftwerk-balcony-solar'
 // Smart-home and balcony-solar articles do not carry the flag yet; the test adds it for the "on" render.
 export const SMART_HOME_ARTICLES: Record<string, Record<string, unknown>> = { 'matter-1-6-explained': smartMatter as any }
+import { article as biteCutoff } from '../src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates'
+export const PROMPT_BITES_ARTICLES: Record<string, Record<string, unknown>> = { 'ai-model-knowledge-cutoff-dates': biteCutoff as any }
 export const BALCONY_ARTICLES: Record<string, Record<string, unknown>> = { 'kleines-kraftwerk-balcony-solar': balconyKw as any }
