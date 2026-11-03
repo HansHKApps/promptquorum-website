@@ -352,6 +352,8 @@ After Steps 5 and 5.5 have left every locale block final, and before writing the
 /risk-checker src/lib/<cluster>/articles/<slug>.ts
 ```
 
+**Run it for real (owner rule 2026-11-03, HARD):** invoke the skill with the Skill tool (`risk-checker`, argument = the article path) — in subagents too. A hand-applied rubric, a grep pass or `npm run risk:scan` is not the gate and must not be reported as one; "PASS (manual)" is a failed run. Paste the skill's `Risk gate:` line and score into the Update Report. If the skill cannot be invoked, the run is INCOMPLETE and the page is not marked done or shipped. Any text edit after the run (even a first-screen trim) re-opens the gate for that file.
+
 It is read-only, needs no GSC data, and covers all locale blocks in one run (`~/.claude/skills/risk-checker/SKILL.md`; full rule text in `docs/GEO_WRITING_GUIDELINES.md` Rule 35b).
 
 **Gate rule:**
@@ -552,6 +554,7 @@ npm run test:article-skin           # same-DOM guard for the hub skin
 
 - Any `INCOMPLETE` line is a failed run: fix it (usually Step 4.9, `designSkin: 'hub'` in all 9 locales) and re-run. Never hand back a "done" with an open line.
 - **Every 3rd page-updater run** (count them in the update report: "Run N since last sweep") also run the full sweep: `npm run check:page-updater -- --all`. It checks `designSkin` parity (all 9 locales or none) across every article in a skin-supporting cluster.
+- **No risk-checker report, no completion:** the Update Report must contain the risk-checker skill's gate line and score for every changed article file (Step 5.7). Missing or "manual" = INCOMPLETE.
 - Put both outputs in the Update Report under "Completion check".
 
 ## Slide Decks and PDF Reference Cards
