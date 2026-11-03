@@ -3840,7 +3840,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Qwen 3 vs Llama 4 vs Mistral Small 24B: 2026 벤치마크 비교',
         'description': '전체 벤치마크 비교: Qwen3.8-27B(61.7 SWE-bench Pro, 24 GB 최고), Llama 4 Scout(MoE, 10M 컨텍스트, ~55 GB VRAM), Mistral Small 24B + 레거시 Mistral 24B/Qwen3 14B/Llama 3.1 8B.',
-        'url': 'https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral',
+        'url': 'https://www.promptquorum.com/ko/local-llms/qwen-vs-llama-vs-mistral',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'datePublished': '2026-04-04',
         'dateModified': '2026-08-28',
