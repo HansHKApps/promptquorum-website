@@ -20635,5 +20635,1044 @@
       "t14": "2026-11-16",
       "t28": "2026-11-30"
     }
+  },
+  {
+    "id": "39567ec0-3b3d-4118-b057-ca85042f5d0d",
+    "slug": "/balcony-solar/kleines-kraftwerk-balcony-solar",
+    "date": "2026-11-02T20:46:59.294Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Kleines Kraftwerk Balcony Solar Company Profile",
+        "new": "Kleines Kraftwerk Profile: Founders, Kits, Shipping"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Company profile for Kleines Kraftwerk: history, ownership, and product range in the balcony solar market.",
+        "new": "Independent profile of Kleines Kraftwerk from Achim: founders, plug-in solar kits with Anker SOLIX storage, shipping only in Germany and the 800 VA rule."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (kleines-kraftwerk-balcony-solar); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "kleineskraftwerk",
+      "kleines kraftwerk",
+      "liefern sie auch in die schweiz"
+    ],
+    "baseline": {
+      "position": 6.6,
+      "impressions": 4194,
+      "clicks": 2,
+      "ctr": 0.0004768717215069146,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "5e62e597-10fa-4e24-b1f5-6a7154a8d79a",
+    "slug": "/de/balcony-solar/kleines-kraftwerk-balcony-solar",
+    "date": "2026-11-02T20:46:59.396Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Kleines Kraftwerk: Firmenprofil im Balkonkraftwerk-Markt",
+        "new": "Kleines Kraftwerk Profil: Gründer, Sets, Versand"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Firmenprofil zu Kleines Kraftwerk: Geschichte, Eigentümerstruktur und Produktangebot im deutschen Balkonkraftwerk-Markt, laut offiziellen Angaben.",
+        "new": "Unabhängiges Profil von Kleines Kraftwerk aus Achim: Gründer, Balkonkraftwerk-Sets mit Anker-SOLIX-Speicher, Versand nur in Deutschland, 800-VA-Grenze."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (kleines-kraftwerk-balcony-solar); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "kleineskraftwerk",
+      "kleines kraftwerk",
+      "liefern sie auch in die schweiz"
+    ],
+    "baseline": {
+      "position": 6.6,
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e651554b-3b9b-4214-92e8-c10f49a1476e",
+    "slug": "/fr/balcony-solar/kleines-kraftwerk-balcony-solar",
+    "date": "2026-11-02T20:46:59.498Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Kleines Kraftwerk : Profil d'entreprise solaire de balcon",
+        "new": "Kleines Kraftwerk : fondateurs, kits et livraison"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Profil d'entreprise de Kleines Kraftwerk : histoire, actionnariat et gamme de produits complète sur le marché du solaire de balcon en Allemagne.",
+        "new": "Profil indépendant de Kleines Kraftwerk : fondateurs, kits solaires avec stockage Anker SOLIX, livraison uniquement en Allemagne et limite de 800 VA."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (kleines-kraftwerk-balcony-solar); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "kleineskraftwerk",
+      "kleines kraftwerk",
+      "liefern sie auch in die schweiz"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "fb51fba9-3c48-4957-adc2-e80039de891f",
+    "slug": "/ja/balcony-solar/kleines-kraftwerk-balcony-solar",
+    "date": "2026-11-02T20:46:59.615Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "クレイネス・クラフトヴェルク:バルコニーソーラー企業プロフィール",
+        "new": "Kleines Kraftwerk:創業者・キット・配送"
+      },
+      {
+        "field": "metaDescription",
+        "old": "クレイネス・クラフトヴェルクの企業プロフィールです。ドイツのバルコニーソーラー市場における沿革、所有構造、および製品ラインナップの詳細を、公開情報に基づいて解説します。",
+        "new": "ドイツのAchim拠点Kleines Kraftwerkの独立プロフィール。創業者、Anker SOLIX蓄電付きプラグイン式ソーラーキット、ドイツ国内限定の配送、800 VA上限を解説します。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (kleines-kraftwerk-balcony-solar); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "kleineskraftwerk",
+      "kleines kraftwerk",
+      "liefern sie auch in die schweiz"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d8bb60d6-287b-4950-9b28-4e3e959c7f80",
+    "slug": "/zh/balcony-solar/kleines-kraftwerk-balcony-solar",
+    "date": "2026-11-02T20:46:59.723Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Kleines Kraftwerk 阳台光伏公司档案与产品概况",
+        "new": "Kleines Kraftwerk:创始人、套件与配送"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Kleines Kraftwerk公司档案:详细介绍其成立背景、发展历程、股权结构,以及在德国阳台光伏市场的产品线与主要供应商合作情况。",
+        "new": "位于德国Achim的Kleines Kraftwerk独立档案:创始人、搭配Anker SOLIX储能的即插即用光伏套件、仅限德国境内配送,以及800 VA上限规则。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (kleines-kraftwerk-balcony-solar); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "kleineskraftwerk",
+      "kleines kraftwerk",
+      "liefern sie auch in die schweiz"
+    ],
+    "baseline": {
+      "position": 8.7,
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "06e161d6-de07-4a56-8b4c-208f09743e36",
+    "slug": "/es/balcony-solar/kleines-kraftwerk-balcony-solar",
+    "date": "2026-11-02T20:46:59.829Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Kleines Kraftwerk: perfil de empresa solar de balcón",
+        "new": "Kleines Kraftwerk: fundadores, kits y envíos en Alemania"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Perfil de la empresa Kleines Kraftwerk: historia, estructura de propiedad y gama de productos en el mercado de energía solar de balcón en Alemania.",
+        "new": "Perfil independiente de Kleines Kraftwerk (Achim): fundadores, kits solares con almacenamiento Anker SOLIX, envíos solo en Alemania y límite de 800 VA."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (kleines-kraftwerk-balcony-solar); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "kleineskraftwerk",
+      "kleines kraftwerk",
+      "liefern sie auch in die schweiz"
+    ],
+    "baseline": {
+      "position": 3.5,
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "f0988e24-3303-4dda-b15c-061db7a1b63e",
+    "slug": "/pt/balcony-solar/kleines-kraftwerk-balcony-solar",
+    "date": "2026-11-02T20:46:59.933Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Kleines Kraftwerk: perfil da empresa solar de varanda",
+        "new": "Kleines Kraftwerk: fundadores, kits e entrega na Alemanha"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Perfil da empresa Kleines Kraftwerk: história, estrutura societária e linha de produtos no mercado de energia solar de varanda na Alemanha.",
+        "new": "Perfil independente da Kleines Kraftwerk (Achim): fundadores, kits solares com armazenamento Anker SOLIX, entrega só na Alemanha e limite de 800 VA."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (kleines-kraftwerk-balcony-solar); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "kleineskraftwerk",
+      "kleines kraftwerk",
+      "liefern sie auch in die schweiz"
+    ],
+    "baseline": {
+      "position": 6.7,
+      "impressions": 169,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c55f4b51-4a22-477a-abd5-072d2ca3ab54",
+    "slug": "/ar/balcony-solar/kleines-kraftwerk-balcony-solar",
+    "date": "2026-11-02T20:47:00.041Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Kleines Kraftwerk: ملف شركة الطاقة الشمسية للشرفات",
+        "new": "Kleines Kraftwerk: المؤسسان والأطقم والشحن"
+      },
+      {
+        "field": "metaDescription",
+        "old": "ملف شركة Kleines Kraftwerk: التاريخ، هيكل الملكية، ومجموعة المنتجات الكاملة في سوق الطاقة الشمسية للشرفات في ألمانيا.",
+        "new": "ملف مستقل عن Kleines Kraftwerk في أخيم: المؤسسان، وأطقم الطاقة الشمسية الجاهزة للتوصيل مع تخزين Anker SOLIX، والشحن داخل ألمانيا فقط، وحد 800 VA."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (kleines-kraftwerk-balcony-solar); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "kleineskraftwerk",
+      "kleines kraftwerk",
+      "liefern sie auch in die schweiz"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "5df3da52-b084-4486-83b9-fecceb32f46f",
+    "slug": "/ko/balcony-solar/kleines-kraftwerk-balcony-solar",
+    "date": "2026-11-02T20:47:00.149Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Kleines Kraftwerk: 발코니 태양광 기업 프로필",
+        "new": "Kleines Kraftwerk: 창업자·키트·배송 정보"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Kleines Kraftwerk의 기업 프로필입니다. 독일 발코니 태양광 시장에서의 연혁, 소유 구조, 제품 라인업을 소개합니다.",
+        "new": "독일 Achim의 Kleines Kraftwerk 독립 프로필입니다. 창업자, Anker SOLIX 저장장치 포함 플러그인 태양광 키트, 독일 내 배송 한정, 800 VA 상한을 소개합니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (kleines-kraftwerk-balcony-solar); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "kleineskraftwerk",
+      "kleines kraftwerk",
+      "liefern sie auch in die schweiz"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "712482e3-23eb-48a4-9896-a71d859adde3",
+    "slug": "/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
+    "date": "2026-11-02T20:47:00.270Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Local Platforms for Balcony Solar: HA vs ioBroker vs EVCC (2026)",
+        "new": "Balcony Solar: Home Assistant and EVCC Alternatives"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Compare the best local platforms for balcony solar: Home Assistant vs ioBroker vs EVCC vs Solar Assistant vs openHAB — protocols, control vs. monitor, setup difficulty, cost.",
+        "new": "Compare Home Assistant, ioBroker, openHAB, EVCC, Solar Assistant and Node-RED for balcony solar: protocols, control vs. monitoring, setup effort and cost."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (local-platforms-balcony-solar-home-assistant-alternatives); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "evcc alternative",
+      "iobroker alternative",
+      "evcc alternative home assistant",
+      "home assistant vs iobroker vs openhab"
+    ],
+    "baseline": {
+      "position": 5.39,
+      "impressions": 463,
+      "clicks": 4,
+      "ctr": 0.008639308855291577,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "de307fbc-81eb-42dd-8fb2-1e55b43ad01b",
+    "slug": "/de/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
+    "date": "2026-11-02T20:47:00.374Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Lokale Plattformen für Balkonkraftwerk: HA vs ioBroker vs EVCC (2026)",
+        "new": "Balkonkraftwerk: Alternativen zu Home Assistant & EVCC"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Vergleich der besten lokalen Plattformen für Balkonkraftwerke: Home Assistant vs. ioBroker vs. EVCC vs. Solar Assistant vs. openHAB — Protokolle, Steuerung vs. Monitoring, Schwierigkeitsgrad, Kosten.",
+        "new": "Alternativen zu Home Assistant und EVCC fürs Balkonkraftwerk: ioBroker, openHAB, Node-RED und Solar Assistant im Vergleich – lokal, mit Kosten und Aufwand."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (local-platforms-balcony-solar-home-assistant-alternatives); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "evcc alternative",
+      "iobroker alternative",
+      "evcc alternative home assistant",
+      "home assistant vs iobroker vs openhab"
+    ],
+    "baseline": {
+      "position": 6.97,
+      "impressions": 607,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "5a5bf795-0ce4-4c46-99c9-6ade7bf29a58",
+    "slug": "/ar/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
+    "date": "2026-11-02T20:47:00.477Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "المنصات المحلية للطاقة الشمسية في الشرفة: HA مقابل ioBroker مقابل EVCC (2026)",
+        "new": "بدائل Home Assistant وEVCC للطاقة الشمسية في الشرفة"
+      },
+      {
+        "field": "metaDescription",
+        "old": "قارن بين أفضل المنصات المحلية للطاقة الشمسية في الشرفة: Home Assistant مقابل ioBroker مقابل EVCC مقابل Solar Assistant مقابل openHAB — البروتوكولات، التحكم أو المراقبة، صعوبة الإعداد، التكلفة.",
+        "new": "قارن بدائل Home Assistant وEVCC للطاقة الشمسية في الشرفة: ioBroker وopenHAB وNode-RED وSolar Assistant، مع التشغيل المحلي والتكلفة وجهد الإعداد."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (local-platforms-balcony-solar-home-assistant-alternatives); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "evcc alternative",
+      "iobroker alternative",
+      "evcc alternative home assistant",
+      "home assistant vs iobroker vs openhab"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "71450b69-bd52-4a4a-b39e-a2963165c8a7",
+    "slug": "/es/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
+    "date": "2026-11-02T20:47:00.581Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Plataformas Locales para Solar de Balcón: HA vs ioBroker vs EVCC (2026)",
+        "new": "Solar de balcón: alternativas a Home Assistant y EVCC"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Compara las mejores plataformas locales para solar de balcón: Home Assistant vs ioBroker vs EVCC vs Solar Assistant vs openHAB — protocolos, control vs. monitoreo, dificultad de configuración, costo.",
+        "new": "Alternativas a Home Assistant y EVCC para solar de balcón: ioBroker, openHAB, Node-RED y Solar Assistant comparados, en local, con coste y esfuerzo."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (local-platforms-balcony-solar-home-assistant-alternatives); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "evcc alternative",
+      "iobroker alternative",
+      "evcc alternative home assistant",
+      "home assistant vs iobroker vs openhab"
+    ],
+    "baseline": {
+      "position": 5.1,
+      "impressions": 14,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "57d05cbc-33a2-4f87-b229-fb4531b9c212",
+    "slug": "/fr/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
+    "date": "2026-11-02T20:47:00.686Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Plateformes locales pour solaire balcon : HA vs ioBroker vs EVCC (2026)",
+        "new": "Solaire balcon : alternatives à Home Assistant et EVCC"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Comparez les meilleures plateformes locales pour le solaire balcon : Home Assistant vs ioBroker vs EVCC vs Solar Assistant vs openHAB — protocoles, contrôle ou monitoring, difficulté de configuration, coût.",
+        "new": "Alternatives à Home Assistant et EVCC pour le solaire balcon : ioBroker, openHAB, Node-RED et Solar Assistant comparés, en local, avec coût et effort."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (local-platforms-balcony-solar-home-assistant-alternatives); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "evcc alternative",
+      "iobroker alternative",
+      "evcc alternative home assistant",
+      "home assistant vs iobroker vs openhab"
+    ],
+    "baseline": {
+      "position": 8.5,
+      "impressions": 4,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "45102072-0f43-410f-b511-8cbf1d62975a",
+    "slug": "/ja/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
+    "date": "2026-11-02T20:47:00.791Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "バルコニー太陽光のローカルプラットフォーム比較：HA vs ioBroker vs EVCC（2026）",
+        "new": "バルコニー太陽光：Home Assistantの代替比較"
+      },
+      {
+        "field": "metaDescription",
+        "old": "バルコニー太陽光向けローカルプラットフォームを比較：Home Assistant vs ioBroker vs EVCC vs Solar Assistant vs openHAB — プロトコル、制御とモニタリング、設定難易度、コスト。",
+        "new": "バルコニー太陽光向けに、Home AssistantとEVCCの代替としてioBroker、openHAB、Node-RED、Solar Assistantを比較。ローカル運用、コスト、設定の手間を整理。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (local-platforms-balcony-solar-home-assistant-alternatives); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "evcc alternative",
+      "iobroker alternative",
+      "evcc alternative home assistant",
+      "home assistant vs iobroker vs openhab"
+    ],
+    "baseline": {
+      "position": 9.8,
+      "impressions": 4,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "cd10f34d-1c3b-49bd-883b-f2f56d5523fa",
+    "slug": "/ko/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
+    "date": "2026-11-02T20:47:00.895Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "발코니 태양광 로컬 플랫폼: HA vs ioBroker vs EVCC (2026)",
+        "new": "발코니 태양광: Home Assistant 대안 비교"
+      },
+      {
+        "field": "metaDescription",
+        "old": "발코니 태양광을 위한 최고의 로컬 플랫폼 비교: Home Assistant vs ioBroker vs EVCC vs Solar Assistant vs openHAB — 프로토콜, 제어 대 모니터링, 설정 난이도, 비용.",
+        "new": "발코니 태양광용 Home Assistant와 EVCC 대안으로 ioBroker, openHAB, Node-RED, Solar Assistant를 로컬 운영, 비용, 설정 난이도로 비교합니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (local-platforms-balcony-solar-home-assistant-alternatives); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "evcc alternative",
+      "iobroker alternative",
+      "evcc alternative home assistant",
+      "home assistant vs iobroker vs openhab"
+    ],
+    "baseline": {
+      "position": 8.2,
+      "impressions": 10,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6f3f9a30-0395-46f2-8ad1-0301412148a9",
+    "slug": "/pt/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
+    "date": "2026-11-02T20:47:01.001Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Plataformas Locais para Solar de Varanda: HA vs ioBroker vs EVCC (2026)",
+        "new": "Solar de varanda: alternativas ao Home Assistant e EVCC"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Compare as melhores plataformas locais para solar de varanda: Home Assistant vs ioBroker vs EVCC vs Solar Assistant vs openHAB — protocolos, controle vs. monitoramento, dificuldade de configuração, custo.",
+        "new": "Alternativas ao Home Assistant e ao EVCC para solar de varanda: ioBroker, openHAB, Node-RED e Solar Assistant comparados, em local, com custo e esforço."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (local-platforms-balcony-solar-home-assistant-alternatives); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "evcc alternative",
+      "iobroker alternative",
+      "evcc alternative home assistant",
+      "home assistant vs iobroker vs openhab"
+    ],
+    "baseline": {
+      "position": 17,
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ba1e72d7-ba82-424f-bb6a-fafffe90b15d",
+    "slug": "/zh/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
+    "date": "2026-11-02T20:47:01.104Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "阳台光伏本地平台：HA vs ioBroker vs EVCC 对比（2026）",
+        "new": "阳台光伏：Home Assistant替代方案对比"
+      },
+      {
+        "field": "metaDescription",
+        "old": "阳台光伏最佳本地平台对比：Home Assistant vs ioBroker vs EVCC vs Solar Assistant vs openHAB——协议支持、控制与监控、配置难度、费用。",
+        "new": "阳台光伏的本地平台对比：Home Assistant与EVCC的替代方案ioBroker、openHAB、Node-RED、Solar Assistant，涵盖本地运行、费用与配置难度。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (local-platforms-balcony-solar-home-assistant-alternatives); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "evcc alternative",
+      "iobroker alternative",
+      "evcc alternative home assistant",
+      "home assistant vs iobroker vs openhab"
+    ],
+    "baseline": {
+      "position": 7.3,
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "f3959d9b-8fd5-4c66-b57e-b271d2350664",
+    "slug": "/prompt-bites/best-quantization-6gb-vram",
+    "date": "2026-11-02T20:47:01.226Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M for 7B models: 4.9 GB, fits 6 GB VRAM with 1.1 GB for context. Q5_K_M fits tight. Q6_K and above exceed 6 GB. Quick answer from PromptQuorum.",
+        "new": "Pick Q4_K_M for 8B models on 6 GB VRAM: a 4.6–5.0 GB file plus a 4k-token KV cache still fits. Q5_K_M is tight; Q6_K and Q8_0 do not fit. Sizes sourced."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-quantization-6gb-vram); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "how to choose quantization level llm vram requirements 6gb"
+    ],
+    "baseline": {
+      "position": 4.64,
+      "impressions": 530,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "87dcc928-b95d-4fb9-b657-44c480b2ac26",
+    "slug": "/de/prompt-bites/best-quantization-6gb-vram",
+    "date": "2026-11-02T20:47:01.327Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M für 7B-Modelle: 4,9 GB, passt mit 1,1 GB Puffer für Kontext. Q5_K_M passt knapp. Q6_K und höher überschreiten 6 GB. Schnelle Antwort von PromptQuorum.",
+        "new": "Q4_K_M für 8B-Modelle bei 6 GB VRAM: 4,6–5,0 GB Datei plus 4k-Token-KV-Cache passen noch. Q5_K_M ist knapp, Q6_K und Q8_0 passen nicht. Mit Quellen."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-quantization-6gb-vram); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "how to choose quantization level llm vram requirements 6gb"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "81913d0f-1be7-4aad-b411-8d76eeed73e2",
+    "slug": "/fr/prompt-bites/best-quantization-6gb-vram",
+    "date": "2026-11-02T20:47:01.428Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M pour les modèles 7B : 4,9 Go, tient dans 6 Go avec 1,1 Go pour le contexte. Q5_K_M tient juste. Q6_K et au-dessus dépassent 6 Go. Réponse rapide de PromptQuorum.",
+        "new": "Q4_K_M pour les modèles 8B avec 6 Go de VRAM : un fichier de 4.6–5.0 Go plus un cache KV de 4k tokens tient encore. Q5_K_M est juste ; Q6_K et Q8_0 non."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-quantization-6gb-vram); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "how to choose quantization level llm vram requirements 6gb"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e86989e3-078a-4297-b164-9e15439c567b",
+    "slug": "/ja/prompt-bites/best-quantization-6gb-vram",
+    "date": "2026-11-02T20:47:01.531Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "7B モデルの Q4_K_M：4.9 GB、6 GB VRAM に収まり 1.1 GB のコンテキスト余裕あり。Q5_K_M はギリギリ。Q6_K 以上は 6 GB を超過。PromptQuorum による簡潔な回答。",
+        "new": "6 GB VRAMの8BモデルはQ4_K_Mが適合：4.6〜5.0 GBのファイルに4kトークンのKVキャッシュを足しても収まります。Q5_K_Mは余裕なし、Q6_K以上は不可。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-quantization-6gb-vram); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "how to choose quantization level llm vram requirements 6gb"
+    ],
+    "baseline": {
+      "position": 7.2,
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d6e02be8-cdd2-4447-b31a-e2c152d809cc",
+    "slug": "/zh/prompt-bites/best-quantization-6gb-vram",
+    "date": "2026-11-02T20:47:01.631Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "7B 模型 Q4_K_M：4.9 GB，6 GB 显存可容纳并留 1.1 GB 用于上下文。Q5_K_M 勉强能放。Q6_K 及以上超出 6 GB。PromptQuorum 快速解答。",
+        "new": "6 GB 显存跑 8B 模型选 Q4_K_M：4.6–5.0 GB 的文件加上 4k tokens 的 KV 缓存仍可容纳。Q5_K_M 余量很小，Q6_K 及以上放不下。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-quantization-6gb-vram); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "how to choose quantization level llm vram requirements 6gb"
+    ],
+    "baseline": {
+      "position": 1,
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d8b55706-815f-489f-9197-1e92abea4eb4",
+    "slug": "/pt/prompt-bites/best-quantization-6gb-vram",
+    "date": "2026-11-02T20:47:01.733Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M para modelos 7B: 4,9 GB, cabe em 6 GB de VRAM com 1,1 GB para contexto. Q5_K_M cabe justo; Q6_K e superiores ultrapassam 6 GB. Resposta rápida.",
+        "new": "Q4_K_M para modelos 8B com 6 GB de VRAM: um arquivo de 4.6–5.0 GB mais cache KV de 4k tokens ainda cabe. Q5_K_M fica apertado; Q6_K e Q8_0 não cabem."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-quantization-6gb-vram); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "how to choose quantization level llm vram requirements 6gb"
+    ],
+    "baseline": {
+      "position": 4,
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "fc436534-2dd2-45cf-8827-89620cadcab7",
+    "slug": "/es/prompt-bites/best-quantization-6gb-vram",
+    "date": "2026-11-02T20:47:01.838Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M para modelos 7B: 4,9 GB, cabe en 6 GB de VRAM con 1,1 GB para contexto. Q5_K_M cabe justo; Q6_K y superiores superan los 6 GB. Respuesta rápida.",
+        "new": "Q4_K_M para modelos 8B con 6 GB de VRAM: un archivo de 4.6–5.0 GB más una caché KV de 4k tokens aún cabe. Q5_K_M queda justo; Q6_K y Q8_0 no caben."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-quantization-6gb-vram); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "how to choose quantization level llm vram requirements 6gb"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "4dcd3bd6-7519-4dda-aad0-61ab65250c18",
+    "slug": "/ar/prompt-bites/best-quantization-6gb-vram",
+    "date": "2026-11-02T20:47:01.939Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "⁨Q4⁩_⁨K⁩_⁨M⁩ لنماذج ⁨7B/8B⁩ يستخدم ⁨4.7⁩–⁨4.9 GB⁩ ويترك ⁨1.1 GB⁩ لذاكرة ⁨KV. Q5⁩_⁨K⁩_⁨M⁩ يتسع بـ⁨5.7 GB⁩ فقط مع تقليل السياق إلى ⁨2k. Q6⁩_⁨K⁩ يتجاوز ⁨6 GB⁩.",
+        "new": "اختر Q4_K_M لنماذج 8B مع 6 GB VRAM: ملف بحجم 4.6–5.0 GB مع ذاكرة KV لسياق 4k رمز يتسع. Q5_K_M ضيق، و Q6_K و Q8_0 لا يتسعان."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-quantization-6gb-vram); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "how to choose quantization level llm vram requirements 6gb"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "f13ee706-4d55-458d-82bf-d4d766f6a13e",
+    "slug": "/ko/prompt-bites/best-quantization-6gb-vram",
+    "date": "2026-11-02T20:47:02.039Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "7B/8B 모델의 Q4_K_M은 4.7~4.9GB를 사용하여 KV 캐시에 1.1GB를 남깁니다. Q5_K_M은 5.7GB로 컨텍스트를 2k로 제한해야 합니다. Q6_K 이상은 6GB를 초과합니다.",
+        "new": "6GB VRAM의 8B 모델에는 Q4_K_M이 적합합니다. 4.6~5.0GB 파일과 4k 토큰 KV 캐시가 들어갑니다. Q5_K_M은 여유가 없고 Q6_K 이상은 불가합니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (best-quantization-6gb-vram); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "how to choose quantization level llm vram requirements 6gb"
+    ],
+    "baseline": {
+      "position": 9,
+      "impressions": 6,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "028c9bcc-e057-43b3-b597-f38738e41705",
+    "slug": "/local-llms/page-assist-review",
+    "date": "2026-11-02T20:47:02.154Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Page Assist Review 2026: Local AI Browser Sidebar",
+        "new": "Page Assist Review 2026: Local AI Browser Extension"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (page-assist-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "page assist",
+      "page assist firefox",
+      "page assist chrome extension"
+    ],
+    "baseline": {
+      "position": 7.6,
+      "impressions": 838,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d 2026-10-06..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d32f2fff-764d-49ba-80dd-c9b87e829e73",
+    "slug": "/ja/local-llms/page-assist-review",
+    "date": "2026-11-02T20:47:02.256Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Page AssistはGitHubスター8,200以上の無料・MITライセンスのブラウザ拡張機能で、ローカルAIモデルやウェブページとチャットできます。インストールリンクと2026年レビュー。",
+        "new": "Page Assistの使い方を解説。Chrome・Firefox・Edge対応の無料MIT拡張機能で、Ollamaなどのローカルモデルとチャット。インストール手順と2026年レビュー。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (page-assist-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "page assist",
+      "page assist firefox",
+      "page assist chrome extension"
+    ],
+    "baseline": {
+      "position": 6.8,
+      "impressions": 443,
+      "clicks": 17,
+      "ctr": 0.03837471783295711,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "954bd9b9-0d0e-4e25-85d4-deda15afada6",
+    "slug": "/zh/local-llms/page-assist-review",
+    "date": "2026-11-02T20:47:02.357Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Page Assist是一款免费、MIT许可的浏览器扩展，GitHub星标超8,200，可与本地AI模型和网页对话。附安装链接及2026评测。",
+        "new": "Page Assist是免费、MIT许可的浏览器扩展，支持Chrome、Firefox和Edge，可通过Ollama与本地AI模型对话。含安装链接、使用方法及2026评测。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (page-assist-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "page assist",
+      "page assist firefox",
+      "page assist chrome extension"
+    ],
+    "baseline": {
+      "position": 10,
+      "impressions": 84,
+      "clicks": 2,
+      "ctr": 0.023809523809523808,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "34e7b391-ee05-40b4-b992-0bab2a1e7083",
+    "slug": "/es/local-llms/page-assist-review",
+    "date": "2026-11-02T20:47:02.457Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Page Assist: análisis 2026 de la sidebar de IA local",
+        "new": "Page Assist: análisis 2026 de la extensión de IA local"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (page-assist-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "page assist",
+      "page assist firefox",
+      "page assist chrome extension"
+    ],
+    "baseline": {
+      "position": 7.1,
+      "impressions": 274,
+      "clicks": 3,
+      "ctr": 0.010948905109489052,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "0265c06e-13ff-4098-8ae9-dc905965af5a",
+    "slug": "/ko/local-llms/page-assist-review",
+    "date": "2026-11-02T20:47:02.558Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Page Assist는 GitHub 스타 8,200개 이상의 무료 MIT 라이선스 브라우저 확장 프로그램으로, 로컬 AI 모델 및 웹페이지와 채팅할 수 있습니다. 설치 링크와 2026년 리뷰.",
+        "new": "Page Assist는 Chrome, Firefox, Edge에서 Ollama 등 로컬 AI 모델과 채팅하는 무료 MIT 브라우저 확장 프로그램입니다. 설치 링크와 2026년 리뷰."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (page-assist-review); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "page assist",
+      "page assist firefox",
+      "page assist chrome extension"
+    ],
+    "baseline": {
+      "position": 8,
+      "impressions": 64,
+      "clicks": 1,
+      "ctr": 0.015625,
+      "period": "90d 2026-08-05..2026-11-02"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "409d636e-124f-472a-841c-077c0a6cf7f5",
+    "slug": "/prompt-bites/q4-k-m-vs-q8-0",
+    "date": "2026-11-03T04:00:03.283Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Use Q4_K_M with 8 GB VRAM or less. Use Q8_0 with 12+ GB. Q4_K_M delivers 95% of Q8_0 quality at half the size. Quick answer from PromptQuorum.",
+        "new": "Q4_K_M for 8 GB VRAM or less, Q8_0 for 12+ GB. On Llama 3 8B, Q4_K_M is 4.58 GiB at +2.8% perplexity vs f16; Q8_0 is 7.96 GiB at +0.02%. Sourced."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (q4-k-m-vs-q8-0); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "q4_k_m vs q8_0"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "14027d45-fdc7-45ee-9a1c-0f52c44a34d6",
+    "slug": "/de/prompt-bites/q4-k-m-vs-q8-0",
+    "date": "2026-11-03T04:00:03.378Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M bei 8 GB VRAM oder weniger, Q8_0 ab 12+ GB. Q4_K_M liefert 95 % der Q8_0-Qualität bei halbem Dateivolumen. Schnelle Antwort von PromptQuorum.",
+        "new": "Q4_K_M bei 8 GB VRAM oder weniger, Q8_0 ab 12+ GB. Bei Llama 3 8B ist Q4_K_M 4,58 GiB groß (+2,8 % Perplexität vs. f16), Q8_0 7,96 GiB (+0,02 %)."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (q4-k-m-vs-q8-0); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "q4_k_m vs q8_0"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "1b0ef4f5-b2ee-4876-8f77-8899a027699b",
+    "slug": "/fr/prompt-bites/q4-k-m-vs-q8-0",
+    "date": "2026-11-03T04:00:03.473Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Utilisez Q4_K_M avec 8 Go de VRAM ou moins. Utilisez Q8_0 avec 12+ Go. Q4_K_M offre 95 % de la qualité de Q8_0 à la moitié de la taille. Réponse rapide.",
+        "new": "Q4_K_M avec 8 Go de VRAM ou moins, Q8_0 dès 12 Go. Sur Llama 3 8B, Q4_K_M fait 4,58 GiB (+2,8 % de perplexité vs f16), Q8_0 7,96 GiB (+0,02 %)."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (q4-k-m-vs-q8-0); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "q4_k_m vs q8_0"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3162bedd-bca2-4b56-b320-3254ef9b026a",
+    "slug": "/ja/prompt-bites/q4-k-m-vs-q8-0",
+    "date": "2026-11-03T04:00:03.567Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "VRAM 8 GB以下ならQ4_K_M、12 GB以上ならQ8_0。Q4_K_MはQ8_0の95%の品質を半分のサイズで実現します。",
+        "new": "VRAM 8 GB以下ならQ4_K_M、12 GB以上ならQ8_0。Llama 3 8Bではf16比でQ4_K_Mは4.58 GiB・パープレキシティ+2.8%、Q8_0は7.96 GiB・+0.02%です。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (q4-k-m-vs-q8-0); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "q4_k_m vs q8_0"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "215261e5-bd3a-4a2a-a095-2c620e0d783b",
+    "slug": "/zh/prompt-bites/q4-k-m-vs-q8-0",
+    "date": "2026-11-03T04:00:03.660Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "显存8 GB或更少用Q4_K_M，12 GB以上用Q8_0。Q4_K_M以约一半文件大小提供Q8_0 95%的质量。",
+        "new": "显存8 GB或更少用Q4_K_M，12 GB以上用Q8_0。在Llama 3 8B上，Q4_K_M为4.58 GiB，困惑度比f16高2.8%；Q8_0为7.96 GiB，仅高0.02%。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (q4-k-m-vs-q8-0); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "q4_k_m vs q8_0"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a387dbc5-fec0-4c04-a349-4e4e0b41f8a2",
+    "slug": "/pt/prompt-bites/q4-k-m-vs-q8-0",
+    "date": "2026-11-03T04:00:03.753Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Use Q4_K_M com 8 GB de VRAM ou menos. Use Q8_0 com 12+ GB. Q4_K_M oferece 95% da qualidade do Q8_0 à metade do tamanho. Resposta rápida do PromptQuorum.",
+        "new": "Q4_K_M com 8 GB de VRAM ou menos, Q8_0 com 12+ GB. No Llama 3 8B, Q4_K_M tem 4,58 GiB (+2,8% de perplexidade vs f16); Q8_0 tem 7,96 GiB (+0,02%)."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (q4-k-m-vs-q8-0); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "q4_k_m vs q8_0"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "def1e348-51ba-428a-a8fa-0fd543ab43e1",
+    "slug": "/es/prompt-bites/q4-k-m-vs-q8-0",
+    "date": "2026-11-03T04:00:03.848Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Usa Q4_K_M con 8 GB de VRAM o menos. Usa Q8_0 con 12+ GB. Q4_K_M ofrece el 95% de la calidad de Q8_0 a la mitad del tamaño. Respuesta rápida de PromptQuorum.",
+        "new": "Q4_K_M con 8 GB de VRAM o menos, Q8_0 con 12+ GB. En Llama 3 8B, Q4_K_M ocupa 4,58 GiB (+2,8 % de perplejidad vs f16); Q8_0 ocupa 7,96 GiB (+0,02 %)."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (q4-k-m-vs-q8-0); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "q4_k_m vs q8_0"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d753592b-222f-47b1-b921-63ffcd5d155f",
+    "slug": "/ar/prompt-bites/q4-k-m-vs-q8-0",
+    "date": "2026-11-03T04:00:03.941Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "استخدم ⁨Q4⁩_⁨K⁩_⁨M⁩ مع ⁨8 GB VRAM⁩ أو أقل، و⁨Q8⁩_⁨0⁩ مع ⁨12+ GB⁩. يوفر ⁨Q4⁩_⁨K⁩_⁨M⁩ ⁨95%⁩ من جودة ⁨Q8⁩_⁨0⁩ بنصف الحجم.",
+        "new": "استخدم Q4_K_M مع 8 GB VRAM أو أقل، وQ8_0 مع 12+ GB. في Llama 3 8B حجم Q4_K_M هو 4.58 GiB (حيرة أعلى بـ 2.8% من f16) وحجم Q8_0 هو 7.96 GiB (+0.02%)."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (q4-k-m-vs-q8-0); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "q4_k_m vs q8_0"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3ed985ce-00a2-4302-9e69-018856043969",
+    "slug": "/ko/prompt-bites/q4-k-m-vs-q8-0",
+    "date": "2026-11-03T04:00:04.035Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "VRAM 8 GB 이하는 Q4_K_M, 12 GB 이상은 Q8_0을 사용하십시오. Q4_K_M은 절반 크기로 Q8_0 품질의 95%를 제공합니다.",
+        "new": "VRAM 8 GB 이하는 Q4_K_M, 12 GB 이상은 Q8_0. Llama 3 8B: Q4_K_M 4.58 GiB(퍼플렉시티 +2.8%), Q8_0 7.96 GiB(+0.02%)."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (q4-k-m-vs-q8-0); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "q4_k_m vs q8_0"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "3c61db13-26fc-42af-bdf0-584b036b5eef",
+    "slug": "/ar/prompt-bites/what-is-q4-k-m-quantization",
+    "date": "2026-11-03T04:00:04.140Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "⁨Q4⁩_⁨K⁩_⁨M⁩ يوفر جودة أعلى بـ ⁨5⁩–⁨8%⁩ من ⁨Q4⁩_⁨0⁩ بنفس حجم الملف. نموذج ⁨7B⁩ يحتاج ~⁨5.5 GB VRAM⁩. استخدمه افتراضيًا في ⁨Ollama⁩ بدلًا من ⁨Q4⁩_⁨0⁩ أو ⁨Q8⁩_⁨0⁩.",
+        "new": "Q4_K_M تكميم 4-bit من عائلة k-quant بجودة متوسطة: حيرة أقل من Q4_0 وحجم أصغر من Q8_0. ملف Llama 3.1 8B بصيغته 4.58 GiB. استخدمه افتراضيًا في Ollama."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 6 (what-is-q4-k-m-quantization); per-locale GSC rule, 28d to 2026-11-02",
+    "queries": [
+      "what is q4_k_m quantization"
+    ],
+    "baseline": null,
+    "deployedAt": null
   }
 ]

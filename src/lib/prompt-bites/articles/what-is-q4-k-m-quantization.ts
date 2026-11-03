@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
     title: 'What Is Q4_K_M Quantization?',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-03',
     seoTitle: 'Q4_K_M Quantization Guide 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M means 4-bit k-quant at medium quality. Better than Q4_0, smaller than Q8_0. Use Q4_K_M as your default for Ollama. Quick guide from PromptQuorum.',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-en.webp',
@@ -25,60 +25,60 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         answer: 'Q4_K_M means 4-bit quantization using k-quant (K) compression at medium (M) quality. It is the best default for most models: better quality than Q4_0, smaller than Q8_0.',
         bullets: [
           'Q = quantized, 4 = 4-bit, K = k-quant, M = medium',
-          'Better quality than Q4_0 at the same file size',
+          'Lower perplexity than Q4_0 (6.41 vs 6.70 on Llama 3 8B) for a file 0.24 GiB larger',
           'Use Q4_K_M as your default quantization',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-11',
       },
       de: {
         question: 'Was bedeutet Q4_K_M-Quantisierung?',
-        answer: 'Q4_K_M = 4-Bit-Quantisierung mit K-Quant-Kompression auf mittlerem Qualitätsniveau. Besser als Q4_0 bei gleicher Dateigröße, kleiner als Q8_0. Verwenden Sie es als Standard.',
+        answer: 'Q4_K_M = 4-Bit-Quantisierung mit K-Quant-Kompression auf mittlerem Qualitätsniveau. Niedrigere Perplexität als Q4_0, kleiner als Q8_0. Verwenden Sie es als Standard.',
         bullets: [
           'Q = quantisiert, 4 = 4 Bit, K = K-Quant, M = mittel',
-          'Bessere Qualität als Q4_0 bei gleicher Dateigröße',
+          'Niedrigere Perplexität als Q4_0 (6,41 vs. 6,70 bei Llama 3 8B) bei einer um 0,24 GiB größeren Datei',
           'Q4_K_M als Standard-Quantisierung verwenden',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-11',
       },
       fr: {
         question: 'Qu\'est-ce que la quantisation Q4_K_M ?',
-        answer: 'Q4_K_M signifie quantisation 4 bits avec compression k-quant à qualité moyenne. Meilleure que Q4_0 à taille égale, plus petite que Q8_0. À utiliser comme standard.',
+        answer: 'Q4_K_M signifie quantisation 4 bits avec compression k-quant à qualité moyenne. Perplexité plus basse que Q4_0, plus petite que Q8_0. À utiliser comme standard.',
         bullets: [
           'Q = quantisé, 4 = 4 bits, K = k-quant, M = moyen',
-          'Meilleure qualité que Q4_0 à la même taille de fichier',
+          'Perplexité plus basse que Q4_0 (6,41 contre 6,70 sur Llama 3 8B) pour un fichier plus grand de 0,24 GiB',
           'Utiliser Q4_K_M comme quantisation par défaut',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-11',
       },
       ja: {
         question: 'Q4_K_M量化とは何ですか？',
         answer: 'Q4_K_MはK-Quant（K）圧縮を使用した4ビット量化で、品質は中程度（M）です。ほとんどのモデルのデフォルトとして最適：Q4_0より品質が高く、Q8_0より小さいです。',
         bullets: [
           'Q=量化済み、4=4ビット、K=K-Quant、M=中程度',
-          'Q4_0と同じファイルサイズでより高品質',
+          'Q4_0よりパープレキシティが低い（Llama 3 8Bで6.41対6.70）、ファイルは0.24 GiB大きい',
           'Q4_K_Mをデフォルトの量化として使用する',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-11',
       },
       zh: {
         question: 'Q4_K_M量化是什么？',
         answer: 'Q4_K_M表示使用K-Quant（K）压缩的4位量化，品质为中等（M）。这是大多数模型的最佳默认选择：质量优于Q4_0，文件大小小于Q8_0。',
         bullets: [
           'Q=量化，4=4位，K=K-Quant，M=中等',
-          '相同文件大小下质量优于Q4_0',
+          '困惑度低于Q4_0（Llama 3 8B上为6.41对6.70），文件大0.24 GiB',
           '将Q4_K_M作为默认量化格式使用',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-11',
       },
       es: {
         question: '¿Qué es la cuantización Q4_K_M?',
         answer: 'Q4_K_M significa cuantización de 4 bits con compresión k-quant (K) a calidad media (M). Es la mejor opción por defecto para la mayoría de modelos: mejor calidad que Q4_0, menor tamaño que Q8_0.',
         bullets: [
           'Q = cuantizado, 4 = 4 bits, K = k-quant, M = medio',
-          'Mejor calidad que Q4_0 al mismo tamaño de archivo',
+          'Menor perplejidad que Q4_0 (6,41 frente a 6,70 en Llama 3 8B) con un archivo 0,24 GiB mayor',
           'Usa Q4_K_M como cuantización predeterminada',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -86,18 +86,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Q4_K_M = 4-bit quantization with k-quant compression at medium quality — better than Q4_0 at the same file size',
-          'A 7B model at Q4_K_M fits in ~4.1 GB on disk and needs ~5.5 GB VRAM to run',
+          'Q4_K_M = 4-bit quantization with k-quant compression at medium quality — lower perplexity than Q4_0 for a slightly larger file',
+          'Llama 3.1 8B at Q4_K_M is 4.58 GiB on disk; with a 4k-token KV cache (about 0.5 GiB, calculated) it needs about 5.1 GiB of VRAM before runtime overhead',
           'Use Q4_K_M as your default — it delivers the best quality-per-gigabyte for most VRAM budgets',
         ],
       },
       body1: {
         title: 'What Each Letter in Q4_K_M Means',
         content: [
-          '<strong>Q4_K_M exists because old 4-bit formats (Q4_0) lost too much quality on critical weights.</strong> K-quant compression solves this by allocating more bits to weights that affect output most, and fewer bits to weights with minimal impact. The result: 5–8% better quality than Q4_0 at the same file size.',
-          'The "K" is the key differentiator. K-quant compression applies non-uniform bit allocation — critical weights get more bits, less important ones get fewer. This recovers 5–8% quality compared to the older Q4_0 format at the same file size.',
-          'The "M" is the quality setting within k-quant. Q4_K_S (small) is slightly smaller with lower quality. Q4_K_M (medium) is the best balance. Q4_K_L (large) is marginally better but rarely worth the extra size.',
-          '<strong>K-quant works by clustering weights and assigning bits based on importance.</strong> Top-importance clusters get 6 bits per weight. Mid-tier clusters get 4 bits. Low-importance clusters get 3 bits. The "M" tier averages 4.5 bits per weight across the model — explaining why Q4_K_M sits between Q4_K_S and Q5_K_M in both size and quality. For when the M tier is not enough, see <a href="/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
+          '<strong>Q4_K_M exists because the older 4-bit format Q4_0 loses more quality than necessary.</strong> On Llama 3 8B, llama.cpp\'s perplexity test gives 6.41 for Q4_K_M and 6.70 for Q4_0 (lower is better; f16 is 6.23), for a file that is 0.24 GiB larger (4.58 vs 4.34 GiB). Source: <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp perplexity README</a>.',
+          'The "K" marks the k-quant family introduced in <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp pull request #1684</a>. Q4_K_M mixes two tensor types: it uses 6-bit Q6_K for half of the attention.wv and feed_forward.w2 tensors and 4-bit Q4_K for all other tensors. On Llama 3.1 8B this averages 4.89 bits per weight (llama.cpp quantize README), above the nominal 4.',
+          'The "M" is the size variant within the family. Q4_K_S (small) uses Q4_K for every tensor: 4.36 GiB versus 4.58 GiB for Q4_K_M on Llama 3.1 8B, with higher perplexity (6.50 vs 6.41 on Llama 3 8B without an importance matrix). Q5_K_M is the next step up at 5.33 GiB.',
+          '<strong>K-quant works on blocks of weights.</strong> Q4_K groups 32 weights into a block and 8 blocks into a super-block, storing block scales and minimums with 6 bits, which is 4.5 bits per weight (pull request #1684). Q4_K_M lands at 4.89 because of its Q6_K tensors, which is why it sits between Q4_K_S (4.67) and Q5_K_M (5.70) in size. For when the M tier is not enough, see <a href="/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
         ],
         image: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-en.webp',
         imageCaption: 'What Each Letter in Q4_K_M Means -- Decoding the format name',
@@ -105,18 +105,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'How Q4_K_M Compares to Other Quantizations',
         content: [
-          'The table below shows the tradeoffs for a 7B model. Quality is relative to the full-precision Q8_0 baseline. Unless you have 12+ GB VRAM, Q4_K_M gives the best quality-per-gigabyte.',
+          'The table shows llama.cpp\'s Llama 3 8B perplexity test (wikitext, no importance matrix; lower is better). Percentages are calculated against f16 (6.2332). Q4_K_M adds under 3% perplexity at 4.58 GiB, about 58% of the Q8_0 file size (calculated: 4.58 / 7.96).',
           'For a direct comparison of Q4_K_M vs Q8_0, see the <a href="/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0 decision guide</a>. For the full quantization reference, see the <a href="/local-llms/quantization-levels-comparison" class="text-primary hover:underline">quantization levels comparison</a>.',
         ],
-        columns: ['Format', 'File Size (7B)', 'Quality vs Q8_0'],
+        columns: ['Format', 'Size, Llama 3 8B (GiB)', 'Perplexity (change vs f16)'],
         rows: [
-          { 'Format': 'Q4_0', 'File Size (7B)': '3.8 GB', 'Quality vs Q8_0': 'Baseline (~87%)' },
-          { 'Format': 'Q4_K_M', 'File Size (7B)': '4.1 GB', 'Quality vs Q8_0': '~92% (+5%)' },
-          { 'Format': 'Q5_K_M', 'File Size (7B)': '5.0 GB', 'Quality vs Q8_0': '~95% (+3%)' },
-          { 'Format': 'Q8_0', 'File Size (7B)': '7.7 GB', 'Quality vs Q8_0': '100% (reference)' },
+          { 'Format': 'Q4_0', 'Size, Llama 3 8B (GiB)': '4.34', 'Perplexity (change vs f16)': '6.70 (+7.5%)' },
+          { 'Format': 'Q4_K_M', 'Size, Llama 3 8B (GiB)': '4.58', 'Perplexity (change vs f16)': '6.41 (+2.8%)' },
+          { 'Format': 'Q5_K_M', 'Size, Llama 3 8B (GiB)': '5.33', 'Perplexity (change vs f16)': '6.29 (+0.9%)' },
+          { 'Format': 'Q8_0', 'Size, Llama 3 8B (GiB)': '7.96', 'Perplexity (change vs f16)': '6.23 (+0.02%)' },
         ],
         image: '/images/what-is-q4-k-m-quantization-size-quality-hero-en.webp',
-        imageCaption: 'Q4_K_M vs Other Quantizations -- File size and quality (7B model)',
+        imageCaption: 'Q4_K_M vs Other Quantizations -- File size and perplexity (Llama 3 8B)',
       },
       faq: {
         id: 'faq',
@@ -124,19 +124,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Is Q4_K_M the same as Q4_0?',
-            a: 'No. Q4_K_M uses k-quant compression which recovers 5–8% quality over Q4_0 at the same bit depth. Always prefer Q4_K_M over Q4_0. See the <a href="/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0 guide</a> for when to go higher.',
+            a: 'No. On Llama 3 8B, Q4_K_M reaches a perplexity of 6.41 against 6.70 for Q4_0, for a file 0.24 GiB larger (4.58 vs 4.34 GiB; llama.cpp, no importance matrix). Prefer Q4_K_M over Q4_0. See the <a href="/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0 guide</a> for when to go higher.',
           },
           {
             q: 'Which quantization should I use for 8 GB VRAM?',
-            a: 'Q4_K_M for 7B models (5.5 GB VRAM). If you want better quality and have headroom, Q5_K_M uses 6.5 GB and adds ~3% quality. Both fit comfortably in 8 GB.',
+            a: 'Q4_K_M for 8B models: the Llama 3.1 8B file is 4.58 GiB, or about 5.1 GiB with a 4k-token KV cache (calculated, before runtime overhead). Q5_K_M is 5.33 GiB, about 5.8 GiB with the same cache (calculated), and cuts the perplexity increase over f16 from +2.8% to +0.9% on Llama 3 8B. Both fit in 8 GB; Q8_0 (7.95 GiB file) does not.',
           },
           {
             q: "What does the 'M' in Q4_K_M stand for?",
-            a: "Medium — it refers to the quality tier within k-quant compression. Q4_K_S is the small (lower quality) variant, Q4_K_M is medium (recommended), and Q4_K_L is large (marginal gain over M).",
+            a: 'Medium: it is the size variant within the k-quant family. Q4_K_S (small) is smaller (4.36 GiB vs 4.58 GiB on Llama 3.1 8B) with higher perplexity, and Q4_K_M (medium) is the usual default. llama.cpp\'s quantize tool has no Q4_K_L type; the next step up is Q5_K_M.',
           },
           {
             q: 'Which models on Ollama use Q4_K_M by default?',
-            a: 'Most of them — Llama 3, Mistral, Qwen, Phi, and Gemma all default to Q4_K_M tags. Specify <code>:q5_K_M</code> or <code>:q8_0</code> in the model tag to switch quantization.',
+            a: 'Many of them. The Ollama library pages for Llama 3.1 8B, Qwen3 8B, Mistral 7B and Phi-4 mini list Q4_K_M for the default tag (checked 2026-11-03); other models can differ, so check the model page. Where a model offers them, specify <code>:q5_K_M</code> or <code>:q8_0</code> in the tag to switch quantization.',
           },
         ],
       },
@@ -149,19 +149,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Q4_K_M = 4-Bit-K-Quant auf mittlerem Qualitätsniveau. Besser als Q4_0, kleiner als Q8_0. Verwenden Sie es als Standard. Schnelle Antwort von PromptQuorum.',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-de.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       de: {
         question: 'Was bedeutet Q4_K_M-Quantisierung?',
-        answer: 'Q4_K_M = 4-Bit-Quantisierung mit K-Quant-Kompression auf mittlerem Qualitätsniveau. Besser als Q4_0 bei gleicher Dateigröße, kleiner als Q8_0. Verwenden Sie es als Standard.',
+        answer: 'Q4_K_M = 4-Bit-Quantisierung mit K-Quant-Kompression auf mittlerem Qualitätsniveau. Niedrigere Perplexität als Q4_0, kleiner als Q8_0. Verwenden Sie es als Standard.',
         bullets: [
           'Q = quantisiert, 4 = 4 Bit, K = K-Quant, M = mittel',
-          'Bessere Qualität als Q4_0 bei gleicher Dateigröße',
+          'Niedrigere Perplexität als Q4_0 (6,41 vs. 6,70 bei Llama 3 8B) bei einer um 0,24 GiB größeren Datei',
           'Q4_K_M als Standard-Quantisierung verwenden',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -169,18 +169,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Q4_K_M = 4-Bit-Quantisierung mit K-Quant-Kompression auf mittlerem Qualitätsniveau — besser als Q4_0 bei gleicher Dateigröße',
-          'Ein 7B-Modell bei Q4_K_M belegt ~4,1 GB auf der Festplatte und benötigt ~5,5 GB VRAM zum Betrieb',
+          'Q4_K_M = 4-Bit-Quantisierung mit K-Quant-Kompression auf mittlerem Qualitätsniveau — niedrigere Perplexität als Q4_0 bei etwas größerer Datei',
+          'Llama 3.1 8B bei Q4_K_M ist 4,58 GiB groß; mit 4k-Token-KV-Cache (etwa 0,5 GiB, berechnet) braucht es etwa 5,1 GiB VRAM vor Laufzeit-Overhead',
           'Verwenden Sie Q4_K_M als Standard — es liefert das beste Qualitäts-pro-Gigabyte-Verhältnis für die meisten VRAM-Budgets',
         ],
       },
       body1: {
         title: 'Was jeder Buchstabe in Q4_K_M bedeutet',
         content: [
-          '<strong>Q4_K_M existiert, weil alte 4-Bit-Formate (Q4_0) bei kritischen Gewichten zu viel Qualität verloren.</strong> K-Quant-Kompression löst dies, indem sie wichtigen Gewichten mehr Bits zuweist und unwichtigeren Gewichten weniger. Das Ergebnis: 5–8 % bessere Qualität als Q4_0 bei gleicher Dateigröße.',
-          'Das "K" ist der entscheidende Unterschied. K-Quant-Kompression wendet eine nicht-uniforme Bit-Zuweisung an — kritische Gewichte erhalten mehr Bits, weniger wichtige erhalten weniger. Das gewinnt 5–8 % Qualität gegenüber dem älteren Q4_0-Format bei gleicher Dateigröße zurück.',
-          'Das "M" ist die Qualitätseinstellung innerhalb von K-Quant. Q4_K_S (small) ist etwas kleiner mit niedrigerer Qualität. Q4_K_M (medium) ist die beste Balance. Q4_K_L (large) ist geringfügig besser, aber selten die extra Größe wert.',
-          '<strong>K-Quant funktioniert durch Clustering von Gewichten und Bit-Zuweisung basierend auf Wichtigkeit.</strong> Top-Wichtigkeits-Cluster erhalten 6 Bits pro Gewicht. Mittlere Cluster erhalten 4 Bits. Unwichtige Cluster erhalten 3 Bits. Die "M"-Stufe durchschnittlich 4,5 Bits pro Gewicht — was erklärt, warum Q4_K_M in Größe und Qualität zwischen Q4_K_S und Q5_K_M liegt. Für den Fall, dass die M-Stufe nicht ausreicht, siehe <a href="/de/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs. Q8_0</a>.',
+          '<strong>Q4_K_M existiert, weil das ältere 4-Bit-Format Q4_0 mehr Qualität verliert als nötig.</strong> Bei Llama 3 8B ergibt der Perplexitätstest von llama.cpp 6,41 für Q4_K_M und 6,70 für Q4_0 (niedriger ist besser; f16 liegt bei 6,23), bei einer um 0,24 GiB größeren Datei (4,58 vs. 4,34 GiB). Quelle: <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp-Perplexity-README</a>.',
+          'Das "K" steht für die K-Quant-Familie aus <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp Pull Request #1684</a>. Q4_K_M mischt zwei Tensor-Typen: 6-Bit-Q6_K für die Hälfte der Tensoren attention.wv und feed_forward.w2 und 4-Bit-Q4_K für alle anderen. Bei Llama 3.1 8B ergibt das im Mittel 4,89 Bit pro Gewicht (llama.cpp-Quantize-README), also mehr als nominell 4.',
+          'Das "M" ist die Größenvariante innerhalb der Familie. Q4_K_S (small) nutzt Q4_K für jeden Tensor: 4,36 GiB gegenüber 4,58 GiB bei Q4_K_M (Llama 3.1 8B), mit höherer Perplexität (6,50 vs. 6,41 bei Llama 3 8B ohne Importance-Matrix). Q5_K_M ist die nächste Stufe mit 5,33 GiB.',
+          '<strong>K-Quant arbeitet mit Blöcken von Gewichten.</strong> Q4_K fasst 32 Gewichte zu einem Block und 8 Blöcke zu einem Super-Block zusammen und speichert Block-Skalen und -Minima mit 6 Bit, das sind 4,5 Bit pro Gewicht (Pull Request #1684). Q4_K_M liegt wegen seiner Q6_K-Tensoren bei 4,89 und damit in der Größe zwischen Q4_K_S (4,67) und Q5_K_M (5,70). Wenn die M-Stufe nicht reicht, siehe <a href="/de/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs. Q8_0</a>.',
         ],
         image: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-de.webp',
         imageCaption: 'Was Jeder Buchstabe in Q4_K_M Bedeutet -- Den Formatnamen entschlüsseln',
@@ -188,18 +188,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Wie Q4_K_M im Vergleich zu anderen Quantisierungen abschneidet',
         content: [
-          'Die folgende Tabelle zeigt die Kompromisse für ein 7B-Modell. Die Qualität ist relativ zur vollpräzisen Q8_0-Referenz. Es sei denn, Sie haben 12+ GB VRAM, bietet Q4_K_M das beste Qualitäts-pro-Gigabyte-Verhältnis.',
+          'Die Tabelle zeigt den Perplexitätstest von llama.cpp für Llama 3 8B (wikitext, ohne Importance-Matrix; niedriger ist besser). Die Prozentwerte sind gegenüber f16 (6,2332) berechnet. Q4_K_M erhöht die Perplexität um unter 3 % bei 4,58 GiB, etwa 58 % der Dateigröße von Q8_0 (berechnet: 4,58 / 7,96).',
           'Für einen direkten Vergleich von Q4_K_M vs. Q8_0, siehe den <a href="/de/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs. Q8_0 Entscheidungsleitfaden</a>. Für die vollständige Quantisierungsreferenz, siehe den <a href="/de/local-llms/quantization-levels-comparison" class="text-primary hover:underline">Quantisierungsstufen-Vergleich</a>.',
         ],
-        columns: ['Format', 'Dateigröße (7B)', 'Qualität vs. Q8_0'],
+        columns: ['Format', 'Größe, Llama 3 8B (GiB)', 'Perplexität (Änderung vs. f16)'],
         rows: [
-          { 'Format': 'Q4_0', 'Dateigröße (7B)': '3,8 GB', 'Qualität vs. Q8_0': 'Basiswert (~87 %)' },
-          { 'Format': 'Q4_K_M', 'Dateigröße (7B)': '4,1 GB', 'Qualität vs. Q8_0': '~92 % (+5 %)' },
-          { 'Format': 'Q5_K_M', 'Dateigröße (7B)': '5,0 GB', 'Qualität vs. Q8_0': '~95 % (+3 %)' },
-          { 'Format': 'Q8_0', 'Dateigröße (7B)': '7,7 GB', 'Qualität vs. Q8_0': '100 % (Referenz)' },
+          { 'Format': 'Q4_0', 'Größe, Llama 3 8B (GiB)': '4,34', 'Perplexität (Änderung vs. f16)': '6,70 (+7,5 %)' },
+          { 'Format': 'Q4_K_M', 'Größe, Llama 3 8B (GiB)': '4,58', 'Perplexität (Änderung vs. f16)': '6,41 (+2,8 %)' },
+          { 'Format': 'Q5_K_M', 'Größe, Llama 3 8B (GiB)': '5,33', 'Perplexität (Änderung vs. f16)': '6,29 (+0,9 %)' },
+          { 'Format': 'Q8_0', 'Größe, Llama 3 8B (GiB)': '7,96', 'Perplexität (Änderung vs. f16)': '6,23 (+0,02 %)' },
         ],
         image: '/images/what-is-q4-k-m-quantization-size-quality-hero-de.webp',
-        imageCaption: 'Q4_K_M vs. Andere Quantisierungen -- Dateigröße und Qualität (7B-Modell)',
+        imageCaption: 'Q4_K_M vs. Andere Quantisierungen -- Dateigröße und Perplexität (Llama 3 8B)',
       },
       faq: {
         id: 'faq',
@@ -207,19 +207,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Ist Q4_K_M dasselbe wie Q4_0?',
-            a: 'Nein. Q4_K_M verwendet K-Quant-Kompression, die 5–8 % Qualität gegenüber Q4_0 bei gleicher Bittiefe zurückgewinnt. Bevorzugen Sie immer Q4_K_M gegenüber Q4_0. Siehe den <a href="/de/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs. Q8_0 Leitfaden</a> für den Fall, dass Sie höher gehen möchten.',
+            a: 'Nein. Bei Llama 3 8B erreicht Q4_K_M eine Perplexität von 6,41 gegenüber 6,70 bei Q4_0, bei einer um 0,24 GiB größeren Datei (4,58 vs. 4,34 GiB; llama.cpp, ohne Importance-Matrix). Bevorzugen Sie Q4_K_M gegenüber Q4_0. Siehe den <a href="/de/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs. Q8_0 Leitfaden</a>, wenn Sie höher gehen wollen.',
           },
           {
             q: 'Welche Quantisierung sollte ich für 8 GB VRAM verwenden?',
-            a: 'Q4_K_M für 7B-Modelle (5,5 GB VRAM). Wenn Sie bessere Qualität wünschen und Spielraum haben, verwendet Q5_K_M 6,5 GB und fügt ~3 % Qualität hinzu. Beide passen bequem in 8 GB.',
+            a: 'Q4_K_M für 8B-Modelle: Die Datei von Llama 3.1 8B ist 4,58 GiB groß, mit 4k-Token-KV-Cache etwa 5,1 GiB (berechnet, vor Laufzeit-Overhead). Q5_K_M ist 5,33 GiB groß, mit demselben Cache etwa 5,8 GiB (berechnet), und senkt den Perplexitätsanstieg gegenüber f16 bei Llama 3 8B von +2,8 % auf +0,9 %. Beide passen in 8 GB; Q8_0 (7,95-GiB-Datei) nicht.',
           },
           {
             q: 'Wofür steht das "M" in Q4_K_M?',
-            a: 'Medium (mittel) — es bezieht sich auf die Qualitätsstufe innerhalb der K-Quant-Kompression. Q4_K_S ist die kleine (niedrigere Qualität) Variante, Q4_K_M ist medium (empfohlen), und Q4_K_L ist large (marginaler Gewinn gegenüber M).',
+            a: 'Medium (mittel) — die Größenvariante innerhalb der K-Quant-Familie. Q4_K_S (small) ist kleiner (4,36 GiB vs. 4,58 GiB bei Llama 3.1 8B) mit höherer Perplexität, Q4_K_M (medium) ist der übliche Standard. Das Quantize-Tool von llama.cpp hat keinen Typ Q4_K_L; die nächste Stufe ist Q5_K_M.',
           },
           {
             q: 'Welche Modelle auf Ollama verwenden standardmäßig Q4_K_M?',
-            a: 'Die meisten — Llama 3, Mistral, Qwen, Phi und Gemma verwenden alle standardmäßig Q4_K_M-Tags. Geben Sie <code>:q5_K_M</code> oder <code>:q8_0</code> im Modell-Tag an, um die Quantisierung zu wechseln.',
+            a: 'Viele. Die Ollama-Bibliotheksseiten von Llama 3.1 8B, Qwen3 8B, Mistral 7B und Phi-4 mini führen für den Standard-Tag Q4_K_M auf (geprüft am 2026-11-03); andere Modelle können abweichen, prüfen Sie daher die Modellseite. Wo ein Modell sie anbietet, geben Sie <code>:q5_K_M</code> oder <code>:q8_0</code> im Tag an, um die Quantisierung zu wechseln.',
           },
         ],
       },
@@ -232,19 +232,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Q4_K_M = k-quant 4 bits à qualité moyenne. Meilleure que Q4_0, plus petite que Q8_0. À utiliser comme standard. Réponse rapide par PromptQuorum.',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-fr.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que la quantisation Q4_K_M ?',
-        answer: 'Q4_K_M signifie quantisation 4 bits avec compression k-quant à qualité moyenne. Meilleure que Q4_0 à taille égale, plus petite que Q8_0. À utiliser comme standard.',
+        answer: 'Q4_K_M signifie quantisation 4 bits avec compression k-quant à qualité moyenne. Perplexité plus basse que Q4_0, plus petite que Q8_0. À utiliser comme standard.',
         bullets: [
           'Q = quantisé, 4 = 4 bits, K = k-quant, M = moyen',
-          'Meilleure qualité que Q4_0 à la même taille de fichier',
+          'Perplexité plus basse que Q4_0 (6,41 contre 6,70 sur Llama 3 8B) pour un fichier plus grand de 0,24 GiB',
           'Utiliser Q4_K_M comme quantisation par défaut',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -252,18 +252,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Q4_K_M = quantisation 4 bits avec compression k-quant à qualité moyenne — meilleure que Q4_0 à taille de fichier égale',
-          'Un modèle 7B en Q4_K_M occupe ~4,1 Go sur disque et nécessite ~5,5 Go de VRAM',
+          'Q4_K_M = quantisation 4 bits avec compression k-quant à qualité moyenne — perplexité plus basse que Q4_0 pour un fichier un peu plus grand',
+          'Llama 3.1 8B en Q4_K_M fait 4,58 GiB sur disque ; avec un cache KV de 4k tokens (environ 0,5 GiB, calculé), il faut environ 5,1 GiB de VRAM hors surcoût d\'exécution',
           'Utilisez Q4_K_M par défaut — c\'est le meilleur ratio qualité/gigaoctet pour la plupart des budgets VRAM',
         ],
       },
       body1: {
         title: 'Ce que signifie chaque lettre de Q4_K_M',
         content: [
-          '<strong>Q4_K_M existe parce que les anciens formats 4 bits (Q4_0) perdaient trop de qualité sur les poids critiques.</strong> La compression k-quant résout ce problème en allouant plus de bits aux poids qui influencent le plus les sorties, et moins aux poids à faible impact. Résultat : 5 à 8 % de qualité en plus par rapport à Q4_0 à taille de fichier identique.',
-          'Le "K" est le différenciateur clé. La compression k-quant applique une allocation de bits non uniforme — les poids critiques reçoivent plus de bits, les moins importants en reçoivent moins. Cela récupère 5 à 8 % de qualité par rapport à l\'ancien format Q4_0 à même taille de fichier.',
-          'Le "M" est le niveau de qualité au sein du k-quant. Q4_K_S (small) est légèrement plus petit avec une qualité moindre. Q4_K_M (medium) est le meilleur équilibre. Q4_K_L (large) est marginalement meilleur mais rarement justifié.',
-          '<strong>Le k-quant fonctionne en regroupant les poids et en attribuant les bits selon leur importance.</strong> Les clusters de haute importance reçoivent 6 bits par poids. Les clusters intermédiaires reçoivent 4 bits. Les clusters peu importants reçoivent 3 bits. Le niveau "M" représente en moyenne 4,5 bits par poids — ce qui explique pourquoi Q4_K_M se situe entre Q4_K_S et Q5_K_M en taille et en qualité. Pour savoir quand le niveau M ne suffit pas, voir <a href="/fr/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
+          '<strong>Q4_K_M existe parce que l\'ancien format 4 bits Q4_0 perd plus de qualité que nécessaire.</strong> Sur Llama 3 8B, le test de perplexité de llama.cpp donne 6,41 pour Q4_K_M et 6,70 pour Q4_0 (plus bas est meilleur ; f16 : 6,23), pour un fichier plus grand de 0,24 GiB (4,58 contre 4,34 GiB). Source : <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">README perplexity de llama.cpp</a>.',
+          'Le « K » désigne la famille k-quant introduite dans la <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">pull request #1684 de llama.cpp</a>. Q4_K_M mélange deux types de tenseurs : du Q6_K 6 bits pour la moitié des tenseurs attention.wv et feed_forward.w2, et du Q4_K 4 bits pour tous les autres. Sur Llama 3.1 8B, cela donne en moyenne 4,89 bits par poids (README de quantize de llama.cpp), au-dessus des 4 nominaux.',
+          'Le « M » est la variante de taille dans la famille. Q4_K_S (small) utilise Q4_K pour tous les tenseurs : 4,36 GiB contre 4,58 GiB pour Q4_K_M sur Llama 3.1 8B, avec une perplexité plus élevée (6,50 contre 6,41 sur Llama 3 8B sans matrice d\'importance). Q5_K_M est l\'étape suivante à 5,33 GiB.',
+          '<strong>K-quant travaille sur des blocs de poids.</strong> Q4_K regroupe 32 poids en un bloc et 8 blocs en un super-bloc, et stocke échelles et minimums de bloc sur 6 bits, soit 4,5 bits par poids (pull request #1684). Q4_K_M atteint 4,89 à cause de ses tenseurs Q6_K, d\'où sa place entre Q4_K_S (4,67) et Q5_K_M (5,70) en taille. Quand le niveau M ne suffit pas, voir <a href="/fr/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
         ],
         image: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-fr.webp',
         imageCaption: 'Ce que Signifie Chaque Lettre dans Q4_K_M -- Décoder le nom du format',
@@ -271,18 +271,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Comment Q4_K_M se compare aux autres quantisations',
         content: [
-          'Le tableau ci-dessous montre les compromis pour un modèle 7B. La qualité est relative à la référence Q8_0 en pleine précision. Sauf si vous disposez de 12+ Go de VRAM, Q4_K_M offre le meilleur rapport qualité/gigaoctet.',
+          'Le tableau reprend le test de perplexité de llama.cpp sur Llama 3 8B (wikitext, sans matrice d\'importance ; plus bas est meilleur). Les pourcentages sont calculés par rapport à f16 (6,2332). Q4_K_M ajoute moins de 3 % de perplexité pour 4,58 GiB, environ 58 % de la taille de Q8_0 (calculé : 4,58 / 7,96).',
           'Pour une comparaison directe Q4_K_M vs Q8_0, voir le <a href="/fr/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">guide de décision Q4_K_M vs Q8_0</a>. Pour la référence complète des quantisations, voir la <a href="/fr/local-llms/quantization-levels-comparison" class="text-primary hover:underline">comparaison des niveaux de quantisation</a>.',
         ],
-        columns: ['Format', 'Taille du fichier (7B)', 'Qualité vs Q8_0'],
+        columns: ['Format', 'Taille, Llama 3 8B (GiB)', 'Perplexité (écart vs f16)'],
         rows: [
-          { 'Format': 'Q4_0', 'Taille du fichier (7B)': '3,8 Go', 'Qualité vs Q8_0': 'Référence (~87 %)' },
-          { 'Format': 'Q4_K_M', 'Taille du fichier (7B)': '4,1 Go', 'Qualité vs Q8_0': '~92 % (+5 %)' },
-          { 'Format': 'Q5_K_M', 'Taille du fichier (7B)': '5,0 Go', 'Qualité vs Q8_0': '~95 % (+3 %)' },
-          { 'Format': 'Q8_0', 'Taille du fichier (7B)': '7,7 Go', 'Qualité vs Q8_0': '100 % (référence)' },
+          { 'Format': 'Q4_0', 'Taille, Llama 3 8B (GiB)': '4,34', 'Perplexité (écart vs f16)': '6,70 (+7,5 %)' },
+          { 'Format': 'Q4_K_M', 'Taille, Llama 3 8B (GiB)': '4,58', 'Perplexité (écart vs f16)': '6,41 (+2,8 %)' },
+          { 'Format': 'Q5_K_M', 'Taille, Llama 3 8B (GiB)': '5,33', 'Perplexité (écart vs f16)': '6,29 (+0,9 %)' },
+          { 'Format': 'Q8_0', 'Taille, Llama 3 8B (GiB)': '7,96', 'Perplexité (écart vs f16)': '6,23 (+0,02 %)' },
         ],
         image: '/images/what-is-q4-k-m-quantization-size-quality-hero-fr.webp',
-        imageCaption: 'Q4_K_M vs Autres Quantisations -- Taille de fichier et qualité (modèle 7B)',
+        imageCaption: 'Q4_K_M vs autres quantisations -- Taille de fichier et perplexité (Llama 3 8B)',
       },
       faq: {
         id: 'faq',
@@ -290,19 +290,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Q4_K_M est-il identique à Q4_0 ?',
-            a: 'Non. Q4_K_M utilise la compression k-quant qui récupère 5 à 8 % de qualité par rapport à Q4_0 à même profondeur de bits. Préférez toujours Q4_K_M à Q4_0. Voir le <a href="/fr/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">guide Q4_K_M vs Q8_0</a> pour savoir quand monter en niveau.',
+            a: 'Non. Sur Llama 3 8B, Q4_K_M atteint une perplexité de 6,41 contre 6,70 pour Q4_0, pour un fichier plus grand de 0,24 GiB (4,58 contre 4,34 GiB ; llama.cpp, sans matrice d\'importance). Préférez Q4_K_M à Q4_0. Voir le <a href="/fr/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">guide Q4_K_M vs Q8_0</a> pour savoir quand monter en gamme.',
           },
           {
             q: 'Quelle quantisation utiliser avec 8 Go de VRAM ?',
-            a: 'Q4_K_M pour les modèles 7B (5,5 Go de VRAM). Si vous souhaitez une meilleure qualité et avez de la marge, Q5_K_M utilise 6,5 Go et ajoute ~3 % de qualité. Les deux rentrent confortablement dans 8 Go.',
+            a: 'Q4_K_M pour les modèles 8B : le fichier de Llama 3.1 8B fait 4,58 GiB, soit environ 5,1 GiB avec un cache KV de 4k tokens (calculé, hors surcoût d\'exécution). Q5_K_M fait 5,33 GiB, environ 5,8 GiB avec le même cache (calculé), et réduit la hausse de perplexité par rapport à f16 de +2,8 % à +0,9 % sur Llama 3 8B. Les deux tiennent dans 8 Go ; Q8_0 (fichier de 7,95 GiB) non.',
           },
           {
             q: 'Que signifie le "M" dans Q4_K_M ?',
-            a: 'Medium (moyen) — il désigne le niveau de qualité au sein de la compression k-quant. Q4_K_S est la variante petite (qualité moindre), Q4_K_M est medium (recommandé), et Q4_K_L est large (gain marginal par rapport à M).',
+            a: 'Medium (moyen) — la variante de taille dans la famille k-quant. Q4_K_S (small) est plus petit (4,36 GiB contre 4,58 GiB sur Llama 3.1 8B) avec une perplexité plus élevée, Q4_K_M (medium) est le standard habituel. L\'outil quantize de llama.cpp n\'a pas de type Q4_K_L ; l\'étape suivante est Q5_K_M.',
           },
           {
             q: 'Quels modèles sur Ollama utilisent Q4_K_M par défaut ?',
-            a: 'La plupart — Llama 3, Mistral, Qwen, Phi et Gemma utilisent tous des tags Q4_K_M par défaut. Spécifiez <code>:q5_K_M</code> ou <code>:q8_0</code> dans le tag du modèle pour changer de quantisation.',
+            a: 'Beaucoup. Les pages de la bibliothèque Ollama pour Llama 3.1 8B, Qwen3 8B, Mistral 7B et Phi-4 mini indiquent Q4_K_M pour le tag par défaut (vérifié le 2026-11-03) ; d\'autres modèles peuvent différer, consultez donc la page du modèle. Si un modèle les propose, indiquez <code>:q5_K_M</code> ou <code>:q8_0</code> dans le tag pour changer de quantisation.',
           },
         ],
       },
@@ -315,7 +315,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Q4_K_Mは中品質のK-Quant 4ビット量化です。Q4_0より優れ、Q8_0より小さいです。デフォルトとして使用してください。PromptQuorumの解説。',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-ja.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
@@ -324,10 +324,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         answer: 'Q4_K_MはK-Quant（K）圧縮を使用した4ビット量化で、品質は中程度（M）です。ほとんどのモデルのデフォルトとして最適：Q4_0より品質が高く、Q8_0より小さいです。',
         bullets: [
           'Q=量化済み、4=4ビット、K=K-Quant、M=中程度',
-          'Q4_0と同じファイルサイズでより高品質',
+          'Q4_0よりパープレキシティが低い（Llama 3 8Bで6.41対6.70）、ファイルは0.24 GiB大きい',
           'Q4_K_Mをデフォルトの量化として使用する',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -335,18 +335,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Q4_K_M = 中品質のK-Quant圧縮による4ビット量化 — 同じファイルサイズでQ4_0より優れた品質',
-          'Q4_K_Mの7Bモデルはディスク上で約4.1 GB、実行には約5.5 GB VRAMが必要',
+          'Q4_K_M = K-Quant圧縮による中程度品質の4ビット量化 — Q4_0よりパープレキシティが低く、ファイルはやや大きい',
+          'Llama 3.1 8BのQ4_K_Mはディスク上で4.58 GiB。4kトークンのKVキャッシュ（約0.5 GiB、計算値）を加えると、実行時オーバーヘッドを除いて約5.1 GiBのVRAMが必要です',
           'Q4_K_Mをデフォルトとして使用 — ほとんどのVRAM予算でベストな品質対ギガバイト比を提供',
         ],
       },
       body1: {
         title: 'Q4_K_Mの各文字の意味',
         content: [
-          '<strong>Q4_K_Mは古い4ビットフォーマット（Q4_0）が重要な重みで品質を失いすぎたために存在しています。</strong>K-Quant圧縮は、出力に最も影響を与える重みにより多くのビットを割り当て、影響の少ない重みには少ないビットを割り当てることでこれを解決します。結果：同じファイルサイズでQ4_0より5–8%品質が向上します。',
-          '「K」が主要な差別化要因です。K-Quant圧縮は非均一なビット割り当てを適用します — 重要な重みはより多くのビットを得て、重要でないものはより少ないビットを得ます。これにより同じファイルサイズで古いQ4_0フォーマットと比べて5–8%の品質を回復します。',
-          '「M」はK-Quant内の品質設定です。Q4_K_S（small）は品質が低いが少し小さいです。Q4_K_M（medium）は最もバランスが取れています。Q4_K_L（large）はわずかに優れていますが、追加サイズの価値はほとんどありません。',
-          '<strong>K-Quantは重みをクラスタリングし、重要度に基づいてビットを割り当てます。</strong>最重要クラスターは重みあたり6ビットを取得します。中間クラスターは4ビットを取得します。低重要クラスターは3ビットを取得します。「M」ティアはモデル全体で重みあたり平均4.5ビット — これがQ4_K_MがQ4_K_SとQ5_K_Mの間のサイズと品質に位置する理由です。Mティアで不十分な場合は、<a href="/ja/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>を参照してください。',
+          '<strong>Q4_K_Mが存在するのは、旧来の4ビット形式Q4_0が必要以上に品質を失うためです。</strong>Llama 3 8Bでは、llama.cppのパープレキシティテストでQ4_K_Mが6.41、Q4_0が6.70（低いほど良い。f16は6.23）で、ファイルは0.24 GiB大きくなります（4.58対4.34 GiB）。出典：<a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp perplexity README</a>。',
+          '「K」は<a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp プルリクエスト #1684</a>で導入されたk-quantファミリーを示します。Q4_K_Mは2種類のテンソル型を混ぜています。attention.wvとfeed_forward.w2テンソルの半分には6ビットのQ6_K、それ以外すべてには4ビットのQ4_Kを使います。Llama 3.1 8Bでは平均で1重みあたり4.89ビット（llama.cpp quantize README）となり、名目上の4を上回ります。',
+          '「M」はファミリー内のサイズ違いです。Q4_K_S（small）はすべてのテンソルにQ4_Kを使います。Llama 3.1 8Bで4.36 GiB対Q4_K_Mの4.58 GiBで、パープレキシティは高くなります（Llama 3 8B、重要度行列なしで6.50対6.41）。次の段階はQ5_K_Mで5.33 GiBです。',
+          '<strong>K-quantは重みのブロック単位で動作します。</strong>Q4_Kは32個の重みを1ブロック、8ブロックを1スーパーブロックにまとめ、ブロックのスケールと最小値を6ビットで保存します。これは1重みあたり4.5ビットです（プルリクエスト #1684）。Q4_K_MはQ6_Kテンソルを含むため4.89ビットとなり、サイズはQ4_K_S（4.67）とQ5_K_M（5.70）の間に位置します。Mでは足りない場合は<a href="/ja/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>を参照してください。',
         ],
         image: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-ja.webp',
         imageCaption: 'Q4_K_Mの各文字が意味すること -- フォーマット名を読み解く',
@@ -354,18 +354,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Q4_K_Mと他の量化の比較',
         content: [
-          '以下の表は7Bモデルのトレードオフを示しています。品質は完全精度のQ8_0ベースラインに対する相対値です。12+ GB VRAMがない限り、Q4_K_Mは最高の品質対ギガバイト比を提供します。',
+          'この表は、llama.cppのLlama 3 8Bパープレキシティテスト（wikitext、重要度行列なし。低いほど良い）を示しています。割合はf16（6.2332）に対する計算値です。Q4_K_Mは4.58 GiBでパープレキシティの増加は3%未満で、Q8_0のファイルサイズの約58%です（計算値：4.58 / 7.96）。',
           'Q4_K_MとQ8_0の直接比較については、<a href="/ja/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0決定ガイド</a>を参照してください。完全な量化リファレンスについては、<a href="/ja/local-llms/quantization-levels-comparison" class="text-primary hover:underline">量化レベル比較</a>を参照してください。',
         ],
-        columns: ['フォーマット', 'ファイルサイズ（7B）', 'Q8_0との品質比較'],
+        columns: ['フォーマット', 'サイズ、Llama 3 8B（GiB）', 'パープレキシティ（f16との差）'],
         rows: [
-          { 'フォーマット': 'Q4_0', 'ファイルサイズ（7B）': '3.8 GB', 'Q8_0との品質比較': 'ベースライン（~87%）' },
-          { 'フォーマット': 'Q4_K_M', 'ファイルサイズ（7B）': '4.1 GB', 'Q8_0との品質比較': '~92%（+5%）' },
-          { 'フォーマット': 'Q5_K_M', 'ファイルサイズ（7B）': '5.0 GB', 'Q8_0との品質比較': '~95%（+3%）' },
-          { 'フォーマット': 'Q8_0', 'ファイルサイズ（7B）': '7.7 GB', 'Q8_0との品質比較': '100%（参照）' },
+          { 'フォーマット': 'Q4_0', 'サイズ、Llama 3 8B（GiB）': '4.34', 'パープレキシティ（f16との差）': '6.70（+7.5%）' },
+          { 'フォーマット': 'Q4_K_M', 'サイズ、Llama 3 8B（GiB）': '4.58', 'パープレキシティ（f16との差）': '6.41（+2.8%）' },
+          { 'フォーマット': 'Q5_K_M', 'サイズ、Llama 3 8B（GiB）': '5.33', 'パープレキシティ（f16との差）': '6.29（+0.9%）' },
+          { 'フォーマット': 'Q8_0', 'サイズ、Llama 3 8B（GiB）': '7.96', 'パープレキシティ（f16との差）': '6.23（+0.02%）' },
         ],
         image: '/images/what-is-q4-k-m-quantization-size-quality-hero-ja.webp',
-        imageCaption: 'Q4_K_M対他の量子化形式 -- ファイルサイズと品質（7Bモデル）',
+        imageCaption: 'Q4_K_Mと他の量子化の比較 -- ファイルサイズとパープレキシティ（Llama 3 8B）',
       },
       faq: {
         id: 'faq',
@@ -373,19 +373,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Q4_K_MはQ4_0と同じですか？',
-            a: 'いいえ。Q4_K_MはK-Quant圧縮を使用しており、同じビット深度でQ4_0より5–8%品質を回復します。常にQ4_0よりQ4_K_Mを優先してください。高いレベルに上げる場合は<a href="/ja/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0ガイド</a>を参照してください。',
+            a: 'いいえ。Llama 3 8Bでは、Q4_K_MのパープレキシティはQ4_0の6.70に対して6.41で、ファイルは0.24 GiB大きくなります（4.58対4.34 GiB、llama.cpp、重要度行列なし）。Q4_0よりQ4_K_Mを選んでください。さらに上げるタイミングは<a href="/ja/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0ガイド</a>を参照してください。',
           },
           {
             q: '8 GB VRAMにはどの量化を使うべきですか？',
-            a: '7BモデルにはQ4_K_M（5.5 GB VRAM）。より良い品質を望み余裕があれば、Q5_K_Mは6.5 GBを使用し~3%品質を追加します。両方とも8 GBに十分収まります。',
+            a: '8BモデルならQ4_K_Mです。Llama 3.1 8Bのファイルは4.58 GiBで、4kトークンのKVキャッシュを加えると約5.1 GiB（計算値、実行時オーバーヘッドを除く）です。Q5_K_Mは5.33 GiB、同じキャッシュで約5.8 GiB（計算値）となり、Llama 3 8Bのf16に対するパープレキシティ増加を+2.8%から+0.9%に抑えます。どちらも8 GBに収まりますが、Q8_0（ファイル7.95 GiB）は収まりません。',
           },
           {
             q: 'Q4_K_Mの「M」は何を意味しますか？',
-            a: 'Medium（中程度）— K-Quant圧縮内の品質ティアを指します。Q4_K_Sは小さい（低品質）バリアント、Q4_K_Mはmedium（推奨）、Q4_K_Lはlarge（Mに対する限界的な改善）です。',
+            a: 'Medium（中程度）です。k-quantファミリー内のサイズ違いを表します。Q4_K_S（small）はより小さく（Llama 3.1 8Bで4.36 GiB対4.58 GiB）パープレキシティは高く、Q4_K_M（medium）が通常のデフォルトです。llama.cppのquantizeツールにはQ4_K_Lという型はなく、次の段階はQ5_K_Mです。',
           },
           {
             q: 'OllamaのどのモデルがデフォルトでQ4_K_Mを使用していますか？',
-            a: 'ほとんどのモデルが使用しています — Llama 3、Mistral、Qwen、Phi、GemmaはすべてデフォルトでQ4_K_Mタグを使用しています。量化を切り替えるには、モデルタグに<code>:q5_K_M</code>や<code>:q8_0</code>を指定してください。',
+            a: '多くのモデルがそうです。Llama 3.1 8B、Qwen3 8B、Mistral 7B、Phi-4 miniのOllamaライブラリのページでは、デフォルトタグがQ4_K_Mと記載されています（2026-11-03確認）。他のモデルは異なる場合があるため、モデルのページで確認してください。モデルが提供している場合は、タグに<code>:q5_K_M</code>または<code>:q8_0</code>を指定して量子化を切り替えます。',
           },
         ],
       },
@@ -398,7 +398,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Q4_K_M是中等质量的K-Quant 4位量化格式。优于Q4_0，体积小于Q8_0。将其作为默认格式使用。PromptQuorum快速解答。',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-zh.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
@@ -407,10 +407,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         answer: 'Q4_K_M表示使用K-Quant（K）压缩的4位量化，品质为中等（M）。这是大多数模型的最佳默认选择：质量优于Q4_0，文件大小小于Q8_0。',
         bullets: [
           'Q=量化，4=4位，K=K-Quant，M=中等',
-          '相同文件大小下质量优于Q4_0',
+          '困惑度低于Q4_0（Llama 3 8B上为6.41对6.70），文件大0.24 GiB',
           '将Q4_K_M作为默认量化格式使用',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -418,18 +418,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Q4_K_M = 中等质量K-Quant压缩的4位量化——相同文件大小下质量优于Q4_0',
-          'Q4_K_M的7B模型磁盘占用约4.1 GB，运行需要约5.5 GB显存',
+          'Q4_K_M = 采用K-Quant压缩的中等质量4位量化 — 困惑度低于Q4_0，文件略大',
+          'Llama 3.1 8B的Q4_K_M磁盘文件为4.58 GiB；加上4k token的KV缓存（约0.5 GiB，计算值），在不含运行时开销的情况下约需5.1 GiB显存',
           '将Q4_K_M作为默认格式——在大多数显存预算下提供最佳质量/GB比',
         ],
       },
       body1: {
         title: 'Q4_K_M中每个字母的含义',
         content: [
-          '<strong>Q4_K_M的出现是因为旧有的4位格式（Q4_0）在关键权重上损失了过多质量。</strong>K-Quant压缩通过为影响输出最大的权重分配更多位、为影响较小的权重分配更少位来解决这个问题。结果：相同文件大小下比Q4_0质量提升5–8%。',
-          '「K」是核心区别。K-Quant压缩采用非均匀位分配——关键权重获得更多位，较不重要的权重获得更少位。与相同文件大小的旧Q4_0格式相比，可恢复5–8%的质量。',
-          '「M」是K-Quant内的质量设置。Q4_K_S（small）体积略小但质量略低。Q4_K_M（medium）是最佳平衡点。Q4_K_L（large）质量略高但额外体积通常不值得。',
-          '<strong>K-Quant通过对权重进行聚类并按重要性分配位数来工作。</strong>最重要的簇每个权重获得6位。中间级别的簇获得4位。低重要性的簇获得3位。「M」层的平均值为每权重4.5位——这解释了为什么Q4_K_M在大小和质量上都介于Q4_K_S和Q5_K_M之间。当M层不够用时，请参阅<a href="/zh/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M与Q8_0的对比</a>。',
+          '<strong>Q4_K_M之所以存在，是因为较早的4位格式Q4_0损失了不必要的质量。</strong>在Llama 3 8B上，llama.cpp的困惑度测试中Q4_K_M为6.41，Q4_0为6.70（越低越好；f16为6.23），文件大0.24 GiB（4.58对4.34 GiB）。来源：<a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp perplexity README</a>。',
+          '“K”表示<a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp拉取请求#1684</a>引入的k-quant系列。Q4_K_M混合了两种张量类型：attention.wv和feed_forward.w2张量的一半使用6位Q6_K，其余张量使用4位Q4_K。在Llama 3.1 8B上，平均每个权重为4.89位（llama.cpp quantize README），高于名义上的4位。',
+          '“M”是该系列内的大小变体。Q4_K_S（small）对所有张量使用Q4_K：在Llama 3.1 8B上为4.36 GiB，Q4_K_M为4.58 GiB，困惑度更高（Llama 3 8B、无重要性矩阵时为6.50对6.41）。再往上一级是Q5_K_M，为5.33 GiB。',
+          '<strong>K-quant以权重块为单位工作。</strong>Q4_K把32个权重组成一个块，8个块组成一个超级块，块的缩放因子和最小值用6位存储，合计每个权重4.5位（拉取请求#1684）。Q4_K_M因含有Q6_K张量而达到4.89位，所以其大小介于Q4_K_S（4.67）和Q5_K_M（5.70）之间。M等级不够用时，请参阅<a href="/zh/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>。',
         ],
         image: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-zh.webp',
         imageCaption: 'Q4_K_M中每个字母的含义 -- 解读格式名称',
@@ -437,18 +437,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Q4_K_M与其他量化格式的比较',
         content: [
-          '下表显示了7B模型的权衡情况。质量相对于完整精度的Q8_0基准。除非您有12+ GB显存，否则Q4_K_M提供最佳的质量/GB比。',
+          '该表展示llama.cpp在Llama 3 8B上的困惑度测试（wikitext，无重要性矩阵；越低越好）。百分比是相对f16（6.2332）计算得出。Q4_K_M在4.58 GiB下困惑度增加不到3%，约为Q8_0文件大小的58%（计算值：4.58 / 7.96）。',
           '关于Q4_K_M与Q8_0的直接比较，请参阅<a href="/zh/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0决策指南</a>。完整的量化参考请查看<a href="/zh/local-llms/quantization-levels-comparison" class="text-primary hover:underline">量化级别比较</a>。',
         ],
-        columns: ['格式', '文件大小（7B）', '对比Q8_0的质量'],
+        columns: ['格式', '大小，Llama 3 8B（GiB）', '困惑度（相对f16的变化）'],
         rows: [
-          { '格式': 'Q4_0', '文件大小（7B）': '3.8 GB', '对比Q8_0的质量': '基准（~87%）' },
-          { '格式': 'Q4_K_M', '文件大小（7B）': '4.1 GB', '对比Q8_0的质量': '~92%（+5%）' },
-          { '格式': 'Q5_K_M', '文件大小（7B）': '5.0 GB', '对比Q8_0的质量': '~95%（+3%）' },
-          { '格式': 'Q8_0', '文件大小（7B）': '7.7 GB', '对比Q8_0的质量': '100%（参照）' },
+          { '格式': 'Q4_0', '大小，Llama 3 8B（GiB）': '4.34', '困惑度（相对f16的变化）': '6.70（+7.5%）' },
+          { '格式': 'Q4_K_M', '大小，Llama 3 8B（GiB）': '4.58', '困惑度（相对f16的变化）': '6.41（+2.8%）' },
+          { '格式': 'Q5_K_M', '大小，Llama 3 8B（GiB）': '5.33', '困惑度（相对f16的变化）': '6.29（+0.9%）' },
+          { '格式': 'Q8_0', '大小，Llama 3 8B（GiB）': '7.96', '困惑度（相对f16的变化）': '6.23（+0.02%）' },
         ],
         image: '/images/what-is-q4-k-m-quantization-size-quality-hero-zh.webp',
-        imageCaption: 'Q4_K_M对比其他量化格式 -- 文件大小与质量（7B模型）',
+        imageCaption: 'Q4_K_M与其他量化对比 -- 文件大小与困惑度（Llama 3 8B）',
       },
       faq: {
         id: 'faq',
@@ -456,19 +456,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Q4_K_M和Q4_0是一样的吗？',
-            a: '不一样。Q4_K_M使用K-Quant压缩，在相同位深下比Q4_0恢复5–8%的质量。始终优先选择Q4_K_M而非Q4_0。何时需要更高格式请参阅<a href="/zh/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0指南</a>。',
+            a: '不是。在Llama 3 8B上，Q4_K_M的困惑度为6.41，Q4_0为6.70，文件大0.24 GiB（4.58对4.34 GiB；llama.cpp，无重要性矩阵）。请优先选择Q4_K_M而不是Q4_0。何时升级请参阅<a href="/zh/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0指南</a>。',
           },
           {
             q: '8 GB显存应该使用哪种量化？',
-            a: '7B模型使用Q4_K_M（5.5 GB显存）。如果想要更好质量且有余量，Q5_K_M使用6.5 GB并增加约3%质量。两者都能舒适地装进8 GB。',
+            a: '8B模型选Q4_K_M：Llama 3.1 8B的文件为4.58 GiB，加上4k token的KV缓存约为5.1 GiB（计算值，不含运行时开销）。Q5_K_M为5.33 GiB，同样缓存下约5.8 GiB（计算值），并把Llama 3 8B相对f16的困惑度增幅从+2.8%降到+0.9%。两者都能放进8 GB；Q8_0（文件7.95 GiB）放不下。',
           },
           {
             q: 'Q4_K_M中的"M"代表什么？',
-            a: 'Medium（中等）——指K-Quant压缩内的质量层级。Q4_K_S是小型（较低质量）变体，Q4_K_M是中等（推荐），Q4_K_L是大型（相比M改善有限）。',
+            a: 'Medium（中等）——k-quant系列内的大小变体。Q4_K_S（small）更小（Llama 3.1 8B上为4.36 GiB对4.58 GiB），困惑度更高；Q4_K_M（medium）是常用默认选项。llama.cpp的quantize工具没有Q4_K_L类型，再往上一级是Q5_K_M。',
           },
           {
             q: 'Ollama上哪些模型默认使用Q4_K_M？',
-            a: '大多数模型——Llama 3、Mistral、Qwen、Phi和Gemma都默认使用Q4_K_M标签。在模型标签中指定<code>:q5_K_M</code>或<code>:q8_0</code>可切换量化格式。',
+            a: '很多模型如此。Ollama库中Llama 3.1 8B、Qwen3 8B、Mistral 7B和Phi-4 mini的页面都把默认标签标为Q4_K_M（2026-11-03核对）；其他模型可能不同，请查看模型页面。如果模型提供，可在标签中指定<code>:q5_K_M</code>或<code>:q8_0</code>来切换量化。',
           },
         ],
       },
@@ -481,7 +481,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Q4_K_M é quantização de 4 bits k-quant de qualidade média: melhor que Q4_0, menor que Q8_0. Use-a como padrão no Ollama. Guia rápido do PromptQuorum.',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-pt.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
@@ -490,10 +490,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         answer: 'Q4_K_M significa quantização de 4 bits com compressão k-quant (K) em qualidade média (M). É a melhor opção padrão para a maioria dos modelos: melhor qualidade que Q4_0, tamanho menor que Q8_0.',
         bullets: [
           'Q = quantizado, 4 = 4 bits, K = k-quant, M = médio',
-          'Melhor qualidade que Q4_0 no mesmo tamanho de arquivo',
+          'Perplexidade menor que Q4_0 (6,41 contra 6,70 no Llama 3 8B) com arquivo 0,24 GiB maior',
           'Use Q4_K_M como quantização padrão',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -501,18 +501,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Q4_K_M = quantização de 4 bits com compressão k-quant em qualidade média — melhor que Q4_0 no mesmo tamanho de arquivo',
-          'Um modelo 7B em Q4_K_M ocupa ~4,1 GB no disco e precisa de ~5,5 GB de VRAM para rodar',
+          'Q4_K_M = quantização de 4 bits com compressão k-quant em qualidade média — perplexidade menor que Q4_0 com arquivo um pouco maior',
+          'O Llama 3.1 8B em Q4_K_M tem 4,58 GiB em disco; com cache KV de 4k tokens (cerca de 0,5 GiB, calculado), precisa de cerca de 5,1 GiB de VRAM antes do overhead de execução',
           'Use Q4_K_M como padrão — oferece a melhor relação qualidade por gigabyte para a maioria dos orçamentos de VRAM',
         ],
       },
       body1: {
         title: 'O que cada letra em Q4_K_M significa',
         content: [
-          '<strong>Q4_K_M existe porque os formatos antigos de 4 bits (Q4_0) perdiam muita qualidade nos pesos críticos.</strong> A compressão k-quant resolve isso alocando mais bits para os pesos que mais afetam a saída e menos bits para os de menor impacto. Resultado: 5–8% mais qualidade que Q4_0 no mesmo tamanho de arquivo.',
-          'O "K" é o diferenciador principal. A compressão k-quant aplica alocação de bits não uniforme — pesos críticos recebem mais bits, os menos importantes recebem menos. Isso recupera 5–8% de qualidade em comparação com o formato Q4_0 mais antigo no mesmo tamanho de arquivo.',
-          'O "M" é a configuração de qualidade dentro do k-quant. Q4_K_S (small) é ligeiramente menor com qualidade menor. Q4_K_M (medium) é o melhor equilíbrio. Q4_K_L (large) é marginalmente melhor, mas raramente vale o tamanho extra.',
-          '<strong>K-quant funciona agrupando pesos e atribuindo bits com base na importância.</strong> Clusters de maior importância recebem 6 bits por peso. Clusters de nível médio recebem 4 bits. Clusters de baixa importância recebem 3 bits. O nível "M" tem uma média de 4,5 bits por peso em todo o modelo — explicando por que Q4_K_M fica entre Q4_K_S e Q5_K_M em tamanho e qualidade. Para quando o nível M não é suficiente, veja <a href="/pt/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
+          '<strong>Q4_K_M existe porque o formato antigo de 4 bits, Q4_0, perde mais qualidade do que o necessário.</strong> No Llama 3 8B, o teste de perplexidade do llama.cpp dá 6,41 para Q4_K_M e 6,70 para Q4_0 (menor é melhor; f16 é 6,23), com arquivo 0,24 GiB maior (4,58 contra 4,34 GiB). Fonte: <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">README de perplexity do llama.cpp</a>.',
+          'O "K" marca a família k-quant introduzida no <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">pull request #1684 do llama.cpp</a>. Q4_K_M mistura dois tipos de tensor: Q6_K de 6 bits para metade dos tensores attention.wv e feed_forward.w2 e Q4_K de 4 bits para todos os outros. No Llama 3.1 8B isso dá em média 4,89 bits por peso (README do quantize do llama.cpp), acima dos 4 nominais.',
+          'O "M" é a variante de tamanho dentro da família. Q4_K_S (small) usa Q4_K em todos os tensores: 4,36 GiB contra 4,58 GiB do Q4_K_M no Llama 3.1 8B, com perplexidade maior (6,50 contra 6,41 no Llama 3 8B sem matriz de importância). Q5_K_M é o próximo degrau, com 5,33 GiB.',
+          '<strong>O k-quant trabalha com blocos de pesos.</strong> Q4_K agrupa 32 pesos em um bloco e 8 blocos em um super-bloco, guardando escalas e mínimos dos blocos com 6 bits, o que dá 4,5 bits por peso (pull request #1684). Q4_K_M chega a 4,89 por causa dos tensores Q6_K, por isso fica entre Q4_K_S (4,67) e Q5_K_M (5,70) em tamanho. Quando o nível M não basta, veja <a href="/pt/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
         ],
         image: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-pt.webp',
         imageCaption: 'O Que Cada Letra em Q4_K_M Significa -- Decodificando o nome do formato',
@@ -520,18 +520,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Como Q4_K_M se compara a outras quantizações',
         content: [
-          'A tabela abaixo mostra os trade-offs para um modelo 7B. A qualidade é relativa ao baseline de precisão total Q8_0. A menos que você tenha 12+ GB de VRAM, Q4_K_M oferece a melhor relação qualidade por gigabyte.',
+          'A tabela mostra o teste de perplexidade do llama.cpp no Llama 3 8B (wikitext, sem matriz de importância; menor é melhor). As porcentagens são calculadas em relação ao f16 (6,2332). Q4_K_M soma menos de 3% de perplexidade com 4,58 GiB, cerca de 58% do tamanho do Q8_0 (calculado: 4,58 / 7,96).',
           'Para uma comparação direta de Q4_K_M vs Q8_0, veja o <a href="/pt/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">guia de decisão Q4_K_M vs Q8_0</a>. Para a referência completa de quantização, veja a <a href="/pt/local-llms/quantization-levels-comparison" class="text-primary hover:underline">comparação de níveis de quantização</a>.',
         ],
-        columns: ['Formato', 'Tamanho do arquivo (7B)', 'Qualidade vs Q8_0'],
+        columns: ['Formato', 'Tamanho, Llama 3 8B (GiB)', 'Perplexidade (variação vs f16)'],
         rows: [
-          { 'Formato': 'Q4_0', 'Tamanho do arquivo (7B)': '3,8 GB', 'Qualidade vs Q8_0': 'Base (~87%)' },
-          { 'Formato': 'Q4_K_M', 'Tamanho do arquivo (7B)': '4,1 GB', 'Qualidade vs Q8_0': '~92% (+5%)' },
-          { 'Formato': 'Q5_K_M', 'Tamanho do arquivo (7B)': '5,0 GB', 'Qualidade vs Q8_0': '~95% (+3%)' },
-          { 'Formato': 'Q8_0', 'Tamanho do arquivo (7B)': '7,7 GB', 'Qualidade vs Q8_0': '100% (referência)' },
+          { 'Formato': 'Q4_0', 'Tamanho, Llama 3 8B (GiB)': '4,34', 'Perplexidade (variação vs f16)': '6,70 (+7,5%)' },
+          { 'Formato': 'Q4_K_M', 'Tamanho, Llama 3 8B (GiB)': '4,58', 'Perplexidade (variação vs f16)': '6,41 (+2,8%)' },
+          { 'Formato': 'Q5_K_M', 'Tamanho, Llama 3 8B (GiB)': '5,33', 'Perplexidade (variação vs f16)': '6,29 (+0,9%)' },
+          { 'Formato': 'Q8_0', 'Tamanho, Llama 3 8B (GiB)': '7,96', 'Perplexidade (variação vs f16)': '6,23 (+0,02%)' },
         ],
         image: '/images/what-is-q4-k-m-quantization-size-quality-hero-pt.webp',
-        imageCaption: 'Q4_K_M vs Outras Quantizações -- Tamanho do arquivo e qualidade (modelo 7B)',
+        imageCaption: 'Q4_K_M vs outras quantizações -- Tamanho de arquivo e perplexidade (Llama 3 8B)',
       },
       faq: {
         id: 'faq',
@@ -539,19 +539,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Q4_K_M é o mesmo que Q4_0?',
-            a: 'Não. Q4_K_M usa compressão k-quant que recupera 5–8% de qualidade sobre Q4_0 na mesma profundidade de bits. Sempre prefira Q4_K_M a Q4_0. Veja o <a href="/pt/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">guia Q4_K_M vs Q8_0</a> para saber quando subir de nível.',
+            a: 'Não. No Llama 3 8B, Q4_K_M atinge perplexidade de 6,41 contra 6,70 do Q4_0, com arquivo 0,24 GiB maior (4,58 contra 4,34 GiB; llama.cpp, sem matriz de importância). Prefira Q4_K_M ao Q4_0. Veja o <a href="/pt/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">guia Q4_K_M vs Q8_0</a> para saber quando subir de nível.',
           },
           {
             q: 'Qual quantização devo usar com 8 GB de VRAM?',
-            a: 'Q4_K_M para modelos 7B (5,5 GB de VRAM). Se quiser melhor qualidade e tiver margem, Q5_K_M usa 6,5 GB e adiciona ~3% de qualidade. Ambas cabem confortavelmente em 8 GB.',
+            a: 'Q4_K_M para modelos 8B: o arquivo do Llama 3.1 8B tem 4,58 GiB, ou cerca de 5,1 GiB com cache KV de 4k tokens (calculado, antes do overhead de execução). Q5_K_M tem 5,33 GiB, cerca de 5,8 GiB com o mesmo cache (calculado), e reduz o aumento de perplexidade sobre o f16 de +2,8% para +0,9% no Llama 3 8B. Ambos cabem em 8 GB; Q8_0 (arquivo de 7,95 GiB) não.',
           },
           {
             q: "O que significa o 'M' em Q4_K_M?",
-            a: "Medium (médio) — refere-se ao nível de qualidade dentro da compressão k-quant. Q4_K_S é a variante pequena (qualidade menor), Q4_K_M é médio (recomendado) e Q4_K_L é grande (melhora marginal em relação ao M).",
+            a: 'Medium (médio) — a variante de tamanho dentro da família k-quant. Q4_K_S (small) é menor (4,36 GiB contra 4,58 GiB no Llama 3.1 8B) com perplexidade maior, e Q4_K_M (medium) é o padrão usual. A ferramenta quantize do llama.cpp não tem um tipo Q4_K_L; o próximo degrau é Q5_K_M.',
           },
           {
             q: 'Quais modelos no Ollama usam Q4_K_M por padrão?',
-            a: 'A maioria deles — Llama 3, Mistral, Qwen, Phi e Gemma usam tags Q4_K_M por padrão. Especifique <code>:q5_K_M</code> ou <code>:q8_0</code> na tag do modelo para mudar a quantização.',
+            a: 'Muitos. As páginas da biblioteca Ollama para Llama 3.1 8B, Qwen3 8B, Mistral 7B e Phi-4 mini listam Q4_K_M para a tag padrão (verificado em 2026-11-03); outros modelos podem diferir, então consulte a página do modelo. Quando o modelo as oferece, especifique <code>:q5_K_M</code> ou <code>:q8_0</code> na tag para trocar a quantização.',
           },
         ],
       },
@@ -564,7 +564,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Q4_K_M es cuantización de 4 bits k-quant de calidad media: mejor que Q4_0, más pequeña que Q8_0. Úsala por defecto en Ollama. Guía rápida de PromptQuorum.',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-es.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
@@ -573,10 +573,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         answer: 'Q4_K_M significa cuantización de 4 bits con compresión k-quant (K) a calidad media (M). Es la mejor opción por defecto para la mayoría de modelos: mejor calidad que Q4_0, menor tamaño que Q8_0.',
         bullets: [
           'Q = cuantizado, 4 = 4 bits, K = k-quant, M = medio',
-          'Mejor calidad que Q4_0 al mismo tamaño de archivo',
+          'Menor perplejidad que Q4_0 (6,41 frente a 6,70 en Llama 3 8B) con un archivo 0,24 GiB mayor',
           'Usa Q4_K_M como cuantización predeterminada',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -584,18 +584,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Q4_K_M = cuantización de 4 bits con compresión k-quant a calidad media — mejor que Q4_0 al mismo tamaño de archivo',
-          'Un modelo 7B en Q4_K_M ocupa ~4,1 GB en disco y necesita ~5,5 GB de VRAM para ejecutarse',
+          'Q4_K_M = cuantización de 4 bits con compresión k-quant a calidad media — menor perplejidad que Q4_0 con un archivo algo mayor',
+          'Llama 3.1 8B en Q4_K_M ocupa 4,58 GiB en disco; con una caché KV de 4k tokens (unos 0,5 GiB, calculado) necesita unos 5,1 GiB de VRAM antes de la sobrecarga de ejecución',
           'Usa Q4_K_M como predeterminado — ofrece la mejor relación calidad/GB para la mayoría de presupuestos de VRAM',
         ],
       },
       body1: {
         title: 'Qué significa cada letra de Q4_K_M',
         content: [
-          '<strong>Q4_K_M existe porque los formatos antiguos de 4 bits (Q4_0) perdían demasiada calidad en los pesos críticos.</strong> La compresión k-quant resuelve esto asignando más bits a los pesos que más afectan a la salida, y menos bits a los de menor impacto. Resultado: 5–8% más calidad que Q4_0 al mismo tamaño de archivo.',
-          'La "K" es el diferenciador clave. La compresión k-quant aplica una asignación de bits no uniforme — los pesos críticos reciben más bits, los menos importantes reciben menos. Esto recupera 5–8% de calidad respecto al antiguo formato Q4_0 al mismo tamaño de archivo.',
-          'La "M" es el ajuste de calidad dentro de k-quant. Q4_K_S (small) es ligeramente más pequeño con menor calidad. Q4_K_M (medium) es el mejor equilibrio. Q4_K_L (large) es marginalmente mejor pero rara vez justifica el tamaño extra.',
-          '<strong>K-quant funciona agrupando pesos y asignando bits según su importancia.</strong> Los clusters de mayor importancia reciben 6 bits por peso. Los de nivel medio reciben 4 bits. Los de baja importancia reciben 3 bits. El nivel "M" promedia 4,5 bits por peso en todo el modelo — esto explica por qué Q4_K_M se sitúa entre Q4_K_S y Q5_K_M en tamaño y calidad. Para cuando el nivel M no es suficiente, consulta <a href="/es/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
+          '<strong>Q4_K_M existe porque el formato antiguo de 4 bits, Q4_0, pierde más calidad de la necesaria.</strong> En Llama 3 8B, la prueba de perplejidad de llama.cpp da 6,41 para Q4_K_M y 6,70 para Q4_0 (menor es mejor; f16 es 6,23), con un archivo 0,24 GiB mayor (4,58 frente a 4,34 GiB). Fuente: <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">README de perplexity de llama.cpp</a>.',
+          'La "K" marca la familia k-quant introducida en el <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">pull request #1684 de llama.cpp</a>. Q4_K_M mezcla dos tipos de tensor: Q6_K de 6 bits para la mitad de los tensores attention.wv y feed_forward.w2, y Q4_K de 4 bits para el resto. En Llama 3.1 8B esto da una media de 4,89 bits por peso (README de quantize de llama.cpp), por encima de los 4 nominales.',
+          'La "M" es la variante de tamaño dentro de la familia. Q4_K_S (small) usa Q4_K en todos los tensores: 4,36 GiB frente a 4,58 GiB de Q4_K_M en Llama 3.1 8B, con mayor perplejidad (6,50 frente a 6,41 en Llama 3 8B sin matriz de importancia). Q5_K_M es el siguiente escalón, con 5,33 GiB.',
+          '<strong>K-quant trabaja con bloques de pesos.</strong> Q4_K agrupa 32 pesos en un bloque y 8 bloques en un superbloque, y guarda escalas y mínimos de bloque con 6 bits, lo que supone 4,5 bits por peso (pull request #1684). Q4_K_M llega a 4,89 por sus tensores Q6_K, por eso queda entre Q4_K_S (4,67) y Q5_K_M (5,70) en tamaño. Cuando el nivel M no basta, consulta <a href="/es/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
         ],
         image: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-es.webp',
         imageCaption: 'Qué Significa Cada Letra en Q4_K_M -- Descifrando el nombre del formato',
@@ -603,18 +603,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Cómo se compara Q4_K_M con otras cuantizaciones',
         content: [
-          'La tabla siguiente muestra los compromisos para un modelo 7B. La calidad es relativa al baseline de plena precisión Q8_0. A menos que tengas 12+ GB de VRAM, Q4_K_M ofrece la mejor relación calidad/GB.',
+          'La tabla muestra la prueba de perplejidad de llama.cpp en Llama 3 8B (wikitext, sin matriz de importancia; menor es mejor). Los porcentajes se calculan respecto a f16 (6,2332). Q4_K_M añade menos del 3 % de perplejidad con 4,58 GiB, aproximadamente el 58 % del tamaño de Q8_0 (calculado: 4,58 / 7,96).',
           'Para una comparación directa de Q4_K_M vs Q8_0, consulta la <a href="/es/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">guía de decisión Q4_K_M vs Q8_0</a>. Para la referencia completa de cuantización, consulta la <a href="/es/local-llms/quantization-levels-comparison" class="text-primary hover:underline">comparación de niveles de cuantización</a>.',
         ],
-        columns: ['Formato', 'Tamaño de archivo (7B)', 'Calidad vs Q8_0'],
+        columns: ['Formato', 'Tamaño, Llama 3 8B (GiB)', 'Perplejidad (cambio vs f16)'],
         rows: [
-          { 'Formato': 'Q4_0', 'Tamaño de archivo (7B)': '3,8 GB', 'Calidad vs Q8_0': 'Base (~87%)' },
-          { 'Formato': 'Q4_K_M', 'Tamaño de archivo (7B)': '4,1 GB', 'Calidad vs Q8_0': '~92% (+5%)' },
-          { 'Formato': 'Q5_K_M', 'Tamaño de archivo (7B)': '5,0 GB', 'Calidad vs Q8_0': '~95% (+3%)' },
-          { 'Formato': 'Q8_0', 'Tamaño de archivo (7B)': '7,7 GB', 'Calidad vs Q8_0': '100% (referencia)' },
+          { 'Formato': 'Q4_0', 'Tamaño, Llama 3 8B (GiB)': '4,34', 'Perplejidad (cambio vs f16)': '6,70 (+7,5 %)' },
+          { 'Formato': 'Q4_K_M', 'Tamaño, Llama 3 8B (GiB)': '4,58', 'Perplejidad (cambio vs f16)': '6,41 (+2,8 %)' },
+          { 'Formato': 'Q5_K_M', 'Tamaño, Llama 3 8B (GiB)': '5,33', 'Perplejidad (cambio vs f16)': '6,29 (+0,9 %)' },
+          { 'Formato': 'Q8_0', 'Tamaño, Llama 3 8B (GiB)': '7,96', 'Perplejidad (cambio vs f16)': '6,23 (+0,02 %)' },
         ],
         image: '/images/what-is-q4-k-m-quantization-size-quality-hero-es.webp',
-        imageCaption: 'Q4_K_M vs Otras Cuantizaciones -- Tamaño de archivo y calidad (modelo 7B)',
+        imageCaption: 'Q4_K_M vs otras cuantizaciones -- Tamaño de archivo y perplejidad (Llama 3 8B)',
       },
       faq: {
         id: 'faq',
@@ -622,19 +622,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Es Q4_K_M lo mismo que Q4_0?',
-            a: 'No. Q4_K_M usa compresión k-quant que recupera 5–8% de calidad sobre Q4_0 a la misma profundidad de bits. Siempre prefiere Q4_K_M sobre Q4_0. Consulta la <a href="/es/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">guía Q4_K_M vs Q8_0</a> para saber cuándo subir de nivel.',
+            a: 'No. En Llama 3 8B, Q4_K_M alcanza una perplejidad de 6,41 frente a 6,70 de Q4_0, con un archivo 0,24 GiB mayor (4,58 frente a 4,34 GiB; llama.cpp, sin matriz de importancia). Prefiere Q4_K_M a Q4_0. Consulta la <a href="/es/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">guía Q4_K_M vs Q8_0</a> para saber cuándo subir de nivel.',
           },
           {
             q: '¿Qué cuantización debo usar con 8 GB de VRAM?',
-            a: 'Q4_K_M para modelos 7B (5,5 GB VRAM). Si quieres mejor calidad y tienes margen, Q5_K_M usa 6,5 GB y añade ~3% de calidad. Ambas caben cómodamente en 8 GB.',
+            a: 'Q4_K_M para modelos 8B: el archivo de Llama 3.1 8B ocupa 4,58 GiB, o unos 5,1 GiB con una caché KV de 4k tokens (calculado, antes de la sobrecarga de ejecución). Q5_K_M ocupa 5,33 GiB, unos 5,8 GiB con la misma caché (calculado), y reduce el aumento de perplejidad sobre f16 de +2,8 % a +0,9 % en Llama 3 8B. Ambos caben en 8 GB; Q8_0 (archivo de 7,95 GiB) no.',
           },
           {
             q: "¿Qué significa la 'M' en Q4_K_M?",
-            a: "Medium (medio) — se refiere al nivel de calidad dentro de la compresión k-quant. Q4_K_S es la variante pequeña (menor calidad), Q4_K_M es medium (recomendada), y Q4_K_L es large (mejora marginal respecto a M).",
+            a: 'Medium (medio) — la variante de tamaño dentro de la familia k-quant. Q4_K_S (small) es más pequeño (4,36 GiB frente a 4,58 GiB en Llama 3.1 8B) con mayor perplejidad, y Q4_K_M (medium) es el valor predeterminado habitual. La herramienta quantize de llama.cpp no tiene un tipo Q4_K_L; el siguiente escalón es Q5_K_M.',
           },
           {
             q: '¿Qué modelos en Ollama usan Q4_K_M por defecto?',
-            a: 'La mayoría — Llama 3, Mistral, Qwen, Phi y Gemma usan etiquetas Q4_K_M por defecto. Especifica <code>:q5_K_M</code> o <code>:q8_0</code> en la etiqueta del modelo para cambiar la cuantización.',
+            a: 'Muchos. Las páginas de la biblioteca de Ollama para Llama 3.1 8B, Qwen3 8B, Mistral 7B y Phi-4 mini indican Q4_K_M para la etiqueta por defecto (comprobado el 2026-11-03); otros modelos pueden diferir, así que consulta la página del modelo. Cuando el modelo las ofrece, indica <code>:q5_K_M</code> o <code>:q8_0</code> en la etiqueta para cambiar de cuantización.',
           },
         ],
       },
@@ -644,10 +644,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     title: 'ما هو ضغط ⁨Q4⁩_⁨K⁩_⁨M⁩؟',
     seoTitle: '⁨Q4⁩_⁨K⁩_⁨M⁩: ضغط ⁨k-quant 4-bit 2026⁩ | ⁨PromptQuorum⁩',
-    metaDescription: '⁨Q4⁩_⁨K⁩_⁨M⁩ يوفر جودة أعلى بـ ⁨5⁩–⁨8%⁩ من ⁨Q4⁩_⁨0⁩ بنفس حجم الملف. نموذج ⁨7B⁩ يحتاج ~⁨5.5 GB VRAM⁩. استخدمه افتراضيًا في ⁨Ollama⁩ بدلًا من ⁨Q4⁩_⁨0⁩ أو ⁨Q8⁩_⁨0⁩.',
+    metaDescription: 'Q4_K_M تكميم 4-bit من عائلة k-quant بجودة متوسطة: حيرة أقل من Q4_0 وحجم أصغر من Q8_0. ملف Llama 3.1 8B بصيغته 4.58 GiB. استخدمه افتراضيًا في Ollama.',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-ar.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
@@ -656,10 +656,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         answer: 'يعني Q4_K_M ضغط 4-bit مع ضغط k-quant (K) بجودة متوسطة (M). هو الخيار الافتراضي الأفضل لمعظم النماذج: جودة أعلى من Q4_0، وحجم أصغر من Q8_0.',
         bullets: [
           'Q = مضغوط، 4 = 4 بت، K = k-quant، M = متوسط',
-          'جودة أعلى من Q4_0 بنفس حجم الملف',
+          'حيرة (perplexity) أقل من Q4_0 (6.41 مقابل 6.70 في Llama 3 8B) بملف أكبر بمقدار 0.24 GiB',
           'استخدم Q4_K_M كضغط افتراضي',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -667,18 +667,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Q4_K_M = ضغط 4-bit مع ضغط k-quant بجودة متوسطة — أفضل من Q4_0 بنفس حجم الملف',
-          'نموذج 7B بـ Q4_K_M يشغل ~4.1 GB على القرص ويحتاج ~5.5 GB VRAM للتشغيل',
+          'Q4_K_M = تكميم 4-bit مع ضغط k-quant بجودة متوسطة — حيرة أقل من Q4_0 بملف أكبر قليلًا',
+          'حجم Llama 3.1 8B بصيغة Q4_K_M هو 4.58 GiB على القرص؛ ومع ذاكرة KV بسياق 4k رمز (حوالي 0.5 GiB، محسوب) يحتاج إلى حوالي 5.1 GiB من VRAM قبل الحمل الإضافي لوقت التشغيل',
           'استخدم Q4_K_M كافتراضي — يقدم أفضل نسبة جودة/GB لمعظم ميزانيات VRAM',
         ],
       },
       body1: {
         title: 'ماذا تعني كل حرف في Q4_K_M',
         content: [
-          '<strong>وُجد Q4_K_M لأن صيغ 4-bit القديمة (Q4_0) فقدت جودةً كبيرة في الأوزان الحرجة.</strong> يحل ضغط k-quant هذه المشكلة بتخصيص مزيد من البتات للأوزان الأكثر تأثيرًا في المخرجات وبتات أقل للأقل تأثيرًا. النتيجة: جودة أعلى بنسبة 5–8% من Q4_0 بنفس حجم الملف.',
-          '"K" هي المُميِّز الرئيسي. يطبق ضغط k-quant تخصيص بتات غير منتظم — تحصل الأوزان الحرجة على بتات أكثر والأقل أهمية على بتات أقل. يستعيد هذا 5–8% من الجودة مقارنةً بصيغة Q4_0 القديمة بنفس حجم الملف.',
-          '"M" هي إعداد الجودة ضمن k-quant. Q4_K_S (صغير) أصغر حجمًا قليلًا بجودة أدنى. Q4_K_M (متوسط) هو أفضل توازن. Q4_K_L (كبير) أفضل هامشيًا لكنه نادرًا ما يستحق الحجم الإضافي.',
-          '<strong>يعمل k-quant بتجميع الأوزان وتخصيص البتات وفق الأهمية.</strong> تحصل المجموعات الأعلى أهمية على 6 بتات لكل وزن. المجموعات متوسطة المستوى على 4 بتات. المجموعات منخفضة الأهمية على 3 بتات. يتوسط المستوى "M" 4.5 بت لكل وزن عبر النموذج بأكمله — ما يُفسر لماذا يقع Q4_K_M بين Q4_K_S و Q5_K_M في الحجم والجودة. حين لا يكفي المستوى M، راجع <a href="/ar/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M مقابل Q8_0</a>.',
+          '<strong>يوجد Q4_K_M لأن صيغة 4-bit الأقدم Q4_0 تفقد جودة أكثر من اللازم.</strong> في Llama 3 8B يعطي اختبار الحيرة في llama.cpp القيمة 6.41 لـ Q4_K_M و6.70 لـ Q4_0 (الأقل أفضل؛ f16 هو 6.23)، بملف أكبر بمقدار 0.24 GiB (4.58 مقابل 4.34 GiB). المصدر: <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">ملف README الخاص بـ perplexity في llama.cpp</a>.',
+          'يشير الحرف K إلى عائلة k-quant التي قُدّمت في <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">طلب السحب رقم 1684 في llama.cpp</a>. يمزج Q4_K_M نوعين من التنسورات: Q6_K بـ 6 بتات لنصف تنسورات attention.wv وfeed_forward.w2، وQ4_K بـ 4 بتات لبقية التنسورات. في Llama 3.1 8B يعطي ذلك متوسط 4.89 بت لكل وزن (ملف README الخاص بـ quantize في llama.cpp)، أي أعلى من 4 الاسمية.',
+          'الحرف M هو متغير الحجم داخل العائلة. يستخدم Q4_K_S (صغير) الصيغة Q4_K لكل التنسورات: ‏4.36 GiB مقابل 4.58 GiB لـ Q4_K_M في Llama 3.1 8B، بحيرة أعلى (6.50 مقابل 6.41 في Llama 3 8B دون مصفوفة أهمية). والدرجة الأعلى التالية هي Q5_K_M بحجم 5.33 GiB.',
+          '<strong>يعمل k-quant على كتل من الأوزان.</strong> يجمع Q4_K كل 32 وزنًا في كتلة و8 كتل في كتلة عليا، ويخزّن مقاييس الكتل وقيمها الدنيا بـ 6 بتات، أي 4.5 بت لكل وزن (طلب السحب رقم 1684). يصل Q4_K_M إلى 4.89 بسبب تنسورات Q6_K فيه، ولذلك يقع حجمه بين Q4_K_S (4.67) وQ5_K_M (5.70). عندما لا يكفي المستوى M، راجع <a href="/ar/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M مقابل Q8_0</a>.',
         ],
         image: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-ar.webp',
         imageCaption: 'ماذا يعني كل حرف في Q4_K_M -- فك رموز اسم الصيغة',
@@ -686,18 +686,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'كيف يُقارَن Q4_K_M بمستويات الضغط الأخرى',
         content: [
-          'يوضح الجدول التالي المقايضات لنموذج 7B. الجودة نسبية إلى خط الأساس للدقة الكاملة Q8_0. ما لم تمتلك 12+ GB VRAM، يقدم Q4_K_M أفضل نسبة جودة/GB.',
+          'يعرض الجدول اختبار الحيرة في llama.cpp على Llama 3 8B (بيانات wikitext، دون مصفوفة أهمية؛ الأقل أفضل). النسب المئوية محسوبة بالنسبة إلى f16 (6.2332). يضيف Q4_K_M أقل من 3% إلى الحيرة بحجم 4.58 GiB، أي حوالي 58% من حجم ملف Q8_0 (محسوب: 4.58 / 7.96).',
           'للمقارنة المباشرة بين Q4_K_M و Q8_0، راجع <a href="/ar/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">دليل قرار Q4_K_M مقابل Q8_0</a>. للمرجع الكامل حول الضغط، راجع <a href="/ar/local-llms/quantization-levels-comparison" class="text-primary hover:underline">مقارنة مستويات الضغط</a>.',
         ],
-        columns: ['الصيغة', 'حجم الملف (7B)', 'الجودة مقارنةً بـ Q8_0'],
+        columns: ['الصيغة', 'الحجم، Llama 3 8B (GiB)', 'الحيرة (التغيّر عن f16)'],
         rows: [
-          { 'الصيغة': 'Q4_0', 'حجم الملف (7B)': '3.8 GB', 'الجودة مقارنةً بـ Q8_0': 'أساس (~87%)' },
-          { 'الصيغة': 'Q4_K_M', 'حجم الملف (7B)': '4.1 GB', 'الجودة مقارنةً بـ Q8_0': '~92% (+5%)' },
-          { 'الصيغة': 'Q5_K_M', 'حجم الملف (7B)': '5.0 GB', 'الجودة مقارنةً بـ Q8_0': '~95% (+3%)' },
-          { 'الصيغة': 'Q8_0', 'حجم الملف (7B)': '7.7 GB', 'الجودة مقارنةً بـ Q8_0': '100% (مرجع)' },
+          { 'الصيغة': 'Q4_0', 'الحجم، Llama 3 8B (GiB)': '4.34', 'الحيرة (التغيّر عن f16)': '6.70 (+7.5%)' },
+          { 'الصيغة': 'Q4_K_M', 'الحجم، Llama 3 8B (GiB)': '4.58', 'الحيرة (التغيّر عن f16)': '6.41 (+2.8%)' },
+          { 'الصيغة': 'Q5_K_M', 'الحجم، Llama 3 8B (GiB)': '5.33', 'الحيرة (التغيّر عن f16)': '6.29 (+0.9%)' },
+          { 'الصيغة': 'Q8_0', 'الحجم، Llama 3 8B (GiB)': '7.96', 'الحيرة (التغيّر عن f16)': '6.23 (+0.02%)' },
         ],
         image: '/images/what-is-q4-k-m-quantization-size-quality-hero-ar.webp',
-        imageCaption: 'Q4_K_M مقابل تكميمات أخرى -- حجم الملف والجودة (نموذج 7B)',
+        imageCaption: 'Q4_K_M مقابل صيغ التكميم الأخرى -- حجم الملف والحيرة (Llama 3 8B)',
       },
       faq: {
         id: 'faq',
@@ -705,19 +705,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'هل Q4_K_M هو نفسه Q4_0؟',
-            a: 'لا. يستخدم Q4_K_M ضغط k-quant الذي يستعيد 5–8% من الجودة على Q4_0 بنفس عمق البتات. دائمًا فضّل Q4_K_M على Q4_0. راجع <a href="/ar/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">دليل Q4_K_M مقابل Q8_0</a> لمعرفة متى ترفع المستوى.',
+            a: 'لا. في Llama 3 8B تبلغ حيرة Q4_K_M ‏6.41 مقابل 6.70 لـ Q4_0، بملف أكبر بمقدار 0.24 GiB (4.58 مقابل 4.34 GiB؛ llama.cpp، دون مصفوفة أهمية). فضّل Q4_K_M على Q4_0. راجع <a href="/ar/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">دليل Q4_K_M مقابل Q8_0</a> لمعرفة متى ترتقي بالمستوى.',
           },
           {
             q: 'ما الضغط المناسب مع 8 GB VRAM؟',
-            a: 'Q4_K_M للنماذج 7B (5.5 GB VRAM). إذا أردت جودة أعلى وتوفر لديك هامش، يستخدم Q5_K_M 6.5 GB ويضيف ~3% جودة. كلاهما يتسع بيسر في 8 GB.',
+            a: 'Q4_K_M لنماذج 8B: ملف Llama 3.1 8B حجمه 4.58 GiB، أو حوالي 5.1 GiB مع ذاكرة KV بسياق 4k رمز (محسوب، قبل الحمل الإضافي لوقت التشغيل). حجم Q5_K_M هو 5.33 GiB، وحوالي 5.8 GiB مع الذاكرة نفسها (محسوب)، ويخفض زيادة الحيرة عن f16 في Llama 3 8B من +2.8% إلى +0.9%. كلاهما يتسع في 8 GB؛ أما Q8_0 (ملف 7.95 GiB) فلا.',
           },
           {
             q: 'ماذا تعني "M" في Q4_K_M؟',
-            a: 'Medium (متوسط) — تشير إلى مستوى الجودة ضمن ضغط k-quant. Q4_K_S هو المتغير الصغير (جودة أدنى)، Q4_K_M هو المتوسط (موصى به)، وQ4_K_L هو الكبير (تحسن هامشي عن M).',
+            a: 'Medium (متوسط) — متغير الحجم داخل عائلة k-quant. يكون Q4_K_S (صغير) أصغر (4.36 GiB مقابل 4.58 GiB في Llama 3.1 8B) بحيرة أعلى، ويُعدّ Q4_K_M (متوسط) الخيار الافتراضي المعتاد. لا تحتوي أداة quantize في llama.cpp على نوع Q4_K_L؛ والدرجة الأعلى التالية هي Q5_K_M.',
           },
           {
             q: 'ما النماذج في Ollama التي تستخدم Q4_K_M افتراضيًا؟',
-            a: 'معظمها — Llama 3 و Mistral و Qwen و Phi و Gemma تستخدم وسوم Q4_K_M افتراضيًا. حدّد <code>:q5_K_M</code> أو <code>:q8_0</code> في وسم النموذج لتغيير الضغط.',
+            a: 'كثير منها. تذكر صفحات مكتبة Ollama لنماذج Llama 3.1 8B وQwen3 8B وMistral 7B وPhi-4 mini أن الوسم الافتراضي هو Q4_K_M (جرى التحقق في 2026-11-03)؛ وقد تختلف النماذج الأخرى، لذا راجع صفحة النموذج. عندما يوفّرها النموذج، حدّد <code>:q5_K_M</code> أو <code>:q8_0</code> في الوسم لتبديل التكميم.',
           },
         ],
       },
@@ -730,7 +730,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Q4_K_M은 중간 품질의 4비트 k-quant 양자화입니다. Q4_0보다 품질이 높고 Q8_0보다 파일 크기가 작습니다. Ollama의 기본 설정으로 사용하십시오.',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-ko.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     targetKeywords: [
@@ -747,10 +747,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         answer: 'Q4_K_M은 k-quant(K) 압축 방식을 사용하는 4비트 양자화로, 중간(M) 품질 수준을 의미합니다. 대부분의 모델에 대한 최적의 기본 설정입니다. Q4_0보다 품질이 높고 Q8_0보다 파일 크기가 작습니다.',
         bullets: [
           'Q = 양자화, 4 = 4비트, K = k-quant, M = 중간',
-          '동일한 파일 크기에서 Q4_0보다 품질이 높습니다',
+          'Q4_0보다 낮은 퍼플렉시티(Llama 3 8B에서 6.41 대 6.70), 파일은 0.24 GiB 더 큼',
           'Q4_K_M을 기본 양자화 설정으로 사용하십시오',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-11',
       },
     },
     schema: {
@@ -758,10 +758,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'TechArticle',
       inLanguage: 'ko',
       headline: 'Q4_K_M 양자화란 무엇입니까?',
-      description: 'Q4_K_M은 중간 품질의 4비트 k-quant 양자화입니다. Q4_0보다 5~8% 품질이 높고 Q8_0보다 파일 크기가 작으며 Ollama의 기본 설정으로 사용됩니다.',
+      description: 'Q4_K_M은 중간 품질의 4비트 k-quant 양자화입니다. Llama 3 8B에서 Q4_0보다 퍼플렉시티가 낮고 Q8_0보다 파일 크기가 작으며, 많은 Ollama 모델의 기본 태그로 사용됩니다.',
       url: 'https://www.promptquorum.com/ko/prompt-bites/what-is-q4-k-m-quantization',
       datePublished: '2026-05-18',
-      dateModified: '2026-05-18',
+      dateModified: '2026-11-03',
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',
@@ -792,8 +792,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Q4_K_M = 중간 품질의 k-quant 압축 방식을 사용하는 4비트 양자화 — 동일한 파일 크기에서 Q4_0보다 품질이 높습니다',
-          'Q4_K_M으로 실행되는 7B 모델은 디스크에 ~4.1 GB를 차지하며 실행에 ~5.5 GB VRAM이 필요합니다',
+          'Q4_K_M = k-quant 압축을 사용하는 중간 품질의 4비트 양자화 — Q4_0보다 퍼플렉시티가 낮고 파일은 약간 큽니다',
+          'Q4_K_M의 Llama 3.1 8B는 디스크에서 4.58 GiB입니다. 4k 토큰 KV 캐시(약 0.5 GiB, 계산값)를 더하면 런타임 오버헤드를 제외하고 약 5.1 GiB의 VRAM이 필요합니다',
           'Q4_K_M을 기본값으로 사용하십시오 — 대부분의 VRAM 예산에서 최고의 품질/GB 비율을 제공합니다',
         ],
       },
@@ -802,18 +802,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Q4_K_M은 중요한 가중치에 더 많은 비트를 할당하는 k-quant 압축을 사용하여 동일한 파일 크기에서 Q4_0보다 5~8% 높은 품질을 제공하는 4비트 양자화 형식입니다.',
+            text: 'Q4_K_M은 k-quant 압축을 사용하는 4비트 양자화 형식으로, Llama 3 8B에서 Q4_0보다 퍼플렉시티가 낮으며(6.41 대 6.70) 파일은 0.24 GiB 더 큽니다.',
           },
           {
             type: 'plain-terms',
-            text: 'Q4_K_M에서 Q는 양자화, 4는 4비트, K는 k-quant(비균일 비트 할당), M은 중간 품질을 의미하며, 파일 크기는 작게 유지하면서 더 나은 품질을 제공합니다.',
+            text: 'Q4_K_M에서 Q는 양자화, 4는 4비트, K는 k-quant 계열, M은 중간 크기 변형을 의미하며, 일부 텐서에는 6비트(Q6_K)를, 나머지에는 4비트(Q4_K)를 사용합니다.',
           },
         ],
         content: [
-          '<strong>Q4_K_M은 기존 4비트 형식(Q4_0)이 중요한 가중치에서 너무 많은 품질을 손실했기 때문에 존재합니다.</strong> k-quant 압축은 출력에 가장 큰 영향을 미치는 가중치에 더 많은 비트를 할당하고 영향이 적은 가중치에는 더 적은 비트를 할당하여 이 문제를 해결합니다. 결과: 동일한 파일 크기에서 Q4_0보다 5~8% 높은 품질.',
-          '"K"는 핵심적인 차별점입니다. k-quant 압축은 비균일 비트 할당을 적용합니다 — 중요한 가중치는 더 많은 비트를 받고, 덜 중요한 가중치는 더 적은 비트를 받습니다. 이를 통해 동일한 파일 크기에서 기존 Q4_0 형식 대비 5~8%의 품질을 회복합니다.',
-          '"M"은 k-quant 내의 품질 설정입니다. Q4_K_S(small)는 더 낮은 품질로 약간 더 작습니다. Q4_K_M(medium)은 최적의 균형입니다. Q4_K_L(large)은 약간 더 낫지만 추가 크기를 정당화하는 경우는 거의 없습니다.',
-          '<strong>k-quant는 가중치를 클러스터링하고 중요도에 따라 비트를 할당하는 방식으로 작동합니다.</strong> 최고 중요도 클러스터는 가중치당 6비트를 받습니다. 중간 수준 클러스터는 4비트를 받습니다. 낮은 중요도 클러스터는 3비트를 받습니다. "M" 수준은 모델 전체에서 가중치당 평균 4.5비트입니다 — 이것이 Q4_K_M이 크기와 품질 모두에서 Q4_K_S와 Q5_K_M 사이에 위치하는 이유입니다. M 수준으로 충분하지 않을 때는 <a href="/ko/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>을 참조하십시오.',
+          '<strong>Q4_K_M이 존재하는 이유는 기존 4비트 형식인 Q4_0가 필요 이상으로 품질을 잃기 때문입니다.</strong> Llama 3 8B에서 llama.cpp의 퍼플렉시티 테스트는 Q4_K_M이 6.41, Q4_0가 6.70(낮을수록 좋음, f16은 6.23)이며, 파일은 0.24 GiB 더 큽니다(4.58 대 4.34 GiB). 출처: <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp perplexity README</a>.',
+          '"K"는 <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp 풀 리퀘스트 #1684</a>에서 도입된 k-quant 계열을 뜻합니다. Q4_K_M은 두 가지 텐서 유형을 섞습니다. attention.wv와 feed_forward.w2 텐서의 절반에는 6비트 Q6_K를, 나머지 모든 텐서에는 4비트 Q4_K를 사용합니다. Llama 3.1 8B에서는 가중치당 평균 4.89비트(llama.cpp quantize README)로, 명목상의 4비트보다 높습니다.',
+          '"M"은 계열 내의 크기 변형입니다. Q4_K_S(small)는 모든 텐서에 Q4_K를 사용합니다. Llama 3.1 8B에서 4.36 GiB 대 Q4_K_M의 4.58 GiB이며 퍼플렉시티는 더 높습니다(Llama 3 8B, 중요도 행렬 없음에서 6.50 대 6.41). 다음 단계는 5.33 GiB의 Q5_K_M입니다.',
+          '<strong>K-quant는 가중치 블록 단위로 동작합니다.</strong> Q4_K는 가중치 32개를 한 블록으로, 8개 블록을 한 슈퍼 블록으로 묶고 블록 스케일과 최솟값을 6비트로 저장하며, 이는 가중치당 4.5비트입니다(풀 리퀘스트 #1684). Q4_K_M은 Q6_K 텐서 때문에 4.89비트가 되며, 그래서 크기가 Q4_K_S(4.67)와 Q5_K_M(5.70) 사이에 있습니다. M 등급으로 부족하다면 <a href="/ko/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>를 참조하십시오.',
         ],
         image: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-ko.webp',
         imageCaption: 'Q4_K_M의 각 글자가 의미하는 것 -- 형식 이름 해독하기',
@@ -821,18 +821,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Q4_K_M과 다른 양자화 형식 비교',
         content: [
-          '아래 표는 7B 모델에 대한 트레이드오프를 보여줍니다. 품질은 완전 정밀도 Q8_0 기준선에 대한 상대적 수치입니다. VRAM이 12GB 이상 없다면 Q4_K_M이 최고의 품질/GB 비율을 제공합니다.',
+          '이 표는 llama.cpp의 Llama 3 8B 퍼플렉시티 테스트(wikitext, 중요도 행렬 없음, 낮을수록 좋음)를 보여줍니다. 백분율은 f16(6.2332) 대비 계산한 값입니다. Q4_K_M은 4.58 GiB에서 퍼플렉시티 증가가 3% 미만이며, 이는 Q8_0 파일 크기의 약 58%입니다(계산값: 4.58 / 7.96).',
           'Q4_K_M과 Q8_0의 직접 비교는 <a href="/ko/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0 결정 가이드</a>를 참조하십시오. 전체 양자화 참고 자료는 <a href="/ko/local-llms/quantization-levels-comparison" class="text-primary hover:underline">양자화 수준 비교</a>를 참조하십시오.',
         ],
-        columns: ['형식', '파일 크기 (7B)', 'Q8_0 대비 품질'],
+        columns: ['형식', '크기, Llama 3 8B (GiB)', '퍼플렉시티 (f16 대비 변화)'],
         rows: [
-          { '형식': 'Q4_0', '파일 크기 (7B)': '3.8 GB', 'Q8_0 대비 품질': '기준선 (~87%)' },
-          { '형식': 'Q4_K_M', '파일 크기 (7B)': '4.1 GB', 'Q8_0 대비 품질': '~92% (+5%)' },
-          { '형식': 'Q5_K_M', '파일 크기 (7B)': '5.0 GB', 'Q8_0 대비 품질': '~95% (+3%)' },
-          { '형식': 'Q8_0', '파일 크기 (7B)': '7.7 GB', 'Q8_0 대비 품질': '100% (기준)' },
+          { '형식': 'Q4_0', '크기, Llama 3 8B (GiB)': '4.34', '퍼플렉시티 (f16 대비 변화)': '6.70 (+7.5%)' },
+          { '형식': 'Q4_K_M', '크기, Llama 3 8B (GiB)': '4.58', '퍼플렉시티 (f16 대비 변화)': '6.41 (+2.8%)' },
+          { '형식': 'Q5_K_M', '크기, Llama 3 8B (GiB)': '5.33', '퍼플렉시티 (f16 대비 변화)': '6.29 (+0.9%)' },
+          { '형식': 'Q8_0', '크기, Llama 3 8B (GiB)': '7.96', '퍼플렉시티 (f16 대비 변화)': '6.23 (+0.02%)' },
         ],
         image: '/images/what-is-q4-k-m-quantization-size-quality-hero-ko.webp',
-        imageCaption: 'Q4_K_M 대 다른 양자화 형식 -- 파일 크기 및 품질(7B 모델)',
+        imageCaption: 'Q4_K_M과 다른 양자화 비교 -- 파일 크기와 퍼플렉시티 (Llama 3 8B)',
       },
       faq: {
         id: 'faq',
@@ -840,19 +840,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Q4_K_M은 Q4_0과 같습니까?',
-            a: '아닙니다. Q4_K_M은 동일한 비트 깊이에서 Q4_0 대비 5~8%의 품질을 회복하는 k-quant 압축을 사용합니다. 항상 Q4_0보다 Q4_K_M을 선택하십시오. 더 높은 수준으로 언제 올려야 하는지는 <a href="/ko/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0 가이드</a>를 참조하십시오.',
+            a: '아닙니다. Llama 3 8B에서 Q4_K_M의 퍼플렉시티는 6.41로 Q4_0의 6.70보다 낮고, 파일은 0.24 GiB 더 큽니다(4.58 대 4.34 GiB, llama.cpp, 중요도 행렬 없음). Q4_0보다 Q4_K_M을 선택하십시오. 언제 더 높은 형식으로 갈지는 <a href="/ko/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0 가이드</a>를 참조하십시오.',
           },
           {
             q: 'VRAM 8GB에서 어떤 양자화를 사용해야 합니까?',
-            a: '7B 모델에는 Q4_K_M을 사용하십시오(5.5 GB VRAM). 더 나은 품질을 원하고 여유가 있다면 Q5_K_M은 6.5 GB를 사용하고 약 3%의 품질을 추가합니다. 두 가지 모두 8 GB에 편안하게 들어맞습니다.',
+            a: '8B 모델에는 Q4_K_M입니다. Llama 3.1 8B 파일은 4.58 GiB이고, 4k 토큰 KV 캐시를 더하면 약 5.1 GiB입니다(계산값, 런타임 오버헤드 제외). Q5_K_M은 5.33 GiB이고 같은 캐시로 약 5.8 GiB(계산값)이며, Llama 3 8B에서 f16 대비 퍼플렉시티 증가를 +2.8%에서 +0.9%로 줄입니다. 둘 다 8 GB에 들어가지만 Q8_0(파일 7.95 GiB)은 들어가지 않습니다.',
           },
           {
             q: "Q4_K_M에서 'M'은 무엇을 의미합니까?",
-            a: 'Medium(중간)을 의미합니다 — k-quant 압축 내의 품질 수준을 나타냅니다. Q4_K_S는 소형(낮은 품질) 변형이고, Q4_K_M은 중간(권장 설정)이며, Q4_K_L은 대형(M 대비 미미한 향상)입니다.',
+            a: 'Medium(중간)입니다. k-quant 계열 내의 크기 변형을 뜻합니다. Q4_K_S(small)는 더 작고(Llama 3.1 8B에서 4.36 GiB 대 4.58 GiB) 퍼플렉시티는 더 높으며, Q4_K_M(medium)이 일반적인 기본값입니다. llama.cpp의 quantize 도구에는 Q4_K_L 유형이 없으며, 다음 단계는 Q5_K_M입니다.',
           },
           {
             q: 'Ollama에서 기본적으로 Q4_K_M을 사용하는 모델은 무엇입니까?',
-            a: '대부분의 모델입니다 — Llama 3, Mistral, Qwen, Phi, Gemma 모두 기본적으로 Q4_K_M 태그를 사용합니다. 양자화를 변경하려면 모델 태그에 <code>:q5_K_M</code> 또는 <code>:q8_0</code>을 지정하십시오.',
+            a: '많은 모델이 그렇습니다. Llama 3.1 8B, Qwen3 8B, Mistral 7B, Phi-4 mini의 Ollama 라이브러리 페이지는 기본 태그를 Q4_K_M으로 표시합니다(2026-11-03 확인). 다른 모델은 다를 수 있으니 모델 페이지를 확인하십시오. 모델이 제공하는 경우 태그에 <code>:q5_K_M</code> 또는 <code>:q8_0</code>을 지정해 양자화를 전환합니다.',
           },
         ],
       },
