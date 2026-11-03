@@ -18,11 +18,12 @@ export const app: ToolRecord = {
   license: 'AGPL 3.0',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true, variesByModel: true }, // per github.com/LostRuins/koboldcpp README: "Runs on CPU or GPU, supports full or partial offloading" — no fixed RAM/VRAM minimum stated, floor depends entirely on the GGUF model and context size loaded, verified 2026-09-13
-  stars: 11600,
+  stars: 12133,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['serve'],
-  url: 'github.com/LostRuins/koboldcpp',
+  url: 'koboldcpp.net', // official site = the repo's GitHub homepage field (checked 2026-11-02); its downloads point to GitHub Releases
+  storeLinks: { github: 'https://github.com/LostRuins/koboldcpp' },
   installEffort: 'installer', // see InstallEffortKey in ./types.ts
   installOn: ['win'],
   installEvidence: 'README: "One executable file, no installation required"; on Windows download koboldcpp.exe and double-click it. Linux/macOS binaries need chmod +x and a terminal, so the tier is scoped to Windows. checked 2026-10-09',
@@ -38,10 +39,10 @@ export const app: ToolRecord = {
     ko: '내장 인터페이스가 포함된 llama.cpp 경량 래퍼',
   },
   reviewSlug: 'koboldcpp-review', // dedicated PromptQuorum review — pinned to #1 in the article index
-  pqReview: { date: '2026-10-17', version: 'v1.123.1', versionSourceUrl: 'https://github.com/LostRuins/koboldcpp/releases/tag/v1.123.1' },
-  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  pqReview: { date: '2026-11-02', version: 'v1.124.2', versionSourceUrl: 'https://github.com/LostRuins/koboldcpp/releases/tag/v1.124.2' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-11-02 (README re-read for v1.124.2; unchanged); a missing key = not stated there, never false.
   compare: { dockerDeploy: true, mcp: true, fileChat: true, openaiApi: true, nvidiaGpu: true, appleSilicon: true, amdGpu: true, cpuInference: true },
-  lastVerifiedDate: '2026-09-20',
-  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastVerifiedDate: '2026-11-02',
+  lastUpstreamUpdate: '2026-11-02', // GitHub API (latest release v1.124.2 on 2026-10-31; repo pushed_at 2026-11-02, whichever is newer), read 2026-11-02
   lastUpstreamUpdateSource: 'https://github.com/LostRuins/koboldcpp',
 }

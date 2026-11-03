@@ -414,6 +414,26 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026',
+        destination: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026',
+        destination: '/:lang/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
+        permanent: true,
+      },
+      {
+        source: '/local-llms/mram-in-memory-computing-local-ai-2026',
+        destination: '/local-llms/mram-in-memory-computing-local-ai',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/local-llms/mram-in-memory-computing-local-ai-2026',
+        destination: '/:lang/local-llms/mram-in-memory-computing-local-ai',
+        permanent: true,
+      },
+      {
         source: '/local-llms/best-vector-database-2026',
         destination: '/local-llms/best-vector-database',
         permanent: true,
@@ -845,6 +865,14 @@ const nextConfig: NextConfig = {
     ].join('; ')
 
     return [
+      {
+        // The GEO audit widget is only an iframe embed of /prompt-engineering/seo-meets-ai;
+        // as its own URL it ranked at position ~60 with no value (owner rule 2026-11-02).
+        source: '/widgets/:path*',
+        headers: [
+          { key: 'X-Robots-Tag', value: 'noindex, follow' },
+        ],
+      },
       {
         source: '/_next/static/:path*',
         headers: [

@@ -15,7 +15,7 @@ export const app: ToolRecord = {
   license: 'BSD-3-Clause (core), Weaviate License for gated features in the wl/ directory (requires a license key)', // GitHub reports license "Other" — repo LICENSE dual-licenses core code under BSD-3-Clause and select features under the proprietary Weaviate License, verified 2026-09-18
   price: 'freemium',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true },
-  stars: 16819, // github.com/weaviate/weaviate, verified 2026-09-18
+  stars: 16934, // github.com/weaviate/weaviate, verified 2026-09-18
   addedDate: '2026-09-18',
   status: 'listed',
   uses: ['build', 'docs'],
@@ -35,6 +35,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { dockerDeploy: true, hybridSearch: true, metadataFilter: true, clustered: true, managedCloud: true },
   lastVerifiedDate: '2026-09-18',
-  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2026-11-02', // GitHub API (latest release or push, whichever is newer), read 2026-11-02
   lastUpstreamUpdateSource: 'https://github.com/weaviate/weaviate',
 }

@@ -871,7 +871,7 @@ const HUB_THEMES: Array<{
     colorBadge: 'bg-blue-50 text-blue-700 border-blue-200',
     colorDot: 'bg-blue-400',
     slugs: [
-      'lm-studio-vs-jan-vs-gpt4all-2026',
+      'lm-studio-vs-jan-vs-gpt4all',
       'easiest-local-ai-app-windows-mac-linux',
       'best-local-llm-apps-mac',
       'local-llm-app-alternatives',

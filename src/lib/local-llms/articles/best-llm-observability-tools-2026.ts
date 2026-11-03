@@ -8,13 +8,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Best LLM Observability Tool 2026: Langfuse vs LangSmith vs Helicone',
-    seoTitle: 'Best LLM Observability Tool 2026',
-    metaDescription: 'Langfuse is free to self-host with 33.9k stars, LangSmith is $39/seat plus usage, Helicone is $79. Langfuse now belongs to ClickHouse.',
+    seoTitle: 'Best LLM Observability Tools 2026: Langfuse vs LangSmith',
+    metaDescription: 'Best LLM observability tools 2026: Langfuse (free to self-host), LangSmith from $39/seat, Helicone from $79/month, with pricing and trade-offs compared.',
     educationalLevel: 'Advanced',
     audience: 'Developers and teams running LLM applications in production',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-02',
     readTime: '14 min read',
     primaryTerm: 'LLM observability tool',
     targetKeywords: [
@@ -24,19 +24,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'best prompt monitoring tool',
       'Langfuse ClickHouse acquisition',
     ],
-    leadAnswerBlock: '**Langfuse is the best overall choice for most production teams: 33.9k GitHub stars, free to self-host, and the broadest framework coverage of the four. LangSmith is the right pick if your stack is LangChain or LangGraph, at $39 per seat per month plus usage-based compute and storage units. Helicone is the fastest to adopt because it is a proxy rather than an SDK, at $79 a month. Two things most comparisons get wrong: Langfuse was acquired by ClickHouse on 16 January 2026, and its free self-hosted tier is not feature-complete — nine capabilities including RBAC and audit logs are Enterprise-only.**',
+    leadAnswerBlock: '**Langfuse is the best default for most production teams: free to self-host with broad framework coverage. LangSmith fits LangChain and LangGraph stacks, from $39 per seat per month. Helicone is the fastest to adopt as a proxy, from $79 a month. Langfuse now belongs to ClickHouse.**',
     quickAnswerTop: {
       question: 'Which LLM observability tool is best in 2026?',
       answer: '**Langfuse for flexibility and self-hosting, LangSmith if you are already on LangChain, Helicone if you want cost visibility with a one-line integration, and PromptLayer only if you need prompt versioning rather than full observability.** The choice is mostly structural: LangSmith and Langfuse instrument your code with an SDK, Helicone sits in front of the API as a proxy and captures every call without instrumentation. That difference decides what data you get. A proxy sees requests and costs; an SDK tracer sees the reasoning steps inside a multi-agent run.',
       bullets: [
-        '**Best overall:** Langfuse — 33.9k stars, free self-hosting, broadest integrations, but check the Enterprise feature gate first',
-        '**Best for LangChain teams:** LangSmith — native zero-config tracing, $39/seat/mo plus $1.50 per compute unit and $1.00 per storage unit',
+        '**Best overall:** Langfuse — 36.9k stars, free self-hosting, broadest integrations, but check the Enterprise feature gate first',
+        '**Best for LangChain teams:** LangSmith — native zero-config tracing, $39/seat/mo plus usage billed in LSUs ($1.00 each)',
         '**Fastest to adopt:** Helicone — a proxy, so one line of code, free for 10,000 requests then $79/mo',
         '**Lightest option:** PromptLayer — prompt versioning and logging, free for 2,500 requests, Pro $49/mo',
         '**Langfuse now belongs to ClickHouse** — acquired 16 January 2026 alongside a $400M Series D, which is a roadmap consideration',
         '**Skip all four** if you are pre-production making a few dozen calls a day: provider dashboards cover it',
       ],
-      updatedDate: '2026-08-28',
+      updatedDate: '2026-11-02',
     },
     toc: [
       { label: 'Key takeaways', anchor: 'tldr' },
@@ -65,12 +65,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Langfuse** — 33.9k GitHub stars, the largest open-source footprint here. Cloud Hobby is free with 50,000 units a month, 30 days of data access and 2 users; Core is $29/mo with 100,000 units and unlimited users; Pro is $199/mo with three years of retention; Enterprise is $2,499/mo. Self-hosting the open-source core is free and unlimited.',
+          '**Langfuse** — 36.9k GitHub stars, the largest open-source footprint here. Cloud Hobby is free with 50,000 units a month, 30 days of data access and 2 users; Core is $29/mo with 100,000 units and unlimited users; Pro is $199/mo with three years of retention; Enterprise is $2,499/mo. Self-hosting the open-source core is free and unlimited.',
           '**A correction worth making:** Langfuse is widely described as MIT-licensed with no feature gate. Its own README says the repository is "MIT licensed, except for the `ee` folders", and its self-host page lists nine Enterprise-only features — server-side data masking, project-level RBAC, data retention management, SCIM, audit logs and more. Core observability and evals are genuinely free; governance features are not.',
           '**Langfuse was acquired by ClickHouse, Inc. on 16 January 2026**, announced alongside ClickHouse\'s $400M Series D. The repository LICENSE now reads "Copyright (c) 2023-2026 ClickHouse, Inc." That is not a reason to avoid it, but it is a roadmap consideration worth five minutes before you standardise on it.',
-          '**LangSmith** — Developer is free with up to 5,000 base traces a month and one seat. Plus is $39 per seat per month with up to 10,000 base traces, then usage-based billing at $1.50 per compute unit and $1.00 per storage unit. Enterprise is custom with self-hosted and hybrid options.',
+          '**LangSmith** — Developer is free with up to 5,000 base traces a month and one seat. Plus is $39 per seat per month with up to 10,000 base traces, then usage-based billing in LangChain Standard Units (LSU), at $1.00 per LSU. Enterprise is custom with self-hosted and hybrid options.',
           '**Helicone** — a proxy rather than an SDK, so integration is one line and it captures every call without instrumentation. Hobby is free with 10,000 requests, 1 GB and 7-day retention; Pro is $79/mo with unlimited seats and 1-month retention; Team is $799/mo with SOC-2 and HIPAA and 3-month retention.',
-          '**Helicone is also open source**, under Apache-2.0 with 6.1k stars — a fact most comparisons miss. The nuance is that its pricing page sells on-prem only at Enterprise and documents no supported free self-host path, so the code being open does not mean the vendor supports you running it.',
+          '**Helicone is also open source**, under Apache-2.0 with 6.3k stars — a fact most comparisons miss. The nuance is that its pricing page sells on-prem only at Enterprise and documents no supported free self-host path, so the code being open does not mean the vendor supports you running it.',
           '**PromptLayer** — the narrowest of the four. Free gives 2,500 requests a month, 5 users and 10 prompts; Pro is $49/mo with $0.003 per transaction overage; Team is $500/mo with 100,000+ requests and 25 users. Self-hosting on GCP, AWS or Azure is Enterprise-only.',
           'None of the four publishes a public affiliate or referral programme. LangChain runs a Partner Network, but that is a technology-integration programme, not a commission scheme. Every link on this page is unpaid.',
         ],
@@ -106,7 +106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.langchain.com/pricing-langsmith',
             productName: 'LangSmith',
             productCategory: 'dev-tool',
-            priceRange: 'Developer free; Plus $39/seat/mo + $1.50/LCU and $1.00/LSU; Enterprise custom',
+            priceRange: 'Developer free; Plus $39/seat/mo + usage in LSUs ($1.00 each); Enterprise custom',
             label: 'LangSmith — see pricing',
           },
           {
@@ -137,13 +137,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'Langfuse vs LangSmith vs Helicone vs PromptLayer',
-        content: '**Each tool optimises a different point in the stack rather than competing feature for feature.** Prices were read from each vendor\'s own pricing page on 28 August 2026, and repository figures from the GitHub API the same day.',
+        content: '**Each tool optimises a different point in the stack rather than competing feature for feature.** Prices were read from each vendor\'s own pricing page on 2 November 2026, and repository figures from the GitHub API the same day.',
         tableFormat: true,
         itemHeadings: true,
         columns: ['Criterion', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { Criterion: 'Model', Langfuse: 'SDK tracer', LangSmith: 'SDK tracer', Helicone: 'Proxy', PromptLayer: 'SDK and REST logging' },
-          { Criterion: 'GitHub stars', Langfuse: '33.9k', LangSmith: 'Not open source', Helicone: '6.1k', PromptLayer: '0.8k (client lib)' },
+          { Criterion: 'GitHub stars', Langfuse: '36.9k', LangSmith: 'Not open source', Helicone: '6.3k', PromptLayer: '0.8k (client lib)' },
           { Criterion: 'Licence', Langfuse: 'MIT except ee/ folders', LangSmith: 'Commercial', Helicone: 'Apache-2.0', PromptLayer: 'Commercial' },
           { Criterion: 'Free tier', Langfuse: '50,000 units/mo, 30-day access', LangSmith: '5,000 traces/mo, 1 seat', Helicone: '10,000 requests, 7-day', PromptLayer: '2,500 requests, 10 prompts' },
           { Criterion: 'Paid entry', Langfuse: 'Core $29/mo', LangSmith: 'Plus $39/seat/mo + usage', Helicone: 'Pro $79/mo', PromptLayer: 'Pro $49/mo' },
@@ -154,7 +154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Comparisons routinely call Langfuse "the only open-source option here". Helicone is Apache-2.0 with 6.1k stars, so that is not accurate. What is accurate is that Langfuse documents and supports a free self-hosted deployment, while Helicone sells on-prem only at Enterprise and describes no supported free self-host path on its pricing page.',
+            text: 'Comparisons routinely call Langfuse "the only open-source option here". Helicone is Apache-2.0 with 6.3k stars, so that is not accurate. What is accurate is that Langfuse documents and supports a free self-hosted deployment, while Helicone sells on-prem only at Enterprise and describes no supported free self-host path on its pricing page.',
           },
         ],
       },
@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Langfuse — best overall',
-            tagline: '33.9k stars, free self-hosted core, broadest framework coverage',
+            tagline: '36.9k stars, free self-hosted core, broadest framework coverage',
             verdict: 'Langfuse covers observability, evals, prompt management and datasets in one product, and its integration list is the longest of the four: OpenAI SDK, LangChain, LlamaIndex, Haystack, LiteLLM, Vercel AI SDK, Ollama and Amazon Bedrock natively, with community integrations beyond that. For a mixed stack — some LangChain, some raw SDK calls, LlamaIndex for retrieval — that breadth means you instrument once rather than per framework. Cloud pricing is Hobby free with 50,000 units a month and 30 days of data access, Core at $29/mo with 100,000 units and unlimited users, Pro at $199/mo with three years of retention plus SOC2, ISO27001 and a BAA for HIPAA, and Enterprise at $2,499/mo. Overage is graduated, from $8 per 100,000 units down to $6 at volume. Self-hosting the open-source core is free and genuinely unlimited in usage.',
             pros: [
               'Broadest native framework coverage of the four, so a mixed stack instruments once',
@@ -201,7 +201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'LangSmith — best for LangChain and LangGraph teams',
             tagline: 'Native zero-config tracing, $39/seat/mo plus usage-based units',
-            verdict: 'LangSmith comes from the LangChain team, and inside LangChain or LangGraph the tracing is automatic — you get step-level visibility into an agent run without writing instrumentation. Outside that ecosystem you use a `traceable()` wrapper around OpenAI or Anthropic SDK calls, which works but removes the main advantage. Pricing is a Developer tier at $0 per seat with up to 5,000 base traces a month and a single seat, Plus at $39 per seat per month with up to 10,000 base traces and one free small serverless deployment, and custom Enterprise with self-hosted and hybrid options. Beyond the included allowance, billing is usage-based at $1.50 per LangChain Compute Unit and $1.00 per Storage Unit. That is the part to model before committing: the bill scales with agent complexity and trace volume, not with headcount, so a team that adds LangGraph steps can see cost move independently of seats.',
+            verdict: 'LangSmith comes from the LangChain team, and inside LangChain or LangGraph the tracing is automatic — you get step-level visibility into an agent run without writing instrumentation. Outside that ecosystem you use a `traceable()` wrapper around OpenAI or Anthropic SDK calls, which works but removes the main advantage. Pricing is a Developer tier at $0 per seat with up to 5,000 base traces a month and a single seat, Plus at $39 per seat per month with up to 10,000 base traces and one free small serverless deployment, and custom Enterprise with self-hosted and hybrid options. Beyond the included allowance, billing is usage-based in LangChain Standard Units (LSU), at $1.00 per LSU. That is the part to model before committing: the bill scales with agent complexity and trace volume, not with headcount, so a team that adds LangGraph steps can see cost move independently of seats.',
             pros: [
               'Zero-config tracing inside LangChain and LangGraph, unmatched for that stack',
               'Mature dataset-driven evaluation and experiment tooling',
@@ -209,7 +209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Enterprise offers self-hosted and hybrid deployment',
             ],
             cons: [
-              'Usage-based LCU and LSU billing makes the bill hard to predict as agent complexity grows',
+              'Usage-based LSU billing makes the bill hard to predict as agent complexity grows',
               'Self-hosting is Enterprise-only with custom pricing',
               'Much weaker value proposition if you are not on LangChain',
             ],
@@ -218,13 +218,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 url: 'https://www.langchain.com/pricing-langsmith',
                 productName: 'LangSmith',
                 productCategory: 'dev-tool',
-                priceRange: 'Developer free; Plus $39/seat/mo + $1.50/LCU and $1.00/LSU; Enterprise custom',
+                priceRange: 'Developer free; Plus $39/seat/mo + usage in LSUs ($1.00 each); Enterprise custom',
                 label: 'LangSmith — see pricing',
               },
             ],
           },
         ],
-        note: 'Use LangSmith if LangChain is your framework. Model your expected compute and storage units before upgrading to Plus, because the seat price is not the whole bill.',
+        note: 'Use LangSmith if LangChain is your framework. Estimate your expected LSU usage before upgrading to Plus, because the seat price is not the whole bill.',
       },
       helicone: {
         id: 'helicone',
@@ -235,7 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Helicone — fastest to adopt, best for cost visibility',
             tagline: 'One-line proxy integration, Apache-2.0, free for 10,000 requests then $79/mo',
-            verdict: 'Because Helicone is a proxy, adopting it is a change of base URL rather than an instrumentation project, and it captures cost and request data on every call by default without you deciding what to trace. That makes it the fastest of the four to get value from, and it is why cost tracking is its strongest surface: per-request cost breakdowns and spend visibility across many keys and models are the core product rather than a reporting view layered on tracing. Hobby is free with 10,000 requests, 1 GB of storage and 7 days of retention; Pro is $79 a month with unlimited seats and one month of retention; Team is $799 a month adding SOC-2 and HIPAA compliance and three months of retention; Enterprise adds on-prem deployment, SAML SSO and unlimited retention. The code is Apache-2.0 with 6.1k stars, though the pricing page markets on-prem only at Enterprise.',
+            verdict: 'Because Helicone is a proxy, adopting it is a change of base URL rather than an instrumentation project, and it captures cost and request data on every call by default without you deciding what to trace. That makes it the fastest of the four to get value from, and it is why cost tracking is its strongest surface: per-request cost breakdowns and spend visibility across many keys and models are the core product rather than a reporting view layered on tracing. Hobby is free with 10,000 requests, 1 GB of storage and 7 days of retention; Pro is $79 a month with unlimited seats and one month of retention; Team is $799 a month adding SOC-2 and HIPAA compliance and three months of retention; Enterprise adds on-prem deployment, SAML SSO and unlimited retention. The code is Apache-2.0 with 6.3k stars, though the pricing page markets on-prem only at Enterprise.',
             pros: [
               'One line to integrate — no SDK rewrite, works with any OpenAI-compatible endpoint',
               'Cost tracking is the core product, not a secondary reporting tab',
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Tier: 'Free', Langfuse: 'Hobby: 50,000 units, 2 users', LangSmith: 'Developer: 5,000 traces, 1 seat', Helicone: 'Hobby: 10,000 requests', PromptLayer: 'Free: 2,500 requests, 5 users' },
           { Tier: 'Free retention', Langfuse: '30 days data access', LangSmith: 'Not stated on pricing page', Helicone: '7 days', PromptLayer: 'Not stated on pricing page' },
           { Tier: 'Entry paid', Langfuse: 'Core $29/mo', LangSmith: 'Plus $39/seat/mo', Helicone: 'Pro $79/mo', PromptLayer: 'Pro $49/mo' },
-          { Tier: 'Usage billing', Langfuse: '$8 per 100,000 units, graduated', LangSmith: '$1.50/LCU, $1.00/LSU', Helicone: 'Usage-based beyond free quota', PromptLayer: '$0.003 per transaction' },
+          { Tier: 'Usage billing', Langfuse: '$8 per 100,000 units, graduated', LangSmith: 'LSU usage, $1.00 each', Helicone: 'Usage-based beyond free quota', PromptLayer: '$0.003 per transaction' },
           { Tier: 'Mid tier', Langfuse: 'Pro $199/mo, 3-year retention', LangSmith: 'Enterprise custom', Helicone: 'Team $799/mo', PromptLayer: 'Team $500/mo' },
           { Tier: 'Compliance', Langfuse: 'Pro: SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team: SOC-2, HIPAA', PromptLayer: 'Enterprise' },
           { Tier: 'Self-host cost', Langfuse: 'Free for core features', LangSmith: 'Enterprise only', Helicone: 'Enterprise only', PromptLayer: 'Enterprise only' },
@@ -391,11 +391,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Calling Langfuse the only open-source option',
-            whyItMatters: 'Helicone is Apache-2.0 with 6.1k stars. The accurate distinction is that Langfuse documents a supported free self-hosted deployment while Helicone sells on-prem at Enterprise, not that one is open and the other is not.',
+            whyItMatters: 'Helicone is Apache-2.0 with 6.3k stars. The accurate distinction is that Langfuse documents a supported free self-hosted deployment while Helicone sells on-prem at Enterprise, not that one is open and the other is not.',
           },
           {
             title: 'Reading LangSmith\'s $39 seat price as the whole bill',
-            whyItMatters: 'Plus adds usage-based billing at $1.50 per compute unit and $1.00 per storage unit on top of the seat. The bill scales with agent complexity and trace volume rather than headcount, so LangGraph-heavy teams can see cost move sharply without adding people.',
+            whyItMatters: 'Plus adds usage-based billing in LSUs ($1.00 each) on top of the seat. The bill scales with agent complexity and trace volume rather than headcount, so LangGraph-heavy teams can see cost move sharply without adding people.',
           },
           {
             title: 'Treating Helicone\'s proxy as equivalent to SDK tracing',
@@ -436,7 +436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How much does LangSmith cost?',
-            a: 'The Developer tier is free with up to 5,000 base traces a month and one seat. Plus is $39 per seat per month with up to 10,000 base traces and one free small serverless deployment. Beyond that it is usage-based at $1.50 per LangChain Compute Unit and $1.00 per Storage Unit. Enterprise is custom-priced with self-hosted and hybrid options.',
+            a: 'The Developer tier is free with up to 5,000 base traces a month and one seat. Plus is $39 per seat per month with up to 10,000 base traces and one free small serverless deployment. Beyond that it is usage-based in LangChain Standard Units (LSU), where one LSU costs $1.00. Enterprise is custom-priced with self-hosted and hybrid options.',
           },
           {
             q: 'LangSmith or Langfuse if I already use LangChain?',
@@ -444,7 +444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is Helicone open source?',
-            a: 'Yes, under Apache-2.0 with about 6,100 GitHub stars, which many comparisons of this category miss. The nuance is that Helicone\'s pricing page sells on-prem deployment only at the Enterprise tier and documents no supported free self-hosted path, so the code being open does not mean the vendor supports you running it yourself.',
+            a: 'Yes, under Apache-2.0 with about 6,300 GitHub stars, which many comparisons of this category miss. The nuance is that Helicone\'s pricing page sells on-prem deployment only at the Enterprise tier and documents no supported free self-hosted path, so the code being open does not mean the vendor supports you running it yourself.',
           },
           {
             q: 'Do any of these have affiliate programmes?',
@@ -461,7 +461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Final verdict',
         items: [
           '**Use Langfuse if** you want the broadest integrations and the option to self-host — next step: start on the free Hobby tier or a Docker Compose deployment, and check the Enterprise feature list if you need RBAC or audit logs.',
-          '**Use LangSmith if** your stack is LangChain or LangGraph — next step: start on the free Developer tier and model your compute and storage unit usage before upgrading to Plus, since the seat price is not the whole bill.',
+          '**Use LangSmith if** your stack is LangChain or LangGraph — next step: start on the free Developer tier and estimate your LSU usage before upgrading to Plus, since the seat price is not the whole bill.',
           '**Use Helicone if** cost visibility is the pain and you want it working today — next step: point one service at the proxy on the free tier and confirm the cost data matches your provider invoice.',
           '**Use PromptLayer if** prompt versioning is the actual requirement — next step: use the free tier and move to Langfuse or LangSmith when you need dataset-driven regression testing.',
           '**Skip all four if** you are pre-production — next step: use provider dashboards and revisit when someone other than you needs to see what the system did.',
@@ -477,7 +477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/langfuse/langfuse', title: 'Langfuse repository', description: 'Star count, and the LICENSE file showing MIT except the ee/ folders plus the ClickHouse, Inc. copyright line.' },
           { url: 'https://clickhouse.com/blog/clickhouse-acquires-langfuse-open-source-llm-observability', title: 'ClickHouse acquires Langfuse', description: 'ClickHouse\'s own announcement of the 16 January 2026 acquisition.' },
           { url: 'https://siliconangle.com/2026/01/16/database-maker-clickhouse-raises-400m-acquires-ai-observability-startup-langfuse/', title: 'ClickHouse raises $400M and acquires Langfuse (SiliconANGLE)', description: 'Independent confirmation of the acquisition date and the Series D context.' },
-          { url: 'https://www.langchain.com/pricing-langsmith', title: 'LangSmith pricing', description: 'Developer, Plus and Enterprise tiers with trace allowances and the $1.50 LCU and $1.00 LSU usage rates.' },
+          { url: 'https://www.langchain.com/pricing-langsmith', title: 'LangSmith pricing', description: 'Developer, Plus and Enterprise tiers with trace allowances and LSU usage billing at $1.00 per LSU.' },
           { url: 'https://www.helicone.ai/pricing', title: 'Helicone pricing', description: 'Hobby, Pro, Team and Enterprise tiers with request limits, retention windows and the Enterprise-only on-prem note.' },
           { url: 'https://github.com/Helicone/helicone', title: 'Helicone repository', description: 'Star count and Apache-2.0 licence, confirming Helicone is open source.' },
           { url: 'https://www.promptlayer.com/pricing', title: 'PromptLayer pricing', description: 'Free, Pro, Team and Enterprise tiers with request limits, user counts and per-transaction overage rates.' },
@@ -501,7 +501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Best LLM Observability Tool 2026: Langfuse vs LangSmith vs Helicone',
       description: 'Compares Langfuse, LangSmith, Helicone and PromptLayer for LLM observability, with verified pricing, licences, retention windows, the ClickHouse acquisition and the Enterprise self-hosting feature gate.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-02',
       url: 'https://www.promptquorum.com/local-llms/best-llm-observability-tools',
       inLanguage: 'en',
       proficiencyLevel: 'Advanced',
@@ -553,7 +553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'How much does LangSmith cost?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Developer is free with up to 5,000 base traces a month and one seat. Plus is $39 per seat per month with up to 10,000 base traces, then usage-based at $1.50 per compute unit and $1.00 per storage unit. Enterprise is custom.',
+            text: 'Developer is free with up to 5,000 base traces a month and one seat. Plus is $39 per seat per month with up to 10,000 base traces, then usage-based in LangChain Standard Units (LSU), at $1.00 per LSU. Enterprise is custom.',
           },
         },
         {
@@ -561,7 +561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Is Helicone open source?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes, under Apache-2.0 with about 6,100 GitHub stars. However its pricing page sells on-prem deployment only at Enterprise and documents no supported free self-hosted path.',
+            text: 'Yes, under Apache-2.0 with about 6,300 GitHub stars. However its pricing page sells on-prem deployment only at Enterprise and documents no supported free self-hosted path.',
           },
         },
       ],
@@ -569,12 +569,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Best LLM observability tools (August 2026)',
+      name: 'Best LLM observability tools (2026)',
       inLanguage: 'en',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Best overall — 33.9k stars, free self-hosted core, broadest framework coverage, though nine features are Enterprise-only' },
-        { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'Best for LangChain and LangGraph teams — native zero-config tracing, $39/seat/mo plus usage-based compute and storage units' },
+        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Best overall — 36.9k stars, free self-hosted core, broadest framework coverage, though nine features are Enterprise-only' },
+        { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'Best for LangChain and LangGraph teams — native zero-config tracing, $39/seat/mo plus usage-based LSU billing' },
         { '@type': 'ListItem', position: 3, name: 'Helicone', description: 'Fastest to adopt and best for cost tracking — Apache-2.0 proxy, one-line integration, free for 10,000 requests then $79/mo' },
         { '@type': 'ListItem', position: 4, name: 'PromptLayer', description: 'Lightest option — prompt versioning and logging, free for 2,500 requests a month, Pro $49/mo' },
       ],
@@ -586,14 +586,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-02-28',
     designSkin: 'hub',
     theme: 'Tools & Interfaces',
-    title: 'Bestes LLM-Observability-Tool 2026: Langfuse, LangSmith oder Helicone',
-    seoTitle: 'Bestes LLM-Observability-Tool 2026',
-    metaDescription: 'Langfuse lässt sich mit 33,9k Sternen kostenlos selbst betreiben, LangSmith kostet 39 $ pro Platz plus Nutzung, Helicone 79 $. Langfuse gehört jetzt ClickHouse.',
+    title: 'Beste LLM-Observability-Tools 2026: Langfuse vs LangSmith',
+    seoTitle: 'Beste LLM-Observability-Tools 2026: Langfuse vs LangSmith',
+    metaDescription: 'Beste LLM-Observability-Tools 2026: Langfuse (kostenlos selbst hostbar), LangSmith ab 39 $/Platz, Helicone ab 79 $/Monat im ausführlichen Preisvergleich.',
     educationalLevel: 'Advanced',
     audience: 'Entwickler und Teams, die LLM-Anwendungen produktiv betreiben',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-02',
     readTime: '14 Min. Lesezeit',
     primaryTerm: 'LLM-Observability-Tool',
     targetKeywords: [
@@ -603,19 +603,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'bestes Prompt-Monitoring-Tool',
       'Langfuse ClickHouse Übernahme',
     ],
-    leadAnswerBlock: '**Langfuse ist für die meisten Produktionsteams die beste Gesamtwahl: 33,9k GitHub-Sterne, kostenlos selbst zu betreiben und mit der breitesten Framework-Abdeckung der vier. LangSmith ist richtig, wenn Ihr Stack auf LangChain oder LangGraph läuft, zu 39 $ pro Platz und Monat plus nutzungsabhängige Compute- und Storage-Einheiten. Helicone ist am schnellsten eingeführt, weil es ein Proxy ist und kein SDK, zu 79 $ im Monat. Zwei Dinge übersehen die meisten Vergleiche: Langfuse wurde am 16. Januar 2026 von ClickHouse übernommen, und die kostenlose selbst gehostete Variante ist nicht vollständig — neun Funktionen, darunter RBAC und Audit-Logs, sind der Enterprise-Stufe vorbehalten.**',
+    leadAnswerBlock: '**Langfuse ist die beste Standardwahl für die meisten Produktionsteams: kostenlos selbst hostbar, breite Framework-Abdeckung. LangSmith passt zu LangChain- und LangGraph-Stacks, ab 39 $ pro Platz und Monat. Helicone lässt sich als Proxy am schnellsten einführen, ab 79 $ im Monat.**',
     quickAnswerTop: {
       question: 'Welches LLM-Observability-Tool ist 2026 das beste?',
       answer: '**Langfuse für Flexibilität und Selbstbetrieb, LangSmith wenn Sie ohnehin auf LangChain sind, Helicone für Kostentransparenz mit einzeiliger Integration, und PromptLayer nur, wenn Sie Prompt-Versionierung statt vollständiger Observability brauchen.** Die Wahl ist vor allem strukturell: LangSmith und Langfuse instrumentieren Ihren Code per SDK, Helicone sitzt als Proxy vor der API und erfasst jeden Aufruf ohne Instrumentierung. Dieser Unterschied entscheidet, welche Daten Sie erhalten. Ein Proxy sieht Anfragen und Kosten; ein SDK-Tracer sieht die Denkschritte innerhalb eines Multi-Agenten-Laufs.',
       bullets: [
-        '**Insgesamt am besten:** Langfuse — 33,9k Sterne, kostenloser Selbstbetrieb, breiteste Integrationen, aber prüfen Sie zuerst die Enterprise-Schranke',
-        '**Am besten für LangChain-Teams:** LangSmith — natives Tracing ohne Konfiguration, 39 $/Platz/Monat plus 1,50 $ je Compute- und 1,00 $ je Storage-Einheit',
+        '**Insgesamt am besten:** Langfuse — 36,9k Sterne, kostenloser Selbstbetrieb, breiteste Integrationen, aber prüfen Sie zuerst die Enterprise-Schranke',
+        '**Am besten für LangChain-Teams:** LangSmith — natives Tracing ohne Konfiguration, 39 $/Platz/Monat plus nutzungsabhängig in LSU (je 1,00 $)',
         '**Am schnellsten eingeführt:** Helicone — ein Proxy, also eine Zeile Code, kostenlos bis 10.000 Anfragen, danach 79 $/Monat',
         '**Schlankeste Option:** PromptLayer — Prompt-Versionierung und Logging, kostenlos bis 2.500 Anfragen, Pro 49 $/Monat',
         '**Langfuse gehört jetzt ClickHouse** — Übernahme am 16. Januar 2026 samt 400-Mio.-$-Series-D, was für die Roadmap zählt',
         '**Verzichten Sie auf alle vier,** wenn Sie vor der Produktion stehen und ein paar Dutzend Aufrufe am Tag machen: die Anbieter-Dashboards genügen',
       ],
-      updatedDate: '2026-08-28',
+      updatedDate: '2026-11-02',
     },
     toc: [
       { label: 'Kernaussagen', anchor: 'tldr' },
@@ -644,12 +644,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Langfuse** — 33,9k GitHub-Sterne, die größte Open-Source-Präsenz hier. Cloud Hobby ist kostenlos mit 50.000 Einheiten im Monat, 30 Tagen Datenzugriff und 2 Nutzenden; Core kostet 29 $/Monat mit 100.000 Einheiten und unbegrenzt vielen Nutzenden; Pro 199 $/Monat mit drei Jahren Aufbewahrung; Enterprise 2.499 $/Monat. Der Selbstbetrieb des quelloffenen Kerns ist kostenlos und unbegrenzt.',
+          '**Langfuse** — 36,9k GitHub-Sterne, die größte Open-Source-Präsenz hier. Cloud Hobby ist kostenlos mit 50.000 Einheiten im Monat, 30 Tagen Datenzugriff und 2 Nutzenden; Core kostet 29 $/Monat mit 100.000 Einheiten und unbegrenzt vielen Nutzenden; Pro 199 $/Monat mit drei Jahren Aufbewahrung',
           '**Eine Korrektur, die sich lohnt:** Langfuse wird verbreitet als MIT-lizenziert ohne Funktionsschranke beschrieben. Die eigene README sagt, das Repository sei „MIT licensed, except for the `ee` folders", und die Self-Host-Seite listet neun Enterprise-Funktionen — serverseitige Datenmaskierung, projektbezogenes RBAC, Verwaltung der Aufbewahrung, SCIM, Audit-Logs und weitere. Kern-Observability und Evaluationen sind wirklich kostenlos; Governance-Funktionen nicht.',
           '**Langfuse wurde am 16. Januar 2026 von ClickHouse, Inc. übernommen**, angekündigt zusammen mit der 400-Mio.-$-Series-D von ClickHouse. Die LICENSE-Datei im Repository beginnt nun mit „Copyright (c) 2023-2026 ClickHouse, Inc." Das ist kein Grund, Langfuse zu meiden, aber ein Roadmap-Aspekt, der fünf Minuten Prüfung verdient, bevor Sie sich festlegen.',
-          '**LangSmith** — Developer ist kostenlos mit bis zu 5.000 Basis-Traces im Monat und einem Platz. Plus kostet 39 $ pro Platz und Monat mit bis zu 10.000 Basis-Traces, danach nutzungsabhängig mit 1,50 $ je Compute-Einheit und 1,00 $ je Storage-Einheit. Enterprise ist individuell mit selbst gehosteten und hybriden Optionen.',
+          '**LangSmith** — Developer ist kostenlos mit bis zu 5.000 Basis-Traces im Monat und einem Platz. Plus kostet 39 $ pro Platz und Monat mit bis zu 10.000 Basis-Traces, danach nutzungsabhängig in LangChain Standard Units (LSU), 1,00 $ je LSU. Enterprise ist individuell mit selbst gehosteten und hybriden Optionen.',
           '**Helicone** — ein Proxy statt eines SDK, die Integration ist also eine Zeile und erfasst jeden Aufruf ohne Instrumentierung. Hobby ist kostenlos mit 10.000 Anfragen, 1 GB und 7 Tagen Aufbewahrung; Pro kostet 79 $/Monat mit unbegrenzten Plätzen und einem Monat Aufbewahrung; Team 799 $/Monat mit SOC-2 und HIPAA und drei Monaten Aufbewahrung.',
-          '**Auch Helicone ist quelloffen**, unter Apache-2.0 mit 6,1k Sternen — was die meisten Vergleiche übersehen. Die Nuance: Die Preisseite verkauft On-Premises nur in der Enterprise-Stufe und dokumentiert keinen unterstützten kostenlosen Selbstbetrieb. Offener Quelltext heißt hier nicht, dass der Anbieter den Eigenbetrieb unterstützt.',
+          '**Auch Helicone ist quelloffen**, unter Apache-2.0 mit 6,3k Sternen — was die meisten Vergleiche übersehen. Die Nuance: Die Preisseite verkauft On-Premises nur in der Enterprise-Stufe und dokumentiert keinen unterstützten kostenlosen Selbstbetrieb. Offener Quelltext heißt hier nicht, dass der Anbieter den Eigenbetrieb unterstützt.',
           '**PromptLayer** — das schmalste der vier. Kostenlos sind 2.500 Anfragen im Monat, 5 Nutzende und 10 Prompts; Pro kostet 49 $/Monat mit 0,003 $ je Transaktion über dem Kontingent; Team 500 $/Monat mit über 100.000 Anfragen und 25 Nutzenden. Selbstbetrieb auf GCP, AWS oder Azure gibt es nur mit Enterprise.',
           'Keiner der vier veröffentlicht ein Affiliate- oder Empfehlungsprogramm. LangChain betreibt ein Partner Network, doch das ist ein Programm für technische Integrationen, keine Provisionsvereinbarung. Sämtliche Links auf dieser Seite sind unvergütet.',
         ],
@@ -685,7 +685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.langchain.com/pricing-langsmith',
             productName: 'LangSmith',
             productCategory: 'dev-tool',
-            priceRange: 'Developer kostenlos; Plus 39 $/Platz/Monat + 1,50 $/Compute- und 1,00 $/Storage-Einheit; Enterprise individuell',
+            priceRange: 'Developer kostenlos; Plus 39 $/Platz/Monat + Nutzung in LSU (je 1,00 $); Enterprise individuell',
             label: 'LangSmith — Preise ansehen',
           },
           {
@@ -716,13 +716,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'Langfuse, LangSmith, Helicone und PromptLayer im Vergleich',
-        content: '**Jedes Werkzeug optimiert eine andere Stelle im Stack, statt Funktion gegen Funktion anzutreten.** Die Preise stammen von den Preisseiten der Anbieter vom 28. August 2026, die Repository-Zahlen vom selben Tag aus der GitHub-API.',
+        content: '**Jedes Werkzeug optimiert eine andere Stelle im Stack, statt Funktion gegen Funktion anzutreten.** Die Preise stammen von den Preisseiten der Anbieter vom 2. November 2026, die Repository-Zahlen vom selben Tag aus der GitHub-API.',
         tableFormat: true,
         itemHeadings: true,
         columns: ['Kriterium', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { Kriterium: 'Ansatz', Langfuse: 'SDK-Tracer', LangSmith: 'SDK-Tracer', Helicone: 'Proxy', PromptLayer: 'SDK- und REST-Logging' },
-          { Kriterium: 'GitHub-Sterne', Langfuse: '33,9k', LangSmith: 'Nicht quelloffen', Helicone: '6,1k', PromptLayer: '0,8k (Client-Bibliothek)' },
+          { Kriterium: 'GitHub-Sterne', Langfuse: '36,9k', LangSmith: 'Nicht quelloffen', Helicone: '6,3k', PromptLayer: '0,8k (Client-Bibliothek)' },
           { Kriterium: 'Lizenz', Langfuse: 'MIT außer ee/-Ordner', LangSmith: 'Kommerziell', Helicone: 'Apache-2.0', PromptLayer: 'Kommerziell' },
           { Kriterium: 'Kostenlose Stufe', Langfuse: '50.000 Einheiten/Monat, 30 Tage', LangSmith: '5.000 Traces/Monat, 1 Platz', Helicone: '10.000 Anfragen, 7 Tage', PromptLayer: '2.500 Anfragen, 10 Prompts' },
           { Kriterium: 'Bezahlter Einstieg', Langfuse: 'Core 29 $/Monat', LangSmith: 'Plus 39 $/Platz/Monat + Nutzung', Helicone: 'Pro 79 $/Monat', PromptLayer: 'Pro 49 $/Monat' },
@@ -733,7 +733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Vergleiche nennen Langfuse regelmäßig „die einzige quelloffene Option hier". Helicone steht unter Apache-2.0 mit 6,1k Sternen, das trifft also nicht zu. Richtig ist: Langfuse dokumentiert und unterstützt einen kostenlosen Selbstbetrieb, während Helicone On-Premises nur mit Enterprise verkauft und auf seiner Preisseite keinen unterstützten kostenlosen Selbstbetrieb beschreibt.',
+            text: 'Vergleiche nennen Langfuse regelmäßig „die einzige quelloffene Option hier". Helicone steht unter Apache-2.0 mit 6,3k Sternen, das trifft also nicht zu. Richtig ist: Langfuse dokumentiert und unterstützt einen kostenlosen Selbstbetrieb, während Helicone On-Premises nur mit Enterprise verkauft und auf seiner Preisseite keinen unterstützten kostenlosen Selbstbetrieb beschreibt.',
           },
         ],
       },
@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Langfuse — insgesamt am besten',
-            tagline: '33,9k Sterne, kostenloser selbst gehosteter Kern, breiteste Framework-Abdeckung',
+            tagline: '36,9k Sterne, kostenloser selbst gehosteter Kern, breiteste Framework-Abdeckung',
             verdict: 'Langfuse deckt Observability, Evaluationen, Prompt-Verwaltung und Datensätze in einem Produkt ab, und seine Integrationsliste ist die längste der vier: OpenAI SDK, LangChain, LlamaIndex, Haystack, LiteLLM, Vercel AI SDK, Ollama und Amazon Bedrock nativ, dazu Community-Integrationen. Bei einem gemischten Stack — etwas LangChain, einige rohe SDK-Aufrufe, LlamaIndex für Retrieval — bedeutet diese Breite, dass Sie einmal instrumentieren statt je Framework. Die Cloud-Preise: Hobby kostenlos mit 50.000 Einheiten im Monat und 30 Tagen Datenzugriff, Core zu 29 $/Monat mit 100.000 Einheiten und unbegrenzt vielen Nutzenden, Pro zu 199 $/Monat mit drei Jahren Aufbewahrung sowie SOC2, ISO27001 und einem BAA für HIPAA, und Enterprise zu 2.499 $/Monat. Der Mehrverbrauch ist gestaffelt, von 8 $ je 100.000 Einheiten hinunter auf 6 $ bei Volumen. Der Selbstbetrieb des quelloffenen Kerns ist kostenlos und in der Nutzung tatsächlich unbegrenzt.',
             pros: [
               'Breiteste native Framework-Abdeckung der vier, ein gemischter Stack wird einmal instrumentiert',
@@ -779,8 +779,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'LangSmith — am besten für LangChain- und LangGraph-Teams',
-            tagline: 'Natives Tracing ohne Konfiguration, 39 $/Platz/Monat plus nutzungsabhängige Einheiten',
-            verdict: 'LangSmith stammt vom LangChain-Team, und innerhalb von LangChain oder LangGraph läuft das Tracing automatisch: Sie erhalten Einblick auf Schrittebene in einen Agentenlauf, ohne Instrumentierung zu schreiben. Außerhalb nutzen Sie einen `traceable()`-Wrapper um OpenAI- oder Anthropic-Aufrufe, was funktioniert, aber den Hauptvorteil aufhebt. Die Preise: eine Developer-Stufe zu 0 $ pro Platz mit bis zu 5.000 Basis-Traces im Monat und einem einzigen Platz, Plus zu 39 $ pro Platz und Monat mit bis zu 10.000 Basis-Traces und einem kostenlosen kleinen Serverless-Deployment, sowie individuelles Enterprise mit selbst gehosteten und hybriden Optionen. Über dem Kontingent wird nutzungsabhängig abgerechnet: 1,50 $ je LangChain-Compute-Einheit und 1,00 $ je Storage-Einheit. Genau das sollten Sie vorher modellieren, denn die Rechnung skaliert mit Agenten-Komplexität und Trace-Volumen, nicht mit der Kopfzahl.',
+            tagline: 'Natives Tracing ohne Konfiguration, 39 $/Platz/Monat plus nutzungsabhängige LSU-Abrechnung',
+            verdict: 'LangSmith stammt vom LangChain-Team, und innerhalb von LangChain oder LangGraph läuft das Tracing automatisch: Sie erhalten Einblick auf Schrittebene in einen Agentenlauf, ohne Instrumentierung zu schreiben. Außerhalb nutzen Sie einen `traceable()`-Wrapper um OpenAI- oder Anthropic-Aufrufe, was funktioniert, aber den Hauptvorteil aufhebt. Die Preise: eine Developer-Stufe zu 0 $ pro Platz mit bis zu 5.000 Basis-Traces im Monat und einem einzigen Platz, Plus zu 39 $ pro Platz und Monat mit bis zu 10.000 Basis-Traces und einem kostenlosen kleinen Serverless-Deployment, sowie individuelles Enterprise mit selbst gehosteten und hybriden Optionen. Über dem Kontingent wird nutzungsabhängig abgerechnet: in LangChain Standard Units (LSU), 1,00 $ je LSU. Genau das sollten Sie vorher modellieren, denn die Rechnung skaliert mit Agenten-Komplexität und Trace-Volumen, nicht mit der Kopfzahl.',
             pros: [
               'Tracing ohne Konfiguration in LangChain und LangGraph, dafür unerreicht',
               'Ausgereifte, datensatzgetriebene Evaluations- und Experimentwerkzeuge',
@@ -788,7 +788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Enterprise bietet selbst gehostete und hybride Bereitstellung',
             ],
             cons: [
-              'Die nutzungsabhängige Abrechnung nach Compute- und Storage-Einheiten macht die Rechnung mit wachsender Agenten-Komplexität schwer vorhersehbar',
+              'Die nutzungsabhängige Abrechnung in LSU macht die Rechnung mit wachsender Agenten-Komplexität schwer vorhersehbar',
               'Selbstbetrieb nur mit Enterprise und individuellem Preis',
               'Deutlich schwächeres Nutzenversprechen, wenn Sie nicht auf LangChain sind',
             ],
@@ -797,13 +797,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 url: 'https://www.langchain.com/pricing-langsmith',
                 productName: 'LangSmith',
                 productCategory: 'dev-tool',
-                priceRange: 'Developer kostenlos; Plus 39 $/Platz/Monat + 1,50 $/Compute- und 1,00 $/Storage-Einheit; Enterprise individuell',
+                priceRange: 'Developer kostenlos; Plus 39 $/Platz/Monat + Nutzung in LSU (je 1,00 $); Enterprise individuell',
                 label: 'LangSmith — Preise ansehen',
               },
             ],
           },
         ],
-        note: 'Nutzen Sie LangSmith, wenn LangChain Ihr Framework ist. Rechnen Sie Ihre erwarteten Compute- und Storage-Einheiten durch, bevor Sie auf Plus wechseln — der Platzpreis ist nicht die ganze Rechnung.',
+        note: 'Nutzen Sie LangSmith, wenn LangChain Ihr Framework ist. Rechnen Sie Ihre erwartete LSU-Nutzung durch, bevor Sie auf Plus wechseln — der Platzpreis ist nicht die ganze Rechnung.',
       },
       helicone: {
         id: 'helicone',
@@ -814,7 +814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Helicone — am schnellsten eingeführt, am besten für Kostentransparenz',
             tagline: 'Einzeilige Proxy-Integration, Apache-2.0, kostenlos bis 10.000 Anfragen, danach 79 $/Monat',
-            verdict: 'Weil Helicone ein Proxy ist, ist die Einführung ein Wechsel der Basis-URL statt eines Instrumentierungsprojekts, und es erfasst Kosten- und Anfragedaten bei jedem Aufruf standardmäßig, ohne dass jemand entscheiden muss, was getract wird. Das macht es zum schnellsten der vier und erklärt, warum Kostenverfolgung seine stärkste Seite ist: Kostenaufschlüsselung pro Anfrage und Ausgabentransparenz über viele Schlüssel und Modelle sind das Kernprodukt statt einer auf das Tracing gelegten Auswertung. Hobby ist kostenlos mit 10.000 Anfragen, 1 GB Speicher und 7 Tagen Aufbewahrung; Pro kostet 79 $ im Monat mit unbegrenzten Plätzen und einem Monat Aufbewahrung; Team 799 $ im Monat mit SOC-2- und HIPAA-Konformität und drei Monaten Aufbewahrung; Enterprise ergänzt On-Premises, SAML-SSO und unbegrenzte Aufbewahrung. Der Quelltext steht unter Apache-2.0 mit 6,1k Sternen, auch wenn die Preisseite On-Premises nur mit Enterprise bewirbt.',
+            verdict: 'Weil Helicone ein Proxy ist, ist die Einführung ein Wechsel der Basis-URL statt eines Instrumentierungsprojekts, und es erfasst Kosten- und Anfragedaten bei jedem Aufruf standardmäßig, ohne dass jemand entscheiden muss, was getract wird. Das macht es zum schnellsten der vier und erklärt, warum Kostenverfolgung seine stärkste Seite ist: Kostenaufschlüsselung pro Anfrage und Ausgabentransparenz über viele Schlüssel und Modelle sind das Kernprodukt statt einer auf das Tracing gelegten Auswertung. Hobby ist kostenlos mit 10.000 Anfragen, 1 GB Speicher und 7 Tagen Aufbewahrung; Pro kostet 79 $ im Monat mit unbegrenzten Plätzen und einem Monat Aufbewahrung; Team 799 $ im Monat mit SOC-2- und HIPAA-Konformität und drei Monaten Aufbewahrung; Enterprise ergänzt On-Premises, SAML-SSO und unbegrenzte Aufbewahrung. Der Quelltext steht unter Apache-2.0 mit 6,3k Sternen, auch wenn die Preisseite On-Premises nur mit Enterprise bewirbt.',
             pros: [
               'Eine Zeile zur Integration — kein SDK-Umbau, funktioniert mit jedem OpenAI-kompatiblen Endpunkt',
               'Kostenverfolgung ist das Kernprodukt, kein nachrangiger Auswertungsreiter',
@@ -908,7 +908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Stufe: 'Kostenlos', Langfuse: 'Hobby: 50.000 Einheiten, 2 Nutzende', LangSmith: 'Developer: 5.000 Traces, 1 Platz', Helicone: 'Hobby: 10.000 Anfragen', PromptLayer: 'Free: 2.500 Anfragen, 5 Nutzende' },
           { Stufe: 'Aufbewahrung kostenlos', Langfuse: '30 Tage Datenzugriff', LangSmith: 'Auf der Preisseite nicht genannt', Helicone: '7 Tage', PromptLayer: 'Auf der Preisseite nicht genannt' },
           { Stufe: 'Bezahlter Einstieg', Langfuse: 'Core 29 $/Monat', LangSmith: 'Plus 39 $/Platz/Monat', Helicone: 'Pro 79 $/Monat', PromptLayer: 'Pro 49 $/Monat' },
-          { Stufe: 'Nutzungsabrechnung', Langfuse: '8 $ je 100.000 Einheiten, gestaffelt', LangSmith: '1,50 $/Compute-, 1,00 $/Storage-Einheit', Helicone: 'Nutzungsabhängig über dem Kontingent', PromptLayer: '0,003 $ je Transaktion' },
+          { Stufe: 'Nutzungsabrechnung', Langfuse: '8 $ je 100.000 Einheiten, gestaffelt', LangSmith: 'LSU-Nutzung, je 1,00 $', Helicone: 'Nutzungsabhängig über dem Kontingent', PromptLayer: '0,003 $ je Transaktion' },
           { Stufe: 'Mittlere Stufe', Langfuse: 'Pro 199 $/Monat, 3 Jahre Aufbewahrung', LangSmith: 'Enterprise individuell', Helicone: 'Team 799 $/Monat', PromptLayer: 'Team 500 $/Monat' },
           { Stufe: 'Compliance', Langfuse: 'Pro: SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team: SOC-2, HIPAA', PromptLayer: 'Enterprise' },
           { Stufe: 'Kosten Selbstbetrieb', Langfuse: 'Kostenlos für Kernfunktionen', LangSmith: 'Nur Enterprise', Helicone: 'Nur Enterprise', PromptLayer: 'Nur Enterprise' },
@@ -970,11 +970,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Langfuse als einzige quelloffene Option bezeichnen',
-            whyItMatters: 'Helicone steht unter Apache-2.0 mit 6,1k Sternen. Die zutreffende Unterscheidung lautet, dass Langfuse einen unterstützten kostenlosen Selbstbetrieb dokumentiert, während Helicone On-Premises mit Enterprise verkauft — nicht, dass das eine offen und das andere geschlossen wäre.',
+            whyItMatters: 'Helicone steht unter Apache-2.0 mit 6,3k Sternen. Die zutreffende Unterscheidung lautet, dass Langfuse einen unterstützten kostenlosen Selbstbetrieb dokumentiert, während Helicone On-Premises mit Enterprise verkauft — nicht, dass das eine offen und das andere geschlossen wäre.',
           },
           {
             title: 'LangSmiths 39-$-Platzpreis für die ganze Rechnung halten',
-            whyItMatters: 'Plus ergänzt die nutzungsabhängige Abrechnung mit 1,50 $ je Compute- und 1,00 $ je Storage-Einheit. Die Rechnung skaliert mit Agenten-Komplexität und Trace-Volumen statt mit der Kopfzahl, sodass LangGraph-lastige Teams die Kosten deutlich steigen sehen, ohne Personal aufzubauen.',
+            whyItMatters: 'Plus ergänzt die nutzungsabhängige Abrechnung in LSU (je 1,00 $). Die Rechnung skaliert mit Agenten-Komplexität und Trace-Volumen statt mit der Kopfzahl, sodass LangGraph-lastige Teams die Kosten deutlich steigen sehen, ohne Personal aufzubauen.',
           },
           {
             title: 'Helicones Proxy mit SDK-Tracing gleichsetzen',
@@ -1015,7 +1015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was kostet LangSmith?',
-            a: 'Die Developer-Stufe ist kostenlos mit bis zu 5.000 Basis-Traces im Monat und einem Platz. Plus kostet 39 $ pro Platz und Monat mit bis zu 10.000 Basis-Traces und einem kostenlosen kleinen Serverless-Deployment. Darüber hinaus wird nutzungsabhängig mit 1,50 $ je LangChain-Compute-Einheit und 1,00 $ je Storage-Einheit abgerechnet. Enterprise ist individuell mit selbst gehosteten und hybriden Optionen.',
+            a: 'Die Developer-Stufe ist kostenlos mit bis zu 5.000 Basis-Traces im Monat und einem Platz. Plus kostet 39 $ pro Platz und Monat mit bis zu 10.000 Basis-Traces und einem kostenlosen kleinen Serverless-Deployment. Darüber hinaus wird nutzungsabhängig in LangChain Standard Units (LSU) abgerechnet; 1 LSU kostet 1,00 $. Enterprise ist individuell mit selbst gehosteten und hybriden Optionen.',
           },
           {
             q: 'LangSmith oder Langfuse, wenn ich bereits LangChain nutze?',
@@ -1023,7 +1023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist Helicone quelloffen?',
-            a: 'Ja, unter Apache-2.0 mit rund 6.100 GitHub-Sternen, was viele Vergleiche dieser Kategorie übersehen. Die Nuance ist, dass Helicones Preisseite On-Premises nur in der Enterprise-Stufe verkauft und keinen unterstützten kostenlosen Selbstbetrieb dokumentiert — offener Quelltext heißt also nicht, dass der Anbieter Ihren Eigenbetrieb unterstützt.',
+            a: 'Ja, unter Apache-2.0 mit rund 6.300 GitHub-Sternen, was viele Vergleiche dieser Kategorie übersehen. Die Nuance ist, dass Helicones Preisseite On-Premises nur in der Enterprise-Stufe verkauft und keinen unterstützten kostenlosen Selbstbetrieb dokumentiert — offener Quelltext heißt also nicht, dass der Anbieter Ihren Eigenbetrieb unterstützt.',
           },
           {
             q: 'Haben diese Anbieter Affiliate-Programme?',
@@ -1048,7 +1048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fazit',
         items: [
           '**Nutzen Sie Langfuse, wenn** Sie die breitesten Integrationen und die Option zum Selbstbetrieb wollen — nächster Schritt: mit der kostenlosen Hobby-Stufe oder einem Docker-Compose-Deployment beginnen und die Enterprise-Liste prüfen, falls Sie RBAC oder Audit-Logs brauchen.',
-          '**Nutzen Sie LangSmith, wenn** Ihr Stack LangChain oder LangGraph ist — nächster Schritt: mit der kostenlosen Developer-Stufe starten und die Compute- und Storage-Einheiten durchrechnen, bevor Sie auf Plus wechseln, denn der Platzpreis ist nicht die ganze Rechnung.',
+          '**Nutzen Sie LangSmith, wenn** Ihr Stack LangChain oder LangGraph ist — nächster Schritt: mit der kostenlosen Developer-Stufe starten und die LSU-Nutzung durchrechnen, bevor Sie auf Plus wechseln, denn der Platzpreis ist nicht die ganze Rechnung.',
           '**Nutzen Sie Helicone, wenn** Kostentransparenz das Problem ist und es heute laufen soll — nächster Schritt: einen Dienst auf der kostenlosen Stufe über den Proxy leiten und prüfen, ob die Kostendaten zur Anbieterrechnung passen.',
           '**Nutzen Sie PromptLayer, wenn** Prompt-Versionierung die eigentliche Anforderung ist — nächster Schritt: die kostenlose Stufe nutzen und zu Langfuse oder LangSmith wechseln, sobald datensatzgetriebene Regressionstests nötig werden.',
           '**Überspringen Sie alle vier, wenn** Sie vor der Produktion stehen — nächster Schritt: Anbieter-Dashboards nutzen und erneut prüfen, sobald jemand außer Ihnen sehen muss, was das System getan hat.',
@@ -1064,7 +1064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/langfuse/langfuse', title: 'Langfuse-Repository', description: 'Sternzahl sowie die LICENSE-Datei mit MIT außer den ee/-Ordnern und dem Copyright-Vermerk von ClickHouse, Inc.' },
           { url: 'https://clickhouse.com/blog/clickhouse-acquires-langfuse-open-source-llm-observability', title: 'ClickHouse übernimmt Langfuse', description: 'Die eigene Ankündigung von ClickHouse zur Übernahme vom 16. Januar 2026.' },
           { url: 'https://siliconangle.com/2026/01/16/database-maker-clickhouse-raises-400m-acquires-ai-observability-startup-langfuse/', title: 'ClickHouse sammelt 400 Mio. $ ein und übernimmt Langfuse (SiliconANGLE)', description: 'Unabhängige Bestätigung des Übernahmedatums und des Series-D-Kontexts.' },
-          { url: 'https://www.langchain.com/pricing-langsmith', title: 'LangSmith-Preise', description: 'Stufen Developer, Plus und Enterprise mit Trace-Kontingenten sowie den Sätzen von 1,50 $ und 1,00 $ je Einheit.' },
+          { url: 'https://www.langchain.com/pricing-langsmith', title: 'LangSmith-Preise', description: 'Stufen Developer, Plus und Enterprise mit Trace-Kontingenten sowie der LSU-Abrechnung zu 1,00 $ je LSU.' },
           { url: 'https://www.helicone.ai/pricing', title: 'Helicone-Preise', description: 'Stufen Hobby, Pro, Team und Enterprise mit Anfragegrenzen, Aufbewahrungsfristen und dem Hinweis auf On-Premises nur bei Enterprise.' },
           { url: 'https://github.com/Helicone/helicone', title: 'Helicone-Repository', description: 'Sternzahl und Apache-2.0-Lizenz, die belegen, dass Helicone quelloffen ist.' },
           { url: 'https://www.promptlayer.com/pricing', title: 'PromptLayer-Preise', description: 'Stufen Free, Pro, Team und Enterprise mit Anfragegrenzen, Nutzerzahlen und Sätzen je Transaktion.' },
@@ -1088,7 +1088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Bestes LLM-Observability-Tool 2026: Langfuse, LangSmith oder Helicone',
       description: 'Vergleicht Langfuse, LangSmith, Helicone und PromptLayer zur LLM-Observability, mit geprüften Preisen, Lizenzen, Aufbewahrungsfristen, der ClickHouse-Übernahme und der Enterprise-Schranke beim Selbstbetrieb.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-02',
       url: 'https://www.promptquorum.com/de/local-llms/best-llm-observability-tools',
       inLanguage: 'de',
       proficiencyLevel: 'Advanced',
@@ -1140,7 +1140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Was kostet LangSmith?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Developer ist kostenlos mit bis zu 5.000 Basis-Traces im Monat und einem Platz. Plus kostet 39 $ pro Platz und Monat mit bis zu 10.000 Basis-Traces, danach nutzungsabhängig mit 1,50 $ je Compute- und 1,00 $ je Storage-Einheit. Enterprise ist individuell.',
+            text: 'Developer ist kostenlos mit bis zu 5.000 Basis-Traces im Monat und einem Platz. Plus kostet 39 $ pro Platz und Monat mit bis zu 10.000 Basis-Traces, danach nutzungsabhängig in LangChain Standard Units (LSU), 1,00 $ je LSU. Enterprise ist individuell.',
           },
         },
         {
@@ -1148,7 +1148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Ist Helicone quelloffen?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ja, unter Apache-2.0 mit rund 6.100 GitHub-Sternen. Die Preisseite verkauft On-Premises jedoch nur in der Enterprise-Stufe und dokumentiert keinen unterstützten kostenlosen Selbstbetrieb.',
+            text: 'Ja, unter Apache-2.0 mit rund 6.300 GitHub-Sternen. Die Preisseite verkauft On-Premises jedoch nur in der Enterprise-Stufe und dokumentiert keinen unterstützten kostenlosen Selbstbetrieb.',
           },
         },
       ],
@@ -1156,12 +1156,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Beste LLM-Observability-Tools (August 2026)',
+      name: 'Beste LLM-Observability-Tools (2026)',
       inLanguage: 'de',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Insgesamt am besten — 33,9k Sterne, kostenloser selbst gehosteter Kern, breiteste Framework-Abdeckung, doch neun Funktionen sind Enterprise-exklusiv' },
-        { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'Am besten für LangChain- und LangGraph-Teams — natives Tracing ohne Konfiguration, 39 $/Platz/Monat plus nutzungsabhängige Einheiten' },
+        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Insgesamt am besten — 36,9k Sterne, kostenloser selbst gehosteter Kern, breiteste Framework-Abdeckung, doch neun Funktionen sind Enterprise-exklusiv' },
+        { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'Am besten für LangChain- und LangGraph-Teams — natives Tracing ohne Konfiguration, 39 $/Platz/Monat plus nutzungsabhängige LSU-Abrechnung' },
         { '@type': 'ListItem', position: 3, name: 'Helicone', description: 'Am schnellsten eingeführt und am besten für Kostenverfolgung — Apache-2.0-Proxy, einzeilige Integration, kostenlos bis 10.000 Anfragen, danach 79 $/Monat' },
         { '@type': 'ListItem', position: 4, name: 'PromptLayer', description: 'Schlankeste Option — Prompt-Versionierung und Logging, kostenlos bis 2.500 Anfragen im Monat, Pro 49 $/Monat' },
       ],
@@ -1173,14 +1173,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-02-28',
     designSkin: 'hub',
     theme: 'Tools & Interfaces',
-    title: 'Mejor herramienta de observabilidad de LLM 2026: Langfuse, LangSmith o Helicone',
-    seoTitle: 'Mejor herramienta de observabilidad de LLM 2026',
-    metaDescription: 'Langfuse es gratis de autoalojar con 33,9k estrellas, LangSmith cuesta 39 $ por puesto más consumo, Helicone 79 $. Langfuse ya pertenece a ClickHouse.',
+    title: 'Mejores herramientas de observabilidad LLM 2026: Langfuse',
+    seoTitle: 'Mejores herramientas de observabilidad LLM 2026: Langfuse',
+    metaDescription: 'Mejores herramientas de observabilidad LLM 2026: Langfuse (autoalojado gratis), LangSmith desde 39 $/puesto y Helicone desde 79 $/mes comparados.',
     educationalLevel: 'Advanced',
     audience: 'Desarrolladores y equipos que ejecutan aplicaciones de LLM en producción',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-02',
     readTime: '14 min de lectura',
     primaryTerm: 'herramienta de observabilidad de LLM',
     targetKeywords: [
@@ -1190,19 +1190,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mejor herramienta de monitorización de prompts',
       'Langfuse adquisición ClickHouse',
     ],
-    leadAnswerBlock: '**Langfuse es la mejor opción global para la mayoría de equipos en producción: 33,9k estrellas en GitHub, gratis de autoalojar y con la cobertura de frameworks más amplia de las cuatro. LangSmith es la elección correcta si su stack es LangChain o LangGraph, a 39 $ por puesto y mes más unidades de cómputo y almacenamiento medidas. Helicone es la más rápida de adoptar porque es un proxy y no un SDK, a 79 $ al mes. Dos cosas que la mayoría de comparativas pasa por alto: Langfuse fue adquirida por ClickHouse el 16 de enero de 2026, y su nivel autoalojado gratuito no es completo — nueve capacidades, incluidas RBAC y los registros de auditoría, son exclusivas de Enterprise.**',
+    leadAnswerBlock: '**Langfuse es la mejor opción por defecto para la mayoría de equipos: autoalojamiento gratis y amplia cobertura de frameworks. LangSmith encaja con LangChain y LangGraph, desde 39 $ por puesto al mes. Helicone, un proxy, es el más rápido de adoptar, desde 79 $ al mes.**',
     quickAnswerTop: {
       question: '¿Qué herramienta de observabilidad de LLM es mejor en 2026?',
       answer: '**Langfuse por flexibilidad y autoalojamiento, LangSmith si ya está en LangChain, Helicone si quiere visibilidad de costes con una integración de una línea, y PromptLayer solo si necesita versionado de prompts en lugar de observabilidad completa.** La decisión es sobre todo estructural: LangSmith y Langfuse instrumentan su código con un SDK, mientras que Helicone se sitúa delante de la API como proxy y captura cada llamada sin instrumentación. Esa diferencia decide qué datos obtiene. Un proxy ve peticiones y costes; un trazador SDK ve los pasos de razonamiento dentro de una ejecución multiagente.',
       bullets: [
-        '**Mejor en conjunto:** Langfuse — 33,9k estrellas, autoalojamiento gratuito, integraciones más amplias, pero revise antes el muro de Enterprise',
-        '**Mejor para equipos LangChain:** LangSmith — trazado nativo sin configuración, 39 $/puesto/mes más 1,50 $ por unidad de cómputo y 1,00 $ por unidad de almacenamiento',
+        '**Mejor en conjunto:** Langfuse — 36,9k estrellas, autoalojamiento gratuito, integraciones más amplias, pero revise antes el muro de Enterprise',
+        '**Mejor para equipos LangChain:** LangSmith — trazado nativo sin configuración, 39 $/puesto/mes más consumo en LSU (1,00 $ cada una)',
         '**La más rápida de adoptar:** Helicone — un proxy, así que una línea de código, gratis hasta 10.000 peticiones y luego 79 $/mes',
         '**Opción más ligera:** PromptLayer — versionado de prompts y registro, gratis hasta 2.500 peticiones, Pro 49 $/mes',
         '**Langfuse ya pertenece a ClickHouse** — adquirida el 16 de enero de 2026 junto a una ronda Serie D de 400 M$, lo que cuenta para la hoja de ruta',
         '**Prescinda de las cuatro** si está antes de producción con unas pocas decenas de llamadas al día: los paneles del proveedor bastan',
       ],
-      updatedDate: '2026-08-28',
+      updatedDate: '2026-11-02',
     },
     toc: [
       { label: 'Puntos clave', anchor: 'tldr' },
@@ -1231,12 +1231,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Langfuse** — 33,9k estrellas en GitHub, la mayor presencia de código abierto aquí. Hobby en la nube es gratis con 50.000 unidades al mes, 30 días de acceso a datos y 2 usuarios; Core cuesta 29 $/mes con 100.000 unidades y usuarios ilimitados; Pro 199 $/mes con tres años de retención; Enterprise 2.499 $/mes. Autoalojar el núcleo de código abierto es gratis e ilimitado.',
+          '**Langfuse** — 36,9k estrellas en GitHub, la mayor presencia de código abierto aquí. Hobby en la nube es gratis con 50.000 unidades al mes, 30 días de acceso a datos y 2 usuarios; Core cuesta 29 $/mes con 100.000 unidades y usuarios ilimitados; Pro 199 $/mes con tres años de retención',
           '**Una corrección que conviene hacer:** se describe ampliamente a Langfuse como licenciada bajo MIT sin muro de funciones. Su propio README dice que el repositorio está «MIT licensed, except for the `ee` folders», y su página de autoalojamiento enumera nueve funciones exclusivas de Enterprise: enmascarado de datos en servidor, RBAC por proyecto, gestión de retención, SCIM, registros de auditoría y más. La observabilidad y las evaluaciones básicas sí son gratuitas; las funciones de gobernanza no.',
           '**Langfuse fue adquirida por ClickHouse, Inc. el 16 de enero de 2026**, anunciado junto a la ronda Serie D de 400 M$ de ClickHouse. El archivo LICENSE del repositorio empieza ahora por «Copyright (c) 2023-2026 ClickHouse, Inc.». No es motivo para descartarla, pero sí una consideración de hoja de ruta que merece cinco minutos antes de estandarizarla.',
-          '**LangSmith** — Developer es gratis con hasta 5.000 trazas base al mes y un puesto. Plus cuesta 39 $ por puesto y mes con hasta 10.000 trazas base, y después facturación por consumo a 1,50 $ por unidad de cómputo y 1,00 $ por unidad de almacenamiento. Enterprise es personalizado con opciones autoalojada e híbrida.',
+          '**LangSmith** — Developer es gratis con hasta 5.000 trazas base al mes y un puesto. Plus cuesta 39 $ por puesto y mes con hasta 10.000 trazas base, y después facturación por consumo en LangChain Standard Units (LSU), a 1,00 $ por LSU. Enterprise es personalizado con opciones autoalojada e híbrida.',
           '**Helicone** — un proxy en lugar de un SDK, así que la integración es una línea y captura cada llamada sin instrumentación. Hobby es gratis con 10.000 peticiones, 1 GB y 7 días de retención; Pro cuesta 79 $/mes con puestos ilimitados y un mes de retención; Team 799 $/mes con SOC-2 y HIPAA y tres meses de retención.',
-          '**Helicone también es de código abierto**, bajo Apache-2.0 con 6,1k estrellas, algo que la mayoría de comparativas omite. El matiz es que su página de precios vende on-premise solo en Enterprise y no documenta una vía gratuita de autoalojamiento con soporte, así que que el código sea abierto no significa que el proveedor respalde que lo ejecute usted.',
+          '**Helicone también es de código abierto**, bajo Apache-2.0 con 6,3k estrellas, algo que la mayoría de comparativas omite. El matiz es que su página de precios vende on-premise solo en Enterprise y no documenta una vía gratuita de autoalojamiento con soporte, así que que el código sea abierto no significa que el proveedor respalde que lo ejecute usted.',
           '**PromptLayer** — la más estrecha de las cuatro. El nivel gratuito da 2.500 peticiones al mes, 5 usuarios y 10 prompts; Pro cuesta 49 $/mes con 0,003 $ por transacción excedente; Team 500 $/mes con más de 100.000 peticiones y 25 usuarios. El autoalojamiento en GCP, AWS o Azure es exclusivo de Enterprise.',
           'Ninguna de las cuatro publica un programa de afiliados o referidos. LangChain tiene una Partner Network, pero es un programa de integración tecnológica, no un esquema de comisiones. Todos los enlaces de esta página son no remunerados.',
         ],
@@ -1272,7 +1272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.langchain.com/pricing-langsmith',
             productName: 'LangSmith',
             productCategory: 'dev-tool',
-            priceRange: 'Developer gratis; Plus 39 $/puesto/mes + 1,50 $/unidad de cómputo y 1,00 $/almacenamiento; Enterprise personalizado',
+            priceRange: 'Developer gratis; Plus 39 $/puesto/mes + consumo en LSU (1,00 $ cada una); Enterprise personalizado',
             label: 'LangSmith — ver precios',
           },
           {
@@ -1303,13 +1303,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'Langfuse, LangSmith, Helicone y PromptLayer comparados',
-        content: '**Cada herramienta optimiza un punto distinto del stack en lugar de competir función por función.** Los precios se leyeron de las páginas de cada proveedor el 28 de agosto de 2026, y las cifras de repositorio de la API de GitHub ese mismo día.',
+        content: '**Cada herramienta optimiza un punto distinto del stack en lugar de competir función por función.** Los precios se leyeron de las páginas de cada proveedor el 2 de noviembre de 2026, y las cifras de repositorio de la API de GitHub ese mismo día.',
         tableFormat: true,
         itemHeadings: true,
         columns: ['Criterio', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { Criterio: 'Enfoque', Langfuse: 'Trazador SDK', LangSmith: 'Trazador SDK', Helicone: 'Proxy', PromptLayer: 'Registro por SDK y REST' },
-          { Criterio: 'Estrellas en GitHub', Langfuse: '33,9k', LangSmith: 'No es código abierto', Helicone: '6,1k', PromptLayer: '0,8k (biblioteca cliente)' },
+          { Criterio: 'Estrellas en GitHub', Langfuse: '36,9k', LangSmith: 'No es código abierto', Helicone: '6,3k', PromptLayer: '0,8k (biblioteca cliente)' },
           { Criterio: 'Licencia', Langfuse: 'MIT salvo carpetas ee/', LangSmith: 'Comercial', Helicone: 'Apache-2.0', PromptLayer: 'Comercial' },
           { Criterio: 'Nivel gratuito', Langfuse: '50.000 unidades/mes, 30 días', LangSmith: '5.000 trazas/mes, 1 puesto', Helicone: '10.000 peticiones, 7 días', PromptLayer: '2.500 peticiones, 10 prompts' },
           { Criterio: 'Entrada de pago', Langfuse: 'Core 29 $/mes', LangSmith: 'Plus 39 $/puesto/mes + consumo', Helicone: 'Pro 79 $/mes', PromptLayer: 'Pro 49 $/mes' },
@@ -1320,7 +1320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Las comparativas llaman habitualmente a Langfuse «la única opción de código abierto aquí». Helicone es Apache-2.0 con 6,1k estrellas, así que eso no es exacto. Lo que sí es exacto es que Langfuse documenta y respalda un despliegue autoalojado gratuito, mientras que Helicone vende on-premise solo en Enterprise y no describe ninguna vía gratuita de autoalojamiento con soporte en su página de precios.',
+            text: 'Las comparativas llaman habitualmente a Langfuse «la única opción de código abierto aquí». Helicone es Apache-2.0 con 6,3k estrellas, así que eso no es exacto. Lo que sí es exacto es que Langfuse documenta y respalda un despliegue autoalojado gratuito, mientras que Helicone vende on-premise solo en Enterprise y no describe ninguna vía gratuita de autoalojamiento con soporte en su página de precios.',
           },
         ],
       },
@@ -1332,7 +1332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Langfuse — mejor en conjunto',
-            tagline: '33,9k estrellas, núcleo autoalojado gratuito, cobertura de frameworks más amplia',
+            tagline: '36,9k estrellas, núcleo autoalojado gratuito, cobertura de frameworks más amplia',
             verdict: 'Langfuse cubre observabilidad, evaluaciones, gestión de prompts y conjuntos de datos en un solo producto, y su lista de integraciones es la más larga de las cuatro: OpenAI SDK, LangChain, LlamaIndex, Haystack, LiteLLM, Vercel AI SDK, Ollama y Amazon Bedrock de forma nativa, más integraciones de la comunidad. Para un stack mixto — algo de LangChain, algunas llamadas SDK en crudo, LlamaIndex para recuperación — esa amplitud significa instrumentar una vez en lugar de por framework. Los precios de la nube: Hobby gratis con 50.000 unidades al mes y 30 días de acceso a datos, Core a 29 $/mes con 100.000 unidades y usuarios ilimitados, Pro a 199 $/mes con tres años de retención más SOC2, ISO27001 y un BAA para HIPAA, y Enterprise a 2.499 $/mes. El exceso es escalonado, desde 8 $ por 100.000 unidades hasta 6 $ a volumen. Autoalojar el núcleo de código abierto es gratis y realmente ilimitado en uso.',
             pros: [
               'La cobertura nativa de frameworks más amplia de las cuatro: un stack mixto se instrumenta una vez',
@@ -1367,7 +1367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'LangSmith — mejor para equipos de LangChain y LangGraph',
             tagline: 'Trazado nativo sin configuración, 39 $/puesto/mes más unidades por consumo',
-            verdict: 'LangSmith viene del equipo de LangChain, y dentro de LangChain o LangGraph el trazado es automático: obtiene visibilidad a nivel de paso de una ejecución de agente sin escribir instrumentación. Fuera de ahí se usa un envoltorio `traceable()` alrededor de las llamadas a los SDK de OpenAI o Anthropic, que funciona pero elimina la ventaja principal. Los precios: un nivel Developer a 0 $ por puesto con hasta 5.000 trazas base al mes y un único puesto, Plus a 39 $ por puesto y mes con hasta 10.000 trazas base y un despliegue serverless pequeño gratuito, y Enterprise personalizado con opciones autoalojada e híbrida. Por encima de la cuota, la facturación es por consumo a 1,50 $ por unidad de cómputo de LangChain y 1,00 $ por unidad de almacenamiento. Esa es la parte a modelar antes de comprometerse: la factura escala con la complejidad del agente y el volumen de trazas, no con la plantilla.',
+            verdict: 'LangSmith viene del equipo de LangChain, y dentro de LangChain o LangGraph el trazado es automático: obtiene visibilidad a nivel de paso de una ejecución de agente sin escribir instrumentación. Fuera de ahí se usa un envoltorio `traceable()` alrededor de las llamadas a los SDK de OpenAI o Anthropic, que funciona pero elimina la ventaja principal. Los precios: un nivel Developer a 0 $ por puesto con hasta 5.000 trazas base al mes y un único puesto, Plus a 39 $ por puesto y mes con hasta 10.000 trazas base y un despliegue serverless pequeño gratuito, y Enterprise personalizado con opciones autoalojada e híbrida. Por encima de la cuota, la facturación es por consumo en LangChain Standard Units (LSU), a 1,00 $ por LSU. Esa es la parte a modelar antes de comprometerse: la factura escala con la complejidad del agente y el volumen de trazas, no con la plantilla.',
             pros: [
               'Trazado sin configuración dentro de LangChain y LangGraph, insuperable para ese stack',
               'Herramientas maduras de evaluación y experimentación basadas en conjuntos de datos',
@@ -1375,7 +1375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Enterprise ofrece despliegue autoalojado e híbrido',
             ],
             cons: [
-              'La facturación por unidades de cómputo y almacenamiento hace difícil prever la factura según crece la complejidad del agente',
+              'La facturación por consumo en LSU hace difícil prever la factura según crece la complejidad del agente',
               'El autoalojamiento es exclusivo de Enterprise con precio personalizado',
               'Propuesta de valor mucho más débil si no está en LangChain',
             ],
@@ -1384,13 +1384,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 url: 'https://www.langchain.com/pricing-langsmith',
                 productName: 'LangSmith',
                 productCategory: 'dev-tool',
-                priceRange: 'Developer gratis; Plus 39 $/puesto/mes + 1,50 $/unidad de cómputo y 1,00 $/almacenamiento; Enterprise personalizado',
+                priceRange: 'Developer gratis; Plus 39 $/puesto/mes + consumo en LSU (1,00 $ cada una); Enterprise personalizado',
                 label: 'LangSmith — ver precios',
               },
             ],
           },
         ],
-        note: 'Use LangSmith si LangChain es su framework. Modele sus unidades de cómputo y almacenamiento previstas antes de pasar a Plus, porque el precio por puesto no es toda la factura.',
+        note: 'Use LangSmith si LangChain es su framework. Modele su consumo previsto de LSU antes de pasar a Plus, porque el precio por puesto no es toda la factura.',
       },
       helicone: {
         id: 'helicone',
@@ -1401,7 +1401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Helicone — la más rápida de adoptar y la mejor para costes',
             tagline: 'Integración proxy de una línea, Apache-2.0, gratis hasta 10.000 peticiones y luego 79 $/mes',
-            verdict: 'Como Helicone es un proxy, adoptarla es cambiar la URL base en lugar de emprender un proyecto de instrumentación, y captura datos de coste y petición en cada llamada por defecto sin que nadie decida qué trazar. Eso la convierte en la más rápida de las cuatro en dar valor, y explica por qué el seguimiento de costes es su punto más fuerte: el desglose de coste por petición y la visibilidad del gasto entre muchas claves y modelos son el producto central en lugar de una vista de informes montada sobre el trazado. Hobby es gratis con 10.000 peticiones, 1 GB de almacenamiento y 7 días de retención; Pro cuesta 79 $ al mes con puestos ilimitados y un mes de retención; Team 799 $ al mes añadiendo cumplimiento SOC-2 y HIPAA y tres meses de retención; Enterprise añade despliegue on-premise, SSO SAML y retención ilimitada. El código es Apache-2.0 con 6,1k estrellas, aunque la página de precios comercializa on-premise solo en Enterprise.',
+            verdict: 'Como Helicone es un proxy, adoptarla es cambiar la URL base en lugar de emprender un proyecto de instrumentación, y captura datos de coste y petición en cada llamada por defecto sin que nadie decida qué trazar. Eso la convierte en la más rápida de las cuatro en dar valor, y explica por qué el seguimiento de costes es su punto más fuerte: el desglose de coste por petición y la visibilidad del gasto entre muchas claves y modelos son el producto central en lugar de una vista de informes montada sobre el trazado. Hobby es gratis con 10.000 peticiones, 1 GB de almacenamiento y 7 días de retención; Pro cuesta 79 $ al mes con puestos ilimitados y un mes de retención; Team 799 $ al mes añadiendo cumplimiento SOC-2 y HIPAA y tres meses de retención; Enterprise añade despliegue on-premise, SSO SAML y retención ilimitada. El código es Apache-2.0 con 6,3k estrellas, aunque la página de precios comercializa on-premise solo en Enterprise.',
             pros: [
               'Una línea para integrar: sin reescritura de SDK, funciona con cualquier endpoint compatible con OpenAI',
               'El seguimiento de costes es el producto central, no una pestaña de informes secundaria',
@@ -1495,7 +1495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Nivel: 'Gratuito', Langfuse: 'Hobby: 50.000 unidades, 2 usuarios', LangSmith: 'Developer: 5.000 trazas, 1 puesto', Helicone: 'Hobby: 10.000 peticiones', PromptLayer: 'Free: 2.500 peticiones, 5 usuarios' },
           { Nivel: 'Retención gratuita', Langfuse: '30 días de acceso a datos', LangSmith: 'No indicado en la página de precios', Helicone: '7 días', PromptLayer: 'No indicado en la página de precios' },
           { Nivel: 'Entrada de pago', Langfuse: 'Core 29 $/mes', LangSmith: 'Plus 39 $/puesto/mes', Helicone: 'Pro 79 $/mes', PromptLayer: 'Pro 49 $/mes' },
-          { Nivel: 'Facturación por uso', Langfuse: '8 $ por 100.000 unidades, escalonado', LangSmith: '1,50 $/cómputo, 1,00 $/almacenamiento', Helicone: 'Por consumo sobre la cuota gratuita', PromptLayer: '0,003 $ por transacción' },
+          { Nivel: 'Facturación por uso', Langfuse: '8 $ por 100.000 unidades, escalonado', LangSmith: 'Consumo en LSU, 1,00 $ cada una', Helicone: 'Por consumo sobre la cuota gratuita', PromptLayer: '0,003 $ por transacción' },
           { Nivel: 'Nivel medio', Langfuse: 'Pro 199 $/mes, 3 años de retención', LangSmith: 'Enterprise personalizado', Helicone: 'Team 799 $/mes', PromptLayer: 'Team 500 $/mes' },
           { Nivel: 'Cumplimiento', Langfuse: 'Pro: SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team: SOC-2, HIPAA', PromptLayer: 'Enterprise' },
           { Nivel: 'Coste de autoalojar', Langfuse: 'Gratis para funciones centrales', LangSmith: 'Solo Enterprise', Helicone: 'Solo Enterprise', PromptLayer: 'Solo Enterprise' },
@@ -1557,11 +1557,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Llamar a Langfuse la única opción de código abierto',
-            whyItMatters: 'Helicone es Apache-2.0 con 6,1k estrellas. La distinción exacta es que Langfuse documenta un despliegue autoalojado gratuito con soporte mientras que Helicone vende on-premise en Enterprise, no que una sea abierta y la otra no.',
+            whyItMatters: 'Helicone es Apache-2.0 con 6,3k estrellas. La distinción exacta es que Langfuse documenta un despliegue autoalojado gratuito con soporte mientras que Helicone vende on-premise en Enterprise, no que una sea abierta y la otra no.',
           },
           {
             title: 'Leer el precio de 39 $ por puesto de LangSmith como la factura entera',
-            whyItMatters: 'Plus añade facturación por consumo a 1,50 $ por unidad de cómputo y 1,00 $ por unidad de almacenamiento sobre el puesto. La factura escala con la complejidad del agente y el volumen de trazas más que con la plantilla, así que los equipos con mucho LangGraph pueden ver el coste dispararse sin incorporar a nadie.',
+            whyItMatters: 'Plus añade facturación por consumo en LSU (1,00 $ cada una) sobre el puesto. La factura escala con la complejidad del agente y el volumen de trazas más que con la plantilla, así que los equipos con mucho LangGraph pueden ver el coste dispararse sin incorporar a nadie.',
           },
           {
             title: 'Tratar el proxy de Helicone como equivalente al trazado por SDK',
@@ -1602,7 +1602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuánto cuesta LangSmith?',
-            a: 'El nivel Developer es gratis con hasta 5.000 trazas base al mes y un puesto. Plus cuesta 39 $ por puesto y mes con hasta 10.000 trazas base y un despliegue serverless pequeño gratuito. Por encima es por consumo, a 1,50 $ por unidad de cómputo de LangChain y 1,00 $ por unidad de almacenamiento. Enterprise tiene precio personalizado con opciones autoalojada e híbrida.',
+            a: 'El nivel Developer es gratis con hasta 5.000 trazas base al mes y un puesto. Plus cuesta 39 $ por puesto y mes con hasta 10.000 trazas base y un despliegue serverless pequeño gratuito. Por encima es por consumo en LangChain Standard Units (LSU); una LSU cuesta 1,00 $. Enterprise tiene precio personalizado con opciones autoalojada e híbrida.',
           },
           {
             q: '¿LangSmith o Langfuse si ya uso LangChain?',
@@ -1610,7 +1610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Helicone es de código abierto?',
-            a: 'Sí, bajo Apache-2.0 con unas 6.100 estrellas en GitHub, algo que muchas comparativas de esta categoría omiten. El matiz es que la página de precios de Helicone vende el despliegue on-premise solo en el nivel Enterprise y no documenta ninguna vía gratuita de autoalojamiento con soporte, así que que el código sea abierto no significa que el proveedor respalde que lo ejecute usted.',
+            a: 'Sí, bajo Apache-2.0 con unas 6.300 estrellas en GitHub, algo que muchas comparativas de esta categoría omiten. El matiz es que la página de precios de Helicone vende el despliegue on-premise solo en el nivel Enterprise y no documenta ninguna vía gratuita de autoalojamiento con soporte, así que que el código sea abierto no significa que el proveedor respalde que lo ejecute usted.',
           },
           {
             q: '¿Alguna tiene programa de afiliados?',
@@ -1627,7 +1627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Veredicto final',
         items: [
           '**Use Langfuse si** quiere las integraciones más amplias y la opción de autoalojar — siguiente paso: empiece en el nivel Hobby gratuito o con un despliegue de Docker Compose, y revise la lista de Enterprise si necesita RBAC o registros de auditoría.',
-          '**Use LangSmith si** su stack es LangChain o LangGraph — siguiente paso: empiece en el nivel Developer gratuito y modele su uso de unidades de cómputo y almacenamiento antes de pasar a Plus, ya que el precio por puesto no es toda la factura.',
+          '**Use LangSmith si** su stack es LangChain o LangGraph — siguiente paso: empiece en el nivel Developer gratuito y modele su consumo de LSU antes de pasar a Plus, ya que el precio por puesto no es toda la factura.',
           '**Use Helicone si** la visibilidad de costes es el dolor y lo quiere funcionando hoy — siguiente paso: apunte un servicio al proxy en el nivel gratuito y confirme que los datos de coste cuadran con la factura de su proveedor.',
           '**Use PromptLayer si** el versionado de prompts es el requisito real — siguiente paso: use el nivel gratuito y pase a Langfuse o LangSmith cuando necesite pruebas de regresión basadas en conjuntos de datos.',
           '**Sáltese las cuatro si** está antes de producción — siguiente paso: use los paneles del proveedor y revísese cuando alguien que no sea usted necesite ver qué hizo el sistema.',
@@ -1643,7 +1643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/langfuse/langfuse', title: 'Repositorio de Langfuse', description: 'Número de estrellas y el archivo LICENSE que muestra MIT salvo las carpetas ee/ más la línea de copyright de ClickHouse, Inc.' },
           { url: 'https://clickhouse.com/blog/clickhouse-acquires-langfuse-open-source-llm-observability', title: 'ClickHouse adquiere Langfuse', description: 'El anuncio de la propia ClickHouse sobre la adquisición del 16 de enero de 2026.' },
           { url: 'https://siliconangle.com/2026/01/16/database-maker-clickhouse-raises-400m-acquires-ai-observability-startup-langfuse/', title: 'ClickHouse capta 400 M$ y adquiere Langfuse (SiliconANGLE)', description: 'Confirmación independiente de la fecha de adquisición y del contexto de la Serie D.' },
-          { url: 'https://www.langchain.com/pricing-langsmith', title: 'Precios de LangSmith', description: 'Niveles Developer, Plus y Enterprise con cuotas de trazas y las tarifas de 1,50 $ y 1,00 $ por unidad.' },
+          { url: 'https://www.langchain.com/pricing-langsmith', title: 'Precios de LangSmith', description: 'Niveles Developer, Plus y Enterprise con cuotas de trazas y la facturación por consumo a 1,00 $ por LSU.' },
           { url: 'https://www.helicone.ai/pricing', title: 'Precios de Helicone', description: 'Niveles Hobby, Pro, Team y Enterprise con límites de peticiones, ventanas de retención y la nota de on-premise solo en Enterprise.' },
           { url: 'https://github.com/Helicone/helicone', title: 'Repositorio de Helicone', description: 'Número de estrellas y licencia Apache-2.0, que confirman que Helicone es de código abierto.' },
           { url: 'https://www.promptlayer.com/pricing', title: 'Precios de PromptLayer', description: 'Niveles Free, Pro, Team y Enterprise con límites de peticiones, número de usuarios y tarifas por transacción.' },
@@ -1667,7 +1667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Mejor herramienta de observabilidad de LLM 2026: Langfuse, LangSmith o Helicone',
       description: 'Compara Langfuse, LangSmith, Helicone y PromptLayer para observabilidad de LLM, con precios, licencias y ventanas de retención verificados, la adquisición por ClickHouse y el muro de funciones de Enterprise en el autoalojamiento.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-02',
       url: 'https://www.promptquorum.com/es/local-llms/best-llm-observability-tools',
       inLanguage: 'es',
       proficiencyLevel: 'Advanced',
@@ -1719,7 +1719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿Cuánto cuesta LangSmith?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Developer es gratis con hasta 5.000 trazas base al mes y un puesto. Plus cuesta 39 $ por puesto y mes con hasta 10.000 trazas base, y después por consumo a 1,50 $ por unidad de cómputo y 1,00 $ por unidad de almacenamiento. Enterprise es personalizado.',
+            text: 'Developer es gratis con hasta 5.000 trazas base al mes y un puesto. Plus cuesta 39 $ por puesto y mes con hasta 10.000 trazas base, y después por consumo en LangChain Standard Units (LSU), a 1,00 $ por LSU. Enterprise es personalizado.',
           },
         },
         {
@@ -1727,7 +1727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿Helicone es de código abierto?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Sí, bajo Apache-2.0 con unas 6.100 estrellas en GitHub. Sin embargo su página de precios vende el despliegue on-premise solo en Enterprise y no documenta ninguna vía gratuita de autoalojamiento con soporte.',
+            text: 'Sí, bajo Apache-2.0 con unas 6.300 estrellas en GitHub. Sin embargo su página de precios vende el despliegue on-premise solo en Enterprise y no documenta ninguna vía gratuita de autoalojamiento con soporte.',
           },
         },
       ],
@@ -1735,12 +1735,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Mejores herramientas de observabilidad de LLM (agosto de 2026)',
+      name: 'Mejores herramientas de observabilidad de LLM (2026)',
       inLanguage: 'es',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Mejor en conjunto — 33,9k estrellas, núcleo autoalojado gratuito, cobertura de frameworks más amplia, aunque nueve funciones son exclusivas de Enterprise' },
-        { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'Mejor para equipos de LangChain y LangGraph — trazado nativo sin configuración, 39 $/puesto/mes más unidades de cómputo y almacenamiento por consumo' },
+        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Mejor en conjunto — 36,9k estrellas, núcleo autoalojado gratuito, cobertura de frameworks más amplia, aunque nueve funciones son exclusivas de Enterprise' },
+        { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'Mejor para equipos de LangChain y LangGraph — trazado nativo sin configuración, 39 $/puesto/mes más facturación por consumo en LSU' },
         { '@type': 'ListItem', position: 3, name: 'Helicone', description: 'La más rápida de adoptar y la mejor para costes — proxy Apache-2.0, integración de una línea, gratis hasta 10.000 peticiones y luego 79 $/mes' },
         { '@type': 'ListItem', position: 4, name: 'PromptLayer', description: 'Opción más ligera — versionado de prompts y registro, gratis hasta 2.500 peticiones al mes, Pro 49 $/mes' },
       ],
@@ -1752,14 +1752,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-02-28',
     designSkin: 'hub',
     theme: 'Tools & Interfaces',
-    title: 'Meilleur outil d observabilite LLM 2026 : Langfuse, LangSmith ou Helicone',
-    seoTitle: 'Meilleur outil d observabilite LLM 2026',
-    metaDescription: 'Langfuse s auto-heberge gratuitement avec 33,9k etoiles, LangSmith coute 39 $ par siege plus la consommation, Helicone 79 $. Langfuse appartient desormais a ClickHouse. Verifie en aout 2026.',
+    title: 'Observabilité LLM 2026 : Langfuse vs LangSmith vs Helicone',
+    seoTitle: 'Observabilité LLM 2026 : Langfuse vs LangSmith vs Helicone',
+    metaDescription: 'Meilleurs outils d\'observabilité LLM 2026 : Langfuse (auto-hébergement gratuit), LangSmith dès 39 $/siège, Helicone dès 79 $/mois comparés en détail.',
     educationalLevel: 'Advanced',
     audience: 'Developpeurs et equipes exploitant des applications LLM en production',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-02',
     readTime: '14 min de lecture',
     primaryTerm: 'outil d observabilite LLM',
     targetKeywords: [
@@ -1769,19 +1769,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'meilleur outil de suivi des prompts',
       'Langfuse acquisition ClickHouse',
     ],
-    leadAnswerBlock: '**Langfuse est le meilleur choix global pour la plupart des equipes en production : 33,9k etoiles sur GitHub, auto-hebergement gratuit et la couverture de frameworks la plus large des quatre. LangSmith est le bon choix si votre pile repose sur LangChain ou LangGraph, a 39 $ par siege et par mois plus des unites de calcul et de stockage facturees a l usage. Helicone est le plus rapide a adopter parce que c est un proxy et non un SDK, a 79 $ par mois. Deux points echappent a la plupart des comparatifs : Langfuse a ete rachete par ClickHouse le 16 janvier 2026, et son niveau auto-heberge gratuit n est pas complet — neuf fonctionnalites, dont le RBAC et les journaux d audit, sont reservees a l offre Enterprise.**',
+    leadAnswerBlock: '**Langfuse est le meilleur choix par défaut pour la plupart des équipes : auto-hébergement gratuit, large couverture de frameworks. LangSmith convient aux stacks LangChain et LangGraph, dès 39 $ par siège. Helicone, un proxy, s\'adopte le plus vite, dès 79 $.**',
     quickAnswerTop: {
       question: 'Quel est le meilleur outil d observabilite LLM en 2026 ?',
       answer: '**Langfuse pour la souplesse et l auto-hebergement, LangSmith si vous etes deja sur LangChain, Helicone si vous voulez de la visibilite sur les couts avec une integration en une ligne, et PromptLayer seulement si vous avez besoin de versionner des prompts plutot que d une observabilite complete.** Le choix est avant tout structurel : LangSmith et Langfuse instrumentent votre code via un SDK, tandis qu Helicone se place devant l API comme un proxy et capte chaque appel sans instrumentation. Cette difference determine les donnees que vous obtenez. Un proxy voit les requetes et les couts ; un traceur SDK voit les etapes de raisonnement a l interieur d une execution multi-agents.',
       bullets: [
-        '**Meilleur globalement :** Langfuse — 33,9k etoiles, auto-hebergement gratuit, integrations les plus larges, mais verifiez d abord le mur Enterprise',
-        '**Meilleur pour les equipes LangChain :** LangSmith — tracage natif sans configuration, 39 $/siege/mois plus 1,50 $ par unite de calcul et 1,00 $ par unite de stockage',
+        '**Meilleur globalement :** Langfuse — 36,9k etoiles, auto-hebergement gratuit, integrations les plus larges, mais verifiez d abord le mur Enterprise',
+        '**Meilleur pour les equipes LangChain :** LangSmith — tracage natif sans configuration, 39 $/siege/mois plus usage facturé en LSU (1,00 $ chacune)',
         '**Le plus rapide a adopter :** Helicone — un proxy, donc une ligne de code, gratuit jusqu a 10 000 requetes puis 79 $/mois',
         '**Option la plus legere :** PromptLayer — versionnement des prompts et journalisation, gratuit jusqu a 2 500 requetes, Pro a 49 $/mois',
         '**Langfuse appartient desormais a ClickHouse** — rachat du 16 janvier 2026, annonce avec une serie D de 400 M$, ce qui compte pour la feuille de route',
         '**Passez votre chemin sur les quatre** si vous etes avant la production avec quelques dizaines d appels par jour : les tableaux de bord des fournisseurs suffisent',
       ],
-      updatedDate: '2026-08-28',
+      updatedDate: '2026-11-02',
     },
     toc: [
       { label: 'Points cles', anchor: 'tldr' },
@@ -1810,12 +1810,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Langfuse** — 33,9k etoiles sur GitHub, la plus forte presence open source ici. L offre cloud Hobby est gratuite avec 50 000 unites par mois, 30 jours d acces aux donnees et 2 utilisateurs ; Core coute 29 $/mois avec 100 000 unites et un nombre illimite d utilisateurs ; Pro 199 $/mois avec trois ans de retention ; Enterprise 2 499 $/mois. Auto-heberger le coeur open source est gratuit et illimite.',
+          '**Langfuse** — 36,9k etoiles sur GitHub, la plus forte presence open source ici. L offre cloud Hobby est gratuite avec 50 000 unites par mois, 30 jours d acces aux donnees et 2 utilisateurs ; Core coute 29 $/mois avec 100 000 unites et un nombre illimite d utilisateurs ; Pro 199 $/mois.',
           '**Une correction qui merite d etre faite :** Langfuse est largement decrit comme sous licence MIT sans mur de fonctionnalites. Son propre README indique que le depot est « MIT licensed, except for the `ee` folders », et sa page d auto-hebergement enumere neuf fonctionnalites Enterprise : masquage des donnees cote serveur, RBAC par projet, gestion de la retention, SCIM, journaux d audit et d autres. L observabilite et les evaluations de base sont bien gratuites ; les fonctions de gouvernance ne le sont pas.',
           '**Langfuse a ete rachete par ClickHouse, Inc. le 16 janvier 2026**, annonce en meme temps que la serie D de 400 M$ de ClickHouse. Le fichier LICENSE du depot commence desormais par « Copyright (c) 2023-2026 ClickHouse, Inc. » Ce n est pas une raison d ecarter Langfuse, mais une consideration de feuille de route qui merite cinq minutes avant de standardiser dessus.',
-          '**LangSmith** — Developer est gratuit avec jusqu a 5 000 traces de base par mois et un siege. Plus coute 39 $ par siege et par mois avec jusqu a 10 000 traces de base, puis une facturation a l usage de 1,50 $ par unite de calcul et 1,00 $ par unite de stockage. Enterprise est sur devis avec des options auto-hebergee et hybride.',
+          '**LangSmith** — Developer est gratuit avec jusqu a 5 000 traces de base par mois et un siege. Plus coute 39 $ par siege et par mois avec jusqu a 10 000 traces de base, puis une facturation a l usage en LangChain Standard Units (LSU), a 1,00 $ par LSU. Enterprise est sur devis avec des options auto-hebergee et hybride.',
           '**Helicone** — un proxy plutot qu un SDK, l integration tient donc en une ligne et capte chaque appel sans instrumentation. Hobby est gratuit avec 10 000 requetes, 1 Go et 7 jours de retention ; Pro coute 79 $/mois avec des sieges illimites et un mois de retention ; Team 799 $/mois avec SOC-2 et HIPAA et trois mois de retention.',
-          '**Helicone est aussi open source**, sous Apache-2.0 avec 6,1k etoiles, ce que la plupart des comparatifs omettent. La nuance : sa page tarifaire ne vend l on-premise qu au niveau Enterprise et ne documente aucune voie d auto-hebergement gratuite et prise en charge. Code ouvert ne signifie pas ici que l editeur soutient votre propre exploitation.',
+          '**Helicone est aussi open source**, sous Apache-2.0 avec 6,3k etoiles, ce que la plupart des comparatifs omettent. La nuance : sa page tarifaire ne vend l on-premise qu au niveau Enterprise et ne documente aucune voie d auto-hebergement gratuite et prise en charge. Code ouvert ne signifie pas ici que l editeur soutient votre propre exploitation.',
           '**PromptLayer** — le plus etroit des quatre. Le niveau gratuit offre 2 500 requetes par mois, 5 utilisateurs et 10 prompts ; Pro coute 49 $/mois avec 0,003 $ par transaction au-dela ; Team 500 $/mois avec plus de 100 000 requetes et 25 utilisateurs. L auto-hebergement sur GCP, AWS ou Azure est reserve a Enterprise.',
           'Aucun des quatre ne publie de programme d affiliation ou de parrainage. LangChain anime un Partner Network, mais il s agit d un programme d integration technique, pas d un dispositif de commissions. Tous les liens de cette page sont non remuneres.',
         ],
@@ -1851,7 +1851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.langchain.com/pricing-langsmith',
             productName: 'LangSmith',
             productCategory: 'dev-tool',
-            priceRange: 'Developer gratuit ; Plus 39 $/siege/mois + 1,50 $/unite de calcul et 1,00 $/stockage ; Enterprise sur devis',
+            priceRange: 'Developer gratuit ; Plus 39 $/siege/mois + usage en LSU (1,00 $ chacune) ; Enterprise sur devis',
             label: 'LangSmith — voir les tarifs',
           },
           {
@@ -1882,13 +1882,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'Langfuse, LangSmith, Helicone et PromptLayer compares',
-        content: '**Chaque outil optimise un point different de la pile plutot que de rivaliser fonctionnalite par fonctionnalite.** Les tarifs ont ete releves sur les pages des editeurs le 28 aout 2026, et les chiffres des depots via l API GitHub le meme jour.',
+        content: '**Chaque outil optimise un point different de la pile plutot que de rivaliser fonctionnalite par fonctionnalite.** Les tarifs ont ete releves sur les pages des editeurs le 2 novembre 2026, et les chiffres des depots via l API GitHub le meme jour.',
         tableFormat: true,
         itemHeadings: true,
         columns: ['Critere', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { Critere: 'Approche', Langfuse: 'Traceur SDK', LangSmith: 'Traceur SDK', Helicone: 'Proxy', PromptLayer: 'Journalisation SDK et REST' },
-          { Critere: 'Etoiles GitHub', Langfuse: '33,9k', LangSmith: 'Non open source', Helicone: '6,1k', PromptLayer: '0,8k (bibliotheque cliente)' },
+          { Critere: 'Etoiles GitHub', Langfuse: '36,9k', LangSmith: 'Non open source', Helicone: '6,3k', PromptLayer: '0,8k (bibliotheque cliente)' },
           { Critere: 'Licence', Langfuse: 'MIT sauf dossiers ee/', LangSmith: 'Commerciale', Helicone: 'Apache-2.0', PromptLayer: 'Commerciale' },
           { Critere: 'Niveau gratuit', Langfuse: '50 000 unites/mois, 30 jours', LangSmith: '5 000 traces/mois, 1 siege', Helicone: '10 000 requetes, 7 jours', PromptLayer: '2 500 requetes, 10 prompts' },
           { Critere: 'Entree payante', Langfuse: 'Core 29 $/mois', LangSmith: 'Plus 39 $/siege/mois + usage', Helicone: 'Pro 79 $/mois', PromptLayer: 'Pro 49 $/mois' },
@@ -1899,7 +1899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Les comparatifs qualifient regulierement Langfuse de « seule option open source ici ». Helicone est sous Apache-2.0 avec 6,1k etoiles, cette affirmation est donc inexacte. Ce qui est exact : Langfuse documente et prend en charge un deploiement auto-heberge gratuit, tandis qu Helicone ne vend l on-premise qu au niveau Enterprise et ne decrit aucune voie d auto-hebergement gratuite et soutenue sur sa page tarifaire.',
+            text: 'Les comparatifs qualifient regulierement Langfuse de « seule option open source ici ». Helicone est sous Apache-2.0 avec 6,3k etoiles, cette affirmation est donc inexacte. Ce qui est exact : Langfuse documente et prend en charge un deploiement auto-heberge gratuit, tandis qu Helicone ne vend l on-premise qu au niveau Enterprise et ne decrit aucune voie d auto-hebergement gratuite et soutenue sur sa page tarifaire.',
           },
         ],
       },
@@ -1911,7 +1911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Langfuse — meilleur globalement',
-            tagline: '33,9k etoiles, coeur auto-heberge gratuit, couverture de frameworks la plus large',
+            tagline: '36,9k etoiles, coeur auto-heberge gratuit, couverture de frameworks la plus large',
             verdict: 'Langfuse couvre l observabilite, les evaluations, la gestion des prompts et les jeux de donnees dans un seul produit, et sa liste d integrations est la plus longue des quatre : SDK OpenAI, LangChain, LlamaIndex, Haystack, LiteLLM, Vercel AI SDK, Ollama et Amazon Bedrock en natif, plus des integrations communautaires. Pour une pile mixte — un peu de LangChain, quelques appels SDK bruts, LlamaIndex pour la recherche — cette ampleur signifie instrumenter une fois plutot que par framework. Les tarifs cloud : Hobby gratuit avec 50 000 unites par mois et 30 jours d acces aux donnees, Core a 29 $/mois avec 100 000 unites et des utilisateurs illimites, Pro a 199 $/mois avec trois ans de retention plus SOC2, ISO27001 et un BAA pour HIPAA, et Enterprise a 2 499 $/mois. Le depassement est degressif, de 8 $ par 100 000 unites jusqu a 6 $ au volume. Auto-heberger le coeur open source est gratuit et reellement illimite a l usage.',
             pros: [
               'La couverture native de frameworks la plus large des quatre : une pile mixte s instrumente une seule fois',
@@ -1946,7 +1946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'LangSmith — meilleur pour les equipes LangChain et LangGraph',
             tagline: 'Tracage natif sans configuration, 39 $/siege/mois plus des unites facturees a l usage',
-            verdict: 'LangSmith vient de l equipe LangChain, et a l interieur de LangChain ou LangGraph le tracage est automatique : vous obtenez une visibilite au niveau des etapes d une execution d agent sans ecrire d instrumentation. En dehors, vous utilisez un wrapper `traceable()` autour des appels aux SDK OpenAI ou Anthropic, ce qui fonctionne mais annule l avantage principal. Les tarifs : un niveau Developer a 0 $ par siege avec jusqu a 5 000 traces de base par mois et un seul siege, Plus a 39 $ par siege et par mois avec jusqu a 10 000 traces de base et un petit deploiement serverless gratuit, et Enterprise sur devis avec des options auto-hebergee et hybride. Au-dela du quota, la facturation passe a l usage : 1,50 $ par unite de calcul LangChain et 1,00 $ par unite de stockage. C est la partie a modeliser avant de s engager, car la facture evolue avec la complexite des agents et le volume de traces, pas avec l effectif.',
+            verdict: 'LangSmith vient de l equipe LangChain, et a l interieur de LangChain ou LangGraph le tracage est automatique : vous obtenez une visibilite au niveau des etapes d une execution d agent sans ecrire d instrumentation. En dehors, vous utilisez un wrapper `traceable()` autour des appels aux SDK OpenAI ou Anthropic, ce qui fonctionne mais annule l avantage principal. Les tarifs : un niveau Developer a 0 $ par siege avec jusqu a 5 000 traces de base par mois et un seul siege, Plus a 39 $ par siege et par mois avec jusqu a 10 000 traces de base et un petit deploiement serverless gratuit, et Enterprise sur devis avec des options auto-hebergee et hybride. Au-dela du quota, la facturation passe a l usage : en LangChain Standard Units (LSU), a 1,00 $ par LSU. C est la partie a modeliser avant de s engager, car la facture evolue avec la complexite des agents et le volume de traces, pas avec l effectif.',
             pros: [
               'Tracage sans configuration dans LangChain et LangGraph, imbattable pour cette pile',
               'Outils matures d evaluation et d experimentation pilotes par jeux de donnees',
@@ -1954,7 +1954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Enterprise propose un deploiement auto-heberge et hybride',
             ],
             cons: [
-              'La facturation en unites de calcul et de stockage rend la facture difficile a anticiper quand la complexite des agents augmente',
+              'La facturation a l usage en LSU rend la facture difficile a anticiper quand la complexite des agents augmente',
               'L auto-hebergement est reserve a Enterprise, sur devis',
               'Proposition de valeur bien plus faible si vous n etes pas sur LangChain',
             ],
@@ -1963,13 +1963,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 url: 'https://www.langchain.com/pricing-langsmith',
                 productName: 'LangSmith',
                 productCategory: 'dev-tool',
-                priceRange: 'Developer gratuit ; Plus 39 $/siege/mois + 1,50 $/unite de calcul et 1,00 $/stockage ; Enterprise sur devis',
+                priceRange: 'Developer gratuit ; Plus 39 $/siege/mois + usage en LSU (1,00 $ chacune) ; Enterprise sur devis',
                 label: 'LangSmith — voir les tarifs',
               },
             ],
           },
         ],
-        note: 'Utilisez LangSmith si LangChain est votre framework. Modelisez vos unites de calcul et de stockage attendues avant de passer a Plus, car le prix par siege n est pas toute la facture.',
+        note: 'Utilisez LangSmith si LangChain est votre framework. Modelisez votre usage attendu en LSU avant de passer a Plus, car le prix par siege n est pas toute la facture.',
       },
       helicone: {
         id: 'helicone',
@@ -1980,7 +1980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Helicone — le plus rapide a adopter, le meilleur pour les couts',
             tagline: 'Integration proxy en une ligne, Apache-2.0, gratuit jusqu a 10 000 requetes puis 79 $/mois',
-            verdict: 'Parce qu Helicone est un proxy, l adoption consiste a changer l URL de base plutot qu a mener un projet d instrumentation, et il capte les donnees de cout et de requete a chaque appel par defaut, sans que personne ait a decider quoi tracer. Cela en fait le plus rapide des quatre a produire de la valeur, et explique pourquoi le suivi des couts est son point fort : la ventilation du cout par requete et la visibilite de la depense entre de nombreuses cles et modeles sont le produit central plutot qu une vue de reporting posee sur le tracage. Hobby est gratuit avec 10 000 requetes, 1 Go de stockage et 7 jours de retention ; Pro coute 79 $ par mois avec des sieges illimites et un mois de retention ; Team 799 $ par mois en ajoutant la conformite SOC-2 et HIPAA et trois mois de retention ; Enterprise ajoute le deploiement on-premise, le SSO SAML et une retention illimitee. Le code est sous Apache-2.0 avec 6,1k etoiles, meme si la page tarifaire ne commercialise l on-premise qu en Enterprise.',
+            verdict: 'Parce qu Helicone est un proxy, l adoption consiste a changer l URL de base plutot qu a mener un projet d instrumentation, et il capte les donnees de cout et de requete a chaque appel par defaut, sans que personne ait a decider quoi tracer. Cela en fait le plus rapide des quatre a produire de la valeur, et explique pourquoi le suivi des couts est son point fort : la ventilation du cout par requete et la visibilite de la depense entre de nombreuses cles et modeles sont le produit central plutot qu une vue de reporting posee sur le tracage. Hobby est gratuit avec 10 000 requetes, 1 Go de stockage et 7 jours de retention ; Pro coute 79 $ par mois avec des sieges illimites et un mois de retention ; Team 799 $ par mois en ajoutant la conformite SOC-2 et HIPAA et trois mois de retention ; Enterprise ajoute le deploiement on-premise, le SSO SAML et une retention illimitee. Le code est sous Apache-2.0 avec 6,3k etoiles, meme si la page tarifaire ne commercialise l on-premise qu en Enterprise.',
             pros: [
               'Une ligne pour integrer : aucune reecriture SDK, fonctionne avec tout point de terminaison compatible OpenAI',
               'Le suivi des couts est le produit central, pas un onglet de reporting secondaire',
@@ -2074,7 +2074,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Niveau: 'Gratuit', Langfuse: 'Hobby : 50 000 unites, 2 utilisateurs', LangSmith: 'Developer : 5 000 traces, 1 siege', Helicone: 'Hobby : 10 000 requetes', PromptLayer: 'Free : 2 500 requetes, 5 utilisateurs' },
           { Niveau: 'Retention gratuite', Langfuse: '30 jours d acces aux donnees', LangSmith: 'Non precise sur la page tarifaire', Helicone: '7 jours', PromptLayer: 'Non precise sur la page tarifaire' },
           { Niveau: 'Entree payante', Langfuse: 'Core 29 $/mois', LangSmith: 'Plus 39 $/siege/mois', Helicone: 'Pro 79 $/mois', PromptLayer: 'Pro 49 $/mois' },
-          { Niveau: 'Facturation a l usage', Langfuse: '8 $ par 100 000 unites, degressif', LangSmith: '1,50 $/calcul, 1,00 $/stockage', Helicone: 'A l usage au-dela du quota gratuit', PromptLayer: '0,003 $ par transaction' },
+          { Niveau: 'Facturation a l usage', Langfuse: '8 $ par 100 000 unites, degressif', LangSmith: 'Usage en LSU, 1,00 $ chacune', Helicone: 'A l usage au-dela du quota gratuit', PromptLayer: '0,003 $ par transaction' },
           { Niveau: 'Niveau intermediaire', Langfuse: 'Pro 199 $/mois, 3 ans de retention', LangSmith: 'Enterprise sur devis', Helicone: 'Team 799 $/mois', PromptLayer: 'Team 500 $/mois' },
           { Niveau: 'Conformite', Langfuse: 'Pro : SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team : SOC-2, HIPAA', PromptLayer: 'Enterprise' },
           { Niveau: 'Cout d auto-hebergement', Langfuse: 'Gratuit pour les fonctions centrales', LangSmith: 'Enterprise seulement', Helicone: 'Enterprise seulement', PromptLayer: 'Enterprise seulement' },
@@ -2136,11 +2136,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Presenter Langfuse comme la seule option open source',
-            whyItMatters: 'Helicone est sous Apache-2.0 avec 6,1k etoiles. La distinction exacte est que Langfuse documente un deploiement auto-heberge gratuit et pris en charge tandis qu Helicone vend l on-premise en Enterprise, pas que l un serait ouvert et l autre ferme.',
+            whyItMatters: 'Helicone est sous Apache-2.0 avec 6,3k etoiles. La distinction exacte est que Langfuse documente un deploiement auto-heberge gratuit et pris en charge tandis qu Helicone vend l on-premise en Enterprise, pas que l un serait ouvert et l autre ferme.',
           },
           {
             title: 'Lire le prix de 39 $ par siege de LangSmith comme la facture entiere',
-            whyItMatters: 'Plus ajoute une facturation a l usage de 1,50 $ par unite de calcul et 1,00 $ par unite de stockage au-dessus du siege. La facture evolue avec la complexite des agents et le volume de traces plutot qu avec l effectif, si bien que les equipes tres orientees LangGraph peuvent voir les couts grimper sans embaucher.',
+            whyItMatters: 'Plus ajoute une facturation a l usage en LSU (1,00 $ chacune) au-dessus du siege. La facture evolue avec la complexite des agents et le volume de traces plutot qu avec l effectif, si bien que les equipes tres orientees LangGraph peuvent voir les couts grimper sans embaucher.',
           },
           {
             title: 'Traiter le proxy d Helicone comme equivalent au tracage SDK',
@@ -2181,7 +2181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Combien coute LangSmith ?',
-            a: 'Le niveau Developer est gratuit avec jusqu a 5 000 traces de base par mois et un siege. Plus coute 39 $ par siege et par mois avec jusqu a 10 000 traces de base et un petit deploiement serverless gratuit. Au-dela, la facturation passe a l usage : 1,50 $ par unite de calcul LangChain et 1,00 $ par unite de stockage. Enterprise est sur devis avec des options auto-hebergee et hybride.',
+            a: 'Le niveau Developer est gratuit avec jusqu a 5 000 traces de base par mois et un siege. Plus coute 39 $ par siege et par mois avec jusqu a 10 000 traces de base et un petit deploiement serverless gratuit. Au-dela, la facturation passe a l usage en LangChain Standard Units (LSU) ; une LSU coute 1,00 $. Enterprise est sur devis avec des options auto-hebergee et hybride.',
           },
           {
             q: 'LangSmith ou Langfuse si j utilise deja LangChain ?',
@@ -2206,7 +2206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Verdict final',
         items: [
           '**Utilisez Langfuse si** vous voulez les integrations les plus larges et l option d auto-heberger — etape suivante : demarrez sur le niveau Hobby gratuit ou un deploiement Docker Compose, et verifiez la liste Enterprise si vous avez besoin du RBAC ou des journaux d audit.',
-          '**Utilisez LangSmith si** votre pile est LangChain ou LangGraph — etape suivante : demarrez sur le niveau Developer gratuit et modelisez vos unites de calcul et de stockage avant de passer a Plus, car le prix par siege n est pas toute la facture.',
+          '**Utilisez LangSmith si** votre pile est LangChain ou LangGraph — etape suivante : demarrez sur le niveau Developer gratuit et modelisez votre usage en LSU avant de passer a Plus, car le prix par siege n est pas toute la facture.',
           '**Utilisez Helicone si** la visibilite des couts est le probleme et que vous le voulez operationnel aujourd hui — etape suivante : faites passer un service par le proxy sur le niveau gratuit et verifiez que les donnees de cout correspondent a la facture de votre fournisseur.',
           '**Utilisez PromptLayer si** le versionnement des prompts est le vrai besoin — etape suivante : utilisez le niveau gratuit et passez a Langfuse ou LangSmith quand des tests de regression pilotes par jeux de donnees deviennent necessaires.',
           '**Passez les quatre si** vous etes avant la production — etape suivante : utilisez les tableaux de bord des fournisseurs et reevaluez quand quelqu un d autre que vous devra voir ce que le systeme a fait.',
@@ -2222,7 +2222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/langfuse/langfuse', title: 'Depot Langfuse', description: 'Nombre d etoiles et fichier LICENSE indiquant MIT sauf les dossiers ee/ ainsi que la ligne de copyright de ClickHouse, Inc.' },
           { url: 'https://clickhouse.com/blog/clickhouse-acquires-langfuse-open-source-llm-observability', title: 'ClickHouse rachete Langfuse', description: 'L annonce de ClickHouse elle-meme sur le rachat du 16 janvier 2026.' },
           { url: 'https://siliconangle.com/2026/01/16/database-maker-clickhouse-raises-400m-acquires-ai-observability-startup-langfuse/', title: 'ClickHouse leve 400 M$ et rachete Langfuse (SiliconANGLE)', description: 'Confirmation independante de la date du rachat et du contexte de la serie D.' },
-          { url: 'https://www.langchain.com/pricing-langsmith', title: 'Tarifs LangSmith', description: 'Niveaux Developer, Plus et Enterprise avec quotas de traces et tarifs de 1,50 $ et 1,00 $ par unite.' },
+          { url: 'https://www.langchain.com/pricing-langsmith', title: 'Tarifs LangSmith', description: 'Niveaux Developer, Plus et Enterprise avec quotas de traces et facturation a l usage a 1,00 $ par LSU.' },
           { url: 'https://www.helicone.ai/pricing', title: 'Tarifs Helicone', description: 'Niveaux Hobby, Pro, Team et Enterprise avec limites de requetes, fenetres de retention et la mention on-premise reserve a Enterprise.' },
           { url: 'https://github.com/Helicone/helicone', title: 'Depot Helicone', description: 'Nombre d etoiles et licence Apache-2.0, confirmant qu Helicone est open source.' },
           { url: 'https://www.promptlayer.com/pricing', title: 'Tarifs PromptLayer', description: 'Niveaux Free, Pro, Team et Enterprise avec limites de requetes, nombres d utilisateurs et tarifs par transaction.' },
@@ -2244,9 +2244,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: 'Meilleur outil d observabilite LLM 2026 : Langfuse, LangSmith ou Helicone',
-      description: 'Compare Langfuse, LangSmith, Helicone et PromptLayer pour l observabilite LLM, avec tarifs, licences et fenetres de retention verifies, le rachat par ClickHouse et le mur de fonctionnalites Enterprise en auto-hebergement. Verifie en aout 2026.',
+      description: 'Compare Langfuse, LangSmith, Helicone et PromptLayer pour l observabilite LLM, avec tarifs, licences et fenetres de retention verifies, le rachat par ClickHouse et le mur de fonctionnalites Enterprise en auto-hebergement.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-02',
       url: 'https://www.promptquorum.com/fr/local-llms/best-llm-observability-tools',
       inLanguage: 'fr',
       proficiencyLevel: 'Advanced',
@@ -2298,7 +2298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Combien coute LangSmith ?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Developer est gratuit avec jusqu a 5 000 traces de base par mois et un siege. Plus coute 39 $ par siege et par mois avec jusqu a 10 000 traces de base, puis a l usage a 1,50 $ par unite de calcul et 1,00 $ par unite de stockage. Enterprise est sur devis.',
+            text: 'Developer est gratuit avec jusqu a 5 000 traces de base par mois et un siege. Plus coute 39 $ par siege et par mois avec jusqu a 10 000 traces de base, puis a l usage en LangChain Standard Units (LSU), a 1,00 $ par LSU. Enterprise est sur devis.',
           },
         },
         {
@@ -2314,12 +2314,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Meilleurs outils d observabilite LLM (aout 2026)',
+      name: 'Meilleurs outils d observabilite LLM (2026)',
       inLanguage: 'fr',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Meilleur globalement — 33,9k etoiles, coeur auto-heberge gratuit, couverture de frameworks la plus large, mais neuf fonctionnalites sont reservees a Enterprise' },
-        { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'Meilleur pour les equipes LangChain et LangGraph — tracage natif sans configuration, 39 $/siege/mois plus des unites de calcul et de stockage a l usage' },
+        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Meilleur globalement — 36,9k etoiles, coeur auto-heberge gratuit, couverture de frameworks la plus large, mais neuf fonctionnalites sont reservees a Enterprise' },
+        { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'Meilleur pour les equipes LangChain et LangGraph — tracage natif sans configuration, 39 $/siege/mois plus un usage facture en LSU' },
         { '@type': 'ListItem', position: 3, name: 'Helicone', description: 'Le plus rapide a adopter et le meilleur pour les couts — proxy Apache-2.0, integration en une ligne, gratuit jusqu a 10 000 requetes puis 79 $/mois' },
         { '@type': 'ListItem', position: 4, name: 'PromptLayer', description: 'Option la plus legere — versionnement des prompts et journalisation, gratuit jusqu a 2 500 requetes par mois, Pro a 49 $/mois' },
       ],
@@ -2331,14 +2331,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-02-28',
     designSkin: 'hub',
     theme: 'Tools & Interfaces',
-    title: 'Melhor ferramenta de observabilidade de LLM 2026: Langfuse, LangSmith ou Helicone',
-    seoTitle: 'Melhor ferramenta de observabilidade de LLM 2026',
-    metaDescription: 'O Langfuse é gratuito para auto-hospedar e tem 33,9 mil estrelas, o LangSmith custa US$ 39 por assento mais consumo e o Helicone US$ 79. O Langfuse agora pertence à ClickHouse.',
+    title: 'Melhores ferramentas de observabilidade LLM 2026: Langfuse',
+    seoTitle: 'Melhores ferramentas de observabilidade LLM 2026: Langfuse',
+    metaDescription: 'Melhores ferramentas de observabilidade LLM 2026: Langfuse (auto-hospedagem grátis), LangSmith desde US$ 39/assento e Helicone desde US$ 79.',
     educationalLevel: 'Advanced',
     audience: 'Desenvolvedores e equipes que operam aplicações de LLM em produção',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-02',
     readTime: '14 min de leitura',
     primaryTerm: 'ferramenta de observabilidade de LLM',
     targetKeywords: [
@@ -2348,19 +2348,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'melhor ferramenta de monitoramento de prompts',
       'Langfuse aquisição ClickHouse',
     ],
-    leadAnswerBlock: '**O Langfuse é a melhor escolha geral para a maioria das equipes em produção: 33,9 mil estrelas no GitHub, gratuito para auto-hospedar e com a maior cobertura de frameworks entre os quatro. O LangSmith é a escolha certa se sua stack roda em LangChain ou LangGraph, a US$ 39 por assento ao mês mais unidades de computação e armazenamento medidas. O Helicone é o mais rápido de adotar porque é um proxy e não um SDK, a US$ 79 ao mês. Dois pontos escapam à maioria das comparações: o Langfuse foi adquirido pela ClickHouse em 16 de janeiro de 2026, e seu nível auto-hospedado gratuito não é completo — nove recursos, incluindo RBAC e registros de auditoria, são exclusivos do Enterprise.**',
+    leadAnswerBlock: '**O Langfuse é a melhor escolha padrão para a maioria das equipes: auto-hospedagem gratuita e ampla cobertura. O LangSmith serve a stacks LangChain e LangGraph, desde US$ 39 por assento. O Helicone, um proxy, é o mais rápido de adotar, desde US$ 79.**',
     quickAnswerTop: {
       question: 'Qual é a melhor ferramenta de observabilidade de LLM em 2026?',
       answer: '**Langfuse para flexibilidade e auto-hospedagem, LangSmith se você já está no LangChain, Helicone para visibilidade de custos com integração de uma linha e PromptLayer apenas se você precisa de versionamento de prompts em vez de observabilidade completa.** A decisão é sobretudo estrutural: LangSmith e Langfuse instrumentam seu código via SDK, enquanto o Helicone fica à frente da API como proxy e captura cada chamada sem instrumentação. Essa diferença determina quais dados você obtém. Um proxy vê requisições e custos; um rastreador de SDK vê os passos de raciocínio dentro de uma execução multiagente.',
       bullets: [
-        '**Melhor no geral:** Langfuse — 33,9 mil estrelas, auto-hospedagem gratuita, integrações mais amplas, mas confira antes o muro do Enterprise',
-        '**Melhor para times LangChain:** LangSmith — rastreamento nativo sem configuração, US$ 39/assento/mês mais US$ 1,50 por unidade de computação e US$ 1,00 por unidade de armazenamento',
+        '**Melhor no geral:** Langfuse — 36,9 mil estrelas, auto-hospedagem gratuita, integrações mais amplas, mas confira antes o muro do Enterprise',
+        '**Melhor para times LangChain:** LangSmith — rastreamento nativo sem configuração, US$ 39/assento/mês mais consumo em LSU (US$ 1,00 cada)',
         '**Mais rápido de adotar:** Helicone — um proxy, então uma linha de código, gratuito até 10 mil requisições e depois US$ 79/mês',
         '**Opção mais enxuta:** PromptLayer — versionamento de prompts e registro, gratuito até 2.500 requisições, Pro a US$ 49/mês',
         '**O Langfuse agora pertence à ClickHouse** — aquisição em 16 de janeiro de 2026, anunciada junto a uma Série D de US$ 400 milhões, o que importa para o roadmap',
         '**Dispense os quatro** se você está antes da produção com algumas dezenas de chamadas por dia: os painéis dos fornecedores bastam',
       ],
-      updatedDate: '2026-08-28',
+      updatedDate: '2026-11-02',
     },
     toc: [
       { label: 'Pontos principais', anchor: 'tldr' },
@@ -2389,12 +2389,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Langfuse** — 33,9 mil estrelas no GitHub, a maior presença de código aberto aqui. O Hobby na nuvem é gratuito com 50 mil unidades por mês, 30 dias de acesso aos dados e 2 usuários; o Core custa US$ 29/mês com 100 mil unidades e usuários ilimitados; o Pro US$ 199/mês com três anos de retenção; o Enterprise US$ 2.499/mês. Auto-hospedar o núcleo de código aberto é gratuito e ilimitado.',
+          '**Langfuse** — 36,9 mil estrelas no GitHub, a maior presença de código aberto aqui. O Hobby na nuvem é gratuito com 50 mil unidades por mês, 30 dias de acesso aos dados e 2 usuários; o Core custa US$ 29/mês com 100 mil unidades e usuários ilimitados; o Pro US$ 199/mês com três anos de retenção',
           '**Uma correção que vale a pena:** o Langfuse é amplamente descrito como licenciado sob MIT sem muro de recursos. O próprio README diz que o repositório é "MIT licensed, except for the `ee` folders", e a página de auto-hospedagem lista nove recursos exclusivos do Enterprise: mascaramento de dados no servidor, RBAC por projeto, gestão de retenção, SCIM, registros de auditoria e outros. Observabilidade e avaliações básicas são realmente gratuitas; os recursos de governança não são.',
           '**O Langfuse foi adquirido pela ClickHouse, Inc. em 16 de janeiro de 2026**, anunciado junto à Série D de US$ 400 milhões da ClickHouse. O arquivo LICENSE do repositório agora começa com "Copyright (c) 2023-2026 ClickHouse, Inc." Isso não é motivo para descartar o Langfuse, mas é uma consideração de roadmap que merece cinco minutos antes de padronizar em cima dele.',
-          '**LangSmith** — o Developer é gratuito com até 5.000 traces base por mês e um assento. O Plus custa US$ 39 por assento ao mês com até 10 mil traces base e, acima disso, cobrança por consumo a US$ 1,50 por unidade de computação e US$ 1,00 por unidade de armazenamento. O Enterprise é sob consulta, com opções auto-hospedada e híbrida.',
+          '**LangSmith** — o Developer é gratuito com até 5.000 traces base por mês e um assento. O Plus custa US$ 39 por assento ao mês com até 10 mil traces base e, acima disso, cobrança por consumo em LangChain Standard Units (LSU), a US$ 1,00 por LSU. O Enterprise é sob consulta, com opções auto-hospedada e híbrida.',
           '**Helicone** — um proxy em vez de um SDK, então a integração é uma linha e captura cada chamada sem instrumentação. O Hobby é gratuito com 10 mil requisições, 1 GB e 7 dias de retenção; o Pro custa US$ 79/mês com assentos ilimitados e um mês de retenção; o Team US$ 799/mês com SOC-2 e HIPAA e três meses de retenção.',
-          '**O Helicone também é de código aberto**, sob Apache-2.0 com 6,1 mil estrelas, o que a maioria das comparações omite. A nuance é que sua página de preços vende on-premise apenas no Enterprise e não documenta nenhum caminho gratuito de auto-hospedagem com suporte. Código aberto aqui não significa que o fornecedor apoia você operando por conta própria.',
+          '**O Helicone também é de código aberto**, sob Apache-2.0 com 6,3 mil estrelas, o que a maioria das comparações omite. A nuance é que sua página de preços vende on-premise apenas no Enterprise e não documenta nenhum caminho gratuito de auto-hospedagem com suporte. Código aberto aqui não significa que o fornecedor apoia você operando por conta própria.',
           '**PromptLayer** — o mais estreito dos quatro. O nível gratuito oferece 2.500 requisições por mês, 5 usuários e 10 prompts; o Pro custa US$ 49/mês com US$ 0,003 por transação excedente; o Team US$ 500/mês com mais de 100 mil requisições e 25 usuários. A auto-hospedagem em GCP, AWS ou Azure é exclusiva do Enterprise.',
           'Nenhum dos quatro publica programa de afiliados ou indicação. A LangChain mantém uma Partner Network, mas é um programa de integração técnica, não um esquema de comissões. Todos os links desta página são não remunerados.',
         ],
@@ -2430,7 +2430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.langchain.com/pricing-langsmith',
             productName: 'LangSmith',
             productCategory: 'dev-tool',
-            priceRange: 'Developer gratuito; Plus US$ 39/assento/mês + US$ 1,50/unidade de computação e US$ 1,00/armazenamento; Enterprise sob consulta',
+            priceRange: 'Developer gratuito; Plus US$ 39/assento/mês + consumo em LSU (US$ 1,00 cada); Enterprise sob consulta',
             label: 'LangSmith — ver preços',
           },
           {
@@ -2461,13 +2461,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'Langfuse, LangSmith, Helicone e PromptLayer comparados',
-        content: '**Cada ferramenta otimiza um ponto diferente da stack em vez de competir recurso a recurso.** Os preços foram lidos nas páginas dos fornecedores em 28 de agosto de 2026, e os números dos repositórios vieram da API do GitHub no mesmo dia.',
+        content: '**Cada ferramenta otimiza um ponto diferente da stack em vez de competir recurso a recurso.** Os preços foram lidos nas páginas dos fornecedores em 2 de noviembre de 2026, e os números dos repositórios vieram da API do GitHub no mesmo dia.',
         tableFormat: true,
         itemHeadings: true,
         columns: ['Critério', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { Critério: 'Abordagem', Langfuse: 'Rastreador SDK', LangSmith: 'Rastreador SDK', Helicone: 'Proxy', PromptLayer: 'Registro via SDK e REST' },
-          { Critério: 'Estrelas no GitHub', Langfuse: '33,9 mil', LangSmith: 'Não é código aberto', Helicone: '6,1 mil', PromptLayer: '0,8 mil (biblioteca cliente)' },
+          { Critério: 'Estrelas no GitHub', Langfuse: '36,9 mil', LangSmith: 'Não é código aberto', Helicone: '6,3 mil', PromptLayer: '0,8 mil (biblioteca cliente)' },
           { Critério: 'Licença', Langfuse: 'MIT exceto pastas ee/', LangSmith: 'Comercial', Helicone: 'Apache-2.0', PromptLayer: 'Comercial' },
           { Critério: 'Nível gratuito', Langfuse: '50 mil unidades/mês, 30 dias', LangSmith: '5 mil traces/mês, 1 assento', Helicone: '10 mil requisições, 7 dias', PromptLayer: '2.500 requisições, 10 prompts' },
           { Critério: 'Entrada paga', Langfuse: 'Core US$ 29/mês', LangSmith: 'Plus US$ 39/assento/mês + consumo', Helicone: 'Pro US$ 79/mês', PromptLayer: 'Pro US$ 49/mês' },
@@ -2478,7 +2478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Comparações costumam chamar o Langfuse de "a única opção de código aberto aqui". O Helicone é Apache-2.0 com 6,1 mil estrelas, então isso não procede. O que procede é que o Langfuse documenta e apoia uma implantação auto-hospedada gratuita, enquanto o Helicone vende on-premise apenas no Enterprise e não descreve nenhum caminho gratuito de auto-hospedagem com suporte em sua página de preços.',
+            text: 'Comparações costumam chamar o Langfuse de "a única opção de código aberto aqui". O Helicone é Apache-2.0 com 6,3 mil estrelas, então isso não procede. O que procede é que o Langfuse documenta e apoia uma implantação auto-hospedada gratuita, enquanto o Helicone vende on-premise apenas no Enterprise e não descreve nenhum caminho gratuito de auto-hospedagem com suporte em sua página de preços.',
           },
         ],
       },
@@ -2490,7 +2490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Langfuse — melhor no geral',
-            tagline: '33,9 mil estrelas, núcleo auto-hospedado gratuito, maior cobertura de frameworks',
+            tagline: '36,9 mil estrelas, núcleo auto-hospedado gratuito, maior cobertura de frameworks',
             verdict: 'O Langfuse cobre observabilidade, avaliações, gestão de prompts e conjuntos de dados em um único produto, e sua lista de integrações é a mais longa dos quatro: SDK da OpenAI, LangChain, LlamaIndex, Haystack, LiteLLM, Vercel AI SDK, Ollama e Amazon Bedrock nativamente, além de integrações da comunidade. Para uma stack mista — um pouco de LangChain, algumas chamadas de SDK diretas, LlamaIndex para recuperação — essa amplitude significa instrumentar uma vez em vez de por framework. Preços na nuvem: Hobby gratuito com 50 mil unidades por mês e 30 dias de acesso aos dados, Core a US$ 29/mês com 100 mil unidades e usuários ilimitados, Pro a US$ 199/mês com três anos de retenção mais SOC2, ISO27001 e um BAA para HIPAA, e Enterprise a US$ 2.499/mês. O excedente é escalonado, de US$ 8 por 100 mil unidades até US$ 6 em volume. Auto-hospedar o núcleo de código aberto é gratuito e de fato ilimitado no uso.',
             pros: [
               'A maior cobertura nativa de frameworks dos quatro: uma stack mista é instrumentada uma só vez',
@@ -2525,7 +2525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'LangSmith — melhor para times de LangChain e LangGraph',
             tagline: 'Rastreamento nativo sem configuração, US$ 39/assento/mês mais unidades por consumo',
-            verdict: 'O LangSmith vem do time do LangChain, e dentro de LangChain ou LangGraph o rastreamento é automático: você obtém visibilidade em nível de passo de uma execução de agente sem escrever instrumentação. Fora disso, usa-se um wrapper `traceable()` em torno das chamadas aos SDKs da OpenAI ou Anthropic, o que funciona mas elimina a vantagem principal. Os preços: um nível Developer a US$ 0 por assento com até 5.000 traces base por mês e um único assento, Plus a US$ 39 por assento ao mês com até 10 mil traces base e uma implantação serverless pequena gratuita, e Enterprise sob consulta com opções auto-hospedada e híbrida. Acima da cota, a cobrança passa a ser por consumo: US$ 1,50 por unidade de computação do LangChain e US$ 1,00 por unidade de armazenamento. Essa é a parte a modelar antes de se comprometer, porque a fatura escala com a complexidade dos agentes e o volume de traces, não com o número de pessoas.',
+            verdict: 'O LangSmith vem do time do LangChain, e dentro de LangChain ou LangGraph o rastreamento é automático: você obtém visibilidade em nível de passo de uma execução de agente sem escrever instrumentação. Fora disso, usa-se um wrapper `traceable()` em torno das chamadas aos SDKs da OpenAI ou Anthropic, o que funciona mas elimina a vantagem principal. Os preços: um nível Developer a US$ 0 por assento com até 5.000 traces base por mês e um único assento, Plus a US$ 39 por assento ao mês com até 10 mil traces base e uma implantação serverless pequena gratuita, e Enterprise sob consulta com opções auto-hospedada e híbrida. Acima da cota, a cobrança passa a ser por consumo: em LangChain Standard Units (LSU), a US$ 1,00 por LSU. Essa é a parte a modelar antes de se comprometer, porque a fatura escala com a complexidade dos agentes e o volume de traces, não com o número de pessoas.',
             pros: [
               'Rastreamento sem configuração dentro de LangChain e LangGraph, imbatível para essa stack',
               'Ferramentas maduras de avaliação e experimentação orientadas por conjuntos de dados',
@@ -2533,7 +2533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'O Enterprise oferece implantação auto-hospedada e híbrida',
             ],
             cons: [
-              'A cobrança por unidades de computação e armazenamento torna a fatura difícil de prever conforme a complexidade dos agentes cresce',
+              'A cobrança por consumo em LSU torna a fatura difícil de prever conforme a complexidade dos agentes cresce',
               'A auto-hospedagem é exclusiva do Enterprise, com preço sob consulta',
               'Proposta de valor bem mais fraca se você não está no LangChain',
             ],
@@ -2542,13 +2542,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 url: 'https://www.langchain.com/pricing-langsmith',
                 productName: 'LangSmith',
                 productCategory: 'dev-tool',
-                priceRange: 'Developer gratuito; Plus US$ 39/assento/mês + US$ 1,50/unidade de computação e US$ 1,00/armazenamento; Enterprise sob consulta',
+                priceRange: 'Developer gratuito; Plus US$ 39/assento/mês + consumo em LSU (US$ 1,00 cada); Enterprise sob consulta',
                 label: 'LangSmith — ver preços',
               },
             ],
           },
         ],
-        note: 'Use o LangSmith se o LangChain é o seu framework. Modele suas unidades de computação e armazenamento previstas antes de migrar para o Plus, porque o preço por assento não é a fatura inteira.',
+        note: 'Use o LangSmith se o LangChain é o seu framework. Modele seu consumo previsto em LSU antes de migrar para o Plus, porque o preço por assento não é a fatura inteira.',
       },
       helicone: {
         id: 'helicone',
@@ -2559,7 +2559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Helicone — mais rápido de adotar e melhor para custos',
             tagline: 'Integração proxy de uma linha, Apache-2.0, gratuito até 10 mil requisições e depois US$ 79/mês',
-            verdict: 'Como o Helicone é um proxy, adotá-lo é trocar a URL base em vez de tocar um projeto de instrumentação, e ele captura dados de custo e requisição em cada chamada por padrão, sem que ninguém precise decidir o que rastrear. Isso o torna o mais rápido dos quatro a entregar valor e explica por que o acompanhamento de custos é seu ponto mais forte: o detalhamento de custo por requisição e a visibilidade do gasto entre muitas chaves e modelos são o produto central, não uma visão de relatórios montada sobre o rastreamento. O Hobby é gratuito com 10 mil requisições, 1 GB de armazenamento e 7 dias de retenção; o Pro custa US$ 79 ao mês com assentos ilimitados e um mês de retenção; o Team US$ 799 ao mês acrescentando conformidade SOC-2 e HIPAA e três meses de retenção; o Enterprise adiciona implantação on-premise, SSO SAML e retenção ilimitada. O código é Apache-2.0 com 6,1 mil estrelas, ainda que a página de preços comercialize on-premise apenas no Enterprise.',
+            verdict: 'Como o Helicone é um proxy, adotá-lo é trocar a URL base em vez de tocar um projeto de instrumentação, e ele captura dados de custo e requisição em cada chamada por padrão, sem que ninguém precise decidir o que rastrear. Isso o torna o mais rápido dos quatro a entregar valor e explica por que o acompanhamento de custos é seu ponto mais forte: o detalhamento de custo por requisição e a visibilidade do gasto entre muitas chaves e modelos são o produto central, não uma visão de relatórios montada sobre o rastreamento. O Hobby é gratuito com 10 mil requisições, 1 GB de armazenamento e 7 dias de retenção; o Pro custa US$ 79 ao mês com assentos ilimitados e um mês de retenção; o Team US$ 799 ao mês acrescentando conformidade SOC-2 e HIPAA e três meses de retenção; o Enterprise adiciona implantação on-premise, SSO SAML e retenção ilimitada. O código é Apache-2.0 com 6,3 mil estrelas, ainda que a página de preços comercialize on-premise apenas no Enterprise.',
             pros: [
               'Uma linha para integrar: sem reescrita de SDK, funciona com qualquer endpoint compatível com OpenAI',
               'O acompanhamento de custos é o produto central, não uma aba de relatórios secundária',
@@ -2653,7 +2653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Nível: 'Gratuito', Langfuse: 'Hobby: 50 mil unidades, 2 usuários', LangSmith: 'Developer: 5 mil traces, 1 assento', Helicone: 'Hobby: 10 mil requisições', PromptLayer: 'Free: 2.500 requisições, 5 usuários' },
           { Nível: 'Retenção gratuita', Langfuse: '30 dias de acesso aos dados', LangSmith: 'Não informado na página de preços', Helicone: '7 dias', PromptLayer: 'Não informado na página de preços' },
           { Nível: 'Entrada paga', Langfuse: 'Core US$ 29/mês', LangSmith: 'Plus US$ 39/assento/mês', Helicone: 'Pro US$ 79/mês', PromptLayer: 'Pro US$ 49/mês' },
-          { Nível: 'Cobrança por uso', Langfuse: 'US$ 8 por 100 mil unidades, escalonado', LangSmith: 'US$ 1,50/computação, US$ 1,00/armazenamento', Helicone: 'Por consumo acima da cota gratuita', PromptLayer: 'US$ 0,003 por transação' },
+          { Nível: 'Cobrança por uso', Langfuse: 'US$ 8 por 100 mil unidades, escalonado', LangSmith: 'Consumo em LSU, US$ 1,00 cada', Helicone: 'Por consumo acima da cota gratuita', PromptLayer: 'US$ 0,003 por transação' },
           { Nível: 'Nível intermediário', Langfuse: 'Pro US$ 199/mês, 3 anos de retenção', LangSmith: 'Enterprise sob consulta', Helicone: 'Team US$ 799/mês', PromptLayer: 'Team US$ 500/mês' },
           { Nível: 'Conformidade', Langfuse: 'Pro: SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team: SOC-2, HIPAA', PromptLayer: 'Enterprise' },
           { Nível: 'Custo de auto-hospedar', Langfuse: 'Gratuito para recursos centrais', LangSmith: 'Só Enterprise', Helicone: 'Só Enterprise', PromptLayer: 'Só Enterprise' },
@@ -2715,11 +2715,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Chamar o Langfuse de única opção de código aberto',
-            whyItMatters: 'O Helicone é Apache-2.0 com 6,1 mil estrelas. A distinção correta é que o Langfuse documenta uma implantação auto-hospedada gratuita e apoiada enquanto o Helicone vende on-premise no Enterprise, não que um seja aberto e o outro fechado.',
+            whyItMatters: 'O Helicone é Apache-2.0 com 6,3 mil estrelas. A distinção correta é que o Langfuse documenta uma implantação auto-hospedada gratuita e apoiada enquanto o Helicone vende on-premise no Enterprise, não que um seja aberto e o outro fechado.',
           },
           {
             title: 'Ler o preço de US$ 39 por assento do LangSmith como a fatura inteira',
-            whyItMatters: 'O Plus acrescenta cobrança por consumo de US$ 1,50 por unidade de computação e US$ 1,00 por unidade de armazenamento sobre o assento. A fatura escala com a complexidade dos agentes e o volume de traces mais do que com o número de pessoas, então equipes com muito LangGraph podem ver o custo disparar sem contratar ninguém.',
+            whyItMatters: 'O Plus acrescenta cobrança por consumo em LSU (US$ 1,00 cada) sobre o assento. A fatura escala com a complexidade dos agentes e o volume de traces mais do que com o número de pessoas, então equipes com muito LangGraph podem ver o custo disparar sem contratar ninguém.',
           },
           {
             title: 'Tratar o proxy do Helicone como equivalente ao rastreamento por SDK',
@@ -2760,7 +2760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quanto custa o LangSmith?',
-            a: 'O nível Developer é gratuito com até 5.000 traces base por mês e um assento. O Plus custa US$ 39 por assento ao mês com até 10 mil traces base e uma implantação serverless pequena gratuita. Acima disso é por consumo, a US$ 1,50 por unidade de computação do LangChain e US$ 1,00 por unidade de armazenamento. O Enterprise é sob consulta, com opções auto-hospedada e híbrida.',
+            a: 'O nível Developer é gratuito com até 5.000 traces base por mês e um assento. O Plus custa US$ 39 por assento ao mês com até 10 mil traces base e uma implantação serverless pequena gratuita. Acima disso é por consumo em LangChain Standard Units (LSU); uma LSU custa US$ 1,00. O Enterprise é sob consulta, com opções auto-hospedada e híbrida.',
           },
           {
             q: 'LangSmith ou Langfuse se eu já uso LangChain?',
@@ -2768,7 +2768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'O Helicone é de código aberto?',
-            a: 'Sim, sob Apache-2.0 com cerca de 6.100 estrelas no GitHub, algo que muitas comparações dessa categoria omitem. A nuance é que a página de preços do Helicone vende a implantação on-premise apenas no nível Enterprise e não documenta nenhum caminho gratuito de auto-hospedagem com suporte, então código aberto não significa que o fornecedor apoia você operando por conta própria.',
+            a: 'Sim, sob Apache-2.0 com cerca de 6.300 estrelas no GitHub, algo que muitas comparações dessa categoria omitem. A nuance é que a página de preços do Helicone vende a implantação on-premise apenas no nível Enterprise e não documenta nenhum caminho gratuito de auto-hospedagem com suporte, então código aberto não significa que o fornecedor apoia você operando por conta própria.',
           },
           {
             q: 'Algum deles tem programa de afiliados?',
@@ -2785,7 +2785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Veredito final',
         items: [
           '**Use o Langfuse se** quer as integrações mais amplas e a opção de auto-hospedar — próximo passo: comece no nível Hobby gratuito ou em uma instalação com Docker Compose, e confira a lista do Enterprise se precisar de RBAC ou registros de auditoria.',
-          '**Use o LangSmith se** sua stack é LangChain ou LangGraph — próximo passo: comece no nível Developer gratuito e modele seu uso de unidades de computação e armazenamento antes de migrar para o Plus, já que o preço por assento não é a fatura inteira.',
+          '**Use o LangSmith se** sua stack é LangChain ou LangGraph — próximo passo: comece no nível Developer gratuito e modele seu consumo em LSU antes de migrar para o Plus, já que o preço por assento não é a fatura inteira.',
           '**Use o Helicone se** visibilidade de custos é a dor e você quer isso funcionando hoje — próximo passo: aponte um serviço para o proxy no nível gratuito e confirme que os dados de custo batem com a fatura do seu fornecedor.',
           '**Use o PromptLayer se** versionamento de prompts é o requisito real — próximo passo: use o nível gratuito e migre para Langfuse ou LangSmith quando precisar de testes de regressão orientados por conjuntos de dados.',
           '**Pule os quatro se** você está antes da produção — próximo passo: use os painéis dos fornecedores e reavalie quando alguém além de você precisar ver o que o sistema fez.',
@@ -2801,7 +2801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/langfuse/langfuse', title: 'Repositório do Langfuse', description: 'Contagem de estrelas e o arquivo LICENSE mostrando MIT exceto as pastas ee/ mais a linha de copyright da ClickHouse, Inc.' },
           { url: 'https://clickhouse.com/blog/clickhouse-acquires-langfuse-open-source-llm-observability', title: 'ClickHouse adquire o Langfuse', description: 'O anúncio da própria ClickHouse sobre a aquisição de 16 de janeiro de 2026.' },
           { url: 'https://siliconangle.com/2026/01/16/database-maker-clickhouse-raises-400m-acquires-ai-observability-startup-langfuse/', title: 'ClickHouse levanta US$ 400 mi e adquire o Langfuse (SiliconANGLE)', description: 'Confirmação independente da data da aquisição e do contexto da Série D.' },
-          { url: 'https://www.langchain.com/pricing-langsmith', title: 'Preços do LangSmith', description: 'Níveis Developer, Plus e Enterprise com cotas de traces e as taxas de US$ 1,50 e US$ 1,00 por unidade.' },
+          { url: 'https://www.langchain.com/pricing-langsmith', title: 'Preços do LangSmith', description: 'Níveis Developer, Plus e Enterprise com cotas de traces e a cobrança por consumo a US$ 1,00 por LSU.' },
           { url: 'https://www.helicone.ai/pricing', title: 'Preços do Helicone', description: 'Níveis Hobby, Pro, Team e Enterprise com limites de requisições, janelas de retenção e a nota de on-premise apenas no Enterprise.' },
           { url: 'https://github.com/Helicone/helicone', title: 'Repositório do Helicone', description: 'Contagem de estrelas e licença Apache-2.0, confirmando que o Helicone é de código aberto.' },
           { url: 'https://www.promptlayer.com/pricing', title: 'Preços do PromptLayer', description: 'Níveis Free, Pro, Team e Enterprise com limites de requisições, número de usuários e taxas por transação.' },
@@ -2825,7 +2825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Melhor ferramenta de observabilidade de LLM 2026: Langfuse, LangSmith ou Helicone',
       description: 'Compara Langfuse, LangSmith, Helicone e PromptLayer para observabilidade de LLM, com preços, licenças e janelas de retenção verificados, a aquisição pela ClickHouse e o muro de recursos do Enterprise na auto-hospedagem.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-02',
       url: 'https://www.promptquorum.com/pt/local-llms/best-llm-observability-tools',
       inLanguage: 'pt-BR',
       proficiencyLevel: 'Advanced',
@@ -2877,7 +2877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Quanto custa o LangSmith?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'O Developer é gratuito com até 5.000 traces base por mês e um assento. O Plus custa US$ 39 por assento ao mês com até 10 mil traces base e, acima disso, é por consumo a US$ 1,50 por unidade de computação e US$ 1,00 por unidade de armazenamento. O Enterprise é sob consulta.',
+            text: 'O Developer é gratuito com até 5.000 traces base por mês e um assento. O Plus custa US$ 39 por assento ao mês com até 10 mil traces base e, acima disso, é por consumo em LangChain Standard Units (LSU), a US$ 1,00 por LSU. O Enterprise é sob consulta.',
           },
         },
         {
@@ -2885,7 +2885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'O Helicone é de código aberto?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Sim, sob Apache-2.0 com cerca de 6.100 estrelas no GitHub. Sua página de preços, porém, vende a implantação on-premise apenas no nível Enterprise e não documenta nenhum caminho gratuito de auto-hospedagem com suporte.',
+            text: 'Sim, sob Apache-2.0 com cerca de 6.300 estrelas no GitHub. Sua página de preços, porém, vende a implantação on-premise apenas no nível Enterprise e não documenta nenhum caminho gratuito de auto-hospedagem com suporte.',
           },
         },
       ],
@@ -2893,12 +2893,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Melhores ferramentas de observabilidade de LLM (agosto de 2026)',
+      name: 'Melhores ferramentas de observabilidade de LLM (2026)',
       inLanguage: 'pt-BR',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Melhor no geral — 33,9 mil estrelas, núcleo auto-hospedado gratuito, maior cobertura de frameworks, embora nove recursos sejam exclusivos do Enterprise' },
-        { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'Melhor para times de LangChain e LangGraph — rastreamento nativo sem configuração, US$ 39/assento/mês mais unidades de computação e armazenamento por consumo' },
+        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Melhor no geral — 36,9 mil estrelas, núcleo auto-hospedado gratuito, maior cobertura de frameworks, embora nove recursos sejam exclusivos do Enterprise' },
+        { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'Melhor para times de LangChain e LangGraph — rastreamento nativo sem configuração, US$ 39/assento/mês mais cobrança por consumo em LSU' },
         { '@type': 'ListItem', position: 3, name: 'Helicone', description: 'Mais rápido de adotar e melhor para custos — proxy Apache-2.0, integração de uma linha, gratuito até 10 mil requisições e depois US$ 79/mês' },
         { '@type': 'ListItem', position: 4, name: 'PromptLayer', description: 'Opção mais enxuta — versionamento de prompts e registro, gratuito até 2.500 requisições por mês, Pro a US$ 49/mês' },
       ],
@@ -2911,13 +2911,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026年 最適なLLMオブザーバビリティツール：Langfuse・LangSmith・Helicone',
-    seoTitle: '2026年 最適なLLMオブザーバビリティツール',
-    metaDescription: 'Langfuseはスター33,900件で自己ホストが無料、LangSmithは1席39ドルと従量課金、Heliconeは79ドル。LangfuseはClickHouse傘下に。2026年8月時点で確認。',
+    seoTitle: 'LLM可観測性ツール比較2026：Langfuse',
+    metaDescription: '2026年のLLMオブザーバビリティツール比較：Langfuse（セルフホスト無料）、LangSmithは1席月39ドルから、Heliconeは月79ドルから。料金と得失を比較。',
     educationalLevel: 'Advanced',
     audience: 'LLMアプリケーションを本番運用する開発者とチーム',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-02',
     readTime: '14分で読めます',
     primaryTerm: 'LLMオブザーバビリティツール',
     targetKeywords: [
@@ -2927,19 +2927,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'プロンプト監視ツール おすすめ',
       'Langfuse ClickHouse 買収',
     ],
-    leadAnswerBlock: '**本番運用の多くのチームにとって総合的な最良解はLangfuseです。GitHubスター33,900件、自己ホストが無料で、4製品のなかで最も広いフレームワーク対応を備えます。スタックがLangChainまたはLangGraphならLangSmithが正解で、1席あたり月39ドルに計測されたコンピュートユニットとストレージユニットが加わります。HeliconeはSDKではなくプロキシであるため導入が最速で、月79ドルです。多くの比較記事が見落としている点が2つあります。Langfuseは2026年1月16日にClickHouseに買収されており、無料の自己ホスト版は完全版ではありません。RBACや監査ログを含む9つの機能がEnterprise専用です。**',
+    leadAnswerBlock: '**多くの本番チームにはLangfuseが最適です。セルフホストは無料で、対応フレームワークも幅広いです。LangChainやLangGraph中心ならLangSmith（1席月39ドルから）。導入の速さはプロキシ型のHelicone（月79ドルから）が一番です。LangfuseはClickHouse傘下になりました。**',
     quickAnswerTop: {
       question: '2026年に最適なLLMオブザーバビリティツールはどれですか？',
       answer: '**柔軟性と自己ホストならLangfuse、すでにLangChainを使っているならLangSmith、1行の導入でコストを可視化したいならHelicone、完全なオブザーバビリティではなくプロンプトのバージョン管理が必要なだけならPromptLayerです。** この選択はおもに構造の問題です。LangSmithとLangfuseはSDKでコードを計装しますが、HeliconeはAPIの手前にプロキシとして入り、計装なしですべての呼び出しを取得します。この違いが得られるデータを決めます。プロキシはリクエストとコストを見ますが、SDKトレーサーはマルチエージェント実行の内部にある推論ステップまで見えます。',
       bullets: [
-        '**総合的に最良：** Langfuse — スター33,900件、自己ホストが無料、対応連携が最も広い。ただしEnterpriseの壁を先に確認',
-        '**LangChainのチームに最良：** LangSmith — 設定不要のネイティブトレーシング、1席あたり月39ドルにコンピュート1.50ドル・ストレージ1.00ドルが加算',
+        '**総合的に最良：** Langfuse — スター36,900件、自己ホストが無料、対応連携が最も広い。ただしEnterpriseの壁を先に確認',
+        '**LangChainのチームに最良：** LangSmith — 設定不要のネイティブトレーシング、1席あたり月39ドルにLSU単位の従量課金（1 LSU = 1.00ドル）が加算',
         '**導入が最速：** Helicone — プロキシなのでコードは1行、1万リクエストまで無料、以降は月79ドル',
         '**最も軽量：** PromptLayer — プロンプトのバージョン管理とログ、2,500リクエストまで無料、Proは月49ドル',
         '**LangfuseはClickHouse傘下** — 2026年1月16日の買収で、4億ドルのシリーズDと同時発表。ロードマップ上の論点',
         '**4つとも不要なケース** — 本番前で1日数十回の呼び出しなら、各社の管理画面で十分',
       ],
-      updatedDate: '2026-08-28',
+      updatedDate: '2026-11-02',
     },
     toc: [
       { label: '要点', anchor: 'tldr' },
@@ -2968,12 +2968,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Langfuse** — GitHubスター33,900件で、ここで最大のオープンソース基盤です。クラウドのHobbyは無料で月5万ユニット、データ参照30日間、2ユーザー。Coreは月29ドルで10万ユニットとユーザー数無制限、Proは月199ドルで3年間の保持、Enterpriseは月2,499ドルです。オープンソースのコアを自己ホストする分には無料かつ無制限です。',
+          '**Langfuse** — GitHubスター36,900件で、ここで最大のオープンソース基盤です。クラウドのHobbyは無料で月5万ユニット、データ参照30日間、2ユーザー。Coreは月29ドルで10万ユニットとユーザー数無制限、Proは月199ドルで3年間の保持、Enterpriseは月2,499ドルです。オープンソースのコアを自己ホストする分には無料かつ無制限です。',
           '**訂正しておきたい点：** Langfuseは「機能制限のないMITライセンス」と広く説明されますが、公式READMEは「This repository is MIT licensed, except for the `ee` folders」と述べ、自己ホストの料金ページはサーバー側のデータマスキング、プロジェクト単位のRBAC、保持期間の管理、SCIM、監査ログなど9つの機能をEnterprise限定として挙げています。基本のオブザーバビリティと評価は本当に無料ですが、ガバナンス機能は無料ではありません。',
           '**Langfuseは2026年1月16日にClickHouse, Inc.に買収されました。** ClickHouseの4億ドルのシリーズDと同時に発表されたものです。リポジトリのLICENSEファイルは現在「Copyright (c) 2023-2026 ClickHouse, Inc.」で始まります。Langfuseを避ける理由にはなりませんが、標準として採用する前に5分だけ確認する価値のあるロードマップ上の論点です。',
-          '**LangSmith** — Developerは無料で、月5,000件までの基本トレースと1席が付きます。Plusは1席あたり月39ドルで基本トレース1万件までが含まれ、それを超えると従量課金となり、コンピュートユニット1.50ドル、ストレージユニット1.00ドルです。Enterpriseは個別見積もりで、自己ホストとハイブリッドの選択肢があります。',
+          '**LangSmith** — Developerは無料で、月5,000件までの基本トレースと1席が付きます。Plusは1席あたり月39ドルで基本トレース1万件までが含まれ、それを超えると従量課金となり、LangChain Standard Unit（LSU）単位で、1 LSUは1.00ドルです。Enterpriseは個別見積もりで、自己ホストとハイブリッドの選択肢があります。',
           '**Helicone** — SDKではなくプロキシなので、導入は1行で済み、計装なしにすべての呼び出しを取得します。Hobbyは無料で1万リクエスト、1GB、保持7日間。Proは月79ドルで席数無制限、保持1か月。Teamは月799ドルでSOC-2とHIPAAに対応し、保持3か月です。',
-          '**Heliconeもオープンソースです。** Apache-2.0でスター6,100件ですが、これは多くの比較記事が見落としています。ただし料金ページはオンプレミスをEnterpriseでのみ販売しており、サポートされた無料の自己ホスト経路は示されていません。ソースが公開されていることと、ベンダーが自前運用を支援することは別です。',
+          '**Heliconeもオープンソースです。** Apache-2.0でスター6,300件ですが、これは多くの比較記事が見落としています。ただし料金ページはオンプレミスをEnterpriseでのみ販売しており、サポートされた無料の自己ホスト経路は示されていません。ソースが公開されていることと、ベンダーが自前運用を支援することは別です。',
           '**PromptLayer** — 4つのなかで最も対象範囲が狭い製品です。無料枠は月2,500リクエスト、5ユーザー、10プロンプト。Proは月49ドルで超過分は1トランザクション0.003ドル。Teamは月500ドルで10万リクエスト超、25ユーザーです。GCP・AWS・Azureでの自己ホストはEnterprise限定です。',
           '4社ともアフィリエイトや紹介プログラムを公開していません。LangChainはPartner Networkを運営していますが、これは技術連携のプログラムであり報酬制度ではありません。本ページのリンクはすべて報酬を伴いません。',
         ],
@@ -3009,7 +3009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.langchain.com/pricing-langsmith',
             productName: 'LangSmith',
             productCategory: 'dev-tool',
-            priceRange: 'Developer無料、Plus1席月39ドル＋コンピュート1.50ドル・ストレージ1.00ドル、Enterpriseは個別',
+            priceRange: 'Developer無料、Plus1席月39ドル＋LSU従量課金（1 LSU = 1.00ドル）、Enterpriseは個別',
             label: 'LangSmith — 料金を見る',
           },
           {
@@ -3040,13 +3040,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'Langfuse・LangSmith・Helicone・PromptLayerの比較',
-        content: '**4製品は機能を正面から競うのではなく、スタックのそれぞれ異なる地点を最適化しています。** 料金は2026年8月28日に各社の料金ページで確認し、リポジトリの数値は同日にGitHub APIから取得しました。',
+        content: '**4製品は機能を正面から競うのではなく、スタックのそれぞれ異なる地点を最適化しています。** 料金は2026年11月2日に各社の料金ページで確認し、リポジトリの数値は同日にGitHub APIから取得しました。',
         tableFormat: true,
         itemHeadings: true,
         columns: ['項目', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { 項目: '方式', Langfuse: 'SDKトレーサー', LangSmith: 'SDKトレーサー', Helicone: 'プロキシ', PromptLayer: 'SDKとRESTのログ' },
-          { 項目: 'GitHubスター', Langfuse: '33,900件', LangSmith: 'オープンソースではない', Helicone: '6,100件', PromptLayer: '800件（クライアント）' },
+          { 項目: 'GitHubスター', Langfuse: '36,900件', LangSmith: 'オープンソースではない', Helicone: '6,300件', PromptLayer: '800件（クライアント）' },
           { 項目: 'ライセンス', Langfuse: 'ee/を除きMIT', LangSmith: '商用', Helicone: 'Apache-2.0', PromptLayer: '商用' },
           { 項目: '無料枠', Langfuse: '月5万ユニット、30日', LangSmith: '月5,000トレース、1席', Helicone: '1万リクエスト、7日', PromptLayer: '2,500リクエスト、10プロンプト' },
           { 項目: '有料の入口', Langfuse: 'Core月29ドル', LangSmith: 'Plus1席月39ドル＋従量', Helicone: 'Pro月79ドル', PromptLayer: 'Pro月49ドル' },
@@ -3057,7 +3057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '比較記事はしばしばLangfuseを「ここで唯一のオープンソース」と呼びますが、HeliconeもApache-2.0でスター6,100件なので正確ではありません。正確に言えば、Langfuseは無料の自己ホスト構成を文書化して支援しているのに対し、HeliconeはオンプレミスをEnterprise段階でのみ販売し、料金ページにサポートされた無料の自己ホスト経路を記載していない、という違いです。',
+            text: '比較記事はしばしばLangfuseを「ここで唯一のオープンソース」と呼びますが、HeliconeもApache-2.0でスター6,300件なので正確ではありません。正確に言えば、Langfuseは無料の自己ホスト構成を文書化して支援しているのに対し、HeliconeはオンプレミスをEnterprise段階でのみ販売し、料金ページにサポートされた無料の自己ホスト経路を記載していない、という違いです。',
           },
         ],
       },
@@ -3069,7 +3069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Langfuse — 総合的に最良',
-            tagline: 'スター33,900件、自己ホストのコアが無料、フレームワーク対応が最も広い',
+            tagline: 'スター36,900件、自己ホストのコアが無料、フレームワーク対応が最も広い',
             verdict: 'Langfuseはオブザーバビリティ、評価、プロンプト管理、データセットを1つの製品で扱い、連携リストは4製品で最長です。OpenAI SDK、LangChain、LlamaIndex、Haystack、LiteLLM、Vercel AI SDK、Ollama、Amazon Bedrockにネイティブ対応し、さらにコミュニティ製の連携があります。LangChainを少し使い、素のSDK呼び出しもあり、検索にLlamaIndexを使うといった混在スタックでは、この幅広さのおかげでフレームワークごとではなく一度の計装で済みます。クラウドの料金は、Hobbyが無料で月5万ユニットとデータ参照30日間、Coreが月29ドルで10万ユニットとユーザー数無制限、Proが月199ドルで3年間の保持に加えSOC2・ISO27001とHIPAA向けのBAA、Enterpriseが月2,499ドルです。超過分は段階制で、10万ユニットあたり8ドルから、量が増えると6ドルまで下がります。オープンソースのコアの自己ホストは無料で、使用量も実際に無制限です。',
             pros: [
               '4製品で最も広いネイティブ連携。混在スタックでも計装は一度で済む',
@@ -3104,7 +3104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'LangSmith — LangChainとLangGraphのチームに最良',
             tagline: '設定不要のネイティブトレーシング、1席あたり月39ドルと従量ユニット',
-            verdict: 'LangSmithはLangChainチームによる製品で、LangChainやLangGraphの内側ではトレーシングが自動で働きます。計装を書かずに、エージェント実行のステップ単位の可視性が得られます。その外では、OpenAIやAnthropicのSDK呼び出しを`traceable()`でラップする形になり、動きはしますが主要な利点は失われます。料金は、Developerが1席0ドルで月5,000件までの基本トレースと1席のみ、Plusが1席あたり月39ドルで基本トレース1万件までと小規模なサーバーレス構成を1つ無料で含み、Enterpriseは個別見積もりで自己ホストとハイブリッドの選択肢があります。上限を超えると従量課金となり、LangChainコンピュートユニット1.50ドル、ストレージユニット1.00ドルです。決める前に見積もるべきはここで、請求額は人数ではなくエージェントの複雑さとトレース量に比例して伸びます。',
+            verdict: 'LangSmithはLangChainチームによる製品で、LangChainやLangGraphの内側ではトレーシングが自動で働きます。計装を書かずに、エージェント実行のステップ単位の可視性が得られます。その外では、OpenAIやAnthropicのSDK呼び出しを`traceable()`でラップする形になり、動きはしますが主要な利点は失われます。料金は、Developerが1席0ドルで月5,000件までの基本トレースと1席のみ、Plusが1席あたり月39ドルで基本トレース1万件までと小規模なサーバーレス構成を1つ無料で含み、Enterpriseは個別見積もりで自己ホストとハイブリッドの選択肢があります。上限を超えると従量課金となり、LangChain Standard Unit（LSU）単位で、1 LSUは1.00ドルです。決める前に見積もるべきはここで、請求額は人数ではなくエージェントの複雑さとトレース量に比例して伸びます。',
             pros: [
               'LangChainとLangGraphの内側では設定不要でトレースでき、このスタックでは無敵',
               'データセット駆動の評価と実験の機能が成熟している',
@@ -3112,7 +3112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Enterpriseでは自己ホストとハイブリッドの構成が選べる',
             ],
             cons: [
-              'コンピュートとストレージのユニット課金のため、エージェントが複雑になるほど請求額が読みにくい',
+              'LSU単位の従量課金のため、エージェントが複雑になるほど請求額が読みにくい',
               '自己ホストはEnterprise限定で個別見積もり',
               'LangChainを使っていない場合、価値の提案はかなり弱い',
             ],
@@ -3121,13 +3121,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 url: 'https://www.langchain.com/pricing-langsmith',
                 productName: 'LangSmith',
                 productCategory: 'dev-tool',
-                priceRange: 'Developer無料、Plus1席月39ドル＋コンピュート1.50ドル・ストレージ1.00ドル、Enterpriseは個別',
+                priceRange: 'Developer無料、Plus1席月39ドル＋LSU従量課金（1 LSU = 1.00ドル）、Enterpriseは個別',
                 label: 'LangSmith — 料金を見る',
               },
             ],
           },
         ],
-        note: 'LangChainが自分のフレームワークならLangSmithです。席単価が請求額のすべてではないため、Plusへ移る前に見込みのコンピュートとストレージのユニットを試算してください。',
+        note: 'LangChainが自分のフレームワークならLangSmithです。席単価が請求額のすべてではないため、Plusへ移る前に見込みのLSU消費を試算してください。',
       },
       helicone: {
         id: 'helicone',
@@ -3138,7 +3138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Helicone — 導入が最速、コスト把握に最良',
             tagline: '1行で入るプロキシ、Apache-2.0、1万リクエストまで無料、以降は月79ドル',
-            verdict: 'Heliconeはプロキシなので、導入は計装プロジェクトではなくベースURLの変更で済み、何をトレースするか誰かが決めるまでもなく、既定ですべての呼び出しでコストとリクエストのデータを取得します。そのため4製品で最も早く価値が出ますし、コスト把握が最大の強みである理由もここにあります。リクエスト単位のコスト内訳と、多数のキーやモデルにまたがる支出の可視化が中核の製品であり、トレーシングの上に載せたレポート画面ではありません。Hobbyは無料で1万リクエスト、ストレージ1GB、保持7日間。Proは月79ドルで席数無制限、保持1か月。Teamは月799ドルでSOC-2とHIPAAへの準拠と保持3か月が加わります。Enterpriseではオンプレミス構成、SAML SSO、無制限の保持が付きます。コードはApache-2.0でスター6,100件ですが、料金ページ上はオンプレミスをEnterpriseでのみ扱っています。',
+            verdict: 'Heliconeはプロキシなので、導入は計装プロジェクトではなくベースURLの変更で済み、何をトレースするか誰かが決めるまでもなく、既定ですべての呼び出しでコストとリクエストのデータを取得します。そのため4製品で最も早く価値が出ますし、コスト把握が最大の強みである理由もここにあります。リクエスト単位のコスト内訳と、多数のキーやモデルにまたがる支出の可視化が中核の製品であり、トレーシングの上に載せたレポート画面ではありません。Hobbyは無料で1万リクエスト、ストレージ1GB、保持7日間。Proは月79ドルで席数無制限、保持1か月。Teamは月799ドルでSOC-2とHIPAAへの準拠と保持3か月が加わります。Enterpriseではオンプレミス構成、SAML SSO、無制限の保持が付きます。コードはApache-2.0でスター6,300件ですが、料金ページ上はオンプレミスをEnterpriseでのみ扱っています。',
             pros: [
               '導入は1行。SDKの書き換えが不要で、OpenAI互換のエンドポイントなら何にでも使える',
               'コスト把握が中核の製品であり、二次的なレポートのタブではない',
@@ -3232,7 +3232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 段階: '無料', Langfuse: 'Hobby：5万ユニット、2ユーザー', LangSmith: 'Developer：5,000トレース、1席', Helicone: 'Hobby：1万リクエスト', PromptLayer: 'Free：2,500リクエスト、5ユーザー' },
           { 段階: '無料枠の保持', Langfuse: 'データ参照30日間', LangSmith: '料金ページに記載なし', Helicone: '7日間', PromptLayer: '料金ページに記載なし' },
           { 段階: '有料の入口', Langfuse: 'Core月29ドル', LangSmith: 'Plus1席月39ドル', Helicone: 'Pro月79ドル', PromptLayer: 'Pro月49ドル' },
-          { 段階: '従量課金', Langfuse: '10万ユニット8ドル、段階制', LangSmith: 'コンピュート1.50ドル・ストレージ1.00ドル', Helicone: '無料枠超過分は従量', PromptLayer: '1トランザクション0.003ドル' },
+          { 段階: '従量課金', Langfuse: '10万ユニット8ドル、段階制', LangSmith: 'LSU従量課金、1 LSU = 1.00ドル', Helicone: '無料枠超過分は従量', PromptLayer: '1トランザクション0.003ドル' },
           { 段階: '中間の段階', Langfuse: 'Pro月199ドル、保持3年', LangSmith: 'Enterpriseは個別', Helicone: 'Team月799ドル', PromptLayer: 'Team月500ドル' },
           { 段階: '準拠', Langfuse: 'Pro：SOC2・ISO27001・BAA', LangSmith: 'Enterprise', Helicone: 'Team：SOC-2・HIPAA', PromptLayer: 'Enterprise' },
           { 段階: '自己ホスト費用', Langfuse: 'コア機能は無料', LangSmith: 'Enterpriseのみ', Helicone: 'Enterpriseのみ', PromptLayer: 'Enterpriseのみ' },
@@ -3294,11 +3294,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Langfuseを唯一のオープンソースだと述べる',
-            whyItMatters: 'HeliconeはApache-2.0でスター6,100件です。正確な区別は、Langfuseが支援された無料の自己ホスト構成を文書化しているのに対し、HeliconeはオンプレミスをEnterprise段階で販売しているという点であって、一方が公開でもう一方が非公開という話ではありません。',
+            whyItMatters: 'HeliconeはApache-2.0でスター6,300件です。正確な区別は、Langfuseが支援された無料の自己ホスト構成を文書化しているのに対し、HeliconeはオンプレミスをEnterprise段階で販売しているという点であって、一方が公開でもう一方が非公開という話ではありません。',
           },
           {
             title: 'LangSmithの1席39ドルを請求額のすべてだと読む',
-            whyItMatters: 'Plusでは席料に加えて、コンピュートユニット1.50ドルとストレージユニット1.00ドルの従量課金が乗ります。請求額は人数よりもエージェントの複雑さとトレース量に比例して伸びるため、LangGraphを多用するチームは人を増やさなくても費用が跳ね上がることがあります。',
+            whyItMatters: 'Plusでは席料に加えて、LSU単位（1 LSU = 1.00ドル）の従量課金が乗ります。請求額は人数よりもエージェントの複雑さとトレース量に比例して伸びるため、LangGraphを多用するチームは人を増やさなくても費用が跳ね上がることがあります。',
           },
           {
             title: 'HeliconeのプロキシをSDKトレーシングと同等に扱う',
@@ -3339,7 +3339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'LangSmithの費用はいくらですか？',
-            a: 'Developerは無料で、月5,000件までの基本トレースと1席が付きます。Plusは1席あたり月39ドルで基本トレース1万件までと小規模なサーバーレス構成を1つ無料で含みます。それを超えると従量課金で、LangChainコンピュートユニット1.50ドル、ストレージユニット1.00ドルです。Enterpriseは個別見積もりで、自己ホストとハイブリッドの選択肢があります。',
+            a: 'Developerは無料で、月5,000件までの基本トレースと1席が付きます。Plusは1席あたり月39ドルで基本トレース1万件までと小規模なサーバーレス構成を1つ無料で含みます。それを超えると従量課金で、LangChain Standard Unit（LSU）単位、1 LSUは1.00ドルです。Enterpriseは個別見積もりで、自己ホストとハイブリッドの選択肢があります。',
           },
           {
             q: 'すでにLangChainを使っている場合、LangSmithとLangfuseのどちらですか？',
@@ -3347,7 +3347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Heliconeはオープンソースですか？',
-            a: 'はい。Apache-2.0でGitHubスターは約6,100件ですが、この分野の比較記事の多くが見落としています。ただしHeliconeの料金ページはオンプレミス構成をEnterprise段階でのみ販売しており、サポートされた無料の自己ホスト経路は記載されていません。ソースが公開されていることと、ベンダーが自前運用を支援することは別です。',
+            a: 'はい。Apache-2.0でGitHubスターは約6,300件ですが、この分野の比較記事の多くが見落としています。ただしHeliconeの料金ページはオンプレミス構成をEnterprise段階でのみ販売しており、サポートされた無料の自己ホスト経路は記載されていません。ソースが公開されていることと、ベンダーが自前運用を支援することは別です。',
           },
           {
             q: 'これらにアフィリエイトプログラムはありますか？',
@@ -3364,7 +3364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '結論',
         items: [
           '**Langfuseを選ぶなら** 連携が最も広く、自己ホストの選択肢もほしい場合。次の一歩：無料のHobby枠かDocker Composeでの構築から始め、RBACや監査ログが要るならEnterpriseの一覧を確認してください。',
-          '**LangSmithを選ぶなら** スタックがLangChainまたはLangGraphの場合。次の一歩：無料のDeveloper枠から始め、席単価が請求額のすべてではないため、Plusへ移る前にコンピュートとストレージのユニット消費を試算してください。',
+          '**LangSmithを選ぶなら** スタックがLangChainまたはLangGraphの場合。次の一歩：無料のDeveloper枠から始め、席単価が請求額のすべてではないため、Plusへ移る前にLSU消費を試算してください。',
           '**Heliconeを選ぶなら** コストの可視化が痛みで、今日動かしたい場合。次の一歩：無料枠でサービスを1つプロキシ経由にし、コストのデータが事業者の請求と合うか確かめてください。',
           '**PromptLayerを選ぶなら** プロンプトのバージョン管理こそが要件の場合。次の一歩：無料枠で使い、データセット駆動の回帰テストが必要になったらLangfuseかLangSmithへ移ってください。',
           '**4つとも見送るなら** 本番前の段階の場合。次の一歩：各社の管理画面を使い、あなた以外の誰かがシステムの挙動を見る必要が出た時点で見直してください。',
@@ -3380,7 +3380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/langfuse/langfuse', title: 'Langfuse リポジトリ', description: 'スター数と、ee/フォルダを除きMITであることを示すLICENSEファイル、およびClickHouse, Inc.の著作権表示。' },
           { url: 'https://clickhouse.com/blog/clickhouse-acquires-langfuse-open-source-llm-observability', title: 'ClickHouseによるLangfuseの買収', description: '2026年1月16日の買収に関するClickHouse自身の告知。' },
           { url: 'https://siliconangle.com/2026/01/16/database-maker-clickhouse-raises-400m-acquires-ai-observability-startup-langfuse/', title: 'ClickHouseが4億ドルを調達しLangfuseを買収（SiliconANGLE）', description: '買収日とシリーズDの文脈に関する独立した確認。' },
-          { url: 'https://www.langchain.com/pricing-langsmith', title: 'LangSmith の料金', description: 'Developer・Plus・Enterpriseの各段階と、トレースの含有枠、1.50ドルおよび1.00ドルのユニット単価。' },
+          { url: 'https://www.langchain.com/pricing-langsmith', title: 'LangSmith の料金', description: 'Developer・Plus・Enterpriseの各段階と、トレースの含有枠、1 LSU = 1.00ドルの従量課金。' },
           { url: 'https://www.helicone.ai/pricing', title: 'Helicone の料金', description: 'Hobby・Pro・Team・Enterpriseの各段階と、リクエスト上限、保持期間、オンプレミスがEnterprise限定である旨。' },
           { url: 'https://github.com/Helicone/helicone', title: 'Helicone リポジトリ', description: 'スター数とApache-2.0ライセンス。Heliconeがオープンソースであることの裏付け。' },
           { url: 'https://www.promptlayer.com/pricing', title: 'PromptLayer の料金', description: 'Free・Pro・Team・Enterpriseの各段階と、リクエスト上限、ユーザー数、トランザクション単価。' },
@@ -3402,9 +3402,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: '2026年 最適なLLMオブザーバビリティツール：Langfuse・LangSmith・Helicone',
-      description: 'LLMオブザーバビリティ向けにLangfuse、LangSmith、Helicone、PromptLayerを比較。確認済みの料金、ライセンス、保持期間に加え、ClickHouseによる買収と自己ホストにおけるEnterpriseの機能の壁を扱います。2026年8月時点で確認。',
+      description: 'LLMオブザーバビリティ向けにLangfuse、LangSmith、Helicone、PromptLayerを比較。確認済みの料金、ライセンス、保持期間に加え、ClickHouseによる買収と自己ホストにおけるEnterpriseの機能の壁を扱います。',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-02',
       url: 'https://www.promptquorum.com/ja/local-llms/best-llm-observability-tools',
       inLanguage: 'ja',
       proficiencyLevel: 'Advanced',
@@ -3456,7 +3456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'LangSmithの費用はいくらですか？',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Developerは無料で月5,000件までの基本トレースと1席。Plusは1席あたり月39ドルで基本トレース1万件までを含み、それを超えると従量課金でコンピュートユニット1.50ドル、ストレージユニット1.00ドルです。Enterpriseは個別見積もりです。',
+            text: 'Developerは無料で月5,000件までの基本トレースと1席。Plusは1席あたり月39ドルで基本トレース1万件までを含み、それを超えると従量課金でLangChain Standard Unit（LSU）単位、1 LSUは1.00ドルです。Enterpriseは個別見積もりです。',
           },
         },
         {
@@ -3464,7 +3464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Heliconeはオープンソースですか？',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'はい。Apache-2.0でGitHubスターは約6,100件です。ただし料金ページはオンプレミス構成をEnterprise段階でのみ販売しており、サポートされた無料の自己ホスト経路は記載されていません。',
+            text: 'はい。Apache-2.0でGitHubスターは約6,300件です。ただし料金ページはオンプレミス構成をEnterprise段階でのみ販売しており、サポートされた無料の自己ホスト経路は記載されていません。',
           },
         },
       ],
@@ -3472,12 +3472,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: '最適なLLMオブザーバビリティツール（2026年8月）',
+      name: '最適なLLMオブザーバビリティツール（2026年）',
       inLanguage: 'ja',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: '総合的に最良 — スター33,900件、自己ホストのコアが無料、フレームワーク対応が最も広い。ただし9機能はEnterprise限定' },
-        { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'LangChainとLangGraphのチームに最良 — 設定不要のネイティブトレーシング、1席あたり月39ドルと従量のコンピュート・ストレージユニット' },
+        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: '総合的に最良 — スター36,900件、自己ホストのコアが無料、フレームワーク対応が最も広い。ただし9機能はEnterprise限定' },
+        { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'LangChainとLangGraphのチームに最良 — 設定不要のネイティブトレーシング、1席あたり月39ドルとLSU単位の従量課金' },
         { '@type': 'ListItem', position: 3, name: 'Helicone', description: '導入が最速でコスト把握に最良 — Apache-2.0のプロキシ、1行で導入、1万リクエストまで無料、以降は月79ドル' },
         { '@type': 'ListItem', position: 4, name: 'PromptLayer', description: '最も軽量 — プロンプトのバージョン管理とログ、月2,500リクエストまで無料、Proは月49ドル' },
       ],
@@ -3490,13 +3490,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026年最佳 LLM 可观测性工具：Langfuse、LangSmith 还是 Helicone',
-    seoTitle: '2026年最佳 LLM 可观测性工具',
-    metaDescription: 'Langfuse 拥有 3.39 万星标且自托管免费，LangSmith 每席位 39 美元加用量计费，Helicone 79 美元。Langfuse 已被 ClickHouse 收购。',
+    seoTitle: 'LLM可观测性工具对比2026:Langfuse',
+    metaDescription: '2026年LLM可观测性工具对比:Langfuse(可免费自托管)、LangSmith每席每月39美元起、Helicone每月79美元起,并比较价格与取舍。',
     educationalLevel: 'Advanced',
     audience: '在生产环境运行 LLM 应用的开发者与团队',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-02',
     readTime: '约 14 分钟阅读',
     primaryTerm: 'LLM 可观测性工具',
     targetKeywords: [
@@ -3506,19 +3506,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '最佳提示词监控工具',
       'Langfuse ClickHouse 收购',
     ],
-    leadAnswerBlock: '**对多数生产团队而言，Langfuse 是综合最优解：GitHub 星标 3.39 万，自托管免费，且在四者中框架覆盖最广。如果你的技术栈跑在 LangChain 或 LangGraph 上，LangSmith 是正确选择，每席位每月 39 美元，另加按量计费的计算单元与存储单元。Helicone 上手最快，因为它是代理而非 SDK，每月 79 美元。多数对比文章漏掉了两点：Langfuse 已于 2026 年 1 月 16 日被 ClickHouse 收购，而其免费自托管版本并不完整——包括 RBAC 与审计日志在内的九项能力属于 Enterprise 专有。**',
+    leadAnswerBlock: '**对多数生产团队,Langfuse是最佳默认选择:可免费自托管,框架覆盖广。LangChain和LangGraph技术栈适合LangSmith,每席每月39美元起。Helicone作为代理上手最快,每月79美元起。Langfuse现已隶属于ClickHouse。**',
     quickAnswerTop: {
       question: '2026 年最好的 LLM 可观测性工具是哪一个？',
       answer: '**要灵活性和自托管选 Langfuse，已经在用 LangChain 选 LangSmith，想一行代码接入并看清成本选 Helicone，只需要提示词版本管理而非完整可观测性则选 PromptLayer。** 这个选择主要是结构性的：LangSmith 与 Langfuse 通过 SDK 对代码做插桩，而 Helicone 作为代理挡在 API 前面，无需插桩即可捕获每一次调用。这一差别决定了你能拿到什么数据。代理看到的是请求与成本；SDK 追踪器看得到多智能体运行内部的推理步骤。',
       bullets: [
-        '**综合最优：** Langfuse——3.39 万星标，自托管免费，集成最广，但先看清 Enterprise 那道墙',
-        '**LangChain 团队最优：** LangSmith——无需配置的原生追踪，每席位每月 39 美元，另加每计算单元 1.50 美元、每存储单元 1.00 美元',
+        '**综合最优：** Langfuse——3.69 万星标，自托管免费，集成最广，但先看清 Enterprise 那道墙',
+        '**LangChain 团队最优：** LangSmith——无需配置的原生追踪，每席位每月 39 美元，另加按 LSU 计的按量计费（1 LSU = 1.00 美元）',
         '**上手最快：** Helicone——代理架构，一行代码，1 万次请求内免费，之后每月 79 美元',
         '**最轻量：** PromptLayer——提示词版本管理与日志，2500 次请求内免费，Pro 每月 49 美元',
         '**Langfuse 已归属 ClickHouse**——2026 年 1 月 16 日收购，与 4 亿美元 D 轮同步宣布，这关系到产品路线',
         '**四者都可以不用**——若你尚未上生产、每天只有几十次调用，各家厂商的控制台就够了',
       ],
-      updatedDate: '2026-08-28',
+      updatedDate: '2026-11-02',
     },
     toc: [
       { label: '要点速览', anchor: 'tldr' },
@@ -3547,10 +3547,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Langfuse**——GitHub 星标 3.39 万，是这里开源体量最大的一个。云端 Hobby 免费，每月 5 万单元、30 天数据可查、2 个用户；Core 每月 29 美元，含 10 万单元且用户数不限；Pro 每月 199 美元，保留三年；Enterprise 每月 2499 美元。自托管开源内核免费且不限量。',
+          '**Langfuse**——GitHub 星标 3.69 万，是这里开源体量最大的一个。云端 Hobby 免费，每月 5 万单元、30 天数据可查、2 个用户；Core 每月 29 美元，含 10 万单元且用户数不限；Pro 每月 199 美元，保留三年；Enterprise 每月 2499 美元。自托管开源内核免费且不限量。',
           '**一处值得更正的说法：** Langfuse 常被描述为「MIT 许可、没有功能墙」。但它自己的 README 写着仓库「MIT licensed, except for the `ee` folders」，其自托管定价页更列出九项 Enterprise 专有功能：服务端数据脱敏、按项目 RBAC、保留期管理、SCIM、审计日志等。核心的可观测性与评估确实免费；治理类功能不免费。',
           '**Langfuse 已于 2026 年 1 月 16 日被 ClickHouse, Inc. 收购**，与 ClickHouse 的 4 亿美元 D 轮同步宣布。仓库中的 LICENSE 文件现在以「Copyright (c) 2023-2026 ClickHouse, Inc.」开头。这不构成排除 Langfuse 的理由，但在把它定为标准之前，值得花五分钟看看这条路线上的变量。',
-          '**LangSmith**——Developer 免费，每月最多 5000 条基础追踪、1 个席位。Plus 每席位每月 39 美元，含最多 1 万条基础追踪，超出后按量计费，每计算单元 1.50 美元、每存储单元 1.00 美元。Enterprise 为定制报价，提供自托管与混合部署。',
+          '**LangSmith**——Developer 免费，每月最多 5000 条基础追踪、1 个席位。Plus 每席位每月 39 美元，含最多 1 万条基础追踪，超出后按 LangChain Standard Unit（LSU）按量计费，1 LSU = 1.00 美元。Enterprise 为定制报价，提供自托管与混合部署。',
           '**Helicone**——是代理而非 SDK，因此接入只需一行，无需插桩即可捕获每一次调用。Hobby 免费，含 1 万次请求、1 GB、7 天保留；Pro 每月 79 美元，席位不限、保留一个月；Team 每月 799 美元，具备 SOC-2 与 HIPAA，保留三个月。',
           '**Helicone 同样是开源的**，采用 Apache-2.0，星标 6100，这一点多数对比文章都漏掉了。需要区分的是：其定价页只在 Enterprise 层出售本地部署，并未给出受支持的免费自托管路径。源码开放，不等于厂商支持你自己运行。',
           '**PromptLayer**——四者中范围最窄。免费层提供每月 2500 次请求、5 个用户、10 条提示词；Pro 每月 49 美元，超出部分每笔 0.003 美元；Team 每月 500 美元，含 10 万次以上请求与 25 个用户。在 GCP、AWS 或 Azure 上自托管为 Enterprise 专有。',
@@ -3588,7 +3588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.langchain.com/pricing-langsmith',
             productName: 'LangSmith',
             productCategory: 'dev-tool',
-            priceRange: 'Developer 免费；Plus 每席位每月 39 美元＋计算单元 1.50 美元、存储单元 1.00 美元；Enterprise 定制',
+            priceRange: 'Developer 免费；Plus 每席位每月 39 美元＋按 LSU 按量计费（1 LSU = 1.00 美元）；Enterprise 定制',
             label: 'LangSmith——查看价格',
           },
           {
@@ -3619,13 +3619,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'Langfuse、LangSmith、Helicone 与 PromptLayer 对比',
-        content: '**四者优化的是技术栈上不同的位置，而不是逐项功能对拼。** 价格于 2026 年 8 月 28 日从各厂商定价页读取，仓库数据同日取自 GitHub API。',
+        content: '**四者优化的是技术栈上不同的位置，而不是逐项功能对拼。** 价格于 2026 年 11 月 2 日从各厂商定价页读取，仓库数据同日取自 GitHub API。',
         tableFormat: true,
         itemHeadings: true,
         columns: ['维度', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { 维度: '方式', Langfuse: 'SDK 追踪器', LangSmith: 'SDK 追踪器', Helicone: '代理', PromptLayer: 'SDK 与 REST 日志' },
-          { 维度: 'GitHub 星标', Langfuse: '3.39 万', LangSmith: '非开源', Helicone: '6100', PromptLayer: '800（客户端库）' },
+          { 维度: 'GitHub 星标', Langfuse: '3.69 万', LangSmith: '非开源', Helicone: '6300', PromptLayer: '800（客户端库）' },
           { 维度: '许可证', Langfuse: '除 ee/ 目录外为 MIT', LangSmith: '商业', Helicone: 'Apache-2.0', PromptLayer: '商业' },
           { 维度: '免费层', Langfuse: '每月 5 万单元，30 天', LangSmith: '每月 5000 追踪，1 席位', Helicone: '1 万次请求，7 天', PromptLayer: '2500 次请求，10 提示词' },
           { 维度: '付费起点', Langfuse: 'Core 每月 29 美元', LangSmith: 'Plus 每席位 39 美元＋用量', Helicone: 'Pro 每月 79 美元', PromptLayer: 'Pro 每月 49 美元' },
@@ -3648,7 +3648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Langfuse——综合最优',
-            tagline: '3.39 万星标，自托管内核免费，框架覆盖最广',
+            tagline: '3.69 万星标，自托管内核免费，框架覆盖最广',
             verdict: 'Langfuse 在一个产品里覆盖了可观测性、评估、提示词管理与数据集，集成清单是四者中最长的：原生支持 OpenAI SDK、LangChain、LlamaIndex、Haystack、LiteLLM、Vercel AI SDK、Ollama 与 Amazon Bedrock，另有社区集成。对于混合技术栈——一点 LangChain、几处原始 SDK 调用、检索用 LlamaIndex——这种广度意味着插桩一次即可，而不是按框架各做一遍。云端价格：Hobby 免费，每月 5 万单元、30 天数据可查；Core 每月 29 美元，含 10 万单元且用户数不限；Pro 每月 199 美元，保留三年，并含 SOC2、ISO27001 与面向 HIPAA 的 BAA；Enterprise 每月 2499 美元。超量按阶梯计价，从每 10 万单元 8 美元降至放量后的 6 美元。自托管开源内核免费，用量确实不限。',
             pros: [
               '四者中原生框架覆盖最广，混合技术栈插桩一次即可',
@@ -3683,7 +3683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'LangSmith——LangChain 与 LangGraph 团队最优',
             tagline: '无需配置的原生追踪，每席位每月 39 美元加按量计费的单元',
-            verdict: 'LangSmith 出自 LangChain 团队，在 LangChain 或 LangGraph 内部追踪是自动的：不用写插桩就能获得智能体运行的步骤级可见性。在生态之外，你要用 `traceable()` 包装 OpenAI 或 Anthropic 的 SDK 调用，能跑，但主要优势也就没了。价格方面：Developer 层每席位 0 美元，每月最多 5000 条基础追踪且仅 1 个席位；Plus 每席位每月 39 美元，含最多 1 万条基础追踪与一个免费的小型无服务器部署；Enterprise 为定制报价，提供自托管与混合部署。超出额度后转为按量计费：每个 LangChain 计算单元 1.50 美元，每个存储单元 1.00 美元。这正是签约前该测算的部分，因为账单随智能体复杂度与追踪量增长，而不是随人数。',
+            verdict: 'LangSmith 出自 LangChain 团队，在 LangChain 或 LangGraph 内部追踪是自动的：不用写插桩就能获得智能体运行的步骤级可见性。在生态之外，你要用 `traceable()` 包装 OpenAI 或 Anthropic 的 SDK 调用，能跑，但主要优势也就没了。价格方面：Developer 层每席位 0 美元，每月最多 5000 条基础追踪且仅 1 个席位；Plus 每席位每月 39 美元，含最多 1 万条基础追踪与一个免费的小型无服务器部署；Enterprise 为定制报价，提供自托管与混合部署。超出额度后转为按量计费：按 LangChain Standard Unit（LSU）计，1 LSU = 1.00 美元。这正是签约前该测算的部分，因为账单随智能体复杂度与追踪量增长，而不是随人数。',
             pros: [
               '在 LangChain 与 LangGraph 内部免配置追踪，这一栈无可匹敌',
               '数据集驱动的评估与实验工具成熟',
@@ -3691,7 +3691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Enterprise 提供自托管与混合部署',
             ],
             cons: [
-              '按计算与存储单元计费，随着智能体复杂度上升，账单难以预估',
+              '按 LSU 计费，随着智能体复杂度上升，账单难以预估',
               '自托管为 Enterprise 专有且价格定制',
               '如果不用 LangChain，价值主张要弱得多',
             ],
@@ -3700,13 +3700,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 url: 'https://www.langchain.com/pricing-langsmith',
                 productName: 'LangSmith',
                 productCategory: 'dev-tool',
-                priceRange: 'Developer 免费；Plus 每席位每月 39 美元＋计算单元 1.50 美元、存储单元 1.00 美元；Enterprise 定制',
+                priceRange: 'Developer 免费；Plus 每席位每月 39 美元＋按 LSU 按量计费（1 LSU = 1.00 美元）；Enterprise 定制',
                 label: 'LangSmith——查看价格',
               },
             ],
           },
         ],
-        note: '如果 LangChain 就是你的框架，那就用 LangSmith。升到 Plus 之前先测算预期的计算与存储单元，因为席位价并不是账单的全部。',
+        note: '如果 LangChain 就是你的框架，那就用 LangSmith。升到 Plus 之前先测算预期的 LSU 用量，因为席位价并不是账单的全部。',
       },
       helicone: {
         id: 'helicone',
@@ -3811,7 +3811,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 层级: '免费', Langfuse: 'Hobby：5 万单元，2 用户', LangSmith: 'Developer：5000 追踪，1 席位', Helicone: 'Hobby：1 万次请求', PromptLayer: 'Free：2500 次请求，5 用户' },
           { 层级: '免费层保留', Langfuse: '30 天数据可查', LangSmith: '定价页未说明', Helicone: '7 天', PromptLayer: '定价页未说明' },
           { 层级: '付费起点', Langfuse: 'Core 每月 29 美元', LangSmith: 'Plus 每席位每月 39 美元', Helicone: 'Pro 每月 79 美元', PromptLayer: 'Pro 每月 49 美元' },
-          { 层级: '用量计费', Langfuse: '每 10 万单元 8 美元，阶梯', LangSmith: '计算 1.50 美元、存储 1.00 美元', Helicone: '超出免费额度按量计费', PromptLayer: '每笔 0.003 美元' },
+          { 层级: '用量计费', Langfuse: '每 10 万单元 8 美元，阶梯', LangSmith: '按 LSU 计费，1 LSU = 1.00 美元', Helicone: '超出免费额度按量计费', PromptLayer: '每笔 0.003 美元' },
           { 层级: '中间层', Langfuse: 'Pro 每月 199 美元，保留 3 年', LangSmith: 'Enterprise 定制', Helicone: 'Team 每月 799 美元', PromptLayer: 'Team 每月 500 美元' },
           { 层级: '合规', Langfuse: 'Pro：SOC2、ISO27001、BAA', LangSmith: 'Enterprise', Helicone: 'Team：SOC-2、HIPAA', PromptLayer: 'Enterprise' },
           { 层级: '自托管成本', Langfuse: '核心功能免费', LangSmith: '仅 Enterprise', Helicone: '仅 Enterprise', PromptLayer: '仅 Enterprise' },
@@ -3877,7 +3877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '把 LangSmith 每席位 39 美元当成账单全部',
-            whyItMatters: 'Plus 在席位费之上还叠加按量计费：每计算单元 1.50 美元、每存储单元 1.00 美元。账单随智能体复杂度与追踪量增长，而不是随人数，因此重度使用 LangGraph 的团队可能不增人却看到成本飙升。',
+            whyItMatters: 'Plus 在席位费之上还叠加按量计费：按 LSU 计，1 LSU = 1.00 美元。账单随智能体复杂度与追踪量增长，而不是随人数，因此重度使用 LangGraph 的团队可能不增人却看到成本飙升。',
           },
           {
             title: '把 Helicone 的代理等同于 SDK 追踪',
@@ -3918,7 +3918,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'LangSmith 多少钱？',
-            a: 'Developer 层免费，每月最多 5000 条基础追踪、1 个席位。Plus 每席位每月 39 美元，含最多 1 万条基础追踪与一个免费的小型无服务器部署。超出后按量计费，每个 LangChain 计算单元 1.50 美元，每个存储单元 1.00 美元。Enterprise 为定制报价，提供自托管与混合部署。',
+            a: 'Developer 层免费，每月最多 5000 条基础追踪、1 个席位。Plus 每席位每月 39 美元，含最多 1 万条基础追踪与一个免费的小型无服务器部署。超出后按 LangChain Standard Unit（LSU）按量计费，1 LSU = 1.00 美元。Enterprise 为定制报价，提供自托管与混合部署。',
           },
           {
             q: '已经在用 LangChain，该选 LangSmith 还是 Langfuse？',
@@ -3943,7 +3943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '最终结论',
         items: [
           '**选 Langfuse，如果**你想要最广的集成以及自托管的选项——下一步：从免费的 Hobby 层或一套 Docker Compose 部署开始；若需要 RBAC 或审计日志，请核对 Enterprise 清单。',
-          '**选 LangSmith，如果**你的技术栈是 LangChain 或 LangGraph——下一步：从免费的 Developer 层开始，并在升到 Plus 之前测算计算与存储单元的消耗，因为席位价不是账单的全部。',
+          '**选 LangSmith，如果**你的技术栈是 LangChain 或 LangGraph——下一步：从免费的 Developer 层开始，并在升到 Plus 之前测算 LSU 的消耗，因为席位价不是账单的全部。',
           '**选 Helicone，如果**成本可见性是痛点、而且你今天就想跑起来——下一步：在免费层把一个服务指向代理，核对成本数据是否与厂商账单对得上。',
           '**选 PromptLayer，如果**提示词版本管理才是真实需求——下一步：先用免费层，等需要数据集驱动的回归测试时再转向 Langfuse 或 LangSmith。',
           '**四个都跳过，如果**你还没上生产——下一步：用厂商控制台，等到除你之外还有人需要看系统做了什么时再重新评估。',
@@ -3959,7 +3959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/langfuse/langfuse', title: 'Langfuse 仓库', description: '星标数，以及显示除 ee/ 目录外为 MIT 的 LICENSE 文件与 ClickHouse, Inc. 的版权行。' },
           { url: 'https://clickhouse.com/blog/clickhouse-acquires-langfuse-open-source-llm-observability', title: 'ClickHouse 收购 Langfuse', description: 'ClickHouse 关于 2026 年 1 月 16 日收购的官方公告。' },
           { url: 'https://siliconangle.com/2026/01/16/database-maker-clickhouse-raises-400m-acquires-ai-observability-startup-langfuse/', title: 'ClickHouse 融资 4 亿美元并收购 Langfuse（SiliconANGLE）', description: '对收购日期与 D 轮背景的独立确认。' },
-          { url: 'https://www.langchain.com/pricing-langsmith', title: 'LangSmith 定价', description: 'Developer、Plus 与 Enterprise 各层级的追踪额度，以及每单元 1.50 美元与 1.00 美元的费率。' },
+          { url: 'https://www.langchain.com/pricing-langsmith', title: 'LangSmith 定价', description: 'Developer、Plus 与 Enterprise 各层级的追踪额度，以及按 LSU 计的按量计费（1 LSU = 1.00 美元）。' },
           { url: 'https://www.helicone.ai/pricing', title: 'Helicone 定价', description: 'Hobby、Pro、Team 与 Enterprise 各层级的请求上限、保留窗口，以及本地部署仅限 Enterprise 的说明。' },
           { url: 'https://github.com/Helicone/helicone', title: 'Helicone 仓库', description: '星标数与 Apache-2.0 许可证，可确认 Helicone 为开源。' },
           { url: 'https://www.promptlayer.com/pricing', title: 'PromptLayer 定价', description: 'Free、Pro、Team 与 Enterprise 各层级的请求上限、用户数与每笔交易费率。' },
@@ -3983,7 +3983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026年最佳 LLM 可观测性工具：Langfuse、LangSmith 还是 Helicone',
       description: '对比 Langfuse、LangSmith、Helicone 与 PromptLayer 的 LLM 可观测性能力，包含核实过的价格、许可证与保留窗口，以及 ClickHouse 收购和自托管中的 Enterprise 功能墙。',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-02',
       url: 'https://www.promptquorum.com/zh/local-llms/best-llm-observability-tools',
       inLanguage: 'zh',
       proficiencyLevel: 'Advanced',
@@ -4035,7 +4035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'LangSmith 多少钱？',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Developer 免费，每月最多 5000 条基础追踪、1 个席位。Plus 每席位每月 39 美元，含最多 1 万条基础追踪，超出后按量计费，每计算单元 1.50 美元、每存储单元 1.00 美元。Enterprise 为定制报价。',
+            text: 'Developer 免费，每月最多 5000 条基础追踪、1 个席位。Plus 每席位每月 39 美元，含最多 1 万条基础追踪，超出后按 LangChain Standard Unit（LSU）按量计费，1 LSU = 1.00 美元。Enterprise 为定制报价。',
           },
         },
         {
@@ -4051,12 +4051,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: '最佳 LLM 可观测性工具（2026 年 8 月）',
+      name: '最佳 LLM 可观测性工具（2026 年）',
       inLanguage: 'zh',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: '综合最优——3.39 万星标，自托管内核免费，框架覆盖最广，但有九项功能为 Enterprise 专有' },
-        { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'LangChain 与 LangGraph 团队最优——无需配置的原生追踪，每席位每月 39 美元加按量计费的计算与存储单元' },
+        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: '综合最优——3.69 万星标，自托管内核免费，框架覆盖最广，但有九项功能为 Enterprise 专有' },
+        { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'LangChain 与 LangGraph 团队最优——无需配置的原生追踪，每席位每月 39 美元加按 LSU 计的按量计费' },
         { '@type': 'ListItem', position: 3, name: 'Helicone', description: '上手最快且成本可见性最佳——Apache-2.0 代理，一行接入，1 万次请求内免费，之后每月 79 美元' },
         { '@type': 'ListItem', position: 4, name: 'PromptLayer', description: '最轻量——提示词版本管理与日志，每月 2500 次请求内免费，Pro 每月 49 美元' },
       ],
@@ -4069,13 +4069,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'أفضل أداة لمراقبة نماذج اللغة الكبيرة 2026: Langfuse أم LangSmith أم Helicone',
-    seoTitle: 'أفضل أداة لمراقبة نماذج اللغة الكبيرة 2026',
-    metaDescription: 'الاستضافة الذاتية لـ Langfuse مجانية وله 33.9 ألف نجمة، وLangSmith بـ 39 دولارًا للمقعد إضافة إلى الاستهلاك، وHelicone بـ 79 دولارًا. صار Langfuse ملكًا لـ ClickHouse. جرى.',
+    seoTitle: 'أفضل أدوات مراقبة LLM 2026: Langfuse مقابل LangSmith',
+    metaDescription: 'أفضل أدوات مراقبة LLM 2026: Langfuse (استضافة ذاتية مجانية)، وLangSmith من 39 دولاراً للمقعد، وHelicone من 79 دولاراً شهرياً، مقارنةً بالأسعار.',
     educationalLevel: 'Advanced',
     audience: 'المطورون والفرق التي تشغّل تطبيقات نماذج اللغة الكبيرة في بيئة الإنتاج',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-02',
     readTime: 'قراءة 14 دقيقة',
     primaryTerm: 'أداة مراقبة نماذج اللغة الكبيرة',
     targetKeywords: [
@@ -4085,19 +4085,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'أفضل أداة لمراقبة المطالبات',
       'استحواذ ClickHouse على Langfuse',
     ],
-    leadAnswerBlock: '**‏Langfuse هو الخيار الأفضل إجمالًا لمعظم فرق الإنتاج: 33.9 ألف نجمة على GitHub، واستضافة ذاتية مجانية، وأوسع تغطية لأطر العمل بين الأربعة. أما LangSmith فهو الخيار الصحيح إذا كانت منظومتك تعمل على LangChain أو LangGraph، بسعر 39 دولارًا للمقعد شهريًا إضافة إلى وحدات حوسبة وتخزين محسوبة بالاستهلاك. وHelicone هو الأسرع في التبنّي لأنه وكيل وليس حزمة تطوير، بسعر 79 دولارًا شهريًا. وهناك أمران تفوتهما معظم المقارنات: استحوذت ClickHouse على Langfuse في 16 يناير 2026، والنسخة المجانية للاستضافة الذاتية ليست كاملة — إذ تقتصر تسع قدرات، من بينها التحكم بالصلاحيات وسجلات التدقيق، على مستوى Enterprise.**',
+    leadAnswerBlock: '**Langfuse هو الخيار الافتراضي الأفضل لمعظم فرق الإنتاج: استضافة ذاتية مجانية وتغطية واسعة للأطر. يناسب LangSmith حزم LangChain وLangGraph، من 39 دولاراً للمقعد شهرياً. وHelicone الأسرع اعتماداً لأنه وكيل (proxy)، من 79 دولاراً شهرياً. وأصبح Langfuse تابعاً لـ ClickHouse.**',
     quickAnswerTop: {
       question: 'ما أفضل أداة لمراقبة نماذج اللغة الكبيرة في 2026؟',
       answer: '**‏Langfuse للمرونة والاستضافة الذاتية، وLangSmith إن كنت أصلًا على LangChain، وHelicone لوضوح التكاليف بتكامل من سطر واحد، وPromptLayer فقط إن كنت تحتاج إلى إدارة إصدارات المطالبات لا إلى مراقبة كاملة.** القرار بنيوي في جوهره: يعتمد LangSmith وLangfuse على حزمة تطوير تُجهّز شيفرتك، بينما يقف Helicone أمام الواجهة البرمجية بوصفه وكيلًا فيلتقط كل نداء دون أي تجهيز. هذا الفارق يحدد البيانات التي تحصل عليها. الوكيل يرى الطلبات والتكاليف؛ أما متتبّع حزمة التطوير فيرى خطوات الاستدلال داخل تشغيلة متعددة الوكلاء.',
       bullets: [
-        '**الأفضل إجمالًا:** ‏Langfuse — 33.9 ألف نجمة، استضافة ذاتية مجانية، أوسع تكاملات، لكن راجع أولًا جدار مستوى Enterprise',
-        '**الأفضل لفرق LangChain:** ‏LangSmith — تتبّع أصلي بلا إعداد، 39 دولارًا للمقعد شهريًا زائد 1.50 دولار لوحدة الحوسبة و1.00 دولار لوحدة التخزين',
+        '**الأفضل إجمالًا:** ‏Langfuse — 36.9 ألف نجمة، استضافة ذاتية مجانية، أوسع تكاملات، لكن راجع أولًا جدار مستوى Enterprise',
+        '**الأفضل لفرق LangChain:** ‏LangSmith — تتبّع أصلي بلا إعداد، 39 دولارًا للمقعد شهريًا زائد فوترة بالاستهلاك بوحدات LSU (1.00 دولار للوحدة)',
         '**الأسرع في التبنّي:** ‏Helicone — وكيل، أي سطر واحد من الشيفرة، مجاني حتى 10 آلاف طلب ثم 79 دولارًا شهريًا',
         '**الخيار الأخف:** ‏PromptLayer — إدارة إصدارات المطالبات والتسجيل، مجاني حتى 2500 طلب، وPro بـ 49 دولارًا شهريًا',
         '**‏Langfuse صار ملكًا لـ ClickHouse** — استحواذ في 16 يناير 2026 أُعلن مع جولة تمويل من الفئة D بقيمة 400 مليون دولار، وهو ما يهمّ خارطة الطريق',
         '**استغنِ عن الأربعة جميعًا** إن كنت قبل مرحلة الإنتاج بعشرات النداءات يوميًا: لوحات المزوّدين تكفي',
       ],
-      updatedDate: '2026-08-28',
+      updatedDate: '2026-11-02',
     },
     toc: [
       { label: 'أبرز النقاط', anchor: 'tldr' },
@@ -4126,12 +4126,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**‏Langfuse** — 33.9 ألف نجمة على GitHub، وهو الأكبر حضورًا في المصادر المفتوحة هنا. خطة Hobby السحابية مجانية بـ 50 ألف وحدة شهريًا و30 يومًا للوصول إلى البيانات ومستخدمَين؛ وCore بـ 29 دولارًا شهريًا مع 100 ألف وحدة ومستخدمين بلا حد؛ وPro بـ 199 دولارًا شهريًا مع احتفاظ لثلاث سنوات؛ وEnterprise بـ 2499 دولارًا شهريًا. أما استضافة النواة مفتوحة المصدر ذاتيًا فمجانية وبلا حدود.',
+          '**‏Langfuse** — 36.9 ألف نجمة على GitHub، وهو الأكبر حضورًا في المصادر المفتوحة هنا. خطة Hobby السحابية مجانية بـ 50 ألف وحدة شهريًا و30 يومًا للوصول إلى البيانات ومستخدمَين؛ وCore بـ 29 دولارًا شهريًا مع 100 ألف وحدة ومستخدمين بلا حد؛ وPro بـ 199 دولارًا شهريًا مع احتفاظ لثلاث سنوات؛ وEnterprise بـ 2499 دولارًا شهريًا. أما استضافة النواة مفتوحة المصدر ذاتيًا فمجانية وبلا حدود.',
           '**تصحيح يستحق الإيراد:** يُوصف Langfuse على نطاق واسع بأنه مرخّص بـ MIT دون أي جدار للميزات. لكن ملف README الخاص به يقول إن المستودع «MIT licensed, except for the `ee` folders»، وصفحة الاستضافة الذاتية تُدرج تسع ميزات حصرية لمستوى Enterprise: إخفاء البيانات على الخادم، والتحكم بالصلاحيات على مستوى المشروع، وإدارة مدة الاحتفاظ، وSCIM، وسجلات التدقيق وغيرها. المراقبة والتقييمات الأساسية مجانية فعلًا؛ أما ميزات الحوكمة فلا.',
           '**استحوذت ClickHouse, Inc. على Langfuse في 16 يناير 2026**، وأُعلن ذلك مع جولة التمويل من الفئة D بقيمة 400 مليون دولار. وملف LICENSE في المستودع صار يبدأ بعبارة «Copyright (c) 2023-2026 ClickHouse, Inc.». هذا ليس سببًا لاستبعاد Langfuse، لكنه اعتبار يخصّ خارطة الطريق ويستحق خمس دقائق قبل اعتماده معيارًا.',
-          '**‏LangSmith** — مستوى Developer مجاني بحد أقصى 5000 تتبّع أساسي شهريًا ومقعد واحد. وPlus بـ 39 دولارًا للمقعد شهريًا بحد أقصى 10 آلاف تتبّع أساسي، ثم فوترة بالاستهلاك بواقع 1.50 دولار لوحدة الحوسبة و1.00 دولار لوحدة التخزين. وEnterprise بسعر مخصص مع خيارات للاستضافة الذاتية والهجينة.',
+          '**‏LangSmith** — مستوى Developer مجاني بحد أقصى 5000 تتبّع أساسي شهريًا ومقعد واحد. وPlus بـ 39 دولارًا للمقعد شهريًا بحد أقصى 10 آلاف تتبّع أساسي، ثم فوترة بالاستهلاك بوحدات LangChain Standard Units (LSU)، بواقع 1.00 دولار لكل وحدة. وEnterprise بسعر مخصص مع خيارات للاستضافة الذاتية والهجينة.',
           '**‏Helicone** — وكيل بدل حزمة تطوير، فالتكامل سطر واحد ويلتقط كل نداء دون تجهيز. خطة Hobby مجانية بـ 10 آلاف طلب و1 غيغابايت واحتفاظ 7 أيام؛ وPro بـ 79 دولارًا شهريًا بمقاعد بلا حد واحتفاظ شهر واحد؛ وTeam بـ 799 دولارًا شهريًا مع SOC-2 وHIPAA واحتفاظ ثلاثة أشهر.',
-          '**‏Helicone مفتوح المصدر أيضًا**، برخصة Apache-2.0 و6.1 ألف نجمة، وهو ما تغفله معظم المقارنات. والفارق الدقيق أن صفحة أسعاره تبيع النشر داخل المؤسسة في مستوى Enterprise فقط ولا توثّق أي مسار مجاني مدعوم للاستضافة الذاتية. فكون الشيفرة مفتوحة لا يعني هنا أن المزوّد يدعم تشغيلك لها بنفسك.',
+          '**‏Helicone مفتوح المصدر أيضًا**، برخصة Apache-2.0 و6.3 ألف نجمة، وهو ما تغفله معظم المقارنات. والفارق الدقيق أن صفحة أسعاره تبيع النشر داخل المؤسسة في مستوى Enterprise فقط ولا توثّق أي مسار مجاني مدعوم للاستضافة الذاتية. فكون الشيفرة مفتوحة لا يعني هنا أن المزوّد يدعم تشغيلك لها بنفسك.',
           '**‏PromptLayer** — الأضيق نطاقًا بين الأربعة. المستوى المجاني يمنح 2500 طلب شهريًا و5 مستخدمين و10 مطالبات؛ وPro بـ 49 دولارًا شهريًا مع 0.003 دولار لكل عملية تتجاوز الحد؛ وTeam بـ 500 دولار شهريًا مع أكثر من 100 ألف طلب و25 مستخدمًا. والاستضافة الذاتية على GCP أو AWS أو Azure حصرية لمستوى Enterprise.',
           'لا ينشر أيٌّ من الأربعة برنامج عمولة أو إحالة. وتدير LangChain شبكة شركاء، لكنها برنامج تكامل تقني لا نظام عمولات. وجميع الروابط في هذه الصفحة غير مدفوعة.',
         ],
@@ -4167,7 +4167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.langchain.com/pricing-langsmith',
             productName: 'LangSmith',
             productCategory: 'dev-tool',
-            priceRange: 'Developer مجاني؛ Plus 39 دولارًا للمقعد شهريًا + 1.50 دولار لوحدة الحوسبة و1.00 دولار للتخزين؛ Enterprise مخصص',
+            priceRange: 'Developer مجاني؛ Plus 39 دولارًا للمقعد شهريًا + استهلاك بوحدات LSU (1.00 دولار للوحدة)؛ Enterprise مخصص',
             label: '\u200fLangSmith — اطّلع على الأسعار',
           },
           {
@@ -4198,13 +4198,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'مقارنة بين Langfuse وLangSmith وHelicone وPromptLayer',
-        content: '**كل أداة تُحسّن نقطة مختلفة في المنظومة بدل التنافس ميزةً بميزة.** قُرئت الأسعار من صفحات المزوّدين في 28 أغسطس 2026، وأُخذت أرقام المستودعات من واجهة GitHub البرمجية في اليوم نفسه.',
+        content: '**كل أداة تُحسّن نقطة مختلفة في المنظومة بدل التنافس ميزةً بميزة.** قُرئت الأسعار من صفحات المزوّدين في 2 نوفمبر 2026، وأُخذت أرقام المستودعات من واجهة GitHub البرمجية في اليوم نفسه.',
         tableFormat: true,
         itemHeadings: true,
         columns: ['المعيار', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { المعيار: 'الأسلوب', Langfuse: 'متتبّع حزمة تطوير', LangSmith: 'متتبّع حزمة تطوير', Helicone: 'وكيل', PromptLayer: 'تسجيل عبر حزمة وREST' },
-          { المعيار: 'نجوم GitHub', Langfuse: '33.9 ألف', LangSmith: 'ليس مفتوح المصدر', Helicone: '6.1 ألف', PromptLayer: '0.8 ألف (مكتبة عميل)' },
+          { المعيار: 'نجوم GitHub', Langfuse: '36.9 ألف', LangSmith: 'ليس مفتوح المصدر', Helicone: '6.3 ألف', PromptLayer: '0.8 ألف (مكتبة عميل)' },
           { المعيار: 'الرخصة', Langfuse: 'MIT عدا مجلدات ee/', LangSmith: 'تجارية', Helicone: 'Apache-2.0', PromptLayer: 'تجارية' },
           { المعيار: 'المستوى المجاني', Langfuse: '50 ألف وحدة شهريًا، 30 يومًا', LangSmith: '5000 تتبّع شهريًا، مقعد', Helicone: '10 آلاف طلب، 7 أيام', PromptLayer: '2500 طلب، 10 مطالبات' },
           { المعيار: 'بداية المدفوع', Langfuse: 'Core 29 دولارًا شهريًا', LangSmith: 'Plus 39 دولارًا للمقعد + استهلاك', Helicone: 'Pro 79 دولارًا شهريًا', PromptLayer: 'Pro 49 دولارًا شهريًا' },
@@ -4215,7 +4215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'تصف المقارنات Langfuse بانتظام بأنه «الخيار المفتوح المصدر الوحيد هنا». وHelicone مرخّص بـ Apache-2.0 وله 6.1 ألف نجمة، فالوصف غير دقيق. والدقيق أن Langfuse يوثّق ويدعم نشرًا ذاتيًا مجانيًا، بينما يبيع Helicone النشر داخل المؤسسة في مستوى Enterprise فقط ولا يصف أي مسار مجاني مدعوم للاستضافة الذاتية في صفحة أسعاره.',
+            text: 'تصف المقارنات Langfuse بانتظام بأنه «الخيار المفتوح المصدر الوحيد هنا». وHelicone مرخّص بـ Apache-2.0 وله 6.3 ألف نجمة، فالوصف غير دقيق. والدقيق أن Langfuse يوثّق ويدعم نشرًا ذاتيًا مجانيًا، بينما يبيع Helicone النشر داخل المؤسسة في مستوى Enterprise فقط ولا يصف أي مسار مجاني مدعوم للاستضافة الذاتية في صفحة أسعاره.',
           },
         ],
       },
@@ -4227,7 +4227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: '‏Langfuse — الأفضل إجمالًا',
-            tagline: '33.9 ألف نجمة، نواة مجانية للاستضافة الذاتية، أوسع تغطية لأطر العمل',
+            tagline: '36.9 ألف نجمة، نواة مجانية للاستضافة الذاتية، أوسع تغطية لأطر العمل',
             verdict: 'يغطي Langfuse المراقبة والتقييمات وإدارة المطالبات ومجموعات البيانات في منتج واحد، وقائمة تكاملاته هي الأطول بين الأربعة: حزمة OpenAI وLangChain وLlamaIndex وHaystack وLiteLLM وحزمة Vercel AI وOllama وAmazon Bedrock بصورة أصلية، إضافة إلى تكاملات من المجتمع. ولمنظومة مختلطة — شيء من LangChain، وبعض نداءات الحزمة المباشرة، وLlamaIndex للاسترجاع — يعني هذا الاتساع أن تجهّز مرة واحدة بدل التجهيز لكل إطار على حدة. أما أسعار السحابة فهي: Hobby مجانية بـ 50 ألف وحدة شهريًا و30 يومًا للوصول إلى البيانات، وCore بـ 29 دولارًا شهريًا مع 100 ألف وحدة ومستخدمين بلا حد، وPro بـ 199 دولارًا شهريًا مع احتفاظ لثلاث سنوات إضافة إلى SOC2 وISO27001 واتفاقية شريك أعمال لأغراض HIPAA، وEnterprise بـ 2499 دولارًا شهريًا. والتجاوز متدرّج، من 8 دولارات لكل 100 ألف وحدة نزولًا إلى 6 دولارات عند الحجم الكبير. واستضافة النواة مفتوحة المصدر ذاتيًا مجانية وبلا حد فعلي في الاستخدام.',
             pros: [
               'أوسع تغطية أصلية لأطر العمل بين الأربعة، فالمنظومة المختلطة تُجهَّز مرة واحدة',
@@ -4262,7 +4262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: '‏LangSmith — الأفضل لفرق LangChain وLangGraph',
             tagline: 'تتبّع أصلي بلا إعداد، 39 دولارًا للمقعد شهريًا زائد وحدات بالاستهلاك',
-            verdict: 'صدر LangSmith عن فريق LangChain، وداخل LangChain أو LangGraph يعمل التتبّع تلقائيًا: تحصل على رؤية على مستوى الخطوة داخل تشغيلة وكيل دون كتابة أي تجهيز. وخارج ذلك تستخدم غلاف `traceable()` حول نداءات حزمتَي OpenAI أو Anthropic، وهو يعمل لكنه يلغي الميزة الأساسية. أما الأسعار فهي: مستوى Developer بصفر دولار للمقعد بحد أقصى 5000 تتبّع أساسي شهريًا ومقعد واحد فقط، وPlus بـ 39 دولارًا للمقعد شهريًا بحد أقصى 10 آلاف تتبّع أساسي مع نشر صغير بلا خوادم مجانًا، وEnterprise بسعر مخصص مع خيارات للاستضافة الذاتية والهجينة. وفوق الحصة تتحول الفوترة إلى الاستهلاك: 1.50 دولار لوحدة حوسبة LangChain و1.00 دولار لوحدة التخزين. وهذا بالضبط ما ينبغي حسابه قبل الالتزام، لأن الفاتورة تكبر مع تعقيد الوكلاء وحجم التتبّعات لا مع عدد الأشخاص.',
+            verdict: 'صدر LangSmith عن فريق LangChain، وداخل LangChain أو LangGraph يعمل التتبّع تلقائيًا: تحصل على رؤية على مستوى الخطوة داخل تشغيلة وكيل دون كتابة أي تجهيز. وخارج ذلك تستخدم غلاف `traceable()` حول نداءات حزمتَي OpenAI أو Anthropic، وهو يعمل لكنه يلغي الميزة الأساسية. أما الأسعار فهي: مستوى Developer بصفر دولار للمقعد بحد أقصى 5000 تتبّع أساسي شهريًا ومقعد واحد فقط، وPlus بـ 39 دولارًا للمقعد شهريًا بحد أقصى 10 آلاف تتبّع أساسي مع نشر صغير بلا خوادم مجانًا، وEnterprise بسعر مخصص مع خيارات للاستضافة الذاتية والهجينة. وفوق الحصة تتحول الفوترة إلى الاستهلاك: بوحدات LangChain Standard Units (LSU)، بواقع 1.00 دولار لكل وحدة. وهذا بالضبط ما ينبغي حسابه قبل الالتزام، لأن الفاتورة تكبر مع تعقيد الوكلاء وحجم التتبّعات لا مع عدد الأشخاص.',
             pros: [
               'تتبّع بلا إعداد داخل LangChain وLangGraph، ولا يُبارى في هذه المنظومة',
               'أدوات ناضجة للتقييم والتجريب مبنية على مجموعات البيانات',
@@ -4270,7 +4270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'يوفّر Enterprise نشرًا ذاتيًا وهجينًا',
             ],
             cons: [
-              'الفوترة بوحدات الحوسبة والتخزين تجعل الفاتورة صعبة التوقّع كلما زاد تعقيد الوكلاء',
+              'الفوترة بوحدات LSU تجعل الفاتورة صعبة التوقّع كلما زاد تعقيد الوكلاء',
               'الاستضافة الذاتية حصرية لمستوى Enterprise بسعر مخصص',
               'قيمة المنتج أضعف بكثير إن لم تكن على LangChain',
             ],
@@ -4279,13 +4279,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 url: 'https://www.langchain.com/pricing-langsmith',
                 productName: 'LangSmith',
                 productCategory: 'dev-tool',
-                priceRange: 'Developer مجاني؛ Plus 39 دولارًا للمقعد شهريًا + 1.50 دولار لوحدة الحوسبة و1.00 دولار للتخزين؛ Enterprise مخصص',
+                priceRange: 'Developer مجاني؛ Plus 39 دولارًا للمقعد شهريًا + استهلاك بوحدات LSU (1.00 دولار للوحدة)؛ Enterprise مخصص',
                 label: '‏LangSmith — اطّلع على الأسعار',
               },
             ],
           },
         ],
-        note: 'استخدم LangSmith إن كان LangChain هو إطارك. واحسب وحدات الحوسبة والتخزين المتوقعة قبل الانتقال إلى Plus، فسعر المقعد ليس الفاتورة كاملة.',
+        note: 'استخدم LangSmith إن كان LangChain هو إطارك. واحسب استهلاك LSU المتوقع قبل الانتقال إلى Plus، فسعر المقعد ليس الفاتورة كاملة.',
       },
       helicone: {
         id: 'helicone',
@@ -4296,7 +4296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: '‏Helicone — الأسرع تبنّيًا والأفضل لوضوح التكاليف',
             tagline: 'تكامل وكيل من سطر واحد، Apache-2.0، مجاني حتى 10 آلاف طلب ثم 79 دولارًا شهريًا',
-            verdict: 'لأن Helicone وكيل، فإن تبنّيه يعني تغيير عنوان الأساس لا إطلاق مشروع تجهيز، وهو يلتقط بيانات التكلفة والطلب في كل نداء افتراضيًا دون أن يقرر أحد ما الذي يُتتبَّع. وهذا يجعله الأسرع بين الأربعة في تحقيق قيمة، ويفسّر لماذا تتبّع التكاليف أقوى جوانبه: فتفصيل التكلفة لكل طلب ووضوح الإنفاق عبر مفاتيح ونماذج كثيرة هما المنتج الأساسي لا واجهة تقارير موضوعة فوق التتبّع. خطة Hobby مجانية بـ 10 آلاف طلب و1 غيغابايت تخزينًا واحتفاظ 7 أيام؛ وPro بـ 79 دولارًا شهريًا بمقاعد بلا حد واحتفاظ شهر؛ وTeam بـ 799 دولارًا شهريًا تضيف امتثال SOC-2 وHIPAA واحتفاظ ثلاثة أشهر؛ وEnterprise يضيف النشر داخل المؤسسة والدخول الموحّد عبر SAML واحتفاظًا بلا حد. والشيفرة مرخّصة بـ Apache-2.0 ولها 6.1 ألف نجمة، وإن كانت صفحة الأسعار تسوّق النشر داخل المؤسسة في مستوى Enterprise فقط.',
+            verdict: 'لأن Helicone وكيل، فإن تبنّيه يعني تغيير عنوان الأساس لا إطلاق مشروع تجهيز، وهو يلتقط بيانات التكلفة والطلب في كل نداء افتراضيًا دون أن يقرر أحد ما الذي يُتتبَّع. وهذا يجعله الأسرع بين الأربعة في تحقيق قيمة، ويفسّر لماذا تتبّع التكاليف أقوى جوانبه: فتفصيل التكلفة لكل طلب ووضوح الإنفاق عبر مفاتيح ونماذج كثيرة هما المنتج الأساسي لا واجهة تقارير موضوعة فوق التتبّع. خطة Hobby مجانية بـ 10 آلاف طلب و1 غيغابايت تخزينًا واحتفاظ 7 أيام؛ وPro بـ 79 دولارًا شهريًا بمقاعد بلا حد واحتفاظ شهر؛ وTeam بـ 799 دولارًا شهريًا تضيف امتثال SOC-2 وHIPAA واحتفاظ ثلاثة أشهر؛ وEnterprise يضيف النشر داخل المؤسسة والدخول الموحّد عبر SAML واحتفاظًا بلا حد. والشيفرة مرخّصة بـ Apache-2.0 ولها 6.3 ألف نجمة، وإن كانت صفحة الأسعار تسوّق النشر داخل المؤسسة في مستوى Enterprise فقط.',
             pros: [
               'سطر واحد للتكامل: بلا إعادة كتابة للحزمة، ويعمل مع أي نقطة نهاية متوافقة مع OpenAI',
               'تتبّع التكاليف هو المنتج الأساسي لا تبويب تقارير ثانوي',
@@ -4390,7 +4390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { المستوى: 'المجاني', Langfuse: 'Hobby: 50 ألف وحدة، مستخدمان', LangSmith: 'Developer: 5000 تتبّع، مقعد', Helicone: 'Hobby: 10 آلاف طلب', PromptLayer: 'Free: 2500 طلب، 5 مستخدمين' },
           { المستوى: 'احتفاظ المجاني', Langfuse: '30 يومًا للوصول إلى البيانات', LangSmith: 'غير مذكور في صفحة الأسعار', Helicone: '7 أيام', PromptLayer: 'غير مذكور في صفحة الأسعار' },
           { المستوى: 'بداية المدفوع', Langfuse: 'Core 29 دولارًا شهريًا', LangSmith: 'Plus 39 دولارًا للمقعد شهريًا', Helicone: 'Pro 79 دولارًا شهريًا', PromptLayer: 'Pro 49 دولارًا شهريًا' },
-          { المستوى: 'فوترة الاستهلاك', Langfuse: '8 دولارات لكل 100 ألف وحدة، متدرّجة', LangSmith: '1.50 للحوسبة، 1.00 للتخزين', Helicone: 'بالاستهلاك فوق الحصة المجانية', PromptLayer: '0.003 دولار لكل عملية' },
+          { المستوى: 'فوترة الاستهلاك', Langfuse: '8 دولارات لكل 100 ألف وحدة، متدرّجة', LangSmith: 'استهلاك بوحدات LSU، 1.00 دولار للوحدة', Helicone: 'بالاستهلاك فوق الحصة المجانية', PromptLayer: '0.003 دولار لكل عملية' },
           { المستوى: 'المستوى المتوسط', Langfuse: 'Pro 199 دولارًا شهريًا، احتفاظ 3 سنوات', LangSmith: 'Enterprise مخصص', Helicone: 'Team 799 دولارًا شهريًا', PromptLayer: 'Team 500 دولار شهريًا' },
           { المستوى: 'الامتثال', Langfuse: 'Pro: SOC2 وISO27001 وBAA', LangSmith: 'Enterprise', Helicone: 'Team: SOC-2 وHIPAA', PromptLayer: 'Enterprise' },
           { المستوى: 'كلفة الاستضافة الذاتية', Langfuse: 'مجانية للميزات الأساسية', LangSmith: 'Enterprise فقط', Helicone: 'Enterprise فقط', PromptLayer: 'Enterprise فقط' },
@@ -4452,11 +4452,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'وصف Langfuse بأنه الخيار المفتوح المصدر الوحيد',
-            whyItMatters: '‏Helicone مرخّص بـ Apache-2.0 وله 6.1 ألف نجمة. والتمييز الدقيق هو أن Langfuse يوثّق نشرًا ذاتيًا مجانيًا ومدعومًا بينما يبيع Helicone النشر داخل المؤسسة في Enterprise، لا أن أحدهما مفتوح والآخر مغلق.',
+            whyItMatters: '‏Helicone مرخّص بـ Apache-2.0 وله 6.3 ألف نجمة. والتمييز الدقيق هو أن Langfuse يوثّق نشرًا ذاتيًا مجانيًا ومدعومًا بينما يبيع Helicone النشر داخل المؤسسة في Enterprise، لا أن أحدهما مفتوح والآخر مغلق.',
           },
           {
             title: 'قراءة سعر المقعد 39 دولارًا لدى LangSmith بوصفه الفاتورة كاملة',
-            whyItMatters: 'يضيف Plus فوترة بالاستهلاك بواقع 1.50 دولار لوحدة الحوسبة و1.00 دولار لوحدة التخزين فوق سعر المقعد. والفاتورة تكبر مع تعقيد الوكلاء وحجم التتبّعات أكثر من كبرها مع عدد الأشخاص، فقد ترى الفرق التي تعتمد بكثافة على LangGraph التكاليف ترتفع بحدة دون توظيف أحد.',
+            whyItMatters: 'يضيف Plus فوترة بالاستهلاك بوحدات LSU (1.00 دولار للوحدة) فوق سعر المقعد. والفاتورة تكبر مع تعقيد الوكلاء وحجم التتبّعات أكثر من كبرها مع عدد الأشخاص، فقد ترى الفرق التي تعتمد بكثافة على LangGraph التكاليف ترتفع بحدة دون توظيف أحد.',
           },
           {
             title: 'معاملة وكيل Helicone كأنه مكافئ لتتبّع حزمة التطوير',
@@ -4497,7 +4497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كم تكلفة LangSmith؟',
-            a: 'مستوى Developer مجاني بحد أقصى 5000 تتبّع أساسي شهريًا ومقعد واحد. وPlus بـ 39 دولارًا للمقعد شهريًا بحد أقصى 10 آلاف تتبّع أساسي مع نشر صغير بلا خوادم مجانًا. وفوق ذلك تكون الفوترة بالاستهلاك، بواقع 1.50 دولار لوحدة حوسبة LangChain و1.00 دولار لوحدة التخزين. وEnterprise بسعر مخصص مع خيارات للاستضافة الذاتية والهجينة.',
+            a: 'مستوى Developer مجاني بحد أقصى 5000 تتبّع أساسي شهريًا ومقعد واحد. وPlus بـ 39 دولارًا للمقعد شهريًا بحد أقصى 10 آلاف تتبّع أساسي مع نشر صغير بلا خوادم مجانًا. وفوق ذلك تكون الفوترة بالاستهلاك بوحدات LangChain Standard Units (LSU)، وتكلّف الوحدة 1.00 دولار. وEnterprise بسعر مخصص مع خيارات للاستضافة الذاتية والهجينة.',
           },
           {
             q: '‏LangSmith أم Langfuse إن كنت أستخدم LangChain أصلًا؟',
@@ -4522,7 +4522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخلاصة النهائية',
         items: [
           '**استخدم Langfuse إن** أردت أوسع التكاملات وخيار الاستضافة الذاتية — الخطوة التالية: ابدأ من مستوى Hobby المجاني أو من نشر عبر Docker Compose، وراجع قائمة Enterprise إن كنت تحتاج إلى التحكم بالصلاحيات أو سجلات التدقيق.',
-          '**استخدم LangSmith إن** كانت منظومتك LangChain أو LangGraph — الخطوة التالية: ابدأ من مستوى Developer المجاني واحسب استهلاكك من وحدات الحوسبة والتخزين قبل الانتقال إلى Plus، فسعر المقعد ليس الفاتورة كاملة.',
+          '**استخدم LangSmith إن** كانت منظومتك LangChain أو LangGraph — الخطوة التالية: ابدأ من مستوى Developer المجاني واحسب استهلاكك من وحدات LSU قبل الانتقال إلى Plus، فسعر المقعد ليس الفاتورة كاملة.',
           '**استخدم Helicone إن** كان وضوح التكاليف هو الوجع وأردت تشغيله اليوم — الخطوة التالية: مرّر خدمة واحدة عبر الوكيل على المستوى المجاني وتأكد من مطابقة بيانات التكلفة لفاتورة مزوّدك.',
           '**استخدم PromptLayer إن** كانت إدارة إصدارات المطالبات هي المطلب الحقيقي — الخطوة التالية: استخدم المستوى المجاني وانتقل إلى Langfuse أو LangSmith حين تحتاج إلى اختبارات انحدار مبنية على مجموعات البيانات.',
           '**تجاوز الأربعة إن** كنت قبل مرحلة الإنتاج — الخطوة التالية: استخدم لوحات المزوّدين وأعد النظر حين يحتاج شخص غيرك إلى رؤية ما فعله النظام.',
@@ -4538,7 +4538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/langfuse/langfuse', title: 'مستودع Langfuse', description: 'عدد النجوم وملف LICENSE الذي يبيّن رخصة MIT عدا مجلدات ee/ إضافة إلى سطر حقوق النشر باسم ClickHouse, Inc.' },
           { url: 'https://clickhouse.com/blog/clickhouse-acquires-langfuse-open-source-llm-observability', title: 'استحواذ ClickHouse على Langfuse', description: 'إعلان ClickHouse نفسها عن الاستحواذ في 16 يناير 2026.' },
           { url: 'https://siliconangle.com/2026/01/16/database-maker-clickhouse-raises-400m-acquires-ai-observability-startup-langfuse/', title: 'ClickHouse تجمع 400 مليون دولار وتستحوذ على Langfuse (SiliconANGLE)', description: 'تأكيد مستقل لتاريخ الاستحواذ ولسياق جولة الفئة D.' },
-          { url: 'https://www.langchain.com/pricing-langsmith', title: 'أسعار LangSmith', description: 'مستويات Developer وPlus وEnterprise مع حصص التتبّعات ورسوم 1.50 دولار و1.00 دولار للوحدة.' },
+          { url: 'https://www.langchain.com/pricing-langsmith', title: 'أسعار LangSmith', description: 'مستويات Developer وPlus وEnterprise مع حصص التتبّعات وفوترة بالاستهلاك بسعر 1.00 دولار لكل وحدة LSU.' },
           { url: 'https://www.helicone.ai/pricing', title: 'أسعار Helicone', description: 'مستويات Hobby وPro وTeam وEnterprise مع حدود الطلبات ونوافذ الاحتفاظ والإشارة إلى قصر النشر داخل المؤسسة على Enterprise.' },
           { url: 'https://github.com/Helicone/helicone', title: 'مستودع Helicone', description: 'عدد النجوم ورخصة Apache-2.0، بما يؤكد أن Helicone مفتوح المصدر.' },
           { url: 'https://www.promptlayer.com/pricing', title: 'أسعار PromptLayer', description: 'مستويات Free وPro وTeam وEnterprise مع حدود الطلبات وأعداد المستخدمين ورسوم كل عملية.' },
@@ -4562,7 +4562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'أفضل أداة لمراقبة نماذج اللغة الكبيرة 2026: Langfuse أم LangSmith أم Helicone',
       description: 'مقارنة بين Langfuse وLangSmith وHelicone وPromptLayer لمراقبة نماذج اللغة الكبيرة، مع أسعار ورخص ومدد احتفاظ جرى التحقق منها، إضافة إلى استحواذ ClickHouse وجدار ميزات Enterprise في الاستضافة الذاتية. جرى.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-02',
       url: 'https://www.promptquorum.com/ar/local-llms/best-llm-observability-tools',
       inLanguage: 'ar',
       proficiencyLevel: 'Advanced',
@@ -4614,7 +4614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'كم تكلفة LangSmith؟',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'مستوى Developer مجاني بحد أقصى 5000 تتبّع أساسي شهريًا ومقعد واحد. وPlus بـ 39 دولارًا للمقعد شهريًا بحد أقصى 10 آلاف تتبّع أساسي، ثم بالاستهلاك بواقع 1.50 دولار لوحدة الحوسبة و1.00 دولار لوحدة التخزين. وEnterprise بسعر مخصص.',
+            text: 'مستوى Developer مجاني بحد أقصى 5000 تتبّع أساسي شهريًا ومقعد واحد. وPlus بـ 39 دولارًا للمقعد شهريًا بحد أقصى 10 آلاف تتبّع أساسي، ثم بالاستهلاك بوحدات LangChain Standard Units (LSU)، بواقع 1.00 دولار لكل وحدة. وEnterprise بسعر مخصص.',
           },
         },
         {
@@ -4630,12 +4630,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'أفضل أدوات مراقبة نماذج اللغة الكبيرة (أغسطس 2026)',
+      name: 'أفضل أدوات مراقبة نماذج اللغة الكبيرة (2026)',
       inLanguage: 'ar',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'الأفضل إجمالًا — 33.9 ألف نجمة، نواة مجانية للاستضافة الذاتية، أوسع تغطية لأطر العمل، وإن كانت تسع ميزات حصرية لمستوى Enterprise' },
-        { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'الأفضل لفرق LangChain وLangGraph — تتبّع أصلي بلا إعداد، 39 دولارًا للمقعد شهريًا زائد وحدات حوسبة وتخزين بالاستهلاك' },
+        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'الأفضل إجمالًا — 36.9 ألف نجمة، نواة مجانية للاستضافة الذاتية، أوسع تغطية لأطر العمل، وإن كانت تسع ميزات حصرية لمستوى Enterprise' },
+        { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'الأفضل لفرق LangChain وLangGraph — تتبّع أصلي بلا إعداد، 39 دولارًا للمقعد شهريًا زائد فوترة بالاستهلاك بوحدات LSU' },
         { '@type': 'ListItem', position: 3, name: 'Helicone', description: 'الأسرع تبنّيًا والأفضل لوضوح التكاليف — وكيل برخصة Apache-2.0، تكامل من سطر واحد، مجاني حتى 10 آلاف طلب ثم 79 دولارًا شهريًا' },
         { '@type': 'ListItem', position: 4, name: 'PromptLayer', description: 'الخيار الأخف — إدارة إصدارات المطالبات والتسجيل، مجاني حتى 2500 طلب شهريًا، وPro بـ 49 دولارًا شهريًا' },
       ],
@@ -4648,13 +4648,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026년 최고의 LLM 옵저버빌리티 도구: Langfuse, LangSmith, Helicone',
-    seoTitle: '2026년 최고의 LLM 옵저버빌리티 도구',
-    metaDescription: 'Langfuse는 스타 3만 3,900개에 자체 호스팅이 무료, LangSmith는 좌석당 39달러에 사용량 과금, Helicone은 79달러입니다. Langfuse는 ClickHouse에 인수됐습니다.',
+    seoTitle: 'LLM 관측 도구 비교 2026: Langfuse·LangSmith',
+    metaDescription: '2026 LLM 관측 도구 비교: Langfuse(무료 셀프 호스팅), LangSmith 좌석당 월 39달러부터, Helicone 월 79달러부터, 가격과 장단점 비교.',
     educationalLevel: 'Advanced',
     audience: 'LLM 애플리케이션을 프로덕션에서 운영하는 개발자와 팀',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-02',
     readTime: '14분 분량',
     primaryTerm: 'LLM 옵저버빌리티 도구',
     targetKeywords: [
@@ -4664,19 +4664,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '최고의 프롬프트 모니터링 도구',
       'Langfuse ClickHouse 인수',
     ],
-    leadAnswerBlock: '**대부분의 프로덕션 팀에게 종합적으로 가장 나은 선택은 Langfuse입니다. GitHub 스타 3만 3,900개, 자체 호스팅 무료, 그리고 네 제품 중 프레임워크 지원 범위가 가장 넓습니다. 스택이 LangChain이나 LangGraph 위에서 돌아간다면 LangSmith가 맞는 선택이며, 좌석당 월 39달러에 사용량 기반 컴퓨트·스토리지 단위가 더해집니다. Helicone은 SDK가 아니라 프록시라서 도입이 가장 빠르고, 월 79달러입니다. 대부분의 비교 글이 놓치는 두 가지가 있습니다. Langfuse는 2026년 1월 16일 ClickHouse에 인수됐고, 무료 자체 호스팅판은 완전판이 아닙니다. RBAC와 감사 로그를 포함한 아홉 가지 기능이 Enterprise 전용입니다.**',
+    leadAnswerBlock: '**대부분의 프로덕션 팀에는 Langfuse가 기본 선택입니다. 무료 셀프 호스팅과 폭넓은 프레임워크 지원을 제공합니다. LangChain·LangGraph 스택에는 LangSmith(좌석당 월 39달러부터), 도입 속도는 프록시 방식의 Helicone(월 79달러부터)이 가장 빠릅니다. Langfuse는 이제 ClickHouse 소속입니다.**',
     quickAnswerTop: {
       question: '2026년에 가장 좋은 LLM 옵저버빌리티 도구는 무엇인가요?',
       answer: '**유연성과 자체 호스팅이라면 Langfuse, 이미 LangChain을 쓰고 있다면 LangSmith, 한 줄 연동으로 비용을 들여다보고 싶다면 Helicone, 완전한 옵저버빌리티가 아니라 프롬프트 버전 관리만 필요하다면 PromptLayer입니다.** 이 선택은 본질적으로 구조의 문제입니다. LangSmith와 Langfuse는 SDK로 코드를 계측하지만, Helicone은 API 앞에 프록시로 서서 계측 없이 모든 호출을 잡아냅니다. 이 차이가 어떤 데이터를 얻는지를 결정합니다. 프록시는 요청과 비용을 보고, SDK 트레이서는 멀티 에이전트 실행 내부의 추론 단계까지 봅니다.',
       bullets: [
-        '**종합 최고:** Langfuse — 스타 3만 3,900개, 자체 호스팅 무료, 가장 넓은 연동. 다만 Enterprise 장벽을 먼저 확인',
-        '**LangChain 팀에 최적:** LangSmith — 설정 없는 네이티브 트레이싱, 좌석당 월 39달러에 컴퓨트 단위 1.50달러·스토리지 단위 1.00달러 추가',
+        '**종합 최고:** Langfuse — 스타 3만 6,900개, 자체 호스팅 무료, 가장 넓은 연동. 다만 Enterprise 장벽을 먼저 확인',
+        '**LangChain 팀에 최적:** LangSmith — 설정 없는 네이티브 트레이싱, 좌석당 월 39달러에 LSU 단위 사용량 과금(1 LSU = 1.00달러) 추가',
         '**도입이 가장 빠름:** Helicone — 프록시라서 코드 한 줄, 1만 요청까지 무료, 이후 월 79달러',
         '**가장 가벼운 선택:** PromptLayer — 프롬프트 버전 관리와 로깅, 2,500요청까지 무료, Pro 월 49달러',
         '**Langfuse는 이제 ClickHouse 소유** — 2026년 1월 16일 인수, 4억 달러 시리즈 D와 함께 발표됐고 로드맵에 영향',
         '**넷 다 건너뛰어도 되는 경우** — 프로덕션 이전 단계로 하루 수십 번 호출이라면 각 사업자의 대시보드로 충분',
       ],
-      updatedDate: '2026-08-28',
+      updatedDate: '2026-11-02',
     },
     toc: [
       { label: '핵심 요약', anchor: 'tldr' },
@@ -4705,12 +4705,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Langfuse** — GitHub 스타 3만 3,900개로, 여기서 오픈소스 기반이 가장 큽니다. 클라우드 Hobby는 무료이며 월 5만 유닛, 데이터 조회 30일, 사용자 2명입니다. Core는 월 29달러로 10만 유닛에 사용자 수 무제한, Pro는 월 199달러로 3년 보존, Enterprise는 월 2,499달러입니다. 오픈소스 코어를 자체 호스팅하는 것은 무료이며 제한이 없습니다.',
+          '**Langfuse** — GitHub 스타 3만 6,900개로, 여기서 오픈소스 기반이 가장 큽니다. 클라우드 Hobby는 무료이며 월 5만 유닛, 데이터 조회 30일, 사용자 2명입니다. Core는 월 29달러로 10만 유닛에 사용자 수 무제한, Pro는 월 199달러로 3년 보존, Enterprise는 월 2,499달러입니다. 오픈소스 코어를 자체 호스팅하는 것은 무료이며 제한이 없습니다.',
           '**바로잡을 만한 대목:** Langfuse는 흔히 "기능 장벽 없는 MIT 라이선스"로 소개됩니다. 하지만 공식 README는 저장소가 "MIT licensed, except for the `ee` folders"라고 밝히고 있고, 자체 호스팅 요금 페이지는 서버 측 데이터 마스킹, 프로젝트 단위 RBAC, 보존 기간 관리, SCIM, 감사 로그 등 아홉 가지를 Enterprise 전용으로 명시합니다. 기본 옵저버빌리티와 평가는 실제로 무료지만, 거버넌스 기능은 그렇지 않습니다.',
           '**Langfuse는 2026년 1월 16일 ClickHouse, Inc.에 인수됐습니다.** ClickHouse의 4억 달러 시리즈 D와 함께 발표됐습니다. 저장소의 LICENSE 파일은 이제 "Copyright (c) 2023-2026 ClickHouse, Inc."로 시작합니다. Langfuse를 배제할 이유는 아니지만, 표준으로 삼기 전에 5분쯤 살펴볼 가치가 있는 로드맵 상의 변수입니다.',
-          '**LangSmith** — Developer는 무료이며 월 최대 5,000건의 기본 트레이스와 좌석 1개를 제공합니다. Plus는 좌석당 월 39달러로 기본 트레이스 1만 건까지 포함하고, 초과분은 사용량 과금으로 컴퓨트 단위 1.50달러, 스토리지 단위 1.00달러입니다. Enterprise는 맞춤 견적이며 자체 호스팅과 하이브리드 옵션을 제공합니다.',
+          '**LangSmith** — Developer는 무료이며 월 최대 5,000건의 기본 트레이스와 좌석 1개를 제공합니다. Plus는 좌석당 월 39달러로 기본 트레이스 1만 건까지 포함하고, 초과분은 사용량 과금으로 LangChain Standard Unit(LSU) 단위이며 1 LSU는 1.00달러입니다. Enterprise는 맞춤 견적이며 자체 호스팅과 하이브리드 옵션을 제공합니다.',
           '**Helicone** — SDK가 아닌 프록시라서 연동이 한 줄이면 되고, 계측 없이 모든 호출을 잡습니다. Hobby는 무료로 1만 요청, 1GB, 보존 7일입니다. Pro는 월 79달러로 좌석 무제한에 보존 1개월, Team은 월 799달러로 SOC-2와 HIPAA를 갖추고 보존 3개월입니다.',
-          '**Helicone도 오픈소스입니다.** Apache-2.0에 스타 6,100개인데, 대부분의 비교 글이 이 점을 놓칩니다. 다만 요금 페이지는 온프레미스를 Enterprise 단계에서만 판매하며, 지원되는 무료 자체 호스팅 경로를 문서화하지 않았습니다. 소스가 공개돼 있다는 것이 곧 사업자가 직접 운영을 지원한다는 뜻은 아닙니다.',
+          '**Helicone도 오픈소스입니다.** Apache-2.0에 스타 6,300개인데, 대부분의 비교 글이 이 점을 놓칩니다. 다만 요금 페이지는 온프레미스를 Enterprise 단계에서만 판매하며, 지원되는 무료 자체 호스팅 경로를 문서화하지 않았습니다. 소스가 공개돼 있다는 것이 곧 사업자가 직접 운영을 지원한다는 뜻은 아닙니다.',
           '**PromptLayer** — 넷 중 범위가 가장 좁습니다. 무료 등급은 월 2,500요청, 사용자 5명, 프롬프트 10개입니다. Pro는 월 49달러이고 초과분은 트랜잭션당 0.003달러, Team은 월 500달러로 10만 요청 초과와 사용자 25명을 제공합니다. GCP, AWS, Azure에서의 자체 호스팅은 Enterprise 전용입니다.',
           '네 곳 모두 제휴나 추천 프로그램을 공개하지 않습니다. LangChain은 Partner Network를 운영하지만 이는 기술 연동 프로그램이지 수수료 제도가 아닙니다. 이 페이지의 모든 링크에는 대가가 없습니다.',
         ],
@@ -4746,7 +4746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.langchain.com/pricing-langsmith',
             productName: 'LangSmith',
             productCategory: 'dev-tool',
-            priceRange: 'Developer 무료, Plus 좌석당 월 39달러＋컴퓨트 1.50달러·스토리지 1.00달러, Enterprise 맞춤',
+            priceRange: 'Developer 무료, Plus 좌석당 월 39달러＋LSU 사용량 과금(1 LSU = 1.00달러), Enterprise 맞춤',
             label: 'LangSmith — 가격 보기',
           },
           {
@@ -4777,13 +4777,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'Langfuse, LangSmith, Helicone, PromptLayer 비교',
-        content: '**네 도구는 기능을 정면으로 겨루기보다 스택의 서로 다른 지점을 최적화합니다.** 가격은 2026년 8월 28일 각 사 요금 페이지에서 확인했고, 저장소 수치는 같은 날 GitHub API에서 가져왔습니다.',
+        content: '**네 도구는 기능을 정면으로 겨루기보다 스택의 서로 다른 지점을 최적화합니다.** 가격은 2026년 11월 2일 각 사 요금 페이지에서 확인했고, 저장소 수치는 같은 날 GitHub API에서 가져왔습니다.',
         tableFormat: true,
         itemHeadings: true,
         columns: ['항목', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { 항목: '방식', Langfuse: 'SDK 트레이서', LangSmith: 'SDK 트레이서', Helicone: '프록시', PromptLayer: 'SDK·REST 로깅' },
-          { 항목: 'GitHub 스타', Langfuse: '3만 3,900', LangSmith: '오픈소스 아님', Helicone: '6,100', PromptLayer: '800(클라이언트)' },
+          { 항목: 'GitHub 스타', Langfuse: '3만 6,900', LangSmith: '오픈소스 아님', Helicone: '6,300', PromptLayer: '800(클라이언트)' },
           { 항목: '라이선스', Langfuse: 'ee/ 제외 MIT', LangSmith: '상용', Helicone: 'Apache-2.0', PromptLayer: '상용' },
           { 항목: '무료 등급', Langfuse: '월 5만 유닛, 30일', LangSmith: '월 5,000 트레이스, 1좌석', Helicone: '1만 요청, 7일', PromptLayer: '2,500요청, 10프롬프트' },
           { 항목: '유료 시작가', Langfuse: 'Core 월 29달러', LangSmith: 'Plus 좌석당 39달러＋사용량', Helicone: 'Pro 월 79달러', PromptLayer: 'Pro 월 49달러' },
@@ -4794,7 +4794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '비교 글들은 Langfuse를 "여기서 유일한 오픈소스"라고 자주 부릅니다. Helicone도 Apache-2.0에 스타 6,100개이므로 정확한 표현이 아닙니다. 정확히 말하면 Langfuse는 무료 자체 호스팅 배포를 문서화하고 지원하는 반면, Helicone은 온프레미스를 Enterprise 단계에서만 판매하며 요금 페이지에 지원되는 무료 자체 호스팅 경로를 밝히지 않았다는 차이입니다.',
+            text: '비교 글들은 Langfuse를 "여기서 유일한 오픈소스"라고 자주 부릅니다. Helicone도 Apache-2.0에 스타 6,300개이므로 정확한 표현이 아닙니다. 정확히 말하면 Langfuse는 무료 자체 호스팅 배포를 문서화하고 지원하는 반면, Helicone은 온프레미스를 Enterprise 단계에서만 판매하며 요금 페이지에 지원되는 무료 자체 호스팅 경로를 밝히지 않았다는 차이입니다.',
           },
         ],
       },
@@ -4806,7 +4806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Langfuse — 종합 최고',
-            tagline: '스타 3만 3,900개, 무료 자체 호스팅 코어, 가장 넓은 프레임워크 지원',
+            tagline: '스타 3만 6,900개, 무료 자체 호스팅 코어, 가장 넓은 프레임워크 지원',
             verdict: 'Langfuse는 옵저버빌리티, 평가, 프롬프트 관리, 데이터셋을 한 제품에서 다루며, 연동 목록은 넷 중 가장 깁니다. OpenAI SDK, LangChain, LlamaIndex, Haystack, LiteLLM, Vercel AI SDK, Ollama, Amazon Bedrock을 네이티브로 지원하고 커뮤니티 연동도 더해집니다. LangChain을 조금 쓰고, 원시 SDK 호출도 있고, 검색에는 LlamaIndex를 쓰는 혼합 스택이라면, 이 넓이 덕분에 프레임워크마다가 아니라 한 번만 계측하면 됩니다. 클라우드 가격은 Hobby가 무료로 월 5만 유닛과 데이터 조회 30일, Core가 월 29달러로 10만 유닛과 사용자 수 무제한, Pro가 월 199달러로 3년 보존에 SOC2·ISO27001과 HIPAA용 BAA, Enterprise가 월 2,499달러입니다. 초과분은 구간제로 10만 유닛당 8달러에서 물량이 늘면 6달러까지 내려갑니다. 오픈소스 코어의 자체 호스팅은 무료이고 사용량도 실제로 제한이 없습니다.',
             pros: [
               '넷 중 네이티브 프레임워크 지원이 가장 넓어, 혼합 스택도 한 번만 계측하면 됨',
@@ -4841,7 +4841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'LangSmith — LangChain·LangGraph 팀에 최적',
             tagline: '설정 없는 네이티브 트레이싱, 좌석당 월 39달러에 사용량 단위 추가',
-            verdict: 'LangSmith는 LangChain 팀이 만든 제품으로, LangChain이나 LangGraph 안에서는 트레이싱이 자동으로 동작합니다. 계측을 쓰지 않아도 에이전트 실행의 단계 단위 가시성을 얻습니다. 그 밖에서는 OpenAI나 Anthropic SDK 호출을 `traceable()`로 감싸는데, 동작은 하지만 핵심 이점은 사라집니다. 가격은 Developer 등급이 좌석당 0달러로 월 최대 5,000건의 기본 트레이스와 좌석 1개, Plus가 좌석당 월 39달러로 기본 트레이스 1만 건까지와 소규모 서버리스 배포 1개 무료, Enterprise는 맞춤 견적으로 자체 호스팅과 하이브리드를 제공합니다. 한도를 넘으면 사용량 과금으로 전환되어 LangChain 컴퓨트 단위 1.50달러, 스토리지 단위 1.00달러입니다. 계약 전에 계산해야 할 부분이 바로 이것으로, 청구액은 인원수가 아니라 에이전트 복잡도와 트레이스 양에 따라 늘어납니다.',
+            verdict: 'LangSmith는 LangChain 팀이 만든 제품으로, LangChain이나 LangGraph 안에서는 트레이싱이 자동으로 동작합니다. 계측을 쓰지 않아도 에이전트 실행의 단계 단위 가시성을 얻습니다. 그 밖에서는 OpenAI나 Anthropic SDK 호출을 `traceable()`로 감싸는데, 동작은 하지만 핵심 이점은 사라집니다. 가격은 Developer 등급이 좌석당 0달러로 월 최대 5,000건의 기본 트레이스와 좌석 1개, Plus가 좌석당 월 39달러로 기본 트레이스 1만 건까지와 소규모 서버리스 배포 1개 무료, Enterprise는 맞춤 견적으로 자체 호스팅과 하이브리드를 제공합니다. 한도를 넘으면 사용량 과금으로 전환되어 LangChain Standard Unit(LSU) 단위이며 1 LSU는 1.00달러입니다. 계약 전에 계산해야 할 부분이 바로 이것으로, 청구액은 인원수가 아니라 에이전트 복잡도와 트레이스 양에 따라 늘어납니다.',
             pros: [
               'LangChain과 LangGraph 안에서는 설정 없이 트레이싱되며, 이 스택에서는 대적할 상대가 없음',
               '데이터셋 기반 평가·실험 도구가 성숙함',
@@ -4849,7 +4849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Enterprise에서 자체 호스팅과 하이브리드 배포를 제공',
             ],
             cons: [
-              '컴퓨트·스토리지 단위 과금이라 에이전트가 복잡해질수록 청구액을 예측하기 어려움',
+              'LSU 단위 과금이라 에이전트가 복잡해질수록 청구액을 예측하기 어려움',
               '자체 호스팅은 Enterprise 전용이며 맞춤 견적',
               'LangChain을 쓰지 않는다면 가치 제안이 훨씬 약함',
             ],
@@ -4858,13 +4858,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 url: 'https://www.langchain.com/pricing-langsmith',
                 productName: 'LangSmith',
                 productCategory: 'dev-tool',
-                priceRange: 'Developer 무료, Plus 좌석당 월 39달러＋컴퓨트 1.50달러·스토리지 1.00달러, Enterprise 맞춤',
+                priceRange: 'Developer 무료, Plus 좌석당 월 39달러＋LSU 사용량 과금(1 LSU = 1.00달러), Enterprise 맞춤',
                 label: 'LangSmith — 가격 보기',
               },
             ],
           },
         ],
-        note: 'LangChain이 여러분의 프레임워크라면 LangSmith입니다. 좌석 단가가 청구액의 전부가 아니므로, Plus로 올리기 전에 예상 컴퓨트·스토리지 단위를 계산해 보세요.',
+        note: 'LangChain이 여러분의 프레임워크라면 LangSmith입니다. 좌석 단가가 청구액의 전부가 아니므로, Plus로 올리기 전에 예상 LSU 사용량을 계산해 보세요.',
       },
       helicone: {
         id: 'helicone',
@@ -4875,7 +4875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Helicone — 도입이 가장 빠르고 비용 가시성에 최적',
             tagline: '한 줄로 붙는 프록시, Apache-2.0, 1만 요청까지 무료 이후 월 79달러',
-            verdict: 'Helicone은 프록시이므로 도입이 계측 프로젝트가 아니라 베이스 URL 변경으로 끝나고, 무엇을 트레이싱할지 누군가 정할 필요 없이 기본적으로 모든 호출에서 비용과 요청 데이터를 수집합니다. 그래서 넷 중 가치가 가장 빨리 나오며, 비용 추적이 가장 강한 면인 이유도 여기 있습니다. 요청 단위 비용 분해와 여러 키·모델에 걸친 지출 가시성이 핵심 제품이지, 트레이싱 위에 얹은 리포트 화면이 아닙니다. Hobby는 무료로 1만 요청, 스토리지 1GB, 보존 7일입니다. Pro는 월 79달러로 좌석 무제한에 보존 1개월, Team은 월 799달러로 SOC-2와 HIPAA 준수 및 보존 3개월이 더해지고, Enterprise는 온프레미스 배포와 SAML SSO, 무제한 보존을 추가합니다. 소스는 Apache-2.0에 스타 6,100개이지만, 요금 페이지에서는 온프레미스를 Enterprise 단계에서만 다룹니다.',
+            verdict: 'Helicone은 프록시이므로 도입이 계측 프로젝트가 아니라 베이스 URL 변경으로 끝나고, 무엇을 트레이싱할지 누군가 정할 필요 없이 기본적으로 모든 호출에서 비용과 요청 데이터를 수집합니다. 그래서 넷 중 가치가 가장 빨리 나오며, 비용 추적이 가장 강한 면인 이유도 여기 있습니다. 요청 단위 비용 분해와 여러 키·모델에 걸친 지출 가시성이 핵심 제품이지, 트레이싱 위에 얹은 리포트 화면이 아닙니다. Hobby는 무료로 1만 요청, 스토리지 1GB, 보존 7일입니다. Pro는 월 79달러로 좌석 무제한에 보존 1개월, Team은 월 799달러로 SOC-2와 HIPAA 준수 및 보존 3개월이 더해지고, Enterprise는 온프레미스 배포와 SAML SSO, 무제한 보존을 추가합니다. 소스는 Apache-2.0에 스타 6,300개이지만, 요금 페이지에서는 온프레미스를 Enterprise 단계에서만 다룹니다.',
             pros: [
               '연동은 한 줄. SDK를 고칠 필요가 없고 OpenAI 호환 엔드포인트라면 무엇이든 동작',
               '비용 추적이 핵심 제품이며 부수적인 리포트 탭이 아님',
@@ -4969,7 +4969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 등급: '무료', Langfuse: 'Hobby: 5만 유닛, 2사용자', LangSmith: 'Developer: 5,000 트레이스, 1좌석', Helicone: 'Hobby: 1만 요청', PromptLayer: 'Free: 2,500요청, 5사용자' },
           { 등급: '무료 등급 보존', Langfuse: '데이터 조회 30일', LangSmith: '요금 페이지에 없음', Helicone: '7일', PromptLayer: '요금 페이지에 없음' },
           { 등급: '유료 시작가', Langfuse: 'Core 월 29달러', LangSmith: 'Plus 좌석당 월 39달러', Helicone: 'Pro 월 79달러', PromptLayer: 'Pro 월 49달러' },
-          { 등급: '사용량 과금', Langfuse: '10만 유닛당 8달러, 구간제', LangSmith: '컴퓨트 1.50달러·스토리지 1.00달러', Helicone: '무료 한도 초과분 사용량 과금', PromptLayer: '트랜잭션당 0.003달러' },
+          { 등급: '사용량 과금', Langfuse: '10만 유닛당 8달러, 구간제', LangSmith: 'LSU 사용량 과금, 1 LSU = 1.00달러', Helicone: '무료 한도 초과분 사용량 과금', PromptLayer: '트랜잭션당 0.003달러' },
           { 등급: '중간 등급', Langfuse: 'Pro 월 199달러, 보존 3년', LangSmith: 'Enterprise 맞춤', Helicone: 'Team 월 799달러', PromptLayer: 'Team 월 500달러' },
           { 등급: '컴플라이언스', Langfuse: 'Pro: SOC2·ISO27001·BAA', LangSmith: 'Enterprise', Helicone: 'Team: SOC-2·HIPAA', PromptLayer: 'Enterprise' },
           { 등급: '자체 호스팅 비용', Langfuse: '핵심 기능 무료', LangSmith: 'Enterprise만', Helicone: 'Enterprise만', PromptLayer: 'Enterprise만' },
@@ -5031,11 +5031,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Langfuse를 유일한 오픈소스 선택지로 소개하는 것',
-            whyItMatters: 'Helicone은 Apache-2.0에 스타 6,100개입니다. 정확한 구분은 Langfuse가 지원되는 무료 자체 호스팅 배포를 문서화한 반면 Helicone은 온프레미스를 Enterprise에서 판매한다는 점이지, 한쪽은 공개이고 다른 쪽은 비공개라는 이야기가 아닙니다.',
+            whyItMatters: 'Helicone은 Apache-2.0에 스타 6,300개입니다. 정확한 구분은 Langfuse가 지원되는 무료 자체 호스팅 배포를 문서화한 반면 Helicone은 온프레미스를 Enterprise에서 판매한다는 점이지, 한쪽은 공개이고 다른 쪽은 비공개라는 이야기가 아닙니다.',
           },
           {
             title: 'LangSmith의 좌석당 39달러를 청구액 전부로 읽는 것',
-            whyItMatters: 'Plus는 좌석 요금 위에 컴퓨트 단위 1.50달러, 스토리지 단위 1.00달러의 사용량 과금을 더합니다. 청구액은 인원수보다 에이전트 복잡도와 트레이스 양에 따라 늘어나므로, LangGraph를 많이 쓰는 팀은 사람을 늘리지 않고도 비용이 크게 뛰는 것을 볼 수 있습니다.',
+            whyItMatters: 'Plus는 좌석 요금 위에 LSU 단위(1 LSU = 1.00달러)의 사용량 과금을 더합니다. 청구액은 인원수보다 에이전트 복잡도와 트레이스 양에 따라 늘어나므로, LangGraph를 많이 쓰는 팀은 사람을 늘리지 않고도 비용이 크게 뛰는 것을 볼 수 있습니다.',
           },
           {
             title: 'Helicone의 프록시를 SDK 트레이싱과 동등하게 다루는 것',
@@ -5076,7 +5076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'LangSmith는 비용이 얼마인가요?',
-            a: 'Developer 등급은 무료이며 월 최대 5,000건의 기본 트레이스와 좌석 1개를 제공합니다. Plus는 좌석당 월 39달러로 기본 트레이스 1만 건까지와 소규모 서버리스 배포 1개를 무료로 포함합니다. 그 이상은 사용량 과금으로 LangChain 컴퓨트 단위 1.50달러, 스토리지 단위 1.00달러입니다. Enterprise는 맞춤 견적이며 자체 호스팅과 하이브리드 옵션을 제공합니다.',
+            a: 'Developer 등급은 무료이며 월 최대 5,000건의 기본 트레이스와 좌석 1개를 제공합니다. Plus는 좌석당 월 39달러로 기본 트레이스 1만 건까지와 소규모 서버리스 배포 1개를 무료로 포함합니다. 그 이상은 사용량 과금으로 LangChain Standard Unit(LSU) 단위이며 1 LSU는 1.00달러입니다. Enterprise는 맞춤 견적이며 자체 호스팅과 하이브리드 옵션을 제공합니다.',
           },
           {
             q: '이미 LangChain을 쓰는데 LangSmith와 Langfuse 중 무엇을 골라야 하나요?',
@@ -5084,7 +5084,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Helicone은 오픈소스인가요?',
-            a: '네, Apache-2.0이며 GitHub 스타는 약 6,100개인데 이 분야 비교 글 다수가 이를 놓칩니다. 다만 Helicone 요금 페이지는 온프레미스 배포를 Enterprise 단계에서만 판매하고 지원되는 무료 자체 호스팅 경로를 문서화하지 않았습니다. 소스가 공개돼 있다는 것이 사업자가 직접 운영을 지원한다는 뜻은 아닙니다.',
+            a: '네, Apache-2.0이며 GitHub 스타는 약 6,300개인데 이 분야 비교 글 다수가 이를 놓칩니다. 다만 Helicone 요금 페이지는 온프레미스 배포를 Enterprise 단계에서만 판매하고 지원되는 무료 자체 호스팅 경로를 문서화하지 않았습니다. 소스가 공개돼 있다는 것이 사업자가 직접 운영을 지원한다는 뜻은 아닙니다.',
           },
           {
             q: '이 제품들에 제휴 프로그램이 있나요?',
@@ -5101,7 +5101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '최종 결론',
         items: [
           '**Langfuse를 고르세요.** 가장 넓은 연동과 자체 호스팅 선택지를 원한다면. 다음 단계: 무료 Hobby 등급이나 Docker Compose 배포로 시작하고, RBAC나 감사 로그가 필요하면 Enterprise 목록을 확인하세요.',
-          '**LangSmith를 고르세요.** 스택이 LangChain이나 LangGraph라면. 다음 단계: 무료 Developer 등급으로 시작하고, 좌석 단가가 청구액의 전부가 아니므로 Plus로 올리기 전에 컴퓨트·스토리지 단위 사용량을 계산하세요.',
+          '**LangSmith를 고르세요.** 스택이 LangChain이나 LangGraph라면. 다음 단계: 무료 Developer 등급으로 시작하고, 좌석 단가가 청구액의 전부가 아니므로 Plus로 올리기 전에 LSU 사용량을 계산하세요.',
           '**Helicone을 고르세요.** 비용 가시성이 통증이고 오늘 당장 돌리고 싶다면. 다음 단계: 무료 등급에서 서비스 하나를 프록시로 보내고 비용 데이터가 사업자 청구서와 맞는지 확인하세요.',
           '**PromptLayer를 고르세요.** 프롬프트 버전 관리가 진짜 요구사항이라면. 다음 단계: 무료 등급을 쓰다가 데이터셋 기반 회귀 테스트가 필요해지면 Langfuse나 LangSmith로 옮기세요.',
           '**넷 다 건너뛰세요.** 프로덕션 이전 단계라면. 다음 단계: 사업자 대시보드를 쓰고, 여러분 말고 다른 사람이 시스템이 무엇을 했는지 봐야 할 때 다시 검토하세요.',
@@ -5117,7 +5117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/langfuse/langfuse', title: 'Langfuse 저장소', description: '스타 수와, ee/ 폴더를 제외하고 MIT임을 보여주는 LICENSE 파일 및 ClickHouse, Inc. 저작권 표기.' },
           { url: 'https://clickhouse.com/blog/clickhouse-acquires-langfuse-open-source-llm-observability', title: 'ClickHouse의 Langfuse 인수', description: '2026년 1월 16일 인수에 관한 ClickHouse의 공식 발표.' },
           { url: 'https://siliconangle.com/2026/01/16/database-maker-clickhouse-raises-400m-acquires-ai-observability-startup-langfuse/', title: 'ClickHouse 4억 달러 조달 및 Langfuse 인수(SiliconANGLE)', description: '인수 날짜와 시리즈 D 맥락에 대한 독립적인 확인.' },
-          { url: 'https://www.langchain.com/pricing-langsmith', title: 'LangSmith 요금', description: 'Developer, Plus, Enterprise 등급과 트레이스 한도, 단위당 1.50달러 및 1.00달러 요율.' },
+          { url: 'https://www.langchain.com/pricing-langsmith', title: 'LangSmith 요금', description: 'Developer, Plus, Enterprise 등급과 트레이스 한도, LSU 사용량 과금(1 LSU = 1.00달러).' },
           { url: 'https://www.helicone.ai/pricing', title: 'Helicone 요금', description: 'Hobby, Pro, Team, Enterprise 등급과 요청 한도, 보존 기간, 온프레미스가 Enterprise 전용이라는 안내.' },
           { url: 'https://github.com/Helicone/helicone', title: 'Helicone 저장소', description: '스타 수와 Apache-2.0 라이선스로, Helicone이 오픈소스임을 확인해 줍니다.' },
           { url: 'https://www.promptlayer.com/pricing', title: 'PromptLayer 요금', description: 'Free, Pro, Team, Enterprise 등급과 요청 한도, 사용자 수, 트랜잭션당 요율.' },
@@ -5141,7 +5141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026년 최고의 LLM 옵저버빌리티 도구: Langfuse, LangSmith, Helicone',
       description: 'LLM 옵저버빌리티를 위한 Langfuse, LangSmith, Helicone, PromptLayer 비교. 확인된 가격과 라이선스, 보존 기간에 더해 ClickHouse 인수와 자체 호스팅의 Enterprise 기능 장벽을 다룹니다.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-02',
       url: 'https://www.promptquorum.com/ko/local-llms/best-llm-observability-tools',
       inLanguage: 'ko',
       proficiencyLevel: 'Advanced',
@@ -5193,7 +5193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'LangSmith는 비용이 얼마인가요?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Developer는 무료로 월 최대 5,000건의 기본 트레이스와 좌석 1개를 제공합니다. Plus는 좌석당 월 39달러로 기본 트레이스 1만 건까지 포함하고, 그 이상은 사용량 과금으로 컴퓨트 단위 1.50달러, 스토리지 단위 1.00달러입니다. Enterprise는 맞춤 견적입니다.',
+            text: 'Developer는 무료로 월 최대 5,000건의 기본 트레이스와 좌석 1개를 제공합니다. Plus는 좌석당 월 39달러로 기본 트레이스 1만 건까지 포함하고, 그 이상은 사용량 과금으로 LangChain Standard Unit(LSU) 단위이며 1 LSU는 1.00달러입니다. Enterprise는 맞춤 견적입니다.',
           },
         },
         {
@@ -5201,7 +5201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Helicone은 오픈소스인가요?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: '네, Apache-2.0이며 GitHub 스타는 약 6,100개입니다. 다만 요금 페이지는 온프레미스 배포를 Enterprise 단계에서만 판매하고 지원되는 무료 자체 호스팅 경로를 문서화하지 않았습니다.',
+            text: '네, Apache-2.0이며 GitHub 스타는 약 6,300개입니다. 다만 요금 페이지는 온프레미스 배포를 Enterprise 단계에서만 판매하고 지원되는 무료 자체 호스팅 경로를 문서화하지 않았습니다.',
           },
         },
       ],
@@ -5209,12 +5209,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: '최고의 LLM 옵저버빌리티 도구(2026년 8월)',
+      name: '최고의 LLM 옵저버빌리티 도구(2026년)',
       inLanguage: 'ko',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: '종합 최고 — 스타 3만 3,900개, 무료 자체 호스팅 코어, 가장 넓은 프레임워크 지원. 다만 아홉 기능은 Enterprise 전용' },
-        { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'LangChain·LangGraph 팀에 최적 — 설정 없는 네이티브 트레이싱, 좌석당 월 39달러에 사용량 기반 컴퓨트·스토리지 단위' },
+        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: '종합 최고 — 스타 3만 6,900개, 무료 자체 호스팅 코어, 가장 넓은 프레임워크 지원. 다만 아홉 기능은 Enterprise 전용' },
+        { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'LangChain·LangGraph 팀에 최적 — 설정 없는 네이티브 트레이싱, 좌석당 월 39달러에 사용량 기반 LSU 과금' },
         { '@type': 'ListItem', position: 3, name: 'Helicone', description: '도입이 가장 빠르고 비용 가시성에 최적 — Apache-2.0 프록시, 한 줄 연동, 1만 요청까지 무료 이후 월 79달러' },
         { '@type': 'ListItem', position: 4, name: 'PromptLayer', description: '가장 가벼운 선택 — 프롬프트 버전 관리와 로깅, 월 2,500요청까지 무료, Pro 월 49달러' },
       ],

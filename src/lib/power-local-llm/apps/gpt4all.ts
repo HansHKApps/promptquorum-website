@@ -18,7 +18,7 @@ export const app: ToolRecord = {
   license: 'MIT',
   price: 'free',
   hardware: { ramGb: 8, vramGb: null, cpuOnly: true }, // per github.com/nomic-ai/gpt4all gpt4all-chat/system_requirements.md: 8GB RAM minimum for 3B-class LLMs (16GB general recommendation); minimum GPU spec is "any Direct3D 11/12 or OpenGL 2.1 capable" device — i.e. no discrete GPU required, CPU inference is the default path, verified 2026-09-13
-  stars: 77386,
+  stars: 77346,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat'],

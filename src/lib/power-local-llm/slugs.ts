@@ -11,7 +11,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'ai-tool-licenses-explained':                  'ai-tool-licenses-explained',
 
   // Category 1 — Easiest Desktop Apps
-  'lm-studio-vs-jan-vs-gpt4all-2026':            'lm-studio-vs-jan-vs-gpt4all-2026',
+  'lm-studio-vs-jan-vs-gpt4all':                 'lm-studio-vs-jan-vs-gpt4all-2026',
   'easiest-local-ai-app-windows-mac-linux':      'easiest-local-ai-app-windows-mac-linux',
   'local-ai-app-non-technical-users':            'local-ai-app-non-technical-users',
   'best-local-ai-app-low-end-pc':                'best-local-ai-app-low-end-pc',

@@ -15,7 +15,7 @@ export const app: ToolRecord = {
   license: 'Apache-2.0',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true },
-  stars: 46152, // github.com/milvus-io/milvus, verified 2026-09-18
+  stars: 46558, // github.com/milvus-io/milvus, verified 2026-09-18
   addedDate: '2026-09-18',
   status: 'listed',
   uses: ['build', 'docs'],
@@ -35,6 +35,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { dockerDeploy: true, hybridSearch: true, metadataFilter: true, clustered: true, managedCloud: true },
   lastVerifiedDate: '2026-09-18',
-  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2026-11-02', // GitHub API (latest release or push, whichever is newer), read 2026-11-02
   lastUpstreamUpdateSource: 'https://github.com/milvus-io/milvus',
 }

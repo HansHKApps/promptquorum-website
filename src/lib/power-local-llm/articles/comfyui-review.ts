@@ -9,13 +9,21 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+import { formatDisplayDate } from '@/lib/formatDisplayDate'
+
+// Last upstream update comes from the directory tile (App Maintenance Recency rule); rendered via formatDisplayDate.
+const upd = (lang: Language) =>
+  formatDisplayDate(localAiApps.find((a) => a.slug === 'comfyui')?.lastUpstreamUpdate, lang)
+// Release date of the tagged version named in the same bullet (github.com/Comfy-Org/ComfyUI/releases/tag/v0.43.0).
+const rel = (lang: Language) => formatDisplayDate('2026-10-27', lang)
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-en.webp',
@@ -24,7 +32,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ComfyUI is a free, open-source, node-based visual interface for running diffusion models — Stable Diffusion, SDXL, SD 3.5, Flux, and others — locally on your own GPU. It is not a model itself: ComfyUI is the engine and workflow editor that loads a diffusion model and lets you wire together each generation step (model loading, prompt encoding, sampling, upscaling) as a graph of connected nodes, rather than a fixed set of tabs and sliders. This review covers what ComfyUI actually does, how its node-graph approach differs from simpler UIs like AUTOMATIC1111 and Fooocus, its GPL-3.0 license, hardware requirements by model, ComfyUI Manager for custom nodes, and the separate paid Comfy Cloud hosting tier versus the free self-hosted core.',
     metaDescription:
-      'ComfyUI review 2026: GPL-3.0 license, node-graph workflow explained, VRAM needs for SD 1.5/SDXL/Flux, ComfyUI Manager, Comfy Cloud pricing, and how it compares with AUTOMATIC1111, InvokeAI, and Fooocus.',
+      'ComfyUI review: free GPL-3.0 node-based UI for Stable Diffusion and Flux. VRAM needs by model, ComfyUI Manager, Comfy Cloud pricing and alternatives.',
     twitterDescription:
       'ComfyUI review 2026: the free node-based engine for running Stable Diffusion and Flux locally — GPL-3.0 license, VRAM needs, ComfyUI Manager, Comfy Cloud pricing, and how it stacks up against AUTOMATIC1111 and Fooocus.',
     audience:
@@ -45,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion 1.5', 'Stable Diffusion XL 1.0', 'Stable Diffusion 3.5', 'FLUX.1 schnell', 'FLUX.1 dev', 'FLUX.2'],
     current_hardware_mentioned: ['4 GB VRAM', '6 GB VRAM', '8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'NVIDIA RTX 3060', 'NVIDIA RTX 4090', 'RTX PRO 6000 Blackwell'],
     leadAnswerBlock:
-      '**ComfyUI is a free, open-source, node-based interface for running diffusion models like Stable Diffusion and Flux locally — GPL-3.0 licensed, self-hostable on your own GPU at no cost.** Unlike AUTOMATIC1111\'s tab-based layout or Fooocus\'s one-click simplicity, ComfyUI represents every generation step (model loading, prompt encoding, sampling, upscaling) as a node you connect in a visual graph, which gives power users full pipeline control and reproducible, shareable workflow files at the cost of a steeper learning curve. Hardware needs are set by whichever model you load — as little as 4–6 GB VRAM for Stable Diffusion 1.5 up to 24 GB+ for Flux at full precision — not by ComfyUI itself. Comfy Org, the organization behind the project, also sells a separate paid hosted service, Comfy Cloud, for readers who do not want to run their own GPU; verify current tiers and pricing on [comfy.org](https://www.comfy.org) before budgeting, as SaaS pricing changes over time.',
+      '**ComfyUI is a free, open-source, node-based interface for running diffusion models like Stable Diffusion and Flux locally. It is GPL-3.0 licensed, free to self-host. VRAM needs depend on the model: about 4 GB for SD 1.5, 24 GB+ for Flux. Comfy Cloud is a separate paid service.**',
     quickAnswerTop: {
       en: {
         question: 'What is ComfyUI and is it free to use?',
@@ -57,9 +65,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ComfyUI Manager installs and updates community custom nodes from inside the interface.',
           'Runs SD 1.5 on roughly 4–6 GB VRAM; Flux at full precision wants 24 GB+.',
           'Comfy Cloud (paid, separate product) starts at $20/month for 4,200 monthly credits on hosted Blackwell RTX PRO 6000 GPUs.',
-          'Latest tagged release: v0.36.0.',
+          'Latest tagged release: v0.43.0 (' + rel('en') + '). Last upstream update: ' + upd('en') + ' (newest commit or release in the [Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI) repository).',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -105,7 +113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ComfyUI does not generate images on its own — it needs a diffusion model loaded into it, such as [Stable Diffusion](/power-local-llm/stable-diffusion-review), SDXL, SD 3.5, or Flux. ComfyUI\'s job is to load that model\'s weights, run inference on your own GPU, and expose every stage of that process (checkpoint loading, text-prompt encoding, sampling, VAE decoding, upscaling) as a separate, connectable node.',
           'This puts ComfyUI in the same category as [AUTOMATIC1111\'s Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui), [InvokeAI](https://github.com/invoke-ai/InvokeAI), and [Fooocus](https://github.com/lllyasviel/Fooocus): all four are front-end interfaces for the same underlying diffusion models, not competing models themselves. Where they differ is the interaction paradigm — AUTOMATIC1111 and Fooocus use conventional tabs, buttons, and sliders; ComfyUI uses a node graph.',
           'ComfyUI was created by a developer known publicly as comfyanonymous, whose real name — Yannik Marek — became public through later interviews and podcast appearances. The project was first released on [GitHub](https://github.com/comfyanonymous/ComfyUI) in January 2023. Marek was hired by [Stability AI](https://stability.ai) in June 2023, and that direct employment relationship ended by June 2024; on June 21, 2024, Comfy Org was formed as a dedicated organization with Marek as co-founder alongside other core ComfyUI developers, and the project\'s primary GitHub repository now lives under the [Comfy-Org](https://github.com/Comfy-Org/ComfyUI) organization rather than Marek\'s personal account. Comfy Org joined the Linux Foundation\'s Open Model Initiative in August 2024.',
-          'ComfyUI\'s ecosystem has grown well beyond Stable Diffusion: as of September 2026 the project and its custom-node ecosystem support image models (Stable Diffusion, SDXL, SD 3.5, Flux.1 and Flux.2, Qwen-Image), video models (Wan, LTX-Video, HunyuanVideo), and audio and 3D generation nodes — verify the current supported-model list on the [official ComfyUI GitHub repository](https://github.com/Comfy-Org/ComfyUI) before planning a specific workflow, since new model support ships frequently.',
+          'ComfyUI\'s ecosystem has grown well beyond Stable Diffusion: the project and its custom-node ecosystem support image models (Stable Diffusion, SDXL, SD 3.5, Flux.1 and Flux.2, Qwen-Image), video models (Wan, LTX-Video, HunyuanVideo), and audio and 3D generation nodes — verify the current supported-model list on the [official ComfyUI GitHub repository](https://github.com/Comfy-Org/ComfyUI) before planning a specific workflow, since new model support ships frequently.',
         ],
       },
       nodeGraphWorkflow: {
@@ -159,7 +167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPL-3.0\'s copyleft condition matters mainly for developers, not for readers who just want to generate images: if you modify ComfyUI\'s core code and distribute that modified version, GPL-3.0 requires you to release your changes under the same license. According to a [maintainer discussion on the official repository](https://github.com/comfyanonymous/ComfyUI/issues/3362), custom nodes that extend ComfyUI through its plugin interface (living in the `custom_nodes` folder) are generally treated as separate works that can carry their own license — but a fork or direct modification of ComfyUI\'s own core code is a derivative work and must stay GPL-3.0. Verify the license of any specific custom node you install, since community-authored nodes are not covered by ComfyUI\'s own license and vary in terms.',
           '**ComfyUI\'s GPL-3.0 license says nothing about what you may do with the images you generate — that is governed entirely by the license of whichever diffusion model you load.** Stable Diffusion 1.5, SD 2.1, and SDXL use the CreativeML Open RAIL-M / RAIL++-M license with no commercial revenue cap; SD 3 and SD 3.5 use the Stability AI Community License, free only under $1,000,000 in annual revenue; Flux.1 schnell is Apache 2.0 (unrestricted), while Flux.1 dev requires a separate commercial license from [Black Forest Labs](https://blackforestlabs.ai) for commercial use. Running any of these models inside ComfyUI does not change or override their license terms.',
         ],
-        note: 'License terms are legal text, not marketing copy — this section summarizes publicly published terms as of 2026-09-06 but is not legal advice. Read the actual `LICENSE` file on the GitHub repository, and the license for whichever model you load, before commercial deployment.',
+        note: 'License terms are legal text, not marketing copy — this section summarizes publicly published terms at the time of the last update but is not legal advice. Read the actual `LICENSE` file on the GitHub repository, and the license for whichever model you load, before commercial deployment.',
       },
       hardwareRequirements: {
         id: 'hardware-requirements',
@@ -179,7 +187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Pricing: Free Self-Hosting vs. Comfy Cloud',
         content: [
           '**Self-hosting ComfyUI is free — you pay only for your own hardware and electricity.** The software itself, under its GPL-3.0 license, has no subscription, no revenue cap, and no registration requirement for local or offline use.',
-          'Comfy Org separately sells Comfy Cloud, a paid hosted-GPU service for readers who do not want to run their own hardware. As of the pricing published on [comfy.org](https://www.comfy.org/pricing), Comfy Cloud offers a free tier with a limited number of GPU runs and no credit card required, then paid monthly subscriptions: Standard at $20/month (4,200 monthly credits, no custom-model imports), Creator at $35/month (7,400 monthly credits, custom-model imports included), Pro at $100/month (21,100 monthly credits, up to one-hour workflow runtime), and Team at $700/month (147,700 monthly credits, shared team access). Annual billing is offered at a discount on each tier. Comfy Cloud runs on hosted Blackwell RTX PRO 6000 GPUs with 96 GB VRAM, and GPU time is billed per second of active processing rather than per generation.',
+          'Comfy Org separately sells Comfy Cloud, a paid hosted-GPU service for readers who do not want to run their own hardware. As of the pricing published on [comfy.org](https://www.comfy.org/pricing), Comfy Cloud offers a free tier with a limited number of free GPU runs, then paid monthly subscriptions: Standard at $20/month (4,200 monthly credits, no custom-model imports), Creator at $35/month (7,400 monthly credits, custom-model imports included), Pro at $100/month (21,100 monthly credits, up to one-hour workflow runtime), and Team at $700/month (147,700 monthly credits, shared team access). Annual billing is offered at a discount on each tier. Comfy Cloud runs on hosted Blackwell RTX PRO 6000 GPUs with 96 GB VRAM, and GPU time is billed per second of active processing rather than per generation.',
           'Comfy Cloud is a distinct commercial product from the free, self-hosted, open-source ComfyUI project — you never need it to use ComfyUI on your own GPU, and nothing in the GPL-3.0 license requires paying for it.',
         ],
         note: 'Comfy Cloud\'s tier names, credit amounts, and prices are SaaS pricing that Comfy Org has changed more than once in 2026 — confirm current tier names and pricing directly on [comfy.org/pricing](https://www.comfy.org/pricing) before budgeting for a hosted plan. This article does not guess or round current dollar figures.',
@@ -277,6 +285,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Yes. ComfyUI is free, open-source software under the GPL-3.0 license — there is no cost to download, self-host, modify, or use it commercially. Comfy Org separately sells Comfy Cloud, a paid hosted-GPU subscription starting at $20/month, for readers who do not want to run their own GPU, but this is optional and not required to use ComfyUI locally.',
           },
           {
+            q: 'What is ComfyUI used for?',
+            a: 'ComfyUI is used to generate images and, with the right models and custom nodes, video on your own computer: you load a diffusion model such as Stable Diffusion, SDXL, or Flux and build the pipeline (prompt encoding, sampling, upscaling) as a node graph that you can save as a .json workflow and reload later. Its custom-node ecosystem also covers video models such as Wan and LTX-Video, plus audio and 3D generation.',
+          },
+          {
             q: 'What is the difference between ComfyUI and Stable Diffusion?',
             a: 'Stable Diffusion is the diffusion model — the weights and code that turn a text prompt into an image. ComfyUI is one of several front-end interfaces (alongside AUTOMATIC1111, InvokeAI, and Fooocus) that loads that model and lets you run it. ComfyUI does not generate images on its own; it needs a model like Stable Diffusion, SDXL, or Flux loaded into it first.',
           },
@@ -293,8 +305,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'ComfyUI is licensed under GPL-3.0 (GNU General Public License version 3.0), a free and open-source copyleft license. It is free to self-host and use commercially with no revenue threshold. This license covers the ComfyUI software itself — it does not change or override the separate license of whichever diffusion model (Stable Diffusion, Flux, etc.) you load and run inside it.',
           },
           {
-            q: 'How much VRAM does ComfyUI need?',
-            a: 'VRAM needs come from the model you load, not from ComfyUI itself: roughly 4 GB for Stable Diffusion 1.5, 6–12 GB for SDXL, and 12 GB (FP8 quantized) to 24 GB+ (FP16 full precision) for Flux. ComfyUI is commonly reported to add somewhat less memory overhead than AUTOMATIC1111 for the same model, though exact figures vary by workflow.',
+            q: 'How much VRAM does ComfyUI need, and what are the system requirements?',
+            a: 'VRAM needs come from the model you load, not from ComfyUI itself: roughly 4 GB for Stable Diffusion 1.5, 6–12 GB for SDXL, and 12 GB (FP8 quantized) to 24 GB+ (FP16 full precision) for Flux. ComfyUI is commonly reported to add somewhat less memory overhead than AUTOMATIC1111 for the same model, though exact figures vary by workflow. ComfyUI publishes no fixed minimum VRAM or RAM; per its README, the Windows portable build runs on an Nvidia GPU or on CPU only, and the v0.43.0 NVIDIA portable archive is about 2 GB to download, before any model files.',
           },
           {
             q: 'What is ComfyUI Manager?',
@@ -345,8 +357,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-de.webp',
@@ -355,7 +367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ComfyUI ist eine kostenlose, quelloffene, node-basierte visuelle Oberfläche zum lokalen Ausführen von Diffusionsmodellen — Stable Diffusion, SDXL, SD 3.5, Flux und weitere — auf der eigenen GPU. Es ist kein Modell selbst: ComfyUI ist die Engine und der Workflow-Editor, der ein Diffusionsmodell lädt und es erlaubt, jeden einzelnen Schritt der Bildgenerierung (Modell laden, Prompt-Encoding, Sampling, Upscaling) als Graph aus verbundenen Nodes zusammenzustellen, statt eines festen Satzes aus Tabs und Reglern. Diese Rezension erklärt, was ComfyUI tatsächlich macht, wie sich sein Node-Graph-Ansatz von einfacheren Oberflächen wie AUTOMATIC1111 und Fooocus unterscheidet, die GPL-3.0-Lizenz, die Hardware-Anforderungen je Modell, den ComfyUI Manager für Custom Nodes und den separaten kostenpflichtigen Comfy-Cloud-Hosting-Tarif im Vergleich zum kostenlosen selbst gehosteten Kern.',
     metaDescription:
-      'ComfyUI-Rezension 2026: GPL-3.0-Lizenz, Node-Graph-Workflow erklärt, VRAM-Bedarf für SD 1.5/SDXL/Flux, ComfyUI Manager, Comfy-Cloud-Preise und der Vergleich mit AUTOMATIC1111, InvokeAI und Fooocus.',
+      'ComfyUI-Rezension: kostenloser Node-Editor (GPL-3.0) für Stable Diffusion und Flux, VRAM-Bedarf je Modell, ComfyUI Manager, Comfy-Cloud-Preise.',
     twitterDescription:
       'ComfyUI-Rezension 2026: die kostenlose node-basierte Engine für Stable Diffusion und Flux lokal — GPL-3.0-Lizenz, VRAM-Bedarf, ComfyUI Manager, Comfy-Cloud-Preise und der Vergleich mit AUTOMATIC1111 und Fooocus.',
     audience:
@@ -376,7 +388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion 1.5', 'Stable Diffusion XL 1.0', 'Stable Diffusion 3.5', 'FLUX.1 schnell', 'FLUX.1 dev', 'FLUX.2'],
     current_hardware_mentioned: ['4 GB VRAM', '6 GB VRAM', '8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'NVIDIA RTX 3060', 'NVIDIA RTX 4090', 'RTX PRO 6000 Blackwell'],
     leadAnswerBlock:
-      '**ComfyUI ist eine kostenlose, quelloffene, node-basierte Oberfläche zum lokalen Ausführen von Diffusionsmodellen wie Stable Diffusion und Flux — GPL-3.0-lizenziert und ohne Kosten auf der eigenen GPU selbst zu hosten.** Anders als AUTOMATIC1111s Tab-Layout oder Fooocus\' Ein-Klick-Einfachheit stellt ComfyUI jeden Generierungsschritt (Modell laden, Prompt-Encoding, Sampling, Upscaling) als Node in einem visuellen Graphen dar, den man selbst verbindet — das gibt Power-Usern volle Kontrolle über die Pipeline und reproduzierbare, teilbare Workflow-Dateien, auf Kosten einer steileren Lernkurve. Der Hardware-Bedarf wird durch das geladene Modell bestimmt — nur 4–6 GB VRAM für Stable Diffusion 1.5 bis 24 GB+ für Flux in voller Präzision — nicht durch ComfyUI selbst. Comfy Org, die Organisation hinter dem Projekt, verkauft zudem separat einen kostenpflichtigen Hosting-Dienst namens Comfy Cloud für Leser ohne eigene GPU; prüfen Sie aktuelle Tarife und Preise auf [comfy.org](https://www.comfy.org), bevor Sie damit kalkulieren, da sich SaaS-Preise mit der Zeit ändern.',
+      '**ComfyUI ist eine kostenlose, quelloffene, knotenbasierte Oberfläche, um Diffusionsmodelle wie Stable Diffusion und Flux lokal auszuführen. GPL-3.0-lizenziert, frei selbst hostbar. Der VRAM-Bedarf hängt vom Modell ab: etwa 4 GB für SD 1.5, 24 GB+ für Flux. Comfy Cloud ist ein separater, kostenpflichtiger Dienst.**',
     quickAnswerTop: {
       de: {
         question: 'Was ist ComfyUI und ist es kostenlos?',
@@ -388,8 +400,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ComfyUI Manager installiert und aktualisiert Community-Custom-Nodes direkt in der Oberfläche.',
           'Läuft mit SD 1.5 auf etwa 4–6 GB VRAM; Flux in voller Präzision benötigt 24 GB+.',
           'Comfy Cloud (kostenpflichtig, separates Produkt) startet bei 20 USD/Monat für 4.200 monatliche Credits auf gehosteten Blackwell-RTX-PRO-6000-GPUs.',
+          'Neuestes getaggtes Release: v0.43.0 (' + rel('de') + '). Letztes Upstream-Update: ' + upd('de') + ' (jüngster Commit bzw. Release im Repository [Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI)).',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -435,7 +448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ComfyUI erzeugt keine Bilder aus sich selbst heraus — es braucht ein geladenes Diffusionsmodell, etwa [Stable Diffusion](/de/power-local-llm/stable-diffusion-review), SDXL, SD 3.5 oder Flux. Die Aufgabe von ComfyUI ist es, die Gewichte dieses Modells zu laden, die Inferenz auf der eigenen GPU auszuführen und jede Phase dieses Prozesses (Checkpoint laden, Text-Prompt-Encoding, Sampling, VAE-Decoding, Upscaling) als separaten, verbindbaren Node offenzulegen.',
           'Damit gehört ComfyUI in dieselbe Kategorie wie [AUTOMATIC1111s Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui), [InvokeAI](https://github.com/invoke-ai/InvokeAI) und [Fooocus](https://github.com/lllyasviel/Fooocus): Alle vier sind Oberflächen für dieselben zugrunde liegenden Diffusionsmodelle, keine konkurrierenden Modelle selbst. Der Unterschied liegt im Interaktionsmodell — AUTOMATIC1111 und Fooocus nutzen klassische Tabs, Buttons und Regler; ComfyUI nutzt einen Node-Graph.',
           'ComfyUI wurde von einem Entwickler erstellt, der öffentlich als comfyanonymous bekannt ist; sein echter Name — Yannik Marek — wurde später durch Interviews und Podcast-Auftritte öffentlich. Das Projekt wurde erstmals im Januar 2023 auf [GitHub](https://github.com/comfyanonymous/ComfyUI) veröffentlicht. Marek wurde im Juni 2023 von [Stability AI](https://stability.ai) eingestellt, und dieses direkte Anstellungsverhältnis endete bis Juni 2024; am 21. Juni 2024 wurde Comfy Org als eigenständige Organisation gegründet, mit Marek als Mitgründer neben weiteren Kernentwicklern von ComfyUI, und das primäre GitHub-Repository des Projekts liegt inzwischen bei der Organisation [Comfy-Org](https://github.com/Comfy-Org/ComfyUI) statt bei Mareks persönlichem Konto. Comfy Org trat im August 2024 der Open Model Initiative der Linux Foundation bei.',
-          'Das ComfyUI-Ökosystem ist längst über Stable Diffusion hinausgewachsen: Stand September 2026 unterstützen das Projekt und sein Custom-Node-Ökosystem Bildmodelle (Stable Diffusion, SDXL, SD 3.5, Flux.1 und Flux.2, Qwen-Image), Videomodelle (Wan, LTX-Video, HunyuanVideo) sowie Audio- und 3D-Generierungs-Nodes — prüfen Sie die aktuelle Liste unterstützter Modelle im [offiziellen ComfyUI-GitHub-Repository](https://github.com/Comfy-Org/ComfyUI), bevor Sie einen konkreten Workflow planen, da neue Modell-Unterstützung häufig hinzukommt.',
+          'Das ComfyUI-Ökosystem ist längst über Stable Diffusion hinausgewachsen: unterstützen das Projekt und sein Custom-Node-Ökosystem Bildmodelle (Stable Diffusion, SDXL, SD 3.5, Flux.1 und Flux.2, Qwen-Image), Videomodelle (Wan, LTX-Video, HunyuanVideo) sowie Audio- und 3D-Generierungs-Nodes — prüfen Sie die aktuelle Liste unterstützter Modelle im [offiziellen ComfyUI-GitHub-Repository](https://github.com/Comfy-Org/ComfyUI), bevor Sie einen konkreten Workflow planen, da neue Modell-Unterstützung häufig hinzukommt.',
         ],
       },
       nodeGraphWorkflow: {
@@ -489,7 +502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Die Copyleft-Bedingung von GPL-3.0 ist vor allem für Entwickler relevant, nicht für Leser, die nur Bilder erzeugen wollen: Wer den Kerncode von ComfyUI verändert und diese veränderte Version weitergibt, muss laut GPL-3.0 seine Änderungen unter derselben Lizenz veröffentlichen. Laut einer [Maintainer-Diskussion im offiziellen Repository](https://github.com/comfyanonymous/ComfyUI/issues/3362) werden Custom Nodes, die ComfyUI über seine Plugin-Schnittstelle erweitern (im `custom_nodes`-Ordner), grundsätzlich als eigenständige Werke mit eigener Lizenz behandelt — ein Fork oder eine direkte Änderung des ComfyUI-Kerncodes ist dagegen ein abgeleitetes Werk und muss GPL-3.0 bleiben. Prüfen Sie die Lizenz jedes einzelnen Custom Nodes, den Sie installieren, da von der Community erstellte Nodes nicht unter ComfyUIs eigener Lizenz stehen und in den Bedingungen variieren.',
           '**ComfyUIs GPL-3.0-Lizenz sagt nichts darüber aus, was Sie mit erzeugten Bildern tun dürfen — das wird ausschließlich durch die Lizenz des jeweils geladenen Diffusionsmodells geregelt.** Stable Diffusion 1.5, SD 2.1 und SDXL stehen unter der CreativeML-Open-RAIL-M-/RAIL++-M-Lizenz ohne kommerzielle Umsatzgrenze; SD 3 und SD 3.5 nutzen die Stability AI Community License, kostenlos nur unter 1 Mio. USD Jahresumsatz; FLUX.1 schnell steht unter Apache 2.0 (unbeschränkt), während FLUX.1 dev für kommerzielle Nutzung eine separate kommerzielle Lizenz von [Black Forest Labs](https://blackforestlabs.ai) erfordert. Diese Modelle in ComfyUI auszuführen ändert oder überschreibt deren Lizenzbedingungen nicht.',
         ],
-        note: 'Lizenzbedingungen sind Rechtstext, kein Marketingtext — dieser Abschnitt fasst öffentlich veröffentlichte Bedingungen Stand 2026-09-06 zusammen, ist aber keine Rechtsberatung. Lesen Sie vor kommerziellem Einsatz die tatsächliche `LICENSE`-Datei im GitHub-Repository sowie die Lizenz des jeweils geladenen Modells.',
+        note: 'Lizenzbedingungen sind Rechtstext, kein Marketingtext — dieser Abschnitt fasst öffentlich veröffentlichte Bedingungen zum Zeitpunkt der letzten Aktualisierung zusammen, ist aber keine Rechtsberatung. Lesen Sie vor kommerziellem Einsatz die tatsächliche `LICENSE`-Datei im GitHub-Repository sowie die Lizenz des jeweils geladenen Modells.',
       },
       hardwareRequirements: {
         id: 'hardware-requirements',
@@ -509,7 +522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preise: Kostenloses Self-Hosting vs. Comfy Cloud',
         content: [
           '**Self-Hosting von ComfyUI ist kostenlos — Sie zahlen nur für eigene Hardware und Strom.** Die Software selbst hat unter ihrer GPL-3.0-Lizenz kein Abo, keine Umsatzgrenze und keine Registrierungspflicht für lokale oder Offline-Nutzung.',
-          'Comfy Org verkauft separat Comfy Cloud, einen kostenpflichtigen gehosteten GPU-Dienst für Leser ohne eigene Hardware. Laut den auf [comfy.org](https://www.comfy.org/pricing) veröffentlichten Preisen bietet Comfy Cloud eine kostenlose Stufe mit einer begrenzten Anzahl an GPU-Läufen ohne Kreditkarte, danach kostenpflichtige Monatsabos: Standard für 20 USD/Monat (4.200 monatliche Credits, keine Custom-Model-Imports), Creator für 35 USD/Monat (7.400 monatliche Credits, Custom-Model-Imports inklusive), Pro für 100 USD/Monat (21.100 monatliche Credits, bis zu einer Stunde Workflow-Laufzeit) und Team für 700 USD/Monat (147.700 monatliche Credits, gemeinsamer Team-Zugriff). Jährliche Abrechnung wird bei jeder Stufe mit Rabatt angeboten. Comfy Cloud läuft auf gehosteten Blackwell-RTX-PRO-6000-GPUs mit 96 GB VRAM, und GPU-Zeit wird pro Sekunde aktiver Verarbeitung abgerechnet, nicht pro Generierung.',
+          'Comfy Org verkauft separat Comfy Cloud, einen kostenpflichtigen gehosteten GPU-Dienst für Leser ohne eigene Hardware. Laut den auf [comfy.org](https://www.comfy.org/pricing) veröffentlichten Preisen bietet Comfy Cloud eine kostenlose Stufe mit einer begrenzten Anzahl kostenloser GPU-Läufe, danach kostenpflichtige Monatsabos: Standard für 20 USD/Monat (4.200 monatliche Credits, keine Custom-Model-Imports), Creator für 35 USD/Monat (7.400 monatliche Credits, Custom-Model-Imports inklusive), Pro für 100 USD/Monat (21.100 monatliche Credits, bis zu einer Stunde Workflow-Laufzeit) und Team für 700 USD/Monat (147.700 monatliche Credits, gemeinsamer Team-Zugriff). Jährliche Abrechnung wird bei jeder Stufe mit Rabatt angeboten. Comfy Cloud läuft auf gehosteten Blackwell-RTX-PRO-6000-GPUs mit 96 GB VRAM, und GPU-Zeit wird pro Sekunde aktiver Verarbeitung abgerechnet, nicht pro Generierung.',
           'Comfy Cloud ist ein eigenständiges kommerzielles Produkt, getrennt vom kostenlosen, selbst gehosteten Open-Source-Projekt ComfyUI — Sie brauchen es nie, um ComfyUI auf der eigenen GPU zu nutzen, und nichts in der GPL-3.0-Lizenz verlangt eine Bezahlung dafür.',
         ],
         note: 'Comfy Clouds Tarifnamen, Credit-Mengen und Preise sind SaaS-Preise, die Comfy Org 2026 bereits mehrfach geändert hat — bestätigen Sie aktuelle Tarife und Preise direkt auf [comfy.org/pricing](https://www.comfy.org/pricing), bevor Sie mit einem Hosting-Plan kalkulieren. Dieser Artikel schätzt oder rundet keine aktuellen Dollarbeträge.',
@@ -607,6 +620,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Ja. ComfyUI ist kostenlose, quelloffene Software unter der GPL-3.0-Lizenz — es entstehen keine Kosten fürs Herunterladen, Self-Hosting, Verändern oder kommerzielle Nutzung. Comfy Org verkauft separat Comfy Cloud, ein kostenpflichtiges gehostetes GPU-Abo ab 20 USD/Monat, für Leser ohne eigene GPU — das ist optional und für die lokale Nutzung von ComfyUI nicht erforderlich.',
           },
           {
+            q: 'Wofür wird ComfyUI verwendet?',
+            a: 'ComfyUI dient dazu, Bilder und – mit passenden Modellen und Custom Nodes – auch Videos auf dem eigenen Rechner zu erzeugen: Sie laden ein Diffusionsmodell wie Stable Diffusion, SDXL oder Flux und bauen die Pipeline (Prompt-Kodierung, Sampling, Upscaling) als Node-Graph, den Sie als .json-Workflow speichern und später wieder laden können. Das Custom-Node-Ökosystem deckt außerdem Videomodelle wie Wan und LTX-Video sowie Audio- und 3D-Generierung ab.',
+          },
+          {
             q: 'Was ist der Unterschied zwischen ComfyUI und Stable Diffusion?',
             a: 'Stable Diffusion ist das Diffusionsmodell — die Gewichte und der Code, die einen Text-Prompt in ein Bild verwandeln. ComfyUI ist eine von mehreren Oberflächen (neben AUTOMATIC1111, InvokeAI und Fooocus), die dieses Modell lädt und ausführt. ComfyUI erzeugt keine Bilder aus sich selbst heraus; es braucht zunächst ein geladenes Modell wie Stable Diffusion, SDXL oder Flux.',
           },
@@ -623,8 +640,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'ComfyUI steht unter GPL-3.0 (GNU General Public License Version 3.0), einer freien Open-Source-Copyleft-Lizenz. Es ist kostenlos zu hosten und kommerziell zu nutzen, ohne Umsatzschwelle. Diese Lizenz deckt die ComfyUI-Software selbst ab — sie ändert oder überschreibt nicht die separate Lizenz des jeweiligen Diffusionsmodells (Stable Diffusion, Flux usw.), das Sie darin laden und ausführen.',
           },
           {
-            q: 'Wie viel VRAM braucht ComfyUI?',
-            a: 'Der VRAM-Bedarf kommt vom geladenen Modell, nicht von ComfyUI selbst: etwa 4 GB für Stable Diffusion 1.5, 6–12 GB für SDXL und 12 GB (FP8-quantisiert) bis 24 GB+ (FP16, volle Präzision) für Flux. ComfyUI wird häufig als etwas speicherschonender als AUTOMATIC1111 für dasselbe Modell beschrieben, genaue Werte variieren aber je nach Workflow.',
+            q: 'Wie viel VRAM braucht ComfyUI, und welche Systemanforderungen gelten?',
+            a: 'Der VRAM-Bedarf kommt vom geladenen Modell, nicht von ComfyUI selbst: etwa 4 GB für Stable Diffusion 1.5, 6–12 GB für SDXL und 12 GB (FP8-quantisiert) bis 24 GB+ (FP16, volle Präzision) für Flux. ComfyUI wird häufig als etwas speicherschonender als AUTOMATIC1111 für dasselbe Modell beschrieben, genaue Werte variieren aber je nach Workflow. ComfyUI veröffentlicht keinen festen Mindestwert für VRAM oder RAM; laut README läuft der portable Windows-Build auf einer Nvidia-GPU oder nur auf der CPU, und das NVIDIA-Archiv von v0.43.0 umfasst etwa 2 GB Download, noch ohne Modelldateien.',
           },
           {
             q: 'Was ist der ComfyUI Manager?',
@@ -675,17 +692,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-es.webp',
     title: 'ComfyUI Análisis: Interfaz gratuita basada en nodos para Stable Diffusion y Flux',
-    seoTitle: 'ComfyUI Análisis: Editor de nodos para generación de imágenes local',
+    seoTitle: 'ComfyUI: qué es, si es gratis y requisitos (análisis)',
     intro:
       'ComfyUI es una interfaz visual gratuita, de código abierto y basada en nodos para ejecutar modelos de difusión — Stable Diffusion, SDXL, SD 3.5, Flux y otros — de forma local en tu propia GPU. No es un modelo en sí: ComfyUI es el motor y el editor de workflows que carga un modelo de difusión y te permite conectar cada paso de la generación de imágenes (carga del modelo, codificación del prompt, muestreo, escalado) como un grafo de nodos conectados, en lugar de un conjunto fijo de pestañas y controles deslizantes. Este análisis explica qué hace realmente ComfyUI, en qué se diferencia su enfoque de grafo de nodos de interfaces más simples como AUTOMATIC1111 y Fooocus, su licencia GPL-3.0, los requisitos de hardware según el modelo, ComfyUI Manager para nodos personalizados, y el nivel de pago independiente Comfy Cloud frente al núcleo gratuito autoalojado.',
     metaDescription:
-      'Análisis de ComfyUI 2026: licencia GPL-3.0, workflow de grafo de nodos explicado, VRAM necesaria para SD 1.5/SDXL/Flux, ComfyUI Manager, precios de Comfy Cloud y comparación con AUTOMATIC1111, InvokeAI y Fooocus.',
+      'Análisis de ComfyUI: qué es, si es gratis (GPL-3.0), requisitos de VRAM por modelo, ComfyUI Manager, precios de Comfy Cloud y alternativas a AUTOMATIC1111.',
     twitterDescription:
       'Análisis de ComfyUI 2026: el motor gratuito basado en nodos para ejecutar Stable Diffusion y Flux localmente — licencia GPL-3.0, VRAM necesaria, ComfyUI Manager, precios de Comfy Cloud y comparación con AUTOMATIC1111 y Fooocus.',
     audience:
@@ -706,7 +723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion 1.5', 'Stable Diffusion XL 1.0', 'Stable Diffusion 3.5', 'FLUX.1 schnell', 'FLUX.1 dev', 'FLUX.2'],
     current_hardware_mentioned: ['4 GB VRAM', '6 GB VRAM', '8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'NVIDIA RTX 3060', 'NVIDIA RTX 4090', 'RTX PRO 6000 Blackwell'],
     leadAnswerBlock:
-      '**ComfyUI es una interfaz gratuita, de código abierto y basada en nodos para ejecutar modelos de difusión como Stable Diffusion y Flux de forma local — con licencia GPL-3.0 y autoalojable en tu propia GPU sin coste.** A diferencia del diseño por pestañas de AUTOMATIC1111 o la simplicidad de un clic de Fooocus, ComfyUI representa cada paso de la generación (carga del modelo, codificación del prompt, muestreo, escalado) como un nodo que conectas en un grafo visual, lo que da a los usuarios avanzados control total sobre el pipeline y archivos de workflow reproducibles y compartibles, a costa de una curva de aprendizaje más pronunciada. Los requisitos de hardware dependen del modelo cargado — desde apenas 4–6 GB de VRAM para Stable Diffusion 1.5 hasta 24 GB+ para Flux a máxima precisión — no de ComfyUI en sí. Comfy Org, la organización detrás del proyecto, también vende un servicio de pago independiente, Comfy Cloud, para lectores que no quieren usar su propia GPU; verifica los niveles y precios actuales en [comfy.org](https://www.comfy.org) antes de presupuestar, ya que los precios de SaaS cambian con el tiempo.',
+      '**ComfyUI es una interfaz gratuita, de código abierto y basada en nodos para ejecutar modelos de difusión como Stable Diffusion y Flux. Licencia GPL-3.0, autoalojamiento gratis. La VRAM depende del modelo: unos 4 GB para SD 1.5 y 24 GB+ para Flux. Comfy Cloud es un servicio de pago.**',
     quickAnswerTop: {
       es: {
         question: '¿Qué es ComfyUI y es gratis usarlo?',
@@ -718,8 +735,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ComfyUI Manager instala y actualiza nodos personalizados de la comunidad desde dentro de la interfaz.',
           'Ejecuta SD 1.5 con aproximadamente 4–6 GB de VRAM; Flux a máxima precisión necesita 24 GB+.',
           'Comfy Cloud (de pago, producto independiente) empieza en 20 USD/mes por 4.200 créditos mensuales en GPUs Blackwell RTX PRO 6000 alojadas.',
+          'Última versión etiquetada: v0.43.0 (' + rel('es') + '). Última actualización upstream: ' + upd('es') + ' (commit o release más reciente del repositorio [Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI)).',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -765,7 +783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ComfyUI no genera imágenes por sí solo — necesita cargar un modelo de difusión, como [Stable Diffusion](/es/power-local-llm/stable-diffusion-review), SDXL, SD 3.5 o Flux. El trabajo de ComfyUI es cargar los pesos de ese modelo, ejecutar la inferencia en tu propia GPU y exponer cada etapa del proceso (carga del checkpoint, codificación del texto del prompt, muestreo, decodificación VAE, escalado) como un nodo separado y conectable.',
           'Esto sitúa a ComfyUI en la misma categoría que [AUTOMATIC1111\'s Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui), [InvokeAI](https://github.com/invoke-ai/InvokeAI) y [Fooocus](https://github.com/lllyasviel/Fooocus): las cuatro son interfaces frontend para los mismos modelos de difusión subyacentes, no modelos competidores en sí. La diferencia está en el paradigma de interacción — AUTOMATIC1111 y Fooocus usan pestañas, botones y controles deslizantes convencionales; ComfyUI usa un grafo de nodos.',
           'ComfyUI fue creado por un desarrollador conocido públicamente como comfyanonymous, cuyo nombre real — Yannik Marek — se hizo público más tarde a través de entrevistas y podcasts. El proyecto se publicó por primera vez en [GitHub](https://github.com/comfyanonymous/ComfyUI) en enero de 2023. Marek fue contratado por [Stability AI](https://stability.ai) en junio de 2023, y esa relación laboral directa terminó hacia junio de 2024; el 21 de junio de 2024 se formó Comfy Org como organización dedicada, con Marek como cofundador junto a otros desarrolladores clave de ComfyUI, y el repositorio principal de GitHub del proyecto reside ahora bajo la organización [Comfy-Org](https://github.com/Comfy-Org/ComfyUI) en lugar de la cuenta personal de Marek. Comfy Org se unió a la Open Model Initiative de la Linux Foundation en agosto de 2024.',
-          'El ecosistema de ComfyUI ha crecido mucho más allá de Stable Diffusion: a partir de septiembre de 2026, el proyecto y su ecosistema de nodos personalizados admiten modelos de imagen (Stable Diffusion, SDXL, SD 3.5, Flux.1 y Flux.2, Qwen-Image), modelos de video (Wan, LTX-Video, HunyuanVideo) y nodos de generación de audio y 3D — verifica la lista actual de modelos compatibles en el [repositorio oficial de ComfyUI en GitHub](https://github.com/Comfy-Org/ComfyUI) antes de planificar un workflow concreto, ya que se añade soporte para nuevos modelos con frecuencia.',
+          'El ecosistema de ComfyUI ha crecido mucho más allá de Stable Diffusion: el proyecto y su ecosistema de nodos personalizados admiten modelos de imagen (Stable Diffusion, SDXL, SD 3.5, Flux.1 y Flux.2, Qwen-Image), modelos de video (Wan, LTX-Video, HunyuanVideo) y nodos de generación de audio y 3D — verifica la lista actual de modelos compatibles en el [repositorio oficial de ComfyUI en GitHub](https://github.com/Comfy-Org/ComfyUI) antes de planificar un workflow concreto, ya que se añade soporte para nuevos modelos con frecuencia.',
         ],
       },
       nodeGraphWorkflow: {
@@ -819,7 +837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La condición copyleft de GPL-3.0 importa sobre todo a los desarrolladores, no a los lectores que solo quieren generar imágenes: si modificas el código del núcleo de ComfyUI y distribuyes esa versión modificada, GPL-3.0 exige publicar tus cambios bajo la misma licencia. Según una [discusión de mantenedores en el repositorio oficial](https://github.com/comfyanonymous/ComfyUI/issues/3362), los nodos personalizados que extienden ComfyUI a través de su interfaz de plugins (ubicados en la carpeta `custom_nodes`) generalmente se tratan como obras independientes que pueden tener su propia licencia — pero un fork o una modificación directa del código del núcleo de ComfyUI es una obra derivada y debe seguir bajo GPL-3.0. Verifica la licencia de cualquier nodo personalizado concreto que instales, ya que los nodos creados por la comunidad no están cubiertos por la licencia propia de ComfyUI y varían en sus términos.',
           '**La licencia GPL-3.0 de ComfyUI no dice nada sobre lo que puedes hacer con las imágenes que generas — eso lo regula por completo la licencia del modelo de difusión que cargues.** Stable Diffusion 1.5, SD 2.1 y SDXL usan la licencia CreativeML Open RAIL-M / RAIL++-M sin límite de ingresos comerciales; SD 3 y SD 3.5 usan la Stability AI Community License, gratuita solo por debajo de 1.000.000 USD de ingresos anuales; FLUX.1 schnell es Apache 2.0 (sin restricciones), mientras que FLUX.1 dev requiere una licencia comercial aparte de [Black Forest Labs](https://blackforestlabs.ai) para uso comercial. Ejecutar cualquiera de estos modelos dentro de ComfyUI no cambia ni anula sus condiciones de licencia.',
         ],
-        note: 'Los términos de licencia son texto legal, no texto de marketing — esta sección resume términos publicados públicamente a fecha de 2026-09-06, pero no es asesoramiento legal. Lee el archivo `LICENSE` real en el repositorio de GitHub, y la licencia del modelo que cargues, antes de un despliegue comercial.',
+        note: 'Los términos de licencia son texto legal, no texto de marketing — esta sección resume términos publicados públicamente en el momento de la última actualización, pero no es asesoramiento legal. Lee el archivo `LICENSE` real en el repositorio de GitHub, y la licencia del modelo que cargues, antes de un despliegue comercial.',
       },
       hardwareRequirements: {
         id: 'hardware-requirements',
@@ -839,7 +857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Precios: Autoalojamiento gratuito vs. Comfy Cloud',
         content: [
           '**Autoalojar ComfyUI es gratis — solo pagas por tu propio hardware y electricidad.** El software en sí, bajo su licencia GPL-3.0, no tiene suscripción, límite de ingresos ni requisito de registro para uso local u offline.',
-          'Comfy Org vende por separado Comfy Cloud, un servicio de pago con GPU alojada para lectores que no quieren usar su propio hardware. Según los precios publicados en [comfy.org](https://www.comfy.org/pricing), Comfy Cloud ofrece un nivel gratuito con un número limitado de ejecuciones en GPU y sin necesidad de tarjeta de crédito, y después suscripciones mensuales de pago: Standard a 20 USD/mes (4.200 créditos mensuales, sin importación de modelos personalizados), Creator a 35 USD/mes (7.400 créditos mensuales, con importación de modelos personalizados incluida), Pro a 100 USD/mes (21.100 créditos mensuales, hasta una hora de duración de workflow) y Team a 700 USD/mes (147.700 créditos mensuales, acceso compartido para equipos). La facturación anual se ofrece con descuento en cada nivel. Comfy Cloud funciona con GPUs Blackwell RTX PRO 6000 alojadas con 96 GB de VRAM, y el tiempo de GPU se factura por segundo de procesamiento activo, no por generación.',
+          'Comfy Org vende por separado Comfy Cloud, un servicio de pago con GPU alojada para lectores que no quieren usar su propio hardware. Según los precios publicados en [comfy.org](https://www.comfy.org/pricing), Comfy Cloud ofrece un nivel gratuito con un número limitado de ejecuciones gratuitas en GPU, y después suscripciones mensuales de pago: Standard a 20 USD/mes (4.200 créditos mensuales, sin importación de modelos personalizados), Creator a 35 USD/mes (7.400 créditos mensuales, con importación de modelos personalizados incluida), Pro a 100 USD/mes (21.100 créditos mensuales, hasta una hora de duración de workflow) y Team a 700 USD/mes (147.700 créditos mensuales, acceso compartido para equipos). La facturación anual se ofrece con descuento en cada nivel. Comfy Cloud funciona con GPUs Blackwell RTX PRO 6000 alojadas con 96 GB de VRAM, y el tiempo de GPU se factura por segundo de procesamiento activo, no por generación.',
           'Comfy Cloud es un producto comercial independiente del proyecto ComfyUI gratuito, autoalojado y de código abierto — nunca lo necesitas para usar ComfyUI en tu propia GPU, y nada en la licencia GPL-3.0 obliga a pagarlo.',
         ],
         note: 'Los nombres de niveles, cantidades de créditos y precios de Comfy Cloud son precios de SaaS que Comfy Org ha cambiado más de una vez en 2026 — confirma los niveles y precios actuales directamente en [comfy.org/pricing](https://www.comfy.org/pricing) antes de presupuestar un plan alojado. Este artículo no estima ni redondea cifras en dólares actuales.',
@@ -937,6 +955,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Sí. ComfyUI es software gratuito y de código abierto bajo licencia GPL-3.0 — no hay coste por descargarlo, autoalojarlo, modificarlo o usarlo comercialmente. Comfy Org vende por separado Comfy Cloud, una suscripción de pago con GPU alojada desde 20 USD/mes, para lectores que no quieren usar su propia GPU, pero esto es opcional y no es necesario para usar ComfyUI localmente.',
           },
           {
+            q: '¿Para qué sirve ComfyUI?',
+            a: 'ComfyUI sirve para generar imágenes y, con los modelos y nodos personalizados adecuados, también vídeo en tu propio equipo: cargas un modelo de difusión como Stable Diffusion, SDXL o Flux y montas el pipeline (codificación del prompt, muestreo, ampliación) como un grafo de nodos que puedes guardar como workflow .json y volver a cargar. Su ecosistema de nodos personalizados también cubre modelos de vídeo como Wan y LTX-Video, además de generación de audio y 3D.',
+          },
+          {
             q: '¿Cuál es la diferencia entre ComfyUI y Stable Diffusion?',
             a: 'Stable Diffusion es el modelo de difusión — los pesos y el código que convierten un prompt de texto en una imagen. ComfyUI es una de varias interfaces frontend (junto con AUTOMATIC1111, InvokeAI y Fooocus) que carga ese modelo y te permite ejecutarlo. ComfyUI no genera imágenes por sí solo; necesita tener cargado primero un modelo como Stable Diffusion, SDXL o Flux.',
           },
@@ -953,8 +975,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'ComfyUI tiene licencia GPL-3.0 (Licencia Pública General de GNU versión 3.0), una licencia copyleft gratuita y de código abierto. Es gratuita para autoalojar y usar comercialmente, sin umbral de ingresos. Esta licencia cubre el software ComfyUI en sí — no cambia ni anula la licencia independiente del modelo de difusión (Stable Diffusion, Flux, etc.) que cargues y ejecutes dentro de él.',
           },
           {
-            q: '¿Cuánta VRAM necesita ComfyUI?',
-            a: 'Las necesidades de VRAM vienen del modelo que cargas, no de ComfyUI en sí: aproximadamente 4 GB para Stable Diffusion 1.5, 6–12 GB para SDXL, y de 12 GB (cuantizado FP8) a 24 GB+ (FP16 de máxima precisión) para Flux. Se suele decir que ComfyUI añade algo menos de sobrecarga de memoria que AUTOMATIC1111 para el mismo modelo, aunque las cifras exactas varían según el workflow.',
+            q: '¿Cuánta VRAM y qué requisitos mínimos necesita ComfyUI?',
+            a: 'Las necesidades de VRAM vienen del modelo que cargas, no de ComfyUI en sí: aproximadamente 4 GB para Stable Diffusion 1.5, 6–12 GB para SDXL, y de 12 GB (cuantizado FP8) a 24 GB+ (FP16 de máxima precisión) para Flux. Se suele decir que ComfyUI añade algo menos de sobrecarga de memoria que AUTOMATIC1111 para el mismo modelo, aunque las cifras exactas varían según el workflow. ComfyUI no publica un mínimo fijo de VRAM ni de RAM; según su README, la versión portable para Windows funciona con una GPU Nvidia o solo con la CPU, y el archivo portable NVIDIA de v0.43.0 pesa unos 2 GB de descarga, sin contar los modelos.',
           },
           {
             q: '¿Qué es ComfyUI Manager?',
@@ -1005,17 +1027,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-fr.webp',
     title: 'Avis ComfyUI: interface gratuite à base de nœuds pour Stable Diffusion et Flux',
-    seoTitle: 'Avis ComfyUI: éditeur de nœuds pour la génération d\'images locale',
+    seoTitle: 'Avis ComfyUI: éditeur de nœuds pour images en local',
     intro:
       'ComfyUI est une interface visuelle gratuite, open source et à base de nœuds pour exécuter des modèles de diffusion — Stable Diffusion, SDXL, SD 3.5, Flux et d\'autres — localement sur votre propre GPU. Ce n\'est pas un modèle en soi : ComfyUI est le moteur et l\'éditeur de workflow qui charge un modèle de diffusion et vous permet de relier chaque étape de la génération d\'image (chargement du modèle, encodage du prompt, échantillonnage, upscaling) sous forme d\'un graphe de nœuds connectés, plutôt qu\'un ensemble fixe d\'onglets et de curseurs. Cet avis explique ce que fait réellement ComfyUI, en quoi son approche par graphe de nœuds diffère des interfaces plus simples comme AUTOMATIC1111 et Fooocus, sa licence GPL-3.0, les besoins matériels selon le modèle, ComfyUI Manager pour les nœuds personnalisés, et l\'offre payante distincte Comfy Cloud face au socle gratuit auto-hébergé.',
     metaDescription:
-      'Avis ComfyUI 2026 : licence GPL-3.0, workflow par graphe de nœuds expliqué, VRAM nécessaire pour SD 1.5/SDXL/Flux, ComfyUI Manager, tarifs Comfy Cloud et comparaison avec AUTOMATIC1111, InvokeAI et Fooocus.',
+      'Avis ComfyUI: éditeur de nœuds gratuit (GPL-3.0) pour Stable Diffusion et Flux, VRAM requise par modèle, ComfyUI Manager, tarifs Comfy Cloud, alternatives.',
     twitterDescription:
       'Avis ComfyUI 2026 : le moteur gratuit à base de nœuds pour exécuter Stable Diffusion et Flux en local — licence GPL-3.0, VRAM nécessaire, ComfyUI Manager, tarifs Comfy Cloud et comparaison avec AUTOMATIC1111 et Fooocus.',
     audience:
@@ -1036,7 +1058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion 1.5', 'Stable Diffusion XL 1.0', 'Stable Diffusion 3.5', 'FLUX.1 schnell', 'FLUX.1 dev', 'FLUX.2'],
     current_hardware_mentioned: ['4 GB VRAM', '6 GB VRAM', '8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'NVIDIA RTX 3060', 'NVIDIA RTX 4090', 'RTX PRO 6000 Blackwell'],
     leadAnswerBlock:
-      '**ComfyUI est une interface gratuite, open source et à base de nœuds pour exécuter localement des modèles de diffusion comme Stable Diffusion et Flux — sous licence GPL-3.0, auto-hébergeable sur votre propre GPU sans frais.** Contrairement à l\'interface à onglets d\'AUTOMATIC1111 ou à la simplicité en un clic de Fooocus, ComfyUI représente chaque étape de la génération (chargement du modèle, encodage du prompt, échantillonnage, upscaling) comme un nœud que vous connectez dans un graphe visuel, ce qui donne aux utilisateurs avancés un contrôle total du pipeline et des fichiers de workflow reproductibles et partageables, au prix d\'une courbe d\'apprentissage plus raide. Les besoins matériels dépendent du modèle chargé — à peine 4-6 Go de VRAM pour Stable Diffusion 1.5 jusqu\'à 24 Go+ pour Flux en pleine précision — pas de ComfyUI lui-même. Comfy Org, l\'organisation derrière le projet, vend aussi séparément un service payant hébergé, Comfy Cloud, pour les lecteurs qui ne veulent pas utiliser leur propre GPU ; vérifiez les niveaux et tarifs actuels sur [comfy.org](https://www.comfy.org) avant de budgétiser, les prix SaaS évoluant dans le temps.',
+      '**ComfyUI est une interface gratuite, open source et à nœuds pour exécuter en local des modèles de diffusion comme Stable Diffusion et Flux. Licence GPL-3.0, auto-hébergement gratuit. La VRAM dépend du modèle : environ 4 Go pour SD 1.5, 24 Go+ pour Flux. Comfy Cloud est un service payant.**',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que ComfyUI et est-ce gratuit ?',
@@ -1048,8 +1070,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ComfyUI Manager installe et met à jour les nœuds personnalisés de la communauté depuis l\'interface elle-même.',
           'Fait tourner SD 1.5 avec environ 4-6 Go de VRAM ; Flux en pleine précision demande 24 Go+.',
           'Comfy Cloud (payant, produit distinct) démarre à 20 USD/mois pour 4 200 crédits mensuels sur des GPU Blackwell RTX PRO 6000 hébergés.',
+          'Dernière version taguée : v0.43.0 (' + rel('fr') + '). Dernière mise à jour en amont : ' + upd('fr') + ' (dernier commit ou release du dépôt [Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI)).',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1095,7 +1118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ComfyUI ne génère pas d\'images tout seul — il a besoin qu\'un modèle de diffusion soit chargé, comme [Stable Diffusion](/fr/power-local-llm/stable-diffusion-review), SDXL, SD 3.5 ou Flux. Le rôle de ComfyUI est de charger les poids de ce modèle, d\'exécuter l\'inférence sur votre propre GPU et d\'exposer chaque étape de ce processus (chargement du checkpoint, encodage du prompt textuel, échantillonnage, décodage VAE, upscaling) comme un nœud séparé et connectable.',
           'Cela place ComfyUI dans la même catégorie que [AUTOMATIC1111\'s Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui), [InvokeAI](https://github.com/invoke-ai/InvokeAI) et [Fooocus](https://github.com/lllyasviel/Fooocus) : les quatre sont des interfaces frontales pour les mêmes modèles de diffusion sous-jacents, pas des modèles concurrents en soi. La différence tient au paradigme d\'interaction — AUTOMATIC1111 et Fooocus utilisent des onglets, boutons et curseurs classiques ; ComfyUI utilise un graphe de nœuds.',
           'ComfyUI a été créé par un développeur connu publiquement sous le pseudonyme comfyanonymous, dont le vrai nom — Yannik Marek — est devenu public par la suite via des interviews et des podcasts. Le projet a été publié pour la première fois sur [GitHub](https://github.com/comfyanonymous/ComfyUI) en janvier 2023. Marek a été embauché par [Stability AI](https://stability.ai) en juin 2023, et cette relation d\'emploi directe a pris fin vers juin 2024 ; le 21 juin 2024, Comfy Org a été fondée comme organisation dédiée, avec Marek comme cofondateur aux côtés d\'autres développeurs clés de ComfyUI, et le dépôt GitHub principal du projet se trouve désormais sous l\'organisation [Comfy-Org](https://github.com/Comfy-Org/ComfyUI) plutôt que sous le compte personnel de Marek. Comfy Org a rejoint l\'Open Model Initiative de la Linux Foundation en août 2024.',
-          'L\'écosystème de ComfyUI a largement dépassé Stable Diffusion : en septembre 2026, le projet et son écosystème de nœuds personnalisés prennent en charge des modèles d\'image (Stable Diffusion, SDXL, SD 3.5, Flux.1 et Flux.2, Qwen-Image), des modèles vidéo (Wan, LTX-Video, HunyuanVideo) ainsi que des nœuds de génération audio et 3D — vérifiez la liste actuelle des modèles pris en charge sur le [dépôt GitHub officiel de ComfyUI](https://github.com/Comfy-Org/ComfyUI) avant de planifier un workflow précis, la prise en charge de nouveaux modèles arrivant fréquemment.',
+          'L\'écosystème de ComfyUI a largement dépassé Stable Diffusion : le projet et son écosystème de nœuds personnalisés prennent en charge des modèles d\'image (Stable Diffusion, SDXL, SD 3.5, Flux.1 et Flux.2, Qwen-Image), des modèles vidéo (Wan, LTX-Video, HunyuanVideo) ainsi que des nœuds de génération audio et 3D — vérifiez la liste actuelle des modèles pris en charge sur le [dépôt GitHub officiel de ComfyUI](https://github.com/Comfy-Org/ComfyUI) avant de planifier un workflow précis, la prise en charge de nouveaux modèles arrivant fréquemment.',
         ],
       },
       nodeGraphWorkflow: {
@@ -1149,7 +1172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La condition copyleft de la GPL-3.0 concerne surtout les développeurs, pas les lecteurs qui veulent simplement générer des images : si vous modifiez le code central de ComfyUI et distribuez cette version modifiée, la GPL-3.0 exige de publier vos changements sous la même licence. Selon une [discussion de mainteneurs sur le dépôt officiel](https://github.com/comfyanonymous/ComfyUI/issues/3362), les nœuds personnalisés qui étendent ComfyUI via son interface de plugins (situés dans le dossier `custom_nodes`) sont généralement traités comme des œuvres distinctes pouvant porter leur propre licence — mais un fork ou une modification directe du code central de ComfyUI est une œuvre dérivée et doit rester sous GPL-3.0. Vérifiez la licence de chaque nœud personnalisé précis que vous installez, car les nœuds créés par la communauté ne sont pas couverts par la licence propre de ComfyUI et leurs conditions varient.',
           '**La licence GPL-3.0 de ComfyUI ne dit rien de ce que vous pouvez faire des images que vous générez — cela est entièrement régi par la licence du modèle de diffusion que vous chargez.** Stable Diffusion 1.5, SD 2.1 et SDXL utilisent la licence CreativeML Open RAIL-M / RAIL++-M sans plafond de revenu commercial ; SD 3 et SD 3.5 utilisent la Stability AI Community License, gratuite seulement en dessous de 1 000 000 USD de revenu annuel ; FLUX.1 schnell est sous Apache 2.0 (sans restriction), tandis que FLUX.1 dev exige une licence commerciale séparée de [Black Forest Labs](https://blackforestlabs.ai) pour un usage commercial. Exécuter l\'un de ces modèles dans ComfyUI ne modifie ni n\'annule leurs conditions de licence.',
         ],
-        note: 'Les conditions de licence sont un texte juridique, pas un texte marketing — cette section résume des conditions publiées publiquement au 2026-09-06, mais ne constitue pas un conseil juridique. Lisez le fichier `LICENSE` réel sur le dépôt GitHub, ainsi que la licence du modèle que vous chargez, avant tout déploiement commercial.',
+        note: 'Les conditions de licence sont un texte juridique, pas un texte marketing — cette section résume des conditions publiées publiquement à la date de la dernière mise à jour, mais ne constitue pas un conseil juridique. Lisez le fichier `LICENSE` réel sur le dépôt GitHub, ainsi que la licence du modèle que vous chargez, avant tout déploiement commercial.',
       },
       hardwareRequirements: {
         id: 'hardware-requirements',
@@ -1169,7 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Tarifs : auto-hébergement gratuit vs. Comfy Cloud',
         content: [
           '**Auto-héberger ComfyUI est gratuit — vous ne payez que votre propre matériel et l\'électricité.** Le logiciel lui-même, sous sa licence GPL-3.0, n\'a ni abonnement, ni plafond de revenu, ni exigence d\'enregistrement pour un usage local ou hors ligne.',
-          'Comfy Org vend séparément Comfy Cloud, un service payant de GPU hébergé pour les lecteurs qui ne veulent pas utiliser leur propre matériel. Selon les tarifs publiés sur [comfy.org](https://www.comfy.org/pricing), Comfy Cloud propose un niveau gratuit avec un nombre limité d\'exécutions GPU sans carte bancaire requise, puis des abonnements mensuels payants : Standard à 20 USD/mois (4 200 crédits mensuels, sans import de modèles personnalisés), Creator à 35 USD/mois (7 400 crédits mensuels, import de modèles personnalisés inclus), Pro à 100 USD/mois (21 100 crédits mensuels, jusqu\'à une heure de durée de workflow) et Team à 700 USD/mois (147 700 crédits mensuels, accès partagé en équipe). La facturation annuelle est proposée avec une remise sur chaque niveau. Comfy Cloud tourne sur des GPU Blackwell RTX PRO 6000 hébergés avec 96 Go de VRAM, et le temps GPU est facturé à la seconde de traitement actif plutôt qu\'à la génération.',
+          'Comfy Org vend séparément Comfy Cloud, un service payant de GPU hébergé pour les lecteurs qui ne veulent pas utiliser leur propre matériel. Selon les tarifs publiés sur [comfy.org](https://www.comfy.org/pricing), Comfy Cloud propose un niveau gratuit avec un nombre limité d\'exécutions GPU gratuites, puis des abonnements mensuels payants : Standard à 20 USD/mois (4 200 crédits mensuels, sans import de modèles personnalisés), Creator à 35 USD/mois (7 400 crédits mensuels, import de modèles personnalisés inclus), Pro à 100 USD/mois (21 100 crédits mensuels, jusqu\'à une heure de durée de workflow) et Team à 700 USD/mois (147 700 crédits mensuels, accès partagé en équipe). La facturation annuelle est proposée avec une remise sur chaque niveau. Comfy Cloud tourne sur des GPU Blackwell RTX PRO 6000 hébergés avec 96 Go de VRAM, et le temps GPU est facturé à la seconde de traitement actif plutôt qu\'à la génération.',
           'Comfy Cloud est un produit commercial distinct du projet ComfyUI gratuit, open source et auto-hébergé — vous n\'en avez jamais besoin pour utiliser ComfyUI sur votre propre GPU, et rien dans la licence GPL-3.0 n\'impose de le payer.',
         ],
         note: 'Les noms de niveaux, montants de crédits et prix de Comfy Cloud sont des tarifs SaaS que Comfy Org a déjà modifiés plusieurs fois en 2026 — confirmez les niveaux et tarifs actuels directement sur [comfy.org/pricing](https://www.comfy.org/pricing) avant de budgétiser une offre hébergée. Cet article n\'estime ni n\'arrondit de montants en dollars actuels.',
@@ -1267,6 +1290,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Oui. ComfyUI est un logiciel gratuit et open source sous licence GPL-3.0 — il n\'y a aucun coût pour le télécharger, l\'auto-héberger, le modifier ou l\'utiliser commercialement. Comfy Org vend séparément Comfy Cloud, un abonnement payant de GPU hébergé à partir de 20 USD/mois, pour les lecteurs qui ne veulent pas utiliser leur propre GPU, mais c\'est optionnel et non requis pour utiliser ComfyUI en local.',
           },
           {
+            q: 'À quoi sert ComfyUI ?',
+            a: 'ComfyUI sert à générer des images et, avec les modèles et nœuds personnalisés adaptés, de la vidéo sur votre propre machine : vous chargez un modèle de diffusion comme Stable Diffusion, SDXL ou Flux et construisez le pipeline (encodage du prompt, échantillonnage, upscaling) sous forme de graphe de nœuds, que vous pouvez enregistrer en workflow .json et recharger plus tard. Son écosystème de nœuds personnalisés couvre aussi des modèles vidéo comme Wan et LTX-Video, ainsi que la génération audio et 3D.',
+          },
+          {
             q: 'Quelle est la différence entre ComfyUI et Stable Diffusion ?',
             a: 'Stable Diffusion est le modèle de diffusion — les poids et le code qui transforment un prompt texte en image. ComfyUI est l\'une des plusieurs interfaces frontales (avec AUTOMATIC1111, InvokeAI et Fooocus) qui charge ce modèle et permet de l\'exécuter. ComfyUI ne génère pas d\'images tout seul ; il a besoin qu\'un modèle comme Stable Diffusion, SDXL ou Flux soit d\'abord chargé.',
           },
@@ -1283,8 +1310,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'ComfyUI est sous licence GPL-3.0 (Licence Publique Générale GNU version 3.0), une licence copyleft gratuite et open source. Elle est gratuite à auto-héberger et à utiliser commercialement, sans seuil de revenu. Cette licence couvre le logiciel ComfyUI lui-même — elle ne modifie ni n\'annule la licence distincte du modèle de diffusion (Stable Diffusion, Flux, etc.) que vous chargez et exécutez à l\'intérieur.',
           },
           {
-            q: 'De combien de VRAM ComfyUI a-t-il besoin ?',
-            a: 'Les besoins en VRAM viennent du modèle chargé, pas de ComfyUI lui-même : environ 4 Go pour Stable Diffusion 1.5, 6-12 Go pour SDXL, et de 12 Go (quantifié FP8) à 24 Go+ (FP16 pleine précision) pour Flux. ComfyUI est couramment décrit comme ajoutant un peu moins de surcharge mémoire qu\'AUTOMATIC1111 pour le même modèle, bien que les chiffres exacts varient selon le workflow.',
+            q: 'De combien de VRAM ComfyUI a-t-il besoin, et quelle configuration minimale ?',
+            a: 'Les besoins en VRAM viennent du modèle chargé, pas de ComfyUI lui-même : environ 4 Go pour Stable Diffusion 1.5, 6-12 Go pour SDXL, et de 12 Go (quantifié FP8) à 24 Go+ (FP16 pleine précision) pour Flux. ComfyUI est couramment décrit comme ajoutant un peu moins de surcharge mémoire qu\'AUTOMATIC1111 pour le même modèle, bien que les chiffres exacts varient selon le workflow. ComfyUI ne publie aucun minimum fixe de VRAM ou de RAM ; d\'après son README, la version portable pour Windows fonctionne sur un GPU Nvidia ou uniquement sur le CPU, et l\'archive portable NVIDIA de la v0.43.0 pèse environ 2 Go à télécharger, hors fichiers de modèles.',
           },
           {
             q: 'Qu\'est-ce que ComfyUI Manager ?',
@@ -1335,8 +1362,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-ja.webp',
@@ -1345,7 +1372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ComfyUIは、Stable Diffusion、SDXL、SD 3.5、Fluxなどの拡散モデルを自分のGPU上でローカルに実行するための、無料でオープンソースのノードベース・ビジュアルインターフェースです。モデルそのものではありません。ComfyUIは拡散モデルを読み込み、画像生成の各ステップ(モデルの読み込み、プロンプトのエンコード、サンプリング、アップスケーリング)を固定されたタブやスライダーの集合ではなく、接続されたノードのグラフとして組み立てられるようにするエンジンおよびワークフローエディタです。本レビューでは、ComfyUIが実際に何をするのか、そのノードグラフ方式がAUTOMATIC1111やFooocusのようなよりシンプルなUIとどう異なるのか、GPL-3.0ライセンス、モデルごとのハードウェア要件、カスタムノード用のComfyUI Manager、そして無料の自己ホスト型コアとは別の有料Comfy Cloudホスティング階層について解説します。',
     metaDescription:
-      'ComfyUIレビュー2026:GPL-3.0ライセンス、ノードグラフ・ワークフローの解説、SD 1.5/SDXL/Fluxに必要なVRAM、ComfyUI Manager、Comfy Cloudの料金、AUTOMATIC1111・InvokeAI・Fooocusとの比較。',
+      'ComfyUIレビュー：GPL-3.0の無料ノードエディタ。必要VRAM、ComfyUI Manager、Comfy Cloudの料金、AUTOMATIC1111との比較を解説。',
     twitterDescription:
       'ComfyUIレビュー2026:Stable DiffusionとFluxをローカルで動かす無料ノードベース・エンジン——GPL-3.0ライセンス、必要VRAM、ComfyUI Manager、Comfy Cloudの料金、AUTOMATIC1111・Fooocusとの比較。',
     audience:
@@ -1366,7 +1393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion 1.5', 'Stable Diffusion XL 1.0', 'Stable Diffusion 3.5', 'FLUX.1 schnell', 'FLUX.1 dev', 'FLUX.2'],
     current_hardware_mentioned: ['4 GB VRAM', '6 GB VRAM', '8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'NVIDIA RTX 3060', 'NVIDIA RTX 4090', 'RTX PRO 6000 Blackwell'],
     leadAnswerBlock:
-      '**ComfyUIは、Stable DiffusionやFluxなどの拡散モデルをローカルで実行するための無料・オープンソースのノードベースインターフェースで、GPL-3.0ライセンスの下、自分のGPUで無料でセルフホストできます。** AUTOMATIC1111のタブ型レイアウトやFooocusのワンクリックの手軽さとは異なり、ComfyUIは生成の各ステップ(モデルの読み込み、プロンプトのエンコード、サンプリング、アップスケーリング)を、自分で接続するビジュアルグラフ上のノードとして表現します。これによりパワーユーザーはパイプラインを完全に制御でき、再現可能で共有可能なワークフローファイルを得られますが、その代償として学習曲線は急になります。ハードウェア要件は読み込むモデルによって決まり——ComfyUI自体ではありません——Stable Diffusion 1.5ならわずか4〜6 GBのVRAM、フル精度のFluxなら24 GB以上が必要です。プロジェクトを運営するComfy Orgは、自分のGPUを使いたくない読者向けに、Comfy Cloudという別の有料ホスティングサービスも販売しています。SaaSの価格は時間とともに変わるため、予算を組む前に[comfy.org](https://www.comfy.org)で現在の階層と価格を確認してください。',
+      '**ComfyUIは、Stable DiffusionやFluxなどの拡散モデルをローカルで動かす、無料のオープンソース・ノードベースUIです。GPL-3.0ライセンスで、必要VRAMはモデル次第（SD 1.5で約4GB、Fluxは24GB以上）。Comfy Cloudは別の有料サービスです。**',
     quickAnswerTop: {
       ja: {
         question: 'ComfyUIとは何ですか、無料で使えますか?',
@@ -1378,8 +1405,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ComfyUI Managerがインターフェース内からコミュニティ製カスタムノードをインストール・更新。',
           'SD 1.5は約4〜6 GBのVRAMで動作。フル精度のFluxは24 GB以上が必要。',
           'Comfy Cloud(有料、別製品)はホスト型Blackwell RTX PRO 6000 GPUで月4,200クレジット、月額20USDから。',
+          '最新のタグ付きリリース：v0.43.0（' + rel('ja') + '）。上流の最終更新：' + upd('ja') + '（リポジトリ[Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI)の最新のコミットまたはリリース）',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1425,7 +1453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ComfyUI単体では画像を生成できない——[Stable Diffusion](/ja/power-local-llm/stable-diffusion-review)、SDXL、SD 3.5、Fluxなどの拡散モデルを読み込む必要がある。ComfyUIの役割は、そのモデルの重みを読み込み、自分のGPU上で推論を実行し、プロセスの各段階(チェックポイントの読み込み、テキストプロンプトのエンコード、サンプリング、VAEデコード、アップスケーリング)を、個別に接続可能なノードとして公開することである。',
           'これにより、ComfyUIは[AUTOMATIC1111のStable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)、[InvokeAI](https://github.com/invoke-ai/InvokeAI)、[Fooocus](https://github.com/lllyasviel/Fooocus)と同じカテゴリーに位置づけられる——この4つはいずれも同じ基盤拡散モデルのフロントエンドインターフェースであり、競合するモデル自体ではない。違いは操作パラダイムにある——AUTOMATIC1111とFooocusは従来型のタブ、ボタン、スライダーを使うが、ComfyUIはノードグラフを使う。',
           'ComfyUIは、公にはcomfyanonymousとして知られる開発者によって作られた。その本名——Yannik Marek——は、後のインタビューやポッドキャスト出演を通じて公になった。プロジェクトは2023年1月に[GitHub](https://github.com/comfyanonymous/ComfyUI)で初公開された。Marekは2023年6月に[Stability AI](https://stability.ai)に雇用され、この直接的な雇用関係は2024年6月頃に終了。2024年6月21日、Marekを共同創業者としてComfyUIの他のコア開発者とともに専門組織Comfy Orgが設立され、プロジェクトの主要GitHubリポジトリは、Marekの個人アカウントではなく[Comfy-Org](https://github.com/Comfy-Org/ComfyUI)組織の下に置かれるようになった。Comfy Orgは2024年8月、Linux FoundationのOpen Model Initiativeに参加した。',
-          'ComfyUIのエコシステムはStable Diffusionをはるかに超えて成長している。2026年9月時点で、プロジェクトとそのカスタムノード・エコシステムは、画像モデル(Stable Diffusion、SDXL、SD 3.5、Flux.1・Flux.2、Qwen-Image)、動画モデル(Wan、LTX-Video、HunyuanVideo)、そして音声・3D生成用のノードをサポートしている——具体的なワークフローを計画する前に、[公式ComfyUI GitHubリポジトリ](https://github.com/Comfy-Org/ComfyUI)で最新のサポートモデル一覧を確認してほしい。新しいモデルサポートは頻繁に追加される。',
+          'ComfyUIのエコシステムはStable Diffusionをはるかに超えて成長している。プロジェクトとそのカスタムノード・エコシステムは、画像モデル(Stable Diffusion、SDXL、SD 3.5、Flux.1・Flux.2、Qwen-Image)、動画モデル(Wan、LTX-Video、HunyuanVideo)、そして音声・3D生成用のノードをサポートしている——具体的なワークフローを計画する前に、[公式ComfyUI GitHubリポジトリ](https://github.com/Comfy-Org/ComfyUI)で最新のサポートモデル一覧を確認してほしい。新しいモデルサポートは頻繁に追加される。',
         ],
       },
       nodeGraphWorkflow: {
@@ -1479,7 +1507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPL-3.0のコピーレフト条件は、単に画像を生成したいだけの読者ではなく、主に開発者にとって重要である:ComfyUIのコアコードを改変し、その改変版を配布する場合、GPL-3.0は同じライセンスの下で変更を公開することを要求する。[公式リポジトリでのメンテナーの議論](https://github.com/comfyanonymous/ComfyUI/issues/3362)によれば、プラグインインターフェース経由でComfyUIを拡張するカスタムノード(`custom_nodes`フォルダ内にあるもの)は、一般的に独自のライセンスを持てる別個の著作物として扱われる——一方、ComfyUIのコアコード自体をフォークしたり直接改変したりするのは二次的著作物にあたり、GPL-3.0のままである必要がある。インストールする個々のカスタムノードのライセンスは確認すること。コミュニティ製のノードはComfyUI自体のライセンスの対象外であり、条件はさまざまである。',
           '**ComfyUIのGPL-3.0ライセンスは、生成した画像で何ができるかについては何も規定していない——それは完全に、読み込んだ拡散モデルのライセンスによって決まる。** Stable Diffusion 1.5、SD 2.1、SDXLはCreativeML Open RAIL-M/RAIL++-Mライセンスを使用しており、商用収益の上限はない。SD 3とSD 3.5はStability AI Community Licenseを使用しており、年間収益100万USD未満でのみ無料である。FLUX.1 schnellはApache 2.0(無制限)である一方、FLUX.1 devは商用利用に[Black Forest Labs](https://blackforestlabs.ai)からの別個の商用ライセンスを必要とする。これらのモデルをComfyUI内で実行しても、そのライセンス条件が変更または上書きされることはない。',
         ],
-        note: 'ライセンス条件は法的文書であり、マーケティング文言ではない——本セクションは2026-09-06時点で公開されている条件を要約したものであり、法的助言ではない。商用展開の前に、GitHubリポジトリ上の実際の`LICENSE`ファイルと、読み込むモデルのライセンスを確認すること。',
+        note: 'ライセンス条件は法的文書であり、マーケティング文言ではない——本セクションは最終更新時点で公開されている条件を要約したものであり、法的助言ではない。商用展開の前に、GitHubリポジトリ上の実際の`LICENSE`ファイルと、読み込むモデルのライセンスを確認すること。',
       },
       hardwareRequirements: {
         id: 'hardware-requirements',
@@ -1499,7 +1527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '料金:無料のセルフホストとComfy Cloud',
         content: [
           '**ComfyUIのセルフホストは無料——自分のハードウェアと電気代のみを負担する。** GPL-3.0ライセンスの下、ソフトウェア自体にサブスクリプション、収益上限、ローカル/オフライン利用のための登録要件はない。',
-          'Comfy Orgは、自分のハードウェアを使いたくない読者向けに、有料のホスト型GPUサービスであるComfy Cloudを別途販売している。[comfy.org](https://www.comfy.org/pricing)で公開されている料金によれば、Comfy Cloudはクレジットカード不要で限られた回数のGPU実行ができる無料階層を提供し、その先に有料月額プランがある:Standard(月額20USD、月4,200クレジット、カスタムモデルのインポート不可)、Creator(月額35USD、月7,400クレジット、カスタムモデルのインポート込み)、Pro(月額100USD、月21,100クレジット、最大1時間のワークフロー実行時間)、Team(月額700USD、月147,700クレジット、チームでの共有アクセス)。年間契約はどの階層でも割引が提供される。Comfy Cloudは96 GBのVRAMを持つホスト型Blackwell RTX PRO 6000 GPU上で動作し、GPU時間は生成回数ではなく、実処理秒数に応じて課金される。',
+          'Comfy Orgは、自分のハードウェアを使いたくない読者向けに、有料のホスト型GPUサービスであるComfy Cloudを別途販売している。[comfy.org](https://www.comfy.org/pricing)で公開されている料金によれば、Comfy Cloudは限られた回数のGPU実行が無料の階層を提供し、その先に有料月額プランがある:Standard(月額20USD、月4,200クレジット、カスタムモデルのインポート不可)、Creator(月額35USD、月7,400クレジット、カスタムモデルのインポート込み)、Pro(月額100USD、月21,100クレジット、最大1時間のワークフロー実行時間)、Team(月額700USD、月147,700クレジット、チームでの共有アクセス)。年間契約はどの階層でも割引が提供される。Comfy Cloudは96 GBのVRAMを持つホスト型Blackwell RTX PRO 6000 GPU上で動作し、GPU時間は生成回数ではなく、実処理秒数に応じて課金される。',
           'Comfy Cloudは、無料でセルフホストのオープンソースプロジェクトであるComfyUIとは別個の商用製品である——自分のGPUでComfyUIを使うために必要になることは一切なく、GPL-3.0ライセンスの中に支払いを義務付ける条項は何もない。',
         ],
         note: 'Comfy Cloudの階層名、クレジット量、価格はSaaS料金であり、Comfy Orgは2026年中に既に複数回変更している——ホスティングプランの予算を組む前に、[comfy.org/pricing](https://www.comfy.org/pricing)で直接、現行の階層と価格を確認すること。本記事は現在のドル金額を推測したり丸めたりしていない。',
@@ -1597,6 +1625,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'はい。ComfyUIはGPL-3.0ライセンスの下の無料・オープンソースソフトウェアです——ダウンロード、セルフホスト、改変、商用利用に費用はかかりません。Comfy Orgは、自分のGPUを使いたくない読者向けに、月額20USDからの有料ホスト型GPUサブスクリプションComfy Cloudを別途販売していますが、これは任意であり、ComfyUIをローカルで使うために必須ではありません。',
           },
           {
+            q: 'ComfyUIは何に使うものですか?',
+            a: 'ComfyUIは、自分のパソコン上で画像を生成するためのツールで、対応するモデルとカスタムノードがあれば動画も扱えます。Stable Diffusion、SDXL、Fluxなどの拡散モデルを読み込み、プロンプトのエンコード、サンプリング、アップスケーリングといったパイプラインをノードグラフとして組み立て、.jsonワークフローとして保存して後から読み込めます。カスタムノードのエコシステムは、WanやLTX-Videoなどの動画モデル、音声生成や3D生成にも対応しています。',
+          },
+          {
             q: 'ComfyUIとStable Diffusionの違いは何ですか?',
             a: 'Stable Diffusionは拡散モデル——テキストプロンプトを画像に変換する重みとコードです。ComfyUIは、そのモデルを読み込んで実行できるようにする、いくつかあるフロントエンドインターフェース(AUTOMATIC1111、InvokeAI、Fooocusと並ぶ)の一つです。ComfyUI単体では画像を生成できず、まずStable Diffusion、SDXL、Fluxなどのモデルを読み込む必要があります。',
           },
@@ -1613,8 +1645,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'ComfyUIはGPL-3.0(GNU General Public License version 3.0)のライセンスを使用しています。これは無料でオープンソースのコピーレフトライセンスです。収益しきい値なしで、セルフホストと商用利用が無料です。このライセンスはComfyUIというソフトウェア自体をカバーするものであり、その中で読み込んで実行する拡散モデル(Stable Diffusion、Fluxなど)の別個のライセンスを変更または上書きするものではありません。',
           },
           {
-            q: 'ComfyUIにはどれくらいのVRAMが必要ですか?',
-            a: 'VRAMの要件はComfyUI自体ではなく、読み込むモデルによって決まります:Stable Diffusion 1.5で約4 GB、SDXLで6〜12 GB、Fluxで12 GB(FP8量子化)から24 GB以上(FP16フル精度)です。ComfyUIは同じモデルであればAUTOMATIC1111よりもメモリオーバーヘッドがやや少ないと一般に報告されていますが、正確な数値はワークフローによって異なります。',
+            q: 'ComfyUIにはどれくらいのVRAMが必要で、システム要件は何ですか?',
+            a: 'VRAMの要件はComfyUI自体ではなく、読み込むモデルによって決まります:Stable Diffusion 1.5で約4 GB、SDXLで6〜12 GB、Fluxで12 GB(FP8量子化)から24 GB以上(FP16フル精度)です。ComfyUIは同じモデルであればAUTOMATIC1111よりもメモリオーバーヘッドがやや少ないと一般に報告されていますが、正確な数値はワークフローによって異なります。ComfyUIはVRAMやRAMの固定の最小値を公開していません。READMEによれば、Windows版ポータブルビルドはNvidia GPUまたはCPUのみで動作し、v0.43.0のNVIDIA版ポータブルアーカイブはモデルファイルを除いて約2 GBのダウンロードです。',
           },
           {
             q: 'ComfyUI Managerとは何ですか?',
@@ -1665,17 +1697,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-pt.webp',
     title: 'Análise do ComfyUI: interface gratuita baseada em nós para Stable Diffusion e Flux',
-    seoTitle: 'Análise do ComfyUI: editor de nós para geração de imagens local',
+    seoTitle: 'Análise do ComfyUI: editor de nós para imagens locais',
     intro:
       'O ComfyUI é uma interface visual gratuita, de código aberto e baseada em nós para executar modelos de difusão — Stable Diffusion, SDXL, SD 3.5, Flux e outros — localmente na sua própria GPU. Não é um modelo em si: o ComfyUI é o motor e o editor de workflow que carrega um modelo de difusão e permite conectar cada etapa da geração de imagem (carregamento do modelo, codificação do prompt, amostragem, upscaling) como um grafo de nós conectados, em vez de um conjunto fixo de abas e controles deslizantes. Esta análise explica o que o ComfyUI realmente faz, em que sua abordagem de grafo de nós difere de interfaces mais simples como AUTOMATIC1111 e Fooocus, sua licença GPL-3.0, os requisitos de hardware por modelo, o ComfyUI Manager para nós personalizados, e o nível pago separado Comfy Cloud em comparação com o núcleo gratuito autoalojado.',
     metaDescription:
-      'Análise do ComfyUI 2026: licença GPL-3.0, workflow de grafo de nós explicado, VRAM necessária para SD 1.5/SDXL/Flux, ComfyUI Manager, preços do Comfy Cloud e comparação com AUTOMATIC1111, InvokeAI e Fooocus.',
+      'Análise do ComfyUI: editor de nós gratuito (GPL-3.0) para Stable Diffusion e Flux, VRAM por modelo, ComfyUI Manager, preços do Comfy Cloud e alternativas.',
     twitterDescription:
       'Análise do ComfyUI 2026: o motor gratuito baseado em nós para rodar Stable Diffusion e Flux localmente — licença GPL-3.0, VRAM necessária, ComfyUI Manager, preços do Comfy Cloud e comparação com AUTOMATIC1111 e Fooocus.',
     audience:
@@ -1696,7 +1728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion 1.5', 'Stable Diffusion XL 1.0', 'Stable Diffusion 3.5', 'FLUX.1 schnell', 'FLUX.1 dev', 'FLUX.2'],
     current_hardware_mentioned: ['4 GB VRAM', '6 GB VRAM', '8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'NVIDIA RTX 3060', 'NVIDIA RTX 4090', 'RTX PRO 6000 Blackwell'],
     leadAnswerBlock:
-      '**O ComfyUI é uma interface gratuita, de código aberto e baseada em nós para rodar localmente modelos de difusão como Stable Diffusion e Flux — licenciado sob GPL-3.0 e autoalojável na sua própria GPU sem custo.** Diferente do layout em abas do AUTOMATIC1111 ou da simplicidade de um clique do Fooocus, o ComfyUI representa cada etapa da geração (carregamento do modelo, codificação do prompt, amostragem, upscaling) como um nó que você conecta em um grafo visual, o que dá aos usuários avançados controle total do pipeline e arquivos de workflow reproduzíveis e compartilháveis, ao custo de uma curva de aprendizado mais acentuada. Os requisitos de hardware dependem do modelo carregado — apenas 4-6 GB de VRAM para o Stable Diffusion 1.5 até 24 GB+ para o Flux em precisão total — não do ComfyUI em si. A Comfy Org, organização por trás do projeto, também vende separadamente um serviço pago hospedado, o Comfy Cloud, para leitores que não querem usar a própria GPU; confira os níveis e preços atuais em [comfy.org](https://www.comfy.org) antes de planejar o orçamento, já que preços de SaaS mudam com o tempo.',
+      '**O ComfyUI é uma interface gratuita, de código aberto e baseada em nós para rodar modelos de difusão como Stable Diffusion e Flux. Licença GPL-3.0. A VRAM depende do modelo: cerca de 4 GB para SD 1.5 e 24 GB+ para Flux. O Comfy Cloud é um serviço pago.**',
     quickAnswerTop: {
       pt: {
         question: 'O que é o ComfyUI e ele é gratuito?',
@@ -1708,8 +1740,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O ComfyUI Manager instala e atualiza nós personalizados da comunidade direto na interface.',
           'Roda o SD 1.5 com aproximadamente 4-6 GB de VRAM; o Flux em precisão total exige 24 GB+.',
           'O Comfy Cloud (pago, produto separado) começa em 20 USD/mês por 4.200 créditos mensais em GPUs Blackwell RTX PRO 6000 hospedadas.',
+          'Última versão marcada: v0.43.0 (' + rel('pt') + '). Última atualização upstream: ' + upd('pt') + ' (commit ou release mais recente do repositório [Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI)).',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1755,7 +1788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O ComfyUI não gera imagens sozinho — ele precisa de um modelo de difusão carregado, como [Stable Diffusion](/pt/power-local-llm/stable-diffusion-review), SDXL, SD 3.5 ou Flux. O trabalho do ComfyUI é carregar os pesos desse modelo, executar a inferência na sua própria GPU e expor cada etapa desse processo (carregamento do checkpoint, codificação do prompt de texto, amostragem, decodificação VAE, upscaling) como um nó separado e conectável.',
           'Isso coloca o ComfyUI na mesma categoria do [AUTOMATIC1111\'s Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui), do [InvokeAI](https://github.com/invoke-ai/InvokeAI) e do [Fooocus](https://github.com/lllyasviel/Fooocus): os quatro são interfaces frontend para os mesmos modelos de difusão subjacentes, não modelos concorrentes em si. A diferença está no paradigma de interação — AUTOMATIC1111 e Fooocus usam abas, botões e controles deslizantes convencionais; o ComfyUI usa um grafo de nós.',
           'O ComfyUI foi criado por um desenvolvedor publicamente conhecido como comfyanonymous, cujo nome real — Yannik Marek — se tornou público mais tarde por meio de entrevistas e podcasts. O projeto foi lançado pela primeira vez no [GitHub](https://github.com/comfyanonymous/ComfyUI) em janeiro de 2023. Marek foi contratado pela [Stability AI](https://stability.ai) em junho de 2023, e esse vínculo empregatício direto terminou por volta de junho de 2024; em 21 de junho de 2024, a Comfy Org foi formada como organização dedicada, com Marek como cofundador ao lado de outros desenvolvedores centrais do ComfyUI, e o repositório principal do projeto no GitHub agora está sob a organização [Comfy-Org](https://github.com/Comfy-Org/ComfyUI), em vez da conta pessoal de Marek. A Comfy Org entrou para a Open Model Initiative da Linux Foundation em agosto de 2024.',
-          'O ecossistema do ComfyUI cresceu bem além do Stable Diffusion: em setembro de 2026, o projeto e seu ecossistema de nós personalizados suportam modelos de imagem (Stable Diffusion, SDXL, SD 3.5, Flux.1 e Flux.2, Qwen-Image), modelos de vídeo (Wan, LTX-Video, HunyuanVideo) e nós de geração de áudio e 3D — confira a lista atual de modelos suportados no [repositório oficial do ComfyUI no GitHub](https://github.com/Comfy-Org/ComfyUI) antes de planejar um workflow específico, já que o suporte a novos modelos é adicionado com frequência.',
+          'O ecossistema do ComfyUI cresceu bem além do Stable Diffusion: o projeto e seu ecossistema de nós personalizados suportam modelos de imagem (Stable Diffusion, SDXL, SD 3.5, Flux.1 e Flux.2, Qwen-Image), modelos de vídeo (Wan, LTX-Video, HunyuanVideo) e nós de geração de áudio e 3D — confira a lista atual de modelos suportados no [repositório oficial do ComfyUI no GitHub](https://github.com/Comfy-Org/ComfyUI) antes de planejar um workflow específico, já que o suporte a novos modelos é adicionado com frequência.',
         ],
       },
       nodeGraphWorkflow: {
@@ -1809,7 +1842,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A condição copyleft da GPL-3.0 importa principalmente para desenvolvedores, não para leitores que só querem gerar imagens: se você modificar o código central do ComfyUI e distribuir essa versão modificada, a GPL-3.0 exige que você publique suas mudanças sob a mesma licença. Segundo uma [discussão de mantenedores no repositório oficial](https://github.com/comfyanonymous/ComfyUI/issues/3362), nós personalizados que estendem o ComfyUI por meio de sua interface de plugins (localizados na pasta `custom_nodes`) geralmente são tratados como obras separadas que podem ter sua própria licença — mas um fork ou uma modificação direta do código central do ComfyUI é uma obra derivada e deve permanecer sob GPL-3.0. Verifique a licença de cada nó personalizado específico que você instalar, já que nós criados pela comunidade não são cobertos pela licença própria do ComfyUI e variam nos termos.',
           '**A licença GPL-3.0 do ComfyUI não diz nada sobre o que você pode fazer com as imagens que gera — isso é regido inteiramente pela licença do modelo de difusão que você carrega.** Stable Diffusion 1.5, SD 2.1 e SDXL usam a licença CreativeML Open RAIL-M / RAIL++-M, sem teto de receita comercial; SD 3 e SD 3.5 usam a Stability AI Community License, gratuita apenas abaixo de 1.000.000 USD de receita anual; o FLUX.1 schnell é Apache 2.0 (sem restrições), enquanto o FLUX.1 dev exige uma licença comercial separada da [Black Forest Labs](https://blackforestlabs.ai) para uso comercial. Rodar qualquer um desses modelos dentro do ComfyUI não muda nem anula os termos de licença deles.',
         ],
-        note: 'Termos de licença são texto jurídico, não texto de marketing — esta seção resume termos publicados publicamente em 2026-09-06, mas não é aconselhamento jurídico. Leia o arquivo `LICENSE` real no repositório do GitHub, e a licença do modelo que você carregar, antes de qualquer uso comercial.',
+        note: 'Termos de licença são texto jurídico, não texto de marketing — esta seção resume termos publicados publicamente no momento da última atualização, mas não é aconselhamento jurídico. Leia o arquivo `LICENSE` real no repositório do GitHub, e a licença do modelo que você carregar, antes de qualquer uso comercial.',
       },
       hardwareRequirements: {
         id: 'hardware-requirements',
@@ -1829,7 +1862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preços: autoalojamento gratuito vs. Comfy Cloud',
         content: [
           '**Autoalojar o ComfyUI é gratuito — você paga apenas pelo seu próprio hardware e eletricidade.** O software em si, sob sua licença GPL-3.0, não tem assinatura, teto de receita ou exigência de registro para uso local ou offline.',
-          'A Comfy Org vende separadamente o Comfy Cloud, um serviço pago de GPU hospedada para leitores que não querem usar o próprio hardware. Segundo os preços publicados em [comfy.org](https://www.comfy.org/pricing), o Comfy Cloud oferece um nível gratuito com um número limitado de execuções em GPU e sem necessidade de cartão de crédito, seguido de assinaturas mensais pagas: Standard a 20 USD/mês (4.200 créditos mensais, sem importação de modelos personalizados), Creator a 35 USD/mês (7.400 créditos mensais, com importação de modelos personalizados incluída), Pro a 100 USD/mês (21.100 créditos mensais, até uma hora de duração de workflow) e Team a 700 USD/mês (147.700 créditos mensais, acesso compartilhado para equipes). A cobrança anual é oferecida com desconto em cada nível. O Comfy Cloud roda em GPUs Blackwell RTX PRO 6000 hospedadas com 96 GB de VRAM, e o tempo de GPU é cobrado por segundo de processamento ativo, não por geração.',
+          'A Comfy Org vende separadamente o Comfy Cloud, um serviço pago de GPU hospedada para leitores que não querem usar o próprio hardware. Segundo os preços publicados em [comfy.org](https://www.comfy.org/pricing), o Comfy Cloud oferece um nível gratuito com um número limitado de execuções gratuitas em GPU, seguido de assinaturas mensais pagas: Standard a 20 USD/mês (4.200 créditos mensais, sem importação de modelos personalizados), Creator a 35 USD/mês (7.400 créditos mensais, com importação de modelos personalizados incluída), Pro a 100 USD/mês (21.100 créditos mensais, até uma hora de duração de workflow) e Team a 700 USD/mês (147.700 créditos mensais, acesso compartilhado para equipes). A cobrança anual é oferecida com desconto em cada nível. O Comfy Cloud roda em GPUs Blackwell RTX PRO 6000 hospedadas com 96 GB de VRAM, e o tempo de GPU é cobrado por segundo de processamento ativo, não por geração.',
           'O Comfy Cloud é um produto comercial distinto do projeto ComfyUI gratuito, autoalojado e de código aberto — você nunca precisa dele para usar o ComfyUI na sua própria GPU, e nada na licença GPL-3.0 exige pagar por ele.',
         ],
         note: 'Os nomes de níveis, quantidades de créditos e preços do Comfy Cloud são preços de SaaS que a Comfy Org já mudou mais de uma vez em 2026 — confirme os níveis e preços atuais diretamente em [comfy.org/pricing](https://www.comfy.org/pricing) antes de planejar o orçamento para um plano hospedado. Este artigo não estima nem arredonda valores em dólar atuais.',
@@ -1927,6 +1960,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Sim. O ComfyUI é software gratuito e de código aberto sob licença GPL-3.0 — não há custo para baixar, autoalojar, modificar ou usar comercialmente. A Comfy Org vende separadamente o Comfy Cloud, uma assinatura paga de GPU hospedada a partir de 20 USD/mês, para leitores que não querem usar a própria GPU, mas isso é opcional e não é necessário para usar o ComfyUI localmente.',
           },
           {
+            q: 'Para que serve o ComfyUI?',
+            a: 'O ComfyUI serve para gerar imagens e, com os modelos e nós personalizados certos, também vídeo no seu próprio computador: você carrega um modelo de difusão como Stable Diffusion, SDXL ou Flux e monta o pipeline (codificação do prompt, amostragem, upscaling) como um grafo de nós, que pode ser salvo como workflow .json e recarregado depois. O ecossistema de nós personalizados também cobre modelos de vídeo como Wan e LTX-Video, além de geração de áudio e 3D.',
+          },
+          {
             q: 'Qual é a diferença entre ComfyUI e Stable Diffusion?',
             a: 'O Stable Diffusion é o modelo de difusão — os pesos e o código que transformam um prompt de texto em uma imagem. O ComfyUI é uma entre várias interfaces frontend (junto com AUTOMATIC1111, InvokeAI e Fooocus) que carrega esse modelo e permite executá-lo. O ComfyUI não gera imagens sozinho; ele precisa ter um modelo como Stable Diffusion, SDXL ou Flux carregado primeiro.',
           },
@@ -1943,8 +1980,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'O ComfyUI é licenciado sob GPL-3.0 (Licença Pública Geral GNU versão 3.0), uma licença copyleft gratuita e de código aberto. É gratuita para autoalojar e usar comercialmente, sem teto de receita. Essa licença cobre o software ComfyUI em si — ela não muda nem anula a licença separada do modelo de difusão (Stable Diffusion, Flux, etc.) que você carrega e executa dentro dele.',
           },
           {
-            q: 'Quanta VRAM o ComfyUI precisa?',
-            a: 'Os requisitos de VRAM vêm do modelo carregado, não do ComfyUI em si: aproximadamente 4 GB para o Stable Diffusion 1.5, 6-12 GB para o SDXL, e de 12 GB (quantizado FP8) a 24 GB+ (FP16 em precisão total) para o Flux. Costuma-se relatar que o ComfyUI adiciona um pouco menos de sobrecarga de memória que o AUTOMATIC1111 para o mesmo modelo, embora os números exatos variem conforme o workflow.',
+            q: 'Quanta VRAM o ComfyUI precisa e quais são os requisitos do sistema?',
+            a: 'Os requisitos de VRAM vêm do modelo carregado, não do ComfyUI em si: aproximadamente 4 GB para o Stable Diffusion 1.5, 6-12 GB para o SDXL, e de 12 GB (quantizado FP8) a 24 GB+ (FP16 em precisão total) para o Flux. Costuma-se relatar que o ComfyUI adiciona um pouco menos de sobrecarga de memória que o AUTOMATIC1111 para o mesmo modelo, embora os números exatos variem conforme o workflow. O ComfyUI não publica um mínimo fixo de VRAM nem de RAM; segundo o README, a versão portátil para Windows funciona com uma GPU Nvidia ou apenas com a CPU, e o arquivo portátil NVIDIA da v0.43.0 tem cerca de 2 GB de download, sem contar os arquivos de modelo.',
           },
           {
             q: 'O que é o ComfyUI Manager?',
@@ -1995,8 +2032,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-ar.webp',
@@ -2005,7 +2042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ComfyUI هي واجهة بصرية مجانية ومفتوحة المصدر وقائمة على العُقد لتشغيل نماذج الانتشار — Stable Diffusion وSDXL وSD 3.5 وFlux وغيرها — محليًا على معالج الرسومات (GPU) الخاص بك. إنها ليست نموذجًا بحد ذاتها: ComfyUI هي المحرك ومحرر سير العمل الذي يُحمّل نموذج انتشار ويتيح لك ربط كل خطوة من خطوات توليد الصورة (تحميل النموذج، ترميز الطلب، أخذ العينات، تكبير الدقة) كمخطط من العُقد المتصلة، بدلًا من مجموعة ثابتة من الألسنة وأشرطة التمرير. تشرح هذه المراجعة ما تفعله ComfyUI فعليًا، وكيف يختلف نهجها القائم على مخطط العُقد عن واجهات أبسط مثل AUTOMATIC1111 وFooocus، ورخصتها GPL-3.0، ومتطلبات الأجهزة حسب النموذج، وComfyUI Manager للعُقد المخصصة، وباقة Comfy Cloud المدفوعة المنفصلة مقارنة بالنواة المجانية المستضافة ذاتيًا.',
     metaDescription:
-      'مراجعة ComfyUI 2026: رخصة GPL-3.0، شرح سير عمل مخطط العُقد، متطلبات VRAM لـ SD 1.5/SDXL/Flux، ComfyUI Manager، أسعار Comfy Cloud، ومقارنة مع AUTOMATIC1111 وInvokeAI وFooocus.',
+      'مراجعة ComfyUI: محرر عُقد مجاني (GPL-3.0) لـ Stable Diffusion وFlux، متطلبات VRAM لكل نموذج، ComfyUI Manager، أسعار Comfy Cloud والبدائل.',
     twitterDescription:
       'مراجعة ComfyUI 2026: المحرك المجاني القائم على العُقد لتشغيل Stable Diffusion وFlux محليًا — رخصة GPL-3.0، متطلبات VRAM، ComfyUI Manager، أسعار Comfy Cloud، ومقارنة مع AUTOMATIC1111 وFooocus.',
     audience:
@@ -2026,7 +2063,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion 1.5', 'Stable Diffusion XL 1.0', 'Stable Diffusion 3.5', 'FLUX.1 schnell', 'FLUX.1 dev', 'FLUX.2'],
     current_hardware_mentioned: ['4 GB VRAM', '6 GB VRAM', '8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'NVIDIA RTX 3060', 'NVIDIA RTX 4090', 'RTX PRO 6000 Blackwell'],
     leadAnswerBlock:
-      '**ComfyUI هي واجهة مجانية ومفتوحة المصدر وقائمة على العُقد لتشغيل نماذج انتشار مثل Stable Diffusion وFlux محليًا — مرخّصة بموجب GPL-3.0 ويمكن استضافتها ذاتيًا على معالج الرسومات الخاص بك دون أي تكلفة.** على عكس تخطيط الألسنة في AUTOMATIC1111 أو بساطة النقرة الواحدة في Fooocus، تمثّل ComfyUI كل خطوة من خطوات التوليد (تحميل النموذج، ترميز الطلب، أخذ العينات، تكبير الدقة) كعقدة تربطها بنفسك في مخطط بصري، ما يمنح المستخدمين المتقدمين تحكمًا كاملًا في خط الأنابيب وملفات سير عمل قابلة للتكرار والمشاركة، مقابل منحنى تعلّم أكثر انحدارًا. تتحدد متطلبات الأجهزة بحسب النموذج الذي تحمّله — بدءًا من 4-6 جيجابايت فقط من VRAM لـ Stable Diffusion 1.5 وحتى 24 جيجابايت أو أكثر لـ Flux بدقة كاملة — وليس بحسب ComfyUI نفسها. تبيع Comfy Org، المنظمة القائمة على المشروع، أيضًا خدمة استضافة مدفوعة منفصلة تُسمى Comfy Cloud للقراء الذين لا يرغبون في استخدام معالج الرسومات الخاص بهم؛ تحقق من الباقات والأسعار الحالية على [comfy.org](https://www.comfy.org) قبل التخطيط للميزانية، لأن أسعار خدمات SaaS تتغير بمرور الوقت.',
+      '**ComfyUI واجهة مجانية مفتوحة المصدر قائمة على العُقد لتشغيل نماذج الانتشار مثل Stable Diffusion وFlux محلياً. رخصتها GPL-3.0، ويعتمد VRAM المطلوب على النموذج: نحو 4 GB لـ SD 1.5 و24 GB+ لـ Flux. Comfy Cloud خدمة مدفوعة منفصلة.**',
     quickAnswerTop: {
       ar: {
         question: 'ما هي ComfyUI، وهل هي مجانية الاستخدام؟',
@@ -2038,8 +2075,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يقوم ComfyUI Manager بتثبيت وتحديث العُقد المخصصة من المجتمع من داخل الواجهة نفسها.',
           'تشغّل SD 1.5 بحوالي 4-6 جيجابايت من VRAM؛ يحتاج Flux بدقة كاملة إلى 24 جيجابايت أو أكثر.',
           'تبدأ Comfy Cloud (مدفوعة، منتج منفصل) من 20 دولارًا أمريكيًا شهريًا مقابل 4,200 رصيد شهري على معالجات Blackwell RTX PRO 6000 المستضافة.',
+          'أحدث إصدار موسوم: v0.43.0 (' + rel('ar') + '). آخر تحديث في المشروع الأصلي: ' + upd('ar') + ' (أحدث commit أو إصدار في المستودع [Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI)).',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -2085,7 +2123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لا تولّد ComfyUI الصور بمفردها — فهي تحتاج إلى تحميل نموذج انتشار، مثل [Stable Diffusion](/ar/power-local-llm/stable-diffusion-review) أو SDXL أو SD 3.5 أو Flux. مهمة ComfyUI هي تحميل أوزان ذلك النموذج، وتشغيل الاستدلال على معالج الرسومات الخاص بك، وكشف كل مرحلة من هذه العملية (تحميل نقطة التحقق، ترميز نص الطلب، أخذ العينات، فك ترميز VAE، تكبير الدقة) كعقدة منفصلة قابلة للربط.',
           'هذا يضع ComfyUI في نفس فئة [واجهة Stable Diffusion WebUI الخاصة بـ AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui) و[InvokeAI](https://github.com/invoke-ai/InvokeAI) و[Fooocus](https://github.com/lllyasviel/Fooocus): فالأربعة جميعها واجهات أمامية لنفس نماذج الانتشار الأساسية، وليست نماذج منافسة بحد ذاتها. يكمن الاختلاف في نموذج التفاعل — يستخدم AUTOMATIC1111 وFooocus ألسنة وأزرارًا وأشرطة تمرير تقليدية؛ بينما تستخدم ComfyUI مخطط عُقد.',
           'أنشأ ComfyUI مطوّر معروف علنًا باسم comfyanonymous، وأصبح اسمه الحقيقي — Yannik Marek — معروفًا لاحقًا من خلال مقابلات وحلقات بودكاست. صدر المشروع لأول مرة على [GitHub](https://github.com/comfyanonymous/ComfyUI) في يناير 2023. وظّفت [Stability AI](https://stability.ai) ماريك في يونيو 2023، وانتهت علاقة التوظيف المباشرة تلك بحلول يونيو 2024؛ وفي 21 يونيو 2024، تأسست Comfy Org كمنظمة مخصصة بمشاركة ماريك كمؤسس مشارك إلى جانب مطورين أساسيين آخرين في ComfyUI، وأصبح مستودع GitHub الرئيسي للمشروع الآن تحت منظمة [Comfy-Org](https://github.com/Comfy-Org/ComfyUI) بدلًا من حساب ماريك الشخصي. انضمت Comfy Org إلى مبادرة Open Model Initiative التابعة لمؤسسة Linux Foundation في أغسطس 2024.',
-          'نما نظام ComfyUI البيئي إلى ما هو أبعد بكثير من Stable Diffusion: اعتبارًا من سبتمبر 2026، يدعم المشروع ونظام العُقد المخصصة المحيط به نماذج صور (Stable Diffusion، SDXL، SD 3.5، Flux.1 وFlux.2، Qwen-Image)، ونماذج فيديو (Wan، LTX-Video، HunyuanVideo)، وعُقد توليد الصوت والأبعاد الثلاثية — تحقق من قائمة النماذج المدعومة الحالية على [مستودع ComfyUI الرسمي على GitHub](https://github.com/Comfy-Org/ComfyUI) قبل التخطيط لسير عمل محدد، لأن دعم النماذج الجديدة يصدر بشكل متكرر.',
+          'نما نظام ComfyUI البيئي إلى ما هو أبعد بكثير من Stable Diffusion: يدعم المشروع ونظام العُقد المخصصة المحيط به نماذج صور (Stable Diffusion، SDXL، SD 3.5، Flux.1 وFlux.2، Qwen-Image)، ونماذج فيديو (Wan، LTX-Video، HunyuanVideo)، وعُقد توليد الصوت والأبعاد الثلاثية — تحقق من قائمة النماذج المدعومة الحالية على [مستودع ComfyUI الرسمي على GitHub](https://github.com/Comfy-Org/ComfyUI) قبل التخطيط لسير عمل محدد، لأن دعم النماذج الجديدة يصدر بشكل متكرر.',
         ],
       },
       nodeGraphWorkflow: {
@@ -2139,7 +2177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'شرط copyleft في GPL-3.0 يهم المطورين بشكل أساسي، وليس القراء الذين يريدون فقط توليد الصور: إذا عدّلت الكود الأساسي لـ ComfyUI ووزّعت تلك النسخة المعدّلة، فإن GPL-3.0 تلزمك بإصدار تعديلاتك بموجب الرخصة نفسها. وفقًا لـ[نقاش بين القائمين على المستودع الرسمي](https://github.com/comfyanonymous/ComfyUI/issues/3362)، تُعامل العُقد المخصصة التي توسّع ComfyUI عبر واجهة الإضافات الخاصة بها (الموجودة في مجلد `custom_nodes`) عمومًا كأعمال منفصلة يمكن أن تحمل رخصتها الخاصة — أما التفريع أو التعديل المباشر لكود ComfyUI الأساسي فهو عمل مشتق ويجب أن يبقى بموجب GPL-3.0. تحقق من رخصة أي عقدة مخصصة معينة تثبّتها، لأن العُقد التي ينشئها المجتمع لا تخضع لرخصة ComfyUI الخاصة وتتفاوت شروطها.',
           '**رخصة GPL-3.0 الخاصة بـ ComfyUI لا تقول شيئًا عمّا يُسمح لك بفعله بالصور التي تولّدها — فذلك تحكمه بالكامل رخصة نموذج الانتشار الذي تحمّله.** تستخدم Stable Diffusion 1.5 وSD 2.1 وSDXL رخصة CreativeML Open RAIL-M / RAIL++-M دون سقف إيرادات تجارية؛ بينما تستخدم SD 3 وSD 3.5 رخصة Stability AI Community License، وهي مجانية فقط لمن تقل إيراداته السنوية عن 1,000,000 دولار أمريكي؛ أما FLUX.1 schnell فهو بموجب Apache 2.0 (دون قيود)، في حين يتطلب FLUX.1 dev رخصة تجارية منفصلة من [Black Forest Labs](https://blackforestlabs.ai) للاستخدام التجاري. تشغيل أي من هذه النماذج داخل ComfyUI لا يغيّر أو يلغي شروط رخصتها.',
         ],
-        note: 'شروط الرخصة نص قانوني وليست نصًا تسويقيًا — يلخّص هذا القسم شروطًا منشورة علنًا اعتبارًا من 2026-09-06، لكنه ليس استشارة قانونية. اقرأ ملف `LICENSE` الفعلي على مستودع GitHub، ورخصة النموذج الذي تحمّله، قبل أي نشر تجاري.',
+        note: 'شروط الرخصة نص قانوني وليست نصًا تسويقيًا — يلخّص هذا القسم شروطًا منشورة علنًا وقت آخر تحديث، لكنه ليس استشارة قانونية. اقرأ ملف `LICENSE` الفعلي على مستودع GitHub، ورخصة النموذج الذي تحمّله، قبل أي نشر تجاري.',
       },
       hardwareRequirements: {
         id: 'hardware-requirements',
@@ -2159,7 +2197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسعار: الاستضافة الذاتية المجانية مقابل Comfy Cloud',
         content: [
           '**استضافة ComfyUI ذاتيًا مجانية — تدفع فقط مقابل جهازك الخاص والكهرباء.** لا يحتوي البرنامج نفسه، بموجب رخصة GPL-3.0 الخاصة به، على أي اشتراك أو سقف إيرادات أو شرط تسجيل للاستخدام المحلي أو دون اتصال.',
-          'تبيع Comfy Org بشكل منفصل Comfy Cloud، وهي خدمة معالج رسومات مستضافة مدفوعة للقراء الذين لا يرغبون في استخدام جهازهم الخاص. وفقًا للأسعار المنشورة على [comfy.org](https://www.comfy.org/pricing)، تقدّم Comfy Cloud باقة مجانية بعدد محدود من عمليات تشغيل معالج الرسومات دون الحاجة إلى بطاقة ائتمان، ثم اشتراكات شهرية مدفوعة: Standard مقابل 20 دولارًا شهريًا (4,200 رصيد شهري، دون استيراد نماذج مخصصة)، وCreator مقابل 35 دولارًا شهريًا (7,400 رصيد شهري، مع استيراد نماذج مخصصة)، وPro مقابل 100 دولار شهريًا (21,100 رصيد شهري، حتى ساعة واحدة من مدة سير العمل)، وTeam مقابل 700 دولار شهريًا (147,700 رصيد شهري، وصول مشترك للفريق). تُقدَّم الفوترة السنوية بخصم في كل باقة. تعمل Comfy Cloud على معالجات Blackwell RTX PRO 6000 المستضافة بسعة 96 جيجابايت من VRAM، ويُفرض رسم وقت معالج الرسومات بحسب ثانية المعالجة النشطة وليس بحسب كل عملية توليد.',
+          'تبيع Comfy Org بشكل منفصل Comfy Cloud، وهي خدمة معالج رسومات مستضافة مدفوعة للقراء الذين لا يرغبون في استخدام جهازهم الخاص. وفقًا للأسعار المنشورة على [comfy.org](https://www.comfy.org/pricing)، تقدّم Comfy Cloud باقة مجانية بعدد محدود من عمليات تشغيل معالج الرسومات المجانية، ثم اشتراكات شهرية مدفوعة: Standard مقابل 20 دولارًا شهريًا (4,200 رصيد شهري، دون استيراد نماذج مخصصة)، وCreator مقابل 35 دولارًا شهريًا (7,400 رصيد شهري، مع استيراد نماذج مخصصة)، وPro مقابل 100 دولار شهريًا (21,100 رصيد شهري، حتى ساعة واحدة من مدة سير العمل)، وTeam مقابل 700 دولار شهريًا (147,700 رصيد شهري، وصول مشترك للفريق). تُقدَّم الفوترة السنوية بخصم في كل باقة. تعمل Comfy Cloud على معالجات Blackwell RTX PRO 6000 المستضافة بسعة 96 جيجابايت من VRAM، ويُفرض رسم وقت معالج الرسومات بحسب ثانية المعالجة النشطة وليس بحسب كل عملية توليد.',
           'Comfy Cloud منتج تجاري منفصل عن مشروع ComfyUI المجاني والمفتوح المصدر والمستضاف ذاتيًا — لست بحاجة إليه أبدًا لاستخدام ComfyUI على معالج الرسومات الخاص بك، ولا شيء في رخصة GPL-3.0 يلزمك بالدفع مقابله.',
         ],
         note: 'أسماء باقات Comfy Cloud ومقادير الأرصدة والأسعار هي أسعار خدمات SaaS غيّرتها Comfy Org أكثر من مرة خلال عام 2026 — تحقق من الباقات والأسعار الحالية مباشرة على [comfy.org/pricing](https://www.comfy.org/pricing) قبل التخطيط لميزانية خطة مستضافة. لا يخمّن هذا المقال أو يقرّب أي أرقام دولارية حالية.',
@@ -2257,6 +2295,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'نعم. ComfyUI برنامج مجاني ومفتوح المصدر بموجب رخصة GPL-3.0 — لا توجد تكلفة للتنزيل أو الاستضافة الذاتية أو التعديل أو الاستخدام التجاري. تبيع Comfy Org بشكل منفصل Comfy Cloud، وهو اشتراك معالج رسومات مستضاف مدفوع بدءًا من 20 دولارًا شهريًا، للقراء الذين لا يرغبون في استخدام معالج الرسومات الخاص بهم، لكن هذا اختياري وغير مطلوب لاستخدام ComfyUI محليًا.',
           },
           {
+            q: 'ما استخدامات ComfyUI؟',
+            a: 'يُستخدم ComfyUI لتوليد الصور، ومع النماذج والعُقد المخصصة المناسبة لتوليد الفيديو أيضًا، على جهازك الخاص: تحمّل نموذج انتشار مثل Stable Diffusion أو SDXL أو Flux وتبني خط المعالجة (ترميز الـ prompt، أخذ العينات، تكبير الصورة) في صورة مخطط من العُقد يمكنك حفظه كملف workflow بصيغة .json وإعادة تحميله لاحقًا. كما يشمل نظام العُقد المخصصة نماذج فيديو مثل Wan وLTX-Video إضافةً إلى توليد الصوت والمحتوى ثلاثي الأبعاد.',
+          },
+          {
             q: 'ما الفرق بين ComfyUI وStable Diffusion؟',
             a: 'Stable Diffusion هو نموذج الانتشار — الأوزان والكود الذي يحوّل طلب نصي إلى صورة. أما ComfyUI فهي واحدة من عدة واجهات أمامية (إلى جانب AUTOMATIC1111 وInvokeAI وFooocus) تحمّل ذلك النموذج وتتيح تشغيله. لا تولّد ComfyUI الصور بمفردها؛ فهي تحتاج إلى تحميل نموذج مثل Stable Diffusion أو SDXL أو Flux أولًا.',
           },
@@ -2273,8 +2315,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'ComfyUI مرخّصة بموجب GPL-3.0 (رخصة جنو العمومية العامة الإصدار 3.0)، وهي رخصة copyleft مجانية ومفتوحة المصدر. وهي مجانية للاستضافة الذاتية والاستخدام التجاري دون عتبة إيرادات. تغطي هذه الرخصة برنامج ComfyUI نفسه — ولا تغيّر أو تلغي الرخصة المنفصلة لنموذج الانتشار (Stable Diffusion، Flux، إلخ) الذي تحمّله وتشغّله داخلها.',
           },
           {
-            q: 'كم من VRAM تحتاجه ComfyUI؟',
-            a: 'تنبع متطلبات VRAM من النموذج الذي تحمّله، وليس من ComfyUI نفسها: نحو 4 جيجابايت لـ Stable Diffusion 1.5، و6-12 جيجابايت لـ SDXL، ومن 12 جيجابايت (مكمّم بصيغة FP8) إلى 24 جيجابايت أو أكثر (FP16 بدقة كاملة) لـ Flux. يُذكر عادةً أن ComfyUI تضيف عبئًا أقل قليلًا على الذاكرة مقارنة بـ AUTOMATIC1111 لنفس النموذج، رغم أن الأرقام الدقيقة تختلف حسب سير العمل.',
+            q: 'كم من VRAM يحتاجه ComfyUI وما متطلبات النظام؟',
+            a: 'تنبع متطلبات VRAM من النموذج الذي تحمّله، وليس من ComfyUI نفسها: نحو 4 جيجابايت لـ Stable Diffusion 1.5، و6-12 جيجابايت لـ SDXL، ومن 12 جيجابايت (مكمّم بصيغة FP8) إلى 24 جيجابايت أو أكثر (FP16 بدقة كاملة) لـ Flux. يُذكر عادةً أن ComfyUI تضيف عبئًا أقل قليلًا على الذاكرة مقارنة بـ AUTOMATIC1111 لنفس النموذج، رغم أن الأرقام الدقيقة تختلف حسب سير العمل. لا ينشر ComfyUI حدًّا أدنى ثابتًا لـ VRAM أو RAM؛ ووفق ملف README يعمل الإصدار المحمول لنظام Windows على معالج رسومات Nvidia أو على CPU فقط، ويبلغ حجم أرشيف NVIDIA المحمول من v0.43.0 نحو 2 GB للتنزيل، دون ملفات النماذج.',
           },
           {
             q: 'ما هو ComfyUI Manager؟',
@@ -2325,17 +2367,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-zh.webp',
     title: 'ComfyUI评测:运行Stable Diffusion与Flux的免费节点式界面',
-    seoTitle: 'ComfyUI评测:本地图像生成的节点编辑器',
+    seoTitle: 'ComfyUI评测:本地图像生成的节点编辑器与免费使用',
     intro:
       'ComfyUI是一款免费、开源、基于节点的可视化界面,用于在自己的GPU上本地运行扩散模型——Stable Diffusion、SDXL、SD 3.5、Flux等。它本身不是模型:ComfyUI是加载扩散模型的引擎和工作流编辑器,让你把图像生成的每一步(模型加载、提示词编码、采样、放大)以相连节点组成的图形来搭建,而不是一组固定的标签页和滑块。本评测将说明ComfyUI实际做什么、其节点图方式与AUTOMATIC1111、Fooocus等更简单界面的区别、GPL-3.0许可证、按模型划分的硬件要求、用于自定义节点的ComfyUI Manager,以及独立的付费托管服务Comfy Cloud与免费自托管核心之间的区别。',
     metaDescription:
-      'ComfyUI评测2026:GPL-3.0许可证、节点图工作流详解、SD 1.5/SDXL/Flux所需VRAM、ComfyUI Manager、Comfy Cloud定价,以及与AUTOMATIC1111、InvokeAI、Fooocus的对比。',
+      'ComfyUI评测:GPL-3.0免费节点编辑器,各模型所需VRAM、ComfyUI Manager、Comfy Cloud定价,以及与AUTOMATIC1111、Fooocus的对比。',
     twitterDescription:
       'ComfyUI评测2026:本地运行Stable Diffusion与Flux的免费节点式引擎——GPL-3.0许可证、所需VRAM、ComfyUI Manager、Comfy Cloud定价,以及与AUTOMATIC1111、Fooocus的对比。',
     audience:
@@ -2356,7 +2398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion 1.5', 'Stable Diffusion XL 1.0', 'Stable Diffusion 3.5', 'FLUX.1 schnell', 'FLUX.1 dev', 'FLUX.2'],
     current_hardware_mentioned: ['4 GB VRAM', '6 GB VRAM', '8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'NVIDIA RTX 3060', 'NVIDIA RTX 4090', 'RTX PRO 6000 Blackwell'],
     leadAnswerBlock:
-      '**ComfyUI是一款免费、开源、基于节点的界面,用于在本地运行Stable Diffusion、Flux等扩散模型——采用GPL-3.0许可证,可在自己的GPU上免费自托管。** 与AUTOMATIC1111的标签页布局或Fooocus的一键式简单操作不同,ComfyUI把生成过程的每一步(模型加载、提示词编码、采样、放大)表示为一个节点,由你在可视化图形中自行连接,这让高级用户获得对流水线的完全控制,以及可复现、可共享的工作流文件,代价是学习曲线更陡峭。硬件需求取决于所加载的模型——Stable Diffusion 1.5仅需4-6 GB VRAM,而全精度Flux则需要24 GB以上——而不是取决于ComfyUI本身。该项目背后的组织Comfy Org还另外销售一项付费托管服务Comfy Cloud,供不想使用自有GPU的读者选用;在做预算之前,请在[comfy.org](https://www.comfy.org)确认当前的套餐和价格,因为SaaS定价会随时间变化。',
+      '**ComfyUI是免费开源的节点式界面,可在本地运行Stable Diffusion、Flux等扩散模型。采用GPL-3.0许可证,所需显存取决于模型(SD 1.5约4GB,Flux需24GB以上)。Comfy Cloud是单独的付费服务。**',
     quickAnswerTop: {
       zh: {
         question: 'ComfyUI是什么,它免费吗?',
@@ -2368,8 +2410,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ComfyUI Manager可在界面内安装和更新社区自定义节点。',
           '运行SD 1.5大约需要4-6 GB VRAM;全精度Flux需要24 GB以上。',
           'Comfy Cloud(付费,独立产品)在托管的Blackwell RTX PRO 6000 GPU上起价为每月20美元,含4,200点月度积分。',
+          '最新标记版本：v0.43.0（' + rel('zh') + '）。上游最近更新：' + upd('zh') + '（仓库[Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI)中最新的提交或发布）',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -2415,7 +2458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ComfyUI本身不会生成图像——它需要加载一个扩散模型,例如[Stable Diffusion](/zh/power-local-llm/stable-diffusion-review)、SDXL、SD 3.5或Flux。ComfyUI的工作是加载该模型的权重,在你自己的GPU上运行推理,并把这个过程的每个阶段(加载检查点、文本提示词编码、采样、VAE解码、放大)公开为一个独立、可连接的节点。',
           '这使得ComfyUI与[AUTOMATIC1111的Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)、[InvokeAI](https://github.com/invoke-ai/InvokeAI)、[Fooocus](https://github.com/lllyasviel/Fooocus)属于同一类别:这四者都是运行同一批底层扩散模型的前端界面,而非彼此竞争的模型本身。区别在于交互范式——AUTOMATIC1111和Fooocus使用传统的标签页、按钮和滑块;ComfyUI使用节点图。',
           'ComfyUI由一位公开身份为comfyanonymous的开发者创建,其真实姓名——Yannik Marek——后来通过采访和播客节目为公众所知。该项目于2023年1月在[GitHub](https://github.com/comfyanonymous/ComfyUI)首次发布。Marek于2023年6月被[Stability AI](https://stability.ai)聘用,这段直接雇佣关系在2024年6月前后结束;2024年6月21日,Comfy Org作为一个专门的组织成立,Marek与其他几位ComfyUI核心开发者共同担任联合创始人,该项目主要的GitHub代码仓库如今归属于[Comfy-Org](https://github.com/Comfy-Org/ComfyUI)组织,而非Marek的个人账户。Comfy Org于2024年8月加入了Linux基金会的Open Model Initiative。',
-          'ComfyUI的生态系统早已远远超出Stable Diffusion的范畴:截至2026年9月,该项目及其自定义节点生态支持图像模型(Stable Diffusion、SDXL、SD 3.5、Flux.1及Flux.2、Qwen-Image)、视频模型(Wan、LTX-Video、HunyuanVideo),以及音频和3D生成节点——在规划具体工作流之前,请在[ComfyUI官方GitHub代码仓库](https://github.com/Comfy-Org/ComfyUI)确认当前支持的模型列表,因为新模型的支持会频繁上线。',
+          'ComfyUI的生态系统早已远远超出Stable Diffusion的范畴:该项目及其自定义节点生态支持图像模型(Stable Diffusion、SDXL、SD 3.5、Flux.1及Flux.2、Qwen-Image)、视频模型(Wan、LTX-Video、HunyuanVideo),以及音频和3D生成节点——在规划具体工作流之前,请在[ComfyUI官方GitHub代码仓库](https://github.com/Comfy-Org/ComfyUI)确认当前支持的模型列表,因为新模型的支持会频繁上线。',
         ],
       },
       nodeGraphWorkflow: {
@@ -2469,7 +2512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPL-3.0的著佐权条款主要与开发者相关,而非只想生成图像的读者:如果你修改了ComfyUI的核心代码并分发该修改版本,GPL-3.0要求你以相同许可证发布你的改动。根据[官方代码仓库上一场维护者的讨论](https://github.com/comfyanonymous/ComfyUI/issues/3362),通过其插件接口扩展ComfyUI的自定义节点(位于`custom_nodes`文件夹中)通常被视为可拥有自己许可证的独立作品——但对ComfyUI核心代码本身的分叉或直接修改属于衍生作品,必须继续遵循GPL-3.0。请核实你所安装的每一个具体自定义节点的许可证,因为社区编写的节点不受ComfyUI自身许可证的约束,条款各不相同。',
           '**ComfyUI的GPL-3.0许可证并未规定你可以对生成的图像做什么——这完全由你所加载的扩散模型的许可证决定。** Stable Diffusion 1.5、SD 2.1和SDXL采用CreativeML Open RAIL-M/RAIL++-M许可证,没有商业收入上限;SD 3和SD 3.5采用Stability AI Community License,仅在年收入低于100万美元时免费;FLUX.1 schnell采用Apache 2.0许可证(无限制),而FLUX.1 dev的商业使用则需要向[Black Forest Labs](https://blackforestlabs.ai)单独获取商业许可证。在ComfyUI中运行这些模型并不会改变或覆盖它们各自的许可条款。',
         ],
-        note: '许可条款是法律文本,不是营销文案——本节概述了截至2026-09-06公开发布的条款,但不构成法律建议。在进行任何商业部署之前,请阅读GitHub代码仓库上实际的`LICENSE`文件,以及你所加载模型的许可证。',
+        note: '许可条款是法律文本,不是营销文案——本节概述了最近一次更新时公开发布的条款,但不构成法律建议。在进行任何商业部署之前,请阅读GitHub代码仓库上实际的`LICENSE`文件,以及你所加载模型的许可证。',
       },
       hardwareRequirements: {
         id: 'hardware-requirements',
@@ -2489,7 +2532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '定价:免费自托管 vs. Comfy Cloud',
         content: [
           '**自托管ComfyUI是免费的——你只需支付自己的硬件和电费。** 在GPL-3.0许可证下,该软件本身没有订阅费、没有收入上限,本地或离线使用也无需注册。',
-          'Comfy Org另外销售Comfy Cloud,这是一项面向不想使用自有硬件的读者的付费托管GPU服务。根据[comfy.org](https://www.comfy.org/pricing)公布的价格,Comfy Cloud提供一个免费套餐,可进行有限次数的GPU运行且无需信用卡,之后是付费月度订阅:Standard每月20美元(月度4,200点积分,不支持导入自定义模型)、Creator每月35美元(月度7,400点积分,含自定义模型导入)、Pro每月100美元(月度21,100点积分,最长1小时工作流运行时间),以及Team每月700美元(月度147,700点积分,团队共享访问)。每个套餐都提供年付折扣。Comfy Cloud运行在配备96 GB VRAM的托管Blackwell RTX PRO 6000 GPU上,GPU时间按实际处理秒数计费,而非按每次生成计费。',
+          'Comfy Org另外销售Comfy Cloud,这是一项面向不想使用自有硬件的读者的付费托管GPU服务。根据[comfy.org](https://www.comfy.org/pricing)公布的价格,Comfy Cloud提供一个免费套餐,可进行有限次数的免费GPU运行,之后是付费月度订阅:Standard每月20美元(月度4,200点积分,不支持导入自定义模型)、Creator每月35美元(月度7,400点积分,含自定义模型导入)、Pro每月100美元(月度21,100点积分,最长1小时工作流运行时间),以及Team每月700美元(月度147,700点积分,团队共享访问)。每个套餐都提供年付折扣。Comfy Cloud运行在配备96 GB VRAM的托管Blackwell RTX PRO 6000 GPU上,GPU时间按实际处理秒数计费,而非按每次生成计费。',
           'Comfy Cloud是与免费、自托管、开源的ComfyUI项目相互独立的商业产品——在自己的GPU上使用ComfyUI永远不需要用到它,GPL-3.0许可证中也没有任何条款要求为此付费。',
         ],
         note: 'Comfy Cloud的套餐名称、积分额度和价格属于SaaS定价,Comfy Org在2026年内已多次调整——在为托管方案做预算之前,请直接在[comfy.org/pricing](https://www.comfy.org/pricing)确认当前的套餐和价格。本文不会猜测或对当前的美元金额进行四舍五入。',
@@ -2587,6 +2630,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: '是的。ComfyUI是采用GPL-3.0许可证的免费开源软件——下载、自托管、修改或商业使用都不收取任何费用。Comfy Org另外销售付费托管GPU订阅服务Comfy Cloud,起价每月20美元,供不想使用自有GPU的读者选用,但这是可选项,本地使用ComfyUI并不需要它。',
           },
           {
+            q: 'ComfyUI是干嘛的?',
+            a: 'ComfyUI用于在你自己的电脑上生成图像，配合合适的模型和自定义节点还能生成视频：你加载Stable Diffusion、SDXL或Flux等扩散模型，把提示词编码、采样、放大等流程搭成节点图，并可保存为.json工作流以便日后重新加载。它的自定义节点生态还涵盖Wan、LTX-Video等视频模型，以及音频和3D生成。',
+          },
+          {
             q: 'ComfyUI和Stable Diffusion有什么区别?',
             a: 'Stable Diffusion是扩散模型本身——将文本提示词转换为图像的权重和代码。ComfyUI则是加载并运行该模型的多个前端界面之一(与AUTOMATIC1111、InvokeAI、Fooocus并列)。ComfyUI本身不会生成图像;它首先需要加载像Stable Diffusion、SDXL或Flux这样的模型。',
           },
@@ -2603,8 +2650,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'ComfyUI采用GPL-3.0(GNU通用公共许可证3.0版)许可证,这是一种免费开源的著佐权(copyleft)许可证。它可以免费自托管和商业使用,没有收入门槛。该许可证涵盖ComfyUI这款软件本身——它不会改变或覆盖你在其中加载和运行的扩散模型(Stable Diffusion、Flux等)各自独立的许可证。',
           },
           {
-            q: 'ComfyUI需要多少VRAM?',
-            a: 'VRAM需求来自你所加载的模型,而非ComfyUI本身:Stable Diffusion 1.5约需4 GB,SDXL需6-12 GB,Flux从12 GB(FP8量化)到24 GB以上(FP16全精度)不等。对于同一模型,ComfyUI通常被认为比AUTOMATIC1111的内存开销略小,但具体数字会因工作流而异。',
+            q: 'ComfyUI需要多少VRAM?系统要求是什么?',
+            a: 'VRAM需求来自你所加载的模型,而非ComfyUI本身:Stable Diffusion 1.5约需4 GB,SDXL需6-12 GB,Flux从12 GB(FP8量化)到24 GB以上(FP16全精度)不等。对于同一模型,ComfyUI通常被认为比AUTOMATIC1111的内存开销略小,但具体数字会因工作流而异。ComfyUI没有公布固定的VRAM或内存最低值；根据其README，Windows便携版可在Nvidia GPU上运行，也可仅用CPU运行，v0.43.0的NVIDIA便携版压缩包下载体积约2 GB（不含模型文件）。',
           },
           {
             q: '什么是ComfyUI Manager?',
@@ -2655,17 +2702,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-ko.webp',
     title: 'ComfyUI 리뷰: Stable Diffusion과 Flux를 구동하는 무료 노드 기반 UI',
-    seoTitle: 'ComfyUI 리뷰: 로컬 이미지 생성을 위한 노드 에디터',
+    seoTitle: 'ComfyUI란? 무료 노드 에디터 리뷰 (로컬 이미지 생성)',
     intro:
       'ComfyUI는 Stable Diffusion, SDXL, SD 3.5, Flux 등 확산 모델을 자신의 GPU에서 로컬로 실행하기 위한 무료 오픈소스 노드 기반 시각적 인터페이스입니다. 모델 자체는 아닙니다. ComfyUI는 확산 모델을 불러와 이미지 생성의 각 단계(모델 로딩, 프롬프트 인코딩, 샘플링, 업스케일링)를 고정된 탭과 슬라이더 대신 연결된 노드의 그래프로 조립할 수 있게 해주는 엔진이자 워크플로우 편집기입니다. 이 리뷰에서는 ComfyUI가 실제로 무엇을 하는지, 그 노드 그래프 방식이 AUTOMATIC1111이나 Fooocus 같은 더 단순한 UI와 어떻게 다른지, GPL-3.0 라이선스, 모델별 하드웨어 요구 사항, 커스텀 노드를 위한 ComfyUI Manager, 그리고 무료 자체 호스팅 코어와 별도인 유료 Comfy Cloud 호스팅 등급을 다룹니다.',
     metaDescription:
-      'ComfyUI 리뷰 2026: GPL-3.0 라이선스, 노드 그래프 워크플로우 설명, SD 1.5/SDXL/Flux에 필요한 VRAM, ComfyUI Manager, Comfy Cloud 요금제, AUTOMATIC1111·InvokeAI·Fooocus와의 비교.',
+      'ComfyUI 리뷰: ComfyUI란 무엇인지, 무료인지(GPL-3.0), 필요 VRAM, ComfyUI Manager, Comfy Cloud 요금제와 대안을 정리했습니다.',
     twitterDescription:
       'ComfyUI 리뷰 2026: Stable Diffusion과 Flux를 로컬에서 구동하는 무료 노드 기반 엔진 — GPL-3.0 라이선스, 필요 VRAM, ComfyUI Manager, Comfy Cloud 요금제, AUTOMATIC1111·Fooocus와의 비교.',
     audience:
@@ -2686,7 +2733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion 1.5', 'Stable Diffusion XL 1.0', 'Stable Diffusion 3.5', 'FLUX.1 schnell', 'FLUX.1 dev', 'FLUX.2'],
     current_hardware_mentioned: ['4 GB VRAM', '6 GB VRAM', '8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'NVIDIA RTX 3060', 'NVIDIA RTX 4090', 'RTX PRO 6000 Blackwell'],
     leadAnswerBlock:
-      '**ComfyUI는 Stable Diffusion, Flux 같은 확산 모델을 로컬에서 실행하기 위한 무료 오픈소스 노드 기반 인터페이스로, GPL-3.0 라이선스 아래 자신의 GPU에서 비용 없이 자체 호스팅할 수 있습니다.** AUTOMATIC1111의 탭 기반 레이아웃이나 Fooocus의 원클릭 단순함과 달리, ComfyUI는 생성의 각 단계(모델 로딩, 프롬프트 인코딩, 샘플링, 업스케일링)를 시각적 그래프에서 직접 연결하는 노드로 표현합니다. 이는 파워 유저에게 파이프라인에 대한 완전한 제어권과 재현 가능하고 공유 가능한 워크플로우 파일을 제공하지만, 그 대가로 학습 곡선이 더 가팔라집니다. 하드웨어 요구 사항은 ComfyUI 자체가 아니라 불러오는 모델에 따라 결정됩니다 — Stable Diffusion 1.5는 VRAM 4~6GB로 충분하지만, 전체 정밀도의 Flux는 24GB 이상이 필요합니다. 이 프로젝트를 운영하는 Comfy Org는 자신의 GPU를 사용하고 싶지 않은 독자를 위해 별도의 유료 호스팅 서비스인 Comfy Cloud도 판매합니다. SaaS 요금제는 시간이 지나며 변경되므로 예산을 세우기 전 [comfy.org](https://www.comfy.org)에서 현재 등급과 가격을 확인하세요.',
+      '**ComfyUI는 Stable Diffusion, Flux 같은 확산 모델을 로컬에서 실행하는 무료 오픈소스 노드 기반 인터페이스입니다. GPL-3.0 라이선스이며 필요 VRAM은 모델에 따라 다릅니다(SD 1.5 약 4GB, Flux 24GB 이상). Comfy Cloud는 별도의 유료 서비스입니다.**',
     quickAnswerTop: {
       ko: {
         question: 'ComfyUI란 무엇이며 무료로 사용할 수 있나요?',
@@ -2698,8 +2745,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ComfyUI Manager가 인터페이스 내부에서 커뮤니티 커스텀 노드를 설치하고 업데이트함.',
           'SD 1.5는 약 4~6GB VRAM으로 구동되며, 전체 정밀도 Flux는 24GB 이상이 필요함.',
           'Comfy Cloud(유료, 별도 제품)는 호스팅된 Blackwell RTX PRO 6000 GPU에서 월 4,200 크레딧에 월 20달러부터 시작.',
+          '최신 태그 릴리스: v0.43.0(' + rel('ko') + '). 업스트림 최종 업데이트: ' + upd('ko') + '(저장소 [Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI)의 최신 커밋 또는 릴리스)',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -2745,7 +2793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ComfyUI 단독으로는 이미지를 생성하지 못한다 — [Stable Diffusion](/ko/power-local-llm/stable-diffusion-review), SDXL, SD 3.5, Flux 같은 확산 모델을 불러와야 한다. ComfyUI의 역할은 해당 모델의 가중치를 불러오고, 자신의 GPU에서 추론을 실행하며, 그 과정의 각 단계(체크포인트 로딩, 텍스트 프롬프트 인코딩, 샘플링, VAE 디코딩, 업스케일링)를 개별적으로 연결 가능한 노드로 노출하는 것이다.',
           '이 때문에 ComfyUI는 [AUTOMATIC1111의 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui), [InvokeAI](https://github.com/invoke-ai/InvokeAI), [Fooocus](https://github.com/lllyasviel/Fooocus)와 같은 범주에 속한다. 이 넷은 모두 동일한 기반 확산 모델을 위한 프런트엔드 인터페이스이지, 서로 경쟁하는 모델 자체가 아니다. 차이는 상호작용 패러다임에 있다 — AUTOMATIC1111과 Fooocus는 전통적인 탭, 버튼, 슬라이더를 사용하고, ComfyUI는 노드 그래프를 사용한다.',
           'ComfyUI는 공개적으로 comfyanonymous로 알려진 개발자가 만들었으며, 그의 실명 — Yannik Marek — 은 이후 인터뷰와 팟캐스트 출연을 통해 알려졌다. 이 프로젝트는 2023년 1월 [GitHub](https://github.com/comfyanonymous/ComfyUI)에서 처음 공개되었다. Marek은 2023년 6월 [Stability AI](https://stability.ai)에 채용되었고, 그 직접적인 고용 관계는 2024년 6월경 종료되었다. 2024년 6월 21일, Marek을 공동 창업자로 하여 다른 ComfyUI 핵심 개발자들과 함께 전담 조직인 Comfy Org가 설립되었으며, 프로젝트의 주요 GitHub 저장소는 이제 Marek의 개인 계정이 아니라 [Comfy-Org](https://github.com/Comfy-Org/ComfyUI) 조직 산하에 있다. Comfy Org는 2024년 8월 Linux Foundation의 Open Model Initiative에 합류했다.',
-          'ComfyUI의 생태계는 Stable Diffusion을 훨씬 넘어 성장했다: 2026년 9월 기준, 이 프로젝트와 커스텀 노드 생태계는 이미지 모델(Stable Diffusion, SDXL, SD 3.5, Flux.1 및 Flux.2, Qwen-Image), 비디오 모델(Wan, LTX-Video, HunyuanVideo), 오디오 및 3D 생성 노드를 지원한다 — 새로운 모델 지원이 자주 추가되므로, 구체적인 워크플로우를 계획하기 전에 [공식 ComfyUI GitHub 저장소](https://github.com/Comfy-Org/ComfyUI)에서 현재 지원 모델 목록을 확인하라.',
+          'ComfyUI의 생태계는 Stable Diffusion을 훨씬 넘어 성장했다: 이 프로젝트와 커스텀 노드 생태계는 이미지 모델(Stable Diffusion, SDXL, SD 3.5, Flux.1 및 Flux.2, Qwen-Image), 비디오 모델(Wan, LTX-Video, HunyuanVideo), 오디오 및 3D 생성 노드를 지원한다 — 새로운 모델 지원이 자주 추가되므로, 구체적인 워크플로우를 계획하기 전에 [공식 ComfyUI GitHub 저장소](https://github.com/Comfy-Org/ComfyUI)에서 현재 지원 모델 목록을 확인하라.',
         ],
       },
       nodeGraphWorkflow: {
@@ -2799,7 +2847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPL-3.0의 카피레프트 조건은 이미지를 만들고 싶을 뿐인 독자보다는 주로 개발자에게 중요하다: ComfyUI의 코어 코드를 수정하고 그 수정 버전을 배포한다면, GPL-3.0은 그 변경 사항을 같은 라이선스로 공개할 것을 요구한다. [공식 저장소의 메인테이너 토론](https://github.com/comfyanonymous/ComfyUI/issues/3362)에 따르면, ComfyUI를 플러그인 인터페이스를 통해 확장하는 커스텀 노드(`custom_nodes` 폴더 안에 위치)는 일반적으로 자체 라이선스를 가질 수 있는 별개의 저작물로 취급된다 — 반면 ComfyUI 코어 코드 자체를 포크하거나 직접 수정하는 것은 2차적 저작물이며 GPL-3.0을 유지해야 한다. 설치하는 각 커스텀 노드의 라이선스는 개별적으로 확인해야 한다. 커뮤니티가 작성한 노드는 ComfyUI 자체의 라이선스에 포함되지 않으며 조건이 제각각이다.',
           '**ComfyUI의 GPL-3.0 라이선스는 생성한 이미지로 무엇을 할 수 있는지 전혀 규정하지 않는다 — 이는 전적으로 불러온 확산 모델의 라이선스가 관장한다.** Stable Diffusion 1.5, SD 2.1, SDXL은 상업적 수익 상한이 없는 CreativeML Open RAIL-M / RAIL++-M 라이선스를 사용한다. SD 3과 SD 3.5는 Stability AI Community License를 사용하며, 연간 매출 100만 달러 미만일 때만 무료다. FLUX.1 schnell은 Apache 2.0(제한 없음)이며, FLUX.1 dev는 상업적 사용을 위해 [Black Forest Labs](https://blackforestlabs.ai)로부터 별도의 상업용 라이선스가 필요하다. 이 모델들을 ComfyUI 안에서 실행한다고 해서 각각의 라이선스 조건이 바뀌거나 무효화되지는 않는다.',
         ],
-        note: '라이선스 조건은 법률 문서이지 마케팅 문구가 아니다 — 이 섹션은 2026-09-06 기준 공개된 조건을 요약한 것이며 법률 자문이 아니다. 상업적 배포 전에 GitHub 저장소의 실제 `LICENSE` 파일과 불러오는 모델의 라이선스를 읽어보라.',
+        note: '라이선스 조건은 법률 문서이지 마케팅 문구가 아니다 — 이 섹션은 최근 업데이트 시점에 공개된 조건을 요약한 것이며 법률 자문이 아니다. 상업적 배포 전에 GitHub 저장소의 실제 `LICENSE` 파일과 불러오는 모델의 라이선스를 읽어보라.',
       },
       hardwareRequirements: {
         id: 'hardware-requirements',
@@ -2819,7 +2867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '요금제: 무료 자체 호스팅 vs. Comfy Cloud',
         content: [
           '**ComfyUI를 자체 호스팅하는 것은 무료다 — 자신의 하드웨어와 전기 요금만 부담하면 된다.** GPL-3.0 라이선스 아래, 소프트웨어 자체에는 구독료도, 수익 상한도, 로컬·오프라인 사용을 위한 등록 요건도 없다.',
-          'Comfy Org는 자체 하드웨어를 사용하고 싶지 않은 독자를 위해 유료 호스팅 GPU 서비스인 Comfy Cloud를 별도로 판매한다. [comfy.org](https://www.comfy.org/pricing)에 공개된 요금에 따르면, Comfy Cloud는 신용카드 없이 제한된 횟수의 GPU 실행이 가능한 무료 등급을 제공하며, 이후 유료 월간 구독으로 이어진다: Standard는 월 20달러(월간 4,200 크레딧, 커스텀 모델 가져오기 불가), Creator는 월 35달러(월간 7,400 크레딧, 커스텀 모델 가져오기 포함), Pro는 월 100달러(월간 21,100 크레딧, 최대 1시간 워크플로우 실행 시간), Team은 월 700달러(월간 147,700 크레딧, 팀 공유 액세스)다. 연간 결제 시 각 등급마다 할인이 제공된다. Comfy Cloud는 96GB VRAM을 갖춘 호스팅된 Blackwell RTX PRO 6000 GPU에서 구동되며, GPU 시간은 생성 횟수가 아니라 실제 처리 초당으로 과금된다.',
+          'Comfy Org는 자체 하드웨어를 사용하고 싶지 않은 독자를 위해 유료 호스팅 GPU 서비스인 Comfy Cloud를 별도로 판매한다. [comfy.org](https://www.comfy.org/pricing)에 공개된 요금에 따르면, Comfy Cloud는 제한된 횟수의 GPU 실행이 가능한 무료 등급을 제공하며, 이후 유료 월간 구독으로 이어진다: Standard는 월 20달러(월간 4,200 크레딧, 커스텀 모델 가져오기 불가), Creator는 월 35달러(월간 7,400 크레딧, 커스텀 모델 가져오기 포함), Pro는 월 100달러(월간 21,100 크레딧, 최대 1시간 워크플로우 실행 시간), Team은 월 700달러(월간 147,700 크레딧, 팀 공유 액세스)다. 연간 결제 시 각 등급마다 할인이 제공된다. Comfy Cloud는 96GB VRAM을 갖춘 호스팅된 Blackwell RTX PRO 6000 GPU에서 구동되며, GPU 시간은 생성 횟수가 아니라 실제 처리 초당으로 과금된다.',
           'Comfy Cloud는 무료이고 자체 호스팅되는 오픈소스 프로젝트인 ComfyUI와는 별개의 상업적 제품이다 — 자신의 GPU에서 ComfyUI를 사용하는 데는 결코 필요하지 않으며, GPL-3.0 라이선스에는 이를 위해 비용을 지불해야 한다는 조항이 전혀 없다.',
         ],
         note: 'Comfy Cloud의 등급명, 크레딧 수량, 가격은 SaaS 요금제이며 Comfy Org는 2026년 중 이미 여러 차례 변경했다 — 호스팅 플랜의 예산을 세우기 전 [comfy.org/pricing](https://www.comfy.org/pricing)에서 현재 등급과 가격을 직접 확인하라. 이 글은 현재 달러 금액을 추정하거나 반올림하지 않는다.',
@@ -2913,8 +2961,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           {
-            q: 'ComfyUI는 무료인가요?',
+            q: 'ComfyUI는 무료인가요, 유료 요금제도 있나요?',
             a: '네. ComfyUI는 GPL-3.0 라이선스 아래의 무료 오픈소스 소프트웨어입니다 — 다운로드, 자체 호스팅, 수정, 상업적 사용에 비용이 들지 않습니다. Comfy Org는 자체 GPU를 사용하고 싶지 않은 독자를 위해 월 20달러부터 시작하는 유료 호스팅 GPU 구독 Comfy Cloud를 별도로 판매하지만, 이는 선택 사항이며 ComfyUI를 로컬에서 사용하는 데 필요하지 않습니다.',
+          },
+          {
+            q: 'ComfyUI란 무엇이고 어디에 쓰나요?',
+            a: 'ComfyUI는 내 컴퓨터에서 이미지를 생성하는 도구이며, 적합한 모델과 커스텀 노드가 있으면 비디오도 만들 수 있습니다. Stable Diffusion, SDXL, Flux 같은 확산 모델을 불러온 뒤 프롬프트 인코딩, 샘플링, 업스케일링 같은 파이프라인을 노드 그래프로 구성하고, 이를 .json 워크플로로 저장해 나중에 다시 불러올 수 있습니다. 커스텀 노드 생태계는 Wan, LTX-Video 같은 비디오 모델과 오디오·3D 생성도 지원합니다.',
           },
           {
             q: 'ComfyUI와 Stable Diffusion의 차이는 무엇인가요?',
@@ -2933,8 +2985,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'ComfyUI는 GPL-3.0(GNU 일반 공중 사용 허가서 3.0판) 라이선스를 사용하며, 이는 무료 오픈소스 카피레프트 라이선스입니다. 수익 임계값 없이 자체 호스팅과 상업적 사용이 무료입니다. 이 라이선스는 ComfyUI라는 소프트웨어 자체를 다루며, 그 안에서 불러와 실행하는 확산 모델(Stable Diffusion, Flux 등)의 별도 라이선스를 바꾸거나 무효화하지 않습니다.',
           },
           {
-            q: 'ComfyUI에는 VRAM이 얼마나 필요한가요?',
-            a: 'VRAM 요구 사항은 ComfyUI 자체가 아니라 불러온 모델에서 비롯됩니다: Stable Diffusion 1.5는 약 4GB, SDXL은 6~12GB, Flux는 12GB(FP8 양자화)에서 24GB 이상(FP16 전체 정밀도)까지 필요합니다. 동일한 모델에서 ComfyUI가 AUTOMATIC1111보다 메모리 오버헤드가 다소 적다고 흔히 보고되지만, 정확한 수치는 워크플로우에 따라 다릅니다.',
+            q: 'ComfyUI에는 VRAM이 얼마나 필요하고 시스템 요구 사항은 무엇인가요?',
+            a: 'VRAM 요구 사항은 ComfyUI 자체가 아니라 불러온 모델에서 비롯됩니다: Stable Diffusion 1.5는 약 4GB, SDXL은 6~12GB, Flux는 12GB(FP8 양자화)에서 24GB 이상(FP16 전체 정밀도)까지 필요합니다. 동일한 모델에서 ComfyUI가 AUTOMATIC1111보다 메모리 오버헤드가 다소 적다고 흔히 보고되지만, 정확한 수치는 워크플로우에 따라 다릅니다. ComfyUI는 VRAM이나 RAM의 고정 최소 사양을 공개하지 않습니다. README에 따르면 Windows 포터블 빌드는 Nvidia GPU 또는 CPU만으로 실행할 수 있으며, v0.43.0의 NVIDIA 포터블 아카이브는 모델 파일을 제외하고 다운로드 용량이 약 2 GB입니다.',
           },
           {
             q: 'ComfyUI Manager는 무엇인가요?',

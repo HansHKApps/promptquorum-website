@@ -17,7 +17,10 @@ export const stopFor = (loc) => new Set(STOP[loc] ?? [])
 
 export const CJK = new Set(['ja', 'zh', 'ko'])
 export const isCjkChar = (c) => /[぀-ヿ㐀-鿿가-힯]/.test(c)
-export const norm = (s) => s.normalize('NFKC').toLowerCase().replace(/[-_./]/g, ' ').replace(/\s+/g, ' ').trim()
+// Latin text is compared without diacritics (GSC queries are often typed without accents: "memoire magnetique"
+// must hit "mémoire magnétique"). Text containing CJK characters is left alone: NFD would split kana/hangul.
+const stripMarks = (s) => ([...s].some((c) => isCjkChar(c)) ? s : s.normalize('NFD').replace(/[̀-ͯ]/g, ''))
+export const norm = (s) => stripMarks(s.normalize('NFKC').toLowerCase().replace(/[-_./]/g, ' ').replace(/\s+/g, ' ').trim())
 
 export function keyTerms(query, loc) {
   const q = norm(query)
@@ -25,9 +28,14 @@ export function keyTerms(query, loc) {
     // Bigrams per whitespace-separated word, so no bigram spans two words.
     const grams = []
     for (const word of q.split(/\s+/).filter(Boolean)) {
-      const chars = [...word]
-      if (chars.length <= 2) grams.push(word)
-      else for (let i = 0; i < chars.length - 1; i++) grams.push(chars[i] + chars[i + 1])
+      // Latin/digit runs inside a CJK word ("comfyui", "gpt4all") stay whole terms: split into bigrams they
+      // could never match a token. Only the non-Latin runs are cut into character bigrams.
+      for (const run of word.match(/[a-z0-9]+|[^a-z0-9]+/g) ?? []) {
+        if (/^[a-z0-9]+$/.test(run)) { grams.push(run); continue }
+        const chars = [...run]
+        if (chars.length <= 2) grams.push(run)
+        else for (let i = 0; i < chars.length - 1; i++) grams.push(chars[i] + chars[i + 1])
+      }
     }
     return [...new Set(grams)]
   }

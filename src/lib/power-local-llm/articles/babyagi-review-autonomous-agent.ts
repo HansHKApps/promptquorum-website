@@ -13,14 +13,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-02',
     educationalLevel: 'Intermediate',
     audience: 'Developers evaluating BabyAGI as an autonomous-agent framework, and readers researching its history before choosing between it, AutoGPT, CrewAI, LangGraph, or Langflow',
     primaryTerm: 'BabyAGI',
     title: 'BabyAGI: What the First AI Agent Became',
-    seoTitle: 'BabyAGI: What the First AI Agent Became',
+    seoTitle: 'BabyAGI Review: What It Is, License, Local LLM Support',
     intro: 'BabyAGI is the project that made "autonomous AI agent" a mainstream phrase in 2023 — a small Python script that created its own to-do list, worked through it, and generated new tasks from the results. The project you can install today is not that script. Creator Yohei Nakajima rebuilt it around a different architecture, and the original code now lives frozen in a separate archive repository.',
-    metaDescription: 'BabyAGI pioneered autonomous AI agents in 2023, then its creator rebuilt it twice. Here is what runs today, its MIT license, and why it has no local-model support.',
+    metaDescription: 'What is BabyAGI? The 2023 agent was rebuilt as functionz in 2024. MIT license, little recent activity and no documented local-model support.',
     readTime: '11 min read',
     targetKeywords: [
       'BabyAGI review',
@@ -34,7 +34,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Is BabyAGI still maintained, and does it run on local models?',
-        answer: 'The main BabyAGI repository ([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi)) is a 2024 rebuild around a function-management framework called functionz, still receiving occasional commits from its solo maintainer, Yohei Nakajima. The original 2023 task-loop script that made BabyAGI famous is frozen in a separate babyagi_archive repository and receives no further updates. Neither version has documented native support for local models such as Ollama — both are built around the OpenAI API key.',
+        answer: 'The main BabyAGI repository ([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi)) is a 2024 rebuild around a function-management framework called functionz, with no code change since 11 October 2024 (its last commit, on 31 January 2026, added a documentation file), maintained by one person, Yohei Nakajima. The original 2023 task-loop script that made BabyAGI famous is frozen in a separate babyagi_archive repository and receives no further updates. Neither version has documented native support for local models such as Ollama — both are built around the OpenAI API key.',
         bullets: [
           'Creator: Yohei Nakajima, first released as a public script in 2023',
           'Current main repo: over 22,000 GitHub stars, MIT license, rebuilt in 2024 around the functionz framework',
@@ -44,7 +44,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No paid product or affiliate program exists — BabyAGI is free, open source, and has no commercial tier',
           'Latest tagged release on the rebuilt repository: v0.1.0',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'TL;DR — BabyAGI in 2026',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'BabyAGI is a free, MIT-licensed autonomous-agent project created by Yohei Nakajima in 2023; the original viral task-loop script is now frozen in an archive repository, and the actively updated main repository is a 2024 rebuild around a different framework called functionz.' },
+          { type: 'one-sentence', text: 'BabyAGI is a free, MIT-licensed autonomous-agent project created by Yohei Nakajima in 2023; the original viral task-loop script is now frozen in an archive repository, and the main repository is a 2024 rebuild around a different framework called functionz.' },
           { type: 'plain-terms', text: 'The BabyAGI everyone remembers — a script that made its own to-do list and worked through it — still exists, but it is not what you install today. The current repository is a smaller, solo-maintained framework for functions an AI can register and call, and it needs an OpenAI API key rather than a local model.' },
         ],
         items: [
@@ -78,6 +78,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No commercial product, paid tier, or affiliate program exists for BabyAGI',
         ],
         callouts: [
+          { type: 'warning', text: 'No code change since 11 October 2024. The last commit to the main repository (31 January 2026) added a documentation file, the repository has no published GitHub release, and the README calls the project experimental, so it may be unmaintained. Check the repository before relying on it.' },
           { type: 'note', text: 'If you are looking for the classic "autonomous to-do list" agent, that code lives in the babyagi_archive repository, not the current babyagi repository — they are different codebases under the same name.' },
         ],
       },
@@ -85,7 +86,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-built-babyagi',
         title: 'Who Built BabyAGI, and Is It Still Maintained?',
         content: [
-          '**Yohei Nakajima created BabyAGI and still maintains it alone.** He first published the project in 2023 as a small Python script demonstrating an autonomous task loop: an LLM call created new tasks, another call prioritized them, a third executed the top task, the result was stored, and the loop generated further tasks from that result. It was one of the earliest projects to popularize the idea of an "autonomous AI agent" running with minimal human input.',
+          '**Yohei Nakajima created BabyAGI and maintains it alone; the last code change was on 11 October 2024.** He first published the project in 2023 as a small Python script demonstrating an autonomous task loop: an LLM call created new tasks, another call prioritized them, a third executed the top task, the result was stored, and the loop generated further tasks from that result. It was one of the earliest projects to popularize the idea of an "autonomous AI agent" running with minimal human input.',
           'That original script is no longer the active codebase. Its own README states plainly: "This project has been archived and moved to the babyagi_archive repo (September 2024 snapshot)." The repository at github.com/yoheinakajima/babyagi now contains a different project — a 2024 rebuild the README describes as "an experimental framework for a self-building autonomous agent," built around a function-management system called functionz.',
         ],
         itemHeadings: true,
@@ -225,7 +226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Who created BabyAGI?', a: 'Yohei Nakajima created BabyAGI and first published it in 2023. He continues to maintain the project alone.' },
-          { q: 'Is BabyAGI still maintained?', a: 'The current main repository (functionz-based) receives occasional commits from its solo maintainer. The original 2023 task-loop script is frozen and has received no updates since it was moved to the babyagi_archive repository in September 2024.' },
+          { q: 'Is BabyAGI still maintained?', a: 'The current main repository (functionz-based) has had no code change since 11 October 2024; its last commit, on 31 January 2026, added a documentation file. The original 2023 task-loop script is frozen and has received no updates since it was moved to the babyagi_archive repository in September 2024.' },
           { q: 'What license is BabyAGI released under?', a: 'MIT, across the main repository, the archived original, and the later BabyAGI 2o and BabyAGI 3 side-projects.' },
           { q: 'Does BabyAGI support local models like Ollama?', a: 'No. Neither the current nor the archived version documents native support for local models. Both are built around an OpenAI API key.' },
           { q: 'What is the difference between BabyAGI and the original viral BabyAGI script?', a: 'The original script (2023) ran a fixed loop: create tasks, prioritize them, execute the top one, store the result, repeat. That code is frozen in the babyagi_archive repository. The current babyagi repository, rebuilt in 2024, is a general-purpose function-registration framework called functionz, unrelated in architecture to the original loop.' },
@@ -264,14 +265,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-02',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die BabyAGI als Framework für autonome Agenten evaluieren, sowie Leser, die dessen Geschichte recherchieren, bevor sie sich zwischen BabyAGI, AutoGPT, CrewAI, LangGraph oder Langflow entscheiden',
     primaryTerm: 'BabyAGI',
     title: 'BabyAGI: Vom viralen Skript zum Function-Framework',
-    seoTitle: 'BabyAGI: MIT-Lizenz, kein lokales Modell',
+    seoTitle: 'BabyAGI Test: Was es ist, Lizenz und lokale LLMs',
     intro: 'BabyAGI machte den Begriff "autonomer KI-Agent" 2023 populär — ein kleines Python-Skript, das seine eigene To-do-Liste erstellte, abarbeitete und aus den Ergebnissen neue Aufgaben ableitete. Das Projekt, das sich heute installieren lässt, ist nicht mehr dieses Skript. Entwickler Yohei Nakajima hat es auf eine andere Architektur umgebaut, und der ursprüngliche Code liegt eingefroren in einem separaten Archiv-Repository.',
-    metaDescription: 'BabyAGI prägte 2023 autonome KI-Agenten, wurde dann zweimal umgebaut. Was heute läuft, die MIT-Lizenz und warum es kein lokales Modell unterstützt.',
+    metaDescription: 'Was ist BabyAGI? Der Agent von 2023 wurde 2024 als functionz neu gebaut. MIT-Lizenz, wenig Aktivität und keine dokumentierte Unterstützung lokaler Modelle.',
     readTime: '11 Min. Lesezeit',
     targetKeywords: [
       'BabyAGI Test',
@@ -285,7 +286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Wird BabyAGI noch gepflegt, und läuft es mit lokalen Modellen?',
-        answer: 'Das Haupt-Repository von BabyAGI ([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi)) ist ein 2024er Umbau rund um ein Function-Management-Framework namens functionz, das gelegentlich Commits von seinem alleinigen Maintainer Yohei Nakajima erhält. Das ursprüngliche Aufgaben-Loop-Skript von 2023, das BabyAGI bekannt machte, ist in einem separaten babyagi_archive-Repository eingefroren und erhält keine weiteren Updates. Keine der beiden Versionen dokumentiert native Unterstützung für lokale Modelle wie Ollama — beide setzen auf einen OpenAI-API-Key.',
+        answer: 'Das Haupt-Repository von BabyAGI ([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi)) ist ein 2024er Umbau rund um ein Function-Management-Framework namens functionz, mit der letzten Code-Änderung am 11. Oktober 2024 (der letzte Commit vom 31. Januar 2026 fügte nur eine Dokumentationsdatei hinzu) und einem einzigen Maintainer, Yohei Nakajima. Das ursprüngliche Aufgaben-Loop-Skript von 2023, das BabyAGI bekannt machte, ist in einem separaten babyagi_archive-Repository eingefroren und erhält keine weiteren Updates. Keine der beiden Versionen dokumentiert native Unterstützung für lokale Modelle wie Ollama — beide setzen auf einen OpenAI-API-Key.',
         bullets: [
           'Entwickler: Yohei Nakajima, 2023 erstmals als öffentliches Skript veröffentlicht',
           'Aktuelles Haupt-Repository: über 22.000 GitHub-Sterne, MIT-Lizenz, 2024 rund um das functionz-Framework umgebaut',
@@ -294,7 +295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Das eigene README des Projekts beschreibt es als von einer Person gepflegt, experimentell und "nicht für den Produktionseinsatz gedacht"',
           'Es gibt kein kostenpflichtiges Produkt und kein Affiliate-Programm für BabyAGI — es ist kostenlos und quelloffen',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -315,7 +316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Zusammenfassung — BabyAGI im Jahr 2026',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'BabyAGI ist ein kostenloses, MIT-lizenziertes Projekt für autonome Agenten von Yohei Nakajima aus dem Jahr 2023; das ursprüngliche virale Aufgaben-Loop-Skript ist inzwischen in einem Archiv-Repository eingefroren, während das aktiv gepflegte Haupt-Repository ein 2024er Umbau rund um ein anderes Framework namens functionz ist.' },
+          { type: 'one-sentence', text: 'BabyAGI ist ein kostenloses, MIT-lizenziertes Projekt für autonome Agenten von Yohei Nakajima aus dem Jahr 2023; das ursprüngliche virale Aufgaben-Loop-Skript ist inzwischen in einem Archiv-Repository eingefroren, während das Haupt-Repository ein 2024er Umbau rund um ein anderes Framework namens functionz ist.' },
           { type: 'plain-terms', text: 'Das BabyAGI, an das sich alle erinnern — ein Skript, das seine eigene To-do-Liste erstellte und abarbeitete — existiert noch, ist aber nicht das, was man heute installiert. Das aktuelle Repository ist ein kleineres, allein gepflegtes Framework für Funktionen, die eine KI registrieren und aufrufen kann, und es benötigt einen OpenAI-API-Key statt eines lokalen Modells.' },
         ],
         items: [
@@ -328,6 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Es gibt kein kommerzielles Produkt, keine kostenpflichtige Stufe und kein Affiliate-Programm für BabyAGI',
         ],
         callouts: [
+          { type: 'warning', text: 'Keine Code-Änderung seit dem 11. Oktober 2024. Der letzte Commit im Haupt-Repository (31. Januar 2026) fügte eine Dokumentationsdatei hinzu, es gibt keinen veröffentlichten GitHub-Release, und die README nennt das Projekt experimentell – es könnte also nicht mehr gepflegt werden. Prüfen Sie das Repository, bevor Sie sich darauf verlassen.' },
           { type: 'note', text: 'Wer den klassischen Agenten mit selbst erstellter To-do-Liste sucht: Dieser Code liegt im babyagi_archive-Repository, nicht im aktuellen babyagi-Repository — es sind zwei unterschiedliche Codebasen unter demselben Namen.' },
         ],
       },
@@ -335,7 +337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-built-babyagi',
         title: 'Wer hat BabyAGI gebaut, und wird es noch gepflegt?',
         content: [
-          '**Yohei Nakajima hat BabyAGI entwickelt und pflegt es weiterhin allein.** Er veröffentlichte das Projekt 2023 erstmals als kleines Python-Skript, das einen autonomen Aufgaben-Loop demonstrierte: Ein LLM-Aufruf erzeugte neue Aufgaben, ein zweiter priorisierte sie, ein dritter führte die oberste Aufgabe aus, das Ergebnis wurde gespeichert, und der Loop erzeugte daraus weitere Aufgaben. Es war eines der ersten Projekte, das die Idee eines "autonomen KI-Agenten" mit minimalem menschlichen Eingriff populär machte.',
+          '**Yohei Nakajima hat BabyAGI entwickelt und pflegt es allein; die letzte Code-Änderung stammt vom 11. Oktober 2024.** Er veröffentlichte das Projekt 2023 erstmals als kleines Python-Skript, das einen autonomen Aufgaben-Loop demonstrierte: Ein LLM-Aufruf erzeugte neue Aufgaben, ein zweiter priorisierte sie, ein dritter führte die oberste Aufgabe aus, das Ergebnis wurde gespeichert, und der Loop erzeugte daraus weitere Aufgaben. Es war eines der ersten Projekte, das die Idee eines "autonomen KI-Agenten" mit minimalem menschlichen Eingriff populär machte.',
           'Dieses ursprüngliche Skript ist nicht mehr die aktive Codebasis. Das eigene README stellt klar: "This project has been archived and moved to the babyagi_archive repo (September 2024 snapshot)." Das Repository unter github.com/yoheinakajima/babyagi enthält heute ein anderes Projekt — einen 2024er Umbau, den das README als "experimentelles Framework für einen self-building autonomous agent" beschreibt, aufgebaut um ein Function-Management-System namens functionz.',
         ],
         itemHeadings: true,
@@ -475,7 +477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Wer hat BabyAGI entwickelt?', a: 'Yohei Nakajima hat BabyAGI entwickelt und 2023 erstmals veröffentlicht. Er pflegt das Projekt weiterhin allein.' },
-          { q: 'Wird BabyAGI noch gepflegt?', a: 'Das aktuelle Haupt-Repository (functionz-basiert) erhält gelegentliche Commits von seinem alleinigen Maintainer. Das ursprüngliche Aufgaben-Loop-Skript von 2023 ist eingefroren und hat seit der Verschiebung ins babyagi_archive-Repository im September 2024 keine Updates mehr erhalten.' },
+          { q: 'Wird BabyAGI noch gepflegt?', a: 'Das aktuelle Haupt-Repository (functionz-basiert) hat seit dem 11. Oktober 2024 keine Code-Änderung erhalten; der letzte Commit vom 31. Januar 2026 fügte eine Dokumentationsdatei hinzu. Das ursprüngliche Aufgaben-Loop-Skript von 2023 ist eingefroren und hat seit der Verschiebung ins babyagi_archive-Repository im September 2024 keine Updates mehr erhalten.' },
           { q: 'Unter welcher Lizenz steht BabyAGI?', a: 'MIT, über das Haupt-Repository, das archivierte Original und die späteren Nebenprojekte BabyAGI 2o und BabyAGI 3 hinweg.' },
           { q: 'Unterstützt BabyAGI lokale Modelle wie Ollama?', a: 'Nein. Weder die aktuelle noch die archivierte Version dokumentiert native Unterstützung lokaler Modelle. Beide sind um einen OpenAI-API-Key herum gebaut.' },
           { q: 'Was ist der Unterschied zwischen BabyAGI und dem ursprünglichen viralen BabyAGI-Skript?', a: 'Das Original-Skript (2023) lief einen festen Loop: Aufgaben erstellen, priorisieren, die oberste ausführen, Ergebnis speichern, wiederholen. Dieser Code ist im babyagi_archive-Repository eingefroren. Das aktuelle babyagi-Repository, 2024 umgebaut, ist ein universelles Function-Registrierungs-Framework namens functionz, architektonisch unabhängig vom ursprünglichen Loop.' },
@@ -513,14 +515,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-02',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs évaluant BabyAGI comme framework d\'agent autonome, et lecteurs recherchant son historique avant de choisir entre BabyAGI, AutoGPT, CrewAI, LangGraph ou Langflow',
     primaryTerm: 'BabyAGI',
     title: 'BabyAGI: du script viral au framework de fonctions',
-    seoTitle: 'BabyAGI: licence MIT, pas de modèle local',
+    seoTitle: 'Avis BabyAGI : définition, licence et LLM locaux',
     intro: 'BabyAGI a rendu l\'expression « agent IA autonome » populaire en 2023 — un petit script Python qui créait sa propre liste de tâches, la traitait, puis générait de nouvelles tâches à partir des résultats. Le projet que vous installez aujourd\'hui n\'est plus ce script. Son créateur, Yohei Nakajima, l\'a reconstruit autour d\'une architecture différente, et le code d\'origine reste figé dans un dépôt d\'archive séparé.',
-    metaDescription: 'BabyAGI a pionné les agents IA autonomes en 2023, puis a été reconstruit deux fois. Ce qui fonctionne aujourd\'hui, sa licence MIT, et pourquoi aucun modèle local.',
+    metaDescription: 'Qu\'est-ce que BabyAGI ? L\'agent de 2023 a été refondu en functionz en 2024. Licence MIT, peu d\'activité et aucun support documenté des modèles locaux.',
     readTime: '11 min de lecture',
     targetKeywords: [
       'avis BabyAGI',
@@ -530,11 +532,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'licence BabyAGI',
       'BabyAGI 2026',
     ],
-    leadAnswerBlock: 'BabyAGI est un projet d\'agent autonome gratuit et sous licence MIT, créé par Yohei Nakajima en 2023 — mais le dépôt que vous trouvez aujourd\'hui n\'est plus le script de boucle de tâches devenu viral. Il a été reconstruit en 2024 en un framework « self-building agent » nommé functionz, tandis que le code original a été figé et déplacé dans une archive séparée.',
+    leadAnswerBlock: 'BabyAGI est un projet d\'agent autonome gratuit sous licence MIT, créé par Yohei Nakajima en 2023. Le dépôt actuel n\'est plus le script viral de boucle de tâches : il a été reconstruit en 2024 en framework functionz, et le code original est figé dans une archive séparée.',
     quickAnswerTop: {
       fr: {
         question: 'BabyAGI est-il encore maintenu, et fonctionne-t-il avec des modèles locaux ?',
-        answer: 'Le dépôt principal de BabyAGI ([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi)) est une reconstruction de 2024 autour d\'un framework de gestion de fonctions nommé functionz, qui reçoit encore des commits occasionnels de son unique mainteneur, Yohei Nakajima. Le script original de 2023, à l\'origine de la notoriété de BabyAGI, est figé dans un dépôt babyagi_archive séparé et ne reçoit plus de mise à jour. Aucune des deux versions ne documente de support natif pour des modèles locaux comme Ollama — les deux reposent sur une clé API OpenAI.',
+        answer: 'Le dépôt principal de BabyAGI ([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi)) est une reconstruction de 2024 autour d\'un framework de gestion de fonctions nommé functionz, sans modification de code depuis le 11 octobre 2024 (le dernier commit, du 31 janvier 2026, a ajouté un fichier de documentation), maintenu par une seule personne, Yohei Nakajima. Le script original de 2023, à l\'origine de la notoriété de BabyAGI, est figé dans un dépôt babyagi_archive séparé et ne reçoit plus de mise à jour. Aucune des deux versions ne documente de support natif pour des modèles locaux comme Ollama — les deux reposent sur une clé API OpenAI.',
         bullets: [
           'Créateur : Yohei Nakajima, publié pour la première fois comme script public en 2023',
           'Dépôt principal actuel : plus de 22 000 étoiles GitHub, licence MIT, reconstruit en 2024 autour du framework functionz',
@@ -543,7 +545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le README du projet indique lui-même qu\'il est maintenu par une seule personne, expérimental, et « not meant for production use »',
           'Aucun produit payant ni programme d\'affiliation n\'existe pour BabyAGI — il est gratuit et open source',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -564,7 +566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Résumé — BabyAGI en 2026',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'BabyAGI est un projet d\'agent autonome gratuit et sous licence MIT créé par Yohei Nakajima en 2023 ; le script viral original de boucle de tâches est aujourd\'hui figé dans un dépôt d\'archive, tandis que le dépôt principal, activement mis à jour, est une reconstruction de 2024 autour d\'un framework différent nommé functionz.' },
+          { type: 'one-sentence', text: 'BabyAGI est un projet d\'agent autonome gratuit et sous licence MIT créé par Yohei Nakajima en 2023 ; le script viral original de boucle de tâches est aujourd\'hui figé dans un dépôt d\'archive, tandis que le dépôt principal est une reconstruction de 2024 autour d\'un framework différent nommé functionz.' },
           { type: 'plain-terms', text: 'Le BabyAGI dont tout le monde se souvient — un script qui créait sa propre liste de tâches et la traitait — existe toujours, mais ce n\'est pas ce que vous installez aujourd\'hui. Le dépôt actuel est un framework plus petit, maintenu par une seule personne, pour des fonctions qu\'une IA peut enregistrer et appeler, et il nécessite une clé API OpenAI plutôt qu\'un modèle local.' },
         ],
         items: [
@@ -577,6 +579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Aucun produit commercial, offre payante ou programme d\'affiliation n\'existe pour BabyAGI',
         ],
         callouts: [
+          { type: 'warning', text: 'Aucune modification de code depuis le 11 octobre 2024. Le dernier commit du dépôt principal (31 janvier 2026) a ajouté un fichier de documentation, aucune release GitHub n\'est publiée et le README qualifie le projet d\'expérimental : il peut ne plus être maintenu. Vérifiez le dépôt avant de vous y fier.' },
           { type: 'note', text: 'Si vous cherchez l\'agent classique à « liste de tâches autonome », ce code se trouve dans le dépôt babyagi_archive, pas dans le dépôt babyagi actuel — ce sont deux bases de code différentes sous le même nom.' },
         ],
       },
@@ -584,7 +587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-built-babyagi',
         title: 'Qui a créé BabyAGI, et est-il encore maintenu ?',
         content: [
-          '**Yohei Nakajima a créé BabyAGI et continue de le maintenir seul.** Il a publié le projet pour la première fois en 2023 comme un petit script Python démontrant une boucle de tâches autonome : un appel à un LLM créait de nouvelles tâches, un autre les priorisait, un troisième exécutait la tâche prioritaire, le résultat était stocké, et la boucle générait ensuite de nouvelles tâches à partir de ce résultat. Ce fut l\'un des tout premiers projets à populariser l\'idée d\'un « agent IA autonome » fonctionnant avec une intervention humaine minimale.',
+          '**Yohei Nakajima a créé BabyAGI et le maintient seul ; la dernière modification de code date du 11 octobre 2024.** Il a publié le projet pour la première fois en 2023 comme un petit script Python démontrant une boucle de tâches autonome : un appel à un LLM créait de nouvelles tâches, un autre les priorisait, un troisième exécutait la tâche prioritaire, le résultat était stocké, et la boucle générait ensuite de nouvelles tâches à partir de ce résultat. Ce fut l\'un des tout premiers projets à populariser l\'idée d\'un « agent IA autonome » fonctionnant avec une intervention humaine minimale.',
           'Ce script original n\'est plus la base de code active. Son propre README l\'indique clairement : « This project has been archived and moved to the babyagi_archive repo (September 2024 snapshot). » Le dépôt github.com/yoheinakajima/babyagi contient aujourd\'hui un projet différent — une reconstruction de 2024 que le README décrit comme « un framework expérimental pour un agent autonome auto-constructeur », bâti autour d\'un système de gestion de fonctions nommé functionz.',
         ],
         itemHeadings: true,
@@ -724,7 +727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquentes',
         faqs: [
           { q: 'Qui a créé BabyAGI ?', a: 'Yohei Nakajima a créé BabyAGI et l\'a publié pour la première fois en 2023. Il continue de maintenir seul le projet.' },
-          { q: 'BabyAGI est-il encore maintenu ?', a: 'Le dépôt principal actuel (basé sur functionz) reçoit des commits occasionnels de son unique mainteneur. Le script original de boucle de tâches de 2023 est figé et n\'a reçu aucune mise à jour depuis son déplacement vers le dépôt babyagi_archive en septembre 2024.' },
+          { q: 'BabyAGI est-il encore maintenu ?', a: 'Le dépôt principal actuel (basé sur functionz) n\'a reçu aucune modification de code depuis le 11 octobre 2024 ; son dernier commit, du 31 janvier 2026, a ajouté un fichier de documentation. Le script original de boucle de tâches de 2023 est figé et n\'a reçu aucune mise à jour depuis son déplacement vers le dépôt babyagi_archive en septembre 2024.' },
           { q: 'Sous quelle licence BabyAGI est-il publié ?', a: 'MIT, pour le dépôt principal, l\'original archivé, et les projets annexes ultérieurs BabyAGI 2o et BabyAGI 3.' },
           { q: 'BabyAGI prend-il en charge les modèles locaux comme Ollama ?', a: 'Non. Ni la version actuelle ni la version archivée ne documente de support natif pour les modèles locaux. Les deux reposent sur une clé API OpenAI.' },
           { q: 'Quelle est la différence entre BabyAGI et le script viral original ?', a: 'Le script original (2023) exécutait une boucle fixe : créer des tâches, les prioriser, exécuter la première, stocker le résultat, répéter. Ce code est figé dans le dépôt babyagi_archive. Le dépôt babyagi actuel, reconstruit en 2024, est un framework d\'enregistrement de fonctions à usage général nommé functionz, sans rapport architectural avec la boucle originale.' },
@@ -762,14 +765,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-02',
     educationalLevel: 'Intermediate',
     audience: 'BabyAGIを自律エージェントフレームワークとして評価する開発者、およびAutoGPT・CrewAI・LangGraph・Langflowと比較する前にその経緯を調べる読者',
     primaryTerm: 'BabyAGI',
     title: 'BabyAGI：バイラルスクリプトから関数フレームワークへ',
-    seoTitle: 'BabyAGI：MITライセンス、ローカルモデル非対応',
+    seoTitle: 'BabyAGIレビュー：概要・ライセンス・ローカルLLM',
     intro: 'BabyAGIは2023年に「自律型AIエージェント」という言葉を広めたプロジェクトだ——自分でタスクリストを作り、それをこなし、結果から新しいタスクを生成する小さなPythonスクリプトだった。今日インストールできるプロジェクトは、もうそのスクリプトではない。開発者のYohei Nakajima氏は異なるアーキテクチャに作り替え、元のコードは別のアーカイブリポジトリに凍結保存されている。',
-    metaDescription: 'BabyAGIは2023年に自律型AIエージェントを切り拓き、その後2度作り替えられた。現在動くもの、MITライセンス、ローカルモデル非対応の理由を解説。',
+    metaDescription: 'BabyAGIとは？2023年のエージェントが2024年にfunctionzとして再構築。MITライセンス、最近の更新は少なく、ローカルモデル対応の記載はなし。',
     readTime: '11分で読了',
     targetKeywords: [
       'BabyAGI レビュー',
@@ -783,7 +786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'BabyAGIはまだメンテナンスされているのか、ローカルモデルで動くのか？',
-        answer: 'BabyAGIのメインリポジトリ（github.com/yoheinakajima/babyagi）は、functionzという関数管理フレームワークを中心とした2024年の作り替え版で、単独メンテナーのYohei Nakajima氏から時折コミットが入る。BabyAGIを有名にした2023年のタスクループスクリプトは、別のbabyagi_archiveリポジトリに凍結されており、それ以上の更新はない。どちらのバージョンもOllamaのようなローカルモデルへのネイティブ対応は文書化されておらず、両方ともOpenAI APIキーを前提とする。',
+        answer: 'BabyAGIのメインリポジトリ（github.com/yoheinakajima/babyagi）は、functionzという関数管理フレームワークを中心とした2024年の作り替え版で、2024年10月11日以降コードの変更はなく（最新コミットは2026年1月31日のドキュメントファイル追加）、Yohei Nakajima氏が単独でメンテナンスしている。BabyAGIを有名にした2023年のタスクループスクリプトは、別のbabyagi_archiveリポジトリに凍結されており、それ以上の更新はない。どちらのバージョンもOllamaのようなローカルモデルへのネイティブ対応は文書化されておらず、両方ともOpenAI APIキーを前提とする。',
         bullets: [
           '開発者：Yohei Nakajima氏、2023年に公開スクリプトとして初リリース',
           '現在のメインリポジトリ：GitHubスター2万2000超、MITライセンス、2024年にfunctionzフレームワークへ作り替え',
@@ -792,7 +795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'プロジェクト自身のREADMEは、単独メンテナンス・実験的であり「本番利用を意図していない」と明記',
           'BabyAGIには有料製品もアフィリエイトプログラムも存在しない',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -813,7 +816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '要約 — 2026年のBabyAGI',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'BabyAGIはYohei Nakajima氏が2023年に開発した無料・MITライセンスの自律エージェントプロジェクトで、バイラルになった元のタスクループスクリプトは現在アーカイブリポジトリに凍結され、活発に更新されているメインリポジトリはfunctionzという別フレームワークを中心とした2024年の作り替え版だ。' },
+          { type: 'one-sentence', text: 'BabyAGIはYohei Nakajima氏が2023年に開発した無料・MITライセンスの自律エージェントプロジェクトで、バイラルになった元のタスクループスクリプトは現在アーカイブリポジトリに凍結され、メインリポジトリはfunctionzという別フレームワークを中心とした2024年の作り替え版だ。' },
           { type: 'plain-terms', text: '誰もが記憶しているBabyAGI——自分でタスクリストを作りこなしていくスクリプト——は今も存在するが、今日インストールするものはそれではない。現在のリポジトリはAIが登録・呼び出せる関数のための、単独メンテナンスの小さなフレームワークであり、ローカルモデルではなくOpenAI APIキーを必要とする。' },
         ],
         items: [
@@ -826,6 +829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'BabyAGIに商用製品、有料プラン、アフィリエイトプログラムは存在しない',
         ],
         callouts: [
+          { type: 'warning', text: '2024年10月11日以降、コードの変更はありません。メインリポジトリの最新コミット（2026年1月31日）はドキュメントファイルの追加で、GitHubの公開リリースはなく、READMEも実験的プロジェクトとしています。メンテナンスが止まっている可能性があるため、利用前にリポジトリを確認してください。' },
           { type: 'note', text: '「自律的にタスクリストを作る」古典的なエージェントを探している場合、そのコードはbabyagi_archiveリポジトリにあり、現在のbabyagiリポジトリにはない——同じ名前の下に異なる2つのコードベースが存在する。' },
         ],
       },
@@ -833,7 +837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-built-babyagi',
         title: 'BabyAGIを作ったのは誰か、今もメンテナンスされているか',
         content: [
-          '**Yohei Nakajima氏がBabyAGIを開発し、今も単独でメンテナンスしている。** 2023年、目標に向けた自律的なタスクループを示す小さなPythonスクリプトとして初めて公開した：あるLLM呼び出しが新しいタスクを作成し、別の呼び出しがそれを優先順位付けし、3つ目が最上位のタスクを実行、結果を保存し、そのループが結果からさらなるタスクを生成する。人間の介入を最小限に抑えた「自律型AIエージェント」という考え方を広めた最初期のプロジェクトの一つだった。',
+          '**Yohei Nakajima氏がBabyAGIを開発し、単独でメンテナンスしており、最後のコード変更は2024年10月11日だ。** 2023年、目標に向けた自律的なタスクループを示す小さなPythonスクリプトとして初めて公開した：あるLLM呼び出しが新しいタスクを作成し、別の呼び出しがそれを優先順位付けし、3つ目が最上位のタスクを実行、結果を保存し、そのループが結果からさらなるタスクを生成する。人間の介入を最小限に抑えた「自律型AIエージェント」という考え方を広めた最初期のプロジェクトの一つだった。',
           'その元のスクリプトは、もはやアクティブなコードベースではない。README自体がはっきりと述べている：「This project has been archived and moved to the babyagi_archive repo (September 2024 snapshot).」現在github.com/yoheinakajima/babyagiにあるのは別のプロジェクトで、READMEは「self-building autonomous agentのための実験的フレームワーク」と説明しており、functionzという関数管理システムを中心に構築されている。',
         ],
         itemHeadings: true,
@@ -973,7 +977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: 'BabyAGIを作ったのは誰か？', a: 'Yohei Nakajima氏がBabyAGIを開発し、2023年に初めて公開した。現在も単独でプロジェクトをメンテナンスし続けている。' },
-          { q: 'BabyAGIは今もメンテナンスされているか？', a: '現在のメインリポジトリ（functionzベース）は単独メンテナーから時折コミットを受けている。2023年の元のタスクループスクリプトは凍結されており、2024年9月にbabyagi_archiveリポジトリへ移動して以来、更新はない。' },
+          { q: 'BabyAGIは今もメンテナンスされているか？', a: '現在のメインリポジトリ（functionzベース）は2024年10月11日以降コードの変更がなく、最新コミット（2026年1月31日）はドキュメントファイルの追加だった。2023年の元のタスクループスクリプトは凍結されており、2024年9月にbabyagi_archiveリポジトリへ移動して以来、更新はない。' },
           { q: 'BabyAGIはどのライセンスの下で公開されているか？', a: 'メインリポジトリ、アーカイブされた元のもの、後発のBabyAGI 2oおよびBabyAGI 3のいずれもMITライセンスだ。' },
           { q: 'BabyAGIはOllamaのようなローカルモデルに対応しているか？', a: 'いいえ。現在のバージョンもアーカイブされたバージョンも、ローカルモデルへのネイティブ対応を文書化していない。どちらもOpenAI APIキーを前提に構築されている。' },
           { q: 'BabyAGIと元のバイラルなBabyAGIスクリプトの違いは何か？', a: '元のスクリプト（2023年）は固定ループを実行していた：タスクを作成し、優先順位を付け、最上位を実行し、結果を保存し、繰り返す。このコードはbabyagi_archiveリポジトリに凍結されている。2024年に作り替えられた現在のbabyagiリポジトリは、functionzという汎用的な関数登録フレームワークで、アーキテクチャ的には元のループと無関係だ。' },
@@ -1011,14 +1015,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-02',
     educationalLevel: 'Intermediate',
     audience: '正在评估BabyAGI作为自主智能体框架的开发者，以及在AutoGPT、CrewAI、LangGraph或Langflow之间做选择前想了解其历史的读者',
     primaryTerm: 'BabyAGI',
     title: 'BabyAGI：从爆红脚本到函数框架',
-    seoTitle: 'BabyAGI：MIT许可证，不支持本地模型',
+    seoTitle: 'BabyAGI评测:简介、许可证与本地模型支持情况',
     intro: 'BabyAGI在2023年让"自主AI智能体"成为主流词汇——一个能自己创建待办列表、逐项完成、并根据结果生成新任务的小型Python脚本。今天你能安装的项目已经不是当年那个脚本了。开发者Yohei Nakajima将其重构为完全不同的架构，原始代码则被冻结在一个独立的存档仓库中。',
-    metaDescription: 'BabyAGI在2023年开创了自主AI智能体，之后被重建了两次。本文说明目前运行的版本、MIT许可证，以及为何不支持本地模型。',
+    metaDescription: 'BabyAGI是什么?2023年的智能体在2024年重构为functionz。MIT许可证,近期更新很少,没有文档记载的本地模型支持,使用前请核实。',
     readTime: '11分钟阅读',
     targetKeywords: [
       'BabyAGI 评测',
@@ -1032,7 +1036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       zh: {
         question: 'BabyAGI是否仍在维护，能否运行本地模型？',
-        answer: 'BabyAGI的主仓库（github.com/yoheinakajima/babyagi）是2024年围绕名为functionz的函数管理框架重建的版本，仍会收到唯一维护者Yohei Nakajima偶尔提交的更新。让BabyAGI声名鹊起的2023年原始任务循环脚本被冻结在独立的babyagi_archive仓库中，不再获得任何更新。两个版本均未记录对Ollama等本地模型的原生支持——都依赖OpenAI API密钥。',
+        answer: 'BabyAGI的主仓库（github.com/yoheinakajima/babyagi）是2024年围绕名为functionz的函数管理框架重建的版本，自2024年10月11日起没有代码变更（最近一次提交在2026年1月31日，仅新增一份文档文件），由Yohei Nakajima一人维护。让BabyAGI声名鹊起的2023年原始任务循环脚本被冻结在独立的babyagi_archive仓库中，不再获得任何更新。两个版本均未记录对Ollama等本地模型的原生支持——都依赖OpenAI API密钥。',
         bullets: [
           '创建者：Yohei Nakajima，2023年首次以公开脚本形式发布',
           '当前主仓库：GitHub星标超过22,000，MIT许可证，2024年围绕functionz框架重建',
@@ -1041,7 +1045,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '项目自己的README声明它由个人维护、属于实验性质，"并非用于生产环境"',
           'BabyAGI没有任何付费产品或联盟营销计划',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1062,7 +1066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '要点速览 — 2026年的BabyAGI',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'BabyAGI是Yohei Nakajima于2023年创建的免费、MIT许可自主智能体项目；曾经爆红的原始任务循环脚本如今冻结在存档仓库中，而持续更新的主仓库是2024年围绕另一个名为functionz的框架重建的版本。' },
+          { type: 'one-sentence', text: 'BabyAGI是Yohei Nakajima于2023年创建的免费、MIT许可自主智能体项目；曾经爆红的原始任务循环脚本如今冻结在存档仓库中，而主仓库是2024年围绕另一个名为functionz的框架重建的版本。' },
           { type: 'plain-terms', text: '大家记忆中的那个BabyAGI——能自己列待办事项并逐项完成的脚本——依然存在，但那不是你今天安装到的东西。当前仓库是一个规模更小、由个人维护的框架，用于注册和调用AI可以使用的函数，需要OpenAI API密钥而非本地模型。' },
         ],
         items: [
@@ -1075,6 +1079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'BabyAGI没有商业产品、付费套餐或联盟营销计划',
         ],
         callouts: [
+          { type: 'warning', text: '自2024年10月11日以来没有代码变更。主仓库最近一次提交（2026年1月31日）只是新增了一份文档文件，没有发布GitHub正式版本，README也称其为实验性项目，可能已无人维护。依赖前请先查看该仓库。' },
           { type: 'note', text: '如果你在寻找经典的"自主待办列表"智能体，那段代码位于babyagi_archive仓库，而不是当前的babyagi仓库——它们是同名之下两个不同的代码库。' },
         ],
       },
@@ -1082,7 +1087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-built-babyagi',
         title: 'BabyAGI是谁开发的，现在还在维护吗？',
         content: [
-          '**Yohei Nakajima创建了BabyAGI，并一直独自维护它。** 他于2023年首次发布该项目，是一个演示自主任务循环的小型Python脚本：一次LLM调用创建新任务，另一次调用为其排序，第三次执行最优先的任务，结果被存储，循环再根据该结果生成更多任务。这是最早推广"自主AI智能体"以最少人工干预运行这一理念的项目之一。',
+          '**Yohei Nakajima创建了BabyAGI，并独自维护它；最后一次代码变更是在2024年10月11日。** 他于2023年首次发布该项目，是一个演示自主任务循环的小型Python脚本：一次LLM调用创建新任务，另一次调用为其排序，第三次执行最优先的任务，结果被存储，循环再根据该结果生成更多任务。这是最早推广"自主AI智能体"以最少人工干预运行这一理念的项目之一。',
           '那个原始脚本已不再是活跃的代码库。项目自己的README直言不讳："This project has been archived and moved to the babyagi_archive repo (September 2024 snapshot)."如今github.com/yoheinakajima/babyagi仓库中的是一个不同的项目——README将其描述为2024年重建的"自构建自主智能体的实验性框架"，围绕名为functionz的函数管理系统构建。',
         ],
         itemHeadings: true,
@@ -1222,7 +1227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           { q: 'BabyAGI是谁创建的？', a: 'Yohei Nakajima创建了BabyAGI，并于2023年首次发布。他至今仍独自维护该项目。' },
-          { q: 'BabyAGI现在还在维护吗？', a: '当前的主仓库（基于functionz）会收到唯一维护者偶尔提交的更新。2023年原始的任务循环脚本已被冻结，自2024年9月移至babyagi_archive仓库以来未再获得任何更新。' },
+          { q: 'BabyAGI现在还在维护吗？', a: '当前的主仓库（基于functionz）自2024年10月11日起没有代码变更，最近一次提交（2026年1月31日）只是新增了一份文档文件。2023年原始的任务循环脚本已被冻结，自2024年9月移至babyagi_archive仓库以来未再获得任何更新。' },
           { q: 'BabyAGI采用什么许可证发布？', a: '主仓库、已归档的原始版本，以及后来的BabyAGI 2o和BabyAGI 3子项目均采用MIT许可证。' },
           { q: 'BabyAGI支持Ollama等本地模型吗？', a: '不支持。当前版本和已归档版本都没有记录对本地模型的原生支持。两者都是围绕OpenAI API密钥构建的。' },
           { q: 'BabyAGI与最初爆红的BabyAGI脚本有何区别？', a: '原始脚本（2023年）运行一个固定循环：创建任务、排序、执行最优先任务、存储结果、重复。这段代码被冻结在babyagi_archive仓库中。2024年重建的当前babyagi仓库是一个名为functionz的通用函数注册框架，在架构上与原始循环无关。' },
@@ -1260,14 +1265,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-02',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores que evalúan BabyAGI como framework de agente autónomo, y lectores que investigan su historia antes de elegir entre BabyAGI, AutoGPT, CrewAI, LangGraph o Langflow',
     primaryTerm: 'BabyAGI',
     title: 'BabyAGI: del script viral al framework de funciones',
-    seoTitle: 'BabyAGI: licencia MIT, sin modelo local',
+    seoTitle: 'Reseña de BabyAGI: qué es, licencia y LLM locales',
     intro: 'BabyAGI popularizó la expresión "agente de IA autónomo" en 2023 — un pequeño script en Python que creaba su propia lista de tareas, la ejecutaba y generaba nuevas tareas a partir de los resultados. El proyecto que se instala hoy ya no es ese script. Su creador, Yohei Nakajima, lo reconstruyó con una arquitectura distinta, y el código original quedó congelado en un repositorio de archivo aparte.',
-    metaDescription: 'BabyAGI fue pionero en agentes de IA autónomos en 2023 y luego se reconstruyó dos veces. Qué funciona hoy, su licencia MIT y por qué no soporta modelos locales.',
+    metaDescription: '¿Qué es BabyAGI? El agente de 2023 se reconstruyó como functionz en 2024. MIT, poca actividad reciente y sin soporte documentado de modelos locales.',
     readTime: '11 min de lectura',
     targetKeywords: [
       'reseña BabyAGI',
@@ -1277,11 +1282,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'licencia BabyAGI',
       'BabyAGI 2026',
     ],
-    leadAnswerBlock: 'BabyAGI es un proyecto de agente autónomo gratuito y con licencia MIT creado por Yohei Nakajima en 2023 — pero el repositorio que se encuentra hoy ya no es el script viral de bucle de tareas. Se reconstruyó en 2024 como un framework de "agente autoconstructor" llamado functionz, mientras el código original quedó congelado y trasladado a un archivo aparte.',
+    leadAnswerBlock: 'BabyAGI es un proyecto de agente autónomo gratuito con licencia MIT, creado por Yohei Nakajima en 2023. El repositorio actual ya no es el script viral de bucle de tareas: se reconstruyó en 2024 como el framework functionz, y el código original quedó congelado en un archivo aparte.',
     quickAnswerTop: {
       es: {
         question: '¿Sigue mantenido BabyAGI, y funciona con modelos locales?',
-        answer: 'El repositorio principal de BabyAGI ([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi)) es una reconstrucción de 2024 en torno a un framework de gestión de funciones llamado functionz, que aún recibe commits ocasionales de su único mantenedor, Yohei Nakajima. El script original de bucle de tareas de 2023, el que hizo famoso a BabyAGI, está congelado en un repositorio babyagi_archive separado y ya no recibe actualizaciones. Ninguna de las dos versiones documenta soporte nativo para modelos locales como Ollama — ambas dependen de una clave de API de OpenAI.',
+        answer: 'El repositorio principal de BabyAGI ([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi)) es una reconstrucción de 2024 en torno a un framework de gestión de funciones llamado functionz, sin cambios de código desde el 11 de octubre de 2024 (su último commit, del 31 de enero de 2026, añadió un archivo de documentación) y con un único mantenedor, Yohei Nakajima. El script original de bucle de tareas de 2023, el que hizo famoso a BabyAGI, está congelado en un repositorio babyagi_archive separado y ya no recibe actualizaciones. Ninguna de las dos versiones documenta soporte nativo para modelos locales como Ollama — ambas dependen de una clave de API de OpenAI.',
         bullets: [
           'Creador: Yohei Nakajima, publicado por primera vez como script público en 2023',
           'Repositorio principal actual: más de 22.000 estrellas en GitHub, licencia MIT, reconstruido en 2024 en torno al framework functionz',
@@ -1290,7 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El propio README del proyecto indica que lo mantiene una sola persona, que es experimental, y que "no está pensado para uso en producción"',
           'No existe ningún producto de pago ni programa de afiliados para BabyAGI',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1311,7 +1316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Resumen — BabyAGI en 2026',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'BabyAGI es un proyecto de agente autónomo gratuito y con licencia MIT creado por Yohei Nakajima en 2023; el script viral original de bucle de tareas está hoy congelado en un repositorio de archivo, mientras el repositorio principal, activamente actualizado, es una reconstrucción de 2024 en torno a otro framework llamado functionz.' },
+          { type: 'one-sentence', text: 'BabyAGI es un proyecto de agente autónomo gratuito y con licencia MIT creado por Yohei Nakajima en 2023; el script viral original de bucle de tareas está hoy congelado en un repositorio de archivo, mientras el repositorio principal es una reconstrucción de 2024 en torno a otro framework llamado functionz.' },
           { type: 'plain-terms', text: 'El BabyAGI que todos recuerdan — un script que creaba su propia lista de tareas y la ejecutaba — sigue existiendo, pero no es lo que se instala hoy. El repositorio actual es un framework más pequeño, mantenido por una sola persona, para funciones que una IA puede registrar y llamar, y necesita una clave de API de OpenAI en lugar de un modelo local.' },
         ],
         items: [
@@ -1324,6 +1329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No existe ningún producto comercial, plan de pago ni programa de afiliados para BabyAGI',
         ],
         callouts: [
+          { type: 'warning', text: 'Sin cambios de código desde el 11 de octubre de 2024. El último commit del repositorio principal (31 de enero de 2026) añadió un archivo de documentación, no hay releases publicadas en GitHub y el README lo califica de experimental, por lo que puede estar sin mantenimiento. Revise el repositorio antes de depender de él.' },
           { type: 'note', text: 'Si busca el agente clásico de "lista de tareas autónoma", ese código está en el repositorio babyagi_archive, no en el repositorio babyagi actual — son dos bases de código distintas bajo el mismo nombre.' },
         ],
       },
@@ -1331,7 +1337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-built-babyagi',
         title: '¿Quién creó BabyAGI, y sigue mantenido?',
         content: [
-          '**Yohei Nakajima creó BabyAGI y sigue manteniéndolo él solo.** Publicó el proyecto por primera vez en 2023 como un pequeño script en Python que demostraba un bucle de tareas autónomo: una llamada a un LLM creaba nuevas tareas, otra las priorizaba, una tercera ejecutaba la tarea principal, el resultado se guardaba, y el bucle generaba más tareas a partir de ese resultado. Fue uno de los primeros proyectos en popularizar la idea de un "agente de IA autónomo" que funciona con intervención humana mínima.',
+          '**Yohei Nakajima creó BabyAGI y lo mantiene él solo; el último cambio de código fue el 11 de octubre de 2024.** Publicó el proyecto por primera vez en 2023 como un pequeño script en Python que demostraba un bucle de tareas autónomo: una llamada a un LLM creaba nuevas tareas, otra las priorizaba, una tercera ejecutaba la tarea principal, el resultado se guardaba, y el bucle generaba más tareas a partir de ese resultado. Fue uno de los primeros proyectos en popularizar la idea de un "agente de IA autónomo" que funciona con intervención humana mínima.',
           'Ese script original ya no es la base de código activa. Su propio README lo indica sin rodeos: "This project has been archived and moved to the babyagi_archive repo (September 2024 snapshot)." El repositorio en github.com/yoheinakajima/babyagi contiene hoy un proyecto distinto — una reconstrucción de 2024 que el README describe como "un framework experimental para un agente autónomo autoconstructor", basado en un sistema de gestión de funciones llamado functionz.',
         ],
         itemHeadings: true,
@@ -1471,7 +1477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Quién creó BabyAGI?', a: 'Yohei Nakajima creó BabyAGI y lo publicó por primera vez en 2023. Sigue manteniendo el proyecto él solo.' },
-          { q: '¿Sigue mantenido BabyAGI?', a: 'El repositorio principal actual (basado en functionz) recibe commits ocasionales de su único mantenedor. El script original de bucle de tareas de 2023 está congelado y no ha recibido actualizaciones desde que se trasladó al repositorio babyagi_archive en septiembre de 2024.' },
+          { q: '¿Sigue mantenido BabyAGI?', a: 'El repositorio principal actual (basado en functionz) no ha recibido cambios de código desde el 11 de octubre de 2024; su último commit, del 31 de enero de 2026, añadió un archivo de documentación. El script original de bucle de tareas de 2023 está congelado y no ha recibido actualizaciones desde que se trasladó al repositorio babyagi_archive en septiembre de 2024.' },
           { q: '¿Con qué licencia se publica BabyAGI?', a: 'MIT, tanto en el repositorio principal como en el original archivado y en los proyectos paralelos posteriores BabyAGI 2o y BabyAGI 3.' },
           { q: '¿Soporta BabyAGI modelos locales como Ollama?', a: 'No. Ni la versión actual ni la archivada documentan soporte nativo para modelos locales. Ambas están construidas en torno a una clave de API de OpenAI.' },
           { q: '¿Cuál es la diferencia entre BabyAGI y el script viral original de BabyAGI?', a: 'El script original (2023) ejecutaba un bucle fijo: crear tareas, priorizarlas, ejecutar la principal, guardar el resultado, repetir. Ese código está congelado en el repositorio babyagi_archive. El repositorio babyagi actual, reconstruido en 2024, es un framework de registro de funciones de propósito general llamado functionz, sin relación arquitectónica con el bucle original.' },
@@ -1509,14 +1515,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-02',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores avaliando o BabyAGI como framework de agente autônomo, e leitores pesquisando seu histórico antes de escolher entre BabyAGI, AutoGPT, CrewAI, LangGraph ou Langflow',
     primaryTerm: 'BabyAGI',
     title: 'BabyAGI: do script viral ao framework de funções',
-    seoTitle: 'BabyAGI: licença MIT, sem modelo local',
+    seoTitle: 'Análise do BabyAGI: o que é, licença e LLMs locais',
     intro: 'O BabyAGI popularizou a expressão "agente de IA autônomo" em 2023 — um pequeno script em Python que criava sua própria lista de tarefas, a executava e gerava novas tarefas a partir dos resultados. O projeto que você instala hoje não é mais esse script. Seu criador, Yohei Nakajima, o reconstruiu com uma arquitetura diferente, e o código original ficou congelado em um repositório de arquivo separado.',
-    metaDescription: 'O BabyAGI foi pioneiro em agentes de IA autônomos em 2023 e depois foi reconstruído duas vezes. O que roda hoje, sua licença MIT e por que não há suporte a modelos locais.',
+    metaDescription: 'O que é o BabyAGI? O agente de 2023 foi reconstruído como functionz em 2024. MIT, pouca atividade recente e sem suporte documentado a modelos locais.',
     readTime: '11 min de leitura',
     targetKeywords: [
       'análise BabyAGI',
@@ -1526,11 +1532,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'licença BabyAGI',
       'BabyAGI 2026',
     ],
-    leadAnswerBlock: 'O BabyAGI é um projeto de agente autônomo gratuito e com licença MIT criado por Yohei Nakajima em 2023 — mas o repositório encontrado hoje não é mais o script viral de loop de tarefas. Ele foi reconstruído em 2024 como um framework de "agente autoconstrutor" chamado functionz, enquanto o código original foi congelado e movido para um arquivo separado.',
+    leadAnswerBlock: 'O BabyAGI é um projeto de agente autônomo gratuito com licença MIT, criado por Yohei Nakajima em 2023. O repositório atual não é mais o script viral de loop de tarefas: foi reconstruído em 2024 como o framework functionz, e o código original foi congelado em um arquivo separado.',
     quickAnswerTop: {
       pt: {
         question: 'O BabyAGI ainda é mantido, e funciona com modelos locais?',
-        answer: 'O repositório principal do BabyAGI ([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi)) é uma reconstrução de 2024 em torno de um framework de gestão de funções chamado functionz, que ainda recebe commits ocasionais de seu único mantenedor, Yohei Nakajima. O script original de loop de tarefas de 2023, que tornou o BabyAGI famoso, está congelado em um repositório babyagi_archive separado e não recebe mais atualizações. Nenhuma das versões documenta suporte nativo a modelos locais como o Ollama — ambas dependem de uma chave de API da OpenAI.',
+        answer: 'O repositório principal do BabyAGI ([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi)) é uma reconstrução de 2024 em torno de um framework de gestão de funções chamado functionz, sem alterações de código desde 11 de outubro de 2024 (o último commit, de 31 de janeiro de 2026, adicionou um arquivo de documentação) e com um único mantenedor, Yohei Nakajima. O script original de loop de tarefas de 2023, que tornou o BabyAGI famoso, está congelado em um repositório babyagi_archive separado e não recebe mais atualizações. Nenhuma das versões documenta suporte nativo a modelos locais como o Ollama — ambas dependem de uma chave de API da OpenAI.',
         bullets: [
           'Criador: Yohei Nakajima, publicado pela primeira vez como script público em 2023',
           'Repositório principal atual: mais de 22.000 estrelas no GitHub, licença MIT, reconstruído em 2024 em torno do framework functionz',
@@ -1539,7 +1545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O próprio README do projeto afirma que é mantido por uma única pessoa, é experimental, e "não é destinado a uso em produção"',
           'Não existe produto pago nem programa de afiliados para o BabyAGI',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1560,7 +1566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Resumo — o BabyAGI em 2026',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'O BabyAGI é um projeto de agente autônomo gratuito e com licença MIT criado por Yohei Nakajima em 2023; o script viral original de loop de tarefas está hoje congelado em um repositório de arquivo, enquanto o repositório principal, ativamente atualizado, é uma reconstrução de 2024 em torno de outro framework chamado functionz.' },
+          { type: 'one-sentence', text: 'O BabyAGI é um projeto de agente autônomo gratuito e com licença MIT criado por Yohei Nakajima em 2023; o script viral original de loop de tarefas está hoje congelado em um repositório de arquivo, enquanto o repositório principal é uma reconstrução de 2024 em torno de outro framework chamado functionz.' },
           { type: 'plain-terms', text: 'O BabyAGI que todo mundo lembra — um script que criava sua própria lista de tarefas e a executava — ainda existe, mas não é o que você instala hoje. O repositório atual é um framework menor, mantido por uma única pessoa, para funções que uma IA pode registrar e chamar, e exige uma chave de API da OpenAI em vez de um modelo local.' },
         ],
         items: [
@@ -1573,6 +1579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Não existe produto comercial, plano pago ou programa de afiliados para o BabyAGI',
         ],
         callouts: [
+          { type: 'warning', text: 'Sem alterações de código desde 11 de outubro de 2024. O último commit do repositório principal (31 de janeiro de 2026) adicionou um arquivo de documentação, não há releases publicadas no GitHub e o README o chama de experimental, então pode estar sem manutenção. Verifique o repositório antes de depender dele.' },
           { type: 'note', text: 'Se você procura o agente clássico de "lista de tarefas autônoma", esse código está no repositório babyagi_archive, não no repositório babyagi atual — são duas bases de código diferentes sob o mesmo nome.' },
         ],
       },
@@ -1580,7 +1587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-built-babyagi',
         title: 'Quem criou o BabyAGI, e ele ainda é mantido?',
         content: [
-          '**Yohei Nakajima criou o BabyAGI e continua mantendo-o sozinho.** Ele publicou o projeto pela primeira vez em 2023 como um pequeno script em Python demonstrando um loop de tarefas autônomo: uma chamada a um LLM criava novas tarefas, outra as priorizava, uma terceira executava a tarefa principal, o resultado era armazenado, e o loop gerava mais tarefas a partir desse resultado. Foi um dos primeiros projetos a popularizar a ideia de um "agente de IA autônomo" funcionando com intervenção humana mínima.',
+          '**Yohei Nakajima criou o BabyAGI e o mantém sozinho; a última alteração de código foi em 11 de outubro de 2024.** Ele publicou o projeto pela primeira vez em 2023 como um pequeno script em Python demonstrando um loop de tarefas autônomo: uma chamada a um LLM criava novas tarefas, outra as priorizava, uma terceira executava a tarefa principal, o resultado era armazenado, e o loop gerava mais tarefas a partir desse resultado. Foi um dos primeiros projetos a popularizar a ideia de um "agente de IA autônomo" funcionando com intervenção humana mínima.',
           'Esse script original não é mais a base de código ativa. O próprio README afirma claramente: "This project has been archived and moved to the babyagi_archive repo (September 2024 snapshot)." O repositório em github.com/yoheinakajima/babyagi contém hoje um projeto diferente — uma reconstrução de 2024 que o README descreve como "um framework experimental para um agente autônomo autoconstrutor", construído em torno de um sistema de gestão de funções chamado functionz.',
         ],
         itemHeadings: true,
@@ -1720,7 +1727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'Quem criou o BabyAGI?', a: 'Yohei Nakajima criou o BabyAGI e o publicou pela primeira vez em 2023. Ele continua mantendo o projeto sozinho.' },
-          { q: 'O BabyAGI ainda é mantido?', a: 'O repositório principal atual (baseado em functionz) recebe commits ocasionais de seu único mantenedor. O script original de loop de tarefas de 2023 está congelado e não recebe atualizações desde que foi movido para o repositório babyagi_archive em setembro de 2024.' },
+          { q: 'O BabyAGI ainda é mantido?', a: 'O repositório principal atual (baseado em functionz) não recebe alterações de código desde 11 de outubro de 2024; o último commit, de 31 de janeiro de 2026, adicionou um arquivo de documentação. O script original de loop de tarefas de 2023 está congelado e não recebe atualizações desde que foi movido para o repositório babyagi_archive em setembro de 2024.' },
           { q: 'Sob qual licença o BabyAGI é publicado?', a: 'MIT, tanto no repositório principal quanto no original arquivado e nos projetos paralelos posteriores BabyAGI 2o e BabyAGI 3.' },
           { q: 'O BabyAGI suporta modelos locais como o Ollama?', a: 'Não. Nem a versão atual nem a arquivada documentam suporte nativo a modelos locais. Ambas são construídas em torno de uma chave de API da OpenAI.' },
           { q: 'Qual é a diferença entre o BabyAGI e o script viral original do BabyAGI?', a: 'O script original (2023) executava um loop fixo: criar tarefas, priorizá-las, executar a principal, armazenar o resultado, repetir. Esse código está congelado no repositório babyagi_archive. O repositório babyagi atual, reconstruído em 2024, é um framework de registro de funções de propósito geral chamado functionz, sem relação arquitetônica com o loop original.' },
@@ -1758,14 +1765,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-02',
     educationalLevel: 'Intermediate',
     audience: 'المطورون الذين يقيّمون BabyAGI كإطار عمل لعميل مستقل، والقراء الذين يبحثون عن تاريخه قبل الاختيار بينه وبين AutoGPT وCrewAI وLangGraph وLangflow',
     primaryTerm: 'BabyAGI',
     title: 'BabyAGI: من نص برمجي منتشر إلى إطار وظائف',
-    seoTitle: 'BabyAGI: ترخيص MIT، بلا نموذج محلي',
+    seoTitle: 'مراجعة BabyAGI: ما هو والترخيص والنماذج المحلية',
     intro: 'جعل BabyAGI عبارة "عميل ذكاء اصطناعي مستقل" شائعة في 2023 — نص برمجي صغير بلغة Python كان ينشئ قائمة مهامه الخاصة، ينفذها، ثم يولّد مهامًا جديدة من النتائج. المشروع الذي يمكن تثبيته اليوم لم يعد ذلك النص. أعاد منشئه Yohei Nakajima بناءه بمعمارية مختلفة تمامًا، بينما بقي الكود الأصلي مجمّدًا في مستودع أرشيف منفصل.',
-    metaDescription: 'ابتكر BabyAGI فكرة عملاء الذكاء الاصطناعي المستقلين في 2023، ثم أُعيد بناؤه مرتين. ما يعمل اليوم، ترخيصه MIT، ولماذا لا يدعم النماذج المحلية.',
+    metaDescription: 'ما هو BabyAGI؟ أُعيد بناء وكيل 2023 باسم functionz في 2024. ترخيص MIT ونشاط حديث قليل ولا دعم موثّق للنماذج المحلية.',
     readTime: 'وقت القراءة 11 دقيقة',
     targetKeywords: [
       'مراجعة BabyAGI',
@@ -1779,7 +1786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل BabyAGI ما زال مدعومًا، وهل يعمل مع النماذج المحلية؟',
-        answer: 'المستودع الرئيسي لـ BabyAGI ([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi)) هو إعادة بناء من عام 2024 حول إطار عمل لإدارة الوظائف يُدعى functionz، ولا يزال يتلقى التزامات (commits) عرضية من مشرفه الوحيد Yohei Nakajima. أما النص البرمجي الأصلي لحلقة المهام من عام 2023، الذي جعل BabyAGI مشهورًا، فهو مجمّد في مستودع babyagi_archive منفصل ولا يتلقى أي تحديثات. لا توثّق أي من النسختين دعمًا أصليًا لنماذج محلية مثل Ollama — تعتمد كلتاهما على مفتاح واجهة برمجة OpenAI.',
+        answer: 'المستودع الرئيسي لـ BabyAGI ([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi)) هو إعادة بناء من عام 2024 حول إطار عمل لإدارة الوظائف يُدعى functionz، دون أي تغيير في الشيفرة منذ 11 أكتوبر 2024 (أضاف آخر التزام، في 31 يناير 2026، ملف توثيق فقط)، ويصونه شخص واحد هو Yohei Nakajima. أما النص البرمجي الأصلي لحلقة المهام من عام 2023، الذي جعل BabyAGI مشهورًا، فهو مجمّد في مستودع babyagi_archive منفصل ولا يتلقى أي تحديثات. لا توثّق أي من النسختين دعمًا أصليًا لنماذج محلية مثل Ollama — تعتمد كلتاهما على مفتاح واجهة برمجة OpenAI.',
         bullets: [
           'المنشئ: Yohei Nakajima، نُشر لأول مرة كنص برمجي عام في 2023',
           'المستودع الرئيسي الحالي: أكثر من 22,000 نجمة على GitHub، ترخيص MIT، أُعيد بناؤه عام 2024 حول إطار functionz',
@@ -1788,7 +1795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يوضح ملف README الخاص بالمشروع أنه يُصان من قِبل شخص واحد، وهو تجريبي، و"غير مخصص للاستخدام في الإنتاج"',
           'لا يوجد منتج مدفوع ولا برنامج شراكة تسويقية لـ BabyAGI',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1809,7 +1816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الملخص — BabyAGI في 2026',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'BabyAGI مشروع عميل مستقل مجاني بترخيص MIT أنشأه Yohei Nakajima عام 2023؛ النص البرمجي الأصلي المنتشر لحلقة المهام مجمّد الآن في مستودع أرشيف، بينما المستودع الرئيسي المحدَّث بنشاط هو إعادة بناء من عام 2024 حول إطار عمل آخر يُدعى functionz.' },
+          { type: 'one-sentence', text: 'BabyAGI مشروع عميل مستقل مجاني بترخيص MIT أنشأه Yohei Nakajima عام 2023؛ النص البرمجي الأصلي المنتشر لحلقة المهام مجمّد الآن في مستودع أرشيف، بينما المستودع الرئيسي هو إعادة بناء من عام 2024 حول إطار عمل آخر يُدعى functionz.' },
           { type: 'plain-terms', text: 'BabyAGI الذي يتذكره الجميع — نص برمجي كان ينشئ قائمة مهامه الخاصة وينفذها — لا يزال موجودًا، لكنه ليس ما تثبّته اليوم. المستودع الحالي إطار عمل أصغر، يديره شخص واحد، لوظائف يمكن لذكاء اصطناعي تسجيلها واستدعاؤها، ويحتاج مفتاح واجهة برمجة OpenAI بدلًا من نموذج محلي.' },
         ],
         items: [
@@ -1822,6 +1829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لا يوجد منتج تجاري أو خطة مدفوعة أو برنامج شراكة تسويقية لـ BabyAGI',
         ],
         callouts: [
+          { type: 'warning', text: 'لا تغييرات على الشيفرة منذ 11 أكتوبر 2024. أضاف آخر التزام في المستودع الرئيسي (31 يناير 2026) ملف توثيق فقط، ولا يوجد إصدار منشور على GitHub، ويصف README المشروع بأنه تجريبي، لذا قد يكون غير مُصان. تحقق من المستودع قبل الاعتماد عليه.' },
           { type: 'note', text: 'إذا كنت تبحث عن العميل الكلاسيكي "قائمة المهام المستقلة"، فهذا الكود موجود في مستودع babyagi_archive، وليس في مستودع babyagi الحالي — فهما قاعدتا كود مختلفتان تحت نفس الاسم.' },
         ],
       },
@@ -1829,7 +1837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-built-babyagi',
         title: 'من بنى BabyAGI، وهل ما زال مدعومًا؟',
         content: [
-          '**أنشأ Yohei Nakajima مشروع BabyAGI وما زال يصونه بمفرده.** نشر المشروع لأول مرة في 2023 كنص برمجي صغير بلغة Python يوضّح حلقة مهام مستقلة: استدعاء لنموذج لغوي كبير ينشئ مهامًا جديدة، واستدعاء آخر يرتبها حسب الأولوية، وثالث ينفّذ المهمة الأعلى أولوية، ويُخزَّن الناتج، وتولّد الحلقة مزيدًا من المهام بناءً على تلك النتيجة. كان أحد أوائل المشاريع التي روّجت لفكرة "عميل ذكاء اصطناعي مستقل" يعمل بأدنى تدخل بشري.',
+          '**أنشأ Yohei Nakajima مشروع BabyAGI ويصونه بمفرده؛ وكان آخر تغيير في الشيفرة في 11 أكتوبر 2024.** نشر المشروع لأول مرة في 2023 كنص برمجي صغير بلغة Python يوضّح حلقة مهام مستقلة: استدعاء لنموذج لغوي كبير ينشئ مهامًا جديدة، واستدعاء آخر يرتبها حسب الأولوية، وثالث ينفّذ المهمة الأعلى أولوية، ويُخزَّن الناتج، وتولّد الحلقة مزيدًا من المهام بناءً على تلك النتيجة. كان أحد أوائل المشاريع التي روّجت لفكرة "عميل ذكاء اصطناعي مستقل" يعمل بأدنى تدخل بشري.',
           'لم يعد ذلك النص البرمجي الأصلي هو قاعدة الكود النشطة. يوضح ملف README الخاص به بصراحة: "This project has been archived and moved to the babyagi_archive repo (September 2024 snapshot)." يحتوي المستودع على github.com/yoheinakajima/babyagi اليوم على مشروع مختلف — إعادة بناء من 2024 يصفها README بأنها "إطار عمل تجريبي لعميل مستقل ذاتي البناء"، مبني حول نظام لإدارة الوظائف يُدعى functionz.',
         ],
         itemHeadings: true,
@@ -1969,7 +1977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'من أنشأ BabyAGI؟', a: 'أنشأ Yohei Nakajima مشروع BabyAGI ونشره لأول مرة في 2023. وما زال يصون المشروع بمفرده.' },
-          { q: 'هل BabyAGI ما زال مدعومًا؟', a: 'يتلقى المستودع الرئيسي الحالي (المبني على functionz) التزامات عرضية من مشرفه الوحيد. أما النص البرمجي الأصلي لحلقة المهام من 2023 فهو مجمّد ولم يتلقَّ أي تحديثات منذ نقله إلى مستودع babyagi_archive في سبتمبر 2024.' },
+          { q: 'هل BabyAGI ما زال مدعومًا؟', a: 'يتلقى المستودع الرئيسي الحالي (المبني على functionz) لم يشهد تغييرًا في الشيفرة منذ 11 أكتوبر 2024؛ فآخر التزام، في 31 يناير 2026، أضاف ملف توثيق. أما النص البرمجي الأصلي لحلقة المهام من 2023 فهو مجمّد ولم يتلقَّ أي تحديثات منذ نقله إلى مستودع babyagi_archive في سبتمبر 2024.' },
           { q: 'ما الترخيص الذي يُنشر بموجبه BabyAGI؟', a: 'MIT، عبر المستودع الرئيسي والأصل المؤرشف والمشروعين الجانبيين اللاحقين BabyAGI 2o وBabyAGI 3.' },
           { q: 'هل يدعم BabyAGI نماذج محلية مثل Ollama؟', a: 'لا. لا توثّق النسخة الحالية ولا المؤرشفة دعمًا أصليًا للنماذج المحلية. كلتاهما مبنيتان حول مفتاح واجهة برمجة OpenAI.' },
           { q: 'ما الفرق بين BabyAGI والنص البرمجي المنتشر الأصلي؟', a: 'كان النص البرمجي الأصلي (2023) يشغّل حلقة ثابتة: إنشاء مهام، ترتيبها حسب الأولوية، تنفيذ الأعلى أولوية، تخزين النتيجة، والتكرار. هذا الكود مجمّد في مستودع babyagi_archive. أما مستودع babyagi الحالي، المُعاد بناؤه في 2024، فهو إطار عمل عام لتسجيل الوظائف يُدعى functionz، ولا علاقة معمارية له بالحلقة الأصلية.' },
@@ -2007,14 +2015,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-02',
     educationalLevel: 'Intermediate',
     audience: 'BabyAGI를 자율 에이전트 프레임워크로 평가하는 개발자, 그리고 AutoGPT·CrewAI·LangGraph·Langflow 중 하나를 선택하기 전 그 역사를 조사하는 독자',
     primaryTerm: 'BabyAGI',
     title: 'BabyAGI: 바이럴 스크립트에서 함수 프레임워크로',
-    seoTitle: 'BabyAGI: MIT 라이선스, 로컬 모델 미지원',
+    seoTitle: 'BabyAGI 리뷰: 개요·라이선스·로컬 LLM 지원',
     intro: 'BabyAGI는 2023년 "자율 AI 에이전트"라는 표현을 대중화한 프로젝트다——스스로 할 일 목록을 만들고, 이를 처리하고, 결과로부터 새로운 작업을 생성하는 작은 Python 스크립트였다. 오늘날 설치할 수 있는 프로젝트는 더 이상 그 스크립트가 아니다. 개발자 Yohei Nakajima는 이를 전혀 다른 아키텍처로 재구축했고, 원본 코드는 별도의 아카이브 저장소에 동결된 채로 남아 있다.',
-    metaDescription: 'BabyAGI는 2023년 자율 AI 에이전트를 개척했고, 이후 두 차례 재구축됐다. 지금 작동하는 버전, MIT 라이선스, 로컬 모델을 지원하지 않는 이유를 설명한다.',
+    metaDescription: 'BabyAGI란? 2023년 에이전트가 2024년 functionz로 재구축됨. MIT 라이선스, 최근 활동은 적고 로컬 모델 지원은 문서화되지 않음.',
     readTime: '읽는 시간 11분',
     targetKeywords: [
       'BabyAGI 리뷰',
@@ -2028,7 +2036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ko: {
         question: 'BabyAGI는 여전히 유지보수되고 있으며, 로컬 모델에서 작동하는가?',
-        answer: 'BabyAGI의 메인 저장소([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi))는 functionz라는 함수 관리 프레임워크를 중심으로 2024년에 재구축된 버전으로, 유일한 관리자인 Yohei Nakajima로부터 가끔 커밋을 받는다. BabyAGI를 유명하게 만든 2023년 원본 작업 루프 스크립트는 별도의 babyagi_archive 저장소에 동결되어 있으며 더 이상 업데이트되지 않는다. 두 버전 모두 Ollama와 같은 로컬 모델에 대한 네이티브 지원을 문서화하지 않았으며——둘 다 OpenAI API 키에 의존한다.',
+        answer: 'BabyAGI의 메인 저장소([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi))는 functionz라는 함수 관리 프레임워크를 중심으로 2024년에 재구축된 버전으로, 2024년 10월 11일 이후 코드 변경이 없으며(마지막 커밋은 2026년 1월 31일의 문서 파일 추가), Yohei Nakajima 한 사람이 관리한다. BabyAGI를 유명하게 만든 2023년 원본 작업 루프 스크립트는 별도의 babyagi_archive 저장소에 동결되어 있으며 더 이상 업데이트되지 않는다. 두 버전 모두 Ollama와 같은 로컬 모델에 대한 네이티브 지원을 문서화하지 않았으며——둘 다 OpenAI API 키에 의존한다.',
         bullets: [
           '개발자: Yohei Nakajima, 2023년 공개 스크립트로 최초 공개',
           '현재 메인 저장소: GitHub 스타 22,000개 이상, MIT 라이선스, 2024년 functionz 프레임워크로 재구축',
@@ -2037,7 +2045,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '프로젝트 자체 README는 1인이 유지보수하며 실험적이고 "본 프로덕션 사용을 의도하지 않았다"고 명시',
           'BabyAGI에는 유료 제품이나 제휴 프로그램이 존재하지 않음',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -2058,7 +2066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '요약 — 2026년의 BabyAGI',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'BabyAGI는 Yohei Nakajima가 2023년에 만든 무료 MIT 라이선스 자율 에이전트 프로젝트로, 바이럴이었던 원본 작업 루프 스크립트는 현재 아카이브 저장소에 동결되어 있고, 활발히 업데이트되는 메인 저장소는 functionz라는 다른 프레임워크를 중심으로 한 2024년 재구축 버전이다.' },
+          { type: 'one-sentence', text: 'BabyAGI는 Yohei Nakajima가 2023년에 만든 무료 MIT 라이선스 자율 에이전트 프로젝트로, 바이럴이었던 원본 작업 루프 스크립트는 현재 아카이브 저장소에 동결되어 있고, 메인 저장소는 functionz라는 다른 프레임워크를 중심으로 한 2024년 재구축 버전이다.' },
           { type: 'plain-terms', text: '모두가 기억하는 BabyAGI——스스로 할 일 목록을 만들고 처리하던 스크립트——는 여전히 존재하지만, 오늘 설치하는 것은 그것이 아니다. 현재 저장소는 AI가 등록하고 호출할 수 있는 함수를 위한, 1인이 관리하는 더 작은 프레임워크이며, 로컬 모델이 아니라 OpenAI API 키가 필요하다.' },
         ],
         items: [
@@ -2071,6 +2079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'BabyAGI에는 상용 제품, 유료 요금제, 제휴 프로그램이 존재하지 않음',
         ],
         callouts: [
+          { type: 'warning', text: '2024년 10월 11일 이후 코드 변경이 없습니다. 메인 저장소의 마지막 커밋(2026년 1월 31일)은 문서 파일 추가였고, GitHub 공개 릴리스가 없으며 README도 실험적 프로젝트라고 밝히므로 유지보수가 중단되었을 수 있습니다. 의존하기 전에 저장소를 확인하세요.' },
           { type: 'note', text: '고전적인 "자율 할 일 목록" 에이전트를 찾고 있다면, 그 코드는 babyagi_archive 저장소에 있으며 현재 babyagi 저장소에는 없다——같은 이름 아래 두 개의 서로 다른 코드베이스다.' },
         ],
       },
@@ -2078,7 +2087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-built-babyagi',
         title: 'BabyAGI는 누가 만들었고, 지금도 유지보수되고 있는가',
         content: [
-          '**Yohei Nakajima가 BabyAGI를 만들었고 지금도 혼자 유지보수하고 있다.** 그는 2023년 자율 작업 루프를 시연하는 작은 Python 스크립트로 이 프로젝트를 처음 공개했다: 한 LLM 호출이 새 작업을 생성하고, 다른 호출이 우선순위를 매기고, 세 번째 호출이 최상위 작업을 실행하며, 결과가 저장되고, 그 루프가 결과로부터 더 많은 작업을 생성했다. 최소한의 인간 개입으로 작동하는 "자율 AI 에이전트"라는 개념을 대중화한 최초의 프로젝트 중 하나였다.',
+          '**Yohei Nakajima가 BabyAGI를 만들었고 혼자 유지보수하며, 마지막 코드 변경은 2024년 10월 11일이었다.** 그는 2023년 자율 작업 루프를 시연하는 작은 Python 스크립트로 이 프로젝트를 처음 공개했다: 한 LLM 호출이 새 작업을 생성하고, 다른 호출이 우선순위를 매기고, 세 번째 호출이 최상위 작업을 실행하며, 결과가 저장되고, 그 루프가 결과로부터 더 많은 작업을 생성했다. 최소한의 인간 개입으로 작동하는 "자율 AI 에이전트"라는 개념을 대중화한 최초의 프로젝트 중 하나였다.',
           '그 원본 스크립트는 더 이상 활성 코드베이스가 아니다. 자체 README는 분명히 밝힌다: "This project has been archived and moved to the babyagi_archive repo (September 2024 snapshot)." 오늘날 github.com/yoheinakajima/babyagi 저장소에는 다른 프로젝트가 있다——README는 이를 "self-building autonomous agent를 위한 실험적 프레임워크"라고 설명하며, functionz라는 함수 관리 시스템을 중심으로 구축된 2024년 재구축 버전이다.',
         ],
         itemHeadings: true,
@@ -2218,7 +2227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           { q: 'BabyAGI는 누가 만들었는가?', a: 'Yohei Nakajima가 BabyAGI를 만들었고 2023년 처음 공개했다. 그는 지금도 이 프로젝트를 혼자 유지보수하고 있다.' },
-          { q: 'BabyAGI는 지금도 유지보수되고 있는가?', a: '현재의 메인 저장소(functionz 기반)는 유일한 관리자로부터 가끔 커밋을 받는다. 2023년의 원본 작업 루프 스크립트는 동결되어 있으며, 2024년 9월 babyagi_archive 저장소로 옮겨진 이후 업데이트를 받지 않았다.' },
+          { q: 'BabyAGI는 지금도 유지보수되고 있는가?', a: '현재의 메인 저장소(functionz 기반)는 2024년 10월 11일 이후 코드 변경이 없고, 마지막 커밋(2026년 1월 31일)은 문서 파일 추가였다. 2023년의 원본 작업 루프 스크립트는 동결되어 있으며, 2024년 9월 babyagi_archive 저장소로 옮겨진 이후 업데이트를 받지 않았다.' },
           { q: 'BabyAGI는 어떤 라이선스로 공개되는가?', a: 'MIT 라이선스이며, 메인 저장소, 아카이브된 원본, 이후의 사이드 프로젝트인 BabyAGI 2o와 BabyAGI 3 모두 동일하다.' },
           { q: 'BabyAGI는 Ollama 같은 로컬 모델을 지원하는가?', a: '아니다. 현재 버전도 아카이브 버전도 로컬 모델에 대한 네이티브 지원을 문서화하지 않았다. 둘 다 OpenAI API 키를 중심으로 구축되어 있다.' },
           { q: 'BabyAGI와 원래의 바이럴 BabyAGI 스크립트의 차이는 무엇인가?', a: '원본 스크립트(2023년)는 고정된 루프를 실행했다: 작업 생성, 우선순위 지정, 최상위 작업 실행, 결과 저장, 반복. 이 코드는 babyagi_archive 저장소에 동결되어 있다. 2024년 재구축된 현재의 babyagi 저장소는 functionz라는 범용 함수 등록 프레임워크로, 원본 루프와는 아키텍처상 무관하다.' },

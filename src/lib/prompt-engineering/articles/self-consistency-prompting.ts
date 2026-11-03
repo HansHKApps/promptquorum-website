@@ -9,29 +9,29 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
-      last_full_refresh: '2026-08-29',
-      next_refresh_due: '2027-02-28',
+      last_full_refresh: '2026-11-02',
+      next_refresh_due: '2027-05-02',
       theme: 'Techniques',
       heroImage: '/images/self-consistency-prompting-overview-hero-en.webp',
       title: 'Self-Consistency Prompting: Generate Multiple Answers, Pick the One That\'s Right',
-      intro: '**Self-consistency prompting generates 5-20 independent reasoning paths for the same question and selects the answer that appears most frequently.** Instead of trusting a single AI answer (which may be wrong), you ask the question multiple times at higher temperatures and let majority voting decide. This simple technique improves accuracy on math, logic, and multi-step analysis by 15-25 percentage points.',
-      leadAnswerBlock: '**Self-consistency prompting: ask the model the same question 5-20 times with higher temperature (0.7-1.0) to generate diverse reasoning paths, then pick the majority answer. The technique improved math accuracy from 56% (single chain-of-thought) to 74% (self-consistency with 40 samples) in the original paper. Works on all models. Trade-off: 5-20× more tokens per task.**',
+      intro: '**Self-consistency prompting samples several independent reasoning paths for the same question and selects the answer that appears most often.** Instead of trusting one answer that may be wrong, you ask several times at a higher temperature and let majority voting decide.',
+      leadAnswerBlock: '**Self-consistency prompting asks the model the same question several times at a temperature above zero, then picks the majority answer. In the original paper, 40 samples raised PaLM-540B on GSM8K from 56.5% to 74.4%. Cost: one full response per sample.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-02',
       readTime: '12 min read',
       educationalLevel: 'Intermediate',
       audience: 'Developers building reliable AI reasoning pipelines, analysts making high-stakes decisions with AI, researchers in prompt engineering',
-      seoTitle: 'Self-Consistency Prompting: Multiple Answers, Pick Best',
-      metaDescription: 'Self-consistency prompting generates 5-20 reasoning paths and picks the majority answer. Improves accuracy on math and logic from 56% to 74%.',
-      ogDescription: 'One AI answer might be wrong. Five AI answers that agree? Much more reliable. Self-consistency improves accuracy 15-25 points by sampling multiple reasoning paths and picking the consensus.',
-      twitterDescription: 'Self-consistency: ask the AI the same question 5-20 times, pick the majority answer. Simple technique, dramatic accuracy improvement on reasoning tasks.',
+      seoTitle: 'Self-Consistency Prompting: How Majority Voting Works',
+      metaDescription: 'Self-consistency prompting samples several reasoning paths and picks the majority answer. In the original paper, GSM8K accuracy rose from 56.5% to 74.4%.',
+      ogDescription: 'One AI answer might be wrong. Sample several reasoning paths and pick the majority answer: the original paper reports PaLM-540B rising from 56.5% to 74.4% on GSM8K.',
+      twitterDescription: 'Self-consistency: ask the model the same question several times at a temperature above 0, then pick the majority answer. Paper-reported GSM8K: 56.5% to 74.4%.',
       primaryTerm: 'Self-Consistency Prompting',
       quickFacts: [
         '**Technique:** Generate 5-20 independent reasoning paths for the same question, then select the most frequent answer via majority voting.',
         '**Paper:** Wang et al. (2023), "Self-Consistency Improves Chain of Thought Reasoning in Language Models," ICLR 2023.',
-        '**Key result:** GSM8K math accuracy improved from 56% (single chain-of-thought) to 74% (self-consistency with 40 samples)—a 32% relative improvement.',
-        '**Temperature requirement:** Must set 0.7-1.0 (temperature=0 produces identical outputs, defeating the purpose).',
-        '**Sample count:** 5-10 samples is the sweet spot; diminishing returns beyond 20 samples.',
+        '**Key result (paper-reported):** PaLM-540B on GSM8K rose from 56.5% (greedy chain-of-thought) to 74.4% (self-consistency, 40 sampled paths), a gain of 17.9 points.',
+        '**Temperature requirement:** Must be above 0 (temperature=0 produces identical outputs, defeating the purpose); the paper sampled at T=0.5-0.7.',
+        '**Sample count:** The paper suggests starting with 5 or 10 paths, since performance saturates quickly.',
         '**Cost:** 5-20× more tokens per task; justified only for high-stakes reasoning where accuracy matters more than cost.',
       ],
       schema: {
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Self-Consistency Prompting: Generate Multiple Answers, Pick the One That\'s Right',
         description: 'Self-consistency prompting improves AI accuracy on math, logic, and analysis by generating multiple reasoning paths and selecting the majority answer. Technique, examples, and cost-benefit analysis.',
         datePublished: '2026-03-26',
-        dateModified: '2026-08-31',
+        dateModified: '2026-11-02',
         'url': 'https://www.promptquorum.com/prompt-engineering/self-consistency-prompting',
         keywords: ['self-consistency prompting', 'prompt engineering', 'reasoning prompts', 'majority voting', 'chain-of-thought', 'accuracy improvement', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           content: [
             '**Self-consistency** generates 5-20 independent answers to the same prompt, then selects the majority-vote conclusion — converting one unreliable answer into a statistically robust consensus.',
-            'The technique was introduced by Wang et al. (2023) and improved accuracy on GSM8K math problems from 56% (single chain-of-thought) to 74% (self-consistency with 40 samples).',
+            'The technique was introduced by Wang et al. (2023). The paper reports PaLM-540B on GSM8K rising from 56.5% (greedy chain-of-thought) to 74.4% (self-consistency, 40 sampled paths).',
             'Use higher temperature (0.7-1.0) to generate diverse reasoning paths — low temperature produces identical outputs, defeating the purpose.',
             'Best for: math, logic, multi-step analysis, and any task where single runs are observably unstable.',
             'Trade-off: 5-20× more tokens consumed per task — use only when accuracy matters more than cost.',
@@ -80,7 +80,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Self-consistency prompting means sampling several independent answers to the same prompt and selecting the most consistent conclusion.** Rather than one chain of thought, you get multiple, potentially different chains.',
             'The idea is simple: if the model reasons in several different ways and most paths converge on the same answer, that answer is more trustworthy than a single run. If the paths disagree, you know the problem is ambiguous or difficult and needs closer review.',
-            'Self-consistency was introduced by Wang et al. in 2023 (ICLR) and showed dramatic accuracy improvements on math, logic, and reasoning tasks. The technique leverages a fundamental principle from statistics: a consensus of many independent estimates is more reliable than a single estimate.',
+            'Self-consistency was introduced by Wang et al. (ICLR 2023) and reported accuracy gains on arithmetic and commonsense reasoning benchmarks. The technique leverages a fundamental principle from statistics: a consensus of many independent estimates is more reliable than a single estimate.',
           ],
         },
         whyItMatters: {
@@ -99,23 +99,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         accuracyExample: {
-          title: 'What the Numbers Show',
+          title: 'What the Paper Reports',
           content: [
-            'The original Wang et al. (2023) paper demonstrated self-consistency on arithmetic reasoning (GSM8K benchmark), a standard test for language model math abilities. The results show a clear pattern:',
-            'The pattern: each additional sample improves accuracy, but with diminishing returns. Going from 1 to 5 samples gives the biggest gain (+10 percentage points). Going from 20 to 40 adds only 2 percentage points. For most practical purposes, 5-10 samples is the sweet spot between accuracy and cost. Beyond 20 samples, you\'re spending exponentially more tokens for minimal accuracy gains.',
+            'Wang et al. (2023) compared self-consistency (40 sampled reasoning paths per question, majority vote) with greedy chain-of-thought decoding on arithmetic benchmarks. The table shows the paper-reported PaLM-540B results; we did not reproduce them.',
+            'Gains are largest where chain-of-thought alone is weakest (GSM8K +17.9, AQuA +12.5 points) and small where it is already strong (AddSub +1.8). The abstract also reports +6.4 on StrategyQA and +3.9 on ARC-challenge. These are 2022-era models and settings, so they do not predict gains on your task or on current models. The paper notes that self-consistency costs more computation and suggests starting with 5 or 10 paths, since performance saturates quickly.',
           ],
-          columns: ['Method', 'GSM8K Accuracy', 'Samples', 'Cost Multiplier'],
+          columns: ['Benchmark', 'CoT (greedy)', 'Self-consistency', 'Gain'],
           rows: [
-            { 'Method': 'Standard prompting (no chain-of-thought)', 'GSM8K Accuracy': '18%', 'Samples': '1', 'Cost Multiplier': '1×' },
-            { 'Method': 'Chain-of-thought (single pass)', 'GSM8K Accuracy': '56%', 'Samples': '1', 'Cost Multiplier': '1.5×' },
-            { 'Method': 'Self-consistency (5 samples)', 'GSM8K Accuracy': '66%', 'Samples': '5', 'Cost Multiplier': '7.5×' },
-            { 'Method': 'Self-consistency (10 samples)', 'GSM8K Accuracy': '70%', 'Samples': '10', 'Cost Multiplier': '15×' },
-            { 'Method': 'Self-consistency (20 samples)', 'GSM8K Accuracy': '72%', 'Samples': '20', 'Cost Multiplier': '30×' },
-            { 'Method': 'Self-consistency (40 samples)', 'GSM8K Accuracy': '74%', 'Samples': '40', 'Cost Multiplier': '60×' },
+            { 'Benchmark': 'GSM8K', 'CoT (greedy)': '56.5%', 'Self-consistency': '74.4%', 'Gain': '+17.9' },
+            { 'Benchmark': 'AQuA', 'CoT (greedy)': '35.8%', 'Self-consistency': '48.3%', 'Gain': '+12.5' },
+            { 'Benchmark': 'SVAMP', 'CoT (greedy)': '79.0%', 'Self-consistency': '86.6%', 'Gain': '+7.6' },
+            { 'Benchmark': 'ASDiv', 'CoT (greedy)': '74.0%', 'Self-consistency': '81.9%', 'Gain': '+7.9' },
+            { 'Benchmark': 'MultiArith', 'CoT (greedy)': '94.7%', 'Self-consistency': '99.3%', 'Gain': '+4.6' },
+            { 'Benchmark': 'AddSub', 'CoT (greedy)': '91.9%', 'Self-consistency': '93.7%', 'Gain': '+1.8' },
           ],
           tableFormat: true,
           callouts: [
-            { type: 'info', label: 'Did You Know', text: 'Self-consistency improved GSM8K math accuracy from 56% to 74%—a 32% relative improvement—by simply asking the same question multiple times and picking the majority answer. No model changes, no fine-tuning, no new data. Just sampling and voting.' },
+            { type: 'info', label: 'Did You Know', text: 'On GSM8K, PaLM-540B rose from 56.5% (greedy chain-of-thought) to 74.4% (self-consistency) in the paper, with no fine-tuning and no extra training data: only sampling and voting. Figures are paper-reported, not our own measurements.' },
           ],
         },
         howItWorks: {
@@ -161,10 +161,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['Technique', 'Samples', 'Cost', 'Best For', 'Accuracy Gain'],
           rows: [
             { 'Technique': 'Single answer (baseline)', 'Samples': '1', 'Cost': '1×', 'Best For': 'Simple tasks, low stakes', 'Accuracy Gain': '—' },
-            { 'Technique': 'Chain-of-thought', 'Samples': '1', 'Cost': '~1.5×', 'Best For': 'Math, logic, step-by-step', 'Accuracy Gain': 'Moderate (+5-10 pp)' },
-            { 'Technique': 'Self-consistency', 'Samples': '5-20', 'Cost': '7.5-30×', 'Best For': 'Hard reasoning, high stakes', 'Accuracy Gain': 'Large (+18 pp on GSM8K)' },
-            { 'Technique': 'Multi-model consensus', 'Samples': '3-5 models', 'Cost': '3-5×', 'Best For': 'Catching model-specific biases', 'Accuracy Gain': 'Moderate-Large' },
-            { 'Technique': 'Both combined', 'Samples': '5 × 3 models', 'Cost': '15×', 'Best For': 'Maximum reliability', 'Accuracy Gain': 'Highest' },
+            { 'Technique': 'Chain-of-thought', 'Samples': '1', 'Cost': '1 call, longer output', 'Best For': 'Math, logic, step-by-step', 'Accuracy Gain': 'Baseline in the paper' },
+            { 'Technique': 'Self-consistency', 'Samples': '5-20', 'Cost': '5-20×', 'Best For': 'Hard reasoning, high stakes', 'Accuracy Gain': 'Up to +17.9 pts on GSM8K (paper)' },
+            { 'Technique': 'Multi-model consensus', 'Samples': '3-5 models', 'Cost': '3-5×', 'Best For': 'Catching model-specific biases', 'Accuracy Gain': 'Task-dependent' },
+            { 'Technique': 'Both combined', 'Samples': '5 × 3 models', 'Cost': '15×', 'Best For': 'Maximum reliability', 'Accuracy Gain': 'Task-dependent' },
           ],
           tableFormat: true,
           callouts: [
@@ -179,7 +179,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Using temperature 0 (deterministic mode).** Why it hurts: Every sample is identical. Voting on 10 identical answers tells you nothing. Fix: Set temperature to 0.7-1.0 to generate diverse reasoning paths.',
             '**Using self-consistency for simple factual questions.** Why it hurts: "What is the capital of France?" produces "Paris" every time. You spent 10× the tokens for no accuracy gain. Fix: Reserve self-consistency for tasks where single-run accuracy is observably below 90%.',
-            '**Generating too few samples (2-3).** Why it hurts: With 2 samples that disagree, you have no tiebreaker. With 3, a 2-1 split gives weak consensus. Fix: Use at least 5 samples. The accuracy gain from 1→5 is the steepest part of the curve.',
+            '**Generating too few samples (2-3).** Why it hurts: With 2 samples that disagree, you have no tiebreaker. With 3, a 2-1 split gives weak consensus. Fix: Use at least 5 samples; the paper suggests starting with 5 or 10 paths because most of the gain arrives early.',
             '**Voting on the full response text instead of the final answer.** Why it hurts: Two responses may reach the same answer via completely different reasoning paths. Text comparison says they\'re different; answer comparison says they agree. Fix: Extract only the final answer (require "Answer: X" format) and vote on that.',
           ],
         },
@@ -229,8 +229,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
-            { q: 'What is self-consistency prompting?', a: 'Self-consistency prompting is a technique where you generate multiple independent answers to the same question — each with its own reasoning path — and then select the answer that appears most frequently. Instead of trusting one AI response, you trust the consensus of many. It was introduced by Wang et al. (2023) and significantly improves accuracy on math, logic, and multi-step reasoning tasks.' },
-            { q: 'How many samples do I need for self-consistency?', a: 'For most tasks, 5-10 samples provide the best accuracy-to-cost ratio. The original paper showed accuracy improving rapidly from 1 to 5 samples, then diminishing returns beyond 20. Going from 20 to 40 samples added only 2 percentage points on GSM8K. Start with 5; increase to 10-20 only for high-stakes decisions.' },
+            { q: 'What is self-consistency prompting?', a: 'Self-consistency prompting is a technique where you generate multiple independent answers to the same question — each with its own reasoning path — and then select the answer that appears most frequently. Instead of trusting one AI response, you trust the consensus of many. It was introduced by Wang et al. (2023), who reported accuracy gains on arithmetic and commonsense reasoning benchmarks.' },
+            { q: 'How many samples do I need for self-consistency?', a: 'For most tasks, start with 5-10 samples. The original paper notes that performance saturates quickly as paths are added and suggests starting with 5 or 10; every extra sample costs a full extra response. Start with 5; increase to 10-20 only for high-stakes decisions.' },
             { q: 'Does self-consistency work on simple tasks?', a: 'Not meaningfully. For factual lookups, simple classification, or short-form writing, a single answer is almost always sufficient and much cheaper. Self-consistency adds value only on tasks where the model\'s single-pass accuracy is below ~90% — typically math, logic puzzles, multi-step analysis, and complex reasoning.' },
             { q: 'What temperature should I use for self-consistency?', a: 'Set temperature to 0.7-1.0. The technique requires diverse reasoning paths — if temperature is 0 (deterministic), every sample produces the identical output and voting is meaningless. Higher temperature creates the variation that makes majority voting informative.' },
             { q: 'How much more does self-consistency cost?', a: 'Roughly 5-20× more tokens per task, since you generate 5-20 complete responses instead of one. For a response that costs $0.01, self-consistency at 10 samples costs $0.10. This is justified for critical decisions (financial analysis, medical reasoning, legal interpretation) but wasteful for routine tasks.' },
@@ -245,8 +245,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'en',
         mainEntity: [
-          { '@type': 'Question', name: 'What is self-consistency prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Self-consistency prompting is a technique where you generate multiple independent answers to the same question — each with its own reasoning path — and then select the answer that appears most frequently. Instead of trusting one AI response, you trust the consensus of many. It was introduced by Wang et al. (2023) and significantly improves accuracy on math, logic, and multi-step reasoning tasks.' } },
-          { '@type': 'Question', name: 'How many samples do I need for self-consistency?', acceptedAnswer: { '@type': 'Answer', text: 'For most tasks, 5-10 samples provide the best accuracy-to-cost ratio. The original paper showed accuracy improving rapidly from 1 to 5 samples, then diminishing returns beyond 20. Going from 20 to 40 samples added only 2 percentage points on GSM8K. Start with 5; increase to 10-20 only for high-stakes decisions.' } },
+          { '@type': 'Question', name: 'What is self-consistency prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Self-consistency prompting is a technique where you generate multiple independent answers to the same question — each with its own reasoning path — and then select the answer that appears most frequently. Instead of trusting one AI response, you trust the consensus of many. It was introduced by Wang et al. (2023), who reported accuracy gains on arithmetic and commonsense reasoning benchmarks.' } },
+          { '@type': 'Question', name: 'How many samples do I need for self-consistency?', acceptedAnswer: { '@type': 'Answer', text: 'For most tasks, start with 5-10 samples. The original paper notes that performance saturates quickly as paths are added and suggests starting with 5 or 10; every extra sample costs a full extra response. Start with 5; increase to 10-20 only for high-stakes decisions.' } },
           { '@type': 'Question', name: 'Does self-consistency work on simple tasks?', acceptedAnswer: { '@type': 'Answer', text: 'Not meaningfully. For factual lookups, simple classification, or short-form writing, a single answer is almost always sufficient and much cheaper. Self-consistency adds value only on tasks where the model\'s single-pass accuracy is below ~90% — typically math, logic puzzles, multi-step analysis, and complex reasoning.' } },
           { '@type': 'Question', name: 'What temperature should I use for self-consistency?', acceptedAnswer: { '@type': 'Answer', text: 'Set temperature to 0.7-1.0. The technique requires diverse reasoning paths — if temperature is 0 (deterministic), every sample produces the identical output and voting is meaningless. Higher temperature creates the variation that makes majority voting informative.' } },
           { '@type': 'Question', name: 'How much more does self-consistency cost?', acceptedAnswer: { '@type': 'Answer', text: 'Roughly 5-20× more tokens per task, since you generate 5-20 complete responses instead of one. For a response that costs $0.01, self-consistency at 10 samples costs $0.10. This is justified for critical decisions (financial analysis, medical reasoning, legal interpretation) but wasteful for routine tasks.' } },
@@ -262,8 +262,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberOfItems: 5,
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Single answer (baseline)', description: 'One run, 1× cost, simple tasks' },
-          { '@type': 'ListItem', position: 2, name: 'Chain-of-thought', description: 'One run with reasoning, ~1.5× cost, moderate tasks' },
-          { '@type': 'ListItem', position: 3, name: 'Self-consistency', description: '5-20 runs with voting, 7.5-30× cost, hard reasoning' },
+          { '@type': 'ListItem', position: 2, name: 'Chain-of-thought', description: 'One run with reasoning, longer output, moderate tasks' },
+          { '@type': 'ListItem', position: 3, name: 'Self-consistency', description: '5-20 runs with voting, 5-20× cost, hard reasoning' },
           { '@type': 'ListItem', position: 4, name: 'Multi-model consensus', description: '3-5 models, 3-5× cost, catch model biases' },
           { '@type': 'ListItem', position: 5, name: 'Both combined', description: '5 samples × 3 models, 15× cost, maximum reliability' },
         ],
@@ -274,24 +274,24 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Techniques',
       heroImage: '/images/self-consistency-prompting-overview-hero-de.webp',
       title: 'Self-Consistency Prompting: Mehrfache Antworten generieren, Konsens auswählen',
-      intro: '**Self-Consistency Prompting generiert 5–20 unabhängige Lösungswege für die gleiche Frage und wählt dann die am häufigsten auftretende Antwort aus.** Anstatt einer einzelnen KI-Antwort zu vertrauen, verlassen Sie sich auf den Konsens vieler. Diese einfache Technik verbessert die Genauigkeit bei Mathematik, Logik und mehrstufiger Analyse um 15–25 Prozentpunkte.',
-      leadAnswerBlock: '**Self-Consistency Prompting: Stellen Sie dem Modell die gleiche Frage 5–20 Mal mit höherer Temperatur (0,7–1,0) um unterschiedliche Lösungswege zu generieren, dann wählen Sie die Mehrheitsantwort. Die Technik verbesserte die Mathematik-Genauigkeit von 56% (einzelne Chain-of-Thought) auf 74% (Self-Consistency mit 40 Samples). Funktioniert bei allen Modellen. Trade-off: 5–20× mehr Token pro Aufgabe.**',
+      intro: '**Self-Consistency Prompting zieht mehrere unabhängige Lösungswege für dieselbe Frage und wählt die Antwort, die am häufigsten vorkommt.** Statt einer einzelnen Antwort zu vertrauen, die falsch sein kann, fragen Sie mehrfach bei höherer Temperatur und lassen die Mehrheit entscheiden.',
+      leadAnswerBlock: '**Self-Consistency Prompting stellt dem Modell dieselbe Frage mehrfach bei einer Temperatur über null und wählt die Mehrheitsantwort. Im Originalpaper stieg PaLM-540B auf GSM8K mit 40 Samples von 56,5% auf 74,4%. Kosten: eine vollständige Antwort pro Sample.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-02',
       readTime: '12 Min. Lesezeit',
       educationalLevel: 'Intermediate',
       audience: 'Entwickler, die zuverlässige KI-Reasoning-Pipelines erstellen, Analysten, die hochriskante Entscheidungen mit KI treffen, Forscher im Prompt Engineering',
       seoTitle: 'Self-Consistency Prompting: Mehrere Antworten wählen',
-      metaDescription: 'Self-Consistency Prompting generiert 5-20 Denkketten und wählt die Mehrheitsantwort. Verbessert Genauigkeit bei Mathematik und Logik von 56% auf 74%.',
-      ogDescription: 'Eine KI-Antwort könnte falsch sein. Fünf KI-Antworten, die übereinstimmen? Viel zuverlässiger. Self-Consistency verbessert die Genauigkeit um 15–25 Punkte durch Sampling und Mehrheitsvoting.',
-      twitterDescription: 'Self-Consistency: Stellen Sie die KI die gleiche Frage 5–20 Mal, wählen Sie die Mehrheitsantwort. Einfache Technik, dramatische Genauigkeitsverbesserung.',
+      metaDescription: 'Self-Consistency Prompting zieht mehrere Lösungswege und wählt die Mehrheitsantwort. Im Originalpaper stieg die GSM8K-Genauigkeit von 56,5% auf 74,4%.',
+      ogDescription: 'Eine KI-Antwort kann falsch sein. Mehrere Lösungswege ziehen und die Mehrheitsantwort wählen: Das Originalpaper berichtet für PaLM-540B auf GSM8K einen Anstieg von 56,5% auf 74,4%.',
+      twitterDescription: 'Self-Consistency: Stellen Sie dem Modell dieselbe Frage mehrfach bei Temperatur über 0 und wählen Sie die Mehrheitsantwort. Laut Paper GSM8K: 56,5% auf 74,4%.',
       primaryTerm: 'Self-Consistency Prompting',
       quickFacts: [
         '**Technik:** Generieren Sie 5–20 unabhängige Lösungswege für die gleiche Frage, dann wählen Sie die häufigste Antwort durch Mehrheitsvoting.',
         '**Paper:** Wang et al. (2023), "Self-Consistency Improves Chain of Thought Reasoning in Language Models," ICLR 2023.',
-        '**Kernmerkmal:** GSM8K-Mathematik-Genauigkeit verbesserte sich von 56% (einzelne Chain-of-Thought) auf 74% (Self-Consistency mit 40 Samples)—eine relative Verbesserung von 32%.',
-        '**Temperatur-Anforderung:** Muss 0,7–1,0 gesetzt werden (Temperatur=0 erzeugt identische Outputs, was den Zweck aufhebt).',
-        '**Sample-Anzahl:** 5–10 Samples ist der optimale Kompromiss; sinkende Erträge jenseits von 20 Samples.',
+        '**Kernergebnis (laut Paper):** PaLM-540B stieg auf GSM8K von 56,5% (Greedy Chain-of-Thought) auf 74,4% (Self-Consistency, 40 Lösungswege)—ein Plus von 17,9 Punkten.',
+        '**Temperatur-Anforderung:** Muss über 0 liegen (Temperatur=0 erzeugt identische Outputs, was den Zweck aufhebt); das Paper sampelte mit T=0,5–0,7.',
+        '**Sample-Anzahl:** Das Paper empfiehlt, mit 5 oder 10 Lösungswegen zu beginnen, da die Leistung schnell sättigt.',
         '**Kosten:** 5–20× mehr Token pro Aufgabe; gerechtfertigt nur bei hochriskanten Reasoning-Aufgaben, wo Genauigkeit wichtiger ist als Kosten.',
       ],
       schema: {
@@ -300,7 +300,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Self-Consistency Prompting: Mehrfache Antworten generieren, Konsens auswählen',
         description: 'Self-Consistency Prompting verbessert die KI-Genauigkeit bei Mathematik, Logik und Analyse durch Generierung mehrerer Lösungswege und Auswahl der Mehrheitsantwort.',
         datePublished: '2026-03-26',
-        dateModified: '2026-08-31',
+        dateModified: '2026-11-02',
         'url': 'https://www.promptquorum.com/de/prompt-engineering/self-consistency-prompting',
         keywords: ['Self-Consistency Prompting', 'Prompt Engineering', 'KI-Zuverlässigkeit', 'Mehrheitsabstimmung', 'Reasoning', 'Chain-of-Thought'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -323,7 +323,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           content: [
             '**Self-Consistency** generiert 5–20 unabhängige Antworten auf die gleiche Aufforderung und wählt dann die Mehrheitsvoting-Schlussfolgerung — konvertiert eine unzuverlässige Antwort in einen statistisch robusten Konsens.',
-            'Die Technik wurde 2023 von Wang et al. eingeführt und verbesserte die Genauigkeit bei GSM8K-Mathematik-Aufgaben von 56% (einzelne Chain-of-Thought) auf 74% (Self-Consistency mit 40 Samples).',
+            'Die Technik wurde von Wang et al. (2023) eingeführt. Das Paper berichtet, dass PaLM-540B auf GSM8K von 56,5% (Greedy Chain-of-Thought) auf 74,4% (Self-Consistency, 40 Lösungswege) stieg.',
             'Verwenden Sie höhere Temperatur (0,7–1,0) um unterschiedliche Lösungswege zu generieren — niedrige Temperatur erzeugt identische Outputs, was den Zweck aufhebt.',
             'Am besten geeignet für: Mathematik, Logik, mehrstufige Analyse und Aufgaben, bei denen einzelne Durchläufe beobachtbar instabil sind.',
             'Trade-off: 5–20× mehr verbrauchte Token pro Aufgabe — verwenden Sie nur, wenn Genauigkeit wichtiger als Kosten ist.',
@@ -340,7 +340,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Self-Consistency Prompting bedeutet, mehrere unabhängige Antworten auf die gleiche Aufforderung zu samplen und die konsistenteste Schlussfolgerung auszuwählen.** Anstelle einer Gedankenkette erhalten Sie mehrere, möglicherweise unterschiedliche Ketten.',
             'Die Idee ist einfach: Wenn das Modell auf mehrere verschiedene Arten begründet und die meisten Pfade auf die gleiche Antwort hinweisen, ist diese Antwort zuverlässiger als ein einzelner Durchlauf. Wenn sich die Pfade unterscheiden, wissen Sie, dass das Problem mehrdeutig oder schwierig ist und eine genauere Überprüfung erfordert.',
-            'Self-Consistency wurde 2023 von Wang et al. eingeführt (ICLR) und zeigte dramatische Genauigkeitsverbesserungen bei Mathematik-, Logik- und Reasoning-Aufgaben. Die Technik nutzt ein grundlegendes Prinzip der Statistik: Der Konsens vieler unabhängiger Schätzungen ist zuverlässiger als eine Einzelschätzung.',
+            'Self-Consistency wurde von Wang et al. (ICLR 2023) eingeführt und erzielte laut Paper Genauigkeitsgewinne bei arithmetischen und Commonsense-Reasoning-Benchmarks. Die Technik nutzt ein Prinzip der Statistik: Der Konsens vieler unabhängiger Schätzungen ist zuverlässiger als eine Einzelschätzung.',
           ],
         },
         whyItMatters: {
@@ -359,23 +359,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         accuracyExample: {
-          title: 'Was die Zahlen zeigen',
+          title: 'Was das Paper berichtet',
           content: [
-            'Das ursprüngliche Wang et al. (2023) Paper demonstrierte Self-Consistency beim arithmetischen Reasoning (GSM8K Benchmark), einem Standardtest für Mathematik-Fähigkeiten von Sprachmodellen. Die Ergebnisse zeigen ein klares Muster:',
-            'Das Muster: Jeder zusätzliche Sample verbessert die Genauigkeit, aber mit sinkenden Erträgen. Der Übergang von 1 auf 5 Samples gibt den größten Gewinn (+10 Prozentpunkte). Der Übergang von 20 auf 40 fügt nur 2 Prozentpunkte hinzu. Für die meisten praktischen Zwecke sind 5–10 Samples der optimale Kompromiss zwischen Genauigkeit und Kosten. Jenseits von 20 Samples geben Sie exponentiell mehr Token für minimale Genauigkeitsgewinne aus.',
+            'Wang et al. (2023) verglichen Self-Consistency (40 gesampelte Lösungswege pro Frage, Mehrheitsvoting) mit Greedy-Chain-of-Thought-Decoding auf arithmetischen Benchmarks. Die Tabelle zeigt die im Paper berichteten Ergebnisse für PaLM-540B; wir haben sie nicht nachgemessen.',
+            'Die Gewinne sind dort am größten, wo Chain-of-Thought allein am schwächsten ist (GSM8K +17,9, AQuA +12,5 Punkte), und klein, wo es schon stark ist (AddSub +1,8). Das Abstract nennt zudem +6,4 bei StrategyQA und +3,9 bei ARC-challenge. Es sind Modelle und Einstellungen von 2022; sie sagen keinen Gewinn für Ihre Aufgabe oder aktuelle Modelle voraus. Laut Paper kostet Self-Consistency mehr Rechenaufwand; es empfiehlt, mit 5 oder 10 Lösungswegen zu beginnen, da die Leistung schnell sättigt.',
           ],
-          columns: ['Methode', 'GSM8K-Genauigkeit', 'Samples', 'Kostenmultiplikator'],
+          columns: ['Benchmark', 'CoT (Greedy)', 'Self-Consistency', 'Differenz'],
           rows: [
-            { 'Methode': 'Standard-Prompting (ohne Chain-of-Thought)', 'GSM8K-Genauigkeit': '18%', 'Samples': '1', 'Kostenmultiplikator': '1×' },
-            { 'Methode': 'Chain-of-Thought (Einzeldurchlauf)', 'GSM8K-Genauigkeit': '56%', 'Samples': '1', 'Kostenmultiplikator': '1,5×' },
-            { 'Methode': 'Self-Consistency (5 Samples)', 'GSM8K-Genauigkeit': '66%', 'Samples': '5', 'Kostenmultiplikator': '7,5×' },
-            { 'Methode': 'Self-Consistency (10 Samples)', 'GSM8K-Genauigkeit': '70%', 'Samples': '10', 'Kostenmultiplikator': '15×' },
-            { 'Methode': 'Self-Consistency (20 Samples)', 'GSM8K-Genauigkeit': '72%', 'Samples': '20', 'Kostenmultiplikator': '30×' },
-            { 'Methode': 'Self-Consistency (40 Samples)', 'GSM8K-Genauigkeit': '74%', 'Samples': '40', 'Kostenmultiplikator': '60×' },
+            { 'Benchmark': 'GSM8K', 'CoT (Greedy)': '56,5%', 'Self-Consistency': '74,4%', 'Differenz': '+17,9' },
+            { 'Benchmark': 'AQuA', 'CoT (Greedy)': '35,8%', 'Self-Consistency': '48,3%', 'Differenz': '+12,5' },
+            { 'Benchmark': 'SVAMP', 'CoT (Greedy)': '79,0%', 'Self-Consistency': '86,6%', 'Differenz': '+7,6' },
+            { 'Benchmark': 'ASDiv', 'CoT (Greedy)': '74,0%', 'Self-Consistency': '81,9%', 'Differenz': '+7,9' },
+            { 'Benchmark': 'MultiArith', 'CoT (Greedy)': '94,7%', 'Self-Consistency': '99,3%', 'Differenz': '+4,6' },
+            { 'Benchmark': 'AddSub', 'CoT (Greedy)': '91,9%', 'Self-Consistency': '93,7%', 'Differenz': '+1,8' },
           ],
           tableFormat: true,
           callouts: [
-            { type: 'info', label: 'Wussten Sie schon?', text: 'Self-Consistency verbesserte die GSM8K-Mathematik-Genauigkeit von 56% auf 74%—eine 32% relative Verbesserung—indem einfach die gleiche Frage mehrmals gestellt und die Mehrheitsantwort ausgewählt wurde. Keine Modelländerungen, kein Fine-Tuning, keine neuen Daten. Nur Sampling und Voting.' },
+            { type: 'info', label: 'Wussten Sie schon?', text: 'Auf GSM8K stieg PaLM-540B laut Paper von 56,5% (Greedy Chain-of-Thought) auf 74,4% (Self-Consistency)—ohne Fine-Tuning und ohne zusätzliche Trainingsdaten, nur durch Sampling und Voting. Die Zahlen stammen aus dem Paper, nicht aus eigenen Messungen.' },
           ],
         },
         howItWorks: {
@@ -421,10 +421,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['Technik', 'Samples', 'Kosten', 'Am besten für', 'Genauigkeitsgewinn'],
           rows: [
             { 'Technik': 'Einzelantwort (Baseline)', 'Samples': '1', 'Kosten': '1×', 'Am besten für': 'Einfache Aufgaben, geringe Priorität', 'Genauigkeitsgewinn': '—' },
-            { 'Technik': 'Chain-of-Thought', 'Samples': '1', 'Kosten': '~1,5×', 'Am besten für': 'Mathematik, Logik, Schritt-für-Schritt', 'Genauigkeitsgewinn': 'Moderat (+5–10 pp)' },
-            { 'Technik': 'Self-Consistency', 'Samples': '5–20', 'Kosten': '7,5–30×', 'Am besten für': 'Schwieriges Reasoning, hohe Priorität', 'Genauigkeitsgewinn': 'Große (+18 pp auf GSM8K)' },
-            { 'Technik': 'Multi-Modell-Konsens', 'Samples': '3–5 Modelle', 'Kosten': '3–5×', 'Am besten für': 'Erfassen modellspezifischer Verzerrungen', 'Genauigkeitsgewinn': 'Moderat-Groß' },
-            { 'Technik': 'Beide kombiniert', 'Samples': '5 × 3 Modelle', 'Kosten': '15×', 'Am besten für': 'Maximale Zuverlässigkeit', 'Genauigkeitsgewinn': 'Höchste' },
+            { 'Technik': 'Chain-of-Thought', 'Samples': '1', 'Kosten': '1 Aufruf, längere Ausgabe', 'Am besten für': 'Mathematik, Logik, Schritt-für-Schritt', 'Genauigkeitsgewinn': 'Basis im Paper' },
+            { 'Technik': 'Self-Consistency', 'Samples': '5–20', 'Kosten': '5–20×', 'Am besten für': 'Schwieriges Reasoning, hohe Priorität', 'Genauigkeitsgewinn': 'Bis +17,9 Pkt. auf GSM8K (Paper)' },
+            { 'Technik': 'Multi-Modell-Konsens', 'Samples': '3–5 Modelle', 'Kosten': '3–5×', 'Am besten für': 'Erfassen modellspezifischer Verzerrungen', 'Genauigkeitsgewinn': 'Aufgabenabhängig' },
+            { 'Technik': 'Beide kombiniert', 'Samples': '5 × 3 Modelle', 'Kosten': '15×', 'Am besten für': 'Maximale Zuverlässigkeit', 'Genauigkeitsgewinn': 'Aufgabenabhängig' },
           ],
           tableFormat: true,
           callouts: [
@@ -439,7 +439,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Verwendung von Temperatur 0 (deterministischer Modus).** Warum es schadet: Jeder Sample ist identisch. Voting über 10 identische Antworten sagt Ihnen nichts. Lösung: Setzen Sie Temperatur auf 0,7–1,0, um unterschiedliche Lösungswege zu generieren.',
             '**Verwendung von Self-Consistency für einfache Faktenfragen.** Warum es schadet: "Was ist die Hauptstadt von Frankreich?" erzeugt jedes Mal "Paris". Sie haben 10× die Token für keinen Genauigkeitsgewinn ausgegeben. Lösung: Behalten Sie Self-Consistency für Aufgaben vor, bei denen die Einzeldurchlauf-Genauigkeit beobachtbar unter 90% liegt.',
-            '**Generieren von zu wenigen Samples (2–3).** Warum es schadet: Bei 2 Samples, die sich widersprechen, haben Sie keinen Tiebreaker. Bei 3 gibt eine 2-zu-1-Aufteilung schwachen Konsens. Lösung: Verwenden Sie mindestens 5 Samples. Der Genauigkeitsgewinn von 1→5 ist der steilste Teil der Kurve.',
+            '**Generieren von zu wenigen Samples (2–3).** Warum es schadet: Bei 2 Samples, die sich widersprechen, haben Sie keinen Tiebreaker. Bei 3 gibt eine 2-zu-1-Aufteilung schwachen Konsens. Lösung: Verwenden Sie mindestens 5 Samples; das Paper empfiehlt, mit 5 oder 10 Lösungswegen zu beginnen, weil der Großteil des Gewinns früh anfällt.',
             '**Voting über den gesamten Response-Text statt der finalen Antwort.** Warum es schadet: Zwei Responses können die gleiche Antwort über völlig unterschiedliche Lösungswege erreichen. Text-Vergleich sagt, sie sind unterschiedlich; Antwort-Vergleich sagt, sie stimmen überein. Lösung: Extrahieren Sie nur die finale Antwort (fordern Sie "Antwort: X" Format an) und stimmen Sie über das ab.',
           ],
         },
@@ -489,17 +489,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Häufig Gestellte Fragen',
           faqs: [
-            { q: 'Was ist Self-Consistency Prompting?', a: 'Self-Consistency Prompting ist eine Technik, bei der Sie mehrere unabhängige Antworten auf die gleiche Frage generieren — jede mit ihrem eigenen Lösungsweg — und dann die am häufigsten vorkommende Antwort auswählen. Anstatt einer einzigen KI-Antwort zu vertrauen, vertrauen Sie dem Konsens vieler. Sie wurde von Wang et al. (2023) eingeführt und verbessert die Genauigkeit bei Mathematik-, Logik- und mehrstufigen Reasoning-Aufgaben erheblich.' },
-            { q: 'Wie viele Samples benötige ich für Self-Consistency?', a: 'Für die meisten Aufgaben bieten 5–10 Samples das beste Verhältnis zwischen Genauigkeit und Kosten. Das ursprüngliche Paper zeigte schnelle Genauigkeitssteigerung von 1 auf 5 Samples, dann abnehmende Grenznutzen jenseits von 20. Die Steigerung von 20 auf 40 Samples addierte nur 2 Prozentpunkte bei GSM8K hinzu. Beginnen Sie mit 5; erhöhen Sie auf 10-20 nur für kritische Entscheidungen.' },
+            { q: 'Was ist Self-Consistency Prompting?', a: 'Self-Consistency Prompting ist eine Technik, bei der Sie mehrere unabhängige Antworten auf dieselbe Frage erzeugen — jeweils mit eigenem Lösungsweg — und die am häufigsten vorkommende Antwort auswählen. Statt einer einzelnen KI-Antwort vertrauen Sie dem Konsens vieler. Eingeführt wurde sie von Wang et al. (2023), die Genauigkeitsgewinne bei arithmetischen und Commonsense-Reasoning-Benchmarks berichteten.' },
+            { q: 'Wie viele Samples benötige ich für Self-Consistency?', a: 'Beginnen Sie bei den meisten Aufgaben mit 5–10 Samples. Das Originalpaper stellt fest, dass die Leistung mit zusätzlichen Lösungswegen schnell sättigt, und empfiehlt, mit 5 oder 10 zu beginnen; jedes zusätzliche Sample kostet eine vollständige weitere Antwort. Starten Sie mit 5 und erhöhen Sie nur bei hochriskanten Entscheidungen auf 10–20.' },
             { q: 'Funktioniert Self-Consistency bei einfachen Aufgaben?', a: 'Nicht sinnvoll. Für Faktenabruf, einfache Klassifikation oder Short-Form-Schreiben ist eine einzelne Antwort fast immer ausreichend und viel billiger. Self-Consistency bietet Mehrwert nur bei Aufgaben, bei denen die Genauigkeit des Modells beim einmaligen Durchlauf unter ~90% liegt — typischerweise Mathematik, Logikrätsel, mehrstufige Analyse und komplexes Reasoning.' },
             { q: 'Welche Temperatur sollte ich für Self-Consistency verwenden?', a: 'Setzen Sie die Temperatur auf 0,7–1,0. Die Technik erfordert unterschiedliche Lösungswege — wenn die Temperatur 0 ist (deterministisch), erzeugt jedes Sample identische Ausgaben und Abstimmungen sind sinnlos. Höhere Temperatur erzeugt die Variation, die Mehrheitsvoting informativ macht.' },
             { q: 'Wie viel mehr kostet Self-Consistency?', a: 'Etwa 5–20× mehr Token pro Aufgabe, da Sie 5–20 vollständige Antworten statt einer generieren. Für eine Antwort, die 0,01$ kostet, kostet Self-Consistency mit 10 Samples 0,10$. Dies ist für kritische Entscheidungen gerechtfertigt (Finanzanalyse, medizinisches Reasoning, juristische Interpretation), aber verschwendet für Routineaufgaben.' },
             { q: 'Ist Self-Consistency das gleiche wie "Best-of-N" Sampling?', a: 'Ähnlich, aber nicht identisch. Best-of-N generiert N Antworten und wählt die beste aus (oft durch einen Qualitäts-Scorer). Self-Consistency generiert N Lösungswege und wählt die häufigste ANTWORT — die Abstimmung erfolgt über die Schlussfolgerung, nicht über die Qualität. Self-Consistency benötigt keinen Qualitäts-Scorer; es nutzt Übereinstimmung als Signal.' },
             { q: 'Kann ich Self-Consistency mit Chain-of-Thought Prompting kombinieren?', a: 'Ja — dies ist die ursprüngliche und effektivste Kombination. Jeder Ihrer N Samples verwendet Chain-of-Thought Reasoning und erzeugt eine vollständige Reasoning-Spur plus eine endgültige Antwort. Sie stimmen dann über die endgültigen Antworten über alle N Spuren ab. Die Lösungswege können unterschiedlich sein, aber wenn die meisten zu der gleichen Schlussfolgerung führen, ist diese Schlussfolgerung robust.' },
             { q: 'Wie verhält sich PromptQuorum zu Self-Consistency?', a: 'PromptQuorum wendet das gleiche Konsensprinzip über verschiedene Modelle hinweg statt innerhalb eines Modells an. Anstatt das gleiche Modell 10 Mal zu fragen, stellen Sie 5 verschiedene Modelle einmal jedes und vergleichen ihre Antworten. Wo sie sich einigen, ist das Vertrauen hoch. Wo sie sich uneinig sind, muss der Anspruch überprüft werden. Dies erfasst modellspezifische Verzerrungen, die Single-Model Self-Consistency nicht erkennen kann.' },
-            { q: 'Muss ich Self-Consistency bei der Verwendung von PromptQuorum beachten?', a: 'Self-Consistency und Multi-Modell-Konsens sind komplementäre Techniken. Self-Consistency erfasst Sampling-Instabilität in einem Modell; Multi-Modell-Konsens erfasst modellspezifische Verzerrungen. Für höchste Zuverlässigkeit kombinieren Sie beide: Lassen Sie Self-Consistency in Ihrem Hauptmodell ablaufen UND überprüfen Sie die Konsensantwort gegen ein zweites Modell in PromptQuorum.' },
-            { q: 'Muss ich Self-Consistency bei der Einhaltung der DSGVO beachten?', a: 'Nein, Self-Consistency ist eine reine Prompting-Technik und hat keinen Einfluss auf DSGVO-Anforderungen. Datenschutz hängt davon ab, wo Daten verarbeitet werden und welche Modelle Sie verwenden, nicht davon, wie oft Sie samplen. Wenn Sie lokale Modelle (Ollama, LM Studio) verwenden, erfüllen Sie bereits DSGVO, unabhängig davon, ob Sie Self-Consistency anwenden.' },
-            { q: 'Ist Self-Consistency Prompting für Mittelstand-Unternehmen geeignet?', a: 'Ja. Deutsche Mittelstand-Unternehmen können Self-Consistency nutzen, um KI-gestützte Entscheidungsfindung in technischen Analysen, Finanzprognosen und Forschungssynthese zuverlässiger zu machen. Die Technik funktioniert mit allen Modellen. Kombiniert mit lokalen Modellen (Ollama, LM Studio) auf eigenen Servern erfüllen Sie BSI-Grundschutz-Standards und DSGVO-Anforderungen.' },
+            { q: 'Muss ich Self-Consistency bei der Einhaltung der DSGVO beachten?', a: 'Nein, Self-Consistency ist eine reine Prompting-Technik und ändert nichts an Ihren DSGVO-Pflichten. Datenschutz hängt davon ab, wo Daten verarbeitet werden und welche Anbieter beteiligt sind, nicht davon, wie oft Sie samplen. Jeder zusätzliche Durchlauf sendet die Daten erneut an das Modell; bei lokalen Modellen (Ollama, LM Studio) verlassen sie Ihren Rechner nicht. Das ersetzt keine Rechtsberatung.' },
+            { q: 'Ist Self-Consistency Prompting für Mittelstand-Unternehmen geeignet?', a: 'Ja, wenn die Aufgabe es rechtfertigt. Mittelständische Unternehmen können Self-Consistency einsetzen, um KI-gestützte Analysen, Prognosen und Recherche-Synthesen robuster zu machen; die Kosten wachsen linear mit der Zahl der Samples. Mit lokalen Modellen auf eigenen Servern lassen sich Datenschutzanforderungen leichter einhalten. Ob BSI- und DSGVO-Anforderungen erfüllt sind, hängt jedoch von Ihrer Gesamtarchitektur ab.' },
           ],
         },
       },
@@ -513,7 +512,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Was ist Self-Consistency Prompting?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Self-Consistency Prompting ist eine Technik, bei der Sie mehrere unabhängige Antworten auf die gleiche Frage generieren — jede mit ihrem eigenen Lösungsweg — und dann die am häufigsten vorkommende Antwort auswählen. Anstatt einer einzigen KI-Antwort zu vertrauen, vertrauen Sie dem Konsens vieler. Sie wurde von Wang et al. (2023) eingeführt und verbessert die Genauigkeit bei Mathematik-, Logik- und mehrstufigen Reasoning-Aufgaben erheblich.',
+              'text': 'Self-Consistency Prompting ist eine Technik, bei der Sie mehrere unabhängige Antworten auf dieselbe Frage erzeugen — jeweils mit eigenem Lösungsweg — und die am häufigsten vorkommende Antwort auswählen. Statt einer einzelnen KI-Antwort vertrauen Sie dem Konsens vieler. Eingeführt wurde sie von Wang et al. (2023), die Genauigkeitsgewinne bei arithmetischen und Commonsense-Reasoning-Benchmarks berichteten.',
             },
           },
           {
@@ -521,7 +520,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Wie viele Samples benötige ich für Self-Consistency?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Für die meisten Aufgaben bieten 5–10 Samples das beste Verhältnis zwischen Genauigkeit und Kosten. Das ursprüngliche Paper zeigte schnelle Genauigkeitssteigerung von 1 auf 5 Samples, dann abnehmende Grenznutzen jenseits von 20. Die Steigerung von 20 auf 40 Samples addierte nur 2 Prozentpunkte bei GSM8K hinzu. Beginnen Sie mit 5; erhöhen Sie auf 10-20 nur für kritische Entscheidungen.',
+              'text': 'Beginnen Sie bei den meisten Aufgaben mit 5–10 Samples. Das Originalpaper stellt fest, dass die Leistung mit zusätzlichen Lösungswegen schnell sättigt, und empfiehlt, mit 5 oder 10 zu beginnen; jedes zusätzliche Sample kostet eine vollständige weitere Antwort. Starten Sie mit 5 und erhöhen Sie nur bei hochriskanten Entscheidungen auf 10–20.',
             },
           },
           {
@@ -574,18 +573,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'Muss ich Self-Consistency bei der Verwendung von PromptQuorum beachten?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Self-Consistency und Multi-Modell-Konsens sind komplementäre Techniken. Self-Consistency erfasst Sampling-Instabilität in einem Modell; Multi-Modell-Konsens erfasst modellspezifische Verzerrungen. Für höchste Zuverlässigkeit kombinieren Sie beide: Lassen Sie Self-Consistency in Ihrem Hauptmodell ablaufen UND überprüfen Sie die Konsensantwort gegen ein zweites Modell in PromptQuorum.',
-            },
-          },
-          {
-            '@type': 'Question',
             'name': 'Muss ich Self-Consistency bei der Einhaltung der DSGVO beachten?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Nein, Self-Consistency ist eine reine Prompting-Technik und hat keinen Einfluss auf DSGVO-Anforderungen. Datenschutz hängt davon ab, wo Daten verarbeitet werden und welche Modelle Sie verwenden, nicht davon, wie oft Sie samplen. Wenn Sie lokale Modelle (Ollama, LM Studio) verwenden, erfüllen Sie bereits DSGVO, unabhängig davon, ob Sie Self-Consistency anwenden.',
+              'text': 'Nein, Self-Consistency ist eine reine Prompting-Technik und ändert nichts an Ihren DSGVO-Pflichten. Datenschutz hängt davon ab, wo Daten verarbeitet werden und welche Anbieter beteiligt sind, nicht davon, wie oft Sie samplen. Jeder zusätzliche Durchlauf sendet die Daten erneut an das Modell; bei lokalen Modellen (Ollama, LM Studio) verlassen sie Ihren Rechner nicht. Das ersetzt keine Rechtsberatung.',
             },
           },
           {
@@ -593,7 +584,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Ist Self-Consistency Prompting für Mittelstand-Unternehmen geeignet?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Ja. Deutsche Mittelstand-Unternehmen können Self-Consistency nutzen, um KI-gestützte Entscheidungsfindung in technischen Analysen, Finanzprognosen und Forschungssynthese zuverlässiger zu machen. Die Technik funktioniert mit allen Modellen. Kombiniert mit lokalen Modellen (Ollama, LM Studio) auf eigenen Servern erfüllen Sie BSI-Grundschutz-Standards und DSGVO-Anforderungen.',
+              'text': 'Ja, wenn die Aufgabe es rechtfertigt. Mittelständische Unternehmen können Self-Consistency einsetzen, um KI-gestützte Analysen, Prognosen und Recherche-Synthesen robuster zu machen; die Kosten wachsen linear mit der Zahl der Samples. Mit lokalen Modellen auf eigenen Servern lassen sich Datenschutzanforderungen leichter einhalten. Ob BSI- und DSGVO-Anforderungen erfüllt sind, hängt jedoch von Ihrer Gesamtarchitektur ab.',
             },
           },
         ],
@@ -605,8 +596,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberOfItems: 5,
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Einzelantwort (Baseline)', description: 'Ein Durchlauf, 1× Kosten, einfache Aufgaben' },
-          { '@type': 'ListItem', position: 2, name: 'Chain-of-Thought', description: 'Ein Durchlauf mit Reasoning, ~1,5× Kosten, moderate Aufgaben' },
-          { '@type': 'ListItem', position: 3, name: 'Self-Consistency', description: '5–20 Durchläufe mit Voting, 7,5–30× Kosten, schwieriges Reasoning' },
+          { '@type': 'ListItem', position: 2, name: 'Chain-of-Thought', description: 'Ein Durchlauf mit Reasoning, längere Ausgabe, mittlere Aufgaben' },
+          { '@type': 'ListItem', position: 3, name: 'Self-Consistency', description: '5–20 Durchläufe mit Voting, 5–20× Kosten, schwieriges Reasoning' },
           { '@type': 'ListItem', position: 4, name: 'Multi-Modell-Konsens', description: '3–5 Modelle, 3–5× Kosten, erfassen modellspezifische Verzerrungen' },
           { '@type': 'ListItem', position: 5, name: 'Beide kombiniert', description: '5 Samples × 3 Modelle, 15× Kosten, maximale Zuverlässigkeit' },
         ],
@@ -617,24 +608,24 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Techniques',
       heroImage: '/images/self-consistency-prompting-overview-hero-es.webp',
       title: 'Self-Consistency Prompting: genera múltiples respuestas y elige la correcta',
-      intro: '**El self-consistency prompting genera 5–20 caminos de razonamiento independientes para la misma pregunta y selecciona la respuesta que aparece con más frecuencia.** En lugar de confiar en una sola respuesta de IA (que puede ser incorrecta), haces la pregunta múltiples veces con temperaturas más altas y dejas que el voto mayoritario decida. Esta técnica sencilla mejora la precisión en matemáticas, lógica y análisis de múltiples pasos en 15–25 puntos porcentuales.',
-      leadAnswerBlock: '**Self-consistency prompting: haz la misma pregunta al modelo 5–20 veces con temperatura alta (0.7–1.0) para generar caminos de razonamiento diversos, luego elige la respuesta mayoritaria. La técnica mejoró la precisión en matemáticas del 56% (chain-of-thought único) al 74% (self-consistency con 40 muestras) en el artículo original. Funciona en todos los modelos. Trade-off: 5–20× más tokens por tarea.**',
+      intro: '**El self-consistency prompting muestrea varios caminos de razonamiento independientes para la misma pregunta y selecciona la respuesta que aparece con más frecuencia.** En lugar de confiar en una sola respuesta que puede ser incorrecta, preguntas varias veces con una temperatura más alta y dejas que el voto mayoritario decida.',
+      leadAnswerBlock: '**El self-consistency prompting hace al modelo la misma pregunta varias veces con una temperatura superior a cero y elige la respuesta mayoritaria. En el artículo original, 40 muestras llevaron a PaLM-540B en GSM8K del 56.5% al 74.4%. Costo: una respuesta completa por muestra.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-02',
       readTime: '12 min de lectura',
       educationalLevel: 'Intermediate',
       audience: 'Desarrolladores que crean pipelines de razonamiento de IA fiables, analistas que toman decisiones críticas con IA, investigadores en prompt engineering',
       seoTitle: 'Self-Consistency Prompting: varias respuestas, la mejor',
-      metaDescription: 'El self-consistency prompting genera 5–20 caminos de razonamiento y elige la respuesta mayoritaria. Mejora la precisión en matemáticas del 56% al 74%.',
-      ogDescription: 'Una respuesta de IA puede ser incorrecta. ¿Cinco respuestas de IA que coinciden? Mucho más fiable. El self-consistency mejora la precisión 15–25 puntos muestreando múltiples caminos de razonamiento y eligiendo el consenso.',
-      twitterDescription: 'Self-consistency: haz a la IA la misma pregunta 5–20 veces, elige la respuesta mayoritaria. Técnica sencilla, mejora dramática de la precisión en tareas de razonamiento.',
+      metaDescription: 'El self-consistency prompting muestrea caminos de razonamiento y elige la respuesta mayoritaria. En el artículo original, GSM8K sube del 56.5% al 74.4%.',
+      ogDescription: 'Una respuesta de IA puede ser incorrecta. Muestrea varios caminos de razonamiento y elige la mayoritaria: el artículo original informa que PaLM-540B pasó del 56.5% al 74.4% en GSM8K.',
+      twitterDescription: 'Self-consistency: haz al modelo la misma pregunta varias veces con temperatura superior a 0 y elige la respuesta mayoritaria. GSM8K según el artículo: 56.5% a 74.4%.',
       primaryTerm: 'Self-Consistency Prompting',
       quickFacts: [
         '**Técnica:** Genera 5–20 caminos de razonamiento independientes para la misma pregunta y selecciona la respuesta más frecuente mediante votación mayoritaria.',
         '**Artículo:** Wang et al. (2023), "Self-Consistency Improves Chain of Thought Reasoning in Language Models," ICLR 2023.',
-        '**Resultado clave:** La precisión en matemáticas GSM8K mejoró del 56% (chain-of-thought único) al 74% (self-consistency con 40 muestras) — una mejora relativa del 32%.',
-        '**Requisito de temperatura:** Debe establecerse en 0.7–1.0 (temperatura=0 produce salidas idénticas, anulando el propósito).',
-        '**Número de muestras:** 5–10 muestras es el punto óptimo; rendimientos decrecientes más allá de 20 muestras.',
+        '**Resultado clave (según el artículo):** PaLM-540B en GSM8K pasó del 56.5% (chain-of-thought voraz) al 74.4% (self-consistency, 40 caminos muestreados), una mejora de 17.9 puntos.',
+        '**Requisito de temperatura:** debe ser mayor que 0 (temperatura=0 produce salidas idénticas y anula el propósito); el artículo muestreó con T=0.5–0.7.',
+        '**Número de muestras:** el artículo sugiere empezar con 5 o 10 caminos, porque el rendimiento se satura rápido.',
         '**Costo:** 5–20× más tokens por tarea; justificado solo para razonamiento de alto riesgo donde la precisión importa más que el costo.',
       ],
       schema: {
@@ -643,7 +634,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Self-Consistency Prompting: genera múltiples respuestas y elige la correcta',
         description: 'El self-consistency prompting mejora la precisión de la IA en matemáticas, lógica y análisis generando múltiples caminos de razonamiento y seleccionando la respuesta mayoritaria. Técnica, ejemplos y análisis costo-beneficio.',
         datePublished: '2026-03-26',
-        dateModified: '2026-08-31',
+        dateModified: '2026-11-02',
         url: 'https://www.promptquorum.com/es/prompt-engineering/self-consistency-prompting',
         inLanguage: 'es',
         keywords: ['self-consistency prompting', 'prompt engineering', 'prompts de razonamiento', 'voto mayoritario', 'chain-of-thought', 'mejora de precisión', 'PromptQuorum'],
@@ -667,7 +658,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           content: [
             '**El self-consistency** genera 5–20 respuestas independientes al mismo prompt y selecciona la conclusión por voto mayoritario — convirtiendo una respuesta poco fiable en un consenso estadísticamente robusto.',
-            'La técnica fue introducida por Wang et al. (2023) y mejoró la precisión en problemas de matemáticas GSM8K del 56% (chain-of-thought único) al 74% (self-consistency con 40 muestras).',
+            'La técnica fue introducida por Wang et al. (2023). El artículo informa que PaLM-540B en GSM8K pasó del 56.5% (chain-of-thought voraz) al 74.4% (self-consistency, 40 caminos muestreados).',
             'Usa temperatura más alta (0.7–1.0) para generar caminos de razonamiento diversos — temperatura baja produce salidas idénticas, anulando el propósito.',
             'Ideal para: matemáticas, lógica, análisis de múltiples pasos y cualquier tarea donde las ejecuciones únicas sean observablemente inestables.',
             'Trade-off: 5–20× más tokens consumidos por tarea — úsalo solo cuando la precisión importe más que el costo.',
@@ -684,7 +675,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**El self-consistency prompting significa muestrear varias respuestas independientes al mismo prompt y seleccionar la conclusión más consistente.** En lugar de un solo chain of thought, obtienes múltiples, potencialmente diferentes cadenas.',
             'La idea es simple: si el modelo razona de varias maneras diferentes y la mayoría de los caminos convergen en la misma respuesta, esa respuesta es más confiable que una sola ejecución. Si los caminos difieren, sabes que el problema es ambiguo o difícil y necesita revisión más cercana.',
-            'El self-consistency fue introducido por Wang et al. en 2023 (ICLR) y mostró mejoras dramáticas de precisión en matemáticas, lógica y tareas de razonamiento. La técnica aprovecha un principio fundamental de la estadística: un consenso de muchas estimaciones independientes es más fiable que una estimación única.',
+            'El self-consistency fue introducido por Wang et al. (ICLR 2023) y obtuvo mejoras de precisión en benchmarks de razonamiento aritmético y de sentido común. La técnica aprovecha un principio básico de la estadística: el consenso de muchas estimaciones independientes es más fiable que una sola.',
           ],
         },
         whyItMatters: {
@@ -698,23 +689,29 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Decisiones con sutiles compromisos donde pequeños deslices de razonamiento cambian el resultado.',
             'Cualquier razonamiento específico de dominio donde la precisión de pasada única esté por debajo del 90%.',
           ],
+          callouts: [
+            { type: 'pro-tip', label: 'Consejo profesional', text: 'No necesitas comparar 10 salidas manualmente. Añade un paso final de agregación: pega las N respuestas en un nuevo prompt y pregunta "Estas son 10 respuestas a la misma pregunta. ¿Cuál aparece con más frecuencia? Indica la respuesta de consenso y tu nivel de confianza." El modelo hace la votación por ti.' },
+          ],
         },
         accuracyExample: {
-          title: 'Lo que muestran los números',
+          title: 'Qué informa el artículo',
           content: [
-            'El artículo original de Wang et al. (2023) demostró el self-consistency en razonamiento aritmético (benchmark GSM8K), una prueba estándar para las capacidades matemáticas de los modelos de lenguaje. Los resultados muestran un patrón claro:',
-            'El patrón: cada muestra adicional mejora la precisión, pero con rendimientos decrecientes. Pasar de 1 a 5 muestras da la mayor ganancia (+10 puntos porcentuales). Pasar de 20 a 40 solo añade 2 puntos porcentuales. Para la mayoría de los propósitos prácticos, 5–10 muestras es el punto óptimo entre precisión y costo.',
+            'Wang et al. (2023) compararon el self-consistency (40 caminos de razonamiento muestreados por pregunta, voto mayoritario) con la decodificación voraz de chain-of-thought en benchmarks aritméticos. La tabla muestra los resultados de PaLM-540B informados en el artículo; no los hemos reproducido.',
+            'Las mejoras son mayores donde chain-of-thought es más débil (GSM8K +17.9, AQuA +12.5 puntos) y pequeñas donde ya es fuerte (AddSub +1.8). El resumen del artículo también cita +6.4 en StrategyQA y +3.9 en ARC-challenge. Son modelos y configuraciones de 2022, así que no predicen la mejora en tu tarea ni en modelos actuales. El artículo señala que el self-consistency requiere más cómputo y sugiere empezar con 5 o 10 caminos, porque el rendimiento se satura rápido.',
           ],
-          columns: ['Método', 'Precisión GSM8K', 'Muestras', 'Multiplicador de costo'],
+          columns: ['Benchmark', 'CoT (voraz)', 'Self-consistency', 'Diferencia'],
           rows: [
-            { 'Método': 'Prompting estándar (sin chain-of-thought)', 'Precisión GSM8K': '18%', 'Muestras': '1', 'Multiplicador de costo': '1×' },
-            { 'Método': 'Chain-of-thought (pasada única)', 'Precisión GSM8K': '56%', 'Muestras': '1', 'Multiplicador de costo': '1.5×' },
-            { 'Método': 'Self-consistency (5 muestras)', 'Precisión GSM8K': '66%', 'Muestras': '5', 'Multiplicador de costo': '7.5×' },
-            { 'Método': 'Self-consistency (10 muestras)', 'Precisión GSM8K': '70%', 'Muestras': '10', 'Multiplicador de costo': '15×' },
-            { 'Método': 'Self-consistency (20 muestras)', 'Precisión GSM8K': '72%', 'Muestras': '20', 'Multiplicador de costo': '30×' },
-            { 'Método': 'Self-consistency (40 muestras)', 'Precisión GSM8K': '74%', 'Muestras': '40', 'Multiplicador de costo': '60×' },
+            { 'Benchmark': 'GSM8K', 'CoT (voraz)': '56.5%', 'Self-consistency': '74.4%', 'Diferencia': '+17.9' },
+            { 'Benchmark': 'AQuA', 'CoT (voraz)': '35.8%', 'Self-consistency': '48.3%', 'Diferencia': '+12.5' },
+            { 'Benchmark': 'SVAMP', 'CoT (voraz)': '79.0%', 'Self-consistency': '86.6%', 'Diferencia': '+7.6' },
+            { 'Benchmark': 'ASDiv', 'CoT (voraz)': '74.0%', 'Self-consistency': '81.9%', 'Diferencia': '+7.9' },
+            { 'Benchmark': 'MultiArith', 'CoT (voraz)': '94.7%', 'Self-consistency': '99.3%', 'Diferencia': '+4.6' },
+            { 'Benchmark': 'AddSub', 'CoT (voraz)': '91.9%', 'Self-consistency': '93.7%', 'Diferencia': '+1.8' },
           ],
           tableFormat: true,
+          callouts: [
+            { type: 'info', label: '¿Sabías que?', text: 'En GSM8K, PaLM-540B pasó del 56.5% (chain-of-thought voraz) al 74.4% (self-consistency) según el artículo, sin fine-tuning ni datos de entrenamiento adicionales: solo muestreo y votación. Las cifras provienen del artículo, no de mediciones propias.' },
+          ],
         },
         howItWorks: {
           title: 'Cómo funciona el self-consistency prompting en la práctica',
@@ -759,12 +756,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['Técnica', 'Muestras', 'Costo', 'Mejor para', 'Ganancia de precisión'],
           rows: [
             { 'Técnica': 'Respuesta única (línea base)', 'Muestras': '1', 'Costo': '1×', 'Mejor para': 'Tareas simples, bajo riesgo', 'Ganancia de precisión': '—' },
-            { 'Técnica': 'Chain-of-thought', 'Muestras': '1', 'Costo': '~1.5×', 'Mejor para': 'Matemáticas, lógica, paso a paso', 'Ganancia de precisión': 'Moderada (+5–10 pp)' },
-            { 'Técnica': 'Self-consistency', 'Muestras': '5–20', 'Costo': '7.5–30×', 'Mejor para': 'Razonamiento difícil, alto riesgo', 'Ganancia de precisión': 'Grande (+18 pp en GSM8K)' },
-            { 'Técnica': 'Consenso multi-modelo', 'Muestras': '3–5 modelos', 'Costo': '3–5×', 'Mejor para': 'Detectar sesgos específicos del modelo', 'Ganancia de precisión': 'Moderada-Grande' },
-            { 'Técnica': 'Ambos combinados', 'Muestras': '5 × 3 modelos', 'Costo': '15×', 'Mejor para': 'Máxima fiabilidad', 'Ganancia de precisión': 'Más alta' },
+            { 'Técnica': 'Chain-of-thought', 'Muestras': '1', 'Costo': '1 llamada, salida más larga', 'Mejor para': 'Matemáticas, lógica, paso a paso', 'Ganancia de precisión': 'Línea base en el artículo' },
+            { 'Técnica': 'Self-consistency', 'Muestras': '5–20', 'Costo': '5–20×', 'Mejor para': 'Razonamiento difícil, alto riesgo', 'Ganancia de precisión': 'Hasta +17.9 pts en GSM8K (artículo)' },
+            { 'Técnica': 'Consenso multi-modelo', 'Muestras': '3–5 modelos', 'Costo': '3–5×', 'Mejor para': 'Detectar sesgos específicos del modelo', 'Ganancia de precisión': 'Según la tarea' },
+            { 'Técnica': 'Ambos combinados', 'Muestras': '5 × 3 modelos', 'Costo': '15×', 'Mejor para': 'Máxima fiabilidad', 'Ganancia de precisión': 'Según la tarea' },
           ],
           tableFormat: true,
+          callouts: [
+            { type: 'warning', label: 'Advertencia', text: 'El self-consistency con temperatura 0 no sirve: cada muestra produce la misma salida. Debes fijar la temperatura en 0.7 o más para generar la variación que hace informativo el voto mayoritario. Es el error de implementación más común.' },
+          ],
         },
         commonMistakes: {
           title: 'Errores comunes con el self-consistency prompting',
@@ -774,7 +774,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Usar temperatura 0 (modo determinista).** Por qué perjudica: cada muestra es idéntica. Votar en 10 respuestas idénticas no te dice nada. Solución: establece temperatura en 0.7–1.0 para generar caminos de razonamiento diversos.',
             '**Usar self-consistency para preguntas factuales simples.** Por qué perjudica: "¿Cuál es la capital de Francia?" produce "París" cada vez. Gastaste 10× los tokens sin ganancia de precisión. Solución: reserva el self-consistency para tareas donde la precisión de pasada única esté observablemente por debajo del 90%.',
-            '**Generar muy pocas muestras (2–3).** Por qué perjudica: con 2 muestras que difieren, no tienes desempate. Con 3, una división 2–1 da un consenso débil. Solución: usa al menos 5 muestras. La ganancia de precisión de 1→5 es la parte más pronunciada de la curva.',
+            '**Generar muy pocas muestras (2–3).** Por qué perjudica: con 2 muestras que difieren, no tienes desempate. Con 3, una división 2–1 da un consenso débil. Solución: usa al menos 5 muestras; el artículo sugiere empezar con 5 o 10 caminos porque la mayor parte de la mejora llega pronto.',
             '**Votar sobre el texto de respuesta completo en lugar de la respuesta final.** Por qué perjudica: dos respuestas pueden llegar a la misma respuesta por caminos de razonamiento completamente diferentes. La comparación de texto dice que son diferentes; la comparación de respuestas dice que coinciden. Solución: extrae solo la respuesta final (requiere formato "Respuesta: X") y vota sobre eso.',
           ],
         },
@@ -824,17 +824,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
-            { q: '¿Qué es el self-consistency prompting?', a: 'El self-consistency prompting es una técnica donde generas múltiples respuestas independientes a la misma pregunta — cada una con su propio camino de razonamiento — y luego seleccionas la respuesta que aparece con más frecuencia. En lugar de confiar en una respuesta de IA, confías en el consenso de muchas. Fue introducido por Wang et al. (2023) y mejora significativamente la precisión en matemáticas, lógica y tareas de razonamiento de múltiples pasos.' },
-            { q: '¿Cuántas muestras necesito para el self-consistency?', a: 'Para la mayoría de tareas, 5–10 muestras proporcionan la mejor relación precisión-costo. El artículo original mostró que la precisión mejora rápidamente de 1 a 5 muestras, luego con rendimientos decrecientes más allá de 20. Pasar de 20 a 40 muestras solo añadió 2 puntos porcentuales en GSM8K. Comienza con 5; aumenta a 10–20 solo para decisiones de alto riesgo.' },
+            { q: '¿Qué es el self-consistency prompting?', a: 'El self-consistency prompting es una técnica en la que generas varias respuestas independientes a la misma pregunta — cada una con su propio camino de razonamiento — y seleccionas la respuesta que aparece con más frecuencia. En lugar de confiar en una sola respuesta de IA, confías en el consenso de muchas. Fue introducido por Wang et al. (2023), quienes informaron mejoras de precisión en benchmarks de razonamiento aritmético y de sentido común.' },
+            { q: '¿Cuántas muestras necesito para el self-consistency?', a: 'Para la mayoría de las tareas, empieza con 5–10 muestras. El artículo original señala que el rendimiento se satura rápido al añadir caminos y sugiere empezar con 5 o 10; cada muestra extra cuesta una respuesta completa más. Empieza con 5; sube a 10–20 solo para decisiones de alto riesgo.' },
             { q: '¿Funciona el self-consistency en tareas simples?', a: 'No de forma significativa. Para búsquedas factuales, clasificación simple o escritura de forma corta, una sola respuesta es casi siempre suficiente y mucho más barata. El self-consistency solo añade valor en tareas donde la precisión de pasada única del modelo esté por debajo del ~90% — típicamente matemáticas, puzzles lógicos, análisis de múltiples pasos y razonamiento complejo.' },
             { q: '¿Qué temperatura debo usar para el self-consistency?', a: 'Establece la temperatura en 0.7–1.0. La técnica requiere caminos de razonamiento diversos — si la temperatura es 0 (determinista), cada muestra produce la salida idéntica y la votación no tiene sentido. Una temperatura más alta crea la variación que hace que la votación mayoritaria sea informativa.' },
             { q: '¿Cuánto más cuesta el self-consistency?', a: 'Aproximadamente 5–20× más tokens por tarea, ya que generas 5–20 respuestas completas en lugar de una. Para una respuesta que cuesta $0.01, el self-consistency a 10 muestras cuesta $0.10. Esto se justifica para decisiones críticas pero es un desperdicio para tareas rutinarias.' },
             { q: '¿Es el self-consistency lo mismo que el muestreo "best-of-N"?', a: 'Similar pero no idéntico. Best-of-N genera N respuestas y selecciona la mejor (a menudo por un evaluador de calidad). El self-consistency genera N caminos de razonamiento y selecciona la RESPUESTA más común — la votación es sobre la conclusión, no sobre la calidad. El self-consistency no necesita un evaluador de calidad; usa el acuerdo como señal.' },
             { q: '¿Puedo usar el self-consistency con chain-of-thought prompting?', a: 'Sí — esta es la combinación original y más efectiva. Cada una de tus N muestras usa razonamiento de chain-of-thought, produciendo un rastro de razonamiento completo más una respuesta final. Luego votas sobre las respuestas finales de todos los N rastros. Los caminos de razonamiento pueden diferir, pero si la mayoría llega a la misma conclusión, esa conclusión es robusta.' },
             { q: '¿Cómo se relaciona PromptQuorum con el self-consistency?', a: 'PromptQuorum aplica el mismo principio de consenso entre diferentes modelos en lugar de dentro de uno. En lugar de preguntarle al mismo modelo 10 veces, le preguntas a 5 modelos diferentes una vez cada uno y comparas sus respuestas. Donde coinciden, la confianza es alta. Donde difieren, la afirmación necesita verificación. Esto detecta sesgos específicos del modelo que el self-consistency de un solo modelo no puede detectar.' },
-            { q: '¿Cuántas muestras necesito?', a: 'Para la mayoría de tareas, 5–10 muestras proporcionan la mejor relación precisión-costo. Comienza con 5; aumenta a 10–20 solo para decisiones de alto riesgo.' },
-            { q: '¿Qué temperatura debo usar?', a: 'Establece la temperatura en 0.7–1.0. La técnica requiere caminos de razonamiento diversos — si la temperatura es 0, cada muestra produce la salida idéntica y la votación no tiene sentido.' },
-            { q: '¿Es lo mismo que best-of-N?', a: 'Similar pero no idéntico. Best-of-N selecciona la mejor respuesta por calidad. El self-consistency selecciona la RESPUESTA más común — la votación es sobre la conclusión, no sobre la calidad.' },
           ],
         },
       },
@@ -848,7 +845,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': '¿Qué es el self-consistency prompting?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'El self-consistency prompting es una técnica donde generas múltiples respuestas independientes a la misma pregunta — cada una con su propio camino de razonamiento — y luego seleccionas la respuesta que aparece con más frecuencia. En lugar de confiar en una respuesta de IA, confías en el consenso de muchas. Fue introducido por Wang et al. (2023) y mejora significativamente la precisión en matemáticas, lógica y tareas de razonamiento de múltiples pasos.',
+              'text': 'El self-consistency prompting es una técnica en la que generas varias respuestas independientes a la misma pregunta — cada una con su propio camino de razonamiento — y seleccionas la respuesta que aparece con más frecuencia. En lugar de confiar en una sola respuesta de IA, confías en el consenso de muchas. Fue introducido por Wang et al. (2023), quienes informaron mejoras de precisión en benchmarks de razonamiento aritmético y de sentido común.',
             },
           },
           {
@@ -856,7 +853,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': '¿Cuántas muestras necesito para el self-consistency?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Para la mayoría de tareas, 5–10 muestras proporcionan la mejor relación precisión-costo. El artículo original mostró que la precisión mejora rápidamente de 1 a 5 muestras, luego con rendimientos decrecientes más allá de 20. Pasar de 20 a 40 muestras solo añadió 2 puntos porcentuales en GSM8K. Comienza con 5; aumenta a 10–20 solo para decisiones de alto riesgo.',
+              'text': 'Para la mayoría de las tareas, empieza con 5–10 muestras. El artículo original señala que el rendimiento se satura rápido al añadir caminos y sugiere empezar con 5 o 10; cada muestra extra cuesta una respuesta completa más. Empieza con 5; sube a 10–20 solo para decisiones de alto riesgo.',
             },
           },
           {
@@ -907,30 +904,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
               'text': 'PromptQuorum aplica el mismo principio de consenso entre diferentes modelos en lugar de dentro de uno. En lugar de preguntarle al mismo modelo 10 veces, le preguntas a 5 modelos diferentes una vez cada uno y comparas sus respuestas. Donde coinciden, la confianza es alta. Donde difieren, la afirmación necesita verificación. Esto detecta sesgos específicos del modelo que el self-consistency de un solo modelo no puede detectar.',
             },
           },
-          {
-            '@type': 'Question',
-            'name': '¿Cuántas muestras necesito?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Para la mayoría de tareas, 5–10 muestras proporcionan la mejor relación precisión-costo. Comienza con 5; aumenta a 10–20 solo para decisiones de alto riesgo.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Qué temperatura debo usar?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Establece la temperatura en 0.7–1.0. La técnica requiere caminos de razonamiento diversos — si la temperatura es 0, cada muestra produce la salida idéntica y la votación no tiene sentido.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Es lo mismo que best-of-N?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Similar pero no idéntico. Best-of-N selecciona la mejor respuesta por calidad. El self-consistency selecciona la RESPUESTA más común — la votación es sobre la conclusión, no sobre la calidad.',
-            },
-          },
         ],
       },
       itemListSchema: {
@@ -940,8 +913,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberOfItems: 5,
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Respuesta única (línea base)', description: 'Una ejecución, 1× costo, tareas simples' },
-          { '@type': 'ListItem', position: 2, name: 'Chain-of-thought', description: 'Una ejecución con razonamiento, ~1.5× costo, tareas moderadas' },
-          { '@type': 'ListItem', position: 3, name: 'Self-consistency', description: '5–20 ejecuciones con votación, 7.5–30× costo, razonamiento difícil' },
+          { '@type': 'ListItem', position: 2, name: 'Chain-of-thought', description: 'Una ejecución con razonamiento, salida más larga, tareas moderadas' },
+          { '@type': 'ListItem', position: 3, name: 'Self-consistency', description: '5–20 ejecuciones con votación, 5–20× de costo, razonamiento difícil' },
           { '@type': 'ListItem', position: 4, name: 'Consenso multi-modelo', description: '3–5 modelos, 3–5× costo, detectar sesgos del modelo' },
           { '@type': 'ListItem', position: 5, name: 'Ambos combinados', description: '5 muestras × 3 modelos, 15× costo, máxima fiabilidad' },
         ],
@@ -952,24 +925,24 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Techniques',
       heroImage: '/images/self-consistency-prompting-overview-hero-ar.webp',
       title: 'برومبت الاتساق الذاتي: أنتج استجابات متعددة واختر الصحيحة',
-      intro: '**يُولّد برومبت الاتساق الذاتي 5–20 مساراً استدلالياً مستقلاً للسؤال نفسه ويختار الإجابة التي تظهر في أغلب الأحيان.** بدلاً من الاعتماد على إجابة ذكاء اصطناعي واحدة (قد تكون خاطئة)، تطرح السؤال مرات عدة بدرجات حرارة أعلى وتدع التصويت الأغلبي يُقرر. هذه التقنية البسيطة تُحسّن الدقة في الرياضيات والمنطق والتحليل متعدد الخطوات بمقدار 15–25 نقطة مئوية.',
-      leadAnswerBlock: '**برومبت الاتساق الذاتي: اطرح على النموذج السؤال نفسه 5–20 مرة بدرجة حرارة عالية (0.7–1.0) لتوليد مسارات استدلالية متنوعة، ثم اختر الإجابة الأكثرية. حسّنت التقنية دقة الرياضيات من 56٪ (سلسلة أفكار واحدة) إلى 74٪ (اتساق ذاتي بـ40 عينة) في الورقة الأصلية. تعمل مع جميع النماذج. المقايضة: 5–20× رموز أكثر لكل مهمة.**',
+      intro: '**يأخذ برومبت الاتساق الذاتي عدة مسارات استدلالية مستقلة للسؤال نفسه ويختار الإجابة التي تظهر في أغلب الأحيان.** بدلاً من الاعتماد على إجابة واحدة قد تكون خاطئة، تطرح السؤال مرات عدة بدرجة حرارة أعلى وتدع التصويت الأغلبي يُقرر.',
+      leadAnswerBlock: '**يطرح برومبت الاتساق الذاتي السؤال نفسه على النموذج عدة مرات بدرجة حرارة أعلى من الصفر، ثم يختار الإجابة الأغلبية. في الورقة الأصلية رفعت 40 عينة دقة PaLM-540B على GSM8K من 56.5٪ إلى 74.4٪. التكلفة: استجابة كاملة لكل عينة.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-02',
       readTime: '١٢ دقيقة للقراءة',
       educationalLevel: 'متوسط',
       audience: 'المطورون الذين يبنون خطوط معالجة استدلال الذكاء الاصطناعي الموثوقة، والمحللون الذين يتخذون قرارات حاسمة بمساعدة الذكاء الاصطناعي، والباحثون في هندسة البرومبت',
       seoTitle: 'برومبت الاتساق الذاتي: عدة مسارات، أفضل إجابة',
-      metaDescription: 'الاتساق الذاتي يُولّد ⁨5-20⁩ مساراً استدلالياً ويختار بالأغلبية. رفع دقة ⁨GSM8K⁩ من ⁨56⁩٪ إلى ⁨74⁩٪ في ورقة ⁨Wang et al. 2023⁩. كيفية التطبيق والتكلفة.',
-      ogDescription: 'إجابة ذكاء اصطناعي واحدة قد تكون خاطئة. خمس إجابات ذكاء اصطناعي متطابقة؟ أكثر موثوقية بكثير. يُحسّن الاتساق الذاتي الدقة 15–25 نقطة بأخذ عينات من مسارات استدلالية متعددة واختيار التوافق.',
-      twitterDescription: 'الاتساق الذاتي: اطرح على الذكاء الاصطناعي السؤال نفسه ⁨5⁩–⁨20⁩ مرة، اختر الإجابة الأكثرية. تقنية بسيطة، تحسّن دقة ملحوظ في مهام الاستدلال.',
+      metaDescription: 'الاتساق الذاتي يأخذ عدة مسارات استدلالية ويختار الإجابة الأغلبية. في الورقة الأصلية ارتفعت دقة GSM8K من 56.5٪ إلى 74.4٪. كيفية التطبيق والتكلفة.',
+      ogDescription: 'إجابة ذكاء اصطناعي واحدة قد تكون خاطئة. خذ عدة مسارات استدلالية واختر الإجابة الأغلبية: تذكر الورقة الأصلية ارتفاع PaLM-540B على GSM8K من 56.5٪ إلى 74.4٪.',
+      twitterDescription: 'الاتساق الذاتي: اطرح على النموذج السؤال نفسه عدة مرات بدرجة حرارة أعلى من 0 واختر الإجابة الأغلبية. GSM8K وفق الورقة: من 56.5٪ إلى 74.4٪.',
       primaryTerm: 'Self-Consistency Prompting',
       quickFacts: [
         '**التقنية:** يُولّد 5–20 مساراً استدلالياً مستقلاً للسؤال نفسه ويختار الإجابة الأكثر تواتراً بالتصويت الأغلبي.',
         '**الورقة:** Wang et al. (2023)، "Self-Consistency Improves Chain of Thought Reasoning in Language Models"، ICLR 2023.',
-        '**النتيجة الرئيسية:** تحسّنت دقة رياضيات GSM8K من 56٪ (سلسلة أفكار واحدة) إلى 74٪ (اتساق ذاتي بـ40 عينة) — تحسّن نسبي قدره 32٪.',
-        '**متطلب درجة الحرارة:** يجب ضبطها على 0.7–1.0 (درجة الحرارة=0 تُنتج مخرجات متطابقة، مما يُلغي الغرض).',
-        '**عدد العينات:** 5–10 عينات هو نقطة التوازن الأمثل؛ عوائد متناقصة ما وراء 20 عينة.',
+        '**النتيجة الرئيسية (وفق الورقة):** ارتفعت دقة PaLM-540B على GSM8K من 56.5٪ (سلسلة أفكار بالفك الجشع) إلى 74.4٪ (اتساق ذاتي بـ40 مساراً)، بزيادة 17.9 نقطة.',
+        '**متطلب درجة الحرارة:** يجب أن تكون أعلى من 0 (الصفر ينتج مخرجات متطابقة ويُبطل الغاية)؛ استخدمت الورقة T=0.5–0.7.',
+        '**عدد العينات:** تقترح الورقة البدء بـ5 أو 10 مسارات لأن الأداء يشبع سريعاً.',
         '**التكلفة:** 5–20× رموز أكثر لكل مهمة؛ مبرر فقط للاستدلال عالي المخاطر حيث الدقة أهم من التكلفة.',
       ],
       schema: {
@@ -978,7 +951,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'برومبت الاتساق الذاتي: أنتج استجابات متعددة واختر الصحيحة',
         description: 'يُحسّن برومبت الاتساق الذاتي دقة الذكاء الاصطناعي في الرياضيات والمنطق والتحليل بتوليد مسارات استدلالية متعددة واختيار الإجابة الأكثرية. التقنية والأمثلة وتحليل التكلفة والعائد.',
         datePublished: '2026-03-26',
-        dateModified: '2026-08-31',
+        dateModified: '2026-11-02',
         url: 'https://www.promptquorum.com/ar/prompt-engineering/self-consistency-prompting',
         inLanguage: 'ar',
         keywords: ['برومبت الاتساق الذاتي', 'هندسة البرومبت', 'برومبتات الاستدلال', 'التصويت الأغلبي', 'سلسلة الأفكار', 'تحسين الدقة', 'PromptQuorum'],
@@ -1002,7 +975,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           content: [
             '**الاتساق الذاتي** يُولّد 5–20 استجابة مستقلة للبرومبت نفسه ويختار الاستنتاج بالتصويت الأغلبي — مُحوّلاً إجابة غير موثوقة إلى توافق متين إحصائياً.',
-            'قدّمت التقنية Wang et al. (2023) وحسّنت الدقة في مسائل رياضيات GSM8K من 56٪ (سلسلة أفكار واحدة) إلى 74٪ (اتساق ذاتي بـ40 عينة).',
+            'قدّم هذه التقنية Wang et al. (2023). تذكر الورقة ارتفاع PaLM-540B على GSM8K من 56.5٪ (سلسلة أفكار بالفك الجشع) إلى 74.4٪ (اتساق ذاتي، 40 مساراً).',
             'استخدم درجة حرارة أعلى (0.7–1.0) لتوليد مسارات استدلالية متنوعة — درجة الحرارة المنخفضة تُنتج مخرجات متطابقة، مما يُلغي الغرض.',
             'مثالي لـ: الرياضيات والمنطق والتحليل متعدد الخطوات وأي مهمة حيث تكون عمليات التشغيل المفردة غير مستقرة بشكل ملحوظ.',
             'المقايضة: استهلاك 5–20× رموز أكثر لكل مهمة — استخدمه فقط عندما تكون الدقة أهم من التكلفة.',
@@ -1019,7 +992,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**يعني برومبت الاتساق الذاتي أخذ عينات من عدة استجابات مستقلة للبرومبت نفسه واختيار الاستنتاج الأكثر اتساقاً.** بدلاً من سلسلة أفكار واحدة، تحصل على مسارات متعددة، قد تختلف.',
             'الفكرة بسيطة: إذا استدل النموذج بطرق مختلفة متعددة وتقاطعت أغلب المسارات على الإجابة نفسها، فتلك الإجابة أكثر موثوقية من تشغيل واحد. إذا اختلفت المسارات، تعرف أن المشكلة غامضة أو صعبة وتحتاج مراجعة أدق.',
-            'قدّمت Wang et al. الاتساق الذاتي عام 2023 (ICLR) وأظهرت تحسينات دقة ملحوظة في الرياضيات والمنطق ومهام الاستدلال. تستفيد التقنية من مبدأ إحصائي أساسي: توافق تقديرات مستقلة عديدة أكثر موثوقية من تقدير واحد.',
+            'قدّم Wang et al. (ICLR 2023) الاتساق الذاتي وأبلغوا عن مكاسب دقة في معايير الاستدلال الحسابي واستدلال المنطق السليم. تستفيد التقنية من مبدأ إحصائي أساسي: توافق تقديرات مستقلة كثيرة أوثق من تقدير واحد.',
           ],
         },
         whyItMatters: {
@@ -1033,23 +1006,29 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'القرارات ذات المقايضات الدقيقة حيث تُغيّر الانزلاقات الاستدلالية الصغيرة النتيجة.',
             'أي استدلال خاص بمجال حيث دقة التشغيل الواحد أقل من 90٪.',
           ],
+          callouts: [
+            { type: 'pro-tip', label: 'نصيحة احترافية', text: 'لست بحاجة إلى مقارنة 10 مخرجات يدوياً. أضف خطوة تجميع أخيرة: الصق جميع الإجابات الـN في برومبت جديد واسأل: "هذه 10 إجابات عن السؤال نفسه. أي إجابة تظهر أكثر؟ اذكر الإجابة التوافقية ومستوى ثقتك." يتولى النموذج التصويت عنك.' },
+          ],
         },
         accuracyExample: {
-          title: 'ما تُظهره الأرقام',
+          title: 'ما تذكره الورقة',
           content: [
-            'أثبتت الورقة الأصلية لـ Wang et al. (2023) الاتساق الذاتي في الاستدلال الحسابي (معيار GSM8K)، وهو اختبار قياسي لقدرات الرياضيات لدى نماذج اللغة. تُظهر النتائج نمطاً واضحاً:',
-            'النمط: كل عينة إضافية تُحسّن الدقة، لكن بعوائد متناقصة. الانتقال من 1 إلى 5 عينات يُعطي أكبر مكسب (+10 نقاط مئوية). الانتقال من 20 إلى 40 يُضيف فقط 2 نقطة مئوية. لأغراض عملية في معظمها، 5–10 عينات هي نقطة التوازن الأمثل بين الدقة والتكلفة.',
+            'قارن Wang et al. (2023) الاتساق الذاتي (40 مساراً استدلالياً لكل سؤال مع تصويت أغلبي) بفك الترميز الجشع لسلسلة الأفكار على معايير حسابية. يعرض الجدول نتائج PaLM-540B كما وردت في الورقة؛ لم نُعد إنتاجها.',
+            'المكاسب أكبر حيث تكون سلسلة الأفكار وحدها أضعف (GSM8K +17.9 وAQuA +12.5 نقطة) وصغيرة حيث تكون قوية أصلاً (AddSub +1.8). يذكر ملخص الورقة أيضاً +6.4 على StrategyQA و+3.9 على ARC-challenge. هذه نماذج وإعدادات من 2022، فلا تتنبأ بالمكسب في مهمتك أو في النماذج الحالية. تشير الورقة إلى أن الاتساق الذاتي يتطلب حوسبة أكثر وتقترح البدء بـ5 أو 10 مسارات لأن الأداء يشبع سريعاً.',
           ],
-          columns: ['الطريقة', 'دقة GSM8K', 'العينات', 'مضاعف التكلفة'],
+          columns: ['المعيار', 'سلسلة الأفكار (جشع)', 'الاتساق الذاتي', 'الفرق'],
           rows: [
-            { 'الطريقة': 'برومبت معياري (بدون سلسلة أفكار)', 'دقة GSM8K': '18٪', 'العينات': '1', 'مضاعف التكلفة': '1×' },
-            { 'الطريقة': 'سلسلة الأفكار (تشغيل واحد)', 'دقة GSM8K': '56٪', 'العينات': '1', 'مضاعف التكلفة': '1.5×' },
-            { 'الطريقة': 'اتساق ذاتي (5 عينات)', 'دقة GSM8K': '66٪', 'العينات': '5', 'مضاعف التكلفة': '7.5×' },
-            { 'الطريقة': 'اتساق ذاتي (10 عينات)', 'دقة GSM8K': '70٪', 'العينات': '10', 'مضاعف التكلفة': '15×' },
-            { 'الطريقة': 'اتساق ذاتي (20 عينة)', 'دقة GSM8K': '72٪', 'العينات': '20', 'مضاعف التكلفة': '30×' },
-            { 'الطريقة': 'اتساق ذاتي (40 عينة)', 'دقة GSM8K': '74٪', 'العينات': '40', 'مضاعف التكلفة': '60×' },
+            { 'المعيار': 'GSM8K', 'سلسلة الأفكار (جشع)': '56.5%', 'الاتساق الذاتي': '74.4%', 'الفرق': '+17.9' },
+            { 'المعيار': 'AQuA', 'سلسلة الأفكار (جشع)': '35.8%', 'الاتساق الذاتي': '48.3%', 'الفرق': '+12.5' },
+            { 'المعيار': 'SVAMP', 'سلسلة الأفكار (جشع)': '79.0%', 'الاتساق الذاتي': '86.6%', 'الفرق': '+7.6' },
+            { 'المعيار': 'ASDiv', 'سلسلة الأفكار (جشع)': '74.0%', 'الاتساق الذاتي': '81.9%', 'الفرق': '+7.9' },
+            { 'المعيار': 'MultiArith', 'سلسلة الأفكار (جشع)': '94.7%', 'الاتساق الذاتي': '99.3%', 'الفرق': '+4.6' },
+            { 'المعيار': 'AddSub', 'سلسلة الأفكار (جشع)': '91.9%', 'الاتساق الذاتي': '93.7%', 'الفرق': '+1.8' },
           ],
           tableFormat: true,
+          callouts: [
+            { type: 'info', label: 'هل تعلم؟', text: 'على GSM8K ارتفع PaLM-540B وفق الورقة من 56.5٪ (سلسلة أفكار بالفك الجشع) إلى 74.4٪ (اتساق ذاتي) دون ضبط دقيق ودون بيانات تدريب إضافية: مجرد أخذ عينات وتصويت. الأرقام من الورقة وليست قياساتنا.' },
+          ],
         },
         howItWorks: {
           title: 'كيف يعمل برومبت الاتساق الذاتي في الممارسة',
@@ -1094,12 +1073,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['التقنية', 'العينات', 'التكلفة', 'الأفضل لـ', 'مكسب الدقة'],
           rows: [
             { 'التقنية': 'إجابة واحدة (خط الأساس)', 'العينات': '1', 'التكلفة': '1×', 'الأفضل لـ': 'المهام البسيطة، المخاطر المنخفضة', 'مكسب الدقة': '—' },
-            { 'التقنية': 'سلسلة الأفكار', 'العينات': '1', 'التكلفة': '~1.5×', 'الأفضل لـ': 'الرياضيات والمنطق وخطوة بخطوة', 'مكسب الدقة': 'معتدل (+5–10 نقطة مئوية)' },
-            { 'التقنية': 'اتساق ذاتي', 'العينات': '5–20', 'التكلفة': '7.5–30×', 'الأفضل لـ': 'الاستدلال الصعب، المخاطر العالية', 'مكسب الدقة': 'كبير (+18 نقطة مئوية في GSM8K)' },
-            { 'التقنية': 'توافق متعدد النماذج', 'العينات': '3–5 نماذج', 'التكلفة': '3–5×', 'الأفضل لـ': 'كشف الانحيازات الخاصة بالنموذج', 'مكسب الدقة': 'معتدل-كبير' },
-            { 'التقنية': 'كلاهما مدمجَين', 'العينات': '5 × 3 نماذج', 'التكلفة': '15×', 'الأفضل لـ': 'أقصى موثوقية', 'مكسب الدقة': 'الأعلى' },
+            { 'التقنية': 'سلسلة الأفكار', 'العينات': '1', 'التكلفة': 'استدعاء واحد، مخرج أطول', 'الأفضل لـ': 'الرياضيات والمنطق وخطوة بخطوة', 'مكسب الدقة': 'الأساس في الورقة' },
+            { 'التقنية': 'اتساق ذاتي', 'العينات': '5–20', 'التكلفة': '5–20×', 'الأفضل لـ': 'الاستدلال الصعب، المخاطر العالية', 'مكسب الدقة': 'حتى +17.9 نقطة على GSM8K (الورقة)' },
+            { 'التقنية': 'توافق متعدد النماذج', 'العينات': '3–5 نماذج', 'التكلفة': '3–5×', 'الأفضل لـ': 'كشف الانحيازات الخاصة بالنموذج', 'مكسب الدقة': 'حسب المهمة' },
+            { 'التقنية': 'كلاهما مدمجَين', 'العينات': '5 × 3 نماذج', 'التكلفة': '15×', 'الأفضل لـ': 'أقصى موثوقية', 'مكسب الدقة': 'حسب المهمة' },
           ],
           tableFormat: true,
+          callouts: [
+            { type: 'warning', label: 'تحذير', text: 'الاتساق الذاتي عند درجة حرارة 0 بلا فائدة: كل عينة تنتج المخرج نفسه. يجب ضبط درجة الحرارة على 0.7 أو أعلى لتوليد التنوع الذي يجعل التصويت الأغلبي مفيداً. هذا أكثر أخطاء التنفيذ شيوعاً.' },
+          ],
         },
         commonMistakes: {
           title: 'الأخطاء الشائعة في برومبت الاتساق الذاتي',
@@ -1109,7 +1091,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**استخدام درجة الحرارة 0 (الوضع الحتمي).** لماذا يُضر: كل عينة متطابقة. التصويت على 10 إجابات متطابقة لا يُخبرك بشيء. الحل: اضبط درجة الحرارة على 0.7–1.0 لتوليد مسارات استدلالية متنوعة.',
             '**استخدام الاتساق الذاتي للأسئلة الواقعية البسيطة.** لماذا يُضر: "ما عاصمة فرنسا؟" تُنتج "باريس" في كل مرة. أنفقت 10× الرموز دون مكسب دقة. الحل: احتفظ بالاتساق الذاتي للمهام حيث دقة التشغيل الواحد أقل من 90٪ بشكل ملحوظ.',
-            '**توليد عدد قليل جداً من العينات (2–3).** لماذا يُضر: مع 2 عينتين مختلفتين، لا يوجد مُرجَّح. مع 3، انقسام 2–1 يُعطي توافقاً ضعيفاً. الحل: استخدم 5 عينات على الأقل. مكسب الدقة من 1→5 هو الجزء الأكثر انحداراً من المنحنى.',
+            '**توليد عدد قليل جداً من العينات (2–3).** لماذا يُضر: مع عينتين مختلفتين لا يوجد مُرجِّح. مع 3، انقسام 2–1 يُعطي توافقاً ضعيفاً. الحل: استخدم 5 عينات على الأقل؛ تقترح الورقة البدء بـ5 أو 10 مسارات لأن معظم المكسب يأتي مبكراً.',
             '**التصويت على نص الإجابة الكامل بدلاً من الإجابة النهائية.** لماذا يُضر: قد تصل إجابتان إلى الإجابة نفسها عبر مسارات استدلالية مختلفة تماماً. مقارنة النص تقول إنهما مختلفتان؛ مقارنة الإجابة تقول إنهما متطابقتان. الحل: استخرج الإجابة النهائية فقط (يتطلب تنسيق "الإجابة: X") وصوّت عليها.',
           ],
         },
@@ -1159,15 +1141,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
-            { q: 'ما هو برومبت الاتساق الذاتي؟', a: 'برومبت الاتساق الذاتي تقنية تُولّد فيها استجابات مستقلة متعددة للسؤال نفسه — لكل منها مسار استدلالي خاص — ثم تختار الإجابة التي تظهر في أغلب الأحيان. بدلاً من الاعتماد على إجابة ذكاء اصطناعي، تعتمد على توافق استجابات عديدة. قدّمتها Wang et al. (2023) وتُحسّن الدقة بشكل ملحوظ في الرياضيات والمنطق ومهام الاستدلال متعدد الخطوات.' },
-            { q: 'كم عدد العينات الضرورية للاتساق الذاتي؟', a: 'لمعظم المهام، 5–10 عينات تُوفّر أفضل توازن دقة-تكلفة. أظهرت الورقة الأصلية تحسّن الدقة بسرعة من 1 إلى 5 عينات، ثم عوائد متناقصة ما وراء 20. الانتقال من 20 إلى 40 عينة أضاف فقط 2 نقطة مئوية في GSM8K. ابدأ بـ5؛ زد إلى 10–20 فقط للقرارات عالية المخاطر.' },
+            { q: 'ما هو برومبت الاتساق الذاتي؟', a: 'برومبت الاتساق الذاتي تقنية تُولّد فيها عدة إجابات مستقلة للسؤال نفسه — لكل منها مسار استدلالي خاص — ثم تختار الإجابة الأكثر تكراراً. بدلاً من الوثوق بإجابة واحدة، تثق بتوافق إجابات كثيرة. قدّمها Wang et al. (2023) وأبلغوا عن مكاسب دقة في معايير الاستدلال الحسابي واستدلال المنطق السليم.' },
+            { q: 'كم عدد العينات الضرورية للاتساق الذاتي؟', a: 'لمعظم المهام ابدأ بـ5–10 عينات. تلاحظ الورقة الأصلية أن الأداء يشبع سريعاً مع إضافة المسارات وتقترح البدء بـ5 أو 10؛ وكل عينة إضافية تكلّف استجابة كاملة إضافية. ابدأ بـ5 ولا ترفعها إلى 10–20 إلا للقرارات عالية المخاطر.' },
             { q: 'هل يعمل الاتساق الذاتي في المهام البسيطة؟', a: 'ليس بشكل ملحوظ. للبحث عن الحقائق والتصنيف البسيط والكتابة القصيرة، إجابة واحدة كافية دائماً وأقل تكلفة بكثير. الاتساق الذاتي يُضيف قيمة فقط في المهام حيث دقة التشغيل الواحد للنموذج أقل من ~90٪ — عادةً الرياضيات والمسائل المنطقية والتحليل متعدد الخطوات والاستدلال المعقد.' },
             { q: 'أي درجة حرارة يجب استخدامها للاتساق الذاتي؟', a: 'اضبط درجة الحرارة على 0.7–1.0. تتطلب التقنية مسارات استدلالية متنوعة — إذا كانت درجة الحرارة 0 (حتمية)، كل عينة تُنتج المخرج المتطابق والتصويت لا معنى له. درجة الحرارة الأعلى تُنشئ التباين الذي يجعل التصويت الأغلبي مفيداً.' },
             { q: 'كم يزيد الاتساق الذاتي في التكلفة؟', a: 'تقريباً 5–20× رموز أكثر لكل مهمة، لأنك تُولّد 5–20 استجابة كاملة بدلاً من واحدة. للقرارات الحاسمة مبرر، لكنه إهدار للمهام الروتينية.' },
             { q: 'هل الاتساق الذاتي مثل أخذ عينات "best-of-N"؟', a: 'مشابه لكن ليس متطابقاً. Best-of-N يُولّد N إجابة ويختار الأفضل (في أغلب الأحيان بمقيّم جودة). الاتساق الذاتي يُولّد N مسار استدلال ويختار الإجابة الأكثر شيوعاً — التصويت على الاستنتاج لا على الجودة. الاتساق الذاتي لا يحتاج مقيّم جودة؛ يستخدم الاتفاق كإشارة.' },
             { q: 'هل يمكن استخدام الاتساق الذاتي مع برومبت سلسلة الأفكار؟', a: 'نعم — هذا المزيج الأصلي والأكثر فعالية. كل عينة من N عيناتك تستخدم استدلال سلسلة الأفكار، مُنتِجةً مسار استدلال كامل بالإضافة إلى إجابة نهائية. ثم تصوّت على الإجابات النهائية من جميع مسارات N. قد تختلف مسارات الاستدلال، لكن إذا توصّل أغلبها إلى الاستنتاج نفسه، فذلك الاستنتاج متين.' },
             { q: 'كيف يرتبط PromptQuorum بالاتساق الذاتي؟', a: 'PromptQuorum يُطبّق مبدأ التوافق نفسه عبر نماذج مختلفة بدلاً من داخل نموذج واحد. بدلاً من سؤال النموذج نفسه 10 مرات، تسأل 5 نماذج مختلفة مرة واحدة لكل منها وتقارن إجاباتها. حيث تتوافق، الثقة عالية. حيث تختلف، الادعاء يحتاج تحقق. هذا يكشف الانحيازات الخاصة بالنموذج التي لا يستطيع الاتساق الذاتي لنموذج واحد اكتشافها.' },
-            { q: 'هل هو مثل best-of-N؟', a: 'مشابه لكن ليس متطابقاً. Best-of-N يختار الأفضل جودةً. الاتساق الذاتي يختار الإجابة الأكثر شيوعاً — التصويت على الاستنتاج لا على الجودة.' },
           ],
         },
       },
@@ -1181,7 +1162,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'ما هو برومبت الاتساق الذاتي؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'برومبت الاتساق الذاتي تقنية تُولّد فيها استجابات مستقلة متعددة للسؤال نفسه — لكل منها مسار استدلالي خاص — ثم تختار الإجابة التي تظهر في أغلب الأحيان. بدلاً من الاعتماد على إجابة ذكاء اصطناعي، تعتمد على توافق استجابات عديدة. قدّمتها Wang et al. (2023) وتُحسّن الدقة بشكل ملحوظ في الرياضيات والمنطق ومهام الاستدلال متعدد الخطوات.',
+              'text': 'برومبت الاتساق الذاتي تقنية تُولّد فيها عدة إجابات مستقلة للسؤال نفسه — لكل منها مسار استدلالي خاص — ثم تختار الإجابة الأكثر تكراراً. بدلاً من الوثوق بإجابة واحدة، تثق بتوافق إجابات كثيرة. قدّمها Wang et al. (2023) وأبلغوا عن مكاسب دقة في معايير الاستدلال الحسابي واستدلال المنطق السليم.',
             },
           },
           {
@@ -1189,7 +1170,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'كم عدد العينات الضرورية للاتساق الذاتي؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'لمعظم المهام، 5–10 عينات تُوفّر أفضل توازن دقة-تكلفة. أظهرت الورقة الأصلية تحسّن الدقة بسرعة من 1 إلى 5 عينات، ثم عوائد متناقصة ما وراء 20. الانتقال من 20 إلى 40 عينة أضاف فقط 2 نقطة مئوية في GSM8K. ابدأ بـ5؛ زد إلى 10–20 فقط للقرارات عالية المخاطر.',
+              'text': 'لمعظم المهام ابدأ بـ5–10 عينات. تلاحظ الورقة الأصلية أن الأداء يشبع سريعاً مع إضافة المسارات وتقترح البدء بـ5 أو 10؛ وكل عينة إضافية تكلّف استجابة كاملة إضافية. ابدأ بـ5 ولا ترفعها إلى 10–20 إلا للقرارات عالية المخاطر.',
             },
           },
           {
@@ -1240,14 +1221,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
               'text': 'PromptQuorum يُطبّق مبدأ التوافق نفسه عبر نماذج مختلفة بدلاً من داخل نموذج واحد. بدلاً من سؤال النموذج نفسه 10 مرات، تسأل 5 نماذج مختلفة مرة واحدة لكل منها وتقارن إجاباتها. حيث تتوافق، الثقة عالية. حيث تختلف، الادعاء يحتاج تحقق. هذا يكشف الانحيازات الخاصة بالنموذج التي لا يستطيع الاتساق الذاتي لنموذج واحد اكتشافها.',
             },
           },
-          {
-            '@type': 'Question',
-            'name': 'هل هو مثل best-of-N؟',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'مشابه لكن ليس متطابقاً. Best-of-N يختار الأفضل جودةً. الاتساق الذاتي يختار الإجابة الأكثر شيوعاً — التصويت على الاستنتاج لا على الجودة.',
-            },
-          },
         ],
       },
       itemListSchema: {
@@ -1257,33 +1230,36 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberOfItems: 5,
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'إجابة واحدة (خط الأساس)', description: 'تشغيل واحد، تكلفة 1×، المهام البسيطة' },
-          { '@type': 'ListItem', position: 2, name: 'سلسلة الأفكار', description: 'تشغيل واحد مع استدلال، تكلفة ~1.5×، المهام المعتدلة' },
-          { '@type': 'ListItem', position: 3, name: 'اتساق ذاتي', description: '5–20 تشغيل مع تصويت، تكلفة 7.5–30×، الاستدلال الصعب' },
+          { '@type': 'ListItem', position: 2, name: 'سلسلة الأفكار', description: 'تشغيل واحد مع استدلال، مخرج أطول، مهام متوسطة' },
+          { '@type': 'ListItem', position: 3, name: 'اتساق ذاتي', description: '5–20 تشغيلاً مع تصويت، تكلفة 5–20×، استدلال صعب' },
           { '@type': 'ListItem', position: 4, name: 'توافق متعدد النماذج', description: '3–5 نماذج، تكلفة 3–5×، كشف انحيازات النموذج' },
           { '@type': 'ListItem', position: 5, name: 'كلاهما مدمجَين', description: '5 عينات × 3 نماذج، تكلفة 15×، أقصى موثوقية' },
         ],
       },
     },
     pt: {
+      freshness_tier: 'semi_annual',
       theme: 'Techniques',
       heroImage: '/images/self-consistency-prompting-overview-hero-pt.webp',
       title: 'Self-Consistency Prompting: Gere Múltiplas Respostas, Escolha a Mais Consistente',
-      intro: '**O self-consistency prompting gera 5–20 caminhos de raciocínio independentes para a mesma pergunta e seleciona a resposta que aparece com mais frequência.** Em vez de confiar em uma única resposta de IA (que pode estar errada), você faz a pergunta várias vezes com temperaturas mais altas e deixa a votação por maioria decidir. Essa técnica simples melhora a precisão em matemática, lógica e análise de múltiplos passos em 15–25 pontos percentuais.',
-      leadAnswerBlock: '**Self-consistency prompting: faça ao modelo a mesma pergunta 5–20 vezes com temperatura alta (0,7–1,0) para gerar caminhos de raciocínio diversos, depois escolha a resposta majoritária. A técnica melhorou a precisão em matemática de 56% (chain-of-thought único) para 74% (self-consistency com 40 amostras) no artigo original. Funciona em todos os modelos. Trade-off: 5–20× mais tokens por tarefa.**',
+      intro: '**O self-consistency prompting amostra vários caminhos de raciocínio independentes para a mesma pergunta e seleciona a resposta que aparece com mais frequência.** Em vez de confiar em uma única resposta, que pode estar errada, você faz a pergunta várias vezes com temperatura mais alta e deixa a votação por maioria decidir.',
+      leadAnswerBlock: '**O self-consistency prompting faz ao modelo a mesma pergunta várias vezes com temperatura acima de zero e escolhe a resposta majoritária. No artigo original, 40 amostras levaram o PaLM-540B no GSM8K de 56,5% para 74,4%. Custo: uma resposta completa por amostra.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-09-01',
+      dateModified: '2026-11-02',
       readTime: '12 min de leitura',
       educationalLevel: 'Intermediate',
       audience: 'Desenvolvedores criando pipelines de raciocínio de IA confiáveis, analistas tomando decisões críticas com IA, pesquisadores em prompt engineering',
-      seoTitle: 'Self-Consistency Prompting: Várias Respostas, Escolha a Melhor',
-      metaDescription: 'O self-consistency prompting gera 5–20 caminhos de raciocínio e escolhe a resposta majoritária. Melhora a precisão em matemática de 56% para 74%.',
+      seoTitle: 'Self-Consistency Prompting: Escolha a Melhor Resposta',
+      metaDescription: 'O self-consistency prompting amostra vários caminhos de raciocínio e escolhe a resposta majoritária. No artigo original, o GSM8K subiu de 56,5% para 74,4%.',
+      ogDescription: 'Uma resposta de IA pode estar errada. Amostre vários caminhos de raciocínio e escolha a resposta majoritária: o artigo original relata o PaLM-540B de 56,5% para 74,4% no GSM8K.',
+      twitterDescription: 'Self-consistency: faça ao modelo a mesma pergunta várias vezes com temperatura acima de 0 e escolha a resposta majoritária. GSM8K segundo o artigo: 56,5% para 74,4%.',
       primaryTerm: 'Self-Consistency Prompting',
       quickFacts: [
         '**Técnica:** Gere 5–20 caminhos de raciocínio independentes para a mesma pergunta, depois selecione a resposta mais frequente por votação por maioria.',
         '**Artigo:** Wang et al. (2023), "Self-Consistency Improves Chain of Thought Reasoning in Language Models," ICLR 2023.',
-        '**Resultado principal:** Precisão matemática GSM8K melhorou de 56% (chain-of-thought único) para 74% (self-consistency com 40 amostras) — uma melhoria relativa de 32%.',
-        '**Requisito de temperatura:** Deve ser definida em 0,7–1,0 (temperatura=0 produz saídas idênticas, anulando o propósito).',
-        '**Número de amostras:** 5–10 amostras é o ponto ideal; retornos decrescentes além de 20 amostras.',
+        '**Resultado principal (segundo o artigo):** o PaLM-540B no GSM8K subiu de 56,5% (chain-of-thought guloso) para 74,4% (self-consistency, 40 caminhos amostrados), um ganho de 17,9 pontos.',
+        '**Requisito de temperatura:** deve ser maior que 0 (temperatura=0 produz saídas idênticas e anula o propósito); o artigo amostrou com T=0,5–0,7.',
+        '**Número de amostras:** o artigo sugere começar com 5 ou 10 caminhos, porque o desempenho satura rapidamente.',
         '**Custo:** 5–20× mais tokens por tarefa; justificado apenas para raciocínio de alto risco onde precisão importa mais que custo.',
       ],
       schema: {
@@ -1292,7 +1268,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Self-Consistency Prompting: Gere Múltiplas Respostas, Escolha a Mais Consistente',
         description: 'O self-consistency prompting melhora a precisão da IA em matemática, lógica e análise gerando múltiplos caminhos de raciocínio e selecionando a resposta majoritária.',
         datePublished: '2026-03-26',
-        dateModified: '2026-08-31',
+        dateModified: '2026-11-02',
         url: 'https://www.promptquorum.com/pt/prompt-engineering/self-consistency-prompting',
         inLanguage: 'pt-BR',
         keywords: ['self-consistency prompting', 'prompt engineering', 'prompts de raciocínio', 'votação por maioria', 'chain-of-thought', 'melhora de precisão', 'PromptQuorum'],
@@ -1316,7 +1292,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           content: [
             '**Self-consistency** gera 5–20 respostas independentes ao mesmo prompt, depois seleciona a conclusão por votação por maioria — convertendo uma resposta pouco confiável em um consenso estatisticamente robusto.',
-            'A técnica foi introduzida por Wang et al. (2023) e melhorou a precisão em problemas de matemática GSM8K de 56% (chain-of-thought único) para 74% (self-consistency com 40 amostras).',
+            'A técnica foi introduzida por Wang et al. (2023). O artigo relata o PaLM-540B no GSM8K subindo de 56,5% (chain-of-thought guloso) para 74,4% (self-consistency, 40 caminhos amostrados).',
             'Use temperatura mais alta (0,7–1,0) para gerar caminhos de raciocínio diversos — temperatura baixa produz saídas idênticas, anulando o propósito.',
             'Melhor para: matemática, lógica, análise de múltiplos passos e qualquer tarefa onde execuções únicas sejam observavelmente instáveis.',
             'Trade-off: 5–20× mais tokens consumidos por tarefa — use apenas quando precisão importa mais que custo.',
@@ -1333,7 +1309,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Self-consistency prompting significa amostrar várias respostas independentes ao mesmo prompt e selecionar a conclusão mais consistente.** Em vez de um único chain of thought, você obtém múltiplos, potencialmente diferentes caminhos.',
             'A ideia é simples: se o modelo raciocina de várias maneiras diferentes e a maioria dos caminhos converge para a mesma resposta, essa resposta é mais confiável do que uma única execução. Se os caminhos divergem, você sabe que o problema é ambíguo ou difícil e precisa de revisão mais detalhada.',
-            'O self-consistency foi introduzido por Wang et al. em 2023 (ICLR) e mostrou melhorias dramáticas de precisão em matemática, lógica e tarefas de raciocínio.',
+            'O self-consistency foi introduzido por Wang et al. (ICLR 2023) e obteve ganhos de precisão em benchmarks de raciocínio aritmético e de senso comum. A técnica aproveita um princípio básico da estatística: o consenso de muitas estimativas independentes é mais confiável do que uma única estimativa.',
           ],
         },
         whyItMatters: {
@@ -1352,23 +1328,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         accuracyExample: {
-          title: 'O que os Números Mostram',
+          title: 'O que o artigo relata',
           content: [
-            'O artigo original de Wang et al. (2023) demonstrou self-consistency em raciocínio aritmético (benchmark GSM8K). Os resultados mostram um padrão claro:',
-            'O padrão: cada amostra adicional melhora a precisão, mas com retornos decrescentes. Ir de 1 para 5 amostras dá o maior ganho (+10 pontos percentuais). Ir de 20 para 40 adiciona apenas 2 pontos percentuais.',
+            'Wang et al. (2023) compararam o self-consistency (40 caminhos de raciocínio amostrados por pergunta, votação por maioria) com a decodificação gulosa de chain-of-thought em benchmarks aritméticos. A tabela mostra os resultados do PaLM-540B relatados no artigo; não os reproduzimos.',
+            'Os ganhos são maiores onde o chain-of-thought sozinho é mais fraco (GSM8K +17,9, AQuA +12,5 pontos) e pequenos onde já é forte (AddSub +1,8). O resumo do artigo também cita +6,4 no StrategyQA e +3,9 no ARC-challenge. São modelos e configurações de 2022, então não preveem o ganho na sua tarefa nem em modelos atuais. O artigo observa que o self-consistency exige mais computação e sugere começar com 5 ou 10 caminhos, pois o desempenho satura rapidamente.',
           ],
-          columns: ['Método', 'Precisão GSM8K', 'Amostras', 'Multiplicador de custo'],
+          columns: ['Benchmark', 'CoT (guloso)', 'Self-consistency', 'Diferença'],
           rows: [
-            { 'Método': 'Prompting padrão (sem chain-of-thought)', 'Precisão GSM8K': '18%', 'Amostras': '1', 'Multiplicador de custo': '1×' },
-            { 'Método': 'Chain-of-thought (passagem única)', 'Precisão GSM8K': '56%', 'Amostras': '1', 'Multiplicador de custo': '1,5×' },
-            { 'Método': 'Self-consistency (5 amostras)', 'Precisão GSM8K': '66%', 'Amostras': '5', 'Multiplicador de custo': '7,5×' },
-            { 'Método': 'Self-consistency (10 amostras)', 'Precisão GSM8K': '70%', 'Amostras': '10', 'Multiplicador de custo': '15×' },
-            { 'Método': 'Self-consistency (20 amostras)', 'Precisão GSM8K': '72%', 'Amostras': '20', 'Multiplicador de custo': '30×' },
-            { 'Método': 'Self-consistency (40 amostras)', 'Precisão GSM8K': '74%', 'Amostras': '40', 'Multiplicador de custo': '60×' },
+            { 'Benchmark': 'GSM8K', 'CoT (guloso)': '56,5%', 'Self-consistency': '74,4%', 'Diferença': '+17,9' },
+            { 'Benchmark': 'AQuA', 'CoT (guloso)': '35,8%', 'Self-consistency': '48,3%', 'Diferença': '+12,5' },
+            { 'Benchmark': 'SVAMP', 'CoT (guloso)': '79,0%', 'Self-consistency': '86,6%', 'Diferença': '+7,6' },
+            { 'Benchmark': 'ASDiv', 'CoT (guloso)': '74,0%', 'Self-consistency': '81,9%', 'Diferença': '+7,9' },
+            { 'Benchmark': 'MultiArith', 'CoT (guloso)': '94,7%', 'Self-consistency': '99,3%', 'Diferença': '+4,6' },
+            { 'Benchmark': 'AddSub', 'CoT (guloso)': '91,9%', 'Self-consistency': '93,7%', 'Diferença': '+1,8' },
           ],
           tableFormat: true,
           callouts: [
-            { type: 'info', label: 'Você Sabia?', text: 'Self-consistency melhorou a precisão matemática GSM8K de 56% para 74% — uma melhoria relativa de 32% — simplesmente fazendo a mesma pergunta várias vezes e escolhendo a resposta majoritária. Sem mudanças no modelo, sem fine-tuning, sem novos dados.' },
+            { type: 'info', label: 'Você sabia?', text: 'No GSM8K, o PaLM-540B subiu de 56,5% (chain-of-thought guloso) para 74,4% (self-consistency) segundo o artigo, sem fine-tuning nem dados de treino extras: apenas amostragem e votação. Os números vêm do artigo, não de medições nossas.' },
           ],
         },
         howItWorks: {
@@ -1414,10 +1390,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['Técnica', 'Amostras', 'Custo', 'Melhor para', 'Ganho de precisão'],
           rows: [
             { 'Técnica': 'Resposta única (linha de base)', 'Amostras': '1', 'Custo': '1×', 'Melhor para': 'Tarefas simples, baixo risco', 'Ganho de precisão': '—' },
-            { 'Técnica': 'Chain-of-thought', 'Amostras': '1', 'Custo': '~1,5×', 'Melhor para': 'Matemática, lógica, passo a passo', 'Ganho de precisão': 'Moderado (+5–10 pp)' },
-            { 'Técnica': 'Self-consistency', 'Amostras': '5–20', 'Custo': '7,5–30×', 'Melhor para': 'Raciocínio difícil, alto risco', 'Ganho de precisão': 'Grande (+18 pp no GSM8K)' },
-            { 'Técnica': 'Consenso multi-modelo', 'Amostras': '3–5 modelos', 'Custo': '3–5×', 'Melhor para': 'Capturar vieses específicos do modelo', 'Ganho de precisão': 'Moderado-Grande' },
-            { 'Técnica': 'Ambos combinados', 'Amostras': '5 × 3 modelos', 'Custo': '15×', 'Melhor para': 'Máxima confiabilidade', 'Ganho de precisão': 'Mais alta' },
+            { 'Técnica': 'Chain-of-thought', 'Amostras': '1', 'Custo': '1 chamada, saída maior', 'Melhor para': 'Matemática, lógica, passo a passo', 'Ganho de precisão': 'Linha de base no artigo' },
+            { 'Técnica': 'Self-consistency', 'Amostras': '5–20', 'Custo': '5–20×', 'Melhor para': 'Raciocínio difícil, alto risco', 'Ganho de precisão': 'Até +17,9 pts no GSM8K (artigo)' },
+            { 'Técnica': 'Consenso multi-modelo', 'Amostras': '3–5 modelos', 'Custo': '3–5×', 'Melhor para': 'Capturar vieses específicos do modelo', 'Ganho de precisão': 'Depende da tarefa' },
+            { 'Técnica': 'Ambos combinados', 'Amostras': '5 × 3 modelos', 'Custo': '15×', 'Melhor para': 'Máxima confiabilidade', 'Ganho de precisão': 'Depende da tarefa' },
           ],
           tableFormat: true,
           callouts: [
@@ -1432,7 +1408,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Usar temperatura 0 (modo determinístico).** Por que prejudica: cada amostra é idêntica. Votação em 10 respostas idênticas não diz nada. Solução: defina temperatura em 0,7–1,0.',
             '**Usar self-consistency para perguntas factuais simples.** Por que prejudica: "Qual é a capital da França?" produz "Paris" sempre. Você gastou 10× os tokens sem ganho de precisão. Solução: reserve self-consistency para tarefas onde precisão de passagem única esteja abaixo de 90%.',
-            '**Gerar poucas amostras (2–3).** Por que prejudica: com 2 amostras que divergem, você não tem desempate. Solução: use pelo menos 5 amostras.',
+            '**Gerar poucas amostras (2–3).** Por que prejudica: com 2 amostras que divergem, você não tem desempate. Solução: use pelo menos 5 amostras; o artigo sugere começar com 5 ou 10 caminhos, pois a maior parte do ganho vem cedo.',
             '**Votar no texto completo da resposta em vez da resposta final.** Solução: extraia apenas a resposta final (exija formato "Resposta: X") e vote sobre isso.',
           ],
         },
@@ -1462,7 +1438,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Leituras Relacionadas',
           items: [
             '[Chain-of-Thought Prompting](/pt/prompt-engineering/chain-of-thought-prompting)',
+            '[Tree-of-Thought e ReAct](/pt/prompt-engineering/tree-of-thought-and-react)',
+            '[Prompt Injection e Segurança](/pt/prompt-engineering/prompt-injection-and-security)',
             '[Temperatura e Top-P](/pt/prompt-engineering/temperature-and-top-p-control-ai-creativity)',
+            '[Prompt Chaining](/pt/prompt-engineering/prompt-chaining)',
             '[Alucinações de IA: Como detectar e parar](/pt/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)',
           ],
         },
@@ -1471,6 +1450,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '[Wang et al. (2023). "Self-Consistency Improves Chain of Thought Reasoning in Language Models." ICLR 2023. arXiv:2203.11171](https://arxiv.org/abs/2203.11171)',
             '[Wei et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903](https://arxiv.org/abs/2201.11903)',
+            '[Brown et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165](https://arxiv.org/abs/2005.14165)',
             '[Anthropic. "Prompt Engineering Guide." docs.anthropic.com](https://docs.anthropic.com)',
           ],
         },
@@ -1478,15 +1458,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Perguntas Frequentes',
           faqs: [
-            { q: 'O que é self-consistency prompting?', a: 'Self-consistency prompting é uma técnica onde você gera múltiplas respostas independentes para a mesma pergunta — cada uma com seu próprio caminho de raciocínio — e depois seleciona a resposta que aparece com mais frequência. Introduzida por Wang et al. (2023) e melhora significativamente a precisão em matemática, lógica e tarefas de raciocínio de múltiplos passos.' },
-            { q: 'Quantas amostras preciso para self-consistency?', a: 'Para a maioria das tarefas, 5–10 amostras fornecem a melhor relação precisão-custo. O artigo original mostrou precisão melhorando rapidamente de 1 para 5 amostras, depois retornos decrescentes além de 20. Comece com 5; aumente para 10–20 apenas para decisões de alto risco.' },
+            { q: 'O que é self-consistency prompting?', a: 'O self-consistency prompting é uma técnica em que você gera várias respostas independentes para a mesma pergunta — cada uma com seu próprio caminho de raciocínio — e seleciona a resposta que aparece com mais frequência. Em vez de confiar em uma única resposta de IA, você confia no consenso de várias. Foi introduzida por Wang et al. (2023), que relataram ganhos de precisão em benchmarks de raciocínio aritmético e de senso comum.' },
+            { q: 'Quantas amostras preciso para self-consistency?', a: 'Para a maioria das tarefas, comece com 5–10 amostras. O artigo original observa que o desempenho satura rapidamente conforme se adicionam caminhos e sugere começar com 5 ou 10; cada amostra extra custa uma resposta completa a mais. Comece com 5; aumente para 10–20 só em decisões de alto risco.' },
             { q: 'Qual temperatura devo usar para self-consistency?', a: 'Defina temperatura em 0,7–1,0. A técnica requer caminhos de raciocínio diversos — se temperatura for 0 (determinístico), cada amostra produz a saída idêntica e a votação não tem sentido.' },
             { q: 'Como o PromptQuorum se relaciona com self-consistency?', a: 'PromptQuorum aplica o mesmo princípio de consenso entre diferentes modelos em vez de dentro de um. Em vez de perguntar ao mesmo modelo 10 vezes, você pergunta a 5 modelos diferentes uma vez cada e compara suas respostas. Onde concordam, a confiança é alta. Isso captura vieses específicos do modelo que o self-consistency de um único modelo não consegue detectar.' },
             { q: 'Quantas amostras preciso?', a: 'Para a maioria das tarefas, 5–10 amostras fornecem a melhor relação precisão-custo. Comece com 5; aumente para 10–20 apenas para decisões de alto risco.' },
             { q: 'O self-consistency funciona em tarefas simples?', a: 'Não de forma significativa. Para buscas factuais, classificação simples ou textos curtos, uma única resposta quase sempre é suficiente e muito mais barata. O self-consistency compensa em tarefas de raciocínio de múltiplos passos — matemática, lógica, planejamento — onde diferentes caminhos de raciocínio podem chegar a respostas diferentes.' },
             { q: 'Quanto mais custa o self-consistency?', a: 'Aproximadamente 5–20× mais tokens por tarefa, já que você gera de 5 a 20 respostas completas em vez de uma. Para uma resposta que custa R$ 0,05, self-consistency com 10 amostras custa cerca de R$ 0,50. Reserve a técnica para decisões onde o custo extra vale a precisão adicional.' },
             { q: 'Self-consistency é o mesmo que amostragem "best-of-N"?', a: 'Parecido, mas não idêntico. Best-of-N gera N respostas e seleciona a melhor (geralmente por um avaliador de qualidade). Self-consistency gera N caminhos de raciocínio e escolhe a resposta final mais frequente por votação majoritária — não depende de um avaliador externo, só da concordância entre as amostras.' },
-            { q: 'Posso usar self-consistency com chain-of-thought prompting?', a: 'Sim — essa é a combinação original e mais eficaz. Cada uma das suas N amostras usa raciocínio chain-of-thought, produzindo um caminho de raciocínio completo além da resposta final. Você então vota na resposta final entre as amostras, ignorando as variações no caminho de raciocínio.' },
           ],
         },
       },
@@ -1500,7 +1479,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'O que é self-consistency prompting?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Self-consistency prompting é uma técnica onde você gera múltiplas respostas independentes para a mesma pergunta — cada uma com seu próprio caminho de raciocínio — e depois seleciona a resposta que aparece com mais frequência. Introduzida por Wang et al. (2023) e melhora significativamente a precisão em matemática, lógica e tarefas de raciocínio de múltiplos passos.',
+              'text': 'O self-consistency prompting é uma técnica em que você gera várias respostas independentes para a mesma pergunta — cada uma com seu próprio caminho de raciocínio — e seleciona a resposta que aparece com mais frequência. Em vez de confiar em uma única resposta de IA, você confia no consenso de várias. Foi introduzida por Wang et al. (2023), que relataram ganhos de precisão em benchmarks de raciocínio aritmético e de senso comum.',
             },
           },
           {
@@ -1508,7 +1487,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Quantas amostras preciso para self-consistency?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Para a maioria das tarefas, 5–10 amostras fornecem a melhor relação precisão-custo. O artigo original mostrou precisão melhorando rapidamente de 1 para 5 amostras, depois retornos decrescentes além de 20. Comece com 5; aumente para 10–20 apenas para decisões de alto risco.',
+              'text': 'Para a maioria das tarefas, comece com 5–10 amostras. O artigo original observa que o desempenho satura rapidamente conforme se adicionam caminhos e sugere começar com 5 ou 10; cada amostra extra custa uma resposta completa a mais. Comece com 5; aumente para 10–20 só em decisões de alto risco.',
             },
           },
           {
@@ -1559,14 +1538,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
               'text': 'Parecido, mas não idêntico. Best-of-N gera N respostas e seleciona a melhor (geralmente por um avaliador de qualidade). Self-consistency gera N caminhos de raciocínio e escolhe a resposta final mais frequente por votação majoritária — não depende de um avaliador externo, só da concordância entre as amostras.',
             },
           },
-          {
-            '@type': 'Question',
-            'name': 'Posso usar self-consistency com chain-of-thought prompting?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Sim — essa é a combinação original e mais eficaz. Cada uma das suas N amostras usa raciocínio chain-of-thought, produzindo um caminho de raciocínio completo além da resposta final. Você então vota na resposta final entre as amostras, ignorando as variações no caminho de raciocínio.',
-            },
-          },
         ],
       },
       itemListSchema: {
@@ -1576,8 +1547,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberOfItems: 5,
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Resposta única (linha de base)', description: 'Uma execução, 1× custo, tarefas simples' },
-          { '@type': 'ListItem', position: 2, name: 'Chain-of-thought', description: 'Uma execução com raciocínio, ~1,5× custo, tarefas moderadas' },
-          { '@type': 'ListItem', position: 3, name: 'Self-consistency', description: '5–20 execuções com votação, 7,5–30× custo, raciocínio difícil' },
+          { '@type': 'ListItem', position: 2, name: 'Chain-of-thought', description: 'Uma execução com raciocínio, saída maior, tarefas moderadas' },
+          { '@type': 'ListItem', position: 3, name: 'Self-consistency', description: '5–20 execuções com votação, custo 5–20×, raciocínio difícil' },
           { '@type': 'ListItem', position: 4, name: 'Consenso multi-modelo', description: '3–5 modelos, 3–5× custo, capturar vieses do modelo' },
           { '@type': 'ListItem', position: 5, name: 'Ambos combinados', description: '5 amostras × 3 modelos, 15× custo, máxima confiabilidade' },
         ],
@@ -1588,24 +1559,24 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Techniques',
       heroImage: '/images/self-consistency-prompting-overview-hero-fr.webp',
       title: 'Self-Consistency Prompting : Plusieurs Réponses, Choisir le Consensus',
-      intro: '**Le Self-Consistency Prompting génère 5–20 chemins de raisonnement indépendants pour la même question, puis sélectionne la réponse qui apparaît le plus fréquemment.** Au lieu de faire confiance à une seule réponse IA, vous vous appuyez sur le consensus de plusieurs. Cette technique simple améliore la précision en mathématiques, logique et analyse multi-étapes de 15–25 points de pourcentage.',
-      leadAnswerBlock: '**Self-Consistency Prompting : posez au modèle la même question 5–20 fois avec température élevée (0.7–1.0) pour générer des chemins de raisonnement distincts, puis choisissez la réponse majoritaire. La technique a amélioré la précision mathématique de 56% (chaîne de pensée unique) à 74% (Self-Consistency avec 40 échantillons). Fonctionne sur tous les modèles. Compromis : 5–20× plus de tokens par tâche.**',
+      intro: '**Le Self-Consistency Prompting échantillonne plusieurs chemins de raisonnement indépendants pour la même question, puis sélectionne la réponse qui revient le plus souvent.** Au lieu de faire confiance à une seule réponse, qui peut être fausse, vous posez la question plusieurs fois à température plus élevée et laissez le vote majoritaire trancher.',
+      leadAnswerBlock: '**Le Self-Consistency Prompting pose plusieurs fois la même question au modèle à une température supérieure à zéro, puis retient la réponse majoritaire. Dans l\'article original, 40 échantillons ont fait passer PaLM-540B de 56.5% à 74.4% sur GSM8K. Coût : une réponse complète par échantillon.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-02',
       readTime: '11 min de lecture',
       educationalLevel: 'Intermediate',
       audience: 'Développeurs créant des pipelines IA fiables, analystes prenant des décisions critiques avec l\'IA, chercheurs en ingénierie de prompts',
       seoTitle: 'Self-Consistency Prompting : générer 5-20 réponses',
-      metaDescription: 'Self-Consistency Prompting génère 5-20 chemins de raisonnement et sélectionne la réponse majoritaire. Améliore la précision en mathématiques de 56% à 74%.',
-      ogDescription: 'Une réponse IA peut être fausse. Cinq réponses IA qui concordent ? Beaucoup plus fiable. Self-Consistency améliore la précision de 15–25 points par échantillonnage et vote majoritaire.',
-      twitterDescription: 'Self-Consistency : posez à l\'IA la même question 5–20 fois, choisissez la réponse majoritaire. Technique simple, amélioration drastique de la précision.',
+      metaDescription: 'Le Self-Consistency Prompting échantillonne des chemins de raisonnement et retient la réponse majoritaire. Dans l\'article, GSM8K passe de 56.5% à 74.4%.',
+      ogDescription: 'Une réponse IA peut être fausse. Échantillonnez plusieurs chemins de raisonnement et retenez la réponse majoritaire : l\'article original rapporte PaLM-540B de 56.5% à 74.4% sur GSM8K.',
+      twitterDescription: 'Self-Consistency : posez au modèle la même question plusieurs fois à température supérieure à 0, retenez la réponse majoritaire. GSM8K selon l\'article : 56.5% à 74.4%.',
       primaryTerm: 'Self-Consistency Prompting',
       quickFacts: [
         '**Technique :** Générez 5–20 chemins de raisonnement indépendants pour la même question, puis sélectionnez la réponse la plus fréquente par vote majoritaire.',
         '**Article :** Wang et al. (2023), "Self-Consistency Improves Chain of Thought Reasoning in Language Models," ICLR 2023.',
-        '**Résultat clé :** La précision mathématique GSM8K s\'est améliorée de 56% (chaîne de pensée unique) à 74% (Self-Consistency avec 40 échantillons)—une amélioration relative de 32%.',
-        '**Exigence de température :** Doit être définie à 0.7–1.0 (température=0 produit des outputs identiques, annulant l\'objectif).',
-        '**Nombre d\'échantillons :** 5–10 échantillons offrent le meilleur compromis qualité-coût ; rendements décroissants au-delà de 20 échantillons.',
+        '**Résultat clé (selon l\'article) :** PaLM-540B sur GSM8K est passé de 56.5% (chaîne de pensée gloutonne) à 74.4% (Self-Consistency, 40 chemins échantillonnés), soit +17.9 points.',
+        '**Exigence de température :** doit être supérieure à 0 (température=0 produit des sorties identiques, ce qui annule l\'intérêt) ; l\'article a échantillonné avec T=0.5–0.7.',
+        '**Nombre d\'échantillons :** l\'article suggère de commencer avec 5 ou 10 chemins, car la performance sature vite.',
         '**Coût :** 5–20× plus de tokens par tâche ; justifié uniquement pour le raisonnement à enjeux élevés où la précision prime sur le coût.',
       ],
       schema: {
@@ -1614,7 +1585,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Self-Consistency Prompting : Plusieurs Réponses, Choisir le Consensus',
         description: 'Le Self-Consistency Prompting améliore la précision de l\'IA en mathématiques, logique et analyse en générant plusieurs chemins de raisonnement et en sélectionnant la réponse majoritaire.',
         datePublished: '2026-03-26',
-        dateModified: '2026-08-31',
+        dateModified: '2026-11-02',
         'url': 'https://www.promptquorum.com/fr/prompt-engineering/self-consistency-prompting',
         keywords: ['Self-Consistency Prompting', 'Prompt Engineering', 'Fiabilité IA', 'Vote majoritaire', 'Raisonnement', 'Chaîne de pensée'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1637,7 +1608,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           content: [
             '**Self-Consistency** génère 5–20 réponses indépendantes au même prompt, puis sélectionne la conclusion par vote majoritaire — convertissant une réponse peu fiable en consensus statistiquement robuste.',
-            'La technique a été introduite en 2023 par Wang et al. et a amélioré la précision sur les tâches mathématiques GSM8K de 56% (chaîne de pensée unique) à 74% (Self-Consistency avec 40 échantillons).',
+            'La technique a été introduite par Wang et al. (2023). L\'article rapporte que PaLM-540B sur GSM8K passe de 56.5% (chaîne de pensée gloutonne) à 74.4% (Self-Consistency, 40 chemins échantillonnés).',
             'Utilisez une température plus élevée (0.7–1.0) pour générer des chemins de raisonnement distincts — la température basse produit des outputs identiques, annulant l\'objectif.',
             'Idéal pour : mathématiques, logique, analyse multi-étapes et toute tâche où les passages uniques sont observablement instables.',
             'Compromis : 5–20× plus de tokens consommés par tâche — utilisez uniquement quand la précision compte plus que le coût.',
@@ -1654,7 +1625,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Le Self-Consistency Prompting signifie sampler plusieurs réponses indépendantes au même prompt et sélectionner la conclusion la plus cohérente.** Au lieu d\'une seule chaîne de pensée, vous obtenez plusieurs chemins potentiellement différents.',
             'L\'idée est simple : si le modèle raisonne de plusieurs façons différentes et que la plupart des chemins convergent vers la même réponse, cette réponse est plus fiable qu\'un seul passage. Si les chemins divergent, le problème est ambigu ou difficile et nécessite un examen plus approfondi.',
-            'Le Self-Consistency a été introduit en 2023 par Wang et al. (ICLR) et a montré des améliorations dramatiques de précision sur les tâches mathématiques, logiques et de raisonnement. La technique s\'appuie sur un principe fondamental des statistiques : le consensus de nombreuses estimations indépendantes est plus fiable qu\'une seule estimation.',
+            'Self-Consistency a été introduit par Wang et al. (ICLR 2023) et a obtenu des gains de précision sur des benchmarks de raisonnement arithmétique et de bon sens. La technique repose sur un principe statistique fondamental : le consensus de nombreuses estimations indépendantes est plus fiable qu\'une estimation unique.',
           ],
         },
         whyItMatters: {
@@ -1673,23 +1644,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         accuracyExample: {
-          title: 'Ce que les chiffres montrent',
+          title: 'Ce que rapporte l\'article',
           content: [
-            'Le papier original Wang et al. (2023) a démontré le Self-Consistency sur le raisonnement arithmétique (benchmark GSM8K), un test standard pour les capacités mathématiques des modèles de langage. Les résultats montrent un modèle clair :',
-            'Le modèle : chaque échantillon supplémentaire améliore la précision, mais avec des rendements décroissants. Le passage de 1 à 5 échantillons donne le gain le plus important (+10 points de pourcentage). Le passage de 20 à 40 n\'ajoute que 2 points de pourcentage. Pour la plupart des usages pratiques, 5–10 échantillons offrent le meilleur compromis qualité-coût. Au-delà de 20 échantillons, vous dépensez exponentiellement plus de tokens pour des gains de précision minimes.',
+            'Wang et al. (2023) ont comparé Self-Consistency (40 chemins de raisonnement échantillonnés par question, vote majoritaire) au décodage glouton avec chaîne de pensée sur des benchmarks arithmétiques. Le tableau montre les résultats PaLM-540B rapportés dans l\'article ; nous ne les avons pas reproduits.',
+            'Les gains sont les plus élevés là où la chaîne de pensée seule est la plus faible (GSM8K +17.9, AQuA +12.5 points) et faibles là où elle est déjà forte (AddSub +1.8). Le résumé de l\'article cite aussi +6.4 sur StrategyQA et +3.9 sur ARC-challenge. Ce sont des modèles et des réglages de 2022 : ils ne prédisent pas le gain sur votre tâche ni sur les modèles actuels. L\'article note que Self-Consistency coûte plus de calcul et suggère de commencer avec 5 ou 10 chemins, car la performance sature vite.',
           ],
-          columns: ['Méthode', 'Précision GSM8K', 'Échantillons', 'Multiplicateur de coût'],
+          columns: ['Benchmark', 'CoT (glouton)', 'Self-Consistency', 'Écart'],
           rows: [
-            { 'Méthode': 'Prompting standard (sans chaîne de pensée)', 'Précision GSM8K': '18%', 'Échantillons': '1', 'Multiplicateur de coût': '1×' },
-            { 'Méthode': 'Chaîne de pensée (passage unique)', 'Précision GSM8K': '56%', 'Échantillons': '1', 'Multiplicateur de coût': '1.5×' },
-            { 'Méthode': 'Self-Consistency (5 échantillons)', 'Précision GSM8K': '66%', 'Échantillons': '5', 'Multiplicateur de coût': '7.5×' },
-            { 'Méthode': 'Self-Consistency (10 échantillons)', 'Précision GSM8K': '70%', 'Échantillons': '10', 'Multiplicateur de coût': '15×' },
-            { 'Méthode': 'Self-Consistency (20 échantillons)', 'Précision GSM8K': '72%', 'Échantillons': '20', 'Multiplicateur de coût': '30×' },
-            { 'Méthode': 'Self-Consistency (40 échantillons)', 'Précision GSM8K': '74%', 'Échantillons': '40', 'Multiplicateur de coût': '60×' },
+            { 'Benchmark': 'GSM8K', 'CoT (glouton)': '56.5%', 'Self-Consistency': '74.4%', 'Écart': '+17.9' },
+            { 'Benchmark': 'AQuA', 'CoT (glouton)': '35.8%', 'Self-Consistency': '48.3%', 'Écart': '+12.5' },
+            { 'Benchmark': 'SVAMP', 'CoT (glouton)': '79.0%', 'Self-Consistency': '86.6%', 'Écart': '+7.6' },
+            { 'Benchmark': 'ASDiv', 'CoT (glouton)': '74.0%', 'Self-Consistency': '81.9%', 'Écart': '+7.9' },
+            { 'Benchmark': 'MultiArith', 'CoT (glouton)': '94.7%', 'Self-Consistency': '99.3%', 'Écart': '+4.6' },
+            { 'Benchmark': 'AddSub', 'CoT (glouton)': '91.9%', 'Self-Consistency': '93.7%', 'Écart': '+1.8' },
           ],
           tableFormat: true,
           callouts: [
-            { type: 'info', label: 'Le saviez-vous ?', text: 'Self-Consistency a amélioré la précision mathématique GSM8K de 56% à 74%—une amélioration relative de 32%—en posant simplement la même question plusieurs fois et en sélectionnant la réponse majoritaire. Aucune modification de modèle, aucun fine-tuning, aucune nouvelle donnée. Juste échantillonnage et vote.' },
+            { type: 'info', label: 'Le saviez-vous ?', text: 'Sur GSM8K, PaLM-540B est passé de 56.5% (chaîne de pensée gloutonne) à 74.4% (Self-Consistency) selon l\'article, sans fine-tuning ni données d\'entraînement supplémentaires : seulement de l\'échantillonnage et du vote. Les chiffres viennent de l\'article, pas de nos propres mesures.' },
           ],
         },
         howItWorks: {
@@ -1735,10 +1706,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['Technique', 'Échantillons', 'Coût', 'Idéal pour', 'Gain de précision'],
           rows: [
             { 'Technique': 'Réponse unique (baseline)', 'Échantillons': '1', 'Coût': '1×', 'Idéal pour': 'Tâches simples, basse priorité', 'Gain de précision': '—' },
-            { 'Technique': 'Chaîne de pensée', 'Échantillons': '1', 'Coût': '~1.5×', 'Idéal pour': 'Math, logique, par étapes', 'Gain de précision': 'Modéré (+5–10 pp)' },
-            { 'Technique': 'Self-Consistency', 'Échantillons': '5–20', 'Coût': '7.5–30×', 'Idéal pour': 'Raisonnement difficile, haute priorité', 'Gain de précision': 'Grand (+18 pp sur GSM8K)' },
-            { 'Technique': 'Consensus multi-modèle', 'Échantillons': '3–5 modèles', 'Coût': '3–5×', 'Idéal pour': 'Capturer biais modèle-spécifiques', 'Gain de précision': 'Modéré-Grand' },
-            { 'Technique': 'Les deux combinés', 'Échantillons': '5 × 3 modèles', 'Coût': '15×', 'Idéal pour': 'Fiabilité maximale', 'Gain de précision': 'Maximale' },
+            { 'Technique': 'Chaîne de pensée', 'Échantillons': '1', 'Coût': '1 appel, sortie plus longue', 'Idéal pour': 'Math, logique, par étapes', 'Gain de précision': 'Référence dans l\'article' },
+            { 'Technique': 'Self-Consistency', 'Échantillons': '5–20', 'Coût': '5–20×', 'Idéal pour': 'Raisonnement difficile, haute priorité', 'Gain de précision': 'Jusqu\'à +17.9 pts sur GSM8K (article)' },
+            { 'Technique': 'Consensus multi-modèle', 'Échantillons': '3–5 modèles', 'Coût': '3–5×', 'Idéal pour': 'Capturer biais modèle-spécifiques', 'Gain de précision': 'Selon la tâche' },
+            { 'Technique': 'Les deux combinés', 'Échantillons': '5 × 3 modèles', 'Coût': '15×', 'Idéal pour': 'Fiabilité maximale', 'Gain de précision': 'Selon la tâche' },
           ],
           tableFormat: true,
           callouts: [
@@ -1753,7 +1724,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Utiliser température 0 (mode déterministe).** Pourquoi ça nuit : Chaque échantillon est identique. Voter sur 10 réponses identiques ne vous dit rien. Solution : Définissez la température à 0.7–1.0 pour générer des chemins de raisonnement distincts.',
             '**Utiliser Self-Consistency pour des questions factuelles simples.** Pourquoi ça nuit : "Quelle est la capitale de la France ?" produit "Paris" à chaque fois. Vous avez dépensé 10× les tokens pour aucun gain de précision. Solution : Réservez Self-Consistency aux tâches où la précision d\'un passage unique est observablement inférieure à 90%.',
-            '**Générer trop peu d\'échantillons (2–3).** Pourquoi ça nuit : Avec 2 échantillons qui divergent, vous n\'avez pas de départageur. Avec 3, une division 2-1 donne un consensus faible. Solution : Utilisez au moins 5 échantillons. Le gain de précision de 1→5 est la partie la plus raide de la courbe.',
+            '**Générer trop peu d\'échantillons (2–3).** Pourquoi ça nuit : Avec 2 échantillons qui divergent, vous n\'avez pas de départageur. Avec 3, une division 2-1 donne un consensus faible. Solution : Utilisez au moins 5 échantillons ; l\'article suggère de commencer avec 5 ou 10 chemins, car l\'essentiel du gain arrive tôt.',
             '**Voter sur le texte complet de la réponse au lieu de la réponse finale.** Pourquoi ça nuit : Deux réponses peuvent atteindre la même réponse via des chemins complètement différents. La comparaison de texte dit qu\'elles sont différentes ; la comparaison de réponse dit qu\'elles concordent. Solution : Extrayez uniquement la réponse finale (exigez le format "Réponse : X") et votez sur ça.',
           ],
         },
@@ -1803,8 +1774,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Questions Fréquemment Posées',
           faqs: [
-            { q: 'Qu\'est-ce que le Self-Consistency Prompting ?', a: 'Le Self-Consistency Prompting est une technique où vous générez plusieurs réponses indépendantes à la même question — chacune avec son propre chemin de raisonnement — puis sélectionnez la réponse qui apparaît le plus fréquemment. Au lieu de faire confiance à une réponse IA, vous vous appuyez sur le consensus de plusieurs. Il a été introduit en 2023 par Wang et al. et améliore significativement la précision sur les tâches mathématiques, logiques et de raisonnement multi-étapes.' },
-            { q: 'Combien d\'échantillons ai-je besoin pour Self-Consistency ?', a: 'Pour la plupart des tâches, 5–10 échantillons offrent le meilleur rapport qualité-coût. Le papier original a montré que la précision s\'améliore rapidement de 1 à 5 échantillons, puis des rendements décroissants au-delà de 20. Le passage de 20 à 40 échantillons n\'a ajouté que 2 points de pourcentage sur GSM8K. Commencez par 5 ; augmentez à 10–20 uniquement pour les décisions à enjeux élevés.' },
+            { q: 'Qu\'est-ce que le Self-Consistency Prompting ?', a: 'Le Self-Consistency Prompting est une technique où vous générez plusieurs réponses indépendantes à la même question — chacune avec son propre chemin de raisonnement — puis retenez la réponse la plus fréquente. Au lieu de faire confiance à une seule réponse IA, vous vous fiez au consensus de plusieurs. Il a été introduit par Wang et al. (2023), qui ont rapporté des gains de précision sur des benchmarks de raisonnement arithmétique et de bon sens.' },
+            { q: 'Combien d\'échantillons ai-je besoin pour Self-Consistency ?', a: 'Pour la plupart des tâches, commencez avec 5-10 échantillons. L\'article original note que la performance sature vite à mesure que l\'on ajoute des chemins et suggère de commencer avec 5 ou 10 ; chaque échantillon supplémentaire coûte une réponse complète en plus. Commencez avec 5 ; passez à 10-20 uniquement pour les décisions à enjeux élevés.' },
             { q: 'Self-Consistency fonctionne-t-il sur les tâches simples ?', a: 'Pas vraiment. Pour les recherches factuelles, la classification simple ou la production de texte court, une seule réponse est presque toujours suffisante et beaucoup moins chère. Self-Consistency offre de la valeur uniquement sur les tâches où la précision d\'un passage unique est observablement inférieure à ~90% — généralement math, énigmes logiques, analyse multi-étapes et raisonnement complexe.' },
             { q: 'Quelle température dois-je utiliser pour Self-Consistency ?', a: 'Définissez la température à 0.7–1.0. La technique exige des chemins de raisonnement distincts — si la température est 0 (déterministe), chaque échantillon produit le résultat identique et le vote est inutile. Une température plus élevée crée la variation qui rend le vote majoritaire informatif.' },
             { q: 'Combien coûte Self-Consistency en plus ?', a: 'Environ 5–20× plus de tokens par tâche, car vous générez 5–20 réponses complètes au lieu d\'une. Pour une réponse qui coûte $0.01, Self-Consistency à 10 échantillons coûte $0.10. Ceci est justifié pour les décisions critiques (analyse financière, raisonnement médical, interprétation légale), mais gaspillé pour les tâches routinières.' },
@@ -1824,7 +1795,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Qu\'est-ce que le Self-Consistency Prompting ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Le Self-Consistency Prompting est une technique où vous générez plusieurs réponses indépendantes à la même question — chacune avec son propre chemin de raisonnement — puis sélectionnez la réponse qui apparaît le plus fréquemment. Au lieu de faire confiance à une réponse IA, vous vous appuyez sur le consensus de plusieurs. Il a été introduit en 2023 par Wang et al. et améliore significativement la précision sur les tâches mathématiques, logiques et de raisonnement multi-étapes.',
+              'text': 'Le Self-Consistency Prompting est une technique où vous générez plusieurs réponses indépendantes à la même question — chacune avec son propre chemin de raisonnement — puis retenez la réponse la plus fréquente. Au lieu de faire confiance à une seule réponse IA, vous vous fiez au consensus de plusieurs. Il a été introduit par Wang et al. (2023), qui ont rapporté des gains de précision sur des benchmarks de raisonnement arithmétique et de bon sens.',
             },
           },
           {
@@ -1832,7 +1803,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Combien d\'échantillons ai-je besoin pour Self-Consistency ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Pour la plupart des tâches, 5–10 échantillons offrent le meilleur rapport qualité-coût. Le papier original a montré que la précision s\'améliore rapidement de 1 à 5 échantillons, puis des rendements décroissants au-delà de 20. Le passage de 20 à 40 échantillons n\'a ajouté que 2 points de pourcentage sur GSM8K. Commencez par 5 ; augmentez à 10–20 uniquement pour les décisions à enjeux élevés.',
+              'text': 'Pour la plupart des tâches, commencez avec 5-10 échantillons. L\'article original note que la performance sature vite à mesure que l\'on ajoute des chemins et suggère de commencer avec 5 ou 10 ; chaque échantillon supplémentaire coûte une réponse complète en plus. Commencez avec 5 ; passez à 10-20 uniquement pour les décisions à enjeux élevés.',
             },
           },
           {
@@ -1892,8 +1863,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberOfItems: 5,
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Réponse unique (baseline)', description: 'Un passage, coût 1×, tâches simples' },
-          { '@type': 'ListItem', position: 2, name: 'Chaîne de pensée', description: 'Un passage avec raisonnement, coût ~1.5×, tâches modérées' },
-          { '@type': 'ListItem', position: 3, name: 'Self-Consistency', description: '5–20 passages avec vote, coût 7.5–30×, raisonnement difficile' },
+          { '@type': 'ListItem', position: 2, name: 'Chaîne de pensée', description: 'Une exécution avec raisonnement, sortie plus longue, tâches modérées' },
+          { '@type': 'ListItem', position: 3, name: 'Self-Consistency', description: '5-20 exécutions avec vote, coût 5-20×, raisonnement difficile' },
           { '@type': 'ListItem', position: 4, name: 'Consensus multi-modèle', description: '3–5 modèles, coût 3–5×, capture biais modèle-spécifiques' },
           { '@type': 'ListItem', position: 5, name: 'Les deux combinés', description: '5 échantillons × 3 modèles, coût 15×, fiabilité maximale' },
         ],
@@ -1901,1083 +1872,547 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ja: {
       freshness_tier: 'semi_annual',
-      theme: '手法',
+      theme: 'Techniques',
       heroImage: '/images/self-consistency-prompting-overview-hero-ja.webp',
-      title: 'セルフコンシステンシープロンプティング：複数の答えを生成して正しいものを選ぶ',
-      intro: '**セルフコンシステンシープロンプティングは、同じ質問に対して5～20の独立した推論パスを生成し、最も一貫性のある答えを投票で選ぶ手法です。** このアプローチにより、より高い精度が得られます。特に数学や論理的な問題で有効です。',
-      leadAnswerBlock: '**セルフコンシステンシー：同じプロンプトに対して複数の異なる推論経路を生成し、最終的な答えを多数決で決定します。これにより、単一の線形推論（Chain-of-Thought）よりも精度が向上します。例えば、GSM8K数学ベンチマークでは56%から74%に改善されました。**',
+      title: 'Self-Consistencyプロンプト：複数の答えから正解を選ぶ',
+      intro: '**Self-Consistencyプロンプトは、同じ質問に対して複数の独立した推論パスをサンプリングし、最も多く出た答えを採用する手法です。** 間違っているかもしれない1つの答えを信頼する代わりに、高めの温度で何度も質問し、多数決で結論を決めます。',
+      leadAnswerBlock: '**Self-Consistencyプロンプトは、温度を0より高くして同じ質問を複数回モデルに投げ、多数派の答えを採用する手法です。原論文では、40サンプルによりPaLM-540BのGSM8K正答率が56.5%から74.4%に上がりました。コスト：サンプルごとに完全な応答1回分です。**',
       publishDate: '2026-03-26',
-      dateModified: '2026-08-31',
-      readTime: '10分で読める',
-      seoTitle: 'セルフコンシステンシープロンプティング：複数の推論経路で精度向上する手法と実装ガイド',
-      metaDescription: 'セルフコンシステンシープロンプティングは複数の推論パスを生成して多数決で最頻回答を選択。GSM8K数学ベンチマークで56%から74%に精度向上。実装方法と活用シーンを詳しく解説します。',
+      dateModified: '2026-11-02',
+      readTime: '12分で読める',
       educationalLevel: 'Intermediate',
-      audience: 'AI・LLM開発者、プロダクトマネージャー、プロンプトエンジニア、研究者',
-      primaryTerm: 'セルフコンシステンシープロンプティング',
-      aboutTopics: ['セルフコンシステンシープロンプティング', 'プロンプトエンジニアリング', '推論精度向上'],
-
+      audience: '信頼性の高いAI推論パイプラインを構築する開発者、AIで重要な判断を行うアナリスト、プロンプトエンジニアリングの研究者',
+      seoTitle: 'Self-Consistencyプロンプト：多数決の仕組み',
+      metaDescription: 'Self-Consistencyプロンプトは複数の推論パスをサンプリングし、多数派の答えを採用します。原論文ではGSM8Kの正答率が56.5%から74.4%に上がりました。',
+      ogDescription: '1つのAI回答は間違っているかもしれません。複数の推論パスをサンプリングして多数派の答えを採用すると、原論文ではPaLM-540BのGSM8K正答率が56.5%から74.4%に上がったと報告されています。',
+      twitterDescription: 'Self-Consistency：同じ質問を温度0超で複数回モデルに投げ、多数派の答えを採用。論文報告のGSM8K：56.5%から74.4%。',
+      primaryTerm: 'Self-Consistencyプロンプト',
       quickFacts: [
-        '論文：Wang et al.（2023）、ICLR。arXiv:2211.11559',
-        '精度向上：GSM8K数学ベンチマークで56%→74%（+18ポイント）',
-        'トークンコスト：線形推論（CoT）の5～20倍。複数パス実行のため',
-        '最適なパス数：通常5～10。20を超えると収益逓減傾向',
-        'ベストモデル：Claude Opus 5、GPT-5.6、Gemini 3.1 Pro',
-        '活用シーン：複雑な推論、医学診断、法的分析、複合計算'
+        '**手法：** 同じ質問に対して5～20の独立した推論パスを生成し、多数決で最も多い答えを採用します。',
+        '**論文：** Wang et al.（2023）、「Self-Consistency Improves Chain of Thought Reasoning in Language Models」、ICLR 2023。',
+        '**主な結果（論文報告）：** GSM8KでPaLM-540Bは、貪欲法のChain-of-Thoughtの56.5%から、Self-Consistency（40パスをサンプリング）の74.4%へ、17.9ポイント向上しました。',
+        '**温度の要件：** 0より大きくする必要があります（温度0では出力が同一になり意味がありません）。論文ではT=0.5～0.7でサンプリングしています。',
+        '**サンプル数：** 論文は、性能が早く頭打ちになるため、5または10パスから始めることを提案しています。',
+        '**コスト：** 1タスクあたりトークン消費は5～20倍。精度がコストより重要な高リスクの推論でのみ正当化されます。',
       ],
-
-      toc: [
-        { label: '重要ポイント', anchor: 'key-takeaways' },
-        { label: 'セルフコンシステンシーとは', anchor: 'what-is-self-consistency' },
-        { label: '精度向上の仕組み', anchor: 'why-it-works' },
-        { label: '実測例：数学問題での改善', anchor: 'accuracy-example' },
-        { label: 'セルフコンシステンシーの実装', anchor: 'how-it-works' },
-        { label: 'CoT vs セルフコンシステンシー vs マルチモデル投票', anchor: 'comparison-table' },
-        { label: '活用シーンと選択基準', anchor: 'when-to-use' },
-        { label: 'よくある実装ミス', anchor: 'common-mistakes' },
-        { label: 'PromptQuorumで試す', anchor: 'in-prompt-quorum' },
-        { label: 'はじめ方', anchor: 'how-to-start' },
-        { label: 'よくある質問', anchor: 'faq' },
-        { label: '参考文献', anchor: 'sources' }
-      ],
-
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Self-Consistencyプロンプト：複数の答えから正解を選ぶ',
+        description: 'Self-Consistencyプロンプトは、複数の推論パスを生成して多数派の答えを採用する手法です。仕組み、論文の報告値、コストを解説します。',
+        datePublished: '2026-03-26',
+        dateModified: '2026-11-02',
+        'url': 'https://www.promptquorum.com/ja/prompt-engineering/self-consistency-prompting',
+        keywords: ['Self-Consistencyプロンプト', 'プロンプトエンジニアリング', '推論プロンプト', '多数決', 'Chain-of-Thought', '精度向上', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'プロンプトエンジニアリング' },
+          { '@type': 'Thing', name: '大規模言語モデル' },
+          { '@type': 'Thing', name: '推論' },
+          { '@type': 'Thing', name: 'Self-Consistency' },
+        ],
+        'proficiencyLevel': 'Intermediate',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        ],
+      },
       sections: {
         tldr: {
-          id: 'key-takeaways',
           title: '重要ポイント',
           isTldr: true,
           content: [
-            'セルフコンシステンシーは、複数の推論パスを生成して投票で答えを決めるプロンプト技法。単一パスより精度が高い',
-            '仕組み：Chain-of-Thoughtで5～20パス生成→最後の答えを多数決→最多票の答えが最終結果',
-            '効果：数学（GSM8K）で56%→74%に改善。複雑な論理問題や医学診断で有効',
-            'トークン費用：5～10パス実行するため、単一推論の5～10倍のコスト',
-            '最適なパス数：5～10。多いほど精度向上するが、20超過は効果減少',
-            '向いている問題：確定的な答えがある数学・ロジック問題。不確定性が高い創作は不向き',
-            'PromptQuorumで複数モデル・パス数で実験可能'
-          ]
+            '**Self-Consistency**は、同じプロンプトに対して5～20の独立した答えを生成し、多数決で結論を選びます。1つの不安定な答えを、統計的に頑健な合意に変えます。',
+            'この手法はWang et al.（2023）が提案しました。論文は、GSM8KでPaLM-540Bが貪欲法のChain-of-Thoughtの56.5%からSelf-Consistency（40パス）の74.4%に上がったと報告しています。',
+            '多様な推論パスを得るため、温度は高め（0.7～1.0）に設定します。温度が低いと出力が同じになり、意味がありません。',
+            '向いているタスク：数学、論理、多段階の分析など、1回の実行では結果が不安定なタスク。',
+            'トレードオフ：1タスクあたりトークン消費が5～20倍になるため、コストより精度が重要な場合に限って使います。',
+            'PromptQuorumはこの考え方をモデル間に広げます。1つのモデルを複数回サンプリングする代わりに、複数のモデルに送って合意を比較します。',
+            'Self-Consistencyはサンプリングの不安定さを、マルチモデル合意はモデル固有の偏りを検出します。両方を組み合わせると信頼性が最大になります。',
+          ],
         },
-
         whatIsSelfConsistency: {
-          id: 'what-is-self-consistency',
-          title: 'セルフコンシステンシーとは',
+          title: 'Self-Consistencyプロンプトとは',
           snippets: [
-            { type: 'in-one-sentence', text: 'セルフコンシステンシーは、温度をゼロより大きく設定して同じ質問を複数回実行し、最も多く現れた答えを採用する手法で、独立した試行間の一致を正しさの代理指標として用います。' },
-            { type: 'in-plain-terms', text: '同じ質問を5回投げて、繰り返し返ってくる答えを採用します。モデルが一度だけ誤った答えに自信を持つことはありますが、同じ間違いを5回続けて起こす可能性はずっと低くなります。' },
+            { type: 'in-one-sentence', text: 'Self-Consistencyプロンプトは、同じ質問を0より高い温度で複数回実行し、最も多く出た答えを採用する手法で、独立した試行間の一致を正しさの目安として使います。' },
+            { type: 'in-plain-terms', text: '同じ質問を5回して、何度も返ってくる答えを採用します。モデルは1回なら間違った答えに自分を説得してしまうことがありますが、5回続けて同じ誤りをする可能性ははるかに低くなります。' },
           ],
           content: [
-            '定義：同じ質問に対してLLMに複数の異なる推論経路を生成させ、最後の答えを投票で決定するプロンプト技法です。',
-            '論文：Wang et al.（2023）ICLR。Princeton / DeepMind による研究。arXiv:2211.11559',
-            '背景：Chain-of-Thought（線形推論）は推論過程を詳述しますが、1パスのため間違う可能性があります。複数パスを生成して多数決することで、偶発的な推論エラーを回避できます。',
-            '簡潔説明：「同じ質問を何度も異なる方法で考えさせて、最多票の答えを選ぶ」',
-            'この手法は教育心理学の「学習中の複数戦略活性化」と類似。人間も複雑な問題では複数の解法を試して最良を選びます。'
+            '**Self-Consistencyプロンプトとは、同じプロンプトに対して独立した答えを複数サンプリングし、最も一貫した結論を選ぶことです。** 1本の思考の連鎖ではなく、異なる可能性のある複数の連鎖を得ます。',
+            '考え方は単純です。モデルが何通りもの方法で推論し、ほとんどのパスが同じ答えに行き着くなら、その答えは1回の実行より信頼できます。パスが割れる場合は、問題が曖昧か難しく、より慎重な確認が必要だとわかります。',
+            'Self-ConsistencyはWang et al.（ICLR 2023）が提案し、算術および常識推論のベンチマークで精度向上を報告しました。この手法は統計学の基本原理を利用しています。多数の独立した推定の合意は、単一の推定より信頼できます。',
+          ],
+        },
+        whyItMatters: {
+          title: 'Self-Consistencyプロンプトが重要な理由',
+          content: [
+            '**Self-Consistencyプロンプトが重要なのは、言語モデルが難しい推論タスクで不安定になり得るからです。サンプリングのわずかな違いで答えが変わることがあります。** 1回ではなく複数回の試行を見ることで、1つのハルシネーションや間違いの影響を減らせます。',
+          ],
+          items: [
+            '数学と論理パズル。',
+            '多段階の分析的な質問。',
+            '小さな推論ミスで結果が変わる、微妙なトレードオフを伴う判断。',
+            '1回の実行の精度が90%を下回る、分野固有の推論。',
           ],
           callouts: [
-            { type: 'did-you-know', label: 'Did You Know', text: 'セルフコンシステンシーの概念は数学教育から着想を得ています。学生が異なるアプローチで同じ問題を解いて答えを確認する方法と同じ。LLMでも複数の「思考プロセス」を実行することで、精度が人間の検証プロセスに近づきます。' }
-          ]
+            { type: 'pro-tip', label: 'プロのヒント', text: '10個の出力を手作業で比べる必要はありません。最後に集約ステップを追加します。N個の答えを新しいプロンプトに貼り付け、「これらは同じ質問への10個の答えです。最も多く出た答えはどれですか。合意した答えと確信度を示してください」と尋ねます。投票はモデルがやってくれます。' },
+          ],
         },
-
-        whyItWorks: {
-          id: 'why-it-works',
-          title: '精度向上の仕組み',
-          content: [
-            '推論パス生成時の多様性：各パスで異なる思考経路が生成されます。これは温度（Temperature）パラメータを高く設定して多様性を確保するため。',
-            '投票メカニズム：複数パスの最終答えを集約します。例えば5パスで答えが「4, 4, 4, 5, 4」なら、4が最多票で最終答え。',
-            'エラー相殺：1パスで起こる計算ミスや論理飛躍が、複数パス中で相殺される確率が高まる。',
-            'ロバスト性：ランダムな推論エラーは複数パスで同じ方向に起こる確率は低い。その結果、投票で正解が選ばれやすくなります。',
-            'モデルの不確実性把握：複数パスの答え分布を見ると、モデルの確信度が視覚化される。全パスが同じ答えなら高確信。分散していれば低確信。'
-          ]
-        },
-
         accuracyExample: {
-          id: 'accuracy-example',
-          title: '実測例：数学問題での改善',
+          title: '論文が報告している内容',
           content: [
-            'ベンチマーク：GSM8K（小学レベル算数8,500問）',
-            '結果：',
-            '  • CoT（単一パス）：56%',
-            '  • セルフコンシステンシー（8パス投票）：74%',
-            '  • 改善：+18ポイント',
-            '他のベンチマーク：',
-            '  • SVAMP（数学単語問題）：83%→90%',
-            '  • AQuA（複合推論）：35%→55%',
-            'パス数による精度変化（GSM8K）：',
-            '  • 1パス（CoT）：56%',
-            '  • 3パス：70%',
-            '  • 5パス：72%',
-            '  • 8パス：74%',
-            '  • 16パス：75%（伸び減少）',
-            'パス数が増えるほど精度は向上しますが、8～10パスで収益逓減傾向になります。'
-          ]
-        },
-
-        howItWorks: {
-          id: 'how-it-works',
-          title: 'セルフコンシステンシーの実装',
-          content: [
-            'ステップ1：基本プロンプトを構成',
-            '  「以下の問題を段階的に解いてください」',
-            '  [問題文]',
-            '',
-            'ステップ2：複数パス生成',
-            '  • Temperature を 0.7～1.0に設定（多様性確保）',
-            '  • 同じプロンプトで5～10回別々に実行',
-            '  • 各実行で異なる推論経路が生成される',
-            '',
-            'ステップ3：答えを抽出',
-            '  • 各パスの最終答え（結論）を記録',
-            '  • 例：5回実行で「42, 42, 43, 42, 42」',
-            '',
-            'ステップ4：投票で決定',
-            '  • 最多票の答えが最終結果',
-            '  • 上記例では「42」が4票で勝利',
-            '',
-            'ステップ5：確信度を表示（オプション）',
-            '  • 最多票数 / 総パス数 = 確信度',
-            '  • 4/5 = 80%確信度'
-          ]
-        },
-
-        selfConsistencyVsMultiModel: {
-          id: 'comparison-table',
-          title: 'CoT vs セルフコンシステンシー vs マルチモデル投票',
-          content: [
-            'この表は3つの推論精度向上手法を比較します：'
+            'Wang et al.（2023）は、Self-Consistency（質問ごとに40の推論パスをサンプリングして多数決）を、算術ベンチマークで貪欲法のChain-of-Thoughtデコードと比較しました。表は論文が報告したPaLM-540Bの結果で、当サイトでは再現していません。',
+            '向上幅は、Chain-of-Thought単独で最も弱いところで大きく（GSM8K +17.9、AQuA +12.5ポイント）、すでに強いところでは小さくなります（AddSub +1.8）。論文のアブストラクトは、StrategyQAで+6.4、ARC-challengeで+3.9も報告しています。これらは2022年当時のモデルと設定の結果であり、あなたのタスクや最新モデルでの向上を保証するものではありません。論文は、Self-Consistencyは計算コストが増えると述べ、性能が早く頭打ちになるため5または10パスから始めることを提案しています。',
+          ],
+          columns: ['ベンチマーク', 'CoT（貪欲法）', 'Self-Consistency', '差'],
+          rows: [
+            { 'ベンチマーク': 'GSM8K', 'CoT（貪欲法）': '56.5%', 'Self-Consistency': '74.4%', '差': '+17.9' },
+            { 'ベンチマーク': 'AQuA', 'CoT（貪欲法）': '35.8%', 'Self-Consistency': '48.3%', '差': '+12.5' },
+            { 'ベンチマーク': 'SVAMP', 'CoT（貪欲法）': '79.0%', 'Self-Consistency': '86.6%', '差': '+7.6' },
+            { 'ベンチマーク': 'ASDiv', 'CoT（貪欲法）': '74.0%', 'Self-Consistency': '81.9%', '差': '+7.9' },
+            { 'ベンチマーク': 'MultiArith', 'CoT（貪欲法）': '94.7%', 'Self-Consistency': '99.3%', '差': '+4.6' },
+            { 'ベンチマーク': 'AddSub', 'CoT（貪欲法）': '91.9%', 'Self-Consistency': '93.7%', '差': '+1.8' },
           ],
           tableFormat: true,
-          columns: [
-            '項目',
-            'Chain-of-Thought',
-            'セルフコンシステンシー',
-            'マルチモデル投票'
-          ],
-          rows: [
-            {
-              '項目': '定義',
-              'Chain-of-Thought': '「段階的に考えてください」と指示して推論過程を詳述',
-              'セルフコンシステンシー': '同じプロンプトで複数パスを生成、最終答えを投票で決定',
-              'マルチモデル投票': '複数の異なるモデル（GPT、Claude、Gemini）で実行、投票で決定'
-            },
-            {
-              '項目': 'パス/モデル数',
-              'Chain-of-Thought': '1パス（単一実行）',
-              'セルフコンシステンシー': '5～10パス（同一モデル）',
-              'マルチモデル投票': '3～5モデル'
-            },
-            {
-              '項目': '精度向上（GSM8K比較）',
-              'Chain-of-Thought': '56%',
-              'セルフコンシステンシー': '74%（+18ポイント）',
-              'マルチモデル投票': '71%（+15ポイント）'
-            },
-            {
-              '項目': 'トークンコスト',
-              'Chain-of-Thought': 'ベースライン',
-              'セルフコンシステンシー': '5～10倍',
-              'マルチモデル投票': '3～5倍（ただしモデル料金異なる）'
-            },
-            {
-              '項目': 'レイテンシ（遅延）',
-              'Chain-of-Thought': '最速',
-              'セルフコンシステンシー': '遅い（複数パス順序実行）',
-              'マルチモデル投票': '中程度（並列実行可）'
-            },
-            {
-              '項目': '向いている問題',
-              'Chain-of-Thought': 'ほぼ全て。推論が必要な問題すべてで基本',
-              'セルフコンシステンシー': '答えが確定的な数学・ロジック問題',
-              'マルチモデル投票': '汎用。モデル間の視点差が有益な場合'
-            },
-            {
-              '項目': 'コスト効率',
-              'Chain-of-Thought': '最高',
-              'セルフコンシステンシー': '低い（複数パスコスト）',
-              'マルチモデル投票': '中程度'
-            }
-          ]
-        },
-
-        whenToUse: {
-          id: 'when-to-use',
-          title: '活用シーンと選択基準',
-          content: [
-            '✅ セルフコンシステンシーが有効な場合：',
-            '  • 数学問題（計算、方程式、確率）',
-            '  • 論理パズル（クイズ、推論問題）',
-            '  • 医学診断（複数症状から病名特定）',
-            '  • 法的分析（契約条項の合意性判定）',
-            '  • コード検証（正しく動くか判定）',
-            '',
-            '❌ セルフコンシステンシーが不向きな場合：',
-            '  • 創作・物語生成（「正解」がない）',
-            '  • テキスト分類（感情判定など確率的な判定）',
-            '  • 機械翻訳（複数の「正解」が存在するが投票は無意味）',
-            '  • 開放的質問（複数視点が正当、統合が難しい）',
-            '',
-            '選択フロー：',
-            '  1. 問題に確定的な答えがあるか？',
-            '     • YES → セルフコンシステンシー検討',
-            '     • NO → 不向き',
-            '  2. 現在の精度で不足しているか？',
-            '     • YES → コスト許容なら実装',
-            '     • NO → CoT単独で十分',
-            '  3. レイテンシが許容か？',
-            '     • YES → セルフコンシステンシー実装',
-            '     • NO → マルチモデル投票検討'
-          ],
           callouts: [
-            { type: 'pro-tip', label: 'Pro Tip', text: '数学問題で試すなら5～8パスから開始。精度とコストのバランスが最良。その後、必要に応じて10パスに拡張するか判断。最初から20パスで実験すると、コスト消費が無駄になりやすい。' }
-          ]
-        },
-
-        commonMistakes: {
-          id: 'common-mistakes',
-          title: 'よくある実装ミス',
-          content: [
-            'ミス1：Temperature = 0で複数パス実行',
-            '  問題：Temperature 0は決定的（毎回同じ答え）。複数パスの意味がない',
-            '  修正：Temperature 0.7～1.0で実行',
-            '',
-            'ミス2：パス数を多すぎるに設定',
-            '  問題：20～50パスは大幅なコスト増だが、精度向上は頭打ち',
-            '  修正：5～10パスで開始。10を超えるのは検証後のみ',
-            '',
-            'ミス3：結果の型チェック忘れ',
-            '  問題：「答え：42」と「42」と「42.0」が混在し、投票が機能しない',
-            '  修正：答えを正規化（数値なら整数に統一、テキストなら小文字に）',
-            '',
-            'ミス4：不透明な投票方式',
-            '  問題：複数答えが同票の場合の処理を決めていない',
-            '  修正：事前に「最初の答えを選ぶ」「全パスを返す」など方針を決定',
-            '',
-            'ミス5：確信度の無視',
-            '  問題：5パス中3パスと2パスで分かれても「最終答え：X」だけ報告',
-            '  修正：「確信度60%」など添える。低い確信度は注記'
+            { type: 'info', label: 'ご存じですか', text: 'GSM8Kで、論文によればPaLM-540Bは貪欲法のChain-of-Thoughtの56.5%からSelf-Consistencyの74.4%に上がりました。ファインチューニングも追加の学習データも不要で、サンプリングと投票だけです。数値は論文の報告値で、当サイトの測定ではありません。' },
           ],
-          callouts: [
-            { type: 'warning', label: 'Warning', text: 'セルフコンシステンシーは正解率向上の「手段」であり「保証」ではありません。複数パスが全て間違えばスコアは0です。特に複雑な推論では、5～8パスでも全て失敗することがあります。常に別検証手段（教師データ、単体テスト）と併用してください。' }
-          ]
         },
-
-        inPromptQuorum: {
-          id: 'in-prompt-quorum',
-          title: 'PromptQuorumで試す',
+        howItWorks: {
+          title: 'Self-Consistencyプロンプトの実践での流れ',
           content: [
-            'PromptQuorum では、セルフコンシステンシープロンプティングを複数モデルで並行テストできます：',
-            '',
-            '1. モデルを選択：Claude Opus 5、GPT-5.6、Gemini 3.1 Pro など',
-            '2. パス数を設定：5、8、10 を比較実験',
-            '3. Temperature を調整：0.7～1.0 で多様性確保',
-            '4. 同じプロンプトで複数実行してパス多様性を検証',
-            '5. 投票メカニズムで最終答えを決定',
-            '',
-            'メリット：',
-            '  • 複数パス自動生成・投票（手作業不要）',
-            '  • モデル間比較（同じセットで全モデルテスト可）',
-            '  • 設定変更で即座に再テスト',
-            '',
-            '使用例：数学ベンチマーク自動評価',
-            '  • GSM8K 10問セット',
-            '  • 各問3モデル × 8パスで投票',
-            '  • 結果：モデル別・パス数別の精度グラフ'
-          ]
-        },
-
-        howToStart: {
-          id: 'how-to-start',
-          title: 'はじめ方',
+            '**実践では、Self-Consistencyプロンプトは2段階で進みます。多様な答えを生成し、それを集約します。** タスクのプロンプトは同じまま、ランダム性を許してモデルに異なる推論パスを探索させます。',
+            '典型的な流れ：',
+          ],
           numberedItems: [
-            '**現在の精度を測定する。** CoT単一パスで実行し、正答率を記録します。',
-            '**セルフコンシステンシーを設定する。** Temperatureを0.7～0.9に設定し、パス数を5に設定します。',
-            '**テストを実行する。** 同じプロンプトで5回実行し、最終答え5つを記録します。',
-            '**投票で決定する。** 最多票の答えを最終結果とし、確信度を計算します。',
-            '**精度を比較する。** セルフコンシステンシーとCoTを比較し、コスト増とのバランスを判定します。',
-            '**必要に応じて最適化する。** パス数を8や10に増やして再テストし、温度調整で多様性を確認します。推奨開始モデル：Claude Opus 5 または GPT-5.6。',
-          ]
+            '推論向けのプロンプト（多くはChain-of-Thoughtの指示付き）を使い、温度を0.7～1.0にして、モデルに多様な説明を出させます。温度はランダム性を制御します。0は決定的（毎回同じ答え）、1.0は最大の多様性です。',
+            '同じプロンプトを複数回（例：5～20回）実行し、最終的な答えをすべて集めます。各実行は独立させます。温度によるサンプリングであり、キャッシュした結果ではありません。',
+            '集約：最も多く出た答えを数えるか、似た答えをクラスタリングします。多数決の答えを最終結果にします。',
+            '必要に応じて、モデルに食い違いを整理させます。「これらは同じ質問への10個の答えです。最も多いのはどれですか。食い違う理由はありますか」。これで確信度のメタデータが得られます。',
+          ],
         },
-
+        selfConsistencyVsMultiModel: {
+          title: 'Self-Consistencyとマルチモデル合意の違い',
+          content: [
+            'Self-Consistencyは同じモデルを複数回サンプリングします。マルチモデル合意は異なるモデルを1回ずつサンプリングします。どちらも、多様な推論パスに対する多数決という同じ原理を使いますが、検出できる失敗の種類が異なります。',
+            'PromptQuorumはマルチモデル合意をネイティブに実現します。1つのプロンプトを複数のモデルに送って比較できます。重要な判断では両方を組み合わせます。主要モデルでSelf-Consistencyを実行し、その合意の答えを2つ目のモデルで確認します。',
+          ],
+          columns: ['アプローチ', '仕組み', '検出できるもの', '盲点'],
+          rows: [
+            { 'アプローチ': 'Self-Consistency（単一モデル）', '仕組み': '同じプロンプト、同じモデル、T=0.7以上で5～20回', '検出できるもの': 'サンプリングの不安定さ、ランダムな誤り', '盲点': 'モデルの系統的な偏り（全サンプルに同じ偏り）' },
+            { 'アプローチ': 'マルチモデル合意', '仕組み': '同じプロンプト、異なるモデル、各1回', '検出できるもの': 'モデル固有の偏り、アーキテクチャ上の盲点', '盲点': '全モデルが同じ学習データの欠落を共有する可能性' },
+            { 'アプローチ': '組み合わせ（最強）', '仕組み': '複数モデル × 各モデル複数サンプル', '検出できるもの': 'ランダムな誤りと系統的な偏りの両方', '盲点': 'コスト：N個のモデル × Mサンプル = N×M回のAPI呼び出し' },
+          ],
+          tableFormat: true,
+        },
+        whenToUse: {
+          title: 'Self-Consistencyプロンプトを使うべき場面',
+          content: [
+            '**間違った答えのコストが高く、タスクに非自明な推論が含まれる場合に、Self-Consistencyプロンプトを使います。** 計算量とレイテンシを、堅牢性と引き換えにします。',
+            '向いているケース：',
+          ],
+          items: [
+            'ビジネスや技術上の判断を左右する分析的な質問。',
+            '論理ミスのコストが大きい複雑なコーディングタスク。',
+            '途中の手順が重要な、教育・試験形式の推論。',
+            '1回の実行が不安定だとすでに確認しているワークフロー。',
+            '数学問題、論理パズル、リサーチの統合、財務分析。',
+          ],
+          columns: ['手法', 'サンプル数', 'コスト', '最適な用途', '精度向上'],
+          rows: [
+            { '手法': '1回の回答（基準）', 'サンプル数': '1', 'コスト': '1×', '最適な用途': '単純で低リスクなタスク', '精度向上': '—' },
+            { '手法': 'Chain-of-Thought', 'サンプル数': '1', 'コスト': '1回、出力は長め', '最適な用途': '数学、論理、段階的な推論', '精度向上': '論文での基準' },
+            { '手法': 'Self-Consistency', 'サンプル数': '5～20', 'コスト': '5～20×', '最適な用途': '難しい推論、高リスク', '精度向上': 'GSM8Kで最大+17.9pt（論文）' },
+            { '手法': 'マルチモデル合意', 'サンプル数': '3～5モデル', 'コスト': '3～5×', '最適な用途': 'モデル固有の偏りの検出', '精度向上': 'タスク次第' },
+            { '手法': '両方の組み合わせ', 'サンプル数': '5 × 3モデル', 'コスト': '15×', '最適な用途': '最大の信頼性', '精度向上': 'タスク次第' },
+          ],
+          tableFormat: true,
+          callouts: [
+            { type: 'warning', label: '警告', text: '温度0のSelf-Consistencyは無意味です。すべてのサンプルが同一の出力になります。多数決に意味を持たせるばらつきを生むには、温度を0.7以上に設定する必要があります。これは最もよくある実装ミスです。' },
+          ],
+        },
+        commonMistakes: {
+          title: 'Self-Consistencyプロンプトのよくある間違い',
+          content: [
+            'Self-Consistencyを損なう落とし穴と、その回避方法：',
+          ],
+          items: [
+            '**温度0（決定的モード）を使う。** 問題点：すべてのサンプルが同一になり、10個の同じ答えに投票しても何もわかりません。対策：温度を0.7～1.0にして多様な推論パスを生成します。',
+            '**単純な事実の質問にSelf-Consistencyを使う。** 問題点：「フランスの首都は？」は毎回「パリ」になります。精度向上なしにトークンを10倍使うことになります。対策：1回の実行の精度が明らかに90%を下回るタスクに限って使います。',
+            '**サンプル数が少なすぎる（2～3）。** 問題点：2サンプルが食い違うと決め手がなく、3サンプルで2対1に割れても合意は弱くなります。対策：5サンプル以上にします。論文は、向上の大部分が早い段階で得られるため、5または10パスから始めることを提案しています。',
+            '**最終的な答えではなく応答全文で投票する。** 問題点：2つの応答がまったく異なる推論パスで同じ答えに至ることがあります。テキスト比較では違うと判定され、答えの比較では一致します。対策：最終的な答えだけを抽出し（「Answer: X」形式を要求）、それで投票します。',
+          ],
+        },
+        inPromptQuorum: {
+          title: 'PromptQuorumでのSelf-Consistencyプロンプト',
+          content: [
+            '**PromptQuorumはマルチモデルAIディスパッチツールで、複数の答えを簡単に生成・比較できるため、Self-Consistencyプロンプトを自然に補完します。** 「1つのモデルでの複数回実行」と「1つのプロンプトでの複数モデル」を、2層の一貫性チェックとして扱えます。',
+            'PromptQuorumでできること：',
+          ],
+          items: [
+            '推論向けのフレームワーク（TRACEやAPEなど）を再利用し、モデルごとに複数回実行して多様な思考の連鎖を集めます。',
+            '同じ推論プロンプトを複数のモデルで並べて実行し、同じ答えに収束するかを確認します。',
+            'Self-Consistencyのワークフローをテンプレートとして保存し、チームが「複数回サンプリングして集約する」パターンを一から設計せずに繰り返し使えるようにします。',
+          ],
+        },
+        howToStart: {
+          title: 'Self-Consistencyプロンプトの使い方',
+          numberedItems: [
+            '**複雑な推論タスクでは、同じプロンプトから5～10個の出力を生成します。** 同じ質問を5回します。5つの異なる応答が得られます。',
+            '**出力を分析して一貫したパターン（「合意」）を見つけます。** 5つのうち4つが同じ答えなら、その一致が確信度のシグナルです。5つともバラバラなら、タスクが曖昧か、プロンプトの改善が必要です。',
+            '**調査や知識タスクでのハルシネーション検出にSelf-Consistencyを使います。** 「フランスの首都は？」に対して3つが「パリ」、2つが「リヨン」なら、合意（パリ）が答えです。ばらばらの都市が返ってくる場合、モデルはハルシネーションしています。',
+            '**多様な出力を促すため、温度（T）を高め（0.7～1.0）にします。** 低い温度（T=0）では毎回同じ決定的な出力になり、意味がありません。Self-Consistencyは合意を見つけるためにばらつきを必要とします。',
+            '**コストが許す本番パイプラインでSelf-Consistencyを導入します。** 生成を5～10倍実行するのは高コストですが、重要な判断（医療、金融、リサーチの統合）では、合意のシグナルがそのコストを正当化します。',
+          ],
+        },
         relatedReading: {
-          id: 'related-reading',
           title: '関連記事',
-          content: [
-            '[Chain-of-Thoughtプロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) — セルフコンシステンシーの基盤となる線形推論手法',
-            '[プロンプトエンジニアリングとは](/ja/prompt-engineering/what-is-prompt-engineering) — 基礎知識',
-            'マルチステップ推論と分解 — 大型問題を分割する手法',
-            '[Few-Shotプロンプティング](/ja/prompt-engineering/zero-shot-vs-few-shot) — 例示による精度向上',
-            '[モデル選択ガイド](/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Claude Opus 5、GPT-5.6、Gemini 3.1 Pro 比較',
-            '[プロンプト検証戦略](/ja/prompt-engineering/prompt-evaluation-metrics) — 精度測定とA/Bテスト'
-          ]
+          items: [
+            '[Chain-of-Thoughtプロンプト](/ja/prompt-engineering/chain-of-thought-prompting) — Self-Consistencyが複数パスへ拡張する、単一パスの推論手法',
+            '[Tree-of-ThoughtとReAct](/ja/prompt-engineering/tree-of-thought-and-react) — Self-Consistencyに関連する分岐型の推論アプローチ',
+            '[プロンプトインジェクションとセキュリティ](/ja/prompt-engineering/prompt-injection-and-security) — 複数サンプルのパイプラインを実装するときのセキュリティ上の考慮点',
+            '[TemperatureとTop-P](/ja/prompt-engineering/temperature-and-top-p-control-ai-creativity) — Self-Consistencyを機能させるサンプリングパラメータ',
+            '[プロンプトチェーン](/ja/prompt-engineering/prompt-chaining) — 各ステップでSelf-Consistencyを適用できる多段階ワークフロー',
+            '[AIハルシネーション：検出と対策](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — ハルシネーション検出手法としてのSelf-Consistency',
+          ],
         },
-
         sources: {
-          id: 'sources',
-          title: '参考文献',
-          content: [
-            'Wang et al. (2023). "Self-Consistency Improves Chain of Thought Reasoning in Language Models." ICLR 2023. arXiv:2211.11559',
-            'Wei et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903',
-            'Cobbe et al. (2021). "Training Verifiers to Solve Math Word Problems." OpenAI. arXiv:2110.14168',
-            'Uesato et al. (2022). "Solving Mixed-Modal Jailbreak Prompts by Decomposition." DeepMind.',
-            'Anthropic (2026). "Extended Thinking in Claude — Making Longer Chains of Thought." Claude API Documentation.',
-            'OpenAI (2026). "Reasoning in o3 and GPT-5.6 — Model Behavior and Prompting Guidance." OpenAI API Docs.'
-          ]
+          title: '出典',
+          items: [
+            '[Wang et al. (2023). "Self-Consistency Improves Chain of Thought Reasoning in Language Models." ICLR 2023. arXiv:2203.11171](https://arxiv.org/abs/2203.11171) — 推論パスに対する多数決でSelf-Consistencyを導入した基礎論文',
+            '[Wei et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903](https://arxiv.org/abs/2201.11903) — Self-Consistencyの土台となるChain-of-Thought論文',
+            '[Brown et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165](https://arxiv.org/abs/2005.14165) — CoTとSelf-Consistencyの両方を可能にするインコンテキスト学習の基礎研究',
+            '[Anthropic. "Prompt Engineering Guide." docs.anthropic.com](https://docs.anthropic.com) — 本番環境での温度調整とサンプリングのベストプラクティス',
+          ],
         },
         faqSection: {
           id: 'faq',
           title: 'よくある質問',
           faqs: [
-            { q: 'セルフコンシステンシープロンプティングとは？', a: 'セルフコンシステンシープロンプティングは、同じ質問に複数の独立した回答を生成し——各々が独自の推論パスを持つ——その後、最も頻繁に現れる答えを選択する技術です。1つのAI回答を信頼する代わりに、多くの回答の合意に依存します。2023年にWang et al.によって導入され、数学、論理、および多段階推論タスクの精度を大幅に向上させます。' },
-            { q: 'セルフコンシステンシーには何個のサンプルが必要ですか？', a: 'ほとんどのタスクでは、5～10サンプルが最良の精度対コスト比を提供します。元の論文は1から5サンプルまで精度が急速に向上し、20を超えると収穫逓減を示していることを示しました。20から40サンプルへの移行はGSM8Kで2パーセントポイントのみを追加しました。5から始めます。高リスク決定でのみ10～20に増加させます。' },
-            { q: 'セルフコンシステンシーは単純なタスクで機能しますか？', a: '大きな意味では機能しません。事実検索、単純な分類、または短編の執筆については、単一の回答はほぼ常に十分で、はるかに安価です。セルフコンシステンシーはモデルの単一パス精度が～90%未満のタスク——通常は数学、ロジックパズル、多段階分析、複雑な推論——でのみ値を追加します。' },
-            { q: 'セルフコンシステンシーにはどの温度を使用すればよいですか？', a: '温度を0.7～1.0に設定します。この技術は異なる推論パスを必要とします——温度が0（決定論的）の場合、各サンプルは同じ出力を生成し、投票は無意味になります。より高い温度は多数決投票を有益にする変動を生成します。' },
-            { q: 'セルフコンシステンシーはどのくらい多くのコストがかかりますか？', a: '1つの代わりに5～20の完全な応答を生成するため、タスクあたり大体5～20倍のトークンです。$0.01の費用がかかる応答の場合、10サンプルでのセルフコンシステンシーは$0.10かかります。これは重大な決定（財務分析、医学的推論、法的解釈）に対しては正当化されますが、日常的なタスクに対しては無駄です。' },
-            { q: 'セルフコンシステンシーは「ベストオブN」サンプリングと同じですか？', a: '同様ですが同一ではありません。ベストオブNはN個の応答を生成し、最高のものを選択します（多くの場合、品質スコアラーによる）。セルフコンシステンシーはN個の推論パスを生成し、最も一般的な答えを選択します——投票は質の上ではなく結論の上です。セルフコンシステンシーは品質スコアラーを必要としません。合意をシグナルとして使用します。' },
-            { q: 'セルフコンシステンシーをチェーンオブソートプロンプティングで使用できますか？', a: 'はい——これが元の最も効果的な組み合わせです。N個のサンプルのそれぞれが推論の連鎖を使用し、完全な推論トレースと最終的な答えを生成します。その後、すべてのNトレース全体で最終的な答えについて投票します。推論パスは異なる可能性がありますが、ほとんどが同じ結論に達する場合、その結論は堅牢です。' },
-            { q: 'PromptQuorumはセルフコンシステンシーにどのように関連していますか？', a: 'PromptQuorumは、1つのモデル内ではなく異なるモデル全体に同じコンセンサス原則を適用します。同じモデルに10回質問する代わりに、5つの異なるモデルに1回ずつ質問し、それらの答えを比較します。同意するところ、信頼度は高いです。意見が異なるところ、請求は検証が必要です。これにより、単一モデルのセルフコンシステンシーが検出できないモデル固有のバイアスをキャッチします。' },
-            { q: '何パス生成すればいいですか？', a: '推奨は5～10パス。パス数が増えるほど精度は向上しますが、8パス以上では改善が頭打ち傾向。20パスを超えるとコスト増加に対して精度向上が望めません。最初は5パスで試し、必要に応じて8に拡張することをお勧めします。' },
-            { q: 'トークンコストはどのくらい増えますか？', a: 'セルフコンシステンシーは複数パス実行するため、単一推論の5～10倍のトークンを消費します。例えば、Claude Opus 5で1回5,000トークン生成なら、8パスで40,000トークン。高精度が必須な場合のみ使用をお勧めします。' },
-            { q: 'どのモデルがセルフコンシステンシーに向いていますか？', a: '2026年現在、Claude Opus 5、GPT-5.6、Gemini 3.1 Pro が推奨。これらは高い推論能力を持ち、複数パスの多様性が得やすい。オープンソースモデル（Llama、Qwen）でも可能ですが、閉鎖的なモデルほど効果が顕著です。' },
-            { q: 'セルフコンシステンシーが向いていない場面は？', a: '創作・物語生成（「正解」がない）、テキスト分類（感情判定など不確定）、機械翻訳（複数の正解が並立）、開放的質問（視点多様化が意味をなさない）などには不向き。確定的な答えが存在する問題に限定すれば有効です。' },
-            { q: '複数パスの答えが同票になったらどうしますか？', a: '同票の場合の処理を事前に決定することが重要。「最初の答えを選ぶ」「全パスを返す」「ユーザーに複数案を提示」など、目的に応じて方針を決めておきましょう。確信度が低いため、必ず注記をつけることをお勧めします。' },
+            { q: 'Self-Consistencyプロンプトとは何ですか？', a: 'Self-Consistencyプロンプトは、同じ質問に対して独立した答えを、それぞれ別の推論パスで複数生成し、最も多く出た答えを採用する手法です。1つのAI応答を信頼する代わりに、多数の応答の合意を信頼します。Wang et al.（2023）が提案し、算術および常識推論のベンチマークで精度向上を報告しました。' },
+            { q: 'Self-Consistencyには何サンプル必要ですか？', a: 'ほとんどのタスクでは5～10サンプルから始めてください。原論文は、パスを増やすと性能が早く頭打ちになると述べ、5または10から始めることを提案しています。サンプルを1つ増やすごとに、完全な応答がもう1つ必要になります。まず5で始め、高リスクの判断に限って10～20に増やします。' },
+            { q: 'Self-Consistencyは単純なタスクにも有効ですか？', a: '意味のある効果はありません。事実の検索、単純な分類、短い文章作成では、1回の回答でほぼ十分で、はるかに安く済みます。Self-Consistencyが価値を持つのは、モデルの1回あたりの精度が約90%を下回るタスク、つまり数学、論理パズル、多段階の分析、複雑な推論です。' },
+            { q: 'Self-Consistencyではどの温度を使うべきですか？', a: '温度は0.7～1.0に設定します。この手法には多様な推論パスが必要です。温度が0（決定的）だと、すべてのサンプルが同一の出力になり、投票に意味がありません。温度を高くすると、多数決を意味のあるものにするばらつきが生まれます。' },
+            { q: 'Self-Consistencyのコストはどれくらい増えますか？', a: '1つではなく5～20個の完全な応答を生成するため、1タスクあたりのトークンはおよそ5～20倍になります。1回あたり0.01ドルの応答なら、10サンプルのSelf-Consistencyは0.10ドルです。重要な判断（財務分析、医療推論、法的解釈）では正当化できますが、日常的なタスクでは無駄になります。' },
+            { q: 'Self-Consistencyは「best-of-N」サンプリングと同じですか？', a: '似ていますが同じではありません。Best-of-NはN個の応答を生成し、（多くは品質スコアラーで）最良のものを選びます。Self-Consistencyは、N個の推論パスを生成し、最も多い答えを選びます。投票の対象は品質ではなく結論です。品質スコアラーは不要で、一致をシグナルとして使います。' },
+            { q: 'Self-ConsistencyはChain-of-Thoughtプロンプトと併用できますか？', a: 'はい。これが元の、最も効果的な組み合わせです。N個のサンプルそれぞれがChain-of-Thoughtで推論し、完全な推論過程と最終的な答えを出します。そのN個すべての最終的な答えで投票します。推論パスは異なっていても、大半が同じ結論に達すれば、その結論は堅牢です。' },
+            { q: 'PromptQuorumはSelf-Consistencyとどう関係しますか？', a: 'PromptQuorumは、同じ合意の原理を1つのモデル内ではなく、異なるモデル間に適用します。同じモデルに10回尋ねる代わりに、5つの異なるモデルに1回ずつ尋ねて答えを比較します。一致すれば確信度は高く、食い違えばその主張は検証が必要です。これにより、単一モデルのSelf-Consistencyでは検出できない、モデル固有の偏りを捉えられます。' },
           ],
         },
       },
-
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'ja',
         mainEntity: [
-          {
-            '@type': 'Question',
-            'name': 'セルフコンシステンシープロンプティングとは？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'セルフコンシステンシープロンプティングは、同じ質問に複数の独立した回答を生成し——各々が独自の推論パスを持つ——その後、最も頻繁に現れる答えを選択する技術です。1つのAI回答を信頼する代わりに、多くの回答の合意に依存します。2023年にWang et al.によって導入され、数学、論理、および多段階推論タスクの精度を大幅に向上させます。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'セルフコンシステンシーには何個のサンプルが必要ですか？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'ほとんどのタスクでは、5～10サンプルが最良の精度対コスト比を提供します。元の論文は1から5サンプルまで精度が急速に向上し、20を超えると収穫逓減を示していることを示しました。20から40サンプルへの移行はGSM8Kで2パーセントポイントのみを追加しました。5から始めます。高リスク決定でのみ10～20に増加させます。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'セルフコンシステンシーは単純なタスクで機能しますか？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '大きな意味では機能しません。事実検索、単純な分類、または短編の執筆については、単一の回答はほぼ常に十分で、はるかに安価です。セルフコンシステンシーはモデルの単一パス精度が～90%未満のタスク——通常は数学、ロジックパズル、多段階分析、複雑な推論——でのみ値を追加します。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'セルフコンシステンシーにはどの温度を使用すればよいですか？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '温度を0.7～1.0に設定します。この技術は異なる推論パスを必要とします——温度が0（決定論的）の場合、各サンプルは同じ出力を生成し、投票は無意味になります。より高い温度は多数決投票を有益にする変動を生成します。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'セルフコンシステンシーはどのくらい多くのコストがかかりますか？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '1つの代わりに5～20の完全な応答を生成するため、タスクあたり大体5～20倍のトークンです。$0.01の費用がかかる応答の場合、10サンプルでのセルフコンシステンシーは$0.10かかります。これは重大な決定（財務分析、医学的推論、法的解釈）に対しては正当化されますが、日常的なタスクに対しては無駄です。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'セルフコンシステンシーは「ベストオブN」サンプリングと同じですか？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '同様ですが同一ではありません。ベストオブNはN個の応答を生成し、最高のものを選択します（多くの場合、品質スコアラーによる）。セルフコンシステンシーはN個の推論パスを生成し、最も一般的な答えを選択します——投票は質の上ではなく結論の上です。セルフコンシステンシーは品質スコアラーを必要としません。合意をシグナルとして使用します。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'セルフコンシステンシーをチェーンオブソートプロンプティングで使用できますか？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'はい——これが元の最も効果的な組み合わせです。N個のサンプルのそれぞれが推論の連鎖を使用し、完全な推論トレースと最終的な答えを生成します。その後、すべてのNトレース全体で最終的な答えについて投票します。推論パスは異なる可能性がありますが、ほとんどが同じ結論に達する場合、その結論は堅牢です。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'PromptQuorumはセルフコンシステンシーにどのように関連していますか？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'PromptQuorumは、1つのモデル内ではなく異なるモデル全体に同じコンセンサス原則を適用します。同じモデルに10回質問する代わりに、5つの異なるモデルに1回ずつ質問し、それらの答えを比較します。同意するところ、信頼度は高いです。意見が異なるところ、請求は検証が必要です。これにより、単一モデルのセルフコンシステンシーが検出できないモデル固有のバイアスをキャッチします。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '何パス生成すればいいですか？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '推奨は5～10パス。パス数が増えるほど精度は向上しますが、8パス以上では改善が頭打ち傾向。20パスを超えるとコスト増加に対して精度向上が望めません。最初は5パスで試し、必要に応じて8に拡張することをお勧めします。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'トークンコストはどのくらい増えますか？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'セルフコンシステンシーは複数パス実行するため、単一推論の5～10倍のトークンを消費します。例えば、Claude Opus 5で1回5,000トークン生成なら、8パスで40,000トークン。高精度が必須な場合のみ使用をお勧めします。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'どのモデルがセルフコンシステンシーに向いていますか？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '2026年現在、Claude Opus 5、GPT-5.6、Gemini 3.1 Pro が推奨。これらは高い推論能力を持ち、複数パスの多様性が得やすい。オープンソースモデル（Llama、Qwen）でも可能ですが、閉鎖的なモデルほど効果が顕著です。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'セルフコンシステンシーが向いていない場面は？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '創作・物語生成（「正解」がない）、テキスト分類（感情判定など不確定）、機械翻訳（複数の正解が並立）、開放的質問（視点多様化が意味をなさない）などには不向き。確定的な答えが存在する問題に限定すれば有効です。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '複数パスの答えが同票になったらどうしますか？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '同票の場合の処理を事前に決定することが重要。「最初の答えを選ぶ」「全パスを返す」「ユーザーに複数案を提示」など、目的に応じて方針を決めておきましょう。確信度が低いため、必ず注記をつけることをお勧めします。',
-            },
-          },
-        ]
+          { '@type': 'Question', name: 'Self-Consistencyプロンプトとは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'Self-Consistencyプロンプトは、同じ質問に対して独立した答えを、それぞれ別の推論パスで複数生成し、最も多く出た答えを採用する手法です。1つのAI応答を信頼する代わりに、多数の応答の合意を信頼します。Wang et al.（2023）が提案し、算術および常識推論のベンチマークで精度向上を報告しました。' } },
+          { '@type': 'Question', name: 'Self-Consistencyには何サンプル必要ですか？', acceptedAnswer: { '@type': 'Answer', text: 'ほとんどのタスクでは5～10サンプルから始めてください。原論文は、パスを増やすと性能が早く頭打ちになると述べ、5または10から始めることを提案しています。サンプルを1つ増やすごとに、完全な応答がもう1つ必要になります。まず5で始め、高リスクの判断に限って10～20に増やします。' } },
+          { '@type': 'Question', name: 'Self-Consistencyは単純なタスクにも有効ですか？', acceptedAnswer: { '@type': 'Answer', text: '意味のある効果はありません。事実の検索、単純な分類、短い文章作成では、1回の回答でほぼ十分で、はるかに安く済みます。Self-Consistencyが価値を持つのは、モデルの1回あたりの精度が約90%を下回るタスク、つまり数学、論理パズル、多段階の分析、複雑な推論です。' } },
+          { '@type': 'Question', name: 'Self-Consistencyではどの温度を使うべきですか？', acceptedAnswer: { '@type': 'Answer', text: '温度は0.7～1.0に設定します。この手法には多様な推論パスが必要です。温度が0（決定的）だと、すべてのサンプルが同一の出力になり、投票に意味がありません。温度を高くすると、多数決を意味のあるものにするばらつきが生まれます。' } },
+          { '@type': 'Question', name: 'Self-Consistencyのコストはどれくらい増えますか？', acceptedAnswer: { '@type': 'Answer', text: '1つではなく5～20個の完全な応答を生成するため、1タスクあたりのトークンはおよそ5～20倍になります。1回あたり0.01ドルの応答なら、10サンプルのSelf-Consistencyは0.10ドルです。重要な判断（財務分析、医療推論、法的解釈）では正当化できますが、日常的なタスクでは無駄になります。' } },
+          { '@type': 'Question', name: 'Self-Consistencyは「best-of-N」サンプリングと同じですか？', acceptedAnswer: { '@type': 'Answer', text: '似ていますが同じではありません。Best-of-NはN個の応答を生成し、（多くは品質スコアラーで）最良のものを選びます。Self-Consistencyは、N個の推論パスを生成し、最も多い答えを選びます。投票の対象は品質ではなく結論です。品質スコアラーは不要で、一致をシグナルとして使います。' } },
+          { '@type': 'Question', name: 'Self-ConsistencyはChain-of-Thoughtプロンプトと併用できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。これが元の、最も効果的な組み合わせです。N個のサンプルそれぞれがChain-of-Thoughtで推論し、完全な推論過程と最終的な答えを出します。そのN個すべての最終的な答えで投票します。推論パスは異なっていても、大半が同じ結論に達すれば、その結論は堅牢です。' } },
+          { '@type': 'Question', name: 'PromptQuorumはSelf-Consistencyとどう関係しますか？', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorumは、同じ合意の原理を1つのモデル内ではなく、異なるモデル間に適用します。同じモデルに10回尋ねる代わりに、5つの異なるモデルに1回ずつ尋ねて答えを比較します。一致すれば確信度は高く、食い違えばその主張は検証が必要です。これにより、単一モデルのSelf-Consistencyでは検出できない、モデル固有の偏りを捉えられます。' } },
+        ],
       },
-
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        name: 'Chain-of-Thought vs セルフコンシステンシー vs マルチモデル投票比較',
-        numberOfItems: 7,
+        name: 'Self-Consistencyプロンプトと他の手法の比較',
+        numberOfItems: 5,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: '定義', description: 'Chain-of-Thoughtは段階的思考指示、セルフコンシステンシーは複数パス投票、マルチモデル投票は異モデル投票' },
-          { '@type': 'ListItem', position: 2, name: 'パス/モデル数', description: 'CoT=1パス、セルフコンシステンシー=5～10パス、マルチモデル=3～5モデル' },
-          { '@type': 'ListItem', position: 3, name: '精度向上', description: 'CoT=56%、セルフコンシステンシー=74%（+18pt）、マルチモデル=71%（+15pt）' },
-          { '@type': 'ListItem', position: 4, name: 'トークンコスト', description: 'CoT=ベース、セルフコンシステンシー=5～10倍、マルチモデル=3～5倍' },
-          { '@type': 'ListItem', position: 5, name: 'レイテンシ', description: 'CoT=最速、セルフコンシステンシー=低速（順序実行）、マルチモデル=中程度' },
-          { '@type': 'ListItem', position: 6, name: '向いている問題', description: 'CoT=全般的、セルフコンシステンシー=数学・ロジック、マルチモデル=汎用・視点差有益' },
-          { '@type': 'ListItem', position: 7, name: 'コスト効率', description: 'CoT=最高、セルフコンシステンシー=低い、マルチモデル=中程度' }
-        ]
+          { '@type': 'ListItem', position: 1, name: '1回の回答（基準）', description: '1回の実行、1×コスト、単純なタスク' },
+          { '@type': 'ListItem', position: 2, name: 'Chain-of-Thought', description: '推論付きの1回の実行、出力は長め、中程度のタスク' },
+          { '@type': 'ListItem', position: 3, name: 'Self-Consistency', description: '投票付きの5～20回の実行、5～20×コスト、難しい推論' },
+          { '@type': 'ListItem', position: 4, name: 'マルチモデル合意', description: '3～5モデル、3～5×コスト、モデルの偏りを検出' },
+          { '@type': 'ListItem', position: 5, name: '両方の組み合わせ', description: '5サンプル × 3モデル、15×コスト、最大の信頼性' },
+        ],
       },
-
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        headline: 'セルフコンシステンシープロンプティング：複数の答えを生成して正しいものを選ぶ',
-        description: '複数の推論パスを生成して投票で答えを選ぶセルフコンシステンシープロンプティング。GSM8K数学ベンチマークで56%→74%に改善。実装方法と活用シーンを詳解。',
-        datePublished: '2026-03-26',
-        dateModified: '2026-08-31',
-        url: 'https://www.promptquorum.com/ja/prompt-engineering/self-consistency-prompting',
-        inLanguage: 'ja',
-        keywords: [
-          'セルフコンシステンシー',
-          'セルフコンシステンシープロンプティング',
-          'プロンプトエンジニアリング',
-          '推論精度',
-          '複数パス',
-          'LLM',
-          'AI',
-          'PromptQuorum'
-        ],
-        author: { '@type': 'Organization', name: 'PromptQuorum' },
-        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        about: [
-          { '@type': 'Thing', name: 'セルフコンシステンシープロンプティング' },
-          { '@type': 'Thing', name: 'プロンプトエンジニアリング' },
-          { '@type': 'Thing', name: '推論精度向上' },
-          { '@type': 'Thing', name: 'LLMエンジニアリング' }
-        ],
-        mentions: [
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 5' },
-          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' }
-        ],
-        'proficiencyLevel': 'Intermediate',
-        speakable: {
-          '@type': 'SpeakableSpecification',
-          cssSelector: ['.article-intro', '.key-takeaways']
-        }
-      }
     },
     zh: {
       freshness_tier: 'semi_annual',
-      theme: '技术',
+      theme: 'Techniques',
       heroImage: '/images/self-consistency-prompting-overview-hero-zh.webp',
-      title: '自洽一致性提示：生成多个答案，投票选择最佳答案',
-      intro: '**自洽一致性提示（Self-Consistency）让模型对同一个问题生成5-20条独立的推理路径，然后投票选择出现最频繁的答案。** 这个简单的技巧将数学、逻辑和复杂分析的准确率从56%提升到74%，比单次Chain-of-Thought推理提高18个百分点。',
-      leadAnswerBlock: '**自洽一致性：用更高的Temperature（0.7-1.0）让同一个提示词生成5-20条不同的推理路径，然后用多数投票选择最终答案。相比单一推理，这个方法在数学基准上从56%提升到74%。权衡：消耗5-20倍的token，但精度显著提升。**',
+      title: 'Self-Consistency提示：生成多个答案，选出正确的那个',
+      intro: '**Self-Consistency提示会针对同一个问题采样多条独立的推理路径，并选出出现次数最多的答案。** 与其相信可能出错的单个答案，不如用较高的温度多问几次，让多数投票来决定。',
+      leadAnswerBlock: '**Self-Consistency提示把同一个问题以高于零的温度多次交给模型，然后选取多数答案。原论文中，40次采样使PaLM-540B在GSM8K上的准确率从56.5%提高到74.4%。代价：每次采样一条完整回答。**',
       publishDate: '2026-03-26',
-      dateModified: '2026-08-31',
-      readTime: '阅读约11分钟',
-      seoTitle: '自洽一致性提示：多采样投票法精度提升18%，完整实现和企业应用指南',
-      metaDescription: '自洽一致性提示生成多个推理路径投票选择最频繁答案。GSM8K数学精度从56%提升到74%。包含完整实现步骤和金融、医疗、法律企业部署指南。',
+      dateModified: '2026-11-02',
+      readTime: '阅读约12分钟',
       educationalLevel: 'Intermediate',
-      audience: 'AI工程师、产品经理、提示工程师、企业技术团队',
-      primaryTerm: '自洽一致性提示',
-      aboutTopics: ['自洽一致性提示', '提示工程', '推理精度', 'AI系统'],
-
+      audience: '构建可靠AI推理流程的开发者、用AI做高风险决策的分析师、提示工程研究者',
+      seoTitle: 'Self-Consistency提示：多数投票如何选出答案',
+      metaDescription: 'Self-Consistency提示采样多条推理路径并选取多数答案。原论文中GSM8K准确率从56.5%提高到74.4%，本文说明原理、适用场景与成本。',
+      ogDescription: '单个AI答案可能出错。采样多条推理路径并选取多数答案：原论文报告PaLM-540B在GSM8K上从56.5%提高到74.4%。',
+      twitterDescription: 'Self-Consistency：用高于0的温度把同一问题多次交给模型，选取多数答案。论文报告的GSM8K：56.5%到74.4%。',
+      primaryTerm: 'Self-Consistency提示',
       quickFacts: [
-        '论文：Wang et al.（2023）ICLR。arXiv:2211.11559',
-        '精度提升：GSM8K数学基准从56%→74%（+18个百分点）',
-        'Token成本：比单次推理多消耗5-20倍。8次采样则为8倍',
-        '最优采样数：5-10次。超过20次效果递减',
-        '最佳模型：Claude Opus 5、GPT-5.6、Gemini 3.1 Pro',
-        '适用场景：确定性答案问题（数学、诊断、法律分析、代码审计）'
+        '**方法：** 针对同一问题生成5-20条独立推理路径，再用多数投票选出最常出现的答案。',
+        '**论文：** Wang et al.（2023），“Self-Consistency Improves Chain of Thought Reasoning in Language Models”，ICLR 2023。',
+        '**关键结果（论文报告）：** PaLM-540B在GSM8K上从贪心Chain-of-Thought的56.5%提高到Self-Consistency（采样40条路径）的74.4%，提升17.9个百分点。',
+        '**温度要求：** 必须大于0（温度为0时输出完全相同，失去意义）；论文使用T=0.5-0.7采样。',
+        '**采样数量：** 论文建议从5条或10条路径开始，因为性能很快趋于饱和。',
+        '**成本：** 每个任务多消耗5-20倍token；仅在准确率比成本更重要的高风险推理中值得使用。',
       ],
-
-      toc: [
-        { label: '核心要点', anchor: 'key-takeaways' },
-        { label: '自洽一致性是什么', anchor: 'what-is-self-consistency' },
-        { label: '为什么有效', anchor: 'why-it-works' },
-        { label: '实际数字展示', anchor: 'accuracy-example' },
-        { label: '如何实现', anchor: 'how-it-works' },
-        { label: '对比：CoT vs 自洽一致性 vs 多模型投票', anchor: 'comparison-table' },
-        { label: '何时使用', anchor: 'when-to-use' },
-        { label: '常见实现错误', anchor: 'common-mistakes' },
-        { label: '在PromptQuorum中使用', anchor: 'in-prompt-quorum' },
-        { label: '快速开始', anchor: 'how-to-start' },
-        { label: '常见问题', anchor: 'faq' },
-        { label: '参考文献', anchor: 'sources' }
-      ],
-
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Self-Consistency提示：生成多个答案，选出正确的那个',
+        description: 'Self-Consistency提示通过生成多条推理路径并选取多数答案来提高推理准确率。本文介绍原理、论文报告的结果和成本。',
+        datePublished: '2026-03-26',
+        dateModified: '2026-11-02',
+        'url': 'https://www.promptquorum.com/zh/prompt-engineering/self-consistency-prompting',
+        keywords: ['Self-Consistency提示', '提示工程', '推理提示', '多数投票', 'Chain-of-Thought', '准确率提升', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: '提示工程' },
+          { '@type': 'Thing', name: '大语言模型' },
+          { '@type': 'Thing', name: '推理' },
+          { '@type': 'Thing', name: 'Self-Consistency' },
+        ],
+        'proficiencyLevel': 'Intermediate',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        ],
+      },
       sections: {
         tldr: {
-          id: 'key-takeaways',
           title: '核心要点',
           isTldr: true,
           content: [
-            '自洽一致性：生成5-20条推理路径，投票选择最频繁的答案。精度显著高于单次推理',
-            '效果：数学问题准确率从56%提升到74%。复杂逻辑、医学诊断、法律分析效果明显',
-            '成本：消耗5-20倍token。仅在高价值决策中使用才划算',
-            '最优参数：5-10次采样最佳。温度(Temperature)必须0.7-1.0才能生成多样路径',
-            '不适用：创意写作、开放式问题、不确定性强的任务都不适合用自洽一致性',
-            '企业部署：满足中国数据安全法要求。本地推理模型可完全控制数据流向',
-            'PromptQuorum：跨模型投票，捕捉模型特定偏见，提升企业级可靠性'
-          ]
+            '**Self-Consistency**对同一提示生成5-20个独立答案，再用多数投票选出结论，把一个不稳定的答案变成统计上更稳健的共识。',
+            '该方法由Wang et al.（2023）提出。论文报告PaLM-540B在GSM8K上从贪心Chain-of-Thought的56.5%提高到Self-Consistency（采样40条路径）的74.4%。',
+            '用较高的温度（0.7-1.0）生成多样的推理路径；温度过低会输出相同内容，失去意义。',
+            '适用于：数学、逻辑、多步骤分析，以及单次运行明显不稳定的任务。',
+            '权衡：每个任务多消耗5-20倍token，只在准确率比成本更重要时使用。',
+            'PromptQuorum把这一思路扩展到多个模型：不是对一个模型多次采样，而是把提示发给多个模型并比较共识。',
+            'Self-Consistency可发现采样不稳定，多模型共识可发现模型特有的偏差。两者结合可获得最高可靠性。',
+          ],
         },
-
         whatIsSelfConsistency: {
-          id: 'what-is-self-consistency',
-          title: '自洽一致性是什么',
+          title: 'Self-Consistency提示是什么',
           snippets: [
-            { type: 'in-one-sentence', text: '自洽一致性提示会在非零温度下多次运行同一个问题，并选取出现次数最多的答案，把多次独立尝试之间的一致性当作正确性的替代指标。' },
-            { type: 'in-plain-terms', text: '把同一个问题问五遍，采用反复出现的那个答案。模型偶尔会说服自己接受一个错误结论，但连续五次都拐进同一个错误弯道的可能性要小得多。' },
+            { type: 'in-one-sentence', text: 'Self-Consistency提示在非零温度下多次运行同一个问题，并采用出现最多的答案，以多次独立尝试之间的一致性作为正确性的参考。' },
+            { type: 'in-plain-terms', text: '把同一个问题问五遍，采用反复出现的那个答案。模型一次可能把自己说服到错误答案上，但连续五次犯同样的错要少见得多。' },
           ],
           content: [
-            '定义：同一个提示词用不同的采样参数运行多次，让模型生成不同的推理链，最后用多数投票选择最终答案。',
-            '关键论文：Wang et al.（2023）ICLR。Princeton和Google DeepMind团队。arXiv:2211.11559',
-            '核心思想：单次推理可能出错（计算错误、逻辑跳跃）。但如果同一个问题用5种不同方式思考，最多数的答案更可信。这就是统计学中的"多个独立估计值的共识比单一估计更可靠"。',
-            '简单比喻：人在做复杂决策时，通常会从多个角度思考同一问题。自洽一致性让AI也这样做。',
-            '与Chain-of-Thought的关系：CoT让模型展示推理过程。自洽一致性在CoT基础上加一层：多次CoT后投票决策。'
+            '**Self-Consistency提示是指对同一提示采样多个独立答案，并选出最一致的结论。** 你得到的不是一条思维链，而是多条可能各不相同的思维链。',
+            '思路很简单：如果模型用多种不同方式推理，而大多数路径得出同一个答案，那么这个答案比单次运行更可信。如果各路径意见不一，说明问题含糊或困难，需要更仔细地复核。',
+            'Self-Consistency由Wang et al.（ICLR 2023）提出，并在算术和常识推理基准上报告了准确率提升。该方法利用了统计学的基本原理：许多独立估计的共识比单个估计更可靠。',
+          ],
+        },
+        whyItMatters: {
+          title: '为什么Self-Consistency提示很重要',
+          content: [
+            '**Self-Consistency提示之所以重要，是因为语言模型在困难的推理任务上可能不稳定，采样的细微差异就可能让答案翻转。** 观察一组尝试而不是一次，可以降低单次幻觉或错误的影响。',
+          ],
+          items: [
+            '数学和逻辑谜题。',
+            '多步骤的分析型问题。',
+            '存在微妙权衡、小的推理失误就会改变结果的决策。',
+            '单次准确率低于90%的特定领域推理。',
           ],
           callouts: [
-            { type: 'did-you-know', label: '知道吗', text: '人类专业人士（医生、律师、工程师）在重要决策前常会寻求第二意见，或从不同角度重新审视问题。自洽一致性把这个专业实践编码到了AI中。' }
-          ]
+            { type: 'pro-tip', label: '专业提示', text: '不需要手动比较10个输出。增加一个最终汇总步骤：把N个答案粘贴到新的提示中并问：“这是对同一问题的10个答案。哪个答案出现最多？请给出共识答案和你的置信度。”投票由模型代劳。' },
+          ],
         },
-
-        whyItWorks: {
-          id: 'why-it-works',
-          title: '为什么有效',
-          content: [
-            '多样性：温度(Temperature) 0.7-1.0会产生随机但合理的多个推理路径。温度为0则所有输出相同，无法投票。',
-            '错误相消：5条路径中，某条计算错误的概率比5条都错误的概率高得多。投票自动过滤掉偶发错误。',
-            '模型自不确定性表现：如果5条路径都给出相同答案，模型对这个答案很有信心。如果答案分散，说明问题的难度超过了模型能力。',
-            '统计鲁棒性：从统计学角度，n个独立估计的平均或众数，比单一估计的方差小得多。自洽一致性利用这个原理。',
-            '实现机制：',
-            '  1. 设置Temperature = 0.8',
-            '  2. 同样提示词运行5-10次',
-            '  3. 每次输出一条完整的推理链',
-            '  4. 从每条链提取最终答案',
-            '  5. 统计答案频率，最多的那个就是最终答案'
-          ]
-        },
-
         accuracyExample: {
-          id: 'accuracy-example',
-          title: '实际数字展示',
+          title: '论文报告了什么',
           content: [
-            '基准测试：GSM8K（小学数学应用题8500道）',
-            '结果对比：',
-            '  • Chain-of-Thought（单次）：56%',
-            '  • 自洽一致性（8次投票）：74%',
-            '  • 提升幅度：+18个百分点（相对提升32%）',
-            '',
-            '其他基准的表现：',
-            '  • SVAMP数学题：83%→90%',
-            '  • AQuA复合推理：35%→55%',
-            '',
-            '采样数对精度的影响（GSM8K）：',
-            '  • 1次（基线）：56%',
-            '  • 3次：70%',
-            '  • 5次：72%',
-            '  • 8次：74%',
-            '  • 16次：75%',
-            '  • 32次：75.3%（增长停滞）',
-            '',
-            '关键观察：5-8次采样获得90%的收益。超过10次后，边际收益快速递减。在实际应用中，8次采样是成本和精度的最优平衡。'
-          ]
-        },
-
-        howItWorks: {
-          id: 'how-it-works',
-          title: '如何实现',
-          content: [
-            '步骤1：准备基础提示词',
-            '  输入示例：',
-            '  "请逐步解答以下数学问题：[问题]"',
-            '',
-            '步骤2：配置采样参数',
-            '  • Temperature: 0.7-0.9（必须！不能是0）',
-            '  • 采样次数: 5-8次（首次推荐）',
-            '  • Max tokens: 根据问题复杂度调整',
-            '',
-            '步骤3：多次运行',
-            '  • 使用同一提示词连续调用API 8次',
-            '  • 每次使用不同的seed或rely on Temperature的随机性',
-            '  • 记录所有输出',
-            '',
-            '步骤4：提取答案',
-            '  • 从每个输出中提取最终答案',
-            '  • 格式统一（如都转为小写、都转为数字）',
-            '  • 示例：8次输出的答案为 [42, 42, 43, 42, 42, 42, 41, 42]',
-            '',
-            '步骤5：投票决策',
-            '  • 统计频率：42出现6次，43出现1次，41出现1次',
-            '  • 选择最多：42',
-            '  • 置信度 = 最多频数/总数 = 6/8 = 75%'
-          ]
-        },
-
-        selfConsistencyVsMultiModel: {
-          id: 'comparison-table',
-          title: '对比：CoT vs 自洽一致性 vs 多模型投票',
-          content: [
-            '三种推理精度提升方案的对比：'
+            'Wang et al.（2023）在算术基准上，把Self-Consistency（每题采样40条推理路径并多数投票）与贪心Chain-of-Thought解码做了比较。表中是论文报告的PaLM-540B结果，我们没有复现。',
+            '提升在单靠Chain-of-Thought最弱的地方最大（GSM8K +17.9，AQuA +12.5个百分点），在已经很强的地方较小（AddSub +1.8）。论文摘要还报告了StrategyQA +6.4和ARC-challenge +3.9。这些是2022年的模型和设置，不能预测你的任务或当前模型上的提升。论文指出Self-Consistency需要更多计算，并建议从5条或10条路径开始，因为性能很快趋于饱和。',
+          ],
+          columns: ['基准', 'CoT（贪心）', 'Self-Consistency', '提升'],
+          rows: [
+            { '基准': 'GSM8K', 'CoT（贪心）': '56.5%', 'Self-Consistency': '74.4%', '提升': '+17.9' },
+            { '基准': 'AQuA', 'CoT（贪心）': '35.8%', 'Self-Consistency': '48.3%', '提升': '+12.5' },
+            { '基准': 'SVAMP', 'CoT（贪心）': '79.0%', 'Self-Consistency': '86.6%', '提升': '+7.6' },
+            { '基准': 'ASDiv', 'CoT（贪心）': '74.0%', 'Self-Consistency': '81.9%', '提升': '+7.9' },
+            { '基准': 'MultiArith', 'CoT（贪心）': '94.7%', 'Self-Consistency': '99.3%', '提升': '+4.6' },
+            { '基准': 'AddSub', 'CoT（贪心）': '91.9%', 'Self-Consistency': '93.7%', '提升': '+1.8' },
           ],
           tableFormat: true,
-          columns: [
-            '维度',
-            'Chain-of-Thought',
-            '自洽一致性',
-            '多模型投票'
-          ],
-          rows: [
-            {
-              '维度': '工作原理',
-              'Chain-of-Thought': '同一模型、单次运行，显示推理过程',
-              '自洽一致性': '同一模型、多次运行，投票选择答案',
-              '多模型投票': '多个不同模型、各运行一次、投票决策'
-            },
-            {
-              '维度': '采样数/模型数',
-              'Chain-of-Thought': '1次',
-              '自洽一致性': '5-10次',
-              '多模型投票': '3-5个模型'
-            },
-            {
-              '维度': 'GSM8K精度',
-              'Chain-of-Thought': '56%',
-              '自洽一致性': '74%（+18点）',
-              '多模型投票': '71%（+15点）'
-            },
-            {
-              '维度': 'Token消耗',
-              'Chain-of-Thought': '基线',
-              '自洽一致性': '5-10倍',
-              '多模型投票': '3-5倍（取决于模型定价）'
-            },
-            {
-              '维度': '延迟(Latency)',
-              'Chain-of-Thought': '最低',
-              '自洽一致性': '高（串行运行多次）',
-              '多模型投票': '中等（可并行）'
-            },
-            {
-              '维度': '最适用场景',
-              'Chain-of-Thought': '所有需要推理的任务（基础方法）',
-              '自洽一致性': '确定答案、高价值决策（数学、诊断）',
-              '多模型投票': '捕捉模型偏见、综合多视角（研究、内容审核）'
-            },
-            {
-              '维度': '成本效率',
-              'Chain-of-Thought': '最优',
-              '自洽一致性': '低（大量token消耗）',
-              '多模型投票': '中等'
-            }
-          ]
-        },
-
-        whenToUse: {
-          id: 'when-to-use',
-          title: '何时使用',
-          content: [
-            '✅ 自洽一致性有效的场景：',
-            '  • 数学计算（方程式、概率、统计）',
-            '  • 逻辑推理（谜题、符号推理）',
-            '  • 医学诊断（症状→诊断）',
-            '  • 法律分析（合同解读、案例适用）',
-            '  • 代码审计（bug查找、安全漏洞）',
-            '  • 企业政策判定（合规性、流程决策）',
-            '',
-            '❌ 自洽一致性不适用的场景：',
-            '  • 创意写作（无唯一"正确答案"）',
-            '  • 文本分类（情感分析等概率任务）',
-            '  • 机器翻译（多个等价答案）',
-            '  • 开放式问答（多视角都有效）',
-            '',
-            '决策流程：',
-            '  Q1: 这个任务有确定的答案吗？',
-            '      是→ 继续Q2',
-            '      否→ 不使用自洽一致性',
-            '',
-            '  Q2: 现有的单次推理精度是否 < 85%？',
-            '      是→ 可考虑自洽一致性',
-            '      否→ 单次已足够',
-            '',
-            '  Q3: 公司是否容许5-10倍的token成本？',
-            '      是→ 实施自洽一致性',
-            '      否→ 考虑多模型投票'
-          ],
           callouts: [
-            { type: 'pro-tip', label: '建议', text: '金融机构风控、医疗诊断辅助、法律合规审查这三个场景，自洽一致性的ROI最高。一次错误的风控决策可能损失千万级人民币，相比之下8倍token成本微不足道。' }
-          ]
-        },
-
-        commonMistakes: {
-          id: 'common-mistakes',
-          title: '常见实现错误',
-          content: [
-            '错误1：Temperature设为0运行多次',
-            '  问题：Temperature=0是确定性的。8次采样会得到8份相同输出。投票没有意义。',
-            '  修正：Temperature必须0.7-1.0',
-            '',
-            '错误2：采样次数过多',
-            '  问题：20-50次采样消耗成本指数增加，但精度改善停滞（见GSM8K数据）',
-            '  修正：从5次开始。精度不够再考虑8次。超过10次通常不划算',
-            '',
-            '错误3：答案格式不统一',
-            '  问题：一条链输出"答案是42"，另一条输出"42"，第三条"四十二"。投票失效。',
-            '  修正：预处理答案。数字统一为阿拉伯数字，文本统一为小写。用正则表达式提取最终答案。',
-            '',
-            '错误4：投票逻辑不清',
-            '  问题：8次采样中4个答案是A，3个是B，1个是C。该选A还是B都未定？',
-            '  修正：事先约定投票规则（简单多数？75%阈值？）。记录置信度和异议。',
-            '',
-            '错误5：忽视置信度信息',
-            '  问题：8次里只有4个相同答案（50%）的结果，和8个都相同（100%）的结果，一样处理。',
-            '  修正：始终报告"答案X，置信度Y%"。低于60%的置信度要标记为"需人工审核"'
+            { type: 'info', label: '你知道吗', text: '在GSM8K上，论文报告PaLM-540B从贪心Chain-of-Thought的56.5%提高到Self-Consistency的74.4%，无需微调，也无需额外训练数据，只靠采样和投票。数字来自论文报告，并非我们自己的测量。' },
           ],
-          callouts: [
-            { type: 'warning', label: '警告', text: '自洽一致性提升的是统计平均精度，不是绝对保证。如果问题本身模型理解错误（如误读题意），8次采样也会全部错误。金融、医疗等高风险场景必须配合专家复核。不能完全依赖自动投票。' }
-          ]
         },
-
-        inPromptQuorum: {
-          id: 'in-prompt-quorum',
-          title: '在PromptQuorum中使用',
+        howItWorks: {
+          title: 'Self-Consistency提示的实际工作流程',
           content: [
-            'PromptQuorum原生支持自洽一致性工作流：',
-            '',
-            '1. 选择模型：Claude Opus 5、GPT-5.6、Gemini 3.1 Pro',
-            '2. 设置采样数：5、8、10对比实验',
-            '3. 配置Temperature：0.7-0.9',
-            '4. 运行多采样：系统自动运行N次并收集输出',
-            '5. 自动投票：系统统计答案频率，给出最终结果和置信度',
-            '',
-            '额外优势：',
-            '  • 跨模型对比：不仅单模型多采样，还能看3个模型的一致性',
-            '  • 可视化仪表板：看采样分布、置信度趋势',
-            '  • 批量测试：对测试集自动投票，生成精度报告',
-            '',
-            '实战例子：金融风控',
-            '  • 输入：交易特征数据',
-            '  • 提示词：请判断这笔交易是否存在欺诈风险',
-            '  • PromptQuorum设置：Claude + GPT + Gemini，各8采样',
-            '  • 输出：',
-            '    - 是否欺诈？投票结果 (可能：6/24票)',
-            '    - 置信度：25%（偏低，需人工复核）',
-            '    - 模型分歧：Claude和GPT倾向"欺诈"，Gemini倾向"正常"',
-            '    - 建议：人工审核此笔交易'
-          ]
-        },
-
-        howToStart: {
-          id: 'how-to-start',
-          title: '快速开始',
+            '**实际操作中，Self-Consistency提示分两个阶段：先生成多样的答案，再汇总。** 任务提示保持不变，但允许随机性，让模型探索不同的推理路径。',
+            '典型流程：',
+          ],
           numberedItems: [
-            '**找一个有明确答案的问题。** 数学题、逻辑谜题或医学案例都可以，但必须有标准答案可对比。',
-            '**进行基线测试。** 用单次CoT运行，记录准确率。示例：测试10道题，CoT答对5道（50%）。',
-            '**配置自洽一致性。** 将Temperature设为0.8，采样次数设为5。',
-            '**运行5次采样。** 对同一题目生成5次输出，记录所有答案。',
-            '**投票决定最终答案。** 统计答案频率，取最多票的答案。',
-            '**对比精度。** 比较单次CoT与5采样投票的结果，计算提升百分点。',
-            '**按需优化。** 如果精度还不够，试试8采样；如果成本受限，试试3采样。推荐首选模型：Claude Opus 5（推理强）或 GPT-5.6（多样性好）。',
-          ]
+            '使用推理类提示（通常带Chain-of-Thought指令），并把温度设为0.7-1.0，让模型产生不同的解释。温度控制随机性：0为确定性（每次答案相同），1.0为最大多样性。',
+            '多次运行同一提示（例如5-20次），收集所有最终答案。每次运行应相互独立：来自不同的温度采样，而不是缓存的结果。',
+            '汇总：统计哪个答案出现最多，或对相似答案聚类。把多数投票得出的答案作为最终结果。',
+            '可选：让模型梳理分歧：“这是对同一问题的10个答案。哪个出现最多？分歧的原因是什么？”这会增加置信度元数据。',
+          ],
         },
-
+        selfConsistencyVsMultiModel: {
+          title: 'Self-Consistency与多模型共识的区别',
+          content: [
+            'Self-Consistency对同一个模型多次采样，多模型共识则对不同模型各采样一次。两者应用同一原理：对多样推理路径做多数投票，但能发现的失效类型不同。',
+            'PromptQuorum原生支持多模型共识：把一个提示发给多个模型并比较。对关键决策，可以两者结合：在主模型上运行Self-Consistency，并用第二个模型核对共识答案。',
+          ],
+          columns: ['方法', '工作方式', '能发现什么', '盲区'],
+          rows: [
+            { '方法': 'Self-Consistency（单模型）', '工作方式': '同一提示、同一模型，T=0.7以上运行5-20次', '能发现什么': '采样不稳定、随机错误', '盲区': '模型的系统性偏差（每个样本都有）' },
+            { '方法': '多模型共识', '工作方式': '同一提示、不同模型，各运行1次', '能发现什么': '模型特有的偏差、架构盲区', '盲区': '所有模型可能共享同一训练数据缺口' },
+            { '方法': '组合（最强）', '工作方式': '多个模型 × 每个模型多次采样', '能发现什么': '随机错误和系统性偏差', '盲区': '成本：N个模型 × M次采样 = N×M次API调用' },
+          ],
+          tableFormat: true,
+        },
+        whenToUse: {
+          title: '何时使用Self-Consistency提示',
+          content: [
+            '**当错误答案的代价很高、任务包含非平凡推理时，应使用Self-Consistency提示。** 它用算力和延迟换取更好的稳健性。',
+            '适合的场景：',
+          ],
+          items: [
+            '驱动业务或技术决策的分析型问题。',
+            '逻辑错误代价高昂的复杂编程任务。',
+            '中间步骤很重要的教育或考试类推理。',
+            '你已经观察到单次运行不稳定的任何工作流。',
+            '数学题、逻辑谜题、研究综合、财务分析。',
+          ],
+          columns: ['方法', '采样数', '成本', '最适合', '准确率提升'],
+          rows: [
+            { '方法': '单次回答（基线）', '采样数': '1', '成本': '1×', '最适合': '简单、低风险任务', '准确率提升': '—' },
+            { '方法': 'Chain-of-Thought', '采样数': '1', '成本': '1次调用，输出更长', '最适合': '数学、逻辑、分步推理', '准确率提升': '论文中的基线' },
+            { '方法': 'Self-Consistency', '采样数': '5-20', '成本': '5-20×', '最适合': '困难推理、高风险', '准确率提升': 'GSM8K最高+17.9点（论文）' },
+            { '方法': '多模型共识', '采样数': '3-5个模型', '成本': '3-5×', '最适合': '发现模型特有偏差', '准确率提升': '因任务而异' },
+            { '方法': '两者结合', '采样数': '5 × 3个模型', '成本': '15×', '最适合': '最高可靠性', '准确率提升': '因任务而异' },
+          ],
+          tableFormat: true,
+          callouts: [
+            { type: 'warning', label: '警告', text: '温度为0时Self-Consistency毫无用处：每个样本都输出相同内容。必须把温度设为0.7或更高，才能产生让多数投票有意义的差异。这是最常见的实现错误。' },
+          ],
+        },
+        commonMistakes: {
+          title: 'Self-Consistency提示的常见错误',
+          content: [
+            '以下是削弱Self-Consistency的陷阱及避免方法：',
+          ],
+          items: [
+            '**使用温度0（确定性模式）。** 危害：每个样本都相同，对10个相同答案投票什么也说明不了。解决：把温度设为0.7-1.0，以生成多样的推理路径。',
+            '**对简单事实问题使用Self-Consistency。** 危害：“法国的首都是哪里？”每次都是“巴黎”，你多花了10倍token却没有任何准确率提升。解决：只在单次运行准确率明显低于90%的任务上使用。',
+            '**采样数太少（2-3个）。** 危害：2个样本不一致时没有决胜依据；3个样本出现2比1时共识也很弱。解决：至少使用5个样本；论文建议从5条或10条路径开始，因为大部分提升出现得较早。',
+            '**对完整回答文本而不是最终答案投票。** 危害：两个回答可能经由完全不同的推理路径得到同一个答案。文本比较认为它们不同，答案比较则认为一致。解决：只提取最终答案（要求“Answer: X”格式）并对其投票。',
+          ],
+        },
+        inPromptQuorum: {
+          title: 'PromptQuorum中的Self-Consistency提示',
+          content: [
+            '**PromptQuorum是一个多模型AI分发工具，能轻松生成并比较多个答案，因此自然地补充了Self-Consistency提示。** 你可以把“一个模型多次运行”和“一个提示多个模型”看作两层一致性检查。',
+            '使用PromptQuorum，你可以：',
+          ],
+          items: [
+            '复用推理型框架（如TRACE或APE），在每个模型上多次运行，收集多样的思维链。',
+            '把同一个推理提示并排发给多个模型，观察它们是否收敛到同一个答案。',
+            '把Self-Consistency工作流保存为模板，团队无需从零设计“多次采样再汇总”的模式即可重复使用。',
+          ],
+        },
+        howToStart: {
+          title: '如何使用Self-Consistency提示',
+          numberedItems: [
+            '**对复杂推理任务，用同一提示生成多个输出（5-10个）。** 把同一个问题问5遍，你会得到5个不同的回答。',
+            '**分析输出，找出一致的模式（“共识”）。** 如果5个回答中有4个给出同一答案，这种一致性就是你的置信信号。如果5个全不一致，说明任务含糊，或提示需要改进。',
+            '**在研究和知识类任务中用Self-Consistency检测幻觉。** 问“法国的首都是哪里？”，若3个回答是“巴黎”、2个是“里昂”，共识（巴黎）就是答案。如果得到的是五花八门的城市，说明模型在产生幻觉。',
+            '**把温度（T）设高一些（0.7-1.0）以促进多样输出。** 低温度（T=0）每次都输出相同的确定性结果，失去意义。Self-Consistency需要差异才能找到共识。',
+            '**在成本允许的生产流程中实施Self-Consistency。** 多运行5-10倍的生成成本很高，但对关键决策（医疗建议、金融建议、研究综合），共识信号值得这笔成本。',
+          ],
+        },
         relatedReading: {
-          id: 'related-reading',
           title: '相关阅读',
-          content: [
-            '[Chain-of-Thought提示工程](/zh/prompt-engineering/chain-of-thought-prompting) — 自洽一致性的基础技术',
-            '[什么是提示工程](/zh/prompt-engineering/what-is-prompt-engineering) — 基础概念',
-            '分解式提示（Decomposition） — 拆分复杂问题',
-            '[少样本提示（Few-Shot）](/zh/prompt-engineering/zero-shot-vs-few-shot) — 用例子指导推理',
-            '[模型选择指南](/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Claude vs GPT vs Gemini推理能力对比',
-            '[提示优化与评估](/zh/prompt-engineering/prompt-evaluation-metrics) — 精度测量和A/B测试'
-          ]
+          items: [
+            '[Chain-of-Thought提示](/zh/prompt-engineering/chain-of-thought-prompting) — Self-Consistency扩展到多条路径的单路径推理方法',
+            '[Tree-of-Thought与ReAct](/zh/prompt-engineering/tree-of-thought-and-react) — 与Self-Consistency相关的分支式推理方法',
+            '[提示注入与安全](/zh/prompt-engineering/prompt-injection-and-security) — 实施多样本流程时的安全考量',
+            '[Temperature与Top-P](/zh/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 让Self-Consistency发挥作用的采样参数',
+            '[提示链](/zh/prompt-engineering/prompt-chaining) — 可在每一步应用Self-Consistency的多步骤工作流',
+            '[AI幻觉：如何检测与阻止](/zh/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 把Self-Consistency用作幻觉检测方法',
+          ],
         },
-
         sources: {
-          id: 'sources',
-          title: '参考文献',
-          content: [
-            'Wang et al. (2023). "Self-Consistency Improves Chain of Thought Reasoning in Language Models." ICLR 2023. arXiv:2211.11559',
-            'Wei et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903',
-            'Cobbe et al. (2021). "Training Verifiers to Solve Math Word Problems." OpenAI. arXiv:2110.14168',
-            'Uesato et al. (2022). "Solving Mixed-Modal Jailbreak Prompts by Decomposition." DeepMind.',
-            'Anthropic (2026). "Extended Thinking in Claude." Claude API Documentation.',
-            'OpenAI (2026). "Reasoning in o3 and GPT-5.6." OpenAI API Documentation.'
-          ]
+          title: '来源',
+          items: [
+            '[Wang et al. (2023). "Self-Consistency Improves Chain of Thought Reasoning in Language Models." ICLR 2023. arXiv:2203.11171](https://arxiv.org/abs/2203.11171) — 提出以多数投票对推理路径进行Self-Consistency的奠基论文',
+            '[Wei et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903](https://arxiv.org/abs/2201.11903) — Self-Consistency所依托的Chain-of-Thought论文',
+            '[Brown et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165](https://arxiv.org/abs/2005.14165) — 为CoT和Self-Consistency提供基础的上下文学习奠基研究',
+            '[Anthropic. "Prompt Engineering Guide." docs.anthropic.com](https://docs.anthropic.com) — 生产环境中温度调节与采样的最佳实践',
+          ],
         },
         faqSection: {
           id: 'faq',
           title: '常见问题',
           faqs: [
-            { q: '什么是自洽一致性提示？', a: '自洽一致性提示是一种技术，其中您为同一问题生成多个独立答案——每个都有自己的推理路径——然后选择出现最频繁的答案。您不是相信单一AI回应，而是相信许多人的共识。它由Wang et al.在2023年引入，并显著改善了数学、逻辑和多步推理任务的准确性。' },
-            { q: '自洽一致性需要多少个样本？', a: '对于大多数任务，5-10个样本提供最佳的准确性与成本比率。原始论文显示精度从1到5个样本迅速改善，然后在20个以上出现收益递减。从20个到40个样本在GSM8K上只增加了2个百分点。从5个开始；仅在高风险决策中增加到10-20个。' },
-            { q: '自洽一致性在简单任务上有效吗？', a: '没有显著效果。对于事实查询、简单分类或短文本编写，单一答案几乎总是足够且便宜得多。自洽一致性只对模型单次精度低于~90%的任务有价值——通常是数学、逻辑谜题、多步分析和复杂推理。' },
-            { q: '自洽一致性应该使用多少温度？', a: '将温度设置为0.7-1.0。该技术需要多样化的推理路径——如果温度为0（确定性），每个样本都会产生相同的输出，投票就没有意义了。更高的温度会产生使多数投票更有信息量的变异。' },
-            { q: '自洽一致性成本增加多少？', a: '大约每个任务多耗费5-20倍token，因为您生成5-20个完整的响应而不是一个。对于成本0.01美元的响应，10个样本的自洽一致性成本为0.10美元。这对关键决策（财务分析、医学推理、法律解释）是合理的，但对日常任务浪费。' },
-            { q: '自洽一致性与"最佳N"采样相同吗？', a: '相似但不相同。最佳N生成N个响应并选择最好的（通常由质量评分器）。自洽一致性生成N个推理路径并选择最常见的答案——投票是关于结论而不是质量。自洽一致性不需要质量评分器；它使用一致性作为信号。' },
-            { q: '我可以将自洽一致性与链式思维提示结合使用吗？', a: '可以——这是原始的、最有效的组合。您的每个N个样本都使用链式思维推理，产生完整的推理踪迹加上最终答案。然后您对所有N条踪迹的最终答案进行投票。推理路径可能不同，但如果大多数达到相同的结论，那么该结论是稳健的。' },
-            { q: 'PromptQuorum与自洽一致性的关系如何？', a: 'PromptQuorum在不同模型之间而不是在一个模型内应用相同的共识原则。您不是让同一模型回答10次，而是让5个不同的模型各回答一次并比较答案。他们同意的地方，信心很高。他们不同意的地方，需要验证。这捕捉了单模型自洽一致性无法检测的模型特定偏见。' },
-            { q: '自洽一致性是什么？', a: '自洽一致性（Self-Consistency）是一种提示工程技术，对同一个问题让LLM生成多条（通常5-20条）独立的推理链，然后用投票选出出现最频繁的答案。与单次推理相比，这种方法大大提升了复杂问题的准确率。' },
-            { q: '自洽一致性能提升多少精度？', a: '根据论文数据，在GSM8K数学基准上，Chain-of-Thought单次得56%，自洽一致性（8采样）得74%，提升18个百分点。其他基准如SVAMP也有7-10个百分点的提升。但提升幅度取决于问题复杂度和模型能力。' },
-            { q: '需要多少次采样？', a: '建议5-10次。根据研究，1→5次采样收益最大（+10点）。5→8次再加2-3点。超过16次后精度改善停滞。对大多数应用，8次采样是成本和精度的最优平衡。' },
-            { q: 'Token成本会增加多少？', a: '自洽一致性会消耗5-20倍的token（取决于采样数）。8次采样就是8倍成本。虽然贵，但对金融风控、医疗诊断等高价值决策，精度提升带来的收益远大于token成本。' },
-            { q: '哪些模型最适合？', a: '2026年，Claude Opus 5、GPT-5.6、Gemini 3.1 Pro三款模型推理能力最强，采样多样性也最好。开源模型（Llama、Qwen）也可以用，但效果不如闭源前沿模型。' },
-            { q: '自洽一致性不适用的场景是？', a: '创意写作（无"正确答案"）、文本分类（概率型判断）、开放式问答（多观点都有效）这些不适合。自洽一致性只对有确定答案的问题有效。' },
-            { q: '答案投票时怎样处理平局？', a: '需要事先制定规则。可选方案：(1)简单多数（票数最多）；(2)绝对多数（>50%）；(3)低于某个阈值就标记为"不确定"。一定要记录投票置信度，低置信度的决策需要人工复核。' },
+            { q: '什么是Self-Consistency提示？', a: 'Self-Consistency提示是一种方法：针对同一个问题生成多个独立答案，每个答案各有自己的推理路径，然后选出出现最频繁的答案。你不再相信单个AI回答，而是相信多个回答的共识。该方法由Wang et al.（2023）提出，并在算术和常识推理基准上报告了准确率提升。' },
+            { q: 'Self-Consistency需要多少个样本？', a: '对大多数任务，从5-10个样本开始。原论文指出，随着路径增加，性能很快趋于饱和，并建议从5条或10条开始；每多一个样本，就多一条完整回答的成本。先用5个；只有高风险决策才增加到10-20个。' },
+            { q: 'Self-Consistency对简单任务有效吗？', a: '没有实质帮助。对于事实查询、简单分类或短文写作，单个回答几乎总是足够，而且便宜得多。只有当模型单次准确率低于约90%时才有价值，通常是数学、逻辑谜题、多步骤分析和复杂推理。' },
+            { q: 'Self-Consistency应该用什么温度？', a: '把温度设为0.7-1.0。该方法需要多样的推理路径：温度为0（确定性）时，每个样本输出完全相同，投票毫无意义。较高的温度会产生让多数投票有意义的差异。' },
+            { q: 'Self-Consistency的成本高多少？', a: '由于要生成5-20条完整回答而不是一条，每个任务大约多消耗5-20倍token。如果一条回答花费0.01美元，10个样本的Self-Consistency就是0.10美元。这对关键决策（财务分析、医疗推理、法律解读）是值得的，但对日常任务是浪费。' },
+            { q: 'Self-Consistency和“best-of-N”采样一样吗？', a: '相似但不相同。Best-of-N生成N条回答，并（通常借助质量评分器）选出最好的一条。Self-Consistency生成N条推理路径，选出最常见的答案：投票针对的是结论，而不是质量。它不需要质量评分器，而是把一致性作为信号。' },
+            { q: 'Self-Consistency可以和Chain-of-Thought提示一起用吗？', a: '可以，这是最初也是最有效的组合。N个样本中的每一个都使用Chain-of-Thought推理，产生完整的推理过程和最终答案。然后对全部N条的最终答案投票。推理路径可能不同，但如果大多数得出同一个结论，这个结论就是稳健的。' },
+            { q: 'PromptQuorum与Self-Consistency是什么关系？', a: 'PromptQuorum把同样的共识原理应用在不同模型之间，而不是一个模型之内。你不必对同一个模型问10次，而是向5个不同的模型各问一次并比较答案。一致时置信度高，不一致时该说法需要核实。这能发现单模型Self-Consistency无法发现的模型特有偏差。' },
           ],
         },
       },
-
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'zh',
         mainEntity: [
-          {
-            '@type': 'Question',
-            'name': '什么是自洽一致性提示？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '自洽一致性提示是一种技术，其中您为同一问题生成多个独立答案——每个都有自己的推理路径——然后选择出现最频繁的答案。您不是相信单一AI回应，而是相信许多人的共识。它由Wang et al.在2023年引入，并显著改善了数学、逻辑和多步推理任务的准确性。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '自洽一致性需要多少个样本？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '对于大多数任务，5-10个样本提供最佳的准确性与成本比率。原始论文显示精度从1到5个样本迅速改善，然后在20个以上出现收益递减。从20个到40个样本在GSM8K上只增加了2个百分点。从5个开始；仅在高风险决策中增加到10-20个。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '自洽一致性在简单任务上有效吗？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '没有显著效果。对于事实查询、简单分类或短文本编写，单一答案几乎总是足够且便宜得多。自洽一致性只对模型单次精度低于~90%的任务有价值——通常是数学、逻辑谜题、多步分析和复杂推理。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '自洽一致性应该使用多少温度？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '将温度设置为0.7-1.0。该技术需要多样化的推理路径——如果温度为0（确定性），每个样本都会产生相同的输出，投票就没有意义了。更高的温度会产生使多数投票更有信息量的变异。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '自洽一致性成本增加多少？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '大约每个任务多耗费5-20倍token，因为您生成5-20个完整的响应而不是一个。对于成本0.01美元的响应，10个样本的自洽一致性成本为0.10美元。这对关键决策（财务分析、医学推理、法律解释）是合理的，但对日常任务浪费。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '自洽一致性与"最佳N"采样相同吗？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '相似但不相同。最佳N生成N个响应并选择最好的（通常由质量评分器）。自洽一致性生成N个推理路径并选择最常见的答案——投票是关于结论而不是质量。自洽一致性不需要质量评分器；它使用一致性作为信号。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '我可以将自洽一致性与链式思维提示结合使用吗？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '可以——这是原始的、最有效的组合。您的每个N个样本都使用链式思维推理，产生完整的推理踪迹加上最终答案。然后您对所有N条踪迹的最终答案进行投票。推理路径可能不同，但如果大多数达到相同的结论，那么该结论是稳健的。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'PromptQuorum与自洽一致性的关系如何？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'PromptQuorum在不同模型之间而不是在一个模型内应用相同的共识原则。您不是让同一模型回答10次，而是让5个不同的模型各回答一次并比较答案。他们同意的地方，信心很高。他们不同意的地方，需要验证。这捕捉了单模型自洽一致性无法检测的模型特定偏见。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '自洽一致性是什么？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '自洽一致性（Self-Consistency）是一种提示工程技术，对同一个问题让LLM生成多条（通常5-20条）独立的推理链，然后用投票选出出现最频繁的答案。与单次推理相比，这种方法大大提升了复杂问题的准确率。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '自洽一致性能提升多少精度？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '根据论文数据，在GSM8K数学基准上，Chain-of-Thought单次得56%，自洽一致性（8采样）得74%，提升18个百分点。其他基准如SVAMP也有7-10个百分点的提升。但提升幅度取决于问题复杂度和模型能力。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '需要多少次采样？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '建议5-10次。根据研究，1→5次采样收益最大（+10点）。5→8次再加2-3点。超过16次后精度改善停滞。对大多数应用，8次采样是成本和精度的最优平衡。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'Token成本会增加多少？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '自洽一致性会消耗5-20倍的token（取决于采样数）。8次采样就是8倍成本。虽然贵，但对金融风控、医疗诊断等高价值决策，精度提升带来的收益远大于token成本。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '哪些模型最适合？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '2026年，Claude Opus 5、GPT-5.6、Gemini 3.1 Pro三款模型推理能力最强，采样多样性也最好。开源模型（Llama、Qwen）也可以用，但效果不如闭源前沿模型。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '自洽一致性不适用的场景是？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '创意写作（无"正确答案"）、文本分类（概率型判断）、开放式问答（多观点都有效）这些不适合。自洽一致性只对有确定答案的问题有效。',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '答案投票时怎样处理平局？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '需要事先制定规则。可选方案：(1)简单多数（票数最多）；(2)绝对多数（>50%）；(3)低于某个阈值就标记为"不确定"。一定要记录投票置信度，低置信度的决策需要人工复核。',
-            },
-          },
-        ]
+          { '@type': 'Question', name: '什么是Self-Consistency提示？', acceptedAnswer: { '@type': 'Answer', text: 'Self-Consistency提示是一种方法：针对同一个问题生成多个独立答案，每个答案各有自己的推理路径，然后选出出现最频繁的答案。你不再相信单个AI回答，而是相信多个回答的共识。该方法由Wang et al.（2023）提出，并在算术和常识推理基准上报告了准确率提升。' } },
+          { '@type': 'Question', name: 'Self-Consistency需要多少个样本？', acceptedAnswer: { '@type': 'Answer', text: '对大多数任务，从5-10个样本开始。原论文指出，随着路径增加，性能很快趋于饱和，并建议从5条或10条开始；每多一个样本，就多一条完整回答的成本。先用5个；只有高风险决策才增加到10-20个。' } },
+          { '@type': 'Question', name: 'Self-Consistency对简单任务有效吗？', acceptedAnswer: { '@type': 'Answer', text: '没有实质帮助。对于事实查询、简单分类或短文写作，单个回答几乎总是足够，而且便宜得多。只有当模型单次准确率低于约90%时才有价值，通常是数学、逻辑谜题、多步骤分析和复杂推理。' } },
+          { '@type': 'Question', name: 'Self-Consistency应该用什么温度？', acceptedAnswer: { '@type': 'Answer', text: '把温度设为0.7-1.0。该方法需要多样的推理路径：温度为0（确定性）时，每个样本输出完全相同，投票毫无意义。较高的温度会产生让多数投票有意义的差异。' } },
+          { '@type': 'Question', name: 'Self-Consistency的成本高多少？', acceptedAnswer: { '@type': 'Answer', text: '由于要生成5-20条完整回答而不是一条，每个任务大约多消耗5-20倍token。如果一条回答花费0.01美元，10个样本的Self-Consistency就是0.10美元。这对关键决策（财务分析、医疗推理、法律解读）是值得的，但对日常任务是浪费。' } },
+          { '@type': 'Question', name: 'Self-Consistency和“best-of-N”采样一样吗？', acceptedAnswer: { '@type': 'Answer', text: '相似但不相同。Best-of-N生成N条回答，并（通常借助质量评分器）选出最好的一条。Self-Consistency生成N条推理路径，选出最常见的答案：投票针对的是结论，而不是质量。它不需要质量评分器，而是把一致性作为信号。' } },
+          { '@type': 'Question', name: 'Self-Consistency可以和Chain-of-Thought提示一起用吗？', acceptedAnswer: { '@type': 'Answer', text: '可以，这是最初也是最有效的组合。N个样本中的每一个都使用Chain-of-Thought推理，产生完整的推理过程和最终答案。然后对全部N条的最终答案投票。推理路径可能不同，但如果大多数得出同一个结论，这个结论就是稳健的。' } },
+          { '@type': 'Question', name: 'PromptQuorum与Self-Consistency是什么关系？', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum把同样的共识原理应用在不同模型之间，而不是一个模型之内。你不必对同一个模型问10次，而是向5个不同的模型各问一次并比较答案。一致时置信度高，不一致时该说法需要核实。这能发现单模型Self-Consistency无法发现的模型特有偏差。' } },
+        ],
       },
-
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        name: 'Chain-of-Thought vs 自洽一致性 vs 多模型投票对比',
-        numberOfItems: 7,
+        name: 'Self-Consistency提示与其他方法对比',
+        numberOfItems: 5,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: '工作原理', description: 'CoT=单次推理过程展示；自洽一致性=多采样投票；多模型投票=多模型各一次' },
-          { '@type': 'ListItem', position: 2, name: '采样/模型数', description: 'CoT=1次；自洽一致性=5-10次；多模型=3-5个' },
-          { '@type': 'ListItem', position: 3, name: '精度（GSM8K）', description: 'CoT=56%；自洽一致性=74%；多模型=71%' },
-          { '@type': 'ListItem', position: 4, name: 'Token消耗', description: 'CoT=基线；自洽一致性=5-10倍；多模型=3-5倍' },
-          { '@type': 'ListItem', position: 5, name: '延迟', description: 'CoT=最低；自洽一致性=高；多模型=中等' },
-          { '@type': 'ListItem', position: 6, name: '最优场景', description: 'CoT=所有推理任务；自洽一致性=高价值决策；多模型=捕捉偏见' },
-          { '@type': 'ListItem', position: 7, name: '成本效率', description: 'CoT=最优；自洽一致性=低；多模型=中等' }
-        ]
+          { '@type': 'ListItem', position: 1, name: '单次回答（基线）', description: '1次运行，1×成本，简单任务' },
+          { '@type': 'ListItem', position: 2, name: 'Chain-of-Thought', description: '1次带推理的运行，输出更长，中等任务' },
+          { '@type': 'ListItem', position: 3, name: 'Self-Consistency', description: '5-20次运行加投票，5-20×成本，困难推理' },
+          { '@type': 'ListItem', position: 4, name: '多模型共识', description: '3-5个模型，3-5×成本，发现模型偏差' },
+          { '@type': 'ListItem', position: 5, name: '两者结合', description: '5个样本 × 3个模型，15×成本，最高可靠性' },
+        ],
       },
-
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        headline: '自洽一致性提示：生成多个答案，投票选择最佳答案',
-        description: '自洽一致性提示生成5-20个推理路径投票选最频繁答案。GSM8K数学精度从56%提升到74%。企业部署指南、实现代码、温度配置。',
-        datePublished: '2026-03-26',
-        dateModified: '2026-08-31',
-        url: 'https://www.promptquorum.com/zh/prompt-engineering/self-consistency-prompting',
-        inLanguage: 'zh',
-        keywords: [
-          '自洽一致性',
-          '自洽一致性提示',
-          '提示工程',
-          'Self-Consistency',
-          '推理精度',
-          '多采样投票',
-          'LLM',
-          'AI企业应用',
-          'PromptQuorum'
-        ],
-        author: { '@type': 'Organization', name: 'PromptQuorum' },
-        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        about: [
-          { '@type': 'Thing', name: '自洽一致性提示' },
-          { '@type': 'Thing', name: '提示工程' },
-          { '@type': 'Thing', name: '推理精度优化' },
-          { '@type': 'Thing', name: 'LLM应用' }
-        ],
-        mentions: [
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 5' },
-          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' }
-        ],
-        'proficiencyLevel': 'Intermediate',
-        speakable: {
-          '@type': 'SpeakableSpecification',
-          cssSelector: ['.article-intro', '.key-takeaways']
-        }
-      }
     },
   ko: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
     heroImage: '/images/self-consistency-prompting-overview-hero-ko.webp',
       title: '자기 일관성 프롬프팅: 여러 답변을 생성하고 올바른 답을 선택하십시오',
-      intro: '**자기 일관성 프롬프팅은 동일한 질문에 대해 5~20개의 독립적인 추론 경로를 생성한 후 가장 자주 등장하는 답변을 선택합니다.** 단일 AI 답변을 신뢰하는 대신(틀릴 수 있으므로), 더 높은 temperature에서 동일한 질문을 여러 번 제시하고 다수결로 결론을 도출합니다. 이 간단한 기법은 수학, 논리, 다단계 분석의 정확도를 15~25 퍼센트포인트 향상시킵니다.',
-      leadAnswerBlock: '**자기 일관성 프롬프팅: 동일한 질문을 temperature 0.7~1.0으로 설정하여 5~20회 모델에 제시함으로써 다양한 추론 경로를 생성한 후, 다수결 답변을 선택합니다. 이 기법은 원본 논문에서 수학 정확도를 단일 chain-of-thought의 56%에서 자기 일관성(40샘플) 74%로 향상시켰습니다. 모든 모델에서 작동합니다. 트레이드오프: 작업당 5~20배 더 많은 토큰이 소비됩니다.**',
+      intro: '**자기 일관성 프롬프팅은 동일한 질문에 대해 여러 개의 독립적인 추론 경로를 샘플링한 후 가장 자주 등장하는 답변을 선택합니다.** 틀릴 수 있는 단일 답변을 신뢰하는 대신, 더 높은 temperature에서 여러 번 질문하고 다수결로 결론을 도출합니다.',
+      leadAnswerBlock: '**자기 일관성 프롬프팅은 temperature를 0보다 높게 설정해 모델에 동일한 질문을 여러 번 제시한 뒤 다수결 답변을 선택합니다. 원본 논문에서 40개 샘플은 GSM8K에서 PaLM-540B의 정확도를 56.5%에서 74.4%로 높였습니다. 비용: 샘플당 완전한 응답 하나입니다.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-02',
       readTime: '12분 읽기',
       educationalLevel: 'Intermediate',
       audience: '신뢰할 수 있는 AI 추론 파이프라인을 구축하는 개발자, AI로 고위험 결정을 내리는 분석가, 프롬프트 엔지니어링 연구자',
-      seoTitle: '자기 일관성 프롬프팅: 여러 답변 생성 후 최적 선택',
-      metaDescription: '자기 일관성 프롬프팅은 5~20개의 추론 경로를 생성하고 다수결 답변을 선택합니다. 수학 및 논리 정확도를 56%에서 74%로 향상시킵니다.',
-      ogDescription: '단일 AI 답변은 틀릴 수 있습니다. 동일한 답에 동의하는 다섯 가지 AI 응답은 훨씬 더 신뢰할 수 있습니다. 자기 일관성은 여러 추론 경로를 샘플링하고 합의를 선택함으로써 정확도를 15~25포인트 향상시킵니다.',
-      twitterDescription: '자기 일관성: AI에게 동일한 질문을 5~20회 제시하고 다수결 답변을 선택합니다. 간단한 기법이지만 추론 과제에서 극적인 정확도 향상을 가져옵니다.',
+      seoTitle: '자기 일관성 프롬프팅: 다수결로 정답을 고르는 방법',
+      metaDescription: '자기 일관성 프롬프팅은 여러 추론 경로를 샘플링해 다수결 답변을 선택합니다. 원본 논문에서 GSM8K 정확도는 56.5%에서 74.4%로 올랐습니다.',
+      ogDescription: '단일 AI 답변은 틀릴 수 있습니다. 여러 추론 경로를 샘플링해 다수결 답변을 선택하십시오. 원본 논문은 GSM8K에서 PaLM-540B가 56.5%에서 74.4%로 향상되었다고 보고합니다.',
+      twitterDescription: '자기 일관성: 모델에 동일한 질문을 temperature 0 초과로 여러 번 제시하고 다수결 답변을 선택합니다. 논문 보고 GSM8K: 56.5%에서 74.4%.',
       primaryTerm: '자기 일관성 프롬프팅',
       quickFacts: [
         '**기법:** 동일한 질문에 대해 5~20개의 독립적인 추론 경로를 생성한 후 다수결 투표로 가장 빈번한 답변을 선택합니다.',
         '**논문:** Wang et al. (2023), "Self-Consistency Improves Chain of Thought Reasoning in Language Models," ICLR 2023.',
-        '**주요 결과:** GSM8K 수학 정확도가 단일 chain-of-thought의 56%에서 자기 일관성(40샘플)의 74%로 향상되었습니다—32%의 상대적 개선.',
-        '**Temperature 요건:** 0.7~1.0으로 설정해야 합니다(temperature=0은 동일한 출력을 생성하여 목적을 상실합니다).',
-        '**샘플 수:** 5~10샘플이 최적 지점이며, 20샘플 이후에는 수익 감소가 발생합니다.',
+        '**주요 결과(논문 보고):** GSM8K에서 PaLM-540B가 탐욕적 chain-of-thought의 56.5%에서 자기 일관성(40개 샘플링 경로)의 74.4%로 17.9포인트 향상되었습니다.',
+        '**Temperature 요건:** 0보다 높아야 합니다(temperature=0은 동일한 출력을 생성하여 목적을 상실합니다). 논문은 T=0.5~0.7로 샘플링했습니다.',
+        '**샘플 수:** 논문은 성능이 빠르게 포화되므로 5개 또는 10개 경로로 시작할 것을 제안합니다.',
         '**비용:** 작업당 5~20배 더 많은 토큰 소비; 정확도가 비용보다 중요한 고위험 추론 과제에서만 정당화됩니다.',
       ],
       schema: {
@@ -2986,8 +2421,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '자기 일관성 프롬프팅: 여러 답변을 생성하고 올바른 답을 선택하십시오',
         description: '자기 일관성 프롬프팅은 여러 추론 경로를 생성하고 다수결 답변을 선택함으로써 수학, 논리, 분석에서 AI 정확도를 향상시킵니다. 기법, 예시, 비용-편익 분석.',
         datePublished: '2026-03-26',
-        dateModified: '2026-08-31',
-        'url': 'https://www.promptquorum.com/prompt-engineering/self-consistency-prompting',
+        dateModified: '2026-11-02',
+        'url': 'https://www.promptquorum.com/ko/prompt-engineering/self-consistency-prompting',
         keywords: ['자기 일관성 프롬프팅', '프롬프트 엔지니어링', '추론 프롬프트', '다수결 투표', 'chain-of-thought', '정확도 향상', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -3009,7 +2444,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           content: [
             '**자기 일관성**은 동일한 프롬프트에 대해 5~20개의 독립적인 답변을 생성한 후 다수결 결론을 선택합니다—신뢰할 수 없는 단일 답변을 통계적으로 견고한 합의로 변환합니다.',
-            '이 기법은 Wang et al. (2023)이 도입하였으며, GSM8K 수학 문제에서 정확도를 단일 chain-of-thought의 56%에서 자기 일관성(40샘플)의 74%로 향상시켰습니다.',
+            '이 기법은 Wang et al. (2023)이 도입했습니다. 논문은 GSM8K에서 PaLM-540B가 탐욕적 chain-of-thought의 56.5%에서 자기 일관성(40개 샘플링 경로)의 74.4%로 향상되었다고 보고합니다.',
             '다양한 추론 경로를 생성하기 위해 더 높은 temperature(0.7~1.0)를 사용하십시오—낮은 temperature는 동일한 출력을 생성하여 목적을 상실합니다.',
             '최적 용도: 수학, 논리, 다단계 분석, 단일 실행이 관찰 가능하게 불안정한 모든 과제.',
             '트레이드오프: 작업당 5~20배 더 많은 토큰 소비—정확도가 비용보다 중요한 경우에만 사용하십시오.',
@@ -3026,7 +2461,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**자기 일관성 프롬프팅은 동일한 프롬프트에 대해 여러 독립적인 답변을 샘플링하고 가장 일관된 결론을 선택하는 것을 의미합니다.** 하나의 chain-of-thought 대신 잠재적으로 다른 여러 chain을 얻습니다.',
             '아이디어는 간단합니다: 모델이 여러 다른 방식으로 추론하고 대부분의 경로가 동일한 답으로 수렴한다면, 그 답은 단일 실행보다 더 신뢰할 수 있습니다. 경로들이 일치하지 않으면, 문제가 모호하거나 어려워 더 면밀한 검토가 필요하다는 것을 알 수 있습니다.',
-            '자기 일관성은 Wang et al.이 2023년 ICLR에서 도입하였으며 수학, 논리, 추론 과제에서 극적인 정확도 향상을 보여주었습니다. 이 기법은 통계학의 근본 원리를 활용합니다: 많은 독립적 추정의 합의는 단일 추정보다 더 신뢰할 수 있습니다.',
+            '자기 일관성은 Wang et al.(ICLR 2023)이 도입했으며 산술 및 상식 추론 벤치마크에서 정확도 향상을 보고했습니다. 이 기법은 통계의 기본 원리를 활용합니다. 독립적인 여러 추정치의 합의는 단일 추정치보다 신뢰할 수 있습니다.',
           ],
         },
         whyItMatters: {
@@ -3045,23 +2480,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         accuracyExample: {
-          title: '수치가 보여주는 것',
+          title: '논문이 보고하는 내용',
           content: [
-            '원본 Wang et al. (2023) 논문은 산술 추론(GSM8K 벤치마크)에서 자기 일관성을 시연하였으며, 이는 언어 모델 수학 능력의 표준 테스트입니다. 결과는 명확한 패턴을 보여줍니다:',
-            '패턴: 추가 샘플마다 정확도가 향상되지만 수익 감소가 발생합니다. 1개에서 5개 샘플로 가는 것이 가장 큰 향상(+10 퍼센트포인트)을 가져옵니다. 20개에서 40개로 가면 단 2 퍼센트포인트만 추가됩니다. 대부분의 실용적 목적을 위해 5~10개 샘플이 정확도와 비용 사이의 최적 지점입니다. 20개 샘플 이상에서는 최소한의 정확도 향상을 위해 기하급수적으로 더 많은 토큰을 소비하게 됩니다.',
+            'Wang et al.(2023)은 자기 일관성(질문당 40개의 샘플링된 추론 경로, 다수결)을 산술 벤치마크에서 탐욕적 chain-of-thought 디코딩과 비교했습니다. 표는 논문이 보고한 PaLM-540B 결과이며, 저희가 재현한 것이 아닙니다.',
+            'chain-of-thought만으로 가장 약한 곳에서 향상 폭이 크고(GSM8K +17.9, AQuA +12.5포인트), 이미 강한 곳에서는 작습니다(AddSub +1.8). 논문 초록은 StrategyQA +6.4, ARC-challenge +3.9도 보고합니다. 이는 2022년 당시의 모델과 설정이므로 귀하의 과제나 최신 모델의 향상을 예측하지 않습니다. 논문은 자기 일관성이 더 많은 연산을 요구한다고 언급하며, 성능이 빠르게 포화되므로 5개 또는 10개 경로로 시작할 것을 제안합니다.',
           ],
-          columns: ['방법', 'GSM8K 정확도', '샘플 수', '비용 배수'],
+          columns: ['벤치마크', 'CoT(탐욕적)', '자기 일관성', '차이'],
           rows: [
-            { '방법': '표준 프롬프팅 (chain-of-thought 없음)', 'GSM8K 정확도': '18%', '샘플 수': '1', '비용 배수': '1×' },
-            { '방법': 'Chain-of-thought (단일 패스)', 'GSM8K 정확도': '56%', '샘플 수': '1', '비용 배수': '1.5×' },
-            { '방법': '자기 일관성 (5샘플)', 'GSM8K 정확도': '66%', '샘플 수': '5', '비용 배수': '7.5×' },
-            { '방법': '자기 일관성 (10샘플)', 'GSM8K 정확도': '70%', '샘플 수': '10', '비용 배수': '15×' },
-            { '방법': '자기 일관성 (20샘플)', 'GSM8K 정확도': '72%', '샘플 수': '20', '비용 배수': '30×' },
-            { '방법': '자기 일관성 (40샘플)', 'GSM8K 정확도': '74%', '샘플 수': '40', '비용 배수': '60×' },
+            { '벤치마크': 'GSM8K', 'CoT(탐욕적)': '56.5%', '자기 일관성': '74.4%', '차이': '+17.9' },
+            { '벤치마크': 'AQuA', 'CoT(탐욕적)': '35.8%', '자기 일관성': '48.3%', '차이': '+12.5' },
+            { '벤치마크': 'SVAMP', 'CoT(탐욕적)': '79.0%', '자기 일관성': '86.6%', '차이': '+7.6' },
+            { '벤치마크': 'ASDiv', 'CoT(탐욕적)': '74.0%', '자기 일관성': '81.9%', '차이': '+7.9' },
+            { '벤치마크': 'MultiArith', 'CoT(탐욕적)': '94.7%', '자기 일관성': '99.3%', '차이': '+4.6' },
+            { '벤치마크': 'AddSub', 'CoT(탐욕적)': '91.9%', '자기 일관성': '93.7%', '차이': '+1.8' },
           ],
           tableFormat: true,
           callouts: [
-            { type: 'info', label: '알고 계셨습니까', text: '자기 일관성은 동일한 질문을 여러 번 묻고 다수결 답변을 선택하는 것만으로 GSM8K 수학 정확도를 56%에서 74%로—32%의 상대적 개선—향상시켰습니다. 모델 변경 없음, 파인튜닝 없음, 새로운 데이터 없음. 단순히 샘플링과 투표만 있을 뿐입니다.' },
+            { type: 'info', label: '알고 계셨나요?', text: 'GSM8K에서 논문에 따르면 PaLM-540B는 탐욕적 chain-of-thought의 56.5%에서 자기 일관성의 74.4%로 향상되었으며, 파인튜닝이나 추가 학습 데이터 없이 샘플링과 투표만 사용했습니다. 수치는 논문 보고치이며 저희의 측정이 아닙니다.' },
           ],
         },
         howItWorks: {
@@ -3107,10 +2542,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['기법', '샘플 수', '비용', '최적 용도', '정확도 향상'],
           rows: [
             { '기법': '단일 답변 (기준선)', '샘플 수': '1', '비용': '1×', '최적 용도': '간단한 과제, 낮은 위험', '정확도 향상': '—' },
-            { '기법': 'Chain-of-thought', '샘플 수': '1', '비용': '~1.5×', '최적 용도': '수학, 논리, 단계별', '정확도 향상': '보통 (+5~10 pp)' },
-            { '기법': '자기 일관성', '샘플 수': '5~20', '비용': '7.5~30×', '최적 용도': '어려운 추론, 고위험', '정확도 향상': '큰 향상 (GSM8K에서 +18 pp)' },
-            { '기법': '다중 모델 합의', '샘플 수': '3~5개 모델', '비용': '3~5×', '최적 용도': '모델 특정 편향 포착', '정확도 향상': '보통~큰 향상' },
-            { '기법': '두 가지 결합', '샘플 수': '5 × 3개 모델', '비용': '15×', '최적 용도': '최대 신뢰도', '정확도 향상': '가장 높음' },
+            { '기법': 'Chain-of-thought', '샘플 수': '1', '비용': '1회 호출, 더 긴 출력', '최적 용도': '수학, 논리, 단계별', '정확도 향상': '논문의 기준선' },
+            { '기법': '자기 일관성', '샘플 수': '5~20', '비용': '5~20배', '최적 용도': '어려운 추론, 고위험', '정확도 향상': 'GSM8K 최대 +17.9pt(논문)' },
+            { '기법': '다중 모델 합의', '샘플 수': '3~5개 모델', '비용': '3~5×', '최적 용도': '모델 특정 편향 포착', '정확도 향상': '과제에 따라 다름' },
+            { '기법': '두 가지 결합', '샘플 수': '5 × 3개 모델', '비용': '15×', '최적 용도': '최대 신뢰도', '정확도 향상': '과제에 따라 다름' },
           ],
           tableFormat: true,
           callouts: [
@@ -3125,7 +2560,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**temperature 0(결정론적 모드) 사용.** 문제점: 모든 샘플이 동일합니다. 10개의 동일한 답변에 투표하면 아무것도 알 수 없습니다. 해결책: temperature를 0.7~1.0으로 설정하여 다양한 추론 경로를 생성하십시오.',
             '**단순한 사실 질문에 자기 일관성 사용.** 문제점: "프랑스의 수도는 어디입니까?"는 매번 "파리"를 생성합니다. 정확도 향상 없이 토큰을 10배 소비했습니다. 해결책: 단일 실행 정확도가 관찰 가능하게 90% 미만인 과제에만 자기 일관성을 예약하십시오.',
-            '**너무 적은 샘플(2~3개) 생성.** 문제점: 동의하지 않는 2개의 샘플로는 타이브레이커가 없습니다. 3개의 경우 2-1 분할은 약한 합의를 제공합니다. 해결책: 최소 5개의 샘플을 사용하십시오. 1→5의 정확도 향상이 곡선의 가장 가파른 부분입니다.',
+            '**너무 적은 샘플(2~3개) 생성.** 문제점: 동의하지 않는 2개의 샘플로는 타이브레이커가 없습니다. 3개의 경우 2-1 분할은 약한 합의를 제공합니다. 해결책: 최소 5개의 샘플을 사용하십시오. 논문은 이득 대부분이 초기에 나타나므로 5개 또는 10개 경로로 시작할 것을 제안합니다.',
             '**최종 답변 대신 전체 응답 텍스트에 투표.** 문제점: 두 응답이 완전히 다른 추론 경로를 통해 동일한 답에 도달할 수 있습니다. 텍스트 비교는 다르다고 하지만 답변 비교는 동의한다고 합니다. 해결책: 최종 답변만 추출하고("Answer: X" 형식 요구) 그것에 투표하십시오.',
           ],
         },
@@ -3175,8 +2610,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: '자주 묻는 질문',
           faqs: [
-            { q: '자기 일관성 프롬프팅이란 무엇입니까?', a: '자기 일관성 프롬프팅은 동일한 질문에 대해 여러 독립적인 답변을 생성하고—각각 자체 추론 경로를 가진—가장 자주 나타나는 답변을 선택하는 기법입니다. 하나의 AI 응답을 신뢰하는 대신, 많은 응답의 합의를 신뢰합니다. Wang et al. (2023)이 도입하였으며 수학, 논리, 다단계 추론 과제에서 정확도를 크게 향상시킵니다.' },
-            { q: '자기 일관성에 몇 개의 샘플이 필요합니까?', a: '대부분의 과제에서 5~10개의 샘플이 최적의 정확도 대 비용 비율을 제공합니다. 원본 논문은 1~5개 샘플에서 정확도가 빠르게 향상되고 20개 이후에는 수익 감소가 발생함을 보여주었습니다. GSM8K에서 20개에서 40개 샘플로 가는 것은 단 2 퍼센트포인트만 추가되었습니다. 5개로 시작하고, 고위험 결정에만 10~20개로 늘리십시오.' },
+            { q: '자기 일관성 프롬프팅이란 무엇입니까?', a: '자기 일관성 프롬프팅은 동일한 질문에 대해 여러 독립적인 답변을 생성하고—각각 자체 추론 경로를 가진—가장 자주 나타나는 답변을 선택하는 기법입니다. 하나의 AI 응답을 신뢰하는 대신, 많은 응답의 합의를 신뢰합니다. Wang et al. (2023)이 도입했으며 산술 및 상식 추론 벤치마크에서 정확도 향상을 보고했습니다.' },
+            { q: '자기 일관성에 몇 개의 샘플이 필요합니까?', a: '대부분의 과제에서 5~10개의 샘플로 시작하십시오. 원본 논문은 경로를 추가할수록 성능이 빠르게 포화된다고 언급하며 5개 또는 10개로 시작할 것을 제안합니다. 샘플이 하나 늘 때마다 완전한 응답이 하나 더 필요합니다. 5개로 시작하고, 고위험 결정에만 10~20개로 늘리십시오.' },
             { q: '자기 일관성이 단순한 과제에서도 작동합니까?', a: '의미 있게 작동하지 않습니다. 사실 조회, 단순 분류, 또는 단편 작문의 경우 단일 답변이 거의 항상 충분하며 훨씬 저렴합니다. 자기 일관성은 모델의 단일 패스 정확도가 ~90% 미만인 과제—일반적으로 수학, 논리 퍼즐, 다단계 분석, 복잡한 추론—에서만 가치를 추가합니다.' },
             { q: '자기 일관성에는 어떤 temperature를 사용해야 합니까?', a: 'temperature를 0.7~1.0으로 설정하십시오. 이 기법은 다양한 추론 경로가 필요합니다—temperature가 0(결정론적)이면 모든 샘플이 동일한 출력을 생성하고 투표는 의미가 없습니다. 더 높은 temperature는 다수결 투표를 의미 있게 만드는 변형을 생성합니다.' },
             { q: '자기 일관성의 비용이 얼마나 더 많이 드나요?', a: '5~20개의 완전한 응답 대신 하나를 생성하므로 작업당 약 5~20배 더 많은 토큰이 필요합니다. $0.01의 비용이 드는 응답의 경우, 10개 샘플의 자기 일관성은 $0.10이 됩니다. 이는 중요한 결정(재무 분석, 의료 추론, 법적 해석)에서 정당화되지만 일상적인 과제에는 낭비입니다.' },
@@ -3191,8 +2626,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'ko',
         mainEntity: [
-          { '@type': 'Question', name: '자기 일관성 프롬프팅이란 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '자기 일관성 프롬프팅은 동일한 질문에 대해 여러 독립적인 답변을 생성하고—각각 자체 추론 경로를 가진—가장 자주 나타나는 답변을 선택하는 기법입니다. 하나의 AI 응답을 신뢰하는 대신, 많은 응답의 합의를 신뢰합니다. Wang et al. (2023)이 도입하였으며 수학, 논리, 다단계 추론 과제에서 정확도를 크게 향상시킵니다.' } },
-          { '@type': 'Question', name: '자기 일관성에 몇 개의 샘플이 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '대부분의 과제에서 5~10개의 샘플이 최적의 정확도 대 비용 비율을 제공합니다. 원본 논문은 1~5개 샘플에서 정확도가 빠르게 향상되고 20개 이후에는 수익 감소가 발생함을 보여주었습니다. GSM8K에서 20개에서 40개 샘플로 가는 것은 단 2 퍼센트포인트만 추가되었습니다. 5개로 시작하고, 고위험 결정에만 10~20개로 늘리십시오.' } },
+          { '@type': 'Question', name: '자기 일관성 프롬프팅이란 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '자기 일관성 프롬프팅은 동일한 질문에 대해 여러 독립적인 답변을 생성하고—각각 자체 추론 경로를 가진—가장 자주 나타나는 답변을 선택하는 기법입니다. 하나의 AI 응답을 신뢰하는 대신, 많은 응답의 합의를 신뢰합니다. Wang et al. (2023)이 도입했으며 산술 및 상식 추론 벤치마크에서 정확도 향상을 보고했습니다.' } },
+          { '@type': 'Question', name: '자기 일관성에 몇 개의 샘플이 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '대부분의 과제에서 5~10개의 샘플로 시작하십시오. 원본 논문은 경로를 추가할수록 성능이 빠르게 포화된다고 언급하며 5개 또는 10개로 시작할 것을 제안합니다. 샘플이 하나 늘 때마다 완전한 응답이 하나 더 필요합니다. 5개로 시작하고, 고위험 결정에만 10~20개로 늘리십시오.' } },
           { '@type': 'Question', name: '자기 일관성이 단순한 과제에서도 작동합니까?', acceptedAnswer: { '@type': 'Answer', text: '의미 있게 작동하지 않습니다. 사실 조회, 단순 분류, 또는 단편 작문의 경우 단일 답변이 거의 항상 충분하며 훨씬 저렴합니다. 자기 일관성은 모델의 단일 패스 정확도가 ~90% 미만인 과제—일반적으로 수학, 논리 퍼즐, 다단계 분석, 복잡한 추론—에서만 가치를 추가합니다.' } },
           { '@type': 'Question', name: '자기 일관성에는 어떤 temperature를 사용해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: 'temperature를 0.7~1.0으로 설정하십시오. 이 기법은 다양한 추론 경로가 필요합니다—temperature가 0(결정론적)이면 모든 샘플이 동일한 출력을 생성하고 투표는 의미가 없습니다. 더 높은 temperature는 다수결 투표를 의미 있게 만드는 변형을 생성합니다.' } },
           { '@type': 'Question', name: '자기 일관성의 비용이 얼마나 더 많이 드나요?', acceptedAnswer: { '@type': 'Answer', text: '5~20개의 완전한 응답 대신 하나를 생성하므로 작업당 약 5~20배 더 많은 토큰이 필요합니다. $0.01의 비용이 드는 응답의 경우, 10개 샘플의 자기 일관성은 $0.10이 됩니다. 이는 중요한 결정(재무 분석, 의료 추론, 법적 해석)에서 정당화되지만 일상적인 과제에는 낭비입니다.' } },
@@ -3208,8 +2643,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberOfItems: 5,
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: '단일 답변 (기준선)', description: '1회 실행, 1× 비용, 간단한 과제' },
-          { '@type': 'ListItem', position: 2, name: 'Chain-of-thought', description: '추론이 있는 1회 실행, ~1.5× 비용, 보통 과제' },
-          { '@type': 'ListItem', position: 3, name: '자기 일관성', description: '투표가 있는 5~20회 실행, 7.5~30× 비용, 어려운 추론' },
+          { '@type': 'ListItem', position: 2, name: 'Chain-of-thought', description: '추론이 있는 1회 실행, 더 긴 출력, 보통 과제' },
+          { '@type': 'ListItem', position: 3, name: '자기 일관성', description: '투표가 있는 5~20회 실행, 5~20배 비용, 어려운 추론' },
           { '@type': 'ListItem', position: 4, name: '다중 모델 합의', description: '3~5개 모델, 3~5× 비용, 모델 편향 포착' },
           { '@type': 'ListItem', position: 5, name: '두 가지 결합', description: '5개 샘플 × 3개 모델, 15× 비용, 최대 신뢰도' },
         ],

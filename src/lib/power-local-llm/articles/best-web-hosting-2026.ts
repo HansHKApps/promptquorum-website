@@ -25,18 +25,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'monthly',
     publishDate: '2026-08-30',
-    dateModified: '2026-09-03',
-    next_refresh_due: '2026-10-03',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
     title: 'Best Web Hosting 2026: Verified Pricing',
     seoTitle: 'Best Web Hosting 2026: Verified Pricing Comparison',
     intro:
-      'Type "best web hosting 2026" into Google and you get a dozen lists quoting the same advertised intro rate, none of which mention what the plan costs once that term runs out. That gap is the whole reason this page exists. We checked [Hostinger](https://www.hostinger.com/)\'s pricing ourselves on 2026-08-30, and the number that actually matters — the renewal rate — sits right next to the sticker price below, not buried in a footnote. If you are here for GPU compute instead of website hosting, you want the [Cloud GPU Rental Guide](/power-local-llm/cloud-gpu-rental-guide-2026), not this page. A wider multi-provider comparison is next once more hosts are re-verified the same way. Beyond the website hosting plan itself, this page also covers the related hosting decisions most site owners eventually run into: hosting a database separately, backing up a site off-site, sharing large files or datasets safely, and where AI/LLM hosting fits alongside all of it.',
+      'Type "best web hosting 2026" into Google and you get a dozen lists quoting the same advertised intro rate, none of which mention what the plan costs once that term runs out. That gap is the whole reason this page exists. We checked [Hostinger](https://www.hostinger.com/)\'s pricing ourselves on 2026-11-02, and the number that actually matters — the renewal rate — sits right next to the sticker price below, not buried in a footnote. If you are here for GPU compute instead of website hosting, you want the [Cloud GPU Rental Guide](/power-local-llm/cloud-gpu-rental-guide-2026), not this page. A wider multi-provider comparison is next once more hosts are re-verified the same way. Beyond the website hosting plan itself, this page also covers the related hosting decisions most site owners eventually run into: hosting a database separately, backing up a site off-site, sharing large files or datasets safely, and where AI/LLM hosting fits alongside all of it.',
     metaDescription:
-      'Hostinger hosting price verified 2026-08-30: $2.99/mo intro (48-month prepay, $143.52 upfront), renews at $10.99/mo. What the plan actually costs before you sign up.',
+      'Hostinger Premium price checked 2026-11-02: $2.49/mo with a 48-month prepay ($119.52), renewing at $10.99/mo. See the real cost before you sign up.',
     twitterDescription:
-      'Most hosting roundups quote the intro price and skip the renewal. Here is the one provider we verified directly, with both numbers, checked 2026-08-30.',
+      'Most hosting roundups quote the intro price and skip the renewal. Here is the one provider we verified directly, with both numbers, checked 2026-11-02.',
     affiliateDisclosure: true,
     audience:
       'Buyers evaluating shared or budget web hosting for a small site or blog, who want the real renewal price alongside the advertised intro price before committing to a long prepay term.',
@@ -51,13 +51,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'shared hosting cost 2026',
     ],
     leadAnswerBlock:
-      '**Hostinger advertises $2.99/mo for shared hosting, but that price requires a 48-month prepay ($143.52 upfront) and renews at $10.99/mo — a 3.7x jump. That is the only shared-hosting provider on this page whose pricing we verified directly on 2026-08-30.**',
+      '**Hostinger advertises $2.49/mo for its Premium shared hosting plan, but that price requires a 48-month prepay ($119.52 upfront) and renews at $10.99/mo — a 4.4x jump. That is the only shared-hosting provider on this page whose pricing we verified directly on 2026-11-02.**',
     affiliateLinks: [
       {
         url: 'https://www.hostinger.com/',
         productName: 'Hostinger web hosting',
         productCategory: 'hosting',
-        priceRange: '2.99-10.99/mo',
+        priceRange: '2.49-10.99/mo',
         label: 'Check Hostinger pricing',
       },
     ],
@@ -65,14 +65,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       en: {
         question: 'What does web hosting actually cost in 2026?',
         answer:
-          'Hostinger\'s advertised $2.99/mo rate requires a 48-month prepay of $143.52 upfront, and the plan renews at $10.99/mo after that term — a 3.7x increase over the intro rate. That renewal price is the number that matters for budgeting past year one, not the headline rate on the pricing page.',
+          'Hostinger\'s advertised $2.49/mo rate requires a 48-month prepay of $119.52 upfront, and the plan renews at $10.99/mo after that term — a 4.4x increase over the intro rate. That renewal price is the number that matters for budgeting past year one, not the headline rate on the pricing page.',
         bullets: [
-          'Intro rate: $2.99/mo, only with a 48-month prepay ($143.52 charged upfront)',
-          'Renewal rate: $10.99/mo (3.7x the intro rate)',
-          'Shorter terms (12/24-month) carry a higher intro rate than $2.99/mo',
-          'Verified directly on hostinger.com, 2026-08-30',
+          'Intro rate: $2.49/mo, only with a 48-month prepay ($119.52 charged upfront)',
+          'Renewal rate: $10.99/mo (4.4x the intro rate)',
+          'Other terms are priced separately; the 48-month price is the one displayed',
+          'Verified directly on hostinger.com, 2026-11-02',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -95,8 +95,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Hostinger is the only provider on this page with pricing we verified directly** — $2.99/mo intro rate, but only with a 48-month prepay ($143.52 upfront); the plan renews at $10.99/mo, a 3.7x jump.',
-          '**The intro price is not the real annual cost.** Budget for the $10.99/mo renewal rate from year five onward, not the $2.99/mo headline figure.',
+          '**Hostinger is the only provider on this page with pricing we verified directly** — $2.49/mo intro rate, but only with a 48-month prepay ($119.52 upfront); the plan renews at $10.99/mo, a 4.4x jump.',
+          '**The intro price is not the real annual cost.** Budget for the $10.99/mo renewal rate from year five onward, not the $2.49/mo headline figure.',
           '**This page intentionally excludes other well-known hosts.** Bluehost, SiteGround, HostGator, GoDaddy, and Namecheap were not re-verified this pass, so they are left out rather than repeated from stale or unconfirmed figures.',
           '**Web hosting is not AI/GPU cloud hosting.** If you need compute for running or fine-tuning a local LLM, see the separate [Cloud GPU Rental Guide](/power-local-llm/cloud-gpu-rental-guide-2026) — this page is about hosting a website, not renting a GPU.',
           '**A website needs more than the plan it is hosted on.** A separate managed database (Neon, Supabase), an off-site backup (Backblaze B2, Cloudflare R2, Wasabi), and a safe way to share large files are three decisions most site owners eventually face — covered below with directly checked pricing.',
@@ -106,22 +106,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Quick Facts',
         items: [
-          '**Verified provider:** Hostinger — the only shared-hosting price on this page checked directly, 2026-08-30.',
-          '**Intro price:** $2.99/mo, available only with a 48-month prepay term.',
-          '**Upfront charge:** $143.52, billed at signup for the full 48-month term.',
-          '**Renewal price:** $10.99/mo — a 3.7x increase over the intro rate, applied after the prepaid term ends.',
-          '**Billing currency:** USD, regardless of the customer\'s country.',
+          '**Verified provider:** Hostinger — the only shared-hosting price on this page checked directly, 2026-11-02.',
+          '**Intro price:** $2.49/mo, available only with a 48-month prepay term.',
+          '**Upfront charge:** $119.52, billed at signup for the full 48-month term.',
+          '**Renewal price:** $10.99/mo — a 4.4x increase over the intro rate, applied after the prepaid term ends.',
+          '**Billing currency:** USD on the US storefront. Hostinger\'s German and French storefronts show the same plan in euros (2.49 EUR per month, 9.99 EUR renewal), and the Brazilian one in reais, so check the storefront for your country before you compare.',
+          '**Higher plan:** Unlimited is $3.49/mo on the same 48-month prepay ($167.52 upfront) and renews at $16.99/mo.',
         ],
       },
       comparisonTable: {
         id: 'comparison-table',
         title: 'Verified Web Hosting Pricing',
         content:
-          'One row, on purpose. [Hostinger](https://www.hostinger.com/) is the only shared-hosting price re-verified directly for this page, checked on hostinger.com on 2026-08-30, and the renewal price sits in the same row as the intro price so nobody has to go digging for it. A hosting price without its renewal figure is an incomplete number — that is the entire complaint this page is built to fix.',
+          'Two rows, both [Hostinger](https://www.hostinger.com/), the only shared-hosting provider re-verified directly for this page (US storefront, checked on hostinger.com on 2026-11-02), and the renewal price sits in the same row as the intro price so nobody has to go digging for it. A hosting price without its renewal figure is an incomplete number — that is the entire complaint this page is built to fix.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Hostinger\'s $2.99/mo shared hosting rate requires a 48-month prepay and renews at $10.99/mo, a 3.7x jump — check the renewal price before you commit.',
+            text: 'Hostinger\'s $2.49/mo shared hosting rate requires a 48-month prepay and renews at $10.99/mo, a 4.4x jump — check the renewal price before you commit.',
           },
           {
             type: 'plain-terms',
@@ -131,10 +132,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Provider', 'Intro price', 'Prepay term', 'Renewal price'],
         rows: [
           {
-            'Provider': 'Hostinger',
-            'Intro price': '$2.99/mo',
-            'Prepay term': '48 months ($143.52 upfront)',
-            'Renewal price': '$10.99/mo (3.7x)',
+            'Provider': 'Hostinger Premium',
+            'Intro price': '$2.49/mo',
+            'Prepay term': '48 months ($119.52 upfront)',
+            'Renewal price': '$10.99/mo (4.4x)',
+          },
+          {
+            'Provider': 'Hostinger Unlimited',
+            'Intro price': '$3.49/mo',
+            'Prepay term': '48 months ($167.52 upfront)',
+            'Renewal price': '$16.99/mo (4.9x)',
           },
         ],
         affiliateLinks: [
@@ -142,7 +149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.hostinger.com/',
             productName: 'Hostinger web hosting',
             productCategory: 'hosting',
-            priceRange: '2.99-10.99/mo',
+            priceRange: '2.49-10.99/mo',
             label: 'Check Hostinger pricing',
           },
         ],
@@ -207,13 +214,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Hostinger\'s $2.99/mo rate works for a small site if you are comfortable prepaying $143.52 for 48 months and budgeting for a $10.99/mo renewal afterward — go in expecting that number, not the headline one. Not willing to lock in four years to get the low rate? A shorter term buys the same hosting at a higher intro rate instead, and that is fine too. This page will expand once more providers are re-verified directly.',
+          'Hostinger\'s $2.49/mo rate works for a small site if you are comfortable prepaying $119.52 for 48 months and budgeting for a $10.99/mo renewal afterward — go in expecting that number, not the headline one. Not willing to lock in four years to get the low rate? Check the live page for the price of a shorter term before you decide. This page will expand once more providers are re-verified directly.',
       },
       sources: {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[Hostinger Pricing](https://www.hostinger.com/) — checked directly on hostinger.com, 2026-08-30: $2.99/mo intro (48-month prepay, $143.52 upfront), $10.99/mo renewal.',
+          '[Hostinger Pricing](https://www.hostinger.com/) — checked directly on hostinger.com, 2026-11-02: $2.49/mo intro (48-month prepay, $119.52 upfront), $10.99/mo renewal.',
           '[Backblaze B2 Pricing](https://www.backblaze.com/cloud-storage/pricing) — checked directly 2026-09-03: $6.95/TB/month, first 10 GB free, free egress up to 3x stored data.',
           '[Cloudflare R2 Pricing](https://developers.cloudflare.com/r2/pricing/) — checked directly 2026-09-03: $0.015/GB-month standard storage, zero egress fees, 10 GB free tier.',
           '[Wasabi Pricing](https://wasabi.com/pricing/) — checked directly 2026-09-03: $7.99/TB/month flat pay-as-you-go, no separate egress or API fees.',
@@ -227,7 +234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'How much does Hostinger actually cost?',
-            a: 'The advertised $2.99/mo rate requires a 48-month prepay, charged as $143.52 upfront at signup. After that term, the plan renews at $10.99/mo — a 3.7x increase over the intro rate. Budget for the $10.99/mo figure, not the $2.99/mo headline.',
+            a: 'The advertised $2.49/mo rate requires a 48-month prepay, charged as $119.52 upfront at signup. After that term, the plan renews at $10.99/mo — a 4.4x increase over the intro rate. Budget for the $10.99/mo figure, not the $2.49/mo headline.',
           },
           {
             q: 'Why does this page only list one hosting provider?',
@@ -239,7 +246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Does the Hostinger intro price apply on shorter terms?',
-            a: 'No. The $2.99/mo rate is tied to the 48-month prepay term. Shorter commitment terms (such as 12 or 24 months) carry a higher intro rate on Hostinger\'s pricing page — check the live page for the exact rate on the term you want.',
+            a: 'No. The $2.49/mo rate is tied to the 48-month prepay term. The page we read on 2026-11-02 displayed the 48-month price; other terms are priced separately, so check the live page for the exact rate on the term you want.',
           },
           {
             q: 'Do I need a separate database, or is the one included with my hosting plan enough?',
@@ -272,18 +279,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'monthly',
     publishDate: '2026-08-30',
-    dateModified: '2026-09-03',
-    next_refresh_due: '2026-10-03',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
     title: 'Beste Webhosting-Anbieter in Deutschland 2026',
-    seoTitle: 'Webhosting Deutschland 2026: Geprüfte Preise',
+    seoTitle: 'Webhosting Kosten Deutschland 2026: Preisvergleich',
     intro:
-      'Webhosting für den deutschen Markt hat eigene Anbieter und einen eigenen regulatorischen Rahmen — DSGVO plus BSI-Grundschutz — den ein allgemeiner globaler Hosting-Vergleich nicht abdeckt. Diese Seite behandelt drei Anbieter mit am 30.08.2026 direkt geprüften Preisen: [IONOS](https://www.ionos.de/), [ALL-INKL.COM](https://all-inkl.com/) und [Hostinger](https://www.hostinger.com/). Preissprünge bei der Verlängerung stehen direkt neben dem Einstiegspreis, nicht versteckt weiter unten — genau der Trick, an dem die meisten Hosting-Vergleiche vorbeischauen. Über den reinen Webhosting-Tarif hinaus behandelt diese Seite auch die verwandten Entscheidungen, vor denen die meisten Website-Betreiber irgendwann stehen: eine separate Datenbank hosten, ein Offsite-Backup einrichten, große Dateien oder Datensätze sicher teilen, und wo KI-/LLM-Hosting in dieses Gesamtbild passt.',
+      'Webhosting für den deutschen Markt hat eigene Anbieter und einen eigenen regulatorischen Rahmen — DSGVO plus BSI-Grundschutz — den ein allgemeiner globaler Hosting-Vergleich nicht abdeckt. Diese Seite behandelt drei Anbieter mit am 02.11.2026 direkt geprüften Preisen: [IONOS](https://www.ionos.de/), [ALL-INKL.COM](https://all-inkl.com/) und [Hostinger](https://www.hostinger.com/). Preissprünge bei der Verlängerung stehen direkt neben dem Einstiegspreis, nicht versteckt weiter unten — genau der Trick, an dem die meisten Hosting-Vergleiche vorbeischauen. Über den reinen Webhosting-Tarif hinaus behandelt diese Seite auch die verwandten Entscheidungen, vor denen die meisten Website-Betreiber irgendwann stehen: eine separate Datenbank hosten, ein Offsite-Backup einrichten, große Dateien oder Datensätze sicher teilen, und wo KI-/LLM-Hosting in dieses Gesamtbild passt.',
     metaDescription:
-      'IONOS, ALL-INKL.COM und Hostinger: Preise geprüft am 30.08.2026 für Webhosting in Deutschland. IONOS verlängert zum 11-fachen des €1/Monat-Einstiegspreises.',
+      'Webhosting Kosten 2026: IONOS, ALL-INKL.COM und Hostinger mit Einstiegs- und Verlängerungspreis, geprüft am 02.11.2026. IONOS verlängert zum 11-fachen.',
     twitterDescription:
-      'IONOS wirbt mit €1/Monat, verlängert dann zu €11/Monat — das 11-fache. Drei Webhosting-Anbieter für Deutschland, geprüfte Preise, Stand 30.08.2026.',
+      'IONOS wirbt mit €1/Monat, verlängert dann zu €11/Monat — das 11-fache. Drei Webhosting-Anbieter für Deutschland, geprüfte Preise, Stand 02.11.2026.',
     affiliateDisclosure: true,
     audience:
       'Käufer, die Webhosting für eine Website oder ein kleines Unternehmen im deutschen Markt auswählen und den tatsächlichen Verlängerungspreis sowie eine DSGVO-Einschätzung für in Deutschland gehostete Optionen suchen.',
@@ -298,7 +305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'webhosting deutschland 2026',
     ],
     leadAnswerBlock:
-      '**IONOS wirbt mit €1/Monat für die ersten 12 Monate, verlängert dann zu €11/Monat — das 11-fache. ALL-INKL.COM gibt den ersten Monat kostenlos, danach €4,95/Monat ohne Mindestvertragslaufzeit. Hostinger nutzt die gleiche globale Preisstruktur wie überall — $2,99/Monat Einstieg (~€2,75/Monat), $10,99/Monat Verlängerung — und rechnet in USD ab.**',
+      '**IONOS wirbt mit €1/Monat für die ersten 12 Monate, verlängert dann zu €11/Monat — das 11-fache. ALL-INKL.COM gibt den ersten Monat kostenlos, danach €4,95/Monat ohne Mindestvertragslaufzeit. Hostinger zeigt auf dem deutschen Shop 2,49 €/Monat bei 48 Monaten Vorauszahlung und verlängert auf 9,99 €/Monat.**',
     affiliateLinks: [
       {
         url: 'https://www.ionos.de/',
@@ -318,7 +325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.hostinger.com/',
         productName: 'Hostinger Webhosting',
         productCategory: 'hosting',
-        priceRange: '2.99-10.99 USD/Monat',
+        priceRange: '2,49-9,99 EUR/Monat',
         label: 'Hostinger-Preise prüfen',
       },
     ],
@@ -326,14 +333,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       de: {
         question: 'Welcher deutsche Webhosting-Anbieter hat den besten tatsächlichen (nicht nur Einstiegs-) Preis?',
         answer:
-          'ALL-INKL.COM hat den geringsten Preissprung bei der Verlängerung: der erste Monat ist kostenlos, danach ein fester Satz von €4,95/Monat ohne Mindestvertragslaufzeit. IONOS wirbt mit dem niedrigsten Einstiegspreis von €1/Monat, verlängert aber nach 12 Monaten auf €11/Monat — ein Anstieg um das 11-fache, der steilste Sprung der drei Anbieter. Hostingers Preise werden weltweit in USD abgerechnet (etwa €2,75/Monat Einstieg, umgerechnet, Verlängerung nahe €10/Monat), nicht nativ in EUR.',
+          'ALL-INKL.COM hat den geringsten Preissprung bei der Verlängerung: der erste Monat ist kostenlos, danach ein fester Satz von €4,95/Monat ohne Mindestvertragslaufzeit. IONOS wirbt mit dem niedrigsten Einstiegspreis von €1/Monat, verlängert aber nach 12 Monaten auf €11/Monat — ein Anstieg um das 11-fache, der steilste Sprung der drei Anbieter. Hostinger zeigt auf dem deutschen Shop Euro-Preise: 2,49 €/Monat Einstieg (Tarif Premium, 48 Monate Vorauszahlung), Verlängerung 9,99 €/Monat.',
         bullets: [
           'IONOS: €1/Monat Einstieg (12 Monate), Verlängerung €11/Monat (11-fach)',
           'ALL-INKL.COM: 1. Monat kostenlos, danach €4,95/Monat fest, keine Mindestlaufzeit',
-          'Hostinger: $2,99/Monat Einstieg (~€2,75/Monat, USD-Abrechnung) / $10,99/Monat Verlängerung',
-          'Direkt geprüft, 30.08.2026',
+          'Hostinger Premium: 2,49 €/Monat Einstieg (48 Monate) / 9,99 €/Monat Verlängerung',
+          'IONOS: einmalig 10 € Einrichtung, Preise inkl. MwSt. laut Anbieterseite',
+          'Direkt geprüft, 02.11.2026',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -358,9 +366,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Der €1/Monat-Einstiegspreis von IONOS verlängert sich auf €11/Monat — das 11-fache** nach den ersten 12 Monaten. Kalkulieren Sie ab dem zweiten Jahr mit €11/Monat, nicht mit €1/Monat.',
           '**ALL-INKL.COM hat die mildesten Konditionen:** der erste Monat ist kostenlos, danach ein fester Satz von €4,95/Monat ohne Mindestvertragslaufzeit — kein Mehrjahres-Vorauskauf und kein steiler Verlängerungssprung.',
-          '**Hostinger rechnet in USD ab, kein EUR-natives Angebot.** Der Einstiegspreis von $2,99/Monat (rund €2,75/Monat bei aktuellem Umrechnungskurs) erfordert dieselbe 48-monatige Vorauszahlung wie die globale Seite und verlängert sich auf $10,99/Monat.',
+          '**Hostinger zeigt in Deutschland Euro-Preise.** Der Tarif Premium kostet 2,49 €/Monat bei 48 Monaten Vorauszahlung (119,52 € im Voraus) und verlängert sich auf 9,99 €/Monat, also etwa das Vierfache.',
           '**Ein deutscher Hoster vereinfacht die DSGVO-Konformität für regulierte Branchen** (Recht, Medizin, Finanzen), ersetzt aber keinen ordnungsgemäßen Auftragsverarbeitungsvertrag nach Art. 28 — siehe Abschnitt Compliance unten.',
-          '**Dies ist Standard-Webhosting, keine GPU-Cloud-Rechenleistung.** IONOS und Hetzner bieten auch GPU-Cloud-Produkte für KI-Workloads an, separat behandelt in unserem [DSGVO-Cloud-GPU-Vergleich](/local-llms/eu-cloud-gpu-gdpr-2026) — der IONOS-Tarif auf dieser Seite ist deren Standard-Webhosting-Stufe, keine GPU-Rechenleistung.',
+          '**Dies ist Standard-Webhosting, keine GPU-Cloud-Rechenleistung.** IONOS und Hetzner bieten auch GPU-Cloud-Produkte für KI-Workloads an, separat behandelt in unserem [DSGVO-Cloud-GPU-Vergleich](/de/local-llms/eu-cloud-gpu-gdpr-2026) — der IONOS-Tarif auf dieser Seite ist deren Standard-Webhosting-Stufe, keine GPU-Rechenleistung.',
           '**Eine Website braucht mehr als nur den Hosting-Tarif.** Eine separate Datenbank (Neon, Supabase), ein Offsite-Backup (Backblaze B2, Cloudflare R2, Wasabi) und ein sicherer Weg, große Dateien zu teilen, sind drei Entscheidungen, vor denen die meisten Website-Betreiber irgendwann stehen — unten mit direkt geprüften Preisen behandelt.',
         ],
       },
@@ -368,18 +376,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Kurzfakten',
         items: [
-          '**IONOS:** €1/Monat Einstieg für 12 Monate, Verlängerung auf €11/Monat (11-fach). Aktives direktes Partnerprogramm.',
+          '**IONOS:** €1/Monat Einstieg für 12 Monate (Tarif Plus), Verlängerung auf €11/Monat (11-fach); einmalig 10 € Einrichtung. Aktives direktes Partnerprogramm.',
           '**ALL-INKL.COM:** 1. Monat kostenlos, danach €4,95/Monat fest, keine Mindestlaufzeit. Aktives direktes Partnerprogramm.',
-          '**Hostinger:** $2,99/Monat Einstieg (48-monatige Vorauszahlung, $143,52 im Voraus), Verlängerung $10,99/Monat. Weltweit USD-Abrechnung, nicht EUR-nativ.',
+          '**Hostinger:** Premium 2,49 €/Monat Einstieg (48-monatige Vorauszahlung, 119,52 € im Voraus), Verlängerung 9,99 €/Monat. Unlimited: 3,49 €/Monat, Verlängerung 16,99 €/Monat.',
           '**Diesmal ausgeschlossen:** netcup und Hostpoint — Preise nicht erneut geprüft.',
-          '**Alle Preise direkt auf der jeweiligen Anbieter-Website geprüft, 30.08.2026.**',
+          '**Alle Preise direkt auf der jeweiligen Anbieter-Website geprüft, 02.11.2026.**',
         ],
       },
       comparisonTable: {
         id: 'comparison-table',
         title: 'Webhosting Deutschland: Geprüfte Preise',
         content:
-          'Drei Zeilen, direkt auf den jeweiligen Anbieter-Websites geprüft am 30.08.2026. [IONOS](https://www.ionos.de/) und [ALL-INKL.COM](https://all-inkl.com/) rechnen nativ in EUR ab; [Hostinger](https://www.hostinger.com/) rechnet weltweit in USD, daher ist der Wert hier eine ungefähre EUR-Umrechnung, kein EUR-denominierter Tarif. Der große Unterschied fällt sofort auf: IONOS lockt am günstigsten, springt danach aber am steilsten.',
+          'Vier Zeilen, direkt auf den jeweiligen Anbieter-Websites geprüft am 02.11.2026, alle in EUR wie auf dem deutschen Shop angezeigt. [IONOS](https://www.ionos.de/) nennt Preise inklusive MwSt. und 10 € einmalige Einrichtung; [ALL-INKL.COM](https://all-inkl.com/) nennt 19 % MwSt. im Preis; [Hostinger](https://www.hostinger.com/de/webhosting) zeigt 48-Monats-Preise ohne Angabe zur MwSt. Der große Unterschied fällt sofort auf: IONOS lockt am günstigsten, springt danach aber am steilsten.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -405,10 +413,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verlängerungspreis': '€4,95/Monat fest',
           },
           {
-            'Anbieter': 'Hostinger',
-            'Einstiegspreis': '$2,99/Monat (~€2,75, USD-Abrechnung)',
-            'Laufzeit': '48 Monate ($143,52 im Voraus)',
-            'Verlängerungspreis': '$10,99/Monat (3,7-fach)',
+            'Anbieter': 'Hostinger Premium',
+            'Einstiegspreis': '2,49 €/Monat (Premium)',
+            'Laufzeit': '48 Monate (119,52 € im Voraus)',
+            'Verlängerungspreis': '9,99 €/Monat (4-fach)',
+          },
+          {
+            'Anbieter': 'Hostinger Unlimited',
+            'Einstiegspreis': '3,49 €/Monat',
+            'Laufzeit': '48 Monate (167,52 € im Voraus)',
+            'Verlängerungspreis': '16,99 €/Monat (4,9-fach)',
           },
         ],
         affiliateLinks: [
@@ -430,7 +444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.hostinger.com/',
             productName: 'Hostinger Webhosting',
             productCategory: 'hosting',
-            priceRange: '2.99-10.99 USD/Monat',
+            priceRange: '2,49-9,99 EUR/Monat',
             label: 'Hostinger-Preise prüfen',
           },
         ],
@@ -439,7 +453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hosting-vs-gpu-cloud',
         title: 'Standard-Hosting vs. KI-/GPU-Cloud-Hosting',
         content:
-          'IONOS und Hetzner betreiben auch GPU-Cloud-Produkte für KI-Workloads — siehe unseren [DSGVO-Cloud-GPU-Vergleich](/local-llms/eu-cloud-gpu-gdpr-2026) — aber der oben genannte IONOS-Tarif ist deren Standard-Webhosting-Stufe, keine GPU-Rechenleistung. Wenn Sie Rechenleistung zum Betreiben oder Fine-Tuning eines lokalen LLM benötigen statt eine Website zu hosten, gibt es drei Wege, keiner davon ist Standard-Webhosting: (1) eine GPU stundenweise mieten und das Modell selbst betreiben — siehe den [Cloud-GPU-Mietratgeber 2026](/de/power-local-llm/cloud-gpu-rental-guide-2026) für Stundenpreise bei RunPod, Lambda Labs und Vast.ai, oder den oben verlinkten EU-spezifischen Vergleich für DSGVO-fokussierte GPU-Anbieter einschließlich Hetzner; (2) eine verwaltete Inferenz-API aufrufen, die pro Token oder pro Anfrage abrechnet und keine eigene GPU-Verwaltung erfordert; (3) eine eigene KI-Workstation aufbauen und die Hardware besitzen, was eine höhere Vorabinvestition gegen keine laufende Mietrechnung tauscht.',
+          'IONOS und Hetzner betreiben auch GPU-Cloud-Produkte für KI-Workloads — siehe unseren [DSGVO-Cloud-GPU-Vergleich](/de/local-llms/eu-cloud-gpu-gdpr-2026) — aber der oben genannte IONOS-Tarif ist deren Standard-Webhosting-Stufe, keine GPU-Rechenleistung. Wenn Sie Rechenleistung zum Betreiben oder Fine-Tuning eines lokalen LLM benötigen statt eine Website zu hosten, gibt es drei Wege, keiner davon ist Standard-Webhosting: (1) eine GPU stundenweise mieten und das Modell selbst betreiben — siehe den [Cloud-GPU-Mietratgeber 2026](/de/power-local-llm/cloud-gpu-rental-guide-2026) für Stundenpreise bei RunPod, Lambda Labs und Vast.ai, oder den oben verlinkten EU-spezifischen Vergleich für DSGVO-fokussierte GPU-Anbieter einschließlich Hetzner; (2) eine verwaltete Inferenz-API aufrufen, die pro Token oder pro Anfrage abrechnet und keine eigene GPU-Verwaltung erfordert; (3) eine eigene KI-Workstation aufbauen und die Hardware besitzen, was eine höhere Vorabinvestition gegen keine laufende Mietrechnung tauscht.',
       },
       hostingTypesExplained: {
         id: 'hosting-types-explained',
@@ -495,15 +509,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Für die niedrigsten laufenden Kosten ohne Verlängerungsschock ist [ALL-INKL.COMs](https://all-inkl.com/) fester Satz von €4,95/Monat die einfachste Wahl — kein Kleingedrucktes, keine Überraschung im zweiten Jahr. Für den niedrigstmöglichen Preis im ersten Jahr, sofern Sie den Sprung auf €11/Monat fest einplanen, eignet sich [IONOS](https://www.ionos.de/). [Hostinger](https://www.hostinger.com/) passt, wenn Sie denselben Anbieter wie bei einer globalen Website nutzen möchten und mit USD-Abrechnung sowie 48-monatiger Vorauszahlung einverstanden sind.',
+          'Für die niedrigsten laufenden Kosten ohne Verlängerungsschock ist [ALL-INKL.COMs](https://all-inkl.com/) fester Satz von €4,95/Monat die einfachste Wahl — kein Kleingedrucktes, keine Überraschung im zweiten Jahr. Für den niedrigstmöglichen Preis im ersten Jahr, sofern Sie den Sprung auf €11/Monat fest einplanen, eignet sich [IONOS](https://www.ionos.de/). [Hostinger](https://www.hostinger.com/) passt, wenn Sie denselben Anbieter wie bei einer globalen Website nutzen möchten und mit 48-monatiger Vorauszahlung und einem Verlängerungspreis von 9,99 €/Monat einverstanden sind.',
       },
       sources: {
         id: 'sources',
         title: 'Quellen',
         items: [
-          '[IONOS Hosting](https://www.ionos.de/) — direkt auf ionos.de geprüft, 30.08.2026: €1/Monat Einstieg (12 Monate), €11/Monat Verlängerung.',
-          '[ALL-INKL.COM Hosting](https://all-inkl.com/) — direkt auf all-inkl.com geprüft, 30.08.2026: 1. Monat kostenlos, €4,95/Monat fest, keine Mindestlaufzeit.',
-          '[Hostinger-Preise](https://www.hostinger.com/) — direkt auf hostinger.com geprüft, 30.08.2026: $2,99/Monat Einstieg (48-monatige Vorauszahlung, $143,52 im Voraus), $10,99/Monat Verlängerung.',
+          '[IONOS Hosting](https://www.ionos.de/) — direkt auf ionos.de geprüft, 02.11.2026: Tarif Plus €1/Monat Einstieg (12 Monate), €11/Monat danach; einmalig 10 € Einrichtung; Preise inkl. MwSt.',
+          '[ALL-INKL.COM Hosting](https://all-inkl.com/) — direkt auf all-inkl.com geprüft, 02.11.2026: 1. Monat kostenlos, €4,95/Monat fest, keine Mindestlaufzeit.',
+          '[Hostinger-Preise](https://www.hostinger.com/) — direkt auf hostinger.com/de geprüft, 02.11.2026: Premium 2,49 €/Monat (48 Monate, 119,52 € im Voraus), 9,99 €/Monat Verlängerung; Unlimited 3,49 €/Monat, 16,99 €/Monat Verlängerung.',
           '[Backblaze B2 Preise](https://www.backblaze.com/cloud-storage/pricing) — direkt geprüft 03.09.2026: $6,95/TB/Monat, erste 10 GB kostenlos, freier Egress bis zum 3-fachen der gespeicherten Daten.',
           '[Cloudflare R2 Preise](https://developers.cloudflare.com/r2/pricing/) — direkt geprüft 03.09.2026: $0,015/GB-Monat Standard-Speicher, keine Egress-Gebühren, kostenlose Stufe 10 GB.',
           '[Wasabi Preise](https://wasabi.com/pricing/) — direkt geprüft 03.09.2026: $7,99/TB/Monat fest, keine separaten Egress- oder API-Gebühren.',
@@ -516,6 +530,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           {
+            q: 'Was kostet Webhosting in Deutschland pro Monat?',
+            a: 'Nach den am 02.11.2026 geprüften Anbieterseiten: ALL-INKL.COM ab €4,95/Monat im Tarif PRIVAT (erster Monat kostenlos, keine Mindestlaufzeit), IONOS im Tarif Plus €1/Monat im ersten Jahr und danach €11/Monat (zuzüglich 10 € einmaliger Einrichtung), Hostinger Premium 2,49 €/Monat bei 48 Monaten Vorauszahlung und danach 9,99 €/Monat. Kalkulieren Sie mit dem Verlängerungspreis, nicht mit dem Einstiegspreis.',
+          },
+          {
             q: 'Wie viel kostet IONOS-Hosting nach dem ersten Jahr?',
             a: 'IONOS wirbt mit €1/Monat für die ersten 12 Monate, verlängert sich dann auf €11/Monat — ein Anstieg um das 11-fache. Kalkulieren Sie mit dem €11/Monat-Wert, wenn Sie die Gesamtkosten über mehr als ein Jahr vergleichen.',
           },
@@ -524,8 +542,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'ALL-INKL.COM. Der erste Monat ist kostenlos, danach wird ein fester Satz von €4,95/Monat berechnet, ohne Mindestvertragslaufzeit und ohne Verlängerungssprung — der Preis im zweiten Monat ist der Preis, den Sie danach jeden Monat zahlen.',
           },
           {
-            q: 'Ist Hostinger ein deutsches (EUR-natives) Hosting-Angebot?',
-            a: 'Nein. Hostinger rechnet weltweit in USD ab, auch für deutsche Kunden. Der Einstiegspreis von $2,99/Monat (rund €2,75/Monat bei aktuellem Umrechnungskurs) erfordert eine 48-monatige Vorauszahlung und verlängert sich auf $10,99/Monat — dieselben Konditionen wie die globale Preisgestaltung, kein EUR-denominierter Deutschland-Tarif.',
+            q: 'Rechnet Hostinger in Deutschland in Euro ab?',
+            a: 'Ja, der deutsche Shop zeigt Euro-Preise: Der Tarif Premium kostet 2,49 €/Monat bei 48 Monaten Vorauszahlung (119,52 € im Voraus) und verlängert sich auf 9,99 €/Monat. Hostinger ist kein deutscher Anbieter; zur Datenresidenz und zum Auftragsverarbeitungsvertrag siehe den Abschnitt Compliance.',
           },
           {
             q: 'Erfüllt deutsches Hosting allein die DSGVO?',
@@ -533,7 +551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Bieten IONOS oder Hetzner GPU-Cloud-Hosting für KI-Workloads an?',
-            a: 'Ja, beide betreiben separate GPU-Cloud-Produkte für KI-Rechenleistung, unabhängig von ihren Standard-Webhosting-Tarifen. Siehe den [DSGVO-Cloud-GPU-Vergleich](/local-llms/eu-cloud-gpu-gdpr-2026) für diese Produktlinie — die IONOS-Preise auf dieser Seite gelten für Standard-Webhosting, nicht für GPU-Rechenleistung.',
+            a: 'Ja, beide betreiben separate GPU-Cloud-Produkte für KI-Rechenleistung, unabhängig von ihren Standard-Webhosting-Tarifen. Siehe den [DSGVO-Cloud-GPU-Vergleich](/de/local-llms/eu-cloud-gpu-gdpr-2026) für diese Produktlinie — die IONOS-Preise auf dieser Seite gelten für Standard-Webhosting, nicht für GPU-Rechenleistung.',
           },
           {
             q: 'Reicht die im Hosting-Tarif enthaltene Datenbank aus, oder brauche ich eine separate?',
@@ -553,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[DSGVO-konforme Cloud-GPU-Anbieter in der EU vergleichen](/local-llms/eu-cloud-gpu-gdpr-2026) — Hetzner, IONOS GPU Cloud und andere EU-native GPU-Anbieter für KI-Workloads, unabhängig vom Webhosting.',
+          '[DSGVO-konforme Cloud-GPU-Anbieter in der EU vergleichen](/de/local-llms/eu-cloud-gpu-gdpr-2026) — Hetzner, IONOS GPU Cloud und andere EU-native GPU-Anbieter für KI-Workloads, unabhängig vom Webhosting.',
           '[Cloud-GPU-Miete allgemein vergleichen](/de/power-local-llm/cloud-gpu-rental-guide-2026) — RunPod, Lambda Labs und Vast.ai nach Stundenpreis, Verfügbarkeit und Einrichtungszeit.',
           '[Die globale Seite mit geprüften Webhosting-Preisen ansehen](/de/power-local-llm/best-web-hosting) — das weltweite Gegenstück zu dieser Deutschland-Seite.',
         ],
@@ -563,18 +581,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'monthly',
     publishDate: '2026-08-30',
-    dateModified: '2026-09-03',
-    next_refresh_due: '2026-10-03',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
     title: 'Meilleur Hébergeur Web en France 2026',
-    seoTitle: 'Meilleur Hébergeur France 2026 : Prix Vérifiés',
+    seoTitle: 'LWS, OVHcloud, Hostinger : comparatif hébergeur 2026',
     intro:
-      'L\'hébergement web pour le marché français a ses propres acteurs, ses propres conventions tarifaires, et un contexte réglementaire spécifique — RGPD et recommandations de la CNIL — qu\'un comparatif mondial générique ne couvre pas. Cette page compare quatre hébergeurs dont les tarifs ont été vérifiés directement le 30/08/2026 : [o2switch](https://www.o2switch.fr/), [LWS](https://www.lws.fr/), [Infomaniak](https://www.infomaniak.com/) et [Hostinger](https://www.hostinger.com/). OVHcloud, la marque d\'hébergement française la plus reconnue, fait l\'objet d\'une mention éditoriale sans lien affilié plus bas, car aucun programme d\'affiliation ouvert au marché français n\'existe pour l\'instant (seul un programme CJ pour le marché américain existe). Au-delà du seul hébergement web, cette page couvre aussi les décisions connexes auxquelles la plupart des propriétaires de site font face tôt ou tard : héberger une base de données à part, sauvegarder hors site, partager de gros fichiers ou jeux de données en toute sécurité, et où se situe l\'hébergement IA/LLM dans cet ensemble.',
+      'L\'hébergement web pour le marché français a ses propres acteurs, ses propres conventions tarifaires, et un contexte réglementaire spécifique — RGPD et recommandations de la CNIL — qu\'un comparatif mondial générique ne couvre pas. Cette page compare quatre hébergeurs dont les tarifs ont été lus directement le 02/11/2026 (Infomaniak : relevé du 30/08/2026, non relu) : [o2switch](https://www.o2switch.fr/), [LWS](https://www.lws.fr/), [Infomaniak](https://www.infomaniak.com/) et [Hostinger](https://www.hostinger.com/). OVHcloud, la marque d\'hébergement française la plus reconnue, fait l\'objet d\'une mention éditoriale sans lien affilié plus bas, car aucun programme d\'affiliation ouvert au marché français n\'existe pour l\'instant (seul un programme CJ pour le marché américain existe). Au-delà du seul hébergement web, cette page couvre aussi les décisions connexes auxquelles la plupart des propriétaires de site font face tôt ou tard : héberger une base de données à part, sauvegarder hors site, partager de gros fichiers ou jeux de données en toute sécurité, et où se situe l\'hébergement IA/LLM dans cet ensemble.',
     metaDescription:
-      'o2switch, LWS, Infomaniak, Hostinger : prix vérifiés le 30/08/2026 pour l\'hébergement web en France. LWS renouvelle à 2,7x son tarif d\'appel — le coût réel avant de s\'engager.',
+      'Comparatif hébergeur web 2026 : LWS, OVHcloud, o2switch, Hostinger, Infomaniak. Prix d\'appel et de renouvellement lus le 02/11/2026, LWS vs OVH.',
     twitterDescription:
-      'LWS affiche 1,49€/mois, puis renouvelle à 3,99€/mois. Quatre hébergeurs pour le marché français, prix vérifiés, au 30/08/2026.',
+      'LWS affiche 1,49€/mois, puis renouvelle à 3,99€/mois. Cinq hébergeurs pour le marché français, prix lus au 02/11/2026.',
     affiliateDisclosure: true,
     audience:
       'Acheteurs choisissant un hébergement web pour un site ou une petite entreprise sur le marché français, qui veulent connaître le prix réel de renouvellement et un éclairage RGPD/CNIL sur les options hébergées en France ou en Suisse.',
@@ -589,13 +607,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'hébergement web rgpd france',
     ],
     leadAnswerBlock:
-      '**Infomaniak propose la tarification la plus transparente des quatre — 10,91 CHF/mois fixe, sans saut au renouvellement, avec un essai gratuit de 30 jours. LWS est le moins cher au démarrage (1,49€/mois, renouvellement à 3,99€/mois) mais présente le saut le plus important. o2switch fonctionne avec une offre unique à environ 4,20-5,04€/mois, renouvelée à environ 7-8,40€/mois. OVHcloud, l\'hébergeur français le plus connu, n\'est pas un choix monétisable ici actuellement — aucun programme d\'affiliation ouvert au marché français n\'existe.**',
+      '**LWS affiche 1,49 € HT/mois la première année et renouvelle à 3,99 € HT/mois. OVHcloud démarre à 1,59 € HT/mois (Starter, renouvellement 2,59 € HT) et Hostinger à 2,49 €/mois sur 48 mois (renouvellement 9,99 €). o2switch affiche 1,86 € HT/mois, sans renouvellement publié.**',
     affiliateLinks: [
       {
         url: 'https://www.o2switch.fr/',
         productName: 'Hébergement web o2switch',
         productCategory: 'hosting',
-        priceRange: '4,20-8,40 EUR/mois',
+        priceRange: '1,86 EUR HT/mois',
         label: 'Voir les tarifs o2switch',
       },
       {
@@ -617,15 +635,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fr: {
         question: 'Quel hébergeur web français a la tarification la plus honnête ?',
         answer:
-          'Infomaniak est le plus transparent : 10,91 CHF/mois est son tarif catalogue standard, sans saut au renouvellement, avec un essai gratuit de 30 jours pour tester avant de payer. LWS est le moins cher au départ, à 1,49€/mois, mais renouvelle à 3,99€/mois. o2switch propose une offre unique à environ 4,20-5,04€/mois la première année, renouvelée autour de 7-8,40€/mois. OVHcloud est la marque d\'hébergement française la plus reconnue, mais n\'a pas de programme d\'affiliation ouvert au marché français, donc elle apparaît ici en mention éditoriale uniquement.',
+          'LWS affiche 1,49 € HT/mois la première année et renouvelle à 3,99 € HT/mois. OVHcloud, la marque française la plus connue, affiche 1,59 € HT/mois pour Starter (renouvellement 2,59 € HT) et 2,99 € HT/mois pour Perso pendant 12 mois (renouvellement 5,99 € HT) ; elle apparaît sans lien affilié. Hostinger affiche 2,49 €/mois sur 48 mois et renouvelle à 9,99 €/mois. o2switch affiche 1,86 € HT/mois avec paiement annuel mais ne publie pas son tarif de renouvellement. Infomaniak affichait 10,91 CHF/mois fixe lors du relevé du 30/08/2026, non relu depuis.',
         bullets: [
-          'Infomaniak : 10,91 CHF/mois fixe, pas de saut au renouvellement, essai gratuit 30 jours',
-          'LWS : 1,49€/mois (1ère année), renouvellement à 3,99€/mois',
-          'o2switch : ~4,20-5,04€/mois (1ère année), renouvellement ~7-8,40€/mois, offre unique',
-          'Hostinger : 2,99$/mois d\'appel, renouvellement 10,99$/mois (tarif mondial, facturé en USD)',
-          'OVHcloud : mention éditoriale uniquement, pas de lien affilié (pas de programme ouvert au marché FR)',
+          'LWS : 1,49 € HT/mois (1ère année), renouvellement à 3,99 € HT/mois',
+          'OVHcloud : Starter 1,59 € HT/mois (renouvellement 2,59 € HT), Perso 2,99 € HT/mois (renouvellement 5,99 € HT)',
+          'Hostinger : Premium 2,49 €/mois sur 48 mois, renouvellement 9,99 €/mois',
+          'o2switch : 1,86 € HT/mois affiché (paiement annuel), renouvellement non publié',
+          'Infomaniak : 10,91 CHF/mois fixe (relevé du 30/08/2026, non relu)',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -648,10 +666,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Infomaniak est le seul hébergeur ici avec un prix fixe et transparent** — 10,91 CHF/mois en tarif catalogue standard, sans saut au renouvellement, avec un essai gratuit de 30 jours.',
-          '**LWS est le moins cher au démarrage mais présente le saut le plus important :** 1,49€/mois la première année, renouvelé à 3,99€/mois — une hausse de 2,7x.',
-          '**o2switch fonctionne avec une "Offre Unique" :** environ 4,20-5,04€/mois la première année, renouvelée autour de 7-8,40€/mois, sans paliers d\'offres à comparer.',
-          '**OVHcloud, la marque d\'hébergement française la plus reconnue, fait l\'objet d\'une mention éditoriale uniquement.** Aucun programme d\'affiliation ouvert au marché français n\'existe (seul un programme CJ pour le marché américain), donc elle n\'est pas présentée comme un choix monétisé.',
+          '**Infomaniak affichait un prix fixe** — 10,91 CHF/mois en tarif catalogue standard, sans saut au renouvellement, avec un essai gratuit de 30 jours (relevé du 30/08/2026, non relu le 02/11/2026).',
+          '**LWS : 1,49 € HT/mois la première année, renouvelé à 3,99 € HT/mois** (1,79 € puis 4,79 € TTC), une hausse de 2,7x. Offres supérieures : Starter 3,49 € HT/mois et Performance 6,99 € HT/mois en promotion.',
+          '**o2switch fonctionne avec une "Offre Unique" :** 1,86 € HT/mois affiché, paiement annuel ; la page indique un renouvellement « au tarif classique » sans le chiffrer.',
+          '**OVHcloud, la marque d\'hébergement française la plus reconnue : Starter 1,59 € HT/mois (renouvellement 2,59 € HT), Perso 2,99 € HT/mois pendant 12 mois (renouvellement 5,99 € HT).** Mention éditoriale uniquement. Aucun programme d\'affiliation ouvert au marché français n\'existe (seul un programme CJ pour le marché américain), donc elle n\'est pas présentée comme un choix monétisé.',
           '**Il s\'agit d\'hébergement web standard, pas de calcul GPU en cloud.** Pour le calcul IA/LLM, voir le [Guide de location de GPU cloud 2026](/fr/power-local-llm/cloud-gpu-rental-guide-2026) séparé.',
           '**Un site a besoin de plus que son seul forfait d\'hébergement.** Une base de données séparée (Neon, Supabase), une sauvegarde hors site (Backblaze B2, Cloudflare R2, Wasabi) et un moyen sûr de partager de gros fichiers sont trois décisions auxquelles la plupart des propriétaires de site font face tôt ou tard — détaillées ci-dessous avec des prix vérifiés directement.',
         ],
@@ -660,10 +678,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'En bref',
         items: [
-          '**o2switch :** ~4,20-5,04€/mois (1ère année, offre unique), renouvellement ~7-8,40€/mois. Programme d\'affiliation actif via Awin.',
-          '**LWS :** 1,49€/mois (1ère année), renouvellement 3,99€/mois. Programme d\'affiliation actif, direct.',
+          '**o2switch :** 1,86 € HT/mois affiché (offre unique, paiement annuel), renouvellement non publié. Programme d\'affiliation actif via Awin.',
+          '**LWS :** 1,49 € HT/mois (1ère année), renouvellement 3,99 € HT/mois. Programme d\'affiliation actif, direct.',
           '**Infomaniak :** 10,91 CHF/mois en tarif catalogue standard, pas de saut au renouvellement, essai gratuit 30 jours. Entreprise suisse, large clientèle française. Programme d\'affiliation actif, direct.',
-          '**Hostinger :** 2,99$/mois d\'appel (prépaiement 48 mois), renouvellement 10,99$/mois. Tarification mondiale en USD.',
+          '**Hostinger :** Premium 2,49 €/mois (prépaiement 48 mois, 119,52 € à l\'avance), renouvellement 9,99 €/mois ; la boutique française affiche des prix en euros.',
           '**OVHcloud :** mention éditoriale uniquement — hébergeur français #1 en notoriété, mais pas de programme d\'affiliation ouvert au marché français (seul un programme CJ pour le marché américain).',
           '**Exclu cette fois-ci :** PlanetHoster — tarifs non revérifiés.',
         ],
@@ -672,7 +690,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Hébergement en France : Prix Vérifiés',
         content:
-          'Quatre hébergeurs, un seul patron dans leurs grilles tarifaires : le prix qui accroche n\'est jamais celui que vous payez la deuxième année. [Infomaniak](https://www.infomaniak.com/) est la seule exception. Tarifs vérifiés directement sur le site de chaque hébergeur le 30/08/2026 ; OVHcloud est inclus à titre de référence car c\'est la marque que les lecteurs attendent de voir, mais sans lien affilié puisqu\'aucun programme ouvert au marché français n\'existe pour cet hébergeur.',
+          'Quatre hébergeurs, un seul patron dans leurs grilles tarifaires : le prix qui accroche n\'est le plus souvent pas celui que vous payez la deuxième année. [Infomaniak](https://www.infomaniak.com/) est la seule exception. Tarifs lus directement sur le site de chaque hébergeur le 02/11/2026 (Infomaniak : 30/08/2026) ; OVHcloud figure avec ses prix publics car c\'est la marque que les lecteurs attendent de voir, mais sans lien affilié puisqu\'aucun programme ouvert au marché français n\'existe pour cet hébergeur.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -687,32 +705,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Hébergeur': 'o2switch',
-            'Prix an 1': '~4,20-5,04€/mois',
-            'Prix renouvellement': '~7-8,40€/mois',
+            'Prix an 1': '1,86 € HT/mois',
+            'Prix renouvellement': 'Non publié',
             'Lien affilié': 'Oui (Awin)',
           },
           {
             'Hébergeur': 'LWS',
-            'Prix an 1': '1,49€/mois',
-            'Prix renouvellement': '3,99€/mois',
+            'Prix an 1': '1,49 € HT/mois',
+            'Prix renouvellement': '3,99 € HT/mois',
             'Lien affilié': 'Oui (direct)',
           },
           {
             'Hébergeur': 'Infomaniak',
-            'Prix an 1': '10,91 CHF/mois (fixe)',
-            'Prix renouvellement': '10,91 CHF/mois (sans saut)',
+            'Prix an 1': '10,91 CHF/mois (30/08)',
+            'Prix renouvellement': 'Sans saut (non relu)',
             'Lien affilié': 'Oui (direct)',
           },
           {
             'Hébergeur': 'Hostinger',
-            'Prix an 1': '2,99$/mois (prépa. 48 mois)',
-            'Prix renouvellement': '10,99$/mois',
+            'Prix an 1': '2,49 €/mois (prépa. 48 mois)',
+            'Prix renouvellement': '9,99 €/mois',
             'Lien affilié': 'Oui (direct)',
           },
           {
             'Hébergeur': 'OVHcloud',
-            'Prix an 1': 'Voir ovhcloud.com',
-            'Prix renouvellement': 'Voir ovhcloud.com',
+            'Prix an 1': '1,59 € HT/mois (Starter)',
+            'Prix renouvellement': '2,59 € HT/mois',
             'Lien affilié': 'Non (mention éditoriale)',
           },
         ],
@@ -721,7 +739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.o2switch.fr/',
             productName: 'Hébergement web o2switch',
             productCategory: 'hosting',
-            priceRange: '4,20-8,40 EUR/mois',
+            priceRange: '1,86 EUR HT/mois',
             label: 'Voir les tarifs o2switch',
           },
           {
@@ -742,7 +760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.hostinger.com/',
             productName: 'Hébergement web Hostinger',
             productCategory: 'hosting',
-            priceRange: '2.99-10.99 USD/mois',
+            priceRange: '2,49-9,99 EUR/mois',
             label: 'Voir les tarifs Hostinger',
           },
         ],
@@ -807,17 +825,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          '[Infomaniak](https://www.infomaniak.com/) est le choix si un prix fixe et prévisible compte plus qu\'un tarif de première année au plus bas — 10,91 CHF/mois sans saut au renouvellement, et un essai de 30 jours pour tester avant de sortir la carte bancaire. [LWS](https://www.lws.fr/) convient pour le coût de démarrage le plus bas possible, si vous êtes préparé au saut à 3,99€/mois au renouvellement. L\'offre unique d\'[o2switch](https://www.o2switch.fr/) convient aux acheteurs qui veulent éviter complètement la comparaison entre paliers d\'offres. OVHcloud reste à consulter directement sur [ovhcloud.com](https://ovhcloud.com) — ce n\'est simplement pas une page que nous pouvons monétiser honnêtement pour l\'instant.',
+          '[Infomaniak](https://www.infomaniak.com/) est le choix si un prix fixe et prévisible compte plus qu\'un tarif de première année au plus bas — 10,91 CHF/mois sans saut au renouvellement, et un essai de 30 jours pour tester avant de sortir la carte bancaire. [LWS](https://www.lws.fr/) convient pour le coût de démarrage le plus bas possible, si vous êtes préparé au saut à 3,99 € HT/mois au renouvellement. L\'offre unique d\'[o2switch](https://www.o2switch.fr/) convient aux acheteurs qui veulent éviter la comparaison entre paliers, à condition de demander le tarif de renouvellement avant de commander. Chez OVHcloud, le renouvellement de Starter (2,59 € HT/mois) reste le plus bas du tableau ; les prix sont à confirmer sur [ovhcloud.com](https://ovhcloud.com), qui n\'est simplement pas une page que nous pouvons monétiser honnêtement pour l\'instant.',
       },
       sources: {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[o2switch](https://www.o2switch.fr/) — vérifié directement sur o2switch.fr, 30/08/2026 : ~4,20-5,04€/mois la première année, ~7-8,40€/mois au renouvellement, offre unique.',
-          '[LWS](https://www.lws.fr/) — vérifié directement sur lws.fr, 30/08/2026 : 1,49€/mois d\'appel (1ère année), 3,99€/mois au renouvellement.',
+          '[o2switch](https://www.o2switch.fr/) — lu directement sur o2switch.fr, 02/11/2026 : 1,86 € HT/mois, paiement annuel, offre unique ; le renouvellement est annoncé « au tarif classique » sans montant.',
+          '[LWS](https://www.lws.fr/) — lu directement sur lws.fr, 02/11/2026 : Perso 1,49 € HT/mois (1,79 € TTC) la première année, prix barré 3,99 € HT/mois ; Starter 3,49 € HT/mois, Performance 6,99 € HT/mois.',
           '[Infomaniak](https://www.infomaniak.com/) — vérifié directement sur infomaniak.com, 30/08/2026 : 10,91 CHF/mois en tarif catalogue standard, essai gratuit 30 jours, pas de saut au renouvellement.',
-          '[Hostinger](https://www.hostinger.com/) — vérifié directement sur hostinger.com, 30/08/2026 : 2,99$/mois d\'appel (prépaiement 48 mois, 143,52$ à l\'avance), 10,99$/mois au renouvellement.',
-          'OVHcloud ([ovhcloud.com](https://ovhcloud.com)) — mentionné à titre éditorial en tant que marque d\'hébergement française la plus reconnue ; aucun programme d\'affiliation confirmé ouvert au marché français au 30/08/2026 (seul un programme CJ pour le marché américain existe).',
+          '[Hostinger](https://www.hostinger.com/) — lu directement sur hostinger.com/fr, 02/11/2026 : Premium 2,49 €/mois (48 mois, 119,52 € à l\'avance), 9,99 €/mois au renouvellement ; Unlimited 3,49 €/mois, 16,99 €/mois au renouvellement.',
+          'OVHcloud ([ovhcloud.com](https://ovhcloud.com)) — mentionné à titre éditorial en tant que marque d\'hébergement française la plus reconnue ; prix lus sur ovhcloud.com le 02/11/2026 (Starter 1,59 € HT/mois, renouvellement 2,59 € HT ; Perso 2,99 € HT/mois pendant 12 mois, renouvellement 5,99 € HT) ; aucun programme d\'affiliation confirmé ouvert au marché français au 30/08/2026 (seul un programme CJ pour le marché américain existe).',
           '[Prix Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — vérifié directement le 03/09/2026 : 6,95$/To/mois, 10 premiers Go gratuits, sortie gratuite jusqu\'à 3x les données stockées.',
           '[Prix Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — vérifié directement le 03/09/2026 : 0,015$/Go/mois en stockage standard, aucun frais de sortie, palier gratuit de 10 Go.',
           '[Prix Wasabi](https://wasabi.com/pricing/) — vérifié directement le 03/09/2026 : 7,99$/To/mois fixe, sans frais de sortie ou d\'API séparés.',
@@ -838,12 +856,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'OVHcloud est la marque d\'hébergement française la plus reconnue et est mentionnée pour cette raison, mais aucun programme d\'affiliation ouvert au marché français n\'existe — seul un programme CJ pour le marché américain existe. Pour éviter de le présenter comme une recommandation monétisée qu\'il n\'est pas, il apparaît ici sans lien affilié.',
           },
           {
+            q: 'LWS ou OVHcloud : lequel est le moins cher ?',
+            a: 'Au 02/11/2026, l\'offre d\'entrée d\'OVHcloud (Starter, 1,59 € HT/mois, renouvellement 2,59 € HT/mois) est affichée moins chère que l\'offre d\'entrée de LWS (Perso, 1,49 € HT/mois la première année, puis 3,99 € HT/mois) à partir de la deuxième année. Pour une offre comparable, OVHcloud Perso coûte 2,99 € HT/mois pendant 12 mois puis 5,99 € HT/mois, contre 3,49 € HT/mois en promotion chez LWS Starter. Comparez les capacités de chaque offre avant de choisir : les prix seuls ne suffisent pas.',
+          },
+          {
+            q: 'LWS ou Hostinger : quelles différences de prix ?',
+            a: 'LWS facture en euros HT (1,49 € HT/mois la première année, 3,99 € HT ensuite) sans engagement affiché de 48 mois ; Hostinger propose 2,49 €/mois (Premium) à condition de payer 119,52 € d\'avance pour 48 mois, puis 9,99 €/mois. Sur la durée, le renouvellement compte plus que le prix d\'appel.',
+          },
+          {
             q: 'Combien coûte LWS après la première année ?',
-            a: 'LWS affiche 1,49€/mois pour la première année, puis renouvelle à 3,99€/mois — soit une hausse d\'environ 2,7 fois. Prévoyez le montant de 3,99€/mois au-delà de la première année.',
+            a: 'LWS affiche 1,49 € HT/mois pour la première année, puis le prix barré de 3,99 € HT/mois — soit une hausse d\'environ 2,7 fois. La page ne chiffre pas explicitement le renouvellement : prévoyez 3,99 € HT/mois au-delà de la première année.',
           },
           {
             q: 'Que signifie l\'"Offre Unique" d\'o2switch pour la tarification ?',
-            a: 'o2switch vend une seule offre d\'hébergement plutôt que plusieurs paliers, facturée environ 4,20-5,04€/mois la première année et renouvelée autour de 7-8,40€/mois. Il n\'y a pas de palier moins cher ou plus cher à choisir — une seule offre couvre tous les usages courants.',
+            a: 'o2switch vend une seule offre d\'hébergement plutôt que plusieurs paliers, affichée 1,86 € HT/mois avec paiement annuel ; son renouvellement est annoncé « au tarif classique » sans montant publié. Il n\'y a pas de palier moins cher ou plus cher à choisir — une seule offre couvre tous les usages courants.',
           },
           {
             q: 'L\'hébergement français suffit-il à lui seul pour respecter le RGPD ?',
@@ -876,18 +902,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'monthly',
     publishDate: '2026-08-30',
-    dateModified: '2026-09-03',
-    next_refresh_due: '2026-10-03',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
-    title: 'Mejor Hosting Web en España y Latinoamérica 2026',
-    seoTitle: 'Mejor Hosting España y Latinoamérica 2026',
+    title: 'Mejor Hosting Barato y con Soporte en Español 2026: España y Latinoamérica',
+    seoTitle: 'Mejor hosting barato y con soporte en español 2026',
     intro:
-      'España y Sudamérica son dos mercados de hosting completamente distintos, con dos marcos legales de protección de datos distintos, y tratarlos como una sola región produce recomendaciones equivocadas. Esta guía los mantiene separados: una tabla para España con [Webempresa](https://www.webempresa.com/) y [Nominalia](https://www.nominalia.com/), regida por el RGPD, y una tabla de Sudamérica desglosada por país — [DonWeb](https://www.donweb.com/) en Argentina, [Hosting.cl](https://www.hosting.cl/) en Chile — ya que cada país tiene su propia ley de protección de datos. Cada precio de esta guía se verificó directamente en el sitio del proveedor el 30 de agosto de 2026 — las promociones de hosting cambian rápido, y una moneda tan volátil como el peso argentino convierte cualquier conversión a dólares en una fotografía puntual, no en una cifra estable.',
+      'España y Sudamérica son dos mercados de hosting completamente distintos, con dos marcos legales de protección de datos distintos, y tratarlos como una sola región produce recomendaciones equivocadas. Esta guía los mantiene separados: una tabla para España con [Webempresa](https://www.webempresa.com/) y [Nominalia](https://www.nominalia.com/), regida por el RGPD, y una tabla de Sudamérica desglosada por país — [DonWeb](https://www.donweb.com/) en Argentina, [Hosting.cl](https://www.hosting.cl/) en Chile — ya que cada país tiene su propia ley de protección de datos. Los precios de Webempresa, Nominalia, DonWeb y Hosting.cl se leyeron directamente en el sitio del proveedor el 2 de noviembre de 2026; los de WNPower no se pudieron verificar esa fecha. Las promociones de hosting cambian rápido, y una moneda tan volátil como el peso argentino convierte cualquier conversión a dólares en una fotografía puntual, no en una cifra estable.',
     metaDescription:
-      'Mejor hosting web en España (Webempresa, Nominalia) y Sudamérica (Argentina, Chile, Perú) para 2026. Precios verificados, saltos de renovación y cumplimiento RGPD vs. leyes locales por país.',
+      'Hosting con soporte en español y barato: Hostinger, Raiola, Dinahosting, SiteGround, Webempresa y DonWeb con precios leídos el 2 de noviembre de 2026.',
     twitterDescription:
-      'España y Sudamérica son dos mercados de hosting distintos con dos leyes de privacidad distintas — esta guía mantiene las tablas y las reglas de cumplimiento separadas. Precios de agosto de 2026, verificados en cada proveedor.',
+      'España y Sudamérica son dos mercados de hosting distintos con dos leyes de privacidad distintas — esta guía mantiene las tablas y las reglas de cumplimiento separadas. Precios leídos en cada proveedor el 2 de noviembre de 2026 (WNPower, sin verificar).',
     affiliateDisclosure: true,
     audience:
       'Lectores que eligen hosting web para un sitio en España o Sudamérica, comparando precio, condiciones de renovación y qué ley de protección de datos aplica en cada país. No requiere experiencia previa con hosting.',
@@ -895,6 +921,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Principiante',
     primaryTerm: 'hosting web España y Latinoamérica',
     targetKeywords: [
+      'hosting con soporte en español',
+      'mejor hosting barato',
+      'hosting recomendados',
       'mejor hosting espana 2026',
       'hosting web latinoamerica 2026',
       'hosting argentina chile peru',
@@ -902,24 +931,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mejor hosting sudamerica',
     ],
     leadAnswerBlock:
-      '**En España, Webempresa (8,95 €/mes, plan específico para WordPress) es la opción de precio estable y Nominalia (1,67 €/mes de entrada, renueva a 6,67 €/mes) es la más barata al inicio pero sube en la renovación. En Sudamérica, DonWeb cubre Argentina (ARS $3.790/mes en promoción, ~US$3-9/mes) y Hosting.cl cubre Chile (CLP $13.325/mes, ~US$14/mes, con condiciones de afiliados confirmadas); WNPower en Perú (US$0,96/mes en promoción, renueva a US$4,37/mes) funciona sobre infraestructura AWS y no es un proveedor totalmente peruano. Colombia no tiene opción confirmada en esta revisión.**',
+      '**Precios leídos el 2 de noviembre de 2026 en euros: Hostinger Single 1,49 €/mes a 48 meses (renueva a 6,99 €), Dinahosting desde 2,75 €/mes, SiteGround 1,99 €/mes el primer año (renueva a 15,99 €) y Raiola Networks 8,95 €/mes con soporte 24/7 en español.**',
     quickAnswerTop: {
       es: {
         question: '¿Cuál es el mejor hosting web para España y Latinoamérica en 2026?',
         answer:
-          'Para España, Webempresa (8,95 €/mes, plan específico para WordPress) es la opción más estable y Nominalia (1,67 €/mes de entrada) es la más barata al inicio pero renueva a 6,67 €/mes. Para Sudamérica, DonWeb atiende Argentina (ARS $3.790/mes en promoción) y Hosting.cl atiende Chile (CLP $13.325/mes, unos US$14/mes). WNPower en Perú (US$0,96/mes en promoción, renueva a US$4,37/mes) funciona sobre infraestructura AWS en lugar de servidores propios en el país. España está bajo el RGPD; Argentina, Chile y Colombia tienen cada uno su propia ley de protección de datos.',
+          'Para España, Webempresa (plan Maxi de WordPress, 8,94 €/mes con facturación anual y promoción del 75 %, sin IVA; precio normal 429 €/año) y Nominalia (1,67 € y 6,67 €/mes, sin etiquetar cuál es la renovación). Para Sudamérica, DonWeb atiende Argentina (desde ARS $3.200/mes en promoción a 48 meses, IVA incluido) y Hosting.cl atiende Chile (CLP $13.325/mes + IVA). WNPower en Perú funciona sobre infraestructura AWS en lugar de servidores propios en el país y su página no muestra precios de hosting. España está bajo el RGPD; Argentina, Chile y Colombia tienen cada uno su propia ley de protección de datos.',
         bullets: [
-          'Webempresa: 8,95 €/mes plan WordPress, comisión 25% fija, cookie de 90 días',
-          'Nominalia: 1,67 €/mes de entrada renueva a 6,67 €/mes — una subida de 4 veces',
-          'DonWeb (Argentina): ARS $3.790/mes en promoción, ~US$3-9/mes, cifra puntual por FX',
+          'Webempresa: plan Maxi de WordPress a 8,94 €/mes con facturación anual y promoción del 75 % (sin IVA)',
+          'Nominalia: su plan WordPress muestra 1,67 €/mes y 6,67 €/mes sin etiquetar cuál es la renovación',
+          'DonWeb (Argentina): desde ARS $3.200/mes en promoción a 48 meses (regular ARS $11.900/mes, IVA incluido)',
           'Hosting.cl (Chile): CLP $13.325/mes, comisión confirmada del 25% en el primer pago',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11',
       },
     },
     toc: [
       { label: 'Puntos Clave', anchor: '#key-takeaways' },
       { label: 'España: Proveedores de Hosting', anchor: '#spain-providers' },
+      { label: 'Hosting con Soporte en Español', anchor: '#spanish-support-hosting' },
       { label: 'Sudamérica: Hosting por País', anchor: '#south-america-providers' },
       { label: 'Hosting Estándar vs. Hosting para IA', anchor: '#standard-vs-ai-hosting' },
       { label: 'Tipos de Hosting Explicados', anchor: '#hosting-types-explained' },
@@ -937,14 +967,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.webempresa.com/',
         productName: 'Hosting Webempresa',
         productCategory: 'hosting',
-        priceRange: '8.95/mes',
+        priceRange: '8.94/mes',
         label: 'Ver precios de Webempresa',
       },
       {
         url: 'https://www.donweb.com/',
         productName: 'Hosting DonWeb (Argentina)',
         productCategory: 'hosting',
-        priceRange: 'ARS 3.790/mes promo',
+        priceRange: 'ARS 3.200/mes promo',
         label: 'Ver precios de DonWeb',
       },
       {
@@ -960,12 +990,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
+          '**Hosting barato con soporte en español:** Raiola Networks indica soporte 24/7 en español (8,95 €/mes sin IVA); Hostinger Single cuesta 1,49 €/mes a 48 meses y renueva a 6,99 €. Compare la renovación, no el primer precio.',
           '**España y Sudamérica se presentan en dos tablas separadas** — proveedores distintos, monedas distintas y leyes de protección de datos distintas. No los trate como una sola región.',
-          '**Opción estable en España: Webempresa** — 8,95 €/mes, pero es el plan específico para WordPress. Podría existir un plan de hosting compartido genérico más barato por separado; aquí no se afirma ninguna cifra para ese plan.',
-          '**Opción más barata al inicio en España: Nominalia** — 1,67 €/mes de entrada, pero renueva a 6,67 €/mes, una subida de 4 veces. Su nivel "Microhosting" gratuito viene incluido con la compra de un dominio, no es un plan de hosting independiente.',
-          '**Argentina: DonWeb** — ARS $3.790/mes en promoción (regular ARS $11.990/mes), aproximadamente US$3-9/mes. El peso argentino es muy volátil — esa cifra en dólares es una fotografía de agosto de 2026, no un número estable.',
+          '**España: Webempresa** — plan Maxi de WordPress a 8,94 €/mes con facturación anual y una promoción del 75 %, sin IVA; el precio normal anual es 429 € (unos 35,75 €/mes) y su página no indica el precio de renovación. Podría existir un plan de hosting compartido genérico más barato por separado; aquí no se afirma ninguna cifra para ese plan.',
+          '**España: Nominalia** — su plan WordPress muestra dos precios mensuales, 1,67 € y 6,67 €, y su página no etiqueta cuál es la tarifa de entrada ni cuál la de renovación; presupueste el más alto. Su nivel "Microhosting" gratuito viene incluido con la compra de un dominio, no es un plan de hosting independiente.',
+          '**Argentina: DonWeb** — plan Personal desde ARS $3.200/mes en promoción a 48 meses (ARS $3.600/mes a 12 meses; regular ARS $11.900/mes, IVA incluido). Según su página, al renovar a 1 año el plan Personal pasa a ARS $13.250/mes. El peso argentino es muy volátil: convierta a dólares con el tipo de cambio del día.',
           '**Chile: Hosting.cl** — CLP $159.900/año + IVA (unos CLP $13.325/mes, ~US$14/mes), con condiciones de afiliados confirmadas. HostingPlus es más barato (~US$6/mes), pero el estado de su programa de afiliados no está confirmado, por lo que no se presenta como opción monetizada aquí.',
-          '**Perú: WNPower** — 0,96 US$/mes en promoción, renueva a 4,37 US$/mes. Es de fundación argentina y funciona sobre infraestructura AWS, por lo que no es un proveedor "totalmente local" en Perú — no se confirmó ninguna alternativa peruana más local en esta revisión.',
+          '**Perú: WNPower** — su página de hosting no muestra precios, así que no se pudo verificar el 2 de noviembre de 2026 la cifra anterior (0,96 US$/mes en promoción, 4,37 US$/mes de renovación, leída el 30 de agosto de 2026). Es de fundación argentina y funciona sobre infraestructura AWS, por lo que no es un proveedor "totalmente local" en Perú — no se confirmó ninguna alternativa peruana más local en esta revisión.',
           '**Colombia no tiene opción confirmada.** La página de precios de ColombiaHosting se renderiza con JavaScript y su precio no pudo verificarse — se excluye en lugar de estimarse.',
           '**El RGPD aplica solo a España.** Sudamérica funciona con leyes nacionales separadas — la LFPDPPP de México, la Ley 25.326 de Argentina, la Ley 1581 de Colombia y la Ley 19.628 de Chile — ninguna de ellas es el RGPD.',
           '**Un sitio necesita más que su plan de hosting.** Una base de datos separada (Neon, Supabase), una copia de seguridad externa (Backblaze B2, Cloudflare R2, Wasabi) y una forma segura de compartir archivos grandes son tres decisiones que la mayoría de los propietarios de sitios enfrentan tarde o temprano — cubiertas abajo con precios verificados directamente.',
@@ -975,29 +1006,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'spain-providers',
         title: 'España: Proveedores de Hosting',
         content:
-          'Dos proveedores tienen precios confirmados y programas de afiliados activos para el mercado español. La cifra de 8,95 €/mes de [Webempresa](https://www.webempresa.com/) corresponde específicamente a su plan de hosting para WordPress — podría existir un plan de hosting compartido genérico más barato en paralelo, pero aquí no se afirma ninguna cifra separada sin verificarla. Los 1,67 €/mes de [Nominalia](https://www.nominalia.com/) son solo una tarifa de entrada; renueva a 6,67 €/mes, una subida de 4 veces que conviene presupuestar. Nominalia también anuncia un nivel "Microhosting" gratuito, pero viene incluido con la compra de un dominio en lugar de ser un plan de hosting independiente real, así que no se trata como tal aquí. Raiola Networks es un proveedor español conocido, pero su precio actual no se confirmó en esta revisión, por lo que se deja fuera en lugar de estimarlo.',
+          'Dos proveedores tienen precios leídos el 2 de noviembre de 2026 y programas de afiliados para el mercado español. [Webempresa](https://www.webempresa.com/) muestra su plan Maxi de WordPress a 8,94 €/mes con facturación anual y una promoción del 75 % (precio normal 429 €/año, unos 35,75 €/mes), sin IVA, y su página no indica el precio de renovación. [Nominalia](https://www.nominalia.com/) muestra dos precios mensuales para su plan WordPress, 1,67 € y 6,67 €, sin etiquetar cuál es la entrada y cuál la renovación; conviene presupuestar el más alto. Nominalia también anuncia un nivel "Microhosting" gratuito, pero viene incluido con la compra de un dominio en lugar de ser un plan de hosting independiente real, así que no se trata como tal aquí. Raiola Networks, Dinahosting, Hostinger y SiteGround se comparan en la sección siguiente, con soporte y renovación.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Para España, Webempresa (8,95 €/mes, plan WordPress) es la opción de precio más estable y Nominalia (1,67 €/mes de entrada, renueva a 6,67 €/mes) es la más barata al inicio pero sube fuerte en la renovación.',
+            text: 'Para España, Webempresa (plan Maxi de WordPress, 8,94 €/mes con facturación anual y promoción del 75 %) tiene un precio normal de 429 €/año, y Nominalia muestra 1,67 € y 6,67 €/mes sin etiquetar cuál es la renovación.',
           },
           {
             type: 'plain-terms',
-            text: 'Un proveedor tiene un precio claro que se mantiene casi igual. El otro parece mucho más barato el primer día, y luego prácticamente se cuadruplica cuando termina el periodo de introducción — decida cuál pesa más en su presupuesto antes de contratar.',
+            text: 'Los precios que ve hoy no son necesariamente los del segundo año: uno es una promoción del 75 % sobre un precio anual normal mucho mayor, y el otro no indica cuál de sus dos cifras es la renovación — decida con el precio más alto antes de contratar.',
           },
         ],
         columns: ['Proveedor', 'Precio', 'Programa', 'Comisión', 'Cookie'],
         rows: [
           {
             'Proveedor': '[Webempresa](https://www.webempresa.com/)',
-            'Precio': '8,95 €/mes (plan WordPress)',
+            'Precio': '8,94 €/mes (Maxi WP, promo −75 %, sin IVA)',
             'Programa': 'Afiliado directo',
             'Comisión': '25% fija',
             'Cookie': '90 días',
           },
           {
             'Proveedor': '[Nominalia](https://www.nominalia.com/)',
-            'Precio': '1,67 €/mes → 6,67 €/mes renov.',
+            'Precio': '1,67 € y 6,67 €/mes (sin etiquetar)',
             'Programa': 'Awin',
             'Comisión': '30% hosting / 10% SSL',
             'Cookie': '30 días',
@@ -1008,7 +1039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.webempresa.com/',
             productName: 'Hosting Webempresa',
             productCategory: 'hosting',
-            priceRange: '8.95/mes',
+            priceRange: '8.94/mes',
             label: 'Ver precios de Webempresa',
           },
           {
@@ -1020,11 +1051,58 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      spainSupport: {
+        id: 'spanish-support-hosting',
+        title: 'Hosting con Soporte en Español: Precios Comparados',
+        content:
+          'Cuatro proveedores más, con precios leídos el 2 de noviembre de 2026 en euros. [Hostinger](https://www.hostinger.com/es/hosting-web) muestra el plan Single a 1,49 €/mes con pago anticipado de 48 meses (71,52 € en total) y renovación a 6,99 €/mes; Premium cuesta 2,39 €/mes (renovación 9,99 €) y Unlimited 3,29 €/mes (renovación 16,99 €), y su página no indica el tratamiento del IVA ni el idioma del soporte. [Raiola Networks](https://raiolanetworks.com/hosting-web/) cobra 8,95 €/mes sin IVA en Hosting SSD Inicio, con facturación mensual, dos centros de datos en Madrid y soporte técnico 24/7 en español para España y Latinoamérica según su página. [Dinahosting](https://dinahosting.com/hosting) muestra 2,75 €/mes con contratación anual en los planes Básico y WordPress, que pasan a 5,45 €/mes después del primer periodo, y anuncia soporte 24/7 «en tu idioma» (no nombra el español) con un teléfono gratuito. [SiteGround](https://www.siteground.es/hosting-web.htm) muestra StartUp a 1,99 €/mes durante 12 meses, sin IVA, con renovación a 15,99 €/mes; no se verificó su idioma de soporte. Para elegir un hosting barato, compare siempre el precio de renovación y el plazo de pago anticipado, no el primer precio. Un hosting con soporte en español, en cambio, es una afirmación de cada proveedor que conviene probar antes de pagar: abra el chat o llame antes de contratar y compruebe en qué idioma y en qué horario responden.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'El 2 de noviembre de 2026, Raiola Networks (8,95 €/mes sin IVA) indicaba soporte 24/7 en español, Dinahosting (desde 2,75 €/mes, renovación 5,45 €) ofrecía soporte 24/7 «en tu idioma», y Hostinger (1,49 €/mes) y SiteGround (1,99 €/mes) tienen renovaciones de 6,99 € y 15,99 €/mes.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'El precio de la primera etiqueta no es lo que pagará el segundo año. Mire cuántos meses debe pagar por adelantado, cuánto cuesta renovar y si el soporte contesta en su idioma.',
+          },
+        ],
+        columns: ['Proveedor', 'Plan', 'Precio inicial', 'Renovación', 'Soporte'],
+        rows: [
+          {
+            'Proveedor': '[Hostinger](https://www.hostinger.com/es/hosting-web)',
+            'Plan': 'Single (48 meses)',
+            'Precio inicial': '1,49 €/mes (71,52 € en total)',
+            'Renovación': '6,99 €/mes',
+            'Soporte': 'Idioma no indicado en la página',
+          },
+          {
+            'Proveedor': '[Raiola Networks](https://raiolanetworks.com/hosting-web/)',
+            'Plan': 'SSD Inicio (mensual)',
+            'Precio inicial': '8,95 €/mes sin IVA',
+            'Renovación': 'Sin cambio indicado (mensual)',
+            'Soporte': '24/7 en español (España y LATAM)',
+          },
+          {
+            'Proveedor': '[Dinahosting](https://dinahosting.com/hosting)',
+            'Plan': 'Básico / WordPress (anual)',
+            'Precio inicial': '2,75 €/mes',
+            'Renovación': '5,45 €/mes',
+            'Soporte': '24/7 «en tu idioma»',
+          },
+          {
+            'Proveedor': '[SiteGround](https://www.siteground.es/hosting-web.htm)',
+            'Plan': 'StartUp (12 meses)',
+            'Precio inicial': '1,99 €/mes sin IVA',
+            'Renovación': '15,99 €/mes',
+            'Soporte': 'Idioma no verificado',
+          },
+        ],
+      },
       southAmericaProviders: {
         id: 'south-america-providers',
         title: 'Sudamérica: Hosting por País',
         content:
-          'Sudamérica no es un solo mercado de hosting — cada país que sigue tiene su propio proveedor confirmado, y Colombia no tiene ninguno. Las cifras en pesos argentinos usan una moneda muy volátil: la estimación en dólares aquí es una fotografía del tipo de cambio de agosto de 2026, y conviene verificar la tasa actual antes de tratarla como estable. [Hosting.cl](https://www.hosting.cl/) en Chile es la opción destacada porque sus condiciones de afiliados están confirmadas; HostingPlus tiene un precio menor, alrededor de US$6/mes, pero no se pudo confirmar el estado de su programa de afiliados, por lo que no lleva enlace de afiliado aquí. [WNPower](https://www.wnpower.com/) en Perú es de fundación argentina y funciona sobre infraestructura basada en AWS en lugar de servidores dedicados en Perú — algo importante si el hosting "totalmente local" le importa; no se confirmó ninguna alternativa peruana más local. ColombiaHosting queda excluido por completo: su página de precios se renderiza con JavaScript y el precio no pudo verificarse.',
+          'Sudamérica no es un solo mercado de hosting — cada país que sigue tiene su propio proveedor confirmado, y Colombia no tiene ninguno. Las cifras en pesos argentinos usan una moneda muy volátil: convierta a dólares con el tipo de cambio del día de la compra. [Hosting.cl](https://www.hosting.cl/) en Chile es la opción destacada porque sus condiciones de afiliados están confirmadas; HostingPlus tiene un precio menor, alrededor de US$6/mes, pero no se pudo confirmar el estado de su programa de afiliados, por lo que no lleva enlace de afiliado aquí. [WNPower](https://www.wnpower.com/) en Perú es de fundación argentina y funciona sobre infraestructura basada en AWS en lugar de servidores dedicados en Perú — algo importante si el hosting "totalmente local" le importa; no se confirmó ninguna alternativa peruana más local. ColombiaHosting queda excluido por completo: su página de precios se renderiza con JavaScript y el precio no pudo verificarse.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1040,7 +1118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'País': 'Argentina',
             'Proveedor': '[DonWeb](https://www.donweb.com/)',
-            'Precio': 'ARS $3.790/mes promo (~US$3-9)',
+            'Precio': 'ARS $3.200/mes promo (48 meses)',
             'Programa': 'Programa de referidos',
             'Comisión': 'Hasta US$2.000/nivel',
             'Cookie': 'Retención 45 días',
@@ -1056,7 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'País': 'Perú',
             'Proveedor': '[WNPower](https://www.wnpower.com/)',
-            'Precio': 'US$0,96/mes → US$4,37/mes',
+            'Precio': 'No verificado (ant. US$0,96 → 4,37)',
             'Programa': 'Afiliado directo',
             'Comisión': '10% recurrente, sin tope',
             'Cookie': 'No especificada',
@@ -1065,7 +1143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'El peso argentino es muy volátil. La cifra de ~US$3-9/mes para DonWeb es una conversión puntual de agosto de 2026, no un precio estable — verifique el tipo de cambio actual antes de presupuestar sobre esa base.',
+            text: 'El peso argentino es muy volátil. Los precios de DonWeb están en pesos argentinos (con IVA incluido, según su página); convierta a dólares con el tipo de cambio actual antes de presupuestar.',
           },
         ],
         affiliateLinks: [
@@ -1073,7 +1151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.donweb.com/',
             productName: 'Hosting DonWeb (Argentina)',
             productCategory: 'hosting',
-            priceRange: 'ARS 3.790/mes promo',
+            priceRange: 'ARS 3.200/mes promo',
             label: 'Ver precios de DonWeb',
           },
           {
@@ -1152,15 +1230,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Para España, elija [Webempresa](https://www.webempresa.com/) si un precio estable le importa más que la cifra inicial más baja, y [Nominalia](https://www.nominalia.com/) solo si ya presupuestó la subida de renovación a 6,67 €/mes. Para Sudamérica, [DonWeb](https://www.donweb.com/) (Argentina), [Hosting.cl](https://www.hosting.cl/) (Chile) y [WNPower](https://www.wnpower.com/) (Perú, sobre infraestructura AWS) son las opciones confirmadas en esta revisión — Colombia no tiene ninguna hasta que se pueda verificar un precio. Sea cual sea su país, verifique la ley de protección de datos de ese país en concreto en lugar de asumir que aplica el RGPD u otra ley distinta.',
+          'Para España, elija [Webempresa](https://www.webempresa.com/) si prefiere conocer el precio normal anual (429 € en el plan Maxi) además de la promoción, y [Nominalia](https://www.nominalia.com/) solo si ya presupuestó el precio más alto de 6,67 €/mes. Para Sudamérica, [DonWeb](https://www.donweb.com/) (Argentina), [Hosting.cl](https://www.hosting.cl/) (Chile) y [WNPower](https://www.wnpower.com/) (Perú, sobre infraestructura AWS) son las opciones confirmadas en esta revisión — Colombia no tiene ninguna hasta que se pueda verificar un precio. Sea cual sea su país, verifique la ley de protección de datos de ese país en concreto en lugar de asumir que aplica el RGPD u otra ley distinta.',
       },
       faq: {
         id: 'faq',
         title: 'Preguntas Frecuentes',
         faqs: [
           {
+            q: '¿Qué hosting tiene soporte en español?',
+            a: 'Según su propia página, leída el 2 de noviembre de 2026, Raiola Networks ofrece soporte técnico 24/7 en español para España y Latinoamérica (Hosting SSD Inicio, 8,95 €/mes sin IVA, con centros de datos en Madrid). Dinahosting anuncia soporte 24/7 «en tu idioma» y un teléfono gratuito, sin nombrar el español. Hostinger y SiteGround no indican el idioma de soporte en las páginas leídas. Es una afirmación del proveedor: pruebe el chat o el teléfono antes de pagar.',
+          },
+          {
+            q: '¿Cuál es el mejor hosting barato?',
+            a: 'Entre los precios leídos el 2 de noviembre de 2026, Hostinger Single es 1,49 €/mes con pago anticipado de 48 meses (71,52 € en total) y renueva a 6,99 €/mes; SiteGround StartUp es 1,99 €/mes sin IVA durante 12 meses y renueva a 15,99 €/mes; Dinahosting Básico y WordPress son 2,75 €/mes con contrato anual y pasan a 5,45 €. Nominalia muestra 1,67 € y 6,67 €/mes sin etiquetar la renovación. El más barato el primer día no es el más barato al renovar.',
+          },
+          {
+            q: '¿Qué hosting recomiendan para un sitio pequeño o un blog?',
+            a: 'Para un blog o un sitio pequeño basta un plan de hosting compartido o de WordPress. Compare tres cosas antes de contratar: el precio de renovación, cuántos meses se pagan por adelantado y si el soporte responde en su idioma. Los precios leídos el 2 de noviembre de 2026 están en la sección Hosting con Soporte en Español y en la tabla de España de esta guía.',
+          },
+          {
             q: '¿Cuál es el mejor hosting web en España en 2026?',
-            a: 'Webempresa (8,95 €/mes, plan específico para WordPress) es la opción de precio más estable, con cookie de afiliado de 90 días y comisión fija del 25%. Nominalia es más barato al inicio, a 1,67 €/mes, pero renueva a 6,67 €/mes — una subida de 4 veces que conviene presupuestar antes de contratar.',
+            a: 'Webempresa (plan Maxi de WordPress, 8,94 €/mes con facturación anual y una promoción del 75 %, sin IVA) tiene un precio normal anual de 429 € y su página no indica la renovación; la cookie de afiliado de 90 días y la comisión fija del 25 % corresponden a la revisión del 30 de agosto de 2026 y no se volvieron a verificar. Nominalia muestra 1,67 €/mes y 6,67 €/mes para su plan WordPress sin etiquetar cuál es la entrada y cuál la renovación — presupueste el más alto antes de contratar.',
           },
           {
             q: '¿El Microhosting gratuito de Nominalia es un plan de hosting real?',
@@ -1168,7 +1258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuál es el mejor hosting web para Argentina?',
-            a: 'DonWeb es la opción confirmada, a ARS $3.790/mes en promoción (regular ARS $11.990/mes), aproximadamente US$3-9/mes. Como el peso argentino es muy volátil, trate esa cifra en dólares como una fotografía de agosto de 2026 y verifique el tipo de cambio actual antes de presupuestar.',
+            a: 'DonWeb es la opción confirmada: el plan Personal cuesta desde ARS $3.200/mes en promoción a 48 meses (ARS $3.600/mes a 12 meses; regular ARS $11.900/mes, IVA incluido), y su página indica que al renovar a 1 año pasa a ARS $13.250/mes. Como el peso argentino es muy volátil, convierta a dólares con el tipo de cambio actual antes de presupuestar.',
           },
           {
             q: '¿Cuál es el mejor hosting web para Chile?',
@@ -1176,7 +1266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿WNPower es una empresa de hosting nativa de Perú?',
-            a: 'No del todo. WNPower es de fundación argentina y su infraestructura funciona sobre AWS en lugar de servidores dedicados en Perú. Sigue siendo la opción confirmada para precios en Perú (US$0,96/mes en promoción, renovando a US$4,37/mes) — no se confirmó ninguna alternativa peruana más local en esta revisión.',
+            a: 'No del todo. WNPower es de fundación argentina y su infraestructura funciona sobre AWS en lugar de servidores dedicados en Perú. Sigue siendo la opción identificada para Perú, pero su página de hosting no muestra precios y las cifras de agosto de 2026 (US$0,96/mes en promoción, US$4,37/mes de renovación) no se pudieron verificar el 2 de noviembre de 2026 — no se confirmó ninguna alternativa peruana más local en esta revisión.',
           },
           {
             q: '¿Hay un hosting recomendado para Colombia?',
@@ -1204,11 +1294,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         items: [
-          '[Webempresa](https://www.webempresa.com/) — precio del plan de hosting WordPress y condiciones de afiliados, verificado directamente en Webempresa, 2026-08-30.',
-          '[Nominalia](https://www.nominalia.com/) — precios de entrada y renovación, verificado directamente en Nominalia, 2026-08-30.',
-          '[DonWeb](https://www.donweb.com/) — precio de promoción y precio regular en ARS para Argentina, verificado directamente en DonWeb, 2026-08-30.',
-          '[Hosting.cl](https://www.hosting.cl/) — precio anual en CLP y condiciones de afiliados para Chile, verificado directamente en Hosting.cl, 2026-08-30.',
-          '[WNPower](https://www.wnpower.com/) — precios de entrada y renovación para Perú, verificado directamente en WNPower, 2026-08-30.',
+          '[Webempresa](https://www.webempresa.com/) — precio del plan de hosting WordPress y condiciones de afiliados, precio leído directamente en Webempresa el 2026-11-02 (las condiciones de afiliado son del 2026-08-30 y no se volvieron a verificar).',
+          '[Nominalia](https://www.nominalia.com/) — precios de entrada y renovación, leído directamente en Nominalia el 2026-11-02; la página no etiqueta cuál de los dos precios es el de renovación.',
+          '[DonWeb](https://www.donweb.com/) — precio de promoción y precio regular en ARS para Argentina, leído directamente en DonWeb el 2026-11-02.',
+          '[Hosting.cl](https://www.hosting.cl/) — precio anual en CLP y condiciones de afiliados para Chile, precio anual leído directamente en Hosting.cl el 2026-11-02 (las condiciones de afiliado son del 2026-08-30 y no se volvieron a verificar).',
+          '[WNPower](https://www.wnpower.com/) — precios de entrada y renovación para Perú, cifras del 2026-08-30; el 2026-11-02 la página de hosting de WNPower no mostraba precios, por lo que no se pudieron verificar.',
+          '[Hostinger](https://www.hostinger.com/es/hosting-web) — planes Single, Premium y Unlimited a 48 meses y sus renovaciones, leídos directamente el 2026-11-02; la página no indica IVA ni idioma de soporte.',
+          '[Raiola Networks](https://raiolanetworks.com/hosting-web/) — precios mensuales sin IVA, centros de datos en Madrid y soporte 24/7 en español, leídos directamente el 2026-11-02.',
+          '[Dinahosting](https://dinahosting.com/hosting) — precios con contratación anual y renovación, soporte 24/7 «en tu idioma» y teléfono gratuito, leídos directamente el 2026-11-02.',
+          '[SiteGround](https://www.siteground.es/hosting-web.htm) — StartUp, GrowBig y GoGeek a 12 meses y sus renovaciones, sin IVA, leídos directamente el 2026-11-02.',
           '[Precios de Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — verificado directamente el 03-09-2026: US$6,95/TB al mes, primeros 10 GB gratis, salida gratuita hasta 3x los datos almacenados.',
           '[Precios de Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — verificado directamente el 03-09-2026: US$0,015/GB al mes en almacenamiento estándar, sin tarifas de salida, nivel gratuito de 10 GB.',
           '[Precios de Wasabi](https://wasabi.com/pricing/) — verificado directamente el 03-09-2026: US$7,99/TB al mes fijo, sin tarifas separadas de salida o de API.',
@@ -1228,16 +1322,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'monthly',
     publishDate: '2026-08-30',
-    dateModified: '2026-09-03',
-    next_refresh_due: '2026-10-03',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
     title: 'Melhor Hospedagem de Site no Brasil 2026: Hostinger e Alternativas',
-    seoTitle: 'Hospedagem Brasil 2026: Hostinger vs HostGator vs KingHost',
+    seoTitle: 'Hospedagem de site barata no Brasil 2026: preços em R$',
     intro:
-      'A maioria das listas de "melhor hospedagem para o Brasil" ignora o detalhe que decide se você consegue mesmo contratar: a exigência de CNPJ. A [Hostinger](https://www.hostinger.com/) pode ser contratada e paga por qualquer pessoa no Brasil sem CNPJ — já as marcas brasileiras conhecidas [HostGator Brasil](https://www.hostgator.com.br/), [KingHost](https://www.kinghost.com.br/) e [Locaweb](https://www.locaweb.com.br/) valem a pena conhecer, mas este site não consegue te levar a uma oferta de afiliado funcional com nenhuma delas, porque os programas de afiliados dessas empresas exigem CNPJ e Nota Fiscal. Este guia compara preços reais, o salto no valor de renovação que pega novos clientes da Hostinger de surpresa, e o que a LGPD exige de fato de um provedor de hospedagem em termos de residência de dados.',
+      'A maioria das listas de "melhor hospedagem para o Brasil" ignora o detalhe que decide se você consegue mesmo contratar: a exigência de CNPJ. A [Hostinger](https://www.hostinger.com/br/hospedagem-de-sites) pode ser contratada e paga por qualquer pessoa no Brasil sem CNPJ — já as marcas brasileiras conhecidas [HostGator Brasil](https://www.hostgator.com.br/), [KingHost](https://www.kinghost.com.br/) e [Locaweb](https://www.locaweb.com.br/) valem a pena conhecer, mas este site não consegue te levar a uma oferta de afiliado funcional com nenhuma delas, porque os programas de afiliados dessas empresas exigem CNPJ e Nota Fiscal. Este guia compara preços em reais lidos nos sites em 2 de novembro de 2026, o salto no valor de renovação que pega novos clientes da Hostinger de surpresa, e o que a LGPD exige de fato de um provedor de hospedagem em termos de residência de dados.',
     metaDescription:
-      'Hostinger vs HostGator Brasil vs KingHost vs Locaweb comparados em 2026: preços de entrada e renovação, exigência de CNPJ e adequação à LGPD.',
+      'Hostinger, Locaweb, KingHost e HostGator comparadas em 2026: preço de entrada e de renovação em reais, lidos nos sites em 02/11/2026, e a LGPD.',
     twitterDescription:
       'Hospedagem de site no Brasil em 2026: a Hostinger é a única opção aqui que você consegue contratar sem CNPJ — veja quanto custa depois do salto na renovação.',
     affiliateDisclosure: true,
@@ -1254,13 +1348,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'hospedagem lgpd brasil',
     ],
     leadAnswerBlock:
-      '**A Hostinger ($2,99/mês de entrada, com pré-pagamento obrigatório de 48 meses, renovando a $10,99/mês) é a única opção desta página que uma pessoa no Brasil sem CNPJ consegue contratar através do link do PromptQuorum. HostGator Brasil, KingHost e Locaweb são provedores brasileiros reais e conhecidos, que valem a pena comparar diretamente nos próprios sites, mas nenhum dos programas de afiliados deles é acessível sem CNPJ e Nota Fiscal, então aparecem aqui apenas como referência.**',
+      '**Em 2 de novembro de 2026, a Hostinger mostrava R$ 5,99/mês no plano Single (48 meses, R$ 287,52 à vista) e renovação a R$ 23,99/mês. A Locaweb Go custa R$ 5,90/mês no primeiro ciclo e a KingHost Hospedagem I, R$ 9,99/mês.**',
     affiliateLinks: [
       {
-        url: 'https://www.hostinger.com/',
+        url: 'https://www.hostinger.com/br/hospedagem-de-sites',
         productName: 'Hospedagem Hostinger',
         productCategory: 'hosting',
-        priceRange: '2.99-10.99/mo',
+        priceRange: 'R$ 5,99-23,99/mês',
         label: 'Ver preços da Hostinger',
       },
     ],
@@ -1283,11 +1377,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**A Hostinger é a única opção realmente acessível aqui sem CNPJ.** O valor anunciado de $2,99/mês exige pré-pagamento de 48 meses ($143,52 à vista) e renova a $10,99/mês — um salto de cerca de 3,7 vezes. É a única provedora desta página com uma oferta funcional e monetizável para o PromptQuorum.',
+          '**A Hostinger mostra preços em reais, mas o valor de entrada exige 48 meses pré-pagos:** o plano Single sai por R$ 5,99/mês e renova a R$ 23,99/mês, cerca de 4 vezes mais (lido em 02/11/2026). Aceita contratação sem CNPJ.',
           '**HostGator Brasil, KingHost e Locaweb são opções reais — mas apenas menções editoriais.** Os programas de afiliados dessas empresas exigem CNPJ e Nota Fiscal, que o PromptQuorum não possui, então nenhum link aqui gera comissão com essas três.',
-          '**A KingHost (R$9,99/mês de entrada) não divulga o preço de renovação** na própria página de preços — reserve orçamento para um aumento e confirme o valor antes de contratar.',
-          '**Na Locaweb (R$5,90/mês) não fica claro se o valor é promocional ou padrão** — confirme o preço atual diretamente no site da Locaweb antes de comparar com as demais.',
-          '**O preço da HostGator Brasil (faixa de R$10-15/mês) não foi reverificado de forma independente nesta análise** — fontes de terceiros sugerem essa faixa histórica; confirme o preço vigente antes de contratar.',
+          '**A KingHost (Hospedagem I a R$ 9,99/mês, II a R$ 15,99, III a R$ 19,99) não informa qual período corresponde a cada valor nem o preço de renovação em reais** (lido em 02/11/2026); a página oferece ciclos mensal, anual e bienal e diz que na renovação vale o preço regular. Confirme antes de contratar.',
+          '**Na Locaweb o valor é promocional:** Go R$ 5,90/mês, Hospedagem I R$ 10,90 e II R$ 16,90 no primeiro ciclo, contra R$ 24,90, R$ 37,90 e R$ 59,90 riscados; o pagamento é integral e antecipado e a página não informa o preço de renovação (lido em 02/11/2026).',
+          '**A página da HostGator Brasil que lemos em 02/11/2026 não exibe valores em reais** (mostra "a partir de" sem número e diz que os planos são pré-pagos, com o desconto mantido até a renovação); por isso não publicamos preço para ela. Veja a tabela de preços no site antes de comparar.',
           '**Provedores brasileiros com CNPJ simplificam obrigações de residência de dados da LGPD** por padrão, já que já estão sujeitos à jurisdição da ANPD — uma vantagem real sobre a Hostinger para negócios que lidam com dados pessoais regulados no Brasil.',
           '**Um site precisa de mais do que o plano de hospedagem.** Um banco de dados separado (Neon, Supabase), um backup externo (Backblaze B2, Cloudflare R2, Wasabi) e uma forma segura de compartilhar arquivos grandes são três decisões que a maioria dos donos de site enfrenta mais cedo ou mais tarde — cobertas abaixo com preços verificados diretamente.',
         ],
@@ -1296,7 +1390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Hostinger vs HostGator Brasil vs KingHost vs Locaweb em 2026',
         content:
-          'Preços verificados diretamente em cada provedor sempre que possível; veja a seção Fontes para saber exatamente quais valores foram confirmados de forma independente em 30/08/2026 e quais não foram. Apenas a [Hostinger](https://www.hostinger.com/) tem um link de contratação que o PromptQuorum consegue monetizar — [HostGator Brasil](https://www.hostgator.com.br/), [KingHost](https://www.kinghost.com.br/) e [Locaweb](https://www.locaweb.com.br/) exigem CNPJ para entrar no programa de afiliados, então vale comparar direto no site de cada uma.',
+          'Preços em reais lidos diretamente nos sites em 02/11/2026; veja a seção Fontes para saber o que cada página informava e o que não informava. Apenas a [Hostinger](https://www.hostinger.com/br/hospedagem-de-sites) tem um link de contratação que o PromptQuorum consegue monetizar — [HostGator Brasil](https://www.hostgator.com.br/), [KingHost](https://www.kinghost.com.br/) e [Locaweb](https://www.locaweb.com.br/) exigem CNPJ para entrar no programa de afiliados, então vale comparar direto no site de cada uma.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1310,27 +1404,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Provedor', 'Preço de entrada', 'Preço de renovação', 'Exige CNPJ'],
         rows: [
           {
-            'Provedor': 'Hostinger',
-            'Preço de entrada': '$2,99/mês (pré-pago 48 meses)',
-            'Preço de renovação': '$10,99/mês (~3,7x)',
+            'Provedor': 'Hostinger (Single)',
+            'Preço de entrada': 'R$ 5,99/mês (48 meses)',
+            'Preço de renovação': 'R$ 23,99/mês (~4x)',
             'Exige CNPJ': 'Não — acessível sem CNPJ',
           },
           {
             'Provedor': 'HostGator Brasil',
-            'Preço de entrada': 'R$10-15/mês (não reverificado)',
-            'Preço de renovação': 'Não informado pelo provedor',
+            'Preço de entrada': 'Não exibido na página lida',
+            'Preço de renovação': 'Não informado',
             'Exige CNPJ': 'Sim — apenas menção editorial',
           },
           {
             'Provedor': 'KingHost',
-            'Preço de entrada': 'R$9,99/mês de entrada',
-            'Preço de renovação': 'Não divulgado pelo provedor',
+            'Preço de entrada': 'R$ 9,99/mês (Hospedagem I)',
+            'Preço de renovação': 'Preço regular, sem valor na página',
             'Exige CNPJ': 'Sim — apenas menção editorial',
           },
           {
             'Provedor': 'Locaweb',
-            'Preço de entrada': 'R$5,90/mês (promo/padrão incerto)',
-            'Preço de renovação': 'Incerto — mesmo valor',
+            'Preço de entrada': 'R$ 5,90/mês (Go, 1º ciclo)',
+            'Preço de renovação': 'Não informado (cheio R$ 24,90)',
             'Exige CNPJ': 'Sim — apenas menção editorial',
           },
         ],
@@ -1395,27 +1489,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito',
         content:
-          'Se você não tem CNPJ, a [Hostinger](https://www.hostinger.com/) é o ponto de partida realista — reserve orçamento para o pré-pagamento de 48 meses e para o salto na renovação até $10,99/mês, em vez de ser pego de surpresa. Se você tem uma empresa registrada no Brasil, compare [HostGator Brasil](https://www.hostgator.com.br/), [KingHost](https://www.kinghost.com.br/) e [Locaweb](https://www.locaweb.com.br/) diretamente nos próprios sites antes de decidir; as três são hospedagens brasileiras legítimas e conhecidas, só não são provedoras que o PromptQuorum consegue monetizar através de um link.',
+          'Se você não tem CNPJ, a [Hostinger](https://www.hostinger.com/br/hospedagem-de-sites) é o ponto de partida realista — reserve orçamento para o pré-pagamento de 48 meses e para o salto na renovação (de R$ 5,99 para R$ 23,99/mês no plano Single), em vez de ser pego de surpresa. Se você tem uma empresa registrada no Brasil, compare [HostGator Brasil](https://www.hostgator.com.br/), [KingHost](https://www.kinghost.com.br/) e [Locaweb](https://www.locaweb.com.br/) diretamente nos próprios sites antes de decidir; as três são hospedagens brasileiras legítimas e conhecidas, só não são provedoras que o PromptQuorum consegue monetizar através de um link.',
       },
       faq: {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
           {
+            q: 'Qual é a hospedagem de site mais barata do Brasil?',
+            a: 'Entre os preços em reais lidos em 02/11/2026, a Locaweb Go (R$ 5,90/mês no primeiro ciclo) e a Hostinger Single (R$ 5,99/mês com 48 meses pré-pagos) têm os menores valores iniciais, seguidas pela KingHost Hospedagem I (R$ 9,99/mês). O mais barato no primeiro mês não é o mais barato depois: a Hostinger Single renova a R$ 23,99/mês, a Locaweb mostra R$ 24,90 riscado e as páginas da Locaweb e da KingHost não informam a renovação em reais.',
+          },
+          {
+            q: 'HostGator ou Hostinger: qual compensa mais?',
+            a: 'Não conseguimos comparar o preço em reais: a página da HostGator Brasil lida em 02/11/2026 não exibia valores. Da Hostinger temos o preço (Single R$ 5,99/mês por 48 meses, renovando a R$ 23,99/mês) e a contratação sem CNPJ. Compare o preço cheio da HostGator na tabela de preços dela, o prazo de pré-pagamento e o valor de renovação das duas antes de decidir.',
+          },
+          {
             q: 'Dá para contratar hospedagem de site no Brasil sem CNPJ?',
             a: 'Sim, com a Hostinger — ela aceita contratação de pessoa física, sem CNPJ. HostGator Brasil, KingHost e Locaweb também podem ser contratadas por uma pessoa física no Brasil, mas os programas de afiliados delas exigem CNPJ e Nota Fiscal para participar, por isso o PromptQuorum só consegue oferecer um link funcional com a Hostinger.',
           },
           {
             q: 'Por que a Hostinger renova a quase 4x o preço anunciado?',
-            a: 'O valor de $2,99/mês da Hostinger é um preço promocional vinculado a um pré-pagamento de 48 meses ($143,52 à vista). Depois desse período, o plano renova pelo valor padrão de $10,99/mês — um aumento de cerca de 3,7 vezes. Considere o preço de renovação, não o anunciado, ao comparar o custo total.',
+            a: 'Na página brasileira lida em 02/11/2026, o plano Single custa R$ 5,99/mês vinculado a um pré-pagamento de 48 meses (R$ 287,52 à vista) e a renovação automática é de R$ 23,99/mês pelo mesmo período, cerca de 4 vezes mais. Premium (R$ 9,99/mês) renova a R$ 38,99 e Unlimited (R$ 12,99/mês) a R$ 64,99. Considere o preço de renovação, não o anunciado, ao comparar o custo total.',
           },
           {
             q: 'A HostGator Brasil é a mesma empresa da HostGator dos Estados Unidos?',
-            a: 'A HostGator Brasil opera sob a marca HostGator para o mercado brasileiro, com preços e suporte próprios. O preço atual dela não foi reverificado de forma independente nesta análise — fontes de terceiros sugerem uma faixa de entrada de R$10-15/mês, mas confirme o valor vigente diretamente no site da HostGator Brasil antes de contratar.',
+            a: 'A HostGator Brasil opera sob a marca HostGator para o mercado brasileiro, com preços e suporte próprios. A página que lemos em 02/11/2026 não mostrava valores em reais, só "a partir de" e a informação de que os planos são pré-pagos; por isso não publicamos preço para ela. Confirme o valor vigente diretamente no site da HostGator Brasil antes de contratar.',
           },
           {
             q: 'O que a KingHost não divulga sobre o preço?',
-            a: 'A KingHost anuncia um valor de entrada de R$9,99/mês, mas não informa o preço de renovação na própria página de preços. Confirme o custo de renovação diretamente com a KingHost antes de contratar, já que ele não está publicado para comparação aqui.',
+            a: 'A KingHost mostra Hospedagem I a R$ 9,99/mês, II a R$ 15,99 e III a R$ 19,99, mas não indica qual ciclo (mensal, anual ou bienal) corresponde a cada valor e diz apenas que na renovação será cobrado o preço regular, sem valor em reais. Confirme o custo de renovação diretamente com a KingHost antes de contratar.',
           },
           {
             q: 'Hospedagem brasileira ajuda na conformidade com a LGPD?',
@@ -1443,10 +1545,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         items: [
-          '[Preços da Hostinger](https://www.hostinger.com/) — verificado diretamente na Hostinger em 30/08/2026. O valor de $2,99/mês de entrada exige pré-pagamento de 48 meses; renova a $10,99/mês.',
-          'Preço da HostGator Brasil (faixa de R$10-15/mês de entrada) — não reverificado de forma independente nesta análise; baseado em fontes de terceiros/históricas. Confirme o preço atual no próprio site da HostGator Brasil antes de contratar.',
-          'Preço da KingHost (R$9,99/mês de entrada) — verificado na página de preços da KingHost em 30/08/2026. O preço de renovação não é informado pelo provedor.',
-          'Preço da Locaweb (R$5,90/mês) — verificado na página de preços da Locaweb em 30/08/2026. Não fica claro pela própria página se é um valor promocional ou padrão.',
+          '[Preços da Hostinger](https://www.hostinger.com/br/hospedagem-de-sites) — lidos diretamente na página brasileira em 02/11/2026: Single R$ 5,99/mês (R$ 287,52 por 48 meses), renovação R$ 23,99/mês; Premium R$ 9,99/mês, renovação R$ 38,99; Unlimited R$ 12,99/mês, renovação R$ 64,99.',
+          '[HostGator Brasil](https://www.hostgator.com.br/hospedagem-de-sites) — página lida em 02/11/2026 sem valores em reais (só "a partir de", planos pré-pagos, até 30 dias de reembolso). Nenhum preço publicado aqui.',
+          '[KingHost](https://king.host/hospedagem-de-sites) — lido em 02/11/2026: Hospedagem I R$ 9,99, II R$ 15,99, III R$ 19,99 por mês, ciclos mensal/anual/bienal sem indicar qual valor vale para qual ciclo; renovação ao preço regular, sem valor.',
+          '[Locaweb](https://www.locaweb.com.br/hospedagem-de-sites/) — lido em 02/11/2026: Go R$ 5,90, Hospedagem I R$ 10,90, II R$ 16,90 por mês no primeiro ciclo (riscados R$ 24,90, R$ 37,90, R$ 59,90), pagamento integral e antecipado; renovação não informada.',
           '[LGPD — Lei Geral de Proteção de Dados (ANPD)](https://www.gov.br/anpd/pt-br) — site oficial da autoridade brasileira de proteção de dados, citado para o enquadramento de LGPD/ANPD acima.',
           '[Preços da Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — verificado diretamente em 03/09/2026: US$6,95/TB por mês, primeiros 10 GB grátis, saída gratuita até 3x os dados armazenados.',
           '[Preços da Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — verificado diretamente em 03/09/2026: US$0,015/GB por mês em armazenamento padrão, sem taxas de saída, nível gratuito de 10 GB.',
@@ -1467,8 +1569,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'monthly',
     publishDate: '2026-08-30',
-    dateModified: '2026-09-03',
-    next_refresh_due: '2026-10-03',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
     title: 'أفضل استضافة مواقع في الخليج العربي 2026: Hostinger مقابل ArabHosters',
@@ -1476,7 +1578,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'غالبًا ما تعيد مراجعات الاستضافة الموجهة لمنطقة الخليج نشر أسعار السوق الأمريكي دون التحقق مما إذا كان المزود فعليًا نشطًا ومؤكدًا في منطقة الشرق الأوسط وشمال أفريقيا، أو ما إذا كانت العملة المعروضة عند الدفع تطابق ما يتوقعه القارئ. كل من [Hostinger](https://www.hostinger.com/) و[ArabHosters](https://www.arabhosters.com/) مؤكدان كخيارين نشطين ويمكن الوصول إليهما في الخليج والعالم العربي الأوسع، مع مفاضلات مختلفة: تقدّم Hostinger سعرًا معلنًا منخفضًا مرتبطًا بمدة دفع مسبق طويلة، بينما ArabHosters مزود عربي شامل مقره مصر لكنه يحتسب الفواتير بالدولار الأمريكي رغم هويته الإقليمية. أما GoDaddy وNamecheap فهما مزودان عالميان معروفان تستحق معرفتهما، لكن هذا الدليل لم يعِد تسعيرهما ولم يؤكد وجود برنامج شراكة خاص بمنطقة الشرق الأوسط وشمال أفريقيا لأي منهما.',
     metaDescription:
-      'مقارنة Hostinger وArabHosters لاستضافة المواقع في الخليج العربي 2026: الأسعار الفعلية، العملة، والحضور المؤكد في المنطقة، إضافة إلى نظام PDPL السعودي وقانون حماية البيانات الإماراتي.',
+      'مقارنة Hostinger وArabHosters لاستضافة المواقع في الخليج 2026: الأسعار والعملة والحضور المؤكد، مع نظام PDPL السعودي وقانون حماية البيانات الإماراتي.',
     twitterDescription:
       'استضافة المواقع في الخليج العربي 2026: مقارنة Hostinger وArabHosters من حيث السعر الفعلي والحضور المؤكد في المنطقة — وما يتطلبه نظام PDPL السعودي وقانون البيانات الإماراتي.',
     affiliateDisclosure: true,
@@ -1493,13 +1595,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'pdpl استضافة الإمارات',
     ],
     leadAnswerBlock:
-      '**Hostinger (سعر تمهيدي 2.99 دولار شهريًا، يتطلب دفعًا مسبقًا لمدة 48 شهرًا، ويتجدد بسعر 10.99 دولار شهريًا) وArabHosters (37.80 دولار سنويًا، أي نحو 3.15 دولار شهريًا، لخطة Personal) هما المزودان المؤكد نشاطهما وقابلية الاشتراك الذاتي بهما في الخليج العربي. كلاهما يحتسب الفواتير بالدولار الأمريكي وليس بعملة الخليج المحلية، رغم الهوية العربية الشاملة لـArabHosters — تحقق من ذلك قبل افتراض أن الدفع سيكون بالعملة المحلية. أما GoDaddy وNamecheap فهما خياران عالميان مُدرجان للاطلاع فقط، دون تسعير أو برنامج مؤكد خاص بمنطقة الشرق الأوسط وشمال أفريقيا في هذا الدليل.**',
+      '**Hostinger (سعر تمهيدي 2.49 دولار شهريًا مع دفع مسبق لمدة 48 شهرًا، ويتجدد بسعر 10.99 دولار شهريًا) وArabHosters (37.80 دولار سنويًا، نحو 3.15 دولار شهريًا) مؤكدان في الخليج العربي، وكلاهما يحتسب الفواتير بالدولار الأمريكي لا بعملة الخليج المحلية.**',
     affiliateLinks: [
       {
         url: 'https://www.hostinger.com/',
         productName: 'استضافة Hostinger',
         productCategory: 'hosting',
-        priceRange: '2.99-10.99/mo',
+        priceRange: '2.49-10.99/mo',
         label: 'تحقق من أسعار Hostinger',
       },
       {
@@ -1529,7 +1631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Hostinger مؤكد نشاطه في أكثر من 12 دولة في منطقة الشرق الأوسط وشمال أفريقيا** عبر شبكتي التسويق بالعمولة Impact وArabClicks. سعره التمهيدي 2.99 دولار شهريًا يتطلب دفعًا مسبقًا لمدة 48 شهرًا (143.52 دولار مقدمًا) ويتجدد بسعر 10.99 دولار شهريًا — بزيادة تقارب 3.7 أضعاف.',
+          '**Hostinger مؤكد نشاطه في أكثر من 12 دولة في منطقة الشرق الأوسط وشمال أفريقيا** عبر شبكتي التسويق بالعمولة Impact وArabClicks. سعره التمهيدي 2.49 دولار شهريًا يتطلب دفعًا مسبقًا لمدة 48 شهرًا (119.52 دولار مقدمًا) ويتجدد بسعر 10.99 دولار شهريًا — بزيادة تقارب 4.4 أضعاف.',
           '**ArabHosters مزود عربي شامل مقره مصر، وله برنامج شراكة ذاتي الاشتراك نشط**، لكن نسبة العمولة الدقيقة غير معلنة حتى التسجيل. خطته Personal تبلغ 37.80 دولار سنويًا (نحو 3.15 دولار شهريًا).',
           '**ArabHosters يحتسب الأسعار بالدولار الأمريكي وليس بعملة الخليج المحلية**، رغم هويته العربية الشاملة — لا تفترض أن سعر الدفع سيكون بالريال السعودي أو الدرهم الإماراتي دون التحقق أولًا.',
           '**GoDaddy وNamecheap مُدرجان للاطلاع فقط.** لم تتم إعادة تسعير أي منهما ولم تُؤكد شروط برنامج شراكة خاص بمنطقة الشرق الأوسط وشمال أفريقيا لأي منهما.',
@@ -1541,7 +1643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'مقارنة Hostinger وArabHosters وGoDaddy وNamecheap في الخليج',
         content:
-          'تم التحقق من الأسعار مباشرة على [Hostinger](https://www.hostinger.com/) و[ArabHosters](https://www.arabhosters.com/) بتاريخ 2026-08-30؛ أما GoDaddy وNamecheap فمُدرجان للاطلاع فقط ولم تتم إعادة تسعيرهما أو تأكيد شروط خاصة بمنطقة الشرق الأوسط وشمال أفريقيا هذه المرة.',
+          'تم التحقق من سعر [Hostinger](https://www.hostinger.com/) بتاريخ 2026-11-02 وسعر [ArabHosters](https://www.arabhosters.com/) بتاريخ 2026-08-30؛ أما GoDaddy وNamecheap فمُدرجان للاطلاع فقط ولم تتم إعادة تسعيرهما أو تأكيد شروط خاصة بمنطقة الشرق الأوسط وشمال أفريقيا هذه المرة.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1556,7 +1658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'المزود': 'Hostinger',
-            'السعر التمهيدي': '2.99 دولار/شهر (دفع مسبق 48 شهر)',
+            'السعر التمهيدي': '2.49 دولار/شهر (دفع مسبق 48 شهر)',
             'الحضور في المنطقة': 'نشط في أكثر من 12 دولة',
             'العملة': 'دولار أمريكي',
           },
@@ -1648,7 +1750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل Hostinger متاح فعليًا في الخليج العربي ومنطقة الشرق الأوسط وشمال أفريقيا؟',
-            a: 'نعم. Hostinger مؤكد نشاطه واشتراكه الذاتي في أكثر من 12 دولة في منطقة الشرق الأوسط وشمال أفريقيا عبر شبكتي Impact وArabClicks. سعره التمهيدي 2.99 دولار شهريًا يتطلب دفعًا مسبقًا لمدة 48 شهرًا (143.52 دولار مقدمًا) ويتجدد بسعر 10.99 دولار شهريًا — بزيادة تقارب 3.7 أضعاف — لذا خطط لسعر التجديد وليس السعر المعلن.',
+            a: 'نعم. Hostinger مؤكد نشاطه واشتراكه الذاتي في أكثر من 12 دولة في منطقة الشرق الأوسط وشمال أفريقيا عبر شبكتي Impact وArabClicks. سعره التمهيدي 2.49 دولار شهريًا يتطلب دفعًا مسبقًا لمدة 48 شهرًا (119.52 دولار مقدمًا) ويتجدد بسعر 10.99 دولار شهريًا — بزيادة تقارب 4.4 أضعاف — لذا خطط لسعر التجديد وليس السعر المعلن.',
           },
           {
             q: 'هل يسعّر ArabHosters بالريال السعودي أو الدرهم الإماراتي؟',
@@ -1688,7 +1790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         items: [
-          '[أسعار Hostinger](https://www.hostinger.com/) — تم التحقق مباشرة على Hostinger بتاريخ 2026-08-30. السعر التمهيدي 2.99 دولار شهريًا يتطلب دفعًا مسبقًا لمدة 48 شهرًا؛ ويتجدد بسعر 10.99 دولار شهريًا. تم تأكيد الحضور في المنطقة عبر شبكتي Impact وArabClicks.',
+          '[أسعار Hostinger](https://www.hostinger.com/) — تم التحقق مباشرة على الصفحة العالمية لـHostinger (خطة Premium) بتاريخ 2026-11-02. السعر التمهيدي 2.49 دولار شهريًا يتطلب دفعًا مسبقًا لمدة 48 شهرًا؛ ويتجدد بسعر 10.99 دولار شهريًا. تم تأكيد الحضور في المنطقة عبر شبكتي Impact وArabClicks.',
           '[أسعار ArabHosters](https://www.arabhosters.com/) — تم التحقق مباشرة على ArabHosters بتاريخ 2026-08-30. خطة Personal بسعر 37.80 دولار سنويًا، مسعّرة بالدولار الأمريكي.',
           'GoDaddy وNamecheap — لم تتم إعادة تسعيرهما ولم تُؤكد شروط برنامج خاصة بمنطقة الشرق الأوسط وشمال أفريقيا هذه المرة؛ مذكوران للاطلاع فقط.',
           'نظام حماية البيانات الشخصية السعودي (PDPL) — مصدر إطار حماية البيانات السعودي المذكور أعلاه؛ تحقق من النص الحالي عبر المصادر الحكومية السعودية الرسمية.',
@@ -1713,18 +1815,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'monthly',
     publishDate: '2026-08-30',
-    dateModified: '2026-09-03',
-    next_refresh_due: '2026-10-03',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
     title: '2026年 日本国内 おすすめレンタルサーバー比較',
-    seoTitle: '2026年 レンタルサーバー比較：Xserver vs ロリポップ',
+    seoTitle: '2026年 エックスサーバー ロリポップ 比較：料金',
     intro:
-      '2026年時点で価格が確認でき、A8.netのアフィリエイトプログラムが稼働している日本国内のレンタルサーバーは、[Xserver](https://www.xserver.ne.jp/)と[ロリポップ！](https://lolipop.jp/)の2社です。どちらも表示価格だけを見て判断すると誤解を招きます。Xserverのキャンペーン価格は契約期間によって変わり、ロリポップ！の最安プランはそもそもWordPressを動かせません。本記事では価格を比較する前に、各プランで「できること・できないこと」を先に示します。以下の価格はすべて2026年8月30日に各社の公式サイトで直接確認したものです。',
+      '2026年時点で価格が確認でき、A8.netのアフィリエイトプログラムが稼働している日本国内のレンタルサーバーは、[Xserver](https://www.xserver.ne.jp/)と[ロリポップ！](https://lolipop.jp/)の2社です。どちらも表示価格だけを見て判断すると誤解を招きます。Xserverのキャンペーン価格は契約期間によって変わり、ロリポップ！の最安プランはそもそもWordPressを動かせません。本記事では価格を比較する前に、各プランで「できること・できないこと」を先に示します。以下の価格はすべて2026年11月2日に各社の公式サイトで直接確認したものです。',
     metaDescription:
-      '2026年の日本国内おすすめレンタルサーバー：Xserver（キャンペーン価格月額693円）とロリポップ！（エコノミープラン月額121円、PHP/DB非対応）を比較。確認済み価格、契約期間の注意点、APPI対応について解説。',
+      'エックスサーバー（Xserver）とロリポップ！を2026年11月2日の公式価格で比較。Xserverは月額693円、ロリポップ！は月額121円から。契約期間とWordPress対応の違い、APPI対応を解説。',
     twitterDescription:
-      'Xserver vs ロリポップ！ — ロリポップ！の最安プランはWordPressを動かせないため、本記事では価格より先にプランの機能を比較します。2026年8月に各社公式サイトで確認した最新価格。',
+      'Xserver vs ロリポップ！ — ロリポップ！の最安プランはWordPressを動かせないため、本記事では価格より先にプランの機能を比較します。2026年11月に各社公式サイトで確認した最新価格。',
     affiliateDisclosure: true,
     audience:
       '日本国内向けウェブサイトのレンタルサーバーを選ぶ読者向け。2026年の確認済み価格、契約期間による料金差、どのプランが実際にWordPressに対応しているかを比較する。レンタルサーバーの利用経験は前提としない。',
@@ -1739,7 +1841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'xserver キャンペーン価格 2026',
     ],
     leadAnswerBlock:
-      '**Xserver（キャンペーン価格 月額693円、最大30%オフ。36ヶ月契約時の通常料金は月額990円）がWordPressに対応できるプランです。ロリポップ！の目玉である月額121円のエコノミープランはPHPとデータベースに対応しておらず、WordPressを動かせません — ほとんどの読者はロリポップ！の上位プランかXserverを選ぶ必要があります。Xserverの現行キャンペーンは2026年9月7日まで実施されます。**',
+      '**Xserver（キャンペーン価格 月額693円、最大30%オフ。36ヶ月契約時の通常料金は月額990円）がWordPressに対応できるプランです。ロリポップ！の目玉である月額121円のエコノミープランはPHPとデータベースに対応しておらず、WordPressを動かせません — ほとんどの読者はロリポップ！の上位プランかXserverを選ぶ必要があります。Xserverの現行キャンペーンは2026年11月4日まで実施されます。**',
     toc: [
       { label: '要点まとめ', anchor: '#key-takeaways' },
       { label: '日本国内のホスティング事業者', anchor: '#japan-providers' },
@@ -1775,7 +1877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**WordPressに対応できるのはXserver。** キャンペーン価格は月額693円（最大30%オフ）、2026年9月7日まで実施。通常料金は36ヶ月契約で月額990円。',
+          '**WordPressに対応できるのはXserver。** キャンペーン価格は月額693円（最大30%オフ）、2026年11月4日17時まで実施。通常料金は36ヶ月契約で月額990円。',
           '**契約期間によって月額料金が変わる。** Xserverの最安月額は最長期間の契約が前提。12ヶ月契約は36ヶ月契約より月額が高くなる。',
           '**ロリポップ！の月額121円はWordPress非対応。** エコノミープランはPHPとデータベースに非対応のためWordPressを動かせない。最安価格が自分の用途に使えるとは限らないので、プランの仕様を先に確認する。',
           '**両社ともA8.net経由**で、1件あたり5,000〜10,000円の成果報酬。日本最大級のアフィリエイトネットワーク。',
@@ -1787,7 +1889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'japan-providers',
         title: '日本国内のホスティング事業者',
         content:
-          '[Xserver](https://www.xserver.ne.jp/)と[ロリポップ！](https://lolipop.jp/)はどちらも2026年時点の価格が確認でき、A8.netのアフィリエイトプログラムが稼働しています。Xserverの月額693円は期間限定のキャンペーン価格（最大30%オフ）で、2026年9月7日まで実施されます。この期間を過ぎるか、より短い契約期間を選ぶと、36ヶ月契約に紐づく通常料金の月額990円に近づきます — Xserverでは契約期間が短いほど月額が全体的に高くなります。ロリポップ！の月額121円は最安の「エコノミー」プランの価格ですが、このプランはPHPとデータベースに対応していないため、WordPressの利用が完全に不可能です。WordPressが必要な読者は、月額121円の目玉価格ではなく、ロリポップ！の上位プランとXserverを比較してください。GMO ConoHa WING、さくらインターネット、mixhostも国内でよく利用されるホスティングですが、今回は価格を再確認できていないため、推測での掲載は行っていません。',
+          '[Xserver](https://www.xserver.ne.jp/)と[ロリポップ！](https://lolipop.jp/)はどちらも2026年時点の価格が確認でき、A8.netのアフィリエイトプログラムが稼働しています。Xserverの月額693円は期間限定のキャンペーン価格（最大30%オフ）で、2026年11月4日17時まで実施されます。この期間を過ぎるか、より短い契約期間を選ぶと、36ヶ月契約に紐づく通常料金の月額990円に近づきます — Xserverでは契約期間が短いほど月額が全体的に高くなります。ロリポップ！の月額121円は最安の「エコノミー」プランの価格ですが、このプランはPHPとデータベースに対応していないため、WordPressの利用が完全に不可能です。WordPressが必要な読者は、月額121円の目玉価格ではなく、ロリポップ！の上位プランとXserverを比較してください。ロリポップ！の公式サイトには、エコノミー121円〜、ライト330円〜、スタンダード605円〜、ハイスピード660円〜、エンタープライズ2,420円〜（いずれも月額、2026年11月2日確認、税込・税抜の表記なし）が掲載されています。Xserverは税込で、スタンダード693円、プレミアム1,386円、ビジネス2,772円（36ヶ月契約のキャンペーン価格）で、初期費用0円、10日間の無料お試しがあります。GMO ConoHa WING、さくらインターネット、mixhostも国内でよく利用されるホスティングですが、今回は価格を再確認できていないため、推測での掲載は行っていません。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1898,7 +2000,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content:
-          'WordPressやデータベース対応が必要な汎用サイトを運用するなら[Xserver](https://www.xserver.ne.jp/)を選び、長期契約にコミットできるなら2026年9月7日までのキャンペーン価格のうちに契約するとよいでしょう。[ロリポップ！](https://lolipop.jp/)を選ぶ場合は、PHPやデータベースが必要ならエコノミーより上位のプランを選んでください — 月額121円の目玉価格は静的サイトやごく簡易なサイト向けで、WordPressには使えません。',
+          'WordPressやデータベース対応が必要な汎用サイトを運用するなら[Xserver](https://www.xserver.ne.jp/)を選び、長期契約にコミットできるなら2026年11月4日までのキャンペーン価格のうちに契約するとよいでしょう。[ロリポップ！](https://lolipop.jp/)を選ぶ場合は、PHPやデータベースが必要ならエコノミーより上位のプランを選んでください — 月額121円の目玉価格は静的サイトやごく簡易なサイト向けで、WordPressには使えません。',
       },
       faq: {
         id: 'faq',
@@ -1906,7 +2008,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '2026年、日本国内で一番おすすめのレンタルサーバーは？',
-            a: 'WordPressに対応できるのはXserverです。現行キャンペーン価格は月額693円（最大30%オフ、2026年9月7日まで実施）、36ヶ月契約の通常価格は月額990円です。ロリポップ！は月額121円のエコノミープランでより安価ですが、このプランはWordPressを動かせません。',
+            a: 'WordPressに対応できるのはXserverです。現行キャンペーン価格は月額693円（最大30%オフ、2026年11月4日まで実施）、36ヶ月契約の通常価格は月額990円です。ロリポップ！は月額121円のエコノミープランでより安価ですが、このプランはWordPressを動かせません。',
+          },
+          {
+            q: 'エックスサーバーとロリポップ！はどっちがいいですか？',
+            a: 'WordPressやデータベースを使う一般的なサイトならXserver（エックスサーバー）が向いています。36ヶ月契約のスタンダードは通常月額990円、現行キャンペーンで月額693円（税込、2026年11月4日17時まで）、初期費用は0円です。ロリポップ！は月額121円（エコノミー）から選べますが、エコノミーはPHPとデータベースに対応しておらずWordPressを動かせないため、必要なら上位プランと比較してください。',
           },
           {
             q: 'ロリポップ！の最安プランでWordPressを動かせますか？',
@@ -1918,7 +2024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Xserverの現行キャンペーン価格はいつまでですか？',
-            a: '最大30%オフとなる現行キャンペーンは2026年9月7日まで実施されます。キャンペーン価格と終了時期は変更されることがあるため、申し込み前にXserver公式の価格ページで最新の価格を確認してください。',
+            a: '最大30%オフとなる現行キャンペーンは2026年11月4日17時まで実施されます。キャンペーン価格と終了時期は変更されることがあるため、申し込み前にXserver公式の価格ページで最新の価格を確認してください。',
           },
           {
             q: 'XserverとロリポップのアフィリエイトA8.net報酬はいくらですか？',
@@ -1950,8 +2056,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '出典',
         items: [
-          '[Xserver](https://www.xserver.ne.jp/) — キャンペーン価格・通常価格、契約期間の条件、A8.net報酬範囲を2026-08-30にXserver公式サイトで直接確認。',
-          '[ロリポップ！](https://lolipop.jp/) — エコノミープランの価格とプラン別のPHP／データベース対応状況を2026-08-30にロリポップ！公式サイトで直接確認。',
+          '[Xserver](https://www.xserver.ne.jp/) — キャンペーン価格・通常価格、契約期間の条件、A8.net報酬範囲を2026-11-02にXserver公式サイトで直接確認（スタンダード990円、プレミアム1,980円、ビジネス3,960円。いずれも36ヶ月契約の通常価格、税込。キャンペーン価格はそれぞれ693円、1,386円、2,772円）。報酬範囲は2026-08-30時点の確認で、再確認していません。',
+          '[ロリポップ！](https://lolipop.jp/) — プラン別の月額価格（エコノミー121円〜、ライト330円〜、スタンダード605円〜、ハイスピード660円〜、エンタープライズ2,420円〜）を2026-11-02にロリポップ！公式サイトで直接確認。税込・税抜の表記はなし。エコノミーのPHP／データベース非対応は2026-08-30時点の確認で、再確認していません。',
           '[Backblaze B2の価格](https://www.backblaze.com/cloud-storage/pricing) — 2026-09-03に直接確認：1TBあたり月6.95ドル、最初の10GBは無料、保存データ量の3倍まで送信無料。',
           '[Cloudflare R2の価格](https://developers.cloudflare.com/r2/pricing/) — 2026-09-03に直接確認：標準ストレージ1GBあたり月0.015ドル、送信課金なし、10GBの無料枠。',
           '[Wasabiの価格](https://wasabi.com/pricing/) — 2026-09-03に直接確認：1TBあたり月7.99ドルの固定料金、送信量・APIの個別課金なし。',
@@ -1972,16 +2078,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'monthly',
     publishDate: '2026-08-30',
-    dateModified: '2026-09-03',
-    next_refresh_due: '2026-10-03',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
     title: '2026年面向全球华语读者的最佳网站主机',
-    seoTitle: '2026年最佳网站主机推荐（面向华语读者）',
+    seoTitle: '2026年最佳网站主机推荐：阿里云、腾讯云与Hostinger',
     intro:
       '本指南面向全球华语读者，而不仅仅是中国大陆境内的读者——这两类读者面对的服务商和合规规则并不相同，下文会分开讨论。[阿里云](https://www.alibabacloud.com/)和[腾讯云](https://www.tencentcloud.com/)是面向中国大陆用户的确认价格选择；对于中国大陆以外的读者，[Hostinger](https://www.hostinger.com/) 是本页真正可通过联盟计划变现的全球预算型选择。以下所有价格均于2026年8月30日在各服务商官网直接核实，限时促销价格尤其需要在下单前再次确认是否仍然有效。',
     metaDescription:
-      '2026年面向华语读者的最佳网站主机：阿里云（限时促销每年38元）、腾讯云（每月35元）、Hostinger（首月2.99美元）。附确认价格及PIPL、数据安全法合规说明。',
+      '2026年面向华语读者的最佳网站主机：阿里云（限时促销每年38元）、腾讯云（每月35元）、Hostinger（首月2.49美元）。附确认价格及PIPL、数据安全法合规说明。',
     twitterDescription:
       '阿里云、腾讯云与Hostinger对比——面向大陆用户的合规主机与面向全球华语读者的预算型主机是两个不同的问题，本文分开说明。所有价格均在各服务商官网直接核实。',
     affiliateDisclosure: true,
@@ -1998,16 +2104,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Hostinger vs 阿里云',
     ],
     leadAnswerBlock:
-      '**面向中国大陆用户的主机，阿里云（限时促销每年38元的轻量应用服务器，标准续费约每月45元）和腾讯云（轻量应用服务器每月35元，12个月预付约有15%折扣）是确认价格的选择。面向全球华语读者的一般受众，Hostinger（首月2.99美元，48个月预付方案，续费每月10.99美元）是可变现的全球预算型选择。限时促销价格经常有时间限制——下单前请再次确认是否仍在进行。**',
+      '**面向中国大陆用户的主机，阿里云（限时促销每年38元的轻量应用服务器，标准续费约每月45元）和腾讯云（轻量应用服务器每月35元，12个月预付约有15%折扣）是确认价格的选择。面向全球华语读者的一般受众，Hostinger（首月2.49美元，48个月预付方案，续费每月10.99美元）是可变现的全球预算型选择。限时促销价格经常有时间限制——下单前请再次确认是否仍在进行。**',
     quickAnswerTop: {
       zh: {
         question: '2026年面向华语读者的最佳网站主机是什么？',
         answer:
-          '面向中国大陆用户的主机，阿里云有限时促销价每年38元（约合每月3.2元，库存有限）的2核2GB轻量应用服务器，标准续费约每月45元；腾讯云同规格的轻量应用服务器标准价为每月35元，12个月预付约有15%折扣。面向中国大陆以外、希望使用全球预算型主机的读者，Hostinger的48个月预付首月价为2.99美元，续费为每月10.99美元。限时促销价格经常变动——下单前请确认实时价格。',
+          '面向中国大陆用户的主机，阿里云有限时促销价每年38元（约合每月3.2元，库存有限）的2核2GB轻量应用服务器，标准续费约每月45元；腾讯云同规格的轻量应用服务器标准价为每月35元，12个月预付约有15%折扣。面向中国大陆以外、希望使用全球预算型主机的读者，Hostinger的48个月预付首月价为2.49美元，续费为每月10.99美元。限时促销价格经常变动——下单前请确认实时价格。',
         bullets: [
           '阿里云：限时促销每年38元（约每月3.2元），续费约每月45元——需确认是否仍有效',
           '腾讯云：标准每月35元，12个月预付约15%折扣',
-          'Hostinger：首月2.99美元（48个月预付），续费每月10.99美元——涨幅明显',
+          'Hostinger：首月2.49美元（48个月预付），续费每月10.99美元——涨幅明显',
           '华为云确实存在，但其联盟计划地域受限，本站无法接入',
         ],
         updatedDate: '2026-08',
@@ -2046,7 +2152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.hostinger.com/',
         productName: 'Hostinger',
         productCategory: 'hosting',
-        priceRange: '2.99-10.99美元/月',
+        priceRange: '2.49-10.99美元/月',
         label: '查看Hostinger价格',
       },
     ],
@@ -2058,7 +2164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**本指南面向全球华语读者，而非仅限中国大陆居民。** 面向大陆用户的主机和面向全球用户的预算型主机是两个不同的问题，下文分开讨论。',
           '**阿里云：限时促销每年38元**（约每月3.2元，库存有限），2核2GB轻量应用服务器，标准续费约每月45元。限时促销价格经常有时间限制——下单前请确认是否仍在进行。',
           '**腾讯云：标准每月35元**，同规格轻量应用服务器，12个月预付约有15%折扣。其联盟计划条款未获确认——本文列出价格，但不将联盟条款列为已确认信息。',
-          '**Hostinger是本页真正可变现的全球预算型选择**，48个月预付首月价2.99美元，续费每月10.99美元——涨幅值得提前预算。',
+          '**Hostinger是本页真正可变现的全球预算型选择**，48个月预付首月价2.49美元，续费每月10.99美元——涨幅值得提前预算。',
           '**华为云确有其事，但未作为变现推荐列出。** 其联盟计划仅面向若干指定的亚洲国家开放，不包括大多数西方发布者，本站无法接入——其价格本轮也未获确认。',
           '**Namecheap和Bluehost是Hostinger之外常见的全球替代选择**，但本轮未重新核实其具体现价，因此本文不为二者提供具体数字。',
           '**网站需要的不只是主机方案本身。** 单独的数据库（Neon、Supabase）、异地备份（Backblaze B2、Cloudflare R2、Wasabi）以及安全共享大文件的方法，是大多数网站运营者迟早会遇到的三个问题——下文附直接核实的价格详细说明。请注意，这几家服务商面向的是中国大陆以外的全球华语读者，在中国大陆境内的可访问性可能受限，使用前请自行确认。',
@@ -2068,11 +2174,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'china-providers',
         title: '主机服务商',
         content:
-          '阿里云和腾讯云均已确认面向大陆用户的2核2GB轻量应用服务器2026年价格。阿里云的每年38元是库存有限的限时促销价——请将其视为有时间限制的价格，下单前确认是否仍在进行，因为标准续费价约为每月45元。腾讯云的每月35元是同规格轻量应用服务器的标准价，12个月预付约有15%折扣；腾讯云确有联盟计划，但本轮未能确认其具体条款，因此本文列出价格但不对佣金结构作出确认性说明。Hostinger是面向中国大陆以外读者、本页真正可变现的全球预算型选择：48个月预付首月价2.99美元，续费每月10.99美元——这是需要提前预算的实际涨幅。Namecheap和Bluehost是常见的全球替代选择，本文仅将其列为选项，因为本轮未重新核实二者的具体2026年现价。华为云在这一领域确有其事，但其联盟计划仅面向若干指定的亚洲国家开放，不包括大多数西方发布者，本站无法接入，因此本文未为其列出价格或链接。',
+          '阿里云和腾讯云均已确认面向大陆用户的2核2GB轻量应用服务器2026年价格。阿里云的每年38元是库存有限的限时促销价——请将其视为有时间限制的价格，下单前确认是否仍在进行，因为标准续费价约为每月45元。腾讯云的每月35元是同规格轻量应用服务器的标准价，12个月预付约有15%折扣；腾讯云确有联盟计划，但本轮未能确认其具体条款，因此本文列出价格但不对佣金结构作出确认性说明。Hostinger是面向中国大陆以外读者、本页真正可变现的全球预算型选择：48个月预付首月价2.49美元，续费每月10.99美元——这是需要提前预算的实际涨幅。Namecheap和Bluehost是常见的全球替代选择，本文仅将其列为选项，因为本轮未重新核实二者的具体2026年现价。华为云在这一领域确有其事，但其联盟计划仅面向若干指定的亚洲国家开放，不包括大多数西方发布者，本站无法接入，因此本文未为其列出价格或链接。',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '阿里云（限时促销每年38元，标准约每月45元）和腾讯云（标准每月35元）是面向大陆用户的确认选择；Hostinger（首月2.99美元，续费10.99美元）是确认的全球预算型选择。',
+            text: '阿里云（限时促销每年38元，标准约每月45元）和腾讯云（标准每月35元）是面向大陆用户的确认选择；Hostinger（首月2.49美元，续费10.99美元）是确认的全球预算型选择。',
           },
           {
             type: 'plain-terms',
@@ -2097,7 +2203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '服务商': '[Hostinger](https://www.hostinger.com/)',
-            '价格': '首月2.99→续费10.99美元',
+            '价格': '首月2.49→续费10.99美元',
             '联盟计划': '直接联盟计划',
             '佣金': '全球统一计划',
             '备注': '48个月预付享首月价',
@@ -2128,7 +2234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.hostinger.com/',
             productName: 'Hostinger',
             productCategory: 'hosting',
-            priceRange: '2.99-10.99美元/月',
+            priceRange: '2.49-10.99美元/月',
             label: '查看Hostinger价格',
           },
         ],
@@ -2201,7 +2307,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '2026年面向华语读者的最佳网站主机是什么？',
-            a: '这取决于你的网站服务于谁。面向中国大陆用户，阿里云（限时促销每年38元，标准约每月45元）或腾讯云（标准每月35元）是确认的选择。面向不涉及大陆运营的全球华语读者，Hostinger（首月2.99美元，续费10.99美元）是确认的预算型选择。',
+            a: '这取决于你的网站服务于谁。面向中国大陆用户，阿里云（限时促销每年38元，标准约每月45元）或腾讯云（标准每月35元）是确认的选择。面向不涉及大陆运营的全球华语读者，Hostinger（首月2.49美元，续费10.99美元）是确认的预算型选择。',
           },
           {
             q: '阿里云每年38元是永久价格吗？',
@@ -2213,7 +2319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '为什么推荐Hostinger而不是Namecheap或Bluehost？',
-            a: 'Hostinger的现价已确认，48个月预付首月价2.99美元，续费每月10.99美元。Namecheap和Bluehost是常见的全球替代选择，但本轮未重新核实二者的具体现价，因此本文不为它们提供具体数字。',
+            a: 'Hostinger的现价已确认，48个月预付首月价2.49美元，续费每月10.99美元。Namecheap和Bluehost是常见的全球替代选择，但本轮未重新核实二者的具体现价，因此本文不为它们提供具体数字。',
           },
           {
             q: '为什么华为云没有作为变现推荐列出？',
@@ -2243,7 +2349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[阿里云](https://www.alibabacloud.com/) —— 轻量应用服务器限时促销价与标准续费价，于2026-08-30在阿里云官网直接核实。',
           '[腾讯云](https://www.tencentcloud.com/) —— 轻量应用服务器标准价及12个月预付折扣，于2026-08-30在腾讯云官网直接核实。',
-          '[Hostinger](https://www.hostinger.com/) —— 首月价与续费价，于2026-08-30在Hostinger官网直接核实。',
+          '[Hostinger](https://www.hostinger.com/) —— 首月价与续费价（Premium套餐，美国站美元价格），于2026-11-02在Hostinger官网直接核实。',
           '[Backblaze B2价格](https://www.backblaze.com/cloud-storage/pricing) —— 于2026-09-03直接核实：每TB每月6.95美元，前10GB免费，出站流量在存储量3倍以内免费。',
           '[Cloudflare R2价格](https://developers.cloudflare.com/r2/pricing/) —— 于2026-09-03直接核实：标准存储每GB每月0.015美元，不收出站流量费，10GB免费额度。',
           '[Wasabi价格](https://wasabi.com/pricing/) —— 于2026-09-03直接核实：固定每TB每月7.99美元，不单独收取出站流量或API费用。',
@@ -2263,12 +2369,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'monthly',
     publishDate: '2026-08-30',
-    dateModified: '2026-09-03',
-    next_refresh_due: '2026-10-03',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2026-12-02',
     designSkin: 'hub',
     theme: 'Overview & Reference',
     title: '2026년 한국 웹 호스팅 추천: Cafe24 vs 가비아 vs 닷홈',
-    seoTitle: '한국 웹 호스팅 2026: Cafe24 vs 가비아 vs 닷홈 vs NHN',
+    seoTitle: '한국 웹 호스팅 2026: Cafe24 가비아 닷홈 비교',
     intro:
       '한국의 주요 호스팅 업체들은 현재 블로거형 제휴(어필리에이트) 프로그램을 운영하지 않습니다. 그래서 이 페이지는 정보 제공 목적으로만 작성되었으며, 아래 어디에도 "가입하기" 버튼이 없고, 이 글에서 비교하는 네 업체 모두 개인 발행자를 위한 공개된 제휴 프로그램이 확인되지 않았습니다. 이는 독자가 그런 프로그램을 기대했다면 그 자체로 유용한 사실입니다. 이 글은 [Cafe24](https://www.cafe24.com/), [가비아](https://www.gabia.com/)(Gabia), [닷홈](https://www.dothome.co.kr/)(Dothome), [NHN Hosting](https://www.nhncloud.com/)을 실제 가격과 실제 제공 내용을 기준으로 비교하므로, 제휴 링크가 없다는 것이 정보의 부재를 의미하지는 않습니다.',
     metaDescription:
@@ -2468,8 +2574,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         items: [
-          '[Cafe24 호스팅 요금](https://www.cafe24.com/) — 2026-08-30 Cafe24에서 직접 확인. 스타트업 플랜 월 450원부터. 파트너스 포털은 이커머스/유튜브 쇼핑 중심이며 호스팅 제휴 프로그램이 아님을 확인함.',
-          '[가비아 호스팅 요금](https://www.gabia.com/) — 2026-08-30 가비아에서 직접 확인. 무제한 트래픽 기본 PHP 플랜 월 10,450원. 파트너센터 "제휴 파트너" 등급은 조건이 비공개인 API/임베드 파트너십임을 확인함.',
+          '[Cafe24 호스팅 요금](https://www.cafe24.com/) — 2026-11-02 Cafe24 호스팅 페이지에서 직접 확인(뉴아우토반 호스팅·뉴매니지드 워드프레스 월 450원~, 부가세와 계약 기간은 페이지에 표기되지 않음). 2026-08-30에는 스타트업 플랜 월 450원부터로 확인. 파트너스 포털은 이커머스/유튜브 쇼핑 중심이며 호스팅 제휴 프로그램이 아님을 확인함.',
+          '[가비아 호스팅 요금](https://www.gabia.com/) — 2026-08-30 가비아에서 직접 확인(2026-11-02에는 요금 페이지를 읽지 못해 재확인하지 못함). 무제한 트래픽 기본 PHP 플랜 월 10,450원. 파트너센터 "제휴 파트너" 등급은 조건이 비공개인 API/임베드 파트너십임을 확인함.',
           '[닷홈 호스팅 요금](https://www.dothome.co.kr/) — 2026-08-30 닷홈에서 직접 확인. 업그레이드 플랜 월 900원. 제휴 프로그램은 발견되지 않음.',
           '[NHN Hosting 요금](https://www.nhncloud.com/) — 2026-08-30 NHN Hosting에서 직접 확인. 300MB 티어 프로모션가 월 250원부터 시작하는 엔트리 리눅스 호스팅. 제휴 프로그램은 발견되지 않음.',
           '[Cloudflare — South Korea PIPA 트러스트 허브](https://www.cloudflare.com/trust-hub/compliance-resources/south-korea-pipa/) — PIPA가 한국인 개인정보의 국외 이전을 제한한다는 주장의 출처.',

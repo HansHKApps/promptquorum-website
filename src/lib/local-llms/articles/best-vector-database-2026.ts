@@ -8,13 +8,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma',
-    seoTitle: 'Best Vector Database 2026',
-    metaDescription: 'Qdrant has 34.2k stars and a free-forever cloud tier, Pinecone starts at $20/month, Weaviate added a no-expiry free tier in June 2026. All four now have one.',
+    seoTitle: 'Best Vector Database 2026: Qdrant vs Pinecone vs Chroma',
+    metaDescription: 'Best vector database 2026: Qdrant (35k+ GitHub stars, free-forever cloud tier), Pinecone from $20/month, Weaviate and Chroma compared for RAG.',
     educationalLevel: 'Advanced',
     audience: 'Developers building RAG applications',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-09-01',
+    dateModified: '2026-11-02',
     readTime: '15 min read',
     primaryTerm: 'vector database',
     targetKeywords: [
@@ -24,12 +24,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'vector database pricing comparison',
       'vector database for RAG',
     ],
-    leadAnswerBlock: '**Qdrant is the best default for most teams: 34,242 GitHub stars, Apache-2.0, the lowest resource footprint of the open-source engines, and a cloud tier that is free forever. Pinecone is the right call when you want zero infrastructure work and will pay for it, starting at $20/month on Builder. Weaviate is the pick when hybrid search quality is central. Chroma is the fastest way to a working prototype because it runs in-process. The single most out-of-date claim in this category is that only some of these have a free tier — all four do, including Weaviate, which replaced its expiring 14-day sandbox with a genuinely free, non-expiring plan.**',
+    leadAnswerBlock: '**Qdrant is the best default for most teams: Apache-2.0, a small resource footprint and a free-forever cloud tier. Pinecone suits teams that want zero infrastructure work, from $20/month. Weaviate is strongest for hybrid search, Chroma for fast prototypes. All four now have a free tier.**',
     quickAnswerTop: {
       question: 'What is the best vector database in 2026?',
       answer: '**Qdrant for the best performance-per-dollar if you have any ops capacity, Pinecone if you want zero infrastructure work, Weaviate if hybrid search accuracy is central to retrieval, and Chroma if you are prototyping and want no server at all.** There is no single winner here, and any guide that names one is answering a different question than the one you have. The real decision is whether you run the engine yourself or rent it, and that turns on whether your team has spare engineering hours or spare budget — those are rarely the same constraint.',
       bullets: [
-        '**Best overall:** Qdrant — 34,242 stars, Apache-2.0, written in Rust, free-forever cloud tier at 0.5 vCPU / 1 GB RAM / 4 GB disk',
+        '**Best overall:** Qdrant — 35,383 stars, Apache-2.0, written in Rust, free-forever cloud tier at 0.5 vCPU / 1 GB RAM / 4 GB disk',
         '**Best for zero ops:** Pinecone — the most mature serverless product, Builder at $20/month flat, Standard at $50/month minimum',
         '**Best for hybrid search:** Weaviate — native BM25 plus vector, and since June 2026 a free tier with no expiry and no credit card',
         '**Best for prototyping:** Chroma — `pip install chromadb` and it runs in your Python process, no server to stand up',
@@ -65,11 +65,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Qdrant** — 34,242 GitHub stars, Apache-2.0, written in Rust. Qdrant Cloud has a free-forever tier at 0.5 vCPU, 1 GB RAM and 4 GB disk; Standard is usage-based with a 99.5% uptime SLA and no flat platform fee; Premium adds SSO and private VPC links with a 99.9% SLA and a minimum spend.',
+          '**Qdrant** — 35,383 GitHub stars, Apache-2.0, written in Rust. Qdrant Cloud has a free-forever tier at 0.5 vCPU, 1 GB RAM and 4 GB disk; Standard is usage-based with a 99.5% uptime SLA and no flat platform fee; Premium adds SSO and private VPC links with a 99.9% SLA and a minimum spend.',
           '**Pinecone** — cloud-only by design, with no self-hosted version at all. Starter is free with 2 GB storage, 2M write units and 1M read units a month. Builder is $20/month flat with 10 GB, 5M writes and 2M reads. Standard is a $50/month minimum then pay-as-you-go, and Enterprise is a $500/month minimum adding a 99.95% SLA, BYOC, HIPAA and audit logs.',
-          '**Weaviate** — 16,758 stars, BSD-3-Clause, written in Go. **The correction that matters most on this page:** Weaviate Cloud is no longer a 14-day sandbox. On 17 June 2026 it launched a genuinely free tier with no credit card and no time expiry — 100,000 objects, 1 GB memory and 10 GB disk. Comparisons still telling readers to budget $45/month from day one are sending them to pay for something now free.',
+          '**Weaviate** — 16,934 stars, BSD-3-Clause, written in Go. **The correction that matters most on this page:** Weaviate Cloud is no longer a 14-day sandbox. On 17 June 2026 it launched a genuinely free tier with no credit card and no time expiry — 100,000 objects, 1 GB memory and 10 GB disk. Comparisons still telling readers to budget $45/month from day one are sending them to pay for something now free.',
           '**Weaviate paid pricing has also moved.** The live pricing page lists Flex from $45/month and Premium from $400/month. The $280/month Plus tier announced in the October 2025 pricing update no longer appears there, so quote Flex and Premium rather than the older three-tier structure.',
-          '**Chroma** — 29,174 stars, Apache-2.0, and now a Rust core rather than the Python engine it started as. It is the only one of the four that runs in-process with no server, which is exactly why it wins for prototyping.',
+          '**Chroma** — 29,622 stars, Apache-2.0, and now a Rust core rather than the Python engine it started as. It is the only one of the four that runs in-process with no server, which is exactly why it wins for prototyping.',
           '**Chroma Cloud exists too**, which most comparisons of this category miss entirely: Starter is $0/month plus usage with $5 in free credits, Team is $250/month plus usage, and usage is priced at $2.50 per GiB written, $0.33 per GiB stored per month, $0.0075 per TiB queried and $0.09 per GiB returned. So there are four managed options here, not three.',
           '**All four now have a free tier**, which was not true a year ago and is the single fastest way to check whether a comparison you are reading has been refreshed.',
           '**Disclosure worth stating plainly:** Pinecone does run a real Affiliate Program for content creators, confirmed on its partners page. PromptQuorum is not enrolled in it and earns nothing from any link here. This is the one category in this series where such a programme exists, which is precisely why the recommendation above is Qdrant and not Pinecone.',
@@ -123,12 +123,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'Qdrant, Pinecone, Weaviate and Chroma compared',
-        content: '**Each of these optimises a different constraint — footprint, operational simplicity, retrieval quality, or time-to-first-query — rather than competing feature for feature.** Pricing was read from each vendor pricing page on 28 August 2026, and repository figures come from the GitHub API the same day.',
+        content: '**Each of these optimises a different constraint — footprint, operational simplicity, retrieval quality, or time-to-first-query — rather than competing feature for feature.** Pricing was read from each vendor pricing page on 2 November 2026, and repository figures come from the GitHub API the same day.',
         tableFormat: true,
         itemHeadings: true,
         columns: ['Criterion', '[Qdrant](https://qdrant.tech)', '[Pinecone](https://www.pinecone.io)', '[Weaviate](https://weaviate.io)', '[Chroma](https://www.trychroma.com)'],
         rows: [
-          { Criterion: 'GitHub stars', Qdrant: '34,242', Pinecone: 'Not open source', Weaviate: '16,758', Chroma: '29,174' },
+          { Criterion: 'GitHub stars', Qdrant: '35,383', Pinecone: 'Not open source', Weaviate: '16,934', Chroma: '29,622' },
           { Criterion: 'License', Qdrant: 'Apache-2.0', Pinecone: 'Proprietary', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
           { Criterion: 'Written in', Qdrant: 'Rust', Pinecone: 'Not disclosed', Weaviate: 'Go', Chroma: 'Rust core' },
           { Criterion: 'Self-hostable', Qdrant: 'Yes, free', Pinecone: 'No, cloud only', Weaviate: 'Yes, free', Chroma: 'Yes, free' },
@@ -187,13 +187,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Qdrant — best overall',
-            tagline: '34,242 stars, Apache-2.0, Rust, free-forever cloud tier',
+            tagline: '35,383 stars, Apache-2.0, Rust, free-forever cloud tier',
             verdict: 'Qdrant is written in Rust, which shows up as a smaller memory and CPU footprint for the same workload than the Go and Python-heritage alternatives, and that footprint is the practical reason it stretches further on a single node. Its filtering is the strongest here: it applies metadata conditions during the HNSW traversal rather than filtering results afterwards, so a heavily filtered query does not quietly degrade into scanning. Hybrid search is native through sparse vectors alongside dense ones. The cloud pricing is the cleanest of the four: a free tier at 0.5 vCPU, 1 GB RAM and 4 GB disk that is free forever rather than time-limited, a Standard tier billed on actual vCPU, memory and storage consumption with a 99.5% uptime SLA and no flat platform fee on top, and a Premium tier adding SSO and private VPC links with a 99.9% SLA and a minimum spend. The absence of a platform fee is what makes it the cost-sensitive choice: you pay for resources rather than for the privilege of being a customer.',
             pros: [
               'Lowest resource footprint of the open-source engines, so a single node goes further',
               'Filtering applied during index traversal rather than after, so filtered queries stay fast',
               'Free-forever cloud tier rather than a trial, and usage-based Standard pricing with no flat fee',
-              'Apache-2.0 with the largest community here at 34,242 stars, and the same engine self-hosted or managed',
+              'Apache-2.0 with the largest community here at 35,383 stars, and the same engine self-hosted or managed',
             ],
             cons: [
               'Its own query language rather than SQL or GraphQL, so there is a learning curve',
@@ -255,7 +255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Weaviate — best when hybrid search quality matters',
-            tagline: '16,758 stars, BSD-3-Clause, Go, free tier with no expiry since June 2026',
+            tagline: '16,934 stars, BSD-3-Clause, Go, free tier with no expiry since June 2026',
             verdict: 'Weaviate combines BM25 keyword scoring with vector similarity natively in its query API, and it has done so longer than the others, which shows in how much control you get over the blend. That matters more than it sounds: pure semantic search reliably misses exact product codes, model numbers, error strings and acronyms, because those are tokens whose meaning is their literal form. Weaviate also ships vectorisation modules that call embedding providers for you, so the database handles embedding rather than your application. On pricing, the important fact is recent: on 17 June 2026 Weaviate launched a free tier with no credit card and no time expiry, offering 100,000 objects, 1 GB memory and 10 GB disk. That replaced the 14-day sandbox that comparisons still describe. Paid plans on the live pricing page are Flex from $45/month, pay-as-you-go with a 99.5% uptime SLA, and Premium from $400/month for shared or dedicated deployments; the $280/month Plus tier from the October 2025 announcement no longer appears there.',
             pros: [
               'The most mature hybrid search here, with real control over the keyword and vector blend',
@@ -289,7 +289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Chroma — best for prototyping and small-to-mid workloads',
-            tagline: '29,174 stars, Apache-2.0, Rust core, `pip install chromadb` and it runs',
+            tagline: '29,622 stars, Apache-2.0, Rust core, `pip install chromadb` and it runs',
             verdict: 'Chroma installs with pip and runs embedded, so a notebook can have working semantic retrieval in a few lines with no container, no port and no configuration. That single property is why it dominates tutorials and prototypes, and it is a real engineering advantage rather than a beginner crutch — being able to test retrieval logic without infrastructure shortens the loop considerably. The engine core has been rewritten in Rust, so the performance story is better than its Python origins suggest, though metadata filtering remains simpler than Qdrant\'s and hybrid search is newer and less complete. Chroma Cloud exists as well, which most comparisons of this category omit: Starter is $0/month plus usage with $5 in free credits and 10 databases, Team is $250/month plus usage with 100 databases and dedicated Slack support, and Enterprise adds single-tenant or BYOC clusters. Usage is priced at $2.50 per GiB written, $0.33 per GiB stored per month, $0.0075 per TiB queried and $0.09 per GiB returned.',
             pros: [
               'Runs in-process with no server, so there is nothing to provision to start',
@@ -345,7 +345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'These are modelled estimates from typical VM pricing and vendor list prices on 28 August 2026, not measured production bills. Usage-based costs on Pinecone, Qdrant Cloud and Chroma Cloud vary with query volume, so run your expected read and write volume through each provider\'s calculator before committing.',
+            text: 'These are modelled estimates from typical VM pricing and vendor list prices on 2 November 2026, not measured production bills. Usage-based costs on Pinecone, Qdrant Cloud and Chroma Cloud vary with query volume, so run your expected read and write volume through each provider\'s calculator before committing.',
           },
         ],
         note: 'At a million vectors the ops line usually decides this, not the sticker price. Self-host when residency or volume requires it; otherwise the managed tiers are cheaper once your own hours are priced honestly.',
@@ -444,7 +444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How much does a vector database cost for 1 million vectors?',
-            a: 'On August 2026 list pricing, a managed tier typically runs roughly $45 to $70 a month at that scale before usage overages, while self-hosting on a small VM runs $40 to $60 a month in infrastructure plus two to five hours a month of operations time. Once those hours are priced at a realistic engineering rate, managed usually comes out cheaper over twelve months — see the full comparison table above.',
+            a: 'On current list pricing, a managed tier typically runs roughly $45 to $70 a month at that scale before usage overages, while self-hosting on a small VM runs $40 to $60 a month in infrastructure plus two to five hours a month of operations time. Once those hours are priced at a realistic engineering rate, managed usually comes out cheaper over twelve months — see the full comparison table above.',
           },
           {
             q: 'Is Qdrant the same as Weaviate?',
@@ -480,18 +480,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://qdrant.tech/pricing/', title: 'Qdrant Cloud pricing', description: 'Free-forever tier limits of 0.5 vCPU, 1 GB RAM and 4 GB disk, plus Standard usage-based billing and the 99.5% and 99.9% SLAs. Re-verified against the live pricing page 1 September 2026, unchanged.' },
+          { url: 'https://qdrant.tech/pricing/', title: 'Qdrant Cloud pricing', description: 'Free-forever tier limits of 0.5 vCPU, 1 GB RAM and 4 GB disk, plus Standard usage-based billing and the 99.5% and 99.9% SLAs. Re-verified against the live pricing page 2 November 2026, unchanged.' },
           { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Qdrant capacity planning', description: 'Official guidance on sharding a collection once past roughly 1 million vectors, and the RAM formula (vectors × dimensions × 4 bytes × 1.5) used for the self-hosting ceiling described above.' },
           { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant: minimal RAM to serve 1M vectors', description: 'Basis for the ~6–7 GB RAM per million 1,536-dimension vectors (in-memory HNSW) versus ~1.2 GB per million with disk-backed (mmap) storage.' },
-          { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant repository', description: 'Star count of 34,242, Apache-2.0 license and Rust as the implementation language, read from the GitHub API on 28 August 2026.' },
+          { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant repository', description: 'Star count of 35,383, Apache-2.0 license and Rust as the implementation language, read from the GitHub API on 2 November 2026.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone pricing', description: 'Starter, Builder, Standard and Enterprise limits including the $20 flat Builder plan and the $50 and $500 monthly minimums.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone partners page', description: 'Confirms the Affiliate Program for content creators alongside Technology, Solution and Referral partner categories.' },
           { url: 'https://weaviate.io/blog/weaviate-free-tier', title: 'Weaviate Cloud is now free to start', description: 'The 17 June 2026 announcement of a free tier with no credit card and no time expiry, replacing the 14-day sandbox.' },
           { url: 'https://weaviate.io/pricing', title: 'Weaviate pricing', description: 'Current free tier allowances of 100,000 objects, 1 GB memory and 10 GB disk, plus Flex from $45/month and Premium from $400/month.' },
           { url: 'https://weaviate.io/blog/weaviate-cloud-pricing-update', title: 'Weaviate Cloud pricing update', description: 'The October 2025 restructuring that introduced Flex, Plus and Premium, useful for dating the pricing changes.' },
-          { url: 'https://github.com/weaviate/weaviate', title: 'Weaviate repository', description: 'Star count of 16,758, BSD-3-Clause license and Go as the implementation language.' },
+          { url: 'https://github.com/weaviate/weaviate', title: 'Weaviate repository', description: 'Star count of 16,934, BSD-3-Clause license and Go as the implementation language.' },
           { url: 'https://www.trychroma.com/pricing', title: 'Chroma Cloud pricing', description: 'Starter at $0/month plus usage with $5 in credits, Team at $250/month, and the per-GiB write, storage, query and egress rates.' },
-          { url: 'https://github.com/chroma-core/chroma', title: 'Chroma repository', description: 'Star count of 29,174, Apache-2.0 license, and Rust as the primary implementation language of the current core.' },
+          { url: 'https://github.com/chroma-core/chroma', title: 'Chroma repository', description: 'Star count of 29,622, Apache-2.0 license, and Rust as the primary implementation language of the current core.' },
         ],
       },
       relatedReading: {
@@ -511,7 +511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma',
       description: 'Compares Qdrant, Pinecone, Weaviate and Chroma for RAG, with verified pricing, licenses, star counts and free-tier limits, including Weaviate\'s June 2026 no-expiry free tier and Chroma Cloud.',
       datePublished: '2026-08-28',
-      dateModified: '2026-09-01',
+      dateModified: '2026-11-02',
       url: 'https://www.promptquorum.com/local-llms/best-vector-database',
       inLanguage: 'en',
       proficiencyLevel: 'Advanced',
@@ -563,7 +563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'How much does a vector database cost for 1 million vectors?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'On August 2026 list pricing, a managed tier runs roughly $45 to $70 a month at that scale before overages, while self-hosting on a small VM runs $40 to $60 a month plus two to five hours a month of operations time. Priced at a realistic engineering rate, managed usually wins over twelve months.',
+            text: 'On current list pricing, a managed tier runs roughly $45 to $70 a month at that scale before overages, while self-hosting on a small VM runs $40 to $60 a month plus two to five hours a month of operations time. Priced at a realistic engineering rate, managed usually wins over twelve months.',
           },
         },
         {
@@ -579,11 +579,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Best vector databases (August 2026)',
+      name: 'Best vector databases (2026)',
       inLanguage: 'en',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Best overall — 34,242 stars, Apache-2.0, Rust, lowest resource footprint and a free-forever cloud tier with usage-based Standard pricing' },
+        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Best overall — 35,383 stars, Apache-2.0, Rust, lowest resource footprint and a free-forever cloud tier with usage-based Standard pricing' },
         { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Best for zero ops — the most mature serverless product, Builder at $20/month flat, but cloud-only with no self-hosted version' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'Best for hybrid search — native BM25 plus vector, and since June 2026 a free tier with no expiry offering 100,000 objects' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Best for prototyping — runs in-process with no server, Rust core, and Chroma Cloud starting at $0/month plus usage' },
@@ -596,14 +596,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-02-28',
     designSkin: 'hub',
     theme: 'Tools & Interfaces',
-    title: 'Beste Vektordatenbank 2026: Qdrant, Pinecone, Weaviate oder Chroma',
-    seoTitle: 'Beste Vektordatenbank 2026',
-    metaDescription: 'Qdrant hat 34.242 Sterne und eine dauerhaft kostenlose Cloud-Stufe, Pinecone startet bei 20 $/Monat, Weaviate hat im Juni 2026 eine unbefristete Gratisstufe ergänzt. Alle vier haben jetzt eine.',
+    title: 'Beste Vektordatenbank 2026: Qdrant vs Pinecone vs Chroma',
+    seoTitle: 'Beste Vektordatenbank 2026: Qdrant vs Pinecone vs Chroma',
+    metaDescription: 'Beste Vektordatenbank 2026: Qdrant (35k+ GitHub-Sterne, dauerhaft gratis in der Cloud), Pinecone ab 20 $/Monat, Weaviate und Chroma für RAG im Vergleich.',
     educationalLevel: 'Advanced',
     audience: 'Entwicklerinnen und Entwickler, die RAG-Anwendungen bauen',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-09-01',
+    dateModified: '2026-11-02',
     readTime: '15 Min. Lesezeit',
     primaryTerm: 'Vektordatenbank',
     targetKeywords: [
@@ -613,12 +613,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Vektordatenbank Preisvergleich',
       'Vektordatenbank für RAG',
     ],
-    leadAnswerBlock: '**Qdrant ist für die meisten Teams die beste Standardwahl: 34.242 GitHub-Sterne, Apache-2.0, der geringste Ressourcenbedarf unter den quelloffenen Engines und eine dauerhaft kostenlose Cloud-Stufe. Pinecone ist richtig, wenn Sie keinerlei Infrastrukturarbeit wollen und dafür zahlen — ab 20 $/Monat mit Builder. Weaviate ist die Wahl, wenn hybride Suche im Mittelpunkt steht. Chroma führt am schnellsten zu einem funktionierenden Prototyp, weil es im Prozess läuft. Die veraltetste Behauptung in dieser Kategorie lautet, nur einige davon hätten eine Gratisstufe: Seit Juni 2026 haben alle vier eine, auch Weaviate, das seine ablaufende 14-Tage-Sandbox durch einen wirklich kostenlosen, unbefristeten Tarif ersetzt hat.**',
+    leadAnswerBlock: '**Qdrant ist die beste Standardwahl für die meisten Teams: Apache-2.0, geringer Ressourcenbedarf und eine dauerhaft kostenlose Cloud-Stufe. Pinecone passt, wenn Sie keinen Infrastrukturaufwand wollen, ab 20 $/Monat. Weaviate ist stark bei Hybridsuche, Chroma für schnelle Prototypen.**',
     quickAnswerTop: {
       question: 'Welche Vektordatenbank ist 2026 die beste?',
-      answer: '**Qdrant für das beste Preis-Leistungs-Verhältnis, sofern Sie überhaupt Betriebskapazität haben, Pinecone wenn Sie null Infrastrukturarbeit wollen, Weaviate wenn hybride Suche für die Trefferqualität zentral ist, und Chroma wenn Sie prototypisieren und gar keinen Server wollen.** Einen einzelnen Sieger gibt es hier nicht, und jeder Ratgeber, der einen nennt, beantwortet eine andere Frage als Ihre. Die eigentliche Entscheidung ist, ob Sie die Engine selbst betreiben oder mieten, und das hängt daran, ob Ihr Team freie Entwicklungsstunden oder freies Budget hat — selten ist beides dieselbe Beschränkung.',
+      answer: '**Qdrant für das beste Preis-Leistungs-Verhältnis, sofern Sie überhaupt Betriebskapazität haben, Pinecone wenn Sie null Infrastrukturarbeit wollen, Weaviate wenn hybride Suche für die Trefferqualität zentral ist, und Chroma wenn Sie prototypisieren und gar keinen Server wollen.** Einen einzelnen Sieger gibt es hier nicht, und jeder Ratgeber, der einen nennt, beantwortet eine andere Frage als Ihre.',
       bullets: [
-        '**Insgesamt am besten:** Qdrant — 34.242 Sterne, Apache-2.0, in Rust geschrieben, dauerhaft kostenlose Cloud-Stufe mit 0,5 vCPU / 1 GB RAM / 4 GB Speicher',
+        '**Insgesamt am besten:** Qdrant — 35.383 Sterne, Apache-2.0, Rust, dauerhaft kostenlose Cloud-Stufe (0,5 vCPU / 1 GB RAM)',
         '**Am besten ohne Betrieb:** Pinecone — das ausgereifteste Serverless-Produkt, Builder pauschal 20 $/Monat, Standard mindestens 50 $/Monat',
         '**Am besten für hybride Suche:** Weaviate — BM25 und Vektor nativ, und seit Juni 2026 eine Gratisstufe ohne Ablauf und ohne Kreditkarte',
         '**Am besten zum Prototypisieren:** Chroma — `pip install chromadb`, und es läuft in Ihrem Python-Prozess, ohne Server',
@@ -654,11 +654,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Qdrant** — 34.242 GitHub-Sterne, Apache-2.0, in Rust geschrieben. Qdrant Cloud hat eine dauerhaft kostenlose Stufe mit 0,5 vCPU, 1 GB RAM und 4 GB Speicher; Standard rechnet nutzungsabhängig ab, mit 99,5 % Verfügbarkeitszusage und ohne pauschale Plattformgebühr; Premium ergänzt SSO und private VPC-Links mit 99,9 % und einem Mindestumsatz.',
+          '**Qdrant** — 35.383 GitHub-Sterne, Apache-2.0, in Rust geschrieben. Qdrant Cloud hat eine dauerhaft kostenlose Stufe (0,5 vCPU, 1 GB RAM, 4 GB Speicher); Standard rechnet nutzungsabhängig ab (99,5 % SLA, keine Plattformgebühr).',
           '**Pinecone** — von Grund auf reine Cloud, ohne jede selbst betriebene Variante. Starter ist kostenlos mit 2 GB Speicher, 2 Mio. Write Units und 1 Mio. Read Units im Monat. Builder kostet pauschal 20 $/Monat mit 10 GB, 5 Mio. Writes und 2 Mio. Reads. Standard beginnt bei 50 $/Monat und rechnet darüber nutzungsabhängig ab; Enterprise liegt bei mindestens 500 $/Monat und ergänzt 99,95 % Verfügbarkeit, BYOC, HIPAA und Audit-Logs.',
-          '**Weaviate** — 16.758 Sterne, BSD-3-Clause, in Go geschrieben. **Die wichtigste Korrektur auf dieser Seite:** Weaviate Cloud ist keine 14-Tage-Sandbox mehr. Am 17. Juni 2026 wurde eine wirklich kostenlose Stufe ohne Kreditkarte und ohne zeitliche Befristung eingeführt — 100.000 Objekte, 1 GB Arbeitsspeicher und 10 GB Festplatte. Vergleiche, die weiterhin raten, ab Tag eins 45 $/Monat einzuplanen, schicken Leserinnen und Leser dazu, für etwas zu zahlen, das inzwischen kostenlos ist.',
+          '**Weaviate** — 16.934 Sterne, BSD-3-Clause, in Go geschrieben. **Die wichtigste Korrektur auf dieser Seite:** Weaviate Cloud ist keine 14-Tage-Sandbox mehr. Am 17. Juni 2026 wurde eine wirklich kostenlose Stufe ohne Kreditkarte und ohne zeitliche Befristung eingeführt — 100.000 Objekte, 1 GB Arbeitsspeicher und 10 GB Festplatte. Vergleiche, die weiterhin raten, ab Tag eins 45 $/Monat einzuplanen, schicken Leserinnen und Leser dazu, für etwas zu zahlen, das inzwischen kostenlos ist.',
           '**Auch die bezahlten Weaviate-Tarife haben sich verschoben.** Die aktuelle Preisseite führt Flex ab 45 $/Monat und Premium ab 400 $/Monat. Die im Oktober 2025 angekündigte Plus-Stufe zu 280 $/Monat erscheint dort nicht mehr, nennen Sie also Flex und Premium statt der älteren dreistufigen Struktur.',
-          '**Chroma** — 29.174 Sterne, Apache-2.0, und inzwischen ein Kern in Rust statt der Python-Engine, mit der es begann. Es ist das einzige der vier, das ohne Server im Prozess läuft, und genau deshalb gewinnt es beim Prototypisieren.',
+          '**Chroma** — 29.622 Sterne, Apache-2.0, und inzwischen ein Kern in Rust statt der Python-Engine, mit der es begann. Es ist das einzige der vier, das ohne Server im Prozess läuft, und genau deshalb gewinnt es beim Prototypisieren.',
           '**Auch Chroma Cloud gibt es**, was die meisten Vergleiche dieser Kategorie völlig übersehen: Starter kostet 0 $/Monat plus Nutzung mit 5 $ Startguthaben, Team 250 $/Monat plus Nutzung, und die Nutzung wird mit 2,50 $ je geschriebenem GiB, 0,33 $ je gespeichertem GiB und Monat, 0,0075 $ je abgefragtem TiB und 0,09 $ je zurückgegebenem GiB berechnet. Es gibt hier also vier verwaltete Optionen, nicht drei.',
           '**Alle vier haben inzwischen eine Gratisstufe**, was vor einem Jahr noch nicht galt und der schnellste Weg ist zu prüfen, ob ein Vergleich, den Sie lesen, aktualisiert wurde.',
           '**Ein Hinweis, der klar gesagt gehört:** Pinecone betreibt tatsächlich ein Affiliate-Programm für Content-Ersteller, bestätigt auf der eigenen Partnerseite. PromptQuorum ist dort nicht angemeldet und verdient an keinem Link hier etwas. Dies ist die einzige Kategorie dieser Reihe, in der ein solches Programm existiert — und genau deshalb lautet die Empfehlung oben Qdrant und nicht Pinecone.',
@@ -712,12 +712,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'Qdrant, Pinecone, Weaviate und Chroma im Vergleich',
-        content: '**Jede dieser Engines optimiert eine andere Beschränkung — Ressourcenbedarf, Betriebseinfachheit, Trefferqualität oder Zeit bis zur ersten Abfrage — statt Funktion gegen Funktion anzutreten.** Die Preise stammen von den Preisseiten der Anbieter vom 28. August 2026, die Repository-Zahlen vom selben Tag aus der GitHub-API.',
+        content: '**Jede dieser Engines optimiert eine andere Beschränkung — Ressourcenbedarf, Betriebseinfachheit, Trefferqualität oder Zeit bis zur ersten Abfrage — statt Funktion gegen Funktion anzutreten.** Die Preise stammen von den Preisseiten der Anbieter vom 2. November 2026, die Repository-Zahlen vom selben Tag aus der GitHub-API.',
         tableFormat: true,
         itemHeadings: true,
         columns: ['Kriterium', '[Qdrant](https://qdrant.tech)', '[Pinecone](https://www.pinecone.io)', '[Weaviate](https://weaviate.io)', '[Chroma](https://www.trychroma.com)'],
         rows: [
-          { Kriterium: 'GitHub-Sterne', Qdrant: '34.242', Pinecone: 'Nicht quelloffen', Weaviate: '16.758', Chroma: '29.174' },
+          { Kriterium: 'GitHub-Sterne', Qdrant: '35.383', Pinecone: 'Nicht quelloffen', Weaviate: '16.934', Chroma: '29.622' },
           { Kriterium: 'Lizenz', Qdrant: 'Apache-2.0', Pinecone: 'Proprietär', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
           { Kriterium: 'Geschrieben in', Qdrant: 'Rust', Pinecone: 'Nicht offengelegt', Weaviate: 'Go', Chroma: 'Kern in Rust' },
           { Kriterium: 'Selbst betreibbar', Qdrant: 'Ja, kostenlos', Pinecone: 'Nein, nur Cloud', Weaviate: 'Ja, kostenlos', Chroma: 'Ja, kostenlos' },
@@ -776,13 +776,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Qdrant — insgesamt am besten',
-            tagline: '34.242 Sterne, Apache-2.0, Rust, dauerhaft kostenlose Cloud-Stufe',
+            tagline: '35.383 Sterne, Apache-2.0, Rust, dauerhaft kostenlose Cloud-Stufe',
             verdict: 'Qdrant ist in Rust geschrieben, was sich in einem kleineren Speicher- und CPU-Bedarf bei gleicher Last niederschlägt als bei den Alternativen aus Go und Python-Herkunft, und dieser Bedarf ist der praktische Grund, warum es auf einem einzelnen Knoten weiter reicht. Die Filterung ist die stärkste hier: Metadatenbedingungen werden während der HNSW-Traversierung angewandt statt nachträglich auf die Ergebnisse, sodass eine stark gefilterte Abfrage nicht still in einen Scan abgleitet. Hybride Suche ist über sparse Vektoren neben dichten nativ vorhanden. Die Cloud-Preise sind die klarsten der vier: eine kostenlose Stufe mit 0,5 vCPU, 1 GB RAM und 4 GB Speicher, dauerhaft statt zeitlich begrenzt; eine Standard-Stufe, die nach tatsächlichem vCPU-, Speicher- und Plattenverbrauch abrechnet, mit 99,5 % Verfügbarkeitszusage und ohne pauschale Plattformgebühr obendrauf; und eine Premium-Stufe mit SSO und privaten VPC-Links, 99,9 % und einem Mindestumsatz. Das Fehlen einer Plattformgebühr macht es zur kostenbewussten Wahl: Sie zahlen für Ressourcen, nicht für das Privileg, Kunde zu sein.',
             pros: [
               'Geringster Ressourcenbedarf der quelloffenen Engines, ein einzelner Knoten reicht weiter',
               'Filterung während der Indextraversierung statt danach, gefilterte Abfragen bleiben schnell',
               'Dauerhaft kostenlose Cloud-Stufe statt Testphase, und nutzungsabhängiges Standard ohne Pauschale',
-              'Apache-2.0 mit der größten Community hier bei 34.242 Sternen, dieselbe Engine selbst betrieben wie verwaltet',
+              'Apache-2.0 mit der größten Community hier bei 35.383 Sternen, dieselbe Engine selbst betrieben wie verwaltet',
             ],
             cons: [
               'Eine eigene Abfragesprache statt SQL oder GraphQL, es gibt also eine Lernkurve',
@@ -844,7 +844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Weaviate — am besten, wenn hybride Suche zählt',
-            tagline: '16.758 Sterne, BSD-3-Clause, Go, seit Juni 2026 Gratisstufe ohne Ablauf',
+            tagline: '16.934 Sterne, BSD-3-Clause, Go, seit Juni 2026 Gratisstufe ohne Ablauf',
             verdict: 'Weaviate verbindet BM25-Stichwortbewertung und Vektorähnlichkeit nativ in der Abfrage-API und tut das länger als die anderen, was sich daran zeigt, wie viel Kontrolle Sie über die Mischung haben. Das zählt mehr, als es klingt: Reine Bedeutungssuche verfehlt verlässlich exakte Artikelnummern, Modellbezeichnungen, Fehlerstrings und Abkürzungen, denn deren Bedeutung ist ihre wörtliche Form. Weaviate liefert außerdem Vektorisierungsmodule mit, die Embedding-Anbieter für Sie aufrufen, sodass die Datenbank das Embedding übernimmt statt Ihrer Anwendung. Bei den Preisen ist die wichtige Tatsache neu: Am 17. Juni 2026 führte Weaviate eine Gratisstufe ohne Kreditkarte und ohne zeitliche Befristung ein, mit 100.000 Objekten, 1 GB Arbeitsspeicher und 10 GB Festplatte. Sie ersetzt die 14-Tage-Sandbox, die in Vergleichen weiterhin beschrieben wird. Die bezahlten Tarife auf der aktuellen Preisseite sind Flex ab 45 $/Monat, nutzungsabhängig mit 99,5 % Verfügbarkeitszusage, und Premium ab 400 $/Monat für geteilte oder dedizierte Bereitstellung; die Plus-Stufe zu 280 $/Monat aus der Ankündigung vom Oktober 2025 erscheint dort nicht mehr.',
             pros: [
               'Die reifste hybride Suche hier, mit echter Kontrolle über die Mischung aus Stichwort und Vektor',
@@ -878,7 +878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Chroma — am besten zum Prototypisieren und für kleine bis mittlere Lasten',
-            tagline: '29.174 Sterne, Apache-2.0, Kern in Rust, `pip install chromadb` und es läuft',
+            tagline: '29.622 Sterne, Apache-2.0, Kern in Rust, `pip install chromadb` und es läuft',
             verdict: 'Chroma installiert sich per pip und läuft eingebettet, sodass ein Notebook in wenigen Zeilen funktionierende semantische Suche hat — ohne Container, ohne Port, ohne Konfiguration. Genau diese Eigenschaft erklärt seine Dominanz in Tutorials und Prototypen, und sie ist ein echter technischer Vorteil statt einer Anfängerkrücke: Abrufslogik ohne Infrastruktur testen zu können, verkürzt die Schleife erheblich. Der Kern wurde in Rust neu geschrieben, die Leistungsgeschichte ist also besser, als die Python-Herkunft vermuten lässt, auch wenn die Metadatenfilterung einfacher bleibt als bei Qdrant und die hybride Suche neuer und weniger vollständig ist. Auch Chroma Cloud existiert, was die meisten Vergleiche dieser Kategorie auslassen: Starter kostet 0 $/Monat plus Nutzung mit 5 $ Startguthaben und 10 Datenbanken, Team 250 $/Monat plus Nutzung mit 100 Datenbanken und eigenem Slack-Support, und Enterprise ergänzt Single-Tenant- oder BYOC-Cluster. Die Nutzung wird mit 2,50 $ je geschriebenem GiB, 0,33 $ je gespeichertem GiB und Monat, 0,0075 $ je abgefragtem TiB und 0,09 $ je zurückgegebenem GiB berechnet.',
             pros: [
               'Läuft ohne Server im Prozess, es gibt nichts bereitzustellen, um anzufangen',
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Das sind modellierte Schätzungen aus üblichen Serverpreisen und Listenpreisen der Anbieter vom 28. August 2026, keine gemessenen Produktivrechnungen. Nutzungsabhängige Kosten bei Pinecone, Qdrant Cloud und Chroma Cloud schwanken mit dem Abfragevolumen, rechnen Sie Ihr erwartetes Lese- und Schreibvolumen daher vorher durch die Kalkulatoren der Anbieter.',
+            text: 'Das sind modellierte Schätzungen aus üblichen Serverpreisen und Listenpreisen der Anbieter vom 2. November 2026, keine gemessenen Produktivrechnungen. Nutzungsabhängige Kosten bei Pinecone, Qdrant Cloud und Chroma Cloud schwanken mit dem Abfragevolumen, rechnen Sie Ihr erwartetes Lese- und Schreibvolumen daher vorher durch die Kalkulatoren der Anbieter.',
           },
         ],
         note: 'Bei einer Million Vektoren entscheidet üblicherweise die Betriebszeile, nicht der Listenpreis. Betreiben Sie selbst, wenn Residenz oder Volumen es verlangen; sonst sind die verwalteten Stufen günstiger, sobald die eigenen Stunden ehrlich bepreist sind.',
@@ -1033,7 +1033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was kostet eine Vektordatenbank für 1 Million Vektoren?',
-            a: 'Nach den Listenpreisen von August 2026 kostet eine verwaltete Stufe in dieser Größenordnung typischerweise rund 45 bis 70 $ im Monat vor Mehrverbrauch, während Selbstbetrieb auf einem kleinen Server 40 bis 60 $ Infrastruktur plus zwei bis fünf Stunden Betriebszeit im Monat kostet. Sobald diese Stunden zu einem realistischen Entwicklersatz bepreist sind, liegt Managed über zwölf Monate meist günstiger — siehe die vollständige Vergleichstabelle oben.',
+            a: 'Nach den aktuellen Listenpreisen kostet eine verwaltete Stufe in dieser Größenordnung typischerweise rund 45 bis 70 $ im Monat vor Mehrverbrauch, während Selbstbetrieb auf einem kleinen Server 40 bis 60 $ Infrastruktur plus zwei bis fünf Stunden Betriebszeit im Monat kostet. Sobald diese Stunden zu einem realistischen Entwicklersatz bepreist sind, liegt Managed über zwölf Monate meist günstiger — siehe die vollständige Vergleichstabelle oben.',
           },
           {
             q: 'Ist Qdrant dasselbe wie Weaviate?',
@@ -1080,15 +1080,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://qdrant.tech/pricing/', title: 'Qdrant Cloud-Preise', description: 'Grenzen der dauerhaft kostenlosen Stufe mit 0,5 vCPU, 1 GB RAM und 4 GB Speicher sowie nutzungsabhängiges Standard und die Zusagen von 99,5 % und 99,9 %.' },
           { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Qdrant-Kapazitätsplanung', description: 'Offizielle Hinweise zur Shardierung einer Collection ab etwa 1 Million Vektoren sowie die RAM-Formel (Vektoren × Dimensionen × 4 Byte × 1,5), die der oben beschriebenen Obergrenze für Selbstbetrieb zugrunde liegt.' },
           { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant: minimaler RAM für 1 Mio. Vektoren', description: 'Grundlage für die ~6–7 GB RAM je Million 1.536-dimensionaler Vektoren (In-Memory-HNSW) gegenüber ~1,2 GB je Million bei plattenbasiertem (mmap) Speicher.' },
-          { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant-Repository', description: 'Sternzahl 34.242, Apache-2.0-Lizenz und Rust als Implementierungssprache, am 28. August 2026 aus der GitHub-API gelesen.' },
+          { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant-Repository', description: 'Sternzahl 35.383, Apache-2.0-Lizenz und Rust als Implementierungssprache, am 2. November 2026 aus der GitHub-API gelesen.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone-Preise', description: 'Grenzen von Starter, Builder, Standard und Enterprise samt Builder-Pauschale von 20 $ und den Mindestbeträgen von 50 $ und 500 $ im Monat.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone-Partnerseite', description: 'Bestätigt das Affiliate-Programm für Content-Ersteller neben den Kategorien Technologie-, Lösungs- und Empfehlungspartner.' },
           { url: 'https://weaviate.io/blog/weaviate-free-tier', title: 'Weaviate Cloud ist jetzt kostenlos zum Start', description: 'Die Ankündigung vom 17. Juni 2026 zur Gratisstufe ohne Kreditkarte und ohne zeitliche Befristung, die die 14-Tage-Sandbox ersetzt.' },
           { url: 'https://weaviate.io/pricing', title: 'Weaviate-Preise', description: 'Aktuelle Kontingente der Gratisstufe mit 100.000 Objekten, 1 GB Arbeitsspeicher und 10 GB Platte sowie Flex ab 45 $/Monat und Premium ab 400 $/Monat.' },
           { url: 'https://weaviate.io/blog/weaviate-cloud-pricing-update', title: 'Aktualisierung der Weaviate-Cloud-Preise', description: 'Die Umstellung vom Oktober 2025, die Flex, Plus und Premium einführte — nützlich zur zeitlichen Einordnung der Preisänderungen.' },
-          { url: 'https://github.com/weaviate/weaviate', title: 'Weaviate-Repository', description: 'Sternzahl 16.758, BSD-3-Clause-Lizenz und Go als Implementierungssprache.' },
+          { url: 'https://github.com/weaviate/weaviate', title: 'Weaviate-Repository', description: 'Sternzahl 16.934, BSD-3-Clause-Lizenz und Go als Implementierungssprache.' },
           { url: 'https://www.trychroma.com/pricing', title: 'Chroma Cloud-Preise', description: 'Starter zu 0 $/Monat plus Nutzung mit 5 $ Guthaben, Team zu 250 $/Monat sowie die Sätze je GiB für Schreiben, Speichern, Abfragen und Egress.' },
-          { url: 'https://github.com/chroma-core/chroma', title: 'Chroma-Repository', description: 'Sternzahl 29.174, Apache-2.0-Lizenz und Rust als primäre Implementierungssprache des heutigen Kerns.' },
+          { url: 'https://github.com/chroma-core/chroma', title: 'Chroma-Repository', description: 'Sternzahl 29.622, Apache-2.0-Lizenz und Rust als primäre Implementierungssprache des heutigen Kerns.' },
         ],
       },
       relatedReading: {
@@ -1108,7 +1108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Beste Vektordatenbank 2026: Qdrant, Pinecone, Weaviate oder Chroma',
       description: 'Vergleicht Qdrant, Pinecone, Weaviate und Chroma für RAG, mit geprüften Preisen, Lizenzen, Sternzahlen und Gratisstufen, darunter Weaviates unbefristete Gratisstufe vom Juni 2026 und Chroma Cloud.',
       datePublished: '2026-08-28',
-      dateModified: '2026-09-01',
+      dateModified: '2026-11-02',
       url: 'https://www.promptquorum.com/de/local-llms/best-vector-database',
       inLanguage: 'de',
       proficiencyLevel: 'Advanced',
@@ -1160,7 +1160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Was kostet eine Vektordatenbank für 1 Million Vektoren?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Nach den Listenpreisen von August 2026 kostet eine verwaltete Stufe rund 45 bis 70 $ im Monat vor Mehrverbrauch, während Selbstbetrieb auf einem kleinen Server 40 bis 60 $ plus zwei bis fünf Stunden Betriebszeit im Monat kostet. Zu einem realistischen Entwicklersatz bepreist, liegt Managed über zwölf Monate meist vorn.',
+            text: 'Nach den aktuellen Listenpreisen kostet eine verwaltete Stufe rund 45 bis 70 $ im Monat vor Mehrverbrauch, während Selbstbetrieb auf einem kleinen Server 40 bis 60 $ plus zwei bis fünf Stunden Betriebszeit im Monat kostet. Zu einem realistischen Entwicklersatz bepreist, liegt Managed über zwölf Monate meist vorn.',
           },
         },
         {
@@ -1176,11 +1176,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Beste Vektordatenbanken (August 2026)',
+      name: 'Beste Vektordatenbanken (2026)',
       inLanguage: 'de',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Insgesamt am besten — 34.242 Sterne, Apache-2.0, Rust, geringster Ressourcenbedarf und dauerhaft kostenlose Cloud-Stufe mit nutzungsabhängigem Standard' },
+        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Insgesamt am besten — 35.383 Sterne, Apache-2.0, Rust, geringster Ressourcenbedarf und dauerhaft kostenlose Cloud-Stufe mit nutzungsabhängigem Standard' },
         { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Am besten ohne Betrieb — das ausgereifteste Serverless-Produkt, Builder pauschal 20 $/Monat, aber reine Cloud ohne selbst betriebene Variante' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'Am besten für hybride Suche — BM25 plus Vektor nativ, und seit Juni 2026 eine Gratisstufe ohne Ablauf mit 100.000 Objekten' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Am besten zum Prototypisieren — läuft ohne Server im Prozess, Kern in Rust, und Chroma Cloud ab 0 $/Monat plus Nutzung' },
@@ -1193,14 +1193,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-02-28',
     designSkin: 'hub',
     theme: 'Tools & Interfaces',
-    title: 'Mejor base de datos vectorial 2026: Qdrant, Pinecone, Weaviate o Chroma',
-    seoTitle: 'Mejor base de datos vectorial 2026',
-    metaDescription: 'Qdrant tiene 34.242 estrellas y un nivel gratuito permanente en la nube, Pinecone arranca en 20 $/mes y Weaviate añadió un nivel gratuito sin caducidad en junio de 2026. Los cuatro ya tienen uno.',
+    title: 'Mejor base de datos vectorial 2026: Qdrant vs Pinecone',
+    seoTitle: 'Mejor base de datos vectorial 2026: Qdrant vs Pinecone',
+    metaDescription: 'Mejor base de datos vectorial 2026: Qdrant (35k+ estrellas en GitHub, nube gratis), Pinecone desde 20 $/mes, Weaviate y Chroma comparados para RAG.',
     educationalLevel: 'Advanced',
     audience: 'Desarrolladores que construyen aplicaciones RAG',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-09-01',
+    dateModified: '2026-11-02',
     readTime: '15 min de lectura',
     primaryTerm: 'base de datos vectorial',
     targetKeywords: [
@@ -1210,12 +1210,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'comparativa de precios de bases de datos vectoriales',
       'base de datos vectorial para RAG',
     ],
-    leadAnswerBlock: '**Qdrant es la mejor opción por defecto para la mayoría de equipos: 34.242 estrellas en GitHub, licencia Apache-2.0, el menor consumo de recursos entre los motores de código abierto y un nivel en la nube gratuito para siempre. Pinecone es lo correcto cuando quiere cero trabajo de infraestructura y va a pagarlo, desde 20 $/mes con Builder. Weaviate es la elección cuando la búsqueda híbrida es central. Chroma es el camino más rápido a un prototipo que funcione porque corre dentro del proceso. La afirmación más desactualizada de esta categoría es que solo algunos tienen nivel gratuito: desde junio de 2026 los cuatro lo tienen, incluido Weaviate, que sustituyó su sandbox caducable de 14 días por un plan realmente gratuito y sin caducidad.**',
+    leadAnswerBlock: '**Qdrant es la mejor opción por defecto para la mayoría de equipos: Apache-2.0, poco consumo de recursos y nube gratis para siempre. Pinecone encaja si no quieres gestionar infraestructura, desde 20 $/mes. Weaviate destaca en búsqueda híbrida y Chroma en prototipos rápidos.**',
     quickAnswerTop: {
       question: '¿Cuál es la mejor base de datos vectorial en 2026?',
-      answer: '**Qdrant por la mejor relación coste-rendimiento si tiene alguna capacidad de operaciones, Pinecone si quiere cero trabajo de infraestructura, Weaviate si la búsqueda híbrida es central para la precisión de la recuperación, y Chroma si está prototipando y no quiere ningún servidor.** Aquí no hay un ganador único, y cualquier guía que nombre uno está respondiendo a una pregunta distinta de la suya. La decisión real es si ejecuta el motor usted o lo alquila, y eso depende de si a su equipo le sobran horas de ingeniería o le sobra presupuesto: rara vez son la misma restricción.',
+      answer: '**Qdrant por la mejor relación coste-rendimiento si tiene alguna capacidad de operaciones, Pinecone si quiere cero trabajo de infraestructura, Weaviate si la búsqueda híbrida es central para la precisión de la recuperación, y Chroma si está prototipando y no quiere ningún servidor.** Aquí no hay un ganador único, y cualquier guía que nombre uno está respondiendo a una pregunta distinta de la suya.',
       bullets: [
-        '**Mejor en conjunto:** Qdrant — 34.242 estrellas, Apache-2.0, escrito en Rust, nivel en la nube gratuito para siempre con 0,5 vCPU / 1 GB RAM / 4 GB de disco',
+        '**Mejor en conjunto:** Qdrant — 35.383 estrellas, Apache-2.0, Rust, nube gratis para siempre (0,5 vCPU / 1 GB RAM)',
         '**Mejor sin operaciones:** Pinecone — el producto serverless más maduro, Builder a 20 $/mes fijos, Standard con un mínimo de 50 $/mes',
         '**Mejor para búsqueda híbrida:** Weaviate — BM25 más vector de forma nativa, y desde junio de 2026 un nivel gratuito sin caducidad ni tarjeta de crédito',
         '**Mejor para prototipar:** Chroma — `pip install chromadb` y corre en su proceso de Python, sin servidor que levantar',
@@ -1251,11 +1251,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Qdrant** — 34.242 estrellas en GitHub, Apache-2.0, escrito en Rust. Qdrant Cloud tiene un nivel gratuito para siempre con 0,5 vCPU, 1 GB de RAM y 4 GB de disco; Standard factura por consumo con un SLA del 99,5 % y sin cuota fija de plataforma; Premium añade SSO y enlaces VPC privados con un 99,9 % y un gasto mínimo.',
+          '**Qdrant** — 35.383 estrellas en GitHub, Apache-2.0, escrito en Rust. Qdrant Cloud tiene un nivel gratuito para siempre con 0,5 vCPU, 1 GB de RAM y 4 GB de disco; Standard factura por consumo con un SLA del 99,5 % y sin cuota fija de plataforma.',
           '**Pinecone** — solo nube por diseño, sin ninguna versión autoalojada. Starter es gratis con 2 GB de almacenamiento, 2 M de unidades de escritura y 1 M de lectura al mes. Builder cuesta 20 $/mes fijos con 10 GB, 5 M de escrituras y 2 M de lecturas. Standard parte de un mínimo de 50 $/mes y luego paga por uso, y Enterprise de un mínimo de 500 $/mes añadiendo un SLA del 99,95 %, BYOC, HIPAA y registros de auditoría.',
-          '**Weaviate** — 16.758 estrellas, BSD-3-Clause, escrito en Go. **La corrección más importante de esta página:** Weaviate Cloud ya no es un sandbox de 14 días. El 17 de junio de 2026 lanzó un nivel realmente gratuito sin tarjeta de crédito y sin caducidad: 100.000 objetos, 1 GB de memoria y 10 GB de disco. Las comparativas que siguen diciendo que presupueste 45 $/mes desde el primer día están mandando a la gente a pagar por algo que ahora es gratis.',
+          '**Weaviate** — 16.934 estrellas, BSD-3-Clause, escrito en Go. **La corrección más importante de esta página:** Weaviate Cloud ya no es un sandbox de 14 días. El 17 de junio de 2026 lanzó un nivel realmente gratuito sin tarjeta de crédito y sin caducidad: 100.000 objetos, 1 GB de memoria y 10 GB de disco. Las comparativas que siguen diciendo que presupueste 45 $/mes desde el primer día están mandando a la gente a pagar por algo que ahora es gratis.',
           '**Los precios de pago de Weaviate también se han movido.** La página de precios vigente lista Flex desde 45 $/mes y Premium desde 400 $/mes. El nivel Plus de 280 $/mes anunciado en la actualización de octubre de 2025 ya no aparece allí, así que cite Flex y Premium en lugar de la antigua estructura de tres niveles.',
-          '**Chroma** — 29.174 estrellas, Apache-2.0, y ahora un núcleo en Rust en lugar del motor en Python con el que empezó. Es el único de los cuatro que corre dentro del proceso sin servidor, y por eso mismo gana para prototipar.',
+          '**Chroma** — 29.622 estrellas, Apache-2.0, y ahora un núcleo en Rust en lugar del motor en Python con el que empezó. Es el único de los cuatro que corre dentro del proceso sin servidor, y por eso mismo gana para prototipar.',
           '**Chroma Cloud también existe**, algo que la mayoría de comparativas de esta categoría omite por completo: Starter cuesta 0 $/mes más consumo con 5 $ de crédito inicial, Team 250 $/mes más consumo, y el consumo se tarifa a 2,50 $ por GiB escrito, 0,33 $ por GiB almacenado al mes, 0,0075 $ por TiB consultado y 0,09 $ por GiB devuelto. Hay, por tanto, cuatro opciones gestionadas, no tres.',
           '**Los cuatro tienen ya un nivel gratuito**, algo que no era cierto hace un año y es la forma más rápida de comprobar si la comparativa que está leyendo se ha actualizado.',
           '**Un aviso que conviene decir sin rodeos:** Pinecone sí tiene un programa de afiliados real para creadores de contenido, confirmado en su página de socios. PromptQuorum no está inscrito en él y no gana nada con ningún enlace de aquí. Esta es la única categoría de esta serie donde existe tal programa, y precisamente por eso la recomendación de arriba es Qdrant y no Pinecone.',
@@ -1309,12 +1309,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'Qdrant, Pinecone, Weaviate y Chroma comparados',
-        content: '**Cada uno optimiza una restricción distinta —consumo, simplicidad operativa, calidad de recuperación o tiempo hasta la primera consulta— en lugar de competir función por función.** Los precios se leyeron de las páginas de cada proveedor el 28 de agosto de 2026, y las cifras de repositorio proceden de la API de GitHub ese mismo día.',
+        content: '**Cada uno optimiza una restricción distinta —consumo, simplicidad operativa, calidad de recuperación o tiempo hasta la primera consulta— en lugar de competir función por función.** Los precios se leyeron de las páginas de cada proveedor el 2 de noviembre de 2026, y las cifras de repositorio proceden de la API de GitHub ese mismo día.',
         tableFormat: true,
         itemHeadings: true,
         columns: ['Criterio', '[Qdrant](https://qdrant.tech)', '[Pinecone](https://www.pinecone.io)', '[Weaviate](https://weaviate.io)', '[Chroma](https://www.trychroma.com)'],
         rows: [
-          { Criterio: 'Estrellas en GitHub', Qdrant: '34.242', Pinecone: 'No es código abierto', Weaviate: '16.758', Chroma: '29.174' },
+          { Criterio: 'Estrellas en GitHub', Qdrant: '35.383', Pinecone: 'No es código abierto', Weaviate: '16.934', Chroma: '29.622' },
           { Criterio: 'Licencia', Qdrant: 'Apache-2.0', Pinecone: 'Propietaria', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
           { Criterio: 'Escrito en', Qdrant: 'Rust', Pinecone: 'No divulgado', Weaviate: 'Go', Chroma: 'Núcleo en Rust' },
           { Criterio: 'Autoalojable', Qdrant: 'Sí, gratis', Pinecone: 'No, solo nube', Weaviate: 'Sí, gratis', Chroma: 'Sí, gratis' },
@@ -1373,13 +1373,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Qdrant — mejor en conjunto',
-            tagline: '34.242 estrellas, Apache-2.0, Rust, nivel en la nube gratuito para siempre',
+            tagline: '35.383 estrellas, Apache-2.0, Rust, nivel en la nube gratuito para siempre',
             verdict: 'Qdrant está escrito en Rust, lo que se traduce en menos memoria y CPU para la misma carga que las alternativas de herencia Go y Python, y ese consumo es la razón práctica de que estire más en un solo nodo. Su filtrado es el más fuerte aquí: aplica las condiciones de metadatos durante el recorrido del índice HNSW en lugar de filtrar los resultados después, de modo que una consulta muy filtrada no degenera calladamente en un escaneo. La búsqueda híbrida es nativa mediante vectores dispersos junto a los densos. Los precios en la nube son los más limpios de los cuatro: un nivel gratuito con 0,5 vCPU, 1 GB de RAM y 4 GB de disco, gratuito para siempre en lugar de limitado en el tiempo; un nivel Standard facturado sobre el consumo real de vCPU, memoria y almacenamiento con un SLA del 99,5 % y sin cuota fija de plataforma encima; y un nivel Premium que añade SSO y enlaces VPC privados con un SLA del 99,9 % y un gasto mínimo. La ausencia de cuota de plataforma es lo que lo convierte en la elección sensible al coste: paga por recursos y no por el privilegio de ser cliente.',
             pros: [
               'El menor consumo de recursos de los motores abiertos, así que un solo nodo llega más lejos',
               'Filtrado aplicado durante el recorrido del índice y no después, de modo que las consultas filtradas siguen siendo rápidas',
               'Nivel en la nube gratuito para siempre en lugar de una prueba, y Standard por consumo sin cuota fija',
-              'Apache-2.0 con la mayor comunidad aquí, 34.242 estrellas, y el mismo motor autoalojado o gestionado',
+              'Apache-2.0 con la mayor comunidad aquí, 35.383 estrellas, y el mismo motor autoalojado o gestionado',
             ],
             cons: [
               'Lenguaje de consulta propio en lugar de SQL o GraphQL, de modo que hay curva de aprendizaje',
@@ -1441,7 +1441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Weaviate — mejor cuando importa la búsqueda híbrida',
-            tagline: '16.758 estrellas, BSD-3-Clause, Go, nivel gratuito sin caducidad desde junio de 2026',
+            tagline: '16.934 estrellas, BSD-3-Clause, Go, nivel gratuito sin caducidad desde junio de 2026',
             verdict: 'Weaviate combina la puntuación de palabras clave BM25 con la similitud vectorial de forma nativa en su API de consulta, y lleva haciéndolo más tiempo que los demás, lo que se nota en el control que le da sobre la mezcla. Eso importa más de lo que suena: la búsqueda puramente semántica falla de manera fiable con códigos de producto, números de modelo, cadenas de error y siglas exactas, porque el significado de esos tokens es su forma literal. Weaviate incluye además módulos de vectorización que llaman a proveedores de embeddings por usted, de modo que la base de datos se encarga del embedding en lugar de su aplicación. En cuanto a precios, el dato importante es reciente: el 17 de junio de 2026 Weaviate lanzó un nivel gratuito sin tarjeta de crédito y sin caducidad, con 100.000 objetos, 1 GB de memoria y 10 GB de disco. Sustituyó al sandbox de 14 días que las comparativas siguen describiendo. Los planes de pago en la página vigente son Flex desde 45 $/mes, de pago por uso con un SLA del 99,5 %, y Premium desde 400 $/mes para despliegues compartidos o dedicados; el nivel Plus de 280 $/mes del anuncio de octubre de 2025 ya no aparece allí.',
             pros: [
               'La búsqueda híbrida más madura de aquí, con control real sobre la mezcla de palabra clave y vector',
@@ -1475,7 +1475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Chroma — mejor para prototipar y cargas pequeñas y medianas',
-            tagline: '29.174 estrellas, Apache-2.0, núcleo en Rust, `pip install chromadb` y funciona',
+            tagline: '29.622 estrellas, Apache-2.0, núcleo en Rust, `pip install chromadb` y funciona',
             verdict: 'Chroma se instala con pip y corre embebido, así que un notebook puede tener recuperación semántica funcionando en pocas líneas sin contenedor, sin puerto y sin configuración. Esa sola propiedad explica por qué domina en tutoriales y prototipos, y es una ventaja de ingeniería real y no una muleta para principiantes: poder probar la lógica de recuperación sin infraestructura acorta bastante el ciclo. El núcleo del motor se ha reescrito en Rust, así que su rendimiento es mejor de lo que sugieren sus orígenes en Python, aunque el filtrado por metadatos sigue siendo más simple que el de Qdrant y la búsqueda híbrida es más reciente y menos completa. Chroma Cloud también existe, algo que la mayoría de comparativas de esta categoría omite: Starter cuesta 0 $/mes más consumo con 5 $ de crédito y 10 bases de datos, Team 250 $/mes más consumo con 100 bases de datos y soporte dedicado por Slack, y Enterprise añade clústeres de inquilino único o BYOC. El consumo se tarifa a 2,50 $ por GiB escrito, 0,33 $ por GiB almacenado al mes, 0,0075 $ por TiB consultado y 0,09 $ por GiB devuelto.',
             pros: [
               'Corre en el proceso sin servidor, así que no hay nada que aprovisionar para empezar',
@@ -1531,7 +1531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Son estimaciones modeladas a partir de precios habituales de máquinas y precios de lista de los proveedores el 28 de agosto de 2026, no facturas de producción medidas. Los costes por consumo en Pinecone, Qdrant Cloud y Chroma Cloud varían con el volumen de consultas, así que pase su volumen previsto de lecturas y escrituras por la calculadora de cada proveedor antes de comprometerse.',
+            text: 'Son estimaciones modeladas a partir de precios habituales de máquinas y precios de lista de los proveedores el 2 de noviembre de 2026, no facturas de producción medidas. Los costes por consumo en Pinecone, Qdrant Cloud y Chroma Cloud varían con el volumen de consultas, así que pase su volumen previsto de lecturas y escrituras por la calculadora de cada proveedor antes de comprometerse.',
           },
         ],
         note: 'A un millón de vectores suele decidir la línea de operaciones y no el precio de catálogo. Autoaloje cuando la residencia o el volumen lo exijan; en caso contrario los niveles gestionados salen más baratos una vez que sus propias horas se valoran con honestidad.',
@@ -1630,7 +1630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuánto cuesta una base de datos vectorial para 1 millón de vectores?',
-            a: 'Con precios de lista de agosto de 2026, un nivel gestionado ronda los 45 a 70 dólares al mes a esa escala antes de excesos, mientras que autoalojar en una máquina pequeña cuesta de 40 a 60 dólares al mes de infraestructura más dos a cinco horas mensuales de operaciones. Una vez valoradas esas horas a una tarifa de ingeniería realista, lo gestionado suele salir más barato a doce meses; véase la tabla comparativa completa más arriba.',
+            a: 'Con los precios de lista actuales, un nivel gestionado ronda los 45 a 70 dólares al mes a esa escala antes de excesos, mientras que autoalojar en una máquina pequeña cuesta de 40 a 60 dólares al mes de infraestructura más dos a cinco horas mensuales de operaciones. Una vez valoradas esas horas a una tarifa de ingeniería realista, lo gestionado suele salir más barato a doce meses; véase la tabla comparativa completa más arriba.',
           },
           {
             q: '¿Es Qdrant lo mismo que Weaviate?',
@@ -1666,18 +1666,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         links: [
-          { url: 'https://qdrant.tech/pricing/', title: 'Precios de Qdrant Cloud', description: 'Límites del nivel gratuito para siempre con 0,5 vCPU, 1 GB de RAM y 4 GB de disco, más la facturación por consumo de Standard y los SLA del 99,5 % y 99,9 %. Reverificado en la página de precios en vivo el 1 de septiembre de 2026, sin cambios.' },
+          { url: 'https://qdrant.tech/pricing/', title: 'Precios de Qdrant Cloud', description: 'Límites del nivel gratuito para siempre con 0,5 vCPU, 1 GB de RAM y 4 GB de disco, más la facturación por consumo de Standard y los SLA del 99,5 % y 99,9 %. Reverificado en la página de precios en vivo el 2 de noviembre de 2026, sin cambios.' },
           { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Planificación de capacidad de Qdrant', description: 'Guía oficial sobre cuándo fragmentar (sharding) una colección al superar aproximadamente 1 millón de vectores, y la fórmula de RAM (vectores × dimensiones × 4 bytes × 1,5) usada para el techo de autoalojamiento descrito arriba.' },
           { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant: RAM mínima para servir 1 M de vectores', description: 'Base de los aproximadamente 6-7 GB de RAM por millón de vectores de 1.536 dimensiones (HNSW en memoria) frente a ~1,2 GB por millón con almacenamiento respaldado en disco (mmap).' },
-          { url: 'https://github.com/qdrant/qdrant', title: 'Repositorio de Qdrant', description: 'Recuento de 34.242 estrellas, licencia Apache-2.0 y Rust como lenguaje de implementación, leídos de la API de GitHub el 28 de agosto de 2026.' },
+          { url: 'https://github.com/qdrant/qdrant', title: 'Repositorio de Qdrant', description: 'Recuento de 35.383 estrellas, licencia Apache-2.0 y Rust como lenguaje de implementación, leídos de la API de GitHub el 2 de noviembre de 2026.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Precios de Pinecone', description: 'Límites de Starter, Builder, Standard y Enterprise incluidos el plan plano Builder de 20 $ y los mínimos mensuales de 50 $ y 500 $.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Página de socios de Pinecone', description: 'Confirma el programa de afiliados para creadores de contenido junto a las categorías de socios tecnológicos, de soluciones y de referencia.' },
           { url: 'https://weaviate.io/blog/weaviate-free-tier', title: 'Weaviate Cloud ya es gratis para empezar', description: 'El anuncio del 17 de junio de 2026 de un nivel gratuito sin tarjeta de crédito y sin caducidad, que sustituye al sandbox de 14 días.' },
           { url: 'https://weaviate.io/pricing', title: 'Precios de Weaviate', description: 'Cupos actuales del nivel gratuito de 100.000 objetos, 1 GB de memoria y 10 GB de disco, más Flex desde 45 $/mes y Premium desde 400 $/mes.' },
           { url: 'https://weaviate.io/blog/weaviate-cloud-pricing-update', title: 'Actualización de precios de Weaviate Cloud', description: 'La reestructuración de octubre de 2025 que introdujo Flex, Plus y Premium, útil para fechar los cambios de precios.' },
-          { url: 'https://github.com/weaviate/weaviate', title: 'Repositorio de Weaviate', description: 'Recuento de 16.758 estrellas, licencia BSD-3-Clause y Go como lenguaje de implementación.' },
+          { url: 'https://github.com/weaviate/weaviate', title: 'Repositorio de Weaviate', description: 'Recuento de 16.934 estrellas, licencia BSD-3-Clause y Go como lenguaje de implementación.' },
           { url: 'https://www.trychroma.com/pricing', title: 'Precios de Chroma Cloud', description: 'Starter a 0 $/mes más consumo con 5 $ de crédito, Team a 250 $/mes, y las tarifas por GiB de escritura, almacenamiento, consulta y salida.' },
-          { url: 'https://github.com/chroma-core/chroma', title: 'Repositorio de Chroma', description: 'Recuento de 29.174 estrellas, licencia Apache-2.0 y Rust como lenguaje principal del núcleo actual.' },
+          { url: 'https://github.com/chroma-core/chroma', title: 'Repositorio de Chroma', description: 'Recuento de 29.622 estrellas, licencia Apache-2.0 y Rust como lenguaje principal del núcleo actual.' },
         ],
       },
       relatedReading: {
@@ -1697,7 +1697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Mejor base de datos vectorial 2026: Qdrant, Pinecone, Weaviate o Chroma',
       description: 'Compara Qdrant, Pinecone, Weaviate y Chroma para RAG, con precios, licencias, recuentos de estrellas y límites de nivel gratuito verificados, incluidos el nivel gratuito sin caducidad de Weaviate de junio de 2026 y Chroma Cloud.',
       datePublished: '2026-08-28',
-      dateModified: '2026-09-01',
+      dateModified: '2026-11-02',
       url: 'https://www.promptquorum.com/es/local-llms/best-vector-database',
       inLanguage: 'es',
       proficiencyLevel: 'Advanced',
@@ -1749,7 +1749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿Cuánto cuesta una base de datos vectorial para 1 millón de vectores?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Con precios de lista de agosto de 2026, un nivel gestionado ronda los 45 a 70 dólares al mes antes de excesos, mientras que autoalojar en una máquina pequeña cuesta de 40 a 60 dólares al mes más dos a cinco horas mensuales de operaciones. Valoradas a una tarifa realista, lo gestionado suele ganar a doce meses.',
+            text: 'Con los precios de lista actuales, un nivel gestionado ronda los 45 a 70 dólares al mes antes de excesos, mientras que autoalojar en una máquina pequeña cuesta de 40 a 60 dólares al mes más dos a cinco horas mensuales de operaciones. Valoradas a una tarifa realista, lo gestionado suele ganar a doce meses.',
           },
         },
         {
@@ -1765,11 +1765,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Mejores bases de datos vectoriales (agosto de 2026)',
+      name: 'Mejores bases de datos vectoriales (2026)',
       inLanguage: 'es',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Mejor en conjunto — 34.242 estrellas, Apache-2.0, Rust, el menor consumo de recursos y un nivel en la nube gratuito para siempre con Standard por consumo' },
+        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Mejor en conjunto — 35.383 estrellas, Apache-2.0, Rust, el menor consumo de recursos y un nivel en la nube gratuito para siempre con Standard por consumo' },
         { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Mejor sin operaciones — el producto serverless más maduro, Builder a 20 $/mes fijos, pero solo nube y sin versión autoalojada' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'Mejor para búsqueda híbrida — BM25 más vector de forma nativa, y desde junio de 2026 un nivel gratuito sin caducidad con 100.000 objetos' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Mejor para prototipar — corre en el proceso sin servidor, núcleo en Rust, y Chroma Cloud desde 0 $/mes más consumo' },
@@ -1782,14 +1782,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-02-28',
     designSkin: 'hub',
     theme: 'Tools & Interfaces',
-    title: 'Meilleure base de donnees vectorielle 2026 : Qdrant, Pinecone, Weaviate ou Chroma',
-    seoTitle: 'Meilleure base de donnees vectorielle 2026',
-    metaDescription: 'Qdrant compte 34 242 etoiles et un palier cloud gratuit a vie, Pinecone demarre a 20 $/mois, Weaviate a ajoute un palier gratuit sans expiration en juin 2026. Les quatre en ont un desormais. Verifie en aout 2026.',
+    title: 'Meilleure base vectorielle 2026 : Qdrant vs Pinecone',
+    seoTitle: 'Meilleure base vectorielle 2026 : Qdrant vs Pinecone',
+    metaDescription: 'Meilleure base vectorielle 2026 : Qdrant (35k+ étoiles GitHub, cloud gratuit à vie), Pinecone dès 20 $/mois, Weaviate et Chroma comparés pour le RAG.',
     educationalLevel: 'Advanced',
     audience: 'Developpeurs qui construisent des applications RAG',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-09-01',
+    dateModified: '2026-11-02',
     readTime: '15 min de lecture',
     primaryTerm: 'base de donnees vectorielle',
     targetKeywords: [
@@ -1799,12 +1799,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'comparatif des prix des bases vectorielles',
       'base de donnees vectorielle pour RAG',
     ],
-    leadAnswerBlock: '**Qdrant est le meilleur choix par defaut pour la plupart des equipes : 34 242 etoiles sur GitHub, licence Apache-2.0, la plus faible empreinte de ressources parmi les moteurs open source, et un palier cloud gratuit a vie. Pinecone est le bon choix quand vous voulez zero travail d infrastructure et acceptez de payer pour cela, a partir de 20 $/mois avec Builder. Weaviate s impose quand la recherche hybride est centrale. Chroma est le chemin le plus court vers un prototype qui fonctionne, parce qu il s execute dans le processus. L affirmation la plus perimee de cette categorie est que seuls certains ont un palier gratuit : depuis juin 2026 les quatre en ont un, y compris Weaviate, qui a remplace son bac a sable expirant de 14 jours par une offre reellement gratuite et sans expiration.**',
+    leadAnswerBlock: '**Qdrant est le meilleur choix par défaut pour la plupart des équipes : Apache-2.0, faible empreinte et offre cloud gratuite à vie. Pinecone convient si vous voulez zéro infrastructure, dès 20 $/mois. Weaviate excelle en recherche hybride, Chroma pour prototyper vite.**',
     quickAnswerTop: {
       question: 'Quelle est la meilleure base de donnees vectorielle en 2026 ?',
       answer: '**Qdrant pour le meilleur rapport cout-performance si vous avez la moindre capacite d exploitation, Pinecone si vous voulez zero travail d infrastructure, Weaviate si la recherche hybride est centrale pour la precision, et Chroma si vous prototypez et ne voulez aucun serveur.** Il n y a pas de vainqueur unique ici, et tout guide qui en designe un repond a une autre question que la votre. La vraie decision est de savoir si vous exploitez le moteur ou si vous le louez, et cela depend de ce qui manque a votre equipe : des heures d ingenierie ou du budget. Ce sont rarement la meme contrainte.',
       bullets: [
-        '**Meilleur globalement :** Qdrant — 34 242 etoiles, Apache-2.0, ecrit en Rust, palier cloud gratuit a vie avec 0,5 vCPU / 1 Go de RAM / 4 Go de disque',
+        '**Meilleur globalement :** Qdrant — 35 383 etoiles, Apache-2.0, ecrit en Rust, palier cloud gratuit a vie avec 0,5 vCPU / 1 Go de RAM / 4 Go de disque',
         '**Meilleur sans exploitation :** Pinecone — le produit serverless le plus mature, Builder a 20 $/mois forfaitaires, Standard a partir de 50 $/mois',
         '**Meilleur pour la recherche hybride :** Weaviate — BM25 et vecteur en natif, et depuis juin 2026 un palier gratuit sans expiration ni carte bancaire',
         '**Meilleur pour prototyper :** Chroma — `pip install chromadb` et il tourne dans votre processus Python, sans serveur a monter',
@@ -1840,11 +1840,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Qdrant** — 34 242 etoiles sur GitHub, Apache-2.0, ecrit en Rust. Qdrant Cloud propose un palier gratuit a vie avec 0,5 vCPU, 1 Go de RAM et 4 Go de disque ; Standard facture a la consommation avec un engagement de 99,5 % et sans frais fixes de plateforme ; Premium ajoute le SSO et des liens VPC prives avec 99,9 % et une depense minimale.',
+          '**Qdrant** — 35 383 etoiles sur GitHub, Apache-2.0, ecrit en Rust. Qdrant Cloud propose un palier gratuit a vie avec 0,5 vCPU, 1 Go de RAM et 4 Go de disque ; Standard facture a la consommation avec un engagement de 99,5 % et sans frais fixes de plateforme ; Premium ajoute le SSO et des liens VPC prives avec 99,9 % et une depense minimale.',
           '**Pinecone** — cloud uniquement par conception, sans aucune version auto-hebergee. Starter est gratuit avec 2 Go de stockage, 2 M d unites d ecriture et 1 M de lecture par mois. Builder coute 20 $/mois forfaitaires avec 10 Go, 5 M d ecritures et 2 M de lectures. Standard part d un minimum de 50 $/mois puis facture a l usage, et Enterprise d un minimum de 500 $/mois en ajoutant un engagement de 99,95 %, le BYOC, HIPAA et les journaux d audit.',
-          '**Weaviate** — 16 758 etoiles, BSD-3-Clause, ecrit en Go. **La correction la plus importante de cette page :** Weaviate Cloud n est plus un bac a sable de 14 jours. Le 17 juin 2026, un palier reellement gratuit sans carte bancaire et sans expiration a ete lance : 100 000 objets, 1 Go de memoire et 10 Go de disque. Les comparatifs qui conseillent encore de budgeter 45 $/mois des le premier jour envoient les lecteurs payer pour quelque chose de desormais gratuit.',
+          '**Weaviate** — 16 934 etoiles, BSD-3-Clause, ecrit en Go. **La correction la plus importante de cette page :** Weaviate Cloud n est plus un bac a sable de 14 jours. Le 17 juin 2026, un palier reellement gratuit sans carte bancaire et sans expiration a ete lance : 100 000 objets, 1 Go de memoire et 10 Go de disque. Les comparatifs qui conseillent encore de budgeter 45 $/mois des le premier jour envoient les lecteurs payer pour quelque chose de desormais gratuit.',
           '**Les tarifs payants de Weaviate ont aussi bouge.** La page tarifaire en vigueur liste Flex a partir de 45 $/mois et Premium a partir de 400 $/mois. Le palier Plus a 280 $/mois annonce lors de la mise a jour d octobre 2025 n y figure plus : citez donc Flex et Premium plutot que l ancienne structure a trois niveaux.',
-          '**Chroma** — 29 174 etoiles, Apache-2.0, et desormais un coeur en Rust plutot que le moteur Python de ses debuts. C est le seul des quatre a tourner dans le processus sans serveur, et c est precisement pourquoi il l emporte pour le prototypage.',
+          '**Chroma** — 29 622 etoiles, Apache-2.0, et desormais un coeur en Rust plutot que le moteur Python de ses debuts. C est le seul des quatre a tourner dans le processus sans serveur, et c est precisement pourquoi il l emporte pour le prototypage.',
           '**Chroma Cloud existe aussi**, ce que la plupart des comparatifs de cette categorie omettent completement : Starter coute 0 $/mois plus la consommation avec 5 $ de credits, Team 250 $/mois plus la consommation, et l usage est facture 2,50 $ par Gio ecrit, 0,33 $ par Gio stocke et par mois, 0,0075 $ par Tio interroge et 0,09 $ par Gio renvoye. Il y a donc quatre options gerees ici, et non trois.',
           '**Les quatre ont desormais un palier gratuit**, ce qui n etait pas vrai il y a un an et constitue le moyen le plus rapide de verifier si un comparatif que vous lisez a ete actualise.',
           '**Une precision a dire clairement :** Pinecone anime bien un programme d affiliation destine aux createurs de contenu, confirme sur sa page partenaires. PromptQuorum n y est pas inscrit et ne gagne rien sur aucun lien ici. C est la seule categorie de cette serie ou un tel programme existe, et c est precisement pour cela que la recommandation ci-dessus est Qdrant et non Pinecone.',
@@ -1898,12 +1898,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'Qdrant, Pinecone, Weaviate et Chroma compares',
-        content: '**Chacun optimise une contrainte differente — empreinte, simplicite d exploitation, qualite de recherche ou delai avant la premiere requete — plutot que de rivaliser fonctionnalite par fonctionnalite.** Les tarifs ont ete releves sur les pages des editeurs le 28 aout 2026, et les chiffres des depots proviennent de l API GitHub le meme jour.',
+        content: '**Chacun optimise une contrainte differente — empreinte, simplicite d exploitation, qualite de recherche ou delai avant la premiere requete — plutot que de rivaliser fonctionnalite par fonctionnalite.** Les tarifs ont ete releves sur les pages des editeurs le 2 novembre 2026, et les chiffres des depots proviennent de l API GitHub le meme jour.',
         tableFormat: true,
         itemHeadings: true,
         columns: ['Critere', '[Qdrant](https://qdrant.tech)', '[Pinecone](https://www.pinecone.io)', '[Weaviate](https://weaviate.io)', '[Chroma](https://www.trychroma.com)'],
         rows: [
-          { Critere: 'Etoiles GitHub', Qdrant: '34 242', Pinecone: 'Non open source', Weaviate: '16 758', Chroma: '29 174' },
+          { Critere: 'Etoiles GitHub', Qdrant: '35 383', Pinecone: 'Non open source', Weaviate: '16 934', Chroma: '29 622' },
           { Critere: 'Licence', Qdrant: 'Apache-2.0', Pinecone: 'Proprietaire', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
           { Critere: 'Ecrit en', Qdrant: 'Rust', Pinecone: 'Non communique', Weaviate: 'Go', Chroma: 'Coeur en Rust' },
           { Critere: 'Auto-hebergeable', Qdrant: 'Oui, gratuit', Pinecone: 'Non, cloud seulement', Weaviate: 'Oui, gratuit', Chroma: 'Oui, gratuit' },
@@ -1962,13 +1962,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Qdrant — meilleur globalement',
-            tagline: '34 242 etoiles, Apache-2.0, Rust, palier cloud gratuit a vie',
+            tagline: '35 383 etoiles, Apache-2.0, Rust, palier cloud gratuit a vie',
             verdict: 'Qdrant est ecrit en Rust, ce qui se traduit par une empreinte memoire et processeur plus faible a charge egale que les alternatives issues de Go et de Python, et cette empreinte est la raison pratique pour laquelle il va plus loin sur un seul noeud. Son filtrage est le plus solide ici : il applique les conditions sur les metadonnees pendant le parcours de l index HNSW plutot qu apres coup sur les resultats, si bien qu une requete fortement filtree ne degenere pas silencieusement en balayage. La recherche hybride est native grace aux vecteurs creux aux cotes des vecteurs denses. Les tarifs cloud sont les plus lisibles des quatre : un palier gratuit avec 0,5 vCPU, 1 Go de RAM et 4 Go de disque, gratuit a vie plutot que limite dans le temps ; un palier Standard facture sur la consommation reelle de vCPU, de memoire et de stockage, avec un engagement de 99,5 % et sans frais fixes de plateforme par-dessus ; et un palier Premium ajoutant le SSO et des liens VPC prives avec 99,9 % et une depense minimale. L absence de frais de plateforme en fait le choix attentif aux couts : vous payez des ressources, pas le privilege d etre client.',
             pros: [
               'La plus faible empreinte des moteurs open source, un seul noeud va donc plus loin',
               'Filtrage applique pendant le parcours de l index et non apres, les requetes filtrees restent rapides',
               'Palier cloud gratuit a vie plutot qu un essai, et Standard a la consommation sans frais fixes',
-              'Apache-2.0 avec la plus grande communaute ici, 34 242 etoiles, et le meme moteur auto-heberge ou gere',
+              'Apache-2.0 avec la plus grande communaute ici, 35 383 etoiles, et le meme moteur auto-heberge ou gere',
             ],
             cons: [
               'Un langage de requete propre plutot que SQL ou GraphQL, il y a donc une courbe d apprentissage',
@@ -2030,7 +2030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Weaviate — meilleur quand la recherche hybride compte',
-            tagline: '16 758 etoiles, BSD-3-Clause, Go, palier gratuit sans expiration depuis juin 2026',
+            tagline: '16 934 etoiles, BSD-3-Clause, Go, palier gratuit sans expiration depuis juin 2026',
             verdict: 'Weaviate combine nativement le score BM25 sur les mots-cles et la similarite vectorielle dans son API de requete, et le fait depuis plus longtemps que les autres, ce qui se voit au controle dont vous disposez sur le melange. Cela compte plus qu il n y parait : la recherche purement semantique manque systematiquement les references produit, numeros de modele, chaines d erreur et acronymes exacts, car le sens de ces jetons est leur forme litterale. Weaviate fournit en outre des modules de vectorisation qui appellent les fournisseurs d embeddings pour vous, si bien que la base prend en charge le plongement a la place de votre application. Cote tarifs, le fait important est recent : le 17 juin 2026, Weaviate a lance un palier gratuit sans carte bancaire et sans expiration, offrant 100 000 objets, 1 Go de memoire et 10 Go de disque. Il remplace le bac a sable de 14 jours que les comparatifs decrivent encore. Les offres payantes sur la page en vigueur sont Flex a partir de 45 $/mois, a l usage avec un engagement de 99,5 %, et Premium a partir de 400 $/mois en deploiement partage ou dedie ; le palier Plus a 280 $/mois de l annonce d octobre 2025 n y figure plus.',
             pros: [
               'La recherche hybride la plus mature ici, avec un controle reel sur le melange mot-cle et vecteur',
@@ -2064,7 +2064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Chroma — meilleur pour prototyper et pour les charges petites a moyennes',
-            tagline: '29 174 etoiles, Apache-2.0, coeur en Rust, `pip install chromadb` et ca tourne',
+            tagline: '29 622 etoiles, Apache-2.0, coeur en Rust, `pip install chromadb` et ca tourne',
             verdict: 'Chroma s installe avec pip et tourne en embarque, si bien qu un notebook peut disposer d une recherche semantique fonctionnelle en quelques lignes, sans conteneur, sans port et sans configuration. Cette seule propriete explique sa domination dans les tutoriels et les prototypes, et c est un avantage d ingenierie reel plutot qu une bequille pour debutants : pouvoir tester la logique de recuperation sans infrastructure raccourcit nettement la boucle. Le coeur du moteur a ete reecrit en Rust, la question des performances se pose donc mieux que ses origines Python ne le laissent penser, meme si le filtrage par metadonnees reste plus simple que celui de Qdrant et la recherche hybride plus recente et moins complete. Chroma Cloud existe egalement, ce que la plupart des comparatifs de cette categorie omettent : Starter coute 0 $/mois plus la consommation avec 5 $ de credits et 10 bases, Team 250 $/mois plus la consommation avec 100 bases et un support Slack dedie, et Enterprise ajoute des grappes mono-locataire ou BYOC. L usage est facture 2,50 $ par Gio ecrit, 0,33 $ par Gio stocke et par mois, 0,0075 $ par Tio interroge et 0,09 $ par Gio renvoye.',
             pros: [
               'Tourne dans le processus sans serveur, il n y a donc rien a provisionner pour commencer',
@@ -2120,7 +2120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Ce sont des estimations modelisees a partir des prix habituels de machines et des tarifs publics des editeurs au 28 aout 2026, et non des factures de production mesurees. Les couts a l usage chez Pinecone, Qdrant Cloud et Chroma Cloud varient avec le volume de requetes : passez votre volume attendu de lectures et d ecritures dans le calculateur de chaque editeur avant de vous engager.',
+            text: 'Ce sont des estimations modelisees a partir des prix habituels de machines et des tarifs publics des editeurs au 2 novembre 2026, et non des factures de production mesurees. Les couts a l usage chez Pinecone, Qdrant Cloud et Chroma Cloud varient avec le volume de requetes : passez votre volume attendu de lectures et d ecritures dans le calculateur de chaque editeur avant de vous engager.',
           },
         ],
         note: 'A un million de vecteurs, c est generalement la ligne exploitation qui tranche, pas le prix affiche. Auto-hebergez quand la residence ou le volume l exigent ; sinon les paliers geres reviennent moins cher des lors que vos propres heures sont valorisees honnetement.',
@@ -2219,7 +2219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Combien coute une base vectorielle pour 1 million de vecteurs ?',
-            a: 'Aux tarifs publics d aout 2026, un palier gere revient a environ 45 a 70 dollars par mois a cette echelle avant depassements, tandis que l auto-hebergement sur une petite machine coute 40 a 60 dollars par mois d infrastructure plus deux a cinq heures mensuelles d exploitation. Une fois ces heures valorisees a un taux d ingenierie realiste, le gere revient generalement moins cher sur douze mois — voyez le tableau comparatif complet ci-dessus.',
+            a: 'Aux tarifs publics actuels, un palier gere revient a environ 45 a 70 dollars par mois a cette echelle avant depassements, tandis que l auto-hebergement sur une petite machine coute 40 a 60 dollars par mois d infrastructure plus deux a cinq heures mensuelles d exploitation. Une fois ces heures valorisees a un taux d ingenierie realiste, le gere revient generalement moins cher sur douze mois — voyez le tableau comparatif complet ci-dessus.',
           },
           {
             q: 'Qdrant est-il la meme chose que Weaviate ?',
@@ -2258,15 +2258,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://qdrant.tech/pricing/', title: 'Tarifs Qdrant Cloud', description: 'Limites du palier gratuit a vie avec 0,5 vCPU, 1 Go de RAM et 4 Go de disque, plus la facturation a la consommation de Standard et les engagements de 99,5 % et 99,9 %.' },
           { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Dimensionnement des capacites Qdrant', description: 'Recommandation officielle de partitionner une collection au-dela d environ 1 million de vecteurs, ainsi que la formule de RAM (vecteurs x dimensions x 4 octets x 1,5) qui sous-tend le plafond d auto-hebergement decrit plus haut.' },
           { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant : RAM minimale pour 1 million de vecteurs', description: 'Base des ~6 a 7 Go de RAM par million de vecteurs a 1 536 dimensions (HNSW en memoire), contre ~1,2 Go par million en stockage sur disque (mmap).' },
-          { url: 'https://github.com/qdrant/qdrant', title: 'Depot Qdrant', description: 'Compte de 34 242 etoiles, licence Apache-2.0 et Rust comme langage d implementation, lus depuis l API GitHub le 28 aout 2026.' },
+          { url: 'https://github.com/qdrant/qdrant', title: 'Depot Qdrant', description: 'Compte de 35 383 etoiles, licence Apache-2.0 et Rust comme langage d implementation, lus depuis l API GitHub le 2 novembre 2026.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Tarifs Pinecone', description: 'Limites de Starter, Builder, Standard et Enterprise, dont l offre forfaitaire Builder a 20 $ et les minimums mensuels de 50 $ et 500 $.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Page partenaires de Pinecone', description: 'Confirme le programme d affiliation destine aux createurs de contenu, aux cotes des categories partenaires technologiques, solutions et prescripteurs.' },
           { url: 'https://weaviate.io/blog/weaviate-free-tier', title: 'Weaviate Cloud est desormais gratuit pour demarrer', description: 'L annonce du 17 juin 2026 d un palier gratuit sans carte bancaire et sans expiration, qui remplace le bac a sable de 14 jours.' },
           { url: 'https://weaviate.io/pricing', title: 'Tarifs Weaviate', description: 'Quotas actuels du palier gratuit de 100 000 objets, 1 Go de memoire et 10 Go de disque, plus Flex des 45 $/mois et Premium des 400 $/mois.' },
           { url: 'https://weaviate.io/blog/weaviate-cloud-pricing-update', title: 'Mise a jour des tarifs Weaviate Cloud', description: 'La restructuration d octobre 2025 qui a introduit Flex, Plus et Premium, utile pour dater les changements de tarifs.' },
-          { url: 'https://github.com/weaviate/weaviate', title: 'Depot Weaviate', description: 'Compte de 16 758 etoiles, licence BSD-3-Clause et Go comme langage d implementation.' },
+          { url: 'https://github.com/weaviate/weaviate', title: 'Depot Weaviate', description: 'Compte de 16 934 etoiles, licence BSD-3-Clause et Go comme langage d implementation.' },
           { url: 'https://www.trychroma.com/pricing', title: 'Tarifs Chroma Cloud', description: 'Starter a 0 $/mois plus la consommation avec 5 $ de credits, Team a 250 $/mois, et les tarifs par Gio pour l ecriture, le stockage, les requetes et la sortie.' },
-          { url: 'https://github.com/chroma-core/chroma', title: 'Depot Chroma', description: 'Compte de 29 174 etoiles, licence Apache-2.0 et Rust comme langage principal du coeur actuel.' },
+          { url: 'https://github.com/chroma-core/chroma', title: 'Depot Chroma', description: 'Compte de 29 622 etoiles, licence Apache-2.0 et Rust comme langage principal du coeur actuel.' },
         ],
       },
       relatedReading: {
@@ -2284,9 +2284,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: 'Meilleure base de donnees vectorielle 2026 : Qdrant, Pinecone, Weaviate ou Chroma',
-      description: 'Compare Qdrant, Pinecone, Weaviate et Chroma pour le RAG, avec tarifs, licences, nombres d etoiles et limites de paliers gratuits verifies, dont le palier gratuit sans expiration de Weaviate de juin 2026 et Chroma Cloud. Verifie en aout 2026.',
+      description: 'Compare Qdrant, Pinecone, Weaviate et Chroma pour le RAG, avec tarifs, licences, nombres d etoiles et limites de paliers gratuits verifies, dont le palier gratuit sans expiration de Weaviate de juin 2026 et Chroma Cloud.',
       datePublished: '2026-08-28',
-      dateModified: '2026-09-01',
+      dateModified: '2026-11-02',
       url: 'https://www.promptquorum.com/fr/local-llms/best-vector-database',
       inLanguage: 'fr',
       proficiencyLevel: 'Advanced',
@@ -2338,7 +2338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Combien coute une base vectorielle pour 1 million de vecteurs ?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Aux tarifs publics d aout 2026, un palier gere revient a environ 45 a 70 dollars par mois avant depassements, tandis que l auto-hebergement sur une petite machine coute 40 a 60 dollars par mois plus deux a cinq heures mensuelles d exploitation. Valorisees a un taux realiste, les offres gerees l emportent generalement sur douze mois.',
+            text: 'Aux tarifs publics actuels, un palier gere revient a environ 45 a 70 dollars par mois avant depassements, tandis que l auto-hebergement sur une petite machine coute 40 a 60 dollars par mois plus deux a cinq heures mensuelles d exploitation. Valorisees a un taux realiste, les offres gerees l emportent generalement sur douze mois.',
           },
         },
         {
@@ -2354,11 +2354,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Meilleures bases de donnees vectorielles (aout 2026)',
+      name: 'Meilleures bases de donnees vectorielles (2026)',
       inLanguage: 'fr',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Meilleur globalement — 34 242 etoiles, Apache-2.0, Rust, la plus faible empreinte de ressources et un palier cloud gratuit a vie avec Standard a la consommation' },
+        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Meilleur globalement — 35 383 etoiles, Apache-2.0, Rust, la plus faible empreinte de ressources et un palier cloud gratuit a vie avec Standard a la consommation' },
         { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Meilleur sans exploitation — le produit serverless le plus mature, Builder a 20 $/mois forfaitaires, mais cloud uniquement et sans version auto-hebergee' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'Meilleur pour la recherche hybride — BM25 plus vecteur en natif, et depuis juin 2026 un palier gratuit sans expiration offrant 100 000 objets' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Meilleur pour prototyper — tourne dans le processus sans serveur, coeur en Rust, et Chroma Cloud des 0 $/mois plus la consommation' },
@@ -2371,14 +2371,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-02-28',
     designSkin: 'hub',
     theme: 'Tools & Interfaces',
-    title: 'Melhor banco de dados vetorial 2026: Qdrant, Pinecone, Weaviate ou Chroma',
-    seoTitle: 'Melhor banco de dados vetorial 2026',
-    metaDescription: 'O Qdrant tem 34.242 estrelas e um nível gratuito permanente na nuvem, o Pinecone começa em US$ 20/mês e o Weaviate ganhou um nível gratuito sem expiração em junho de 2026. Os quatro já têm um.',
+    title: 'Melhor banco vetorial 2026: Qdrant vs Pinecone vs Chroma',
+    seoTitle: 'Melhor banco vetorial 2026: Qdrant vs Pinecone vs Chroma',
+    metaDescription: 'Melhor banco vetorial 2026: Qdrant (35k+ estrelas no GitHub, nuvem grátis), Pinecone desde US$ 20/mês, Weaviate e Chroma comparados para RAG.',
     educationalLevel: 'Advanced',
     audience: 'Desenvolvedores que constroem aplicações RAG',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-02',
     readTime: '15 min de leitura',
     primaryTerm: 'banco de dados vetorial',
     targetKeywords: [
@@ -2388,12 +2388,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'comparação de preços de bancos vetoriais',
       'banco de dados vetorial para RAG',
     ],
-    leadAnswerBlock: '**O Qdrant é a melhor escolha padrão para a maioria das equipes: 34.242 estrelas no GitHub, licença Apache-2.0, o menor consumo de recursos entre os motores de código aberto e um nível de nuvem gratuito para sempre. O Pinecone é a decisão certa quando você quer zero trabalho de infraestrutura e vai pagar por isso, a partir de US$ 20/mês no Builder. O Weaviate é a escolha quando a busca híbrida é central. O Chroma é o caminho mais rápido para um protótipo funcionando, porque roda dentro do processo. A afirmação mais desatualizada desta categoria é que só alguns têm nível gratuito: desde junho de 2026 os quatro têm, inclusive o Weaviate, que substituiu seu sandbox de 14 dias por um plano realmente gratuito e sem expiração.**',
+    leadAnswerBlock: '**O Qdrant é a melhor escolha padrão para a maioria das equipes: Apache-2.0, leve e com nuvem grátis para sempre. O Pinecone serve a quem não quer gerir infraestrutura, desde US$ 20/mês. O Weaviate se destaca em busca híbrida, o Chroma em protótipos.**',
     quickAnswerTop: {
       question: 'Qual é o melhor banco de dados vetorial em 2026?',
       answer: '**Qdrant para a melhor relação custo-desempenho se você tiver alguma capacidade de operações, Pinecone se quiser zero trabalho de infraestrutura, Weaviate se a busca híbrida for central para a precisão da recuperação, e Chroma se estiver prototipando e não quiser servidor algum.** Não há um vencedor único aqui, e qualquer guia que nomeie um está respondendo a uma pergunta diferente da sua. A decisão real é se você opera o motor ou o aluga, e isso depende de a sua equipe ter horas de engenharia sobrando ou orçamento sobrando — raramente são a mesma restrição.',
       bullets: [
-        '**Melhor no geral:** Qdrant — 34.242 estrelas, Apache-2.0, escrito em Rust, nível de nuvem gratuito para sempre com 0,5 vCPU / 1 GB de RAM / 4 GB de disco',
+        '**Melhor no geral:** Qdrant — 35.383 estrelas, Apache-2.0, escrito em Rust, nível de nuvem gratuito para sempre com 0,5 vCPU / 1 GB de RAM / 4 GB de disco',
         '**Melhor sem operações:** Pinecone — o produto serverless mais maduro, Builder a US$ 20/mês fixos, Standard com mínimo de US$ 50/mês',
         '**Melhor para busca híbrida:** Weaviate — BM25 mais vetor de forma nativa, e desde junho de 2026 um nível gratuito sem expiração e sem cartão de crédito',
         '**Melhor para prototipar:** Chroma — `pip install chromadb` e roda no seu processo Python, sem servidor para subir',
@@ -2429,11 +2429,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Qdrant** — 34.242 estrelas no GitHub, Apache-2.0, escrito em Rust. O Qdrant Cloud tem um nível gratuito para sempre com 0,5 vCPU, 1 GB de RAM e 4 GB de disco; o Standard cobra por consumo com SLA de 99,5% e sem taxa fixa de plataforma; o Premium acrescenta SSO e links VPC privados com 99,9% e um gasto mínimo.',
+          '**Qdrant** — 35.383 estrelas no GitHub, Apache-2.0, escrito em Rust. O Qdrant Cloud tem um nível gratuito para sempre com 0,5 vCPU, 1 GB de RAM e 4 GB de disco; o Standard cobra por consumo com SLA de 99,5% e sem taxa fixa de plataforma; o Premium acrescenta SSO e links VPC privados com 99,9% e um gasto mínimo.',
           '**Pinecone** — apenas nuvem por projeto, sem nenhuma versão auto-hospedada. O Starter é gratuito com 2 GB de armazenamento, 2 mi de unidades de escrita e 1 mi de leitura por mês. O Builder custa US$ 20/mês fixos com 10 GB, 5 mi de escritas e 2 mi de leituras. O Standard parte de um mínimo de US$ 50/mês e depois cobra por uso, e o Enterprise de um mínimo de US$ 500/mês acrescentando SLA de 99,95%, BYOC, HIPAA e registros de auditoria.',
-          '**Weaviate** — 16.758 estrelas, BSD-3-Clause, escrito em Go. **A correção mais importante desta página:** o Weaviate Cloud não é mais um sandbox de 14 dias. Em 17 de junho de 2026 foi lançado um nível realmente gratuito, sem cartão de crédito e sem expiração: 100.000 objetos, 1 GB de memória e 10 GB de disco. Comparações que ainda mandam reservar US$ 45/mês desde o primeiro dia estão levando leitores a pagar por algo que agora é grátis.',
+          '**Weaviate** — 16.934 estrelas, BSD-3-Clause, escrito em Go. **A correção mais importante desta página:** o Weaviate Cloud não é mais um sandbox de 14 dias. Em 17 de junho de 2026 foi lançado um nível realmente gratuito, sem cartão de crédito e sem expiração: 100.000 objetos, 1 GB de memória e 10 GB de disco. Comparações que ainda mandam reservar US$ 45/mês desde o primeiro dia estão levando leitores a pagar por algo que agora é grátis.',
           '**Os preços pagos do Weaviate também mudaram.** A página de preços vigente lista o Flex a partir de US$ 45/mês e o Premium a partir de US$ 400/mês. O nível Plus de US$ 280/mês anunciado na atualização de outubro de 2025 não aparece mais ali, então cite Flex e Premium em vez da antiga estrutura de três níveis.',
-          '**Chroma** — 29.174 estrelas, Apache-2.0, e agora um núcleo em Rust em vez do motor em Python com que começou. É o único dos quatro que roda dentro do processo sem servidor, e é exatamente por isso que vence na prototipagem.',
+          '**Chroma** — 29.622 estrelas, Apache-2.0, e agora um núcleo em Rust em vez do motor em Python com que começou. É o único dos quatro que roda dentro do processo sem servidor, e é exatamente por isso que vence na prototipagem.',
           '**O Chroma Cloud também existe**, algo que a maioria das comparações desta categoria omite por completo: o Starter custa US$ 0/mês mais consumo com US$ 5 de crédito inicial, o Team US$ 250/mês mais consumo, e o consumo é tarifado a US$ 2,50 por GiB escrito, US$ 0,33 por GiB armazenado ao mês, US$ 0,0075 por TiB consultado e US$ 0,09 por GiB devolvido. Há, portanto, quatro opções gerenciadas aqui, não três.',
           '**Os quatro já têm nível gratuito**, o que não era verdade há um ano e é a forma mais rápida de checar se a comparação que você está lendo foi atualizada.',
           '**Um aviso que merece ser dito sem rodeios:** o Pinecone de fato mantém um programa de afiliados para criadores de conteúdo, confirmado na sua página de parceiros. A PromptQuorum não está inscrita nele e não ganha nada com nenhum link daqui. Esta é a única categoria desta série em que tal programa existe, e é justamente por isso que a recomendação acima é Qdrant e não Pinecone.',
@@ -2487,12 +2487,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'Qdrant, Pinecone, Weaviate e Chroma comparados',
-        content: '**Cada um otimiza uma restrição diferente — consumo, simplicidade operacional, qualidade da recuperação ou tempo até a primeira consulta — em vez de competir recurso a recurso.** Os preços foram lidos nas páginas de cada fornecedor em 28 de agosto de 2026, e os números dos repositórios vieram da API do GitHub no mesmo dia.',
+        content: '**Cada um otimiza uma restrição diferente — consumo, simplicidade operacional, qualidade da recuperação ou tempo até a primeira consulta — em vez de competir recurso a recurso.** Os preços foram lidos nas páginas de cada fornecedor em 2 de noviembre de 2026, e os números dos repositórios vieram da API do GitHub no mesmo dia.',
         tableFormat: true,
         itemHeadings: true,
         columns: ['Critério', '[Qdrant](https://qdrant.tech)', '[Pinecone](https://www.pinecone.io)', '[Weaviate](https://weaviate.io)', '[Chroma](https://www.trychroma.com)'],
         rows: [
-          { Critério: 'Estrelas no GitHub', Qdrant: '34.242', Pinecone: 'Não é código aberto', Weaviate: '16.758', Chroma: '29.174' },
+          { Critério: 'Estrelas no GitHub', Qdrant: '35.383', Pinecone: 'Não é código aberto', Weaviate: '16.934', Chroma: '29.622' },
           { Critério: 'Licença', Qdrant: 'Apache-2.0', Pinecone: 'Proprietária', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
           { Critério: 'Escrito em', Qdrant: 'Rust', Pinecone: 'Não divulgado', Weaviate: 'Go', Chroma: 'Núcleo em Rust' },
           { Critério: 'Auto-hospedável', Qdrant: 'Sim, grátis', Pinecone: 'Não, só nuvem', Weaviate: 'Sim, grátis', Chroma: 'Sim, grátis' },
@@ -2530,13 +2530,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Qdrant — melhor no geral',
-            tagline: '34.242 estrelas, Apache-2.0, Rust, nível de nuvem gratuito para sempre',
+            tagline: '35.383 estrelas, Apache-2.0, Rust, nível de nuvem gratuito para sempre',
             verdict: 'O Qdrant é escrito em Rust, o que aparece como menor consumo de memória e CPU para a mesma carga do que as alternativas de herança Go e Python, e esse consumo é a razão prática de ele render mais em um único nó. Sua filtragem é a mais forte aqui: aplica as condições de metadados durante a travessia do índice HNSW em vez de filtrar os resultados depois, então uma consulta muito filtrada não degenera silenciosamente em varredura. A busca híbrida é nativa por meio de vetores esparsos ao lado dos densos. Os preços na nuvem são os mais limpos dos quatro: um nível gratuito com 0,5 vCPU, 1 GB de RAM e 4 GB de disco, gratuito para sempre em vez de limitado no tempo; um nível Standard cobrado sobre o consumo real de vCPU, memória e armazenamento, com SLA de 99,5% e sem taxa fixa de plataforma por cima; e um nível Premium que acrescenta SSO e links VPC privados com SLA de 99,9% e um gasto mínimo. A ausência de taxa de plataforma é o que o torna a escolha atenta ao custo: você paga por recursos, não pelo privilégio de ser cliente.',
             pros: [
               'O menor consumo de recursos dos motores abertos, então um único nó vai mais longe',
               'Filtragem aplicada durante a travessia do índice e não depois, então consultas filtradas continuam rápidas',
               'Nível de nuvem gratuito para sempre em vez de um teste, e Standard por consumo sem taxa fixa',
-              'Apache-2.0 com a maior comunidade aqui, 34.242 estrelas, e o mesmo motor auto-hospedado ou gerenciado',
+              'Apache-2.0 com a maior comunidade aqui, 35.383 estrelas, e o mesmo motor auto-hospedado ou gerenciado',
             ],
             cons: [
               'Linguagem de consulta própria em vez de SQL ou GraphQL, então há curva de aprendizado',
@@ -2598,7 +2598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Weaviate — melhor quando a busca híbrida importa',
-            tagline: '16.758 estrelas, BSD-3-Clause, Go, nível gratuito sem expiração desde junho de 2026',
+            tagline: '16.934 estrelas, BSD-3-Clause, Go, nível gratuito sem expiração desde junho de 2026',
             verdict: 'O Weaviate combina a pontuação de palavras-chave BM25 com a similaridade vetorial de forma nativa na sua API de consulta, e faz isso há mais tempo que os outros, o que aparece no controle que você tem sobre a mistura. Isso importa mais do que parece: a busca puramente semântica erra de forma confiável códigos de produto, números de modelo, mensagens de erro e siglas exatas, porque o significado desses tokens é sua forma literal. O Weaviate ainda traz módulos de vetorização que chamam provedores de embeddings por você, de modo que o banco assume o embedding em vez da sua aplicação. Nos preços, o dado importante é recente: em 17 de junho de 2026 o Weaviate lançou um nível gratuito sem cartão de crédito e sem expiração, com 100.000 objetos, 1 GB de memória e 10 GB de disco. Ele substituiu o sandbox de 14 dias que as comparações ainda descrevem. Os planos pagos na página vigente são Flex a partir de US$ 45/mês, pago por uso com SLA de 99,5%, e Premium a partir de US$ 400/mês para implantação compartilhada ou dedicada; o nível Plus de US$ 280/mês do anúncio de outubro de 2025 não aparece mais ali.',
             pros: [
               'A busca híbrida mais madura daqui, com controle real sobre a mistura de palavra-chave e vetor',
@@ -2632,7 +2632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Chroma — melhor para prototipar e para cargas pequenas e médias',
-            tagline: '29.174 estrelas, Apache-2.0, núcleo em Rust, `pip install chromadb` e roda',
+            tagline: '29.622 estrelas, Apache-2.0, núcleo em Rust, `pip install chromadb` e roda',
             verdict: 'O Chroma instala com pip e roda embarcado, então um notebook pode ter busca semântica funcionando em poucas linhas sem contêiner, sem porta e sem configuração. Essa única propriedade explica por que ele domina em tutoriais e protótipos, e é uma vantagem de engenharia real e não uma muleta para iniciantes: poder testar a lógica de recuperação sem infraestrutura encurta bastante o ciclo. O núcleo do motor foi reescrito em Rust, então a história de desempenho é melhor do que suas origens em Python sugerem, embora a filtragem por metadados siga mais simples que a do Qdrant e a busca híbrida seja mais recente e menos completa. O Chroma Cloud também existe, o que a maioria das comparações desta categoria omite: o Starter custa US$ 0/mês mais consumo com US$ 5 de crédito e 10 bancos, o Team US$ 250/mês mais consumo com 100 bancos e suporte dedicado no Slack, e o Enterprise acrescenta clusters de locatário único ou BYOC. O consumo é tarifado a US$ 2,50 por GiB escrito, US$ 0,33 por GiB armazenado ao mês, US$ 0,0075 por TiB consultado e US$ 0,09 por GiB devolvido.',
             pros: [
               'Roda no processo sem servidor, então não há nada a provisionar para começar',
@@ -2688,7 +2688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'São estimativas modeladas a partir de preços típicos de máquinas e preços de tabela dos fornecedores em 28 de agosto de 2026, não faturas de produção medidas. Os custos por consumo no Pinecone, Qdrant Cloud e Chroma Cloud variam com o volume de consultas, então passe seu volume previsto de leituras e escritas pela calculadora de cada fornecedor antes de se comprometer.',
+            text: 'São estimativas modeladas a partir de preços típicos de máquinas e preços de tabela dos fornecedores em 2 de noviembre de 2026, não faturas de produção medidas. Os custos por consumo no Pinecone, Qdrant Cloud e Chroma Cloud variam com o volume de consultas, então passe seu volume previsto de leituras e escritas pela calculadora de cada fornecedor antes de se comprometer.',
           },
         ],
         note: 'A um milhão de vetores normalmente é a linha de operações que decide, não o preço de tabela. Auto-hospede quando residência ou volume exigirem; caso contrário, os níveis gerenciados saem mais baratos assim que suas próprias horas forem precificadas com honestidade.',
@@ -2787,7 +2787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quanto custa um banco vetorial para 1 milhão de vetores?',
-            a: 'Com preços de tabela de agosto de 2026, um nível gerenciado fica em torno de US$ 45 a US$ 70 por mês nessa escala antes de excedentes, enquanto auto-hospedar em uma máquina pequena custa de US$ 40 a US$ 60 por mês de infraestrutura mais duas a cinco horas mensais de operações. Uma vez precificadas essas horas a um valor de engenharia realista, o gerenciado costuma sair mais barato em doze meses — veja a tabela comparativa completa acima.',
+            a: 'Com os preços de tabela atuais, um nível gerenciado fica em torno de US$ 45 a US$ 70 por mês nessa escala antes de excedentes, enquanto auto-hospedar em uma máquina pequena custa de US$ 40 a US$ 60 por mês de infraestrutura mais duas a cinco horas mensais de operações. Uma vez precificadas essas horas a um valor de engenharia realista, o gerenciado costuma sair mais barato em doze meses — veja a tabela comparativa completa acima.',
           },
           {
             q: 'O Qdrant é a mesma coisa que o Weaviate?',
@@ -2824,15 +2824,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fontes',
         links: [
           { url: 'https://qdrant.tech/pricing/', title: 'Preços do Qdrant Cloud', description: 'Limites do nível gratuito para sempre com 0,5 vCPU, 1 GB de RAM e 4 GB de disco, além da cobrança por consumo do Standard e os SLAs de 99,5% e 99,9%.' },
-          { url: 'https://github.com/qdrant/qdrant', title: 'Repositório do Qdrant', description: 'Contagem de 34.242 estrelas, licença Apache-2.0 e Rust como linguagem de implementação, lidos da API do GitHub em 28 de agosto de 2026.' },
+          { url: 'https://github.com/qdrant/qdrant', title: 'Repositório do Qdrant', description: 'Contagem de 35.383 estrelas, licença Apache-2.0 e Rust como linguagem de implementação, lidos da API do GitHub em 2 de noviembre de 2026.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Preços do Pinecone', description: 'Limites de Starter, Builder, Standard e Enterprise, incluindo o plano fixo Builder de US$ 20 e os mínimos mensais de US$ 50 e US$ 500.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Página de parceiros do Pinecone', description: 'Confirma o programa de afiliados para criadores de conteúdo ao lado das categorias de parceiros de tecnologia, de soluções e de indicação.' },
           { url: 'https://weaviate.io/blog/weaviate-free-tier', title: 'O Weaviate Cloud agora é gratuito para começar', description: 'O anúncio de 17 de junho de 2026 de um nível gratuito sem cartão de crédito e sem expiração, que substitui o sandbox de 14 dias.' },
           { url: 'https://weaviate.io/pricing', title: 'Preços do Weaviate', description: 'Cotas atuais do nível gratuito de 100.000 objetos, 1 GB de memória e 10 GB de disco, além de Flex a partir de US$ 45/mês e Premium a partir de US$ 400/mês.' },
           { url: 'https://weaviate.io/blog/weaviate-cloud-pricing-update', title: 'Atualização de preços do Weaviate Cloud', description: 'A reestruturação de outubro de 2025 que introduziu Flex, Plus e Premium, útil para datar as mudanças de preços.' },
-          { url: 'https://github.com/weaviate/weaviate', title: 'Repositório do Weaviate', description: 'Contagem de 16.758 estrelas, licença BSD-3-Clause e Go como linguagem de implementação.' },
+          { url: 'https://github.com/weaviate/weaviate', title: 'Repositório do Weaviate', description: 'Contagem de 16.934 estrelas, licença BSD-3-Clause e Go como linguagem de implementação.' },
           { url: 'https://www.trychroma.com/pricing', title: 'Preços do Chroma Cloud', description: 'Starter a US$ 0/mês mais consumo com US$ 5 de crédito, Team a US$ 250/mês, e as tarifas por GiB de escrita, armazenamento, consulta e saída.' },
-          { url: 'https://github.com/chroma-core/chroma', title: 'Repositório do Chroma', description: 'Contagem de 29.174 estrelas, licença Apache-2.0 e Rust como linguagem principal do núcleo atual.' },
+          { url: 'https://github.com/chroma-core/chroma', title: 'Repositório do Chroma', description: 'Contagem de 29.622 estrelas, licença Apache-2.0 e Rust como linguagem principal do núcleo atual.' },
         ],
       },
       relatedReading: {
@@ -2852,7 +2852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Melhor banco de dados vetorial 2026: Qdrant, Pinecone, Weaviate ou Chroma',
       description: 'Compara Qdrant, Pinecone, Weaviate e Chroma para RAG, com preços, licenças, contagens de estrelas e limites de nível gratuito verificados, incluindo o nível gratuito sem expiração do Weaviate de junho de 2026 e o Chroma Cloud.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-02',
       url: 'https://www.promptquorum.com/pt/local-llms/best-vector-database',
       inLanguage: 'pt-BR',
       proficiencyLevel: 'Advanced',
@@ -2904,7 +2904,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Quanto custa um banco vetorial para 1 milhão de vetores?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Com preços de tabela de agosto de 2026, um nível gerenciado fica em torno de US$ 45 a US$ 70 por mês antes de excedentes, enquanto auto-hospedar em uma máquina pequena custa de US$ 40 a US$ 60 por mês mais duas a cinco horas mensais de operações. Precificadas a um valor realista, as opções gerenciadas costumam vencer em doze meses.',
+            text: 'Com os preços de tabela atuais, um nível gerenciado fica em torno de US$ 45 a US$ 70 por mês antes de excedentes, enquanto auto-hospedar em uma máquina pequena custa de US$ 40 a US$ 60 por mês mais duas a cinco horas mensais de operações. Precificadas a um valor realista, as opções gerenciadas costumam vencer em doze meses.',
           },
         },
         {
@@ -2920,11 +2920,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Melhores bancos de dados vetoriais (agosto de 2026)',
+      name: 'Melhores bancos de dados vetoriais (2026)',
       inLanguage: 'pt-BR',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Melhor no geral — 34.242 estrelas, Apache-2.0, Rust, o menor consumo de recursos e um nível de nuvem gratuito para sempre com Standard por consumo' },
+        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Melhor no geral — 35.383 estrelas, Apache-2.0, Rust, o menor consumo de recursos e um nível de nuvem gratuito para sempre com Standard por consumo' },
         { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Melhor sem operações — o produto serverless mais maduro, Builder a US$ 20/mês fixos, mas só nuvem e sem versão auto-hospedada' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'Melhor para busca híbrida — BM25 mais vetor de forma nativa, e desde junho de 2026 um nível gratuito sem expiração com 100.000 objetos' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Melhor para prototipar — roda no processo sem servidor, núcleo em Rust, e Chroma Cloud a partir de US$ 0/mês mais consumo' },
@@ -2938,13 +2938,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026年 最適なベクトルデータベース：Qdrant・Pinecone・Weaviate・Chroma',
-    seoTitle: '2026年 最適なベクトルデータベース',
-    metaDescription: 'Qdrantはスター34,242件で永続無料のクラウド枠、Pineconeは月20ドルから、Weaviateは2026年6月に無期限の無料枠を追加。4製品すべてに無料枠があります。2026年8月時点で確認。',
+    seoTitle: 'ベクトルDB比較2026：Qdrant・Pinecone',
+    metaDescription: '2026年のベクトルデータベース比較：Qdrant（GitHubスター35k超、永年無料のクラウド枠）、Pineconeは月20ドルから、WeaviateとChromaもRAG向けに比較。',
     educationalLevel: 'Advanced',
     audience: 'RAGアプリケーションを構築する開発者',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-09-01',
+    dateModified: '2026-11-02',
     readTime: '15分で読めます',
     primaryTerm: 'ベクトルデータベース',
     targetKeywords: [
@@ -2954,12 +2954,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ベクトルデータベース 料金比較',
       'RAG ベクトルデータベース',
     ],
-    leadAnswerBlock: '**多くのチームにとって既定の最良解はQdrantです。GitHubスター34,242件、Apache-2.0ライセンス、オープンソースのエンジンで最も少ないリソース消費、そして永続的に無料のクラウド枠を備えます。インフラ作業を一切したくなく、その対価を払うつもりならPineconeが正解で、Builderなら月20ドルからです。ハイブリッド検索が中心ならWeaviateを選びます。Chromaはプロセス内で動くため、動くプロトタイプまでが最短です。この分野で最も古びた主張は「無料枠があるのは一部だけ」というものですが、2026年6月以降は4製品すべてにあります。期限切れになる14日間のサンドボックスを、本当に無料で無期限のプランへ置き換えたWeaviateも含めてです。**',
+    leadAnswerBlock: '**多くのチームにはQdrantが最適です。Apache-2.0で軽量、永年無料のクラウド枠があります。インフラ運用を避けたいならPinecone（月20ドルから）、ハイブリッド検索ならWeaviate、素早い試作ならChroma。4製品とも無料枠があります。**',
     quickAnswerTop: {
       question: '2026年に最適なベクトルデータベースはどれですか？',
       answer: '**運用の余力が少しでもあるならコスト対性能で最良のQdrant、インフラ作業をゼロにしたいならPinecone、検索精度にハイブリッド検索が効くならWeaviate、試作中でサーバーを一切置きたくないならChromaです。** ここに単独の勝者はなく、1つを名指しするガイドはあなたの問いとは別の問いに答えています。本当の判断は、エンジンを自分で動かすのか借りるのかであり、それはチームに余っているのが工数か予算かで決まります。両方が同じ制約であることはまれです。',
       bullets: [
-        '**総合的に最良：** Qdrant — スター34,242件、Apache-2.0、Rust製、0.5 vCPU / 1 GB RAM / 4 GBディスクの永続無料クラウド枠',
+        '**総合的に最良：** Qdrant — スター35,383件、Apache-2.0、Rust製、0.5 vCPU / 1 GB RAM / 4 GBディスクの永続無料クラウド枠',
         '**運用ゼロなら最良：** Pinecone — 最も成熟したサーバーレス製品、Builderは月20ドル定額、Standardは月50ドルから',
         '**ハイブリッド検索なら最良：** Weaviate — BM25とベクトルをネイティブに統合し、2026年6月以降はクレジットカード不要・無期限の無料枠',
         '**試作なら最良：** Chroma — `pip install chromadb` でPythonプロセス内で動き、立ち上げるサーバーがない',
@@ -2995,11 +2995,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Qdrant** — GitHubスター34,242件、Apache-2.0、Rust製。Qdrant Cloudには0.5 vCPU、1 GB RAM、4 GBディスクの永続無料枠があります。Standardは実使用量に応じた課金で、99.5%の稼働率保証があり、定額のプラットフォーム料金はありません。PremiumはSSOとプライベートVPCリンクを加え、99.9%と最低利用額が設定されます。',
+          '**Qdrant** — GitHubスター35,383件、Apache-2.0、Rust製。Qdrant Cloudには0.5 vCPU、1 GB RAM、4 GBディスクの永続無料枠があります。Standardは実使用量に応じた課金で、99.5%の稼働率保証があり、定額のプラットフォーム料金はありません。PremiumはSSOとプライベートVPCリンクを加え、99.9%と最低利用額が設定されます。',
           '**Pinecone** — 設計上クラウド専用で、自己ホスト版は一切ありません。Starterは無料で、ストレージ2 GB、書き込みユニット月200万、読み取りユニット月100万です。Builderは月20ドル定額で10 GB、書き込み500万、読み取り200万。Standardは月50ドルの最低額から従量課金となり、Enterpriseは月500ドルの最低額で99.95%の稼働率保証、BYOC、HIPAA、監査ログが加わります。',
-          '**Weaviate** — スター16,758件、BSD-3-Clause、Go製。**このページで最も重要な訂正：** Weaviate Cloudはもう14日間のサンドボックスではありません。2026年6月17日に、クレジットカード不要・無期限の本当に無料な枠が導入されました。オブジェクト10万件、メモリ1 GB、ディスク10 GBです。初日から月45ドルを見込むよう勧め続けている比較記事は、いまや無料のものに対して読者にお金を払わせています。',
+          '**Weaviate** — スター16,934件、BSD-3-Clause、Go製。**このページで最も重要な訂正：** Weaviate Cloudはもう14日間のサンドボックスではありません。2026年6月17日に、クレジットカード不要・無期限の本当に無料な枠が導入されました。オブジェクト10万件、メモリ1 GB、ディスク10 GBです。初日から月45ドルを見込むよう勧め続けている比較記事は、いまや無料のものに対して読者にお金を払わせています。',
           '**Weaviateの有料プランも動いています。** 現行の料金ページはFlexが月45ドルから、Premiumが月400ドルからです。2025年10月の更新で告知された月280ドルのPlusはそこに載っていないため、古い3段構成ではなくFlexとPremiumを挙げてください。',
-          '**Chroma** — スター29,174件、Apache-2.0、そして出発点だったPythonエンジンではなく、いまやRust製のコアです。4製品で唯一サーバーなしにプロセス内で動き、まさにそれゆえ試作で勝ちます。',
+          '**Chroma** — スター29,622件、Apache-2.0、そして出発点だったPythonエンジンではなく、いまやRust製のコアです。4製品で唯一サーバーなしにプロセス内で動き、まさにそれゆえ試作で勝ちます。',
           '**Chroma Cloudも存在します。** この分野の比較記事の多くが完全に見落としている点です。Starterは月0ドルに従量課金で5ドルの初期クレジット、Teamは月250ドルに従量課金、使用量は書き込み1 GiBあたり2.50ドル、保存1 GiBあたり月0.33ドル、クエリ1 TiBあたり0.0075ドル、返送1 GiBあたり0.09ドルです。つまりここでのマネージド製品は3つではなく4つです。',
           '**4製品すべてに無料枠があります。** 1年前には当てはまらなかった事実であり、読んでいる比較記事が更新されているかを確かめる最速の方法です。',
           '**はっきり書いておくべき点：** Pineconeはコンテンツ制作者向けのアフィリエイトプログラムを実際に運営しており、自社のパートナーページで確認できます。PromptQuorumはそれに登録しておらず、本ページのどのリンクからも収益を得ていません。このシリーズでそうしたプログラムが存在する唯一の分野であり、だからこそ上の推奨はPineconeではなくQdrantです。',
@@ -3053,12 +3053,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'Qdrant・Pinecone・Weaviate・Chromaの比較',
-        content: '**4製品は機能を正面から競うのではなく、リソース消費、運用の簡単さ、取得の質、最初のクエリまでの速さという別々の制約を最適化しています。** 料金は2026年8月28日に各社の料金ページで確認し、リポジトリの数値は同日にGitHub APIから取得しました。',
+        content: '**4製品は機能を正面から競うのではなく、リソース消費、運用の簡単さ、取得の質、最初のクエリまでの速さという別々の制約を最適化しています。** 料金は2026年11月2日に各社の料金ページで確認し、リポジトリの数値は同日にGitHub APIから取得しました。',
         tableFormat: true,
         itemHeadings: true,
         columns: ['項目', '[Qdrant](https://qdrant.tech)', '[Pinecone](https://www.pinecone.io)', '[Weaviate](https://weaviate.io)', '[Chroma](https://www.trychroma.com)'],
         rows: [
-          { 項目: 'GitHubスター', Qdrant: '34,242', Pinecone: 'オープンソースではない', Weaviate: '16,758', Chroma: '29,174' },
+          { 項目: 'GitHubスター', Qdrant: '35,383', Pinecone: 'オープンソースではない', Weaviate: '16,934', Chroma: '29,622' },
           { 項目: 'ライセンス', Qdrant: 'Apache-2.0', Pinecone: 'プロプライエタリ', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
           { 項目: '実装言語', Qdrant: 'Rust', Pinecone: '非公開', Weaviate: 'Go', Chroma: 'コアはRust' },
           { 項目: '自己ホスト', Qdrant: '可、無料', Pinecone: '不可、クラウド専用', Weaviate: '可、無料', Chroma: '可、無料' },
@@ -3117,13 +3117,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Qdrant — 総合的に最良',
-            tagline: 'スター34,242件、Apache-2.0、Rust、永続無料のクラウド枠',
+            tagline: 'スター35,383件、Apache-2.0、Rust、永続無料のクラウド枠',
             verdict: 'QdrantはRustで書かれており、それは同じ負荷に対するメモリとCPUの消費が、GoやPython由来の代替より小さいという形で表れます。この消費の小ささが、単一ノードでより遠くまで届く実務上の理由です。フィルタリングはここで最も強力で、メタデータの条件をHNSWの探索中に適用し、結果を後から絞り込むのではありません。そのため強くフィルタしたクエリが静かに全走査へ劣化しません。ハイブリッド検索は密ベクトルと並ぶ疎ベクトルによってネイティブに備わります。クラウド料金は4製品で最も見通しがよく、0.5 vCPU、1 GB RAM、4 GBディスクの無料枠は期間限定ではなく永続です。Standardは実際のvCPU・メモリ・ストレージ消費に対して課金され、99.5%の稼働率保証があり、その上に定額のプラットフォーム料金は乗りません。PremiumはSSOとプライベートVPCリンクを加え、99.9%と最低利用額が設定されます。プラットフォーム料金がないことこそ、コスト重視の選択肢たるゆえんです。顧客である特権にではなく、リソースに対して支払います。',
             pros: [
               'オープンソースのエンジンで最も少ないリソース消費。単一ノードでより遠くまで届く',
               'フィルタリングをインデックス探索中に適用するため、絞り込んだクエリも速いまま',
               '試用ではなく永続無料のクラウド枠。Standardは従量課金で定額料金なし',
-              'Apache-2.0でここ最大のコミュニティ（34,242件）。自己ホストでもマネージドでも同じエンジン',
+              'Apache-2.0でここ最大のコミュニティ（35,383件）。自己ホストでもマネージドでも同じエンジン',
             ],
             cons: [
               'SQLでもGraphQLでもない独自のクエリ言語のため、学習が必要',
@@ -3185,7 +3185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Weaviate — ハイブリッド検索が効くなら最良',
-            tagline: 'スター16,758件、BSD-3-Clause、Go、2026年6月以降は無期限の無料枠',
+            tagline: 'スター16,934件、BSD-3-Clause、Go、2026年6月以降は無期限の無料枠',
             verdict: 'WeaviateはBM25によるキーワードのスコアとベクトル類似度を、クエリAPIの中でネイティブに組み合わせます。他より長くそうしてきたことは、混ぜ方をどれだけ制御できるかに表れています。これは響き以上に重要です。純粋な意味検索は、製品コード、型番、エラー文字列、略語といった厳密な字面を確実に取り逃します。それらのトークンの意味は字面そのものだからです。Weaviateはさらに、埋め込みプロバイダを呼び出すベクトル化モジュールを備えており、埋め込みをアプリケーションではなくデータベース側が担えます。料金について重要な事実は最近のものです。2026年6月17日、Weaviateはクレジットカード不要・無期限の無料枠を導入しました。オブジェクト10万件、メモリ1 GB、ディスク10 GBです。これが、比較記事がいまも書いている14日間のサンドボックスに取って代わりました。現行ページの有料プランは、従量課金で99.5%の稼働率保証があるFlexが月45ドルから、共有または専有構成のPremiumが月400ドルからです。2025年10月の告知にあった月280ドルのPlusは、そこに載っていません。',
             pros: [
               'ここで最も成熟したハイブリッド検索。キーワードとベクトルの配合を実際に制御できる',
@@ -3219,7 +3219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Chroma — 試作と小〜中規模の負荷に最良',
-            tagline: 'スター29,174件、Apache-2.0、コアはRust、`pip install chromadb` で動く',
+            tagline: 'スター29,622件、Apache-2.0、コアはRust、`pip install chromadb` で動く',
             verdict: 'Chromaはpipで入り、埋め込み型で動きます。コンテナもポートも設定もなく、ノートブックが数行で動く意味検索を持てるということです。この一点が、チュートリアルと試作での優位を説明します。そしてこれは初心者向けの補助輪ではなく実質的な技術的利点です。インフラなしに取得のロジックを試せることは、反復をかなり短くします。エンジンのコアはRustで書き直されているため、性能の話はPython由来という出自から想像されるより良好です。ただしメタデータのフィルタリングはQdrantより単純なままで、ハイブリッド検索は新しく完成度も低めです。Chroma Cloudも存在し、この分野の比較記事の多くが省いています。Starterは月0ドルに従量課金で5ドル分のクレジットとデータベース10個、Teamは月250ドルに従量課金でデータベース100個と専用のSlackサポート、Enterpriseはシングルテナントまたはbring-your-own-cloudのクラスタが加わります。使用量は書き込み1 GiBあたり2.50ドル、保存1 GiBあたり月0.33ドル、クエリ1 TiBあたり0.0075ドル、返送1 GiBあたり0.09ドルです。',
             pros: [
               'サーバーなしにプロセス内で動くため、始めるのに用意するものがない',
@@ -3275,7 +3275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'これらは2026年8月28日時点の一般的なサーバー価格と各社の表示価格から組み立てた推計であり、実測の本番請求ではありません。Pinecone、Qdrant Cloud、Chroma Cloudの従量課金はクエリ量で変動するため、決める前に想定の読み書き量を各社の試算ツールに通してください。',
+            text: 'これらは2026年11月2日時点の一般的なサーバー価格と各社の表示価格から組み立てた推計であり、実測の本番請求ではありません。Pinecone、Qdrant Cloud、Chroma Cloudの従量課金はクエリ量で変動するため、決める前に想定の読み書き量を各社の試算ツールに通してください。',
           },
         ],
         note: '100万ベクトルでは、たいてい定価ではなく運用の行が決め手になります。所在地や利用量が求めるなら自己ホストを。そうでなければ、自分たちの時間を正直に値付けした時点でマネージドのほうが安く収まります。',
@@ -3413,15 +3413,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://qdrant.tech/pricing/', title: 'Qdrant Cloud の料金', description: '0.5 vCPU・1 GB RAM・4 GBディスクという永続無料枠の上限、Standardの従量課金、99.5%と99.9%の稼働率保証。' },
           { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Qdrant のキャパシティ計画', description: 'コレクションが約100万ベクトルを超えたらシャーディングするという公式の推奨、および上記の自己ホストの天井の根拠となるRAMの計算式（ベクトル数×次元数×4バイト×1.5）。' },
           { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant：100万ベクトルに必要な最小RAM', description: '1,536次元（HNSWをメモリ上に保持）で100万ベクトルあたり約6〜7 GBのRAM、ディスク上のストレージ（mmap）なら100万ベクトルあたり約1.2 GBという数値の出典。' },
-          { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant リポジトリ', description: 'スター34,242件、Apache-2.0ライセンス、実装言語Rust。2026年8月28日にGitHub APIから取得。' },
+          { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant リポジトリ', description: 'スター35,383件、Apache-2.0ライセンス、実装言語Rust。2026年11月2日にGitHub APIから取得。' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone の料金', description: 'Starter・Builder・Standard・Enterpriseの上限。20ドルの定額Builderと月50ドル・月500ドルの最低額を含む。' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone パートナーページ', description: '技術・ソリューション・紹介の各パートナー区分と並ぶ、コンテンツ制作者向けアフィリエイトプログラムの確認。' },
           { url: 'https://weaviate.io/blog/weaviate-free-tier', title: 'Weaviate Cloud が無料で始められるように', description: 'クレジットカード不要・無期限の無料枠を告知した2026年6月17日の記事。14日間のサンドボックスを置き換えたもの。' },
           { url: 'https://weaviate.io/pricing', title: 'Weaviate の料金', description: '無料枠の現行上限であるオブジェクト10万件・メモリ1 GB・ディスク10 GB、およびFlex月45ドルから、Premium月400ドルから。' },
           { url: 'https://weaviate.io/blog/weaviate-cloud-pricing-update', title: 'Weaviate Cloud 料金の更新', description: 'Flex・Plus・Premiumを導入した2025年10月の再編。料金変更の時期を押さえるのに有用。' },
-          { url: 'https://github.com/weaviate/weaviate', title: 'Weaviate リポジトリ', description: 'スター16,758件、BSD-3-Clauseライセンス、実装言語Go。' },
+          { url: 'https://github.com/weaviate/weaviate', title: 'Weaviate リポジトリ', description: 'スター16,934件、BSD-3-Clauseライセンス、実装言語Go。' },
           { url: 'https://www.trychroma.com/pricing', title: 'Chroma Cloud の料金', description: '月0ドル＋従量で5ドル分クレジットのStarter、月250ドルのTeam、書き込み・保存・クエリ・下りのGiB単価。' },
-          { url: 'https://github.com/chroma-core/chroma', title: 'Chroma リポジトリ', description: 'スター29,174件、Apache-2.0ライセンス、現行コアの主要実装言語はRust。' },
+          { url: 'https://github.com/chroma-core/chroma', title: 'Chroma リポジトリ', description: 'スター29,622件、Apache-2.0ライセンス、現行コアの主要実装言語はRust。' },
         ],
       },
       relatedReading: {
@@ -3439,9 +3439,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: '2026年 最適なベクトルデータベース：Qdrant・Pinecone・Weaviate・Chroma',
-      description: 'RAG向けにQdrant、Pinecone、Weaviate、Chromaを比較。確認済みの料金、ライセンス、スター数、無料枠の上限に加え、2026年6月に導入されたWeaviateの無期限無料枠とChroma Cloudを扱います。2026年8月時点で確認。',
+      description: 'RAG向けにQdrant、Pinecone、Weaviate、Chromaを比較。確認済みの料金、ライセンス、スター数、無料枠の上限に加え、2026年6月に導入されたWeaviateの無期限無料枠とChroma Cloudを扱います。',
       datePublished: '2026-08-28',
-      dateModified: '2026-09-01',
+      dateModified: '2026-11-02',
       url: 'https://www.promptquorum.com/ja/local-llms/best-vector-database',
       inLanguage: 'ja',
       proficiencyLevel: 'Advanced',
@@ -3509,11 +3509,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: '最適なベクトルデータベース（2026年8月）',
+      name: '最適なベクトルデータベース（2026年）',
       inLanguage: 'ja',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: '総合的に最良 — スター34,242件、Apache-2.0、Rust、最も少ないリソース消費と、従量課金のStandardを備えた永続無料のクラウド枠' },
+        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: '総合的に最良 — スター35,383件、Apache-2.0、Rust、最も少ないリソース消費と、従量課金のStandardを備えた永続無料のクラウド枠' },
         { '@type': 'ListItem', position: 2, name: 'Pinecone', description: '運用ゼロなら最良 — 最も成熟したサーバーレス製品、Builderは月20ドル定額。ただしクラウド専用で自己ホスト版はない' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'ハイブリッド検索なら最良 — BM25とベクトルをネイティブに統合し、2026年6月以降はオブジェクト10万件の無期限な無料枠' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: '試作なら最良 — サーバーなしにプロセス内で動き、コアはRust。Chroma Cloudは月0ドル＋従量から' },
@@ -3527,13 +3527,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026年最佳向量数据库：Qdrant、Pinecone、Weaviate 还是 Chroma',
-    seoTitle: '2026年最佳向量数据库',
-    metaDescription: 'Qdrant 拥有 34,242 星标和永久免费的云层级，Pinecone 每月 20 美元起，Weaviate 于 2026 年 6 月新增了不过期的免费层级。四者现在都有。',
+    seoTitle: '最佳向量数据库2026：Qdrant vs Pinecone',
+    metaDescription: '2026年最佳向量数据库对比:Qdrant(GitHub星标3.5万+,云端永久免费层)、Pinecone每月20美元起,以及Weaviate和Chroma的RAG适用性。',
     educationalLevel: 'Advanced',
     audience: '构建 RAG 应用的开发者',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-09-01',
+    dateModified: '2026-11-02',
     readTime: '约 15 分钟阅读',
     primaryTerm: '向量数据库',
     targetKeywords: [
@@ -3543,12 +3543,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '向量数据库价格对比',
       'RAG 向量数据库',
     ],
-    leadAnswerBlock: '**对多数团队而言，Qdrant 是最好的默认选择：GitHub 星标 34,242，Apache-2.0 许可，开源引擎中资源占用最低，且云层级永久免费。如果你想要零基础设施工作并愿意为此付费，Pinecone 是正确答案，Builder 每月 20 美元起。如果混合检索是核心，就选 Weaviate。Chroma 是通往可用原型的最短路径，因为它在进程内运行。这个品类里最过时的说法是「只有部分产品有免费层级」：自 2026 年 6 月起四者都有，包括把 14 天到期沙箱换成真正免费、不过期方案的 Weaviate。**',
+    leadAnswerBlock: '**对大多数团队,Qdrant是最佳默认选择:Apache-2.0、资源占用小、云端永久免费层。不想管基础设施选Pinecone(每月20美元起),混合检索选Weaviate,快速原型选Chroma。四者现在都有免费层。**',
     quickAnswerTop: {
       question: '2026 年最好的向量数据库是哪一个？',
       answer: '**只要你有一点运维余力，Qdrant 的性价比最好；想要零基础设施工作就选 Pinecone；若混合检索对召回精度至关重要就选 Weaviate；在做原型且完全不想要服务器就选 Chroma。** 这里没有单一赢家，任何点名一个的指南，回答的都是与你不同的问题。真正的决定是你自己运行引擎还是租用它，而这取决于你的团队富余的是工程小时还是预算——两者很少是同一种约束。',
       bullets: [
-        '**综合最优：** Qdrant——34,242 星标，Apache-2.0，Rust 编写，永久免费云层级含 0.5 vCPU / 1 GB 内存 / 4 GB 磁盘',
+        '**综合最优：** Qdrant——35,383 星标，Apache-2.0，Rust 编写，永久免费云层级含 0.5 vCPU / 1 GB 内存 / 4 GB 磁盘',
         '**零运维最优：** Pinecone——最成熟的无服务器产品，Builder 每月 20 美元固定价，Standard 每月最低 50 美元',
         '**混合检索最优：** Weaviate——原生支持 BM25 加向量，且自 2026 年 6 月起提供不过期、免信用卡的免费层级',
         '**原型开发最优：** Chroma——`pip install chromadb` 即在你的 Python 进程中运行，无需搭建服务器',
@@ -3584,11 +3584,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Qdrant**——GitHub 星标 34,242，Apache-2.0，用 Rust 编写。Qdrant Cloud 有永久免费层级，含 0.5 vCPU、1 GB 内存与 4 GB 磁盘；Standard 按用量计费，承诺 99.5% 可用性，且不收固定平台费；Premium 增加 SSO 与私有 VPC 链路，承诺 99.9% 并设有最低消费。',
+          '**Qdrant**——GitHub 星标 35,383，Apache-2.0，用 Rust 编写。Qdrant Cloud 有永久免费层级，含 0.5 vCPU、1 GB 内存与 4 GB 磁盘；Standard 按用量计费，承诺 99.5% 可用性，且不收固定平台费；Premium 增加 SSO 与私有 VPC 链路，承诺 99.9% 并设有最低消费。',
           '**Pinecone**——设计上仅限云端，完全没有自托管版本。Starter 免费，含 2 GB 存储、每月 200 万写入单元与 100 万读取单元。Builder 每月 20 美元固定价，含 10 GB、500 万写入与 200 万读取。Standard 从每月最低 50 美元起后按用量计费，Enterprise 从每月最低 500 美元起，增加 99.95% 可用性承诺、BYOC、HIPAA 与审计日志。',
-          '**Weaviate**——16,758 星标，BSD-3-Clause，用 Go 编写。**本页最重要的更正：** Weaviate Cloud 已不再是 14 天沙箱。2026 年 6 月 17 日，它推出了真正免费的层级，免信用卡、不过期：10 万个对象、1 GB 内存与 10 GB 磁盘。那些仍在建议读者从第一天起预留每月 45 美元的对比文章，正把人送去为如今免费的东西付费。',
+          '**Weaviate**——16,934 星标，BSD-3-Clause，用 Go 编写。**本页最重要的更正：** Weaviate Cloud 已不再是 14 天沙箱。2026 年 6 月 17 日，它推出了真正免费的层级，免信用卡、不过期：10 万个对象、1 GB 内存与 10 GB 磁盘。那些仍在建议读者从第一天起预留每月 45 美元的对比文章，正把人送去为如今免费的东西付费。',
           '**Weaviate 的付费价格也变了。** 现行定价页列出的是 Flex 每月 45 美元起、Premium 每月 400 美元起。2025 年 10 月定价更新中宣布的每月 280 美元 Plus 层级已不在页面上，因此请引用 Flex 与 Premium，而不是旧的三层结构。',
-          '**Chroma**——29,174 星标，Apache-2.0，如今是 Rust 内核，而非起步时的 Python 引擎。它是四者中唯一无需服务器、在进程内运行的，这也正是它在原型开发上胜出的原因。',
+          '**Chroma**——29,622 星标，Apache-2.0，如今是 Rust 内核，而非起步时的 Python 引擎。它是四者中唯一无需服务器、在进程内运行的，这也正是它在原型开发上胜出的原因。',
           '**Chroma Cloud 同样存在**，这一点多数同类对比完全遗漏：Starter 每月 0 美元加用量，附 5 美元初始额度；Team 每月 250 美元加用量；用量计价为每写入 1 GiB 2.50 美元、每存储 1 GiB 每月 0.33 美元、每查询 1 TiB 0.0075 美元、每返回 1 GiB 0.09 美元。因此这里有四个托管选项，而非三个。',
           '**四者现在都有免费层级**，这在一年前还不成立，也是判断你正在读的对比是否更新过的最快方法。',
           '**一句需要直说的披露：** Pinecone 确实为内容创作者运营着联盟计划，其合作伙伴页面可以佐证。PromptQuorum 未加入该计划，也不从本页任何链接中获得收益。这是本系列中唯一存在此类计划的品类，而这恰恰是上面推荐 Qdrant 而非 Pinecone 的原因。',
@@ -3642,12 +3642,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'Qdrant、Pinecone、Weaviate 与 Chroma 对比',
-        content: '**四者优化的是不同的约束——资源占用、运维简单度、检索质量或首次查询的时间——而不是逐项功能对拼。** 价格于 2026 年 8 月 28 日从各厂商定价页读取，仓库数据同日取自 GitHub API。',
+        content: '**四者优化的是不同的约束——资源占用、运维简单度、检索质量或首次查询的时间——而不是逐项功能对拼。** 价格于 2026 年 11 月 2 日从各厂商定价页读取，仓库数据同日取自 GitHub API。',
         tableFormat: true,
         itemHeadings: true,
         columns: ['维度', '[Qdrant](https://qdrant.tech)', '[Pinecone](https://www.pinecone.io)', '[Weaviate](https://weaviate.io)', '[Chroma](https://www.trychroma.com)'],
         rows: [
-          { 维度: 'GitHub 星标', Qdrant: '34,242', Pinecone: '非开源', Weaviate: '16,758', Chroma: '29,174' },
+          { 维度: 'GitHub 星标', Qdrant: '35,383', Pinecone: '非开源', Weaviate: '16,934', Chroma: '29,622' },
           { 维度: '许可证', Qdrant: 'Apache-2.0', Pinecone: '专有', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
           { 维度: '实现语言', Qdrant: 'Rust', Pinecone: '未公开', Weaviate: 'Go', Chroma: 'Rust 内核' },
           { 维度: '可自托管', Qdrant: '可以，免费', Pinecone: '不可，仅云端', Weaviate: '可以，免费', Chroma: '可以，免费' },
@@ -3706,13 +3706,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Qdrant——综合最优',
-            tagline: '34,242 星标，Apache-2.0，Rust，永久免费云层级',
+            tagline: '35,383 星标，Apache-2.0，Rust，永久免费云层级',
             verdict: 'Qdrant 用 Rust 编写，这表现为在同等负载下内存与 CPU 占用小于源自 Go 和 Python 的替代品，而这份占用正是它在单节点上能走得更远的实际原因。它的过滤是这里最强的：元数据条件在 HNSW 遍历过程中施加，而不是事后再过滤结果，因此重度过滤的查询不会悄悄退化成扫描。混合检索通过与稠密向量并列的稀疏向量原生支持。云端定价是四者中最清爽的：一个含 0.5 vCPU、1 GB 内存与 4 GB 磁盘的免费层级，永久有效而非限时；一个按 vCPU、内存与存储的实际消耗计费的 Standard 层级，承诺 99.5% 可用性，且上面不再叠加固定平台费；以及一个增加 SSO 与私有 VPC 链路的 Premium 层级，承诺 99.9% 并设有最低消费。没有平台费正是它成为成本敏感之选的原因：你为资源付钱，而不是为「成为客户」这件事付钱。',
             pros: [
               '开源引擎中资源占用最低，单节点因此能走得更远',
               '过滤在索引遍历过程中施加而非事后进行，带过滤的查询依然快',
               '永久免费的云层级而非试用，Standard 按用量计费且无固定费',
-              'Apache-2.0，34,242 星标是这里最大的社区，自托管与托管是同一个引擎',
+              'Apache-2.0，35,383 星标是这里最大的社区，自托管与托管是同一个引擎',
             ],
             cons: [
               '使用自有查询语言而非 SQL 或 GraphQL，因此存在学习曲线',
@@ -3774,7 +3774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Weaviate——混合检索要紧时最优',
-            tagline: '16,758 星标，BSD-3-Clause，Go，自 2026 年 6 月起免费层级不过期',
+            tagline: '16,934 星标，BSD-3-Clause，Go，自 2026 年 6 月起免费层级不过期',
             verdict: 'Weaviate 在查询 API 中原生地把 BM25 关键词打分与向量相似度结合起来，而且做这件事的时间比其他产品都长，这体现在你对混合方式能有多少控制上。这比听起来更重要：纯语义检索会稳定地漏掉精确的产品编码、型号、错误串与缩写，因为这些词元的含义就是其字面形式。Weaviate 还附带向量化模块，可代你调用嵌入服务商，于是嵌入由数据库承担而不是你的应用。在价格方面，重要的事实是新近的：2026 年 6 月 17 日，Weaviate 推出了免信用卡、不过期的免费层级，提供 10 万个对象、1 GB 内存与 10 GB 磁盘。它取代了对比文章仍在描述的 14 天沙箱。现行页面上的付费方案是按量付费、承诺 99.5% 可用性的 Flex 每月 45 美元起，以及共享或专属部署的 Premium 每月 400 美元起；2025 年 10 月公告中每月 280 美元的 Plus 层级已不在其上。',
             pros: [
               '这里最成熟的混合检索，对关键词与向量的配比有真正的控制',
@@ -3808,7 +3808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Chroma——原型开发与中小负载最优',
-            tagline: '29,174 星标，Apache-2.0，Rust 内核，`pip install chromadb` 即可运行',
+            tagline: '29,622 星标，Apache-2.0，Rust 内核，`pip install chromadb` 即可运行',
             verdict: 'Chroma 用 pip 安装并以嵌入方式运行，因此一个 notebook 可以用几行代码就拥有可用的语义检索，不需要容器、端口或配置。这一条特性就解释了它为何主导教程与原型，而这是真实的工程优势而非新手拐杖：能在没有基础设施的情况下测试检索逻辑，会明显缩短迭代循环。引擎内核已用 Rust 重写，因此性能表现好于它的 Python 出身所暗示的，尽管元数据过滤仍比 Qdrant 简单，混合检索也更新、更不完整。Chroma Cloud 同样存在，而多数同类对比略过了它：Starter 每月 0 美元加用量，附 5 美元额度与 10 个数据库；Team 每月 250 美元加用量，含 100 个数据库与专属 Slack 支持；Enterprise 增加单租户或自带云集群。用量计价为每写入 1 GiB 2.50 美元、每存储 1 GiB 每月 0.33 美元、每查询 1 TiB 0.0075 美元、每返回 1 GiB 0.09 美元。',
             pros: [
               '无需服务器、在进程内运行，因此开始时没有东西需要预置',
@@ -3864,7 +3864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '这些是依据 2026 年 8 月 28 日常见的机器价格与厂商标价建模的估算，不是实测的生产账单。Pinecone、Qdrant Cloud 与 Chroma Cloud 的按量成本随查询量浮动，因此在做决定前，请把你预期的读写量放进各厂商的计算器跑一遍。',
+            text: '这些是依据 2026 年 11 月 2 日常见的机器价格与厂商标价建模的估算，不是实测的生产账单。Pinecone、Qdrant Cloud 与 Chroma Cloud 的按量成本随查询量浮动，因此在做决定前，请把你预期的读写量放进各厂商的计算器跑一遍。',
           },
         ],
         note: '在一百万向量的量级上，通常是运维那一行决定结果，而非标价。当驻留或用量提出要求时就自托管；否则一旦把自己的工时诚实计价，托管层级会更便宜。',
@@ -4002,15 +4002,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://qdrant.tech/pricing/', title: 'Qdrant Cloud 定价', description: '永久免费层级 0.5 vCPU、1 GB 内存与 4 GB 磁盘的额度，以及 Standard 的按量计费与 99.5%、99.9% 的可用性承诺。' },
           { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Qdrant 容量规划', description: '官方指南，说明集合超过约 100 万条向量后应开始分片，以及用于上文自托管上限的 RAM 计算公式（向量数 × 维度 × 4 字节 × 1.5）。' },
           { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant：服务 100 万条向量所需的最小内存', description: '1,536 维向量每百万条约需 6 到 7 GB 内存（内存驻留 HNSW）、磁盘支持（mmap）存储下每百万条约 1.2 GB 这一数据的出处。' },
-          { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant 仓库', description: '星标 34,242、Apache-2.0 许可证与 Rust 实现语言，于 2026 年 8 月 28 日读自 GitHub API。' },
+          { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant 仓库', description: '星标 35,383、Apache-2.0 许可证与 Rust 实现语言，于 2026 年 11 月 2 日读自 GitHub API。' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone 定价', description: 'Starter、Builder、Standard 与 Enterprise 的额度，包括 20 美元的 Builder 固定方案以及每月 50 美元与 500 美元的最低额。' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone 合作伙伴页面', description: '确认面向内容创作者的联盟计划，与技术、解决方案、推荐三类伙伴并列。' },
           { url: 'https://weaviate.io/blog/weaviate-free-tier', title: 'Weaviate Cloud 现在可免费开始', description: '2026 年 6 月 17 日关于免信用卡、不过期免费层级的公告，取代了 14 天沙箱。' },
           { url: 'https://weaviate.io/pricing', title: 'Weaviate 定价', description: '免费层级当前的 10 万对象、1 GB 内存与 10 GB 磁盘额度，以及 Flex 每月 45 美元起与 Premium 每月 400 美元起。' },
           { url: 'https://weaviate.io/blog/weaviate-cloud-pricing-update', title: 'Weaviate Cloud 定价更新', description: '2025 年 10 月引入 Flex、Plus 与 Premium 的调整，有助于确定价格变动的时间。' },
-          { url: 'https://github.com/weaviate/weaviate', title: 'Weaviate 仓库', description: '星标 16,758、BSD-3-Clause 许可证与 Go 实现语言。' },
+          { url: 'https://github.com/weaviate/weaviate', title: 'Weaviate 仓库', description: '星标 16,934、BSD-3-Clause 许可证与 Go 实现语言。' },
           { url: 'https://www.trychroma.com/pricing', title: 'Chroma Cloud 定价', description: 'Starter 每月 0 美元加用量并附 5 美元额度、Team 每月 250 美元，以及写入、存储、查询与出站的每 GiB 费率。' },
-          { url: 'https://github.com/chroma-core/chroma', title: 'Chroma 仓库', description: '星标 29,174、Apache-2.0 许可证，以及当前内核的主要实现语言 Rust。' },
+          { url: 'https://github.com/chroma-core/chroma', title: 'Chroma 仓库', description: '星标 29,622、Apache-2.0 许可证，以及当前内核的主要实现语言 Rust。' },
         ],
       },
       relatedReading: {
@@ -4030,7 +4030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026年最佳向量数据库：Qdrant、Pinecone、Weaviate 还是 Chroma',
       description: '对比 Qdrant、Pinecone、Weaviate 与 Chroma 在 RAG 场景中的表现，包含核实过的价格、许可证、星标数与免费层级额度，以及 Weaviate 于 2026 年 6 月推出的不过期免费层级和 Chroma Cloud。',
       datePublished: '2026-08-28',
-      dateModified: '2026-09-01',
+      dateModified: '2026-11-02',
       url: 'https://www.promptquorum.com/zh/local-llms/best-vector-database',
       inLanguage: 'zh',
       proficiencyLevel: 'Advanced',
@@ -4102,7 +4102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'zh',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: '综合最优——34,242 星标，Apache-2.0，Rust，资源占用最低，永久免费云层级搭配按用量计费的 Standard' },
+        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: '综合最优——35,383 星标，Apache-2.0，Rust，资源占用最低，永久免费云层级搭配按用量计费的 Standard' },
         { '@type': 'ListItem', position: 2, name: 'Pinecone', description: '零运维最优——最成熟的无服务器产品，Builder 每月 20 美元固定价，但仅限云端且没有自托管版本' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: '混合检索最优——原生 BM25 加向量，自 2026 年 6 月起提供含 10 万对象的不过期免费层级' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: '原型开发最优——无需服务器、进程内运行，Rust 内核，Chroma Cloud 从每月 0 美元加用量起步' },
@@ -4116,13 +4116,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'أفضل قاعدة بيانات متجهية 2026: Qdrant أم Pinecone أم Weaviate أم Chroma',
-    seoTitle: 'أفضل قاعدة بيانات متجهية 2026',
-    metaDescription: 'يملك Qdrant‏ 34,242 نجمة وطبقة سحابية مجانية دائمًا، ويبدأ Pinecone من 20 دولارًا شهريًا، وأضاف Weaviate طبقة مجانية بلا انتهاء في يونيو 2026. الأربعة جميعًا لديها واحدة الآن. جرى.',
+    seoTitle: 'أفضل قاعدة بيانات متجهية 2026: Qdrant مقابل Pinecone',
+    metaDescription: 'أفضل قاعدة بيانات متجهية 2026: Qdrant (أكثر من 35 ألف نجمة، طبقة مجانية دائماً)، وPinecone من 20 دولاراً شهرياً، مع Weaviate وChroma لـ RAG.',
     educationalLevel: 'Advanced',
     audience: 'المطورون الذين يبنون تطبيقات الاسترجاع المعزز بالتوليد',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-02',
     readTime: 'قراءة 15 دقيقة',
     primaryTerm: 'قاعدة بيانات متجهية',
     targetKeywords: [
@@ -4132,12 +4132,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'مقارنة أسعار قواعد البيانات المتجهية',
       'قاعدة بيانات متجهية للاسترجاع المعزز',
     ],
-    leadAnswerBlock: '**‏Qdrant هو الخيار الافتراضي الأفضل لمعظم الفرق: 34,242 نجمة على GitHub، ورخصة Apache-2.0، وأقل استهلاك للموارد بين المحركات مفتوحة المصدر، وطبقة سحابية مجانية إلى الأبد. وPinecone هو القرار الصحيح حين تريد صفر عمل بنية تحتية وتقبل الدفع مقابل ذلك، ابتداءً من 20 دولارًا شهريًا في خطة Builder. وWeaviate هو الاختيار حين تكون جودة البحث الهجين محورية. وChroma هو أقصر طريق إلى نموذج أولي يعمل لأنه يعمل داخل العملية نفسها. وأكثر ادعاء عفا عليه الزمن في هذه الفئة هو أن بعضها فقط لديه طبقة مجانية: فمنذ يونيو 2026 لدى الأربعة جميعًا واحدة، ومنها Weaviate الذي استبدل بيئته التجريبية المنتهية بعد 14 يومًا بخطة مجانية فعلًا وبلا انتهاء.**',
+    leadAnswerBlock: '**Qdrant هو الخيار الافتراضي الأفضل لمعظم الفرق: Apache-2.0 واستهلاك موارد منخفض وطبقة سحابية مجانية دائماً. يناسب Pinecone من لا يريد إدارة بنية تحتية بدءاً من 20 دولاراً شهرياً، ويتفوق Weaviate في البحث الهجين وChroma في النماذج الأولية السريعة. للأربعة الآن طبقة مجانية.**',
     quickAnswerTop: {
       question: 'ما أفضل قاعدة بيانات متجهية في 2026؟',
       answer: '**‏Qdrant لأفضل نسبة بين التكلفة والأداء إن كان لديك أي قدرة تشغيلية، وPinecone إن أردت صفر عمل بنية تحتية، وWeaviate إن كان البحث الهجين محوريًا لدقة الاسترجاع، وChroma إن كنت تبني نموذجًا أوليًا ولا تريد أي خادم.** لا يوجد فائز واحد هنا، وأي دليل يسمّي واحدًا إنما يجيب عن سؤال غير سؤالك. القرار الحقيقي هو: هل تشغّل المحرك بنفسك أم تستأجره؟ وذلك يتوقف على ما يفيض لدى فريقك: ساعات هندسية أم ميزانية. ونادرًا ما يكونان القيد نفسه.',
       bullets: [
-        '**الأفضل إجمالًا:** ‏Qdrant — 34,242 نجمة، Apache-2.0، مكتوب بلغة Rust، وطبقة سحابية مجانية إلى الأبد بـ 0.5 vCPU و1 غيغابايت ذاكرة و4 غيغابايت قرص',
+        '**الأفضل إجمالًا:** ‏Qdrant — 35,383 نجمة، Apache-2.0، مكتوب بلغة Rust، وطبقة سحابية مجانية إلى الأبد بـ 0.5 vCPU و1 غيغابايت ذاكرة و4 غيغابايت قرص',
         '**الأفضل بلا تشغيل:** ‏Pinecone — أنضج منتج بلا خوادم، وBuilder بسعر ثابت 20 دولارًا شهريًا، وStandard بحد أدنى 50 دولارًا شهريًا',
         '**الأفضل للبحث الهجين:** ‏Weaviate — دعم أصلي لـ BM25 مع المتجهات، ومنذ يونيو 2026 طبقة مجانية بلا انتهاء وبلا بطاقة ائتمان',
         '**الأفضل للنماذج الأولية:** ‏Chroma — ‏`pip install chromadb` ويعمل داخل عملية Python لديك، بلا خادم تُنشئه',
@@ -4173,11 +4173,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**‏Qdrant** — 34,242 نجمة على GitHub، ورخصة Apache-2.0، ومكتوب بلغة Rust. ولدى Qdrant Cloud طبقة مجانية إلى الأبد بـ 0.5 vCPU و1 غيغابايت ذاكرة و4 غيغابايت قرص؛ وطبقة Standard تُحاسب على الاستهلاك مع التزام توافر 99.5% وبلا رسوم منصة ثابتة؛ وتضيف Premium الدخول الموحّد وروابط VPC خاصة مع 99.9% وحد أدنى للإنفاق.',
+          '**‏Qdrant** — 35,383 نجمة على GitHub، ورخصة Apache-2.0، ومكتوب بلغة Rust. ولدى Qdrant Cloud طبقة مجانية إلى الأبد بـ 0.5 vCPU و1 غيغابايت ذاكرة و4 غيغابايت قرص؛ وطبقة Standard تُحاسب على الاستهلاك مع التزام توافر 99.5% وبلا رسوم منصة ثابتة؛ وتضيف Premium الدخول الموحّد وروابط VPC خاصة مع 99.9% وحد أدنى للإنفاق.',
           '**‏Pinecone** — سحابي فقط بحكم التصميم، وبلا أي نسخة للاستضافة الذاتية. خطة Starter مجانية بـ 2 غيغابايت تخزين، ومليونَي وحدة كتابة ومليون وحدة قراءة شهريًا. وBuilder بسعر ثابت 20 دولارًا شهريًا بـ 10 غيغابايت و5 ملايين كتابة ومليونَي قراءة. وتبدأ Standard من حد أدنى 50 دولارًا شهريًا ثم بالاستهلاك، وEnterprise من حد أدنى 500 دولار شهريًا مع التزام توافر 99.95% وBYOC وHIPAA وسجلات التدقيق.',
-          '**‏Weaviate** — 16,758 نجمة، ورخصة BSD-3-Clause، ومكتوب بلغة Go. **أهم تصحيح في هذه الصفحة:** لم يعد Weaviate Cloud بيئة تجريبية لـ 14 يومًا. ففي 17 يونيو 2026 أُطلقت طبقة مجانية فعلًا، بلا بطاقة ائتمان وبلا انتهاء: 100 ألف كائن و1 غيغابايت ذاكرة و10 غيغابايت قرص. والمقارنات التي ما زالت تنصح برصد 45 دولارًا شهريًا من اليوم الأول تدفع القرّاء إلى الدفع مقابل شيء صار مجانيًا.',
+          '**‏Weaviate** — 16,934 نجمة، ورخصة BSD-3-Clause، ومكتوب بلغة Go. **أهم تصحيح في هذه الصفحة:** لم يعد Weaviate Cloud بيئة تجريبية لـ 14 يومًا. ففي 17 يونيو 2026 أُطلقت طبقة مجانية فعلًا، بلا بطاقة ائتمان وبلا انتهاء: 100 ألف كائن و1 غيغابايت ذاكرة و10 غيغابايت قرص. والمقارنات التي ما زالت تنصح برصد 45 دولارًا شهريًا من اليوم الأول تدفع القرّاء إلى الدفع مقابل شيء صار مجانيًا.',
           '**كما تغيّرت أسعار Weaviate المدفوعة.** فصفحة الأسعار السارية تُدرج Flex ابتداءً من 45 دولارًا شهريًا وPremium ابتداءً من 400 دولار شهريًا. أما طبقة Plus بـ 280 دولارًا شهريًا التي أُعلنت في تحديث أكتوبر 2025 فلم تعد ترد هناك، فاذكر Flex وPremium بدل البنية الثلاثية القديمة.',
-          '**‏Chroma** — 29,174 نجمة، ورخصة Apache-2.0، ونواة بلغة Rust الآن بدل محرك Python الذي بدأ به. وهو الوحيد بين الأربعة الذي يعمل داخل العملية بلا خادم، وهذا بالضبط سبب تفوّقه في بناء النماذج الأولية.',
+          '**‏Chroma** — 29,622 نجمة، ورخصة Apache-2.0، ونواة بلغة Rust الآن بدل محرك Python الذي بدأ به. وهو الوحيد بين الأربعة الذي يعمل داخل العملية بلا خادم، وهذا بالضبط سبب تفوّقه في بناء النماذج الأولية.',
           '**‏Chroma Cloud موجود أيضًا**، وهو ما تغفله معظم مقارنات هذه الفئة تمامًا: خطة Starter بصفر دولار شهريًا زائد الاستهلاك مع رصيد ابتدائي 5 دولارات، وTeam بـ 250 دولارًا شهريًا زائد الاستهلاك، والاستهلاك مُسعّر بـ 2.50 دولار لكل غيبيبايت مكتوب، و0.33 دولار لكل غيبيبايت مخزّن شهريًا، و0.0075 دولار لكل تبيبايت مُستعلَم، و0.09 دولار لكل غيبيبايت مُعاد. أي أن هنا أربعة خيارات مُدارة لا ثلاثة.',
           '**الأربعة جميعًا لديها طبقة مجانية الآن**، وهو ما لم يكن صحيحًا قبل عام، وهو أسرع وسيلة للتحقق مما إذا كانت المقارنة التي تقرأها قد جرى تحديثها.',
           '**إفصاح يستحق القول بوضوح:** يدير Pinecone بالفعل برنامج عمولة لصنّاع المحتوى، وهو مؤكد على صفحة شركائه. وPromptQuorum غير مسجّلة فيه ولا تربح شيئًا من أي رابط هنا. وهذه هي الفئة الوحيدة في هذه السلسلة التي يوجد فيها برنامج كهذا، ولهذا السبب تحديدًا فإن التوصية أعلاه هي Qdrant وليست Pinecone.',
@@ -4231,12 +4231,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'مقارنة بين Qdrant وPinecone وWeaviate وChroma',
-        content: '**كل واحد منها يُحسّن قيدًا مختلفًا — الاستهلاك، أو بساطة التشغيل، أو جودة الاسترجاع، أو الزمن حتى أول استعلام — بدل التنافس ميزةً بميزة.** قُرئت الأسعار من صفحات كل مزوّد في 28 أغسطس 2026، وجاءت أرقام المستودعات من واجهة GitHub البرمجية في اليوم نفسه.',
+        content: '**كل واحد منها يُحسّن قيدًا مختلفًا — الاستهلاك، أو بساطة التشغيل، أو جودة الاسترجاع، أو الزمن حتى أول استعلام — بدل التنافس ميزةً بميزة.** قُرئت الأسعار من صفحات كل مزوّد في 2 نوفمبر 2026، وجاءت أرقام المستودعات من واجهة GitHub البرمجية في اليوم نفسه.',
         tableFormat: true,
         itemHeadings: true,
         columns: ['المعيار', '[Qdrant](https://qdrant.tech)', '[Pinecone](https://www.pinecone.io)', '[Weaviate](https://weaviate.io)', '[Chroma](https://www.trychroma.com)'],
         rows: [
-          { المعيار: 'نجوم GitHub', Qdrant: '34,242', Pinecone: 'ليس مفتوح المصدر', Weaviate: '16,758', Chroma: '29,174' },
+          { المعيار: 'نجوم GitHub', Qdrant: '35,383', Pinecone: 'ليس مفتوح المصدر', Weaviate: '16,934', Chroma: '29,622' },
           { المعيار: 'الرخصة', Qdrant: 'Apache-2.0', Pinecone: 'مغلقة المصدر', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
           { المعيار: 'لغة التنفيذ', Qdrant: 'Rust', Pinecone: 'غير معلنة', Weaviate: 'Go', Chroma: 'نواة بلغة Rust' },
           { المعيار: 'قابل للاستضافة الذاتية', Qdrant: 'نعم، مجانًا', Pinecone: 'لا، سحابي فقط', Weaviate: 'نعم، مجانًا', Chroma: 'نعم، مجانًا' },
@@ -4274,13 +4274,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: '‏Qdrant — الأفضل إجمالًا',
-            tagline: '34,242 نجمة، Apache-2.0، Rust، وطبقة سحابية مجانية إلى الأبد',
+            tagline: '35,383 نجمة، Apache-2.0، Rust، وطبقة سحابية مجانية إلى الأبد',
             verdict: 'كُتب Qdrant بلغة Rust، وهو ما يظهر في استهلاك أقل للذاكرة والمعالج عند الحمل نفسه مقارنةً ببدائل ذات أصول في Go وPython، وهذا الاستهلاك هو السبب العملي لامتداده أبعد على عقدة واحدة. وتصفيته هي الأقوى هنا: يطبّق شروط البيانات الوصفية أثناء اجتياز فهرس HNSW بدل تصفية النتائج لاحقًا، فلا ينحدر الاستعلام كثيف التصفية بهدوء إلى مسح كامل. والبحث الهجين أصلي عبر المتجهات المتفرّقة إلى جانب الكثيفة. وأسعار السحابة هي الأوضح بين الأربعة: طبقة مجانية بـ 0.5 vCPU و1 غيغابايت ذاكرة و4 غيغابايت قرص، مجانية إلى الأبد لا محدودة زمنيًا؛ وطبقة Standard تُحاسب على الاستهلاك الفعلي للمعالج والذاكرة والتخزين، مع التزام توافر 99.5% وبلا رسوم منصة ثابتة فوقها؛ وطبقة Premium تضيف الدخول الموحّد وروابط VPC خاصة مع 99.9% وحد أدنى للإنفاق. وغياب رسوم المنصة هو ما يجعله الخيار المراعي للتكلفة: تدفع مقابل الموارد لا مقابل امتياز أن تكون عميلًا.',
             pros: [
               'أقل استهلاك للموارد بين المحركات المفتوحة، فتمتد العقدة الواحدة أبعد',
               'التصفية تُطبَّق أثناء اجتياز الفهرس لا بعده، فتبقى الاستعلامات المُصفّاة سريعة',
               'طبقة سحابية مجانية إلى الأبد لا تجربة، وStandard بالاستهلاك بلا رسوم ثابتة',
-              'رخصة Apache-2.0 مع أكبر مجتمع هنا عند 34,242 نجمة، والمحرك نفسه ذاتي الاستضافة أو مُدارًا',
+              'رخصة Apache-2.0 مع أكبر مجتمع هنا عند 35,383 نجمة، والمحرك نفسه ذاتي الاستضافة أو مُدارًا',
             ],
             cons: [
               'لغة استعلام خاصة به بدل SQL أو GraphQL، فثمة منحنى تعلّم',
@@ -4342,7 +4342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: '‏Weaviate — الأفضل حين يهمّ البحث الهجين',
-            tagline: '16,758 نجمة، BSD-3-Clause، Go، وطبقة مجانية بلا انتهاء منذ يونيو 2026',
+            tagline: '16,934 نجمة، BSD-3-Clause، Go، وطبقة مجانية بلا انتهاء منذ يونيو 2026',
             verdict: 'يجمع Weaviate تقييم الكلمات المفتاحية بـ BM25 مع التشابه المتجهي أصليًا داخل واجهة الاستعلام، ويفعل ذلك منذ وقت أطول من غيره، وهو ما يظهر في مقدار التحكم الممنوح لك في المزج. وهذا أهم مما يبدو: فالبحث الدلالي الصرف يُخطئ باطّراد أكواد المنتجات وأرقام الطُرز وسلاسل الأخطاء والاختصارات الدقيقة، لأن معنى هذه الرموز هو شكلها الحرفي. ويوفّر Weaviate كذلك وحدات تضمين تستدعي مزوّدي التضمين نيابةً عنك، فتتولى قاعدة البيانات التضمين بدل تطبيقك. وفي الأسعار، الحقيقة المهمة حديثة: ففي 17 يونيو 2026 أطلق Weaviate طبقة مجانية بلا بطاقة ائتمان وبلا انتهاء، تمنح 100 ألف كائن و1 غيغابايت ذاكرة و10 غيغابايت قرص. وقد حلّت محل البيئة التجريبية لـ 14 يومًا التي ما زالت المقارنات تصفها. أما الخطط المدفوعة على الصفحة السارية فهي Flex من 45 دولارًا شهريًا، بالدفع حسب الاستخدام مع التزام توافر 99.5%، وPremium من 400 دولار شهريًا لنشر مشترك أو مخصص؛ ولم تعد طبقة Plus بـ 280 دولارًا شهريًا من إعلان أكتوبر 2025 ترد هناك.',
             pros: [
               'أنضج بحث هجين هنا، مع تحكم حقيقي في مزج الكلمة المفتاحية بالمتجه',
@@ -4376,7 +4376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: '‏Chroma — الأفضل للنماذج الأولية والأحمال الصغيرة والمتوسطة',
-            tagline: '29,174 نجمة، Apache-2.0، نواة بلغة Rust، و`pip install chromadb` ثم يعمل',
+            tagline: '29,622 نجمة، Apache-2.0، نواة بلغة Rust، و`pip install chromadb` ثم يعمل',
             verdict: 'يُثبَّت Chroma بـ pip ويعمل مضمّنًا، فيمكن لدفتر ملاحظات أن يحصل على استرجاع دلالي يعمل في بضعة أسطر بلا حاوية ولا منفذ ولا إعداد. وهذه الخاصية وحدها تفسّر هيمنته على الدروس والنماذج الأولية، وهي ميزة هندسية حقيقية لا عكّازًا للمبتدئين: فالقدرة على اختبار منطق الاسترجاع دون بنية تحتية تقصّر دورة العمل كثيرًا. وقد أُعيدت كتابة نواة المحرك بلغة Rust، فحكاية الأداء أفضل مما توحي به أصوله في Python، وإن ظلت التصفية بالبيانات الوصفية أبسط من نظيرتها في Qdrant وظل البحث الهجين أحدث وأقل اكتمالًا. ويوجد Chroma Cloud أيضًا، وهو ما تغفله معظم مقارنات هذه الفئة: خطة Starter بصفر دولار شهريًا زائد الاستهلاك مع رصيد 5 دولارات و10 قواعد بيانات، وTeam بـ 250 دولارًا شهريًا زائد الاستهلاك مع 100 قاعدة بيانات ودعم مخصص عبر Slack، وEnterprise يضيف عناقيد أحادية المستأجر أو بإحضار سحابتك الخاصة. والاستهلاك مُسعّر بـ 2.50 دولار لكل غيبيبايت مكتوب، و0.33 دولار لكل غيبيبايت مخزّن شهريًا، و0.0075 دولار لكل تبيبايت مُستعلَم، و0.09 دولار لكل غيبيبايت مُعاد.',
             pros: [
               'يعمل داخل العملية بلا خادم، فلا شيء تُهيّئه لتبدأ',
@@ -4432,7 +4432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'هذه تقديرات مبنية على أسعار أجهزة معتادة وأسعار معلنة للمزوّدين في 28 أغسطس 2026، لا فواتير إنتاج مقيسة. وتتغيّر الكلف بالاستهلاك لدى Pinecone وQdrant Cloud وChroma Cloud بحسب حجم الاستعلامات، فمرّر حجم القراءة والكتابة المتوقع على حاسبة كل مزوّد قبل أن تلتزم.',
+            text: 'هذه تقديرات مبنية على أسعار أجهزة معتادة وأسعار معلنة للمزوّدين في 2 نوفمبر 2026، لا فواتير إنتاج مقيسة. وتتغيّر الكلف بالاستهلاك لدى Pinecone وQdrant Cloud وChroma Cloud بحسب حجم الاستعلامات، فمرّر حجم القراءة والكتابة المتوقع على حاسبة كل مزوّد قبل أن تلتزم.',
           },
         ],
         note: 'عند مليون متجه يحسم الأمر عادةً بند التشغيل لا السعر المعلن. استضف ذاتيًا حين يفرض ذلك مقر البيانات أو الحجم؛ وإلا فالطبقات المُدارة أرخص متى سعّرت ساعاتك بصدق.',
@@ -4531,7 +4531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كم تكلّف قاعدة بيانات متجهية لمليون متجه؟',
-            a: 'وفق الأسعار المعلنة في أغسطس 2026، تبلغ الطبقة المُدارة نحو 45 إلى 70 دولارًا شهريًا عند هذا الحجم قبل التجاوزات، بينما تكلّف الاستضافة الذاتية على جهاز صغير 40 إلى 60 دولارًا شهريًا للبنية التحتية إضافةً إلى ساعتين إلى خمس ساعات تشغيل شهريًا. وحين تُسعَّر تلك الساعات بأجر هندسي واقعي، يخرج المُدار عادةً أرخص على مدى اثني عشر شهرًا — انظر جدول المقارنة الكامل أعلاه.',
+            a: 'وفق الأسعار المعلنة الحالية، تبلغ الطبقة المُدارة نحو 45 إلى 70 دولارًا شهريًا عند هذا الحجم قبل التجاوزات، بينما تكلّف الاستضافة الذاتية على جهاز صغير 40 إلى 60 دولارًا شهريًا للبنية التحتية إضافةً إلى ساعتين إلى خمس ساعات تشغيل شهريًا. وحين تُسعَّر تلك الساعات بأجر هندسي واقعي، يخرج المُدار عادةً أرخص على مدى اثني عشر شهرًا — انظر جدول المقارنة الكامل أعلاه.',
           },
           {
             q: 'هل Qdrant هو نفسه Weaviate؟',
@@ -4568,15 +4568,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'المصادر',
         links: [
           { url: 'https://qdrant.tech/pricing/', title: 'أسعار Qdrant Cloud', description: 'حدود الطبقة المجانية إلى الأبد بـ 0.5 vCPU و1 غيغابايت ذاكرة و4 غيغابايت قرص، إضافةً إلى احتساب Standard بالاستهلاك والتزامَي التوافر 99.5% و99.9%.' },
-          { url: 'https://github.com/qdrant/qdrant', title: 'مستودع Qdrant', description: 'عدد النجوم 34,242 ورخصة Apache-2.0 ولغة التنفيذ Rust، قُرئت من واجهة GitHub البرمجية في 28 أغسطس 2026.' },
+          { url: 'https://github.com/qdrant/qdrant', title: 'مستودع Qdrant', description: 'عدد النجوم 35,383 ورخصة Apache-2.0 ولغة التنفيذ Rust، قُرئت من واجهة GitHub البرمجية في 2 نوفمبر 2026.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'أسعار Pinecone', description: 'حدود Starter وBuilder وStandard وEnterprise، ومنها خطة Builder الثابتة بـ 20 دولارًا والحدان الأدنى 50 و500 دولار شهريًا.' },
           { url: 'https://www.pinecone.io/partners/', title: 'صفحة شركاء Pinecone', description: 'تؤكد برنامج العمولة الموجّه إلى صنّاع المحتوى إلى جانب فئات شركاء التقنية والحلول والإحالة.' },
           { url: 'https://weaviate.io/blog/weaviate-free-tier', title: 'صار Weaviate Cloud مجانيًا للبدء', description: 'إعلان 17 يونيو 2026 عن طبقة مجانية بلا بطاقة ائتمان وبلا انتهاء، حلّت محل البيئة التجريبية لـ 14 يومًا.' },
           { url: 'https://weaviate.io/pricing', title: 'أسعار Weaviate', description: 'حصص الطبقة المجانية الحالية البالغة 100 ألف كائن و1 غيغابايت ذاكرة و10 غيغابايت قرص، إضافةً إلى Flex من 45 دولارًا شهريًا وPremium من 400 دولار شهريًا.' },
           { url: 'https://weaviate.io/blog/weaviate-cloud-pricing-update', title: 'تحديث أسعار Weaviate Cloud', description: 'إعادة الهيكلة في أكتوبر 2025 التي أدخلت Flex وPlus وPremium، وهي مفيدة لتأريخ تغيّرات الأسعار.' },
-          { url: 'https://github.com/weaviate/weaviate', title: 'مستودع Weaviate', description: 'عدد النجوم 16,758 ورخصة BSD-3-Clause ولغة التنفيذ Go.' },
+          { url: 'https://github.com/weaviate/weaviate', title: 'مستودع Weaviate', description: 'عدد النجوم 16,934 ورخصة BSD-3-Clause ولغة التنفيذ Go.' },
           { url: 'https://www.trychroma.com/pricing', title: 'أسعار Chroma Cloud', description: 'خطة Starter بصفر دولار شهريًا زائد الاستهلاك مع رصيد 5 دولارات، وTeam بـ 250 دولارًا شهريًا، وأسعار الغيبيبايت للكتابة والتخزين والاستعلام والصادر.' },
-          { url: 'https://github.com/chroma-core/chroma', title: 'مستودع Chroma', description: 'عدد النجوم 29,174 ورخصة Apache-2.0 ولغة Rust بوصفها اللغة الأساسية للنواة الحالية.' },
+          { url: 'https://github.com/chroma-core/chroma', title: 'مستودع Chroma', description: 'عدد النجوم 29,622 ورخصة Apache-2.0 ولغة Rust بوصفها اللغة الأساسية للنواة الحالية.' },
         ],
       },
       relatedReading: {
@@ -4596,7 +4596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'أفضل قاعدة بيانات متجهية 2026: Qdrant أم Pinecone أم Weaviate أم Chroma',
       description: 'مقارنة بين Qdrant وPinecone وWeaviate وChroma للاسترجاع المعزز بالتوليد، مع أسعار ورخص وأعداد نجوم وحدود طبقات مجانية جرى التحقق منها، بما في ذلك الطبقة المجانية بلا انتهاء لدى Weaviate منذ يونيو 2026 وChroma Cloud. جرى.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-02',
       url: 'https://www.promptquorum.com/ar/local-llms/best-vector-database',
       inLanguage: 'ar',
       proficiencyLevel: 'Advanced',
@@ -4648,7 +4648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'كم تكلّف قاعدة بيانات متجهية لمليون متجه؟',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'وفق الأسعار المعلنة في أغسطس 2026، تبلغ الطبقة المُدارة نحو 45 إلى 70 دولارًا شهريًا قبل التجاوزات، بينما تكلّف الاستضافة الذاتية على جهاز صغير 40 إلى 60 دولارًا شهريًا إضافةً إلى ساعتين إلى خمس ساعات تشغيل شهريًا. وبتسعير واقعي، يتفوق المُدار عادةً على مدى اثني عشر شهرًا.',
+            text: 'وفق الأسعار المعلنة الحالية، تبلغ الطبقة المُدارة نحو 45 إلى 70 دولارًا شهريًا قبل التجاوزات، بينما تكلّف الاستضافة الذاتية على جهاز صغير 40 إلى 60 دولارًا شهريًا إضافةً إلى ساعتين إلى خمس ساعات تشغيل شهريًا. وبتسعير واقعي، يتفوق المُدار عادةً على مدى اثني عشر شهرًا.',
           },
         },
         {
@@ -4664,11 +4664,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'أفضل قواعد البيانات المتجهية (أغسطس 2026)',
+      name: 'أفضل قواعد البيانات المتجهية (2026)',
       inLanguage: 'ar',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'الأفضل إجمالًا — 34,242 نجمة، Apache-2.0، Rust، أقل استهلاك للموارد وطبقة سحابية مجانية إلى الأبد مع Standard بالاستهلاك' },
+        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'الأفضل إجمالًا — 35,383 نجمة، Apache-2.0، Rust، أقل استهلاك للموارد وطبقة سحابية مجانية إلى الأبد مع Standard بالاستهلاك' },
         { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'الأفضل بلا تشغيل — أنضج منتج بلا خوادم، وBuilder بسعر ثابت 20 دولارًا شهريًا، لكنه سحابي فقط وبلا نسخة ذاتية الاستضافة' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'الأفضل للبحث الهجين — BM25 مع المتجهات أصليًا، ومنذ يونيو 2026 طبقة مجانية بلا انتهاء بـ 100 ألف كائن' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'الأفضل للنماذج الأولية — يعمل داخل العملية بلا خادم، ونواته بلغة Rust، وChroma Cloud من صفر دولار شهريًا زائد الاستهلاك' },
@@ -4682,13 +4682,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026년 최고의 벡터 데이터베이스: Qdrant, Pinecone, Weaviate, Chroma',
-    seoTitle: '2026년 최고의 벡터 데이터베이스',
-    metaDescription: 'Qdrant는 스타 34,242개에 영구 무료 클라우드 등급, Pinecone은 월 20달러부터, Weaviate는 2026년 6월 만료 없는 무료 등급을 추가했습니다. 이제 넷 다 무료 등급이 있습니다.',
+    seoTitle: '최고의 벡터 DB 2026: Qdrant vs Pinecone',
+    metaDescription: '2026 최고의 벡터 데이터베이스: Qdrant(GitHub 스타 3.5만+, 영구 무료 클라우드), Pinecone 월 20달러부터, Weaviate와 Chroma를 RAG 기준으로 비교.',
     educationalLevel: 'Advanced',
     audience: 'RAG 애플리케이션을 만드는 개발자',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-02',
     readTime: '15분 분량',
     primaryTerm: '벡터 데이터베이스',
     targetKeywords: [
@@ -4698,12 +4698,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '벡터 데이터베이스 가격 비교',
       'RAG 벡터 데이터베이스',
     ],
-    leadAnswerBlock: '**대부분의 팀에게 가장 나은 기본 선택은 Qdrant입니다. GitHub 스타 34,242개, Apache-2.0 라이선스, 오픈소스 엔진 중 가장 적은 리소스 사용량, 그리고 영구 무료인 클라우드 등급을 갖췄습니다. 인프라 작업을 전혀 하고 싶지 않고 그 대가를 낼 생각이라면 Pinecone이 맞는 선택이며 Builder가 월 20달러부터입니다. 하이브리드 검색이 핵심이라면 Weaviate입니다. Chroma는 프로세스 안에서 돌아가기 때문에 동작하는 프로토타입까지의 거리가 가장 짧습니다. 이 분야에서 가장 낡은 주장은 "일부만 무료 등급이 있다"는 말인데, 2026년 6월부터는 넷 다 있습니다. 만료되던 14일 샌드박스를 진짜 무료이고 만료도 없는 요금제로 바꾼 Weaviate까지 포함해서입니다.**',
+    leadAnswerBlock: '**대부분의 팀에는 Qdrant가 기본 선택입니다. Apache-2.0, 적은 리소스, 영구 무료 클라우드 티어를 제공합니다. 인프라 관리를 피하려면 Pinecone(월 20달러부터), 하이브리드 검색은 Weaviate, 빠른 프로토타입은 Chroma입니다. 네 제품 모두 무료 티어가 있습니다.**',
     quickAnswerTop: {
       question: '2026년에 가장 좋은 벡터 데이터베이스는 무엇인가요?',
       answer: '**운영 여력이 조금이라도 있다면 비용 대비 성능이 가장 좋은 Qdrant, 인프라 작업을 0으로 만들고 싶다면 Pinecone, 검색 정확도에 하이브리드 검색이 핵심이라면 Weaviate, 프로토타입 중이고 서버를 전혀 두고 싶지 않다면 Chroma입니다.** 여기에 단일 승자는 없고, 하나를 지목하는 가이드는 당신의 질문이 아닌 다른 질문에 답하고 있는 것입니다. 진짜 결정은 엔진을 직접 운영할 것인가 빌릴 것인가이며, 이는 팀에 남는 것이 엔지니어링 시간인지 예산인지에 달려 있습니다. 둘이 같은 제약인 경우는 드뭅니다.',
       bullets: [
-        '**종합 최고:** Qdrant — 스타 34,242개, Apache-2.0, Rust 작성, 0.5 vCPU / 1GB RAM / 4GB 디스크의 영구 무료 클라우드 등급',
+        '**종합 최고:** Qdrant — 스타 35,383개, Apache-2.0, Rust 작성, 0.5 vCPU / 1GB RAM / 4GB 디스크의 영구 무료 클라우드 등급',
         '**운영 없이 쓰기 최적:** Pinecone — 가장 성숙한 서버리스 제품, Builder 월 20달러 정액, Standard 월 최소 50달러',
         '**하이브리드 검색 최적:** Weaviate — BM25와 벡터를 네이티브로 결합, 2026년 6월부터 만료 없고 신용카드도 필요 없는 무료 등급',
         '**프로토타이핑 최적:** Chroma — `pip install chromadb` 하면 파이썬 프로세스 안에서 돌아가고, 세울 서버가 없습니다',
@@ -4739,11 +4739,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Qdrant** — GitHub 스타 34,242개, Apache-2.0, Rust로 작성. Qdrant Cloud에는 0.5 vCPU, 1GB RAM, 4GB 디스크의 영구 무료 등급이 있습니다. Standard는 실사용량 기준으로 과금되며 99.5% 가동률을 보장하고 정액 플랫폼 요금이 없습니다. Premium은 SSO와 프라이빗 VPC 링크를 더해 99.9%와 최소 지출액이 붙습니다.',
+          '**Qdrant** — GitHub 스타 35,383개, Apache-2.0, Rust로 작성. Qdrant Cloud에는 0.5 vCPU, 1GB RAM, 4GB 디스크의 영구 무료 등급이 있습니다. Standard는 실사용량 기준으로 과금되며 99.5% 가동률을 보장하고 정액 플랫폼 요금이 없습니다. Premium은 SSO와 프라이빗 VPC 링크를 더해 99.9%와 최소 지출액이 붙습니다.',
           '**Pinecone** — 설계상 클라우드 전용이며 자체 호스팅 버전이 전혀 없습니다. Starter는 무료로 스토리지 2GB, 월 200만 쓰기 단위와 100만 읽기 단위를 제공합니다. Builder는 월 20달러 정액에 10GB, 쓰기 500만, 읽기 200만입니다. Standard는 월 최소 50달러에서 시작해 이후 사용량 과금이며, Enterprise는 월 최소 500달러로 99.95% 가동률 보장, BYOC, HIPAA, 감사 로그가 더해집니다.',
-          '**Weaviate** — 스타 16,758개, BSD-3-Clause, Go로 작성. **이 페이지에서 가장 중요한 정정:** Weaviate Cloud는 더 이상 14일 샌드박스가 아닙니다. 2026년 6월 17일, 신용카드 없이 만료도 없는 진짜 무료 등급이 출시됐습니다. 객체 10만 개, 메모리 1GB, 디스크 10GB입니다. 여전히 첫날부터 월 45달러를 잡아두라고 조언하는 비교 글은, 이제 무료인 것에 독자가 돈을 내게 만들고 있습니다.',
+          '**Weaviate** — 스타 16,934개, BSD-3-Clause, Go로 작성. **이 페이지에서 가장 중요한 정정:** Weaviate Cloud는 더 이상 14일 샌드박스가 아닙니다. 2026년 6월 17일, 신용카드 없이 만료도 없는 진짜 무료 등급이 출시됐습니다. 객체 10만 개, 메모리 1GB, 디스크 10GB입니다. 여전히 첫날부터 월 45달러를 잡아두라고 조언하는 비교 글은, 이제 무료인 것에 독자가 돈을 내게 만들고 있습니다.',
           '**Weaviate의 유료 가격도 바뀌었습니다.** 현행 요금 페이지는 Flex 월 45달러부터, Premium 월 400달러부터를 싣고 있습니다. 2025년 10월 가격 개편에서 발표된 월 280달러 Plus 등급은 그곳에 더 이상 없으므로, 예전 3단 구조 대신 Flex와 Premium을 인용하세요.',
-          '**Chroma** — 스타 29,174개, Apache-2.0, 그리고 출발점이던 파이썬 엔진이 아니라 이제 Rust 코어입니다. 넷 중 유일하게 서버 없이 프로세스 안에서 돌아가며, 프로토타이핑에서 이기는 이유가 바로 그것입니다.',
+          '**Chroma** — 스타 29,622개, Apache-2.0, 그리고 출발점이던 파이썬 엔진이 아니라 이제 Rust 코어입니다. 넷 중 유일하게 서버 없이 프로세스 안에서 돌아가며, 프로토타이핑에서 이기는 이유가 바로 그것입니다.',
           '**Chroma Cloud도 있습니다.** 이 분야 비교 글 대부분이 통째로 놓치는 부분입니다. Starter는 월 0달러에 사용량 과금이며 초기 크레딧 5달러가 붙고, Team은 월 250달러에 사용량 과금이며, 사용량은 쓰기 1GiB당 2.50달러, 저장 1GiB당 월 0.33달러, 조회 1TiB당 0.0075달러, 반환 1GiB당 0.09달러입니다. 즉 여기 매니지드 선택지는 셋이 아니라 넷입니다.',
           '**이제 넷 다 무료 등급이 있습니다.** 1년 전에는 사실이 아니었고, 지금 읽고 있는 비교 글이 갱신됐는지 확인하는 가장 빠른 방법이기도 합니다.',
           '**분명히 밝혀둘 것:** Pinecone은 실제로 콘텐츠 제작자를 위한 제휴 프로그램을 운영하며, 자사 파트너 페이지에서 확인됩니다. PromptQuorum은 여기에 가입하지 않았고 이 페이지의 어떤 링크로도 수익을 얻지 않습니다. 이 시리즈에서 그런 프로그램이 존재하는 유일한 분야이며, 바로 그래서 위의 추천이 Pinecone이 아니라 Qdrant입니다.',
@@ -4797,12 +4797,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'Qdrant, Pinecone, Weaviate, Chroma 비교',
-        content: '**넷은 기능을 정면으로 겨루기보다 리소스 사용량, 운영의 단순함, 검색 품질, 첫 질의까지의 시간이라는 서로 다른 제약을 최적화합니다.** 가격은 2026년 8월 28일 각 사 요금 페이지에서 확인했고, 저장소 수치는 같은 날 GitHub API에서 가져왔습니다.',
+        content: '**넷은 기능을 정면으로 겨루기보다 리소스 사용량, 운영의 단순함, 검색 품질, 첫 질의까지의 시간이라는 서로 다른 제약을 최적화합니다.** 가격은 2026년 11월 2일 각 사 요금 페이지에서 확인했고, 저장소 수치는 같은 날 GitHub API에서 가져왔습니다.',
         tableFormat: true,
         itemHeadings: true,
         columns: ['항목', '[Qdrant](https://qdrant.tech)', '[Pinecone](https://www.pinecone.io)', '[Weaviate](https://weaviate.io)', '[Chroma](https://www.trychroma.com)'],
         rows: [
-          { 항목: 'GitHub 스타', Qdrant: '34,242', Pinecone: '오픈소스 아님', Weaviate: '16,758', Chroma: '29,174' },
+          { 항목: 'GitHub 스타', Qdrant: '35,383', Pinecone: '오픈소스 아님', Weaviate: '16,934', Chroma: '29,622' },
           { 항목: '라이선스', Qdrant: 'Apache-2.0', Pinecone: '독점', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
           { 항목: '구현 언어', Qdrant: 'Rust', Pinecone: '비공개', Weaviate: 'Go', Chroma: '코어는 Rust' },
           { 항목: '자체 호스팅', Qdrant: '가능, 무료', Pinecone: '불가, 클라우드 전용', Weaviate: '가능, 무료', Chroma: '가능, 무료' },
@@ -4840,13 +4840,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Qdrant — 종합 최고',
-            tagline: '스타 34,242개, Apache-2.0, Rust, 영구 무료 클라우드 등급',
+            tagline: '스타 35,383개, Apache-2.0, Rust, 영구 무료 클라우드 등급',
             verdict: 'Qdrant는 Rust로 작성돼 있고, 이는 같은 부하에서 Go와 파이썬 계보의 대안보다 메모리와 CPU 사용량이 적다는 형태로 드러납니다. 그 사용량이 단일 노드에서 더 멀리 가는 실질적인 이유입니다. 필터링은 여기서 가장 강력한데, 메타데이터 조건을 결과에 사후 적용하는 대신 HNSW 탐색 도중에 적용합니다. 그래서 필터가 강한 질의가 조용히 전체 스캔으로 퇴화하지 않습니다. 하이브리드 검색은 조밀 벡터와 나란한 희소 벡터를 통해 네이티브로 지원됩니다. 클라우드 가격은 넷 중 가장 깔끔합니다. 0.5 vCPU, 1GB RAM, 4GB 디스크의 무료 등급은 기간 제한이 아니라 영구입니다. Standard는 실제 vCPU·메모리·스토리지 소비량 기준으로 과금되고 99.5% 가동률을 보장하며 그 위에 정액 플랫폼 요금이 붙지 않습니다. Premium은 SSO와 프라이빗 VPC 링크를 더해 99.9%와 최소 지출액이 붙습니다. 플랫폼 요금이 없다는 점이 비용에 민감한 선택지가 되는 이유입니다. 고객이라는 자격이 아니라 리소스에 돈을 냅니다.',
             pros: [
               '오픈소스 엔진 중 리소스 사용량이 가장 적어 단일 노드가 더 멀리 갑니다',
               '필터링을 사후가 아니라 인덱스 탐색 중에 적용하므로 필터링된 질의도 빠릅니다',
               '체험이 아니라 영구 무료인 클라우드 등급, Standard는 정액 없이 사용량 과금',
-              'Apache-2.0에 스타 34,242개로 여기서 가장 큰 커뮤니티, 자체 호스팅과 매니지드가 같은 엔진',
+              'Apache-2.0에 스타 35,383개로 여기서 가장 큰 커뮤니티, 자체 호스팅과 매니지드가 같은 엔진',
             ],
             cons: [
               'SQL도 GraphQL도 아닌 자체 쿼리 언어라 학습 곡선이 있습니다',
@@ -4908,7 +4908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Weaviate — 하이브리드 검색이 중요할 때 최적',
-            tagline: '스타 16,758개, BSD-3-Clause, Go, 2026년 6월부터 만료 없는 무료 등급',
+            tagline: '스타 16,934개, BSD-3-Clause, Go, 2026년 6월부터 만료 없는 무료 등급',
             verdict: 'Weaviate는 BM25 키워드 점수와 벡터 유사도를 쿼리 API 안에서 네이티브로 결합하며, 다른 제품들보다 오래 그렇게 해왔습니다. 그 점은 배합을 얼마나 통제할 수 있는지에서 드러납니다. 이는 들리는 것보다 중요합니다. 순수 의미 검색은 제품 코드, 모델 번호, 오류 문자열, 약어 같은 정확한 표현을 안정적으로 놓칩니다. 그런 토큰의 의미는 글자 그대로의 형태이기 때문입니다. Weaviate는 임베딩 제공자를 대신 호출해 주는 벡터화 모듈도 함께 제공해, 애플리케이션이 아니라 데이터베이스가 임베딩을 맡을 수 있습니다. 가격에서 중요한 사실은 최근의 것입니다. 2026년 6월 17일 Weaviate는 신용카드 없이 만료도 없는 무료 등급을 내놨고, 객체 10만 개, 메모리 1GB, 디스크 10GB를 제공합니다. 이것이 비교 글들이 아직 서술하는 14일 샌드박스를 대체했습니다. 현행 페이지의 유료 요금제는 사용량 과금에 99.5% 가동률을 보장하는 Flex가 월 45달러부터, 공유 또는 전용 배포의 Premium이 월 400달러부터입니다. 2025년 10월 발표의 월 280달러 Plus 등급은 그곳에 더 이상 없습니다.',
             pros: [
               '여기서 가장 성숙한 하이브리드 검색이며, 키워드와 벡터의 배합을 실제로 통제할 수 있습니다',
@@ -4942,7 +4942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             name: 'Chroma — 프로토타이핑과 중소 규모 부하에 최적',
-            tagline: '스타 29,174개, Apache-2.0, Rust 코어, `pip install chromadb` 하면 동작',
+            tagline: '스타 29,622개, Apache-2.0, Rust 코어, `pip install chromadb` 하면 동작',
             verdict: 'Chroma는 pip으로 설치되고 임베디드로 돌아가므로, 노트북이 컨테이너도 포트도 설정도 없이 몇 줄만으로 동작하는 의미 검색을 가질 수 있습니다. 이 한 가지 성질이 튜토리얼과 프로토타입에서의 지배력을 설명하며, 이는 초보자용 보조바퀴가 아니라 실질적인 엔지니어링 이점입니다. 인프라 없이 검색 로직을 시험할 수 있다는 것은 반복 주기를 상당히 줄여 줍니다. 엔진 코어는 Rust로 다시 쓰였기 때문에 성능 이야기는 파이썬 출신이 시사하는 것보다 낫습니다. 다만 메타데이터 필터링은 여전히 Qdrant보다 단순하고, 하이브리드 검색은 더 최근이며 완성도가 낮습니다. Chroma Cloud도 있는데 이 분야 비교 글 대부분이 빠뜨립니다. Starter는 월 0달러에 사용량 과금이며 크레딧 5달러와 데이터베이스 10개, Team은 월 250달러에 사용량 과금이며 데이터베이스 100개와 전용 Slack 지원, Enterprise는 단일 테넌트 또는 자체 클라우드 클러스터가 더해집니다. 사용량은 쓰기 1GiB당 2.50달러, 저장 1GiB당 월 0.33달러, 조회 1TiB당 0.0075달러, 반환 1GiB당 0.09달러입니다.',
             pros: [
               '서버 없이 프로세스 안에서 돌아가므로 시작하는 데 준비할 것이 없습니다',
@@ -4998,7 +4998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '이 수치는 2026년 8월 28일 기준 일반적인 머신 가격과 각 사 정가로 모델링한 추정치이며, 실측된 프로덕션 청구서가 아닙니다. Pinecone, Qdrant Cloud, Chroma Cloud의 사용량 비용은 질의량에 따라 달라지므로, 결정 전에 예상 읽기·쓰기 양을 각 사 계산기에 넣어 보세요.',
+            text: '이 수치는 2026년 11월 2일 기준 일반적인 머신 가격과 각 사 정가로 모델링한 추정치이며, 실측된 프로덕션 청구서가 아닙니다. Pinecone, Qdrant Cloud, Chroma Cloud의 사용량 비용은 질의량에 따라 달라지므로, 결정 전에 예상 읽기·쓰기 양을 각 사 계산기에 넣어 보세요.',
           },
         ],
         note: '100만 벡터에서는 대개 정가가 아니라 운영 항목이 결정을 짓습니다. 소재지나 사용량이 요구하면 자체 호스팅하고, 그렇지 않다면 자기 시간을 정직하게 값 매긴 순간 매니지드 등급이 더 쌉니다.',
@@ -5134,15 +5134,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '출처',
         links: [
           { url: 'https://qdrant.tech/pricing/', title: 'Qdrant Cloud 요금', description: '0.5 vCPU, 1GB RAM, 4GB 디스크의 영구 무료 등급 한도와 Standard의 사용량 과금, 99.5% 및 99.9% 가동률 보장.' },
-          { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant 저장소', description: '스타 34,242개, Apache-2.0 라이선스, 구현 언어 Rust. 2026년 8월 28일 GitHub API에서 확인.' },
+          { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant 저장소', description: '스타 35,383개, Apache-2.0 라이선스, 구현 언어 Rust. 2026년 11월 2일 GitHub API에서 확인.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone 요금', description: 'Starter, Builder, Standard, Enterprise 한도. 20달러 정액 Builder와 월 50달러·500달러 최소 금액 포함.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone 파트너 페이지', description: '기술·솔루션·추천 파트너 범주와 나란히 있는 콘텐츠 제작자 대상 제휴 프로그램 확인.' },
           { url: 'https://weaviate.io/blog/weaviate-free-tier', title: 'Weaviate Cloud, 이제 무료로 시작', description: '신용카드 없이 만료도 없는 무료 등급을 알린 2026년 6월 17일 공지. 14일 샌드박스를 대체.' },
           { url: 'https://weaviate.io/pricing', title: 'Weaviate 요금', description: '무료 등급의 현행 한도인 객체 10만 개, 메모리 1GB, 디스크 10GB와 Flex 월 45달러부터, Premium 월 400달러부터.' },
           { url: 'https://weaviate.io/blog/weaviate-cloud-pricing-update', title: 'Weaviate Cloud 요금 개편', description: 'Flex, Plus, Premium을 도입한 2025년 10월 개편. 가격 변경 시점을 짚는 데 유용.' },
-          { url: 'https://github.com/weaviate/weaviate', title: 'Weaviate 저장소', description: '스타 16,758개, BSD-3-Clause 라이선스, 구현 언어 Go.' },
+          { url: 'https://github.com/weaviate/weaviate', title: 'Weaviate 저장소', description: '스타 16,934개, BSD-3-Clause 라이선스, 구현 언어 Go.' },
           { url: 'https://www.trychroma.com/pricing', title: 'Chroma Cloud 요금', description: '월 0달러＋사용량에 크레딧 5달러인 Starter, 월 250달러인 Team, 그리고 쓰기·저장·조회·아웃바운드의 GiB당 요율.' },
-          { url: 'https://github.com/chroma-core/chroma', title: 'Chroma 저장소', description: '스타 29,174개, Apache-2.0 라이선스, 현재 코어의 주 구현 언어 Rust.' },
+          { url: 'https://github.com/chroma-core/chroma', title: 'Chroma 저장소', description: '스타 29,622개, Apache-2.0 라이선스, 현재 코어의 주 구현 언어 Rust.' },
         ],
       },
       relatedReading: {
@@ -5162,7 +5162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026년 최고의 벡터 데이터베이스: Qdrant, Pinecone, Weaviate, Chroma',
       description: 'RAG를 위한 Qdrant, Pinecone, Weaviate, Chroma 비교. 확인된 가격, 라이선스, 스타 수, 무료 등급 한도에 더해 2026년 6월 도입된 Weaviate의 만료 없는 무료 등급과 Chroma Cloud를 다룹니다.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-02',
       url: 'https://www.promptquorum.com/ko/local-llms/best-vector-database',
       inLanguage: 'ko',
       proficiencyLevel: 'Advanced',
@@ -5230,11 +5230,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: '최고의 벡터 데이터베이스(2026년 8월)',
+      name: '최고의 벡터 데이터베이스(2026년)',
       inLanguage: 'ko',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: '종합 최고 — 스타 34,242개, Apache-2.0, Rust, 가장 적은 리소스 사용량과 사용량 과금 Standard를 갖춘 영구 무료 클라우드 등급' },
+        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: '종합 최고 — 스타 35,383개, Apache-2.0, Rust, 가장 적은 리소스 사용량과 사용량 과금 Standard를 갖춘 영구 무료 클라우드 등급' },
         { '@type': 'ListItem', position: 2, name: 'Pinecone', description: '운영 없이 쓰기 최적 — 가장 성숙한 서버리스 제품, Builder 월 20달러 정액. 다만 클라우드 전용이고 자체 호스팅 버전이 없음' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: '하이브리드 검색 최적 — BM25와 벡터를 네이티브로 결합, 2026년 6월부터 객체 10만 개의 만료 없는 무료 등급' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: '프로토타이핑 최적 — 서버 없이 프로세스 안에서 실행, Rust 코어, Chroma Cloud는 월 0달러＋사용량부터' },

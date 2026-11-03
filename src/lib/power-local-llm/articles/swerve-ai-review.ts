@@ -3,7 +3,7 @@
 // Companion to: agnai-review, risuai-review, backyard-ai-review-local-roleplay
 // Sources: the App Store listing (id6754301136, US/DE/FR/ES/JP/BR storefronts + iTunes lookup), getswerve.com, its privacy notice
 // (last updated 2026-06-19) and its terms, all read 2026-10-17 — no hands-on testing.
-// Version 1.32.0 (released 2026-10-07) is the version shown on the listing (tile pqReview.version must match).
+// Version 1.33.0 (released 2026-10-23) is the version shown on the listing (tile pqReview.version must match). Refreshed 2026-11-02 against the listing, getswerve.com (support, safety, about, privacy) and iTunes lookup.
 // Prices: each locale shows its own App Store storefront (US $12.49 Pro / gems from $2.49, DE+FR+ES 14,99 EUR / gems from 2,99 EUR,
 // JP 2,000 JPY / gems from 400 JPY, BR R$ 79,90 / gems from R$ 14,90). ZH/AR/KO use the US storefront in USD (the Korean storefront has
 // no listing). Never FX-converted.
@@ -16,25 +16,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
-    next_refresh_due: '2027-04-17',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/swerve-ai-review-hero-en.webp',
     title: 'Swerve Review: AI Story and Character Chat for iPhone',
-    seoTitle: 'Swerve Review: AI Story and Character Chat for iPhone',
+    seoTitle: 'Swerve AI Review: Privacy, Price, 18+ Rating and Android',
     intro:
       'Swerve: AI Chat & Stories is an iPhone app from MSPW Labs, Inc. where you talk to AI characters and play branching stories. This review covers what its App Store listing, website, privacy notice and terms document, what they leave unsaid, and how it compares with roleplay apps that run on a computer you control.',
     metaDescription:
-      'Swerve review: free iPhone app for AI character chat and branching stories. In-app purchases, 18+ rating, cloud service, privacy and local alternatives.',
+      'Swerve AI review for iPhone: free download with in-app purchases, 18+ rating, what the privacy notice says about chats, and Android and web status.',
     twitterDescription:
-      'Swerve review: freemium iPhone roleplay app with branching stories. Pricing, age rating, what the privacy notice says, limits, and local alternatives.',
+      'Swerve AI review: freemium iPhone roleplay app. Price, 18+ rating, what the privacy notice says about chats, and why Android and web are waitlists.',
     audience:
       'iPhone owners weighing an AI roleplay and story app — covers features, pricing, privacy, age rating, limits, and alternatives that run locally.',
     readTime: '6 min read',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: false,
-    primaryTerm: 'Swerve review',
+    primaryTerm: 'Swerve AI review',
     targetKeywords: [
+      'is swerve ai safe',
+      'swerve ai android',
+      'swerve ai free',
       'swerve ai review',
       'swerve ai chat and stories',
       'swerve app iphone',
@@ -46,7 +49,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories is a free, closed-source iPhone app for roleplay chats and branching stories; it is an online service, not a local-AI app.** Per its App Store listing it needs iOS 18.0 or later. This review covers version 1.32.0, last updated October 7, 2026, and rests on public sources only, not on hands-on testing.',
+      '**Swerve: AI Chat & Stories is a free, closed-source iPhone app for roleplay chats and branching stories, run as an online service, not local AI.** Reviewed version: 1.33.0, updated October 23, 2026, from public sources only, without hands-on testing.',
     quickAnswerTop: {
       en: {
         question: 'Is Swerve worth installing for AI character chat and stories on an iPhone?',
@@ -59,7 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'The privacy notice says identifiers and internet activity were sold or shared with ad networks in the past 12 months.',
           'Android and web versions are waitlist-only.',
         ],
-        updatedDate: '2026-10-17',
+        updatedDate: '2026-11-02',
       },
     },
     toc: [
@@ -95,7 +98,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Version reviewed: 1.32.0, as shown on the [App Store listing](https://apps.apple.com/us/app/swerve-ai-chat/id6754301136).',
+          'Version reviewed: 1.33.0, as shown on the [App Store listing](https://apps.apple.com/us/app/swerve-ai-chat/id6754301136).',
           'Where it runs: the listing, website and notice name no AI model or host, and no on-device mode is documented.',
           'Age: rated 18+ on the App Store, with frequent sexual content or nudity listed in the age-rating details.',
           'Language: the listing is English only.',
@@ -106,7 +109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Get Swerve',
         content: [
-          '**Swerve is distributed through the Apple App Store as an iPhone-only app.** The download is 116.9 MB and free, with in-app purchases.',
+          '**Swerve is distributed through the Apple App Store as an iPhone-only app.** The download is 121.4 MB and free, with in-app purchases.',
         ],
         columns: ['Channel', 'Get It'],
         rows: [
@@ -141,7 +144,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Attribute': 'Group chats', 'Swerve': 'Yes, several characters per story' },
           { 'Attribute': 'Lorebooks / world info', 'Swerve': 'Not stated in the listing' },
           { 'Attribute': 'Age rating', 'Swerve': '18+' },
-          { 'Attribute': 'Version / last update', 'Swerve': '1.32.0 / October 7, 2026' },
+          { 'Attribute': 'Version / last update', 'Swerve': '1.33.0 / October 23, 2026' },
+          { 'Attribute': 'Store rating', 'Swerve': '4.7 of 5, about 37,000 App Store ratings (US)' },
           { 'Attribute': 'Interface language', 'Swerve': 'English' },
         ],
         note: 'Attributes follow the roleplay comparison used in the Local AI App Directory. They come from the App Store listing and website, which do not cover every feature.',
@@ -151,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Swerve Is',
         content: [
           '**Swerve is an interactive-fiction chat app: you "play stories in your own words" and AI characters respond.** The listing describes more than 500,000 community-created characters across genres such as romance, drama, anime and fantasy.',
-          'It is published by MSPW Labs, Inc., a US company. The website calls getswerve.com "the only official Swerve AI website", so treat similarly named apps and sites as different products.',
+          'It is published by MSPW Labs, Inc., a US company. The website calls getswerve.com "the only official Swerve AI website", so treat similarly named apps and sites as different products. Apple\'s App Store lookup data dates its first release to November 16, 2025, and the website describes the company as a Delaware corporation based in Palo Alto and backed by Y Combinator.',
           'This review draws on those four public sources only. It includes no hands-on testing, so answer quality, memory reliability, moderation and speed are not rated here.',
         ],
       },
@@ -165,7 +169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Characters.** Browse community characters or create your own and share them publicly or keep them private.',
           '**Story modes.** Chat one-on-one or bring several characters into the same story, and play as any character through personas.',
           '**Memory.** Pin the details characters should remember.',
-          '**Control.** Request another reply, edit messages, or start a new path from any message. Version 1.32.0 adds automatic drafts and a rewind preview that shows how many messages it will remove.',
+          '**Control.** Request another reply, edit messages, or start a new path from any message. Version 1.32.0 adds automatic drafts and a rewind preview that shows how many messages it will remove. Version 1.33.0 then added search across your characters, personas and bookmarks from your profile, plus chat layout and font options in Settings.',
           '**Community.** The listing links a Discord community.',
         ],
       },
@@ -176,6 +180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Swerve is free to download, with in-app purchases for a Pro tier, gem packs and, on some storefronts, a Swerve Lite tier.** On the US storefront Pro costs $12.49 and gem packs start at $2.49. The listing does not say what Pro or the gems unlock, so check the paywall in the app first.',
           '**The privacy notice, last updated June 19, 2026, says Swerve collects names, email addresses and usernames, plus IP address, device and app IDs, app activity and crash reports.** Payments run through Apple and RevenueCat, and signing in with Facebook or X can share profile details such as name, email, friends list and picture.',
           '**The notice also says identifiers and internet activity were sold or shared with ad networks in the past 12 months, and the App Store label lists identifiers used to track you across other companies\' apps and websites.** It names no AI provider, lists "AI platforms" only as a category of recipient, and does not say whether chats are used to train models. These are the developer\'s own statements; this review did not inspect network traffic.',
+          '**The developer\'s Safety Center page, last updated May 25, 2026, says Swerve uses AI-based classification to detect self-harm content in messages in real time, blocks the character\'s reply to a flagged message and shows crisis resources.** That is the developer\'s own description; this review did not test how the app behaves.',
         ],
       },
       ageContent: {
@@ -213,8 +218,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Benefit': 'Frequent updates',
-            'What it means in real use': 'The version history shows 25 releases from March 23 to October 7.',
-            'Limitation / caveat': 'All but the latest list only "Bug fixes and performance improvements".',
+            'What it means in real use': 'The version history shows 25 releases from April 2 to October 23.',
+            'Limitation / caveat': 'Only the two latest releases list specific changes; the others read "Bug fixes and performance improvements".',
           },
         ],
       },
@@ -290,6 +295,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Can I delete my Swerve account and data?',
             a: 'The website links an account-deletion page, and the notice says data is deactivated or deleted after account termination, with some kept for fraud prevention and legal reasons.',
           },
+          {
+            q: 'Is Swerve AI safe to use?',
+            a: 'This review did not test the app, so it does not rate its safety. The developer\'s own pages document an 18+ age limit, a Safety Center that describes automatic self-harm detection, and a privacy notice that describes sharing with ad networks; read the notice before you share personal details.',
+          },
+          {
+            q: 'Does Swerve AI read my chats?',
+            a: 'Neither the privacy notice nor the terms say whether staff, character creators or other users can read your chats. The terms say Swerve has no obligation to monitor user contributions, and the Safety Center says messages are scanned automatically for self-harm content. For a definite answer, ask [support@getswerve.com](mailto:support@getswerve.com).',
+          },
+          {
+            q: 'Is Swerve AI free?',
+            a: 'The download is free, and the App Store lists in-app purchases: Pro, Swerve Lite and gem packs. The listing does not say which features need a purchase, and this review did not test the free tier.',
+          },
+          {
+            q: 'When is Swerve AI coming to Android and the web?',
+            a: 'The developer gives no date. Its support page says both are "coming soon", that no official Android app, APK or web version exists yet, and that other "Swerve AI" apps and sites are not from the company.',
+          },
+          {
+            q: 'Why are my Swerve chats missing?',
+            a: 'The developer\'s support FAQ says this usually means you signed in with different credentials (Apple or Google) than the ones you signed up with. Sign out and back in with the original ones, or open Settings → Support Chat in the app.',
+          },
         ],
       },
       verdict: {
@@ -309,6 +334,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Swerve website](https://www.getswerve.com/) — the developer\'s own description and platform availability.',
           '[Swerve privacy notice](https://www.getswerve.com/privacy) — data collection, ad-network sharing and retention.',
           '[Swerve terms and conditions](https://www.getswerve.com/terms) — age limit, content policy and subscription terms.',
+          '[Swerve Safety Center](https://www.getswerve.com/safety) — self-harm detection and crisis-resource protocol.',
+          '[Swerve support](https://www.getswerve.com/support) — official-site statement, Android and web status, missing-chats help.',
+          '[Swerve about page](https://www.getswerve.com/about) — company, location and backer.',
         ],
       },
       relatedReading: {
@@ -327,8 +355,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
-    next_refresh_due: '2027-04-17',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/swerve-ai-review-hero-de.webp',
     title: 'Swerve Rezension: KI-Story- und Charakter-Chat für das iPhone',
@@ -357,7 +385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories ist eine kostenlose, nicht quelloffene iPhone-App zum Chatten mit KI-Charakteren und für verzweigte Geschichten; sie ist ein Online-Dienst, keine lokale KI-App.** Laut App-Store-Eintrag setzt sie iOS 18.0 oder neuer voraus. Diese Rezension behandelt Version 1.32.0, zuletzt aktualisiert am 7. Oktober 2026, und beruht auf Eintrag, Website, Datenschutzhinweis und Nutzungsbedingungen, nicht auf praktischen Tests.',
+      '**Swerve: AI Chat & Stories ist eine kostenlose, nicht quelloffene iPhone-App für KI-Charakter-Chats und verzweigte Geschichten, als Online-Dienst statt lokaler KI.** Geprüfte Version: 1.33.0, aktualisiert am 23. Oktober 2026, nur aus öffentlichen Quellen, ohne praktische Tests.',
     quickAnswerTop: {
       de: {
         question: 'Lohnt sich Swerve für KI-Charakter-Chat und Geschichten auf dem iPhone?',
@@ -370,7 +398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Laut Datenschutzhinweis wurden Kennungen und Internetaktivität in den letzten 12 Monaten an Werbenetzwerke verkauft oder weitergegeben.',
           'Android- und Web-Version gibt es nur als Warteliste.',
         ],
-        updatedDate: '2026-10-17',
+        updatedDate: '2026-11-02',
       },
     },
     toc: [
@@ -406,7 +434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Geprüfte Version: 1.32.0, wie im [App-Store-Eintrag](https://apps.apple.com/de/app/swerve-ai-chat-stories/id6754301136) angezeigt.',
+          'Geprüfte Version: 1.33.0, wie im [App-Store-Eintrag](https://apps.apple.com/de/app/swerve-ai-chat-stories/id6754301136) angezeigt.',
           'Wo sie läuft: Eintrag, Website und Hinweis nennen kein KI-Modell und keinen Host; ein On-Device-Modus ist nicht dokumentiert.',
           'Alter: im App Store ab 18 Jahren eingestuft; die Altersdetails nennen häufige sexuelle Inhalte oder Nacktheit.',
           'Sprache: Der Eintrag ist nur auf Englisch.',
@@ -417,7 +445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Swerve herunterladen',
         content: [
-          '**Swerve wird über den Apple App Store als reine iPhone-App vertrieben.** Der Download ist 116,9 MB groß und kostenlos, mit In-App-Käufen.',
+          '**Swerve wird über den Apple App Store als reine iPhone-App vertrieben.** Der Download ist 121,4 MB groß und kostenlos, mit In-App-Käufen.',
         ],
         columns: ['Kanal', 'Bezugsquelle'],
         rows: [
@@ -452,7 +480,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Merkmal': 'Gruppenchats', 'Swerve': 'Ja, mehrere Charaktere pro Story' },
           { 'Merkmal': 'Lorebooks / World Info', 'Swerve': 'Im Eintrag nicht genannt' },
           { 'Merkmal': 'Altersfreigabe', 'Swerve': '18+' },
-          { 'Merkmal': 'Version / letztes Update', 'Swerve': '1.32.0 / 7. Oktober 2026' },
+          { 'Merkmal': 'Version / letztes Update', 'Swerve': '1.33.0 / 23. Oktober 2026' },
+          { 'Merkmal': 'App-Store-Bewertung', 'Swerve': '4,7 von 5, rund 37.000 Bewertungen (US-Store)' },
           { 'Merkmal': 'Sprache der Oberfläche', 'Swerve': 'Englisch' },
         ],
         note: 'Die Merkmale folgen dem Rollenspiel-Vergleich des Local AI App Directory. Sie stammen aus App-Store-Eintrag und Website, die nicht jede Funktion abdecken.',
@@ -462,7 +491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was Swerve ist',
         content: [
           '**Swerve ist eine Interactive-Fiction-Chat-App: Man „spielt Geschichten in eigenen Worten“, und KI-Charaktere antworten.** Der Eintrag beschreibt mehr als 500.000 von der Community erstellte Charaktere in Genres wie Romantik, Drama, Anime und Fantasy.',
-          'Herausgegeben wird sie von MSPW Labs, Inc., einem US-Unternehmen. Die Website nennt getswerve.com „die einzige offizielle Swerve-AI-Website“; ähnlich benannte Apps und Seiten sind daher andere Produkte.',
+          'Herausgegeben wird sie von MSPW Labs, Inc., einem US-Unternehmen. Die Website nennt getswerve.com „die einzige offizielle Swerve-AI-Website“; ähnlich benannte Apps und Seiten sind daher andere Produkte. Laut Apples App-Store-Abfragedaten erschien die App erstmals am 16. November 2025; die Website beschreibt das Unternehmen als Delaware Corporation mit Sitz in Palo Alto, unterstützt von Y Combinator.',
           'Diese Rezension stützt sich nur auf Eintrag, Website, Datenschutzhinweis und Nutzungsbedingungen. Praktische Tests fehlen, daher werden Antwortqualität, Zuverlässigkeit des Gedächtnisses, Moderation und Geschwindigkeit hier nicht bewertet.',
         ],
       },
@@ -476,7 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Charaktere.** Community-Charaktere durchsuchen oder eigene erstellen und öffentlich teilen oder privat halten.',
           '**Story-Modi.** Einzeln chatten oder mehrere Charaktere in dieselbe Geschichte holen und über Personas als beliebiger Charakter spielen.',
           '**Gedächtnis.** Details fixieren, die Charaktere sich merken sollen.',
-          '**Kontrolle.** Eine andere Antwort anfordern, Nachrichten bearbeiten oder ab jeder Nachricht einen neuen Pfad beginnen. Version 1.32.0 ergänzt automatische Entwürfe und eine Vorschau beim Zurückspulen, die zeigt, wie viele Nachrichten entfernt werden.',
+          '**Kontrolle.** Eine andere Antwort anfordern, Nachrichten bearbeiten oder ab jeder Nachricht einen neuen Pfad beginnen. Version 1.32.0 ergänzt automatische Entwürfe und eine Vorschau beim Zurückspulen, die zeigt, wie viele Nachrichten entfernt werden. Version 1.33.0 brachte danach die Suche in eigenen Charakteren, Personas und Lesezeichen im Profil sowie Optionen für Chat-Layout und Schriftart in den Einstellungen.',
           '**Community.** Der Eintrag verlinkt eine Discord-Community.',
         ],
       },
@@ -487,6 +516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Swerve ist kostenlos herunterladbar, mit In-App-Käufen für einen Pro-Tarif, Gem-Pakete und in manchen Stores einen Tarif Swerve Lite.** Im deutschen Store kostet Pro 14,99 €, Gem-Pakete beginnen bei 2,99 €. Der Eintrag sagt nicht, was Pro oder die Gems freischalten; prüfen Sie daher zuerst die Bezahlseite in der App.',
           '**Laut Datenschutzhinweis (zuletzt aktualisiert am 19. Juni 2026) erhebt Swerve Namen, E-Mail-Adressen und Benutzernamen sowie IP-Adresse, Geräte- und App-Kennungen, App-Aktivität und Absturzberichte.** Zahlungen laufen über Apple und RevenueCat; bei der Anmeldung mit Facebook oder X können Profildaten wie Name, E-Mail, Freundesliste und Bild übermittelt werden.',
           '**Der Hinweis nennt außerdem, dass Kennungen und Internetaktivität in den letzten 12 Monaten an Werbenetzwerke verkauft oder weitergegeben wurden; das App-Store-Label führt Kennungen auf, die zum Tracking über Apps und Websites anderer Unternehmen dienen.** Er nennt keinen KI-Anbieter, führt „KI-Plattformen“ nur als Empfängerkategorie auf und sagt nicht, ob Chats zum Training von Modellen verwendet werden. Dies sind Angaben des Entwicklers; diese Rezension hat den Netzwerkverkehr nicht geprüft.',
+          '**Die Safety-Center-Seite des Entwicklers, zuletzt aktualisiert am 25. Mai 2026, besagt, dass Swerve Nachrichten per KI-Klassifizierung in Echtzeit auf Selbstverletzungsinhalte prüft, die Antwort des Charakters auf eine markierte Nachricht blockiert und Krisenhilfen einblendet.** Das ist die eigene Beschreibung des Entwicklers; diese Rezension hat nicht getestet, wie sich die App tatsächlich verhält.',
         ],
       },
       ageContent: {
@@ -524,8 +554,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Vorteil': 'Häufige Updates',
-            'Was das im Alltag bedeutet': 'Die Versionshistorie zeigt 25 Releases vom 23. März bis 7. Oktober.',
-            'Einschränkung / Hinweis': 'Alle außer dem neuesten nennen nur „Bug fixes and performance improvements“.',
+            'Was das im Alltag bedeutet': 'Die Versionshistorie zeigt 25 Releases vom 2. April bis 23. Oktober.',
+            'Einschränkung / Hinweis': 'Nur die beiden neuesten Releases nennen konkrete Änderungen; die übrigen enthalten nur „Bug fixes and performance improvements“.',
           },
         ],
       },
@@ -601,6 +631,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Kann ich mein Swerve-Konto und meine Daten löschen?',
             a: 'Die Website verlinkt eine Seite zur Kontolöschung, und laut Hinweis werden Daten nach Kontobeendigung deaktiviert oder gelöscht; einiges bleibt zur Betrugsprävention und aus rechtlichen Gründen erhalten.',
           },
+          {
+            q: 'Ist Swerve AI sicher?',
+            a: 'Diese Rezension hat die App nicht getestet und bewertet ihre Sicherheit daher nicht. Die eigenen Seiten des Entwicklers dokumentieren eine Altersgrenze von 18+, ein Safety Center mit automatischer Erkennung von Selbstverletzungsinhalten und einen Datenschutzhinweis, der die Weitergabe an Werbenetzwerke beschreibt; lesen Sie den Hinweis, bevor Sie persönliche Angaben machen.',
+          },
+          {
+            q: 'Liest Swerve AI meine Chats mit?',
+            a: 'Weder der Datenschutzhinweis noch die Nutzungsbedingungen sagen, ob Mitarbeitende, Charakter-Ersteller oder andere Nutzer Ihre Chats lesen können. Die Bedingungen halten fest, dass Swerve nicht verpflichtet ist, Nutzerbeiträge zu überwachen, und das Safety Center nennt eine automatische Prüfung von Nachrichten auf Selbstverletzungsinhalte. Eine verbindliche Antwort erhalten Sie über [support@getswerve.com](mailto:support@getswerve.com).',
+          },
+          {
+            q: 'Ist Swerve AI kostenlos?',
+            a: 'Der Download ist kostenlos, und der App Store nennt In-App-Käufe: Pro, Swerve Lite und Gem-Pakete. Der Eintrag sagt nicht, welche Funktionen einen Kauf voraussetzen, und diese Rezension hat die kostenlose Stufe nicht getestet.',
+          },
+          {
+            q: 'Wann kommt Swerve AI für Android und das Web?',
+            a: 'Der Entwickler nennt kein Datum. Seine Support-Seite sagt, beide Versionen kämen „bald“, es gebe bisher keine offizielle Android-App, kein APK und keine Web-Version, und andere „Swerve AI“-Apps und -Seiten stammten nicht vom Unternehmen.',
+          },
+          {
+            q: 'Warum fehlen meine Swerve-Chats?',
+            a: 'Laut Support-FAQ des Entwicklers liegt das meist daran, dass Sie sich mit anderen Zugangsdaten (Apple oder Google) angemeldet haben als bei der Registrierung. Melden Sie sich ab und mit den ursprünglichen Daten wieder an, oder öffnen Sie in der App „Settings → Support Chat“.',
+          },
         ],
       },
       verdict: {
@@ -620,6 +670,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Swerve-Website](https://www.getswerve.com/) — Selbstbeschreibung des Entwicklers und Plattformverfügbarkeit.',
           '[Datenschutzhinweis von Swerve](https://www.getswerve.com/privacy) — Datenerhebung, Weitergabe an Werbenetzwerke und Speicherdauer.',
           '[Nutzungsbedingungen von Swerve](https://www.getswerve.com/terms) — Altersgrenze, Inhaltsrichtlinie und Abo-Bedingungen.',
+          '[Swerve Safety Center](https://www.getswerve.com/safety) — Erkennung von Selbstverletzungsinhalten und Krisenhilfen.',
+          '[Swerve-Support](https://www.getswerve.com/support) — Aussage zur offiziellen Website, Status von Android und Web, Hilfe bei fehlenden Chats.',
+          '[Über Swerve](https://www.getswerve.com/about) — Unternehmen, Standort und Unterstützer.',
         ],
       },
       relatedReading: {
@@ -638,25 +691,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
-    next_refresh_due: '2027-04-17',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/swerve-ai-review-hero-fr.webp',
     title: 'Test de Swerve : chat d’histoires et de personnages IA sur iPhone',
-    seoTitle: 'Test de Swerve : personnages IA et histoires sur iPhone',
+    seoTitle: 'Test de Swerve AI : prix, 18+, vie privée et Android',
     intro:
       'Swerve: AI Chat & Stories est une application iPhone de MSPW Labs, Inc. pour discuter avec des personnages IA et jouer des histoires à embranchements. Ce test présente ce que documentent sa fiche App Store, son site, son avis de confidentialité et ses conditions, ce qu’ils laissent de côté, et comment l’application se compare aux applications de jeu de rôle qui tournent sur votre propre matériel.',
     metaDescription:
-      'Test de Swerve : appli iPhone gratuite de chat avec personnages IA et histoires à embranchements. Achats intégrés, 18+, cloud, vie privée, alternatives.',
+      'Test de Swerve AI sur iPhone : appli gratuite avec achats intégrés, classement 18+, ce que dit l’avis de confidentialité et statut d’Android et du web.',
     twitterDescription:
-      'Test de Swerve : une application iPhone freemium de chat avec personnages IA et d’histoires à embranchements. Prix, classement 18+, confidentialité, limites et alternatives locales.',
+      'Test de Swerve AI : prix, classement 18+, ce que dit l’avis de confidentialité sur les conversations, et pourquoi Android et le web sont en liste d’attente.',
     audience:
       'Propriétaires d’iPhone qui comparent une application de jeu de rôle et d’histoires IA — fonctions, prix, confidentialité, classement par âge, limites et alternatives locales.',
     readTime: '6 min de lecture',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: false,
-    primaryTerm: 'Test de Swerve',
+    primaryTerm: 'Test de Swerve AI',
     targetKeywords: [
+      'swerve ia',
+      'swerve ai android',
+      'swerve app',
       'swerve ai avis',
       'swerve ai chat and stories',
       'swerve app iphone',
@@ -668,7 +724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories est une application iPhone gratuite et propriétaire pour discuter avec des personnages IA et jouer des histoires à embranchements ; c’est un service en ligne, pas une application d’IA locale.** Selon sa fiche App Store, elle exige iOS 18.0 ou version ultérieure. Ce test porte sur la version 1.32.0, mise à jour pour la dernière fois le 7 octobre 2026, et repose sur la fiche publique, le site, l’avis de confidentialité et les conditions, pas sur des essais pratiques.',
+      '**Swerve: AI Chat & Stories est une appli iPhone gratuite et propriétaire de chat avec personnages IA et d’histoires à embranchements, en service en ligne, pas en IA locale.** Version testée : 1.33.0, mise à jour le 23 octobre 2026, d’après des sources publiques, sans essais pratiques.',
     quickAnswerTop: {
       fr: {
         question: 'Swerve vaut-il l’installation pour le chat avec personnages IA et les histoires sur iPhone ?',
@@ -681,7 +737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'L’avis de confidentialité indique que des identifiants et de l’activité Internet ont été vendus ou partagés avec des réseaux publicitaires au cours des 12 derniers mois.',
           'Les versions Android et web n’existent que sous forme de liste d’attente.',
         ],
-        updatedDate: '2026-10-17',
+        updatedDate: '2026-11-02',
       },
     },
     toc: [
@@ -717,7 +773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Version testée : 1.32.0, telle qu’affichée sur la [fiche App Store](https://apps.apple.com/fr/app/swerve-ai-chat-stories/id6754301136).',
+          'Version testée : 1.33.0, telle qu’affichée sur la [fiche App Store](https://apps.apple.com/fr/app/swerve-ai-chat-stories/id6754301136).',
           'Où elle tourne : la fiche, le site et l’avis ne citent ni modèle d’IA ni hébergeur, et aucun mode sur l’appareil n’est documenté.',
           'Âge : classée 18+ sur l’App Store, avec des contenus sexuels ou de nudité fréquents indiqués dans les détails de classement.',
           'Langue : la fiche est uniquement en anglais.',
@@ -728,7 +784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Obtenir Swerve',
         content: [
-          '**Swerve est distribuée via l’Apple App Store, uniquement pour iPhone.** Le téléchargement pèse 116.9 Mo et il est gratuit, avec des achats intégrés.',
+          '**Swerve est distribuée via l’Apple App Store, uniquement pour iPhone.** Le téléchargement pèse 121.4 Mo et il est gratuit, avec des achats intégrés.',
         ],
         columns: ['Canal', 'Où l’obtenir'],
         rows: [
@@ -763,7 +819,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Critère': 'Chats de groupe', 'Swerve': 'Oui, plusieurs personnages par histoire' },
           { 'Critère': 'Lorebooks / world info', 'Swerve': 'Non mentionné dans la fiche' },
           { 'Critère': 'Classement par âge', 'Swerve': '18+' },
-          { 'Critère': 'Version / dernière MAJ', 'Swerve': '1.32.0 / 7 octobre 2026' },
+          { 'Critère': 'Version / dernière MAJ', 'Swerve': '1.33.0 / 23 octobre 2026' },
+          { 'Critère': 'Note App Store', 'Swerve': '4.7 sur 5, environ 37 000 notes (store US)' },
           { 'Critère': 'Langue de l’interface', 'Swerve': 'Anglais' },
         ],
         note: 'Les critères suivent la comparaison de jeu de rôle du Local AI App Directory. Ils proviennent de la fiche App Store et du site, qui ne couvrent pas toutes les fonctions.',
@@ -773,7 +830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Ce qu’est Swerve',
         content: [
           '**Swerve est une application de chat de fiction interactive : on « joue des histoires avec ses propres mots » et des personnages IA répondent.** La fiche décrit plus de 500 000 personnages créés par la communauté, dans des genres comme la romance, le drame, l’anime et la fantasy.',
-          'Elle est publiée par MSPW Labs, Inc., une société américaine. Le site présente getswerve.com comme « le seul site officiel de Swerve AI » ; des applications et sites au nom proche sont donc d’autres produits.',
+          'Elle est publiée par MSPW Labs, Inc., une société américaine. Le site présente getswerve.com comme « le seul site officiel de Swerve AI » ; des applications et sites au nom proche sont donc d’autres produits. Selon les données de consultation de l’App Store d’Apple, la première version date du 16 novembre 2025 ; le site présente l’entreprise comme une société du Delaware basée à Palo Alto et soutenue par Y Combinator.',
           'Ce test s’appuie uniquement sur la fiche, le site, l’avis de confidentialité et les conditions. Il ne comprend aucun essai pratique : la qualité des réponses, la fiabilité de la mémoire, la modération et la vitesse ne sont donc pas notées ici.',
         ],
       },
@@ -787,7 +844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Personnages.** Parcourez les personnages de la communauté ou créez les vôtres, à partager publiquement ou à garder privés.',
           '**Modes d’histoire.** Discutez en tête-à-tête ou réunissez plusieurs personnages dans la même histoire, et jouez n’importe quel personnage grâce aux personas.',
           '**Mémoire.** Épinglez les détails que les personnages doivent retenir.',
-          '**Contrôle.** Demandez une autre réponse, modifiez des messages ou ouvrez un nouveau chemin depuis n’importe quel message. La version 1.32.0 ajoute des brouillons automatiques et un aperçu du retour en arrière indiquant combien de messages seront supprimés.',
+          '**Contrôle.** Demandez une autre réponse, modifiez des messages ou ouvrez un nouveau chemin depuis n’importe quel message. La version 1.32.0 ajoute des brouillons automatiques et un aperçu du retour en arrière indiquant combien de messages seront supprimés. La version 1.33.0 a ensuite ajouté la recherche dans vos personnages, personas et favoris depuis le profil, ainsi que des options de mise en page du chat et de police dans les réglages.',
           '**Communauté.** La fiche renvoie vers une communauté Discord.',
         ],
       },
@@ -798,6 +855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Swerve se télécharge gratuitement, avec des achats intégrés pour une offre Pro, des packs de gems et, sur certains stores, une offre Swerve Lite.** Sur le store français, Pro coûte 14,99 € et les packs de gems commencent à 2,99 €. La fiche ne dit pas ce que Pro ou les gems débloquent ; vérifiez donc d’abord l’écran de paiement dans l’application.',
           '**Selon l’avis de confidentialité, mis à jour pour la dernière fois le 19 juin 2026, Swerve collecte noms, adresses e-mail et noms d’utilisateur, ainsi que l’adresse IP, les identifiants d’appareil et d’application, l’activité dans l’application et les rapports de plantage.** Les paiements passent par Apple et RevenueCat, et la connexion via Facebook ou X peut transmettre des informations de profil comme le nom, l’e-mail, la liste d’amis et la photo.',
           '**L’avis indique aussi que des identifiants et de l’activité Internet ont été vendus ou partagés avec des réseaux publicitaires au cours des 12 derniers mois, et l’étiquette App Store liste des identifiants servant à vous suivre sur les applications et sites d’autres entreprises.** Il ne cite aucun fournisseur d’IA, ne mentionne les « plateformes d’IA » que comme catégorie de destinataires, et ne précise pas si les conversations servent à entraîner des modèles. Ce sont des déclarations du développeur ; ce test n’a pas inspecté le trafic réseau.',
+          '**La page Safety Center du développeur, mise à jour le 25 mai 2026, indique que Swerve utilise une classification par IA pour détecter en temps réel les contenus d’automutilation dans les messages, bloque la réponse du personnage à un message signalé et affiche des ressources d’aide en cas de crise.** C’est la description du développeur lui-même ; ce test n’a pas vérifié le comportement réel de l’application.',
         ],
       },
       ageContent: {
@@ -835,8 +893,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Avantage': 'Mises à jour fréquentes',
-            'Ce que cela donne en pratique': 'L’historique montre 25 versions du 23 mars au 7 octobre.',
-            'Limite / réserve': 'Toutes sauf la dernière indiquent seulement « Bug fixes and performance improvements ».',
+            'Ce que cela donne en pratique': 'L’historique montre 25 versions du 2 avril au 23 octobre.',
+            'Limite / réserve': 'Seules les deux dernières versions détaillent des changements ; les autres indiquent seulement « Bug fixes and performance improvements ».',
           },
         ],
       },
@@ -912,6 +970,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Puis-je supprimer mon compte Swerve et mes données ?',
             a: 'Le site renvoie vers une page de suppression de compte, et l’avis indique que les données sont désactivées ou supprimées après la clôture du compte, certaines étant conservées pour prévenir la fraude et pour des raisons légales.',
           },
+          {
+            q: 'Swerve AI est-elle sûre ?',
+            a: 'Ce test n’a pas essayé l’application et n’évalue donc pas sa sécurité. Les pages du développeur documentent une limite d’âge de 18 ans, un Safety Center décrivant la détection automatique des contenus d’automutilation et un avis de confidentialité qui décrit un partage avec des réseaux publicitaires ; lisez l’avis avant de partager des informations personnelles.',
+          },
+          {
+            q: 'Swerve AI lit-elle mes conversations ?',
+            a: 'Ni l’avis de confidentialité ni les conditions ne disent si le personnel, les créateurs de personnages ou d’autres utilisateurs peuvent lire vos conversations. Les conditions précisent que Swerve n’a aucune obligation de surveiller les contributions des utilisateurs, et le Safety Center indique que les messages sont analysés automatiquement pour détecter l’automutilation. Pour une réponse certaine, écrivez à [support@getswerve.com](mailto:support@getswerve.com).',
+          },
+          {
+            q: 'Swerve AI est-elle gratuite ?',
+            a: 'Le téléchargement est gratuit et l’App Store indique des achats intégrés : Pro, Swerve Lite et packs de gemmes. La fiche ne précise pas quelles fonctions exigent un achat, et ce test n’a pas essayé la version gratuite.',
+          },
+          {
+            q: 'Quand Swerve AI arrive-t-elle sur Android et sur le web ?',
+            a: 'Le développeur ne donne aucune date. Sa page d’assistance indique que les deux arrivent « bientôt », qu’il n’existe pas encore d’application Android officielle, d’APK ni de version web, et que les autres applications et sites « Swerve AI » ne viennent pas de l’entreprise.',
+          },
+          {
+            q: 'Pourquoi mes conversations Swerve ont-elles disparu ?',
+            a: 'Selon la FAQ d’assistance du développeur, c’est généralement que vous avez utilisé d’autres identifiants (Apple ou Google) que ceux de l’inscription. Déconnectez-vous puis reconnectez-vous avec les identifiants d’origine, ou ouvrez « Settings → Support Chat » dans l’application.',
+          },
         ],
       },
       verdict: {
@@ -931,6 +1009,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Site web de Swerve](https://www.getswerve.com/) — description du développeur et disponibilité par plateforme.',
           '[Avis de confidentialité de Swerve](https://www.getswerve.com/privacy) — collecte de données, partage avec les réseaux publicitaires et conservation.',
           '[Conditions générales de Swerve](https://www.getswerve.com/terms) — limite d’âge, politique de contenu et conditions d’abonnement.',
+          '[Safety Center de Swerve](https://www.getswerve.com/safety) — détection de l’automutilation et ressources d’aide en cas de crise.',
+          '[Assistance de Swerve](https://www.getswerve.com/support) — déclaration sur le site officiel, statut d’Android et du web, aide en cas de conversations manquantes.',
+          '[Page « À propos » de Swerve](https://www.getswerve.com/about) — entreprise, siège et soutien.',
         ],
       },
       relatedReading: {
@@ -949,12 +1030,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
-    next_refresh_due: '2027-04-17',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/swerve-ai-review-hero-ja.webp',
     title: 'Swerveレビュー：iPhone向けAIストーリー＆キャラクターチャット',
-    seoTitle: 'Swerveレビュー：iPhoneのAIキャラチャットとストーリー',
+    seoTitle: 'Swerveレビュー：iPhone向けAIキャラチャット',
     intro:
       'Swerve: AI Chat & Stories は、MSPW Labs, Inc.が提供する、AIキャラクターとチャットし、分岐するストーリーを遊べるiPhoneアプリです。このレビューでは、App Storeの掲載情報、公式サイト、プライバシー通知、利用規約が記載している内容と記載していない点、そして自分のハードウェアで動くロールプレイアプリとの違いを整理します。',
     metaDescription:
@@ -979,7 +1060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories は、AIキャラクターとチャットし、分岐するストーリーを遊べる無料のクローズドソースiPhoneアプリです。ローカルAIアプリではなく、オンラインサービスです。** App Storeの掲載情報によると、iOS 18.0以降が必要です。このレビューはバージョン1.32.0（最終更新日：2026年10月7日）が対象で、公開されている掲載情報、公式サイト、プライバシー通知、利用規約に基づいており、実機での検証は行っていません。',
+      '**Swerve: AI Chat & Stories は、AIキャラクターとチャットし、分岐するストーリーを遊べる無料のクローズドソースiPhoneアプリです。ローカルAIアプリではなく、オンラインサービスです。** App Storeの掲載情報によると、iOS 18.0以降が必要です。このレビューはバージョン1.33.0（最終更新日：2026年10月23日）が対象で、公開されている掲載情報、公式サイト、プライバシー通知、利用規約に基づいており、実機での検証は行っていません。',
     quickAnswerTop: {
       ja: {
         question: 'iPhoneでAIキャラクターチャットやストーリーを楽しむなら、Swerveは入れる価値がありますか？',
@@ -992,7 +1073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'プライバシー通知には、識別子とインターネット活動を過去12か月に広告ネットワークへ販売または共有したと記載されています。',
           'Android版とWeb版はウェイトリストのみです。',
         ],
-        updatedDate: '2026-10-17',
+        updatedDate: '2026-11-02',
       },
     },
     toc: [
@@ -1028,7 +1109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'レビュー対象バージョン：1.32.0（[App Storeの掲載情報](https://apps.apple.com/jp/app/swerve-ai-chat-stories/id6754301136)に表示）。',
+          'レビュー対象バージョン：1.33.0（[App Storeの掲載情報](https://apps.apple.com/jp/app/swerve-ai-chat-stories/id6754301136)に表示）。',
           '動作場所：掲載情報、公式サイト、通知のいずれもAIモデルやホストを明示しておらず、オンデバイスモードの記載もありません。',
           '年齢：App Storeでは18+。年齢区分の詳細には、性的な内容やヌードが頻繁に含まれると記載されています。',
           '言語：掲載情報は英語のみです。',
@@ -1039,7 +1120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Swerveの入手方法',
         content: [
-          '**SwerveはApple App Store経由で配布されるiPhone専用アプリです。** ダウンロードサイズは116.9 MBで、無料（アプリ内課金あり）です。',
+          '**SwerveはApple App Store経由で配布されるiPhone専用アプリです。** ダウンロードサイズは121.4 MBで、無料（アプリ内課金あり）です。',
         ],
         columns: ['入手経路', '入手先'],
         rows: [
@@ -1074,7 +1155,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '項目': 'グループチャット', 'Swerve': '可（1つのストーリーに複数キャラ）' },
           { '項目': 'ロアブック／ワールド情報', 'Swerve': '掲載情報に記載なし' },
           { '項目': '年齢区分', 'Swerve': '18+' },
-          { '項目': 'バージョン／最終更新', 'Swerve': '1.32.0／2026年10月7日' },
+          { '項目': 'バージョン／最終更新', 'Swerve': '1.33.0／2026年10月23日' },
+          { '項目': 'App Storeの評価', 'Swerve': '5段階中4.7、約3万7千件（米国ストア）' },
           { '項目': 'UI言語', 'Swerve': '英語' },
         ],
         note: '項目はLocal AI App Directoryのロールプレイ比較に準じています。内容はApp Storeの掲載情報と公式サイトに基づいており、すべての機能を網羅しているわけではありません。',
@@ -1084,7 +1166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Swerveとは',
         content: [
           '**Swerveはインタラクティブフィクションのチャットアプリで、「自分の言葉でストーリーを遊ぶ」と、AIキャラクターが応答します。** 掲載情報には、ロマンス、ドラマ、アニメ、ファンタジーなどのジャンルにわたる、コミュニティ作成の50万体以上のキャラクターがあると説明されています。',
-          '提供元は米国企業のMSPW Labs, Inc.です。公式サイトはgetswerve.comを「Swerve AIの唯一の公式サイト」としているため、名前の似たアプリやサイトは別の製品として扱ってください。',
+          '提供元は米国企業のMSPW Labs, Inc.です。公式サイトはgetswerve.comを「Swerve AIの唯一の公式サイト」としているため、名前の似たアプリやサイトは別の製品として扱ってください。AppleのApp Store照会データでは初回リリースは2025年11月16日とされており、公式サイトはこの会社をカリフォルニア州パロアルトに本社を置くデラウェア州法人で、Y Combinatorの支援を受けていると説明しています。',
           'このレビューは掲載情報、公式サイト、プライバシー通知、利用規約のみに基づいています。実機での検証は含まないため、回答の質、メモリの信頼性、コンテンツ管理、速度は評価していません。',
         ],
       },
@@ -1098,7 +1180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**キャラクター。** コミュニティのキャラクターを探すか、自作して公開または非公開にできます。',
           '**ストーリーモード。** 1対1でチャットするか、複数のキャラクターを同じストーリーに招き、ペルソナで好きなキャラクターとして遊べます。',
           '**メモリ。** キャラクターに覚えてほしい情報を固定できます。',
-          '**操作。** 別の返信を求める、メッセージを編集する、任意のメッセージから新しい分岐を始めることができます。バージョン1.32.0では、自動下書きと、削除されるメッセージ数を示す巻き戻しプレビューが加わりました。',
+          '**操作。** 別の返信を求める、メッセージを編集する、任意のメッセージから新しい分岐を始めることができます。バージョン1.32.0では、自動下書きと、削除されるメッセージ数を示す巻き戻しプレビューが加わりました。その後のバージョン1.33.0では、プロフィールから自分のキャラクター・ペルソナ・ブックマークを検索できるようになり、設定にチャットのレイアウトとフォントのオプションが加わりました。',
           '**コミュニティ。** 掲載情報にDiscordコミュニティへのリンクがあります。',
         ],
       },
@@ -1109,6 +1191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Swerveは無料でダウンロードでき、Proプラン、ジェムパック、一部のストアではSwerve Liteプランがアプリ内課金で用意されています。** 日本のストアではProが¥2,000、ジェムパックは¥400からです。掲載情報にはProやジェムで何が使えるようになるか記載がないため、まずアプリ内の購入画面を確認してください。',
           '**プライバシー通知（最終更新日：2026年6月19日）によると、Swerveは氏名、メールアドレス、ユーザー名のほか、IPアドレス、デバイスID・アプリID、アプリの利用状況、クラッシュレポートを収集します。** 決済はAppleとRevenueCat経由で処理され、FacebookやXでログインすると、氏名、メール、友達リスト、写真などのプロフィール情報が共有される場合があります。',
           '**通知には、識別子とインターネット活動を過去12か月に広告ネットワークへ販売または共有したとも記載されており、App Storeのラベルには、他社のアプリやWebサイトをまたいでユーザーを追跡するために使われる識別子が挙げられています。** AIプロバイダーは明記されず、「AIプラットフォーム」は受領者のカテゴリとして挙げられているだけで、チャットがモデルの学習に使われるかどうかも書かれていません。これらは開発元自身の記述であり、このレビューではネットワーク通信の検査は行っていません。',
+          '**開発元のSafety Centerページ（最終更新2026年5月25日）によると、SwerveはAIによる分類でメッセージ内の自傷に関する内容をリアルタイムに検出し、該当メッセージへのキャラクターの返信を止めて、危機時の相談先を表示します。** これは開発元自身の説明であり、このレビューではアプリの実際の挙動を試していません。',
         ],
       },
       ageContent: {
@@ -1146,8 +1229,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'メリット': '頻繁なアップデート',
-            '実際の使い勝手': 'バージョン履歴には3月23日から10月7日までに25回のリリースがあります。',
-            '制約・注意点': '最新版以外は「Bug fixes and performance improvements」とのみ記載されています。',
+            '実際の使い勝手': 'バージョン履歴には4月2日から10月23日までに25回のリリースがあります。',
+            '制約・注意点': '具体的な変更点が書かれているのは最新2件のみで、それ以外は「Bug fixes and performance improvements」とのみ記載されています。',
           },
         ],
       },
@@ -1223,6 +1306,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Swerveのアカウントとデータは削除できますか？',
             a: '公式サイトにアカウント削除ページへのリンクがあり、通知にはアカウント終了後にデータが無効化または削除されると記載されています。ただし、不正防止や法的な理由で一部は保持されます。',
           },
+          {
+            q: 'Swerve AIは安全ですか？',
+            a: 'このレビューではアプリを実際に試していないため、安全性は評価していません。開発元の公式ページには、18歳以上という年齢制限、自傷に関する内容を自動検出するSafety Center、広告ネットワークへの共有を記したプライバシー通知が記載されています。個人情報を入力する前に通知をお読みください。',
+          },
+          {
+            q: 'Swerve AIはチャットを読み取りますか？',
+            a: 'プライバシー通知にも利用規約にも、スタッフ、キャラクター作成者、他のユーザーがチャットを読めるかどうかは書かれていません。利用規約には、Swerveにはユーザー投稿を監視する義務がないとあり、Safety Centerにはメッセージを自傷に関する内容について自動的に検査すると記されています。確実な回答は[support@getswerve.com](mailto:support@getswerve.com)にお問い合わせください。',
+          },
+          {
+            q: 'Swerve AIは無料ですか？',
+            a: 'ダウンロードは無料で、App Storeにはアプリ内課金（Pro、Swerve Lite、ジェムパック）が表示されています。掲載情報には、どの機能に購入が必要かは書かれておらず、このレビューでは無料プランを試していません。',
+          },
+          {
+            q: 'Swerve AIはいつAndroidとウェブに対応しますか？',
+            a: '開発元は日付を示していません。サポートページには、どちらも「近日公開」とあり、公式のAndroidアプリ、APK、ウェブ版はまだ存在せず、「Swerve AI」を名乗る他のアプリやサイトは同社のものではないと記されています。',
+          },
+          {
+            q: 'Swerveのチャットが消えたのはなぜですか？',
+            a: '開発元のサポートFAQによると、多くの場合、登録時と異なる認証情報（AppleまたはGoogle）でサインインしていることが原因です。一度サインアウトし、元の認証情報でサインインし直すか、アプリの「Settings → Support Chat」を開いてください。',
+          },
         ],
       },
       verdict: {
@@ -1242,6 +1345,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Swerve公式サイト](https://www.getswerve.com/) — 開発元自身の説明とプラットフォームの提供状況。',
           '[Swerveのプライバシー通知](https://www.getswerve.com/privacy) — データ収集、広告ネットワークへの共有、保持。',
           '[Swerveの利用規約](https://www.getswerve.com/terms) — 年齢制限、コンテンツポリシー、サブスクリプション条件。',
+          '[SwerveのSafety Center](https://www.getswerve.com/safety) — 自傷に関する内容の検出と危機時の相談先。',
+          '[Swerveのサポート](https://www.getswerve.com/support) — 公式サイトに関する記述、Androidとウェブの状況、チャットが見つからない場合の案内。',
+          '[Swerveの会社情報](https://www.getswerve.com/about) — 会社、所在地、支援元。',
         ],
       },
       relatedReading: {
@@ -1260,8 +1366,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
-    next_refresh_due: '2027-04-17',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/swerve-ai-review-hero-zh.webp',
     title: 'Swerve评测：面向iPhone的AI故事与角色聊天应用',
@@ -1290,7 +1396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories 是一款免费、闭源的iPhone应用，用于与AI角色聊天并游玩分支故事；它是在线服务，而非本地AI应用。** 根据App Store页面，它需要iOS 18.0或更高版本。本评测针对1.32.0版本（最后更新于2026年10月7日），依据公开的页面、官网、隐私声明和条款，并非实际上手测试。',
+      '**Swerve: AI Chat & Stories 是一款免费、闭源的iPhone应用，用于与AI角色聊天并游玩分支故事；它是在线服务，而非本地AI应用。** 根据App Store页面，它需要iOS 18.0或更高版本。本评测针对1.33.0版本（最后更新于2026年10月23日），依据公开的页面、官网、隐私声明和条款，并非实际上手测试。',
     quickAnswerTop: {
       zh: {
         question: '想在iPhone上玩AI角色聊天和故事，Swerve值得安装吗？',
@@ -1303,7 +1409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '隐私声明称，过去12个月内标识符和互联网活动数据曾被出售或共享给广告网络。',
           'Android版和网页版目前仅开放候补名单。',
         ],
-        updatedDate: '2026-10-17',
+        updatedDate: '2026-11-02',
       },
     },
     toc: [
@@ -1339,7 +1445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '评测版本：1.32.0，见[App Store页面](https://apps.apple.com/us/app/swerve-ai-chat/id6754301136)。',
+          '评测版本：1.33.0，见[App Store页面](https://apps.apple.com/us/app/swerve-ai-chat/id6754301136)。',
           '运行位置：页面、官网和声明均未说明所用AI模型或托管方，也没有记载设备端模式。',
           '年龄：App Store分级为18+，年龄分级详情列出频繁出现的性内容或裸露。',
           '语言：页面仅提供英文。',
@@ -1350,7 +1456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: '获取Swerve',
         content: [
-          '**Swerve通过Apple App Store分发，仅支持iPhone。** 下载大小为116.9 MB，免费下载，含应用内购买。',
+          '**Swerve通过Apple App Store分发，仅支持iPhone。** 下载大小为121.4 MB，免费下载，含应用内购买。',
         ],
         columns: ['渠道', '获取方式'],
         rows: [
@@ -1385,7 +1491,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '属性': '群聊', 'Swerve': '支持，一个故事可有多个角色' },
           { '属性': '设定集 / 世界信息', 'Swerve': '页面未说明' },
           { '属性': '年龄分级', 'Swerve': '18+' },
-          { '属性': '版本 / 最近更新', 'Swerve': '1.32.0 / 2026年10月7日' },
+          { '属性': '版本 / 最近更新', 'Swerve': '1.33.0 / 2026年10月23日' },
+          { '属性': 'App Store评分', 'Swerve': '4.7 / 5，约3.7万个评分（美国商店）' },
           { '属性': '界面语言', 'Swerve': '英语' },
         ],
         note: '这些属性沿用Local AI App Directory的角色扮演对比项，来自App Store页面和官网，并未覆盖所有功能。',
@@ -1395,7 +1502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Swerve是什么',
         content: [
           '**Swerve是一款互动小说式聊天应用：你“用自己的话玩故事”，AI角色随之回应。** 页面称其拥有超过50万个社区创建的角色，涵盖浪漫、剧情、动漫和奇幻等类型。',
-          '它由美国公司MSPW Labs, Inc.发布。官网称getswerve.com是“Swerve AI唯一的官方网站”，因此名称相近的应用和网站应视为不同产品。',
+          '它由美国公司MSPW Labs, Inc.发布。官网称getswerve.com是“Swerve AI唯一的官方网站”，因此名称相近的应用和网站应视为不同产品。Apple的App Store查询数据显示其首个版本发布于2025年11月16日；官网称该公司是总部位于帕洛阿尔托的特拉华州公司，并获得Y Combinator支持。',
           '本评测仅依据App Store页面、官网、隐私声明和条款，不含实际上手测试，因此回答质量、记忆可靠性、内容审核和速度均未在此评分。',
         ],
       },
@@ -1409,7 +1516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**角色。** 浏览社区角色，或自建角色并选择公开分享或保持私有。',
           '**故事模式。** 可一对一聊天，也可让多个角色进入同一个故事，并通过人设扮演任意角色。',
           '**记忆。** 固定希望角色记住的细节。',
-          '**控制。** 可要求换一个回复、编辑消息，或从任意消息开启新的分支。1.32.0版新增自动草稿，以及会显示将删除多少条消息的回退预览。',
+          '**控制。** 可要求换一个回复、编辑消息，或从任意消息开启新的分支。1.32.0版新增自动草稿，以及会显示将删除多少条消息的回退预览。随后的1.33.0版可从个人资料页搜索你的角色、人设和书签，并在设置中新增聊天布局和字体选项。',
           '**社区。** 页面链接了Discord社区。',
         ],
       },
@@ -1420,6 +1527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Swerve可免费下载，应用内购买包括Pro档位、宝石包，部分商店还有Swerve Lite档位。** 在美国商店，Pro售价为$12.49，宝石包起价$2.49。页面没有说明Pro或宝石解锁什么，请先查看应用内的付费页面。',
           '**隐私声明（最后更新于2026年6月19日）称，Swerve会收集姓名、电子邮件地址和用户名，以及IP地址、设备与应用标识符、应用活动和崩溃报告。** 付款通过Apple和RevenueCat处理；使用Facebook或X登录时，可能会共享姓名、邮箱、好友列表和头像等资料。',
           '**声明还称，过去12个月内标识符和互联网活动数据曾被出售或共享给广告网络，App Store隐私标签也列出了用于跨其他公司应用和网站追踪你的标识符。** 声明没有点名任何AI提供方，仅把“AI平台”列为接收方类别，也没有说明聊天内容是否用于训练模型。以上均为开发者自己的说法，本评测未检查网络流量。',
+          '**开发者的Safety Center页面（最后更新于2026年5月25日）称，Swerve使用基于AI的分类实时检测消息中的自残内容，对被标记的消息阻止角色回复，并显示危机求助资源。** 这是开发者自己的说明；本评测没有测试该应用的实际表现。',
         ],
       },
       ageContent: {
@@ -1457,8 +1565,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '优势': '更新频繁',
-            '实际使用中的意义': '版本历史显示3月23日至10月7日共有25次发布。',
-            '局限 / 注意事项': '除最新版本外，其余仅写“Bug fixes and performance improvements”。',
+            '实际使用中的意义': '版本历史显示4月2日至10月23日共有25次发布。',
+            '局限 / 注意事项': '仅最新的两个版本写明了具体改动，其余仅写“Bug fixes and performance improvements”。',
           },
         ],
       },
@@ -1534,6 +1642,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '我能删除Swerve账号和数据吗？',
             a: '官网链接了账号删除页面，声明称账号终止后数据会被停用或删除，部分数据会出于防欺诈和法律原因保留。',
           },
+          {
+            q: 'Swerve AI安全吗？',
+            a: '本评测未实际测试该应用，因此不评估其安全性。开发者自己的页面记载了18岁以上的年龄限制、描述自动检测自残内容的Safety Center，以及说明会与广告网络共享数据的隐私声明；在提供个人信息之前，请先阅读该声明。',
+          },
+          {
+            q: 'Swerve AI会读取我的聊天吗？',
+            a: '隐私声明和条款都没有说明工作人员、角色创建者或其他用户能否阅读你的聊天。条款称Swerve没有义务监控用户贡献的内容，Safety Center则称会自动扫描消息以检测自残内容。如需明确答复，请联系[support@getswerve.com](mailto:support@getswerve.com)。',
+          },
+          {
+            q: 'Swerve AI免费吗？',
+            a: '下载免费，App Store列出了应用内购买：Pro、Swerve Lite和宝石包。页面没有说明哪些功能需要付费，本评测也没有测试免费档。',
+          },
+          {
+            q: 'Swerve AI什么时候支持Android和网页版？',
+            a: '开发者没有给出日期。其支持页面称两者“即将推出”，目前没有官方Android应用、APK或网页版，并称其他名为“Swerve AI”的应用和网站并非来自该公司。',
+          },
+          {
+            q: '我的Swerve聊天记录为什么不见了？',
+            a: '开发者的支持FAQ称，通常是因为你登录所用的账号（Apple或Google）与注册时不同。请退出后用最初的账号重新登录，或在应用内打开“Settings → Support Chat”。',
+          },
         ],
       },
       verdict: {
@@ -1553,6 +1681,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Swerve官网](https://www.getswerve.com/) — 开发者自己的介绍和平台可用性。',
           '[Swerve隐私声明](https://www.getswerve.com/privacy) — 数据收集、向广告网络共享和保留期限。',
           '[Swerve条款与条件](https://www.getswerve.com/terms) — 年龄限制、内容政策和订阅条款。',
+          '[Swerve Safety Center](https://www.getswerve.com/safety) — 自残内容检测与危机求助资源。',
+          '[Swerve支持页面](https://www.getswerve.com/support) — 官方网站声明、Android和网页版状态、聊天记录丢失的处理办法。',
+          '[Swerve关于页面](https://www.getswerve.com/about) — 公司、所在地与支持方。',
         ],
       },
       relatedReading: {
@@ -1571,25 +1702,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
-    next_refresh_due: '2027-04-17',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/swerve-ai-review-hero-es.webp',
     title: 'Reseña de Swerve: chat de historias y personajes con IA para iPhone',
-    seoTitle: 'Reseña de Swerve: chat de historias y personajes con IA',
+    seoTitle: 'Swerve AI: qué es, precio, privacidad y Android (reseña)',
     intro:
       'Swerve: AI Chat & Stories es una app para iPhone de MSPW Labs, Inc. para chatear con personajes de IA y jugar historias con ramificaciones. Esta reseña recoge lo que documentan su ficha de la App Store, su sitio web, su aviso de privacidad y sus términos, lo que dejan sin decir y cómo se compara con apps de rol que puedes ejecutar en tu propio hardware.',
     metaDescription:
-      'Reseña de Swerve: app gratuita para iPhone de chat con personajes de IA e historias ramificadas. Compras en la app, 18+, nube, privacidad y alternativas.',
+      'Reseña de Swerve AI para iPhone: qué es, descarga gratis con compras en la app, clasificación 18+, qué dice su aviso de privacidad y si hay Android.',
     twitterDescription:
-      'Reseña de Swerve: una app freemium para iPhone de chat con personajes de IA e historias con ramificaciones. Precios, clasificación 18+, aviso de privacidad, límites y alternativas locales.',
+      'Reseña de Swerve AI: qué es, precio, clasificación 18+, qué dice el aviso de privacidad sobre los chats y por qué Android y web siguen en lista de espera.',
     audience:
       'Usuarios de iPhone que valoran una app de rol e historias con IA — cubre funciones, precios, privacidad, clasificación por edad, límites y alternativas que se ejecutan en local.',
     readTime: '6 min de lectura',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: false,
-    primaryTerm: 'Reseña de Swerve',
+    primaryTerm: 'Reseña de Swerve AI',
     targetKeywords: [
+      'qué es swerve ai',
+      'swerve ia',
+      'swerve ai android',
       'swerve ai reseña',
       'swerve ai chat and stories',
       'swerve app iphone',
@@ -1601,7 +1735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories es una app gratuita y de código cerrado para iPhone con la que chatear con personajes de IA y jugar historias con ramificaciones; es un servicio en línea, no una app de IA local.** Según su ficha de la App Store, requiere iOS 18.0 o posterior. Esta reseña cubre la versión 1.32.0, actualizada por última vez el 7 de octubre de 2026, y se basa en la ficha pública, el sitio web, el aviso de privacidad y los términos, no en pruebas prácticas.',
+      '**Swerve: AI Chat & Stories es una app gratuita y de código cerrado para iPhone de chat con personajes de IA e historias ramificadas, como servicio en línea, no IA local.** Versión analizada: 1.33.0, actualizada el 23 de octubre de 2026, según fuentes públicas, sin pruebas prácticas.',
     quickAnswerTop: {
       es: {
         question: '¿Vale la pena instalar Swerve para chatear con personajes de IA y jugar historias en el iPhone?',
@@ -1614,7 +1748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El aviso de privacidad dice que identificadores y actividad en internet se vendieron o compartieron con redes publicitarias en los últimos 12 meses.',
           'Las versiones para Android y web son solo lista de espera.',
         ],
-        updatedDate: '2026-10-17',
+        updatedDate: '2026-11-02',
       },
     },
     toc: [
@@ -1650,7 +1784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Versión analizada: 1.32.0, tal como aparece en la [ficha de la App Store](https://apps.apple.com/es/app/swerve-ai-chat-stories/id6754301136).',
+          'Versión analizada: 1.33.0, tal como aparece en la [ficha de la App Store](https://apps.apple.com/es/app/swerve-ai-chat-stories/id6754301136).',
           'Dónde se ejecuta: la ficha, el sitio y el aviso no nombran ningún modelo de IA ni proveedor de alojamiento, y no se documenta un modo en el dispositivo.',
           'Edad: clasificada 18+ en la App Store, con contenido sexual o desnudez frecuentes en los detalles de clasificación.',
           'Idioma: la ficha está solo en inglés.',
@@ -1661,7 +1795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Conseguir Swerve',
         content: [
-          '**Swerve se distribuye a través de la App Store de Apple como app solo para iPhone.** La descarga pesa 116.9 MB y es gratuita, con compras dentro de la app.',
+          '**Swerve se distribuye a través de la App Store de Apple como app solo para iPhone.** La descarga pesa 121.4 MB y es gratuita, con compras dentro de la app.',
         ],
         columns: ['Canal', 'Dónde conseguirla'],
         rows: [
@@ -1696,7 +1830,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Atributo': 'Chats grupales', 'Swerve': 'Sí, varios personajes por historia' },
           { 'Atributo': 'Lorebooks / world info', 'Swerve': 'No se menciona en la ficha' },
           { 'Atributo': 'Clasificación por edad', 'Swerve': '18+' },
-          { 'Atributo': 'Versión / última act.', 'Swerve': '1.32.0 / 7 de octubre de 2026' },
+          { 'Atributo': 'Versión / última act.', 'Swerve': '1.33.0 / 23 de octubre de 2026' },
+          { 'Atributo': 'Valoración en la tienda', 'Swerve': '4.7 de 5, unas 37.000 valoraciones de la App Store (EE. UU.)' },
           { 'Atributo': 'Idioma de la interfaz', 'Swerve': 'Inglés' },
         ],
         note: 'Los atributos siguen la comparativa de rol del Local AI App Directory. Proceden de la ficha de la App Store y del sitio web, que no cubren todas las funciones.',
@@ -1706,7 +1841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qué es Swerve',
         content: [
           '**Swerve es una app de chat de ficción interactiva: «juegas historias con tus propias palabras» y los personajes de IA responden.** La ficha describe más de 500.000 personajes creados por la comunidad, de géneros como romance, drama, anime y fantasía.',
-          'La publica MSPW Labs, Inc., una empresa estadounidense. El sitio web llama a getswerve.com «el único sitio web oficial de Swerve AI», así que trata las apps y sitios de nombre parecido como productos distintos.',
+          'La publica MSPW Labs, Inc., una empresa estadounidense. El sitio web llama a getswerve.com «el único sitio web oficial de Swerve AI», así que trata las apps y sitios de nombre parecido como productos distintos. Según los datos de consulta de la App Store de Apple, su primera versión salió el 16 de noviembre de 2025; el sitio web presenta a la empresa como una sociedad de Delaware con sede en Palo Alto y respaldada por Y Combinator.',
           'Esta reseña se apoya solo en la ficha, el sitio web, el aviso de privacidad y los términos. No incluye pruebas prácticas, por lo que aquí no se valoran la calidad de las respuestas, la fiabilidad de la memoria, la moderación ni la velocidad.',
         ],
       },
@@ -1720,7 +1855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Personajes.** Explora personajes de la comunidad o crea los tuyos y compártelos públicamente o mantenlos privados.',
           '**Modos de historia.** Chatea de uno en uno o lleva a varios personajes a la misma historia, y juega como cualquier personaje mediante personas.',
           '**Memoria.** Fija los detalles que los personajes deben recordar.',
-          '**Control.** Pide otra respuesta, edita mensajes o abre un camino nuevo desde cualquier mensaje. La versión 1.32.0 añade borradores automáticos y una vista previa al retroceder que muestra cuántos mensajes se eliminarán.',
+          '**Control.** Pide otra respuesta, edita mensajes o abre un camino nuevo desde cualquier mensaje. La versión 1.32.0 añade borradores automáticos y una vista previa al retroceder que muestra cuántos mensajes se eliminarán. La versión 1.33.0 añadió después la búsqueda de tus personajes, personas y marcadores desde el perfil, además de opciones de diseño del chat y de fuente en los ajustes.',
           '**Comunidad.** La ficha enlaza una comunidad de Discord.',
         ],
       },
@@ -1731,6 +1866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Swerve se descarga gratis, con compras dentro de la app para un nivel Pro, paquetes de gemas y, en algunas tiendas, un nivel Swerve Lite.** En la tienda española, Pro cuesta 14,99 € y los paquetes de gemas empiezan en 2,99 €. La ficha no dice qué desbloquean Pro ni las gemas, así que revisa primero la pantalla de pago en la app.',
           '**Según el aviso de privacidad, actualizado por última vez el 19 de junio de 2026, Swerve recopila nombres, direcciones de correo y nombres de usuario, además de dirección IP, identificadores de dispositivo y de app, actividad en la app e informes de fallos.** Los pagos pasan por Apple y RevenueCat, e iniciar sesión con Facebook o X puede compartir datos de perfil como nombre, correo, lista de amigos y foto.',
           '**El aviso también dice que identificadores y actividad en internet se vendieron o compartieron con redes publicitarias en los últimos 12 meses, y la etiqueta de la App Store enumera identificadores usados para rastrearte entre apps y sitios web de otras empresas.** No nombra ningún proveedor de IA, menciona las «plataformas de IA» solo como categoría de destinatarios y no aclara si los chats se usan para entrenar modelos. Son declaraciones del propio desarrollador; esta reseña no inspeccionó el tráfico de red.',
+          '**La página Safety Center del desarrollador, actualizada por última vez el 25 de mayo de 2026, dice que Swerve usa una clasificación basada en IA para detectar en tiempo real contenido de autolesiones en los mensajes, bloquea la respuesta del personaje a un mensaje marcado y muestra recursos de ayuda en crisis.** Es la descripción del propio desarrollador; esta reseña no probó cómo se comporta la app.',
         ],
       },
       ageContent: {
@@ -1768,8 +1904,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Ventaja': 'Actualizaciones frecuentes',
-            'Qué significa en el uso real': 'El historial muestra 25 versiones del 23 de marzo al 7 de octubre.',
-            'Limitación / salvedad': 'Todas menos la última indican solo «Bug fixes and performance improvements».',
+            'Qué significa en el uso real': 'El historial muestra 25 versiones del 2 de abril al 23 de octubre.',
+            'Limitación / salvedad': 'Solo las dos últimas versiones detallan cambios concretos; las demás indican solo «Bug fixes and performance improvements».',
           },
         ],
       },
@@ -1845,6 +1981,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Puedo eliminar mi cuenta de Swerve y mis datos?',
             a: 'El sitio web enlaza una página para eliminar la cuenta, y el aviso dice que los datos se desactivan o eliminan tras cerrar la cuenta, conservándose algunos para prevenir fraudes y por motivos legales.',
           },
+          {
+            q: '¿Es seguro usar Swerve AI?',
+            a: 'Esta reseña no probó la app, así que no valora su seguridad. Las páginas del propio desarrollador documentan un límite de edad de 18+, un Safety Center que describe la detección automática de contenido de autolesiones y un aviso de privacidad que describe compartición con redes publicitarias; lee el aviso antes de dar datos personales.',
+          },
+          {
+            q: '¿Swerve AI lee mis chats?',
+            a: 'Ni el aviso de privacidad ni los términos dicen si el personal, los creadores de personajes u otros usuarios pueden leer tus chats. Los términos indican que Swerve no tiene obligación de supervisar las contribuciones de los usuarios, y el Safety Center dice que los mensajes se analizan automáticamente para detectar autolesiones. Para una respuesta definitiva, escribe a [support@getswerve.com](mailto:support@getswerve.com).',
+          },
+          {
+            q: '¿Swerve AI es gratis?',
+            a: 'La descarga es gratuita y la App Store muestra compras dentro de la app: Pro, Swerve Lite y paquetes de gemas. La ficha no dice qué funciones exigen una compra, y esta reseña no probó el nivel gratuito.',
+          },
+          {
+            q: '¿Cuándo sale Swerve AI en Android y en la web?',
+            a: 'El desarrollador no da ninguna fecha. Su página de soporte dice que ambas llegarán «pronto», que todavía no existe una app oficial para Android, ni un APK, ni una versión web, y que otras apps y sitios llamados «Swerve AI» no son de la empresa.',
+          },
+          {
+            q: '¿Por qué faltan mis chats de Swerve?',
+            a: 'Según las preguntas frecuentes de soporte del desarrollador, suele deberse a que has iniciado sesión con credenciales distintas (Apple o Google) a las del registro. Cierra sesión y entra de nuevo con las originales, o abre «Settings → Support Chat» en la app.',
+          },
         ],
       },
       verdict: {
@@ -1864,6 +2020,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Sitio web de Swerve](https://www.getswerve.com/) — la descripción del propio desarrollador y la disponibilidad por plataforma.',
           '[Aviso de privacidad de Swerve](https://www.getswerve.com/privacy) — recopilación de datos, compartición con redes publicitarias y conservación.',
           '[Términos y condiciones de Swerve](https://www.getswerve.com/terms) — límite de edad, política de contenido y condiciones de suscripción.',
+          '[Safety Center de Swerve](https://www.getswerve.com/safety) — detección de autolesiones y recursos de ayuda en crisis.',
+          '[Soporte de Swerve](https://www.getswerve.com/support) — declaración sobre el sitio oficial, estado de Android y web, ayuda con chats que faltan.',
+          '[Página «Acerca de» de Swerve](https://www.getswerve.com/about) — empresa, sede y respaldo.',
         ],
       },
       relatedReading: {
@@ -1882,8 +2041,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
-    next_refresh_due: '2027-04-17',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/swerve-ai-review-hero-pt.webp',
     title: 'Análise do Swerve: chat de histórias e personagens com IA para iPhone',
@@ -1912,7 +2071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories é um app gratuito e de código fechado para iPhone para conversar com personagens de IA e jogar histórias com ramificações; é um serviço online, não um app de IA local.** Segundo a página da App Store, ele exige iOS 18.0 ou posterior. Esta análise cobre a versão 1.32.0, atualizada pela última vez em 7 de outubro de 2026, e se baseia na página pública, no site, no aviso de privacidade e nos termos, não em testes práticos.',
+      '**Swerve: AI Chat & Stories é um app gratuito e de código fechado para iPhone de chat com personagens de IA e histórias ramificadas, como serviço online, não IA local.** Versão analisada: 1.33.0, atualizada em 23 de outubro de 2026, com base em fontes públicas, sem testes práticos.',
     quickAnswerTop: {
       pt: {
         question: 'Vale a pena instalar o Swerve para chat com personagens de IA e histórias no iPhone?',
@@ -1925,7 +2084,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O aviso de privacidade diz que identificadores e atividade na internet foram vendidos ou compartilhados com redes de anúncios nos últimos 12 meses.',
           'As versões para Android e web são apenas lista de espera.',
         ],
-        updatedDate: '2026-10-17',
+        updatedDate: '2026-11-02',
       },
     },
     toc: [
@@ -1961,7 +2120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Versão analisada: 1.32.0, como exibida na [página da App Store](https://apps.apple.com/br/app/swerve-ai-chat-stories/id6754301136).',
+          'Versão analisada: 1.33.0, como exibida na [página da App Store](https://apps.apple.com/br/app/swerve-ai-chat-stories/id6754301136).',
           'Onde roda: a página, o site e o aviso não citam nenhum modelo de IA nem provedor de hospedagem, e não há modo no dispositivo documentado.',
           'Idade: classificado 18+ na App Store, com conteúdo sexual ou nudez frequentes nos detalhes da classificação.',
           'Idioma: a página está apenas em inglês.',
@@ -1972,7 +2131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Baixar o Swerve',
         content: [
-          '**O Swerve é distribuído pela App Store da Apple como um app só para iPhone.** O download tem 116.9 MB e é gratuito, com compras no app.',
+          '**O Swerve é distribuído pela App Store da Apple como um app só para iPhone.** O download tem 121.4 MB e é gratuito, com compras no app.',
         ],
         columns: ['Canal', 'Onde obter'],
         rows: [
@@ -2007,7 +2166,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Atributo': 'Chats em grupo', 'Swerve': 'Sim, vários personagens por história' },
           { 'Atributo': 'Lorebooks / world info', 'Swerve': 'Não citado na página' },
           { 'Atributo': 'Classificação etária', 'Swerve': '18+' },
-          { 'Atributo': 'Versão / última atualização', 'Swerve': '1.32.0 / 7 de outubro de 2026' },
+          { 'Atributo': 'Versão / última atualização', 'Swerve': '1.33.0 / 23 de outubro de 2026' },
+          { 'Atributo': 'Avaliação na loja', 'Swerve': '4,7 de 5, cerca de 37 mil avaliações da App Store (EUA)' },
           { 'Atributo': 'Idioma da interface', 'Swerve': 'Inglês' },
         ],
         note: 'Os atributos seguem a comparação de roleplay do Local AI App Directory. Vêm da página da App Store e do site, que não cobrem todos os recursos.',
@@ -2017,7 +2177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que é o Swerve',
         content: [
           '**O Swerve é um app de chat de ficção interativa: você «joga histórias com as suas próprias palavras» e os personagens de IA respondem.** A página descreve mais de 500.000 personagens criados pela comunidade, em gêneros como romance, drama, anime e fantasia.',
-          'Ele é publicado pela MSPW Labs, Inc., uma empresa dos EUA. O site chama getswerve.com de «o único site oficial do Swerve AI», então trate apps e sites de nome parecido como produtos diferentes.',
+          'Ele é publicado pela MSPW Labs, Inc., uma empresa dos EUA. O site chama getswerve.com de «o único site oficial do Swerve AI», então trate apps e sites de nome parecido como produtos diferentes. Segundo os dados de consulta da App Store da Apple, a primeira versão saiu em 16 de novembro de 2025; o site apresenta a empresa como uma corporação de Delaware sediada em Palo Alto e apoiada pela Y Combinator.',
           'Esta análise usa apenas a página, o site, o aviso de privacidade e os termos. Não inclui testes práticos, portanto qualidade das respostas, confiabilidade da memória, moderação e velocidade não são avaliadas aqui.',
         ],
       },
@@ -2031,7 +2191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Personagens.** Explore personagens da comunidade ou crie os seus e compartilhe publicamente ou mantenha privados.',
           '**Modos de história.** Converse individualmente ou leve vários personagens para a mesma história, e jogue como qualquer personagem por meio de personas.',
           '**Memória.** Fixe os detalhes que os personagens devem lembrar.',
-          '**Controle.** Peça outra resposta, edite mensagens ou comece um novo caminho a partir de qualquer mensagem. A versão 1.32.0 adiciona rascunhos automáticos e uma prévia ao voltar que mostra quantas mensagens serão removidas.',
+          '**Controle.** Peça outra resposta, edite mensagens ou comece um novo caminho a partir de qualquer mensagem. A versão 1.32.0 adiciona rascunhos automáticos e uma prévia ao voltar que mostra quantas mensagens serão removidas. A versão 1.33.0 acrescentou depois a busca em seus personagens, personas e favoritos pelo perfil, além de opções de layout do chat e de fonte nos ajustes.',
           '**Comunidade.** A página tem link para uma comunidade no Discord.',
         ],
       },
@@ -2042,6 +2202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**O Swerve é gratuito para baixar, com compras no app para um nível Pro, pacotes de gemas e, em algumas lojas, um nível Swerve Lite.** Na loja brasileira, o Pro custa R$ 79,90 e os pacotes de gemas começam em R$ 14,90. A página não diz o que o Pro ou as gemas liberam, então confira primeiro a tela de pagamento no app.',
           '**Segundo o aviso de privacidade, atualizado pela última vez em 19 de junho de 2026, o Swerve coleta nomes, endereços de e-mail e nomes de usuário, além de endereço IP, identificadores de dispositivo e de app, atividade no app e relatórios de falhas.** Os pagamentos passam pela Apple e pela RevenueCat, e entrar com Facebook ou X pode compartilhar dados de perfil como nome, e-mail, lista de amigos e foto.',
           '**O aviso também diz que identificadores e atividade na internet foram vendidos ou compartilhados com redes de anúncios nos últimos 12 meses, e o rótulo da App Store lista identificadores usados para rastrear você em apps e sites de outras empresas.** Ele não cita nenhum provedor de IA, menciona as «plataformas de IA» apenas como categoria de destinatários e não diz se os chats são usados para treinar modelos. São declarações do próprio desenvolvedor; esta análise não inspecionou o tráfego de rede.',
+          '**A página Safety Center do desenvolvedor, atualizada pela última vez em 25 de maio de 2026, diz que o Swerve usa classificação baseada em IA para detectar em tempo real conteúdo de automutilação nas mensagens, bloqueia a resposta do personagem a uma mensagem sinalizada e exibe recursos de ajuda em crise.** É a descrição do próprio desenvolvedor; esta análise não testou como o app se comporta.',
         ],
       },
       ageContent: {
@@ -2079,8 +2240,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Vantagem': 'Atualizações frequentes',
-            'O que significa no uso real': 'O histórico mostra 25 versões de 23 de março a 7 de outubro.',
-            'Limitação / ressalva': 'Todas, exceto a mais recente, trazem só «Bug fixes and performance improvements».',
+            'O que significa no uso real': 'O histórico mostra 25 versões de 2 de abril a 23 de outubro.',
+            'Limitação / ressalva': 'Só as duas versões mais recentes detalham mudanças; as demais trazem só «Bug fixes and performance improvements».',
           },
         ],
       },
@@ -2156,6 +2317,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Posso excluir minha conta do Swerve e meus dados?',
             a: 'O site tem link para uma página de exclusão de conta, e o aviso diz que os dados são desativados ou excluídos após o encerramento da conta, com alguns mantidos para prevenir fraudes e por motivos legais.',
           },
+          {
+            q: 'O Swerve AI é seguro?',
+            a: 'Esta análise não testou o app, então não avalia a segurança dele. As páginas do próprio desenvolvedor documentam um limite de idade de 18+, um Safety Center que descreve a detecção automática de conteúdo de automutilação e um aviso de privacidade que descreve compartilhamento com redes de publicidade; leia o aviso antes de informar dados pessoais.',
+          },
+          {
+            q: 'O Swerve AI lê meus chats?',
+            a: 'Nem o aviso de privacidade nem os termos dizem se funcionários, criadores de personagens ou outros usuários podem ler seus chats. Os termos afirmam que o Swerve não tem obrigação de monitorar as contribuições dos usuários, e o Safety Center diz que as mensagens são analisadas automaticamente para detectar automutilação. Para uma resposta definitiva, escreva para [support@getswerve.com](mailto:support@getswerve.com).',
+          },
+          {
+            q: 'O Swerve AI é grátis?',
+            a: 'O download é gratuito e a App Store lista compras no app: Pro, Swerve Lite e pacotes de gemas. A página não diz quais recursos exigem compra, e esta análise não testou o nível gratuito.',
+          },
+          {
+            q: 'Quando o Swerve AI chega ao Android e à web?',
+            a: 'O desenvolvedor não informa data. A página de suporte diz que ambos chegam «em breve», que ainda não existe app oficial para Android, APK nem versão web, e que outros apps e sites chamados «Swerve AI» não são da empresa.',
+          },
+          {
+            q: 'Por que meus chats do Swerve sumiram?',
+            a: 'Segundo o FAQ de suporte do desenvolvedor, geralmente é porque você entrou com credenciais diferentes (Apple ou Google) das usadas no cadastro. Saia e entre de novo com as originais, ou abra «Settings → Support Chat» no app.',
+          },
         ],
       },
       verdict: {
@@ -2175,6 +2356,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Site do Swerve](https://www.getswerve.com/) — a descrição do próprio desenvolvedor e a disponibilidade por plataforma.',
           '[Aviso de privacidade do Swerve](https://www.getswerve.com/privacy) — coleta de dados, compartilhamento com redes de anúncios e retenção.',
           '[Termos e condições do Swerve](https://www.getswerve.com/terms) — limite de idade, política de conteúdo e condições de assinatura.',
+          '[Safety Center do Swerve](https://www.getswerve.com/safety) — detecção de automutilação e recursos de ajuda em crise.',
+          '[Suporte do Swerve](https://www.getswerve.com/support) — declaração sobre o site oficial, status de Android e web, ajuda com chats que sumiram.',
+          '[Página «Sobre» do Swerve](https://www.getswerve.com/about) — empresa, sede e apoio.',
         ],
       },
       relatedReading: {
@@ -2193,8 +2377,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
-    next_refresh_due: '2027-04-17',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/swerve-ai-review-hero-ar.webp',
     title: 'مراجعة Swerve: دردشة قصص وشخصيات بالذكاء الاصطناعي على iPhone',
@@ -2223,7 +2407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories تطبيق iPhone مجاني ومغلق المصدر للدردشة مع شخصيات الذكاء الاصطناعي ولعب قصص متفرعة؛ وهو خدمة عبر الإنترنت وليس تطبيق ذكاء اصطناعي محليًا.** وفق صفحته في App Store يتطلب iOS 18.0 أو أحدث. تغطي هذه المراجعة الإصدار 1.32.0 الذي حُدّث آخر مرة في 7 أكتوبر 2026، وتعتمد على الصفحة العامة والموقع الرسمي وإشعار الخصوصية والشروط، لا على اختبار عملي.',
+      '**Swerve: AI Chat & Stories تطبيق iPhone مجاني ومغلق المصدر للدردشة مع شخصيات الذكاء الاصطناعي وقصص متفرعة، كخدمة عبر الإنترنت لا ذكاء اصطناعيًا محليًا.** الإصدار المراجَع: 1.33.0، حُدّث في 23 أكتوبر 2026، اعتمادًا على مصادر عامة فقط ودون اختبار عملي.',
     quickAnswerTop: {
       ar: {
         question: 'هل يستحق Swerve التثبيت للدردشة مع شخصيات الذكاء الاصطناعي ولعب القصص على iPhone؟',
@@ -2236,7 +2420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يقول إشعار الخصوصية إن المعرّفات والنشاط على الإنترنت بيعت أو شوركت مع شبكات الإعلانات خلال آخر 12 شهرًا.',
           'نسختا Android والويب متاحتان عبر قائمة الانتظار فقط.',
         ],
-        updatedDate: '2026-10-17',
+        updatedDate: '2026-11-02',
       },
     },
     toc: [
@@ -2272,7 +2456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'الإصدار الذي تغطيه المراجعة: 1.32.0 كما يظهر في [صفحة App Store](https://apps.apple.com/us/app/swerve-ai-chat/id6754301136).',
+          'الإصدار الذي تغطيه المراجعة: 1.33.0 كما يظهر في [صفحة App Store](https://apps.apple.com/us/app/swerve-ai-chat/id6754301136).',
           'مكان التشغيل: لا تذكر الصفحة ولا الموقع ولا الإشعار أي نموذج ذكاء اصطناعي أو مضيفًا، ولا يوجد وضع على الجهاز موثّق.',
           'العمر: مصنّف +18 في App Store، وتذكر تفاصيل التصنيف محتوى جنسيًا أو عريًا متكررًا.',
           'اللغة: الصفحة متوفرة بالإنجليزية فقط.',
@@ -2283,7 +2467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'الحصول على Swerve',
         content: [
-          '**يُوزَّع Swerve عبر متجر Apple App Store كتطبيق لجهاز iPhone فقط.** حجم التنزيل 116.9 MB وهو مجاني مع مشتريات داخل التطبيق.',
+          '**يُوزَّع Swerve عبر متجر Apple App Store كتطبيق لجهاز iPhone فقط.** حجم التنزيل 121.4 MB وهو مجاني مع مشتريات داخل التطبيق.',
         ],
         columns: ['القناة', 'الحصول عليه'],
         rows: [
@@ -2318,7 +2502,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الخاصية': 'دردشات جماعية', 'Swerve': 'نعم، عدة شخصيات في القصة' },
           { 'الخاصية': 'كتب المعلومات / world info', 'Swerve': 'غير مذكورة في الصفحة' },
           { 'الخاصية': 'التصنيف العمري', 'Swerve': '+18' },
-          { 'الخاصية': 'الإصدار / آخر تحديث', 'Swerve': '1.32.0 / 7 أكتوبر 2026' },
+          { 'الخاصية': 'الإصدار / آخر تحديث', 'Swerve': '1.33.0 / 23 أكتوبر 2026' },
+          { 'الخاصية': 'تقييم المتجر', 'Swerve': '4.7 من 5، نحو 37,000 تقييم في App Store (الولايات المتحدة)' },
           { 'الخاصية': 'لغة الواجهة', 'Swerve': 'الإنجليزية' },
         ],
         note: 'تتبع الخصائص مقارنة لعب الأدوار في Local AI App Directory. وهي مأخوذة من صفحة App Store والموقع الرسمي اللذين لا يغطيان كل الميزات.',
@@ -2328,7 +2513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما هو Swerve',
         content: [
           '**Swerve تطبيق دردشة للخيال التفاعلي: «تلعب القصص بكلماتك أنت» فتستجيب شخصيات الذكاء الاصطناعي.** تصف الصفحة أكثر من 500,000 شخصية أنشأها المجتمع في أنواع مثل الرومانسية والدراما والأنمي والفانتازيا.',
-          'ينشره MSPW Labs, Inc.، وهي شركة أمريكية. ويصف الموقع getswerve.com بأنه «الموقع الرسمي الوحيد لـ Swerve AI»، لذا تعامل مع التطبيقات والمواقع المشابهة في الاسم على أنها منتجات مختلفة.',
+          'ينشره MSPW Labs, Inc.، وهي شركة أمريكية. ويصف الموقع getswerve.com بأنه «الموقع الرسمي الوحيد لـ Swerve AI»، لذا تعامل مع التطبيقات والمواقع المشابهة في الاسم على أنها منتجات مختلفة. وفق بيانات استعلام App Store من Apple صدر الإصدار الأول في 16 نوفمبر 2025، ويصف الموقع الشركة بأنها شركة مسجلة في ولاية ديلاوير ومقرها بالو ألتو وبدعم من Y Combinator.',
           'تعتمد هذه المراجعة على الصفحة والموقع وإشعار الخصوصية والشروط فقط، ولا تتضمن اختبارًا عمليًا، لذلك لا تُقيَّم هنا جودة الإجابات أو موثوقية الذاكرة أو الإشراف على المحتوى أو السرعة.',
         ],
       },
@@ -2342,7 +2527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الشخصيات.** تصفّح شخصيات المجتمع أو أنشئ شخصياتك وشاركها علنًا أو أبقها خاصة.',
           '**أوضاع القصة.** دردش فرديًا أو أدخل عدة شخصيات في القصة نفسها، والعب بدور أي شخصية عبر شخصيات المستخدم.',
           '**الذاكرة.** ثبّت التفاصيل التي ينبغي أن تتذكرها الشخصيات.',
-          '**التحكم.** اطلب ردًا آخر أو عدّل الرسائل أو ابدأ مسارًا جديدًا من أي رسالة. يضيف الإصدار 1.32.0 مسودات تلقائية ومعاينة للتراجع تعرض عدد الرسائل التي ستُحذف.',
+          '**التحكم.** اطلب ردًا آخر أو عدّل الرسائل أو ابدأ مسارًا جديدًا من أي رسالة. يضيف الإصدار 1.32.0 مسودات تلقائية ومعاينة للتراجع تعرض عدد الرسائل التي ستُحذف. ثم أضاف الإصدار 1.33.0 بحثًا في شخصياتك وشخصيات المستخدم والإشارات المرجعية من الملف الشخصي، مع خيارات لتخطيط الدردشة والخط في الإعدادات.',
           '**المجتمع.** تتضمن الصفحة رابطًا إلى مجتمع Discord.',
         ],
       },
@@ -2353,6 +2538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**تنزيل Swerve مجاني مع مشتريات داخل التطبيق لمستوى Pro وحزم الجواهر، ولمستوى Swerve Lite في بعض المتاجر.** في متجر الولايات المتحدة يبلغ سعر Pro ‏$12.49 وتبدأ حزم الجواهر من $2.49. لا توضح الصفحة ما الذي يفتحه Pro أو الجواهر، لذا راجع شاشة الدفع في التطبيق أولًا.',
           '**وفق إشعار الخصوصية الذي حُدّث آخر مرة في 19 يونيو 2026، يجمع Swerve الأسماء وعناوين البريد الإلكتروني وأسماء المستخدمين، إضافة إلى عنوان IP ومعرّفات الجهاز والتطبيق ونشاط التطبيق وتقارير الأعطال.** تمر المدفوعات عبر Apple وRevenueCat، وقد يؤدي تسجيل الدخول عبر Facebook أو X إلى مشاركة بيانات الملف الشخصي مثل الاسم والبريد وقائمة الأصدقاء والصورة.',
           '**ويقول الإشعار أيضًا إن المعرّفات والنشاط على الإنترنت بيعت أو شوركت مع شبكات الإعلانات خلال آخر 12 شهرًا، وتدرج بطاقة App Store معرّفات تُستخدم لتتبعك عبر تطبيقات ومواقع شركات أخرى.** لا يسمّي الإشعار أي مزوّد للذكاء الاصطناعي، ويذكر «منصات الذكاء الاصطناعي» فقط كفئة من المستلمين، ولا يوضح هل تُستخدم المحادثات لتدريب النماذج. هذه تصريحات المطوّر نفسه، ولم تفحص هذه المراجعة حركة الشبكة.',
+          '**تقول صفحة Safety Center لدى المطوّر، وآخر تحديث لها 25 مايو 2026، إن Swerve تستخدم تصنيفًا قائمًا على الذكاء الاصطناعي لاكتشاف محتوى إيذاء النفس في الرسائل لحظيًا، وتمنع رد الشخصية على الرسالة المُعلَّمة، وتعرض موارد المساعدة في الأزمات.** هذا وصف المطوّر نفسه، ولم تختبر هذه المراجعة سلوك التطبيق فعليًا.',
         ],
       },
       ageContent: {
@@ -2390,8 +2576,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الميزة': 'تحديثات متكررة',
-            'ما تعنيه في الاستخدام الفعلي': 'يُظهر سجل الإصدارات 25 إصدارًا من 23 مارس إلى 7 أكتوبر.',
-            'القيد / التحفظ': 'كلها عدا الأحدث تذكر فقط «Bug fixes and performance improvements».',
+            'ما تعنيه في الاستخدام الفعلي': 'يُظهر سجل الإصدارات 25 إصدارًا من 2 أبريل إلى 23 أكتوبر.',
+            'القيد / التحفظ': 'الإصداران الأحدث فقط يذكران تغييرات محددة؛ أما البقية فتكتفي بعبارة «Bug fixes and performance improvements».',
           },
         ],
       },
@@ -2467,6 +2653,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'هل يمكنني حذف حسابي وبياناتي في Swerve؟',
             a: 'يتضمن الموقع رابطًا إلى صفحة حذف الحساب، ويقول الإشعار إن البيانات تُعطَّل أو تُحذف بعد إنهاء الحساب، مع الاحتفاظ ببعضها لمنع الاحتيال ولأسباب قانونية.',
           },
+          {
+            q: 'هل تطبيق Swerve AI آمن؟',
+            a: 'لم تختبر هذه المراجعة التطبيق، لذلك لا تقيّم أمانه. توثّق صفحات المطوّر نفسه حدًّا عمريًا +18، ومركز Safety Center يصف الكشف التلقائي عن محتوى إيذاء النفس، وإشعار خصوصية يصف المشاركة مع شبكات الإعلانات؛ اقرأ الإشعار قبل مشاركة بياناتك الشخصية.',
+          },
+          {
+            q: 'هل يقرأ Swerve AI محادثاتي؟',
+            a: 'لا يذكر إشعار الخصوصية ولا الشروط ما إذا كان بإمكان الموظفين أو منشئي الشخصيات أو مستخدمين آخرين قراءة محادثاتك. تنص الشروط على أن Swerve غير ملزمة بمراقبة مساهمات المستخدمين، ويقول Safety Center إن الرسائل تُفحص تلقائيًا بحثًا عن محتوى إيذاء النفس. للحصول على إجابة قاطعة راسل [support@getswerve.com](mailto:support@getswerve.com).',
+          },
+          {
+            q: 'هل Swerve AI مجاني؟',
+            a: 'التنزيل مجاني، ويعرض App Store مشتريات داخل التطبيق: Pro وSwerve Lite وحزم الجواهر. لا تذكر الصفحة أي الميزات تتطلب شراءً، ولم تختبر هذه المراجعة المستوى المجاني.',
+          },
+          {
+            q: 'متى يصل Swerve AI إلى أندرويد والويب؟',
+            a: 'لا يذكر المطوّر تاريخًا. تقول صفحة الدعم إن النسختين «قريبًا»، وإنه لا يوجد بعد تطبيق أندرويد رسمي ولا ملف APK ولا نسخة ويب، وإن التطبيقات والمواقع الأخرى باسم «Swerve AI» ليست من الشركة.',
+          },
+          {
+            q: 'لماذا اختفت محادثاتي في Swerve؟',
+            a: 'يقول قسم الأسئلة الشائعة في صفحة الدعم لدى المطوّر إن السبب عادةً هو تسجيل الدخول ببيانات مختلفة (Apple أو Google) عن تلك المستخدمة عند التسجيل. سجّل الخروج ثم ادخل بالبيانات الأصلية، أو افتح Support Chat من Settings داخل التطبيق.',
+          },
         ],
       },
       verdict: {
@@ -2486,6 +2692,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[موقع Swerve](https://www.getswerve.com/) — وصف المطوّر نفسه وتوفر المنصات.',
           '[إشعار خصوصية Swerve](https://www.getswerve.com/privacy) — جمع البيانات والمشاركة مع شبكات الإعلانات والاحتفاظ.',
           '[شروط Swerve وأحكامه](https://www.getswerve.com/terms) — الحد الأدنى للعمر وسياسة المحتوى وشروط الاشتراك.',
+          '[Swerve Safety Center](https://www.getswerve.com/safety) — اكتشاف إيذاء النفس وموارد المساعدة في الأزمات.',
+          '[دعم Swerve](https://www.getswerve.com/support) — بيان الموقع الرسمي وحالة أندرويد والويب والمساعدة عند اختفاء المحادثات.',
+          '[صفحة «من نحن» في Swerve](https://www.getswerve.com/about) — الشركة ومقرها والجهة الداعمة.',
         ],
       },
       relatedReading: {
@@ -2504,8 +2713,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
-    next_refresh_due: '2027-04-17',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/swerve-ai-review-hero-ko.webp',
     title: 'Swerve 리뷰: iPhone용 AI 스토리·캐릭터 채팅 앱',
@@ -2534,7 +2743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone'],
     leadAnswerBlock:
-      '**Swerve: AI Chat & Stories는 AI 캐릭터와 채팅하고 분기형 스토리를 즐기는 무료 비공개 소스 iPhone 앱이며, 로컬 AI 앱이 아니라 온라인 서비스입니다.** App Store 페이지에 따르면 iOS 18.0 이상이 필요합니다. 이 리뷰는 2026년 10월 7일에 마지막으로 업데이트된 버전 1.32.0을 다루며, 직접 사용해 본 결과가 아니라 공개된 페이지, 웹사이트, 개인정보 고지, 약관에 근거합니다.',
+      '**Swerve: AI Chat & Stories는 AI 캐릭터와 채팅하고 분기형 스토리를 즐기는 무료 비공개 소스 iPhone 앱이며, 로컬 AI 앱이 아니라 온라인 서비스입니다.** App Store 페이지에 따르면 iOS 18.0 이상이 필요합니다. 이 리뷰는 2026년 10월 23일에 마지막으로 업데이트된 버전 1.33.0을 다루며, 직접 사용해 본 결과가 아니라 공개된 페이지, 웹사이트, 개인정보 고지, 약관에 근거합니다.',
     quickAnswerTop: {
       ko: {
         question: 'iPhone에서 AI 캐릭터 채팅과 스토리를 즐기려면 Swerve를 설치할 만한가요?',
@@ -2547,7 +2756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '개인정보 고지에 따르면 식별자와 인터넷 활동이 지난 12개월 동안 광고 네트워크에 판매되거나 공유되었습니다.',
           'Android 및 웹 버전은 대기자 명단만 운영합니다.',
         ],
-        updatedDate: '2026-10-17',
+        updatedDate: '2026-11-02',
       },
     },
     toc: [
@@ -2583,7 +2792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '리뷰 대상 버전: 1.32.0이며 [App Store 페이지](https://apps.apple.com/us/app/swerve-ai-chat/id6754301136)에 표시된 버전입니다.',
+          '리뷰 대상 버전: 1.33.0이며 [App Store 페이지](https://apps.apple.com/us/app/swerve-ai-chat/id6754301136)에 표시된 버전입니다.',
           '실행 위치: 페이지, 웹사이트, 고지 어디에도 AI 모델이나 호스트가 명시되어 있지 않으며 온디바이스 모드도 문서화되어 있지 않습니다.',
           '연령: App Store에서 18+로 분류되며, 연령 등급 상세에 빈번한 성적 콘텐츠 또는 노출이 명시되어 있습니다.',
           '언어: 페이지는 영어로만 제공됩니다.',
@@ -2594,7 +2803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Swerve 받기',
         content: [
-          '**Swerve는 Apple App Store를 통해 배포되는 iPhone 전용 앱입니다.** 다운로드 크기는 116.9 MB이며 무료이고 인앱 결제가 있습니다.',
+          '**Swerve는 Apple App Store를 통해 배포되는 iPhone 전용 앱입니다.** 다운로드 크기는 121.4 MB이며 무료이고 인앱 결제가 있습니다.',
         ],
         columns: ['채널', '받는 곳'],
         rows: [
@@ -2629,7 +2838,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '항목': '그룹 채팅', 'Swerve': '예, 한 스토리에 여러 캐릭터' },
           { '항목': '로어북 / 월드 정보', 'Swerve': '페이지에 명시 없음' },
           { '항목': '연령 등급', 'Swerve': '18+' },
-          { '항목': '버전 / 마지막 업데이트', 'Swerve': '1.32.0 / 2026년 10월 7일' },
+          { '항목': '버전 / 마지막 업데이트', 'Swerve': '1.33.0 / 2026년 10월 23일' },
+          { '항목': '스토어 평점', 'Swerve': '5점 만점에 4.7점, 약 3만 7천 건의 App Store 평가(미국)' },
           { '항목': '인터페이스 언어', 'Swerve': '영어' },
         ],
         note: '항목은 Local AI App Directory의 롤플레이 비교 기준을 따릅니다. App Store 페이지와 웹사이트에서 가져왔으며 모든 기능을 다루지는 않습니다.',
@@ -2639,7 +2849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Swerve란',
         content: [
           '**Swerve는 인터랙티브 픽션 채팅 앱으로, "자신의 말로 스토리를 플레이"하면 AI 캐릭터가 응답합니다.** 페이지에는 로맨스, 드라마, 애니메이션, 판타지 같은 장르에 걸친 커뮤니티 제작 캐릭터가 50만 개 이상이라고 설명되어 있습니다.',
-          '발행사는 미국 기업인 MSPW Labs, Inc.입니다. 웹사이트는 getswerve.com을 "Swerve AI의 유일한 공식 웹사이트"라고 밝히고 있으므로 이름이 비슷한 앱이나 사이트는 다른 제품으로 보셔야 합니다.',
+          '발행사는 미국 기업인 MSPW Labs, Inc.입니다. 웹사이트는 getswerve.com을 "Swerve AI의 유일한 공식 웹사이트"라고 밝히고 있으므로 이름이 비슷한 앱이나 사이트는 다른 제품으로 보셔야 합니다. Apple의 App Store 조회 데이터에는 첫 출시일이 2025년 11월 16일로 나와 있으며, 웹사이트는 이 회사를 팰러앨토에 본사를 둔 델라웨어 법인이자 Y Combinator의 지원을 받는 곳으로 소개합니다.',
           '이 리뷰는 페이지, 웹사이트, 개인정보 고지, 약관만을 근거로 합니다. 직접 사용해 본 테스트는 포함하지 않으므로 응답 품질, 메모리 신뢰성, 콘텐츠 관리, 속도는 여기서 평가하지 않습니다.',
         ],
       },
@@ -2653,7 +2863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**캐릭터.** 커뮤니티 캐릭터를 둘러보거나 직접 만들어 공개로 공유하거나 비공개로 둘 수 있습니다.',
           '**스토리 모드.** 일대일로 채팅하거나 여러 캐릭터를 같은 스토리에 불러올 수 있으며, 페르소나로 원하는 캐릭터를 연기할 수 있습니다.',
           '**메모리.** 캐릭터가 기억해야 할 세부 정보를 고정할 수 있습니다.',
-          '**제어.** 다른 답변을 요청하거나 메시지를 편집하거나 임의의 메시지에서 새 경로를 시작할 수 있습니다. 버전 1.32.0은 자동 임시 저장과 삭제될 메시지 수를 보여 주는 되감기 미리보기를 추가했습니다.',
+          '**제어.** 다른 답변을 요청하거나 메시지를 편집하거나 임의의 메시지에서 새 경로를 시작할 수 있습니다. 버전 1.32.0은 자동 임시 저장과 삭제될 메시지 수를 보여 주는 되감기 미리보기를 추가했습니다. 이후 버전 1.33.0은 프로필에서 내 캐릭터·페르소나·북마크를 검색하는 기능과 설정의 채팅 레이아웃·글꼴 옵션을 추가했습니다.',
           '**커뮤니티.** 페이지에 Discord 커뮤니티 링크가 있습니다.',
         ],
       },
@@ -2664,6 +2874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Swerve는 무료로 다운로드할 수 있으며 Pro 등급, 젬 패키지, 일부 스토어에서는 Swerve Lite 등급이 인앱 결제로 제공됩니다.** 미국 스토어에서 Pro는 $12.49이고 젬 패키지는 $2.49부터 시작합니다. 페이지에는 Pro나 젬으로 무엇이 열리는지 나와 있지 않으므로 먼저 앱 안의 결제 화면을 확인하십시오.',
           '**개인정보 고지(2026년 6월 19일 마지막 업데이트)에 따르면 Swerve는 이름, 이메일 주소, 사용자 이름과 함께 IP 주소, 기기 및 앱 식별자, 앱 활동, 충돌 보고서를 수집합니다.** 결제는 Apple과 RevenueCat을 통해 처리되며, Facebook 또는 X로 로그인하면 이름, 이메일, 친구 목록, 사진 같은 프로필 정보가 공유될 수 있습니다.',
           '**고지에는 지난 12개월 동안 식별자와 인터넷 활동이 광고 네트워크에 판매되거나 공유되었다는 내용도 있으며, App Store 라벨에는 다른 회사의 앱과 웹사이트 전반에서 사용자를 추적하는 데 쓰이는 식별자가 표시되어 있습니다.** AI 제공업체는 명시되지 않으며 "AI 플랫폼"은 수신자 범주로만 언급되고, 채팅이 모델 학습에 쓰이는지도 밝히지 않습니다. 이는 개발사 자신의 진술이며, 이 리뷰는 네트워크 트래픽을 점검하지 않았습니다.',
+          '**개발사의 Safety Center 페이지(최종 업데이트 2026년 5월 25일)에 따르면 Swerve는 AI 기반 분류로 메시지 속 자해 콘텐츠를 실시간으로 감지하고, 표시된 메시지에 대한 캐릭터의 답변을 막으며 위기 지원 자료를 보여 줍니다.** 이는 개발사 자신의 설명이며, 이 리뷰는 앱의 실제 동작을 테스트하지 않았습니다.',
         ],
       },
       ageContent: {
@@ -2701,8 +2912,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '장점': '잦은 업데이트',
-            '실제 사용에서의 의미': '버전 기록에 3월 23일부터 10월 7일까지 25번의 릴리스가 있습니다.',
-            '한계 / 주의점': '최신 버전을 제외하면 모두 "Bug fixes and performance improvements"만 적혀 있습니다.',
+            '실제 사용에서의 의미': '버전 기록에 4월 2일부터 10월 23일까지 25번의 릴리스가 있습니다.',
+            '한계 / 주의점': '구체적인 변경 내용이 적힌 것은 최신 두 버전뿐이고, 나머지는 "Bug fixes and performance improvements"만 적혀 있습니다.',
           },
         ],
       },
@@ -2778,6 +2989,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Swerve 계정과 데이터를 삭제할 수 있나요?',
             a: '웹사이트에 계정 삭제 페이지 링크가 있으며, 고지에 따르면 계정 종료 후 데이터는 비활성화되거나 삭제되고 일부는 사기 방지와 법적 사유로 보관됩니다.',
           },
+          {
+            q: 'Swerve AI는 안전한가요?',
+            a: '이 리뷰는 앱을 직접 사용해 보지 않았으므로 안전성을 평가하지 않습니다. 개발사 자체 페이지에는 18세 이상 연령 제한, 자해 콘텐츠를 자동 감지한다고 설명하는 Safety Center, 광고 네트워크와의 공유를 설명하는 개인정보 고지가 기재되어 있습니다. 개인 정보를 입력하기 전에 고지를 읽어 보십시오.',
+          },
+          {
+            q: 'Swerve AI가 내 채팅을 읽나요?',
+            a: '개인정보 고지와 이용약관 모두 직원, 캐릭터 제작자, 다른 사용자가 채팅을 읽을 수 있는지 밝히지 않습니다. 약관에는 Swerve가 사용자 게시물을 모니터링할 의무가 없다고 되어 있고, Safety Center에는 메시지를 자해 콘텐츠 여부로 자동 검사한다고 되어 있습니다. 확실한 답변은 [support@getswerve.com](mailto:support@getswerve.com)으로 문의하십시오.',
+          },
+          {
+            q: 'Swerve AI는 무료인가요?',
+            a: '다운로드는 무료이며, App Store에는 인앱 결제(Pro, Swerve Lite, 젬 패키지)가 표시되어 있습니다. 어떤 기능에 결제가 필요한지는 페이지에 나와 있지 않으며, 이 리뷰는 무료 이용 범위를 직접 사용해 보지 않았습니다.',
+          },
+          {
+            q: 'Swerve AI는 언제 Android와 웹에서 출시되나요?',
+            a: '개발사는 날짜를 밝히지 않았습니다. 지원 페이지에는 두 버전 모두 "곧 출시"라고 되어 있고, 공식 Android 앱, APK, 웹 버전은 아직 없으며 "Swerve AI"라는 이름의 다른 앱과 사이트는 해당 회사의 것이 아니라고 적혀 있습니다.',
+          },
+          {
+            q: 'Swerve 채팅이 사라진 이유는 무엇인가요?',
+            a: '개발사 지원 FAQ에 따르면 대개 가입할 때와 다른 인증 정보(Apple 또는 Google)로 로그인했기 때문입니다. 로그아웃한 뒤 처음 사용한 정보로 다시 로그인하거나, 앱의 "Settings → Support Chat"을 여십시오.',
+          },
         ],
       },
       verdict: {
@@ -2797,6 +3028,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Swerve 웹사이트](https://www.getswerve.com/) — 개발사 자신의 설명과 플랫폼별 제공 현황.',
           '[Swerve 개인정보 고지](https://www.getswerve.com/privacy) — 데이터 수집, 광고 네트워크 공유, 보관.',
           '[Swerve 이용 약관](https://www.getswerve.com/terms) — 연령 제한, 콘텐츠 정책, 구독 조건.',
+          '[Swerve Safety Center](https://www.getswerve.com/safety) — 자해 콘텐츠 감지 및 위기 지원 자료.',
+          '[Swerve 지원](https://www.getswerve.com/support) — 공식 웹사이트 안내, Android·웹 상태, 채팅이 보이지 않을 때의 도움말.',
+          '[Swerve 소개 페이지](https://www.getswerve.com/about) — 회사, 소재지, 지원 기관.',
         ],
       },
       relatedReading: {

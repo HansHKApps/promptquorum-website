@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'MIT',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/n4ze3m/page-assist README: a Chrome/Firefox browser extension and sidebar UI that talks to a separately-installed backend (Ollama or any OpenAI-compatible endpoint) — the extension itself never runs inference, so it needs no GPU of its own — verified 2026-09-13
-  stars: 8277,
+  stars: 8307,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat'],
@@ -34,10 +34,10 @@ export const app: ToolRecord = {
     ko: 'Chrome 및 Firefox용 브라우저 사이드바 AI',
   },
   reviewSlug: 'page-assist-review', // dedicated PromptQuorum review — pinned to #1 in the article index
-  pqReview: { date: '2026-09-20', version: 'v1.5.83', versionSourceUrl: 'https://github.com/n4ze3m/page-assist/releases/tag/v1.5.83' },
+  pqReview: { date: '2026-11-02', version: 'v1.5.90', versionSourceUrl: 'https://github.com/n4ze3m/page-assist/releases/tag/v1.5.90' },
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { ollama: true, customEndpoint: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-10-11', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2026-11-01', // GitHub API (latest release or push, whichever is newer), read 2026-11-02
   lastUpstreamUpdateSource: 'https://github.com/n4ze3m/page-assist',
 }

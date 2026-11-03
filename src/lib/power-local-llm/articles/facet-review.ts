@@ -1,11 +1,11 @@
 // Facet Review: Local Photo Scoring, Culling and Gallery
 // Slug: facet-review
 // Companion to: immich-review, photoprism-review, pixlstash-review
-// Sources (all read 2026-10-28, no hands-on testing): ncoevoet.github.io/facet, the GitHub repo and API (ncoevoet/facet: v1.25.0 published 2026-10-27, last push 2026-10-28, LICENSE = MIT,
+// Sources (read 2026-10-28, re-verified 2026-11-02, no hands-on testing): ncoevoet.github.io/facet, the GitHub repo and API (ncoevoet/facet: v1.27.0 published 2026-10-27, last push 2026-10-28, LICENSE = MIT,
 // API licence NOASSERTION), README.md, docs/INSTALLATION.md (profiles, first-run download sizes, feature requirements, commercial install), docs/THIRD_PARTY_MODELS.md, docs/CONFIGURATION.md
 // (vlm_backend, updates), docs/AGENTS.md (MCP endpoint, on by default), docs/DEPLOYMENT.md, docs/GETTING_STARTED.md, viewer.py (default host 0.0.0.0) and client source (OSM tiles, Photon dialog).
 // The request came from the site owner (link from localhosted.com), not from the maker: no maker comment, no founder-review badge.
-// Facet is NOT an LLM chat app. Offline use after the first-run model download is unverified (stated in the review). Last upstream update 2026-10-28 => no stale warning.
+// Facet is NOT an LLM chat app. Offline use after the first-run model download is unverified (stated in the review). Last upstream update 2026-10-30 => no stale warning. 2026-11-02: v1.27.0 docs describe a per-user Windows MSI that no release ships (build from clone / CI artifact); 24gb download 19.3 GB.
 // Directory-tile caveat: license MIT for the code; pyiqa (TOPIQ, LIQE) and InsightFace weights are non-commercial, licensing.mode: commercial swaps them out (stated in the review).
 
 import type { Language } from '@/lib/blog/blogContent'
@@ -16,14 +16,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-10-28',
-    next_refresh_due: '2027-04-28',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-en.webp',
     title: 'Facet Review: Local Photo Scoring, Culling and Gallery',
     seoTitle: 'Facet Review: Local Photo Scoring, Culling, Gallery',
     intro:
-      'Facet is a free, MIT-licensed photo-analysis tool that you run yourself: it scores each photo, finds bursts and near-duplicates, groups faces and lets you search your library in plain words through a web gallery. It is not a chat or LLM app; the AI is image scoring, embeddings and face models. This review reflects its README, documentation, GitHub releases and source as checked on 28 October 2026.',
+      'Facet is a free, MIT-licensed photo-analysis tool that you run yourself: it scores each photo, finds bursts and near-duplicates, groups faces and lets you search your library in plain words through a web gallery. It is not a chat or LLM app; the AI is image scoring, embeddings and face models. This review reflects its README, documentation, GitHub releases and source as checked on 2 November 2026.',
     metaDescription:
       'Facet review: free MIT-licensed tool that scores, culls and browses photos locally, with face grouping and search. Setup, model licences, privacy.',
     twitterDescription:
@@ -45,7 +45,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet (v1.25.0 as of 28 October 2026) is a free, MIT-licensed tool that scores, culls and browses a local photo library through a web gallery, with face grouping and plain-language search running on your own machine.** According to the project\'s model-licence page, some of its default model weights are not licensed for commercial use. It contains no chat feature.',
+      '**Facet (v1.27.0) is a free, MIT-licensed tool that scores, culls and browses a local photo library through a web gallery, with face grouping and plain-language search running on your own machine.** Per the project\'s model-licence page, some default model weights are not licensed for commercial use.',
     quickAnswerTop: {
       en: {
         question: 'Does Facet keep your photos and AI scoring on your own machine?',
@@ -55,10 +55,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Scores each photo on 9 dimensions, groups bursts, look-alikes and faces, and surfaces top picks.',
           'Plain-language search uses SigLIP 2 on the 16gb and 24gb GPU profiles and a CLIP model on the legacy and 8gb profiles.',
           'Runs on a CPU with the legacy profile; an NVIDIA GPU or a large-memory Apple Silicon Mac unlocks the strongest models.',
-          'Installed with Docker or an install script; there is no installer, app-store build or release binary.',
+          'Installed with Docker or an install script; no installer, app-store build or release binary is published, but the docs describe a Windows MSI you build or take from a CI run.',
           'Per its docs, the viewer is open to anyone who can reach its port until you set a password.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -145,7 +145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Maintenance: v1.25.0 was released on 27 October 2026 and the repository received a push on 28 October 2026, so no stale-project warning applies.',
+          'Maintenance: v1.27.0 was released on 29 October 2026 and the repository received a push on 30 October 2026, so no stale-project warning applies.',
           'Operator: the README calls it a single-developer project without commercial support; the code is on GitHub under the MIT licence.',
           'Setup: Docker Compose or an install script plus a first scan that downloads the models; a terminal is required.',
           'Cost: free; no paid tier was found. The word "Edition" in the docs is an access level, not a product edition.',
@@ -155,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'This review is based on the project\'s website, README, documentation, GitHub releases and parts of its source, checked on 28 October 2026. PromptQuorum has not installed Facet, so scoring accuracy, search relevance and speed are not assessed.',
+              'This review is based on the project\'s website, README, documentation, GitHub releases and parts of its source, checked on 2 November 2026. PromptQuorum has not installed Facet, so scoring accuracy, search relevance and speed are not assessed.',
           },
         ],
       },
@@ -171,7 +171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Get It',
         content: [
-          '**Facet is installed from its source repository with Docker or an install script; the project publishes no installer, app-store listing or release binary.**',
+          '**Facet is installed from its source repository with Docker or an install script; the project publishes no ready-made installer, app-store listing or release binary.**',
         ],
         columns: [
           'Option',
@@ -186,6 +186,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Option: 'Without Docker',
             'How to get it': 'Clone, run bash install.sh, then python facet.py and python viewer.py (Linux, macOS)',
+          },
+          {
+            Option: 'Windows (MSI)',
+            'How to get it': 'Per-user MSI per the docs, but no release ships it: build it from a clone or use the CI artifact',
           },
           {
             Option: 'Documentation',
@@ -205,7 +209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          'Version reviewed: v1.25.0, published on 27 October 2026 per the GitHub release; the last push to the repository was on 28 October 2026. Installing needs a terminal, Git and Docker or Python, so this is a developer-style setup rather than a double-click install. No separate privacy-policy page was found on the project site or in the documentation read; privacy statements are in the README.',
+          'Version reviewed: v1.27.0, published on 29 October 2026 per the GitHub release; the last push to the repository was on 30 October 2026. Installing needs a terminal, Git and Docker or Python, so this is a developer-style setup rather than a double-click install. No separate privacy-policy page was found on the project site or in the documentation read; privacy statements are in the README.',
       },
       requirements: {
         id: 'requirements',
@@ -225,7 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Item: 'First-run download',
-            'What the sources say': 'Roughly 4.7 GB (legacy), 6.9 GB (8gb), 14.6 GB (16gb) or 19.1 GB (24gb), once, per the docs',
+            'What the sources say': 'Roughly 4.7 GB (legacy), 6.9 GB (8gb), 14.6 GB (16gb) or 19.3 GB (24gb), once, per the docs',
           },
           {
             Item: 'Apple Silicon',
@@ -243,7 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Item: 'Operating system',
-            'What the sources say': 'Windows, macOS or Linux; on Windows the docs point to Docker, and to WSL2 for an NVIDIA GPU',
+            'What the sources say': 'Windows, macOS or Linux; on Windows the docs describe Docker (WSL2 for an NVIDIA GPU) or a per-user MSI that you build yourself',
           },
           {
             Item: 'Photo formats',
@@ -359,7 +363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**AI quality.** Score accuracy, face grouping, search relevance and scan speed were not tested; the README itself calls the aesthetic score approximate.',
           '**Offline use.** Whether Facet works fully offline after the first model download was not verified.',
-          '**Release stability.** The v1.23.1 notes say v1.23.0 shipped without the CUDA Docker image, and three versions were released between 24 and 27 October 2026, so expect fast change.',
+          '**Release stability.** The v1.23.1 notes say v1.23.0 shipped without the CUDA Docker image, and six versions were released between 24 and 29 October 2026, so expect fast change.',
           '**Support.** The README describes a single-developer project without the support of commercial cullers.',
           '**Install steps.** The setup commands come from the docs and were not run by PromptQuorum.',
         ],
@@ -442,11 +446,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[Facet website](https://ncoevoet.github.io/facet/) — feature overview and quick start, checked 28 October 2026.',
-          '[Facet README](https://github.com/ncoevoet/facet/blob/master/README.md) — features, requirements, licensing and comparisons, checked 28 October 2026.',
-          '[Facet documentation](https://github.com/ncoevoet/facet/tree/master/docs) — installation, configuration, deployment and AI-agent pages, checked 28 October 2026.',
-          '[Third-party models and licences](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — licence of each model, checked 28 October 2026.',
-          '[Facet on GitHub](https://github.com/ncoevoet/facet/releases) — releases and commit activity, checked 28 October 2026.',
+          '[Facet website](https://ncoevoet.github.io/facet/) — feature overview and quick start, checked 2 November 2026.',
+          '[Facet README](https://github.com/ncoevoet/facet/blob/master/README.md) — features, requirements, licensing and comparisons, checked 2 November 2026.',
+          '[Facet documentation](https://github.com/ncoevoet/facet/tree/master/docs) — installation, configuration, deployment and AI-agent pages, checked 2 November 2026.',
+          '[Third-party models and licences](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — licence of each model, checked 2 November 2026.',
+          '[Facet on GitHub](https://github.com/ncoevoet/facet/releases) — releases and commit activity, checked 2 November 2026.',
         ],
       },
       relatedReading: {
@@ -469,7 +473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/facet-review',
       inLanguage: 'en',
       datePublished: '2026-10-28',
-      dateModified: '2026-10-28',
+      dateModified: '2026-11-02',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -538,14 +542,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-10-28',
-    next_refresh_due: '2027-04-28',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-de.webp',
     title: 'Facet-Rezension: lokale Foto-Bewertung, Aussortieren und Galerie',
     seoTitle: 'Facet-Rezension: Fotos lokal bewerten und aussortieren',
     intro:
-      'Facet ist ein kostenloses, MIT-lizenziertes Werkzeug zur Fotoanalyse, das Sie selbst betreiben: Es bewertet jedes Foto, findet Serienbilder und Beinahe-Duplikate, gruppiert Gesichter und lässt Sie Ihre Bibliothek in einer Weboberfläche in natürlicher Sprache durchsuchen. Es ist keine Chat- oder LLM-App; die KI besteht aus Bildbewertung, Embeddings und Gesichtsmodellen. Diese Rezension stützt sich auf README, Dokumentation, GitHub-Releases und Quellcode, geprüft am 28. Oktober 2026.',
+      'Facet ist ein kostenloses, MIT-lizenziertes Werkzeug zur Fotoanalyse, das Sie selbst betreiben: Es bewertet jedes Foto, findet Serienbilder und Beinahe-Duplikate, gruppiert Gesichter und lässt Sie Ihre Bibliothek in einer Weboberfläche in natürlicher Sprache durchsuchen. Es ist keine Chat- oder LLM-App; die KI besteht aus Bildbewertung, Embeddings und Gesichtsmodellen. Diese Rezension stützt sich auf README, Dokumentation, GitHub-Releases und Quellcode, geprüft am 2. November 2026.',
     metaDescription:
       'Facet-Rezension: kostenloses MIT-Werkzeug zum lokalen Bewerten und Aussortieren von Fotos, mit Gesichtsgruppen und Suche. Lizenzen, Datenschutz.',
     twitterDescription:
@@ -567,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet (v1.25.0, Stand 28. Oktober 2026) ist ein kostenloses, MIT-lizenziertes Werkzeug, das eine lokale Fotobibliothek bewertet, aussortiert und in einer Weboberfläche durchsuchbar macht, mit Gesichtsgruppierung und Suche in natürlicher Sprache auf Ihrem eigenen Rechner.** Laut der Lizenzseite des Projekts sind einige der Standardmodelle nicht für die kommerzielle Nutzung lizenziert. Eine Chat-Funktion gibt es nicht.',
+      '**Facet (v1.27.0) ist ein kostenloses, MIT-lizenziertes Werkzeug, das eine lokale Fotobibliothek bewertet, aussortiert und in einer Weboberfläche durchsuchbar macht, mit Gesichtsgruppierung und Suche in natürlicher Sprache auf Ihrem eigenen Rechner.** Laut Lizenzseite des Projekts sind einige Standardmodelle nicht für kommerzielle Nutzung lizenziert.',
     quickAnswerTop: {
       de: {
         question: 'Bleiben Ihre Fotos und die KI-Bewertung bei Facet auf Ihrem eigenen Rechner?',
@@ -577,10 +581,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Bewertet jedes Foto in 9 Dimensionen, gruppiert Serienbilder, ähnliche Aufnahmen und Gesichter und zeigt Top-Picks.',
           'Die Suche in natürlicher Sprache nutzt SigLIP 2 auf den GPU-Profilen 16gb und 24gb und ein CLIP-Modell auf legacy und 8gb.',
           'Läuft mit dem Profil legacy auf einer CPU; eine NVIDIA-GPU oder ein Apple-Silicon-Mac mit viel Speicher schaltet die stärksten Modelle frei.',
-          'Installation per Docker oder Installationsskript; es gibt weder Installer noch App-Store-Version noch Release-Binärdatei.',
+          'Installation per Docker oder Installationsskript; veröffentlicht werden weder Installer noch App-Store-Version noch Release-Binärdatei, doch die Dokumentation beschreibt für Windows eine MSI, die Sie selbst bauen oder aus einem CI-Lauf nehmen.',
           'Laut Dokumentation ist der Viewer für jeden erreichbar, der seinen Port erreicht, bis Sie ein Passwort setzen.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -667,7 +671,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Pflege: v1.25.0 erschien am 27. Oktober 2026, und das Repository erhielt am 28. Oktober 2026 einen Push; ein Warnhinweis auf ein veraltetes Projekt gilt daher nicht.',
+          'Pflege: v1.27.0 erschien am 29. Oktober 2026, und das Repository erhielt am 30. Oktober 2026 einen Push; ein Warnhinweis auf ein veraltetes Projekt gilt daher nicht.',
           'Betreiber: Laut README ist es ein Ein-Entwickler-Projekt ohne kommerziellen Support; der Code liegt auf GitHub unter der MIT-Lizenz.',
           'Einrichtung: Docker Compose oder ein Installationsskript plus ein erster Scan, der die Modelle herunterlädt; ein Terminal ist nötig.',
           'Kosten: kostenlos; ein Bezahltarif wurde nicht gefunden. „Edition“ in der Dokumentation bezeichnet eine Zugriffsstufe, keine Produktedition.',
@@ -677,7 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'Diese Rezension stützt sich auf Website, README, Dokumentation, GitHub-Releases und Teile des Quellcodes, geprüft am 28. Oktober 2026. PromptQuorum hat Facet nicht installiert, daher werden Bewertungsgenauigkeit, Suchqualität und Geschwindigkeit nicht beurteilt.',
+              'Diese Rezension stützt sich auf Website, README, Dokumentation, GitHub-Releases und Teile des Quellcodes, geprüft am 2. November 2026. PromptQuorum hat Facet nicht installiert, daher werden Bewertungsgenauigkeit, Suchqualität und Geschwindigkeit nicht beurteilt.',
           },
         ],
       },
@@ -693,7 +697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Bezugsquelle',
         content: [
-          '**Facet wird aus seinem Quell-Repository mit Docker oder einem Installationsskript installiert; das Projekt veröffentlicht weder Installer noch App-Store-Eintrag noch Release-Binärdatei.**',
+          '**Facet wird aus seinem Quell-Repository mit Docker oder einem Installationsskript installiert; das Projekt veröffentlicht weder einen fertigen Installer noch einen App-Store-Eintrag noch eine Release-Binärdatei.**',
         ],
         columns: [
           'Option',
@@ -708,6 +712,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Option: 'Ohne Docker',
             Bezug: 'Klonen, bash install.sh ausführen, dann python facet.py und python viewer.py (Linux, macOS)',
+          },
+          {
+            Option: 'Windows (MSI)',
+            Bezug: 'Laut Dokumentation eine MSI pro Benutzer, die aber kein Release enthält: aus dem Klon bauen oder CI-Artefakt nutzen',
           },
           {
             Option: 'Dokumentation',
@@ -727,7 +735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          'Geprüfte Version: v1.25.0, laut GitHub-Release am 27. Oktober 2026 veröffentlicht; der letzte Push ins Repository erfolgte am 28. Oktober 2026. Die Installation erfordert ein Terminal, Git und Docker oder Python, ist also eine Entwickler-Einrichtung und keine Installation per Doppelklick. Eine eigene Datenschutzseite wurde weder auf der Projektseite noch in der gelesenen Dokumentation gefunden; Datenschutzaussagen stehen in der README.',
+          'Geprüfte Version: v1.27.0, laut GitHub-Release am 29. Oktober 2026 veröffentlicht; der letzte Push ins Repository erfolgte am 30. Oktober 2026. Die Installation erfordert ein Terminal, Git und Docker oder Python, ist also eine Entwickler-Einrichtung und keine Installation per Doppelklick. Eine eigene Datenschutzseite wurde weder auf der Projektseite noch in der gelesenen Dokumentation gefunden; Datenschutzaussagen stehen in der README.',
       },
       requirements: {
         id: 'requirements',
@@ -747,7 +755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Punkt: 'Download beim ersten Start',
-            'Angaben der Quellen': 'Laut Dokumentation einmalig rund 4,7 GB (legacy), 6,9 GB (8gb), 14,6 GB (16gb) oder 19,1 GB (24gb)',
+            'Angaben der Quellen': 'Laut Dokumentation einmalig rund 4,7 GB (legacy), 6,9 GB (8gb), 14,6 GB (16gb) oder 19,3 GB (24gb)',
           },
           {
             Punkt: 'Apple Silicon',
@@ -767,7 +775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Punkt: 'Betriebssystem',
             'Angaben der Quellen':
-              'Windows, macOS oder Linux; unter Windows verweist die Dokumentation auf Docker und für eine NVIDIA-GPU auf WSL2',
+              'Windows, macOS oder Linux; unter Windows beschreibt die Dokumentation Docker (WSL2 für eine NVIDIA-GPU) oder eine MSI pro Benutzer, die Sie selbst bauen',
           },
           {
             Punkt: 'Fotoformate',
@@ -884,7 +892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**KI-Qualität.** Bewertungsgenauigkeit, Gesichtsgruppierung, Suchrelevanz und Scangeschwindigkeit wurden nicht getestet; die README selbst nennt den ästhetischen Wert ungefähr.',
           '**Offline-Betrieb.** Ob Facet nach dem ersten Modell-Download vollständig offline funktioniert, wurde nicht überprüft.',
-          '**Release-Stabilität.** Laut den Hinweisen zu v1.23.1 wurde v1.23.0 ohne das CUDA-Docker-Image veröffentlicht, und zwischen dem 24. und 27. Oktober 2026 erschienen drei Versionen; rechnen Sie also mit schnellen Änderungen.',
+          '**Release-Stabilität.** Laut den Hinweisen zu v1.23.1 wurde v1.23.0 ohne das CUDA-Docker-Image veröffentlicht, und zwischen dem 24. und 29. Oktober 2026 erschienen sechs Versionen; rechnen Sie also mit schnellen Änderungen.',
           '**Support.** Die README beschreibt ein Ein-Entwickler-Projekt ohne den Support kommerzieller Aussortier-Werkzeuge.',
           '**Installationsschritte.** Die Einrichtungsbefehle stammen aus der Dokumentation und wurden von PromptQuorum nicht ausgeführt.',
         ],
@@ -968,11 +976,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         items: [
-          '[Facet-Website](https://ncoevoet.github.io/facet/) — Funktionsüberblick und Schnellstart, geprüft am 28. Oktober 2026.',
-          '[Facet-README](https://github.com/ncoevoet/facet/blob/master/README.md) — Funktionen, Anforderungen, Lizenzen und Vergleiche, geprüft am 28. Oktober 2026.',
-          '[Facet-Dokumentation](https://github.com/ncoevoet/facet/tree/master/docs) — Installation, Konfiguration, Deployment und KI-Agenten-Seiten, geprüft am 28. Oktober 2026.',
-          '[Modelle und Lizenzen von Drittanbietern](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — Lizenz jedes Modells, geprüft am 28. Oktober 2026.',
-          '[Facet auf GitHub](https://github.com/ncoevoet/facet/releases) — Releases und Commit-Aktivität, geprüft am 28. Oktober 2026.',
+          '[Facet-Website](https://ncoevoet.github.io/facet/) — Funktionsüberblick und Schnellstart, geprüft am 2. November 2026.',
+          '[Facet-README](https://github.com/ncoevoet/facet/blob/master/README.md) — Funktionen, Anforderungen, Lizenzen und Vergleiche, geprüft am 2. November 2026.',
+          '[Facet-Dokumentation](https://github.com/ncoevoet/facet/tree/master/docs) — Installation, Konfiguration, Deployment und KI-Agenten-Seiten, geprüft am 2. November 2026.',
+          '[Modelle und Lizenzen von Drittanbietern](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — Lizenz jedes Modells, geprüft am 2. November 2026.',
+          '[Facet auf GitHub](https://github.com/ncoevoet/facet/releases) — Releases und Commit-Aktivität, geprüft am 2. November 2026.',
         ],
       },
       relatedReading: {
@@ -991,14 +999,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-10-28',
-    next_refresh_due: '2027-04-28',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-es.webp',
     title: 'Análisis de Facet: puntuación, selección y galería de fotos en local',
     seoTitle: 'Análisis de Facet: puntuar y seleccionar fotos en local',
     intro:
-      'Facet es una herramienta gratuita de análisis de fotos con licencia MIT que ejecutas tú mismo: puntúa cada foto, detecta ráfagas y casi duplicados, agrupa caras y te deja buscar en tu biblioteca con lenguaje natural desde una galería web. No es una app de chat ni de LLM; la IA consiste en puntuación de imágenes, embeddings y modelos de caras. Este análisis refleja su README, su documentación, las versiones de GitHub y el código fuente, revisados el 28 de octubre de 2026.',
+      'Facet es una herramienta gratuita de análisis de fotos con licencia MIT que ejecutas tú mismo: puntúa cada foto, detecta ráfagas y casi duplicados, agrupa caras y te deja buscar en tu biblioteca con lenguaje natural desde una galería web. No es una app de chat ni de LLM; la IA consiste en puntuación de imágenes, embeddings y modelos de caras. Este análisis refleja su README, su documentación, las versiones de GitHub y el código fuente, revisados el 2 de noviembre de 2026.',
     metaDescription:
       'Análisis de Facet: herramienta gratuita MIT que puntúa, selecciona y explora fotos en local, con caras agrupadas y búsqueda. Licencias y privacidad.',
     twitterDescription:
@@ -1020,7 +1028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet (v1.25.0 a 28 de octubre de 2026) es una herramienta gratuita con licencia MIT que puntúa, selecciona y explora una biblioteca de fotos local desde una galería web, con agrupación de caras y búsqueda en lenguaje natural en tu propio equipo.** Según la página de licencias del proyecto, algunos de sus pesos de modelo por defecto no tienen licencia para uso comercial. No incluye ninguna función de chat.',
+      '**Facet (v1.27.0) es una herramienta gratuita con licencia MIT que puntúa, selecciona y explora una biblioteca de fotos local en una galería web, con agrupación de caras y búsqueda en lenguaje natural en tu equipo.** Según su página de licencias, algunos pesos por defecto no están licenciados para uso comercial.',
     quickAnswerTop: {
       es: {
         question: '¿Facet mantiene tus fotos y la puntuación con IA en tu propio equipo?',
@@ -1030,10 +1038,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Puntúa cada foto en 9 dimensiones, agrupa ráfagas, fotos parecidas y caras, y muestra las mejores.',
           'La búsqueda en lenguaje natural usa SigLIP 2 en los perfiles de GPU 16gb y 24gb y un modelo CLIP en legacy y 8gb.',
           'Funciona en CPU con el perfil legacy; una GPU NVIDIA o un Mac con Apple Silicon con mucha memoria desbloquea los modelos más potentes.',
-          'Se instala con Docker o un script de instalación; no hay instalador, versión en tienda de apps ni binario de release.',
+          'Se instala con Docker o un script de instalación; no se publica instalador, versión en tienda de apps ni binario de release, pero la documentación describe un MSI para Windows que compilas tú o tomas de una ejecución de CI.',
           'Según su documentación, el visor está abierto a cualquiera que alcance su puerto hasta que establezcas una contraseña.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1120,7 +1128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Mantenimiento: la v1.25.0 se publicó el 27 de octubre de 2026 y el repositorio recibió un push el 28 de octubre de 2026, así que no se aplica ningún aviso de proyecto abandonado.',
+          'Mantenimiento: la v1.27.0 se publicó el 29 de octubre de 2026 y el repositorio recibió un push el 30 de octubre de 2026, así que no se aplica ningún aviso de proyecto abandonado.',
           'Responsable: el README lo describe como un proyecto de un solo desarrollador sin soporte comercial; el código está en GitHub con licencia MIT.',
           'Instalación: Docker Compose o un script de instalación, más un primer escaneo que descarga los modelos; hace falta una terminal.',
           'Coste: gratuito; no se encontró ningún plan de pago. «Edition» en la documentación es un nivel de acceso, no una edición del producto.',
@@ -1130,7 +1138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'Este análisis se basa en el sitio web, el README, la documentación, las versiones de GitHub y partes del código fuente del proyecto, revisados el 28 de octubre de 2026. PromptQuorum no ha instalado Facet, por lo que no se evalúan la precisión de la puntuación, la relevancia de la búsqueda ni la velocidad.',
+              'Este análisis se basa en el sitio web, el README, la documentación, las versiones de GitHub y partes del código fuente del proyecto, revisados el 2 de noviembre de 2026. PromptQuorum no ha instalado Facet, por lo que no se evalúan la precisión de la puntuación, la relevancia de la búsqueda ni la velocidad.',
           },
         ],
       },
@@ -1146,7 +1154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Dónde conseguirlo',
         content: [
-          '**Facet se instala desde su repositorio de código con Docker o un script de instalación; el proyecto no publica instalador, ficha en una tienda de apps ni binario de release.**',
+          '**Facet se instala desde su repositorio de código con Docker o un script de instalación; el proyecto no publica un instalador listo para usar, ficha en una tienda de apps ni binario de release.**',
         ],
         columns: [
           'Opción',
@@ -1161,6 +1169,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Opción': 'Sin Docker',
             'Cómo conseguirlo': 'Clonar, ejecutar bash install.sh y luego python facet.py y python viewer.py (Linux, macOS)',
+          },
+          {
+            'Opción': 'Windows (MSI)',
+            'Cómo conseguirlo': 'MSI por usuario; ningún release lo incluye: compílalo o usa el artefacto de CI',
           },
           {
             'Opción': 'Documentación',
@@ -1180,7 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          'Versión revisada: v1.25.0, publicada el 27 de octubre de 2026 según el release de GitHub; el último push al repositorio fue el 28 de octubre de 2026. Instalar requiere una terminal, Git y Docker o Python, así que es una instalación para desarrolladores y no un instalador de doble clic. No se encontró una página de política de privacidad aparte en el sitio del proyecto ni en la documentación leída; las declaraciones de privacidad están en el README.',
+          'Versión revisada: v1.27.0, publicada el 29 de octubre de 2026 según el release de GitHub; el último push al repositorio fue el 30 de octubre de 2026. Instalar requiere una terminal, Git y Docker o Python, así que es una instalación para desarrolladores y no un instalador de doble clic. No se encontró una página de política de privacidad aparte en el sitio del proyecto ni en la documentación leída; las declaraciones de privacidad están en el README.',
       },
       requirements: {
         id: 'requirements',
@@ -1201,7 +1213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Elemento: 'Descarga en el primer uso',
             'Qué dicen las fuentes':
-              'Según la documentación, una sola vez, unos 4.7 GB (legacy), 6.9 GB (8gb), 14.6 GB (16gb) o 19.1 GB (24gb)',
+              'Según la documentación, una sola vez, unos 4.7 GB (legacy), 6.9 GB (8gb), 14.6 GB (16gb) o 19.3 GB (24gb)',
           },
           {
             Elemento: 'Apple Silicon',
@@ -1220,7 +1232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Elemento: 'Sistema operativo',
-            'Qué dicen las fuentes': 'Windows, macOS o Linux; en Windows la documentación remite a Docker y, para una GPU NVIDIA, a WSL2',
+            'Qué dicen las fuentes': 'Windows, macOS o Linux; en Windows la documentación describe Docker (WSL2 para una GPU NVIDIA) o un MSI por usuario que compilas tú',
           },
           {
             Elemento: 'Formatos de foto',
@@ -1336,7 +1348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Calidad de la IA.** No se probaron la precisión de la puntuación, la agrupación de caras, la relevancia de la búsqueda ni la velocidad de escaneo; el propio README llama aproximada a la puntuación estética.',
           '**Uso sin conexión.** No se verificó si Facet funciona del todo sin conexión tras la primera descarga de modelos.',
-          '**Estabilidad de las versiones.** Las notas de la v1.23.1 dicen que la v1.23.0 salió sin la imagen CUDA de Docker, y entre el 24 y el 27 de octubre de 2026 se publicaron tres versiones, así que espera cambios rápidos.',
+          '**Estabilidad de las versiones.** Las notas de la v1.23.1 dicen que la v1.23.0 salió sin la imagen CUDA de Docker, y entre el 24 y el 29 de octubre de 2026 se publicaron seis versiones, así que espera cambios rápidos.',
           '**Soporte.** El README describe un proyecto de un solo desarrollador, sin el soporte de las herramientas comerciales de selección.',
           '**Pasos de instalación.** Los comandos de instalación proceden de la documentación y PromptQuorum no los ejecutó.',
         ],
@@ -1420,11 +1432,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         items: [
-          '[Sitio web de Facet](https://ncoevoet.github.io/facet/) — resumen de funciones e inicio rápido, revisado el 28 de octubre de 2026.',
-          '[README de Facet](https://github.com/ncoevoet/facet/blob/master/README.md) — funciones, requisitos, licencias y comparaciones, revisado el 28 de octubre de 2026.',
-          '[Documentación de Facet](https://github.com/ncoevoet/facet/tree/master/docs) — instalación, configuración, despliegue y páginas de agentes de IA, revisadas el 28 de octubre de 2026.',
-          '[Modelos y licencias de terceros](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — licencia de cada modelo, revisada el 28 de octubre de 2026.',
-          '[Facet en GitHub](https://github.com/ncoevoet/facet/releases) — versiones y actividad de commits, revisadas el 28 de octubre de 2026.',
+          '[Sitio web de Facet](https://ncoevoet.github.io/facet/) — resumen de funciones e inicio rápido, revisado el 2 de noviembre de 2026.',
+          '[README de Facet](https://github.com/ncoevoet/facet/blob/master/README.md) — funciones, requisitos, licencias y comparaciones, revisado el 2 de noviembre de 2026.',
+          '[Documentación de Facet](https://github.com/ncoevoet/facet/tree/master/docs) — instalación, configuración, despliegue y páginas de agentes de IA, revisadas el 2 de noviembre de 2026.',
+          '[Modelos y licencias de terceros](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — licencia de cada modelo, revisada el 2 de noviembre de 2026.',
+          '[Facet en GitHub](https://github.com/ncoevoet/facet/releases) — versiones y actividad de commits, revisadas el 2 de noviembre de 2026.',
         ],
       },
       relatedReading: {
@@ -1443,14 +1455,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-10-28',
-    next_refresh_due: '2027-04-28',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-fr.webp',
     title: 'Test de Facet : notation, tri et galerie de photos en local',
     seoTitle: 'Test de Facet : noter et trier ses photos en local',
     intro:
-      'Facet est un outil gratuit d’analyse de photos sous licence MIT que vous exécutez vous-même : il note chaque photo, repère les rafales et les quasi-doublons, regroupe les visages et vous permet de chercher dans votre photothèque en langage naturel via une galerie web. Ce n’est pas une application de chat ni de LLM ; l’IA se compose de notation d’images, d’embeddings et de modèles de visages. Ce test reflète son README, sa documentation, ses versions GitHub et son code source, consultés le 28 octobre 2026.',
+      'Facet est un outil gratuit d’analyse de photos sous licence MIT que vous exécutez vous-même : il note chaque photo, repère les rafales et les quasi-doublons, regroupe les visages et vous permet de chercher dans votre photothèque en langage naturel via une galerie web. Ce n’est pas une application de chat ni de LLM ; l’IA se compose de notation d’images, d’embeddings et de modèles de visages. Ce test reflète son README, sa documentation, ses versions GitHub et son code source, consultés le 2 novembre 2026.',
     metaDescription:
       'Test de Facet : outil gratuit MIT qui note, trie et parcourt vos photos en local, avec visages regroupés et recherche. Licences et confidentialité.',
     twitterDescription:
@@ -1472,7 +1484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet (v1.25.0 au 28 octobre 2026) est un outil gratuit sous licence MIT qui note, trie et parcourt une photothèque locale via une galerie web, avec regroupement des visages et recherche en langage naturel sur votre propre machine.** Selon la page de licences du projet, une partie de ses poids de modèles par défaut n’est pas sous licence pour un usage commercial. Il ne comporte aucune fonction de chat.',
+      '**Facet (v1.27.0) est un outil gratuit sous licence MIT qui note, trie et parcourt une photothèque locale dans une galerie web, avec regroupement des visages et recherche en langage naturel sur votre machine.** Selon sa page de licences, certains poids par défaut n’ont pas de licence d’usage commercial.',
     quickAnswerTop: {
       fr: {
         question: 'Facet garde-t-il vos photos et la notation par IA sur votre propre machine ?',
@@ -1482,10 +1494,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Note chaque photo selon 9 dimensions, regroupe rafales, photos similaires et visages, et fait ressortir les meilleures.',
           'La recherche en langage naturel utilise SigLIP 2 sur les profils GPU 16gb et 24gb et un modèle CLIP sur legacy et 8gb.',
           'Fonctionne sur CPU avec le profil legacy ; un GPU NVIDIA ou un Mac Apple Silicon doté de beaucoup de mémoire débloque les modèles les plus puissants.',
-          'S’installe avec Docker ou un script d’installation ; il n’existe ni installeur, ni version sur une boutique d’applications, ni binaire de release.',
+          'S’installe avec Docker ou un script d’installation ; aucun installeur, version sur une boutique d’applications ni binaire de release n’est publié, mais la documentation décrit pour Windows un MSI à compiler soi-même ou à récupérer dans une exécution CI.',
           'Selon sa documentation, le visualiseur est ouvert à toute personne qui atteint son port tant que vous n’avez pas défini de mot de passe.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1572,7 +1584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Maintenance : la v1.25.0 est sortie le 27 octobre 2026 et le dépôt a reçu un push le 28 octobre 2026, donc aucun avertissement de projet abandonné ne s’applique.',
+          'Maintenance : la v1.27.0 est sortie le 29 octobre 2026 et le dépôt a reçu un push le 30 octobre 2026, donc aucun avertissement de projet abandonné ne s’applique.',
           'Responsable : le README le décrit comme un projet d’un seul développeur sans support commercial ; le code est sur GitHub sous licence MIT.',
           'Installation : Docker Compose ou un script d’installation, puis un premier scan qui télécharge les modèles ; un terminal est nécessaire.',
           'Coût : gratuit ; aucune offre payante n’a été trouvée. « Edition » dans la documentation désigne un niveau d’accès, pas une édition du produit.',
@@ -1582,7 +1594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'Ce test s’appuie sur le site web, le README, la documentation, les versions GitHub et une partie du code source du projet, consultés le 28 octobre 2026. PromptQuorum n’a pas installé Facet : la précision de la notation, la pertinence de la recherche et la vitesse ne sont donc pas évaluées.',
+              'Ce test s’appuie sur le site web, le README, la documentation, les versions GitHub et une partie du code source du projet, consultés le 2 novembre 2026. PromptQuorum n’a pas installé Facet : la précision de la notation, la pertinence de la recherche et la vitesse ne sont donc pas évaluées.',
           },
         ],
       },
@@ -1598,7 +1610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Où l’obtenir',
         content: [
-          '**Facet s’installe depuis son dépôt de code avec Docker ou un script d’installation ; le projet ne publie ni installeur, ni fiche sur une boutique d’applications, ni binaire de release.**',
+          '**Facet s’installe depuis son dépôt de code avec Docker ou un script d’installation ; le projet ne publie ni installeur prêt à l’emploi, ni fiche sur une boutique d’applications, ni binaire de release.**',
         ],
         columns: [
           'Option',
@@ -1613,6 +1625,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Option: 'Sans Docker',
             'Comment l’obtenir': 'Cloner, lancer bash install.sh, puis python facet.py et python viewer.py (Linux, macOS)',
+          },
+          {
+            Option: 'Windows (MSI)',
+            'Comment l’obtenir': 'MSI par utilisateur ; aucune release ne l’inclut : à compiler ou via l’artefact CI',
           },
           {
             Option: 'Documentation',
@@ -1632,7 +1648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          'Version testée : v1.25.0, publiée le 27 octobre 2026 selon la release GitHub ; le dernier push dans le dépôt date du 28 octobre 2026. L’installation exige un terminal, Git et Docker ou Python : c’est une mise en place pour développeurs, pas une installation par double-clic. Aucune page de politique de confidentialité distincte n’a été trouvée sur le site du projet ni dans la documentation lue ; les déclarations de confidentialité figurent dans le README.',
+          'Version testée : v1.27.0, publiée le 29 octobre 2026 selon la release GitHub ; le dernier push dans le dépôt date du 30 octobre 2026. L’installation exige un terminal, Git et Docker ou Python : c’est une mise en place pour développeurs, pas une installation par double-clic. Aucune page de politique de confidentialité distincte n’a été trouvée sur le site du projet ni dans la documentation lue ; les déclarations de confidentialité figurent dans le README.',
       },
       requirements: {
         id: 'requirements',
@@ -1653,7 +1669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Élément': 'Téléchargement initial',
             'Ce que disent les sources':
-              'Selon la documentation, une seule fois, environ 4.7 Go (legacy), 6.9 Go (8gb), 14.6 Go (16gb) ou 19.1 Go (24gb)',
+              'Selon la documentation, une seule fois, environ 4.7 Go (legacy), 6.9 Go (8gb), 14.6 Go (16gb) ou 19.3 Go (24gb)',
           },
           {
             'Élément': 'Apple Silicon',
@@ -1673,7 +1689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Élément': 'Système d’exploitation',
             'Ce que disent les sources':
-              'Windows, macOS ou Linux ; sous Windows, la documentation renvoie à Docker et, pour un GPU NVIDIA, à WSL2',
+              'Windows, macOS ou Linux ; sous Windows, la documentation décrit Docker (WSL2 pour un GPU NVIDIA) ou un MSI par utilisateur à compiler soi-même',
           },
           {
             'Élément': 'Formats de photo',
@@ -1790,7 +1806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Qualité de l’IA.** La précision de la notation, le regroupement des visages, la pertinence de la recherche et la vitesse de scan n’ont pas été testés ; le README qualifie lui-même la note esthétique d’approximative.',
           '**Usage hors connexion.** Nous n’avons pas vérifié si Facet fonctionne entièrement hors ligne après le premier téléchargement des modèles.',
-          '**Stabilité des versions.** Les notes de la v1.23.1 indiquent que la v1.23.0 est sortie sans l’image Docker CUDA, et trois versions ont paru entre le 24 et le 27 octobre 2026 : attendez-vous à des changements rapides.',
+          '**Stabilité des versions.** Les notes de la v1.23.1 indiquent que la v1.23.0 est sortie sans l’image Docker CUDA, et six versions ont paru entre le 24 et le 29 octobre 2026 : attendez-vous à des changements rapides.',
           '**Support.** Le README décrit un projet d’un seul développeur, sans le support des outils de tri commerciaux.',
           '**Étapes d’installation.** Les commandes proviennent de la documentation et PromptQuorum ne les a pas exécutées.',
         ],
@@ -1874,11 +1890,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[Site web de Facet](https://ncoevoet.github.io/facet/) — présentation des fonctions et démarrage rapide, consultés le 28 octobre 2026.',
-          '[README de Facet](https://github.com/ncoevoet/facet/blob/master/README.md) — fonctions, prérequis, licences et comparaisons, consultés le 28 octobre 2026.',
-          '[Documentation de Facet](https://github.com/ncoevoet/facet/tree/master/docs) — installation, configuration, déploiement et pages sur les agents d’IA, consultées le 28 octobre 2026.',
-          '[Modèles et licences tiers](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — licence de chaque modèle, consultée le 28 octobre 2026.',
-          '[Facet sur GitHub](https://github.com/ncoevoet/facet/releases) — versions et activité des commits, consultées le 28 octobre 2026.',
+          '[Site web de Facet](https://ncoevoet.github.io/facet/) — présentation des fonctions et démarrage rapide, consultés le 2 novembre 2026.',
+          '[README de Facet](https://github.com/ncoevoet/facet/blob/master/README.md) — fonctions, prérequis, licences et comparaisons, consultés le 2 novembre 2026.',
+          '[Documentation de Facet](https://github.com/ncoevoet/facet/tree/master/docs) — installation, configuration, déploiement et pages sur les agents d’IA, consultées le 2 novembre 2026.',
+          '[Modèles et licences tiers](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — licence de chaque modèle, consultée le 2 novembre 2026.',
+          '[Facet sur GitHub](https://github.com/ncoevoet/facet/releases) — versions et activité des commits, consultées le 2 novembre 2026.',
         ],
       },
       relatedReading: {
@@ -1897,14 +1913,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-10-28',
-    next_refresh_due: '2027-04-28',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-ja.webp',
     title: 'Facetレビュー：ローカルで写真を採点・選別・閲覧',
-    seoTitle: 'Facetレビュー：写真をローカルで採点・選別・閲覧する無料ツール',
+    seoTitle: 'Facetレビュー：写真をローカルで採点・選別・閲覧できるツール',
     intro:
-      'Facetは、自分で動かす無料のMITライセンスの写真分析ツールです。写真を1枚ずつ採点し、連写やほぼ同じ写真を見つけ、顔をグループ化し、Webギャラリーから自然な言葉でライブラリを検索できます。チャットやLLMのアプリではなく、AIは画像の採点、埋め込み、顔モデルです。このレビューは、2026年10月28日に確認したREADME、ドキュメント、GitHubのリリース、ソースコードに基づいています。',
+      'Facetは、自分で動かす無料のMITライセンスの写真分析ツールです。写真を1枚ずつ採点し、連写やほぼ同じ写真を見つけ、顔をグループ化し、Webギャラリーから自然な言葉でライブラリを検索できます。チャットやLLMのアプリではなく、AIは画像の採点、埋め込み、顔モデルです。このレビューは、2026年11月2日に確認したREADME、ドキュメント、GitHubのリリース、ソースコードに基づいています。',
     metaDescription: 'Facetのレビュー。写真をローカルで採点・選別・閲覧できる無料のMITツールで、顔のグループ化と自然言語検索に対応。導入方法、モデルのライセンス、プライバシーを解説します。',
     twitterDescription:
       'Facetレビュー：写真の採点・選別・ギャラリーを自分の環境で動かすツール。DockerまたはスクリプトでのセットアップとCPU／GPUプロファイル、既定モデルの非商用ライセンス、任意のリモートVLM、確認できなかった点を整理します。',
@@ -1924,7 +1940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet（2026年10月28日時点でv1.25.0）は、ローカルの写真ライブラリを採点・選別し、Webギャラリーで閲覧できる無料のMITライセンスのツールで、顔のグループ化と自然言語検索が自分のマシン上で動きます。**プロジェクトのモデルライセンスのページによれば、既定モデルの重みの一部は商用利用が許諾されていません。チャット機能はありません。',
+      '**Facet（v1.27.0）は、ローカルの写真ライブラリを採点・選別し、Webギャラリーで閲覧できる無料のMITライセンスのツールで、顔のグループ化と自然言語検索が自分のマシン上で動きます。**プロジェクトのモデルライセンスのページによれば、既定モデルの重みの一部は商用利用が許諾されていません。チャット機能はありません。',
     quickAnswerTop: {
       ja: {
         question: 'Facetは写真とAIの採点を自分のマシン上にとどめますか。',
@@ -1934,10 +1950,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '写真を9つの観点で採点し、連写・類似写真・顔をグループ化して上位の写真を示します。',
           '自然言語検索は、GPUプロファイルの16gbと24gbではSigLIP 2、legacyと8gbではCLIPモデルを使います。',
           'legacyプロファイルならCPUで動き、NVIDIA GPUまたはメモリの多いApple Siliconを搭載したMacで最も強力なモデルが使えます。',
-          'インストールはDockerまたはインストールスクリプトで、インストーラー、アプリストア版、リリースのバイナリはありません。',
+          'インストールはDockerまたはインストールスクリプトで、インストーラー、アプリストア版、リリースのバイナリは公開されていませんが、ドキュメントにはWindows用MSIをビルドするかCI実行の成果物から入手する方法があります。',
           'ドキュメントによれば、ビューアはパスワードを設定するまで、ポートに届く人なら誰でも開けます。',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -2022,7 +2038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'メンテナンス：v1.25.0は2026年10月27日に公開され、リポジトリには2026年10月28日にプッシュがあったため、放置プロジェクトの警告は該当しません。',
+          'メンテナンス：v1.27.0は2026年10月29日に公開され、リポジトリには2026年10月30日にプッシュがあったため、放置プロジェクトの警告は該当しません。',
           '運営：READMEは、商用サポートのない個人開発プロジェクトと説明しています。コードはMITライセンスでGitHubにあります。',
           '導入：Docker Composeまたはインストールスクリプトと、モデルをダウンロードする初回スキャンが必要で、ターミナルを使います。',
           '費用：無料で、有料プランは見つかりませんでした。ドキュメントの「Edition」はアクセスレベルであり、製品のエディションではありません。',
@@ -2032,7 +2048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'このレビューは、2026年10月28日に確認したプロジェクトのWebサイト、README、ドキュメント、GitHubのリリース、ソースコードの一部に基づいています。PromptQuorumはFacetをインストールしていないため、採点の精度、検索の適合度、速度は評価していません。',
+              'このレビューは、2026年11月2日に確認したプロジェクトのWebサイト、README、ドキュメント、GitHubのリリース、ソースコードの一部に基づいています。PromptQuorumはFacetをインストールしていないため、採点の精度、検索の適合度、速度は評価していません。',
           },
         ],
       },
@@ -2048,7 +2064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: '入手方法',
         content: [
-          '**Facetは、ソースのリポジトリからDockerまたはインストールスクリプトでインストールします。プロジェクトは、インストーラー、アプリストアの掲載、リリースのバイナリを公開していません。**',
+          '**Facetは、ソースのリポジトリからDockerまたはインストールスクリプトでインストールします。プロジェクトは、すぐ使えるインストーラー、アプリストアの掲載、リリースのバイナリを公開していません。**',
         ],
         columns: [
           '項目',
@@ -2063,6 +2079,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '項目': 'Dockerなし',
             '入手方法': 'クローンして bash install.sh を実行し、python facet.py と python viewer.py を起動（Linux、macOS）',
+          },
+          {
+            '項目': 'Windows（MSI）',
+            '入手方法': 'ドキュメントではユーザー単位のMSI。ただしリリースには含まれず、クローンからビルドするかCIの成果物を使用',
           },
           {
             '項目': 'ドキュメント',
@@ -2082,7 +2102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          '確認したバージョンはv1.25.0で、GitHubのリリースによると2026年10月27日に公開されました。リポジトリへの最後のプッシュは2026年10月28日です。インストールにはターミナル、Git、DockerまたはPythonが必要で、ダブルクリックで入るものではなく開発者向けの導入です。プロジェクトのサイトにも読んだドキュメントにも、独立したプライバシーポリシーのページは見つかりませんでした。プライバシーに関する記述はREADMEにあります。',
+          '確認したバージョンはv1.27.0で、GitHubのリリースによると2026年10月29日に公開されました。リポジトリへの最後のプッシュは2026年10月30日です。インストールにはターミナル、Git、DockerまたはPythonが必要で、ダブルクリックで入るものではなく開発者向けの導入です。プロジェクトのサイトにも読んだドキュメントにも、独立したプライバシーポリシーのページは見つかりませんでした。プライバシーに関する記述はREADMEにあります。',
       },
       requirements: {
         id: 'requirements',
@@ -2102,7 +2122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '項目': '初回ダウンロード',
-            '情報源の記載': 'ドキュメントによれば一度だけで、legacyは約4.7 GB、8gbは約6.9 GB、16gbは約14.6 GB、24gbは約19.1 GB',
+            '情報源の記載': 'ドキュメントによれば一度だけで、legacyは約4.7 GB、8gbは約6.9 GB、16gbは約14.6 GB、24gbは約19.3 GB',
           },
           {
             '項目': 'Apple Silicon',
@@ -2118,7 +2138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '項目': '対応OS',
-            '情報源の記載': 'Windows、macOS、Linux。WindowsではドキュメントがDockerを案内し、NVIDIA GPUにはWSL2を案内しています',
+            '情報源の記載': 'Windows、macOS、Linux。WindowsではドキュメントがDocker（NVIDIA GPUにはWSL2）またはビルドして使うユーザー単位のMSIを案内しています',
           },
           {
             '項目': '写真の形式',
@@ -2226,7 +2246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**AIの品質。**採点の精度、顔のグループ化、検索の適合度、スキャン速度は試していません。README自身も美的スコアを概算としています。',
           '**オフライン利用。**最初のモデルのダウンロード後に、Facetが完全にオフラインで動くかどうかは確認していません。',
-          '**リリースの安定性。**v1.23.1のノートによると、v1.23.0はCUDA版のDockerイメージなしで公開されました。2026年10月24日から27日のあいだに3つのバージョンが出ているため、変更が速い点に注意してください。',
+          '**リリースの安定性。**v1.23.1のノートによると、v1.23.0はCUDA版のDockerイメージなしで公開されました。2026年10月24日から29日のあいだに6つのバージョンが出ているため、変更が速い点に注意してください。',
           '**サポート。**READMEは、商用の選別ツールのようなサポートのない個人開発プロジェクトと説明しています。',
           '**インストール手順。**セットアップのコマンドはドキュメントによるもので、PromptQuorumは実行していません。',
         ],
@@ -2306,11 +2326,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '情報源',
         items: [
-          '[Facetのウェブサイト](https://ncoevoet.github.io/facet/)：機能の概要とクイックスタート。2026年10月28日に確認。',
-          '[FacetのREADME](https://github.com/ncoevoet/facet/blob/master/README.md)：機能、要件、ライセンス、他ツールとの比較。2026年10月28日に確認。',
-          '[Facetのドキュメント](https://github.com/ncoevoet/facet/tree/master/docs)：インストール、設定、デプロイ、AIエージェントのページ。2026年10月28日に確認。',
-          '[サードパーティのモデルとライセンス](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md)：各モデルのライセンス。2026年10月28日に確認。',
-          '[GitHubのFacet](https://github.com/ncoevoet/facet/releases)：リリースとコミットの状況。2026年10月28日に確認。',
+          '[Facetのウェブサイト](https://ncoevoet.github.io/facet/)：機能の概要とクイックスタート。2026年11月2日に確認。',
+          '[FacetのREADME](https://github.com/ncoevoet/facet/blob/master/README.md)：機能、要件、ライセンス、他ツールとの比較。2026年11月2日に確認。',
+          '[Facetのドキュメント](https://github.com/ncoevoet/facet/tree/master/docs)：インストール、設定、デプロイ、AIエージェントのページ。2026年11月2日に確認。',
+          '[サードパーティのモデルとライセンス](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md)：各モデルのライセンス。2026年11月2日に確認。',
+          '[GitHubのFacet](https://github.com/ncoevoet/facet/releases)：リリースとコミットの状況。2026年11月2日に確認。',
         ],
       },
       relatedReading: {
@@ -2329,14 +2349,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-10-28',
-    next_refresh_due: '2027-04-28',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-pt.webp',
     title: 'Análise do Facet: pontuação, seleção e galeria de fotos locais',
     seoTitle: 'Análise do Facet: pontuar e selecionar fotos localmente',
     intro:
-      'O Facet é uma ferramenta gratuita de análise de fotos, sob licença MIT, que você mesmo executa: ela pontua cada foto, encontra rajadas e quase duplicatas, agrupa rostos e deixa você pesquisar a biblioteca em linguagem natural por uma galeria web. Não é um app de chat nem de LLM; a IA é pontuação de imagens, embeddings e modelos de rostos. Esta análise reflete o README, a documentação, as versões do GitHub e o código-fonte, conferidos em 28 de outubro de 2026.',
+      'O Facet é uma ferramenta gratuita de análise de fotos, sob licença MIT, que você mesmo executa: ela pontua cada foto, encontra rajadas e quase duplicatas, agrupa rostos e deixa você pesquisar a biblioteca em linguagem natural por uma galeria web. Não é um app de chat nem de LLM; a IA é pontuação de imagens, embeddings e modelos de rostos. Esta análise reflete o README, a documentação, as versões do GitHub e o código-fonte, conferidos em 2 de novembro de 2026.',
     metaDescription:
       'Análise do Facet: ferramenta gratuita MIT que pontua, seleciona e navega fotos localmente, com rostos agrupados e busca. Instalação, licenças, privacidade.',
     twitterDescription:
@@ -2358,7 +2378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**O Facet (v1.25.0 em 28 de outubro de 2026) é uma ferramenta gratuita, sob licença MIT, que pontua, seleciona e navega uma biblioteca de fotos local por uma galeria web, com agrupamento de rostos e busca em linguagem natural rodando no seu próprio computador.** Segundo a página de licenças do projeto, parte dos pesos de modelo padrão não tem licença para uso comercial. Não há nenhuma função de chat.',
+      '**O Facet (v1.27.0) é uma ferramenta gratuita, sob licença MIT, que pontua, seleciona e navega uma biblioteca de fotos local em uma galeria web, com agrupamento de rostos e busca em linguagem natural no seu computador.** Segundo a página de licenças, alguns pesos padrão não têm licença para uso comercial.',
     quickAnswerTop: {
       pt: {
         question: 'O Facet mantém suas fotos e a pontuação por IA no seu próprio computador?',
@@ -2368,10 +2388,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pontua cada foto em 9 dimensões, agrupa rajadas, fotos parecidas e rostos, e destaca as melhores.',
           'A busca em linguagem natural usa o SigLIP 2 nos perfis de GPU 16gb e 24gb e um modelo CLIP em legacy e 8gb.',
           'Roda em CPU com o perfil legacy; uma GPU NVIDIA ou um Mac com Apple Silicon e muita memória libera os modelos mais fortes.',
-          'Instala-se com Docker ou um script de instalação; não há instalador, versão em loja de apps nem binário de release.',
+          'Instala-se com Docker ou um script de instalação; não é publicado instalador, versão em loja de apps nem binário de release, mas a documentação descreve um MSI para Windows que você compila ou obtém de uma execução de CI.',
           'Segundo a documentação, o visualizador fica aberto a qualquer pessoa que alcance a porta até você definir uma senha.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -2458,7 +2478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Manutenção: a v1.25.0 foi lançada em 27 de outubro de 2026 e o repositório recebeu um push em 28 de outubro de 2026, então nenhum aviso de projeto abandonado se aplica.',
+          'Manutenção: a v1.27.0 foi lançada em 29 de outubro de 2026 e o repositório recebeu um push em 30 de outubro de 2026, então nenhum aviso de projeto abandonado se aplica.',
           'Responsável: o README o descreve como um projeto de um único desenvolvedor, sem suporte comercial; o código está no GitHub sob licença MIT.',
           'Instalação: Docker Compose ou um script de instalação, mais uma primeira varredura que baixa os modelos; é preciso um terminal.',
           'Custo: gratuito; nenhum plano pago foi encontrado. «Edition» na documentação é um nível de acesso, não uma edição do produto.',
@@ -2468,7 +2488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'Esta análise se baseia no site, no README, na documentação, nas versões do GitHub e em partes do código-fonte do projeto, conferidos em 28 de outubro de 2026. A PromptQuorum não instalou o Facet, então precisão da pontuação, relevância da busca e velocidade não são avaliadas.',
+              'Esta análise se baseia no site, no README, na documentação, nas versões do GitHub e em partes do código-fonte do projeto, conferidos em 2 de novembro de 2026. A PromptQuorum não instalou o Facet, então precisão da pontuação, relevância da busca e velocidade não são avaliadas.',
           },
         ],
       },
@@ -2484,7 +2504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Onde obter',
         content: [
-          '**O Facet é instalado a partir do repositório de código com Docker ou um script de instalação; o projeto não publica instalador, página em loja de apps nem binário de release.**',
+          '**O Facet é instalado a partir do repositório de código com Docker ou um script de instalação; o projeto não publica instalador pronto, página em loja de apps nem binário de release.**',
         ],
         columns: [
           'Opção',
@@ -2499,6 +2519,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Opção': 'Sem Docker',
             'Onde obter': 'Clonar, executar bash install.sh e depois python facet.py e python viewer.py (Linux, macOS)',
+          },
+          {
+            'Opção': 'Windows (MSI)',
+            'Onde obter': 'MSI por usuário; nenhum release o inclui: compile ou use o artefato de CI',
           },
           {
             'Opção': 'Documentação',
@@ -2518,7 +2542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          'Versão analisada: v1.25.0, publicada em 27 de outubro de 2026 segundo o release do GitHub; o último push no repositório foi em 28 de outubro de 2026. A instalação exige terminal, Git e Docker ou Python, então é uma configuração para desenvolvedores, não uma instalação com duplo clique. Nenhuma página separada de política de privacidade foi encontrada no site do projeto nem na documentação lida; as declarações de privacidade estão no README.',
+          'Versão analisada: v1.27.0, publicada em 29 de outubro de 2026 segundo o release do GitHub; o último push no repositório foi em 30 de outubro de 2026. A instalação exige terminal, Git e Docker ou Python, então é uma configuração para desenvolvedores, não uma instalação com duplo clique. Nenhuma página separada de política de privacidade foi encontrada no site do projeto nem na documentação lida; as declarações de privacidade estão no README.',
       },
       requirements: {
         id: 'requirements',
@@ -2539,7 +2563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Item: 'Download no primeiro uso',
             'O que dizem as fontes':
-              'Segundo a documentação, uma única vez, cerca de 4.7 GB (legacy), 6.9 GB (8gb), 14.6 GB (16gb) ou 19.1 GB (24gb)',
+              'Segundo a documentação, uma única vez, cerca de 4.7 GB (legacy), 6.9 GB (8gb), 14.6 GB (16gb) ou 19.3 GB (24gb)',
           },
           {
             Item: 'Apple Silicon',
@@ -2557,7 +2581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Item: 'Sistema operacional',
-            'O que dizem as fontes': 'Windows, macOS ou Linux; no Windows a documentação indica o Docker e, para GPU NVIDIA, o WSL2',
+            'O que dizem as fontes': 'Windows, macOS ou Linux; no Windows a documentação descreve o Docker (WSL2 para GPU NVIDIA) ou um MSI por usuário que você compila',
           },
           {
             Item: 'Formatos de foto',
@@ -2673,7 +2697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Qualidade da IA.** Precisão da pontuação, agrupamento de rostos, relevância da busca e velocidade de varredura não foram testados; o próprio README chama a nota estética de aproximada.',
           '**Uso offline.** Não verificamos se o Facet funciona totalmente offline depois do primeiro download dos modelos.',
-          '**Estabilidade das versões.** As notas da v1.23.1 dizem que a v1.23.0 saiu sem a imagem CUDA do Docker, e três versões foram lançadas entre 24 e 27 de outubro de 2026, então espere mudanças rápidas.',
+          '**Estabilidade das versões.** As notas da v1.23.1 dizem que a v1.23.0 saiu sem a imagem CUDA do Docker, e seis versões foram lançadas entre 24 e 29 de outubro de 2026, então espere mudanças rápidas.',
           '**Suporte.** O README descreve um projeto de um único desenvolvedor, sem o suporte das ferramentas comerciais de seleção.',
           '**Etapas de instalação.** Os comandos de instalação vêm da documentação e a PromptQuorum não os executou.',
         ],
@@ -2757,11 +2781,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         items: [
-          '[Site do Facet](https://ncoevoet.github.io/facet/) — visão geral dos recursos e início rápido, conferidos em 28 de outubro de 2026.',
-          '[README do Facet](https://github.com/ncoevoet/facet/blob/master/README.md) — recursos, requisitos, licenças e comparações, conferidos em 28 de outubro de 2026.',
-          '[Documentação do Facet](https://github.com/ncoevoet/facet/tree/master/docs) — instalação, configuração, implantação e páginas sobre agentes de IA, conferidas em 28 de outubro de 2026.',
-          '[Modelos e licenças de terceiros](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — licença de cada modelo, conferida em 28 de outubro de 2026.',
-          '[Facet no GitHub](https://github.com/ncoevoet/facet/releases) — versões e atividade de commits, conferidas em 28 de outubro de 2026.',
+          '[Site do Facet](https://ncoevoet.github.io/facet/) — visão geral dos recursos e início rápido, conferidos em 2 de novembro de 2026.',
+          '[README do Facet](https://github.com/ncoevoet/facet/blob/master/README.md) — recursos, requisitos, licenças e comparações, conferidos em 2 de novembro de 2026.',
+          '[Documentação do Facet](https://github.com/ncoevoet/facet/tree/master/docs) — instalação, configuração, implantação e páginas sobre agentes de IA, conferidas em 2 de novembro de 2026.',
+          '[Modelos e licenças de terceiros](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — licença de cada modelo, conferida em 2 de novembro de 2026.',
+          '[Facet no GitHub](https://github.com/ncoevoet/facet/releases) — versões e atividade de commits, conferidas em 2 de novembro de 2026.',
         ],
       },
       relatedReading: {
@@ -2780,14 +2804,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-10-28',
-    next_refresh_due: '2027-04-28',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-ar.webp',
     title: 'مراجعة Facet: تقييم الصور وفرزها ومعرضها محليًا',
     seoTitle: 'مراجعة Facet: تقييم الصور وفرزها على جهازك',
     intro:
-      'Facet أداة مجانية بترخيص MIT لتحليل الصور تشغّلها بنفسك: تقيّم كل صورة، وتكتشف اللقطات المتتابعة والصور شبه المكررة، وتجمّع الوجوه، وتتيح لك البحث في مكتبتك بلغة طبيعية عبر معرض ويب. وهي ليست تطبيق دردشة ولا تطبيق LLM؛ فالذكاء الاصطناعي فيها تقييم للصور وتمثيلات embeddings ونماذج للوجوه. تعكس هذه المراجعة ملف README والوثائق وإصدارات GitHub والشيفرة المصدرية كما اطّلعنا عليها في 28 أكتوبر 2026.',
+      'Facet أداة مجانية بترخيص MIT لتحليل الصور تشغّلها بنفسك: تقيّم كل صورة، وتكتشف اللقطات المتتابعة والصور شبه المكررة، وتجمّع الوجوه، وتتيح لك البحث في مكتبتك بلغة طبيعية عبر معرض ويب. وهي ليست تطبيق دردشة ولا تطبيق LLM؛ فالذكاء الاصطناعي فيها تقييم للصور وتمثيلات embeddings ونماذج للوجوه. تعكس هذه المراجعة ملف README والوثائق وإصدارات GitHub والشيفرة المصدرية كما اطّلعنا عليها في 2 نوفمبر 2026.',
     metaDescription:
       'مراجعة Facet: أداة مجانية بترخيص MIT تقيّم الصور وتفرزها وتتصفحها محليًا، مع تجميع الوجوه والبحث بلغة طبيعية. الإعداد وتراخيص النماذج والخصوصية.',
     twitterDescription:
@@ -2809,7 +2833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet (الإصدار v1.25.0 حتى 28 أكتوبر 2026) أداة مجانية بترخيص MIT تقيّم مكتبة صور محلية وتفرزها وتتصفحها عبر معرض ويب، مع تجميع الوجوه والبحث بلغة طبيعية على جهازك الخاص.** بحسب صفحة التراخيص في المشروع، بعض أوزان النماذج الافتراضية فيها غير مرخّصة للاستخدام التجاري. ولا تتضمن أي ميزة دردشة.',
+      '**Facet (الإصدار v1.27.0) أداة مجانية بترخيص MIT تقيّم مكتبة صور محلية وتفرزها وتتصفحها عبر معرض ويب، مع تجميع الوجوه والبحث بلغة طبيعية على جهازك الخاص.** بحسب صفحة التراخيص في المشروع، بعض أوزان النماذج الافتراضية فيها غير مرخّصة للاستخدام التجاري. ولا تتضمن أي ميزة دردشة.',
     quickAnswerTop: {
       ar: {
         question: 'هل يُبقي Facet صورك وتقييم الذكاء الاصطناعي على جهازك؟',
@@ -2819,10 +2843,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يقيّم كل صورة في 9 أبعاد، ويجمّع اللقطات المتتابعة والصور المتشابهة والوجوه، ويبرز أفضل الصور.',
           'يستخدم البحث بلغة طبيعية SigLIP 2 في ملفي GPU هما 16gb و24gb، ونموذج CLIP في legacy و8gb.',
           'يعمل على المعالج المركزي بملف legacy؛ وتتيح بطاقة NVIDIA أو جهاز Mac بمعالج Apple Silicon وذاكرة كبيرة أقوى النماذج.',
-          'يُثبَّت عبر Docker أو برنامج تثبيت نصي؛ ولا يوجد مثبّت ولا نسخة في متجر تطبيقات ولا ملف تنفيذي ضمن الإصدارات.',
+          'يُثبَّت عبر Docker أو برنامج تثبيت نصي؛ ولا يُنشر مثبّت ولا نسخة في متجر تطبيقات ولا ملف تنفيذي ضمن الإصدارات، لكن الوثائق تصف حزمة MSI لنظام Windows تبنيها بنفسك أو تأخذها من تشغيل CI.',
           'بحسب الوثائق، المعرض مفتوح لأي شخص يصل إلى منفذه إلى أن تضع كلمة مرور.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -2909,7 +2933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'الصيانة: صدر v1.25.0 في 27 أكتوبر 2026 وتلقّى المستودع دفعة تحديثات في 28 أكتوبر 2026، فلا ينطبق تحذير المشروع المهجور.',
+          'الصيانة: صدر v1.27.0 في 29 أكتوبر 2026 وتلقّى المستودع دفعة تحديثات في 30 أكتوبر 2026، فلا ينطبق تحذير المشروع المهجور.',
           'الجهة المشغّلة: يصفه ملف README بأنه مشروع لمطوّر واحد دون دعم تجاري؛ والشيفرة على GitHub بترخيص MIT.',
           'الإعداد: Docker Compose أو برنامج تثبيت نصي، مع فحص أول ينزّل النماذج؛ ويلزم استخدام الطرفية.',
           'التكلفة: مجاني؛ ولم نعثر على خطة مدفوعة. وكلمة «Edition» في الوثائق مستوى وصول وليست إصدارًا من المنتج.',
@@ -2919,7 +2943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'تستند هذه المراجعة إلى موقع المشروع وملف README والوثائق وإصدارات GitHub وأجزاء من الشيفرة المصدرية، كما اطّلعنا عليها في 28 أكتوبر 2026. لم تثبّت PromptQuorum أداة Facet، ولذلك لا نقيّم دقة التقييم ولا ملاءمة نتائج البحث ولا السرعة.',
+              'تستند هذه المراجعة إلى موقع المشروع وملف README والوثائق وإصدارات GitHub وأجزاء من الشيفرة المصدرية، كما اطّلعنا عليها في 2 نوفمبر 2026. لم تثبّت PromptQuorum أداة Facet، ولذلك لا نقيّم دقة التقييم ولا ملاءمة نتائج البحث ولا السرعة.',
           },
         ],
       },
@@ -2935,7 +2959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'كيف تحصل عليه',
         content: [
-          '**يُثبَّت Facet من مستودع شيفرته المصدرية عبر Docker أو برنامج تثبيت نصي؛ ولا ينشر المشروع مثبّتًا ولا صفحة في متجر تطبيقات ولا ملفًا تنفيذيًا ضمن الإصدارات.**',
+          '**يُثبَّت Facet من مستودع شيفرته المصدرية عبر Docker أو برنامج تثبيت نصي؛ ولا ينشر المشروع مثبّتًا جاهزًا ولا صفحة في متجر تطبيقات ولا ملفًا تنفيذيًا ضمن الإصدارات.**',
         ],
         columns: [
           'الخيار',
@@ -2950,6 +2974,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'الخيار': 'بدون Docker',
             'مصدر الحصول عليه': 'استنساخ ثم تشغيل bash install.sh ثم python facet.py وpython viewer.py (Linux وmacOS)',
+          },
+          {
+            'الخيار': 'Windows (MSI)',
+            'مصدر الحصول عليه': 'حزمة MSI لكل مستخدم بحسب الوثائق، لكن لا إصدار يتضمنها: ابنِها من نسخة مستنسخة أو استخدم ناتج CI',
           },
           {
             'الخيار': 'الوثائق',
@@ -2969,7 +2997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          'الإصدار الذي راجعناه: v1.25.0، نُشر في 27 أكتوبر 2026 بحسب إصدار GitHub؛ وكان آخر دفع إلى المستودع في 28 أكتوبر 2026. يتطلب التثبيت طرفية وGit وDocker أو Python، فهو إعداد بأسلوب المطوّرين وليس تثبيتًا بنقرتين. لم نعثر على صفحة سياسة خصوصية مستقلة في موقع المشروع ولا في الوثائق التي قرأناها؛ وتصريحات الخصوصية موجودة في ملف README.',
+          'الإصدار الذي راجعناه: v1.27.0، نُشر في 29 أكتوبر 2026 بحسب إصدار GitHub؛ وكان آخر دفع إلى المستودع في 30 أكتوبر 2026. يتطلب التثبيت طرفية وGit وDocker أو Python، فهو إعداد بأسلوب المطوّرين وليس تثبيتًا بنقرتين. لم نعثر على صفحة سياسة خصوصية مستقلة في موقع المشروع ولا في الوثائق التي قرأناها؛ وتصريحات الخصوصية موجودة في ملف README.',
       },
       requirements: {
         id: 'requirements',
@@ -2989,7 +3017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'البند': 'التنزيل عند أول تشغيل',
-            'ما تقوله المصادر': 'مرة واحدة بحسب الوثائق: نحو 4.7 GB (legacy) أو 6.9 GB (8gb) أو 14.6 GB (16gb) أو 19.1 GB (24gb)',
+            'ما تقوله المصادر': 'مرة واحدة بحسب الوثائق: نحو 4.7 GB (legacy) أو 6.9 GB (8gb) أو 14.6 GB (16gb) أو 19.3 GB (24gb)',
           },
           {
             'البند': 'Apple Silicon',
@@ -3007,7 +3035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'البند': 'نظام التشغيل',
-            'ما تقوله المصادر': 'Windows أو macOS أو Linux؛ وفي Windows تحيل الوثائق إلى Docker، وإلى WSL2 مع بطاقة NVIDIA',
+            'ما تقوله المصادر': 'Windows أو macOS أو Linux؛ وفي Windows تصف الوثائق Docker (مع WSL2 لبطاقة NVIDIA) أو حزمة MSI لكل مستخدم تبنيها بنفسك',
           },
           {
             'البند': 'صيغ الصور',
@@ -3121,7 +3149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**جودة الذكاء الاصطناعي.** لم تُختبر دقة التقييم ولا تجميع الوجوه ولا ملاءمة البحث ولا سرعة الفحص؛ وملف README نفسه يصف الدرجة الجمالية بأنها تقريبية.',
           '**الاستخدام دون اتصال.** لم نتحقق مما إذا كان Facet يعمل دون اتصال بالكامل بعد أول تنزيل للنماذج.',
-          '**استقرار الإصدارات.** تقول ملاحظات v1.23.1 إن v1.23.0 صدر دون صورة Docker الخاصة بـ CUDA، وصدرت ثلاثة إصدارات بين 24 و27 أكتوبر 2026، فتوقّع تغيرات سريعة.',
+          '**استقرار الإصدارات.** تقول ملاحظات v1.23.1 إن v1.23.0 صدر دون صورة Docker الخاصة بـ CUDA، وصدرت ستة إصدارات بين 24 و29 أكتوبر 2026، فتوقّع تغيرات سريعة.',
           '**الدعم.** يصف ملف README مشروعًا لمطوّر واحد دون دعم الأدوات التجارية للفرز.',
           '**خطوات التثبيت.** أوامر الإعداد مأخوذة من الوثائق ولم تنفّذها PromptQuorum.',
         ],
@@ -3203,11 +3231,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         items: [
-          '[موقع Facet](https://ncoevoet.github.io/facet/) — نظرة عامة على الميزات والبدء السريع، اطّلعنا عليه في 28 أكتوبر 2026.',
-          '[ملف README لـ Facet](https://github.com/ncoevoet/facet/blob/master/README.md) — الميزات والمتطلبات والتراخيص والمقارنات، اطّلعنا عليه في 28 أكتوبر 2026.',
-          '[وثائق Facet](https://github.com/ncoevoet/facet/tree/master/docs) — التثبيت والإعداد والنشر وصفحات وكلاء الذكاء الاصطناعي، اطّلعنا عليها في 28 أكتوبر 2026.',
-          '[النماذج والتراخيص من جهات خارجية](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — ترخيص كل نموذج، اطّلعنا عليه في 28 أكتوبر 2026.',
-          '[Facet على GitHub](https://github.com/ncoevoet/facet/releases) — الإصدارات ونشاط الإيداعات، اطّلعنا عليهما في 28 أكتوبر 2026.',
+          '[موقع Facet](https://ncoevoet.github.io/facet/) — نظرة عامة على الميزات والبدء السريع، اطّلعنا عليه في 2 نوفمبر 2026.',
+          '[ملف README لـ Facet](https://github.com/ncoevoet/facet/blob/master/README.md) — الميزات والمتطلبات والتراخيص والمقارنات، اطّلعنا عليه في 2 نوفمبر 2026.',
+          '[وثائق Facet](https://github.com/ncoevoet/facet/tree/master/docs) — التثبيت والإعداد والنشر وصفحات وكلاء الذكاء الاصطناعي، اطّلعنا عليها في 2 نوفمبر 2026.',
+          '[النماذج والتراخيص من جهات خارجية](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md) — ترخيص كل نموذج، اطّلعنا عليه في 2 نوفمبر 2026.',
+          '[Facet على GitHub](https://github.com/ncoevoet/facet/releases) — الإصدارات ونشاط الإيداعات، اطّلعنا عليهما في 2 نوفمبر 2026.',
         ],
       },
       relatedReading: {
@@ -3226,14 +3254,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-10-28',
-    next_refresh_due: '2027-04-28',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-zh.webp',
     title: 'Facet 评测：本地照片评分、筛选与图库',
     seoTitle: 'Facet 评测：在自己的电脑上为照片评分、筛选和浏览的免费工具',
     intro:
-      'Facet 是一款免费、采用 MIT 许可证、由你自己运行的照片分析工具：它为每张照片评分，找出连拍和近似重复的照片，对人脸分组，并让你通过网页图库用自然语言搜索照片库。它不是聊天或 LLM 应用；其中的 AI 是图像评分、嵌入向量和人脸模型。本评测依据 2026 年 10 月 28 日查看的 README、文档、GitHub 发布版本和源代码。',
+      'Facet 是一款免费、采用 MIT 许可证、由你自己运行的照片分析工具：它为每张照片评分，找出连拍和近似重复的照片，对人脸分组，并让你通过网页图库用自然语言搜索照片库。它不是聊天或 LLM 应用；其中的 AI 是图像评分、嵌入向量和人脸模型。本评测依据 2026 年 11 月 2 日查看的 README、文档、GitHub 发布版本和源代码。',
     metaDescription: 'Facet 评测：免费的 MIT 许可证工具，可在本地为照片评分、筛选和浏览，支持人脸分组与自然语言搜索。涵盖安装方式、模型许可证、隐私以及我们未能核实的内容。',
     twitterDescription: 'Facet 评测：一款自托管的照片评分、筛选与图库工具。通过 Docker 或脚本安装，提供 CPU 与 GPU 配置档，默认模型权重不可商用，可选远程视觉语言模型，以及我们未能核实的内容。',
     audience: '拥有大型本地照片库的摄影师和自托管用户，想了解安装难度、AI 在哪里运行、模型许可证允许什么，以及哪些内容来源并未证实。',
@@ -3252,7 +3280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet（截至 2026 年 10 月 28 日为 v1.25.0）是一款免费、采用 MIT 许可证的工具，通过网页图库为本地照片库评分、筛选和浏览，人脸分组与自然语言搜索都在你自己的机器上运行。**据项目的模型许可证页面，其默认模型权重中有一部分未获商业使用许可。它没有聊天功能。',
+      '**Facet（v1.27.0）是一款免费、采用 MIT 许可证的工具，通过网页图库为本地照片库评分、筛选和浏览，人脸分组与自然语言搜索都在你自己的机器上运行。**据项目的模型许可证页面，其默认模型权重中有一部分未获商业使用许可。它没有聊天功能。',
     quickAnswerTop: {
       zh: {
         question: 'Facet 会把照片和 AI 评分留在你自己的机器上吗？',
@@ -3262,10 +3290,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '从 9 个维度为每张照片评分，对连拍、相似照片和人脸分组，并列出精选照片。',
           '自然语言搜索在 16gb 和 24gb 的 GPU 配置档上使用 SigLIP 2，在 legacy 和 8gb 上使用 CLIP 模型。',
           '用 legacy 配置档可在 CPU 上运行；NVIDIA 显卡或大内存的 Apple Silicon Mac 可启用最强的模型。',
-          '通过 Docker 或安装脚本安装；没有安装程序、应用商店版本或发布的二进制文件。',
+          '通过 Docker 或安装脚本安装；项目未发布安装程序、应用商店版本或发布的二进制文件，但文档介绍了 Windows 的 MSI，需要自行构建或从 CI 运行产物获取。',
           '据其文档，在你设置密码之前，任何能访问其端口的人都可以打开查看器。',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -3350,7 +3378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '维护情况：v1.25.0 于 2026 年 10 月 27 日发布，仓库在 2026 年 10 月 28 日有过推送，因此不适用停更项目警告。',
+          '维护情况：v1.27.0 于 2026 年 10 月 29 日发布，仓库在 2026 年 10 月 30 日有过推送，因此不适用停更项目警告。',
           '运营方：README 称其为没有商业支持的单人开发项目；代码在 GitHub 上，采用 MIT 许可证。',
           '安装：使用 Docker Compose 或安装脚本，并进行一次下载模型的首次扫描；需要终端。',
           '费用：免费；未发现付费套餐。文档中的“Edition”是访问级别，不是产品版本。',
@@ -3360,7 +3388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              '本评测依据 2026 年 10 月 28 日查看的项目网站、README、文档、GitHub 发布版本以及部分源代码。PromptQuorum 没有安装 Facet，因此不评估评分准确度、搜索相关性和速度。',
+              '本评测依据 2026 年 11 月 2 日查看的项目网站、README、文档、GitHub 发布版本以及部分源代码。PromptQuorum 没有安装 Facet，因此不评估评分准确度、搜索相关性和速度。',
           },
         ],
       },
@@ -3376,7 +3404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: '获取方式',
         content: [
-          '**Facet 通过 Docker 或安装脚本，从源代码仓库安装；项目没有发布安装程序、应用商店页面或发布的二进制文件。**',
+          '**Facet 通过 Docker 或安装脚本，从源代码仓库安装；项目没有发布现成的安装程序、应用商店页面或发布的二进制文件。**',
         ],
         columns: [
           '选项',
@@ -3391,6 +3419,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '选项': '不使用 Docker',
             '获取方式': '克隆后运行 bash install.sh，再运行 python facet.py 和 python viewer.py（Linux、macOS）',
+          },
+          {
+            '选项': 'Windows（MSI）',
+            '获取方式': '文档称有按用户安装的 MSI，但发布版不含：从克隆自行构建或使用 CI 产物',
           },
           {
             '选项': '文档',
@@ -3410,7 +3442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          '评测的版本：v1.25.0，据 GitHub 发布页于 2026 年 10 月 27 日发布；仓库最近一次推送在 2026 年 10 月 28 日。安装需要终端、Git 以及 Docker 或 Python，属于开发者式的部署，而不是双击安装。在项目网站和我们读过的文档中，没有找到独立的隐私政策页面；隐私相关说明在 README 中。',
+          '评测的版本：v1.27.0，据 GitHub 发布页于 2026 年 10 月 29 日发布；仓库最近一次推送在 2026 年 10 月 30 日。安装需要终端、Git 以及 Docker 或 Python，属于开发者式的部署，而不是双击安装。在项目网站和我们读过的文档中，没有找到独立的隐私政策页面；隐私相关说明在 README 中。',
       },
       requirements: {
         id: 'requirements',
@@ -3430,7 +3462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '项目': '首次下载',
-            '来源说明': '据文档只需一次：legacy 约 4.7 GB，8gb 约 6.9 GB，16gb 约 14.6 GB，24gb 约 19.1 GB',
+            '来源说明': '据文档只需一次：legacy 约 4.7 GB，8gb 约 6.9 GB，16gb 约 14.6 GB，24gb 约 19.3 GB',
           },
           {
             '项目': 'Apple Silicon',
@@ -3446,7 +3478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '项目': '操作系统',
-            '来源说明': 'Windows、macOS 或 Linux；在 Windows 上文档推荐 Docker，使用 NVIDIA 显卡则推荐 WSL2',
+            '来源说明': 'Windows、macOS 或 Linux；在 Windows 上文档介绍 Docker（NVIDIA 显卡用 WSL2）或需自行构建的按用户 MSI',
           },
           {
             '项目': '照片格式',
@@ -3554,7 +3586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**AI 质量。**评分准确度、人脸分组、搜索相关性和扫描速度均未测试；README 本身也称美学评分是近似值。',
           '**离线使用。**首次下载模型之后 Facet 能否完全离线运行，我们没有核实。',
-          '**发布稳定性。**v1.23.1 的发布说明称 v1.23.0 发布时缺少 CUDA 版 Docker 镜像，并且在 2026 年 10 月 24 日至 27 日之间发布了三个版本，因此请预期变化很快。',
+          '**发布稳定性。**v1.23.1 的发布说明称 v1.23.0 发布时缺少 CUDA 版 Docker 镜像，并且在 2026 年 10 月 24 日至 29 日之间发布了六个版本，因此请预期变化很快。',
           '**支持。**README 称这是没有商业筛选工具那样支持的单人开发项目。',
           '**安装步骤。**设置命令来自文档，PromptQuorum 没有运行过。',
         ],
@@ -3631,11 +3663,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '来源',
         items: [
-          '[Facet 网站](https://ncoevoet.github.io/facet/)：功能概览与快速开始，2026 年 10 月 28 日查看。',
-          '[Facet README](https://github.com/ncoevoet/facet/blob/master/README.md)：功能、要求、许可证与对比，2026 年 10 月 28 日查看。',
-          '[Facet 文档](https://github.com/ncoevoet/facet/tree/master/docs)：安装、配置、部署和 AI 代理页面，2026 年 10 月 28 日查看。',
-          '[第三方模型与许可证](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md)：各模型的许可证，2026 年 10 月 28 日查看。',
-          '[GitHub 上的 Facet](https://github.com/ncoevoet/facet/releases)：发布版本与提交活动，2026 年 10 月 28 日查看。',
+          '[Facet 网站](https://ncoevoet.github.io/facet/)：功能概览与快速开始，2026 年 11 月 2 日查看。',
+          '[Facet README](https://github.com/ncoevoet/facet/blob/master/README.md)：功能、要求、许可证与对比，2026 年 11 月 2 日查看。',
+          '[Facet 文档](https://github.com/ncoevoet/facet/tree/master/docs)：安装、配置、部署和 AI 代理页面，2026 年 11 月 2 日查看。',
+          '[第三方模型与许可证](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md)：各模型的许可证，2026 年 11 月 2 日查看。',
+          '[GitHub 上的 Facet](https://github.com/ncoevoet/facet/releases)：发布版本与提交活动，2026 年 11 月 2 日查看。',
         ],
       },
       relatedReading: {
@@ -3654,14 +3686,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-28',
-    dateModified: '2026-10-28',
-    next_refresh_due: '2027-04-28',
+    dateModified: '2026-11-02',
+    next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-ko.webp',
     title: 'Facet 리뷰: 로컬 사진 점수화·선별·갤러리',
     seoTitle: 'Facet 리뷰: 내 컴퓨터에서 사진 점수화·선별·갤러리',
     intro:
-      'Facet은 직접 실행하는 무료 MIT 라이선스 사진 분석 도구입니다. 사진마다 점수를 매기고, 연사와 거의 같은 사진을 찾고, 얼굴을 묶고, 웹 갤러리에서 자연어로 라이브러리를 검색할 수 있습니다. 채팅이나 LLM 앱이 아니며, AI는 이미지 점수화, 임베딩, 얼굴 모델로 이루어져 있습니다. 이 리뷰는 2026년 10월 28일에 확인한 README, 문서, GitHub 릴리스, 소스 코드를 바탕으로 합니다.',
+      'Facet은 직접 실행하는 무료 MIT 라이선스 사진 분석 도구입니다. 사진마다 점수를 매기고, 연사와 거의 같은 사진을 찾고, 얼굴을 묶고, 웹 갤러리에서 자연어로 라이브러리를 검색할 수 있습니다. 채팅이나 LLM 앱이 아니며, AI는 이미지 점수화, 임베딩, 얼굴 모델로 이루어져 있습니다. 이 리뷰는 2026년 11월 2일에 확인한 README, 문서, GitHub 릴리스, 소스 코드를 바탕으로 합니다.',
     metaDescription: 'Facet 리뷰: 사진을 로컬에서 점수화·선별·탐색하는 무료 MIT 도구로, 얼굴 묶기와 자연어 검색을 지원합니다. 설치 방법, 모델 라이선스, 개인정보를 다룹니다.',
     twitterDescription:
       'Facet 리뷰: 사진 점수화·선별·갤러리를 직접 호스팅하는 도구입니다. Docker 또는 스크립트 설치, CPU·GPU 프로파일, 상업용이 아닌 기본 모델 가중치, 선택적 원격 VLM, 확인하지 못한 사항을 정리했습니다.',
@@ -3682,7 +3714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet(2026년 10월 28일 기준 v1.25.0)은 로컬 사진 라이브러리를 웹 갤러리로 점수화·선별·탐색하는 무료 MIT 라이선스 도구이며, 얼굴 묶기와 자연어 검색이 내 컴퓨터에서 실행됩니다.** 프로젝트의 모델 라이선스 페이지에 따르면 기본 모델 가중치 일부는 상업적 사용이 허용되지 않습니다. 채팅 기능은 없습니다.',
+      '**Facet(v1.27.0)은 로컬 사진 라이브러리를 웹 갤러리로 점수화·선별·탐색하는 무료 MIT 라이선스 도구이며, 얼굴 묶기와 자연어 검색이 내 컴퓨터에서 실행됩니다.** 프로젝트의 모델 라이선스 페이지에 따르면 기본 모델 가중치 일부는 상업적 사용이 허용되지 않습니다. 채팅 기능은 없습니다.',
     quickAnswerTop: {
       ko: {
         question: 'Facet은 사진과 AI 점수화를 내 컴퓨터 안에 두나요?',
@@ -3692,10 +3724,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '사진을 9가지 항목으로 점수화하고, 연사·유사 사진·얼굴을 묶어 상위 사진을 보여 줍니다.',
           '자연어 검색은 GPU 프로파일 16gb와 24gb에서는 SigLIP 2를, legacy와 8gb에서는 CLIP 모델을 사용합니다.',
           'legacy 프로파일로 CPU에서 실행되며, NVIDIA GPU나 메모리가 큰 Apple Silicon Mac이면 가장 강력한 모델을 쓸 수 있습니다.',
-          'Docker 또는 설치 스크립트로 설치하며, 설치 프로그램·앱 스토어 버전·릴리스 바이너리는 없습니다.',
+          'Docker 또는 설치 스크립트로 설치하며, 설치 프로그램·앱 스토어 버전·릴리스 바이너리는 공개되지 않지만 문서에는 직접 빌드하거나 CI 실행 결과물에서 받는 Windows용 MSI가 설명되어 있습니다.',
           '문서에 따르면 뷰어는 비밀번호를 설정하기 전까지 포트에 접근할 수 있는 누구에게나 열려 있습니다.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -3781,7 +3813,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '유지보수: v1.25.0이 2026년 10월 27일에 릴리스되었고 저장소에 2026년 10월 28일 푸시가 있었으므로 방치된 프로젝트 경고는 해당되지 않습니다.',
+          '유지보수: v1.27.0이 2026년 10월 29일에 릴리스되었고 저장소에 2026년 10월 30일 푸시가 있었으므로 방치된 프로젝트 경고는 해당되지 않습니다.',
           '운영: README는 상업적 지원이 없는 1인 개발 프로젝트라고 설명하며, 코드는 GitHub에서 MIT 라이선스로 공개되어 있습니다.',
           '설치: Docker Compose 또는 설치 스크립트와, 모델을 내려받는 첫 스캔이 필요하며 터미널을 사용합니다.',
           '비용: 무료이며 유료 요금제는 찾지 못했습니다. 문서의 "Edition"은 접근 수준이며 제품 에디션이 아닙니다.',
@@ -3791,7 +3823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              '이 리뷰는 2026년 10월 28일에 확인한 프로젝트 웹사이트, README, 문서, GitHub 릴리스, 소스 코드 일부를 바탕으로 합니다. PromptQuorum은 Facet을 설치하지 않았으므로 점수의 정확도, 검색 적합도, 속도는 평가하지 않았습니다.',
+              '이 리뷰는 2026년 11월 2일에 확인한 프로젝트 웹사이트, README, 문서, GitHub 릴리스, 소스 코드 일부를 바탕으로 합니다. PromptQuorum은 Facet을 설치하지 않았으므로 점수의 정확도, 검색 적합도, 속도는 평가하지 않았습니다.',
           },
         ],
       },
@@ -3807,7 +3839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: '입수 방법',
         content: [
-          '**Facet은 소스 저장소에서 Docker 또는 설치 스크립트로 설치합니다. 프로젝트는 설치 프로그램, 앱 스토어 등록, 릴리스 바이너리를 제공하지 않습니다.**',
+          '**Facet은 소스 저장소에서 Docker 또는 설치 스크립트로 설치합니다. 프로젝트는 바로 쓸 수 있는 설치 프로그램, 앱 스토어 등록, 릴리스 바이너리를 제공하지 않습니다.**',
         ],
         columns: [
           '옵션',
@@ -3822,6 +3854,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '옵션': 'Docker 없이',
             '입수 방법': '클론 후 bash install.sh를 실행하고, python facet.py와 python viewer.py를 실행(Linux, macOS)',
+          },
+          {
+            '옵션': 'Windows(MSI)',
+            '입수 방법': '문서상 사용자별 MSI이지만 릴리스에는 없음: 클론에서 직접 빌드하거나 CI 결과물 사용',
           },
           {
             '옵션': '문서',
@@ -3841,7 +3877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          '확인한 버전은 v1.25.0이며 GitHub 릴리스에 따르면 2026년 10월 27일에 공개되었습니다. 저장소의 마지막 푸시는 2026년 10월 28일입니다. 설치에는 터미널, Git, Docker 또는 Python이 필요하므로 더블클릭으로 설치하는 방식이 아니라 개발자용 설정입니다. 프로젝트 사이트와 읽은 문서에서는 별도의 개인정보 처리방침 페이지를 찾지 못했으며, 개인정보 관련 설명은 README에 있습니다.',
+          '확인한 버전은 v1.27.0이며 GitHub 릴리스에 따르면 2026년 10월 29일에 공개되었습니다. 저장소의 마지막 푸시는 2026년 10월 30일입니다. 설치에는 터미널, Git, Docker 또는 Python이 필요하므로 더블클릭으로 설치하는 방식이 아니라 개발자용 설정입니다. 프로젝트 사이트와 읽은 문서에서는 별도의 개인정보 처리방침 페이지를 찾지 못했으며, 개인정보 관련 설명은 README에 있습니다.',
       },
       requirements: {
         id: 'requirements',
@@ -3861,7 +3897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '항목': '첫 실행 다운로드',
-            '출처의 설명': '문서에 따르면 한 번만, legacy 약 4.7 GB, 8gb 약 6.9 GB, 16gb 약 14.6 GB, 24gb 약 19.1 GB',
+            '출처의 설명': '문서에 따르면 한 번만, legacy 약 4.7 GB, 8gb 약 6.9 GB, 16gb 약 14.6 GB, 24gb 약 19.3 GB',
           },
           {
             '항목': 'Apple Silicon',
@@ -3877,7 +3913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '항목': '운영체제',
-            '출처의 설명': 'Windows, macOS, Linux. Windows에서는 문서가 Docker를, NVIDIA GPU에는 WSL2를 안내',
+            '출처의 설명': 'Windows, macOS, Linux. Windows에서는 문서가 Docker(NVIDIA GPU에는 WSL2) 또는 직접 빌드하는 사용자별 MSI를 안내',
           },
           {
             '항목': '사진 형식',
@@ -3985,7 +4021,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**AI 품질.** 점수 정확도, 얼굴 묶기, 검색 적합도, 스캔 속도는 테스트하지 않았으며, README 자체도 미적 점수를 근사치라고 합니다.',
           '**오프라인 사용.** 첫 모델 다운로드 이후 Facet이 완전히 오프라인으로 동작하는지는 확인하지 못했습니다.',
-          '**릴리스 안정성.** v1.23.1 노트에 따르면 v1.23.0은 CUDA Docker 이미지 없이 배포되었고, 2026년 10월 24일부터 27일 사이에 세 버전이 나왔으므로 변경이 빠르다는 점에 유의하십시오.',
+          '**릴리스 안정성.** v1.23.1 노트에 따르면 v1.23.0은 CUDA Docker 이미지 없이 배포되었고, 2026년 10월 24일부터 29일 사이에 여섯 버전이 나왔으므로 변경이 빠르다는 점에 유의하십시오.',
           '**지원.** README는 상업용 선별 도구 같은 지원이 없는 1인 개발 프로젝트라고 설명합니다.',
           '**설치 단계.** 설정 명령은 문서에서 가져온 것이며 PromptQuorum이 실행하지 않았습니다.',
         ],
@@ -4065,11 +4101,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         items: [
-          '[Facet 웹사이트](https://ncoevoet.github.io/facet/): 기능 개요와 빠른 시작, 2026년 10월 28일 확인.',
-          '[Facet README](https://github.com/ncoevoet/facet/blob/master/README.md): 기능, 요구 사항, 라이선스, 비교, 2026년 10월 28일 확인.',
-          '[Facet 문서](https://github.com/ncoevoet/facet/tree/master/docs): 설치, 설정, 배포, AI 에이전트 페이지, 2026년 10월 28일 확인.',
-          '[서드파티 모델과 라이선스](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md): 모델별 라이선스, 2026년 10월 28일 확인.',
-          '[GitHub의 Facet](https://github.com/ncoevoet/facet/releases): 릴리스와 커밋 활동, 2026년 10월 28일 확인.',
+          '[Facet 웹사이트](https://ncoevoet.github.io/facet/): 기능 개요와 빠른 시작, 2026년 11월 2일 확인.',
+          '[Facet README](https://github.com/ncoevoet/facet/blob/master/README.md): 기능, 요구 사항, 라이선스, 비교, 2026년 11월 2일 확인.',
+          '[Facet 문서](https://github.com/ncoevoet/facet/tree/master/docs): 설치, 설정, 배포, AI 에이전트 페이지, 2026년 11월 2일 확인.',
+          '[서드파티 모델과 라이선스](https://github.com/ncoevoet/facet/blob/master/docs/THIRD_PARTY_MODELS.md): 모델별 라이선스, 2026년 11월 2일 확인.',
+          '[GitHub의 Facet](https://github.com/ncoevoet/facet/releases): 릴리스와 커밋 활동, 2026년 11월 2일 확인.',
         ],
       },
       relatedReading: {

@@ -40,7 +40,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     writingBrief:
       'OS-specific decision page. Test top 5 apps (LM Studio, Jan, GPT4All, Ollama desktop, AnythingLLM) on each major OS. Cover install steps, system tray integration, update mechanism, and OS-native features (Mac unified memory, Windows DirectML, Linux ROCm). Declare a winner per OS with reasoning. Lead with comparison table by OS. Address common pain points: Apple Silicon optimization, NVIDIA driver headaches on Linux, Windows Defender false positives. Section per OS with the "if you have this OS, install this" answer in the first sentence of each section. Cover edge cases: Windows on ARM, M5 vs M4 differences, Linux without NVIDIA.',
     internalLinks: [
-      { ref: 'lm-studio-vs-jan-vs-gpt4all-2026', reasoning: 'readers came from comparison, came here for OS-specific' },
+      { ref: 'lm-studio-vs-jan-vs-gpt4all', reasoning: 'readers came from comparison, came here for OS-specific' },
       { ref: 'local-ai-app-with-built-in-rag', reasoning: 'natural next escalation' },
       { ref: 'best-local-llm-apps-iphone-2026', reasoning: 'for readers who also want mobile' },
     ],

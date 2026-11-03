@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'MIT',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // CLI agent orchestrator only, no built-in inference — per github.com/NousResearch/hermes-agent README, no fixed process-level RAM/VRAM requirement is documented; entirely dependent on the Ollama/LM Studio/vLLM/llama.cpp backend the user points it at, checked 2026-09-13
-  stars: null,
+  stars: 259789,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['agent'],
@@ -37,4 +37,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
   compare: { localLlm: true, memory: true, codeExecution: true, webBrowsing: true, sandbox: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-11-02', // GitHub API (v0.22.6 release 2026-11-02, latest push 2026-11-02), read 2026-11-02
+  lastUpstreamUpdateSource: 'https://github.com/NousResearch/hermes-agent',
 }

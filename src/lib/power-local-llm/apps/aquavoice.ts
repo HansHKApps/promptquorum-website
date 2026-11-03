@@ -37,7 +37,7 @@ export const app: ToolRecord = {
   reviewSlug: 'aquavoice-review', // dedicated PromptQuorum review
   // Each value verified against aquavoice.com on 2026-10-03; a missing key = not stated there, never false.
   compare: { languages: 49, realtime: true },
-  lastVerifiedDate: '2026-10-03',
-  lastUpstreamUpdate: '2026-10-13', // official changelog, read 2026-10-16
+  lastVerifiedDate: '2026-11-02',
+  lastUpstreamUpdate: '2026-10-17', // official changelog (Mac/Windows 0.21.4), read 2026-11-02
   lastUpstreamUpdateSource: 'https://aquavoice.com/changelog',
 }

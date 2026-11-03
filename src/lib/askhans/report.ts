@@ -1,4 +1,4 @@
-// Ask Hans — usage report for the public /mcp-stats block and for scripts. Same windows as the MCP report
+// Ask Hans — usage report for the public /askhans page and for scripts. Same windows as the MCP report
 // (today, yesterday, last 7 days, last 30 days, all time). Reads the anonymous per-day counters only:
 //   askhans:day:<date>   total_opens / total_requests / total_answers (all visitors) and, for visitors who agreed
 //                        to the anonymous statistics: q:<category>, app:<slug>, dircat:<key>, tool:<name>, lang:<xx>

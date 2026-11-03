@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'AGPL-3.0',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: false, variesByModel: true }, // GPU strongly recommended for practical speed; exact minimum depends on the loaded checkpoint and resolution — no single documented floor found, verified 2026-09-18
-  stars: 13017, // github.com/lllyasviel/stable-diffusion-webui-forge, verified 2026-09-18
+  stars: 13107, // github.com/lllyasviel/stable-diffusion-webui-forge, verified via GitHub API 2026-11-02
   addedDate: '2026-09-18',
   status: 'listed',
   uses: ['image'],
@@ -40,6 +40,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { extensions: true, apiServer: true },
   lastVerifiedDate: '2026-09-18',
-  lastUpstreamUpdate: '2025-07-31', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2025-07-31', // GitHub API (last push, py3.12 branch 2025-07-31; main last commit 2025-06-26; latest release 2024-02-05), re-read 2026-11-02
   lastUpstreamUpdateSource: 'https://github.com/lllyasviel/stable-diffusion-webui-forge',
 }

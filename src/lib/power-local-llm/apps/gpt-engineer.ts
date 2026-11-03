@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'MIT',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // CLI code-gen tool that calls an external LLM API, no local inference engine of its own — no hardware minimum in github.com/AntonOsika/gpt-engineer README, checked 2026-09-13
-  stars: 55100,
+  stars: 54989,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['code', 'agent'],
@@ -34,12 +34,13 @@ export const app: ToolRecord = {
     ko: '자율 코드 생성 및 전체 프로젝트 구축',
   },
   reviewSlug: 'gpt-engineer-review', // dedicated PromptQuorum review — pinned to #1 in the article index
-  pqReview: { date: '2026-09-20', version: 'v0.3.1', versionSourceUrl: 'https://github.com/AntonOsika/gpt-engineer/releases/tag/v0.3.1' },
+  pqReview: { date: '2026-11-02', version: 'v0.3.1', versionSourceUrl: 'https://github.com/AntonOsika/gpt-engineer/releases/tag/v0.3.1' },
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
   compare: { localLlm: true, codeExecution: true },
-  // GitHub API archived=true, checked 2026-09-21
+  // GitHub API archived=true, re-checked 2026-11-02
   upstreamStatus: { state: 'archived' },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2025-05-14', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
-  lastUpstreamUpdateSource: 'https://github.com/AntonOsika/gpt-engineer',
+  // Last upstream update = last code change merged to main (PR #1191 merge, 2024-08-08); latest release v0.3.1 was 2024-06-06; later main commits (to 2024-11-17) are README-only; the 2025-05-14 "push" is a FUNDING.yml commit on side branch AntonOsika-patch-11, not a code change. Read from the GitHub API 2026-11-02.
+  lastUpstreamUpdate: '2024-08-08',
+  lastUpstreamUpdateSource: 'https://github.com/AntonOsika/gpt-engineer/commits/main',
 }
