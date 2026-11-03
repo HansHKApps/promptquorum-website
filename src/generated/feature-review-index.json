@@ -1044,6 +1044,11 @@
     "urlSlug": "hillnote-review",
     "url": "/power-local-llm/hillnote-review"
   },
+  "trilium-notes": {
+    "cluster": "power-local-llm",
+    "urlSlug": "trilium-notes-review",
+    "url": "/power-local-llm/trilium-notes-review"
+  },
   "llm-vision": {
     "cluster": "power-local-llm",
     "urlSlug": "llm-vision-review",

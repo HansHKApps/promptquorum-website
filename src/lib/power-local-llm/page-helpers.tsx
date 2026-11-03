@@ -1196,6 +1196,7 @@ const HUB_THEMES: Array<{
       'siyuan-review',
       'logseq-review',
       'hillnote-review',
+      'trilium-notes-review',
       'karakeep-review',
       'evershelf-review',
       'ai-file-sorter-review',

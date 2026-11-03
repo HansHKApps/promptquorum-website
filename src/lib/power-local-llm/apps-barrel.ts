@@ -276,6 +276,7 @@ import { app as app_fullmoon } from './apps/fullmoon'
 import { app as app_reins } from './apps/reins'
 import { app as app_openvoiceos } from './apps/openvoiceos'
 import { app as app_hillnote } from './apps/hillnote'
+import { app as app_trilium_notes } from './apps/trilium-notes'
 import { app as app_llm_vision } from './apps/llm-vision'
 import { app as app_picoclaw } from './apps/picoclaw'
 import { app as app_scrypted } from './apps/scrypted'
@@ -568,6 +569,7 @@ export const localAiApps: ToolRecord[] = [
   app_reins,
   app_openvoiceos,
   app_hillnote,
+  app_trilium_notes,
   app_llm_vision,
   app_picoclaw,
   app_scrypted,

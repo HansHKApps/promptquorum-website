@@ -1028,7 +1028,7 @@
       "images": []
     },
     "lobechat-bigagi-nextchat-pageassist-chatbox-compared": {
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-09-02",
       "hasSections": true,
@@ -6773,7 +6773,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 14 categories of a local LLM stack: 345 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and eight more groups from Agents & Automation to At the Edge."
+          "title": "The 14 categories of a local LLM stack: 346 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and eight more groups from Agents & Automation to At the Edge."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -7630,7 +7630,7 @@
       "images": []
     },
     "pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026": {
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-08-27",
       "hasSections": true,
@@ -8017,7 +8017,7 @@
       "images": []
     },
     "digitalocean-vs-aws-cloud-for-ai-companies": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -8629,7 +8629,7 @@
       "images": []
     },
     "best-local-llms-customer-support-call-centers-enterprise": {
-      "dateModified": "2026-09-03",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
       "hasSections": true,
@@ -10326,7 +10326,7 @@
       "images": []
     },
     "vllm-explained": {
-      "dateModified": "2026-09-06",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
@@ -10416,7 +10416,7 @@
       "images": []
     },
     "tensorrt-llm-explained": {
-      "dateModified": "2026-09-06",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
@@ -11967,6 +11967,24 @@
       "dateModified": "2026-11-01",
       "lastFactChecked": null,
       "publishDate": "2026-11-01",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "trilium-notes-review": {
+      "dateModified": "2026-11-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-11-03",
       "hasSections": true,
       "langs": [
         "en",
@@ -14504,7 +14522,7 @@
       "images": []
     },
     "whatIsQ4KMQuantization": {
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -14526,12 +14544,12 @@
         },
         {
           "url": "/images/what-is-q4-k-m-quantization-size-quality-hero-en.webp",
-          "title": "Q4_K_M vs Other Quantizations -- File size and quality (7B model)"
+          "title": "Q4_K_M vs Other Quantizations -- File size and perplexity (Llama 3 8B)"
         }
       ]
     },
     "q4KMVsQ80": {
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -15373,7 +15391,7 @@
       "images": []
     },
     "bestQuantization6gbVram": {
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-05-23",
       "hasSections": true,
@@ -18361,7 +18379,7 @@
       "images": []
     },
     "local-platforms-balcony-solar-home-assistant-alternatives": {
-      "dateModified": "2026-07-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-07-03",
       "hasSections": true,
@@ -19154,27 +19172,27 @@
       "images": [
         {
           "url": "/images/kleines-kraftwerk-balcony-solar-snapshot-en.svg",
-          "title": "Achim, Germany; founded 2022 by two friends, starting from a garage; 100% self-financed."
+          "title": "Achim, Germany; founded 2022 by Markus Struck and Sebastian Hirt; Kleines Kraftwerk DE GmbH."
         },
         {
           "url": "/images/kleines-kraftwerk-balcony-solar-timeline-en.svg",
-          "title": "Founding story and early growth confirmed via press interviews (Weser-Kurier, Forbes AT)."
+          "title": "Founding year per ADAC (2026); first-year sales per Weser-Kurier (2023); headcount per ADAC (2026)."
         },
         {
           "url": "/images/kleines-kraftwerk-balcony-solar-lineup-en.svg",
-          "title": "System output per kit generation, as officially listed."
+          "title": "Module output in Wp per kit, as listed in the shop; not the power fed into the grid."
         },
         {
           "url": "/images/kleines-kraftwerk-balcony-solar-markets-en.svg",
-          "title": "Germany-focused — no official Austria/Switzerland storefront was found in this research."
+          "title": "Shop footer shows Germany and EUR; shipping statement: \"Versand nur innerhalb Deutschlands\"."
         },
         {
           "url": "/images/kleines-kraftwerk-balcony-solar-position-en.svg",
-          "title": "Its one proprietary product is an in-house mounting-bracket system; battery/inverter hardware is sourced from named partners."
+          "title": "Retailer layer: storage from Anker SOLIX, own mounting systems, assembly into kits."
         },
         {
           "url": "/images/kleines-kraftwerk-balcony-solar-partners-en.svg",
-          "title": "Named directly in current product listings."
+          "title": "Anker SOLIX named in the shop and in the ADAC press release."
         }
       ]
     },

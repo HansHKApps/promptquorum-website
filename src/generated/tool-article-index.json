@@ -19,6 +19,38 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llms-customer-support-call-centers-enterprise",
+        "title": "Best Local LLM Solutions for Enterprise Customer Support & Call Centers (2026)",
+        "url": "/power-local-llm/best-local-llms-customer-support-call-centers-enterprise",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "trilium-notes-review",
+        "title": "Trilium Notes Review: Free Hierarchical Notes With Optional AI",
+        "url": "/power-local-llm/trilium-notes-review",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "vllm-explained",
+        "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
+        "url": "/power-local-llm/vllm-explained",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "apple-silicon-local-llm-guide-2026",
         "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
         "url": "/local-llms/apple-silicon-local-llm-guide-2026",
@@ -48,41 +80,9 @@
         "url": "/local-llms/nextchat-review",
         "dateModified": "2026-11-02",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "page-assist-review",
-        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
-        "url": "/local-llms/page-assist-review",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "babyagi-review-autonomous-agent",
-        "title": "BabyAGI: What the First AI Agent Became",
-        "url": "/power-local-llm/babyagi-review-autonomous-agent",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
-        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
-        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
-        "dateModified": "2026-11-02",
-        "tier": "about"
       }
     ],
-    "totalCount": 341,
+    "totalCount": 342,
     "capped": true
   },
   "llama.cpp": {
@@ -100,6 +100,22 @@
         "slug": "apple-silicon-m5-local-llm",
         "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
         "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "tensorrt-llm-explained",
+        "title": "TensorRT-LLM Explained: NVIDIA's GPU-Optimized Inference Engine (2026)",
+        "url": "/power-local-llm/tensorrt-llm-explained",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "vllm-explained",
+        "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
+        "url": "/power-local-llm/vllm-explained",
         "dateModified": "2026-11-03",
         "tier": "about"
       },
@@ -150,22 +166,6 @@
         "url": "/power-local-llm/odysseus-review",
         "dateModified": "2026-11-02",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "whisper-cpp-review",
-        "title": "Whisper.cpp Review: Local Speech-to-Text in Pure C/C++",
-        "url": "/power-local-llm/whisper-cpp-review",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-30",
-        "tier": "about"
       }
     ],
     "totalCount": 185,
@@ -178,7 +178,23 @@
         "slug": "vllm-explained",
         "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
         "url": "/power-local-llm/vllm-explained",
-        "dateModified": "2026-09-06",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llms-customer-support-call-centers-enterprise",
+        "title": "Best Local LLM Solutions for Enterprise Customer Support & Call Centers (2026)",
+        "url": "/power-local-llm/best-local-llms-customer-support-call-centers-enterprise",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "tensorrt-llm-explained",
+        "title": "TensorRT-LLM Explained: NVIDIA's GPU-Optimized Inference Engine (2026)",
+        "url": "/power-local-llm/tensorrt-llm-explained",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -235,22 +251,6 @@
         "title": "NVIDIA DGX Spark for Local AI: Specs, Price and Verdict",
         "url": "/local-llms/nvidia-dgx-spark-local-ai-workstation",
         "dateModified": "2026-10-31",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework",
-        "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-10-30",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "litellm-review",
-        "title": "LiteLLM Review: One Gateway for 100+ LLM Provider APIs",
-        "url": "/power-local-llm/litellm-review",
-        "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],
@@ -350,7 +350,15 @@
         "slug": "tensorrt-llm-explained",
         "title": "TensorRT-LLM Explained: NVIDIA's GPU-Optimized Inference Engine (2026)",
         "url": "/power-local-llm/tensorrt-llm-explained",
-        "dateModified": "2026-09-06",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "vllm-explained",
+        "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
+        "url": "/power-local-llm/vllm-explained",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -382,14 +390,6 @@
         "slug": "sglang-explained",
         "title": "SGLang Explained: RadixAttention and Structured LLM Serving (2026)",
         "url": "/power-local-llm/sglang-explained",
-        "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "vllm-explained",
-        "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
-        "url": "/power-local-llm/vllm-explained",
         "dateModified": "2026-09-06",
         "tier": "about"
       },
@@ -503,6 +503,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llms-customer-support-call-centers-enterprise",
+        "title": "Best Local LLM Solutions for Enterprise Customer Support & Call Centers (2026)",
+        "url": "/power-local-llm/best-local-llms-customer-support-call-centers-enterprise",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
         "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
         "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
@@ -550,31 +558,23 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "tensorrt-llm-explained",
+        "title": "TensorRT-LLM Explained: NVIDIA's GPU-Optimized Inference Engine (2026)",
+        "url": "/power-local-llm/tensorrt-llm-explained",
+        "dateModified": "2026-11-03",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "local-llm-hardware-guide",
         "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
         "url": "/local-llms/local-llm-hardware-guide",
         "dateModified": "2026-11-02",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "70b-models-consumer-hardware",
-        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
-        "url": "/local-llms/70b-models-consumer-hardware",
-        "dateModified": "2026-10-29",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-24",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 15,
     "capped": true
   },
   "ExLlamaV2": {
@@ -721,6 +721,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-11-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "page-assist-review",
         "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
         "url": "/local-llms/page-assist-review",
@@ -749,14 +757,6 @@
         "title": "AutoGPT Review: Classic Agent vs. Hosted Platform",
         "url": "/power-local-llm/autogpt-local-review",
         "dateModified": "2026-09-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
-        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02",
         "tier": "mentioned"
       }
     ],
@@ -861,6 +861,30 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "trilium-notes-review",
+        "title": "Trilium Notes Review: Free Hierarchical Notes With Optional AI",
+        "url": "/power-local-llm/trilium-notes-review",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "vllm-explained",
+        "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
+        "url": "/power-local-llm/vllm-explained",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "apple-silicon-local-llm-guide-2026",
         "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
         "url": "/local-llms/apple-silicon-local-llm-guide-2026",
@@ -906,33 +930,9 @@
         "url": "/power-local-llm/local-ai-agents-with-mcp",
         "dateModified": "2026-11-02",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "opencode-review",
-        "title": "OpenCode Review: The Open-Source Terminal Coding Agent",
-        "url": "/power-local-llm/opencode-review",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llm-frontends",
-        "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
-        "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-10-31",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-mac",
-        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
-        "url": "/power-local-llm/best-local-llm-apps-mac",
-        "dateModified": "2026-10-31",
-        "tier": "about"
       }
     ],
-    "totalCount": 171,
+    "totalCount": 172,
     "capped": true
   },
   "Atomic Chat": {
@@ -2425,6 +2425,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
         "url": "/local-llms/best-local-llm-frontends",
@@ -2437,14 +2445,6 @@
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
         "dateModified": "2026-10-31",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
-        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02",
         "tier": "about"
       },
       {
@@ -2479,6 +2479,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "nextchat-review",
         "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
         "url": "/local-llms/nextchat-review",
@@ -2507,14 +2515,6 @@
         "title": "Chatbox Review 2026: Cross-Platform AI Chat Client for Desktop, Web, and Mobile",
         "url": "/local-llms/chatbox-review",
         "dateModified": "2026-09-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
-        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02",
         "tier": "about"
       }
     ],
@@ -2533,6 +2533,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "page-assist-review",
         "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
         "url": "/local-llms/page-assist-review",
@@ -2554,14 +2562,6 @@
         "url": "/local-llms/chatbox-review",
         "dateModified": "2026-09-11",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
-        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02",
-        "tier": "about"
       }
     ],
     "totalCount": 5,
@@ -2575,6 +2575,14 @@
         "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
         "url": "/local-llms/page-assist-review",
         "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -2600,14 +2608,6 @@
         "url": "/local-llms/chatbox-review",
         "dateModified": "2026-09-11",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
-        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02",
-        "tier": "about"
       }
     ],
     "totalCount": 5,
@@ -2621,6 +2621,14 @@
         "title": "Chatbox Review 2026: Cross-Platform AI Chat Client for Desktop, Web, and Mobile",
         "url": "/local-llms/chatbox-review",
         "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -2645,14 +2653,6 @@
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
         "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
-        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02",
         "tier": "about"
       },
       {
@@ -9936,6 +9936,22 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-11-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "trilium-notes-review",
+        "title": "Trilium Notes Review: Free Hierarchical Notes With Optional AI",
+        "url": "/power-local-llm/trilium-notes-review",
+        "dateModified": "2026-11-03",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "facet-review",
         "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
@@ -9982,25 +9998,9 @@
         "url": "/power-local-llm/photoview-review",
         "dateModified": "2026-10-30",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tonfotos-review",
-        "title": "Tonfotos Review: Local Face Recognition Photo Manager",
-        "url": "/power-local-llm/tonfotos-review",
-        "dateModified": "2026-10-30",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "loci-ai-review-offline-local-ai",
-        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
-        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "FluidVoice": {
@@ -10217,6 +10217,20 @@
         "title": "Hillnote Review: Local-First Markdown Notes With On-Device AI",
         "url": "/power-local-llm/hillnote-review",
         "dateModified": "2026-11-01",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Trilium Notes": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "trilium-notes-review",
+        "title": "Trilium Notes Review: Free Hierarchical Notes With Optional AI",
+        "url": "/power-local-llm/trilium-notes-review",
+        "dateModified": "2026-11-03",
         "tier": "about"
       }
     ],
@@ -10750,6 +10764,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
+        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Best Vector DB (2026)",
+        "url": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-vector-database-2026",
         "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
@@ -10803,14 +10825,6 @@
         "title": "txtai Review: The Embedded Vector Database That Skips the Server",
         "url": "/power-local-llm/txtai-embedded-vector-database-review",
         "dateModified": "2026-09-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
-        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Best Vector DB (2026)",
-        "url": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
-        "dateModified": "2026-09-01",
         "tier": "about"
       },
       {
@@ -11903,6 +11917,22 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-11-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
+        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Best Vector DB (2026)",
+        "url": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+        "dateModified": "2026-11-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "best-vector-database-2026",
         "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
         "url": "/local-llms/best-vector-database",
@@ -11948,25 +11978,9 @@
         "url": "/power-local-llm/aquavoice-review",
         "dateModified": "2026-11-02",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "automatic1111-review",
-        "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
-        "url": "/power-local-llm/automatic1111-review",
-        "dateModified": "2026-11-02",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "babyagi-review-autonomous-agent",
-        "title": "BabyAGI: What the First AI Agent Became",
-        "url": "/power-local-llm/babyagi-review-autonomous-agent",
-        "dateModified": "2026-11-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 248,
+    "totalCount": 249,
     "capped": true
   },
   "Qdrant": {
@@ -11977,6 +11991,14 @@
         "title": "Qdrant Review: The Self-Hosted Vector Database for RAG",
         "url": "/power-local-llm/qdrant-review",
         "dateModified": "2026-09-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
+        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Best Vector DB (2026)",
+        "url": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -12041,14 +12063,6 @@
         "title": "DreamServer Review: One-Command Local AI Server Stack",
         "url": "/power-local-llm/dreamserver-review",
         "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "chroma-review",
-        "title": "Chroma Review: Open-Source Vector Database for AI and RAG",
-        "url": "/power-local-llm/chroma-review",
-        "dateModified": "2026-09-18",
         "tier": "about"
       }
     ],
@@ -12412,6 +12426,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
+        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Best Vector DB (2026)",
+        "url": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-vector-database-2026",
         "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
@@ -12465,14 +12487,6 @@
         "title": "Haystack Review: deepset's RAG Framework vs. LangChain and LlamaIndex",
         "url": "/power-local-llm/haystack-deepset-rag-framework-review",
         "dateModified": "2026-09-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
-        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Best Vector DB (2026)",
-        "url": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
-        "dateModified": "2026-09-01",
         "tier": "about"
       },
       {
