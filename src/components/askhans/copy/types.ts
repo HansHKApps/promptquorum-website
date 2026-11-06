@@ -30,6 +30,9 @@ export interface AskCopy {
   restore: string
   newChat: string
   newChatLabel: string
+  /** header button that switches the window to Power Mode (guided setups) */
+  powerSwitch: string
+  powerSwitchTitle: string
   logoLabel: string
   logoTitle: string
 

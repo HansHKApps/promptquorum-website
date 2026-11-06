@@ -4,6 +4,7 @@
 
 import {
   AppWindow,
+  ArrowLeft,
   ArrowLeftRight,
   ArrowRight,
   Bot,
@@ -19,6 +20,7 @@ import {
   Copy,
   Cpu,
   Database,
+  Download,
   Eye,
   FileText,
   History,
@@ -47,6 +49,7 @@ import {
 
 export const ASK_HANS_ICONS: Record<string, LucideIcon> = {
   AppWindow,
+  ArrowLeft,
   ArrowLeftRight,
   ArrowRight,
   Bot,
@@ -62,6 +65,7 @@ export const ASK_HANS_ICONS: Record<string, LucideIcon> = {
   Copy,
   Cpu,
   Database,
+  Download,
   Eye,
   FileText,
   History,

@@ -14,18 +14,38 @@ export type AskStreamEvent =
   | { t: 'error'; code: AskErrorCode }
 
 const CLIENT_TIMEOUT_MS = 70_000
+/** Power Mode reports are long; the route allows 120 s. */
+const SOLUTION_CLIENT_TIMEOUT_MS = 125_000
 
 export async function streamAnswer(
   body: { visitId: string; lang: string; messages: { role: 'user' | 'assistant'; content: string }[] },
   onEvent: (e: AskStreamEvent) => void,
+  options: { endpoint?: string; timeoutMs?: number; signal?: AbortSignal } = {},
+): Promise<void> {
+  return streamNdjson(body, onEvent, options)
+}
+
+/** Power Mode: POST /api/ask/solution. Same event stream (text, tool, done, error). */
+export async function streamSolution(
+  body: { visitId: string; lang: string; process: string; answers: unknown },
+  onEvent: (e: AskStreamEvent) => void,
+  signal?: AbortSignal,
+): Promise<void> {
+  return streamNdjson(body, onEvent, { endpoint: '/api/ask/solution', timeoutMs: SOLUTION_CLIENT_TIMEOUT_MS, signal })
+}
+
+async function streamNdjson(
+  body: unknown,
+  onEvent: (e: AskStreamEvent) => void,
+  { endpoint = '/api/ask', timeoutMs = CLIENT_TIMEOUT_MS, signal }: { endpoint?: string; timeoutMs?: number; signal?: AbortSignal },
 ): Promise<void> {
   let res: Response
   try {
-    res = await fetch('/api/ask', {
+    res = await fetch(endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
-      signal: AbortSignal.timeout(CLIENT_TIMEOUT_MS),
+      signal: signal ? AbortSignal.any([signal, AbortSignal.timeout(timeoutMs)]) : AbortSignal.timeout(timeoutMs),
     })
   } catch {
     onEvent({ t: 'error', code: 'unavailable' })

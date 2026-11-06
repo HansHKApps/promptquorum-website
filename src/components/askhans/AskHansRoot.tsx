@@ -5,6 +5,7 @@
 // Conversations are kept in sessionStorage only; nothing is stored on the server.
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import dynamic from 'next/dynamic'
 import { ASK_HANS_LIMITS, ASK_HANS_OPEN_EVENT, ASK_HANS_SPLIT, ASK_HANS_CONSENT_TEXT_VERSION } from '@/lib/askhans/config'
 import { DEFAULT_CATEGORY_KEY, type AskHansLink } from '@/lib/askhans/categories'
 import { AskHansLogo } from './AskHansLogo'
@@ -22,6 +23,9 @@ import type { AskErrorCode, ChatMsg, ConsentRecord, Conversation, Rect, UiState 
 import { logEvent, streamAnswer } from './useAskStream'
 import { useIsDesktop } from './useIsDesktop'
 import { WelcomeBox } from './WelcomeBox'
+
+// Power Mode (guided setups + report exports) is loaded only when a visitor opens it.
+const PowerShell = dynamic(() => import('./power/PowerShell').then((m) => m.PowerShell), { ssr: false })
 
 const newConversation = (): Conversation => ({ id: uid(), messages: [], category: DEFAULT_CATEGORY_KEY, startedAt: Date.now() })
 
@@ -59,6 +63,9 @@ export function AskHansRoot() {
   const [expanded, setExpanded] = useState<Set<string>>(new Set())
   const [showPanel, setShowPanel] = useState(true)
   const [showHistory, setShowHistory] = useState(true)
+  /** 'power' = the guided setups screen replaces the chat inside the same window */
+  const [mode, setMode] = useState<'chat' | 'power'>('chat')
+  const powerBackRef = useRef<(() => boolean) | null>(null)
   const visitId = useRef('')
   /** answers that already produced a counted click (each answer counts once in the click-through rate) */
   const clickedAnswers = useRef(new Set<string>())
@@ -113,6 +120,7 @@ export function AskHansRoot() {
 
   // ---- window actions -------------------------------------------------------------------------
   const closeWindow = useCallback((focusLogo = true) => {
+    setMode('chat')
     setUi((u) => ({ ...u, open: false, everClosed: true }))
     if (focusLogo) setTimeout(() => logoRef.current?.focus(), 30)
   }, [])
@@ -229,12 +237,17 @@ export function AskHansRoot() {
   }, [ready, openWindow])
 
   // ---- consent --------------------------------------------------------------------------------
-  const chooseConsent = (value: 'yes' | 'no', saveHistory: boolean) => {
+  const recordConsent = (value: 'yes' | 'no', saveHistory: boolean): ConsentRecord => {
     const rec = saveConsent(value, saveHistory)
     setConsent(rec)
     setConsentOpen(false)
     if (value === 'yes') logEvent({ type: 'consent_yes', visitId: visitId.current, textVersion: ASK_HANS_CONSENT_TEXT_VERSION })
     else logEvent({ type: 'consent_no' })
+    return rec
+  }
+
+  const chooseConsent = (value: 'yes' | 'no', saveHistory: boolean) => {
+    const rec = recordConsent(value, saveHistory)
     const q = pendingQuestion
     setPendingQuestion(null)
     if (q) {
@@ -399,8 +412,19 @@ export function AskHansRoot() {
           onClose={() => closeWindow()}
           onToggleMaximize={() => setUi((u) => ({ ...u, maximized: !u.maximized }))}
           onNew={startNew}
-          newDisabled={streaming || !active || active.messages.length === 0}
+          newDisabled={mode === 'power' || streaming || !active || active.messages.length === 0}
+          powerActive={mode === 'power'}
+          onTogglePower={() => setMode((m) => (m === 'power' ? 'chat' : 'power'))}
+          onEscape={() => {
+            if (mode !== 'power') return false
+            if (powerBackRef.current) return powerBackRef.current()
+            setMode('chat')
+            return true
+          }}
         >
+          {mode === 'power' ? (
+            <PowerShell getVisitId={() => visitId.current} consent={consent} onConsent={recordConsent} backRef={powerBackRef} onExit={() => setMode('chat')} />
+          ) : (
           <div className="grid min-h-0 flex-1" style={isDesktop && showPanel ? { gridTemplateColumns: `${ASK_HANS_SPLIT.chatFr}fr ${ASK_HANS_SPLIT.panelFr}fr` } : undefined}>
             <div className="flex min-h-0 min-w-0 flex-col">
               {(previous.length > 0 || !showPanel) && !consentOpen && (
@@ -568,6 +592,7 @@ export function AskHansRoot() {
 
             {isDesktop && showPanel && <MarketingPanel variant="side" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onHide={() => setShowPanel(false)} />}
           </div>
+          )}
         </AskHansWindow>
       )}
     </>

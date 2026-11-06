@@ -17,7 +17,7 @@ export function plainText(md: string): string {
     .replace(/^#{1,4}\s+/gm, '')
 }
 
-async function writeClipboard(text: string): Promise<boolean> {
+export async function writeClipboard(text: string): Promise<boolean> {
   try {
     await navigator.clipboard.writeText(text)
     return true
