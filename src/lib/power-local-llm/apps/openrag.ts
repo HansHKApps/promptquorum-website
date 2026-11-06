@@ -1,6 +1,6 @@
 // Local AI App Directory — OpenRAG (layer: RAG platform / document search with a chat interface)
-// Added 2026-10-23. Facts verified 2026-10-23 against github.com/langflow-ai/openrag (README, LICENSE, release v0.8.0
-// published 2026-10-01, Apache-2.0) and docs.openr.ag (quickstart, install options, troubleshooting, configuration reference).
+// Added 2026-10-23. Facts verified 2026-10-23, refreshed 2026-11-06 against github.com/langflow-ai/openrag (README, LICENSE, release v0.8.1
+// published 2026-10-29, Apache-2.0) and docs.openr.ag (quickstart, install options, troubleshooting, configuration reference).
 
 import type { ToolRecord } from './types'
 
@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   license: 'Apache-2.0',
   price: 'free',
   hardware: { ramGb: 8, vramGb: null, cpuOnly: null, variesByModel: true }, // docs.openr.ag/support/troubleshoot: 8 GB minimum recommended RAM, 50 GB free disk; gpt-oss:20b needs 16 GB for local Ollama
-  stars: 4657, // github.com/langflow-ai/openrag, read 2026-10-23
+  stars: 4673, // github.com/langflow-ai/openrag, read 2026-11-06
   addedDate: '2026-10-23',
   status: 'listed',
   uses: ['docs', 'agent', 'build'],
@@ -45,12 +45,12 @@ export const app: ToolRecord = {
   compare: { visualBuilder: true, localLlm: true, agents: true, dockerDeploy: true },
   reviewSlug: 'openrag-review',
   pqReview: {
-    date: '2026-10-23',
-    version: '0.8.0',
+    date: '2026-11-06',
+    version: '0.8.1',
     versionSourceUrl: 'https://github.com/langflow-ai/openrag/releases',
   },
   verdict: 'Best for developers who want a ready-wired, Apache-2.0 RAG stack (Langflow, OpenSearch, Docling) with a chat UI and are happy to run containers through a terminal setup; limited by the Docker/Podman and 50 GB disk needs, WSL-only Windows support and a default OpenAI path.',
-  lastVerifiedDate: '2026-10-23',
-  lastUpstreamUpdate: '2026-10-23', // GitHub API: last push 2026-10-23, latest release v0.8.0 published 2026-10-01, read 2026-10-23
+  lastVerifiedDate: '2026-11-06',
+  lastUpstreamUpdate: '2026-11-06', // GitHub API: last push 2026-11-06, latest release v0.8.1 published 2026-10-29, read 2026-11-06
   lastUpstreamUpdateSource: 'https://github.com/langflow-ai/openrag',
 }
