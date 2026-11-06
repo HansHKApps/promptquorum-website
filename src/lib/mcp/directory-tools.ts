@@ -26,6 +26,8 @@ import { STACK_RECIPES } from '@/lib/power-local-llm/stacks'
 import { ALL_CLOUD_APPS, matchCloudApp, normalizeQuery } from '@/lib/power-local-llm/alternatives/match'
 import { HANDS_ON_TEST_SLUGS, handsOnTestUrl } from '@/lib/hands-on-tests/links'
 import { getHandsOnTest } from '@/lib/hands-on-tests'
+import { suggestModelsForHardware, MODEL_USE_CASES } from '@/lib/mcp/model-tools'
+import type { CatalogUseCase } from '@/lib/local-llm-catalog'
 import { MODEL_SIZES, QUANT_BITS, CONTEXT_OVERHEAD, BATCH_MULTIPLIER, MAC_OS_RESERVE_GB, estimateVram, macUsableGb } from '@/lib/vram'
 
 const SITE = 'https://www.promptquorum.com'
@@ -50,6 +52,11 @@ const GOAL_USE_CASES: [RegExp, UseCaseKey][] = [
 export function inferUseCase(goal: string): UseCaseKey | undefined {
   for (const [re, uc] of GOAL_USE_CASES) if (re.test(goal)) return uc
   return undefined
+}
+
+/** Directory use-case tag -> catalog use case, or undefined when the catalog has no such filter (serve, build...). */
+function catalogUseCase(uc: UseCaseKey | undefined): CatalogUseCase | undefined {
+  return uc && (MODEL_USE_CASES as string[]).includes(uc) ? (uc as CatalogUseCase) : undefined
 }
 
 const EFFORT_PLAIN: Record<string, string> = {
@@ -218,6 +225,8 @@ export function checkHardwareCompatibility(args: CheckHardwareArgs) {
         (app.hardware?.cpuOnly ? 'cpuOnly means it can run without a GPU, not that it runs fast; speed depends on the model and your CPU.' : null),
     },
     model: modelCheck,
+    // Catalog models that fit this machine (null when no memory was given), with how this app gets its models.
+    suggestedModels: overall === 'too-demanding' ? null : suggestModelsForHardware({ os: args.os, ramGb: args.ramGb, vramGb: args.vramGb, app }),
     alternatives,
     summary,
     calculatorUrl: VRAM_CALCULATOR_URL,
@@ -365,6 +374,8 @@ export function recommendStack(args: RecommendStackArgs) {
     goal: args.goal,
     matchedByGoal: matched.length > 0,
     stacks,
+    // Models to run inside the stack: catalog models that fit this machine for the goal's use case.
+    suggestedModels: suggestModelsForHardware({ os: args.os, ramGb: args.ramGb, vramGb: args.vramGb, useCase: catalogUseCase(inferUseCase(args.goal)) }),
     note: matched.length === 0 ? 'No stack matched the goal words; these are the general-purpose options that fit your hardware.' : undefined,
     directoryUrl: directoryUrlFor({}),
     disclaimer: DIRECTORY_DISCLAIMER,

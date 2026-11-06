@@ -1,10 +1,8 @@
-# ENTWURF — Datenschutzhinweis „Ask Hans“ (nicht veröffentlichen)
+# Datenschutzhinweis „Ask Hans“
 
-> **Status: Text für Abschnitt 2c (Gesprächsverlauf) und der Einwilligungstext sind final (2026-11-06); die Datenschutzerklärung (`src/translations.ts`, `privacyAskHansNote`, 9 Sprachen) ist angeglichen.**
-> Dies ist kein Rechtsrat. Offene Vertrags- und Fristenfragen stehen in der Aufgabe „Ask Hans: Datenschutz-Restpunkte“.
-> Der Einwilligungstext im Chatfenster (`src/components/askhans/copy.ts`, Version
-> `2026-11-06-v4`) muss zu diesem Text passen; bei jeder Textänderung die Versionsnummer in
-> `src/lib/askhans/config.ts` (`ASK_HANS_CONSENT_TEXT_VERSION`) erhöhen — dann wird die Einwilligung neu eingeholt.
+> Stand: 2026-11-06. Der Einwilligungstext im Chatfenster (`src/components/askhans/copy/`, Version `2026-11-06-v4`) und die
+> Datenschutzerklärung (`src/translations.ts`, `privacyAskHansNote`, 9 Sprachen) entsprechen diesem Text. Bei jeder Textänderung
+> die Versionsnummer in `src/lib/askhans/config.ts` (`ASK_HANS_CONSENT_TEXT_VERSION`) erhöhen — dann wird die Einwilligung neu eingeholt.
 
 ## Ask Hans (KI-Assistent)
 
@@ -86,9 +84,6 @@ Person verknüpft ist, kann eine Zuordnung für Auskunft/Löschung unmöglich se
 ### 8. Kontakt
 hello@promptquorum.com. Verantwortlicher: siehe Impressum.
 
-### 9. Offene Punkte (Hans, vor dem Einschalten)
-1. Datenverarbeitungsvertrag mit Anthropic und Transfermechanismus bestätigen (Abschnitte 4, 5).
-2. Einwilligungstext (Chatfenster) und diesen Entwurf gemeinsam freigeben; danach in `/de/privacy` übernehmen.
-3. Die MCP-Sitzungswerkzeuge `set_consent`, `my_profile`, `forget_me`, `start` des öffentlichen MCP-Servers sind **nicht** mit
-   Ask Hans verbunden. Ask Hans hat eigene Einwilligung (Abschnitt 2e) und speichert keine Profile.
-4. Aufbewahrungsfristen (Abschnitt 2e, 6) festlegen.
+### 9. Abgrenzung zum MCP-Server
+Die MCP-Sitzungswerkzeuge `set_consent`, `my_profile`, `forget_me`, `start` des öffentlichen MCP-Servers sind **nicht** mit
+Ask Hans verbunden. Ask Hans hat eine eigene Einwilligung (Abschnitt 2e) und speichert keine Profile.

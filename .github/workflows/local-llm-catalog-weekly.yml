@@ -1,0 +1,98 @@
+name: Local LLM Catalog (weekly)
+
+# Strict weekly cycle for data/local-llm-catalog.json - the curated top-~30 local
+# LLM variants (real download sizes, quantization, architecture, license,
+# capabilities) that the MCP server combines with app and hardware data.
+#
+# What this job does, every Monday:
+#   1. GATE   - fails loudly if the catalog on main is older than 30 days
+#               (validate-catalog.mjs --strict-age). Merging last week's PR is
+#               the human step that keeps this green.
+#   2. DETECT - rebuilds the catalog from primary sources (Ollama registry
+#               manifest + GGUF header + license layer) and diffs it against main.
+#   3. PROPOSE- opens/updates ONE pull request (branch bot/catalog-weekly) with the
+#               rebuilt file and the diff report as its body. It never pushes to main:
+#               a person reads the diff, optionally runs the model-registry-refresh
+#               skill to re-verify flagged entries, and merges.
+#
+# Every week produces a PR (at minimum the verification dates move) so a missed
+# review is visible as an open PR and, after 30 days, a red gate.
+#
+# One-time repo setting required: Settings -> Actions -> General -> Workflow
+# permissions -> "Allow GitHub Actions to create and approve pull requests".
+#
+# No npm install: the catalog scripts use only Node built-ins (fetch, fs).
+# Runs 05:23 UTC, before validate-model-names-weekly (06:00 UTC).
+
+on:
+  schedule:
+    - cron: '23 5 * * 1'
+  workflow_dispatch: {}
+
+concurrency:
+  group: local-llm-catalog-weekly
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+
+      - name: Freshness gate (main must be < 30 days old)
+        id: gate
+        continue-on-error: true
+        run: node scripts/validate-catalog.mjs --strict-age
+
+      - name: Detect drift against primary sources
+        id: detect
+        run: node scripts/catalog-detect.mjs --report catalog-report.md
+
+      - name: Rebuild catalog
+        run: node scripts/catalog-build.mjs --write
+
+      - name: Validate rebuilt catalog
+        run: node scripts/validate-catalog.mjs
+
+      - name: Open or update the weekly pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -B bot/catalog-weekly
+          git add data/local-llm-catalog.json
+          if git diff --cached --quiet; then
+            echo "Catalog identical to main - nothing to propose."
+            exit 0
+          fi
+          git commit -m "chore(catalog): weekly local LLM catalog refresh"
+          git push --force origin bot/catalog-weekly
+          existing=$(gh pr list --head bot/catalog-weekly --state open --json number --jq '.[0].number // empty')
+          if [ -n "$existing" ]; then
+            gh pr edit "$existing" --body-file catalog-report.md
+            echo "Updated PR #$existing"
+          else
+            gh pr create --base main --head bot/catalog-weekly \
+              --title "chore(catalog): weekly local LLM catalog refresh" \
+              --body-file catalog-report.md
+          fi
+
+      - name: Fail the run if the freshness gate failed
+        if: steps.gate.outcome == 'failure'
+        run: |
+          echo "::error::Catalog on main is older than 30 days. Merge the open bot/catalog-weekly PR."
+          exit 1
