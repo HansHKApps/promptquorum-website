@@ -13,6 +13,8 @@ import { useAskCopy, useAskLang, ASK_HANS_CONTACT_EMAIL } from './copy'
 type Phase = 'idle' | 'sending' | 'sent' | 'error'
 
 const AUTO_SEND_MS = 1000
+/** After "thanks" the stars come back, so a later answer in the same chat can be rated again. */
+const THANKS_RESET_MS = 5 * 60_000
 const Q_MAX = 500
 const A_MAX = 1200
 
@@ -42,6 +44,17 @@ export function FeedbackBar({ lastQuestion, lastAnswer }: { lastQuestion?: strin
     timer.current = null
   }
   useEffect(() => clear, [])
+
+  // Thanks message is temporary: back to the stars after THANKS_RESET_MS.
+  useEffect(() => {
+    if (phase !== 'sent') return
+    const id = setTimeout(() => {
+      setPhase('idle')
+      setRating(0)
+      setHover(0)
+    }, THANKS_RESET_MS)
+    return () => clearTimeout(id)
+  }, [phase])
 
   const submit = useCallback(
     async (n: number) => {
