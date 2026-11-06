@@ -37,6 +37,11 @@ const nextConfig: NextConfig = {
     cpus: 1,
     workerThreads: false,
     webpackMemoryOptimizations: true,
+    // Turbopack builds peaked at ~7.9 GB RSS (cold, 2026-11-06) against Vercel's 8 GB build container,
+    // and wrote a 268 MB .map next to the 211 MB article-corpus chunk. Source maps are only needed for
+    // readable server stack traces, so they are off to cut memory, time and upload size.
+    turbopackSourceMaps: false,
+    turbopackInputSourceMaps: false,
   },
   images: {
     formats: ['image/avif', 'image/webp'],
