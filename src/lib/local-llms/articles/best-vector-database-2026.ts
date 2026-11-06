@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       answer: '**Qdrant as our default pick if you have any ops capacity, Pinecone if you want zero infrastructure work, Weaviate if hybrid search accuracy is central to retrieval, and Chroma if you are prototyping and want no server at all.** There is no single winner here, and any guide that names one is answering a different question than the one you have. The real decision is whether you run the engine yourself or rent it, and that turns on whether your team has spare engineering hours or spare budget — those are rarely the same constraint.',
       bullets: [
         '**Best overall:** Qdrant — 35,383 stars, Apache-2.0, written in Rust, free cloud tier at 0.5 vCPU / 1 GB RAM / 4 GB disk (idle clusters are suspended)',
-        '**Best for zero ops:** Pinecone — the most mature serverless product, Builder at $20/month flat, Standard at $50/month minimum',
+        '**Best for zero ops:** Pinecone — in our assessment a mature serverless product, Builder at $20/month flat, Standard at $50/month minimum',
         '**Best for hybrid search:** Weaviate — native BM25 plus vector, and since June 2026 a free tier with no expiry and no credit card',
         '**Best for prototyping:** Chroma — `pip install chromadb` and it runs in your Python process, no server to stand up',
         '**All four now have a free tier** — the widely repeated claim that Weaviate only offers a 14-day sandbox is out of date',
@@ -69,7 +69,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pinecone** — cloud-only by design, with no self-hosted version at all. Starter is free with 2 GB storage, 2M write units and 1M read units a month. Builder is $20/month flat with 10 GB, 5M writes and 2M reads. Standard is a $50/month minimum then pay-as-you-go, and Enterprise is a $500/month minimum adding a 99.95% SLA, BYOC, HIPAA and audit logs.',
           '**Weaviate** — 16,934 stars, BSD-3-Clause, written in Go. **The correction that matters most on this page:** Weaviate Cloud is no longer a 14-day sandbox. On 17 June 2026 it launched a genuinely free tier with no credit card and no time expiry — 100,000 objects, 1 GB memory and 10 GB disk. Comparisons still telling readers to budget $45/month from day one are sending them to pay for something now free.',
           '**Weaviate paid pricing has also moved.** The live pricing page lists Flex from $45/month and Premium from $400/month. The $280/month Plus tier announced in the October 2025 pricing update no longer appears there, so quote Flex and Premium rather than the older three-tier structure.',
-          '**Chroma** — 29,622 stars, Apache-2.0, and now a Rust core rather than the Python engine it started as. It is the only one of the four that runs in-process with no server, which is exactly why it wins for prototyping.',
+          '**Chroma** — 29,622 stars, Apache-2.0, and now a Rust core rather than the Python engine it started as. It is the one of the four built around running in-process with no server (Qdrant\'s Python client also has a local mode for tests, but its production path is a server), which is exactly why it wins for prototyping.',
           '**Chroma Cloud exists too**, which most comparisons of this category miss entirely: Starter is $0/month plus usage with $5 in free credits, Team is $250/month plus usage, and usage is priced at $2.50 per GiB written, $0.33 per GiB stored per month, $0.0075 per TiB queried and $0.09 per GiB returned. So there are four managed options here, not three.',
           '**All four now have a free tier**, which was not true a year ago and is the single fastest way to check whether a comparison you are reading has been refreshed.',
           '**Disclosure worth stating plainly:** Pinecone does run a real Affiliate Program for content creators, confirmed on its partners page. PromptQuorum is not enrolled in it and earns nothing from any link here. This is the one category in this series where such a programme exists, which is precisely why the recommendation above is Qdrant and not Pinecone.',
@@ -81,8 +81,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**The structural question is whether you operate the engine or rent it, and that turns on whether your scarce resource is engineering hours or budget.** Read down and stop at the first line that describes you.',
         items: [
           '**You have some ops capacity and want to control cost and performance** → Qdrant, self-hosted or on Qdrant Cloud. Written in Rust, with the largest GitHub community of the three open-source engines.',
-          '**You want zero infrastructure work and will pay for it** → Pinecone. The most mature serverless product, and Builder at $20/month flat is a real plan rather than a trial.',
-          '**Retrieval accuracy depends on blending keyword and semantic matching** → Weaviate. Native BM25 plus vector is the most mature hybrid implementation here, and the free tier now costs nothing to evaluate.',
+          '**You want zero infrastructure work and will pay for it** → Pinecone. In our assessment a mature serverless product, and Builder at $20/month flat is a real plan rather than a trial.',
+          '**Retrieval accuracy depends on blending keyword and semantic matching** → Weaviate. Native BM25 plus vector is, in our assessment, the most complete hybrid implementation here, and the free tier now costs nothing to evaluate.',
           '**You are prototyping in a notebook and want no server** → Chroma. It runs in your Python process, so there is nothing to provision before you have working retrieval.',
           '**You need data to stay on hardware you control** → Qdrant, Weaviate or Chroma self-hosted. Pinecone has no self-hosted version, so data stays on hardware you control only through its BYOC option on Enterprise; if you only need a specific region, check Pinecone\'s current region documentation.',
           '**You have under roughly 10,000 vectors** → none of them. pgvector on Postgres covers that scale without adding a service to run, and you skip learning a new query API for a workload that does not need one.',
@@ -132,10 +132,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Criterion: 'License', Qdrant: 'Apache-2.0', Pinecone: 'Proprietary', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
           { Criterion: 'Written in', Qdrant: 'Rust', Pinecone: 'Not disclosed', Weaviate: 'Go', Chroma: 'Rust core' },
           { Criterion: 'Self-hostable', Qdrant: 'Yes, free', Pinecone: 'No, cloud only', Weaviate: 'Yes, free', Chroma: 'Yes, free' },
-          { Criterion: 'Runs in-process', Qdrant: 'No, server', Pinecone: 'No, hosted', Weaviate: 'No, server', Chroma: 'Yes' },
+          { Criterion: 'Runs in-process', Qdrant: 'Python local mode only; server for production', Pinecone: 'No, hosted', Weaviate: 'No, server', Chroma: 'Yes' },
           { Criterion: 'Free cloud tier', Qdrant: '0.5 vCPU, 1 GB, 4 GB disk', Pinecone: '2 GB, 2M writes, 1M reads', Weaviate: '100k objects, 1 GB, 10 GB', Chroma: '$0/mo plus $5 credits' },
           { Criterion: 'Paid entry', Qdrant: 'Usage-based, no flat fee', Pinecone: 'Builder $20/mo flat', Weaviate: 'Flex from $45/mo', Chroma: 'Team $250/mo plus usage' },
-          { Criterion: 'Hybrid search', Qdrant: 'Native, sparse plus dense', Pinecone: 'Yes', Weaviate: 'Native BM25, most mature', Chroma: 'Newer, less complete' },
+          { Criterion: 'Hybrid search', Qdrant: 'Native, sparse plus dense', Pinecone: 'Yes', Weaviate: 'Native BM25', Chroma: 'Newer; check its docs' },
           { Criterion: 'Entry-tier SLA', Qdrant: '99.5% on Standard', Pinecone: 'Enterprise only, 99.95%', Weaviate: '99.5% on Flex', Chroma: 'Not published below Enterprise' },
           { Criterion: 'Affiliate programme', Qdrant: 'None found', Pinecone: 'Yes, we are not in it', Weaviate: 'None found', Chroma: 'None found' },
         ],
@@ -284,7 +284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       chroma: {
         id: 'chroma',
         title: 'Chroma: the prototyping pick',
-        content: '**Chroma is the only one of the four that runs inside your Python process with no server, which makes it the fastest path from nothing to working retrieval.** It is narrower than the others by design, and honest about it.',
+        content: '**Chroma is the one of the four built to run inside your Python process with no server (Qdrant\'s Python client has a local mode for tests only), which makes it the fastest path from nothing to working retrieval.** It is narrower than the others by design, and honest about it.',
         rankedItems: [
           {
             rank: 1,
@@ -348,7 +348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'These are modelled estimates from typical VM pricing and vendor list prices on 2 November 2026, not measured production bills. Usage-based costs on Pinecone, Qdrant Cloud and Chroma Cloud vary with query volume, so run your expected read and write volume through each provider\'s calculator before committing.',
           },
         ],
-        note: 'At a million vectors the ops line usually decides this, not the sticker price. Self-host when residency or volume requires it; otherwise the managed tiers are cheaper once your own hours are priced honestly.',
+        note: 'At a million vectors the ops line usually decides this, not the sticker price. Self-host when residency or volume requires it; in this model the managed tiers come out cheaper once ops hours are priced, and the result flips with cheaper ops time or high usage.',
       },
       hybridSearch: {
         id: 'hybrid-search',
@@ -441,7 +441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is Pinecone better than Weaviate for RAG?',
-            a: 'Neither is universally better. Pinecone has the more mature managed serverless product and no self-hosted version, so choosing it is a commitment to that engine. Weaviate offers the same engine self-hosted and managed, giving you a migration path in both directions, and has the more mature hybrid search. Choose Pinecone if operational simplicity is what you are buying; choose Weaviate if retrieval quality on technical content matters or you want the option to move to your own hardware later.',
+            a: 'Neither is universally better. In our assessment Pinecone has the more mature managed serverless product, and it has no self-hosted version, so choosing it is a commitment to that engine. Weaviate offers the same engine self-hosted and managed, giving you a migration path in both directions, and, in our assessment, has the more mature hybrid search. Choose Pinecone if operational simplicity is what you are buying; choose Weaviate if retrieval quality on technical content matters or you want the option to move to your own hardware later.',
           },
           {
             q: 'How much does a vector database cost for 1 million vectors?',
@@ -449,7 +449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is Qdrant the same as Weaviate?',
-            a: 'No. They are separate open-source projects with different architectures and query interfaces. Qdrant is written in Rust with its own query API over REST and gRPC; Weaviate is written in Go and is known for its GraphQL interface. Both support hybrid search and both run self-hosted or managed, but queries written for one are not portable to the other without rewriting. Qdrant filters metadata during index traversal; Weaviate has the more mature hybrid search and built-in vectorisation modules.',
+            a: 'No. They are separate open-source projects with different architectures and query interfaces. Qdrant is written in Rust with its own query API over REST and gRPC; Weaviate is written in Go and is known for its GraphQL interface. Both support hybrid search and both run self-hosted or managed, but queries written for one are not portable to the other without rewriting. Qdrant filters metadata during index traversal; Weaviate has, in our assessment, the more mature hybrid search and built-in vectorisation modules.',
           },
           {
             q: 'How do I migrate from Chroma to Qdrant?',
@@ -469,7 +469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Final verdict',
         items: [
-          '**Use Qdrant if** you want the best cost-to-performance and one engine that works self-hosted or managed — next step: start on the free-forever cloud tier, and move to Standard when you outgrow 4 GB rather than provisioning a VM first.',
+          '**Use Qdrant if** you want a low-cost path with one engine that works self-hosted or managed — next step: start on the free-forever cloud tier, and move to Standard when you outgrow 4 GB rather than provisioning a VM first.',
           '**Use Pinecone if** you want zero infrastructure work and accept the engine lock-in — next step: start on Builder at $20/month and model your read and write unit volume before moving to Standard.',
           '**Use Weaviate if** hybrid search quality is central to retrieval — next step: evaluate on the free tier, which since June 2026 costs nothing and does not expire.',
           '**Use Chroma if** you are prototyping and want retrieval working today — next step: `pip install chromadb`, and plan the migration to Qdrant or Weaviate on your own schedule.',
@@ -558,7 +558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Is Pinecone better than Weaviate for RAG?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Neither is universally better. Pinecone has the more mature managed product and no self-hosted version. Weaviate offers the same engine self-hosted and managed and has the more mature hybrid search, so it suits teams that want a migration path or depend on exact-match terms in retrieval.',
+            text: 'Neither is universally better. In our assessment Pinecone has the more mature managed product, and it has no self-hosted version. Weaviate offers the same engine self-hosted and managed and, in our assessment, has the more mature hybrid search, so it suits teams that want a migration path or depend on exact-match terms in retrieval.',
           },
         },
         {
@@ -587,7 +587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       numberOfItems: 4,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Our default pick — Apache-2.0, Rust, a free cloud tier with usage-based Standard pricing' },
-        { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Best for zero ops — the most mature serverless product, Builder at $20/month flat, but cloud-only with no self-hosted version' },
+        { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Best for zero ops — in our assessment a mature serverless product, Builder at $20/month flat, but cloud-only with no self-hosted version' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'Best for hybrid search — native BM25 plus vector, and since June 2026 a free tier with no expiry offering 100,000 objects' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Best for prototyping — runs in-process with no server, Rust core, and Chroma Cloud starting at $0/month plus usage' },
       ],
@@ -622,7 +622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       answer: '**Qdrant als unsere Standardempfehlung, sofern Sie überhaupt Betriebskapazität haben, Pinecone wenn Sie null Infrastrukturarbeit wollen, Weaviate wenn hybride Suche für die Trefferqualität zentral ist, und Chroma wenn Sie prototypisieren und gar keinen Server wollen.** Einen einzelnen Sieger gibt es hier nicht, und jeder Ratgeber, der einen nennt, beantwortet eine andere Frage als Ihre.',
       bullets: [
         '**Insgesamt am besten:** Qdrant — 35.383 Sterne, Apache-2.0, Rust, kostenlose Cloud-Stufe (0,5 vCPU / 1 GB RAM; ungenutzte Cluster werden pausiert)',
-        '**Am besten ohne Betrieb:** Pinecone — das ausgereifteste Serverless-Produkt, Builder pauschal 20 $/Monat, Standard mindestens 50 $/Monat',
+        '**Am besten ohne Betrieb:** Pinecone — nach unserer Einschätzung ein ausgereiftes Serverless-Produkt, Builder pauschal 20 $/Monat, Standard mindestens 50 $/Monat',
         '**Am besten für hybride Suche:** Weaviate — BM25 und Vektor nativ, und seit Juni 2026 eine Gratisstufe ohne Ablauf und ohne Kreditkarte',
         '**Am besten zum Prototypisieren:** Chroma — `pip install chromadb`, und es läuft in Ihrem Python-Prozess, ohne Server',
         '**Alle vier haben inzwischen eine Gratisstufe** — die vielfach wiederholte Aussage, Weaviate biete nur eine 14-Tage-Sandbox, ist überholt',
@@ -661,7 +661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pinecone** — von Grund auf reine Cloud, ohne jede selbst betriebene Variante. Starter ist kostenlos mit 2 GB Speicher, 2 Mio. Write Units und 1 Mio. Read Units im Monat. Builder kostet pauschal 20 $/Monat mit 10 GB, 5 Mio. Writes und 2 Mio. Reads. Standard beginnt bei 50 $/Monat und rechnet darüber nutzungsabhängig ab; Enterprise liegt bei mindestens 500 $/Monat und ergänzt 99,95 % Verfügbarkeit, BYOC, HIPAA und Audit-Logs.',
           '**Weaviate** — 16.934 Sterne, BSD-3-Clause, in Go geschrieben. **Die wichtigste Korrektur auf dieser Seite:** Weaviate Cloud ist keine 14-Tage-Sandbox mehr. Am 17. Juni 2026 wurde eine wirklich kostenlose Stufe ohne Kreditkarte und ohne zeitliche Befristung eingeführt — 100.000 Objekte, 1 GB Arbeitsspeicher und 10 GB Festplatte. Vergleiche, die weiterhin raten, ab Tag eins 45 $/Monat einzuplanen, schicken Leserinnen und Leser dazu, für etwas zu zahlen, das inzwischen kostenlos ist.',
           '**Auch die bezahlten Weaviate-Tarife haben sich verschoben.** Die aktuelle Preisseite führt Flex ab 45 $/Monat und Premium ab 400 $/Monat. Die im Oktober 2025 angekündigte Plus-Stufe zu 280 $/Monat erscheint dort nicht mehr, nennen Sie also Flex und Premium statt der älteren dreistufigen Struktur.',
-          '**Chroma** — 29.622 Sterne, Apache-2.0, und inzwischen ein Kern in Rust statt der Python-Engine, mit der es begann. Es ist das einzige der vier, das ohne Server im Prozess läuft, und genau deshalb gewinnt es beim Prototypisieren.',
+          '**Chroma** — 29.622 Sterne, Apache-2.0, und inzwischen ein Kern in Rust statt der Python-Engine, mit der es begann. Es ist dasjenige der vier, das darauf ausgelegt ist, ohne Server im Prozess zu laufen (der Python-Client von Qdrant hat zwar auch einen lokalen Modus für Tests, der Produktionsweg ist aber ein Server), und genau deshalb gewinnt es beim Prototypisieren.',
           '**Auch Chroma Cloud gibt es**, was die meisten Vergleiche dieser Kategorie völlig übersehen: Starter kostet 0 $/Monat plus Nutzung mit 5 $ Startguthaben, Team 250 $/Monat plus Nutzung, und die Nutzung wird mit 2,50 $ je geschriebenem GiB, 0,33 $ je gespeichertem GiB und Monat, 0,0075 $ je abgefragtem TiB und 0,09 $ je zurückgegebenem GiB berechnet. Es gibt hier also vier verwaltete Optionen, nicht drei.',
           '**Alle vier haben inzwischen eine Gratisstufe**, was vor einem Jahr noch nicht galt und der schnellste Weg ist zu prüfen, ob ein Vergleich, den Sie lesen, aktualisiert wurde.',
           '**Ein Hinweis, der klar gesagt gehört:** Pinecone betreibt tatsächlich ein Affiliate-Programm für Content-Ersteller, bestätigt auf der eigenen Partnerseite. PromptQuorum ist dort nicht angemeldet und verdient an keinem Link hier etwas. Dies ist die einzige Kategorie dieser Reihe, in der ein solches Programm existiert — und genau deshalb lautet die Empfehlung oben Qdrant und nicht Pinecone.',
@@ -673,8 +673,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Die strukturelle Frage lautet, ob Sie die Engine betreiben oder mieten, und das hängt daran, ob Entwicklungsstunden oder Budget knapper sind.** Lesen Sie von oben und halten Sie bei der ersten Zeile inne, die auf Sie zutrifft.',
         items: [
           '**Sie haben etwas Betriebskapazität und wollen Kosten und Leistung im Griff behalten** → Qdrant, selbst betrieben oder in Qdrant Cloud. In Rust geschrieben, mit der größten GitHub-Community der drei quelloffenen Engines.',
-          '**Sie wollen null Infrastrukturarbeit und zahlen dafür** → Pinecone. Das ausgereifteste Serverless-Produkt, und Builder zu pauschal 20 $/Monat ist ein echter Tarif und keine Testphase.',
-          '**Die Trefferqualität hängt daran, Stichwort- und Bedeutungssuche zu verbinden** → Weaviate. BM25 plus Vektor nativ ist die reifste hybride Umsetzung hier, und die Gratisstufe kostet inzwischen nichts zum Ausprobieren.',
+          '**Sie wollen null Infrastrukturarbeit und zahlen dafür** → Pinecone. Nach unserer Einschätzung ein ausgereiftes Serverless-Produkt, und Builder zu pauschal 20 $/Monat ist ein echter Tarif und keine Testphase.',
+          '**Die Trefferqualität hängt daran, Stichwort- und Bedeutungssuche zu verbinden** → Weaviate. BM25 plus Vektor nativ ist nach unserer Einschätzung die vollständigste hybride Umsetzung hier, und die Gratisstufe kostet inzwischen nichts zum Ausprobieren.',
           '**Sie prototypisieren im Notebook und wollen keinen Server** → Chroma. Es läuft in Ihrem Python-Prozess, es gibt also nichts bereitzustellen, bevor die Suche funktioniert.',
           '**Ihre Daten müssen auf eigener Hardware bleiben** → Qdrant, Weaviate oder Chroma selbst betrieben. Pinecone hat keine selbst betriebene Variante; Daten bleiben nur über die BYOC-Option der Enterprise-Stufe in Ihrer eigenen Umgebung. Wenn nur eine bestimmte Region gefordert ist, prüfen Sie die aktuelle Regionen-Dokumentation von Pinecone.',
           '**Sie haben unter rund 10.000 Vektoren** → keine davon. pgvector auf Postgres deckt diese Größenordnung ab, ohne einen Dienst zu betreiben, und Sie sparen sich eine neue Abfrage-API für eine Last, die sie nicht braucht.',
@@ -724,10 +724,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Kriterium: 'Lizenz', Qdrant: 'Apache-2.0', Pinecone: 'Proprietär', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
           { Kriterium: 'Geschrieben in', Qdrant: 'Rust', Pinecone: 'Nicht offengelegt', Weaviate: 'Go', Chroma: 'Kern in Rust' },
           { Kriterium: 'Selbst betreibbar', Qdrant: 'Ja, kostenlos', Pinecone: 'Nein, nur Cloud', Weaviate: 'Ja, kostenlos', Chroma: 'Ja, kostenlos' },
-          { Kriterium: 'Läuft im Prozess', Qdrant: 'Nein, Server', Pinecone: 'Nein, gehostet', Weaviate: 'Nein, Server', Chroma: 'Ja' },
+          { Kriterium: 'Läuft im Prozess', Qdrant: 'Nur Python-Lokalmodus; Server in Produktion', Pinecone: 'Nein, gehostet', Weaviate: 'Nein, Server', Chroma: 'Ja' },
           { Kriterium: 'Kostenlose Cloud-Stufe', Qdrant: '0,5 vCPU, 1 GB, 4 GB', Pinecone: '2 GB, 2 Mio. Writes, 1 Mio. Reads', Weaviate: '100.000 Objekte, 1 GB, 10 GB', Chroma: '0 $/Monat plus 5 $ Guthaben' },
           { Kriterium: 'Bezahlter Einstieg', Qdrant: 'Nutzungsabhängig, keine Pauschale', Pinecone: 'Builder pauschal 20 $/Monat', Weaviate: 'Flex ab 45 $/Monat', Chroma: 'Team 250 $/Monat plus Nutzung' },
-          { Kriterium: 'Hybride Suche', Qdrant: 'Nativ, sparse plus dense', Pinecone: 'Ja', Weaviate: 'Nativ BM25, am reifsten', Chroma: 'Neuer, weniger vollständig' },
+          { Kriterium: 'Hybride Suche', Qdrant: 'Nativ, sparse plus dense', Pinecone: 'Ja', Weaviate: 'Nativ BM25', Chroma: 'Neuer; Doku prüfen' },
           { Kriterium: 'Zusage Einstiegsstufe', Qdrant: '99,5 % bei Standard', Pinecone: 'Nur Enterprise, 99,95 %', Weaviate: '99,5 % bei Flex', Chroma: 'Unter Enterprise nicht genannt' },
           { Kriterium: 'Affiliate-Programm', Qdrant: 'Keines gefunden', Pinecone: 'Ja, wir sind nicht dabei', Weaviate: 'Keines gefunden', Chroma: 'Keines gefunden' },
         ],
@@ -876,7 +876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       chroma: {
         id: 'chroma',
         title: 'Chroma: die Wahl zum Prototypisieren',
-        content: '**Chroma ist das einzige der vier, das ohne Server in Ihrem Python-Prozess läuft, und damit der schnellste Weg von nichts zu funktionierendem Abruf.** Es ist bewusst schmaler als die anderen und geht damit offen um.',
+        content: '**Chroma ist dasjenige der vier, das darauf ausgelegt ist, ohne Server in Ihrem Python-Prozess zu laufen (der Python-Client von Qdrant bietet nur einen lokalen Testmodus), und damit der schnellste Weg von nichts zu funktionierendem Abruf.** Es ist bewusst schmaler als die anderen und geht damit offen um.',
         rankedItems: [
           {
             rank: 1,
@@ -940,7 +940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Das sind modellierte Schätzungen aus üblichen Serverpreisen und Listenpreisen der Anbieter vom 2. November 2026, keine gemessenen Produktivrechnungen. Nutzungsabhängige Kosten bei Pinecone, Qdrant Cloud und Chroma Cloud schwanken mit dem Abfragevolumen, rechnen Sie Ihr erwartetes Lese- und Schreibvolumen daher vorher durch die Kalkulatoren der Anbieter.',
           },
         ],
-        note: 'Bei einer Million Vektoren entscheidet üblicherweise die Betriebszeile, nicht der Listenpreis. Betreiben Sie selbst, wenn Residenz oder Volumen es verlangen; sonst sind die verwalteten Stufen günstiger, sobald die eigenen Stunden ehrlich bepreist sind.',
+        note: 'Bei einer Million Vektoren entscheidet üblicherweise die Betriebszeile, nicht der Listenpreis. Betreiben Sie selbst, wenn Residenz oder Volumen es verlangen; in diesem Modell sind die verwalteten Stufen günstiger, sobald die Betriebsstunden bepreist sind; das Ergebnis kippt bei günstigerer Betriebszeit oder hoher Nutzung.',
       },
       hybridSearch: {
         id: 'hybrid-search',
@@ -1033,7 +1033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist Pinecone besser als Weaviate für RAG?',
-            a: 'Keines ist allgemein besser. Pinecone hat das ausgereiftere verwaltete Serverless-Produkt und keine selbst betriebene Variante, die Wahl ist also eine Festlegung auf diese Engine. Weaviate bietet dieselbe Engine selbst betrieben und verwaltet, gibt Ihnen damit einen Migrationspfad in beide Richtungen und hat die reifere hybride Suche. Wählen Sie Pinecone, wenn Sie Betriebseinfachheit kaufen; wählen Sie Weaviate, wenn Trefferqualität auf technischen Inhalten zählt oder Sie sich die Option auf eigene Hardware offenhalten wollen.',
+            a: 'Keines ist allgemein besser. Nach unserer Einschätzung hat Pinecone das ausgereiftere verwaltete Serverless-Produkt, und es hat keine selbst betriebene Variante, die Wahl ist also eine Festlegung auf diese Engine. Weaviate bietet dieselbe Engine selbst betrieben und verwaltet, gibt Ihnen damit einen Migrationspfad in beide Richtungen und hat nach unserer Einschätzung die reifere hybride Suche. Wählen Sie Pinecone, wenn Sie Betriebseinfachheit kaufen; wählen Sie Weaviate, wenn Trefferqualität auf technischen Inhalten zählt oder Sie sich die Option auf eigene Hardware offenhalten wollen.',
           },
           {
             q: 'Was kostet eine Vektordatenbank für 1 Million Vektoren?',
@@ -1041,7 +1041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist Qdrant dasselbe wie Weaviate?',
-            a: 'Nein. Es sind getrennte quelloffene Projekte mit unterschiedlicher Architektur und Abfrageschnittstelle. Qdrant ist in Rust geschrieben und hat eine eigene Abfrage-API über REST und gRPC; Weaviate ist in Go geschrieben und für seine GraphQL-Schnittstelle bekannt. Beide unterstützen hybride Suche und laufen selbst betrieben wie verwaltet, doch für eines geschriebene Abfragen sind ohne Umschreiben nicht auf das andere übertragbar. Qdrant filtert Metadaten während der Index-Traversierung, Weaviate bietet die reifere hybride Suche und eingebaute Vektorisierungsmodule.',
+            a: 'Nein. Es sind getrennte quelloffene Projekte mit unterschiedlicher Architektur und Abfrageschnittstelle. Qdrant ist in Rust geschrieben und hat eine eigene Abfrage-API über REST und gRPC; Weaviate ist in Go geschrieben und für seine GraphQL-Schnittstelle bekannt. Beide unterstützen hybride Suche und laufen selbst betrieben wie verwaltet, doch für eines geschriebene Abfragen sind ohne Umschreiben nicht auf das andere übertragbar. Qdrant filtert Metadaten während der Index-Traversierung, Weaviate bietet nach unserer Einschätzung die reifere hybride Suche und eingebaute Vektorisierungsmodule.',
           },
           {
             q: 'Wie migriere ich von Chroma zu Qdrant?',
@@ -1069,7 +1069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         items: [
-          '**Nutzen Sie Qdrant, wenn** Sie das beste Verhältnis von Kosten zu Leistung wollen und eine Engine, die selbst betrieben wie verwaltet funktioniert — nächster Schritt: auf der dauerhaft kostenlosen Cloud-Stufe beginnen und auf Standard wechseln, wenn 4 GB nicht mehr reichen, statt zuerst einen Server bereitzustellen.',
+          '**Nutzen Sie Qdrant, wenn** Sie einen kostengünstigen Weg mit einer Engine wollen, die selbst betrieben wie verwaltet funktioniert — nächster Schritt: auf der dauerhaft kostenlosen Cloud-Stufe beginnen und auf Standard wechseln, wenn 4 GB nicht mehr reichen, statt zuerst einen Server bereitzustellen.',
           '**Nutzen Sie Pinecone, wenn** Sie null Infrastrukturarbeit wollen und die Bindung an die Engine akzeptieren — nächster Schritt: mit Builder zu 20 $/Monat starten und das Volumen an Read und Write Units durchrechnen, bevor Sie auf Standard wechseln.',
           '**Nutzen Sie Weaviate, wenn** hybride Suche für den Abruf zentral ist — nächster Schritt: auf der Gratisstufe prüfen, die seit Juni 2026 nichts kostet und nicht abläuft.',
           '**Nutzen Sie Chroma, wenn** Sie prototypisieren und den Abruf heute zum Laufen bringen wollen — nächster Schritt: `pip install chromadb`, und die Migration zu Qdrant oder Weaviate nach eigenem Zeitplan einplanen.',
@@ -1158,7 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Ist Pinecone besser als Weaviate für RAG?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Keines ist allgemein besser. Pinecone hat das ausgereiftere verwaltete Produkt und keine selbst betriebene Variante. Weaviate bietet dieselbe Engine selbst betrieben und verwaltet und hat die reifere hybride Suche, passt also zu Teams, die einen Migrationspfad wollen oder auf exakte Begriffe im Abruf angewiesen sind.',
+            text: 'Keines ist allgemein besser. Nach unserer Einschätzung hat Pinecone das ausgereiftere verwaltete Produkt, und es hat keine selbst betriebene Variante. Weaviate bietet dieselbe Engine selbst betrieben und verwaltet und hat nach unserer Einschätzung die reifere hybride Suche, passt also zu Teams, die einen Migrationspfad wollen oder auf exakte Begriffe im Abruf angewiesen sind.',
           },
         },
         {
@@ -1187,7 +1187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       numberOfItems: 4,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Unsere Standardempfehlung — Apache-2.0, Rust, kostenlose Cloud-Stufe mit nutzungsabhängigem Standard' },
-        { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Am besten ohne Betrieb — das ausgereifteste Serverless-Produkt, Builder pauschal 20 $/Monat, aber reine Cloud ohne selbst betriebene Variante' },
+        { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Am besten ohne Betrieb — nach unserer Einschätzung ein ausgereiftes Serverless-Produkt, Builder pauschal 20 $/Monat, aber reine Cloud ohne selbst betriebene Variante' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'Am besten für hybride Suche — BM25 plus Vektor nativ, und seit Juni 2026 eine Gratisstufe ohne Ablauf mit 100.000 Objekten' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Am besten zum Prototypisieren — läuft ohne Server im Prozess, Kern in Rust, und Chroma Cloud ab 0 $/Monat plus Nutzung' },
       ],
@@ -1222,7 +1222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       answer: '**Qdrant como nuestra opción por defecto si tiene alguna capacidad de operaciones, Pinecone si quiere cero trabajo de infraestructura, Weaviate si la búsqueda híbrida es central para la precisión de la recuperación, y Chroma si está prototipando y no quiere ningún servidor.** Aquí no hay un ganador único, y cualquier guía que nombre uno está respondiendo a una pregunta distinta de la suya.',
       bullets: [
         '**Mejor en conjunto:** Qdrant — 35.383 estrellas, Apache-2.0, Rust, nube gratis (0,5 vCPU / 1 GB RAM; los clústeres inactivos se suspenden)',
-        '**Mejor sin operaciones:** Pinecone — el producto serverless más maduro, Builder a 20 $/mes fijos, Standard con un mínimo de 50 $/mes',
+        '**Mejor sin operaciones:** Pinecone — a nuestro juicio un producto serverless maduro, Builder a 20 $/mes fijos, Standard con un mínimo de 50 $/mes',
         '**Mejor para búsqueda híbrida:** Weaviate — BM25 más vector de forma nativa, y desde junio de 2026 un nivel gratuito sin caducidad ni tarjeta de crédito',
         '**Mejor para prototipar:** Chroma — `pip install chromadb` y corre en su proceso de Python, sin servidor que levantar',
         '**Los cuatro ya tienen nivel gratuito** — la idea tan repetida de que Weaviate solo ofrece un sandbox de 14 días está desactualizada',
@@ -1261,7 +1261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pinecone** — solo nube por diseño, sin ninguna versión autoalojada. Starter es gratis con 2 GB de almacenamiento, 2 M de unidades de escritura y 1 M de lectura al mes. Builder cuesta 20 $/mes fijos con 10 GB, 5 M de escrituras y 2 M de lecturas. Standard parte de un mínimo de 50 $/mes y luego paga por uso, y Enterprise de un mínimo de 500 $/mes añadiendo un SLA del 99,95 %, BYOC, HIPAA y registros de auditoría.',
           '**Weaviate** — 16.934 estrellas, BSD-3-Clause, escrito en Go. **La corrección más importante de esta página:** Weaviate Cloud ya no es un sandbox de 14 días. El 17 de junio de 2026 lanzó un nivel realmente gratuito sin tarjeta de crédito y sin caducidad: 100.000 objetos, 1 GB de memoria y 10 GB de disco. Las comparativas que siguen diciendo que presupueste 45 $/mes desde el primer día están mandando a la gente a pagar por algo que ahora es gratis.',
           '**Los precios de pago de Weaviate también se han movido.** La página de precios vigente lista Flex desde 45 $/mes y Premium desde 400 $/mes. El nivel Plus de 280 $/mes anunciado en la actualización de octubre de 2025 ya no aparece allí, así que cite Flex y Premium en lugar de la antigua estructura de tres niveles.',
-          '**Chroma** — 29.622 estrellas, Apache-2.0, y ahora un núcleo en Rust en lugar del motor en Python con el que empezó. Es el único de los cuatro que corre dentro del proceso sin servidor, y por eso mismo gana para prototipar.',
+          '**Chroma** — 29.622 estrellas, Apache-2.0, y ahora un núcleo en Rust en lugar del motor en Python con el que empezó. Es el de los cuatro pensado para correr dentro del proceso sin servidor (el cliente de Python de Qdrant también tiene un modo local para pruebas, pero su vía de producción es un servidor), y por eso mismo gana para prototipar.',
           '**Chroma Cloud también existe**, algo que la mayoría de comparativas de esta categoría omite por completo: Starter cuesta 0 $/mes más consumo con 5 $ de crédito inicial, Team 250 $/mes más consumo, y el consumo se tarifa a 2,50 $ por GiB escrito, 0,33 $ por GiB almacenado al mes, 0,0075 $ por TiB consultado y 0,09 $ por GiB devuelto. Hay, por tanto, cuatro opciones gestionadas, no tres.',
           '**Los cuatro tienen ya un nivel gratuito**, algo que no era cierto hace un año y es la forma más rápida de comprobar si la comparativa que está leyendo se ha actualizado.',
           '**Un aviso que conviene decir sin rodeos:** Pinecone sí tiene un programa de afiliados real para creadores de contenido, confirmado en su página de socios. PromptQuorum no está inscrito en él y no gana nada con ningún enlace de aquí. Esta es la única categoría de esta serie donde existe tal programa, y precisamente por eso la recomendación de arriba es Qdrant y no Pinecone.',
@@ -1273,8 +1273,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**La pregunta estructural es si opera el motor o lo alquila, y eso depende de si su recurso escaso son las horas de ingeniería o el presupuesto.** Lea hacia abajo y deténgase en la primera línea que le describa.',
         items: [
           '**Tiene algo de capacidad de operaciones y quiere controlar coste y rendimiento** → Qdrant, autoalojado o en Qdrant Cloud. Escrito en Rust y con la mayor comunidad en GitHub de los tres motores abiertos.',
-          '**Quiere cero trabajo de infraestructura y va a pagarlo** → Pinecone. El producto serverless más maduro, y Builder a 20 $/mes fijos es un plan de verdad, no una prueba.',
-          '**La precisión de la recuperación depende de mezclar coincidencia literal y semántica** → Weaviate. BM25 más vector de forma nativa es la implementación híbrida más madura aquí, y el nivel gratuito ya no cuesta nada para evaluarlo.',
+          '**Quiere cero trabajo de infraestructura y va a pagarlo** → Pinecone. A nuestro juicio, un producto serverless maduro, y Builder a 20 $/mes fijos es un plan de verdad, no una prueba.',
+          '**La precisión de la recuperación depende de mezclar coincidencia literal y semántica** → Weaviate. BM25 más vector de forma nativa es, a nuestro juicio, la implementación híbrida más completa aquí, y el nivel gratuito ya no cuesta nada para evaluarlo.',
           '**Está prototipando en un notebook y no quiere servidor** → Chroma. Corre en su proceso de Python, así que no hay nada que aprovisionar antes de tener recuperación funcionando.',
           '**Necesita que los datos permanezcan en hardware que usted controla** → Qdrant, Weaviate o Chroma autoalojados. Pinecone no tiene versión autoalojada; solo con su opción BYOC de Enterprise los datos permanecen en su propio entorno. Si solo necesita una región concreta, consulte la documentación actual de regiones de Pinecone.',
           '**Tiene menos de unos 10.000 vectores** → ninguno. pgvector sobre Postgres cubre esa escala sin añadir un servicio que operar, y se ahorra aprender una API nueva para una carga que no la necesita.',
@@ -1324,10 +1324,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Criterio: 'Licencia', Qdrant: 'Apache-2.0', Pinecone: 'Propietaria', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
           { Criterio: 'Escrito en', Qdrant: 'Rust', Pinecone: 'No divulgado', Weaviate: 'Go', Chroma: 'Núcleo en Rust' },
           { Criterio: 'Autoalojable', Qdrant: 'Sí, gratis', Pinecone: 'No, solo nube', Weaviate: 'Sí, gratis', Chroma: 'Sí, gratis' },
-          { Criterio: 'Corre en el proceso', Qdrant: 'No, servidor', Pinecone: 'No, alojado', Weaviate: 'No, servidor', Chroma: 'Sí' },
+          { Criterio: 'Corre en el proceso', Qdrant: 'Solo modo local Python; servidor en producción', Pinecone: 'No, alojado', Weaviate: 'No, servidor', Chroma: 'Sí' },
           { Criterio: 'Nivel gratuito en nube', Qdrant: '0,5 vCPU, 1 GB, 4 GB', Pinecone: '2 GB, 2M escrituras, 1M lecturas', Weaviate: '100.000 objetos, 1 GB, 10 GB', Chroma: '0 $/mes más 5 $ de crédito' },
           { Criterio: 'Entrada de pago', Qdrant: 'Por consumo, sin cuota fija', Pinecone: 'Builder 20 $/mes fijos', Weaviate: 'Flex desde 45 $/mes', Chroma: 'Team 250 $/mes más consumo' },
-          { Criterio: 'Búsqueda híbrida', Qdrant: 'Nativa, dispersa más densa', Pinecone: 'Sí', Weaviate: 'BM25 nativo, la más madura', Chroma: 'Más reciente, menos completa' },
+          { Criterio: 'Búsqueda híbrida', Qdrant: 'Nativa, dispersa más densa', Pinecone: 'Sí', Weaviate: 'BM25 nativo', Chroma: 'Más reciente; vea su documentación' },
           { Criterio: 'SLA en nivel de entrada', Qdrant: '99,5 % en Standard', Pinecone: 'Solo Enterprise, 99,95 %', Weaviate: '99,5 % en Flex', Chroma: 'No publicado bajo Enterprise' },
           { Criterio: 'Programa de afiliados', Qdrant: 'No encontrado', Pinecone: 'Sí, no estamos en él', Weaviate: 'No encontrado', Chroma: 'No encontrado' },
         ],
@@ -1476,7 +1476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       chroma: {
         id: 'chroma',
         title: 'Chroma: la opción para prototipar',
-        content: '**Chroma es el único de los cuatro que corre dentro de su proceso de Python sin servidor, lo que lo convierte en el camino más rápido de la nada a una recuperación que funciona.** Es más estrecho que los demás por diseño, y honesto al respecto.',
+        content: '**Chroma es el de los cuatro pensado para correr dentro de su proceso de Python sin servidor (el cliente de Python de Qdrant solo ofrece un modo local para pruebas), lo que lo convierte en el camino más rápido de la nada a una recuperación que funciona.** Es más estrecho que los demás por diseño, y honesto al respecto.',
         rankedItems: [
           {
             rank: 1,
@@ -1540,7 +1540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Son estimaciones modeladas a partir de precios habituales de máquinas y precios de lista de los proveedores el 2 de noviembre de 2026, no facturas de producción medidas. Los costes por consumo en Pinecone, Qdrant Cloud y Chroma Cloud varían con el volumen de consultas, así que pase su volumen previsto de lecturas y escrituras por la calculadora de cada proveedor antes de comprometerse.',
           },
         ],
-        note: 'A un millón de vectores suele decidir la línea de operaciones y no el precio de catálogo. Autoaloje cuando la residencia o el volumen lo exijan; en caso contrario los niveles gestionados salen más baratos una vez que sus propias horas se valoran con honestidad.',
+        note: 'A un millón de vectores suele decidir la línea de operaciones y no el precio de catálogo. Autoaloje cuando la residencia o el volumen lo exijan; en este modelo los niveles gestionados salen más baratos una vez que se valoran las horas de operaciones, y el resultado cambia si ese tiempo es más barato o el uso es alto.',
       },
       hybridSearch: {
         id: 'hybrid-search',
@@ -1607,7 +1607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Elegir Pinecone por ser el nombre más mencionado',
-            whyItMatters: 'Pinecone mantiene un programa de afiliados público para creadores de contenido (véase su [página de socios](https://www.pinecone.io/partners/)), por lo que parte de la cobertura que lo recomienda puede tener motivación comercial. PromptQuorum no está inscrito en él. Es una opción sólida sin operaciones; no es independiente del incentivo comercial. Es genuinamente la mejor opción sin operaciones; no es automáticamente la mejor ni la más barata, y es la única que no puede autoalojar.',
+            whyItMatters: 'Pinecone mantiene un programa de afiliados público para creadores de contenido (véase su [página de socios](https://www.pinecone.io/partners/)), por lo que parte de la cobertura que lo recomienda puede tener motivación comercial. PromptQuorum no está inscrito en él. Es una opción sólida sin operaciones; no es automáticamente la mejor ni la más barata, y es la única de las cuatro que no puede autoalojar.',
           },
           {
             title: 'Valorar el autoalojamiento solo contra el coste de la máquina',
@@ -1633,7 +1633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Es Pinecone mejor que Weaviate para RAG?',
-            a: 'Ninguno es universalmente mejor. Pinecone tiene el producto gestionado serverless más maduro y ninguna versión autoalojada, así que elegirlo es comprometerse con ese motor. Weaviate ofrece el mismo motor autoalojado y gestionado, dándole camino de migración en ambos sentidos, y tiene la búsqueda híbrida más madura. Elija Pinecone si lo que compra es simplicidad operativa; elija Weaviate si la calidad de recuperación sobre contenido técnico importa o quiere la opción de pasar a hardware propio más adelante.',
+            a: 'Ninguno es universalmente mejor. A nuestro juicio, Pinecone tiene el producto gestionado serverless más maduro, y no tiene versión autoalojada, así que elegirlo es comprometerse con ese motor. Weaviate ofrece el mismo motor autoalojado y gestionado, dándole camino de migración en ambos sentidos, y, a nuestro juicio, tiene la búsqueda híbrida más madura. Elija Pinecone si lo que compra es simplicidad operativa; elija Weaviate si la calidad de recuperación sobre contenido técnico importa o quiere la opción de pasar a hardware propio más adelante.',
           },
           {
             q: '¿Cuánto cuesta una base de datos vectorial para 1 millón de vectores?',
@@ -1641,7 +1641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Es Qdrant lo mismo que Weaviate?',
-            a: 'No. Son proyectos de código abierto distintos con arquitecturas e interfaces de consulta diferentes. Qdrant está escrito en Rust con su propia API sobre REST y gRPC; Weaviate está escrito en Go y es conocido por su interfaz GraphQL. Ambos admiten búsqueda híbrida y ambos corren autoalojados o gestionados, pero las consultas escritas para uno no son portables al otro sin reescribirlas. Qdrant filtra metadatos durante el recorrido del índice; Weaviate tiene la búsqueda híbrida más madura y módulos de vectorización integrados.',
+            a: 'No. Son proyectos de código abierto distintos con arquitecturas e interfaces de consulta diferentes. Qdrant está escrito en Rust con su propia API sobre REST y gRPC; Weaviate está escrito en Go y es conocido por su interfaz GraphQL. Ambos admiten búsqueda híbrida y ambos corren autoalojados o gestionados, pero las consultas escritas para uno no son portables al otro sin reescribirlas. Qdrant filtra metadatos durante el recorrido del índice; Weaviate tiene, a nuestro juicio, la búsqueda híbrida más madura y módulos de vectorización integrados.',
           },
           {
             q: '¿Cómo migro de Chroma a Qdrant?',
@@ -1661,7 +1661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto final',
         items: [
-          '**Use Qdrant si** quiere la mejor relación coste-rendimiento y un motor que funcione autoalojado o gestionado — siguiente paso: empiece en el nivel de nube gratuito para siempre y pase a Standard cuando se le queden cortos los 4 GB, en vez de aprovisionar antes una máquina.',
+          '**Use Qdrant si** quiere un camino de bajo coste con un motor que funcione autoalojado o gestionado — siguiente paso: empiece en el nivel de nube gratuito para siempre y pase a Standard cuando se le queden cortos los 4 GB, en vez de aprovisionar antes una máquina.',
           '**Use Pinecone si** quiere cero trabajo de infraestructura y acepta quedar atado al motor — siguiente paso: empiece en Builder a 20 $/mes y modele su volumen de unidades de lectura y escritura antes de pasar a Standard.',
           '**Use Weaviate si** la búsqueda híbrida es central para la recuperación — siguiente paso: evalúelo en el nivel gratuito, que desde junio de 2026 no cuesta nada y no caduca.',
           '**Use Chroma si** está prototipando y quiere recuperación funcionando hoy — siguiente paso: `pip install chromadb`, y planifique la migración a Qdrant o Weaviate según su propio calendario.',
@@ -1750,7 +1750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿Es Pinecone mejor que Weaviate para RAG?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ninguno es universalmente mejor. Pinecone tiene el producto gestionado más maduro y ninguna versión autoalojada. Weaviate ofrece el mismo motor autoalojado y gestionado y tiene la búsqueda híbrida más madura, así que conviene a equipos que quieren camino de migración o dependen de términos exactos en la recuperación.',
+            text: 'Ninguno es universalmente mejor. A nuestro juicio, Pinecone tiene el producto gestionado más maduro, y no tiene versión autoalojada. Weaviate ofrece el mismo motor autoalojado y gestionado y, a nuestro juicio, tiene la búsqueda híbrida más madura, así que conviene a equipos que quieren camino de migración o dependen de términos exactos en la recuperación.',
           },
         },
         {
@@ -1779,7 +1779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       numberOfItems: 4,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Nuestra opción por defecto — Apache-2.0, Rust, un nivel en la nube gratuito con Standard por consumo' },
-        { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Mejor sin operaciones — el producto serverless más maduro, Builder a 20 $/mes fijos, pero solo nube y sin versión autoalojada' },
+        { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Mejor sin operaciones — a nuestro juicio un producto serverless maduro, Builder a 20 $/mes fijos, pero solo nube y sin versión autoalojada' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'Mejor para búsqueda híbrida — BM25 más vector de forma nativa, y desde junio de 2026 un nivel gratuito sin caducidad con 100.000 objetos' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Mejor para prototipar — corre en el proceso sin servidor, núcleo en Rust, y Chroma Cloud desde 0 $/mes más consumo' },
       ],
@@ -1814,7 +1814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       answer: '**Qdrant comme choix par défaut si vous avez la moindre capacité d\'exploitation, Pinecone si vous voulez zero travail d infrastructure, Weaviate si la recherche hybride est centrale pour la precision, et Chroma si vous prototypez et ne voulez aucun serveur.** Il n y a pas de vainqueur unique ici, et tout guide qui en designe un repond a une autre question que la votre. La vraie decision est de savoir si vous exploitez le moteur ou si vous le louez, et cela depend de ce qui manque a votre equipe : des heures d ingenierie ou du budget. Ce sont rarement la meme contrainte.',
       bullets: [
         '**Meilleur globalement :** Qdrant — 35 383 etoiles, Apache-2.0, ecrit en Rust, palier cloud gratuit avec 0,5 vCPU / 1 Go de RAM / 4 Go de disque (clusters inactifs suspendus)',
-        '**Meilleur sans exploitation :** Pinecone — le produit serverless le plus mature, Builder a 20 $/mois forfaitaires, Standard a partir de 50 $/mois',
+        '**Meilleur sans exploitation :** Pinecone — selon notre evaluation un produit serverless mature, Builder a 20 $/mois forfaitaires, Standard a partir de 50 $/mois',
         '**Meilleur pour la recherche hybride :** Weaviate — BM25 et vecteur en natif, et depuis juin 2026 un palier gratuit sans expiration ni carte bancaire',
         '**Meilleur pour prototyper :** Chroma — `pip install chromadb` et il tourne dans votre processus Python, sans serveur a monter',
         '**Les quatre ont desormais un palier gratuit** — l idee tres repandue selon laquelle Weaviate n offre qu un bac a sable de 14 jours est perimee',
@@ -1853,7 +1853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pinecone** — cloud uniquement par conception, sans aucune version auto-hebergee. Starter est gratuit avec 2 Go de stockage, 2 M d unites d ecriture et 1 M de lecture par mois. Builder coute 20 $/mois forfaitaires avec 10 Go, 5 M d ecritures et 2 M de lectures. Standard part d un minimum de 50 $/mois puis facture a l usage, et Enterprise d un minimum de 500 $/mois en ajoutant un engagement de 99,95 %, le BYOC, HIPAA et les journaux d audit.',
           '**Weaviate** — 16 934 etoiles, BSD-3-Clause, ecrit en Go. **La correction la plus importante de cette page :** Weaviate Cloud n est plus un bac a sable de 14 jours. Le 17 juin 2026, un palier reellement gratuit sans carte bancaire et sans expiration a ete lance : 100 000 objets, 1 Go de memoire et 10 Go de disque. Les comparatifs qui conseillent encore de budgeter 45 $/mois des le premier jour envoient les lecteurs payer pour quelque chose de desormais gratuit.',
           '**Les tarifs payants de Weaviate ont aussi bouge.** La page tarifaire en vigueur liste Flex a partir de 45 $/mois et Premium a partir de 400 $/mois. Le palier Plus a 280 $/mois annonce lors de la mise a jour d octobre 2025 n y figure plus : citez donc Flex et Premium plutot que l ancienne structure a trois niveaux.',
-          '**Chroma** — 29 622 etoiles, Apache-2.0, et desormais un coeur en Rust plutot que le moteur Python de ses debuts. C est le seul des quatre a tourner dans le processus sans serveur, et c est precisement pourquoi il l emporte pour le prototypage.',
+          '**Chroma** — 29 622 etoiles, Apache-2.0, et desormais un coeur en Rust plutot que le moteur Python de ses debuts. C est celui des quatre concu pour tourner dans le processus sans serveur (le client Python de Qdrant propose aussi un mode local pour les tests, mais sa voie de production est un serveur), et c est precisement pourquoi il l emporte pour le prototypage.',
           '**Chroma Cloud existe aussi**, ce que la plupart des comparatifs de cette categorie omettent completement : Starter coute 0 $/mois plus la consommation avec 5 $ de credits, Team 250 $/mois plus la consommation, et l usage est facture 2,50 $ par Gio ecrit, 0,33 $ par Gio stocke et par mois, 0,0075 $ par Tio interroge et 0,09 $ par Gio renvoye. Il y a donc quatre options gerees ici, et non trois.',
           '**Les quatre ont desormais un palier gratuit**, ce qui n etait pas vrai il y a un an et constitue le moyen le plus rapide de verifier si un comparatif que vous lisez a ete actualise.',
           '**Une precision a dire clairement :** Pinecone anime bien un programme d affiliation destine aux createurs de contenu, confirme sur sa page partenaires. PromptQuorum n y est pas inscrit et ne gagne rien sur aucun lien ici. C est la seule categorie de cette serie ou un tel programme existe, et c est precisement pour cela que la recommandation ci-dessus est Qdrant et non Pinecone.',
@@ -1865,8 +1865,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**La question structurelle est de savoir si vous exploitez le moteur ou si vous le louez, et cela depend de votre ressource rare : les heures d ingenierie ou le budget.** Lisez vers le bas et arretez-vous a la premiere ligne qui vous decrit.',
         items: [
           '**Vous avez un peu de capacité d\'exploitation et voulez maîtriser coûts et performances** → Qdrant, auto-hébergé ou sur Qdrant Cloud. Écrit en Rust, avec la plus grande communauté GitHub des trois moteurs open source.',
-          '**Vous voulez zero travail d infrastructure et acceptez de payer** → Pinecone. Le produit serverless le plus mature, et Builder a 20 $/mois forfaitaires est une vraie offre, pas un essai.',
-          '**La precision de la recherche depend du melange entre correspondance litterale et semantique** → Weaviate. BM25 plus vecteur en natif est l implementation hybride la plus mature ici, et le palier gratuit ne coute plus rien pour l evaluer.',
+          '**Vous voulez zero travail d infrastructure et acceptez de payer** → Pinecone. Selon notre evaluation, un produit serverless mature, et Builder a 20 $/mois forfaitaires est une vraie offre, pas un essai.',
+          '**La precision de la recherche depend du melange entre correspondance litterale et semantique** → Weaviate. BM25 plus vecteur en natif est, selon notre evaluation, l implementation hybride la plus complete ici, et le palier gratuit ne coute plus rien pour l evaluer.',
           '**Vous prototypez dans un notebook et ne voulez pas de serveur** → Chroma. Il tourne dans votre processus Python, il n y a donc rien a provisionner avant d avoir une recherche fonctionnelle.',
           '**Vos donnees doivent rester sur du materiel que vous controlez** → Qdrant, Weaviate ou Chroma auto-heberges. Pinecone n\'a pas de version auto-hébergée ; seule l\'option BYOC d\'Enterprise garde les données dans votre propre environnement. Si seule une région précise est exigée, consultez la documentation actuelle des régions de Pinecone.',
           '**Vous avez moins d environ 10 000 vecteurs** → aucune d elles. pgvector sur Postgres couvre cette echelle sans ajouter un service a exploiter, et vous evitez d apprendre une nouvelle API pour une charge qui n en a pas besoin.',
@@ -1916,10 +1916,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Critere: 'Licence', Qdrant: 'Apache-2.0', Pinecone: 'Proprietaire', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
           { Critere: 'Ecrit en', Qdrant: 'Rust', Pinecone: 'Non communique', Weaviate: 'Go', Chroma: 'Coeur en Rust' },
           { Critere: 'Auto-hebergeable', Qdrant: 'Oui, gratuit', Pinecone: 'Non, cloud seulement', Weaviate: 'Oui, gratuit', Chroma: 'Oui, gratuit' },
-          { Critere: 'Tourne dans le processus', Qdrant: 'Non, serveur', Pinecone: 'Non, heberge', Weaviate: 'Non, serveur', Chroma: 'Oui' },
+          { Critere: 'Tourne dans le processus', Qdrant: 'Mode local Python seul ; serveur en prod.', Pinecone: 'Non, heberge', Weaviate: 'Non, serveur', Chroma: 'Oui' },
           { Critere: 'Palier cloud gratuit', Qdrant: '0,5 vCPU, 1 Go, 4 Go', Pinecone: '2 Go, 2M ecritures, 1M lectures', Weaviate: '100 000 objets, 1 Go, 10 Go', Chroma: '0 $/mois plus 5 $ de credits' },
           { Critere: 'Entree payante', Qdrant: 'A la consommation, sans forfait', Pinecone: 'Builder 20 $/mois forfaitaires', Weaviate: 'Flex des 45 $/mois', Chroma: 'Team 250 $/mois plus usage' },
-          { Critere: 'Recherche hybride', Qdrant: 'Native, creuse et dense', Pinecone: 'Oui', Weaviate: 'BM25 natif, la plus mature', Chroma: 'Plus recente, moins complete' },
+          { Critere: 'Recherche hybride', Qdrant: 'Native, creuse et dense', Pinecone: 'Oui', Weaviate: 'BM25 natif', Chroma: 'Plus recente ; voir sa doc' },
           { Critere: 'Engagement palier d entree', Qdrant: '99,5 % sur Standard', Pinecone: 'Enterprise seulement, 99,95 %', Weaviate: '99,5 % sur Flex', Chroma: 'Non publie sous Enterprise' },
           { Critere: 'Programme d affiliation', Qdrant: 'Aucun trouve', Pinecone: 'Oui, nous n y sommes pas', Weaviate: 'Aucun trouve', Chroma: 'Aucun trouve' },
         ],
@@ -2068,7 +2068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       chroma: {
         id: 'chroma',
         title: 'Chroma : le choix prototypage',
-        content: '**Chroma est le seul des quatre a tourner dans votre processus Python sans serveur, ce qui en fait le chemin le plus rapide de rien a une recherche fonctionnelle.** Il est plus etroit que les autres par choix, et l assume.',
+        content: '**Chroma est celui des quatre concu pour tourner dans votre processus Python sans serveur (le client Python de Qdrant n offre qu un mode local pour les tests), ce qui en fait le chemin le plus rapide de rien a une recherche fonctionnelle.** Il est plus etroit que les autres par choix, et l assume.',
         rankedItems: [
           {
             rank: 1,
@@ -2132,7 +2132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Ce sont des estimations modelisees a partir des prix habituels de machines et des tarifs publics des editeurs au 2 novembre 2026, et non des factures de production mesurees. Les couts a l usage chez Pinecone, Qdrant Cloud et Chroma Cloud varient avec le volume de requetes : passez votre volume attendu de lectures et d ecritures dans le calculateur de chaque editeur avant de vous engager.',
           },
         ],
-        note: 'A un million de vecteurs, c est generalement la ligne exploitation qui tranche, pas le prix affiche. Auto-hebergez quand la residence ou le volume l exigent ; sinon les paliers geres reviennent moins cher des lors que vos propres heures sont valorisees honnetement.',
+        note: 'A un million de vecteurs, c est generalement la ligne exploitation qui tranche, pas le prix affiche. Auto-hebergez quand la residence ou le volume l exigent ; dans ce modele, les paliers geres reviennent moins cher des lors que les heures d exploitation sont valorisees, et le resultat s inverse si ce temps coute moins cher ou si l usage est eleve.',
       },
       hybridSearch: {
         id: 'hybrid-search',
@@ -2225,7 +2225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Pinecone est-il meilleur que Weaviate pour le RAG ?',
-            a: 'Aucun n est universellement meilleur. Pinecone a le produit gere serverless le plus mature et aucune version auto-hebergee : le choisir revient donc a s engager sur ce moteur. Weaviate propose le meme moteur auto-heberge et gere, ce qui vous laisse un chemin de migration dans les deux sens, et possede la recherche hybride la plus mature. Choisissez Pinecone si ce que vous achetez est la simplicite d exploitation ; choisissez Weaviate si la qualite de recherche sur du contenu technique compte ou si vous voulez garder l option d un materiel a vous plus tard.',
+            a: 'Aucun n est universellement meilleur. Selon notre evaluation, Pinecone a le produit gere serverless le plus mature, et il n a aucune version auto-hebergee : le choisir revient donc a s engager sur ce moteur. Weaviate propose le meme moteur auto-heberge et gere, ce qui vous laisse un chemin de migration dans les deux sens, et possede, selon notre evaluation, la recherche hybride la plus mature. Choisissez Pinecone si ce que vous achetez est la simplicite d exploitation ; choisissez Weaviate si la qualite de recherche sur du contenu technique compte ou si vous voulez garder l option d un materiel a vous plus tard.',
           },
           {
             q: 'Combien coute une base vectorielle pour 1 million de vecteurs ?',
@@ -2233,7 +2233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qdrant est-il la meme chose que Weaviate ?',
-            a: 'Non. Ce sont des projets open source distincts, aux architectures et aux interfaces de requete differentes. Qdrant est ecrit en Rust avec sa propre API sur REST et gRPC ; Weaviate est ecrit en Go et est connu pour son interface GraphQL. Les deux prennent en charge la recherche hybride et fonctionnent auto-heberges ou geres, mais les requetes ecrites pour l un ne sont pas portables vers l autre sans reecriture. Qdrant filtre les métadonnées pendant le parcours de l\'index ; Weaviate a la recherche hybride la plus mature et des modules de vectorisation integres.',
+            a: 'Non. Ce sont des projets open source distincts, aux architectures et aux interfaces de requete differentes. Qdrant est ecrit en Rust avec sa propre API sur REST et gRPC ; Weaviate est ecrit en Go et est connu pour son interface GraphQL. Les deux prennent en charge la recherche hybride et fonctionnent auto-heberges ou geres, mais les requetes ecrites pour l un ne sont pas portables vers l autre sans reecriture. Qdrant filtre les métadonnées pendant le parcours de l\'index ; Weaviate a, selon notre evaluation, la recherche hybride la plus mature et des modules de vectorisation integres.',
           },
           {
             q: 'Comment migrer de Chroma vers Qdrant ?',
@@ -2253,7 +2253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict final',
         items: [
-          '**Utilisez Qdrant si** vous voulez le meilleur rapport cout-performance et un moteur qui fonctionne auto-heberge ou gere — etape suivante : demarrez sur le palier cloud gratuit a vie et passez a Standard quand 4 Go ne suffisent plus, plutot que de provisionner d abord une machine.',
+          '**Utilisez Qdrant si** vous voulez une voie a bas cout avec un moteur qui fonctionne auto-heberge ou gere — etape suivante : demarrez sur le palier cloud gratuit a vie et passez a Standard quand 4 Go ne suffisent plus, plutot que de provisionner d abord une machine.',
           '**Utilisez Pinecone si** vous voulez zero travail d infrastructure et acceptez la dependance au moteur — etape suivante : demarrez sur Builder a 20 $/mois et modelisez votre volume d unites de lecture et d ecriture avant de passer a Standard.',
           '**Utilisez Weaviate si** la recherche hybride est centrale pour la recuperation — etape suivante : evaluez-le sur le palier gratuit, qui depuis juin 2026 ne coute rien et n expire pas.',
           '**Utilisez Chroma si** vous prototypez et voulez une recherche fonctionnelle aujourd hui — etape suivante : `pip install chromadb`, et planifiez la migration vers Qdrant ou Weaviate a votre rythme.',
@@ -2342,7 +2342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Pinecone est-il meilleur que Weaviate pour le RAG ?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Aucun n est universellement meilleur. Pinecone a le produit gere le plus mature et aucune version auto-hebergee. Weaviate propose le meme moteur auto-heberge et gere et possede la recherche hybride la plus mature, ce qui convient aux equipes voulant un chemin de migration ou dependant de termes exacts dans la recuperation.',
+            text: 'Aucun n est universellement meilleur. Selon notre evaluation, Pinecone a le produit gere le plus mature, et il n a aucune version auto-hebergee. Weaviate propose le meme moteur auto-heberge et gere et possede, selon notre evaluation, la recherche hybride la plus mature, ce qui convient aux equipes voulant un chemin de migration ou dependant de termes exacts dans la recuperation.',
           },
         },
         {
@@ -2371,7 +2371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       numberOfItems: 4,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Notre choix par défaut — Apache-2.0, Rust, un palier cloud gratuit avec Standard a la consommation' },
-        { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Meilleur sans exploitation — le produit serverless le plus mature, Builder a 20 $/mois forfaitaires, mais cloud uniquement et sans version auto-hebergee' },
+        { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Meilleur sans exploitation — selon notre evaluation un produit serverless mature, Builder a 20 $/mois forfaitaires, mais cloud uniquement et sans version auto-hebergee' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'Meilleur pour la recherche hybride — BM25 plus vecteur en natif, et depuis juin 2026 un palier gratuit sans expiration offrant 100 000 objets' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Meilleur pour prototyper — tourne dans le processus sans serveur, coeur en Rust, et Chroma Cloud des 0 $/mois plus la consommation' },
       ],
@@ -2406,7 +2406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       answer: '**Qdrant como nossa escolha padrão se você tiver alguma capacidade de operações, Pinecone se quiser zero trabalho de infraestrutura, Weaviate se a busca híbrida for central para a precisão da recuperação, e Chroma se estiver prototipando e não quiser servidor algum.** Não há um vencedor único aqui, e qualquer guia que nomeie um está respondendo a uma pergunta diferente da sua. A decisão real é se você opera o motor ou o aluga, e isso depende de a sua equipe ter horas de engenharia sobrando ou orçamento sobrando — raramente são a mesma restrição.',
       bullets: [
         '**Melhor no geral:** Qdrant — 35.383 estrelas, Apache-2.0, escrito em Rust, nível de nuvem gratuito com 0,5 vCPU / 1 GB de RAM / 4 GB de disco (clusters inativos são suspensos)',
-        '**Melhor sem operações:** Pinecone — o produto serverless mais maduro, Builder a US$ 20/mês fixos, Standard com mínimo de US$ 50/mês',
+        '**Melhor sem operações:** Pinecone — na nossa avaliação um produto serverless maduro, Builder a US$ 20/mês fixos, Standard com mínimo de US$ 50/mês',
         '**Melhor para busca híbrida:** Weaviate — BM25 mais vetor de forma nativa, e desde junho de 2026 um nível gratuito sem expiração e sem cartão de crédito',
         '**Melhor para prototipar:** Chroma — `pip install chromadb` e roda no seu processo Python, sem servidor para subir',
         '**Os quatro já têm nível gratuito** — a ideia tão repetida de que o Weaviate só oferece um sandbox de 14 dias está desatualizada',
@@ -2445,7 +2445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pinecone** — apenas nuvem por projeto, sem nenhuma versão auto-hospedada. O Starter é gratuito com 2 GB de armazenamento, 2 mi de unidades de escrita e 1 mi de leitura por mês. O Builder custa US$ 20/mês fixos com 10 GB, 5 mi de escritas e 2 mi de leituras. O Standard parte de um mínimo de US$ 50/mês e depois cobra por uso, e o Enterprise de um mínimo de US$ 500/mês acrescentando SLA de 99,95%, BYOC, HIPAA e registros de auditoria.',
           '**Weaviate** — 16.934 estrelas, BSD-3-Clause, escrito em Go. **A correção mais importante desta página:** o Weaviate Cloud não é mais um sandbox de 14 dias. Em 17 de junho de 2026 foi lançado um nível realmente gratuito, sem cartão de crédito e sem expiração: 100.000 objetos, 1 GB de memória e 10 GB de disco. Comparações que ainda mandam reservar US$ 45/mês desde o primeiro dia estão levando leitores a pagar por algo que agora é grátis.',
           '**Os preços pagos do Weaviate também mudaram.** A página de preços vigente lista o Flex a partir de US$ 45/mês e o Premium a partir de US$ 400/mês. O nível Plus de US$ 280/mês anunciado na atualização de outubro de 2025 não aparece mais ali, então cite Flex e Premium em vez da antiga estrutura de três níveis.',
-          '**Chroma** — 29.622 estrelas, Apache-2.0, e agora um núcleo em Rust em vez do motor em Python com que começou. É o único dos quatro que roda dentro do processo sem servidor, e é exatamente por isso que vence na prototipagem.',
+          '**Chroma** — 29.622 estrelas, Apache-2.0, e agora um núcleo em Rust em vez do motor em Python com que começou. É o dos quatro feito para rodar dentro do processo sem servidor (o cliente Python do Qdrant também tem um modo local para testes, mas seu caminho de produção é um servidor), e é exatamente por isso que vence na prototipagem.',
           '**O Chroma Cloud também existe**, algo que a maioria das comparações desta categoria omite por completo: o Starter custa US$ 0/mês mais consumo com US$ 5 de crédito inicial, o Team US$ 250/mês mais consumo, e o consumo é tarifado a US$ 2,50 por GiB escrito, US$ 0,33 por GiB armazenado ao mês, US$ 0,0075 por TiB consultado e US$ 0,09 por GiB devolvido. Há, portanto, quatro opções gerenciadas aqui, não três.',
           '**Os quatro já têm nível gratuito**, o que não era verdade há um ano e é a forma mais rápida de checar se a comparação que você está lendo foi atualizada.',
           '**Um aviso que merece ser dito sem rodeios:** o Pinecone de fato mantém um programa de afiliados para criadores de conteúdo, confirmado na sua página de parceiros. A PromptQuorum não está inscrita nele e não ganha nada com nenhum link daqui. Esta é a única categoria desta série em que tal programa existe, e é justamente por isso que a recomendação acima é Qdrant e não Pinecone.',
@@ -2457,8 +2457,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**A questão estrutural é se você opera o motor ou o aluga, e isso depende de qual é o seu recurso escasso: horas de engenharia ou orçamento.** Leia de cima para baixo e pare na primeira linha que descreva você.',
         items: [
           '**Você tem alguma capacidade de operações e quer controlar custo e desempenho** → Qdrant, auto-hospedado ou no Qdrant Cloud. Escrito em Rust, com a maior comunidade no GitHub dos três motores abertos.',
-          '**Você quer zero trabalho de infraestrutura e vai pagar por isso** → Pinecone. O produto serverless mais maduro, e o Builder a US$ 20/mês fixos é um plano de verdade, não um teste.',
-          '**A precisão da recuperação depende de misturar correspondência literal e semântica** → Weaviate. BM25 mais vetor de forma nativa é a implementação híbrida mais madura aqui, e o nível gratuito já não custa nada para avaliar.',
+          '**Você quer zero trabalho de infraestrutura e vai pagar por isso** → Pinecone. Na nossa avaliação, um produto serverless maduro, e o Builder a US$ 20/mês fixos é um plano de verdade, não um teste.',
+          '**A precisão da recuperação depende de misturar correspondência literal e semântica** → Weaviate. BM25 mais vetor de forma nativa é, na nossa avaliação, a implementação híbrida mais completa aqui, e o nível gratuito já não custa nada para avaliar.',
           '**Você está prototipando em um notebook e não quer servidor** → Chroma. Roda no seu processo Python, então não há nada a provisionar antes de ter recuperação funcionando.',
           '**Seus dados precisam ficar em hardware que você controla** → Qdrant, Weaviate ou Chroma auto-hospedados. O Pinecone não tem versão auto-hospedada; só com a opção BYOC do Enterprise os dados ficam no seu próprio ambiente. Se basta uma região específica, consulte a documentação atual de regiões do Pinecone.',
           '**Você tem menos de cerca de 10.000 vetores** → nenhum deles. pgvector no Postgres cobre essa escala sem acrescentar um serviço para operar, e você evita aprender uma API nova para uma carga que não precisa dela.',
@@ -2508,10 +2508,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Critério: 'Licença', Qdrant: 'Apache-2.0', Pinecone: 'Proprietária', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
           { Critério: 'Escrito em', Qdrant: 'Rust', Pinecone: 'Não divulgado', Weaviate: 'Go', Chroma: 'Núcleo em Rust' },
           { Critério: 'Auto-hospedável', Qdrant: 'Sim, grátis', Pinecone: 'Não, só nuvem', Weaviate: 'Sim, grátis', Chroma: 'Sim, grátis' },
-          { Critério: 'Roda no processo', Qdrant: 'Não, servidor', Pinecone: 'Não, hospedado', Weaviate: 'Não, servidor', Chroma: 'Sim' },
+          { Critério: 'Roda no processo', Qdrant: 'Só modo local Python; servidor em produção', Pinecone: 'Não, hospedado', Weaviate: 'Não, servidor', Chroma: 'Sim' },
           { Critério: 'Nível gratuito na nuvem', Qdrant: '0,5 vCPU, 1 GB, 4 GB', Pinecone: '2 GB, 2mi escritas, 1mi leituras', Weaviate: '100.000 objetos, 1 GB, 10 GB', Chroma: 'US$ 0/mês mais US$ 5 de crédito' },
           { Critério: 'Entrada paga', Qdrant: 'Por consumo, sem taxa fixa', Pinecone: 'Builder US$ 20/mês fixos', Weaviate: 'Flex a partir de US$ 45/mês', Chroma: 'Team US$ 250/mês mais consumo' },
-          { Critério: 'Busca híbrida', Qdrant: 'Nativa, esparsa mais densa', Pinecone: 'Sim', Weaviate: 'BM25 nativo, a mais madura', Chroma: 'Mais recente, menos completa' },
+          { Critério: 'Busca híbrida', Qdrant: 'Nativa, esparsa mais densa', Pinecone: 'Sim', Weaviate: 'BM25 nativo', Chroma: 'Mais recente; veja a doc' },
           { Critério: 'SLA no nível de entrada', Qdrant: '99,5% no Standard', Pinecone: 'Só Enterprise, 99,95%', Weaviate: '99,5% no Flex', Chroma: 'Não publicado abaixo do Enterprise' },
           { Critério: 'Programa de afiliados', Qdrant: 'Nenhum encontrado', Pinecone: 'Sim, não estamos nele', Weaviate: 'Nenhum encontrado', Chroma: 'Nenhum encontrado' },
         ],
@@ -2639,7 +2639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       chroma: {
         id: 'chroma',
         title: 'Chroma: a escolha para prototipar',
-        content: '**O Chroma é o único dos quatro que roda dentro do seu processo Python sem servidor, o que o torna o caminho mais rápido do nada até uma recuperação funcionando.** É mais estreito que os outros por escolha, e assume isso.',
+        content: '**O Chroma é o dos quatro feito para rodar dentro do seu processo Python sem servidor (o cliente Python do Qdrant só oferece um modo local para testes), o que o torna o caminho mais rápido do nada até uma recuperação funcionando.** É mais estreito que os outros por escolha, e assume isso.',
         rankedItems: [
           {
             rank: 1,
@@ -2703,7 +2703,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'São estimativas modeladas a partir de preços típicos de máquinas e preços de tabela dos fornecedores em 2 de novembro de 2026, não faturas de produção medidas. Os custos por consumo no Pinecone, Qdrant Cloud e Chroma Cloud variam com o volume de consultas, então passe seu volume previsto de leituras e escritas pela calculadora de cada fornecedor antes de se comprometer.',
           },
         ],
-        note: 'A um milhão de vetores normalmente é a linha de operações que decide, não o preço de tabela. Auto-hospede quando residência ou volume exigirem; caso contrário, os níveis gerenciados saem mais baratos assim que suas próprias horas forem precificadas com honestidade.',
+        note: 'A um milhão de vetores normalmente é a linha de operações que decide, não o preço de tabela. Auto-hospede quando residência ou volume exigirem; neste modelo, os níveis gerenciados saem mais baratos assim que as horas de operações são precificadas, e o resultado se inverte com tempo de operações mais barato ou uso alto.',
       },
       hybridSearch: {
         id: 'hybrid-search',
@@ -2796,7 +2796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'O Pinecone é melhor que o Weaviate para RAG?',
-            a: 'Nenhum é universalmente melhor. O Pinecone tem o produto gerenciado serverless mais maduro e nenhuma versão auto-hospedada, então escolhê-lo é um compromisso com aquele motor. O Weaviate oferece o mesmo motor auto-hospedado e gerenciado, dando caminho de migração nos dois sentidos, e tem a busca híbrida mais madura. Escolha o Pinecone se o que você compra é simplicidade operacional; escolha o Weaviate se a qualidade da recuperação em conteúdo técnico importa ou se quer a opção de ir para hardware próprio depois.',
+            a: 'Nenhum é universalmente melhor. Na nossa avaliação, o Pinecone tem o produto gerenciado serverless mais maduro, e ele não tem versão auto-hospedada, então escolhê-lo é um compromisso com aquele motor. O Weaviate oferece o mesmo motor auto-hospedado e gerenciado, dando caminho de migração nos dois sentidos, e, na nossa avaliação, tem a busca híbrida mais madura. Escolha o Pinecone se o que você compra é simplicidade operacional; escolha o Weaviate se a qualidade da recuperação em conteúdo técnico importa ou se quer a opção de ir para hardware próprio depois.',
           },
           {
             q: 'Quanto custa um banco vetorial para 1 milhão de vetores?',
@@ -2804,7 +2804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'O Qdrant é a mesma coisa que o Weaviate?',
-            a: 'Não. São projetos de código aberto distintos, com arquiteturas e interfaces de consulta diferentes. O Qdrant é escrito em Rust com API própria sobre REST e gRPC; o Weaviate é escrito em Go e é conhecido pela sua interface GraphQL. Ambos suportam busca híbrida e ambos rodam auto-hospedados ou gerenciados, mas consultas escritas para um não são portáveis para o outro sem reescrita. O Qdrant filtra metadados durante a travessia do índice; o Weaviate tem a busca híbrida mais madura e módulos de vetorização embutidos.',
+            a: 'Não. São projetos de código aberto distintos, com arquiteturas e interfaces de consulta diferentes. O Qdrant é escrito em Rust com API própria sobre REST e gRPC; o Weaviate é escrito em Go e é conhecido pela sua interface GraphQL. Ambos suportam busca híbrida e ambos rodam auto-hospedados ou gerenciados, mas consultas escritas para um não são portáveis para o outro sem reescrita. O Qdrant filtra metadados durante a travessia do índice; o Weaviate tem, na nossa avaliação, a busca híbrida mais madura e módulos de vetorização embutidos.',
           },
           {
             q: 'Como migro do Chroma para o Qdrant?',
@@ -2824,7 +2824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito final',
         items: [
-          '**Use o Qdrant se** quer a melhor relação custo-desempenho e um motor que funcione auto-hospedado ou gerenciado — próximo passo: comece no nível de nuvem gratuito para sempre e vá para o Standard quando os 4 GB ficarem pequenos, em vez de provisionar antes uma máquina.',
+          '**Use o Qdrant se** quer um caminho de baixo custo com um motor que funcione auto-hospedado ou gerenciado — próximo passo: comece no nível de nuvem gratuito para sempre e vá para o Standard quando os 4 GB ficarem pequenos, em vez de provisionar antes uma máquina.',
           '**Use o Pinecone se** quer zero trabalho de infraestrutura e aceita a amarração ao motor — próximo passo: comece no Builder a US$ 20/mês e modele seu volume de unidades de leitura e escrita antes de passar ao Standard.',
           '**Use o Weaviate se** a busca híbrida é central para a recuperação — próximo passo: avalie no nível gratuito, que desde junho de 2026 não custa nada e não expira.',
           '**Use o Chroma se** está prototipando e quer recuperação funcionando hoje — próximo passo: `pip install chromadb`, e planeje a migração para Qdrant ou Weaviate no seu próprio ritmo.',
@@ -2911,7 +2911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'O Pinecone é melhor que o Weaviate para RAG?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Nenhum é universalmente melhor. O Pinecone tem o produto gerenciado mais maduro e nenhuma versão auto-hospedada. O Weaviate oferece o mesmo motor auto-hospedado e gerenciado e tem a busca híbrida mais madura, servindo a equipes que querem caminho de migração ou dependem de termos exatos na recuperação.',
+            text: 'Nenhum é universalmente melhor. Na nossa avaliação, o Pinecone tem o produto gerenciado mais maduro, e ele não tem versão auto-hospedada. O Weaviate oferece o mesmo motor auto-hospedado e gerenciado e, na nossa avaliação, tem a busca híbrida mais madura, servindo a equipes que querem caminho de migração ou dependem de termos exatos na recuperação.',
           },
         },
         {
@@ -2940,7 +2940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       numberOfItems: 4,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Nossa escolha padrão — Apache-2.0, Rust, um nível de nuvem gratuito com Standard por consumo' },
-        { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Melhor sem operações — o produto serverless mais maduro, Builder a US$ 20/mês fixos, mas só nuvem e sem versão auto-hospedada' },
+        { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Melhor sem operações — na nossa avaliação um produto serverless maduro, Builder a US$ 20/mês fixos, mas só nuvem e sem versão auto-hospedada' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'Melhor para busca híbrida — BM25 mais vetor de forma nativa, e desde junho de 2026 um nível gratuito sem expiração com 100.000 objetos' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Melhor para prototipar — roda no processo sem servidor, núcleo em Rust, e Chroma Cloud a partir de US$ 0/mês mais consumo' },
       ],
@@ -2975,7 +2975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       answer: '**運用の余力が少しでもあるなら既定の選択肢としてQdrant、インフラ作業をゼロにしたいならPinecone、検索精度にハイブリッド検索が効くならWeaviate、試作中でサーバーを一切置きたくないならChromaです。** ここに単独の勝者はなく、1つを名指しするガイドはあなたの問いとは別の問いに答えています。本当の判断は、エンジンを自分で動かすのか借りるのかであり、それはチームに余っているのが工数か予算かで決まります。両方が同じ制約であることはまれです。',
       bullets: [
         '**総合的に最良：** Qdrant — スター35,383件、Apache-2.0、Rust製、0.5 vCPU / 1 GB RAM / 4 GBディスクの無料クラウド枠（未使用時は停止）',
-        '**運用ゼロなら最良：** Pinecone — 最も成熟したサーバーレス製品、Builderは月20ドル定額、Standardは月50ドルから',
+        '**運用ゼロなら最良：** Pinecone — 当サイトの評価では成熟したサーバーレス製品、Builderは月20ドル定額、Standardは月50ドルから',
         '**ハイブリッド検索なら最良：** Weaviate — BM25とベクトルをネイティブに統合し、2026年6月以降はクレジットカード不要・無期限の無料枠',
         '**試作なら最良：** Chroma — `pip install chromadb` でPythonプロセス内で動き、立ち上げるサーバーがない',
         '**4製品すべてに無料枠があります** — Weaviateは14日間のサンドボックスだけ、という広く語られる話は古い情報です',
@@ -3014,7 +3014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pinecone** — 設計上クラウド専用で、自己ホスト版は一切ありません。Starterは無料で、ストレージ2 GB、書き込みユニット月200万、読み取りユニット月100万です。Builderは月20ドル定額で10 GB、書き込み500万、読み取り200万。Standardは月50ドルの最低額から従量課金となり、Enterpriseは月500ドルの最低額で99.95%の稼働率保証、BYOC、HIPAA、監査ログが加わります。',
           '**Weaviate** — スター16,934件、BSD-3-Clause、Go製。**このページで最も重要な訂正：** Weaviate Cloudはもう14日間のサンドボックスではありません。2026年6月17日に、クレジットカード不要・無期限の本当に無料な枠が導入されました。オブジェクト10万件、メモリ1 GB、ディスク10 GBです。初日から月45ドルを見込むよう勧め続けている比較記事は、いまや無料のものに対して読者にお金を払わせています。',
           '**Weaviateの有料プランも動いています。** 現行の料金ページはFlexが月45ドルから、Premiumが月400ドルからです。2025年10月の更新で告知された月280ドルのPlusはそこに載っていないため、古い3段構成ではなくFlexとPremiumを挙げてください。',
-          '**Chroma** — スター29,622件、Apache-2.0、そして出発点だったPythonエンジンではなく、いまやRust製のコアです。4製品で唯一サーバーなしにプロセス内で動き、まさにそれゆえ試作で勝ちます。',
+          '**Chroma** — スター29,622件、Apache-2.0、そして出発点だったPythonエンジンではなく、いまやRust製のコアです。4製品の中でサーバーなしのプロセス内実行を前提に作られており（QdrantのPythonクライアントにもテスト用のローカルモードがありますが、本番はサーバー型です）、まさにそれゆえ試作で勝ちます。',
           '**Chroma Cloudも存在します。** この分野の比較記事の多くが完全に見落としている点です。Starterは月0ドルに従量課金で5ドルの初期クレジット、Teamは月250ドルに従量課金、使用量は書き込み1 GiBあたり2.50ドル、保存1 GiBあたり月0.33ドル、クエリ1 TiBあたり0.0075ドル、返送1 GiBあたり0.09ドルです。つまりここでのマネージド製品は3つではなく4つです。',
           '**4製品すべてに無料枠があります。** 1年前には当てはまらなかった事実であり、読んでいる比較記事が更新されているかを確かめる最速の方法です。',
           '**はっきり書いておくべき点：** Pineconeはコンテンツ制作者向けのアフィリエイトプログラムを実際に運営しており、自社のパートナーページで確認できます。PromptQuorumはそれに登録しておらず、本ページのどのリンクからも収益を得ていません。このシリーズでそうしたプログラムが存在する唯一の分野であり、だからこそ上の推奨はPineconeではなくQdrantです。',
@@ -3026,8 +3026,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**構造上の問いは、エンジンを自分で運用するのか借りるのかであり、それは工数と予算のどちらが希少かで決まります。** 上から読み、自分に当てはまる最初の行で止めてください。',
         items: [
           '**運用の余力が多少あり、コストと性能を自分で管理したい** → Qdrant。自己ホストでもQdrant Cloudでも。Rust製で、オープンソースの3エンジンのうちGitHubコミュニティが最大です。',
-          '**インフラ作業をゼロにしたく、その対価を払う** → Pinecone。最も成熟したサーバーレス製品で、月20ドル定額のBuilderは試用ではなく本物のプランです。',
-          '**検索精度が字面一致と意味的一致の両立に依存する** → Weaviate。BM25とベクトルのネイティブ統合はここで最も成熟したハイブリッド実装で、無料枠での評価にもう費用はかかりません。',
+          '**インフラ作業をゼロにしたく、その対価を払う** → Pinecone。当サイトの評価では成熟したサーバーレス製品で、月20ドル定額のBuilderは試用ではなく本物のプランです。',
+          '**検索精度が字面一致と意味的一致の両立に依存する** → Weaviate。BM25とベクトルのネイティブ統合は当サイトの評価ではここで最も完成度の高いハイブリッド実装で、無料枠での評価にもう費用はかかりません。',
           '**ノートブックで試作中、サーバーは置きたくない** → Chroma。Pythonプロセス内で動くので、検索が動くまでに用意するものがありません。',
           '**データを自分の管理下のハードウェアに留める必要がある** → Qdrant、Weaviate、Chromaのいずれかを自己ホスト。Pineconeに自己ホスト版はなく、データを自社環境に置けるのはEnterpriseのBYOCを使う場合です。特定のリージョンで足りる場合は、Pineconeの最新のリージョン情報をご確認ください。',
           '**ベクトルがおよそ1万未満** → どれも不要です。Postgres上のpgvectorがその規模を賄い、運用対象を増やさずに済み、必要のない新しいクエリAPIを覚えずに済みます。',
@@ -3077,10 +3077,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 項目: 'ライセンス', Qdrant: 'Apache-2.0', Pinecone: 'プロプライエタリ', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
           { 項目: '実装言語', Qdrant: 'Rust', Pinecone: '非公開', Weaviate: 'Go', Chroma: 'コアはRust' },
           { 項目: '自己ホスト', Qdrant: '可、無料', Pinecone: '不可、クラウド専用', Weaviate: '可、無料', Chroma: '可、無料' },
-          { 項目: 'プロセス内実行', Qdrant: '不可、サーバー型', Pinecone: '不可、ホスト型', Weaviate: '不可、サーバー型', Chroma: '可' },
+          { 項目: 'プロセス内実行', Qdrant: 'Pythonローカルのみ、本番はサーバー型', Pinecone: '不可、ホスト型', Weaviate: '不可、サーバー型', Chroma: '可' },
           { 項目: 'クラウド無料枠', Qdrant: '0.5 vCPU、1 GB、4 GB', Pinecone: '2 GB、書込200万、読取100万', Weaviate: '10万オブジェクト、1 GB、10 GB', Chroma: '月0ドル＋5ドル分クレジット' },
           { 項目: '有料の入口', Qdrant: '従量課金、定額なし', Pinecone: 'Builder月20ドル定額', Weaviate: 'Flex月45ドルから', Chroma: 'Team月250ドル＋従量' },
-          { 項目: 'ハイブリッド検索', Qdrant: 'ネイティブ、疎＋密', Pinecone: '対応', Weaviate: 'BM25ネイティブ、最も成熟', Chroma: '新しく、完成度は低い' },
+          { 項目: 'ハイブリッド検索', Qdrant: 'ネイティブ、疎＋密', Pinecone: '対応', Weaviate: 'BM25ネイティブ', Chroma: '新しい。ドキュメント要確認' },
           { 項目: '入口プランの保証', Qdrant: 'Standardで99.5%', Pinecone: 'Enterpriseのみ99.95%', Weaviate: 'Flexで99.5%', Chroma: 'Enterprise未満は非公表' },
           { 項目: 'アフィリエイト', Qdrant: '見当たらず', Pinecone: 'あり、当社は不参加', Weaviate: '見当たらず', Chroma: '見当たらず' },
         ],
@@ -3229,7 +3229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       chroma: {
         id: 'chroma',
         title: 'Chroma：試作向けの選択肢',
-        content: '**Chromaは4製品で唯一、サーバーなしにPythonプロセス内で動きます。そのため、何もない状態から動く取得までが最短です。** 意図的に他より範囲が狭く、その点を率直に示しています。',
+        content: '**Chromaは4製品の中で、サーバーなしにPythonプロセス内で動かす前提で作られています（QdrantのPythonクライアントにあるのはテスト用のローカルモードのみです）。そのため、何もない状態から動く取得までが最短です。** 意図的に他より範囲が狭く、その点を率直に示しています。',
         rankedItems: [
           {
             rank: 1,
@@ -3293,7 +3293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'これらは2026年11月2日時点の一般的なサーバー価格と各社の表示価格から組み立てた推計であり、実測の本番請求ではありません。Pinecone、Qdrant Cloud、Chroma Cloudの従量課金はクエリ量で変動するため、決める前に想定の読み書き量を各社の試算ツールに通してください。',
           },
         ],
-        note: '100万ベクトルでは、たいてい定価ではなく運用の行が決め手になります。所在地や利用量が求めるなら自己ホストを。そうでなければ、自分たちの時間を正直に値付けした時点でマネージドのほうが安く収まります。',
+        note: '100万ベクトルでは、たいてい定価ではなく運用の行が決め手になります。所在地や利用量が求めるなら自己ホストを。このモデルでは、運用時間を値付けした時点でマネージドのほうが安く収まり、運用時間が安い場合や利用量が多い場合は結果が逆転します。',
       },
       hybridSearch: {
         id: 'hybrid-search',
@@ -3386,7 +3386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'RAGにはPineconeとWeaviateのどちらが優れていますか？',
-            a: 'どちらかが一律に優れているわけではありません。Pineconeはより成熟したマネージドのサーバーレス製品を持ち、自己ホスト版がないため、選ぶことはそのエンジンへの固定を意味します。Weaviateは自己ホストとマネージドで同じエンジンを提供し、双方向の移行経路を残しつつ、より成熟したハイブリッド検索を備えます。買うものが運用の簡単さならPinecone、技術的な内容での取得の質が重要か、後で自前のハードウェアへ移る選択肢を残したいならWeaviateです。',
+            a: 'どちらかが一律に優れているわけではありません。当サイトの評価では、Pineconeはより成熟したマネージドのサーバーレス製品を持ち、自己ホスト版がないため、選ぶことはそのエンジンへの固定を意味します。Weaviateは自己ホストとマネージドで同じエンジンを提供し、双方向の移行経路を残しつつ、当サイトの評価ではより成熟したハイブリッド検索を備えます。買うものが運用の簡単さならPinecone、技術的な内容での取得の質が重要か、後で自前のハードウェアへ移る選択肢を残したいならWeaviateです。',
           },
           {
             q: '100万ベクトルのベクトルデータベースはいくらかかりますか？',
@@ -3394,7 +3394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'QdrantとWeaviateは同じものですか？',
-            a: 'いいえ。アーキテクチャもクエリのインターフェースも異なる別々のオープンソースプロジェクトです。QdrantはRustで書かれ、RESTとgRPC上に独自のAPIを持ちます。WeaviateはGoで書かれ、GraphQLのインターフェースで知られます。どちらもハイブリッド検索に対応し、自己ホストでもマネージドでも動きますが、一方向けに書いたクエリは書き直さずには移せません。QdrantはHNSW探索中にメタデータをフィルタし、Weaviateはハイブリッド検索がより成熟し、ベクトル化モジュールを内蔵します。',
+            a: 'いいえ。アーキテクチャもクエリのインターフェースも異なる別々のオープンソースプロジェクトです。QdrantはRustで書かれ、RESTとgRPC上に独自のAPIを持ちます。WeaviateはGoで書かれ、GraphQLのインターフェースで知られます。どちらもハイブリッド検索に対応し、自己ホストでもマネージドでも動きますが、一方向けに書いたクエリは書き直さずには移せません。QdrantはHNSW探索中にメタデータをフィルタし、Weaviateは当サイトの評価ではハイブリッド検索がより成熟し、ベクトル化モジュールを内蔵します。',
           },
           {
             q: 'ChromaからQdrantへどう移行しますか？',
@@ -3414,7 +3414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         items: [
-          '**Qdrantを選ぶなら** コスト対性能を最良にしたく、自己ホストでもマネージドでも動くエンジンがほしい場合。次の一歩：永続無料のクラウド枠から始め、まずサーバーを用意するのではなく、4 GBで足りなくなった時点でStandardへ移ってください。',
+          '**Qdrantを選ぶなら** 低コストの道筋を取りつつ、自己ホストでもマネージドでも動くエンジンがほしい場合。次の一歩：永続無料のクラウド枠から始め、まずサーバーを用意するのではなく、4 GBで足りなくなった時点でStandardへ移ってください。',
           '**Pineconeを選ぶなら** インフラ作業をゼロにしたく、エンジンへの固定を受け入れる場合。次の一歩：月20ドルのBuilderから始め、Standardへ移る前に読み書きユニットの量を試算してください。',
           '**Weaviateを選ぶなら** 取得においてハイブリッド検索が中心の場合。次の一歩：無料枠で評価してください。2026年6月以降、費用はかからず期限もありません。',
           '**Chromaを選ぶなら** 試作中で今日中に取得を動かしたい場合。次の一歩：`pip install chromadb` を実行し、QdrantやWeaviateへの移行は自分の都合で計画してください。',
@@ -3503,7 +3503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'RAGにはPineconeとWeaviateのどちらが優れていますか？',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'どちらかが一律に優れているわけではありません。Pineconeはより成熟したマネージド製品を持ち、自己ホスト版がありません。Weaviateは自己ホストとマネージドで同じエンジンを提供し、より成熟したハイブリッド検索を備えるため、移行経路を残したいチームや取得で厳密な語に依存するチームに向きます。',
+            text: 'どちらかが一律に優れているわけではありません。当サイトの評価では、Pineconeはより成熟したマネージド製品を持ち、自己ホスト版がありません。Weaviateは自己ホストとマネージドで同じエンジンを提供し、当サイトの評価ではより成熟したハイブリッド検索を備えるため、移行経路を残したいチームや取得で厳密な語に依存するチームに向きます。',
           },
         },
         {
@@ -3532,7 +3532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       numberOfItems: 4,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Qdrant', description: '既定の選択肢 — Apache-2.0、Rust、従量課金のStandardを備えた無料のクラウド枠' },
-        { '@type': 'ListItem', position: 2, name: 'Pinecone', description: '運用ゼロなら最良 — 最も成熟したサーバーレス製品、Builderは月20ドル定額。ただしクラウド専用で自己ホスト版はない' },
+        { '@type': 'ListItem', position: 2, name: 'Pinecone', description: '運用ゼロなら最良 — 当サイトの評価では成熟したサーバーレス製品、Builderは月20ドル定額。ただしクラウド専用で自己ホスト版はない' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'ハイブリッド検索なら最良 — BM25とベクトルをネイティブに統合し、2026年6月以降はオブジェクト10万件の無期限な無料枠' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: '試作なら最良 — サーバーなしにプロセス内で動き、コアはRust。Chroma Cloudは月0ドル＋従量から' },
       ],
@@ -3567,7 +3567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       answer: '**只要你有一点运维余力，我们默认推荐 Qdrant；想要零基础设施工作就选 Pinecone；若混合检索对召回精度至关重要就选 Weaviate；在做原型且完全不想要服务器就选 Chroma。** 这里没有单一赢家，任何点名一个的指南，回答的都是与你不同的问题。真正的决定是你自己运行引擎还是租用它，而这取决于你的团队富余的是工程小时还是预算——两者很少是同一种约束。',
       bullets: [
         '**综合最优：** Qdrant——35,383 星标，Apache-2.0，Rust 编写，免费云层级含 0.5 vCPU / 1 GB 内存 / 4 GB 磁盘（闲置会被暂停）',
-        '**零运维最优：** Pinecone——最成熟的无服务器产品，Builder 每月 20 美元固定价，Standard 每月最低 50 美元',
+        '**零运维最优：** Pinecone——我们评估为成熟的无服务器产品，Builder 每月 20 美元固定价，Standard 每月最低 50 美元',
         '**混合检索最优：** Weaviate——原生支持 BM25 加向量，且自 2026 年 6 月起提供不过期、免信用卡的免费层级',
         '**原型开发最优：** Chroma——`pip install chromadb` 即在你的 Python 进程中运行，无需搭建服务器',
         '**四者现在都有免费层级**——那句流传甚广的「Weaviate 只给 14 天沙箱」已经过时',
@@ -3606,7 +3606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pinecone**——设计上仅限云端，完全没有自托管版本。Starter 免费，含 2 GB 存储、每月 200 万写入单元与 100 万读取单元。Builder 每月 20 美元固定价，含 10 GB、500 万写入与 200 万读取。Standard 从每月最低 50 美元起后按用量计费，Enterprise 从每月最低 500 美元起，增加 99.95% 可用性承诺、BYOC、HIPAA 与审计日志。',
           '**Weaviate**——16,934 星标，BSD-3-Clause，用 Go 编写。**本页最重要的更正：** Weaviate Cloud 已不再是 14 天沙箱。2026 年 6 月 17 日，它推出了真正免费的层级，免信用卡、不过期：10 万个对象、1 GB 内存与 10 GB 磁盘。那些仍在建议读者从第一天起预留每月 45 美元的对比文章，正把人送去为如今免费的东西付费。',
           '**Weaviate 的付费价格也变了。** 现行定价页列出的是 Flex 每月 45 美元起、Premium 每月 400 美元起。2025 年 10 月定价更新中宣布的每月 280 美元 Plus 层级已不在页面上，因此请引用 Flex 与 Premium，而不是旧的三层结构。',
-          '**Chroma**——29,622 星标，Apache-2.0，如今是 Rust 内核，而非起步时的 Python 引擎。它是四者中唯一无需服务器、在进程内运行的，这也正是它在原型开发上胜出的原因。',
+          '**Chroma**——29,622 星标，Apache-2.0，如今是 Rust 内核，而非起步时的 Python 引擎。它是四者中专为无需服务器、在进程内运行而设计的（Qdrant 的 Python 客户端也有用于测试的本地模式，但其生产路径是服务端），这也正是它在原型开发上胜出的原因。',
           '**Chroma Cloud 同样存在**，这一点多数同类对比完全遗漏：Starter 每月 0 美元加用量，附 5 美元初始额度；Team 每月 250 美元加用量；用量计价为每写入 1 GiB 2.50 美元、每存储 1 GiB 每月 0.33 美元、每查询 1 TiB 0.0075 美元、每返回 1 GiB 0.09 美元。因此这里有四个托管选项，而非三个。',
           '**四者现在都有免费层级**，这在一年前还不成立，也是判断你正在读的对比是否更新过的最快方法。',
           '**一句需要直说的披露：** Pinecone 确实为内容创作者运营着联盟计划，其合作伙伴页面可以佐证。PromptQuorum 未加入该计划，也不从本页任何链接中获得收益。这是本系列中唯一存在此类计划的品类，而这恰恰是上面推荐 Qdrant 而非 Pinecone 的原因。',
@@ -3618,8 +3618,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**结构性的问题是：你自己运维引擎，还是租用它？这取决于你稀缺的是工程小时还是预算。** 从上往下读，停在第一条符合你情况的。',
         items: [
           '**你有一些运维余力，且想自己掌控成本与性能** → Qdrant，自托管或用 Qdrant Cloud。用 Rust 编写，在三个开源引擎中 GitHub 社区最大。',
-          '**你想要零基础设施工作，并愿意为此付费** → Pinecone。最成熟的无服务器产品，而每月 20 美元固定价的 Builder 是一个真正的方案，不是试用。',
-          '**召回精度取决于字面匹配与语义匹配的结合** → Weaviate。原生的 BM25 加向量是这里最成熟的混合实现，而且免费层级如今评估起来分文不花。',
+          '**你想要零基础设施工作，并愿意为此付费** → Pinecone。我们评估为成熟的无服务器产品，而每月 20 美元固定价的 Builder 是一个真正的方案，不是试用。',
+          '**召回精度取决于字面匹配与语义匹配的结合** → Weaviate。原生的 BM25 加向量是我们评估下这里最完整的混合实现，而且免费层级如今评估起来分文不花。',
           '**你在 notebook 里做原型，不想要服务器** → Chroma。它在你的 Python 进程中运行，因此在检索跑通之前没有任何东西需要预置。',
           '**数据必须留在你自己掌控的硬件上** → 自托管 Qdrant、Weaviate 或 Chroma。Pinecone 没有自托管版本，只有使用 Enterprise 的 BYOC 选项才能让数据留在你自己的环境中。如果只需要特定区域，请查阅 Pinecone 当前的区域文档。',
           '**你的向量少于约 1 万条** → 一个都不用。Postgres 上的 pgvector 足以覆盖这一规模，既不必多运维一个服务，也省得为一个用不上的负载去学新的查询 API。',
@@ -3669,10 +3669,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 维度: '许可证', Qdrant: 'Apache-2.0', Pinecone: '专有', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
           { 维度: '实现语言', Qdrant: 'Rust', Pinecone: '未公开', Weaviate: 'Go', Chroma: 'Rust 内核' },
           { 维度: '可自托管', Qdrant: '可以，免费', Pinecone: '不可，仅云端', Weaviate: '可以，免费', Chroma: '可以，免费' },
-          { 维度: '进程内运行', Qdrant: '否，服务端', Pinecone: '否，托管', Weaviate: '否，服务端', Chroma: '是' },
+          { 维度: '进程内运行', Qdrant: '仅 Python 本地模式；生产用服务端', Pinecone: '否，托管', Weaviate: '否，服务端', Chroma: '是' },
           { 维度: '云端免费层级', Qdrant: '0.5 vCPU、1 GB、4 GB', Pinecone: '2 GB、200万写、100万读', Weaviate: '10万对象、1 GB、10 GB', Chroma: '每月 0 美元加 5 美元额度' },
           { 维度: '付费起点', Qdrant: '按用量，无固定费', Pinecone: 'Builder 每月 20 美元固定', Weaviate: 'Flex 每月 45 美元起', Chroma: 'Team 每月 250 美元加用量' },
-          { 维度: '混合检索', Qdrant: '原生，稀疏加稠密', Pinecone: '支持', Weaviate: '原生 BM25，最成熟', Chroma: '较新，完整度较低' },
+          { 维度: '混合检索', Qdrant: '原生，稀疏加稠密', Pinecone: '支持', Weaviate: '原生 BM25', Chroma: '较新；请查阅其文档' },
           { 维度: '入门层级 SLA', Qdrant: 'Standard 99.5%', Pinecone: '仅 Enterprise，99.95%', Weaviate: 'Flex 99.5%', Chroma: 'Enterprise 以下未公布' },
           { 维度: '联盟计划', Qdrant: '未发现', Pinecone: '有，我们未参与', Weaviate: '未发现', Chroma: '未发现' },
         ],
@@ -3821,7 +3821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       chroma: {
         id: 'chroma',
         title: 'Chroma：原型开发之选',
-        content: '**Chroma 是四者中唯一无需服务器、在你的 Python 进程内运行的，因此它是从零到检索跑通的最短路径。** 它按设计比其他三者窄，并且对此很坦诚。',
+        content: '**Chroma 是四者中专为无需服务器、在你的 Python 进程内运行而设计的（Qdrant 的 Python 客户端仅提供测试用本地模式），因此它是从零到检索跑通的最短路径。** 它按设计比其他三者窄，并且对此很坦诚。',
         rankedItems: [
           {
             rank: 1,
@@ -3885,7 +3885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '这些是依据 2026 年 11 月 2 日常见的机器价格与厂商标价建模的估算，不是实测的生产账单。Pinecone、Qdrant Cloud 与 Chroma Cloud 的按量成本随查询量浮动，因此在做决定前，请把你预期的读写量放进各厂商的计算器跑一遍。',
           },
         ],
-        note: '在一百万向量的量级上，通常是运维那一行决定结果，而非标价。当驻留或用量提出要求时就自托管；否则一旦把自己的工时诚实计价，托管层级会更便宜。',
+        note: '在一百万向量的量级上，通常是运维那一行决定结果，而非标价。当驻留或用量提出要求时就自托管；在这个模型中，一旦把运维工时计价，托管层级会更便宜；若运维时间更便宜或用量很高，结论会反转。',
       },
       hybridSearch: {
         id: 'hybrid-search',
@@ -3978,7 +3978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '做 RAG 时 Pinecone 比 Weaviate 更好吗？',
-            a: '两者都不是普遍更好。Pinecone 拥有更成熟的托管无服务器产品且没有自托管版本，因此选择它意味着对该引擎的承诺。Weaviate 在自托管与托管上提供同一个引擎，为你留下双向的迁移路径，并且混合检索更成熟。如果你买的是运维简单，选 Pinecone；如果技术内容上的检索质量要紧，或者你想保留日后转向自有硬件的选项，选 Weaviate。',
+            a: '两者都不是普遍更好。我们评估 Pinecone 拥有更成熟的托管无服务器产品，且没有自托管版本，因此选择它意味着对该引擎的承诺。Weaviate 在自托管与托管上提供同一个引擎，为你留下双向的迁移路径，并且按我们的评估混合检索更成熟。如果你买的是运维简单，选 Pinecone；如果技术内容上的检索质量要紧，或者你想保留日后转向自有硬件的选项，选 Weaviate。',
           },
           {
             q: '100 万条向量的向量数据库要花多少钱？',
@@ -3986,7 +3986,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qdrant 和 Weaviate 是一回事吗？',
-            a: '不是。它们是架构与查询接口都不同的两个独立开源项目。Qdrant 用 Rust 编写，在 REST 与 gRPC 之上有自己的 API；Weaviate 用 Go 编写，以其 GraphQL 接口著称。两者都支持混合检索，也都能自托管或托管运行，但为其中一个写的查询不经重写无法移植到另一个。Qdrant 在 HNSW 遍历过程中过滤元数据；Weaviate 混合检索更成熟，并内置向量化模块。',
+            a: '不是。它们是架构与查询接口都不同的两个独立开源项目。Qdrant 用 Rust 编写，在 REST 与 gRPC 之上有自己的 API；Weaviate 用 Go 编写，以其 GraphQL 接口著称。两者都支持混合检索，也都能自托管或托管运行，但为其中一个写的查询不经重写无法移植到另一个。Qdrant 在 HNSW 遍历过程中过滤元数据；按我们的评估 Weaviate 混合检索更成熟，并内置向量化模块。',
           },
           {
             q: '如何从 Chroma 迁移到 Qdrant？',
@@ -4006,7 +4006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '最终结论',
         items: [
-          '**选 Qdrant，如果**你想要最好的性价比，以及一个自托管或托管都能跑的引擎——下一步：从永久免费的云层级开始，等 4 GB 不够用时再升到 Standard，而不是先去开一台机器。',
+          '**选 Qdrant，如果**你想要一条低成本路径，以及一个自托管或托管都能跑的引擎——下一步：从永久免费的云层级开始，等 4 GB 不够用时再升到 Standard，而不是先去开一台机器。',
           '**选 Pinecone，如果**你想要零基础设施工作并接受被引擎绑定——下一步：从每月 20 美元的 Builder 开始，升到 Standard 之前先测算读写单元用量。',
           '**选 Weaviate，如果**混合检索是检索的核心——下一步：在免费层级上评估，自 2026 年 6 月起它分文不花且不会过期。',
           '**选 Chroma，如果**你在做原型且想今天就让检索跑起来——下一步：`pip install chromadb`，并按自己的节奏规划迁移到 Qdrant 或 Weaviate。',
@@ -4095,7 +4095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '做 RAG 时 Pinecone 比 Weaviate 更好吗？',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: '两者都不是普遍更好。Pinecone 拥有更成熟的托管产品且没有自托管版本。Weaviate 在自托管与托管上提供同一个引擎，且混合检索更成熟，适合想要迁移路径或在检索中依赖精确词项的团队。',
+            text: '两者都不是普遍更好。我们评估 Pinecone 拥有更成熟的托管产品，且没有自托管版本。Weaviate 在自托管与托管上提供同一个引擎，且按我们的评估混合检索更成熟，适合想要迁移路径或在检索中依赖精确词项的团队。',
           },
         },
         {
@@ -4124,7 +4124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       numberOfItems: 4,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Qdrant', description: '我们的默认推荐——Apache-2.0，Rust，免费云层级搭配按用量计费的 Standard' },
-        { '@type': 'ListItem', position: 2, name: 'Pinecone', description: '零运维最优——最成熟的无服务器产品，Builder 每月 20 美元固定价，但仅限云端且没有自托管版本' },
+        { '@type': 'ListItem', position: 2, name: 'Pinecone', description: '零运维最优——我们评估为成熟的无服务器产品，Builder 每月 20 美元固定价，但仅限云端且没有自托管版本' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: '混合检索最优——原生 BM25 加向量，自 2026 年 6 月起提供含 10 万对象的不过期免费层级' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: '原型开发最优——无需服务器、进程内运行，Rust 内核，Chroma Cloud 从每月 0 美元加用量起步' },
       ],
@@ -4159,7 +4159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       answer: '**‏Qdrant كخيارنا الافتراضي إن كان لديك أي قدرة تشغيلية، وPinecone إن أردت صفر عمل بنية تحتية، وWeaviate إن كان البحث الهجين محوريًا لدقة الاسترجاع، وChroma إن كنت تبني نموذجًا أوليًا ولا تريد أي خادم.** لا يوجد فائز واحد هنا، وأي دليل يسمّي واحدًا إنما يجيب عن سؤال غير سؤالك. القرار الحقيقي هو: هل تشغّل المحرك بنفسك أم تستأجره؟ وذلك يتوقف على ما يفيض لدى فريقك: ساعات هندسية أم ميزانية. ونادرًا ما يكونان القيد نفسه.',
       bullets: [
         '**الأفضل إجمالًا:** ‏Qdrant — 35,383 نجمة، Apache-2.0، مكتوب بلغة Rust، وطبقة سحابية مجانية بـ 0.5 vCPU و1 غيغابايت ذاكرة و4 غيغابايت قرص (تُعلَّق عند الخمول)',
-        '**الأفضل بلا تشغيل:** ‏Pinecone — أنضج منتج بلا خوادم، وBuilder بسعر ثابت 20 دولارًا شهريًا، وStandard بحد أدنى 50 دولارًا شهريًا',
+        '**الأفضل بلا تشغيل:** ‏Pinecone — بحسب تقييمنا منتج ناضج بلا خوادم، وBuilder بسعر ثابت 20 دولارًا شهريًا، وStandard بحد أدنى 50 دولارًا شهريًا',
         '**الأفضل للبحث الهجين:** ‏Weaviate — دعم أصلي لـ BM25 مع المتجهات، ومنذ يونيو 2026 طبقة مجانية بلا انتهاء وبلا بطاقة ائتمان',
         '**الأفضل للنماذج الأولية:** ‏Chroma — ‏`pip install chromadb` ويعمل داخل عملية Python لديك، بلا خادم تُنشئه',
         '**الأربعة جميعًا لديها طبقة مجانية الآن** — والادعاء الشائع بأن Weaviate لا يقدّم سوى بيئة تجريبية لـ 14 يومًا صار قديمًا',
@@ -4198,7 +4198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**‏Pinecone** — سحابي فقط بحكم التصميم، وبلا أي نسخة للاستضافة الذاتية. خطة Starter مجانية بـ 2 غيغابايت تخزين، ومليونَي وحدة كتابة ومليون وحدة قراءة شهريًا. وBuilder بسعر ثابت 20 دولارًا شهريًا بـ 10 غيغابايت و5 ملايين كتابة ومليونَي قراءة. وتبدأ Standard من حد أدنى 50 دولارًا شهريًا ثم بالاستهلاك، وEnterprise من حد أدنى 500 دولار شهريًا مع التزام توافر 99.95% وBYOC وHIPAA وسجلات التدقيق.',
           '**‏Weaviate** — 16,934 نجمة، ورخصة BSD-3-Clause، ومكتوب بلغة Go. **أهم تصحيح في هذه الصفحة:** لم يعد Weaviate Cloud بيئة تجريبية لـ 14 يومًا. ففي 17 يونيو 2026 أُطلقت طبقة مجانية فعلًا، بلا بطاقة ائتمان وبلا انتهاء: 100 ألف كائن و1 غيغابايت ذاكرة و10 غيغابايت قرص. والمقارنات التي ما زالت تنصح برصد 45 دولارًا شهريًا من اليوم الأول تدفع القرّاء إلى الدفع مقابل شيء صار مجانيًا.',
           '**كما تغيّرت أسعار Weaviate المدفوعة.** فصفحة الأسعار السارية تُدرج Flex ابتداءً من 45 دولارًا شهريًا وPremium ابتداءً من 400 دولار شهريًا. أما طبقة Plus بـ 280 دولارًا شهريًا التي أُعلنت في تحديث أكتوبر 2025 فلم تعد ترد هناك، فاذكر Flex وPremium بدل البنية الثلاثية القديمة.',
-          '**‏Chroma** — 29,622 نجمة، ورخصة Apache-2.0، ونواة بلغة Rust الآن بدل محرك Python الذي بدأ به. وهو الوحيد بين الأربعة الذي يعمل داخل العملية بلا خادم، وهذا بالضبط سبب تفوّقه في بناء النماذج الأولية.',
+          '**‏Chroma** — 29,622 نجمة، ورخصة Apache-2.0، ونواة بلغة Rust الآن بدل محرك Python الذي بدأ به. وهو الذي صُمّم من بين الأربعة ليعمل داخل العملية بلا خادم (ولعميل Qdrant في Python وضع محلي للاختبار أيضًا، لكن مسار الإنتاج فيه خادم)، وهذا بالضبط سبب تفوّقه في بناء النماذج الأولية.',
           '**‏Chroma Cloud موجود أيضًا**، وهو ما تغفله معظم مقارنات هذه الفئة تمامًا: خطة Starter بصفر دولار شهريًا زائد الاستهلاك مع رصيد ابتدائي 5 دولارات، وTeam بـ 250 دولارًا شهريًا زائد الاستهلاك، والاستهلاك مُسعّر بـ 2.50 دولار لكل غيبيبايت مكتوب، و0.33 دولار لكل غيبيبايت مخزّن شهريًا، و0.0075 دولار لكل تبيبايت مُستعلَم، و0.09 دولار لكل غيبيبايت مُعاد. أي أن هنا أربعة خيارات مُدارة لا ثلاثة.',
           '**الأربعة جميعًا لديها طبقة مجانية الآن**، وهو ما لم يكن صحيحًا قبل عام، وهو أسرع وسيلة للتحقق مما إذا كانت المقارنة التي تقرأها قد جرى تحديثها.',
           '**إفصاح يستحق القول بوضوح:** يدير Pinecone بالفعل برنامج عمولة لصنّاع المحتوى، وهو مؤكد على صفحة شركائه. وPromptQuorum غير مسجّلة فيه ولا تربح شيئًا من أي رابط هنا. وهذه هي الفئة الوحيدة في هذه السلسلة التي يوجد فيها برنامج كهذا، ولهذا السبب تحديدًا فإن التوصية أعلاه هي Qdrant وليست Pinecone.',
@@ -4210,8 +4210,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**السؤال البنيوي هو: هل تشغّل المحرك أم تستأجره؟ وذلك يتوقف على المورد الشحيح لديك: الساعات الهندسية أم الميزانية.** اقرأ من أعلى وتوقّف عند أول سطر ينطبق عليك.',
         items: [
           '**لديك بعض القدرة التشغيلية وتريد التحكم في التكلفة والأداء** ← Qdrant، باستضافة ذاتية أو على Qdrant Cloud. مكتوب بلغة Rust، وله أكبر مجتمع على GitHub بين المحركات الثلاثة المفتوحة.',
-          '**تريد صفر عمل بنية تحتية وتقبل الدفع** ← Pinecone. أنضج منتج بلا خوادم، وBuilder بسعر ثابت 20 دولارًا شهريًا خطة حقيقية لا تجربة.',
-          '**دقة الاسترجاع تعتمد على مزج المطابقة الحرفية بالدلالية** ← Weaviate. فدمج BM25 مع المتجهات أصليًا هو أنضج تطبيق هجين هنا، والطبقة المجانية لم تعد تكلّف شيئًا لتقييمه.',
+          '**تريد صفر عمل بنية تحتية وتقبل الدفع** ← Pinecone. بحسب تقييمنا منتج ناضج بلا خوادم، وBuilder بسعر ثابت 20 دولارًا شهريًا خطة حقيقية لا تجربة.',
+          '**دقة الاسترجاع تعتمد على مزج المطابقة الحرفية بالدلالية** ← Weaviate. فدمج BM25 مع المتجهات أصليًا هو بحسب تقييمنا أكمل تطبيق هجين هنا، والطبقة المجانية لم تعد تكلّف شيئًا لتقييمه.',
           '**تبني نموذجًا أوليًا في دفتر ملاحظات ولا تريد خادمًا** ← Chroma. يعمل داخل عملية Python لديك، فلا شيء تُهيّئه قبل أن يعمل الاسترجاع.',
           '**يجب أن تبقى بياناتك على عتاد تتحكم فيه** ← Qdrant أو Weaviate أو Chroma باستضافة ذاتية. لا توجد نسخة ذاتية الاستضافة من Pinecone؛ ولا تبقى البيانات في بيئتك إلا عبر خيار BYOC في طبقة Enterprise. وإذا كنت تحتاج منطقة محددة فقط، فراجع وثائق مناطق Pinecone الحالية.',
           '**لديك أقل من نحو 10 آلاف متجه** ← لا شيء منها. إذ يغطي pgvector على Postgres هذا الحجم دون إضافة خدمة تشغّلها، وتوفّر على نفسك تعلّم واجهة استعلام جديدة لحمل لا يحتاجها.',
@@ -4261,10 +4261,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { المعيار: 'الرخصة', Qdrant: 'Apache-2.0', Pinecone: 'مغلقة المصدر', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
           { المعيار: 'لغة التنفيذ', Qdrant: 'Rust', Pinecone: 'غير معلنة', Weaviate: 'Go', Chroma: 'نواة بلغة Rust' },
           { المعيار: 'قابل للاستضافة الذاتية', Qdrant: 'نعم، مجانًا', Pinecone: 'لا، سحابي فقط', Weaviate: 'نعم، مجانًا', Chroma: 'نعم، مجانًا' },
-          { المعيار: 'يعمل داخل العملية', Qdrant: 'لا، خادم', Pinecone: 'لا، مستضاف', Weaviate: 'لا، خادم', Chroma: 'نعم' },
+          { المعيار: 'يعمل داخل العملية', Qdrant: 'وضع Python محلي فقط؛ خادم للإنتاج', Pinecone: 'لا، مستضاف', Weaviate: 'لا، خادم', Chroma: 'نعم' },
           { المعيار: 'طبقة سحابية مجانية', Qdrant: '0.5 vCPU و1 غ.ب و4 غ.ب', Pinecone: '2 غ.ب، مليونا كتابة، مليون قراءة', Weaviate: '100 ألف كائن، 1 غ.ب، 10 غ.ب', Chroma: 'صفر دولار شهريًا مع رصيد 5 دولارات' },
           { المعيار: 'بداية المدفوع', Qdrant: 'بالاستهلاك، بلا رسوم ثابتة', Pinecone: 'Builder 20 دولارًا شهريًا ثابتة', Weaviate: 'Flex من 45 دولارًا شهريًا', Chroma: 'Team 250 دولارًا شهريًا زائد الاستهلاك' },
-          { المعيار: 'البحث الهجين', Qdrant: 'أصلي، متفرّق مع كثيف', Pinecone: 'مدعوم', Weaviate: 'BM25 أصلي، الأنضج', Chroma: 'أحدث وأقل اكتمالًا' },
+          { المعيار: 'البحث الهجين', Qdrant: 'أصلي، متفرّق مع كثيف', Pinecone: 'مدعوم', Weaviate: 'BM25 أصلي', Chroma: 'أحدث؛ راجع وثائقه' },
           { المعيار: 'التزام الطبقة الأولى', Qdrant: '99.5% في Standard', Pinecone: 'Enterprise فقط، 99.95%', Weaviate: '99.5% في Flex', Chroma: 'غير منشور دون Enterprise' },
           { المعيار: 'برنامج عمولة', Qdrant: 'لم يُعثر عليه', Pinecone: 'نعم، ولسنا فيه', Weaviate: 'لم يُعثر عليه', Chroma: 'لم يُعثر عليه' },
         ],
@@ -4392,7 +4392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       chroma: {
         id: 'chroma',
         title: '‏Chroma: خيار النماذج الأولية',
-        content: '**‏Chroma هو الوحيد بين الأربعة الذي يعمل داخل عملية Python لديك بلا خادم، ما يجعله أقصر طريق من لا شيء إلى استرجاع يعمل.** وهو أضيق من غيره عن قصد، ويقرّ بذلك بصراحة.',
+        content: '**‏Chroma هو الذي صُمّم من بين الأربعة ليعمل داخل عملية Python لديك بلا خادم (ولعميل Qdrant في Python وضع محلي للاختبار فقط)، ما يجعله أقصر طريق من لا شيء إلى استرجاع يعمل.** وهو أضيق من غيره عن قصد، ويقرّ بذلك بصراحة.',
         rankedItems: [
           {
             rank: 1,
@@ -4456,7 +4456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'هذه تقديرات مبنية على أسعار أجهزة معتادة وأسعار معلنة للمزوّدين في 2 نوفمبر 2026، لا فواتير إنتاج مقيسة. وتتغيّر الكلف بالاستهلاك لدى Pinecone وQdrant Cloud وChroma Cloud بحسب حجم الاستعلامات، فمرّر حجم القراءة والكتابة المتوقع على حاسبة كل مزوّد قبل أن تلتزم.',
           },
         ],
-        note: 'عند مليون متجه يحسم الأمر عادةً بند التشغيل لا السعر المعلن. استضف ذاتيًا حين يفرض ذلك مقر البيانات أو الحجم؛ وإلا فالطبقات المُدارة أرخص متى سعّرت ساعاتك بصدق.',
+        note: 'عند مليون متجه يحسم الأمر عادةً بند التشغيل لا السعر المعلن. استضف ذاتيًا حين يفرض ذلك مقر البيانات أو الحجم؛ وفي هذا النموذج تخرج الطبقات المُدارة أرخص متى سُعِّرت ساعات التشغيل، وتنقلب النتيجة إذا كان وقت التشغيل أرخص أو الاستخدام مرتفعًا.',
       },
       hybridSearch: {
         id: 'hybrid-search',
@@ -4549,7 +4549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل Pinecone أفضل من Weaviate للاسترجاع المعزز؟',
-            a: 'لا أحدهما أفضل على إطلاقه. فلدى Pinecone المنتج المُدار بلا خوادم الأنضج وبلا نسخة ذاتية الاستضافة، أي أن اختياره التزام بذلك المحرك. ويوفّر Weaviate المحرك نفسه ذاتي الاستضافة ومُدارًا، فيمنحك مسار انتقال في الاتجاهين، ولديه البحث الهجين الأنضج. اختر Pinecone إن كان ما تشتريه هو بساطة التشغيل؛ واختر Weaviate إن كانت جودة الاسترجاع على محتوى تقني تهمّك أو أردت خيار الانتقال إلى عتاد خاص بك لاحقًا.',
+            a: 'لا أحدهما أفضل على إطلاقه. فلدى Pinecone بحسب تقييمنا المنتج المُدار بلا خوادم الأنضج وبلا نسخة ذاتية الاستضافة، أي أن اختياره التزام بذلك المحرك. ويوفّر Weaviate المحرك نفسه ذاتي الاستضافة ومُدارًا، فيمنحك مسار انتقال في الاتجاهين، ولديه بحسب تقييمنا البحث الهجين الأنضج. اختر Pinecone إن كان ما تشتريه هو بساطة التشغيل؛ واختر Weaviate إن كانت جودة الاسترجاع على محتوى تقني تهمّك أو أردت خيار الانتقال إلى عتاد خاص بك لاحقًا.',
           },
           {
             q: 'كم تكلّف قاعدة بيانات متجهية لمليون متجه؟',
@@ -4557,7 +4557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل Qdrant هو نفسه Weaviate؟',
-            a: 'لا. هما مشروعان مفتوحا المصدر منفصلان بمعمارية وواجهات استعلام مختلفة. فـ Qdrant مكتوب بلغة Rust وله واجهته الخاصة عبر REST وgRPC؛ وWeaviate مكتوب بلغة Go ويُعرف بواجهة GraphQL. وكلاهما يدعم البحث الهجين ويعمل ذاتي الاستضافة أو مُدارًا، لكن الاستعلامات المكتوبة لأحدهما غير قابلة للنقل إلى الآخر دون إعادة كتابة. ويطبّق Qdrant تصفية البيانات الوصفية أثناء اجتياز الفهرس؛ ولدى Weaviate البحث الهجين الأنضج ووحدات تضمين مدمجة.',
+            a: 'لا. هما مشروعان مفتوحا المصدر منفصلان بمعمارية وواجهات استعلام مختلفة. فـ Qdrant مكتوب بلغة Rust وله واجهته الخاصة عبر REST وgRPC؛ وWeaviate مكتوب بلغة Go ويُعرف بواجهة GraphQL. وكلاهما يدعم البحث الهجين ويعمل ذاتي الاستضافة أو مُدارًا، لكن الاستعلامات المكتوبة لأحدهما غير قابلة للنقل إلى الآخر دون إعادة كتابة. ويطبّق Qdrant تصفية البيانات الوصفية أثناء اجتياز الفهرس؛ ولدى Weaviate بحسب تقييمنا البحث الهجين الأنضج ووحدات تضمين مدمجة.',
           },
           {
             q: 'كيف أنتقل من Chroma إلى Qdrant؟',
@@ -4577,7 +4577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة النهائية',
         items: [
-          '**استخدم Qdrant إن** أردت أفضل نسبة بين التكلفة والأداء ومحركًا يعمل ذاتي الاستضافة أو مُدارًا — الخطوة التالية: ابدأ من الطبقة السحابية المجانية إلى الأبد، وانتقل إلى Standard حين تضيق بك الـ 4 غيغابايت بدل تهيئة جهاز أولًا.',
+          '**استخدم Qdrant إن** أردت مسارًا منخفض التكلفة ومحركًا يعمل ذاتي الاستضافة أو مُدارًا — الخطوة التالية: ابدأ من الطبقة السحابية المجانية إلى الأبد، وانتقل إلى Standard حين تضيق بك الـ 4 غيغابايت بدل تهيئة جهاز أولًا.',
           '**استخدم Pinecone إن** أردت صفر عمل بنية تحتية وقبلت الارتباط بالمحرك — الخطوة التالية: ابدأ من Builder بـ 20 دولارًا شهريًا واحسب حجم وحدات القراءة والكتابة قبل الانتقال إلى Standard.',
           '**استخدم Weaviate إن** كان البحث الهجين محوريًا للاسترجاع — الخطوة التالية: قيّمه على الطبقة المجانية، فهي منذ يونيو 2026 لا تكلّف شيئًا ولا تنتهي.',
           '**استخدم Chroma إن** كنت تبني نموذجًا أوليًا وتريد استرجاعًا يعمل اليوم — الخطوة التالية: نفّذ `pip install chromadb`، وخطّط للانتقال إلى Qdrant أو Weaviate وفق جدولك أنت.',
@@ -4664,7 +4664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'هل Pinecone أفضل من Weaviate للاسترجاع المعزز؟',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'لا أحدهما أفضل على إطلاقه. فلدى Pinecone المنتج المُدار الأنضج وبلا نسخة ذاتية الاستضافة. ويوفّر Weaviate المحرك نفسه ذاتي الاستضافة ومُدارًا ولديه البحث الهجين الأنضج، فيناسب الفرق التي تريد مسار انتقال أو تعتمد على المصطلحات الدقيقة في الاسترجاع.',
+            text: 'لا أحدهما أفضل على إطلاقه. فلدى Pinecone بحسب تقييمنا المنتج المُدار الأنضج وبلا نسخة ذاتية الاستضافة. ويوفّر Weaviate المحرك نفسه ذاتي الاستضافة ومُدارًا ولديه بحسب تقييمنا البحث الهجين الأنضج، فيناسب الفرق التي تريد مسار انتقال أو تعتمد على المصطلحات الدقيقة في الاسترجاع.',
           },
         },
         {
@@ -4693,7 +4693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       numberOfItems: 4,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'خيارنا الافتراضي — Apache-2.0، Rust، وطبقة سحابية مجانية مع Standard بالاستهلاك' },
-        { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'الأفضل بلا تشغيل — أنضج منتج بلا خوادم، وBuilder بسعر ثابت 20 دولارًا شهريًا، لكنه سحابي فقط وبلا نسخة ذاتية الاستضافة' },
+        { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'الأفضل بلا تشغيل — بحسب تقييمنا منتج ناضج بلا خوادم، وBuilder بسعر ثابت 20 دولارًا شهريًا، لكنه سحابي فقط وبلا نسخة ذاتية الاستضافة' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'الأفضل للبحث الهجين — BM25 مع المتجهات أصليًا، ومنذ يونيو 2026 طبقة مجانية بلا انتهاء بـ 100 ألف كائن' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'الأفضل للنماذج الأولية — يعمل داخل العملية بلا خادم، ونواته بلغة Rust، وChroma Cloud من صفر دولار شهريًا زائد الاستهلاك' },
       ],
@@ -4728,7 +4728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       answer: '**운영 여력이 조금이라도 있다면 기본 선택인 Qdrant, 인프라 작업을 0으로 만들고 싶다면 Pinecone, 검색 정확도에 하이브리드 검색이 핵심이라면 Weaviate, 프로토타입 중이고 서버를 전혀 두고 싶지 않다면 Chroma입니다.** 여기에 단일 승자는 없고, 하나를 지목하는 가이드는 당신의 질문이 아닌 다른 질문에 답하고 있는 것입니다. 진짜 결정은 엔진을 직접 운영할 것인가 빌릴 것인가이며, 이는 팀에 남는 것이 엔지니어링 시간인지 예산인지에 달려 있습니다. 둘이 같은 제약인 경우는 드뭅니다.',
       bullets: [
         '**종합 최고:** Qdrant — 스타 35,383개, Apache-2.0, Rust 작성, 0.5 vCPU / 1GB RAM / 4GB 디스크의 무료 클라우드 등급(미사용 시 일시 중지)',
-        '**운영 없이 쓰기 최적:** Pinecone — 가장 성숙한 서버리스 제품, Builder 월 20달러 정액, Standard 월 최소 50달러',
+        '**운영 없이 쓰기 최적:** Pinecone — 당사 평가로는 성숙한 서버리스 제품, Builder 월 20달러 정액, Standard 월 최소 50달러',
         '**하이브리드 검색 최적:** Weaviate — BM25와 벡터를 네이티브로 결합, 2026년 6월부터 만료 없고 신용카드도 필요 없는 무료 등급',
         '**프로토타이핑 최적:** Chroma — `pip install chromadb` 하면 파이썬 프로세스 안에서 돌아가고, 세울 서버가 없습니다',
         '**이제 넷 다 무료 등급이 있습니다** — Weaviate는 14일 샌드박스뿐이라는 널리 퍼진 이야기는 낡은 정보입니다',
@@ -4767,7 +4767,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pinecone** — 설계상 클라우드 전용이며 자체 호스팅 버전이 전혀 없습니다. Starter는 무료로 스토리지 2GB, 월 200만 쓰기 단위와 100만 읽기 단위를 제공합니다. Builder는 월 20달러 정액에 10GB, 쓰기 500만, 읽기 200만입니다. Standard는 월 최소 50달러에서 시작해 이후 사용량 과금이며, Enterprise는 월 최소 500달러로 99.95% 가동률 보장, BYOC, HIPAA, 감사 로그가 더해집니다.',
           '**Weaviate** — 스타 16,934개, BSD-3-Clause, Go로 작성. **이 페이지에서 가장 중요한 정정:** Weaviate Cloud는 더 이상 14일 샌드박스가 아닙니다. 2026년 6월 17일, 신용카드 없이 만료도 없는 진짜 무료 등급이 출시됐습니다. 객체 10만 개, 메모리 1GB, 디스크 10GB입니다. 여전히 첫날부터 월 45달러를 잡아두라고 조언하는 비교 글은, 이제 무료인 것에 독자가 돈을 내게 만들고 있습니다.',
           '**Weaviate의 유료 가격도 바뀌었습니다.** 현행 요금 페이지는 Flex 월 45달러부터, Premium 월 400달러부터를 싣고 있습니다. 2025년 10월 가격 개편에서 발표된 월 280달러 Plus 등급은 그곳에 더 이상 없으므로, 예전 3단 구조 대신 Flex와 Premium을 인용하세요.',
-          '**Chroma** — 스타 29,622개, Apache-2.0, 그리고 출발점이던 파이썬 엔진이 아니라 이제 Rust 코어입니다. 넷 중 유일하게 서버 없이 프로세스 안에서 돌아가며, 프로토타이핑에서 이기는 이유가 바로 그것입니다.',
+          '**Chroma** — 스타 29,622개, Apache-2.0, 그리고 출발점이던 파이썬 엔진이 아니라 이제 Rust 코어입니다. 넷 중 서버 없이 프로세스 안에서 돌아가도록 설계된 제품이며(Qdrant의 파이썬 클라이언트에도 테스트용 로컬 모드가 있지만 운영 경로는 서버입니다), 프로토타이핑에서 이기는 이유가 바로 그것입니다.',
           '**Chroma Cloud도 있습니다.** 이 분야 비교 글 대부분이 통째로 놓치는 부분입니다. Starter는 월 0달러에 사용량 과금이며 초기 크레딧 5달러가 붙고, Team은 월 250달러에 사용량 과금이며, 사용량은 쓰기 1GiB당 2.50달러, 저장 1GiB당 월 0.33달러, 조회 1TiB당 0.0075달러, 반환 1GiB당 0.09달러입니다. 즉 여기 매니지드 선택지는 셋이 아니라 넷입니다.',
           '**이제 넷 다 무료 등급이 있습니다.** 1년 전에는 사실이 아니었고, 지금 읽고 있는 비교 글이 갱신됐는지 확인하는 가장 빠른 방법이기도 합니다.',
           '**분명히 밝혀둘 것:** Pinecone은 실제로 콘텐츠 제작자를 위한 제휴 프로그램을 운영하며, 자사 파트너 페이지에서 확인됩니다. PromptQuorum은 여기에 가입하지 않았고 이 페이지의 어떤 링크로도 수익을 얻지 않습니다. 이 시리즈에서 그런 프로그램이 존재하는 유일한 분야이며, 바로 그래서 위의 추천이 Pinecone이 아니라 Qdrant입니다.',
@@ -4779,8 +4779,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**구조적인 질문은 엔진을 직접 운영할 것인가 빌릴 것인가이며, 이는 무엇이 희소한지 — 엔지니어링 시간인지 예산인지 — 에 달려 있습니다.** 위에서부터 읽다가 자신에게 해당하는 첫 줄에서 멈추세요.',
         items: [
           '**운영 여력이 조금 있고 비용과 성능을 직접 관리하고 싶다** → Qdrant. 자체 호스팅이든 Qdrant Cloud든. Rust로 작성되었고, 오픈소스 엔진 셋 중 GitHub 커뮤니티가 가장 큽니다.',
-          '**인프라 작업을 0으로 만들고 그 대가를 낼 생각이다** → Pinecone. 가장 성숙한 서버리스 제품이며, 월 20달러 정액의 Builder는 체험판이 아니라 진짜 요금제입니다.',
-          '**검색 정확도가 글자 그대로의 일치와 의미적 일치의 결합에 달려 있다** → Weaviate. BM25와 벡터의 네이티브 결합은 여기서 가장 성숙한 하이브리드 구현이며, 무료 등급이라 평가에 돈이 들지 않습니다.',
+          '**인프라 작업을 0으로 만들고 그 대가를 낼 생각이다** → Pinecone. 당사 평가로는 성숙한 서버리스 제품이며, 월 20달러 정액의 Builder는 체험판이 아니라 진짜 요금제입니다.',
+          '**검색 정확도가 글자 그대로의 일치와 의미적 일치의 결합에 달려 있다** → Weaviate. BM25와 벡터의 네이티브 결합은 당사 평가로는 여기서 가장 완성도 높은 하이브리드 구현이며, 무료 등급이라 평가에 돈이 들지 않습니다.',
           '**노트북에서 프로토타입 중이고 서버를 두고 싶지 않다** → Chroma. 파이썬 프로세스 안에서 돌아가므로 검색이 동작하기 전에 준비할 것이 없습니다.',
           '**데이터가 내가 통제하는 하드웨어에 있어야 한다** → Qdrant, Weaviate, Chroma 중 하나를 자체 호스팅. Pinecone은 자체 호스팅 버전이 없어, Enterprise의 BYOC 옵션을 쓸 때만 데이터가 자체 환경에 남습니다. 특정 리전만 필요하다면 Pinecone의 최신 리전 문서를 확인하세요.',
           '**벡터가 약 1만 개 미만이다** → 넷 다 필요 없습니다. Postgres의 pgvector가 그 규모를 감당하며, 운영할 서비스를 늘리지 않아도 되고 필요 없는 새 쿼리 API를 배우지 않아도 됩니다.',
@@ -4830,10 +4830,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 항목: '라이선스', Qdrant: 'Apache-2.0', Pinecone: '독점', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
           { 항목: '구현 언어', Qdrant: 'Rust', Pinecone: '비공개', Weaviate: 'Go', Chroma: '코어는 Rust' },
           { 항목: '자체 호스팅', Qdrant: '가능, 무료', Pinecone: '불가, 클라우드 전용', Weaviate: '가능, 무료', Chroma: '가능, 무료' },
-          { 항목: '프로세스 내 실행', Qdrant: '불가, 서버형', Pinecone: '불가, 호스팅형', Weaviate: '불가, 서버형', Chroma: '가능' },
+          { 항목: '프로세스 내 실행', Qdrant: '파이썬 로컬 모드만, 운영은 서버형', Pinecone: '불가, 호스팅형', Weaviate: '불가, 서버형', Chroma: '가능' },
           { 항목: '클라우드 무료 등급', Qdrant: '0.5 vCPU, 1GB, 4GB', Pinecone: '2GB, 쓰기 200만, 읽기 100만', Weaviate: '객체 10만, 1GB, 10GB', Chroma: '월 0달러＋크레딧 5달러' },
           { 항목: '유료 시작가', Qdrant: '사용량 과금, 정액 없음', Pinecone: 'Builder 월 20달러 정액', Weaviate: 'Flex 월 45달러부터', Chroma: 'Team 월 250달러＋사용량' },
-          { 항목: '하이브리드 검색', Qdrant: '네이티브, 희소＋조밀', Pinecone: '지원', Weaviate: 'BM25 네이티브, 가장 성숙', Chroma: '더 최근, 완성도 낮음' },
+          { 항목: '하이브리드 검색', Qdrant: '네이티브, 희소＋조밀', Pinecone: '지원', Weaviate: 'BM25 네이티브', Chroma: '더 최근, 문서 확인' },
           { 항목: '기본 등급 SLA', Qdrant: 'Standard 99.5%', Pinecone: 'Enterprise만 99.95%', Weaviate: 'Flex 99.5%', Chroma: 'Enterprise 미만 비공개' },
           { 항목: '제휴 프로그램', Qdrant: '확인되지 않음', Pinecone: '있음, 당사는 미가입', Weaviate: '확인되지 않음', Chroma: '확인되지 않음' },
         ],
@@ -4961,7 +4961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       chroma: {
         id: 'chroma',
         title: 'Chroma: 프로토타이핑을 위한 선택',
-        content: '**Chroma는 넷 중 유일하게 서버 없이 파이썬 프로세스 안에서 돌아가며, 그래서 아무것도 없는 상태에서 동작하는 검색까지가 가장 빠릅니다.** 의도적으로 다른 셋보다 좁고, 그 점을 솔직하게 밝힙니다.',
+        content: '**Chroma는 넷 중 서버 없이 파이썬 프로세스 안에서 돌아가도록 설계된 제품이며(Qdrant의 파이썬 클라이언트는 테스트용 로컬 모드만 제공합니다), 그래서 아무것도 없는 상태에서 동작하는 검색까지가 가장 빠릅니다.** 의도적으로 다른 셋보다 좁고, 그 점을 솔직하게 밝힙니다.',
         rankedItems: [
           {
             rank: 1,
@@ -5025,7 +5025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '이 수치는 2026년 11월 2일 기준 일반적인 머신 가격과 각 사 정가로 모델링한 추정치이며, 실측된 프로덕션 청구서가 아닙니다. Pinecone, Qdrant Cloud, Chroma Cloud의 사용량 비용은 질의량에 따라 달라지므로, 결정 전에 예상 읽기·쓰기 양을 각 사 계산기에 넣어 보세요.',
           },
         ],
-        note: '100만 벡터에서는 대개 정가가 아니라 운영 항목이 결정을 짓습니다. 소재지나 사용량이 요구하면 자체 호스팅하고, 그렇지 않다면 자기 시간을 정직하게 값 매긴 순간 매니지드 등급이 더 쌉니다.',
+        note: '100만 벡터에서는 대개 정가가 아니라 운영 항목이 결정을 짓습니다. 소재지나 사용량이 요구하면 자체 호스팅하고, 그렇지 않다면 이 모델에서는 운영 시간에 값을 매긴 순간 매니지드 등급이 더 싸지며, 운영 시간이 더 싸거나 사용량이 많으면 결과가 뒤집힙니다.',
       },
       hybridSearch: {
         id: 'hybrid-search',
@@ -5118,7 +5118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'RAG에는 Pinecone이 Weaviate보다 나은가요?',
-            a: '어느 쪽도 보편적으로 낫지는 않습니다. Pinecone은 더 성숙한 매니지드 서버리스 제품을 갖췄고 자체 호스팅 버전이 없으므로, 선택은 그 엔진에 대한 약속입니다. Weaviate는 자체 호스팅과 매니지드에서 같은 엔진을 제공해 양방향 이전 경로를 남기며, 하이브리드 검색이 더 성숙합니다. 사는 것이 운영의 단순함이라면 Pinecone을, 기술 콘텐츠에서의 검색 품질이 중요하거나 나중에 자체 하드웨어로 옮길 선택지를 남기고 싶다면 Weaviate를 고르세요.',
+            a: '어느 쪽도 보편적으로 낫지는 않습니다. 당사 평가로는 Pinecone이 더 성숙한 매니지드 서버리스 제품을 갖췄고, 자체 호스팅 버전은 없으므로, 선택은 그 엔진에 대한 약속입니다. Weaviate는 자체 호스팅과 매니지드에서 같은 엔진을 제공해 양방향 이전 경로를 남기며, 당사 평가로는 하이브리드 검색이 더 성숙합니다. 사는 것이 운영의 단순함이라면 Pinecone을, 기술 콘텐츠에서의 검색 품질이 중요하거나 나중에 자체 하드웨어로 옮길 선택지를 남기고 싶다면 Weaviate를 고르세요.',
           },
           {
             q: '100만 벡터의 벡터 데이터베이스는 비용이 얼마인가요?',
@@ -5126,7 +5126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qdrant와 Weaviate는 같은 것인가요?',
-            a: '아닙니다. 아키텍처와 쿼리 인터페이스가 다른 별개의 오픈소스 프로젝트입니다. Qdrant는 Rust로 작성돼 REST와 gRPC 위에 자체 API를 갖고, Weaviate는 Go로 작성돼 GraphQL 인터페이스로 알려져 있습니다. 둘 다 하이브리드 검색을 지원하고 자체 호스팅이나 매니지드로 돌지만, 한쪽으로 쓴 쿼리는 다시 쓰지 않으면 옮길 수 없습니다. Qdrant는 인덱스 탐색 중에 메타데이터를 필터링하며, Weaviate는 하이브리드 검색이 더 성숙하고 벡터화 모듈을 내장합니다.',
+            a: '아닙니다. 아키텍처와 쿼리 인터페이스가 다른 별개의 오픈소스 프로젝트입니다. Qdrant는 Rust로 작성돼 REST와 gRPC 위에 자체 API를 갖고, Weaviate는 Go로 작성돼 GraphQL 인터페이스로 알려져 있습니다. 둘 다 하이브리드 검색을 지원하고 자체 호스팅이나 매니지드로 돌지만, 한쪽으로 쓴 쿼리는 다시 쓰지 않으면 옮길 수 없습니다. Qdrant는 인덱스 탐색 중에 메타데이터를 필터링하며, Weaviate는 당사 평가로 하이브리드 검색이 더 성숙하고 벡터화 모듈을 내장합니다.',
           },
           {
             q: 'Chroma에서 Qdrant로 어떻게 옮기나요?',
@@ -5146,7 +5146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '최종 결론',
         items: [
-          '**Qdrant를 고르세요.** 비용 대비 성능이 가장 좋고 자체 호스팅이든 매니지드든 도는 엔진을 원한다면. 다음 단계: 영구 무료 클라우드 등급에서 시작하고, 머신부터 준비하는 대신 4GB가 부족해질 때 Standard로 옮기세요.',
+          '**Qdrant를 고르세요.** 저비용 경로를 원하고 자체 호스팅이든 매니지드든 도는 엔진을 원한다면. 다음 단계: 영구 무료 클라우드 등급에서 시작하고, 머신부터 준비하는 대신 4GB가 부족해질 때 Standard로 옮기세요.',
           '**Pinecone을 고르세요.** 인프라 작업을 0으로 만들고 엔진 고정을 받아들인다면. 다음 단계: 월 20달러 Builder에서 시작하고, Standard로 옮기기 전에 읽기·쓰기 단위 사용량을 계산하세요.',
           '**Weaviate를 고르세요.** 검색에서 하이브리드 검색이 핵심이라면. 다음 단계: 무료 등급에서 평가하세요. 2026년 6월부터 비용이 들지 않고 만료도 없습니다.',
           '**Chroma를 고르세요.** 프로토타입 중이고 오늘 검색을 돌려 보고 싶다면. 다음 단계: `pip install chromadb`, 그리고 Qdrant나 Weaviate로의 이전은 본인 일정에 맞춰 계획하세요.',
@@ -5233,7 +5233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'RAG에는 Pinecone이 Weaviate보다 나은가요?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: '어느 쪽도 보편적으로 낫지는 않습니다. Pinecone은 더 성숙한 매니지드 제품을 갖췄고 자체 호스팅 버전이 없습니다. Weaviate는 자체 호스팅과 매니지드에서 같은 엔진을 제공하고 하이브리드 검색이 더 성숙해, 이전 경로를 원하거나 검색에서 정확한 용어에 의존하는 팀에 맞습니다.',
+            text: '어느 쪽도 보편적으로 낫지는 않습니다. 당사 평가로는 Pinecone이 더 성숙한 매니지드 제품을 갖췄고, 자체 호스팅 버전은 없습니다. Weaviate는 자체 호스팅과 매니지드에서 같은 엔진을 제공하고 당사 평가로는 하이브리드 검색이 더 성숙해, 이전 경로를 원하거나 검색에서 정확한 용어에 의존하는 팀에 맞습니다.',
           },
         },
         {
@@ -5262,7 +5262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       numberOfItems: 4,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Qdrant', description: '기본 선택 — Apache-2.0, Rust, 사용량 과금 Standard를 갖춘 무료 클라우드 등급' },
-        { '@type': 'ListItem', position: 2, name: 'Pinecone', description: '운영 없이 쓰기 최적 — 가장 성숙한 서버리스 제품, Builder 월 20달러 정액. 다만 클라우드 전용이고 자체 호스팅 버전이 없음' },
+        { '@type': 'ListItem', position: 2, name: 'Pinecone', description: '운영 없이 쓰기 최적 — 당사 평가로는 성숙한 서버리스 제품, Builder 월 20달러 정액. 다만 클라우드 전용이고 자체 호스팅 버전이 없음' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: '하이브리드 검색 최적 — BM25와 벡터를 네이티브로 결합, 2026년 6월부터 객체 10만 개의 만료 없는 무료 등급' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: '프로토타이핑 최적 — 서버 없이 프로세스 안에서 실행, Rust 코어, Chroma Cloud는 월 0달러＋사용량부터' },
       ],
