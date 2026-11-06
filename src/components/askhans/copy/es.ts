@@ -54,7 +54,7 @@ export const copy: AskCopy = {
   consentTitle: 'Antes de empezar',
   consentParagraphs: [
     'Ask Hans responde a sus preguntas con ayuda de una IA (Claude, de Anthropic) a partir de los contenidos de PromptQuorum. Para ello, su entrada se transmite a nuestro servidor y a Anthropic. No introduzca datos personales.',
-    'Si elige «Sí, de acuerdo», nos permite registrar de forma anónima, con fines estadísticos y para mejorar Ask Hans y nuestros contenidos: el tema de su pregunta, qué apps, categorías del directorio y herramientas ha consultado Ask Hans para responder, el idioma, en qué enlaces hace clic y qué funciones utiliza (por ejemplo, las preguntas de seguimiento sugeridas o iniciar un chat nuevo), la hora y un identificador de visita aleatorio que no está vinculado a usted. Las estadísticas no contienen el texto de la pregunta ni de la respuesta, ni su dirección IP ni su nombre. Solo publicamos cifras agregadas.',
+    'Si elige «Sí, de acuerdo», nos permite registrar de forma anónima, con fines estadísticos y para mejorar Ask Hans y nuestros contenidos: el tema de su pregunta, qué apps, categorías del directorio y herramientas ha consultado Ask Hans para responder, el idioma, en qué enlaces hace clic y qué funciones utiliza (por ejemplo, las preguntas de seguimiento sugeridas o iniciar un chat nuevo), la hora y un identificador de visita aleatorio que no está vinculado a usted. Las estadísticas no contienen el texto de la pregunta ni de la respuesta, ni su dirección IP ni su nombre. Solo publicamos cifras agregadas. También contamos, en rangos aproximados, si se trata de una visita repetida y cuánto tiempo permanece abierto Ask Hans. Para ello, el navegador recuerda en el dispositivo (no en nuestro servidor) el día de la primera visita y cuántas veces se ha usado Ask Hans; se elimina al retirar el consentimiento.',
     'Su consentimiento es voluntario. Puede usar Ask Hans sin él y revocarlo en cualquier momento con efectos para el futuro. Como prueba de su decisión guardamos la hora, la versión del texto y el identificador de visita aleatorio. Independientemente de lo que elija, contamos de forma anónima cuántas veces se abre Ask Hans y cuántas respuestas se dan (solo totales: sin identificador ni texto).',
   ],
   consentPrivacyLink: 'Más información en la política de privacidad.',
@@ -102,6 +102,25 @@ export const copy: AskCopy = {
     copy: "Copiar",
     copied: "Copiado",
     copyAnswer: "Copiar respuesta",
+    moreOptions: "Más opciones para copiar y compartir",
+    copyFormatted: "Copiar con formato",
+    copyPlain: "Copiar como texto sin formato",
+    shareEmail: "Enviar por correo electrónico",
+    shareWhatsApp: "Enviar por WhatsApp",
+    shareTelegram: "Enviar por Telegram",
+    shareMore: "Compartir…",
+    emailSubject: "Respuesta de Ask Hans (PromptQuorum)",
+  },
+
+  promo: {
+    title: "¿Te gusta Ask Hans?",
+    body: "Hasta donde sabemos, Ask Hans y el servidor MCP de PromptQuorum son el único sitio web de IA local con un asistente de IA y un servidor MCP que pueden leer todo el sitio. Si te ayudan, compártelos con tus amigos.",
+    share: "Compartir con amigos",
+    copyLink: "Copiar enlace",
+    linkCopied: "Enlace copiado",
+    shareText: "Ask Hans: el asistente de IA de PromptQuorum para IA local, hardware y hogar inteligente.",
+    close: "Ocultar",
+    imageAlt: "Ask Hans y el MCP de PromptQuorum: hasta donde sabemos, el único sitio de IA local con ambos",
   },
 
   panel: {

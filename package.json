@@ -36,6 +36,7 @@
     "test:app-activity": "node scripts/test-app-activity.mjs",
     "askhans:check": "node scripts/check-askhans-config.mjs",
     "askhans:pictures": "node scripts/gen-askhans-pictures.mjs",
+    "askhans:promo": "node scripts/gen-askhans-promo.mjs",
     "askhans:stats": "node scripts/askhans-stats.mjs",
     "test:stale-banner": "node scripts/test-stale-banner.mjs",
     "test:outbound-utm": "node scripts/test-outbound-utm.mjs",

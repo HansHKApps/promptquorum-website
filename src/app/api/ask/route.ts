@@ -19,6 +19,7 @@ import { Ratelimit } from '@upstash/ratelimit'
 import { redis } from '@/lib/redis'
 import { ASK_HANS_DEFAULT_MODEL, ASK_HANS_LIMITS } from '@/lib/askhans/config'
 import { buildSystemPrompt } from '@/lib/askhans/system-prompt'
+import { detectLang } from '@/lib/askhans/detect-lang'
 import { generateFollowups } from '@/lib/askhans/followups'
 import { missingSourcesMarkdown } from '@/lib/askhans/sources'
 import { bumpTotals } from '@/lib/askhans/totals'
@@ -138,11 +139,13 @@ export async function POST(req: NextRequest): Promise<Response> {
     console.error('[askhans] visit counter failed', err instanceof Error ? err.message : err)
   }
 
-  const { lang, messages: history } = parsed
+  const { lang: pageLang, messages: history } = parsed
+  // The visitor's question decides the language of answer, link titles and link prefixes, not the page they are on.
+  const lang = detectLang(history[history.length - 1]?.content ?? '', pageLang)
   const model = process.env.ASK_HANS_MODEL || ASK_HANS_DEFAULT_MODEL
   const client = new Anthropic({ maxRetries: 1, timeout: ASK_HANS_LIMITS.answerTimeoutMs })
   const tools = buildToolDefinitions()
-  const system = buildSystemPrompt(lang)
+  const system = buildSystemPrompt(pageLang, lang)
   const abort = AbortSignal.timeout(ASK_HANS_LIMITS.answerTimeoutMs)
   const startedAt = Date.now()
 

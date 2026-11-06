@@ -39,6 +39,7 @@ import {
   getAppAlternatives,
   getHandsOnTestFindings,
 } from '@/lib/mcp/directory-tools'
+import { getPage, listPages, PageNotFoundError } from '@/lib/mcp/pages'
 import { STACK_RECIPES } from '@/lib/power-local-llm/stacks'
 import { recordMcpCall, type McpToolName } from '@/lib/mcp/usage'
 import { recordMcpDimensions } from '@/lib/mcp/usage-dimensions'
@@ -151,7 +152,7 @@ const handler = createMcpHandler(
       'get_article',
       {
         title: 'Get PromptQuorum article',
-        description: 'Fetch the full content of one PromptQuorum article by cluster + slug (from a search_promptquorum result URL).',
+        description: 'Fetch the full content of one PromptQuorum article by cluster + slug (from a search_promptquorum result URL). For the home page, About, Security, Privacy and other pages that are not articles, use get_page.',
         inputSchema: z.object({
           cluster: z.string().describe('Cluster the article belongs to, e.g. "local-llms" or "power-local-llm"'),
           slug: z.string().describe('URL slug of the article'),
@@ -164,6 +165,41 @@ const handler = createMcpHandler(
             return jsonResult(getArticle(args), 'get_article')
           } catch (err) {
             if (err instanceof ArticleNotFoundError) return errorResult(err.message)
+            throw err
+          }
+        })
+    )
+
+    server.registerTool(
+      'list_pages',
+      {
+        title: 'List readable PromptQuorum pages',
+        description:
+          'List every page of promptquorum.com that is not an article (home page, About, PromptQuorum app page, Security, Privacy, Impressum, prompt frameworks, tool pages, cluster hubs) with its URL and a short description. Read one with get_page. Example: {"lang":"de"}.',
+        inputSchema: z.object({
+          lang: z.string().optional().describe('Language code (en, de, fr, ja, zh, es, pt, ar, ko), defaults to en'),
+        }),
+      },
+      async (args) => withUsageTracking('list_pages', () => jsonResult(listPages(args), 'list_pages'))
+    )
+
+    server.registerTool(
+      'get_page',
+      {
+        title: 'Get PromptQuorum page',
+        description:
+          'Read the text of one PromptQuorum page that is not an article, for example the home page, About, Security or Privacy. Pass a path from list_pages. Example: {"path":"/about","lang":"en"}. Articles are read with get_article, directory apps with get_app_details.',
+        inputSchema: z.object({
+          path: z.string().describe('Page path from list_pages, e.g. "/", "/about", "/pq-apps", "/security"'),
+          lang: z.string().optional().describe('Language code, defaults to en'),
+        }),
+      },
+      async (args) =>
+        withUsageTracking('get_page', async () => {
+          try {
+            return jsonResult(await getPage(args), 'get_page')
+          } catch (err) {
+            if (err instanceof PageNotFoundError) return errorResult(err.message)
             throw err
           }
         })

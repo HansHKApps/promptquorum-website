@@ -99,4 +99,42 @@ export function clearConsent(): void {
   } catch {
     // ignore
   }
+  clearUsage() // withdrawing consent also removes the return-visit memory
+}
+
+interface UsageRecord {
+  firstDay: string
+  visits: number
+}
+
+const dayOf = (d = new Date()) => d.toISOString().slice(0, 10)
+
+/**
+ * Return-visit memory, kept in this browser only and only while the visitor has said "Yes": the day of the first
+ * visit and how many browser sessions used Ask Hans. Called once per page load; a session counts once.
+ * Only the buckets derived from it (new/back, days since first visit) are ever sent, never the dates.
+ */
+export function touchUsage(): { returning: boolean; daysSinceFirst: number } {
+  const today = dayOf()
+  let newSession = true
+  try {
+    newSession = !sessionStorage.getItem(ASK_HANS_STORAGE.usageSession)
+    sessionStorage.setItem(ASK_HANS_STORAGE.usageSession, '1')
+  } catch {
+    // no session storage: count every load as a new session at most once per call
+  }
+  const existing = read<UsageRecord>(localStorage, ASK_HANS_STORAGE.usage)
+  const rec: UsageRecord = existing && /^\d{4}-\d{2}-\d{2}$/.test(existing.firstDay) ? { ...existing, visits: existing.visits + (newSession ? 1 : 0) } : { firstDay: today, visits: 1 }
+  write(localStorage, ASK_HANS_STORAGE.usage, rec)
+  const days = Math.max(0, Math.round((Date.parse(today) - Date.parse(rec.firstDay)) / 86_400_000))
+  return { returning: rec.visits > 1, daysSinceFirst: days }
+}
+
+export function clearUsage(): void {
+  try {
+    localStorage.removeItem(ASK_HANS_STORAGE.usage)
+    sessionStorage.removeItem(ASK_HANS_STORAGE.usageSession)
+  } catch {
+    // ignore
+  }
 }

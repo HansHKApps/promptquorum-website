@@ -5,7 +5,8 @@
 // Conversations are kept in sessionStorage only; nothing is stored on the server.
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { ASK_HANS_LIMITS, ASK_HANS_OPEN_EVENT, ASK_HANS_SPLIT, ASK_HANS_CONSENT_TEXT_VERSION } from '@/lib/askhans/config'
+import { ASK_HANS_LIMITS, ASK_HANS_OPEN_EVENT, ASK_HANS_SPLIT, ASK_HANS_CONSENT_TEXT_VERSION, ASK_HANS_PROMO_AFTER_S, ASK_HANS_STORAGE } from '@/lib/askhans/config'
+import { daysBucket, durationBucket, questionBucket } from '@/lib/askhans/engagement'
 import { DEFAULT_CATEGORY_KEY, type AskHansLink } from '@/lib/askhans/categories'
 import { AskHansLogo } from './AskHansLogo'
 import { AskHansWindow } from './AskHansWindow'
@@ -14,10 +15,10 @@ import { useAskCopy, useAskLang } from './copy'
 import { FeedbackBar } from './FeedbackBar'
 import { AskIcon } from './icons'
 import { Markdown } from './markdown'
-import { CopyButton, plainText } from './CopyButton'
+import { ASK_HANS_SHARE_EVENT, CopyButton, type ShareKind, type ShareSource } from './CopyButton'
 import { clickSection, relatedLinks } from './links'
 import { MarketingPanel } from './MarketingPanel'
-import { clearConsent, clearSavedConversations, getVisitId, loadConsent, loadConversations, loadUi, saveConsent, saveConversations, saveUi, uid } from './storage'
+import { clearConsent, clearSavedConversations, getVisitId, loadConsent, loadConversations, loadUi, saveConsent, saveConversations, saveUi, touchUsage, uid } from './storage'
 import type { AskErrorCode, ChatMsg, ConsentRecord, Conversation, Rect, UiState } from './types'
 import { logEvent, streamAnswer } from './useAskStream'
 import { useIsDesktop } from './useIsDesktop'
@@ -59,7 +60,15 @@ export function AskHansRoot() {
   const [expanded, setExpanded] = useState<Set<string>>(new Set())
   const [showPanel, setShowPanel] = useState(true)
   const [showHistory, setShowHistory] = useState(true)
+  /** the 2-minute promo card replaces the topic picture (once per visit) */
+  const [promo, setPromo] = useState(false)
   const visitId = useRef('')
+  /** active seconds (window open + tab visible): since the last flushed use session, and in this whole visit */
+  const segMs = useRef(0)
+  const totalMs = useRef(0)
+  const sessionQuestions = useRef(0)
+  /** return-visit info, only filled while the visitor has said "Yes" */
+  const usageInfo = useRef<{ returning: boolean; daysSinceFirst: number } | null>(null)
   /** answers that already produced a counted click (each answer counts once in the click-through rate) */
   const clickedAnswers = useRef(new Set<string>())
   const wasOpen = useRef<boolean | null>(null)
@@ -68,6 +77,20 @@ export function AskHansRoot() {
   const scrollRef = useRef<HTMLDivElement>(null)
   const stick = useRef(true)
   const expandedRef = useRef<HTMLDivElement>(null)
+
+  // Consent as a ref, so event handlers registered once always see the current choice.
+  const consentRef = useRef<ConsentRecord | null>(null)
+
+  // One use session ended (window closed / page left): anonymous buckets only, and only with consent "Yes".
+  const flushSession = useCallback(() => {
+    const seconds = segMs.current / 1000
+    const info = usageInfo.current
+    if (consentRef.current?.value === 'yes' && info && seconds >= 3) {
+      logEvent({ type: 'session_end', ret: info.returning ? 'back' : 'new', days: daysBucket(info.daysSinceFirst), dur: durationBucket(seconds), msgs: questionBucket(sessionQuestions.current) })
+    }
+    segMs.current = 0
+    sessionQuestions.current = 0
+  }, [])
 
   // ---- load / persist -------------------------------------------------------------------------
   // Browser storage only exists after hydration, so the initial load has to happen in an effect.
@@ -81,6 +104,13 @@ export function AskHansRoot() {
     setActiveId(cs.length ? cs[cs.length - 1].id : null)
     setUi(loadUi())
     setConsent(c)
+    consentRef.current = c
+    if (c?.value === 'yes') usageInfo.current = touchUsage()
+    try {
+      if (sessionStorage.getItem(ASK_HANS_STORAGE.promoShown)) totalMs.current = ASK_HANS_PROMO_AFTER_S * 1000
+    } catch {
+      // ignore
+    }
     setReady(true)
   }, [])
   /* eslint-enable react-hooks/set-state-in-effect */
@@ -94,8 +124,39 @@ export function AskHansRoot() {
     // (anonymous counter, no visitor ID).
     if (!ready) return
     if (wasOpen.current === false && ui.open) logEvent({ type: 'open' })
+    if (wasOpen.current === true && !ui.open) flushSession()
     wasOpen.current = ui.open
-  }, [ui.open, ready])
+  }, [ui.open, ready, flushSession])
+
+  // Active time: counts seconds while the window is open and the tab is visible. Feeds the anonymous
+  // time-in-tool counter (with consent only) and the one-time promo card after ASK_HANS_PROMO_AFTER_S seconds.
+  useEffect(() => {
+    if (!ready || !ui.open) return
+    const id = setInterval(() => {
+      if (document.visibilityState !== 'visible') return
+      segMs.current += 1000
+      totalMs.current += 1000
+      if (totalMs.current === ASK_HANS_PROMO_AFTER_S * 1000) {
+        try {
+          if (!sessionStorage.getItem(ASK_HANS_STORAGE.promoShown)) {
+            sessionStorage.setItem(ASK_HANS_STORAGE.promoShown, '1')
+            setPromo(true)
+            if (consentRef.current?.value === 'yes') logEvent({ type: 'promo_shown' })
+          }
+        } catch {
+          setPromo(true)
+        }
+      }
+    }, 1000)
+    return () => clearInterval(id)
+  }, [ready, ui.open])
+
+  // Leaving the page ends the use session too.
+  useEffect(() => {
+    const on = () => flushSession()
+    window.addEventListener('pagehide', on)
+    return () => window.removeEventListener('pagehide', on)
+  }, [flushSession])
 
   useEffect(() => {
     if (!ready || streaming) return
@@ -137,6 +198,7 @@ export function AskHansRoot() {
   const send = useCallback(
     async (text: string, consentValue: ConsentRecord | null) => {
       window.umami?.track('ask_hans_question', { source_page: window.location.pathname })
+      sessionQuestions.current += 1
       const conv = active ?? newConversation()
       const history = toApiMessages(conv.messages)
       const userMsg: ChatMsg = { id: uid(), role: 'user', content: text }
@@ -228,11 +290,27 @@ export function AskHansRoot() {
     return () => window.removeEventListener(ASK_HANS_OPEN_EVENT, on)
   }, [ready, openWindow])
 
+  // Anonymous share counter (copy / mail / messenger): only with consent, never any text.
+  useEffect(() => {
+    consentRef.current = consent
+  })
+  useEffect(() => {
+    const on = (e: Event) => {
+      if (consentRef.current?.value !== 'yes') return
+      const d = (e as CustomEvent<{ source: ShareSource; channel: ShareKind }>).detail
+      logEvent({ type: 'share', visitId: visitId.current, source: d.source, channel: d.channel })
+    }
+    window.addEventListener(ASK_HANS_SHARE_EVENT, on)
+    return () => window.removeEventListener(ASK_HANS_SHARE_EVENT, on)
+  }, [])
+
   // ---- consent --------------------------------------------------------------------------------
   const chooseConsent = (value: 'yes' | 'no', saveHistory: boolean) => {
     const rec = saveConsent(value, saveHistory)
     setConsent(rec)
     setConsentOpen(false)
+    consentRef.current = rec
+    if (value === 'yes') usageInfo.current = touchUsage()
     if (value === 'yes') logEvent({ type: 'consent_yes', visitId: visitId.current, textVersion: ASK_HANS_CONSENT_TEXT_VERSION })
     else logEvent({ type: 'consent_no' })
     const q = pendingQuestion
@@ -246,6 +324,8 @@ export function AskHansRoot() {
   const withdrawConsent = () => {
     if (consent?.value === 'yes') logEvent({ type: 'consent_withdrawn', visitId: visitId.current, textVersion: ASK_HANS_CONSENT_TEXT_VERSION })
     clearConsent()
+    usageInfo.current = null
+    consentRef.current = null
     clearSavedConversations() // withdrawing also deletes anything saved on this device
     setConsent(null)
     setConsentOpen(true)
@@ -357,7 +437,7 @@ export function AskHansRoot() {
               )}
               {m.content && !m.pending && (
                 <div className="mt-1 flex justify-end">
-                  <CopyButton text={plainText(m.content)} />
+                  <CopyButton md={m.content} />
                 </div>
               )}
               {m.pending && m.status && <p className="text-[13px] italic text-muted-foreground" role="status">{m.status}</p>}
@@ -515,7 +595,7 @@ export function AskHansRoot() {
                 />
               )}
 
-              {!isDesktop && showPanel && <MarketingPanel variant="strip" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onHide={() => setShowPanel(false)} />}
+              {!isDesktop && showPanel && <MarketingPanel variant="strip" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onHide={() => setShowPanel(false)} promo={promo} onPromoClose={() => setPromo(false)} />}
 
               <form
                 className="flex-shrink-0 border-t border-border bg-white p-2.5"
@@ -566,7 +646,7 @@ export function AskHansRoot() {
               </form>
             </div>
 
-            {isDesktop && showPanel && <MarketingPanel variant="side" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onHide={() => setShowPanel(false)} />}
+            {isDesktop && showPanel && <MarketingPanel variant="side" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onHide={() => setShowPanel(false)} promo={promo} onPromoClose={() => setPromo(false)} />}
           </div>
         </AskHansWindow>
       )}

@@ -9,7 +9,8 @@ import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 import { CATEGORY_SUB_LABEL } from '@/lib/power-local-llm/apps/categories'
 import type { CategorySubKey } from '@/lib/power-local-llm/apps/categories'
 import { ASK_HANS_CATEGORIES } from '@/lib/askhans/categories'
-import type { FeedbackStats, ReportRow, ReportWindow, UsageReportBase } from '@/lib/usage/report-types'
+import type { EngagementStats, FeedbackStats, ReportRow, ReportWindow, UsageReportBase } from '@/lib/usage/report-types'
+import { DURATION_BUCKETS, DURATION_MIDPOINT_S, type DurationBucket } from '@/lib/askhans/engagement'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { HUB_TONES } from '@/components/hub-template/palette'
 import { t as tMcp } from './mcp-stats-i18n'
@@ -131,6 +132,64 @@ function RatingsCard({ feedback, lang }: { feedback: FeedbackStats; lang: Langua
   )
 }
 
+const DURATION_LABEL: Record<DurationBucket, AskUiKey> = { lt30: 'engDurLt30', '30-120': 'engDur30', '120-300': 'engDur120', '300-900': 'engDur300', gt900: 'engDurGt900' }
+
+/** Ask Hans engagement: uses, share of return visits, average time and the time distribution (consent "Yes" only). */
+function EngagementCard({ engagement, lang }: { engagement: EngagementStats; lang: Language }) {
+  const loc = toOutputLocale(lang)
+  const fmt = (n: number) => n.toLocaleString(loc)
+  const tone = HUB_TONES.violet
+  const pct = (part: number, whole: number) => (whole ? `${Math.round((part * 100) / whole).toLocaleString(loc)} %` : '–')
+  const avg = (w: ReportWindow) => {
+    const total = engagement.sessions[w]
+    if (!total) return '–'
+    const secs = DURATION_BUCKETS.reduce((n, b) => n + engagement.duration[b][w] * DURATION_MIDPOINT_S[b], 0) / total
+    const m = Math.floor(secs / 60)
+    const sec = Math.round(secs % 60)
+    return `${m.toLocaleString(loc)}:${String(sec).padStart(2, '0')}`
+  }
+  const rows: { label: string; win: (w: ReportWindow) => string }[] = [
+    { label: tAsk('engSessions', lang), win: (w) => fmt(engagement.sessions[w]) },
+    { label: tAsk('engReturning', lang), win: (w) => fmt(engagement.returning[w]) },
+    { label: tAsk('engReturningShare', lang), win: (w) => pct(engagement.returning[w], engagement.sessions[w]) },
+    { label: tAsk('engAvg', lang), win: avg },
+    { label: tAsk('engPromo', lang), win: (w) => fmt(engagement.promoShown[w]) },
+    ...DURATION_BUCKETS.map((b) => ({ label: `${tAsk('engDurHeading', lang)}: ${tAsk(DURATION_LABEL[b], lang)}`, win: (w: ReportWindow) => fmt(engagement.duration[b][w]) })),
+  ]
+  return (
+    <div className={`mt-4 min-w-0 rounded-[14px] border bg-white ${tone.edge}`}>
+      <h3 className="px-4 pb-1 pt-4 text-[15px] font-bold">{tAsk('engHeading', lang)}</h3>
+      {engagement.sessions.last30 === 0 && engagement.sessions.today === 0 ? (
+        <p className="px-4 pb-4 pt-1 text-sm text-text-muted">{tAsk('noData', lang)}</p>
+      ) : (
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className={`${tone.tint} ${tone.ink}`}>
+                <th scope="col" className="px-4 py-2"><span className="sr-only">{tAsk('engHeading', lang)}</span></th>
+                {WINDOWS.map((w) => (
+                  <th key={w.key} scope="col" className="px-3 py-2 text-end font-bold">{w.label(lang)}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((r) => (
+                <tr key={r.label} className="border-t border-border">
+                  <th scope="row" className="px-4 py-2 text-start font-semibold">{r.label}</th>
+                  {WINDOWS.map((w) => (
+                    <td key={w.key} className="px-3 py-2 text-end tabular-nums">{r.win(w.key)}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+      <p className="border-t border-border px-4 py-2.5 text-xs leading-relaxed text-text-secondary">{tAsk('engNote', lang)}</p>
+    </div>
+  )
+}
+
 export type UsageReportKind = 'askhans' | 'mcp'
 
 const HEADLINE_LABEL = { answers: 'statAnswers', opens: 'statOpens', calls: 'statCalls', starts: 'statStarts' } as const
@@ -195,6 +254,7 @@ export function UsageReportView({ lang, report, kind }: { lang: Language; report
       </div>
 
       {!mcp && report.feedback && <RatingsCard feedback={report.feedback} lang={lang} />}
+      {!mcp && report.engagement && <EngagementCard engagement={report.engagement} lang={lang} />}
 
       <div className="mt-4 grid gap-4 lg:grid-cols-2">
         {!mcp && <BreakdownTable heading={tAsk('topicsHeading', lang)} firstCol={tAsk('topicsHeading', lang)} rows={report.categories} label={topicLabel} lang={lang} />}

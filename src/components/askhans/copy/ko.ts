@@ -54,7 +54,7 @@ export const copy: AskCopy = {
   consentTitle: '시작하기 전에',
   consentParagraphs: [
     'Ask Hans는 PromptQuorum의 콘텐츠를 바탕으로 AI(Anthropic의 Claude)를 사용하여 질문에 답합니다. 이를 위해 입력하신 내용이 당사 서버와 Anthropic으로 전송됩니다. 개인정보는 입력하지 마십시오.',
-    '"예, 동의합니다"를 선택하시면 통계 목적 및 Ask Hans와 당사 콘텐츠 개선을 위해 다음 사항을 익명으로 기록하는 것에 동의하시는 것입니다: 질문의 주제, 답변을 위해 Ask Hans가 조회한 앱·디렉터리 카테고리·도구, 언어, 클릭하신 링크, 사용하신 기능(예: 추천 후속 질문, 새 대화 시작), 시각, 그리고 개인과 연결되지 않는 무작위 방문 ID. 통계에는 질문이나 답변 내용, IP 주소, 이름이 포함되지 않습니다. 당사는 집계된 수치만 공개합니다.',
+    '"예, 동의합니다"를 선택하시면 통계 목적 및 Ask Hans와 당사 콘텐츠 개선을 위해 다음 사항을 익명으로 기록하는 것에 동의하시는 것입니다: 질문의 주제, 답변을 위해 Ask Hans가 조회한 앱·디렉터리 카테고리·도구, 언어, 클릭하신 링크, 사용하신 기능(예: 추천 후속 질문, 새 대화 시작), 시각, 그리고 개인과 연결되지 않는 무작위 방문 ID. 통계에는 질문이나 답변 내용, IP 주소, 이름이 포함되지 않습니다. 당사는 집계된 수치만 공개합니다. 또한 재방문 여부와 Ask Hans가 열려 있던 시간을 대략적인 구간으로 집계합니다. 이를 위해 브라우저가 기기(당사 서버가 아님)에 첫 방문 날짜와 Ask Hans 이용 횟수를 기억하며, 동의를 철회하면 삭제됩니다.',
     '동의는 자발적입니다. 동의하지 않으셔도 Ask Hans를 이용하실 수 있으며, 동의는 언제든지 철회하실 수 있고 철회는 장래를 향해 효력이 있습니다. 선택의 증빙으로 그 시각, 문구 버전, 무작위 방문 ID를 저장합니다. 선택과 관계없이 Ask Hans가 열린 횟수와 제공된 답변 수는 익명으로 집계합니다(합계만 집계하며 ID와 내용은 포함하지 않습니다).',
   ],
   consentPrivacyLink: '자세한 내용은 개인정보 처리방침을 참조하십시오.',
@@ -102,6 +102,25 @@ export const copy: AskCopy = {
     copy: "복사",
     copied: "복사됨",
     copyAnswer: "답변 복사",
+    moreOptions: "복사 및 공유 옵션 더 보기",
+    copyFormatted: "서식 포함 복사",
+    copyPlain: "일반 텍스트로 복사",
+    shareEmail: "이메일로 보내기",
+    shareWhatsApp: "WhatsApp으로 보내기",
+    shareTelegram: "Telegram으로 보내기",
+    shareMore: "공유…",
+    emailSubject: "Ask Hans의 답변 (PromptQuorum)",
+  },
+
+  promo: {
+    title: "Ask Hans가 마음에 드십니까?",
+    body: "저희가 아는 한, Ask Hans와 PromptQuorum MCP 서버는 사이트 전체를 읽을 수 있는 AI 어시스턴트와 MCP 서버를 모두 갖춘 유일한 로컬 AI 웹사이트입니다. 도움이 되셨다면 친구에게도 공유해 주십시오.",
+    share: "친구에게 공유",
+    copyLink: "링크 복사",
+    linkCopied: "링크를 복사했습니다",
+    shareText: "Ask Hans: 로컬 AI, 하드웨어, 스마트 홈을 다루는 PromptQuorum의 AI 어시스턴트입니다.",
+    close: "숨기기",
+    imageAlt: "Ask Hans와 PromptQuorum MCP: 저희가 아는 한 둘 다 갖춘 유일한 로컬 AI 사이트",
   },
 
   panel: {
