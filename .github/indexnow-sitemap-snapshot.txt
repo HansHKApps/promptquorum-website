@@ -431,6 +431,7 @@ https://www.promptquorum.com/power-local-llm/langflow-visual-ai-orchestration-re
 https://www.promptquorum.com/power-local-llm/langfuse-review
 https://www.promptquorum.com/power-local-llm/langgraph-review
 https://www.promptquorum.com/power-local-llm/laria-review
+https://www.promptquorum.com/power-local-llm/lastbrowser-review
 https://www.promptquorum.com/power-local-llm/layla-review
 https://www.promptquorum.com/power-local-llm/lemonade-review
 https://www.promptquorum.com/power-local-llm/leon-ai-review
