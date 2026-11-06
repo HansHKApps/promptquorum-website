@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-en.webp',
     title: 'Best Copilot+ PC for Local LLMs in 2026: NPU vs GPU',
@@ -258,6 +259,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-ar.webp',
     title: 'أفضل جهاز Copilot+ PC لتشغيل LLM محلي في 2026: NPU مقابل GPU',
@@ -513,6 +515,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-de.webp',
     title: 'Bester Copilot+-PC für lokale LLMs 2026: NPU vs. GPU',
@@ -768,6 +771,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-es.webp',
     title: 'Mejor Copilot+ PC para LLMs Locales en 2026: NPU vs GPU',
@@ -1023,6 +1027,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-fr.webp',
     title: 'Meilleur PC Copilot+ pour LLM Locaux en 2026 : NPU vs GPU',
@@ -1278,6 +1283,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-ja.webp',
     title: '2026年版ローカルLLMに最適なCopilot+ PC: NPU vs GPU',
@@ -1533,6 +1539,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-ko.webp',
     title: '2026년 로컬 LLM에 최적인 Copilot+ PC: NPU 대 GPU',
@@ -1788,6 +1795,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-pt.webp',
     title: 'Melhor PC Copilot+ para LLMs Locais em 2026: NPU vs GPU',
@@ -2043,6 +2051,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-zh.webp',
     title: '2026 年本地 LLM 最佳 Copilot+ PC：NPU 对比 GPU',

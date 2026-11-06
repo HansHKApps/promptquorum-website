@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Ollama',
     title: 'Best Ollama Models Right Now?',
     dateModified: '2026-08-28',
@@ -105,6 +106,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Ollama',
     title: 'Die besten Ollama-Modelle im Moment?',
     seoTitle: 'Beste Ollama-Modelle 2026 | Prompt Bites | PromptQuorum',
@@ -201,6 +203,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Ollama',
     title: 'Les meilleurs modèles Ollama en ce moment ?',
     seoTitle: 'Meilleurs modèles Ollama 2026 | Prompt Bites | PromptQuorum',
@@ -297,6 +300,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Ollama',
     title: '今おすすめのOllamaモデルは？',
     seoTitle: '2026年おすすめOllamaモデル | Prompt Bites | PromptQuorum',
@@ -393,6 +397,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Ollama',
     title: '目前最佳的Ollama模型是什么？',
     seoTitle: '2026年最佳Ollama本地模型推荐 | Prompt Bites | PromptQuorum',
@@ -485,6 +490,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Ollama',
     title: '¿Los mejores modelos de Ollama ahora mismo?',
     seoTitle: 'Mejores modelos de Ollama 2026 | Prompt Bites | PromptQuorum',
@@ -581,6 +587,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Ollama',
     title: 'Os melhores modelos Ollama agora?',
     seoTitle: 'Melhores modelos Ollama 2026 | Prompt Bites | PromptQuorum',
@@ -677,6 +684,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Ollama',
     title: 'أفضل نماذج ⁨Ollama⁩ الآن؟',
     seoTitle: 'أفضل نماذج ⁨Ollama⁩ الآن ⁨2026⁩ | ⁨PromptQuorum⁩',
@@ -773,6 +781,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Ollama',
     title: '지금 최고의 Ollama 모델은?',
     seoTitle: '최고의 Ollama 모델 2026 | Prompt Bites | PromptQuorum',

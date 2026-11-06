@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-en.webp',
     title: 'Local AI Trends 2027, Part 5 of 10: Frontier-Class Compute Comes to the Desktop',
@@ -199,6 +200,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-de.webp',
     title: 'Local AI Trends 2027, Teil 5 von 10: Höchstleistungsrechenkapazität zieht auf den Desktop',
@@ -395,6 +397,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-fr.webp',
     title: "Tendances IA locale 2027, partie 5 sur 10 : la puissance de calcul de pointe arrive sur le bureau",
@@ -591,6 +594,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-ja.webp',
     title: 'ローカルAIトレンド2027 第5回(全10回):フロンティア級の計算能力がデスクトップに到来',
@@ -787,6 +791,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-zh.webp',
     title: '本地AI趋势2027,第5部分(共10部分):前沿级算力走进桌面',
@@ -983,6 +988,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-es.webp',
     title: 'Tendencias de IA local 2027, parte 5 de 10: la potencia de cómputo de frontera llega al escritorio',
@@ -1179,6 +1185,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-pt.webp',
     title: 'Tendências de IA local 2027, parte 5 de 10: computação de nível de fronteira chega ao desktop',
@@ -1375,6 +1382,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-ar.webp',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 5 من 10: القدرة الحاسوبية من الطراز المتقدم تصل إلى سطح المكتب',
@@ -1571,6 +1579,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-ko.webp',
     title: '로컬 AI 트렌드 2027, 5부(전체 10부): 프론티어급 연산 능력이 데스크톱으로',

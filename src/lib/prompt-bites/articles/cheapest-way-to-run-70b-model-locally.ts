@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-25',
     last_full_refresh: '2026-08-26',
@@ -250,6 +251,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: { '@type': 'TechArticle', headline: 'Cheapest Practical Way to Run 70B Model Locally 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'en' },
   },
   de: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-25',
     theme: 'Hardware & Performance',
@@ -454,6 +456,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: { '@type': 'TechArticle', headline: 'Günstigster praktikabler Weg, ein 70B-Modell lokal zu betreiben 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/de/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'de' },
   },
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-25',
     theme: 'Hardware & Performance',
@@ -658,6 +661,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: { '@type': 'TechArticle', headline: 'Moyen le moins cher et pratique de faire tourner un modèle 70B localement en 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/fr/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'fr' },
   },
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-25',
     theme: 'Hardware & Performance',
@@ -862,6 +866,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: { '@type': 'TechArticle', headline: '2026年版 70Bモデルをローカルで動かす最も安い実用的な方法', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/ja/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'ja' },
   },
   es: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-25',
     theme: 'Hardware & Performance',
@@ -1066,6 +1071,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: { '@type': 'TechArticle', headline: 'Forma más barata y práctica de ejecutar un modelo 70B en local en 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/es/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'es' },
   },
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-25',
     theme: 'Hardware & Performance',
@@ -1270,6 +1276,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: { '@type': 'TechArticle', headline: '2026年本地运行70B模型最便宜的实用方案', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/zh/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'zh' },
   },
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-25',
     theme: 'Hardware & Performance',
@@ -1474,6 +1481,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: { '@type': 'TechArticle', headline: 'Forma Mais Barata e Prática de Rodar um Modelo 70B Localmente em 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/pt/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'pt-BR' },
   },
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-25',
     theme: 'Hardware & Performance',
@@ -1678,6 +1686,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: { '@type': 'TechArticle', headline: 'أرخص طريقة عملية لتشغيل نموذج 70B محليًا في 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/ar/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'ar' },
   },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-25',
     theme: 'Hardware & Performance',

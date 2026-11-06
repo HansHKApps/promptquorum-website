@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-embedding-model-local-rag-overview-hero-en.webp',
     title: 'Best Embedding Model for Local RAG: nomic vs mxbai vs BGE-M3?',
@@ -151,6 +152,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-embedding-model-local-rag-overview-hero-ar.webp',
     title: 'أفضل نموذج تضمين لـ RAG محلي: nomic أم mxbai أم BGE-M3؟',
@@ -298,6 +300,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-embedding-model-local-rag-overview-hero-de.webp',
     title: 'Das beste Embedding-Modell für lokales RAG: nomic vs. mxbai vs. BGE-M3?',
@@ -445,6 +448,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-embedding-model-local-rag-overview-hero-es.webp',
     title: '¿Cuál es el mejor modelo de embedding para RAG local: nomic, mxbai o BGE-M3?',
@@ -592,6 +596,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-embedding-model-local-rag-overview-hero-fr.webp',
     title: 'Quel est le meilleur modèle d\'embedding pour un RAG local : nomic, mxbai ou BGE-M3 ?',
@@ -739,6 +744,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-embedding-model-local-rag-overview-hero-ja.webp',
     title: 'ローカルRAGに最適な埋め込みモデルは？ nomic vs mxbai vs BGE-M3',
@@ -886,6 +892,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-embedding-model-local-rag-overview-hero-ko.webp',
     title: '로컬 RAG를 위한 최적의 임베딩 모델은? nomic vs mxbai vs BGE-M3',
@@ -1033,6 +1040,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-embedding-model-local-rag-overview-hero-pt.webp',
     title: 'Qual o melhor modelo de embedding para RAG local: nomic, mxbai ou BGE-M3?',
@@ -1180,6 +1188,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-embedding-model-local-rag-overview-hero-zh.webp',
     title: '本地 RAG 的最佳嵌入模型：nomic、mxbai 还是 BGE-M3？',

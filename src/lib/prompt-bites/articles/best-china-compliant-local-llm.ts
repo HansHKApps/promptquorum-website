@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-china-compliant-local-llm-overview-hero-en.webp',
     title: 'Best Local LLM for Mainland-China-Compliant Deployments?',
@@ -157,6 +158,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-china-compliant-local-llm-overview-hero-ar.webp',
     title: 'أفضل LLM محلي للنشر المتوافق مع الصين القارية؟',
@@ -311,6 +313,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-china-compliant-local-llm-overview-hero-de.webp',
     title: 'Das beste lokale LLM für China-konforme Deployments?',
@@ -465,6 +468,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-china-compliant-local-llm-overview-hero-es.webp',
     title: '¿Cuál es el Mejor LLM Local para Despliegues Compatibles con China Continental?',
@@ -619,6 +623,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-china-compliant-local-llm-overview-hero-fr.webp',
     title: 'Quel est le meilleur LLM local pour les déploiements conformes à la Chine continentale ?',
@@ -773,6 +778,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-china-compliant-local-llm-overview-hero-ja.webp',
     title: '中国本土向けコンプライアンス対応デプロイに最適なローカルLLMは?',
@@ -927,6 +933,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-china-compliant-local-llm-overview-hero-ko.webp',
     title: '중국 본토 규정 준수 배포에 최적의 로컬 LLM은?',
@@ -1081,6 +1088,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-china-compliant-local-llm-overview-hero-pt.webp',
     title: 'Qual o Melhor LLM Local para Implantações Compatíveis com a China Continental?',
@@ -1235,6 +1243,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-china-compliant-local-llm-overview-hero-zh.webp',
     title: '适合中国大陆合规部署的最佳本地 LLM 是什么？',

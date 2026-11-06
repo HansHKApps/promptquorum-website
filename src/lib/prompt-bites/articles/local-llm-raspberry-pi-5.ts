@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-en.webp',
     title: 'Can You Run a Local LLM on a Raspberry Pi 5?',
@@ -220,6 +221,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-ar.webp',
     title: 'هل يمكن تشغيل LLM محلي على جهاز Raspberry Pi 5؟',
@@ -437,6 +439,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-de.webp',
     title: 'Kann man ein lokales LLM auf einem Raspberry Pi 5 betreiben?',
@@ -654,6 +657,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-es.webp',
     title: '¿Puedes Ejecutar un LLM Local en una Raspberry Pi 5?',
@@ -871,6 +875,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-fr.webp',
     title: 'Peut-on exécuter un LLM local sur un Raspberry Pi 5 ?',
@@ -1088,6 +1093,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-ja.webp',
     title: 'Raspberry Pi 5でローカルLLMを動かせますか?',
@@ -1305,6 +1311,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-ko.webp',
     title: 'Raspberry Pi 5에서 로컬 LLM을 구동할 수 있는가?',
@@ -1522,6 +1529,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-pt.webp',
     title: 'É Possível Rodar um LLM Local em um Raspberry Pi 5?',
@@ -1739,6 +1747,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-zh.webp',
     title: 'Raspberry Pi 5 能运行本地 LLM 吗？',

@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/hybrid-local-cloud-llm-strategy-overview-hero-en.webp',
     title: 'When Should You Combine Local and Cloud LLM Inference?',
@@ -108,6 +109,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/hybrid-local-cloud-llm-strategy-overview-hero-de.webp',
     title: 'Wann sollten Sie lokale und Cloud-LLM-Inferenz kombinieren?',
@@ -213,6 +215,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/hybrid-local-cloud-llm-strategy-overview-hero-fr.webp',
     title: 'Quand faut-il combiner inférence LLM locale et cloud ?',
@@ -318,6 +321,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/hybrid-local-cloud-llm-strategy-overview-hero-ja.webp',
     title: 'ローカルとクラウドのLLM推論を組み合わせるべきタイミングとは？',
@@ -423,6 +427,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/hybrid-local-cloud-llm-strategy-overview-hero-zh.webp',
     title: '什么时候应该结合本地和云端LLM推理？',
@@ -528,6 +533,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/hybrid-local-cloud-llm-strategy-overview-hero-es.webp',
     title: '¿Cuándo deberías combinar inferencia de LLM local y en la nube?',
@@ -633,6 +639,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/hybrid-local-cloud-llm-strategy-overview-hero-pt.webp',
     title: 'Quando você deve combinar inferência de LLM local e na nuvem?',
@@ -738,6 +745,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/hybrid-local-cloud-llm-strategy-overview-hero-ar.webp',
     title: 'متى يجب الجمع بين الاستدلال المحلي واستدلال LLM السحابي؟',
@@ -843,6 +851,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/hybrid-local-cloud-llm-strategy-overview-hero-ko.webp',
     title: '로컬과 클라우드 LLM 추론을 언제 결합해야 할까요?',

@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/mac-mini-m4-local-llm-overview-hero-en.webp',
     title: 'Is the Mac Mini M4 Good for Local LLMs in 2026?',
@@ -223,6 +224,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/mac-mini-m4-local-llm-overview-hero-de.webp',
     title: 'Ist der Mac Mini M4 2026 gut für lokale LLMs?',
@@ -440,6 +442,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/mac-mini-m4-local-llm-overview-hero-fr.webp',
     title: 'Le Mac Mini M4 est-il bon pour les LLM locaux en 2026 ?',
@@ -657,6 +660,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/mac-mini-m4-local-llm-overview-hero-ja.webp',
     title: '2026年、Mac Mini M4はローカルLLMに向いていますか？',
@@ -874,6 +878,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/mac-mini-m4-local-llm-overview-hero-zh.webp',
     title: '2026年Mac Mini M4适合本地LLM吗？',
@@ -1091,6 +1096,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/mac-mini-m4-local-llm-overview-hero-pt.webp',
     title: 'O Mac Mini M4 é bom para LLMs locais em 2026?',
@@ -1308,6 +1314,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/mac-mini-m4-local-llm-overview-hero-es.webp',
     title: '¿Es el Mac Mini M4 bueno para LLMs locales en 2026?',
@@ -1525,6 +1532,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/mac-mini-m4-local-llm-overview-hero-ar.webp',
     title: 'هل ⁨Mac Mini M4⁩ مناسب للنماذج اللغوية المحلية في ⁨2026⁩؟',
@@ -1742,6 +1750,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/mac-mini-m4-local-llm-overview-hero-ko.webp',
     title: 'Mac Mini M4는 2026년에 로컬 LLM 실행에 적합한가?',

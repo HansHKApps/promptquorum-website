@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-en.webp',
     title: 'llama-bench: The Best Tool for Benchmarking Local LLM Speed',
@@ -141,6 +142,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-de.webp',
     title: 'llama-bench: Das beste Tool zum Benchmarking lokaler LLM-Geschwindigkeit',
@@ -279,6 +281,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-fr.webp',
     title: "llama-bench : le meilleur outil pour mesurer la vitesse d'un LLM local",
@@ -417,6 +420,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-ja.webp',
     title: 'llama-bench:ローカルLLMの速度をベンチマークする最良のツール',
@@ -555,6 +559,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-zh.webp',
     title: 'llama-bench:衡量本地LLM速度的最佳工具',
@@ -693,6 +698,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-es.webp',
     title: 'llama-bench: la mejor herramienta para medir la velocidad de un LLM local',
@@ -831,6 +837,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-pt.webp',
     title: 'llama-bench: a melhor ferramenta para medir a velocidade de um LLM local',
@@ -969,6 +976,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-ar.webp',
     title: 'llama-bench: أفضل أداة لقياس سرعة نماذج LLM المحلية',
@@ -1107,6 +1115,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-ko.webp',
     title: 'llama-bench: 로컬 LLM 속도를 벤치마킹하는 가장 좋은 도구',

@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-vs-lm-studio-overview-hero-en.webp',
     title: 'Ollama vs LM Studio: Which Should You Pick?',
@@ -141,6 +142,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-vs-lm-studio-overview-hero-de.webp',
     title: 'Ollama vs LM Studio: Welches sollten Sie wählen?',
@@ -232,6 +234,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-vs-lm-studio-overview-hero-fr.webp',
     title: 'Ollama vs LM Studio : lequel choisir ?',
@@ -323,6 +326,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-vs-lm-studio-overview-hero-ja.webp',
     title: 'Ollama vs LM Studio：どちらを選ぶべきですか？',
@@ -414,6 +418,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-vs-lm-studio-overview-hero-zh.webp',
     title: 'Ollama vs LM Studio：应该选哪个？',
@@ -505,6 +510,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-vs-lm-studio-overview-hero-pt.webp',
     title: 'Ollama vs LM Studio: Qual você deve escolher?',
@@ -603,6 +609,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-vs-lm-studio-overview-hero-es.webp',
     title: 'Ollama vs LM Studio: ¿Cuál deberías elegir?',
@@ -701,6 +708,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-vs-lm-studio-overview-hero-ar.webp',
     title: '⁨Ollama⁩ مقابل ⁨LM Studio⁩: أيهما تختار؟',
@@ -799,6 +807,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-vs-lm-studio-overview-hero-ko.webp',
     title: 'Ollama vs LM Studio: 어떤 도구를 선택해야 할까요?',

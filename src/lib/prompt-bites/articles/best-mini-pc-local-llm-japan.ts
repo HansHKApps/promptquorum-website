@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/best-mini-pc-local-llm-japan-overview-hero-en.webp',
     title: 'Best Mini PC for Local LLMs in Japan (2026): Beelink, Minisforum, GMKtec',
@@ -134,6 +135,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/best-mini-pc-local-llm-japan-overview-hero-de.webp',
     title: 'Bester Mini-PC für lokale LLMs in Japan (2026): Beelink, Minisforum, GMKtec',
@@ -262,6 +264,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/best-mini-pc-local-llm-japan-overview-hero-fr.webp',
     title: 'Meilleur mini PC pour LLM locaux au Japon (2026) : Beelink, Minisforum, GMKtec',
@@ -390,6 +393,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/best-mini-pc-local-llm-japan-overview-hero-ja.webp',
     title: '日本のローカルLLM向けベストミニPC（2026）：Beelink・Minisforum・GMKtec',
@@ -518,6 +522,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/best-mini-pc-local-llm-japan-overview-hero-es.webp',
     title: 'Mejor mini PC para LLMs locales en Japón (2026): Beelink, Minisforum, GMKtec',
@@ -646,6 +651,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/best-mini-pc-local-llm-japan-overview-hero-pt.webp',
     title: 'Melhor mini PC para LLMs locais no Japão (2026): Beelink, Minisforum, GMKtec',
@@ -774,6 +780,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/best-mini-pc-local-llm-japan-overview-hero-zh.webp',
     title: '日本最适合本地LLM的迷你电脑（2026）：Beelink、Minisforum、GMKtec',
@@ -902,6 +909,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/best-mini-pc-local-llm-japan-overview-hero-ar.webp',
     title: 'أفضل جهاز مصغر لنماذج اللغة الكبيرة المحلية في اليابان (2026): Beelink، Minisforum، GMKtec',
@@ -1030,6 +1038,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/best-mini-pc-local-llm-japan-overview-hero-ko.webp',
     title: '일본 로컬 LLM용 최고의 미니 PC (2026): Beelink, Minisforum, GMKtec',

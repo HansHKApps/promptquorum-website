@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/radeon-6800m-local-llm-overview-hero-en.webp',
     title: 'Can You Run Local LLMs on a Radeon RX 6800M?',
@@ -122,6 +123,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/radeon-6800m-local-llm-overview-hero-de.webp',
     title: 'Können Sie lokale LLMs auf einer Radeon RX 6800M ausführen?',
@@ -233,6 +235,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/radeon-6800m-local-llm-overview-hero-fr.webp',
     title: 'Peut-on faire tourner des LLMs locaux sur une Radeon RX 6800M ?',
@@ -344,6 +347,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/radeon-6800m-local-llm-overview-hero-ja.webp',
     title: 'Radeon RX 6800M でローカル LLM を実行できますか？',
@@ -455,6 +459,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/radeon-6800m-local-llm-overview-hero-zh.webp',
     title: '可以在 Radeon RX 6800M 上运行本地 LLM 吗？',
@@ -566,6 +571,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/radeon-6800m-local-llm-overview-hero-pt.webp',
     title: 'Você pode executar LLMs locais em uma Radeon RX 6800M?',
@@ -677,6 +683,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/radeon-6800m-local-llm-overview-hero-es.webp',
     title: '¿Puedes ejecutar LLMs locales en una Radeon RX 6800M?',
@@ -788,6 +795,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/radeon-6800m-local-llm-overview-hero-ar.webp',
     title: 'هل يمكنك تشغيل نماذج اللغة المحلية على ⁨Radeon RX 6800M⁩؟',
@@ -899,6 +907,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/radeon-6800m-local-llm-overview-hero-ko.webp',
     title: 'Radeon RX 6800M에서 로컬 LLM을 실행할 수 있습니까?',

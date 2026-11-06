@@ -6,6 +6,7 @@ import type { PromptBiteArticle } from '../types'
 // CLAUDE.md freshness-tier rule. next_refresh_due set 6 months out.
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'UAE/Gulf Sprint',
     heroImage: '/images/best-gpu-local-llm-uae-price-overview-hero-en.webp',
     title: 'Best-Value GPU for Local LLMs at UAE/Gulf Pricing in 2026',
@@ -219,6 +220,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   de: {
+    designSkin: 'hub',
     theme: 'UAE/Gulf Sprint',
     heroImage: '/images/best-gpu-local-llm-uae-price-overview-hero-de.webp',
     title: 'Die beste Preis-Leistungs-GPU für lokale LLMs zu VAE-/Golf-Preisen 2026',
@@ -432,6 +434,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   fr: {
+    designSkin: 'hub',
     theme: 'UAE/Gulf Sprint',
     heroImage: '/images/best-gpu-local-llm-uae-price-overview-hero-fr.webp',
     title: 'Le meilleur GPU qualité-prix pour LLM locaux aux prix du Golfe/EAU en 2026',
@@ -645,6 +648,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   ja: {
+    designSkin: 'hub',
     theme: 'UAE/Gulf Sprint',
     heroImage: '/images/best-gpu-local-llm-uae-price-overview-hero-ja.webp',
     title: 'UAE・湾岸地域価格で選ぶ、ローカルLLM向けコスパ最強GPU（2026年）',
@@ -858,6 +862,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   zh: {
+    designSkin: 'hub',
     theme: 'UAE/Gulf Sprint',
     heroImage: '/images/best-gpu-local-llm-uae-price-overview-hero-zh.webp',
     title: '2026年阿联酋/海湾地区最具性价比的本地 LLM 显卡',
@@ -1071,6 +1076,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   es: {
+    designSkin: 'hub',
     theme: 'UAE/Gulf Sprint',
     heroImage: '/images/best-gpu-local-llm-uae-price-overview-hero-es.webp',
     title: 'La GPU con mejor relación calidad-precio para LLMs locales a precios de EAU/Golfo en 2026',
@@ -1284,6 +1290,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   pt: {
+    designSkin: 'hub',
     theme: 'UAE/Gulf Sprint',
     heroImage: '/images/best-gpu-local-llm-uae-price-overview-hero-pt.webp',
     title: 'A GPU com melhor custo-benefício para LLMs locais a preços dos EAU/Golfo em 2026',
@@ -1497,6 +1504,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   ar: {
+    designSkin: 'hub',
     theme: 'UAE/Gulf Sprint',
     heroImage: '/images/best-gpu-local-llm-uae-price-overview-hero-ar.webp',
     title: 'أفضل معالج رسومات من حيث القيمة للنماذج اللغوية الكبيرة المحلية بأسعار الإمارات/الخليج لعام 2026',
@@ -1710,6 +1718,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   ko: {
+    designSkin: 'hub',
     theme: 'UAE/Gulf Sprint',
     heroImage: '/images/best-gpu-local-llm-uae-price-overview-hero-ko.webp',
     title: '2026년 UAE·걸프 지역 가격 기준 로컬 LLM 최고 가성비 GPU',

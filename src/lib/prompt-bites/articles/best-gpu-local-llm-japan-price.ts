@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-en.webp',
     title: 'What Is the Best Value GPU for Local LLMs in Japan?',
@@ -293,6 +294,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   de: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-de.webp',
     title: 'Welche GPU bietet in Japan das beste Preis-Leistungs-Verhältnis für lokale LLMs?',
@@ -526,6 +528,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-fr.webp',
     title: 'Quel est le GPU au meilleur rapport qualité-prix pour LLM locaux au Japon ?',
@@ -755,6 +758,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-ja.webp',
     title: '日本でコスパ最強のローカルLLM用GPUは？',
@@ -1002,6 +1006,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-zh.webp',
     title: '在日本性价比最高的本地LLM显卡是什么？',
@@ -1242,6 +1247,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   es: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-es.webp',
     title: '¿Cuál es la mejor GPU por precio para LLMs locales en Japón?',
@@ -1503,6 +1509,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-ar.webp',
     title: 'ما أفضل معالج رسومات من حيث السعر لتشغيل النماذج اللغوية الكبيرة محلياً في اليابان؟',
@@ -1734,6 +1741,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-pt.webp',
     title: 'Qual é a melhor GPU por custo-benefício para LLMs locais no Japão?',
@@ -2005,6 +2013,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-ko.webp',
     title: '일본에서 로컬 LLM용 최고의 가성비 GPU는 무엇입니까?',

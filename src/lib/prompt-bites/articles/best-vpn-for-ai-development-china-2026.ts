@@ -8,6 +8,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-en.webp',
     title: 'Best VPN for AI Development in China 2026',
@@ -278,6 +279,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-de.webp',
     title: 'Bestes VPN für KI-Entwicklung in China 2026',
@@ -496,6 +498,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-fr.webp',
     title: 'Meilleur VPN pour le développement IA en Chine 2026',
@@ -714,6 +717,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-ja.webp',
     title: '中国でのAI開発に最適なVPN 2026',
@@ -933,6 +937,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-zh.webp',
     title: '2026年中国AI开发最佳VPN推荐',
@@ -1152,6 +1157,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   pt: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-pt.webp',
     title: 'Melhor VPN para Desenvolvimento de IA na China em 2026',
@@ -1370,6 +1376,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-es.webp',
     title: 'Mejor VPN para desarrollo de IA en China 2026',
@@ -1588,6 +1595,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-ar.webp',
     title: 'أفضل VPN لتطوير الذكاء الاصطناعي في الصين 2026',
@@ -1806,6 +1814,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-ko.webp',
     title: '중국 AI 개발을 위한 최고의 VPN 2026',

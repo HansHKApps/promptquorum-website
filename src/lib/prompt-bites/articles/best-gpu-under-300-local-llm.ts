@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-en.webp',
     title: 'RTX 3060 12GB: Best GPU Under $300 for Local LLMs (2026)?',
@@ -143,6 +144,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-de.webp',
     title: 'RTX 3060 12GB: Beste GPU unter 300 € für lokale LLMs (2026)?',
@@ -284,6 +286,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-fr.webp',
     title: 'RTX 3060 12 Go : meilleure GPU à moins de 300 € pour les LLM locaux (2026) ?',
@@ -424,6 +427,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-ja.webp',
     title: 'RTX 3060 12GB：300ドル以下でローカルLLMに最適なGPUは（2026年版）？',
@@ -565,6 +569,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-zh.webp',
     title: 'RTX 3060 12GB：300美元以下本地LLM最佳GPU（2026年）？',
@@ -705,6 +710,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-es.webp',
     title: 'RTX 3060 12GB: ¿mejor GPU por menos de 300 $ para LLMs locales (2026)?',
@@ -845,6 +851,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-pt.webp',
     title: 'RTX 3060 12GB: Melhor GPU Abaixo de US$ 300 para LLMs Locais (2026)?',
@@ -985,6 +992,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-ar.webp',
     title: 'RTX 3060 12GB: أفضل بطاقة رسومات بأقل من 300 دولار للنماذج اللغوية المحلية (2026)؟',
@@ -1125,6 +1133,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-ko.webp',
     title: 'RTX 3060 12GB: 로컬 LLM용 300달러 이하 최고의 GPU는（2026년）?',

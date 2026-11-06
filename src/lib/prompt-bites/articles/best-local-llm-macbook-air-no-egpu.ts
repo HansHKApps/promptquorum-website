@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-en.webp',
     title: 'Best Local LLM for a MacBook Air Without an eGPU in 2026',
@@ -131,6 +132,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-ar.webp',
     title: 'أفضل LLM محلي لجهاز MacBook Air بدون eGPU في عام 2026',
@@ -259,6 +261,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-de.webp',
     title: 'Bestes lokales LLM für ein MacBook Air ohne eGPU im Jahr 2026',
@@ -384,6 +387,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-es.webp',
     title: 'El Mejor LLM Local para un MacBook Air sin eGPU en 2026',
@@ -512,6 +516,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-fr.webp',
     title: 'Meilleur LLM local pour un MacBook Air sans eGPU en 2026',
@@ -640,6 +645,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-ja.webp',
     title: '2026年版 eGPUなしのMacBook Airに最適なローカルLLM構成',
@@ -768,6 +774,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-ko.webp',
     title: 'eGPU 없는 MacBook Air를 위한 최적의 로컬 LLM은? (2026년)',
@@ -896,6 +903,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-pt.webp',
     title: 'Qual o Melhor LLM Local para um MacBook Air Sem eGPU em 2026?',
@@ -1021,6 +1029,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-zh.webp',
     title: '2026 年无 eGPU MacBook Air 的最佳本地 LLM',

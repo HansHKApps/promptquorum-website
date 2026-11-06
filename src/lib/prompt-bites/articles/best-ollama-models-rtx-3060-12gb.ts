@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-ollama-models-rtx-3060-12gb-overview-hero-en.webp',
     title: 'Best Ollama Models for RTX 3060 12 GB?',
@@ -149,6 +150,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-ollama-models-rtx-3060-12gb-overview-hero-de.webp',
     title: 'Beste Ollama-Modelle für RTX 3060 12 GB?',
@@ -216,6 +218,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-ollama-models-rtx-3060-12gb-overview-hero-fr.webp',
     title: 'Meilleurs modèles Ollama pour RTX 3060 12 Go ?',
@@ -283,6 +286,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-ollama-models-rtx-3060-12gb-overview-hero-ja.webp',
     title: 'RTX 3060 12 GB向け最良Ollamaモデルは？',
@@ -350,6 +354,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-ollama-models-rtx-3060-12gb-overview-hero-zh.webp',
     title: 'RTX 3060 12 GB最佳Ollama模型？',
@@ -417,6 +422,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-ollama-models-rtx-3060-12gb-overview-hero-pt.webp',
     title: 'Melhores modelos Ollama para RTX 3060 12 GB?',
@@ -496,6 +502,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-ollama-models-rtx-3060-12gb-overview-hero-es.webp',
     title: '¿Mejores modelos Ollama para RTX 3060 12 GB?',
@@ -575,6 +582,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-ollama-models-rtx-3060-12gb-overview-hero-ar.webp',
     title: 'أفضل نماذج ⁨Ollama⁩ لـ⁨RTX 3060 12 GB⁩؟',
@@ -654,6 +662,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-ollama-models-rtx-3060-12gb-overview-hero-ko.webp',
     title: 'RTX 3060 12 GB에 최적인 Ollama 모델은?',

@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-en.webp',
     title: 'Best GPU Under $1,000 for Local LLM Inference?',
@@ -124,6 +125,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-ar.webp',
     title: 'أفضل GPU بأقل من 1,000 دولار لتشغيل LLM محلي؟',
@@ -245,6 +247,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-de.webp',
     title: 'Die beste GPU unter 1.000 $ für lokale LLM-Inferenz?',
@@ -366,6 +369,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-es.webp',
     title: '¿Cuál es la mejor GPU por menos de $1,000 para inferencia de LLM local?',
@@ -487,6 +491,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-fr.webp',
     title: 'Meilleur GPU à moins de 1 000 $ pour l\'inférence LLM locale ?',
@@ -608,6 +613,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-ja.webp',
     title: 'ローカルLLM推論に最適な1,000ドル以下のGPUは?',
@@ -729,6 +735,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-ko.webp',
     title: '로컬 LLM 추론에 1,000달러 이하 최적의 GPU는?',
@@ -850,6 +857,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-pt.webp',
     title: 'Qual a Melhor GPU Abaixo de US$ 1.000 para Inferência de LLM Local?',
@@ -971,6 +979,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-zh.webp',
     title: '1000 美元以下运行本地 LLM 的最佳 GPU 是什么？',

@@ -186,7 +186,7 @@ export interface AppSummary {
   mcpSupport?: boolean
   /** true = documented to serve an OpenAI- or Ollama-compatible API to other apps. Absent = not verified. */
   exposesApi?: boolean
-  upstreamStatus?: { state: 'archived' | 'unmaintained'; since?: string }
+  upstreamStatus?: { state: 'archived' | 'unmaintained' | 'delisted'; since?: string }
   dataVerifiedAt: string | null
   addedDate: string | null
   listingFreshness: 'fresh' | 'warn' | 'old' | 'unverified'
@@ -355,7 +355,7 @@ function categorySuggestionsFor(keys: CategorySubKey[]): CategorySuggestion[] {
     key: k,
     label: CATEGORY_SUB_LABEL[k]?.en ?? k,
     exampleApps: localAiApps
-      .filter((a) => a.categories.includes(k) && a.status !== 'planned' && a.upstreamStatus?.state !== 'archived')
+      .filter((a) => a.categories.includes(k) && a.status !== 'planned' && a.upstreamStatus?.state !== 'archived' && a.upstreamStatus?.state !== 'delisted')
       .sort((x, y) => (y.stars ?? 0) - (x.stars ?? 0))
       .slice(0, 3)
       .map((a) => a.name),
@@ -470,7 +470,7 @@ export function searchApps(args: {
   } else {
     pool = [...localAiApps]
   }
-  pool = pool.filter((a) => a.status !== 'planned' && a.upstreamStatus?.state !== 'archived')
+  pool = pool.filter((a) => a.status !== 'planned' && a.upstreamStatus?.state !== 'archived' && a.upstreamStatus?.state !== 'delisted')
 
   if (args.category) {
     const c = args.category

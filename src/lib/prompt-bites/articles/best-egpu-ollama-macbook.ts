@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-egpu-ollama-macbook-overview-hero-en.webp',
     title: 'Best eGPU for Ollama on a MacBook in 2026',
@@ -197,6 +198,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-egpu-ollama-macbook-overview-hero-de.webp',
     title: 'Beste eGPU für Ollama auf einem MacBook 2026',
@@ -391,6 +393,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-egpu-ollama-macbook-overview-hero-fr.webp',
     title: 'Meilleure eGPU pour Ollama sur un MacBook en 2026',
@@ -585,6 +588,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-egpu-ollama-macbook-overview-hero-ja.webp',
     title: '2026年版：MacBookでOllamaに最適なeGPUは？',
@@ -779,6 +783,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-egpu-ollama-macbook-overview-hero-zh.webp',
     title: '2026年MacBook上运行Ollama的最佳eGPU是什么？',
@@ -973,6 +978,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-egpu-ollama-macbook-overview-hero-ar.webp',
     title: 'أفضل ⁨eGPU⁩ لتشغيل ⁨Ollama⁩ على ⁨MacBook⁩ في ⁨2026⁩',
@@ -1167,6 +1173,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-egpu-ollama-macbook-overview-hero-es.webp',
     title: 'Mejor eGPU para Ollama en un MacBook en 2026',
@@ -1361,6 +1368,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-egpu-ollama-macbook-overview-hero-pt.webp',
     title: 'Melhor eGPU para Ollama em um MacBook em 2026',
@@ -1555,6 +1563,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-egpu-ollama-macbook-overview-hero-ko.webp',
     title: '2026년 MacBook에서 Ollama를 위한 최적의 eGPU는?',

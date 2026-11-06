@@ -170,7 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'database-hosting',
         title: 'Hosting a Database Separately',
         content:
-          'Shared web hosting like the Hostinger plan on this page bundles a single MySQL database sized to the same disk quota as the rest of the account — enough for a blog or small CMS, not for an application with its own user table, analytics events, or the vector/embedding storage an AI feature needs. For that, a managed database is a separate product from web hosting. **[Neon](https://neon.com/pricing)** runs on serverless Postgres and offers a free tier — 100 compute-hours per project per month, 1 GB storage per project, 5 GB egress, read from neon.com on 2026-11-03 — that suspends to zero cost when idle, then bills usage-based compute (from $0.106/CU-hour) and storage ($0.35/GB-month) beyond the free tier with no monthly minimum. **[Supabase](https://supabase.com/pricing)** offers a comparable free tier — 500 MB database, 1 GB file storage, 50,000 monthly active users, 5 GB egress, across up to 2 projects, read from supabase.com on 2026-09-03 — but a free project pauses after 7 days of inactivity and gets no automated backups; the Pro plan ($25/mo) removes both limits. Move to a separate managed database once a site needs more than the single bundled MySQL instance shared hosting provides — it is an addition to web hosting, not a replacement for it.',
+          'Shared web hosting like the Hostinger plan on this page bundles a single MySQL database sized to the same disk quota as the rest of the account — enough for a blog or small CMS, not for an application with its own user table, analytics events, or the vector/embedding storage an AI feature needs. For that, a managed database is a separate product from web hosting. **[Neon](https://neon.com/pricing)** runs on serverless Postgres and offers a free tier — 100 compute-hours per project per month, 1 GB storage per project, 5 GB egress, read from neon.com on 2026-11-03 — that suspends to zero cost when idle, then bills usage-based compute (from $0.106/CU-hour) and storage ($0.35/GB-month) beyond the free tier with no monthly minimum. **[Supabase](https://supabase.com/pricing)** offers a comparable free tier — 500 MB database, 1 GB file storage, 50,000 monthly active users, 5 GB egress, across up to 2 projects, read from supabase.com on 2026-11-03 — but a free project pauses after 7 days of inactivity and gets no automated backups; the Pro plan ($25/mo) removes both limits. Move to a separate managed database once a site needs more than the single bundled MySQL instance shared hosting provides — it is an addition to web hosting, not a replacement for it.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -186,7 +186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'backups',
         title: 'Backing Up Your Site and Data',
         content:
-          'The standard rule is 3-2-1: keep 3 copies of the data, on 2 different types of storage, with 1 copy off-site. A backup that lives only on the same server as the website does not count, since a single provider outage or account issue takes out the site and the backup together. Most shared hosting plans, including Hostinger\'s, include some automatic backup feature, but check the retention window (how many days back a restore can reach) and whether restoring is self-service or requires a support ticket before relying on it as the only copy. For the off-site copy, object storage priced by the gigabyte is the standard option: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** charges $6.95/TB/month with the first 10 GB free and free egress up to 3x the average data stored, read from the vendor\'s pricing page on 2026-09-03; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** charges $0.015/GB-month (about $15/TB/month) but with zero egress fees at any volume and a free tier covering 10 GB of storage, read from the vendor\'s pricing page on 2026-09-03; **[Wasabi](https://wasabi.com/pricing/)** charges a flat $7.99/TB/month pay-as-you-go rate with no separate egress or API request fees, read from the vendor\'s pricing page on 2026-09-03. For a small site, any of the three costs well under $1/month to keep a full off-site backup.',
+          'The standard rule is 3-2-1: keep 3 copies of the data, on 2 different types of storage, with 1 copy off-site. A backup that lives only on the same server as the website does not count, since a single provider outage or account issue takes out the site and the backup together. Most shared hosting plans, including Hostinger\'s, include some automatic backup feature, but check the retention window (how many days back a restore can reach) and whether restoring is self-service or requires a support ticket before relying on it as the only copy. For the off-site copy, object storage priced by the gigabyte is the standard option: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** charges $6.95/TB/month with the first 10 GB free and free egress up to 3x the average data stored, read from the vendor\'s pricing page on 2026-11-03; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** charges $0.015/GB-month (about $15/TB/month) but with zero egress fees at any volume and a free tier covering 10 GB of storage, read from the vendor\'s pricing page on 2026-11-03; **[Wasabi](https://wasabi.com/pricing/)** charges a flat $7.99/TB/month pay-as-you-go rate with no separate egress or API request fees, read from the vendor\'s pricing page on 2026-11-03. For a small site, any of the three costs well under $1/month to keep a full off-site backup.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -221,11 +221,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sources',
         items: [
           '[Hostinger Pricing](https://www.hostinger.com/) — checked directly on hostinger.com, 2026-11-03: $2.49/mo intro (48-month prepay, $119.52 upfront), $10.99/mo renewal.',
-          '[Backblaze B2 Pricing](https://www.backblaze.com/cloud-storage/pricing) — read from the vendor\'s pricing page on 2026-09-03: $6.95/TB/month, first 10 GB free, free egress up to 3x stored data.',
-          '[Cloudflare R2 Pricing](https://developers.cloudflare.com/r2/pricing/) — read from the vendor\'s pricing page on 2026-09-03: $0.015/GB-month standard storage, zero egress fees, 10 GB free tier.',
-          '[Wasabi Pricing](https://wasabi.com/pricing/) — read from the vendor\'s pricing page on 2026-09-03: $7.99/TB/month flat pay-as-you-go, no separate egress or API fees.',
+          '[Backblaze B2 Pricing](https://www.backblaze.com/cloud-storage/pricing) — read from the vendor\'s pricing page on 2026-11-03: $6.95/TB/month, first 10 GB free, free egress up to 3x stored data.',
+          '[Cloudflare R2 Pricing](https://developers.cloudflare.com/r2/pricing/) — read from the vendor\'s pricing page on 2026-11-03: $0.015/GB-month standard storage, zero egress fees, 10 GB free tier.',
+          '[Wasabi Pricing](https://wasabi.com/pricing/) — read from the vendor\'s pricing page on 2026-11-03: $7.99/TB/month flat pay-as-you-go, no separate egress or API fees.',
           '[Neon Pricing](https://neon.com/pricing) — read from the vendor\'s pricing page on 2026-11-03: free tier 100 CU-hours/project/month, 1 GB storage/project, 5 GB egress; paid compute from $0.106/CU-hour.',
-          '[Supabase Pricing](https://supabase.com/pricing) — read from the vendor\'s pricing page on 2026-09-03: free tier 500 MB database, 1 GB storage, 50,000 MAUs; Pro plan $25/month.',
+          '[Supabase Pricing](https://supabase.com/pricing) — read from the vendor\'s pricing page on 2026-11-03: free tier 500 MB database, 1 GB storage, 50,000 MAUs; Pro plan $25/month.',
         ],
       },
       faq: {
@@ -254,7 +254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How much does off-site backup storage actually cost?',
-            a: 'Object storage from Backblaze B2 ($6.95/TB/month), Cloudflare R2 (about $15/TB/month, zero egress fees), or Wasabi ($7.99/TB/month flat) — all read from the vendor\'s pricing page on 2026-09-03 — costs well under $1/month to store a full backup of a typical small site, far less than the cost of losing the only copy to a single provider outage.',
+            a: 'Object storage from Backblaze B2 ($6.95/TB/month), Cloudflare R2 (about $15/TB/month, zero egress fees), or Wasabi ($7.99/TB/month flat) — all read from the vendor\'s pricing page on 2026-11-03 — costs well under $1/month to store a full backup of a typical small site, far less than the cost of losing the only copy to a single provider outage.',
           },
           {
             q: 'What is the safest way to share a large file or dataset?',
@@ -465,7 +465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'database-hosting',
         title: 'Eine separate Datenbank hosten',
         content:
-          'Shared Webhosting wie der IONOS- oder ALL-INKL.COM-Tarif auf dieser Seite bündelt eine einzelne MySQL-Datenbank im selben Speicherkontingent wie der Rest des Kontos — ausreichend für einen Blog oder ein kleines CMS, nicht für eine Anwendung mit eigener Nutzertabelle, Analytics-Ereignissen oder dem Vektor-/Embedding-Speicher, den eine KI-Funktion braucht. Dafür ist eine verwaltete Datenbank ein eigenes Produkt, getrennt vom Webhosting. **[Neon](https://neon.com/pricing)** läuft auf serverlosem Postgres und bietet eine kostenlose Stufe — 100 Rechenstunden pro Projekt und Monat, 1 GB Speicher pro Projekt, 5 GB Egress, laut neon.com am 03.11.2026 —, die sich bei Inaktivität auf Null-Kosten stellt und danach nutzungsbasiert abrechnet (Rechenleistung ab $0,106/CU-Stunde, Speicher $0,35/GB-Monat) ohne Monatsminimum. **[Supabase](https://supabase.com/pricing)** bietet eine vergleichbare kostenlose Stufe — 500 MB Datenbank, 1 GB Dateispeicher, 50.000 monatlich aktive Nutzer, 5 GB Egress, über bis zu 2 Projekte, laut supabase.com am 03.09.2026 —, aber ein kostenloses Projekt pausiert nach 7 Tagen Inaktivität und erhält keine automatischen Backups; der Pro-Tarif ($25/Monat) hebt beide Grenzen auf. Ein Wechsel zu einer separaten verwalteten Datenbank lohnt sich, sobald eine Website mehr braucht als die eine gebündelte MySQL-Instanz von Shared Hosting — als Ergänzung zum Webhosting, nicht als Ersatz.',
+          'Shared Webhosting wie der IONOS- oder ALL-INKL.COM-Tarif auf dieser Seite bündelt eine einzelne MySQL-Datenbank im selben Speicherkontingent wie der Rest des Kontos — ausreichend für einen Blog oder ein kleines CMS, nicht für eine Anwendung mit eigener Nutzertabelle, Analytics-Ereignissen oder dem Vektor-/Embedding-Speicher, den eine KI-Funktion braucht. Dafür ist eine verwaltete Datenbank ein eigenes Produkt, getrennt vom Webhosting. **[Neon](https://neon.com/pricing)** läuft auf serverlosem Postgres und bietet eine kostenlose Stufe — 100 Rechenstunden pro Projekt und Monat, 1 GB Speicher pro Projekt, 5 GB Egress, laut neon.com am 03.11.2026 —, die sich bei Inaktivität auf Null-Kosten stellt und danach nutzungsbasiert abrechnet (Rechenleistung ab $0,106/CU-Stunde, Speicher $0,35/GB-Monat) ohne Monatsminimum. **[Supabase](https://supabase.com/pricing)** bietet eine vergleichbare kostenlose Stufe — 500 MB Datenbank, 1 GB Dateispeicher, 50.000 monatlich aktive Nutzer, 5 GB Egress, über bis zu 2 Projekte, laut supabase.com am 03.11.2026 —, aber ein kostenloses Projekt pausiert nach 7 Tagen Inaktivität und erhält keine automatischen Backups; der Pro-Tarif ($25/Monat) hebt beide Grenzen auf. Ein Wechsel zu einer separaten verwalteten Datenbank lohnt sich, sobald eine Website mehr braucht als die eine gebündelte MySQL-Instanz von Shared Hosting — als Ergänzung zum Webhosting, nicht als Ersatz.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -481,7 +481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'backups',
         title: 'Backups der eigenen Website und Daten',
         content:
-          'Die Standardregel lautet 3-2-1: 3 Kopien der Daten, auf 2 verschiedenen Speicherarten, mit 1 Kopie außerhalb des Standorts. Ein Backup, das nur auf demselben Server liegt wie die Website, zählt nicht, denn ein Ausfall beim Anbieter oder ein Kontoproblem legt Website und Backup gemeinsam lahm. Die meisten Shared-Hosting-Tarife, einschließlich IONOS und ALL-INKL.COM, enthalten eine automatische Backup-Funktion, aber prüfen Sie das Aufbewahrungsfenster (wie viele Tage zurück eine Wiederherstellung reicht) und ob die Wiederherstellung selbst durchführbar ist oder ein Support-Ticket erfordert, bevor Sie sich darauf als einzige Kopie verlassen. Für die Offsite-Kopie ist nach Gigabyte abgerechneter Objektspeicher die Standardoption: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** berechnet $6,95/TB/Monat, die ersten 10 GB kostenlos, freier Egress bis zum 3-fachen der durchschnittlich gespeicherten Datenmenge, laut Anbieterseite am 03.09.2026; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** berechnet $0,015/GB-Monat (rund $15/TB/Monat), aber ohne jegliche Egress-Gebühren und mit einer kostenlosen Stufe von 10 GB Speicher, laut Anbieterseite am 03.09.2026; **[Wasabi](https://wasabi.com/pricing/)** berechnet einen festen Satz von $7,99/TB/Monat ohne separate Egress- oder API-Gebühren, laut Anbieterseite am 03.09.2026. Für eine kleine Website kostet ein vollständiges Offsite-Backup bei allen drei Anbietern deutlich unter $1/Monat.',
+          'Die Standardregel lautet 3-2-1: 3 Kopien der Daten, auf 2 verschiedenen Speicherarten, mit 1 Kopie außerhalb des Standorts. Ein Backup, das nur auf demselben Server liegt wie die Website, zählt nicht, denn ein Ausfall beim Anbieter oder ein Kontoproblem legt Website und Backup gemeinsam lahm. Die meisten Shared-Hosting-Tarife, einschließlich IONOS und ALL-INKL.COM, enthalten eine automatische Backup-Funktion, aber prüfen Sie das Aufbewahrungsfenster (wie viele Tage zurück eine Wiederherstellung reicht) und ob die Wiederherstellung selbst durchführbar ist oder ein Support-Ticket erfordert, bevor Sie sich darauf als einzige Kopie verlassen. Für die Offsite-Kopie ist nach Gigabyte abgerechneter Objektspeicher die Standardoption: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** berechnet $6,95/TB/Monat, die ersten 10 GB kostenlos, freier Egress bis zum 3-fachen der durchschnittlich gespeicherten Datenmenge, laut Anbieterseite am 03.11.2026; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** berechnet $0,015/GB-Monat (rund $15/TB/Monat), aber ohne jegliche Egress-Gebühren und mit einer kostenlosen Stufe von 10 GB Speicher, laut Anbieterseite am 03.11.2026; **[Wasabi](https://wasabi.com/pricing/)** berechnet einen festen Satz von $7,99/TB/Monat ohne separate Egress- oder API-Gebühren, laut Anbieterseite am 03.11.2026. Für eine kleine Website kostet ein vollständiges Offsite-Backup bei allen drei Anbietern deutlich unter $1/Monat.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -518,11 +518,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[IONOS Hosting](https://www.ionos.de/) — laut ionos.de, 02.11.2026: Tarif Plus €1/Monat Einstieg (12 Monate), €11/Monat danach; einmalig 10 € Einrichtung; Preise inkl. MwSt.',
           '[ALL-INKL.COM Hosting](https://all-inkl.com/) — laut all-inkl.com, 02.11.2026: 1. Monat kostenlos, €4,95/Monat fest, keine Mindestlaufzeit.',
           '[Hostinger-Preise](https://www.hostinger.com/) — laut hostinger.com/de, 02.11.2026: Premium 2,49 €/Monat (48 Monate, 119,52 € im Voraus), 9,99 €/Monat Verlängerung; Unlimited 3,49 €/Monat, 16,99 €/Monat Verlängerung.',
-          '[Backblaze B2 Preise](https://www.backblaze.com/cloud-storage/pricing) — laut Anbieterseite 03.09.2026: $6,95/TB/Monat, erste 10 GB kostenlos, freier Egress bis zum 3-fachen der gespeicherten Daten.',
-          '[Cloudflare R2 Preise](https://developers.cloudflare.com/r2/pricing/) — laut Anbieterseite 03.09.2026: $0,015/GB-Monat Standard-Speicher, keine Egress-Gebühren, kostenlose Stufe 10 GB.',
-          '[Wasabi Preise](https://wasabi.com/pricing/) — laut Anbieterseite 03.09.2026: $7,99/TB/Monat fest, keine separaten Egress- oder API-Gebühren.',
+          '[Backblaze B2 Preise](https://www.backblaze.com/cloud-storage/pricing) — laut Anbieterseite 03.11.2026: $6,95/TB/Monat, erste 10 GB kostenlos, freier Egress bis zum 3-fachen der gespeicherten Daten.',
+          '[Cloudflare R2 Preise](https://developers.cloudflare.com/r2/pricing/) — laut Anbieterseite 03.11.2026: $0,015/GB-Monat Standard-Speicher, keine Egress-Gebühren, kostenlose Stufe 10 GB.',
+          '[Wasabi Preise](https://wasabi.com/pricing/) — laut Anbieterseite 03.11.2026: $7,99/TB/Monat fest, keine separaten Egress- oder API-Gebühren.',
           '[Neon Preise](https://neon.com/pricing) — laut Anbieterseite 03.11.2026: kostenlose Stufe 100 CU-Stunden/Projekt/Monat, 1 GB Speicher/Projekt, 5 GB Egress; bezahlte Rechenleistung ab $0,106/CU-Stunde.',
-          '[Supabase Preise](https://supabase.com/pricing) — laut Anbieterseite 03.09.2026: kostenlose Stufe 500 MB Datenbank, 1 GB Speicher, 50.000 MAUs; Pro-Tarif $25/Monat.',
+          '[Supabase Preise](https://supabase.com/pricing) — laut Anbieterseite 03.11.2026: kostenlose Stufe 500 MB Datenbank, 1 GB Speicher, 50.000 MAUs; Pro-Tarif $25/Monat.',
         ],
       },
       faq: {
@@ -559,7 +559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was kostet ein Offsite-Backup wirklich?',
-            a: 'Objektspeicher von Backblaze B2 ($6,95/TB/Monat), Cloudflare R2 (rund $15/TB/Monat, keine Egress-Gebühren) oder Wasabi ($7,99/TB/Monat fest) — alle laut Anbieterseite am 03.09.2026 — kostet für ein vollständiges Backup einer typischen kleinen Website deutlich unter $1/Monat, weit weniger als der Verlust der einzigen Kopie bei einem Anbieterausfall.',
+            a: 'Objektspeicher von Backblaze B2 ($6,95/TB/Monat), Cloudflare R2 (rund $15/TB/Monat, keine Egress-Gebühren) oder Wasabi ($7,99/TB/Monat fest) — alle laut Anbieterseite am 03.11.2026 — kostet für ein vollständiges Backup einer typischen kleinen Website deutlich unter $1/Monat, weit weniger als der Verlust der einzigen Kopie bei einem Anbieterausfall.',
           },
           {
             q: 'Wie teile ich eine große Datei oder einen Datensatz am sichersten?',
@@ -776,7 +776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'database-hosting',
         title: 'Héberger une base de données à part',
         content:
-          'L\'hébergement mutualisé, comme les forfaits o2switch, LWS ou Infomaniak de cette page, regroupe une seule base de données MySQL dans le même quota de disque que le reste du compte — suffisant pour un blog ou un petit CMS, pas pour une application avec sa propre table d\'utilisateurs, des événements analytiques, ou le stockage vectoriel/embeddings qu\'exige une fonctionnalité IA. Pour cela, une base de données managée est un produit distinct de l\'hébergement web. **[Neon](https://neon.com/pricing)** fonctionne sur Postgres serverless et propose un palier gratuit — 100 heures de calcul par projet et par mois, 0,5 Go de stockage par projet, 5 Go de sortie, lu sur neon.com le 03/09/2026 — qui se met en veille à coût nul en cas d\'inactivité, puis facture le calcul à l\'usage (à partir de 0,106$/heure de calcul) et le stockage (0,35$/Go/mois) au-delà du palier gratuit, sans minimum mensuel. **[Supabase](https://supabase.com/pricing)** propose un palier gratuit comparable — 500 Mo de base de données, 1 Go de stockage de fichiers, 50 000 utilisateurs actifs mensuels, 5 Go de sortie, sur 2 projets maximum, lu sur supabase.com le 03/09/2026 — mais un projet gratuit se met en pause après 7 jours d\'inactivité et ne bénéficie d\'aucune sauvegarde automatique ; le forfait Pro (25$/mois) lève ces deux limites. Passer à une base de données managée séparée devient pertinent dès qu\'un site a besoin de plus que l\'unique instance MySQL groupée avec l\'hébergement mutualisé — en complément de l\'hébergement web, pas en remplacement.',
+          'L\'hébergement mutualisé, comme les forfaits o2switch, LWS ou Infomaniak de cette page, regroupe une seule base de données MySQL dans le même quota de disque que le reste du compte — suffisant pour un blog ou un petit CMS, pas pour une application avec sa propre table d\'utilisateurs, des événements analytiques, ou le stockage vectoriel/embeddings qu\'exige une fonctionnalité IA. Pour cela, une base de données managée est un produit distinct de l\'hébergement web. **[Neon](https://neon.com/pricing)** fonctionne sur Postgres serverless et propose un palier gratuit — 100 heures de calcul par projet et par mois, 1 Go de stockage par projet, 5 Go de sortie, lu sur neon.com le 03/11/2026 — qui se met en veille à coût nul en cas d\'inactivité, puis facture le calcul à l\'usage (à partir de 0,106$/heure de calcul) et le stockage (0,35$/Go/mois) au-delà du palier gratuit, sans minimum mensuel. **[Supabase](https://supabase.com/pricing)** propose un palier gratuit comparable — 500 Mo de base de données, 1 Go de stockage de fichiers, 50 000 utilisateurs actifs mensuels, 5 Go de sortie, sur 2 projets maximum, lu sur supabase.com le 03/11/2026 — mais un projet gratuit se met en pause après 7 jours d\'inactivité et ne bénéficie d\'aucune sauvegarde automatique ; le forfait Pro (25$/mois) lève ces deux limites. Passer à une base de données managée séparée devient pertinent dès qu\'un site a besoin de plus que l\'unique instance MySQL groupée avec l\'hébergement mutualisé — en complément de l\'hébergement web, pas en remplacement.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -792,7 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'backups',
         title: 'Sauvegarder son site et ses données',
         content:
-          'La règle standard est 3-2-1 : garder 3 copies des données, sur 2 types de stockage différents, avec 1 copie hors site. Une sauvegarde qui ne vit que sur le même serveur que le site ne compte pas, car une panne chez l\'hébergeur ou un problème de compte emporte le site et la sauvegarde ensemble. La plupart des forfaits d\'hébergement mutualisé, y compris ceux de cette page, incluent une fonction de sauvegarde automatique, mais vérifiez la fenêtre de rétention (combien de jours en arrière une restauration peut remonter) et si la restauration est en libre-service ou nécessite un ticket support avant de s\'y fier comme unique copie. Pour la copie hors site, le stockage objet facturé au gigaoctet est l\'option standard : **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** facture 6,95$/To/mois, les 10 premiers Go gratuits, sortie gratuite jusqu\'à 3x les données stockées en moyenne, lu sur la page du fournisseur le 03/09/2026 ; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** facture 0,015$/Go/mois (environ 15$/To/mois) mais sans aucun frais de sortie et avec un palier gratuit de 10 Go de stockage, lu sur la page du fournisseur le 03/09/2026 ; **[Wasabi](https://wasabi.com/pricing/)** facture un tarif fixe de 7,99$/To/mois sans frais de sortie ou d\'API séparés, lu sur la page du fournisseur le 03/09/2026. Pour un petit site, une sauvegarde hors site complète coûte, avec l\'un ou l\'autre des trois, bien moins d\'1$/mois.',
+          'La règle standard est 3-2-1 : garder 3 copies des données, sur 2 types de stockage différents, avec 1 copie hors site. Une sauvegarde qui ne vit que sur le même serveur que le site ne compte pas, car une panne chez l\'hébergeur ou un problème de compte emporte le site et la sauvegarde ensemble. La plupart des forfaits d\'hébergement mutualisé, y compris ceux de cette page, incluent une fonction de sauvegarde automatique, mais vérifiez la fenêtre de rétention (combien de jours en arrière une restauration peut remonter) et si la restauration est en libre-service ou nécessite un ticket support avant de s\'y fier comme unique copie. Pour la copie hors site, le stockage objet facturé au gigaoctet est l\'option standard : **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** facture 6,95$/To/mois, les 10 premiers Go gratuits, sortie gratuite jusqu\'à 3x les données stockées en moyenne, lu sur la page du fournisseur le 03/11/2026 ; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** facture 0,015$/Go/mois (environ 15$/To/mois) mais sans aucun frais de sortie et avec un palier gratuit de 10 Go de stockage, lu sur la page du fournisseur le 03/11/2026 ; **[Wasabi](https://wasabi.com/pricing/)** facture un tarif fixe de 7,99$/To/mois sans frais de sortie ou d\'API séparés, lu sur la page du fournisseur le 03/11/2026. Pour un petit site, une sauvegarde hors site complète coûte, avec l\'un ou l\'autre des trois, bien moins d\'1$/mois.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -831,11 +831,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Infomaniak](https://www.infomaniak.com/) — lu sur infomaniak.com, 30/08/2026 (non relu depuis) : 10,91 CHF/mois en tarif catalogue, essai gratuit 30 jours, sans saut annoncé au renouvellement.',
           '[Hostinger](https://www.hostinger.com/) — lu directement sur hostinger.com/fr, 02/11/2026 : Premium 2,49 €/mois (48 mois, 119,52 € à l\'avance), 9,99 €/mois au renouvellement ; Unlimited 3,49 €/mois, 16,99 €/mois au renouvellement.',
           'OVHcloud ([ovhcloud.com](https://ovhcloud.com)) — marque d\'hébergement française bien connue ; prix lus sur ovhcloud.com le 03/11/2026 (Starter 1,59 € HT/mois, renouvellement 2,59 € HT ; Perso 2,99 € HT/mois pendant 12 mois, renouvellement 5,99 € HT).',
-          '[Prix Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — lu sur la page du fournisseur le 03/09/2026 : 6,95$/To/mois, 10 premiers Go gratuits, sortie gratuite jusqu\'à 3x les données stockées.',
-          '[Prix Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — lu sur la page du fournisseur le 03/09/2026 : 0,015$/Go/mois en stockage standard, aucun frais de sortie, palier gratuit de 10 Go.',
-          '[Prix Wasabi](https://wasabi.com/pricing/) — lu sur la page du fournisseur le 03/09/2026 : 7,99$/To/mois fixe, sans frais de sortie ou d\'API séparés.',
-          '[Prix Neon](https://neon.com/pricing) — lu sur la page du fournisseur le 03/09/2026 : palier gratuit 100 heures de calcul/projet/mois, 0,5 Go de stockage/projet, 5 Go de sortie ; calcul payant à partir de 0,106$/heure.',
-          '[Prix Supabase](https://supabase.com/pricing) — lu sur la page du fournisseur le 03/09/2026 : palier gratuit 500 Mo de base de données, 1 Go de stockage, 50 000 utilisateurs actifs mensuels ; forfait Pro 25$/mois.',
+          '[Prix Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — lu sur la page du fournisseur le 03/11/2026 : 6,95$/To/mois, 10 premiers Go gratuits, sortie gratuite jusqu\'à 3x les données stockées.',
+          '[Prix Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — lu sur la page du fournisseur le 03/11/2026 : 0,015$/Go/mois en stockage standard, aucun frais de sortie, palier gratuit de 10 Go.',
+          '[Prix Wasabi](https://wasabi.com/pricing/) — lu sur la page du fournisseur le 03/11/2026 : 7,99$/To/mois fixe, sans frais de sortie ou d\'API séparés.',
+          '[Prix Neon](https://neon.com/pricing) — lu sur la page du fournisseur le 03/11/2026 : palier gratuit 100 heures de calcul/projet/mois, 1 Go de stockage/projet, 5 Go de sortie ; calcul payant à partir de 0,106$/heure.',
+          '[Prix Supabase](https://supabase.com/pricing) — lu sur la page du fournisseur le 03/11/2026 : palier gratuit 500 Mo de base de données, 1 Go de stockage, 50 000 utilisateurs actifs mensuels ; forfait Pro 25$/mois.',
         ],
       },
       faq: {
@@ -876,7 +876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Combien coûte réellement une sauvegarde hors site ?',
-            a: 'Le stockage objet de Backblaze B2 (6,95$/To/mois), Cloudflare R2 (environ 15$/To/mois, sans frais de sortie) ou Wasabi (7,99$/To/mois fixe) — tous lus sur la page de chaque fournisseur le 03/09/2026 — coûte bien moins d\'1$/mois pour stocker une sauvegarde complète d\'un petit site classique, bien moins que de perdre l\'unique copie lors d\'une panne chez l\'hébergeur.',
+            a: 'Le stockage objet de Backblaze B2 (6,95$/To/mois), Cloudflare R2 (environ 15$/To/mois, sans frais de sortie) ou Wasabi (7,99$/To/mois fixe) — tous lus sur la page de chaque fournisseur le 03/11/2026 — coûte bien moins d\'1$/mois pour stocker une sauvegarde complète d\'un petit site classique, bien moins que de perdre l\'unique copie lors d\'une panne chez l\'hébergeur.',
           },
           {
             q: 'Quel est le moyen le plus sûr de partager un gros fichier ou un jeu de données ?',
@@ -1166,7 +1166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'database-hosting',
         title: 'Alojar una Base de Datos Aparte',
         content:
-          'El hosting compartido, como los planes de Webempresa o Nominalia de esta página, incluye una única base de datos MySQL dentro de la misma cuota de disco que el resto de la cuenta — suficiente para un blog o un CMS pequeño, no para una aplicación con su propia tabla de usuarios, eventos de analítica, o el almacenamiento vectorial/embeddings que necesita una función de IA. Para eso, una base de datos gestionada es un producto separado del hosting web. **[Neon](https://neon.com/pricing)** funciona sobre Postgres sin servidor y ofrece un nivel gratuito — 100 horas de cómputo por proyecto al mes, 1 GB de almacenamiento por proyecto, 5 GB de salida, leído en neon.com el 03-11-2026 — que se suspende a costo cero cuando está inactivo, y luego cobra cómputo por uso (desde US$0,106/hora de cómputo) y almacenamiento (US$0,35/GB al mes) más allá del nivel gratuito, sin mínimo mensual. **[Supabase](https://supabase.com/pricing)** ofrece un nivel gratuito comparable — 500 MB de base de datos, 1 GB de almacenamiento de archivos, 50.000 usuarios activos mensuales, 5 GB de salida, en hasta 2 proyectos, leído en supabase.com el 03-09-2026 — pero un proyecto gratuito se pausa tras 7 días de inactividad y no tiene copias de seguridad automáticas; el plan Pro (US$25/mes) elimina ambos límites. Pasar a una base de datos gestionada separada tiene sentido en cuanto un sitio necesita más que la única instancia MySQL incluida en el hosting compartido — como complemento del hosting web, no como reemplazo.',
+          'El hosting compartido, como los planes de Webempresa o Nominalia de esta página, incluye una única base de datos MySQL dentro de la misma cuota de disco que el resto de la cuenta — suficiente para un blog o un CMS pequeño, no para una aplicación con su propia tabla de usuarios, eventos de analítica, o el almacenamiento vectorial/embeddings que necesita una función de IA. Para eso, una base de datos gestionada es un producto separado del hosting web. **[Neon](https://neon.com/pricing)** funciona sobre Postgres sin servidor y ofrece un nivel gratuito — 100 horas de cómputo por proyecto al mes, 1 GB de almacenamiento por proyecto, 5 GB de salida, leído en neon.com el 03-11-2026 — que se suspende a costo cero cuando está inactivo, y luego cobra cómputo por uso (desde US$0,106/hora de cómputo) y almacenamiento (US$0,35/GB al mes) más allá del nivel gratuito, sin mínimo mensual. **[Supabase](https://supabase.com/pricing)** ofrece un nivel gratuito comparable — 500 MB de base de datos, 1 GB de almacenamiento de archivos, 50.000 usuarios activos mensuales, 5 GB de salida, en hasta 2 proyectos, leído en supabase.com el 03-11-2026 — pero un proyecto gratuito se pausa tras 7 días de inactividad y no tiene copias de seguridad automáticas; el plan Pro (US$25/mes) elimina ambos límites. Pasar a una base de datos gestionada separada tiene sentido en cuanto un sitio necesita más que la única instancia MySQL incluida en el hosting compartido — como complemento del hosting web, no como reemplazo.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1182,7 +1182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'backups',
         title: 'Copias de Seguridad del Sitio y los Datos',
         content:
-          'La regla estándar es 3-2-1: mantener 3 copias de los datos, en 2 tipos de almacenamiento distintos, con 1 copia fuera del sitio. Una copia de seguridad que vive solo en el mismo servidor que el sitio web no cuenta, porque una caída del proveedor o un problema de cuenta se lleva por delante el sitio y la copia de seguridad juntos. La mayoría de los planes de hosting compartido, incluidos los de esta página, incluyen alguna función de copia de seguridad automática, pero conviene revisar la ventana de retención (cuántos días atrás se puede restaurar) y si restaurar es autoservicio o requiere un ticket de soporte antes de confiar en ella como única copia. Para la copia externa, el almacenamiento de objetos con precio por gigabyte es la opción estándar: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** cobra US$6,95/TB al mes, los primeros 10 GB gratis, salida gratuita hasta 3 veces los datos almacenados en promedio, leído en la página del proveedor el 03-09-2026; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** cobra US$0,015/GB al mes (unos US$15/TB al mes) pero sin ninguna tarifa de salida y con un nivel gratuito de 10 GB de almacenamiento, leído en la página del proveedor el 03-09-2026; **[Wasabi](https://wasabi.com/pricing/)** cobra una tarifa fija de US$7,99/TB al mes sin tarifas separadas de salida o de API, leído en la página del proveedor el 03-09-2026. Para un sitio pequeño, una copia de seguridad externa completa cuesta bastante menos de US$1 al mes con cualquiera de los tres.',
+          'La regla estándar es 3-2-1: mantener 3 copias de los datos, en 2 tipos de almacenamiento distintos, con 1 copia fuera del sitio. Una copia de seguridad que vive solo en el mismo servidor que el sitio web no cuenta, porque una caída del proveedor o un problema de cuenta se lleva por delante el sitio y la copia de seguridad juntos. La mayoría de los planes de hosting compartido, incluidos los de esta página, incluyen alguna función de copia de seguridad automática, pero conviene revisar la ventana de retención (cuántos días atrás se puede restaurar) y si restaurar es autoservicio o requiere un ticket de soporte antes de confiar en ella como única copia. Para la copia externa, el almacenamiento de objetos con precio por gigabyte es la opción estándar: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** cobra US$6,95/TB al mes, los primeros 10 GB gratis, salida gratuita hasta 3 veces los datos almacenados en promedio, leído en la página del proveedor el 03-11-2026; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** cobra US$0,015/GB al mes (unos US$15/TB al mes) pero sin ninguna tarifa de salida y con un nivel gratuito de 10 GB de almacenamiento, leído en la página del proveedor el 03-11-2026; **[Wasabi](https://wasabi.com/pricing/)** cobra una tarifa fija de US$7,99/TB al mes sin tarifas separadas de salida o de API, leído en la página del proveedor el 03-11-2026. Para un sitio pequeño, una copia de seguridad externa completa cuesta bastante menos de US$1 al mes con cualquiera de los tres.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1262,7 +1262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuánto cuesta realmente una copia de seguridad externa?',
-            a: 'El almacenamiento de objetos de Backblaze B2 (US$6,95/TB al mes), Cloudflare R2 (unos US$15/TB al mes, sin tarifas de salida) o Wasabi (US$7,99/TB al mes fijo) — todos leídos en la página de cada proveedor el 03-09-2026 — cuesta bastante menos de US$1 al mes para guardar una copia de seguridad completa de un sitio pequeño típico, mucho menos que perder la única copia por una caída del proveedor.',
+            a: 'El almacenamiento de objetos de Backblaze B2 (US$6,95/TB al mes), Cloudflare R2 (unos US$15/TB al mes, sin tarifas de salida) o Wasabi (US$7,99/TB al mes fijo) — todos leídos en la página de cada proveedor el 03-11-2026 — cuesta bastante menos de US$1 al mes para guardar una copia de seguridad completa de un sitio pequeño típico, mucho menos que perder la única copia por una caída del proveedor.',
           },
           {
             q: '¿Cuál es la forma más segura de compartir un archivo grande o un conjunto de datos?',
@@ -1283,11 +1283,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Raiola Networks](https://raiolanetworks.com/hosting-web/) — precios mensuales sin IVA, centros de datos en Madrid y soporte 24/7 en español, leídos directamente el 2026-11-02.',
           '[Dinahosting](https://dinahosting.com/hosting) — precios con contratación anual y renovación, soporte 24/7 «en tu idioma» y teléfono gratuito, leídos directamente el 2026-11-02.',
           '[SiteGround](https://www.siteground.es/hosting-web.htm) — StartUp, GrowBig y GoGeek a 12 meses y sus renovaciones, sin IVA, leídos directamente el 2026-11-02.',
-          '[Precios de Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — leído en la página del proveedor el 03-09-2026: US$6,95/TB al mes, primeros 10 GB gratis, salida gratuita hasta 3x los datos almacenados.',
-          '[Precios de Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — leído en la página del proveedor el 03-09-2026: US$0,015/GB al mes en almacenamiento estándar, sin tarifas de salida, nivel gratuito de 10 GB.',
-          '[Precios de Wasabi](https://wasabi.com/pricing/) — leído en la página del proveedor el 03-09-2026: US$7,99/TB al mes fijo, sin tarifas separadas de salida o de API.',
+          '[Precios de Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — leído en la página del proveedor el 03-11-2026: US$6,95/TB al mes, primeros 10 GB gratis, salida gratuita hasta 3x los datos almacenados.',
+          '[Precios de Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — leído en la página del proveedor el 03-11-2026: US$0,015/GB al mes en almacenamiento estándar, sin tarifas de salida, nivel gratuito de 10 GB.',
+          '[Precios de Wasabi](https://wasabi.com/pricing/) — leído en la página del proveedor el 03-11-2026: US$7,99/TB al mes fijo, sin tarifas separadas de salida o de API.',
           '[Precios de Neon](https://neon.com/pricing) — leído en la página del proveedor el 03-11-2026: nivel gratuito 100 horas de cómputo/proyecto/mes, 1 GB de almacenamiento/proyecto, 5 GB de salida; cómputo pago desde US$0,106/hora.',
-          '[Precios de Supabase](https://supabase.com/pricing) — leído en la página del proveedor el 03-09-2026: nivel gratuito 500 MB de base de datos, 1 GB de almacenamiento, 50.000 usuarios activos mensuales; plan Pro US$25/mes.',
+          '[Precios de Supabase](https://supabase.com/pricing) — leído en la página del proveedor el 03-11-2026: nivel gratuito 500 MB de base de datos, 1 GB de almacenamiento, 50.000 usuarios activos mensuales; plan Pro US$25/mes.',
         ],
       },
       relatedReading: {
@@ -1421,7 +1421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'database-hosting',
         title: 'Hospedar um banco de dados separado',
         content:
-          'A hospedagem compartilhada, como os planos da Hostinger, KingHost ou Locaweb desta página, inclui um único banco de dados MySQL dentro da mesma cota de disco do resto da conta — suficiente para um blog ou um CMS pequeno, não para uma aplicação com tabela de usuários própria, eventos de analytics, ou o armazenamento vetorial/embeddings que uma função de IA exige. Para isso, um banco de dados gerenciado é um produto separado da hospedagem de site. **[Neon](https://neon.com/pricing)** roda sobre Postgres serverless e oferece um nível gratuito — 100 horas de computação por projeto ao mês, 1 GB de armazenamento por projeto, 5 GB de saída, lido em neon.com em 03/11/2026 — que suspende a custo zero quando ocioso, e depois cobra computação por uso (a partir de US$0,106/hora de computação) e armazenamento (US$0,35/GB ao mês) além do nível gratuito, sem mínimo mensal. **[Supabase](https://supabase.com/pricing)** oferece um nível gratuito comparável — 500 MB de banco de dados, 1 GB de armazenamento de arquivos, 50.000 usuários ativos mensais, 5 GB de saída, em até 2 projetos, lido em supabase.com em 03/09/2026 — mas um projeto gratuito pausa após 7 dias de inatividade e não tem backups automáticos; o plano Pro (US$25/mês) remove ambos os limites. Migrar para um banco de dados gerenciado separado faz sentido assim que um site precisar de mais do que a única instância MySQL incluída na hospedagem compartilhada — como complemento à hospedagem de site, não como substituto.',
+          'A hospedagem compartilhada, como os planos da Hostinger, KingHost ou Locaweb desta página, inclui um único banco de dados MySQL dentro da mesma cota de disco do resto da conta — suficiente para um blog ou um CMS pequeno, não para uma aplicação com tabela de usuários própria, eventos de analytics, ou o armazenamento vetorial/embeddings que uma função de IA exige. Para isso, um banco de dados gerenciado é um produto separado da hospedagem de site. **[Neon](https://neon.com/pricing)** roda sobre Postgres serverless e oferece um nível gratuito — 100 horas de computação por projeto ao mês, 1 GB de armazenamento por projeto, 5 GB de saída, lido em neon.com em 03/11/2026 — que suspende a custo zero quando ocioso, e depois cobra computação por uso (a partir de US$0,106/hora de computação) e armazenamento (US$0,35/GB ao mês) além do nível gratuito, sem mínimo mensal. **[Supabase](https://supabase.com/pricing)** oferece um nível gratuito comparável — 500 MB de banco de dados, 1 GB de armazenamento de arquivos, 50.000 usuários ativos mensais, 5 GB de saída, em até 2 projetos, lido em supabase.com em 03/11/2026 — mas um projeto gratuito pausa após 7 dias de inatividade e não tem backups automáticos; o plano Pro (US$25/mês) remove ambos os limites. Migrar para um banco de dados gerenciado separado faz sentido assim que um site precisar de mais do que a única instância MySQL incluída na hospedagem compartilhada — como complemento à hospedagem de site, não como substituto.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1437,7 +1437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'backups',
         title: 'Backup do seu site e dados',
         content:
-          'A regra padrão é 3-2-1: manter 3 cópias dos dados, em 2 tipos diferentes de armazenamento, com 1 cópia fora do local. Um backup que vive só no mesmo servidor do site não conta, porque uma queda do provedor ou um problema de conta derruba o site e o backup juntos. A maioria dos planos de hospedagem compartilhada, incluindo os desta página, inclui alguma função de backup automático, mas verifique a janela de retenção (quantos dias atrás uma restauração consegue alcançar) e se restaurar é autoatendimento ou exige um ticket de suporte antes de confiar nele como única cópia. Para a cópia externa, armazenamento de objetos cobrado por gigabyte é a opção padrão: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** cobra US$6,95/TB por mês, os primeiros 10 GB grátis, saída gratuita até 3x os dados armazenados em média, lido na página do provedor em 03/09/2026; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** cobra US$0,015/GB por mês (cerca de US$15/TB por mês) mas sem nenhuma taxa de saída e com um nível gratuito de 10 GB de armazenamento, lido na página do provedor em 03/09/2026; **[Wasabi](https://wasabi.com/pricing/)** cobra uma taxa fixa de US$7,99/TB por mês sem taxas separadas de saída ou de API, lido na página do provedor em 03/09/2026. Para um site pequeno, um backup externo completo custa bem menos de US$1 por mês com qualquer um dos três.',
+          'A regra padrão é 3-2-1: manter 3 cópias dos dados, em 2 tipos diferentes de armazenamento, com 1 cópia fora do local. Um backup que vive só no mesmo servidor do site não conta, porque uma queda do provedor ou um problema de conta derruba o site e o backup juntos. A maioria dos planos de hospedagem compartilhada, incluindo os desta página, inclui alguma função de backup automático, mas verifique a janela de retenção (quantos dias atrás uma restauração consegue alcançar) e se restaurar é autoatendimento ou exige um ticket de suporte antes de confiar nele como única cópia. Para a cópia externa, armazenamento de objetos cobrado por gigabyte é a opção padrão: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** cobra US$6,95/TB por mês, os primeiros 10 GB grátis, saída gratuita até 3x os dados armazenados em média, lido na página do provedor em 03/11/2026; **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** cobra US$0,015/GB por mês (cerca de US$15/TB por mês) mas sem nenhuma taxa de saída e com um nível gratuito de 10 GB de armazenamento, lido na página do provedor em 03/11/2026; **[Wasabi](https://wasabi.com/pricing/)** cobra uma taxa fixa de US$7,99/TB por mês sem taxas separadas de saída ou de API, lido na página do provedor em 03/11/2026. Para um site pequeno, um backup externo completo custa bem menos de US$1 por mês com qualquer um dos três.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1509,7 +1509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quanto custa realmente um backup externo?',
-            a: 'Armazenamento de objetos da Backblaze B2 (US$6,95/TB por mês), Cloudflare R2 (cerca de US$15/TB por mês, sem taxas de saída) ou Wasabi (US$7,99/TB por mês fixo) — todos lidos na página de cada provedor em 03/09/2026 — custa bem menos de US$1 por mês para guardar um backup completo de um site pequeno típico, muito menos do que perder a única cópia numa queda do provedor.',
+            a: 'Armazenamento de objetos da Backblaze B2 (US$6,95/TB por mês), Cloudflare R2 (cerca de US$15/TB por mês, sem taxas de saída) ou Wasabi (US$7,99/TB por mês fixo) — todos lidos na página de cada provedor em 03/11/2026 — custa bem menos de US$1 por mês para guardar um backup completo de um site pequeno típico, muito menos do que perder a única cópia numa queda do provedor.',
           },
           {
             q: 'Qual é a forma mais segura de compartilhar um arquivo grande ou um conjunto de dados?',
@@ -1526,11 +1526,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[KingHost](https://king.host/hospedagem-de-sites) — lido em 02/11/2026: Hospedagem I R$ 9,99, II R$ 15,99, III R$ 19,99 por mês, ciclos mensal/anual/bienal sem indicar qual valor vale para qual ciclo; renovação ao preço regular, sem valor.',
           '[Locaweb](https://www.locaweb.com.br/hospedagem-de-sites/) — lido em 02/11/2026: Go R$ 5,90, Hospedagem I R$ 10,90, II R$ 16,90 por mês no primeiro ciclo (riscados R$ 24,90, R$ 37,90, R$ 59,90), pagamento integral e antecipado; renovação não informada.',
           '[LGPD — Lei Geral de Proteção de Dados (ANPD)](https://www.gov.br/anpd/pt-br) — site oficial da autoridade brasileira de proteção de dados, citado para o enquadramento de LGPD/ANPD acima.',
-          '[Preços da Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — lido na página do provedor em 03/09/2026: US$6,95/TB por mês, primeiros 10 GB grátis, saída gratuita até 3x os dados armazenados.',
-          '[Preços da Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — lido na página do provedor em 03/09/2026: US$0,015/GB por mês em armazenamento padrão, sem taxas de saída, nível gratuito de 10 GB.',
-          '[Preços da Wasabi](https://wasabi.com/pricing/) — lido na página do provedor em 03/09/2026: US$7,99/TB por mês fixo, sem taxas separadas de saída ou de API.',
+          '[Preços da Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — lido na página do provedor em 03/11/2026: US$6,95/TB por mês, primeiros 10 GB grátis, saída gratuita até 3x os dados armazenados.',
+          '[Preços da Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — lido na página do provedor em 03/11/2026: US$0,015/GB por mês em armazenamento padrão, sem taxas de saída, nível gratuito de 10 GB.',
+          '[Preços da Wasabi](https://wasabi.com/pricing/) — lido na página do provedor em 03/11/2026: US$7,99/TB por mês fixo, sem taxas separadas de saída ou de API.',
           '[Preços da Neon](https://neon.com/pricing) — lido na página do provedor em 03/11/2026: nível gratuito 100 horas de computação/projeto/mês, 1 GB de armazenamento/projeto, 5 GB de saída; computação paga a partir de US$0,106/hora.',
-          '[Preços da Supabase](https://supabase.com/pricing) — lido na página do provedor em 03/09/2026: nível gratuito 500 MB de banco de dados, 1 GB de armazenamento, 50.000 usuários ativos mensais; plano Pro US$25/mês.',
+          '[Preços da Supabase](https://supabase.com/pricing) — lido na página do provedor em 03/11/2026: nível gratuito 500 MB de banco de dados, 1 GB de armazenamento, 50.000 usuários ativos mensais; plano Pro US$25/mês.',
         ],
       },
       relatedReading: {
@@ -1674,7 +1674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'database-hosting',
         title: 'استضافة قاعدة بيانات منفصلة',
         content:
-          'تُضمّن الاستضافة المشتركة، مثل خطط Hostinger أو ArabHosters في هذه الصفحة، قاعدة بيانات MySQL واحدة ضمن نفس حصة القرص المخصصة لبقية الحساب — وهذا كافٍ لمدونة أو نظام إدارة محتوى صغير، وليس لتطبيق له جدول مستخدمين خاص أو أحداث تحليلات أو تخزين متجهات/embeddings تحتاجه ميزة ذكاء اصطناعي. لهذا الغرض، تُعد قاعدة البيانات المُدارة منتجًا منفصلًا عن استضافة المواقع. تعمل **[Neon](https://neon.com/pricing)** على Postgres بلا خادم وتقدّم مستوى مجانيًا — 100 ساعة حوسبة لكل مشروع شهريًا، 0.5 جيجابايت تخزين لكل مشروع، 5 جيجابايت نقل خارجي، تمت قراءته من neon.com بتاريخ 2026-09-03 — يتوقف عن التكلفة تمامًا عند عدم الاستخدام، ثم يحتسب الحوسبة حسب الاستخدام (بدءًا من 0.106 دولار لكل ساعة حوسبة) والتخزين (0.35 دولار لكل جيجابايت شهريًا) بعد تجاوز المستوى المجاني، دون حد أدنى شهري. تقدّم **[Supabase](https://supabase.com/pricing)** مستوى مجانيًا مشابهًا — قاعدة بيانات 500 ميجابايت، تخزين ملفات 1 جيجابايت، 50,000 مستخدم نشط شهريًا، 5 جيجابايت نقل خارجي، عبر مشروعين كحد أقصى، تمت قراءته من supabase.com بتاريخ 2026-09-03 — لكن المشروع المجاني يتوقف مؤقتًا بعد 7 أيام من عدم النشاط ولا يحصل على نسخ احتياطي تلقائي؛ تزيل خطة Pro (25 دولار شهريًا) هذين الحدين. يصبح الانتقال إلى قاعدة بيانات مُدارة منفصلة منطقيًا بمجرد أن يحتاج الموقع أكثر من نسخة MySQL الواحدة المضمّنة في الاستضافة المشتركة — كإضافة لاستضافة الموقع، وليس بديلًا عنها.',
+          'تُضمّن الاستضافة المشتركة، مثل خطط Hostinger أو ArabHosters في هذه الصفحة، قاعدة بيانات MySQL واحدة ضمن نفس حصة القرص المخصصة لبقية الحساب — وهذا كافٍ لمدونة أو نظام إدارة محتوى صغير، وليس لتطبيق له جدول مستخدمين خاص أو أحداث تحليلات أو تخزين متجهات/embeddings تحتاجه ميزة ذكاء اصطناعي. لهذا الغرض، تُعد قاعدة البيانات المُدارة منتجًا منفصلًا عن استضافة المواقع. تعمل **[Neon](https://neon.com/pricing)** على Postgres بلا خادم وتقدّم مستوى مجانيًا — 100 ساعة حوسبة لكل مشروع شهريًا، 1 جيجابايت تخزين لكل مشروع، 5 جيجابايت نقل خارجي، تمت قراءته من neon.com بتاريخ 2026-11-03 — يتوقف عن التكلفة تمامًا عند عدم الاستخدام، ثم يحتسب الحوسبة حسب الاستخدام (بدءًا من 0.106 دولار لكل ساعة حوسبة) والتخزين (0.35 دولار لكل جيجابايت شهريًا) بعد تجاوز المستوى المجاني، دون حد أدنى شهري. تقدّم **[Supabase](https://supabase.com/pricing)** مستوى مجانيًا مشابهًا — قاعدة بيانات 500 ميجابايت، تخزين ملفات 1 جيجابايت، 50,000 مستخدم نشط شهريًا، 5 جيجابايت نقل خارجي، عبر مشروعين كحد أقصى، تمت قراءته من supabase.com بتاريخ 2026-11-03 — لكن المشروع المجاني يتوقف مؤقتًا بعد 7 أيام من عدم النشاط ولا يحصل على نسخ احتياطي تلقائي؛ تزيل خطة Pro (25 دولار شهريًا) هذين الحدين. يصبح الانتقال إلى قاعدة بيانات مُدارة منفصلة منطقيًا بمجرد أن يحتاج الموقع أكثر من نسخة MySQL الواحدة المضمّنة في الاستضافة المشتركة — كإضافة لاستضافة الموقع، وليس بديلًا عنها.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1690,7 +1690,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'backups',
         title: 'النسخ الاحتياطي لموقعك وبياناتك',
         content:
-          'القاعدة المعيارية هي 3-2-1: الاحتفاظ بثلاث نسخ من البيانات، على نوعين مختلفين من التخزين، مع نسخة واحدة خارج الموقع. لا تُحتسب النسخة الاحتياطية التي تعيش فقط على نفس خادم الموقع، لأن انقطاع خدمة المزود أو مشكلة في الحساب يعطّل الموقع والنسخة الاحتياطية معًا. تتضمن معظم خطط الاستضافة المشتركة، بما فيها الخطط المذكورة هنا، ميزة نسخ احتياطي تلقائي، لكن تحقق من نافذة الاحتفاظ (عدد الأيام التي يمكن الرجوع إليها عند الاستعادة) وما إذا كانت الاستعادة ذاتية الخدمة أم تتطلب تذكرة دعم فني قبل الاعتماد عليها كنسخة وحيدة. بالنسبة للنسخة خارج الموقع، يُعد التخزين الكائني المحتسَب بالجيجابايت الخيار المعياري: تفرض **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** رسوم 6.95 دولار لكل تيرابايت شهريًا، مع أول 10 جيجابايت مجانًا ونقل خارجي مجاني حتى 3 أضعاف متوسط البيانات المخزنة، تمت قراءته من صفحة المزود بتاريخ 2026-09-03؛ وتفرض **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** رسوم 0.015 دولار لكل جيجابايت شهريًا (نحو 15 دولارًا لكل تيرابايت شهريًا) لكن دون أي رسوم نقل خارجي على الإطلاق ومع مستوى مجاني بسعة 10 جيجابايت تخزين، تمت قراءته من صفحة المزود بتاريخ 2026-09-03؛ وتفرض **[Wasabi](https://wasabi.com/pricing/)** رسمًا ثابتًا قدره 7.99 دولار لكل تيرابايت شهريًا دون رسوم نقل خارجي أو رسوم واجهة برمجية منفصلة، تمت قراءته من صفحة المزود بتاريخ 2026-09-03. لموقع صغير، تكلف نسخة احتياطية كاملة خارج الموقع أقل بكثير من دولار واحد شهريًا مع أي من الثلاثة.',
+          'القاعدة المعيارية هي 3-2-1: الاحتفاظ بثلاث نسخ من البيانات، على نوعين مختلفين من التخزين، مع نسخة واحدة خارج الموقع. لا تُحتسب النسخة الاحتياطية التي تعيش فقط على نفس خادم الموقع، لأن انقطاع خدمة المزود أو مشكلة في الحساب يعطّل الموقع والنسخة الاحتياطية معًا. تتضمن معظم خطط الاستضافة المشتركة، بما فيها الخطط المذكورة هنا، ميزة نسخ احتياطي تلقائي، لكن تحقق من نافذة الاحتفاظ (عدد الأيام التي يمكن الرجوع إليها عند الاستعادة) وما إذا كانت الاستعادة ذاتية الخدمة أم تتطلب تذكرة دعم فني قبل الاعتماد عليها كنسخة وحيدة. بالنسبة للنسخة خارج الموقع، يُعد التخزين الكائني المحتسَب بالجيجابايت الخيار المعياري: تفرض **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** رسوم 6.95 دولار لكل تيرابايت شهريًا، مع أول 10 جيجابايت مجانًا ونقل خارجي مجاني حتى 3 أضعاف متوسط البيانات المخزنة، تمت قراءته من صفحة المزود بتاريخ 2026-11-03؛ وتفرض **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** رسوم 0.015 دولار لكل جيجابايت شهريًا (نحو 15 دولارًا لكل تيرابايت شهريًا) لكن دون أي رسوم نقل خارجي على الإطلاق ومع مستوى مجاني بسعة 10 جيجابايت تخزين، تمت قراءته من صفحة المزود بتاريخ 2026-11-03؛ وتفرض **[Wasabi](https://wasabi.com/pricing/)** رسمًا ثابتًا قدره 7.99 دولار لكل تيرابايت شهريًا دون رسوم نقل خارجي أو رسوم واجهة برمجية منفصلة، تمت قراءته من صفحة المزود بتاريخ 2026-11-03. لموقع صغير، تكلف نسخة احتياطية كاملة خارج الموقع أقل بكثير من دولار واحد شهريًا مع أي من الثلاثة.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1750,7 +1750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كم تكلف النسخة الاحتياطية خارج الموقع فعليًا؟',
-            a: 'يكلف التخزين الكائني من Backblaze B2 (6.95 دولار لكل تيرابايت شهريًا) أو Cloudflare R2 (نحو 15 دولارًا لكل تيرابايت شهريًا، دون رسوم نقل خارجي) أو Wasabi (7.99 دولار لكل تيرابايت شهريًا ثابتة) — جميعها قُرئت من صفحة كل مزود بتاريخ 2026-09-03 — أقل بكثير من دولار واحد شهريًا لتخزين نسخة احتياطية كاملة لموقع صغير نموذجي، وهو أقل بكثير من تكلفة فقدان النسخة الوحيدة عند انقطاع خدمة المزود.',
+            a: 'يكلف التخزين الكائني من Backblaze B2 (6.95 دولار لكل تيرابايت شهريًا) أو Cloudflare R2 (نحو 15 دولارًا لكل تيرابايت شهريًا، دون رسوم نقل خارجي) أو Wasabi (7.99 دولار لكل تيرابايت شهريًا ثابتة) — جميعها قُرئت من صفحة كل مزود بتاريخ 2026-11-03 — أقل بكثير من دولار واحد شهريًا لتخزين نسخة احتياطية كاملة لموقع صغير نموذجي، وهو أقل بكثير من تكلفة فقدان النسخة الوحيدة عند انقطاع خدمة المزود.',
           },
           {
             q: 'ما أأمن طريقة لمشاركة ملف كبير أو مجموعة بيانات؟',
@@ -1767,11 +1767,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GoDaddy وNamecheap — لم تتم إعادة تسعيرهما هذه المرة؛ مذكوران للاطلاع فقط.',
           'نظام حماية البيانات الشخصية السعودي (PDPL) — مصدر إطار حماية البيانات السعودي المذكور أعلاه؛ تحقق من النص الحالي عبر المصادر الحكومية السعودية الرسمية.',
           'المرسوم بقانون اتحادي رقم 45 لسنة 2021 بشأن حماية البيانات الشخصية (الإمارات) — مصدر إطار حماية البيانات الإماراتي المذكور أعلاه؛ تحقق من النص الحالي عبر المصادر الحكومية الإماراتية الرسمية.',
-          '[أسعار Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — تمت قراءته من صفحة المزود بتاريخ 2026-09-03: 6.95 دولار لكل تيرابايت شهريًا، أول 10 جيجابايت مجانًا، نقل خارجي مجاني حتى 3 أضعاف البيانات المخزنة.',
-          '[أسعار Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — تمت قراءته من صفحة المزود بتاريخ 2026-09-03: 0.015 دولار لكل جيجابايت شهريًا للتخزين القياسي، دون رسوم نقل خارجي، مستوى مجاني بسعة 10 جيجابايت.',
-          '[أسعار Wasabi](https://wasabi.com/pricing/) — تمت قراءته من صفحة المزود بتاريخ 2026-09-03: 7.99 دولار لكل تيرابايت شهريًا ثابتة، دون رسوم نقل خارجي أو واجهة برمجية منفصلة.',
-          '[أسعار Neon](https://neon.com/pricing) — تمت قراءته من صفحة المزود بتاريخ 2026-09-03: مستوى مجاني 100 ساعة حوسبة/مشروع/شهريًا، 0.5 جيجابايت تخزين/مشروع، 5 جيجابايت نقل خارجي؛ الحوسبة المدفوعة تبدأ من 0.106 دولار لكل ساعة.',
-          '[أسعار Supabase](https://supabase.com/pricing) — تمت قراءته من صفحة المزود بتاريخ 2026-09-03: مستوى مجاني 500 ميجابايت قاعدة بيانات، 1 جيجابايت تخزين، 50,000 مستخدم نشط شهريًا؛ خطة Pro بسعر 25 دولار شهريًا.',
+          '[أسعار Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) — تمت قراءته من صفحة المزود بتاريخ 2026-11-03: 6.95 دولار لكل تيرابايت شهريًا، أول 10 جيجابايت مجانًا، نقل خارجي مجاني حتى 3 أضعاف البيانات المخزنة.',
+          '[أسعار Cloudflare R2](https://developers.cloudflare.com/r2/pricing/) — تمت قراءته من صفحة المزود بتاريخ 2026-11-03: 0.015 دولار لكل جيجابايت شهريًا للتخزين القياسي، دون رسوم نقل خارجي، مستوى مجاني بسعة 10 جيجابايت.',
+          '[أسعار Wasabi](https://wasabi.com/pricing/) — تمت قراءته من صفحة المزود بتاريخ 2026-11-03: 7.99 دولار لكل تيرابايت شهريًا ثابتة، دون رسوم نقل خارجي أو واجهة برمجية منفصلة.',
+          '[أسعار Neon](https://neon.com/pricing) — تمت قراءته من صفحة المزود بتاريخ 2026-11-03: مستوى مجاني 100 ساعة حوسبة/مشروع/شهريًا، 1 جيجابايت تخزين/مشروع، 5 جيجابايت نقل خارجي؛ الحوسبة المدفوعة تبدأ من 0.106 دولار لكل ساعة.',
+          '[أسعار Supabase](https://supabase.com/pricing) — تمت قراءته من صفحة المزود بتاريخ 2026-11-03: مستوى مجاني 500 ميجابايت قاعدة بيانات، 1 جيجابايت تخزين، 50,000 مستخدم نشط شهريًا؛ خطة Pro بسعر 25 دولار شهريًا.',
         ],
       },
       relatedReading: {
@@ -1923,7 +1923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'database-hosting',
         title: 'データベースを別途ホスティングする',
         content:
-          'XserverやロリポップのようなプランではMySQLデータベースが1つ、アカウント全体と同じディスク容量の中に含まれています — ブログや小規模なCMSには十分ですが、独自のユーザーテーブルや分析イベント、AI機能に必要なベクトル／embeddingストレージを持つアプリケーションには不十分です。そのためには、ウェブホスティングとは別の製品であるマネージドデータベースが必要です。**[Neon](https://neon.com/pricing)** はサーバーレスPostgres上で動作し、無料枠（プロジェクトあたり月100計算時間、プロジェクトあたり1GBストレージ、5GBの送信量、2026-11-03時点のneon.comの記載）を提供しており、アイドル時はコストゼロまで自動的に一時停止し、無料枠を超えると使用量に応じて計算（1計算時間あたり0.106ドルから）とストレージ（1GBあたり月0.35ドル）が課金され、月額最低料金はありません。**[Supabase](https://supabase.com/pricing)** も同様の無料枠（データベース500MB、ファイルストレージ1GB、月間アクティブユーザー50,000人、送信量5GB、最大2プロジェクトまで、2026-09-03時点のsupabase.comの記載）を提供していますが、無料プロジェクトは7日間操作がないと一時停止し、自動バックアップもありません — Proプラン（月25ドル）で両方の制限が解除されます。共有ホスティングに含まれる単一のMySQLインスタンス以上のものがサイトに必要になった時点で、別途マネージドデータベースへの移行を検討する価値があります — ウェブホスティングの代替ではなく、その補完としてです。',
+          'XserverやロリポップのようなプランではMySQLデータベースが1つ、アカウント全体と同じディスク容量の中に含まれています — ブログや小規模なCMSには十分ですが、独自のユーザーテーブルや分析イベント、AI機能に必要なベクトル／embeddingストレージを持つアプリケーションには不十分です。そのためには、ウェブホスティングとは別の製品であるマネージドデータベースが必要です。**[Neon](https://neon.com/pricing)** はサーバーレスPostgres上で動作し、無料枠（プロジェクトあたり月100計算時間、プロジェクトあたり1GBストレージ、5GBの送信量、2026-11-03時点のneon.comの記載）を提供しており、アイドル時はコストゼロまで自動的に一時停止し、無料枠を超えると使用量に応じて計算（1計算時間あたり0.106ドルから）とストレージ（1GBあたり月0.35ドル）が課金され、月額最低料金はありません。**[Supabase](https://supabase.com/pricing)** も同様の無料枠（データベース500MB、ファイルストレージ1GB、月間アクティブユーザー50,000人、送信量5GB、最大2プロジェクトまで、2026-11-03時点のsupabase.comの記載）を提供していますが、無料プロジェクトは7日間操作がないと一時停止し、自動バックアップもありません — Proプラン（月25ドル）で両方の制限が解除されます。共有ホスティングに含まれる単一のMySQLインスタンス以上のものがサイトに必要になった時点で、別途マネージドデータベースへの移行を検討する価値があります — ウェブホスティングの代替ではなく、その補完としてです。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1939,7 +1939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'backups',
         title: 'サイトとデータのバックアップ',
         content:
-          '標準的なルールは3-2-1方式です：データのコピーを3つ持ち、2種類の異なるストレージに保存し、そのうち1つはサイト外に置きます。サイトと同じサーバー上にしかないバックアップはカウントされません。プロバイダー側の障害やアカウントの問題が起きれば、サイトとバックアップが同時に失われるためです。本記事のプランを含め、ほとんどの共有ホスティングプランには自動バックアップ機能が含まれていますが、唯一のコピーとして頼る前に、保存期間（何日前まで復元できるか）と、復元がセルフサービスかサポートへの問い合わせが必要かを確認してください。サイト外のコピーには、ギガバイト単位で課金されるオブジェクトストレージが標準的な選択肢です：**[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** は1TBあたり月6.95ドル、最初の10GBは無料、平均保存データ量の3倍まで送信（egress）無料で、2026-09-03時点の各社公式ページの記載。**[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** は1GBあたり月0.015ドル（1TBあたり約15ドル）ですが、送信量に一切課金がなく、10GBまでの無料枠があり、2026-09-03時点の各社公式ページの記載。**[Wasabi](https://wasabi.com/pricing/)** は1TBあたり月7.99ドルの固定料金で、送信量やAPIリクエストの個別課金はなく、2026-09-03時点の各社公式ページの記載。小規模サイトであれば、これら3社のいずれでもサイト外の完全なバックアップを月1ドル未満で維持できます。',
+          '標準的なルールは3-2-1方式です：データのコピーを3つ持ち、2種類の異なるストレージに保存し、そのうち1つはサイト外に置きます。サイトと同じサーバー上にしかないバックアップはカウントされません。プロバイダー側の障害やアカウントの問題が起きれば、サイトとバックアップが同時に失われるためです。本記事のプランを含め、ほとんどの共有ホスティングプランには自動バックアップ機能が含まれていますが、唯一のコピーとして頼る前に、保存期間（何日前まで復元できるか）と、復元がセルフサービスかサポートへの問い合わせが必要かを確認してください。サイト外のコピーには、ギガバイト単位で課金されるオブジェクトストレージが標準的な選択肢です：**[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** は1TBあたり月6.95ドル、最初の10GBは無料、平均保存データ量の3倍まで送信（egress）無料で、2026-11-03時点の各社公式ページの記載。**[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** は1GBあたり月0.015ドル（1TBあたり約15ドル）ですが、送信量に一切課金がなく、10GBまでの無料枠があり、2026-11-03時点の各社公式ページの記載。**[Wasabi](https://wasabi.com/pricing/)** は1TBあたり月7.99ドルの固定料金で、送信量やAPIリクエストの個別課金はなく、2026-11-03時点の各社公式ページの記載。小規模サイトであれば、これら3社のいずれでもサイト外の完全なバックアップを月1ドル未満で維持できます。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2007,7 +2007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'サイト外バックアップの実際の費用はどれくらいですか？',
-            a: 'Backblaze B2（1TBあたり月6.95ドル）、Cloudflare R2（1TBあたり約15ドル、送信量課金なし）、Wasabi（1TBあたり月7.99ドルの固定料金）のオブジェクトストレージは、いずれも2026-09-03時点の各社公式ページの記載で、一般的な小規模サイトの完全なバックアップを保存するのに月1ドル未満で済みます。プロバイダー障害で唯一のコピーを失うことに比べればはるかに安価です。',
+            a: 'Backblaze B2（1TBあたり月6.95ドル）、Cloudflare R2（1TBあたり約15ドル、送信量課金なし）、Wasabi（1TBあたり月7.99ドルの固定料金）のオブジェクトストレージは、いずれも2026-11-03時点の各社公式ページの記載で、一般的な小規模サイトの完全なバックアップを保存するのに月1ドル未満で済みます。プロバイダー障害で唯一のコピーを失うことに比べればはるかに安価です。',
           },
           {
             q: '大容量ファイルやデータセットを共有する最も安全な方法は何ですか？',
@@ -2022,11 +2022,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Xserver](https://www.xserver.ne.jp/) — キャンペーン価格・通常価格、契約期間の条件を2026-11-02にXserver公式サイトで確認（スタンダード990円、プレミアム1,980円、ビジネス3,960円。いずれも36ヶ月契約の通常価格、税込。キャンペーン価格はそれぞれ693円、1,386円、2,772円）。',
           '[ロリポップ！](https://lolipop.jp/) — プラン別の月額価格（エコノミー121円〜、ライト330円〜、スタンダード605円〜、ハイスピード660円〜、エンタープライズ2,420円〜）を2026-11-02にロリポップ！公式サイトで直接確認。税込・税抜の表記はなし。エコノミーは[公式プラン比較ページ](https://lolipop.jp/service/plan/)で「シンプルなHTMLサイト向け」とされ、MySQL・WordPress対応の記載がないことを2026-11-03に確認。',
           '[個人情報保護委員会（PPC）：個人情報保護法等](https://www.ppc.go.jp/personalinfo/) — APPIの所管機関による法令・ガイドラインのページ。2026-11-03に確認。',
-          '[Backblaze B2の価格](https://www.backblaze.com/cloud-storage/pricing) — 2026-09-03時点の公式ページの記載：1TBあたり月6.95ドル、最初の10GBは無料、保存データ量の3倍まで送信無料。',
-          '[Cloudflare R2の価格](https://developers.cloudflare.com/r2/pricing/) — 2026-09-03時点の公式ページの記載：標準ストレージ1GBあたり月0.015ドル、送信課金なし、10GBの無料枠。',
-          '[Wasabiの価格](https://wasabi.com/pricing/) — 2026-09-03時点の公式ページの記載：1TBあたり月7.99ドルの固定料金、送信量・APIの個別課金なし。',
+          '[Backblaze B2の価格](https://www.backblaze.com/cloud-storage/pricing) — 2026-11-03時点の公式ページの記載：1TBあたり月6.95ドル、最初の10GBは無料、保存データ量の3倍まで送信無料。',
+          '[Cloudflare R2の価格](https://developers.cloudflare.com/r2/pricing/) — 2026-11-03時点の公式ページの記載：標準ストレージ1GBあたり月0.015ドル、送信課金なし、10GBの無料枠。',
+          '[Wasabiの価格](https://wasabi.com/pricing/) — 2026-11-03時点の公式ページの記載：1TBあたり月7.99ドルの固定料金、送信量・APIの個別課金なし。',
           '[Neonの価格](https://neon.com/pricing) — 2026-11-03時点の公式ページの記載：無料枠はプロジェクトあたり月100計算時間、プロジェクトあたり1GBストレージ、5GBの送信量。有料の計算は1計算時間あたり0.106ドルから。',
-          '[Supabaseの価格](https://supabase.com/pricing) — 2026-09-03時点の公式ページの記載：無料枠はデータベース500MB、ストレージ1GB、月間アクティブユーザー50,000人。Proプランは月25ドル。',
+          '[Supabaseの価格](https://supabase.com/pricing) — 2026-11-03時点の公式ページの記載：無料枠はデータベース500MB、ストレージ1GB、月間アクティブユーザー50,000人。Proプランは月25ドル。',
         ],
       },
       relatedReading: {
@@ -2051,7 +2051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '本指南面向全球华语读者，而不仅仅是中国大陆境内的读者——这两类读者面对的服务商和合规规则并不相同，下文会分开讨论。[阿里云](https://www.alibabacloud.com/)和[腾讯云](https://www.tencentcloud.com/)的价格是面向中国大陆用户的参考价格（2026年8月30日读取自官网）；对于中国大陆以外的读者，[Hostinger](https://www.hostinger.com/)是价格已核实的全球预算型选择（2026年11月3日读取自美国站）。限时促销价格尤其需要在下单前再次确认是否仍然有效。',
     metaDescription:
-      '2026年面向华语读者的网站主机价格：阿里云（限时促销每年38元）、腾讯云（每月35元）、Hostinger（需一次预付48个月，每月2.49美元起，续费每月10.99美元）。附PIPL与数据安全法说明。',
+      '2026年面向华语读者的网站主机价格：阿里云（限时促销每年38元）、腾讯云（每月45元）、Hostinger（需一次预付48个月，每月2.49美元起，续费每月10.99美元）。附PIPL与数据安全法说明。',
     twitterDescription:
       '阿里云、腾讯云与Hostinger对比——面向大陆用户的主机与面向全球华语读者的预算型主机是两个不同的问题，本文分开说明。价格均读取自各服务商官网。',
     affiliateDisclosure: true,
@@ -2068,15 +2068,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Hostinger vs 阿里云',
     ],
     leadAnswerBlock:
-      '**面向中国大陆用户的主机，阿里云（限时促销每年38元的轻量应用服务器，标准续费约每月45元）和腾讯云（轻量应用服务器每月35元，12个月预付约有15%折扣）的价格读取自官网（2026年8月30日）。面向全球华语读者的一般受众，Hostinger（预付48个月的每月价2.49美元，续费每月10.99美元，2026年11月3日读取自美国站）是价格已核实的全球预算型选择。限时促销价格经常有时间限制——下单前请再次确认是否仍在进行。**',
+      '**面向中国大陆用户的主机，阿里云（限时促销每年38元的轻量应用服务器，续费价以官网为准）和腾讯云（轻量应用服务器每月45元，12个月预付459元，约85折）的价格读取自官网（2026年8月30日）。面向全球华语读者的一般受众，Hostinger（预付48个月的每月价2.49美元，续费每月10.99美元，2026年11月3日读取自美国站）是价格已核实的全球预算型选择。限时促销价格经常有时间限制——下单前请再次确认是否仍在进行。**',
     quickAnswerTop: {
       zh: {
         question: '2026年面向华语读者的网站主机价格如何？',
         answer:
-          '面向中国大陆用户的主机，阿里云有限时促销价每年38元（约合每月3.2元，库存有限）的2核2GB轻量应用服务器，标准续费约每月45元；腾讯云同规格的轻量应用服务器标准价为每月35元，12个月预付约有15%折扣。面向中国大陆以外、希望使用全球预算型主机的读者，Hostinger需一次预付48个月，预付期内每月价为2.49美元，续费为每月10.99美元。限时促销价格经常变动——下单前请确认实时价格。',
+          '面向中国大陆用户的主机，阿里云有限时促销价每年38元（约合每月3.2元，库存有限）的2核2GB轻量应用服务器，续费价以官网为准；腾讯云同规格的轻量应用服务器标准价为每月45元，12个月预付459元（约85折）。面向中国大陆以外、希望使用全球预算型主机的读者，Hostinger需一次预付48个月，预付期内每月价为2.49美元，续费为每月10.99美元。限时促销价格经常变动——下单前请确认实时价格。',
         bullets: [
-          '阿里云：限时促销每年38元（约每月3.2元），续费约每月45元——需确认是否仍有效',
-          '腾讯云：标准每月35元，12个月预付约15%折扣',
+          '阿里云：限时促销每年38元（约每月3.2元），续费价以官网为准——需确认是否仍有效',
+          '腾讯云：标准每月45元，12个月预付459元（约85折）',
           'Hostinger：预付48个月的每月价2.49美元，续费每月10.99美元——涨幅明显',
           '华为云本轮未核实价格，因此本文不列出其价格',
         ],
@@ -2126,8 +2126,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**本指南面向全球华语读者，而非仅限中国大陆居民。** 面向大陆用户的主机和面向全球用户的预算型主机是两个不同的问题，下文分开讨论。',
-          '**阿里云：限时促销每年38元**（约每月3.2元，库存有限），2核2GB轻量应用服务器，标准续费约每月45元。限时促销价格经常有时间限制——下单前请确认是否仍在进行。',
-          '**腾讯云：标准每月35元**，同规格轻量应用服务器，12个月预付约有15%折扣（2026年8月30日读取自官网）。',
+          '**阿里云：限时促销每年38元**（约每月3.2元，库存有限），2核2GB轻量应用服务器，续费价以官网为准。限时促销价格经常有时间限制——下单前请确认是否仍在进行。',
+          '**腾讯云：标准每月45元**，同规格轻量应用服务器，12个月预付459元（约85折）（2026年11月3日读取自腾讯云中国站）。',
           '**Hostinger是价格已核实的全球预算型选择**，预付48个月的每月价为2.49美元，续费每月10.99美元——涨幅值得提前预算。',
           '**华为云本轮未核实价格，因此未列出。** 其价格与规格需另行查询官网。',
           '**Namecheap和Bluehost是Hostinger之外常见的全球替代选择**，但本轮未重新核实其具体现价，因此本文不为二者提供具体数字。',
@@ -2138,11 +2138,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'china-providers',
         title: '主机服务商',
         content:
-          '阿里云和腾讯云面向大陆用户的2核2GB轻量应用服务器价格读取自官网（2026年8月30日）。阿里云的每年38元是库存有限的限时促销价——请将其视为有时间限制的价格，下单前确认是否仍在进行，因为标准续费价约为每月45元。腾讯云的每月35元是同规格轻量应用服务器的标准价，12个月预付约有15%折扣。Hostinger是面向中国大陆以外读者、价格已核实的全球预算型选择：预付48个月的每月价为2.49美元，续费每月10.99美元——这是需要提前预算的实际涨幅。Namecheap和Bluehost是常见的全球替代选择，本文仅将其列为选项，因为本轮未重新核实二者的具体2026年现价。华为云在这一领域也有产品，但本轮未核实其价格，因此本文未列出价格或链接。',
+          '阿里云和腾讯云面向大陆用户的2核2GB轻量应用服务器价格读取自官网（2026年8月30日）。阿里云的每年38元是库存有限的限时促销价——请将其视为有时间限制的价格，下单前确认是否仍在进行，因为续费价各来源说法不一。腾讯云的每月45元是同规格轻量应用服务器的标准价，12个月预付459元（约85折，2026年11月3日读取自腾讯云中国站）。Hostinger是面向中国大陆以外读者、价格已核实的全球预算型选择：预付48个月的每月价为2.49美元，续费每月10.99美元——这是需要提前预算的实际涨幅。Namecheap和Bluehost是常见的全球替代选择，本文仅将其列为选项，因为本轮未重新核实二者的具体2026年现价。华为云在这一领域也有产品，但本轮未核实其价格，因此本文未列出价格或链接。',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '阿里云（限时促销每年38元，标准约每月45元）和腾讯云（标准每月35元）是面向大陆用户的价格参考（2026年8月30日）；Hostinger（预付48个月的每月价2.49美元，续费10.99美元）是价格已核实的全球预算型选择。',
+            text: '阿里云（限时促销每年38元，续费价以官网为准）和腾讯云（标准每月45元）是面向大陆用户的价格参考（2026年8月30日）；Hostinger（预付48个月的每月价2.49美元，续费10.99美元）是价格已核实的全球预算型选择。',
           },
           {
             type: 'plain-terms',
@@ -2213,7 +2213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'database-hosting',
         title: '单独托管数据库',
         content:
-          '像阿里云、腾讯云或Hostinger这样的共享主机方案，会在账户相同的磁盘配额内附带一个MySQL数据库——这对博客或小型CMS来说已经足够，但对于拥有独立用户表、分析事件，或AI功能所需的向量/embedding存储的应用程序则远远不够。这时，托管数据库是一个与网站主机完全独立的产品。**[Neon](https://neon.com/pricing)** 基于无服务器Postgres运行，提供免费套餐——每个项目每月100计算小时、每个项目1GB存储、5GB出站流量，2026-11-03读取自neon.com——闲置时会自动挂起至零成本，超出免费套餐后按使用量计费（计算费用起价为每计算小时0.106美元，存储费用为每GB每月0.35美元），无月度最低消费。**[Supabase](https://supabase.com/pricing)** 提供类似的免费套餐——500MB数据库、1GB文件存储、每月5万活跃用户、5GB出站流量，最多2个项目，2026-09-03读取自supabase.com——但免费项目在7天不活动后会暂停，且没有自动备份；Pro方案（每月25美元）可解除这两项限制。当网站需要的功能超出共享主机附带的单一MySQL实例时，就值得迁移到单独的托管数据库——它是网站主机的补充，而不是替代品。',
+          '像阿里云、腾讯云或Hostinger这样的共享主机方案，会在账户相同的磁盘配额内附带一个MySQL数据库——这对博客或小型CMS来说已经足够，但对于拥有独立用户表、分析事件，或AI功能所需的向量/embedding存储的应用程序则远远不够。这时，托管数据库是一个与网站主机完全独立的产品。**[Neon](https://neon.com/pricing)** 基于无服务器Postgres运行，提供免费套餐——每个项目每月100计算小时、每个项目1GB存储、5GB出站流量，2026-11-03读取自neon.com——闲置时会自动挂起至零成本，超出免费套餐后按使用量计费（计算费用起价为每计算小时0.106美元，存储费用为每GB每月0.35美元），无月度最低消费。**[Supabase](https://supabase.com/pricing)** 提供类似的免费套餐——500MB数据库、1GB文件存储、每月5万活跃用户、5GB出站流量，最多2个项目，2026-11-03读取自supabase.com——但免费项目在7天不活动后会暂停，且没有自动备份；Pro方案（每月25美元）可解除这两项限制。当网站需要的功能超出共享主机附带的单一MySQL实例时，就值得迁移到单独的托管数据库——它是网站主机的补充，而不是替代品。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2229,7 +2229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'backups',
         title: '网站与数据备份',
         content:
-          '标准规则是3-2-1原则：保留3份数据副本，存放在2种不同类型的存储介质上，其中1份放在异地。仅存放在网站所在服务器上的备份不算数，因为服务商故障或账户问题会同时导致网站和备份一起失效。包括本文提到的方案在内，大多数共享主机方案都包含某种自动备份功能，但在把它当作唯一副本依赖之前，请先确认保留窗口（能回溯恢复多少天前的数据），以及恢复是自助操作还是需要提交工单。对于异地副本，按GB计费的对象存储是标准选择：**[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** 收费为每TB每月6.95美元，前10GB免费，出站流量在平均存储数据量3倍以内免费，2026-09-03读取自服务商官网；**[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** 收费为每GB每月0.015美元（约合每TB每月15美元），但完全不收取出站流量费用，并提供10GB的免费存储额度，2026-09-03读取自服务商官网；**[Wasabi](https://wasabi.com/pricing/)** 收取固定的每TB每月7.99美元，不单独收取出站流量或API请求费用，2026-09-03读取自服务商官网。对于小型网站，用以上三家中的任意一家保存完整的异地备份，每月费用都远低于1美元。',
+          '标准规则是3-2-1原则：保留3份数据副本，存放在2种不同类型的存储介质上，其中1份放在异地。仅存放在网站所在服务器上的备份不算数，因为服务商故障或账户问题会同时导致网站和备份一起失效。包括本文提到的方案在内，大多数共享主机方案都包含某种自动备份功能，但在把它当作唯一副本依赖之前，请先确认保留窗口（能回溯恢复多少天前的数据），以及恢复是自助操作还是需要提交工单。对于异地副本，按GB计费的对象存储是标准选择：**[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)** 收费为每TB每月6.95美元，前10GB免费，出站流量在平均存储数据量3倍以内免费，2026-11-03读取自服务商官网；**[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)** 收费为每GB每月0.015美元（约合每TB每月15美元），但完全不收取出站流量费用，并提供10GB的免费存储额度，2026-11-03读取自服务商官网；**[Wasabi](https://wasabi.com/pricing/)** 收取固定的每TB每月7.99美元，不单独收取出站流量或API请求费用，2026-11-03读取自服务商官网。对于小型网站，用以上三家中的任意一家保存完整的异地备份，每月费用都远低于1美元。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2265,11 +2265,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '2026年面向华语读者的网站主机价格如何？',
-            a: '这取决于你的网站服务于谁。面向中国大陆用户，阿里云（限时促销每年38元，标准约每月45元）或腾讯云（标准每月35元）的价格见上文（2026年8月30日读取）。面向不涉及大陆运营的全球华语读者，Hostinger（预付48个月的每月价2.49美元，续费10.99美元）是价格已核实的预算型选择。',
+            a: '这取决于你的网站服务于谁。面向中国大陆用户，阿里云（限时促销每年38元，续费价以官网为准）或腾讯云（标准每月45元）的价格见上文（2026年8月30日读取）。面向不涉及大陆运营的全球华语读者，Hostinger（预付48个月的每月价2.49美元，续费10.99美元）是价格已核实的预算型选择。',
           },
           {
             q: '阿里云每年38元是永久价格吗？',
-            a: '不是。这是2核2GB轻量应用服务器的库存有限限时促销价，标准续费价约为每月45元。此类限时促销价格经常有时间限制，下单前请在阿里云官网价格页确认促销是否仍在进行。',
+            a: '不是。这是2核2GB轻量应用服务器的库存有限限时促销价，续费价各来源说法不一，以官网为准。此类限时促销价格经常有时间限制，下单前请在阿里云官网价格页确认促销是否仍在进行。',
           },
           {
             q: '为什么本文只给出Hostinger的价格，而没有Namecheap或Bluehost？',
@@ -2285,7 +2285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '异地备份存储实际要花多少钱？',
-            a: 'Backblaze B2（每TB每月6.95美元）、Cloudflare R2（约每TB每月15美元，不收出站流量费）或Wasabi（每TB每月固定7.99美元）的对象存储——均读取自各服务商官网，日期为2026-09-03——为典型小型网站保存完整备份的费用远低于每月1美元，比因服务商故障丢失唯一副本要便宜得多。',
+            a: 'Backblaze B2（每TB每月6.95美元）、Cloudflare R2（约每TB每月15美元，不收出站流量费）或Wasabi（每TB每月固定7.99美元）的对象存储——均读取自各服务商官网，日期为2026-11-03——为典型小型网站保存完整备份的费用远低于每月1美元，比因服务商故障丢失唯一副本要便宜得多。',
           },
           {
             q: '共享大文件或数据集最安全的方式是什么？',
@@ -2300,11 +2300,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[阿里云](https://www.alibabacloud.com/) —— 轻量应用服务器限时促销价与标准续费价，于2026-08-30读取自阿里云官网。',
           '[腾讯云](https://www.tencentcloud.com/) —— 轻量应用服务器标准价及12个月预付折扣，于2026-08-30读取自腾讯云官网。',
           '[Hostinger](https://www.hostinger.com/) —— 预付48个月的每月价与续费价（Premium套餐，美国站美元价格），于2026-11-03读取自Hostinger官网。',
-          '[Backblaze B2价格](https://www.backblaze.com/cloud-storage/pricing) —— 2026-09-03读取自服务商官网：每TB每月6.95美元，前10GB免费，出站流量在存储量3倍以内免费。',
-          '[Cloudflare R2价格](https://developers.cloudflare.com/r2/pricing/) —— 2026-09-03读取自服务商官网：标准存储每GB每月0.015美元，不收出站流量费，10GB免费额度。',
-          '[Wasabi价格](https://wasabi.com/pricing/) —— 2026-09-03读取自服务商官网：固定每TB每月7.99美元，不单独收取出站流量或API费用。',
+          '[Backblaze B2价格](https://www.backblaze.com/cloud-storage/pricing) —— 2026-11-03读取自服务商官网：每TB每月6.95美元，前10GB免费，出站流量在存储量3倍以内免费。',
+          '[Cloudflare R2价格](https://developers.cloudflare.com/r2/pricing/) —— 2026-11-03读取自服务商官网：标准存储每GB每月0.015美元，不收出站流量费，10GB免费额度。',
+          '[Wasabi价格](https://wasabi.com/pricing/) —— 2026-11-03读取自服务商官网：固定每TB每月7.99美元，不单独收取出站流量或API费用。',
           '[Neon价格](https://neon.com/pricing) —— 2026-11-03读取自服务商官网：免费套餐为每项目每月100计算小时、每项目1GB存储、5GB出站流量；付费计算起价为每计算小时0.106美元。',
-          '[Supabase价格](https://supabase.com/pricing) —— 2026-09-03读取自服务商官网：免费套餐为500MB数据库、1GB存储、每月5万活跃用户；Pro方案每月25美元。',
+          '[Supabase价格](https://supabase.com/pricing) —— 2026-11-03读取自服务商官网：免费套餐为500MB数据库、1GB存储、每月5万活跃用户；Pro方案每月25美元。',
         ],
       },
       relatedReading: {
@@ -2369,7 +2369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Cafe24(월 450원, 약 0.33달러)는 호스팅과 이커머스 플랫폼을 함께 운영합니다.**',
           '**가비아(월 10,450원, 약 7.60달러)는 도메인 등록과 호스팅을 함께 제공하는 업체입니다.**',
           '**닷홈(월 900원, 약 0.65달러)은 저가 요금제를 제공하며,** 소규모·취미 프로젝트에 맞을 수 있습니다.',
-          '**NHN Hosting(프로모션가 월 250원부터, 300MB 티어)은 저가 엔트리 요금제를 제공합니다.** 선택 전에 현재 서비스 내용과 이용자 후기를 직접 확인하시기 바랍니다.',
+          '**NHN Hosting(프로모션가 월 250원부터, 300MB 티어)은 저가 엔트리 요금제를 제공합니다.** 선택 전에 현재 서비스 내용과 이용자 후기를 직접 확인하시기 바랍니다. 이 가격은 2026-08-30 확인값이며 2026-11-03에는 재확인하지 못했습니다.',
           '**웹사이트에는 호스팅 요금제 외에도 필요한 것이 있습니다.** 별도의 데이터베이스(Neon, Supabase), 사이트 외부 백업(Backblaze B2, Cloudflare R2, Wasabi), 대용량 파일을 안전하게 공유하는 방법은 대부분의 웹사이트 운영자가 조만간 마주하는 세 가지 결정입니다 — 아래에 직접 확인한 가격과 함께 설명합니다.',
         ],
       },
@@ -2428,7 +2428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'database-hosting',
         title: '데이터베이스 별도 호스팅',
         content:
-          'Cafe24나 가비아 같은 공유 호스팅 요금제에는 계정 나머지 부분과 동일한 디스크 할당량 안에 MySQL 데이터베이스 하나가 포함되어 있습니다 — 블로그나 소규모 CMS에는 충분하지만, 자체 사용자 테이블, 분석 이벤트, AI 기능에 필요한 벡터/임베딩 저장소를 갖춘 애플리케이션에는 부족합니다. 이런 경우 관리형 데이터베이스는 웹 호스팅과는 별개의 제품입니다. **[Neon](https://neon.com/pricing)**은 서버리스 Postgres 기반으로 운영되며, 무료 티어(프로젝트당 월 100 컴퓨팅 시간, 프로젝트당 1GB 저장 공간, 5GB 아웃바운드 트래픽, 2026-11-03 neon.com 게재 내용 기준)를 제공합니다. 유휴 상태에서는 비용이 0으로 자동 중단되며, 무료 티어를 초과하면 사용량에 따라 컴퓨팅(시간당 $0.106부터)과 저장 공간(GB당 월 $0.35)이 과금되고 월 최소 요금은 없습니다. **[Supabase](https://supabase.com/pricing)**도 비슷한 무료 티어(데이터베이스 500MB, 파일 저장소 1GB, 월간 활성 사용자 50,000명, 아웃바운드 트래픽 5GB, 최대 2개 프로젝트, 2026-09-03 supabase.com 게재 내용 기준)를 제공하지만, 무료 프로젝트는 7일간 비활성 상태가 지속되면 일시 중지되고 자동 백업도 제공되지 않습니다 — Pro 요금제(월 $25)를 사용하면 두 제한이 모두 해제됩니다. 사이트에 공유 호스팅에 포함된 단일 MySQL 인스턴스 이상이 필요해지면, 별도의 관리형 데이터베이스로 전환할 가치가 있습니다 — 이는 웹 호스팅을 대체하는 것이 아니라 보완하는 것입니다.',
+          'Cafe24나 가비아 같은 공유 호스팅 요금제에는 계정 나머지 부분과 동일한 디스크 할당량 안에 MySQL 데이터베이스 하나가 포함되어 있습니다 — 블로그나 소규모 CMS에는 충분하지만, 자체 사용자 테이블, 분석 이벤트, AI 기능에 필요한 벡터/임베딩 저장소를 갖춘 애플리케이션에는 부족합니다. 이런 경우 관리형 데이터베이스는 웹 호스팅과는 별개의 제품입니다. **[Neon](https://neon.com/pricing)**은 서버리스 Postgres 기반으로 운영되며, 무료 티어(프로젝트당 월 100 컴퓨팅 시간, 프로젝트당 1GB 저장 공간, 5GB 아웃바운드 트래픽, 2026-11-03 neon.com 게재 내용 기준)를 제공합니다. 유휴 상태에서는 비용이 0으로 자동 중단되며, 무료 티어를 초과하면 사용량에 따라 컴퓨팅(시간당 $0.106부터)과 저장 공간(GB당 월 $0.35)이 과금되고 월 최소 요금은 없습니다. **[Supabase](https://supabase.com/pricing)**도 비슷한 무료 티어(데이터베이스 500MB, 파일 저장소 1GB, 월간 활성 사용자 50,000명, 아웃바운드 트래픽 5GB, 최대 2개 프로젝트, 2026-11-03 supabase.com 게재 내용 기준)를 제공하지만, 무료 프로젝트는 7일간 비활성 상태가 지속되면 일시 중지되고 자동 백업도 제공되지 않습니다 — Pro 요금제(월 $25)를 사용하면 두 제한이 모두 해제됩니다. 사이트에 공유 호스팅에 포함된 단일 MySQL 인스턴스 이상이 필요해지면, 별도의 관리형 데이터베이스로 전환할 가치가 있습니다 — 이는 웹 호스팅을 대체하는 것이 아니라 보완하는 것입니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2444,7 +2444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'backups',
         title: '사이트와 데이터 백업하기',
         content:
-          '표준 규칙은 3-2-1입니다: 데이터를 3개 복사본으로 보관하되, 2가지 다른 유형의 저장소에 두고, 그중 1개는 사이트 외부에 둡니다. 웹사이트와 같은 서버에만 있는 백업은 포함되지 않습니다 — 호스팅 업체 장애나 계정 문제가 발생하면 사이트와 백업이 동시에 사라지기 때문입니다. 이 페이지의 요금제를 포함한 대부분의 공유 호스팅 요금제에는 자동 백업 기능이 포함되어 있지만, 유일한 백업본으로 의존하기 전에 보존 기간(며칠 전까지 복원할 수 있는지)과 복원이 셀프서비스인지 아니면 지원 티켓이 필요한지 확인해야 합니다. 사이트 외부 복사본에는 GB당 요금이 부과되는 오브젝트 스토리지가 표준 선택지입니다: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)**는 TB당 월 $6.95를 청구하며 첫 10GB는 무료이고, 평균 저장 데이터의 3배까지 아웃바운드 트래픽이 무료입니다 (2026-09-03 업체 페이지 게재 내용 기준); **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)**는 GB당 월 $0.015(TB당 약 $15)를 청구하지만 아웃바운드 트래픽 요금이 전혀 없고 10GB 무료 저장 공간을 제공합니다 (2026-09-03 업체 페이지 게재 내용 기준); **[Wasabi](https://wasabi.com/pricing/)**는 별도의 아웃바운드 트래픽이나 API 요청 요금 없이 TB당 월 $7.99의 고정 요금을 청구합니다 (2026-09-03 업체 페이지 게재 내용 기준). 소규모 사이트라면 이 세 곳 중 어디를 선택하더라도 완전한 사이트 외부 백업 비용은 월 $1 미만입니다.',
+          '표준 규칙은 3-2-1입니다: 데이터를 3개 복사본으로 보관하되, 2가지 다른 유형의 저장소에 두고, 그중 1개는 사이트 외부에 둡니다. 웹사이트와 같은 서버에만 있는 백업은 포함되지 않습니다 — 호스팅 업체 장애나 계정 문제가 발생하면 사이트와 백업이 동시에 사라지기 때문입니다. 이 페이지의 요금제를 포함한 대부분의 공유 호스팅 요금제에는 자동 백업 기능이 포함되어 있지만, 유일한 백업본으로 의존하기 전에 보존 기간(며칠 전까지 복원할 수 있는지)과 복원이 셀프서비스인지 아니면 지원 티켓이 필요한지 확인해야 합니다. 사이트 외부 복사본에는 GB당 요금이 부과되는 오브젝트 스토리지가 표준 선택지입니다: **[Backblaze B2](https://www.backblaze.com/cloud-storage/pricing)**는 TB당 월 $6.95를 청구하며 첫 10GB는 무료이고, 평균 저장 데이터의 3배까지 아웃바운드 트래픽이 무료입니다 (2026-11-03 업체 페이지 게재 내용 기준); **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/)**는 GB당 월 $0.015(TB당 약 $15)를 청구하지만 아웃바운드 트래픽 요금이 전혀 없고 10GB 무료 저장 공간을 제공합니다 (2026-11-03 업체 페이지 게재 내용 기준); **[Wasabi](https://wasabi.com/pricing/)**는 별도의 아웃바운드 트래픽이나 API 요청 요금 없이 TB당 월 $7.99의 고정 요금을 청구합니다 (2026-11-03 업체 페이지 게재 내용 기준). 소규모 사이트라면 이 세 곳 중 어디를 선택하더라도 완전한 사이트 외부 백업 비용은 월 $1 미만입니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2488,7 +2488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'NHN Hosting의 시작 요금은 얼마인가요?',
-            a: '2026-08-30 NHN Hosting 페이지 기준으로 300MB 티어 프로모션가는 월 250원부터입니다. 선택 전에 현재 서비스 내용과 이용자 후기를 직접 확인하시기 바랍니다.',
+            a: '2026-08-30에 확인한 NHN Hosting 페이지 기준으로 300MB 티어 프로모션가는 월 250원부터이며, 2026-11-03에는 공식 사이트에서 이 상품을 찾지 못해 재확인하지 못했습니다. 선택 전에 현재 서비스 내용과 이용자 후기를 직접 확인하시기 바랍니다.',
           },
           {
             q: 'PIPA는 데이터를 반드시 한국 내에 호스팅하도록 요구하나요?',
@@ -2500,7 +2500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '사이트 외부 백업은 실제로 얼마가 드나요?',
-            a: 'Backblaze B2(TB당 월 $6.95), Cloudflare R2(TB당 약 $15, 아웃바운드 트래픽 요금 없음), Wasabi(TB당 월 $7.99 고정) 등 오브젝트 스토리지는 모두 2026-09-03 업체 페이지 게재 가격 기준으로, 일반적인 소규모 사이트의 전체 백업을 보관하는 데 월 $1 미만이 듭니다 — 호스팅 업체 장애로 유일한 백업본을 잃는 것보다 훨씬 저렴합니다.',
+            a: 'Backblaze B2(TB당 월 $6.95), Cloudflare R2(TB당 약 $15, 아웃바운드 트래픽 요금 없음), Wasabi(TB당 월 $7.99 고정) 등 오브젝트 스토리지는 모두 2026-11-03 업체 페이지 게재 가격 기준으로, 일반적인 소규모 사이트의 전체 백업을 보관하는 데 월 $1 미만이 듭니다 — 호스팅 업체 장애로 유일한 백업본을 잃는 것보다 훨씬 저렴합니다.',
           },
           {
             q: '대용량 파일이나 데이터셋을 가장 안전하게 공유하는 방법은 무엇인가요?',
@@ -2515,13 +2515,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Cafe24 호스팅 요금](https://www.cafe24.com/) — 2026-11-02 Cafe24 호스팅 페이지에서 직접 확인(뉴아우토반 호스팅·뉴매니지드 워드프레스 월 450원~, 부가세와 계약 기간은 페이지에 표기되지 않음). 2026-08-30에는 스타트업 플랜 월 450원부터로 확인.',
           '[가비아 호스팅 요금](https://www.gabia.com/) — 2026-08-30 가비아에서 직접 확인(2026-11-02에는 요금 페이지를 읽지 못해 재확인하지 못함). 무제한 트래픽 기본 PHP 플랜 월 10,450원.',
           '[닷홈 호스팅 요금](https://www.dothome.co.kr/) — 2026-08-30 닷홈에서 직접 확인. 업그레이드 플랜 월 900원.',
-          '[NHN Hosting 요금](https://www.nhncloud.com/) — 2026-08-30 NHN Hosting에서 직접 확인. 300MB 티어 프로모션가 월 250원부터 시작하는 엔트리 리눅스 호스팅.',
+          '[NHN Hosting 요금](https://www.nhncloud.com/) — 2026-08-30에 NHN Hosting에서 확인한 값(300MB 티어 프로모션가 월 250원부터). 2026-11-03에는 NHN Cloud 사이트에서 웹 호스팅 상품 페이지를 찾을 수 없어 재확인하지 못했습니다.',
           '[Cloudflare — South Korea PIPA 트러스트 허브](https://www.cloudflare.com/trust-hub/compliance-resources/south-korea-pipa/) — PIPA가 한국인 개인정보의 국외 이전을 제한한다는 주장의 출처.',
-          '[Backblaze B2 요금](https://www.backblaze.com/cloud-storage/pricing) — 2026-09-03 업체 페이지 게재 내용 기준: TB당 월 $6.95, 첫 10GB 무료, 저장 데이터의 3배까지 아웃바운드 트래픽 무료.',
-          '[Cloudflare R2 요금](https://developers.cloudflare.com/r2/pricing/) — 2026-09-03 업체 페이지 게재 내용 기준: 표준 저장소 GB당 월 $0.015, 아웃바운드 트래픽 요금 없음, 10GB 무료 티어.',
-          '[Wasabi 요금](https://wasabi.com/pricing/) — 2026-09-03 업체 페이지 게재 내용 기준: TB당 월 $7.99 고정, 별도의 아웃바운드 트래픽이나 API 요금 없음.',
+          '[Backblaze B2 요금](https://www.backblaze.com/cloud-storage/pricing) — 2026-11-03 업체 페이지 게재 내용 기준: TB당 월 $6.95, 첫 10GB 무료, 저장 데이터의 3배까지 아웃바운드 트래픽 무료.',
+          '[Cloudflare R2 요금](https://developers.cloudflare.com/r2/pricing/) — 2026-11-03 업체 페이지 게재 내용 기준: 표준 저장소 GB당 월 $0.015, 아웃바운드 트래픽 요금 없음, 10GB 무료 티어.',
+          '[Wasabi 요금](https://wasabi.com/pricing/) — 2026-11-03 업체 페이지 게재 내용 기준: TB당 월 $7.99 고정, 별도의 아웃바운드 트래픽이나 API 요금 없음.',
           '[Neon 요금](https://neon.com/pricing) — 2026-11-03 업체 페이지 게재 내용 기준: 무료 티어는 프로젝트당 월 100 컴퓨팅 시간, 프로젝트당 1GB 저장 공간, 5GB 아웃바운드 트래픽; 유료 컴퓨팅은 시간당 $0.106부터.',
-          '[Supabase 요금](https://supabase.com/pricing) — 2026-09-03 업체 페이지 게재 내용 기준: 무료 티어는 데이터베이스 500MB, 저장 공간 1GB, 월간 활성 사용자 50,000명; Pro 요금제는 월 $25.',
+          '[Supabase 요금](https://supabase.com/pricing) — 2026-11-03 업체 페이지 게재 내용 기준: 무료 티어는 데이터베이스 500MB, 저장 공간 1GB, 월간 활성 사용자 50,000명; Pro 요금제는 월 $25.',
         ],
       },
       relatedReading: {

@@ -15,6 +15,7 @@ const siblingBites = [
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-data-sovereignty-compliance-overview-hero-en.webp',
     title: 'Local AI Trends 2027, Part 9 of 10: The Regulatory Calendar Local AI Teams Should Watch',
@@ -116,6 +117,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-data-sovereignty-compliance-overview-hero-de.webp',
     title: 'Lokale KI-Trends 2027, Teil 9 von 10: Der regulatorische Kalender für lokale KI-Teams',
@@ -217,6 +219,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-data-sovereignty-compliance-overview-hero-fr.webp',
     title: "Tendances de l'IA locale 2027, partie 9/10 : le calendrier réglementaire à surveiller pour les équipes IA locale",
@@ -318,6 +321,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-data-sovereignty-compliance-overview-hero-ja.webp',
     title: 'ローカルAIトレンド2027 第9回/全10回:ローカルAIチームが注視すべき規制カレンダー',
@@ -419,6 +423,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-data-sovereignty-compliance-overview-hero-zh.webp',
     title: '本地AI趋势2027,第9篇(共10篇):本地AI团队应关注的监管日历',
@@ -520,6 +525,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-data-sovereignty-compliance-overview-hero-es.webp',
     title: 'Tendencias de IA local 2027, parte 9 de 10: el calendario regulatorio que deben vigilar los equipos de IA local',
@@ -621,6 +627,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-data-sovereignty-compliance-overview-hero-pt.webp',
     title: 'Tendências de IA local 2027, parte 9 de 10: o calendário regulatório que as equipes de IA local devem observar',
@@ -722,6 +729,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-data-sovereignty-compliance-overview-hero-ar.webp',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 9 من 10: التقويم التنظيمي الذي يجب أن تراقبه فرق الذكاء الاصطناعي المحلي',
@@ -823,6 +831,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-data-sovereignty-compliance-overview-hero-ko.webp',
     title: '로컬 AI 트렌드 2027, 10부작 중 9부: 로컬 AI 팀이 주시해야 할 규제 일정',

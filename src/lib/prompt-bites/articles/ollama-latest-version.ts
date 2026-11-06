@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/ollama-latest-version-overview-hero-en.webp',
     title: 'What Is the Latest Ollama Version?',
@@ -98,6 +99,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/ollama-latest-version-overview-hero-de.webp',
     title: 'Was ist die neueste Ollama-Version?',
@@ -187,6 +189,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/ollama-latest-version-overview-hero-fr.webp',
     title: 'Quelle est la dernière version d\'Ollama ?',
@@ -276,6 +279,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/ollama-latest-version-overview-hero-ja.webp',
     title: 'Ollamaの最新バージョンは？',
@@ -365,6 +369,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/ollama-latest-version-overview-hero-zh.webp',
     title: 'Ollama最新版本是什么？',
@@ -454,6 +459,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/ollama-latest-version-overview-hero-pt.webp',
     title: 'Qual é a versão mais recente do Ollama?',
@@ -543,6 +549,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/ollama-latest-version-overview-hero-es.webp',
     title: '¿Cuál es la versión más reciente de Ollama?',
@@ -632,6 +639,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/ollama-latest-version-overview-hero-ar.webp',
     title: 'ما هو أحدث إصدار من ⁨Ollama⁩؟',
@@ -721,6 +729,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/ollama-latest-version-overview-hero-ko.webp',
     title: 'Ollama 최신 버전은 무엇입니까?',

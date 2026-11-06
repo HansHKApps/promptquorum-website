@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-ram-for-7b-model-overview-hero-en.webp',
     title: 'How Much RAM Does a 7B Model Need?',
@@ -150,6 +151,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-ram-for-7b-model-overview-hero-de.webp',
     title: 'Wie viel RAM braucht ein 7B-Modell?',
@@ -228,6 +230,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-ram-for-7b-model-overview-hero-fr.webp',
     title: 'De combien de RAM a besoin un modèle 7B ?',
@@ -306,6 +309,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-ram-for-7b-model-overview-hero-ja.webp',
     title: '7Bモデルにはどれくらいのメモリが必要ですか？',
@@ -384,6 +388,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-ram-for-7b-model-overview-hero-zh.webp',
     title: '7B模型需要多少内存？',
@@ -462,6 +467,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-ram-for-7b-model-overview-hero-es.webp',
     title: '¿Cuánta RAM necesita un modelo 7B?',
@@ -552,6 +558,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-ram-for-7b-model-overview-hero-pt.webp',
     title: 'Quanta RAM um modelo 7B precisa?',
@@ -642,6 +649,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-ram-for-7b-model-overview-hero-ar.webp',
     title: 'كم من الذاكرة يحتاج نموذج ⁨7B⁩؟',
@@ -732,6 +740,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-ram-for-7b-model-overview-hero-ko.webp',
     title: '7B 모델에 얼마나 많은 RAM이 필요합니까?',

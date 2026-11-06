@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     last_full_refresh: '2026-08-26',
@@ -165,6 +166,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   de: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     theme: 'Hardware & Performance',
@@ -295,6 +297,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     theme: 'Hardware & Performance',
@@ -421,6 +424,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     theme: 'Hardware & Performance',
@@ -547,6 +551,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   es: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     theme: 'Hardware & Performance',
@@ -644,6 +649,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: { '@type': 'TechArticle', headline: 'Mejor Mini PC para Servidor Ollama Always-On 2026', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/es/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'es' },
   },
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     theme: 'Hardware & Performance',
@@ -741,6 +747,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: { '@type': 'TechArticle', headline: 'Melhor Mini PC para Servidor Ollama Sempre Ligado 2026', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/pt/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'pt-BR' },
   },
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     theme: 'Hardware & Performance',
@@ -876,6 +883,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: { '@type': 'TechArticle', headline: '2026年Ollama常驻服务器最佳迷你电脑推荐', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/zh/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'zh' },
   },
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     theme: 'Hardware & Performance',
@@ -973,6 +981,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: { '@type': 'TechArticle', headline: 'أفضل جهاز كمبيوتر مصغر لخادم Ollama الدائم التشغيل 2026', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/ar/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ar' },
   },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     theme: 'Hardware & Performance',

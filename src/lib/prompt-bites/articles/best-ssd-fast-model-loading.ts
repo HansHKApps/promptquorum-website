@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-ssd-fast-model-loading-overview-hero-en.webp',
     title: 'Best SSD for Fast Model Loading in 2026?',
@@ -218,6 +219,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-ssd-fast-model-loading-overview-hero-de.webp',
     title: 'Beste SSD für schnelles Modell-Laden 2026?',
@@ -394,6 +396,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-ssd-fast-model-loading-overview-hero-fr.webp',
     title: 'Meilleur SSD pour charger les modèles vite en 2026 ?',
@@ -570,6 +573,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-ssd-fast-model-loading-overview-hero-ja.webp',
     title: '2026年、モデル読み込みが速いSSDは？',
@@ -746,6 +750,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-ssd-fast-model-loading-overview-hero-zh.webp',
     title: '2026年模型加载最快的SSD是？',
@@ -925,6 +930,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-ssd-fast-model-loading-overview-hero-pt.webp',
     title: 'Melhor SSD para carregamento rápido de modelos em 2026?',
@@ -1101,6 +1107,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-ssd-fast-model-loading-overview-hero-es.webp',
     title: '¿Mejor SSD para cargar modelos rápido en 2026?',
@@ -1277,6 +1284,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-ssd-fast-model-loading-overview-hero-ar.webp',
     title: 'أفضل ⁨SSD⁩ لتحميل النماذج بسرعة في ⁨2026⁩؟',
@@ -1453,6 +1461,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-ssd-fast-model-loading-overview-hero-ko.webp',
     title: '2026년 모델 빠른 로딩을 위한 최고의 SSD는?',

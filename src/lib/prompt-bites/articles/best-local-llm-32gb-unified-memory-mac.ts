@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-en.webp',
     title: 'Best Local LLM for a Mac with 32GB Unified Memory in 2026',
@@ -147,6 +148,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-ar.webp',
     title: 'أفضل LLM محلي لجهاز Mac بذاكرة موحدة 32GB في 2026',
@@ -291,6 +293,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-de.webp',
     title: 'Bestes lokales LLM für einen Mac mit 32 GB Unified Memory in 2026',
@@ -435,6 +438,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-es.webp',
     title: 'El Mejor LLM Local para un Mac con 32GB de Memoria Unificada en 2026',
@@ -579,6 +583,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-fr.webp',
     title: 'Meilleur LLM Local pour un Mac à 32 Go de Mémoire Unifiée en 2026',
@@ -723,6 +728,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-ja.webp',
     title: '2026年、32GB統合メモリMacに最適なローカルLLMは?',
@@ -867,6 +873,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-ko.webp',
     title: '2026년 32GB 통합 메모리 Mac을 위한 최적의 로컬 LLM은?',
@@ -1008,6 +1015,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-pt.webp',
     title: 'Melhor LLM Local para um Mac com 32GB de Memória Unificada em 2026',
@@ -1152,6 +1160,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-zh.webp',
     title: '2026年32GB统一内存Mac的最佳本地LLM是什么？',

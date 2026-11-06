@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/is-qwen-gdpr-compliant-overview-hero-en.webp',
     title: 'Is Qwen GDPR Compliant?',
@@ -106,6 +107,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/is-qwen-gdpr-compliant-overview-hero-de.webp',
     title: 'Ist Qwen DSGVO-konform?',
@@ -197,6 +199,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/is-qwen-gdpr-compliant-overview-hero-fr.webp',
     title: 'Qwen est-il conforme au RGPD ?',
@@ -288,6 +291,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/is-qwen-gdpr-compliant-overview-hero-ja.webp',
     title: 'QwenはGDPR準拠ですか？',
@@ -379,6 +383,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/is-qwen-gdpr-compliant-overview-hero-zh.webp',
     title: 'Qwen符合GDPR吗？',
@@ -470,6 +475,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/is-qwen-gdpr-compliant-overview-hero-pt.webp',
     title: 'O Qwen é compatível com o RGPD?',
@@ -561,6 +567,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/is-qwen-gdpr-compliant-overview-hero-es.webp',
     title: '¿Es Qwen compatible con el RGPD?',
@@ -652,6 +659,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/is-qwen-gdpr-compliant-overview-hero-ar.webp',
     title: 'هل ⁨Qwen⁩ متوافق مع اللائحة الأوروبية لحماية البيانات ⁨GDPR⁩؟',
@@ -743,6 +751,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/is-qwen-gdpr-compliant-overview-hero-ko.webp',
     title: 'Qwen은 GDPR을 준수합니까?',

@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-reasoning-ui-overview-hero-en.webp',
     title: 'Best Local LLM UI for Viewing Reasoning Tokens in 2026',
@@ -223,6 +224,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-reasoning-ui-overview-hero-de.webp',
     title: 'Beste lokale LLM-Oberfläche für Reasoning-Token 2026',
@@ -443,6 +445,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-reasoning-ui-overview-hero-fr.webp',
     title: 'Meilleure interface LLM locale pour les tokens de raisonnement en 2026',
@@ -663,6 +666,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-reasoning-ui-overview-hero-ja.webp',
     title: '2026年版 ローカルLLM reasoningトークン表示に最適なUI',
@@ -883,6 +887,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-reasoning-ui-overview-hero-zh.webp',
     title: '2026年最佳本地LLM推理token查看界面',
@@ -1103,6 +1108,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-reasoning-ui-overview-hero-es.webp',
     title: 'Mejor interfaz de LLM local para tokens de razonamiento en 2026',
@@ -1323,6 +1329,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-reasoning-ui-overview-hero-pt.webp',
     title: 'Melhor interface de LLM local para tokens de raciocínio em 2026',
@@ -1543,6 +1550,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-reasoning-ui-overview-hero-ar.webp',
     title: 'أفضل واجهة LLM محلية لرموز التفكير في 2026',
@@ -1763,6 +1771,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-reasoning-ui-overview-hero-ko.webp',
     title: '2026년 로컬 LLM 추론 토큰 표시 최적 UI',

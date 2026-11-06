@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-en.webp',
     title: 'Best Local LLM for a Customer Support Chatbot?',
@@ -99,6 +100,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-de.webp',
     title: 'Das beste lokale LLM für einen Kundensupport-Chatbot?',
@@ -195,6 +197,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-fr.webp',
     title: 'Quel est le meilleur LLM local pour un chatbot de support client ?',
@@ -291,6 +294,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-ja.webp',
     title: 'カスタマーサポートチャットボットに最適なローカルLLMとは？',
@@ -387,6 +391,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-zh.webp',
     title: '客户支持聊天机器人的最佳本地LLM是什么？',
@@ -483,6 +488,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-es.webp',
     title: '¿Cuál es el mejor LLM local para un chatbot de atención al cliente?',
@@ -579,6 +585,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-pt.webp',
     title: 'Qual é o melhor LLM local para um chatbot de atendimento ao cliente?',
@@ -675,6 +682,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-ar.webp',
     title: 'ما هو أفضل نموذج لغوي محلي لروبوت دردشة دعم العملاء؟',
@@ -771,6 +779,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-ko.webp',
     title: '고객 지원 챗봇에 가장 적합한 로컬 LLM은 무엇입니까?',

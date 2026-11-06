@@ -341,7 +341,7 @@ const OS_KEYS: OSKey[] = ['mac', 'win', 'linux', 'ios', 'ipados', 'watchos', 'an
 // brief round 2, gap 2: an AI had to guess a category blind (no counts, no
 // examples) because list_categories gave no signal on which ones actually
 // have listings.
-const listedApps = localAiApps.filter((a) => a.status !== 'planned' && a.upstreamStatus?.state !== 'archived')
+const listedApps = localAiApps.filter((a) => a.status !== 'planned' && a.upstreamStatus?.state !== 'archived' && a.upstreamStatus?.state !== 'delisted')
 
 export function listCategories() {
   return {

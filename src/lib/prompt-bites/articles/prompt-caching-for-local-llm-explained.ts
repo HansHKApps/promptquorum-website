@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/prompt-caching-for-local-llm-explained-overview-hero-en.webp',
     title: 'What Is Prompt Caching for Local LLMs?',
@@ -107,6 +108,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/prompt-caching-for-local-llm-explained-overview-hero-de.webp',
     title: 'Was ist Prompt-Caching für lokale LLMs?',
@@ -211,6 +213,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/prompt-caching-for-local-llm-explained-overview-hero-fr.webp',
     title: "Qu'est-ce que le cache de prompt pour les LLM locaux ?",
@@ -315,6 +318,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/prompt-caching-for-local-llm-explained-overview-hero-ja.webp',
     title: 'ローカルLLMのプロンプトキャッシュとは？',
@@ -419,6 +423,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/prompt-caching-for-local-llm-explained-overview-hero-zh.webp',
     title: '什么是本地LLM的提示词缓存？',
@@ -523,6 +528,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/prompt-caching-for-local-llm-explained-overview-hero-es.webp',
     title: '¿Qué es el caching de prompts para LLMs locales?',
@@ -627,6 +633,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/prompt-caching-for-local-llm-explained-overview-hero-pt.webp',
     title: 'O Que É Cache de Prompt para LLMs Locais?',
@@ -731,6 +738,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/prompt-caching-for-local-llm-explained-overview-hero-ar.webp',
     title: 'ما هو التخزين المؤقت للـ Prompt في نماذج LLM المحلية؟',
@@ -835,6 +843,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/prompt-caching-for-local-llm-explained-overview-hero-ko.webp',
     title: '로컬 LLM을 위한 프롬프트 캐싱이란 무엇입니까?',

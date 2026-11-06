@@ -50,6 +50,7 @@ export const app: ToolRecord = {
     versionSourceUrl: 'https://apps.apple.com/de/app/hiwaifu-ki-charakter-chat/id6447806780',
   },
   lastVerifiedDate: '2026-10-17',
+  upstreamStatus: { state: 'delisted', since: '2026-11-03' }, // App Store lookup empty in 8 storefronts and listing page 404 on 2026-11-03 (itunes.apple.com/lookup?id=6447806780); recheck before removing the flag
   lastUpstreamUpdate: '2026-10-02', // iTunes lookup currentVersionReleaseDate 2026-10-02T21:02:25Z (3.10.1), App Store version history, read 2026-10-17
   lastUpstreamUpdateSource: 'https://apps.apple.com/de/app/hiwaifu-ki-charakter-chat/id6447806780',
   verdict:

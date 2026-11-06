@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-en.webp',
     title: 'What Are the Best Local LLM Apps for Android in Japan?',
@@ -206,6 +207,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-de.webp',
     title: 'Welche lokalen LLM-Apps für Android sind in Japan am beliebtesten?',
@@ -369,6 +371,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-fr.webp',
     title: 'Quelles sont les meilleures apps LLM locales pour Android au Japon ?',
@@ -532,6 +535,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-ja.webp',
     title: '日本で人気のAndroidローカルLLMアプリは？',
@@ -688,6 +692,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-es.webp',
     title: '¿Cuáles son las mejores apps de LLM local para Android en Japón?',
@@ -851,6 +856,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-pt.webp',
     title: 'Quais são os melhores apps de LLM local para Android no Japão?',
@@ -1014,6 +1020,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-ar.webp',
     title: 'ما أفضل تطبيقات النماذج اللغوية الكبيرة المحلية لنظام Android في اليابان؟',
@@ -1177,6 +1184,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-zh.webp',
     title: '日本最受欢迎的Android本地LLM应用是什么？',
@@ -1317,6 +1325,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-ko.webp',
     title: '일본 Android에서 가장 좋은 로컬 LLM 앱은 무엇입니까?',

@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-en.webp',
     title: 'How Do You Convert a Model to GGUF With llama.cpp?',
@@ -108,6 +109,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-de.webp',
     title: 'Wie konvertiert man ein Modell mit llama.cpp in GGUF?',
@@ -213,6 +215,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-fr.webp',
     title: 'Comment convertir un modèle en GGUF avec llama.cpp ?',
@@ -318,6 +321,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-ja.webp',
     title: 'llama.cppでモデルをGGUFに変換するにはどうすればよいですか?',
@@ -423,6 +427,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-zh.webp',
     title: '如何用llama.cpp将模型转换为GGUF格式?',
@@ -528,6 +533,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-es.webp',
     title: '¿Cómo convertir un modelo a GGUF con llama.cpp?',
@@ -633,6 +639,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-pt.webp',
     title: 'Como converter um modelo para GGUF com o llama.cpp?',
@@ -738,6 +745,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-ar.webp',
     title: 'كيف تحوّل نموذجًا إلى صيغة GGUF باستخدام llama.cpp؟',
@@ -843,6 +851,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-ko.webp',
     title: 'llama.cpp로 모델을 GGUF로 변환하는 방법은 무엇입니까?',

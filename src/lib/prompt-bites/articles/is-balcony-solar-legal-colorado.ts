@@ -7,6 +7,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-colorado-overview-hero-en.webp',
     title: 'Is Balcony Solar Legal in Colorado?',
@@ -114,6 +115,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-colorado-overview-hero-de.webp',
     title: 'Ist Balkonsolar in Colorado legal?',
@@ -221,6 +223,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-colorado-overview-hero-fr.webp',
     title: "L'énergie solaire de balcon est-elle légale au Colorado ?",
@@ -328,6 +331,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-colorado-overview-hero-ja.webp',
     title: 'コロラド州でベランダ太陽光発電は合法ですか?',
@@ -435,6 +439,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-colorado-overview-hero-zh.webp',
     title: '科罗拉多州的阳台太阳能合法吗?',
@@ -542,6 +547,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-colorado-overview-hero-es.webp',
     title: '¿Es legal la energía solar de balcón en Colorado?',
@@ -649,6 +655,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-colorado-overview-hero-pt.webp',
     title: 'A energia solar de varanda é legal no Colorado?',
@@ -756,6 +763,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-colorado-overview-hero-ar.webp',
     title: 'هل الطاقة الشمسية للشرفات قانونية في كولورادو؟',
@@ -863,6 +871,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-colorado-overview-hero-ko.webp',
     title: '콜로라도주에서 발코니 태양광 발전은 합법입니까?',

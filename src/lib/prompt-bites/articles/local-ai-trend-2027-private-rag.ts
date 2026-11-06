@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-en.webp',
     title: 'Local AI Trends 2027, Part 4 of 10: Private RAG Is on Track to Become Default Infrastructure',
@@ -125,6 +126,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-de.webp',
     title: 'Local AI Trends 2027, Teil 4 von 10: Private RAG ist auf dem Weg zur Standardinfrastruktur',
@@ -247,6 +249,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-fr.webp',
     title: 'Local AI Trends 2027, Partie 4 sur 10 : le RAG privé est en passe de devenir une infrastructure par défaut',
@@ -369,6 +372,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-ja.webp',
     title: 'Local AI Trends 2027 第4回(全10回):プライベートRAGは標準インフラになる見通し',
@@ -491,6 +495,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-zh.webp',
     title: 'Local AI Trends 2027 第4篇(共10篇):私有RAG有望成为默认基础设施',
@@ -613,6 +618,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-es.webp',
     title: 'Local AI Trends 2027, Parte 4 de 10: el RAG privado va camino de ser infraestructura por defecto',
@@ -735,6 +741,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-pt.webp',
     title: 'Local AI Trends 2027, Parte 4 de 10: o RAG privado está a caminho de virar infraestrutura padrão',
@@ -857,6 +864,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-ar.webp',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 4 من 10: RAG الخاص في طريقه ليصبح بنية تحتية افتراضية',
@@ -979,6 +987,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-ko.webp',
     title: 'Local AI Trends 2027, 10부작 중 4부: 프라이빗 RAG, 기본 인프라가 될 전망',

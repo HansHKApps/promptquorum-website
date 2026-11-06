@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-budget-ai-laptop-under-1000-overview-hero-en.webp',
     title: 'Best Budget AI Laptop Under $1,000 in 2026 (Local LLM & ML)?',
@@ -204,6 +205,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-budget-ai-laptop-under-1000-overview-hero-de.webp',
     title: 'Bestes Budget-KI-Notebook unter 1.000 € 2026 (Lokales LLM & ML)?',
@@ -410,6 +412,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-budget-ai-laptop-under-1000-overview-hero-fr.webp',
     title: 'Meilleur PC portable IA à moins de 1 000 $ en 2026 (LLM local et ML) ?',
@@ -612,6 +615,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-budget-ai-laptop-under-1000-overview-hero-ja.webp',
     title: '2026年、15万円以下のベストAIノートPCは？（ローカルLLM & ML）',
@@ -811,6 +815,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-budget-ai-laptop-under-1000-overview-hero-es.webp',
     title: 'Mejor Laptop de IA Económica por Menos de $1,000 en 2026 (LLM Local y ML)?',
@@ -1013,6 +1018,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-budget-ai-laptop-under-1000-overview-hero-pt.webp',
     title: 'Melhor Notebook IA Econômico por Menos de $1.000 em 2026 (LLM Local e ML)?',
@@ -1214,6 +1220,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-budget-ai-laptop-under-1000-overview-hero-ar.webp',
     title: 'أفضل حاسب محمول للذكاء الاصطناعي بأقل من 1,000 دولار في 2026 (LLM محلي و ML)؟',
@@ -1415,6 +1422,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-budget-ai-laptop-under-1000-overview-hero-zh.webp',
     title: '2026年1,000美元以下最佳AI笔记本电脑（本地LLM与ML）？',
@@ -1617,6 +1625,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-budget-ai-laptop-under-1000-overview-hero-ko.webp',
     title: '2026년 1,000달러 이하 최고의 예산형 AI 노트북은? (로컬 LLM & ML)',

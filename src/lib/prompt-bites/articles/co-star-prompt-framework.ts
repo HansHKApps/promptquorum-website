@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Prompt Engineering',
     heroImage: '/images/co-star-prompt-framework-overview-hero-en.webp',
     title: 'What Is the CO-STAR Prompt Framework?',
@@ -158,6 +159,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Prompt Engineering',
     heroImage: '/images/co-star-prompt-framework-overview-hero-de.webp',
     title: 'Was ist das CO-STAR-Prompt-Framework?',
@@ -262,6 +264,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Prompt Engineering',
     heroImage: '/images/co-star-prompt-framework-overview-hero-fr.webp',
     title: 'Qu\'est-ce que le framework de prompt CO-STAR ?',
@@ -366,6 +369,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Prompt Engineering',
     heroImage: '/images/co-star-prompt-framework-overview-hero-ja.webp',
     title: 'CO-STARプロンプトフレームワークとは？',
@@ -470,6 +474,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Prompt Engineering',
     heroImage: '/images/co-star-prompt-framework-overview-hero-pt.webp',
     title: 'O que é o framework CO-STAR para prompts?',
@@ -574,6 +579,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Prompt Engineering',
     heroImage: '/images/co-star-prompt-framework-overview-hero-es.webp',
     title: '¿Qué es el framework CO-STAR para prompts?',
@@ -678,6 +684,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Prompt Engineering',
     heroImage: '/images/co-star-prompt-framework-overview-hero-zh.webp',
     title: 'CO-STAR 提示框架是什么？',
@@ -782,6 +789,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Prompt Engineering',
     heroImage: '/images/co-star-prompt-framework-overview-hero-ar.webp',
     title: 'ما هو إطار عمل ⁨CO-STAR⁩ للأوامر؟',
@@ -886,6 +894,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Prompt Engineering',
     heroImage: '/images/co-star-prompt-framework-overview-hero-ko.webp',
     title: 'CO-STAR 프롬프트 프레임워크란 무엇입니까?',

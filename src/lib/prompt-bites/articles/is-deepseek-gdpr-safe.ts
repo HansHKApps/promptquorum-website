@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-en.webp',
     title: 'Is DeepSeek GDPR Safe to Use?',
@@ -104,6 +105,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-de.webp',
     title: 'Ist DeepSeek DSGVO-sicher?',
@@ -193,6 +195,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-fr.webp',
     title: 'DeepSeek est-il sûr au regard du RGPD ?',
@@ -282,6 +285,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-ja.webp',
     title: 'DeepSeekはGDPR的に安全ですか？',
@@ -371,6 +375,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-zh.webp',
     title: 'DeepSeek在GDPR方面安全吗？',
@@ -460,6 +465,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-pt.webp',
     title: 'O DeepSeek é seguro para uso sob o RGPD?',
@@ -549,6 +555,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-es.webp',
     title: '¿Es seguro usar DeepSeek bajo el RGPD?',
@@ -638,6 +645,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-ar.webp',
     title: 'هل استخدام ⁨DeepSeek⁩ آمن وفق اللائحة الأوروبية لحماية البيانات ⁨GDPR⁩؟',
@@ -727,6 +735,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-ko.webp',
     title: 'DeepSeek는 GDPR에 안전한가?',

@@ -20,6 +20,7 @@ const SIBLING_BITES = [
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-en.webp',
     title: 'Local AI Trends 2027, Part 8 of 10: Local Agents Get a Longer Leash',
@@ -143,6 +144,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-de.webp',
     title: 'Local AI Trends 2027, Part 8 of 10: Lokale Agenten bekommen mehr Handlungsspielraum',
@@ -266,6 +268,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-fr.webp',
     title: 'Local AI Trends 2027, Part 8 of 10 : les agents locaux gagnent en autonomie',
@@ -389,6 +392,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-ja.webp',
     title: 'Local AI Trends 2027、Part 8 of 10：ローカルエージェントの裁量が広がる',
@@ -512,6 +516,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-zh.webp',
     title: 'Local AI Trends 2027,第8部分(共10部分):本地智能体获得更大自主空间',
@@ -635,6 +640,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-es.webp',
     title: 'Local AI Trends 2027, Parte 8 de 10: los agentes locales ganan más margen de autonomía',
@@ -758,6 +764,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-pt.webp',
     title: 'Local AI Trends 2027, Parte 8 de 10: os agentes locais ganham mais autonomia',
@@ -881,6 +888,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-ar.webp',
     title: 'Local AI Trends 2027، الجزء 8 من 10: الوكلاء المحليون يحصلون على مساحة أكبر من الاستقلالية',
@@ -1004,6 +1012,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-ko.webp',
     title: 'Local AI Trends 2027, 10부 중 8부: 로컬 에이전트, 더 넓은 자율 범위를 얻다',

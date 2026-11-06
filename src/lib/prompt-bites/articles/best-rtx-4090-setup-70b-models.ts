@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-en.webp',
     title: 'Best RTX 4090 Setup for Running 70B Models?',
@@ -145,6 +146,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-ar.webp',
     title: 'أفضل إعداد RTX 4090 لتشغيل نماذج 70B؟',
@@ -287,6 +289,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-de.webp',
     title: 'Das beste RTX-4090-Setup für den Betrieb von 70B-Modellen?',
@@ -429,6 +432,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-es.webp',
     title: '¿Cuál es la Mejor Configuración RTX 4090 para Ejecutar Modelos de 70B?',
@@ -571,6 +575,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-fr.webp',
     title: 'Meilleure configuration RTX 4090 pour faire tourner des modèles 70B ?',
@@ -713,6 +718,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-ja.webp',
     title: '70Bモデルを動かすための最適なRTX 4090セットアップは?',
@@ -855,6 +861,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-ko.webp',
     title: '70B 모델 구동을 위한 최적의 RTX 4090 설정은?',
@@ -997,6 +1004,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-pt.webp',
     title: 'Qual a Melhor Configuração RTX 4090 para Rodar Modelos de 70B?',
@@ -1139,6 +1147,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-zh.webp',
     title: '运行 70B 模型的最佳 RTX 4090 配置是什么？',

@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-mlx-apple-silicon-overview-hero-en.webp',
     title: 'Does Ollama Support MLX on Apple Silicon?',
@@ -137,6 +138,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-mlx-apple-silicon-overview-hero-de.webp',
     title: 'Unterstützt Ollama MLX auf Apple Silicon?',
@@ -224,6 +226,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-mlx-apple-silicon-overview-hero-fr.webp',
     title: 'Ollama prend-il en charge MLX sur Apple Silicon ?',
@@ -311,6 +314,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-mlx-apple-silicon-overview-hero-ja.webp',
     title: 'OllamaはApple SiliconでMLXをサポートしていますか？',
@@ -398,6 +402,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-mlx-apple-silicon-overview-hero-zh.webp',
     title: 'Ollama 在 Apple Silicon 上支持 MLX 吗？',
@@ -485,6 +490,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-mlx-apple-silicon-overview-hero-pt.webp',
     title: 'O Ollama suporta MLX no Apple Silicon?',
@@ -579,6 +585,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-mlx-apple-silicon-overview-hero-es.webp',
     title: '¿Ollama soporta MLX en Apple Silicon?',
@@ -673,6 +680,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-mlx-apple-silicon-overview-hero-ar.webp',
     title: 'هل يدعم ⁨Ollama MLX⁩ على ⁨Apple Silicon⁩؟',
@@ -767,6 +775,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-mlx-apple-silicon-overview-hero-ko.webp',
     title: 'Ollama는 Apple Silicon에서 MLX를 지원합니까?',

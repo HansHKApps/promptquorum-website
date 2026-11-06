@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-en.webp',
     title: "Best Local PII Redaction Tool or Library for LLMs?",
@@ -127,6 +128,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-de.webp',
     title: "Bestes lokales PII-Schwärzungs-Tool oder -Bibliothek für LLMs?",
@@ -251,6 +253,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-fr.webp',
     title: "Meilleur outil ou bibliothèque locale d'anonymisation des PII pour les LLM ?",
@@ -375,6 +378,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-ja.webp',
     title: "LLM向けのローカルPIIマスキングツール／ライブラリのおすすめは？",
@@ -499,6 +503,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-zh.webp',
     title: "适用于LLM的最佳本地PII脱敏工具或库是什么？",
@@ -623,6 +628,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-es.webp',
     title: "¿Mejor herramienta o biblioteca local de redacción de PII para LLM?",
@@ -747,6 +753,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-pt.webp',
     title: "Melhor ferramenta ou biblioteca local de redação de PII para LLMs?",
@@ -871,6 +878,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-ar.webp',
     title: "ما أفضل أداة أو مكتبة محلية لحجب بيانات PII في نماذج LLM؟",
@@ -995,6 +1003,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-ko.webp',
     title: "LLM용 최고의 로컬 PII 마스킹 도구 또는 라이브러리는?",

@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-frontend-for-ollama-overview-hero-en.webp',
     title: 'Best Frontend for Ollama?',
@@ -90,6 +91,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-frontend-for-ollama-overview-hero-de.webp',
     title: 'Bestes Frontend für Ollama?',
@@ -170,6 +172,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-frontend-for-ollama-overview-hero-fr.webp',
     title: 'Meilleur frontend pour Ollama ?',
@@ -250,6 +253,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-frontend-for-ollama-overview-hero-ja.webp',
     title: 'Ollamaに最適なフロントエンドは？',
@@ -330,6 +334,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-frontend-for-ollama-overview-hero-zh.webp',
     title: 'Ollama 最佳前端是什么？',
@@ -410,6 +415,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-frontend-for-ollama-overview-hero-es.webp',
     title: '¿Mejor frontend para Ollama?',
@@ -494,6 +500,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-frontend-for-ollama-overview-hero-pt.webp',
     title: '¿Mejor frontend para Ollama?',
@@ -578,6 +585,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-frontend-for-ollama-overview-hero-ar.webp',
     title: 'أفضل واجهة أمامية لـ ⁨Ollama⁩؟',
@@ -662,6 +670,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-frontend-for-ollama-overview-hero-ko.webp',
     title: 'Ollama 최적 프론트엔드는?',

@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-en.webp',
     title: 'How to Convert Ollama Models to MLX Format',
@@ -146,6 +147,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-de.webp',
     title: 'Ollama-Modelle in das MLX-Format konvertieren',
@@ -241,6 +243,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-fr.webp',
     title: 'Comment convertir des modèles Ollama au format MLX',
@@ -336,6 +339,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-ja.webp',
     title: 'OllamaモデルをMLX形式に変換する方法',
@@ -431,6 +435,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-zh.webp',
     title: '如何将 Ollama 模型转换为 MLX 格式',
@@ -526,6 +531,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-pt.webp',
     title: 'Como converter modelos do Ollama para o formato MLX',
@@ -628,6 +634,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-es.webp',
     title: 'Cómo convertir modelos de Ollama a formato MLX',
@@ -730,6 +737,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-ar.webp',
     title: 'كيفية تحويل نماذج ⁨Ollama⁩ إلى صيغة ⁨MLX⁩',
@@ -832,6 +840,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-ko.webp',
     title: 'Ollama 모델을 MLX 형식으로 변환하는 방법',

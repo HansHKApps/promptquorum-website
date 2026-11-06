@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/speculative-decoding-explained-overview-hero-en.webp',
     title: 'What Is Speculative Decoding?',
@@ -135,6 +136,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/speculative-decoding-explained-overview-hero-de.webp',
     title: 'Was ist Spekulatives Dekodieren?',
@@ -267,6 +269,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/speculative-decoding-explained-overview-hero-fr.webp',
     title: "Qu'est-ce que le décodage spéculatif ?",
@@ -399,6 +402,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/speculative-decoding-explained-overview-hero-ja.webp',
     title: '投機的デコーディングとは',
@@ -531,6 +535,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/speculative-decoding-explained-overview-hero-zh.webp',
     title: '什么是推测解码？',
@@ -662,6 +667,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/speculative-decoding-explained-overview-hero-es.webp',
     title: '¿Qué es la decodificación especulativa?',
@@ -794,6 +800,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/speculative-decoding-explained-overview-hero-pt.webp',
     title: 'O que é decodificação especulativa?',
@@ -926,6 +933,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/speculative-decoding-explained-overview-hero-ar.webp',
     title: 'ما هو فك التشفير التخميني؟',
@@ -1058,6 +1066,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/speculative-decoding-explained-overview-hero-ko.webp',
     title: '추측 디코딩이란 무엇입니까?',

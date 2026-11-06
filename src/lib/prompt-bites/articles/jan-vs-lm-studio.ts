@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/jan-vs-lm-studio-overview-hero-en.webp',
     title: 'Jan vs LM Studio: Which Is Better?',
@@ -144,6 +145,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/jan-vs-lm-studio-overview-hero-de.webp',
     title: 'Jan vs LM Studio: Welches ist besser?',
@@ -238,6 +240,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/jan-vs-lm-studio-overview-hero-fr.webp',
     title: 'Jan vs LM Studio : lequel est le meilleur ?',
@@ -332,6 +335,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/jan-vs-lm-studio-overview-hero-ja.webp',
     title: 'Jan vs LM Studio：どちらが優れていますか？',
@@ -426,6 +430,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/jan-vs-lm-studio-overview-hero-zh.webp',
     title: 'Jan vs LM Studio：哪个更好？',
@@ -520,6 +525,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/jan-vs-lm-studio-overview-hero-pt.webp',
     title: 'Jan vs LM Studio: Qual é melhor?',
@@ -621,6 +627,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/jan-vs-lm-studio-overview-hero-es.webp',
     title: '¿Jan vs LM Studio: Cuál es mejor?',
@@ -722,6 +729,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/jan-vs-lm-studio-overview-hero-ar.webp',
     title: '⁨Jan⁩ مقابل ⁨LM Studio⁩: أيهما أفضل؟',
@@ -823,6 +831,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/jan-vs-lm-studio-overview-hero-ko.webp',
     title: 'Jan vs LM Studio: 어느 쪽이 더 낫습니까?',

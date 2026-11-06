@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-quantization-6gb-vram-overview-hero-en.webp',
     title: 'Best Quantization for 6 GB VRAM: Which Level Fits?',
@@ -154,6 +155,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-quantization-6gb-vram-overview-hero-de.webp',
     title: 'Beste Quantisierung für 6 GB VRAM: Welche Stufe passt?',
@@ -251,6 +253,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-quantization-6gb-vram-overview-hero-fr.webp',
     title: 'Meilleure quantisation pour 6 Go de VRAM : quel niveau choisir ?',
@@ -348,6 +351,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-quantization-6gb-vram-overview-hero-ja.webp',
     title: '6 GB VRAM に最適な量子化レベルは？',
@@ -445,6 +449,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-quantization-6gb-vram-overview-hero-zh.webp',
     title: '6 GB 显存最佳量化等级是哪个？',
@@ -542,6 +547,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-quantization-6gb-vram-overview-hero-pt.webp',
     title: 'Melhor quantização para 6 GB de VRAM: qual nível cabe?',
@@ -639,6 +645,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-quantization-6gb-vram-overview-hero-es.webp',
     title: '¿Mejor cuantización para 6 GB de VRAM: qué nivel cabe?',
@@ -736,6 +743,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-quantization-6gb-vram-overview-hero-ar.webp',
     title: 'أفضل تكميم لـ⁨6 GB VRAM⁩: أي مستوى يتسع؟',
@@ -833,6 +841,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-quantization-6gb-vram-overview-hero-ko.webp',
     title: '6GB VRAM에 최적화된 양자화: 어떤 레벨이 적합한가?',

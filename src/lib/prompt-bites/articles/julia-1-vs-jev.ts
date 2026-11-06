@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Julia-1 vs Jev: Local vs Cloud Decision Models (2026)',
     dateModified: '2026-09-28',
@@ -147,6 +148,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Julia-1 vs. Jev: Lokales oder Cloud-Decision-Modell (2026)',
     dateModified: '2026-09-28',
@@ -291,6 +293,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Julia-1 vs Jev: modelos de decisión local o en la nube (2026)',
     dateModified: '2026-09-28',
@@ -435,6 +438,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Julia-1 et Jev : modèle de décision local ou cloud (2026)',
     dateModified: '2026-09-28',
@@ -579,6 +583,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Julia-1 vs Jev：ローカルとクラウドの意思決定モデル比較（2026）',
     dateModified: '2026-09-28',
@@ -723,6 +728,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Julia-1对比Jev：本地与云端决策模型（2026）',
     dateModified: '2026-09-28',
@@ -867,6 +873,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Julia-1 vs Jev: modelos de decisão local ou em nuvem (2026)',
     dateModified: '2026-09-28',
@@ -1011,6 +1018,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Julia-1 مقابل Jev: نماذج قرار محلية أم سحابية؟ (2026)',
     dateModified: '2026-09-28',
@@ -1155,6 +1163,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Julia-1 vs Jev: 로컬 대 클라우드 의사결정 모델 비교 (2026)',
     dateModified: '2026-09-28',
