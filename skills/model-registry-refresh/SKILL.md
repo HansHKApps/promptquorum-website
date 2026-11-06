@@ -191,6 +191,47 @@ close it in Step 2 (never leave a dangling `superseded_by`). If it fails on
 `ECOSYSTEM_NOTE_UNSOURCED`/`_UNDATED`, every `ecosystem_notes[]` entry needs a
 `source_id` resolving to `sources[]` and a `retrieved_at` date.
 
+### Step 4b — Local LLM catalog (`data/local-llm-catalog.json`)
+
+The catalog is the curated top-~30 local LLM variants the MCP server uses for
+"which model fits my machine / app" (`recommend_models`, `list_local_models`,
+and `suggestedModels` inside `check_hardware_compatibility` / `recommend_stack`).
+It is separate from the registry: the registry decides whether a model name is
+valid and current; the catalog holds sizes, quantization, architecture, license
+and capabilities. **Every catalog fact is derived by script from primary sources
+(Ollama registry manifest, GGUF header, license layer) — never typed by hand.**
+The only hand-edited input is `data/catalog-candidates.json` (which variants,
+registry mapping, `best_for`, two sourced active-parameter overrides).
+
+The Monday workflow `.github/workflows/local-llm-catalog-weekly.yml` already
+rebuilt the catalog and opened PR `bot/catalog-weekly` with the drift report as
+its body. Your job is the human half:
+
+1. Read the PR body (or run `npm run catalog:detect`). Triage each section:
+   - **Registry link needs attention** — a catalog variant's registry entry is
+     no longer `current`. Replace the candidate with its successor (check that
+     the successor has a pullable Ollama tag) or drop it. Never leave a
+     superseded model in the catalog.
+   - **Size / quantization / context / license / capability changes** — confirm
+     against the model's own Ollama page and official card before merging.
+     A size jump means Ollama republished the tag; a capability flip needs a
+     second source. Capabilities for renderer-based models (Qwen3.5+, Gemma 4)
+     come from Ollama's family badges and are family-level, not per-size.
+   - **Popular families not in the catalog** — curation input only. Ollama's pull
+     ranking favors older families, so add a candidate only if the registry lists
+     it `current`. Also check the other direction: registry models marked
+     `current` that have no Ollama tag yet (e.g. a newer release than Ollama
+     ships) are intentionally absent from the catalog.
+2. To change the selection edit `data/catalog-candidates.json`, then
+   `npm run catalog:build -- --write` (it refuses to write if any candidate
+   fails to resolve). Never edit `data/local-llm-catalog.json` by hand —
+   `validate-catalog.mjs` fails on drift from the candidate list.
+3. Gate: `npm run validate:catalog:strict` must pass and `npm run check:mcp`
+   must pass (it pins the fit math, the 8 GB Mac reserve, and tool behavior).
+4. Merge the PR. The catalog's `last_updated` is the freshness signal: the
+   weekly job goes red when it is more than 30 days old.
+5. Record it: `node scripts/record-review.mjs --action catalog-refresh --summary "<what you verified>"`.
+
 ### Step 5 — Baseline burn-down
 
 Existing site violations that predate this validator are frozen in
@@ -249,3 +290,4 @@ sessions run in this repo); never `git reset` or rebase on local `main`.
 - [ ] `npm run build` — 0 errors
 - [ ] Brief output for review before any page content is edited
 - [ ] Review recorded via `record-review.mjs`
+- [ ] Catalog PR (`bot/catalog-weekly`) triaged per Step 4b; `npm run validate:catalog:strict` and `npm run check:mcp` pass
