@@ -41,6 +41,7 @@ import {
 } from '@/lib/mcp/directory-tools'
 import { STACK_RECIPES } from '@/lib/power-local-llm/stacks'
 import { recordMcpCall, type McpToolName } from '@/lib/mcp/usage'
+import { recordMcpDimensions } from '@/lib/mcp/usage-dimensions'
 import { tagSiteUrls } from '@/lib/mcp/utm'
 import { TOTAL_TOOL_COUNT } from '@/lib/power-local-llm/apps-barrel'
 import { SUPPORTED_LANGS } from '@/components/search/search-utils'
@@ -118,6 +119,15 @@ async function runStart(toolName: McpToolName, fn: (deps: StartDeps) => Promise<
 
 const handler = createMcpHandler(
   (server) => {
+    // Anonymous "what was asked about" counters (apps, directory categories, languages): wrap every tool handler once
+    // so each call also records those, validated against closed lists (see usage-dimensions.ts).
+    const registerTool = server.registerTool.bind(server) as (name: string, config: unknown, cb: (...a: unknown[]) => unknown) => unknown
+    server.registerTool = ((name: string, config: unknown, cb: (...a: unknown[]) => unknown) =>
+      registerTool(name, config, async (...a: unknown[]) => {
+        await recordMcpDimensions(a[0])
+        return cb(...a)
+      })) as unknown as typeof server.registerTool
+
     server.registerTool(
       'search_promptquorum',
       {

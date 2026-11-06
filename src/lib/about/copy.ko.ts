@@ -65,15 +65,14 @@ export const ko: AboutCopy = {
     '통제로부터의 독립은 이 사이트 전체를 관통하는 주제입니다. 그것이 바로 디렉터리가 중립적으로 운영되는 이유이자, 모든 항목이 공식 소스로 연결되는 이유이며, 우리가 9개 언어로 콘텐츠를 발행하는 이유입니다.',
   believeItalic:
     '우리는 클라우드 AI가 나쁘다고 생각하지 않습니다. 다만 당신에게 진정한 선택권이 있어야 하며, 로컬을 선택하는 일이 클라우드를 선택하는 일만큼 쉬워야 한다고 믿습니다.',
-  ecosystemH2: '하나의 생태계, 함께 작동하는 다섯 가지 요소',
+  ecosystemH2: '하나의 생태계, 함께 작동하는 네 가지 요소',
   ecosystemLead:
-    'PromptQuorum은 단순한 앱도, 단순한 디렉터리도 아닙니다. 동일한 목표를 중심으로 만들어진 다섯 가지 요소로 구성되어 있어, "무엇을 실행해야 할까?"라는 질문에서 실제로 작동하는 설정까지 이 사이트를 벗어나지 않고 도달할 수 있습니다.',
+    'PromptQuorum은 단순한 앱도, 단순한 디렉터리도 아닙니다. 동일한 목표를 중심으로 만들어진 네 가지 요소로 구성되어 있어, "무엇을 실행해야 할까?"라는 질문에서 실제로 작동하는 설정까지 이 사이트를 벗어나지 않고 도달할 수 있습니다.',
   connectsLabel: '다른 요소와의 연동:',
   findLabel: '찾기',
   learnLabel: '배우기',
   useLabel: '사용하기',
   askLabel: '묻기',
-  hansLabel: '대화',
   partFindTitle: '로컬 AI 디렉터리',
   partFindOneLiner: '검색 가능하고 구조화된 로컬 AI 소프트웨어 지도.',
   partFindBody:
@@ -94,16 +93,10 @@ export const ko: AboutCopy = {
   partAskBody:
     'Model Context Protocol을 위한 공개된 읽기 전용 서버입니다. Claude, Cursor는 물론 MCP를 지원하는 모든 어시스턴트가 디렉터리를 검색하고, 앱 세부 정보를 가져오고, 가이드를 읽고, 라이선스를 설명할 수 있습니다. 계정도 API 키도 필요 없습니다. 내 AI가 로컬 AI에 관한 질문에 답할 때, 추측하는 대신 PromptQuorum의 정보를 활용할 수 있습니다.',
   partAskConnects: '이 웹사이트와 동일한 디렉터리와 가이드를 참조하므로, 당신의 어시스턴트도 당신과 같은 소스를 바탕으로 답변합니다.',
-  partHansTitle: 'Ask Hans',
-  partHansOneLiner: '평소 말투로 질문하면 디렉터리를 바탕으로 답합니다.',
-  partHansBody:
-    '이 사이트의 AI 채팅 어시스턴트입니다. 어떤 앱이 작업에 맞는지, 내 하드웨어에서 무엇이 돌아가는지, 라이선스가 무슨 뜻인지 물으면 같은 디렉터리와 가이드를 바탕으로 답합니다. AI 기반이므로 중요한 내용은 디렉터리 항목과 가이드에서 확인하세요. 대화는 브라우저 탭 안에만 남고, 질문과 답변 텍스트는 저장하지 않습니다.',
-  partHansConnects: 'MCP 서버와 같은 도구를 사용하므로, 직접 어시스턴트를 설정하지 않아도 디렉터리의 답을 받을 수 있습니다.',
   ctaOpenDirectory: '디렉터리 열기',
   ctaReadGuides: '가이드 읽기',
   ctaAboutApp: '앱 소개',
   ctaSeeHowToConnect: '연결 방법 보기',
-  ctaAskHans: 'Ask Hans 열기',
   practiceH3: '실제로는 이렇게 작동합니다',
   practiceIntro: '예를 들어 RAM이 16 GB이고, 오프라인 상태에서 내 PDF 문서와 대화하고 싶다고 가정해 보겠습니다.',
   practiceSteps: [

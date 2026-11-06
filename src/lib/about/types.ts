@@ -62,7 +62,6 @@ export interface AboutCopy {
   learnLabel: string
   useLabel: string
   askLabel: string
-  hansLabel: string
   partFindTitle: string
   partFindOneLiner: string
   partFindBody: string // {{appCount}} {{groupCount}} {{categoryCount}}
@@ -79,15 +78,10 @@ export interface AboutCopy {
   partAskOneLiner: string
   partAskBody: string
   partAskConnects: string
-  partHansTitle: string
-  partHansOneLiner: string
-  partHansBody: string
-  partHansConnects: string
   ctaOpenDirectory: string
   ctaReadGuides: string
   ctaAboutApp: string
   ctaSeeHowToConnect: string
-  ctaAskHans: string
   practiceH3: string
   practiceIntro: string
   practiceSteps: [string, string, string, string] // paired by index with find/learn/use/askLabel

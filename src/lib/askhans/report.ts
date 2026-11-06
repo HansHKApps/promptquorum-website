@@ -7,54 +7,30 @@
 
 import { redis } from '@/lib/redis'
 import { getAskHansTotals } from './totals'
+import { REPORT_DAYS, lastNDaysUtc, rankRows, windowsOf, zeroCounts } from '@/lib/usage/report-types'
+import type { ReportRow, ReportWindow, UsageReportBase, WindowCounts } from '@/lib/usage/report-types'
 
-export const REPORT_DAYS = 30
-const TOP_ROWS = 12
+export { REPORT_DAYS }
+export type { ReportWindow, WindowCounts, ReportRow }
 
-export type ReportWindow = 'today' | 'yesterday' | 'last7' | 'last30'
-export type WindowCounts = Record<ReportWindow, number>
-
-export interface ReportRow {
-  key: string
-  counts: WindowCounts
-}
-
-export interface AskHansReport {
-  generatedAt: string
-  since: string | null
+export interface AskHansReport extends UsageReportBase {
   /** all visitors, no consent needed */
   totals: { opens: number; requests: number; answers: number }
-  windows: { opens: WindowCounts; answers: WindowCounts }
-  /** answers per UTC day, oldest first, ending today */
-  days: { date: string; answers: number }[]
-  /** visitors who agreed to the anonymous statistics: how many questions they asked, per window (only days from `since`, so never above the answers of the same window) */
-  sampled: WindowCounts
-  /** all-visitor answers over exactly the days `sampled` covers, so sampled / sampledOf is a true consent share */
-  sampledOf: WindowCounts
-  /** breakdowns, busiest (last 30 days) first; sample = consenting visitors only */
-  categories: ReportRow[]
-  apps: ReportRow[]
-  dirCats: ReportRow[]
-  tools: ReportRow[]
-  langs: ReportRow[]
-}
-
-const zero = (): WindowCounts => ({ today: 0, yesterday: 0, last7: 0, last30: 0 })
-
-function lastNDaysUtc(n: number): string[] {
-  const now = Date.now()
-  return Array.from({ length: n }, (_, i) => new Date(now - (n - 1 - i) * 86_400_000).toISOString().slice(0, 10))
 }
 
 function emptyReport(dates: string[]): AskHansReport {
   return {
     generatedAt: new Date().toISOString(),
     since: null,
+    breakdownSince: null,
     totals: { opens: 0, requests: 0, answers: 0 },
-    windows: { opens: zero(), answers: zero() },
-    days: dates.map((date) => ({ date, answers: 0 })),
-    sampled: zero(),
-    sampledOf: zero(),
+    headline: [
+      { key: 'answers', win: zeroCounts(), all: 0 },
+      { key: 'opens', win: zeroCounts(), all: 0 },
+    ],
+    days: dates.map((date) => ({ date, count: 0 })),
+    sampled: zeroCounts(),
+    sampledOf: zeroCounts(),
     categories: [],
     apps: [],
     dirCats: [],
@@ -72,34 +48,31 @@ export async function getAskHansReport(): Promise<AskHansReport> {
     const [perDay, totals] = await Promise.all([pipe.exec<(Record<string, string | number> | null)[]>(), getAskHansTotals()])
     report.totals = { opens: totals.opens, requests: totals.requests, answers: totals.answers }
     report.since = totals.since
+    report.breakdownSince = totals.since
+    const answersWin = zeroCounts()
+    const opensWin = zeroCounts()
+    const sampled = zeroCounts()
+    const sampledOf = zeroCounts()
 
-    const last = dates.length - 1
-    const windowsOf = (i: number): ReportWindow[] => {
-      const w: ReportWindow[] = ['last30']
-      if (i === last) w.push('today')
-      if (i === last - 1) w.push('yesterday')
-      if (i > last - 7) w.push('last7')
-      return w
-    }
     const prefixes = { 'q:': 'categories', 'app:': 'apps', 'dircat:': 'dirCats', 'tool:': 'tools', 'lang:': 'langs' } as const
     const rows: Record<string, Map<string, WindowCounts>> = { categories: new Map(), apps: new Map(), dirCats: new Map(), tools: new Map(), langs: new Map() }
 
     perDay.forEach((h, i) => {
       const day = h ?? {}
-      const wins = windowsOf(i)
+      const wins = windowsOf(i, dates.length)
       // The all-visitor totals only exist from `since`, and `since` itself is a partial day (the counter went live
       // mid-day) while the consent-based breakdowns started earlier. Both are therefore compared from the day after
       // `since` only, otherwise sampled questions could exceed answers in the same window.
       const inBreakdown = !totals.since || dates[i] > totals.since
       const opens = Number(day.total_opens ?? 0) || 0
       const answers = Number(day.total_answers ?? 0) || 0
-      report.days[i].answers = answers
+      report.days[i].count = answers
       for (const w of wins) {
-        report.windows.opens[w] += opens
-        report.windows.answers[w] += answers
+        opensWin[w] += opens
+        answersWin[w] += answers
       }
       if (!inBreakdown) return
-      for (const w of wins) report.sampledOf[w] += answers
+      for (const w of wins) sampledOf[w] += answers
       for (const [field, raw] of Object.entries(day)) {
         const n = Number(raw) || 0
         if (!n) continue
@@ -107,20 +80,21 @@ export async function getAskHansReport(): Promise<AskHansReport> {
           if (!field.startsWith(prefix)) continue
           const key = field.slice(prefix.length)
           const m = rows[bucket]
-          const counts = m.get(key) ?? zero()
+          const counts = m.get(key) ?? zeroCounts()
           for (const w of wins) counts[w] += n
           m.set(key, counts)
-          if (prefix === 'q:') for (const w of wins) report.sampled[w] += n
+          if (prefix === 'q:') for (const w of wins) sampled[w] += n
         }
       }
     })
 
-    for (const bucket of Object.values(prefixes)) {
-      report[bucket] = [...rows[bucket]]
-        .map(([key, counts]) => ({ key, counts }))
-        .sort((a, b) => b.counts.last30 - a.counts.last30 || b.counts.last7 - a.counts.last7 || a.key.localeCompare(b.key))
-        .slice(0, TOP_ROWS)
-    }
+    report.headline = [
+      { key: 'answers', win: answersWin, all: totals.answers },
+      { key: 'opens', win: opensWin, all: totals.opens },
+    ]
+    report.sampled = sampled
+    report.sampledOf = sampledOf
+    for (const bucket of Object.values(prefixes)) report[bucket] = rankRows(rows[bucket])
   } catch (err) {
     console.error('[askhans] report failed', err instanceof Error ? err.message : err)
     return emptyReport(dates)

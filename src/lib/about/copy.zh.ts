@@ -65,15 +65,14 @@ export const zh: AboutCopy = {
     '摆脱受制于人，是这个网站上所有内容的共同主题：这也是为什么目录保持中立、每个条目都链接到官方来源、以及我们用九种语言发布内容的原因。',
   believeItalic:
     '我们并不认为云端 AI 不好。我们相信，你应该拥有真正的选择权，而选择本地 AI 应该和选择云端 AI 一样简单。',
-  ecosystemH2: '一个生态系统，五个协同运作的部分',
+  ecosystemH2: '一个生态系统，四个协同运作的部分',
   ecosystemLead:
-    'PromptQuorum 不只是一款应用，也不只是一个目录，而是围绕同一个目标构建的五个部分，让你无需离开这个网站，就能从“我该运行什么？”一路走到实际可用的配置。',
+    'PromptQuorum 不只是一款应用，也不只是一个目录，而是围绕同一个目标构建的四个部分，让你无需离开这个网站，就能从“我该运行什么？”一路走到实际可用的配置。',
   connectsLabel: '与其他部分的联动：',
   findLabel: '查找',
   learnLabel: '学习',
   useLabel: '使用',
   askLabel: '询问',
-  hansLabel: '对话',
   partFindTitle: '本地 AI 目录',
   partFindOneLiner: '可检索、结构化的本地 AI 软件地图。',
   partFindBody:
@@ -94,16 +93,10 @@ export const zh: AboutCopy = {
   partAskBody:
     '面向 Model Context Protocol 的公开只读服务器。Claude、Cursor 以及任何支持 MCP 的助手都可以借此搜索目录、获取应用详情、阅读指南并解释许可证。无需账号，也无需 API 密钥。这样一来，当你的 AI 回答有关本地 AI 的问题时，就能引用 PromptQuorum 的内容，而不是凭空猜测。',
   partAskConnects: '它读取的目录和指南与本网站完全相同，因此你的助手所依据的信息来源与你自己看到的一致。',
-  partHansTitle: 'Ask Hans',
-  partHansOneLiner: '用日常的话提问，直接从目录里得到答案。',
-  partHansBody:
-    '本站上的 AI 聊天助手。你可以问哪款应用适合某项任务、什么能在你的硬件上运行，或者某个许可证是什么意思，它会依据同一份目录和指南来回答。它基于 AI，重要细节请到目录条目和指南中核对。你的对话只保留在浏览器标签页中，我们不会保存问题和回答的文本。',
-  partHansConnects: '它使用与 MCP 服务器相同的工具，因此无需自己配置助手，也能得到目录给出的答案。',
   ctaOpenDirectory: '打开目录',
   ctaReadGuides: '阅读指南',
   ctaAboutApp: '关于这款应用',
   ctaSeeHowToConnect: '查看连接方法',
-  ctaAskHans: '打开 Ask Hans',
   practiceH3: '实际使用流程',
   practiceIntro: '假设你有 16 GB RAM，想要离线与自己的 PDF 文档对话。',
   practiceSteps: [

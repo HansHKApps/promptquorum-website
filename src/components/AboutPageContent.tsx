@@ -4,7 +4,6 @@ import type { Language } from '@/lib/blog/blogContent'
 import { translations } from '@/translations'
 import { AboutHeroClient } from '@/components/AboutHeroClient'
 import { AboutTrackedLink } from '@/components/AboutTrackedLink'
-import { AboutAskHansButton } from '@/components/AboutAskHansButton'
 import { AboutLanguagePill } from '@/components/AboutLanguagePill'
 import { CATEGORY_GROUPS } from '@/lib/power-local-llm/apps/categories'
 import { getHomeStats } from '@/lib/home/stats'
@@ -95,13 +94,6 @@ function LayersIcon() {
     </svg>
   )
 }
-function ChatIcon() {
-  return (
-    <svg {...ICON_PROPS}>
-      <path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z" />
-    </svg>
-  )
-}
 function PlugIcon() {
   return (
     <svg {...ICON_PROPS}>
@@ -176,12 +168,11 @@ interface PartProps {
   cta: string
   arrow: string
   via: string
-  askHans?: boolean
 }
 
-function Part({ tone, verb, icon, title, oneLiner, children, connectsLabel, connects, href, cta, arrow, via, askHans }: PartProps) {
+function Part({ tone, verb, icon, title, oneLiner, children, connectsLabel, connects, href, cta, arrow, via }: PartProps) {
   return (
-    <div className={`rounded-xl border p-6 flex flex-col transition hover:shadow-lg hover:-translate-y-0.5 ${askHans ? 'sm:col-span-2' : ''} ${HUB_TONES[tone].tint} ${HUB_TONES[tone].edge}`}>
+    <div className={`rounded-xl border p-6 flex flex-col transition hover:shadow-lg hover:-translate-y-0.5 ${HUB_TONES[tone].tint} ${HUB_TONES[tone].edge}`}>
       <div className="flex items-center gap-3 mb-3">
         <div className={`w-11 h-11 rounded-xl text-white flex items-center justify-center shrink-0 ${HUB_TONES[tone].solid}`}>{icon}</div>
         <div>
@@ -194,13 +185,9 @@ function Part({ tone, verb, icon, title, oneLiner, children, connectsLabel, conn
       <p className={`text-sm text-text-secondary border-s-2 ps-3 mb-4 ${HUB_TONES[tone].solidBorder}`}>
         <strong className="text-text-primary">{connectsLabel}</strong> {connects}
       </p>
-      {askHans ? (
-        <AboutAskHansButton label={`${cta} ${arrow}`} className={`${LINK} ${HUB_TONES[tone].ink} text-sm mt-auto text-start`} />
-      ) : (
-        <AboutTrackedLink href={href} via={via} className={`${LINK} ${HUB_TONES[tone].ink} text-sm mt-auto`}>
-          {cta} {arrow}
-        </AboutTrackedLink>
-      )}
+      <AboutTrackedLink href={href} via={via} className={`${LINK} ${HUB_TONES[tone].ink} text-sm mt-auto`}>
+        {cta} {arrow}
+      </AboutTrackedLink>
     </div>
   )
 }
@@ -465,22 +452,6 @@ export function AboutPageContent({ lang }: { lang: Language }) {
                 via="part_mcp"
               >
                 {copy.partAskBody}
-              </Part>
-              <Part
-                tone={cycleTone(4)}
-                verb={copy.hansLabel}
-                icon={<ChatIcon />}
-                title={copy.partHansTitle}
-                oneLiner={copy.partHansOneLiner}
-                connectsLabel={copy.connectsLabel}
-                connects={copy.partHansConnects}
-                href="#"
-                cta={copy.ctaAskHans}
-                arrow={arrow}
-                via="part_askhans"
-                askHans
-              >
-                {copy.partHansBody}
               </Part>
             </div>
 
