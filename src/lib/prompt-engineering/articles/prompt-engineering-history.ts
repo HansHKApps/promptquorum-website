@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ogTitle: 'How Prompt Engineering Evolved: From GPT-3 to Context Design (2020–2026)',
       twitterTitle: 'How prompt engineering went from "write a better prompt" to context design in 6 years',
       publishDate: '2026-03-01',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       readTime: '10 min read',
       educationalLevel: 'Beginner',
       audience: 'Knowledge workers and developers learning the history of prompt engineering and AI techniques',
@@ -32,7 +32,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Chain-of-Thought (2022):** Wei et al. showed that prompt structure could activate step-by-step reasoning; PaLM 540B went from 17.9% to 56.9% on GSM8K',
         '**ChatGPT (Nov 2022):** Passed 1 million users in 5 days (per OpenAI CEO Sam Altman); an estimated 100 million monthly active users by January 2023 (UBS, via Reuters)',
         '**Job Market (2023):** An Anthropic "Prompt Engineer and Librarian" posting advertised $175K–$335K (Fortune, March 2023)',
-        '**GPT-4 & Frameworks (2023):** Image inputs and published frameworks (CO-STAR, SPECS, RISEN) turned prompting into a teachable discipline',
+        '**GPT-4 (2023) & Frameworks:** Image inputs and published frameworks (CO-STAR from GovTech Singapore, 2023; SPECS, RISEN) turned prompting into a teachable discipline',
         '**Context Design (2024–2026):** Open-weights LLMs, 1M+ token context windows, and agent orchestration shifted focus from prompt tweaking to system-level context engineering',
       ],
       toc: [
@@ -59,7 +59,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Is Prompt Engineering Dead? How It Evolved, 2020–2026',
         description: 'Prompt engineering is not dead, it changed: a sourced timeline from GPT-3 few-shot prompting (2020) through chain-of-thought and ChatGPT to context design.',
         datePublished: '2026-03-01',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'en',
         keywords: ['prompt engineering history', 'GPT-3 few-shot learning', 'chain-of-thought prompting', 'ChatGPT', 'context engineering', 'prompt engineering timeline', 'InstructGPT', 'RLHF'],
@@ -93,7 +93,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'Who first coined the term "prompt engineering"?', acceptedAnswer: { '@type': 'Answer', text: 'The exact origin is debated, and no single person is credited with inventing the term. Research papers were describing prompt-based methods by 2021, and the phrase gained wider use through 2022 and after ChatGPT. The Wikipedia article on prompt engineering gives an overview of the history.' } },
           { '@type': 'Question', name: 'Why did prompt engineering explode in popularity after ChatGPT?', acceptedAnswer: { '@type': 'Answer', text: 'ChatGPT was among the first general-purpose AI models that millions of non-researchers could use immediately, for free, without writing code. The gap between a well-crafted prompt and a vague one was visible and immediately consequential — better prompts produced usably better outputs. That feedback loop, experienced simultaneously by millions of people, turned prompt engineering from a research concept into a mass skill.' } },
           { '@type': 'Question', name: 'How did research papers influence real-world prompting techniques?', acceptedAnswer: { '@type': 'Answer', text: 'The transfer was unusually fast for AI research. Chain-of-Thought prompting (Wei et al., 2022) went from academic paper to widely used practitioner technique within months, partly because it required no tooling — just a change in how you wrote the prompt. Few-shot prompting from the GPT-3 paper (Brown et al., 2020) was immediately adoptable by anyone with API access. The accessibility of the techniques accelerated their spread.' } },
-          { '@type': 'Question', name: 'Is prompt engineering becoming less important as models improve?', acceptedAnswer: { '@type': 'Answer', text: 'No — more capable models respond better to well-structured prompts, not less. The gains from good prompting increase as the model becomes more capable of following precise instructions. What has changed is the level of prompt engineering required for simple tasks: conversational questions now require less crafting than they did in 2021. But for complex, production-grade outputs, structured prompting remains the most reliable lever available.' } },
+          { '@type': 'Question', name: 'Is prompt engineering becoming less important as models improve?', acceptedAnswer: { '@type': 'Answer', text: 'No — more capable models respond better to well-structured prompts, not less. The gains from good prompting increase as the model becomes more capable of following precise instructions. What has changed is the level of prompt engineering required for simple tasks: conversational questions now require less crafting than they did in 2021. But for complex, production-grade outputs, structured prompting is usually one of the most effective levers, alongside retrieval, model choice and fine-tuning.' } },
           { '@type': 'Question', name: 'What is the difference between prompt engineering and context engineering?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt engineering typically refers to designing the text input to a model to improve its output. Context engineering is a broader, more recent concept that refers to orchestrating everything in the model\'s context window: the system prompt, retrieved documents, conversation history, tool outputs, and user input — all composed deliberately. Context engineering treats the prompt as one component in a designed system, not a standalone artifact.' } },
           { '@type': 'Question', name: 'Will automated tools replace the need to understand prompt engineering?', acceptedAnswer: { '@type': 'Answer', text: 'Automated tools like DSPy can optimise prompt wording within defined objectives, but they require a human to specify what the objective is, what constraints apply, and how to evaluate success. Understanding prompt engineering principles remains necessary to use these tools effectively — and to diagnose when they produce the wrong outcome. Automation removes some of the manual iteration; it does not remove the need for structured thinking.' } },
           { '@type': 'Question', name: 'Is prompt engineering dead in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'No. The discipline has shifted, not disappeared. As models grow more capable, the work moves from syntax tricks and formatting hacks to context design — structuring inputs, managing retrieval, and composing tool outputs. The job title "Prompt Engineer" is narrowing, but the underlying skill is embedded in every role that uses AI: developer, analyst, marketer, researcher. Clear task framing, relevant context, and a specified output format still determine how useful a model\'s answer is.' } },
@@ -117,7 +117,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: 5, name: 'ChatGPT launch (2022 (Nov))', description: 'Brought prompting to a mass audience; millions began experimenting within days' },
           { '@type': 'ListItem', position: 6, name: '"Prompt engineer" postings draw attention; an Anthropic posting advertises $175K–$335K (2023 (Q1))', description: 'Made prompt engineering visible as a possible profession, though the role was widely debated' },
           { '@type': 'ListItem', position: 7, name: 'GPT-4 release with image input (2023 (Mar))', description: 'Extended prompting beyond text to images; 128K-token context followed with GPT-4 Turbo (Nov 2023)' },
-          { '@type': 'ListItem', position: 8, name: 'Frameworks such as CRAFT, CO-STAR, SPECS, RISEN and TRACE; official guides from OpenAI and Google (2023)', description: 'Turned individual craft into reusable, teachable templates' },
+          { '@type': 'ListItem', position: 8, name: 'Frameworks such as CO-STAR (GovTech Singapore, 2023) and other published templates (CRAFT, SPECS, RISEN, TRACE); official guides from OpenAI and Google', description: 'Turned individual craft into reusable, teachable templates' },
           { '@type': 'ListItem', position: 9, name: 'APE (Zhou et al.) and DSPy (Khattab et al.): LLM-optimised prompts (2022–2023)', description: 'Showed that LLMs can write and tune prompts, making automated prompt optimisation practical' },
           { '@type': 'ListItem', position: 10, name: 'Llama 3 (Apr) and Gemini 1.5 Pro with a 1M-token context preview (Feb) (2024)', description: 'Open-weights models for private deployment and very long contexts moved focus to context engineering' },
           { '@type': 'ListItem', position: 11, name: 'Reasoning models: OpenAI o1 (Sep 2024), DeepSeek-R1 (Jan 2025), Claude 3.7 Sonnet extended thinking (Feb 2025) (2024–2025)', description: 'Models reason step by step internally, so explicit chain-of-thought prompting matters less on them' },
@@ -269,7 +269,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Year': '2022 (Nov)', 'Milestone': 'ChatGPT launch', 'Why It Matters': 'Brought prompting to a mass audience; millions began experimenting within days' },
             { 'Year': '2023 (Q1)', 'Milestone': '"Prompt engineer" postings draw attention; an Anthropic posting advertises $175K–$335K', 'Why It Matters': 'Made prompt engineering visible as a possible profession, though the role was widely debated' },
             { 'Year': '2023 (Mar)', 'Milestone': 'GPT-4 release with image input', 'Why It Matters': 'Extended prompting beyond text to images; 128K-token context followed with GPT-4 Turbo (Nov 2023)' },
-            { 'Year': '2023', 'Milestone': 'Frameworks such as CRAFT, CO-STAR, SPECS, RISEN and TRACE; official guides from OpenAI and Google', 'Why It Matters': 'Turned individual craft into reusable, teachable templates' },
+            { 'Year': '2023', 'Milestone': 'Frameworks such as CO-STAR (GovTech Singapore, 2023) and other published templates (CRAFT, SPECS, RISEN, TRACE); official guides from OpenAI and Google', 'Why It Matters': 'Turned individual craft into reusable, teachable templates' },
             { 'Year': '2022–2023', 'Milestone': 'APE (Zhou et al.) and DSPy (Khattab et al.): LLM-optimised prompts', 'Why It Matters': 'Showed that LLMs can write and tune prompts, making automated prompt optimisation practical' },
             { 'Year': '2024', 'Milestone': 'Llama 3 (Apr) and Gemini 1.5 Pro with a 1M-token context preview (Feb)', 'Why It Matters': 'Open-weights models for private deployment and very long contexts moved focus to context engineering' },
             { 'Year': '2024–2025', 'Milestone': 'Reasoning models: OpenAI o1 (Sep 2024), DeepSeek-R1 (Jan 2025), Claude 3.7 Sonnet extended thinking (Feb 2025)', 'Why It Matters': 'Models reason step by step internally, so explicit chain-of-thought prompting matters less on them' },
@@ -316,7 +316,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Is prompt engineering becoming less important as models improve?',
-              a: 'No — more capable models respond better to well-structured prompts, not less. The gains from good prompting increase as the model becomes more capable of following precise instructions. What has changed is the level of prompt engineering required for simple tasks: conversational questions now require less crafting than they did in 2021. But for complex, production-grade outputs, structured prompting remains the most reliable lever available.',
+              a: 'No — more capable models respond better to well-structured prompts, not less. The gains from good prompting increase as the model becomes more capable of following precise instructions. What has changed is the level of prompt engineering required for simple tasks: conversational questions now require less crafting than they did in 2021. But for complex, production-grade outputs, structured prompting is usually one of the most effective levers, alongside retrieval, model choice and fine-tuning.',
             },
             {
               q: 'What is the difference between prompt engineering and context engineering?',
@@ -352,7 +352,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Better models make prompt engineering irrelevant.',
-              problem: 'A more capable model is like a more capable person — it responds *better* to clear instructions, not worse. The gains from good prompting compound as model capability increases. What changes is the *kind* of prompting needed, not whether it\'s necessary.',
+              problem: 'A more capable model is like a more capable person — it responds *better* to clear instructions, not worse. The gains from good prompting can compound as model capability increases. What changes is the *kind* of prompting needed, not whether it\'s necessary.',
               fix: 'Assume prompting will remain central to AI work. What evolves is the level of detail and scaffolding needed. With weaker models, you may need explicit step-by-step structure. With stronger models, a clear one-line instruction may suffice — but that directness is itself a prompt engineering choice.',
             },
             {
@@ -393,6 +393,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Google (2024). Gemini 1.5 announcement](https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/) — Google, Gemini 1.5 announcement (15 February 2024): 1M-token context in limited preview.',
             '[DeepSeek-AI (2025). "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning." arXiv:2501.12948](https://arxiv.org/abs/2501.12948) — DeepSeek-R1: reasoning through reinforcement learning (January 2025).',
             '[Fortune (2023). Report on new AI jobs, 9 March 2023](https://fortune.com/2023/03/09/new-ai-jobs-chatgpt-like-assistants/) — Fortune (9 March 2023): report on the salary range of the Anthropic prompt-engineer posting.',
+            '[Reuters (2023). "ChatGPT sets record for fastest-growing user base - analyst note", syndicated by The Star, 2 February 2023](https://www.thestar.com.my/tech/tech-news/2023/02/02/chatgpt-sets-record-for-fastest-growing-user-base---analyst-note) — UBS estimate of about 100 million monthly active users in January 2023; TikTok and Instagram comparison attributed to Sensor Tower.',
+            '[Tech Startups (2022). "ChatGPT crosses 1 million users five days after launch", 5 December 2022](https://techstartups.com/2022/12/05/chatgpt-crosses-1-million-users-five-days-launch/) — news report quoting Sam Altman\'s post of 5 December 2022: "ChatGPT launched on wednesday. today it crossed 1 million users!"',
           ],
         },
 
@@ -411,7 +413,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ogTitle: 'Wie sich Prompt Engineering entwickelte: Von GPT-3 zu Context Design (2020–2026)',
       twitterTitle: 'Wie Prompt Engineering in 6 Jahren von „besser formulieren“ zu Context Design wurde',
       publishDate: '2026-03-01',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       readTime: '10 Min. Lesezeit',
       educationalLevel: 'Beginner',
       audience: 'Wissensarbeiter und Entwickler, die die Geschichte von Prompt Engineering und KI-Techniken erlernen',
@@ -423,7 +425,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Chain-of-Thought (2022):** Wei et al. zeigten, dass die Prompt-Struktur schrittweises Schlussfolgern aktivieren kann; PaLM 540B stieg bei GSM8K von 17,9 % auf 56,9 %',
         '**ChatGPT (Nov. 2022):** Eine Million Nutzer in 5 Tagen (laut OpenAI-CEO Sam Altman); geschätzt 100 Millionen monatlich aktive Nutzer bis Januar 2023 (UBS, laut Reuters)',
         '**Arbeitsmarkt (2023):** Eine Anthropic-Stelle „Prompt Engineer and Librarian“ nannte 175.000–335.000 US-Dollar (Fortune, März 2023)',
-        '**GPT-4 & Frameworks (2023):** Bildeingaben und veröffentlichte Frameworks (CO-STAR, SPECS, RISEN) machten Prompting zu einer lehrbaren Disziplin',
+        '**GPT-4 (2023) & Frameworks:** Bildeingaben und veröffentlichte Frameworks (CO-STAR von GovTech Singapur, 2023; SPECS, RISEN) machten Prompting zu einer lehrbaren Disziplin',
         '**Context Design (2024–2026):** Open-Weights-LLMs, Kontextfenster ab 1 Mio. Token und Agenten-Orchestrierung verlagerten den Fokus vom Feinschliff einzelner Prompts auf Context Engineering auf Systemebene',
       ],
       toc: [
@@ -450,7 +452,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Ist Prompt Engineering tot? Entwicklung 2020–2026',
         description: 'Prompt Engineering ist nicht tot, sondern gewandelt: belegte Zeitleiste von GPT-3 Few-Shot (2020) über Chain-of-Thought und ChatGPT bis Context Design.',
         datePublished: '2026-03-01',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/de/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'de',
         keywords: ['Prompt-Engineering-Geschichte', 'GPT-3 Few-Shot-Lernen', 'Chain-of-Thought-Prompting', 'ChatGPT', 'Context Engineering', 'Prompt-Engineering-Zeitleiste', 'InstructGPT', 'RLHF'],
@@ -484,7 +486,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'Wer prägte als Erster den Begriff „Prompt Engineering"?', acceptedAnswer: { '@type': 'Answer', text: 'Der genaue Ursprung ist umstritten, und keine einzelne Person gilt als Erfinder des Begriffs. Forschungsarbeiten beschrieben promptbasierte Methoden bereits 2021, und der Ausdruck wurde 2022 und nach ChatGPT breiter verwendet. Der Wikipedia-Artikel zu Prompt Engineering gibt einen Überblick über die Geschichte.' } },
           { '@type': 'Question', name: 'Warum explodierte Prompt Engineering in der Popularität nach ChatGPT?', acceptedAnswer: { '@type': 'Answer', text: 'ChatGPT war eines der ersten Allzweck-KI-Modelle, die Millionen von Nicht-Forschern sofort, kostenlos, ohne Code schreiben zu müssen, nutzen konnten. Die Lücke zwischen einem gut gestalteten Prompt und einem vagen war sichtbar und sofort folgenreich – bessere Prompts lieferten spürbar bessere Ausgaben. Diese Rückkopplungsschleife, die von Millionen von Menschen gleichzeitig erlebt wurde, verwandelte Prompt Engineering von einem Forschungskonzept in eine Massenfähigkeit.' } },
           { '@type': 'Question', name: 'Wie beeinflussten Forschungsarbeiten reale Prompting-Techniken?', acceptedAnswer: { '@type': 'Answer', text: 'Die Übertragung war für KI-Forschung ungewöhnlich schnell. Chain-of-Thought-Prompting (Wei et al., 2022) entwickelte sich innerhalb von Monaten von einem akademischen Paper zu einer weit verbreiteten Praktikertechnik, teilweise weil es kein Tooling erforderte – nur eine Änderung in der Art, wie man den Prompt schrieb. Few-Shot-Prompting aus dem GPT-3-Paper (Brown et al., 2020) war sofort von jedem mit API-Zugang adaptierbar. Die Zugänglichkeit der Techniken beschleunigte ihre Verbreitung.' } },
-          { '@type': 'Question', name: 'Wird Prompt Engineering weniger wichtig, wenn Modelle sich verbessern?', acceptedAnswer: { '@type': 'Answer', text: 'Nein – leistungsfähigere Modelle reagieren besser auf gut strukturierte Prompts, nicht weniger. Der Gewinn aus gutem Prompting steigt, wenn das Modell präzisen Anweisungen besser folgen kann. Was sich verändert hat, ist das Niveau des Prompt Engineerings, das für einfache Aufgaben erforderlich ist: Gesprächsfragen erfordern jetzt weniger Ausarbeitung als 2021. Aber für komplexe, produktionsreife Ausgaben bleibt strukturiertes Prompting der zuverlässigste verfügbare Hebel.' } },
+          { '@type': 'Question', name: 'Wird Prompt Engineering weniger wichtig, wenn Modelle sich verbessern?', acceptedAnswer: { '@type': 'Answer', text: 'Nein – leistungsfähigere Modelle reagieren besser auf gut strukturierte Prompts, nicht weniger. Der Gewinn aus gutem Prompting steigt, wenn das Modell präzisen Anweisungen besser folgen kann. Was sich verändert hat, ist das Niveau des Prompt Engineerings, das für einfache Aufgaben erforderlich ist: Gesprächsfragen erfordern jetzt weniger Ausarbeitung als 2021. Aber für komplexe, produktionsreife Ausgaben ist strukturiertes Prompting in der Regel einer der wirksamsten Hebel, neben Retrieval, Modellwahl und Fine-Tuning.' } },
           { '@type': 'Question', name: 'Was ist der Unterschied zwischen Prompt Engineering und Kontext-Engineering?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt Engineering bezieht sich typischerweise auf das Gestalten der Texteingabe für ein Modell, um seine Ausgabe zu verbessern. Kontext-Engineering ist ein breiteres, neueres Konzept, das sich auf das Orchestrieren von allem im Kontextfenster des Modells bezieht: den System-Prompt, abgerufene Dokumente, Gesprächsverlauf, Werkzeugausgaben und Benutzereingaben – alle bewusst zusammengestellt. Kontext-Engineering behandelt den Prompt als eine Komponente in einem gestalteten System, nicht als eigenständiges Artefakt.' } },
           { '@type': 'Question', name: 'Werden automatisierte Werkzeuge die Notwendigkeit eliminieren, Prompt Engineering zu verstehen?', acceptedAnswer: { '@type': 'Answer', text: 'Automatisierte Werkzeuge wie DSPy können Prompt-Formulierungen innerhalb definierter Ziele optimieren, erfordern jedoch, dass ein Mensch festlegt, was das Ziel ist, welche Einschränkungen gelten und wie Erfolg bewertet wird. Das Verständnis von Prompt-Engineering-Prinzipien bleibt notwendig, um diese Werkzeuge effektiv einzusetzen – und um zu diagnostizieren, wenn sie das falsche Ergebnis liefern. Automatisierung beseitigt einen Teil der manuellen Iteration; sie beseitigt nicht die Notwendigkeit strukturierten Denkens.' } },
           { '@type': 'Question', name: 'Ist Prompt Engineering im Jahr 2026 tot?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Die Disziplin hat sich verschoben, nicht aufgelöst. Je leistungsfähiger die Modelle werden, desto mehr verlagert sich die Arbeit von Syntax-Tricks und Formatierungskniffen zum Context Design – Eingaben strukturieren, Retrieval steuern und Tool-Ausgaben zusammenführen. Die Berufsbezeichnung „Prompt Engineer“ wird enger, doch die zugrunde liegende Fähigkeit steckt in jeder Rolle, die KI nutzt: Entwickler, Analysten, Marketer, Forschende. Klare Aufgabenstellung, passender Kontext und ein festgelegtes Ausgabeformat bestimmen weiterhin, wie nützlich die Antwort eines Modells ist.' } },
@@ -508,7 +510,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: 5, name: 'Start von ChatGPT (2022 (Nov.))', description: 'Brachte Prompting zu einem Massenpublikum; Millionen begannen binnen Tagen zu experimentieren' },
           { '@type': 'ListItem', position: 6, name: 'Stellen für „Prompt Engineers“ erregen Aufmerksamkeit; eine Anthropic-Stelle nennt 175.000–335.000 US-Dollar (2023 (Q1))', description: 'Machte Prompt Engineering als möglichen Beruf sichtbar, wobei die Rolle viel diskutiert wurde' },
           { '@type': 'ListItem', position: 7, name: 'GPT-4 mit Bildeingabe (2023 (März))', description: 'Erweiterte Prompting über Text hinaus auf Bilder; 128.000 Token Kontext folgten mit GPT-4 Turbo (Nov. 2023)' },
-          { '@type': 'ListItem', position: 8, name: 'Frameworks wie CRAFT, CO-STAR, SPECS, RISEN und TRACE; offizielle Leitfäden von OpenAI und Google (2023)', description: 'Machte aus individuellem Handwerk wiederverwendbare, lehrbare Vorlagen' },
+          { '@type': 'ListItem', position: 8, name: 'Frameworks wie CO-STAR (GovTech Singapur, 2023) und weitere veröffentlichte Vorlagen (CRAFT, SPECS, RISEN, TRACE); offizielle Leitfäden von OpenAI und Google', description: 'Machte aus individuellem Handwerk wiederverwendbare, lehrbare Vorlagen' },
           { '@type': 'ListItem', position: 9, name: 'APE (Zhou et al.) und DSPy (Khattab et al.): von LLMs optimierte Prompts (2022–2023)', description: 'Zeigte, dass LLMs Prompts schreiben und abstimmen können; automatische Prompt-Optimierung wurde praktikabel' },
           { '@type': 'ListItem', position: 10, name: 'Llama 3 (Apr.) und Gemini 1.5 Pro mit 1-Mio.-Token-Kontext in der Vorschau (Feb.) (2024)', description: 'Open-Weights-Modelle für den privaten Betrieb und sehr lange Kontexte verlagerten den Fokus auf Context Engineering' },
           { '@type': 'ListItem', position: 11, name: 'Reasoning-Modelle: OpenAI o1 (Sep. 2024), DeepSeek-R1 (Jan. 2025), Claude 3.7 Sonnet mit Extended Thinking (Feb. 2025) (2024–2025)', description: 'Die Modelle denken intern Schritt für Schritt, daher ist explizites Chain-of-Thought-Prompting bei ihnen weniger wichtig' },
@@ -560,7 +562,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Die moderne Geschichte des Prompt Engineerings beginnt faktisch mit GPT-3.** Im Mai 2020 veröffentlichten OpenAI-Forschende „[Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)“ (Brown et al.), das GPT-3 beschreibt, ein Modell mit 175 Milliarden Parametern. Die Arbeit zeigte, dass einige Beispiele der gewünschten Aufgabe direkt im Prompt – ohne jede Aktualisierung der Modellgewichte – die Leistung bei vielen Folgeaufgaben verbesserten.',
             'Das war der Keim des Prompt Engineerings als Disziplin. Forschende und Entwickler erkannten, dass dasselbe Modell allein durch die Formulierung des Prompts zum Übersetzer, Zusammenfasser, Code-Generator oder Frage-Antwort-System werden konnte. Das Modell musste nicht neu trainiert werden – es brauchte einen besseren Prompt. Diese Erkenntnis veränderte, was ein Prompt ist: nicht nur eine Eingabe, sondern ein Gestaltungsartefakt.',
             'Brown et al. berichteten, dass die Few-Shot-Leistung im Allgemeinen mit der Modellgröße stieg und GPT-3 mit 175 Milliarden Parametern insgesamt die stärkste Variante war. Das verband Skalierung und promptbasiertes Lernen und machte die Qualität des Prompts zu einer Variable, die auch Praktiker – nicht nur Forschende – steuern konnten.',
-            'Eine praktische Anleitung zu der Technik, die GPT-3 bekannt machte, finden Sie unter [Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot).',
+            'Eine praktische Anleitung zu der Technik, die GPT-3 bekannt machte, finden Sie unter [Zero-Shot vs. Few-Shot Prompting](/de/prompt-engineering/zero-shot-vs-few-shot).',
           ],
         },
 
@@ -579,7 +581,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Die Einführung des Chain-of-Thought-Promptings (CoT) im Jahr 2022 war eine der bedeutendsten technischen Entwicklungen in der kurzen Geschichte der Disziplin.** Wei et al. (Google) veröffentlichten „[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)“ und zeigten, dass Beispiele mit Zwischenschritten im Prompt die Leistung bei Arithmetik-, Alltagslogik- und symbolischen Aufgaben verbesserten. In einem Spitzenergebnis stieg die Genauigkeit von PaLM 540B auf dem GSM8K-Benchmark für Grundschulmathematik durch Chain-of-Thought-Prompting von 17,9 % auf 56,9 % – ein Gewinn allein durch den geänderten Prompt, ohne zusätzliches Training. Die Folgerung war weitreichend: Die Struktur des Prompts konnte anderes Denkverhalten aktivieren, nicht nur andere Fakten.',
             'Verwandte Techniken folgten rasch. Zhou et al. führten das [Least-to-Most-Prompting](https://arxiv.org/abs/2205.10625) ein, das komplexe Probleme in eine Folge einfacherer Teilprobleme zerlegt, die nacheinander gelöst werden. Diese Ansätze machten Prompt Engineering von einer Formatierungsübung zu einem Werkzeug, mit dem sich strukturiertes Schlussfolgern aus Modellen herauskitzeln ließ, die nicht explizit darauf trainiert waren. Prompting wurde zum Gerüst für Kognition.',
-            'Den vollständigen Technikleitfaden finden Sie unter [Chain-of-Thought Prompting: Lassen Sie die KI ihr Denken zeigen](/prompt-engineering/chain-of-thought-prompting) und [Prompt Chaining: Komplexe Aufgaben in Fokussierte Schritte Zerlegen](/prompt-engineering/prompt-chaining).',
+            'Den vollständigen Technikleitfaden finden Sie unter [Chain-of-Thought Prompting: Lassen Sie die KI ihr Denken zeigen](/de/prompt-engineering/chain-of-thought-prompting) und [Prompt Chaining: Komplexe Aufgaben in Fokussierte Schritte Zerlegen](/de/prompt-engineering/prompt-chaining).',
           ],
         },
 
@@ -606,7 +608,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'OpenAI kündigte GPT-4 im März 2023 mit Bildeingaben zusätzlich zu Text an (zunächst als Forschungsvorschau). Das öffnete Prompt Engineering für visuelle Aufgaben wie Bilder beschreiben, Diagramme vergleichen und Grafiken kommentieren; größere Kontextfenster (128.000 Token mit GPT-4 Turbo im November 2023) folgten. Googles Gemini (Dezember 2023) und Anthropics Claude-3-Modelle mit Bildverständnis (März 2024) brachten multimodale Optionen anderer Anbieter.',
             'In dieser Zeit wurden auch Best Practices formalisiert. OpenAI veröffentlichte seinen [offiziellen Prompt-Engineering-Leitfaden](https://developers.openai.com/api/docs/guides/prompt-engineering). Google Cloud veröffentlichte einen eigenen [Leitfaden zum Prompt Engineering](https://cloud.google.com/discover/what-is-prompt-engineering). Unabhängige Autoren und Teams stellten Frameworks wie CRAFT, CO-STAR, SPECS, RISEN und TRACE vor, die wiederholbare Vorlagen für den Prompt-Aufbau lieferten und das Ausprobieren verringerten. Namen, Urheber und Veröffentlichungsdaten dieser Frameworks unterscheiden sich je nach Quelle; keines ist ein offizieller Standard.',
-            'Diese Frameworks markierten die Reifung des Prompt Engineerings von einer persönlichen Fähigkeit zu einer lehr- und teilbaren Praxis. Hilfe bei der Auswahl finden Sie unter [Welches Prompt-Framework ist das richtige für Sie? (2026)](/prompt-engineering/which-prompt-framework-should-you-use), die multimodale Seite unter [Jenseits von Text: Wie man mit Bildern promptet](/prompt-engineering/beyond-text-how-to-prompt-with-images).',
+            'Diese Frameworks markierten die Reifung des Prompt Engineerings von einer persönlichen Fähigkeit zu einer lehr- und teilbaren Praxis. Hilfe bei der Auswahl finden Sie unter [Welches Prompt-Framework ist das richtige für Sie? (2026)](/de/prompt-engineering/which-prompt-framework-should-you-use), die multimodale Seite unter [Jenseits von Text: Wie man mit Bildern promptet](/de/prompt-engineering/beyond-text-how-to-prompt-with-images).',
           ],
         },
 
@@ -616,7 +618,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'Eine auffällige Entwicklung um 2023 war die Forschung, die zeigte, dass LLMs Prompts ebenso gut optimieren können wie Menschen. Zhou et al. stellten im November 2022 „[Large Language Models Are Human-Level Prompt Engineers](https://arxiv.org/abs/2211.01910)“ (APE) vor: Ein LLM erzeugte und bewertete Kandidaten-Anweisungen und erreichte oder übertraf von Menschen geschriebene Anweisungen bei 19 von 24 getesteten Aufgaben. Das DSPy-Framework von Stanford-Forschenden ([Khattab et al., Oktober 2023](https://arxiv.org/abs/2310.03714)) ging weiter: Entwickler beschreiben, was ein Prompt leisten soll, und die Formulierung wird automatisch kompiliert.',
             'Gleichzeitig wurde Retrieval-Augmented Generation (RAG) – 2020 von [Lewis et al.](https://arxiv.org/abs/2005.11401) bei Facebook AI Research (heute Meta) vorgestellt – zu einem zentralen Muster produktiver KI-Systeme. RAG fügte abgerufene Dokumente direkt in den Prompt-Kontext ein und verankerte Antworten in echten, aktuellen Quellen, statt alle nötigen Fakten im Prompt zu verlangen. Dadurch verschob sich der Schwerpunkt von „Wie bringe ich dem Modell dieses Wissen bei?“ zu „Wie strukturiere ich den Kontext, damit das Modell ihn richtig nutzt?“',
-            'Zu den wichtigsten Techniken dieser Zeit siehe [RAG erklärt: KI-Antworten in echten Daten verankern (2026)](/prompt-engineering/rag-explained) und [Self-Consistency Prompting: Mehrfache Antworten generieren, Konsens auswählen](/prompt-engineering/self-consistency-prompting).',
+            'Zu den wichtigsten Techniken dieser Zeit siehe [RAG erklärt: KI-Antworten in echten Daten verankern (2026)](/de/prompt-engineering/rag-explained) und [Self-Consistency Prompting: Mehrfache Antworten generieren, Konsens auswählen](/de/prompt-engineering/self-consistency-prompting).',
           ],
         },
 
@@ -660,7 +662,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Jahr': '2022 (Nov.)', 'Meilenstein': 'Start von ChatGPT', 'Warum es wichtig ist': 'Brachte Prompting zu einem Massenpublikum; Millionen begannen binnen Tagen zu experimentieren' },
             { 'Jahr': '2023 (Q1)', 'Meilenstein': 'Stellen für „Prompt Engineers“ erregen Aufmerksamkeit; eine Anthropic-Stelle nennt 175.000–335.000 US-Dollar', 'Warum es wichtig ist': 'Machte Prompt Engineering als möglichen Beruf sichtbar, wobei die Rolle viel diskutiert wurde' },
             { 'Jahr': '2023 (März)', 'Meilenstein': 'GPT-4 mit Bildeingabe', 'Warum es wichtig ist': 'Erweiterte Prompting über Text hinaus auf Bilder; 128.000 Token Kontext folgten mit GPT-4 Turbo (Nov. 2023)' },
-            { 'Jahr': '2023', 'Meilenstein': 'Frameworks wie CRAFT, CO-STAR, SPECS, RISEN und TRACE; offizielle Leitfäden von OpenAI und Google', 'Warum es wichtig ist': 'Machte aus individuellem Handwerk wiederverwendbare, lehrbare Vorlagen' },
+            { 'Jahr': '2023', 'Meilenstein': 'Frameworks wie CO-STAR (GovTech Singapur, 2023) und weitere veröffentlichte Vorlagen (CRAFT, SPECS, RISEN, TRACE); offizielle Leitfäden von OpenAI und Google', 'Warum es wichtig ist': 'Machte aus individuellem Handwerk wiederverwendbare, lehrbare Vorlagen' },
             { 'Jahr': '2022–2023', 'Meilenstein': 'APE (Zhou et al.) und DSPy (Khattab et al.): von LLMs optimierte Prompts', 'Warum es wichtig ist': 'Zeigte, dass LLMs Prompts schreiben und abstimmen können; automatische Prompt-Optimierung wurde praktikabel' },
             { 'Jahr': '2024', 'Meilenstein': 'Llama 3 (Apr.) und Gemini 1.5 Pro mit 1-Mio.-Token-Kontext in der Vorschau (Feb.)', 'Warum es wichtig ist': 'Open-Weights-Modelle für den privaten Betrieb und sehr lange Kontexte verlagerten den Fokus auf Context Engineering' },
             { 'Jahr': '2024–2025', 'Meilenstein': 'Reasoning-Modelle: OpenAI o1 (Sep. 2024), DeepSeek-R1 (Jan. 2025), Claude 3.7 Sonnet mit Extended Thinking (Feb. 2025)', 'Warum es wichtig ist': 'Die Modelle denken intern Schritt für Schritt, daher ist explizites Chain-of-Thought-Prompting bei ihnen weniger wichtig' },
@@ -677,11 +679,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Die RAG- und Kontext-Design-Ära gab uns das Verständnis, dass Prompts nicht isoliert existieren – sie werden mit abgerufenen Daten, Systemanweisungen und Werkzeugausgaben zusammengestellt, um einen vollständigen Kontext zu bilden. Und die automatisierte Prompting-Ära erinnerte uns daran, dass die Prinzipien guten Promptings messbar sind: besser strukturierte Prompts liefern bessere Ausgaben auf eine Weise, die systematisch bewertet und optimiert werden kann.',
           ],
           items: [
-            'Denktechniken aus 2022 → [Chain-of-Thought Prompting: Lassen Sie die KI ihr Denken zeigen](/prompt-engineering/chain-of-thought-prompting) und [Tree of Thought & ReAct: Fortgeschrittene Reasoning-Techniken für komplexe Probleme](/prompt-engineering/tree-of-thought-and-react)',
-            'Framework-Entwicklung aus 2023 → [Welches Prompt-Framework ist das richtige für Sie? (2026)](/prompt-engineering/which-prompt-framework-should-you-use)',
-            'Wachstum des Kontextfensters → [Kontextfenster erklärt: Warum KI vergisst (und was Sie tun können)](/prompt-engineering/context-windows-explained-why-ai-forgets)',
-            'Token-Ökonomie über Modellgenerationen hinweg → [Token, Kosten & Limits: Die Ökonomie des KI-Prompting](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
-            'RAG als Ergänzung zum reinen Prompting → [RAG erklärt: KI-Antworten in echten Daten verankern (2026)](/prompt-engineering/rag-explained)',
+            'Denktechniken aus 2022 → [Chain-of-Thought Prompting: Lassen Sie die KI ihr Denken zeigen](/de/prompt-engineering/chain-of-thought-prompting) und [Tree of Thought & ReAct: Fortgeschrittene Reasoning-Techniken für komplexe Probleme](/de/prompt-engineering/tree-of-thought-and-react)',
+            'Framework-Entwicklung aus 2023 → [Welches Prompt-Framework ist das richtige für Sie? (2026)](/de/prompt-engineering/which-prompt-framework-should-you-use)',
+            'Wachstum des Kontextfensters → [Kontextfenster erklärt: Warum KI vergisst (und was Sie tun können)](/de/prompt-engineering/context-windows-explained-why-ai-forgets)',
+            'Token-Ökonomie über Modellgenerationen hinweg → [Token, Kosten & Limits: Die Ökonomie des KI-Prompting](/de/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
+            'RAG als Ergänzung zum reinen Prompting → [RAG erklärt: KI-Antworten in echten Daten verankern (2026)](/de/prompt-engineering/rag-explained)',
           ],
         },
 
@@ -707,7 +709,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Wird Prompt Engineering weniger wichtig, wenn Modelle sich verbessern?',
-              a: 'Nein – leistungsfähigere Modelle reagieren besser auf gut strukturierte Prompts, nicht weniger. Der Gewinn aus gutem Prompting steigt, wenn das Modell präzisen Anweisungen besser folgen kann. Was sich verändert hat, ist das Niveau des Prompt Engineerings, das für einfache Aufgaben erforderlich ist: Gesprächsfragen erfordern jetzt weniger Ausarbeitung als 2021. Aber für komplexe, produktionsreife Ausgaben bleibt strukturiertes Prompting der zuverlässigste verfügbare Hebel.',
+              a: 'Nein – leistungsfähigere Modelle reagieren besser auf gut strukturierte Prompts, nicht weniger. Der Gewinn aus gutem Prompting steigt, wenn das Modell präzisen Anweisungen besser folgen kann. Was sich verändert hat, ist das Niveau des Prompt Engineerings, das für einfache Aufgaben erforderlich ist: Gesprächsfragen erfordern jetzt weniger Ausarbeitung als 2021. Aber für komplexe, produktionsreife Ausgaben ist strukturiertes Prompting in der Regel einer der wirksamsten Hebel, neben Retrieval, Modellwahl und Fine-Tuning.',
             },
             {
               q: 'Was ist der Unterschied zwischen Prompt Engineering und Kontext-Engineering?',
@@ -743,7 +745,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Bessere Modelle machen Prompt Engineering überflüssig.',
-              problem: 'Ein leistungsfähigeres Modell ist wie ein fähigerer Mitarbeiter – es reagiert *besser* auf klare Anweisungen, nicht schlechter. Der Nutzen guter Prompts wächst mit der Modellfähigkeit. Es ändert sich die *Art* des nötigen Promptings, nicht ob es nötig ist.',
+              problem: 'Ein leistungsfähigeres Modell ist wie ein fähigerer Mitarbeiter – es reagiert *besser* auf klare Anweisungen, nicht schlechter. Der Nutzen guter Prompts kann mit der Modellfähigkeit wachsen. Es ändert sich die *Art* des nötigen Promptings, nicht ob es nötig ist.',
               fix: 'Gehen Sie davon aus, dass Prompting für die KI-Arbeit zentral bleibt. Es ändert sich, wie viel Detail und Gerüst nötig sind. Bei schwächeren Modellen braucht es womöglich explizite Schrittstrukturen, bei stärkeren genügt eine klare Zeile – doch auch diese Direktheit ist eine Prompt-Engineering-Entscheidung.',
             },
             {
@@ -758,11 +760,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: 'Weiterführende Lektüre',
           items: [
-            { title: 'Chain-of-Thought Prompting: Lassen Sie die KI ihr Denken zeigen', url: '/prompt-engineering/chain-of-thought-prompting' },
-            { title: 'Zero-Shot vs. Few-Shot Prompting', url: '/prompt-engineering/zero-shot-vs-few-shot' },
-            { title: 'RAG erklärt: KI-Antworten in echten Daten verankern (2026)', url: '/prompt-engineering/rag-explained' },
-            { title: 'Kontextfenster erklärt: Warum KI vergisst (und was Sie tun können)', url: '/prompt-engineering/context-windows-explained-why-ai-forgets' },
-            { title: 'Token, Kosten & Limits: Die Ökonomie des KI-Prompting', url: '/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
+            { title: 'Chain-of-Thought Prompting: Lassen Sie die KI ihr Denken zeigen', url: '/de/prompt-engineering/chain-of-thought-prompting' },
+            { title: 'Zero-Shot vs. Few-Shot Prompting', url: '/de/prompt-engineering/zero-shot-vs-few-shot' },
+            { title: 'RAG erklärt: KI-Antworten in echten Daten verankern (2026)', url: '/de/prompt-engineering/rag-explained' },
+            { title: 'Kontextfenster erklärt: Warum KI vergisst (und was Sie tun können)', url: '/de/prompt-engineering/context-windows-explained-why-ai-forgets' },
+            { title: 'Token, Kosten & Limits: Die Ökonomie des KI-Prompting', url: '/de/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
           ],
         },
 
@@ -784,6 +786,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Google (2024). Gemini 1.5 announcement](https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/) — Google, Ankündigung von Gemini 1.5 (15. Februar 2024): 1 Mio. Token Kontext in begrenzter Vorschau.',
             '[DeepSeek-AI (2025). "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning." arXiv:2501.12948](https://arxiv.org/abs/2501.12948) — DeepSeek-R1: Reasoning durch Reinforcement Learning (Januar 2025).',
             '[Fortune (2023). Report on new AI jobs, 9 March 2023](https://fortune.com/2023/03/09/new-ai-jobs-chatgpt-like-assistants/) — Fortune (9. März 2023): Bericht über die Gehaltsspanne der Anthropic-Stelle für Prompt Engineers.',
+            '[Reuters (2023). "ChatGPT sets record for fastest-growing user base - analyst note", syndicated by The Star, 2 February 2023](https://www.thestar.com.my/tech/tech-news/2023/02/02/chatgpt-sets-record-for-fastest-growing-user-base---analyst-note) — UBS-Schätzung von rund 100 Millionen monatlich aktiven Nutzern im Januar 2023; der Vergleich mit TikTok und Instagram wird Sensor Tower zugeschrieben.',
+            '[Tech Startups (2022). "ChatGPT crosses 1 million users five days after launch", 5 December 2022](https://techstartups.com/2022/12/05/chatgpt-crosses-1-million-users-five-days-launch/) — Nachrichtenbericht, der den Beitrag von Sam Altman vom 5. Dezember 2022 zitiert: „ChatGPT launched on wednesday. today it crossed 1 million users!“',
           ],
         },
 
@@ -802,7 +806,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ogTitle: 'Cómo evolucionó el prompt engineering: de GPT-3 al context design (2020–2026)',
       twitterTitle: 'Cómo el prompt engineering pasó de «escribe mejor el prompt» al context design en 6 años',
       publishDate: '2026-03-01',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       readTime: '10 min de lectura',
       educationalLevel: 'Beginner',
       audience: 'Profesionales del conocimiento y desarrolladores que quieren conocer la historia del prompt engineering y de las técnicas de IA',
@@ -814,7 +818,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Chain-of-Thought (2022):** Wei et al. mostraron que la estructura del prompt puede activar el razonamiento paso a paso; PaLM 540B pasó del 17.9% al 56.9% en GSM8K',
         '**ChatGPT (nov. 2022):** superó 1 millón de usuarios en 5 días (según Sam Altman, CEO de OpenAI); unos 100 millones de usuarios activos mensuales estimados en enero de 2023 (UBS, vía Reuters)',
         '**Mercado laboral (2023):** una oferta de Anthropic para «Prompt Engineer and Librarian» anunciaba entre 175 000 y 335 000 USD (Fortune, marzo de 2023)',
-        '**GPT-4 y frameworks (2023):** la entrada de imágenes y los frameworks publicados (CO-STAR, SPECS, RISEN) convirtieron el prompting en una disciplina enseñable',
+        '**GPT-4 (2023) y frameworks:** la entrada de imágenes y los frameworks publicados (CO-STAR de GovTech Singapur, 2023; SPECS, RISEN) convirtieron el prompting en una disciplina enseñable',
         '**Context design (2024–2026):** LLM de pesos abiertos, ventanas de contexto de más de 1 M de tokens y orquestación de agentes desplazaron el foco del ajuste de prompts a la ingeniería de contexto a nivel de sistema',
       ],
       toc: [
@@ -841,7 +845,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '¿Ha muerto el prompt engineering? Evolución 2020–2026',
         description: 'El prompt engineering no ha muerto, ha cambiado: cronología con fuentes del few-shot de GPT-3 (2020) al chain-of-thought, ChatGPT y el context design.',
         datePublished: '2026-03-01',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/es/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'es',
         keywords: ['historia del prompt engineering', 'GPT-3 few-shot learning', 'chain-of-thought prompting', 'ChatGPT', 'context engineering', 'línea de tiempo del prompt engineering', 'InstructGPT', 'RLHF'],
@@ -875,7 +879,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: '¿Quién acuñó por primera vez el término "prompt engineering"?', acceptedAnswer: { '@type': 'Answer', text: 'El origen exacto se discute y no se atribuye el término a una sola persona. Los artículos de investigación ya describían métodos basados en prompts en 2021, y la expresión se generalizó durante 2022 y tras ChatGPT. El artículo de Wikipedia sobre prompt engineering ofrece un panorama de la historia.' } },
           { '@type': 'Question', name: '¿Por qué el prompt engineering explotó en popularidad después de ChatGPT?', acceptedAnswer: { '@type': 'Answer', text: 'ChatGPT fue uno de los primeros modelos de IA de propósito general que millones de no investigadores podían usar de inmediato, gratis, sin escribir código. La brecha entre un prompt bien elaborado y uno vago era visible e inmediatamente relevante — los mejores prompts producían outputs usablemente mejores. Ese bucle de retroalimentación, experimentado simultáneamente por millones de personas, convirtió el prompt engineering de un concepto de investigación en una habilidad masiva.' } },
           { '@type': 'Question', name: '¿Cómo influyeron los artículos de investigación en las técnicas de prompting del mundo real?', acceptedAnswer: { '@type': 'Answer', text: 'La transferencia fue inusualmente rápida para la investigación en IA. El prompting Chain-of-Thought (Wei et al., 2022) pasó de artículo académico a técnica de profesionales ampliamente usada en meses, en parte porque no requería herramientas — solo un cambio en cómo se escribía el prompt. El few-shot prompting del artículo de GPT-3 (Brown et al., 2020) era inmediatamente adoptable por cualquier persona con acceso a la API.' } },
-          { '@type': 'Question', name: '¿El prompt engineering se está volviendo menos importante a medida que mejoran los modelos?', acceptedAnswer: { '@type': 'Answer', text: 'No — los modelos más capaces responden mejor a los prompts bien estructurados, no peor. Las ganancias del buen prompting aumentan a medida que el modelo se vuelve más capaz de seguir instrucciones precisas. Lo que ha cambiado es el nivel de prompt engineering requerido para tareas simples. Pero para outputs complejos de nivel de producción, el prompting estructurado sigue siendo la palanca más fiable disponible.' } },
+          { '@type': 'Question', name: '¿El prompt engineering se está volviendo menos importante a medida que mejoran los modelos?', acceptedAnswer: { '@type': 'Answer', text: 'No — los modelos más capaces responden mejor a los prompts bien estructurados, no peor. Las ganancias del buen prompting aumentan a medida que el modelo se vuelve más capaz de seguir instrucciones precisas. Lo que ha cambiado es el nivel de prompt engineering requerido para tareas simples. Pero para outputs complejos de nivel de producción, el prompting estructurado suele ser una de las palancas más eficaces, junto con la recuperación, la elección del modelo y el fine-tuning.' } },
           { '@type': 'Question', name: '¿Cuál es la diferencia entre prompt engineering y context engineering?', acceptedAnswer: { '@type': 'Answer', text: 'El prompt engineering se refiere típicamente a diseñar el input de texto para un modelo para mejorar su output. El context engineering es un concepto más amplio y reciente que se refiere a orquestar todo lo que hay en el context window del modelo: el system prompt, los documentos recuperados, el historial de conversación, los outputs de las herramientas y el input del usuario — todos compuestos deliberadamente. El context engineering trata el prompt como un componente en un sistema diseñado, no como un artefacto independiente.' } },
           { '@type': 'Question', name: '¿Las herramientas automatizadas reemplazarán la necesidad de entender el prompt engineering?', acceptedAnswer: { '@type': 'Answer', text: 'Las herramientas automatizadas como DSPy pueden optimizar la redacción de prompts dentro de objetivos definidos, pero requieren que un humano especifique cuál es el objetivo, qué restricciones aplican y cómo evaluar el éxito. Entender los principios del prompt engineering sigue siendo necesario para usar estas herramientas de forma efectiva. La automatización elimina algo de la iteración manual; no elimina la necesidad de pensamiento estructurado.' } },
           { '@type': 'Question', name: '¿Está muerto el prompt engineering en 2026?', acceptedAnswer: { '@type': 'Answer', text: 'No. La disciplina se ha desplazado, no ha desaparecido. A medida que los modelos mejoran, el trabajo pasa de los trucos de sintaxis y formato al context design: estructurar entradas, gestionar la recuperación y componer salidas de herramientas. El título «Prompt Engineer» se estrecha, pero la habilidad de fondo está en todo rol que usa IA: desarrollo, análisis, marketing, investigación. Plantear bien la tarea, dar el contexto relevante y especificar el formato de salida siguen determinando cuán útil es la respuesta del modelo.' } },
@@ -899,7 +903,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: 5, name: 'Lanzamiento de ChatGPT (2022 (nov.))', description: 'Llevó el prompting a un público masivo; millones empezaron a experimentar en pocos días' },
           { '@type': 'ListItem', position: 6, name: 'Las ofertas de «prompt engineer» atraen atención; una oferta de Anthropic anuncia 175 000–335 000 USD (2023 (T1))', description: 'Hizo visible el prompt engineering como posible profesión, aunque el rol fue muy debatido' },
           { '@type': 'ListItem', position: 7, name: 'Lanzamiento de GPT-4 con entrada de imágenes (2023 (mar.))', description: 'Amplió el prompting más allá del texto a las imágenes; el contexto de 128 000 tokens llegó con GPT-4 Turbo (nov. 2023)' },
-          { '@type': 'ListItem', position: 8, name: 'Frameworks como CRAFT, CO-STAR, SPECS, RISEN y TRACE; guías oficiales de OpenAI y Google (2023)', description: 'Convirtió el oficio individual en plantillas reutilizables y enseñables' },
+          { '@type': 'ListItem', position: 8, name: 'Frameworks como CO-STAR (GovTech Singapur, 2023) y otras plantillas publicadas (CRAFT, SPECS, RISEN, TRACE); guías oficiales de OpenAI y Google', description: 'Convirtió el oficio individual en plantillas reutilizables y enseñables' },
           { '@type': 'ListItem', position: 9, name: 'APE (Zhou et al.) y DSPy (Khattab et al.): prompts optimizados por LLM (2022–2023)', description: 'Mostró que los LLM pueden escribir y ajustar prompts, haciendo práctica la optimización automática' },
           { '@type': 'ListItem', position: 10, name: 'Llama 3 (abr.) y Gemini 1.5 Pro con vista previa de contexto de 1 M de tokens (feb.) (2024)', description: 'Los modelos de pesos abiertos para despliegue privado y los contextos muy largos desplazaron el foco a la ingeniería de contexto' },
           { '@type': 'ListItem', position: 11, name: 'Modelos de razonamiento: OpenAI o1 (sep. 2024), DeepSeek-R1 (ene. 2025), Claude 3.7 Sonnet con extended thinking (feb. 2025) (2024–2025)', description: 'Los modelos razonan paso a paso internamente, por lo que el chain-of-thought explícito importa menos en ellos' },
@@ -951,7 +955,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**La historia moderna del prompt engineering empieza, en la práctica, con GPT-3.** En mayo de 2020, investigadores de OpenAI publicaron «[Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)» (Brown et al.), que describe GPT-3, un modelo de 175 000 millones de parámetros. El artículo mostró que incluir unos pocos ejemplos de la tarea directamente en el prompt, sin actualizar los pesos del modelo, mejoraba el rendimiento en muchas tareas posteriores.',
             'Esa fue la semilla del prompt engineering como disciplina. Investigadores y desarrolladores comprendieron que el mismo modelo podía convertirse en traductor, resumidor, generador de código o sistema de preguntas y respuestas con solo cambiar cómo se escribía el prompt. El modelo no necesitaba reentrenarse: necesitaba un mejor prompt. Esa idea cambió el concepto de prompt: no solo una entrada, sino un artefacto de diseño.',
             'Brown et al. observaron que el rendimiento few-shot mejoraba, en general, al crecer el tamaño del modelo, y que GPT-3 de 175B parámetros era la variante más sólida en conjunto. Eso vinculó la escala con el aprendizaje basado en prompts y convirtió la calidad del prompt en una variable que los profesionales, y no solo los investigadores, podían controlar.',
-            'Consulta [Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot) para una guía práctica de la técnica que popularizó GPT-3.',
+            'Consulta [Zero-Shot vs. Few-Shot Prompting](/es/prompt-engineering/zero-shot-vs-few-shot) para una guía práctica de la técnica que popularizó GPT-3.',
           ],
         },
 
@@ -970,7 +974,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**La aparición del prompting chain-of-thought (CoT) en 2022 fue uno de los avances técnicos más importantes en la corta historia de la disciplina.** Wei et al. (Google) publicaron «[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)» y mostraron que dar al modelo ejemplos resueltos con pasos intermedios mejoraba el rendimiento en tareas aritméticas, de sentido común y de razonamiento simbólico. En un resultado destacado, el prompting chain-of-thought elevó la precisión de PaLM 540B en GSM8K, un benchmark de matemáticas de primaria, del 17.9% al 56.9%, una mejora lograda solo cambiando el prompt, sin entrenamiento adicional. La implicación era profunda: la estructura del prompt podía activar un comportamiento de razonamiento distinto, no solo hechos distintos.',
             'Pronto surgieron técnicas relacionadas. Zhou et al. introdujeron el [least-to-most prompting](https://arxiv.org/abs/2205.10625), que descompone problemas complejos en una secuencia de subproblemas más simples resueltos en orden. Estos enfoques convirtieron el prompt engineering de un ejercicio de formato en una herramienta para obtener razonamiento estructurado de modelos no entrenados explícitamente para ello. El prompting se volvió un andamio para la cognición.',
-            'Para la guía completa de la técnica, consulta [Chain-of-Thought Prompting: Haz que la IA muestre su razonamiento](/prompt-engineering/chain-of-thought-prompting) y [Prompt chaining: cómo dividir tareas grandes en pasos ganadores](/prompt-engineering/prompt-chaining).',
+            'Para la guía completa de la técnica, consulta [Chain-of-Thought Prompting: Haz que la IA muestre su razonamiento](/es/prompt-engineering/chain-of-thought-prompting) y [Prompt chaining: cómo dividir tareas grandes en pasos ganadores](/es/prompt-engineering/prompt-chaining).',
           ],
         },
 
@@ -997,7 +1001,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'OpenAI presentó GPT-4 en marzo de 2023 con entrada de imágenes junto al texto (al principio como vista previa de investigación), lo que abrió el prompt engineering a tareas visuales como describir imágenes, comparar diagramas y anotar gráficos; después llegaron ventanas de contexto mayores (128 000 tokens con GPT-4 Turbo en noviembre de 2023). Gemini de Google (diciembre de 2023) y los modelos Claude 3 de Anthropic con visión (marzo de 2024) sumaron opciones multimodales de otros proveedores.',
             'En ese mismo periodo se formalizaron las buenas prácticas. OpenAI publicó su [guía oficial de prompt engineering](https://developers.openai.com/api/docs/guides/prompt-engineering). Google Cloud publicó su propia [guía de prompt engineering](https://cloud.google.com/discover/what-is-prompt-engineering). Autores y equipos independientes publicaron frameworks como CRAFT, CO-STAR, SPECS, RISEN y TRACE, que dieron a los profesionales plantillas repetibles para estructurar prompts y redujeron la dependencia del ensayo y error. Los autores y las fechas de publicación de estos frameworks varían según la fuente, y ninguno es un estándar oficial.',
-            'Estos frameworks marcaron la madurez del prompt engineering, de habilidad personal a práctica enseñable y compartible. Consulta [¿Qué framework de prompts deberías usar?](/prompt-engineering/which-prompt-framework-should-you-use) para elegir entre ellos y [Más allá del texto: Cómo hacer prompts con imágenes](/prompt-engineering/beyond-text-how-to-prompt-with-images) para la dimensión multimodal.',
+            'Estos frameworks marcaron la madurez del prompt engineering, de habilidad personal a práctica enseñable y compartible. Consulta [¿Qué framework de prompts deberías usar?](/es/prompt-engineering/which-prompt-framework-should-you-use) para elegir entre ellos y [Más allá del texto: Cómo hacer prompts con imágenes](/es/prompt-engineering/beyond-text-how-to-prompt-with-images) para la dimensión multimodal.',
           ],
         },
 
@@ -1007,7 +1011,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'Un avance llamativo hacia 2023 fue la investigación que mostró que los LLM pueden optimizar prompts tan bien como las personas. Zhou et al. publicaron en noviembre de 2022 «[Large Language Models Are Human-Level Prompt Engineers](https://arxiv.org/abs/2211.01910)» (APE): un LLM generaba y puntuaba instrucciones candidatas e igualó o superó a las escritas por humanos en 19 de las 24 tareas evaluadas. El framework DSPy, de investigadores de Stanford ([Khattab et al., octubre de 2023](https://arxiv.org/abs/2310.03714)), fue más lejos: el desarrollador describe lo que el prompt debe lograr y la redacción se compila automáticamente.',
             'A la vez, la generación aumentada por recuperación (RAG), presentada en 2020 por [Lewis et al.](https://arxiv.org/abs/2005.11401) en Facebook AI Research (hoy Meta), se convirtió en un patrón central de los sistemas de IA en producción. RAG inyectaba documentos recuperados directamente en el contexto del prompt, anclando las respuestas en fuentes reales y actualizadas en lugar de exigir que el prompt contuviera todos los datos. Así, el énfasis pasó de «¿cómo hago que el modelo sepa esto?» a «¿cómo estructuro el contexto para que el modelo lo use bien?».',
-            'Consulta [RAG explicado: cómo anclar las respuestas de IA en datos reales (2026)](/prompt-engineering/rag-explained) y [Self-Consistency Prompting: genera múltiples respuestas y elige la correcta](/prompt-engineering/self-consistency-prompting) para las técnicas clave de este periodo.',
+            'Consulta [RAG explicado: cómo anclar las respuestas de IA en datos reales (2026)](/es/prompt-engineering/rag-explained) y [Self-Consistency Prompting: genera múltiples respuestas y elige la correcta](/es/prompt-engineering/self-consistency-prompting) para las técnicas clave de este periodo.',
           ],
         },
 
@@ -1051,7 +1055,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Año': '2022 (nov.)', 'Hito': 'Lanzamiento de ChatGPT', 'Por qué importa': 'Llevó el prompting a un público masivo; millones empezaron a experimentar en pocos días' },
             { 'Año': '2023 (T1)', 'Hito': 'Las ofertas de «prompt engineer» atraen atención; una oferta de Anthropic anuncia 175 000–335 000 USD', 'Por qué importa': 'Hizo visible el prompt engineering como posible profesión, aunque el rol fue muy debatido' },
             { 'Año': '2023 (mar.)', 'Hito': 'Lanzamiento de GPT-4 con entrada de imágenes', 'Por qué importa': 'Amplió el prompting más allá del texto a las imágenes; el contexto de 128 000 tokens llegó con GPT-4 Turbo (nov. 2023)' },
-            { 'Año': '2023', 'Hito': 'Frameworks como CRAFT, CO-STAR, SPECS, RISEN y TRACE; guías oficiales de OpenAI y Google', 'Por qué importa': 'Convirtió el oficio individual en plantillas reutilizables y enseñables' },
+            { 'Año': '2023', 'Hito': 'Frameworks como CO-STAR (GovTech Singapur, 2023) y otras plantillas publicadas (CRAFT, SPECS, RISEN, TRACE); guías oficiales de OpenAI y Google', 'Por qué importa': 'Convirtió el oficio individual en plantillas reutilizables y enseñables' },
             { 'Año': '2022–2023', 'Hito': 'APE (Zhou et al.) y DSPy (Khattab et al.): prompts optimizados por LLM', 'Por qué importa': 'Mostró que los LLM pueden escribir y ajustar prompts, haciendo práctica la optimización automática' },
             { 'Año': '2024', 'Hito': 'Llama 3 (abr.) y Gemini 1.5 Pro con vista previa de contexto de 1 M de tokens (feb.)', 'Por qué importa': 'Los modelos de pesos abiertos para despliegue privado y los contextos muy largos desplazaron el foco a la ingeniería de contexto' },
             { 'Año': '2024–2025', 'Hito': 'Modelos de razonamiento: OpenAI o1 (sep. 2024), DeepSeek-R1 (ene. 2025), Claude 3.7 Sonnet con extended thinking (feb. 2025)', 'Por qué importa': 'Los modelos razonan paso a paso internamente, por lo que el chain-of-thought explícito importa menos en ellos' },
@@ -1068,11 +1072,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'La era RAG y context design nos dio la comprensión de que los prompts no existen de forma aislada — se componen con datos recuperados, instrucciones del sistema y outputs de herramientas para formar un contexto completo.',
           ],
           items: [
-            'Técnicas de razonamiento de 2022 → [Chain-of-Thought Prompting: Haz que la IA muestre su razonamiento](/prompt-engineering/chain-of-thought-prompting) y [Tree of Thought y ReAct: Razonamiento avanzado para problemas difíciles](/prompt-engineering/tree-of-thought-and-react)',
-            'Desarrollo de frameworks de 2023 → [¿Qué framework de prompts deberías usar?](/prompt-engineering/which-prompt-framework-should-you-use)',
-            'Crecimiento del context window → [Context windows explicadas: Por qué la IA olvida (y qué hacer al respecto)](/prompt-engineering/context-windows-explained-why-ai-forgets)',
-            'Economía de tokens a través de generaciones de modelos → [Tokens, costes y límites: La economía del prompting de IA en 2026](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
-            'RAG como complemento del prompting puro → [RAG explicado: cómo anclar las respuestas de IA en datos reales (2026)](/prompt-engineering/rag-explained)',
+            'Técnicas de razonamiento de 2022 → [Chain-of-Thought Prompting: Haz que la IA muestre su razonamiento](/es/prompt-engineering/chain-of-thought-prompting) y [Tree of Thought y ReAct: Razonamiento avanzado para problemas difíciles](/es/prompt-engineering/tree-of-thought-and-react)',
+            'Desarrollo de frameworks de 2023 → [¿Qué framework de prompts deberías usar?](/es/prompt-engineering/which-prompt-framework-should-you-use)',
+            'Crecimiento del context window → [Context windows explicadas: Por qué la IA olvida (y qué hacer al respecto)](/es/prompt-engineering/context-windows-explained-why-ai-forgets)',
+            'Economía de tokens a través de generaciones de modelos → [Tokens, costes y límites: La economía del prompting de IA en 2026](/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
+            'RAG como complemento del prompting puro → [RAG explicado: cómo anclar las respuestas de IA en datos reales (2026)](/es/prompt-engineering/rag-explained)',
           ],
         },
 
@@ -1098,7 +1102,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿El prompt engineering se está volviendo menos importante a medida que mejoran los modelos?',
-              a: 'No — los modelos más capaces responden mejor a los prompts bien estructurados, no peor. Las ganancias del buen prompting aumentan a medida que el modelo se vuelve más capaz de seguir instrucciones precisas. Lo que ha cambiado es el nivel de prompt engineering requerido para tareas simples. Pero para outputs complejos de nivel de producción, el prompting estructurado sigue siendo la palanca más fiable disponible.',
+              a: 'No — los modelos más capaces responden mejor a los prompts bien estructurados, no peor. Las ganancias del buen prompting aumentan a medida que el modelo se vuelve más capaz de seguir instrucciones precisas. Lo que ha cambiado es el nivel de prompt engineering requerido para tareas simples. Pero para outputs complejos de nivel de producción, el prompting estructurado suele ser una de las palancas más eficaces, junto con la recuperación, la elección del modelo y el fine-tuning.',
             },
             {
               q: '¿Cuál es la diferencia entre prompt engineering y context engineering?',
@@ -1134,7 +1138,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Los mejores modelos hacen irrelevante el prompt engineering.',
-              problem: 'Un modelo más capaz es como una persona más capaz: responde *mejor* a instrucciones claras, no peor. Las ganancias de un buen prompting crecen con la capacidad del modelo. Cambia el *tipo* de prompting necesario, no si hace falta.',
+              problem: 'Un modelo más capaz es como una persona más capaz: responde *mejor* a instrucciones claras, no peor. Las ganancias de un buen prompting pueden crecer con la capacidad del modelo. Cambia el *tipo* de prompting necesario, no si hace falta.',
               fix: 'Da por hecho que el prompting seguirá siendo central en el trabajo con IA. Lo que cambia es el nivel de detalle y andamiaje. Con modelos más débiles puede hacer falta una estructura paso a paso explícita; con modelos más fuertes puede bastar una instrucción clara de una línea, pero esa franqueza también es una decisión de prompt engineering.',
             },
             {
@@ -1149,11 +1153,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: 'Lecturas relacionadas',
           items: [
-            { title: 'Chain-of-Thought Prompting: Haz que la IA muestre su razonamiento', url: '/prompt-engineering/chain-of-thought-prompting' },
-            { title: 'Zero-Shot vs. Few-Shot Prompting', url: '/prompt-engineering/zero-shot-vs-few-shot' },
-            { title: 'RAG explicado: cómo anclar las respuestas de IA en datos reales (2026)', url: '/prompt-engineering/rag-explained' },
-            { title: 'Context windows explicadas: Por qué la IA olvida (y qué hacer al respecto)', url: '/prompt-engineering/context-windows-explained-why-ai-forgets' },
-            { title: 'Tokens, costes y límites: La economía del prompting de IA en 2026', url: '/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
+            { title: 'Chain-of-Thought Prompting: Haz que la IA muestre su razonamiento', url: '/es/prompt-engineering/chain-of-thought-prompting' },
+            { title: 'Zero-Shot vs. Few-Shot Prompting', url: '/es/prompt-engineering/zero-shot-vs-few-shot' },
+            { title: 'RAG explicado: cómo anclar las respuestas de IA en datos reales (2026)', url: '/es/prompt-engineering/rag-explained' },
+            { title: 'Context windows explicadas: Por qué la IA olvida (y qué hacer al respecto)', url: '/es/prompt-engineering/context-windows-explained-why-ai-forgets' },
+            { title: 'Tokens, costes y límites: La economía del prompting de IA en 2026', url: '/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
           ],
         },
 
@@ -1175,6 +1179,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Google (2024). Gemini 1.5 announcement](https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/) — Google, anuncio de Gemini 1.5 (15 de febrero de 2024): contexto de 1 M de tokens en vista previa limitada.',
             '[DeepSeek-AI (2025). "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning." arXiv:2501.12948](https://arxiv.org/abs/2501.12948) — DeepSeek-R1: razonamiento mediante aprendizaje por refuerzo (enero de 2025).',
             '[Fortune (2023). Report on new AI jobs, 9 March 2023](https://fortune.com/2023/03/09/new-ai-jobs-chatgpt-like-assistants/) — Fortune (9 de marzo de 2023): informe sobre el rango salarial de la oferta de Anthropic para prompt engineers.',
+            '[Reuters (2023). "ChatGPT sets record for fastest-growing user base - analyst note", syndicated by The Star, 2 February 2023](https://www.thestar.com.my/tech/tech-news/2023/02/02/chatgpt-sets-record-for-fastest-growing-user-base---analyst-note) — estimación de UBS de unos 100 millones de usuarios activos mensuales en enero de 2023; la comparación con TikTok e Instagram se atribuye a Sensor Tower.',
+            '[Tech Startups (2022). "ChatGPT crosses 1 million users five days after launch", 5 December 2022](https://techstartups.com/2022/12/05/chatgpt-crosses-1-million-users-five-days-launch/) — noticia que cita la publicación de Sam Altman del 5 de diciembre de 2022: "ChatGPT launched on wednesday. today it crossed 1 million users!"',
           ],
         },
 
@@ -1193,7 +1199,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ogTitle: 'كيف تطورت هندسة البرومبت: من GPT-3 إلى تصميم السياق (2020–2026)',
       twitterTitle: 'كيف انتقلت هندسة البرومبت من «اكتب برومبت أفضل» إلى تصميم السياق في 6 سنوات',
       publishDate: '2026-03-01',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       readTime: '١٠ دقائق للقراءة',
       educationalLevel: 'Beginner',
       audience: 'العاملون في مجال المعرفة والمطورون الراغبون في التعرف على تاريخ هندسة البرومبت وتقنيات الذكاء الاصطناعي',
@@ -1205,7 +1211,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**سلسلة الأفكار (2022):** أظهر Wei وزملاؤه أن بنية البرومبت قد تُفعّل الاستدلال خطوة بخطوة؛ ارتفعت دقة PaLM 540B في GSM8K من 17.9% إلى 56.9%',
         '**ChatGPT (نوفمبر 2022):** تجاوز مليون مستخدم في 5 أيام (بحسب سام ألتمان، الرئيس التنفيذي لـOpenAI)؛ وقُدّر بنحو 100 مليون مستخدم نشط شهريًا بحلول يناير 2023 (UBS عبر Reuters)',
         '**سوق العمل (2023):** أعلنت وظيفة في Anthropic بمسمى «Prompt Engineer and Librarian» عن راتب بين 175 ألف و335 ألف دولار (Fortune، مارس 2023)',
-        '**GPT-4 والأطر (2023):** إدخال الصور والأطر المنشورة (CO-STAR وSPECS وRISEN) جعلا كتابة البرومبت تخصصًا قابلًا للتعليم',
+        '**GPT-4 (2023) والأطر:** إدخال الصور والأطر المنشورة (CO-STAR من GovTech سنغافورة، 2023؛ وSPECS وRISEN) جعلا كتابة البرومبت تخصصًا قابلًا للتعليم',
         '**تصميم السياق (2024–2026):** نماذج لغوية مفتوحة الأوزان ونوافذ سياق تتجاوز مليون رمز وتنسيق الوكلاء نقلت التركيز من تعديل البرومبت إلى هندسة السياق على مستوى النظام',
       ],
       toc: [
@@ -1232,7 +1238,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'هل انتهت هندسة البرومبت؟ تطورها من 2020 إلى 2026',
         description: 'هندسة البرومبت لم تمت بل تغيّرت: خط زمني موثّق من التعلّم بأمثلة قليلة في GPT-3 (2020) إلى سلسلة الأفكار وChatGPT وصولًا إلى تصميم السياق.',
         datePublished: '2026-03-01',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/ar/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'ar',
         keywords: ['تاريخ هندسة البرومبت', 'GPT-3 few-shot learning', 'chain-of-thought prompting', 'ChatGPT', 'هندسة السياق', 'خط زمني لهندسة البرومبت', 'InstructGPT', 'RLHF'],
@@ -1266,7 +1272,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'من صاغ مصطلح "هندسة البرومبت" أول مرة؟', acceptedAnswer: { '@type': 'Answer', text: 'أصل المصطلح محل جدل، ولا يُنسب ابتكاره إلى شخص بعينه. كانت الأوراق البحثية تصف الأساليب القائمة على البرومبت منذ 2021، وازداد استخدام العبارة خلال 2022 وبعد ChatGPT. وتقدّم مقالة ويكيبيديا عن هندسة البرومبت لمحة عامة عن هذا التاريخ.' } },
           { '@type': 'Question', name: 'لماذا انفجرت هندسة البرومبت في الشعبية بعد ChatGPT؟', acceptedAnswer: { '@type': 'Answer', text: 'كان ChatGPT من أوائل نماذج الذكاء الاصطناعي للأغراض العامة التي يستطيع الملايين استخدامه فورًا، مجانًا، دون كتابة كود. الفجوة بين برومبت مُحكم وآخر مبهم كانت مرئية وذات صلة فورية — البرومبتات الأفضل تُنتج مخرجات أفضل.' } },
           { '@type': 'Question', name: 'كيف أثّرت أوراق البحث على تقنيات البرومبت الواقعية؟', acceptedAnswer: { '@type': 'Answer', text: 'كان النقل سريعًا بشكل غير عادي. انتقل برومبت Chain-of-Thought (Wei et al., 2022) من ورقة أكاديمية إلى تقنية يستخدمها الممارسون على نطاق واسع في أشهر.' } },
-          { '@type': 'Question', name: 'هل هندسة البرومبت تصبح أقل أهمية مع تحسّن النماذج؟', acceptedAnswer: { '@type': 'Answer', text: 'لا — النماذج الأكثر قدرة تستجيب بشكل أفضل للبرومبتات المنظمة جيدًا. ما تغيّر هو مستوى هندسة البرومبت المطلوب للمهام البسيطة. لكن للمخرجات الإنتاجية المعقدة، يظل البرومبت المنظّم الرافعة الأكثر موثوقية.' } },
+          { '@type': 'Question', name: 'هل هندسة البرومبت تصبح أقل أهمية مع تحسّن النماذج؟', acceptedAnswer: { '@type': 'Answer', text: 'لا — النماذج الأكثر قدرة تستجيب بشكل أفضل للبرومبتات المنظمة جيدًا. ما تغيّر هو مستوى هندسة البرومبت المطلوب للمهام البسيطة. لكن للمخرجات الإنتاجية المعقدة، يكون البرومبت المنظّم عادةً من أكثر الوسائل فاعلية، إلى جانب الاسترجاع واختيار النموذج والضبط الدقيق.' } },
           { '@type': 'Question', name: 'ما الفرق بين هندسة البرومبت وهندسة السياق؟', acceptedAnswer: { '@type': 'Answer', text: 'هندسة البرومبت تشير عادةً إلى تصميم مدخلات النص لتحسين مخرجاته. هندسة السياق مفهوم أوسع يشير إلى تنسيق كل ما هو داخل نافذة سياق النموذج — تُعامل البرومبت كمكوّن في نظام مُصمَّم، لا كنتاج مستقل.' } },
           { '@type': 'Question', name: 'هل ستحلّ الأدوات التلقائية محلّ الحاجة لفهم هندسة البرومبت؟', acceptedAnswer: { '@type': 'Answer', text: 'الأدوات التلقائية كـDSPy تستطيع تحسين صياغة البرومبتات ضمن أهداف محددة، لكنها تتطلب من إنسان تحديد الهدف وما هي القيود وكيفية تقييم النجاح.' } },
           { '@type': 'Question', name: 'هل ماتت هندسة البرومبت في 2026؟', acceptedAnswer: { '@type': 'Answer', text: 'لا. لقد تحوّل التخصص ولم يختفِ. فكلما ازدادت قدرة النماذج انتقل العمل من حيل الصياغة والتنسيق إلى تصميم السياق: بناء المدخلات وإدارة الاسترجاع وتركيب مخرجات الأدوات. يضيق مسمى «مهندس برومبت»، لكن المهارة الأساسية حاضرة في كل دور يستخدم الذكاء الاصطناعي: المطوّر والمحلل والمسوّق والباحث. وما زال وضوح صياغة المهمة والسياق المناسب وتحديد صيغة المخرجات هي ما يحدد مدى فائدة إجابة النموذج.' } },
@@ -1290,7 +1296,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: 5, name: 'إطلاق ChatGPT (2022 (نوفمبر))', description: 'أوصل كتابة البرومبت إلى جمهور واسع؛ بدأ الملايين بالتجريب خلال أيام' },
           { '@type': 'ListItem', position: 6, name: 'وظائف «مهندس برومبت» تلفت الانتباه؛ وظيفة في Anthropic تعلن 175 ألفًا–335 ألف دولار (2023 (الربع 1))', description: 'جعلت هندسة البرومبت مهنة محتملة ظاهرة، مع جدل واسع حول الدور' },
           { '@type': 'ListItem', position: 7, name: 'إصدار GPT-4 مع إدخال الصور (2023 (مارس))', description: 'وسّع كتابة البرومبت إلى ما بعد النص ليشمل الصور؛ وجاء سياق 128 ألف رمز مع GPT-4 Turbo (نوفمبر 2023)' },
-          { '@type': 'ListItem', position: 8, name: 'أطر مثل CRAFT وCO-STAR وSPECS وRISEN وTRACE؛ أدلة رسمية من OpenAI وGoogle (2023)', description: 'حوّلت الحرفة الفردية إلى قوالب قابلة لإعادة الاستخدام والتعليم' },
+          { '@type': 'ListItem', position: 8, name: 'أطر مثل CO-STAR (GovTech سنغافورة، 2023) وقوالب منشورة أخرى (CRAFT وSPECS وRISEN وTRACE)؛ وأدلة رسمية من OpenAI وGoogle', description: 'حوّلت الحرفة الفردية إلى قوالب قابلة لإعادة الاستخدام والتعليم' },
           { '@type': 'ListItem', position: 9, name: 'APE (Zhou وزملاؤه) وDSPy (Khattab وزملاؤه): برومبتات محسَّنة بنماذج لغوية (2022–2023)', description: 'أظهرا أن النماذج اللغوية تكتب البرومبتات وتضبطها، فصار التحسين الآلي عمليًا' },
           { '@type': 'ListItem', position: 10, name: 'Llama 3 (أبريل) وGemini 1.5 Pro بمعاينة سياق مليون رمز (فبراير) (2024)', description: 'نماذج مفتوحة الأوزان للنشر الخاص وسياقات طويلة جدًا نقلت التركيز إلى هندسة السياق' },
           { '@type': 'ListItem', position: 11, name: 'نماذج الاستدلال: OpenAI o1 (سبتمبر 2024)، DeepSeek-R1 (يناير 2025)، Claude 3.7 Sonnet بالتفكير الممتد (فبراير 2025) (2024–2025)', description: 'تستدل النماذج خطوة بخطوة داخليًا، لذا يقل تأثير سلسلة الأفكار الصريحة فيها' },
@@ -1342,7 +1348,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**يبدأ التاريخ الحديث لهندسة البرومبت فعليًا مع GPT-3.** في مايو 2020 نشر باحثو OpenAI ورقة «[Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)» (Brown وزملاؤه) التي تصف GPT-3، وهو نموذج بـ175 مليار معامل. أظهرت الورقة أن تضمين بضعة أمثلة للمهمة المطلوبة مباشرة في البرومبت، دون أي تحديث لأوزان النموذج، يحسّن الأداء في كثير من المهام اللاحقة.',
             'كانت هذه بذرة هندسة البرومبت كتخصص. أدرك الباحثون والمطورون أن النموذج نفسه يمكن أن يصبح مترجمًا أو ملخّصًا أو مولّد شيفرة أو نظام أسئلة وأجوبة بمجرد تغيير طريقة كتابة البرومبت. لم يحتج النموذج إلى إعادة تدريب، بل إلى برومبت أفضل. أعادت هذه الفكرة تعريف البرومبت: ليس مجرد مدخل، بل عنصر تصميم.',
             'ذكر Brown وزملاؤه أن أداء التعلّم بأمثلة قليلة تحسّن عمومًا مع كبر حجم النموذج، وأن GPT-3 بـ175 مليار معامل كان الأقوى إجمالًا. ربط ذلك بين الحجم والتعلّم القائم على البرومبت، وجعل جودة البرومبت متغيّرًا يمكن للممارسين، لا للباحثين وحدهم، التحكم فيه.',
-            'راجع [التوجيه الصفري مقابل التوجيه بأمثلة قليلة](/prompt-engineering/zero-shot-vs-few-shot) للحصول على دليل عملي للتقنية التي جعلها GPT-3 مشهورة.',
+            'راجع [التوجيه الصفري مقابل التوجيه بأمثلة قليلة](/ar/prompt-engineering/zero-shot-vs-few-shot) للحصول على دليل عملي للتقنية التي جعلها GPT-3 مشهورة.',
           ],
         },
 
@@ -1361,7 +1367,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**كان ظهور التوجيه بسلسلة الأفكار (CoT) عام 2022 من أهم التطورات التقنية في التاريخ القصير لهذا التخصص.** نشر Wei وزملاؤه (Google) ورقة «[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)» وأظهروا أن تزويد النموذج بأمثلة محلولة بخطوات وسيطة يحسّن الأداء في مهام الحساب والاستدلال العام والرمزي. وفي نتيجة بارزة رفع التوجيه بسلسلة الأفكار دقة PaLM 540B على معيار GSM8K لمسائل الرياضيات المدرسية من 17.9% إلى 56.9%، وهو مكسب تحقق بتغيير البرومبت فقط ودون تدريب إضافي. وكانت الدلالة عميقة: بنية البرومبت قد تُفعّل سلوك استدلال مختلفًا، لا حقائق مختلفة فحسب.',
             'تبعتها تقنيات مرتبطة بسرعة. قدّم Zhou وزملاؤه [التوجيه من الأبسط إلى الأعقد (least-to-most)](https://arxiv.org/abs/2205.10625) الذي يفكّك المسائل المعقدة إلى سلسلة من المسائل الفرعية الأبسط تُحل بالترتيب. حوّلت هذه المقاربات هندسة البرومبت من تمرين تنسيق إلى أداة لاستخراج استدلال منظّم من نماذج لم تُدرَّب صراحةً على ذلك. صار التوجيه سقالة للإدراك.',
-            'للاطلاع على الدليل الكامل للتقنية راجع [توجيه سلسلة الأفكار: اجعل الذكاء الاصطناعي يُظهر استدلاله](/prompt-engineering/chain-of-thought-prompting) و[ربط البرومبتات: كيف تقسّم المهام الكبيرة إلى خطوات رابحة](/prompt-engineering/prompt-chaining).',
+            'للاطلاع على الدليل الكامل للتقنية راجع [توجيه سلسلة الأفكار: اجعل الذكاء الاصطناعي يُظهر استدلاله](/ar/prompt-engineering/chain-of-thought-prompting) و[ربط البرومبتات: كيف تقسّم المهام الكبيرة إلى خطوات رابحة](/ar/prompt-engineering/prompt-chaining).',
           ],
         },
 
@@ -1388,7 +1394,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'أعلنت OpenAI عن GPT-4 في مارس 2023 مع إدخال الصور إلى جانب النص (في البداية كمعاينة بحثية)، ففتح هندسة البرومبت أمام مهام بصرية مثل وصف الصور ومقارنة المخططات والتعليق على الرسوم البيانية؛ ثم جاءت نوافذ سياق أكبر (128 ألف رمز مع GPT-4 Turbo في نوفمبر 2023). وأضافت Gemini من Google (ديسمبر 2023) ونماذج Claude 3 ذات الرؤية من Anthropic (مارس 2024) خيارات متعددة الوسائط من مزوّدين آخرين.',
             'شهدت الفترة نفسها تقنين أفضل الممارسات. نشرت OpenAI [دليلها الرسمي لهندسة البرومبت](https://developers.openai.com/api/docs/guides/prompt-engineering)، ونشرت Google Cloud [دليلها الخاص لهندسة البرومبت](https://cloud.google.com/discover/what-is-prompt-engineering). ونشر مؤلفون وفرق مستقلة أطرًا مثل CRAFT وCO-STAR وSPECS وRISEN وTRACE تمنح الممارسين قوالب قابلة للتكرار لبناء البرومبتات وتقلل الاعتماد على التجربة والخطأ. يختلف مؤلفو هذه الأطر وتواريخ نشرها بحسب المصدر، ولا يُعد أيٌّ منها معيارًا رسميًا.',
-            'مثّلت هذه الأطر نضج هندسة البرومبت من مهارة شخصية إلى ممارسة قابلة للتعليم والمشاركة. راجع [أي إطار طلب يجب استخدامه؟](/prompt-engineering/which-prompt-framework-should-you-use) لاختيار الإطار المناسب، و[ما وراء النص: كيفية الاستفسار بالصور](/prompt-engineering/beyond-text-how-to-prompt-with-images) للبعد متعدد الوسائط.',
+            'مثّلت هذه الأطر نضج هندسة البرومبت من مهارة شخصية إلى ممارسة قابلة للتعليم والمشاركة. راجع [أي إطار طلب يجب استخدامه؟](/ar/prompt-engineering/which-prompt-framework-should-you-use) لاختيار الإطار المناسب، و[ما وراء النص: كيفية الاستفسار بالصور](/ar/prompt-engineering/beyond-text-how-to-prompt-with-images) للبعد متعدد الوسائط.',
           ],
         },
 
@@ -1398,7 +1404,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'من التطورات اللافتة نحو عام 2023 بحوث أظهرت أن النماذج اللغوية الكبيرة تستطيع تحسين البرومبتات بقدر ما يفعل البشر. نشر Zhou وزملاؤه في نوفمبر 2022 ورقة «[Large Language Models Are Human-Level Prompt Engineers](https://arxiv.org/abs/2211.01910)» (APE): ولّد نموذج لغوي تعليمات مرشّحة وقيّمها، وساوى أو تفوّق على التعليمات التي كتبها البشر في 19 من 24 مهمة اختُبرت. وذهب إطار DSPy، من باحثين في Stanford ([Khattab وزملاؤه، أكتوبر 2023](https://arxiv.org/abs/2310.03714))، أبعد: يصف المطور ما يجب أن يحققه البرومبت وتُترجَم الصياغة آليًا.',
             'وفي الوقت نفسه أصبح التوليد المعزَّز بالاسترجاع (RAG)، الذي قدّمه [Lewis وزملاؤه عام 2020](https://arxiv.org/abs/2005.11401) في Facebook AI Research (Meta اليوم)، نمطًا مركزيًا في أنظمة الذكاء الاصطناعي الإنتاجية. كان RAG يحقن المستندات المسترجعة مباشرة في سياق البرومبت، فيربط المخرجات بمصادر حقيقية ومحدّثة بدل اشتراط أن يحتوي البرومبت على كل الحقائق. وبذلك انتقل التركيز من «كيف أجعل النموذج يعرف هذا؟» إلى «كيف أبني السياق ليستخدمه النموذج بشكل صحيح؟».',
-            'راجع [RAG موضَّح: كيف تُربط استجابات الذكاء الاصطناعي بالبيانات الحقيقية (2026)](/prompt-engineering/rag-explained) و[برومبت الاتساق الذاتي: أنتج استجابات متعددة واختر الصحيحة](/prompt-engineering/self-consistency-prompting) للاطلاع على أهم تقنيات هذه الفترة.',
+            'راجع [RAG موضَّح: كيف تُربط استجابات الذكاء الاصطناعي بالبيانات الحقيقية (2026)](/ar/prompt-engineering/rag-explained) و[برومبت الاتساق الذاتي: أنتج استجابات متعددة واختر الصحيحة](/ar/prompt-engineering/self-consistency-prompting) للاطلاع على أهم تقنيات هذه الفترة.',
           ],
         },
 
@@ -1442,7 +1448,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'السنة': '2022 (نوفمبر)', 'المعلم': 'إطلاق ChatGPT', 'لماذا يهم': 'أوصل كتابة البرومبت إلى جمهور واسع؛ بدأ الملايين بالتجريب خلال أيام' },
             { 'السنة': '2023 (الربع 1)', 'المعلم': 'وظائف «مهندس برومبت» تلفت الانتباه؛ وظيفة في Anthropic تعلن 175 ألفًا–335 ألف دولار', 'لماذا يهم': 'جعلت هندسة البرومبت مهنة محتملة ظاهرة، مع جدل واسع حول الدور' },
             { 'السنة': '2023 (مارس)', 'المعلم': 'إصدار GPT-4 مع إدخال الصور', 'لماذا يهم': 'وسّع كتابة البرومبت إلى ما بعد النص ليشمل الصور؛ وجاء سياق 128 ألف رمز مع GPT-4 Turbo (نوفمبر 2023)' },
-            { 'السنة': '2023', 'المعلم': 'أطر مثل CRAFT وCO-STAR وSPECS وRISEN وTRACE؛ أدلة رسمية من OpenAI وGoogle', 'لماذا يهم': 'حوّلت الحرفة الفردية إلى قوالب قابلة لإعادة الاستخدام والتعليم' },
+            { 'السنة': '2023', 'المعلم': 'أطر مثل CO-STAR (GovTech سنغافورة، 2023) وقوالب منشورة أخرى (CRAFT وSPECS وRISEN وTRACE)؛ وأدلة رسمية من OpenAI وGoogle', 'لماذا يهم': 'حوّلت الحرفة الفردية إلى قوالب قابلة لإعادة الاستخدام والتعليم' },
             { 'السنة': '2022–2023', 'المعلم': 'APE (Zhou وزملاؤه) وDSPy (Khattab وزملاؤه): برومبتات محسَّنة بنماذج لغوية', 'لماذا يهم': 'أظهرا أن النماذج اللغوية تكتب البرومبتات وتضبطها، فصار التحسين الآلي عمليًا' },
             { 'السنة': '2024', 'المعلم': 'Llama 3 (أبريل) وGemini 1.5 Pro بمعاينة سياق مليون رمز (فبراير)', 'لماذا يهم': 'نماذج مفتوحة الأوزان للنشر الخاص وسياقات طويلة جدًا نقلت التركيز إلى هندسة السياق' },
             { 'السنة': '2024–2025', 'المعلم': 'نماذج الاستدلال: OpenAI o1 (سبتمبر 2024)، DeepSeek-R1 (يناير 2025)، Claude 3.7 Sonnet بالتفكير الممتد (فبراير 2025)', 'لماذا يهم': 'تستدل النماذج خطوة بخطوة داخليًا، لذا يقل تأثير سلسلة الأفكار الصريحة فيها' },
@@ -1459,11 +1465,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'أعطتنا حقبة RAG وتصميم السياق الفهم القائل بأن البرومبتات لا توجد بمعزل عن غيرها — بل تتركّب مع البيانات المسترجعة وتعليمات النظام ومخرجات الأدوات لتشكيل سياق كامل.',
           ],
           items: [
-            'تقنيات الاستدلال من 2022 → [توجيه سلسلة الأفكار: اجعل الذكاء الاصطناعي يُظهر استدلاله](/prompt-engineering/chain-of-thought-prompting) و[Tree of Thought و ReAct: الاستدلال المتقدم للمسائل الصعبة](/prompt-engineering/tree-of-thought-and-react)',
-            'تطوير أطر العمل من 2023 → [أي إطار طلب يجب استخدامه؟](/prompt-engineering/which-prompt-framework-should-you-use)',
-            'نمو نافذة السياق → [نوافذ السياق مشروحة: لماذا تنسى الذكاء الاصطناعي (وماذا تفعل؟)](/prompt-engineering/context-windows-explained-why-ai-forgets)',
-            'اقتصاد الرموز → [الرموز والتكاليف والحدود: اقتصاديات استدعاء الذكاء الاصطناعي في 2026](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
-            'RAG كمكمّل للبرومبت المحض → [RAG موضَّح: كيف تُربط استجابات الذكاء الاصطناعي بالبيانات الحقيقية (2026)](/prompt-engineering/rag-explained)',
+            'تقنيات الاستدلال من 2022 → [توجيه سلسلة الأفكار: اجعل الذكاء الاصطناعي يُظهر استدلاله](/ar/prompt-engineering/chain-of-thought-prompting) و[Tree of Thought و ReAct: الاستدلال المتقدم للمسائل الصعبة](/ar/prompt-engineering/tree-of-thought-and-react)',
+            'تطوير أطر العمل من 2023 → [أي إطار طلب يجب استخدامه؟](/ar/prompt-engineering/which-prompt-framework-should-you-use)',
+            'نمو نافذة السياق → [نوافذ السياق مشروحة: لماذا تنسى الذكاء الاصطناعي (وماذا تفعل؟)](/ar/prompt-engineering/context-windows-explained-why-ai-forgets)',
+            'اقتصاد الرموز → [الرموز والتكاليف والحدود: اقتصاديات استدعاء الذكاء الاصطناعي في 2026](/ar/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
+            'RAG كمكمّل للبرومبت المحض → [RAG موضَّح: كيف تُربط استجابات الذكاء الاصطناعي بالبيانات الحقيقية (2026)](/ar/prompt-engineering/rag-explained)',
           ],
         },
 
@@ -1489,7 +1495,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'هل هندسة البرومبت تصبح أقل أهمية مع تحسّن النماذج؟',
-              a: 'لا — النماذج الأكثر قدرة تستجيب بشكل أفضل للبرومبتات المنظمة جيدًا. ما تغيّر هو مستوى هندسة البرومبت المطلوب للمهام البسيطة. لكن للمخرجات الإنتاجية المعقدة، يظل البرومبت المنظّم الرافعة الأكثر موثوقية.',
+              a: 'لا — النماذج الأكثر قدرة تستجيب بشكل أفضل للبرومبتات المنظمة جيدًا. ما تغيّر هو مستوى هندسة البرومبت المطلوب للمهام البسيطة. لكن للمخرجات الإنتاجية المعقدة، يكون البرومبت المنظّم عادةً من أكثر الوسائل فاعلية، إلى جانب الاسترجاع واختيار النموذج والضبط الدقيق.',
             },
             {
               q: 'ما الفرق بين هندسة البرومبت وهندسة السياق؟',
@@ -1525,7 +1531,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'النماذج الأفضل تجعل هندسة البرومبت غير ذات صلة.',
-              problem: 'النموذج الأقدر كالشخص الأقدر: يستجيب *بشكل أفضل* للتعليمات الواضحة لا أسوأ. تتضاعف مكاسب البرومبت الجيد مع ازدياد قدرة النموذج. ما يتغير هو *نوع* التوجيه المطلوب لا ضرورته.',
+              problem: 'النموذج الأقدر كالشخص الأقدر: يستجيب *بشكل أفضل* للتعليمات الواضحة لا أسوأ. قد تتضاعف مكاسب البرومبت الجيد مع ازدياد قدرة النموذج. ما يتغير هو *نوع* التوجيه المطلوب لا ضرورته.',
               fix: 'افترض أن كتابة البرومبت ستبقى محورية في العمل مع الذكاء الاصطناعي. ما يتطور هو مستوى التفصيل والسقالات المطلوبة. مع النماذج الأضعف قد تحتاج إلى بنية صريحة خطوة بخطوة، ومع الأقوى قد يكفي سطر واضح واحد، لكن هذه المباشرة نفسها قرار في هندسة البرومبت.',
             },
             {
@@ -1540,11 +1546,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: 'قراءات ذات صلة',
           items: [
-            { title: 'توجيه سلسلة الأفكار: اجعل الذكاء الاصطناعي يُظهر استدلاله', url: '/prompt-engineering/chain-of-thought-prompting' },
-            { title: 'التوجيه الصفري مقابل التوجيه بأمثلة قليلة', url: '/prompt-engineering/zero-shot-vs-few-shot' },
-            { title: 'RAG موضَّح: كيف تُربط استجابات الذكاء الاصطناعي بالبيانات الحقيقية (2026)', url: '/prompt-engineering/rag-explained' },
-            { title: 'نوافذ السياق مشروحة: لماذا تنسى الذكاء الاصطناعي (وماذا تفعل؟)', url: '/prompt-engineering/context-windows-explained-why-ai-forgets' },
-            { title: 'الرموز والتكاليف والحدود: اقتصاديات استدعاء الذكاء الاصطناعي في 2026', url: '/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
+            { title: 'توجيه سلسلة الأفكار: اجعل الذكاء الاصطناعي يُظهر استدلاله', url: '/ar/prompt-engineering/chain-of-thought-prompting' },
+            { title: 'التوجيه الصفري مقابل التوجيه بأمثلة قليلة', url: '/ar/prompt-engineering/zero-shot-vs-few-shot' },
+            { title: 'RAG موضَّح: كيف تُربط استجابات الذكاء الاصطناعي بالبيانات الحقيقية (2026)', url: '/ar/prompt-engineering/rag-explained' },
+            { title: 'نوافذ السياق مشروحة: لماذا تنسى الذكاء الاصطناعي (وماذا تفعل؟)', url: '/ar/prompt-engineering/context-windows-explained-why-ai-forgets' },
+            { title: 'الرموز والتكاليف والحدود: اقتصاديات استدعاء الذكاء الاصطناعي في 2026', url: '/ar/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
           ],
         },
 
@@ -1566,6 +1572,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Google (2024). Gemini 1.5 announcement](https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/) — Google، إعلان Gemini 1.5 (15 فبراير 2024): سياق مليون رمز في معاينة محدودة.',
             '[DeepSeek-AI (2025). "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning." arXiv:2501.12948](https://arxiv.org/abs/2501.12948) — DeepSeek-R1: الاستدلال عبر التعلّم المعزَّز (يناير 2025).',
             '[Fortune (2023). Report on new AI jobs, 9 March 2023](https://fortune.com/2023/03/09/new-ai-jobs-chatgpt-like-assistants/) — Fortune (9 مارس 2023): تقرير عن نطاق راتب وظيفة مهندس البرومبت في Anthropic.',
+            '[Reuters (2023). "ChatGPT sets record for fastest-growing user base - analyst note", syndicated by The Star, 2 February 2023](https://www.thestar.com.my/tech/tech-news/2023/02/02/chatgpt-sets-record-for-fastest-growing-user-base---analyst-note) — تقدير من UBS يبلغ نحو 100 مليون مستخدم نشط شهريًا في يناير 2023؛ وتُنسب المقارنة مع TikTok وInstagram إلى Sensor Tower.',
+            '[Tech Startups (2022). "ChatGPT crosses 1 million users five days after launch", 5 December 2022](https://techstartups.com/2022/12/05/chatgpt-crosses-1-million-users-five-days-launch/) — تقرير إخباري يقتبس منشور Sam Altman بتاريخ 5 ديسمبر 2022: "ChatGPT launched on wednesday. today it crossed 1 million users!"',
           ],
         },
 
@@ -1584,7 +1592,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ogTitle: 'Como o prompt engineering evoluiu: do GPT-3 ao context design (2020–2026)',
       twitterTitle: 'Como o prompt engineering passou de "escreva um prompt melhor" ao context design em 6 anos',
       publishDate: '2026-03-01',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       readTime: '10 min de leitura',
       educationalLevel: 'Beginner',
       audience: 'Profissionais do conhecimento e desenvolvedores que querem conhecer a história do prompt engineering e das técnicas de IA',
@@ -1596,7 +1604,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Chain-of-Thought (2022):** Wei et al. mostraram que a estrutura do prompt pode ativar o raciocínio passo a passo; o PaLM 540B foi de 17,9% para 56,9% no GSM8K',
         '**ChatGPT (nov. 2022):** passou de 1 milhão de usuários em 5 dias (segundo Sam Altman, CEO da OpenAI); estimativa de 100 milhões de usuários ativos mensais em janeiro de 2023 (UBS, via Reuters)',
         '**Mercado de trabalho (2023):** uma vaga da Anthropic para "Prompt Engineer and Librarian" anunciava de US$ 175 mil a US$ 335 mil (Fortune, março de 2023)',
-        '**GPT-4 e frameworks (2023):** a entrada de imagens e os frameworks publicados (CO-STAR, SPECS, RISEN) tornaram o prompting uma disciplina ensinável',
+        '**GPT-4 (2023) e frameworks:** a entrada de imagens e os frameworks publicados (CO-STAR, da GovTech Singapura, 2023; SPECS, RISEN) tornaram o prompting uma disciplina ensinável',
         '**Context design (2024–2026):** LLMs de pesos abertos, janelas de contexto de mais de 1 milhão de tokens e orquestração de agentes deslocaram o foco do ajuste de prompts para a engenharia de contexto em nível de sistema',
       ],
       toc: [
@@ -1623,7 +1631,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Prompt engineering morreu? Evolução de 2020 a 2026',
         description: 'O prompt engineering não morreu, mudou: linha do tempo com fontes do few-shot do GPT-3 (2020) ao chain-of-thought, ao ChatGPT e ao context design.',
         datePublished: '2026-03-01',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/pt/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'pt-BR',
         keywords: ['história do prompt engineering', 'GPT-3 few-shot learning', 'chain-of-thought prompting', 'ChatGPT', 'context engineering', 'linha do tempo do prompt engineering', 'InstructGPT', 'RLHF'],
@@ -1657,7 +1665,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'Quem cunhou pela primeira vez o termo "prompt engineering"?', acceptedAnswer: { '@type': 'Answer', text: 'A origem exata é debatida e nenhuma pessoa é creditada por inventar o termo. Artigos de pesquisa já descreviam métodos baseados em prompts em 2021, e a expressão ganhou uso mais amplo ao longo de 2022 e depois do ChatGPT. O artigo da Wikipédia sobre prompt engineering dá uma visão geral da história.' } },
           { '@type': 'Question', name: 'Por que o prompt engineering explodiu em popularidade após o ChatGPT?', acceptedAnswer: { '@type': 'Answer', text: 'O ChatGPT foi um dos primeiros modelos de IA de propósito geral que milhões de não-pesquisadores podiam usar imediatamente, de graça, sem escrever código. A diferença entre um prompt bem elaborado e um vago era visível e imediatamente relevante — os melhores prompts produziam outputs visivelmente melhores. Esse ciclo de retroalimentação, experimentado simultaneamente por milhões de pessoas, transformou o prompt engineering de um conceito de pesquisa em uma habilidade massiva.' } },
           { '@type': 'Question', name: 'Como os artigos de pesquisa influenciaram as técnicas de prompting do mundo real?', acceptedAnswer: { '@type': 'Answer', text: 'A transferência foi incomumente rápida para a pesquisa em IA. O prompting Chain-of-Thought (Wei et al., 2022) passou de artigo acadêmico para técnica amplamente usada por profissionais em meses, em parte porque não exigia ferramentas — apenas uma mudança na forma de escrever o prompt. O few-shot prompting do artigo do GPT-3 (Brown et al., 2020) era imediatamente adotável por qualquer pessoa com acesso à API.' } },
-          { '@type': 'Question', name: 'O prompt engineering está se tornando menos importante à medida que os modelos melhoram?', acceptedAnswer: { '@type': 'Answer', text: 'Não — modelos mais capazes respondem melhor a prompts bem estruturados, não pior. Os ganhos do bom prompting aumentam à medida que o modelo se torna mais capaz de seguir instruções precisas. O que mudou é o nível de prompt engineering necessário para tarefas simples. Mas para outputs complexos em nível de produção, o prompting estruturado continua sendo a alavanca mais confiável disponível.' } },
+          { '@type': 'Question', name: 'O prompt engineering está se tornando menos importante à medida que os modelos melhoram?', acceptedAnswer: { '@type': 'Answer', text: 'Não — modelos mais capazes respondem melhor a prompts bem estruturados, não pior. Os ganhos do bom prompting aumentam à medida que o modelo se torna mais capaz de seguir instruções precisas. O que mudou é o nível de prompt engineering necessário para tarefas simples. Mas para outputs complexos em nível de produção, o prompting estruturado costuma ser uma das alavancas mais eficazes, ao lado de recuperação, escolha do modelo e fine-tuning.' } },
           { '@type': 'Question', name: 'Qual é a diferença entre prompt engineering e context engineering?', acceptedAnswer: { '@type': 'Answer', text: 'O prompt engineering se refere tipicamente a projetar o input de texto para um modelo para melhorar seu output. O context engineering é um conceito mais amplo e recente que se refere a orquestrar tudo o que está no context window do modelo: o system prompt, os documentos recuperados, o histórico de conversa, os outputs das ferramentas e o input do usuário — todos compostos deliberadamente. O context engineering trata o prompt como um componente em um sistema projetado, não como um artefato independente.' } },
           { '@type': 'Question', name: 'As ferramentas automatizadas substituirão a necessidade de entender prompt engineering?', acceptedAnswer: { '@type': 'Answer', text: 'Ferramentas automatizadas como o DSPy podem otimizar a redação de prompts dentro de objetivos definidos, mas exigem que um humano especifique qual é o objetivo, quais restrições se aplicam e como avaliar o sucesso. Entender os princípios do prompt engineering continua sendo necessário para usar essas ferramentas de forma eficaz. A automação elimina parte da iteração manual; não elimina a necessidade de pensamento estruturado.' } },
           { '@type': 'Question', name: 'O prompt engineering está morto em 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Não. A disciplina mudou de lugar, não desapareceu. À medida que os modelos ficam mais capazes, o trabalho passa de truques de sintaxe e formatação para o context design: estruturar entradas, gerenciar a recuperação e compor saídas de ferramentas. O cargo "Prompt Engineer" está se estreitando, mas a habilidade de fundo está em todo papel que usa IA: desenvolvedor, analista, profissional de marketing, pesquisador. Enquadrar bem a tarefa, fornecer o contexto relevante e especificar o formato de saída continuam determinando o quanto a resposta do modelo é útil.' } },
@@ -1681,7 +1689,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: 5, name: 'Lançamento do ChatGPT (2022 (nov.))', description: 'Levou o prompting a um público de massa; milhões começaram a experimentar em poucos dias' },
           { '@type': 'ListItem', position: 6, name: 'Vagas de "prompt engineer" chamam atenção; uma vaga da Anthropic anuncia US$ 175 mil–335 mil (2023 (T1))', description: 'Deu visibilidade ao prompt engineering como possível profissão, embora o papel tenha sido muito debatido' },
           { '@type': 'ListItem', position: 7, name: 'Lançamento do GPT-4 com entrada de imagens (2023 (mar.))', description: 'Ampliou o prompting além do texto para imagens; o contexto de 128 mil tokens veio com o GPT-4 Turbo (nov. 2023)' },
-          { '@type': 'ListItem', position: 8, name: 'Frameworks como CRAFT, CO-STAR, SPECS, RISEN e TRACE; guias oficiais da OpenAI e do Google (2023)', description: 'Transformou o ofício individual em modelos reutilizáveis e ensináveis' },
+          { '@type': 'ListItem', position: 8, name: 'Frameworks como CO-STAR (GovTech Singapura, 2023) e outros modelos publicados (CRAFT, SPECS, RISEN, TRACE); guias oficiais da OpenAI e do Google', description: 'Transformou o ofício individual em modelos reutilizáveis e ensináveis' },
           { '@type': 'ListItem', position: 9, name: 'APE (Zhou et al.) e DSPy (Khattab et al.): prompts otimizados por LLM (2022–2023)', description: 'Mostrou que LLMs podem escrever e ajustar prompts, tornando prática a otimização automática' },
           { '@type': 'ListItem', position: 10, name: 'Llama 3 (abr.) e Gemini 1.5 Pro com prévia de contexto de 1 milhão de tokens (fev.) (2024)', description: 'Modelos de pesos abertos para implantação privada e contextos muito longos deslocaram o foco para a engenharia de contexto' },
           { '@type': 'ListItem', position: 11, name: 'Modelos de raciocínio: OpenAI o1 (set. 2024), DeepSeek-R1 (jan. 2025), Claude 3.7 Sonnet com extended thinking (fev. 2025) (2024–2025)', description: 'Os modelos raciocinam passo a passo internamente, então o chain-of-thought explícito importa menos neles' },
@@ -1733,7 +1741,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**A história moderna do prompt engineering começa, na prática, com o GPT-3.** Em maio de 2020, pesquisadores da OpenAI publicaram "[Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)" (Brown et al.), que descreve o GPT-3, um modelo de 175 bilhões de parâmetros. O artigo mostrou que incluir alguns exemplos da tarefa diretamente no prompt, sem nenhuma atualização dos pesos do modelo, melhorava o desempenho em muitas tarefas posteriores.',
             'Essa foi a semente do prompt engineering como disciplina. Pesquisadores e desenvolvedores perceberam que o mesmo modelo podia virar tradutor, resumidor, gerador de código ou sistema de perguntas e respostas apenas mudando a forma de escrever o prompt. O modelo não precisava ser retreinado: precisava de um prompt melhor. Essa ideia mudou o que é um prompt: não só uma entrada, mas um artefato de design.',
             'Brown et al. relataram que o desempenho few-shot geralmente melhorava com o tamanho do modelo, e que o GPT-3 de 175B parâmetros era a variante mais forte no geral. Isso ligou escala e aprendizado baseado em prompts e fez da qualidade do prompt uma variável que os profissionais, e não só os pesquisadores, podiam controlar.',
-            'Veja [Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot) para um guia prático da técnica que o GPT-3 tornou famosa.',
+            'Veja [Zero-Shot vs. Few-Shot Prompting](/pt/prompt-engineering/zero-shot-vs-few-shot) para um guia prático da técnica que o GPT-3 tornou famosa.',
           ],
         },
 
@@ -1752,7 +1760,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**A introdução do prompting chain-of-thought (CoT) em 2022 foi um dos avanços técnicos mais importantes da curta história da disciplina.** Wei et al. (Google) publicaram "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)" e mostraram que dar ao modelo exemplos resolvidos com etapas intermediárias melhorava o desempenho em tarefas de aritmética, bom senso e raciocínio simbólico. Em um resultado de destaque, o prompting chain-of-thought elevou a precisão do PaLM 540B no GSM8K, um benchmark de matemática do ensino fundamental, de 17,9% para 56,9%, um ganho obtido mudando o prompt, sem treinamento adicional. A implicação era profunda: a estrutura do prompt podia ativar um comportamento de raciocínio diferente, e não apenas fatos diferentes.',
             'Técnicas relacionadas surgiram logo depois. Zhou et al. introduziram o [least-to-most prompting](https://arxiv.org/abs/2205.10625), que decompõe problemas complexos em uma sequência de subproblemas mais simples resolvidos em ordem. Essas abordagens transformaram o prompt engineering de um exercício de formatação em uma ferramenta para obter raciocínio estruturado de modelos que não foram treinados explicitamente para isso. O prompting virou um andaime para a cognição.',
-            'Para o guia completo da técnica, veja [Chain-of-Thought Prompting: Faça a IA mostrar seu raciocínio](/prompt-engineering/chain-of-thought-prompting) e [Prompt chaining: como dividir tarefas grandes em etapas vencedoras](/prompt-engineering/prompt-chaining).',
+            'Para o guia completo da técnica, veja [Chain-of-Thought Prompting: Faça a IA mostrar seu raciocínio](/pt/prompt-engineering/chain-of-thought-prompting) e [Prompt chaining: como dividir tarefas grandes em etapas vencedoras](/pt/prompt-engineering/prompt-chaining).',
           ],
         },
 
@@ -1779,7 +1787,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'A OpenAI anunciou o GPT-4 em março de 2023 com entrada de imagens além do texto (inicialmente como prévia de pesquisa), abrindo o prompt engineering para tarefas visuais como descrever imagens, comparar diagramas e anotar gráficos; janelas de contexto maiores vieram depois (128 mil tokens com o GPT-4 Turbo em novembro de 2023). O Gemini, do Google (dezembro de 2023), e os modelos Claude 3 com visão, da Anthropic (março de 2024), somaram opções multimodais de outros fornecedores.',
             'No mesmo período, as boas práticas foram formalizadas. A OpenAI publicou seu [guia oficial de prompt engineering](https://developers.openai.com/api/docs/guides/prompt-engineering). O Google Cloud publicou seu próprio [guia de prompt engineering](https://cloud.google.com/discover/what-is-prompt-engineering). Autores e equipes independentes publicaram frameworks como CRAFT, CO-STAR, SPECS, RISEN e TRACE, que deram aos profissionais modelos repetíveis para estruturar prompts e reduziram a dependência de tentativa e erro. Os autores e as datas de publicação desses frameworks variam conforme a fonte, e nenhum deles é um padrão oficial.',
-            'Esses frameworks marcaram o amadurecimento do prompt engineering, de habilidade pessoal a prática ensinável e compartilhável. Veja [Qual framework de prompt você deve usar?](/prompt-engineering/which-prompt-framework-should-you-use) para escolher entre eles e [Além do texto: Como criar prompts com imagens](/prompt-engineering/beyond-text-how-to-prompt-with-images) para a dimensão multimodal.',
+            'Esses frameworks marcaram o amadurecimento do prompt engineering, de habilidade pessoal a prática ensinável e compartilhável. Veja [Qual framework de prompt você deve usar?](/pt/prompt-engineering/which-prompt-framework-should-you-use) para escolher entre eles e [Além do texto: Como criar prompts com imagens](/pt/prompt-engineering/beyond-text-how-to-prompt-with-images) para a dimensão multimodal.',
           ],
         },
 
@@ -1789,7 +1797,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'Um avanço marcante por volta de 2023 foi a pesquisa que mostrou que LLMs conseguem otimizar prompts tão bem quanto humanos. Zhou et al. publicaram em novembro de 2022 "[Large Language Models Are Human-Level Prompt Engineers](https://arxiv.org/abs/2211.01910)" (APE): um LLM gerava e pontuava instruções candidatas e igualou ou superou as escritas por humanos em 19 das 24 tarefas testadas. O framework DSPy, de pesquisadores de Stanford ([Khattab et al., outubro de 2023](https://arxiv.org/abs/2310.03714)), foi além: o desenvolvedor descreve o que o prompt deve alcançar e a redação é compilada automaticamente.',
             'Ao mesmo tempo, a geração aumentada por recuperação (RAG), apresentada em 2020 por [Lewis et al.](https://arxiv.org/abs/2005.11401) no Facebook AI Research (hoje Meta), tornou-se um padrão central em sistemas de IA em produção. O RAG injetava documentos recuperados diretamente no contexto do prompt, ancorando as respostas em fontes reais e atualizadas em vez de exigir que o prompt contivesse todos os fatos. Com isso, a ênfase passou de "como faço o modelo saber isso?" para "como estruturo o contexto para o modelo usá-lo corretamente?".',
-            'Veja [RAG Explicado: Como Ancorar Respostas de IA em Dados Reais (2026)](/prompt-engineering/rag-explained) e [Self-Consistency Prompting: Gere Múltiplas Respostas, Escolha a Mais Consistente](/prompt-engineering/self-consistency-prompting) para as principais técnicas desse período.',
+            'Veja [RAG Explicado: Como Ancorar Respostas de IA em Dados Reais (2026)](/pt/prompt-engineering/rag-explained) e [Self-Consistency Prompting: Gere Múltiplas Respostas, Escolha a Mais Consistente](/pt/prompt-engineering/self-consistency-prompting) para as principais técnicas desse período.',
           ],
         },
 
@@ -1833,7 +1841,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Ano': '2022 (nov.)', 'Marco': 'Lançamento do ChatGPT', 'Por que importa': 'Levou o prompting a um público de massa; milhões começaram a experimentar em poucos dias' },
             { 'Ano': '2023 (T1)', 'Marco': 'Vagas de "prompt engineer" chamam atenção; uma vaga da Anthropic anuncia US$ 175 mil–335 mil', 'Por que importa': 'Deu visibilidade ao prompt engineering como possível profissão, embora o papel tenha sido muito debatido' },
             { 'Ano': '2023 (mar.)', 'Marco': 'Lançamento do GPT-4 com entrada de imagens', 'Por que importa': 'Ampliou o prompting além do texto para imagens; o contexto de 128 mil tokens veio com o GPT-4 Turbo (nov. 2023)' },
-            { 'Ano': '2023', 'Marco': 'Frameworks como CRAFT, CO-STAR, SPECS, RISEN e TRACE; guias oficiais da OpenAI e do Google', 'Por que importa': 'Transformou o ofício individual em modelos reutilizáveis e ensináveis' },
+            { 'Ano': '2023', 'Marco': 'Frameworks como CO-STAR (GovTech Singapura, 2023) e outros modelos publicados (CRAFT, SPECS, RISEN, TRACE); guias oficiais da OpenAI e do Google', 'Por que importa': 'Transformou o ofício individual em modelos reutilizáveis e ensináveis' },
             { 'Ano': '2022–2023', 'Marco': 'APE (Zhou et al.) e DSPy (Khattab et al.): prompts otimizados por LLM', 'Por que importa': 'Mostrou que LLMs podem escrever e ajustar prompts, tornando prática a otimização automática' },
             { 'Ano': '2024', 'Marco': 'Llama 3 (abr.) e Gemini 1.5 Pro com prévia de contexto de 1 milhão de tokens (fev.)', 'Por que importa': 'Modelos de pesos abertos para implantação privada e contextos muito longos deslocaram o foco para a engenharia de contexto' },
             { 'Ano': '2024–2025', 'Marco': 'Modelos de raciocínio: OpenAI o1 (set. 2024), DeepSeek-R1 (jan. 2025), Claude 3.7 Sonnet com extended thinking (fev. 2025)', 'Por que importa': 'Os modelos raciocinam passo a passo internamente, então o chain-of-thought explícito importa menos neles' },
@@ -1850,11 +1858,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'A era RAG e context design nos deu a compreensão de que os prompts não existem de forma isolada — são compostos com dados recuperados, instruções do sistema e outputs de ferramentas para formar um contexto completo.',
           ],
           items: [
-            'Técnicas de raciocínio de 2022 → [Chain-of-Thought Prompting: Faça a IA mostrar seu raciocínio](/prompt-engineering/chain-of-thought-prompting) e [Tree of Thought e ReAct: Raciocínio avançado para problemas difíceis](/prompt-engineering/tree-of-thought-and-react)',
-            'Desenvolvimento de frameworks de 2023 → [Qual framework de prompt você deve usar?](/prompt-engineering/which-prompt-framework-should-you-use)',
-            'Crescimento do context window → [Janelas de contexto explicadas: Por que a IA esquece (e o que fazer)](/prompt-engineering/context-windows-explained-why-ai-forgets)',
-            'Economia de tokens ao longo das gerações de modelos → [Tokens, Custos e Limites: A Economia do Prompting de IA em 2026](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
-            'RAG como complemento ao prompting puro → [RAG Explicado: Como Ancorar Respostas de IA em Dados Reais (2026)](/prompt-engineering/rag-explained)',
+            'Técnicas de raciocínio de 2022 → [Chain-of-Thought Prompting: Faça a IA mostrar seu raciocínio](/pt/prompt-engineering/chain-of-thought-prompting) e [Tree of Thought e ReAct: Raciocínio avançado para problemas difíceis](/pt/prompt-engineering/tree-of-thought-and-react)',
+            'Desenvolvimento de frameworks de 2023 → [Qual framework de prompt você deve usar?](/pt/prompt-engineering/which-prompt-framework-should-you-use)',
+            'Crescimento do context window → [Janelas de contexto explicadas: Por que a IA esquece (e o que fazer)](/pt/prompt-engineering/context-windows-explained-why-ai-forgets)',
+            'Economia de tokens ao longo das gerações de modelos → [Tokens, Custos e Limites: A Economia do Prompting de IA em 2026](/pt/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
+            'RAG como complemento ao prompting puro → [RAG Explicado: Como Ancorar Respostas de IA em Dados Reais (2026)](/pt/prompt-engineering/rag-explained)',
           ],
         },
 
@@ -1880,7 +1888,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'O prompt engineering está se tornando menos importante à medida que os modelos melhoram?',
-              a: 'Não — modelos mais capazes respondem melhor a prompts bem estruturados, não pior. Os ganhos do bom prompting aumentam à medida que o modelo se torna mais capaz de seguir instruções precisas. O que mudou é o nível de prompt engineering necessário para tarefas simples. Mas para outputs complexos em nível de produção, o prompting estruturado continua sendo a alavanca mais confiável disponível.',
+              a: 'Não — modelos mais capazes respondem melhor a prompts bem estruturados, não pior. Os ganhos do bom prompting aumentam à medida que o modelo se torna mais capaz de seguir instruções precisas. O que mudou é o nível de prompt engineering necessário para tarefas simples. Mas para outputs complexos em nível de produção, o prompting estruturado costuma ser uma das alavancas mais eficazes, ao lado de recuperação, escolha do modelo e fine-tuning.',
             },
             {
               q: 'Qual é a diferença entre prompt engineering e context engineering?',
@@ -1916,7 +1924,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Modelos melhores tornam o prompt engineering irrelevante.',
-              problem: 'Um modelo mais capaz é como uma pessoa mais capaz: responde *melhor* a instruções claras, não pior. Os ganhos de um bom prompting crescem com a capacidade do modelo. O que muda é o *tipo* de prompting necessário, não se ele é necessário.',
+              problem: 'Um modelo mais capaz é como uma pessoa mais capaz: responde *melhor* a instruções claras, não pior. Os ganhos de um bom prompting podem crescer com a capacidade do modelo. O que muda é o *tipo* de prompting necessário, não se ele é necessário.',
               fix: 'Presuma que o prompting continuará central no trabalho com IA. O que evolui é o nível de detalhe e de estrutura exigido. Com modelos mais fracos, pode ser preciso uma estrutura passo a passo explícita; com modelos mais fortes, uma instrução clara de uma linha pode bastar, mas essa objetividade também é uma escolha de prompt engineering.',
             },
             {
@@ -1931,11 +1939,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: 'Leituras relacionadas',
           items: [
-            { title: 'Chain-of-Thought Prompting: Faça a IA mostrar seu raciocínio', url: '/prompt-engineering/chain-of-thought-prompting' },
-            { title: 'Zero-Shot vs. Few-Shot Prompting', url: '/prompt-engineering/zero-shot-vs-few-shot' },
-            { title: 'RAG Explicado: Como Ancorar Respostas de IA em Dados Reais (2026)', url: '/prompt-engineering/rag-explained' },
-            { title: 'Janelas de contexto explicadas: Por que a IA esquece (e o que fazer)', url: '/prompt-engineering/context-windows-explained-why-ai-forgets' },
-            { title: 'Tokens, Custos e Limites: A Economia do Prompting de IA em 2026', url: '/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
+            { title: 'Chain-of-Thought Prompting: Faça a IA mostrar seu raciocínio', url: '/pt/prompt-engineering/chain-of-thought-prompting' },
+            { title: 'Zero-Shot vs. Few-Shot Prompting', url: '/pt/prompt-engineering/zero-shot-vs-few-shot' },
+            { title: 'RAG Explicado: Como Ancorar Respostas de IA em Dados Reais (2026)', url: '/pt/prompt-engineering/rag-explained' },
+            { title: 'Janelas de contexto explicadas: Por que a IA esquece (e o que fazer)', url: '/pt/prompt-engineering/context-windows-explained-why-ai-forgets' },
+            { title: 'Tokens, Custos e Limites: A Economia do Prompting de IA em 2026', url: '/pt/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
           ],
         },
 
@@ -1957,6 +1965,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Google (2024). Gemini 1.5 announcement](https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/) — Google, anúncio do Gemini 1.5 (15 de fevereiro de 2024): contexto de 1 milhão de tokens em prévia limitada.',
             '[DeepSeek-AI (2025). "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning." arXiv:2501.12948](https://arxiv.org/abs/2501.12948) — DeepSeek-R1: raciocínio por aprendizado por reforço (janeiro de 2025).',
             '[Fortune (2023). Report on new AI jobs, 9 March 2023](https://fortune.com/2023/03/09/new-ai-jobs-chatgpt-like-assistants/) — Fortune (9 de março de 2023): reportagem sobre a faixa salarial da vaga de prompt engineer da Anthropic.',
+            '[Reuters (2023). "ChatGPT sets record for fastest-growing user base - analyst note", syndicated by The Star, 2 February 2023](https://www.thestar.com.my/tech/tech-news/2023/02/02/chatgpt-sets-record-for-fastest-growing-user-base---analyst-note) — estimativa da UBS de cerca de 100 milhões de usuários ativos mensais em janeiro de 2023; a comparação com TikTok e Instagram é atribuída à Sensor Tower.',
+            '[Tech Startups (2022). "ChatGPT crosses 1 million users five days after launch", 5 December 2022](https://techstartups.com/2022/12/05/chatgpt-crosses-1-million-users-five-days-launch/) — reportagem que cita a publicação de Sam Altman de 5 de dezembro de 2022: "ChatGPT launched on wednesday. today it crossed 1 million users!"',
           ],
         },
 
@@ -1975,7 +1985,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ogTitle: 'Comment le prompt engineering a évolué : de GPT-3 au context design (2020–2026)',
       twitterTitle: 'Comment le prompt engineering est passé de « écrire un meilleur prompt » au context design en 6 ans',
       publishDate: '2026-03-01',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       readTime: '10 min de lecture',
       educationalLevel: 'Beginner',
       audience: 'Travailleurs du savoir et développeurs découvrant l\'histoire de l\'ingénierie des prompts et des techniques d\'IA',
@@ -1987,7 +1997,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Chain-of-Thought (2022) :** Wei et al. ont montré que la structure du prompt peut déclencher un raisonnement pas à pas ; PaLM 540B est passé de 17,9 % à 56,9 % sur GSM8K',
         '**ChatGPT (nov. 2022) :** 1 million d\'utilisateurs en 5 jours (selon Sam Altman, PDG d\'OpenAI) ; environ 100 millions d\'utilisateurs actifs mensuels estimés en janvier 2023 (UBS, via Reuters)',
         '**Marché de l\'emploi (2023) :** une offre d\'Anthropic « Prompt Engineer and Librarian » annonçait 175 000 à 335 000 $ (Fortune, mars 2023)',
-        '**GPT-4 et frameworks (2023) :** l\'entrée d\'images et les frameworks publiés (CO-STAR, SPECS, RISEN) ont fait du prompting une discipline enseignable',
+        '**GPT-4 (2023) et frameworks :** l\'entrée d\'images et les frameworks publiés (CO-STAR de GovTech Singapour, 2023 ; SPECS, RISEN) ont fait du prompting une discipline enseignable',
         '**Context design (2024–2026) :** LLM à poids ouverts, fenêtres de contexte de plus d\'1 M de tokens et orchestration d\'agents ont déplacé l\'attention du réglage des prompts vers l\'ingénierie de contexte au niveau du système',
       ],
       toc: [
@@ -2014,7 +2024,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Le prompt engineering est-il mort ? Évolution 2020–2026',
         description: 'Le prompt engineering n\'est pas mort, il a changé : chronologie sourcée du few-shot de GPT-3 (2020) au chain-of-thought, à ChatGPT puis au context design.',
         datePublished: '2026-03-01',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/fr/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'fr',
         keywords: ['historique ingénierie prompts', 'GPT-3 few-shot learning', 'chain-of-thought prompting', 'ChatGPT', 'context engineering', 'ingénierie prompts', 'InstructGPT', 'RLHF'],
@@ -2048,7 +2058,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'Qui a inventé le terme « prompt engineering » en premier ?', acceptedAnswer: { '@type': 'Answer', text: 'L\'origine exacte est débattue et aucune personne n\'est reconnue comme l\'inventrice du terme. Des articles de recherche décrivaient déjà des méthodes fondées sur les prompts en 2021, et l\'expression s\'est répandue en 2022 puis après ChatGPT. L\'article Wikipédia sur le prompt engineering donne un aperçu de l\'histoire.' } },
           { '@type': 'Question', name: 'Pourquoi le prompt engineering a-t-il explosé en popularité après ChatGPT ?', acceptedAnswer: { '@type': 'Answer', text: 'ChatGPT était l\'un des premiers modèles IA polyvalents que des millions de non-chercheurs pouvaient utiliser immédiatement, gratuitement, sans écrire de code. L\'écart entre un prompt bien conçu et un vague était visible et immédiatement conséquent — de meilleurs prompts produisaient des sorties sensiblement meilleures. Cette boucle de rétroaction, vécue simultanément par des millions de personnes, a transformé le prompt engineering d\'un concept de recherche en une compétence de masse.' } },
           { '@type': 'Question', name: 'Comment les articles de recherche ont-ils influencé les techniques de prompting du monde réel ?', acceptedAnswer: { '@type': 'Answer', text: 'Le transfert a été inhabituellement rapide pour la recherche en IA. Le prompting Chain-of-Thought (Wei et al., 2022) est passé d\'un article académique à une technique de praticien largement utilisée en quelques mois, en partie parce qu\'il ne nécessitait aucun outillage — juste un changement dans la façon d\'écrire le prompt. Le few-shot prompting tiré de l\'article GPT-3 (Brown et al., 2020) était immédiatement adoptable par quiconque avait accès à l\'API. L\'accessibilité des techniques a accéléré leur diffusion.' } },
-          { '@type': 'Question', name: 'Le prompt engineering devient-il moins important à mesure que les modèles s\'améliorent ?', acceptedAnswer: { '@type': 'Answer', text: 'Non — les modèles plus capables répondent mieux aux prompts bien structurés, pas moins. Les gains d\'un bon prompting augmentent à mesure que le modèle devient plus capable de suivre des instructions précises. Ce qui a changé, c\'est le niveau de prompt engineering requis pour les tâches simples : les questions conversationnelles nécessitent désormais moins de travail qu\'en 2021. Mais pour les sorties complexes de qualité production, le prompting structuré reste le levier le plus fiable disponible.' } },
+          { '@type': 'Question', name: 'Le prompt engineering devient-il moins important à mesure que les modèles s\'améliorent ?', acceptedAnswer: { '@type': 'Answer', text: 'Non — les modèles plus capables répondent mieux aux prompts bien structurés, pas moins. Les gains d\'un bon prompting augmentent à mesure que le modèle devient plus capable de suivre des instructions précises. Ce qui a changé, c\'est le niveau de prompt engineering requis pour les tâches simples : les questions conversationnelles nécessitent désormais moins de travail qu\'en 2021. Mais pour les sorties complexes de qualité production, le prompting structuré est généralement l\'un des leviers les plus efficaces, aux côtés de la récupération, du choix du modèle et du fine-tuning.' } },
           { '@type': 'Question', name: 'Quelle est la différence entre le prompt engineering et l\'ingénierie de contexte ?', acceptedAnswer: { '@type': 'Answer', text: 'Le prompt engineering désigne généralement la conception de l\'entrée textuelle d\'un modèle pour améliorer sa sortie. L\'ingénierie de contexte est un concept plus large et plus récent qui désigne l\'orchestration de tout ce qui se trouve dans la fenêtre de contexte du modèle : le prompt système, les documents récupérés, l\'historique de conversation, les sorties d\'outils et l\'entrée utilisateur — tous composés délibérément. L\'ingénierie de contexte traite le prompt comme un composant dans un système conçu, pas comme un artefact autonome.' } },
           { '@type': 'Question', name: 'Les outils automatisés remplaceront-ils le besoin de comprendre le prompt engineering ?', acceptedAnswer: { '@type': 'Answer', text: 'Les outils automatisés comme DSPy peuvent optimiser la formulation des prompts dans des objectifs définis, mais ils nécessitent qu\'un humain spécifie quel est l\'objectif, quelles contraintes s\'appliquent et comment évaluer le succès. Comprendre les principes du prompt engineering reste nécessaire pour utiliser ces outils efficacement — et pour diagnostiquer quand ils produisent le mauvais résultat. L\'automatisation supprime une partie de l\'itération manuelle ; elle ne supprime pas le besoin d\'une réflexion structurée.' } },
           { '@type': 'Question', name: 'Le prompt engineering est-il mort en 2026 ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. La discipline s\'est déplacée, elle n\'a pas disparu. À mesure que les modèles gagnent en capacité, le travail passe des astuces de syntaxe et de mise en forme au context design : structurer les entrées, gérer la récupération et composer les sorties d\'outils. L\'intitulé « Prompt Engineer » se resserre, mais la compétence sous-jacente est présente dans tous les rôles qui utilisent l\'IA : développeur, analyste, marketeur, chercheur. Bien cadrer la tâche, fournir le contexte pertinent et préciser le format de sortie continuent de déterminer l\'utilité de la réponse d\'un modèle.' } },
@@ -2072,7 +2082,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: 5, name: 'Lancement de ChatGPT (2022 (nov.))', description: 'A amené le prompting au grand public ; des millions de personnes ont commencé à expérimenter en quelques jours' },
           { '@type': 'ListItem', position: 6, name: 'Les offres de « prompt engineer » attirent l\'attention ; une offre d\'Anthropic annonce 175 000–335 000 $ (2023 (T1))', description: 'A rendu le prompt engineering visible comme métier possible, bien que le rôle ait été très débattu' },
           { '@type': 'ListItem', position: 7, name: 'Sortie de GPT-4 avec entrée d\'images (2023 (mars))', description: 'A étendu le prompting au-delà du texte aux images ; le contexte de 128 000 tokens a suivi avec GPT-4 Turbo (nov. 2023)' },
-          { '@type': 'ListItem', position: 8, name: 'Frameworks comme CRAFT, CO-STAR, SPECS, RISEN et TRACE ; guides officiels d\'OpenAI et de Google (2023)', description: 'A transformé le savoir-faire individuel en modèles réutilisables et enseignables' },
+          { '@type': 'ListItem', position: 8, name: 'Frameworks comme CO-STAR (GovTech Singapour, 2023) et d\'autres modèles publiés (CRAFT, SPECS, RISEN, TRACE) ; guides officiels d\'OpenAI et de Google', description: 'A transformé le savoir-faire individuel en modèles réutilisables et enseignables' },
           { '@type': 'ListItem', position: 9, name: 'APE (Zhou et al.) et DSPy (Khattab et al.) : prompts optimisés par LLM (2022–2023)', description: 'A montré que les LLM peuvent écrire et ajuster des prompts, rendant l\'optimisation automatique praticable' },
           { '@type': 'ListItem', position: 10, name: 'Llama 3 (avr.) et Gemini 1.5 Pro avec préversion d\'un contexte de 1 M de tokens (févr.) (2024)', description: 'Les modèles à poids ouverts pour déploiement privé et les contextes très longs ont déplacé l\'attention vers l\'ingénierie de contexte' },
           { '@type': 'ListItem', position: 11, name: 'Modèles de raisonnement : OpenAI o1 (sept. 2024), DeepSeek-R1 (janv. 2025), Claude 3.7 Sonnet avec extended thinking (févr. 2025) (2024–2025)', description: 'Ces modèles raisonnent pas à pas en interne, si bien que le chain-of-thought explicite compte moins pour eux' },
@@ -2124,7 +2134,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**L\'histoire moderne du prompt engineering commence en pratique avec GPT-3.** En mai 2020, des chercheurs d\'OpenAI ont publié « [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) » (Brown et al.), qui décrit GPT-3, un modèle de 175 milliards de paramètres. L\'article a montré que fournir quelques exemples de la tâche directement dans le prompt, sans aucune mise à jour des poids du modèle, améliorait les performances sur de nombreuses tâches en aval.',
             'Ce fut la graine du prompt engineering comme discipline. Chercheurs et développeurs ont compris que le même modèle pouvait devenir traducteur, outil de synthèse, générateur de code ou système de questions-réponses simplement en changeant la rédaction du prompt. Le modèle n\'avait pas besoin d\'être réentraîné : il lui fallait un meilleur prompt. Cette idée a redéfini ce qu\'est un prompt : non plus seulement une entrée, mais un artefact de conception.',
             'Brown et al. ont constaté que les performances few-shot s\'amélioraient en général avec la taille du modèle, GPT-3 (175 milliards de paramètres) étant globalement la variante la plus performante. Cela a relié échelle et apprentissage par prompt, et fait de la qualité du prompt une variable que les praticiens, pas seulement les chercheurs, pouvaient maîtriser.',
-            'Voir [Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot) pour un guide pratique de la technique rendue célèbre par GPT-3.',
+            'Voir [Zero-Shot vs. Few-Shot Prompting](/fr/prompt-engineering/zero-shot-vs-few-shot) pour un guide pratique de la technique rendue célèbre par GPT-3.',
           ],
         },
 
@@ -2143,7 +2153,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**L\'apparition du prompting chain-of-thought (CoT) en 2022 a été l\'une des avancées techniques les plus importantes de la courte histoire de la discipline.** Wei et al. (Google) ont publié « [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903) » et montré que donner au modèle des exemples résolus avec étapes intermédiaires améliorait les performances en arithmétique, en raisonnement de bon sens et en raisonnement symbolique. Dans un résultat phare, le prompting chain-of-thought a fait passer la précision de PaLM 540B sur GSM8K, un benchmark de mathématiques de niveau primaire, de 17,9 % à 56,9 %, un gain obtenu en changeant le prompt, sans entraînement supplémentaire. L\'implication était profonde : la structure du prompt pouvait activer un comportement de raisonnement différent, pas seulement des faits différents.',
             'Des techniques apparentées ont suivi rapidement. Zhou et al. ont introduit le [least-to-most prompting](https://arxiv.org/abs/2205.10625), qui décompose les problèmes complexes en une suite de sous-problèmes plus simples résolus dans l\'ordre. Ces approches ont fait du prompt engineering un outil pour obtenir un raisonnement structuré de modèles non entraînés explicitement à cela, et non plus un simple exercice de mise en forme. Le prompting était devenu un échafaudage pour la cognition.',
-            'Pour le guide complet de la technique, voir [Chain-of-Thought Prompting : Faites penser l\'IA à haute voix](/prompt-engineering/chain-of-thought-prompting) et [Chaînage de Prompts : Décomposer les Tâches Complexes en Étapes Gagnantes](/prompt-engineering/prompt-chaining).',
+            'Pour le guide complet de la technique, voir [Chain-of-Thought Prompting : Faites penser l\'IA à haute voix](/fr/prompt-engineering/chain-of-thought-prompting) et [Chaînage de Prompts : Décomposer les Tâches Complexes en Étapes Gagnantes](/fr/prompt-engineering/prompt-chaining).',
           ],
         },
 
@@ -2170,7 +2180,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'OpenAI a annoncé GPT-4 en mars 2023 avec l\'entrée d\'images en plus du texte (d\'abord en aperçu de recherche), ouvrant le prompt engineering à des tâches visuelles comme décrire des images, comparer des schémas ou annoter des graphiques ; des fenêtres de contexte plus grandes ont suivi (128 000 tokens avec GPT-4 Turbo en novembre 2023). Gemini de Google (décembre 2023) et les modèles Claude 3 d\'Anthropic avec vision (mars 2024) ont apporté des options multimodales d\'autres éditeurs.',
             'La même période a vu la formalisation des bonnes pratiques. OpenAI a publié son [guide officiel du prompt engineering](https://developers.openai.com/api/docs/guides/prompt-engineering). Google Cloud a publié son propre [guide du prompt engineering](https://cloud.google.com/discover/what-is-prompt-engineering). Des auteurs et équipes indépendants ont publié des frameworks comme CRAFT, CO-STAR, SPECS, RISEN et TRACE, qui offraient des modèles reproductibles pour structurer les prompts et réduisaient le recours au tâtonnement. Les auteurs et les dates de publication de ces frameworks varient selon les sources, et aucun n\'est une norme officielle.',
-            'Ces frameworks ont marqué la maturation du prompt engineering, d\'une compétence personnelle à une pratique enseignable et partageable. Voir [Quel framework de prompt choisir ? (2026)](/prompt-engineering/which-prompt-framework-should-you-use) pour choisir entre eux et [Au-delà du texte: Comment utiliser des images dans vos prompts](/prompt-engineering/beyond-text-how-to-prompt-with-images) pour la dimension multimodale.',
+            'Ces frameworks ont marqué la maturation du prompt engineering, d\'une compétence personnelle à une pratique enseignable et partageable. Voir [Quel framework de prompt choisir ? (2026)](/fr/prompt-engineering/which-prompt-framework-should-you-use) pour choisir entre eux et [Au-delà du texte: Comment utiliser des images dans vos prompts](/fr/prompt-engineering/beyond-text-how-to-prompt-with-images) pour la dimension multimodale.',
           ],
         },
 
@@ -2180,7 +2190,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'Un développement marquant vers 2023 a été la recherche montrant que les LLM peuvent optimiser des prompts aussi bien que les humains. Zhou et al. ont publié en novembre 2022 « [Large Language Models Are Human-Level Prompt Engineers](https://arxiv.org/abs/2211.01910) » (APE) : un LLM générait et évaluait des instructions candidates et égalait ou dépassait les instructions rédigées par des humains sur 19 des 24 tâches testées. Le framework DSPy, issu de chercheurs de Stanford ([Khattab et al., octobre 2023](https://arxiv.org/abs/2310.03714)), est allé plus loin : le développeur décrit ce que le prompt doit accomplir et la formulation est compilée automatiquement.',
             'Parallèlement, la génération augmentée par récupération (RAG), introduite en 2020 par [Lewis et al.](https://arxiv.org/abs/2005.11401) chez Facebook AI Research (aujourd\'hui Meta), est devenue un schéma central des systèmes d\'IA en production. Le RAG injectait des documents récupérés directement dans le contexte du prompt, ancrant les réponses dans des sources réelles et à jour plutôt que d\'exiger que le prompt contienne tous les faits. L\'accent est ainsi passé de « comment faire connaître cela au modèle ? » à « comment structurer le contexte pour que le modèle l\'utilise correctement ? ».',
-            'Voir [RAG expliqué : ancrer les réponses IA dans des données réelles (2026)](/prompt-engineering/rag-explained) et [Self-Consistency Prompting : Plusieurs Réponses, Choisir le Consensus](/prompt-engineering/self-consistency-prompting) pour les techniques clés de cette période.',
+            'Voir [RAG expliqué : ancrer les réponses IA dans des données réelles (2026)](/fr/prompt-engineering/rag-explained) et [Self-Consistency Prompting : Plusieurs Réponses, Choisir le Consensus](/fr/prompt-engineering/self-consistency-prompting) pour les techniques clés de cette période.',
           ],
         },
 
@@ -2224,7 +2234,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Année': '2022 (nov.)', 'Jalon': 'Lancement de ChatGPT', 'Pourquoi c\'est important': 'A amené le prompting au grand public ; des millions de personnes ont commencé à expérimenter en quelques jours' },
             { 'Année': '2023 (T1)', 'Jalon': 'Les offres de « prompt engineer » attirent l\'attention ; une offre d\'Anthropic annonce 175 000–335 000 $', 'Pourquoi c\'est important': 'A rendu le prompt engineering visible comme métier possible, bien que le rôle ait été très débattu' },
             { 'Année': '2023 (mars)', 'Jalon': 'Sortie de GPT-4 avec entrée d\'images', 'Pourquoi c\'est important': 'A étendu le prompting au-delà du texte aux images ; le contexte de 128 000 tokens a suivi avec GPT-4 Turbo (nov. 2023)' },
-            { 'Année': '2023', 'Jalon': 'Frameworks comme CRAFT, CO-STAR, SPECS, RISEN et TRACE ; guides officiels d\'OpenAI et de Google', 'Pourquoi c\'est important': 'A transformé le savoir-faire individuel en modèles réutilisables et enseignables' },
+            { 'Année': '2023', 'Jalon': 'Frameworks comme CO-STAR (GovTech Singapour, 2023) et d\'autres modèles publiés (CRAFT, SPECS, RISEN, TRACE) ; guides officiels d\'OpenAI et de Google', 'Pourquoi c\'est important': 'A transformé le savoir-faire individuel en modèles réutilisables et enseignables' },
             { 'Année': '2022–2023', 'Jalon': 'APE (Zhou et al.) et DSPy (Khattab et al.) : prompts optimisés par LLM', 'Pourquoi c\'est important': 'A montré que les LLM peuvent écrire et ajuster des prompts, rendant l\'optimisation automatique praticable' },
             { 'Année': '2024', 'Jalon': 'Llama 3 (avr.) et Gemini 1.5 Pro avec préversion d\'un contexte de 1 M de tokens (févr.)', 'Pourquoi c\'est important': 'Les modèles à poids ouverts pour déploiement privé et les contextes très longs ont déplacé l\'attention vers l\'ingénierie de contexte' },
             { 'Année': '2024–2025', 'Jalon': 'Modèles de raisonnement : OpenAI o1 (sept. 2024), DeepSeek-R1 (janv. 2025), Claude 3.7 Sonnet avec extended thinking (févr. 2025)', 'Pourquoi c\'est important': 'Ces modèles raisonnent pas à pas en interne, si bien que le chain-of-thought explicite compte moins pour eux' },
@@ -2241,11 +2251,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'L\'ère RAG et de la conception de contexte nous a donné la compréhension que les prompts n\'existent pas en isolation — ils sont composés avec des données récupérées, des instructions système et des sorties d\'outils pour former un contexte complet. Et l\'ère du prompting automatisé nous a rappelé que les principes d\'un bon prompting sont mesurables : les prompts mieux structurés produisent de meilleures sorties de façon qui peut être évaluée et optimisée systématiquement.',
           ],
           items: [
-            'Techniques de raisonnement de 2022 → [Chain-of-Thought Prompting : Faites penser l\'IA à haute voix](/prompt-engineering/chain-of-thought-prompting) et [Tree of Thought et ReAct : Techniques de raisonnement avancées pour les problèmes complexes](/prompt-engineering/tree-of-thought-and-react)',
-            'Développement de frameworks de 2023 → [Quel framework de prompt choisir ? (2026)](/prompt-engineering/which-prompt-framework-should-you-use)',
-            'Croissance des fenêtres de contexte → [Fenêtres de contexte expliquées : Pourquoi l\'IA oublie (et comment y remédier)](/prompt-engineering/context-windows-explained-why-ai-forgets)',
-            'Économie des tokens à travers les générations de modèles → [Tokens, Coûts et Limites : L\'économie du prompt engineering](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
-            'RAG comme complément au prompting pur → [RAG expliqué : ancrer les réponses IA dans des données réelles (2026)](/prompt-engineering/rag-explained)',
+            'Techniques de raisonnement de 2022 → [Chain-of-Thought Prompting : Faites penser l\'IA à haute voix](/fr/prompt-engineering/chain-of-thought-prompting) et [Tree of Thought et ReAct : Techniques de raisonnement avancées pour les problèmes complexes](/fr/prompt-engineering/tree-of-thought-and-react)',
+            'Développement de frameworks de 2023 → [Quel framework de prompt choisir ? (2026)](/fr/prompt-engineering/which-prompt-framework-should-you-use)',
+            'Croissance des fenêtres de contexte → [Fenêtres de contexte expliquées : Pourquoi l\'IA oublie (et comment y remédier)](/fr/prompt-engineering/context-windows-explained-why-ai-forgets)',
+            'Économie des tokens à travers les générations de modèles → [Tokens, Coûts et Limites : L\'économie du prompt engineering](/fr/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
+            'RAG comme complément au prompting pur → [RAG expliqué : ancrer les réponses IA dans des données réelles (2026)](/fr/prompt-engineering/rag-explained)',
           ],
         },
 
@@ -2271,7 +2281,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Le prompt engineering devient-il moins important à mesure que les modèles s\'améliorent ?',
-              a: 'Non — les modèles plus capables répondent mieux aux prompts bien structurés, pas moins. Les gains d\'un bon prompting augmentent à mesure que le modèle devient plus capable de suivre des instructions précises. Ce qui a changé, c\'est le niveau de prompt engineering requis pour les tâches simples : les questions conversationnelles nécessitent désormais moins de travail qu\'en 2021. Mais pour les sorties complexes de qualité production, le prompting structuré reste le levier le plus fiable disponible.',
+              a: 'Non — les modèles plus capables répondent mieux aux prompts bien structurés, pas moins. Les gains d\'un bon prompting augmentent à mesure que le modèle devient plus capable de suivre des instructions précises. Ce qui a changé, c\'est le niveau de prompt engineering requis pour les tâches simples : les questions conversationnelles nécessitent désormais moins de travail qu\'en 2021. Mais pour les sorties complexes de qualité production, le prompting structuré est généralement l\'un des leviers les plus efficaces, aux côtés de la récupération, du choix du modèle et du fine-tuning.',
             },
             {
               q: 'Quelle est la différence entre le prompt engineering et l\'ingénierie de contexte ?',
@@ -2307,7 +2317,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'De meilleurs modèles rendent le prompt engineering inutile.',
-              problem: 'Un modèle plus capable est comme une personne plus capable : il réagit *mieux* à des instructions claires, pas moins bien. Les gains d\'un bon prompting augmentent avec la capacité du modèle. Ce qui change, c\'est le *type* de prompting nécessaire, pas sa nécessité.',
+              problem: 'Un modèle plus capable est comme une personne plus capable : il réagit *mieux* à des instructions claires, pas moins bien. Les gains d\'un bon prompting peuvent augmenter avec la capacité du modèle. Ce qui change, c\'est le *type* de prompting nécessaire, pas sa nécessité.',
               fix: 'Partez du principe que le prompting restera central dans le travail avec l\'IA. Ce qui évolue, c\'est le niveau de détail et d\'échafaudage requis. Avec des modèles plus faibles, une structure pas à pas explicite peut être nécessaire ; avec des modèles plus forts, une consigne claire d\'une ligne peut suffire, mais cette franchise est elle-même un choix de prompt engineering.',
             },
             {
@@ -2322,11 +2332,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: 'Lectures associées',
           items: [
-            { title: 'Chain-of-Thought Prompting : Faites penser l\'IA à haute voix', url: '/prompt-engineering/chain-of-thought-prompting' },
-            { title: 'Zero-Shot vs. Few-Shot Prompting', url: '/prompt-engineering/zero-shot-vs-few-shot' },
-            { title: 'RAG expliqué : ancrer les réponses IA dans des données réelles (2026)', url: '/prompt-engineering/rag-explained' },
-            { title: 'Fenêtres de contexte expliquées : Pourquoi l\'IA oublie (et comment y remédier)', url: '/prompt-engineering/context-windows-explained-why-ai-forgets' },
-            { title: 'Tokens, Coûts et Limites : L\'économie du prompt engineering', url: '/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
+            { title: 'Chain-of-Thought Prompting : Faites penser l\'IA à haute voix', url: '/fr/prompt-engineering/chain-of-thought-prompting' },
+            { title: 'Zero-Shot vs. Few-Shot Prompting', url: '/fr/prompt-engineering/zero-shot-vs-few-shot' },
+            { title: 'RAG expliqué : ancrer les réponses IA dans des données réelles (2026)', url: '/fr/prompt-engineering/rag-explained' },
+            { title: 'Fenêtres de contexte expliquées : Pourquoi l\'IA oublie (et comment y remédier)', url: '/fr/prompt-engineering/context-windows-explained-why-ai-forgets' },
+            { title: 'Tokens, Coûts et Limites : L\'économie du prompt engineering', url: '/fr/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
           ],
         },
 
@@ -2348,6 +2358,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Google (2024). Gemini 1.5 announcement](https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/) — Google, annonce de Gemini 1.5 (15 février 2024) : contexte de 1 M de tokens en préversion limitée.',
             '[DeepSeek-AI (2025). "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning." arXiv:2501.12948](https://arxiv.org/abs/2501.12948) — DeepSeek-R1 : raisonnement par apprentissage par renforcement (janvier 2025).',
             '[Fortune (2023). Report on new AI jobs, 9 March 2023](https://fortune.com/2023/03/09/new-ai-jobs-chatgpt-like-assistants/) — Fortune (9 mars 2023) : article sur la fourchette salariale de l\'offre d\'Anthropic pour prompt engineers.',
+            '[Reuters (2023). "ChatGPT sets record for fastest-growing user base - analyst note", syndicated by The Star, 2 February 2023](https://www.thestar.com.my/tech/tech-news/2023/02/02/chatgpt-sets-record-for-fastest-growing-user-base---analyst-note) — estimation d\'UBS d\'environ 100 millions d\'utilisateurs actifs mensuels en janvier 2023 ; la comparaison avec TikTok et Instagram est attribuée à Sensor Tower.',
+            '[Tech Startups (2022). "ChatGPT crosses 1 million users five days after launch", 5 December 2022](https://techstartups.com/2022/12/05/chatgpt-crosses-1-million-users-five-days-launch/) — article de presse citant la publication de Sam Altman du 5 décembre 2022 : « ChatGPT launched on wednesday. today it crossed 1 million users! »',
           ],
         },
 
@@ -2366,7 +2378,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ogTitle: 'プロンプトエンジニアリングの進化：GPT-3からコンテキスト設計へ（2020–2026）',
       twitterTitle: 'プロンプトエンジニアリングは6年で「良いプロンプトを書く」からコンテキスト設計へ',
       publishDate: '2026-03-01',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       readTime: '10分で読める',
       educationalLevel: 'Beginner',
       audience: 'プロンプトエンジニアリングの歴史とAI技術を学ぶ知識労働者と開発者',
@@ -2378,7 +2390,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**思考の連鎖（2022年）：** Wei et al.が、プロンプトの構造によってステップごとの推論を引き出せることを示した。PaLM 540BのGSM8K正答率は17.9%から56.9%へ',
         '**ChatGPT（2022年11月）：** 5日で100万ユーザーを突破（OpenAIのサム・アルトマンCEOによる）。2023年1月には月間アクティブユーザー約1億人と推定（UBS、Reuters経由）',
         '**求人市場（2023年）：** Anthropicの「Prompt Engineer and Librarian」求人が17.5万〜33.5万ドルを提示（Fortune、2023年3月）',
-        '**GPT-4とフレームワーク（2023年）：** 画像入力と公開されたフレームワーク（CO-STAR、SPECS、RISEN）により、プロンプティングは教えられる分野になった',
+        '**GPT-4（2023年）とフレームワーク：** 画像入力と公開されたフレームワーク（シンガポールGovTechのCO-STAR、2023年。SPECS、RISEN）により、プロンプティングは教えられる分野になった',
         '**コンテキスト設計（2024〜2026年）：** オープンウェイトLLM、100万トークン超のコンテキストウィンドウ、エージェントのオーケストレーションにより、焦点はプロンプトの微調整からシステムレベルのコンテキストエンジニアリングへ移った',
       ],
       toc: [
@@ -2405,7 +2417,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'プロンプトエンジニアリングは終わり？進化2020–2026',
         description: 'プロンプトエンジニアリングは終わらず形を変えました。GPT-3のフューショット（2020年）から思考の連鎖、ChatGPT、コンテキスト設計までを出典付きで解説します。',
         datePublished: '2026-03-01',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/ja/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'ja',
         keywords: ['プロンプトエンジニアリング歴史', 'GPT-3 フューショット学習', 'Chain-of-Thought プロンプティング', 'ChatGPT', 'コンテキストエンジニアリング', 'プロンプトエンジニアリング タイムライン', 'InstructGPT', 'RLHF'],
@@ -2439,7 +2451,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: '「プロンプトエンジニアリング」という用語は誰が最初に作ったのですか？', acceptedAnswer: { '@type': 'Answer', text: '正確な起源は議論されており、この用語を考案したとされる特定の人物はいません。2021年にはすでに研究論文がプロンプトに基づく手法を説明しており、この言葉は2022年とChatGPT後に広く使われるようになりました。Wikipediaのプロンプトエンジニアリングの記事が経緯を概観しています。' } },
           { '@type': 'Question', name: 'ChatGPT後にプロンプトエンジニアリングがなぜ爆発的に普及したのですか？', acceptedAnswer: { '@type': 'Answer', text: 'ChatGPTは、何百万もの非研究者がコードを書かずに無料で即座に使用できる最初期の汎用AIモデルの一つでした。巧みに作られたプロンプトと漠然としたプロンプトのギャップは目に見えて即座に重要でした — より良いプロンプトは使えるほど良い出力を生成しました。そのフィードバックループが何百万もの人々によって同時に経験されたことで、プロンプトエンジニアリングは研究概念から大衆スキルへと変わりました。' } },
           { '@type': 'Question', name: '研究論文は実際のプロンプティングテクニックにどのように影響を与えましたか？', acceptedAnswer: { '@type': 'Answer', text: 'AI研究としては移転が異例に速かったです。思考の連鎖（Chain-of-Thought）プロンプティング（Wei et al.、2022年）は、部分的にはツールを必要としなかったため — プロンプトの書き方を変えるだけ — 、学術論文から数ヶ月以内に広く使われる実践者テクニックになりました。GPT-3論文のフューショットプロンプティング（Brown et al.、2020年）はAPIアクセスを持つ誰もが即座に採用できるものでした。テクニックのアクセスしやすさがその普及を加速しました。' } },
-          { '@type': 'Question', name: 'モデルが改善されるにつれて、プロンプトエンジニアリングは重要でなくなっていますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ — より高性能なモデルは構造化されたプロンプトに対してより良く反応します、より少なくではなく。モデルが精密な指示に従う能力が向上するにつれて、優れたプロンプティングからの利益が増加します。変わったのは、単純なタスクに必要なプロンプトエンジニアリングのレベルです：会話的な質問は2021年よりも作り込みを必要としなくなりました。しかし、複雑な本番グレードの出力には、構造化されたプロンプティングが利用可能な最も信頼できる手段であり続けています。' } },
+          { '@type': 'Question', name: 'モデルが改善されるにつれて、プロンプトエンジニアリングは重要でなくなっていますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ — より高性能なモデルは構造化されたプロンプトに対してより良く反応します、より少なくではなく。モデルが精密な指示に従う能力が向上するにつれて、優れたプロンプティングからの利益が増加します。変わったのは、単純なタスクに必要なプロンプトエンジニアリングのレベルです：会話的な質問は2021年よりも作り込みを必要としなくなりました。しかし、複雑な本番グレードの出力では、構造化されたプロンプティングは、検索、モデル選択、ファインチューニングと並ぶ最も有効な手段の一つであることが多いです。' } },
           { '@type': 'Question', name: 'プロンプトエンジニアリングとコンテキストエンジニアリングの違いは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプトエンジニアリングは通常、出力を改善するためにモデルへのテキスト入力を設計することを指します。コンテキストエンジニアリングは、モデルのコンテキストウィンドウにある全てのものを調整することを指す、より広く・より最近の概念です：システムプロンプト・取得したドキュメント・会話履歴・ツール出力・ユーザー入力 — すべて意図的に組み合わされます。コンテキストエンジニアリングは、プロンプトをスタンドアロンの成果物としてではなく、設計されたシステムの一コンポーネントとして扱います。' } },
           { '@type': 'Question', name: '自動化ツールはプロンプトエンジニアリングを理解する必要性を置き換えるでしょうか？', acceptedAnswer: { '@type': 'Answer', text: 'DSPyのような自動化ツールは定義された目標の中でプロンプトの言い回しを最適化できますが、目標が何か・どのような制約が適用されるか・成功をどのように評価するかを指定するには人間が必要です。プロンプトエンジニアリングの原則を理解することは、これらのツールを効果的に使うために、そして間違った結果を生成したときに診断するために必要であり続けます。自動化は手動のイテレーションの一部を取り除きます；構造化された思考の必要性は取り除きません。' } },
           { '@type': 'Question', name: 'プロンプトエンジニアリングは2026年に時代遅れになっていますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。分野は形を変えただけで、なくなってはいません。モデルが高性能になるにつれ、仕事は構文のコツや書式のテクニックから、入力の構造化、検索の管理、ツール出力の組み合わせといったコンテキスト設計へ移っています。「プロンプトエンジニア」という職名は狭まっていますが、その根底のスキルは、開発者、アナリスト、マーケター、研究者など、AIを使うあらゆる役割に含まれています。タスクの明確な示し方、関連するコンテキスト、指定された出力形式が、モデルの回答の有用性を今も左右します。' } },
@@ -2463,7 +2475,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: 5, name: 'ChatGPTの公開 (2022年（11月）)', description: 'プロンプティングを一般の人々に広げ、数日で何百万人が試し始めた' },
           { '@type': 'ListItem', position: 6, name: '「プロンプトエンジニア」の求人が注目を集め、Anthropicの求人が17.5万〜33.5万ドルを提示 (2023年（第1四半期）)', description: '職業としての可能性を可視化したが、その役割は広く議論された' },
           { '@type': 'ListItem', position: 7, name: '画像入力を備えたGPT-4の公開 (2023年（3月）)', description: 'プロンプティングをテキストから画像へ拡張。12.8万トークンのコンテキストはGPT-4 Turbo（2023年11月）で実現' },
-          { '@type': 'ListItem', position: 8, name: 'CRAFT、CO-STAR、SPECS、RISEN、TRACEなどのフレームワーク、OpenAIとGoogleの公式ガイド (2023年)', description: '個人の技を、再利用できて教えられるテンプレートへ変えた' },
+          { '@type': 'ListItem', position: 8, name: 'CO-STAR（シンガポールGovTech、2023年）などの公開テンプレート（CRAFT、SPECS、RISEN、TRACE）、OpenAIとGoogleの公式ガイド', description: '個人の技を、再利用できて教えられるテンプレートへ変えた' },
           { '@type': 'ListItem', position: 9, name: 'APE（Zhou et al.）とDSPy（Khattab et al.）：LLMによるプロンプト最適化 (2022〜2023年)', description: 'LLMがプロンプトを書き調整できることを示し、自動最適化を実用的にした' },
           { '@type': 'ListItem', position: 10, name: 'Llama 3（4月）と、100万トークンのコンテキストをプレビューしたGemini 1.5 Pro（2月） (2024年)', description: '私的環境にデプロイできるオープンウェイトモデルと超長コンテキストが、焦点をコンテキストエンジニアリングへ移した' },
           { '@type': 'ListItem', position: 11, name: '推論モデル：OpenAI o1（2024年9月）、DeepSeek-R1（2025年1月）、拡張思考を備えたClaude 3.7 Sonnet（2025年2月） (2024〜2025年)', description: 'モデルが内部でステップごとに推論するため、明示的な思考の連鎖プロンプトの重要度は下がる' },
@@ -2515,7 +2527,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**プロンプトエンジニアリングの現代史は、実質的にGPT-3から始まります。** 2020年5月、OpenAIの研究者が「[Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)」（Brown et al.）を発表し、1,750億パラメータのモデルGPT-3を紹介しました。この論文は、目的のタスクの例をいくつかプロンプトに直接含めるだけで、モデルの重みを更新しなくても、多くの下流タスクで性能が向上することを示しました。',
             'これがプロンプトエンジニアリングという分野の種でした。研究者や開発者は、プロンプトの書き方を変えるだけで、同じモデルが翻訳者、要約者、コード生成器、質問応答システムに変わることに気づきました。モデルの再学習は不要で、必要なのはより良いプロンプトでした。この気づきにより、プロンプトは単なる入力ではなく設計上の成果物として捉え直されました。',
             'Brown et al.は、フューショットの性能が一般にモデルサイズとともに向上し、1,750億パラメータのGPT-3が全体として最も強いと報告しました。これはスケールとプロンプトによる学習を結びつけ、プロンプトの質を研究者だけでなく実践者も制御できる変数にしました。',
-            'GPT-3が広めた技法の実践ガイドは、[ゼロショット vs. フューショットプロンプティング](/prompt-engineering/zero-shot-vs-few-shot)を参照してください。',
+            'GPT-3が広めた技法の実践ガイドは、[ゼロショット vs. フューショットプロンプティング](/ja/prompt-engineering/zero-shot-vs-few-shot)を参照してください。',
           ],
         },
 
@@ -2534,7 +2546,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**2022年の思考の連鎖（CoT）プロンプティングの登場は、この分野の短い歴史の中で最も重要な技術的進展の一つでした。** Wei et al.（Google）は「[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)」を発表し、途中の推論ステップを含む解答例をモデルに与えると、算術、常識、記号推論のタスクで性能が向上することを示しました。代表的な結果として、思考の連鎖プロンプティングにより、PaLM 540Bの小学校レベルの算数ベンチマークGSM8Kでの正答率は17.9%から56.9%に上がりました。追加の学習なしに、プロンプトを変えただけで得られた向上です。この意味は大きく、プロンプトの構造は異なる事実だけでなく、異なる推論の振る舞いを引き出せるということでした。',
             '関連する技法がすぐに続きました。Zhou et al.は[least-to-most プロンプティング](https://arxiv.org/abs/2205.10625)を提案し、複雑な問題をより単純なサブ問題の列に分解して順に解きます。これらの手法により、プロンプトエンジニアリングは書式の工夫から、そう訓練されていないモデルに構造化された推論を引き出すための道具へと変わりました。プロンプティングは認知の足場になったのです。',
-            '技法の詳しいガイドは、[Chain-of-Thoughtプロンプティング: AIに推論プロセスを見せさせる](/prompt-engineering/chain-of-thought-prompting)と[プロンプトチェーニング：複雑なタスクを成功する段階に分ける方法](/prompt-engineering/prompt-chaining)を参照してください。',
+            '技法の詳しいガイドは、[Chain-of-Thoughtプロンプティング: AIに推論プロセスを見せさせる](/ja/prompt-engineering/chain-of-thought-prompting)と[プロンプトチェーニング：複雑なタスクを成功する段階に分ける方法](/ja/prompt-engineering/prompt-chaining)を参照してください。',
           ],
         },
 
@@ -2561,7 +2573,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '2023年3月にOpenAIが発表したGPT-4は、テキストに加えて画像入力に対応し（当初は研究プレビュー）、画像の説明、図の比較、グラフへの注釈といった視覚タスクにプロンプトエンジニアリングを広げました。その後、より大きなコンテキストウィンドウ（2023年11月のGPT-4 Turboで12.8万トークン）も続きました。GoogleのGemini（2023年12月）や、画像理解を備えたAnthropicのClaude 3モデル（2024年3月）が、他社のマルチモーダルな選択肢を加えました。',
             '同じ時期に、ベストプラクティスの体系化が進みました。OpenAIは[公式のプロンプトエンジニアリングガイド](https://developers.openai.com/api/docs/guides/prompt-engineering)を公開し、Google Cloudも独自の[プロンプトエンジニアリングガイド](https://cloud.google.com/discover/what-is-prompt-engineering)を公開しました。独立した著者やチームは、CRAFT、CO-STAR、SPECS、RISEN、TRACEなどのフレームワークを公開し、プロンプトを構造化する再現可能なテンプレートを実践者に提供して、試行錯誤への依存を減らしました。これらのフレームワークの著者や公開時期は情報源によって異なり、公式の標準となっているものはありません。',
-            'これらのフレームワークは、プロンプトエンジニアリングが個人のスキルから、教えて共有できる実践へと成熟したことを示しています。選び方は[どのPromptフレームワークを使うべきか？（2026）](/prompt-engineering/which-prompt-framework-should-you-use)、マルチモーダルの側面は[テキストを超えて：画像でプロンプトを作成する方法](/prompt-engineering/beyond-text-how-to-prompt-with-images)を参照してください。',
+            'これらのフレームワークは、プロンプトエンジニアリングが個人のスキルから、教えて共有できる実践へと成熟したことを示しています。選び方は[どのPromptフレームワークを使うべきか？（2026）](/ja/prompt-engineering/which-prompt-framework-should-you-use)、マルチモーダルの側面は[テキストを超えて：画像でプロンプトを作成する方法](/ja/prompt-engineering/beyond-text-how-to-prompt-with-images)を参照してください。',
           ],
         },
 
@@ -2571,7 +2583,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '2023年ごろの注目すべき進展は、LLMが人間と同じくらいうまくプロンプトを最適化できることを示す研究でした。Zhou et al.は2022年11月に「[Large Language Models Are Human-Level Prompt Engineers](https://arxiv.org/abs/2211.01910)」（APE）を公開しました。LLMが候補の指示を生成して評価し、検証した24タスクのうち19タスクで、人間が書いた指示に並ぶか上回りました。Stanfordの研究者によるDSPyフレームワーク（[Khattab et al.、2023年10月](https://arxiv.org/abs/2310.03714)）はさらに進み、開発者がプロンプトの目的を記述すると、文言が自動的にコンパイルされます。',
             '同時に、Facebook AI Research（現Meta）の[Lewis et al.が2020年に提案した](https://arxiv.org/abs/2005.11401)検索拡張生成（RAG）が、本番のAIシステムの中心的なパターンになりました。RAGは取得したドキュメントをプロンプトのコンテキストに直接挿入し、必要な事実をすべてプロンプトに含める代わりに、実在する最新の情報源に出力を根拠づけました。これにより重点は「モデルにこれをどう知らせるか」から「モデルが正しく使えるようにコンテキストをどう構造化するか」へ移りました。',
-            'この時期の主要な技法は、[RAG解説：実データでAI回答を根拠づける方法（2026年）](/prompt-engineering/rag-explained)と[セルフコンシステンシープロンプティング：複数の答えを生成して正しいものを選ぶ](/prompt-engineering/self-consistency-prompting)を参照してください。',
+            'この時期の主要な技法は、[RAG解説：実データでAI回答を根拠づける方法（2026年）](/ja/prompt-engineering/rag-explained)と[セルフコンシステンシープロンプティング：複数の答えを生成して正しいものを選ぶ](/ja/prompt-engineering/self-consistency-prompting)を参照してください。',
           ],
         },
 
@@ -2615,7 +2627,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { '年': '2022年（11月）', 'マイルストーン': 'ChatGPTの公開', '重要な理由': 'プロンプティングを一般の人々に広げ、数日で何百万人が試し始めた' },
             { '年': '2023年（第1四半期）', 'マイルストーン': '「プロンプトエンジニア」の求人が注目を集め、Anthropicの求人が17.5万〜33.5万ドルを提示', '重要な理由': '職業としての可能性を可視化したが、その役割は広く議論された' },
             { '年': '2023年（3月）', 'マイルストーン': '画像入力を備えたGPT-4の公開', '重要な理由': 'プロンプティングをテキストから画像へ拡張。12.8万トークンのコンテキストはGPT-4 Turbo（2023年11月）で実現' },
-            { '年': '2023年', 'マイルストーン': 'CRAFT、CO-STAR、SPECS、RISEN、TRACEなどのフレームワーク、OpenAIとGoogleの公式ガイド', '重要な理由': '個人の技を、再利用できて教えられるテンプレートへ変えた' },
+            { '年': '2023年', 'マイルストーン': 'CO-STAR（シンガポールGovTech、2023年）などの公開テンプレート（CRAFT、SPECS、RISEN、TRACE）、OpenAIとGoogleの公式ガイド', '重要な理由': '個人の技を、再利用できて教えられるテンプレートへ変えた' },
             { '年': '2022〜2023年', 'マイルストーン': 'APE（Zhou et al.）とDSPy（Khattab et al.）：LLMによるプロンプト最適化', '重要な理由': 'LLMがプロンプトを書き調整できることを示し、自動最適化を実用的にした' },
             { '年': '2024年', 'マイルストーン': 'Llama 3（4月）と、100万トークンのコンテキストをプレビューしたGemini 1.5 Pro（2月）', '重要な理由': '私的環境にデプロイできるオープンウェイトモデルと超長コンテキストが、焦点をコンテキストエンジニアリングへ移した' },
             { '年': '2024〜2025年', 'マイルストーン': '推論モデル：OpenAI o1（2024年9月）、DeepSeek-R1（2025年1月）、拡張思考を備えたClaude 3.7 Sonnet（2025年2月）', '重要な理由': 'モデルが内部でステップごとに推論するため、明示的な思考の連鎖プロンプトの重要度は下がる' },
@@ -2632,11 +2644,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'RAGとコンテキストデザインの時代は、プロンプトが単独で存在するのではなく — 取得されたデータ・システム指示・ツール出力と組み合わされてフルコンテキストを形成する — という理解を与えてくれました。そして自動プロンプティング時代は、優れたプロンプティングの原則が測定可能であることを思い出させてくれました：より構造化されたプロンプトは、体系的に評価・最適化できる方法でより良い出力を生成します。',
           ],
           items: [
-            '2022年からの推論テクニック → [Chain-of-Thoughtプロンプティング: AIに推論プロセスを見せさせる](/prompt-engineering/chain-of-thought-prompting) と [Tree of Thought & ReAct: 複雑な問題のための高度なReasoningテクニック](/prompt-engineering/tree-of-thought-and-react)',
-            '2023年からのフレームワーク開発 → [どのPromptフレームワークを使うべきか？（2026）](/prompt-engineering/which-prompt-framework-should-you-use)',
-            'コンテキストウィンドウの成長 → [コンテキストウィンドウの説明：AIが忘れる理由（と対処法）](/prompt-engineering/context-windows-explained-why-ai-forgets)',
-            'モデル世代にわたるトークンの経済性 → [トークン、コスト＆制限：AIプロンプティングの経済学](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
-            '純粋なプロンプティングの補完としてのRAG → [RAG解説：実データでAI回答を根拠づける方法（2026年）](/prompt-engineering/rag-explained)',
+            '2022年からの推論テクニック → [Chain-of-Thoughtプロンプティング: AIに推論プロセスを見せさせる](/ja/prompt-engineering/chain-of-thought-prompting) と [Tree of Thought & ReAct: 複雑な問題のための高度なReasoningテクニック](/ja/prompt-engineering/tree-of-thought-and-react)',
+            '2023年からのフレームワーク開発 → [どのPromptフレームワークを使うべきか？（2026）](/ja/prompt-engineering/which-prompt-framework-should-you-use)',
+            'コンテキストウィンドウの成長 → [コンテキストウィンドウの説明：AIが忘れる理由（と対処法）](/ja/prompt-engineering/context-windows-explained-why-ai-forgets)',
+            'モデル世代にわたるトークンの経済性 → [トークン、コスト＆制限：AIプロンプティングの経済学](/ja/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
+            '純粋なプロンプティングの補完としてのRAG → [RAG解説：実データでAI回答を根拠づける方法（2026年）](/ja/prompt-engineering/rag-explained)',
           ],
         },
 
@@ -2662,7 +2674,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'モデルが改善されるにつれて、プロンプトエンジニアリングは重要でなくなっていますか？',
-              a: 'いいえ — より高性能なモデルは構造化されたプロンプトに対してより良く反応します、より少なくではなく。モデルが精密な指示に従う能力が向上するにつれて、優れたプロンプティングからの利益が増加します。変わったのは、単純なタスクに必要なプロンプトエンジニアリングのレベルです：会話的な質問は2021年よりも作り込みを必要としなくなりました。しかし、複雑な本番グレードの出力には、構造化されたプロンプティングが利用可能な最も信頼できる手段であり続けています。',
+              a: 'いいえ — より高性能なモデルは構造化されたプロンプトに対してより良く反応します、より少なくではなく。モデルが精密な指示に従う能力が向上するにつれて、優れたプロンプティングからの利益が増加します。変わったのは、単純なタスクに必要なプロンプトエンジニアリングのレベルです：会話的な質問は2021年よりも作り込みを必要としなくなりました。しかし、複雑な本番グレードの出力では、構造化されたプロンプティングは、検索、モデル選択、ファインチューニングと並ぶ最も有効な手段の一つであることが多いです。',
             },
             {
               q: 'プロンプトエンジニアリングとコンテキストエンジニアリングの違いは何ですか？',
@@ -2698,7 +2710,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'より良いモデルが出ればプロンプトエンジニアリングは不要になる。',
-              problem: '高性能なモデルは有能な人に似ていて、明確な指示にはより良く反応します。良いプロンプトの効果は、モデルの能力が上がるほど大きくなります。変わるのは必要なプロンプトの種類であり、必要かどうかではありません。',
+              problem: '高性能なモデルは有能な人に似ていて、明確な指示にはより良く反応します。良いプロンプトの効果は、モデルの能力が上がるほど大きくなることがあります。変わるのは必要なプロンプトの種類であり、必要かどうかではありません。',
               fix: 'プロンプティングはAI活用の中心であり続けると考えてください。変わるのは、必要な詳細さと足場の量です。弱いモデルには明示的な手順の構造が必要かもしれませんが、強いモデルなら明確な一行の指示で足りることもあります。ただし、その簡潔さ自体がプロンプトエンジニアリング上の判断です。',
             },
             {
@@ -2713,11 +2725,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: '関連記事',
           items: [
-            { title: 'Chain-of-Thoughtプロンプティング: AIに推論プロセスを見せさせる', url: '/prompt-engineering/chain-of-thought-prompting' },
-            { title: 'ゼロショット vs. フューショットプロンプティング', url: '/prompt-engineering/zero-shot-vs-few-shot' },
-            { title: 'RAG解説：実データでAI回答を根拠づける方法（2026年）', url: '/prompt-engineering/rag-explained' },
-            { title: 'コンテキストウィンドウの説明：AIが忘れる理由（と対処法）', url: '/prompt-engineering/context-windows-explained-why-ai-forgets' },
-            { title: 'トークン、コスト＆制限：AIプロンプティングの経済学', url: '/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
+            { title: 'Chain-of-Thoughtプロンプティング: AIに推論プロセスを見せさせる', url: '/ja/prompt-engineering/chain-of-thought-prompting' },
+            { title: 'ゼロショット vs. フューショットプロンプティング', url: '/ja/prompt-engineering/zero-shot-vs-few-shot' },
+            { title: 'RAG解説：実データでAI回答を根拠づける方法（2026年）', url: '/ja/prompt-engineering/rag-explained' },
+            { title: 'コンテキストウィンドウの説明：AIが忘れる理由（と対処法）', url: '/ja/prompt-engineering/context-windows-explained-why-ai-forgets' },
+            { title: 'トークン、コスト＆制限：AIプロンプティングの経済学', url: '/ja/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
           ],
         },
 
@@ -2739,6 +2751,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Google (2024). Gemini 1.5 announcement](https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/) — Google、Gemini 1.5の発表（2024年2月15日）：限定プレビューで100万トークンのコンテキスト。',
             '[DeepSeek-AI (2025). "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning." arXiv:2501.12948](https://arxiv.org/abs/2501.12948) — DeepSeek-R1：強化学習による推論（2025年1月）。',
             '[Fortune (2023). Report on new AI jobs, 9 March 2023](https://fortune.com/2023/03/09/new-ai-jobs-chatgpt-like-assistants/) — Fortune（2023年3月9日）：Anthropicのプロンプトエンジニア求人の給与幅を報じた記事。',
+            '[Reuters (2023). "ChatGPT sets record for fastest-growing user base - analyst note", syndicated by The Star, 2 February 2023](https://www.thestar.com.my/tech/tech-news/2023/02/02/chatgpt-sets-record-for-fastest-growing-user-base---analyst-note) — 2023年1月の月間アクティブユーザー数を約1億人とするUBSの推計。TikTokとInstagramとの比較はSensor Towerのデータとされています。',
+            '[Tech Startups (2022). "ChatGPT crosses 1 million users five days after launch", 5 December 2022](https://techstartups.com/2022/12/05/chatgpt-crosses-1-million-users-five-days-launch/) — Sam Altman氏の2022年12月5日の投稿「ChatGPT launched on wednesday. today it crossed 1 million users!」を引用した報道です。',
           ],
         },
 
@@ -2752,12 +2766,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/prompt-engineering-history-overview-hero-zh.webp',
       title: '从GPT-2到今天：提示词工程的演变',
       seoTitle: '提示词工程过时了吗？GPT-3到上下文设计2020–2026',
-      intro: '提示词工程的历史：从2020年的GPT-3和少样本提示到2026年的上下文设计。',
+      intro: '提示词工程从2020年围绕GPT-3的非正式实验，发展为到2026年拥有命名技术和框架的结构化学科。本时间线梳理了使提示成为一项核心技能的关键突破、研究论文和转折点。',
       metaDescription: '提示词工程没有消亡而是转型：附来源的时间线，从2020年GPT-3少样本提示，到思维链、ChatGPT与上下文设计，梳理2020至2026年的演变。',
       ogTitle: '提示词工程如何演变：从GPT-3到上下文设计（2020–2026）',
       twitterTitle: '提示词工程如何在6年内从“写更好的提示词”走向上下文设计',
       publishDate: '2026-03-01',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       readTime: '阅读约10分钟',
       educationalLevel: 'Beginner',
       audience: '学习提示词工程和AI技术历史的知识工作者和开发人员',
@@ -2769,7 +2783,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**思维链（2022年）：** Wei等人证明提示词结构可以激发逐步推理；PaLM 540B在GSM8K上的准确率从17.9%提高到56.9%',
         '**ChatGPT（2022年11月）：** 5天内突破100万用户（据OpenAI首席执行官Sam Altman）；据估计2023年1月月活跃用户约1亿（UBS，经Reuters报道）',
         '**就业市场（2023年）：** Anthropic的“Prompt Engineer and Librarian”职位标出17.5万至33.5万美元（Fortune，2023年3月）',
-        '**GPT-4与框架（2023年）：** 图像输入和公开的框架（CO-STAR、SPECS、RISEN）使提示成为可传授的学科',
+        '**GPT-4（2023年）与框架：** 图像输入和公开的框架（新加坡GovTech的CO-STAR，2023年；SPECS、RISEN）使提示成为可传授的学科',
         '**上下文设计（2024–2026年）：** 开放权重LLM、超过100万词元的上下文窗口和智能体编排，把重心从调整提示词转向系统层面的上下文工程',
       ],
       toc: [
@@ -2796,7 +2810,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '提示词工程过时了吗？GPT-3到上下文设计2020–2026',
         description: '提示词工程没有消亡而是转型：附来源的时间线，从2020年GPT-3少样本提示，到思维链、ChatGPT与上下文设计，梳理2020至2026年的演变。',
         datePublished: '2026-03-01',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/zh/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'zh',
         keywords: ['提示工程历史', 'GPT-3 少样本学习', 'Chain-of-Thought 提示', 'ChatGPT', '上下文工程', '提示工程时间线', 'InstructGPT', 'RLHF'],
@@ -2830,7 +2844,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: '谁最先创造了"提示词工程"这个术语？', acceptedAnswer: { '@type': 'Answer', text: '确切起源存在争议，没有哪一个人被认定为该术语的发明者。2021年就已有研究论文描述基于提示的方法，这个说法在2022年以及ChatGPT之后被更广泛地使用。Wikipedia上的提示词工程条目概述了这段历史。' } },
           { '@type': 'Question', name: '为什么提示词工程在 ChatGPT 之后迅速爆红？', acceptedAnswer: { '@type': 'Answer', text: 'ChatGPT 是最早一批数百万非研究人员可以立即免费使用、无需编写代码的通用 AI 模型之一。精心设计的提示词与模糊提示词之间的差距是可见的，且立即产生影响——更好的提示词产出可直接使用的更好输出。这个反馈循环被数百万人同时体验，将提示词工程从研究概念转变为大众技能。' } },
           { '@type': 'Question', name: '研究论文如何影响了现实世界的提示技术？', acceptedAnswer: { '@type': 'Answer', text: '对于 AI 研究而言，这种传播速度异常快速。思维链（Chain-of-Thought）提示（Wei 等人，2022年）在几个月内就从学术论文变成了广泛使用的从业者技术，部分原因是它不需要任何工具——只需改变你写提示词的方式。GPT-3 论文（Brown 等人，2020年）中的少样本提示，任何有 API 访问权限的人都可以立即采用。这些技术的易用性加速了它们的传播。' } },
-          { '@type': 'Question', name: '随着模型的改进，提示词工程会变得不那么重要吗？', acceptedAnswer: { '@type': 'Answer', text: '不会——能力更强的模型对结构良好的提示词响应更好，而不是更差。随着模型更善于遵循精确指令，好的提示词所带来的收益也会增加。改变的是简单任务所需的提示词工程程度：与2021年相比，对话性问题现在需要的精心设计更少。但对于复杂的生产级输出，结构化提示仍然是最可靠的手段。' } },
+          { '@type': 'Question', name: '随着模型的改进，提示词工程会变得不那么重要吗？', acceptedAnswer: { '@type': 'Answer', text: '不会——能力更强的模型对结构良好的提示词响应更好，而不是更差。随着模型更善于遵循精确指令，好的提示词所带来的收益也会增加。改变的是简单任务所需的提示词工程程度：与2021年相比，对话性问题现在需要的精心设计更少。但对于复杂的生产级输出，结构化提示通常是最有效的手段之一，与检索、模型选择和微调并列。' } },
           { '@type': 'Question', name: '提示词工程与上下文工程有什么区别？', acceptedAnswer: { '@type': 'Answer', text: '提示词工程通常指设计模型的文本输入以改善其输出。上下文工程是一个更广泛、更新近的概念，指编排模型上下文窗口中的所有内容：系统提示词、检索到的文档、对话历史、工具输出和用户输入——所有这些都经过精心组合。上下文工程将提示词视为设计系统中的一个组件，而非独立的产物。' } },
           { '@type': 'Question', name: '自动化工具会取代理解提示词工程的必要性吗？', acceptedAnswer: { '@type': 'Answer', text: '像 DSPy 这样的自动化工具可以在定义的目标内优化提示词措辞，但它们需要人类来指定目标是什么、适用哪些约束以及如何评估成功。理解提示词工程原则仍然是有效使用这些工具的必要条件——也是在它们产出错误结果时进行诊断的必要条件。自动化消除了一些手动迭代；它不能消除结构化思考的需要。' } },
           { '@type': 'Question', name: '提示词工程在2026年已经过时了吗？', acceptedAnswer: { '@type': 'Answer', text: '没有。这一领域发生了转移，而不是消失。随着模型能力增强，工作重心从语法技巧和格式窍门转向上下文设计，即构造输入、管理检索和组合工具输出。“提示词工程师”这一职称在收窄，但这一技能已融入每个使用AI的角色：开发者、分析师、营销人员、研究者。清晰地表述任务、提供相关上下文和指定输出格式，仍然决定着模型回答的有用程度。' } },
@@ -2854,7 +2868,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: 5, name: 'ChatGPT发布 (2022年（11月）)', description: '把提示带给大众；数百万人在几天内开始尝试' },
           { '@type': 'ListItem', position: 6, name: '“提示词工程师”职位引发关注；Anthropic职位标出17.5万–33.5万美元 (2023年（第1季度）)', description: '让提示词工程成为一种可见的潜在职业，但该角色备受争议' },
           { '@type': 'ListItem', position: 7, name: 'GPT-4发布，支持图像输入 (2023年（3月）)', description: '把提示从文本扩展到图像；12.8万词元的上下文随GPT-4 Turbo（2023年11月）出现' },
-          { '@type': 'ListItem', position: 8, name: 'CRAFT、CO-STAR、SPECS、RISEN、TRACE等框架；OpenAI和Google的官方指南 (2023年)', description: '把个人手艺变成可复用、可传授的模板' },
+          { '@type': 'ListItem', position: 8, name: 'CO-STAR（新加坡GovTech，2023年）等已发布模板（CRAFT、SPECS、RISEN、TRACE）；OpenAI和Google的官方指南', description: '把个人手艺变成可复用、可传授的模板' },
           { '@type': 'ListItem', position: 9, name: 'APE（Zhou等人）和DSPy（Khattab等人）：由LLM优化的提示词 (2022–2023年)', description: '表明LLM能编写和调整提示词，使自动化提示优化变得可行' },
           { '@type': 'ListItem', position: 10, name: 'Llama 3（4月）和预览100万词元上下文的Gemini 1.5 Pro（2月） (2024年)', description: '可私有部署的开放权重模型与超长上下文，把重心转向上下文工程' },
           { '@type': 'ListItem', position: 11, name: '推理模型：OpenAI o1（2024年9月）、DeepSeek-R1（2025年1月）、具备扩展思考的Claude 3.7 Sonnet（2025年2月） (2024–2025年)', description: '模型在内部逐步推理，因此显式思维链提示对它们的重要性下降' },
@@ -2906,7 +2920,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**提示词工程的现代历史实际上始于GPT-3。** 2020年5月，OpenAI的研究人员发表了《[Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)》（Brown等人），介绍了拥有1750亿参数的GPT-3。论文表明，在提示词中直接加入几个目标任务的示例，无需更新模型权重，就能提高许多下游任务的表现。',
             '这是提示词工程成为一门学科的起点。研究人员和开发者意识到，只需改变提示词的写法，同一个模型就能成为翻译器、摘要器、代码生成器或问答系统。模型不需要重新训练，只需要更好的提示词。这一认识改变了人们对提示词的看法：它不只是输入，更是设计产物。',
             'Brown等人报告称，少样本表现总体上随模型规模增大而提升，1750亿参数的GPT-3整体上最强。这把规模与基于提示的学习联系起来，也使提示词的质量成为实践者而不仅是研究人员可以掌控的变量。',
-            '关于GPT-3使其闻名的这一技术，请参阅[零样本与少样本提示对比](/prompt-engineering/zero-shot-vs-few-shot)获取实用指南。',
+            '关于GPT-3使其闻名的这一技术，请参阅[零样本与少样本提示对比](/zh/prompt-engineering/zero-shot-vs-few-shot)获取实用指南。',
           ],
         },
 
@@ -2925,7 +2939,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**2022年思维链（CoT）提示的出现，是这一学科短暂历史中最重要的技术进展之一。** Wei等人（Google）发表了《[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)》，表明给模型提供带有中间推理步骤的示例，可以提高算术、常识和符号推理任务的表现。在一个突出的结果中，思维链提示使PaLM 540B在小学数学基准GSM8K上的准确率从17.9%提高到56.9%，这一提升仅靠改变提示词获得，没有额外的模型训练。其含义深远：提示词的结构可以激发不同的推理行为，而不只是调出不同的事实。',
             '相关技术很快出现。Zhou等人提出了[由少到多提示（least-to-most）](https://arxiv.org/abs/2205.10625)，把复杂问题分解为一系列更简单的子问题并依次解决。这些方法使提示词工程从格式练习变成了从未被明确训练推理的模型中引出结构化推理的工具。提示成为了认知的脚手架。',
-            '完整的技术指南请参阅[链式思维提示词: 让AI展示其推理过程](/prompt-engineering/chain-of-thought-prompting)和[提示链：复杂任务分步示例与LangChain代码](/prompt-engineering/prompt-chaining)。',
+            '完整的技术指南请参阅[链式思维提示词: 让AI展示其推理过程](/zh/prompt-engineering/chain-of-thought-prompting)和[提示链：复杂任务分步示例与LangChain代码](/zh/prompt-engineering/prompt-chaining)。',
           ],
         },
 
@@ -2952,7 +2966,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '2023年3月，OpenAI发布GPT-4，在文本之外支持图像输入（最初为研究预览），使提示词工程可用于描述图像、比较图表、标注图形等视觉任务；随后出现了更大的上下文窗口（2023年11月GPT-4 Turbo达到12.8万词元）。Google的Gemini（2023年12月）和具备视觉能力的Anthropic Claude 3模型（2024年3月）增加了其他厂商的多模态选择。',
             '同一时期，最佳实践得到了规范化。OpenAI发布了[官方提示词工程指南](https://developers.openai.com/api/docs/guides/prompt-engineering)，Google Cloud发布了自己的[提示词工程指南](https://cloud.google.com/discover/what-is-prompt-engineering)。独立作者和团队发布了CRAFT、CO-STAR、SPECS、RISEN和TRACE等框架，为实践者提供了可重复的提示词结构模板，减少了对反复试错的依赖。这些框架的作者和发布时间因来源而异，且没有一个是官方标准。',
-            '这些框架标志着提示词工程从个人技能走向可传授、可分享的实践。选择框架请参阅[应该选择哪种提示词框架？（2026）](/prompt-engineering/which-prompt-framework-should-you-use)，多模态方面请参阅[超越文本：如何使用图像进行提示](/prompt-engineering/beyond-text-how-to-prompt-with-images)。',
+            '这些框架标志着提示词工程从个人技能走向可传授、可分享的实践。选择框架请参阅[应该选择哪种提示词框架？（2026）](/zh/prompt-engineering/which-prompt-framework-should-you-use)，多模态方面请参阅[超越文本：如何使用图像进行提示](/zh/prompt-engineering/beyond-text-how-to-prompt-with-images)。',
           ],
         },
 
@@ -2962,7 +2976,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '2023年前后一个引人注目的进展，是研究表明LLM可以像人类一样优化提示词。Zhou等人在2022年11月发表了《[Large Language Models Are Human-Level Prompt Engineers](https://arxiv.org/abs/2211.01910)》（APE）：由LLM生成并评分候选指令，在所测试的24项任务中，有19项达到或超过了人工编写的指令。Stanford研究人员的DSPy框架（[Khattab等人，2023年10月](https://arxiv.org/abs/2310.03714)）更进一步：开发者描述提示词应达成的目标，措辞则自动编译生成。',
             '与此同时，由[Lewis等人在2020年](https://arxiv.org/abs/2005.11401)于Facebook AI Research（现Meta）提出的检索增强生成（RAG），成为生产级AI系统的核心模式。RAG把检索到的文档直接注入提示词上下文，让输出基于真实、最新的来源，而不是要求提示词包含所有必要事实。这使提示词工程的重点从“如何让模型知道这个？”转向“如何构造上下文，让模型正确使用它？”',
-            '该时期的关键技术请参阅[RAG详解：让AI回答基于真实数据（2026）](/prompt-engineering/rag-explained)和[自洽一致性提示：生成多个答案，投票选择最佳答案](/prompt-engineering/self-consistency-prompting)。',
+            '该时期的关键技术请参阅[RAG详解：让AI回答基于真实数据（2026）](/zh/prompt-engineering/rag-explained)和[自洽一致性提示：生成多个答案，投票选择最佳答案](/zh/prompt-engineering/self-consistency-prompting)。',
           ],
         },
 
@@ -3006,7 +3020,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { '年份': '2022年（11月）', '里程碑': 'ChatGPT发布', '重要意义': '把提示带给大众；数百万人在几天内开始尝试' },
             { '年份': '2023年（第1季度）', '里程碑': '“提示词工程师”职位引发关注；Anthropic职位标出17.5万–33.5万美元', '重要意义': '让提示词工程成为一种可见的潜在职业，但该角色备受争议' },
             { '年份': '2023年（3月）', '里程碑': 'GPT-4发布，支持图像输入', '重要意义': '把提示从文本扩展到图像；12.8万词元的上下文随GPT-4 Turbo（2023年11月）出现' },
-            { '年份': '2023年', '里程碑': 'CRAFT、CO-STAR、SPECS、RISEN、TRACE等框架；OpenAI和Google的官方指南', '重要意义': '把个人手艺变成可复用、可传授的模板' },
+            { '年份': '2023年', '里程碑': 'CO-STAR（新加坡GovTech，2023年）等已发布模板（CRAFT、SPECS、RISEN、TRACE）；OpenAI和Google的官方指南', '重要意义': '把个人手艺变成可复用、可传授的模板' },
             { '年份': '2022–2023年', '里程碑': 'APE（Zhou等人）和DSPy（Khattab等人）：由LLM优化的提示词', '重要意义': '表明LLM能编写和调整提示词，使自动化提示优化变得可行' },
             { '年份': '2024年', '里程碑': 'Llama 3（4月）和预览100万词元上下文的Gemini 1.5 Pro（2月）', '重要意义': '可私有部署的开放权重模型与超长上下文，把重心转向上下文工程' },
             { '年份': '2024–2025年', '里程碑': '推理模型：OpenAI o1（2024年9月）、DeepSeek-R1（2025年1月）、具备扩展思考的Claude 3.7 Sonnet（2025年2月）', '重要意义': '模型在内部逐步推理，因此显式思维链提示对它们的重要性下降' },
@@ -3023,11 +3037,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'RAG 和上下文设计时代让我们认识到，提示词并不孤立存在——它们与检索到的数据、系统指令和工具输出组合在一起，形成完整的上下文。而自动化提示时代提醒我们，良好提示的原则是可量化的：结构更好的提示词能产出更好的输出，这些改进可以被系统地评估和优化。',
           ],
           items: [
-            '来自2022年的推理技术 → [链式思维提示词: 让AI展示其推理过程](/prompt-engineering/chain-of-thought-prompting) 和 [树思考与 ReAct: 复杂问题的高级推理技术](/prompt-engineering/tree-of-thought-and-react)',
-            '来自2023年的框架发展 → [应该选择哪种提示词框架？（2026）](/prompt-engineering/which-prompt-framework-should-you-use)',
-            '上下文窗口的增长 → [上下文窗口解释：为什么AI会忘记（以及如何处理）](/prompt-engineering/context-windows-explained-why-ai-forgets)',
-            '跨模型世代的词元经济学 → [令牌、成本和限制：AI提示的经济学](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
-            'RAG 作为纯提示词方案的补充 → [RAG详解：让AI回答基于真实数据（2026）](/prompt-engineering/rag-explained)',
+            '来自2022年的推理技术 → [链式思维提示词: 让AI展示其推理过程](/zh/prompt-engineering/chain-of-thought-prompting) 和 [树思考与 ReAct: 复杂问题的高级推理技术](/zh/prompt-engineering/tree-of-thought-and-react)',
+            '来自2023年的框架发展 → [应该选择哪种提示词框架？（2026）](/zh/prompt-engineering/which-prompt-framework-should-you-use)',
+            '上下文窗口的增长 → [上下文窗口解释：为什么AI会忘记（以及如何处理）](/zh/prompt-engineering/context-windows-explained-why-ai-forgets)',
+            '跨模型世代的词元经济学 → [令牌、成本和限制：AI提示的经济学](/zh/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
+            'RAG 作为纯提示词方案的补充 → [RAG详解：让AI回答基于真实数据（2026）](/zh/prompt-engineering/rag-explained)',
           ],
         },
 
@@ -3053,7 +3067,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '随着模型的改进，提示词工程会变得不那么重要吗？',
-              a: '不会——能力更强的模型对结构良好的提示词响应更好，而不是更差。随着模型更善于遵循精确指令，好的提示词所带来的收益也会增加。改变的是简单任务所需的提示词工程程度：与2021年相比，对话性问题现在需要的精心设计更少。但对于复杂的生产级输出，结构化提示仍然是最可靠的手段。',
+              a: '不会——能力更强的模型对结构良好的提示词响应更好，而不是更差。随着模型更善于遵循精确指令，好的提示词所带来的收益也会增加。改变的是简单任务所需的提示词工程程度：与2021年相比，对话性问题现在需要的精心设计更少。但对于复杂的生产级输出，结构化提示通常是最有效的手段之一，与检索、模型选择和微调并列。',
             },
             {
               q: '提示词工程与上下文工程有什么区别？',
@@ -3089,7 +3103,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: '更好的模型会让提示词工程变得无关紧要。',
-              problem: '能力更强的模型就像能力更强的人：对清晰的指令反应更好，而不是更差。随着模型能力提高，好提示词带来的收益也会增加。变化的是所需提示的类型，而不是是否需要。',
+              problem: '能力更强的模型就像能力更强的人：对清晰的指令反应更好，而不是更差。随着模型能力提高，好提示词带来的收益可能会增加。变化的是所需提示的类型，而不是是否需要。',
               fix: '预期提示仍将是AI工作的核心。变化的是所需的细节程度和脚手架。对较弱的模型，可能需要明确的分步结构；对较强的模型，一句清晰的指令可能就够了，但这种直接本身也是一种提示词工程的选择。',
             },
             {
@@ -3104,11 +3118,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            { title: '链式思维提示词: 让AI展示其推理过程', url: '/prompt-engineering/chain-of-thought-prompting' },
-            { title: '零样本与少样本提示对比', url: '/prompt-engineering/zero-shot-vs-few-shot' },
-            { title: 'RAG详解：让AI回答基于真实数据（2026）', url: '/prompt-engineering/rag-explained' },
-            { title: '上下文窗口解释：为什么AI会忘记（以及如何处理）', url: '/prompt-engineering/context-windows-explained-why-ai-forgets' },
-            { title: '令牌、成本和限制：AI提示的经济学', url: '/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
+            { title: '链式思维提示词: 让AI展示其推理过程', url: '/zh/prompt-engineering/chain-of-thought-prompting' },
+            { title: '零样本与少样本提示对比', url: '/zh/prompt-engineering/zero-shot-vs-few-shot' },
+            { title: 'RAG详解：让AI回答基于真实数据（2026）', url: '/zh/prompt-engineering/rag-explained' },
+            { title: '上下文窗口解释：为什么AI会忘记（以及如何处理）', url: '/zh/prompt-engineering/context-windows-explained-why-ai-forgets' },
+            { title: '令牌、成本和限制：AI提示的经济学', url: '/zh/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
           ],
         },
 
@@ -3130,6 +3144,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Google (2024). Gemini 1.5 announcement](https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/) — Google，Gemini 1.5发布公告（2024年2月15日）：有限预览中的100万词元上下文。',
             '[DeepSeek-AI (2025). "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning." arXiv:2501.12948](https://arxiv.org/abs/2501.12948) — DeepSeek-R1：通过强化学习获得推理能力（2025年1月）。',
             '[Fortune (2023). Report on new AI jobs, 9 March 2023](https://fortune.com/2023/03/09/new-ai-jobs-chatgpt-like-assistants/) — Fortune（2023年3月9日）：关于Anthropic提示词工程师职位薪资范围的报道。',
+            '[Reuters (2023). "ChatGPT sets record for fastest-growing user base - analyst note", syndicated by The Star, 2 February 2023](https://www.thestar.com.my/tech/tech-news/2023/02/02/chatgpt-sets-record-for-fastest-growing-user-base---analyst-note) — UBS估计2023年1月月活跃用户约为1亿；与TikTok和Instagram的对比数据归因于Sensor Tower。',
+            '[Tech Startups (2022). "ChatGPT crosses 1 million users five days after launch", 5 December 2022](https://techstartups.com/2022/12/05/chatgpt-crosses-1-million-users-five-days-launch/) — 新闻报道，引用了Sam Altman于2022年12月5日的帖子：“ChatGPT launched on wednesday. today it crossed 1 million users!”',
           ],
         },
 
@@ -3148,7 +3164,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ogTitle: '프롬프트 엔지니어링의 진화: GPT-3에서 컨텍스트 설계까지 (2020–2026)',
       twitterTitle: '프롬프트 엔지니어링이 6년 만에 "더 나은 프롬프트 작성"에서 컨텍스트 설계로 발전한 과정',
       publishDate: '2026-03-01',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       readTime: '10분 분량',
       educationalLevel: 'Beginner',
       audience: 'AI 기법의 역사와 프롬프트 엔지니어링을 학습하는 지식 근로자 및 개발자',
@@ -3160,7 +3176,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**사고 연쇄 (2022):** Wei et al.은 프롬프트 구조가 단계별 추론을 이끌어낼 수 있음을 보였고, PaLM 540B의 GSM8K 정확도는 17.9%에서 56.9%로 올랐습니다',
         '**ChatGPT (2022년 11월):** 5일 만에 사용자 100만 명 돌파(OpenAI CEO 샘 올트먼 발언), 2023년 1월 월간 활성 사용자 약 1억 명으로 추정(UBS, Reuters 보도)',
         '**채용 시장 (2023):** Anthropic의 "Prompt Engineer and Librarian" 공고가 17.5만~33.5만 달러를 제시했습니다(Fortune, 2023년 3월)',
-        '**GPT-4와 프레임워크 (2023):** 이미지 입력과 공개된 프레임워크(CO-STAR, SPECS, RISEN)로 프롬프팅은 가르칠 수 있는 분야가 되었습니다',
+        '**GPT-4(2023)와 프레임워크:** 이미지 입력과 공개된 프레임워크(싱가포르 GovTech의 CO-STAR, 2023; SPECS, RISEN)로 프롬프팅은 가르칠 수 있는 분야가 되었습니다',
         '**컨텍스트 설계 (2024–2026):** 오픈 웨이트 LLM, 100만 토큰 이상의 컨텍스트 창, 에이전트 오케스트레이션으로 초점이 프롬프트 다듬기에서 시스템 수준의 컨텍스트 엔지니어링으로 옮겨갔습니다',
       ],
       toc: [
@@ -3187,7 +3203,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '프롬프트 엔지니어링은 끝났나? 2020–2026 진화',
         description: '프롬프트 엔지니어링은 사라지지 않고 변했습니다. GPT-3 퓨샷(2020)에서 사고 연쇄, ChatGPT, 컨텍스트 설계까지 출처와 함께 정리한 타임라인입니다.',
         datePublished: '2026-03-01',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/ko/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'ko',
         keywords: ['프롬프트 엔지니어링 역사', 'GPT-3 퓨샷 학습', '연쇄 사고 프롬프팅', 'ChatGPT', '컨텍스트 엔지니어링', '프롬프트 엔지니어링 타임라인', 'InstructGPT', 'RLHF'],
@@ -3221,7 +3237,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: '"프롬프트 엔지니어링"이라는 용어를 처음 만든 사람은 누구입니까?', acceptedAnswer: { '@type': 'Answer', text: '정확한 기원은 논쟁 중이며, 이 용어를 만들었다고 인정되는 특정 인물은 없습니다. 2021년에 이미 연구 논문이 프롬프트 기반 방법을 설명하고 있었고, 이 표현은 2022년과 ChatGPT 이후 더 널리 쓰였습니다. 프롬프트 엔지니어링에 관한 Wikipedia 문서가 이 역사를 개괄합니다.' } },
           { '@type': 'Question', name: 'ChatGPT 이후 프롬프트 엔지니어링이 폭발적으로 인기를 얻은 이유는 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'ChatGPT는 수백만 명의 비연구자가 코드 없이 즉시 무료로 사용할 수 있는 최초의 범용 AI 모델 중 하나였습니다. 잘 만들어진 프롬프트와 모호한 프롬프트 사이의 차이가 눈에 보이고 즉각적으로 결과에 영향을 미쳤습니다. 수백만 명이 동시에 경험한 그 피드백 루프가 프롬프트 엔지니어링을 연구 개념에서 대중적 기술로 전환시켰습니다.' } },
           { '@type': 'Question', name: '연구 논문이 실제 프롬프팅 기법에 어떤 영향을 미쳤습니까?', acceptedAnswer: { '@type': 'Answer', text: '전파 속도는 AI 연구로서는 이례적으로 빨랐습니다. 연쇄 사고 프롬프팅(Wei et al., 2022)은 학술 논문에서 수개월 내에 실무자들이 널리 사용하는 기법으로 자리잡았으며, 이는 도구 없이 프롬프트 작성 방식만 바꾸면 되었기 때문입니다. GPT-3 논문(Brown et al., 2020)의 퓨샷 프롬프팅은 API 접근 권한이 있는 누구나 즉시 적용할 수 있었습니다. 기법의 접근성이 확산을 가속화하였습니다.' } },
-          { '@type': 'Question', name: '모델이 발전함에 따라 프롬프트 엔지니어링의 중요성이 감소하고 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '아닙니다. 더 유능한 모델은 잘 구조화된 프롬프트에 더 잘 반응하지, 덜 반응하지 않습니다. 좋은 프롬프팅의 효과는 모델이 정밀한 지시를 따르는 능력이 높아질수록 증가합니다. 변화한 것은 간단한 작업에 필요한 프롬프트 엔지니어링의 수준입니다. 그러나 복잡한 프로덕션 수준의 출력을 위해서는 구조화된 프롬프팅이 여전히 가장 신뢰할 수 있는 수단입니다.' } },
+          { '@type': 'Question', name: '모델이 발전함에 따라 프롬프트 엔지니어링의 중요성이 감소하고 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '아닙니다. 더 유능한 모델은 잘 구조화된 프롬프트에 더 잘 반응하지, 덜 반응하지 않습니다. 좋은 프롬프팅의 효과는 모델이 정밀한 지시를 따르는 능력이 높아질수록 증가합니다. 변화한 것은 간단한 작업에 필요한 프롬프트 엔지니어링의 수준입니다. 그러나 복잡한 프로덕션 수준의 출력에서는 구조화된 프롬프팅이 검색, 모델 선택, 파인튜닝과 함께 가장 효과적인 수단 중 하나인 경우가 많습니다.' } },
           { '@type': 'Question', name: '프롬프트 엔지니어링과 컨텍스트 엔지니어링의 차이는 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '프롬프트 엔지니어링은 일반적으로 모델의 출력을 개선하기 위해 텍스트 입력을 설계하는 것을 의미합니다. 컨텍스트 엔지니어링은 더 광범위하고 최근의 개념으로, 모델의 컨텍스트 창에 들어가는 모든 것을 조율하는 것을 의미합니다: 시스템 프롬프트, 검색된 문서, 대화 기록, 도구 출력, 사용자 입력 — 모두 의도적으로 구성됩니다. 컨텍스트 엔지니어링은 프롬프트를 독립적인 결과물이 아닌 설계된 시스템의 하나의 구성 요소로 취급합니다.' } },
           { '@type': 'Question', name: '자동화 도구가 프롬프트 엔지니어링을 이해할 필요를 대체할 것입니까?', acceptedAnswer: { '@type': 'Answer', text: 'DSPy와 같은 자동화 도구는 정의된 목표 내에서 프롬프트 표현을 최적화할 수 있지만, 목표가 무엇인지, 제약 조건이 무엇인지, 성공을 어떻게 평가할지를 지정하는 것은 여전히 사람이 해야 합니다. 프롬프트 엔지니어링 원칙을 이해하는 것은 이러한 도구를 효과적으로 사용하고 잘못된 결과를 진단하는 데 여전히 필요합니다. 자동화는 수동 반복 작업 일부를 제거하지만, 구조적 사고의 필요성은 제거하지 못합니다.' } },
           { '@type': 'Question', name: '2026년에 프롬프트 엔지니어링은 끝났습니까?', acceptedAnswer: { '@type': 'Answer', text: '아닙니다. 이 분야는 사라진 것이 아니라 이동했습니다. 모델이 더 유능해질수록 작업은 문법 요령과 서식 기교에서 입력 구조화, 검색 관리, 도구 출력 구성 같은 컨텍스트 설계로 옮겨갑니다. "프롬프트 엔지니어"라는 직함은 좁아지고 있지만, 그 밑바탕의 기술은 개발자, 분석가, 마케터, 연구자 등 AI를 쓰는 모든 역할에 들어 있습니다. 작업을 명확히 제시하고, 관련 컨텍스트를 주고, 출력 형식을 지정하는 일은 여전히 모델 답변의 유용성을 좌우합니다.' } },
@@ -3245,7 +3261,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: 5, name: 'ChatGPT 출시 (2022 (11월))', description: '프롬프팅을 대중에게 확산; 수백만 명이 며칠 만에 시도하기 시작' },
           { '@type': 'ListItem', position: 6, name: '"프롬프트 엔지니어" 공고가 주목받음; Anthropic 공고가 17.5만~33.5만 달러 제시 (2023 (1분기))', description: '직업으로서의 가능성을 부각했으나 그 역할은 논쟁이 많았음' },
           { '@type': 'ListItem', position: 7, name: '이미지 입력을 지원하는 GPT-4 출시 (2023 (3월))', description: '프롬프팅을 텍스트에서 이미지로 확장; 12만 8천 토큰 컨텍스트는 GPT-4 Turbo(2023년 11월)로 이어짐' },
-          { '@type': 'ListItem', position: 8, name: 'CRAFT, CO-STAR, SPECS, RISEN, TRACE 같은 프레임워크; OpenAI와 Google의 공식 가이드 (2023)', description: '개인의 기술을 재사용 가능하고 가르칠 수 있는 템플릿으로 바꿈' },
+          { '@type': 'ListItem', position: 8, name: 'CO-STAR(싱가포르 GovTech, 2023)를 비롯한 공개 템플릿(CRAFT, SPECS, RISEN, TRACE), OpenAI와 Google의 공식 가이드', description: '개인의 기술을 재사용 가능하고 가르칠 수 있는 템플릿으로 바꿈' },
           { '@type': 'ListItem', position: 9, name: 'APE (Zhou et al.)와 DSPy (Khattab et al.): LLM이 최적화한 프롬프트 (2022–2023)', description: 'LLM이 프롬프트를 쓰고 조정할 수 있음을 보여 자동 최적화를 실용화' },
           { '@type': 'ListItem', position: 10, name: 'Llama 3(4월)와 100만 토큰 컨텍스트 미리보기의 Gemini 1.5 Pro(2월) (2024)', description: '비공개 배포용 오픈 웨이트 모델과 매우 긴 컨텍스트가 초점을 컨텍스트 엔지니어링으로 옮김' },
           { '@type': 'ListItem', position: 11, name: '추론 모델: OpenAI o1(2024년 9월), DeepSeek-R1(2025년 1월), 확장 사고를 갖춘 Claude 3.7 Sonnet(2025년 2월) (2024–2025)', description: '모델이 내부적으로 단계별 추론을 하므로 명시적 사고 연쇄 프롬프트의 중요도가 낮아짐' },
@@ -3297,7 +3313,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**프롬프트 엔지니어링의 현대사는 사실상 GPT-3에서 시작됩니다.** 2020년 5월 OpenAI 연구자들은 1750억 개 매개변수 모델 GPT-3를 소개한 "[Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)"(Brown et al.)를 발표했습니다. 이 논문은 모델의 가중치를 갱신하지 않고도 원하는 작업의 예시 몇 개를 프롬프트에 직접 넣는 것만으로 많은 하위 작업의 성능이 향상됨을 보였습니다.',
             '이것이 프롬프트 엔지니어링이라는 분야의 씨앗이었습니다. 연구자와 개발자는 프롬프트를 쓰는 방식만 바꾸면 같은 모델이 번역기, 요약기, 코드 생성기, 질의응답 시스템이 될 수 있음을 깨달았습니다. 모델을 다시 학습시킬 필요 없이 더 나은 프롬프트가 필요할 뿐이었습니다. 이 통찰은 프롬프트의 의미를 단순한 입력에서 설계 산출물로 바꿔 놓았습니다.',
             'Brown et al.은 퓨샷 성능이 대체로 모델 크기와 함께 향상되었으며, 1750억 개 매개변수의 GPT-3가 전반적으로 가장 강했다고 보고했습니다. 이는 규모와 프롬프트 기반 학습을 연결했고, 프롬프트의 질을 연구자뿐 아니라 실무자도 조절할 수 있는 변수로 만들었습니다.',
-            'GPT-3가 널리 알린 기법의 실용 가이드는 [제로샷 vs. 퓨샷 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot)을(를) 참고하십시오.',
+            'GPT-3가 널리 알린 기법의 실용 가이드는 [제로샷 vs. 퓨샷 프롬프팅](/ko/prompt-engineering/zero-shot-vs-few-shot)을(를) 참고하십시오.',
           ],
         },
 
@@ -3316,7 +3332,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**2022년 사고 연쇄(CoT) 프롬프팅의 등장은 이 분야의 짧은 역사에서 가장 중요한 기술적 진전 중 하나였습니다.** Wei et al.(Google)은 "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)"를 발표하여, 중간 추론 단계가 포함된 풀이 예시를 모델에 주면 산술, 상식, 기호 추론 작업의 성능이 향상됨을 보였습니다. 대표적인 결과로, 사고 연쇄 프롬프팅은 초등 수학 벤치마크 GSM8K에서 PaLM 540B의 정확도를 17.9%에서 56.9%로 끌어올렸습니다. 추가 학습 없이 프롬프트만 바꿔 얻은 향상입니다. 이는 프롬프트의 구조가 서로 다른 사실이 아니라 서로 다른 추론 동작을 이끌어낼 수 있음을 뜻했습니다.',
             '관련 기법이 곧 뒤따랐습니다. Zhou et al.은 복잡한 문제를 더 단순한 하위 문제의 순서로 분해해 차례로 푸는 [least-to-most 프롬프팅](https://arxiv.org/abs/2205.10625)을 제안했습니다. 이러한 접근은 프롬프트 엔지니어링을 서식 작업에서, 그렇게 명시적으로 학습되지 않은 모델에서 구조화된 추론을 끌어내는 도구로 바꿔 놓았습니다. 프롬프팅은 인지를 위한 발판이 되었습니다.',
-            '기법에 대한 전체 가이드는 [Chain-of-Thought 프롬프팅: AI가 추론 과정을 보여주게 하는 방법](/prompt-engineering/chain-of-thought-prompting)와(과) [프롬프트 체이닝: 복잡한 작업을 성공적인 단계로 분해하는 방법](/prompt-engineering/prompt-chaining)을(를) 참고하십시오.',
+            '기법에 대한 전체 가이드는 [Chain-of-Thought 프롬프팅: AI가 추론 과정을 보여주게 하는 방법](/ko/prompt-engineering/chain-of-thought-prompting)와(과) [프롬프트 체이닝: 복잡한 작업을 성공적인 단계로 분해하는 방법](/ko/prompt-engineering/prompt-chaining)을(를) 참고하십시오.',
           ],
         },
 
@@ -3343,7 +3359,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '2023년 3월 OpenAI가 발표한 GPT-4는 텍스트와 함께 이미지 입력을 지원하여(처음에는 연구 프리뷰) 이미지 설명, 도표 비교, 차트 주석 달기 같은 시각 작업으로 프롬프트 엔지니어링의 범위를 넓혔고, 이후 더 큰 컨텍스트 창(2023년 11월 GPT-4 Turbo의 12만 8천 토큰)이 뒤따랐습니다. Google의 Gemini(2023년 12월)와 비전을 갖춘 Anthropic의 Claude 3 모델(2024년 3월)은 다른 벤더의 멀티모달 선택지를 더했습니다.',
             '같은 시기에 모범 사례가 체계화되었습니다. OpenAI는 [공식 프롬프트 엔지니어링 가이드](https://developers.openai.com/api/docs/guides/prompt-engineering)를 공개했고, Google Cloud도 자체 [프롬프트 엔지니어링 가이드](https://cloud.google.com/discover/what-is-prompt-engineering)를 공개했습니다. 독립 저자와 팀은 CRAFT, CO-STAR, SPECS, RISEN, TRACE 같은 프레임워크를 발표하여, 프롬프트를 구조화하는 반복 가능한 템플릿을 제공하고 시행착오에 대한 의존을 줄였습니다. 이들 프레임워크의 저자와 공개 시기는 출처에 따라 다르며, 공식 표준인 것은 없습니다.',
-            '이러한 프레임워크는 프롬프트 엔지니어링이 개인 기술에서 가르치고 공유할 수 있는 실천으로 성숙했음을 보여 줍니다. 선택 방법은 [어떤 프롬프트 프레임워크를 사용해야 합니까?](/prompt-engineering/which-prompt-framework-should-you-use)을(를), 멀티모달 측면은 [텍스트를 넘어서: 이미지로 프롬프트를 작성하는 방법](/prompt-engineering/beyond-text-how-to-prompt-with-images)을(를) 참고하십시오.',
+            '이러한 프레임워크는 프롬프트 엔지니어링이 개인 기술에서 가르치고 공유할 수 있는 실천으로 성숙했음을 보여 줍니다. 선택 방법은 [어떤 프롬프트 프레임워크를 사용해야 합니까?](/ko/prompt-engineering/which-prompt-framework-should-you-use)을(를), 멀티모달 측면은 [텍스트를 넘어서: 이미지로 프롬프트를 작성하는 방법](/ko/prompt-engineering/beyond-text-how-to-prompt-with-images)을(를) 참고하십시오.',
           ],
         },
 
@@ -3353,7 +3369,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '2023년 무렵의 눈에 띄는 진전은 LLM이 사람만큼 프롬프트를 잘 최적화할 수 있음을 보인 연구였습니다. Zhou et al.은 2022년 11월 "[Large Language Models Are Human-Level Prompt Engineers](https://arxiv.org/abs/2211.01910)"(APE)를 공개했습니다. LLM이 후보 지시문을 생성하고 평가했으며, 시험한 24개 작업 중 19개에서 사람이 쓴 지시문과 같거나 더 나은 성능을 냈습니다. Stanford 연구자들의 DSPy 프레임워크([Khattab et al., 2023년 10월](https://arxiv.org/abs/2310.03714))는 한 걸음 더 나아가, 개발자가 프롬프트의 목표를 기술하면 문구를 자동으로 컴파일합니다.',
             '동시에 2020년 Facebook AI Research(현 Meta)의 [Lewis et al.](https://arxiv.org/abs/2005.11401)이 제안한 검색 증강 생성(RAG)이 실제 운영 AI 시스템의 핵심 패턴이 되었습니다. RAG는 검색한 문서를 프롬프트 컨텍스트에 직접 넣어, 프롬프트에 모든 사실을 담는 대신 실제의 최신 출처에 출력을 근거 짓게 했습니다. 이에 따라 초점은 "모델이 이것을 알게 하려면 어떻게 해야 하는가?"에서 "모델이 이것을 올바르게 쓰도록 컨텍스트를 어떻게 구조화할 것인가?"로 옮겨갔습니다.',
-            '이 시기의 핵심 기법은 [RAG 설명: 실제 데이터로 AI 답변을 근거화하는 방법 (2026)](/prompt-engineering/rag-explained)와(과) [자기 일관성 프롬프팅: 여러 답변을 생성하고 올바른 답을 선택하십시오](/prompt-engineering/self-consistency-prompting)을(를) 참고하십시오.',
+            '이 시기의 핵심 기법은 [RAG 설명: 실제 데이터로 AI 답변을 근거화하는 방법 (2026)](/ko/prompt-engineering/rag-explained)와(과) [자기 일관성 프롬프팅: 여러 답변을 생성하고 올바른 답을 선택하십시오](/ko/prompt-engineering/self-consistency-prompting)을(를) 참고하십시오.',
           ],
         },
 
@@ -3397,7 +3413,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { '연도': '2022 (11월)', '이정표': 'ChatGPT 출시', '중요성': '프롬프팅을 대중에게 확산; 수백만 명이 며칠 만에 시도하기 시작' },
             { '연도': '2023 (1분기)', '이정표': '"프롬프트 엔지니어" 공고가 주목받음; Anthropic 공고가 17.5만~33.5만 달러 제시', '중요성': '직업으로서의 가능성을 부각했으나 그 역할은 논쟁이 많았음' },
             { '연도': '2023 (3월)', '이정표': '이미지 입력을 지원하는 GPT-4 출시', '중요성': '프롬프팅을 텍스트에서 이미지로 확장; 12만 8천 토큰 컨텍스트는 GPT-4 Turbo(2023년 11월)로 이어짐' },
-            { '연도': '2023', '이정표': 'CRAFT, CO-STAR, SPECS, RISEN, TRACE 같은 프레임워크; OpenAI와 Google의 공식 가이드', '중요성': '개인의 기술을 재사용 가능하고 가르칠 수 있는 템플릿으로 바꿈' },
+            { '연도': '2023', '이정표': 'CO-STAR(싱가포르 GovTech, 2023)를 비롯한 공개 템플릿(CRAFT, SPECS, RISEN, TRACE), OpenAI와 Google의 공식 가이드', '중요성': '개인의 기술을 재사용 가능하고 가르칠 수 있는 템플릿으로 바꿈' },
             { '연도': '2022–2023', '이정표': 'APE (Zhou et al.)와 DSPy (Khattab et al.): LLM이 최적화한 프롬프트', '중요성': 'LLM이 프롬프트를 쓰고 조정할 수 있음을 보여 자동 최적화를 실용화' },
             { '연도': '2024', '이정표': 'Llama 3(4월)와 100만 토큰 컨텍스트 미리보기의 Gemini 1.5 Pro(2월)', '중요성': '비공개 배포용 오픈 웨이트 모델과 매우 긴 컨텍스트가 초점을 컨텍스트 엔지니어링으로 옮김' },
             { '연도': '2024–2025', '이정표': '추론 모델: OpenAI o1(2024년 9월), DeepSeek-R1(2025년 1월), 확장 사고를 갖춘 Claude 3.7 Sonnet(2025년 2월)', '중요성': '모델이 내부적으로 단계별 추론을 하므로 명시적 사고 연쇄 프롬프트의 중요도가 낮아짐' },
@@ -3414,11 +3430,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'RAG와 컨텍스트 설계 시대는 프롬프트가 고립적으로 존재하지 않는다는 이해를 가져다주었습니다 — 프롬프트는 검색된 데이터, 시스템 지시, 도구 출력과 함께 전체 컨텍스트를 형성하기 위해 구성됩니다. 그리고 자동화 프롬프팅 시대는 좋은 프롬프팅의 원칙이 측정 가능하다는 것을 상기시켜 주었습니다: 더 잘 구조화된 프롬프트가 체계적으로 평가하고 최적화할 수 있는 방식으로 더 나은 출력을 생성합니다.',
           ],
           items: [
-            '2022년의 추론 기법 → [Chain-of-Thought 프롬프팅: AI가 추론 과정을 보여주게 하는 방법](/prompt-engineering/chain-of-thought-prompting) 및 [Tree of Thought와 ReAct: 복잡한 문제를 위한 고급 추론 기법](/prompt-engineering/tree-of-thought-and-react)',
-            '2023년의 프레임워크 개발 → [어떤 프롬프트 프레임워크를 사용해야 합니까?](/prompt-engineering/which-prompt-framework-should-you-use)',
-            '컨텍스트 창 성장 → [컨텍스트 윈도우 설명: AI가 잊어버리는 이유(와 대처 방법)](/prompt-engineering/context-windows-explained-why-ai-forgets)',
-            '모델 세대 전반의 토큰 경제학 → [토큰, 비용 및 제한: 2026년 AI 프롬프팅의 경제학](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
-            '순수 프롬프팅의 보완으로서 RAG → [RAG 설명: 실제 데이터로 AI 답변을 근거화하는 방법 (2026)](/prompt-engineering/rag-explained)',
+            '2022년의 추론 기법 → [Chain-of-Thought 프롬프팅: AI가 추론 과정을 보여주게 하는 방법](/ko/prompt-engineering/chain-of-thought-prompting) 및 [Tree of Thought와 ReAct: 복잡한 문제를 위한 고급 추론 기법](/ko/prompt-engineering/tree-of-thought-and-react)',
+            '2023년의 프레임워크 개발 → [어떤 프롬프트 프레임워크를 사용해야 합니까?](/ko/prompt-engineering/which-prompt-framework-should-you-use)',
+            '컨텍스트 창 성장 → [컨텍스트 윈도우 설명: AI가 잊어버리는 이유(와 대처 방법)](/ko/prompt-engineering/context-windows-explained-why-ai-forgets)',
+            '모델 세대 전반의 토큰 경제학 → [토큰, 비용 및 제한: 2026년 AI 프롬프팅의 경제학](/ko/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
+            '순수 프롬프팅의 보완으로서 RAG → [RAG 설명: 실제 데이터로 AI 답변을 근거화하는 방법 (2026)](/ko/prompt-engineering/rag-explained)',
           ],
         },
 
@@ -3444,7 +3460,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '모델이 발전함에 따라 프롬프트 엔지니어링의 중요성이 감소하고 있습니까?',
-              a: '아닙니다. 더 유능한 모델은 잘 구조화된 프롬프트에 더 잘 반응하지, 덜 반응하지 않습니다. 좋은 프롬프팅의 효과는 모델이 정밀한 지시를 따르는 능력이 높아질수록 증가합니다. 변화한 것은 간단한 작업에 필요한 프롬프트 엔지니어링의 수준입니다. 그러나 복잡한 프로덕션 수준의 출력을 위해서는 구조화된 프롬프팅이 여전히 가장 신뢰할 수 있는 수단입니다.',
+              a: '아닙니다. 더 유능한 모델은 잘 구조화된 프롬프트에 더 잘 반응하지, 덜 반응하지 않습니다. 좋은 프롬프팅의 효과는 모델이 정밀한 지시를 따르는 능력이 높아질수록 증가합니다. 변화한 것은 간단한 작업에 필요한 프롬프트 엔지니어링의 수준입니다. 그러나 복잡한 프로덕션 수준의 출력에서는 구조화된 프롬프팅이 검색, 모델 선택, 파인튜닝과 함께 가장 효과적인 수단 중 하나인 경우가 많습니다.',
             },
             {
               q: '프롬프트 엔지니어링과 컨텍스트 엔지니어링의 차이는 무엇입니까?',
@@ -3480,7 +3496,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: '더 나은 모델이 나오면 프롬프트 엔지니어링은 필요 없어진다.',
-              problem: '더 유능한 모델은 더 유능한 사람과 같아서, 명확한 지시에 더 잘 반응합니다. 좋은 프롬프팅의 이점은 모델 능력이 커질수록 커집니다. 바뀌는 것은 필요한 프롬프팅의 종류이지 필요 여부가 아닙니다.',
+              problem: '더 유능한 모델은 더 유능한 사람과 같아서, 명확한 지시에 더 잘 반응합니다. 좋은 프롬프팅의 이점은 모델 능력이 커질수록 커질 수 있습니다. 바뀌는 것은 필요한 프롬프팅의 종류이지 필요 여부가 아닙니다.',
               fix: '프롬프팅이 AI 작업에서 계속 핵심일 것이라고 전제하십시오. 변하는 것은 필요한 세부 수준과 발판의 양입니다. 약한 모델에는 명시적인 단계별 구조가 필요할 수 있고, 강한 모델에는 명확한 한 줄 지시로 충분할 수 있지만, 그 간결함 자체가 프롬프트 엔지니어링의 선택입니다.',
             },
             {
@@ -3495,11 +3511,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: '관련 읽기',
           items: [
-            { title: 'Chain-of-Thought 프롬프팅: AI가 추론 과정을 보여주게 하는 방법', url: '/prompt-engineering/chain-of-thought-prompting' },
-            { title: '제로샷 vs. 퓨샷 프롬프팅', url: '/prompt-engineering/zero-shot-vs-few-shot' },
-            { title: 'RAG 설명: 실제 데이터로 AI 답변을 근거화하는 방법 (2026)', url: '/prompt-engineering/rag-explained' },
-            { title: '컨텍스트 윈도우 설명: AI가 잊어버리는 이유(와 대처 방법)', url: '/prompt-engineering/context-windows-explained-why-ai-forgets' },
-            { title: '토큰, 비용 및 제한: 2026년 AI 프롬프팅의 경제학', url: '/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
+            { title: 'Chain-of-Thought 프롬프팅: AI가 추론 과정을 보여주게 하는 방법', url: '/ko/prompt-engineering/chain-of-thought-prompting' },
+            { title: '제로샷 vs. 퓨샷 프롬프팅', url: '/ko/prompt-engineering/zero-shot-vs-few-shot' },
+            { title: 'RAG 설명: 실제 데이터로 AI 답변을 근거화하는 방법 (2026)', url: '/ko/prompt-engineering/rag-explained' },
+            { title: '컨텍스트 윈도우 설명: AI가 잊어버리는 이유(와 대처 방법)', url: '/ko/prompt-engineering/context-windows-explained-why-ai-forgets' },
+            { title: '토큰, 비용 및 제한: 2026년 AI 프롬프팅의 경제학', url: '/ko/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
           ],
         },
 
@@ -3521,6 +3537,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Google (2024). Gemini 1.5 announcement](https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/) — Google, Gemini 1.5 발표(2024년 2월 15일): 제한적 미리보기의 100만 토큰 컨텍스트.',
             '[DeepSeek-AI (2025). "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning." arXiv:2501.12948](https://arxiv.org/abs/2501.12948) — DeepSeek-R1: 강화 학습을 통한 추론(2025년 1월).',
             '[Fortune (2023). Report on new AI jobs, 9 March 2023](https://fortune.com/2023/03/09/new-ai-jobs-chatgpt-like-assistants/) — Fortune(2023년 3월 9일): Anthropic 프롬프트 엔지니어 공고의 연봉 범위 보도.',
+            '[Reuters (2023). "ChatGPT sets record for fastest-growing user base - analyst note", syndicated by The Star, 2 February 2023](https://www.thestar.com.my/tech/tech-news/2023/02/02/chatgpt-sets-record-for-fastest-growing-user-base---analyst-note) — 2023년 1월 월간 활성 사용자 약 1억 명이라는 UBS의 추정치이며, TikTok·Instagram과의 비교는 Sensor Tower의 자료로 알려져 있습니다.',
+            '[Tech Startups (2022). "ChatGPT crosses 1 million users five days after launch", 5 December 2022](https://techstartups.com/2022/12/05/chatgpt-crosses-1-million-users-five-days-launch/) — 2022년 12월 5일 Sam Altman의 게시물 "ChatGPT launched on wednesday. today it crossed 1 million users!"를 인용한 기사입니다.',
           ],
         },
 

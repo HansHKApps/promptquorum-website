@@ -3,6 +3,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 import { starsFor } from '@/lib/power-local-llm/app-facts'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
+import { getAppActivity } from '@/components/local-ai-directory/staleness'
 
 // Star counts come from the directory tile (GEO_WRITING_GUIDELINES.md Rule 49) -- never type them into a string.
 const st = {
@@ -18,16 +19,18 @@ const upd = (slug: string, lang: Language) =>
 const AIDER_URL = 'https://github.com/Aider-AI/aider'
 const aiderQuiet = (lang: Language): string => {
   const d = upd('aider', lang)
+  // The "gone quiet" half is rendered only while the Aider tile is past the 90-day line (quiet or dead); otherwise only the dated source line shows.
+  const quiet = ['quiet', 'dead'].includes(getAppActivity(localAiApps.find((a) => a.slug === 'aider')?.lastUpstreamUpdate))
   switch (lang) {
-    case 'de': return `Hinweis zu Aider: Das Repository ist nicht archiviert, das letzte Upstream-Update war jedoch am ${d} (Quelle: [Aider-AI/aider auf GitHub](${AIDER_URL})). Das liegt mehr als drei Monate zurück, das Projekt ist also ruhig geworden — prüfen Sie die aktuelle Aktivität, bevor Sie sich darauf verlassen.`
-    case 'fr': return `Remarque sur Aider : son dépôt n'est pas archivé, mais sa dernière mise à jour en amont date du ${d} (source : [Aider-AI/aider sur GitHub](${AIDER_URL})). C'est plus de trois mois, le projet est donc devenu calme — vérifiez son activité récente avant de vous y fier.`
-    case 'es': return `Nota sobre Aider: su repositorio no está archivado, pero su última actualización upstream fue el ${d} (fuente: [Aider-AI/aider en GitHub](${AIDER_URL})). Han pasado más de tres meses, así que el proyecto se ha quedado tranquilo — comprueba su actividad reciente antes de depender de él.`
-    case 'pt': return `Nota sobre o Aider: o repositório não está arquivado, mas a última atualização upstream foi em ${d} (fonte: [Aider-AI/aider no GitHub](${AIDER_URL})). Já se passaram mais de três meses, então o projeto está parado — verifique a atividade recente antes de depender dele.`
-    case 'ja': return `Aiderに関する注記：リポジトリはアーカイブされていませんが、プロジェクトの最終更新は${d}です（出典：[GitHubのAider-AI/aider](${AIDER_URL})）。3か月以上更新がなく、動きが止まっています。利用を決める前に最近のアクティビティをご確認ください。`
-    case 'zh': return `关于Aider的说明：其仓库未被归档，但上游最近一次更新是${d}（来源：[GitHub上的Aider-AI/aider](${AIDER_URL})）。距今已超过三个月，项目已趋于沉寂——依赖它之前请先核实其近期活跃度。`
-    case 'ar': return `ملاحظة حول Aider: مستودعه غير مؤرشف، لكن آخر تحديث للمشروع الأصلي كان في ${d} (المصدر: [Aider-AI/aider على GitHub](${AIDER_URL})). مضى أكثر من ثلاثة أشهر، لذا أصبح المشروع هادئًا — تحقق من نشاطه الأخير قبل الاعتماد عليه.`
-    case 'ko': return `Aider 관련 참고: 저장소는 아카이브되지 않았지만 프로젝트의 마지막 업스트림 업데이트는 ${d}입니다(출처: [GitHub의 Aider-AI/aider](${AIDER_URL})). 3개월 넘게 업데이트가 없어 활동이 뜸해졌습니다. 의존하기 전에 최근 활동을 확인하십시오.`
-    default: return `Aider note: its repository is not archived, but its last upstream update was ${d} (source: [Aider-AI/aider on GitHub](${AIDER_URL})). That is more than three months ago, so the project has gone quiet — check its recent activity before relying on it.`
+    case 'de': return quiet ? `Hinweis zu Aider: Das Repository ist nicht archiviert, das letzte Upstream-Update war jedoch am ${d} (Quelle: [Aider-AI/aider auf GitHub](${AIDER_URL})). Das liegt mehr als drei Monate zurück, das Projekt ist also ruhig geworden — prüfen Sie die aktuelle Aktivität, bevor Sie sich darauf verlassen.` : `Hinweis zu Aider: Das Repository ist nicht archiviert, und das letzte Upstream-Update war am ${d} (Quelle: [Aider-AI/aider auf GitHub](${AIDER_URL})).`
+    case 'fr': return quiet ? `Remarque sur Aider : son dépôt n'est pas archivé, mais sa dernière mise à jour en amont date du ${d} (source : [Aider-AI/aider sur GitHub](${AIDER_URL})). C'est plus de trois mois, le projet est donc devenu calme — vérifiez son activité récente avant de vous y fier.` : `Remarque sur Aider : son dépôt n'est pas archivé et sa dernière mise à jour en amont date du ${d} (source : [Aider-AI/aider sur GitHub](${AIDER_URL})).`
+    case 'es': return quiet ? `Nota sobre Aider: su repositorio no está archivado, pero su última actualización upstream fue el ${d} (fuente: [Aider-AI/aider en GitHub](${AIDER_URL})). Han pasado más de tres meses, así que el proyecto se ha quedado tranquilo — comprueba su actividad reciente antes de depender de él.` : `Nota sobre Aider: su repositorio no está archivado y su última actualización upstream fue el ${d} (fuente: [Aider-AI/aider en GitHub](${AIDER_URL})).`
+    case 'pt': return quiet ? `Nota sobre o Aider: o repositório não está arquivado, mas a última atualização upstream foi em ${d} (fonte: [Aider-AI/aider no GitHub](${AIDER_URL})). Já se passaram mais de três meses, então o projeto está parado — verifique a atividade recente antes de depender dele.` : `Nota sobre o Aider: o repositório não está arquivado e a última atualização upstream foi em ${d} (fonte: [Aider-AI/aider no GitHub](${AIDER_URL})).`
+    case 'ja': return quiet ? `Aiderに関する注記：リポジトリはアーカイブされていませんが、プロジェクトの最終更新は${d}です（出典：[GitHubのAider-AI/aider](${AIDER_URL})）。3か月以上更新がなく、動きが止まっています。利用を決める前に最近のアクティビティをご確認ください。` : `Aiderに関する注記：リポジトリはアーカイブされておらず、プロジェクトの最終更新は${d}です（出典：[GitHubのAider-AI/aider](${AIDER_URL})）。`
+    case 'zh': return quiet ? `关于Aider的说明：其仓库未被归档，但上游最近一次更新是${d}（来源：[GitHub上的Aider-AI/aider](${AIDER_URL})）。距今已超过三个月，项目已趋于沉寂——依赖它之前请先核实其近期活跃度。` : `关于Aider的说明：其仓库未被归档，上游最近一次更新是${d}（来源：[GitHub上的Aider-AI/aider](${AIDER_URL})）。`
+    case 'ar': return quiet ? `ملاحظة حول Aider: مستودعه غير مؤرشف، لكن آخر تحديث للمشروع الأصلي كان في ${d} (المصدر: [Aider-AI/aider على GitHub](${AIDER_URL})). مضى أكثر من ثلاثة أشهر، لذا أصبح المشروع هادئًا — تحقق من نشاطه الأخير قبل الاعتماد عليه.` : `ملاحظة حول Aider: مستودعه غير مؤرشف، وآخر تحديث للمشروع الأصلي كان في ${d} (المصدر: [Aider-AI/aider على GitHub](${AIDER_URL})).`
+    case 'ko': return quiet ? `Aider 관련 참고: 저장소는 아카이브되지 않았지만 프로젝트의 마지막 업스트림 업데이트는 ${d}입니다(출처: [GitHub의 Aider-AI/aider](${AIDER_URL})). 3개월 넘게 업데이트가 없어 활동이 뜸해졌습니다. 의존하기 전에 최근 활동을 확인하십시오.` : `Aider 관련 참고: 저장소는 아카이브되지 않았으며 프로젝트의 마지막 업스트림 업데이트는 ${d}입니다(출처: [GitHub의 Aider-AI/aider](${AIDER_URL})).`
+    default: return quiet ? `Aider note: its repository is not archived, but its last upstream update was ${d} (source: [Aider-AI/aider on GitHub](${AIDER_URL})). That is more than three months ago, so the project has gone quiet — check its recent activity before relying on it.` : `Aider note: its repository is not archived, and its last upstream update was ${d} (source: [Aider-AI/aider on GitHub](${AIDER_URL})).`
   }
 }
 
@@ -112,7 +115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'From Codegen Experiment to Archived Repo',
         content: [
           "**GPT Engineer launched in April 2023 as one of the first widely used \"describe an app, get a full codebase\" tools, and its GitHub repository is now archived.** [Anton Osika](https://github.com/AntonOsika) created the [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) repository on April 29, 2023, and it grew quickly during the 2023 wave of interest in autonomous coding agents that followed AutoGPT and BabyAGI.",
-          "An organization, gpt-engineer-org, was created in December 2023 and briefly held a copy of the project (github.com/gpt-engineer-org/gpt-engineer redirects back to the AntonOsika repository as of this review). The gpt-engineer-org organization's own listed website is [gptengineer.app](https://gptengineer.app), an opinionated, managed no-code/low-code product that GPT Engineer's README describes as \"the evolution\" of the original CLI tool.",
+          "An organization, gpt-engineer-org, was created in December 2023; the project's README still links to [gpt-engineer-org/gpt-engineer](https://github.com/gpt-engineer-org/gpt-engineer), which redirects to the AntonOsika repository as of this review. The gpt-engineer-org organization's own listed website is [gptengineer.app](https://gptengineer.app), an opinionated, managed no-code/low-code product that GPT Engineer's README describes as \"the evolution\" of the original CLI tool.",
           "The commercial platform at gptengineer.app was later rebranded as [Lovable](https://lovable.dev): Lovable's own [GPT Engineer page](https://lovable.dev/en/gpt-engineer) says the rebrand was made \"to avoid confusion\" with the open-source tool, and gptengineer.app now redirects to lovable.dev. The GitHub repository's description reads \"Precursor to: lovable.dev\". This review covers only the original open-source `gpt-engineer` CLI tool, not gptengineer.app or Lovable, which are commercial products with their own separate terms, pricing, and support.",
           "The last tagged release on GitHub is `v0.3.1` (June 6, 2024), matching the last version published to PyPI. The last code change merged to the main branch dates from " + upd('gpt-engineer', 'en') + ", and the only later commits on main are README edits (the last on " + formatDisplayDate('2024-11-17', 'en') + "). GitHub's archived flag has since been set, so the repository is read-only: no new commits, issues, or pull requests can be merged.",
         ],
@@ -165,6 +168,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       setupGuide: {
         id: 'how-to-install-gpt-engineer',
+        callouts: [
+          { type: 'warning', text: "GPT Engineer runs the code it generates on your machine and sends your prompt and project files to the configured model provider. Use a disposable environment and review the output before using it." },
+        ],
         title: 'How Do You Install and Run GPT Engineer?',
         content: "**Install the last published release from PyPI with `pip install gpt-engineer`.** Because the repository is archived, this installs the same 0.3.1 build published in June 2024 — there is no newer version to fetch.",
         numberedItems: [
@@ -261,7 +267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Is GPT Engineer still maintained?', a: 'No. The AntonOsika/gpt-engineer GitHub repository is archived (read-only) as of this review. Its last tagged release and last PyPI publish were both in June 2024 (version 0.3.1), and the last code change merged to main dates from ' + upd('gpt-engineer', 'en') + ' (later commits on main only edit the README).' },
-          { q: 'Is GPT Engineer free to use?', a: 'Yes. GPT Engineer is MIT licensed and free for commercial use, modification, and self-hosting — the license terms remain valid even though the repository can no longer accept new changes.' },
+          { q: 'Is GPT Engineer free to use?', a: 'Yes, the tool itself is free: GPT Engineer is MIT licensed, with no fee for commercial use, modification or self-hosting. API costs of the model provider you configure (by default OpenAI) are separate. The license terms remain valid even though the repository can no longer accept new changes.' },
           { q: 'What should I use instead of GPT Engineer?', a: "GPT Engineer's own README recommends [Aider](/power-local-llm/aider-review) as \"a well maintained hackable CLI\" for terminal-based coding, and points to gptengineer.app (since rebranded as the commercial product Lovable) for users who want a hosted, managed alternative rather than a CLI tool." },
           { q: 'What is the relationship between GPT Engineer, gptengineer.app, and Lovable?', a: "GPT Engineer is the original open-source CLI covered in this review. gptengineer.app was the commercial web platform built by the same people, described by the project as \"the evolution\" of the CLI. It has been rebranded as Lovable, which says on its own site that the change was made to avoid confusion with the open-source tool, and gptengineer.app now redirects to lovable.dev. The CLI's GitHub description calls it a precursor to Lovable. The CLI and Lovable are distinct products with independent pricing and terms." },
           { q: 'How do I install GPT Engineer?', a: 'Run `pip install gpt-engineer`, which installs the last published version, 0.3.1 (June 2024). No newer release exists.' },
@@ -378,7 +384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Vom Codegen-Experiment zum archivierten Repo',
         content: [
           "**GPT Engineer startete im April 2023 als eines der ersten weit verbreiteten \"App beschreiben, vollständige Codebasis erhalten\"-Tools, und das GitHub-Repository ist inzwischen archiviert.** [Anton Osika](https://github.com/AntonOsika) erstellte das Repository [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) am 29. April 2023, und es wuchs während der 2023er-Welle des Interesses an autonomen Coding-Agenten, die auf AutoGPT und BabyAGI folgte, schnell.",
-          "Eine Organisation namens gpt-engineer-org wurde im Dezember 2023 erstellt und hielt kurzzeitig eine Kopie des Projekts (die GitHub-URL github.com/gpt-engineer-org/gpt-engineer leitet zum Zeitpunkt dieser Bewertung zurück zum ursprünglichen AntonOsika-Repository). Die eigene gelistete Website der gpt-engineer-org-Organisation ist [gptengineer.app](https://gptengineer.app), ein eigenständiger, verwalteter No-Code/Low-Code-Dienst, den GPT Engineers README als \"die Weiterentwicklung\" des ursprünglichen CLI-Tools beschreibt.",
+          "Eine Organisation namens gpt-engineer-org wurde im Dezember 2023 erstellt; die README des Projekts verweist weiterhin auf [gpt-engineer-org/gpt-engineer](https://github.com/gpt-engineer-org/gpt-engineer), das zum Zeitpunkt dieser Bewertung zum AntonOsika-Repository weiterleitet. Die eigene gelistete Website der gpt-engineer-org-Organisation ist [gptengineer.app](https://gptengineer.app), ein eigenständiger, verwalteter No-Code/Low-Code-Dienst, den GPT Engineers README als \"die Weiterentwicklung\" des ursprünglichen CLI-Tools beschreibt.",
           "Die kommerzielle Plattform unter gptengineer.app wurde später in [Lovable](https://lovable.dev) umbenannt: Laut der [GPT-Engineer-Seite von Lovable](https://lovable.dev/en/gpt-engineer) soll die Umbenennung Verwechslungen mit dem quelloffenen Tool vermeiden, und gptengineer.app leitet inzwischen auf lovable.dev weiter. Die Beschreibung des GitHub-Repositorys lautet \"Precursor to: lovable.dev\". Diese Bewertung behandelt ausschließlich das ursprüngliche quelloffene `gpt-engineer`-CLI-Tool, nicht gptengineer.app oder Lovable, welche kommerzielle Produkte mit eigenen, separaten Bedingungen, Preisen und Support sind.",
           "Das letzte getaggte Release auf GitHub ist `v0.3.1` (6. Juni 2024), was mit der letzten auf PyPI veröffentlichten Version übereinstimmt. Die letzte in den Hauptzweig gemergte Codeänderung stammt vom " + upd('gpt-engineer', 'de') + ", die späteren Commits im Hauptzweig sind reine README-Änderungen (der letzte am " + formatDisplayDate('2024-11-17', 'de') + "). Danach wurde GitHubs Archiv-Kennzeichen gesetzt — das Repository ist nur lesbar: Es können keine neuen Commits, Issues oder Pull Requests mehr gemergt werden.",
         ],
@@ -431,6 +437,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       setupGuide: {
         id: 'how-to-install-gpt-engineer',
+        callouts: [
+          { type: 'warning', text: "GPT Engineer führt den von ihm erzeugten Code auf Ihrem Rechner aus und sendet Ihren Prompt sowie Ihre Projektdateien an den konfigurierten Modellanbieter. Verwenden Sie eine Wegwerfumgebung und prüfen Sie die Ausgabe, bevor Sie sie einsetzen." },
+        ],
         title: 'Wie installiert und startet man GPT Engineer?',
         content: "**Installieren Sie das zuletzt veröffentlichte Release über PyPI mit `pip install gpt-engineer`.** Da das Repository archiviert ist, installiert dies denselben 0.3.1-Build von Juni 2024 — es gibt keine neuere Version abzurufen.",
         numberedItems: [
@@ -527,7 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Wird GPT Engineer noch gepflegt?', a: 'Nein. Das GitHub-Repository AntonOsika/gpt-engineer ist zum Zeitpunkt dieser Bewertung archiviert (nur lesbar). Das letzte getaggte Release und die letzte PyPI-Veröffentlichung waren beide im Juni 2024 (Version 0.3.1), die letzte in den Hauptzweig gemergte Codeänderung stammt vom ' + upd('gpt-engineer', 'de') + ' (spätere Commits im Hauptzweig ändern nur die README).' },
-          { q: 'Ist GPT Engineer kostenlos nutzbar?', a: 'Ja. GPT Engineer ist MIT-lizenziert und kostenlos für kommerzielle Nutzung, Veränderung und Selbsthosting — die Lizenzbedingungen bleiben gültig, obwohl das Repository keine neuen Änderungen mehr annehmen kann.' },
+          { q: 'Ist GPT Engineer kostenlos nutzbar?', a: 'Ja, das Werkzeug selbst ist kostenlos: GPT Engineer ist MIT-lizenziert, ohne Gebühr für kommerzielle Nutzung, Veränderung oder Selbsthosting. Die API-Kosten des von Ihnen konfigurierten Modellanbieters (standardmäßig OpenAI) kommen separat hinzu. Die Lizenzbedingungen bleiben gültig, obwohl das Repository keine neuen Änderungen mehr annehmen kann.' },
           { q: 'Was sollte ich statt GPT Engineer verwenden?', a: "GPT Engineers eigene README empfiehlt [Aider](/de/power-local-llm/aider-review) als \"eine gut gepflegte, hackbare CLI\" für terminalbasiertes Coding und verweist auf gptengineer.app (inzwischen in das kommerzielle Produkt Lovable umbenannt) für Nutzer, die statt eines CLI-Tools eine gehostete, verwaltete Alternative möchten." },
           { q: 'In welcher Beziehung stehen GPT Engineer, gptengineer.app und Lovable?', a: "GPT Engineer ist das ursprüngliche quelloffene CLI, das in dieser Bewertung behandelt wird. gptengineer.app war die kommerzielle Web-Plattform, die von denselben Personen gebaut und vom Projekt als \"die Weiterentwicklung\" des CLI beschrieben wurde. Sie wurde in Lovable umbenannt; laut Lovable soll die Umbenennung Verwechslungen mit dem quelloffenen Tool vermeiden, und gptengineer.app leitet inzwischen auf lovable.dev weiter. Die GitHub-Beschreibung des CLI nennt es einen Vorläufer von Lovable. Das CLI und Lovable sind eigenständige Produkte mit unabhängigen Preisen und Bedingungen." },
           { q: 'Wie installiere ich GPT Engineer?', a: 'Führen Sie `pip install gpt-engineer` aus, was die letzte veröffentlichte Version installiert, 0.3.1 (Juni 2024). Es gibt keine neuere Version.' },
@@ -644,7 +653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'De l\'expérience codegen au dépôt archivé',
         content: [
           "**GPT Engineer a été lancé en avril 2023 comme l'un des premiers outils largement utilisés du type \"décrivez une application, obtenez une base de code complète\", et son dépôt GitHub est désormais archivé.** [Anton Osika](https://github.com/AntonOsika) a créé le dépôt [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) le 29 avril 2023, et il a rapidement grandi pendant la vague d'intérêt de 2023 pour les agents de codage autonomes qui a suivi AutoGPT et BabyAGI.",
-          "Une organisation, gpt-engineer-org, a été créée en décembre 2023 et a brièvement détenu une copie du projet (l'URL GitHub github.com/gpt-engineer-org/gpt-engineer redirige, au moment de cette évaluation, vers le dépôt AntonOsika d'origine). Le site web répertorié de l'organisation gpt-engineer-org est [gptengineer.app](https://gptengineer.app), un produit géré, avec des choix imposés, no-code/low-code que le README de GPT Engineer décrit comme \"l'évolution\" de l'outil CLI d'origine.",
+          "Une organisation, gpt-engineer-org, a été créée en décembre 2023 ; le README du projet renvoie toujours vers [gpt-engineer-org/gpt-engineer](https://github.com/gpt-engineer-org/gpt-engineer), qui redirige, au moment de cette évaluation, vers le dépôt AntonOsika. Le site web répertorié de l'organisation gpt-engineer-org est [gptengineer.app](https://gptengineer.app), un produit géré, avec des choix imposés, no-code/low-code que le README de GPT Engineer décrit comme \"l'évolution\" de l'outil CLI d'origine.",
           "La plateforme commerciale de gptengineer.app a ensuite été renommée [Lovable](https://lovable.dev) : selon la [page GPT Engineer de Lovable](https://lovable.dev/en/gpt-engineer), ce changement de nom vise à éviter toute confusion avec l'outil open source, et gptengineer.app redirige désormais vers lovable.dev. La description du dépôt GitHub indique \"Precursor to: lovable.dev\". Cette évaluation couvre uniquement l'outil CLI open source `gpt-engineer` d'origine, pas gptengineer.app ni Lovable, qui sont des produits commerciaux avec leurs propres conditions, tarifs et support distincts.",
           "La dernière version taguée sur GitHub est `v0.3.1` (6 juin 2024), correspondant à la dernière version publiée sur PyPI. La dernière modification de code fusionnée dans la branche principale date du " + upd('gpt-engineer', 'fr') + ", et les commits suivants sur cette branche ne modifient que le README (le dernier le " + formatDisplayDate('2024-11-17', 'fr') + "). L'indicateur d'archivage de GitHub a ensuite été défini, ce qui signifie que le dépôt est en lecture seule : aucun nouveau commit, issue ou pull request ne peut y être fusionné.",
         ],
@@ -697,6 +706,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       setupGuide: {
         id: 'how-to-install-gpt-engineer',
+        callouts: [
+          { type: 'warning', text: "GPT Engineer exécute sur votre machine le code qu'il génère et envoie votre prompt et vos fichiers de projet au fournisseur de modèle configuré. Utilisez un environnement jetable et vérifiez le résultat avant de l'utiliser." },
+        ],
         title: 'Comment installer et démarrer GPT Engineer ?',
         content: "**Installez la dernière version publiée depuis PyPI avec `pip install gpt-engineer`.** Le dépôt étant archivé, cela installe la même version 0.3.1 publiée en juin 2024 — il n'existe pas de version plus récente à récupérer.",
         numberedItems: [
@@ -793,7 +805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquemment posées',
         faqs: [
           { q: 'GPT Engineer est-il encore maintenu ?', a: 'Non. Le dépôt GitHub AntonOsika/gpt-engineer est archivé (lecture seule) au moment de cette évaluation. Sa dernière version taguée et sa dernière publication PyPI datent toutes deux de juin 2024 (version 0.3.1), et la dernière modification de code fusionnée dans la branche principale date du ' + upd('gpt-engineer', 'fr') + ' (les commits suivants ne modifient que le README).' },
-          { q: 'GPT Engineer est-il gratuit ?', a: 'Oui. GPT Engineer est sous licence MIT et gratuit pour un usage commercial, la modification et l\'auto-hébergement — les termes de la licence restent valides même si le dépôt ne peut plus accepter de nouvelles modifications.' },
+          { q: 'GPT Engineer est-il gratuit ?', a: 'Oui, l\'outil lui-même est gratuit : GPT Engineer est sous licence MIT, sans frais pour un usage commercial, la modification ou l\'auto-hébergement. Les coûts d\'API du fournisseur de modèle que vous configurez (OpenAI par défaut) sont facturés séparément. Les termes de la licence restent valides même si le dépôt ne peut plus accepter de nouvelles modifications.' },
           { q: 'Que dois-je utiliser à la place de GPT Engineer ?', a: "Le propre README de GPT Engineer recommande [Aider](/fr/power-local-llm/aider-review) comme « une CLI hackable bien maintenue » pour le codage en terminal, et oriente vers gptengineer.app (depuis renommé en produit commercial Lovable) pour les utilisateurs voulant une alternative hébergée et gérée plutôt qu'un outil CLI." },
           { q: 'Quelle est la relation entre GPT Engineer, gptengineer.app et Lovable ?', a: "GPT Engineer est la CLI open source d'origine couverte par cette évaluation. gptengineer.app était la plateforme web commerciale construite par les mêmes personnes, décrite par le projet comme « l'évolution » de la CLI. Elle a été renommée Lovable ; selon Lovable, ce changement vise à éviter toute confusion avec l'outil open source, et gptengineer.app redirige désormais vers lovable.dev. La description GitHub de la CLI la qualifie de précurseur de Lovable. La CLI et Lovable sont des produits distincts avec des tarifs et conditions indépendants." },
           { q: 'Comment installer GPT Engineer ?', a: 'Exécutez `pip install gpt-engineer`, qui installe la dernière version publiée, 0.3.1 (juin 2024). Aucune version plus récente n\'existe.' },
@@ -910,7 +922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Del experimento de codegen al repo archivado',
         content: [
           "**GPT Engineer se lanzó en abril de 2023 como una de las primeras herramientas ampliamente usadas del tipo \"describe una app, obtén una base de código completa\", y su repositorio de GitHub ahora está archivado.** [Anton Osika](https://github.com/AntonOsika) creó el repositorio [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) el 29 de abril de 2023, y creció rápidamente durante la ola de interés de 2023 en agentes de codificación autónomos que siguió a AutoGPT y BabyAGI.",
-          "Una organización, gpt-engineer-org, se creó en diciembre de 2023 y mantuvo brevemente una copia del proyecto (la URL de GitHub github.com/gpt-engineer-org/gpt-engineer redirige, al momento de esta evaluación, al repositorio original de AntonOsika). El sitio web listado de la organización gpt-engineer-org es [gptengineer.app](https://gptengineer.app), un producto gestionado y con criterio propio, no-code/low-code, que el README de GPT Engineer describe como \"la evolución\" de la herramienta CLI original.",
+          "Una organización, gpt-engineer-org, se creó en diciembre de 2023; el README del proyecto sigue enlazando a [gpt-engineer-org/gpt-engineer](https://github.com/gpt-engineer-org/gpt-engineer), que redirige, al momento de esta evaluación, al repositorio de AntonOsika. El sitio web listado de la organización gpt-engineer-org es [gptengineer.app](https://gptengineer.app), un producto gestionado y con criterio propio, no-code/low-code, que el README de GPT Engineer describe como \"la evolución\" de la herramienta CLI original.",
           "La plataforma comercial de gptengineer.app se renombró después como [Lovable](https://lovable.dev): según la [página sobre GPT Engineer de Lovable](https://lovable.dev/en/gpt-engineer), el cambio de nombre busca evitar confusiones con la herramienta de código abierto, y gptengineer.app redirige ahora a lovable.dev. La descripción del repositorio de GitHub dice \"Precursor to: lovable.dev\". Esta evaluación cubre únicamente la herramienta CLI de código abierto `gpt-engineer` original, no gptengineer.app ni Lovable, que son productos comerciales con sus propios términos, precios y soporte independientes.",
           "La última versión etiquetada en GitHub es `v0.3.1` (6 de junio de 2024), que coincide con la última versión publicada en PyPI. El último cambio de código fusionado en la rama principal es del " + upd('gpt-engineer', 'es') + ", y los commits posteriores en esa rama solo editan el README (el último el " + formatDisplayDate('2024-11-17', 'es') + "). Después se activó la marca de archivado de GitHub, lo que significa que el repositorio es de solo lectura: no se pueden fusionar nuevos commits, issues ni pull requests.",
         ],
@@ -963,6 +975,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       setupGuide: {
         id: 'how-to-install-gpt-engineer',
+        callouts: [
+          { type: 'warning', text: "GPT Engineer ejecuta en tu equipo el código que genera y envía tu prompt y los archivos de tu proyecto al proveedor de modelos configurado. Usa un entorno desechable y revisa el resultado antes de usarlo." },
+        ],
         title: '¿Cómo instalar y ejecutar GPT Engineer?',
         content: "**Instala la última versión publicada desde PyPI con `pip install gpt-engineer`.** Como el repositorio está archivado, esto instala la misma versión 0.3.1 publicada en junio de 2024 — no hay una versión más nueva que obtener.",
         numberedItems: [
@@ -1059,7 +1074,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Sigue manteniéndose GPT Engineer?', a: 'No. El repositorio de GitHub AntonOsika/gpt-engineer está archivado (solo lectura) al momento de esta evaluación. Su última versión etiquetada y su última publicación en PyPI fueron ambas en junio de 2024 (versión 0.3.1), y el último cambio de código fusionado en la rama principal es del ' + upd('gpt-engineer', 'es') + ' (los commits posteriores solo editan el README).' },
-          { q: '¿Es GPT Engineer gratuito?', a: 'Sí. GPT Engineer tiene licencia MIT y es gratuito para uso comercial, modificación y autoalojamiento — los términos de la licencia siguen vigentes aunque el repositorio ya no pueda aceptar nuevos cambios.' },
+          { q: '¿Es GPT Engineer gratuito?', a: 'Sí, la herramienta en sí es gratuita: GPT Engineer tiene licencia MIT, sin coste por uso comercial, modificación o autoalojamiento. Los costos de API del proveedor de modelos que configures (por defecto OpenAI) son aparte. Los términos de la licencia siguen vigentes aunque el repositorio ya no pueda aceptar nuevos cambios.' },
           { q: '¿Qué debería usar en lugar de GPT Engineer?', a: "El propio README de GPT Engineer recomienda [Aider](/es/power-local-llm/aider-review) como \"una CLI hackeable bien mantenida\" para codificación en terminal, y dirige hacia gptengineer.app (renombrado desde entonces como el producto comercial Lovable) para usuarios que quieran una alternativa alojada y gestionada en lugar de una herramienta CLI." },
           { q: '¿Cuál es la relación entre GPT Engineer, gptengineer.app y Lovable?', a: "GPT Engineer es la CLI de código abierto original cubierta en esta evaluación. gptengineer.app era la plataforma web comercial construida por las mismas personas, descrita por el proyecto como \"la evolución\" de la CLI. Se ha renombrado como Lovable; según Lovable, el cambio busca evitar confusiones con la herramienta de código abierto, y gptengineer.app redirige ahora a lovable.dev. La descripción de GitHub de la CLI la llama precursor de Lovable. La CLI y Lovable son productos distintos con precios y términos independientes." },
           { q: '¿Cómo instalo GPT Engineer?', a: 'Ejecuta `pip install gpt-engineer`, que instala la última versión publicada, 0.3.1 (junio de 2024). No existe una versión más nueva.' },
@@ -1176,7 +1191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Do experimento de codegen ao repo arquivado',
         content: [
           "**O GPT Engineer foi lançado em abril de 2023 como uma das primeiras ferramentas amplamente usadas do tipo \"descreva um app, obtenha uma base de código completa\", e seu repositório do GitHub agora está arquivado.** [Anton Osika](https://github.com/AntonOsika) criou o repositório [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) em 29 de abril de 2023, e ele cresceu rapidamente durante a onda de interesse de 2023 em agentes de codificação autônomos que seguiu o AutoGPT e o BabyAGI.",
-          "Uma organização, gpt-engineer-org, foi criada em dezembro de 2023 e manteve brevemente uma cópia do projeto (a URL do GitHub github.com/gpt-engineer-org/gpt-engineer redireciona, no momento desta avaliação, para o repositório original de AntonOsika). O site listado da organização gpt-engineer-org é [gptengineer.app](https://gptengineer.app), um produto gerenciado e opinativo, no-code/low-code, que o README do GPT Engineer descreve como \"a evolução\" da ferramenta CLI original.",
+          "Uma organização, gpt-engineer-org, foi criada em dezembro de 2023; o README do projeto ainda aponta para [gpt-engineer-org/gpt-engineer](https://github.com/gpt-engineer-org/gpt-engineer), que redireciona, no momento desta avaliação, para o repositório de AntonOsika. O site listado da organização gpt-engineer-org é [gptengineer.app](https://gptengineer.app), um produto gerenciado e opinativo, no-code/low-code, que o README do GPT Engineer descreve como \"a evolução\" da ferramenta CLI original.",
           "A plataforma comercial do gptengineer.app foi renomeada depois como [Lovable](https://lovable.dev): segundo a [página sobre o GPT Engineer do Lovable](https://lovable.dev/en/gpt-engineer), a mudança de nome busca evitar confusão com a ferramenta de código aberto, e o gptengineer.app agora redireciona para lovable.dev. A descrição do repositório no GitHub diz \"Precursor to: lovable.dev\". Esta avaliação cobre apenas a ferramenta CLI de código aberto `gpt-engineer` original, não o gptengineer.app nem o Lovable, que são produtos comerciais com seus próprios termos, preços e suporte independentes.",
           "A última versão marcada no GitHub é `v0.3.1` (6 de junho de 2024), coincidindo com a última versão publicada no PyPI. A última alteração de código mesclada na branch principal é de " + upd('gpt-engineer', 'pt') + ", e os commits posteriores nessa branch só editam o README (o último em " + formatDisplayDate('2024-11-17', 'pt') + "). Depois disso, a marcação de arquivamento do GitHub foi ativada, o que significa que o repositório é somente leitura: nenhum novo commit, issue ou pull request pode ser mesclado.",
         ],
@@ -1229,6 +1244,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       setupGuide: {
         id: 'how-to-install-gpt-engineer',
+        callouts: [
+          { type: 'warning', text: "O GPT Engineer executa no seu computador o código que gera e envia o seu prompt e os arquivos do seu projeto ao provedor de modelos configurado. Use um ambiente descartável e revise a saída antes de usá-la." },
+        ],
         title: 'Como instalar e executar o GPT Engineer?',
         content: "**Instale a última versão publicada a partir do PyPI com `pip install gpt-engineer`.** Como o repositório está arquivado, isso instala o mesmo build 0.3.1 publicado em junho de 2024 — não há versão mais recente para buscar.",
         numberedItems: [
@@ -1325,7 +1343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'O GPT Engineer ainda é mantido?', a: 'Não. O repositório do GitHub AntonOsika/gpt-engineer está arquivado (somente leitura) no momento desta avaliação. Sua última versão marcada e sua última publicação no PyPI foram ambas em junho de 2024 (versão 0.3.1), e a última alteração de código mesclada na branch principal é de ' + upd('gpt-engineer', 'pt') + ' (os commits posteriores só editam o README).' },
-          { q: 'O GPT Engineer é gratuito?', a: 'Sim. O GPT Engineer tem licença MIT e é gratuito para uso comercial, modificação e auto-hospedagem — os termos da licença continuam válidos mesmo que o repositório não possa mais aceitar novas mudanças.' },
+          { q: 'O GPT Engineer é gratuito?', a: 'Sim, a ferramenta em si é gratuita: o GPT Engineer tem licença MIT, sem taxa para uso comercial, modificação ou auto-hospedagem. Os custos de API do provedor de modelos que você configurar (por padrão, a OpenAI) são separados. Os termos da licença continuam válidos mesmo que o repositório não possa mais aceitar novas mudanças.' },
           { q: 'O que devo usar em vez do GPT Engineer?', a: "O próprio README do GPT Engineer recomenda o [Aider](/pt/power-local-llm/aider-review) como \"uma CLI hackeável bem mantida\" para codificação em terminal, e direciona para o gptengineer.app (renomeado desde então como o produto comercial Lovable) para usuários que queiram uma alternativa hospedada e gerenciada em vez de uma ferramenta CLI." },
           { q: 'Qual é a relação entre GPT Engineer, gptengineer.app e Lovable?', a: "GPT Engineer é a CLI de código aberto original coberta nesta avaliação. gptengineer.app era a plataforma web comercial construída pelas mesmas pessoas, descrita pelo projeto como \"a evolução\" da CLI. Foi renomeada como Lovable; segundo o Lovable, a mudança busca evitar confusão com a ferramenta de código aberto, e o gptengineer.app agora redireciona para lovable.dev. A descrição do GitHub da CLI a chama de precursor do Lovable. A CLI e o Lovable são produtos distintos com preços e termos independentes." },
           { q: 'Como instalo o GPT Engineer?', a: 'Execute `pip install gpt-engineer`, que instala a última versão publicada, 0.3.1 (junho de 2024). Não existe uma versão mais recente.' },
@@ -1442,7 +1460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'コード生成実験からアーカイブ済みリポジトリへ',
         content: [
           "**GPT Engineerは2023年4月、「アプリを説明すれば完全なコードベースが得られる」という発想を広く普及させた初期のツールの1つとして誕生し、そのGitHubリポジトリは現在アーカイブされている。** [Anton Osika](https://github.com/AntonOsika)氏は2023年4月29日に[AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)リポジトリを作成し、AutoGPTやBabyAGIに続いた2023年の自律型コーディングエージェントへの関心の高まりの中で急速に成長した。",
-          "2023年12月には、gpt-engineer-orgという組織が作られ、プロジェクトのコピーを一時期保持していた（本レビュー時点で、github.com/gpt-engineer-org/gpt-engineerというGitHub URLは元のAntonOsikaリポジトリへリダイレクトされる）。gpt-engineer-org組織が掲載しているウェブサイトは[gptengineer.app](https://gptengineer.app)であり、GPT EngineerのREADMEはこれを元のCLIツールの「進化形」だと説明している。これは意見の反映された、マネージド型のノーコード/ローコード製品である。",
+          "2023年12月にgpt-engineer-orgという組織が作られました。プロジェクトのREADMEは現在も[gpt-engineer-org/gpt-engineer](https://github.com/gpt-engineer-org/gpt-engineer)へリンクしており、本レビュー時点ではAntonOsikaリポジトリへリダイレクトされます。gpt-engineer-org組織が掲載しているウェブサイトは[gptengineer.app](https://gptengineer.app)であり、GPT EngineerのREADMEはこれを元のCLIツールの「進化形」だと説明している。これは意見の反映された、マネージド型のノーコード/ローコード製品である。",
           "gptengineer.appの商用プラットフォームはその後[Lovable](https://lovable.dev)に改称された。[LovableのGPT Engineerページ](https://lovable.dev/en/gpt-engineer)によれば、改称の目的はオープンソースツールとの混同を避けることで、gptengineer.appは現在lovable.devへリダイレクトされる。GitHubリポジトリの説明文は「Precursor to: lovable.dev」となっている。本レビューが扱うのは元のオープンソースCLIツール`gpt-engineer`のみであり、gptengineer.appやLovableは対象外である。これらは独自の利用規約、価格、サポートを持つ商用製品である。",
           "GitHub上の最終タグ付きリリースは`v0.3.1`（2024年6月6日）であり、PyPIに公開された最終バージョンと一致する。mainブランチにマージされた最後のコード変更は" + upd('gpt-engineer', 'ja') + "で、それ以降のmainブランチへのコミットはREADMEの編集のみである（最後は" + formatDisplayDate('2024-11-17', 'ja') + "）。その後GitHubのアーカイブフラグが設定された。つまりリポジトリは読み取り専用であり、新しいコミット、issue、プルリクエストはマージできない。",
         ],
@@ -1495,6 +1513,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       setupGuide: {
         id: 'how-to-install-gpt-engineer',
+        callouts: [
+          { type: 'warning', text: "GPT Engineerは、生成したコードをお使いのマシン上で実行し、プロンプトとプロジェクトファイルを設定したモデルプロバイダーに送信します。使い捨ての環境を使用し、出力は利用前に確認してください。" },
+        ],
         title: 'GPT Engineerのインストールと実行方法は？',
         content: "**PyPIから`pip install gpt-engineer`で最終公開リリースをインストールする。** リポジトリがアーカイブされているため、これは2024年6月に公開された同じ0.3.1ビルドをインストールするものであり、取得できる新しいバージョンは存在しない。",
         numberedItems: [
@@ -1591,7 +1612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: 'GPT Engineerはまだ保守されていますか？', a: 'いいえ。GitHubリポジトリAntonOsika/gpt-engineerは本レビュー時点でアーカイブ（読み取り専用）されている。最終タグ付きリリースと最終PyPI公開はいずれも2024年6月（バージョン0.3.1）であり、mainブランチにマージされた最後のコード変更は' + upd('gpt-engineer', 'ja') + 'だった（以降のコミットはREADMEの編集のみ）。' },
-          { q: 'GPT Engineerは無料で使えますか？', a: 'はい。GPT EngineerはMITライセンスであり、商用利用、改変、セルフホストが無料でできる — リポジトリがもう新しい変更を受け付けられなくても、ライセンス条項自体は有効なままである。' },
+          { q: 'GPT Engineerは無料で使えますか？', a: 'はい、ツール自体は無料です。GPT EngineerはMITライセンスで、商用利用、改変、セルフホストに料金はかかりません。設定したモデルプロバイダー（デフォルトはOpenAI）のAPI料金は別途かかります。リポジトリが新しい変更を受け付けられなくなっても、ライセンス条項自体は有効なままです。' },
           { q: 'GPT Engineerの代わりに何を使うべきですか？', a: "GPT Engineer自身のREADMEは、ターミナルベースのコーディング向けに[Aider](/ja/power-local-llm/aider-review)を「よく整備されたハッカブルなCLI」として推奨し、CLIツールではなくホスト型のマネージドな代替を求めるユーザー向けにgptengineer.app（その後商用製品Lovableに改称された）を案内している。" },
           { q: 'GPT Engineer、gptengineer.app、Lovableの関係は何ですか？', a: 'GPT Engineerは本レビューが扱う元のオープンソースCLIである。gptengineer.appは同じ人々によって構築された商用ウェブプラットフォームで、プロジェクトからはCLIの「進化形」だと説明されていた。これはLovableに改称されており、Lovableは自身のサイトで、改称の目的はオープンソースツールとの混同を避けることだと説明している。gptengineer.appは現在lovable.devへリダイレクトされる。CLIのGitHub説明文は、自らをLovableの前身と記している。CLIとLovableは、価格や規約が独立した別個の製品である。' },
           { q: 'GPT Engineerのインストール方法は？', a: '`pip install gpt-engineer`を実行すると、最終公開バージョンである0.3.1（2024年6月）がインストールされる。それより新しいリリースは存在しない。' },
@@ -1708,7 +1729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '从代码生成实验到已归档仓库',
         content: [
           "**GPT Engineer于2023年4月发布，是最早被广泛使用的“描述一个应用、获得完整代码库”类工具之一，其GitHub仓库现已归档。** [Anton Osika](https://github.com/AntonOsika)于2023年4月29日创建了[AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)仓库，并在紧随AutoGPT和BabyAGI之后、2023年那波自主编码智能体热潮中迅速成长。",
-          "2023年12月，一个名为gpt-engineer-org的组织成立，并短暂持有该项目的一份副本（截至本评测时，github.com/gpt-engineer-org/gpt-engineer这个GitHub网址会重定向回原始的AntonOsika仓库）。gpt-engineer-org组织所列的网站是[gptengineer.app](https://gptengineer.app)，GPT Engineer的README将其描述为原始CLI工具的“演进版本”——一个有主见的、托管式无代码/低代码产品。",
+          "2023年12月，一个名为gpt-engineer-org的组织成立；该项目的README仍链接到[gpt-engineer-org/gpt-engineer](https://github.com/gpt-engineer-org/gpt-engineer)，截至本评测时该链接会重定向到AntonOsika仓库。gpt-engineer-org组织所列的网站是[gptengineer.app](https://gptengineer.app)，GPT Engineer的README将其描述为原始CLI工具的“演进版本”——一个有主见的、托管式无代码/低代码产品。",
           "gptengineer.app背后的商业平台后来更名为[Lovable](https://lovable.dev)：根据[Lovable的GPT Engineer页面](https://lovable.dev/en/gpt-engineer)，更名是为了避免与开源工具混淆，gptengineer.app现在会重定向到lovable.dev。GitHub仓库的描述为“Precursor to: lovable.dev”。本评测仅涵盖最初的开源`gpt-engineer` CLI工具本身，不涉及gptengineer.app或Lovable，它们是拥有各自独立条款、定价和支持的商业产品。",
           "GitHub上最后一个打标签的版本是`v0.3.1`（2024年6月6日），与最后发布到PyPI的版本一致。合并到main分支的最后一次代码变更是" + upd('gpt-engineer', 'zh') + "，此后main分支上的提交都只是修改README（最后一次在" + formatDisplayDate('2024-11-17', 'zh') + "）。之后GitHub设置了归档标志，这意味着该仓库为只读：无法再合并任何新的提交、issue或拉取请求。",
         ],
@@ -1761,6 +1782,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       setupGuide: {
         id: 'how-to-install-gpt-engineer',
+        callouts: [
+          { type: 'warning', text: "GPT Engineer会在你的机器上运行其生成的代码，并将你的提示词和项目文件发送给所配置的模型提供方。请使用一次性环境，并在使用前审查输出。" },
+        ],
         title: '如何安装并运行GPT Engineer？',
         content: "**通过`pip install gpt-engineer`从PyPI安装最后发布的版本。** 由于仓库已被归档，这将安装2024年6月发布的同一个0.3.1版本——没有更新的版本可供获取。",
         numberedItems: [
@@ -1857,7 +1881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           { q: 'GPT Engineer还在维护吗？', a: '没有。截至本评测时，GitHub仓库AntonOsika/gpt-engineer已被归档（只读）。其最后一个打标签的版本和最后一次PyPI发布均在2024年6月（版本0.3.1），合并到main分支的最后一次代码变更发生在' + upd('gpt-engineer', 'zh') + '（此后的提交只修改README）。' },
-          { q: 'GPT Engineer是免费的吗？', a: '是的。GPT Engineer采用MIT许可证，可免费用于商业用途、修改及自行托管——即使该仓库已无法再接受新的变更，许可条款依然有效。' },
+          { q: 'GPT Engineer是免费的吗？', a: '是的，该工具本身免费：GPT Engineer采用MIT许可证，商业使用、修改及自行托管均无需付费。你所配置的模型提供方（默认为OpenAI）的API费用另计。即使该仓库已无法再接受新的变更，许可条款依然有效。' },
           { q: '我应该用什么来代替GPT Engineer？', a: "GPT Engineer自身的README推荐使用[Aider](/zh/power-local-llm/aider-review)作为终端编码的“维护良好、可黑客化的CLI”，并将希望使用托管式、有产品支持的替代方案而非CLI工具的用户引导至gptengineer.app（后来更名为商业产品Lovable）。" },
           { q: 'GPT Engineer、gptengineer.app和Lovable之间是什么关系？', a: 'GPT Engineer是本评测所涵盖的最初开源CLI。gptengineer.app曾是由同一批人构建的商业网页平台，该项目将其描述为CLI的"演进版本"。它已更名为Lovable，Lovable在自己的网站上说明更名是为了避免与开源工具混淆，gptengineer.app现在会重定向到lovable.dev。该CLI的GitHub描述称自己是Lovable的前身。CLI与Lovable是定价和条款各自独立的不同产品。' },
           { q: '如何安装GPT Engineer？', a: '运行`pip install gpt-engineer`，即可安装最后发布的版本0.3.1（2024年6月）。目前没有更新的版本。' },
@@ -1974,7 +1998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'من تجربة توليد الأكواد إلى مستودع مؤرشف',
         content: [
           "**أُطلق GPT Engineer في أبريل 2023 كأحد أول الأدوات واسعة الاستخدام من نوع «صِف تطبيقًا، واحصل على قاعدة كود كاملة»، ومستودعه على GitHub مؤرشف الآن.** أنشأ [Anton Osika](https://github.com/AntonOsika) مستودع [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) في 29 أبريل 2023، ونما بسرعة خلال موجة اهتمام 2023 بعملاء البرمجة المستقلين التي تلت AutoGPT وBabyAGI.",
-          "أُنشئت منظمة باسم gpt-engineer-org في ديسمبر 2023، واحتفظت لفترة وجيزة بنسخة من المشروع (رابط GitHub github.com/gpt-engineer-org/gpt-engineer يُعيد التوجيه، وقت إعداد هذه المراجعة، إلى مستودع AntonOsika الأصلي). الموقع المدرج لمنظمة gpt-engineer-org هو [gptengineer.app](https://gptengineer.app)، وهو منتج مُدار ذو رؤية محددة بلا كود/بكود قليل، يصفه ملف README الخاص بـ GPT Engineer بأنه «التطور» لأداة سطر الأوامر الأصلية.",
+          "أُنشئت منظمة باسم gpt-engineer-org في ديسمبر 2023؛ ولا يزال ملف README الخاص بالمشروع يشير إلى [gpt-engineer-org/gpt-engineer](https://github.com/gpt-engineer-org/gpt-engineer)، الذي يُعيد التوجيه، وقت إعداد هذه المراجعة، إلى مستودع AntonOsika. الموقع المدرج لمنظمة gpt-engineer-org هو [gptengineer.app](https://gptengineer.app)، وهو منتج مُدار ذو رؤية محددة بلا كود/بكود قليل، يصفه ملف README الخاص بـ GPT Engineer بأنه «التطور» لأداة سطر الأوامر الأصلية.",
           "أُعيدت تسمية المنصة التجارية على gptengineer.app لاحقًا إلى [Lovable](https://lovable.dev): بحسب [صفحة GPT Engineer على موقع Lovable](https://lovable.dev/en/gpt-engineer) جاءت إعادة التسمية لتجنب الخلط مع الأداة مفتوحة المصدر، ويعيد gptengineer.app الآن التوجيه إلى lovable.dev. وصف مستودع GitHub يقول «Precursor to: lovable.dev». تغطي هذه المراجعة فقط أداة سطر الأوامر الأصلية المفتوحة المصدر `gpt-engineer`، وليس gptengineer.app أو Lovable، وهما منتجان تجاريان بشروط وأسعار ودعم مستقلين خاصين بهما.",
           "آخر إصدار موسوم على GitHub هو `v0.3.1` (6 يونيو 2024)، وهو يطابق آخر إصدار منشور على PyPI. آخر تغيير في الكود دُمج في الفرع الرئيسي يعود إلى " + upd('gpt-engineer', 'ar') + "، وما تلاه من تعديلات على الفرع الرئيسي هو تعديلات على README فقط (آخرها في " + formatDisplayDate('2024-11-17', 'ar') + "). بعدها فُعِّلت علامة الأرشفة في GitHub، ما يعني أن المستودع للقراءة فقط: لا يمكن دمج أي تعديلات أو مشكلات أو طلبات سحب جديدة فيه.",
         ],
@@ -2027,6 +2051,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       setupGuide: {
         id: 'how-to-install-gpt-engineer',
+        callouts: [
+          { type: 'warning', text: "يشغّل GPT Engineer على جهازك الشيفرة التي يولّدها، ويرسل الموجّه (prompt) وملفات مشروعك إلى مزوّد النماذج المُعدّ. استخدم بيئة مؤقتة يمكن التخلص منها وراجع المخرجات قبل استخدامها." },
+        ],
         title: 'كيف تُثبّت GPT Engineer وتبدأ استخدامه؟',
         content: "**ثبّت آخر إصدار منشور من PyPI باستخدام `pip install gpt-engineer`.** بما أن المستودع مؤرشف، فهذا يُثبّت نفس نسخة 0.3.1 المنشورة في يونيو 2024 — لا يوجد إصدار أحدث يمكن جلبه.",
         numberedItems: [
@@ -2123,7 +2150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'هل ما زال GPT Engineer مُصانًا؟', a: 'لا. مستودع GitHub الخاص بـ AntonOsika/gpt-engineer مؤرشف (للقراءة فقط) وقت إعداد هذه المراجعة. كان آخر إصدار موسوم وآخر نشر على PyPI كلاهما في يونيو 2024 (الإصدار 0.3.1)، وآخر تغيير في الكود دُمج في الفرع الرئيسي يعود إلى ' + upd('gpt-engineer', 'ar') + ' (التعديلات اللاحقة على README فقط).' },
-          { q: 'هل GPT Engineer مجاني للاستخدام؟', a: 'نعم. GPT Engineer مرخّصة بموجب MIT ومجانية للاستخدام التجاري والتعديل والاستضافة الذاتية — تظل شروط الترخيص سارية حتى لو لم يعد المستودع يقبل تغييرات جديدة.' },
+          { q: 'هل GPT Engineer مجاني للاستخدام؟', a: 'نعم، الأداة نفسها مجانية: GPT Engineer مرخّصة بموجب MIT، دون رسوم للاستخدام التجاري أو التعديل أو الاستضافة الذاتية. أما تكاليف واجهة API لدى مزوّد النماذج الذي تُعدّه (OpenAI افتراضيًا) فهي منفصلة. وتظل شروط الترخيص سارية حتى لو لم يعد المستودع يقبل تغييرات جديدة.' },
           { q: 'ماذا يجب أن أستخدم بدلاً من GPT Engineer؟', a: 'يوصي ملف README الخاص بـ GPT Engineer نفسه بـ [Aider](/ar/power-local-llm/aider-review) باعتبارها «واجهة سطر أوامر قابلة للتعديل ومُصانة جيدًا» للبرمجة عبر الطرفية، ويوجّه إلى gptengineer.app (الذي أُعيدت تسميته لاحقًا إلى المنتج التجاري Lovable) للمستخدمين الراغبين في بديل مُستضاف ومُدار بدلاً من أداة سطر أوامر.' },
           { q: 'ما العلاقة بين GPT Engineer وgptengineer.app وLovable؟', a: 'GPT Engineer هي واجهة سطر الأوامر الأصلية مفتوحة المصدر التي تغطيها هذه المراجعة. كان gptengineer.app منصة ويب تجارية بناها الأشخاص أنفسهم، ويصفها المشروع بأنها «التطور» لواجهة سطر الأوامر. وقد أُعيدت تسميتها إلى Lovable، وتذكر Lovable على موقعها أن التغيير جاء لتجنب الخلط مع الأداة مفتوحة المصدر، ويعيد gptengineer.app الآن التوجيه إلى lovable.dev. ووصف الأداة على GitHub يسميها سلفًا لـ Lovable. الأداة وLovable منتجان مستقلان بأسعار وشروط منفصلة.' },
           { q: 'كيف أثبّت GPT Engineer؟', a: 'شغّل `pip install gpt-engineer`، الذي يُثبّت آخر إصدار منشور، 0.3.1 (يونيو 2024). لا يوجد إصدار أحدث.' },
@@ -2240,7 +2267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '코드 생성 실험에서 아카이브된 저장소로',
         content: [
           "**GPT Engineer는 2023년 4월, \"앱을 설명하면 완전한 코드베이스를 얻는다\"는 개념을 널리 알린 초기 도구 중 하나로 출시되었으며, 그 GitHub 저장소는 현재 아카이브되어 있다.** [Anton Osika](https://github.com/AntonOsika)는 2023년 4월 29일 [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) 저장소를 만들었고, AutoGPT와 BabyAGI에 뒤이은 2023년 자율 코딩 에이전트에 대한 관심의 물결 속에서 빠르게 성장했다.",
-          "2023년 12월, gpt-engineer-org라는 조직이 만들어져 잠시 프로젝트의 사본을 보유했다(본 리뷰 시점 기준, github.com/gpt-engineer-org/gpt-engineer라는 GitHub URL은 원래의 AntonOsika 저장소로 리다이렉트된다). gpt-engineer-org 조직이 등록한 웹사이트는 [gptengineer.app](https://gptengineer.app)으로, GPT Engineer의 README는 이를 원래 CLI 도구의 \"진화형\"이라고 설명한다. 이는 의견이 반영된 관리형 노코드/로우코드 제품이다.",
+          "2023년 12월에 gpt-engineer-org라는 조직이 만들어졌습니다. 프로젝트의 README는 여전히 [gpt-engineer-org/gpt-engineer](https://github.com/gpt-engineer-org/gpt-engineer)로 연결되며, 본 리뷰 시점 기준 이 주소는 AntonOsika 저장소로 리다이렉트됩니다. gpt-engineer-org 조직이 등록한 웹사이트는 [gptengineer.app](https://gptengineer.app)으로, GPT Engineer의 README는 이를 원래 CLI 도구의 \"진화형\"이라고 설명한다. 이는 의견이 반영된 관리형 노코드/로우코드 제품이다.",
           "gptengineer.app의 상업용 플랫폼은 이후 [Lovable](https://lovable.dev)로 이름이 바뀌었다. [Lovable의 GPT Engineer 페이지](https://lovable.dev/en/gpt-engineer)에 따르면 이름 변경은 오픈소스 도구와의 혼동을 피하기 위한 것이며, gptengineer.app은 이제 lovable.dev로 리다이렉트된다. GitHub 저장소 설명에는 \"Precursor to: lovable.dev\"라고 적혀 있다. 본 리뷰는 원래의 오픈소스 `gpt-engineer` CLI 도구만을 다루며, gptengineer.app이나 Lovable은 다루지 않는다. 이들은 각자 독립적인 약관, 가격, 지원을 갖춘 상업 제품이다.",
           "GitHub상 마지막 태그 릴리스는 `v0.3.1`(2024년 6월 6일)로, PyPI에 게시된 마지막 버전과 일치한다. main 브랜치에 병합된 마지막 코드 변경은 " + upd('gpt-engineer', 'ko') + "이며, 이후 main 브랜치의 커밋은 README 수정뿐이다(마지막은 " + formatDisplayDate('2024-11-17', 'ko') + "). 그 뒤 GitHub의 아카이브 플래그가 설정되었다. 즉 저장소는 읽기 전용이며, 새로운 커밋, 이슈, 풀 리퀘스트를 병합할 수 없다.",
         ],
@@ -2293,6 +2320,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       setupGuide: {
         id: 'how-to-install-gpt-engineer',
+        callouts: [
+          { type: 'warning', text: "GPT Engineer는 생성한 코드를 사용자의 컴퓨터에서 실행하며, 프롬프트와 프로젝트 파일을 설정된 모델 제공업체에 전송합니다. 일회용 환경을 사용하고, 출력물은 사용하기 전에 검토하십시오." },
+        ],
         title: 'GPT Engineer는 어떻게 설치하고 실행하나?',
         content: "**PyPI에서 `pip install gpt-engineer`로 마지막 게시된 릴리스를 설치한다.** 저장소가 아카이브되어 있으므로, 이는 2024년 6월에 게시된 것과 동일한 0.3.1 빌드를 설치하는 것이며 — 가져올 수 있는 더 새로운 버전은 없다.",
         numberedItems: [
@@ -2389,7 +2419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           { q: 'GPT Engineer는 아직 유지보수되고 있나요?', a: '아니요. AntonOsika/gpt-engineer GitHub 저장소는 본 리뷰 시점 기준 아카이브(읽기 전용)되어 있다. 마지막 태그 릴리스와 마지막 PyPI 게시는 모두 2024년 6월(버전 0.3.1)이었으며, main 브랜치에 병합된 마지막 코드 변경은 ' + upd('gpt-engineer', 'ko') + '이었다(이후 커밋은 README 수정뿐).' },
-          { q: 'GPT Engineer는 무료인가요?', a: '네. GPT Engineer는 MIT 라이선스이며 상업적 이용, 수정, 자체 호스팅이 무료다 — 저장소가 더 이상 새로운 변경을 받아들이지 않더라도 라이선스 조건 자체는 여전히 유효하다.' },
+          { q: 'GPT Engineer는 무료인가요?', a: '네, 도구 자체는 무료입니다. GPT Engineer는 MIT 라이선스이며 상업적 이용, 수정, 자체 호스팅에 비용이 없습니다. 설정한 모델 제공업체(기본값은 OpenAI)의 API 비용은 별도입니다. 저장소가 더 이상 새로운 변경을 받아들이지 않더라도 라이선스 조건 자체는 여전히 유효합니다.' },
           { q: 'GPT Engineer 대신 무엇을 사용해야 하나요?', a: "GPT Engineer 자체 README는 터미널 기반 코딩을 위해 [Aider](/ko/power-local-llm/aider-review)를 \"잘 관리되는 해킹 가능한 CLI\"로 추천하며, CLI 도구 대신 호스팅되는 관리형 대안을 원하는 사용자에게는 gptengineer.app(이후 상업 제품 Lovable로 이름이 바뀐)을 안내한다." },
           { q: 'GPT Engineer, gptengineer.app, Lovable은 어떤 관계인가요?', a: 'GPT Engineer는 본 리뷰가 다루는 원래의 오픈소스 CLI다. gptengineer.app은 같은 사람들이 만든 상업용 웹 플랫폼으로, 프로젝트에서는 이를 CLI의 "진화형"이라고 설명했다. 이것은 Lovable로 이름이 바뀌었으며, Lovable은 자사 사이트에서 이름 변경이 오픈소스 도구와의 혼동을 피하기 위한 것이라고 밝힌다. gptengineer.app은 이제 lovable.dev로 리다이렉트된다. CLI의 GitHub 설명은 스스로를 Lovable의 전신이라고 부른다. CLI와 Lovable은 가격과 약관이 독립된 별개의 제품이다.' },
           { q: 'GPT Engineer는 어떻게 설치하나요?', a: '`pip install gpt-engineer`를 실행하면 마지막으로 게시된 버전인 0.3.1(2024년 6월)이 설치된다. 더 새로운 릴리스는 존재하지 않는다.' },

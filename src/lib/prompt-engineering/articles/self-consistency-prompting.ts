@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: '**Self-consistency prompting samples several independent reasoning paths for the same question and selects the answer that appears most often.** Instead of trusting one answer that may be wrong, you ask several times at a higher temperature and let majority voting decide.',
       leadAnswerBlock: '**Self-consistency prompting asks the model the same question several times at a temperature above zero, then picks the majority answer. In the original paper, 40 samples raised PaLM-540B on GSM8K from 56.5% to 74.4%. Cost: one full response per sample.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       readTime: '12 min read',
       educationalLevel: 'Intermediate',
       audience: 'Developers building reliable AI reasoning pipelines, analysts making high-stakes decisions with AI, researchers in prompt engineering',
@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Self-Consistency Prompting: Generate Multiple Answers, Pick the One That\'s Right',
         description: 'Self-consistency prompting improves AI accuracy on math, logic, and analysis by generating multiple reasoning paths and selecting the majority answer. Technique, examples, and cost-benefit analysis.',
         datePublished: '2026-03-26',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         'url': 'https://www.promptquorum.com/prompt-engineering/self-consistency-prompting',
         keywords: ['self-consistency prompting', 'prompt engineering', 'reasoning prompts', 'majority voting', 'chain-of-thought', 'accuracy improvement', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -96,7 +96,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Any domain-specific reasoning where single-pass accuracy is below 90% (rule of thumb).',
           ],
           callouts: [
-            { type: 'pro-tip', label: 'Pro Tip', text: 'You don\'t need to manually compare 10 outputs. Add a final aggregation step: paste all N answers into a new prompt and ask "These are 10 answers to the same question. Which answer appears most frequently? State the consensus answer and your confidence level." The model does the voting for you.' },
+            { type: 'pro-tip', label: 'Pro Tip', text: 'You don\'t need to manually compare 10 outputs. Add a final aggregation step: paste all N answers into a new prompt and ask "These are 10 answers to the same question. Which answer appears most frequently? State the consensus answer and your confidence level." The model can do the counting for you; check its tally on important questions.' },
           ],
         },
         accuracyExample: {
@@ -142,7 +142,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { 'Approach': 'Self-consistency (single model)', 'How It Works': 'Same prompt, same model, 5-20 runs at T=0.7+', 'What It Catches': 'Sampling instability, random errors', 'Blind Spots': 'Systematic model bias (same bias in every sample)' },
             { 'Approach': 'Multi-model consensus', 'How It Works': 'Same prompt, different models, 1 run each', 'What It Catches': 'Model-specific biases, architectural blind spots', 'Blind Spots': 'All models may share the same training data gap' },
-            { 'Approach': 'Combined (strongest)', 'How It Works': 'Multiple models × multiple samples each', 'What It Catches': 'Both random errors AND systematic biases', 'Blind Spots': 'Cost: N models × M samples = N×M API calls' },
+            { 'Approach': 'Combined (broadest coverage)', 'How It Works': 'Multiple models × multiple samples each', 'What It Catches': 'Both random errors AND systematic biases', 'Blind Spots': 'Cost: N models × M samples = N×M API calls' },
           ],
           tableFormat: true,
         },
@@ -169,7 +169,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           callouts: [
-            { type: 'warning', label: 'Warning', text: 'Self-consistency at temperature 0 is useless — every sample produces the identical output. You must set temperature to 0.7 or higher to generate the variation that makes majority voting informative. This is the most common implementation mistake.' },
+            { type: 'warning', label: 'Warning', text: 'Self-consistency at temperature 0 is useless — every sample produces the identical output. Set temperature above 0; the paper sampled at T=0.5-0.7, and 0.7 is a common starting point. Temperature 0 is a frequent implementation mistake.' },
           ],
         },
         commonMistakes: {
@@ -278,7 +278,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: '**Self-Consistency Prompting zieht mehrere unabhängige Lösungswege für dieselbe Frage und wählt die Antwort, die am häufigsten vorkommt.** Statt einer einzelnen Antwort zu vertrauen, die falsch sein kann, fragen Sie mehrfach bei höherer Temperatur und lassen die Mehrheit entscheiden.',
       leadAnswerBlock: '**Self-Consistency Prompting stellt dem Modell dieselbe Frage mehrfach bei einer Temperatur über null und wählt die Mehrheitsantwort. Im Originalpaper stieg PaLM-540B auf GSM8K mit 40 Samples von 56,5% auf 74,4%. Kosten: eine vollständige Antwort pro Sample.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       readTime: '12 Min. Lesezeit',
       educationalLevel: 'Intermediate',
       audience: 'Entwickler, die zuverlässige KI-Reasoning-Pipelines erstellen, Analysten, die hochriskante Entscheidungen mit KI treffen, Forscher im Prompt Engineering',
@@ -301,7 +301,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Self-Consistency Prompting: Mehrfache Antworten generieren, Konsens auswählen',
         description: 'Self-Consistency Prompting verbessert die KI-Genauigkeit bei Mathematik, Logik und Analyse durch Generierung mehrerer Lösungswege und Auswahl der Mehrheitsantwort.',
         datePublished: '2026-03-26',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         'url': 'https://www.promptquorum.com/de/prompt-engineering/self-consistency-prompting',
         keywords: ['Self-Consistency Prompting', 'Prompt Engineering', 'KI-Zuverlässigkeit', 'Mehrheitsabstimmung', 'Reasoning', 'Chain-of-Thought'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -356,7 +356,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Jede domänenspezifische Reasoning-Aufgabe, bei der die Genauigkeit eines Einzeldurchlaufs unter 90% liegt (Faustregel).',
           ],
           callouts: [
-            { type: 'pro-tip', label: 'Profi-Tipp', text: 'Sie müssen 10 Outputs nicht manuell vergleichen. Fügen Sie einen finalen Aggregationsschritt hinzu: Fügen Sie alle N Antworten in einen neuen Prompt ein und fragen Sie: "Dies sind 10 Antworten auf die gleiche Frage. Welche Antwort kommt am häufigsten vor? Geben Sie die Konsensantwort und Ihr Vertrauensniveau an." Das Modell erledigt das Voting für Sie.' },
+            { type: 'pro-tip', label: 'Profi-Tipp', text: 'Sie müssen 10 Outputs nicht manuell vergleichen. Fügen Sie einen finalen Aggregationsschritt hinzu: Fügen Sie alle N Antworten in einen neuen Prompt ein und fragen Sie: "Dies sind 10 Antworten auf die gleiche Frage. Welche Antwort kommt am häufigsten vor? Geben Sie die Konsensantwort und Ihr Vertrauensniveau an." Das Modell kann das Auszählen übernehmen; prüfen Sie das Ergebnis bei wichtigen Fragen nach.' },
           ],
         },
         accuracyExample: {
@@ -402,7 +402,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { 'Ansatz': 'Self-Consistency (Einzelmodell)', 'Wie es funktioniert': 'Gleicher Prompt, gleiches Modell, 5–20 Durchläufe bei T=0,7+', 'Was es erfasst': 'Sampling-Instabilität, zufällige Fehler', 'Blinde Flecken': 'Systematische Modellverzerrung (gleiche Verzerrung in jedem Sample)' },
             { 'Ansatz': 'Multi-Modell-Konsens', 'Wie es funktioniert': 'Gleicher Prompt, verschiedene Modelle, 1 Durchlauf je Modell', 'Was es erfasst': 'Modellspezifische Verzerrungen, architektur-spezifische Schwachstellen', 'Blinde Flecken': 'Alle Modelle können die gleiche Trainingsdaten-Lücke teilen' },
-            { 'Ansatz': 'Kombiniert (stärkster)', 'Wie es funktioniert': 'Mehrere Modelle × mehrere Samples je Modell', 'Was es erfasst': 'Sowohl zufällige Fehler ALS AUCH systematische Verzerrungen', 'Blinde Flecken': 'Kosten: N Modelle × M Samples = N×M API-Aufrufe' },
+            { 'Ansatz': 'Kombiniert (breiteste Abdeckung)', 'Wie es funktioniert': 'Mehrere Modelle × mehrere Samples je Modell', 'Was es erfasst': 'Sowohl zufällige Fehler ALS AUCH systematische Verzerrungen', 'Blinde Flecken': 'Kosten: N Modelle × M Samples = N×M API-Aufrufe' },
           ],
           tableFormat: true,
         },
@@ -429,7 +429,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           callouts: [
-            { type: 'warning', label: 'Warnung', text: 'Self-Consistency bei Temperatur 0 ist sinnlos — jeder Sample erzeugt das identische Ergebnis. Sie müssen die Temperatur auf 0,7 oder höher setzen, um die Vielfalt zu generieren, die das Mehrheitsvoting aussagekräftig macht. Dies ist der häufigste Implementierungsfehler.' },
+            { type: 'warning', label: 'Warnung', text: 'Self-Consistency bei Temperatur 0 ist sinnlos — jeder Sample erzeugt das identische Ergebnis. Setzen Sie die Temperatur über 0; die Studie hat mit T=0,5-0,7 gesampelt, und 0,7 ist ein üblicher Startwert. Temperatur 0 ist ein häufiger Implementierungsfehler.' },
           ],
         },
         commonMistakes: {
@@ -497,7 +497,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Ist Self-Consistency das gleiche wie "Best-of-N" Sampling?', a: 'Ähnlich, aber nicht identisch. Best-of-N generiert N Antworten und wählt die beste aus (oft durch einen Qualitäts-Scorer). Self-Consistency generiert N Lösungswege und wählt die häufigste ANTWORT — die Abstimmung erfolgt über die Schlussfolgerung, nicht über die Qualität. Self-Consistency benötigt keinen Qualitäts-Scorer; es nutzt Übereinstimmung als Signal.' },
             { q: 'Kann ich Self-Consistency mit Chain-of-Thought Prompting kombinieren?', a: 'Ja — dies ist die Kombination aus dem Originalpaper. Jeder Ihrer N Samples verwendet Chain-of-Thought Reasoning und erzeugt eine vollständige Reasoning-Spur plus eine endgültige Antwort. Sie stimmen dann über die endgültigen Antworten über alle N Spuren ab. Die Lösungswege können unterschiedlich sein, aber wenn die meisten zu der gleichen Schlussfolgerung führen, ist diese Schlussfolgerung wahrscheinlicher richtig, aber nie garantiert.' },
             { q: 'Wie verhält sich PromptQuorum zu Self-Consistency?', a: 'PromptQuorum wendet das gleiche Konsensprinzip über verschiedene Modelle hinweg statt innerhalb eines Modells an. Anstatt das gleiche Modell 10 Mal zu fragen, stellen Sie 5 verschiedene Modelle einmal jedes und vergleichen ihre Antworten. Wo sie sich einigen, ist das Vertrauen hoch. Wo sie sich uneinig sind, muss der Anspruch überprüft werden. Dies erfasst modellspezifische Verzerrungen, die Single-Model Self-Consistency nicht erkennen kann.' },
-            { q: 'Muss ich Self-Consistency bei der Einhaltung der DSGVO beachten?', a: 'Nein, Self-Consistency ist eine reine Prompting-Technik und ändert nichts an Ihren DSGVO-Pflichten. Datenschutz hängt davon ab, wo Daten verarbeitet werden und welche Anbieter beteiligt sind, nicht davon, wie oft Sie samplen. Jeder zusätzliche Durchlauf sendet die Daten erneut an das Modell; bei lokal ausgeführten Modellen (z. B. Ollama, LM Studio) findet die Inferenz auf Ihrem Rechner statt; Update-Prüfungen oder Modell-Downloads der Tools können dennoch Verbindungen aufbauen. Das ist keine Rechtsberatung.' },
+            { q: 'Muss ich bei Self-Consistency etwas zur DSGVO beachten?', a: 'Ja, Ihre DSGVO-Pflichten bleiben bestehen: Self-Consistency ist eine reine Prompting-Technik und ändert weder Ihre Rechtsgrundlage noch Ihre sonstigen Pflichten. Jeder zusätzliche Durchlauf sendet die Eingabedaten erneut an das Modell, die verarbeitete Datenmenge wächst also mit der Zahl der Samples. Bei lokal ausgeführten Modellen (z. B. Ollama, LM Studio) findet die Inferenz auf Ihrem Rechner statt; Update-Prüfungen oder Modell-Downloads der Tools können dennoch Verbindungen aufbauen. Das ist keine Rechtsberatung.' },
             { q: 'Ist Self-Consistency Prompting für Mittelstand-Unternehmen geeignet?', a: 'Ja, wenn die Aufgabe es rechtfertigt. Mittelständische Unternehmen können Self-Consistency einsetzen, um KI-gestützte Analysen, Prognosen und Recherche-Synthesen robuster zu machen; die Kosten wachsen linear mit der Zahl der Samples. Mit lokalen Modellen auf eigenen Servern lassen sich Datenschutzanforderungen leichter einhalten. Ob BSI- und DSGVO-Anforderungen erfüllt sind, hängt jedoch von Ihrer Gesamtarchitektur ab. Das ist keine Rechtsberatung.' },
           ],
         },
@@ -573,10 +573,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'Muss ich Self-Consistency bei der Einhaltung der DSGVO beachten?',
+            'name': 'Muss ich bei Self-Consistency etwas zur DSGVO beachten?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Nein, Self-Consistency ist eine reine Prompting-Technik und ändert nichts an Ihren DSGVO-Pflichten. Datenschutz hängt davon ab, wo Daten verarbeitet werden und welche Anbieter beteiligt sind, nicht davon, wie oft Sie samplen. Jeder zusätzliche Durchlauf sendet die Daten erneut an das Modell; bei lokal ausgeführten Modellen (z. B. Ollama, LM Studio) findet die Inferenz auf Ihrem Rechner statt; Update-Prüfungen oder Modell-Downloads der Tools können dennoch Verbindungen aufbauen. Das ist keine Rechtsberatung.',
+              'text': 'Ja, Ihre DSGVO-Pflichten bleiben bestehen: Self-Consistency ist eine reine Prompting-Technik und ändert weder Ihre Rechtsgrundlage noch Ihre sonstigen Pflichten. Jeder zusätzliche Durchlauf sendet die Eingabedaten erneut an das Modell, die verarbeitete Datenmenge wächst also mit der Zahl der Samples. Bei lokal ausgeführten Modellen (z. B. Ollama, LM Studio) findet die Inferenz auf Ihrem Rechner statt; Update-Prüfungen oder Modell-Downloads der Tools können dennoch Verbindungen aufbauen. Das ist keine Rechtsberatung.',
             },
           },
           {
@@ -612,7 +612,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: '**El self-consistency prompting muestrea varios caminos de razonamiento independientes para la misma pregunta y selecciona la respuesta que aparece con más frecuencia.** En lugar de confiar en una sola respuesta que puede ser incorrecta, preguntas varias veces con una temperatura más alta y dejas que el voto mayoritario decida.',
       leadAnswerBlock: '**El self-consistency prompting hace al modelo la misma pregunta varias veces con una temperatura superior a cero y elige la respuesta mayoritaria. En el artículo original, 40 muestras llevaron a PaLM-540B en GSM8K del 56.5% al 74.4%. Costo: una respuesta completa por muestra.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       readTime: '12 min de lectura',
       educationalLevel: 'Intermediate',
       audience: 'Desarrolladores que crean pipelines de razonamiento de IA fiables, analistas que toman decisiones críticas con IA, investigadores en prompt engineering',
@@ -635,7 +635,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Self-Consistency Prompting: genera múltiples respuestas y elige la correcta',
         description: 'El self-consistency prompting mejora la precisión de la IA en matemáticas, lógica y análisis generando múltiples caminos de razonamiento y seleccionando la respuesta mayoritaria. Técnica, ejemplos y análisis costo-beneficio.',
         datePublished: '2026-03-26',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/es/prompt-engineering/self-consistency-prompting',
         inLanguage: 'es',
         keywords: ['self-consistency prompting', 'prompt engineering', 'prompts de razonamiento', 'voto mayoritario', 'chain-of-thought', 'mejora de precisión', 'PromptQuorum'],
@@ -691,7 +691,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Cualquier razonamiento específico de dominio donde la precisión de pasada única esté por debajo del 90% (regla general).',
           ],
           callouts: [
-            { type: 'pro-tip', label: 'Consejo profesional', text: 'No necesitas comparar 10 salidas manualmente. Añade un paso final de agregación: pega las N respuestas en un nuevo prompt y pregunta "Estas son 10 respuestas a la misma pregunta. ¿Cuál aparece con más frecuencia? Indica la respuesta de consenso y tu nivel de confianza." El modelo hace la votación por ti.' },
+            { type: 'pro-tip', label: 'Consejo profesional', text: 'No necesitas comparar 10 salidas manualmente. Añade un paso final de agregación: pega las N respuestas en un nuevo prompt y pregunta "Estas son 10 respuestas a la misma pregunta. ¿Cuál aparece con más frecuencia? Indica la respuesta de consenso y tu nivel de confianza." El modelo puede hacer el recuento por ti; comprueba su resultado en preguntas importantes.' },
           ],
         },
         accuracyExample: {
@@ -737,7 +737,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { 'Enfoque': 'Self-consistency (modelo único)', 'Cómo funciona': 'Mismo prompt, mismo modelo, 5–20 ejecuciones a T=0.7+', 'Qué detecta': 'Inestabilidad de muestreo, errores aleatorios', 'Puntos ciegos': 'Sesgo sistemático del modelo (el mismo sesgo en cada muestra)' },
             { 'Enfoque': 'Consenso multi-modelo', 'Cómo funciona': 'Mismo prompt, diferentes modelos, 1 ejecución cada uno', 'Qué detecta': 'Sesgos específicos del modelo, puntos ciegos arquitectónicos', 'Puntos ciegos': 'Todos los modelos pueden compartir el mismo vacío de datos de entrenamiento' },
-            { 'Enfoque': 'Combinado (más fuerte)', 'Cómo funciona': 'Múltiples modelos × múltiples muestras cada uno', 'Qué detecta': 'Tanto errores aleatorios COMO sesgos sistemáticos', 'Puntos ciegos': 'Costo: N modelos × M muestras = N×M llamadas a la API' },
+            { 'Enfoque': 'Combinado (mayor cobertura)', 'Cómo funciona': 'Múltiples modelos × múltiples muestras cada uno', 'Qué detecta': 'Tanto errores aleatorios COMO sesgos sistemáticos', 'Puntos ciegos': 'Costo: N modelos × M muestras = N×M llamadas a la API' },
           ],
           tableFormat: true,
         },
@@ -764,7 +764,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           callouts: [
-            { type: 'warning', label: 'Advertencia', text: 'El self-consistency con temperatura 0 no sirve: cada muestra produce la misma salida. Debes fijar la temperatura en 0.7 o más para generar la variación que hace informativo el voto mayoritario. Es el error de implementación más común.' },
+            { type: 'warning', label: 'Advertencia', text: 'El self-consistency con temperatura 0 no sirve: cada muestra produce la misma salida. Fija la temperatura por encima de 0; el artículo muestreó con T=0.5-0.7, y 0.7 es un punto de partida habitual. La temperatura 0 es un error de implementación frecuente.' },
           ],
         },
         commonMistakes: {
@@ -929,7 +929,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: '**يأخذ برومبت الاتساق الذاتي عدة مسارات استدلالية مستقلة للسؤال نفسه ويختار الإجابة التي تظهر في أغلب الأحيان.** بدلاً من الاعتماد على إجابة واحدة قد تكون خاطئة، تطرح السؤال مرات عدة بدرجة حرارة أعلى وتدع التصويت الأغلبي يُقرر.',
       leadAnswerBlock: '**يطرح برومبت الاتساق الذاتي السؤال نفسه على النموذج عدة مرات بدرجة حرارة أعلى من الصفر، ثم يختار الإجابة الأغلبية. في الورقة الأصلية رفعت 40 عينة دقة PaLM-540B على GSM8K من 56.5٪ إلى 74.4٪. التكلفة: استجابة كاملة لكل عينة.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       readTime: '١٢ دقيقة للقراءة',
       educationalLevel: 'متوسط',
       audience: 'المطورون الذين يبنون خطوط معالجة استدلال الذكاء الاصطناعي الموثوقة، والمحللون الذين يتخذون قرارات حاسمة بمساعدة الذكاء الاصطناعي، والباحثون في هندسة البرومبت',
@@ -952,7 +952,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'برومبت الاتساق الذاتي: أنتج استجابات متعددة واختر الصحيحة',
         description: 'يُحسّن برومبت الاتساق الذاتي دقة الذكاء الاصطناعي في الرياضيات والمنطق والتحليل بتوليد مسارات استدلالية متعددة واختيار الإجابة الأكثرية. التقنية والأمثلة وتحليل التكلفة والعائد.',
         datePublished: '2026-03-26',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/ar/prompt-engineering/self-consistency-prompting',
         inLanguage: 'ar',
         keywords: ['برومبت الاتساق الذاتي', 'هندسة البرومبت', 'برومبتات الاستدلال', 'التصويت الأغلبي', 'سلسلة الأفكار', 'تحسين الدقة', 'PromptQuorum'],
@@ -1008,7 +1008,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'أي استدلال خاص بمجال حيث دقة التشغيل الواحد أقل من 90٪ (قاعدة عامة).',
           ],
           callouts: [
-            { type: 'pro-tip', label: 'نصيحة احترافية', text: 'لست بحاجة إلى مقارنة 10 مخرجات يدوياً. أضف خطوة تجميع أخيرة: الصق جميع الإجابات الـN في برومبت جديد واسأل: "هذه 10 إجابات عن السؤال نفسه. أي إجابة تظهر أكثر؟ اذكر الإجابة التوافقية ومستوى ثقتك." يتولى النموذج التصويت عنك.' },
+            { type: 'pro-tip', label: 'نصيحة احترافية', text: 'لست بحاجة إلى مقارنة 10 مخرجات يدوياً. أضف خطوة تجميع أخيرة: الصق جميع الإجابات الـN في برومبت جديد واسأل: "هذه 10 إجابات عن السؤال نفسه. أي إجابة تظهر أكثر؟ اذكر الإجابة التوافقية ومستوى ثقتك." يمكن للنموذج تولي العدّ عنك؛ تحقق من نتيجته في الأسئلة المهمة.' },
           ],
         },
         accuracyExample: {
@@ -1054,7 +1054,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { 'النهج': 'الاتساق الذاتي (نموذج واحد)', 'كيف يعمل': 'نفس البرومبت، نفس النموذج، 5–20 تشغيل بدرجة حرارة T=0.7+', 'ما يكشفه': 'عدم استقرار أخذ العينات، الأخطاء العشوائية', 'النقاط العمياء': 'الانحياز المنهجي للنموذج (نفس الانحياز في كل عينة)' },
             { 'النهج': 'التوافق متعدد النماذج', 'كيف يعمل': 'نفس البرومبت، نماذج مختلفة، تشغيل واحد لكل منها', 'ما يكشفه': 'الانحيازات الخاصة بالنموذج، النقاط العمياء المعمارية', 'النقاط العمياء': 'قد تشترك جميع النماذج في الفجوة نفسها في بيانات التدريب' },
-            { 'النهج': 'مدمج (الأقوى)', 'كيف يعمل': 'نماذج متعددة × عينات متعددة لكل منها', 'ما يكشفه': 'كل من الأخطاء العشوائية والانحيازات المنهجية', 'النقاط العمياء': 'التكلفة: N نموذج × M عينة = N×M استدعاءات API' },
+            { 'النهج': 'مدمج (أوسع تغطية)', 'كيف يعمل': 'نماذج متعددة × عينات متعددة لكل منها', 'ما يكشفه': 'كل من الأخطاء العشوائية والانحيازات المنهجية', 'النقاط العمياء': 'التكلفة: N نموذج × M عينة = N×M استدعاءات API' },
           ],
           tableFormat: true,
         },
@@ -1081,7 +1081,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           callouts: [
-            { type: 'warning', label: 'تحذير', text: 'الاتساق الذاتي عند درجة حرارة 0 بلا فائدة: كل عينة تنتج المخرج نفسه. يجب ضبط درجة الحرارة على 0.7 أو أعلى لتوليد التنوع الذي يجعل التصويت الأغلبي مفيداً. هذا أكثر أخطاء التنفيذ شيوعاً.' },
+            { type: 'warning', label: 'تحذير', text: 'الاتساق الذاتي عند درجة حرارة 0 بلا فائدة: كل عينة تنتج المخرج نفسه. اضبط درجة الحرارة على قيمة أعلى من 0؛ فقد أخذت الورقة البحثية عيناتها عند T=0.5-0.7، و0.7 نقطة بداية شائعة. درجة الحرارة 0 خطأ تنفيذ متكرر.' },
           ],
         },
         commonMistakes: {
@@ -1246,7 +1246,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: '**O self-consistency prompting amostra vários caminhos de raciocínio independentes para a mesma pergunta e seleciona a resposta que aparece com mais frequência.** Em vez de confiar em uma única resposta, que pode estar errada, você faz a pergunta várias vezes com temperatura mais alta e deixa a votação por maioria decidir.',
       leadAnswerBlock: '**O self-consistency prompting faz ao modelo a mesma pergunta várias vezes com temperatura acima de zero e escolhe a resposta majoritária. No artigo original, 40 amostras levaram o PaLM-540B no GSM8K de 56,5% para 74,4%. Custo: uma resposta completa por amostra.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       readTime: '12 min de leitura',
       educationalLevel: 'Intermediate',
       audience: 'Desenvolvedores criando pipelines de raciocínio de IA confiáveis, analistas tomando decisões críticas com IA, pesquisadores em prompt engineering',
@@ -1269,7 +1269,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Self-Consistency Prompting: Gere Múltiplas Respostas, Escolha a Mais Consistente',
         description: 'O self-consistency prompting melhora a precisão da IA em matemática, lógica e análise gerando múltiplos caminhos de raciocínio e selecionando a resposta majoritária.',
         datePublished: '2026-03-26',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/pt/prompt-engineering/self-consistency-prompting',
         inLanguage: 'pt-BR',
         keywords: ['self-consistency prompting', 'prompt engineering', 'prompts de raciocínio', 'votação por maioria', 'chain-of-thought', 'melhora de precisão', 'PromptQuorum'],
@@ -1325,7 +1325,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Qualquer raciocínio específico de domínio onde a precisão de passagem única esteja abaixo de 90% (regra prática).',
           ],
           callouts: [
-            { type: 'pro-tip', label: 'Dica Pro', text: 'Você não precisa comparar manualmente 10 saídas. Adicione uma etapa de agregação final: cole todas as N respostas em um novo prompt e pergunte "Estas são 10 respostas para a mesma pergunta. Qual resposta aparece com mais frequência? Declare a resposta de consenso e seu nível de confiança." O modelo faz a votação por você.' },
+            { type: 'pro-tip', label: 'Dica Pro', text: 'Você não precisa comparar manualmente 10 saídas. Adicione uma etapa de agregação final: cole todas as N respostas em um novo prompt e pergunte "Estas são 10 respostas para a mesma pergunta. Qual resposta aparece com mais frequência? Declare a resposta de consenso e seu nível de confiança." O modelo pode fazer a contagem por você; confira o resultado em perguntas importantes.' },
           ],
         },
         accuracyExample: {
@@ -1371,7 +1371,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { 'Abordagem': 'Self-consistency (modelo único)', 'Como funciona': 'Mesmo prompt, mesmo modelo, 5–20 execuções em T=0,7+', 'O que captura': 'Instabilidade de amostragem, erros aleatórios', 'Pontos cegos': 'Viés sistemático do modelo (mesmo viés em cada amostra)' },
             { 'Abordagem': 'Consenso multi-modelo', 'Como funciona': 'Mesmo prompt, modelos diferentes, 1 execução cada', 'O que captura': 'Vieses específicos do modelo, pontos cegos arquiteturais', 'Pontos cegos': 'Todos os modelos podem compartilhar a mesma lacuna de dados de treinamento' },
-            { 'Abordagem': 'Combinado (mais forte)', 'Como funciona': 'Vários modelos × várias amostras cada', 'O que captura': 'Tanto erros aleatórios QUANTO vieses sistemáticos', 'Pontos cegos': 'Custo: N modelos × M amostras = N×M chamadas de API' },
+            { 'Abordagem': 'Combinado (maior cobertura)', 'Como funciona': 'Vários modelos × várias amostras cada', 'O que captura': 'Tanto erros aleatórios QUANTO vieses sistemáticos', 'Pontos cegos': 'Custo: N modelos × M amostras = N×M chamadas de API' },
           ],
           tableFormat: true,
         },
@@ -1398,7 +1398,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           callouts: [
-            { type: 'warning', label: 'Aviso', text: 'Self-consistency com temperatura 0 é inútil — cada amostra produz a saída idêntica. Você deve definir a temperatura em 0,7 ou maior para gerar a variação que torna a votação por maioria informativa. Este é o erro de implementação mais comum.' },
+            { type: 'warning', label: 'Aviso', text: 'Self-consistency com temperatura 0 é inútil — cada amostra produz a saída idêntica. Defina a temperatura acima de 0; o artigo amostrou com T=0,5-0,7, e 0,7 é um ponto de partida comum. Temperatura 0 é um erro de implementação frequente.' },
           ],
         },
         commonMistakes: {
@@ -1563,7 +1563,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: '**Le Self-Consistency Prompting échantillonne plusieurs chemins de raisonnement indépendants pour la même question, puis sélectionne la réponse qui revient le plus souvent.** Au lieu de faire confiance à une seule réponse, qui peut être fausse, vous posez la question plusieurs fois à température plus élevée et laissez le vote majoritaire trancher.',
       leadAnswerBlock: '**Le Self-Consistency Prompting pose plusieurs fois la même question au modèle à une température supérieure à zéro, puis retient la réponse majoritaire. Dans l\'article original, 40 échantillons ont fait passer PaLM-540B de 56.5% à 74.4% sur GSM8K. Coût : une réponse complète par échantillon.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       readTime: '11 min de lecture',
       educationalLevel: 'Intermediate',
       audience: 'Développeurs créant des pipelines IA fiables, analystes prenant des décisions critiques avec l\'IA, chercheurs en ingénierie de prompts',
@@ -1586,7 +1586,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Self-Consistency Prompting : Plusieurs Réponses, Choisir le Consensus',
         description: 'Le Self-Consistency Prompting améliore la précision de l\'IA en mathématiques, logique et analyse en générant plusieurs chemins de raisonnement et en sélectionnant la réponse majoritaire.',
         datePublished: '2026-03-26',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         'url': 'https://www.promptquorum.com/fr/prompt-engineering/self-consistency-prompting',
         keywords: ['Self-Consistency Prompting', 'Prompt Engineering', 'Fiabilité IA', 'Vote majoritaire', 'Raisonnement', 'Chaîne de pensée'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1641,7 +1641,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Toute tâche de raisonnement spécifique au domaine où la précision d\'un passage unique est observablement inférieure à 90% (règle générale).',
           ],
           callouts: [
-            { type: 'pro-tip', label: 'Conseil Pro', text: 'Vous n\'avez pas besoin de comparer manuellement 10 outputs. Ajoutez une étape d\'agrégation finale : collez tous les N réponses dans un nouveau prompt et demandez : "Voici 10 réponses à la même question. Quelle réponse apparaît le plus souvent ? Donnez la réponse consensuelle et votre niveau de confiance." Le modèle fait le vote pour vous.' },
+            { type: 'pro-tip', label: 'Conseil Pro', text: 'Vous n\'avez pas besoin de comparer manuellement 10 outputs. Ajoutez une étape d\'agrégation finale : collez tous les N réponses dans un nouveau prompt et demandez : "Voici 10 réponses à la même question. Quelle réponse apparaît le plus souvent ? Donnez la réponse consensuelle et votre niveau de confiance." Le modèle peut faire le décompte à votre place ; vérifiez son résultat sur les questions importantes.' },
           ],
         },
         accuracyExample: {
@@ -1687,7 +1687,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { 'Approche': 'Self-Consistency (modèle unique)', 'Comment ça marche': 'Même prompt, même modèle, 5–20 passages à T=0.7+', 'Ce qu\'elle capture': 'Instabilité d\'échantillonnage, erreurs aléatoires', 'Angles morts': 'Biais systématique du modèle (même biais dans chaque échantillon)' },
             { 'Approche': 'Consensus multi-modèle', 'Comment ça marche': 'Même prompt, modèles différents, 1 passage chacun', 'Ce qu\'elle capture': 'Biais modèle-spécifiques, angles morts architecturaux', 'Angles morts': 'Tous les modèles peuvent partager la même lacune dans les données d\'entraînement' },
-            { 'Approche': 'Combiné (le plus puissant)', 'Comment ça marche': 'Plusieurs modèles × plusieurs échantillons chacun', 'Ce qu\'elle capture': 'Erreurs aléatoires ET biais systématiques', 'Angles morts': 'Coût : N modèles × M échantillons = N×M appels API' },
+            { 'Approche': 'Combiné (couverture la plus large)', 'Comment ça marche': 'Plusieurs modèles × plusieurs échantillons chacun', 'Ce qu\'elle capture': 'Erreurs aléatoires ET biais systématiques', 'Angles morts': 'Coût : N modèles × M échantillons = N×M appels API' },
           ],
           tableFormat: true,
         },
@@ -1714,7 +1714,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           callouts: [
-            { type: 'warning', label: 'Avertissement', text: 'Self-Consistency à température 0 est inutile — chaque échantillon produit le résultat identique. Vous devez définir la température à 0.7 ou plus pour générer la variation qui rend le vote majoritaire informatif. Ceci est l\'erreur d\'implémentation la plus courante.' },
+            { type: 'warning', label: 'Avertissement', text: 'Self-Consistency à température 0 est inutile — chaque échantillon produit le résultat identique. Définissez la température au-dessus de 0 ; l\'article a échantillonné à T=0.5-0.7, et 0.7 est un point de départ courant. La température 0 est une erreur d\'implémentation fréquente.' },
           ],
         },
         commonMistakes: {
@@ -1879,7 +1879,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: '**Self-Consistencyプロンプトは、同じ質問に対して複数の独立した推論パスをサンプリングし、最も多く出た答えを採用する手法です。** 間違っているかもしれない1つの答えを信頼する代わりに、高めの温度で何度も質問し、多数決で結論を決めます。',
       leadAnswerBlock: '**Self-Consistencyプロンプトは、温度を0より高くして同じ質問を複数回モデルに投げ、多数派の答えを採用する手法です。原論文では、40サンプルによりPaLM-540BのGSM8K正答率が56.5%から74.4%に上がりました。コスト：サンプルごとに完全な応答1回分です。**',
       publishDate: '2026-03-26',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       readTime: '12分で読める',
       educationalLevel: 'Intermediate',
       audience: '信頼性の高いAI推論パイプラインを構築する開発者、AIで重要な判断を行うアナリスト、プロンプトエンジニアリングの研究者',
@@ -1902,7 +1902,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Self-Consistencyプロンプト：複数の答えから正解を選ぶ',
         description: 'Self-Consistencyプロンプトは、複数の推論パスを生成して多数派の答えを採用する手法です。仕組み、論文の報告値、コストを解説します。',
         datePublished: '2026-03-26',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         'url': 'https://www.promptquorum.com/ja/prompt-engineering/self-consistency-prompting',
         keywords: ['Self-Consistencyプロンプト', 'プロンプトエンジニアリング', '推論プロンプト', '多数決', 'Chain-of-Thought', '精度向上', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1957,7 +1957,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '1回の実行の精度が90%を下回る、分野固有の推論（目安）。',
           ],
           callouts: [
-            { type: 'pro-tip', label: 'プロのヒント', text: '10個の出力を手作業で比べる必要はありません。最後に集約ステップを追加します。N個の答えを新しいプロンプトに貼り付け、「これらは同じ質問への10個の答えです。最も多く出た答えはどれですか。合意した答えと確信度を示してください」と尋ねます。投票はモデルがやってくれます。' },
+            { type: 'pro-tip', label: 'プロのヒント', text: '10個の出力を手作業で比べる必要はありません。最後に集約ステップを追加します。N個の答えを新しいプロンプトに貼り付け、「これらは同じ質問への10個の答えです。最も多く出た答えはどれですか。合意した答えと確信度を示してください」と尋ねます。集計はモデルに任せられますが、重要な質問では結果を確認してください。' },
           ],
         },
         accuracyExample: {
@@ -2003,7 +2003,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { 'アプローチ': 'Self-Consistency（単一モデル）', '仕組み': '同じプロンプト、同じモデル、T=0.7以上で5～20回', '検出できるもの': 'サンプリングの不安定さ、ランダムな誤り', '盲点': 'モデルの系統的な偏り（全サンプルに同じ偏り）' },
             { 'アプローチ': 'マルチモデル合意', '仕組み': '同じプロンプト、異なるモデル、各1回', '検出できるもの': 'モデル固有の偏り、アーキテクチャ上の盲点', '盲点': '全モデルが同じ学習データの欠落を共有する可能性' },
-            { 'アプローチ': '組み合わせ（最強）', '仕組み': '複数モデル × 各モデル複数サンプル', '検出できるもの': 'ランダムな誤りと系統的な偏りの両方', '盲点': 'コスト：N個のモデル × Mサンプル = N×M回のAPI呼び出し' },
+            { 'アプローチ': '組み合わせ（最も広いカバー）', '仕組み': '複数モデル × 各モデル複数サンプル', '検出できるもの': 'ランダムな誤りと系統的な偏りの両方', '盲点': 'コスト：N個のモデル × Mサンプル = N×M回のAPI呼び出し' },
           ],
           tableFormat: true,
         },
@@ -2030,7 +2030,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           callouts: [
-            { type: 'warning', label: '警告', text: '温度0のSelf-Consistencyは無意味です。すべてのサンプルが同一の出力になります。多数決に意味を持たせるばらつきを生むには、温度を0.7以上に設定する必要があります。これは最もよくある実装ミスです。' },
+            { type: 'warning', label: '警告', text: '温度0のSelf-Consistencyは無意味です。すべてのサンプルが同一の出力になります。温度は0より大きく設定してください。論文ではT=0.5-0.7でサンプリングしており、0.7は一般的な開始値です。温度0は実装ミスとしてよくあります。' },
           ],
         },
         commonMistakes: {
@@ -2139,7 +2139,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: '**Self-Consistency提示会针对同一个问题采样多条独立的推理路径，并选出出现次数最多的答案。** 与其相信可能出错的单个答案，不如用较高的温度多问几次，让多数投票来决定。',
       leadAnswerBlock: '**Self-Consistency提示把同一个问题以高于零的温度多次交给模型，然后选取多数答案。原论文中，40次采样使PaLM-540B在GSM8K上的准确率从56.5%提高到74.4%。代价：每次采样一条完整回答。**',
       publishDate: '2026-03-26',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       readTime: '阅读约12分钟',
       educationalLevel: 'Intermediate',
       audience: '构建可靠AI推理流程的开发者、用AI做高风险决策的分析师、提示工程研究者',
@@ -2162,7 +2162,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Self-Consistency提示：生成多个答案，选出正确的那个',
         description: 'Self-Consistency提示通过生成多条推理路径并选取多数答案来提高推理准确率。本文介绍原理、论文报告的结果和成本。',
         datePublished: '2026-03-26',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         'url': 'https://www.promptquorum.com/zh/prompt-engineering/self-consistency-prompting',
         keywords: ['Self-Consistency提示', '提示工程', '推理提示', '多数投票', 'Chain-of-Thought', '准确率提升', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2217,7 +2217,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '单次准确率低于90%的特定领域推理（经验法则）。',
           ],
           callouts: [
-            { type: 'pro-tip', label: '专业提示', text: '不需要手动比较10个输出。增加一个最终汇总步骤：把N个答案粘贴到新的提示中并问：“这是对同一问题的10个答案。哪个答案出现最多？请给出共识答案和你的置信度。”投票由模型代劳。' },
+            { type: 'pro-tip', label: '专业提示', text: '不需要手动比较10个输出。增加一个最终汇总步骤：把N个答案粘贴到新的提示中并问：“这是对同一问题的10个答案。哪个答案出现最多？请给出共识答案和你的置信度。”统计可以交给模型，但重要问题上请核对它的结果。' },
           ],
         },
         accuracyExample: {
@@ -2263,7 +2263,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { '方法': 'Self-Consistency（单模型）', '工作方式': '同一提示、同一模型，T=0.7以上运行5-20次', '能发现什么': '采样不稳定、随机错误', '盲区': '模型的系统性偏差（每个样本都有）' },
             { '方法': '多模型共识', '工作方式': '同一提示、不同模型，各运行1次', '能发现什么': '模型特有的偏差、架构盲区', '盲区': '所有模型可能共享同一训练数据缺口' },
-            { '方法': '组合（最强）', '工作方式': '多个模型 × 每个模型多次采样', '能发现什么': '随机错误和系统性偏差', '盲区': '成本：N个模型 × M次采样 = N×M次API调用' },
+            { '方法': '组合（覆盖最广）', '工作方式': '多个模型 × 每个模型多次采样', '能发现什么': '随机错误和系统性偏差', '盲区': '成本：N个模型 × M次采样 = N×M次API调用' },
           ],
           tableFormat: true,
         },
@@ -2290,7 +2290,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           callouts: [
-            { type: 'warning', label: '警告', text: '温度为0时Self-Consistency毫无用处：每个样本都输出相同内容。必须把温度设为0.7或更高，才能产生让多数投票有意义的差异。这是最常见的实现错误。' },
+            { type: 'warning', label: '警告', text: '温度为0时Self-Consistency毫无用处：每个样本都输出相同内容。请把温度设为大于0的值；论文使用T=0.5-0.7进行采样，0.7是常见的起点。温度为0是常见的实现错误。' },
           ],
         },
         commonMistakes: {
@@ -2399,7 +2399,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: '**자기 일관성 프롬프팅은 동일한 질문에 대해 여러 개의 독립적인 추론 경로를 샘플링한 후 가장 자주 등장하는 답변을 선택합니다.** 틀릴 수 있는 단일 답변을 신뢰하는 대신, 더 높은 temperature에서 여러 번 질문하고 다수결로 결론을 도출합니다.',
       leadAnswerBlock: '**자기 일관성 프롬프팅은 temperature를 0보다 높게 설정해 모델에 동일한 질문을 여러 번 제시한 뒤 다수결 답변을 선택합니다. 원본 논문에서 40개 샘플은 GSM8K에서 PaLM-540B의 정확도를 56.5%에서 74.4%로 높였습니다. 비용: 샘플당 완전한 응답 하나입니다.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       readTime: '12분 읽기',
       educationalLevel: 'Intermediate',
       audience: '신뢰할 수 있는 AI 추론 파이프라인을 구축하는 개발자, AI로 고위험 결정을 내리는 분석가, 프롬프트 엔지니어링 연구자',
@@ -2422,7 +2422,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '자기 일관성 프롬프팅: 여러 답변을 생성하고 올바른 답을 선택하십시오',
         description: '자기 일관성 프롬프팅은 여러 추론 경로를 생성하고 다수결 답변을 선택함으로써 수학, 논리, 분석에서 AI 정확도를 향상시킵니다. 기법, 예시, 비용-편익 분석.',
         datePublished: '2026-03-26',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         'url': 'https://www.promptquorum.com/ko/prompt-engineering/self-consistency-prompting',
         keywords: ['자기 일관성 프롬프팅', '프롬프트 엔지니어링', '추론 프롬프트', '다수결 투표', 'chain-of-thought', '정확도 향상', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2477,7 +2477,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '단일 패스 정확도가 90% 미만인 모든 도메인 특정 추론(경험칙).',
           ],
           callouts: [
-            { type: 'pro-tip', label: '전문가 팁', text: '10개의 출력을 수동으로 비교할 필요가 없습니다. 최종 집계 단계를 추가하십시오: 모든 N개의 답변을 새 프롬프트에 붙여넣고 "다음은 동일한 질문에 대한 10개의 답변입니다. 가장 자주 나타나는 답변은 무엇입니까? 합의 답변과 신뢰도 수준을 말씀해 주십시오."라고 묻습니다. 모델이 투표를 대신 해줍니다.' },
+            { type: 'pro-tip', label: '전문가 팁', text: '10개의 출력을 수동으로 비교할 필요가 없습니다. 최종 집계 단계를 추가하십시오: 모든 N개의 답변을 새 프롬프트에 붙여넣고 "다음은 동일한 질문에 대한 10개의 답변입니다. 가장 자주 나타나는 답변은 무엇입니까? 합의 답변과 신뢰도 수준을 말씀해 주십시오."라고 묻습니다. 집계는 모델에게 맡길 수 있지만, 중요한 질문에서는 결과를 확인하십시오.' },
           ],
         },
         accuracyExample: {
@@ -2523,7 +2523,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { '접근법': '자기 일관성 (단일 모델)', '작동 방식': '동일한 프롬프트, 동일한 모델, T=0.7+ 에서 5~20회 실행', '포착하는 것': '샘플링 불안정성, 무작위 오류', '맹점': '체계적인 모델 편향 (모든 샘플에서 동일한 편향)' },
             { '접근법': '다중 모델 합의', '작동 방식': '동일한 프롬프트, 다른 모델, 각 1회 실행', '포착하는 것': '모델 특정 편향, 아키텍처 맹점', '맹점': '모든 모델이 동일한 학습 데이터 공백을 공유할 수 있음' },
-            { '접근법': '결합 (가장 강력)', '작동 방식': '여러 모델 × 각각 여러 샘플', '포착하는 것': '무작위 오류와 체계적 편향 모두', '맹점': '비용: N 모델 × M 샘플 = N×M API 호출' },
+            { '접근법': '결합 (가장 넓은 포괄 범위)', '작동 방식': '여러 모델 × 각각 여러 샘플', '포착하는 것': '무작위 오류와 체계적 편향 모두', '맹점': '비용: N 모델 × M 샘플 = N×M API 호출' },
           ],
           tableFormat: true,
         },
@@ -2550,7 +2550,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           callouts: [
-            { type: 'warning', label: '경고', text: 'temperature 0에서의 자기 일관성은 쓸모없습니다—모든 샘플이 동일한 출력을 생성합니다. 다수결 투표를 의미 있게 만드는 변형을 생성하려면 temperature를 0.7 이상으로 설정해야 합니다. 이것이 가장 일반적인 구현 실수입니다.' },
+            { type: 'warning', label: '경고', text: 'temperature 0에서의 자기 일관성은 쓸모없습니다—모든 샘플이 동일한 출력을 생성합니다. temperature를 0보다 크게 설정하십시오. 논문은 T=0.5-0.7로 샘플링했으며, 0.7은 일반적인 시작값입니다. temperature 0은 흔한 구현 실수입니다.' },
           ],
         },
         commonMistakes: {
@@ -2614,7 +2614,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '자기 일관성에 몇 개의 샘플이 필요합니까?', a: '대부분의 과제에서 5~10개의 샘플로 시작하십시오. 원본 논문은 경로를 추가할수록 성능이 빠르게 포화된다고 언급하며 5개 또는 10개로 시작할 것을 제안합니다. 샘플이 하나 늘 때마다 완전한 응답이 하나 더 필요합니다. 5개로 시작하고, 고위험 결정에만 10~20개로 늘리십시오.' },
             { q: '자기 일관성이 단순한 과제에서도 작동합니까?', a: '의미 있게 작동하지 않습니다. 사실 조회, 단순 분류, 또는 단편 작문의 경우 단일 답변이 거의 항상 충분하며 훨씬 저렴합니다. 경험칙으로(저희의 휴리스틱이며 논문의 수치가 아닙니다), 자기 일관성은 모델의 단일 패스 정확도가 ~90% 미만인 과제—일반적으로 수학, 논리 퍼즐, 다단계 분석, 복잡한 추론—에서 주로 가치를 더합니다.' },
             { q: '자기 일관성에는 어떤 temperature를 사용해야 합니까?', a: 'temperature를 0.7~1.0으로 설정하십시오. 이 기법은 다양한 추론 경로가 필요합니다—temperature가 0(결정론적)이면 모든 샘플이 동일한 출력을 생성하고 투표는 의미가 없습니다. 더 높은 temperature는 다수결 투표를 의미 있게 만드는 변형을 생성합니다.' },
-            { q: '자기 일관성의 비용이 얼마나 더 많이 드나요?', a: '5~20개의 완전한 응답 대신 하나를 생성하므로 작업당 약 5~20배 더 많은 토큰이 필요합니다. $0.01의 비용이 드는 응답의 경우, 10개 샘플의 자기 일관성은 $0.10이 됩니다. 위험도가 높은 분석에서는 정당화될 수 있지만 일상적인 과제에는 낭비입니다. 의료, 법률, 재무 관련 결정은 자격을 갖춘 전문가가 결과를 검토해야 하며, 이 글은 일반 정보일 뿐 전문적인 조언이 아닙니다.' },
+            { q: '자기 일관성의 비용이 얼마나 더 많이 드나요?', a: '하나가 아니라 5~20개의 완전한 응답을 생성하므로 작업당 약 5~20배 더 많은 토큰이 필요합니다. $0.01의 비용이 드는 응답의 경우, 10개 샘플의 자기 일관성은 $0.10이 됩니다. 위험도가 높은 분석에서는 정당화될 수 있지만 일상적인 과제에는 낭비입니다. 의료, 법률, 재무 관련 결정은 자격을 갖춘 전문가가 결과를 검토해야 하며, 이 글은 일반 정보일 뿐 전문적인 조언이 아닙니다.' },
             { q: '자기 일관성이 "best-of-N" 샘플링과 같습니까?', a: '유사하지만 동일하지 않습니다. Best-of-N은 N개의 응답을 생성하고 가장 좋은 것을 선택합니다(종종 품질 스코어러에 의해). 자기 일관성은 N개의 추론 경로를 생성하고 가장 일반적인 답변—품질이 아닌 결론에 대한 투표—을 선택합니다. 자기 일관성은 품질 스코어러가 필요 없습니다; 동의를 신호로 사용합니다.' },
             { q: '자기 일관성을 chain-of-thought 프롬프팅과 함께 사용할 수 있습니까?', a: '예—이것이 원본 논문에서 사용한 조합입니다. N개의 각 샘플은 chain-of-thought 추론을 사용하여 전체 추론 추적과 최종 답변을 생성합니다. 그런 다음 모든 N개의 추적에서 최종 답변에 투표합니다. 추론 경로는 다를 수 있지만 대부분이 동일한 결론에 도달하면 그 결론이 맞을 가능성은 높아지지만 보장되지는 않습니다.' },
             { q: 'PromptQuorum이 자기 일관성과 어떻게 관련됩니까?', a: 'PromptQuorum은 하나의 모델 내에서 대신 다른 모델에 걸쳐 동일한 합의 원리를 적용합니다. 동일한 모델에 10번 묻는 대신, 5개의 다른 모델에 각각 한 번씩 묻고 답변을 비교합니다. 동의하는 경우 신뢰도가 높습니다. 동의하지 않는 경우 주장을 확인해야 합니다. 이는 단일 모델 자기 일관성이 감지할 수 없는 모델 특정 편향을 포착합니다.' },
@@ -2630,7 +2630,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: '자기 일관성에 몇 개의 샘플이 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '대부분의 과제에서 5~10개의 샘플로 시작하십시오. 원본 논문은 경로를 추가할수록 성능이 빠르게 포화된다고 언급하며 5개 또는 10개로 시작할 것을 제안합니다. 샘플이 하나 늘 때마다 완전한 응답이 하나 더 필요합니다. 5개로 시작하고, 고위험 결정에만 10~20개로 늘리십시오.' } },
           { '@type': 'Question', name: '자기 일관성이 단순한 과제에서도 작동합니까?', acceptedAnswer: { '@type': 'Answer', text: '의미 있게 작동하지 않습니다. 사실 조회, 단순 분류, 또는 단편 작문의 경우 단일 답변이 거의 항상 충분하며 훨씬 저렴합니다. 경험칙으로(저희의 휴리스틱이며 논문의 수치가 아닙니다), 자기 일관성은 모델의 단일 패스 정확도가 ~90% 미만인 과제—일반적으로 수학, 논리 퍼즐, 다단계 분석, 복잡한 추론—에서 주로 가치를 더합니다.' } },
           { '@type': 'Question', name: '자기 일관성에는 어떤 temperature를 사용해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: 'temperature를 0.7~1.0으로 설정하십시오. 이 기법은 다양한 추론 경로가 필요합니다—temperature가 0(결정론적)이면 모든 샘플이 동일한 출력을 생성하고 투표는 의미가 없습니다. 더 높은 temperature는 다수결 투표를 의미 있게 만드는 변형을 생성합니다.' } },
-          { '@type': 'Question', name: '자기 일관성의 비용이 얼마나 더 많이 드나요?', acceptedAnswer: { '@type': 'Answer', text: '5~20개의 완전한 응답 대신 하나를 생성하므로 작업당 약 5~20배 더 많은 토큰이 필요합니다. $0.01의 비용이 드는 응답의 경우, 10개 샘플의 자기 일관성은 $0.10이 됩니다. 위험도가 높은 분석에서는 정당화될 수 있지만 일상적인 과제에는 낭비입니다. 의료, 법률, 재무 관련 결정은 자격을 갖춘 전문가가 결과를 검토해야 하며, 이 글은 일반 정보일 뿐 전문적인 조언이 아닙니다.' } },
+          { '@type': 'Question', name: '자기 일관성의 비용이 얼마나 더 많이 드나요?', acceptedAnswer: { '@type': 'Answer', text: '하나가 아니라 5~20개의 완전한 응답을 생성하므로 작업당 약 5~20배 더 많은 토큰이 필요합니다. $0.01의 비용이 드는 응답의 경우, 10개 샘플의 자기 일관성은 $0.10이 됩니다. 위험도가 높은 분석에서는 정당화될 수 있지만 일상적인 과제에는 낭비입니다. 의료, 법률, 재무 관련 결정은 자격을 갖춘 전문가가 결과를 검토해야 하며, 이 글은 일반 정보일 뿐 전문적인 조언이 아닙니다.' } },
           { '@type': 'Question', name: '자기 일관성이 "best-of-N" 샘플링과 같습니까?', acceptedAnswer: { '@type': 'Answer', text: '유사하지만 동일하지 않습니다. Best-of-N은 N개의 응답을 생성하고 가장 좋은 것을 선택합니다(종종 품질 스코어러에 의해). 자기 일관성은 N개의 추론 경로를 생성하고 가장 일반적인 답변—품질이 아닌 결론에 대한 투표—을 선택합니다. 자기 일관성은 품질 스코어러가 필요 없습니다; 동의를 신호로 사용합니다.' } },
           { '@type': 'Question', name: '자기 일관성을 chain-of-thought 프롬프팅과 함께 사용할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '예—이것이 원본 논문에서 사용한 조합입니다. N개의 각 샘플은 chain-of-thought 추론을 사용하여 전체 추론 추적과 최종 답변을 생성합니다. 그런 다음 모든 N개의 추적에서 최종 답변에 투표합니다. 추론 경로는 다를 수 있지만 대부분이 동일한 결론에 도달하면 그 결론이 맞을 가능성은 높아지지만 보장되지는 않습니다.' } },
           { '@type': 'Question', name: 'PromptQuorum이 자기 일관성과 어떻게 관련됩니까?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum은 하나의 모델 내에서 대신 다른 모델에 걸쳐 동일한 합의 원리를 적용합니다. 동일한 모델에 10번 묻는 대신, 5개의 다른 모델에 각각 한 번씩 묻고 답변을 비교합니다. 동의하는 경우 신뢰도가 높습니다. 동의하지 않는 경우 주장을 확인해야 합니다. 이는 단일 모델 자기 일관성이 감지할 수 없는 모델 특정 편향을 포착합니다.' } },

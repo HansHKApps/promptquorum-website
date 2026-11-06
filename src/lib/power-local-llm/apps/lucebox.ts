@@ -41,7 +41,7 @@ export const app: ToolRecord = {
   reviewSlug: 'lucebox-review', // dedicated PromptQuorum review — added 2026-09-19
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { openaiApi: true, nvidiaGpu: true, amdGpu: true, distributed: true },
-  lastVerifiedDate: '2026-11-02',
-  lastUpstreamUpdate: '2026-11-01', // GitHub API: latest push/commit on main 2026-11-01T23:24:38Z; repo has no releases or tags; read 2026-11-02
+  lastVerifiedDate: '2026-11-06',
+  lastUpstreamUpdate: '2026-11-06', // GitHub API: latest commit on main 2026-11-06T13:00:02Z (repo pushed_at 2026-11-06T15:14:35Z); repo has no releases or tags; read 2026-11-06
   lastUpstreamUpdateSource: 'https://github.com/Luce-Org/lucebox',
 }

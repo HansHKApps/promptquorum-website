@@ -53,12 +53,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         updatedDate: '2026-11',
       },
       ja: {
-        question: 'Q4_K_M量化とは何ですか？',
-        answer: 'Q4_K_MはK-Quant（K）圧縮を使用した4ビット量化で、品質は中程度（M）です。ほとんどのモデルで一般的なデフォルトです：Q4_0よりパープレキシティが低く、Q8_0より小さいです。',
+        question: 'Q4_K_M量子化とは何ですか？',
+        answer: 'Q4_K_MはK-Quant（K）圧縮を使用した4ビット量子化で、品質は中程度（M）です。ほとんどのモデルで一般的なデフォルトです：Q4_0よりパープレキシティが低く、Q8_0より小さいです。',
         bullets: [
-          'Q=量化済み、4=4ビット、K=K-Quant、M=中程度',
+          'Q=量子化済み、4=4ビット、K=K-Quant、M=中程度',
           'Q4_0よりパープレキシティが低い（Llama 3 8Bで6.41対6.70）、ファイルは0.24 GiB大きい',
-          'Q4_K_Mをデフォルトの量化として使用する',
+          'Q4_K_Mをデフォルトの量子化として使用する',
         ],
         updatedDate: '2026-11',
       },
@@ -97,7 +97,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'What Each Letter in Q4_K_M Means',
         content: [
           '<strong>Q4_K_M exists because the older 4-bit format Q4_0 loses more quality than necessary.</strong> On Llama 3 8B, llama.cpp\'s perplexity test gives 6.41 for Q4_K_M and 6.70 for Q4_0 (lower is better; f16 is 6.23), for a file that is 0.24 GiB larger (4.58 vs 4.34 GiB). Source: <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp perplexity README</a>.',
-          'The "K" marks the k-quant family introduced in <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp pull request #1684</a>. Q4_K_M mixes two tensor types: it uses 6-bit Q6_K for half of the attention.wv and feed_forward.w2 tensors and 4-bit Q4_K for all other tensors. On Llama 3.1 8B this averages 4.89 bits per weight (llama.cpp quantize README), above the nominal 4.',
+          'The "K" marks the k-quant family introduced in <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp pull request #1684</a>. Q4_K_M mixes two tensor types: it uses 6-bit Q6_K for half of the attention.wv and feed_forward.w2 tensors and for output.weight, and 4-bit Q4_K for the remaining tensors. On Llama 3.1 8B this averages 4.89 bits per weight (llama.cpp quantize README), above the nominal 4.',
           'The "M" is the size variant within the family. Q4_K_S (small) uses Q4_K for every tensor: 4.36 GiB versus 4.58 GiB for Q4_K_M on Llama 3.1 8B, with higher perplexity (6.50 vs 6.41 on Llama 3 8B without an importance matrix). Q5_K_M is the next step up at 5.33 GiB.',
           '<strong>K-quant works on blocks of weights.</strong> Q4_K groups 32 weights into a block and 8 blocks into a super-block, storing block scales and minimums with 6 bits, which is 4.5 bits per weight (pull request #1684). Q4_K_M lands at 4.89 because of its Q6_K tensors, which is why it sits between Q4_K_S (4.67) and Q5_K_M (5.70) in size. For when the M tier is not enough, see <a href="/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
         ],
@@ -128,7 +128,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Which quantization should I use for 8 GB VRAM?',
-            a: 'Q4_K_M for 8B models: the Llama 3.1 8B file is 4.58 GiB, or about 5.1 GiB with a 4k-token KV cache (calculated, before runtime overhead). Q5_K_M is 5.33 GiB, about 5.8 GiB with the same cache (calculated), and cuts the perplexity increase over f16 from +2.8% to +0.9% on Llama 3 8B. Both fit in 8 GB; Q8_0 (7.95 GiB file) does not.',
+            a: 'Q4_K_M for 8B models: the Llama 3.1 8B file is 4.58 GiB, or about 5.1 GiB with a 4k-token KV cache (calculated, before runtime overhead). Q5_K_M is 5.33 GiB, about 5.8 GiB with the same cache (calculated), and cuts the perplexity increase over f16 from +2.8% to +0.9% on Llama 3 8B. At a 4k context both fit in 8 GB before runtime overhead; Q8_0 (7.95 GiB file) does not.',
           },
           {
             q: "What does the 'M' in Q4_K_M stand for?",
@@ -136,7 +136,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Which models on Ollama use Q4_K_M by default?',
-            a: 'Several. For Llama 3.1 8B, Qwen3 8B, Mistral 7B and Phi-4 mini, the default tag in the Ollama library shares its digest with the tag that has q4_K_M in its name (checked 2026-11-06); the library pages do not label the default quantization, and other models can differ, so check the tag list of the model. Other quantizations are separate tags whose names vary by model, for example <code>llama3.1:8b-instruct-q5_K_M</code> or <code>llama3.1:8b-instruct-q8_0</code>.',
+            a: 'Several. For Llama 3.1 8B, Qwen3 8B, Mistral 7B and Phi-4 mini, the default tag in the Ollama library shares its digest with a tag that has q4_K_M in its name (for Mistral 7B: the v0.3 tag) (checked 2026-11-06); the library pages do not label the default quantization, and other models can differ, so check the tag list of the model. Other quantizations are separate tags whose names vary by model, for example <code>llama3.1:8b-instruct-q5_K_M</code> or <code>llama3.1:8b-instruct-q8_0</code>.',
           },
         ],
       },
@@ -180,7 +180,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Was jeder Buchstabe in Q4_K_M bedeutet',
         content: [
           '<strong>Q4_K_M existiert, weil das ältere 4-Bit-Format Q4_0 mehr Qualität verliert als nötig.</strong> Bei Llama 3 8B ergibt der Perplexitätstest von llama.cpp 6,41 für Q4_K_M und 6,70 für Q4_0 (niedriger ist besser; f16 liegt bei 6,23), bei einer um 0,24 GiB größeren Datei (4,58 vs. 4,34 GiB). Quelle: <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp-Perplexity-README</a>.',
-          'Das "K" steht für die K-Quant-Familie aus <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp Pull Request #1684</a>. Q4_K_M mischt zwei Tensor-Typen: 6-Bit-Q6_K für die Hälfte der Tensoren attention.wv und feed_forward.w2 und 4-Bit-Q4_K für alle anderen. Bei Llama 3.1 8B ergibt das im Mittel 4,89 Bit pro Gewicht (llama.cpp-Quantize-README), also mehr als nominell 4.',
+          'Das "K" steht für die K-Quant-Familie aus <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp Pull Request #1684</a>. Q4_K_M mischt zwei Tensor-Typen: 6-Bit-Q6_K für die Hälfte der Tensoren attention.wv und feed_forward.w2 sowie für output.weight und 4-Bit-Q4_K für die übrigen Tensoren. Bei Llama 3.1 8B ergibt das im Mittel 4,89 Bit pro Gewicht (llama.cpp-Quantize-README), also mehr als nominell 4.',
           'Das "M" ist die Größenvariante innerhalb der Familie. Q4_K_S (small) nutzt Q4_K für jeden Tensor: 4,36 GiB gegenüber 4,58 GiB bei Q4_K_M (Llama 3.1 8B), mit höherer Perplexität (6,50 vs. 6,41 bei Llama 3 8B ohne Importance-Matrix). Q5_K_M ist die nächste Stufe mit 5,33 GiB.',
           '<strong>K-Quant arbeitet mit Blöcken von Gewichten.</strong> Q4_K fasst 32 Gewichte zu einem Block und 8 Blöcke zu einem Super-Block zusammen und speichert Block-Skalen und -Minima mit 6 Bit, das sind 4,5 Bit pro Gewicht (Pull Request #1684). Q4_K_M liegt wegen seiner Q6_K-Tensoren bei 4,89 und damit in der Größe zwischen Q4_K_S (4,67) und Q5_K_M (5,70). Wenn die M-Stufe nicht reicht, siehe <a href="/de/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs. Q8_0</a>.',
         ],
@@ -211,7 +211,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Welche Quantisierung sollte ich für 8 GB VRAM verwenden?',
-            a: 'Q4_K_M für 8B-Modelle: Die Datei von Llama 3.1 8B ist 4,58 GiB groß, mit 4k-Token-KV-Cache etwa 5,1 GiB (berechnet, vor Laufzeit-Overhead). Q5_K_M ist 5,33 GiB groß, mit demselben Cache etwa 5,8 GiB (berechnet), und senkt den Perplexitätsanstieg gegenüber f16 bei Llama 3 8B von +2,8 % auf +0,9 %. Beide passen in 8 GB; Q8_0 (7,95-GiB-Datei) nicht.',
+            a: 'Q4_K_M für 8B-Modelle: Die Datei von Llama 3.1 8B ist 4,58 GiB groß, mit 4k-Token-KV-Cache etwa 5,1 GiB (berechnet, vor Laufzeit-Overhead). Q5_K_M ist 5,33 GiB groß, mit demselben Cache etwa 5,8 GiB (berechnet), und senkt den Perplexitätsanstieg gegenüber f16 bei Llama 3 8B von +2,8 % auf +0,9 %. Bei 4k Kontext passen beide vor dem Laufzeit-Overhead in 8 GB; Q8_0 (7,95-GiB-Datei) nicht.',
           },
           {
             q: 'Wofür steht das "M" in Q4_K_M?',
@@ -219,7 +219,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Welche Modelle auf Ollama verwenden standardmäßig Q4_K_M?',
-            a: 'Mehrere. Bei Llama 3.1 8B, Qwen3 8B, Mistral 7B und Phi-4 mini hat der Standard-Tag in der Ollama-Bibliothek denselben Digest wie der Tag mit q4_K_M im Namen (geprüft am 2026-11-06); die Bibliotheksseiten nennen die Standard-Quantisierung nicht ausdrücklich, und andere Modelle können abweichen, prüfen Sie daher die Tag-Liste des Modells. Andere Quantisierungen sind eigene Tags, deren Namen je nach Modell variieren, zum Beispiel <code>llama3.1:8b-instruct-q5_K_M</code> oder <code>llama3.1:8b-instruct-q8_0</code>.',
+            a: 'Mehrere. Bei Llama 3.1 8B, Qwen3 8B, Mistral 7B und Phi-4 mini hat der Standard-Tag in der Ollama-Bibliothek denselben Digest wie ein Tag mit q4_K_M im Namen (bei Mistral 7B: der v0.3-Tag) (geprüft am 2026-11-06); die Bibliotheksseiten nennen die Standard-Quantisierung nicht ausdrücklich, und andere Modelle können abweichen, prüfen Sie daher die Tag-Liste des Modells. Andere Quantisierungen sind eigene Tags, deren Namen je nach Modell variieren, zum Beispiel <code>llama3.1:8b-instruct-q5_K_M</code> oder <code>llama3.1:8b-instruct-q8_0</code>.',
           },
         ],
       },
@@ -263,7 +263,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Ce que signifie chaque lettre de Q4_K_M',
         content: [
           '<strong>Q4_K_M existe parce que l\'ancien format 4 bits Q4_0 perd plus de qualité que nécessaire.</strong> Sur Llama 3 8B, le test de perplexité de llama.cpp donne 6,41 pour Q4_K_M et 6,70 pour Q4_0 (plus bas est meilleur ; f16 : 6,23), pour un fichier plus grand de 0,24 GiB (4,58 contre 4,34 GiB). Source : <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">README perplexity de llama.cpp</a>.',
-          'Le « K » désigne la famille k-quant introduite dans la <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">pull request #1684 de llama.cpp</a>. Q4_K_M mélange deux types de tenseurs : du Q6_K 6 bits pour la moitié des tenseurs attention.wv et feed_forward.w2, et du Q4_K 4 bits pour tous les autres. Sur Llama 3.1 8B, cela donne en moyenne 4,89 bits par poids (README de quantize de llama.cpp), au-dessus des 4 nominaux.',
+          'Le « K » désigne la famille k-quant introduite dans la <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">pull request #1684 de llama.cpp</a>. Q4_K_M mélange deux types de tenseurs : du Q6_K 6 bits pour la moitié des tenseurs attention.wv et feed_forward.w2 ainsi que pour output.weight, et du Q4_K 4 bits pour les autres tenseurs. Sur Llama 3.1 8B, cela donne en moyenne 4,89 bits par poids (README de quantize de llama.cpp), au-dessus des 4 nominaux.',
           'Le « M » est la variante de taille dans la famille. Q4_K_S (small) utilise Q4_K pour tous les tenseurs : 4,36 GiB contre 4,58 GiB pour Q4_K_M sur Llama 3.1 8B, avec une perplexité plus élevée (6,50 contre 6,41 sur Llama 3 8B sans matrice d\'importance). Q5_K_M est l\'étape suivante à 5,33 GiB.',
           '<strong>K-quant travaille sur des blocs de poids.</strong> Q4_K regroupe 32 poids en un bloc et 8 blocs en un super-bloc, et stocke échelles et minimums de bloc sur 6 bits, soit 4,5 bits par poids (pull request #1684). Q4_K_M atteint 4,89 à cause de ses tenseurs Q6_K, d\'où sa place entre Q4_K_S (4,67) et Q5_K_M (5,70) en taille. Quand le niveau M ne suffit pas, voir <a href="/fr/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
         ],
@@ -294,7 +294,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quelle quantisation utiliser avec 8 Go de VRAM ?',
-            a: 'Q4_K_M pour les modèles 8B : le fichier de Llama 3.1 8B fait 4,58 GiB, soit environ 5,1 GiB avec un cache KV de 4k tokens (calculé, hors surcoût d\'exécution). Q5_K_M fait 5,33 GiB, environ 5,8 GiB avec le même cache (calculé), et réduit la hausse de perplexité par rapport à f16 de +2,8 % à +0,9 % sur Llama 3 8B. Les deux tiennent dans 8 Go ; Q8_0 (fichier de 7,95 GiB) non.',
+            a: 'Q4_K_M pour les modèles 8B : le fichier de Llama 3.1 8B fait 4,58 GiB, soit environ 5,1 GiB avec un cache KV de 4k tokens (calculé, hors surcoût d\'exécution). Q5_K_M fait 5,33 GiB, environ 5,8 GiB avec le même cache (calculé), et réduit la hausse de perplexité par rapport à f16 de +2,8 % à +0,9 % sur Llama 3 8B. Avec un contexte de 4k, les deux tiennent dans 8 Go avant le surcoût d\'exécution ; Q8_0 (fichier de 7,95 GiB) non.',
           },
           {
             q: 'Que signifie le "M" dans Q4_K_M ?',
@@ -302,7 +302,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quels modèles sur Ollama utilisent Q4_K_M par défaut ?',
-            a: 'Plusieurs. Pour Llama 3.1 8B, Qwen3 8B, Mistral 7B et Phi-4 mini, le tag par défaut de la bibliothèque Ollama partage son empreinte (digest) avec le tag dont le nom contient q4_K_M (vérifié le 2026-11-06) ; les pages de la bibliothèque n\'indiquent pas la quantisation par défaut et d\'autres modèles peuvent différer, consultez donc la liste des tags du modèle. Les autres quantisations sont des tags distincts dont le nom varie selon le modèle, par exemple <code>llama3.1:8b-instruct-q5_K_M</code> ou <code>llama3.1:8b-instruct-q8_0</code>.',
+            a: 'Plusieurs. Pour Llama 3.1 8B, Qwen3 8B, Mistral 7B et Phi-4 mini, le tag par défaut de la bibliothèque Ollama partage son empreinte (digest) avec un tag dont le nom contient q4_K_M (pour Mistral 7B : le tag v0.3) (vérifié le 2026-11-06) ; les pages de la bibliothèque n\'indiquent pas la quantisation par défaut et d\'autres modèles peuvent différer, consultez donc la liste des tags du modèle. Les autres quantisations sont des tags distincts dont le nom varie selon le modèle, par exemple <code>llama3.1:8b-instruct-q5_K_M</code> ou <code>llama3.1:8b-instruct-q8_0</code>.',
           },
         ],
       },
@@ -311,23 +311,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ja: {
     designSkin: 'hub',
     theme: 'Quantization & VRAM',
-    title: 'Q4_K_M量化とは何ですか？',
+    title: 'Q4_K_M量子化とは何ですか？',
     seoTitle: 'Q4_K_M量化の完全解説 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Q4_K_Mは中品質のK-Quant 4ビット量化です。Q4_0よりパープレキシティが低く、Q8_0より小さいです。デフォルトとして使用してください。PromptQuorumの解説。',
+    metaDescription: 'Q4_K_Mは中品質のK-Quant 4ビット量子化です。Q4_0よりパープレキシティが低く、Q8_0より小さいです。デフォルトとして使用してください。PromptQuorumの解説。',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-ja.webp',
     publishDate: '2026-05-18',
     dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
-    leadAnswerBlock: '**Q4_K_Mはllama.cppのK-Quant形式で、中程度（M）の規模の4ビット量化です。**Llama 3 8Bのパープレキシティは6.41で、Q4_0の6.70より低くなります。',
+    leadAnswerBlock: '**Q4_K_Mはllama.cppのK-Quant形式で、中程度（M）の規模の4ビット量子化です。**Llama 3 8Bのパープレキシティは6.41で、Q4_0の6.70より低くなります。',
     quickAnswerTop: {
       ja: {
-        question: 'Q4_K_M量化とは何ですか？',
-        answer: 'Q4_K_MはK-Quant（K）圧縮を使用した4ビット量化で、品質は中程度（M）です。ほとんどのモデルで一般的なデフォルトです：Q4_0よりパープレキシティが低く、Q8_0より小さいです。',
+        question: 'Q4_K_M量子化とは何ですか？',
+        answer: 'Q4_K_MはK-Quant（K）圧縮を使用した4ビット量子化で、品質は中程度（M）です。ほとんどのモデルで一般的なデフォルトです：Q4_0よりパープレキシティが低く、Q8_0より小さいです。',
         bullets: [
-          'Q=量化済み、4=4ビット、K=K-Quant、M=中程度',
+          'Q=量子化済み、4=4ビット、K=K-Quant、M=中程度',
           'Q4_0よりパープレキシティが低い（Llama 3 8Bで6.41対6.70）、ファイルは0.24 GiB大きい',
-          'Q4_K_Mをデフォルトの量化として使用する',
+          'Q4_K_Mをデフォルトの量子化として使用する',
         ],
         updatedDate: '2026-11',
       },
@@ -337,7 +337,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Q4_K_M = K-Quant圧縮による中程度品質の4ビット量化 — Q4_0よりパープレキシティが低く、ファイルはやや大きい',
+          'Q4_K_M = K-Quant圧縮による中程度品質の4ビット量子化 — Q4_0よりパープレキシティが低く、ファイルはやや大きい',
           'Llama 3.1 8BのQ4_K_Mはディスク上で4.58 GiB。4kトークンのKVキャッシュ（約0.5 GiB、計算値）を加えると、実行時オーバーヘッドを除いて約5.1 GiBのVRAMが必要です',
           'Q4_K_Mをデフォルトとして使用 — Llama 3 8Bのテストでは、f16に対するパープレキシティの増加は3%未満で、ファイルサイズはQ8_0の約58%です',
         ],
@@ -346,7 +346,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Q4_K_Mの各文字の意味',
         content: [
           '<strong>Q4_K_Mが存在するのは、旧来の4ビット形式Q4_0が必要以上に品質を失うためです。</strong>Llama 3 8Bでは、llama.cppのパープレキシティテストでQ4_K_Mが6.41、Q4_0が6.70（低いほど良い。f16は6.23）で、ファイルは0.24 GiB大きくなります（4.58対4.34 GiB）。出典：<a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp perplexity README</a>。',
-          '「K」は<a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp プルリクエスト #1684</a>で導入されたk-quantファミリーを示します。Q4_K_Mは2種類のテンソル型を混ぜています。attention.wvとfeed_forward.w2テンソルの半分には6ビットのQ6_K、それ以外すべてには4ビットのQ4_Kを使います。Llama 3.1 8Bでは平均で1重みあたり4.89ビット（llama.cpp quantize README）となり、名目上の4を上回ります。',
+          '「K」は<a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp プルリクエスト #1684</a>で導入されたk-quantファミリーを示します。Q4_K_Mは2種類のテンソル型を混ぜています。attention.wvとfeed_forward.w2テンソルの半分およびoutput.weightには6ビットのQ6_K、残りのテンソルには4ビットのQ4_Kを使います。Llama 3.1 8Bでは平均で1重みあたり4.89ビット（llama.cpp quantize README）となり、名目上の4を上回ります。',
           '「M」はファミリー内のサイズ違いです。Q4_K_S（small）はすべてのテンソルにQ4_Kを使います。Llama 3.1 8Bで4.36 GiB対Q4_K_Mの4.58 GiBで、パープレキシティは高くなります（Llama 3 8B、重要度行列なしで6.50対6.41）。次の段階はQ5_K_Mで5.33 GiBです。',
           '<strong>K-quantは重みのブロック単位で動作します。</strong>Q4_Kは32個の重みを1ブロック、8ブロックを1スーパーブロックにまとめ、ブロックのスケールと最小値を6ビットで保存します。これは1重みあたり4.5ビットです（プルリクエスト #1684）。Q4_K_MはQ6_Kテンソルを含むため4.89ビットとなり、サイズはQ4_K_S（4.67）とQ5_K_M（5.70）の間に位置します。Mでは足りない場合は<a href="/ja/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>を参照してください。',
         ],
@@ -354,10 +354,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         imageCaption: 'Q4_K_Mの各文字が意味すること -- フォーマット名を読み解く',
       },
       body2: {
-        title: 'Q4_K_Mと他の量化の比較',
+        title: 'Q4_K_Mと他の量子化の比較',
         content: [
           'この表は、llama.cppのLlama 3 8Bパープレキシティテスト（wikitext、重要度行列なし。低いほど良い）を示しています。割合はf16（6.2332）に対する計算値です。Q4_K_Mは4.58 GiBでパープレキシティの増加は3%未満で、Q8_0のファイルサイズの約58%です（計算値：4.58 / 7.96）。',
-          'Q4_K_MとQ8_0の直接比較については、<a href="/ja/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0決定ガイド</a>を参照してください。完全な量化リファレンスについては、<a href="/ja/local-llms/quantization-levels-comparison" class="text-primary hover:underline">量化レベル比較</a>を参照してください。',
+          'Q4_K_MとQ8_0の直接比較については、<a href="/ja/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0決定ガイド</a>を参照してください。完全な量子化リファレンスについては、<a href="/ja/local-llms/quantization-levels-comparison" class="text-primary hover:underline">量子化レベル比較</a>を参照してください。',
         ],
         columns: ['フォーマット', 'サイズ、Llama 3 8B（GiB）', 'パープレキシティ（f16との差）'],
         rows: [
@@ -369,15 +369,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: '量化に関するよくある質問',
+        title: '量子化に関するよくある質問',
         faqs: [
           {
             q: 'Q4_K_MはQ4_0と同じですか？',
             a: 'いいえ。Llama 3 8Bでは、Q4_K_MのパープレキシティはQ4_0の6.70に対して6.41で、ファイルは0.24 GiB大きくなります（4.58対4.34 GiB、llama.cpp、重要度行列なし）。Q4_0よりQ4_K_Mを選んでください。さらに上げるタイミングは<a href="/ja/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0ガイド</a>を参照してください。',
           },
           {
-            q: '8 GB VRAMにはどの量化を使うべきですか？',
-            a: '8BモデルならQ4_K_Mです。Llama 3.1 8Bのファイルは4.58 GiBで、4kトークンのKVキャッシュを加えると約5.1 GiB（計算値、実行時オーバーヘッドを除く）です。Q5_K_Mは5.33 GiB、同じキャッシュで約5.8 GiB（計算値）となり、Llama 3 8Bのf16に対するパープレキシティ増加を+2.8%から+0.9%に抑えます。どちらも8 GBに収まりますが、Q8_0（ファイル7.95 GiB）は収まりません。',
+            q: '8 GB VRAMにはどの量子化を使うべきですか？',
+            a: '8BモデルならQ4_K_Mです。Llama 3.1 8Bのファイルは4.58 GiBで、4kトークンのKVキャッシュを加えると約5.1 GiB（計算値、実行時オーバーヘッドを除く）です。Q5_K_Mは5.33 GiB、同じキャッシュで約5.8 GiB（計算値）となり、Llama 3 8Bのf16に対するパープレキシティ増加を+2.8%から+0.9%に抑えます。4kコンテキストなら、どちらも実行時オーバーヘッドを除いて8 GBに収まりますが、Q8_0（ファイル7.95 GiB）は収まりません。',
           },
           {
             q: 'Q4_K_Mの「M」は何を意味しますか？',
@@ -385,7 +385,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'OllamaのどのモデルがデフォルトでQ4_K_Mを使用していますか？',
-            a: '複数あります。Llama 3.1 8B、Qwen3 8B、Mistral 7B、Phi-4 miniでは、Ollamaライブラリのデフォルトタグが、名前にq4_K_Mを含むタグとダイジェストを共有しています（2026-11-06確認）。ライブラリのページにはデフォルトの量子化が明記されておらず、他のモデルは異なる場合があるため、モデルのタグ一覧で確認してください。他の量子化は別タグで、名前はモデルごとに異なります。例：<code>llama3.1:8b-instruct-q5_K_M</code>、<code>llama3.1:8b-instruct-q8_0</code>。',
+            a: '複数あります。Llama 3.1 8B、Qwen3 8B、Mistral 7B、Phi-4 miniでは、Ollamaライブラリのデフォルトタグが、名前にq4_K_Mを含むタグとダイジェストを共有しています（Mistral 7Bの場合はv0.3のタグ）（2026-11-06確認）。ライブラリのページにはデフォルトの量子化が明記されておらず、他のモデルは異なる場合があるため、モデルのタグ一覧で確認してください。他の量子化は別タグで、名前はモデルごとに異なります。例：<code>llama3.1:8b-instruct-q5_K_M</code>、<code>llama3.1:8b-instruct-q8_0</code>。',
           },
         ],
       },
@@ -429,7 +429,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Q4_K_M中每个字母的含义',
         content: [
           '<strong>Q4_K_M之所以存在，是因为较早的4位格式Q4_0损失了不必要的质量。</strong>在Llama 3 8B上，llama.cpp的困惑度测试中Q4_K_M为6.41，Q4_0为6.70（越低越好；f16为6.23），文件大0.24 GiB（4.58对4.34 GiB）。来源：<a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp perplexity README</a>。',
-          '“K”表示<a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp拉取请求#1684</a>引入的k-quant系列。Q4_K_M混合了两种张量类型：attention.wv和feed_forward.w2张量的一半使用6位Q6_K，其余张量使用4位Q4_K。在Llama 3.1 8B上，平均每个权重为4.89位（llama.cpp quantize README），高于名义上的4位。',
+          '“K”表示<a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp拉取请求#1684</a>引入的k-quant系列。Q4_K_M混合了两种张量类型：attention.wv和feed_forward.w2张量的一半以及output.weight使用6位Q6_K，其余张量使用4位Q4_K。在Llama 3.1 8B上，平均每个权重为4.89位（llama.cpp quantize README），高于名义上的4位。',
           '“M”是该系列内的大小变体。Q4_K_S（small）对所有张量使用Q4_K：在Llama 3.1 8B上为4.36 GiB，Q4_K_M为4.58 GiB，困惑度更高（Llama 3 8B、无重要性矩阵时为6.50对6.41）。再往上一级是Q5_K_M，为5.33 GiB。',
           '<strong>K-quant以权重块为单位工作。</strong>Q4_K把32个权重组成一个块，8个块组成一个超级块，块的缩放因子和最小值用6位存储，合计每个权重4.5位（拉取请求#1684）。Q4_K_M因含有Q6_K张量而达到4.89位，所以其大小介于Q4_K_S（4.67）和Q5_K_M（5.70）之间。M等级不够用时，请参阅<a href="/zh/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>。',
         ],
@@ -460,7 +460,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '8 GB显存应该使用哪种量化？',
-            a: '8B模型选Q4_K_M：Llama 3.1 8B的文件为4.58 GiB，加上4k token的KV缓存约为5.1 GiB（计算值，不含运行时开销）。Q5_K_M为5.33 GiB，同样缓存下约5.8 GiB（计算值），并把Llama 3 8B相对f16的困惑度增幅从+2.8%降到+0.9%。两者都能放进8 GB；Q8_0（文件7.95 GiB）放不下。',
+            a: '8B模型选Q4_K_M：Llama 3.1 8B的文件为4.58 GiB，加上4k token的KV缓存约为5.1 GiB（计算值，不含运行时开销）。Q5_K_M为5.33 GiB，同样缓存下约5.8 GiB（计算值），并把Llama 3 8B相对f16的困惑度增幅从+2.8%降到+0.9%。在4k上下文下，两者在计入运行时开销之前都能放进8 GB；Q8_0（文件7.95 GiB）放不下。',
           },
           {
             q: 'Q4_K_M中的"M"代表什么？',
@@ -468,7 +468,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Ollama上哪些模型默认使用Q4_K_M？',
-            a: '有几个。Llama 3.1 8B、Qwen3 8B、Mistral 7B和Phi-4 mini在Ollama库中的默认标签，与名称含q4_K_M的标签共享同一摘要（digest）（2026-11-06核对）；库页面并未明确标注默认量化，其他模型可能不同，请查看该模型的标签列表。其他量化是单独的标签，名称因模型而异，例如<code>llama3.1:8b-instruct-q5_K_M</code>或<code>llama3.1:8b-instruct-q8_0</code>。',
+            a: '有几个。Llama 3.1 8B、Qwen3 8B、Mistral 7B和Phi-4 mini在Ollama库中的默认标签，与名称含q4_K_M的某个标签共享同一摘要（digest）（Mistral 7B对应v0.3标签）（2026-11-06核对）；库页面并未明确标注默认量化，其他模型可能不同，请查看该模型的标签列表。其他量化是单独的标签，名称因模型而异，例如<code>llama3.1:8b-instruct-q5_K_M</code>或<code>llama3.1:8b-instruct-q8_0</code>。',
           },
         ],
       },
@@ -512,7 +512,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'O que cada letra em Q4_K_M significa',
         content: [
           '<strong>Q4_K_M existe porque o formato antigo de 4 bits, Q4_0, perde mais qualidade do que o necessário.</strong> No Llama 3 8B, o teste de perplexidade do llama.cpp dá 6,41 para Q4_K_M e 6,70 para Q4_0 (menor é melhor; f16 é 6,23), com arquivo 0,24 GiB maior (4,58 contra 4,34 GiB). Fonte: <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">README de perplexity do llama.cpp</a>.',
-          'O "K" marca a família k-quant introduzida no <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">pull request #1684 do llama.cpp</a>. Q4_K_M mistura dois tipos de tensor: Q6_K de 6 bits para metade dos tensores attention.wv e feed_forward.w2 e Q4_K de 4 bits para todos os outros. No Llama 3.1 8B isso dá em média 4,89 bits por peso (README do quantize do llama.cpp), acima dos 4 nominais.',
+          'O "K" marca a família k-quant introduzida no <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">pull request #1684 do llama.cpp</a>. Q4_K_M mistura dois tipos de tensor: Q6_K de 6 bits para metade dos tensores attention.wv e feed_forward.w2 e para o output.weight, e Q4_K de 4 bits para os demais tensores. No Llama 3.1 8B isso dá em média 4,89 bits por peso (README do quantize do llama.cpp), acima dos 4 nominais.',
           'O "M" é a variante de tamanho dentro da família. Q4_K_S (small) usa Q4_K em todos os tensores: 4,36 GiB contra 4,58 GiB do Q4_K_M no Llama 3.1 8B, com perplexidade maior (6,50 contra 6,41 no Llama 3 8B sem matriz de importância). Q5_K_M é o próximo degrau, com 5,33 GiB.',
           '<strong>O k-quant trabalha com blocos de pesos.</strong> Q4_K agrupa 32 pesos em um bloco e 8 blocos em um super-bloco, guardando escalas e mínimos dos blocos com 6 bits, o que dá 4,5 bits por peso (pull request #1684). Q4_K_M chega a 4,89 por causa dos tensores Q6_K, por isso fica entre Q4_K_S (4,67) e Q5_K_M (5,70) em tamanho. Quando o nível M não basta, veja <a href="/pt/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
         ],
@@ -543,7 +543,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Qual quantização devo usar com 8 GB de VRAM?',
-            a: 'Q4_K_M para modelos 8B: o arquivo do Llama 3.1 8B tem 4,58 GiB, ou cerca de 5,1 GiB com cache KV de 4k tokens (calculado, antes do overhead de execução). Q5_K_M tem 5,33 GiB, cerca de 5,8 GiB com o mesmo cache (calculado), e reduz o aumento de perplexidade sobre o f16 de +2,8% para +0,9% no Llama 3 8B. Ambos cabem em 8 GB; Q8_0 (arquivo de 7,95 GiB) não.',
+            a: 'Q4_K_M para modelos 8B: o arquivo do Llama 3.1 8B tem 4,58 GiB, ou cerca de 5,1 GiB com cache KV de 4k tokens (calculado, antes do overhead de execução). Q5_K_M tem 5,33 GiB, cerca de 5,8 GiB com o mesmo cache (calculado), e reduz o aumento de perplexidade sobre o f16 de +2,8% para +0,9% no Llama 3 8B. Com contexto de 4k, ambos cabem em 8 GB antes do overhead de execução; Q8_0 (arquivo de 7,95 GiB) não.',
           },
           {
             q: "O que significa o 'M' em Q4_K_M?",
@@ -551,7 +551,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quais modelos no Ollama usam Q4_K_M por padrão?',
-            a: 'Vários. No Llama 3.1 8B, Qwen3 8B, Mistral 7B e Phi-4 mini, a tag padrão na biblioteca Ollama tem o mesmo digest da tag com q4_K_M no nome (verificado em 2026-11-06); as páginas da biblioteca não indicam a quantização padrão e outros modelos podem diferir, então consulte a lista de tags do modelo. As outras quantizações são tags separadas, com nomes que variam por modelo, por exemplo <code>llama3.1:8b-instruct-q5_K_M</code> ou <code>llama3.1:8b-instruct-q8_0</code>.',
+            a: 'Vários. No Llama 3.1 8B, Qwen3 8B, Mistral 7B e Phi-4 mini, a tag padrão na biblioteca Ollama tem o mesmo digest de uma tag com q4_K_M no nome (no Mistral 7B: a tag v0.3) (verificado em 2026-11-06); as páginas da biblioteca não indicam a quantização padrão e outros modelos podem diferir, então consulte a lista de tags do modelo. As outras quantizações são tags separadas, com nomes que variam por modelo, por exemplo <code>llama3.1:8b-instruct-q5_K_M</code> ou <code>llama3.1:8b-instruct-q8_0</code>.',
           },
         ],
       },
@@ -595,7 +595,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Qué significa cada letra de Q4_K_M',
         content: [
           '<strong>Q4_K_M existe porque el formato antiguo de 4 bits, Q4_0, pierde más calidad de la necesaria.</strong> En Llama 3 8B, la prueba de perplejidad de llama.cpp da 6,41 para Q4_K_M y 6,70 para Q4_0 (menor es mejor; f16 es 6,23), con un archivo 0,24 GiB mayor (4,58 frente a 4,34 GiB). Fuente: <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">README de perplexity de llama.cpp</a>.',
-          'La "K" marca la familia k-quant introducida en el <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">pull request #1684 de llama.cpp</a>. Q4_K_M mezcla dos tipos de tensor: Q6_K de 6 bits para la mitad de los tensores attention.wv y feed_forward.w2, y Q4_K de 4 bits para el resto. En Llama 3.1 8B esto da una media de 4,89 bits por peso (README de quantize de llama.cpp), por encima de los 4 nominales.',
+          'La "K" marca la familia k-quant introducida en el <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">pull request #1684 de llama.cpp</a>. Q4_K_M mezcla dos tipos de tensor: Q6_K de 6 bits para la mitad de los tensores attention.wv y feed_forward.w2 y para output.weight, y Q4_K de 4 bits para el resto de los tensores. En Llama 3.1 8B esto da una media de 4,89 bits por peso (README de quantize de llama.cpp), por encima de los 4 nominales.',
           'La "M" es la variante de tamaño dentro de la familia. Q4_K_S (small) usa Q4_K en todos los tensores: 4,36 GiB frente a 4,58 GiB de Q4_K_M en Llama 3.1 8B, con mayor perplejidad (6,50 frente a 6,41 en Llama 3 8B sin matriz de importancia). Q5_K_M es el siguiente escalón, con 5,33 GiB.',
           '<strong>K-quant trabaja con bloques de pesos.</strong> Q4_K agrupa 32 pesos en un bloque y 8 bloques en un superbloque, y guarda escalas y mínimos de bloque con 6 bits, lo que supone 4,5 bits por peso (pull request #1684). Q4_K_M llega a 4,89 por sus tensores Q6_K, por eso queda entre Q4_K_S (4,67) y Q5_K_M (5,70) en tamaño. Cuando el nivel M no basta, consulta <a href="/es/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
         ],
@@ -626,7 +626,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Qué cuantización debo usar con 8 GB de VRAM?',
-            a: 'Q4_K_M para modelos 8B: el archivo de Llama 3.1 8B ocupa 4,58 GiB, o unos 5,1 GiB con una caché KV de 4k tokens (calculado, antes de la sobrecarga de ejecución). Q5_K_M ocupa 5,33 GiB, unos 5,8 GiB con la misma caché (calculado), y reduce el aumento de perplejidad sobre f16 de +2,8 % a +0,9 % en Llama 3 8B. Ambos caben en 8 GB; Q8_0 (archivo de 7,95 GiB) no.',
+            a: 'Q4_K_M para modelos 8B: el archivo de Llama 3.1 8B ocupa 4,58 GiB, o unos 5,1 GiB con una caché KV de 4k tokens (calculado, antes de la sobrecarga de ejecución). Q5_K_M ocupa 5,33 GiB, unos 5,8 GiB con la misma caché (calculado), y reduce el aumento de perplejidad sobre f16 de +2,8 % a +0,9 % en Llama 3 8B. Con un contexto de 4k ambos caben en 8 GB antes de la sobrecarga de ejecución; Q8_0 (archivo de 7,95 GiB) no.',
           },
           {
             q: "¿Qué significa la 'M' en Q4_K_M?",
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Qué modelos en Ollama usan Q4_K_M por defecto?',
-            a: 'Varios. En Llama 3.1 8B, Qwen3 8B, Mistral 7B y Phi-4 mini, la etiqueta por defecto de la biblioteca de Ollama comparte su digest con la etiqueta que lleva q4_K_M en el nombre (comprobado el 2026-11-06); las páginas de la biblioteca no indican la cuantización por defecto y otros modelos pueden diferir, así que consulta la lista de etiquetas del modelo. Las demás cuantizaciones son etiquetas aparte cuyos nombres varían según el modelo, por ejemplo <code>llama3.1:8b-instruct-q5_K_M</code> o <code>llama3.1:8b-instruct-q8_0</code>.',
+            a: 'Varios. En Llama 3.1 8B, Qwen3 8B, Mistral 7B y Phi-4 mini, la etiqueta por defecto de la biblioteca de Ollama comparte su digest con una etiqueta que lleva q4_K_M en el nombre (en Mistral 7B: la etiqueta v0.3) (comprobado el 2026-11-06); las páginas de la biblioteca no indican la cuantización por defecto y otros modelos pueden diferir, así que consulta la lista de etiquetas del modelo. Las demás cuantizaciones son etiquetas aparte cuyos nombres varían según el modelo, por ejemplo <code>llama3.1:8b-instruct-q5_K_M</code> o <code>llama3.1:8b-instruct-q8_0</code>.',
           },
         ],
       },
@@ -643,7 +643,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     designSkin: 'hub',
     theme: 'Quantization & VRAM',
-    title: 'ما هو ضغط ⁨Q4⁩_⁨K⁩_⁨M⁩؟',
+    title: 'ما هو تكميم ⁨Q4⁩_⁨K⁩_⁨M⁩؟',
     seoTitle: '⁨Q4⁩_⁨K⁩_⁨M⁩: ضغط ⁨k-quant 4-bit 2026⁩ | ⁨PromptQuorum⁩',
     metaDescription: 'Q4_K_M تكميم 4-bit من عائلة k-quant بجودة متوسطة: حيرة أقل من Q4_0 وحجم أصغر من Q8_0. ملف Llama 3.1 8B بصيغته 4.58 GiB. استخدمه افتراضيًا في Ollama.',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-ar.webp',
@@ -651,15 +651,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
-    leadAnswerBlock: '**Q4_K_M صيغة k-quant في llama.cpp: ضغط 4-bit بمزيج من أنواع التنسورات بحجم متوسط.** في Llama 3 8B تبلغ حيرته (perplexity) 6.41 مقابل 6.70 لـ Q4_0، بملف أكبر بمقدار 0.24 GiB.',
+    leadAnswerBlock: '**Q4_K_M صيغة k-quant في llama.cpp: تكميم 4-bit بمزيج من أنواع التنسورات بحجم متوسط.** في Llama 3 8B تبلغ حيرته (perplexity) 6.41 مقابل 6.70 لـ Q4_0، بملف أكبر بمقدار 0.24 GiB.',
     quickAnswerTop: {
       ar: {
-        question: 'ما هو ضغط Q4_K_M؟',
-        answer: 'يعني Q4_K_M ضغط 4-bit مع ضغط k-quant (K) بجودة متوسطة (M). وهو خيار افتراضي شائع لمعظم النماذج: حيرة أقل من Q4_0، وحجم أصغر من Q8_0.',
+        question: 'ما هو تكميم Q4_K_M؟',
+        answer: 'يعني Q4_K_M تكميم 4-bit مع ضغط k-quant (K) بجودة متوسطة (M). وهو خيار افتراضي شائع لمعظم النماذج: حيرة أقل من Q4_0، وحجم أصغر من Q8_0.',
         bullets: [
           'Q = مضغوط، 4 = 4 بت، K = k-quant، M = متوسط',
           'حيرة (perplexity) أقل من Q4_0 (6.41 مقابل 6.70 في Llama 3 8B) بملف أكبر بمقدار 0.24 GiB',
-          'استخدم Q4_K_M كضغط افتراضي',
+          'استخدم Q4_K_M كتكميم افتراضي',
         ],
         updatedDate: '2026-11',
       },
@@ -678,7 +678,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'ماذا تعني كل حرف في Q4_K_M',
         content: [
           '<strong>يوجد Q4_K_M لأن صيغة 4-bit الأقدم Q4_0 تفقد جودة أكثر من اللازم.</strong> في Llama 3 8B يعطي اختبار الحيرة في llama.cpp القيمة 6.41 لـ Q4_K_M و6.70 لـ Q4_0 (الأقل أفضل؛ f16 هو 6.23)، بملف أكبر بمقدار 0.24 GiB (4.58 مقابل 4.34 GiB). المصدر: <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">ملف README الخاص بـ perplexity في llama.cpp</a>.',
-          'يشير الحرف K إلى عائلة k-quant التي قُدّمت في <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">طلب السحب رقم 1684 في llama.cpp</a>. يمزج Q4_K_M نوعين من التنسورات: Q6_K بـ 6 بتات لنصف تنسورات attention.wv وfeed_forward.w2، وQ4_K بـ 4 بتات لبقية التنسورات. في Llama 3.1 8B يعطي ذلك متوسط 4.89 بت لكل وزن (ملف README الخاص بـ quantize في llama.cpp)، أي أعلى من 4 الاسمية.',
+          'يشير الحرف K إلى عائلة k-quant التي قُدّمت في <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">طلب السحب رقم 1684 في llama.cpp</a>. يمزج Q4_K_M نوعين من التنسورات: Q6_K بـ 6 بتات لنصف تنسورات attention.wv وfeed_forward.w2 ولـ output.weight، وQ4_K بـ 4 بتات لبقية التنسورات. في Llama 3.1 8B يعطي ذلك متوسط 4.89 بت لكل وزن (ملف README الخاص بـ quantize في llama.cpp)، أي أعلى من 4 الاسمية.',
           'الحرف M هو متغير الحجم داخل العائلة. يستخدم Q4_K_S (صغير) الصيغة Q4_K لكل التنسورات: ‏4.36 GiB مقابل 4.58 GiB لـ Q4_K_M في Llama 3.1 8B، بحيرة أعلى (6.50 مقابل 6.41 في Llama 3 8B دون مصفوفة أهمية). والدرجة الأعلى التالية هي Q5_K_M بحجم 5.33 GiB.',
           '<strong>يعمل k-quant على كتل من الأوزان.</strong> يجمع Q4_K كل 32 وزنًا في كتلة و8 كتل في كتلة عليا، ويخزّن مقاييس الكتل وقيمها الدنيا بـ 6 بتات، أي 4.5 بت لكل وزن (طلب السحب رقم 1684). يصل Q4_K_M إلى 4.89 بسبب تنسورات Q6_K فيه، ولذلك يقع حجمه بين Q4_K_S (4.67) وQ5_K_M (5.70). عندما لا يكفي المستوى M، راجع <a href="/ar/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M مقابل Q8_0</a>.',
         ],
@@ -686,10 +686,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         imageCaption: 'ماذا يعني كل حرف في Q4_K_M -- فك رموز اسم الصيغة',
       },
       body2: {
-        title: 'كيف يُقارَن Q4_K_M بمستويات الضغط الأخرى',
+        title: 'كيف يُقارَن Q4_K_M بمستويات التكميم الأخرى',
         content: [
           'يعرض الجدول اختبار الحيرة في llama.cpp على Llama 3 8B (بيانات wikitext، دون مصفوفة أهمية؛ الأقل أفضل). النسب المئوية محسوبة بالنسبة إلى f16 (6.2332). يضيف Q4_K_M أقل من 3% إلى الحيرة بحجم 4.58 GiB، أي حوالي 58% من حجم ملف Q8_0 (محسوب: 4.58 / 7.96).',
-          'للمقارنة المباشرة بين Q4_K_M و Q8_0، راجع <a href="/ar/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">دليل قرار Q4_K_M مقابل Q8_0</a>. للمرجع الكامل حول الضغط، راجع <a href="/ar/local-llms/quantization-levels-comparison" class="text-primary hover:underline">مقارنة مستويات الضغط</a>.',
+          'للمقارنة المباشرة بين Q4_K_M و Q8_0، راجع <a href="/ar/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">دليل قرار Q4_K_M مقابل Q8_0</a>. للمرجع الكامل حول التكميم، راجع <a href="/ar/local-llms/quantization-levels-comparison" class="text-primary hover:underline">مقارنة مستويات التكميم</a>.',
         ],
         columns: ['الصيغة', 'الحجم، Llama 3 8B (GiB)', 'الحيرة (التغيّر عن f16)'],
         rows: [
@@ -701,15 +701,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'إجابات سريعة حول الضغط',
+        title: 'إجابات سريعة حول التكميم',
         faqs: [
           {
             q: 'هل Q4_K_M هو نفسه Q4_0؟',
             a: 'لا. في Llama 3 8B تبلغ حيرة Q4_K_M ‏6.41 مقابل 6.70 لـ Q4_0، بملف أكبر بمقدار 0.24 GiB (4.58 مقابل 4.34 GiB؛ llama.cpp، دون مصفوفة أهمية). فضّل Q4_K_M على Q4_0. راجع <a href="/ar/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">دليل Q4_K_M مقابل Q8_0</a> لمعرفة متى ترتقي بالمستوى.',
           },
           {
-            q: 'ما الضغط المناسب مع 8 GB VRAM؟',
-            a: 'Q4_K_M لنماذج 8B: ملف Llama 3.1 8B حجمه 4.58 GiB، أو حوالي 5.1 GiB مع ذاكرة KV بسياق 4k رمز (محسوب، قبل الحمل الإضافي لوقت التشغيل). حجم Q5_K_M هو 5.33 GiB، وحوالي 5.8 GiB مع الذاكرة نفسها (محسوب)، ويخفض زيادة الحيرة عن f16 في Llama 3 8B من +2.8% إلى +0.9%. كلاهما يتسع في 8 GB؛ أما Q8_0 (ملف 7.95 GiB) فلا.',
+            q: 'ما التكميم المناسب مع 8 GB VRAM؟',
+            a: 'Q4_K_M لنماذج 8B: ملف Llama 3.1 8B حجمه 4.58 GiB، أو حوالي 5.1 GiB مع ذاكرة KV بسياق 4k رمز (محسوب، قبل الحمل الإضافي لوقت التشغيل). حجم Q5_K_M هو 5.33 GiB، وحوالي 5.8 GiB مع الذاكرة نفسها (محسوب)، ويخفض زيادة الحيرة عن f16 في Llama 3 8B من +2.8% إلى +0.9%. عند سياق 4k يتسع كلاهما في 8 GB قبل الحمل الإضافي لوقت التشغيل؛ أما Q8_0 (ملف 7.95 GiB) فلا.',
           },
           {
             q: 'ماذا تعني "M" في Q4_K_M؟',
@@ -717,7 +717,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'ما النماذج في Ollama التي تستخدم Q4_K_M افتراضيًا؟',
-            a: 'عدة نماذج. في Llama 3.1 8B وQwen3 8B وMistral 7B وPhi-4 mini يشترك الوسم الافتراضي في مكتبة Ollama في الـ digest نفسه مع الوسم الذي يحمل q4_K_M في اسمه (جرى التحقق في 2026-11-06)؛ ولا تذكر صفحات المكتبة التكميم الافتراضي صراحةً، وقد تختلف النماذج الأخرى، لذا راجع قائمة وسوم النموذج. التكميمات الأخرى وسوم منفصلة تختلف أسماؤها حسب النموذج، مثل <code>llama3.1:8b-instruct-q5_K_M</code> أو <code>llama3.1:8b-instruct-q8_0</code>.',
+            a: 'عدة نماذج. في Llama 3.1 8B وQwen3 8B وMistral 7B وPhi-4 mini يشترك الوسم الافتراضي في مكتبة Ollama في الـ digest نفسه مع وسم يحمل q4_K_M في اسمه (في Mistral 7B: وسم v0.3) (جرى التحقق في 2026-11-06)؛ ولا تذكر صفحات المكتبة التكميم الافتراضي صراحةً، وقد تختلف النماذج الأخرى، لذا راجع قائمة وسوم النموذج. التكميمات الأخرى وسوم منفصلة تختلف أسماؤها حسب النموذج، مثل <code>llama3.1:8b-instruct-q5_K_M</code> أو <code>llama3.1:8b-instruct-q8_0</code>.',
           },
         ],
       },
@@ -760,7 +760,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'TechArticle',
       inLanguage: 'ko',
       headline: 'Q4_K_M 양자화란 무엇입니까?',
-      description: 'Q4_K_M은 중간 품질의 4비트 k-quant 양자화입니다. Llama 3 8B에서 Q4_0보다 퍼플렉시티가 낮고 Q8_0보다 파일 크기가 작으며, 많은 Ollama 모델의 기본 태그로 사용됩니다.',
+      description: 'Q4_K_M은 중간 품질의 4비트 k-quant 양자화입니다. Llama 3 8B에서 Q4_0보다 퍼플렉시티가 낮고 Q8_0보다 파일 크기가 작으며, Llama 3.1 8B, Qwen3 8B, Mistral 7B, Phi-4 mini 등 일부 Ollama 모델의 기본 태그와 같은 digest를 공유합니다.',
       url: 'https://www.promptquorum.com/ko/prompt-bites/what-is-q4-k-m-quantization',
       datePublished: '2026-05-18',
       dateModified: '2026-11-06',
@@ -813,7 +813,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         content: [
           '<strong>Q4_K_M이 존재하는 이유는 기존 4비트 형식인 Q4_0가 필요 이상으로 품질을 잃기 때문입니다.</strong> Llama 3 8B에서 llama.cpp의 퍼플렉시티 테스트는 Q4_K_M이 6.41, Q4_0가 6.70(낮을수록 좋음, f16은 6.23)이며, 파일은 0.24 GiB 더 큽니다(4.58 대 4.34 GiB). 출처: <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/perplexity/README.md" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp perplexity README</a>.',
-          '"K"는 <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp 풀 리퀘스트 #1684</a>에서 도입된 k-quant 계열을 뜻합니다. Q4_K_M은 두 가지 텐서 유형을 섞습니다. attention.wv와 feed_forward.w2 텐서의 절반에는 6비트 Q6_K를, 나머지 모든 텐서에는 4비트 Q4_K를 사용합니다. Llama 3.1 8B에서는 가중치당 평균 4.89비트(llama.cpp quantize README)로, 명목상의 4비트보다 높습니다.',
+          '"K"는 <a href="https://github.com/ggml-org/llama.cpp/pull/1684" class="text-primary hover:underline" rel="noopener noreferrer">llama.cpp 풀 리퀘스트 #1684</a>에서 도입된 k-quant 계열을 뜻합니다. Q4_K_M은 두 가지 텐서 유형을 섞습니다. attention.wv와 feed_forward.w2 텐서의 절반과 output.weight에는 6비트 Q6_K를, 나머지 텐서에는 4비트 Q4_K를 사용합니다. Llama 3.1 8B에서는 가중치당 평균 4.89비트(llama.cpp quantize README)로, 명목상의 4비트보다 높습니다.',
           '"M"은 계열 내의 크기 변형입니다. Q4_K_S(small)는 모든 텐서에 Q4_K를 사용합니다. Llama 3.1 8B에서 4.36 GiB 대 Q4_K_M의 4.58 GiB이며 퍼플렉시티는 더 높습니다(Llama 3 8B, 중요도 행렬 없음에서 6.50 대 6.41). 다음 단계는 5.33 GiB의 Q5_K_M입니다.',
           '<strong>K-quant는 가중치 블록 단위로 동작합니다.</strong> Q4_K는 가중치 32개를 한 블록으로, 8개 블록을 한 슈퍼 블록으로 묶고 블록 스케일과 최솟값을 6비트로 저장하며, 이는 가중치당 4.5비트입니다(풀 리퀘스트 #1684). Q4_K_M은 Q6_K 텐서 때문에 4.89비트가 되며, 그래서 크기가 Q4_K_S(4.67)와 Q5_K_M(5.70) 사이에 있습니다. M 등급으로 부족하다면 <a href="/ko/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>를 참조하십시오.',
         ],
@@ -844,7 +844,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'VRAM 8GB에서 어떤 양자화를 사용해야 합니까?',
-            a: '8B 모델에는 Q4_K_M입니다. Llama 3.1 8B 파일은 4.58 GiB이고, 4k 토큰 KV 캐시를 더하면 약 5.1 GiB입니다(계산값, 런타임 오버헤드 제외). Q5_K_M은 5.33 GiB이고 같은 캐시로 약 5.8 GiB(계산값)이며, Llama 3 8B에서 f16 대비 퍼플렉시티 증가를 +2.8%에서 +0.9%로 줄입니다. 둘 다 8 GB에 들어가지만 Q8_0(파일 7.95 GiB)은 들어가지 않습니다.',
+            a: '8B 모델에는 Q4_K_M입니다. Llama 3.1 8B 파일은 4.58 GiB이고, 4k 토큰 KV 캐시를 더하면 약 5.1 GiB입니다(계산값, 런타임 오버헤드 제외). Q5_K_M은 5.33 GiB이고 같은 캐시로 약 5.8 GiB(계산값)이며, Llama 3 8B에서 f16 대비 퍼플렉시티 증가를 +2.8%에서 +0.9%로 줄입니다. 4k 컨텍스트에서 둘 다 런타임 오버헤드 전에는 8 GB에 들어가지만 Q8_0(파일 7.95 GiB)은 들어가지 않습니다.',
           },
           {
             q: "Q4_K_M에서 'M'은 무엇을 의미합니까?",
@@ -852,7 +852,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Ollama에서 기본적으로 Q4_K_M을 사용하는 모델은 무엇입니까?',
-            a: '여러 모델이 그렇습니다. Llama 3.1 8B, Qwen3 8B, Mistral 7B, Phi-4 mini에서 Ollama 라이브러리의 기본 태그는 이름에 q4_K_M이 들어간 태그와 같은 digest를 공유합니다(2026-11-06 확인). 라이브러리 페이지가 기본 양자화를 명시하지는 않으며 다른 모델은 다를 수 있으니 모델의 태그 목록을 확인하십시오. 다른 양자화는 별도 태그이며 이름은 모델마다 다릅니다. 예: <code>llama3.1:8b-instruct-q5_K_M</code>, <code>llama3.1:8b-instruct-q8_0</code>.',
+            a: '여러 모델이 그렇습니다. Llama 3.1 8B, Qwen3 8B, Mistral 7B, Phi-4 mini에서 Ollama 라이브러리의 기본 태그는 이름에 q4_K_M이 들어간 태그와 같은 digest를 공유합니다(Mistral 7B는 v0.3 태그)(2026-11-06 확인). 라이브러리 페이지가 기본 양자화를 명시하지는 않으며 다른 모델은 다를 수 있으니 모델의 태그 목록을 확인하십시오. 다른 양자화는 별도 태그이며 이름은 모델마다 다릅니다. 예: <code>llama3.1:8b-instruct-q5_K_M</code>, <code>llama3.1:8b-instruct-q8_0</code>.',
           },
         ],
       },

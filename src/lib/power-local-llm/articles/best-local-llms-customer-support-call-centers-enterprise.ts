@@ -17,9 +17,9 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 const AFFILIATE_LINKS_EN = [
   {
     url: 'https://lambda.com/service/gpu-cloud',
-    productName: 'Lambda Labs GPU Cloud (A100/H100)',
+    productName: 'Lambda GPU Cloud (A100/H100)',
     productCategory: 'cloud-gpu',
-    label: 'Check Lambda Labs GPU pricing for pilot deployments',
+    label: 'Check Lambda GPU pricing for pilot deployments',
   },
   {
     url: 'https://www.runpod.io/console/signup',
@@ -31,9 +31,9 @@ const AFFILIATE_LINKS_EN = [
 const AFFILIATE_LINKS_DE = [
   {
     url: 'https://lambda.com/service/gpu-cloud',
-    productName: 'Lambda Labs GPU Cloud (A100/H100)',
+    productName: 'Lambda GPU Cloud (A100/H100)',
     productCategory: 'cloud-gpu',
-    label: 'Lambda Labs GPU-Preise für Pilotprojekte prüfen',
+    label: 'Lambda GPU-Preise für Pilotprojekte prüfen',
   },
   {
     url: 'https://www.runpod.io/console/signup',
@@ -45,9 +45,9 @@ const AFFILIATE_LINKS_DE = [
 const AFFILIATE_LINKS_FR = [
   {
     url: 'https://lambda.com/service/gpu-cloud',
-    productName: 'Lambda Labs GPU Cloud (A100/H100)',
+    productName: 'Lambda GPU Cloud (A100/H100)',
     productCategory: 'cloud-gpu',
-    label: 'Voir les tarifs GPU Lambda Labs pour un pilote',
+    label: 'Voir les tarifs GPU Lambda pour un pilote',
   },
   {
     url: 'https://www.runpod.io/console/signup',
@@ -59,9 +59,9 @@ const AFFILIATE_LINKS_FR = [
 const AFFILIATE_LINKS_JA = [
   {
     url: 'https://lambda.com/service/gpu-cloud',
-    productName: 'Lambda Labs GPUクラウド (A100/H100)',
+    productName: 'Lambda GPUクラウド (A100/H100)',
     productCategory: 'cloud-gpu',
-    label: 'パイロット導入向けLambda Labs GPU料金を見る',
+    label: 'パイロット導入向けLambda GPU料金を見る',
   },
   {
     url: 'https://www.runpod.io/console/signup',
@@ -73,9 +73,9 @@ const AFFILIATE_LINKS_JA = [
 const AFFILIATE_LINKS_ZH = [
   {
     url: 'https://lambda.com/service/gpu-cloud',
-    productName: 'Lambda Labs GPU云 (A100/H100)',
+    productName: 'Lambda GPU云 (A100/H100)',
     productCategory: 'cloud-gpu',
-    label: '查看试点部署的Lambda Labs GPU价格',
+    label: '查看试点部署的Lambda GPU价格',
   },
   {
     url: 'https://www.runpod.io/console/signup',
@@ -87,9 +87,9 @@ const AFFILIATE_LINKS_ZH = [
 const AFFILIATE_LINKS_ES = [
   {
     url: 'https://lambda.com/service/gpu-cloud',
-    productName: 'Lambda Labs GPU Cloud (A100/H100)',
+    productName: 'Lambda GPU Cloud (A100/H100)',
     productCategory: 'cloud-gpu',
-    label: 'Ver precios de GPU de Lambda Labs para un piloto',
+    label: 'Ver precios de GPU de Lambda para un piloto',
   },
   {
     url: 'https://www.runpod.io/console/signup',
@@ -101,9 +101,9 @@ const AFFILIATE_LINKS_ES = [
 const AFFILIATE_LINKS_PT = [
   {
     url: 'https://lambda.com/service/gpu-cloud',
-    productName: 'Lambda Labs GPU Cloud (A100/H100)',
+    productName: 'Lambda GPU Cloud (A100/H100)',
     productCategory: 'cloud-gpu',
-    label: 'Ver preços de GPU da Lambda Labs para um piloto',
+    label: 'Ver preços de GPU da Lambda para um piloto',
   },
   {
     url: 'https://www.runpod.io/console/signup',
@@ -115,9 +115,9 @@ const AFFILIATE_LINKS_PT = [
 const AFFILIATE_LINKS_AR = [
   {
     url: 'https://lambda.com/service/gpu-cloud',
-    productName: 'Lambda Labs GPU Cloud (A100/H100)',
+    productName: 'Lambda GPU Cloud (A100/H100)',
     productCategory: 'cloud-gpu',
-    label: 'تحقق من أسعار Lambda Labs GPU للتجربة التجريبية',
+    label: 'تحقق من أسعار Lambda GPU للتجربة التجريبية',
   },
   {
     url: 'https://www.runpod.io/console/signup',
@@ -129,9 +129,9 @@ const AFFILIATE_LINKS_AR = [
 const AFFILIATE_LINKS_KO = [
   {
     url: 'https://lambda.com/service/gpu-cloud',
-    productName: 'Lambda Labs GPU 클라우드 (A100/H100)',
+    productName: 'Lambda GPU 클라우드 (A100/H100)',
     productCategory: 'cloud-gpu',
-    label: '파일럿 배포용 Lambda Labs GPU 가격 확인',
+    label: '파일럿 배포용 Lambda GPU 가격 확인',
   },
   {
     url: 'https://www.runpod.io/console/signup',
@@ -185,9 +185,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Yes, for ticket triage, knowledge-base-grounded agent-assist, and self-service deflection — the three workloads where keeping customer PII off a third-party API matters most and answers must be traceable to a source document. It is a poor fit for open-ended conversational quality matching the largest frontier models, and voice-agent pipelines need dedicated latency budgeting for speech-to-text, inference, and text-to-speech in series.',
         bullets: [
-          'Use a 3-8B model (Phi-3.5 Mini, Qwen2.5 7B) for real-time intent classification — typically sub-second on an RTX 4090-class GPU',
+          'Use a 3-8B model (Phi-3.5 Mini, Qwen2.5 7B) for real-time intent classification — typically sub-second on an RTX 4090-class GPU (a planning estimate, not a benchmark)',
           'Use a 7-32B model (Qwen2.5/Qwen3, Mistral) for RAG-grounded agent-assist and chat deflection',
-          'Reserve 70B+ models (Llama 3.3 70B, Mistral Large) for async escalation review, not live chat',
+          'Reserve 70B+ models (Llama 3.3 70B, Mistral Large) for async escalation review, not live chat (check the license per release, see Model Selection)',
           'A vector database (Qdrant, Weaviate) grounds every answer in the actual knowledge base to cut hallucination risk',
           'Voice pipelines add 300-800ms of speech-to-text and text-to-speech latency on top of inference time',
         ],
@@ -227,11 +227,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Quick Facts',
         items: [
-          '**Real-time intent classification:** 3-8B parameter models typically respond in well under 1 second on an NVIDIA RTX 4090-class GPU.',
+          '**Real-time intent classification:** 3-8B parameter models typically respond in well under 1 second on an NVIDIA RTX 4090-class GPU (a planning estimate, not a benchmark).',
           '**Async escalation reasoning:** 70B+ models commonly take 2-5 seconds per response — acceptable for batch ticket review, not for live chat.',
           '**Live chat latency budget:** roughly 1-3 seconds total, including retrieval, for the response to feel conversational.',
           '**Voice pipeline latency stack:** speech-to-text (~100-300ms) + LLM inference + text-to-speech (~100-300ms) run in series, not in parallel.',
-          '**Enterprise serving infrastructure:** vLLM and SGLang (not Hugging Face TGI, which is in maintenance mode) handle concurrent multi-agent traffic; Ollama is aimed at local, mostly single-user use (by default it serves one request per model at a time, see its [FAQ](https://docs.ollama.com/faq)), so vLLM or SGLang, built for high-throughput serving, are the more usual choice for shared production load.',
+          '**Enterprise serving infrastructure:** vLLM and SGLang (not Hugging Face TGI, which is in maintenance mode and whose GitHub repository is archived, last push March 2026) handle concurrent multi-agent traffic; Ollama is aimed at local, mostly single-user use (by default it serves one request per model at a time, see its [FAQ](https://docs.ollama.com/faq)), so vLLM or SGLang, built for high-throughput serving, are the more usual choice for shared production load.',
           '**Deflection is measured, not assumed:** any full-deflection deployment needs a defined escalation threshold (confidence score, retrieval-match quality, or explicit user request) that hands off to a human agent.',
         ],
       },
@@ -335,7 +335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Hallucination risk in customer support is not abstract — a wrong answer about a refund policy or a safety instruction is a real liability, not a bad user experience.** The fix is architectural more than it is model choice: ground every answer in retrieved source text and refuse to answer when retrieval confidence is low.',
         items: [
-          '**Intent classification:** small models (Phi-3.5 Mini 3.8B, Qwen2.5 7B) reach reliable accuracy on well-defined ticket categories fast enough for real-time routing — this task does not need a large model.',
+          '**Intent classification:** small models (Phi-3.5 Mini 3.8B, Qwen2.5 7B) can reach usable accuracy on well-defined ticket categories fast enough for real-time routing once validated on your own labeled tickets — this task does not need a large model.',
           '**KB-grounded agent-assist:** mid-size models (Qwen2.5/Qwen3 7-32B, Mistral 7B/Mixtral) paired with a retrieval pipeline over your actual knowledge base draft a response and cite the source article — the human agent reviews before sending.',
           '**Full deflection:** the same RAG pipeline, but with a confidence threshold — if retrieval does not return a high-confidence match, the system escalates to a human instead of guessing.',
           '**Escalation and QA reasoning:** larger models (Llama 3.3 70B, Mistral Large, or a reasoning model like DeepSeek-R1 for multi-step policy analysis) run asynchronously on flagged conversations where a few seconds of latency is irrelevant.',
@@ -451,7 +451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Launching full deflection on day one instead of starting with agent-assist and measuring accuracy before removing the human in the loop.',
           'Using one large model for every workload — a 70B model on live-chat intent classification wastes latency budget the customer feels immediately.',
-          'Deploying Ollama as the serving layer for multi-agent concurrent traffic — by default it serves one request per model at a time (OLLAMA_NUM_PARALLEL defaults to 1), so use vLLM or SGLang for shared production load (Hugging Face TGI is in maintenance mode; see the [inference server comparison](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)).',
+          'Deploying Ollama as the serving layer for multi-agent concurrent traffic — by default it serves one request per model at a time (OLLAMA_NUM_PARALLEL defaults to 1), so use vLLM or SGLang for shared production load (Hugging Face TGI is in maintenance mode and its GitHub repository is archived, last push March 2026; see the [inference server comparison](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)).',
           'Skipping retrieval grounding and relying on prompt instructions alone to prevent hallucinated policy or pricing answers.',
           'Assuming multi-language quality is uniform across a model family without testing the specific languages your support org actually needs.',
           'Building the helpdesk integration against undocumented API behavior instead of confirming current field-level write permissions with the platform vendor first.',
@@ -474,7 +474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Can a local LLM handle enterprise-scale customer support ticket triage?',
-            a: 'Yes. Small models (3-8B parameters) reliably classify well-defined ticket categories fast enough for real-time routing, and served through vLLM or SGLang they handle concurrent multi-agent traffic rather than the mostly single-user pattern Ollama targets by default. Volume that overwhelms a single GPU scales horizontally with more inference nodes behind a load balancer.',
+            a: 'Yes. Small models (3-8B parameters) can classify well-defined ticket categories fast enough for real-time routing once validated on your own labeled tickets, and served through vLLM or SGLang they handle concurrent multi-agent traffic rather than the mostly single-user pattern Ollama targets by default. Volume that overwhelms a single GPU scales horizontally with more inference nodes behind a load balancer.',
           },
           {
             q: 'What is the latency difference between live chat and async ticket processing?',
@@ -589,9 +589,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Ja, für Ticket-Triage, wissensbasiertes Agent-Assist und Self-Service-Deflektion — die drei Aufgaben, bei denen es am meisten zählt, Kunden-PII von externen APIs fernzuhalten und Antworten auf Quelldokumente zurückführen zu können. Für offene Konversationsqualität auf dem Niveau der größten Frontier-Modelle ist es weniger geeignet, und Voice-Agent-Pipelines brauchen ein eigenes Latenzbudget für Speech-to-Text, Inferenz und Text-to-Speech in Reihe.',
         bullets: [
-          'Ein 3-8B-Modell (Phi-3.5 Mini, Qwen2.5 7B) für Echtzeit-Intent-Klassifikation — typischerweise unter einer Sekunde auf einer GPU der RTX-4090-Klasse',
+          'Ein 3-8B-Modell (Phi-3.5 Mini, Qwen2.5 7B) für Echtzeit-Intent-Klassifikation — typischerweise unter einer Sekunde auf einer GPU der RTX-4090-Klasse (grobe Planungsschätzung, kein Benchmark)',
           'Ein 7-32B-Modell (Qwen2.5/Qwen3, Mistral) für RAG-gestütztes Agent-Assist und Chat-Deflektion',
-          '70B+-Modelle (Llama 3.3 70B, Mistral Large) für asynchrone Eskalationsprüfung reservieren, nicht für Live-Chat',
+          '70B+-Modelle (Llama 3.3 70B, Mistral Large) für asynchrone Eskalationsprüfung reservieren, nicht für Live-Chat (Lizenz je Release prüfen, siehe Modellwahl)',
           'Eine Vektordatenbank (Qdrant, Weaviate) verankert jede Antwort in der tatsächlichen Wissensdatenbank und senkt das Halluzinationsrisiko',
           'Voice-Pipelines addieren 300-800ms Speech-to-Text- und Text-to-Speech-Latenz zur reinen Inferenzzeit',
         ],
@@ -631,11 +631,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Kurzfakten',
         items: [
-          '**Echtzeit-Intent-Klassifikation:** 3-8B-Parameter-Modelle antworten auf einer GPU der RTX-4090-Klasse typischerweise deutlich unter 1 Sekunde.',
+          '**Echtzeit-Intent-Klassifikation:** 3-8B-Parameter-Modelle antworten auf einer GPU der RTX-4090-Klasse typischerweise deutlich unter 1 Sekunde (grobe Planungsschätzung, kein Benchmark).',
           '**Asynchrones Eskalations-Reasoning:** 70B+-Modelle brauchen üblicherweise 2-5 Sekunden pro Antwort — akzeptabel für Batch-Ticket-Review, nicht für Live-Chat.',
           '**Latenzbudget Live-Chat:** insgesamt etwa 1-3 Sekunden inklusive Retrieval, damit sich die Konversation flüssig anfühlt.',
           '**Latenz-Stapel Voice-Pipeline:** Speech-to-Text (~100-300ms) + LLM-Inferenz + Text-to-Speech (~100-300ms) laufen seriell, nicht parallel.',
-          '**Enterprise-Serving-Infrastruktur:** vLLM und SGLang (nicht das im Wartungsmodus befindliche Hugging Face TGI) verarbeiten gleichzeitigen Multi-Agent-Traffic; Ollama zielt auf lokale, meist einzelne Nutzer (standardmäßig bearbeitet es pro Modell eine Anfrage zur Zeit, siehe [FAQ](https://docs.ollama.com/faq)); für geteilte Produktionslast sind vLLM oder SGLang, ausgelegt auf hohen Durchsatz, die übliche Wahl.',
+          '**Enterprise-Serving-Infrastruktur:** vLLM und SGLang (nicht Hugging Face TGI, das sich im Wartungsmodus befindet und dessen GitHub-Repository archiviert ist, letzter Push im März 2026) verarbeiten gleichzeitigen Multi-Agent-Traffic; Ollama zielt auf lokale, meist einzelne Nutzer (standardmäßig bearbeitet es pro Modell eine Anfrage zur Zeit, siehe [FAQ](https://docs.ollama.com/faq)); für geteilte Produktionslast sind vLLM oder SGLang, ausgelegt auf hohen Durchsatz, die übliche Wahl.',
           '**Deflektion wird gemessen, nicht angenommen:** jede vollständige Deflektions-Implementierung braucht eine definierte Eskalationsschwelle (Konfidenzwert, Retrieval-Match-Qualität oder explizite Nutzeranfrage), die an einen menschlichen Agenten übergibt.',
         ],
       },
@@ -739,7 +739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Halluzinationsrisiko im Kundensupport ist kein abstraktes Problem — eine falsche Antwort zur Rückerstattungsrichtlinie oder zu einer Sicherheitsanweisung ist eine reale Haftungsfrage, keine schlechte Nutzererfahrung.** Der Fix liegt mehr in der Architektur als in der Modellwahl: jede Antwort auf abgerufenen Quelltext stützen und bei niedrigem Retrieval-Vertrauen die Antwort verweigern.',
         items: [
-          '**Intent-Klassifikation:** kleine Modelle (Phi-3.5 Mini 3.8B, Qwen2.5 7B) erreichen bei klar definierten Ticket-Kategorien zuverlässige Genauigkeit schnell genug für Echtzeit-Routing — dafür braucht es kein großes Modell.',
+          '**Intent-Klassifikation:** kleine Modelle (Phi-3.5 Mini 3.8B, Qwen2.5 7B) können bei klar definierten Ticket-Kategorien eine brauchbare Genauigkeit schnell genug für Echtzeit-Routing erreichen, sobald sie an Ihren eigenen gelabelten Tickets validiert wurden — dafür braucht es kein großes Modell.',
           '**Wissensbasiertes Agent-Assist:** mittelgroße Modelle (Qwen2.5/Qwen3 7-32B, Mistral 7B/Mixtral) kombiniert mit einer Retrieval-Pipeline über die tatsächliche Wissensdatenbank entwerfen eine Antwort und zitieren den Quellartikel — der menschliche Agent prüft vor dem Versand.',
           '**Vollständige Deflektion:** dieselbe RAG-Pipeline, aber mit Konfidenzschwelle — liefert das Retrieval keinen hochsicheren Treffer, eskaliert das System an einen Menschen statt zu raten.',
           '**Eskalations- und QA-Reasoning:** größere Modelle (Llama 3.3 70B, Mistral Large oder ein Reasoning-Modell wie DeepSeek-R1 für mehrstufige Richtlinienanalyse) laufen asynchron auf markierten Konversationen, wo einige Sekunden Latenz irrelevant sind.',
@@ -855,7 +855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Vollständige Deflektion am ersten Tag starten statt mit Agent-Assist zu beginnen und Genauigkeit zu messen, bevor der Mensch aus der Schleife genommen wird.',
           'Ein großes Modell für jede Aufgabe verwenden — ein 70B-Modell für Live-Chat-Intent-Klassifikation verschwendet Latenzbudget, das der Kunde sofort spürt.',
-          'Ollama als Serving-Schicht für gleichzeitigen Multi-Agent-Traffic einsetzen — es bearbeitet standardmäßig eine Anfrage pro Modell zur Zeit (OLLAMA_NUM_PARALLEL ist standardmäßig 1); für geteilte Produktionslast vLLM oder SGLang verwenden (Hugging Face TGI befindet sich im Wartungsmodus; siehe [Vergleich der Inferenz-Server](/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)).',
+          'Ollama als Serving-Schicht für gleichzeitigen Multi-Agent-Traffic einsetzen — es bearbeitet standardmäßig eine Anfrage pro Modell zur Zeit (OLLAMA_NUM_PARALLEL ist standardmäßig 1); für geteilte Produktionslast vLLM oder SGLang verwenden (Hugging Face TGI befindet sich im Wartungsmodus, sein GitHub-Repository ist archiviert, letzter Push im März 2026; siehe [Vergleich der Inferenz-Server](/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)).',
           'Retrieval-Verankerung auslassen und sich allein auf Prompt-Anweisungen verlassen, um halluzinierte Richtlinien- oder Preisantworten zu verhindern.',
           'Annehmen, dass Mehrsprachigkeit über eine Modellfamilie hinweg gleichmäßig ist, ohne die konkreten Sprachen zu testen, die Ihre Support-Organisation tatsächlich braucht.',
           'Die Helpdesk-Integration auf undokumentiertem API-Verhalten aufbauen statt zuerst aktuelle feldbezogene Schreibrechte mit dem Plattformanbieter zu bestätigen.',
@@ -878,7 +878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Kann ein lokales LLM die Ticket-Triage im Enterprise-Maßstab bewältigen?',
-            a: 'Ja. Kleine Modelle (3-8B Parameter) klassifizieren klar definierte Ticket-Kategorien zuverlässig und schnell genug für Echtzeit-Routing, und über vLLM oder SGLang serviert bewältigen sie gleichzeitigen Multi-Agent-Traffic statt des standardmäßig überwiegend auf Einzelnutzer ausgerichteten Musters von Ollama. Volumen, das eine einzelne GPU überfordert, skaliert horizontal mit weiteren Inferenz-Knoten hinter einem Load Balancer.',
+            a: 'Ja. Kleine Modelle (3-8B Parameter) können klar definierte Ticket-Kategorien schnell genug für Echtzeit-Routing klassifizieren, sobald sie an Ihren eigenen gelabelten Tickets validiert wurden, und über vLLM oder SGLang serviert bewältigen sie gleichzeitigen Multi-Agent-Traffic statt des standardmäßig überwiegend auf Einzelnutzer ausgerichteten Musters von Ollama. Volumen, das eine einzelne GPU überfordert, skaliert horizontal mit weiteren Inferenz-Knoten hinter einem Load Balancer.',
           },
           {
             q: 'Was ist der Latenzunterschied zwischen Live-Chat und asynchroner Ticket-Verarbeitung?',
@@ -993,9 +993,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Oui, pour le triage de tickets, l\'agent-assist appuyé sur la base de connaissances et la déflexion en libre-service — les trois usages où garder les données personnelles des clients hors d\'une API tierce compte le plus et où chaque réponse doit être traçable jusqu\'à un document source. C\'est moins adapté à une qualité conversationnelle ouverte au niveau des plus grands modèles de pointe, et les pipelines d\'agents vocaux exigent un budget de latence dédié pour la transcription, l\'inférence et la synthèse vocale en série.',
         bullets: [
-          'Modèle 3-8B (Phi-3.5 Mini, Qwen2.5 7B) pour la classification d\'intention en temps réel — en général sous la seconde sur un GPU de classe RTX 4090',
+          'Modèle 3-8B (Phi-3.5 Mini, Qwen2.5 7B) pour la classification d\'intention en temps réel — en général sous la seconde sur un GPU de classe RTX 4090 (estimation de planification, pas un benchmark)',
           'Modèle 7-32B (Qwen2.5/Qwen3, Mistral) pour l\'agent-assist RAG et la déflexion du chat',
-          'Réserver les modèles 70B+ (Llama 3.3 70B, Mistral Large) à l\'examen d\'escalade asynchrone, pas au chat en direct',
+          'Réserver les modèles 70B+ (Llama 3.3 70B, Mistral Large) à l\'examen d\'escalade asynchrone, pas au chat en direct (vérifier la licence à chaque version, voir Choix du modèle)',
           'Une base de données vectorielle (Qdrant, Weaviate) ancre chaque réponse dans la base de connaissances réelle et réduit le risque d\'hallucination',
           'Les pipelines vocaux ajoutent 300-800 ms de latence de transcription et de synthèse vocale en plus du temps d\'inférence',
         ],
@@ -1035,11 +1035,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Faits rapides',
         items: [
-          '**Classification d\'intention en temps réel :** les modèles 3-8B répondent généralement en bien moins d\'une seconde sur un GPU de classe RTX 4090.',
+          '**Classification d\'intention en temps réel :** les modèles 3-8B répondent généralement en bien moins d\'une seconde sur un GPU de classe RTX 4090 (estimation de planification, pas un benchmark).',
           '**Raisonnement d\'escalade asynchrone :** les modèles 70B+ prennent couramment 2-5 secondes par réponse — acceptable pour l\'examen de tickets en lot, pas pour le chat en direct.',
           '**Budget de latence du chat en direct :** environ 1-3 secondes au total, retrieval inclus, pour que la conversation semble fluide.',
           '**Pile de latence vocale :** transcription (~100-300 ms) + inférence LLM + synthèse vocale (~100-300 ms) s\'exécutent en série, pas en parallèle.',
-          '**Infrastructure de serving en entreprise :** vLLM et SGLang (et non Hugging Face TGI, en mode maintenance) gèrent le trafic multi-agents concurrent ; Ollama vise surtout un usage local mono-utilisateur (par défaut, il traite une requête à la fois par modèle, voir sa [FAQ](https://docs.ollama.com/faq)) ; pour une charge de production partagée, vLLM ou SGLang, conçus pour un fort débit, sont le choix habituel.',
+          '**Infrastructure de serving en entreprise :** vLLM et SGLang (et non Hugging Face TGI, en mode maintenance et dont le dépôt GitHub est archivé, dernier push en mars 2026) gèrent le trafic multi-agents concurrent ; Ollama vise surtout un usage local mono-utilisateur (par défaut, il traite une requête à la fois par modèle, voir sa [FAQ](https://docs.ollama.com/faq)) ; pour une charge de production partagée, vLLM ou SGLang, conçus pour un fort débit, sont le choix habituel.',
           '**La déflexion se mesure, elle ne se présume pas :** tout déploiement de déflexion complète nécessite un seuil d\'escalade défini (score de confiance, qualité de correspondance du retrieval, ou demande explicite de l\'utilisateur) qui transfère à un agent humain.',
         ],
       },
@@ -1143,7 +1143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Le risque d\'hallucination dans le support client n\'est pas abstrait — une mauvaise réponse sur une politique de remboursement ou une consigne de sécurité est une vraie question de responsabilité, pas une mauvaise expérience utilisateur.** Le correctif relève davantage de l\'architecture que du choix du modèle : ancrer chaque réponse dans un texte source récupéré et refuser de répondre quand la confiance du retrieval est faible.',
         items: [
-          '**Classification d\'intention :** les petits modèles (Phi-3.5 Mini 3.8B, Qwen2.5 7B) atteignent une précision fiable sur des catégories de tickets bien définies, assez vite pour un routage en temps réel — cette tâche ne nécessite pas un grand modèle.',
+          '**Classification d\'intention :** les petits modèles (Phi-3.5 Mini 3.8B, Qwen2.5 7B) peuvent atteindre une précision utilisable sur des catégories de tickets bien définies, assez vite pour un routage en temps réel, une fois validés sur vos propres tickets étiquetés — cette tâche ne nécessite pas un grand modèle.',
           '**Agent-assist appuyé sur la base de connaissances :** des modèles intermédiaires (Qwen2.5/Qwen3 7-32B, Mistral 7B/Mixtral) couplés à un pipeline de retrieval sur la base de connaissances réelle rédigent une réponse et citent l\'article source — l\'agent humain relit avant d\'envoyer.',
           '**Déflexion complète :** le même pipeline RAG, mais avec un seuil de confiance — si le retrieval ne renvoie pas de correspondance de haute confiance, le système escalade vers un humain plutôt que de deviner.',
           '**Raisonnement d\'escalade et de revue QA :** des modèles plus grands (Llama 3.3 70B, Mistral Large, ou un modèle de raisonnement comme DeepSeek-R1 pour l\'analyse de politique en plusieurs étapes) tournent de façon asynchrone sur les conversations signalées, où quelques secondes de latence n\'ont pas d\'importance.',
@@ -1247,7 +1247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Critère': 'Idéal pour',
             'Pile locale auto-hébergée': 'Volume de tickets élevé, exigences strictes de localité des données, capacité ML/IT interne',
-            'Plateforme d\'IA CX commerciale': 'Mise en valeur rapide, capacité d\'ingénierie limitée, cas d\'usage standards',
+            'Plateforme d\'IA CX commerciale': 'Délai de valorisation court, capacité d\'ingénierie limitée, cas d\'usage standards',
           },
         ],
       },
@@ -1259,7 +1259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Lancer la déflexion complète dès le premier jour au lieu de commencer par l\'agent-assist et de mesurer la précision avant de retirer l\'humain de la boucle.',
           'Utiliser un seul grand modèle pour toutes les charges de travail — un modèle 70B pour la classification d\'intention en chat en direct gaspille un budget de latence que le client ressent immédiatement.',
-          'Déployer Ollama comme couche de serving pour un trafic multi-agents concurrent — par défaut il traite une requête à la fois par modèle (OLLAMA_NUM_PARALLEL vaut 1) ; utiliser vLLM ou SGLang pour une charge de production partagée (Hugging Face TGI est en mode maintenance ; voir la [comparaison des serveurs d\'inférence](/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)).',
+          'Déployer Ollama comme couche de serving pour un trafic multi-agents concurrent — par défaut il traite une requête à la fois par modèle (OLLAMA_NUM_PARALLEL vaut 1) ; utiliser vLLM ou SGLang pour une charge de production partagée (Hugging Face TGI est en mode maintenance et son dépôt GitHub est archivé, dernier push en mars 2026 ; voir la [comparaison des serveurs d\'inférence](/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)).',
           'Omettre l\'ancrage par retrieval et compter uniquement sur des instructions de prompt pour empêcher des réponses hallucinées sur les politiques ou les tarifs.',
           'Supposer que la qualité multilingue est uniforme sur une famille de modèles sans tester les langues spécifiques dont votre organisation de support a réellement besoin.',
           'Construire l\'intégration helpdesk sur un comportement d\'API non documenté au lieu de confirmer d\'abord les permissions d\'écriture au niveau des champs avec l\'éditeur de la plateforme.',
@@ -1282,7 +1282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Un LLM local peut-il gérer le triage de tickets de support à l\'échelle de l\'entreprise ?',
-            a: 'Oui. Les petits modèles (3-8 milliards de paramètres) classent de façon fiable des catégories de tickets bien définies, assez rapidement pour un routage en temps réel, et servis via vLLM ou SGLang, ils gèrent un trafic multi-agents concurrent plutôt que le schéma surtout mono-utilisateur visé par défaut par Ollama. Un volume qui dépasse un seul GPU s\'étend horizontalement avec plus de nœuds d\'inférence derrière un répartiteur de charge.',
+            a: 'Oui. Les petits modèles (3-8 milliards de paramètres) peuvent classer des catégories de tickets bien définies assez rapidement pour un routage en temps réel, une fois validés sur vos propres tickets étiquetés, et servis via vLLM ou SGLang, ils gèrent un trafic multi-agents concurrent plutôt que le schéma surtout mono-utilisateur visé par défaut par Ollama. Un volume qui dépasse un seul GPU s\'étend horizontalement avec plus de nœuds d\'inférence derrière un répartiteur de charge.',
           },
           {
             q: 'Quelle est la différence de latence entre le chat en direct et le traitement asynchrone des tickets ?',
@@ -1306,7 +1306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Une pile de support auto-hébergée est-elle moins chère qu\'une plateforme d\'IA CX commerciale ?',
-            a: 'Cela dépend du volume de tickets et de la capacité d\'ingénierie interne. L\'auto-hébergement supprime les frais par résolution ou par siège agent, mais ajoute une infrastructure d\'inférence, une maintenance de pipeline RAG et une ingénierie d\'intégration qu\'une plateforme commerciale inclut dans son abonnement. Les centres de contact à fort volume disposant déjà d\'une capacité IT/ML interne présentent généralement un argument plus fort en faveur de l\'auto-hébergement ; les équipes sans cette capacité obtiennent souvent une mise en valeur plus rapide avec une plateforme commerciale.',
+            a: 'Cela dépend du volume de tickets et de la capacité d\'ingénierie interne. L\'auto-hébergement supprime les frais par résolution ou par siège agent, mais ajoute une infrastructure d\'inférence, une maintenance de pipeline RAG et une ingénierie d\'intégration qu\'une plateforme commerciale inclut dans son abonnement. Les centres de contact à fort volume disposant déjà d\'une capacité IT/ML interne présentent généralement un argument plus fort en faveur de l\'auto-hébergement ; les équipes sans cette capacité obtiennent souvent un délai de valorisation plus court avec une plateforme commerciale.',
           },
           {
             q: 'Quelle est la différence entre l\'agent-assist et la déflexion complète ?',
@@ -1397,9 +1397,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Sí, para triage de tickets, agent-assist basado en la base de conocimiento y deflexión de autoservicio — los tres casos donde más importa mantener los datos personales de los clientes fuera de una API de terceros y donde cada respuesta debe ser trazable hasta un documento fuente. Es menos adecuado para igualar la calidad conversacional abierta de los modelos de frontera más grandes, y los pipelines de agentes de voz necesitan un presupuesto de latencia propio para el reconocimiento de voz, la inferencia y la síntesis de voz en serie.',
         bullets: [
-          'Modelo 3-8B (Phi-3.5 Mini, Qwen2.5 7B) para clasificación de intención en tiempo real — normalmente por debajo de un segundo en una GPU de clase RTX 4090',
+          'Modelo 3-8B (Phi-3.5 Mini, Qwen2.5 7B) para clasificación de intención en tiempo real — normalmente por debajo de un segundo en una GPU de clase RTX 4090 (estimación de planificación, no un benchmark)',
           'Modelo 7-32B (Qwen2.5/Qwen3, Mistral) para agent-assist con RAG y deflexión de chat',
-          'Reservar los modelos 70B+ (Llama 3.3 70B, Mistral Large) para revisión de escalado asíncrona, no para chat en vivo',
+          'Reservar los modelos 70B+ (Llama 3.3 70B, Mistral Large) para revisión de escalado asíncrona, no para chat en vivo (revisa la licencia de cada versión, ver Selección de Modelo)',
           'Una base de datos vectorial (Qdrant, Weaviate) ancla cada respuesta en la base de conocimiento real y reduce el riesgo de alucinación',
           'Los pipelines de voz añaden 300-800ms de latencia de reconocimiento y síntesis de voz sobre el tiempo de inferencia',
         ],
@@ -1439,11 +1439,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Datos Rápidos',
         items: [
-          '**Clasificación de intención en tiempo real:** los modelos de 3-8B parámetros suelen responder en bastante menos de 1 segundo en una GPU de clase RTX 4090.',
+          '**Clasificación de intención en tiempo real:** los modelos de 3-8B parámetros suelen responder en bastante menos de 1 segundo en una GPU de clase RTX 4090 (estimación de planificación, no un benchmark).',
           '**Razonamiento de escalado asíncrono:** los modelos de 70B+ suelen tardar 2-5 segundos por respuesta — aceptable para revisión de tickets en lote, no para chat en vivo.',
           '**Presupuesto de latencia del chat en vivo:** aproximadamente 1-3 segundos en total, recuperación incluida, para que la respuesta se sienta conversacional.',
           '**Pila de latencia del pipeline de voz:** reconocimiento de voz (~100-300ms) + inferencia del LLM + síntesis de voz (~100-300ms) se ejecutan en serie, no en paralelo.',
-          '**Infraestructura de servicio empresarial:** vLLM y SGLang (no Hugging Face TGI, que está en modo de mantenimiento) manejan el tráfico concurrente multiagente; Ollama apunta a un uso local, sobre todo de un solo usuario (por defecto atiende una solicitud por modelo a la vez, ver su [FAQ](https://docs.ollama.com/faq)); para carga de producción compartida, vLLM o SGLang, pensados para alto rendimiento, son la opción habitual.',
+          '**Infraestructura de servicio empresarial:** vLLM y SGLang (no Hugging Face TGI, que está en modo de mantenimiento y cuyo repositorio de GitHub está archivado, último push en marzo de 2026) manejan el tráfico concurrente multiagente; Ollama apunta a un uso local, sobre todo de un solo usuario (por defecto atiende una solicitud por modelo a la vez, ver su [FAQ](https://docs.ollama.com/faq)); para carga de producción compartida, vLLM o SGLang, pensados para alto rendimiento, son la opción habitual.',
           '**La deflexión se mide, no se asume:** cualquier despliegue de deflexión completa necesita un umbral de escalado definido (puntuación de confianza, calidad de coincidencia de recuperación o solicitud explícita del usuario) que transfiera a un agente humano.',
         ],
       },
@@ -1499,7 +1499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**El riesgo de alucinación en soporte al cliente no es abstracto — una respuesta incorrecta sobre una política de reembolso o una instrucción de seguridad es un problema de responsabilidad real, no una mala experiencia de usuario.** La solución es más arquitectónica que de elección de modelo: anclar cada respuesta en texto fuente recuperado y negarse a responder cuando la confianza de la recuperación es baja.',
         items: [
-          '**Clasificación de intención:** los modelos pequeños (Phi-3.5 Mini 3.8B, Qwen2.5 7B) alcanzan una precisión fiable en categorías de tickets bien definidas, lo bastante rápido para enrutamiento en tiempo real — esta tarea no necesita un modelo grande.',
+          '**Clasificación de intención:** los modelos pequeños (Phi-3.5 Mini 3.8B, Qwen2.5 7B) pueden alcanzar una precisión utilizable en categorías de tickets bien definidas, lo bastante rápido para enrutamiento en tiempo real, una vez validados con tus propios tickets etiquetados — esta tarea no necesita un modelo grande.',
           '**Agent-assist basado en la base de conocimiento:** modelos medianos (Qwen2.5/Qwen3 7-32B, Mistral 7B/Mixtral) combinados con un pipeline de recuperación sobre la base de conocimiento real redactan una respuesta y citan el artículo fuente — el agente humano la revisa antes de enviarla.',
           '**Deflexión completa:** el mismo pipeline de RAG, pero con un umbral de confianza — si la recuperación no devuelve una coincidencia de alta confianza, el sistema escala a un humano en lugar de adivinar.',
           '**Razonamiento de escalado y revisión QA:** modelos más grandes (Llama 3.3 70B, Mistral Large, o un modelo de razonamiento como DeepSeek-R1 para análisis de políticas en varios pasos) se ejecutan de forma asíncrona sobre conversaciones marcadas, donde unos segundos de latencia son irrelevantes.',
@@ -1575,7 +1575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Lanzar la deflexión completa el primer día en lugar de empezar con agent-assist y medir la precisión antes de retirar al humano del bucle.',
           'Usar un único modelo grande para toda carga de trabajo — un modelo de 70B para clasificación de intención en chat en vivo desperdicia un presupuesto de latencia que el cliente nota de inmediato.',
-          'Desplegar Ollama como capa de servicio para tráfico multiagente concurrente — por defecto atiende una solicitud por modelo a la vez (OLLAMA_NUM_PARALLEL vale 1); usa vLLM o SGLang para carga de producción compartida (Hugging Face TGI está en modo de mantenimiento; ver la [comparación de servidores de inferencia](/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)).',
+          'Desplegar Ollama como capa de servicio para tráfico multiagente concurrente — por defecto atiende una solicitud por modelo a la vez (OLLAMA_NUM_PARALLEL vale 1); usa vLLM o SGLang para carga de producción compartida (Hugging Face TGI está en modo de mantenimiento y su repositorio de GitHub está archivado, último push en marzo de 2026; ver la [comparación de servidores de inferencia](/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)).',
           'Omitir el anclaje por recuperación y confiar solo en instrucciones del prompt para evitar respuestas alucinadas sobre políticas o precios.',
           'Asumir que la calidad multilingüe es uniforme en toda una familia de modelos sin probar los idiomas específicos que tu organización de soporte realmente necesita.',
           'Construir la integración con el helpdesk sobre comportamiento de API no documentado en lugar de confirmar primero los permisos de escritura a nivel de campo con el proveedor de la plataforma.',
@@ -1596,7 +1596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas Frecuentes',
         faqs: [
-          { q: '¿Puede un LLM local gestionar el triage de tickets de soporte a escala empresarial?', a: 'Sí. Los modelos pequeños (3-8B parámetros) clasifican de forma fiable categorías de tickets bien definidas, lo bastante rápido para enrutamiento en tiempo real, y servidos a través de vLLM o SGLang manejan tráfico concurrente multiagente en lugar del patrón sobre todo de un solo usuario que Ollama aplica por defecto. Un volumen que satura una sola GPU escala horizontalmente con más nodos de inferencia detrás de un balanceador de carga.' },
+          { q: '¿Puede un LLM local gestionar el triage de tickets de soporte a escala empresarial?', a: 'Sí. Los modelos pequeños (3-8B parámetros) pueden clasificar categorías de tickets bien definidas lo bastante rápido para enrutamiento en tiempo real, una vez validados con tus propios tickets etiquetados, y servidos a través de vLLM o SGLang manejan tráfico concurrente multiagente en lugar del patrón sobre todo de un solo usuario que Ollama aplica por defecto. Un volumen que satura una sola GPU escala horizontalmente con más nodos de inferencia detrás de un balanceador de carga.' },
           { q: '¿Cuál es la diferencia de latencia entre chat en vivo y procesamiento asíncrono de tickets?', a: 'El chat en vivo necesita una respuesta completa en aproximadamente 1-3 segundos, recuperación incluida, o la conversación se siente rota. El triage y etiquetado asíncronos pueden ejecutarse en lotes a 5-30 segundos por elemento porque ningún cliente espera el resultado en tiempo real — ese margen permite usar para el triage un modelo más grande y preciso del que jamás sería viable para chat en vivo.' },
           { q: '¿Cómo se reduce el riesgo de alucinación en un contexto de soporte regulado?', a: 'Anclando cada respuesta en texto fuente recuperado de la base de conocimiento real y citando el artículo fuente, en lugar de depender de la memoria paramétrica del modelo o de una instrucción del prompt por sí sola. Añade un umbral de confianza de recuperación que bloquee la generación y escale a un humano cuando no exista una coincidencia de alta confianza — es una barrera arquitectónica dura, no una sugerencia blanda del prompt.' },
           { q: '¿Qué modelos locales funcionan mejor para el soporte al cliente multilingüe?', a: 'Familias de modelos con amplia cobertura de entrenamiento multilingüe publicada, como Qwen2.5/Qwen3 y Mistral, en general rinden bien en los principales idiomas europeos y asiáticos para clasificación y redacción. La calidad sigue variando según el par de idiomas concreto, así que prueba la clasificación de intención y la calidad de respuesta con RAG en cada idioma que tu organización de soporte realmente atiende antes del lanzamiento, en lugar de asumir cobertura uniforme.' },
@@ -1689,9 +1689,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Sim, para triagem de tickets, agent-assist embasado na base de conhecimento e deflexão de autoatendimento — os três casos em que manter os dados pessoais dos clientes fora de uma API de terceiros mais importa e onde cada resposta precisa ser rastreável até um documento fonte. É menos adequado para igualar a qualidade conversacional aberta dos maiores modelos de fronteira, e pipelines de agentes de voz precisam de um orçamento de latência próprio para reconhecimento de voz, inferência e síntese de voz em série.',
         bullets: [
-          'Modelo 3-8B (Phi-3.5 Mini, Qwen2.5 7B) para classificação de intenção em tempo real — normalmente abaixo de um segundo em uma GPU classe RTX 4090',
+          'Modelo 3-8B (Phi-3.5 Mini, Qwen2.5 7B) para classificação de intenção em tempo real — normalmente abaixo de um segundo em uma GPU classe RTX 4090 (estimativa de planejamento, não um benchmark)',
           'Modelo 7-32B (Qwen2.5/Qwen3, Mistral) para agent-assist com RAG e deflexão de chat',
-          'Reservar modelos 70B+ (Llama 3.3 70B, Mistral Large) para revisão de escalonamento assíncrona, não para chat ao vivo',
+          'Reservar modelos 70B+ (Llama 3.3 70B, Mistral Large) para revisão de escalonamento assíncrona, não para chat ao vivo (verifique a licença de cada versão, veja Seleção de Modelo)',
           'Um banco de dados vetorial (Qdrant, Weaviate) ancora cada resposta na base de conhecimento real e reduz o risco de alucinação',
           'Pipelines de voz adicionam 300-800ms de latência de reconhecimento e síntese de voz além do tempo de inferência',
         ],
@@ -1731,11 +1731,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Fatos Rápidos',
         items: [
-          '**Classificação de intenção em tempo real:** modelos de 3-8B parâmetros normalmente respondem em bem menos de 1 segundo em uma GPU classe RTX 4090.',
+          '**Classificação de intenção em tempo real:** modelos de 3-8B parâmetros normalmente respondem em bem menos de 1 segundo em uma GPU classe RTX 4090 (estimativa de planejamento, não um benchmark).',
           '**Raciocínio de escalonamento assíncrono:** modelos 70B+ costumam levar 2-5 segundos por resposta — aceitável para revisão de tickets em lote, não para chat ao vivo.',
           '**Orçamento de latência do chat ao vivo:** cerca de 1-3 segundos no total, recuperação incluída, para que a resposta pareça natural.',
           '**Pilha de latência do pipeline de voz:** reconhecimento de voz (~100-300ms) + inferência do LLM + síntese de voz (~100-300ms) rodam em série, não em paralelo.',
-          '**Infraestrutura de serving corporativa:** vLLM e SGLang (não o Hugging Face TGI, que está em modo de manutenção) lidam com tráfego concorrente multiagente; O Ollama mira o uso local, principalmente de um único usuário (por padrão atende uma requisição por modelo por vez, veja o [FAQ](https://docs.ollama.com/faq)); para carga de produção compartilhada, vLLM ou SGLang, voltados a alto throughput, são a escolha usual.',
+          '**Infraestrutura de serving corporativa:** vLLM e SGLang (não o Hugging Face TGI, que está em modo de manutenção e cujo repositório no GitHub está arquivado, último push em março de 2026) lidam com tráfego concorrente multiagente; O Ollama mira o uso local, principalmente de um único usuário (por padrão atende uma requisição por modelo por vez, veja o [FAQ](https://docs.ollama.com/faq)); para carga de produção compartilhada, vLLM ou SGLang, voltados a alto throughput, são a escolha usual.',
           '**Deflexão se mede, não se presume:** qualquer implantação de deflexão completa precisa de um limiar de escalonamento definido (pontuação de confiança, qualidade de correspondência da recuperação ou solicitação explícita do usuário) que transfira para um agente humano.',
         ],
       },
@@ -1791,7 +1791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**O risco de alucinação no suporte ao cliente não é abstrato — uma resposta errada sobre política de reembolso ou uma instrução de segurança é uma questão real de responsabilidade, não uma experiência de usuário ruim.** A correção é mais arquitetural do que uma questão de escolha de modelo: ancorar cada resposta em texto fonte recuperado e recusar-se a responder quando a confiança da recuperação for baixa.',
         items: [
-          '**Classificação de intenção:** modelos pequenos (Phi-3.5 Mini 3.8B, Qwen2.5 7B) atingem precisão confiável em categorias de tickets bem definidas, rápido o suficiente para roteamento em tempo real — essa tarefa não precisa de um modelo grande.',
+          '**Classificação de intenção:** modelos pequenos (Phi-3.5 Mini 3.8B, Qwen2.5 7B) podem atingir precisão utilizável em categorias de tickets bem definidas, rápido o suficiente para roteamento em tempo real, depois de validados com os seus próprios tickets rotulados — essa tarefa não precisa de um modelo grande.',
           '**Agent-assist embasado na base de conhecimento:** modelos de porte médio (Qwen2.5/Qwen3 7-32B, Mistral 7B/Mixtral) combinados com um pipeline de recuperação sobre a base de conhecimento real rascunham uma resposta e citam o artigo fonte — o agente humano revisa antes de enviar.',
           '**Deflexão completa:** o mesmo pipeline de RAG, mas com um limiar de confiança — se a recuperação não retornar uma correspondência de alta confiança, o sistema escala para um humano em vez de adivinhar.',
           '**Raciocínio de escalonamento e revisão QA:** modelos maiores (Llama 3.3 70B, Mistral Large, ou um modelo de raciocínio como o DeepSeek-R1 para análise de política em várias etapas) rodam de forma assíncrona sobre conversas sinalizadas, onde alguns segundos de latência são irrelevantes.',
@@ -1867,7 +1867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Lançar deflexão completa no primeiro dia em vez de começar com agent-assist e medir a precisão antes de tirar o humano do circuito.',
           'Usar um único modelo grande para toda carga de trabalho — um modelo 70B para classificação de intenção em chat ao vivo desperdiça um orçamento de latência que o cliente sente imediatamente.',
-          'Implantar o Ollama como camada de serving para tráfego concorrente multiagente — por padrão ele atende uma requisição por modelo por vez (OLLAMA_NUM_PARALLEL vale 1); use vLLM ou SGLang para carga de produção compartilhada (Hugging Face TGI está em modo de manutenção; veja a [comparação de servidores de inferência](/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)).',
+          'Implantar o Ollama como camada de serving para tráfego concorrente multiagente — por padrão ele atende uma requisição por modelo por vez (OLLAMA_NUM_PARALLEL vale 1); use vLLM ou SGLang para carga de produção compartilhada (Hugging Face TGI está em modo de manutenção e seu repositório no GitHub está arquivado, último push em março de 2026; veja a [comparação de servidores de inferência](/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)).',
           'Pular a ancoragem por recuperação e confiar só em instruções de prompt para evitar respostas alucinadas sobre política ou preço.',
           'Assumir que a qualidade multilíngue é uniforme em toda uma família de modelos sem testar os idiomas específicos que sua organização de suporte realmente precisa.',
           'Construir a integração com o helpdesk sobre comportamento de API não documentado em vez de confirmar antes as permissões de escrita em nível de campo com o fornecedor da plataforma.',
@@ -1888,13 +1888,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas Frequentes',
         faqs: [
-          { q: 'Um LLM local consegue lidar com triagem de tickets de suporte em escala corporativa?', a: 'Sim. Modelos pequenos (3-8B parâmetros) classificam com confiabilidade categorias de tickets bem definidas, rápido o suficiente para roteamento em tempo real, e servidos via vLLM ou SGLang lidam com tráfego concorrente multiagente em vez do padrão principalmente de usuário único que o Ollama adota por padrão. Um volume que sobrecarrega uma única GPU escala horizontalmente com mais nós de inferência atrás de um balanceador de carga.' },
+          { q: 'Um LLM local consegue lidar com triagem de tickets de suporte em escala corporativa?', a: 'Sim. Modelos pequenos (3-8B parâmetros) podem classificar categorias de tickets bem definidas rápido o suficiente para roteamento em tempo real, depois de validados com os seus próprios tickets rotulados, e servidos via vLLM ou SGLang lidam com tráfego concorrente multiagente em vez do padrão principalmente de usuário único que o Ollama adota por padrão. Um volume que sobrecarrega uma única GPU escala horizontalmente com mais nós de inferência atrás de um balanceador de carga.' },
           { q: 'Qual é a diferença de latência entre chat ao vivo e processamento assíncrono de tickets?', a: 'O chat ao vivo precisa de uma resposta completa em cerca de 1-3 segundos, recuperação incluída, ou a conversa parece quebrada. Triagem e etiquetagem assíncronas podem rodar em lotes a 5-30 segundos por item porque nenhum cliente está esperando o resultado em tempo real — essa folga permite usar na triagem um modelo maior e mais preciso do que jamais seria viável no chat ao vivo.' },
           { q: 'Como reduzir o risco de alucinação em um contexto de suporte regulado?', a: 'Ancorando cada resposta em texto fonte recuperado da base de conhecimento real e citando o artigo fonte, em vez de depender da memória paramétrica do modelo ou só de uma instrução de prompt. Adicione um limiar de confiança de recuperação que bloqueie a geração e escale para um humano quando não houver correspondência de alta confiança — isso é uma proteção arquitetural rígida, não uma sugestão leve de prompt.' },
           { q: 'Quais modelos locais funcionam melhor para suporte ao cliente multilíngue?', a: 'Famílias de modelos com ampla cobertura de treinamento multilíngue publicada, como Qwen2.5/Qwen3 e Mistral, geralmente têm bom desempenho nos principais idiomas europeus e asiáticos para classificação e redação. A qualidade ainda varia por par de idioma específico, então teste a classificação de intenção e a qualidade de resposta com RAG em cada idioma que sua organização de suporte realmente atende antes do lançamento, em vez de presumir cobertura uniforme.' },
           { q: 'Como um LLM local se integra ao Zendesk, Freshdesk ou Salesforce Service Cloud?', a: 'Através da API REST e do framework de webhooks/gatilhos que cada plataforma expõe de forma genérica — um webhook dispara na criação ou atualização de um ticket, chama seu endpoint de inferência auto-hospedado, e o resultado é gravado de volta como nota interna ou resposta sugerida. As permissões exatas de escrita em nível de campo e os limites de taxa variam por edição de plataforma, então confirme as capacidades atuais no console de administração da sua plataforma antes de definir o escopo da integração; este artigo descreve o padrão genérico em nível de API, não um plugin certificado pelo fornecedor.' },
-          { q: 'Tickets de suporte ao cliente devem ser enviados para uma API de LLM em nuvem de terceiros?', a: 'Depende dos seus acordos de tratamento de dados e da sensibilidade do conteúdo, e é uma decisão para jurídico/compliance, não um padrão técnico. Uma arquitetura auto-hospedada reduz o número de terceiros que veem conteúdo de ticket não redigido, o que é a justificativa central para manter em local as cargas de trabalho de suporte que carregam dados pessoais — mas o auto-hospedagem sozinha não atende automaticamente LGPD, GDPR, HIPAA ou regras setoriais; veja o guia dedicado sobre [RAG local em conformidade com o GDPR](/pt/power-local-llm/local-rag-for-private-business-data) para o conjunto de controles exigido.' },
-          { q: 'Uma arquitetura de suporte auto-hospedada é mais barata que uma plataforma de IA de CX comercial?', a: 'Depende do volume de tickets e da capacidade de engenharia interna. O auto-hospedagem elimina taxas por resolução ou por assento de agente, mas adiciona infraestrutura de inferência, manutenção de pipeline de RAG e engenharia de integração que uma plataforma comercial embute na assinatura. Centrais de atendimento de alto volume com capacidade interna de TI/ML já existente costumam ter o argumento mais forte a favor do auto-hospedagem; times sem essa capacidade geralmente obtêm valor mais rápido com uma plataforma comercial.' },
+          { q: 'Tickets de suporte ao cliente devem ser enviados para uma API de LLM em nuvem de terceiros?', a: 'Depende dos seus acordos de tratamento de dados e da sensibilidade do conteúdo, e é uma decisão para jurídico/compliance, não um padrão técnico. Uma arquitetura auto-hospedada reduz o número de terceiros que veem conteúdo de ticket não redigido, o que é a justificativa central para manter em local as cargas de trabalho de suporte que carregam dados pessoais — mas a auto-hospedagem sozinha não atende automaticamente LGPD, GDPR, HIPAA ou regras setoriais; veja o guia dedicado sobre [RAG local em conformidade com o GDPR](/pt/power-local-llm/local-rag-for-private-business-data) para o conjunto de controles exigido.' },
+          { q: 'Uma arquitetura de suporte auto-hospedada é mais barata que uma plataforma de IA de CX comercial?', a: 'Depende do volume de tickets e da capacidade de engenharia interna. A auto-hospedagem elimina taxas por resolução ou por assento de agente, mas adiciona infraestrutura de inferência, manutenção de pipeline de RAG e engenharia de integração que uma plataforma comercial embute na assinatura. Centrais de atendimento de alto volume com capacidade interna de TI/ML já existente costumam ter o argumento mais forte a favor da auto-hospedagem; times sem essa capacidade geralmente obtêm valor mais rápido com uma plataforma comercial.' },
           { q: 'Qual é a diferença entre agent-assist e deflexão completa?', a: 'O agent-assist rascunha uma resposta e cita o artigo fonte da base de conhecimento, e um agente humano revisa e envia — o modelo nunca responde diretamente ao cliente. A deflexão completa deixa o sistema responder automaticamente para uma categoria de tickets restrita e bem definida, com um limiar de confiança que escala para um humano quando a recuperação não retorna uma correspondência de alta confiança. A maioria das implantações corporativas começa com agent-assist, mede a precisão e só expande para deflexão nos tipos de ticket menos ambíguos.' },
         ],
       },
@@ -1981,9 +1981,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'はい、チケットトリアージ、ナレッジベース根拠型エージェント支援、セルフサービスデフレクションの3領域では可能です。ここでは顧客PIIをサードパーティAPIから遠ざけ、回答をソース文書まで追跡できることが最も重要です。最大級のフロンティアモデルと同等のオープンエンドな会話品質を求める用途には不向きで、音声エージェントパイプラインは音声認識・推論・音声合成が直列に並ぶため独自のレイテンシ予算が必要です。',
         bullets: [
-          'リアルタイム意図分類にはPhi-3.5 MiniやQwen2.5 7Bなどの3-8Bモデル — RTX 4090クラスGPUで通常1秒未満',
+          'リアルタイム意図分類にはPhi-3.5 MiniやQwen2.5 7Bなどの3-8Bモデル — RTX 4090クラスGPUで通常1秒未満（計画用の目安であり、ベンチマークではない）',
           'RAG根拠型エージェント支援とチャットデフレクションにはQwen2.5/Qwen3、Mistralなどの7-32Bモデル',
-          '70B以上（Llama 3.3 70B、Mistral Large）は非同期エスカレーション審査専用、ライブチャットには使わない',
+          '70B以上（Llama 3.3 70B、Mistral Large）は非同期エスカレーション審査専用、ライブチャットには使わない（リリースごとにライセンスを確認、モデル選定を参照）',
           'ベクトルデータベース（Qdrant、Weaviate）が実際のナレッジベースに回答を根拠づけ、ハルシネーションリスクを低減',
           '音声パイプラインは推論時間に加え、音声認識と音声合成で300-800msのレイテンシが追加',
         ],
@@ -2023,11 +2023,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'クイックファクト',
         items: [
-          '**リアルタイム意図分類：**3-8Bパラメータモデルは通常、RTX 4090クラスGPUで1秒を大きく下回る応答時間。',
+          '**リアルタイム意図分類：**3-8Bパラメータモデルは通常、RTX 4090クラスGPUで1秒を大きく下回る応答時間（計画用の目安であり、ベンチマークではない）。',
           '**非同期エスカレーション推論：**70B以上のモデルは一般に応答あたり2-5秒 — バッチ審査には許容範囲だがライブチャットには不向き。',
           '**ライブチャットのレイテンシ予算：**検索を含めて合計約1-3秒で会話として自然に感じられる。',
           '**音声パイプラインのレイテンシ構成：**音声認識（約100-300ms）＋LLM推論＋音声合成（約100-300ms）が並列ではなく直列で実行される。',
-          '**エンタープライズ配信基盤：**vLLMとSGLang（メンテナンスモードのHugging Face TGIではなく）は同時多エージェントトラフィックを処理可能、Ollamaはローカルでの主に単一ユーザー利用を想定しており（既定ではモデルごとに同時1リクエストを処理、[FAQ](https://docs.ollama.com/faq)参照）、共有本番負荷では高スループット向けのvLLMまたはSGLangが一般的な選択肢。',
+          '**エンタープライズ配信基盤：**vLLMとSGLang（メンテナンスモードでGitHubリポジトリもアーカイブ済み（最終プッシュは2026年3月）のHugging Face TGIではなく）は同時多エージェントトラフィックを処理可能、Ollamaはローカルでの主に単一ユーザー利用を想定しており（既定ではモデルごとに同時1リクエストを処理、[FAQ](https://docs.ollama.com/faq)参照）、共有本番負荷では高スループット向けのvLLMまたはSGLangが一般的な選択肢。',
           '**デフレクションは仮定ではなく測定が必要：**完全デフレクション導入には人間エージェントへ引き渡す明確なエスカレーション閾値（信頼スコア、検索マッチ品質、明示的なユーザー要求）が必須。',
         ],
       },
@@ -2083,7 +2083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**カスタマーサポートにおけるハルシネーションリスクは抽象的な問題ではありません——返金ポリシーや安全指示に関する誤答は、単なる悪い体験ではなく実質的な責任問題です。**修正策はモデル選択よりもアーキテクチャに関わります：検索された出典テキストにすべての回答を根拠づけ、検索の信頼度が低い場合は回答を拒否します。',
         items: [
-          '**意図分類：**小型モデル（Phi-3.5 Mini 3.8B、Qwen2.5 7B）は明確に定義されたチケットカテゴリで、リアルタイムルーティングに十分な速度で信頼できる精度を達成します——この作業に大型モデルは不要です。',
+          '**意図分類：**小型モデル（Phi-3.5 Mini 3.8B、Qwen2.5 7B）は明確に定義されたチケットカテゴリで、自社のラベル付きチケットで検証すれば、リアルタイムルーティングに十分な速度で実用的な精度を達成できます——この作業に大型モデルは不要です。',
           '**ナレッジベース根拠型エージェント支援：**中型モデル（Qwen2.5/Qwen3 7-32B、Mistral 7B/Mixtral）を実際のナレッジベース上の検索パイプラインと組み合わせ、回答を下書きし出典記事を引用します——人間エージェントが送信前にレビューします。',
           '**完全デフレクション：**同じRAGパイプラインに信頼閾値を追加します——検索結果が高信頼のマッチを返さない場合、推測せずに人間へエスカレーションします。',
           '**エスカレーションとQA推論：**大型モデル（Llama 3.3 70B、Mistral Large、あるいは多段階ポリシー分析向けのDeepSeek-R1のような推論モデル）が、数秒のレイテンシが問題にならないフラグ付き会話に対して非同期で実行されます。',
@@ -2159,7 +2159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'エージェント支援から始めて精度を測定し人間をループから外す前に、初日から完全デフレクションを立ち上げてしまう。',
           'すべての業務に単一の大型モデルを使う——ライブチャットの意図分類に70Bモデルを使うと、顧客がすぐに感じるレイテンシ予算を無駄にする。',
-          '同時多エージェントトラフィックの配信層にOllamaを導入する——既定ではモデルごとに同時1リクエストを処理するため（OLLAMA_NUM_PARALLELの既定値は1）、共有本番負荷にはvLLMまたはSGLangを使うべき（Hugging Face TGIはメンテナンスモード。[推論サーバー比較](/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)を参照）。',
+          '同時多エージェントトラフィックの配信層にOllamaを導入する——既定ではモデルごとに同時1リクエストを処理するため（OLLAMA_NUM_PARALLELの既定値は1）、共有本番負荷にはvLLMまたはSGLangを使うべき（Hugging Face TGIはメンテナンスモードで、GitHubリポジトリもアーカイブ済み（最終プッシュは2026年3月）。[推論サーバー比較](/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)を参照）。',
           '検索による根拠づけを省略し、ポリシーや価格に関するハルシネーションをプロンプト指示だけで防ごうとする。',
           'サポート組織が実際に必要とする言語をテストせずに、モデルファミリー全体の多言語品質が均一だと想定する。',
           '書き込み権限をプラットフォームベンダーにフィールド単位で先に確認せず、非公開のAPI挙動を前提にヘルプデスク統合を構築する。',
@@ -2180,7 +2180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: 'ローカルLLMはエンタープライズ規模のサポートチケットトリアージに対応できますか？', a: 'はい。小型モデル（3-8Bパラメータ）は明確に定義されたチケットカテゴリをリアルタイムルーティングに十分な速度で確実に分類でき、vLLMまたはSGLang経由で提供すれば、Ollamaが既定で想定する主に単一ユーザー向けのパターンではなく同時多エージェントトラフィックを処理できます。単一GPUの容量を超える量は、ロードバランサーの背後に推論ノードを追加することで水平にスケールします。' },
+          { q: 'ローカルLLMはエンタープライズ規模のサポートチケットトリアージに対応できますか？', a: 'はい。小型モデル（3-8Bパラメータ）は明確に定義されたチケットカテゴリを、自社のラベル付きチケットで検証すれば、リアルタイムルーティングに十分な速度で分類でき、vLLMまたはSGLang経由で提供すれば、Ollamaが既定で想定する主に単一ユーザー向けのパターンではなく同時多エージェントトラフィックを処理できます。単一GPUの容量を超える量は、ロードバランサーの背後に推論ノードを追加することで水平にスケールします。' },
           { q: 'ライブチャットと非同期チケット処理のレイテンシの違いは何ですか？', a: 'ライブチャットは検索を含めて約1-3秒で完全な応答が必要で、そうでなければ会話が途切れて感じられます。非同期のトリアージとタグ付けは、リアルタイムで結果を待つ顧客がいないため、1件あたり5-30秒のバッチで処理できます——この余裕により、ライブチャットでは決して使えないより大きく正確なモデルをトリアージに使用できます。' },
           { q: '規制対象のサポート文脈でハルシネーションリスクをどう軽減しますか？', a: 'モデルのパラメトリックメモリやプロンプト指示だけに頼るのではなく、実際のナレッジベースから検索された出典テキストにすべての回答を根拠づけ、出典記事を引用します。高信頼の出典マッチが存在しない場合に生成をブロックし人間へエスカレーションする検索信頼度閾値を追加します——これはソフトなプロンプト提案ではなく、ハードなアーキテクチャ上のガードレールです。' },
           { q: '多言語カスタマーサポートに最適なローカルモデルはどれですか？', a: 'Qwen2.5/Qwen3やMistralなど広範な多言語トレーニングカバレッジを公開しているモデルファミリーは、分類と下書き作成において主要な欧州・アジア言語で概ね良好な性能を示します。品質は言語ペアごとに依然として変動するため、均一なカバレッジを前提とせず、公開前にサポート組織が実際に対応する各言語で意図分類とRAG回答品質をテストしてください。' },
@@ -2201,7 +2201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[エンタープライズLLM推論サーバー：vLLM vs TGI vs NVIDIA NIM vs Ollama](/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — 同時多エージェントサポート導入を支える配信インフラの判断。',
           '[Pinecone vs Weaviate vs Qdrant vs Chroma](/ja/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma) — 検索層向けベクトルデータベース比較。',
           '[ローカルWhisper音声認識モデル比較](/ja/power-local-llm/local-whisper-stt-comparison) — 音声エージェントパイプラインのSTT段階。',
-          '[Zapierをローカルaiエージェントに置き換える](/ja/power-local-llm/replace-zapier-with-local-ai-agents) — サポート領域を超えたニーズを持つチーム向けの汎用ワークフロー自動化パターン。',
+          '[ZapierをローカルAIエージェントに置き換える](/ja/power-local-llm/replace-zapier-with-local-ai-agents) — サポート領域を超えたニーズを持つチーム向けの汎用ワークフロー自動化パターン。',
         ],
       },
     },
@@ -2273,9 +2273,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           '可以，适用于工单分诊、基于知识库的坐席辅助和自助分流这三类场景——这正是让客户PII远离第三方API、并要求每个回答都能追溯到源文档最为重要的场景。它不太适合追求开放式对话质量与最大前沿模型相当的用途，语音坐席流水线还需要为语音识别、推理和语音合成的串行执行单独规划延迟预算。',
         bullets: [
-          '实时意图分类使用3-8B模型（如Phi-3.5 Mini、Qwen2.5 7B）——在RTX 4090级GPU上响应时间通常低于1秒',
+          '实时意图分类使用3-8B模型（如Phi-3.5 Mini、Qwen2.5 7B）——在RTX 4090级GPU上响应时间通常低于1秒（规划估算值，并非基准测试）',
           'RAG支撑的坐席辅助与聊天分流使用7-32B模型（Qwen2.5/Qwen3、Mistral）',
-          '70B以上模型（Llama 3.3 70B、Mistral Large）仅用于异步升级审核，不用于实时聊天',
+          '70B以上模型（Llama 3.3 70B、Mistral Large）仅用于异步升级审核，不用于实时聊天（请按版本核对许可，参见模型选择）',
           '向量数据库（Qdrant、Weaviate）将每个回答锚定在真实知识库中，降低幻觉风险',
           '语音流水线在推理时间之外还会增加300-800毫秒的语音识别和语音合成延迟',
         ],
@@ -2315,11 +2315,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: '速览要点',
         items: [
-          '**实时意图分类：**3-8B参数模型在RTX 4090级GPU上通常远低于1秒即可响应。',
+          '**实时意图分类：**3-8B参数模型在RTX 4090级GPU上通常远低于1秒即可响应（规划估算值，并非基准测试）。',
           '**异步升级推理：**70B以上模型通常每次响应需要2-5秒——适合批量工单审核，不适合实时聊天。',
           '**实时聊天延迟预算：**含检索总计约1-3秒，才能让对话感觉自然流畅。',
           '**语音流水线延迟叠加：**语音识别（约100-300毫秒）+LLM推理+语音合成（约100-300毫秒）依次串行执行，而非并行。',
-          '**企业级服务基础设施：**vLLM和SGLang(而非处于维护模式的Hugging Face TGI)可处理并发多坐席流量；Ollama主要面向本地的单用户使用（默认每个模型同一时间处理一个请求，参见其[FAQ](https://docs.ollama.com/faq)）；共享生产负载通常选用面向高吞吐的vLLM或SGLang。',
+          '**企业级服务基础设施：**vLLM和SGLang(而非处于维护模式且GitHub仓库已归档(最后一次推送为2026年3月)的Hugging Face TGI)可处理并发多坐席流量；Ollama主要面向本地的单用户使用（默认每个模型同一时间处理一个请求，参见其[FAQ](https://docs.ollama.com/faq)）；共享生产负载通常选用面向高吞吐的vLLM或SGLang。',
           '**分流效果需要衡量，不能假设：**任何完全分流部署都需要一个明确的升级阈值（置信度分数、检索匹配质量或用户明确请求），将对话转交给人工坐席。',
         ],
       },
@@ -2375,7 +2375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**客户支持中的幻觉风险并非抽象问题——关于退款政策或安全说明的错误回答是真实的责任问题，而不仅是糟糕的用户体验。**解决方案更多在于架构而非模型选择：让每个回答都基于检索到的源文本，并在检索置信度低时拒绝回答。',
         items: [
-          '**意图分类：**小型模型（Phi-3.5 Mini 3.8B、Qwen2.5 7B）在定义清晰的工单类别上能达到可靠精度，速度足以支持实时路由——这项任务不需要大型模型。',
+          '**意图分类：**小型模型（Phi-3.5 Mini 3.8B、Qwen2.5 7B）在定义清晰的工单类别上，经你自己带标签的工单验证后可达到可用精度，速度足以支持实时路由——这项任务不需要大型模型。',
           '**基于知识库的坐席辅助：**中型模型（Qwen2.5/Qwen3 7-32B、Mistral 7B/Mixtral）结合针对真实知识库的检索流水线，起草回答并引用出处文章——人工坐席在发送前审核。',
           '**完全分流：**同样的RAG流水线，但加入置信度阈值——如果检索未返回高置信度匹配，系统会升级至人工而非猜测。',
           '**升级与QA推理：**更大的模型（Llama 3.3 70B、Mistral Large，或DeepSeek-R1这类用于多步骤政策分析的推理模型）在被标记的对话上异步运行，此时几秒钟的延迟无关紧要。',
@@ -2451,7 +2451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '第一天就上线完全分流，而不是先从坐席辅助开始并在移除人工审核前先衡量准确率。',
           '所有业务场景都用同一个大模型——用70B模型做实时聊天意图分类会浪费客户能立即感知到的延迟预算。',
-          '把Ollama部署为并发多坐席流量的服务层——它默认每个模型同一时间处理一个请求（OLLAMA_NUM_PARALLEL默认值为1）；共享生产负载应使用vLLM或SGLang（Hugging Face TGI处于维护模式；参见[推理服务器对比](/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)）。',
+          '把Ollama部署为并发多坐席流量的服务层——它默认每个模型同一时间处理一个请求（OLLAMA_NUM_PARALLEL默认值为1）；共享生产负载应使用vLLM或SGLang（Hugging Face TGI处于维护模式，其GitHub仓库已归档(最后一次推送为2026年3月)；参见[推理服务器对比](/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)）。',
           '跳过检索锚定，仅依靠提示指令来防止政策或价格方面的幻觉回答。',
           '假设整个模型系列的多语言质量是均一的，而不测试支持组织实际需要的具体语言。',
           '在未文档化的API行为基础上构建helpdesk集成，而不是先与平台供应商确认字段级的写入权限。',
@@ -2472,7 +2472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: '本地LLM能否处理企业级规模的支持工单分诊？', a: '可以。小型模型（3-8B参数）能够可靠地对定义清晰的工单类别进行分类，速度足以支持实时路由，通过vLLM或SGLang提供服务时能处理并发多坐席流量，而不是Ollama默认采用的以单用户为主的模式。超出单个GPU承载能力的流量，可以通过在负载均衡器后增加更多推理节点实现横向扩展。' },
+          { q: '本地LLM能否处理企业级规模的支持工单分诊？', a: '可以。小型模型（3-8B参数）经你自己带标签的工单验证后，能够对定义清晰的工单类别进行分类，速度足以支持实时路由，通过vLLM或SGLang提供服务时能处理并发多坐席流量，而不是Ollama默认采用的以单用户为主的模式。超出单个GPU承载能力的流量，可以通过在负载均衡器后增加更多推理节点实现横向扩展。' },
           { q: '实时聊天与异步工单处理的延迟差异是什么？', a: '实时聊天需要在约1-3秒内（含检索）完成完整回答，否则对话会显得中断。异步分诊与打标可以按每条5-30秒的批量方式运行，因为没有客户在实时等待结果——这一余量使分诊环节可以使用比实时聊天中任何情况下都更大、更精确的模型。' },
           { q: '如何在受监管的支持场景中降低幻觉风险？', a: '让每个回答都基于从真实知识库检索到的源文本并引用出处文章，而不是依赖模型的参数化记忆或仅靠提示指令。加入检索置信度阈值，在不存在高置信度匹配时阻止生成并升级至人工——这是一种硬性的架构防护，而非软性的提示建议。' },
           { q: '哪些本地模型最适合多语言客户支持？', a: 'Qwen2.5/Qwen3、Mistral等公开了广泛多语言训练覆盖范围的模型系列，在分类和草稿撰写方面通常在主要欧洲和亚洲语言上表现良好。质量仍会因具体语言对而异，因此上线前应在支持组织实际服务的每种语言上测试意图分类和RAG回答质量，而不是假设覆盖是均一的。' },
@@ -2565,9 +2565,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           '가능합니다. 티켓 분류, 지식 베이스 기반 상담원 지원, 셀프서비스 디플렉션 세 가지 업무에서 특히 그렇습니다. 이 세 가지는 고객 PII를 서드파티 API로부터 지켜내고 모든 답변을 출처 문서까지 추적 가능하게 만드는 것이 가장 중요한 영역입니다. 가장 큰 프론티어 모델 수준의 개방형 대화 품질에는 다소 부족하며, 음성 에이전트 파이프라인은 음성 인식·추론·음성 합성이 순차적으로 이어지는 만큼 별도의 지연시간 예산이 필요합니다.',
         bullets: [
-          '실시간 의도 분류에는 3-8B 모델(Phi-3.5 Mini, Qwen2.5 7B 등) 사용 — RTX 4090급 GPU에서 일반적으로 1초 미만',
+          '실시간 의도 분류에는 3-8B 모델(Phi-3.5 Mini, Qwen2.5 7B 등) 사용 — RTX 4090급 GPU에서 일반적으로 1초 미만(계획용 추정치이며 벤치마크가 아님)',
           'RAG 기반 상담원 지원과 채팅 디플렉션에는 7-32B 모델(Qwen2.5/Qwen3, Mistral 등) 사용',
-          '70B 이상 모델(Llama 3.3 70B, Mistral Large)은 비동기 에스컬레이션 검토 전용, 라이브 채팅에는 사용하지 않음',
+          '70B 이상 모델(Llama 3.3 70B, Mistral Large)은 비동기 에스컬레이션 검토 전용, 라이브 채팅에는 사용하지 않음(릴리스별 라이선스 확인, 모델 선택 참조)',
           '벡터 데이터베이스(Qdrant, Weaviate)가 모든 답변을 실제 지식 베이스에 근거시켜 환각 위험을 낮춤',
           '음성 파이프라인은 추론 시간 외에 음성 인식과 음성 합성으로 300-800ms의 지연시간이 추가됨',
         ],
@@ -2607,11 +2607,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: '빠른 사실 확인',
         items: [
-          '**실시간 의도 분류:** 3-8B 파라미터 모델은 RTX 4090급 GPU에서 일반적으로 1초를 훨씬 밑도는 응답 시간을 보입니다.',
+          '**실시간 의도 분류:** 3-8B 파라미터 모델은 RTX 4090급 GPU에서 일반적으로 1초를 훨씬 밑도는 응답 시간을 보입니다(계획용 추정치이며 벤치마크가 아닙니다).',
           '**비동기 에스컬레이션 추론:** 70B 이상 모델은 응답당 보통 2-5초가 걸립니다 — 배치 티켓 검토에는 적합하나 라이브 채팅에는 부적합합니다.',
           '**라이브 채팅 지연시간 예산:** 검색을 포함해 총 약 1-3초여야 대화가 자연스럽게 느껴집니다.',
           '**음성 파이프라인 지연시간 구성:** 음성 인식(약 100-300ms) + LLM 추론 + 음성 합성(약 100-300ms)이 병렬이 아닌 순차로 실행됩니다.',
-          '**엔터프라이즈 서빙 인프라:** vLLM과 SGLang(유지보수 모드인 Hugging Face TGI는 제외)은 동시 다중 상담원 트래픽을 처리할 수 있으나, Ollama는 주로 로컬 단일 사용자 사용을 겨냥하며(기본적으로 모델당 한 번에 하나의 요청을 처리, [FAQ](https://docs.ollama.com/faq) 참고), 공유 프로덕션 부하에는 높은 처리량을 위한 vLLM이나 SGLang이 일반적인 선택입니다.',
+          '**엔터프라이즈 서빙 인프라:** vLLM과 SGLang(유지보수 모드이며 GitHub 저장소가 보관 처리된(마지막 푸시 2026년 3월) Hugging Face TGI는 제외)은 동시 다중 상담원 트래픽을 처리할 수 있으나, Ollama는 주로 로컬 단일 사용자 사용을 겨냥하며(기본적으로 모델당 한 번에 하나의 요청을 처리, [FAQ](https://docs.ollama.com/faq) 참고), 공유 프로덕션 부하에는 높은 처리량을 위한 vLLM이나 SGLang이 일반적인 선택입니다.',
           '**디플렉션은 가정이 아니라 측정되어야 합니다:** 완전 디플렉션 배포에는 인간 상담원에게 인계하는 명확한 에스컬레이션 임계값(신뢰도 점수, 검색 매칭 품질, 또는 명시적 사용자 요청)이 필요합니다.',
         ],
       },
@@ -2667,7 +2667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**고객 지원에서 환각 위험은 추상적인 문제가 아닙니다 — 환불 정책이나 안전 지침에 대한 잘못된 답변은 나쁜 사용자 경험이 아니라 실질적인 책임 문제입니다.** 해결책은 모델 선택보다 아키텍처에 더 가깝습니다: 모든 답변을 검색된 출처 텍스트에 근거시키고, 검색 신뢰도가 낮을 때는 답변을 거부하는 것입니다.',
         items: [
-          '**의도 분류:** 소형 모델(Phi-3.5 Mini 3.8B, Qwen2.5 7B)은 명확히 정의된 티켓 카테고리에서 실시간 라우팅에 충분히 빠른 속도로 신뢰할 만한 정확도를 달성합니다 — 이 작업에는 대형 모델이 필요하지 않습니다.',
+          '**의도 분류:** 소형 모델(Phi-3.5 Mini 3.8B, Qwen2.5 7B)은 명확히 정의된 티켓 카테고리에서 자사의 라벨링된 티켓으로 검증하면 실시간 라우팅에 충분히 빠른 속도로 쓸 만한 정확도를 달성할 수 있습니다 — 이 작업에는 대형 모델이 필요하지 않습니다.',
           '**지식 베이스 기반 상담원 지원:** 중형 모델(Qwen2.5/Qwen3 7-32B, Mistral 7B/Mixtral)을 실제 지식 베이스에 대한 검색 파이프라인과 결합해 답변 초안을 작성하고 출처 문서를 인용합니다 — 인간 상담원이 발송 전 검토합니다.',
           '**완전 디플렉션:** 동일한 RAG 파이프라인에 신뢰도 임계값을 추가합니다 — 검색이 고신뢰 매치를 반환하지 못하면 시스템은 추측 대신 인간에게 에스컬레이션합니다.',
           '**에스컬레이션 및 QA 추론:** 대형 모델(Llama 3.3 70B, Mistral Large, 또는 다단계 정책 분석을 위한 DeepSeek-R1 같은 추론 모델)이 표시된 대화에 대해 비동기로 실행되며, 여기서는 몇 초의 지연시간이 무관합니다.',
@@ -2743,7 +2743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '상담원 지원부터 시작해 정확도를 측정한 뒤 인간을 루프에서 빼는 대신, 첫날부터 완전 디플렉션을 출시하는 것.',
           '모든 업무에 하나의 대형 모델을 사용하는 것 — 라이브 채팅 의도 분류에 70B 모델을 쓰면 고객이 즉시 체감하는 지연시간 예산을 낭비합니다.',
-          '동시 다중 상담원 트래픽의 서빙 계층으로 Ollama를 배포하는 것 — 기본적으로 모델당 한 번에 하나의 요청만 처리하므로(OLLAMA_NUM_PARALLEL 기본값은 1), 공유 프로덕션 부하에는 vLLM이나 SGLang을 사용해야 합니다(Hugging Face TGI는 유지보수 모드입니다. [추론 서버 비교](/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) 참고).',
+          '동시 다중 상담원 트래픽의 서빙 계층으로 Ollama를 배포하는 것 — 기본적으로 모델당 한 번에 하나의 요청만 처리하므로(OLLAMA_NUM_PARALLEL 기본값은 1), 공유 프로덕션 부하에는 vLLM이나 SGLang을 사용해야 합니다(Hugging Face TGI는 유지보수 모드이며 GitHub 저장소가 보관 처리되었습니다(마지막 푸시 2026년 3월). [추론 서버 비교](/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) 참고).',
           '검색 기반 근거 제공을 생략하고, 정책이나 가격에 대한 환각 답변을 막기 위해 프롬프트 지시에만 의존하는 것.',
           '지원 조직이 실제로 필요로 하는 특정 언어를 테스트하지 않고, 모델 계열 전체에서 다국어 품질이 균일하다고 가정하는 것.',
           '먼저 플랫폼 공급업체와 필드 수준의 쓰기 권한을 확인하지 않고, 문서화되지 않은 API 동작을 기준으로 헬프데스크 통합을 구축하는 것.',
@@ -2764,7 +2764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: '로컬 LLM이 엔터프라이즈 규모의 지원 티켓 분류를 처리할 수 있나요?', a: '가능합니다. 소형 모델(3-8B 파라미터)은 명확히 정의된 티켓 카테고리를 실시간 라우팅에 충분히 빠른 속도로 신뢰성 있게 분류하며, vLLM이나 SGLang을 통해 서빙하면 Ollama가 기본적으로 따르는 주로 단일 사용자 중심의 패턴이 아니라 동시 다중 상담원 트래픽을 처리할 수 있습니다. 단일 GPU의 용량을 초과하는 볼륨은 로드 밸런서 뒤에 더 많은 추론 노드를 추가해 수평으로 확장됩니다.' },
+          { q: '로컬 LLM이 엔터프라이즈 규모의 지원 티켓 분류를 처리할 수 있나요?', a: '가능합니다. 소형 모델(3-8B 파라미터)은 자사의 라벨링된 티켓으로 검증하면 명확히 정의된 티켓 카테고리를 실시간 라우팅에 충분히 빠른 속도로 분류할 수 있으며, vLLM이나 SGLang을 통해 서빙하면 Ollama가 기본적으로 따르는 주로 단일 사용자 중심의 패턴이 아니라 동시 다중 상담원 트래픽을 처리할 수 있습니다. 단일 GPU의 용량을 초과하는 볼륨은 로드 밸런서 뒤에 더 많은 추론 노드를 추가해 수평으로 확장됩니다.' },
           { q: '라이브 채팅과 비동기 티켓 처리의 지연시간 차이는 무엇인가요?', a: '라이브 채팅은 검색을 포함해 약 1-3초 내에 완전한 응답이 필요하며, 그렇지 않으면 대화가 끊긴 것처럼 느껴집니다. 비동기 분류 및 태깅은 실시간으로 결과를 기다리는 고객이 없으므로 건당 5-30초의 배치로 실행할 수 있습니다 — 이 여유 덕분에 라이브 채팅에서는 결코 쓸 수 없는, 더 크고 정확한 모델을 분류 작업에 사용할 수 있습니다.' },
           { q: '규제 대상 지원 환경에서 환각 위험을 어떻게 줄이나요?', a: '모델의 파라메트릭 메모리나 프롬프트 지시에만 의존하는 대신, 실제 지식 베이스에서 검색된 출처 텍스트에 모든 답변을 근거시키고 출처 문서를 인용해야 합니다. 고신뢰 매치가 없을 때 생성을 차단하고 인간에게 에스컬레이션하는 검색 신뢰도 임계값을 추가하십시오 — 이는 느슨한 프롬프트 제안이 아니라 확고한 아키텍처적 안전장치입니다.' },
           { q: '다국어 고객 지원에 가장 적합한 로컬 모델은 무엇인가요?', a: 'Qwen2.5/Qwen3, Mistral처럼 광범위한 다국어 학습 커버리지를 공개한 모델 계열은 분류와 초안 작성 작업에서 주요 유럽 및 아시아 언어 전반에 걸쳐 대체로 좋은 성능을 보입니다. 다만 품질은 여전히 특정 언어쌍에 따라 달라지므로, 균일한 커버리지를 가정하지 말고 출시 전 지원 조직이 실제로 서비스하는 각 언어에서 의도 분류와 RAG 답변 품질을 테스트해야 합니다.' },
@@ -2857,9 +2857,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'نعم، في تصنيف التذاكر، والمساعدة الآلية المرتكزة على قاعدة المعرفة، وتحويل الخدمة الذاتية — وهي المهام الثلاث التي يكون فيها إبقاء البيانات الشخصية للعملاء بعيدًا عن واجهة برمجة تطبيقات خارجية أكثر أهمية، وحيث يجب أن يكون كل جواب قابلًا للتتبع إلى مستند مصدري. وهو أقل ملاءمة لمضاهاة جودة المحادثة المفتوحة لأكبر النماذج المتقدمة، وتحتاج مسارات وكلاء الصوت إلى موازنة زمن استجابة خاصة بها لتحويل الكلام إلى نص والاستدلال وتحويل النص إلى كلام على التوالي.',
         bullets: [
-          'استخدام نموذج بحجم 3-8 مليار (مثل Phi-3.5 Mini أو Qwen2.5 7B) لتصنيف النوايا الفوري — عادةً أقل من ثانية على معالج رسومي من فئة RTX 4090',
+          'استخدام نموذج بحجم 3-8 مليار (مثل Phi-3.5 Mini أو Qwen2.5 7B) لتصنيف النوايا الفوري — عادةً أقل من ثانية على معالج رسومي من فئة RTX 4090 (تقدير تخطيطي وليس اختبار أداء)',
           'استخدام نموذج بحجم 7-32 مليار (مثل Qwen2.5/Qwen3 وMistral) للمساعدة الآلية عبر RAG وتحويل الدردشة',
-          'حجز النماذج بحجم 70 مليار فأكثر (Llama 3.3 70B وMistral Large) لمراجعة التصعيد غير المتزامنة، وليس للدردشة المباشرة',
+          'حجز النماذج بحجم 70 مليار فأكثر (Llama 3.3 70B وMistral Large) لمراجعة التصعيد غير المتزامنة، وليس للدردشة المباشرة (تحقق من الترخيص لكل إصدار، راجع اختيار النموذج)',
           'قاعدة بيانات متجهية (Qdrant أو Weaviate) ترسّخ كل إجابة في قاعدة المعرفة الفعلية وتقلل مخاطر الهلوسة',
           'مسارات الصوت تضيف 300-800 ملي ثانية من زمن استجابة تحويل الكلام إلى نص وتحويل النص إلى كلام فوق زمن الاستدلال',
         ],
@@ -2899,11 +2899,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'حقائق سريعة',
         items: [
-          '**تصنيف النوايا الفوري:** عادة ما تستجيب النماذج بحجم 3-8 مليار معامل في أقل بكثير من ثانية واحدة على معالج رسومي من فئة RTX 4090.',
+          '**تصنيف النوايا الفوري:** عادة ما تستجيب النماذج بحجم 3-8 مليار معامل في أقل بكثير من ثانية واحدة على معالج رسومي من فئة RTX 4090 (تقدير تخطيطي وليس اختبار أداء).',
           '**الاستدلال في التصعيد غير المتزامن:** عادة ما تستغرق النماذج بحجم 70 مليار فأكثر 2-5 ثوانٍ لكل استجابة — مقبول لمراجعة التذاكر الدفعية، وليس للدردشة المباشرة.',
           '**موازنة زمن استجابة الدردشة المباشرة:** نحو 1-3 ثوانٍ إجمالًا شاملة الاسترجاع، حتى تبدو الاستجابة طبيعية في المحادثة.',
           '**تراكم زمن استجابة مسار الصوت:** تحويل الكلام إلى نص (نحو 100-300 ملي ثانية) + استدلال النموذج + تحويل النص إلى كلام (نحو 100-300 ملي ثانية) يعمل بالتتابع لا بالتوازي.',
-          '**بنية التقديم على مستوى المؤسسات:** يتعامل vLLM وSGLang (وليس Hugging Face TGI الموجود في وضع الصيانة) مع حركة مرور متزامنة من عدة موظفين؛ بينما يستهدف Ollama أساسًا الاستخدام المحلي لمستخدم واحد (يعالج افتراضيًا طلبًا واحدًا لكل نموذج في كل مرة، راجع [الأسئلة الشائعة](https://docs.ollama.com/faq))، ويُعد vLLM أو SGLang، المصمَّمان لإنتاجية عالية، الخيار المعتاد لحمل إنتاج مشترك.',
+          '**بنية التقديم على مستوى المؤسسات:** يتعامل vLLM وSGLang (وليس Hugging Face TGI الموجود في وضع الصيانة والذي أُرشف مستودعه على GitHub، وكان آخر دفع فيه في مارس 2026) مع حركة مرور متزامنة من عدة موظفين؛ بينما يستهدف Ollama أساسًا الاستخدام المحلي لمستخدم واحد (يعالج افتراضيًا طلبًا واحدًا لكل نموذج في كل مرة، راجع [الأسئلة الشائعة](https://docs.ollama.com/faq))، ويُعد vLLM أو SGLang، المصمَّمان لإنتاجية عالية، الخيار المعتاد لحمل إنتاج مشترك.',
           '**التحويل يُقاس ولا يُفترض:** يحتاج أي نشر لتحويل كامل إلى عتبة تصعيد محددة (درجة ثقة أو جودة مطابقة الاسترجاع أو طلب صريح من المستخدم) تُحوّل المحادثة إلى موظف بشري.',
         ],
       },
@@ -2959,7 +2959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**مخاطر الهلوسة في دعم العملاء ليست أمرًا نظريًا — فالإجابة الخاطئة عن سياسة استرداد أو تعليمة سلامة هي مسألة مسؤولية قانونية حقيقية، لا مجرد تجربة مستخدم سيئة.** الحل يكمن في البنية أكثر من اختيار النموذج: ترسيخ كل إجابة في نص مصدري مسترجَع، ورفض الإجابة عندما تكون ثقة الاسترجاع منخفضة.',
         items: [
-          '**تصنيف النوايا:** تحقق النماذج الصغيرة (Phi-3.5 Mini 3.8B، Qwen2.5 7B) دقة موثوقة في فئات تذاكر محددة بوضوح، وبسرعة كافية للتوجيه الفوري — هذه المهمة لا تحتاج نموذجًا كبيرًا.',
+          '**تصنيف النوايا:** يمكن للنماذج الصغيرة (Phi-3.5 Mini 3.8B، Qwen2.5 7B) تحقيق دقة قابلة للاستخدام في فئات تذاكر محددة بوضوح، وبسرعة كافية للتوجيه الفوري، بعد التحقق منها على تذاكرك المصنّفة الخاصة — هذه المهمة لا تحتاج نموذجًا كبيرًا.',
           '**المساعدة الآلية المرتكزة على قاعدة المعرفة:** تقوم نماذج متوسطة الحجم (Qwen2.5/Qwen3 7-32B، Mistral 7B/Mixtral) مقترنة بخط أنابيب استرجاع على قاعدة المعرفة الفعلية بصياغة مسودة إجابة والاستشهاد بالمقال المصدري — ويراجعها الموظف البشري قبل الإرسال.',
           '**التحويل الكامل:** خط أنابيب RAG نفسه، لكن مع عتبة ثقة — إذا لم يُرجع الاسترجاع تطابقًا عالي الثقة، يصعّد النظام إلى موظف بشري بدلًا من التخمين.',
           '**استدلال التصعيد ومراجعة الجودة:** تعمل نماذج أكبر (Llama 3.3 70B، Mistral Large، أو نموذج استدلال مثل DeepSeek-R1 لتحليل السياسات متعدد الخطوات) بشكل غير متزامن على المحادثات المُعلَّمة، حيث لا تهم بضع ثوانٍ من زمن الاستجابة.',
@@ -3035,7 +3035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'إطلاق التحويل الكامل في اليوم الأول بدلًا من البدء بالمساعدة الآلية وقياس الدقة قبل إخراج الإنسان من الحلقة.',
           'استخدام نموذج كبير واحد لكل عبء عمل — استخدام نموذج بحجم 70 مليار لتصنيف النوايا في الدردشة المباشرة يهدر موازنة زمن استجابة يشعر بها العميل فورًا.',
-          'نشر Ollama كطبقة تقديم لحركة مرور متزامنة من عدة موظفين — فهو يعالج افتراضيًا طلبًا واحدًا لكل نموذج في كل مرة (قيمة OLLAMA_NUM_PARALLEL الافتراضية 1)؛ استخدم vLLM أو SGLang لحمل الإنتاج المشترك (Hugging Face TGI في وضع الصيانة؛ راجع [مقارنة خوادم الاستدلال](/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)).',
+          'نشر Ollama كطبقة تقديم لحركة مرور متزامنة من عدة موظفين — فهو يعالج افتراضيًا طلبًا واحدًا لكل نموذج في كل مرة (قيمة OLLAMA_NUM_PARALLEL الافتراضية 1)؛ استخدم vLLM أو SGLang لحمل الإنتاج المشترك (Hugging Face TGI في وضع الصيانة ومستودعه على GitHub مؤرشف، وآخر دفع في مارس 2026؛ راجع [مقارنة خوادم الاستدلال](/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)).',
           'تخطي الترسيخ عبر الاسترجاع والاعتماد فقط على تعليمات الصياغة لمنع إجابات هلوسة حول السياسات أو التسعير.',
           'افتراض أن جودة اللغات المتعددة موحّدة عبر عائلة نموذج كاملة دون اختبار اللغات المحددة التي تحتاجها منظمة الدعم فعليًا.',
           'بناء تكامل مكتب المساعدة على سلوك واجهة برمجة تطبيقات غير موثق بدلًا من تأكيد صلاحيات الكتابة على مستوى الحقل مع مزوّد المنصة أولًا.',
@@ -3056,7 +3056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'هل يمكن لنموذج لغة محلي التعامل مع تصنيف تذاكر الدعم على مستوى المؤسسات؟', a: 'نعم. تصنّف النماذج الصغيرة (3-8 مليار معامل) بموثوقية فئات تذاكر محددة بوضوح، بسرعة كافية للتوجيه الفوري، وعند تقديمها عبر vLLM أو SGLang تتعامل مع حركة مرور متزامنة من عدة موظفين بدلًا من النمط الموجّه افتراضيًا لمستخدم واحد في Ollama. أي حجم يفوق طاقة معالج رسومي واحد يتوسع أفقيًا بإضافة المزيد من عقد الاستدلال خلف موازن الأحمال.' },
+          { q: 'هل يمكن لنموذج لغة محلي التعامل مع تصنيف تذاكر الدعم على مستوى المؤسسات؟', a: 'نعم. يمكن للنماذج الصغيرة (3-8 مليار معامل) تصنيف فئات تذاكر محددة بوضوح بسرعة كافية للتوجيه الفوري، بعد التحقق منها على تذاكرك المصنّفة الخاصة، وعند تقديمها عبر vLLM أو SGLang تتعامل مع حركة مرور متزامنة من عدة موظفين بدلًا من النمط الموجّه افتراضيًا لمستخدم واحد في Ollama. أي حجم يفوق طاقة معالج رسومي واحد يتوسع أفقيًا بإضافة المزيد من عقد الاستدلال خلف موازن الأحمال.' },
           { q: 'ما الفرق في زمن الاستجابة بين الدردشة المباشرة ومعالجة التذاكر غير المتزامنة؟', a: 'تحتاج الدردشة المباشرة إلى إجابة كاملة في نحو 1-3 ثوانٍ شاملة الاسترجاع، وإلا بدت المحادثة متقطعة. أما تصنيف التذاكر ووسمها غير المتزامنين فيمكن تشغيلهما دفعيًا بمعدل 5-30 ثانية لكل عنصر لأن لا عميل ينتظر النتيجة في الوقت الفعلي — هذا الهامش يسمح باستخدام نموذج أكبر وأكثر دقة في التصنيف مما يمكن استخدامه إطلاقًا في الدردشة المباشرة.' },
           { q: 'كيف تقلل مخاطر الهلوسة في سياق دعم خاضع للتنظيم؟', a: 'بترسيخ كل إجابة في نص مصدري مسترجَع من قاعدة المعرفة الفعلية والاستشهاد بالمقال المصدري، بدلًا من الاعتماد على ذاكرة النموذج المعامِلية أو تعليمة صياغة وحدها. أضف عتبة ثقة للاسترجاع تمنع التوليد وتصعّد إلى إنسان عند عدم وجود تطابق عالي الثقة — هذه ضمانة معمارية صارمة، وليست اقتراح صياغة رخوًا.' },
           { q: 'ما النماذج المحلية الأنسب لدعم العملاء متعدد اللغات؟', a: 'عائلات النماذج ذات التغطية التدريبية المنشورة الواسعة متعددة اللغات، مثل Qwen2.5/Qwen3 وMistral، تؤدي بوجه عام أداءً جيدًا عبر اللغات الأوروبية والآسيوية الرئيسية في التصنيف والصياغة. ما زالت الجودة تتفاوت حسب زوج اللغتين المحدد، لذا اختبر جودة تصنيف النوايا وإجابات RAG في كل لغة تخدمها منظمة الدعم فعليًا قبل الإطلاق بدلًا من افتراض تغطية موحّدة.' },

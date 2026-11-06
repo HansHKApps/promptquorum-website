@@ -142,7 +142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vllm',
         title: 'Understanding vLLM: A High-Throughput Open-Source Engine',
         content: [
-          '**vLLM is an open-source (Apache 2.0) inference server built specifically for high-throughput, multi-GPU LLM serving.** It originated from UC Berkeley\'s Sky Computing Lab and is among the most widely deployed open-source engines for production LLM APIs.',
+          '**vLLM is an open-source (Apache 2.0) inference server built specifically for high-throughput, multi-GPU LLM serving.** It originated from UC Berkeley\'s Sky Computing Lab and is a widely used open-source engine for production LLM APIs.',
         ],
         items: [
           '**PagedAttention**: manages the KV cache in fixed-size blocks instead of one contiguous allocation per request, which raises achievable GPU memory utilization and lets more concurrent requests share a GPU.',
@@ -152,7 +152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**OpenAI-compatible API**: `vllm serve <model>` exposes a drop-in replacement for the OpenAI Chat Completions API, minimizing application-side integration work.',
           'vLLM ships an official Helm chart and integrates with KServe for Kubernetes-native model serving, with autoscaling driven by request queue depth or GPU utilization metrics.',
         ],
-        codeBlock: '# Install and serve a model with tensor parallelism across 4 GPUs\npip install vllm\n\n# Without --api-key the endpoint accepts unauthenticated requests; do not expose it publicly\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 4 \\\n  --gpu-memory-utilization 0.9 \\\n  --api-key "$VLLM_API_KEY" \\\n  --host 0.0.0.0 --port 8000\n\n# OpenAI-compatible endpoint now live at http://localhost:8000/v1/chat/completions',
+        codeBlock: '# Install and serve a model with tensor parallelism across 4 GPUs\npip install vllm\n\n# --api-key only protects the /v1, /v2, /inference and /cohere paths; other endpoints stay open. Put a firewall or reverse proxy in front before exposing the port\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 4 \\\n  --gpu-memory-utilization 0.9 \\\n  --api-key "$VLLM_API_KEY" \\\n  --host 0.0.0.0 --port 8000\n\n# OpenAI-compatible endpoint now live at http://localhost:8000/v1/chat/completions',
       },
       tgi: {
         id: 'tgi',
@@ -193,7 +193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Concurrency**: Ollama handles parallel requests through OLLAMA_NUM_PARALLEL (default 1) and a request queue (OLLAMA_MAX_QUEUE, default 512), per its FAQ, but it documents no continuous batching or PagedAttention-style memory management, so it is not designed for many simultaneous users the way vLLM or NIM is.',
           '**Multi-GPU**: Ollama can split a large model across GPUs on one machine, but it has no native tensor-parallel or multi-node distributed serving comparable to vLLM\'s.',
-          '**Kubernetes**: only community-maintained Helm charts exist; there is no first-party Kubernetes operator, autoscaler integration, or vendor support contract.',
+          '**Kubernetes**: a community-maintained Helm chart is listed in its GitHub README; no first-party Kubernetes operator or autoscaler integration is listed in its documentation.',
           '**Observability**: Ollama\'s documentation describes no metrics endpoint, unlike vLLM and TGI.',
           'Where Ollama is still the right tool inside an enterprise: developer laptops, a single-department prototype behind low internal traffic, or an air-gapped edge device serving one user at a time. Once traffic needs multi-tenant concurrency, move to vLLM, TGI, or NIM -- see [multi-GPU local LLM setups](/local-llms/multi-gpu-local-llms) for the hardware side of that move.',
         ],
@@ -233,8 +233,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'licensing-support',
         title: 'Licensing and Support Model Compared',
         content: [
-          '**Licensing is the line item that most changes total cost of ownership between these options.** vLLM is Apache 2.0 licensed and free to run at any scale, as is TGI (Apache 2.0, now archived) -- you pay only for the GPU infrastructure underneath. NVIDIA NIM requires an NVIDIA AI Enterprise licence for production use, which NVIDIA\'s FAQ says starts at $4,500 per GPU per year on top of the GPU cost; research, development and testing on up to 16 GPUs is free for NVIDIA Developer Program members. Confirm current terms directly with NVIDIA before budgeting. Ollama is MIT licensed and free, with support limited to its community GitHub and Discord -- its documentation lists no paid enterprise support tier.',
-          'Support model matters as much as license cost for a production system: vLLM support comes from GitHub issues and community channels (fast for popular issues, no SLA), TGI receives only minor maintenance, NIM comes with an NVIDIA support contract, and Ollama has no support path beyond community channels at all.',
+          '**Licensing is the line item that most changes total cost of ownership between these options.** vLLM is Apache 2.0 licensed and free to run at any scale, as is TGI (Apache 2.0, now archived) -- you pay only for the GPU infrastructure underneath. NVIDIA NIM requires an NVIDIA AI Enterprise licence for production use, which NVIDIA\'s FAQ says starts at $4,500 per GPU per year on top of the GPU cost; research, development and experimentation on up to 16 GPUs is free for NVIDIA Developer Program members. Confirm current terms directly with NVIDIA before budgeting. Ollama is MIT licensed and free, with support limited to its community GitHub and Discord -- its documentation lists no paid enterprise support tier.',
+          'Support model matters as much as license cost for a production system: vLLM support comes from GitHub issues and community channels (fast for popular issues, no SLA), TGI receives only minor maintenance, NIM comes with an NVIDIA support contract, and Ollama\'s documentation lists no support path beyond community channels.',
         ],
       },
       observability: {
@@ -250,18 +250,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'when-to-use',
         title: 'Which Inference Server Should You Choose?',
         content: [
-          '**Best overall open-source pick: vLLM** -- broad community, wide hardware support, multi-GPU tooling and frequent releases.',
+          '**A strong default open-source pick: vLLM** -- broad community, wide hardware support, multi-GPU tooling and frequent releases.',
           '**Already on Hugging Face: still plan on vLLM or SGLang** -- TGI is in maintenance mode, so keep it only for existing deployments.',
-          '**Best if you need vendor support: NVIDIA NIM** -- vendor-backed, turnkey, at a licence cost.',
+          '**A fit if you need vendor support: NVIDIA NIM** -- vendor-backed, turnkey, at a licence cost.',
           '**Not for production multi-tenant traffic: Ollama** -- keep it for developer machines and single-user edge deployments.',
         ],
         items: [
           '🧭 Platform team running a shared internal LLM API for many teams → vLLM, self-hosted on Kubernetes.',
-          '🧭 Regulated enterprise needing a support contract and audit trail → NVIDIA NIM.',
+          '🧭 Regulated enterprise wanting a vendor support contract → NVIDIA NIM; add your own audit logging in front (see the related enterprise compliance guide).',
           '🧭 Team already standardized on Hugging Face Hub for model hosting → vLLM, which loads Hub models directly; keep TGI only for existing deployments.',
           '🧭 Developers building a proof of concept before infrastructure is provisioned → Ollama, then migrate to vLLM once concurrent traffic is real.',
-          '❌ If you expect more than a handful of concurrent users, do not put Ollama behind a shared production endpoint -- use vLLM instead.',
-          '❌ If you need Kubernetes-native autoscaling on request load, Ollama has no equivalent to KEDA-driven queue-depth scaling -- use vLLM or NIM.',
+          '❌ If you expect more than a handful of concurrent users, Ollama is not designed to sit behind a shared production endpoint -- use vLLM instead.',
+          '❌ If you need Kubernetes-native autoscaling on request load, Ollama\'s documentation lists no equivalent to KEDA-driven queue-depth scaling -- use vLLM or NIM.',
         ],
       },
       commonMistakes: {
@@ -269,7 +269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Common Mistakes When Sizing Enterprise Inference Infrastructure',
         items: [
           '**Sizing GPUs by parameter count instead of concurrent request count.** A GPU fleet sized only for one model copy to fit in VRAM has no headroom for concurrent users -- size for peak concurrency, then check the model still fits.',
-          '**Deploying Ollama behind a shared production load balancer.** It works in a demo with two users; it does not hold up in a design meant for hundreds.',
+          '**Deploying Ollama behind a shared production load balancer.** It works in a demo with two users; it is not designed for a deployment meant for hundreds.',
           '**Scaling on CPU utilization.** GPU inference pods barely move CPU regardless of load -- scale on queue depth or GPU utilization metrics instead.',
           '**Ignoring the license check on TGI\'s older cached images.** Confirm the pulled image tag corresponds to the Apache 2.0 release, not a cached HFOIL 1.0-era build.',
           '**Budgeting NIM without confirming current per-GPU pricing directly with NVIDIA.** Enterprise software subscription pricing shifts; a stale quote is not a budget input.',
@@ -293,7 +293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'What is the difference between vLLM and NVIDIA NIM?', a: 'vLLM is a free, open-source (Apache 2.0) inference server you self-host and operate yourself. NVIDIA NIM is a prebuilt container from NVIDIA that, per NVIDIA\'s current documentation, packages the vLLM or SGLang engine with NVIDIA optimizations; production use requires an NVIDIA AI Enterprise licence and comes with vendor support. vLLM gives you control and no licence fee at the cost of doing the tuning and support yourself; NIM trades that for a licence fee. PromptQuorum has not benchmarked the two against each other.' },
           { q: 'Can Ollama be used for enterprise multi-user inference serving?', a: 'Not recommended for production multi-tenant traffic. Ollama processes parallel requests through OLLAMA_NUM_PARALLEL (default 1) and a request queue, but it documents no continuous batching or PagedAttention-style memory management and offers no Kubernetes-native autoscaling. It is a good fit for developer machines, single-user edge devices, or low-traffic internal prototypes.' },
-          { q: 'Is NVIDIA NIM worth the licensing cost over open-source vLLM or TGI?', a: 'It depends on whether the vendor support contract and NVIDIA\'s packaging are worth the licence cost to you, versus keeping the infrastructure free and operating it yourself. Regulated enterprises that need a support contract and an audit trail often justify the cost; teams with in-house ML infrastructure expertise often run vLLM at no licence cost.' },
+          { q: 'Is NVIDIA NIM worth the licensing cost over open-source vLLM or TGI?', a: 'It depends on whether the vendor support contract and NVIDIA\'s packaging are worth the licence cost to you, versus keeping the infrastructure free and operating it yourself. Regulated enterprises that want a vendor support contract often justify the cost (audit logging still has to be added separately); teams with in-house ML infrastructure expertise often run vLLM at no licence cost.' },
           { q: 'How do you scale LLM inference across multiple GPUs and nodes?', a: 'Use tensor parallelism to split one model\'s layers across the GPUs within a single node, and pipeline parallelism to split across multiple nodes once the model exceeds one node\'s combined GPU memory. vLLM supports both (multi-node via Ray or multiprocessing); TGI supports tensor parallelism with less first-party multi-node tooling and is in maintenance mode; NIM deploys multi-GPU models through its model profiles and runs on Kubernetes through the NIM Operator.' },
           { q: 'What quantization formats does each inference server support?', a: 'vLLM supports GPTQ, AWQ, FP8, and INT4. TGI lists bitsandbytes, GPTQ, AWQ, EETQ, Marlin and FP8. NVIDIA NIM selects the precision per model profile and GPU. Ollama uses the GGUF format at Q4 through Q8 precision, aimed at single-machine memory savings rather than multi-tenant throughput.' },
           { q: 'How do you deploy vLLM or TGI on Kubernetes?', a: 'vLLM documents several Kubernetes routes, including a Helm chart, KServe and the vllm-project production-stack. TGI ships a container image that you wrap in your own manifests. Configure resource requests matching your GPU allocation, set autoscaling on request queue depth or GPU utilization rather than CPU, and add a Prometheus ServiceMonitor to scrape the metrics endpoint.' },
@@ -302,7 +302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Do multiple models need separate GPU fleets, or can they share one pool?', a: 'In practice, enterprises running more than one model typically run separate replica pools per model rather than sharing one pool, because GPU memory does not time-share cleanly between differently-sized models. Route requests to the correct pool at the application or gateway layer rather than trying to co-locate multiple models on the same GPU replicas.' },
           { q: 'How does licensing differ between vLLM, TGI, and NVIDIA NIM?', a: 'vLLM and Hugging Face TGI are both Apache 2.0 licensed and free at any scale -- you pay only for the underlying GPU infrastructure. NVIDIA NIM requires an NVIDIA AI Enterprise licence for production use, which NVIDIA\'s FAQ says starts at $4,500 per GPU per year, on top of the GPU hardware cost; Developer Program members may self-host NIM for research and development on up to 16 GPUs. Confirm current pricing directly with NVIDIA. Ollama is MIT licensed and free, with community-only support.' },
           { q: 'Is Hugging Face TGI still maintained?', a: 'TGI is in maintenance mode. Its README says Hugging Face accepts only minor bug fixes, documentation improvements and lightweight maintenance, and the GitHub repository was archived (read-only) in March 2026. The last release is v3.3.7 from December 2025, and Hugging Face recommends vLLM and SGLang for new deployments. Existing TGI deployments keep running, but plan a migration.' },
-          { q: 'How do vLLM and TensorRT-LLM compare?', a: 'vLLM is a general serving engine that loads Hugging Face-format models directly and runs on NVIDIA and AMD GPUs and other hardware. TensorRT-LLM is NVIDIA\'s library that compiles a model into an engine built for a specific NVIDIA GPU, which adds a build step. vLLM usually means a simpler deployment and broader hardware and model coverage; TensorRT-LLM suits teams committed to NVIDIA who accept the build step. See [TensorRT-LLM explained](/power-local-llm/tensorrt-llm-explained).' },
+          { q: 'How do vLLM and TensorRT-LLM compare?', a: 'vLLM is a general serving engine that loads Hugging Face-format models directly and runs on NVIDIA and AMD GPUs and other hardware. TensorRT-LLM is NVIDIA\'s inference library for NVIDIA GPUs. Earlier versions compiled a model ahead of time into a GPU-specific TensorRT engine; NVIDIA\'s current documentation describes a PyTorch-based workflow in which the TensorRT engine backend has been removed, so check the version you deploy. vLLM usually means a simpler deployment and broader hardware and model coverage; TensorRT-LLM suits teams committed to NVIDIA GPUs. See [TensorRT-LLM explained](/power-local-llm/tensorrt-llm-explained).' },
         ],
       },
       relatedReading: {
@@ -452,7 +452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vllm',
         title: 'vLLM verstehen: Eine Open-Source-Engine für hohen Durchsatz',
         content: [
-          '**vLLM ist ein Open-Source-Inferenzserver (Apache 2.0) speziell für Multi-GPU-Serving mit hohem Durchsatz.** Er entstand am Sky Computing Lab der UC Berkeley und gehört zu den am weitesten verbreiteten Open-Source-Engines für produktive LLM-APIs.',
+          '**vLLM ist ein Open-Source-Inferenzserver (Apache 2.0) speziell für Multi-GPU-Serving mit hohem Durchsatz.** Er entstand am Sky Computing Lab der UC Berkeley und ist eine weit verbreitete Open-Source-Engine für produktive LLM-APIs.',
         ],
         items: [
           '**PagedAttention**: verwaltet den KV-Cache in Blöcken fester Größe statt einer zusammenhängenden Allokation pro Anfrage, was die erreichbare GPU-Speicherauslastung erhöht und mehr gleichzeitige Anfragen pro GPU erlaubt.',
@@ -462,7 +462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**OpenAI-kompatible API**: `vllm serve <model>` stellt einen direkten Ersatz für die OpenAI-Chat-Completions-API bereit und minimiert den Integrationsaufwand.',
           'vLLM liefert ein offizielles Helm-Chart und integriert sich mit KServe für Kubernetes-natives Model-Serving, mit Autoscaling anhand von Warteschlangentiefe oder GPU-Auslastung.',
         ],
-        codeBlock: '# Modell mit Tensor-Parallelismus über 4 GPUs bereitstellen\npip install vllm\n\n# Ohne --api-key akzeptiert der Endpunkt Anfragen ohne Authentifizierung; nicht öffentlich exponieren\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 4 \\\n  --gpu-memory-utilization 0.9 \\\n  --api-key "$VLLM_API_KEY" \\\n  --host 0.0.0.0 --port 8000',
+        codeBlock: '# Modell mit Tensor-Parallelismus über 4 GPUs bereitstellen\npip install vllm\n\n# --api-key schützt nur die Pfade /v1, /v2, /inference und /cohere; andere Endpunkte bleiben offen. Setzen Sie vor der Freigabe des Ports eine Firewall oder einen Reverse Proxy davor\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 4 \\\n  --gpu-memory-utilization 0.9 \\\n  --api-key "$VLLM_API_KEY" \\\n  --host 0.0.0.0 --port 8000',
       },
       tgi: {
         id: 'tgi',
@@ -503,7 +503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Parallelität**: Ollama verarbeitet laut FAQ parallele Anfragen über OLLAMA_NUM_PARALLEL (Standard 1) und eine Warteschlange (OLLAMA_MAX_QUEUE, Standard 512), dokumentiert aber kein Continuous Batching und keine PagedAttention-artige Speicherverwaltung -- es ist nicht wie vLLM oder NIM für viele gleichzeitige Nutzer ausgelegt.',
           '**Multi-GPU**: Ollama kann ein großes Modell über GPUs einer Maschine aufteilen, hat aber kein natives Tensor-paralleles oder Multi-Node-Serving vergleichbar mit vLLM.',
-          '**Kubernetes**: es existieren nur Community-gepflegte Helm-Charts; es gibt keinen First-Party-Kubernetes-Operator, keine Autoscaler-Integration und keinen Herstellersupportvertrag.',
+          '**Kubernetes**: In der GitHub-README ist ein Community-gepflegtes Helm-Chart aufgeführt; ein First-Party-Kubernetes-Operator oder eine Autoscaler-Integration ist in der Dokumentation nicht aufgeführt.',
           '**Observability**: Die Ollama-Dokumentation beschreibt keinen Metrik-Endpunkt, anders als bei vLLM und TGI.',
           'Wo Ollama im Unternehmen dennoch das richtige Werkzeug ist: Entwickler-Laptops, ein Abteilungsprototyp bei geringem internem Verkehr, oder ein abgeschottetes Edge-Gerät für einen Nutzer. Sobald Mehrnutzerbetrieb nötig wird, wechseln Sie zu vLLM, TGI oder NIM -- siehe [Multi-GPU-Setups für lokale LLMs](/de/local-llms/multi-gpu-local-llms) für die Hardwareseite dieses Wechsels.',
         ],
@@ -543,8 +543,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'licensing-support',
         title: 'Lizenzierung und Support-Modell im Vergleich',
         content: [
-          '**Die Lizenz ist der Posten, der die Gesamtbetriebskosten zwischen diesen Optionen am stärksten verändert.** vLLM steht unter Apache 2.0 und ist in jeder Größenordnung kostenlos, ebenso TGI (Apache 2.0, jetzt archiviert) -- Sie zahlen nur für die GPU-Infrastruktur darunter. NVIDIA NIM erfordert für den Produktionseinsatz eine NVIDIA-AI-Enterprise-Lizenz, die laut NVIDIA-FAQ ab 4.500 US-Dollar pro GPU und Jahr zusätzlich zu den GPU-Kosten beginnt; Forschung, Entwicklung und Tests auf bis zu 16 GPUs sind für Mitglieder des NVIDIA Developer Program kostenlos. Klären Sie die aktuellen Konditionen direkt mit NVIDIA, bevor Sie budgetieren. Ollama steht unter MIT und ist kostenlos, der Support beschränkt sich auf GitHub und Discord der Community -- die Dokumentation nennt keine bezahlte Enterprise-Support-Stufe.',
-          'Das Support-Modell ist für ein Produktivsystem ebenso wichtig wie die Lizenzkosten: Der vLLM-Support kommt aus GitHub-Issues und Community-Kanälen (bei verbreiteten Problemen schnell, ohne SLA), TGI erhält nur noch kleine Wartungskorrekturen, NIM wird mit einem NVIDIA-Supportvertrag geliefert, und Ollama hat über Community-Kanäle hinaus gar keinen Supportweg.',
+          '**Die Lizenz ist der Posten, der die Gesamtbetriebskosten zwischen diesen Optionen am stärksten verändert.** vLLM steht unter Apache 2.0 und ist in jeder Größenordnung kostenlos, ebenso TGI (Apache 2.0, jetzt archiviert) -- Sie zahlen nur für die GPU-Infrastruktur darunter. NVIDIA NIM erfordert für den Produktionseinsatz eine NVIDIA-AI-Enterprise-Lizenz, die laut NVIDIA-FAQ ab 4.500 US-Dollar pro GPU und Jahr zusätzlich zu den GPU-Kosten beginnt; Forschung, Entwicklung und Experimente auf bis zu 16 GPUs sind für Mitglieder des NVIDIA Developer Program kostenlos. Klären Sie die aktuellen Konditionen direkt mit NVIDIA, bevor Sie budgetieren. Ollama steht unter MIT und ist kostenlos, der Support beschränkt sich auf GitHub und Discord der Community -- die Dokumentation nennt keine bezahlte Enterprise-Support-Stufe.',
+          'Das Support-Modell ist für ein Produktivsystem ebenso wichtig wie die Lizenzkosten: Der vLLM-Support kommt aus GitHub-Issues und Community-Kanälen (bei verbreiteten Problemen schnell, ohne SLA), TGI erhält nur noch kleine Wartungskorrekturen, NIM wird mit einem NVIDIA-Supportvertrag geliefert, und die Ollama-Dokumentation nennt über Community-Kanäle hinaus keinen Supportweg.',
         ],
       },
       observability: {
@@ -560,18 +560,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'when-to-use',
         title: 'Welche Lösung passt zu Ihnen?',
         content: [
-          '**Beste Open-Source-Wahl insgesamt: vLLM** -- breite Community, große Hardware-Unterstützung, Multi-GPU-Tooling und häufige Releases.',
+          '**Naheliegende Open-Source-Wahl: vLLM** -- breite Community, große Hardware-Unterstützung, Multi-GPU-Tooling und häufige Releases.',
           '**Schon bei Hugging Face: trotzdem auf vLLM oder SGLang planen** -- TGI ist im Wartungsmodus, behalten Sie es nur für bestehende Deployments.',
-          '**Beste Wahl bei Bedarf an Herstellersupport: NVIDIA NIM** -- herstellergestützt, schlüsselfertig, gegen Lizenzkosten.',
+          '**Passend bei Bedarf an Herstellersupport: NVIDIA NIM** -- herstellergestützt, schlüsselfertig, gegen Lizenzkosten.',
           '**Nicht für produktiven Mehrnutzerbetrieb: Ollama** -- für Entwickler-Maschinen und Einzelnutzer-Edge-Deployments reservieren.',
         ],
         items: [
           '🧭 Plattform-Team mit einer gemeinsamen internen LLM-API für viele Teams → vLLM, selbst gehostet auf Kubernetes.',
-          '🧭 Reguliertes Unternehmen mit Bedarf an Supportvertrag und Audit-Trail → NVIDIA NIM.',
+          '🧭 Reguliertes Unternehmen mit Bedarf an einem Hersteller-Supportvertrag → NVIDIA NIM; Audit-Logging selbst davorschalten (siehe den verwandten Enterprise-Compliance-Leitfaden).',
           '🧭 Team, das für das Modell-Hosting bereits auf den Hugging Face Hub standardisiert hat → vLLM, das Hub-Modelle direkt lädt; TGI nur für bestehende Deployments behalten.',
           '🧭 Entwickler, die einen Proof of Concept bauen, bevor die Infrastruktur bereitsteht → Ollama, dann Wechsel zu vLLM, sobald echter paralleler Traffic anliegt.',
-          '❌ Wenn Sie mehr als eine Handvoll gleichzeitiger Nutzer erwarten, stellen Sie Ollama nicht hinter einen gemeinsamen Produktions-Endpunkt -- nutzen Sie stattdessen vLLM.',
-          '❌ Wenn Sie Kubernetes-natives Autoscaling auf Anfragelast brauchen: Ollama hat kein Pendant zu KEDA-gesteuertem Queue-Depth-Scaling -- nutzen Sie vLLM oder NIM.',
+          '❌ Wenn Sie mehr als eine Handvoll gleichzeitiger Nutzer erwarten, ist Ollama nicht für einen gemeinsamen Produktions-Endpunkt ausgelegt -- nutzen Sie stattdessen vLLM.',
+          '❌ Wenn Sie Kubernetes-natives Autoscaling auf Anfragelast brauchen: Ollamas Dokumentation nennt kein Pendant zu KEDA-gesteuertem Queue-Depth-Scaling -- nutzen Sie vLLM oder NIM.',
         ],
       },
       commonMistakes: {
@@ -579,7 +579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufige Fehler bei der Dimensionierung von Enterprise-Inferenz-Infrastruktur',
         items: [
           '**GPUs nach Parameterzahl statt nach gleichzeitiger Anfragezahl dimensionieren.** Eine GPU-Flotte, die nur für eine Modellkopie im VRAM ausgelegt ist, hat keinen Spielraum für gleichzeitige Nutzer -- nach Spitzen-Nebenläufigkeit dimensionieren, dann prüfen, ob das Modell noch passt.',
-          '**Ollama hinter einen gemeinsamen Produktions-Load-Balancer stellen.** Funktioniert in einer Demo mit zwei Nutzern; hält einem für hunderte ausgelegten Design nicht stand.',
+          '**Ollama hinter einen gemeinsamen Produktions-Load-Balancer stellen.** Funktioniert in einer Demo mit zwei Nutzern; ist nicht für einen Einsatz mit Hunderten von Nutzern ausgelegt.',
           '**Nach CPU-Auslastung skalieren.** GPU-Inferenz-Pods bewegen die CPU-Last kaum, unabhängig von der Last -- stattdessen nach Warteschlangentiefe oder GPU-Auslastung skalieren.',
           '**Den Lizenzcheck bei älteren gecachten TGI-Images überspringen.** Prüfen Sie, ob der gezogene Image-Tag der Apache-2.0-Version entspricht, nicht einem gecachten HFOIL 1.0-Build.',
           '**NIM budgetieren, ohne aktuelle Preise pro GPU direkt mit NVIDIA zu klären.** Enterprise-Software-Abo-Preise verschieben sich; ein veraltetes Angebot ist keine Budgetgrundlage.',
@@ -603,7 +603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Was ist der Unterschied zwischen vLLM und NVIDIA NIM?', a: 'vLLM ist ein kostenloser Open-Source-Inferenzserver (Apache 2.0), den Sie selbst hosten und betreiben. NVIDIA NIM ist ein vorgefertigter Container von NVIDIA, der laut aktueller NVIDIA-Dokumentation die vLLM- oder SGLang-Engine mit NVIDIA-Optimierungen bündelt; der Produktionseinsatz erfordert eine NVIDIA-AI-Enterprise-Lizenz und kommt mit Herstellersupport. vLLM gibt Ihnen Kontrolle und keine Lizenzgebühr, dafür müssen Sie Tuning und Support selbst leisten; NIM tauscht das gegen eine Lizenzgebühr. PromptQuorum hat die beiden nicht gegeneinander gebenchmarkt.' },
           { q: 'Kann Ollama für Enterprise-Mehrnutzer-Inferenz eingesetzt werden?', a: 'Für produktiven Mehrnutzerbetrieb nicht empfohlen. Ollama verarbeitet parallele Anfragen über OLLAMA_NUM_PARALLEL (Standard 1) und eine Warteschlange, dokumentiert aber kein Continuous Batching und keine PagedAttention-artige Speicherverwaltung und bietet kein Kubernetes-natives Autoscaling. Es eignet sich gut für Entwicklerrechner, Edge-Geräte für einen Nutzer oder interne Prototypen mit wenig Traffic.' },
-          { q: 'Lohnt sich NVIDIA NIM gegenüber Open-Source vLLM oder TGI?', a: 'Das hängt davon ab, ob Ihnen der Herstellersupport-Vertrag und NVIDIAs Paketierung die Lizenzkosten wert sind, oder ob Sie die Infrastruktur lieber kostenlos selbst betreiben. Regulierte Unternehmen, die einen Supportvertrag und eine Prüfspur brauchen, rechtfertigen die Kosten oft; Teams mit eigener ML-Infrastruktur-Expertise betreiben häufig vLLM ohne Lizenzkosten.' },
+          { q: 'Lohnt sich NVIDIA NIM gegenüber Open-Source vLLM oder TGI?', a: 'Das hängt davon ab, ob Ihnen der Herstellersupport-Vertrag und NVIDIAs Paketierung die Lizenzkosten wert sind, oder ob Sie die Infrastruktur lieber kostenlos selbst betreiben. Regulierte Unternehmen, die einen Herstellersupport-Vertrag wünschen, rechtfertigen die Kosten oft (Audit-Logging muss weiterhin separat ergänzt werden); Teams mit eigener ML-Infrastruktur-Expertise betreiben häufig vLLM ohne Lizenzkosten.' },
           { q: 'Wie skaliert man LLM-Inferenz über mehrere GPUs und Knoten?', a: 'Nutzen Sie Tensor-Parallelität, um die Schichten eines Modells auf die GPUs eines Knotens aufzuteilen, und Pipeline-Parallelität über mehrere Knoten, sobald das Modell den gemeinsamen GPU-Speicher eines Knotens übersteigt. vLLM unterstützt beides (Multi-Node über Ray oder Multiprocessing); TGI unterstützt Tensor-Parallelität mit weniger First-Party-Multi-Node-Tooling und befindet sich im Wartungsmodus; NIM stellt Multi-GPU-Modelle über seine Modellprofile bereit und läuft über den NIM Operator auf Kubernetes.' },
           { q: 'Welche Quantisierungsformate unterstützt jeder Inferenzserver?', a: 'vLLM unterstützt GPTQ, AWQ, FP8 und INT4. TGI nennt bitsandbytes, GPTQ, AWQ, EETQ, Marlin und FP8. NVIDIA NIM wählt die Präzision je Modellprofil und GPU. Ollama nutzt das GGUF-Format mit Q4- bis Q8-Präzision, ausgelegt auf Speicherersparnis auf einem Rechner statt auf Mehrnutzer-Durchsatz.' },
           { q: 'Wie stellt man vLLM oder TGI auf Kubernetes bereit?', a: 'vLLM dokumentiert mehrere Kubernetes-Wege, darunter ein Helm-Chart, KServe und den production-stack des vllm-project. TGI liefert ein Container-Image, das Sie in eigene Manifeste einbinden. Legen Sie Ressourcenanforderungen passend zur GPU-Zuteilung fest, skalieren Sie nach Warteschlangentiefe oder GPU-Auslastung statt nach CPU, und ergänzen Sie einen Prometheus-ServiceMonitor, der den Metrik-Endpunkt abfragt.' },
@@ -612,7 +612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Brauchen mehrere Modelle getrennte GPU-Flotten, oder können sie sich einen Pool teilen?', a: 'In der Praxis betreiben Unternehmen mit mehr als einem Modell meist getrennte Replik-Pools pro Modell statt eines gemeinsamen Pools, weil sich GPU-Speicher zwischen unterschiedlich großen Modellen nicht sauber teilen lässt. Routen Sie Anfragen an der Anwendungs- oder Gateway-Ebene zum richtigen Pool, statt mehrere Modelle auf denselben GPU-Repliken zu kolokalisieren.' },
           { q: 'Wie unterscheidet sich die Lizenzierung zwischen vLLM, TGI und NVIDIA NIM?', a: 'vLLM und Hugging Face TGI stehen beide unter Apache 2.0 und sind in jeder Größenordnung kostenlos -- Sie zahlen nur für die GPU-Infrastruktur. NVIDIA NIM erfordert für den Produktionseinsatz eine NVIDIA-AI-Enterprise-Lizenz, die laut NVIDIA-FAQ ab 4.500 US-Dollar pro GPU und Jahr zusätzlich zu den GPU-Hardwarekosten beginnt; Mitglieder des Developer Program dürfen NIM für Forschung und Entwicklung auf bis zu 16 GPUs selbst hosten. Klären Sie aktuelle Preise direkt mit NVIDIA. Ollama steht unter MIT, ist kostenlos und hat nur Community-Support.' },
           { q: 'Wird Hugging Face TGI noch gepflegt?', a: 'TGI befindet sich im Wartungsmodus. Laut README akzeptiert Hugging Face nur kleine Bugfixes, Dokumentationsverbesserungen und leichte Wartungsarbeiten, und das GitHub-Repository wurde im März 2026 archiviert (schreibgeschützt). Das letzte Release ist v3.3.7 vom Dezember 2025, und Hugging Face empfiehlt für neue Deployments vLLM und SGLang. Bestehende TGI-Deployments laufen weiter, aber planen Sie eine Migration.' },
-          { q: 'Wie unterscheiden sich vLLM und TensorRT-LLM?', a: 'vLLM ist eine allgemeine Serving-Engine, die Modelle im Hugging-Face-Format direkt lädt und auf NVIDIA- und AMD-GPUs sowie weiterer Hardware läuft. TensorRT-LLM ist NVIDIAs Bibliothek, die ein Modell in eine Engine für eine bestimmte NVIDIA-GPU kompiliert, was einen Build-Schritt hinzufügt. vLLM bedeutet meist ein einfacheres Deployment und breitere Hardware- und Modellabdeckung; TensorRT-LLM passt zu Teams, die auf NVIDIA festgelegt sind und den Build-Schritt akzeptieren. Siehe [TensorRT-LLM erklärt](/de/power-local-llm/tensorrt-llm-explained).' },
+          { q: 'Wie unterscheiden sich vLLM und TensorRT-LLM?', a: 'vLLM ist eine allgemeine Serving-Engine, die Modelle im Hugging-Face-Format direkt lädt und auf NVIDIA- und AMD-GPUs sowie weiterer Hardware läuft. TensorRT-LLM ist NVIDIAs Inferenz-Bibliothek für NVIDIA-GPUs. Frühere Versionen kompilierten ein Modell vorab in eine GPU-spezifische TensorRT-Engine; die aktuelle NVIDIA-Dokumentation beschreibt einen PyTorch-basierten Workflow, in dem das TensorRT-Engine-Backend entfernt wurde. Prüfen Sie daher die Version, die Sie einsetzen. vLLM bedeutet meist ein einfacheres Deployment und breitere Hardware- und Modellabdeckung; TensorRT-LLM passt zu Teams, die auf NVIDIA-GPUs festgelegt sind. Siehe [TensorRT-LLM erklärt](/de/power-local-llm/tensorrt-llm-explained).' },
         ],
       },
       relatedReading: {
@@ -762,7 +762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vllm',
         title: 'Comprendre vLLM : un moteur open source à haut débit',
         content: [
-          '**vLLM est un serveur d\'inférence open source (Apache 2.0) conçu spécifiquement pour le serving multi-GPU à haut débit.** Issu du Sky Computing Lab de UC Berkeley, c\'est l\'un des moteurs open source les plus déployés pour les API LLM en production.',
+          '**vLLM est un serveur d\'inférence open source (Apache 2.0) conçu spécifiquement pour le serving multi-GPU à haut débit.** Issu du Sky Computing Lab de UC Berkeley, c\'est un moteur open source largement utilisé pour les API LLM en production.',
         ],
         items: [
           '**PagedAttention** : gère le cache KV par blocs de taille fixe plutôt que par allocation contiguë par requête, ce qui augmente l\'utilisation mémoire GPU atteignable et permet à plus de requêtes concurrentes de partager un GPU.',
@@ -772,7 +772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**API compatible OpenAI** : `vllm serve <model>` expose un remplacement direct de l\'API OpenAI Chat Completions, minimisant le travail d\'intégration côté application.',
           'vLLM fournit un Helm chart officiel et s\'intègre à KServe pour le serving de modèles natif Kubernetes, avec un autoscaling piloté par la profondeur de file ou l\'utilisation GPU.',
         ],
-        codeBlock: '# Déployer un modèle avec parallélisme tensoriel sur 4 GPU\npip install vllm\n\n# Sans --api-key, cet endpoint accepte des requêtes non authentifiées ; ne pas exposer publiquement\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 4 \\\n  --gpu-memory-utilization 0.9 \\\n  --api-key "$VLLM_API_KEY" \\\n  --host 0.0.0.0 --port 8000',
+        codeBlock: '# Déployer un modèle avec parallélisme tensoriel sur 4 GPU\npip install vllm\n\n# --api-key ne protège que les chemins /v1, /v2, /inference et /cohere ; les autres endpoints restent ouverts. Placez un pare-feu ou un reverse proxy devant avant toute exposition du port\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 4 \\\n  --gpu-memory-utilization 0.9 \\\n  --api-key "$VLLM_API_KEY" \\\n  --host 0.0.0.0 --port 8000',
       },
       tgi: {
         id: 'tgi',
@@ -813,7 +813,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Concurrence** : selon sa FAQ, Ollama gère les requêtes parallèles via OLLAMA_NUM_PARALLEL (1 par défaut) et une file d\'attente (OLLAMA_MAX_QUEUE, 512 par défaut), mais ne documente ni batching continu ni gestion mémoire de type PagedAttention : il n\'est pas conçu pour de nombreux utilisateurs simultanés comme vLLM ou NIM.',
           '**Multi-GPU** : Ollama peut répartir un grand modèle sur les GPU d\'une machine, mais n\'a pas de serving parallèle tensoriel ou multi-nœud natif comparable à vLLM.',
-          '**Kubernetes** : seuls des Helm charts communautaires existent ; pas d\'operator Kubernetes first-party, d\'intégration d\'autoscaler ni de contrat de support éditeur.',
+          '**Kubernetes** : un Helm chart communautaire est listé dans le README GitHub ; aucun operator Kubernetes first-party ni aucune intégration d\'autoscaler n\'est listé dans sa documentation.',
           '**Observabilité** : la documentation d\'Ollama ne décrit aucun point de métriques, contrairement à vLLM et TGI.',
           'Là où Ollama reste le bon outil dans une entreprise : les ordinateurs portables des développeurs, un prototype départemental à faible trafic interne, ou un appareil edge isolé servant un utilisateur à la fois. Dès que le trafic exige de la concurrence multi-tenant, passez à vLLM, TGI ou NIM -- voir [les configurations multi-GPU pour LLM locaux](/fr/local-llms/multi-gpu-local-llms) pour le volet matériel de cette transition.',
         ],
@@ -853,8 +853,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'licensing-support',
         title: 'Licences et modèle de support comparés',
         content: [
-          '**La licence est la ligne qui modifie le plus le coût total de possession entre ces options.** vLLM est sous licence Apache 2.0 et gratuit à toute échelle, tout comme TGI (Apache 2.0, désormais archivé) -- vous ne payez que l\'infrastructure GPU en dessous. NVIDIA NIM exige une licence NVIDIA AI Enterprise en production, qui commence selon la FAQ de NVIDIA à 4 500 $ US par GPU et par an en plus du coût du GPU ; la recherche, le développement et les tests sur 16 GPU maximum sont gratuits pour les membres du NVIDIA Developer Program. Confirmez les conditions actuelles directement auprès de NVIDIA avant de budgétiser. Ollama est sous licence MIT et gratuit, avec un support limité au GitHub et au Discord de la communauté -- sa documentation ne mentionne aucune offre de support entreprise payante.',
-          'Le modèle de support compte autant que le coût de licence pour un système de production : le support de vLLM passe par les issues GitHub et les canaux communautaires (rapide pour les problèmes courants, sans SLA), TGI ne reçoit plus que des correctifs de maintenance mineurs, NIM s\'accompagne d\'un contrat de support NVIDIA, et Ollama n\'a aucune voie de support hors canaux communautaires.',
+          '**La licence est la ligne qui modifie le plus le coût total de possession entre ces options.** vLLM est sous licence Apache 2.0 et gratuit à toute échelle, tout comme TGI (Apache 2.0, désormais archivé) -- vous ne payez que l\'infrastructure GPU en dessous. NVIDIA NIM exige une licence NVIDIA AI Enterprise en production, qui commence selon la FAQ de NVIDIA à 4 500 $ US par GPU et par an en plus du coût du GPU ; la recherche, le développement et l\'expérimentation sur 16 GPU maximum sont gratuits pour les membres du NVIDIA Developer Program. Confirmez les conditions actuelles directement auprès de NVIDIA avant de budgétiser. Ollama est sous licence MIT et gratuit, avec un support limité au GitHub et au Discord de la communauté -- sa documentation ne mentionne aucune offre de support entreprise payante.',
+          'Le modèle de support compte autant que le coût de licence pour un système de production : le support de vLLM passe par les issues GitHub et les canaux communautaires (rapide pour les problèmes courants, sans SLA), TGI ne reçoit plus que des correctifs de maintenance mineurs, NIM s\'accompagne d\'un contrat de support NVIDIA, et la documentation d\'Ollama ne mentionne aucune voie de support hors canaux communautaires.',
         ],
       },
       observability: {
@@ -870,18 +870,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'when-to-use',
         title: 'Quel serveur d\'inférence choisir ?',
         content: [
-          '**Meilleur choix open source global : vLLM** -- large communauté, vaste prise en charge matérielle, outillage multi-GPU et versions fréquentes.',
+          '**Choix open source par défaut : vLLM** -- large communauté, vaste prise en charge matérielle, outillage multi-GPU et versions fréquentes.',
           '**Déjà chez Hugging Face : planifiez quand même vLLM ou SGLang** -- TGI est en mode maintenance, ne le gardez que pour les déploiements existants.',
-          '**Meilleur choix si vous avez besoin d\'un support éditeur : NVIDIA NIM** -- support éditeur, clé en main, moyennant un coût de licence.',
+          '**Adapté si vous avez besoin d\'un support éditeur : NVIDIA NIM** -- support éditeur, clé en main, moyennant un coût de licence.',
           '**Pas pour du trafic de production multi-tenant : Ollama** -- à réserver aux machines de développeurs et aux déploiements edge mono-utilisateur.',
         ],
         items: [
           '🧭 Équipe plateforme qui exploite une API LLM interne partagée pour de nombreuses équipes → vLLM, auto-hébergé sur Kubernetes.',
-          '🧭 Entreprise réglementée ayant besoin d\'un contrat de support et d\'une piste d\'audit → NVIDIA NIM.',
+          '🧭 Entreprise réglementée souhaitant un contrat de support éditeur → NVIDIA NIM ; ajoutez votre propre journalisation d\'audit en amont (voir le guide de conformité entreprise associé).',
           '🧭 Équipe déjà standardisée sur le Hugging Face Hub pour l\'hébergement des modèles → vLLM, qui charge directement les modèles du Hub ; gardez TGI uniquement pour les déploiements existants.',
           '🧭 Développeurs qui construisent une preuve de concept avant que l\'infrastructure ne soit prête → Ollama, puis migration vers vLLM dès que le trafic simultané devient réel.',
-          '❌ Si vous attendez plus d\'une poignée d\'utilisateurs simultanés, ne placez pas Ollama derrière un point d\'accès de production partagé -- utilisez plutôt vLLM.',
-          '❌ Si vous avez besoin d\'un autoscaling natif Kubernetes sur la charge de requêtes, Ollama n\'a pas d\'équivalent au scaling par profondeur de file piloté par KEDA -- utilisez vLLM ou NIM.',
+          '❌ Si vous attendez plus d\'une poignée d\'utilisateurs simultanés, Ollama n\'est pas conçu pour un point d\'accès de production partagé -- utilisez plutôt vLLM.',
+          '❌ Si vous avez besoin d\'un autoscaling natif Kubernetes sur la charge de requêtes, la documentation d\'Ollama ne mentionne aucun équivalent au scaling par profondeur de file piloté par KEDA -- utilisez vLLM ou NIM.',
         ],
       },
       commonMistakes: {
@@ -889,7 +889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Erreurs courantes dans le dimensionnement de l\'infrastructure d\'inférence entreprise',
         items: [
           '**Dimensionner les GPU selon le nombre de paramètres plutôt que le nombre de requêtes concurrentes.** Un parc GPU dimensionné juste pour qu\'une copie du modèle tienne en VRAM n\'a aucune marge pour des utilisateurs concurrents -- dimensionnez pour la concurrence de pointe, puis vérifiez que le modèle tient toujours.',
-          '**Déployer Ollama derrière un équilibreur de charge de production partagé.** Cela fonctionne dans une démo avec deux utilisateurs ; cela ne tient pas dans une conception pensée pour des centaines.',
+          '**Déployer Ollama derrière un équilibreur de charge de production partagé.** Cela fonctionne dans une démo avec deux utilisateurs ; il n\'est pas conçu pour un déploiement destiné à des centaines d\'utilisateurs.',
           '**Mettre à l\'échelle sur l\'utilisation CPU.** Les pods d\'inférence GPU bougent à peine côté CPU quelle que soit la charge -- mettez plutôt à l\'échelle sur la profondeur de file ou l\'utilisation GPU.',
           '**Ignorer la vérification de licence sur d\'anciennes images TGI en cache.** Confirmez que le tag d\'image récupéré correspond bien à la version Apache 2.0, pas à un build de l\'ère HFOIL 1.0 mis en cache.',
           '**Budgéter NIM sans confirmer les tarifs actuels par GPU directement auprès de NVIDIA.** Les tarifs d\'abonnement logiciel entreprise évoluent ; un devis périmé n\'est pas une base de budget.',
@@ -913,7 +913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Quelle est la différence entre vLLM et NVIDIA NIM ?', a: 'vLLM est un serveur d\'inférence gratuit et open source (Apache 2.0) que vous hébergez et exploitez vous-même. NVIDIA NIM est un conteneur prêt à l\'emploi de NVIDIA qui, selon la documentation actuelle de NVIDIA, regroupe le moteur vLLM ou SGLang avec des optimisations NVIDIA ; la production exige une licence NVIDIA AI Enterprise et inclut le support éditeur. vLLM donne du contrôle sans frais de licence, au prix du réglage et du support à votre charge ; NIM échange cela contre une licence. PromptQuorum n\'a pas comparé les deux par des benchmarks.' },
           { q: 'Ollama peut-il être utilisé pour le serving d\'inférence multi-utilisateurs en entreprise ?', a: 'Déconseillé pour le trafic de production multi-tenant. Ollama traite les requêtes parallèles via OLLAMA_NUM_PARALLEL (1 par défaut) et une file d\'attente, mais ne documente ni batching continu ni gestion mémoire de type PagedAttention, et n\'offre pas d\'autoscaling natif Kubernetes. Il convient aux postes de développeurs, aux appareils edge mono-utilisateur ou aux prototypes internes à faible trafic.' },
-          { q: 'NVIDIA NIM vaut-il le coût de licence face à vLLM ou TGI open source ?', a: 'Cela dépend de ce que valent pour vous le contrat de support éditeur et le packaging de NVIDIA par rapport au coût de licence, face à une infrastructure gratuite que vous exploitez vous-même. Les entreprises réglementées qui ont besoin d\'un contrat de support et d\'une piste d\'audit justifient souvent le coût ; les équipes disposant d\'une expertise interne en infrastructure ML exploitent souvent vLLM sans coût de licence.' },
+          { q: 'NVIDIA NIM vaut-il le coût de licence face à vLLM ou TGI open source ?', a: 'Cela dépend de ce que valent pour vous le contrat de support éditeur et le packaging de NVIDIA par rapport au coût de licence, face à une infrastructure gratuite que vous exploitez vous-même. Les entreprises réglementées qui souhaitent un contrat de support éditeur justifient souvent le coût (la journalisation d\'audit reste à ajouter séparément) ; les équipes disposant d\'une expertise interne en infrastructure ML exploitent souvent vLLM sans coût de licence.' },
           { q: 'Comment mettre à l\'échelle l\'inférence LLM sur plusieurs GPU et nœuds ?', a: 'Utilisez le parallélisme tensoriel pour répartir les couches d\'un modèle sur les GPU d\'un même nœud, et le parallélisme pipeline pour répartir sur plusieurs nœuds quand le modèle dépasse la mémoire GPU cumulée d\'un nœud. vLLM prend en charge les deux (multi-nœud via Ray ou multiprocessing) ; TGI gère le parallélisme tensoriel avec moins d\'outillage multi-nœud officiel et est en mode maintenance ; NIM déploie les modèles multi-GPU via ses profils de modèle et s\'exécute sur Kubernetes grâce au NIM Operator.' },
           { q: 'Quels formats de quantification chaque serveur d\'inférence prend-il en charge ?', a: 'vLLM prend en charge GPTQ, AWQ, FP8 et INT4. TGI indique bitsandbytes, GPTQ, AWQ, EETQ, Marlin et FP8. NVIDIA NIM choisit la précision selon le profil de modèle et le GPU. Ollama utilise le format GGUF en précision Q4 à Q8, visant l\'économie de mémoire sur une machine plutôt que le débit multi-tenant.' },
           { q: 'Comment déployer vLLM ou TGI sur Kubernetes ?', a: 'vLLM documente plusieurs voies Kubernetes, dont un chart Helm, KServe et le production-stack du vllm-project. TGI fournit une image de conteneur que vous intégrez dans vos propres manifestes. Configurez des requêtes de ressources adaptées à votre allocation GPU, réglez l\'autoscaling sur la profondeur de file ou l\'utilisation GPU plutôt que sur le CPU, et ajoutez un ServiceMonitor Prometheus pour collecter le point de métriques.' },
@@ -922,7 +922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Plusieurs modèles nécessitent-ils des parcs GPU séparés, ou peuvent-ils partager un pool ?', a: 'En pratique, les entreprises exécutant plus d\'un modèle font généralement tourner des pools de répliques séparés par modèle plutôt que de partager un pool, car la mémoire GPU ne se partage pas proprement entre des modèles de tailles très différentes. Routez les requêtes vers le bon pool au niveau de l\'application ou de la passerelle plutôt que de tenter de colocaliser plusieurs modèles sur les mêmes répliques GPU.' },
           { q: 'Comment la licence diffère-t-elle entre vLLM, TGI et NVIDIA NIM ?', a: 'vLLM et Hugging Face TGI sont tous deux sous licence Apache 2.0 et gratuits à toute échelle -- vous ne payez que l\'infrastructure GPU. NVIDIA NIM exige une licence NVIDIA AI Enterprise en production, qui commence selon la FAQ de NVIDIA à 4 500 $ US par GPU et par an en plus du matériel GPU ; les membres du Developer Program peuvent auto-héberger NIM pour la recherche et le développement sur 16 GPU maximum. Confirmez les prix actuels directement auprès de NVIDIA. Ollama est sous licence MIT, gratuit, avec un support uniquement communautaire.' },
           { q: 'Hugging Face TGI est-il encore maintenu ?', a: 'TGI est en mode maintenance. Son README indique que Hugging Face n\'accepte que des corrections de bogues mineures, des améliorations de documentation et de la maintenance légère, et le dépôt GitHub a été archivé (lecture seule) en mars 2026. La dernière version est la v3.3.7 de décembre 2025, et Hugging Face recommande vLLM et SGLang pour les nouveaux déploiements. Les déploiements TGI existants continuent de fonctionner, mais prévoyez une migration.' },
-          { q: 'Comment vLLM et TensorRT-LLM se comparent-ils ?', a: 'vLLM est un moteur de serving généraliste qui charge directement les modèles au format Hugging Face et fonctionne sur les GPU NVIDIA et AMD ainsi que sur d\'autres matériels. TensorRT-LLM est la bibliothèque de NVIDIA qui compile un modèle en un moteur conçu pour un GPU NVIDIA précis, ce qui ajoute une étape de build. vLLM implique en général un déploiement plus simple et une couverture matérielle et de modèles plus large ; TensorRT-LLM convient aux équipes engagées sur NVIDIA qui acceptent l\'étape de build. Voir [TensorRT-LLM expliqué](/fr/power-local-llm/tensorrt-llm-explained).' },
+          { q: 'Comment vLLM et TensorRT-LLM se comparent-ils ?', a: 'vLLM est un moteur de serving généraliste qui charge directement les modèles au format Hugging Face et fonctionne sur les GPU NVIDIA et AMD ainsi que sur d\'autres matériels. TensorRT-LLM est la bibliothèque d\'inférence de NVIDIA pour les GPU NVIDIA. Les versions antérieures compilaient un modèle à l\'avance en un moteur TensorRT propre à un GPU ; la documentation actuelle de NVIDIA décrit un workflow basé sur PyTorch dans lequel le backend de moteur TensorRT a été supprimé, vérifiez donc la version que vous déployez. vLLM implique en général un déploiement plus simple et une couverture matérielle et de modèles plus large ; TensorRT-LLM convient aux équipes engagées sur les GPU NVIDIA. Voir [TensorRT-LLM expliqué](/fr/power-local-llm/tensorrt-llm-explained).' },
         ],
       },
       relatedReading: {
@@ -1038,7 +1038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'NVIDIA NIM es un contenedor de microservicio de pago y ya preparado (el uso en producción exige una licencia NVIDIA AI Enterprise) que empaqueta el motor vLLM o SGLang con optimizaciones de NVIDIA, respaldado por soporte del fabricante.',
           'Ollama no está diseñado para servicio multiinquilino empresarial -- es un runtime orientado a un solo nodo y un solo usuario; úselo para portátiles de desarrolladores y prototipos de edge/departamento, no para tráfico de API en producción.',
           'El despliegue en Kubernetes difiere: vLLM documenta rutas con Helm, KServe y production-stack, TGI solo ofrece una imagen de contenedor, NIM tiene el Operator propio de NVIDIA y Ollama solo tiene charts de la comunidad, sin ganchos nativos de autoescalado.',
-          'La licencia decide tu coste total: vLLM y TGI son gratuitos y open source; el uso de NIM en producción exige una licencia NVIDIA AI Enterprise, que según las preguntas frecuentes de NVIDIA empieza en 4,500 USD por GPU al año, además de la GPU en sí.',
+          'La licencia decide tu coste total: vLLM y TGI son gratuitos y open source; el uso de NIM en producción exige una licencia NVIDIA AI Enterprise, que según las preguntas frecuentes de NVIDIA empieza en 4500 USD por GPU al año, además de la GPU en sí.',
           'La observabilidad difiere: vLLM expone métricas en /metrics y TGI ofrece métricas de Prometheus y trazas de OpenTelemetry; NIM admite métricas de DCGM y propias de NIM mediante su Operator; la documentación de Ollama no describe ningún endpoint de métricas.',
           'Usa vLLM para servir en producción con open source, NIM si necesitas soporte del fabricante y puedes pagarlo, abandona TGI en proyectos nuevos y reserva Ollama para prototipos.',
         ],
@@ -1072,7 +1072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vllm',
         title: 'Entendiendo vLLM: un motor de código abierto de alto rendimiento',
         content: [
-          '**vLLM es un servidor de inferencia de código abierto (Apache 2.0) diseñado específicamente para servicio multi-GPU de alto rendimiento.** Surgió del Sky Computing Lab de UC Berkeley y es uno de los motores de código abierto más desplegados para APIs de LLM en producción.',
+          '**vLLM es un servidor de inferencia de código abierto (Apache 2.0) diseñado específicamente para servicio multi-GPU de alto rendimiento.** Surgió del Sky Computing Lab de UC Berkeley y es un motor de código abierto ampliamente utilizado para APIs de LLM en producción.',
         ],
         items: [
           '**PagedAttention**: gestiona la caché KV en bloques de tamaño fijo en lugar de una asignación contigua por solicitud, lo que eleva la utilización de memoria GPU alcanzable y permite que más solicitudes concurrentes compartan una GPU.',
@@ -1082,7 +1082,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**API compatible con OpenAI**: `vllm serve <model>` expone un reemplazo directo de la API OpenAI Chat Completions, minimizando el trabajo de integración en la aplicación.',
           'vLLM incluye un Helm chart oficial y se integra con KServe para servicio de modelos nativo de Kubernetes, con autoescalado impulsado por la profundidad de la cola o la utilización de GPU.',
         ],
-        codeBlock: '# Servir un modelo con paralelismo tensor en 4 GPU\npip install vllm\n\n# Sin --api-key el endpoint acepta solicitudes sin autenticación; no lo expongas públicamente\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 4 \\\n  --gpu-memory-utilization 0.9 \\\n  --api-key "$VLLM_API_KEY" \\\n  --host 0.0.0.0 --port 8000',
+        codeBlock: '# Servir un modelo con paralelismo tensor en 4 GPU\npip install vllm\n\n# --api-key solo protege las rutas /v1, /v2, /inference y /cohere; los demás endpoints quedan abiertos. Coloca un firewall o un reverse proxy delante antes de exponer el puerto\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 4 \\\n  --gpu-memory-utilization 0.9 \\\n  --api-key "$VLLM_API_KEY" \\\n  --host 0.0.0.0 --port 8000',
       },
       tgi: {
         id: 'tgi',
@@ -1111,7 +1111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Soporte empresarial respaldado por NVIDIA**: la diferencia frente a las opciones open source -- una vía de soporte del fabricante bajo una licencia NVIDIA AI Enterprise; confirma en tu contrato las condiciones exactas de SLA y disponibilidad.',
           '**NIM Operator para Kubernetes**: el operator de NVIDIA crea el despliegue de Kubernetes de cada servicio NIM, puede precargar modelos en los nodos y admite autoescalado con métricas de DCGM o propias de NIM.',
           '**Catálogo de modelos**: NVIDIA mantiene un conjunto curado de modelos de pesos abiertos preempaquetados como contenedores NIM listos para usar, más una vía para empaquetar modelos afinados propios.',
-          'La contrapartida es la dependencia del fabricante y el coste de licencia: NIM está pensado para GPU de NVIDIA y el uso en producción exige una licencia NVIDIA AI Enterprise, que según las [preguntas frecuentes de NIM](https://docs.api.nvidia.com/nim/docs/product) de NVIDIA empieza en 4,500 USD por GPU al año. Los miembros del NVIDIA Developer Program pueden autoalojar NIM para investigación, desarrollo y experimentación en hasta 16 GPU. Confirma las condiciones actuales con [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/) antes de presupuestar, porque los precios de suscripciones de software empresarial cambian sin mucho aviso público.',
+          'La contrapartida es la dependencia del fabricante y el coste de licencia: NIM está pensado para GPU de NVIDIA y el uso en producción exige una licencia NVIDIA AI Enterprise, que según las [preguntas frecuentes de NIM](https://docs.api.nvidia.com/nim/docs/product) de NVIDIA empieza en 4500 USD por GPU al año. Los miembros del NVIDIA Developer Program pueden autoalojar NIM para investigación, desarrollo y experimentación en hasta 16 GPU. Confirma las condiciones actuales con [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/) antes de presupuestar, porque los precios de suscripciones de software empresarial cambian sin mucho aviso público.',
         ],
       },
       ollamaEnterprise: {
@@ -1123,7 +1123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Concurrencia**: según su FAQ, Ollama gestiona solicitudes en paralelo con OLLAMA_NUM_PARALLEL (1 por defecto) y una cola (OLLAMA_MAX_QUEUE, 512 por defecto), pero no documenta batching continuo ni gestión de memoria al estilo PagedAttention, por lo que no está pensado para muchos usuarios simultáneos como vLLM o NIM.',
           '**Multi-GPU**: Ollama puede repartir un modelo grande entre las GPU de una máquina, pero no tiene servicio paralelo tensor o multi-nodo nativo comparable a vLLM.',
-          '**Kubernetes**: solo existen Helm charts mantenidos por la comunidad; no hay operador propio de Kubernetes, integración de autoescalador ni contrato de soporte del fabricante.',
+          '**Kubernetes**: en su README de GitHub figura un Helm chart mantenido por la comunidad; su documentación no lista ningún operador propio de Kubernetes ni integración de autoescalador.',
           '**Observabilidad**: la documentación de Ollama no describe ningún endpoint de métricas, a diferencia de vLLM y TGI.',
           'Dónde Ollama sigue siendo la herramienta correcta en una empresa: portátiles de desarrolladores, un prototipo departamental con poco tráfico interno, o un dispositivo edge aislado que atiende a un usuario a la vez. En cuanto el tráfico necesite concurrencia multiinquilino, pase a vLLM, TGI o NIM -- vea [configuraciones multi-GPU para LLM locales](/es/local-llms/multi-gpu-local-llms) para el lado del hardware de ese cambio.',
         ],
@@ -1163,8 +1163,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'licensing-support',
         title: 'Licencias y modelo de soporte comparados',
         content: [
-          '**La licencia es la partida que más cambia el coste total de propiedad entre estas opciones.** vLLM tiene licencia Apache 2.0 y es gratuito a cualquier escala, igual que TGI (Apache 2.0, ahora archivado) -- solo pagas la infraestructura de GPU que hay debajo. NVIDIA NIM exige una licencia NVIDIA AI Enterprise para producción, que según las preguntas frecuentes de NVIDIA empieza en 4,500 USD por GPU al año además del coste de la GPU; investigar, desarrollar y probar en hasta 16 GPU es gratis para los miembros del NVIDIA Developer Program. Confirma las condiciones actuales directamente con NVIDIA antes de presupuestar. Ollama tiene licencia MIT y es gratuito, con soporte limitado al GitHub y Discord de la comunidad -- su documentación no menciona ningún nivel de soporte empresarial de pago.',
-          'El modelo de soporte importa tanto como el coste de licencia en un sistema de producción: el soporte de vLLM viene de issues de GitHub y canales de la comunidad (rápido en los problemas populares, sin SLA), TGI solo recibe mantenimiento menor, NIM incluye un contrato de soporte de NVIDIA y Ollama no tiene ninguna vía de soporte más allá de los canales de la comunidad.',
+          '**La licencia es la partida que más cambia el coste total de propiedad entre estas opciones.** vLLM tiene licencia Apache 2.0 y es gratuito a cualquier escala, igual que TGI (Apache 2.0, ahora archivado) -- solo pagas la infraestructura de GPU que hay debajo. NVIDIA NIM exige una licencia NVIDIA AI Enterprise para producción, que según las preguntas frecuentes de NVIDIA empieza en 4500 USD por GPU al año además del coste de la GPU; la investigación, el desarrollo y la experimentación en hasta 16 GPU son gratuitos para los miembros del NVIDIA Developer Program. Confirma las condiciones actuales directamente con NVIDIA antes de presupuestar. Ollama tiene licencia MIT y es gratuito, con soporte limitado al GitHub y Discord de la comunidad -- su documentación no menciona ningún nivel de soporte empresarial de pago.',
+          'El modelo de soporte importa tanto como el coste de licencia en un sistema de producción: el soporte de vLLM viene de issues de GitHub y canales de la comunidad (rápido en los problemas populares, sin SLA), TGI solo recibe mantenimiento menor, NIM incluye un contrato de soporte de NVIDIA y la documentación de Ollama no menciona ninguna vía de soporte más allá de los canales de la comunidad.',
         ],
       },
       observability: {
@@ -1180,18 +1180,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'when-to-use',
         title: '¿Qué servidor de inferencia elegir?',
         content: [
-          '**Mejor opción open source en general: vLLM** -- comunidad amplia, gran compatibilidad de hardware, herramientas multi-GPU y versiones frecuentes.',
+          '**Opción open source por defecto: vLLM** -- comunidad amplia, gran compatibilidad de hardware, herramientas multi-GPU y versiones frecuentes.',
           '**Si ya usas Hugging Face: planifica igualmente con vLLM o SGLang** -- TGI está en modo de mantenimiento, consérvalo solo para despliegues existentes.',
-          '**Mejor si necesitas soporte del fabricante: NVIDIA NIM** -- respaldado por el fabricante, llave en mano, con coste de licencia.',
+          '**Adecuado si necesitas soporte del fabricante: NVIDIA NIM** -- respaldado por el fabricante, llave en mano, con coste de licencia.',
           '**No para tráfico de producción multiinquilino: Ollama** -- resérvelo para máquinas de desarrolladores y despliegues de edge de un solo usuario.',
         ],
         items: [
           '🧭 Equipo de plataforma que ofrece una API de LLM interna compartida para muchos equipos → vLLM, autoalojado en Kubernetes.',
-          '🧭 Empresa regulada que necesita un contrato de soporte y un registro de auditoría → NVIDIA NIM.',
+          '🧭 Empresa regulada que quiere un contrato de soporte del fabricante → NVIDIA NIM; añade tu propio registro de auditoría por delante (consulta la guía de cumplimiento empresarial relacionada).',
           '🧭 Equipo ya estandarizado en el Hugging Face Hub para alojar modelos → vLLM, que carga modelos del Hub directamente; conserva TGI solo para despliegues existentes.',
           '🧭 Desarrolladores que montan una prueba de concepto antes de tener la infraestructura → Ollama y luego migración a vLLM cuando el tráfico simultáneo sea real.',
-          '❌ Si esperas más de un puñado de usuarios simultáneos, no pongas Ollama detrás de un endpoint de producción compartido -- usa vLLM.',
-          '❌ Si necesitas autoescalado nativo de Kubernetes según la carga de solicitudes, Ollama no tiene equivalente al escalado por profundidad de cola con KEDA -- usa vLLM o NIM.',
+          '❌ Si esperas más de un puñado de usuarios simultáneos, Ollama no está diseñado para un endpoint de producción compartido -- usa vLLM.',
+          '❌ Si necesitas autoescalado nativo de Kubernetes según la carga de solicitudes, la documentación de Ollama no menciona ningún equivalente al escalado por profundidad de cola con KEDA -- usa vLLM o NIM.',
         ],
       },
       commonMistakes: {
@@ -1199,7 +1199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Errores comunes al dimensionar infraestructura de inferencia empresarial',
         items: [
           '**Dimensionar las GPU por número de parámetros en lugar de por número de solicitudes concurrentes.** Una flota de GPU dimensionada solo para que quepa una copia del modelo en VRAM no tiene margen para usuarios concurrentes -- dimensione para la concurrencia máxima y luego compruebe que el modelo sigue cabiendo.',
-          '**Desplegar Ollama detrás de un balanceador de carga de producción compartido.** Funciona en una demo con dos usuarios; no aguanta en un diseño pensado para cientos.',
+          '**Desplegar Ollama detrás de un balanceador de carga de producción compartido.** Funciona en una demo con dos usuarios; no está diseñado para un despliegue destinado a cientos de usuarios.',
           '**Escalar según la utilización de CPU.** Los pods de inferencia GPU apenas mueven la CPU sin importar la carga -- escale según la profundidad de la cola o la utilización de GPU.',
           '**Ignorar la comprobación de licencia en imágenes antiguas de TGI en caché.** Confirme que la etiqueta de imagen obtenida corresponde a la versión Apache 2.0, no a una build de la era HFOIL 1.0 en caché.',
           '**Presupuestar NIM sin confirmar los precios actuales por GPU directamente con NVIDIA.** Los precios de suscripción de software empresarial cambian; una cotización antigua no es una base de presupuesto.',
@@ -1223,16 +1223,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '¿Cuál es la diferencia entre vLLM y NVIDIA NIM?', a: 'vLLM es un servidor de inferencia gratuito y open source (Apache 2.0) que alojas y operas tú mismo. NVIDIA NIM es un contenedor ya preparado de NVIDIA que, según la documentación actual de NVIDIA, empaqueta el motor vLLM o SGLang con optimizaciones de NVIDIA; el uso en producción exige una licencia NVIDIA AI Enterprise e incluye soporte del fabricante. vLLM te da control y ninguna cuota de licencia a cambio de que te ocupes tú del ajuste y el soporte; NIM cambia eso por una licencia. PromptQuorum no ha comparado ambos con pruebas de rendimiento.' },
           { q: '¿Puede usarse Ollama para servicio de inferencia multiusuario empresarial?', a: 'No se recomienda para tráfico de producción multiusuario. Ollama procesa solicitudes en paralelo con OLLAMA_NUM_PARALLEL (1 por defecto) y una cola, pero no documenta batching continuo ni gestión de memoria al estilo PagedAttention, y no ofrece autoescalado nativo de Kubernetes. Encaja bien en equipos de desarrollo, dispositivos edge de un solo usuario o prototipos internos con poco tráfico.' },
-          { q: '¿Merece la pena NVIDIA NIM frente a vLLM o TGI de código abierto?', a: 'Depende de si el contrato de soporte del fabricante y el empaquetado de NVIDIA te compensan frente al coste de licencia, o prefieres una infraestructura gratuita que operas tú. Las empresas reguladas que necesitan un contrato de soporte y una pista de auditoría suelen justificar el coste; los equipos con experiencia propia en infraestructura de ML suelen ejecutar vLLM sin coste de licencia.' },
+          { q: '¿Merece la pena NVIDIA NIM frente a vLLM o TGI de código abierto?', a: 'Depende de si el contrato de soporte del fabricante y el empaquetado de NVIDIA te compensan frente al coste de licencia, o prefieres una infraestructura gratuita que operas tú. Las empresas reguladas que quieren un contrato de soporte del fabricante suelen justificar el coste (el registro de auditoría hay que añadirlo aparte); los equipos con experiencia propia en infraestructura de ML suelen ejecutar vLLM sin coste de licencia.' },
           { q: '¿Cómo se escala la inferencia de LLM entre varias GPU y nodos?', a: 'Usa paralelismo tensorial para repartir las capas de un modelo entre las GPU de un nodo y paralelismo de pipeline para repartirlas entre varios nodos cuando el modelo supera la memoria GPU combinada de un nodo. vLLM admite ambos (multinodo con Ray o multiprocessing); TGI admite paralelismo tensorial con menos herramientas multinodo propias y está en modo de mantenimiento; NIM despliega modelos multi-GPU mediante sus perfiles de modelo y se ejecuta en Kubernetes con el NIM Operator.' },
           { q: '¿Qué formatos de cuantización soporta cada servidor de inferencia?', a: 'vLLM admite GPTQ, AWQ, FP8 e INT4. TGI indica bitsandbytes, GPTQ, AWQ, EETQ, Marlin y FP8. NVIDIA NIM elige la precisión según el perfil del modelo y la GPU. Ollama usa el formato GGUF con precisión de Q4 a Q8, orientado a ahorrar memoria en una sola máquina y no al rendimiento multiusuario.' },
           { q: '¿Cómo se despliega vLLM o TGI en Kubernetes?', a: 'vLLM documenta varias rutas para Kubernetes, entre ellas un chart de Helm, KServe y el production-stack de vllm-project. TGI ofrece una imagen de contenedor que envuelves en tus propios manifiestos. Configura solicitudes de recursos acordes con tu asignación de GPU, ajusta el autoescalado a la profundidad de la cola o al uso de GPU en lugar de la CPU y añade un ServiceMonitor de Prometheus para recoger el endpoint de métricas.' },
           { q: '¿Qué es el continuous batching y por qué importa para el servicio empresarial?', a: 'El batching continuo permite que las nuevas solicitudes se unan a un lote de GPU que ya está en marcha, en lugar de esperar a que termine el lote actual. Mantiene alta la utilización de la GPU con tráfico real irregular, por lo que es estándar en vLLM, TGI y los motores de NIM, y una de las mayores diferencias frente a una herramienta de un solo usuario como Ollama.' },
           { q: '¿Qué servidor de inferencia tiene mejor observabilidad?', a: 'vLLM expone métricas en su endpoint /metrics y TGI ofrece métricas de Prometheus y trazas de OpenTelemetry -- ideal para una pila Prometheus/Grafana existente. NVIDIA NIM admite métricas de DCGM y propias de NIM mediante su Operator, más adecuado para infraestructura centrada en NVIDIA. La documentación de Ollama no describe ningún endpoint de métricas.' },
           { q: '¿Necesitan varios modelos flotas de GPU separadas, o pueden compartir un mismo grupo?', a: 'En la práctica, las empresas que ejecutan más de un modelo suelen operar grupos de réplicas separados por modelo en lugar de compartir un grupo, porque la memoria GPU no se comparte con suficiente limpieza entre modelos de tamaños muy distintos. Enrute las solicitudes al grupo correcto en la capa de aplicación o de gateway, en lugar de intentar colocar varios modelos en las mismas réplicas de GPU.' },
-          { q: '¿Cómo difiere la licencia entre vLLM, TGI y NVIDIA NIM?', a: 'vLLM y Hugging Face TGI tienen licencia Apache 2.0 y son gratuitos a cualquier escala -- solo pagas la infraestructura de GPU. NVIDIA NIM exige una licencia NVIDIA AI Enterprise para producción, que según las preguntas frecuentes de NVIDIA empieza en 4,500 USD por GPU al año además del coste del hardware GPU; los miembros del Developer Program pueden autoalojar NIM para investigación y desarrollo en hasta 16 GPU. Confirma los precios actuales directamente con NVIDIA. Ollama tiene licencia MIT, es gratuito y solo cuenta con soporte de la comunidad.' },
+          { q: '¿Cómo difiere la licencia entre vLLM, TGI y NVIDIA NIM?', a: 'vLLM y Hugging Face TGI tienen licencia Apache 2.0 y son gratuitos a cualquier escala -- solo pagas la infraestructura de GPU. NVIDIA NIM exige una licencia NVIDIA AI Enterprise para producción, que según las preguntas frecuentes de NVIDIA empieza en 4500 USD por GPU al año además del coste del hardware GPU; los miembros del Developer Program pueden autoalojar NIM para investigación y desarrollo en hasta 16 GPU. Confirma los precios actuales directamente con NVIDIA. Ollama tiene licencia MIT, es gratuito y solo cuenta con soporte de la comunidad.' },
           { q: '¿Hugging Face TGI sigue recibiendo mantenimiento?', a: 'TGI está en modo de mantenimiento. Su README indica que Hugging Face solo acepta correcciones menores de errores, mejoras de documentación y mantenimiento ligero, y el repositorio de GitHub se archivó (solo lectura) en marzo de 2026. La última versión es la v3.3.7 de diciembre de 2025 y Hugging Face recomienda vLLM y SGLang para nuevos despliegues. Los despliegues TGI existentes siguen funcionando, pero planifica una migración.' },
-          { q: '¿Cómo se comparan vLLM y TensorRT-LLM?', a: 'vLLM es un motor de servicio general que carga directamente modelos en formato Hugging Face y funciona en GPU de NVIDIA y AMD y en otro hardware. TensorRT-LLM es la biblioteca de NVIDIA que compila un modelo en un motor para una GPU NVIDIA concreta, lo que añade un paso de compilación. vLLM suele implicar un despliegue más sencillo y mayor cobertura de hardware y modelos; TensorRT-LLM encaja con equipos comprometidos con NVIDIA que aceptan ese paso. Consulta [TensorRT-LLM explicado](/es/power-local-llm/tensorrt-llm-explained).' },
+          { q: '¿Cómo se comparan vLLM y TensorRT-LLM?', a: 'vLLM es un motor de servicio general que carga directamente modelos en formato Hugging Face y funciona en GPU de NVIDIA y AMD y en otro hardware. TensorRT-LLM es la biblioteca de inferencia de NVIDIA para GPU de NVIDIA. Las versiones anteriores compilaban un modelo de antemano en un motor TensorRT específico de una GPU; la documentación actual de NVIDIA describe un flujo de trabajo basado en PyTorch en el que se eliminó el backend de motor TensorRT, así que comprueba la versión que despliegas. vLLM suele implicar un despliegue más sencillo y mayor cobertura de hardware y modelos; TensorRT-LLM encaja con equipos comprometidos con las GPU de NVIDIA. Consulta [TensorRT-LLM explicado](/es/power-local-llm/tensorrt-llm-explained).' },
         ],
       },
       relatedReading: {
@@ -1382,7 +1382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vllm',
         title: 'Entendendo o vLLM: um motor open source de alto throughput',
         content: [
-          '**vLLM é um servidor de inferência open source (Apache 2.0) construído especificamente para serving multi-GPU de alto throughput.** Surgiu do Sky Computing Lab da UC Berkeley e é uma das engines open source mais implantadas para APIs de LLM em produção.',
+          '**vLLM é um servidor de inferência open source (Apache 2.0) construído especificamente para serving multi-GPU de alto throughput.** Surgiu do Sky Computing Lab da UC Berkeley e é uma engine open source amplamente utilizada para APIs de LLM em produção.',
         ],
         items: [
           '**PagedAttention**: gerencia o cache KV em blocos de tamanho fixo em vez de uma alocação contígua por requisição, o que eleva a utilização de memória de GPU alcançável e permite mais requisições concorrentes compartilhando uma GPU.',
@@ -1392,7 +1392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**API compatível com OpenAI**: `vllm serve <model>` expõe um substituto direto da API OpenAI Chat Completions, minimizando o trabalho de integração no lado da aplicação.',
           'vLLM traz um Helm chart oficial e se integra ao KServe para serving de modelos nativo do Kubernetes, com autoscaling orientado por profundidade de fila de requisições ou utilização de GPU.',
         ],
-        codeBlock: '# Servir um modelo com paralelismo tensor em 4 GPUs\npip install vllm\n\n# Sem --api-key o endpoint aceita requisições sem autenticação; não o exponha publicamente\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 4 \\\n  --gpu-memory-utilization 0.9 \\\n  --api-key "$VLLM_API_KEY" \\\n  --host 0.0.0.0 --port 8000',
+        codeBlock: '# Servir um modelo com paralelismo tensor em 4 GPUs\npip install vllm\n\n# --api-key protege apenas os caminhos /v1, /v2, /inference e /cohere; os demais endpoints continuam abertos. Coloque um firewall ou um reverse proxy na frente antes de expor a porta\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 4 \\\n  --gpu-memory-utilization 0.9 \\\n  --api-key "$VLLM_API_KEY" \\\n  --host 0.0.0.0 --port 8000',
       },
       tgi: {
         id: 'tgi',
@@ -1433,7 +1433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Concorrência**: segundo o FAQ, o Ollama trata requisições paralelas por meio de OLLAMA_NUM_PARALLEL (padrão 1) e uma fila (OLLAMA_MAX_QUEUE, padrão 512), mas não documenta batching contínuo nem gerenciamento de memória no estilo PagedAttention, então não foi projetado para muitos usuários simultâneos como o vLLM ou o NIM.',
           '**Multi-GPU**: o Ollama consegue dividir um modelo grande entre GPUs de uma máquina, mas não tem serving nativo tensor-paralelo ou multi-node comparável ao do vLLM.',
-          '**Kubernetes**: só existem Helm charts mantidos pela comunidade; não há operador Kubernetes próprio, integração com autoscaler ou contrato de suporte do fabricante.',
+          '**Kubernetes**: um Helm chart mantido pela comunidade consta no README do GitHub; a documentação não lista nenhum operador Kubernetes próprio nem integração com autoscaler.',
           '**Observabilidade**: a documentação do Ollama não descreve nenhum endpoint de métricas, ao contrário de vLLM e TGI.',
           'Onde o Ollama ainda é a ferramenta certa em uma empresa: notebooks de desenvolvedores, um protótipo departamental com pouco tráfego interno, ou um dispositivo de edge isolado atendendo um usuário por vez. Assim que o tráfego exigir concorrência multi-tenant, migre para vLLM, TGI ou NIM -- veja [configurações multi-GPU para LLMs locais](/pt/local-llms/multi-gpu-local-llms) para o lado de hardware dessa mudança.',
         ],
@@ -1473,8 +1473,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'licensing-support',
         title: 'Licenciamento e modelo de suporte comparados',
         content: [
-          '**A licença é o item que mais altera o custo total de propriedade entre essas opções.** O vLLM tem licença Apache 2.0 e é gratuito em qualquer escala, assim como o TGI (Apache 2.0, agora arquivado) -- você paga apenas pela infraestrutura de GPU por baixo. O NVIDIA NIM exige uma licença NVIDIA AI Enterprise para produção, que segundo o FAQ da NVIDIA começa em US$ 4.500 por GPU por ano, além do custo da GPU; pesquisa, desenvolvimento e testes em até 16 GPUs são gratuitos para membros do NVIDIA Developer Program. Confirme as condições atuais diretamente com a NVIDIA antes de orçar. O Ollama tem licença MIT e é gratuito, com suporte limitado ao GitHub e ao Discord da comunidade -- a documentação não menciona nenhum nível pago de suporte corporativo.',
-          'O modelo de suporte importa tanto quanto o custo da licença em um sistema de produção: o suporte do vLLM vem de issues no GitHub e canais da comunidade (rápido para problemas populares, sem SLA), o TGI recebe apenas manutenção menor, o NIM vem com um contrato de suporte da NVIDIA e o Ollama não tem nenhum caminho de suporte além dos canais da comunidade.',
+          '**A licença é o item que mais altera o custo total de propriedade entre essas opções.** O vLLM tem licença Apache 2.0 e é gratuito em qualquer escala, assim como o TGI (Apache 2.0, agora arquivado) -- você paga apenas pela infraestrutura de GPU por baixo. O NVIDIA NIM exige uma licença NVIDIA AI Enterprise para produção, que segundo o FAQ da NVIDIA começa em US$ 4.500 por GPU por ano, além do custo da GPU; pesquisa, desenvolvimento e experimentação em até 16 GPUs são gratuitos para membros do NVIDIA Developer Program. Confirme as condições atuais diretamente com a NVIDIA antes de orçar. O Ollama tem licença MIT e é gratuito, com suporte limitado ao GitHub e ao Discord da comunidade -- a documentação não menciona nenhum nível pago de suporte corporativo.',
+          'O modelo de suporte importa tanto quanto o custo da licença em um sistema de produção: o suporte do vLLM vem de issues no GitHub e canais da comunidade (rápido para problemas populares, sem SLA), o TGI recebe apenas manutenção menor, o NIM vem com um contrato de suporte da NVIDIA e a documentação do Ollama não menciona nenhum caminho de suporte além dos canais da comunidade.',
         ],
       },
       observability: {
@@ -1490,18 +1490,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'when-to-use',
         title: 'Qual servidor de inferência escolher?',
         content: [
-          '**Melhor escolha open source no geral: vLLM** -- comunidade ampla, grande suporte a hardware, ferramentas multi-GPU e lançamentos frequentes.',
+          '**Escolha open source padrão: vLLM** -- comunidade ampla, grande suporte a hardware, ferramentas multi-GPU e lançamentos frequentes.',
           '**Já usa o Hugging Face: ainda assim planeje com vLLM ou SGLang** -- o TGI está em modo de manutenção, mantenha-o apenas em deployments existentes.',
-          '**Melhor se você precisa de suporte do fabricante: NVIDIA NIM** -- respaldado pelo fabricante, pronto para uso, com custo de licença.',
+          '**Indicado se você precisa de suporte do fabricante: NVIDIA NIM** -- respaldado pelo fabricante, pronto para uso, com custo de licença.',
           '**Não para tráfego de produção multi-tenant: Ollama** -- reserve para máquinas de desenvolvedores e deploys de edge de único usuário.',
         ],
         items: [
           '🧭 Time de plataforma que mantém uma API de LLM interna compartilhada para várias equipes → vLLM, auto-hospedado em Kubernetes.',
-          '🧭 Empresa regulada precisando de contrato de suporte e trilha de auditoria → NVIDIA NIM.',
+          '🧭 Empresa regulada que quer um contrato de suporte do fabricante → NVIDIA NIM; adicione seu próprio registro de auditoria na frente (veja o guia de compliance corporativo relacionado).',
           '🧭 Equipe já padronizada no Hugging Face Hub para hospedar modelos → vLLM, que carrega modelos do Hub diretamente; mantenha o TGI apenas em deployments existentes.',
           '🧭 Desenvolvedores montando uma prova de conceito antes de a infraestrutura estar pronta → Ollama e depois migração para o vLLM quando o tráfego simultâneo for real.',
-          '❌ Se você espera mais do que um punhado de usuários simultâneos, não coloque o Ollama atrás de um endpoint de produção compartilhado -- use o vLLM.',
-          '❌ Se você precisa de autoescalonamento nativo do Kubernetes pela carga de requisições, o Ollama não tem equivalente ao escalonamento por profundidade de fila com KEDA -- use vLLM ou NIM.',
+          '❌ Se você espera mais do que um punhado de usuários simultâneos, o Ollama não foi projetado para um endpoint de produção compartilhado -- use o vLLM.',
+          '❌ Se você precisa de autoescalonamento nativo do Kubernetes pela carga de requisições, a documentação do Ollama não lista nenhum equivalente ao escalonamento por profundidade de fila com KEDA -- use vLLM ou NIM.',
         ],
       },
       commonMistakes: {
@@ -1509,7 +1509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Erros comuns ao dimensionar infraestrutura de inferência corporativa',
         items: [
           '**Dimensionar GPUs pela contagem de parâmetros em vez da contagem de requisições concorrentes.** Uma frota de GPU dimensionada só para uma cópia do modelo caber na VRAM não tem margem para usuários concorrentes -- dimensione pela concorrência de pico e depois verifique se o modelo ainda cabe.',
-          '**Implantar o Ollama atrás de um load balancer de produção compartilhado.** Funciona em uma demo com dois usuários; não aguenta em um design pensado para centenas.',
+          '**Implantar o Ollama atrás de um load balancer de produção compartilhado.** Funciona em uma demo com dois usuários; não foi projetado para um deployment voltado a centenas de usuários.',
           '**Escalar pela utilização de CPU.** Pods de inferência em GPU mal movem a CPU independente da carga -- escale pela profundidade da fila ou pela utilização de GPU.',
           '**Ignorar a checagem de licença em imagens antigas do TGI em cache.** Confirme se a tag de imagem baixada corresponde à versão Apache 2.0, não a um build da era HFOIL 1.0 em cache.',
           '**Orçar o NIM sem confirmar os preços atuais por GPU diretamente com a NVIDIA.** Preços de assinatura de software corporativo mudam; uma cotação antiga não é base de orçamento.',
@@ -1533,7 +1533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Qual é a diferença entre vLLM e NVIDIA NIM?', a: 'O vLLM é um servidor de inferência gratuito e open source (Apache 2.0) que você hospeda e opera por conta própria. O NVIDIA NIM é um contêiner pré-pronto da NVIDIA que, segundo a documentação atual da NVIDIA, empacota o motor vLLM ou SGLang com otimizações da NVIDIA; o uso em produção exige uma licença NVIDIA AI Enterprise e inclui suporte do fabricante. O vLLM dá controle e nenhuma taxa de licença, em troca de você cuidar do ajuste e do suporte; o NIM troca isso por uma licença. A PromptQuorum não fez benchmarks comparando os dois.' },
           { q: 'O Ollama pode ser usado para serving de inferência multiusuário corporativo?', a: 'Não é recomendado para tráfego de produção multiusuário. O Ollama processa requisições paralelas por meio de OLLAMA_NUM_PARALLEL (padrão 1) e uma fila, mas não documenta batching contínuo nem gerenciamento de memória no estilo PagedAttention e não oferece autoescalonamento nativo do Kubernetes. Serve bem para máquinas de desenvolvedores, dispositivos edge de um único usuário ou protótipos internos com pouco tráfego.' },
-          { q: 'Vale a pena o custo de licença do NVIDIA NIM frente ao vLLM ou TGI open source?', a: 'Depende de o contrato de suporte do fabricante e o empacotamento da NVIDIA valerem o custo da licença para você, em vez de manter a infraestrutura gratuita e operá-la por conta própria. Empresas reguladas que precisam de contrato de suporte e trilha de auditoria costumam justificar o custo; equipes com expertise própria em infraestrutura de ML costumam rodar o vLLM sem custo de licença.' },
+          { q: 'Vale a pena o custo de licença do NVIDIA NIM frente ao vLLM ou TGI open source?', a: 'Depende de o contrato de suporte do fabricante e o empacotamento da NVIDIA valerem o custo da licença para você, em vez de manter a infraestrutura gratuita e operá-la por conta própria. Empresas reguladas que querem um contrato de suporte do fabricante costumam justificar o custo (o registro de auditoria ainda precisa ser adicionado separadamente); equipes com expertise própria em infraestrutura de ML costumam rodar o vLLM sem custo de licença.' },
           { q: 'Como escalar a inferência de LLM entre várias GPUs e nós?', a: 'Use paralelismo tensorial para dividir as camadas de um modelo entre as GPUs de um nó e paralelismo de pipeline para dividir entre vários nós quando o modelo excede a memória de GPU combinada de um nó. O vLLM suporta os dois (multinó via Ray ou multiprocessing); o TGI suporta paralelismo tensorial com menos ferramentas multinó próprias e está em modo de manutenção; o NIM implanta modelos multi-GPU por meio de seus perfis de modelo e roda em Kubernetes com o NIM Operator.' },
           { q: 'Quais formatos de quantização cada servidor de inferência suporta?', a: 'O vLLM suporta GPTQ, AWQ, FP8 e INT4. O TGI lista bitsandbytes, GPTQ, AWQ, EETQ, Marlin e FP8. O NVIDIA NIM seleciona a precisão por perfil de modelo e GPU. O Ollama usa o formato GGUF com precisão de Q4 a Q8, voltado a economizar memória em uma única máquina e não a desempenho multiusuário.' },
           { q: 'Como implantar vLLM ou TGI no Kubernetes?', a: 'O vLLM documenta várias rotas para Kubernetes, incluindo um chart do Helm, o KServe e o production-stack do vllm-project. O TGI fornece uma imagem de contêiner que você envolve em seus próprios manifestos. Configure requisições de recursos compatíveis com sua alocação de GPU, defina o autoescalonamento pela profundidade da fila ou pelo uso de GPU em vez da CPU e adicione um ServiceMonitor do Prometheus para coletar o endpoint de métricas.' },
@@ -1542,7 +1542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Vários modelos precisam de frotas de GPU separadas, ou podem compartilhar um mesmo pool?', a: 'Na prática, empresas rodando mais de um modelo costumam manter pools de réplicas separados por modelo em vez de compartilhar um pool, porque a memória de GPU não se divide de forma limpa entre modelos de tamanhos muito diferentes. Roteie as requisições para o pool correto na camada de aplicação ou gateway, em vez de tentar colocar vários modelos nas mesmas réplicas de GPU.' },
           { q: 'Como o licenciamento difere entre vLLM, TGI e NVIDIA NIM?', a: 'vLLM e Hugging Face TGI têm licença Apache 2.0 e são gratuitos em qualquer escala -- você paga apenas pela infraestrutura de GPU. O NVIDIA NIM exige uma licença NVIDIA AI Enterprise para produção, que segundo o FAQ da NVIDIA começa em US$ 4.500 por GPU por ano, além do custo do hardware de GPU; membros do Developer Program podem auto-hospedar o NIM para pesquisa e desenvolvimento em até 16 GPUs. Confirme os preços atuais diretamente com a NVIDIA. O Ollama tem licença MIT, é gratuito e só tem suporte da comunidade.' },
           { q: 'O Hugging Face TGI ainda recebe manutenção?', a: 'O TGI está em modo de manutenção. O README diz que o Hugging Face aceita apenas correções menores de bugs, melhorias de documentação e manutenção leve, e o repositório no GitHub foi arquivado (somente leitura) em março de 2026. A última versão é a v3.3.7 de dezembro de 2025 e o Hugging Face recomenda vLLM e SGLang para novos deployments. Os deployments TGI existentes continuam funcionando, mas planeje uma migração.' },
-          { q: 'Como o vLLM e o TensorRT-LLM se comparam?', a: 'O vLLM é um motor de serving geral que carrega diretamente modelos no formato Hugging Face e roda em GPUs NVIDIA e AMD e em outros hardwares. O TensorRT-LLM é a biblioteca da NVIDIA que compila um modelo em um motor para uma GPU NVIDIA específica, o que acrescenta uma etapa de build. O vLLM costuma significar um deployment mais simples e maior cobertura de hardware e modelos; o TensorRT-LLM serve a equipes comprometidas com a NVIDIA que aceitam a etapa de build. Veja [TensorRT-LLM explicado](/pt/power-local-llm/tensorrt-llm-explained).' },
+          { q: 'Como o vLLM e o TensorRT-LLM se comparam?', a: 'O vLLM é um motor de serving geral que carrega diretamente modelos no formato Hugging Face e roda em GPUs NVIDIA e AMD e em outros hardwares. O TensorRT-LLM é a biblioteca de inferência da NVIDIA para GPUs NVIDIA. Versões anteriores compilavam um modelo antecipadamente em um motor TensorRT específico de uma GPU; a documentação atual da NVIDIA descreve um fluxo de trabalho baseado em PyTorch no qual o backend de motor TensorRT foi removido, então verifique a versão que você implanta. O vLLM costuma significar um deployment mais simples e maior cobertura de hardware e modelos; o TensorRT-LLM serve a equipes comprometidas com as GPUs NVIDIA. Veja [TensorRT-LLM explicado](/pt/power-local-llm/tensorrt-llm-explained).' },
         ],
       },
       relatedReading: {
@@ -1654,7 +1654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'ノートPCで1つのAIモデルを動かすことと、共有GPUフリートから数百人の従業員や顧客にサービスを提供することは別の問題です。vLLMは後者のために作られた無償ソフトウェアです。NVIDIA NIMは同じ役割を、NVIDIAのサポート付きの有償パッケージ製品として担います。Hugging FaceのTGIも同じ目的で作られましたが、現在はメンテナンスモードです。多くの人がモデルをローカルで試すのに使うOllamaは、それほど多くの同時ユーザーを想定していません。' },
         ],
         items: [
-          'vLLMは高スループットなマルチテナントサービング向けの主要なオープンソース(Apache 2.0)推論サーバーで、continuous batchingとテンソル・パイプライン・エキスパート並列に対応します。Hugging Face TGIも同様の中核機能を備えますが、現在はメンテナンスモードです。',
+          'vLLMは高スループットなマルチテナントサービング向けの主要なオープンソース(Apache 2.0)推論サーバーで、continuous batchingとテンソル・パイプライン並列に対応します。Hugging Face TGIも同様の中核機能を備えますが、現在はメンテナンスモードです。',
           'NVIDIA NIMは有償のビルド済みマイクロサービスコンテナ(本番利用にはNVIDIA AI Enterpriseライセンスが必要)で、NVIDIA最適化済みのvLLMまたはSGLangエンジンをパッケージ化し、ベンダーサポートが付きます。',
           'Ollamaはエンタープライズのマルチテナントサービング向けには作られていません -- シングルノード・シングルユーザー志向のランタイムです。開発者のノートパソコンやエッジ・部門レベルの試作に使い、本番APIトラフィックには使わないでください。',
           'Kubernetesデプロイは異なります。vLLMはHelm、KServe、production-stackの方法を文書化し、TGIはコンテナイメージのみ、NIMにはNVIDIA独自のOperatorがあり、Ollamaはコミュニティ製チャートのみでネイティブなオートスケール連携はありません。',
@@ -1692,7 +1692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vllm',
         title: 'vLLMを理解する:高スループットのオープンソースエンジン',
         content: [
-          '**vLLMは、マルチGPUの高スループットサービング向けに特化して構築されたオープンソース推論サーバー(Apache 2.0)です。** UC BerkeleyのSky Computing Labを起源とし、本番LLM APIで最も広く導入されているオープンソースエンジンの一つです。',
+          '**vLLMは、マルチGPUの高スループットサービング向けに特化して構築されたオープンソース推論サーバー(Apache 2.0)です。** UC BerkeleyのSky Computing Labを起源とし、本番LLM APIで広く使われているオープンソースエンジンです。',
         ],
         items: [
           '**PagedAttention**:KVキャッシュをリクエストごとの連続割り当てではなく固定サイズのブロックで管理し、到達可能なGPUメモリ利用率を高め、より多くの同時リクエストが1つのGPUを共有できるようにします。',
@@ -1702,7 +1702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**OpenAI互換API**:`vllm serve <model>` はOpenAI Chat Completions APIの直接置き換えを提供し、アプリケーション側の統合作業を最小化します。',
           'vLLMは公式Helmチャートを提供し、Kubernetesネイティブなモデルサービング向けにKServeとも統合されます。オートスケーリングはリクエストキューの深さやGPU利用率に基づいて駆動できます。',
         ],
-        codeBlock: '# 4GPUでテンソル並列を使いモデルを提供\npip install vllm\n\n# --api-keyなしでは認証なしのリクエストを受け付けます。公開しないでください\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 4 \\\n  --gpu-memory-utilization 0.9 \\\n  --api-key "$VLLM_API_KEY" \\\n  --host 0.0.0.0 --port 8000',
+        codeBlock: '# 4GPUでテンソル並列を使いモデルを提供\npip install vllm\n\n# --api-keyが保護するのは/v1、/v2、/inference、/cohereのパスのみで、それ以外のエンドポイントは開いたままです。ポートを公開する前にファイアウォールかリバースプロキシを前段に置いてください\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 4 \\\n  --gpu-memory-utilization 0.9 \\\n  --api-key "$VLLM_API_KEY" \\\n  --host 0.0.0.0 --port 8000',
       },
       tgi: {
         id: 'tgi',
@@ -1743,7 +1743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**同時実行**:FAQによれば、OllamaはOLLAMA_NUM_PARALLEL(デフォルト1)とリクエストキュー(OLLAMA_MAX_QUEUE、デフォルト512)で並列リクエストを処理しますが、continuous batchingやPagedAttention型のメモリ管理は文書化されておらず、vLLMやNIMのように多数の同時ユーザーを想定した設計ではありません。',
           '**マルチGPU**:Ollamaは1台のマシン内で大きなモデルをGPU間に分割できますが、vLLMに匹敵するネイティブなテンソル並列やマルチノード分散サービングは持ちません。',
-          '**Kubernetes**:コミュニティ管理のHelmチャートしか存在せず、自社製のKubernetes Operator、オートスケーラー統合、ベンダーサポート契約はありません。',
+          '**Kubernetes**:GitHubのREADMEに載っているのはコミュニティ管理のHelmチャートのみで、自社製のKubernetes Operatorやオートスケーラー統合はドキュメントに記載がありません。',
           '**可観測性**:Ollamaのドキュメントにはメトリクスのエンドポイントの記載がなく、vLLMやTGIとは異なります。',
           'エンタープライズ内でもOllamaが適切なツールとなる場面:開発者のノートパソコン、社内トラフィックが少ない部門単位の試作、あるいは1度に1ユーザーしか使わないエアギャップ型エッジデバイスです。トラフィックがマルチテナントの並行処理を必要とするようになったら、vLLM、TGI、NIMへ移行してください -- そのハードウェア面の移行については[ローカルLLMのマルチGPU構成](/ja/local-llms/multi-gpu-local-llms)をご覧ください。',
         ],
@@ -1783,8 +1783,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'licensing-support',
         title: 'ライセンスとサポート体制の比較',
         content: [
-          '**ライセンスは、これらの選択肢の総所有コストを最も大きく左右する項目です。** vLLMはApache 2.0ライセンスで、どの規模でも無償で運用でき、TGI(Apache 2.0、現在はアーカイブ済み)も同様です。支払うのは土台となるGPUインフラのみです。NVIDIA NIMは本番利用にNVIDIA AI Enterpriseライセンスが必要で、NVIDIAのFAQによればGPUあたり年額4,500ドルからで、GPU費用に上乗せされます。NVIDIA Developer Programのメンバーは、最大16 GPUでの研究・開発・テストを無償で行えます。予算化の前に、最新の条件をNVIDIAに直接確認してください。OllamaはMITライセンスで無償ですが、サポートはコミュニティのGitHubとDiscordに限られ、ドキュメントに有償のエンタープライズサポート層の記載はありません。',
-          '本番システムでは、サポート体制もライセンス費用と同じくらい重要です。vLLMのサポートはGitHub issueとコミュニティチャネルが中心で(人気の課題には速いがSLAなし)、TGIは軽微なメンテナンスのみ、NIMにはNVIDIAのサポート契約が付き、Ollamaにはコミュニティチャネル以外のサポート窓口がありません。',
+          '**ライセンスは、これらの選択肢の総所有コストを最も大きく左右する項目です。** vLLMはApache 2.0ライセンスで、どの規模でも無償で運用でき、TGI(Apache 2.0、現在はアーカイブ済み)も同様です。支払うのは土台となるGPUインフラのみです。NVIDIA NIMは本番利用にNVIDIA AI Enterpriseライセンスが必要で、NVIDIAのFAQによればGPUあたり年額4,500ドルからで、GPU費用に上乗せされます。NVIDIA Developer Programのメンバーは、最大16 GPUでの研究・開発・実験を無償で行えます。予算化の前に、最新の条件をNVIDIAに直接確認してください。OllamaはMITライセンスで無償ですが、サポートはコミュニティのGitHubとDiscordに限られ、ドキュメントに有償のエンタープライズサポート層の記載はありません。',
+          '本番システムでは、サポート体制もライセンス費用と同じくらい重要です。vLLMのサポートはGitHub issueとコミュニティチャネルが中心で(人気の課題には速いがSLAなし)、TGIは軽微なメンテナンスのみ、NIMにはNVIDIAのサポート契約が付き、Ollamaのドキュメントにはコミュニティチャネル以外のサポート窓口の記載がありません。',
         ],
       },
       observability: {
@@ -1800,18 +1800,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'when-to-use',
         title: 'どの推論サーバーを選ぶべきか',
         content: [
-          '**オープンソースの総合的な第一候補:vLLM** -- 大きなコミュニティ、幅広いハードウェア対応、マルチGPUツール、頻繁なリリース。',
+          '**オープンソースの有力な第一候補:vLLM** -- 大きなコミュニティ、幅広いハードウェア対応、マルチGPUツール、頻繁なリリース。',
           '**すでにHugging Face中心の場合:それでもvLLMまたはSGLangで計画** -- TGIはメンテナンスモードのため、既存デプロイにのみ残してください。',
-          '**ベンダーサポートが必要な場合:NVIDIA NIM** -- ベンダー支援付きのターンキー導入で、ライセンス費用がかかります。',
+          '**ベンダーサポートが必要な場合の選択肢:NVIDIA NIM** -- ベンダー支援付きのターンキー導入で、ライセンス費用がかかります。',
           '**本番マルチテナントトラフィックには不向き:Ollama** -- 開発者マシンとシングルユーザーのエッジ展開にとどめてください。',
         ],
         items: [
           '🧭 多数のチームに共有の社内LLM APIを提供するプラットフォームチーム → Kubernetes上でセルフホストするvLLM。',
-          '🧭 サポート契約と監査証跡が必要な規制業界の企業 → NVIDIA NIM。',
+          '🧭 ベンダーのサポート契約を求める規制業界の企業 → NVIDIA NIM。監査ログは前段に自前で追加します（関連するエンタープライズコンプライアンスのガイドを参照）。',
           '🧭 モデルホスティングをすでにHugging Face Hubに標準化しているチーム → Hubのモデルを直接読み込めるvLLM。TGIは既存デプロイにのみ残す。',
           '🧭 インフラが整う前にPoCを作る開発者 → Ollamaで始め、同時トラフィックが現実になったらvLLMへ移行。',
-          '❌ 同時ユーザーが数人を超えると見込まれるなら、Ollamaを共有の本番エンドポイントの背後に置かず、vLLMを使う。',
-          '❌ リクエスト負荷に対するKubernetesネイティブのオートスケールが必要なら、OllamaにはKEDAによるキュー深度スケーリングに相当する機能がないため、vLLMまたはNIMを使う。',
+          '❌ 同時ユーザーが数人を超えると見込まれるなら、Ollamaは共有の本番エンドポイント向けに設計されていないため、vLLMを使う。',
+          '❌ リクエスト負荷に対するKubernetesネイティブのオートスケールが必要なら、OllamaのドキュメントにはKEDAによるキュー深度スケーリングに相当する機能の記載がないため、vLLMまたはNIMを使う。',
         ],
       },
       commonMistakes: {
@@ -1819,7 +1819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'エンタープライズ推論基盤の見積もりでよくある間違い',
         items: [
           '**同時リクエスト数ではなくパラメータ数でGPUを見積もる。** モデル1コピーがVRAMに収まるだけの規模のGPUフリートには同時ユーザー向けの余裕がありません -- ピーク並行数で見積もり、その上でモデルがまだ収まるか確認してください。',
-          '**Ollamaを共有本番ロードバランサーの背後に展開する。** 2ユーザーのデモでは機能しますが、数百人を想定した設計には耐えません。',
+          '**Ollamaを共有本番ロードバランサーの背後に展開する。** 2ユーザーのデモでは機能しますが、数百人規模の運用を想定した設計ではありません。',
           '**CPU利用率でスケールする。** GPU推論PodのCPU使用率は負荷に関わらずほとんど動きません -- 代わりにキューの深さやGPU利用率でスケールしてください。',
           '**TGIの古いキャッシュ済みイメージのライセンス確認を怠る。** 取得したイメージタグがApache 2.0版に対応しているか、キャッシュされたHFOIL 1.0時代のビルドでないか確認してください。',
           '**GPU単位の最新価格をNVIDIAに直接確認せずにNIMの予算を組む。** エンタープライズソフトウェアの購読価格は変動します。古い見積もりは予算の根拠にはなりません。',
@@ -1843,7 +1843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'vLLMとNVIDIA NIMの違いは何ですか?', a: 'vLLMは、自分でホストして運用する無償のオープンソース(Apache 2.0)推論サーバーです。NVIDIA NIMはNVIDIAのビルド済みコンテナで、NVIDIAの現行ドキュメントによればNVIDIA最適化済みのvLLMまたはSGLangエンジンをパッケージ化しています。本番利用にはNVIDIA AI Enterpriseライセンスが必要で、ベンダーサポートが付きます。vLLMはチューニングとサポートを自前で行う代わりに制御権とライセンス料ゼロが得られ、NIMはそれをライセンス費用と引き換えにします。PromptQuorumは両者のベンチマーク比較を行っていません。' },
           { q: 'Ollamaはエンタープライズのマルチユーザー推論サービングに使えますか?', a: '本番のマルチテナントトラフィックには推奨しません。OllamaはOLLAMA_NUM_PARALLEL(デフォルト1)とキューで並列リクエストを処理しますが、continuous batchingやPagedAttention型のメモリ管理は文書化されておらず、Kubernetesネイティブのオートスケールもありません。開発者のマシン、シングルユーザーのエッジデバイス、低トラフィックの社内プロトタイプには適しています。' },
-          { q: 'NVIDIA NIMはオープンソースのvLLMやTGIに対してライセンス費用に見合う価値がありますか?', a: 'ベンダーサポート契約とNVIDIAのパッケージ化がライセンス費用に見合うか、それともインフラを無償に保って自分で運用するか次第です。サポート契約と監査証跡が必要な規制対象の企業は費用を正当化することが多く、社内にMLインフラの専門知識があるチームはライセンス費用なしでvLLMを運用することが多いです。' },
+          { q: 'NVIDIA NIMはオープンソースのvLLMやTGIに対してライセンス費用に見合う価値がありますか?', a: 'ベンダーサポート契約とNVIDIAのパッケージ化がライセンス費用に見合うか、それともインフラを無償に保って自分で運用するか次第です。ベンダーのサポート契約を求める規制対象の企業は費用を正当化することが多く（監査ログは別途追加する必要があります）、社内にMLインフラの専門知識があるチームはライセンス費用なしでvLLMを運用することが多いです。' },
           { q: '複数のGPUとノードにわたってLLM推論をどうスケールしますか?', a: 'テンソル並列で1つのモデルの層を1ノード内のGPUに分割し、モデルが1ノードのGPUメモリ合計を超える場合はパイプライン並列で複数ノードに分割します。vLLMは両方に対応し(マルチノードはRayまたはmultiprocessing)、TGIはテンソル並列に対応しますが公式のマルチノードツールは少なくメンテナンスモードです。NIMはモデルプロファイルでマルチGPUモデルをデプロイし、NIM OperatorでKubernetes上で動作します。' },
           { q: '各推論サーバーはどの量子化形式に対応していますか?', a: 'vLLMはGPTQ、AWQ、FP8、INT4に対応します。TGIはbitsandbytes、GPTQ、AWQ、EETQ、Marlin、FP8を挙げています。NVIDIA NIMはモデルプロファイルとGPUごとに精度を選びます。OllamaはQ4〜Q8精度のGGUF形式を使い、マルチテナントのスループットではなく単一マシンでのメモリ節約が目的です。' },
           { q: 'vLLMやTGIをKubernetesに展開するにはどうしますか?', a: 'vLLMはHelmチャート、KServe、vllm-projectのproduction-stackなど、複数のKubernetes導入方法を文書化しています。TGIはコンテナイメージを提供しており、独自のマニフェストで包んで使います。GPU割り当てに合わせたリソース要求を設定し、CPUではなくリクエストキュー深度またはGPU使用率でオートスケールし、メトリクスのエンドポイントを収集するPrometheus ServiceMonitorを追加してください。' },
@@ -1852,7 +1852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '複数モデルには別々のGPUフリートが必要ですか、それとも1つのプールを共有できますか?', a: '実務上、複数モデルを運用する企業は通常、1つのプールを共有するのではなく、モデルごとに独立したレプリカプールを運用します。GPUメモリはサイズの大きく異なるモデル間できれいに時分割できないためです。複数モデルを同じGPUレプリカに同居させようとするより、アプリケーション層やゲートウェイ層で適切なプールへリクエストをルーティングしてください。' },
           { q: 'vLLM、TGI、NVIDIA NIMでライセンスはどう異なりますか?', a: 'vLLMとHugging Face TGIはどちらもApache 2.0ライセンスで、どの規模でも無償です。支払うのは基盤のGPUインフラのみです。NVIDIA NIMは本番利用にNVIDIA AI Enterpriseライセンスが必要で、NVIDIAのFAQによればGPUあたり年額4,500ドルからで、GPUハードウェア費用に上乗せされます。Developer Programのメンバーは最大16 GPUで研究・開発向けにNIMをセルフホストできます。最新の価格はNVIDIAに直接確認してください。OllamaはMITライセンスで無償、サポートはコミュニティのみです。' },
           { q: 'Hugging Face TGIはまだメンテナンスされていますか?', a: 'TGIはメンテナンスモードです。READMEによれば、Hugging Faceは軽微なバグ修正、ドキュメント改善、軽量なメンテナンスのみを受け付けており、GitHubリポジトリは2026年3月にアーカイブ(読み取り専用)されました。最終リリースは2025年12月のv3.3.7で、Hugging Faceは新規デプロイにvLLMとSGLangを推奨しています。既存のTGIデプロイは動き続けますが、移行を計画してください。' },
-          { q: 'vLLMとTensorRT-LLMはどう違いますか?', a: 'vLLMは、Hugging Face形式のモデルを直接読み込み、NVIDIAとAMDのGPUやその他のハードウェアで動く汎用のサービングエンジンです。TensorRT-LLMは、モデルを特定のNVIDIA GPU向けのエンジンにコンパイルするNVIDIAのライブラリで、ビルド手順が加わります。vLLMは通常、導入が簡単でハードウェアとモデルの対応範囲が広く、TensorRT-LLMはNVIDIAに腹を決めてビルド手順を受け入れるチームに向きます。[TensorRT-LLMの解説](/ja/power-local-llm/tensorrt-llm-explained)を参照してください。' },
+          { q: 'vLLMとTensorRT-LLMはどう違いますか?', a: 'vLLMは、Hugging Face形式のモデルを直接読み込み、NVIDIAとAMDのGPUやその他のハードウェアで動く汎用のサービングエンジンです。TensorRT-LLMは、NVIDIA GPU向けのNVIDIAの推論ライブラリです。以前のバージョンは、モデルを事前にGPU固有のTensorRTエンジンへコンパイルしていました。NVIDIAの現行ドキュメントは、TensorRTエンジンバックエンドが削除されたPyTorchベースのワークフローを説明しているため、導入するバージョンを確認してください。vLLMは通常、導入が簡単でハードウェアとモデルの対応範囲が広く、TensorRT-LLMはNVIDIA GPUに専念するチームに向きます。[TensorRT-LLMの解説](/ja/power-local-llm/tensorrt-llm-explained)を参照してください。' },
         ],
       },
       relatedReading: {
@@ -1964,7 +1964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '在笔记本上运行一个 AI 模型，与用共享 GPU 集群服务数百名员工或客户，是两类不同的问题。vLLM 是为后者打造的免费软件。NVIDIA NIM 以付费、预打包产品的形式完成同样的工作，并有 NVIDIA 的支持。Hugging Face 的 TGI 也曾为此而生，但现已进入维护模式；而大多数人用来在本地试用模型的 Ollama，并非为这么多同时在线的用户设计。' },
         ],
         items: [
-          'vLLM 是面向高吞吐多租户服务的主要开源（Apache 2.0）推理服务器，支持连续批处理以及张量、流水线和专家并行；Hugging Face TGI 提供类似的核心功能，但现已进入维护模式。',
+          'vLLM 是面向高吞吐多租户服务的主要开源（Apache 2.0）推理服务器，支持连续批处理以及张量和流水线并行；Hugging Face TGI 提供类似的核心功能，但现已进入维护模式。',
           'NVIDIA NIM 是付费的预构建微服务容器（生产使用需要 NVIDIA AI Enterprise 许可），封装了带 NVIDIA 优化的 vLLM 或 SGLang 引擎，并有厂商支持。',
           'Ollama并非为企业级多租户服务而设计——它是面向单节点、单用户的运行时;将其用于开发者笔记本电脑和边缘/部门级原型,而非生产API流量。',
           'Kubernetes 部署各不相同：vLLM 提供 Helm、KServe 和 production-stack 等路径，TGI 仅提供容器镜像，NIM 有 NVIDIA 自家的 Operator，Ollama 只有社区 Helm chart，没有原生自动扩缩容钩子。',
@@ -2002,7 +2002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vllm',
         title: '了解vLLM:高吞吐量开源引擎',
         content: [
-          '**vLLM是专为多GPU高吞吐量服务而构建的开源推理服务器(Apache 2.0)。** 它起源于UC伯克利的Sky Computing Lab,是生产级LLM API中部署最广泛的开源引擎之一。',
+          '**vLLM是专为多GPU高吞吐量服务而构建的开源推理服务器(Apache 2.0)。** 它起源于UC伯克利的Sky Computing Lab,是生产级LLM API中被广泛使用的开源引擎。',
         ],
         items: [
           '**PagedAttention**:以固定大小的块管理KV缓存,而非为每个请求分配连续内存,从而提高可达到的GPU内存利用率,让更多并发请求共享一块GPU。',
@@ -2012,7 +2012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**兼容OpenAI的API**:`vllm serve <model>` 提供OpenAI Chat Completions API的直接替代,最大限度减少应用端集成工作。',
           'vLLM提供官方Helm chart,并与KServe集成以实现Kubernetes原生的模型服务,自动扩缩容可依据请求队列深度或GPU利用率驱动。',
         ],
-        codeBlock: '# 在4块GPU上以张量并行方式部署模型\npip install vllm\n\n# 未设置 --api-key 时端点接受未认证请求,请勿公开暴露\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 4 \\\n  --gpu-memory-utilization 0.9 \\\n  --api-key "$VLLM_API_KEY" \\\n  --host 0.0.0.0 --port 8000',
+        codeBlock: '# 在4块GPU上以张量并行方式部署模型\npip install vllm\n\n# --api-key 仅保护 /v1、/v2、/inference 和 /cohere 路径，其他端点仍然开放。暴露端口之前，请先在前面部署防火墙或反向代理\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 4 \\\n  --gpu-memory-utilization 0.9 \\\n  --api-key "$VLLM_API_KEY" \\\n  --host 0.0.0.0 --port 8000',
       },
       tgi: {
         id: 'tgi',
@@ -2053,7 +2053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**并发**：据其常见问题解答，Ollama 通过 OLLAMA_NUM_PARALLEL（默认 1）和请求队列（OLLAMA_MAX_QUEUE，默认 512）处理并行请求，但文档中没有连续批处理或 PagedAttention 式显存管理，因此不像 vLLM 或 NIM 那样为大量同时在线的用户而设计。',
           '**多GPU**:Ollama可以在一台机器上将大模型拆分到多块GPU,但没有可与vLLM相媲美的原生张量并行或多节点分布式服务。',
-          '**Kubernetes**:只有社区维护的Helm chart;没有自研的Kubernetes Operator、自动扩缩容器集成或厂商支持合同。',
+          '**Kubernetes**:GitHub README 中列出了社区维护的 Helm chart；文档中未列出自研的 Kubernetes Operator 或自动扩缩容集成。',
           '**可观测性**：Ollama 的文档未描述指标端点，这一点不同于 vLLM 和 TGI。',
           'Ollama在企业内仍然适用的场景:开发者笔记本电脑、内部流量较小的部门级原型,或一次只服务一个用户的隔离边缘设备。一旦流量需要多租户并发能力,就应迁移到vLLM、TGI或NIM——关于这一迁移的硬件层面,请参阅[本地LLM的多GPU配置](/zh/local-llms/multi-gpu-local-llms)。',
         ],
@@ -2093,8 +2093,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'licensing-support',
         title: '许可协议与支持模式对比',
         content: [
-          '**在这些方案之间，许可是对总拥有成本影响最大的一项。** vLLM 采用 Apache 2.0 许可，任何规模下均可免费运行，TGI（Apache 2.0，现已归档）亦然 -- 你只需为底层 GPU 基础设施付费。NVIDIA NIM 的生产使用需要 NVIDIA AI Enterprise 许可，据 NVIDIA 常见问题解答，起价为每块 GPU 每年 4,500 美元，另加 GPU 成本；NVIDIA Developer Program 成员可在最多 16 块 GPU 上免费用于研究、开发和测试。编制预算前，请直接向 NVIDIA 确认最新条款。Ollama 采用 MIT 许可且免费，支持仅限社区 GitHub 与 Discord -- 其文档中未列出付费的企业支持层级。',
-          '对生产系统而言，支持模式与许可成本同样重要：vLLM 的支持来自 GitHub issue 和社区渠道（热门问题响应快，但没有 SLA），TGI 只接收小幅维护，NIM 附带 NVIDIA 支持合同，而 Ollama 除社区渠道外没有任何支持途径。',
+          '**在这些方案之间，许可是对总拥有成本影响最大的一项。** vLLM 采用 Apache 2.0 许可，任何规模下均可免费运行，TGI（Apache 2.0，现已归档）亦然 -- 你只需为底层 GPU 基础设施付费。NVIDIA NIM 的生产使用需要 NVIDIA AI Enterprise 许可，据 NVIDIA 常见问题解答，起价为每块 GPU 每年 4,500 美元，另加 GPU 成本；NVIDIA Developer Program 成员可在最多 16 块 GPU 上免费用于研究、开发和实验。编制预算前，请直接向 NVIDIA 确认最新条款。Ollama 采用 MIT 许可且免费，支持仅限社区 GitHub 与 Discord -- 其文档中未列出付费的企业支持层级。',
+          '对生产系统而言，支持模式与许可成本同样重要：vLLM 的支持来自 GitHub issue 和社区渠道（热门问题响应快，但没有 SLA），TGI 只接收小幅维护，NIM 附带 NVIDIA 支持合同，而 Ollama 的文档中未列出社区渠道之外的任何支持途径。',
         ],
       },
       observability: {
@@ -2110,18 +2110,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'when-to-use',
         title: '该选择哪个推理服务器',
         content: [
-          '**综合最佳开源选择：vLLM** -- 社区广泛、硬件支持面广、多 GPU 工具完善、版本更新频繁。',
+          '**开源方案的常见首选：vLLM** -- 社区广泛、硬件支持面广、多 GPU 工具完善、版本更新频繁。',
           '**已在使用 Hugging Face：仍应规划 vLLM 或 SGLang** -- TGI 已进入维护模式，仅为现有部署保留。',
-          '**需要厂商支持时的最佳选择：NVIDIA NIM** -- 有厂商背书、开箱即用，需付许可费用。',
+          '**需要厂商支持时的选择：NVIDIA NIM** -- 有厂商背书、开箱即用，需付许可费用。',
           '**不适合生产多租户流量:Ollama**——留给开发者机器和单用户边缘部署。',
         ],
         items: [
           '🧭 为多个团队运营共享内部 LLM API 的平台团队 → 在 Kubernetes 上自托管 vLLM。',
-          '🧭 需要支持合同和审计跟踪的受监管企业 → NVIDIA NIM。',
+          '🧭 需要厂商支持合同的受监管企业 → NVIDIA NIM；审计日志需自行在前端另行添加（参见相关的企业合规指南）。',
           '🧭 已将模型托管标准化在 Hugging Face Hub 的团队 → vLLM，可直接加载 Hub 模型；TGI 仅为现有部署保留。',
           '🧭 在基础设施就绪前构建概念验证的开发者 → 先用 Ollama，并发流量真正出现后迁移到 vLLM。',
-          '❌ 如果预计同时在线用户超过寥寥几人，不要把 Ollama 放在共享的生产端点之后 -- 改用 vLLM。',
-          '❌ 如果需要按请求负载进行 Kubernetes 原生自动扩缩容，Ollama 没有对应 KEDA 队列深度扩缩的功能 -- 请使用 vLLM 或 NIM。',
+          '❌ 如果预计同时在线用户超过寥寥几人，Ollama 并非为共享的生产端点而设计 -- 建议改用 vLLM。',
+          '❌ 如果需要按请求负载进行 Kubernetes 原生自动扩缩容，Ollama 的文档中未列出与 KEDA 队列深度扩缩对应的功能 -- 请使用 vLLM 或 NIM。',
         ],
       },
       commonMistakes: {
@@ -2129,7 +2129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '评估企业推理基础设施规模时的常见错误',
         items: [
           '**按参数量而非并发请求数评估GPU规模。** 仅按一份模型副本能装入显存来评估的GPU集群,没有余量应对并发用户——先按峰值并发评估,再检查模型是否仍能装入。',
-          '**将Ollama部署在共享生产负载均衡器后面。** 在两个用户的演示中可以运行;但支撑不了面向数百用户设计的系统。',
+          '**将Ollama部署在共享生产负载均衡器后面。** 在两个用户的演示中可以运行;但并非为面向数百用户的部署而设计。',
           '**按CPU利用率扩缩容。** GPU推理Pod的CPU利用率几乎不随负载变化——应改为按队列深度或GPU利用率扩缩容。',
           '**忽略对TGI旧缓存镜像的许可检查。** 请确认拉取的镜像标签对应Apache 2.0版本,而非缓存的HFOIL 1.0时代构建。',
           '**未直接向NVIDIA确认当前每GPU价格就为NIM做预算。** 企业软件订阅价格会变动;过时的报价不能作为预算依据。',
@@ -2153,7 +2153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'vLLM和NVIDIA NIM有什么区别?', a: 'vLLM 是免费开源（Apache 2.0）的推理服务器，需要你自己托管和运维。NVIDIA NIM 是 NVIDIA 提供的预构建容器，据 NVIDIA 当前文档，它封装了带 NVIDIA 优化的 vLLM 或 SGLang 引擎；生产使用需要 NVIDIA AI Enterprise 许可，并附带厂商支持。vLLM 让你拥有控制权且无需许可费，代价是调优和支持要自己承担；NIM 则以许可费换取这些。PromptQuorum 没有对两者做过基准测试对比。' },
           { q: 'Ollama能用于企业级多用户推理服务吗?', a: '不建议用于生产多租户流量。Ollama 通过 OLLAMA_NUM_PARALLEL（默认 1）和请求队列处理并行请求，但文档中没有连续批处理或 PagedAttention 式显存管理，也不提供 Kubernetes 原生自动扩缩容。它适合开发者机器、单用户边缘设备或低流量的内部原型。' },
-          { q: 'NVIDIA NIM相对于开源的vLLM或TGI,许可成本值得吗?', a: '取决于厂商支持合同和 NVIDIA 的打包是否值得你付出许可成本，还是保持基础设施免费、自己运维。需要支持合同和审计留痕的受监管企业通常认为值得；拥有自有 ML 基础设施专长的团队往往无需许可费用即可运行 vLLM。' },
+          { q: 'NVIDIA NIM相对于开源的vLLM或TGI,许可成本值得吗?', a: '取决于厂商支持合同和 NVIDIA 的打包是否值得你付出许可成本，还是保持基础设施免费、自己运维。需要厂商支持合同的受监管企业通常认为值得（审计日志仍需另行添加）；拥有自有 ML 基础设施专长的团队往往无需许可费用即可运行 vLLM。' },
           { q: '如何在多块GPU和多个节点之间扩展LLM推理?', a: '用张量并行把一个模型的层拆分到单个节点内的 GPU 上；当模型超过单节点 GPU 显存总和时，用流水线并行拆分到多个节点。vLLM 两者都支持（多节点可用 Ray 或 multiprocessing）；TGI 支持张量并行，官方多节点工具较少，并已进入维护模式；NIM 通过其模型配置部署多 GPU 模型，并借助 NIM Operator 在 Kubernetes 上运行。' },
           { q: '每个推理服务器支持哪些量化格式?', a: 'vLLM 支持 GPTQ、AWQ、FP8 和 INT4。TGI 列出 bitsandbytes、GPTQ、AWQ、EETQ、Marlin 和 FP8。NVIDIA NIM 按模型配置和 GPU 选择精度。Ollama 使用 Q4 到 Q8 精度的 GGUF 格式，目标是节省单机显存，而非多租户吞吐量。' },
           { q: '如何在Kubernetes上部署vLLM或TGI?', a: 'vLLM 记录了多种 Kubernetes 部署途径，包括 Helm chart、KServe 和 vllm-project 的 production-stack。TGI 提供容器镜像，需要你自行用清单封装。请按 GPU 分配设置资源请求，按请求队列深度或 GPU 利用率而非 CPU 配置自动扩缩容，并添加 Prometheus ServiceMonitor 来抓取指标端点。' },
@@ -2162,7 +2162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '多个模型是否需要独立的GPU集群,还是可以共享一个池?', a: '实践中,运行多个模型的企业通常会为每个模型运行独立的副本池,而非共享一个池,因为GPU显存无法在大小差异很大的模型之间干净地共享。应在应用层或网关层将请求路由到正确的池,而不是尝试将多个模型部署在相同的GPU副本上。' },
           { q: 'vLLM、TGI和NVIDIA NIM的许可协议有何不同?', a: 'vLLM 与 Hugging Face TGI 均采用 Apache 2.0 许可，任何规模下都免费 -- 你只需为底层 GPU 基础设施付费。NVIDIA NIM 的生产使用需要 NVIDIA AI Enterprise 许可，据 NVIDIA 常见问题解答，起价为每块 GPU 每年 4,500 美元，另加 GPU 硬件成本；Developer Program 成员可在最多 16 块 GPU 上自托管 NIM 用于研究和开发。请直接向 NVIDIA 确认最新价格。Ollama 采用 MIT 许可且免费，仅有社区支持。' },
           { q: 'Hugging Face TGI 还在维护吗？', a: 'TGI 已进入维护模式。其 README 称 Hugging Face 只接受小幅缺陷修复、文档改进和轻量维护，GitHub 仓库已于 2026 年 3 月归档（只读）。最新版本是 2025 年 12 月的 v3.3.7，Hugging Face 建议新部署使用 vLLM 与 SGLang。现有 TGI 部署仍可运行，但应规划迁移。' },
-          { q: 'vLLM 与 TensorRT-LLM 如何比较？', a: 'vLLM 是通用的服务引擎，可直接加载 Hugging Face 格式的模型，并运行在 NVIDIA、AMD GPU 及其他硬件上。TensorRT-LLM 是 NVIDIA 的库，会把模型编译成针对特定 NVIDIA GPU 的引擎，因此多出一个构建步骤。vLLM 通常意味着部署更简单、硬件与模型覆盖更广；TensorRT-LLM 适合已锁定 NVIDIA 并能接受构建步骤的团队。参见 [TensorRT-LLM 详解](/zh/power-local-llm/tensorrt-llm-explained)。' },
+          { q: 'vLLM 与 TensorRT-LLM 如何比较？', a: 'vLLM 是通用的服务引擎，可直接加载 Hugging Face 格式的模型，并运行在 NVIDIA、AMD GPU 及其他硬件上。TensorRT-LLM 是 NVIDIA 面向 NVIDIA GPU 的推理库。早期版本会把模型预先编译成针对特定 GPU 的 TensorRT 引擎；NVIDIA 当前文档描述的是基于 PyTorch 的工作流，其中 TensorRT 引擎后端已被移除，因此请确认你部署的版本。vLLM 通常意味着部署更简单、硬件与模型覆盖更广；TensorRT-LLM 适合已锁定 NVIDIA GPU 的团队。参见 [TensorRT-LLM 详解](/zh/power-local-llm/tensorrt-llm-explained)。' },
         ],
       },
       relatedReading: {
@@ -2312,7 +2312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vllm',
         title: 'فهم vLLM: محرك مفتوح المصدر عالي الإنتاجية',
         content: [
-          '**vLLM خادم استدلال مفتوح المصدر (Apache 2.0) مصمم خصيصاً للخدمة عالية الإنتاجية متعددة وحدات المعالجة الرسومية.** نشأ من مختبر Sky Computing في جامعة كاليفورنيا بيركلي، وهو أحد أكثر محركات المصدر المفتوح انتشاراً لواجهات برمجة تطبيقات نماذج اللغة الكبيرة في الإنتاج.',
+          '**vLLM خادم استدلال مفتوح المصدر (Apache 2.0) مصمم خصيصاً للخدمة عالية الإنتاجية متعددة وحدات المعالجة الرسومية.** نشأ من مختبر Sky Computing في جامعة كاليفورنيا بيركلي، وهو محرك مفتوح المصدر واسع الاستخدام لواجهات برمجة تطبيقات نماذج اللغة الكبيرة في الإنتاج.',
         ],
         items: [
           '**PagedAttention**: يدير ذاكرة التخزين المؤقت KV في كتل ذات حجم ثابت بدلاً من تخصيص متجاور لكل طلب، ما يرفع استخدام ذاكرة وحدة المعالجة الرسومية القابل للتحقيق ويتيح لمزيد من الطلبات المتزامنة مشاركة وحدة معالجة رسومية واحدة.',
@@ -2322,7 +2322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**واجهة برمجة تطبيقات متوافقة مع OpenAI**: يوفّر `vllm serve <model>` بديلاً مباشراً لواجهة OpenAI Chat Completions، ما يقلل من عمل التكامل في جانب التطبيق.',
           'يوفّر vLLM مخطط Helm رسمياً ويتكامل مع KServe لخدمة النماذج الأصيلة في Kubernetes، مع توسّع تلقائي مدفوع بعمق طابور الطلبات أو استخدام وحدة المعالجة الرسومية.',
         ],
-        codeBlock: '# خدمة نموذج بتوازي موتري عبر 4 وحدات معالجة رسومات\npip install vllm\n\n# بدون --api-key تقبل نقطة النهاية طلبات غير موثّقة؛ لا تعرضها للعامة\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 4 \\\n  --gpu-memory-utilization 0.9 \\\n  --api-key "$VLLM_API_KEY" \\\n  --host 0.0.0.0 --port 8000',
+        codeBlock: '# خدمة نموذج بتوازي موتري عبر 4 وحدات معالجة رسومات\npip install vllm\n\n# يحمي --api-key المسارات /v1 و/v2 و/inference و/cohere فقط؛ وتبقى نقاط النهاية الأخرى مفتوحة. ضع جدار حماية أو وكيلًا عكسيًا أمامها قبل كشف المنفذ\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 4 \\\n  --gpu-memory-utilization 0.9 \\\n  --api-key "$VLLM_API_KEY" \\\n  --host 0.0.0.0 --port 8000',
       },
       tgi: {
         id: 'tgi',
@@ -2363,7 +2363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**التزامن**: وفق الأسئلة الشائعة، يعالج Ollama الطلبات المتوازية عبر OLLAMA_NUM_PARALLEL (الافتراضي 1) وطابور للطلبات (OLLAMA_MAX_QUEUE، الافتراضي 512)، لكنه لا يوثّق دفعات مستمرة ولا إدارة ذاكرة على نمط PagedAttention، لذا لم يُصمَّم لعدد كبير من المستخدمين المتزامنين كما هو حال vLLM أو NIM.',
           '**متعدد وحدات المعالجة الرسومية**: يمكن لـ Ollama تقسيم نموذج كبير عبر وحدات معالجة رسومات جهاز واحد، لكن دون خدمة موزّعة أصيلة متوازية موترياً أو متعددة العقد تضاهي vLLM.',
-          '**Kubernetes**: لا توجد سوى مخططات Helm يديرها المجتمع؛ لا يوجد مشغّل Kubernetes أصيل، ولا تكامل مع أدوات التوسّع التلقائي، ولا عقد دعم من المورد.',
+          '**Kubernetes**: يُدرج ملف README على GitHub مخطط Helm يديره المجتمع؛ ولا تذكر الوثائق مشغّل Kubernetes أصيلًا ولا تكاملًا مع أدوات التوسّع التلقائي.',
           '**قابلية المراقبة**: لا تصف وثائق Ollama نقطة نهاية للمقاييس، بخلاف vLLM وTGI.',
           'أين يظل Ollama الأداة الصحيحة داخل مؤسسة: أجهزة المطورين المحمولة، نموذج أولي قسمي بحركة داخلية منخفضة، أو جهاز طرفي معزول يخدم مستخدماً واحداً في كل مرة. بمجرد أن تتطلب الحركة تزامناً متعدد المستأجرين، انتقل إلى vLLM أو TGI أو NIM -- راجع [إعدادات نماذج اللغة المحلية متعددة وحدات المعالجة الرسومية](/ar/local-llms/multi-gpu-local-llms) للجانب الخاص بالأجهزة من هذا الانتقال.',
         ],
@@ -2403,8 +2403,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'licensing-support',
         title: 'مقارنة الترخيص ونموذج الدعم',
         content: [
-          '**الترخيص هو البند الذي يغيّر التكلفة الإجمالية للملكية أكثر من غيره بين هذه الخيارات.** يخضع vLLM لترخيص Apache 2.0 ومجاني التشغيل بأي حجم، وكذلك TGI (Apache 2.0، مؤرشف الآن) -- تدفع فقط مقابل بنية GPU التحتية. ويتطلب NVIDIA NIM ترخيص NVIDIA AI Enterprise للإنتاج، وتبدأ أسعاره وفق الأسئلة الشائعة لدى NVIDIA من 4,500 دولار لكل GPU سنويًا فوق تكلفة GPU؛ والبحث والتطوير والاختبار على ما يصل إلى 16 GPU مجاني لأعضاء NVIDIA Developer Program. تأكّد من الشروط الحالية مباشرة مع NVIDIA قبل إعداد الميزانية. أما Ollama فبترخيص MIT ومجاني، والدعم محصور في GitHub وDiscord للمجتمع -- ولا تذكر وثائقه أي شريحة دعم مؤسسي مدفوعة.',
-          'نموذج الدعم لا يقل أهمية عن تكلفة الترخيص في أنظمة الإنتاج: يأتي دعم vLLM من قضايا GitHub وقنوات المجتمع (سريع للمشكلات الشائعة، بلا اتفاقية مستوى خدمة)، ويتلقى TGI صيانة طفيفة فقط، ويأتي NIM مع عقد دعم من NVIDIA، ولا يملك Ollama أي مسار دعم خارج قنوات المجتمع.',
+          '**الترخيص هو البند الذي يغيّر التكلفة الإجمالية للملكية أكثر من غيره بين هذه الخيارات.** يخضع vLLM لترخيص Apache 2.0 ومجاني التشغيل بأي حجم، وكذلك TGI (Apache 2.0، مؤرشف الآن) -- تدفع فقط مقابل بنية GPU التحتية. ويتطلب NVIDIA NIM ترخيص NVIDIA AI Enterprise للإنتاج، وتبدأ أسعاره وفق الأسئلة الشائعة لدى NVIDIA من 4,500 دولار لكل GPU سنويًا فوق تكلفة GPU؛ والبحث والتطوير والتجريب على ما يصل إلى 16 GPU مجاني لأعضاء NVIDIA Developer Program. تأكّد من الشروط الحالية مباشرة مع NVIDIA قبل إعداد الميزانية. أما Ollama فبترخيص MIT ومجاني، والدعم محصور في GitHub وDiscord للمجتمع -- ولا تذكر وثائقه أي شريحة دعم مؤسسي مدفوعة.',
+          'نموذج الدعم لا يقل أهمية عن تكلفة الترخيص في أنظمة الإنتاج: يأتي دعم vLLM من قضايا GitHub وقنوات المجتمع (سريع للمشكلات الشائعة، بلا اتفاقية مستوى خدمة)، ويتلقى TGI صيانة طفيفة فقط، ويأتي NIM مع عقد دعم من NVIDIA، ولا تذكر وثائق Ollama أي مسار دعم خارج قنوات المجتمع.',
         ],
       },
       observability: {
@@ -2420,18 +2420,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'when-to-use',
         title: 'أي خادم استدلال تختار؟',
         content: [
-          '**أفضل خيار مفتوح المصدر عمومًا: vLLM** -- مجتمع واسع ودعم أجهزة واسع وأدوات لعدة GPU وإصدارات متكررة.',
+          '**خيار افتراضي قوي مفتوح المصدر: vLLM** -- مجتمع واسع ودعم أجهزة واسع وأدوات لعدة GPU وإصدارات متكررة.',
           '**إن كنت على Hugging Face: خطّط مع ذلك على vLLM أو SGLang** -- TGI في وضع الصيانة، فأبقِه للنشرات القائمة فقط.',
-          '**الأفضل إن احتجت دعم الشركة المصنّعة: NVIDIA NIM** -- مدعوم من الشركة وجاهز للاستخدام، مقابل تكلفة ترخيص.',
+          '**مناسب إن احتجت دعم الشركة المصنّعة: NVIDIA NIM** -- مدعوم من الشركة وجاهز للاستخدام، مقابل تكلفة ترخيص.',
           '**غير مناسب لحركة إنتاج متعددة المستأجرين: Ollama** -- احتفظ به لأجهزة المطورين ونشر الحافة لمستخدم واحد.',
         ],
         items: [
           '🧭 فريق منصة يشغّل واجهة LLM داخلية مشتركة لفرق كثيرة → vLLM مستضافًا ذاتيًا على Kubernetes.',
-          '🧭 مؤسسة خاضعة للتنظيم تحتاج عقد دعم ومسار تدقيق → NVIDIA NIM.',
+          '🧭 مؤسسة خاضعة للتنظيم تريد عقد دعم من المورّد → NVIDIA NIM؛ أضف سجل التدقيق الخاص بك أمامه (راجع دليل الامتثال المؤسسي ذي الصلة).',
           '🧭 فريق وحّد استضافة النماذج على Hugging Face Hub → vLLM الذي يحمّل نماذج Hub مباشرة؛ وأبقِ TGI للنشرات القائمة فقط.',
           '🧭 مطورون يبنون إثبات مفهوم قبل تجهيز البنية التحتية → Ollama، ثم الانتقال إلى vLLM حين تصبح الحركة المتزامنة حقيقية.',
-          '❌ إن توقعت أكثر من حفنة مستخدمين متزامنين فلا تضع Ollama خلف نقطة نهاية إنتاج مشتركة -- استخدم vLLM بدلًا منه.',
-          '❌ إن احتجت توسيعًا تلقائيًا أصليًا على Kubernetes بحسب حمل الطلبات، فلا يملك Ollama ما يعادل التوسيع بعمق الطابور عبر KEDA -- استخدم vLLM أو NIM.',
+          '❌ إن توقعت أكثر من حفنة مستخدمين متزامنين فإن Ollama غير مصمم لنقطة نهاية إنتاج مشتركة -- استخدم vLLM بدلًا منه.',
+          '❌ إن احتجت توسيعًا تلقائيًا أصليًا على Kubernetes بحسب حمل الطلبات، فإن وثائق Ollama لا تذكر ما يعادل التوسيع بعمق الطابور عبر KEDA -- استخدم vLLM أو NIM.',
         ],
       },
       commonMistakes: {
@@ -2439,7 +2439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'أخطاء شائعة عند تحديد حجم بنية الاستدلال المؤسسية',
         items: [
           '**تحديد حجم وحدات المعالجة الرسومية بناءً على عدد المعاملات بدلاً من عدد الطلبات المتزامنة.** لا يترك أسطول وحدات معالجة رسومات مصمَّم فقط لتتسع نسخة واحدة من النموذج في VRAM أي هامش للمستخدمين المتزامنين -- حدد الحجم عند ذروة التزامن، ثم تحقق من أن النموذج ما زال يتسع.',
-          '**نشر Ollama خلف موازن حمل إنتاج مشترك.** يعمل في عرض توضيحي بمستخدمين اثنين؛ لكنه لا يصمد في تصميم مخصص لمئات المستخدمين.',
+          '**نشر Ollama خلف موازن حمل إنتاج مشترك.** يعمل في عرض توضيحي بمستخدمين اثنين؛ لكنه غير مصمم لنشر مخصص لمئات المستخدمين.',
           '**التوسّع بناءً على استخدام المعالج المركزي.** بالكاد تتحرك جرابات الاستدلال العاملة على وحدة معالجة رسومية من حيث استخدام المعالج المركزي بغض النظر عن الحمل -- وسّع بناءً على عمق الطابور أو استخدام وحدة المعالجة الرسومية بدلاً من ذلك.',
           '**تجاهل التحقق من الترخيص في صور TGI القديمة المخزَّنة مؤقتاً.** تأكد من أن علامة الصورة المسحوبة تطابق إصدار Apache 2.0، لا نسخة مبنية من حقبة HFOIL 1.0 مخزَّنة مؤقتاً.',
           '**وضع ميزانية لـ NIM دون تأكيد الأسعار الحالية لكل وحدة معالجة رسومية مباشرة من NVIDIA.** تتغير أسعار اشتراكات البرمجيات المؤسسية؛ وعرض سعر قديم ليس أساساً صالحاً للميزانية.',
@@ -2463,7 +2463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'ما الفرق بين vLLM وNVIDIA NIM؟', a: 'vLLM خادم استدلال مجاني ومفتوح المصدر (Apache 2.0) تستضيفه وتديره بنفسك. أما NVIDIA NIM فحاوية جاهزة من NVIDIA تحزّم، وفق وثائق NVIDIA الحالية، محرك vLLM أو SGLang بتحسينات NVIDIA؛ ويتطلب الإنتاج ترخيص NVIDIA AI Enterprise ويأتي مع دعم الشركة. يمنحك vLLM التحكم دون رسوم ترخيص مقابل أن تتولى الضبط والدعم بنفسك؛ ويستبدل NIM ذلك برسوم ترخيص. لم تُجرِ PromptQuorum اختبارات أداء مقارنة بين الاثنين.' },
           { q: 'هل يمكن استخدام Ollama لخدمة استدلال متعددة المستخدمين على مستوى المؤسسات؟', a: 'غير موصى به لحركة الإنتاج متعددة المستأجرين. يعالج Ollama الطلبات المتوازية عبر OLLAMA_NUM_PARALLEL (الافتراضي 1) وطابور، لكنه لا يوثّق دفعات مستمرة ولا إدارة ذاكرة على نمط PagedAttention ولا يوفّر توسيعًا تلقائيًا أصليًا على Kubernetes. وهو مناسب لأجهزة المطورين وأجهزة الحافة لمستخدم واحد والنماذج الأولية الداخلية قليلة الحركة.' },
-          { q: 'هل يستحق NVIDIA NIM تكلفة الترخيص مقارنة بـ vLLM أو TGI مفتوحي المصدر؟', a: 'يتوقف الأمر على ما إذا كان عقد الدعم وتحزيم NVIDIA يستحقان تكلفة الترخيص بالنسبة لك، مقابل إبقاء البنية التحتية مجانية وتشغيلها بنفسك. غالبًا ما تبرر المؤسسات الخاضعة للتنظيم التي تحتاج عقد دعم وسجل تدقيق هذه التكلفة؛ وكثيرًا ما تشغّل الفرق ذات الخبرة الداخلية في بنية ML التحتية vLLM دون تكلفة ترخيص.' },
+          { q: 'هل يستحق NVIDIA NIM تكلفة الترخيص مقارنة بـ vLLM أو TGI مفتوحي المصدر؟', a: 'يتوقف الأمر على ما إذا كان عقد الدعم وتحزيم NVIDIA يستحقان تكلفة الترخيص بالنسبة لك، مقابل إبقاء البنية التحتية مجانية وتشغيلها بنفسك. غالبًا ما تبرر المؤسسات الخاضعة للتنظيم التي تريد عقد دعم من المورّد هذه التكلفة (ويبقى سجل التدقيق مما يجب إضافته بشكل منفصل)؛ وكثيرًا ما تشغّل الفرق ذات الخبرة الداخلية في بنية ML التحتية vLLM دون تكلفة ترخيص.' },
           { q: 'كيف توسّع استدلال نماذج اللغة الكبيرة عبر عدة وحدات معالجة رسومات وعقد؟', a: 'استخدم التوازي التنسوري لتقسيم طبقات النموذج على وحدات GPU داخل عقدة واحدة، وتوازي خط الأنابيب للتقسيم عبر عدة عقد حين يتجاوز النموذج مجموع ذاكرة GPU في عقدة واحدة. يدعم vLLM كليهما (متعدد العقد عبر Ray أو multiprocessing)؛ ويدعم TGI التوازي التنسوري بأدوات أقل للعقد المتعددة وهو في وضع الصيانة؛ وينشر NIM النماذج متعددة GPU عبر ملفات تعريف النماذج ويعمل على Kubernetes بواسطة NIM Operator.' },
           { q: 'ما صيغ التكميم التي يدعمها كل خادم استدلال؟', a: 'يدعم vLLM صيغ GPTQ وAWQ وFP8 وINT4. ويذكر TGI صيغ bitsandbytes وGPTQ وAWQ وEETQ وMarlin وFP8. ويختار NVIDIA NIM الدقة بحسب ملف تعريف النموذج وGPU. ويستخدم Ollama صيغة GGUF بدقة Q4 حتى Q8، بهدف توفير الذاكرة على جهاز واحد لا إنتاجية تعدد المستأجرين.' },
           { q: 'كيف تنشر vLLM أو TGI على Kubernetes؟', a: 'يوثّق vLLM عدة مسارات لـ Kubernetes منها مخطط Helm وKServe وproduction-stack من vllm-project. ويوفّر TGI صورة حاوية تغلّفها بملفاتك الخاصة. اضبط طلبات الموارد بما يطابق تخصيص GPU، واضبط التوسيع التلقائي على عمق الطابور أو استخدام GPU بدل CPU، وأضف Prometheus ServiceMonitor لسحب نقطة نهاية المقاييس.' },
@@ -2472,7 +2472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل تحتاج النماذج المتعددة أساطيل وحدات معالجة رسومية منفصلة، أم يمكنها مشاركة مجموعة واحدة؟', a: 'من الناحية العملية، تشغّل المؤسسات التي تستخدم أكثر من نموذج عادةً مجموعات نسخ منفصلة لكل نموذج بدلاً من مشاركة مجموعة واحدة، لأن ذاكرة وحدة المعالجة الرسومية لا تُقسَّم بنظافة كافية بين نماذج بأحجام مختلفة جداً. وجّه الطلبات إلى المجموعة الصحيحة على مستوى التطبيق أو البوابة بدلاً من محاولة وضع عدة نماذج على النسخ نفسها من وحدات المعالجة الرسومية.' },
           { q: 'كيف يختلف الترخيص بين vLLM وTGI وNVIDIA NIM؟', a: 'vLLM وHugging Face TGI كلاهما بترخيص Apache 2.0 ومجانيان بأي حجم -- تدفع فقط مقابل بنية GPU التحتية. ويتطلب NVIDIA NIM ترخيص NVIDIA AI Enterprise للإنتاج، وتبدأ أسعاره وفق الأسئلة الشائعة لدى NVIDIA من 4,500 دولار لكل GPU سنويًا فوق تكلفة عتاد GPU؛ ويمكن لأعضاء Developer Program استضافة NIM ذاتيًا للبحث والتطوير على ما يصل إلى 16 GPU. تأكّد من الأسعار الحالية مباشرة مع NVIDIA. أما Ollama فبترخيص MIT ومجاني ودعمه مجتمعي فقط.' },
           { q: 'هل ما زال Hugging Face TGI يُصان؟', a: 'TGI في وضع الصيانة. يذكر ملف README أن Hugging Face تقبل فقط إصلاحات الأخطاء الطفيفة وتحسينات التوثيق وأعمال الصيانة الخفيفة، وقد أُرشف مستودع GitHub (للقراءة فقط) في مارس 2026. آخر إصدار هو v3.3.7 من ديسمبر 2025، وتوصي Hugging Face بـ vLLM وSGLang للنشرات الجديدة. تستمر نشرات TGI القائمة في العمل، لكن خطّط للترحيل.' },
-          { q: 'كيف يقارن vLLM بـ TensorRT-LLM؟', a: 'vLLM محرك خدمة عام يحمّل النماذج بصيغة Hugging Face مباشرة ويعمل على وحدات NVIDIA وAMD GPU وعتاد آخر. أما TensorRT-LLM فمكتبة من NVIDIA تترجم النموذج إلى محرك مبني لوحدة NVIDIA GPU محددة، مما يضيف خطوة بناء. يعني vLLM عادةً نشرًا أبسط وتغطية أوسع للعتاد والنماذج؛ ويناسب TensorRT-LLM الفرق الملتزمة بـ NVIDIA التي تقبل خطوة البناء. راجع [شرح TensorRT-LLM](/ar/power-local-llm/tensorrt-llm-explained).' },
+          { q: 'كيف يقارن vLLM بـ TensorRT-LLM؟', a: 'vLLM محرك خدمة عام يحمّل النماذج بصيغة Hugging Face مباشرة ويعمل على وحدات NVIDIA وAMD GPU وعتاد آخر. أما TensorRT-LLM فمكتبة استدلال من NVIDIA لوحدات NVIDIA GPU. كانت الإصدارات السابقة تجمّع النموذج مسبقًا في محرك TensorRT خاص بوحدة GPU محددة؛ وتصف وثائق NVIDIA الحالية سير عمل قائمًا على PyTorch أُزيل فيه محرك TensorRT الخلفي، لذا تحقّق من الإصدار الذي تنشره. يعني vLLM عادةً نشرًا أبسط وتغطية أوسع للعتاد والنماذج؛ ويناسب TensorRT-LLM الفرق الملتزمة بوحدات NVIDIA GPU. راجع [شرح TensorRT-LLM](/ar/power-local-llm/tensorrt-llm-explained).' },
         ],
       },
       relatedReading: {
@@ -2584,7 +2584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '노트북에서 AI 모델 하나를 돌리는 일과, 공유 GPU 풀로 수백 명의 직원이나 고객을 서비스하는 일은 다른 문제입니다. vLLM은 후자를 위해 만들어진 무료 소프트웨어입니다. NVIDIA NIM은 같은 일을 NVIDIA 지원이 붙은 유료 패키지 제품으로 수행합니다. Hugging Face의 TGI도 같은 목적으로 만들어졌지만 현재는 유지보수 모드이고, 대부분이 모델을 로컬에서 시험할 때 쓰는 Ollama는 그렇게 많은 동시 사용자를 염두에 두고 설계되지 않았습니다.' },
         ],
         items: [
-          'vLLM은 처리량이 높은 멀티 테넌트 서빙을 위한 주요 오픈소스(Apache 2.0) 추론 서버로, 연속 배치와 텐서·파이프라인·전문가 병렬화를 지원합니다. Hugging Face TGI도 비슷한 핵심 기능을 제공하지만 현재는 유지보수 모드입니다.',
+          'vLLM은 처리량이 높은 멀티 테넌트 서빙을 위한 주요 오픈소스(Apache 2.0) 추론 서버로, 연속 배치와 텐서·파이프라인 병렬화를 지원합니다. Hugging Face TGI도 비슷한 핵심 기능을 제공하지만 현재는 유지보수 모드입니다.',
           'NVIDIA NIM은 유료 사전 구성 마이크로서비스 컨테이너(프로덕션 사용에는 NVIDIA AI Enterprise 라이선스 필요)로, NVIDIA 최적화가 적용된 vLLM 또는 SGLang 엔진을 패키징하며 벤더 지원이 뒷받침됩니다.',
           'Ollama는 엔터프라이즈 다중 테넌트 서빙을 위해 설계되지 않았습니다 -- 단일 노드, 단일 사용자 지향 런타임입니다. 개발자 노트북과 에지/부서 단위 프로토타입에 사용하고, 프로덕션 API 트래픽에는 사용하지 마세요.',
           'Kubernetes 배포는 서로 다릅니다. vLLM은 Helm, KServe, production-stack 경로를 문서화하고, TGI는 컨테이너 이미지만 제공하며, NIM에는 NVIDIA 자체 Operator가 있고, Ollama는 커뮤니티 차트만 있어 네이티브 오토스케일링 연동이 없습니다.',
@@ -2622,7 +2622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vllm',
         title: 'vLLM 이해하기: 고처리량 오픈소스 엔진',
         content: [
-          '**vLLM은 멀티 GPU 고처리량 서빙을 위해 특별히 설계된 오픈소스 추론 서버(Apache 2.0)입니다.** UC 버클리의 Sky Computing Lab에서 시작되었으며, 프로덕션 LLM API에서 가장 널리 배포된 오픈소스 엔진 중 하나입니다.',
+          '**vLLM은 멀티 GPU 고처리량 서빙을 위해 특별히 설계된 오픈소스 추론 서버(Apache 2.0)입니다.** UC 버클리의 Sky Computing Lab에서 시작되었으며, 프로덕션 LLM API에서 널리 사용되는 오픈소스 엔진입니다.',
         ],
         items: [
           '**PagedAttention**: KV 캐시를 요청마다 연속으로 할당하는 대신 고정 크기 블록으로 관리해, 달성 가능한 GPU 메모리 활용률을 높이고 더 많은 동시 요청이 하나의 GPU를 공유할 수 있게 합니다.',
@@ -2632,7 +2632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**OpenAI 호환 API**: `vllm serve <model>` 은 OpenAI Chat Completions API를 그대로 대체할 수 있는 엔드포인트를 제공해 애플리케이션 측 통합 작업을 최소화합니다.',
           'vLLM은 공식 Helm 차트를 제공하며 Kubernetes 네이티브 모델 서빙을 위해 KServe와도 통합됩니다. 오토스케일링은 요청 큐 깊이나 GPU 활용률에 따라 구동할 수 있습니다.',
         ],
-        codeBlock: '# 4개 GPU에서 텐서 병렬로 모델 서빙\npip install vllm\n\n# --api-key가 없으면 엔드포인트가 인증 없는 요청을 받습니다. 공개적으로 노출하지 마세요\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 4 \\\n  --gpu-memory-utilization 0.9 \\\n  --api-key "$VLLM_API_KEY" \\\n  --host 0.0.0.0 --port 8000',
+        codeBlock: '# 4개 GPU에서 텐서 병렬로 모델 서빙\npip install vllm\n\n# --api-key는 /v1, /v2, /inference, /cohere 경로만 보호하며 다른 엔드포인트는 열려 있습니다. 포트를 노출하기 전에 방화벽이나 리버스 프록시를 앞에 두십시오\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 4 \\\n  --gpu-memory-utilization 0.9 \\\n  --api-key "$VLLM_API_KEY" \\\n  --host 0.0.0.0 --port 8000',
       },
       tgi: {
         id: 'tgi',
@@ -2673,7 +2673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**동시성**: FAQ에 따르면 Ollama는 OLLAMA_NUM_PARALLEL(기본값 1)과 요청 큐(OLLAMA_MAX_QUEUE, 기본값 512)로 병렬 요청을 처리하지만, 연속 배치나 PagedAttention 방식의 메모리 관리는 문서화되어 있지 않아 vLLM이나 NIM처럼 많은 동시 사용자를 위해 설계된 것이 아닙니다.',
           '**멀티 GPU**: Ollama는 한 대의 머신 내에서 큰 모델을 여러 GPU에 분할할 수 있지만, vLLM에 필적하는 네이티브 텐서 병렬 처리나 멀티 노드 분산 서빙은 없습니다.',
-          '**Kubernetes**: 커뮤니티가 유지 관리하는 Helm 차트만 존재합니다. 자체 Kubernetes Operator, 오토스케일러 통합, 벤더 지원 계약은 없습니다.',
+          '**Kubernetes**: GitHub README에는 커뮤니티가 유지 관리하는 Helm 차트가 나와 있습니다. 문서에는 자체 Kubernetes Operator나 오토스케일러 통합이 나와 있지 않습니다.',
           '**관측성**: Ollama 문서에는 메트릭 엔드포인트에 대한 설명이 없으며, vLLM·TGI와 다릅니다.',
           'Ollama가 여전히 기업 내에서 올바른 도구인 경우: 개발자 노트북, 내부 트래픽이 적은 부서 단위 프로토타입, 또는 한 번에 한 명의 사용자만 처리하는 에어갭 에지 디바이스입니다. 트래픽이 다중 테넌트 동시성을 필요로 하는 순간 vLLM, TGI, NIM으로 이전하세요 -- 그 이전의 하드웨어 측면은 [로컬 LLM 멀티 GPU 구성](/ko/local-llms/multi-gpu-local-llms)을 참고하세요.',
         ],
@@ -2713,8 +2713,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'licensing-support',
         title: '라이선스와 지원 모델 비교',
         content: [
-          '**라이선스는 이 옵션들 사이에서 총소유비용을 가장 크게 바꾸는 항목입니다.** vLLM은 Apache 2.0 라이선스로 어떤 규모에서도 무료이며, TGI(Apache 2.0, 현재 보관 처리됨)도 마찬가지입니다 -- 비용은 하부 GPU 인프라에만 듭니다. NVIDIA NIM은 프로덕션 사용에 NVIDIA AI Enterprise 라이선스가 필요하며 NVIDIA FAQ에 따르면 GPU당 연 4,500달러부터 시작하고 GPU 비용에 더해집니다. NVIDIA Developer Program 회원은 최대 16개 GPU에서 연구·개발·테스트를 무료로 할 수 있습니다. 예산을 잡기 전에 NVIDIA에 직접 최신 조건을 확인하세요. Ollama는 MIT 라이선스로 무료이며 지원은 커뮤니티 GitHub와 Discord로 한정됩니다 -- 문서에는 유료 엔터프라이즈 지원 등급이 나와 있지 않습니다.',
-          '프로덕션 시스템에서는 지원 체계도 라이선스 비용만큼 중요합니다. vLLM 지원은 GitHub 이슈와 커뮤니티 채널에서 나오고(인기 있는 이슈는 빠르지만 SLA 없음), TGI는 사소한 유지보수만 받으며, NIM은 NVIDIA 지원 계약이 따르고, Ollama는 커뮤니티 채널 외에 지원 경로가 전혀 없습니다.',
+          '**라이선스는 이 옵션들 사이에서 총소유비용을 가장 크게 바꾸는 항목입니다.** vLLM은 Apache 2.0 라이선스로 어떤 규모에서도 무료이며, TGI(Apache 2.0, 현재 보관 처리됨)도 마찬가지입니다 -- 비용은 하부 GPU 인프라에만 듭니다. NVIDIA NIM은 프로덕션 사용에 NVIDIA AI Enterprise 라이선스가 필요하며 NVIDIA FAQ에 따르면 GPU당 연 4,500달러부터 시작하고 GPU 비용에 더해집니다. NVIDIA Developer Program 회원은 최대 16개 GPU에서 연구·개발·실험을 무료로 할 수 있습니다. 예산을 잡기 전에 NVIDIA에 직접 최신 조건을 확인하세요. Ollama는 MIT 라이선스로 무료이며 지원은 커뮤니티 GitHub와 Discord로 한정됩니다 -- 문서에는 유료 엔터프라이즈 지원 등급이 나와 있지 않습니다.',
+          '프로덕션 시스템에서는 지원 체계도 라이선스 비용만큼 중요합니다. vLLM 지원은 GitHub 이슈와 커뮤니티 채널에서 나오고(인기 있는 이슈는 빠르지만 SLA 없음), TGI는 사소한 유지보수만 받으며, NIM은 NVIDIA 지원 계약이 따르고, Ollama 문서에는 커뮤니티 채널 외의 지원 경로가 나와 있지 않습니다.',
         ],
       },
       observability: {
@@ -2730,18 +2730,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'when-to-use',
         title: '어떤 추론 서버를 선택해야 할까',
         content: [
-          '**종합 최고의 오픈소스 선택: vLLM** -- 넓은 커뮤니티, 폭넓은 하드웨어 지원, 멀티 GPU 도구, 잦은 릴리스.',
+          '**오픈소스의 유력한 기본 선택: vLLM** -- 넓은 커뮤니티, 폭넓은 하드웨어 지원, 멀티 GPU 도구, 잦은 릴리스.',
           '**이미 Hugging Face를 쓴다면: 그래도 vLLM 또는 SGLang으로 계획** -- TGI는 유지보수 모드이므로 기존 배포에만 두세요.',
-          '**벤더 지원이 필요할 때 최선: NVIDIA NIM** -- 벤더 지원이 있는 턴키 방식이며 라이선스 비용이 듭니다.',
+          '**벤더 지원이 필요할 때의 선택지: NVIDIA NIM** -- 벤더 지원이 있는 턴키 방식이며 라이선스 비용이 듭니다.',
           '**프로덕션 다중 테넌트 트래픽에는 부적합: Ollama** -- 개발자 머신과 단일 사용자 에지 배포에만 사용하세요.',
         ],
         items: [
           '🧭 여러 팀을 위한 공유 사내 LLM API를 운영하는 플랫폼 팀 → Kubernetes에서 셀프 호스팅하는 vLLM.',
-          '🧭 지원 계약과 감사 추적이 필요한 규제 산업 기업 → NVIDIA NIM.',
+          '🧭 벤더 지원 계약을 원하는 규제 산업 기업 → NVIDIA NIM. 감사 로깅은 앞단에 직접 추가합니다(관련 엔터프라이즈 컴플라이언스 가이드 참조).',
           '🧭 모델 호스팅을 이미 Hugging Face Hub로 표준화한 팀 → Hub 모델을 직접 불러오는 vLLM. TGI는 기존 배포에만 유지.',
           '🧭 인프라가 준비되기 전에 개념 증명을 만드는 개발자 → Ollama로 시작해 동시 트래픽이 현실이 되면 vLLM으로 이전.',
-          '❌ 동시 사용자가 몇 명을 넘을 것으로 예상된다면 Ollama를 공유 프로덕션 엔드포인트 뒤에 두지 말고 vLLM을 사용하세요.',
-          '❌ 요청 부하에 따른 Kubernetes 네이티브 오토스케일링이 필요하다면, Ollama에는 KEDA 기반 큐 깊이 스케일링에 해당하는 기능이 없으므로 vLLM 또는 NIM을 사용하세요.',
+          '❌ 동시 사용자가 몇 명을 넘을 것으로 예상된다면 Ollama는 공유 프로덕션 엔드포인트용으로 설계되지 않았으므로 vLLM을 사용하세요.',
+          '❌ 요청 부하에 따른 Kubernetes 네이티브 오토스케일링이 필요하다면, Ollama 문서에는 KEDA 기반 큐 깊이 스케일링에 해당하는 기능이 기재되어 있지 않으므로 vLLM 또는 NIM을 사용하세요.',
         ],
       },
       commonMistakes: {
@@ -2749,7 +2749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '엔터프라이즈 추론 인프라 규모 산정 시 흔한 실수',
         items: [
           '**동시 요청 수가 아니라 파라미터 수로 GPU 규모를 산정하는 것.** 모델 사본 하나가 VRAM에 들어가는 것만 기준으로 산정된 GPU 플릿에는 동시 사용자를 위한 여유가 없습니다 -- 피크 동시성을 기준으로 산정한 뒤, 모델이 여전히 들어가는지 확인하세요.',
-          '**Ollama를 공유 프로덕션 로드 밸런서 뒤에 배포하는 것.** 사용자 두 명의 데모에서는 동작하지만, 수백 명을 위한 설계에서는 버티지 못합니다.',
+          '**Ollama를 공유 프로덕션 로드 밸런서 뒤에 배포하는 것.** 사용자 두 명의 데모에서는 동작하지만, 수백 명을 위한 배포용으로 설계되지 않았습니다.',
           '**CPU 활용률로 스케일링하는 것.** GPU 추론 파드는 부하와 상관없이 CPU가 거의 움직이지 않습니다 -- 대신 큐 깊이나 GPU 활용률로 스케일링하세요.',
           '**TGI의 오래된 캐시 이미지에 대한 라이선스 확인을 건너뛰는 것.** 가져온 이미지 태그가 Apache 2.0 릴리스에 해당하는지, 캐시된 HFOIL 1.0 시대 빌드가 아닌지 확인하세요.',
           '**NVIDIA에 직접 GPU당 현재 가격을 확인하지 않고 NIM 예산을 세우는 것.** 엔터프라이즈 소프트웨어 구독 가격은 변동합니다. 오래된 견적은 예산의 근거가 될 수 없습니다.',
@@ -2773,7 +2773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'vLLM과 NVIDIA NIM의 차이는 무엇인가요?', a: 'vLLM은 직접 호스팅하고 운영하는 무료 오픈소스(Apache 2.0) 추론 서버입니다. NVIDIA NIM은 NVIDIA의 사전 구성 컨테이너로, NVIDIA의 현재 문서에 따르면 NVIDIA 최적화가 적용된 vLLM 또는 SGLang 엔진을 패키징하며, 프로덕션 사용에는 NVIDIA AI Enterprise 라이선스가 필요하고 벤더 지원이 제공됩니다. vLLM은 튜닝과 지원을 직접 맡는 대신 제어권과 라이선스 무료를 주고, NIM은 이를 라이선스 비용과 맞바꿉니다. PromptQuorum은 둘을 벤치마크로 비교하지 않았습니다.' },
           { q: 'Ollama를 엔터프라이즈 다중 사용자 추론 서빙에 사용할 수 있나요?', a: '프로덕션 멀티 테넌트 트래픽에는 권장하지 않습니다. Ollama는 OLLAMA_NUM_PARALLEL(기본값 1)과 요청 큐로 병렬 요청을 처리하지만, 연속 배치나 PagedAttention 방식의 메모리 관리는 문서화되어 있지 않고 Kubernetes 네이티브 오토스케일링도 제공하지 않습니다. 개발자 PC, 단일 사용자 엣지 장치, 트래픽이 적은 사내 프로토타입에는 적합합니다.' },
-          { q: '오픈소스 vLLM이나 TGI 대비 NVIDIA NIM의 라이선스 비용은 그만한 가치가 있나요?', a: '벤더 지원 계약과 NVIDIA의 패키징이 라이선스 비용만큼 가치가 있는지, 아니면 인프라를 무료로 유지하며 직접 운영하는 편이 나은지에 달려 있습니다. 지원 계약과 감사 추적이 필요한 규제 대상 기업은 비용을 정당화하는 경우가 많고, 자체 ML 인프라 전문성을 가진 팀은 라이선스 비용 없이 vLLM을 운영하는 경우가 많습니다.' },
+          { q: '오픈소스 vLLM이나 TGI 대비 NVIDIA NIM의 라이선스 비용은 그만한 가치가 있나요?', a: '벤더 지원 계약과 NVIDIA의 패키징이 라이선스 비용만큼 가치가 있는지, 아니면 인프라를 무료로 유지하며 직접 운영하는 편이 나은지에 달려 있습니다. 벤더 지원 계약을 원하는 규제 대상 기업은 비용을 정당화하는 경우가 많고(감사 로깅은 별도로 추가해야 합니다), 자체 ML 인프라 전문성을 가진 팀은 라이선스 비용 없이 vLLM을 운영하는 경우가 많습니다.' },
           { q: '여러 GPU와 노드에 걸쳐 LLM 추론을 어떻게 확장하나요?', a: '텐서 병렬화로 모델의 레이어를 한 노드 안의 GPU들에 나누고, 모델이 한 노드의 GPU 메모리 합계를 넘으면 파이프라인 병렬화로 여러 노드에 나눕니다. vLLM은 둘 다 지원하고(멀티 노드는 Ray 또는 multiprocessing), TGI는 텐서 병렬화를 지원하지만 공식 멀티 노드 도구가 적고 유지보수 모드이며, NIM은 모델 프로필을 통해 멀티 GPU 모델을 배포하고 NIM Operator로 Kubernetes에서 실행됩니다.' },
           { q: '각 추론 서버는 어떤 양자화 형식을 지원하나요?', a: 'vLLM은 GPTQ, AWQ, FP8, INT4를 지원합니다. TGI는 bitsandbytes, GPTQ, AWQ, EETQ, Marlin, FP8을 나열합니다. NVIDIA NIM은 모델 프로필과 GPU에 따라 정밀도를 선택합니다. Ollama는 Q4~Q8 정밀도의 GGUF 형식을 사용하며, 멀티 테넌트 처리량이 아니라 단일 머신의 메모리 절감이 목적입니다.' },
           { q: 'vLLM이나 TGI를 Kubernetes에 어떻게 배포하나요?', a: 'vLLM은 Helm 차트, KServe, vllm-project의 production-stack 등 여러 Kubernetes 경로를 문서화합니다. TGI는 컨테이너 이미지를 제공하며 직접 매니페스트로 감싸서 사용합니다. GPU 할당에 맞는 리소스 요청을 설정하고, CPU가 아니라 요청 큐 깊이나 GPU 사용률로 오토스케일링을 구성하며, 메트릭 엔드포인트를 수집할 Prometheus ServiceMonitor를 추가하세요.' },
@@ -2782,7 +2782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '여러 모델은 별도의 GPU 플릿이 필요한가요, 아니면 하나의 풀을 공유할 수 있나요?', a: '실무에서는 하나 이상의 모델을 운영하는 기업은 보통 하나의 풀을 공유하기보다 모델별로 별도의 레플리카 풀을 운영합니다. GPU 메모리가 크기가 크게 다른 모델 사이에서 깔끔하게 시분할되지 않기 때문입니다. 여러 모델을 같은 GPU 레플리카에 함께 두려 하기보다, 애플리케이션이나 게이트웨이 계층에서 올바른 풀로 요청을 라우팅하세요.' },
           { q: 'vLLM, TGI, NVIDIA NIM 간 라이선스는 어떻게 다른가요?', a: 'vLLM과 Hugging Face TGI는 모두 Apache 2.0 라이선스로 어떤 규모에서도 무료이며 하부 GPU 인프라 비용만 듭니다. NVIDIA NIM은 프로덕션 사용에 NVIDIA AI Enterprise 라이선스가 필요하며 NVIDIA FAQ에 따르면 GPU당 연 4,500달러부터 시작하고 GPU 하드웨어 비용에 더해집니다. Developer Program 회원은 최대 16개 GPU에서 연구·개발용으로 NIM을 셀프 호스팅할 수 있습니다. 최신 가격은 NVIDIA에 직접 확인하세요. Ollama는 MIT 라이선스로 무료이며 커뮤니티 지원만 있습니다.' },
           { q: 'Hugging Face TGI는 아직 유지보수되나요?', a: 'TGI는 유지보수 모드입니다. README에 따르면 Hugging Face는 사소한 버그 수정, 문서 개선, 가벼운 유지보수만 받으며, GitHub 저장소는 2026년 3월에 보관 처리(읽기 전용)되었습니다. 마지막 릴리스는 2025년 12월의 v3.3.7이며 Hugging Face는 신규 배포에 vLLM과 SGLang을 권장합니다. 기존 TGI 배포는 계속 동작하지만 마이그레이션을 계획하세요.' },
-          { q: 'vLLM과 TensorRT-LLM은 어떻게 다른가요?', a: 'vLLM은 Hugging Face 형식 모델을 직접 불러오고 NVIDIA와 AMD GPU 및 기타 하드웨어에서 실행되는 범용 서빙 엔진입니다. TensorRT-LLM은 모델을 특정 NVIDIA GPU용 엔진으로 컴파일하는 NVIDIA의 라이브러리로, 빌드 단계가 추가됩니다. vLLM은 대체로 배포가 더 단순하고 하드웨어·모델 지원 범위가 넓으며, TensorRT-LLM은 NVIDIA에 전념하고 빌드 단계를 감수하는 팀에 맞습니다. [TensorRT-LLM 설명](/ko/power-local-llm/tensorrt-llm-explained)을 참고하세요.' },
+          { q: 'vLLM과 TensorRT-LLM은 어떻게 다른가요?', a: 'vLLM은 Hugging Face 형식 모델을 직접 불러오고 NVIDIA와 AMD GPU 및 기타 하드웨어에서 실행되는 범용 서빙 엔진입니다. TensorRT-LLM은 NVIDIA GPU용 NVIDIA의 추론 라이브러리입니다. 이전 버전은 모델을 GPU별 TensorRT 엔진으로 사전에 컴파일했으며, NVIDIA의 현재 문서는 TensorRT 엔진 백엔드가 제거된 PyTorch 기반 워크플로를 설명하므로 배포하는 버전을 확인하십시오. vLLM은 대체로 배포가 더 단순하고 하드웨어·모델 지원 범위가 넓으며, TensorRT-LLM은 NVIDIA GPU에 전념하는 팀에 맞습니다. [TensorRT-LLM 설명](/ko/power-local-llm/tensorrt-llm-explained)을 참고하세요.' },
         ],
       },
       relatedReading: {

@@ -20,11 +20,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
     leadAnswerBlock: "**Team prompt optimization needs versioned storage, A/B variant testing, output scoring and collaborative review, and no single tool covers all four. This guide compares six tools against official vendor pages, flags vendor changes in 2026 and lists the prices the vendors publish.**",
     metaDescription: "Compare Braintrust, DSPy, Promptfoo, Vellum, Helicone and PromptPerfect for team prompt work: pricing, A/B testing, CI/CD and 2026 vendor status.",
     ogTitle: "Prompt Optimization Tools for Teams: Pricing and Vendor Status Checked",
-    ogDescription: "Braintrust, DSPy, Promptfoo, Vellum, Helicone and PromptPerfect compared: what each costs, what it tests, and which vendors changed hands in 2026.",
+    ogDescription: "Braintrust, DSPy, Promptfoo, Vellum, Helicone and PromptPerfect compared: what each costs, what it tests, and which vendors announced ownership changes in 2026.",
     twitterTitle: "Prompt Optimization Tools for Teams 2026: 6 Compared",
     twitterDescription: "Most teams need two tools: one for evaluation, one for deployment. Pricing and vendor status checked against official pages.",
     publishDate: '2026-04-10',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     readTime: '10 min read',
     educationalLevel: 'Intermediate',
     audience: 'Engineering managers and prompt engineers building multi-person LLM workflows',
@@ -57,7 +57,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         isTldr: true,
         items: [
           "Team prompt optimization needs four capabilities: versioned storage, A/B testing, output scoring and review. No single tool covers all four.",
-          "Vendor status changed in 2026: OpenAI announced it would acquire Promptfoo (2026-03-09; it stays open source), Mintlify acquired Helicone (2026-03-03; now in maintenance mode), and Vellum now markets a personal-assistant product. PromptPerfect is reported to be closing on 2026-09-01, which we could not confirm with the vendor.",
+          "Vendor status changed in 2026: OpenAI announced it would acquire Promptfoo (2026-03-09; it stays open source; the deal was subject to closing conditions), Mintlify announced on 2026-03-03 that it would acquire Helicone (maintenance mode), though Helicone\'s pricing page now says it is no longer part of Mintlify, so confirm its status, and Vellum now markets a personal-assistant product. PromptPerfect was reported to be closing on 2026-09-01; its site still loaded on 2026-11-02, and we could not confirm the closure with the vendor.",
           "Braintrust suits eval-driven teams, Promptfoo suits CI/CD regression tests, DSPy automates prompt search from labeled examples, and Vellum documents release reviews before deployment.",
           "DSPy and Promptfoo are free and MIT-licensed, but they need engineering time to set up and have no UI for non-engineers.",
           "Published prices checked 2026-11-02: Braintrust Starter free and Pro $249/month; Helicone Hobby free, Pro $79/month and Team $799/month; Promptfoo Community free. We could not verify Vellum or PromptPerfect prices.",
@@ -143,7 +143,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: "PromptPerfect: UI-Based Optimization (Verify Status)",
         content: [
           "**PromptPerfect is a prompt optimizer from Jina AI with a visual interface: you paste a prompt, pick a target model and receive an optimized variant without writing code.** It was aimed at non-technical users in content, marketing and product teams.",
-          "Status warning: Elastic completed its acquisition of Jina AI on 2025-10-09, and third-party sources report that PromptPerfect will be unavailable after 2026-09-01. We could not confirm this in a vendor statement, and [promptperfect.jina.ai](https://promptperfect.jina.ai) still loaded on 2026-11-02, so verify the service status and any export options before adopting it. We could not verify its current plan prices, so none are listed here.",
+          "Status warning: Elastic completed its acquisition of Jina AI on 2025-10-09, and third-party sources report that PromptPerfect was to close after 2026-09-01. We could not confirm this in a vendor statement, and [promptperfect.jina.ai](https://promptperfect.jina.ai) still loaded on 2026-11-02, so verify the service status and any export options before adopting it. We could not verify its current plan prices, so none are listed here.",
         ],
         items: [
           "No-code UI: paste a prompt, pick a model, receive an optimized variant",
@@ -155,7 +155,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: "Vellum: Deployments, Evaluations and Release Reviews",
         content: [
           "**Vellum is an LLM development platform whose documentation covers prompt and workflow deployments, evaluations and release reviews — relevant for teams that want a review gate before a prompt reaches production.** Its Deployment Release Reviews let team members review, approve or request changes to a Prompt or Workflow Deployment before it is promoted to a critical environment.",
-          "Status warning: on 2026-11-02 the [vellum.ai](https://www.vellum.ai) home page markets a personal AI assistant, and Vellum announced that its hosted Personal Assistant Platform shuts down on 2026-11-02. That notice covers the assistant product only; [docs.vellum.ai](https://docs.vellum.ai) still documents Prompts, Workflows, Evaluations and Deployments. The pricing page now lists only assistant plans ($30, $100 and $200 per month), so we could not verify pricing for the development platform or a traffic-splitting A/B feature, which earlier versions of this page described. Confirm both with Vellum before buying.",
+          "Status warning: on 2026-11-02 the [vellum.ai](https://www.vellum.ai) home page markets a personal AI assistant, and Vellum\'s notice says its hosted Personal Assistant Platform was scheduled to shut down on 2026-11-02. That notice covers the assistant product only; [docs.vellum.ai](https://docs.vellum.ai) still documents Prompts, Workflows, Evaluations and Deployments. The pricing page now lists only assistant plans ($30, $100 and $200 per month), so we could not verify pricing for the development platform or a traffic-splitting A/B feature, which earlier versions of this page described. Confirm both with Vellum before buying.",
           "Best for teams that already use Vellum and want PR-style approval before deployment.",
         ],
       },
@@ -194,8 +194,8 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum: Multi-Model Dispatch for Comparison',
         content: [
-          "**PromptQuorum dispatches one prompt to 25+ AI models simultaneously and returns side-by-side outputs — a quick way to compare how a prompt performs across GPT-5.6, Claude, Gemini, and local LLMs before committing to a model or a prompt version.** Unlike the evaluation tools above, which focus on scoring and regression tests, it answers \"which model handles this prompt best?\" in a single run.",
-          "Use PromptQuorum as a first step before deeper evaluation in a tool such as Braintrust or Promptfoo. A free tier is available, no engineering setup is required, and local LLMs via Ollama and LM Studio are supported. PromptQuorum has no CI/CD integration.",
+          "**PromptQuorum dispatches one prompt to 25+ AI models simultaneously and returns side-by-side outputs — a quick way to compare how a prompt performs across OpenAI models, Claude, Gemini, and local LLMs before committing to a model or a prompt version.** Unlike the evaluation tools above, which focus on scoring and regression tests, it answers \"which model handles this prompt best?\" in a single run.",
+          "Use PromptQuorum as a first step before deeper evaluation in a tool such as Braintrust or Promptfoo. PromptQuorum is in free public beta, no engineering setup is required, and local LLMs via Ollama and LM Studio are supported. PromptQuorum has no CI/CD integration.",
           "Best for teams deciding whether to optimize for a specific model provider, or benchmarking the same prompt across several LLMs at once.",
           "PromptQuorum is our own product, so read this entry as a disclosed first-party listing, not an independent ranking.",
         ],
@@ -258,10 +258,10 @@ tests:
           },
           {
             "Tool": "[PromptQuorum](https://www.promptquorum.com)",
-            "A/B Testing": "✅ Multi-model",
-            "Collaboration": "✓ Shared workspace",
+            "A/B Testing": "Model comparison, not prompt-variant testing",
+            "Collaboration": "Not verified",
             "CI/CD": "✗ No CI/CD",
-            "Pricing": "Free + credits",
+            "Pricing": "Free (public beta)",
             "Best For": "Cross-model comparison",
           },
         ],
@@ -360,7 +360,7 @@ tests:
           },
           {
             "q": "How much does a prompt optimization stack cost for a 5-person team?",
-            "a": "On published prices, roughly $0–$330 per month: DSPy and Promptfoo Community are free, Braintrust Pro is $249/month and Helicone Pro is $79/month. We could not verify Vellum or PromptPerfect prices. Cost scales with data volume, scores and seats.",
+            "a": "On published base plan prices (before usage-based charges), roughly $0–$330 per month: DSPy and Promptfoo Community are free, Braintrust Pro is $249/month and Helicone Pro is $79/month. We could not verify Vellum or PromptPerfect prices. Cost scales with data volume, scores and seats.",
           },
           {
             "q": "How do I measure whether a prompt is actually better?",
@@ -372,7 +372,7 @@ tests:
           },
           {
             "q": "Does Helicone work with all LLM providers?",
-            "a": "Helicone works as a proxy, and integration is a base URL change in the API client; check its docs for the current provider list. Note that Helicone has been in maintenance mode since the Mintlify acquisition announced on 2026-03-03.",
+            "a": "Helicone works as a proxy, and integration is a base URL change in the API client; check its docs for the current provider list. Note that Mintlify announced on 2026-03-03 that it would acquire Helicone and run it in maintenance mode; Helicone\'s pricing page now says it is no longer part of Mintlify, so confirm its status.",
           },
           {
             "q": "When should a team use Vellum instead of Promptfoo?",
@@ -380,7 +380,7 @@ tests:
           },
           {
             "q": "Which of these tools changed ownership or status in 2026?",
-            "a": "OpenAI announced on 2026-03-09 that it would acquire Promptfoo, which will remain open source. Mintlify announced the acquisition of Helicone on 2026-03-03 and put it in maintenance mode. Third-party sources report that PromptPerfect, from Jina AI (acquired by Elastic in October 2025), will be unavailable after 2026-09-01; we could not confirm that with the vendor. Vellum announced that its hosted Personal Assistant Platform closes on 2026-11-02 and now markets an assistant product, while its documentation still covers the development platform.",
+            "a": "OpenAI announced on 2026-03-09 that it would acquire Promptfoo, which will remain open source; the deal was subject to closing conditions. Mintlify announced on 2026-03-03 that it would acquire Helicone and run it in maintenance mode, but Helicone\'s pricing page now says it is no longer part of Mintlify. Third-party sources report that PromptPerfect, from Jina AI (acquired by Elastic in October 2025), was to close after 2026-09-01; we could not confirm that with the vendor. Vellum\'s notice says its hosted Personal Assistant Platform was scheduled to shut down on 2026-11-02, and it now markets an assistant product, while its documentation still covers the development platform.",
           },
           {
             "q": "Which tools suit prompt optimization in production?",
@@ -452,7 +452,7 @@ tests:
       url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'en',
       datePublished: '2026-04-10',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -527,7 +527,7 @@ tests:
           '@type': 'ListItem',
           position: 6,
           name: 'Helicone',
-          description: "LLM observability proxy with cost and latency tracking; in maintenance mode since the Mintlify acquisition.",
+          description: "LLM observability proxy with cost and latency tracking; in maintenance mode after the Mintlify acquisition announcement; confirm current status.",
         },
         {
           '@type': 'ListItem',
@@ -549,11 +549,11 @@ tests:
     leadAnswerBlock: "**Team-Prompt-Optimierung braucht versionierte Speicherung, A/B-Tests, Output-Scoring und gemeinsames Review, und kein einzelnes Tool deckt alle vier ab. Dieser Leitfaden vergleicht sechs Tools mit offiziellen Anbieterseiten, markiert Anbieter-Änderungen 2026 und nennt die veröffentlichten Preise.**",
     metaDescription: "Braintrust, DSPy, Promptfoo, Vellum, Helicone und PromptPerfect im Vergleich: Preise, A/B-Tests, CI/CD und Anbieter-Status für Teams, Stand 2026.",
     ogTitle: "Prompt-Optimierungstools für Teams: Preise und Anbieter-Status geprüft",
-    ogDescription: "Braintrust, DSPy, Promptfoo, Vellum, Helicone und PromptPerfect im Vergleich: Kosten, Testfunktionen und welche Anbieter 2026 den Besitzer wechselten.",
+    ogDescription: "Braintrust, DSPy, Promptfoo, Vellum, Helicone und PromptPerfect im Vergleich: Kosten, Testfunktionen und welche Anbieter 2026 Eigentümerwechsel ankündigten.",
     twitterTitle: "Prompt-Optimierungstools für Teams 2026: 6 im Vergleich",
     twitterDescription: "Die meisten Teams brauchen zwei Tools: eines für die Evaluation, eines für das Deployment. Preise und Anbieter-Status mit offiziellen Seiten abgeglichen.",
     publishDate: '2026-04-10',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     readTime: '10 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Engineering-Manager und Prompt-Ingenieure, die LLM-Workflows mit mehreren Personen erstellen',
@@ -586,7 +586,7 @@ tests:
         isTldr: true,
         items: [
           "Team-Prompt-Optimierung braucht vier Funktionen: versionierte Speicherung, A/B-Tests, Output-Scoring und Review. Kein einzelnes Tool deckt alle vier ab.",
-          "Der Anbieter-Status hat sich 2026 geändert: OpenAI kündigte die Übernahme von Promptfoo an (2026-03-09; bleibt Open Source), Mintlify übernahm Helicone (2026-03-03; jetzt im Wartungsmodus), und Vellum vermarktet inzwischen ein Assistenten-Produkt. PromptPerfect soll laut Drittquellen am 2026-09-01 eingestellt werden; eine Bestätigung des Anbieters liegt uns nicht vor.",
+          "Der Anbieter-Status hat sich 2026 geändert: OpenAI kündigte die Übernahme von Promptfoo an (2026-03-09; bleibt Open Source; der Abschluss stand unter üblichen Abschlussbedingungen), Mintlify kündigte am 2026-03-03 die Übernahme von Helicone an (Wartungsmodus), laut Preisseite gehört Helicone inzwischen jedoch nicht mehr zu Mintlify, prüfen Sie daher den Status, und Vellum vermarktet inzwischen ein Assistenten-Produkt. PromptPerfect sollte laut Drittquellen am 2026-09-01 eingestellt werden; die Website war am 2026-11-02 noch erreichbar, eine Bestätigung des Anbieters liegt uns nicht vor.",
           "Braintrust passt zu Evaluations-getriebenen Teams, Promptfoo zu CI/CD-Regressionstests, DSPy automatisiert die Prompt-Suche aus gelabelten Beispielen, und Vellum dokumentiert Release-Reviews vor dem Deployment.",
           "DSPy und Promptfoo sind kostenlos und MIT-lizenziert, erfordern aber technischen Einrichtungsaufwand und bieten keine Oberfläche für Nicht-Ingenieure.",
           "Veröffentlichte Preise (geprüft 2026-11-02): Braintrust Starter kostenlos, Pro 249 USD/Monat; Helicone Hobby kostenlos, Pro 79 USD/Monat, Team 799 USD/Monat; Promptfoo Community kostenlos. Preise von Vellum und PromptPerfect konnten wir nicht verifizieren.",
@@ -678,7 +678,7 @@ tests:
         title: "PromptPerfect: UI-basierte Optimierung (Status prüfen)",
         content: [
           "**PromptPerfect ist ein Prompt-Optimizer von Jina AI mit visueller Oberfläche: Sie fügen einen Prompt ein, wählen ein Zielmodell und erhalten eine optimierte Variante, ohne Code zu schreiben.** Er richtete sich an Nicht-Techniker in Content-, Marketing- und Produktteams.",
-          "Status-Warnung: Elastic hat die Übernahme von Jina AI am 2025-10-09 abgeschlossen, und Drittquellen berichten, PromptPerfect sei nach dem 2026-09-01 nicht mehr verfügbar. Eine Anbieter-Mitteilung dazu konnten wir nicht bestätigen, und [promptperfect.jina.ai](https://promptperfect.jina.ai) war am 2026-11-02 noch erreichbar. Prüfen Sie daher Dienststatus und Exportmöglichkeiten, bevor Sie das Tool einführen. Aktuelle Tarifpreise konnten wir nicht verifizieren und nennen deshalb keine.",
+          "Status-Warnung: Elastic hat die Übernahme von Jina AI am 2025-10-09 abgeschlossen, und Drittquellen berichten, PromptPerfect solle nach dem 2026-09-01 schließen. Eine Anbieter-Mitteilung dazu konnten wir nicht bestätigen, und [promptperfect.jina.ai](https://promptperfect.jina.ai) war am 2026-11-02 noch erreichbar. Prüfen Sie daher Dienststatus und Exportmöglichkeiten, bevor Sie das Tool einführen. Aktuelle Tarifpreise konnten wir nicht verifizieren und nennen deshalb keine.",
         ],
         items: [
           "No-Code-Oberfläche: Prompt einfügen, Modell wählen, optimierte Variante erhalten",
@@ -690,7 +690,7 @@ tests:
         title: "Vellum: Deployments, Evaluationen und Release-Reviews",
         content: [
           "**Vellum ist eine LLM-Entwicklungsplattform, deren Dokumentation Prompt- und Workflow-Deployments, Evaluationen und Release-Reviews abdeckt — relevant für Teams, die vor dem Produktionsstart eines Prompts ein Review-Gate wollen.** Mit den Deployment Release Reviews prüfen Teammitglieder ein Prompt- oder Workflow-Deployment, genehmigen es oder fordern Änderungen an, bevor es in eine kritische Umgebung übernommen wird.",
-          "Status-Warnung: Am 2026-11-02 bewirbt die Startseite [vellum.ai](https://www.vellum.ai) einen persönlichen KI-Assistenten, und Vellum hat angekündigt, die gehostete Personal-Assistant-Plattform am 2026-11-02 abzuschalten. Die Mitteilung betrifft nur das Assistenten-Produkt; [docs.vellum.ai](https://docs.vellum.ai) dokumentiert weiterhin Prompts, Workflows, Evaluations und Deployments. Die Preisseite listet jetzt nur Assistenten-Tarife (30, 100 und 200 USD pro Monat); daher konnten wir weder Preise der Entwicklungsplattform noch eine Traffic-Split-A/B-Funktion verifizieren, die frühere Fassungen dieser Seite beschrieben. Klären Sie beides mit Vellum, bevor Sie kaufen.",
+          "Status-Warnung: Am 2026-11-02 bewirbt die Startseite [vellum.ai](https://www.vellum.ai) einen persönlichen KI-Assistenten, und laut Vellums Mitteilung sollte die gehostete Personal-Assistant-Plattform am 2026-11-02 abgeschaltet werden. Die Mitteilung betrifft nur das Assistenten-Produkt; [docs.vellum.ai](https://docs.vellum.ai) dokumentiert weiterhin Prompts, Workflows, Evaluations und Deployments. Die Preisseite listet jetzt nur Assistenten-Tarife (30, 100 und 200 USD pro Monat); daher konnten wir weder Preise der Entwicklungsplattform noch eine Traffic-Split-A/B-Funktion verifizieren, die frühere Fassungen dieser Seite beschrieben. Klären Sie beides mit Vellum, bevor Sie kaufen.",
           "Am besten für Teams, die Vellum bereits nutzen und eine PR-ähnliche Freigabe vor dem Deployment wollen.",
         ],
       },
@@ -715,8 +715,8 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum: Multi-Model-Vergleich für Teams',
         content: [
-          "**PromptQuorum sendet einen Prompt gleichzeitig an 25+ KI-Modelle und zeigt die Ausgaben nebeneinander — ein schneller Weg, das Verhalten eines Prompts über GPT-5.6, Claude, Gemini und lokale LLMs zu vergleichen, bevor Sie sich auf ein Modell oder eine Prompt-Version festlegen.** Anders als die Evaluations-Tools oben, die auf Scoring und Regressionstests ausgerichtet sind, beantwortet es in einem Durchlauf die Frage „Welches Modell bewältigt diesen Prompt am besten?“.",
-          "Nutzen Sie PromptQuorum als ersten Schritt vor einer tieferen Evaluation in einem Tool wie Braintrust oder Promptfoo. Es gibt einen kostenlosen Tarif, keine technische Einrichtung ist nötig, und lokale LLMs über Ollama und LM Studio werden unterstützt. PromptQuorum hat keine CI/CD-Integration.",
+          "**PromptQuorum sendet einen Prompt gleichzeitig an 25+ KI-Modelle und zeigt die Ausgaben nebeneinander — ein schneller Weg, das Verhalten eines Prompts über OpenAI-Modelle, Claude, Gemini und lokale LLMs zu vergleichen, bevor Sie sich auf ein Modell oder eine Prompt-Version festlegen.** Anders als die Evaluations-Tools oben, die auf Scoring und Regressionstests ausgerichtet sind, beantwortet es in einem Durchlauf die Frage „Welches Modell bewältigt diesen Prompt am besten?“.",
+          "Nutzen Sie PromptQuorum als ersten Schritt vor einer tieferen Evaluation in einem Tool wie Braintrust oder Promptfoo. Es befindet sich in der kostenlosen öffentlichen Beta, keine technische Einrichtung ist nötig, und lokale LLMs über Ollama und LM Studio werden unterstützt. PromptQuorum hat keine CI/CD-Integration.",
           "Am besten für Teams, die entscheiden, ob sie für einen bestimmten Modellanbieter optimieren, oder die denselben Prompt über mehrere LLMs gleichzeitig vergleichen.",
           "PromptQuorum ist unser eigenes Produkt; lesen Sie diesen Eintrag als gekennzeichnete Eigenlistung, nicht als unabhängiges Ranking.",
         ],
@@ -779,10 +779,10 @@ tests:
           },
           {
             "Tool": "[PromptQuorum](https://www.promptquorum.com)",
-            "A/B-Tests": "✅ Multi-Modell",
-            "Zusammenarbeit": "✓ Gemeinsamer Workspace",
+            "A/B-Tests": "Modellvergleich, kein Prompt-Varianten-Test",
+            "Zusammenarbeit": "Nicht geprüft",
             "CI/CD": "✗ Kein CI/CD",
-            "Preisgestaltung": "Kostenlos + Credits",
+            "Preisgestaltung": "Kostenlos (öffentliche Beta)",
             "Am besten für": "Modellübergreifender Vergleich",
           },
         ],
@@ -890,7 +890,7 @@ tests:
           },
           {
             "q": "Was kostet ein Prompt-Optimierungs-Stack für ein 5-Personen-Team?",
-            "a": "Nach veröffentlichten Preisen etwa 0–330 USD pro Monat: DSPy und Promptfoo Community sind kostenlos, Braintrust Pro kostet 249 USD/Monat und Helicone Pro 79 USD/Monat. Preise von Vellum und PromptPerfect konnten wir nicht verifizieren. Die Kosten skalieren mit Datenvolumen, Scores und Seats.",
+            "a": "Nach veröffentlichten Grundpreisen (vor nutzungsabhängigen Gebühren) etwa 0–330 USD pro Monat: DSPy und Promptfoo Community sind kostenlos, Braintrust Pro kostet 249 USD/Monat und Helicone Pro 79 USD/Monat. Preise von Vellum und PromptPerfect konnten wir nicht verifizieren. Die Kosten skalieren mit Datenvolumen, Scores und Seats.",
           },
           {
             "q": "Wie messe ich, ob ein Prompt tatsächlich besser ist?",
@@ -902,7 +902,7 @@ tests:
           },
           {
             "q": "Funktioniert Helicone mit allen LLM-Anbietern?",
-            "a": "Helicone arbeitet als Proxy; die Integration ist eine Änderung der Base-URL im API-Client. Die aktuelle Anbieterliste finden Sie in der Dokumentation. Beachten Sie, dass Helicone seit der am 2026-03-03 angekündigten Mintlify-Übernahme im Wartungsmodus läuft.",
+            "a": "Helicone arbeitet als Proxy; die Integration ist eine Änderung der Base-URL im API-Client. Die aktuelle Anbieterliste finden Sie in der Dokumentation. Beachten Sie: Mintlify kündigte am 2026-03-03 an, Helicone zu übernehmen und im Wartungsmodus weiterzuführen; laut Preisseite gehört Helicone inzwischen jedoch nicht mehr zu Mintlify, prüfen Sie daher den Status.",
           },
           {
             "q": "Wann sollte ein Team Vellum statt Promptfoo einsetzen?",
@@ -910,7 +910,7 @@ tests:
           },
           {
             "q": "Welche dieser Tools haben 2026 Besitzer oder Status gewechselt?",
-            "a": "OpenAI kündigte am 2026-03-09 die Übernahme von Promptfoo an; das Projekt soll Open Source bleiben. Mintlify kündigte am 2026-03-03 die Übernahme von Helicone an und versetzte es in den Wartungsmodus. Drittquellen berichten, PromptPerfect von Jina AI (im Oktober 2025 von Elastic übernommen) sei nach dem 2026-09-01 nicht mehr verfügbar; vom Anbieter konnten wir das nicht bestätigen. Vellum kündigte an, die gehostete Personal-Assistant-Plattform am 2026-11-02 zu schließen, und vermarktet ein Assistenten-Produkt, während die Dokumentation weiterhin die Entwicklungsplattform abdeckt.",
+            "a": "OpenAI kündigte am 2026-03-09 die Übernahme von Promptfoo an; das Projekt soll Open Source bleiben, der Abschluss stand unter üblichen Abschlussbedingungen. Mintlify kündigte am 2026-03-03 an, Helicone zu übernehmen und im Wartungsmodus weiterzuführen; laut Preisseite gehört Helicone inzwischen jedoch nicht mehr zu Mintlify. Drittquellen berichten, PromptPerfect von Jina AI (im Oktober 2025 von Elastic übernommen) solle nach dem 2026-09-01 schließen; vom Anbieter konnten wir das nicht bestätigen. Laut Vellums Mitteilung sollte die gehostete Personal-Assistant-Plattform am 2026-11-02 geschlossen werden, und Vellum vermarktet ein Assistenten-Produkt, während die Dokumentation weiterhin die Entwicklungsplattform abdeckt.",
           },
           {
             "q": "Welche Tools eignen sich für Prompt-Optimierung in Produktion?",
@@ -971,7 +971,7 @@ tests:
       url: 'https://www.promptquorum.com/de/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'de',
       datePublished: '2026-04-10',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       proficiencyLevel: 'Intermediate',
@@ -1004,7 +1004,7 @@ tests:
         { '@type': 'ListItem', position: 3, name: 'PromptPerfect', description: "Prompt-Optimizer von Jina AI mit No-Code-Oberfläche; Anbieter-Status vor der Einführung prüfen" },
         { '@type': 'ListItem', position: 4, name: 'Vellum', description: "LLM-Entwicklungsplattform mit Deployments, Evaluationen und Release-Reviews; aktuellen Status und Preise klären" },
         { '@type': 'ListItem', position: 5, name: 'Promptfoo', description: 'Open-Source-CLI-Tool für CI/CD-Prompt-Regressions-Tests' },
-        { '@type': 'ListItem', position: 6, name: 'Helicone', description: "LLM-Observability-Proxy mit Kosten- und Latenzverfolgung; seit der Mintlify-Übernahme im Wartungsmodus" },
+        { '@type': 'ListItem', position: 6, name: 'Helicone', description: "LLM-Observability-Proxy mit Kosten- und Latenzverfolgung; im Wartungsmodus nach der Mintlify-Übernahmeankündigung; aktuellen Status prüfen" },
         { '@type': 'ListItem', position: 7, name: 'PromptQuorum', description: 'Multi-Model-Vergleichsplattform; testen Sie denselben Prompt über 25+ Modelle vor Optimierungen' },
       ],
     },
@@ -1019,11 +1019,11 @@ tests:
     leadAnswerBlock: "**La optimización de prompts en equipo exige almacenamiento versionado, pruebas A/B, puntuación de resultados y revisión colaborativa, y ninguna herramienta cubre las cuatro. Esta guía compara seis herramientas con las páginas oficiales de cada proveedor, señala los cambios de 2026 y recoge los precios publicados.**",
     metaDescription: "Optimiza y mejora prompts en equipo y mide su rendimiento: Braintrust, DSPy, Promptfoo, Vellum y Helicone, con precios y estado verificados.",
     ogTitle: "Herramientas de optimización de prompts para equipos: precios y estado verificados",
-    ogDescription: "Braintrust, DSPy, Promptfoo, Vellum, Helicone y PromptPerfect comparados: cuánto cuesta cada una, qué prueba y qué proveedores cambiaron de dueño en 2026.",
+    ogDescription: "Braintrust, DSPy, Promptfoo, Vellum, Helicone y PromptPerfect comparados: cuánto cuesta cada una, qué prueba y qué proveedores anunciaron cambios de propietario en 2026.",
     twitterTitle: "Herramientas de optimización de prompts para equipos 2026: 6 comparadas",
     twitterDescription: "La mayoría de equipos necesita dos herramientas: una para evaluar y otra para desplegar. Precios y estado de proveedor contrastados con páginas oficiales.",
     publishDate: '2026-04-10',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     readTime: '10 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Engineering managers e ingenieros de prompts que construyen flujos de trabajo LLM con múltiples personas',
@@ -1056,7 +1056,7 @@ tests:
         isTldr: true,
         items: [
           "La optimización de prompts en equipo necesita cuatro capacidades: almacenamiento versionado, pruebas A/B, puntuación y revisión. Ninguna herramienta cubre las cuatro.",
-          "El estado de los proveedores cambió en 2026: OpenAI anunció que adquirirá Promptfoo (2026-03-09; seguirá siendo open source), Mintlify adquirió Helicone (2026-03-03; ahora en modo de mantenimiento) y Vellum ahora promociona un producto de asistente personal. Se informa de que PromptPerfect cerrará el 2026-09-01, algo que no pudimos confirmar con el proveedor.",
+          "El estado de los proveedores cambió en 2026: OpenAI anunció que adquirirá Promptfoo (2026-03-09; seguirá siendo open source; el cierre estaba sujeto a las condiciones habituales), Mintlify anunció el 2026-03-03 que adquiriría Helicone (modo de mantenimiento), aunque la página de precios de Helicone indica ahora que ya no forma parte de Mintlify, así que confirma su estado y Vellum ahora promociona un producto de asistente personal. Se informó de que PromptPerfect cerraría el 2026-09-01; su sitio seguía cargando el 2026-11-02 y no pudimos confirmar el cierre con el proveedor.",
           "Braintrust encaja con equipos centrados en evaluación, Promptfoo con pruebas de regresión en CI/CD, DSPy automatiza la búsqueda de prompts a partir de ejemplos etiquetados y Vellum documenta revisiones de versión antes del despliegue.",
           "DSPy y Promptfoo son gratuitos y de licencia MIT, pero requieren tiempo de ingeniería para configurarlos y no tienen interfaz para perfiles no técnicos.",
           "Precios publicados (verificados el 2026-11-02): Braintrust Starter gratis y Pro 249 USD/mes; Helicone Hobby gratis, Pro 79 USD/mes y Team 799 USD/mes; Promptfoo Community gratis. No pudimos verificar los precios de Vellum ni de PromptPerfect.",
@@ -1074,7 +1074,7 @@ tests:
         content: [
           '**La optimización de prompts es el proceso sistemático de mejorar los prompts de IA mediante iteración estructurada, testing de variantes y medición del output — distinto de la escritura puntual de prompts.** Cuando un ingeniero ajusta un prompt y lo comparte verbalmente, las mejoras no son reproducibles ni comparables. Cuando un equipo adopta la optimización sistemática, todos los ingenieros editan la misma biblioteca de prompts, comparan variantes contra el mismo dataset de test y rastrean qué cambios mejoran realmente la calidad.',
           'Lo que hace que la optimización en equipo sea diferente del trabajo individual: bibliotecas de prompts compartidas que múltiples ingenieros editan simultáneamente, flujos de revisión que evitan cambios no autorizados en los prompts de producción, experimentos A/B que miden el impacto en el mundo real y trazas de auditoría para cumplimiento. El ajuste individual de prompts es rápido pero frágil; la optimización en equipo es más lenta de configurar pero escala.',
-          'Esta guía distingue la optimización de prompts (hacer prompts mejores) de la gestión de prompts (organizar y desplegar) y de la evaluación de prompts (medir calidad). La mayoría de equipos necesita herramientas para las tres categorías. Para comparación multi-modelo durante la optimización, [PromptQuorum](/features) despacha un prompt a 25+ proveedores de IA simultáneamente — útil para equipos que validan si los cambios de prompt se generalizan entre modelos.',
+          'Esta guía distingue la optimización de prompts (hacer prompts mejores) de la gestión de prompts (organizar y desplegar) y de la evaluación de prompts (medir calidad). La mayoría de equipos necesita herramientas para las tres categorías. Para comparación multi-modelo durante la optimización, [PromptQuorum](/es/features) despacha un prompt a 25+ proveedores de IA simultáneamente — útil para equipos que validan si los cambios de prompt se generalizan entre modelos.',
           'Para una comparación más amplia de todas las herramientas de prompt engineering (no solo las orientadas a optimización), consulta [Mejores herramientas de prompt engineering 2026: clasificadas por caso de uso](/es/prompt-engineering/best-prompt-engineering-tools-2026).',
         ],
       },
@@ -1142,7 +1142,7 @@ tests:
         title: "PromptPerfect: optimización con interfaz (verificar estado)",
         content: [
           "**PromptPerfect es un optimizador de prompts de Jina AI con interfaz visual: pegas un prompt, eliges un modelo de destino y recibes una variante optimizada sin escribir código.** Estaba pensado para perfiles no técnicos de contenido, marketing y producto.",
-          "Aviso de estado: Elastic completó la adquisición de Jina AI el 2025-10-09 y fuentes de terceros informan de que PromptPerfect dejará de estar disponible después del 2026-09-01. No pudimos confirmarlo con un comunicado del proveedor y [promptperfect.jina.ai](https://promptperfect.jina.ai) seguía cargando el 2026-11-02, así que verifica el estado del servicio y las opciones de exportación antes de adoptarlo. No pudimos verificar sus precios actuales, por eso no los indicamos.",
+          "Aviso de estado: Elastic completó la adquisición de Jina AI el 2025-10-09 y fuentes de terceros informan de que PromptPerfect iba a cerrar después del 2026-09-01. No pudimos confirmarlo con un comunicado del proveedor y [promptperfect.jina.ai](https://promptperfect.jina.ai) seguía cargando el 2026-11-02, así que verifica el estado del servicio y las opciones de exportación antes de adoptarlo. No pudimos verificar sus precios actuales, por eso no los indicamos.",
         ],
         items: [
           "Interfaz sin código: pega un prompt, elige un modelo y recibe una variante optimizada",
@@ -1154,7 +1154,7 @@ tests:
         title: "Vellum: despliegues, evaluaciones y revisiones de versión",
         content: [
           "**Vellum es una plataforma de desarrollo con LLM cuya documentación cubre despliegues de prompts y workflows, evaluaciones y revisiones de versión — útil para equipos que quieren una puerta de revisión antes de que un prompt llegue a producción.** Sus Deployment Release Reviews permiten a los miembros del equipo revisar, aprobar o pedir cambios en un despliegue de Prompt o Workflow antes de promoverlo a un entorno crítico.",
-          "Aviso de estado: el 2026-11-02 la página principal de [vellum.ai](https://www.vellum.ai) promociona un asistente personal de IA, y Vellum anunció que su Personal Assistant Platform alojada se cierra el 2026-11-02. Ese aviso afecta solo al producto de asistente; [docs.vellum.ai](https://docs.vellum.ai) sigue documentando Prompts, Workflows, Evaluations y Deployments. La página de precios solo muestra ahora planes del asistente (30, 100 y 200 USD al mes), así que no pudimos verificar los precios de la plataforma de desarrollo ni una función de A/B con reparto de tráfico, que describían versiones anteriores de esta página. Confirma ambas cosas con Vellum antes de comprar.",
+          "Aviso de estado: el 2026-11-02 la página principal de [vellum.ai](https://www.vellum.ai) promociona un asistente personal de IA, y el aviso de Vellum indica que su Personal Assistant Platform alojada tenía previsto cerrarse el 2026-11-02. Ese aviso afecta solo al producto de asistente; [docs.vellum.ai](https://docs.vellum.ai) sigue documentando Prompts, Workflows, Evaluations y Deployments. La página de precios solo muestra ahora planes del asistente (30, 100 y 200 USD al mes), así que no pudimos verificar los precios de la plataforma de desarrollo ni una función de A/B con reparto de tráfico, que describían versiones anteriores de esta página. Confirma ambas cosas con Vellum antes de comprar.",
           "Ideal para equipos que ya usan Vellum y quieren una aprobación al estilo PR antes del despliegue.",
         ],
       },
@@ -1193,8 +1193,8 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum: despacho multi-modelo para comparación',
         content: [
-          "**PromptQuorum envía un prompt a más de 25 modelos de IA a la vez y devuelve las salidas lado a lado: una forma rápida de comparar cómo rinde un prompt en GPT-5.6, Claude, Gemini y LLM locales antes de comprometerte con un modelo o una versión del prompt.** A diferencia de las herramientas de evaluación anteriores, centradas en puntuación y pruebas de regresión, responde a «¿qué modelo resuelve mejor este prompt?» en una sola ejecución.",
-          "Usa PromptQuorum como primer paso antes de una evaluación más profunda en una herramienta como Braintrust o Promptfoo. Hay un plan gratuito, no requiere configuración técnica y admite LLM locales mediante Ollama y LM Studio. PromptQuorum no tiene integración CI/CD.",
+          "**PromptQuorum envía un prompt a más de 25 modelos de IA a la vez y devuelve las salidas lado a lado: una forma rápida de comparar cómo rinde un prompt en modelos de OpenAI, Claude, Gemini y LLM locales antes de comprometerte con un modelo o una versión del prompt.** A diferencia de las herramientas de evaluación anteriores, centradas en puntuación y pruebas de regresión, responde a «¿qué modelo resuelve mejor este prompt?» en una sola ejecución.",
+          "Usa PromptQuorum como primer paso antes de una evaluación más profunda en una herramienta como Braintrust o Promptfoo. Está en beta pública gratuita, no requiere configuración técnica y admite LLM locales mediante Ollama y LM Studio. PromptQuorum no tiene integración CI/CD.",
           "Ideal para equipos que deciden si optimizar para un proveedor de modelos concreto o que quieren comparar el mismo prompt en varios LLM a la vez.",
           "PromptQuorum es nuestro propio producto, así que lee esta entrada como un listado propio declarado, no como una clasificación independiente.",
         ],
@@ -1257,10 +1257,10 @@ tests:
           },
           {
             "Herramienta": "[PromptQuorum](https://www.promptquorum.com)",
-            "A/B Testing": "✅ Multimodelo",
-            "Colaboración": "✓ Espacio compartido",
+            "A/B Testing": "Comparación de modelos, no pruebas de variantes de prompt",
+            "Colaboración": "No verificado",
             "CI/CD": "✗ Sin CI/CD",
-            "Precios": "Gratis + créditos",
+            "Precios": "Gratis (beta pública)",
             "Ideal para": "Comparación entre modelos",
           },
         ],
@@ -1359,7 +1359,7 @@ tests:
           },
           {
             "q": "¿Cuánto cuesta un stack de optimización de prompts para un equipo de 5 personas?",
-            "a": "Con los precios publicados, aproximadamente entre 0 y 330 USD al mes: DSPy y Promptfoo Community son gratuitos, Braintrust Pro cuesta 249 USD/mes y Helicone Pro 79 USD/mes. No pudimos verificar los precios de Vellum ni de PromptPerfect. El coste crece con el volumen de datos, las puntuaciones y los seats.",
+            "a": "Con las cuotas base publicadas (antes de cargos por uso), aproximadamente entre 0 y 330 USD al mes: DSPy y Promptfoo Community son gratuitos, Braintrust Pro cuesta 249 USD/mes y Helicone Pro 79 USD/mes. No pudimos verificar los precios de Vellum ni de PromptPerfect. El coste crece con el volumen de datos, las puntuaciones y los seats.",
           },
           {
             "q": "¿Cómo mido si un prompt es realmente mejor?",
@@ -1371,7 +1371,7 @@ tests:
           },
           {
             "q": "¿Funciona Helicone con todos los proveedores de LLM?",
-            "a": "Helicone funciona como proxy y la integración consiste en cambiar la URL base en el cliente de la API; consulta su documentación para ver la lista actual de proveedores. Ten en cuenta que Helicone está en modo de mantenimiento desde la adquisición por Mintlify anunciada el 2026-03-03.",
+            "a": "Helicone funciona como proxy y la integración consiste en cambiar la URL base en el cliente de la API; consulta su documentación para ver la lista actual de proveedores. Ten en cuenta que Mintlify anunció el 2026-03-03 que adquiriría Helicone y lo mantendría en modo de mantenimiento; la página de precios de Helicone indica ahora que ya no forma parte de Mintlify, así que confirma su estado.",
           },
           {
             "q": "¿Cuándo conviene usar Vellum en lugar de Promptfoo?",
@@ -1379,7 +1379,7 @@ tests:
           },
           {
             "q": "¿Cuáles de estas herramientas cambiaron de dueño o de estado en 2026?",
-            "a": "OpenAI anunció el 2026-03-09 que adquirirá Promptfoo, que seguirá siendo open source. Mintlify anunció el 2026-03-03 la adquisición de Helicone y la dejó en modo de mantenimiento. Fuentes de terceros informan de que PromptPerfect, de Jina AI (adquirida por Elastic en octubre de 2025), dejará de estar disponible después del 2026-09-01; no pudimos confirmarlo con el proveedor. Vellum anunció que su Personal Assistant Platform alojada se cierra el 2026-11-02 y ahora promociona un producto de asistente, mientras su documentación sigue cubriendo la plataforma de desarrollo.",
+            "a": "OpenAI anunció el 2026-03-09 que adquirirá Promptfoo, que seguirá siendo open source; el cierre estaba sujeto a las condiciones habituales. Mintlify anunció el 2026-03-03 que adquiriría Helicone y lo mantendría en modo de mantenimiento, pero la página de precios de Helicone indica ahora que ya no forma parte de Mintlify. Fuentes de terceros informan de que PromptPerfect, de Jina AI (adquirida por Elastic en octubre de 2025), iba a cerrar después del 2026-09-01; no pudimos confirmarlo con el proveedor. El aviso de Vellum indica que su Personal Assistant Platform alojada tenía previsto cerrarse el 2026-11-02, y ahora promociona un producto de asistente, mientras su documentación sigue cubriendo la plataforma de desarrollo.",
           },
           {
             "q": "¿Qué herramientas sirven para optimizar prompts en producción?",
@@ -1451,7 +1451,7 @@ tests:
       url: 'https://www.promptquorum.com/es/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'es',
       datePublished: '2026-04-10',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1495,7 +1495,7 @@ tests:
         { '@type': 'ListItem', position: 3, name: 'PromptPerfect', description: "Optimizador de prompts de Jina AI con interfaz sin código; verifica el estado del proveedor antes de adoptarlo." },
         { '@type': 'ListItem', position: 4, name: 'Vellum', description: "Plataforma de desarrollo con LLM con despliegues, evaluaciones y revisiones de versión; confirma el estado y los precios actuales." },
         { '@type': 'ListItem', position: 5, name: 'Promptfoo', description: 'Herramienta CLI open-source para testing de regresión de prompts en CI/CD.' },
-        { '@type': 'ListItem', position: 6, name: 'Helicone', description: "Proxy de observabilidad de LLM con seguimiento de coste y latencia; en modo de mantenimiento desde la adquisición por Mintlify." },
+        { '@type': 'ListItem', position: 6, name: 'Helicone', description: "Proxy de observabilidad de LLM con seguimiento de coste y latencia; en modo de mantenimiento tras el anuncio de adquisición por Mintlify; confirma el estado actual." },
         { '@type': 'ListItem', position: 7, name: 'PromptQuorum', description: 'Plataforma de despacho multi-modelo; compara el mismo prompt en 25+ modelos simultáneamente antes de elegir una estrategia de optimización.' },
       ],
     },
@@ -1511,11 +1511,11 @@ tests:
     leadAnswerBlock: "**A otimização de prompts em equipe exige armazenamento versionado, testes A/B, pontuação de saídas e revisão colaborativa, e nenhuma ferramenta cobre as quatro. Este guia compara seis ferramentas com as páginas oficiais dos fornecedores, aponta as mudanças de 2026 e traz os preços publicados.**",
     metaDescription: "Compare Braintrust, DSPy, Promptfoo, Vellum, Helicone e PromptPerfect para equipes: preços, testes A/B, CI/CD e status dos fornecedores em 2026.",
     ogTitle: "Ferramentas de otimização de prompts para equipes: preços e status verificados",
-    ogDescription: "Braintrust, DSPy, Promptfoo, Vellum, Helicone e PromptPerfect comparados: quanto cada uma custa, o que testa e quais fornecedores mudaram de dono em 2026.",
+    ogDescription: "Braintrust, DSPy, Promptfoo, Vellum, Helicone e PromptPerfect comparados: quanto cada uma custa, o que testa e quais fornecedores anunciaram mudanças de proprietário em 2026.",
     twitterTitle: "Ferramentas de otimização de prompts para equipes 2026: 6 comparadas",
     twitterDescription: "A maioria das equipes precisa de duas ferramentas: uma para avaliação e outra para implantação. Preços e status conferidos nas páginas oficiais.",
     publishDate: '2026-04-10',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     readTime: '10 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Gerentes de engenharia e engenheiros de prompts que constroem fluxos de trabalho LLM com múltiplas pessoas',
@@ -1548,7 +1548,7 @@ tests:
         isTldr: true,
         items: [
           "A otimização de prompts em equipe precisa de quatro capacidades: armazenamento versionado, testes A/B, pontuação e revisão. Nenhuma ferramenta cobre as quatro.",
-          "O status dos fornecedores mudou em 2026: a OpenAI anunciou que vai adquirir a Promptfoo (2026-03-09; continua open source), a Mintlify adquiriu a Helicone (2026-03-03; agora em modo de manutenção) e a Vellum agora promove um produto de assistente pessoal. Fontes de terceiros relatam que o PromptPerfect será encerrado em 2026-09-01, o que não conseguimos confirmar com o fornecedor.",
+          "O status dos fornecedores mudou em 2026: a OpenAI anunciou que vai adquirir a Promptfoo (2026-03-09; continua open source; o fechamento estava sujeito às condições habituais), a Mintlify anunciou em 2026-03-03 que adquiriria a Helicone (modo de manutenção), mas a página de preços da Helicone agora diz que ela não faz mais parte da Mintlify, então confirme o status e a Vellum agora promove um produto de assistente pessoal. Fontes de terceiros relataram que o PromptPerfect seria encerrado em 2026-09-01; o site ainda carregava em 2026-11-02, e não conseguimos confirmar o encerramento com o fornecedor.",
           "A Braintrust serve a equipes orientadas a avaliação, a Promptfoo a testes de regressão em CI/CD, o DSPy automatiza a busca de prompts a partir de exemplos rotulados e a Vellum documenta revisões de release antes da implantação.",
           "DSPy e Promptfoo são gratuitos e com licença MIT, mas exigem tempo de engenharia para configurar e não têm interface para quem não é engenheiro.",
           "Preços publicados (verificados em 2026-11-02): Braintrust Starter grátis e Pro US$ 249/mês; Helicone Hobby grátis, Pro US$ 79/mês e Team US$ 799/mês; Promptfoo Community grátis. Não conseguimos verificar os preços da Vellum nem do PromptPerfect.",
@@ -1566,7 +1566,7 @@ tests:
         content: [
           '**A otimização de prompts é o processo sistemático de melhorar os prompts de IA por meio de iteração estruturada, testes de variantes e medição da saída — diferente da escrita pontual de prompts.** Quando um engenheiro ajusta um prompt e o compartilha verbalmente, as melhorias não são reproduzíveis nem comparáveis. Quando uma equipe adota a otimização sistemática, todos os engenheiros editam a mesma biblioteca de prompts, comparam variantes contra o mesmo dataset de teste e rastreiam quais mudanças realmente melhoram a qualidade.',
           'O que torna a otimização em equipe diferente do trabalho individual: bibliotecas de prompts compartilhadas que múltiplos engenheiros editam simultaneamente, fluxos de revisão que evitam mudanças não autorizadas nos prompts de produção, experimentos A/B que medem o impacto no mundo real e trilhas de auditoria para conformidade. O ajuste individual de prompts é rápido mas frágil; a otimização em equipe é mais lenta de configurar, mas escala.',
-          'Este guia distingue a otimização de prompts (tornar prompts melhores) do gerenciamento de prompts (organizar e implantar) e da avaliação de prompts (medir qualidade). A maioria das equipes precisa de ferramentas para as três categorias. Para comparação multi-modelo durante a otimização, [PromptQuorum](/features) despacha um prompt para 25+ fornecedores de IA simultaneamente — útil para equipes que validam se as mudanças de prompt se generalizam entre modelos.',
+          'Este guia distingue a otimização de prompts (tornar prompts melhores) do gerenciamento de prompts (organizar e implantar) e da avaliação de prompts (medir qualidade). A maioria das equipes precisa de ferramentas para as três categorias. Para comparação multi-modelo durante a otimização, [PromptQuorum](/pt/features) despacha um prompt para 25+ fornecedores de IA simultaneamente — útil para equipes que validam se as mudanças de prompt se generalizam entre modelos.',
           'Para uma comparação mais ampla de todas as ferramentas de prompt engineering (não apenas as orientadas a otimização), consulte [Melhores ferramentas de prompt engineering 2026: classificadas por caso de uso](/pt/prompt-engineering/best-prompt-engineering-tools-2026).',
         ],
       },
@@ -1634,7 +1634,7 @@ tests:
         title: "PromptPerfect: otimização com interface (verificar status)",
         content: [
           "**O PromptPerfect é um otimizador de prompts da Jina AI com interface visual: você cola um prompt, escolhe um modelo de destino e recebe uma variante otimizada sem escrever código.** Era voltado a usuários não técnicos de conteúdo, marketing e produto.",
-          "Aviso de status: a Elastic concluiu a aquisição da Jina AI em 2025-10-09, e fontes de terceiros relatam que o PromptPerfect ficará indisponível depois de 2026-09-01. Não conseguimos confirmar isso em um comunicado do fornecedor, e [promptperfect.jina.ai](https://promptperfect.jina.ai) ainda carregava em 2026-11-02; verifique o status do serviço e as opções de exportação antes de adotá-lo. Não conseguimos verificar os preços atuais dos planos, por isso não os listamos.",
+          "Aviso de status: a Elastic concluiu a aquisição da Jina AI em 2025-10-09, e fontes de terceiros relatam que o PromptPerfect deveria ser encerrado depois de 2026-09-01. Não conseguimos confirmar isso em um comunicado do fornecedor, e [promptperfect.jina.ai](https://promptperfect.jina.ai) ainda carregava em 2026-11-02; verifique o status do serviço e as opções de exportação antes de adotá-lo. Não conseguimos verificar os preços atuais dos planos, por isso não os listamos.",
         ],
         items: [
           "Interface sem código: cole um prompt, escolha um modelo e receba uma variante otimizada",
@@ -1646,7 +1646,7 @@ tests:
         title: "Vellum: implantações, avaliações e revisões de release",
         content: [
           "**A Vellum é uma plataforma de desenvolvimento com LLM cuja documentação cobre implantações de prompts e workflows, avaliações e revisões de release — relevante para equipes que querem uma etapa de revisão antes de um prompt chegar à produção.** Suas Deployment Release Reviews permitem que membros da equipe revisem, aprovem ou peçam alterações em uma implantação de Prompt ou Workflow antes de ela ser promovida a um ambiente crítico.",
-          "Aviso de status: em 2026-11-02 a página inicial [vellum.ai](https://www.vellum.ai) promove um assistente pessoal de IA, e a Vellum anunciou que sua Personal Assistant Platform hospedada será encerrada em 2026-11-02. O aviso trata apenas do produto de assistente; [docs.vellum.ai](https://docs.vellum.ai) continua documentando Prompts, Workflows, Evaluations e Deployments. A página de preços agora lista só planos do assistente (US$ 30, US$ 100 e US$ 200 por mês), então não conseguimos verificar o preço da plataforma de desenvolvimento nem um recurso de A/B com divisão de tráfego, que versões anteriores desta página descreviam. Confirme ambos com a Vellum antes de comprar.",
+          "Aviso de status: em 2026-11-02 a página inicial [vellum.ai](https://www.vellum.ai) promove um assistente pessoal de IA, e o aviso da Vellum informa que sua Personal Assistant Platform hospedada estava prevista para ser encerrada em 2026-11-02. O aviso trata apenas do produto de assistente; [docs.vellum.ai](https://docs.vellum.ai) continua documentando Prompts, Workflows, Evaluations e Deployments. A página de preços agora lista só planos do assistente (US$ 30, US$ 100 e US$ 200 por mês), então não conseguimos verificar o preço da plataforma de desenvolvimento nem um recurso de A/B com divisão de tráfego, que versões anteriores desta página descreviam. Confirme ambos com a Vellum antes de comprar.",
           "Ideal para equipes que já usam a Vellum e querem aprovação no estilo PR antes da implantação.",
         ],
       },
@@ -1685,8 +1685,8 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum: despacho multi-modelo para comparação',
         content: [
-          "**O PromptQuorum envia um prompt a mais de 25 modelos de IA ao mesmo tempo e devolve as saídas lado a lado: um jeito rápido de comparar como um prompt se sai no GPT-5.6, Claude, Gemini e LLMs locais antes de se comprometer com um modelo ou uma versão do prompt.** Ao contrário das ferramentas de avaliação acima, focadas em pontuação e testes de regressão, ele responde a \"qual modelo lida melhor com este prompt?\" em uma única execução.",
-          "Use o PromptQuorum como primeiro passo antes de uma avaliação mais profunda em uma ferramenta como Braintrust ou Promptfoo. Há um plano gratuito, não é preciso configuração técnica e há suporte a LLMs locais via Ollama e LM Studio. O PromptQuorum não tem integração CI/CD.",
+          "**O PromptQuorum envia um prompt a mais de 25 modelos de IA ao mesmo tempo e devolve as saídas lado a lado: um jeito rápido de comparar como um prompt se sai em modelos da OpenAI, Claude, Gemini e LLMs locais antes de se comprometer com um modelo ou uma versão do prompt.** Ao contrário das ferramentas de avaliação acima, focadas em pontuação e testes de regressão, ele responde a \"qual modelo lida melhor com este prompt?\" em uma única execução.",
+          "Use o PromptQuorum como primeiro passo antes de uma avaliação mais profunda em uma ferramenta como Braintrust ou Promptfoo. Está em beta pública gratuita, não é preciso configuração técnica e há suporte a LLMs locais via Ollama e LM Studio. O PromptQuorum não tem integração CI/CD.",
           "Ideal para equipes que decidem se vão otimizar para um provedor de modelos específico ou que querem comparar o mesmo prompt em vários LLMs ao mesmo tempo.",
           "O PromptQuorum é um produto nosso; leia esta entrada como uma listagem própria declarada, não como um ranking independente.",
         ],
@@ -1749,10 +1749,10 @@ tests:
           },
           {
             "Ferramenta": "[PromptQuorum](https://www.promptquorum.com)",
-            "A/B Testing": "✅ Multimodelo",
-            "Colaboração": "✓ Espaço compartilhado",
+            "A/B Testing": "Comparação de modelos, não teste de variantes de prompt",
+            "Colaboração": "Não verificado",
             "CI/CD": "✗ Sem CI/CD",
-            "Preços": "Grátis + créditos",
+            "Preços": "Grátis (beta pública)",
             "Ideal para": "Comparação entre modelos",
           },
         ],
@@ -1851,7 +1851,7 @@ tests:
           },
           {
             "q": "Quanto custa um stack de otimização de prompts para uma equipe de 5 pessoas?",
-            "a": "Pelos preços publicados, cerca de US$ 0–330 por mês: DSPy e Promptfoo Community são gratuitos, o Braintrust Pro custa US$ 249/mês e o Helicone Pro, US$ 79/mês. Não conseguimos verificar os preços da Vellum nem do PromptPerfect. O custo cresce com volume de dados, pontuações e seats.",
+            "a": "Pelos preços-base publicados (antes das cobranças por uso), cerca de US$ 0–330 por mês: DSPy e Promptfoo Community são gratuitos, o Braintrust Pro custa US$ 249/mês e o Helicone Pro, US$ 79/mês. Não conseguimos verificar os preços da Vellum nem do PromptPerfect. O custo cresce com volume de dados, pontuações e seats.",
           },
           {
             "q": "Como medir se um prompt é de fato melhor?",
@@ -1863,7 +1863,7 @@ tests:
           },
           {
             "q": "O Helicone funciona com todos os provedores de LLM?",
-            "a": "O Helicone funciona como proxy, e a integração é a troca da URL base no cliente da API; consulte a documentação para a lista atual de provedores. Observe que o Helicone está em modo de manutenção desde a aquisição pela Mintlify, anunciada em 2026-03-03.",
+            "a": "O Helicone funciona como proxy, e a integração é a troca da URL base no cliente da API; consulte a documentação para a lista atual de provedores. Observe que a Mintlify anunciou em 2026-03-03 que adquiriria o Helicone e o manteria em modo de manutenção; a página de preços do Helicone agora diz que ele não faz mais parte da Mintlify, então confirme o status.",
           },
           {
             "q": "Quando uma equipe deve usar a Vellum em vez do Promptfoo?",
@@ -1871,7 +1871,7 @@ tests:
           },
           {
             "q": "Quais destas ferramentas mudaram de dono ou de status em 2026?",
-            "a": "A OpenAI anunciou em 2026-03-09 que vai adquirir o Promptfoo, que continuará open source. A Mintlify anunciou em 2026-03-03 a aquisição da Helicone e a colocou em modo de manutenção. Fontes de terceiros relatam que o PromptPerfect, da Jina AI (adquirida pela Elastic em outubro de 2025), ficará indisponível depois de 2026-09-01; não conseguimos confirmar com o fornecedor. A Vellum anunciou que sua Personal Assistant Platform hospedada será encerrada em 2026-11-02 e agora promove um produto de assistente, enquanto a documentação ainda cobre a plataforma de desenvolvimento.",
+            "a": "A OpenAI anunciou em 2026-03-09 que vai adquirir o Promptfoo, que continuará open source; o fechamento estava sujeito às condições habituais. A Mintlify anunciou em 2026-03-03 que adquiriria a Helicone e a manteria em modo de manutenção, mas a página de preços da Helicone agora diz que ela não faz mais parte da Mintlify. Fontes de terceiros relatam que o PromptPerfect, da Jina AI (adquirida pela Elastic em outubro de 2025), deveria ser encerrado depois de 2026-09-01; não conseguimos confirmar com o fornecedor. O aviso da Vellum informa que sua Personal Assistant Platform hospedada estava prevista para ser encerrada em 2026-11-02, e agora promove um produto de assistente, enquanto a documentação ainda cobre a plataforma de desenvolvimento.",
           },
           {
             "q": "Quais ferramentas servem para otimizar prompts em produção?",
@@ -1943,7 +1943,7 @@ tests:
       url: 'https://www.promptquorum.com/pt/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'pt-BR',
       datePublished: '2026-04-10',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1987,7 +1987,7 @@ tests:
         { '@type': 'ListItem', position: 3, name: 'PromptPerfect', description: "Otimizador de prompts da Jina AI com interface sem código; verifique o status do fornecedor antes de adotá-lo." },
         { '@type': 'ListItem', position: 4, name: 'Vellum', description: "Plataforma de desenvolvimento com LLM com implantações, avaliações e revisões de release; confirme o status e os preços atuais." },
         { '@type': 'ListItem', position: 5, name: 'Promptfoo', description: 'Ferramenta CLI open-source para testes de regressão de prompts em CI/CD.' },
-        { '@type': 'ListItem', position: 6, name: 'Helicone', description: "Proxy de observabilidade de LLM com acompanhamento de custo e latência; em modo de manutenção desde a aquisição pela Mintlify." },
+        { '@type': 'ListItem', position: 6, name: 'Helicone', description: "Proxy de observabilidade de LLM com acompanhamento de custo e latência; em modo de manutenção após o anúncio de aquisição pela Mintlify; confirme o status atual." },
         { '@type': 'ListItem', position: 7, name: 'PromptQuorum', description: 'Plataforma de despacho multi-modelo; compara o mesmo prompt em 25+ modelos simultaneamente antes de escolher uma estratégia de otimização.' },
       ],
     },
@@ -2003,11 +2003,11 @@ tests:
     leadAnswerBlock: "**L'optimisation de prompts en équipe exige un stockage versionné, des tests A/B, une notation des résultats et une relecture collaborative, et aucun outil ne couvre les quatre. Ce guide compare six outils d'après les pages officielles des éditeurs, signale les changements de 2026 et reprend les tarifs publiés.**",
     metaDescription: "Comparez Braintrust, DSPy, Promptfoo, Vellum, Helicone et PromptPerfect : tarifs, tests A/B, CI/CD et changements de statut des éditeurs en 2026.",
     ogTitle: "Outils d'optimisation de prompts pour équipes : tarifs et statuts vérifiés",
-    ogDescription: "Braintrust, DSPy, Promptfoo, Vellum, Helicone et PromptPerfect comparés : coût de chacun, ce qu'il teste et quels éditeurs ont changé de mains en 2026.",
+    ogDescription: "Braintrust, DSPy, Promptfoo, Vellum, Helicone et PromptPerfect comparés : coût de chacun, ce qu'il teste et quels éditeurs ont annoncé des changements de propriétaire en 2026.",
     twitterTitle: "Outils d'optimisation de prompts pour équipes 2026 : 6 comparés",
     twitterDescription: "La plupart des équipes n'ont besoin que de deux outils : un pour l'évaluation, un pour le déploiement. Tarifs et statuts vérifiés sur les pages officielles.",
     publishDate: '2026-04-10',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     readTime: '10 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Responsables d\'ingénierie et ingénieurs de prompts construisant des workflows LLM multi-personnels',
@@ -2040,7 +2040,7 @@ tests:
         isTldr: true,
         items: [
           "L'optimisation de prompts en équipe repose sur quatre capacités : stockage versionné, tests A/B, notation et relecture. Aucun outil ne couvre les quatre.",
-          "Le statut des éditeurs a changé en 2026 : OpenAI a annoncé son intention de racheter Promptfoo (2026-03-09 ; le projet reste open source), Mintlify a racheté Helicone (2026-03-03 ; désormais en mode maintenance) et Vellum met désormais en avant un produit d'assistant personnel. PromptPerfect fermerait le 2026-09-01 selon des sources tierces, ce que nous n'avons pas pu confirmer auprès de l'éditeur.",
+          "Le statut des éditeurs a changé en 2026 : OpenAI a annoncé son intention de racheter Promptfoo (2026-03-09 ; le projet reste open source ; la transaction restait soumise aux conditions de clôture usuelles), Mintlify a annoncé le 2026-03-03 son intention de racheter Helicone (mode maintenance), mais la page tarifs de Helicone indique désormais qu\'il ne fait plus partie de Mintlify, vérifiez donc son statut et Vellum met désormais en avant un produit d'assistant personnel. PromptPerfect devait fermer le 2026-09-01 selon des sources tierces ; son site se chargeait encore le 2026-11-02, et nous n'avons pas pu confirmer la fermeture auprès de l'éditeur.",
           "Braintrust convient aux équipes orientées évaluation, Promptfoo aux tests de non-régression en CI/CD, DSPy automatise la recherche de prompts à partir d'exemples étiquetés et Vellum documente des revues de release avant déploiement.",
           "DSPy et Promptfoo sont gratuits et sous licence MIT, mais demandent du temps d'ingénierie à la mise en place et n'ont pas d'interface pour les non-ingénieurs.",
           "Tarifs publiés (vérifiés le 2026-11-02) : Braintrust Starter gratuit et Pro 249 $/mois ; Helicone Hobby gratuit, Pro 79 $/mois et Team 799 $/mois ; Promptfoo Community gratuit. Nous n'avons pas pu vérifier les tarifs de Vellum ni de PromptPerfect.",
@@ -2132,7 +2132,7 @@ tests:
         title: "PromptPerfect : optimisation par interface (vérifier le statut)",
         content: [
           "**PromptPerfect est un optimiseur de prompts de Jina AI doté d'une interface visuelle : vous collez un prompt, choisissez un modèle cible et recevez une variante optimisée sans écrire de code.** Il visait les profils non techniques des équipes contenu, marketing et produit.",
-          "Avertissement de statut : Elastic a finalisé le rachat de Jina AI le 2025-10-09, et des sources tierces indiquent que PromptPerfect ne sera plus disponible après le 2026-09-01. Nous n'avons pas pu le confirmer par une déclaration de l'éditeur, et [promptperfect.jina.ai](https://promptperfect.jina.ai) se chargeait encore le 2026-11-02 : vérifiez l'état du service et les options d'export avant de l'adopter. Nous n'avons pas pu vérifier ses tarifs actuels, donc nous n'en indiquons aucun.",
+          "Avertissement de statut : Elastic a finalisé le rachat de Jina AI le 2025-10-09, et des sources tierces indiquent que PromptPerfect devait fermer après le 2026-09-01. Nous n'avons pas pu le confirmer par une déclaration de l'éditeur, et [promptperfect.jina.ai](https://promptperfect.jina.ai) se chargeait encore le 2026-11-02 : vérifiez l'état du service et les options d'export avant de l'adopter. Nous n'avons pas pu vérifier ses tarifs actuels, donc nous n'en indiquons aucun.",
         ],
         items: [
           "Interface sans code : collez un prompt, choisissez un modèle, recevez une variante optimisée",
@@ -2144,7 +2144,7 @@ tests:
         title: "Vellum : déploiements, évaluations et revues de release",
         content: [
           "**Vellum est une plateforme de développement LLM dont la documentation couvre les déploiements de prompts et de workflows, les évaluations et les revues de release — utile aux équipes qui veulent une étape de validation avant qu'un prompt n'arrive en production.** Ses Deployment Release Reviews permettent aux membres de l'équipe de relire, approuver ou demander des modifications sur un déploiement de Prompt ou de Workflow avant sa promotion vers un environnement critique.",
-          "Avertissement de statut : le 2026-11-02, la page d'accueil de [vellum.ai](https://www.vellum.ai) met en avant un assistant personnel d'IA, et Vellum a annoncé la fermeture de sa Personal Assistant Platform hébergée le 2026-11-02. Cet avis ne concerne que le produit d'assistant ; [docs.vellum.ai](https://docs.vellum.ai) documente toujours Prompts, Workflows, Evaluations et Deployments. La page de tarifs ne liste plus que des offres d'assistant (30, 100 et 200 $ par mois) ; nous n'avons donc pu vérifier ni le tarif de la plateforme de développement ni une fonction d'A/B avec répartition du trafic, que des versions antérieures de cette page décrivaient. Confirmez les deux auprès de Vellum avant tout achat.",
+          "Avertissement de statut : le 2026-11-02, la page d'accueil de [vellum.ai](https://www.vellum.ai) met en avant un assistant personnel d'IA, et l\'avis de Vellum indique que sa Personal Assistant Platform hébergée devait fermer le 2026-11-02. Cet avis ne concerne que le produit d'assistant ; [docs.vellum.ai](https://docs.vellum.ai) documente toujours Prompts, Workflows, Evaluations et Deployments. La page de tarifs ne liste plus que des offres d'assistant (30, 100 et 200 $ par mois) ; nous n'avons donc pu vérifier ni le tarif de la plateforme de développement ni une fonction d'A/B avec répartition du trafic, que des versions antérieures de cette page décrivaient. Confirmez les deux auprès de Vellum avant tout achat.",
           "Idéal pour les équipes qui utilisent déjà Vellum et veulent une validation de type PR avant le déploiement.",
         ],
       },
@@ -2169,8 +2169,8 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum : comparaison multi-modèle pour les équipes',
         content: [
-          "**PromptQuorum envoie un prompt à plus de 25 modèles d'IA simultanément et renvoie les sorties côte à côte : un moyen rapide de comparer le comportement d'un prompt sur GPT-5.6, Claude, Gemini et des LLM locaux avant de vous engager sur un modèle ou une version de prompt.** Contrairement aux outils d'évaluation ci-dessus, centrés sur la notation et les tests de non-régression, il répond à « quel modèle traite le mieux ce prompt ? » en une seule exécution.",
-          "Utilisez PromptQuorum comme première étape avant une évaluation plus poussée dans un outil comme Braintrust ou Promptfoo. Une offre gratuite existe, aucune configuration technique n'est requise et les LLM locaux via Ollama et LM Studio sont pris en charge. PromptQuorum n'a pas d'intégration CI/CD.",
+          "**PromptQuorum envoie un prompt à plus de 25 modèles d'IA simultanément et renvoie les sorties côte à côte : un moyen rapide de comparer le comportement d'un prompt sur les modèles d\'OpenAI, Claude, Gemini et des LLM locaux avant de vous engager sur un modèle ou une version de prompt.** Contrairement aux outils d'évaluation ci-dessus, centrés sur la notation et les tests de non-régression, il répond à « quel modèle traite le mieux ce prompt ? » en une seule exécution.",
+          "Utilisez PromptQuorum comme première étape avant une évaluation plus poussée dans un outil comme Braintrust ou Promptfoo. Il est en bêta publique gratuite, aucune configuration technique n'est requise et les LLM locaux via Ollama et LM Studio sont pris en charge. PromptQuorum n'a pas d'intégration CI/CD.",
           "Idéal pour les équipes qui hésitent à optimiser pour un fournisseur de modèles précis, ou qui comparent le même prompt sur plusieurs LLM à la fois.",
           "PromptQuorum est notre propre produit : lisez cette entrée comme une présentation déclarée de notre offre, pas comme un classement indépendant.",
         ],
@@ -2233,10 +2233,10 @@ tests:
           },
           {
             "Outil": "[PromptQuorum](https://www.promptquorum.com)",
-            "Test A/B": "✅ Multi-modèles",
-            "Collaboration": "✓ Espace partagé",
+            "Test A/B": "Comparaison de modèles, pas de test de variantes de prompt",
+            "Collaboration": "Non vérifié",
             "CI/CD": "✗ Pas de CI/CD",
-            "Tarification": "Gratuit + crédits",
+            "Tarification": "Gratuit (bêta publique)",
             "Optimal pour": "Comparaison entre modèles",
           },
         ],
@@ -2335,7 +2335,7 @@ tests:
           },
           {
             "q": "Combien coûte un stack d'optimisation de prompts pour une équipe de 5 personnes ?",
-            "a": "D'après les tarifs publiés, environ 0 à 330 $ par mois : DSPy et Promptfoo Community sont gratuits, Braintrust Pro coûte 249 $/mois et Helicone Pro 79 $/mois. Nous n'avons pas pu vérifier les tarifs de Vellum ni de PromptPerfect. Le coût augmente avec le volume de données, les scores et les sièges.",
+            "a": "D'après les tarifs de base publiés (avant facturation à l'usage), environ 0 à 330 $ par mois : DSPy et Promptfoo Community sont gratuits, Braintrust Pro coûte 249 $/mois et Helicone Pro 79 $/mois. Nous n'avons pas pu vérifier les tarifs de Vellum ni de PromptPerfect. Le coût augmente avec le volume de données, les scores et les sièges.",
           },
           {
             "q": "Comment mesurer si un prompt est réellement meilleur ?",
@@ -2347,7 +2347,7 @@ tests:
           },
           {
             "q": "Helicone fonctionne-t-il avec tous les fournisseurs de LLM ?",
-            "a": "Helicone fonctionne comme un proxy et l'intégration consiste à changer l'URL de base dans le client d'API ; consultez sa documentation pour la liste actuelle des fournisseurs. Notez que Helicone est en mode maintenance depuis le rachat par Mintlify annoncé le 2026-03-03.",
+            "a": "Helicone fonctionne comme un proxy et l'intégration consiste à changer l'URL de base dans le client d'API ; consultez sa documentation pour la liste actuelle des fournisseurs. Notez que Mintlify a annoncé le 2026-03-03 son intention de racheter Helicone et de le maintenir en mode maintenance ; la page tarifs de Helicone indique désormais qu\'il ne fait plus partie de Mintlify, vérifiez donc son statut.",
           },
           {
             "q": "Quand une équipe doit-elle choisir Vellum plutôt que Promptfoo ?",
@@ -2355,7 +2355,7 @@ tests:
           },
           {
             "q": "Lesquels de ces outils ont changé de propriétaire ou de statut en 2026 ?",
-            "a": "OpenAI a annoncé le 2026-03-09 son intention de racheter Promptfoo, qui restera open source. Mintlify a annoncé le 2026-03-03 le rachat de Helicone et l'a placé en mode maintenance. Des sources tierces indiquent que PromptPerfect, de Jina AI (rachetée par Elastic en octobre 2025), ne sera plus disponible après le 2026-09-01 ; nous n'avons pas pu le confirmer auprès de l'éditeur. Vellum a annoncé la fermeture de sa Personal Assistant Platform hébergée le 2026-11-02 et met désormais en avant un produit d'assistant, tandis que sa documentation couvre toujours la plateforme de développement.",
+            "a": "OpenAI a annoncé le 2026-03-09 son intention de racheter Promptfoo, qui restera open source ; la transaction restait soumise aux conditions de clôture usuelles. Mintlify a annoncé le 2026-03-03 son intention de racheter Helicone et de le maintenir en mode maintenance, mais la page tarifs de Helicone indique désormais qu'il ne fait plus partie de Mintlify. Des sources tierces indiquent que PromptPerfect, de Jina AI (rachetée par Elastic en octobre 2025), devait fermer après le 2026-09-01 ; nous n'avons pas pu le confirmer auprès de l'éditeur. L\'avis de Vellum indique que sa Personal Assistant Platform hébergée devait fermer le 2026-11-02 ; Vellum met désormais en avant un produit d'assistant, tandis que sa documentation couvre toujours la plateforme de développement.",
           },
           {
             "q": "Quels outils conviennent à l'optimisation de prompts en production ?",
@@ -2408,7 +2408,7 @@ tests:
       url: 'https://www.promptquorum.com/fr/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'fr',
       datePublished: '2026-04-10',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       proficiencyLevel: 'Intermediate',
@@ -2441,7 +2441,7 @@ tests:
         { '@type': 'ListItem', position: 3, name: 'PromptPerfect', description: "Optimiseur de prompts de Jina AI avec interface sans code ; vérifiez le statut de l'éditeur avant de l'adopter." },
         { '@type': 'ListItem', position: 4, name: 'Vellum', description: "Plateforme de développement LLM avec déploiements, évaluations et revues de release ; confirmez le statut et les tarifs actuels." },
         { '@type': 'ListItem', position: 5, name: 'Promptfoo', description: 'Outil CLI open source de tests de non-régression de prompts en CI/CD.' },
-        { '@type': 'ListItem', position: 6, name: 'Helicone', description: "Proxy d'observabilité LLM avec suivi du coût et de la latence ; en mode maintenance depuis le rachat par Mintlify." },
+        { '@type': 'ListItem', position: 6, name: 'Helicone', description: "Proxy d'observabilité LLM avec suivi du coût et de la latence ; en mode maintenance après l\'annonce du rachat par Mintlify ; vérifiez le statut actuel." },
         { '@type': 'ListItem', position: 7, name: 'PromptQuorum', description: 'Plateforme de comparaison multi-modèle : testez le même prompt sur plus de 25 modèles avant d\'optimiser.' },
       ],
     },
@@ -2456,11 +2456,11 @@ tests:
     leadAnswerBlock: "**チームのプロンプト最適化には、バージョン管理された保存、A/Bテスト、出力スコアリング、共同レビューが必要ですが、4つすべてを備えた単一ツールはありません。本ガイドは公式ベンダーページで6ツールを比較し、2026年の変更点と公開価格を整理します。**",
     metaDescription: "Braintrust、DSPy、Promptfoo、Vellum、Helicone、PromptPerfectをチーム向けに比較。料金、A/Bテスト、CI/CD、2026年のベンダー状況の変化を公式情報で確認しました。",
     ogTitle: "チーム向けプロンプト最適化ツール：料金とベンダー状況を確認済み",
-    ogDescription: "Braintrust、DSPy、Promptfoo、Vellum、Helicone、PromptPerfectを比較。各ツールの料金、テスト機能、2026年に所有者が変わったベンダーをまとめました。",
+    ogDescription: "Braintrust、DSPy、Promptfoo、Vellum、Helicone、PromptPerfectを比較。各ツールの料金、テスト機能、2026年に所有者の変更を発表したベンダーをまとめました。",
     twitterTitle: "チーム向けプロンプト最適化ツール2026：6ツール比較",
     twitterDescription: "多くのチームに必要なのは2ツール。評価用とデプロイ用です。料金とベンダー状況は公式ページで確認しています。",
     publishDate: '2026-04-10',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     readTime: '10分で読める',
     educationalLevel: 'Intermediate',
     audience: '複数人でLLMワークフローを構築するエンジニアリングマネージャーとプロンプトエンジニア',
@@ -2493,7 +2493,7 @@ tests:
         isTldr: true,
         items: [
           "チームのプロンプト最適化には4つの機能が必要です。バージョン管理された保存、バリアントのA/Bテスト、出力スコアリング、共同レビューです。4つすべてを満たす単一ツールはありません。",
-          "2026年にベンダーの状況が変わりました。OpenAIはPromptfooの買収を発表（2026-03-09、オープンソースのまま）、MintlifyがHeliconeを買収（2026-03-03、現在はメンテナンスモード）、Vellumは現在パーソナルアシスタント製品を前面に出しています。PromptPerfectは2026-09-01に終了すると第三者情報源が伝えていますが、ベンダーには確認できていません。",
+          "2026年にベンダーの状況が変わりました。OpenAIはPromptfooの買収を発表（2026-03-09、オープンソースのまま、完了には通常のクロージング条件が付されていました）、MintlifyはHeliconeの買収を発表（2026-03-03、メンテナンスモード。Heliconeの料金ページは現在Mintlifyの一部ではないと表示しているため状況は要確認）、Vellumは現在パーソナルアシスタント製品を前面に出しています。PromptPerfectは2026-09-01に終了する予定だったと第三者情報源が伝えていますが、サイトは2026-11-02時点でも表示され、ベンダーには終了を確認できていません。",
           "Braintrustは評価重視のチーム、PromptfooはCI/CDの回帰テスト、DSPyはラベル付き例からのプロンプト自動探索に向きます。Vellumはデプロイ前のリリースレビューをドキュメント化しています。",
           "DSPyとPromptfooは無料でMITライセンスですが、セットアップにエンジニアリング工数が必要で、非エンジニア向けのUIはありません。",
           "公開価格（2026-11-02確認）：Braintrust Starterは無料、Proは249ドル/月。Helicone Hobbyは無料、Proは79ドル/月、Teamは799ドル/月。Promptfoo Communityは無料。VellumとPromptPerfectの価格は確認できませんでした。",
@@ -2585,7 +2585,7 @@ tests:
         title: "PromptPerfect：UIベースの最適化（状況要確認）",
         content: [
           "**PromptPerfectはJina AIが提供する、ビジュアルUIのプロンプト最適化ツールです。プロンプトを貼り付け、対象モデルを選ぶと、コードを書かずに最適化されたバリアントが得られます。**コンテンツ、マーケティング、プロダクトの非技術系メンバーを想定していました。",
-          "状況に関する警告：ElasticはJina AIの買収を2025-10-09に完了しており、第三者情報源はPromptPerfectが2026-09-01以降利用できなくなると伝えています。ベンダーの声明では確認できておらず、[promptperfect.jina.ai](https://promptperfect.jina.ai)は2026-11-02時点でも表示されました。導入前にサービス状況とエクスポート手段を確認してください。現行プランの価格は確認できなかったため、記載していません。",
+          "状況に関する警告：ElasticはJina AIの買収を2025-10-09に完了しており、第三者情報源はPromptPerfectが2026-09-01以降に終了する予定だったと伝えています。ベンダーの声明では確認できておらず、[promptperfect.jina.ai](https://promptperfect.jina.ai)は2026-11-02時点でも表示されました。導入前にサービス状況とエクスポート手段を確認してください。現行プランの価格は確認できなかったため、記載していません。",
         ],
         items: [
           "ノーコードUI：プロンプトを貼り付け、モデルを選び、最適化バリアントを取得",
@@ -2597,7 +2597,7 @@ tests:
         title: "Vellum：デプロイ、評価、リリースレビュー",
         content: [
           "**Vellumは、プロンプトとワークフローのデプロイ、評価、リリースレビューをドキュメント化しているLLM開発プラットフォームです。プロンプトが本番に出る前にレビューゲートを置きたいチームに関係します。**Deployment Release Reviewsでは、プロンプトまたはワークフローのデプロイを重要な環境へ昇格する前に、チームメンバーがレビュー、承認、変更依頼を行えます。",
-          "状況に関する警告：2026-11-02時点で[vellum.ai](https://www.vellum.ai)のトップページはパーソナルAIアシスタントを前面に出しており、Vellumはホスト型Personal Assistant Platformを2026-11-02に終了すると発表しました。この通知の対象はアシスタント製品のみで、[docs.vellum.ai](https://docs.vellum.ai)は引き続きPrompts、Workflows、Evaluations、Deploymentsを記載しています。料金ページにはアシスタント向けプラン（月30ドル、100ドル、200ドル）のみが載っているため、開発プラットフォームの価格や、このページの旧版が記載していたトラフィック分割型A/B機能は確認できませんでした。購入前にVellumへ両方を確認してください。",
+          "状況に関する警告：2026-11-02時点で[vellum.ai](https://www.vellum.ai)のトップページはパーソナルAIアシスタントを前面に出しており、Vellumの通知によると、ホスト型Personal Assistant Platformは2026-11-02に終了する予定でした。この通知の対象はアシスタント製品のみで、[docs.vellum.ai](https://docs.vellum.ai)は引き続きPrompts、Workflows、Evaluations、Deploymentsを記載しています。料金ページにはアシスタント向けプラン（月30ドル、100ドル、200ドル）のみが載っているため、開発プラットフォームの価格や、このページの旧版が記載していたトラフィック分割型A/B機能は確認できませんでした。購入前にVellumへ両方を確認してください。",
           "すでにVellumを使っていて、デプロイ前にPR形式の承認を求めるチームに最適です。",
         ],
       },
@@ -2622,8 +2622,8 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum: チーム向けマルチモデル比較',
         content: [
-          "**PromptQuorumは、1つのプロンプトを25以上のAIモデルへ同時に送信し、出力を並べて表示します。モデルやプロンプトのバージョンを決める前に、GPT-5.6、Claude、Gemini、ローカルLLMでの挙動を素早く比較できます。**スコアリングや回帰テストを中心とする上記の評価ツールと違い、「このプロンプトを最も適切に処理するモデルはどれか」に1回の実行で答えます。",
-          "BraintrustやPromptfooなどでより深く評価する前の最初のステップとして使えます。無料プランがあり、技術的なセットアップは不要で、OllamaとLM Studio経由のローカルLLMにも対応します。PromptQuorumにCI/CD連携はありません。",
+          "**PromptQuorumは、1つのプロンプトを25以上のAIモデルへ同時に送信し、出力を並べて表示します。モデルやプロンプトのバージョンを決める前に、OpenAIモデル、Claude、Gemini、ローカルLLMでの挙動を素早く比較できます。**スコアリングや回帰テストを中心とする上記の評価ツールと違い、「このプロンプトを最も適切に処理するモデルはどれか」に1回の実行で答えます。",
+          "BraintrustやPromptfooなどでより深く評価する前の最初のステップとして使えます。無料のパブリックベータで提供されており、技術的なセットアップは不要で、OllamaとLM Studio経由のローカルLLMにも対応します。PromptQuorumにCI/CD連携はありません。",
           "特定のモデルプロバイダー向けに最適化するか検討しているチームや、同じプロンプトを複数のLLMで同時に比較したいチームに最適です。",
           "PromptQuorumは自社製品です。この項目は独立したランキングではなく、開示付きの自社掲載としてお読みください。",
         ],
@@ -2686,10 +2686,10 @@ tests:
           },
           {
             "ツール": "[PromptQuorum](https://www.promptquorum.com)",
-            "A/Bテスト": "✅ マルチモデル",
-            "コラボレーション": "✓ 共有ワークスペース",
+            "A/Bテスト": "モデル間比較（プロンプト変種のA/Bテストではない）",
+            "コラボレーション": "未確認",
             "CI/CD": "✗ CI/CDなし",
-            "料金": "無料＋クレジット",
+            "料金": "無料（パブリックベータ）",
             "最適チーム": "モデル間比較",
           },
         ],
@@ -2788,7 +2788,7 @@ tests:
           },
           {
             "q": "5人のチームのプロンプト最適化スタックにはいくらかかりますか？",
-            "a": "公開価格では月0〜330ドル程度です。DSPyとPromptfoo Communityは無料、Braintrust Proは249ドル/月、Helicone Proは79ドル/月です。VellumとPromptPerfectの価格は確認できませんでした。費用はデータ量、スコア数、シート数に応じて増えます。",
+            "a": "公開されている基本料金（従量課金の前）では月0〜330ドル程度です。DSPyとPromptfoo Communityは無料、Braintrust Proは249ドル/月、Helicone Proは79ドル/月です。VellumとPromptPerfectの価格は確認できませんでした。費用はデータ量、スコア数、シート数に応じて増えます。",
           },
           {
             "q": "プロンプトが本当に良くなったかをどう測りますか？",
@@ -2800,7 +2800,7 @@ tests:
           },
           {
             "q": "HeliconeはすべてのLLMプロバイダーで使えますか？",
-            "a": "Heliconeはプロキシとして動作し、導入はAPIクライアントのベースURLを変更するだけです。対応プロバイダーの最新一覧はドキュメントで確認してください。なお、2026-03-03に発表されたMintlifyによる買収以降、Heliconeはメンテナンスモードです。",
+            "a": "Heliconeはプロキシとして動作し、導入はAPIクライアントのベースURLを変更するだけです。対応プロバイダーの最新一覧はドキュメントで確認してください。なお、Mintlifyは2026-03-03にHeliconeの買収とメンテナンスモードでの継続を発表しましたが、Heliconeの料金ページは現在Mintlifyの一部ではなくなったと表示しているため、状況を確認してください。",
           },
           {
             "q": "チームはいつPromptfooではなくVellumを選ぶべきですか？",
@@ -2808,7 +2808,7 @@ tests:
           },
           {
             "q": "2026年に所有者や状況が変わったツールはどれですか？",
-            "a": "OpenAIは2026-03-09にPromptfooの買収を発表し、プロジェクトはオープンソースのままとされています。Mintlifyは2026-03-03にHeliconeの買収を発表し、メンテナンスモードにしました。第三者情報源は、Jina AI（2025年10月にElasticが買収）のPromptPerfectが2026-09-01以降利用できなくなると伝えていますが、ベンダーには確認できていません。Vellumはホスト型Personal Assistant Platformを2026-11-02に終了すると発表し、アシスタント製品を前面に出していますが、ドキュメントは開発プラットフォームを引き続き扱っています。",
+            "a": "OpenAIは2026-03-09にPromptfooの買収を発表し、プロジェクトはオープンソースのままとされています（取引の完了には通常のクロージング条件が付されていました）。Mintlifyは2026-03-03にHeliconeの買収とメンテナンスモードでの継続を発表しましたが、Heliconeの料金ページは現在Mintlifyの一部ではなくなったと表示しています。第三者情報源は、Jina AI（2025年10月にElasticが買収）のPromptPerfectが2026-09-01以降に終了する予定だったと伝えていますが、ベンダーには確認できていません。Vellumの通知によると、ホスト型Personal Assistant Platformは2026-11-02に終了する予定で、現在はアシスタント製品を前面に出していますが、ドキュメントは開発プラットフォームを引き続き扱っています。",
           },
           {
             "q": "本番環境でのプロンプト最適化に向くツールはどれですか？",
@@ -2861,7 +2861,7 @@ tests:
       url: 'https://www.promptquorum.com/ja/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'ja',
       datePublished: '2026-04-10',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       proficiencyLevel: 'Intermediate',
@@ -2894,7 +2894,7 @@ tests:
         { '@type': 'ListItem', position: 3, name: 'PromptPerfect', description: "Jina AIのノーコード型プロンプト最適化ツール。導入前にベンダーの状況を確認してください。" },
         { '@type': 'ListItem', position: 4, name: 'Vellum', description: "デプロイ、評価、リリースレビューを備えたLLM開発プラットフォーム。現在の状況と価格を確認してください。" },
         { '@type': 'ListItem', position: 5, name: 'Promptfoo', description: 'CI/CDでプロンプトの回帰テストを行うオープンソースのCLIツール。' },
-        { '@type': 'ListItem', position: 6, name: 'Helicone', description: "コストとレイテンシーを追跡するLLMオブザーバビリティ用プロキシ。Mintlifyによる買収以降はメンテナンスモード。" },
+        { '@type': 'ListItem', position: 6, name: 'Helicone', description: "コストとレイテンシーを追跡するLLMオブザーバビリティ用プロキシ。Mintlifyによる買収発表後はメンテナンスモード。現在の状況は要確認。" },
         { '@type': 'ListItem', position: 7, name: 'PromptQuorum', description: '最適化の前に、同じプロンプトを25以上のモデルで比較できるマルチモデル比較プラットフォーム。' },
       ],
     },
@@ -2909,11 +2909,11 @@ tests:
     leadAnswerBlock: "**团队提示词优化需要版本化存储、A/B测试、输出评分和协作评审，没有单一工具能覆盖这四项。本指南对照官方厂商页面比较六款工具，并整理2026年的变化和公开价格。**",
     metaDescription: "对比Braintrust、DSPy、Promptfoo、Vellum、Helicone和PromptPerfect：价格、A/B测试、CI/CD，并标注2026年厂商状态变化，信息均核对官方页面。",
     ogTitle: "团队提示词优化工具：价格与厂商状态已核实",
-    ogDescription: "对比Braintrust、DSPy、Promptfoo、Vellum、Helicone和PromptPerfect：各自价格、测试能力，以及2026年哪些厂商易主。",
+    ogDescription: "对比Braintrust、DSPy、Promptfoo、Vellum、Helicone和PromptPerfect：各自价格、测试能力，以及2026年哪些厂商宣布了所有权变更。",
     twitterTitle: "团队提示词优化工具2026：6款对比",
     twitterDescription: "多数团队只需两个工具：一个用于评估，一个用于部署。价格与厂商状态均已对照官方页面核实。",
     publishDate: '2026-04-10',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     readTime: '阅读约10分钟',
     educationalLevel: 'Intermediate',
     audience: '构建多人LLM工作流的工程经理和提示工程师',
@@ -2946,7 +2946,7 @@ tests:
         isTldr: true,
         items: [
           "团队提示词优化需要四项能力：版本化存储、变体A/B测试、输出评分和协作评审。没有单一工具能覆盖全部四项。",
-          "2026年厂商状态发生变化：OpenAI宣布将收购Promptfoo（2026-03-09，仍保持开源），Mintlify收购了Helicone（2026-03-03，现处于维护模式），Vellum目前主推个人助理产品。第三方来源称PromptPerfect将于2026-09-01停止服务，我们未能向厂商确认。",
+          "2026年厂商状态发生变化：OpenAI宣布将收购Promptfoo（2026-03-09，仍保持开源；交易需满足惯例交割条件），Mintlify宣布将收购Helicone（2026-03-03，维护模式；Helicone价格页现称其已不再属于Mintlify，请自行确认状态），Vellum目前主推个人助理产品。第三方来源称PromptPerfect原定于2026-09-01停止服务，其网站在2026-11-02仍可访问，我们未能向厂商确认停服。",
           "Braintrust适合以评估为中心的团队，Promptfoo适合CI/CD回归测试，DSPy可基于带标注示例自动搜索提示词，Vellum在文档中提供部署前的发布评审。",
           "DSPy和Promptfoo免费且采用MIT许可证，但需要工程投入来搭建，且没有面向非工程师的界面。",
           "公开价格（2026-11-02核实）：Braintrust Starter免费，Pro为249美元/月；Helicone Hobby免费，Pro为79美元/月，Team为799美元/月；Promptfoo Community免费。Vellum和PromptPerfect的价格未能核实。",
@@ -3032,7 +3032,7 @@ tests:
         title: "PromptPerfect：界面化优化（需核实状态）",
         content: [
           "**PromptPerfect是Jina AI推出的可视化提示词优化器：粘贴提示词、选择目标模型，即可得到优化后的变体，无需写代码。**它面向内容、营销和产品团队中的非技术人员。",
-          "状态提醒：Elastic已于2025-10-09完成对Jina AI的收购，第三方来源称PromptPerfect将在2026-09-01之后不可用。我们未能在厂商声明中确认这一点，且[promptperfect.jina.ai](https://promptperfect.jina.ai)在2026-11-02仍可访问，因此请在采用前核实服务状态和数据导出方式。我们未能核实其当前套餐价格，故此处不列出。",
+          "状态提醒：Elastic已于2025-10-09完成对Jina AI的收购，第三方来源称PromptPerfect原定于2026-09-01之后关闭。我们未能在厂商声明中确认这一点，且[promptperfect.jina.ai](https://promptperfect.jina.ai)在2026-11-02仍可访问，因此请在采用前核实服务状态和数据导出方式。我们未能核实其当前套餐价格，故此处不列出。",
         ],
         items: [
           "无代码界面：粘贴提示词、选择模型、获得优化变体",
@@ -3044,7 +3044,7 @@ tests:
         title: "Vellum：部署、评估与发布评审",
         content: [
           "**Vellum是一个LLM开发平台，其文档涵盖提示词与工作流的部署、评估和发布评审，适合希望在提示词上线前设置评审关卡的团队。**其Deployment Release Reviews允许团队成员在提示词或工作流部署晋升到关键环境之前进行评审、批准或要求修改。",
-          "状态提醒：截至2026-11-02，[vellum.ai](https://www.vellum.ai)首页主推个人AI助理，Vellum宣布其托管的Personal Assistant Platform将于2026-11-02关闭。该通知仅涉及助理产品；[docs.vellum.ai](https://docs.vellum.ai)仍记录Prompts、Workflows、Evaluations和Deployments。价格页现在只列出助理套餐（每月30、100和200美元），因此我们无法核实开发平台的价格，也无法核实本页早期版本所述的流量拆分式A/B功能。购买前请向Vellum确认这两点。",
+          "状态提醒：截至2026-11-02，[vellum.ai](https://www.vellum.ai)首页主推个人AI助理，Vellum的通知称，其托管的Personal Assistant Platform原定于2026-11-02关闭。该通知仅涉及助理产品；[docs.vellum.ai](https://docs.vellum.ai)仍记录Prompts、Workflows、Evaluations和Deployments。价格页现在只列出助理套餐（每月30、100和200美元），因此我们无法核实开发平台的价格，也无法核实本页早期版本所述的流量拆分式A/B功能。购买前请向Vellum确认这两点。",
           "最适合已在使用Vellum、希望在部署前采用类似PR审批流程的团队。",
         ],
       },
@@ -3083,8 +3083,8 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum: 多模型调度对比',
         content: [
-          "**PromptQuorum可将一个提示词同时发送给25个以上的AI模型并并排返回输出，便于在选定模型或提示词版本之前，快速比较提示词在GPT-5.6、Claude、Gemini和本地LLM上的表现。**与上面侧重评分和回归测试的评估工具不同，它一次运行就能回答“哪个模型最适合处理这个提示词”。",
-          "可将PromptQuorum作为在Braintrust或Promptfoo等工具中做更深入评估之前的第一步。它提供免费套餐，无需工程配置，并支持通过Ollama和LM Studio使用本地LLM。PromptQuorum没有CI/CD集成。",
+          "**PromptQuorum可将一个提示词同时发送给25个以上的AI模型并并排返回输出，便于在选定模型或提示词版本之前，快速比较提示词在OpenAI模型、Claude、Gemini和本地LLM上的表现。**与上面侧重评分和回归测试的评估工具不同，它一次运行就能回答“哪个模型最适合处理这个提示词”。",
+          "可将PromptQuorum作为在Braintrust或Promptfoo等工具中做更深入评估之前的第一步。它处于免费公开测试阶段，无需工程配置，并支持通过Ollama和LM Studio使用本地LLM。PromptQuorum没有CI/CD集成。",
           "最适合正在决定是否针对某一模型提供商优化的团队，或需要同时在多个LLM上基准测试同一提示词的团队。",
           "PromptQuorum是我们自己的产品，请把这一条视为已披露的自家产品列示，而非独立排名。",
         ],
@@ -3147,10 +3147,10 @@ tests:
           },
           {
             "工具": "[PromptQuorum](https://www.promptquorum.com)",
-            "A/B测试": "✅ 多模型",
-            "协作": "✓ 共享工作区",
+            "A/B测试": "模型间对比，非提示词变体A/B测试",
+            "协作": "未核实",
             "CI/CD": "✗ 无CI/CD",
-            "价格": "免费＋额度",
+            "价格": "免费（公开测试版）",
             "最适合": "跨模型比较",
           },
         ],
@@ -3258,7 +3258,7 @@ tests:
           },
           {
             "q": "5人团队的提示词优化工具栈要花多少钱？",
-            "a": "按公开价格大致为每月0–330美元：DSPy和Promptfoo Community免费，Braintrust Pro为249美元/月，Helicone Pro为79美元/月。Vellum和PromptPerfect的价格未能核实。费用随数据量、评分次数和席位数增长。",
+            "a": "按公开的基础套餐价格（不含按用量计费部分）大致为每月0–330美元：DSPy和Promptfoo Community免费，Braintrust Pro为249美元/月，Helicone Pro为79美元/月。Vellum和PromptPerfect的价格未能核实。费用随数据量、评分次数和席位数增长。",
           },
           {
             "q": "如何衡量一个提示词是否真的更好？",
@@ -3270,7 +3270,7 @@ tests:
           },
           {
             "q": "Helicone支持所有LLM提供商吗？",
-            "a": "Helicone作为代理工作，集成只需修改API客户端中的基础URL；当前支持的提供商请查阅其文档。请注意，自2026-03-03宣布被Mintlify收购以来，Helicone一直处于维护模式。",
+            "a": "Helicone作为代理工作，集成只需修改API客户端中的基础URL；当前支持的提供商请查阅其文档。请注意，Mintlify于2026-03-03宣布将收购Helicone并以维护模式运营；Helicone价格页现称其已不再属于Mintlify，请自行确认其状态。",
           },
           {
             "q": "团队什么时候应该选Vellum而不是Promptfoo？",
@@ -3278,7 +3278,7 @@ tests:
           },
           {
             "q": "这些工具中哪些在2026年更换了所有者或状态？",
-            "a": "OpenAI于2026-03-09宣布将收购Promptfoo，项目将保持开源。Mintlify于2026-03-03宣布收购Helicone，并将其置于维护模式。第三方来源称Jina AI（2025年10月被Elastic收购）旗下的PromptPerfect将在2026-09-01之后不可用，我们未能向厂商确认。Vellum宣布其托管的Personal Assistant Platform将于2026-11-02关闭，目前主推助理产品，而其文档仍涵盖开发平台。",
+            "a": "OpenAI于2026-03-09宣布将收购Promptfoo，项目将保持开源；交易需满足惯例交割条件。Mintlify于2026-03-03宣布将收购Helicone并以维护模式运营，但Helicone价格页现称其已不再属于Mintlify。第三方来源称Jina AI（2025年10月被Elastic收购）旗下的PromptPerfect原定于2026-09-01之后关闭，我们未能向厂商确认。Vellum的通知称，其托管的Personal Assistant Platform原定于2026-11-02关闭，目前主推助理产品，而其文档仍涵盖开发平台。",
           },
           {
             "q": "哪些工具适合生产环境中的提示词优化？",
@@ -3350,7 +3350,7 @@ tests:
       url: 'https://www.promptquorum.com/zh/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'zh',
       datePublished: '2026-04-10',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -3391,7 +3391,7 @@ tests:
         { '@type': 'ListItem', position: 3, name: 'PromptPerfect', description: "Jina AI推出的无代码提示词优化器；采用前请核实厂商状态。" },
         { '@type': 'ListItem', position: 4, name: 'Vellum', description: "具备部署、评估和发布评审的LLM开发平台；请确认当前状态和价格。" },
         { '@type': 'ListItem', position: 5, name: 'Promptfoo', description: '开源CLI工具 — CI/CD提示回归测试' },
-        { '@type': 'ListItem', position: 6, name: 'Helicone', description: "带有成本与延迟追踪的LLM可观测性代理；自Mintlify收购后处于维护模式。" },
+        { '@type': 'ListItem', position: 6, name: 'Helicone', description: "带有成本与延迟追踪的LLM可观测性代理；Mintlify宣布收购后处于维护模式；请确认当前状态。" },
         { '@type': 'ListItem', position: 7, name: 'PromptQuorum', description: '多模型对比平台；同一提示对25+个模型并排测试' },
       ],
     },
@@ -3406,11 +3406,11 @@ tests:
     leadAnswerBlock: "**يحتاج تحسين البرومبتات للفرق إلى تخزين بإصدارات واختبار A/B وتقييم للمخرجات ومراجعة تعاونية، ولا توجد أداة واحدة تغطي الأربعة. يقارن هذا الدليل ست أدوات استناداً إلى صفحات الموردين الرسمية ويبيّن تغيّرات 2026 والأسعار المنشورة.**",
     metaDescription: "قارن Braintrust وDSPy وPromptfoo وVellum وHelicone وPromptPerfect للفرق: الأسعار واختبار A/B وCI/CD وتغيّر حالة الموردين في 2026.",
     ogTitle: "أدوات تحسين البرومبتات للفرق: الأسعار وحالة الموردين مُراجَعة",
-    ogDescription: "مقارنة Braintrust وDSPy وPromptfoo وVellum وHelicone وPromptPerfect: تكلفة كل أداة وما تختبره وأي الموردين تغيّرت ملكيته في 2026.",
+    ogDescription: "مقارنة Braintrust وDSPy وPromptfoo وVellum وHelicone وPromptPerfect: تكلفة كل أداة وما تختبره وأي الموردين أعلنوا تغييرات في الملكية في 2026.",
     twitterTitle: "أدوات تحسين البرومبتات للفرق 2026: مقارنة 6 أدوات",
     twitterDescription: "معظم الفرق تحتاج أداتين: واحدة للتقييم وأخرى للنشر. الأسعار وحالة الموردين مُراجَعة مقابل الصفحات الرسمية.",
     publishDate: '2026-04-10',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     readTime: '10 دقائق للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'مدراء الهندسة ومهندسو التعليمات الذين يبنون سير عمل LLM متعدد الأشخاص',
@@ -3443,7 +3443,7 @@ tests:
         isTldr: true,
         items: [
           "يحتاج تحسين البرومبتات للفرق إلى أربع قدرات: تخزين بإصدارات، واختبار A/B للمتغيرات، وتقييم المخرجات، ومراجعة تعاونية. لا توجد أداة واحدة تغطي الأربع.",
-          "تغيّرت حالة الموردين في 2026: أعلنت OpenAI أنها ستستحوذ على Promptfoo (2026-03-09، ويبقى مفتوح المصدر)، واستحوذت Mintlify على Helicone (2026-03-03، وهو الآن في وضع الصيانة)، وتروّج Vellum حالياً لمنتج مساعد شخصي. تفيد مصادر خارجية بأن PromptPerfect سيتوقف في 2026-09-01، ولم نتمكن من تأكيد ذلك مع المورّد.",
+          "تغيّرت حالة الموردين في 2026: أعلنت OpenAI أنها ستستحوذ على Promptfoo (2026-03-09، ويبقى مفتوح المصدر، وكان إتمام الصفقة خاضعاً للشروط المعتادة)، وأعلنت Mintlify في 2026-03-03 أنها ستستحوذ على Helicone (وضع الصيانة)، غير أن صفحة أسعار Helicone تذكر الآن أنه لم يعد جزءاً من Mintlify، لذا تحقق من حالته، وتروّج Vellum حالياً لمنتج مساعد شخصي. أفادت مصادر خارجية بأن PromptPerfect كان سيتوقف في 2026-09-01؛ وكان موقعه ما يزال يعمل في 2026-11-02، ولم نتمكن من تأكيد التوقف مع المورّد.",
           "يناسب Braintrust الفرق التي تقودها المقاييس التقييمية، ويناسب Promptfoo اختبارات الانحدار في CI/CD، ويُؤتمت DSPy البحث عن البرومبتات من أمثلة موسومة، وتوثّق Vellum مراجعات الإصدار قبل النشر.",
           "DSPy وPromptfoo مجانيان بترخيص MIT، لكنهما يحتاجان إلى وقت هندسي للإعداد ولا توفران واجهة لغير المهندسين.",
           "الأسعار المنشورة (روجعت في 2026-11-02): Braintrust Starter مجاني وPro بسعر 249 دولاراً/شهر؛ Helicone Hobby مجاني وPro بسعر 79 دولاراً/شهر وTeam بسعر 799 دولاراً/شهر؛ Promptfoo Community مجاني. لم نتمكن من التحقق من أسعار Vellum وPromptPerfect.",
@@ -3461,7 +3461,7 @@ tests:
         content: [
           '**تحسين التعليمات هو العملية المنهجية لتحسين تعليمات الذكاء الاصطناعي من خلال التكرار المنظم واختبار المتغيرات وقياس المخرجات — وهو مختلف عن كتابة التعليمات المتفرقة.** عندما يضبط مهندس تعليمةً ويشاركها شفهياً، لا يكون التحسين قابلاً للتكرار أو المقارنة. حين يتبنى فريق التحسين المنهجي، يتمكن جميع المهندسين من تحرير نفس مكتبة التعليمات ومقارنة المتغيرات على نفس مجموعة بيانات الاختبار وتتبع التغييرات التي تُحسّن الجودة فعلاً.',
           'ما يجعل التحسين الجماعي مختلفاً عن العمل الفردي: مكتبات تعليمات مشتركة يحررها مهندسون متعددون في آنٍ واحد، وسير عمل مراجعة تمنع التغييرات غير المصرح بها على تعليمات الإنتاج، وتجارب A/B تقيس الأثر في العالم الحقيقي، ومسارات مراجعة للامتثال. ضبط التعليمات الفردي سريع لكنه هش؛ التحسين الجماعي أبطأ في الإعداد لكنه قابل للتوسع.',
-          'يُميّز هذا الدليل بين تحسين التعليمات (جعل التعليمات أفضل) وإدارة التعليمات (تنظيمها ونشرها) وتقييم التعليمات (قياس الجودة). معظم الفرق تحتاج أدوات للفئات الثلاث. للمقارنة بين النماذج أثناء التحسين، يُرسل [PromptQuorum](/features) تعليمةً واحدة إلى 25+ مزود ذكاء اصطناعي في آنٍ واحد — مفيد للفرق التي تتحقق من تعميم تغييرات التعليمات عبر النماذج.',
+          'يُميّز هذا الدليل بين تحسين التعليمات (جعل التعليمات أفضل) وإدارة التعليمات (تنظيمها ونشرها) وتقييم التعليمات (قياس الجودة). معظم الفرق تحتاج أدوات للفئات الثلاث. للمقارنة بين النماذج أثناء التحسين، يُرسل [PromptQuorum](/ar/features) تعليمةً واحدة إلى 25+ مزود ذكاء اصطناعي في آنٍ واحد — مفيد للفرق التي تتحقق من تعميم تغييرات التعليمات عبر النماذج.',
           'للاطلاع على مقارنة أشمل لجميع أدوات prompt engineering (ليس فقط المتعلقة بالتحسين)، راجع [أفضل أدوات prompt engineering 2026: مصنّفة حسب حالة الاستخدام](/ar/prompt-engineering/best-prompt-engineering-tools-2026).',
         ],
       },
@@ -3529,7 +3529,7 @@ tests:
         title: "PromptPerfect: تحسين عبر واجهة (تحقق من الحالة)",
         content: [
           "**PromptPerfect أداة لتحسين البرومبتات من Jina AI بواجهة مرئية: تلصق البرومبت وتختار النموذج المستهدف فتحصل على نسخة محسّنة دون كتابة كود.** وكان موجهاً لغير التقنيين في فرق المحتوى والتسويق والمنتج.",
-          "تحذير بشأن الحالة: أتمّت Elastic الاستحواذ على Jina AI في 2025-10-09، وتفيد مصادر خارجية بأن PromptPerfect لن يكون متاحاً بعد 2026-09-01. لم نتمكن من تأكيد ذلك في بيان من المورّد، وكان موقع [promptperfect.jina.ai](https://promptperfect.jina.ai) ما يزال يعمل في 2026-11-02، لذا تحقق من حالة الخدمة وخيارات تصدير البيانات قبل اعتماده. لم نتمكن من التحقق من أسعار خططه الحالية، ولذلك لا نذكر أيّاً منها.",
+          "تحذير بشأن الحالة: أتمّت Elastic الاستحواذ على Jina AI في 2025-10-09، وتفيد مصادر خارجية بأن PromptPerfect كان من المقرر أن يتوقف بعد 2026-09-01. لم نتمكن من تأكيد ذلك في بيان من المورّد، وكان موقع [promptperfect.jina.ai](https://promptperfect.jina.ai) ما يزال يعمل في 2026-11-02، لذا تحقق من حالة الخدمة وخيارات تصدير البيانات قبل اعتماده. لم نتمكن من التحقق من أسعار خططه الحالية، ولذلك لا نذكر أيّاً منها.",
         ],
         items: [
           "واجهة بلا كود: الصق البرومبت واختر النموذج واحصل على نسخة محسّنة",
@@ -3541,7 +3541,7 @@ tests:
         title: "Vellum: عمليات النشر والتقييمات ومراجعات الإصدار",
         content: [
           "**Vellum منصة تطوير لتطبيقات LLM يغطي توثيقها عمليات نشر البرومبتات وسير العمل والتقييمات ومراجعات الإصدار — وهي مناسبة للفرق التي تريد بوابة مراجعة قبل وصول البرومبت إلى الإنتاج.** تتيح مراجعات الإصدار (Deployment Release Reviews) لأعضاء الفريق مراجعة نشر Prompt أو Workflow والموافقة عليه أو طلب تعديلات قبل ترقيته إلى بيئة حرجة.",
-          "تحذير بشأن الحالة: في 2026-11-02 تروّج الصفحة الرئيسية لـ [vellum.ai](https://www.vellum.ai) لمساعد ذكاء اصطناعي شخصي، وأعلنت Vellum إيقاف منصة Personal Assistant المستضافة لديها في 2026-11-02. يخص هذا الإشعار منتج المساعد فقط؛ ولا يزال [docs.vellum.ai](https://docs.vellum.ai) يوثّق Prompts وWorkflows وEvaluations وDeployments. تعرض صفحة الأسعار الآن خطط المساعد فقط (30 و100 و200 دولار شهرياً)، لذا لم نتمكن من التحقق من سعر منصة التطوير ولا من ميزة A/B بتقسيم الحركة التي وصفتها نسخ سابقة من هذه الصفحة. أكّد الأمرين مع Vellum قبل الشراء.",
+          "تحذير بشأن الحالة: في 2026-11-02 تروّج الصفحة الرئيسية لـ [vellum.ai](https://www.vellum.ai) لمساعد ذكاء اصطناعي شخصي، ويذكر إشعار Vellum أن منصة Personal Assistant المستضافة لديها كان من المقرر إيقافها في 2026-11-02. يخص هذا الإشعار منتج المساعد فقط؛ ولا يزال [docs.vellum.ai](https://docs.vellum.ai) يوثّق Prompts وWorkflows وEvaluations وDeployments. تعرض صفحة الأسعار الآن خطط المساعد فقط (30 و100 و200 دولار شهرياً)، لذا لم نتمكن من التحقق من سعر منصة التطوير ولا من ميزة A/B بتقسيم الحركة التي وصفتها نسخ سابقة من هذه الصفحة. أكّد الأمرين مع Vellum قبل الشراء.",
           "الأنسب للفرق التي تستخدم Vellum بالفعل وتريد موافقة على نمط PR قبل النشر.",
         ],
       },
@@ -3580,8 +3580,8 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum: الإرسال متعدد النماذج للمقارنة',
         content: [
-          "**يرسل PromptQuorum برومبتاً واحداً إلى أكثر من 25 نموذج ذكاء اصطناعي في وقت واحد ويعرض المخرجات جنباً إلى جنب — وسيلة سريعة لمقارنة أداء البرومبت عبر GPT-5.6 وClaude وGemini ونماذج LLM المحلية قبل الالتزام بنموذج أو بإصدار من البرومبت.** وعلى خلاف أدوات التقييم أعلاه التي تركّز على التقييم واختبارات الانحدار، يجيب عن سؤال «أي نموذج يتعامل مع هذا البرومبت بأفضل شكل؟» في تشغيل واحد.",
-          "استخدم PromptQuorum خطوةً أولى قبل تقييم أعمق في أداة مثل Braintrust أو Promptfoo. تتوفر خطة مجانية، ولا حاجة إلى إعداد هندسي، وتُدعم نماذج LLM المحلية عبر Ollama وLM Studio. لا يوفر PromptQuorum تكاملاً مع CI/CD.",
+          "**يرسل PromptQuorum برومبتاً واحداً إلى أكثر من 25 نموذج ذكاء اصطناعي في وقت واحد ويعرض المخرجات جنباً إلى جنب — وسيلة سريعة لمقارنة أداء البرومبت عبر نماذج OpenAI وClaude وGemini ونماذج LLM المحلية قبل الالتزام بنموذج أو بإصدار من البرومبت.** وعلى خلاف أدوات التقييم أعلاه التي تركّز على التقييم واختبارات الانحدار، يجيب عن سؤال «أي نموذج يتعامل مع هذا البرومبت بأفضل شكل؟» في تشغيل واحد.",
+          "استخدم PromptQuorum خطوةً أولى قبل تقييم أعمق في أداة مثل Braintrust أو Promptfoo. وهو في نسخة تجريبية عامة مجانية، ولا حاجة إلى إعداد هندسي، وتُدعم نماذج LLM المحلية عبر Ollama وLM Studio. لا يوفر PromptQuorum تكاملاً مع CI/CD.",
           "الأنسب للفرق التي تقرر ما إذا كانت ستحسّن لمزوّد نماذج بعينه، أو التي تقارن البرومبت نفسه عبر عدة نماذج LLM في وقت واحد.",
           "PromptQuorum منتجنا الخاص، فاقرأ هذا البند بوصفه إدراجاً ذاتياً مُعلَناً وليس تصنيفاً مستقلاً.",
         ],
@@ -3644,10 +3644,10 @@ tests:
           },
           {
             "الأداة": "[PromptQuorum](https://www.promptquorum.com)",
-            "اختبار A/B": "✅ متعدد النماذج",
-            "التعاون": "✓ مساحة عمل مشتركة",
+            "اختبار A/B": "مقارنة بين النماذج وليست اختبار متغيرات البرومبت",
+            "التعاون": "لم يُتحقق",
             "CI/CD": "✗ لا CI/CD",
-            "الأسعار": "مجاني + رصيد",
+            "الأسعار": "مجاني (نسخة تجريبية عامة)",
             "مثالي لـ": "مقارنة بين النماذج",
           },
         ],
@@ -3746,7 +3746,7 @@ tests:
           },
           {
             "q": "كم تبلغ تكلفة حزمة تحسين البرومبتات لفريق من 5 أشخاص؟",
-            "a": "وفق الأسعار المنشورة، نحو 0–330 دولاراً شهرياً: DSPy وPromptfoo Community مجانيان، وBraintrust Pro بسعر 249 دولاراً/شهر وHelicone Pro بسعر 79 دولاراً/شهر. لم نتمكن من التحقق من أسعار Vellum وPromptPerfect. وتزداد التكلفة مع حجم البيانات وعدد التقييمات والمقاعد.",
+            "a": "وفق أسعار الخطط الأساسية المنشورة (قبل الرسوم المرتبطة بالاستخدام)، نحو 0–330 دولاراً شهرياً: DSPy وPromptfoo Community مجانيان، وBraintrust Pro بسعر 249 دولاراً/شهر وHelicone Pro بسعر 79 دولاراً/شهر. لم نتمكن من التحقق من أسعار Vellum وPromptPerfect. وتزداد التكلفة مع حجم البيانات وعدد التقييمات والمقاعد.",
           },
           {
             "q": "كيف أقيس ما إذا كان البرومبت أفضل فعلاً؟",
@@ -3758,7 +3758,7 @@ tests:
           },
           {
             "q": "هل يعمل Helicone مع جميع مزوّدي LLM؟",
-            "a": "يعمل Helicone كوسيط (proxy) والتكامل بتغيير عنوان URL الأساسي في عميل API؛ راجع توثيقه للاطلاع على قائمة المزوّدين الحالية. وانتبه إلى أن Helicone في وضع الصيانة منذ استحواذ Mintlify المعلن في 2026-03-03.",
+            "a": "يعمل Helicone كوسيط (proxy) والتكامل بتغيير عنوان URL الأساسي في عميل API؛ راجع توثيقه للاطلاع على قائمة المزوّدين الحالية. وانتبه إلى أن Mintlify أعلنت في 2026-03-03 أنها ستستحوذ على Helicone وتُبقيه في وضع الصيانة؛ وتذكر صفحة أسعار Helicone الآن أنه لم يعد جزءاً من Mintlify، لذا تحقق من حالته.",
           },
           {
             "q": "متى يجب على الفريق استخدام Vellum بدلاً من Promptfoo؟",
@@ -3766,7 +3766,7 @@ tests:
           },
           {
             "q": "أي هذه الأدوات تغيّرت ملكيتها أو حالتها في 2026؟",
-            "a": "أعلنت OpenAI في 2026-03-09 أنها ستستحوذ على Promptfoo الذي سيبقى مفتوح المصدر. وأعلنت Mintlify في 2026-03-03 استحواذها على Helicone ووضعته في وضع الصيانة. وتفيد مصادر خارجية بأن PromptPerfect التابع لـ Jina AI (التي استحوذت عليها Elastic في أكتوبر 2025) لن يكون متاحاً بعد 2026-09-01؛ ولم نتمكن من تأكيد ذلك مع المورّد. وأعلنت Vellum إيقاف منصة Personal Assistant المستضافة في 2026-11-02 وتروّج الآن لمنتج مساعد، بينما يظل توثيقها يغطي منصة التطوير.",
+            "a": "أعلنت OpenAI في 2026-03-09 أنها ستستحوذ على Promptfoo الذي سيبقى مفتوح المصدر، وكان إتمام الصفقة خاضعاً للشروط المعتادة. وأعلنت Mintlify في 2026-03-03 أنها ستستحوذ على Helicone وتُبقيه في وضع الصيانة، لكن صفحة أسعار Helicone تذكر الآن أنه لم يعد جزءاً من Mintlify. وتفيد مصادر خارجية بأن PromptPerfect التابع لـ Jina AI (التي استحوذت عليها Elastic في أكتوبر 2025) كان من المقرر أن يتوقف بعد 2026-09-01؛ ولم نتمكن من تأكيد ذلك مع المورّد. ويذكر إشعار Vellum أن منصة Personal Assistant المستضافة لديها كان من المقرر إيقافها في 2026-11-02، وتروّج الآن لمنتج مساعد، بينما يظل توثيقها يغطي منصة التطوير.",
           },
           {
             "q": "أي الأدوات تناسب تحسين البرومبتات في الإنتاج؟",
@@ -3838,7 +3838,7 @@ tests:
       url: 'https://www.promptquorum.com/ar/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'ar',
       datePublished: '2026-04-10',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -3881,7 +3881,7 @@ tests:
         { '@type': 'ListItem', position: 3, name: 'PromptPerfect', description: "أداة تحسين برومبتات من Jina AI بواجهة بلا كود؛ تحقق من حالة المورّد قبل اعتمادها." },
         { '@type': 'ListItem', position: 4, name: 'Vellum', description: "منصة تطوير لتطبيقات LLM مع عمليات نشر وتقييمات ومراجعات إصدار؛ أكّد الحالة والأسعار الحالية." },
         { '@type': 'ListItem', position: 5, name: 'Promptfoo', description: 'أداة CLI مفتوحة المصدر — اختبار تراجع التعليمات في CI/CD.' },
-        { '@type': 'ListItem', position: 6, name: 'Helicone', description: "وسيط مراقبة لـ LLM مع تتبّع التكلفة وزمن الاستجابة؛ في وضع الصيانة منذ استحواذ Mintlify." },
+        { '@type': 'ListItem', position: 6, name: 'Helicone', description: "وسيط مراقبة لـ LLM مع تتبّع التكلفة وزمن الاستجابة؛ في وضع الصيانة بعد إعلان استحواذ Mintlify؛ تحقق من الحالة الحالية." },
         { '@type': 'ListItem', position: 7, name: 'PromptQuorum', description: 'منصة مقارنة متعددة النماذج؛ اختبار نفس التعليمة على 25+ نموذج في آنٍ واحد قبل اختيار استراتيجية التحسين.' },
       ],
     },
@@ -3896,11 +3896,11 @@ tests:
     leadAnswerBlock: "**팀의 프롬프트 최적화에는 버전 관리 저장, A/B 테스트, 출력 점수 평가, 협업 검토가 필요하며, 네 가지를 모두 갖춘 단일 도구는 없습니다. 이 가이드는 공식 공급사 페이지로 여섯 가지 도구를 비교하고 2026년 변경 사항과 공개 가격을 정리합니다.**",
     metaDescription: "Braintrust, DSPy, Promptfoo, Vellum, Helicone을 팀 기준으로 비교합니다. 가격, A/B 테스트, CI/CD와 2026년 공급사 상태 변화를 확인했습니다.",
     ogTitle: "팀 프롬프트 최적화 도구: 가격과 공급사 상태 확인 완료",
-    ogDescription: "Braintrust, DSPy, Promptfoo, Vellum, Helicone, PromptPerfect 비교: 각 도구의 가격, 테스트 기능, 2026년에 소유주가 바뀐 공급사를 정리했습니다.",
+    ogDescription: "Braintrust, DSPy, Promptfoo, Vellum, Helicone, PromptPerfect 비교: 각 도구의 가격, 테스트 기능, 2026년에 소유주 변경을 발표한 공급사를 정리했습니다.",
     twitterTitle: "팀 프롬프트 최적화 도구 2026: 6가지 비교",
     twitterDescription: "대부분의 팀에는 두 가지 도구가 필요합니다. 평가용 하나, 배포용 하나입니다. 가격과 공급사 상태는 공식 페이지로 확인했습니다.",
     publishDate: '2026-04-10',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     readTime: '10분 분량',
     educationalLevel: 'Intermediate',
     audience: '다수의 인원이 함께 LLM 워크플로를 구축하는 엔지니어링 매니저 및 프롬프트 엔지니어',
@@ -3933,7 +3933,7 @@ tests:
         isTldr: true,
         items: [
           "팀의 프롬프트 최적화에는 네 가지 기능이 필요합니다. 버전 관리 저장, 변형 A/B 테스트, 출력 점수 평가, 협업 검토입니다. 네 가지를 모두 갖춘 단일 도구는 없습니다.",
-          "2026년에 공급사 상태가 달라졌습니다. OpenAI가 Promptfoo 인수를 발표했고(2026-03-09, 오픈소스 유지), Mintlify가 Helicone을 인수했으며(2026-03-03, 현재 유지보수 모드), Vellum은 현재 개인 비서 제품을 내세웁니다. 제3자 출처에 따르면 PromptPerfect는 2026-09-01에 종료된다고 하나, 공급사에 확인하지 못했습니다.",
+          "2026년에 공급사 상태가 달라졌습니다. OpenAI가 Promptfoo 인수를 발표했고(2026-03-09, 오픈소스 유지, 거래 종결은 통상의 종결 조건에 따름), Mintlify가 2026-03-03에 Helicone 인수를 발표했으며(유지보수 모드; Helicone 가격 페이지는 현재 Mintlify의 일부가 아니라고 안내하므로 상태를 확인하십시오), Vellum은 현재 개인 비서 제품을 내세웁니다. 제3자 출처에 따르면 PromptPerfect는 2026-09-01에 종료될 예정이었으나, 사이트는 2026-11-02에도 열렸고 공급사에 종료를 확인하지 못했습니다.",
           "Braintrust는 평가 중심 팀에, Promptfoo는 CI/CD 회귀 테스트에 적합하고, DSPy는 라벨이 있는 예시로 프롬프트 탐색을 자동화하며, Vellum은 배포 전 릴리스 리뷰를 문서화합니다.",
           "DSPy와 Promptfoo는 무료이며 MIT 라이선스이지만, 설정에 엔지니어링 시간이 필요하고 비엔지니어용 UI가 없습니다.",
           "공개 가격(2026-11-02 확인): Braintrust Starter 무료, Pro 월 249달러. Helicone Hobby 무료, Pro 월 79달러, Team 월 799달러. Promptfoo Community 무료. Vellum과 PromptPerfect의 가격은 확인하지 못했습니다.",
@@ -3951,7 +3951,7 @@ tests:
         content: [
           '**프롬프트 최적화는 구조화된 반복, 변형 테스트, 출력 측정을 통해 AI 프롬프트를 체계적으로 개선하는 프로세스입니다 — 즉흥적인 프롬프트 작성과는 다릅니다.** 엔지니어가 프롬프트를 조정하고 구두로 공유할 때 개선 사항은 재현하거나 비교할 수 없습니다. 팀이 체계적인 최적화를 채택하면 모든 엔지니어가 동일한 프롬프트 라이브러리를 편집하고, 동일한 테스트 데이터셋을 기준으로 변형을 비교하며, 어떤 변경이 실제로 품질을 향상시키는지 추적합니다.',
           '팀 최적화가 개인 작업과 다른 점: 여러 엔지니어가 동시에 편집하는 공유 프롬프트 라이브러리, 프로덕션 프롬프트의 무단 변경을 방지하는 검토 워크플로, 실제 영향을 측정하는 A/B 실험, 컴플라이언스를 위한 감사 추적. 개인적인 프롬프트 조정은 빠르지만 취약합니다; 팀 최적화는 설정에 시간이 더 걸리지만 확장 가능합니다.',
-          '이 가이드는 프롬프트 최적화(프롬프트를 더 좋게 만들기)와 프롬프트 관리(구성 및 배포), 프롬프트 평가(품질 측정)를 구별합니다. 대부분의 팀은 세 가지 범주 모두에 도구가 필요합니다. 최적화 중 다중 모델 비교를 위해 [PromptQuorum](/features)은 프롬프트를 25개 이상의 AI 공급업체에 동시에 전송합니다 — 프롬프트 변경이 모델 전반에 걸쳐 일반화되는지 검증하는 팀에 유용합니다.',
+          '이 가이드는 프롬프트 최적화(프롬프트를 더 좋게 만들기)와 프롬프트 관리(구성 및 배포), 프롬프트 평가(품질 측정)를 구별합니다. 대부분의 팀은 세 가지 범주 모두에 도구가 필요합니다. 최적화 중 다중 모델 비교를 위해 [PromptQuorum](/ko/features)은 프롬프트를 25개 이상의 AI 공급업체에 동시에 전송합니다 — 프롬프트 변경이 모델 전반에 걸쳐 일반화되는지 검증하는 팀에 유용합니다.',
           '최적화 중심 도구만이 아닌 모든 프롬프트 엔지니어링 도구의 광범위한 비교는 [최고의 프롬프트 엔지니어링 도구 2026: 사용 사례별 순위](/ko/prompt-engineering/best-prompt-engineering-tools-2026)를 참조하십시오.',
         ],
       },
@@ -4019,7 +4019,7 @@ tests:
         title: "PromptPerfect: UI 기반 최적화(상태 확인 필요)",
         content: [
           "**PromptPerfect는 Jina AI가 제공하는 시각적 인터페이스의 프롬프트 최적화 도구입니다. 프롬프트를 붙여 넣고 대상 모델을 선택하면 코드 작성 없이 최적화된 변형을 받습니다.** 콘텐츠, 마케팅, 제품 팀의 비기술 인력을 대상으로 했습니다.",
-          "상태 경고: Elastic은 2025-10-09에 Jina AI 인수를 완료했으며, 제3자 출처는 PromptPerfect가 2026-09-01 이후 이용할 수 없게 된다고 전합니다. 공급사 성명으로는 확인하지 못했고 [promptperfect.jina.ai](https://promptperfect.jina.ai)는 2026-11-02에도 열렸으므로, 도입 전에 서비스 상태와 내보내기 옵션을 확인하십시오. 현재 요금제 가격은 확인하지 못해 기재하지 않았습니다.",
+          "상태 경고: Elastic은 2025-10-09에 Jina AI 인수를 완료했으며, 제3자 출처는 PromptPerfect가 2026-09-01 이후 종료될 예정이었다고 전합니다. 공급사 성명으로는 확인하지 못했고 [promptperfect.jina.ai](https://promptperfect.jina.ai)는 2026-11-02에도 열렸으므로, 도입 전에 서비스 상태와 내보내기 옵션을 확인하십시오. 현재 요금제 가격은 확인하지 못해 기재하지 않았습니다.",
         ],
         items: [
           "노코드 UI: 프롬프트를 붙여 넣고 모델을 선택해 최적화된 변형을 받음",
@@ -4031,7 +4031,7 @@ tests:
         title: "Vellum: 배포, 평가, 릴리스 리뷰",
         content: [
           "**Vellum은 프롬프트·워크플로 배포, 평가, 릴리스 리뷰를 문서화한 LLM 개발 플랫폼입니다. 프롬프트가 프로덕션에 도달하기 전에 검토 관문을 두려는 팀과 관련이 있습니다.** Deployment Release Reviews를 통해 팀원은 프롬프트 또는 워크플로 배포를 핵심 환경으로 승격하기 전에 검토, 승인하거나 변경을 요청할 수 있습니다.",
-          "상태 경고: 2026-11-02 기준 [vellum.ai](https://www.vellum.ai) 홈페이지는 개인 AI 비서를 내세우고 있으며, Vellum은 호스팅형 Personal Assistant Platform을 2026-11-02에 종료한다고 발표했습니다. 이 공지는 비서 제품에만 해당하며, [docs.vellum.ai](https://docs.vellum.ai)는 여전히 Prompts, Workflows, Evaluations, Deployments를 문서화합니다. 가격 페이지에는 이제 비서 요금제(월 30달러, 100달러, 200달러)만 있어, 개발 플랫폼의 가격과 이 페이지의 이전 버전이 설명했던 트래픽 분할 A/B 기능은 확인하지 못했습니다. 구매 전에 Vellum에 두 가지를 모두 확인하십시오.",
+          "상태 경고: 2026-11-02 기준 [vellum.ai](https://www.vellum.ai) 홈페이지는 개인 AI 비서를 내세우고 있으며, Vellum의 공지에 따르면 호스팅형 Personal Assistant Platform은 2026-11-02에 종료될 예정이었습니다. 이 공지는 비서 제품에만 해당하며, [docs.vellum.ai](https://docs.vellum.ai)는 여전히 Prompts, Workflows, Evaluations, Deployments를 문서화합니다. 가격 페이지에는 이제 비서 요금제(월 30달러, 100달러, 200달러)만 있어, 개발 플랫폼의 가격과 이 페이지의 이전 버전이 설명했던 트래픽 분할 A/B 기능은 확인하지 못했습니다. 구매 전에 Vellum에 두 가지를 모두 확인하십시오.",
           "이미 Vellum을 사용하며 배포 전 PR 방식의 승인을 원하는 팀에 가장 적합합니다.",
         ],
       },
@@ -4070,8 +4070,8 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum: 비교를 위한 다중 모델 디스패치',
         content: [
-          "**PromptQuorum은 프롬프트 하나를 25개 이상의 AI 모델에 동시에 보내 출력을 나란히 보여 줍니다. 모델이나 프롬프트 버전을 확정하기 전에 GPT-5.6, Claude, Gemini, 로컬 LLM에서 프롬프트가 어떻게 동작하는지 빠르게 비교하는 방법입니다.** 점수 평가와 회귀 테스트에 초점을 둔 위의 평가 도구와 달리, \"이 프롬프트를 가장 잘 처리하는 모델은 무엇인가\"에 한 번의 실행으로 답합니다.",
-          "Braintrust나 Promptfoo 같은 도구에서 더 깊이 평가하기 전의 첫 단계로 사용하십시오. 무료 플랜이 있고, 엔지니어링 설정이 필요 없으며, Ollama와 LM Studio를 통한 로컬 LLM을 지원합니다. PromptQuorum에는 CI/CD 연동이 없습니다.",
+          "**PromptQuorum은 프롬프트 하나를 25개 이상의 AI 모델에 동시에 보내 출력을 나란히 보여 줍니다. 모델이나 프롬프트 버전을 확정하기 전에 OpenAI 모델, Claude, Gemini, 로컬 LLM에서 프롬프트가 어떻게 동작하는지 빠르게 비교하는 방법입니다.** 점수 평가와 회귀 테스트에 초점을 둔 위의 평가 도구와 달리, \"이 프롬프트를 가장 잘 처리하는 모델은 무엇인가\"에 한 번의 실행으로 답합니다.",
+          "Braintrust나 Promptfoo 같은 도구에서 더 깊이 평가하기 전의 첫 단계로 사용하십시오. 무료 공개 베타로 제공되며, 엔지니어링 설정이 필요 없으며, Ollama와 LM Studio를 통한 로컬 LLM을 지원합니다. PromptQuorum에는 CI/CD 연동이 없습니다.",
           "특정 모델 제공업체에 맞춰 최적화할지 결정하는 팀, 또는 같은 프롬프트를 여러 LLM에서 동시에 벤치마크하려는 팀에 가장 적합합니다.",
           "PromptQuorum은 자사 제품이므로, 이 항목은 독립적인 순위가 아니라 공개된 자사 게재로 읽어 주십시오.",
         ],
@@ -4134,10 +4134,10 @@ tests:
           },
           {
             "도구": "[PromptQuorum](https://www.promptquorum.com)",
-            "A/B 테스트": "✅ 멀티 모델",
-            "협업": "✓ 공유 워크스페이스",
+            "A/B 테스트": "모델 간 비교(프롬프트 변형 A/B 테스트 아님)",
+            "협업": "미확인",
             "CI/CD": "✗ CI/CD 없음",
-            "가격": "무료 + 크레딧",
+            "가격": "무료(공개 베타)",
             "최적 대상": "모델 간 비교",
           },
         ],
@@ -4236,7 +4236,7 @@ tests:
           },
           {
             "q": "5명 팀의 프롬프트 최적화 스택에는 비용이 얼마나 듭니까?",
-            "a": "공개 가격 기준으로 월 0–330달러 정도입니다. DSPy와 Promptfoo Community는 무료이고, Braintrust Pro는 월 249달러, Helicone Pro는 월 79달러입니다. Vellum과 PromptPerfect의 가격은 확인하지 못했습니다. 비용은 데이터 양, 점수 수, 시트 수에 따라 늘어납니다.",
+            "a": "공개된 기본 요금제 가격(사용량 기반 과금 전) 기준으로 월 0–330달러 정도입니다. DSPy와 Promptfoo Community는 무료이고, Braintrust Pro는 월 249달러, Helicone Pro는 월 79달러입니다. Vellum과 PromptPerfect의 가격은 확인하지 못했습니다. 비용은 데이터 양, 점수 수, 시트 수에 따라 늘어납니다.",
           },
           {
             "q": "프롬프트가 실제로 더 나은지 어떻게 측정합니까?",
@@ -4248,7 +4248,7 @@ tests:
           },
           {
             "q": "Helicone은 모든 LLM 제공업체에서 작동합니까?",
-            "a": "Helicone은 프록시로 동작하며, 연동은 API 클라이언트의 기본 URL을 바꾸는 것입니다. 현재 지원하는 제공업체 목록은 문서를 확인하십시오. 2026-03-03에 발표된 Mintlify 인수 이후 Helicone은 유지보수 모드라는 점에 유의하십시오.",
+            "a": "Helicone은 프록시로 동작하며, 연동은 API 클라이언트의 기본 URL을 바꾸는 것입니다. 현재 지원하는 제공업체 목록은 문서를 확인하십시오. Mintlify는 2026-03-03에 Helicone 인수와 유지보수 모드 운영을 발표했으나 Helicone 가격 페이지는 현재 Mintlify의 일부가 아니라고 안내하므로, 상태를 확인하십시오.",
           },
           {
             "q": "팀은 언제 Promptfoo 대신 Vellum을 써야 합니까?",
@@ -4256,7 +4256,7 @@ tests:
           },
           {
             "q": "이 도구 중 2026년에 소유주나 상태가 바뀐 것은 무엇입니까?",
-            "a": "OpenAI는 2026-03-09에 Promptfoo 인수를 발표했으며 프로젝트는 오픈소스로 유지됩니다. Mintlify는 2026-03-03에 Helicone 인수를 발표하고 유지보수 모드로 전환했습니다. 제3자 출처는 Jina AI(2025년 10월 Elastic에 인수됨)의 PromptPerfect가 2026-09-01 이후 이용할 수 없게 된다고 전하지만, 공급사에 확인하지 못했습니다. Vellum은 호스팅형 Personal Assistant Platform을 2026-11-02에 종료한다고 발표했고 비서 제품을 내세우고 있으나, 문서는 여전히 개발 플랫폼을 다룹니다.",
+            "a": "OpenAI는 2026-03-09에 Promptfoo 인수를 발표했으며 프로젝트는 오픈소스로 유지됩니다(거래 종결은 통상의 종결 조건에 따릅니다). Mintlify는 2026-03-03에 Helicone 인수와 유지보수 모드 운영을 발표했으나, Helicone 가격 페이지는 현재 Mintlify의 일부가 아니라고 안내합니다. 제3자 출처는 Jina AI(2025년 10월 Elastic에 인수됨)의 PromptPerfect가 2026-09-01 이후 종료될 예정이었다고 전하지만, 공급사에 확인하지 못했습니다. Vellum의 공지에 따르면 호스팅형 Personal Assistant Platform은 2026-11-02에 종료될 예정이었고 현재 비서 제품을 내세우고 있으나, 문서는 여전히 개발 플랫폼을 다룹니다.",
           },
           {
             "q": "프로덕션에서 프롬프트를 최적화하는 데 적합한 도구는 무엇입니까?",
@@ -4309,7 +4309,7 @@ tests:
       url: 'https://www.promptquorum.com/ko/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'ko',
       datePublished: '2026-04-10',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -4354,7 +4354,7 @@ tests:
         { '@type': 'ListItem', position: 3, name: 'PromptPerfect', description: "Jina AI의 노코드 프롬프트 최적화 도구. 도입 전에 공급사 상태를 확인하십시오." },
         { '@type': 'ListItem', position: 4, name: 'Vellum', description: "배포, 평가, 릴리스 리뷰를 갖춘 LLM 개발 플랫폼. 현재 상태와 가격을 확인하십시오." },
         { '@type': 'ListItem', position: 5, name: 'Promptfoo', description: "프롬프트 회귀를 CI/CD에서 테스트하는 오픈소스 CLI 도구." },
-        { '@type': 'ListItem', position: 6, name: 'Helicone', description: "비용과 지연 시간을 추적하는 LLM 관측성 프록시. Mintlify 인수 이후 유지보수 모드." },
+        { '@type': 'ListItem', position: 6, name: 'Helicone', description: "비용과 지연 시간을 추적하는 LLM 관측성 프록시. Mintlify 인수 발표 이후 유지보수 모드이며, 현재 상태를 확인하십시오." },
         { '@type': 'ListItem', position: 7, name: 'PromptQuorum', description: "프롬프트 하나를 25개 이상의 모델에 동시에 보내 비교하는 멀티 모델 디스패치 플랫폼." },
       ],
     },

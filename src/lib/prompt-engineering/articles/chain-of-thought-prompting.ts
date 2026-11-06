@@ -57,7 +57,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
-          { '@type': 'Thing', name: 'Chain-of-Thought Prompting', 'sameAs': 'https://www.wikidata.org/wiki/Q117050701' },
+          { '@type': 'Thing', name: 'Chain-of-Thought Prompting', 'sameAs': 'https://www.wikidata.org/wiki/Q135305651' },
           { '@type': 'Thing', name: 'Large Language Models', 'sameAs': 'https://www.wikidata.org/wiki/Q115305900' },
           { '@type': 'Thing', name: 'Reasoning' },
           { '@type': 'Thing', name: 'Structured Output' },
@@ -75,9 +75,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Chain-of-thought prompting asks models to show reasoning steps before giving a final answer**, improving accuracy on math, logic, and multi-step tasks.',
             'Zero-shot CoT ("think step by step") is the simplest option and helps mainly on larger models. Few-shot CoT (with worked examples) is more reliable.',
-            'In 2026, frontier models like Claude Opus 5.5 and OpenAI o3 have **built-in reasoning modes** that subsume prompt-level CoT — you don\'t need to say "think step by step" on these models.',
+            'In 2026, reasoning-capable models such as Claude Opus 5.5 and OpenAI\'s reasoning models (for example GPT-6 Astra) have **built-in reasoning modes** that subsume prompt-level CoT — you don\'t need to say "think step by step" on these models.',
             'CoT increases output tokens and therefore cost. Built-in reasoning modes also spend thinking tokens, which Anthropic and OpenAI bill as output tokens.',
-            'Use prompt-level CoT on models without a built-in reasoning mode, such as many small and locally run models, for low-cost reasoning. On frontier models, use the built-in reasoning mode for maximum accuracy.',
+            'Use prompt-level CoT on models without a built-in reasoning mode, such as many small and locally run models, for low-cost reasoning. On frontier models, the built-in reasoning mode usually gives higher accuracy on hard tasks than a plain prompt; compare both on your own task.',
             'CoT is most valuable for math, logic, planning, and root-cause analysis. Skip it for simple classification, short answers, and quick copywriting.',
           ]
         },
@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Introduced by:** Wei et al. (2022), Google Research (Brain Team) — NeurIPS 2022 paper',
             '**Key result:** Zero-shot CoT ("Let\'s think step by step") raised InstructGPT (text-davinci-002) accuracy on MultiArith from 17.7% to 78.7% (Kojima et al., 2022)',
             '**Trigger phrase:** "Let\'s think step by step" (zero-shot) or worked examples (few-shot)',
-            '**2026 evolution:** Built-in reasoning modes (OpenAI o3, Claude adaptive thinking) now automate CoT internally',
+            '**2026 evolution:** Built-in reasoning modes (OpenAI GPT-6 Astra, Claude adaptive thinking) now automate CoT internally',
             '**Cost impact:** Prompt-level CoT = more output tokens; reasoning modes = separate thinking token budget',
             '**Best models for prompt-level CoT:** Models without a built-in reasoning mode, such as Llama 4 Scout and many small local models',
           ]
@@ -218,15 +218,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'reasoning-models',
           title: 'CoT vs Built-In Reasoning Models (2026)',
           content: [
-            '**In 2026, the frontier models—Claude Opus 5.5, OpenAI o3, Gemini 3.1 Pro thinking—have built-in reasoning modes that internalize chain-of-thought automatically.** You do not need to add "think step by step" instructions on these models.',
+            '**In 2026, reasoning-capable models—Claude Opus 5.5, OpenAI\'s reasoning models (for example GPT-6 Astra) and Gemini 3.1 Pro thinking—have built-in reasoning modes that internalize chain-of-thought automatically.** You do not need to add "think step by step" instructions on these models.',
             '**When to use prompt-level CoT:** Models without a built-in reasoning mode (for example Llama 4), local LLMs, models where thinking is switched off or set to a low effort, or when you want to avoid the extra cost of thinking tokens.',
-            '**When to use built-in reasoning modes:** Maximum accuracy on frontier models, math-heavy tasks, complex analysis. Claude and OpenAI bill reasoning (thinking) tokens as output tokens, so cost grows with how long the model thinks. Test your CoT prompts in [Anthropic\'s Console](https://platform.claude.com/) or [OpenAI\'s Playground](https://platform.openai.com/playground) before deploying to production.',
+            '**When to use built-in reasoning modes:** Hard tasks on frontier models, where the built-in mode usually beats a plain prompt (compare both on your own task), math-heavy tasks, complex analysis. Claude and OpenAI bill reasoning (thinking) tokens as output tokens, so cost grows with how long the model thinks. Test your CoT prompts in [Anthropic\'s Console](https://platform.claude.com/) or [OpenAI\'s Playground](https://platform.openai.com/playground) before deploying to production.',
           ],
           columns: ['Approach', 'Best For', 'Cost', 'Transparency', 'Models'],
           rows: [
             { 'Approach': 'Prompt-level CoT ("think step by step")', 'Best For': 'Small models, local LLMs, cost-sensitive tasks', 'Cost': 'Increases output tokens', 'Transparency': 'Full: visible steps in output', 'Models': 'Llama 4, small local models' },
-            { 'Approach': 'Claude adaptive thinking (Opus 5.5, Sonnet 5.5)', 'Best For': 'Complex analysis, maximum accuracy', 'Cost': 'Thinking tokens billed as output tokens', 'Transparency': 'Summarized thinking via API', 'Models': 'Claude Opus 5.5, Claude Sonnet 5.5' },
-            { 'Approach': 'OpenAI o3', 'Best For': 'Hardest problems (math, coding, competition)', 'Cost': 'Reasoning tokens billed as output tokens', 'Transparency': 'Hidden reasoning, visible output', 'Models': 'OpenAI o3' },
+            { 'Approach': 'Claude adaptive thinking (Opus 5.5, Sonnet 5.5)', 'Best For': 'Complex analysis', 'Cost': 'Thinking tokens billed as output tokens', 'Transparency': 'Summarized thinking via API', 'Models': 'Claude Opus 5.5, Claude Sonnet 5.5' },
+            { 'Approach': 'OpenAI GPT-6 Astra', 'Best For': 'Hardest problems (math, coding, competition)', 'Cost': 'Reasoning tokens billed as output tokens', 'Transparency': 'Hidden reasoning, visible output', 'Models': 'OpenAI GPT-6 Astra' },
             { 'Approach': 'Gemini 3.1 Pro thinking', 'Best For': 'Google Cloud integration, Gemini ecosystem', 'Cost': 'Thinking tokens billed as output tokens', 'Transparency': 'thinking_level parameter (LOW, MEDIUM, HIGH)', 'Models': 'Gemini 3.1 Pro' },
             { 'Approach': 'DeepSeek-R1', 'Best For': 'Open-weights option, self-hosted reasoning', 'Cost': 'Visible reasoning streamed as output text', 'Transparency': 'Full: inline CoT in output', 'Models': 'DeepSeek-R1' },
           ],
@@ -234,7 +234,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               type: 'tip',
               label: 'Pro Tip',
-              text: 'If you\'re building for cost, use prompt-level CoT on smaller models. If you\'re building for accuracy on hard problems, use o3 or Claude adaptive thinking and let the model handle reasoning internally.'
+              text: 'If you\'re building for cost, use prompt-level CoT on smaller models. If you\'re building for accuracy on hard problems, use GPT-6 Astra or Claude adaptive thinking and let the model handle reasoning internally.'
             }
           ],
         },
@@ -258,11 +258,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Model Comparison: How Models Handle CoT Prompting (2026)',
           columns: ['Model', 'Prompt-Level CoT', 'Built-In Reasoning', 'Best Use Case', 'Cost (approx.)'],
           rows: [
-            { 'Model': 'Claude Opus 5.5', 'Prompt-Level CoT': 'Not needed', 'Built-In Reasoning': 'Adaptive thinking', 'Best Use Case': 'Maximum accuracy analysis', 'Cost (approx.)': 'Higher (input + output + thinking tokens)' },
+            { 'Model': 'Claude Opus 5.5', 'Prompt-Level CoT': 'Not needed', 'Built-In Reasoning': 'Adaptive thinking', 'Best Use Case': 'Deep analysis', 'Cost (approx.)': 'Higher (input + output + thinking tokens)' },
             { 'Model': 'Claude Sonnet 5.5', 'Prompt-Level CoT': 'Not needed', 'Built-In Reasoning': 'Adaptive thinking', 'Best Use Case': 'Balanced accuracy/cost', 'Cost (approx.)': 'Medium' },
             { 'Model': 'Claude Haiku 5.5', 'Prompt-Level CoT': 'Not needed', 'Built-In Reasoning': 'Adaptive thinking', 'Best Use Case': 'Fast, cost-effective reasoning', 'Cost (approx.)': 'Low' },
-            { 'Model': 'OpenAI o3', 'Prompt-Level CoT': 'Not needed', 'Built-In Reasoning': 'Effort levels (low, medium, high)', 'Best Use Case': 'Competition-level problems', 'Cost (approx.)': 'Reasoning tokens billed as output (see pricing)' },
-            { 'Model': 'GPT-5.6 Luna', 'Prompt-Level CoT': 'Optional', 'Built-In Reasoning': 'Adjustable reasoning effort', 'Best Use Case': 'Budget-conscious deployment', 'Cost (approx.)': 'Very low' },
+            { 'Model': 'OpenAI GPT-6 Astra', 'Prompt-Level CoT': 'Not needed', 'Built-In Reasoning': 'Effort levels (low, medium, high, xhigh, max)', 'Best Use Case': 'Competition-level problems', 'Cost (approx.)': 'Reasoning tokens billed as output (see pricing)' },
+            { 'Model': 'GPT-6 Luna', 'Prompt-Level CoT': 'Optional', 'Built-In Reasoning': 'Adjustable reasoning effort', 'Best Use Case': 'Budget-conscious deployment', 'Cost (approx.)': 'Efficiency-focused (see pricing)' },
             { 'Model': 'Gemini 3.1 Pro', 'Prompt-Level CoT': 'Works', 'Built-In Reasoning': 'Thinking levels (thinking_level param)', 'Best Use Case': 'Google Cloud integration', 'Cost (approx.)': 'Medium-high' },
             { 'Model': 'Gemini Flash', 'Prompt-Level CoT': 'Optional', 'Built-In Reasoning': 'Adjustable thinking levels', 'Best Use Case': 'Fast responses', 'Cost (approx.)': 'Low' },
             { 'Model': 'DeepSeek-R1', 'Prompt-Level CoT': 'Not needed', 'Built-In Reasoning': 'Inline reasoning in output', 'Best Use Case': 'Open-weights, self-hosted', 'Cost (approx.)': 'MIT-licensed weights; hardware costs apply' },
@@ -290,15 +290,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             {
               q: 'Does chain-of-thought work on all models?',
-              a: 'Not equally well. Wei et al. (2022) found that chain-of-thought prompting only gave gains with models of around 100B parameters or more, and that smaller models often wrote fluent but illogical steps. Results vary by model and task, so test small or local models on your own prompts. On frontier models with built-in reasoning (Claude Opus 5.5, o3), the built-in mode often makes prompt-level CoT unnecessary.'
+              a: 'Not equally well. Wei et al. (2022) found that chain-of-thought prompting only gave gains with models of around 100B parameters or more, and that smaller models often wrote fluent but illogical steps. Results vary by model and task, so test small or local models on your own prompts. On frontier models with built-in reasoning (Claude Opus 5.5, GPT-6 Astra), the built-in mode often makes prompt-level CoT unnecessary.'
             },
             {
               q: 'Does chain-of-thought increase cost?',
-              a: 'Yes. Prompt-level CoT increases output tokens because the model writes out its reasoning before the final answer. Built-in reasoning modes (Claude adaptive thinking, OpenAI o3) also spend thinking tokens, which Anthropic and OpenAI bill as output tokens. Test both on your use case to compare cost against accuracy.'
+              a: 'Yes. Prompt-level CoT increases output tokens because the model writes out its reasoning before the final answer. Built-in reasoning modes (Claude adaptive thinking, OpenAI GPT-6 Astra) also spend thinking tokens, which Anthropic and OpenAI bill as output tokens. Test both on your use case to compare cost against accuracy.'
             },
             {
               q: 'When should I use few-shot CoT instead of zero-shot?',
-              a: 'Use zero-shot CoT first—it\'s the simpler option. Move to few-shot (with 2–5 examples) if zero-shot is unreliable or if your domain requires specific reasoning patterns (e.g., financial analysis with standard line-item structure).'
+              a: 'Use zero-shot CoT first—it\'s the simpler option. Move to few-shot (typically 2–5 examples) if zero-shot is unreliable or if your domain requires specific reasoning patterns (e.g., financial analysis with standard line-item structure).'
             },
             {
               q: 'Can I combine chain-of-thought with structured output (JSON)?',
@@ -306,11 +306,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'What\'s the difference between chain-of-thought and tree-of-thought?',
-              a: 'Chain-of-thought is a linear sequence: step 1 → step 2 → ... → conclusion. Tree-of-thought explores multiple branches (alternative reasoning paths) and prunes weaker ones before arriving at the answer. Tree-of-thought is more powerful but more expensive (requires multiple model calls).'
+              a: 'Chain-of-thought is a linear sequence: step 1 → step 2 → ... → conclusion. Tree-of-thought explores multiple branches (alternative reasoning paths) and prunes weaker ones before arriving at the answer. Tree-of-thought can help on harder search-style problems but costs more (requires multiple model calls).'
             },
             {
-              q: 'Does OpenAI o3 require chain-of-thought prompting?',
-              a: 'No. OpenAI o3 has built-in reasoning that activates automatically. You do not need to add "think step by step" instructions. Just give o3 the problem and set the effort level (low/medium/high) to control how much reasoning budget to spend.'
+              q: 'Does OpenAI GPT-6 Astra require chain-of-thought prompting?',
+              a: 'No. OpenAI\'s reasoning models, such as GPT-6 Astra, have built-in reasoning that activates automatically. You do not need to add "think step by step" instructions. Just give GPT-6 Astra the problem and set the effort level (low/medium/high/xhigh/max) to control how much reasoning budget to spend.'
             },
             {
               q: 'Can I audit the reasoning of built-in reasoning models?',
@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Does chain-of-thought work on all models?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Not equally well. Wei et al. (2022) found that chain-of-thought prompting only gave gains with models of around 100B parameters or more, and that smaller models often wrote fluent but illogical steps. Results vary by model and task, so test small or local models on your own prompts. On frontier models with built-in reasoning (Claude Opus 5.5, o3), the built-in mode often makes prompt-level CoT unnecessary.'
+              text: 'Not equally well. Wei et al. (2022) found that chain-of-thought prompting only gave gains with models of around 100B parameters or more, and that smaller models often wrote fluent but illogical steps. Results vary by model and task, so test small or local models on your own prompts. On frontier models with built-in reasoning (Claude Opus 5.5, GPT-6 Astra), the built-in mode often makes prompt-level CoT unnecessary.'
             }
           },
           {
@@ -359,7 +359,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Does chain-of-thought increase cost?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes. Prompt-level CoT increases output tokens because the model writes out its reasoning before the final answer. Built-in reasoning modes (Claude adaptive thinking, OpenAI o3) also spend thinking tokens, which Anthropic and OpenAI bill as output tokens. Test both on your use case to compare cost against accuracy.'
+              text: 'Yes. Prompt-level CoT increases output tokens because the model writes out its reasoning before the final answer. Built-in reasoning modes (Claude adaptive thinking, OpenAI GPT-6 Astra) also spend thinking tokens, which Anthropic and OpenAI bill as output tokens. Test both on your use case to compare cost against accuracy.'
             }
           },
           {
@@ -367,7 +367,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'When should I use few-shot CoT instead of zero-shot?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Use zero-shot CoT first—it\'s the simpler option. Move to few-shot (with 2–5 examples) if zero-shot is unreliable or if your domain requires specific reasoning patterns (e.g., financial analysis with standard line-item structure).'
+              text: 'Use zero-shot CoT first—it\'s the simpler option. Move to few-shot (typically 2–5 examples) if zero-shot is unreliable or if your domain requires specific reasoning patterns (e.g., financial analysis with standard line-item structure).'
             }
           },
           {
@@ -383,15 +383,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'What\'s the difference between chain-of-thought and tree-of-thought?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Chain-of-thought is a linear sequence: step 1 → step 2 → ... → conclusion. Tree-of-thought explores multiple branches (alternative reasoning paths) and prunes weaker ones before arriving at the answer. Tree-of-thought is more powerful but more expensive (requires multiple model calls).'
+              text: 'Chain-of-thought is a linear sequence: step 1 → step 2 → ... → conclusion. Tree-of-thought explores multiple branches (alternative reasoning paths) and prunes weaker ones before arriving at the answer. Tree-of-thought can help on harder search-style problems but costs more (requires multiple model calls).'
             }
           },
           {
             '@type': 'Question',
-            name: 'Does OpenAI o3 require chain-of-thought prompting?',
+            name: 'Does OpenAI GPT-6 Astra require chain-of-thought prompting?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'No. OpenAI o3 has built-in reasoning that activates automatically. You do not need to add "think step by step" instructions. Just give o3 the problem and set the effort level (low/medium/high) to control how much reasoning budget to spend.'
+              text: 'No. OpenAI\'s reasoning models, such as GPT-6 Astra, have built-in reasoning that activates automatically. You do not need to add "think step by step" instructions. Just give GPT-6 Astra the problem and set the effort level (low/medium/high/xhigh/max) to control how much reasoning budget to spend.'
             }
           },
           {
@@ -527,9 +527,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       items: [
         '**Chain-of-Thought Prompting fordert Modelle auf, ihre Denkschritte vor der abschließenden Antwort zu zeigen**, verbessert die Genauigkeit bei Mathe-, Logik- und mehrstufigen Aufgaben.',
         'Zero-shot CoT („denk Schritt für Schritt") ist die einfachste Variante und hilft vor allem bei größeren Modellen. Few-shot CoT (mit Beispielen) ist zuverlässiger.',
-        '2026 haben Modelle wie Claude Opus 5.5 und OpenAI o3 **integrierte Thinking-Modi**, die Prompt-Level CoT ersetzen – Sie müssen nicht „denk Schritt für Schritt" sagen.',
+        '2026 haben Reasoning-fähige Modelle wie Claude Opus 5.5 und die Reasoning-Modelle von OpenAI (zum Beispiel GPT-6 Astra) **integrierte Thinking-Modi**, die Prompt-Level CoT ersetzen – Sie müssen nicht „denk Schritt für Schritt" sagen.',
         'CoT erhöht die Ausgabe-Tokens und damit die Kosten. Integrierte Reasoning-Modi verbrauchen zusätzlich Denk-Tokens, die Anthropic und OpenAI wie Ausgabe-Tokens abrechnen.',
-        'Nutzen Sie Prompt-Level CoT bei Modellen ohne integrierten Reasoning-Modus, etwa vielen kleinen und lokal betriebenen Modellen, für günstiges Reasoning. Bei Frontier-Modellen nutzen Sie den integrierten Modus für maximale Genauigkeit.',
+        'Nutzen Sie Prompt-Level CoT bei Modellen ohne integrierten Reasoning-Modus, etwa vielen kleinen und lokal betriebenen Modellen, für günstiges Reasoning. Bei Frontier-Modellen liefert der integrierte Reasoning-Modus bei schwierigen Aufgaben meist höhere Genauigkeit als ein einfacher Prompt; vergleichen Sie beides an Ihrer eigenen Aufgabe.',
         'CoT ist wertvoll für Mathe, Logik, Planung und Ursachenanalyse. Überspringen Sie es bei einfacher Klassifizierung, kurzen Antworten und schneller Werbetexterstellung.',
       ]
     },
@@ -543,7 +543,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Eingeführt von:** Wei et al. (2022), Google Research (Brain Team) — Paper auf der NeurIPS 2022',
         '**Kernergebnis:** Zero-Shot CoT ("Let\'s think step by step") steigerte die Genauigkeit von InstructGPT (text-davinci-002) bei MultiArith von 17,7 % auf 78,7 % (Kojima et al., 2022)',
         '**Auslösephrase:** „Denken wir Schritt für Schritt" (Zero-shot) oder Beispiele (Few-shot)',
-        '**Entwicklung 2026:** Integrierte Reasoning-Modi (OpenAI o3, Claude Adaptive Thinking) automatisieren CoT intern',
+        '**Entwicklung 2026:** Integrierte Reasoning-Modi (OpenAI GPT-6 Astra, Claude Adaptive Thinking) automatisieren CoT intern',
         '**Kostenfolge:** Prompt-Level CoT = mehr Output-Token; Thinking-Modi = separates Thinking-Token-Budget',
         '**Am besten für Prompt-Level CoT:** Modelle ohne integrierten Reasoning-Modus, etwa Llama 4 Scout und viele kleine lokale Modelle',
       ]
@@ -664,15 +664,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'reasoning-modelle',
       title: 'CoT vs. integrierte Reasoning-Modelle (2026)',
       content: [
-        '**2026 haben die Frontier-Modelle – Claude Opus 5.5, OpenAI o3, Gemini 3.1 Pro thinking – integrierte Denkmodi, die Chain-of-Thought automatisch internalisieren.** Sie müssen keine „denk Schritt für Schritt"-Anweisungen auf diesen Modellen hinzufügen.',
+        '**2026 haben Reasoning-fähige Modelle – Claude Opus 5.5, die Reasoning-Modelle von OpenAI (zum Beispiel GPT-6 Astra) und Gemini 3.1 Pro thinking – integrierte Denkmodi, die Chain-of-Thought automatisch internalisieren.** Sie müssen keine „denk Schritt für Schritt"-Anweisungen auf diesen Modellen hinzufügen.',
         '**Wann Prompt-Level CoT sinnvoll ist:** Modelle ohne integrierten Reasoning-Modus (zum Beispiel Llama 4), lokale LLMs, Modelle mit abgeschaltetem oder niedrig eingestelltem Denkaufwand oder wenn Sie die Zusatzkosten für Denk-Tokens vermeiden wollen.',
-        '**Wann integrierte Reasoning-Modi sinnvoll sind:** Maximale Genauigkeit bei Frontier-Modellen, mathelastige Aufgaben, komplexe Analysen. Claude und OpenAI rechnen Reasoning-Tokens (Denk-Tokens) wie Ausgabe-Tokens ab, die Kosten wachsen also mit der Denkdauer. Testen Sie Ihre CoT-Prompts in der [Anthropic Console](https://platform.claude.com/) oder im [OpenAI Playground](https://platform.openai.com/playground), bevor Sie live gehen.',
+        '**Wann integrierte Reasoning-Modi sinnvoll sind:** Schwierige Aufgaben bei Frontier-Modellen, bei denen der integrierte Modus meist besser abschneidet als ein einfacher Prompt (vergleichen Sie beides an Ihrer eigenen Aufgabe), mathelastige Aufgaben, komplexe Analysen. Claude und OpenAI rechnen Reasoning-Tokens (Denk-Tokens) wie Ausgabe-Tokens ab, die Kosten wachsen also mit der Denkdauer. Testen Sie Ihre CoT-Prompts in der [Anthropic Console](https://platform.claude.com/) oder im [OpenAI Playground](https://platform.openai.com/playground), bevor Sie live gehen.',
       ],
       columns: ['Ansatz', 'Am besten für', 'Kosten', 'Transparenz', 'Modelle'],
       rows: [
         { 'Ansatz': 'Prompt-Level CoT („denk Schritt für Schritt")', 'Am besten für': 'Kleine Modelle, lokale LLMs, kostensensitive Aufgaben', 'Kosten': 'Erhöht Output-Token', 'Transparenz': 'Vollständig: sichtbare Schritte in der Ausgabe', 'Modelle': 'Llama 4, kleine lokale Modelle' },
-        { 'Ansatz': 'Claude Adaptive Thinking (Opus 5.5, Sonnet 5.5)', 'Am besten für': 'Komplexe Analysen, maximale Genauigkeit', 'Kosten': 'Denk-Tokens wie Ausgabe-Tokens abgerechnet', 'Transparenz': 'Zusammengefasstes Thinking per API', 'Modelle': 'Claude Opus 5.5, Claude Sonnet 5.5' },
-        { 'Ansatz': 'OpenAI o3', 'Am besten für': 'Schwierigste Probleme (Mathe, Coding, Wettbewerbe)', 'Kosten': 'Reasoning-Tokens wie Ausgabe-Tokens abgerechnet', 'Transparenz': 'Verstecktes Denken, sichtbare Ausgabe', 'Modelle': 'OpenAI o3' },
+        { 'Ansatz': 'Claude Adaptive Thinking (Opus 5.5, Sonnet 5.5)', 'Am besten für': 'Komplexe Analysen', 'Kosten': 'Denk-Tokens wie Ausgabe-Tokens abgerechnet', 'Transparenz': 'Zusammengefasstes Thinking per API', 'Modelle': 'Claude Opus 5.5, Claude Sonnet 5.5' },
+        { 'Ansatz': 'OpenAI GPT-6 Astra', 'Am besten für': 'Schwierigste Probleme (Mathe, Coding, Wettbewerbe)', 'Kosten': 'Reasoning-Tokens wie Ausgabe-Tokens abgerechnet', 'Transparenz': 'Verstecktes Denken, sichtbare Ausgabe', 'Modelle': 'OpenAI GPT-6 Astra' },
         { 'Ansatz': 'Gemini 3.1 Pro thinking', 'Am besten für': 'Google Cloud Integration, Gemini-Ökosystem', 'Kosten': 'Denk-Tokens wie Ausgabe-Tokens abgerechnet', 'Transparenz': 'thinking_level Parameter (LOW, MEDIUM, HIGH)', 'Modelle': 'Gemini 3.1 Pro' },
         { 'Ansatz': 'DeepSeek-R1', 'Am besten für': 'Open-Weights-Option, selbst gehostetes Reasoning', 'Kosten': 'Sichtbares Denken in Ausgabetext gestreamt', 'Transparenz': 'Vollständig: inline CoT in Ausgabe', 'Modelle': 'DeepSeek-R1' },
       ],
@@ -680,7 +680,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         {
           type: 'tip',
           label: 'Tipp',
-          text: 'Verwenden Sie für kostenbewusste Systeme Prompt-Level CoT auf kleineren Modellen. Für maximale Genauigkeit bei schwierigen Problemen nutzen Sie o3 oder Claude adaptive thinking und lassen das Modell das Denken intern handhaben.'
+          text: 'Verwenden Sie für kostenbewusste Systeme Prompt-Level CoT auf kleineren Modellen. Für maximale Genauigkeit bei schwierigen Problemen nutzen Sie GPT-6 Astra oder Claude adaptive thinking und lassen das Modell das Denken intern handhaben.'
         }
       ],
     },
@@ -704,11 +704,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Modellvergleich: Wie Modelle CoT Prompting handhaben (2026)',
       columns: ['Modell', 'Prompt-Level CoT', 'Integriertes Thinking', 'Bester Anwendungsfall', 'Kosten (ca.)'],
       rows: [
-        { 'Modell': 'Claude Opus 5.5', 'Prompt-Level CoT': 'Nicht nötig', 'Integriertes Thinking': 'Adaptive Thinking', 'Bester Anwendungsfall': 'Maximale Genauigkeit bei Analysen', 'Kosten (ca.)': 'Höher (Input + Output + Thinking-Token)' },
+        { 'Modell': 'Claude Opus 5.5', 'Prompt-Level CoT': 'Nicht nötig', 'Integriertes Thinking': 'Adaptive Thinking', 'Bester Anwendungsfall': 'Tiefgehende Analysen', 'Kosten (ca.)': 'Höher (Input + Output + Thinking-Token)' },
         { 'Modell': 'Claude Sonnet 5.5', 'Prompt-Level CoT': 'Nicht nötig', 'Integriertes Thinking': 'Adaptive Thinking', 'Bester Anwendungsfall': 'Ausgeglichenes Kosten/Genauigkeit-Verhältnis', 'Kosten (ca.)': 'Mittel' },
         { 'Modell': 'Claude Haiku 5.5', 'Prompt-Level CoT': 'Nicht nötig', 'Integriertes Thinking': 'Adaptive Thinking', 'Bester Anwendungsfall': 'Schnelle, kostengünstige Argumentation', 'Kosten (ca.)': 'Niedrig' },
-        { 'Modell': 'OpenAI o3', 'Prompt-Level CoT': 'Nicht nötig', 'Integriertes Thinking': 'Effort-Levels (low, medium, high)', 'Bester Anwendungsfall': 'Probleme auf Wettbewerbsniveau', 'Kosten (ca.)': 'Reasoning-Tokens als Ausgabe abgerechnet (siehe Preise)' },
-        { 'Modell': 'GPT-5.6 Luna', 'Prompt-Level CoT': 'Optional', 'Integriertes Thinking': 'Einstellbarer Reasoning-Aufwand', 'Bester Anwendungsfall': 'Budgetbewusste Bereitstellung', 'Kosten (ca.)': 'Sehr niedrig' },
+        { 'Modell': 'OpenAI GPT-6 Astra', 'Prompt-Level CoT': 'Nicht nötig', 'Integriertes Thinking': 'Effort-Levels (low, medium, high, xhigh, max)', 'Bester Anwendungsfall': 'Probleme auf Wettbewerbsniveau', 'Kosten (ca.)': 'Reasoning-Tokens als Ausgabe abgerechnet (siehe Preise)' },
+        { 'Modell': 'GPT-6 Luna', 'Prompt-Level CoT': 'Optional', 'Integriertes Thinking': 'Einstellbarer Reasoning-Aufwand', 'Bester Anwendungsfall': 'Budgetbewusste Bereitstellung', 'Kosten (ca.)': 'Auf Effizienz ausgelegt (siehe Preise)' },
         { 'Modell': 'Gemini 3.1 Pro', 'Prompt-Level CoT': 'Funktioniert', 'Integriertes Thinking': 'Thinking-Level (thinking_level Param)', 'Bester Anwendungsfall': 'Google Cloud Integration', 'Kosten (ca.)': 'Mittel-Hoch' },
         { 'Modell': 'Gemini Flash', 'Prompt-Level CoT': 'Optional', 'Integriertes Thinking': 'Einstellbare Thinking-Level', 'Bester Anwendungsfall': 'Schnelle Antworten', 'Kosten (ca.)': 'Niedrig' },
         { 'Modell': 'DeepSeek-R1', 'Prompt-Level CoT': 'Nicht nötig', 'Integriertes Thinking': 'Inline Reasoning in Ausgabe', 'Bester Anwendungsfall': 'Open-Weights, selbst gehostet', 'Kosten (ca.)': 'MIT-Lizenz für Gewichte; Hardwarekosten fallen an' },
@@ -737,15 +737,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqs: [
         {
           q: 'Funktioniert Chain-of-Thought auf allen Modellen?',
-          a: 'Nicht gleich gut. Wei et al. (2022) stellten fest, dass Chain-of-Thought Prompting nur bei Modellen ab etwa 100 Mrd. Parametern Zugewinne brachte und kleinere Modelle oft flüssige, aber unlogische Schritte schrieben. Die Ergebnisse variieren je nach Modell und Aufgabe, testen Sie kleine oder lokale Modelle daher mit eigenen Prompts. Bei Frontier-Modellen mit integriertem Reasoning (Claude Opus 5.5, o3) macht der integrierte Modus Prompt-Level CoT oft überflüssig.'
+          a: 'Nicht gleich gut. Wei et al. (2022) stellten fest, dass Chain-of-Thought Prompting nur bei Modellen ab etwa 100 Mrd. Parametern Zugewinne brachte und kleinere Modelle oft flüssige, aber unlogische Schritte schrieben. Die Ergebnisse variieren je nach Modell und Aufgabe, testen Sie kleine oder lokale Modelle daher mit eigenen Prompts. Bei Frontier-Modellen mit integriertem Reasoning (Claude Opus 5.5, GPT-6 Astra) macht der integrierte Modus Prompt-Level CoT oft überflüssig.'
         },
         {
           q: 'Erhöht Chain-of-Thought die Kosten?',
-          a: 'Ja. Prompt-Level CoT erhöht die Ausgabe-Tokens, weil das Modell seinen Denkweg vor der Endantwort ausschreibt. Integrierte Reasoning-Modi (Claude Adaptive Thinking, OpenAI o3) verbrauchen zusätzlich Denk-Tokens, die Anthropic und OpenAI wie Ausgabe-Tokens abrechnen. Testen Sie beides an Ihrem Anwendungsfall, um Kosten und Genauigkeit zu vergleichen.'
+          a: 'Ja. Prompt-Level CoT erhöht die Ausgabe-Tokens, weil das Modell seinen Denkweg vor der Endantwort ausschreibt. Integrierte Reasoning-Modi (Claude Adaptive Thinking, OpenAI GPT-6 Astra) verbrauchen zusätzlich Denk-Tokens, die Anthropic und OpenAI wie Ausgabe-Tokens abrechnen. Testen Sie beides an Ihrem Anwendungsfall, um Kosten und Genauigkeit zu vergleichen.'
         },
         {
           q: 'Wann sollte ich Few-shot CoT statt Zero-shot verwenden?',
-          a: 'Verwenden Sie zunächst Zero-shot CoT – es ist die einfachere Variante. Wechseln Sie zu Few-shot (mit 2–5 Beispielen), wenn Zero-shot unzuverlässig ist oder wenn Ihre Domäne spezifische Argumentationsmuster erfordert (z. B. Finanzanalyse mit standardisierter Zeilenstruktur).'
+          a: 'Verwenden Sie zunächst Zero-shot CoT – es ist die einfachere Variante. Wechseln Sie zu Few-shot (in der Regel mit 2–5 Beispielen), wenn Zero-shot unzuverlässig ist oder wenn Ihre Domäne spezifische Argumentationsmuster erfordert (z. B. Finanzanalyse mit standardisierter Zeilenstruktur).'
         },
         {
           q: 'Kann ich Chain-of-Thought mit strukturierter Ausgabe (JSON) kombinieren?',
@@ -753,11 +753,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'Was ist der Unterschied zwischen Chain-of-Thought und Tree-of-Thought?',
-          a: 'Chain-of-Thought ist eine lineare Abfolge: Schritt 1 → Schritt 2 → ... → Conclusion. Tree-of-Thought erkundet mehrere Zweige (alternative Argumentationspfade) und reduziert schwächere aus, bevor die Antwort erreicht wird. Tree-of-Thought ist mächtiger, aber teurer (benötigt mehrere Modellaufrufe).'
+          a: 'Chain-of-Thought ist eine lineare Abfolge: Schritt 1 → Schritt 2 → ... → Conclusion. Tree-of-Thought erkundet mehrere Zweige (alternative Argumentationspfade) und reduziert schwächere aus, bevor die Antwort erreicht wird. Tree-of-Thought kann bei schwierigeren, suchartigen Problemen helfen, kostet aber mehr (benötigt mehrere Modellaufrufe).'
         },
         {
-          q: 'Muss ich bei OpenAI o3 Chain-of-Thought Prompting verwenden?',
-          a: 'Nein. OpenAI o3 hat integriertes Thinking, das automatisch aktiviert wird. Sie müssen keine „denk Schritt für Schritt"-Anweisungen hinzufügen. Geben Sie o3 einfach das Problem und stellen Sie das Effort Level (low/medium/high) ein, um zu steuern, wie viel Thinking-Budget ausgegeben wird.'
+          q: 'Muss ich bei OpenAI GPT-6 Astra Chain-of-Thought Prompting verwenden?',
+          a: 'Nein. Die Reasoning-Modelle von OpenAI, etwa GPT-6 Astra, haben integriertes Thinking, das automatisch aktiviert wird. Sie müssen keine „denk Schritt für Schritt"-Anweisungen hinzufügen. Geben Sie GPT-6 Astra einfach das Problem und stellen Sie das Effort Level (low/medium/high/xhigh/max) ein, um zu steuern, wie viel Thinking-Budget ausgegeben wird.'
         },
         {
           q: 'Kann ich das Denken integrierter Reasoning-Modelle nachvollziehen?',
@@ -798,7 +798,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Funktioniert Chain-of-Thought auf allen Modellen?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Nicht gleich gut. Wei et al. (2022) stellten fest, dass Chain-of-Thought Prompting nur bei Modellen ab etwa 100 Mrd. Parametern Zugewinne brachte und kleinere Modelle oft flüssige, aber unlogische Schritte schrieben. Die Ergebnisse variieren je nach Modell und Aufgabe, testen Sie kleine oder lokale Modelle daher mit eigenen Prompts. Bei Frontier-Modellen mit integriertem Reasoning (Claude Opus 5.5, o3) macht der integrierte Modus Prompt-Level CoT oft überflüssig.'
+          text: 'Nicht gleich gut. Wei et al. (2022) stellten fest, dass Chain-of-Thought Prompting nur bei Modellen ab etwa 100 Mrd. Parametern Zugewinne brachte und kleinere Modelle oft flüssige, aber unlogische Schritte schrieben. Die Ergebnisse variieren je nach Modell und Aufgabe, testen Sie kleine oder lokale Modelle daher mit eigenen Prompts. Bei Frontier-Modellen mit integriertem Reasoning (Claude Opus 5.5, GPT-6 Astra) macht der integrierte Modus Prompt-Level CoT oft überflüssig.'
         }
       },
       {
@@ -806,7 +806,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Erhöht Chain-of-Thought die Kosten?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Ja. Prompt-Level CoT erhöht die Ausgabe-Tokens, weil das Modell seinen Denkweg vor der Endantwort ausschreibt. Integrierte Reasoning-Modi (Claude Adaptive Thinking, OpenAI o3) verbrauchen zusätzlich Denk-Tokens, die Anthropic und OpenAI wie Ausgabe-Tokens abrechnen. Testen Sie beides an Ihrem Anwendungsfall, um Kosten und Genauigkeit zu vergleichen.'
+          text: 'Ja. Prompt-Level CoT erhöht die Ausgabe-Tokens, weil das Modell seinen Denkweg vor der Endantwort ausschreibt. Integrierte Reasoning-Modi (Claude Adaptive Thinking, OpenAI GPT-6 Astra) verbrauchen zusätzlich Denk-Tokens, die Anthropic und OpenAI wie Ausgabe-Tokens abrechnen. Testen Sie beides an Ihrem Anwendungsfall, um Kosten und Genauigkeit zu vergleichen.'
         }
       },
       {
@@ -814,7 +814,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Wann sollte ich Few-shot CoT statt Zero-shot verwenden?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Verwenden Sie zunächst Zero-shot CoT – es ist die einfachere Variante. Wechseln Sie zu Few-shot (mit 2–5 Beispielen), wenn Zero-shot unzuverlässig ist oder wenn Ihre Domäne spezifische Argumentationsmuster erfordert (z. B. Finanzanalyse mit standardisierter Zeilenstruktur).'
+          text: 'Verwenden Sie zunächst Zero-shot CoT – es ist die einfachere Variante. Wechseln Sie zu Few-shot (in der Regel mit 2–5 Beispielen), wenn Zero-shot unzuverlässig ist oder wenn Ihre Domäne spezifische Argumentationsmuster erfordert (z. B. Finanzanalyse mit standardisierter Zeilenstruktur).'
         }
       },
       {
@@ -830,15 +830,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Was ist der Unterschied zwischen Chain-of-Thought und Tree-of-Thought?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Chain-of-Thought ist eine lineare Abfolge: Schritt 1 → Schritt 2 → ... → Conclusion. Tree-of-Thought erkundet mehrere Zweige (alternative Argumentationspfade) und reduziert schwächere aus, bevor die Antwort erreicht wird. Tree-of-Thought ist mächtiger, aber teurer (benötigt mehrere Modellaufrufe).'
+          text: 'Chain-of-Thought ist eine lineare Abfolge: Schritt 1 → Schritt 2 → ... → Conclusion. Tree-of-Thought erkundet mehrere Zweige (alternative Argumentationspfade) und reduziert schwächere aus, bevor die Antwort erreicht wird. Tree-of-Thought kann bei schwierigeren, suchartigen Problemen helfen, kostet aber mehr (benötigt mehrere Modellaufrufe).'
         }
       },
       {
         '@type': 'Question',
-        name: 'Muss ich bei OpenAI o3 Chain-of-Thought Prompting verwenden?',
+        name: 'Muss ich bei OpenAI GPT-6 Astra Chain-of-Thought Prompting verwenden?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Nein. OpenAI o3 hat integriertes Thinking, das automatisch aktiviert wird. Sie müssen keine „denk Schritt für Schritt"-Anweisungen hinzufügen. Geben Sie o3 einfach das Problem und stellen Sie das Effort Level (low/medium/high) ein, um zu steuern, wie viel Thinking-Budget ausgegeben wird.'
+          text: 'Nein. Die Reasoning-Modelle von OpenAI, etwa GPT-6 Astra, haben integriertes Thinking, das automatisch aktiviert wird. Sie müssen keine „denk Schritt für Schritt"-Anweisungen hinzufügen. Geben Sie GPT-6 Astra einfach das Problem und stellen Sie das Effort Level (low/medium/high/xhigh/max) ein, um zu steuern, wie viel Thinking-Budget ausgegeben wird.'
         }
       },
       {
@@ -962,7 +962,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
-      { '@type': 'Thing', name: 'Chain-of-Thought Prompting', 'sameAs': 'https://www.wikidata.org/wiki/Q117050701' },
+      { '@type': 'Thing', name: 'Chain-of-Thought Prompting', 'sameAs': 'https://www.wikidata.org/wiki/Q135305651' },
       { '@type': 'Thing', name: 'Large Language Models', 'sameAs': 'https://www.wikidata.org/wiki/Q115305900' },
       { '@type': 'Thing', name: 'Razonamiento' },
       { '@type': 'Thing', name: 'Salida Estructurada' },
@@ -980,9 +980,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       items: [
         '**El chain-of-thought prompting pide a los modelos que muestren los pasos de razonamiento antes de dar una respuesta final**, mejorando la precisión en tareas de matemáticas, lógica y múltiples pasos.',
         'El CoT zero-shot ("piensa paso a paso") es la opción más simple y ayuda sobre todo en modelos grandes. El CoT few-shot (con ejemplos resueltos) es más fiable.',
-        'En 2026, los modelos de frontera como Claude Opus 5.5 y OpenAI o3 tienen **modos de razonamiento integrados** que reemplazan el CoT a nivel de prompt; no necesitas decir "piensa paso a paso" en estos modelos.',
+        'En 2026, los modelos con capacidad de razonamiento, como Claude Opus 5.5 y los modelos de razonamiento de OpenAI (por ejemplo, GPT-6 Astra), tienen **modos de razonamiento integrados** que reemplazan el CoT a nivel de prompt; no necesitas decir "piensa paso a paso" en estos modelos.',
         'El CoT aumenta los tokens de salida y, por tanto, el costo. Los modos de razonamiento integrados también gastan tokens de pensamiento, que Anthropic y OpenAI facturan como tokens de salida.',
-        'Usa CoT a nivel de prompt en modelos sin modo de razonamiento integrado, como muchos modelos pequeños o locales, para razonar a bajo costo. En modelos de frontera, usa el modo de razonamiento integrado para obtener la máxima precisión.',
+        'Usa CoT a nivel de prompt en modelos sin modo de razonamiento integrado, como muchos modelos pequeños o locales, para razonar a bajo costo. En modelos de frontera, el modo de razonamiento integrado suele dar mayor precisión en tareas difíciles que un prompt simple; compara ambos con tu propia tarea.',
         'CoT es más valioso para matemáticas, lógica, planificación y análisis de causa raíz. Omítelo para clasificación simple, respuestas cortas y redacción rápida.',
       ]
     },
@@ -997,7 +997,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Introducido por:** Wei et al. (2022), Google Research (Brain Team) — artículo de NeurIPS 2022',
         '**Resultado clave:** El CoT zero-shot ("Let\'s think step by step") elevó la precisión de InstructGPT (text-davinci-002) en MultiArith del 17,7 % al 78,7 % (Kojima et al., 2022)',
         '**Frase activadora:** "Pensemos paso a paso" (zero-shot) o ejemplos resueltos (few-shot)',
-        '**Evolución en 2026:** Los modos de razonamiento integrados (OpenAI o3, Claude adaptive thinking) automatizan el CoT internamente',
+        '**Evolución en 2026:** Los modos de razonamiento integrados (OpenAI GPT-6 Astra, Claude adaptive thinking) automatizan el CoT internamente',
         '**Impacto en costo:** CoT a nivel de prompt = más tokens de salida; modos de razonamiento = presupuesto de tokens de pensamiento separado',
         '**Mejores modelos para CoT a nivel de prompt:** Modelos sin modo de razonamiento integrado, como Llama 4 Scout y muchos modelos locales pequeños',
       ]
@@ -1123,15 +1123,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'reasoning-models',
       title: 'CoT vs modelos de razonamiento integrados (2026)',
       content: [
-        '**En 2026, los modelos de frontera — Claude Opus 5.5, OpenAI o3, Gemini 3.1 Pro thinking — tienen modos de razonamiento integrados que internalizan chain-of-thought automáticamente.** No necesitas añadir instrucciones "piensa paso a paso" en estos modelos.',
+        '**En 2026, los modelos con capacidad de razonamiento — Claude Opus 5.5, los modelos de razonamiento de OpenAI (por ejemplo, GPT-6 Astra) y Gemini 3.1 Pro thinking — tienen modos de razonamiento integrados que internalizan chain-of-thought automáticamente.** No necesitas añadir instrucciones "piensa paso a paso" en estos modelos.',
         '**Cuándo usar CoT a nivel de prompt:** Modelos sin modo de razonamiento integrado (por ejemplo Llama 4), LLMs locales, modelos con el pensamiento desactivado o con esfuerzo bajo, o cuando quieres evitar el costo extra de los tokens de pensamiento.',
-        '**Cuándo usar modos de razonamiento integrados:** Máxima precisión en modelos de frontera, tareas con mucha matemática, análisis complejo. Claude y OpenAI facturan los tokens de razonamiento (pensamiento) como tokens de salida, así que el costo crece con el tiempo que el modelo piensa. Prueba tus prompts CoT en la [consola de Anthropic](https://platform.claude.com/) o en el [Playground de OpenAI](https://platform.openai.com/playground) antes de desplegarlos en producción.',
+        '**Cuándo usar modos de razonamiento integrados:** Tareas difíciles en modelos de frontera, donde el modo integrado suele superar a un prompt simple (compara ambos con tu propia tarea), tareas con mucha matemática, análisis complejo. Claude y OpenAI facturan los tokens de razonamiento (pensamiento) como tokens de salida, así que el costo crece con el tiempo que el modelo piensa. Prueba tus prompts CoT en la [consola de Anthropic](https://platform.claude.com/) o en el [Playground de OpenAI](https://platform.openai.com/playground) antes de desplegarlos en producción.',
       ],
       columns: ['Enfoque', 'Mejor para', 'Costo', 'Transparencia', 'Modelos'],
       rows: [
         { 'Enfoque': 'CoT a nivel de prompt ("piensa paso a paso")', 'Mejor para': 'Modelos pequeños, LLMs locales, tareas sensibles al costo', 'Costo': 'Aumenta los tokens de salida', 'Transparencia': 'Total: pasos visibles en la salida', 'Modelos': 'Llama 4, modelos locales pequeños' },
-        { 'Enfoque': 'Claude adaptive thinking (Opus 5.5, Sonnet 5.5)', 'Mejor para': 'Análisis complejo, máxima precisión', 'Costo': 'Tokens de pensamiento facturados como tokens de salida', 'Transparencia': 'Pensamiento resumido vía API', 'Modelos': 'Claude Opus 5.5, Claude Sonnet 5.5' },
-        { 'Enfoque': 'OpenAI o3', 'Mejor para': 'Problemas más difíciles (matemáticas, código, competición)', 'Costo': 'Tokens de razonamiento facturados como tokens de salida', 'Transparencia': 'Razonamiento oculto, salida visible', 'Modelos': 'OpenAI o3' },
+        { 'Enfoque': 'Claude adaptive thinking (Opus 5.5, Sonnet 5.5)', 'Mejor para': 'Análisis complejo', 'Costo': 'Tokens de pensamiento facturados como tokens de salida', 'Transparencia': 'Pensamiento resumido vía API', 'Modelos': 'Claude Opus 5.5, Claude Sonnet 5.5' },
+        { 'Enfoque': 'OpenAI GPT-6 Astra', 'Mejor para': 'Problemas más difíciles (matemáticas, código, competición)', 'Costo': 'Tokens de razonamiento facturados como tokens de salida', 'Transparencia': 'Razonamiento oculto, salida visible', 'Modelos': 'OpenAI GPT-6 Astra' },
         { 'Enfoque': 'Gemini 3.1 Pro thinking', 'Mejor para': 'Integración con Google Cloud, ecosistema Gemini', 'Costo': 'Tokens de pensamiento facturados como tokens de salida', 'Transparencia': 'Parámetro thinking_level (LOW, MEDIUM, HIGH)', 'Modelos': 'Gemini 3.1 Pro' },
         { 'Enfoque': 'DeepSeek-R1', 'Mejor para': 'Opción open-weights, razonamiento autoalojado', 'Costo': 'Razonamiento visible transmitido como texto de salida', 'Transparencia': 'Total: CoT en línea en la salida', 'Modelos': 'DeepSeek-R1' },
       ],
@@ -1139,7 +1139,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         {
           type: 'tip',
           label: 'Consejo pro',
-          text: 'Si construyes pensando en el costo, usa CoT a nivel de prompt en modelos más pequeños. Si construyes para precisión en problemas difíciles, usa o3 o Claude adaptive thinking y deja que el modelo gestione el razonamiento internamente.'
+          text: 'Si construyes pensando en el costo, usa CoT a nivel de prompt en modelos más pequeños. Si construyes para precisión en problemas difíciles, usa GPT-6 Astra o Claude adaptive thinking y deja que el modelo gestione el razonamiento internamente.'
         }
       ],
     },
@@ -1163,11 +1163,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Comparación de modelos: cómo manejan el CoT prompting (2026)',
       columns: ['Modelo', 'CoT a nivel de prompt', 'Razonamiento integrado', 'Mejor caso de uso', 'Costo (aprox.)'],
       rows: [
-        { 'Modelo': 'Claude Opus 5.5', 'CoT a nivel de prompt': 'No necesario', 'Razonamiento integrado': 'Adaptive thinking', 'Mejor caso de uso': 'Análisis de máxima precisión', 'Costo (aprox.)': 'Mayor (input + output + tokens de pensamiento)' },
+        { 'Modelo': 'Claude Opus 5.5', 'CoT a nivel de prompt': 'No necesario', 'Razonamiento integrado': 'Adaptive thinking', 'Mejor caso de uso': 'Análisis profundo', 'Costo (aprox.)': 'Mayor (input + output + tokens de pensamiento)' },
         { 'Modelo': 'Claude Sonnet 5.5', 'CoT a nivel de prompt': 'No necesario', 'Razonamiento integrado': 'Adaptive thinking', 'Mejor caso de uso': 'Equilibrio precisión/costo', 'Costo (aprox.)': 'Medio' },
         { 'Modelo': 'Claude Haiku 5.5', 'CoT a nivel de prompt': 'No necesario', 'Razonamiento integrado': 'Adaptive thinking', 'Mejor caso de uso': 'Razonamiento rápido y económico', 'Costo (aprox.)': 'Bajo' },
-        { 'Modelo': 'OpenAI o3', 'CoT a nivel de prompt': 'No necesario', 'Razonamiento integrado': 'Niveles de esfuerzo (low, medium, high)', 'Mejor caso de uso': 'Problemas de nivel de competición', 'Costo (aprox.)': 'Tokens de razonamiento facturados como salida (ver precios)' },
-        { 'Modelo': 'GPT-5.6 Luna', 'CoT a nivel de prompt': 'Opcional', 'Razonamiento integrado': 'Esfuerzo de razonamiento ajustable', 'Mejor caso de uso': 'Despliegue económico', 'Costo (aprox.)': 'Muy bajo' },
+        { 'Modelo': 'OpenAI GPT-6 Astra', 'CoT a nivel de prompt': 'No necesario', 'Razonamiento integrado': 'Niveles de esfuerzo (low, medium, high, xhigh, max)', 'Mejor caso de uso': 'Problemas de nivel de competición', 'Costo (aprox.)': 'Tokens de razonamiento facturados como salida (ver precios)' },
+        { 'Modelo': 'GPT-6 Luna', 'CoT a nivel de prompt': 'Opcional', 'Razonamiento integrado': 'Esfuerzo de razonamiento ajustable', 'Mejor caso de uso': 'Despliegue económico', 'Costo (aprox.)': 'Orientado a la eficiencia (ver precios)' },
         { 'Modelo': 'Gemini 3.1 Pro', 'CoT a nivel de prompt': 'Funciona', 'Razonamiento integrado': 'Niveles de pensamiento (parámetro thinking_level)', 'Mejor caso de uso': 'Integración con Google Cloud', 'Costo (aprox.)': 'Medio-alto' },
         { 'Modelo': 'Gemini Flash', 'CoT a nivel de prompt': 'Opcional', 'Razonamiento integrado': 'Niveles de pensamiento ajustables', 'Mejor caso de uso': 'Respuestas rápidas', 'Costo (aprox.)': 'Bajo' },
         { 'Modelo': 'DeepSeek-R1', 'CoT a nivel de prompt': 'No necesario', 'Razonamiento integrado': 'Razonamiento en línea en la salida', 'Mejor caso de uso': 'Open-weights, autoalojado', 'Costo (aprox.)': 'Pesos con licencia MIT; hay costos de hardware' },
@@ -1196,15 +1196,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqs: [
         {
           q: '¿Funciona el chain-of-thought en todos los modelos?',
-          a: 'No igual de bien. Wei et al. (2022) observaron que el chain-of-thought prompting solo daba mejoras en modelos de unos 100B parámetros o más, y que los modelos pequeños solían escribir pasos fluidos pero ilógicos. Los resultados varían según el modelo y la tarea, así que prueba los modelos pequeños o locales con tus propios prompts. En modelos de frontera con razonamiento integrado (Claude Opus 5.5, o3), el modo integrado suele hacer innecesario el CoT a nivel de prompt.'
+          a: 'No igual de bien. Wei et al. (2022) observaron que el chain-of-thought prompting solo daba mejoras en modelos de unos 100B parámetros o más, y que los modelos pequeños solían escribir pasos fluidos pero ilógicos. Los resultados varían según el modelo y la tarea, así que prueba los modelos pequeños o locales con tus propios prompts. En modelos de frontera con razonamiento integrado (Claude Opus 5.5, GPT-6 Astra), el modo integrado suele hacer innecesario el CoT a nivel de prompt.'
         },
         {
           q: '¿El chain-of-thought aumenta el costo?',
-          a: 'Sí. El CoT a nivel de prompt aumenta los tokens de salida porque el modelo escribe el razonamiento antes de la respuesta final. Los modos de razonamiento integrados (Claude adaptive thinking, OpenAI o3) también gastan tokens de pensamiento, que Anthropic y OpenAI facturan como tokens de salida. Prueba ambos en tu caso de uso para comparar costo y precisión.'
+          a: 'Sí. El CoT a nivel de prompt aumenta los tokens de salida porque el modelo escribe el razonamiento antes de la respuesta final. Los modos de razonamiento integrados (Claude adaptive thinking, OpenAI GPT-6 Astra) también gastan tokens de pensamiento, que Anthropic y OpenAI facturan como tokens de salida. Prueba ambos en tu caso de uso para comparar costo y precisión.'
         },
         {
           q: '¿Cuándo debo usar CoT few-shot en lugar de zero-shot?',
-          a: 'Usa CoT zero-shot primero — es la opción más simple. Pasa a few-shot (con 2–5 ejemplos) si zero-shot no es fiable o si tu dominio requiere patrones de razonamiento específicos (por ejemplo, análisis financiero con estructura de líneas estándar).'
+          a: 'Usa CoT zero-shot primero — es la opción más simple. Pasa a few-shot (normalmente con 2–5 ejemplos) si zero-shot no es fiable o si tu dominio requiere patrones de razonamiento específicos (por ejemplo, análisis financiero con estructura de líneas estándar).'
         },
         {
           q: '¿Puedo combinar chain-of-thought con salida estructurada (JSON)?',
@@ -1212,11 +1212,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: '¿Cuál es la diferencia entre chain-of-thought y tree-of-thought?',
-          a: 'Chain-of-thought es una secuencia lineal: paso 1 → paso 2 → ... → conclusión. Tree-of-thought explora múltiples ramas (rutas de razonamiento alternativas) y poda las más débiles antes de llegar a la respuesta. Tree-of-thought es más potente pero más costoso (requiere múltiples llamadas al modelo).'
+          a: 'Chain-of-thought es una secuencia lineal: paso 1 → paso 2 → ... → conclusión. Tree-of-thought explora múltiples ramas (rutas de razonamiento alternativas) y poda las más débiles antes de llegar a la respuesta. Tree-of-thought puede ayudar en problemas más difíciles de tipo búsqueda, pero cuesta más (requiere múltiples llamadas al modelo).'
         },
         {
-          q: '¿OpenAI o3 requiere chain-of-thought prompting?',
-          a: 'No. OpenAI o3 tiene razonamiento integrado que se activa automáticamente. No necesitas añadir instrucciones "piensa paso a paso". Solo dale a o3 el problema y establece el nivel de esfuerzo (low/medium/high) para controlar cuánto presupuesto de razonamiento gastar.'
+          q: '¿OpenAI GPT-6 Astra requiere chain-of-thought prompting?',
+          a: 'No. Los modelos de razonamiento de OpenAI, como GPT-6 Astra, tienen razonamiento integrado que se activa automáticamente. No necesitas añadir instrucciones "piensa paso a paso". Solo dale a GPT-6 Astra el problema y establece el nivel de esfuerzo (low/medium/high/xhigh/max) para controlar cuánto presupuesto de razonamiento gastar.'
         },
         {
           q: '¿Puedo auditar el razonamiento de los modelos de razonamiento integrados?',
@@ -1257,7 +1257,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: '¿Funciona el chain-of-thought en todos los modelos?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'No igual de bien. Wei et al. (2022) observaron que el chain-of-thought prompting solo daba mejoras en modelos de unos 100B parámetros o más, y que los modelos pequeños solían escribir pasos fluidos pero ilógicos. Los resultados varían según el modelo y la tarea, así que prueba los modelos pequeños o locales con tus propios prompts. En modelos de frontera con razonamiento integrado (Claude Opus 5.5, o3), el modo integrado suele hacer innecesario el CoT a nivel de prompt.'
+          text: 'No igual de bien. Wei et al. (2022) observaron que el chain-of-thought prompting solo daba mejoras en modelos de unos 100B parámetros o más, y que los modelos pequeños solían escribir pasos fluidos pero ilógicos. Los resultados varían según el modelo y la tarea, así que prueba los modelos pequeños o locales con tus propios prompts. En modelos de frontera con razonamiento integrado (Claude Opus 5.5, GPT-6 Astra), el modo integrado suele hacer innecesario el CoT a nivel de prompt.'
         }
       },
       {
@@ -1265,7 +1265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: '¿El chain-of-thought aumenta el costo?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Sí. El CoT a nivel de prompt aumenta los tokens de salida porque el modelo escribe el razonamiento antes de la respuesta final. Los modos de razonamiento integrados (Claude adaptive thinking, OpenAI o3) también gastan tokens de pensamiento, que Anthropic y OpenAI facturan como tokens de salida. Prueba ambos en tu caso de uso para comparar costo y precisión.'
+          text: 'Sí. El CoT a nivel de prompt aumenta los tokens de salida porque el modelo escribe el razonamiento antes de la respuesta final. Los modos de razonamiento integrados (Claude adaptive thinking, OpenAI GPT-6 Astra) también gastan tokens de pensamiento, que Anthropic y OpenAI facturan como tokens de salida. Prueba ambos en tu caso de uso para comparar costo y precisión.'
         }
       },
       {
@@ -1273,7 +1273,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: '¿Cuándo debo usar CoT few-shot en lugar de zero-shot?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Usa CoT zero-shot primero — es la opción más simple. Pasa a few-shot (con 2–5 ejemplos) si zero-shot no es fiable o si tu dominio requiere patrones de razonamiento específicos (por ejemplo, análisis financiero con estructura de líneas estándar).'
+          text: 'Usa CoT zero-shot primero — es la opción más simple. Pasa a few-shot (normalmente con 2–5 ejemplos) si zero-shot no es fiable o si tu dominio requiere patrones de razonamiento específicos (por ejemplo, análisis financiero con estructura de líneas estándar).'
         }
       },
       {
@@ -1289,15 +1289,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: '¿Cuál es la diferencia entre chain-of-thought y tree-of-thought?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Chain-of-thought es una secuencia lineal: paso 1 → paso 2 → ... → conclusión. Tree-of-thought explora múltiples ramas (rutas de razonamiento alternativas) y poda las más débiles antes de llegar a la respuesta. Tree-of-thought es más potente pero más costoso (requiere múltiples llamadas al modelo).'
+          text: 'Chain-of-thought es una secuencia lineal: paso 1 → paso 2 → ... → conclusión. Tree-of-thought explora múltiples ramas (rutas de razonamiento alternativas) y poda las más débiles antes de llegar a la respuesta. Tree-of-thought puede ayudar en problemas más difíciles de tipo búsqueda, pero cuesta más (requiere múltiples llamadas al modelo).'
         }
       },
       {
         '@type': 'Question',
-        name: '¿OpenAI o3 requiere chain-of-thought prompting?',
+        name: '¿OpenAI GPT-6 Astra requiere chain-of-thought prompting?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'No. OpenAI o3 tiene razonamiento integrado que se activa automáticamente. No necesitas añadir instrucciones "piensa paso a paso". Solo dale a o3 el problema y establece el nivel de esfuerzo (low/medium/high) para controlar cuánto presupuesto de razonamiento gastar.'
+          text: 'No. Los modelos de razonamiento de OpenAI, como GPT-6 Astra, tienen razonamiento integrado que se activa automáticamente. No necesitas añadir instrucciones "piensa paso a paso". Solo dale a GPT-6 Astra el problema y establece el nivel de esfuerzo (low/medium/high/xhigh/max) para controlar cuánto presupuesto de razonamiento gastar.'
         }
       },
       {
@@ -1421,7 +1421,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
-      { '@type': 'Thing', name: 'توجيه سلسلة الأفكار', 'sameAs': 'https://www.wikidata.org/wiki/Q117050701' },
+      { '@type': 'Thing', name: 'توجيه سلسلة الأفكار', 'sameAs': 'https://www.wikidata.org/wiki/Q135305651' },
       { '@type': 'Thing', name: 'النماذج اللغوية الكبيرة', 'sameAs': 'https://www.wikidata.org/wiki/Q115305900' },
       { '@type': 'Thing', name: 'الاستدلال' },
       { '@type': 'Thing', name: 'المخرجات المنظَّمة' },
@@ -1439,9 +1439,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       items: [
         '**توجيه سلسلة الأفكار يطلب من النماذج إظهار خطوات الاستدلال قبل إعطاء إجابة نهائية**، مما يُحسِّن الدقة في مهام الرياضيات والمنطق والخطوات المتعددة.',
         'CoT بدون أمثلة ("فكِّر خطوةً بخطوة") هو الخيار الأبسط ويفيد خصوصًا في النماذج الأكبر. CoT مع أمثلة محلولة أكثر موثوقية.',
-        'في 2026، نماذج الحدود مثل Claude Opus 5.5 وOpenAI o3 تمتلك **أوضاع استدلال مُدمَجة** تُحلّ محلّ CoT على مستوى التعليمات؛ لست بحاجة إلى قول "فكِّر خطوةً بخطوة" في هذه النماذج.',
+        'في 2026، النماذج القادرة على الاستدلال مثل Claude Opus 5.5 ونماذج الاستدلال من OpenAI (مثل GPT-6 Astra) تمتلك **أوضاع استدلال مُدمَجة** تُحلّ محلّ CoT على مستوى التعليمات؛ لست بحاجة إلى قول "فكِّر خطوةً بخطوة" في هذه النماذج.',
         'يزيد CoT عدد رموز الإخراج وبالتالي التكلفة. كما تستهلك أوضاع الاستدلال المدمجة رموز تفكير تحتسبها Anthropic وOpenAI بسعر رموز الإخراج.',
-        'استخدم CoT على مستوى التعليمات في النماذج التي لا تملك وضع استدلال مدمجًا، مثل كثير من النماذج الصغيرة والمحلية، لاستدلال منخفض التكلفة. وفي النماذج المتقدمة استخدم وضع الاستدلال المدمج لأقصى دقة.',
+        'استخدم CoT على مستوى التعليمات في النماذج التي لا تملك وضع استدلال مدمجًا، مثل كثير من النماذج الصغيرة والمحلية، لاستدلال منخفض التكلفة. وفي النماذج المتقدمة يمنح وضع الاستدلال المدمج عادةً دقة أعلى في المهام الصعبة من التعليمة العادية؛ فقارن بين الاثنين على مهمتك الخاصة.',
         'CoT أكثر قيمةً في الرياضيات والمنطق والتخطيط وتحليل السبب الجذري. أغفله في التصنيف البسيط والإجابات القصيرة والكتابة السريعة.',
       ]
     },
@@ -1456,7 +1456,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**قدّمه:** Wei وآخرون (2022)، Google Research (Brain Team) — ورقة NeurIPS 2022',
         '**النتيجة الأبرز:** رفع CoT بلا أمثلة ("Let\'s think step by step") دقة InstructGPT (text-davinci-002) على MultiArith من 17.7% إلى 78.7% (Kojima وآخرون، 2022)',
         '**عبارة التفعيل:** "دعنا نفكِّر خطوةً بخطوة" (بدون أمثلة) أو أمثلة محلولة (مع أمثلة)',
-        '**التطور في 2026:** أوضاع الاستدلال المدمجة (OpenAI o3 وClaude adaptive thinking) تؤتمت CoT داخليًا',
+        '**التطور في 2026:** أوضاع الاستدلال المدمجة (OpenAI GPT-6 Astra وClaude adaptive thinking) تؤتمت CoT داخليًا',
         '**أثر التكلفة:** CoT على مستوى التعليمات = رموز مخرجات أكثر؛ أوضاع الاستدلال = ميزانية رموز تفكير منفصلة',
         '**أفضل النماذج لـ CoT على مستوى التعليمات:** النماذج بلا وضع استدلال مدمج، مثل Llama 4 Scout وكثير من النماذج المحلية الصغيرة',
       ]
@@ -1582,15 +1582,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'reasoning-models',
       title: 'CoT مقابل نماذج الاستدلال المُدمَجة (2026)',
       content: [
-        '**في 2026، نماذج الحدود — Claude Opus 5.5 وOpenAI o3 وGemini 3.1 Pro thinking — تمتلك أوضاع استدلال مُدمَجة تُدخِل سلسلة الأفكار تلقائيًا.** لست بحاجة إلى إضافة تعليمات "فكِّر خطوةً بخطوة" في هذه النماذج.',
+        '**في 2026، النماذج القادرة على الاستدلال — Claude Opus 5.5 ونماذج الاستدلال من OpenAI (مثل GPT-6 Astra) وGemini 3.1 Pro thinking — تمتلك أوضاع استدلال مُدمَجة تُدخِل سلسلة الأفكار تلقائيًا.** لست بحاجة إلى إضافة تعليمات "فكِّر خطوةً بخطوة" في هذه النماذج.',
         '**متى تستخدم CoT على مستوى التعليمات:** النماذج بلا وضع استدلال مدمج (مثل Llama 4)، والنماذج المحلية، والنماذج التي أُوقف فيها التفكير أو ضُبط على جهد منخفض، أو عندما تريد تجنب تكلفة رموز التفكير الإضافية.',
-        '**متى تستخدم أوضاع الاستدلال المدمجة:** أقصى دقة في النماذج المتقدمة، والمهام الرياضية الثقيلة، والتحليل المعقد. تحتسب Claude وOpenAI رموز الاستدلال (التفكير) بسعر رموز الإخراج، فتنمو التكلفة بقدر مدة تفكير النموذج. اختبر تعليمات CoT في [وحدة تحكم Anthropic](https://platform.claude.com/) أو [OpenAI Playground](https://platform.openai.com/playground) قبل النشر.',
+        '**متى تستخدم أوضاع الاستدلال المدمجة:** المهام الصعبة في النماذج المتقدمة، حيث يتفوق الوضع المدمج عادةً على التعليمة العادية (قارن بين الاثنين على مهمتك الخاصة)، والمهام الرياضية الثقيلة، والتحليل المعقد. تحتسب Claude وOpenAI رموز الاستدلال (التفكير) بسعر رموز الإخراج، فتنمو التكلفة بقدر مدة تفكير النموذج. اختبر تعليمات CoT في [وحدة تحكم Anthropic](https://platform.claude.com/) أو [OpenAI Playground](https://platform.openai.com/playground) قبل النشر.',
       ],
       columns: ['النهج', 'الأفضل لـ', 'التكلفة', 'الشفافية', 'النماذج'],
       rows: [
         { 'النهج': 'CoT على مستوى التعليمات ("فكِّر خطوةً بخطوة")', 'الأفضل لـ': 'النماذج الصغيرة وLLMs المحلية والمهام الحساسة للتكلفة', 'التكلفة': 'يزيد رموز المخرجات', 'الشفافية': 'كاملة: الخطوات مرئية في المخرجات', 'النماذج': 'Llama 4 والنماذج المحلية الصغيرة' },
-        { 'النهج': 'Claude adaptive thinking (Opus 5.5, Sonnet 5.5)', 'الأفضل لـ': 'التحليل المعقد وأقصى دقة', 'التكلفة': 'رموز التفكير تُحتسب كرموز إخراج', 'الشفافية': 'تفكير مُلخَّص عبر API', 'النماذج': 'Claude Opus 5.5, Claude Sonnet 5.5' },
-        { 'النهج': 'OpenAI o3', 'الأفضل لـ': 'المشكلات الأصعب (رياضيات وكود ومسابقات)', 'التكلفة': 'رموز الاستدلال تُحتسب كرموز إخراج', 'الشفافية': 'الاستدلال مخفي والمخرجات مرئية', 'النماذج': 'OpenAI o3' },
+        { 'النهج': 'Claude adaptive thinking (Opus 5.5, Sonnet 5.5)', 'الأفضل لـ': 'التحليل المعقد', 'التكلفة': 'رموز التفكير تُحتسب كرموز إخراج', 'الشفافية': 'تفكير مُلخَّص عبر API', 'النماذج': 'Claude Opus 5.5, Claude Sonnet 5.5' },
+        { 'النهج': 'OpenAI GPT-6 Astra', 'الأفضل لـ': 'المشكلات الأصعب (رياضيات وكود ومسابقات)', 'التكلفة': 'رموز الاستدلال تُحتسب كرموز إخراج', 'الشفافية': 'الاستدلال مخفي والمخرجات مرئية', 'النماذج': 'OpenAI GPT-6 Astra' },
         { 'النهج': 'Gemini 3.1 Pro thinking', 'الأفضل لـ': 'التكامل مع Google Cloud ونظام Gemini البيئي', 'التكلفة': 'رموز التفكير تُحتسب كرموز إخراج', 'الشفافية': 'معامل thinking_level (LOW وMEDIUM وHIGH)', 'النماذج': 'Gemini 3.1 Pro' },
         { 'النهج': 'DeepSeek-R1', 'الأفضل لـ': 'خيار الأوزان المفتوحة والاستدلال المستضاف ذاتيًا', 'التكلفة': 'الاستدلال المرئي يُبثّ كنص مخرجات', 'الشفافية': 'كاملة: CoT مضمَّن في المخرجات', 'النماذج': 'DeepSeek-R1' },
       ],
@@ -1598,7 +1598,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         {
           type: 'tip',
           label: 'نصيحة احترافية',
-          text: 'إذا كنت تبني مع مراعاة التكلفة، استخدم CoT على مستوى التعليمات في النماذج الأصغر. إذا كنت تبني للدقة في المشكلات الصعبة، استخدم o3 أو التفكير الممتد لـ Claude ودع النموذج يُدير الاستدلال داخليًا.'
+          text: 'إذا كنت تبني مع مراعاة التكلفة، استخدم CoT على مستوى التعليمات في النماذج الأصغر. إذا كنت تبني للدقة في المشكلات الصعبة، استخدم GPT-6 Astra أو التفكير الممتد لـ Claude ودع النموذج يُدير الاستدلال داخليًا.'
         }
       ],
     },
@@ -1622,11 +1622,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'مقارنة النماذج: كيف تتعامل مع CoT (2026)',
       columns: ['النموذج', 'CoT على مستوى التعليمات', 'الاستدلال المُدمَج', 'أفضل حالة استخدام', 'التكلفة (تقريبًا)'],
       rows: [
-        { 'النموذج': 'Claude Opus 5.5', 'CoT على مستوى التعليمات': 'غير ضروري', 'الاستدلال المُدمَج': 'Adaptive thinking', 'أفضل حالة استخدام': 'تحليل أقصى دقة', 'التكلفة (تقريبًا)': 'أعلى (مدخلات + مخرجات + رموز التفكير)' },
+        { 'النموذج': 'Claude Opus 5.5', 'CoT على مستوى التعليمات': 'غير ضروري', 'الاستدلال المُدمَج': 'Adaptive thinking', 'أفضل حالة استخدام': 'تحليل معمّق', 'التكلفة (تقريبًا)': 'أعلى (مدخلات + مخرجات + رموز التفكير)' },
         { 'النموذج': 'Claude Sonnet 5.5', 'CoT على مستوى التعليمات': 'غير ضروري', 'الاستدلال المُدمَج': 'Adaptive thinking', 'أفضل حالة استخدام': 'توازن الدقة/التكلفة', 'التكلفة (تقريبًا)': 'متوسط' },
         { 'النموذج': 'Claude Haiku 5.5', 'CoT على مستوى التعليمات': 'غير ضروري', 'الاستدلال المُدمَج': 'Adaptive thinking', 'أفضل حالة استخدام': 'استدلال سريع واقتصادي', 'التكلفة (تقريبًا)': 'منخفض' },
-        { 'النموذج': 'OpenAI o3', 'CoT على مستوى التعليمات': 'غير ضروري', 'الاستدلال المُدمَج': 'مستويات جهد (low وmedium وhigh)', 'أفضل حالة استخدام': 'مشكلات مستوى المسابقات', 'التكلفة (تقريبًا)': 'رموز الاستدلال تُحتسب كإخراج (راجع الأسعار)' },
-        { 'النموذج': 'GPT-5.6 Luna', 'CoT على مستوى التعليمات': 'اختياري', 'الاستدلال المُدمَج': 'جهد استدلال قابل للضبط', 'أفضل حالة استخدام': 'نشر اقتصادي', 'التكلفة (تقريبًا)': 'منخفض جدًا' },
+        { 'النموذج': 'OpenAI GPT-6 Astra', 'CoT على مستوى التعليمات': 'غير ضروري', 'الاستدلال المُدمَج': 'مستويات جهد (low وmedium وhigh وxhigh وmax)', 'أفضل حالة استخدام': 'مشكلات مستوى المسابقات', 'التكلفة (تقريبًا)': 'رموز الاستدلال تُحتسب كإخراج (راجع الأسعار)' },
+        { 'النموذج': 'GPT-6 Luna', 'CoT على مستوى التعليمات': 'اختياري', 'الاستدلال المُدمَج': 'جهد استدلال قابل للضبط', 'أفضل حالة استخدام': 'نشر اقتصادي', 'التكلفة (تقريبًا)': 'يركّز على الكفاءة (راجع الأسعار)' },
         { 'النموذج': 'Gemini 3.1 Pro', 'CoT على مستوى التعليمات': 'يعمل', 'الاستدلال المُدمَج': 'مستويات التفكير (معامل thinking_level)', 'أفضل حالة استخدام': 'التكامل مع Google Cloud', 'التكلفة (تقريبًا)': 'متوسط-مرتفع' },
         { 'النموذج': 'Gemini Flash', 'CoT على مستوى التعليمات': 'اختياري', 'الاستدلال المُدمَج': 'مستويات تفكير قابلة للضبط', 'أفضل حالة استخدام': 'استجابات سريعة', 'التكلفة (تقريبًا)': 'منخفض' },
         { 'النموذج': 'DeepSeek-R1', 'CoT على مستوى التعليمات': 'غير ضروري', 'الاستدلال المُدمَج': 'الاستدلال المضمَّن في المخرجات', 'أفضل حالة استخدام': 'أوزان مفتوحة واستضافة ذاتية', 'التكلفة (تقريبًا)': 'أوزان بترخيص MIT؛ تُضاف تكاليف العتاد' },
@@ -1655,15 +1655,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqs: [
         {
           q: 'هل تعمل سلسلة الأفكار في جميع النماذج؟',
-          a: 'ليس بالقدر نفسه. وجد Wei وآخرون (2022) أن توجيه سلسلة الأفكار لم يحقق مكاسب إلا في النماذج التي تبلغ نحو 100B معامل فأكثر، وأن النماذج الأصغر كثيرًا ما كتبت خطوات سلسة لكنها غير منطقية. تتفاوت النتائج بحسب النموذج والمهمة، فاختبر النماذج الصغيرة أو المحلية بتعليماتك الخاصة. وفي النماذج المتقدمة ذات الاستدلال المدمج (Claude Opus 5.5 وo3) كثيرًا ما يغني الوضع المدمج عن CoT على مستوى التعليمات.'
+          a: 'ليس بالقدر نفسه. وجد Wei وآخرون (2022) أن توجيه سلسلة الأفكار لم يحقق مكاسب إلا في النماذج التي تبلغ نحو 100B معامل فأكثر، وأن النماذج الأصغر كثيرًا ما كتبت خطوات سلسة لكنها غير منطقية. تتفاوت النتائج بحسب النموذج والمهمة، فاختبر النماذج الصغيرة أو المحلية بتعليماتك الخاصة. وفي النماذج المتقدمة ذات الاستدلال المدمج (Claude Opus 5.5 وGPT-6 Astra) كثيرًا ما يغني الوضع المدمج عن CoT على مستوى التعليمات.'
         },
         {
           q: 'هل تزيد سلسلة الأفكار التكلفة؟',
-          a: 'نعم. يزيد CoT على مستوى التعليمات رموز الإخراج لأن النموذج يكتب استدلاله قبل الإجابة النهائية. كما تستهلك أوضاع الاستدلال المدمجة (Claude adaptive thinking وOpenAI o3) رموز تفكير تحتسبها Anthropic وOpenAI بسعر رموز الإخراج. اختبر الخيارين على حالتك لمقارنة التكلفة بالدقة.'
+          a: 'نعم. يزيد CoT على مستوى التعليمات رموز الإخراج لأن النموذج يكتب استدلاله قبل الإجابة النهائية. كما تستهلك أوضاع الاستدلال المدمجة (Claude adaptive thinking وOpenAI GPT-6 Astra) رموز تفكير تحتسبها Anthropic وOpenAI بسعر رموز الإخراج. اختبر الخيارين على حالتك لمقارنة التكلفة بالدقة.'
         },
         {
           q: 'متى يجب استخدام CoT مع أمثلة بدلًا من بلا أمثلة؟',
-          a: 'ابدأ بـ CoT بلا أمثلة أولًا — فهو الخيار الأبسط. انتقل إلى الأمثلة (مع 2-5 أمثلة) إذا كان بلا أمثلة غير موثوق أو إذا كان مجالك يتطلب أنماط استدلال محددة (مثلًا التحليل المالي ببنية سطر قياسية).'
+          a: 'ابدأ بـ CoT بلا أمثلة أولًا — فهو الخيار الأبسط. انتقل إلى الأمثلة (عادةً مع 2-5 أمثلة) إذا كان بلا أمثلة غير موثوق أو إذا كان مجالك يتطلب أنماط استدلال محددة (مثلًا التحليل المالي ببنية سطر قياسية).'
         },
         {
           q: 'هل يمكنني الجمع بين سلسلة الأفكار والمخرجات المنظَّمة (JSON)؟',
@@ -1671,11 +1671,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'ما الفرق بين سلسلة الأفكار وشجرة الأفكار؟',
-          a: 'سلسلة الأفكار تسلسل خطي: خطوة 1 → خطوة 2 → ... → استنتاج. شجرة الأفكار تستكشف فروعًا متعددة (مسارات استدلال بديلة) وتُقلِّم الأضعف قبل الوصول إلى الإجابة. شجرة الأفكار أكثر قوةً لكن أكثر تكلفةً (تتطلب استدعاءات نموذج متعددة).'
+          a: 'سلسلة الأفكار تسلسل خطي: خطوة 1 → خطوة 2 → ... → استنتاج. شجرة الأفكار تستكشف فروعًا متعددة (مسارات استدلال بديلة) وتُقلِّم الأضعف قبل الوصول إلى الإجابة. قد تفيد شجرة الأفكار في المسائل الأصعب الشبيهة بالبحث، لكنها أكثر تكلفةً (تتطلب استدعاءات نموذج متعددة).'
         },
         {
-          q: 'هل يتطلب OpenAI o3 توجيه سلسلة الأفكار؟',
-          a: 'لا. OpenAI o3 يمتلك استدلالًا مُدمَجًا يُفعَّل تلقائيًا. لست بحاجة إلى إضافة تعليمات "فكِّر خطوةً بخطوة". فقط أعطِه المشكلة وحدِّد مستوى الجهد (low/medium/high) للتحكم في حجم ميزانية الاستدلال المُنفَق.'
+          q: 'هل يتطلب OpenAI GPT-6 Astra توجيه سلسلة الأفكار؟',
+          a: 'لا. نماذج الاستدلال من OpenAI، مثل GPT-6 Astra، تمتلك استدلالًا مُدمَجًا يُفعَّل تلقائيًا. لست بحاجة إلى إضافة تعليمات "فكِّر خطوةً بخطوة". فقط أعطِه المشكلة وحدِّد مستوى الجهد (low/medium/high/xhigh/max) للتحكم في حجم ميزانية الاستدلال المُنفَق.'
         },
         {
           q: 'هل يمكنني تدقيق استدلال نماذج الاستدلال المُدمَجة؟',
@@ -1717,7 +1717,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'هل تعمل سلسلة الأفكار في جميع النماذج؟',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'ليس بالقدر نفسه. وجد Wei وآخرون (2022) أن توجيه سلسلة الأفكار لم يحقق مكاسب إلا في النماذج التي تبلغ نحو 100B معامل فأكثر، وأن النماذج الأصغر كثيرًا ما كتبت خطوات سلسة لكنها غير منطقية. تتفاوت النتائج بحسب النموذج والمهمة، فاختبر النماذج الصغيرة أو المحلية بتعليماتك الخاصة. وفي النماذج المتقدمة ذات الاستدلال المدمج (Claude Opus 5.5 وo3) كثيرًا ما يغني الوضع المدمج عن CoT على مستوى التعليمات.'
+          text: 'ليس بالقدر نفسه. وجد Wei وآخرون (2022) أن توجيه سلسلة الأفكار لم يحقق مكاسب إلا في النماذج التي تبلغ نحو 100B معامل فأكثر، وأن النماذج الأصغر كثيرًا ما كتبت خطوات سلسة لكنها غير منطقية. تتفاوت النتائج بحسب النموذج والمهمة، فاختبر النماذج الصغيرة أو المحلية بتعليماتك الخاصة. وفي النماذج المتقدمة ذات الاستدلال المدمج (Claude Opus 5.5 وGPT-6 Astra) كثيرًا ما يغني الوضع المدمج عن CoT على مستوى التعليمات.'
         }
       },
       {
@@ -1725,7 +1725,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'هل تزيد سلسلة الأفكار التكلفة؟',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'نعم. يزيد CoT على مستوى التعليمات رموز الإخراج لأن النموذج يكتب استدلاله قبل الإجابة النهائية. كما تستهلك أوضاع الاستدلال المدمجة (Claude adaptive thinking وOpenAI o3) رموز تفكير تحتسبها Anthropic وOpenAI بسعر رموز الإخراج. اختبر الخيارين على حالتك لمقارنة التكلفة بالدقة.'
+          text: 'نعم. يزيد CoT على مستوى التعليمات رموز الإخراج لأن النموذج يكتب استدلاله قبل الإجابة النهائية. كما تستهلك أوضاع الاستدلال المدمجة (Claude adaptive thinking وOpenAI GPT-6 Astra) رموز تفكير تحتسبها Anthropic وOpenAI بسعر رموز الإخراج. اختبر الخيارين على حالتك لمقارنة التكلفة بالدقة.'
         }
       },
       {
@@ -1733,7 +1733,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'متى يجب استخدام CoT مع أمثلة بدلًا من بلا أمثلة؟',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'ابدأ بـ CoT بلا أمثلة أولًا — فهو الخيار الأبسط. انتقل إلى الأمثلة (مع 2-5 أمثلة) إذا كان بلا أمثلة غير موثوق أو إذا كان مجالك يتطلب أنماط استدلال محددة (مثلًا التحليل المالي ببنية سطر قياسية).'
+          text: 'ابدأ بـ CoT بلا أمثلة أولًا — فهو الخيار الأبسط. انتقل إلى الأمثلة (عادةً مع 2-5 أمثلة) إذا كان بلا أمثلة غير موثوق أو إذا كان مجالك يتطلب أنماط استدلال محددة (مثلًا التحليل المالي ببنية سطر قياسية).'
         }
       },
       {
@@ -1749,15 +1749,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'ما الفرق بين سلسلة الأفكار وشجرة الأفكار؟',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'سلسلة الأفكار تسلسل خطي: خطوة 1 → خطوة 2 → ... → استنتاج. شجرة الأفكار تستكشف فروعًا متعددة (مسارات استدلال بديلة) وتُقلِّم الأضعف قبل الوصول إلى الإجابة. شجرة الأفكار أكثر قوةً لكن أكثر تكلفةً (تتطلب استدعاءات نموذج متعددة).'
+          text: 'سلسلة الأفكار تسلسل خطي: خطوة 1 → خطوة 2 → ... → استنتاج. شجرة الأفكار تستكشف فروعًا متعددة (مسارات استدلال بديلة) وتُقلِّم الأضعف قبل الوصول إلى الإجابة. قد تفيد شجرة الأفكار في المسائل الأصعب الشبيهة بالبحث، لكنها أكثر تكلفةً (تتطلب استدعاءات نموذج متعددة).'
         }
       },
       {
         '@type': 'Question',
-        name: 'هل يتطلب OpenAI o3 توجيه سلسلة الأفكار؟',
+        name: 'هل يتطلب OpenAI GPT-6 Astra توجيه سلسلة الأفكار؟',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'لا. OpenAI o3 يمتلك استدلالًا مُدمَجًا يُفعَّل تلقائيًا. لست بحاجة إلى إضافة تعليمات "فكِّر خطوةً بخطوة". فقط أعطِه المشكلة وحدِّد مستوى الجهد (low/medium/high) للتحكم في حجم ميزانية الاستدلال المُنفَق.'
+          text: 'لا. نماذج الاستدلال من OpenAI، مثل GPT-6 Astra، تمتلك استدلالًا مُدمَجًا يُفعَّل تلقائيًا. لست بحاجة إلى إضافة تعليمات "فكِّر خطوةً بخطوة". فقط أعطِه المشكلة وحدِّد مستوى الجهد (low/medium/high/xhigh/max) للتحكم في حجم ميزانية الاستدلال المُنفَق.'
         }
       },
       {
@@ -1882,7 +1882,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
-      { '@type': 'Thing', name: 'Chain-of-Thought Prompting', 'sameAs': 'https://www.wikidata.org/wiki/Q117050701' },
+      { '@type': 'Thing', name: 'Chain-of-Thought Prompting', 'sameAs': 'https://www.wikidata.org/wiki/Q135305651' },
       { '@type': 'Thing', name: 'Large Language Models', 'sameAs': 'https://www.wikidata.org/wiki/Q115305900' },
       { '@type': 'Thing', name: 'Raciocínio' },
       { '@type': 'Thing', name: 'Saída Estruturada' },
@@ -1900,9 +1900,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       items: [
         '**O chain-of-thought prompting pede aos modelos que mostrem as etapas de raciocínio antes de dar uma resposta final**, melhorando a precisão em tarefas de matemática, lógica e múltiplas etapas.',
         'O CoT zero-shot ("pense passo a passo") é a opção mais simples e ajuda principalmente em modelos maiores. O CoT few-shot (com exemplos resolvidos) é mais confiável.',
-        'Em 2026, modelos de fronteira como Claude Opus 5.5 e OpenAI o3 têm **modos de raciocínio integrados** que substituem o CoT no nível do prompt; você não precisa dizer "pense passo a passo" nesses modelos.',
+        'Em 2026, modelos com capacidade de raciocínio, como o Claude Opus 5.5 e os modelos de raciocínio da OpenAI (por exemplo, GPT-6 Astra), têm **modos de raciocínio integrados** que substituem o CoT no nível do prompt; você não precisa dizer "pense passo a passo" nesses modelos.',
         'O CoT aumenta os tokens de saída e, portanto, o custo. Os modos de raciocínio integrados também gastam tokens de pensamento, que Anthropic e OpenAI cobram como tokens de saída.',
-        'Use CoT no nível do prompt em modelos sem modo de raciocínio integrado, como muitos modelos pequenos ou locais, para raciocinar a baixo custo. Em modelos de fronteira, use o modo de raciocínio integrado para obter a máxima precisão.',
+        'Use CoT no nível do prompt em modelos sem modo de raciocínio integrado, como muitos modelos pequenos ou locais, para raciocinar a baixo custo. Em modelos de fronteira, o modo de raciocínio integrado costuma dar mais precisão em tarefas difíceis do que um prompt simples; compare os dois na sua própria tarefa.',
         'O CoT é mais valioso para matemática, lógica, planejamento e análise de causa raiz. Omita-o para classificação simples, respostas curtas e redação rápida.',
       ]
     },
@@ -1917,7 +1917,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Introduzido por:** Wei et al. (2022), Google Research (Brain Team) — artigo da NeurIPS 2022',
         '**Resultado principal:** O CoT zero-shot ("Let\'s think step by step") elevou a precisão do InstructGPT (text-davinci-002) no MultiArith de 17,7% para 78,7% (Kojima et al., 2022)',
         '**Frase ativadora:** "Vamos pensar passo a passo" (zero-shot) ou exemplos resolvidos (few-shot)',
-        '**Evolução em 2026:** Os modos de raciocínio integrados (OpenAI o3, Claude adaptive thinking) automatizam o CoT internamente',
+        '**Evolução em 2026:** Os modos de raciocínio integrados (OpenAI GPT-6 Astra, Claude adaptive thinking) automatizam o CoT internamente',
         '**Impacto no custo:** CoT no nível do prompt = mais tokens de saída; modos de raciocínio = orçamento de tokens de pensamento separado',
         '**Melhores modelos para CoT no nível do prompt:** Modelos sem modo de raciocínio integrado, como Llama 4 Scout e muitos modelos locais pequenos',
       ]
@@ -2040,15 +2040,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'reasoning-models',
       title: 'CoT vs modelos de raciocínio integrados (2026)',
       content: [
-        '**Em 2026, modelos de fronteira — Claude Opus 5.5, OpenAI o3, Gemini 3.1 Pro thinking — têm modos de raciocínio integrados que internalizam chain-of-thought automaticamente.** Você não precisa adicionar instruções "pense passo a passo" nesses modelos.',
+        '**Em 2026, modelos com capacidade de raciocínio — Claude Opus 5.5, os modelos de raciocínio da OpenAI (por exemplo, GPT-6 Astra) e Gemini 3.1 Pro thinking — têm modos de raciocínio integrados que internalizam chain-of-thought automaticamente.** Você não precisa adicionar instruções "pense passo a passo" nesses modelos.',
         '**Quando usar CoT no nível do prompt:** Modelos sem modo de raciocínio integrado (por exemplo Llama 4), LLMs locais, modelos com o pensamento desativado ou em esforço baixo, ou quando você quer evitar o custo extra dos tokens de pensamento.',
-        '**Quando usar modos de raciocínio integrados:** Máxima precisão em modelos de fronteira, tarefas com muita matemática, análise complexa. Claude e OpenAI cobram os tokens de raciocínio (pensamento) como tokens de saída, então o custo cresce com o tempo que o modelo pensa. Teste seus prompts CoT no [console da Anthropic](https://platform.claude.com/) ou no [Playground da OpenAI](https://platform.openai.com/playground) antes de ir para produção.',
+        '**Quando usar modos de raciocínio integrados:** Tarefas difíceis em modelos de fronteira, em que o modo integrado costuma superar um prompt simples (compare os dois na sua própria tarefa), tarefas com muita matemática, análise complexa. Claude e OpenAI cobram os tokens de raciocínio (pensamento) como tokens de saída, então o custo cresce com o tempo que o modelo pensa. Teste seus prompts CoT no [console da Anthropic](https://platform.claude.com/) ou no [Playground da OpenAI](https://platform.openai.com/playground) antes de ir para produção.',
       ],
       columns: ['Abordagem', 'Melhor para', 'Custo', 'Transparência', 'Modelos'],
       rows: [
         { 'Abordagem': 'CoT no nível do prompt ("pense passo a passo")', 'Melhor para': 'Modelos pequenos, LLMs locais, tarefas sensíveis ao custo', 'Custo': 'Aumenta os tokens de saída', 'Transparência': 'Total: etapas visíveis na saída', 'Modelos': 'Llama 4, modelos locais pequenos' },
-        { 'Abordagem': 'Claude adaptive thinking (Opus 5.5, Sonnet 5.5)', 'Melhor para': 'Análise complexa, máxima precisão', 'Custo': 'Tokens de pensamento cobrados como tokens de saída', 'Transparência': 'Pensamento resumido via API', 'Modelos': 'Claude Opus 5.5, Claude Sonnet 5.5' },
-        { 'Abordagem': 'OpenAI o3', 'Melhor para': 'Problemas mais difíceis (matemática, código, competição)', 'Custo': 'Tokens de raciocínio cobrados como tokens de saída', 'Transparência': 'Raciocínio oculto, saída visível', 'Modelos': 'OpenAI o3' },
+        { 'Abordagem': 'Claude adaptive thinking (Opus 5.5, Sonnet 5.5)', 'Melhor para': 'Análise complexa', 'Custo': 'Tokens de pensamento cobrados como tokens de saída', 'Transparência': 'Pensamento resumido via API', 'Modelos': 'Claude Opus 5.5, Claude Sonnet 5.5' },
+        { 'Abordagem': 'OpenAI GPT-6 Astra', 'Melhor para': 'Problemas mais difíceis (matemática, código, competição)', 'Custo': 'Tokens de raciocínio cobrados como tokens de saída', 'Transparência': 'Raciocínio oculto, saída visível', 'Modelos': 'OpenAI GPT-6 Astra' },
         { 'Abordagem': 'Gemini 3.1 Pro thinking', 'Melhor para': 'Integração com Google Cloud, ecossistema Gemini', 'Custo': 'Tokens de pensamento cobrados como tokens de saída', 'Transparência': 'Parâmetro thinking_level (LOW, MEDIUM, HIGH)', 'Modelos': 'Gemini 3.1 Pro' },
         { 'Abordagem': 'DeepSeek-R1', 'Melhor para': 'Opção open-weights, raciocínio auto-hospedado', 'Custo': 'Raciocínio visível transmitido como texto de saída', 'Transparência': 'Total: CoT inline na saída', 'Modelos': 'DeepSeek-R1' },
       ],
@@ -2056,7 +2056,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         {
           type: 'tip',
           label: 'Dica profissional',
-          text: 'Se você está construindo pensando no custo, use CoT no nível do prompt em modelos menores. Se está construindo para precisão em problemas difíceis, use o3 ou Claude adaptive thinking e deixe o modelo gerenciar o raciocínio internamente.'
+          text: 'Se você está construindo pensando no custo, use CoT no nível do prompt em modelos menores. Se está construindo para precisão em problemas difíceis, use GPT-6 Astra ou Claude adaptive thinking e deixe o modelo gerenciar o raciocínio internamente.'
         }
       ],
     },
@@ -2080,11 +2080,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Comparação de modelos: como lidam com CoT prompting (2026)',
       columns: ['Modelo', 'CoT no nível do prompt', 'Raciocínio integrado', 'Melhor caso de uso', 'Custo (aprox.)'],
       rows: [
-        { 'Modelo': 'Claude Opus 5.5', 'CoT no nível do prompt': 'Não necessário', 'Raciocínio integrado': 'Adaptive thinking', 'Melhor caso de uso': 'Análise de máxima precisão', 'Custo (aprox.)': 'Maior (input + output + tokens de pensamento)' },
+        { 'Modelo': 'Claude Opus 5.5', 'CoT no nível do prompt': 'Não necessário', 'Raciocínio integrado': 'Adaptive thinking', 'Melhor caso de uso': 'Análise profunda', 'Custo (aprox.)': 'Maior (input + output + tokens de pensamento)' },
         { 'Modelo': 'Claude Sonnet 5.5', 'CoT no nível do prompt': 'Não necessário', 'Raciocínio integrado': 'Adaptive thinking', 'Melhor caso de uso': 'Equilíbrio precisão/custo', 'Custo (aprox.)': 'Médio' },
         { 'Modelo': 'Claude Haiku 5.5', 'CoT no nível do prompt': 'Não necessário', 'Raciocínio integrado': 'Adaptive thinking', 'Melhor caso de uso': 'Raciocínio rápido e econômico', 'Custo (aprox.)': 'Baixo' },
-        { 'Modelo': 'OpenAI o3', 'CoT no nível do prompt': 'Não necessário', 'Raciocínio integrado': 'Níveis de esforço (low, medium, high)', 'Melhor caso de uso': 'Problemas de nível de competição', 'Custo (aprox.)': 'Tokens de raciocínio cobrados como saída (veja preços)' },
-        { 'Modelo': 'GPT-5.6 Luna', 'CoT no nível do prompt': 'Opcional', 'Raciocínio integrado': 'Esforço de raciocínio ajustável', 'Melhor caso de uso': 'Implantação econômica', 'Custo (aprox.)': 'Muito baixo' },
+        { 'Modelo': 'OpenAI GPT-6 Astra', 'CoT no nível do prompt': 'Não necessário', 'Raciocínio integrado': 'Níveis de esforço (low, medium, high, xhigh, max)', 'Melhor caso de uso': 'Problemas de nível de competição', 'Custo (aprox.)': 'Tokens de raciocínio cobrados como saída (veja preços)' },
+        { 'Modelo': 'GPT-6 Luna', 'CoT no nível do prompt': 'Opcional', 'Raciocínio integrado': 'Esforço de raciocínio ajustável', 'Melhor caso de uso': 'Implantação econômica', 'Custo (aprox.)': 'Focado em eficiência (veja os preços)' },
         { 'Modelo': 'Gemini 3.1 Pro', 'CoT no nível do prompt': 'Funciona', 'Raciocínio integrado': 'Níveis de pensamento (parâmetro thinking_level)', 'Melhor caso de uso': 'Integração com Google Cloud', 'Custo (aprox.)': 'Médio-alto' },
         { 'Modelo': 'Gemini Flash', 'CoT no nível do prompt': 'Opcional', 'Raciocínio integrado': 'Níveis de pensamento ajustáveis', 'Melhor caso de uso': 'Respostas rápidas', 'Custo (aprox.)': 'Baixo' },
         { 'Modelo': 'DeepSeek-R1', 'CoT no nível do prompt': 'Não necessário', 'Raciocínio integrado': 'Raciocínio inline na saída', 'Melhor caso de uso': 'Open-weights, auto-hospedado', 'Custo (aprox.)': 'Pesos com licença MIT; há custos de hardware' },
@@ -2113,15 +2113,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqs: [
         {
           q: 'O chain-of-thought funciona em todos os modelos?',
-          a: 'Não igualmente bem. Wei et al. (2022) observaram que o chain-of-thought prompting só trazia ganhos em modelos com cerca de 100B de parâmetros ou mais, e que modelos menores muitas vezes escreviam passos fluentes, mas ilógicos. Os resultados variam conforme o modelo e a tarefa, então teste modelos pequenos ou locais com seus próprios prompts. Em modelos de fronteira com raciocínio integrado (Claude Opus 5.5, o3), o modo integrado costuma tornar o CoT no nível do prompt desnecessário.'
+          a: 'Não igualmente bem. Wei et al. (2022) observaram que o chain-of-thought prompting só trazia ganhos em modelos com cerca de 100B de parâmetros ou mais, e que modelos menores muitas vezes escreviam passos fluentes, mas ilógicos. Os resultados variam conforme o modelo e a tarefa, então teste modelos pequenos ou locais com seus próprios prompts. Em modelos de fronteira com raciocínio integrado (Claude Opus 5.5, GPT-6 Astra), o modo integrado costuma tornar o CoT no nível do prompt desnecessário.'
         },
         {
           q: 'O chain-of-thought aumenta o custo?',
-          a: 'Sim. O CoT no nível do prompt aumenta os tokens de saída porque o modelo escreve o raciocínio antes da resposta final. Os modos de raciocínio integrados (Claude adaptive thinking, OpenAI o3) também gastam tokens de pensamento, que Anthropic e OpenAI cobram como tokens de saída. Teste os dois no seu caso de uso para comparar custo e precisão.'
+          a: 'Sim. O CoT no nível do prompt aumenta os tokens de saída porque o modelo escreve o raciocínio antes da resposta final. Os modos de raciocínio integrados (Claude adaptive thinking, OpenAI GPT-6 Astra) também gastam tokens de pensamento, que Anthropic e OpenAI cobram como tokens de saída. Teste os dois no seu caso de uso para comparar custo e precisão.'
         },
         {
           q: 'Quando devo usar CoT few-shot em vez de zero-shot?',
-          a: 'Use CoT zero-shot primeiro — é a opção mais simples. Passe para few-shot (com 2–5 exemplos) se zero-shot não for confiável ou se seu domínio exigir padrões de raciocínio específicos.'
+          a: 'Use CoT zero-shot primeiro — é a opção mais simples. Passe para few-shot (geralmente com 2–5 exemplos) se zero-shot não for confiável ou se seu domínio exigir padrões de raciocínio específicos.'
         },
         {
           q: 'Posso combinar chain-of-thought com saída estruturada (JSON)?',
@@ -2129,11 +2129,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'Qual é a diferença entre chain-of-thought e tree-of-thought?',
-          a: 'Chain-of-thought é uma sequência linear: etapa 1 → etapa 2 → ... → conclusão. Tree-of-thought explora múltiplos ramos (caminhos de raciocínio alternativos) e poda os mais fracos antes de chegar à resposta. Tree-of-thought é mais poderoso mas mais caro (requer múltiplas chamadas ao modelo).'
+          a: 'Chain-of-thought é uma sequência linear: etapa 1 → etapa 2 → ... → conclusão. Tree-of-thought explora múltiplos ramos (caminhos de raciocínio alternativos) e poda os mais fracos antes de chegar à resposta. Tree-of-thought pode ajudar em problemas mais difíceis, do tipo busca, mas custa mais (requer múltiplas chamadas ao modelo).'
         },
         {
-          q: 'O OpenAI o3 requer chain-of-thought prompting?',
-          a: 'Não. O OpenAI o3 tem raciocínio integrado que se ativa automaticamente. Você não precisa adicionar instruções "pense passo a passo". Basta dar a o3 o problema e definir o nível de esforço (low/medium/high).'
+          q: 'O OpenAI GPT-6 Astra requer chain-of-thought prompting?',
+          a: 'Não. Os modelos de raciocínio da OpenAI, como GPT-6 Astra, têm raciocínio integrado que se ativa automaticamente. Você não precisa adicionar instruções "pense passo a passo". Basta dar a GPT-6 Astra o problema e definir o nível de esforço (low/medium/high/xhigh/max).'
         },
         {
           q: 'Posso auditar o raciocínio dos modelos de raciocínio integrados?',
@@ -2174,7 +2174,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'O chain-of-thought funciona em todos os modelos?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Não igualmente bem. Wei et al. (2022) observaram que o chain-of-thought prompting só trazia ganhos em modelos com cerca de 100B de parâmetros ou mais, e que modelos menores muitas vezes escreviam passos fluentes, mas ilógicos. Os resultados variam conforme o modelo e a tarefa, então teste modelos pequenos ou locais com seus próprios prompts. Em modelos de fronteira com raciocínio integrado (Claude Opus 5.5, o3), o modo integrado costuma tornar o CoT no nível do prompt desnecessário.'
+          text: 'Não igualmente bem. Wei et al. (2022) observaram que o chain-of-thought prompting só trazia ganhos em modelos com cerca de 100B de parâmetros ou mais, e que modelos menores muitas vezes escreviam passos fluentes, mas ilógicos. Os resultados variam conforme o modelo e a tarefa, então teste modelos pequenos ou locais com seus próprios prompts. Em modelos de fronteira com raciocínio integrado (Claude Opus 5.5, GPT-6 Astra), o modo integrado costuma tornar o CoT no nível do prompt desnecessário.'
         }
       },
       {
@@ -2182,7 +2182,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'O chain-of-thought aumenta o custo?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Sim. O CoT no nível do prompt aumenta os tokens de saída porque o modelo escreve o raciocínio antes da resposta final. Os modos de raciocínio integrados (Claude adaptive thinking, OpenAI o3) também gastam tokens de pensamento, que Anthropic e OpenAI cobram como tokens de saída. Teste os dois no seu caso de uso para comparar custo e precisão.'
+          text: 'Sim. O CoT no nível do prompt aumenta os tokens de saída porque o modelo escreve o raciocínio antes da resposta final. Os modos de raciocínio integrados (Claude adaptive thinking, OpenAI GPT-6 Astra) também gastam tokens de pensamento, que Anthropic e OpenAI cobram como tokens de saída. Teste os dois no seu caso de uso para comparar custo e precisão.'
         }
       },
       {
@@ -2190,7 +2190,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Quando devo usar CoT few-shot em vez de zero-shot?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Use CoT zero-shot primeiro — é a opção mais simples. Passe para few-shot (com 2–5 exemplos) se zero-shot não for confiável ou se seu domínio exigir padrões de raciocínio específicos.'
+          text: 'Use CoT zero-shot primeiro — é a opção mais simples. Passe para few-shot (geralmente com 2–5 exemplos) se zero-shot não for confiável ou se seu domínio exigir padrões de raciocínio específicos.'
         }
       },
       {
@@ -2206,15 +2206,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Qual é a diferença entre chain-of-thought e tree-of-thought?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Chain-of-thought é uma sequência linear: etapa 1 → etapa 2 → ... → conclusão. Tree-of-thought explora múltiplos ramos (caminhos de raciocínio alternativos) e poda os mais fracos antes de chegar à resposta. Tree-of-thought é mais poderoso mas mais caro (requer múltiplas chamadas ao modelo).'
+          text: 'Chain-of-thought é uma sequência linear: etapa 1 → etapa 2 → ... → conclusão. Tree-of-thought explora múltiplos ramos (caminhos de raciocínio alternativos) e poda os mais fracos antes de chegar à resposta. Tree-of-thought pode ajudar em problemas mais difíceis, do tipo busca, mas custa mais (requer múltiplas chamadas ao modelo).'
         }
       },
       {
         '@type': 'Question',
-        name: 'O OpenAI o3 requer chain-of-thought prompting?',
+        name: 'O OpenAI GPT-6 Astra requer chain-of-thought prompting?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Não. O OpenAI o3 tem raciocínio integrado que se ativa automaticamente. Você não precisa adicionar instruções "pense passo a passo". Basta dar a o3 o problema e definir o nível de esforço (low/medium/high).'
+          text: 'Não. Os modelos de raciocínio da OpenAI, como GPT-6 Astra, têm raciocínio integrado que se ativa automaticamente. Você não precisa adicionar instruções "pense passo a passo". Basta dar a GPT-6 Astra o problema e definir o nível de esforço (low/medium/high/xhigh/max).'
         }
       },
       {
@@ -2353,9 +2353,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       items: [
         '**Le Chain-of-Thought Prompting demande aux modèles d\'afficher leurs étapes de raisonnement avant la réponse finale**, améliore la précision sur les tâches mathématiques, logiques et multi-étapes.',
         'Le Zero-shot CoT (« réfléchis pas à pas ») est l\'option la plus simple et aide surtout les grands modèles. Le Few-shot CoT (avec exemples) est plus fiable.',
-        'En 2026, les modèles comme Claude Opus 5.5 et OpenAI o3 disposent de **modes de raisonnement intégrés** qui remplacent le CoT au niveau du prompt – vous n\'avez pas besoin de dire « réfléchis pas à pas ».',
+        'En 2026, les modèles dotés de capacités de raisonnement, comme Claude Opus 5.5 et les modèles de raisonnement d\'OpenAI (par exemple GPT-6 Astra), disposent de **modes de raisonnement intégrés** qui remplacent le CoT au niveau du prompt – vous n\'avez pas besoin de dire « réfléchis pas à pas ».',
         'Le CoT augmente les tokens de sortie, donc le coût. Les modes de raisonnement intégrés consomment aussi des tokens de réflexion, qu\'Anthropic et OpenAI facturent comme des tokens de sortie.',
-        'Utilisez le CoT au niveau du prompt sur les modèles sans mode de raisonnement intégré, comme de nombreux petits modèles ou modèles locaux, pour raisonner à moindre coût. Sur les modèles frontière, utilisez le mode de raisonnement intégré pour une précision maximale.',
+        'Utilisez le CoT au niveau du prompt sur les modèles sans mode de raisonnement intégré, comme de nombreux petits modèles ou modèles locaux, pour raisonner à moindre coût. Sur les modèles frontière, le mode de raisonnement intégré donne généralement une meilleure précision sur les tâches difficiles qu\'un prompt simple ; comparez les deux sur votre propre tâche.',
         'CoT est précieux pour les mathématiques, la logique, la planification et l\'analyse des causes. Omettez-le pour la classification simple, les réponses courtes et la rédaction rapide.',
       ]
     },
@@ -2369,7 +2369,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Introduit par :** Wei et al. (2022), Google Research (Brain Team) — article de NeurIPS 2022',
         '**Résultat clé :** Le CoT zero-shot ("Let\'s think step by step") a fait passer la précision d\'InstructGPT (text-davinci-002) sur MultiArith de 17,7 % à 78,7 % (Kojima et al., 2022)',
         '**Phrase déclencheur:** « Réfléchissons pas à pas » (Zero-shot) ou exemples (Few-shot)',
-        '**Évolution en 2026 :** Les modes de raisonnement intégrés (OpenAI o3, Claude adaptive thinking) automatisent le CoT en interne',
+        '**Évolution en 2026 :** Les modes de raisonnement intégrés (OpenAI GPT-6 Astra, Claude adaptive thinking) automatisent le CoT en interne',
         '**Impact sur les coûts:** CoT au niveau du prompt = plus de tokens; modes de raisonnement = budget séparé de tokens de raisonnement',
         '**Meilleurs modèles pour le CoT au niveau du prompt :** Modèles sans mode de raisonnement intégré, comme Llama 4 Scout et de nombreux petits modèles locaux',
       ]
@@ -2493,15 +2493,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'cot-vs-raisonnement',
       title: 'CoT vs modèles de raisonnement intégrés (2026)',
       content: [
-        '**En 2026, les modèles frontière – Claude Opus 5.5, OpenAI o3, Gemini 3.1 Pro thinking – disposent de modes de raisonnement intégrés qui internalisent automatiquement le Chain-of-Thought.** Vous n\'avez pas besoin d\'ajouter des instructions « réfléchis pas à pas » sur ces modèles.',
+        '**En 2026, les modèles dotés de capacités de raisonnement – Claude Opus 5.5, les modèles de raisonnement d\'OpenAI (par exemple GPT-6 Astra) et Gemini 3.1 Pro thinking – disposent de modes de raisonnement intégrés qui internalisent automatiquement le Chain-of-Thought.** Vous n\'avez pas besoin d\'ajouter des instructions « réfléchis pas à pas » sur ces modèles.',
         '**Quand utiliser le CoT au niveau du prompt :** Modèles sans mode de raisonnement intégré (par exemple Llama 4), LLM locaux, modèles dont la réflexion est désactivée ou réglée sur un effort faible, ou lorsque vous voulez éviter le surcoût des tokens de réflexion.',
-        '**Quand utiliser les modes de raisonnement intégrés :** Précision maximale sur les modèles frontière, tâches très mathématiques, analyses complexes. Claude et OpenAI facturent les tokens de raisonnement (réflexion) comme des tokens de sortie : le coût augmente avec la durée de réflexion du modèle. Testez vos prompts CoT dans la [console Anthropic](https://platform.claude.com/) ou le [Playground OpenAI](https://platform.openai.com/playground) avant la mise en production.',
+        '**Quand utiliser les modes de raisonnement intégrés :** Tâches difficiles sur les modèles frontière, où le mode intégré fait généralement mieux qu\'un prompt simple (comparez les deux sur votre propre tâche), tâches très mathématiques, analyses complexes. Claude et OpenAI facturent les tokens de raisonnement (réflexion) comme des tokens de sortie : le coût augmente avec la durée de réflexion du modèle. Testez vos prompts CoT dans la [console Anthropic](https://platform.claude.com/) ou le [Playground OpenAI](https://platform.openai.com/playground) avant la mise en production.',
       ],
       columns: ['Approche', 'Meilleure pour', 'Coûts', 'Transparence', 'Modèles'],
       rows: [
         { 'Approche': 'CoT au niveau du prompt (« réfléchis pas à pas »)', 'Meilleure pour': 'Petits modèles, LLMs locaux, tâches sensibles aux coûts', 'Coûts': 'Augmente les tokens de sortie', 'Transparence': 'Complet: étapes visibles dans la sortie', 'Modèles': 'Llama 4, petits modèles locaux' },
-        { 'Approche': 'Claude adaptive thinking (Opus 5.5, Sonnet 5.5)', 'Meilleure pour': 'Analyse complexe, précision maximale', 'Coûts': 'Tokens de réflexion facturés comme tokens de sortie', 'Transparence': 'Réflexion résumée via l\'API', 'Modèles': 'Claude Opus 5.5, Claude Sonnet 5.5' },
-        { 'Approche': 'OpenAI o3', 'Meilleure pour': 'Problèmes les plus difficiles (maths, codage, compétitions)', 'Coûts': 'Tokens de raisonnement facturés comme tokens de sortie', 'Transparence': 'Raisonnement caché, sortie visible', 'Modèles': 'OpenAI o3' },
+        { 'Approche': 'Claude adaptive thinking (Opus 5.5, Sonnet 5.5)', 'Meilleure pour': 'Analyse complexe', 'Coûts': 'Tokens de réflexion facturés comme tokens de sortie', 'Transparence': 'Réflexion résumée via l\'API', 'Modèles': 'Claude Opus 5.5, Claude Sonnet 5.5' },
+        { 'Approche': 'OpenAI GPT-6 Astra', 'Meilleure pour': 'Problèmes les plus difficiles (maths, codage, compétitions)', 'Coûts': 'Tokens de raisonnement facturés comme tokens de sortie', 'Transparence': 'Raisonnement caché, sortie visible', 'Modèles': 'OpenAI GPT-6 Astra' },
         { 'Approche': 'Gemini 3.1 Pro thinking', 'Meilleure pour': 'Intégration Google Cloud, écosystème Gemini', 'Coûts': 'Tokens de réflexion facturés comme tokens de sortie', 'Transparence': 'Paramètre thinking_level (LOW, MEDIUM, HIGH)', 'Modèles': 'Gemini 3.1 Pro' },
         { 'Approche': 'DeepSeek-R1', 'Meilleure pour': 'Option open-weights, raisonnement auto-hébergé', 'Coûts': 'Raisonnement visible en flux dans le texte de sortie', 'Transparence': 'Complet: CoT inline dans la sortie', 'Modèles': 'DeepSeek-R1' },
       ],
@@ -2509,7 +2509,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         {
           type: 'tip',
           label: 'Conseil',
-          text: 'Pour les coûts, utilisez le CoT au niveau du prompt sur les modèles plus petits. Pour la précision maximale sur les problèmes difficiles, utilisez o3 ou Claude adaptive thinking et laissez le modèle gérer le raisonnement en interne.'
+          text: 'Pour les coûts, utilisez le CoT au niveau du prompt sur les modèles plus petits. Pour la précision maximale sur les problèmes difficiles, utilisez GPT-6 Astra ou Claude adaptive thinking et laissez le modèle gérer le raisonnement en interne.'
         }
       ],
     },
@@ -2532,11 +2532,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Comparaison de modèles : comment les modèles gèrent le CoT Prompting (2026)',
       columns: ['Modèle', 'CoT au niveau du prompt', 'Raisonnement intégré', 'Meilleur cas d\'usage', 'Coût (approx.)'],
       rows: [
-        { 'Modèle': 'Claude Opus 5.5', 'CoT au niveau du prompt': 'Non nécessaire', 'Raisonnement intégré': 'Adaptive thinking', 'Meilleur cas d\'usage': 'Analyses de précision maximale', 'Coût (approx.)': 'Plus élevé (entrée + sortie + tokens de raisonnement)' },
+        { 'Modèle': 'Claude Opus 5.5', 'CoT au niveau du prompt': 'Non nécessaire', 'Raisonnement intégré': 'Adaptive thinking', 'Meilleur cas d\'usage': 'Analyses approfondies', 'Coût (approx.)': 'Plus élevé (entrée + sortie + tokens de raisonnement)' },
         { 'Modèle': 'Claude Sonnet 5.5', 'CoT au niveau du prompt': 'Non nécessaire', 'Raisonnement intégré': 'Adaptive thinking', 'Meilleur cas d\'usage': 'Équilibre coûts/précision', 'Coût (approx.)': 'Moyen' },
         { 'Modèle': 'Claude Haiku 5.5', 'CoT au niveau du prompt': 'Non nécessaire', 'Raisonnement intégré': 'Adaptive thinking', 'Meilleur cas d\'usage': 'Raisonnement rapide et économique', 'Coût (approx.)': 'Bas' },
-        { 'Modèle': 'OpenAI o3', 'CoT au niveau du prompt': 'Non nécessaire', 'Raisonnement intégré': 'Niveaux d\'effort (bas, moyen, haut)', 'Meilleur cas d\'usage': 'Problèmes au niveau des compétitions', 'Coût (approx.)': 'Tokens de raisonnement facturés en sortie (voir tarifs)' },
-        { 'Modèle': 'GPT-5.6 Luna', 'CoT au niveau du prompt': 'Facultatif', 'Raisonnement intégré': 'Effort de raisonnement réglable', 'Meilleur cas d\'usage': 'Déploiement sensible aux budgets', 'Coût (approx.)': 'Très bas' },
+        { 'Modèle': 'OpenAI GPT-6 Astra', 'CoT au niveau du prompt': 'Non nécessaire', 'Raisonnement intégré': 'Niveaux d\'effort (bas, moyen, haut, xhigh, max)', 'Meilleur cas d\'usage': 'Problèmes au niveau des compétitions', 'Coût (approx.)': 'Tokens de raisonnement facturés en sortie (voir tarifs)' },
+        { 'Modèle': 'GPT-6 Luna', 'CoT au niveau du prompt': 'Facultatif', 'Raisonnement intégré': 'Effort de raisonnement réglable', 'Meilleur cas d\'usage': 'Déploiement sensible aux budgets', 'Coût (approx.)': 'Axé sur l\'efficacité (voir tarifs)' },
         { 'Modèle': 'Gemini 3.1 Pro', 'CoT au niveau du prompt': 'Fonctionne', 'Raisonnement intégré': 'Niveaux de réflexion (param thinking_level)', 'Meilleur cas d\'usage': 'Intégration Google Cloud', 'Coût (approx.)': 'Moyen-Haut' },
         { 'Modèle': 'Gemini Flash', 'CoT au niveau du prompt': 'Facultatif', 'Raisonnement intégré': 'Niveaux de réflexion réglables', 'Meilleur cas d\'usage': 'Réponses rapides', 'Coût (approx.)': 'Bas' },
         { 'Modèle': 'DeepSeek-R1', 'CoT au niveau du prompt': 'Non nécessaire', 'Raisonnement intégré': 'Raisonnement inline dans la sortie', 'Meilleur cas d\'usage': 'Open-weights, auto-hébergé', 'Coût (approx.)': 'Poids sous licence MIT ; coûts matériels à prévoir' },
@@ -2564,15 +2564,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqs: [
         {
           q: 'Le Chain-of-Thought fonctionne-t-il sur tous les modèles ?',
-          a: 'Pas aussi bien partout. Wei et al. (2022) ont constaté que le chain-of-thought prompting n\'apportait des gains qu\'aux modèles d\'environ 100 Md de paramètres ou plus, et que les petits modèles écrivaient souvent des étapes fluides mais illogiques. Les résultats varient selon le modèle et la tâche : testez les modèles petits ou locaux avec vos propres prompts. Sur les modèles frontière dotés d\'un raisonnement intégré (Claude Opus 5.5, o3), le mode intégré rend souvent le CoT au niveau du prompt inutile.'
+          a: 'Pas aussi bien partout. Wei et al. (2022) ont constaté que le chain-of-thought prompting n\'apportait des gains qu\'aux modèles d\'environ 100 Md de paramètres ou plus, et que les petits modèles écrivaient souvent des étapes fluides mais illogiques. Les résultats varient selon le modèle et la tâche : testez les modèles petits ou locaux avec vos propres prompts. Sur les modèles frontière dotés d\'un raisonnement intégré (Claude Opus 5.5, GPT-6 Astra), le mode intégré rend souvent le CoT au niveau du prompt inutile.'
         },
         {
           q: 'Le Chain-of-Thought augmente-t-il les coûts ?',
-          a: 'Oui. Le CoT au niveau du prompt augmente les tokens de sortie, car le modèle écrit son raisonnement avant la réponse finale. Les modes de raisonnement intégrés (Claude adaptive thinking, OpenAI o3) consomment aussi des tokens de réflexion, qu\'Anthropic et OpenAI facturent comme des tokens de sortie. Testez les deux sur votre cas d\'usage pour comparer coût et précision.'
+          a: 'Oui. Le CoT au niveau du prompt augmente les tokens de sortie, car le modèle écrit son raisonnement avant la réponse finale. Les modes de raisonnement intégrés (Claude adaptive thinking, OpenAI GPT-6 Astra) consomment aussi des tokens de réflexion, qu\'Anthropic et OpenAI facturent comme des tokens de sortie. Testez les deux sur votre cas d\'usage pour comparer coût et précision.'
         },
         {
           q: 'Quand devrais-je utiliser le Few-shot CoT au lieu du Zero-shot ?',
-          a: 'Utilisez d\'abord le Zero-shot CoT – c\'est l\'option la plus simple. Passez au Few-shot (avec 2–5 exemples) si le Zero-shot est peu fiable ou si votre domaine nécessite des modèles de raisonnement spécifiques (par exemple, analyse financière avec structure de postes standardisée).'
+          a: 'Utilisez d\'abord le Zero-shot CoT – c\'est l\'option la plus simple. Passez au Few-shot (généralement avec 2–5 exemples) si le Zero-shot est peu fiable ou si votre domaine nécessite des modèles de raisonnement spécifiques (par exemple, analyse financière avec structure de postes standardisée).'
         },
         {
           q: 'Puis-je combiner le Chain-of-Thought avec la sortie structurée (JSON) ?',
@@ -2580,11 +2580,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'Quelle est la différence entre Chain-of-Thought et Tree-of-Thought ?',
-          a: 'Chain-of-Thought est une séquence linéaire : étape 1 → étape 2 → ... → conclusion. Tree-of-Thought explore plusieurs branches (chemins de raisonnement alternatifs) et élagage les plus faibles avant d\'arriver à la réponse. Tree-of-Thought est plus puissant mais plus coûteux (nécessite plusieurs appels de modèle).'
+          a: 'Chain-of-Thought est une séquence linéaire : étape 1 → étape 2 → ... → conclusion. Tree-of-Thought explore plusieurs branches (chemins de raisonnement alternatifs) et élagage les plus faibles avant d\'arriver à la réponse. Tree-of-Thought peut aider sur des problèmes plus difficiles de type recherche, mais il coûte plus cher (nécessite plusieurs appels de modèle).'
         },
         {
-          q: 'OpenAI o3 nécessite-t-il du Chain-of-Thought Prompting ?',
-          a: 'Non. OpenAI o3 dispose d\'un raisonnement intégré qui s\'active automatiquement. Vous n\'avez pas besoin d\'ajouter des instructions « réfléchis pas à pas ». Donnez simplement à o3 le problème et réglez le niveau d\'effort (bas/moyen/haut) pour contrôler le budget de raisonnement à dépenser.'
+          q: 'OpenAI GPT-6 Astra nécessite-t-il du Chain-of-Thought Prompting ?',
+          a: 'Non. Les modèles de raisonnement d\'OpenAI, comme GPT-6 Astra, disposent d\'un raisonnement intégré qui s\'active automatiquement. Vous n\'avez pas besoin d\'ajouter des instructions « réfléchis pas à pas ». Donnez simplement à GPT-6 Astra le problème et réglez le niveau d\'effort (bas/moyen/haut/xhigh/max) pour contrôler le budget de raisonnement à dépenser.'
         },
         {
           q: 'Puis-je auditer le raisonnement des modèles avec raisonnement intégré ?',
@@ -2625,7 +2625,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Le Chain-of-Thought fonctionne-t-il sur tous les modèles ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Pas aussi bien partout. Wei et al. (2022) ont constaté que le chain-of-thought prompting n\'apportait des gains qu\'aux modèles d\'environ 100 Md de paramètres ou plus, et que les petits modèles écrivaient souvent des étapes fluides mais illogiques. Les résultats varient selon le modèle et la tâche : testez les modèles petits ou locaux avec vos propres prompts. Sur les modèles frontière dotés d\'un raisonnement intégré (Claude Opus 5.5, o3), le mode intégré rend souvent le CoT au niveau du prompt inutile.'
+          text: 'Pas aussi bien partout. Wei et al. (2022) ont constaté que le chain-of-thought prompting n\'apportait des gains qu\'aux modèles d\'environ 100 Md de paramètres ou plus, et que les petits modèles écrivaient souvent des étapes fluides mais illogiques. Les résultats varient selon le modèle et la tâche : testez les modèles petits ou locaux avec vos propres prompts. Sur les modèles frontière dotés d\'un raisonnement intégré (Claude Opus 5.5, GPT-6 Astra), le mode intégré rend souvent le CoT au niveau du prompt inutile.'
         }
       },
       {
@@ -2633,7 +2633,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Le Chain-of-Thought augmente-t-il les coûts ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Oui. Le CoT au niveau du prompt augmente les tokens de sortie, car le modèle écrit son raisonnement avant la réponse finale. Les modes de raisonnement intégrés (Claude adaptive thinking, OpenAI o3) consomment aussi des tokens de réflexion, qu\'Anthropic et OpenAI facturent comme des tokens de sortie. Testez les deux sur votre cas d\'usage pour comparer coût et précision.'
+          text: 'Oui. Le CoT au niveau du prompt augmente les tokens de sortie, car le modèle écrit son raisonnement avant la réponse finale. Les modes de raisonnement intégrés (Claude adaptive thinking, OpenAI GPT-6 Astra) consomment aussi des tokens de réflexion, qu\'Anthropic et OpenAI facturent comme des tokens de sortie. Testez les deux sur votre cas d\'usage pour comparer coût et précision.'
         }
       },
       {
@@ -2641,7 +2641,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Quand devrais-je utiliser le Few-shot CoT au lieu du Zero-shot ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Utilisez d\'abord le Zero-shot CoT – c\'est l\'option la plus simple. Passez au Few-shot (avec 2–5 exemples) si le Zero-shot est peu fiable ou si votre domaine nécessite des modèles de raisonnement spécifiques (par exemple, analyse financière avec structure de postes standardisée).'
+          text: 'Utilisez d\'abord le Zero-shot CoT – c\'est l\'option la plus simple. Passez au Few-shot (généralement avec 2–5 exemples) si le Zero-shot est peu fiable ou si votre domaine nécessite des modèles de raisonnement spécifiques (par exemple, analyse financière avec structure de postes standardisée).'
         }
       },
       {
@@ -2657,15 +2657,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Quelle est la différence entre Chain-of-Thought et Tree-of-Thought ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Chain-of-Thought est une séquence linéaire : étape 1 → étape 2 → ... → conclusion. Tree-of-Thought explore plusieurs branches (chemins de raisonnement alternatifs) et élagage les plus faibles avant d\'arriver à la réponse. Tree-of-Thought est plus puissant mais plus coûteux (nécessite plusieurs appels de modèle).'
+          text: 'Chain-of-Thought est une séquence linéaire : étape 1 → étape 2 → ... → conclusion. Tree-of-Thought explore plusieurs branches (chemins de raisonnement alternatifs) et élagage les plus faibles avant d\'arriver à la réponse. Tree-of-Thought peut aider sur des problèmes plus difficiles de type recherche, mais il coûte plus cher (nécessite plusieurs appels de modèle).'
         }
       },
       {
         '@type': 'Question',
-        name: 'OpenAI o3 nécessite-t-il du Chain-of-Thought Prompting ?',
+        name: 'OpenAI GPT-6 Astra nécessite-t-il du Chain-of-Thought Prompting ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Non. OpenAI o3 dispose d\'un raisonnement intégré qui s\'active automatiquement. Vous n\'avez pas besoin d\'ajouter des instructions « réfléchis pas à pas ». Donnez simplement à o3 le problème et réglez le niveau d\'effort (bas/moyen/haut) pour contrôler le budget de raisonnement à dépenser.'
+          text: 'Non. Les modèles de raisonnement d\'OpenAI, comme GPT-6 Astra, disposent d\'un raisonnement intégré qui s\'active automatiquement. Vous n\'avez pas besoin d\'ajouter des instructions « réfléchis pas à pas ». Donnez simplement à GPT-6 Astra le problème et réglez le niveau d\'effort (bas/moyen/haut/xhigh/max) pour contrôler le budget de raisonnement à dépenser.'
         }
       },
       {
@@ -2801,9 +2801,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       items: [
         '**Chain-of-Thoughtプロンプティングはモデルに推論ステップを最終回答前に表示させ、** 数学、論理、複数ステップのタスクで精度を向上させます。',
         'Zero-shot CoT(「ステップバイステップで考えて」)は最も簡単な方法で、主に大きなモデルで効果があります。Few-shot CoT(例付き)はより信頼性が高い。',
-        '2026年、Claude Opus 5.5やOpenAI o3のようなモデルは **組み込み推論モード** を備えており、プロンプトレベルのCoTは不要です—「ステップバイステップで考えて」と言う必要はありません。',
+        '2026年、Claude Opus 5.5やOpenAIの推論モデル（たとえばGPT-6 Astra）のように推論機能を備えたモデルは **組み込み推論モード** を備えており、プロンプトレベルのCoTは不要です—「ステップバイステップで考えて」と言う必要はありません。',
         'CoTは出力トークンを増やすため、コストも増えます。組み込み推論モードも思考トークンを消費し、AnthropicとOpenAIはこれを出力トークンとして課金します。',
-        '組み込み推論モードのないモデル（小型モデルやローカル実行モデルの多く）では、低コストで推論させるためにプロンプトレベルのCoTを使います。フロンティアモデルでは、最高精度のため組み込み推論モードを使います。',
+        '組み込み推論モードのないモデル（小型モデルやローカル実行モデルの多く）では、低コストで推論させるためにプロンプトレベルのCoTを使います。フロンティアモデルでは、難しいタスクでは通常のプロンプトより組み込み推論モードのほうが精度が高くなる傾向があるため、ご自身のタスクで両方を比較してください。',
         'CoTは数学、論理、計画、根本原因分析に最も価値があります。シンプルな分類、短い回答、素早いコピーライティングではスキップしてください。',
       ]
     },
@@ -2818,7 +2818,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**提唱:** Wei et al.（2022）、Google Research（Brain Team）— NeurIPS 2022の論文',
         '**重要な結果:** Zero-shot CoT（"Let\'s think step by step"）により、InstructGPT（text-davinci-002）のMultiArith精度が17.7%から78.7%に上昇（Kojima et al., 2022）',
         '**トリガーフレーズ:** 「ステップバイステップで考えましょう」(Zero-shot)または実例(Few-shot)',
-        '**2026年の進化:** 組み込み推論モード（OpenAI o3、Claude adaptive thinking）がCoTを内部で自動化',
+        '**2026年の進化:** 組み込み推論モード（OpenAI GPT-6 Astra、Claude adaptive thinking）がCoTを内部で自動化',
         '**コスト影響:** プロンプトレベルCoT = より多くの出力トークン; 推論モード = 独立した思考トークン予算',
         '**プロンプトレベルCoTに最適:** 組み込み推論モードのないモデル（Llama 4 Scoutや多くの小型ローカルモデルなど）',
       ]
@@ -2941,15 +2941,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
     reasoningModels: {
       title: 'CoT対組み込み推論モデル (2026)',
       content: [
-        '**2026年、フロンティアモデル – Claude Opus 5.5、OpenAI o3、Gemini 3.1 Pro thinking – は、Chain-of-Thoughtを自動的に内部化する組み込み推論モードを備えています。** これらのモデルに「ステップバイステップで考えて」という指示を追加する必要はありません。',
+        '**2026年、推論機能を備えたモデル – Claude Opus 5.5、OpenAIの推論モデル（たとえばGPT-6 Astra）、Gemini 3.1 Pro thinking – は、Chain-of-Thoughtを自動的に内部化する組み込み推論モードを備えています。** これらのモデルに「ステップバイステップで考えて」という指示を追加する必要はありません。',
         '**プロンプトレベルCoTを使う場合:** 組み込み推論モードのないモデル（例: Llama 4）、ローカルLLM、思考をオフまたは低い負荷に設定したモデル、または思考トークンの追加コストを避けたい場合。',
-        '**組み込み推論モードを使う場合:** フロンティアモデルでの最高精度、数学の重いタスク、複雑な分析。ClaudeとOpenAIは推論（思考）トークンを出力トークンとして課金するため、モデルが長く考えるほどコストが増えます。本番導入の前に、[Anthropic Console](https://platform.claude.com/)または[OpenAI Playground](https://platform.openai.com/playground)でCoTプロンプトをテストしてください。',
+        '**組み込み推論モードを使う場合:** フロンティアモデルでの難しいタスク（通常のプロンプトより組み込みモードのほうが精度が高くなる傾向があるため、ご自身のタスクで両方を比較してください）、数学の重いタスク、複雑な分析。ClaudeとOpenAIは推論（思考）トークンを出力トークンとして課金するため、モデルが長く考えるほどコストが増えます。本番導入の前に、[Anthropic Console](https://platform.claude.com/)または[OpenAI Playground](https://platform.openai.com/playground)でCoTプロンプトをテストしてください。',
       ],
       columns: ['アプローチ', '最適な用途', 'コスト', '透明性', 'モデル'],
       rows: [
         { 'アプローチ': 'プロンプトレベルCoT(「ステップバイステップで考えて」)', '最適な用途': '小さいモデル、ローカルLLM、コスト感応的なタスク', 'コスト': '出力トークンを増やす', '透明性': '完全: 出力に表示されるステップ', 'モデル': 'Llama 4、小型ローカルモデル' },
-        { 'アプローチ': 'Claude adaptive thinking（Opus 5.5、Sonnet 5.5）', '最適な用途': '複雑な分析、最大精度', 'コスト': '思考トークンは出力トークンとして課金', '透明性': 'API経由で要約された思考', 'モデル': 'Claude Opus 5.5、Claude Sonnet 5.5' },
-        { 'アプローチ': 'OpenAI o3', '最適な用途': '最難関問題(数学、コーディング、競技)', 'コスト': '推論トークンは出力トークンとして課金', '透明性': '隠れた推論、目に見える出力', 'モデル': 'OpenAI o3' },
+        { 'アプローチ': 'Claude adaptive thinking（Opus 5.5、Sonnet 5.5）', '最適な用途': '複雑な分析', 'コスト': '思考トークンは出力トークンとして課金', '透明性': 'API経由で要約された思考', 'モデル': 'Claude Opus 5.5、Claude Sonnet 5.5' },
+        { 'アプローチ': 'OpenAI GPT-6 Astra', '最適な用途': '最難関問題(数学、コーディング、競技)', 'コスト': '推論トークンは出力トークンとして課金', '透明性': '隠れた推論、目に見える出力', 'モデル': 'OpenAI GPT-6 Astra' },
         { 'アプローチ': 'Gemini 3.1 Pro thinking', '最適な用途': 'Google Cloud統合、Geminiエコシステム', 'コスト': '思考トークンは出力トークンとして課金', '透明性': 'thinking_levelパラメータ(LOW、MEDIUM、HIGH)', 'モデル': 'Gemini 3.1 Pro' },
         { 'アプローチ': 'DeepSeek-R1', '最適な用途': 'オープンウェイトオプション、セルフホスト推論', 'コスト': '出力テキストにストリーミングされる目に見える推論', '透明性': '完全: 出力内のインラインCoT', 'モデル': 'DeepSeek-R1' },
       ],
@@ -2957,7 +2957,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         {
           type: 'tip',
           label: 'ヒント',
-          text: 'コスト効率のためには、小さいモデルでプロンプトレベルのCoTを使用してください。難しい問題で最大精度が必要な場合は、o3またはClaude adaptive thinkingを使用し、モデルに推論を内部で処理させてください。'
+          text: 'コスト効率のためには、小さいモデルでプロンプトレベルのCoTを使用してください。難しい問題で最大精度が必要な場合は、GPT-6 AstraまたはClaude adaptive thinkingを使用し、モデルに推論を内部で処理させてください。'
         }
       ],
     },
@@ -2980,11 +2980,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'モデル比較: 2026年のCoTプロンプティング対応状況',
       columns: ['モデル', 'プロンプトレベルCoT', '組み込み推論', 'ベストユースケース', 'コスト(約)'],
       rows: [
-        { 'モデル': 'Claude Opus 5.5', 'プロンプトレベルCoT': '不要', '組み込み推論': 'Adaptive thinking', 'ベストユースケース': '最大精度分析', 'コスト(約)': 'より高い(入力+出力+思考トークン)' },
+        { 'モデル': 'Claude Opus 5.5', 'プロンプトレベルCoT': '不要', '組み込み推論': 'Adaptive thinking', 'ベストユースケース': '高度な分析', 'コスト(約)': 'より高い(入力+出力+思考トークン)' },
         { 'モデル': 'Claude Sonnet 5.5', 'プロンプトレベルCoT': '不要', '組み込み推論': 'Adaptive thinking', 'ベストユースケース': 'バランスの取れたコスト/精度', 'コスト(約)': '中程度' },
         { 'モデル': 'Claude Haiku 5.5', 'プロンプトレベルCoT': '不要', '組み込み推論': 'Adaptive thinking', 'ベストユースケース': '高速でコスト効率的な推論', 'コスト(約)': '低い' },
-        { 'モデル': 'OpenAI o3', 'プロンプトレベルCoT': '不要', '組み込み推論': 'エフォートレベル(low、medium、high)', 'ベストユースケース': '競技レベルの問題', 'コスト(約)': '推論トークンは出力として課金(料金表参照)' },
-        { 'モデル': 'GPT-5.6 Luna', 'プロンプトレベルCoT': '任意', '組み込み推論': '推論エフォートを調整可能', 'ベストユースケース': '予算意識の高いデプロイメント', 'コスト(約)': '非常に低い' },
+        { 'モデル': 'OpenAI GPT-6 Astra', 'プロンプトレベルCoT': '不要', '組み込み推論': 'エフォートレベル(low、medium、high、xhigh、max)', 'ベストユースケース': '競技レベルの問題', 'コスト(約)': '推論トークンは出力として課金(料金表参照)' },
+        { 'モデル': 'GPT-6 Luna', 'プロンプトレベルCoT': '任意', '組み込み推論': '推論エフォートを調整可能', 'ベストユースケース': '予算意識の高いデプロイメント', 'コスト(約)': '効率重視(料金表参照)' },
         { 'モデル': 'Gemini 3.1 Pro', 'プロンプトレベルCoT': '機能する', '組み込み推論': '思考レベル (thinking_levelパラメータ)', 'ベストユースケース': 'Google Cloud統合', 'コスト(約)': '中程度~高い' },
         { 'モデル': 'Gemini Flash', 'プロンプトレベルCoT': '任意', '組み込み推論': '思考レベルを調整可能', 'ベストユースケース': '高速応答', 'コスト(約)': '低い' },
         { 'モデル': 'DeepSeek-R1', 'プロンプトレベルCoT': '不要', '組み込み推論': '出力の内容推論', 'ベストユースケース': 'オープンウェイト、セルフホスト', 'コスト(約)': 'MITライセンスの重み、ハードウェア費用は別' },
@@ -3013,15 +3013,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqs: [
         {
           q: 'Chain-of-Thoughtはすべてのモデルで機能しますか?',
-          a: '同じようには機能しません。Wei et al.（2022）は、Chain-of-Thoughtプロンプティングが効果を示したのは約100Bパラメータ以上のモデルだけで、小さいモデルは流暢でも非論理的なステップを書くことが多いと報告しています。結果はモデルとタスクで異なるため、小型モデルやローカルモデルは自分のプロンプトで試してください。組み込み推論を持つフロンティアモデル（Claude Opus 5.5、o3）では、組み込みモードによってプロンプトレベルのCoTが不要になることが多いです。'
+          a: '同じようには機能しません。Wei et al.（2022）は、Chain-of-Thoughtプロンプティングが効果を示したのは約100Bパラメータ以上のモデルだけで、小さいモデルは流暢でも非論理的なステップを書くことが多いと報告しています。結果はモデルとタスクで異なるため、小型モデルやローカルモデルは自分のプロンプトで試してください。組み込み推論を持つフロンティアモデル（Claude Opus 5.5、GPT-6 Astra）では、組み込みモードによってプロンプトレベルのCoTが不要になることが多いです。'
         },
         {
           q: 'Chain-of-Thoughtはコストを増やしますか?',
-          a: 'はい。プロンプトレベルのCoTは、モデルが最終回答の前に推論を書き出すため、出力トークンが増えます。組み込み推論モード（Claude adaptive thinking、OpenAI o3）も思考トークンを消費し、AnthropicとOpenAIはこれを出力トークンとして課金します。ユースケースで両方を試し、コストと精度を比較してください。'
+          a: 'はい。プロンプトレベルのCoTは、モデルが最終回答の前に推論を書き出すため、出力トークンが増えます。組み込み推論モード（Claude adaptive thinking、OpenAI GPT-6 Astra）も思考トークンを消費し、AnthropicとOpenAIはこれを出力トークンとして課金します。ユースケースで両方を試し、コストと精度を比較してください。'
         },
         {
           q: 'Zero-shotの代わりにFew-shot CoTを使用する場合は?',
-          a: 'まずZero-shot CoTを使用します – 最もシンプルな方法です。Zero-shotが信頼できない場合、または領域が特定の推論パターンを必要とする場合は、Few-shot (2–5例) に移動します(例: 標準化された行項目構造で財務分析)。'
+          a: 'まずZero-shot CoTを使用します – 最もシンプルな方法です。Zero-shotが信頼できない場合、または領域が特定の推論パターンを必要とする場合は、Few-shot（通常は2–5例）に移動します(例: 標準化された行項目構造で財務分析)。'
         },
         {
           q: 'Chain-of-Thoughtを構造化出力 (JSON) と組み合わせることができますか?',
@@ -3029,11 +3029,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'Chain-of-ThoughtとTree-of-Thoughtの違いは何ですか?',
-          a: 'Chain-of-Thoughtは線形シーケンス: ステップ1 → ステップ2 → ... → 結論。Tree-of-Thoughtは複数のブランチ(代替推論パス)を探索し、答えに到達する前に弱いものを剪定します。Tree-of-Thoughtはより強力ですが、より高価です(複数のモデル呼び出しが必要)。'
+          a: 'Chain-of-Thoughtは線形シーケンス: ステップ1 → ステップ2 → ... → 結論。Tree-of-Thoughtは複数のブランチ(代替推論パス)を探索し、答えに到達する前に弱いものを剪定します。Tree-of-Thoughtは、探索的な難しい問題で役立つことがありますが、コストが高くなります(複数のモデル呼び出しが必要)。'
         },
         {
-          q: 'OpenAI o3はChain-of-Thoughtプロンプティングが必要ですか?',
-          a: 'いいえ。OpenAI o3は自動的にアクティブになる組み込み推論を備えています。「ステップバイステップで考えて」という指示を追加する必要はありません。o3に問題を与え、エフォートレベル(low/medium/high)を設定して、支出する思考予算を制御します。'
+          q: 'OpenAI GPT-6 AstraはChain-of-Thoughtプロンプティングが必要ですか?',
+          a: 'いいえ。OpenAIの推論モデル（GPT-6 Astraなど）は、自動的にアクティブになる組み込み推論を備えています。「ステップバイステップで考えて」という指示を追加する必要はありません。GPT-6 Astraに問題を与え、エフォートレベル(low/medium/high/xhigh/max)を設定して、支出する思考予算を制御します。'
         },
         {
           q: '組み込み推論モデルの推論を監査できますか?',
@@ -3074,7 +3074,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Chain-of-Thoughtはすべてのモデルで機能しますか?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '同じようには機能しません。Wei et al.（2022）は、Chain-of-Thoughtプロンプティングが効果を示したのは約100Bパラメータ以上のモデルだけで、小さいモデルは流暢でも非論理的なステップを書くことが多いと報告しています。結果はモデルとタスクで異なるため、小型モデルやローカルモデルは自分のプロンプトで試してください。組み込み推論を持つフロンティアモデル（Claude Opus 5.5、o3）では、組み込みモードによってプロンプトレベルのCoTが不要になることが多いです。'
+          text: '同じようには機能しません。Wei et al.（2022）は、Chain-of-Thoughtプロンプティングが効果を示したのは約100Bパラメータ以上のモデルだけで、小さいモデルは流暢でも非論理的なステップを書くことが多いと報告しています。結果はモデルとタスクで異なるため、小型モデルやローカルモデルは自分のプロンプトで試してください。組み込み推論を持つフロンティアモデル（Claude Opus 5.5、GPT-6 Astra）では、組み込みモードによってプロンプトレベルのCoTが不要になることが多いです。'
         }
       },
       {
@@ -3082,7 +3082,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Chain-of-Thoughtはコストを増やしますか?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'はい。プロンプトレベルのCoTは、モデルが最終回答の前に推論を書き出すため、出力トークンが増えます。組み込み推論モード（Claude adaptive thinking、OpenAI o3）も思考トークンを消費し、AnthropicとOpenAIはこれを出力トークンとして課金します。ユースケースで両方を試し、コストと精度を比較してください。'
+          text: 'はい。プロンプトレベルのCoTは、モデルが最終回答の前に推論を書き出すため、出力トークンが増えます。組み込み推論モード（Claude adaptive thinking、OpenAI GPT-6 Astra）も思考トークンを消費し、AnthropicとOpenAIはこれを出力トークンとして課金します。ユースケースで両方を試し、コストと精度を比較してください。'
         }
       },
       {
@@ -3090,7 +3090,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Zero-shotの代わりにFew-shot CoTを使用する場合は?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'まずZero-shot CoTを使用します – 最もシンプルな方法です。Zero-shotが信頼できない場合、または領域が特定の推論パターンを必要とする場合は、Few-shot (2–5例) に移動します(例: 標準化された行項目構造で財務分析)。'
+          text: 'まずZero-shot CoTを使用します – 最もシンプルな方法です。Zero-shotが信頼できない場合、または領域が特定の推論パターンを必要とする場合は、Few-shot（通常は2–5例）に移動します(例: 標準化された行項目構造で財務分析)。'
         }
       },
       {
@@ -3106,15 +3106,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Chain-of-ThoughtとTree-of-Thoughtの違いは何ですか?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Chain-of-Thoughtは線形シーケンス: ステップ1 → ステップ2 → ... → 結論。Tree-of-Thoughtは複数のブランチ(代替推論パス)を探索し、答えに到達する前に弱いものを剪定します。Tree-of-Thoughtはより強力ですが、より高価です(複数のモデル呼び出しが必要)。'
+          text: 'Chain-of-Thoughtは線形シーケンス: ステップ1 → ステップ2 → ... → 結論。Tree-of-Thoughtは複数のブランチ(代替推論パス)を探索し、答えに到達する前に弱いものを剪定します。Tree-of-Thoughtは、探索的な難しい問題で役立つことがありますが、コストが高くなります(複数のモデル呼び出しが必要)。'
         }
       },
       {
         '@type': 'Question',
-        name: 'OpenAI o3はChain-of-Thoughtプロンプティングが必要ですか?',
+        name: 'OpenAI GPT-6 AstraはChain-of-Thoughtプロンプティングが必要ですか?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'いいえ。OpenAI o3は自動的にアクティブになる組み込み推論を備えています。「ステップバイステップで考えて」という指示を追加する必要はありません。o3に問題を与え、エフォートレベル(low/medium/high)を設定して、支出する思考予算を制御します。'
+          text: 'いいえ。OpenAIの推論モデル（GPT-6 Astraなど）は、自動的にアクティブになる組み込み推論を備えています。「ステップバイステップで考えて」という指示を追加する必要はありません。GPT-6 Astraに問題を与え、エフォートレベル(low/medium/high/xhigh/max)を設定して、支出する思考予算を制御します。'
         }
       },
       {
@@ -3247,9 +3247,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       items: [
         '**链式思维提示词指示模型在最终答案前展示推理步骤**, 改善数学、逻辑和多步骤任务的精度。',
         'Zero-shot CoT(「逐步思考」)是最简单的做法，主要对较大的模型有帮助。Few-shot CoT(带示例)更可靠。',
-        '2026年，Claude Opus 5.5和OpenAI o3等模型具有**内置推理模式**，自动化CoT——你不需要在这些模型上说「逐步思考」。',
+        '2026年，具备推理能力的模型（如Claude Opus 5.5和OpenAI的推理模型，例如GPT-6 Astra）具有**内置推理模式**，自动化CoT——你不需要在这些模型上说「逐步思考」。',
         'CoT会增加输出token，因此也会增加成本。内置推理模式同样消耗思考token，Anthropic和OpenAI按输出token计费。',
-        '对没有内置推理模式的模型（许多小型和本地运行的模型），使用提示词级CoT以低成本获得推理能力。对前沿模型，则使用内置推理模式以获得最高准确率。',
+        '对没有内置推理模式的模型（许多小型和本地运行的模型），使用提示词级CoT以低成本获得推理能力。对前沿模型，内置推理模式在困难任务上通常比普通提示词准确率更高；请在自己的任务上比较两者。',
         'CoT对数学、逻辑、规划和根本原因分析最有价值。对于简单分类、简短回答和快速文案,跳过它。',
       ]
     },
@@ -3263,7 +3263,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**提出者:** Wei et al.（2022），Google Research（Brain Team）— NeurIPS 2022论文',
         '**关键结果:** 零样本CoT（"Let\'s think step by step"）将InstructGPT（text-davinci-002）在MultiArith上的准确率从17.7%提升到78.7%（Kojima et al., 2022）',
         '**触发短语:** 「让我们逐步思考」(Zero-shot)或工作示例(Few-shot)',
-        '**2026年的演进:** 内置推理模式（OpenAI o3、Claude adaptive thinking）在内部自动完成CoT',
+        '**2026年的演进:** 内置推理模式（OpenAI GPT-6 Astra、Claude adaptive thinking）在内部自动完成CoT',
         '**成本影响:** 提示词级CoT = 更多输出token; 推理模式 = 独立思维token预算',
         '**最适合提示词级CoT的模型:** 没有内置推理模式的模型（如Llama 4 Scout和许多小型本地模型）',
       ]
@@ -3386,15 +3386,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
     reasoningModels: {
       title: 'CoT对内置推理模型 (2026)',
       content: [
-        '**2026年，前沿模型 – Claude Opus 5.5、OpenAI o3、Gemini 3.1 Pro thinking – 具有内置推理模式，可自动内部化链式思维。** 你不需要在这些模型上添加「逐步思考」指令。',
+        '**2026年，具备推理能力的模型 – Claude Opus 5.5、OpenAI的推理模型（例如GPT-6 Astra）、Gemini 3.1 Pro thinking – 具有内置推理模式，可自动内部化链式思维。** 你不需要在这些模型上添加「逐步思考」指令。',
         '**何时使用提示词级CoT:** 没有内置推理模式的模型（例如Llama 4）、本地LLM、思考被关闭或设为低强度的模型，或想避免思考token额外成本时。',
-        '**何时使用内置推理模式:** 前沿模型上的最高准确率、数学密集型任务、复杂分析。Claude和OpenAI把推理（思考）token按输出token计费，因此模型思考越久成本越高。上线前请在[Anthropic控制台](https://platform.claude.com/)或[OpenAI Playground](https://platform.openai.com/playground)中测试你的CoT提示词。',
+        '**何时使用内置推理模式:** 前沿模型上的困难任务（内置模式通常优于普通提示词，请在自己的任务上比较两者）、数学密集型任务、复杂分析。Claude和OpenAI把推理（思考）token按输出token计费，因此模型思考越久成本越高。上线前请在[Anthropic控制台](https://platform.claude.com/)或[OpenAI Playground](https://platform.openai.com/playground)中测试你的CoT提示词。',
       ],
       columns: ['方法', '最适用于', '成本', '透明度', '模型'],
       rows: [
         { '方法': '提示词级CoT(「逐步思考」)', '最适用于': '小型模型、本地LLM、成本敏感任务', '成本': '增加输出token', '透明度': '完全: 输出中可见步骤', '模型': 'Llama 4、小型本地模型' },
-        { '方法': 'Claude adaptive thinking（Opus 5.5、Sonnet 5.5）', '最适用于': '复杂分析、最高准确率', '成本': '思考token按输出token计费', '透明度': '通过API获取摘要化思考', '模型': 'Claude Opus 5.5、Claude Sonnet 5.5' },
-        { '方法': 'OpenAI o3', '最适用于': '最难问题(数学、编码、竞赛)', '成本': '推理token按输出token计费', '透明度': '隐藏推理、可见输出', '模型': 'OpenAI o3' },
+        { '方法': 'Claude adaptive thinking（Opus 5.5、Sonnet 5.5）', '最适用于': '复杂分析', '成本': '思考token按输出token计费', '透明度': '通过API获取摘要化思考', '模型': 'Claude Opus 5.5、Claude Sonnet 5.5' },
+        { '方法': 'OpenAI GPT-6 Astra', '最适用于': '最难问题(数学、编码、竞赛)', '成本': '推理token按输出token计费', '透明度': '隐藏推理、可见输出', '模型': 'OpenAI GPT-6 Astra' },
         { '方法': 'Gemini 3.1 Pro thinking', '最适用于': 'Google Cloud集成、Gemini生态', '成本': '思考token按输出token计费', '透明度': 'thinking_level参数(LOW、MEDIUM、HIGH)', '模型': 'Gemini 3.1 Pro' },
         { '方法': 'DeepSeek-R1', '最适用于': '开源权重选项、自托管推理', '成本': '输出文本中流式传输的可见推理', '透明度': '完全: 输出中的内联CoT', '模型': 'DeepSeek-R1' },
       ],
@@ -3402,7 +3402,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         {
           type: 'tip',
           label: '提示',
-          text: '为降低成本,在较小的模型上使用提示词级CoT。为了在难题上获得最高精度,使用o3或Claude adaptive thinking并让模型内部处理推理。'
+          text: '为降低成本,在较小的模型上使用提示词级CoT。为了在难题上获得最高精度,使用GPT-6 Astra或Claude adaptive thinking并让模型内部处理推理。'
         }
       ],
     },
@@ -3425,11 +3425,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '模型对比: 2026年模型如何处理CoT提示词',
       columns: ['模型', '提示词级CoT', '内置推理', '最佳用途', '成本(约)'],
       rows: [
-        { '模型': 'Claude Opus 5.5', '提示词级CoT': '不需要', '内置推理': 'Adaptive thinking', '最佳用途': '最高精度分析', '成本(约)': '更高(输入+输出+思维token)' },
+        { '模型': 'Claude Opus 5.5', '提示词级CoT': '不需要', '内置推理': 'Adaptive thinking', '最佳用途': '深度分析', '成本(约)': '更高(输入+输出+思维token)' },
         { '模型': 'Claude Sonnet 5.5', '提示词级CoT': '不需要', '内置推理': 'Adaptive thinking', '最佳用途': '平衡成本/精度', '成本(约)': '中等' },
         { '模型': 'Claude Haiku 5.5', '提示词级CoT': '不需要', '内置推理': 'Adaptive thinking', '最佳用途': '快速、经济推理', '成本(约)': '低' },
-        { '模型': 'OpenAI o3', '提示词级CoT': '不需要', '内置推理': '努力级别(低、中、高)', '最佳用途': '竞赛级问题', '成本(约)': '推理token按输出计费(见价目表)' },
-        { '模型': 'GPT-5.6 Luna', '提示词级CoT': '可选', '内置推理': '可调推理强度', '最佳用途': '预算意识部署', '成本(约)': '非常低' },
+        { '模型': 'OpenAI GPT-6 Astra', '提示词级CoT': '不需要', '内置推理': '努力级别(低、中、高、xhigh、max)', '最佳用途': '竞赛级问题', '成本(约)': '推理token按输出计费(见价目表)' },
+        { '模型': 'GPT-6 Luna', '提示词级CoT': '可选', '内置推理': '可调推理强度', '最佳用途': '预算意识部署', '成本(约)': '主打高效(见价目表)' },
         { '模型': 'Gemini 3.1 Pro', '提示词级CoT': '有效', '内置推理': '思考级别(thinking_level参数)', '最佳用途': 'Google Cloud集成', '成本(约)': '中-高' },
         { '模型': 'Gemini Flash', '提示词级CoT': '可选', '内置推理': '可调思考级别', '最佳用途': '快速响应', '成本(约)': '低' },
         { '模型': 'DeepSeek-R1', '提示词级CoT': '不需要', '内置推理': '输出内的内联推理', '最佳用途': '开源权重、自托管', '成本(约)': 'MIT许可权重，需承担硬件成本' },
@@ -3458,15 +3458,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqs: [
         {
           q: '链式思维在所有模型上都有效吗?',
-          a: '效果并不相同。Wei et al.（2022）发现，链式思维提示只对约100B参数及以上的模型带来提升，较小的模型往往写出流畅但不合逻辑的步骤。结果因模型和任务而异，请用自己的提示词测试小型或本地模型。对于带内置推理的前沿模型（Claude Opus 5.5、o3），内置模式通常使提示词级CoT变得不必要。'
+          a: '效果并不相同。Wei et al.（2022）发现，链式思维提示只对约100B参数及以上的模型带来提升，较小的模型往往写出流畅但不合逻辑的步骤。结果因模型和任务而异，请用自己的提示词测试小型或本地模型。对于带内置推理的前沿模型（Claude Opus 5.5、GPT-6 Astra），内置模式通常使提示词级CoT变得不必要。'
         },
         {
           q: '链式思维会增加成本吗?',
-          a: '会。提示词级CoT会增加输出token，因为模型要在最终答案前写出推理过程。内置推理模式（Claude adaptive thinking、OpenAI o3）同样消耗思考token，Anthropic和OpenAI按输出token计费。请在你的场景中测试两者，比较成本与准确率。'
+          a: '会。提示词级CoT会增加输出token，因为模型要在最终答案前写出推理过程。内置推理模式（Claude adaptive thinking、OpenAI GPT-6 Astra）同样消耗思考token，Anthropic和OpenAI按输出token计费。请在你的场景中测试两者，比较成本与准确率。'
         },
         {
           q: '何时使用Few-shot CoT而不是Zero-shot?',
-          a: '首先使用Zero-shot CoT——它是更简单的方法。如果Zero-shot不可靠，或你的领域需要特定推理模式(例如财务分析具有标准化行项目结构)，则转为Few-shot(2-5个示例)。'
+          a: '首先使用Zero-shot CoT——它是更简单的方法。如果Zero-shot不可靠，或你的领域需要特定推理模式(例如财务分析具有标准化行项目结构)，则转为Few-shot(通常为2-5个示例)。'
         },
         {
           q: '我可以将链式思维与结构化输出(JSON)结合吗?',
@@ -3474,11 +3474,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: '链式思维与树思维有什么区别?',
-          a: '链式思维是线性序列: 步骤1 → 步骤2 → ... → 结论。树思维探索多个分支(替代推理路径)并在得出答案前修剪较弱的。树思维更强大但更贵(需要多个模型调用)。'
+          a: '链式思维是线性序列: 步骤1 → 步骤2 → ... → 结论。树思维探索多个分支(替代推理路径)并在得出答案前修剪较弱的。树思维在更难的搜索类问题上可能有帮助，但成本更高(需要多个模型调用)。'
         },
         {
-          q: 'OpenAI o3需要链式思维提示词吗?',
-          a: '不需要。OpenAI o3具有自动激活的内置推理。你不需要添加「逐步思考」指令。只需给o3问题并设置努力级别(低/中/高)以控制要花费多少思维预算。'
+          q: 'OpenAI GPT-6 Astra需要链式思维提示词吗?',
+          a: '不需要。OpenAI的推理模型（如GPT-6 Astra）具有自动激活的内置推理。你不需要添加「逐步思考」指令。只需给GPT-6 Astra问题并设置努力级别(低/中/高/xhigh/max)以控制要花费多少思维预算。'
         },
         {
           q: '我可以审计内置推理模型的推理吗?',
@@ -3519,7 +3519,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: '链式思维在所有模型上都有效吗?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '效果并不相同。Wei et al.（2022）发现，链式思维提示只对约100B参数及以上的模型带来提升，较小的模型往往写出流畅但不合逻辑的步骤。结果因模型和任务而异，请用自己的提示词测试小型或本地模型。对于带内置推理的前沿模型（Claude Opus 5.5、o3），内置模式通常使提示词级CoT变得不必要。'
+          text: '效果并不相同。Wei et al.（2022）发现，链式思维提示只对约100B参数及以上的模型带来提升，较小的模型往往写出流畅但不合逻辑的步骤。结果因模型和任务而异，请用自己的提示词测试小型或本地模型。对于带内置推理的前沿模型（Claude Opus 5.5、GPT-6 Astra），内置模式通常使提示词级CoT变得不必要。'
         }
       },
       {
@@ -3527,7 +3527,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: '链式思维会增加成本吗?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '会。提示词级CoT会增加输出token，因为模型要在最终答案前写出推理过程。内置推理模式（Claude adaptive thinking、OpenAI o3）同样消耗思考token，Anthropic和OpenAI按输出token计费。请在你的场景中测试两者，比较成本与准确率。'
+          text: '会。提示词级CoT会增加输出token，因为模型要在最终答案前写出推理过程。内置推理模式（Claude adaptive thinking、OpenAI GPT-6 Astra）同样消耗思考token，Anthropic和OpenAI按输出token计费。请在你的场景中测试两者，比较成本与准确率。'
         }
       },
       {
@@ -3535,7 +3535,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: '何时使用Few-shot CoT而不是Zero-shot?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '首先使用Zero-shot CoT——它是更简单的方法。如果Zero-shot不可靠，或你的领域需要特定推理模式(例如财务分析具有标准化行项目结构)，则转为Few-shot(2-5个示例)。'
+          text: '首先使用Zero-shot CoT——它是更简单的方法。如果Zero-shot不可靠，或你的领域需要特定推理模式(例如财务分析具有标准化行项目结构)，则转为Few-shot(通常为2-5个示例)。'
         }
       },
       {
@@ -3551,15 +3551,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: '链式思维与树思维有什么区别?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '链式思维是线性序列: 步骤1 → 步骤2 → ... → 结论。树思维探索多个分支(替代推理路径)并在得出答案前修剪较弱的。树思维更强大但更贵(需要多个模型调用)。'
+          text: '链式思维是线性序列: 步骤1 → 步骤2 → ... → 结论。树思维探索多个分支(替代推理路径)并在得出答案前修剪较弱的。树思维在更难的搜索类问题上可能有帮助，但成本更高(需要多个模型调用)。'
         }
       },
       {
         '@type': 'Question',
-        name: 'OpenAI o3需要链式思维提示词吗?',
+        name: 'OpenAI GPT-6 Astra需要链式思维提示词吗?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '不需要。OpenAI o3具有自动激活的内置推理。你不需要添加「逐步思考」指令。只需给o3问题并设置努力级别(低/中/高)以控制要花费多少思维预算。'
+          text: '不需要。OpenAI的推理模型（如GPT-6 Astra）具有自动激活的内置推理。你不需要添加「逐步思考」指令。只需给GPT-6 Astra问题并设置努力级别(低/中/高/xhigh/max)以控制要花费多少思维预算。'
         }
       },
       {
@@ -3683,7 +3683,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
-      { '@type': 'Thing', name: 'Chain-of-Thought 프롬프팅', 'sameAs': 'https://www.wikidata.org/wiki/Q117050701' },
+      { '@type': 'Thing', name: 'Chain-of-Thought 프롬프팅', 'sameAs': 'https://www.wikidata.org/wiki/Q135305651' },
       { '@type': 'Thing', name: '대규모 언어 모델', 'sameAs': 'https://www.wikidata.org/wiki/Q115305900' },
       { '@type': 'Thing', name: '추론' },
       { '@type': 'Thing', name: '구조화된 출력' },
@@ -3701,9 +3701,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       items: [
         '**Chain-of-thought 프롬프팅은 모델에게 최종 답변을 내놓기 전에 추론 단계를 보여달라고 요청합니다.** 이를 통해 수학, 논리, 다단계 작업에서 정확도가 향상됩니다.',
         'Zero-shot CoT("단계별로 생각해 보자")는 가장 간단한 방법이며 주로 더 큰 모델에서 효과가 있습니다. Few-shot CoT(풀이된 예시 제공)는 더 안정적입니다.',
-        '2026년에 Claude Opus 5.5, OpenAI o3 같은 최전선 모델들은 **내장 추론 모드**를 갖추고 있어 프롬프트 수준의 CoT가 필요 없습니다.',
+        '2026년에 Claude Opus 5.5와 OpenAI의 추론 모델(예: GPT-6 Astra)처럼 추론 기능을 갖춘 모델들은 **내장 추론 모드**를 갖추고 있어 프롬프트 수준의 CoT가 필요 없습니다.',
         'CoT는 출력 토큰을 늘리므로 비용도 늘어납니다. 내장 추론 모드도 사고 토큰을 소비하며, Anthropic과 OpenAI는 이를 출력 토큰으로 과금합니다.',
-        '내장 추론 모드가 없는 모델(많은 소형 모델과 로컬 모델)에서는 저비용 추론을 위해 프롬프트 수준 CoT를 사용합니다. 최전선 모델에서는 최대 정확도를 위해 내장 추론 모드를 사용합니다.',
+        '내장 추론 모드가 없는 모델(많은 소형 모델과 로컬 모델)에서는 저비용 추론을 위해 프롬프트 수준 CoT를 사용합니다. 최전선 모델에서는 어려운 작업에서 내장 추론 모드가 일반 프롬프트보다 대체로 더 높은 정확도를 보이므로, 직접 하시는 작업에서 둘을 비교해 보십시오.',
         'CoT는 수학, 논리, 계획 수립, 근본 원인 분석에 가장 유용합니다. 단순 분류, 짧은 답변, 빠른 작성에는 생략해도 됩니다.',
       ]
     },
@@ -3718,7 +3718,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**제안:** Wei et al.(2022), Google Research(Brain Team) — NeurIPS 2022 논문',
         '**핵심 결과:** Zero-shot CoT("Let\'s think step by step")로 InstructGPT(text-davinci-002)의 MultiArith 정확도가 17.7%에서 78.7%로 상승(Kojima et al., 2022)',
         '**활성화 문구:** "단계별로 생각해 보자" (zero-shot) 또는 풀이된 예시 (few-shot)',
-        '**2026년의 변화:** 내장 추론 모드(OpenAI o3, Claude adaptive thinking)가 CoT를 내부적으로 자동화',
+        '**2026년의 변화:** 내장 추론 모드(OpenAI GPT-6 Astra, Claude adaptive thinking)가 CoT를 내부적으로 자동화',
         '**비용 영향:** 프롬프트 수준 CoT = 출력 토큰 증가; 추론 모드 = 별도 사고 토큰 예산',
         '**프롬프트 수준 CoT에 적합한 모델:** 내장 추론 모드가 없는 모델(예: Llama 4 Scout, 다수의 소형 로컬 모델)',
       ]
@@ -3844,15 +3844,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'reasoning-models',
       title: 'CoT vs. 내장 추론 모델 (2026)',
       content: [
-        '**2026년에는 Claude Opus 5.5, OpenAI o3, Gemini 3.1 Pro thinking 같은 최전선 모델들이 chain-of-thought를 자동으로 내부화하는 내장 추론 모드를 갖추고 있습니다.** 이러한 모델에는 단계별로 생각해라는 지시를 추가할 필요가 없습니다.',
+        '**2026년에는 Claude Opus 5.5, OpenAI의 추론 모델(예: GPT-6 Astra), Gemini 3.1 Pro thinking 같은 추론 기능을 갖춘 모델들이 chain-of-thought를 자동으로 내부화하는 내장 추론 모드를 갖추고 있습니다.** 이러한 모델에는 단계별로 생각해라는 지시를 추가할 필요가 없습니다.',
         '**프롬프트 수준 CoT를 사용할 때:** 내장 추론 모드가 없는 모델(예: Llama 4), 로컬 LLM, 사고를 끄거나 낮은 강도로 설정한 모델, 또는 사고 토큰의 추가 비용을 피하고 싶을 때.',
-        '**내장 추론 모드를 사용할 때:** 최전선 모델의 최대 정확도, 수학 중심 작업, 복잡한 분석. Claude와 OpenAI는 추론(사고) 토큰을 출력 토큰으로 과금하므로, 모델이 오래 생각할수록 비용이 늘어납니다. 운영 배포 전에 [Anthropic Console](https://platform.claude.com/) 또는 [OpenAI Playground](https://platform.openai.com/playground)에서 CoT 프롬프트를 테스트하십시오.',
+        '**내장 추론 모드를 사용할 때:** 최전선 모델의 어려운 작업(내장 모드가 일반 프롬프트보다 대체로 더 나으므로 직접 하시는 작업에서 둘을 비교해 보십시오), 수학 중심 작업, 복잡한 분석. Claude와 OpenAI는 추론(사고) 토큰을 출력 토큰으로 과금하므로, 모델이 오래 생각할수록 비용이 늘어납니다. 운영 배포 전에 [Anthropic Console](https://platform.claude.com/) 또는 [OpenAI Playground](https://platform.openai.com/playground)에서 CoT 프롬프트를 테스트하십시오.',
       ],
       columns: ['방식', '최적 사용 사례', '비용', '투명성', '모델'],
       rows: [
         { '방식': '프롬프트 수준 CoT ("단계별로 생각해")', '최적 사용 사례': '소형 모델, 로컬 LLM, 비용에 민감한 작업', '비용': '출력 토큰 증가', '투명성': '완전: 출력에 단계가 보임', '모델': 'Llama 4, 소형 로컬 모델' },
-        { '방식': 'Claude adaptive thinking(Opus 5.5, Sonnet 5.5)', '최적 사용 사례': '복잡한 분석, 최대 정확도', '비용': '사고 토큰은 출력 토큰으로 과금', '투명성': 'API로 요약된 사고 제공', '모델': 'Claude Opus 5.5, Claude Sonnet 5.5' },
-        { '방식': 'OpenAI o3', '최적 사용 사례': '가장 어려운 문제 (수학, 코드, 경쟁)', '비용': '추론 토큰은 출력 토큰으로 과금', '투명성': '추론 숨김, 출력만 보임', '모델': 'OpenAI o3' },
+        { '방식': 'Claude adaptive thinking(Opus 5.5, Sonnet 5.5)', '최적 사용 사례': '복잡한 분석', '비용': '사고 토큰은 출력 토큰으로 과금', '투명성': 'API로 요약된 사고 제공', '모델': 'Claude Opus 5.5, Claude Sonnet 5.5' },
+        { '방식': 'OpenAI GPT-6 Astra', '최적 사용 사례': '가장 어려운 문제 (수학, 코드, 경쟁)', '비용': '추론 토큰은 출력 토큰으로 과금', '투명성': '추론 숨김, 출력만 보임', '모델': 'OpenAI GPT-6 Astra' },
         { '방식': 'Gemini 3.1 Pro thinking', '최적 사용 사례': 'Google Cloud 통합, Gemini 생태계', '비용': '사고 토큰은 출력 토큰으로 과금', '투명성': 'thinking_level 파라미터 (LOW, MEDIUM, HIGH)', '모델': 'Gemini 3.1 Pro' },
         { '방식': 'DeepSeek-R1', '최적 사용 사례': '오픈 가중치 옵션, 셀프호스팅 추론', '비용': '출력 텍스트로 추론 스트리밍', '투명성': '완전: 출력에 CoT 인라인', '모델': 'DeepSeek-R1' },
       ],
@@ -3860,7 +3860,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         {
           type: 'tip',
           label: '전문가 팁',
-          text: '비용을 고려하여 개발한다면 더 작은 모델에서 프롬프트 수준 CoT를 사용하세요. 어려운 문제에서 정확도를 위해 개발한다면 o3 또는 Claude adaptive thinking을 사용하고 추론은 모델에게 맡기세요.'
+          text: '비용을 고려하여 개발한다면 더 작은 모델에서 프롬프트 수준 CoT를 사용하세요. 어려운 문제에서 정확도를 위해 개발한다면 GPT-6 Astra 또는 Claude adaptive thinking을 사용하고 추론은 모델에게 맡기세요.'
         }
       ],
     },
@@ -3884,11 +3884,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '모델 비교: 2026년 CoT 프롬프팅 처리 방식',
       columns: ['모델', '프롬프트 수준 CoT', '내장 추론', '최적 사용 사례', '비용 (약)'],
       rows: [
-        { '모델': 'Claude Opus 5.5', '프롬프트 수준 CoT': '불필요', '내장 추론': 'Adaptive thinking', '최적 사용 사례': '최고 정확도 분석', '비용 (약)': '높음 (입력 + 출력 + 사고 토큰)' },
+        { '모델': 'Claude Opus 5.5', '프롬프트 수준 CoT': '불필요', '내장 추론': 'Adaptive thinking', '최적 사용 사례': '심층 분석', '비용 (약)': '높음 (입력 + 출력 + 사고 토큰)' },
         { '모델': 'Claude Sonnet 5.5', '프롬프트 수준 CoT': '불필요', '내장 추론': 'Adaptive thinking', '최적 사용 사례': '정확도/비용 균형', '비용 (약)': '중간' },
         { '모델': 'Claude Haiku 5.5', '프롬프트 수준 CoT': '불필요', '내장 추론': 'Adaptive thinking', '최적 사용 사례': '빠르고 경제적인 추론', '비용 (약)': '낮음' },
-        { '모델': 'OpenAI o3', '프롬프트 수준 CoT': '불필요', '내장 추론': '노력 수준 (low, medium, high)', '최적 사용 사례': '경쟁 수준 문제', '비용 (약)': '추론 토큰은 출력으로 과금 (요금표 참조)' },
-        { '모델': 'GPT-5.6 Luna', '프롬프트 수준 CoT': '선택', '내장 추론': '조정 가능한 추론 강도', '최적 사용 사례': '경제적 배포', '비용 (약)': '매우 낮음' },
+        { '모델': 'OpenAI GPT-6 Astra', '프롬프트 수준 CoT': '불필요', '내장 추론': '노력 수준 (low, medium, high, xhigh, max)', '최적 사용 사례': '경쟁 수준 문제', '비용 (약)': '추론 토큰은 출력으로 과금 (요금표 참조)' },
+        { '모델': 'GPT-6 Luna', '프롬프트 수준 CoT': '선택', '내장 추론': '조정 가능한 추론 강도', '최적 사용 사례': '경제적 배포', '비용 (약)': '효율 중심 (요금표 참조)' },
         { '모델': 'Gemini 3.1 Pro', '프롬프트 수준 CoT': '작동', '내장 추론': '사고 수준 (thinking_level 파라미터)', '최적 사용 사례': 'Google Cloud 통합', '비용 (약)': '중간-높음' },
         { '모델': 'Gemini Flash', '프롬프트 수준 CoT': '선택', '내장 추론': '조정 가능한 사고 수준', '최적 사용 사례': '빠른 응답', '비용 (약)': '낮음' },
         { '모델': 'DeepSeek-R1', '프롬프트 수준 CoT': '불필요', '내장 추론': '출력에 인라인 추론', '최적 사용 사례': '오픈 가중치, 셀프호스팅', '비용 (약)': 'MIT 라이선스 가중치, 하드웨어 비용 별도' },
@@ -3917,15 +3917,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqs: [
         {
           q: 'Chain-of-thought는 모든 모델에서 작동합니까?',
-          a: '똑같이 잘 작동하지는 않습니다. Wei et al.(2022)은 chain-of-thought 프롬프팅이 약 100B 파라미터 이상의 모델에서만 효과를 냈고, 작은 모델은 유창하지만 비논리적인 단계를 쓰는 경우가 많았다고 보고했습니다. 결과는 모델과 작업에 따라 다르므로 소형 또는 로컬 모델은 직접 만든 프롬프트로 테스트하십시오. 내장 추론을 갖춘 최전선 모델(Claude Opus 5.5, o3)에서는 내장 모드가 프롬프트 수준 CoT를 불필요하게 만드는 경우가 많습니다.'
+          a: '똑같이 잘 작동하지는 않습니다. Wei et al.(2022)은 chain-of-thought 프롬프팅이 약 100B 파라미터 이상의 모델에서만 효과를 냈고, 작은 모델은 유창하지만 비논리적인 단계를 쓰는 경우가 많았다고 보고했습니다. 결과는 모델과 작업에 따라 다르므로 소형 또는 로컬 모델은 직접 만든 프롬프트로 테스트하십시오. 내장 추론을 갖춘 최전선 모델(Claude Opus 5.5, GPT-6 Astra)에서는 내장 모드가 프롬프트 수준 CoT를 불필요하게 만드는 경우가 많습니다.'
         },
         {
           q: 'Chain-of-thought는 비용을 증가시킵니까?',
-          a: '예. 프롬프트 수준 CoT는 모델이 최종 답변 전에 추론을 적기 때문에 출력 토큰이 늘어납니다. 내장 추론 모드(Claude adaptive thinking, OpenAI o3)도 사고 토큰을 소비하며, Anthropic과 OpenAI는 이를 출력 토큰으로 과금합니다. 사용 사례에서 둘을 모두 시험해 비용과 정확도를 비교하십시오.'
+          a: '예. 프롬프트 수준 CoT는 모델이 최종 답변 전에 추론을 적기 때문에 출력 토큰이 늘어납니다. 내장 추론 모드(Claude adaptive thinking, OpenAI GPT-6 Astra)도 사고 토큰을 소비하며, Anthropic과 OpenAI는 이를 출력 토큰으로 과금합니다. 사용 사례에서 둘을 모두 시험해 비용과 정확도를 비교하십시오.'
         },
         {
           q: '언제 zero-shot 대신 few-shot CoT를 사용해야 합니까?',
-          a: '먼저 zero-shot CoT를 사용하세요 — 더 간단한 방법입니다. zero-shot이 신뢰할 수 없거나 도메인에 특정 추론 패턴이 필요한 경우 (예: 표준 라인 구조의 재무 분석) few-shot (예시 2~5개)으로 전환하세요.'
+          a: '먼저 zero-shot CoT를 사용하세요 — 더 간단한 방법입니다. zero-shot이 신뢰할 수 없거나 도메인에 특정 추론 패턴이 필요한 경우 (예: 표준 라인 구조의 재무 분석) few-shot (보통 예시 2~5개)으로 전환하세요.'
         },
         {
           q: 'Chain-of-thought를 구조화된 출력(JSON)과 결합할 수 있습니까?',
@@ -3933,11 +3933,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'Chain-of-thought와 tree-of-thought의 차이는 무엇입니까?',
-          a: 'Chain-of-thought는 선형 순서입니다: 1단계 → 2단계 → ... → 결론. Tree-of-thought는 여러 분기 (대안적 추론 경로)를 탐색하고 답변에 도달하기 전에 더 약한 것을 제거합니다. Tree-of-thought는 더 강력하지만 비용이 더 많이 듭니다 (여러 모델 호출 필요).'
+          a: 'Chain-of-thought는 선형 순서입니다: 1단계 → 2단계 → ... → 결론. Tree-of-thought는 여러 분기 (대안적 추론 경로)를 탐색하고 답변에 도달하기 전에 더 약한 것을 제거합니다. Tree-of-thought는 더 어려운 탐색형 문제에서 도움이 될 수 있지만 비용이 더 많이 듭니다 (여러 모델 호출 필요).'
         },
         {
-          q: 'OpenAI o3는 chain-of-thought 프롬프팅이 필요합니까?',
-          a: '아닙니다. OpenAI o3는 자동으로 활성화되는 내장 추론 기능을 갖추고 있습니다. 단계별로 생각해 지시를 추가할 필요가 없습니다. o3에 문제를 제시하고 지출할 추론 예산을 제어하기 위해 노력 수준 (low/medium/high)을 설정하기만 하면 됩니다.'
+          q: 'OpenAI GPT-6 Astra는 chain-of-thought 프롬프팅이 필요합니까?',
+          a: '아닙니다. OpenAI의 추론 모델(예: GPT-6 Astra)은 자동으로 활성화되는 내장 추론 기능을 갖추고 있습니다. 단계별로 생각해 지시를 추가할 필요가 없습니다. GPT-6 Astra에 문제를 제시하고 지출할 추론 예산을 제어하기 위해 노력 수준 (low/medium/high/xhigh/max)을 설정하기만 하면 됩니다.'
         },
         {
           q: '내장 추론 모델의 추론을 감사할 수 있습니까?',
@@ -3978,7 +3978,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Chain-of-thought는 모든 모델에서 작동합니까?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '똑같이 잘 작동하지는 않습니다. Wei et al.(2022)은 chain-of-thought 프롬프팅이 약 100B 파라미터 이상의 모델에서만 효과를 냈고, 작은 모델은 유창하지만 비논리적인 단계를 쓰는 경우가 많았다고 보고했습니다. 결과는 모델과 작업에 따라 다르므로 소형 또는 로컬 모델은 직접 만든 프롬프트로 테스트하십시오. 내장 추론을 갖춘 최전선 모델(Claude Opus 5.5, o3)에서는 내장 모드가 프롬프트 수준 CoT를 불필요하게 만드는 경우가 많습니다.'
+          text: '똑같이 잘 작동하지는 않습니다. Wei et al.(2022)은 chain-of-thought 프롬프팅이 약 100B 파라미터 이상의 모델에서만 효과를 냈고, 작은 모델은 유창하지만 비논리적인 단계를 쓰는 경우가 많았다고 보고했습니다. 결과는 모델과 작업에 따라 다르므로 소형 또는 로컬 모델은 직접 만든 프롬프트로 테스트하십시오. 내장 추론을 갖춘 최전선 모델(Claude Opus 5.5, GPT-6 Astra)에서는 내장 모드가 프롬프트 수준 CoT를 불필요하게 만드는 경우가 많습니다.'
         }
       },
       {
@@ -3986,7 +3986,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Chain-of-thought는 비용을 증가시킵니까?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '예. 프롬프트 수준 CoT는 모델이 최종 답변 전에 추론을 적기 때문에 출력 토큰이 늘어납니다. 내장 추론 모드(Claude adaptive thinking, OpenAI o3)도 사고 토큰을 소비하며, Anthropic과 OpenAI는 이를 출력 토큰으로 과금합니다. 사용 사례에서 둘을 모두 시험해 비용과 정확도를 비교하십시오.'
+          text: '예. 프롬프트 수준 CoT는 모델이 최종 답변 전에 추론을 적기 때문에 출력 토큰이 늘어납니다. 내장 추론 모드(Claude adaptive thinking, OpenAI GPT-6 Astra)도 사고 토큰을 소비하며, Anthropic과 OpenAI는 이를 출력 토큰으로 과금합니다. 사용 사례에서 둘을 모두 시험해 비용과 정확도를 비교하십시오.'
         }
       },
       {
@@ -3994,7 +3994,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: '언제 zero-shot 대신 few-shot CoT를 사용해야 합니까?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '먼저 zero-shot CoT를 사용하세요 — 더 간단한 방법입니다. zero-shot이 신뢰할 수 없거나 도메인에 특정 추론 패턴이 필요한 경우 (예: 표준 라인 구조의 재무 분석) few-shot (예시 2~5개)으로 전환하세요.'
+          text: '먼저 zero-shot CoT를 사용하세요 — 더 간단한 방법입니다. zero-shot이 신뢰할 수 없거나 도메인에 특정 추론 패턴이 필요한 경우 (예: 표준 라인 구조의 재무 분석) few-shot (보통 예시 2~5개)으로 전환하세요.'
         }
       },
       {
@@ -4010,15 +4010,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Chain-of-thought와 tree-of-thought의 차이는 무엇입니까?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Chain-of-thought는 선형 순서입니다: 1단계 → 2단계 → ... → 결론. Tree-of-thought는 여러 분기 (대안적 추론 경로)를 탐색하고 답변에 도달하기 전에 더 약한 것을 제거합니다. Tree-of-thought는 더 강력하지만 비용이 더 많이 듭니다 (여러 모델 호출 필요).'
+          text: 'Chain-of-thought는 선형 순서입니다: 1단계 → 2단계 → ... → 결론. Tree-of-thought는 여러 분기 (대안적 추론 경로)를 탐색하고 답변에 도달하기 전에 더 약한 것을 제거합니다. Tree-of-thought는 더 어려운 탐색형 문제에서 도움이 될 수 있지만 비용이 더 많이 듭니다 (여러 모델 호출 필요).'
         }
       },
       {
         '@type': 'Question',
-        name: 'OpenAI o3는 chain-of-thought 프롬프팅이 필요합니까?',
+        name: 'OpenAI GPT-6 Astra는 chain-of-thought 프롬프팅이 필요합니까?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '아닙니다. OpenAI o3는 자동으로 활성화되는 내장 추론 기능을 갖추고 있습니다. 단계별로 생각해 지시를 추가할 필요가 없습니다. o3에 문제를 제시하고 지출할 추론 예산을 제어하기 위해 노력 수준 (low/medium/high)을 설정하기만 하면 됩니다.'
+          text: '아닙니다. OpenAI의 추론 모델(예: GPT-6 Astra)은 자동으로 활성화되는 내장 추론 기능을 갖추고 있습니다. 단계별로 생각해 지시를 추가할 필요가 없습니다. GPT-6 Astra에 문제를 제시하고 지출할 추론 예산을 제어하기 위해 노력 수준 (low/medium/high/xhigh/max)을 설정하기만 하면 됩니다.'
         }
       },
       {

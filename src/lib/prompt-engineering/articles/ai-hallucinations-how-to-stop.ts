@@ -19,7 +19,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'Large language models state false things fluently and with confidence. These errors, called hallucinations, range from invented citations to fabricated facts.',
       leadAnswerBlock: '**AI hallucinations are fluent but false statements that language models produce because they predict likely text instead of looking up facts. Detect them by checking sources and comparing answers; reduce them with grounding, clear constraints and human review.**',
       publishDate: '2026-03-22',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       seoTitle: 'AI Hallucinations: How to Detect & Reduce Them 2026',
       metaDescription: 'Why AI hallucinates, real cases, and how to detect hallucinations: check sources, compare answers, then cut errors with prompts, RAG and human review.',
       readTime: '12 min read',
@@ -32,7 +32,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'AI Hallucinations: Why AI Makes Things Up — and How to Stop Them',
         description: 'Why language models hallucinate, how to detect hallucinations, and techniques to reduce them. Learn prompt design strategies, system-level approaches, and multi-model consensus scoring.',
         datePublished: '2026-03-22',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'en',
         keywords: ['AI hallucinations', 'LLM hallucinations', 'hallucination detection', 'prompt engineering', 'multi-model consensus', 'RAG', 'retrieval augmented generation'],
@@ -98,7 +98,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Common Types of Hallucinations',
           content: 'Hallucinations come in recognizable patterns. Identifying the type helps you target mitigation strategies.',
           rows: [
-            { 'Type': 'Invented sources', 'Example': 'Citation to a peer-reviewed paper that doesn\'t exist; fake author names and publication years', 'Why It Happens': 'Model was trained on millions of citations and learned citation-like patterns, then invents new ones', 'Severity': 'Very High' },
+            { 'Type': 'Invented sources', 'Example': 'Citation to a peer-reviewed paper that doesn\'t exist; fake author names and publication years', 'Why It Happens': 'Model was trained on millions of citations and likely learned citation-like patterns, then invents new ones', 'Severity': 'Very High' },
             { 'Type': 'Wrong facts (dates, numbers, names)', 'Example': 'Stating a historical event in the wrong year; incorrect biographical details', 'Why It Happens': 'Training data is incomplete or conflicting; model picks a plausible-sounding number', 'Severity': 'Very High' },
             { 'Type': 'Fabricated URLs and emails', 'Example': 'Providing a link or email address that doesn\'t resolve or belong to the claimed organization', 'Why It Happens': 'Model learned URL and email patterns and generates new ones that sound realistic but are fictional', 'Severity': 'High' },
             { 'Type': 'Lost context', 'Example': 'Answering a question as if the model understood earlier context, when it actually lost track of it', 'Why It Happens': 'Context window is finite; long documents cause earlier details to fade from the model\'s attention', 'Severity': 'High' },
@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         promptDesignIntro: {
           title: 'How Prompt Design Affects Hallucination Risk',
-          content: 'Your prompts either encourage or discourage hallucinations. The difference is measurable.',
+          content: 'Your prompts either encourage or discourage hallucinations. Prompt wording changes how often a model guesses; test it on your own task.',
         },
 
         riskPrompts: {
@@ -197,7 +197,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         systemItems: {
           items: [
             '**Retrieval-Augmented Generation (RAG).** Feed the model a specific document, knowledge base, or dataset and ask it to answer only using that content. This grounds answers in real data instead of the model\'s training data and reduces hallucinations about information the model would otherwise have to guess; it does not remove them, because the model can still misread or misquote the retrieved text. Tools like LangChain and vector databases implement this pattern. See our full guide on [RAG: how to ground AI answers in real data](/prompt-engineering/rag-explained).',
-            '**Tool calling and function use.** Let the model call external functions for calculations, database lookups, or fact-checking. Instead of inventing a statistic, the model calls a function to retrieve it. This removes the temptation to hallucinate entirely for specific domains.',
+            '**Tool calling and function use.** Let the model call external functions for calculations, database lookups, or fact-checking. Instead of inventing a statistic, the model calls a function to retrieve it. This removes the need to guess the facts the function returns, but the model can still misread or misuse the result.',
             '**Human review and expert verification.** For critical decisions—medical, legal, financial, safety-critical—always have a human (preferably an expert) verify AI-generated answers. No prompt technique replaces expert judgment.',
             '**Automated fact-checking workflows.** Run model outputs through automated systems (fact-checking APIs, URL validation, citation verification) before showing them to users. This catches hallucinations at scale without manual review of every output.',
           ],
@@ -330,7 +330,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'How can I quickly check whether an answer is hallucinated?',
-              a: 'Check sources: Click URLs or search for cited papers. If they don\'t exist, the answer is hallucinated. Verify facts: Check dates, names, and numbers against trusted sources. Compare multiple models: Ask the same question to different models. Sharp disagreement suggests at least one is hallucinating. Apply domain expertise: If you know the field, read critically for subtle implausibility—hallucinations often have tell-tale signs to expert readers.',
+              a: 'Check sources: Click URLs or search for cited papers. If they don\'t exist, treat the answer as unreliable and verify it. Verify facts: Check dates, names, and numbers against trusted sources. Compare multiple models: Ask the same question to different models. Sharp disagreement suggests at least one is hallucinating. Apply domain expertise: If you know the field, read critically for subtle implausibility—hallucinations often have tell-tale signs to expert readers.',
             },
             {
               q: 'Should I stop using AI if it hallucinates?',
@@ -393,6 +393,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       leadAnswerBlock: '**KI-Halluzinationen sind flüssige, aber falsche Aussagen, die Sprachmodelle erzeugen, weil sie wahrscheinliche Texte vorhersagen, statt Fakten nachzuschlagen. Sie erkennen sie durch Quellenprüfung und Antwortvergleich und verringern sie durch Grounding, klare Vorgaben und menschliche Kontrolle.**',
       metaDescription: 'Warum KI halluziniert, reale Fälle und wie Sie Halluzinationen erkennen: Quellen prüfen, Antworten vergleichen, Fehler mit Prompts, RAG und Review senken.',
       publishDate: '2026-03-22',
+      dateModified: '2026-11-06',
       readTime: '12 Min. Lesezeit',
       educationalLevel: 'Beginner',
       primaryTerm: 'KI-Halluzination',
@@ -402,7 +403,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'KI-Halluzinationen: Warum KI Dinge erfindet — und wie man sie stoppt',
         description: 'Warum Sprachmodelle halluzinieren, wie man Halluzinationen erkennt und Techniken zu ihrer Verringerung. Erfahren Sie mehr über Prompt-Design-Strategien, systemweite Ansätze und Multi-Modell-Konsens-Scoring.',
         datePublished: '2026-03-22',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'de',
         keywords: ['KI-Halluzinationen', 'LLM-Halluzinationen', 'Halluzinationserkennung', 'Prompt Engineering', 'Multi-Modell-Konsens', 'RAG', 'Retrieval Augmented Generation'],
@@ -456,7 +457,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Häufige Arten von Halluzinationen',
           content: 'Halluzinationen folgen erkennbaren Mustern. Die Identifikation des Typs hilft Ihnen, gezielte Minderungsstrategien auszuwählen.',
           rows: [
-            { 'Type': 'Erfundene Quellen', 'Example': 'Zitat eines Fachjournals, das nicht existiert; erfundene Autorennamen und Publikationsjahre', 'Why It Happens': 'Das Modell wurde mit Millionen von Zitaten trainiert und lernte zitatähnliche Muster, erfindet dann neue', 'Severity': 'Sehr hoch' },
+            { 'Type': 'Erfundene Quellen', 'Example': 'Zitat eines Fachjournals, das nicht existiert; erfundene Autorennamen und Publikationsjahre', 'Why It Happens': 'Das Modell wurde mit Millionen von Zitaten trainiert und lernte vermutlich zitatähnliche Muster, erfindet dann neue', 'Severity': 'Sehr hoch' },
             { 'Type': 'Falsche Fakten (Daten, Zahlen, Namen)', 'Example': 'Ein historisches Ereignis im falschen Jahr nennen; fehlerhafte biografische Details', 'Why It Happens': 'Trainingsdaten sind unvollständig oder widersprüchlich; Modell wählt eine plausibel klingende Zahl', 'Severity': 'Sehr hoch' },
             { 'Type': 'Gefälschte URLs und E-Mails', 'Example': 'Einen Link oder eine E-Mail-Adresse angeben, der/die nicht funktioniert oder nicht der beanspruchten Organisation gehört', 'Why It Happens': 'Modell lernte URL- und E-Mail-Muster und generiert neue, die realistisch, aber fiktiv sind', 'Severity': 'Hoch' },
             { 'Type': 'Kontextverlust', 'Example': 'Eine Frage so beantworten, als hätte das Modell früheren Kontext verstanden, verlor aber tatsächlich die Spur', 'Why It Happens': 'Das Kontextfenster ist endlich; lange Dokumente führen dazu, dass frühere Details aus der Aufmerksamkeit des Modells verblassen', 'Severity': 'Hoch' },
@@ -472,7 +473,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         promptDesignIntro: {
           title: 'Wie Prompt-Design das Halluzinationsrisiko beeinflusst',
-          content: 'Ihre Prompts ermutigen oder entmutigen Halluzinationen. Der Unterschied ist messbar.',
+          content: 'Ihre Prompts ermutigen oder entmutigen Halluzinationen. Die Formulierung eines Prompts verändert, wie oft ein Modell rät; testen Sie das an Ihrer eigenen Aufgabe.',
         },
         riskPrompts: {
           title: 'Prompts, die das Halluzinationsrisiko erhöhen:',
@@ -540,7 +541,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         systemItems: {
           items: [
             '**Retrieval-Augmented Generation (RAG).** Geben Sie dem Modell ein bestimmtes Dokument, eine Wissensdatenbank oder einen Datensatz und lassen Sie es nur mit diesem Inhalt antworten. Das verankert Antworten in echten Daten statt in den Trainingsdaten und verringert Halluzinationen über Informationen, die das Modell sonst raten müsste; es beseitigt sie nicht, denn das Modell kann abgerufenen Text weiterhin falsch lesen oder falsch wiedergeben. Werkzeuge wie LangChain und Vektordatenbanken setzen dieses Muster um. Siehe unseren ausführlichen Leitfaden [RAG: KI-Antworten in echten Daten verankern](/de/prompt-engineering/rag-explained).',
-            '**Tool Calling und Function Use.** Lasse das Modell externe Funktionen für Berechnungen, Datenbankabfragen oder Faktenkontrolle aufrufen. Anstatt eine Statistik zu erfinden, ruft das Modell eine Funktion auf, um sie abzurufen. Dies entfernt die Versuchung zu halluzinieren vollständig für spezifische Domänen.',
+            '**Tool Calling und Function Use.** Lasse das Modell externe Funktionen für Berechnungen, Datenbankabfragen oder Faktenkontrolle aufrufen. Anstatt eine Statistik zu erfinden, ruft das Modell eine Funktion auf, um sie abzurufen. Das beseitigt das Raten bei den Fakten, die die Funktion liefert; das Modell kann das Ergebnis aber weiterhin falsch lesen oder falsch verwenden.',
             '**Menschliche Überprüfung und Expertenverifikation.** Für kritische Entscheidungen – medizinisch, rechtlich, finanziell, sicherheitskritisch – lasse immer einen Menschen (vorzugsweise einen Experten) KI-generierte Antworten verifizieren. Keine Prompt-Technik ersetzt ein Expertenurteil.',
             '**Automatisierte Fakten-Überprüfungs-Workflows.** Führe Modell-Ausgaben durch automatisierte Systeme (Fakten-Überprüfungs-APIs, URL-Validierung, Zitat-Verifikation), bevor du sie Nutzern zeigst. Dies erkennt Halluzinationen im Maßstab, ohne jede Ausgabe manuell zu überprüfen.',
           ],
@@ -661,7 +662,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Wie kann ich schnell überprüfen, ob eine Antwort halluziniert ist?',
-              a: 'Überprüfe Quellen: Klicke URLs an oder suche nach zitierten Paper. Wenn sie nicht existieren, ist die Antwort halluziniert. Überprüfe Fakten: Stelle Daten, Namen und Zahlen gegen vertrauenswürdige Quellen. Vergleiche mehrere Modelle: Frage die gleiche Frage verschiedenen Modellen. Starke Uneinigkeit schlägt vor, dass mindestens eines halluziniert. Wende Fachexpertise an: Wenn du das Feld kennst, lies kritisch auf subtile Implausibilität – Halluzinationen haben oft Erkennungszeichen für Expertenleser.',
+              a: 'Prüfen Sie die Quellen: Klicken Sie auf URLs oder suchen Sie nach zitierten Arbeiten. Wenn sie nicht existieren, behandeln Sie die Antwort als unzuverlässig und überprüfen Sie sie. Prüfen Sie Fakten: Gleichen Sie Daten, Namen und Zahlen mit vertrauenswürdigen Quellen ab. Vergleichen Sie mehrere Modelle: Stellen Sie verschiedenen Modellen dieselbe Frage. Starke Uneinigkeit deutet darauf hin, dass mindestens eines halluziniert. Wenden Sie Fachwissen an: Wenn Sie das Gebiet kennen, lesen Sie kritisch auf subtile Unplausibilitäten – Halluzinationen haben für Fachleute oft verräterische Anzeichen.',
             },
             {
               q: 'Sollte ich aufhören, KI zu verwenden, wenn sie halluziniert?',
@@ -720,6 +721,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'Los modelos de lenguaje afirman cosas falsas con fluidez y seguridad. Estos errores, llamados alucinaciones, van desde citas inventadas hasta datos fabricados.',
       leadAnswerBlock: '**Las alucinaciones de la IA son afirmaciones fluidas pero falsas que generan los modelos de lenguaje porque predicen texto probable en lugar de consultar datos. Se detectan verificando fuentes y comparando respuestas, y se reducen con grounding, límites claros y revisión humana.**',
       publishDate: '2026-03-22',
+      dateModified: '2026-11-06',
       seoTitle: 'Alucinaciones de IA: Cómo detectarlas y reducirlas 2026',
       metaDescription: 'Por qué la IA alucina, casos reales y cómo detectar alucinaciones: verifica fuentes, compara respuestas y reduce errores con prompts, RAG y revisión.',
       readTime: '12 min de lectura',
@@ -731,7 +733,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Alucinaciones de IA: Por qué la IA inventa cosas — y cómo detenerlas',
         description: 'Por qué los modelos de lenguaje alucinan, cómo detectar alucinaciones y técnicas para reducirlas. Aprende estrategias de diseño de prompts, enfoques a nivel de sistema y puntuación de consenso multi-modelo.',
         datePublished: '2026-03-22',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/es/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'es',
         keywords: ['alucinaciones de IA', 'alucinaciones LLM', 'detección de alucinaciones', 'prompt engineering', 'consenso multi-modelo', 'RAG'],
@@ -786,7 +788,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: 'Las alucinaciones siguen patrones reconocibles. Identificar el tipo te ayuda a elegir estrategias de mitigación específicas.',
           columns: ['Tipo', 'Ejemplo', 'Por qué ocurre', 'Severidad'],
           rows: [
-            { 'Tipo': 'Fuentes inventadas', 'Ejemplo': 'Citar una revista académica que no existe; nombres de autores y años de publicación inventados', 'Por qué ocurre': 'El modelo fue entrenado con millones de citas y aprendió patrones similares a las citas, luego inventa nuevas', 'Severidad': 'Muy alta' },
+            { 'Tipo': 'Fuentes inventadas', 'Ejemplo': 'Citar una revista académica que no existe; nombres de autores y años de publicación inventados', 'Por qué ocurre': 'El modelo fue entrenado con millones de citas y probablemente aprendió patrones similares a las citas, luego inventa nuevas', 'Severidad': 'Muy alta' },
             { 'Tipo': 'Hechos incorrectos (fechas, números, nombres)', 'Ejemplo': 'Nombrar un evento histórico en el año incorrecto; detalles biográficos erróneos', 'Por qué ocurre': 'Los datos de entrenamiento son incompletos o contradictorios; el modelo elige un número que suena plausible', 'Severidad': 'Muy alta' },
             { 'Tipo': 'URLs y emails falsos', 'Ejemplo': 'Proporcionar un enlace o dirección de email que no funciona o no pertenece a la organización reclamada', 'Por qué ocurre': 'El modelo aprendió patrones de URL y email y genera nuevos que son realistas pero ficticios', 'Severidad': 'Alta' },
             { 'Tipo': 'Pérdida de contexto', 'Ejemplo': 'Responder una pregunta como si el modelo hubiera entendido el contexto anterior, pero en realidad perdió el hilo', 'Por qué ocurre': 'El context window es finito; los documentos largos hacen que los detalles anteriores se desvanezcan de la atención del modelo', 'Severidad': 'Alta' },
@@ -801,7 +803,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         promptDesignIntro: {
           title: 'Cómo el diseño del prompt afecta al riesgo de alucinación',
-          content: 'Tus prompts alientan o desalientan las alucinaciones. La diferencia es medible.',
+          content: 'Tus prompts alientan o desalientan las alucinaciones. La redacción del prompt cambia la frecuencia con la que un modelo adivina; compruébalo con tu propia tarea.',
         },
         riskPrompts: {
           title: 'Prompts que aumentan el riesgo de alucinación:',
@@ -869,7 +871,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         systemItems: {
           items: [
             '**Retrieval-Augmented Generation (RAG).** Entrega al modelo un documento, base de conocimiento o conjunto de datos concreto y pídele que responda solo con ese contenido. Así las respuestas se apoyan en datos reales y no en los datos de entrenamiento, y se reducen las alucinaciones sobre información que el modelo tendría que adivinar; no las elimina, porque el modelo aún puede leer mal o citar mal el texto recuperado. Herramientas como LangChain y las bases de datos vectoriales implementan este patrón. Consulta nuestra guía completa: [RAG: cómo anclar las respuestas de la IA en datos reales](/es/prompt-engineering/rag-explained).',
-            '**Tool calling y uso de funciones.** Permite que el modelo llame a funciones externas para cálculos, consultas a bases de datos o verificación de hechos. En lugar de inventar una estadística, el modelo llama a una función para obtenerla. Esto elimina por completo la tentación de alucinar en dominios específicos.',
+            '**Tool calling y uso de funciones.** Permite que el modelo llame a funciones externas para cálculos, consultas a bases de datos o verificación de hechos. En lugar de inventar una estadística, el modelo llama a una función para obtenerla. Esto evita tener que adivinar los datos que devuelve la función, aunque el modelo aún puede malinterpretar o usar mal el resultado.',
             '**Revisión humana y verificación experta.** Para decisiones críticas — médicas, legales, financieras, de seguridad — siempre haz que una persona (preferiblemente un experto) verifique las respuestas generadas por IA. Ninguna técnica de prompting reemplaza el juicio experto.',
             '**Flujos de verificación de hechos automatizados.** Pasa las respuestas del modelo por sistemas automatizados (APIs de fact-checking, validación de URLs, verificación de citas) antes de mostrárselas a los usuarios. Esto detecta alucinaciones a escala sin revisión manual de cada respuesta.',
           ],
@@ -990,7 +992,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Cómo puedo verificar rápidamente si una respuesta ha alucinado?',
-              a: 'Verifica las fuentes: haz clic en las URLs o busca los artículos citados. Si no existen, la respuesta ha alucinado. Verifica los hechos: comprueba datos, nombres y números con fuentes confiables. Compara varios modelos: haz la misma pregunta a diferentes modelos. El fuerte desacuerdo sugiere que al menos uno ha alucinado.',
+              a: 'Verifica las fuentes: haz clic en las URLs o busca los artículos citados. Si no existen, trata la respuesta como poco fiable y verifícala. Verifica los hechos: comprueba datos, nombres y números con fuentes confiables. Compara varios modelos: haz la misma pregunta a diferentes modelos. El fuerte desacuerdo sugiere que al menos uno ha alucinado.',
             },
             {
               q: '¿Debo dejar de usar la IA si alucina?',
@@ -1050,6 +1052,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'تذكر النماذج اللغوية الكبيرة معلومات خاطئة بطلاقة وثقة. وتُسمّى هذه الأخطاء هلوسة، وهي تتراوح بين اقتباسات مختلقة ووقائع ملفّقة.',
       leadAnswerBlock: '**هلوسة الذكاء الاصطناعي عبارات سلسة لكنها خاطئة تولّدها النماذج اللغوية لأنها تتنبأ بالنص المحتمل بدل البحث عن الحقائق. تكتشفها بالتحقق من المصادر ومقارنة الإجابات، وتقلّلها بالاستناد إلى بيانات حقيقية وقيود واضحة ومراجعة بشرية.**',
       publishDate: '2026-03-22',
+      dateModified: '2026-11-06',
       seoTitle: 'هلوسات الذكاء الاصطناعي: الكشف والحد منها ⁨2026⁩',
       metaDescription: 'لماذا تهلوس نماذج الذكاء الاصطناعي، وحالات واقعية، وكيفية اكتشاف الهلوسة: تحقق من المصادر وقارن الإجابات وقلّل الأخطاء بالتعليمات والمراجعة البشرية.',
       readTime: '١٢ دقيقة للقراءة',
@@ -1061,7 +1064,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'هلوسات الذكاء الاصطناعي: لماذا تخترع الذكاء الاصطناعي الأشياء — وكيف توقفها',
         description: 'سبب هلوسة نماذج اللغة، وكيفية اكتشاف الهلوسات، وتقنيات الحد منها. تعلَّم استراتيجيات تصميم التعليمات والمناهج على مستوى النظام وتسجيل التوافق متعدد النماذج.',
         datePublished: '2026-03-22',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/ar/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'ar',
         keywords: ['هلوسات الذكاء الاصطناعي', 'هلوسات النموذج اللغوي الكبير', 'اكتشاف الهلوسات', 'هندسة التعليمات', 'التوافق متعدد النماذج', 'RAG'],
@@ -1115,7 +1118,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: 'تتبع الهلوسات أنماطًا يمكن التعرف عليها. يساعدك تحديد النوع على اختيار استراتيجيات تخفيف محددة.',
           columns: ['النوع', 'مثال', 'سبب الحدوث', 'الخطورة'],
           rows: [
-            { 'النوع': 'مصادر مخترعة', 'مثال': 'الاستشهاد بمجلة أكاديمية غير موجودة؛ أسماء مؤلفين وسنوات نشر مخترعة', 'سبب الحدوث': 'دُرِّب النموذج على ملايين الاستشهادات وتعلَّم أنماطًا تشبه الاستشهادات، ثم يخترع استشهادات جديدة', 'الخطورة': 'عالية جدًا' },
+            { 'النوع': 'مصادر مخترعة', 'مثال': 'الاستشهاد بمجلة أكاديمية غير موجودة؛ أسماء مؤلفين وسنوات نشر مخترعة', 'سبب الحدوث': 'دُرِّب النموذج على ملايين الاستشهادات وتعلَّم على الأرجح أنماطًا تشبه الاستشهادات، ثم يخترع استشهادات جديدة', 'الخطورة': 'عالية جدًا' },
             { 'النوع': 'حقائق غير صحيحة (تواريخ وأرقام وأسماء)', 'مثال': 'ذكر حدث تاريخي في العام الخطأ؛ تفاصيل سيرة ذاتية مغلوطة', 'سبب الحدوث': 'بيانات التدريب غير مكتملة أو متناقضة؛ يختار النموذج رقمًا يبدو معقولًا', 'الخطورة': 'عالية جدًا' },
             { 'النوع': 'عناوين URL وبريد إلكتروني وهمية', 'مثال': 'تقديم رابط أو عنوان بريد إلكتروني لا يعمل أو لا ينتمي للمنظمة المزعومة', 'سبب الحدوث': 'تعلَّم النموذج أنماط URL والبريد الإلكتروني ويولِّد أنماطًا جديدة واقعية لكنها خيالية', 'الخطورة': 'عالية' },
             { 'النوع': 'فقدان السياق', 'مثال': 'الإجابة على سؤال كأن النموذج فهم السياق السابق، لكنه في الواقع فقد الخيط', 'سبب الحدوث': 'نافذة السياق محدودة؛ المستندات الطويلة تجعل التفاصيل السابقة تتلاشى من انتباه النموذج', 'الخطورة': 'عالية' },
@@ -1130,7 +1133,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         promptDesignIntro: {
           title: 'كيف يؤثر تصميم التعليمات على خطر الهلوسة',
-          content: 'تعليماتك تُشجِّع الهلوسات أو تُثبِّطها. الفرق قابل للقياس.',
+          content: 'تعليماتك تُشجِّع الهلوسات أو تُثبِّطها. تغيّر صياغة التعليمات عدد المرات التي يخمّن فيها النموذج؛ فاختبر ذلك على مهمتك الخاصة.',
         },
         riskPrompts: {
           title: 'التعليمات التي تزيد من خطر الهلوسة:',
@@ -1198,7 +1201,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         systemItems: {
           items: [
             '**التوليد المعزَّز بالاسترجاع (RAG).** زوّد النموذج بمستند أو قاعدة معرفة أو مجموعة بيانات محددة واطلب منه الإجابة بالاعتماد على هذا المحتوى فقط. هذا يربط الإجابات ببيانات حقيقية بدل بيانات التدريب، ويقلّل الهلوسة بشأن معلومات كان النموذج سيضطر إلى تخمينها؛ لكنه لا يزيلها، فقد يسيء النموذج قراءة النص المسترجَع أو اقتباسه. وتطبّق أدوات مثل LangChain وقواعد البيانات المتجهية هذا النمط. راجع دليلنا الكامل: [RAG: كيف تربط إجابات الذكاء الاصطناعي ببيانات حقيقية](/ar/prompt-engineering/rag-explained).',
-            '**استدعاء الأدوات واستخدام الوظائف.** اسمح للنموذج باستدعاء وظائف خارجية لإجراء الحسابات أو الاستعلام عن قواعد البيانات أو التحقق من الحقائق. بدلًا من اختراع إحصائية، يستدعي النموذج وظيفة لاسترجاعها. هذا يُزيل تمامًا إغراء الهلوسة في مجالات محددة.',
+            '**استدعاء الأدوات واستخدام الوظائف.** اسمح للنموذج باستدعاء وظائف خارجية لإجراء الحسابات أو الاستعلام عن قواعد البيانات أو التحقق من الحقائق. بدلًا من اختراع إحصائية، يستدعي النموذج وظيفة لاسترجاعها. يغني هذا عن تخمين الحقائق التي تعيدها الدالة، لكن يظل بإمكان النموذج إساءة قراءة النتيجة أو استخدامها.',
             '**المراجعة البشرية والتحقق من قِبل خبراء.** بالنسبة للقرارات الحرجة — الطبية والقانونية والمالية والأمنية — احرص دائمًا على أن يتحقق إنسان (يُفضَّل أن يكون خبيرًا) من الإجابات التي يُولِّدها الذكاء الاصطناعي. لا تُغني أي تقنية صياغة تعليمات عن الحكم الخبير.',
             '**سير عمل التحقق الآلي من الحقائق.** مرِّر مخرجات النموذج عبر أنظمة آلية (واجهات برمجة تطبيقات للتحقق من الحقائق، والتحقق من صحة عناوين URL، والتحقق من الاستشهادات) قبل عرضها على المستخدمين. هذا يكتشف الهلوسات على نطاق واسع دون مراجعة يدوية لكل مخرج.',
           ],
@@ -1319,7 +1322,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'كيف يمكنني التحقق بسرعة مما إذا كانت الإجابة قد هلوست؟',
-              a: 'تحقق من المصادر: انقر على عناوين URL أو ابحث عن المقالات المستشهد بها. إذا لم تكن موجودة، فالإجابة هلوست. تحقق من الحقائق: تحقق من البيانات والأسماء والأرقام مع مصادر موثوقة. قارن نماذج متعددة: اطرح السؤال ذاته على نماذج مختلفة. الاختلاف الشديد يُشير إلى أن واحدًا على الأقل قد هلوس.',
+              a: 'تحقق من المصادر: انقر على عناوين URL أو ابحث عن المقالات المستشهد بها. إذا لم تكن موجودة، فاعتبر الإجابة غير موثوقة وتحقق منها. تحقق من الحقائق: تحقق من البيانات والأسماء والأرقام مع مصادر موثوقة. قارن نماذج متعددة: اطرح السؤال ذاته على نماذج مختلفة. الاختلاف الشديد يُشير إلى أن واحدًا على الأقل قد هلوس.',
             },
             {
               q: 'هل يجب أن أتوقف عن استخدام الذكاء الاصطناعي إذا كان يهلوس؟',
@@ -1379,6 +1382,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'Os modelos de linguagem afirmam coisas falsas com fluência e confiança. Esses erros, chamados de alucinações, vão de citações inventadas a fatos fabricados.',
       leadAnswerBlock: '**Alucinações de IA são afirmações fluentes, porém falsas, que os modelos de linguagem geram porque preveem o texto provável em vez de consultar fatos. Você as detecta verificando fontes e comparando respostas, e as reduz com grounding, restrições claras e revisão humana.**',
       publishDate: '2026-03-22',
+      dateModified: '2026-11-06',
       seoTitle: 'Alucinações de IA: Como detectar e reduzir em 2026',
       metaDescription: 'Por que a IA alucina, casos reais e como detectar alucinações: verifique fontes, compare respostas e reduza erros com prompts, RAG e revisão humana.',
       readTime: '12 min de leitura',
@@ -1390,7 +1394,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Alucinações de IA: Por que a IA inventa coisas — e como pará-las',
         description: 'Por que os modelos de linguagem alucinam, como detectar alucinações e técnicas para reduzi-las. Aprenda estratégias de design de prompts, abordagens em nível de sistema e pontuação de consenso multi-modelo.',
         datePublished: '2026-03-22',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/pt/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'pt-BR',
         keywords: ['alucinações de IA', 'alucinações LLM', 'detecção de alucinações', 'prompt engineering', 'consenso multi-modelo', 'RAG', 'geração aumentada por recuperação'],
@@ -1452,7 +1456,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Tipos comuns de alucinações',
           content: 'As alucinações seguem padrões reconhecíveis. Identificar o tipo ajuda a direcionar as estratégias de mitigação.',
           rows: [
-            { 'Type': 'Fontes inventadas', 'Example': 'Citação de um artigo revisado por pares que não existe; nomes de autores e anos de publicação falsos', 'Why It Happens': 'O modelo foi treinado em milhões de citações e aprendeu padrões semelhantes a citações, depois inventa novas', 'Severity': 'Muito alta' },
+            { 'Type': 'Fontes inventadas', 'Example': 'Citação de um artigo revisado por pares que não existe; nomes de autores e anos de publicação falsos', 'Why It Happens': 'O modelo foi treinado em milhões de citações e provavelmente aprendeu padrões semelhantes a citações, depois inventa novas', 'Severity': 'Muito alta' },
             { 'Type': 'Fatos errados (datas, números, nomes)', 'Example': 'Afirmar um evento histórico no ano errado; detalhes biográficos incorretos', 'Why It Happens': 'Os dados de treinamento são incompletos ou contraditórios; o modelo escolhe um número plausível', 'Severity': 'Muito alta' },
             { 'Type': 'URLs e e-mails falsos', 'Example': 'Fornecer um link ou endereço de e-mail que não funciona ou não pertence à organização mencionada', 'Why It Happens': 'O modelo aprendeu padrões de URL e e-mail e gera novos que são realistas mas fictícios', 'Severity': 'Alta' },
             { 'Type': 'Perda de contexto', 'Example': 'Responder a uma pergunta como se o modelo tivesse entendido o contexto anterior, quando na verdade perdeu o controle', 'Why It Happens': 'A janela de contexto é finita; documentos longos fazem com que os detalhes anteriores desapareçam da atenção do modelo', 'Severity': 'Alta' },
@@ -1468,7 +1472,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         promptDesignIntro: {
           title: 'Como o design do prompt afeta o risco de alucinação',
-          content: 'Seus prompts encorajam ou desencorajam as alucinações. A diferença é mensurável.',
+          content: 'Seus prompts encorajam ou desencorajam as alucinações. A redação do prompt muda a frequência com que um modelo faz suposições; teste isso na sua própria tarefa.',
         },
         riskPrompts: {
           title: 'Prompts que aumentam o risco de alucinação:',
@@ -1536,7 +1540,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         systemItems: {
           items: [
             '**Retrieval-Augmented Generation (RAG).** Entregue ao modelo um documento, uma base de conhecimento ou um conjunto de dados específico e peça que responda somente com esse conteúdo. Isso ancora as respostas em dados reais em vez dos dados de treinamento e reduz alucinações sobre informações que o modelo teria de adivinhar; não as elimina, porque o modelo ainda pode ler ou citar mal o texto recuperado. Ferramentas como LangChain e bancos de dados vetoriais implementam esse padrão. Veja nosso guia completo: [RAG: como ancorar as respostas da IA em dados reais](/pt/prompt-engineering/rag-explained).',
-            '**Chamada de ferramentas e uso de funções.** Permita que o modelo chame funções externas para cálculos, pesquisas em banco de dados ou verificação de fatos. Em vez de inventar uma estatística, o modelo chama uma função para recuperá-la. Isso remove completamente a tentação de alucinar para domínios específicos.',
+            '**Chamada de ferramentas e uso de funções.** Permita que o modelo chame funções externas para cálculos, pesquisas em banco de dados ou verificação de fatos. Em vez de inventar uma estatística, o modelo chama uma função para recuperá-la. Isso evita ter de adivinhar os dados que a função retorna, mas o modelo ainda pode interpretar ou usar mal o resultado.',
             '**Revisão humana e verificação por especialistas.** Para decisões críticas — médicas, jurídicas, financeiras, críticas para segurança — sempre tenha um humano (de preferência um especialista) verificando as respostas geradas por IA. Nenhuma técnica de prompt substitui o julgamento de um especialista.',
             '**Fluxos de trabalho de verificação de fatos automatizados.** Execute as saídas do modelo por sistemas automatizados (APIs de verificação de fatos, validação de URL, verificação de citações) antes de mostrá-las aos usuários. Isso detecta alucinações em escala sem revisão manual de cada saída.',
           ],
@@ -1657,7 +1661,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Como posso verificar rapidamente se uma resposta alucinada?',
-              a: 'Verifique as fontes: Clique nas URLs ou pesquise os artigos citados. Se não existirem, a resposta alucinada. Verifique os fatos: Confira datas, nomes e números com fontes confiáveis. Compare vários modelos: Faça a mesma pergunta a modelos diferentes. Forte desacordo sugere que pelo menos um está alucinando. Aplique conhecimento de domínio: Se você conhece o campo, leia criticamente em busca de implausibilidade sutil — alucinações frequentemente têm sinais reveladores para leitores especialistas.',
+              a: 'Verifique as fontes: Clique nas URLs ou pesquise os artigos citados. Se não existirem, trate a resposta como não confiável e verifique-a. Verifique os fatos: Confira datas, nomes e números com fontes confiáveis. Compare vários modelos: Faça a mesma pergunta a modelos diferentes. Forte desacordo sugere que pelo menos um está alucinando. Aplique conhecimento de domínio: Se você conhece o campo, leia criticamente em busca de implausibilidade sutil — alucinações frequentemente têm sinais reveladores para leitores especialistas.',
             },
             {
               q: 'Devo parar de usar IA se ela alucina?',
@@ -1719,6 +1723,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       leadAnswerBlock: '**Les hallucinations de l\'IA sont des affirmations fluides mais fausses, produites parce que les modèles prédisent le texte probable au lieu de consulter des faits. On les détecte en vérifiant les sources et les réponses, et on les réduit par l\'ancrage, des consignes claires et une relecture humaine.**',
       metaDescription: 'Pourquoi l\'IA hallucine, cas réels et détection des hallucinations : vérifiez les sources, comparez les réponses, réduisez les erreurs (prompts, RAG).',
       publishDate: '2026-03-22',
+      dateModified: '2026-11-06',
       readTime: '12 min de lecture',
       educationalLevel: 'Beginner',
       primaryTerm: 'Hallucination IA',
@@ -1728,7 +1733,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Hallucinations IA: Pourquoi l\'IA Invente des Choses — et Comment les Arrêter',
         description: 'Pourquoi les modèles de langage hallucinent, comment détecter les hallucinations et techniques pour les réduire. Apprenez les stratégies de conception de prompts, les approches au niveau du système et le consensus multi-modèles.',
         datePublished: '2026-03-22',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'fr',
         keywords: ['hallucinations IA', 'hallucinations LLM', 'détection hallucination', 'prompt engineering', 'consensus multi-modèles', 'RAG', 'génération augmentée par récupération'],
@@ -1782,7 +1787,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Types courants d\'hallucinations',
           content: 'Les hallucinations viennent en motifs reconnaissables. Identifier le type vous aide à cibler les stratégies d\'atténuation.',
           rows: [
-            { 'Type': 'Sources inventées', 'Example': 'Citation d\'un article évalué par les pairs qui n\'existe pas; faux noms d\'auteurs et années de publication', 'Why It Happens': 'Le modèle a été entraîné sur des millions de citations et a appris des modèles de type citation, puis en invente de nouveaux', 'Severity': 'Très élevée' },
+            { 'Type': 'Sources inventées', 'Example': 'Citation d\'un article évalué par les pairs qui n\'existe pas; faux noms d\'auteurs et années de publication', 'Why It Happens': 'Le modèle a été entraîné sur des millions de citations et a probablement appris des modèles de type citation, puis en invente de nouveaux', 'Severity': 'Très élevée' },
             { 'Type': 'Mauvais faits (dates, nombres, noms)', 'Example': 'Énoncer un événement historique en mauvaise année; détails biographiques incorrects', 'Why It Happens': 'Les données d\'entraînement sont incomplètes ou contradictoires; le modèle choisit un nombre plausible', 'Severity': 'Très élevée' },
             { 'Type': 'URL et e-mails fabriqués', 'Example': 'Fournir un lien ou une adresse e-mail qui ne se résout pas ou n\'appartient pas à l\'organisation revendiquée', 'Why It Happens': 'Le modèle appris les modèles d\'URL et d\'e-mail et génère de nouveaux qui semblent réalistes mais sont fictifs', 'Severity': 'Élevée' },
             { 'Type': 'Perte de contexte', 'Example': 'Répondre à une question comme si le modèle avait compris le contexte antérieur, alors qu\'il a en réalité perdu de vue', 'Why It Happens': 'La fenêtre de contexte est finie; les longs documents font que les détails antérieurs s\'estompent de l\'attention du modèle', 'Severity': 'Élevée' },
@@ -1798,7 +1803,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         promptDesignIntro: {
           title: 'Comment la conception des prompts affecte le risque d\'hallucination',
-          content: 'Vos prompts encouragent ou découragent les hallucinations. La différence est mesurable.',
+          content: 'Vos prompts encouragent ou découragent les hallucinations. La formulation d\'un prompt change la fréquence à laquelle un modèle devine ; testez-la sur votre propre tâche.',
         },
         riskPrompts: {
           title: 'Prompts augmentant le risque d\'hallucination:',
@@ -1866,7 +1871,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         systemItems: {
           items: [
             '**Retrieval-Augmented Generation (RAG).** Fournissez au modèle un document, une base de connaissances ou un jeu de données précis et demandez-lui de répondre uniquement à partir de ce contenu. Les réponses s\'appuient ainsi sur des données réelles plutôt que sur les données d\'entraînement, ce qui réduit les hallucinations sur des informations que le modèle devrait sinon deviner ; cela ne les supprime pas, car le modèle peut encore mal lire ou mal citer le texte récupéré. Des outils comme LangChain et les bases de données vectorielles mettent en œuvre ce schéma. Consultez notre guide complet : [RAG : ancrer les réponses de l\'IA dans des données réelles](/fr/prompt-engineering/rag-explained).',
-            '**Appel de fonction et utilisation de fonctions.** Laissez le modèle appeler des fonctions externes pour les calculs, les recherches en base de données ou la vérification des faits. Au lieu d\'inventer une statistique, le modèle appelle une fonction pour la récupérer. Cela supprime entièrement la tentation d\'halluciner pour des domaines spécifiques.',
+            '**Appel de fonction et utilisation de fonctions.** Laissez le modèle appeler des fonctions externes pour les calculs, les recherches en base de données ou la vérification des faits. Au lieu d\'inventer une statistique, le modèle appelle une fonction pour la récupérer. Cela évite d\'avoir à deviner les faits que la fonction renvoie, mais le modèle peut encore mal lire ou mal utiliser le résultat.',
             '**Examen humain et vérification par les experts.** Pour les décisions critiques – médicales, juridiques, financières, critiques pour la sécurité – laissez toujours un humain (de préférence un expert) vérifier les réponses générées par l\'IA. Aucune technique de prompt ne remplace le jugement d\'un expert.',
             '**Workflows de vérification automatisée des faits.** Exécutez les résultats du modèle par des systèmes automatisés (API de vérification des faits, validation d\'URL, vérification des citations) avant de les montrer aux utilisateurs. Cela détecte les hallucinations à l\'échelle sans examen manuel de chaque sortie.',
           ],
@@ -1987,7 +1992,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Comment puis-je vérifier rapidement si une réponse est hallucée?',
-              a: 'Vérifiez les sources: Cliquez sur les URL ou recherchez les articles cités. S\'ils n\'existent pas, la réponse est hallucée. Vérifiez les faits: Vérifiez les dates, les noms et les nombres contre les sources fiables. Comparez plusieurs modèles: Posez la même question à différents modèles. L\'désaccord tranchant suggère qu\'au moins un hallucine. Appliquez l\'expertise du domaine: Si vous connaissez le domaine, lisez attentivement les plausibilités subtiles – les hallucinations ont souvent des signes révélateurs pour les lecteurs experts.',
+              a: 'Vérifiez les sources: Cliquez sur les URL ou recherchez les articles cités. S\'ils n\'existent pas, considérez la réponse comme peu fiable et vérifiez-la. Vérifiez les faits: Vérifiez les dates, les noms et les nombres contre les sources fiables. Comparez plusieurs modèles: Posez la même question à différents modèles. L\'désaccord tranchant suggère qu\'au moins un hallucine. Appliquez l\'expertise du domaine: Si vous connaissez le domaine, lisez attentivement les plausibilités subtiles – les hallucinations ont souvent des signes révélateurs pour les lecteurs experts.',
             },
             {
               q: 'Dois-je cesser d\'utiliser l\'IA si elle hallucine?',
@@ -2048,6 +2053,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       leadAnswerBlock: '**AIの幻覚とは、言語モデルが事実を調べるのではなく「それらしい文章」を予測して生成する、流暢でも誤った記述です。出典の確認と回答の比較で見抜き、根拠の提示、明確な制約、人による確認で減らせます。**',
       metaDescription: 'AIがもっともらしい嘘を出す理由、実際の事例、幻覚の検出法を解説。出典確認や回答比較で見抜き、プロンプト・RAG・人の確認で減らす方法を紹介します。',
       publishDate: '2026-03-22',
+      dateModified: '2026-11-06',
       readTime: '12分で読める',
       educationalLevel: 'Beginner',
       primaryTerm: 'AIハルシネーション',
@@ -2057,7 +2063,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'AIハルシネーション：AIがなぜ物を作り出すのか — そしてそれを止める方法',
         description: '言語モデルが幻覚を起こす理由、幻覚を検出する方法、およびそれらを削減するための技術。プロンプト設計戦略、システムレベルのアプローチ、およびマルチモデルコンセンサススコアリングについて学ぶ。',
         datePublished: '2026-03-22',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'ja',
         keywords: ['AI幻覚', 'LLM幻覚', '幻覚検出', 'プロンプトエンジニアリング', 'マルチモデルコンセンサス', 'RAG', '検索増強生成'],
@@ -2110,7 +2116,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'ハルシネーションの一般的なタイプ',
           content: 'ハルシネーションは認識可能なパターンで来ます。タイプを識別することは、緩和戦略をターゲットするのに役立ちます。',
           rows: [
-            { 'Type': '架空の出典', 'Example': 'ピアレビュー済みのペーパーへの引用が存在しない；偽の著者名と公開年', 'Why It Happens': 'モデルは数百万の引用でトレーニングされ、引用のようなパターンを学習し、新しい引用を発明', 'Severity': '非常に高い' },
+            { 'Type': '架空の出典', 'Example': 'ピアレビュー済みのペーパーへの引用が存在しない；偽の著者名と公開年', 'Why It Happens': 'モデルは数百万の引用でトレーニングされ、引用のようなパターンを学習した可能性が高く、新しい引用を発明', 'Severity': '非常に高い' },
             { 'Type': '誤った事実（日付、数字、名前）', 'Example': '歴史的なイベントを誤った年に述べ；不正確な伝記の詳細', 'Why It Happens': 'トレーニングデータは不完全または矛盾している；モデルはもっともらしく聞こえる数字を選択', 'Severity': '非常に高い' },
             { 'Type': '偽造URL および電子メール', 'Example': 'リンクまたはメールアドレスを提供し、解決しないか、名乗っている組織に属していない', 'Why It Happens': 'モデルはURLとメールのパターンを学習し、現実的だが架空の新しいパターンを生成', 'Severity': '高い' },
             { 'Type': 'コンテキスト損失', 'Example': 'モデルが以前のコンテキストを理解しているかのように質問に答え、実際には失われた', 'Why It Happens': 'コンテキストウィンドウは有限です；長いドキュメントは以前の詳細をモデルの注意から減退させます', 'Severity': '高い' },
@@ -2126,7 +2132,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         promptDesignIntro: {
           title: 'プロンプト設計がハルシネーションリスクに影響を与える方法',
-          content: 'あなたのプロンプトはハルシネーションを奨励または落胆させます。違いは測定可能です。',
+          content: 'あなたのプロンプトはハルシネーションを奨励または落胆させます。プロンプトの書き方によって、モデルが推測する頻度は変わります。ご自身のタスクで試してください。',
         },
         riskPrompts: {
           title: 'ハルシネーションリスクを増加させるプロンプト：',
@@ -2194,8 +2200,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         systemItems: {
           items: [
             '**検索拡張生成（RAG）。** 特定の文書、ナレッジベース、データセットをモデルに渡し、その内容だけで答えるよう指示します。回答が学習データではなく実データに基づくため、モデルが推測せざるを得ない情報についての幻覚は減りますが、なくなるわけではありません。取得したテキストを読み違えたり誤って引用したりする可能性が残るためです。LangChainやベクトルデータベースなどのツールがこのパターンを実装しています。詳しくは [RAG：AIの回答を実データに根拠づける方法](/ja/prompt-engineering/rag-explained) をご覧ください。',
-            '**ツール呼び出しと関数の使用。** モデルが計算、データベースルックアップ、または事実確認のための外部関数を呼び出すことを許可します。統計を発明する代わりに、モデルはそれを取得するために関数を呼び出します。これは特定のドメインに対してハルシネーションする誘惑を完全に排除します。',
-            '**人間のレビューと専門家検証。** 重大な決定—医療、法律、財務、安全クリティカル—については、常に人間（理想的には専門家）がAIで生成された回答を確認させてください。プロンプト技術はエキスパートジャッジメントの代わりになりません。',
+            '**ツール呼び出しと関数の使用。** モデルが計算、データベースルックアップ、または事実確認のための外部関数を呼び出すことを許可します。統計を発明する代わりに、モデルはそれを取得するために関数を呼び出します。関数が返す事実を推測する必要がなくなりますが、モデルが結果を読み違えたり誤用したりする可能性は残ります。',
+            '**人間のレビューと専門家検証。** 重大な決定—医療、法律、財務、安全クリティカル—については、常に人間（理想的には専門家）がAIで生成された回答を確認させてください。プロンプト技術は専門家の判断の代わりになりません。',
             '**自動ファクトチェックワークフロー。** 自動システム（ファクトチェックAPI、URL検証、引用検証）を通じてモデル出力を実行してから、ユーザーに表示します。これは、すべての出力の手動レビューなしにハルシネーションを大規模に検出します。',
           ],
         },
@@ -2238,13 +2244,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**医療および健康決定** —誤った薬物名、用量、または症状の解釈は患者に害を及ぼす可能性があります',
             '**法律およびコンプライアンス** —作成された判例法、規制要件、または前例は、高額なエラーまたは違反につながる可能性があります',
-            '**財務アドバイス** —誤った市場データ、不正確な税情報、または製造されたパフォーマンスメトリックは、高リスク決定を誤ったります',
+            '**財務アドバイス** —誤った市場データ、不正確な税情報、でっち上げられた業績指標は、重大な判断を誤らせます',
             '**安全クリティカルシステム** —コードレビュー、建築決定、またはセキュリティ分析のハルシネーションは、脆弱性またはバグを導入できます',
-            '**パブリック帰属** —あなたの名前またはブランドの下で公開されたもの、幻想は信頼性を傷つけることが確認する必要があります',
+            '**公開時の責任** —あなたの名前やブランドで公開するものは、必ず事実確認を行ってください。ハルシネーションは信頼性を損ないます。',
           ],
         },
         criticalPrinciple: {
-          content: '**重要な原則：**完全なプロンプトとコンセンサスチェックであっても、人的検証は高リスク決定に不可欠です。AIを時間節約とファーストパスツール使用し、エキスパートジャッジメントまたはプライマリソース検証の交換ではなく。\n\n自己批評技術が複雑な推論タスクでエラーをさらに削減する方法を学びます。',
+          content: '**重要な原則：**完全なプロンプトとコンセンサスチェックであっても、人的検証は高リスク決定に不可欠です。AIは時間を節約する一次チェックのツールとして使い、専門家の判断や一次情報による検証の代わりにはしないでください。\n\n自己批評技術が複雑な推論タスクでエラーをさらに削減する方法を学びます。',
         },
         checklist: {
           title: '実践的なチェックリスト：重大なプロンプトを送信する前に',
@@ -2299,7 +2305,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             {
               q: 'ハルシネーションは完全に排除できますか？',
-              a: 'いいえ。ハルシネーションはどの言語モデルが機能するか固有—彼らは検証済みストアから事実を取得するのではなくテキストパターンを予測します。優れたプロンプト設計、RAGなどのツール、マルチモデルコンセンサスを大幅に削減できますが、現在のLLMアーキテクチャを考えると完全な除去は不可能です。人的検証は高リスク決定のために必要なままです。',
+              a: 'いいえ。ハルシネーションは言語モデルの仕組みに固有のものです。モデルは検証済みのデータストアから事実を取り出すのではなく、テキストのパターンを予測します。優れたプロンプト設計、RAGなどのツール、マルチモデルコンセンサスによって大幅に減らせますが、現在のLLMのアーキテクチャでは完全になくすことはできません。高リスクの判断では、人による検証が引き続き必要です。',
             },
             {
               q: 'モデルが間違っている場合、なぜそんなに自信を持っているようですか？',
@@ -2311,11 +2317,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'モデルをインターネットに接続すると、ハルシネーションが削除されますか？',
-              a: '一部。リアルタイムWebアクセスは現在のイベントと最近のファクトに役立ちますが、コアの問題を解決しません：モデルはまだ詳細を発明し、検索結果を誤ったり、実際に取得しなかったコンテンツについてハルシネーション。インターネットアクセスはハルシネーションの1つのクラスを削減するツールであり、治療法ではありません。',
+              a: '一部は減らせます。リアルタイムのWebアクセスは最新の出来事や最近の事実に役立ちますが、根本的な問題は解決しません。モデルは依然として詳細を作り出したり、検索結果を誤って解釈したり、実際には取得していない内容についてハルシネーションを起こしたりします。インターネットアクセスはハルシネーションの一種類を減らすための手段であり、万能の解決策ではありません。',
             },
             {
               q: '回答がハルシネーションであるかどうかを素早く確認するにはどうすればよいですか？',
-              a: 'ソースを確認する：URLをクリックするか、引用されたペーパーを検索します。存在しない場合、回答はハルシネーションです。事実を確認する：信頼できるソースに対して日付、名前、数字を確認します。複数のモデルを比較する：異なるモデルに同じ質問をしてください。鋭い意見の不一致は、少なくとも1つがハルシネーションしていることを示唆しています。ドメインの専門知識を適用する：フィールドを知っているなら、微妙な不可能について批判的に読む—ハルシネーションはしばしば専門家の読者にとって暴露のしるしを持っています。',
+              a: 'ソースを確認する：URLを開くか、引用された論文を検索してください。存在しない場合は、回答を信頼できないものとして扱い、検証してください。事実を確認する：日付、名前、数字を信頼できる情報源と照合してください。複数のモデルを比較する：異なるモデルに同じ質問をしてください。意見が大きく食い違う場合は、少なくとも1つがハルシネーションを起こしている可能性があります。専門知識を活かす：その分野に詳しい場合は、細かな不自然さに注意して批判的に読んでください。ハルシネーションには、専門家が見ればわかる兆候がしばしばあります。',
             },
             {
               q: 'ハルシネーションする場合、AIの使用を停止する必要があります？',
@@ -2376,6 +2382,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       leadAnswerBlock: '**AI幻觉是语言模型生成的流畅但错误的陈述，原因是模型预测的是“可能出现的文字”，而不是查询事实。核对来源并对比多个回答即可发现幻觉，通过事实依据、明确约束和人工审核可以减少幻觉。**',
       metaDescription: '解析AI幻觉的成因与真实案例，教你检测幻觉：核对来源、多次提问对比，并通过提示词、RAG检索增强与人工审核降低错误，附检测方法与提示词示例。',
       publishDate: '2026-03-22',
+      dateModified: '2026-11-06',
       readTime: '12分钟阅读',
       educationalLevel: 'Beginner',
       primaryTerm: 'AI幻觉',
@@ -2385,7 +2392,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'AI幻觉：为什么AI会编造东西——以及如何停止它们',
         description: '语言模型为什么会产生幻觉，如何检测幻觉，以及减少幻觉的技术。学习提示设计策略、系统级方法和多模型共识评分。',
         datePublished: '2026-03-22',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/zh/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'zh',
         keywords: ['AI幻觉', 'LLM幻觉', '幻觉检测', '提示工程', '多模型共识', 'RAG', '检索增强生成'],
@@ -2438,7 +2445,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '常见的幻觉类型',
           content: '幻觉以可识别的模式出现。识别类型可帮助您针对缓解策略。',
           rows: [
-            { 'Type': '虚假来源', 'Example': '引用不存在的同行评审论文;假作者名和出版年份', 'Why It Happens': '模型在数百万引用上接受培训并学习了类似引用的模式，然后发明新的', 'Severity': '非常高' },
+            { 'Type': '虚假来源', 'Example': '引用不存在的同行评审论文;假作者名和出版年份', 'Why It Happens': '模型在数百万引用上接受培训并很可能学习了类似引用的模式，然后发明新的', 'Severity': '非常高' },
             { 'Type': '错误的事实（日期、数字、名称）', 'Example': '以错误的一年说出历史事件;不正确的传记细节', 'Why It Happens': '训练数据不完整或冲突;模型选择看起来合理的数字', 'Severity': '非常高' },
             { 'Type': '伪造的URL和电子邮件', 'Example': '提供未解析的链接或电子邮件地址，或不属于声称的组织', 'Why It Happens': '模型学到了URL和电子邮件模式，并生成看起来逼真但虚构的新模式', 'Severity': '高' },
             { 'Type': '背景丧失', 'Example': '回答一个问题，好像模型理解了早期的上下文，当它实际上失去了踪迹', 'Why It Happens': '上下文窗口是有限的;长文档导致早期细节从模型的注意力褪色', 'Severity': '高' },
@@ -2454,7 +2461,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         promptDesignIntro: {
           title: '提示设计如何影响幻觉风险',
-          content: '您的提示鼓励或阻止幻觉。这种差异是可测量的。',
+          content: '您的提示鼓励或阻止幻觉。提示的措辞会改变模型猜测的频率，请在您自己的任务上测试。',
         },
         riskPrompts: {
           title: '增加幻觉风险的提示：',
@@ -2522,7 +2529,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         systemItems: {
           items: [
             '**检索增强生成（RAG）。** 把特定文档、知识库或数据集提供给模型，并要求它只根据这些内容作答。这样回答建立在真实数据而非训练数据之上，可以减少模型原本只能猜测的信息所导致的幻觉；但它不能消除幻觉，因为模型仍可能误读或误引检索到的文本。LangChain 和向量数据库等工具实现了这一模式。详见我们的完整指南：[RAG：如何让AI回答基于真实数据](/zh/prompt-engineering/rag-explained)。',
-            '**工具调用和函数使用。** 让模型调用外部函数进行计算、数据库查询或事实检查。模型调用函数来检索它，而不是发明统计数据。这完全消除了特定域对幻觉的诱惑。',
+            '**工具调用和函数使用。** 让模型调用外部函数进行计算、数据库查询或事实检查。模型调用函数来检索它，而不是发明统计数据。这样模型无需猜测函数返回的事实，但仍可能误读或误用返回结果。',
             '**人工审查和专家验证。** 对于关键决定—医学、法律、财务、安全关键—始终让人类（最好是专家）验证AI生成的答案。没有提示技术替代专家判断。',
             '**自动事实检查工作流程。** 在向用户显示模型输出之前，通过自动化系统（事实检查API、URL验证、引用验证）运行模型输出。这可以大规模检测幻觉，而无需手动审查每个输出。',
           ],
@@ -2627,7 +2634,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             {
               q: '幻觉能完全消除吗？',
-              a: '否。幻觉本质上是语言模型工作的方式—他们预测文本模式而不是从验证的存储中检索事实。您可以使用良好的提示设计、RAG等工具和多模型共识来显着减少它们，但给定当前的LLM体系结构，完全消除是不可能的。人工验证仍然对高风险决定是必要的。',
+              a: '否。幻觉是语言模型工作方式所固有的：模型预测文本模式，而不是从经过验证的数据库中检索事实。良好的提示设计、RAG等工具和多模型共识可以显著减少幻觉，但就目前的LLM架构而言，完全消除是不可能的。对于高风险决策，仍然需要人工核实。',
             },
             {
               q: '当它错误时，模型为什么听起来那么自信？',
@@ -2643,11 +2650,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '我如何快速检查答案是否幻觉？',
-              a: '检查来源：点击URL或搜索引用的论文。如果他们不存在，答案是幻觉。验证事实：根据可信源检查日期、名字和数字。比较多个模型：问不同的模型相同的问题。尖锐的分歧表明至少一个是幻觉。应用域专知识：如果您知道该领域，请阅读微妙的不可能—幻觉对专家读者通常有暴露的迹象。',
+              a: '检查来源：点击URL或搜索所引用的论文。如果它们不存在，请把该答案视为不可靠并加以核实。核实事实：对照可信来源检查日期、姓名和数字。比较多个模型：向不同的模型提出同一个问题，若分歧明显，则至少有一个在产生幻觉。运用专业知识：如果您熟悉该领域，请带着批判的眼光阅读，留意细微的不合理之处——幻觉对专家读者往往有明显的破绽。',
             },
             {
               q: '如果它幻觉，我应该停止使用AI吗？',
-              a: '否。将AI与验证一起战略性地使用。对于头脑风暴、起草和探索性工作，幻觉是一个小烦恼。对于事实关键的工作（研究、合规、医疗决定、财务建议），将AI用作起点，然后用受信任的来源或专家审查验证所有内容。',
+              a: '否。应当有策略地使用AI，并配合核实。对于头脑风暴、起草和探索性工作，幻觉只是小麻烦。对于事实要求高的工作（研究、合规、医疗决定、财务建议），把AI当作起点，然后用可信来源或专家审查核实所有内容。',
             },
             {
               q: '幻觉和真正的错误之间的区别是什么？',
@@ -2703,6 +2710,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     intro: '대형 언어 모델은 거짓 정보를 유창하고 자신 있게 말합니다. 환각이라 불리는 이러한 오류는 지어낸 인용부터 조작된 사실까지 다양합니다.',
     leadAnswerBlock: '**AI 환각은 언어 모델이 사실을 조회하지 않고 그럴듯한 텍스트를 예측하기 때문에 생기는, 유창하지만 거짓인 진술입니다. 출처 확인과 답변 비교로 탐지하고, 근거 제공, 명확한 제약, 사람의 검토로 줄일 수 있습니다.**',
     publishDate: '2026-03-22',
+    dateModified: '2026-11-06',
     seoTitle: 'AI 환각(Hallucination): 탐지 및 감소 방법 2026',
     metaDescription: 'AI가 환각을 일으키는 이유와 실제 사례, 환각 탐지법을 설명합니다. 출처 확인과 답변 비교로 찾고 프롬프트·RAG·검토로 줄이는 방법을 다룹니다.',
     readTime: '12분 분량',
@@ -2714,7 +2722,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'AI 환각: AI가 사실을 꾸며내는 이유와 이를 막는 방법',
       description: '언어 모델이 환각을 일으키는 이유, 환각을 탐지하는 방법, 이를 줄이는 기술. 프롬프트 설계 전략, 시스템 수준 접근법, 다중 모델 합의 점수를 배우십시오.',
       datePublished: '2026-03-22',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       url: 'https://www.promptquorum.com/ko/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
       inLanguage: 'ko',
       keywords: ['AI 환각', 'LLM 환각', '환각 탐지', '프롬프트 엔지니어링', '다중 모델 합의', 'RAG'],
@@ -2768,7 +2776,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '환각은 인식 가능한 패턴을 따릅니다. 유형을 식별하면 특정 완화 전략을 선택하는 데 도움이 됩니다.',
         columns: ['유형', '예시', '발생 이유', '심각도'],
         rows: [
-          { '유형': '만들어낸 출처', '예시': '존재하지 않는 학술 저널 인용; 만들어낸 저자 이름과 출판 연도', '발생 이유': '모델은 수백만 개의 인용문으로 학습했으며 인용문과 유사한 패턴을 배운 다음 새로운 것을 만들어냅니다', '심각도': '매우 높음' },
+          { '유형': '만들어낸 출처', '예시': '존재하지 않는 학술 저널 인용; 만들어낸 저자 이름과 출판 연도', '발생 이유': '모델은 수백만 개의 인용문으로 학습했으며 인용문과 유사한 패턴을 배웠을 가능성이 높고, 그 결과 새로운 것을 만들어냅니다', '심각도': '매우 높음' },
           { '유형': '잘못된 사실(날짜, 숫자, 이름)', '예시': '역사적 사건을 잘못된 연도에 기재; 잘못된 전기적 세부 사항', '발생 이유': '학습 데이터가 불완전하거나 모순됨; 모델이 그럴듯하게 들리는 숫자를 선택함', '심각도': '매우 높음' },
           { '유형': '거짓 URL 및 이메일', '예시': '작동하지 않거나 주장된 조직에 속하지 않는 링크 또는 이메일 주소 제공', '발생 이유': '모델은 URL 및 이메일 패턴을 학습했으며 현실적이지만 허구적인 새로운 패턴을 생성합니다', '심각도': '높음' },
           { '유형': '컨텍스트 손실', '예시': '모델이 이전 컨텍스트를 이해한 것처럼 질문에 응답하지만 실제로는 맥락을 잃음', '발생 이유': '컨텍스트 윈도우가 유한함; 긴 문서는 이전 세부 사항이 모델의 주의에서 사라지게 함', '심각도': '높음' },
@@ -2783,7 +2791,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       promptDesignIntro: {
         title: '프롬프트 설계가 환각 위험에 미치는 영향',
-        content: '프롬프트는 환각을 장려하거나 억제합니다. 차이는 측정 가능합니다.',
+        content: '프롬프트는 환각을 장려하거나 억제합니다. 프롬프트 표현 방식에 따라 모델이 추측하는 빈도가 달라집니다. 직접 하시는 작업에서 테스트해 보십시오.',
       },
       riskPrompts: {
         title: '환각 위험을 높이는 프롬프트:',
@@ -2851,7 +2859,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       systemItems: {
         items: [
           '**검색 증강 생성(RAG).** 특정 문서, 지식 베이스, 데이터셋을 모델에 제공하고 그 내용만으로 답하게 합니다. 답변이 학습 데이터가 아닌 실제 데이터에 근거하므로 모델이 추측해야 했을 정보에 대한 환각이 줄어듭니다. 다만 환각이 없어지는 것은 아닙니다. 모델이 검색된 텍스트를 잘못 읽거나 잘못 인용할 수 있기 때문입니다. LangChain과 벡터 데이터베이스 같은 도구가 이 패턴을 구현합니다. 자세한 내용은 [RAG: AI 답변을 실제 데이터에 근거하게 하는 방법](/ko/prompt-engineering/rag-explained) 가이드를 참고하십시오.',
-          '**도구 호출 및 함수 사용.** 모델이 계산, 데이터베이스 조회, 사실 확인을 위해 외부 함수를 호출하도록 허용하십시오. 통계를 지어내는 대신, 모델이 함수를 호출하여 실제 값을 가져옵니다. 이는 특정 영역에서 환각을 일으킬 유혹 자체를 제거합니다.',
+          '**도구 호출 및 함수 사용.** 모델이 계산, 데이터베이스 조회, 사실 확인을 위해 외부 함수를 호출하도록 허용하십시오. 통계를 지어내는 대신, 모델이 함수를 호출하여 실제 값을 가져옵니다. 이렇게 하면 함수가 반환하는 사실을 추측할 필요가 없지만, 모델이 결과를 잘못 읽거나 잘못 사용할 수 있습니다.',
           '**인간 검토 및 전문가 검증.** 의료, 법률, 재무, 안전과 직결된 중요한 결정에는 항상 사람(가급적 해당 분야 전문가)이 AI가 생성한 답변을 검증해야 합니다. 어떤 프롬프트 기법도 전문가의 판단을 대체할 수 없습니다.',
           '**자동화된 사실 확인 워크플로.** 사용자에게 표시하기 전에 모델 출력을 자동화 시스템(사실 확인 API, URL 검증, 인용 검증)을 통해 처리하십시오. 이를 통해 모든 출력을 수동으로 검토하지 않고도 대규모로 환각을 포착할 수 있습니다.',
         ],
@@ -2972,7 +2980,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '응답이 환각을 일으켰는지 빠르게 확인하려면 어떻게 해야 합니까?',
-            a: '출처 확인: URL을 클릭하거나 인용된 기사를 검색하십시오. 존재하지 않으면 응답이 환각을 일으킨 것입니다. 사실 확인: 신뢰할 수 있는 출처로 데이터, 이름, 숫자를 확인하십시오. 여러 모델 비교: 여러 모델에 같은 질문을 하십시오. 강한 불일치는 적어도 하나가 환각을 일으켰음을 시사합니다.',
+            a: '출처 확인: URL을 클릭하거나 인용된 기사를 검색하십시오. 존재하지 않으면 해당 응답을 신뢰할 수 없는 것으로 보고 검증하십시오. 사실 확인: 신뢰할 수 있는 출처로 데이터, 이름, 숫자를 확인하십시오. 여러 모델 비교: 여러 모델에 같은 질문을 하십시오. 강한 불일치는 적어도 하나가 환각을 일으켰음을 시사합니다.',
           },
           {
             q: '환각이 있다면 AI 사용을 중단해야 합니까?',

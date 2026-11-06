@@ -1172,7 +1172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Opción': 'Windows (MSI)',
-            'Cómo conseguirlo': 'MSI por usuario; ningún release lo incluye: compílalo o usa el artefacto de CI',
+            'Cómo conseguirlo': 'Según la documentación, un MSI por usuario; ningún release lo incluye: compílalo o usa el artefacto de CI',
           },
           {
             'Opción': 'Documentación',
@@ -1628,7 +1628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Option: 'Windows (MSI)',
-            'Comment l’obtenir': 'MSI par utilisateur ; aucune release ne l’inclut : à compiler ou via l’artefact CI',
+            'Comment l’obtenir': 'Selon la documentation, un MSI par utilisateur ; aucune release ne l’inclut : à compiler ou via l’artefact CI',
           },
           {
             Option: 'Documentation',
@@ -1940,7 +1940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet（v1.28.0）は、ローカルの写真ライブラリを採点・選別し、Webギャラリーで閲覧できる無料のMITライセンスのツールで、顔のグループ化と自然言語検索が自分のマシン上で動きます。**プロジェクトのモデルライセンスのページによれば、既定モデルの重みの一部は商用利用が許諾されていません。チャット機能はありません。',
+      '**Facet（v1.28.0）は、ローカルの写真ライブラリを採点・選別し、Webギャラリーで閲覧できる無料のMITライセンスのツールで、顔のグループ化と自然言語検索が自分のマシン上で動きます。**プロジェクトのモデルライセンスのページによれば、既定モデルの重みの一部は商用利用が許諾されていません。',
     quickAnswerTop: {
       ja: {
         question: 'Facetは写真とAIの採点を自分のマシン上にとどめますか。',
@@ -2522,7 +2522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Opção': 'Windows (MSI)',
-            'Onde obter': 'MSI por usuário; nenhum release o inclui: compile ou use o artefato de CI',
+            'Onde obter': 'Segundo a documentação, um MSI por usuário; nenhum release o inclui: compile ou use o artefato de CI',
           },
           {
             'Opção': 'Documentação',
@@ -2833,7 +2833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet (الإصدار v1.28.0) أداة مجانية بترخيص MIT تقيّم مكتبة صور محلية وتفرزها وتتصفحها عبر معرض ويب، مع تجميع الوجوه والبحث بلغة طبيعية على جهازك الخاص.** بحسب صفحة التراخيص في المشروع، بعض أوزان النماذج الافتراضية فيها غير مرخّصة للاستخدام التجاري. ولا تتضمن أي ميزة دردشة.',
+      '**Facet (الإصدار v1.28.0) أداة مجانية بترخيص MIT تقيّم مكتبة صور محلية وتفرزها وتتصفحها عبر معرض ويب، مع تجميع الوجوه والبحث بلغة طبيعية على جهازك الخاص.** بحسب صفحة التراخيص في المشروع، بعض أوزان النماذج الافتراضية فيها غير مرخّصة للاستخدام التجاري.',
     quickAnswerTop: {
       ar: {
         question: 'هل يُبقي Facet صورك وتقييم الذكاء الاصطناعي على جهازك؟',
@@ -3280,7 +3280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet（v1.28.0）是一款免费、采用 MIT 许可证的工具，通过网页图库为本地照片库评分、筛选和浏览，人脸分组与自然语言搜索都在你自己的机器上运行。**据项目的模型许可证页面，其默认模型权重中有一部分未获商业使用许可。它没有聊天功能。',
+      '**Facet（v1.28.0）是一款免费、采用 MIT 许可证的工具，通过网页图库为本地照片库评分、筛选和浏览，人脸分组与自然语言搜索都在你自己的机器上运行。**据项目的模型许可证页面，其默认模型权重中有一部分未获商业使用许可。',
     quickAnswerTop: {
       zh: {
         question: 'Facet 会把照片和 AI 评分留在你自己的机器上吗？',
@@ -3714,7 +3714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Facet(v1.28.0)은 로컬 사진 라이브러리를 웹 갤러리로 점수화·선별·탐색하는 무료 MIT 라이선스 도구이며, 얼굴 묶기와 자연어 검색이 내 컴퓨터에서 실행됩니다.** 프로젝트의 모델 라이선스 페이지에 따르면 기본 모델 가중치 일부는 상업적 사용이 허용되지 않습니다. 채팅 기능은 없습니다.',
+      '**Facet(v1.28.0)은 로컬 사진 라이브러리를 웹 갤러리로 점수화·선별·탐색하는 무료 MIT 라이선스 도구이며, 얼굴 묶기와 자연어 검색이 내 컴퓨터에서 실행됩니다.** 프로젝트의 모델 라이선스 페이지에 따르면 기본 모델 가중치 일부는 상업적 사용이 허용되지 않습니다.',
     quickAnswerTop: {
       ko: {
         question: 'Facet은 사진과 AI 점수화를 내 컴퓨터 안에 두나요?',

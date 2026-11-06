@@ -7,7 +7,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-quantization-6gb-vram-overview-hero-en.webp',
     title: 'Best Quantization for 6 GB VRAM: Which Level Fits?',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     seoTitle: 'Best Quantization for 6 GB VRAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Pick Q4_K_M for 8B models on 6 GB VRAM: a 4.6–5.0 GB file plus a 4k-token KV cache still fits. Q5_K_M is tight; Q6_K and Q8_0 do not fit. Sizes sourced.',
     publishDate: '2026-05-23',
@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/local-llms/llm-quantization-explained',
     siblingBites: ['best-local-llm-6gb-vram', 'what-is-q4-k-m-quantization'],
     is_living_page: false,
-    leadAnswerBlock: '**Q4_K_M is the best quantization for a 6 GB GPU: an 8B model\'s file is 4.6–5.0 GB, so a 4k-token context still fits.** Q5_K_M is tight, and Q6_K and Q8_0 do not fit.',
+    leadAnswerBlock: '**Q4_K_M is the recommended quantization for 8B models on a 6 GB GPU: the file is 4.6–5.0 GB, so by calculation a 4k-token context still fits.** Q5_K_M is tight, and Q6_K and Q8_0 do not fit.',
     quickAnswerTop: {
       en: {
         question: 'What quantization level is best for 6 GB VRAM?',
@@ -94,7 +94,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'How to Choose a Quantization Level for 6 GB VRAM',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Q4_K_M is the highest common quantization level whose 8B model file plus a 4k-token KV cache fits in 6 GB of VRAM.' },
+          { type: 'one-sentence', text: 'Q4_K_M is the highest common quantization level whose 8B model file plus a 4k-token KV cache fits in 6 GB of VRAM by calculation.' },
           { type: 'plain-terms', text: 'Pick the highest quantization level whose model file plus KV cache still fits your VRAM. Lower levels save memory but lose more accuracy; higher levels keep accuracy but need more memory.' },
         ],
         content: [
@@ -106,7 +106,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'Quantization': 'Q2_K', 'Llama 3.1 8B (GiB)': '2.95', 'Qwen3 8B (GB)': 'n/a', 'Qwen3 8B + 4k KV (GiB)': 'n/a', 'On a 6 GB card': 'Fits; largest quality loss' },
           { 'Quantization': 'Q3_K_M', 'Llama 3.1 8B (GiB)': '3.74', 'Qwen3 8B (GB)': 'n/a', 'Qwen3 8B + 4k KV (GiB)': 'n/a', 'On a 6 GB card': 'Fits; lower quality than Q4' },
-          { 'Quantization': 'Q4_K_M', 'Llama 3.1 8B (GiB)': '4.58', 'Qwen3 8B (GB)': '5.03', 'Qwen3 8B + 4k KV (GiB)': '~5.25', 'On a 6 GB card': 'Fits; recommended' },
+          { 'Quantization': 'Q4_K_M', 'Llama 3.1 8B (GiB)': '4.58', 'Qwen3 8B (GB)': '5.03', 'Qwen3 8B + 4k KV (GiB)': '~5.25', 'On a 6 GB card': 'Fits (calculated); recommended' },
           { 'Quantization': 'Q5_K_M', 'Llama 3.1 8B (GiB)': '5.33', 'Qwen3 8B (GB)': '5.85', 'Qwen3 8B + 4k KV (GiB)': '~6.01', 'On a 6 GB card': 'Tight; short context only' },
           { 'Quantization': 'Q6_K', 'Llama 3.1 8B (GiB)': '6.14', 'Qwen3 8B (GB)': '6.73', 'Qwen3 8B + 4k KV (GiB)': '~6.83', 'On a 6 GB card': 'Does not fit' },
           { 'Quantization': 'Q8_0', 'Llama 3.1 8B (GiB)': '7.95', 'Qwen3 8B (GB)': '8.71', 'Qwen3 8B + 4k KV (GiB)': '~8.67', 'On a 6 GB card': 'Does not fit' },
@@ -115,7 +115,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Models That Work at Q4_K_M on 6 GB VRAM',
         content: [
-          'Qwen3 8B is a current 8B option. Its Hugging Face GGUF file at Q4_K_M is 5.03 GB, the license is Apache-2.0, and the model card states 32,768 tokens of native context (131,072 with YaRN); on 6 GB you will run far less. Run `ollama run qwen3:8b` (the [Ollama library](https://ollama.com/library/qwen3:8b) lists 5.2 GB at Q4_K_M).',
+          'Qwen3 8B is a widely used 8B option. Its Hugging Face GGUF file at Q4_K_M is 5.03 GB, the license is Apache-2.0, and the model card states 32,768 tokens of native context (131,072 with YaRN); on 6 GB you will run far less. Run `ollama run qwen3:8b` (the [Ollama library](https://ollama.com/library/qwen3:8b) lists 5.2 GB at Q4_K_M).',
           'Llama 3.1 8B has the smaller file: 4.58 GiB at Q4_K_M in the llama.cpp table, and the Ollama library lists `llama3.1:8b` at 4.9 GB (Q4_K_M), which is the same size in decimal GB. Both fit 6 GB with a short context.',
           'If you need more context headroom than an 8B model leaves, use a smaller model instead of a lower quantization. `ollama run phi4-mini` is a 3.8B model listed at 2.5 GB in the Ollama library. At Q8_0 (8.5 bits per weight in the llama.cpp table) a 3.8B model would be about 4.0 GB by calculation (3.8 × 10⁹ × 8.5 / 8 bytes).',
           'Do not attempt 14B models on 6 GB. Qwen3 14B at Q4_K_M is 9 GB ([Hugging Face](https://huggingface.co/Qwen/Qwen3-14B-GGUF)). Even at the Q2_K rate of 3.16 bits per weight from the llama.cpp table, 14.8 billion parameters need about 5.8 GB (calculated) before any KV cache, and Q2_K has the largest quality loss. Use a smaller model at Q4_K_M instead.',
@@ -162,10 +162,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Beste Quantisierung für 6 GB VRAM 2026',
     metaDescription: 'Q4_K_M für 8B-Modelle bei 6 GB VRAM: 4,6–5,0 GB Datei plus 4k-Token-KV-Cache passen noch. Q5_K_M ist knapp, Q6_K und Q8_0 passen nicht. Mit Quellen.',
     publishDate: '2026-05-23',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
-    leadAnswerBlock: '**Q4_K_M ist die beste Quantisierung für eine 6-GB-GPU: Die Datei eines 8B-Modells ist 4,6–5,0 GB groß, ein 4k-Token-Kontext passt also noch.** Q5_K_M ist knapp, Q6_K und Q8_0 passen nicht.',
+    leadAnswerBlock: '**Für 8B-Modelle auf einer 6-GB-GPU empfiehlt sich Q4_K_M: Die Datei ist 4,6–5,0 GB groß, ein 4k-Token-Kontext passt rechnerisch also noch.** Q5_K_M ist knapp, Q6_K und Q8_0 passen nicht.',
     quickAnswerTop: {
       de: {
         question: 'Welche Quantisierungsstufe ist die beste für 6 GB VRAM?',
@@ -192,7 +192,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'So wählen Sie die Quantisierungsstufe für 6 GB VRAM',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Q4_K_M ist die höchste gängige Quantisierungsstufe, deren 8B-Modelldatei samt 4k-Token-KV-Cache in 6 GB VRAM passt.' },
+          { type: 'one-sentence', text: 'Q4_K_M ist die höchste gängige Quantisierungsstufe, deren 8B-Modelldatei samt 4k-Token-KV-Cache rechnerisch in 6 GB VRAM passt.' },
           { type: 'plain-terms', text: 'Wählen Sie die höchste Quantisierungsstufe, deren Modelldatei plus KV-Cache noch in Ihren VRAM passt. Niedrigere Stufen sparen Speicher, verlieren aber mehr Genauigkeit; höhere behalten die Genauigkeit, brauchen aber mehr Speicher.' },
         ],
         content: [
@@ -204,7 +204,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'Quantisierung': 'Q2_K', 'Llama 3.1 8B (GiB)': '2,95', 'Qwen3 8B (GB)': 'n/a', 'Qwen3 8B + 4k KV (GiB)': 'n/a', 'Auf 6-GB-Karte': 'Passt; größter Qualitätsverlust' },
           { 'Quantisierung': 'Q3_K_M', 'Llama 3.1 8B (GiB)': '3,74', 'Qwen3 8B (GB)': 'n/a', 'Qwen3 8B + 4k KV (GiB)': 'n/a', 'Auf 6-GB-Karte': 'Passt; schlechter als Q4' },
-          { 'Quantisierung': 'Q4_K_M', 'Llama 3.1 8B (GiB)': '4,58', 'Qwen3 8B (GB)': '5,03', 'Qwen3 8B + 4k KV (GiB)': '~5,25', 'Auf 6-GB-Karte': 'Passt; empfohlen' },
+          { 'Quantisierung': 'Q4_K_M', 'Llama 3.1 8B (GiB)': '4,58', 'Qwen3 8B (GB)': '5,03', 'Qwen3 8B + 4k KV (GiB)': '~5,25', 'Auf 6-GB-Karte': 'Passt (berechnet); empfohlen' },
           { 'Quantisierung': 'Q5_K_M', 'Llama 3.1 8B (GiB)': '5,33', 'Qwen3 8B (GB)': '5,85', 'Qwen3 8B + 4k KV (GiB)': '~6,01', 'Auf 6-GB-Karte': 'Knapp; nur kurzer Kontext' },
           { 'Quantisierung': 'Q6_K', 'Llama 3.1 8B (GiB)': '6,14', 'Qwen3 8B (GB)': '6,73', 'Qwen3 8B + 4k KV (GiB)': '~6,83', 'Auf 6-GB-Karte': 'Passt nicht' },
           { 'Quantisierung': 'Q8_0', 'Llama 3.1 8B (GiB)': '7,95', 'Qwen3 8B (GB)': '8,71', 'Qwen3 8B + 4k KV (GiB)': '~8,67', 'Auf 6-GB-Karte': 'Passt nicht' },
@@ -213,7 +213,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Modelle für Q4_K_M auf 6 GB VRAM',
         content: [
-          'Qwen3 8B ist eine aktuelle 8B-Option. Die GGUF-Datei auf Hugging Face ist bei Q4_K_M 5,03 GB groß, die Lizenz ist Apache-2.0, und die Modellkarte nennt 32.768 Token nativen Kontext (131.072 mit YaRN); auf 6 GB nutzen Sie deutlich weniger. Starten Sie mit `ollama run qwen3:8b` (die [Ollama-Bibliothek](https://ollama.com/library/qwen3:8b) nennt 5,2 GB bei Q4_K_M).',
+          'Qwen3 8B ist eine weit verbreitete 8B-Option. Die GGUF-Datei auf Hugging Face ist bei Q4_K_M 5,03 GB groß, die Lizenz ist Apache-2.0, und die Modellkarte nennt 32.768 Token nativen Kontext (131.072 mit YaRN); auf 6 GB nutzen Sie deutlich weniger. Starten Sie mit `ollama run qwen3:8b` (die [Ollama-Bibliothek](https://ollama.com/library/qwen3:8b) nennt 5,2 GB bei Q4_K_M).',
           'Llama 3.1 8B hat die kleinere Datei: 4,58 GiB bei Q4_K_M in der llama.cpp-Tabelle; die Ollama-Bibliothek nennt `llama3.1:8b` mit 4,9 GB (Q4_K_M), das ist dieselbe Größe in dezimalen GB. Beide passen mit kurzem Kontext auf 6 GB.',
           'Brauchen Sie mehr Kontextspielraum, als ein 8B-Modell lässt, nehmen Sie ein kleineres Modell statt einer niedrigeren Quantisierung. `ollama run phi4-mini` ist ein 3,8B-Modell, das die Ollama-Bibliothek mit 2,5 GB listet. Bei Q8_0 (8,5 Bit pro Gewicht laut llama.cpp-Tabelle) wäre ein 3,8B-Modell rechnerisch etwa 4,0 GB groß (3,8 × 10⁹ × 8,5 / 8 Byte).',
           'Versuchen Sie keine 14B-Modelle auf 6 GB. Qwen3 14B bei Q4_K_M ist 9 GB groß ([Hugging Face](https://huggingface.co/Qwen/Qwen3-14B-GGUF)). Selbst mit der Q2_K-Rate von 3,16 Bit pro Gewicht aus der llama.cpp-Tabelle brauchen 14,8 Milliarden Parameter etwa 5,8 GB (berechnet), noch vor dem KV-Cache, und Q2_K hat den größten Qualitätsverlust. Nehmen Sie stattdessen ein kleineres Modell bei Q4_K_M.',
@@ -260,10 +260,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Meilleure quantisation 6 Go VRAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M pour les modèles 8B avec 6 Go de VRAM : un fichier de 4.6–5.0 Go plus un cache KV de 4k tokens tient encore. Q5_K_M est juste ; Q6_K et Q8_0 non.',
     publishDate: '2026-05-23',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
-    leadAnswerBlock: '**Q4_K_M est la meilleure quantisation pour un GPU de 6 Go : le fichier d\'un modèle 8B fait 4.6–5.0 Go, donc un contexte de 4k tokens tient encore.** Q5_K_M est juste, Q6_K et Q8_0 ne tiennent pas.',
+    leadAnswerBlock: '**Pour les modèles 8B sur un GPU de 6 Go, Q4_K_M est la quantisation recommandée : le fichier fait 4.6–5.0 Go, donc, par le calcul, un contexte de 4k tokens tient encore.** Q5_K_M est juste, Q6_K et Q8_0 ne tiennent pas.',
     quickAnswerTop: {
       fr: {
         question: 'Quel niveau de quantisation est le meilleur pour 6 Go de VRAM ?',
@@ -290,7 +290,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Comment choisir le niveau de quantisation pour 6 Go de VRAM',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Q4_K_M est le plus haut niveau de quantisation courant dont le fichier d\'un modèle 8B plus un cache KV de 4k tokens tient dans 6 Go de VRAM.' },
+          { type: 'one-sentence', text: 'Q4_K_M est le plus haut niveau de quantisation courant dont le fichier d\'un modèle 8B plus un cache KV de 4k tokens tient, par le calcul, dans 6 Go de VRAM.' },
           { type: 'plain-terms', text: 'Choisissez le plus haut niveau de quantisation dont le fichier du modèle plus le cache KV tient encore dans votre VRAM. Les niveaux bas économisent de la mémoire mais perdent plus de précision ; les niveaux hauts gardent la précision mais demandent plus de mémoire.' },
         ],
         content: [
@@ -302,7 +302,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'Quantisation': 'Q2_K', 'Llama 3.1 8B (GiB)': '2.95', 'Qwen3 8B (Go)': 'n/a', 'Qwen3 8B + KV 4k (GiB)': 'n/a', 'Sur carte de 6 Go': 'Tient ; plus forte perte' },
           { 'Quantisation': 'Q3_K_M', 'Llama 3.1 8B (GiB)': '3.74', 'Qwen3 8B (Go)': 'n/a', 'Qwen3 8B + KV 4k (GiB)': 'n/a', 'Sur carte de 6 Go': 'Tient ; qualité sous Q4' },
-          { 'Quantisation': 'Q4_K_M', 'Llama 3.1 8B (GiB)': '4.58', 'Qwen3 8B (Go)': '5.03', 'Qwen3 8B + KV 4k (GiB)': '~5.25', 'Sur carte de 6 Go': 'Tient ; recommandé' },
+          { 'Quantisation': 'Q4_K_M', 'Llama 3.1 8B (GiB)': '4.58', 'Qwen3 8B (Go)': '5.03', 'Qwen3 8B + KV 4k (GiB)': '~5.25', 'Sur carte de 6 Go': 'Tient (calculé) ; recommandé' },
           { 'Quantisation': 'Q5_K_M', 'Llama 3.1 8B (GiB)': '5.33', 'Qwen3 8B (Go)': '5.85', 'Qwen3 8B + KV 4k (GiB)': '~6.01', 'Sur carte de 6 Go': 'Juste ; contexte court' },
           { 'Quantisation': 'Q6_K', 'Llama 3.1 8B (GiB)': '6.14', 'Qwen3 8B (Go)': '6.73', 'Qwen3 8B + KV 4k (GiB)': '~6.83', 'Sur carte de 6 Go': 'Ne tient pas' },
           { 'Quantisation': 'Q8_0', 'Llama 3.1 8B (GiB)': '7.95', 'Qwen3 8B (Go)': '8.71', 'Qwen3 8B + KV 4k (GiB)': '~8.67', 'Sur carte de 6 Go': 'Ne tient pas' },
@@ -311,7 +311,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Modèles adaptés à Q4_K_M avec 6 Go de VRAM',
         content: [
-          'Qwen3 8B est une option 8B actuelle. Son fichier GGUF sur Hugging Face en Q4_K_M fait 5.03 Go, la licence est Apache-2.0 et la fiche indique 32 768 tokens de contexte natif (131 072 avec YaRN) ; sur 6 Go, vous en utiliserez bien moins. Lancez `ollama run qwen3:8b` (la [bibliothèque Ollama](https://ollama.com/library/qwen3:8b) indique 5.2 Go en Q4_K_M).',
+          'Qwen3 8B est une option 8B très utilisée. Son fichier GGUF sur Hugging Face en Q4_K_M fait 5.03 Go, la licence est Apache-2.0 et la fiche indique 32 768 tokens de contexte natif (131 072 avec YaRN) ; sur 6 Go, vous en utiliserez bien moins. Lancez `ollama run qwen3:8b` (la [bibliothèque Ollama](https://ollama.com/library/qwen3:8b) indique 5.2 Go en Q4_K_M).',
           'Llama 3.1 8B a le fichier le plus petit : 4.58 GiB en Q4_K_M dans le tableau llama.cpp ; la bibliothèque Ollama indique `llama3.1:8b` à 4.9 Go (Q4_K_M), soit la même taille en Go décimaux. Les deux tiennent dans 6 Go avec un contexte court.',
           'Si vous voulez plus de marge de contexte qu\'un modèle 8B n\'en laisse, prenez un modèle plus petit plutôt qu\'une quantisation plus basse. `ollama run phi4-mini` est un modèle 3.8B indiqué à 2.5 Go dans la bibliothèque Ollama. En Q8_0 (8.5 bits par poids dans le tableau llama.cpp), un modèle 3.8B ferait environ 4.0 Go par calcul (3.8 × 10⁹ × 8.5 / 8 octets).',
           'N\'essayez pas les modèles 14B sur 6 Go. Qwen3 14B en Q4_K_M fait 9 Go ([Hugging Face](https://huggingface.co/Qwen/Qwen3-14B-GGUF)). Même au taux Q2_K de 3.16 bits par poids du tableau llama.cpp, 14.8 milliards de paramètres demandent environ 5.8 Go (calculé) avant tout cache KV, et Q2_K a la plus forte perte de qualité. Prenez plutôt un modèle plus petit en Q4_K_M.',
@@ -358,10 +358,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '6 GB VRAM 最適量子化 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '6 GB VRAMの8BモデルはQ4_K_Mが適合：4.6〜5.0 GBのファイルに4kトークンのKVキャッシュを足しても収まります。Q5_K_Mは余裕なし、Q6_K以上は不可。',
     publishDate: '2026-05-23',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
-    leadAnswerBlock: '**6 GB GPUにはQ4_K_Mが最適です。8Bモデルのファイルは4.6〜5.0 GBで、4kトークンのコンテキストも収まります。** Q5_K_Mは余裕がなく、Q6_KとQ8_0は収まりません。',
+    leadAnswerBlock: '**6 GB GPUで8BモデルにはQ4_K_Mがおすすめです。ファイルは4.6〜5.0 GBで、計算上は4kトークンのコンテキストも収まります。** Q5_K_Mは余裕がなく、Q6_KとQ8_0は収まりません。',
     quickAnswerTop: {
       ja: {
         question: '6 GB VRAM に最適な量子化レベルはどれですか？',
@@ -388,7 +388,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '6 GB VRAM で量子化レベルを選ぶ方法',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Q4_K_M は、8B モデルのファイルと 4k トークンの KV キャッシュが 6 GB VRAM に収まる最も高い一般的な量子化レベルです。' },
+          { type: 'one-sentence', text: 'Q4_K_M は、8B モデルのファイルと 4k トークンの KV キャッシュが 6 GB VRAM に計算上収まる最も高い一般的な量子化レベルです。' },
           { type: 'plain-terms', text: 'モデルファイルと KV キャッシュの合計が VRAM に収まる最も高い量子化レベルを選びます。低いレベルはメモリを節約しますが精度の低下が大きく、高いレベルは精度を保てますがメモリを多く使います。' },
         ],
         content: [
@@ -400,7 +400,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { '量子化': 'Q2_K', 'Llama 3.1 8B (GiB)': '2.95', 'Qwen3 8B (GB)': 'n/a', 'Qwen3 8B + 4k KV (GiB)': 'n/a', '6 GB カードでの可否': '収まる。品質低下が最大' },
           { '量子化': 'Q3_K_M', 'Llama 3.1 8B (GiB)': '3.74', 'Qwen3 8B (GB)': 'n/a', 'Qwen3 8B + 4k KV (GiB)': 'n/a', '6 GB カードでの可否': '収まる。Q4 より低品質' },
-          { '量子化': 'Q4_K_M', 'Llama 3.1 8B (GiB)': '4.58', 'Qwen3 8B (GB)': '5.03', 'Qwen3 8B + 4k KV (GiB)': '~5.25', '6 GB カードでの可否': '収まる。推奨' },
+          { '量子化': 'Q4_K_M', 'Llama 3.1 8B (GiB)': '4.58', 'Qwen3 8B (GB)': '5.03', 'Qwen3 8B + 4k KV (GiB)': '~5.25', '6 GB カードでの可否': '計算上収まる。推奨' },
           { '量子化': 'Q5_K_M', 'Llama 3.1 8B (GiB)': '5.33', 'Qwen3 8B (GB)': '5.85', 'Qwen3 8B + 4k KV (GiB)': '~6.01', '6 GB カードでの可否': '余裕なし。短い文脈のみ' },
           { '量子化': 'Q6_K', 'Llama 3.1 8B (GiB)': '6.14', 'Qwen3 8B (GB)': '6.73', 'Qwen3 8B + 4k KV (GiB)': '~6.83', '6 GB カードでの可否': '収まらない' },
           { '量子化': 'Q8_0', 'Llama 3.1 8B (GiB)': '7.95', 'Qwen3 8B (GB)': '8.71', 'Qwen3 8B + 4k KV (GiB)': '~8.67', '6 GB カードでの可否': '収まらない' },
@@ -409,7 +409,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '6 GB VRAM で Q4_K_M を使えるモデル',
         content: [
-          'Qwen3 8B は現行の 8B の選択肢です。Hugging Face の GGUF ファイルは Q4_K_M で 5.03 GB、ライセンスは Apache-2.0、モデルカードによるネイティブのコンテキストは 32,768 トークン（YaRN で 131,072）ですが、6 GB ではそれよりかなり短くなります。`ollama run qwen3:8b` で実行できます（[Ollama ライブラリ](https://ollama.com/library/qwen3:8b)では Q4_K_M で 5.2 GB）。',
+          'Qwen3 8B は広く使われている 8B の選択肢です。Hugging Face の GGUF ファイルは Q4_K_M で 5.03 GB、ライセンスは Apache-2.0、モデルカードによるネイティブのコンテキストは 32,768 トークン（YaRN で 131,072）ですが、6 GB ではそれよりかなり短くなります。`ollama run qwen3:8b` で実行できます（[Ollama ライブラリ](https://ollama.com/library/qwen3:8b)では Q4_K_M で 5.2 GB）。',
           'Llama 3.1 8B はファイルが小さく、llama.cpp の表では Q4_K_M で 4.58 GiB、Ollama ライブラリでは `llama3.1:8b` が 4.9 GB（Q4_K_M）で、十進 GB では同じサイズです。どちらも短いコンテキストなら 6 GB に収まります。',
           '8B モデルより大きなコンテキストの余裕が必要なら、量子化を下げるのではなく小さいモデルを使います。`ollama run phi4-mini` は 3.8B モデルで、Ollama ライブラリでは 2.5 GB です。Q8_0（llama.cpp の表で 1 重みあたり 8.5 ビット）なら 3.8B モデルは計算上約 4.0 GB になります（3.8 × 10⁹ × 8.5 / 8 バイト）。',
           '6 GB で 14B モデルは試さないでください。Qwen3 14B の Q4_K_M は 9 GB です（[Hugging Face](https://huggingface.co/Qwen/Qwen3-14B-GGUF)）。llama.cpp の表の Q2_K の 1 重みあたり 3.16 ビットでも、148 億パラメータで KV キャッシュ以前に約 5.8 GB（計算値）が必要で、Q2_K は品質低下が最大です。代わりに小さいモデルを Q4_K_M で使ってください。',
@@ -456,10 +456,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '6 GB 显存最佳量化 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '6 GB 显存跑 8B 模型选 Q4_K_M：4.6–5.0 GB 的文件加上 4k tokens 的 KV 缓存仍可容纳。Q5_K_M 余量很小，Q6_K 及以上放不下。',
     publishDate: '2026-05-23',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
-    leadAnswerBlock: '**6 GB 显卡最适合 Q4_K_M：8B 模型文件为 4.6–5.0 GB，4k tokens 上下文仍可容纳。** Q5_K_M 余量很小，Q6_K 和 Q8_0 放不下。',
+    leadAnswerBlock: '**6 GB 显卡上的 8B 模型推荐使用 Q4_K_M：文件为 4.6–5.0 GB，按计算 4k tokens 上下文仍可容纳。** Q5_K_M 余量很小，Q6_K 和 Q8_0 放不下。',
     quickAnswerTop: {
       zh: {
         question: '6 GB 显存最佳量化等级是哪个？',
@@ -486,7 +486,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '如何为 6 GB 显存选择量化等级',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Q4_K_M 是 8B 模型文件加 4k tokens KV 缓存仍能放入 6 GB 显存的最高常用量化等级。' },
+          { type: 'one-sentence', text: 'Q4_K_M 是 8B 模型文件加 4k tokens KV 缓存按计算仍能放入 6 GB 显存的最高常用量化等级。' },
           { type: 'plain-terms', text: '选择模型文件加 KV 缓存仍能放入显存的最高量化等级。等级越低越省内存但精度损失越大；等级越高精度越好但占用更多内存。' },
         ],
         content: [
@@ -498,7 +498,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { '量化等级': 'Q2_K', 'Llama 3.1 8B (GiB)': '2.95', 'Qwen3 8B (GB)': 'n/a', 'Qwen3 8B + 4k KV (GiB)': 'n/a', '6 GB 显卡上': '可容纳；质量损失最大' },
           { '量化等级': 'Q3_K_M', 'Llama 3.1 8B (GiB)': '3.74', 'Qwen3 8B (GB)': 'n/a', 'Qwen3 8B + 4k KV (GiB)': 'n/a', '6 GB 显卡上': '可容纳；质量低于 Q4' },
-          { '量化等级': 'Q4_K_M', 'Llama 3.1 8B (GiB)': '4.58', 'Qwen3 8B (GB)': '5.03', 'Qwen3 8B + 4k KV (GiB)': '~5.25', '6 GB 显卡上': '可容纳；推荐' },
+          { '量化等级': 'Q4_K_M', 'Llama 3.1 8B (GiB)': '4.58', 'Qwen3 8B (GB)': '5.03', 'Qwen3 8B + 4k KV (GiB)': '~5.25', '6 GB 显卡上': '按计算可容纳；推荐' },
           { '量化等级': 'Q5_K_M', 'Llama 3.1 8B (GiB)': '5.33', 'Qwen3 8B (GB)': '5.85', 'Qwen3 8B + 4k KV (GiB)': '~6.01', '6 GB 显卡上': '余量小；仅限短上下文' },
           { '量化等级': 'Q6_K', 'Llama 3.1 8B (GiB)': '6.14', 'Qwen3 8B (GB)': '6.73', 'Qwen3 8B + 4k KV (GiB)': '~6.83', '6 GB 显卡上': '放不下' },
           { '量化等级': 'Q8_0', 'Llama 3.1 8B (GiB)': '7.95', 'Qwen3 8B (GB)': '8.71', 'Qwen3 8B + 4k KV (GiB)': '~8.67', '6 GB 显卡上': '放不下' },
@@ -507,7 +507,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '6 GB 显存上适合 Q4_K_M 的模型',
         content: [
-          'Qwen3 8B 是当前的 8B 选项。其 Hugging Face GGUF 文件在 Q4_K_M 下为 5.03 GB，许可证为 Apache-2.0，模型卡称原生上下文为 32,768 tokens（YaRN 下 131,072）；在 6 GB 上实际可用的要短得多。运行 `ollama run qwen3:8b`（[Ollama 库](https://ollama.com/library/qwen3:8b)标注 Q4_K_M 为 5.2 GB）。',
+          'Qwen3 8B 是广泛使用的 8B 选项。其 Hugging Face GGUF 文件在 Q4_K_M 下为 5.03 GB，许可证为 Apache-2.0，模型卡称原生上下文为 32,768 tokens（YaRN 下 131,072）；在 6 GB 上实际可用的要短得多。运行 `ollama run qwen3:8b`（[Ollama 库](https://ollama.com/library/qwen3:8b)标注 Q4_K_M 为 5.2 GB）。',
           'Llama 3.1 8B 文件更小：llama.cpp 表中 Q4_K_M 为 4.58 GiB，Ollama 库标注 `llama3.1:8b` 为 4.9 GB（Q4_K_M），按十进制 GB 是同样的大小。两者在短上下文下都能放入 6 GB。',
           '如果需要比 8B 模型更多的上下文余量，请换更小的模型，而不是更低的量化。`ollama run phi4-mini` 是 3.8B 模型，Ollama 库标注为 2.5 GB。按 Q8_0（llama.cpp 表中每权重 8.5 位）计算，3.8B 模型约 4.0 GB（3.8 × 10⁹ × 8.5 / 8 字节）。',
           '不要在 6 GB 上尝试 14B 模型。Qwen3 14B 的 Q4_K_M 为 9 GB（[Hugging Face](https://huggingface.co/Qwen/Qwen3-14B-GGUF)）。即使按 llama.cpp 表中 Q2_K 的每权重 3.16 位，148 亿参数在计入 KV 缓存之前就需要约 5.8 GB（计算值），而且 Q2_K 的质量损失最大。请改用更小的模型并选 Q4_K_M。',
@@ -554,10 +554,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhor quantização para 6 GB VRAM 2026 | PromptQuorum',
     metaDescription: 'Q4_K_M para modelos 8B com 6 GB de VRAM: um arquivo de 4.6–5.0 GB mais cache KV de 4k tokens ainda cabe. Q5_K_M fica apertado; Q6_K e Q8_0 não cabem.',
     publishDate: '2026-05-23',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
-    leadAnswerBlock: '**Q4_K_M é a melhor quantização para uma GPU de 6 GB: o arquivo de um modelo 8B tem 4.6–5.0 GB, então um contexto de 4k tokens ainda cabe.** Q5_K_M fica apertado; Q6_K e Q8_0 não cabem.',
+    leadAnswerBlock: '**Q4_K_M é a quantização recomendada para modelos 8B em uma GPU de 6 GB: o arquivo tem 4.6–5.0 GB, então, pelo cálculo, um contexto de 4k tokens ainda cabe.** Q5_K_M fica apertado; Q6_K e Q8_0 não cabem.',
     quickAnswerTop: {
       pt: {
         question: 'Qual é o melhor nível de quantização para 6 GB de VRAM?',
@@ -584,7 +584,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Como escolher o nível de quantização para 6 GB de VRAM',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Q4_K_M é o maior nível de quantização comum cujo arquivo de modelo 8B mais um cache KV de 4k tokens cabe em 6 GB de VRAM.' },
+          { type: 'one-sentence', text: 'Q4_K_M é o maior nível de quantização comum cujo arquivo de modelo 8B mais um cache KV de 4k tokens cabe, pelo cálculo, em 6 GB de VRAM.' },
           { type: 'plain-terms', text: 'Escolha o maior nível de quantização cujo arquivo do modelo mais o cache KV ainda caiba na sua VRAM. Níveis baixos economizam memória, mas perdem mais precisão; níveis altos mantêm a precisão, mas exigem mais memória.' },
         ],
         content: [
@@ -596,7 +596,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'Quantização': 'Q2_K', 'Llama 3.1 8B (GiB)': '2.95', 'Qwen3 8B (GB)': 'n/a', 'Qwen3 8B + KV 4k (GiB)': 'n/a', 'Em placa de 6 GB': 'Cabe; maior perda' },
           { 'Quantização': 'Q3_K_M', 'Llama 3.1 8B (GiB)': '3.74', 'Qwen3 8B (GB)': 'n/a', 'Qwen3 8B + KV 4k (GiB)': 'n/a', 'Em placa de 6 GB': 'Cabe; abaixo do Q4' },
-          { 'Quantização': 'Q4_K_M', 'Llama 3.1 8B (GiB)': '4.58', 'Qwen3 8B (GB)': '5.03', 'Qwen3 8B + KV 4k (GiB)': '~5.25', 'Em placa de 6 GB': 'Cabe; recomendado' },
+          { 'Quantização': 'Q4_K_M', 'Llama 3.1 8B (GiB)': '4.58', 'Qwen3 8B (GB)': '5.03', 'Qwen3 8B + KV 4k (GiB)': '~5.25', 'Em placa de 6 GB': 'Cabe (calculado); recomendado' },
           { 'Quantização': 'Q5_K_M', 'Llama 3.1 8B (GiB)': '5.33', 'Qwen3 8B (GB)': '5.85', 'Qwen3 8B + KV 4k (GiB)': '~6.01', 'Em placa de 6 GB': 'Apertado; só contexto curto' },
           { 'Quantização': 'Q6_K', 'Llama 3.1 8B (GiB)': '6.14', 'Qwen3 8B (GB)': '6.73', 'Qwen3 8B + KV 4k (GiB)': '~6.83', 'Em placa de 6 GB': 'Não cabe' },
           { 'Quantização': 'Q8_0', 'Llama 3.1 8B (GiB)': '7.95', 'Qwen3 8B (GB)': '8.71', 'Qwen3 8B + KV 4k (GiB)': '~8.67', 'Em placa de 6 GB': 'Não cabe' },
@@ -605,7 +605,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Modelos que funcionam com Q4_K_M em 6 GB de VRAM',
         content: [
-          'O Qwen3 8B é uma opção 8B atual. O arquivo GGUF no Hugging Face em Q4_K_M tem 5.03 GB, a licença é Apache-2.0 e a página do modelo informa 32.768 tokens de contexto nativo (131.072 com YaRN); em 6 GB você usará bem menos. Execute com `ollama run qwen3:8b` (a [biblioteca do Ollama](https://ollama.com/library/qwen3:8b) informa 5.2 GB em Q4_K_M).',
+          'O Qwen3 8B é uma opção 8B bastante usada. O arquivo GGUF no Hugging Face em Q4_K_M tem 5.03 GB, a licença é Apache-2.0 e a página do modelo informa 32.768 tokens de contexto nativo (131.072 com YaRN); em 6 GB você usará bem menos. Execute com `ollama run qwen3:8b` (a [biblioteca do Ollama](https://ollama.com/library/qwen3:8b) informa 5.2 GB em Q4_K_M).',
           'O Llama 3.1 8B tem o arquivo menor: 4.58 GiB em Q4_K_M na tabela do llama.cpp; a biblioteca do Ollama lista o `llama3.1:8b` com 4.9 GB (Q4_K_M), o mesmo tamanho em GB decimais. Os dois cabem em 6 GB com contexto curto.',
           'Se você precisa de mais folga de contexto do que um modelo 8B deixa, use um modelo menor em vez de uma quantização mais baixa. O `ollama run phi4-mini` é um modelo de 3.8B listado com 2.5 GB na biblioteca do Ollama. Em Q8_0 (8.5 bits por peso na tabela do llama.cpp), um modelo de 3.8B teria cerca de 4.0 GB por cálculo (3.8 × 10⁹ × 8.5 / 8 bytes).',
           'Não tente modelos 14B em 6 GB. O Qwen3 14B em Q4_K_M tem 9 GB ([Hugging Face](https://huggingface.co/Qwen/Qwen3-14B-GGUF)). Mesmo com a taxa do Q2_K de 3.16 bits por peso da tabela do llama.cpp, 14.8 bilhões de parâmetros precisam de cerca de 5.8 GB (calculado) antes de qualquer cache KV, e o Q2_K tem a maior perda de qualidade. Use um modelo menor em Q4_K_M.',
@@ -652,10 +652,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejor cuantización para 6 GB VRAM 2026 | PromptQuorum',
     metaDescription: 'Q4_K_M para modelos 8B con 6 GB de VRAM: un archivo de 4.6–5.0 GB más una caché KV de 4k tokens aún cabe. Q5_K_M queda justo; Q6_K y Q8_0 no caben.',
     publishDate: '2026-05-23',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
-    leadAnswerBlock: '**Q4_K_M es la mejor cuantización para una GPU de 6 GB: el archivo de un modelo 8B pesa 4.6–5.0 GB, así que aún cabe un contexto de 4k tokens.** Q5_K_M queda justo; Q6_K y Q8_0 no caben.',
+    leadAnswerBlock: '**Q4_K_M es la cuantización recomendada para modelos 8B en una GPU de 6 GB: el archivo pesa 4.6–5.0 GB, así que, según el cálculo, aún cabe un contexto de 4k tokens.** Q5_K_M queda justo; Q6_K y Q8_0 no caben.',
     quickAnswerTop: {
       es: {
         question: '¿Cuál es el mejor nivel de cuantización para 6 GB de VRAM?',
@@ -682,7 +682,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Cómo elegir el nivel de cuantización para 6 GB de VRAM',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Q4_K_M es el nivel de cuantización común más alto cuyo archivo de modelo 8B más una caché KV de 4k tokens cabe en 6 GB de VRAM.' },
+          { type: 'one-sentence', text: 'Q4_K_M es el nivel de cuantización común más alto cuyo archivo de modelo 8B más una caché KV de 4k tokens cabe, según el cálculo, en 6 GB de VRAM.' },
           { type: 'plain-terms', text: 'Elige el nivel de cuantización más alto cuyo archivo del modelo más la caché KV aún quepa en tu VRAM. Los niveles bajos ahorran memoria pero pierden más precisión; los altos conservan precisión pero necesitan más memoria.' },
         ],
         content: [
@@ -694,7 +694,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'Cuantización': 'Q2_K', 'Llama 3.1 8B (GiB)': '2.95', 'Qwen3 8B (GB)': 'n/a', 'Qwen3 8B + KV 4k (GiB)': 'n/a', 'En tarjeta de 6 GB': 'Cabe; mayor pérdida' },
           { 'Cuantización': 'Q3_K_M', 'Llama 3.1 8B (GiB)': '3.74', 'Qwen3 8B (GB)': 'n/a', 'Qwen3 8B + KV 4k (GiB)': 'n/a', 'En tarjeta de 6 GB': 'Cabe; menos calidad que Q4' },
-          { 'Cuantización': 'Q4_K_M', 'Llama 3.1 8B (GiB)': '4.58', 'Qwen3 8B (GB)': '5.03', 'Qwen3 8B + KV 4k (GiB)': '~5.25', 'En tarjeta de 6 GB': 'Cabe; recomendado' },
+          { 'Cuantización': 'Q4_K_M', 'Llama 3.1 8B (GiB)': '4.58', 'Qwen3 8B (GB)': '5.03', 'Qwen3 8B + KV 4k (GiB)': '~5.25', 'En tarjeta de 6 GB': 'Cabe (calculado); recomendado' },
           { 'Cuantización': 'Q5_K_M', 'Llama 3.1 8B (GiB)': '5.33', 'Qwen3 8B (GB)': '5.85', 'Qwen3 8B + KV 4k (GiB)': '~6.01', 'En tarjeta de 6 GB': 'Justo; solo contexto corto' },
           { 'Cuantización': 'Q6_K', 'Llama 3.1 8B (GiB)': '6.14', 'Qwen3 8B (GB)': '6.73', 'Qwen3 8B + KV 4k (GiB)': '~6.83', 'En tarjeta de 6 GB': 'No cabe' },
           { 'Cuantización': 'Q8_0', 'Llama 3.1 8B (GiB)': '7.95', 'Qwen3 8B (GB)': '8.71', 'Qwen3 8B + KV 4k (GiB)': '~8.67', 'En tarjeta de 6 GB': 'No cabe' },
@@ -703,7 +703,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Modelos que funcionan con Q4_K_M en 6 GB de VRAM',
         content: [
-          'Qwen3 8B es una opción 8B actual. Su archivo GGUF en Hugging Face en Q4_K_M pesa 5.03 GB, la licencia es Apache-2.0 y la ficha indica 32,768 tokens de contexto nativo (131,072 con YaRN); en 6 GB usarás mucho menos. Ejecútalo con `ollama run qwen3:8b` (la [biblioteca de Ollama](https://ollama.com/library/qwen3:8b) indica 5.2 GB en Q4_K_M).',
+          'Qwen3 8B es una opción 8B muy utilizada. Su archivo GGUF en Hugging Face en Q4_K_M pesa 5.03 GB, la licencia es Apache-2.0 y la ficha indica 32,768 tokens de contexto nativo (131,072 con YaRN); en 6 GB usarás mucho menos. Ejecútalo con `ollama run qwen3:8b` (la [biblioteca de Ollama](https://ollama.com/library/qwen3:8b) indica 5.2 GB en Q4_K_M).',
           'Llama 3.1 8B tiene el archivo más pequeño: 4.58 GiB en Q4_K_M en la tabla de llama.cpp; la biblioteca de Ollama indica `llama3.1:8b` con 4.9 GB (Q4_K_M), el mismo tamaño en GB decimales. Ambos caben en 6 GB con contexto corto.',
           'Si necesitas más margen de contexto del que deja un modelo 8B, usa un modelo más pequeño en lugar de una cuantización más baja. `ollama run phi4-mini` es un modelo de 3.8B que la biblioteca de Ollama indica con 2.5 GB. En Q8_0 (8.5 bits por peso en la tabla de llama.cpp), un modelo de 3.8B ocuparía unos 4.0 GB por cálculo (3.8 × 10⁹ × 8.5 / 8 bytes).',
           'No intentes modelos 14B en 6 GB. Qwen3 14B en Q4_K_M pesa 9 GB ([Hugging Face](https://huggingface.co/Qwen/Qwen3-14B-GGUF)). Incluso con la tasa de Q2_K de 3.16 bits por peso de la tabla de llama.cpp, 14.8 mil millones de parámetros necesitan unos 5.8 GB (calculado) antes de cualquier caché KV, y Q2_K tiene la mayor pérdida de calidad. Usa en su lugar un modelo más pequeño en Q4_K_M.',
@@ -750,10 +750,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل تكميم لـ⁨6 GB VRAM⁩: ⁨Q4⁩_⁨K⁩_⁨M⁩ أم ⁨Q5⁩_⁨K⁩_⁨M⁩؟ ⁨2026⁩',
     metaDescription: 'اختر Q4_K_M لنماذج 8B مع 6 GB VRAM: ملف بحجم 4.6–5.0 GB مع ذاكرة KV لسياق 4k رمز يتسع. Q5_K_M ضيق، و Q6_K و Q8_0 لا يتسعان.',
     publishDate: '2026-05-23',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
-    leadAnswerBlock: '**Q4_K_M هو أفضل تكميم لبطاقة بذاكرة 6 GB: ملف نموذج 8B بحجم 4.6–5.0 GB، فيتسع معه سياق بطول 4k رمز.** Q5_K_M ضيق، ولا يتسع Q6_K ولا Q8_0.',
+    leadAnswerBlock: '**Q4_K_M هو التكميم الموصى به لنماذج 8B على بطاقة بذاكرة 6 GB: حجم الملف 4.6–5.0 GB، فيتسع معه حسابيًا سياق بطول 4k رمز.** Q5_K_M ضيق، ولا يتسع Q6_K ولا Q8_0.',
     quickAnswerTop: {
       ar: {
         question: 'ما هو أفضل مستوى تكميم لـ 6 GB VRAM؟',
@@ -780,7 +780,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'كيف تختار مستوى التكميم لـ 6 GB VRAM',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Q4_K_M هو أعلى مستوى تكميم شائع يتسع معه ملف نموذج 8B مع ذاكرة KV لسياق 4k رمز في 6 GB VRAM.' },
+          { type: 'one-sentence', text: 'Q4_K_M هو أعلى مستوى تكميم شائع يتسع معه ملف نموذج 8B مع ذاكرة KV لسياق 4k رمز في 6 GB VRAM حسابيًا.' },
           { type: 'plain-terms', text: 'اختر أعلى مستوى تكميم يظل ملف النموذج مع ذاكرة KV معه داخل VRAM لديك. المستويات الأدنى توفر الذاكرة لكنها تفقد دقة أكبر، والأعلى تحفظ الدقة لكنها تحتاج ذاكرة أكثر.' },
         ],
         content: [
@@ -792,7 +792,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'التكميم': 'Q2_K', 'Llama 3.1 8B (GiB)': '2.95', 'Qwen3 8B (GB)': 'n/a', 'Qwen3 8B + KV 4k (GiB)': 'n/a', 'على بطاقة 6 GB': 'يتسع؛ أكبر فقد جودة' },
           { 'التكميم': 'Q3_K_M', 'Llama 3.1 8B (GiB)': '3.74', 'Qwen3 8B (GB)': 'n/a', 'Qwen3 8B + KV 4k (GiB)': 'n/a', 'على بطاقة 6 GB': 'يتسع؛ أقل جودة من Q4' },
-          { 'التكميم': 'Q4_K_M', 'Llama 3.1 8B (GiB)': '4.58', 'Qwen3 8B (GB)': '5.03', 'Qwen3 8B + KV 4k (GiB)': '~5.25', 'على بطاقة 6 GB': 'يتسع؛ موصى به' },
+          { 'التكميم': 'Q4_K_M', 'Llama 3.1 8B (GiB)': '4.58', 'Qwen3 8B (GB)': '5.03', 'Qwen3 8B + KV 4k (GiB)': '~5.25', 'على بطاقة 6 GB': 'يتسع (محسوب)؛ موصى به' },
           { 'التكميم': 'Q5_K_M', 'Llama 3.1 8B (GiB)': '5.33', 'Qwen3 8B (GB)': '5.85', 'Qwen3 8B + KV 4k (GiB)': '~6.01', 'على بطاقة 6 GB': 'ضيق؛ سياق قصير فقط' },
           { 'التكميم': 'Q6_K', 'Llama 3.1 8B (GiB)': '6.14', 'Qwen3 8B (GB)': '6.73', 'Qwen3 8B + KV 4k (GiB)': '~6.83', 'على بطاقة 6 GB': 'لا يتسع' },
           { 'التكميم': 'Q8_0', 'Llama 3.1 8B (GiB)': '7.95', 'Qwen3 8B (GB)': '8.71', 'Qwen3 8B + KV 4k (GiB)': '~8.67', 'على بطاقة 6 GB': 'لا يتسع' },
@@ -801,7 +801,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'نماذج تعمل عند Q4_K_M على 6 GB VRAM',
         content: [
-          'Qwen3 8B خيار 8B حالي. ملف GGUF الخاص به على Hugging Face عند Q4_K_M بحجم 5.03 GB، ورخصته Apache-2.0، وتذكر بطاقة النموذج سياقاً أصلياً بطول 32,768 رمز (131,072 مع YaRN)؛ وعلى 6 GB ستستخدم أقل بكثير. شغّله بالأمر `ollama run qwen3:8b` (تذكر [مكتبة Ollama](https://ollama.com/library/qwen3:8b) حجم 5.2 GB عند Q4_K_M).',
+          'Qwen3 8B خيار 8B واسع الاستخدام. ملف GGUF الخاص به على Hugging Face عند Q4_K_M بحجم 5.03 GB، ورخصته Apache-2.0، وتذكر بطاقة النموذج سياقاً أصلياً بطول 32,768 رمز (131,072 مع YaRN)؛ وعلى 6 GB ستستخدم أقل بكثير. شغّله بالأمر `ollama run qwen3:8b` (تذكر [مكتبة Ollama](https://ollama.com/library/qwen3:8b) حجم 5.2 GB عند Q4_K_M).',
           'ملف Llama 3.1 8B أصغر: 4.58 GiB عند Q4_K_M في جدول llama.cpp، وتذكر مكتبة Ollama أن `llama3.1:8b` بحجم 4.9 GB (Q4_K_M)، وهو الحجم نفسه بالـ GB العشري. يتسع كلاهما في 6 GB مع سياق قصير.',
           'إذا احتجت هامش سياق أكبر مما يتركه نموذج 8B، فاستخدم نموذجاً أصغر بدل تكميم أدنى. `ollama run phi4-mini` نموذج بحجم 3.8B تذكره مكتبة Ollama بحجم 2.5 GB. وعند Q8_0 (8.5 بت لكل وزن في جدول llama.cpp) يبلغ حجم نموذج 3.8B نحو 4.0 GB حسابياً (3.8 × 10⁹ × 8.5 / 8 بايت).',
           'لا تحاول تشغيل نماذج 14B على 6 GB. حجم Qwen3 14B عند Q4_K_M هو 9 GB ([Hugging Face](https://huggingface.co/Qwen/Qwen3-14B-GGUF)). وحتى بمعدل Q2_K البالغ 3.16 بت لكل وزن في جدول llama.cpp تحتاج 14.8 مليار معامل إلى نحو 5.8 GB (محسوب) قبل أي ذاكرة KV، كما أن Q2_K يفقد أكبر قدر من الجودة. استخدم بدلاً منه نموذجاً أصغر عند Q4_K_M.',
@@ -848,10 +848,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '6GB VRAM 최적 양자화 2026: Q4_K_M vs Q5_K_M | PromptQuorum',
     metaDescription: '6GB VRAM의 8B 모델에는 Q4_K_M이 적합합니다. 4.6~5.0GB 파일과 4k 토큰 KV 캐시가 들어갑니다. Q5_K_M은 여유가 없고 Q6_K 이상은 불가합니다.',
     publishDate: '2026-05-23',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
-    leadAnswerBlock: '**6GB GPU에는 Q4_K_M이 가장 적합합니다. 8B 모델 파일은 4.6~5.0GB이며 4k 토큰 컨텍스트도 들어갑니다.** Q5_K_M은 여유가 없고 Q6_K와 Q8_0은 들어가지 않습니다. 계산 근거와 출처는 아래 표와 본문에 있습니다.',
+    leadAnswerBlock: '**6GB GPU에서 8B 모델에는 Q4_K_M을 권장합니다. 파일은 4.6~5.0GB이며 계산상 4k 토큰 컨텍스트도 들어갑니다.** Q5_K_M은 여유가 없고 Q6_K와 Q8_0은 들어가지 않습니다. 계산 근거와 출처는 아래 표와 본문에 있습니다.',
     targetKeywords: [
       '6GB VRAM 양자화',
       '6GB 그래픽카드 LLM 실행',
@@ -897,7 +897,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '6GB VRAM에서 양자화 레벨을 고르는 방법',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Q4_K_M은 8B 모델 파일과 4k 토큰 KV 캐시가 6GB VRAM에 들어가는 가장 높은 일반 양자화 레벨입니다.' },
+          { type: 'one-sentence', text: 'Q4_K_M은 8B 모델 파일과 4k 토큰 KV 캐시가 6GB VRAM에 계산상 들어가는 가장 높은 일반 양자화 레벨입니다.' },
           { type: 'plain-terms', text: '모델 파일과 KV 캐시의 합이 VRAM에 들어가는 가장 높은 양자화 레벨을 고르십시오. 낮은 레벨은 메모리를 아끼지만 정확도 손실이 크고, 높은 레벨은 정확도를 유지하지만 메모리를 더 사용합니다.' },
         ],
         content: [
@@ -909,7 +909,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { '양자화': 'Q2_K', 'Llama 3.1 8B (GiB)': '2.95', 'Qwen3 8B (GB)': 'n/a', 'Qwen3 8B + 4k KV (GiB)': 'n/a', '6GB 카드에서': '들어감; 품질 손실 최대' },
           { '양자화': 'Q3_K_M', 'Llama 3.1 8B (GiB)': '3.74', 'Qwen3 8B (GB)': 'n/a', 'Qwen3 8B + 4k KV (GiB)': 'n/a', '6GB 카드에서': '들어감; Q4보다 낮은 품질' },
-          { '양자화': 'Q4_K_M', 'Llama 3.1 8B (GiB)': '4.58', 'Qwen3 8B (GB)': '5.03', 'Qwen3 8B + 4k KV (GiB)': '~5.25', '6GB 카드에서': '들어감; 권장' },
+          { '양자화': 'Q4_K_M', 'Llama 3.1 8B (GiB)': '4.58', 'Qwen3 8B (GB)': '5.03', 'Qwen3 8B + 4k KV (GiB)': '~5.25', '6GB 카드에서': '계산상 들어감; 권장' },
           { '양자화': 'Q5_K_M', 'Llama 3.1 8B (GiB)': '5.33', 'Qwen3 8B (GB)': '5.85', 'Qwen3 8B + 4k KV (GiB)': '~6.01', '6GB 카드에서': '빠듯함; 짧은 컨텍스트만' },
           { '양자화': 'Q6_K', 'Llama 3.1 8B (GiB)': '6.14', 'Qwen3 8B (GB)': '6.73', 'Qwen3 8B + 4k KV (GiB)': '~6.83', '6GB 카드에서': '들어가지 않음' },
           { '양자화': 'Q8_0', 'Llama 3.1 8B (GiB)': '7.95', 'Qwen3 8B (GB)': '8.71', 'Qwen3 8B + 4k KV (GiB)': '~8.67', '6GB 카드에서': '들어가지 않음' },
@@ -918,7 +918,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '6GB VRAM에서 Q4_K_M으로 쓸 수 있는 모델',
         content: [
-          'Qwen3 8B는 현재 쓸 수 있는 8B 선택지입니다. Hugging Face의 GGUF 파일은 Q4_K_M에서 5.03GB이고 라이선스는 Apache-2.0이며, 모델 카드에는 기본 컨텍스트 32,768 토큰(YaRN 사용 시 131,072)으로 나와 있지만 6GB에서는 훨씬 짧게 사용하게 됩니다. `ollama run qwen3:8b`로 실행합니다([Ollama 라이브러리](https://ollama.com/library/qwen3:8b)에는 Q4_K_M 5.2GB로 표시).',
+          'Qwen3 8B는 널리 쓰이는 8B 선택지입니다. Hugging Face의 GGUF 파일은 Q4_K_M에서 5.03GB이고 라이선스는 Apache-2.0이며, 모델 카드에는 기본 컨텍스트 32,768 토큰(YaRN 사용 시 131,072)으로 나와 있지만 6GB에서는 훨씬 짧게 사용하게 됩니다. `ollama run qwen3:8b`로 실행합니다([Ollama 라이브러리](https://ollama.com/library/qwen3:8b)에는 Q4_K_M 5.2GB로 표시).',
           'Llama 3.1 8B는 파일이 더 작습니다. llama.cpp 표에서 Q4_K_M은 4.58 GiB이고, Ollama 라이브러리는 `llama3.1:8b`를 4.9GB(Q4_K_M)로 표시하며 십진 GB로는 같은 크기입니다. 둘 다 짧은 컨텍스트라면 6GB에 들어갑니다.',
           '8B 모델이 남기는 것보다 컨텍스트 여유가 더 필요하면 양자화를 낮추지 말고 더 작은 모델을 사용하십시오. `ollama run phi4-mini`는 3.8B 모델이며 Ollama 라이브러리에는 2.5GB로 표시됩니다. Q8_0(llama.cpp 표에서 가중치당 8.5비트)에서는 3.8B 모델이 계산상 약 4.0GB입니다(3.8 × 10⁹ × 8.5 / 8 바이트).',
           '6GB에서 14B 모델은 시도하지 마십시오. Qwen3 14B의 Q4_K_M은 9GB입니다([Hugging Face](https://huggingface.co/Qwen/Qwen3-14B-GGUF)). llama.cpp 표의 Q2_K 가중치당 3.16비트로 계산해도 148억 파라미터는 KV 캐시 이전에 약 5.8GB(계산값)가 필요하며, Q2_K는 품질 손실이 가장 큽니다. 대신 더 작은 모델을 Q4_K_M으로 사용하십시오.',

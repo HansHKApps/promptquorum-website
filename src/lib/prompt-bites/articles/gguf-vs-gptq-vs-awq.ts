@@ -8,9 +8,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-en.webp',
     title: 'GGUF vs GPTQ vs AWQ: Differences, Speed and Which to Use',
     seoTitle: 'GGUF vs GPTQ vs AWQ Quantization 2026 | Prompt Bites',
-    metaDescription: 'GGUF runs on CPU and GPU via llama.cpp/Ollama; GPTQ and AWQ are GPU-only formats for vLLM serving. Compare speed, quality, tools and commands.',
+    metaDescription: 'GGUF runs on CPU and GPU via llama.cpp/Ollama; GPTQ and AWQ are GPU-focused formats for vLLM serving. Compare speed, quality, tools and commands.',
     publishDate: '2026-07-14',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
@@ -19,7 +19,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Developers choosing a quantization format for local or served LLM inference',
     siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi', 'llama-cpp-gguf-conversion-guide'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>GGUF is the usual default format for local use</strong> — it runs on CPU and GPU via llama.cpp and Ollama. GPTQ and AWQ are GPU-only formats for serving frameworks like vLLM.',
+    leadAnswerBlock: '<strong>GGUF is the usual default format for local use</strong> — it runs on CPU and GPU via llama.cpp and Ollama. GPTQ and AWQ are GPU-focused formats for serving frameworks like vLLM.',
     toc: [
       { label: 'Best Pick: GGUF for Local Use, AWQ for Production Serving', anchor: '#best-pick' },
       { label: 'GGUF vs GPTQ vs AWQ at a Glance', anchor: '#comparison' },
@@ -33,13 +33,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Should I use GGUF, GPTQ, or AWQ quantization?',
-        answer: 'Use GGUF for local use via Ollama or llama.cpp — it runs on CPU and GPU with no extra requirements. Use AWQ over GPTQ if serving in production with vLLM, since it holds quality better at the same bit width.',
+        answer: 'Use GGUF for local use via Ollama or llama.cpp — it runs on CPU and GPU with no extra requirements. Use AWQ over GPTQ if serving in production with vLLM, since it generally keeps quality closer to the original at the same bit width, though results vary by model and kernel.',
         bullets: [
           'GGUF: llama.cpp\'s native format — CPU+GPU hybrid inference, the default for Ollama and LM Studio.',
-          'GPTQ: GPU-only, calibration-based post-training quantization — an early standard for efficient 4-bit serving.',
-          'AWQ (Activation-aware Weight Quantization): GPU-only, generally better quality-per-bit than GPTQ, common in vLLM production serving.',
+          'GPTQ: GPU-focused, calibration-based post-training quantization — an early standard for efficient 4-bit serving.',
+          'AWQ (Activation-aware Weight Quantization): GPU-focused, generally better quality-per-bit than GPTQ, common in vLLM production serving.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -48,36 +48,36 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'GGUF: the right default for local use — runs on CPU and GPU via llama.cpp/Ollama, no CUDA-only requirement',
-          'GPTQ: GPU-only, an early standard for 4-bit serving, still supported by ExLlama and vLLM',
-          'AWQ: GPU-only, generally holds quality better than GPTQ at the same bit width — preferred for production serving',
+          'GPTQ: GPU-focused, an early standard for 4-bit serving, still supported by ExLlama and vLLM',
+          'AWQ: GPU-focused, generally holds quality better than GPTQ at the same bit width — preferred for production serving',
           'If you\'re running Ollama or LM Studio locally, you almost certainly want GGUF, not GPTQ or AWQ',
         ],
       },
       bestPick: {
         id: 'best-pick',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'GGUF is a single-file quantized model format for llama.cpp that runs on CPU and GPU, while GPTQ and AWQ are GPU-only 4-bit formats used mainly for serving with vLLM.' },
+          { type: 'one-sentence', text: 'GGUF is a single-file quantized model format for llama.cpp that runs on CPU and GPU, while GPTQ and AWQ are GPU-focused 4-bit formats used mainly for serving with vLLM.' },
           { type: 'plain-terms', text: 'In plain terms: pick GGUF if you run models on your own computer with Ollama or LM Studio, and pick AWQ or GPTQ only if you serve a model from an NVIDIA GPU server.' },
         ],
         title: 'Best Pick: GGUF for Local Use, AWQ for Production Serving',
         content: [
           '<strong>GGUF is the right quantization format for almost anyone running models locally through Ollama, LM Studio, or llama.cpp directly — it supports both CPU and GPU inference from the same file, including partial CPU offload when a model doesn\'t fully fit in VRAM.</strong> This flexibility is exactly why GGUF became the standard format for consumer local LLM tools: it works whether you have a powerful GPU, a modest one, or none at all.',
-          'GPTQ was one of the earliest widely-adopted 4-bit quantization methods for efficient GPU inference. It uses a calibration dataset to minimize quality loss during post-training quantization, but it is GPU-only — there is no meaningful CPU fallback path — and generally has been superseded in quality-per-bit by newer methods.',
-          'AWQ (Activation-aware Weight Quantization) is the more modern GPU-only alternative to GPTQ. By protecting the weights that matter most for activation magnitude rather than quantizing everything uniformly, AWQ generally preserves more quality at the same bit width. It is a common choice for production serving stacks like vLLM, where GPU-only operation is already a given.',
+          'GPTQ was one of the earliest widely-adopted 4-bit quantization methods for efficient GPU inference. It uses a calibration dataset to minimize quality loss during post-training quantization, but it is GPU-focused (CPU kernels exist in some libraries but are not the common path), and in published comparisons it has often been matched or exceeded in quality per bit by newer methods such as AWQ.',
+          'AWQ (Activation-aware Weight Quantization) is the more modern GPU-focused alternative to GPTQ. By protecting the weights that matter most for activation magnitude rather than quantizing everything uniformly, AWQ generally preserves more quality at the same bit width. It is a common choice for production serving stacks like vLLM, where GPU serving is already a given.',
         ],
       },
       comparison: {
         id: 'comparison',
         title: 'GGUF vs GPTQ vs AWQ at a Glance',
         content: [
-          'Choose GGUF if you\'re running Ollama, LM Studio, or llama.cpp locally — it is the only one of the three with real CPU support and partial-offload flexibility. Choose GPTQ only if you\'re working with an existing pipeline or tool (like older ExLlama setups) that specifically expects it. Choose AWQ if you\'re deploying to a production GPU-serving stack (vLLM) and want the best quality-per-bit among the GPU-only options.',
+          'Choose GGUF if you\'re running Ollama, LM Studio, or llama.cpp locally — it is the one of the three built for CPU and partial-offload use (GPTQ/AWQ CPU kernels exist, for example in GPTQModel, but are not the common path). Choose GPTQ only if you\'re working with an existing pipeline or tool (like older ExLlama setups) that specifically expects it. Choose AWQ if you\'re deploying to a production GPU-serving stack (vLLM) and want generally more quality per bit among the GPU-focused options.',
           'All three represent the same underlying model at reduced precision — the format determines which tools can load it and how gracefully it handles GPU-memory shortfalls, not the model\'s underlying capability.',
         ],
         columns: ['Format', 'Runs on', 'Typical bits', 'Main tools', 'Best for'],
         rows: [
           { 'Format': 'GGUF', 'Runs on': 'CPU, GPU or both', 'Typical bits': '2–8 bit', 'Main tools': 'llama.cpp, Ollama, LM Studio', 'Best for': 'Local use' },
-          { 'Format': 'GPTQ', 'Runs on': 'GPU only', 'Typical bits': '4 bit (3–8)', 'Main tools': 'vLLM, ExLlama', 'Best for': 'Existing GPU pipelines' },
-          { 'Format': 'AWQ', 'Runs on': 'GPU only', 'Typical bits': '4 bit', 'Main tools': 'vLLM, Transformers', 'Best for': 'GPU serving' },
+          { 'Format': 'GPTQ', 'Runs on': 'Mainly GPU', 'Typical bits': '4 bit (3–8)', 'Main tools': 'vLLM, ExLlama', 'Best for': 'Existing GPU pipelines' },
+          { 'Format': 'AWQ', 'Runs on': 'Mainly GPU', 'Typical bits': '4 bit', 'Main tools': 'vLLM, Transformers', 'Best for': 'GPU serving' },
         ],
       },
       formats: {
@@ -95,7 +95,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'speed',
         title: 'Speed and Quality Depend on the Kernel, Not Only the Format',
         content: [
-          '<strong>The same AWQ or GPTQ file can be much slower or faster depending on the GPU kernel that runs it.</strong> Third-party vLLM benchmarks report AWQ on its default kernel running slower than FP16, while the Marlin kernel puts AWQ and GPTQ ahead of FP16 on NVIDIA GPUs (<a href="https://www.spheron.network/blog/gptq-vs-awq-vs-gguf-4-bit-quantization-comparison-2026/" class="text-primary hover:underline" target="_blank" rel="noopener">Spheron</a>, <a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>).',
+          '<strong>The same AWQ or GPTQ file can be much slower or faster depending on the GPU kernel that runs it.</strong> One third-party vLLM benchmark (Qwen2.5-32B on an NVIDIA H200) reports AWQ on its default kernel running slower than FP16 and AWQ and GPTQ with the Marlin kernel running faster (<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>); <a href="https://www.spheron.network/blog/gptq-vs-awq-vs-gguf-4-bit-quantization-comparison-2026/" class="text-primary hover:underline" target="_blank" rel="noopener">Spheron</a> reports the same kernel gap.',
           'Quality loss at 4 bit is small but measurable, and results differ by model and test. One published HumanEval comparison on Qwen2.5-32B put AWQ at 51.8% against 56.1% for FP16, with GPTQ at 46.3% (<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>). Treat such numbers as directional and test on your own model and task.',
           'GGUF files can be loaded by vLLM, but the <a href="https://docs.vllm.ai/en/latest/features/quantization/gguf.html" class="text-primary hover:underline" target="_blank" rel="noopener">vLLM documentation</a> describes that support as highly experimental and under-optimized. For GGUF, use llama.cpp, Ollama or LM Studio.',
         ],
@@ -104,7 +104,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'choose',
         title: 'Which Format to Pick for Your Setup',
         items: [
-          '<strong>Laptop, Mac or CPU-only machine:</strong> GGUF. It is the only one of the three with CPU inference, and it is the format Ollama and LM Studio use on Apple Silicon.',
+          '<strong>Laptop, Mac or CPU-only machine:</strong> GGUF. It is the one of the three that CPU-first tools such as Ollama and LM Studio use by default; LM Studio also offers MLX models on Apple Silicon.',
           '<strong>One consumer GPU, model fits in VRAM:</strong> GGUF for simplicity, or AWQ/GPTQ if your tooling (ExLlama, a Python pipeline) expects them.',
           '<strong>Model larger than your VRAM:</strong> GGUF, because layers can be offloaded to system RAM.',
           '<strong>Production API on NVIDIA GPUs with vLLM:</strong> AWQ or GPTQ with Marlin kernels. Start with AWQ and benchmark GPTQ against it.',
@@ -138,7 +138,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Does Ollama support GPTQ or AWQ models directly?',
-            a: 'No — Ollama is built around GGUF specifically. To use a GPTQ or AWQ checkpoint, you need a different serving tool (vLLM or ExLlama) designed for that format.',
+            a: 'No — Ollama runs GGUF models (and can import supported safetensors weights) but its documentation does not list GPTQ or AWQ checkpoints as loadable formats. To use a GPTQ or AWQ checkpoint, you need a different serving tool (vLLM or ExLlama) designed for that format.',
           },
           {
             q: 'What is GGUF?',
@@ -146,7 +146,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'What is the difference between GPTQ and AWQ?',
-            a: 'Both are GPU-only 4-bit post-training methods. GPTQ compensates rounding error layer by layer using calibration data; AWQ scales the weights that matter most for activations before rounding. In practice AWQ usually keeps slightly more quality, but the GPU kernel used matters as much as the method.',
+            a: 'Both are GPU-focused 4-bit post-training methods. GPTQ compensates rounding error layer by layer using calibration data; AWQ scales the weights that matter most for activations before rounding. In practice AWQ usually keeps slightly more quality, but the GPU kernel used matters as much as the method.',
           },
           {
             q: 'Is AWQ better than GPTQ?',
@@ -188,9 +188,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-ar.webp',
     title: 'GGUF مقابل GPTQ مقابل AWQ: الفروق والسرعة وأيّها تختار',
     seoTitle: 'GGUF مقابل GPTQ مقابل AWQ للتكميم 2026 | Prompt Bites',
-    metaDescription: 'يعمل GGUF على CPU وGPU عبر llama.cpp/Ollama، أما GPTQ وAWQ فتنسيقان لـ GPU فقط لخدمة vLLM. قارن السرعة والجودة والأدوات والأوامر.',
+    metaDescription: 'يعمل GGUF على CPU وGPU عبر llama.cpp/Ollama، أما GPTQ وAWQ فتنسيقان موجَّهان أساسًا لـ GPU لخدمة vLLM. قارن السرعة والجودة والأدوات والأوامر.',
     publishDate: '2026-07-14',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
@@ -199,7 +199,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'المطورون الذين يختارون تنسيق تكميم لاستدلال LLM محلي أو مُقدَّم',
     siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi', 'llama-cpp-gguf-conversion-guide'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>GGUF هو تنسيق التكميم الافتراضي المعتاد للاستخدام المحلي</strong> — يعمل على CPU وGPU عبر llama.cpp وOllama. GPTQ وAWQ تنسيقان لـ GPU فقط لأطر التقديم الإنتاجي مثل vLLM، حيث تحافظ AWQ عمومًا على الجودة بشكل أفضل من GPTQ عند نفس عمق البت.',
+    leadAnswerBlock: '<strong>GGUF هو تنسيق التكميم الافتراضي المعتاد للاستخدام المحلي</strong> — يعمل على CPU وGPU عبر llama.cpp وOllama. GPTQ وAWQ تنسيقان موجَّهان أساسًا لـ GPU لأطر التقديم مثل vLLM.',
     toc: [
       { label: 'أفضل اختيار: GGUF للاستخدام المحلي، وAWQ للتقديم الإنتاجي', anchor: '#best-pick' },
       { label: 'GGUF مقابل GPTQ مقابل AWQ بلمحة', anchor: '#comparison' },
@@ -213,13 +213,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل يجب أن أستخدم تكميم GGUF أم GPTQ أم AWQ؟',
-        answer: 'استخدم GGUF للاستخدام المحلي عبر Ollama أو llama.cpp — يعمل على CPU وGPU دون متطلبات إضافية. استخدم AWQ بدلًا من GPTQ إذا كنت تقدّم في بيئة إنتاج بـ vLLM، لأنها تحافظ على الجودة بشكل أفضل عند نفس عمق البت.',
+        answer: 'استخدم GGUF للاستخدام المحلي عبر Ollama أو llama.cpp — يعمل على CPU وGPU دون متطلبات إضافية. استخدم AWQ بدلًا من GPTQ إذا كنت تقدّم في بيئة إنتاج بـ vLLM، لأنها تُبقي الجودة عمومًا أقرب إلى النموذج الأصلي عند نفس عمق البت، مع أن النتائج تختلف بحسب النموذج والنواة.',
         bullets: [
           'GGUF: التنسيق الأصلي لـ llama.cpp — استدلال هجين CPU+GPU، الافتراضي لـ Ollama وLM Studio.',
-          'GPTQ: مخصص لـ GPU فقط، تكميم بعد التدريب يعتمد على المعايرة — معيار مبكر للتقديم الفعال بـ4-بت.',
-          'AWQ (تكميم الأوزان الواعي بالتنشيط): مخصص لـ GPU فقط، جودة أفضل عمومًا لكل بت من GPTQ، شائع في تقديم vLLM الإنتاجي.',
+          'GPTQ: موجَّه أساسًا لـ GPU، تكميم بعد التدريب يعتمد على المعايرة — معيار مبكر للتقديم الفعال بـ4-بت.',
+          'AWQ (تكميم الأوزان الواعي بالتنشيط): موجَّه أساسًا لـ GPU، جودة أفضل عمومًا لكل بت من GPTQ، شائع في تقديم vLLM الإنتاجي.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -228,36 +228,36 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'GGUF: الافتراضي الصحيح للاستخدام المحلي — يعمل على CPU وGPU عبر llama.cpp/Ollama، دون متطلب يقتصر على CUDA',
-          'GPTQ: مخصص لـ GPU فقط، معيار مبكر للتقديم بـ4-بت، لا يزال مدعومًا من ExLlama وvLLM',
-          'AWQ: مخصص لـ GPU فقط، يحافظ عمومًا على الجودة بشكل أفضل من GPTQ عند نفس عمق البت — مفضّل للتقديم الإنتاجي',
+          'GPTQ: موجَّه أساسًا لـ GPU، معيار مبكر للتقديم بـ4-بت، لا يزال مدعومًا من ExLlama وvLLM',
+          'AWQ: موجَّه أساسًا لـ GPU، يحافظ عمومًا على الجودة بشكل أفضل من GPTQ عند نفس عمق البت — مفضّل للتقديم الإنتاجي',
           'إذا كنت تشغّل Ollama أو LM Studio محليًا، فأنت تريد بالتأكيد GGUF، وليس GPTQ أو AWQ',
         ],
       },
       bestPick: {
         id: 'best-pick',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'GGUF تنسيق نموذج مكمَّم في ملف واحد لـ llama.cpp يعمل على CPU وGPU، بينما GPTQ وAWQ تنسيقان بدقة 4 بت لـ GPU فقط ويُستخدمان أساسًا لتقديم النماذج عبر vLLM.' },
+          { type: 'one-sentence', text: 'GGUF تنسيق نموذج مكمَّم في ملف واحد لـ llama.cpp يعمل على CPU وGPU، بينما GPTQ وAWQ تنسيقان بدقة 4 بت موجَّهان أساسًا لـ GPU ويُستخدمان أساسًا لتقديم النماذج عبر vLLM.' },
           { type: 'plain-terms', text: 'ببساطة: اختر GGUF إذا شغّلت النماذج على حاسوبك عبر Ollama أو LM Studio، واختر AWQ أو GPTQ فقط إذا كنت تقدّم نموذجًا من خادم GPU من NVIDIA.' },
         ],
         title: 'أفضل اختيار: GGUF للاستخدام المحلي، وAWQ للتقديم الإنتاجي',
         content: [
           '<strong>GGUF هو تنسيق التكميم الصحيح لأي شخص تقريبًا يشغّل نماذج محليًا عبر Ollama أو LM Studio أو llama.cpp مباشرة — يدعم استدلال CPU وGPU من نفس الملف، بما في ذلك التفريغ الجزئي إلى CPU عندما لا يستوعب النموذج بالكامل في VRAM.</strong> هذه المرونة هي بالضبط سبب أن GGUF أصبح التنسيق القياسي لأدوات LLM المحلية الاستهلاكية: يعمل سواء كان لديك بطاقة GPU قوية أو متواضعة أو لا شيء إطلاقًا.',
-          'كانت GPTQ من أوائل طرق التكميم بـ4-بت المعتمدة على نطاق واسع لاستدلال GPU الفعّال. تستخدم مجموعة بيانات معايرة لتقليل فقدان الجودة أثناء التكميم بعد التدريب، لكنها مخصصة لـ GPU فقط — لا يوجد مسار بديل جوهري لـ CPU — وقد تجاوزتها عمومًا طرق أحدث في الجودة لكل بت.',
-          'AWQ (تكميم الأوزان الواعي بالتنشيط) هو البديل الأحدث المخصص لـ GPU فقط لـ GPTQ. عبر حماية الأوزان الأكثر أهمية لمقدار التنشيط بدلًا من تكميم كل شيء بشكل موحد، تحافظ AWQ عمومًا على جودة أكبر عند نفس عمق البت. إنها خيار شائع لمكدسات التقديم الإنتاجي مثل vLLM، حيث يكون التشغيل المخصص لـ GPU فقط أمرًا مفروغًا منه أصلًا.',
+          'كانت GPTQ من أوائل طرق التكميم بـ4-بت المعتمدة على نطاق واسع لاستدلال GPU الفعّال. تستخدم مجموعة بيانات معايرة لتقليل فقدان الجودة أثناء التكميم بعد التدريب، لكنها موجَّهة أساسًا لـ GPU (توجد نوى CPU في بعض المكتبات لكنها ليست المسار الشائع)، وفي المقارنات المنشورة غالبًا ما تساويها أو تتفوق عليها طرق أحدث مثل AWQ من حيث الجودة لكل بت.',
+          'AWQ (تكميم الأوزان الواعي بالتنشيط) هو البديل الأحدث الموجَّه أساسًا لـ GPU لـ GPTQ. عبر حماية الأوزان الأكثر أهمية لمقدار التنشيط بدلًا من تكميم كل شيء بشكل موحد، تحافظ AWQ عمومًا على جودة أكبر عند نفس عمق البت. إنها خيار شائع لمكدسات التقديم الإنتاجي مثل vLLM، حيث يكون التقديم على GPU أمرًا مفروغًا منه أصلًا.',
         ],
       },
       comparison: {
         id: 'comparison',
         title: 'GGUF مقابل GPTQ مقابل AWQ بلمحة',
         content: [
-          'اختر GGUF إذا كنت تشغّل Ollama أو LM Studio أو llama.cpp محليًا — إنه الوحيد من الثلاثة بدعم حقيقي لـ CPU ومرونة تفريغ جزئي. اختر GPTQ فقط إذا كنت تعمل مع خط أنابيب أو أداة موجودة (مثل إعدادات ExLlama القديمة) تتوقعه تحديدًا. اختر AWQ إذا كنت تنشر على مكدس تقديم GPU إنتاجي (vLLM) وتريد أفضل جودة لكل بت بين الخيارين المخصصين لـ GPU فقط.',
+          'اختر GGUF إذا كنت تشغّل Ollama أو LM Studio أو llama.cpp محليًا — إنه الأنسب من الثلاثة للتشغيل على CPU والتفريغ الجزئي (توجد نوى CPU لـ GPTQ/AWQ، مثلًا في GPTQModel، لكنها ليست المسار الشائع). اختر GPTQ فقط إذا كنت تعمل مع خط أنابيب أو أداة موجودة (مثل إعدادات ExLlama القديمة) تتوقعه تحديدًا. اختر AWQ إذا كنت تنشر على مكدس تقديم GPU إنتاجي (vLLM) وتريد جودة أعلى عمومًا لكل بت بين الخيارين الموجَّهين لـ GPU.',
           'تمثل الأنواع الثلاثة نفس النموذج الأساسي بدقة مخفضة — التنسيق يحدد أي الأدوات يمكنها تحميله وكيف يتعامل بسلاسة مع نقص ذاكرة GPU، وليس قدرة النموذج الأساسية.',
         ],
         columns: ['التنسيق', 'يعمل على', 'البتات المعتادة', 'الأدوات الرئيسية', 'الأنسب لـ'],
         rows: [
           { 'التنسيق': 'GGUF', 'يعمل على': 'CPU أو GPU أو كلاهما', 'البتات المعتادة': '2–8 بت', 'الأدوات الرئيسية': 'llama.cpp وOllama وLM Studio', 'الأنسب لـ': 'الاستخدام المحلي' },
-          { 'التنسيق': 'GPTQ', 'يعمل على': 'GPU فقط', 'البتات المعتادة': '4 بت (3–8)', 'الأدوات الرئيسية': 'vLLM وExLlama', 'الأنسب لـ': 'خطوط GPU القائمة' },
-          { 'التنسيق': 'AWQ', 'يعمل على': 'GPU فقط', 'البتات المعتادة': '4 بت', 'الأدوات الرئيسية': 'vLLM وTransformers', 'الأنسب لـ': 'التقديم على GPU' },
+          { 'التنسيق': 'GPTQ', 'يعمل على': 'غالبًا GPU', 'البتات المعتادة': '4 بت (3–8)', 'الأدوات الرئيسية': 'vLLM وExLlama', 'الأنسب لـ': 'خطوط GPU القائمة' },
+          { 'التنسيق': 'AWQ', 'يعمل على': 'غالبًا GPU', 'البتات المعتادة': '4 بت', 'الأدوات الرئيسية': 'vLLM وTransformers', 'الأنسب لـ': 'التقديم على GPU' },
         ],
       },
       formats: {
@@ -275,7 +275,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'speed',
         title: 'السرعة والجودة تعتمدان على النواة وليس التنسيق وحده',
         content: [
-          '<strong>قد يكون ملف AWQ أو GPTQ نفسه أبطأ بكثير أو أسرع بحسب نواة GPU التي تشغّله.</strong> تفيد اختبارات أداء من جهات خارجية على vLLM بأن AWQ بالنواة الافتراضية أبطأ من FP16، بينما تجعل نواة Marlin كلًّا من AWQ وGPTQ أسرع من FP16 على وحدات NVIDIA (<a href="https://www.spheron.network/blog/gptq-vs-awq-vs-gguf-4-bit-quantization-comparison-2026/" class="text-primary hover:underline" target="_blank" rel="noopener">Spheron</a>، <a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>).',
+          '<strong>قد يكون ملف AWQ أو GPTQ نفسه أبطأ بكثير أو أسرع بحسب نواة GPU التي تشغّله.</strong> يفيد اختبار أداء واحد من جهة خارجية على vLLM (نموذج Qwen2.5-32B على NVIDIA H200) بأن AWQ بالنواة الافتراضية أبطأ من FP16، وبأن AWQ وGPTQ مع نواة Marlin أسرع (<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>)؛ وتفيد <a href="https://www.spheron.network/blog/gptq-vs-awq-vs-gguf-4-bit-quantization-comparison-2026/" class="text-primary hover:underline" target="_blank" rel="noopener">Spheron</a> بالفجوة نفسها بين النواتين.',
           'فقدان الجودة عند 4 بت صغير لكنه قابل للقياس، ويختلف باختلاف النموذج والاختبار. في مقارنة HumanEval منشورة على Qwen2.5-32B سجّلت AWQ نسبة 51.8% مقابل 56.1% لـ FP16، وسجّلت GPTQ نسبة 46.3% (<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>). تعامل مع هذه الأرقام كمؤشر فقط، واختبر على نموذجك ومهمتك.',
           'يستطيع vLLM تحميل ملفات GGUF، لكن <a href="https://docs.vllm.ai/en/latest/features/quantization/gguf.html" class="text-primary hover:underline" target="_blank" rel="noopener">وثائق vLLM</a> تصف هذا الدعم بأنه تجريبي للغاية وغير محسَّن بالكامل. مع GGUF استخدم llama.cpp أو Ollama أو LM Studio.',
         ],
@@ -284,7 +284,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'choose',
         title: 'أي تنسيق تختار لإعدادك',
         items: [
-          '<strong>حاسوب محمول أو Mac أو جهاز بـ CPU فقط:</strong> GGUF. هو الوحيد من الثلاثة الذي يدعم الاستدلال على CPU، وهو التنسيق الذي يستخدمه Ollama وLM Studio على Apple Silicon.',
+          '<strong>حاسوب محمول أو Mac أو جهاز بـ CPU فقط:</strong> GGUF. هو التنسيق من الثلاثة الذي تستخدمه افتراضيًا الأدوات التي تعطي الأولوية لـ CPU مثل Ollama وLM Studio؛ ويتيح LM Studio أيضًا نماذج MLX على Apple Silicon.',
           '<strong>بطاقة GPU استهلاكية واحدة والنموذج يتسع في VRAM:</strong> GGUF للبساطة، أو AWQ/GPTQ إذا كانت أدواتك (ExLlama أو خط Python) تتوقعهما.',
           '<strong>نموذج أكبر من VRAM لديك:</strong> GGUF، لأنه يمكن تفريغ بعض الطبقات إلى ذاكرة النظام.',
           '<strong>واجهة إنتاجية على GPU من NVIDIA مع vLLM:</strong> AWQ أو GPTQ مع نوى Marlin. ابدأ بـ AWQ وقارن GPTQ باختبار أداء.',
@@ -318,7 +318,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'هل يدعم Ollama نماذج GPTQ أو AWQ مباشرة؟',
-            a: 'لا — يُبنى Ollama حول GGUF تحديدًا. لاستخدام نقطة تفتيش GPTQ أو AWQ، تحتاج أداة تقديم مختلفة (vLLM أو ExLlama) مصممة لذلك التنسيق.',
+            a: 'لا — يشغّل Ollama نماذج GGUF (ويمكنه استيراد أوزان safetensors المدعومة)، لكن وثائقه لا تدرج نقاط تفتيش GPTQ أو AWQ ضمن التنسيقات القابلة للتحميل. لاستخدام نقطة تفتيش GPTQ أو AWQ، تحتاج أداة تقديم مختلفة (vLLM أو ExLlama) مصممة لذلك التنسيق.',
           },
           {
             q: 'ما هو GGUF؟',
@@ -326,7 +326,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'ما الفرق بين GPTQ وAWQ؟',
-            a: 'كلاهما طريقة تكميم 4 بت بعد التدريب لـ GPU فقط. تعوّض GPTQ خطأ التقريب طبقةً بطبقة باستخدام بيانات معايرة؛ أما AWQ فتحجّم الأوزان الأهم للتنشيطات قبل التقريب. عمليًا تحافظ AWQ عادةً على جودة أكبر قليلًا، لكن نواة GPU تهمّ بقدر الطريقة نفسها.',
+            a: 'كلاهما طريقة تكميم 4 بت بعد التدريب موجَّهة أساسًا لـ GPU. تعوّض GPTQ خطأ التقريب طبقةً بطبقة باستخدام بيانات معايرة؛ أما AWQ فتحجّم الأوزان الأهم للتنشيطات قبل التقريب. عمليًا تحافظ AWQ عادةً على جودة أكبر قليلًا، لكن نواة GPU تهمّ بقدر الطريقة نفسها.',
           },
           {
             q: 'هل AWQ أفضل من GPTQ؟',
@@ -354,10 +354,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'قراءات ذات صلة',
         items: [
-          '[ما هو تكميم Q4_K_M؟](/prompt-bites/what-is-q4-k-m-quantization) — مستوى التكميم الأكثر شيوعًا في GGUF موضّح',
-          '[Q4_K_M مقابل Q8_0](/prompt-bites/q4-k-m-vs-q8-0) — اختيار مستوى تكميم GGUF',
-          '[Ollama مقابل vLLM مقابل TGI](/prompt-bites/ollama-vs-vllm-vs-tgi) — أداة التقديم التي تقترن بأي تنسيق',
-          '[شرح تكميم نماذج LLM (دليل كامل)](/local-llms/llm-quantization-explained) — شرح متعمق وكامل لكيفية عمل التكميم داخليًا',
+          '[ما هو تكميم Q4_K_M؟](/ar/prompt-bites/what-is-q4-k-m-quantization) — مستوى التكميم الأكثر شيوعًا في GGUF موضّح',
+          '[Q4_K_M مقابل Q8_0](/ar/prompt-bites/q4-k-m-vs-q8-0) — اختيار مستوى تكميم GGUF',
+          '[Ollama مقابل vLLM مقابل TGI](/ar/prompt-bites/ollama-vs-vllm-vs-tgi) — أداة التقديم التي تقترن بأي تنسيق',
+          '[شرح تكميم نماذج LLM (دليل كامل)](/ar/local-llms/llm-quantization-explained) — شرح متعمق وكامل لكيفية عمل التكميم داخليًا',
         ],
       },
     },
@@ -368,9 +368,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-de.webp',
     title: 'GGUF vs. GPTQ vs. AWQ: Unterschiede, Geschwindigkeit und Auswahl',
     seoTitle: 'GGUF vs. GPTQ vs. AWQ Quantisierung 2026 | Prompt Bites',
-    metaDescription: 'GGUF läuft auf CPU und GPU via llama.cpp/Ollama; GPTQ und AWQ sind GPU-Formate für vLLM. Vergleich von Geschwindigkeit, Qualität, Tools und Befehlen.',
+    metaDescription: 'GGUF läuft auf CPU und GPU via llama.cpp/Ollama; GPTQ und AWQ sind GPU-orientierte Formate für vLLM. Vergleich von Geschwindigkeit, Qualität, Tools und Befehlen.',
     publishDate: '2026-07-14',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
@@ -379,7 +379,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Entwickler, die ein Quantisierungsformat für lokale oder servierte LLM-Inferenz wählen',
     siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi', 'llama-cpp-gguf-conversion-guide'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>GGUF ist das gängige Standardformat für lokale Nutzung</strong> — es läuft auf CPU und GPU über llama.cpp und Ollama. GPTQ und AWQ sind reine GPU-Formate für vLLM.',
+    leadAnswerBlock: '<strong>GGUF ist das gängige Standardformat für lokale Nutzung</strong> — es läuft auf CPU und GPU über llama.cpp und Ollama. GPTQ und AWQ sind GPU-orientierte Formate für vLLM.',
     toc: [
       { label: 'Beste Wahl: GGUF für lokale Nutzung, AWQ für Produktions-Serving', anchor: '#best-pick' },
       { label: 'GGUF vs. GPTQ vs. AWQ auf einen Blick', anchor: '#comparison' },
@@ -393,13 +393,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Sollte ich GGUF, GPTQ oder AWQ verwenden?',
-        answer: 'Nutzen Sie GGUF für lokale Nutzung via Ollama oder llama.cpp — es läuft auf CPU und GPU ohne zusätzliche Anforderungen. Nutzen Sie AWQ statt GPTQ bei Produktions-Serving mit vLLM, da es die Qualität bei gleicher Bitbreite besser hält.',
+        answer: 'Nutzen Sie GGUF für lokale Nutzung via Ollama oder llama.cpp — es läuft auf CPU und GPU ohne zusätzliche Anforderungen. Nutzen Sie AWQ statt GPTQ bei Produktions-Serving mit vLLM, da es die Qualität bei gleicher Bitbreite im Allgemeinen näher am Original hält, wobei die Ergebnisse je nach Modell und Kernel variieren.',
         bullets: [
           'GGUF: das native Format von llama.cpp — Hybrid-Inferenz auf CPU+GPU, der Standard für Ollama und LM Studio.',
-          'GPTQ: nur GPU, kalibrierungsbasierte Post-Training-Quantisierung — ein früher Standard für effizientes 4-Bit-Serving.',
-          'AWQ (Activation-aware Weight Quantization): nur GPU, im Allgemeinen bessere Qualität pro Bit als GPTQ, verbreitet im vLLM-Produktions-Serving.',
+          'GPTQ: GPU-orientiert, kalibrierungsbasierte Post-Training-Quantisierung — ein früher Standard für effizientes 4-Bit-Serving.',
+          'AWQ (Activation-aware Weight Quantization): GPU-orientiert, im Allgemeinen bessere Qualität pro Bit als GPTQ, verbreitet im vLLM-Produktions-Serving.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -408,36 +408,36 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'GGUF: Standard für lokale Nutzung — läuft auf CPU und GPU via llama.cpp/Ollama',
-          'GPTQ: nur GPU, ein früher Standard für 4-Bit-Serving, weiterhin von ExLlama und vLLM unterstützt',
-          'AWQ: nur GPU, hält die Qualität bei gleicher Bitbreite im Allgemeinen besser als GPTQ — bevorzugt für Produktions-Serving',
+          'GPTQ: GPU-orientiert, ein früher Standard für 4-Bit-Serving, weiterhin von ExLlama und vLLM unterstützt',
+          'AWQ: GPU-orientiert, hält die Qualität bei gleicher Bitbreite im Allgemeinen besser als GPTQ — bevorzugt für Produktions-Serving',
           'Wer Ollama oder LM Studio lokal betreibt, will fast sicher GGUF, nicht GPTQ oder AWQ',
         ],
       },
       bestPick: {
         id: 'best-pick',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'GGUF ist ein quantisiertes Einzeldatei-Modellformat für llama.cpp, das auf CPU und GPU läuft, während GPTQ und AWQ reine GPU-4-Bit-Formate sind, die vor allem für das Serving mit vLLM dienen.' },
+          { type: 'one-sentence', text: 'GGUF ist ein quantisiertes Einzeldatei-Modellformat für llama.cpp, das auf CPU und GPU läuft, während GPTQ und AWQ GPU-orientierte 4-Bit-Formate sind, die vor allem für das Serving mit vLLM dienen.' },
           { type: 'plain-terms', text: 'Einfach gesagt: Wählen Sie GGUF, wenn Sie Modelle auf dem eigenen Rechner mit Ollama oder LM Studio betreiben, und AWQ oder GPTQ nur, wenn Sie ein Modell von einem NVIDIA-GPU-Server ausliefern.' },
         ],
         title: 'Beste Wahl: GGUF für lokale Nutzung, AWQ für Produktions-Serving',
         content: [
           '<strong>GGUF ist das richtige Quantisierungsformat für fast jeden, der Modelle lokal über Ollama, LM Studio oder direkt llama.cpp betreibt — es unterstützt sowohl CPU- als auch GPU-Inferenz aus derselben Datei, einschließlich teilweisem CPU-Offload, wenn ein Modell nicht vollständig in den VRAM passt.</strong> Diese Flexibilität ist genau der Grund, warum GGUF zum Standardformat für lokale Consumer-LLM-Tools wurde: Es funktioniert, ob Sie eine leistungsstarke GPU, eine bescheidene oder gar keine haben.',
-          'GPTQ war eine der frühesten, weitverbreiteten 4-Bit-Quantisierungsmethoden für effiziente GPU-Inferenz. Es nutzt einen Kalibrierungsdatensatz, um Qualitätsverluste bei der Post-Training-Quantisierung zu minimieren, ist aber reines GPU-Format — es gibt keinen sinnvollen CPU-Fallback-Pfad — und wurde bei Qualität pro Bit im Allgemeinen von neueren Methoden überholt.',
-          'AWQ (Activation-aware Weight Quantization) ist die modernere, reine GPU-Alternative zu GPTQ. Indem es die Gewichte schützt, die für die Aktivierungsgröße am wichtigsten sind, statt alles einheitlich zu quantisieren, bewahrt AWQ im Allgemeinen mehr Qualität bei gleicher Bitbreite. Es ist eine verbreitete Wahl für Produktions-Serving-Stacks wie vLLM, wo reiner GPU-Betrieb ohnehin gegeben ist.',
+          'GPTQ war eine der frühesten, weitverbreiteten 4-Bit-Quantisierungsmethoden für effiziente GPU-Inferenz. Es nutzt einen Kalibrierungsdatensatz, um Qualitätsverluste bei der Post-Training-Quantisierung zu minimieren, ist aber GPU-orientiert (CPU-Kernel gibt es in einigen Bibliotheken, sie sind aber nicht der übliche Weg) und wurde in veröffentlichten Vergleichen bei der Qualität pro Bit oft von neueren Methoden wie AWQ erreicht oder übertroffen.',
+          'AWQ (Activation-aware Weight Quantization) ist die modernere, GPU-orientierte Alternative zu GPTQ. Indem es die Gewichte schützt, die für die Aktivierungsgröße am wichtigsten sind, statt alles einheitlich zu quantisieren, bewahrt AWQ im Allgemeinen mehr Qualität bei gleicher Bitbreite. Es ist eine verbreitete Wahl für Produktions-Serving-Stacks wie vLLM, wo GPU-Serving ohnehin gegeben ist.',
         ],
       },
       comparison: {
         id: 'comparison',
         title: 'GGUF vs. GPTQ vs. AWQ auf einen Blick',
         content: [
-          'Wählen Sie GGUF, wenn Sie Ollama, LM Studio oder llama.cpp lokal betreiben — es ist das einzige der drei mit echtem CPU-Support und flexiblem Teil-Offload. Wählen Sie GPTQ nur, wenn Sie mit einer bestehenden Pipeline oder einem Tool arbeiten (wie älteren ExLlama-Setups), das dies speziell erwartet. Wählen Sie AWQ, wenn Sie auf einen Produktions-GPU-Serving-Stack (vLLM) deployen und die beste Qualität pro Bit unter den reinen GPU-Optionen wollen.',
+          'Wählen Sie GGUF, wenn Sie Ollama, LM Studio oder llama.cpp lokal betreiben — es ist das Format der drei, das für CPU-Betrieb und flexibles Teil-Offload ausgelegt ist (CPU-Kernel für GPTQ/AWQ gibt es z. B. in GPTQModel, sie sind aber nicht der übliche Weg). Wählen Sie GPTQ nur, wenn Sie mit einer bestehenden Pipeline oder einem Tool arbeiten (wie älteren ExLlama-Setups), das dies speziell erwartet. Wählen Sie AWQ, wenn Sie auf einen Produktions-GPU-Serving-Stack (vLLM) deployen und im Allgemeinen mehr Qualität pro Bit unter den GPU-orientierten Optionen wollen.',
           'Alle drei repräsentieren dasselbe zugrunde liegende Modell bei reduzierter Präzision — das Format bestimmt, welche Tools es laden können und wie elegant es mit GPU-Speicherengpässen umgeht, nicht die zugrunde liegende Fähigkeit des Modells.',
         ],
         columns: ['Format', 'Läuft auf', 'Typische Bits', 'Haupt-Tools', 'Am besten für'],
         rows: [
           { 'Format': 'GGUF', 'Läuft auf': 'CPU, GPU oder beides', 'Typische Bits': '2–8 Bit', 'Haupt-Tools': 'llama.cpp, Ollama, LM Studio', 'Am besten für': 'Lokale Nutzung' },
-          { 'Format': 'GPTQ', 'Läuft auf': 'Nur GPU', 'Typische Bits': '4 Bit (3–8)', 'Haupt-Tools': 'vLLM, ExLlama', 'Am besten für': 'Bestehende GPU-Pipelines' },
-          { 'Format': 'AWQ', 'Läuft auf': 'Nur GPU', 'Typische Bits': '4 Bit', 'Haupt-Tools': 'vLLM, Transformers', 'Am besten für': 'GPU-Serving' },
+          { 'Format': 'GPTQ', 'Läuft auf': 'Hauptsächlich GPU', 'Typische Bits': '4 Bit (3–8)', 'Haupt-Tools': 'vLLM, ExLlama', 'Am besten für': 'Bestehende GPU-Pipelines' },
+          { 'Format': 'AWQ', 'Läuft auf': 'Hauptsächlich GPU', 'Typische Bits': '4 Bit', 'Haupt-Tools': 'vLLM, Transformers', 'Am besten für': 'GPU-Serving' },
         ],
       },
       formats: {
@@ -455,7 +455,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'speed',
         title: 'Geschwindigkeit und Qualität hängen vom Kernel ab, nicht nur vom Format',
         content: [
-          '<strong>Dieselbe AWQ- oder GPTQ-Datei kann je nach GPU-Kernel deutlich langsamer oder schneller laufen.</strong> Benchmarks Dritter mit vLLM berichten, dass AWQ mit dem Standard-Kernel langsamer als FP16 läuft, während der Marlin-Kernel AWQ und GPTQ auf NVIDIA-GPUs vor FP16 bringt (<a href="https://www.spheron.network/blog/gptq-vs-awq-vs-gguf-4-bit-quantization-comparison-2026/" class="text-primary hover:underline" target="_blank" rel="noopener">Spheron</a>, <a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>).',
+          '<strong>Dieselbe AWQ- oder GPTQ-Datei kann je nach GPU-Kernel deutlich langsamer oder schneller laufen.</strong> Ein Drittanbieter-Benchmark mit vLLM (Qwen2.5-32B auf einer NVIDIA H200) berichtet, dass AWQ mit dem Standard-Kernel langsamer als FP16 läuft, AWQ und GPTQ mit dem Marlin-Kernel dagegen schneller (<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>); <a href="https://www.spheron.network/blog/gptq-vs-awq-vs-gguf-4-bit-quantization-comparison-2026/" class="text-primary hover:underline" target="_blank" rel="noopener">Spheron</a> berichtet dieselbe Kernel-Lücke.',
           'Der Qualitätsverlust bei 4 Bit ist klein, aber messbar und hängt von Modell und Test ab. Ein veröffentlichter HumanEval-Vergleich mit Qwen2.5-32B nannte für AWQ 51,8 % gegenüber 56,1 % für FP16, für GPTQ 46,3 % (<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>). Verstehen Sie solche Zahlen als Richtwerte und testen Sie mit Ihrem eigenen Modell und Ihrer Aufgabe.',
           'GGUF-Dateien lassen sich in vLLM laden, doch die <a href="https://docs.vllm.ai/en/latest/features/quantization/gguf.html" class="text-primary hover:underline" target="_blank" rel="noopener">vLLM-Dokumentation</a> beschreibt diese Unterstützung als hochgradig experimentell und nicht optimiert. Nutzen Sie für GGUF llama.cpp, Ollama oder LM Studio.',
         ],
@@ -464,7 +464,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'choose',
         title: 'Welches Format zu Ihrem Setup passt',
         items: [
-          '<strong>Laptop, Mac oder Rechner nur mit CPU:</strong> GGUF. Es ist das einzige der drei Formate mit CPU-Inferenz und wird von Ollama und LM Studio auf Apple Silicon genutzt.',
+          '<strong>Laptop, Mac oder Rechner nur mit CPU:</strong> GGUF. Es ist das Format der drei, das CPU-orientierte Tools wie Ollama und LM Studio standardmäßig nutzen; LM Studio bietet auf Apple Silicon zusätzlich MLX-Modelle an.',
           '<strong>Eine Consumer-GPU, Modell passt in den VRAM:</strong> GGUF für Einfachheit, oder AWQ/GPTQ, wenn Ihr Tooling (ExLlama, Python-Pipeline) diese erwartet.',
           '<strong>Modell größer als Ihr VRAM:</strong> GGUF, da Schichten in den Arbeitsspeicher ausgelagert werden können.',
           '<strong>Produktions-API auf NVIDIA-GPUs mit vLLM:</strong> AWQ oder GPTQ mit Marlin-Kernels. Beginnen Sie mit AWQ und vergleichen Sie GPTQ per Benchmark.',
@@ -498,7 +498,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Unterstützt Ollama GPTQ- oder AWQ-Modelle direkt?',
-            a: 'Nein — Ollama ist speziell um GGUF herum aufgebaut. Um einen GPTQ- oder AWQ-Checkpoint zu nutzen, brauchen Sie ein anderes Serving-Tool (vLLM oder ExLlama), das für dieses Format ausgelegt ist.',
+            a: 'Nein — Ollama führt GGUF-Modelle aus (und kann unterstützte Safetensors-Gewichte importieren), listet GPTQ- oder AWQ-Checkpoints in seiner Dokumentation aber nicht als ladbare Formate. Um einen GPTQ- oder AWQ-Checkpoint zu nutzen, brauchen Sie ein anderes Serving-Tool (vLLM oder ExLlama), das für dieses Format ausgelegt ist.',
           },
           {
             q: 'Was ist GGUF?',
@@ -506,7 +506,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Was ist der Unterschied zwischen GPTQ und AWQ?',
-            a: 'Beide sind reine GPU-Methoden zur 4-Bit-Quantisierung nach dem Training. GPTQ gleicht Rundungsfehler schichtweise mit Kalibrierdaten aus; AWQ skaliert die für die Aktivierungen wichtigsten Gewichte vor dem Runden. In der Praxis hält AWQ meist etwas mehr Qualität, doch der verwendete GPU-Kernel zählt ebenso viel wie die Methode.',
+            a: 'Beide sind GPU-orientierte Methoden zur 4-Bit-Quantisierung nach dem Training. GPTQ gleicht Rundungsfehler schichtweise mit Kalibrierdaten aus; AWQ skaliert die für die Aktivierungen wichtigsten Gewichte vor dem Runden. In der Praxis hält AWQ meist etwas mehr Qualität, doch der verwendete GPU-Kernel zählt ebenso viel wie die Methode.',
           },
           {
             q: 'Ist AWQ besser als GPTQ?',
@@ -534,10 +534,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'Weiterführende Artikel',
         items: [
-          '[Was ist Q4_K_M-Quantisierung?](/prompt-bites/what-is-q4-k-m-quantization) — das gängigste Quant-Level von GGUF erklärt',
-          '[Q4_K_M vs. Q8_0](/prompt-bites/q4-k-m-vs-q8-0) — ein GGUF-Quant-Level auswählen',
-          '[Ollama vs. vLLM vs. TGI](/prompt-bites/ollama-vs-vllm-vs-tgi) — welches Serving-Tool zu welchem Format passt',
-          '[LLM-Quantisierung erklärt (vollständiger Leitfaden)](/local-llms/llm-quantization-explained) — der vollständige Deep Dive, wie Quantisierung unter der Haube funktioniert',
+          '[Was ist Q4_K_M-Quantisierung?](/de/prompt-bites/what-is-q4-k-m-quantization) — das gängigste Quant-Level von GGUF erklärt',
+          '[Q4_K_M vs. Q8_0](/de/prompt-bites/q4-k-m-vs-q8-0) — ein GGUF-Quant-Level auswählen',
+          '[Ollama vs. vLLM vs. TGI](/de/prompt-bites/ollama-vs-vllm-vs-tgi) — welches Serving-Tool zu welchem Format passt',
+          '[LLM-Quantisierung erklärt (vollständiger Leitfaden)](/de/local-llms/llm-quantization-explained) — der vollständige Deep Dive, wie Quantisierung unter der Haube funktioniert',
         ],
       },
     },
@@ -548,9 +548,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-es.webp',
     title: 'GGUF vs GPTQ vs AWQ: diferencias, velocidad y cuál usar',
     seoTitle: 'GGUF vs GPTQ vs AWQ Cuantización 2026 | Prompt Bites',
-    metaDescription: 'GGUF corre en CPU y GPU con llama.cpp/Ollama; GPTQ y AWQ son formatos solo GPU para vLLM. Compara velocidad, calidad, herramientas y comandos.',
+    metaDescription: 'GGUF corre en CPU y GPU con llama.cpp/Ollama; GPTQ y AWQ son formatos orientados a GPU para vLLM. Compara velocidad, calidad, herramientas y comandos.',
     publishDate: '2026-07-14',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
@@ -559,7 +559,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Desarrolladores que eligen un formato de cuantización para inferencia local o servida de LLM',
     siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi', 'llama-cpp-gguf-conversion-guide'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>GGUF es el formato por defecto más habitual para uso local</strong> — corre en CPU y GPU con llama.cpp y Ollama. GPTQ y AWQ son formatos solo GPU para servicio con vLLM.',
+    leadAnswerBlock: '<strong>GGUF es el formato por defecto más habitual para uso local</strong> — corre en CPU y GPU con llama.cpp y Ollama. GPTQ y AWQ son formatos orientados a GPU para servicio con vLLM.',
     toc: [
       { label: 'Mejor Opción: GGUF para Uso Local, AWQ para Servicio en Producción', anchor: '#best-pick' },
       { label: 'GGUF vs GPTQ vs AWQ de un Vistazo', anchor: '#comparison' },
@@ -573,13 +573,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Debería usar cuantización GGUF, GPTQ o AWQ?',
-        answer: 'Usa GGUF para uso local vía Ollama o llama.cpp — corre en CPU y GPU sin requisitos adicionales. Usa AWQ en lugar de GPTQ si sirves en producción con vLLM, ya que mantiene mejor la calidad al mismo ancho de bits.',
+        answer: 'Usa GGUF para uso local vía Ollama o llama.cpp — corre en CPU y GPU sin requisitos adicionales. Usa AWQ en lugar de GPTQ si sirves en producción con vLLM, ya que en general mantiene la calidad más cerca del original al mismo ancho de bits, aunque los resultados varían según el modelo y el kernel.',
         bullets: [
           'GGUF: el formato nativo de llama.cpp — inferencia híbrida CPU+GPU, el predeterminado para Ollama y LM Studio.',
-          'GPTQ: solo para GPU, cuantización post-entrenamiento basada en calibración — un estándar temprano para servicio eficiente en 4 bits.',
-          'AWQ (Cuantización de Pesos Consciente de la Activación): solo para GPU, generalmente mejor calidad por bit que GPTQ, común en servicio de producción vLLM.',
+          'GPTQ: orientado a GPU, cuantización post-entrenamiento basada en calibración — un estándar temprano para servicio eficiente en 4 bits.',
+          'AWQ (Cuantización de Pesos Consciente de la Activación): orientado a GPU, generalmente mejor calidad por bit que GPTQ, común en servicio de producción vLLM.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -588,36 +588,36 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'GGUF: la opción correcta por defecto para uso local — corre en CPU y GPU vía llama.cpp/Ollama, sin requisito exclusivo de CUDA',
-          'GPTQ: solo para GPU, un estándar temprano para servicio en 4 bits, aún soportado por ExLlama y vLLM',
-          'AWQ: solo para GPU, generalmente mantiene mejor la calidad que GPTQ al mismo ancho de bits — preferido para servicio en producción',
+          'GPTQ: orientado a GPU, un estándar temprano para servicio en 4 bits, aún soportado por ExLlama y vLLM',
+          'AWQ: orientado a GPU, generalmente mantiene mejor la calidad que GPTQ al mismo ancho de bits — preferido para servicio en producción',
           'Si ejecutas Ollama o LM Studio localmente, casi con certeza quieres GGUF, no GPTQ ni AWQ',
         ],
       },
       bestPick: {
         id: 'best-pick',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'GGUF es un formato de modelo cuantizado en un solo archivo para llama.cpp que corre en CPU y GPU, mientras que GPTQ y AWQ son formatos de 4 bits solo para GPU, usados sobre todo para servir modelos con vLLM.' },
+          { type: 'one-sentence', text: 'GGUF es un formato de modelo cuantizado en un solo archivo para llama.cpp que corre en CPU y GPU, mientras que GPTQ y AWQ son formatos de 4 bits orientados a GPU, usados sobre todo para servir modelos con vLLM.' },
           { type: 'plain-terms', text: 'En términos simples: elige GGUF si ejecutas modelos en tu propio equipo con Ollama o LM Studio, y AWQ o GPTQ solo si sirves un modelo desde un servidor con GPU NVIDIA.' },
         ],
         title: 'Mejor Opción: GGUF para Uso Local, AWQ para Servicio en Producción',
         content: [
           '<strong>GGUF es el formato de cuantización correcto para casi cualquiera que ejecute modelos localmente a través de Ollama, LM Studio o llama.cpp directamente — soporta inferencia tanto en CPU como en GPU desde el mismo archivo, incluida la descarga parcial a CPU cuando un modelo no cabe completamente en VRAM.</strong> Esta flexibilidad es exactamente por qué GGUF se convirtió en el formato estándar para las herramientas de LLM local de consumo: funciona ya sea que tengas una GPU potente, una modesta, o ninguna.',
-          'GPTQ fue uno de los primeros métodos de cuantización de 4 bits ampliamente adoptados para inferencia eficiente en GPU. Usa un dataset de calibración para minimizar la pérdida de calidad durante la cuantización post-entrenamiento, pero es solo para GPU — no hay una ruta de reserva significativa a CPU — y en general ha sido superado en calidad por bit por métodos más nuevos.',
-          'AWQ (Cuantización de Pesos Consciente de la Activación) es la alternativa más moderna solo para GPU frente a GPTQ. Al proteger los pesos que más importan para la magnitud de activación en lugar de cuantizar todo uniformemente, AWQ generalmente preserva más calidad al mismo ancho de bits. Es una elección común para pilas de servicio en producción como vLLM, donde la operación exclusiva de GPU ya es un supuesto de partida.',
+          'GPTQ fue uno de los primeros métodos de cuantización de 4 bits ampliamente adoptados para inferencia eficiente en GPU. Usa un dataset de calibración para minimizar la pérdida de calidad durante la cuantización post-entrenamiento, pero está orientado a GPU (existen kernels de CPU en algunas bibliotecas, pero no son la vía habitual) y, en comparaciones publicadas, a menudo ha sido igualado o superado en calidad por bit por métodos más nuevos como AWQ.',
+          'AWQ (Cuantización de Pesos Consciente de la Activación) es la alternativa más moderna orientada a GPU frente a GPTQ. Al proteger los pesos que más importan para la magnitud de activación en lugar de cuantizar todo uniformemente, AWQ generalmente preserva más calidad al mismo ancho de bits. Es una elección común para pilas de servicio en producción como vLLM, donde servir en GPU ya es un supuesto de partida.',
         ],
       },
       comparison: {
         id: 'comparison',
         title: 'GGUF vs GPTQ vs AWQ de un Vistazo',
         content: [
-          'Elige GGUF si ejecutas Ollama, LM Studio o llama.cpp localmente — es el único de los tres con soporte real de CPU y flexibilidad de descarga parcial. Elige GPTQ solo si trabajas con una canalización o herramienta existente (como configuraciones de ExLlama más antiguas) que lo espera específicamente. Elige AWQ si despliegas en una pila de servicio de producción en GPU (vLLM) y quieres la mejor calidad por bit entre las opciones exclusivas de GPU.',
+          'Elige GGUF si ejecutas Ollama, LM Studio o llama.cpp localmente — es el formato de los tres pensado para CPU y descarga parcial (existen kernels de CPU para GPTQ/AWQ, por ejemplo en GPTQModel, pero no son la vía habitual). Elige GPTQ solo si trabajas con una canalización o herramienta existente (como configuraciones de ExLlama más antiguas) que lo espera específicamente. Elige AWQ si despliegas en una pila de servicio de producción en GPU (vLLM) y quieres, en general, más calidad por bit entre las opciones orientadas a GPU.',
           'Los tres representan el mismo modelo subyacente con precisión reducida — el formato determina qué herramientas pueden cargarlo y cuán elegantemente maneja las carencias de memoria de GPU, no la capacidad subyacente del modelo.',
         ],
         columns: ['Formato', 'Corre en', 'Bits típicos', 'Herramientas', 'Ideal para'],
         rows: [
           { 'Formato': 'GGUF', 'Corre en': 'CPU, GPU o ambos', 'Bits típicos': '2–8 bits', 'Herramientas': 'llama.cpp, Ollama, LM Studio', 'Ideal para': 'Uso local' },
-          { 'Formato': 'GPTQ', 'Corre en': 'Solo GPU', 'Bits típicos': '4 bits (3–8)', 'Herramientas': 'vLLM, ExLlama', 'Ideal para': 'Pipelines GPU existentes' },
-          { 'Formato': 'AWQ', 'Corre en': 'Solo GPU', 'Bits típicos': '4 bits', 'Herramientas': 'vLLM, Transformers', 'Ideal para': 'Serving en GPU' },
+          { 'Formato': 'GPTQ', 'Corre en': 'Sobre todo GPU', 'Bits típicos': '4 bits (3–8)', 'Herramientas': 'vLLM, ExLlama', 'Ideal para': 'Pipelines GPU existentes' },
+          { 'Formato': 'AWQ', 'Corre en': 'Sobre todo GPU', 'Bits típicos': '4 bits', 'Herramientas': 'vLLM, Transformers', 'Ideal para': 'Serving en GPU' },
         ],
       },
       formats: {
@@ -635,7 +635,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'speed',
         title: 'La velocidad y la calidad dependen del kernel, no solo del formato',
         content: [
-          '<strong>El mismo archivo AWQ o GPTQ puede ser mucho más lento o más rápido según el kernel de GPU que lo ejecute.</strong> Benchmarks de terceros con vLLM indican que AWQ con el kernel por defecto va más lento que FP16, mientras que el kernel Marlin coloca a AWQ y GPTQ por delante de FP16 en GPU NVIDIA (<a href="https://www.spheron.network/blog/gptq-vs-awq-vs-gguf-4-bit-quantization-comparison-2026/" class="text-primary hover:underline" target="_blank" rel="noopener">Spheron</a>, <a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>).',
+          '<strong>El mismo archivo AWQ o GPTQ puede ser mucho más lento o más rápido según el kernel de GPU que lo ejecute.</strong> Un benchmark de terceros con vLLM (Qwen2.5-32B en una NVIDIA H200) indica que AWQ con el kernel por defecto va más lento que FP16, y que AWQ y GPTQ con el kernel Marlin van más rápido (<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>); <a href="https://www.spheron.network/blog/gptq-vs-awq-vs-gguf-4-bit-quantization-comparison-2026/" class="text-primary hover:underline" target="_blank" rel="noopener">Spheron</a> indica la misma brecha entre kernels.',
           'La pérdida de calidad a 4 bits es pequeña pero medible y varía según el modelo y la prueba. Una comparación HumanEval publicada con Qwen2.5-32B dio 51,8 % a AWQ frente a 56,1 % de FP16, y 46,3 % a GPTQ (<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>). Toma estas cifras como orientativas y prueba con tu modelo y tu tarea.',
           'vLLM puede cargar archivos GGUF, pero la <a href="https://docs.vllm.ai/en/latest/features/quantization/gguf.html" class="text-primary hover:underline" target="_blank" rel="noopener">documentación de vLLM</a> describe ese soporte como muy experimental y poco optimizado. Para GGUF usa llama.cpp, Ollama o LM Studio.',
         ],
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'choose',
         title: 'Qué formato elegir según tu configuración',
         items: [
-          '<strong>Portátil, Mac o equipo solo con CPU:</strong> GGUF. Es el único de los tres con inferencia en CPU y el formato que usan Ollama y LM Studio en Apple Silicon.',
+          '<strong>Portátil, Mac o equipo solo con CPU:</strong> GGUF. Es el formato de los tres que las herramientas orientadas a CPU, como Ollama y LM Studio, usan por defecto; LM Studio también ofrece modelos MLX en Apple Silicon.',
           '<strong>Una GPU de consumo, el modelo cabe en VRAM:</strong> GGUF por simplicidad, o AWQ/GPTQ si tus herramientas (ExLlama, un pipeline en Python) lo esperan.',
           '<strong>Modelo mayor que tu VRAM:</strong> GGUF, porque puede descargar capas a la RAM del sistema.',
           '<strong>API de producción en GPU NVIDIA con vLLM:</strong> AWQ o GPTQ con kernels Marlin. Empieza con AWQ y compara GPTQ con un benchmark.',
@@ -678,7 +678,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Soporta Ollama modelos GPTQ o AWQ directamente?',
-            a: 'No — Ollama está construido específicamente en torno a GGUF. Para usar un checkpoint GPTQ o AWQ, necesitas una herramienta de servicio diferente (vLLM o ExLlama) diseñada para ese formato.',
+            a: 'No — Ollama ejecuta modelos GGUF (y puede importar pesos safetensors compatibles), pero su documentación no incluye los checkpoints GPTQ ni AWQ entre los formatos que puede cargar. Para usar un checkpoint GPTQ o AWQ, necesitas una herramienta de servicio diferente (vLLM o ExLlama) diseñada para ese formato.',
           },
           {
             q: '¿Qué es GGUF?',
@@ -686,7 +686,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Cuál es la diferencia entre GPTQ y AWQ?',
-            a: 'Ambos son métodos de 4 bits posteriores al entrenamiento y solo para GPU. GPTQ compensa el error de redondeo capa por capa con datos de calibración; AWQ escala los pesos más importantes para las activaciones antes de redondear. En la práctica AWQ suele conservar algo más de calidad, pero el kernel de GPU importa tanto como el método.',
+            a: 'Ambos son métodos de 4 bits posteriores al entrenamiento y orientados a GPU. GPTQ compensa el error de redondeo capa por capa con datos de calibración; AWQ escala los pesos más importantes para las activaciones antes de redondear. En la práctica AWQ suele conservar algo más de calidad, pero el kernel de GPU importa tanto como el método.',
           },
           {
             q: '¿Es AWQ mejor que GPTQ?',
@@ -714,10 +714,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'Lecturas Relacionadas',
         items: [
-          '[¿Qué Es la Cuantización Q4_K_M?](/prompt-bites/what-is-q4-k-m-quantization) — el nivel de cuantización más común de GGUF explicado',
-          '[Q4_K_M vs Q8_0](/prompt-bites/q4-k-m-vs-q8-0) — eligiendo un nivel de cuantización GGUF',
-          '[Ollama vs vLLM vs TGI](/prompt-bites/ollama-vs-vllm-vs-tgi) — qué herramienta de servicio combina con qué formato',
-          '[Cuantización de LLM explicada (guía completa)](/local-llms/llm-quantization-explained) — la explicación completa y detallada de cómo funciona la cuantización por dentro',
+          '[¿Qué Es la Cuantización Q4_K_M?](/es/prompt-bites/what-is-q4-k-m-quantization) — el nivel de cuantización más común de GGUF explicado',
+          '[Q4_K_M vs Q8_0](/es/prompt-bites/q4-k-m-vs-q8-0) — eligiendo un nivel de cuantización GGUF',
+          '[Ollama vs vLLM vs TGI](/es/prompt-bites/ollama-vs-vllm-vs-tgi) — qué herramienta de servicio combina con qué formato',
+          '[Cuantización de LLM explicada (guía completa)](/es/local-llms/llm-quantization-explained) — la explicación completa y detallada de cómo funciona la cuantización por dentro',
         ],
       },
     },
@@ -728,9 +728,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-fr.webp',
     title: 'GGUF vs GPTQ vs AWQ : différences, vitesse et choix',
     seoTitle: 'GGUF vs GPTQ vs AWQ : quantification 2026 | Prompt Bites',
-    metaDescription: 'GGUF tourne sur CPU et GPU via llama.cpp/Ollama ; GPTQ et AWQ sont des formats GPU pour vLLM. Comparez vitesse, qualité, outils et commandes.',
+    metaDescription: 'GGUF tourne sur CPU et GPU via llama.cpp/Ollama ; GPTQ et AWQ sont des formats orientés GPU pour vLLM. Comparez vitesse, qualité, outils et commandes.',
     publishDate: '2026-07-14',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
@@ -739,7 +739,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Développeurs qui choisissent un format de quantification pour de l\'inférence LLM locale ou servie',
     siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi', 'llama-cpp-gguf-conversion-guide'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>GGUF est le format par défaut le plus courant en local</strong> — il fonctionne sur CPU et GPU via llama.cpp et Ollama. GPTQ et AWQ sont des formats GPU pour le serving avec vLLM.',
+    leadAnswerBlock: '<strong>GGUF est le format par défaut le plus courant en local</strong> — il fonctionne sur CPU et GPU via llama.cpp et Ollama. GPTQ et AWQ sont des formats orientés GPU pour le serving avec vLLM.',
     toc: [
       { label: 'Meilleur choix : GGUF en local, AWQ pour la production', anchor: '#best-pick' },
       { label: 'GGUF vs GPTQ vs AWQ en un coup d\'œil', anchor: '#comparison' },
@@ -753,13 +753,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Faut-il utiliser la quantification GGUF, GPTQ ou AWQ ?',
-        answer: 'Utilisez GGUF pour un usage local via Ollama ou llama.cpp — il fonctionne sur CPU et GPU sans exigence supplémentaire. Préférez AWQ à GPTQ pour un déploiement en production avec vLLM, car il conserve une meilleure qualité à largeur de bits égale.',
+        answer: 'Utilisez GGUF pour un usage local via Ollama ou llama.cpp — il fonctionne sur CPU et GPU sans exigence supplémentaire. Préférez AWQ à GPTQ pour un déploiement en production avec vLLM, car il garde généralement une qualité plus proche de l\'original à largeur de bits égale, même si les résultats varient selon le modèle et le noyau.',
         bullets: [
           'GGUF : le format natif de llama.cpp — inférence hybride CPU+GPU, format par défaut d\'Ollama et LM Studio.',
-          'GPTQ : GPU uniquement, quantification post-entraînement basée sur un calibrage — un des premiers standards pour un déploiement 4-bit efficace.',
-          'AWQ (Activation-aware Weight Quantization) : GPU uniquement, généralement meilleur rapport qualité/bit que GPTQ, courant dans les déploiements de production vLLM.',
+          'GPTQ : orienté GPU, quantification post-entraînement basée sur un calibrage — un des premiers standards pour un déploiement 4-bit efficace.',
+          'AWQ (Activation-aware Weight Quantization) : orienté GPU, généralement meilleur rapport qualité/bit que GPTQ, courant dans les déploiements de production vLLM.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -768,36 +768,36 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'GGUF : le bon choix par défaut pour un usage local — fonctionne sur CPU et GPU via llama.cpp/Ollama, sans exigence CUDA exclusive',
-          'GPTQ : GPU uniquement, un des premiers standards pour le déploiement 4-bit, toujours pris en charge par ExLlama et vLLM',
-          'AWQ : GPU uniquement, conserve généralement une meilleure qualité que GPTQ à largeur de bits égale — préféré pour le déploiement en production',
+          'GPTQ : orienté GPU, un des premiers standards pour le déploiement 4-bit, toujours pris en charge par ExLlama et vLLM',
+          'AWQ : orienté GPU, conserve généralement une meilleure qualité que GPTQ à largeur de bits égale — préféré pour le déploiement en production',
           'Si vous utilisez Ollama ou LM Studio en local, c\'est presque toujours GGUF qu\'il vous faut, pas GPTQ ni AWQ',
         ],
       },
       bestPick: {
         id: 'best-pick',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'GGUF est un format de modèle quantifié en un seul fichier pour llama.cpp, qui tourne sur CPU et GPU, tandis que GPTQ et AWQ sont des formats 4 bits réservés au GPU, utilisés surtout pour servir des modèles avec vLLM.' },
+          { type: 'one-sentence', text: 'GGUF est un format de modèle quantifié en un seul fichier pour llama.cpp, qui tourne sur CPU et GPU, tandis que GPTQ et AWQ sont des formats 4 bits orientés GPU, utilisés surtout pour servir des modèles avec vLLM.' },
           { type: 'plain-terms', text: 'En clair : choisissez GGUF pour exécuter des modèles sur votre propre ordinateur avec Ollama ou LM Studio, et AWQ ou GPTQ seulement pour servir un modèle depuis un serveur GPU NVIDIA.' },
         ],
         title: 'Meilleur choix : GGUF en local, AWQ pour la production',
         content: [
           '<strong>GGUF est le format de quantification adapté à presque tous ceux qui exécutent des modèles en local via Ollama, LM Studio ou llama.cpp directement — il prend en charge l\'inférence CPU et GPU à partir du même fichier, y compris le déchargement CPU partiel lorsqu\'un modèle ne tient pas entièrement en VRAM.</strong> Cette flexibilité explique pourquoi GGUF est devenu le format standard des outils grand public pour LLM en local : il fonctionne que vous disposiez d\'un GPU puissant, modeste, ou d\'aucun GPU du tout.',
-          'GPTQ a été l\'une des premières méthodes de quantification 4-bit largement adoptées pour une inférence GPU efficace. Elle utilise un jeu de données de calibrage pour minimiser la perte de qualité lors de la quantification post-entraînement, mais elle est GPU uniquement — sans réel repli CPU — et a généralement été dépassée en rapport qualité/bit par des méthodes plus récentes.',
-          'AWQ (Activation-aware Weight Quantization) est l\'alternative GPU uniquement plus moderne à GPTQ. En protégeant les poids les plus importants pour l\'amplitude d\'activation plutôt qu\'en quantifiant tout de manière uniforme, AWQ préserve généralement davantage de qualité à largeur de bits égale. C\'est un choix courant pour les piles de déploiement en production comme vLLM, où le fonctionnement GPU uniquement est déjà acquis.',
+          'GPTQ a été l\'une des premières méthodes de quantification 4-bit largement adoptées pour une inférence GPU efficace. Elle utilise un jeu de données de calibrage pour minimiser la perte de qualité lors de la quantification post-entraînement, mais elle est orientée GPU (des noyaux CPU existent dans certaines bibliothèques, mais ce n\'est pas la voie courante) et, dans les comparaisons publiées, elle a souvent été égalée ou dépassée en rapport qualité/bit par des méthodes plus récentes comme AWQ.',
+          'AWQ (Activation-aware Weight Quantization) est l\'alternative orientée GPU plus moderne à GPTQ. En protégeant les poids les plus importants pour l\'amplitude d\'activation plutôt qu\'en quantifiant tout de manière uniforme, AWQ préserve généralement davantage de qualité à largeur de bits égale. C\'est un choix courant pour les piles de déploiement en production comme vLLM, où le serving sur GPU est déjà acquis.',
         ],
       },
       comparison: {
         id: 'comparison',
         title: 'GGUF vs GPTQ vs AWQ en un coup d\'œil',
         content: [
-          'Choisissez GGUF si vous utilisez Ollama, LM Studio ou llama.cpp en local — c\'est le seul des trois à offrir un vrai support CPU et une flexibilité de déchargement partiel. Choisissez GPTQ uniquement si vous travaillez avec un pipeline ou un outil existant (comme d\'anciennes configurations ExLlama) qui l\'exige spécifiquement. Choisissez AWQ si vous déployez sur une pile de production GPU (vLLM) et souhaitez le meilleur rapport qualité/bit parmi les options GPU uniquement.',
+          'Choisissez GGUF si vous utilisez Ollama, LM Studio ou llama.cpp en local — c\'est celui des trois conçu pour le CPU et le déchargement partiel (des noyaux CPU pour GPTQ/AWQ existent, par exemple dans GPTQModel, mais ce n\'est pas la voie courante). Choisissez GPTQ uniquement si vous travaillez avec un pipeline ou un outil existant (comme d\'anciennes configurations ExLlama) qui l\'exige spécifiquement. Choisissez AWQ si vous déployez sur une pile de production GPU (vLLM) et souhaitez, en général, plus de qualité par bit parmi les options orientées GPU.',
           'Les trois formats représentent le même modèle sous-jacent à précision réduite — le format détermine quels outils peuvent le charger et la manière dont il gère les manques de mémoire GPU, pas les capacités intrinsèques du modèle.',
         ],
         columns: ['Format', 'Tourne sur', 'Bits typiques', 'Outils principaux', 'Idéal pour'],
         rows: [
           { 'Format': 'GGUF', 'Tourne sur': 'CPU, GPU ou les deux', 'Bits typiques': '2–8 bits', 'Outils principaux': 'llama.cpp, Ollama, LM Studio', 'Idéal pour': 'Usage local' },
-          { 'Format': 'GPTQ', 'Tourne sur': 'GPU uniquement', 'Bits typiques': '4 bits (3–8)', 'Outils principaux': 'vLLM, ExLlama', 'Idéal pour': 'Pipelines GPU existants' },
-          { 'Format': 'AWQ', 'Tourne sur': 'GPU uniquement', 'Bits typiques': '4 bits', 'Outils principaux': 'vLLM, Transformers', 'Idéal pour': 'Serving GPU' },
+          { 'Format': 'GPTQ', 'Tourne sur': 'Surtout GPU', 'Bits typiques': '4 bits (3–8)', 'Outils principaux': 'vLLM, ExLlama', 'Idéal pour': 'Pipelines GPU existants' },
+          { 'Format': 'AWQ', 'Tourne sur': 'Surtout GPU', 'Bits typiques': '4 bits', 'Outils principaux': 'vLLM, Transformers', 'Idéal pour': 'Serving GPU' },
         ],
       },
       formats: {
@@ -815,7 +815,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'speed',
         title: 'Vitesse et qualité dépendent du noyau, pas seulement du format',
         content: [
-          '<strong>Un même fichier AWQ ou GPTQ peut être bien plus lent ou plus rapide selon le noyau GPU qui l\'exécute.</strong> Des benchmarks tiers sous vLLM indiquent qu\'AWQ avec le noyau par défaut est plus lent que FP16, alors que le noyau Marlin place AWQ et GPTQ devant FP16 sur les GPU NVIDIA (<a href="https://www.spheron.network/blog/gptq-vs-awq-vs-gguf-4-bit-quantization-comparison-2026/" class="text-primary hover:underline" target="_blank" rel="noopener">Spheron</a>, <a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>).',
+          '<strong>Un même fichier AWQ ou GPTQ peut être bien plus lent ou plus rapide selon le noyau GPU qui l\'exécute.</strong> Un benchmark tiers sous vLLM (Qwen2.5-32B sur un NVIDIA H200) indique qu\'AWQ avec le noyau par défaut est plus lent que FP16, alors qu\'AWQ et GPTQ avec le noyau Marlin sont plus rapides (<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>) ; <a href="https://www.spheron.network/blog/gptq-vs-awq-vs-gguf-4-bit-quantization-comparison-2026/" class="text-primary hover:underline" target="_blank" rel="noopener">Spheron</a> signale le même écart entre noyaux.',
           'La perte de qualité à 4 bits est faible mais mesurable, et varie selon le modèle et le test. Une comparaison HumanEval publiée sur Qwen2.5-32B donne 51,8 % pour AWQ contre 56,1 % pour FP16, et 46,3 % pour GPTQ (<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>). Considérez ces chiffres comme indicatifs et testez sur votre modèle et votre tâche.',
           'vLLM peut charger des fichiers GGUF, mais la <a href="https://docs.vllm.ai/en/latest/features/quantization/gguf.html" class="text-primary hover:underline" target="_blank" rel="noopener">documentation de vLLM</a> décrit ce support comme très expérimental et peu optimisé. Pour GGUF, utilisez llama.cpp, Ollama ou LM Studio.',
         ],
@@ -824,7 +824,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'choose',
         title: 'Quel format choisir selon votre configuration',
         items: [
-          '<strong>Portable, Mac ou machine sans GPU :</strong> GGUF. C\'est le seul des trois à permettre l\'inférence CPU, et le format utilisé par Ollama et LM Studio sur Apple Silicon.',
+          '<strong>Portable, Mac ou machine sans GPU :</strong> GGUF. C\'est le format des trois que les outils orientés CPU comme Ollama et LM Studio utilisent par défaut ; LM Studio propose aussi des modèles MLX sur Apple Silicon.',
           '<strong>Un GPU grand public, modèle qui tient en VRAM :</strong> GGUF pour la simplicité, ou AWQ/GPTQ si vos outils (ExLlama, pipeline Python) les attendent.',
           '<strong>Modèle plus grand que votre VRAM :</strong> GGUF, car des couches peuvent être déchargées vers la RAM.',
           '<strong>API de production sur GPU NVIDIA avec vLLM :</strong> AWQ ou GPTQ avec noyaux Marlin. Commencez par AWQ et comparez GPTQ par benchmark.',
@@ -858,7 +858,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Ollama prend-il en charge directement les modèles GPTQ ou AWQ ?',
-            a: 'Non — Ollama est conçu spécifiquement autour de GGUF. Pour utiliser un checkpoint GPTQ ou AWQ, il vous faut un autre outil de déploiement (vLLM ou ExLlama) conçu pour ce format.',
+            a: 'Non — Ollama exécute des modèles GGUF (et peut importer des poids safetensors pris en charge), mais sa documentation ne cite pas les checkpoints GPTQ ou AWQ parmi les formats chargeables. Pour utiliser un checkpoint GPTQ ou AWQ, il vous faut un autre outil de déploiement (vLLM ou ExLlama) conçu pour ce format.',
           },
           {
             q: 'Qu\'est-ce que GGUF ?',
@@ -866,7 +866,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quelle différence entre GPTQ et AWQ ?',
-            a: 'Les deux sont des méthodes 4 bits post-entraînement réservées au GPU. GPTQ compense l\'erreur d\'arrondi couche par couche avec des données de calibration ; AWQ met à l\'échelle les poids les plus importants pour les activations avant l\'arrondi. En pratique AWQ garde souvent un peu plus de qualité, mais le noyau GPU compte autant que la méthode.',
+            a: 'Les deux sont des méthodes 4 bits post-entraînement orientées GPU. GPTQ compense l\'erreur d\'arrondi couche par couche avec des données de calibration ; AWQ met à l\'échelle les poids les plus importants pour les activations avant l\'arrondi. En pratique AWQ garde souvent un peu plus de qualité, mais le noyau GPU compte autant que la méthode.',
           },
           {
             q: 'AWQ est-il meilleur que GPTQ ?',
@@ -894,10 +894,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'Lectures complémentaires',
         items: [
-          '[Qu\'est-ce que la quantification Q4_K_M ?](/prompt-bites/what-is-q4-k-m-quantization) — le niveau de quantification le plus courant de GGUF expliqué',
-          '[Q4_K_M vs Q8_0](/prompt-bites/q4-k-m-vs-q8-0) — choisir un niveau de quantification GGUF',
-          '[Ollama vs vLLM vs TGI](/prompt-bites/ollama-vs-vllm-vs-tgi) — quel outil de déploiement correspond à quel format',
-          '[La quantisation des LLM expliquée (guide complet)](/local-llms/llm-quantization-explained) — l\'analyse complète et détaillée du fonctionnement interne de la quantisation',
+          '[Qu\'est-ce que la quantification Q4_K_M ?](/fr/prompt-bites/what-is-q4-k-m-quantization) — le niveau de quantification le plus courant de GGUF expliqué',
+          '[Q4_K_M vs Q8_0](/fr/prompt-bites/q4-k-m-vs-q8-0) — choisir un niveau de quantification GGUF',
+          '[Ollama vs vLLM vs TGI](/fr/prompt-bites/ollama-vs-vllm-vs-tgi) — quel outil de déploiement correspond à quel format',
+          '[La quantisation des LLM expliquée (guide complet)](/fr/local-llms/llm-quantization-explained) — l\'analyse complète et détaillée du fonctionnement interne de la quantisation',
         ],
       },
     },
@@ -908,9 +908,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-ja.webp',
     title: 'GGUF vs GPTQ vs AWQ: 違い・速度・選び方',
     seoTitle: '2026年版 GGUF vs GPTQ vs AWQ 量子化 | Prompt Bites',
-    metaDescription: 'GGUFはllama.cpp/OllamaでCPUとGPUの両方で動作。GPTQとAWQはvLLM向けのGPU専用形式です。速度・品質・ツール・コマンドを比較します。',
+    metaDescription: 'GGUFはllama.cpp/OllamaでCPUとGPUの両方で動作。GPTQとAWQはvLLM向けのGPU中心の形式です。速度・品質・ツール・コマンドを比較します。',
     publishDate: '2026-07-14',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
@@ -919,7 +919,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'ローカルまたはサービング用LLM推論の量子化フォーマットを選ぶ開発者',
     siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi', 'llama-cpp-gguf-conversion-guide'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>GGUFはローカル用途で標準的に使われる量子化フォーマットです</strong> — llama.cppとOllama経由でCPUとGPU両方で動作し、別途CUDA専用の要件はありません。GPTQとAWQは、vLLMのような本番サービングフレームワーク向けのGPU専用フォーマットで、AWQは一般に同じビット幅ではGPTQより品質を保ちます。',
+    leadAnswerBlock: '<strong>GGUFはローカル用途で標準的に使われる量子化フォーマットです</strong> — llama.cppとOllama経由でCPUとGPU両方で動作します。GPTQとAWQは、vLLMのようなサービングフレームワーク向けのGPU中心のフォーマットです。',
     toc: [
       { label: 'ベストピック: ローカル用にGGUF、本番サービング用にAWQ', anchor: '#best-pick' },
       { label: '一目でわかるGGUF vs GPTQ vs AWQ', anchor: '#comparison' },
@@ -933,13 +933,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'GGUF、GPTQ、AWQのどの量子化を使うべきですか?',
-        answer: 'ローカル用途にはOllamaやllama.cpp経由でGGUFを使ってください — 追加要件なしでCPUとGPU両方で動作します。vLLMで本番サービングする場合は、同じビット幅でより品質を保つため、GPTQよりAWQを使ってください。',
+        answer: 'ローカル用途にはOllamaやllama.cpp経由でGGUFを使ってください — 追加要件なしでCPUとGPU両方で動作します。vLLMで本番サービングする場合は、同じビット幅で一般に元の品質に近く保てるため（結果はモデルやカーネルによって異なります）、GPTQよりAWQを使ってください。',
         bullets: [
           'GGUF: llama.cppのネイティブフォーマット — CPU+GPUのハイブリッド推論、OllamaとLM Studioのデフォルト。',
-          'GPTQ: GPU専用、キャリブレーションベースのトレーニング後量子化 — 効率的な4ビットサービングの初期標準。',
-          'AWQ(Activation-aware Weight Quantization): GPU専用、一般にGPTQよりビットあたりの品質が優れ、vLLMの本番サービングで一般的。',
+          'GPTQ: GPU中心、キャリブレーションベースのトレーニング後量子化 — 効率的な4ビットサービングの初期標準。',
+          'AWQ(Activation-aware Weight Quantization): GPU中心、一般にGPTQよりビットあたりの品質が優れ、vLLMの本番サービングで一般的。',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -948,36 +948,36 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'GGUF: ローカル用途に正しいデフォルト — llama.cpp/Ollama経由でCPUとGPU両方で動作、CUDA専用要件なし',
-          'GPTQ: GPU専用、4ビットサービングの初期標準で、ExLlamaやvLLMで依然サポート',
-          'AWQ: GPU専用、一般に同じビット幅でGPTQより品質を保つ — 本番サービングで好まれる',
+          'GPTQ: GPU中心、4ビットサービングの初期標準で、ExLlamaやvLLMで依然サポート',
+          'AWQ: GPU中心、一般に同じビット幅でGPTQより品質を保つ — 本番サービングで好まれる',
           'OllamaかLM Studioをローカルで動かしているなら、ほぼ確実にGPTQやAWQではなくGGUFが欲しいもの',
         ],
       },
       bestPick: {
         id: 'best-pick',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'GGUFはCPUとGPUで動作するllama.cpp向けの単一ファイル量子化モデル形式で、GPTQとAWQはGPU専用の4ビット形式であり、主にvLLMでのサービングに使われます。' },
+          { type: 'one-sentence', text: 'GGUFはCPUとGPUで動作するllama.cpp向けの単一ファイル量子化モデル形式で、GPTQとAWQはGPU中心の4ビット形式であり、主にvLLMでのサービングに使われます。' },
           { type: 'plain-terms', text: 'わかりやすく言えば、OllamaやLM Studioで自分のPC上でモデルを動かすならGGUF、NVIDIA GPUサーバーからモデルを提供する場合にのみAWQまたはGPTQを選びます。' },
         ],
         title: 'ベストピック: ローカル用にGGUF、本番サービング用にAWQ',
         content: [
           '<strong>GGUFは、Ollama、LM Studio、あるいはllama.cppを直接使ってローカルでモデルを動かすほぼ全ての人にとって正しい量子化フォーマットです — 同じファイルからCPUとGPU両方の推論をサポートし、モデルがVRAMに完全に収まらない場合の部分的なCPUオフロードも含みます。</strong>この柔軟性こそが、GGUFがコンシューマー向けローカルLLMツールの標準フォーマットになった理由です: 強力なGPUがあっても、控えめなGPUでも、GPUが全くなくても機能します。',
-          'GPTQは、効率的なGPU推論のために広く採用された最初期の4ビット量子化手法の一つです。キャリブレーションデータセットを使ってトレーニング後量子化中の品質低下を最小化しますが、GPU専用です — 意味のあるCPUフォールバック経路はなく、一般的にビットあたりの品質では新しい手法に取って代わられています。',
-          'AWQ(Activation-aware Weight Quantization)は、GPTQに代わるより現代的なGPU専用の選択肢です。すべてを均一に量子化するのではなく、活性化の大きさにとって最も重要な重みを保護することで、AWQは一般に同じビット幅でより多くの品質を保持します。vLLMのような本番サービングスタックでよく選ばれ、そこではGPU専用動作が既に前提となっています。',
+          'GPTQは、効率的なGPU推論のために広く採用された最初期の4ビット量子化手法の一つです。キャリブレーションデータセットを使ってトレーニング後量子化中の品質低下を最小化しますが、GPU中心です（一部のライブラリにはCPUカーネルがありますが、一般的な経路ではありません）。公開されている比較では、ビットあたりの品質でAWQなどの新しい手法に並ばれたり上回られたりすることがよくあります。',
+          'AWQ(Activation-aware Weight Quantization)は、GPTQに代わるより現代的なGPU中心の選択肢です。すべてを均一に量子化するのではなく、活性化の大きさにとって最も重要な重みを保護することで、AWQは一般に同じビット幅でより多くの品質を保持します。vLLMのような本番サービングスタックでよく選ばれ、そこではGPUでのサービングが既に前提となっています。',
         ],
       },
       comparison: {
         id: 'comparison',
         title: '一目でわかるGGUF vs GPTQ vs AWQ',
         content: [
-          'Ollama、LM Studio、あるいはllama.cppをローカルで動かしているならGGUFを選んでください — 3つの中で実質的なCPUサポートと部分オフロードの柔軟性を持つ唯一のフォーマットです。既存のパイプラインやツール(古いExLlamaセットアップなど)がそれを特に想定している場合にのみGPTQを選んでください。本番のGPUサービングスタック(vLLM)にデプロイし、GPU専用オプションの中で最良のビットあたりの品質が欲しいならAWQを選んでください。',
+          'Ollama、LM Studio、あるいはllama.cppをローカルで動かしているならGGUFを選んでください — 3つの中でCPUでの利用と部分オフロード向けに作られたフォーマットです（GPTQ/AWQ向けのCPUカーネルは、たとえばGPTQModelに存在しますが、一般的な経路ではありません）。既存のパイプラインやツール(古いExLlamaセットアップなど)がそれを特に想定している場合にのみGPTQを選んでください。本番のGPUサービングスタック(vLLM)にデプロイし、GPU中心のオプションの中で一般にビットあたりの品質が高いものが欲しいならAWQを選んでください。',
           '3つとも同じ元のモデルを低精度で表現しており、フォーマットが決めるのはどのツールがそれを読み込めるか、GPUメモリ不足をどれだけうまく扱うかであって、モデル本来の能力ではありません。',
         ],
         columns: ['形式', '動作環境', '一般的なビット数', '主なツール', '向いている用途'],
         rows: [
           { '形式': 'GGUF', '動作環境': 'CPU、GPU、または両方', '一般的なビット数': '2〜8ビット', '主なツール': 'llama.cpp、Ollama、LM Studio', '向いている用途': 'ローカル利用' },
-          { '形式': 'GPTQ', '動作環境': 'GPUのみ', '一般的なビット数': '4ビット(3〜8)', '主なツール': 'vLLM、ExLlama', '向いている用途': '既存のGPUパイプライン' },
-          { '形式': 'AWQ', '動作環境': 'GPUのみ', '一般的なビット数': '4ビット', '主なツール': 'vLLM、Transformers', '向いている用途': 'GPUサービング' },
+          { '形式': 'GPTQ', '動作環境': 'GPU中心', '一般的なビット数': '4ビット(3〜8)', '主なツール': 'vLLM、ExLlama', '向いている用途': '既存のGPUパイプライン' },
+          { '形式': 'AWQ', '動作環境': 'GPU中心', '一般的なビット数': '4ビット', '主なツール': 'vLLM、Transformers', '向いている用途': 'GPUサービング' },
         ],
       },
       formats: {
@@ -995,7 +995,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'speed',
         title: '速度と品質はフォーマットだけでなくカーネルにも左右される',
         content: [
-          '<strong>同じAWQまたはGPTQファイルでも、実行するGPUカーネルによって速度が大きく変わります。</strong>第三者のvLLMベンチマークでは、デフォルトカーネルのAWQはFP16より遅く、Marlinカーネルを使うとNVIDIA GPUでAWQとGPTQがFP16を上回ると報告されています(<a href="https://www.spheron.network/blog/gptq-vs-awq-vs-gguf-4-bit-quantization-comparison-2026/" class="text-primary hover:underline" target="_blank" rel="noopener">Spheron</a>、<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>)。',
+          '<strong>同じAWQまたはGPTQファイルでも、実行するGPUカーネルによって速度が大きく変わります。</strong>第三者のvLLMベンチマークの1件（NVIDIA H200上のQwen2.5-32B）では、デフォルトカーネルのAWQはFP16より遅く、MarlinカーネルのAWQとGPTQは高速だったと報告されています(<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>)。<a href="https://www.spheron.network/blog/gptq-vs-awq-vs-gguf-4-bit-quantization-comparison-2026/" class="text-primary hover:underline" target="_blank" rel="noopener">Spheron</a>も同じカーネル間の差を報告しています。',
           '4ビットでの品質低下は小さいものの測定可能で、モデルやテストによって異なります。Qwen2.5-32Bで公開されているHumanEvalの比較では、AWQが51.8%、FP16が56.1%、GPTQが46.3%でした(<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>)。こうした数値は目安として扱い、自分のモデルとタスクで検証してください。',
           'vLLMはGGUFファイルを読み込めますが、<a href="https://docs.vllm.ai/en/latest/features/quantization/gguf.html" class="text-primary hover:underline" target="_blank" rel="noopener">vLLMのドキュメント</a>ではそのサポートは非常に実験的で最適化が不十分とされています。GGUFにはllama.cpp、Ollama、LM Studioを使ってください。',
         ],
@@ -1004,7 +1004,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'choose',
         title: '環境別の選び方',
         items: [
-          '<strong>ノートPC、Mac、CPUのみのマシン:</strong>GGUF。3つのうちCPU推論ができる唯一の形式で、Apple SiliconではOllamaとLM Studioがこの形式を使います。',
+          '<strong>ノートPC、Mac、CPUのみのマシン:</strong>GGUF。3つのうち、OllamaやLM StudioといったCPU寄りのツールが標準で使う形式です。LM StudioはApple SiliconでMLXモデルも提供しています。',
           '<strong>コンシューマー向けGPU1枚、モデルがVRAMに収まる場合:</strong>手軽さならGGUF、ツール(ExLlamaやPythonパイプライン)が求める場合はAWQ/GPTQ。',
           '<strong>モデルがVRAMより大きい場合:</strong>GGUF。レイヤーをシステムRAMにオフロードできます。',
           '<strong>vLLMを使うNVIDIA GPU上の本番API:</strong>Marlinカーネル付きのAWQまたはGPTQ。まずAWQで始め、GPTQをベンチマークで比較します。',
@@ -1038,7 +1038,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'OllamaはGPTQやAWQモデルを直接サポートしていますか?',
-            a: 'いいえ — Ollamaは特にGGUFを中心に構築されています。GPTQやAWQのチェックポイントを使うには、そのフォーマット向けに設計された別のサービングツール(vLLM、ExLlama)が必要です。',
+            a: 'いいえ — OllamaはGGUFモデルを実行でき（対応するsafetensorsの重みもインポートできます）、GPTQやAWQのチェックポイントを読み込める形式としてはドキュメントに記載していません。GPTQやAWQのチェックポイントを使うには、そのフォーマット向けに設計された別のサービングツール(vLLM、ExLlama)が必要です。',
           },
           {
             q: 'GGUFとは何ですか?',
@@ -1046,7 +1046,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'GPTQとAWQの違いは何ですか?',
-            a: 'どちらも学習後に行うGPU専用の4ビット量子化手法です。GPTQはキャリブレーションデータを使って層ごとに丸め誤差を補正し、AWQは活性化にとって重要な重みを丸める前にスケーリングします。実際にはAWQのほうが品質をやや保つことが多いですが、手法と同じくらいGPUカーネルが重要です。',
+            a: 'どちらも学習後に行うGPU中心の4ビット量子化手法です。GPTQはキャリブレーションデータを使って層ごとに丸め誤差を補正し、AWQは活性化にとって重要な重みを丸める前にスケーリングします。実際にはAWQのほうが品質をやや保つことが多いですが、手法と同じくらいGPUカーネルが重要です。',
           },
           {
             q: 'AWQはGPTQより優れていますか?',
@@ -1074,10 +1074,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: '関連記事',
         items: [
-          '[Q4_K_M量子化とは?](/prompt-bites/what-is-q4-k-m-quantization) — GGUFの最も一般的なクオントレベルの解説',
-          '[Q4_K_M vs Q8_0](/prompt-bites/q4-k-m-vs-q8-0) — GGUFのクオントレベルの選び方',
-          '[Ollama vs vLLM vs TGI](/prompt-bites/ollama-vs-vllm-vs-tgi) — 各ツールがどのフォーマットと組み合うか',
-          '[LLM量子化を徹底解説（完全ガイド）](/local-llms/llm-quantization-explained) — 量子化の仕組みを内部まで掘り下げた完全ガイド',
+          '[Q4_K_M量子化とは?](/ja/prompt-bites/what-is-q4-k-m-quantization) — GGUFの最も一般的なクオントレベルの解説',
+          '[Q4_K_M vs Q8_0](/ja/prompt-bites/q4-k-m-vs-q8-0) — GGUFのクオントレベルの選び方',
+          '[Ollama vs vLLM vs TGI](/ja/prompt-bites/ollama-vs-vllm-vs-tgi) — 各ツールがどのフォーマットと組み合うか',
+          '[LLM量子化を徹底解説（完全ガイド）](/ja/local-llms/llm-quantization-explained) — 量子化の仕組みを内部まで掘り下げた完全ガイド',
         ],
       },
     },
@@ -1088,9 +1088,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-ko.webp',
     title: 'GGUF 대 GPTQ 대 AWQ: 차이, 속도, 선택 기준',
     seoTitle: '2026년 GGUF 대 GPTQ 대 AWQ 양자화 | Prompt Bites',
-    metaDescription: 'GGUF는 llama.cpp/Ollama로 CPU와 GPU에서 실행되고, GPTQ와 AWQ는 vLLM용 GPU 전용 형식입니다. 속도, 품질, 도구, 명령어를 비교합니다.',
+    metaDescription: 'GGUF는 llama.cpp/Ollama로 CPU와 GPU에서 실행되고, GPTQ와 AWQ는 vLLM용 GPU 중심 형식입니다. 속도, 품질, 도구, 명령어를 비교합니다.',
     publishDate: '2026-07-14',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
@@ -1099,7 +1099,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: '로컬 또는 서빙되는 LLM 추론을 위한 양자화 형식을 선택하는 개발자',
     siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi', 'llama-cpp-gguf-conversion-guide'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>GGUF는 로컬 사용에서 흔히 쓰이는 기본 양자화 형식입니다</strong> — 별도의 CUDA 전용 요건 없이 llama.cpp와 Ollama를 통해 CPU와 GPU 모두에서 실행됩니다. GPTQ와 AWQ는 vLLM 같은 프로덕션 서빙 프레임워크를 위한 GPU 전용 형식이며, 이 중 AWQ가 동일한 비트 폭에서 일반적으로 GPTQ보다 품질을 더 잘 유지합니다.',
+    leadAnswerBlock: '<strong>GGUF는 로컬 사용에서 흔히 쓰이는 기본 양자화 형식입니다</strong> — llama.cpp와 Ollama를 통해 CPU와 GPU 모두에서 실행됩니다. GPTQ와 AWQ는 vLLM 같은 서빙 프레임워크를 위한 GPU 중심 형식입니다.',
     toc: [
       { label: '최적의 선택: 로컬 사용에는 GGUF, 프로덕션 서빙에는 AWQ', anchor: '#best-pick' },
       { label: '한눈에 보는 GGUF 대 GPTQ 대 AWQ', anchor: '#comparison' },
@@ -1113,13 +1113,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: 'GGUF, GPTQ, AWQ 중 어떤 양자화를 사용해야 합니까?',
-        answer: 'Ollama나 llama.cpp를 통한 로컬 사용에는 GGUF를 사용하십시오 — 추가 요건 없이 CPU와 GPU에서 실행됩니다. vLLM으로 프로덕션에서 서빙한다면 GPTQ보다 AWQ를 사용하십시오. 동일한 비트 폭에서 품질을 더 잘 유지하기 때문입니다.',
+        answer: 'Ollama나 llama.cpp를 통한 로컬 사용에는 GGUF를 사용하십시오 — 추가 요건 없이 CPU와 GPU에서 실행됩니다. vLLM으로 프로덕션에서 서빙한다면 GPTQ보다 AWQ를 사용하십시오. 동일한 비트 폭에서 일반적으로 원본에 더 가까운 품질을 유지하기 때문입니다. 다만 결과는 모델과 커널에 따라 다릅니다.',
         bullets: [
           'GGUF: llama.cpp의 네이티브 형식 — CPU+GPU 하이브리드 추론이며 Ollama와 LM Studio의 기본값입니다.',
-          'GPTQ: GPU 전용, 캘리브레이션 기반 사후 훈련 양자화 — 효율적인 4비트 서빙의 초기 표준입니다.',
-          'AWQ(활성화 인식 가중치 양자화): GPU 전용으로 일반적으로 GPTQ보다 비트당 품질이 우수하며 vLLM 프로덕션 서빙에서 흔합니다.',
+          'GPTQ: GPU 중심, 캘리브레이션 기반 사후 훈련 양자화 — 효율적인 4비트 서빙의 초기 표준입니다.',
+          'AWQ(활성화 인식 가중치 양자화): GPU 중심으로 일반적으로 GPTQ보다 비트당 품질이 우수하며 vLLM 프로덕션 서빙에서 흔합니다.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -1128,36 +1128,36 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'GGUF: 로컬 사용의 올바른 기본값 — llama.cpp/Ollama를 통해 CPU와 GPU에서 실행되며 CUDA 전용 요건이 없습니다',
-          'GPTQ: GPU 전용으로 4비트 서빙의 초기 표준이며 ExLlama와 vLLM에서 여전히 지원됩니다',
-          'AWQ: GPU 전용으로 동일한 비트 폭에서 일반적으로 GPTQ보다 품질을 더 잘 유지하며 프로덕션 서빙에 선호됩니다',
+          'GPTQ: GPU 중심으로 4비트 서빙의 초기 표준이며 ExLlama와 vLLM에서 여전히 지원됩니다',
+          'AWQ: GPU 중심으로 동일한 비트 폭에서 일반적으로 GPTQ보다 품질을 더 잘 유지하며 프로덕션 서빙에 선호됩니다',
           'Ollama나 LM Studio를 로컬로 실행한다면 거의 확실히 GPTQ나 AWQ가 아니라 GGUF가 필요합니다',
         ],
       },
       bestPick: {
         id: 'best-pick',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'GGUF는 CPU와 GPU에서 실행되는 llama.cpp용 단일 파일 양자화 모델 형식이고, GPTQ와 AWQ는 주로 vLLM 서빙에 쓰이는 GPU 전용 4비트 형식입니다.' },
+          { type: 'one-sentence', text: 'GGUF는 CPU와 GPU에서 실행되는 llama.cpp용 단일 파일 양자화 모델 형식이고, GPTQ와 AWQ는 주로 vLLM 서빙에 쓰이는 GPU 중심 4비트 형식입니다.' },
           { type: 'plain-terms', text: '쉽게 말해, Ollama나 LM Studio로 내 컴퓨터에서 모델을 실행한다면 GGUF를, NVIDIA GPU 서버에서 모델을 서빙할 때만 AWQ나 GPTQ를 선택하세요.' },
         ],
         title: '최적의 선택: 로컬 사용에는 GGUF, 프로덕션 서빙에는 AWQ',
         content: [
           '<strong>GGUF는 Ollama, LM Studio, 또는 llama.cpp를 통해 직접 로컬로 모델을 실행하는 거의 모든 사람에게 올바른 양자화 형식입니다 — 동일한 파일에서 CPU와 GPU 추론을 모두 지원하며, 모델이 VRAM에 완전히 맞지 않을 때 부분적인 CPU 오프로드도 포함합니다.</strong> 이러한 유연성이 바로 GGUF가 소비자용 로컬 LLM 도구의 표준 형식이 된 이유입니다. 강력한 GPU가 있든, 적당한 GPU가 있든, 아예 없든 작동합니다.',
-          'GPTQ는 효율적인 GPU 추론을 위해 가장 먼저 널리 채택된 4비트 양자화 방법 중 하나였습니다. 캘리브레이션 데이터셋을 사용해 사후 훈련 양자화 중 품질 손실을 최소화하지만, GPU 전용입니다 — 의미 있는 CPU 폴백 경로가 없습니다 — 그리고 일반적으로 비트당 품질에서 더 새로운 방법에 밀려났습니다.',
-          'AWQ(활성화 인식 가중치 양자화)는 GPTQ의 더 현대적인 GPU 전용 대안입니다. 모든 것을 균일하게 양자화하는 대신 활성화 크기에 가장 중요한 가중치를 보호함으로써, AWQ는 일반적으로 동일한 비트 폭에서 더 많은 품질을 보존합니다. GPU 전용 운영이 이미 전제인 vLLM 같은 프로덕션 서빙 스택에서 흔한 선택입니다.',
+          'GPTQ는 효율적인 GPU 추론을 위해 가장 먼저 널리 채택된 4비트 양자화 방법 중 하나였습니다. 캘리브레이션 데이터셋을 사용해 사후 훈련 양자화 중 품질 손실을 최소화하지만, GPU 중심입니다(일부 라이브러리에 CPU 커널이 있지만 일반적인 경로는 아닙니다). 공개된 비교에서는 비트당 품질에서 AWQ 같은 더 새로운 방법과 비슷하거나 그보다 낮은 경우가 많았습니다.',
+          'AWQ(활성화 인식 가중치 양자화)는 GPTQ의 더 현대적인 GPU 중심 대안입니다. 모든 것을 균일하게 양자화하는 대신 활성화 크기에 가장 중요한 가중치를 보호함으로써, AWQ는 일반적으로 동일한 비트 폭에서 더 많은 품질을 보존합니다. GPU 서빙이 이미 전제인 vLLM 같은 프로덕션 서빙 스택에서 흔한 선택입니다.',
         ],
       },
       comparison: {
         id: 'comparison',
         title: '한눈에 보는 GGUF 대 GPTQ 대 AWQ',
         content: [
-          'Ollama, LM Studio, 또는 llama.cpp를 로컬로 실행한다면 GGUF를 선택하십시오 — 세 형식 중 실질적인 CPU 지원과 부분 오프로드 유연성을 갖춘 유일한 형식입니다. 특별히 이를 기대하는 기존 파이프라인이나 도구(구형 ExLlama 설정 같은)로 작업하는 경우에만 GPTQ를 선택하십시오. 프로덕션 GPU 서빙 스택(vLLM)에 배포하며 GPU 전용 옵션 중 최고의 비트당 품질을 원한다면 AWQ를 선택하십시오.',
+          'Ollama, LM Studio, 또는 llama.cpp를 로컬로 실행한다면 GGUF를 선택하십시오 — 세 형식 중 CPU 사용과 부분 오프로드를 염두에 두고 만들어진 형식입니다(GPTQ/AWQ용 CPU 커널은 예를 들어 GPTQModel에 있지만 일반적인 경로는 아닙니다). 특별히 이를 기대하는 기존 파이프라인이나 도구(구형 ExLlama 설정 같은)로 작업하는 경우에만 GPTQ를 선택하십시오. 프로덕션 GPU 서빙 스택(vLLM)에 배포하며 GPU 중심 옵션 중 일반적으로 비트당 품질이 더 높은 쪽을 원한다면 AWQ를 선택하십시오.',
           '세 형식 모두 동일한 기본 모델을 감소된 정밀도로 나타냅니다 — 형식이 결정하는 것은 어떤 도구가 이를 로드할 수 있는지와 GPU 메모리 부족을 얼마나 우아하게 처리하는지이지, 모델의 근본적인 성능이 아닙니다.',
         ],
         columns: ['형식', '실행 환경', '일반 비트', '주요 도구', '적합한 용도'],
         rows: [
           { '형식': 'GGUF', '실행 환경': 'CPU, GPU 또는 둘 다', '일반 비트': '2–8비트', '주요 도구': 'llama.cpp, Ollama, LM Studio', '적합한 용도': '로컬 사용' },
-          { '형식': 'GPTQ', '실행 환경': 'GPU 전용', '일반 비트': '4비트(3–8)', '주요 도구': 'vLLM, ExLlama', '적합한 용도': '기존 GPU 파이프라인' },
-          { '형식': 'AWQ', '실행 환경': 'GPU 전용', '일반 비트': '4비트', '주요 도구': 'vLLM, Transformers', '적합한 용도': 'GPU 서빙' },
+          { '형식': 'GPTQ', '실행 환경': '주로 GPU', '일반 비트': '4비트(3–8)', '주요 도구': 'vLLM, ExLlama', '적합한 용도': '기존 GPU 파이프라인' },
+          { '형식': 'AWQ', '실행 환경': '주로 GPU', '일반 비트': '4비트', '주요 도구': 'vLLM, Transformers', '적합한 용도': 'GPU 서빙' },
         ],
       },
       formats: {
@@ -1175,7 +1175,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'speed',
         title: '속도와 품질은 형식뿐 아니라 커널에도 좌우된다',
         content: [
-          '<strong>같은 AWQ나 GPTQ 파일도 실행하는 GPU 커널에 따라 속도가 크게 달라질 수 있습니다.</strong> 서드파티 vLLM 벤치마크에 따르면 기본 커널의 AWQ는 FP16보다 느리고, Marlin 커널을 쓰면 NVIDIA GPU에서 AWQ와 GPTQ가 FP16을 앞선다고 합니다(<a href="https://www.spheron.network/blog/gptq-vs-awq-vs-gguf-4-bit-quantization-comparison-2026/" class="text-primary hover:underline" target="_blank" rel="noopener">Spheron</a>, <a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>).',
+          '<strong>같은 AWQ나 GPTQ 파일도 실행하는 GPU 커널에 따라 속도가 크게 달라질 수 있습니다.</strong> 서드파티 vLLM 벤치마크 한 건(NVIDIA H200의 Qwen2.5-32B)에 따르면 기본 커널의 AWQ는 FP16보다 느렸고, Marlin 커널을 쓴 AWQ와 GPTQ는 더 빨랐다고 합니다(<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>). <a href="https://www.spheron.network/blog/gptq-vs-awq-vs-gguf-4-bit-quantization-comparison-2026/" class="text-primary hover:underline" target="_blank" rel="noopener">Spheron</a>도 같은 커널 간 차이를 보고합니다.',
           '4비트에서의 품질 손실은 작지만 측정 가능하며, 모델과 테스트에 따라 다릅니다. Qwen2.5-32B에 대한 공개된 HumanEval 비교에서는 AWQ가 51.8%, FP16이 56.1%, GPTQ가 46.3%였습니다(<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>). 이런 수치는 참고용으로만 보고, 자신의 모델과 작업으로 테스트하세요.',
           'vLLM은 GGUF 파일을 로드할 수 있지만, <a href="https://docs.vllm.ai/en/latest/features/quantization/gguf.html" class="text-primary hover:underline" target="_blank" rel="noopener">vLLM 문서</a>는 그 지원을 매우 실험적이며 최적화가 덜 되어 있다고 설명합니다. GGUF에는 llama.cpp, Ollama, LM Studio를 사용하세요.',
         ],
@@ -1184,7 +1184,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'choose',
         title: '환경별 형식 선택',
         items: [
-          '<strong>노트북, Mac, CPU 전용 머신:</strong> GGUF. 세 가지 중 CPU 추론이 가능한 유일한 형식이며, Apple Silicon에서 Ollama와 LM Studio가 사용하는 형식입니다.',
+          '<strong>노트북, Mac, CPU 전용 머신:</strong> GGUF. 세 가지 중 Ollama와 LM Studio 같은 CPU 중심 도구가 기본으로 사용하는 형식입니다. LM Studio는 Apple Silicon에서 MLX 모델도 제공합니다.',
           '<strong>소비자용 GPU 한 장, 모델이 VRAM에 들어가는 경우:</strong> 간편함을 원하면 GGUF, 도구(ExLlama, Python 파이프라인)가 요구하면 AWQ/GPTQ.',
           '<strong>모델이 VRAM보다 큰 경우:</strong> GGUF. 레이어를 시스템 RAM으로 오프로드할 수 있습니다.',
           '<strong>vLLM을 쓰는 NVIDIA GPU 프로덕션 API:</strong> Marlin 커널을 쓰는 AWQ 또는 GPTQ. AWQ로 시작하고 GPTQ는 벤치마크로 비교하세요.',
@@ -1218,7 +1218,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Ollama는 GPTQ나 AWQ 모델을 직접 지원합니까?',
-            a: '아닙니다 — Ollama는 특별히 GGUF를 중심으로 구축되었습니다. GPTQ나 AWQ 체크포인트를 사용하려면 해당 형식을 위해 설계된 다른 서빙 도구(vLLM 또는 ExLlama)가 필요합니다.',
+            a: '아닙니다 — Ollama는 GGUF 모델을 실행하며(지원되는 safetensors 가중치는 가져올 수 있습니다), 문서에서 GPTQ나 AWQ 체크포인트를 불러올 수 있는 형식으로 명시하지 않습니다. GPTQ나 AWQ 체크포인트를 사용하려면 해당 형식을 위해 설계된 다른 서빙 도구(vLLM 또는 ExLlama)가 필요합니다.',
           },
           {
             q: 'GGUF란 무엇인가요?',
@@ -1226,7 +1226,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'GPTQ와 AWQ의 차이는 무엇인가요?',
-            a: '둘 다 학습 후 적용하는 GPU 전용 4비트 양자화 방법입니다. GPTQ는 보정 데이터로 레이어별 반올림 오차를 보정하고, AWQ는 활성화에 중요한 가중치를 반올림 전에 스케일링합니다. 실제로는 AWQ가 품질을 조금 더 유지하는 경우가 많지만, 방법만큼 GPU 커널도 중요합니다.',
+            a: '둘 다 학습 후 적용하는 GPU 중심 4비트 양자화 방법입니다. GPTQ는 보정 데이터로 레이어별 반올림 오차를 보정하고, AWQ는 활성화에 중요한 가중치를 반올림 전에 스케일링합니다. 실제로는 AWQ가 품질을 조금 더 유지하는 경우가 많지만, 방법만큼 GPU 커널도 중요합니다.',
           },
           {
             q: 'AWQ가 GPTQ보다 더 좋은가요?',
@@ -1268,9 +1268,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-pt.webp',
     title: 'GGUF vs GPTQ vs AWQ: diferenças, velocidade e qual usar',
     seoTitle: 'GGUF vs GPTQ vs AWQ Quantização 2026',
-    metaDescription: 'GGUF roda em CPU e GPU via llama.cpp/Ollama; GPTQ e AWQ são formatos só de GPU para vLLM. Compare velocidade, qualidade, ferramentas e comandos.',
+    metaDescription: 'GGUF roda em CPU e GPU via llama.cpp/Ollama; GPTQ e AWQ são formatos voltados a GPU para vLLM. Compare velocidade, qualidade, ferramentas e comandos.',
     publishDate: '2026-07-14',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
@@ -1279,7 +1279,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Desenvolvedores escolhendo um formato de quantização para inferência local ou servida de LLM',
     siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi', 'llama-cpp-gguf-conversion-guide'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>O GGUF é o formato padrão habitual para uso local</strong> — roda em CPU e GPU com llama.cpp e Ollama. GPTQ e AWQ são formatos somente GPU para produção com o vLLM.',
+    leadAnswerBlock: '<strong>O GGUF é o formato padrão habitual para uso local</strong> — roda em CPU e GPU com llama.cpp e Ollama. GPTQ e AWQ são formatos voltados a GPU para produção com o vLLM.',
     toc: [
       { label: 'Melhor Escolha: GGUF para Uso Local, AWQ para Servir em Produção', anchor: '#best-pick' },
       { label: 'GGUF vs GPTQ vs AWQ em Resumo', anchor: '#comparison' },
@@ -1293,13 +1293,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'Devo usar quantização GGUF, GPTQ ou AWQ?',
-        answer: 'Use GGUF para uso local via Ollama ou llama.cpp — ele roda em CPU e GPU sem requisitos extras. Use AWQ em vez de GPTQ se for servir em produção com vLLM, já que mantém a qualidade melhor na mesma largura de bits.',
+        answer: 'Use GGUF para uso local via Ollama ou llama.cpp — ele roda em CPU e GPU sem requisitos extras. Use AWQ em vez de GPTQ se for servir em produção com vLLM, já que em geral mantém a qualidade mais próxima da original na mesma largura de bits, embora os resultados variem conforme o modelo e o kernel.',
         bullets: [
           'GGUF: o formato nativo do llama.cpp — inferência híbrida CPU+GPU, o padrão para Ollama e LM Studio.',
-          'GPTQ: somente GPU, quantização pós-treinamento baseada em calibração — um padrão inicial para servir eficiente em 4 bits.',
-          'AWQ (Quantização de Peso Consciente da Ativação): somente GPU, geralmente melhor qualidade-por-bit que o GPTQ, comum em servir em produção com vLLM.',
+          'GPTQ: voltado a GPU, quantização pós-treinamento baseada em calibração — um padrão inicial para servir eficiente em 4 bits.',
+          'AWQ (Quantização de Peso Consciente da Ativação): voltado a GPU, geralmente melhor qualidade-por-bit que o GPTQ, comum em servir em produção com vLLM.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -1308,36 +1308,36 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'GGUF: o padrão certo para uso local — roda em CPU e GPU via llama.cpp/Ollama, sem requisito exclusivo de CUDA',
-          'GPTQ: somente GPU, um padrão inicial para servir em 4 bits, ainda suportado pelo ExLlama e pelo vLLM',
-          'AWQ: somente GPU, geralmente mantém a qualidade melhor que o GPTQ na mesma largura de bits — preferido para servir em produção',
+          'GPTQ: voltado a GPU, um padrão inicial para servir em 4 bits, ainda suportado pelo ExLlama e pelo vLLM',
+          'AWQ: voltado a GPU, geralmente mantém a qualidade melhor que o GPTQ na mesma largura de bits — preferido para servir em produção',
           'Se você está rodando Ollama ou LM Studio localmente, quase certamente quer GGUF, não GPTQ ou AWQ',
         ],
       },
       bestPick: {
         id: 'best-pick',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'GGUF é um formato de modelo quantizado em arquivo único para o llama.cpp que roda em CPU e GPU, enquanto GPTQ e AWQ são formatos de 4 bits só para GPU, usados principalmente para servir modelos com vLLM.' },
+          { type: 'one-sentence', text: 'GGUF é um formato de modelo quantizado em arquivo único para o llama.cpp que roda em CPU e GPU, enquanto GPTQ e AWQ são formatos de 4 bits voltados a GPU, usados principalmente para servir modelos com vLLM.' },
           { type: 'plain-terms', text: 'Em termos simples: escolha GGUF se você roda modelos no próprio computador com Ollama ou LM Studio, e AWQ ou GPTQ apenas se serve um modelo a partir de um servidor com GPU NVIDIA.' },
         ],
         title: 'Melhor Escolha: GGUF para Uso Local, AWQ para Servir em Produção',
         content: [
           '<strong>O GGUF é o formato de quantização certo para praticamente qualquer pessoa rodando modelos localmente via Ollama, LM Studio ou llama.cpp diretamente — ele suporta inferência tanto em CPU quanto em GPU a partir do mesmo arquivo, incluindo offload parcial de CPU quando um modelo não cabe totalmente na VRAM.</strong> Essa flexibilidade é exatamente por que o GGUF se tornou o formato padrão para ferramentas de LLM local de consumo: funciona seja qual for a GPU que você tenha, potente, modesta ou nenhuma.',
-          'O GPTQ foi um dos primeiros métodos de quantização em 4 bits amplamente adotados para inferência eficiente em GPU. Ele usa um conjunto de dados de calibração para minimizar perda de qualidade durante a quantização pós-treinamento, mas é somente GPU — não há um caminho significativo de fallback para CPU — e geralmente foi superado em qualidade-por-bit por métodos mais novos.',
-          'O AWQ (Quantização de Peso Consciente da Ativação) é a alternativa somente GPU mais moderna ao GPTQ. Ao proteger os pesos que mais importam para a magnitude da ativação em vez de quantizar tudo uniformemente, o AWQ geralmente preserva mais qualidade na mesma largura de bits. É uma escolha comum para pilhas de servir em produção como o vLLM e, onde a operação somente GPU já é dada.',
+          'O GPTQ foi um dos primeiros métodos de quantização em 4 bits amplamente adotados para inferência eficiente em GPU. Ele usa um conjunto de dados de calibração para minimizar perda de qualidade durante a quantização pós-treinamento, mas é voltado a GPU (existem kernels de CPU em algumas bibliotecas, mas não são o caminho comum) e, em comparações publicadas, muitas vezes foi igualado ou superado em qualidade por bit por métodos mais novos, como o AWQ.',
+          'O AWQ (Quantização de Peso Consciente da Ativação) é a alternativa mais moderna ao GPTQ, voltada a GPU. Ao proteger os pesos que mais importam para a magnitude da ativação em vez de quantizar tudo uniformemente, o AWQ geralmente preserva mais qualidade na mesma largura de bits. É uma escolha comum para pilhas de servir em produção como o vLLM e, onde servir em GPU já é dado.',
         ],
       },
       comparison: {
         id: 'comparison',
         title: 'GGUF vs GPTQ vs AWQ em Resumo',
         content: [
-          'Escolha GGUF se você está rodando Ollama, LM Studio ou llama.cpp localmente — é o único dos três com suporte real de CPU e flexibilidade de offload parcial. Escolha GPTQ apenas se você estiver trabalhando com um pipeline ou ferramenta existente (como configurações antigas do ExLlama) que especificamente o exige. Escolha AWQ se você está implantando em uma pilha de servir em produção com GPU (vLLM) e quer a melhor qualidade-por-bit entre as opções somente GPU.',
+          'Escolha GGUF se você está rodando Ollama, LM Studio ou llama.cpp localmente — é o formato dos três pensado para CPU e offload parcial (existem kernels de CPU para GPTQ/AWQ, por exemplo no GPTQModel, mas não são o caminho comum). Escolha GPTQ apenas se você estiver trabalhando com um pipeline ou ferramenta existente (como configurações antigas do ExLlama) que especificamente o exige. Escolha AWQ se você está implantando em uma pilha de servir em produção com GPU (vLLM) e quer, em geral, mais qualidade por bit entre as opções voltadas a GPU.',
           'Os três representam o mesmo modelo subjacente em precisão reduzida — o formato determina quais ferramentas conseguem carregá-lo e quão graciosamente ele lida com déficits de memória de GPU, não a capacidade subjacente do modelo.',
         ],
         columns: ['Formato', 'Roda em', 'Bits típicos', 'Ferramentas', 'Ideal para'],
         rows: [
           { 'Formato': 'GGUF', 'Roda em': 'CPU, GPU ou ambos', 'Bits típicos': '2–8 bits', 'Ferramentas': 'llama.cpp, Ollama, LM Studio', 'Ideal para': 'Uso local' },
-          { 'Formato': 'GPTQ', 'Roda em': 'Só GPU', 'Bits típicos': '4 bits (3–8)', 'Ferramentas': 'vLLM, ExLlama', 'Ideal para': 'Pipelines GPU existentes' },
-          { 'Formato': 'AWQ', 'Roda em': 'Só GPU', 'Bits típicos': '4 bits', 'Ferramentas': 'vLLM, Transformers', 'Ideal para': 'Serving em GPU' },
+          { 'Formato': 'GPTQ', 'Roda em': 'Principalmente GPU', 'Bits típicos': '4 bits (3–8)', 'Ferramentas': 'vLLM, ExLlama', 'Ideal para': 'Pipelines GPU existentes' },
+          { 'Formato': 'AWQ', 'Roda em': 'Principalmente GPU', 'Bits típicos': '4 bits', 'Ferramentas': 'vLLM, Transformers', 'Ideal para': 'Serving em GPU' },
         ],
       },
       formats: {
@@ -1355,7 +1355,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'speed',
         title: 'Velocidade e qualidade dependem do kernel, não só do formato',
         content: [
-          '<strong>O mesmo arquivo AWQ ou GPTQ pode ser bem mais lento ou mais rápido conforme o kernel de GPU que o executa.</strong> Benchmarks de terceiros com vLLM relatam que o AWQ com o kernel padrão roda mais devagar que FP16, enquanto o kernel Marlin coloca AWQ e GPTQ à frente do FP16 em GPUs NVIDIA (<a href="https://www.spheron.network/blog/gptq-vs-awq-vs-gguf-4-bit-quantization-comparison-2026/" class="text-primary hover:underline" target="_blank" rel="noopener">Spheron</a>, <a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>).',
+          '<strong>O mesmo arquivo AWQ ou GPTQ pode ser bem mais lento ou mais rápido conforme o kernel de GPU que o executa.</strong> Um benchmark de terceiros com vLLM (Qwen2.5-32B em uma NVIDIA H200) relata que o AWQ com o kernel padrão roda mais devagar que FP16, e que AWQ e GPTQ com o kernel Marlin rodam mais rápido (<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>); a <a href="https://www.spheron.network/blog/gptq-vs-awq-vs-gguf-4-bit-quantization-comparison-2026/" class="text-primary hover:underline" target="_blank" rel="noopener">Spheron</a> relata a mesma diferença entre kernels.',
           'A perda de qualidade em 4 bits é pequena, mas mensurável, e varia conforme o modelo e o teste. Uma comparação HumanEval publicada com Qwen2.5-32B deu 51,8% para AWQ contra 56,1% do FP16, e 46,3% para GPTQ (<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>). Trate esses números como indicativos e teste com seu modelo e sua tarefa.',
           'O vLLM consegue carregar arquivos GGUF, mas a <a href="https://docs.vllm.ai/en/latest/features/quantization/gguf.html" class="text-primary hover:underline" target="_blank" rel="noopener">documentação do vLLM</a> descreve esse suporte como altamente experimental e pouco otimizado. Para GGUF, use llama.cpp, Ollama ou LM Studio.',
         ],
@@ -1364,7 +1364,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'choose',
         title: 'Qual formato escolher para o seu setup',
         items: [
-          '<strong>Notebook, Mac ou máquina só com CPU:</strong> GGUF. É o único dos três com inferência em CPU e o formato que Ollama e LM Studio usam no Apple Silicon.',
+          '<strong>Notebook, Mac ou máquina só com CPU:</strong> GGUF. É o formato dos três que as ferramentas voltadas a CPU, como Ollama e LM Studio, usam por padrão; o LM Studio também oferece modelos MLX no Apple Silicon.',
           '<strong>Uma GPU de consumo, modelo cabe na VRAM:</strong> GGUF pela simplicidade, ou AWQ/GPTQ se suas ferramentas (ExLlama, um pipeline Python) os esperam.',
           '<strong>Modelo maior que a sua VRAM:</strong> GGUF, pois camadas podem ser descarregadas para a RAM do sistema.',
           '<strong>API de produção em GPUs NVIDIA com vLLM:</strong> AWQ ou GPTQ com kernels Marlin. Comece com AWQ e compare o GPTQ em um benchmark.',
@@ -1398,7 +1398,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'O Ollama suporta modelos GPTQ ou AWQ diretamente?',
-            a: 'Não — o Ollama é construído em torno do GGUF especificamente. Para usar um checkpoint GPTQ ou AWQ, você precisa de uma ferramenta de serviço diferente (vLLM ou ExLlama) projetada para esse formato.',
+            a: 'Não — o Ollama executa modelos GGUF (e pode importar pesos safetensors compatíveis), mas sua documentação não lista checkpoints GPTQ ou AWQ entre os formatos que ele carrega. Para usar um checkpoint GPTQ ou AWQ, você precisa de uma ferramenta de serviço diferente (vLLM ou ExLlama) projetada para esse formato.',
           },
           {
             q: 'O que é GGUF?',
@@ -1406,7 +1406,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Qual a diferença entre GPTQ e AWQ?',
-            a: 'Ambos são métodos de 4 bits pós-treinamento só para GPU. O GPTQ compensa o erro de arredondamento camada por camada com dados de calibração; o AWQ escala os pesos mais importantes para as ativações antes de arredondar. Na prática o AWQ costuma manter um pouco mais de qualidade, mas o kernel de GPU importa tanto quanto o método.',
+            a: 'Ambos são métodos de 4 bits pós-treinamento voltados a GPU. O GPTQ compensa o erro de arredondamento camada por camada com dados de calibração; o AWQ escala os pesos mais importantes para as ativações antes de arredondar. Na prática o AWQ costuma manter um pouco mais de qualidade, mas o kernel de GPU importa tanto quanto o método.',
           },
           {
             q: 'AWQ é melhor que GPTQ?',
@@ -1434,10 +1434,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'Leitura Relacionada',
         items: [
-          '[O Que É a Quantização Q4_K_M?](/prompt-bites/what-is-q4-k-m-quantization) — o nível de quantização mais comum do GGUF explicado',
-          '[Q4_K_M vs Q8_0](/prompt-bites/q4-k-m-vs-q8-0) — escolhendo um nível de quantização GGUF',
-          '[Ollama vs vLLM vs TGI](/prompt-bites/ollama-vs-vllm-vs-tgi) — qual ferramenta de servir combina com qual formato',
-          '[Quantização de LLM explicada (guia completo)](/local-llms/llm-quantization-explained) — o mergulho completo em como a quantização funciona por dentro',
+          '[O Que É a Quantização Q4_K_M?](/pt/prompt-bites/what-is-q4-k-m-quantization) — o nível de quantização mais comum do GGUF explicado',
+          '[Q4_K_M vs Q8_0](/pt/prompt-bites/q4-k-m-vs-q8-0) — escolhendo um nível de quantização GGUF',
+          '[Ollama vs vLLM vs TGI](/pt/prompt-bites/ollama-vs-vllm-vs-tgi) — qual ferramenta de servir combina com qual formato',
+          '[Quantização de LLM explicada (guia completo)](/pt/local-llms/llm-quantization-explained) — o mergulho completo em como a quantização funciona por dentro',
         ],
       },
     },
@@ -1448,9 +1448,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-zh.webp',
     title: 'GGUF 对比 GPTQ 对比 AWQ：差异、速度与选择',
     seoTitle: '2026 年 GGUF 对比 GPTQ 对比 AWQ 量化 | Prompt Bites',
-    metaDescription: 'GGUF 通过 llama.cpp/Ollama 在 CPU 和 GPU 上运行；GPTQ 和 AWQ 是面向 vLLM 的纯 GPU 格式。对比速度、质量、工具与命令。',
+    metaDescription: 'GGUF 通过 llama.cpp/Ollama 在 CPU 和 GPU 上运行；GPTQ 和 AWQ 是面向 vLLM、以 GPU 为主的格式。对比速度、质量、工具与命令。',
     publishDate: '2026-07-14',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
@@ -1459,7 +1459,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: '为本地或托管 LLM 推理选择量化格式的开发者',
     siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi', 'llama-cpp-gguf-conversion-guide'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>GGUF 是本地使用中常见的默认量化格式</strong>——它通过 llama.cpp 和 Ollama 在 CPU 和 GPU 上都能运行，没有单独的纯 CUDA 要求。GPTQ 和 AWQ 是为 vLLM 等生产服务框架打造的纯 GPU 格式，其中 AWQ 在相同位宽下通常比 GPTQ 更好地保持质量。',
+    leadAnswerBlock: '<strong>GGUF 是本地使用中常见的默认量化格式</strong>——它通过 llama.cpp 和 Ollama 在 CPU 和 GPU 上都能运行。GPTQ 和 AWQ 是为 vLLM 等服务框架打造的以 GPU 为主的格式。',
     toc: [
       { label: '最佳选择：本地使用选 GGUF，生产服务选 AWQ', anchor: '#best-pick' },
       { label: 'GGUF 对比 GPTQ 对比 AWQ 一览', anchor: '#comparison' },
@@ -1473,13 +1473,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '应该使用 GGUF、GPTQ 还是 AWQ 量化？',
-        answer: '本地使用通过 Ollama 或 llama.cpp 选择 GGUF——它在 CPU 和 GPU 上运行，无需额外要求。如果用 vLLM 进行生产服务部署，选择 AWQ 而非 GPTQ，因为它在相同位宽下能更好地保持质量。',
+        answer: '本地使用通过 Ollama 或 llama.cpp 选择 GGUF——它在 CPU 和 GPU 上运行，无需额外要求。如果用 vLLM 进行生产服务部署，选择 AWQ 而非 GPTQ，因为它在相同位宽下通常能让质量更接近原模型，但结果因模型和内核而异。',
         bullets: [
           'GGUF：llama.cpp 的原生格式——CPU+GPU 混合推理，是 Ollama 和 LM Studio 的默认格式。',
-          'GPTQ：纯 GPU、基于校准的训练后量化——高效 4 位服务的早期标准。',
-          'AWQ（感知激活的权重量化）：纯 GPU，通常每位质量优于 GPTQ，常见于 vLLM 生产服务。',
+          'GPTQ：以 GPU 为主、基于校准的训练后量化——高效 4 位服务的早期标准。',
+          'AWQ（感知激活的权重量化）：以 GPU 为主，通常每位质量优于 GPTQ，常见于 vLLM 生产服务。',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -1488,36 +1488,36 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'GGUF：本地使用的正确默认选择——通过 llama.cpp/Ollama 在 CPU 和 GPU 上运行，无需纯 CUDA',
-          'GPTQ：纯 GPU，4 位服务的早期标准，ExLlama 和 vLLM 仍支持',
-          'AWQ：纯 GPU，通常在相同位宽下比 GPTQ 更好地保持质量——生产服务的首选',
+          'GPTQ：以 GPU 为主，4 位服务的早期标准，ExLlama 和 vLLM 仍支持',
+          'AWQ：以 GPU 为主，通常在相同位宽下比 GPTQ 更好地保持质量——生产服务的首选',
           '如果你在本地运行 Ollama 或 LM Studio，几乎肯定应该选 GGUF，而非 GPTQ 或 AWQ',
         ],
       },
       bestPick: {
         id: 'best-pick',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'GGUF 是面向 llama.cpp 的单文件量化模型格式，可在 CPU 和 GPU 上运行；GPTQ 和 AWQ 是纯 GPU 的 4 位格式，主要用于 vLLM 的服务部署。' },
+          { type: 'one-sentence', text: 'GGUF 是面向 llama.cpp 的单文件量化模型格式，可在 CPU 和 GPU 上运行；GPTQ 和 AWQ 是以 GPU 为主的 4 位格式，主要用于 vLLM 的服务部署。' },
           { type: 'plain-terms', text: '简单来说：如果你用 Ollama 或 LM Studio 在自己的电脑上运行模型，选 GGUF；只有在 NVIDIA GPU 服务器上提供模型服务时，才选 AWQ 或 GPTQ。' },
         ],
         title: '最佳选择：本地使用选 GGUF，生产服务选 AWQ',
         content: [
           '<strong>对于几乎任何通过 Ollama、LM Studio 或直接使用 llama.cpp 在本地运行模型的人来说，GGUF 都是正确的量化格式——它支持从同一文件进行 CPU 和 GPU 推理，包括模型无法完全装入显存时的部分 CPU 卸载。</strong>正是这种灵活性让 GGUF 成为消费级本地 LLM 工具的标准格式：无论你拥有强大的 GPU、普通的 GPU，还是完全没有 GPU，它都能运行。',
-          'GPTQ 是最早被广泛采用的高效 GPU 推理 4 位量化方法之一。它使用校准数据集在训练后量化过程中最小化质量损失，但它是纯 GPU 的——没有有效的 CPU 回退路径——并且在每位质量方面通常已被更新的方法超越。',
-          'AWQ（感知激活的权重量化）是比 GPTQ 更现代的纯 GPU 替代方案。通过保护对激活幅度最重要的权重,而非统一量化所有权重，AWQ 通常在相同位宽下保留更多质量。它是 vLLM 等生产服务栈的常见选择,这些场景本来就默认使用纯 GPU 运行。',
+          'GPTQ 是最早被广泛采用的高效 GPU 推理 4 位量化方法之一。它使用校准数据集在训练后量化过程中最小化质量损失，但它以 GPU 为主（部分库提供 CPU 内核，但不是常见路径），并且在已发表的对比中，每位质量常被 AWQ 等更新的方法追平或超越。',
+          'AWQ（感知激活的权重量化）是比 GPTQ 更现代的、以 GPU 为主的替代方案。通过保护对激活幅度最重要的权重,而非统一量化所有权重，AWQ 通常在相同位宽下保留更多质量。它是 vLLM 等生产服务栈的常见选择,这些场景本来就默认在 GPU 上提供服务。',
         ],
       },
       comparison: {
         id: 'comparison',
         title: 'GGUF 对比 GPTQ 对比 AWQ 一览',
         content: [
-          '如果你在本地运行 Ollama、LM Studio 或 llama.cpp，选择 GGUF——它是三者中唯一具备真正 CPU 支持和部分卸载灵活性的格式。只有在使用特别期望 GPTQ 的现有流程或工具（如较旧的 ExLlama 配置）时才选择 GPTQ。如果部署到生产 GPU 服务栈（vLLM）并希望在纯 GPU 选项中获得最佳每位质量，选择 AWQ。',
+          '如果你在本地运行 Ollama、LM Studio 或 llama.cpp，选择 GGUF——它是三者中专为 CPU 运行和部分卸载设计的格式（GPTQ/AWQ 的 CPU 内核例如在 GPTQModel 中存在，但不是常见路径）。只有在使用特别期望 GPTQ 的现有流程或工具（如较旧的 ExLlama 配置）时才选择 GPTQ。如果部署到生产 GPU 服务栈（vLLM）并希望在以 GPU 为主的选项中通常获得更高的每位质量，选择 AWQ。',
           '三者都以降低精度表示同一底层模型——格式决定的是哪些工具能加载它、以及它如何优雅地应对显存不足，而非模型本身的底层能力。',
         ],
         columns: ['格式', '运行于', '常见位宽', '主要工具', '最适合'],
         rows: [
           { '格式': 'GGUF', '运行于': 'CPU、GPU 或两者', '常见位宽': '2–8 位', '主要工具': 'llama.cpp、Ollama、LM Studio', '最适合': '本地使用' },
-          { '格式': 'GPTQ', '运行于': '仅 GPU', '常见位宽': '4 位（3–8）', '主要工具': 'vLLM、ExLlama', '最适合': '现有 GPU 流水线' },
-          { '格式': 'AWQ', '运行于': '仅 GPU', '常见位宽': '4 位', '主要工具': 'vLLM、Transformers', '最适合': 'GPU 服务部署' },
+          { '格式': 'GPTQ', '运行于': '主要 GPU', '常见位宽': '4 位（3–8）', '主要工具': 'vLLM、ExLlama', '最适合': '现有 GPU 流水线' },
+          { '格式': 'AWQ', '运行于': '主要 GPU', '常见位宽': '4 位', '主要工具': 'vLLM、Transformers', '最适合': 'GPU 服务部署' },
         ],
       },
       formats: {
@@ -1535,7 +1535,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'speed',
         title: '速度和质量取决于内核，而不只是格式',
         content: [
-          '<strong>同一个 AWQ 或 GPTQ 文件，运行速度可能因 GPU 内核不同而相差很大。</strong>第三方 vLLM 基准测试报告称，使用默认内核的 AWQ 比 FP16 慢，而使用 Marlin 内核后，AWQ 和 GPTQ 在 NVIDIA GPU 上超过了 FP16（<a href="https://www.spheron.network/blog/gptq-vs-awq-vs-gguf-4-bit-quantization-comparison-2026/" class="text-primary hover:underline" target="_blank" rel="noopener">Spheron</a>、<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>）。',
+          '<strong>同一个 AWQ 或 GPTQ 文件，运行速度可能因 GPU 内核不同而相差很大。</strong>一项第三方 vLLM 基准测试（NVIDIA H200 上的 Qwen2.5-32B）报告称，使用默认内核的 AWQ 比 FP16 慢，而使用 Marlin 内核的 AWQ 和 GPTQ 更快（<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>）；<a href="https://www.spheron.network/blog/gptq-vs-awq-vs-gguf-4-bit-quantization-comparison-2026/" class="text-primary hover:underline" target="_blank" rel="noopener">Spheron</a> 报告了同样的内核差距。',
           '4 位量化的质量损失很小但可测量，且因模型和测试而异。一项基于 Qwen2.5-32B 的已发表 HumanEval 对比中，AWQ 为 51.8%，FP16 为 56.1%，GPTQ 为 46.3%（<a href="https://blog.premai.io/llm-quantization-guide-gguf-vs-awq-vs-gptq-vs-bitsandbytes-compared-2026" class="text-primary hover:underline" target="_blank" rel="noopener">Prem AI</a>）。请将这些数字仅作参考，并用自己的模型和任务测试。',
           'vLLM 可以加载 GGUF 文件，但 <a href="https://docs.vllm.ai/en/latest/features/quantization/gguf.html" class="text-primary hover:underline" target="_blank" rel="noopener">vLLM 文档</a>将该支持描述为高度实验性且尚未充分优化。使用 GGUF 时请选择 llama.cpp、Ollama 或 LM Studio。',
         ],
@@ -1544,7 +1544,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'choose',
         title: '根据你的环境选择格式',
         items: [
-          '<strong>笔记本、Mac 或仅有 CPU 的机器：</strong>GGUF。它是三者中唯一支持 CPU 推理的格式，也是 Ollama 和 LM Studio 在 Apple Silicon 上使用的格式。',
+          '<strong>笔记本、Mac 或仅有 CPU 的机器：</strong>GGUF。它是三者中 Ollama 和 LM Studio 等以 CPU 为先的工具默认使用的格式；LM Studio 在 Apple Silicon 上也提供 MLX 模型。',
           '<strong>一块消费级 GPU，模型能放进显存：</strong>图简单选 GGUF；如果你的工具（ExLlama、Python 流水线）要求，则选 AWQ/GPTQ。',
           '<strong>模型比显存大：</strong>GGUF，因为可以把部分层卸载到系统内存。',
           '<strong>在 NVIDIA GPU 上用 vLLM 提供生产 API：</strong>搭配 Marlin 内核的 AWQ 或 GPTQ。先用 AWQ，再用基准测试对比 GPTQ。',
@@ -1578,7 +1578,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Ollama 直接支持 GPTQ 或 AWQ 模型吗？',
-            a: '不支持——Ollama 专门围绕 GGUF 构建。要使用 GPTQ 或 AWQ 检查点，需要专为该格式设计的其他服务工具（vLLM 或 ExLlama）。',
+            a: '不支持——Ollama 运行 GGUF 模型（也可以导入受支持的 safetensors 权重），但其文档并未将 GPTQ 或 AWQ 检查点列为可加载格式。要使用 GPTQ 或 AWQ 检查点，需要专为该格式设计的其他服务工具（vLLM 或 ExLlama）。',
           },
           {
             q: '什么是 GGUF？',
@@ -1586,7 +1586,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'GPTQ 和 AWQ 有什么区别？',
-            a: '两者都是训练后的纯 GPU 4 位量化方法。GPTQ 用校准数据逐层补偿舍入误差；AWQ 在舍入前缩放对激活最重要的权重。实际中 AWQ 通常保留略多的质量，但 GPU 内核与方法同样重要。',
+            a: '两者都是训练后的、以 GPU 为主的 4 位量化方法。GPTQ 用校准数据逐层补偿舍入误差；AWQ 在舍入前缩放对激活最重要的权重。实际中 AWQ 通常保留略多的质量，但 GPU 内核与方法同样重要。',
           },
           {
             q: 'AWQ 比 GPTQ 更好吗？',
@@ -1614,10 +1614,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: '相关阅读',
         items: [
-          '[什么是 Q4_K_M 量化？](/prompt-bites/what-is-q4-k-m-quantization) — GGUF 最常见的量化级别详解',
-          '[Q4_K_M 对比 Q8_0](/prompt-bites/q4-k-m-vs-q8-0) — 选择 GGUF 量化级别',
-          '[Ollama 对比 vLLM 对比 TGI](/prompt-bites/ollama-vs-vllm-vs-tgi) — 哪种服务工具搭配哪种格式',
-          '[LLM量化详解（完整指南）](/local-llms/llm-quantization-explained) — 深入剖析量化底层工作原理的完整指南',
+          '[什么是 Q4_K_M 量化？](/zh/prompt-bites/what-is-q4-k-m-quantization) — GGUF 最常见的量化级别详解',
+          '[Q4_K_M 对比 Q8_0](/zh/prompt-bites/q4-k-m-vs-q8-0) — 选择 GGUF 量化级别',
+          '[Ollama 对比 vLLM 对比 TGI](/zh/prompt-bites/ollama-vs-vllm-vs-tgi) — 哪种服务工具搭配哪种格式',
+          '[LLM量化详解（完整指南）](/zh/local-llms/llm-quantization-explained) — 深入剖析量化底层工作原理的完整指南',
         ],
       },
     },

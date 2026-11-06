@@ -63,9 +63,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Byte-addressable:** Like DRAM, individual bytes can be read/written. Unlike Flash (page-based).',
           '**No refresh power:** DRAM must be refreshed continuously to keep its data, which draws standby power. MRAM is non-volatile and needs no refresh.',
           '**High endurance:** Vendors report write endurance far above NAND Flash and, for some MRAM types, close to DRAM-class levels; exact figures vary by product, so check the vendor datasheet.',
-          '**Process integration:** Samsung, TSMC, and others can embed MRAM directly into logic dies at 28nm, 14nm, and smaller nodes.',
+          '**Process integration:** Samsung and other foundries can embed MRAM directly into logic dies; for Samsung, eMRAM at 28nm FD-SOI is documented in Sources, and smaller nodes are roadmap targets.',
         ],
-        note: 'Everspin Technologies is a major standalone MRAM supplier — it reported Q3 2026 revenue of $20.6 million (up from $14.1 million a year earlier; MRAM product sales $16.9 million versus $12.7 million, per its [SEC Form 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026067890/mram-20260930xexx991.htm)), with growth led by industrial automation, data center, medical and energy management, according to the release. In Q2 2026 it reported initial non-product revenue under a recently signed $40 million contract with a US prime contractor ([SEC Form 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026053376/mram-20260630xexx991.htm)). Samsung announced commercial eMRAM (embedded MRAM) production in 2019. TSMC, Renesas, Avalanche Technology, and GlobalFoundries also offer or have announced MRAM in various nodes. Ainekko, which announced a merger with Veevx in early 2026 ([press release](https://www.eejournal.com/industry_news/ainekko-merges-with-veevx-expands-open-silicon-platform-with-breakthrough-memory-and-embedded-ai-capabilities/)), is developing an MRAM-based embedded memory called iRAM aimed at edge AI accelerators (company claims, not independently verified).',
+        note: 'Everspin Technologies is a major standalone MRAM supplier — it reported Q3 2026 revenue of $20.6 million (up from $14.1 million a year earlier; MRAM product sales $16.9 million versus $12.7 million, per its [SEC Form 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026067890/mram-20260930xexx991.htm)), with growth led by industrial automation, data center, medical and energy management, according to the release. In Q2 2026 it reported initial non-product revenue under a recently signed $40 million contract with a US prime contractor ([SEC Form 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026053376/mram-20260630xexx991.htm)). Samsung announced commercial eMRAM (embedded MRAM) production in 2019 (see Sources). Ainekko, which announced a merger with Veevx in early 2026 ([press release](https://www.eejournal.com/industry_news/ainekko-merges-with-veevx-expands-open-silicon-platform-with-breakthrough-memory-and-embedded-ai-capabilities/)), is developing an MRAM-based embedded memory called iRAM aimed at edge AI accelerators (company claims, not independently verified).',
       },
       'memory-bottleneck': {
         id: 'memory-bottleneck',
@@ -191,9 +191,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**At least 6× reduction** in KV cache memory footprint (Google Research, on needle-in-a-haystack tasks). In long-context inference the KV cache can be a large share of memory.',
           '**No accuracy loss reported** by Google on its own benchmarks, including needle-in-haystack evaluations (long-context retrieval); the [arXiv paper](https://arxiv.org/abs/2504.19874) reports quality neutrality at 3.5 bits per channel.',
           '**Up to 8× speedup** in computing attention logits on H100 GPUs (4-bit TurboQuant vs 32-bit unquantized keys), per Google Research; this is not an end-to-end speedup.',
-          '**No training or fine-tuning required.** Drop-in replacement for existing inference pipelines.',
+          '**Google Research reports that no training or fine-tuning is needed.** Using it in an existing inference pipeline still requires a library implementation.',
           'How it works: Two-stage process — PolarQuant (quantize in polar coordinates using Lloyd-Max centroids) + QJL (Quantized Johnson-Lindenstrauss transform, adds error-correction to preserve inner-product accuracy at extreme compression).',
-          'Multiple independent open-source implementations exist. In the sources we checked, Google\'s blog post does not link an official code release. The figures above are reported by Google Research; community implementations report differing compression ratios.',
+          'Community implementations exist; in the sources we checked, Google\'s blog post does not link official code. The figures above are reported by Google Research; compression ratios differ between community implementations.',
           '**Why it matters:** A software-only memory reduction needs no new hardware, so it could help today\'s devices once an inference library supports it. It is a pragmatic response to the memory bottleneck while MRAM matures.',
         ],
       },
@@ -243,7 +243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Is MRAM available to buy now for my PC or phone?',
-            a: 'No. MRAM is in production for industrial microcontrollers, automotive chips, and enterprise storage. For consumer AI, it is R&D only. The SemiFive/ICYTech chip is still at tape-out stage — silicon not yet returned or benchmarked. Consumer deployment realistically 3–5+ years away.',
+            a: 'No. MRAM is in production at several vendors, for example for industrial and data-center products (see the Everspin Form 8-K above). For consumer AI, it is R&D only. The SemiFive/ICYTech chip is still at tape-out stage — silicon not yet returned or benchmarked. Consumer deployment realistically 3–5+ years away.',
           },
           {
             q: 'Will MRAM replace my GPU\'s VRAM?',
@@ -263,7 +263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is MRAM the same as 3D XPoint (Intel Optane)?',
-            a: 'No. 3D XPoint was Intel\'s proprietary storage-class memory technology (now discontinued). MRAM stores data magnetically; 3D XPoint is a discontinued Intel/Micron technology that works by a different mechanism. Both target the same problem space — fast, durable, non-volatile storage — but use different approaches.',
+            a: 'No. 3D XPoint was a storage-class memory technology developed by Intel and Micron (now discontinued). MRAM stores data magnetically; 3D XPoint works by a different mechanism. Both target the same problem space — fast, durable, non-volatile storage — but use different approaches.',
           },
           {
             q: 'How much power does MRAM save compared to DRAM?',
@@ -341,9 +341,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**Byte-adressierbar:** Wie bei DRAM können einzelne Bytes gelesen/geschrieben werden. Anders als bei Flash (seitenbasiert).',
         '**Kein Refresh-Strom:** DRAM muss ständig aufgefrischt werden, um Daten zu halten, was Standby-Strom verbraucht. MRAM ist nicht-flüchtig und braucht keinen Refresh.',
         '**Hohe Ausdauer:** Hersteller geben Schreibzyklen an, die weit über NAND-Flash liegen und bei manchen MRAM-Typen nahe an DRAM-Niveau heranreichen; die genauen Werte variieren je Produkt, bitte das Datenblatt des Herstellers prüfen.',
-        '**Prozessintegration:** Samsung, TSMC und andere können MRAM direkt in Logik-Dies bei 28nm, 14nm und kleineren Nodes einbetten.',
+        '**Prozessintegration:** Samsung und andere Foundries können MRAM direkt in Logik-Dies einbetten; für Samsung ist eMRAM in 28nm FD-SOI in den Quellen dokumentiert, kleinere Nodes sind Roadmap-Ziele.',
       ],
-      note: 'Everspin Technologies ist ein bedeutender Anbieter von eigenständigem MRAM — im dritten Quartal 2026 meldete das Unternehmen einen Umsatz von 20,6 Millionen US-Dollar (gegenüber 14,1 Millionen im Vorjahr; MRAM-Produktumsatz 16,9 Millionen gegenüber 12,7 Millionen, laut [SEC-Formular 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026067890/mram-20260930xexx991.htm)); das Wachstum wurde laut Mitteilung von Industrieautomation, Rechenzentren, Medizintechnik und Energiemanagement getragen. Im zweiten Quartal 2026 meldete es erste Nicht-Produkt-Umsätze aus einem kürzlich unterzeichneten 40-Millionen-Dollar-Vertrag mit einem US-Hauptauftragnehmer (Prime Contractor) ([SEC-Formular 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026053376/mram-20260630xexx991.htm)). Samsung kündigte 2019 die kommerzielle Produktion von eMRAM (embedded MRAM) an. TSMC, Renesas, Avalanche Technology und GlobalFoundries bieten MRAM in verschiedenen Nodes ebenfalls an oder haben dies angekündigt. Ainekko, das Anfang 2026 eine Fusion mit Veevx ankündigte ([Pressemitteilung](https://www.eejournal.com/industry_news/ainekko-merges-with-veevx-expands-open-silicon-platform-with-breakthrough-memory-and-embedded-ai-capabilities/)), entwickelt einen MRAM-basierten eingebetteten Speicher namens iRAM für Edge-KI-Beschleuniger (Herstellerangaben, nicht unabhängig überprüft).',
+      note: 'Everspin Technologies ist ein bedeutender Anbieter von eigenständigem MRAM — im dritten Quartal 2026 meldete das Unternehmen einen Umsatz von 20,6 Millionen US-Dollar (gegenüber 14,1 Millionen im Vorjahr; MRAM-Produktumsatz 16,9 Millionen gegenüber 12,7 Millionen, laut [SEC-Formular 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026067890/mram-20260930xexx991.htm)); das Wachstum wurde laut Mitteilung von Industrieautomation, Rechenzentren, Medizintechnik und Energiemanagement getragen. Im zweiten Quartal 2026 meldete es erste Nicht-Produkt-Umsätze aus einem kürzlich unterzeichneten 40-Millionen-Dollar-Vertrag mit einem US-Hauptauftragnehmer (Prime Contractor) ([SEC-Formular 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026053376/mram-20260630xexx991.htm)). Samsung kündigte 2019 die kommerzielle Produktion von eMRAM (embedded MRAM) an (siehe Quellen). Ainekko, das Anfang 2026 eine Fusion mit Veevx ankündigte ([Pressemitteilung](https://www.eejournal.com/industry_news/ainekko-merges-with-veevx-expands-open-silicon-platform-with-breakthrough-memory-and-embedded-ai-capabilities/)), entwickelt einen MRAM-basierten eingebetteten Speicher namens iRAM für Edge-KI-Beschleuniger (Herstellerangaben, nicht unabhängig überprüft).',
     },
     'memory-bottleneck': {
       id: 'memory-bottleneck',
@@ -469,9 +469,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**Mindestens 6×-Reduktion** des Speicherbedarfs des KV-Caches (Google Research, bei Needle-in-Haystack-Aufgaben). Bei Inferenz mit langem Kontext kann der KV-Cache einen großen Teil des Speichers belegen.',
         '**Kein Genauigkeitsverlust berichtet** von Google in den eigenen Benchmarks, einschließlich Needle-in-Haystack-Evaluierungen (Abruf bei langem Kontext); das [arXiv-Paper](https://arxiv.org/abs/2504.19874) berichtet Qualitätsneutralität bei 3,5 Bit pro Kanal.',
         '**Bis zu 8× Beschleunigung** bei der Berechnung von Attention-Logits auf H100-GPUs (4-Bit-TurboQuant vs 32-Bit unquantisierte Keys) laut Google Research; das ist keine End-to-End-Beschleunigung.',
-        '**Kein Training oder Fine-Tuning erforderlich.** Drop-in-Ersatz für bestehende Inferenz-Pipelines.',
+        '**Laut Google Research ist kein Training oder Fine-Tuning nötig.** Der Einsatz in einer bestehenden Inferenz-Pipeline setzt weiterhin eine Bibliotheksimplementierung voraus.',
         'So funktioniert es: Zweistufiger Prozess — PolarQuant (Quantisierung in Polarkoordinaten mittels Lloyd-Max-Zentroiden) + QJL (Quantized Johnson-Lindenstrauss-Transformation, fügt Fehlerkorrektur hinzu, um die Genauigkeit des inneren Produkts bei extremer Kompression zu erhalten).',
-        'Mehrere unabhängige Open-Source-Implementierungen existieren. In den von uns geprüften Quellen verlinkt der Google-Blogbeitrag keine offizielle Code-Veröffentlichung. Die obigen Zahlen stammen von Google Research; Community-Implementierungen berichten abweichende Kompressionsraten.',
+        'Community-Implementierungen existieren; in den von uns geprüften Quellen verlinkt der Google-Blogbeitrag keinen offiziellen Code. Die obigen Zahlen stammen von Google Research; die Kompressionsraten unterscheiden sich zwischen den Community-Implementierungen.',
         '**Warum das wichtig ist:** Eine rein softwarebasierte Speicherreduktion erfordert keine neue Hardware und könnte heutigen Geräten helfen, sobald eine Inferenz-Bibliothek sie unterstützt. Sie ist eine pragmatische Antwort auf den Speicher-Engpass, während MRAM reift.',
       ],
     },
@@ -521,7 +521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faqs: [
         {
           q: 'Kann ich MRAM jetzt für meinen PC oder mein Smartphone kaufen?',
-          a: 'Nein. MRAM ist in Produktion für industrielle Mikrocontroller, Automobil-Chips und Enterprise-Storage. Für Consumer-KI ist es weiterhin nur F&E. Der SemiFive/ICYTech-Chip befindet sich weiterhin im Tape-Out-Stadium — das Silizium ist noch nicht zurückgeliefert oder gebenchmarkt. Der Consumer-Einsatz ist realistisch 3–5+ Jahre entfernt.',
+          a: 'Nein. MRAM ist bei mehreren Anbietern in Produktion, zum Beispiel für Industrie- und Rechenzentrumsprodukte (siehe das Everspin-Formular 8-K oben). Für Consumer-KI ist es weiterhin nur F&E. Der SemiFive/ICYTech-Chip befindet sich weiterhin im Tape-Out-Stadium — das Silizium ist noch nicht zurückgeliefert oder gebenchmarkt. Der Consumer-Einsatz ist realistisch 3–5+ Jahre entfernt.',
         },
         {
           q: 'Wird MRAM den VRAM meiner GPU ersetzen?',
@@ -541,7 +541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           q: 'Ist MRAM dasselbe wie 3D XPoint (Intel Optane)?',
-          a: 'Nein. 3D XPoint war Intels proprietäre Storage-Class-Memory-Technologie (inzwischen eingestellt). MRAM speichert Daten magnetisch; 3D XPoint ist eine eingestellte Technologie von Intel und Micron mit einem anderen Funktionsprinzip. Beide zielen auf denselben Problembereich — schnellen, langlebigen, nicht-flüchtigen Speicher — verwenden aber unterschiedliche Ansätze.',
+          a: 'Nein. 3D XPoint war eine von Intel und Micron entwickelte Storage-Class-Memory-Technologie (inzwischen eingestellt). MRAM speichert Daten magnetisch; 3D XPoint arbeitet nach einem anderen Funktionsprinzip. Beide zielen auf denselben Problembereich — schnellen, langlebigen, nicht-flüchtigen Speicher — verwenden aber unterschiedliche Ansätze.',
         },
         {
           q: 'Wie viel Strom spart MRAM im Vergleich zu DRAM?',
@@ -599,7 +599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { type: 'plain-terms', text: "Les puces actuelles gaspillent beaucoup d'énergie rien qu'en déplaçant des données entre la mémoire et le processeur. La MRAM tente d'y remédier en effectuant une partie du calcul directement là où les données sont stockées. C'est une idée prometteuse avec de vraies démonstrations en laboratoire, mais elle n'équipe encore aucun téléphone ni ordinateur portable -- une technologie à surveiller à un stade précoce, pas encore achetable." },
           ],
         items: [
-          '**MRAM (RAM magnétorésistive):** Mémoire non-volatile utilisant des jonctions tunnel magnétiques (MTJ). Aucun rafraîchissement requis, aucune consommation en veille. Adressable à l\'octet comme la DRAM.',
+          '**MRAM (RAM magnétorésistive):** Mémoire non-volatile utilisant des jonctions tunnel magnétiques (MTJ). Aucun rafraîchissement, aucune consommation en veille. Adressable à l\'octet comme la DRAM.',
           '**Informatique en mémoire:** Effectue les opérations de multiplication-accumulation (MAC) directement dans le tableau de mémoire. Réduit le transport de données entre CPU/GPU et mémoire — un poste majeur de consommation énergétique en inférence.',
           '**État actuel:** Samsung SAIT a démontré dans Nature (2022) un réseau crossbar MRAM 64×64 atteignant 93,2% de précision sur MNIST et 93,4% en détection de visages. SemiFive + ICYTech ont réalisé la tape-out d\'un eMRAM 8nm (mai 2026). Pas encore de produits grand public.',
           '**Le hic:** Tape-out ≠ silicium retourné ≠ produit commercialisé — la puce SemiFive/ICYTech n\'a pas été livrée. Les chiffres quantifiés d\'efficacité du calcul en mémoire MRAM proviennent de prototypes académiques de laboratoire, pas de produits commerciaux. Les smartphones/PC grand public sont improbables avant 2029–2031 (estimation éditoriale).',
@@ -618,9 +618,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Adressable à l\'octet:** Comme la DRAM, chaque octet peut être lu/écrit. Contrairement à la Flash (basée sur les pages).',
           '**Pas d\'énergie de rafraîchissement:** La DRAM doit être rafraîchie en permanence pour conserver ses données, ce qui consomme de l\'énergie en veille. La MRAM est non volatile et n\'a pas besoin de rafraîchissement.',
           '**Endurance élevée:** Les fabricants indiquent une endurance en écriture bien supérieure à celle de la NAND Flash et, pour certains types de MRAM, proche du niveau de la DRAM ; les valeurs exactes varient selon le produit, consultez la fiche technique du fabricant.',
-          '**Intégration au procédé:** Samsung, TSMC et d\'autres peuvent intégrer la MRAM directement dans les puces logiques en 28nm, 14nm et nœuds inférieurs.',
+          '**Intégration au procédé:** Samsung et d\'autres fonderies peuvent intégrer la MRAM directement dans les puces logiques ; pour Samsung, l\'eMRAM en 28nm FD-SOI est documentée dans les Sources, les nœuds plus petits sont des objectifs de feuille de route.',
         ],
-        note: 'Everspin Technologies est un fournisseur majeur de MRAM autonome — au troisième trimestre 2026, l\'entreprise a déclaré un chiffre d\'affaires de 20,6 millions de dollars (contre 14,1 millions un an plus tôt; ventes de produits MRAM de 16,9 millions contre 12,7 millions, selon son [formulaire 8-K auprès de la SEC](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026067890/mram-20260930xexx991.htm)); d\'après le communiqué, la croissance a été portée par l\'automatisation industrielle, les centres de données, le médical et la gestion de l\'énergie. Au deuxième trimestre 2026, elle a déclaré un premier revenu hors produits au titre d\'un contrat de 40 millions de dollars récemment signé avec un maître d\'œuvre américain (prime contractor) ([formulaire 8-K auprès de la SEC](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026053376/mram-20260630xexx991.htm)). Samsung a annoncé en 2019 la production commerciale d\'eMRAM (MRAM embarquée). TSMC, Renesas, Avalanche Technology et GlobalFoundries proposent aussi de la MRAM sur divers nœuds, ou l\'ont annoncé. Ainekko, qui a annoncé sa fusion avec Veevx début 2026 ([communiqué de presse](https://www.eejournal.com/industry_news/ainekko-merges-with-veevx-expands-open-silicon-platform-with-breakthrough-memory-and-embedded-ai-capabilities/)), développe une mémoire embarquée à base de MRAM appelée iRAM destinée aux accélérateurs IA d\'edge (déclarations de l\'entreprise, non vérifiées de manière indépendante).',
+        note: 'Everspin Technologies est un fournisseur majeur de MRAM autonome — au troisième trimestre 2026, l\'entreprise a déclaré un chiffre d\'affaires de 20,6 millions de dollars (contre 14,1 millions un an plus tôt; ventes de produits MRAM de 16,9 millions contre 12,7 millions, selon son [formulaire 8-K auprès de la SEC](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026067890/mram-20260930xexx991.htm)); d\'après le communiqué, la croissance a été portée par l\'automatisation industrielle, les centres de données, le médical et la gestion de l\'énergie. Au deuxième trimestre 2026, elle a déclaré un premier revenu hors produits au titre d\'un contrat de 40 millions de dollars récemment signé avec un maître d\'œuvre américain (prime contractor) ([formulaire 8-K auprès de la SEC](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026053376/mram-20260630xexx991.htm)). Samsung a annoncé en 2019 la production commerciale d\'eMRAM (MRAM embarquée), voir Sources. Ainekko, qui a annoncé sa fusion avec Veevx début 2026 ([communiqué de presse](https://www.eejournal.com/industry_news/ainekko-merges-with-veevx-expands-open-silicon-platform-with-breakthrough-memory-and-embedded-ai-capabilities/)), développe une mémoire embarquée à base de MRAM appelée iRAM destinée aux accélérateurs IA d\'edge (déclarations de l\'entreprise, non vérifiées de manière indépendante).',
       },
       'memory-bottleneck': {
         id: 'memory-bottleneck',
@@ -746,9 +746,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Réduction d\'au moins 6×** de l\'empreinte mémoire du cache KV (Google Research, sur des tâches needle-in-haystack). En inférence à long contexte, le cache KV peut occuper une grande part de la mémoire.',
           '**Aucune perte de précision rapportée** par Google sur ses propres benchmarks, y compris les évaluations needle-in-haystack (récupération en long contexte) ; l\'[article arXiv](https://arxiv.org/abs/2504.19874) rapporte une neutralité de qualité à 3,5 bits par canal.',
           '**Jusqu\'à 8× d\'accélération** dans le calcul des logits d\'attention sur GPU H100 (TurboQuant 4 bits contre clés 32 bits non quantifiées), selon Google Research ; il ne s\'agit pas d\'une accélération de bout en bout.',
-          '**Aucun entraînement ni fine-tuning requis.** Remplacement direct pour les pipelines d\'inférence existants.',
+          '**Selon Google Research, aucun entraînement ni fine-tuning n\'est nécessaire.** L\'intégration dans un pipeline d\'inférence existant exige encore une implémentation dans une bibliothèque.',
           'Comment ça fonctionne: Un processus en deux étapes — PolarQuant (quantification en coordonnées polaires avec centroïdes de Lloyd-Max) + QJL (transformée quantifiée de Johnson-Lindenstrauss, qui ajoute une correction d\'erreur pour préserver la précision du produit scalaire à compression extrême).',
-          'Plusieurs implémentations open-source indépendantes existent. Dans les sources que nous avons consultées, l\'article de blog de Google ne renvoie à aucune publication officielle du code. Les chiffres ci-dessus sont rapportés par Google Research; les implémentations communautaires rapportent des taux de compression différents.',
+          'Des implémentations communautaires existent ; dans les sources que nous avons consultées, l\'article de blog de Google ne renvoie à aucun code officiel. Les chiffres ci-dessus sont rapportés par Google Research ; les taux de compression diffèrent d\'une implémentation communautaire à l\'autre.',
           '**Pourquoi c\'est important:** Une réduction mémoire purement logicielle ne nécessite aucun matériel nouveau et pourrait aider les appareils actuels dès qu\'une bibliothèque d\'inférence la prend en charge. C\'est une réponse pragmatique au goulot d\'étranglement mémoire en attendant la maturité de MRAM.',
         ],
       },
@@ -798,7 +798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'MRAM est-elle disponible à l\'achat maintenant pour mon PC ou téléphone?',
-            a: 'Non. MRAM est en production pour les microcontrôleurs industriels, les puces automobiles et le stockage d\'entreprise. Pour l\'IA grand public, elle reste en R&D. La puce SemiFive/ICYTech est toujours au stade tape-out — le silicium n\'est pas encore retourné ni évalué. Le déploiement grand public est réalistiquement à 3–5+ ans.',
+            a: 'Non. La MRAM est en production chez plusieurs fournisseurs, par exemple pour des produits industriels et de centres de données (voir le formulaire 8-K d\'Everspin ci-dessus). Pour l\'IA grand public, elle reste en R&D. La puce SemiFive/ICYTech est toujours au stade tape-out — le silicium n\'est pas encore retourné ni évalué. Le déploiement grand public est réalistiquement à 3–5+ ans.',
           },
           {
             q: 'MRAM va-t-elle remplacer la VRAM de mon GPU?',
@@ -818,7 +818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'MRAM est-elle la même chose que 3D XPoint (Intel Optane)?',
-            a: 'Non. 3D XPoint était la technologie propriétaire de mémoire de classe stockage d\'Intel (désormais abandonnée). La MRAM stocke les données de façon magnétique ; 3D XPoint est une technologie abandonnée d\'Intel et Micron, au mécanisme différent. Les deux ciblent le même espace de problème — stockage rapide, durable et non-volatile — mais avec des approches différentes.',
+            a: 'Non. 3D XPoint était une technologie de mémoire de classe stockage développée par Intel et Micron (désormais abandonnée). La MRAM stocke les données de façon magnétique ; 3D XPoint repose sur un mécanisme différent. Les deux ciblent le même espace de problème — stockage rapide, durable et non-volatile — mais avec des approches différentes.',
           },
           {
             q: 'Combien d\'énergie MRAM économise-t-elle par rapport à la DRAM?',
@@ -896,9 +896,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**バイト単位でアドレス指定可能:** DRAMと同様に、個々のバイトを読み書きできます。Flash(ページ単位)とは異なります。',
           '**リフレッシュ電力が不要:** DRAMはデータを保持するために常時リフレッシュが必要で、スタンバイ電力を消費します。MRAMは不揮発性でリフレッシュが不要です。',
           '**高い耐久性:** ベンダーはNAND Flashを大きく上回り、MRAMの種類によってはDRAM級に近い書き込み耐久性を報告しています。具体的な値は製品ごとに異なるため、ベンダーのデータシートをご確認ください。',
-          '**プロセス統合:** Samsung、TSMCなどは、28nm、14nm、さらに小さなノードでロジックダイに直接MRAMを組み込めます。',
+          '**プロセス統合:** Samsungをはじめとするファウンドリは、ロジックダイにMRAMを直接組み込めます。Samsungについては28nm FD-SOIのeMRAMが出典に記載されており、より微細なノードはロードマップ上の目標です。',
         ],
-        note: 'Everspin Technologiesは主要なスタンドアロンMRAMサプライヤーの1社です — 2026年第3四半期の売上高は2,060万ドル(前年同期の1,410万ドルから増加、MRAM製品売上は1,690万ドルで前年同期は1,270万ドル、出典：[SEC Form 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026067890/mram-20260930xexx991.htm))を計上しました。同社の発表によると、成長を牽引したのは産業オートメーション、データセンター、医療、エネルギー管理です。2026年第2四半期には、最近締結した米国のプライムコントラクターとの4,000万ドル契約に基づく初期の非製品売上を報告しています([SEC Form 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026053376/mram-20260630xexx991.htm))。Samsungは2019年にeMRAM(組み込みMRAM)の商用生産を発表しました。TSMC、Renesas、Avalanche Technology、GlobalFoundriesもさまざまなノードでMRAMを提供している、または発表しています。2026年初めにVeevxとの合併を発表したAinekko([プレスリリース](https://www.eejournal.com/industry_news/ainekko-merges-with-veevx-expands-open-silicon-platform-with-breakthrough-memory-and-embedded-ai-capabilities/))は、エッジAIアクセラレータ向けにiRAMと呼ばれるMRAMベースの組み込みメモリを開発しています(企業発表であり、独立検証はされていません)。',
+        note: 'Everspin Technologiesは主要なスタンドアロンMRAMサプライヤーの1社です — 2026年第3四半期の売上高は2,060万ドル(前年同期の1,410万ドルから増加、MRAM製品売上は1,690万ドルで前年同期は1,270万ドル、出典：[SEC Form 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026067890/mram-20260930xexx991.htm))を計上しました。同社の発表によると、成長を牽引したのは産業オートメーション、データセンター、医療、エネルギー管理です。2026年第2四半期には、最近締結した米国のプライムコントラクターとの4,000万ドル契約に基づく初期の非製品売上を報告しています([SEC Form 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026053376/mram-20260630xexx991.htm))。Samsungは2019年にeMRAM(組み込みMRAM)の商用生産を発表しました(出典を参照)。2026年初めにVeevxとの合併を発表したAinekko([プレスリリース](https://www.eejournal.com/industry_news/ainekko-merges-with-veevx-expands-open-silicon-platform-with-breakthrough-memory-and-embedded-ai-capabilities/))は、エッジAIアクセラレータ向けにiRAMと呼ばれるMRAMベースの組み込みメモリを開発しています(企業発表であり、独立検証はされていません)。',
       },
       'memory-bottleneck': {
         id: 'memory-bottleneck',
@@ -1024,9 +1024,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'KVキャッシュのメモリフットプリントを**少なくとも6倍削減**(Google Research、needle-in-haystackタスクでの値)。長コンテキスト推論では、KVキャッシュがメモリの大きな割合を占めることがあります。',
           'Googleは、needle-in-haystack評価(長コンテキスト検索)を含む自社ベンチマークで**精度損失なし**と報告しています。[arXiv論文](https://arxiv.org/abs/2504.19874)は、チャネルあたり3.5ビットで品質が劣化しないと報告しています。',
           'Google Researchによると、H100 GPU上でのアテンションロジット計算で**最大8倍の高速化**(4ビットTurboQuant vs 32ビット非量子化キー)。エンドツーエンドの高速化ではありません。',
-          '**学習やファインチューニングは不要。** 既存の推論パイプラインへのドロップイン置換。',
+          '**Google Researchによると、学習やファインチューニングは不要です。** 既存の推論パイプラインで使うには、ライブラリの実装が引き続き必要です。',
           '仕組み：2段階プロセス — PolarQuant(Lloyd-Max重心を使用した極座標での量子化) + QJL(Quantized Johnson-Lindenstrauss変換、極端な圧縮でも内積精度を保つための誤り訂正を追加)。',
-          '複数の独立したオープンソース実装が存在します。確認した範囲では、Googleのブログ記事は公式コードのリリースにリンクしていません。上記の数値はGoogle Researchの報告値であり、コミュニティ実装では圧縮率が異なると報告されています。',
+          'コミュニティ実装は存在します。確認した範囲では、Googleのブログ記事は公式コードにリンクしていません。上記の数値はGoogle Researchの報告値であり、圧縮率はコミュニティ実装ごとに異なります。',
           '**なぜ重要か:** ソフトウェアのみのメモリ削減は新しいハードウェアを必要とせず、推論ライブラリが対応すれば現在のデバイスでも役立つ可能性があります。MRAMの成熟を待つ間の、メモリボトルネックに対する実用的な対応策です。',
         ],
       },
@@ -1076,7 +1076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'MRAMは今すぐ自分のPCやスマホ用に購入できますか?',
-            a: 'いいえ。MRAMは産業用マイクロコントローラ、車載チップ、エンタープライズストレージ向けに量産されています。消費者向けAIについては、現時点ではR&Dのみです。SemiFive/ICYTechのチップは依然としてテープアウト段階 — シリコンはまだ返却もベンチマークもされていません。消費者への展開は現実的に3～5年以上先です。',
+            a: 'いいえ。MRAMは複数のベンダーで量産されており、たとえば産業用およびデータセンター向け製品があります(上記のEverspin Form 8-Kを参照)。消費者向けAIについては、現時点ではR&Dのみです。SemiFive/ICYTechのチップは依然としてテープアウト段階 — シリコンはまだ返却もベンチマークもされていません。消費者への展開は現実的に3～5年以上先です。',
           },
           {
             q: 'MRAMは私のGPUのVRAMを置き換えますか?',
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'MRAMは3D XPoint(Intel Optane)と同じですか?',
-            a: 'いいえ。3D XPointはIntelの独自のストレージクラスメモリ技術でした(現在は生産終了)。MRAMはデータを磁気的に記憶します。3D XPointはIntelとMicronによる生産終了済みの技術で、動作原理が異なります。両方とも同じ問題領域 — 高速で耐久性のある不揮発性ストレージ — を対象としますが、異なるアプローチを使用します。',
+            a: 'いいえ。3D XPointはIntelとMicronが開発したストレージクラスメモリ技術でした(現在は生産終了)。MRAMはデータを磁気的に記憶します。3D XPointは動作原理が異なります。両方とも同じ問題領域 — 高速で耐久性のある不揮発性ストレージ — を対象としますが、異なるアプローチを使用します。',
           },
           {
             q: 'MRAMはDRAMと比べてどれくらい電力を節約しますか?',
@@ -1189,9 +1189,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**字节寻址：** 与DRAM一样，可按单个字节读写。不同于Flash(基于页)。',
           '**无需刷新功耗：** DRAM必须持续刷新才能保持数据，这会消耗待机功耗。MRAM是非易失性的，无需刷新。',
           '**高耐久性：** 厂商报告的写入耐久性远高于NAND Flash，某些类型的MRAM接近DRAM级别；具体数值因产品而异，请查阅厂商数据手册。',
-          '**工艺集成：** Samsung、TSMC等厂商可在28nm、14nm及更小节点上将MRAM直接嵌入逻辑晶圆。',
+          '**工艺集成：** Samsung等晶圆代工厂可将MRAM直接嵌入逻辑晶圆；就Samsung而言，28nm FD-SOI的eMRAM已记录于参考资料，更小节点属于路线图目标。',
         ],
-        note: 'Everspin Technologies是主要的独立MRAM供应商之一 — 该公司2026年第三季度营收为2,060万美元(上年同期为1,410万美元；MRAM产品销售额为1,690万美元，上年同期为1,270万美元，来源：[SEC Form 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026067890/mram-20260930xexx991.htm))；据其公告，增长由工业自动化、数据中心、医疗和能源管理领域带动。2026年第二季度，该公司报告了来自最近签署的、与一家美国总承包商的4,000万美元合同的首笔非产品收入([SEC Form 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026053376/mram-20260630xexx991.htm))。Samsung于2019年宣布eMRAM(嵌入式MRAM)商业化生产。TSMC、Renesas、Avalanche Technology和GlobalFoundries也在不同节点提供或已宣布提供MRAM。Ainekko于2026年初宣布与Veevx合并([新闻稿](https://www.eejournal.com/industry_news/ainekko-merges-with-veevx-expands-open-silicon-platform-with-breakthrough-memory-and-embedded-ai-capabilities/))，正在开发面向边缘AI加速器的MRAM嵌入式内存iRAM(公司自述，未经独立验证)。',
+        note: 'Everspin Technologies是主要的独立MRAM供应商之一 — 该公司2026年第三季度营收为2,060万美元(上年同期为1,410万美元；MRAM产品销售额为1,690万美元，上年同期为1,270万美元，来源：[SEC Form 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026067890/mram-20260930xexx991.htm))；据其公告，增长由工业自动化、数据中心、医疗和能源管理领域带动。2026年第二季度，该公司报告了来自最近签署的、与一家美国总承包商的4,000万美元合同的首笔非产品收入([SEC Form 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026053376/mram-20260630xexx991.htm))。Samsung于2019年宣布eMRAM(嵌入式MRAM)商业化生产(参见参考资料)。Ainekko于2026年初宣布与Veevx合并([新闻稿](https://www.eejournal.com/industry_news/ainekko-merges-with-veevx-expands-open-silicon-platform-with-breakthrough-memory-and-embedded-ai-capabilities/))，正在开发面向边缘AI加速器的MRAM嵌入式内存iRAM(公司自述，未经独立验证)。',
       },
       'memory-bottleneck': {
         id: 'memory-bottleneck',
@@ -1317,9 +1317,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'KV缓存内存占用**至少缩减6倍**(Google Research，针对大海捞针任务)。在长上下文推理中，KV缓存可能占据内存的很大一部分。',
           'Google在其自有基准测试(包括大海捞针评测，即长上下文检索)中报告**无精度损失**；[arXiv论文](https://arxiv.org/abs/2504.19874)报告在每通道3.5比特时质量保持不变。',
           '据Google Research称，在H100 GPU上计算注意力logits时**最高提速8倍**(4比特TurboQuant对比32比特未量化键)；这不是端到端提速。',
-          '**无需训练或微调。** 可直接替换现有推理流水线。',
+          '**据Google Research称，无需训练或微调。** 要用于现有推理流水线，仍需要相应的库实现。',
           '工作原理：两阶段过程 — PolarQuant(使用Lloyd-Max质心在极坐标中量化) + QJL(量化Johnson-Lindenstrauss变换，添加纠错以在极端压缩下保持内积精度)。',
-          '已存在多个独立的开源实现。在我们查阅的来源中，Google的博客文章未链接官方代码发布。上述数据由Google Research报告；社区实现报告的压缩比各不相同。',
+          '已有社区实现；在我们查阅的来源中，Google的博客文章未链接官方代码。上述数据由Google Research报告；各社区实现的压缩比各不相同。',
           '**为何重要：** 纯软件的内存缩减无需新硬件，一旦推理库支持，就可能惠及当今的设备。在等待MRAM成熟的同时，这是应对内存瓶颈的务实方案。',
         ],
       },
@@ -1369,7 +1369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '现在能为我的PC或手机购买MRAM吗？',
-            a: '不能。MRAM已在工业微控制器、汽车芯片和企业级存储中量产。而在消费级AI方面，目前仍仅处于研发阶段。SemiFive/ICYTech芯片仍处于流片阶段 — 硅片尚未返回或经过基准测试。消费级部署现实上还需3–5年以上。',
+            a: '不能。MRAM已由多家厂商量产，例如用于工业和数据中心产品(参见上文的Everspin Form 8-K)。而在消费级AI方面，目前仍仅处于研发阶段。SemiFive/ICYTech芯片仍处于流片阶段 — 硅片尚未返回或经过基准测试。消费级部署现实上还需3–5年以上。',
           },
           {
             q: 'MRAM会取代我GPU的VRAM吗？',
@@ -1389,7 +1389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'MRAM与3D XPoint(Intel Optane)是一回事吗？',
-            a: '不是。3D XPoint是Intel专有的存储级内存技术(现已停产)。MRAM以磁性方式存储数据；3D XPoint是Intel与Micron已停产的技术，工作机制不同。两者面向相同的问题领域 — 快速、耐用、非易失性的存储 — 但采用不同的方法。',
+            a: '不是。3D XPoint是由Intel与Micron开发的存储级内存技术(现已停产)。MRAM以磁性方式存储数据；3D XPoint的工作机制不同。两者面向相同的问题领域 — 快速、耐用、非易失性的存储 — 但采用不同的方法。',
           },
           {
             q: '与DRAM相比，MRAM能节省多少功耗？',
@@ -1482,9 +1482,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Direccionable a nivel de byte:** Como la DRAM, se pueden leer/escribir bytes individuales. A diferencia de la Flash (basada en páginas).',
           '**Sin energía de refresco:** La DRAM debe refrescarse de forma continua para conservar sus datos, lo que consume energía en espera. MRAM es no volátil y no necesita refresco.',
           '**Alta resistencia:** Los fabricantes reportan una resistencia de escritura muy superior a la de la NAND Flash y, en algunos tipos de MRAM, cercana a la de la DRAM; las cifras exactas varían según el producto, así que consulta la hoja de datos del fabricante.',
-          '**Integración de proceso:** Samsung, TSMC y otros pueden integrar MRAM directamente en dies lógicos a nodos de 28nm, 14nm y menores.',
+          '**Integración de proceso:** Samsung y otras fundiciones pueden integrar MRAM directamente en dies lógicos; en el caso de Samsung, la eMRAM en 28nm FD-SOI está documentada en Fuentes y los nodos menores son objetivos de la hoja de ruta.',
         ],
-        note: 'Everspin Technologies es un proveedor independiente importante de MRAM — en el tercer trimestre de 2026 reportó ingresos de 20,6 millones de dólares (frente a 14,1 millones un año antes; ventas de producto MRAM de 16,9 millones frente a 12,7 millones, según su [Form 8-K ante la SEC](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026067890/mram-20260930xexx991.htm)); según el comunicado, el crecimiento lo lideraron la automatización industrial, los centros de datos, el sector médico y la gestión de energía. En el segundo trimestre de 2026 reportó ingresos iniciales no ligados a producto de un contrato de 40 millones de dólares firmado recientemente con un contratista principal (prime contractor) de EE. UU. ([Form 8-K ante la SEC](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026053376/mram-20260630xexx991.htm)). Samsung anunció en 2019 la producción comercial de eMRAM (MRAM integrada). TSMC, Renesas, Avalanche Technology y GlobalFoundries también ofrecen MRAM en varios nodos o lo han anunciado. Ainekko, que anunció su fusión con Veevx a principios de 2026 ([comunicado de prensa](https://www.eejournal.com/industry_news/ainekko-merges-with-veevx-expands-open-silicon-platform-with-breakthrough-memory-and-embedded-ai-capabilities/)), desarrolla una memoria integrada basada en MRAM llamada iRAM para aceleradores de IA de borde (afirmaciones de la empresa, no verificadas de forma independiente).',
+        note: 'Everspin Technologies es un proveedor independiente importante de MRAM — en el tercer trimestre de 2026 reportó ingresos de 20,6 millones de dólares (frente a 14,1 millones un año antes; ventas de producto MRAM de 16,9 millones frente a 12,7 millones, según su [Form 8-K ante la SEC](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026067890/mram-20260930xexx991.htm)); según el comunicado, el crecimiento lo lideraron la automatización industrial, los centros de datos, el sector médico y la gestión de energía. En el segundo trimestre de 2026 reportó ingresos iniciales no ligados a producto de un contrato de 40 millones de dólares firmado recientemente con un contratista principal (prime contractor) de EE. UU. ([Form 8-K ante la SEC](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026053376/mram-20260630xexx991.htm)). Samsung anunció en 2019 la producción comercial de eMRAM (MRAM integrada), ver Fuentes. Ainekko, que anunció su fusión con Veevx a principios de 2026 ([comunicado de prensa](https://www.eejournal.com/industry_news/ainekko-merges-with-veevx-expands-open-silicon-platform-with-breakthrough-memory-and-embedded-ai-capabilities/)), desarrolla una memoria integrada basada en MRAM llamada iRAM para aceleradores de IA de borde (afirmaciones de la empresa, no verificadas de forma independiente).',
       },
       'memory-bottleneck': {
         id: 'memory-bottleneck',
@@ -1610,9 +1610,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Reducción de al menos 6×** en la huella de memoria de la caché KV (Google Research, en tareas de aguja en un pajar). En inferencia de contexto largo, la caché KV puede ocupar una parte grande de la memoria.',
           '**Sin pérdida de precisión reportada** por Google en sus propios benchmarks, incluidas las evaluaciones de aguja en un pajar (recuperación de contexto largo); el [artículo en arXiv](https://arxiv.org/abs/2504.19874) reporta neutralidad de calidad con 3,5 bits por canal.',
           '**Hasta 8× de aceleración** en el cálculo de logits de atención en GPU H100 (TurboQuant de 4 bits frente a claves de 32 bits sin cuantizar), según Google Research; no es una aceleración de extremo a extremo.',
-          '**No requiere entrenamiento ni fine-tuning.** Reemplazo directo para las tuberías de inferencia existentes.',
+          '**Según Google Research, no requiere entrenamiento ni fine-tuning.** Usarlo en una tubería de inferencia existente sigue requiriendo una implementación en alguna biblioteca.',
           'Cómo funciona: Proceso en dos etapas — PolarQuant (cuantización en coordenadas polares usando centroides de Lloyd-Max) + QJL (transformada de Johnson-Lindenstrauss cuantizada, que añade corrección de errores para preservar la precisión del producto interno en compresión extrema).',
-          'Existen múltiples implementaciones de código abierto independientes. En las fuentes que consultamos, la entrada del blog de Google no enlaza ninguna publicación oficial del código. Las cifras anteriores las reporta Google Research; las implementaciones de la comunidad reportan ratios de compresión distintos.',
+          'Existen implementaciones de la comunidad; en las fuentes que consultamos, la entrada del blog de Google no enlaza código oficial. Las cifras anteriores las reporta Google Research; los ratios de compresión difieren entre las implementaciones de la comunidad.',
           '**Por qué importa:** La reducción de memoria puramente por software no requiere hardware nuevo y podría ayudar a los dispositivos actuales en cuanto una biblioteca de inferencia la admita. Es una respuesta pragmática al cuello de botella de memoria mientras MRAM madura.',
         ],
       },
@@ -1662,7 +1662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Está MRAM disponible para comprar ya para mi PC o teléfono?',
-            a: 'No. MRAM está en producción para microcontroladores industriales, chips de automoción y almacenamiento empresarial. Para la IA de consumo, sigue siendo solo R&D. El chip de SemiFive/ICYTech sigue en fase de tape-out — el silicio aún no ha regresado ni se ha evaluado. El despliegue de consumo está realistamente a 3-5+ años.',
+            a: 'No. MRAM está en producción en varios proveedores, por ejemplo para productos industriales y de centros de datos (consulta el Form 8-K de Everspin citado arriba). Para la IA de consumo, sigue siendo solo R&D. El chip de SemiFive/ICYTech sigue en fase de tape-out — el silicio aún no ha regresado ni se ha evaluado. El despliegue de consumo está realistamente a 3-5+ años.',
           },
           {
             q: '¿MRAM reemplazará la VRAM de mi GPU?',
@@ -1682,7 +1682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Es MRAM lo mismo que 3D XPoint (Intel Optane)?',
-            a: 'No. 3D XPoint era la tecnología propietaria de memoria de clase almacenamiento de Intel (ahora descontinuada). MRAM almacena los datos de forma magnética; 3D XPoint es una tecnología descontinuada de Intel y Micron con un mecanismo distinto. Ambas apuntan al mismo espacio de problema — almacenamiento rápido, duradero y no volátil — pero usan enfoques diferentes.',
+            a: 'No. 3D XPoint era una tecnología de memoria de clase almacenamiento desarrollada por Intel y Micron (ahora descontinuada). MRAM almacena los datos de forma magnética; 3D XPoint funciona con un mecanismo distinto. Ambas apuntan al mismo espacio de problema — almacenamiento rápido, duradero y no volátil — pero usan enfoques diferentes.',
           },
           {
             q: '¿Cuánta energía ahorra MRAM comparada con DRAM?',
@@ -1775,9 +1775,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Endereçável por byte:** Como a DRAM, bytes individuais podem ser lidos/escritos. Diferente da Flash (baseada em página).',
           '**Sem energia de refresh:** A DRAM precisa ser atualizada continuamente para manter os dados, o que consome energia em espera. A MRAM é não volátil e não precisa de refresh.',
           '**Alta durabilidade:** Os fabricantes relatam uma durabilidade de escrita muito acima da NAND Flash e, em alguns tipos de MRAM, próxima à da DRAM; os valores exatos variam conforme o produto, então consulte o datasheet do fabricante.',
-          '**Integração de processo:** Samsung, TSMC e outras conseguem incorporar a MRAM diretamente nos dies de lógica em 28nm, 14nm e nós menores.',
+          '**Integração de processo:** A Samsung e outras fundições conseguem incorporar a MRAM diretamente nos dies de lógica; no caso da Samsung, a eMRAM em 28nm FD-SOI está documentada em Fontes, e os nós menores são metas do roadmap.',
         ],
-        note: 'A Everspin Technologies é uma fornecedora relevante de MRAM standalone — no terceiro trimestre de 2026, a empresa registrou receita de US$ 20,6 milhões (ante US$ 14,1 milhões um ano antes; vendas de produtos MRAM de US$ 16,9 milhões ante US$ 12,7 milhões, segundo seu [Form 8-K na SEC](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026067890/mram-20260930xexx991.htm)); segundo o comunicado, o crescimento foi liderado por automação industrial, data centers, área médica e gestão de energia. No segundo trimestre de 2026, relatou receita inicial não ligada a produtos de um contrato de US$ 40 milhões assinado recentemente com um contratante principal (prime contractor) dos EUA ([Form 8-K na SEC](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026053376/mram-20260630xexx991.htm)). A Samsung anunciou em 2019 a produção comercial de eMRAM (MRAM embarcada). TSMC, Renesas, Avalanche Technology e GlobalFoundries também oferecem MRAM em vários nós ou já anunciaram essa oferta. A Ainekko, que anunciou a fusão com a Veevx no início de 2026 ([comunicado à imprensa](https://www.eejournal.com/industry_news/ainekko-merges-with-veevx-expands-open-silicon-platform-with-breakthrough-memory-and-embedded-ai-capabilities/)), desenvolve uma memória embarcada baseada em MRAM chamada iRAM voltada para aceleradores de IA de borda (afirmações da empresa, não verificadas de forma independente).',
+        note: 'A Everspin Technologies é uma fornecedora relevante de MRAM standalone — no terceiro trimestre de 2026, a empresa registrou receita de US$ 20,6 milhões (ante US$ 14,1 milhões um ano antes; vendas de produtos MRAM de US$ 16,9 milhões ante US$ 12,7 milhões, segundo seu [Form 8-K na SEC](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026067890/mram-20260930xexx991.htm)); segundo o comunicado, o crescimento foi liderado por automação industrial, data centers, área médica e gestão de energia. No segundo trimestre de 2026, relatou receita inicial não ligada a produtos de um contrato de US$ 40 milhões assinado recentemente com um contratante principal (prime contractor) dos EUA ([Form 8-K na SEC](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026053376/mram-20260630xexx991.htm)). A Samsung anunciou em 2019 a produção comercial de eMRAM (MRAM embarcada), veja Fontes. A Ainekko, que anunciou a fusão com a Veevx no início de 2026 ([comunicado à imprensa](https://www.eejournal.com/industry_news/ainekko-merges-with-veevx-expands-open-silicon-platform-with-breakthrough-memory-and-embedded-ai-capabilities/)), desenvolve uma memória embarcada baseada em MRAM chamada iRAM voltada para aceleradores de IA de borda (afirmações da empresa, não verificadas de forma independente).',
       },
       'memory-bottleneck': {
         id: 'memory-bottleneck',
@@ -1903,9 +1903,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Redução de pelo menos 6×** na pegada de memória do cache KV (Google Research, em tarefas de agulha no palheiro). Em inferência de contexto longo, o cache KV pode ocupar uma grande parte da memória.',
           '**Nenhuma perda de acurácia relatada** pelo Google nos próprios benchmarks, incluindo avaliações de agulha no palheiro (recuperação de contexto longo); o [artigo no arXiv](https://arxiv.org/abs/2504.19874) relata neutralidade de qualidade com 3,5 bits por canal.',
           '**Até 8× de aceleração** no cálculo dos logits de atenção em GPUs H100 (TurboQuant de 4 bits vs chaves de 32 bits sem quantização), segundo o Google Research; não é uma aceleração de ponta a ponta.',
-          '**Nenhum treinamento ou fine-tuning necessário.** Substituição drop-in para pipelines de inferência existentes.',
+          '**Segundo o Google Research, não é necessário treinamento nem fine-tuning.** Usá-lo em um pipeline de inferência existente ainda exige uma implementação em alguma biblioteca.',
           'Como funciona: Processo em dois estágios — PolarQuant (quantização em coordenadas polares usando centroides de Lloyd-Max) + QJL (transformada de Johnson-Lindenstrauss quantizada, adiciona correção de erro para preservar a acurácia do produto interno em compressão extrema).',
-          'Existem múltiplas implementações open-source independentes. Nas fontes que consultamos, a postagem do blog do Google não aponta para um lançamento oficial do código. Os números acima são relatados pelo Google Research; implementações da comunidade relatam taxas de compressão diferentes.',
+          'Existem implementações da comunidade; nas fontes que consultamos, a postagem do blog do Google não aponta para código oficial. Os números acima são relatados pelo Google Research; as taxas de compressão diferem entre as implementações da comunidade.',
           '**Por que isso importa:** A redução de memória apenas por software não exige hardware novo e poderia ajudar os dispositivos atuais assim que uma biblioteca de inferência a suportar. É uma resposta pragmática ao gargalo de memória enquanto a MRAM amadurece.',
         ],
       },
@@ -1955,7 +1955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'A MRAM está disponível para comprar agora para meu PC ou celular?',
-            a: 'Não. A MRAM está em produção para microcontroladores industriais, chips automotivos e armazenamento empresarial. Para IA de consumo, ainda está apenas em P&D. O chip da SemiFive/ICYTech continua em estágio de tape-out — o silício ainda não retornou nem foi avaliado. A implantação de consumo está realistamente a 3–5+ anos.',
+            a: 'Não. A MRAM está em produção em vários fornecedores, por exemplo para produtos industriais e de data center (veja o Form 8-K da Everspin citado acima). Para IA de consumo, ainda está apenas em P&D. O chip da SemiFive/ICYTech continua em estágio de tape-out — o silício ainda não retornou nem foi avaliado. A implantação de consumo está realistamente a 3–5+ anos.',
           },
           {
             q: 'A MRAM vai substituir a VRAM da minha GPU?',
@@ -1975,7 +1975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'A MRAM é o mesmo que 3D XPoint (Intel Optane)?',
-            a: 'Não. O 3D XPoint era a tecnologia proprietária de memória classe de armazenamento da Intel (agora descontinuada). A MRAM armazena dados magneticamente; o 3D XPoint é uma tecnologia descontinuada da Intel e da Micron, com um mecanismo diferente. Ambas miram o mesmo espaço de problema — armazenamento rápido, durável e não-volátil — mas usam abordagens diferentes.',
+            a: 'Não. O 3D XPoint era uma tecnologia de memória classe de armazenamento desenvolvida pela Intel e pela Micron (agora descontinuada). A MRAM armazena dados magneticamente; o 3D XPoint funciona com um mecanismo diferente. Ambas miram o mesmo espaço de problema — armazenamento rápido, durável e não-volátil — mas usam abordagens diferentes.',
           },
           {
             q: 'Quanta energia a MRAM economiza em comparação com a DRAM?',
@@ -2053,9 +2053,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**قابلة للعنونة على مستوى البايت:** مثل DRAM، يمكن قراءة/كتابة كل بايت على حدة. بخلاف Flash (القائمة على الصفحات).',
           '**لا طاقة تحديث:** يجب تحديث DRAM باستمرار للاحتفاظ ببياناتها، مما يستهلك طاقة في وضع الاستعداد. أما MRAM فهي غير متطايرة ولا تحتاج إلى تحديث.',
           '**تحمّل عالٍ:** تُبلغ الشركات المصنّعة عن تحمّل كتابة يفوق NAND Flash بكثير، ويقارب مستوى DRAM في بعض أنواع MRAM؛ وتختلف الأرقام الدقيقة بحسب المنتج، لذا راجع ورقة بيانات المصنّع.',
-          '**تكامل العملية:** يمكن لـ Samsung و TSMC وغيرهما تضمين MRAM مباشرةً في شرائح المنطق عند عقد 28nm و 14nm وأصغر.',
+          '**تكامل العملية:** يمكن لـ Samsung وغيرها من المسابك تضمين MRAM مباشرةً في شرائح المنطق؛ وبالنسبة إلى Samsung فإن eMRAM بتقنية 28nm FD-SOI موثّقة في المصادر، أما العقد الأصغر فهي أهداف في خارطة الطريق.',
         ],
-        note: 'Everspin Technologies من موردي MRAM المستقلين الرئيسيين — سجّلت الشركة في الربع الثالث من 2026 إيرادات بلغت 20.6 مليون دولار (مقابل 14.1 مليون دولار قبل عام؛ ومبيعات منتجات MRAM 16.9 مليون دولار مقابل 12.7 مليون دولار، وفق [نموذج 8-K لدى SEC](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026067890/mram-20260930xexx991.htm))؛ ووفق بيان الشركة قاد النمو قطاعات الأتمتة الصناعية ومراكز البيانات والطب وإدارة الطاقة. وفي الربع الثاني من 2026 أعلنت عن إيرادات أولية غير مرتبطة بالمنتجات من عقد بقيمة 40 مليون دولار وُقّع مؤخراً مع مقاول رئيسي (prime contractor) أمريكي ([نموذج 8-K لدى SEC](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026053376/mram-20260630xexx991.htm)). أعلنت Samsung في 2019 بدء الإنتاج التجاري لـ eMRAM (MRAM المضمّنة). كما تقدّم TSMC و Renesas و Avalanche Technology و GlobalFoundries ذاكرة MRAM بعقد مختلفة أو أعلنت عن ذلك. وتطوّر Ainekko، التي أعلنت اندماجها مع Veevx في مطلع 2026 ([بيان صحفي](https://www.eejournal.com/industry_news/ainekko-merges-with-veevx-expands-open-silicon-platform-with-breakthrough-memory-and-embedded-ai-capabilities/))، ذاكرة مضمّنة قائمة على MRAM تُدعى iRAM موجّهة لمسرّعات ذكاء اصطناعي الحافة (ادعاءات الشركة، دون تحقق مستقل).',
+        note: 'Everspin Technologies من موردي MRAM المستقلين الرئيسيين — سجّلت الشركة في الربع الثالث من 2026 إيرادات بلغت 20.6 مليون دولار (مقابل 14.1 مليون دولار قبل عام؛ ومبيعات منتجات MRAM 16.9 مليون دولار مقابل 12.7 مليون دولار، وفق [نموذج 8-K لدى SEC](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026067890/mram-20260930xexx991.htm))؛ ووفق بيان الشركة قاد النمو قطاعات الأتمتة الصناعية ومراكز البيانات والطب وإدارة الطاقة. وفي الربع الثاني من 2026 أعلنت عن إيرادات أولية غير مرتبطة بالمنتجات من عقد بقيمة 40 مليون دولار وُقّع مؤخراً مع مقاول رئيسي (prime contractor) أمريكي ([نموذج 8-K لدى SEC](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026053376/mram-20260630xexx991.htm)). أعلنت Samsung في 2019 بدء الإنتاج التجاري لـ eMRAM (MRAM المضمّنة)، انظر المصادر. وتطوّر Ainekko، التي أعلنت اندماجها مع Veevx في مطلع 2026 ([بيان صحفي](https://www.eejournal.com/industry_news/ainekko-merges-with-veevx-expands-open-silicon-platform-with-breakthrough-memory-and-embedded-ai-capabilities/))، ذاكرة مضمّنة قائمة على MRAM تُدعى iRAM موجّهة لمسرّعات ذكاء اصطناعي الحافة (ادعاءات الشركة، دون تحقق مستقل).',
       },
       'memory-bottleneck': {
         id: 'memory-bottleneck',
@@ -2181,9 +2181,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**تقليص لا يقل عن 6×** في بصمة ذاكرة KV cache (Google Research، في مهام needle-in-haystack). في الاستدلال ذي السياق الطويل، قد تشغل KV cache جزءاً كبيراً من الذاكرة.',
           '**لم يُبلَّغ عن فقدان في الدقة** من Google في اختباراتها المرجعية الخاصة، بما فيها تقييمات needle-in-haystack (استرجاع السياق الطويل)؛ وتُبلغ [ورقة arXiv](https://arxiv.org/abs/2504.19874) عن حياد الجودة عند 3.5 bits لكل قناة.',
           '**تسريع يصل إلى 8×** في حساب لوغيتات الانتباه (attention logits) على وحدات H100 GPUs (TurboQuant بـ 4-bit مقابل مفاتيح 32-bit غير مُكمَّمة) وفق Google Research؛ وهو ليس تسريعاً شاملاً من طرف إلى طرف.',
-          '**لا حاجة لتدريب أو fine-tuning.** بديل جاهز للاستبدال في خطوط الاستدلال الحالية.',
+          '**وفق Google Research لا حاجة لتدريب أو fine-tuning.** ولا يزال استخدامه في خط استدلال قائم يتطلب تطبيقًا ضمن مكتبة.',
           'كيف يعمل: عملية من مرحلتين — PolarQuant (التكميم في الإحداثيات القطبية باستخدام مراكز Lloyd-Max) + QJL (تحويل Johnson-Lindenstrauss المُكمَّم، يضيف تصحيح الأخطاء للحفاظ على دقة الجداء الداخلي عند الضغط الشديد).',
-          'توجد عدة تطبيقات مفتوحة المصدر مستقلة. في المصادر التي راجعناها، لا تشير تدوينة Google إلى إصدار رسمي للكود. الأرقام أعلاه مُبلَّغ عنها من Google Research؛ وتُبلغ التطبيقات المجتمعية عن نسب ضغط مختلفة.',
+          'توجد تطبيقات مجتمعية؛ في المصادر التي راجعناها، لا تشير تدوينة Google إلى كود رسمي. الأرقام أعلاه مُبلَّغ عنها من Google Research؛ وتختلف نسب الضغط بين التطبيقات المجتمعية.',
           '**لماذا يهم:** لا يتطلب تقليص الذاكرة برمجياً بحتاً أجهزة جديدة، وقد يفيد الأجهزة الحالية حالما تدعمه مكتبة استدلال. إنه استجابة عملية لاختناق الذاكرة في انتظار نضج MRAM.',
         ],
       },
@@ -2233,7 +2233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل MRAM متاحة للشراء الآن لجهاز الكمبيوتر أو الهاتف؟',
-            a: 'لا. MRAM في مرحلة الإنتاج للمتحكمات الدقيقة الصناعية ورقائق السيارات وتخزين المؤسسات. أما للذكاء الاصطناعي الاستهلاكي، فهي لا تزال في مرحلة البحث والتطوير فقط. رقاقة SemiFive/ICYTech لا تزال في مرحلة tape-out — لم يعُد السيليكون بعد ولم يُقَس أداؤه. النشر الاستهلاكي واقعياً على بُعد 3–5 سنوات أو أكثر.',
+            a: 'لا. MRAM في مرحلة الإنتاج لدى عدة موردين، مثلًا لمنتجات صناعية ومنتجات مراكز البيانات (انظر نموذج 8-K الخاص بـ Everspin أعلاه). أما للذكاء الاصطناعي الاستهلاكي، فهي لا تزال في مرحلة البحث والتطوير فقط. رقاقة SemiFive/ICYTech لا تزال في مرحلة tape-out — لم يعُد السيليكون بعد ولم يُقَس أداؤه. النشر الاستهلاكي واقعياً على بُعد 3–5 سنوات أو أكثر.',
           },
           {
             q: 'هل ستحل MRAM محل VRAM في وحدة GPU لديّ؟',
@@ -2253,7 +2253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل MRAM هي نفسها 3D XPoint (Intel Optane)؟',
-            a: 'لا. كانت 3D XPoint تقنية ذاكرة من فئة التخزين مملوكة لـ Intel (أُوقفت الآن). تخزّن MRAM البيانات مغناطيسيًا، أما 3D XPoint فهي تقنية متوقفة من Intel وMicron تعمل بآلية مختلفة. تستهدف كلتاهما المجال نفسه — تخزين سريع ومتين وغير متطاير — لكن باستخدام مقاربات مختلفة.',
+            a: 'لا. كانت 3D XPoint تقنية ذاكرة من فئة التخزين طوّرتها Intel وMicron (أُوقفت الآن). تخزّن MRAM البيانات مغناطيسيًا، أما 3D XPoint فتعمل بآلية مختلفة. تستهدف كلتاهما المجال نفسه — تخزين سريع ومتين وغير متطاير — لكن باستخدام مقاربات مختلفة.',
           },
           {
             q: 'كم من الطاقة توفر MRAM مقارنةً بـ DRAM؟',
@@ -2331,9 +2331,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**바이트 단위 주소 지정:** DRAM처럼 개별 바이트를 읽고 쓸 수 있습니다. 페이지 기반인 Flash와 다릅니다.',
           '**리프레시 전력 불필요:** DRAM은 데이터를 유지하려면 계속 리프레시해야 하며, 이는 대기 전력을 소모합니다. MRAM은 비휘발성이므로 리프레시가 필요 없습니다.',
           '**높은 내구성:** 제조사들은 NAND Flash를 크게 웃돌고 일부 MRAM 유형은 DRAM 수준에 근접하는 쓰기 내구성을 보고합니다. 정확한 수치는 제품마다 다르므로 제조사 데이터시트를 확인하십시오.',
-          '**공정 통합:** Samsung, TSMC 등은 MRAM을 28nm, 14nm 및 그 이하 노드의 로직 다이에 직접 임베드할 수 있습니다.',
+          '**공정 통합:** Samsung과 다른 파운드리는 MRAM을 로직 다이에 직접 임베드할 수 있습니다. Samsung의 경우 28nm FD-SOI eMRAM은 출처에 기록되어 있으며, 더 미세한 노드는 로드맵 목표입니다.',
         ],
-        note: 'Everspin Technologies는 주요 독립형 MRAM 공급업체 중 하나입니다 — 2026년 3분기 매출은 2,060만 달러(전년 동기 1,410만 달러 대비 증가, MRAM 제품 매출은 1,690만 달러로 전년 동기 1,270만 달러, 출처: [SEC Form 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026067890/mram-20260930xexx991.htm))를 기록했습니다. 회사 발표에 따르면 성장은 산업 자동화, 데이터센터, 의료, 에너지 관리 분야가 이끌었습니다. 2026년 2분기에는 최근 체결한 미국 주계약업체(prime contractor)와의 4,000만 달러 규모 계약에서 발생한 초기 비제품 매출을 보고했습니다([SEC Form 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026053376/mram-20260630xexx991.htm)). Samsung은 2019년 eMRAM(임베디드 MRAM)의 상업 생산을 발표했습니다. TSMC, Renesas, Avalanche Technology, GlobalFoundries도 다양한 노드에서 MRAM을 제공하거나 제공 계획을 발표했습니다. 2026년 초 Veevx와의 합병을 발표한 Ainekko([보도자료](https://www.eejournal.com/industry_news/ainekko-merges-with-veevx-expands-open-silicon-platform-with-breakthrough-memory-and-embedded-ai-capabilities/))는 엣지 AI 가속기용 MRAM 기반 임베디드 메모리 iRAM을 개발하고 있습니다(회사 주장이며 독립적으로 검증되지 않았습니다).',
+        note: 'Everspin Technologies는 주요 독립형 MRAM 공급업체 중 하나입니다 — 2026년 3분기 매출은 2,060만 달러(전년 동기 1,410만 달러 대비 증가, MRAM 제품 매출은 1,690만 달러로 전년 동기 1,270만 달러, 출처: [SEC Form 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026067890/mram-20260930xexx991.htm))를 기록했습니다. 회사 발표에 따르면 성장은 산업 자동화, 데이터센터, 의료, 에너지 관리 분야가 이끌었습니다. 2026년 2분기에는 최근 체결한 미국 주계약업체(prime contractor)와의 4,000만 달러 규모 계약에서 발생한 초기 비제품 매출을 보고했습니다([SEC Form 8-K](https://www.sec.gov/Archives/edgar/data/0001438423/000162828026053376/mram-20260630xexx991.htm)). Samsung은 2019년 eMRAM(임베디드 MRAM)의 상업 생산을 발표했습니다(출처 참조). 2026년 초 Veevx와의 합병을 발표한 Ainekko([보도자료](https://www.eejournal.com/industry_news/ainekko-merges-with-veevx-expands-open-silicon-platform-with-breakthrough-memory-and-embedded-ai-capabilities/))는 엣지 AI 가속기용 MRAM 기반 임베디드 메모리 iRAM을 개발하고 있습니다(회사 주장이며 독립적으로 검증되지 않았습니다).',
       },
       'memory-bottleneck': {
         id: 'memory-bottleneck',
@@ -2459,9 +2459,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'KV 캐시 메모리 사용량 **최소 6배 감소**(Google Research, needle-in-haystack 과제 기준). 긴 컨텍스트 추론에서는 KV 캐시가 메모리의 큰 비중을 차지할 수 있습니다.',
           'Google은 건초 더미 속 바늘 찾기 평가(긴 컨텍스트 검색)를 포함한 자체 벤치마크에서 **정확도 손실이 없다고 보고**했습니다. [arXiv 논문](https://arxiv.org/abs/2504.19874)은 채널당 3.5비트에서 품질 중립성을 보고합니다.',
           'Google Research에 따르면 H100 GPU에서 어텐션 로짓 계산 시 **최대 8배 속도 향상**(4비트 TurboQuant vs 32비트 비양자화 키)이며, 엔드투엔드 속도 향상은 아닙니다.',
-          '**학습이나 파인튜닝이 필요 없습니다.** 기존 추론 파이프라인에 그대로 대체 적용 가능합니다.',
+          '**Google Research에 따르면 학습이나 파인튜닝이 필요 없습니다.** 기존 추론 파이프라인에서 사용하려면 여전히 라이브러리 구현이 필요합니다.',
           '작동 방식: 2단계 프로세스 — PolarQuant(Lloyd-Max 중심점을 사용한 극좌표 양자화) + QJL(Quantized Johnson-Lindenstrauss 변환, 극한 압축에서 내적 정확도를 보존하기 위한 오류 보정 추가).',
-          '여러 독립적인 오픈소스 구현이 존재합니다. 확인한 출처에서는 Google 블로그 글이 공식 코드 공개를 링크하지 않았습니다. 위 수치는 Google Research가 보고한 값이며, 커뮤니티 구현은 서로 다른 압축률을 보고합니다.',
+          '커뮤니티 구현이 존재합니다. 확인한 출처에서는 Google 블로그 글이 공식 코드를 링크하지 않았습니다. 위 수치는 Google Research가 보고한 값이며, 압축률은 커뮤니티 구현마다 다릅니다.',
           '**중요한 이유:** 소프트웨어 전용 메모리 절감은 새 하드웨어가 필요 없으며, 추론 라이브러리가 지원하기만 하면 현재 기기에도 도움이 될 수 있습니다. MRAM이 성숙하기를 기다리는 동안 메모리 병목에 대한 실용적인 대응책입니다.',
         ],
       },
@@ -2511,7 +2511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '지금 제 PC나 폰에 쓸 MRAM을 구매할 수 있나요?',
-            a: '아닙니다. MRAM은 산업용 마이크로컨트롤러, 자동차 칩, 엔터프라이즈 스토리지용으로는 양산 중입니다. 소비자 AI의 경우 여전히 R&D 단계에 불과합니다. SemiFive/ICYTech 칩은 여전히 테이프아웃 단계로 실리콘이 아직 반환되거나 벤치마크되지 않았습니다. 소비자 배포는 현실적으로 3~5년 이상 남았습니다.',
+            a: '아닙니다. MRAM은 여러 공급업체에서 양산 중이며, 예를 들어 산업용 및 데이터센터용 제품이 있습니다(위의 Everspin Form 8-K 참조). 소비자 AI의 경우 여전히 R&D 단계에 불과합니다. SemiFive/ICYTech 칩은 여전히 테이프아웃 단계로 실리콘이 아직 반환되거나 벤치마크되지 않았습니다. 소비자 배포는 현실적으로 3~5년 이상 남았습니다.',
           },
           {
             q: 'MRAM이 제 GPU의 VRAM을 대체할까요?',
@@ -2531,7 +2531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'MRAM은 3D XPoint(Intel Optane)와 같은 것인가요?',
-            a: '아닙니다. 3D XPoint는 Intel의 독점 스토리지 클래스 메모리 기술(현재 단종)이었습니다. MRAM은 데이터를 자기적으로 저장하며, 3D XPoint는 Intel과 Micron의 단종된 기술로 작동 방식이 다릅니다. 둘 다 동일한 문제 영역 — 빠르고 내구성 있는 비휘발성 저장 — 을 겨냥하지만 서로 다른 접근법을 사용합니다.',
+            a: '아닙니다. 3D XPoint는 Intel과 Micron이 개발한 스토리지 클래스 메모리 기술(현재 단종)이었습니다. MRAM은 데이터를 자기적으로 저장하며, 3D XPoint는 작동 방식이 다릅니다. 둘 다 동일한 문제 영역 — 빠르고 내구성 있는 비휘발성 저장 — 을 겨냥하지만 서로 다른 접근법을 사용합니다.',
           },
           {
             q: 'MRAM은 DRAM 대비 전력을 얼마나 절약하나요?',

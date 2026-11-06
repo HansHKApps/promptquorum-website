@@ -784,7 +784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Obtenir Swerve',
         content: [
-          '**Swerve est distribuée via l’Apple App Store, uniquement pour iPhone.** Le téléchargement pèse 121.4 Mo et il est gratuit, avec des achats intégrés.',
+          '**Swerve est distribuée via l’Apple App Store, uniquement pour iPhone.** Le téléchargement pèse 121,4 Mo et il est gratuit, avec des achats intégrés.',
         ],
         columns: ['Canal', 'Où l’obtenir'],
         rows: [
@@ -980,7 +980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Swerve AI est-elle gratuite ?',
-            a: 'Le téléchargement est gratuit et l’App Store indique des achats intégrés : Pro, Swerve Lite et packs de gemmes. La fiche ne précise pas quelles fonctions exigent un achat, et ce test n’a pas essayé la version gratuite.',
+            a: 'Le téléchargement est gratuit et l’App Store indique des achats intégrés : Pro, Swerve Lite et packs de gems. La fiche ne précise pas quelles fonctions exigent un achat, et ce test n’a pas essayé la version gratuite.',
           },
           {
             q: 'Quand Swerve AI arrive-t-elle sur Android et sur le web ?',
@@ -1209,7 +1209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'メリット': '大規模なキャラクターライブラリ',
-            '実際の使い勝手': '掲載情報によると掲載情報によると50万体以上のコミュニティキャラクターから始められます。',
+            '実際の使い勝手': '掲載情報によると50万体以上のコミュニティキャラクターから始められます。',
             '制約・注意点': '品質とコンテンツ管理はキャラクターごとに異なり、ここでは検証していません。',
           },
           {
@@ -1545,7 +1545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             '优势': '庞大的角色库',
-            '实际使用中的意义': '据页面称，据页面称，可从超过50万个社区角色开始。',
+            '实际使用中的意义': '据页面称，可从超过50万个社区角色开始。',
             '局限 / 注意事项': '角色质量和审核情况因角色而异，此处均未测试。',
           },
           {
@@ -1795,7 +1795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Conseguir Swerve',
         content: [
-          '**Swerve se distribuye a través de la App Store de Apple como app solo para iPhone.** La descarga pesa 121.4 MB y es gratuita, con compras dentro de la app.',
+          '**Swerve se distribuye a través de la App Store de Apple como app solo para iPhone.** La descarga pesa 121,4 MB y es gratuita, con compras dentro de la app.',
         ],
         columns: ['Canal', 'Dónde conseguirla'],
         rows: [
@@ -2131,7 +2131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Baixar o Swerve',
         content: [
-          '**O Swerve é distribuído pela App Store da Apple como um app só para iPhone.** O download tem 121.4 MB e é gratuito, com compras no app.',
+          '**O Swerve é distribuído pela App Store da Apple como um app só para iPhone.** O download tem 121,4 MB e é gratuito, com compras no app.',
         ],
         columns: ['Canal', 'Onde obter'],
         rows: [
@@ -2680,7 +2680,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخلاصة',
         content: [
           'يناسب Swerve نظريًا مستخدمي iPhone البالغين الذين يريدون كتالوج شخصيات كبيرًا وتحكمًا دقيقًا في القصص التفاعلية ويرتاحون لخدمة سحابية.',
-          'التحفظات تتعلق بالشفافية والخصوصية: ولم يُعثر على مستودع عام، ولا يسمّي أي مزوّد للذكاء الاصطناعي، ويصف إشعار خصوصيته مشاركة مع شبكات الإعلانات.',
+          'التحفظات تتعلق بالشفافية والخصوصية: لم يُعثر على مستودع عام، ولا يسمّي أي مزوّد للذكاء الاصطناعي، ويصف إشعار خصوصيته مشاركة مع شبكات الإعلانات.',
           'إذا كنت تريد شخصيات على جهازك فابدأ بـ [Backyard AI](/ar/power-local-llm/backyard-ai-review-local-roleplay)؛ وإذا أردت مصدرًا مفتوحًا فجرّب [RisuAI](/ar/power-local-llm/risuai-review) أو [Agnai](/ar/power-local-llm/agnai-review).',
         ],
       },
@@ -2724,7 +2724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Swerve 리뷰: AI 캐릭터 채팅과 인터랙티브 스토리를 제공하는 무료 iPhone 앱. 인앱 결제, 18+ 등급, 클라우드 서비스, 개인정보 고지, 한계, 로컬 대안을 정리했습니다.',
     twitterDescription:
-      'Swerve 리뷰: AI 캐릭터 채팅과 분기형 스토리를 제공하는 프리미엄 iPhone 앱. 가격, 18+ 등급, 개인정보 고지, 한계, 로컬 롤플레이 대안.',
+      'Swerve 리뷰: AI 캐릭터 채팅과 분기형 스토리를 제공하는 부분 유료 iPhone 앱. 가격, 18+ 등급, 개인정보 고지, 한계, 로컬 롤플레이 대안.',
     audience:
       'AI 롤플레이·스토리 앱을 고민하는 iPhone 사용자를 위한 글입니다. 기능, 가격, 개인정보, 연령 등급, 한계, 로컬에서 실행되는 대안을 다룹니다.',
     readTime: '6분 읽기',
@@ -2784,7 +2784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'MSPW Labs, Inc.의 Swerve는 AI 캐릭터와 채팅하고 분기형 스토리를 즐기는 프리미엄 iPhone 앱입니다.',
+            text: 'MSPW Labs, Inc.의 Swerve는 AI 캐릭터와 채팅하고 분기형 스토리를 즐기는, 무료로 내려받아 인앱 결제로 확장하는(부분 유료) iPhone 앱입니다.',
           },
           {
             type: 'plain-terms',
@@ -2892,7 +2892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             '장점': '대규모 캐릭터 라이브러리',
-            '실제 사용에서의 의미': '페이지에 따르면 페이지에 따르면 50만 개 이상의 커뮤니티 캐릭터로 시작할 수 있습니다.',
+            '실제 사용에서의 의미': '페이지에 따르면 50만 개 이상의 커뮤니티 캐릭터로 시작할 수 있습니다.',
             '한계 / 주의점': '품질과 콘텐츠 관리는 캐릭터마다 다르며 여기서는 테스트하지 않았습니다.',
           },
           {
@@ -2926,7 +2926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '앱': 'Swerve',
             '플랫폼': 'iPhone',
-            '가격 및 라이선스': '프리미엄, 공개 저장소 없음(확인 기준)',
+            '가격 및 라이선스': '부분 유료(프리미엄 모델), 공개 저장소 없음(확인 기준)',
             '실행 위치': '개발사의 클라우드 서비스',
             '핵심 차이': '준비된 커뮤니티 캐릭터. 데스크톱·Android 빌드는 아직 없음',
           },
@@ -2947,7 +2947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '앱': '[Backyard AI](/ko/power-local-llm/backyard-ai-review-local-roleplay)',
             '플랫폼': 'Mac, Windows',
-            '가격 및 라이선스': '프리미엄, 공개 저장소 없음(확인 기준)',
+            '가격 및 라이선스': '부분 유료(프리미엄 모델), 공개 저장소 없음(확인 기준)',
             '실행 위치': '내 컴퓨터',
             '핵심 차이': '캐릭터가 로컬에서 실행. 데스크톱 전용',
           },
@@ -2958,7 +2958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'Swerve가 적합한 사용자',
         items: [
-          '**휴대폰에서 준비된 캐릭터를 쓰고 싶은 성인.** 페이지에서 밝힌 페이지에서 밝힌 50만 개 이상의 라이브러리 덕분에 출연진을 처음부터 만들 필요가 없습니다.',
+          '**휴대폰에서 준비된 캐릭터를 쓰고 싶은 성인.** 페이지에서 밝힌 50만 개 이상의 라이브러리 덕분에 출연진을 처음부터 만들 필요가 없습니다.',
           '**스토리를 직접 이끌고 싶은 플레이어.** 분기, 편집, 고정 메모리로 각 장면을 제어할 수 있습니다.',
           '**클라우드 서비스가 괜찮은 사용자.** 페이지 어디에도 오프라인이나 온디바이스 사용을 약속하는 내용은 없습니다.',
         ],

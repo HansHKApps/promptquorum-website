@@ -28,8 +28,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Key Takeaways', anchor: 'key-takeaways' },
         { label: 'Prompt chaining splits one task into connected prompts', anchor: 'what-is' },
         { label: 'Chaining makes each model call easier to check', anchor: 'why-it-matters' },
-        { label: 'Four patterns cover most prompt chains', anchor: 'patterns' },
-        { label: 'A three-step chain beats one long prompt', anchor: 'example' },
+        { label: 'Four common patterns for prompt chains', anchor: 'patterns' },
+        { label: 'A three-step chain can be easier to check than one long prompt', anchor: 'example' },
         { label: 'Prompt chaining examples for common tasks', anchor: 'examples' },
         { label: 'LangChain prompt chaining example in Python', anchor: 'langchain' },
         { label: 'Use a chain for fixed stages and a single prompt for small tasks', anchor: 'when-to-use' },
@@ -142,7 +142,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'why-it-matters',
           title: 'Chaining makes each model call easier to check',
           content: [
-            '**Chaining helps because most real tasks are too layered for one prompt to handle reliably.** Separating understanding, planning, generation and checking gives you control at every stage.',
+            '**Chaining helps when a task has too many layers for one prompt to handle reliably.** Separating understanding, planning, generation and checking gives you control at every stage.',
           ],
           items: [
             'Each call is an easier task, which Anthropic describes as trading latency for higher accuracy.',
@@ -153,7 +153,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         patterns: {
           id: 'patterns',
-          title: 'Four patterns cover most prompt chains',
+          title: 'Four common patterns for prompt chains',
           content: [
             '**Most chains reuse a few recurring shapes.** Pick the one that matches your task and adapt the steps.',
           ],
@@ -168,7 +168,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         example: {
           id: 'example',
-          title: 'A three-step chain beats one long prompt',
+          title: 'A three-step chain can be easier to check than one long prompt',
           content: [
             '**The gain is easiest to see when one long prompt and a short chain tackle the same job.** The task: turn raw release notes into a customer-facing changelog.',
             '**Single prompt**',
@@ -223,7 +223,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'LangChain prompt chaining example in Python',
           content: [
             '**To chain prompts in LangChain, load a chat model with `init_chat_model`, call `invoke` once per step and pass each step\'s text into the next prompt.** The sample runs the changelog chain from above; it assumes `langchain`, your provider\'s integration package and its API key are set up.',
-            'For branching, loops, retries or tool use, LangChain points to LangGraph, its low-level orchestration framework for combining deterministic and agentic workflows. Agents are created with `create_agent`.',
+            'For advanced needs, LangChain points to LangGraph, its low-level orchestration framework for combining deterministic and agentic workflows (for example branching or loops). Agents are created with `create_agent`.',
           ],
           codeBlock: 'from langchain.chat_models import init_chat_model\n\nmodel = init_chat_model("claude-sonnet-4-6")  # any supported chat model\n\n\ndef run(prompt: str) -> str:\n    return model.invoke(prompt).text\n\n\nnotes = "..."  # raw release notes\n\nchanges = run(f"List every user-visible change as bullets:\\n{notes}")\nlabeled = run(f"Label each bullet as bug fix, improvement or new feature:\\n{changes}")\nemail = run(f"Write a short user-facing changelog email from this list:\\n{labeled}")\nprint(email)',
           codeLanguage: 'python',
@@ -364,7 +364,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'How do you do prompt chaining in LangChain?',
-              a: 'Load a model with `init_chat_model`, call `invoke` for the first prompt, read the text of the response and insert it into the second prompt, and repeat. For branching, loops or tool use, LangChain recommends LangGraph, its low-level orchestration framework.',
+              a: 'Load a model with `init_chat_model`, call `invoke` for the first prompt, read the text of the response and insert it into the second prompt, and repeat. For advanced needs, LangChain points to LangGraph, its low-level orchestration framework for combining deterministic and agentic workflows (for example branching or loops).',
             },
             {
               q: 'When should you not use prompt chaining?',
@@ -428,8 +428,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Zusammenfassung', anchor: 'key-takeaways' },
         { label: 'Prompt Chaining zerlegt eine Aufgabe in verbundene Prompts', anchor: 'what-is' },
         { label: 'Verkettung macht jeden Modellaufruf leichter prüfbar', anchor: 'why-it-matters' },
-        { label: 'Vier Muster decken die meisten Prompt-Ketten ab', anchor: 'patterns' },
-        { label: 'Eine Kette aus drei Schritten schlägt einen langen Prompt', anchor: 'example' },
+        { label: 'Vier gängige Muster für Prompt-Ketten', anchor: 'patterns' },
+        { label: 'Eine Kette aus drei Schritten lässt sich leichter prüfen als ein langer Prompt', anchor: 'example' },
         { label: 'Beispiele für Prompt Chaining bei typischen Aufgaben', anchor: 'examples' },
         { label: 'LangChain-Beispiel für Prompt Chaining in Python', anchor: 'langchain' },
         { label: 'Kette für feste Phasen, einzelner Prompt für kleine Aufgaben', anchor: 'when-to-use' },
@@ -542,7 +542,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'why-it-matters',
           title: 'Verkettung macht jeden Modellaufruf leichter prüfbar',
           content: [
-            '**Verkettung hilft, weil die meisten echten Aufgaben zu vielschichtig für einen einzelnen Prompt sind.** Wenn Sie Verstehen, Planen, Erzeugen und Prüfen trennen, behalten Sie in jeder Phase die Kontrolle.',
+            '**Verkettung hilft, wenn eine Aufgabe zu viele Ebenen hat, als dass ein einzelner Prompt sie zuverlässig bewältigen könnte.** Wenn Sie Verstehen, Planen, Erzeugen und Prüfen trennen, behalten Sie in jeder Phase die Kontrolle.',
           ],
           items: [
             'Jeder Aufruf ist eine leichtere Aufgabe; Anthropic beschreibt das als Tausch von Latenz gegen höhere Genauigkeit.',
@@ -553,7 +553,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         patterns: {
           id: 'patterns',
-          title: 'Vier Muster decken die meisten Prompt-Ketten ab',
+          title: 'Vier gängige Muster für Prompt-Ketten',
           content: [
             '**Die meisten Ketten greifen auf wenige wiederkehrende Formen zurück.** Wählen Sie die passende und passen Sie die Schritte an.',
           ],
@@ -568,7 +568,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         example: {
           id: 'example',
-          title: 'Eine Kette aus drei Schritten schlägt einen langen Prompt',
+          title: 'Eine Kette aus drei Schritten lässt sich leichter prüfen als ein langer Prompt',
           content: [
             '**Der Gewinn zeigt sich am besten, wenn ein langer Prompt und eine kurze Kette dieselbe Aufgabe lösen.** Die Aufgabe: Aus rohen Release Notes soll ein Changelog für Kunden entstehen.',
             '**Einzelner Prompt**',
@@ -623,7 +623,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'LangChain-Beispiel für Prompt Chaining in Python',
           content: [
             '**Für Prompt Chaining in LangChain laden Sie ein Chat-Modell mit `init_chat_model`, rufen pro Schritt `invoke` auf und reichen den Text jedes Schritts an den nächsten Prompt weiter.** Das Beispiel führt die Changelog-Kette von oben aus; vorausgesetzt sind `langchain`, das Integrationspaket Ihres Anbieters und dessen API-Schlüssel.',
-            'Für Verzweigungen, Schleifen, Wiederholungen oder Tool-Nutzung verweist LangChain auf LangGraph, sein Low-Level-Framework zur Orchestrierung deterministischer und agentischer Workflows. Agenten erstellen Sie mit `create_agent`.',
+            'Für anspruchsvollere Anforderungen verweist LangChain auf LangGraph, sein Low-Level-Framework zur Orchestrierung deterministischer und agentischer Workflows (z. B. Verzweigungen oder Schleifen). Agenten erstellen Sie mit `create_agent`.',
           ],
           codeBlock: 'from langchain.chat_models import init_chat_model\n\nmodel = init_chat_model("claude-sonnet-4-6")  # any supported chat model\n\n\ndef run(prompt: str) -> str:\n    return model.invoke(prompt).text\n\n\nnotes = "..."  # raw release notes\n\nchanges = run(f"List every user-visible change as bullets:\\n{notes}")\nlabeled = run(f"Label each bullet as bug fix, improvement or new feature:\\n{changes}")\nemail = run(f"Write a short user-facing changelog email from this list:\\n{labeled}")\nprint(email)',
           codeLanguage: 'python',
@@ -764,7 +764,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Wie funktioniert Prompt Chaining in LangChain?',
-              a: 'Laden Sie ein Modell mit `init_chat_model`, rufen Sie `invoke` für den ersten Prompt auf, lesen Sie den Text der Antwort, setzen Sie ihn in den zweiten Prompt ein und wiederholen Sie das. Für Verzweigungen, Schleifen oder Tool-Nutzung empfiehlt LangChain LangGraph, sein Low-Level-Orchestrierungs-Framework.',
+              a: 'Laden Sie ein Modell mit `init_chat_model`, rufen Sie `invoke` für den ersten Prompt auf, lesen Sie den Text der Antwort, setzen Sie ihn in den zweiten Prompt ein und wiederholen Sie das. Für anspruchsvollere Anforderungen verweist LangChain auf LangGraph, sein Low-Level-Framework zur Orchestrierung deterministischer und agentischer Workflows (z. B. Verzweigungen oder Schleifen).',
             },
             {
               q: 'Wann sollte man kein Prompt Chaining einsetzen?',
@@ -828,8 +828,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Puntos clave', anchor: 'key-takeaways' },
         { label: 'El encadenamiento divide una tarea en prompts conectados', anchor: 'what-is' },
         { label: 'Encadenar hace más fácil comprobar cada llamada', anchor: 'why-it-matters' },
-        { label: 'Cuatro patrones cubren la mayoría de las cadenas', anchor: 'patterns' },
-        { label: 'Una cadena de tres pasos supera a un prompt largo', anchor: 'example' },
+        { label: 'Cuatro patrones habituales de las cadenas de prompts', anchor: 'patterns' },
+        { label: 'Una cadena de tres pasos es más fácil de comprobar que un prompt largo', anchor: 'example' },
         { label: 'Ejemplos de encadenamiento de prompts para tareas comunes', anchor: 'examples' },
         { label: 'Ejemplo de encadenamiento de prompts con LangChain en Python', anchor: 'langchain' },
         { label: 'Usa una cadena para etapas fijas y un solo prompt para tareas pequeñas', anchor: 'when-to-use' },
@@ -942,7 +942,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'why-it-matters',
           title: 'Encadenar hace más fácil comprobar cada llamada',
           content: [
-            '**Encadenar ayuda porque la mayoría de las tareas reales tienen demasiadas capas para un solo prompt.** Separar comprensión, planificación, generación y comprobación te da control en cada etapa.',
+            '**Encadenar ayuda cuando una tarea tiene demasiadas capas para que un solo prompt la resuelva de forma fiable.** Separar comprensión, planificación, generación y comprobación te da control en cada etapa.',
           ],
           items: [
             'Cada llamada es una tarea más fácil; Anthropic lo describe como cambiar latencia por mayor precisión.',
@@ -953,7 +953,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         patterns: {
           id: 'patterns',
-          title: 'Cuatro patrones cubren la mayoría de las cadenas',
+          title: 'Cuatro patrones habituales de las cadenas de prompts',
           content: [
             '**La mayoría de las cadenas reutilizan unas pocas formas recurrentes.** Elige la que encaje con tu tarea y adapta los pasos.',
           ],
@@ -968,7 +968,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         example: {
           id: 'example',
-          title: 'Una cadena de tres pasos supera a un prompt largo',
+          title: 'Una cadena de tres pasos es más fácil de comprobar que un prompt largo',
           content: [
             '**La ventaja se ve mejor cuando un prompt largo y una cadena corta resuelven la misma tarea.** La tarea: convertir notas de versión en bruto en un registro de cambios para clientes.',
             '**Prompt único**',
@@ -1023,7 +1023,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Ejemplo de encadenamiento de prompts con LangChain en Python',
           content: [
             '**Para encadenar prompts en LangChain, carga un modelo de chat con `init_chat_model`, llama a `invoke` en cada paso y pasa el texto de cada paso al siguiente prompt.** El ejemplo ejecuta la cadena del registro de cambios anterior; supone que tienes instalados `langchain`, el paquete de integración de tu proveedor y su clave de API.',
-            'Para ramas, bucles, reintentos o uso de herramientas, LangChain remite a LangGraph, su framework de orquestación de bajo nivel para combinar flujos deterministas y de agentes. Los agentes se crean con `create_agent`.',
+            'Para necesidades avanzadas, LangChain remite a LangGraph, su framework de orquestación de bajo nivel para combinar flujos deterministas y de agentes (por ejemplo, ramas o bucles). Los agentes se crean con `create_agent`.',
           ],
           codeBlock: 'from langchain.chat_models import init_chat_model\n\nmodel = init_chat_model("claude-sonnet-4-6")  # any supported chat model\n\n\ndef run(prompt: str) -> str:\n    return model.invoke(prompt).text\n\n\nnotes = "..."  # raw release notes\n\nchanges = run(f"List every user-visible change as bullets:\\n{notes}")\nlabeled = run(f"Label each bullet as bug fix, improvement or new feature:\\n{changes}")\nemail = run(f"Write a short user-facing changelog email from this list:\\n{labeled}")\nprint(email)',
           codeLanguage: 'python',
@@ -1164,7 +1164,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Cómo se hace el encadenamiento de prompts en LangChain?',
-              a: 'Carga un modelo con `init_chat_model`, llama a `invoke` con el primer prompt, lee el texto de la respuesta, insértalo en el segundo prompt y repite. Para ramas, bucles o uso de herramientas, LangChain recomienda LangGraph, su framework de orquestación de bajo nivel.',
+              a: 'Carga un modelo con `init_chat_model`, llama a `invoke` con el primer prompt, lee el texto de la respuesta, insértalo en el segundo prompt y repite. Para necesidades avanzadas, LangChain remite a LangGraph, su framework de orquestación de bajo nivel para combinar flujos deterministas y de agentes (por ejemplo, ramas o bucles).',
             },
             {
               q: '¿Cuándo no conviene usar el encadenamiento de prompts?',
@@ -1228,8 +1228,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'النقاط الرئيسية', anchor: 'key-takeaways' },
         { label: 'يقسّم ربط البرومبتات المهمة إلى برومبتات مترابطة', anchor: 'what-is' },
         { label: 'الربط يسهّل فحص كل استدعاء للنموذج', anchor: 'why-it-matters' },
-        { label: 'أربعة أنماط تغطي معظم السلاسل', anchor: 'patterns' },
-        { label: 'سلسلة من ثلاث خطوات تتفوق على برومبت طويل واحد', anchor: 'example' },
+        { label: 'أربعة أنماط شائعة لسلاسل البرومبتات', anchor: 'patterns' },
+        { label: 'سلسلة من ثلاث خطوات أسهل في الفحص من برومبت طويل واحد', anchor: 'example' },
         { label: 'أمثلة على ربط البرومبتات لمهام شائعة', anchor: 'examples' },
         { label: 'مثال على ربط البرومبتات باستخدام LangChain في Python', anchor: 'langchain' },
         { label: 'استخدم سلسلة للمراحل الثابتة وبرومبتًا واحدًا للمهام الصغيرة', anchor: 'when-to-use' },
@@ -1332,7 +1332,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'why-it-matters',
           title: 'الربط يسهّل فحص كل استدعاء للنموذج',
           content: [
-            '**يفيد الربط لأن معظم المهام الحقيقية متعددة الطبقات أكثر مما يتحمله برومبت واحد بموثوقية.** فصل الفهم والتخطيط والتوليد والتحقق يمنحك تحكمًا في كل مرحلة.',
+            '**يفيد الربط عندما تحتوي المهمة على طبقات أكثر مما يستطيع برومبت واحد معالجته بموثوقية.** فصل الفهم والتخطيط والتوليد والتحقق يمنحك تحكمًا في كل مرحلة.',
           ],
           items: [
             'كل استدعاء مهمة أسهل، وتصف Anthropic ذلك بمبادلة زمن الاستجابة بدقة أعلى.',
@@ -1343,7 +1343,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         patterns: {
           id: 'patterns',
-          title: 'أربعة أنماط تغطي معظم السلاسل',
+          title: 'أربعة أنماط شائعة لسلاسل البرومبتات',
           content: [
             '**تعيد معظم السلاسل استخدام أشكال قليلة متكررة.** اختر الشكل المناسب لمهمتك وعدّل الخطوات.',
           ],
@@ -1356,7 +1356,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         example: {
           id: 'example',
-          title: 'سلسلة من ثلاث خطوات تتفوق على برومبت طويل واحد',
+          title: 'سلسلة من ثلاث خطوات أسهل في الفحص من برومبت طويل واحد',
           content: [
             '**تظهر الفائدة بوضوح عندما يعالج برومبت طويل وسلسلة قصيرة المهمة نفسها.** المهمة: تحويل ملاحظات إصدار خام إلى سجل تغييرات موجّه للعملاء.',
             '**برومبت واحد**',
@@ -1401,7 +1401,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'مثال على ربط البرومبتات باستخدام LangChain في Python',
           content: [
             '**لربط البرومبتات في LangChain، حمّل نموذج محادثة بـ `init_chat_model` واستدعِ `invoke` في كل خطوة ومرّر نص كل خطوة إلى البرومبت التالي.** ينفّذ المثال سلسلة سجل التغييرات أعلاه، ويفترض أنك أعددت `langchain` وحزمة التكامل الخاصة بمزوّدك ومفتاح API.',
-            'للتفرع والحلقات وإعادة المحاولة واستخدام الأدوات، يشير LangChain إلى LangGraph، وهو إطاره منخفض المستوى للتنسيق بين سير العمل الحتمية وسير عمل الوكلاء. تُنشأ الوكلاء بـ `create_agent`.',
+            'وللاحتياجات المتقدمة يشير LangChain إلى LangGraph، وهو إطاره منخفض المستوى للتنسيق بين سير العمل الحتمية وسير عمل الوكلاء (مثل التفرع أو الحلقات). تُنشأ الوكلاء بـ `create_agent`.',
           ],
           codeBlock: 'from langchain.chat_models import init_chat_model\n\nmodel = init_chat_model("claude-sonnet-4-6")  # any supported chat model\n\n\ndef run(prompt: str) -> str:\n    return model.invoke(prompt).text\n\n\nnotes = "..."  # raw release notes\n\nchanges = run(f"List every user-visible change as bullets:\\n{notes}")\nlabeled = run(f"Label each bullet as bug fix, improvement or new feature:\\n{changes}")\nemail = run(f"Write a short user-facing changelog email from this list:\\n{labeled}")\nprint(email)',
           codeLanguage: 'python',
@@ -1542,7 +1542,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'كيف يتم ربط البرومبتات في LangChain؟',
-              a: 'حمّل نموذجًا بـ `init_chat_model`، واستدعِ `invoke` للبرومبت الأول، واقرأ نص الاستجابة وأدرجه في البرومبت الثاني، ثم كرّر. وللتفرع أو الحلقات أو استخدام الأدوات يوصي LangChain بـ LangGraph، إطاره منخفض المستوى للتنسيق.',
+              a: 'حمّل نموذجًا بـ `init_chat_model`، واستدعِ `invoke` للبرومبت الأول، واقرأ نص الاستجابة وأدرجه في البرومبت الثاني، ثم كرّر. وللاحتياجات المتقدمة يشير LangChain إلى LangGraph، وهو إطاره منخفض المستوى للتنسيق بين سير العمل الحتمية وسير عمل الوكلاء (مثل التفرع أو الحلقات).',
             },
             {
               q: 'متى لا يجب استخدام ربط البرومبتات؟',
@@ -1606,8 +1606,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Pontos principais', anchor: 'key-takeaways' },
         { label: 'O encadeamento divide uma tarefa em prompts conectados', anchor: 'what-is' },
         { label: 'Encadear facilita a verificação de cada chamada', anchor: 'why-it-matters' },
-        { label: 'Quatro padrões cobrem a maioria das cadeias', anchor: 'patterns' },
-        { label: 'Uma cadeia de três etapas supera um prompt longo', anchor: 'example' },
+        { label: 'Quatro padrões comuns de cadeias de prompts', anchor: 'patterns' },
+        { label: 'Uma cadeia de três etapas é mais fácil de verificar do que um prompt longo', anchor: 'example' },
         { label: 'Exemplos de encadeamento de prompts para tarefas comuns', anchor: 'examples' },
         { label: 'Exemplo de encadeamento de prompts com LangChain em Python', anchor: 'langchain' },
         { label: 'Use cadeia para etapas fixas e um prompt único para tarefas pequenas', anchor: 'when-to-use' },
@@ -1718,7 +1718,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'why-it-matters',
           title: 'Encadear facilita a verificação de cada chamada',
           content: [
-            '**Encadear ajuda porque a maioria das tarefas reais tem camadas demais para um único prompt.** Separar compreensão, planejamento, geração e verificação dá controle em cada fase.',
+            '**Encadear ajuda quando uma tarefa tem camadas demais para um único prompt resolver com confiabilidade.** Separar compreensão, planejamento, geração e verificação dá controle em cada fase.',
           ],
           items: [
             'Cada chamada é uma tarefa mais fácil; a Anthropic descreve isso como trocar latência por mais precisão.',
@@ -1729,7 +1729,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         patterns: {
           id: 'patterns',
-          title: 'Quatro padrões cobrem a maioria das cadeias',
+          title: 'Quatro padrões comuns de cadeias de prompts',
           content: [
             '**A maioria das cadeias reutiliza algumas formas recorrentes.** Escolha a que combina com a sua tarefa e adapte as etapas.',
           ],
@@ -1742,7 +1742,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         example: {
           id: 'example',
-          title: 'Uma cadeia de três etapas supera um prompt longo',
+          title: 'Uma cadeia de três etapas é mais fácil de verificar do que um prompt longo',
           content: [
             '**O ganho aparece melhor quando um prompt longo e uma cadeia curta resolvem a mesma tarefa.** A tarefa: transformar notas de versão brutas em um changelog para clientes.',
             '**Prompt único**',
@@ -1795,7 +1795,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Exemplo de encadeamento de prompts com LangChain em Python',
           content: [
             '**Para encadear prompts no LangChain, carregue um modelo de chat com `init_chat_model`, chame `invoke` a cada etapa e passe o texto de cada etapa ao prompt seguinte.** O exemplo executa a cadeia de changelog acima; ele pressupõe que `langchain`, o pacote de integração do seu provedor e a chave de API estejam configurados.',
-            'Para ramificações, laços, novas tentativas ou uso de ferramentas, o LangChain indica o LangGraph, seu framework de orquestração de baixo nível para combinar fluxos determinísticos e de agentes. Os agentes são criados com `create_agent`.',
+            'Para necessidades avançadas, o LangChain indica o LangGraph, seu framework de orquestração de baixo nível para combinar fluxos determinísticos e de agentes (por exemplo, ramificações ou laços). Os agentes são criados com `create_agent`.',
           ],
           codeBlock: 'from langchain.chat_models import init_chat_model\n\nmodel = init_chat_model("claude-sonnet-4-6")  # any supported chat model\n\n\ndef run(prompt: str) -> str:\n    return model.invoke(prompt).text\n\n\nnotes = "..."  # raw release notes\n\nchanges = run(f"List every user-visible change as bullets:\\n{notes}")\nlabeled = run(f"Label each bullet as bug fix, improvement or new feature:\\n{changes}")\nemail = run(f"Write a short user-facing changelog email from this list:\\n{labeled}")\nprint(email)',
           codeLanguage: 'python',
@@ -1936,7 +1936,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Como fazer encadeamento de prompts no LangChain?',
-              a: 'Carregue um modelo com `init_chat_model`, chame `invoke` com o primeiro prompt, leia o texto da resposta, insira-o no segundo prompt e repita. Para ramificações, laços ou uso de ferramentas, o LangChain recomenda o LangGraph, seu framework de orquestração de baixo nível.',
+              a: 'Carregue um modelo com `init_chat_model`, chame `invoke` com o primeiro prompt, leia o texto da resposta, insira-o no segundo prompt e repita. Para necessidades avançadas, o LangChain indica o LangGraph, seu framework de orquestração de baixo nível para combinar fluxos determinísticos e de agentes (por exemplo, ramificações ou laços).',
             },
             {
               q: 'Quando não usar o encadeamento de prompts?',
@@ -2000,8 +2000,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Points clés', anchor: 'key-takeaways' },
         { label: 'Le chaînage découpe une tâche en prompts reliés', anchor: 'what-is' },
         { label: 'Chaîner rend chaque appel plus facile à vérifier', anchor: 'why-it-matters' },
-        { label: 'Quatre schémas couvrent la plupart des chaînes', anchor: 'patterns' },
-        { label: 'Une chaîne de trois étapes vaut mieux qu\'un long prompt', anchor: 'example' },
+        { label: 'Quatre schémas courants pour les chaînes de prompts', anchor: 'patterns' },
+        { label: 'Une chaîne de trois étapes est plus facile à vérifier qu\'un long prompt', anchor: 'example' },
         { label: 'Exemples de chaînage de prompts pour des tâches courantes', anchor: 'examples' },
         { label: 'Exemple de chaînage de prompts avec LangChain en Python', anchor: 'langchain' },
         { label: 'Une chaîne pour des étapes fixes, un seul prompt pour les petites tâches', anchor: 'when-to-use' },
@@ -2114,7 +2114,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'why-it-matters',
           title: 'Chaîner rend chaque appel plus facile à vérifier',
           content: [
-            '**Le chaînage aide parce que la plupart des tâches réelles sont trop composites pour un seul prompt.** Séparer compréhension, planification, génération et contrôle vous donne la maîtrise à chaque étape.',
+            '**Le chaînage aide quand une tâche comporte trop de couches pour qu\'un seul prompt la traite de façon fiable.** Séparer compréhension, planification, génération et contrôle vous donne la maîtrise à chaque étape.',
           ],
           items: [
             'Chaque appel est une tâche plus simple ; Anthropic décrit cela comme un échange de latence contre plus de précision.',
@@ -2125,7 +2125,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         patterns: {
           id: 'patterns',
-          title: 'Quatre schémas couvrent la plupart des chaînes',
+          title: 'Quatre schémas courants pour les chaînes de prompts',
           content: [
             '**La plupart des chaînes reprennent quelques formes récurrentes.** Choisissez celle qui correspond à votre tâche et adaptez les étapes.',
           ],
@@ -2140,7 +2140,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         example: {
           id: 'example',
-          title: 'Une chaîne de trois étapes vaut mieux qu\'un long prompt',
+          title: 'Une chaîne de trois étapes est plus facile à vérifier qu\'un long prompt',
           content: [
             '**Le gain se voit mieux quand un long prompt et une courte chaîne traitent la même tâche.** La tâche : transformer des notes de version brutes en journal des modifications destiné aux clients.',
             '**Prompt unique**',
@@ -2195,7 +2195,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Exemple de chaînage de prompts avec LangChain en Python',
           content: [
             '**Pour chaîner des prompts dans LangChain, chargez un modèle de chat avec `init_chat_model`, appelez `invoke` à chaque étape et transmettez le texte de chaque étape au prompt suivant.** L\'exemple exécute la chaîne du journal des modifications ci-dessus ; il suppose que `langchain`, le paquet d\'intégration de votre fournisseur et sa clé d\'API sont en place.',
-            'Pour les branches, boucles, nouvelles tentatives ou l\'usage d\'outils, LangChain renvoie vers LangGraph, son framework d\'orchestration bas niveau pour combiner workflows déterministes et agentiques. Les agents se créent avec `create_agent`.',
+            'Pour les besoins avancés, LangChain renvoie vers LangGraph, son framework d\'orchestration bas niveau pour combiner workflows déterministes et agentiques (par exemple branches ou boucles). Les agents se créent avec `create_agent`.',
           ],
           codeBlock: 'from langchain.chat_models import init_chat_model\n\nmodel = init_chat_model("claude-sonnet-4-6")  # any supported chat model\n\n\ndef run(prompt: str) -> str:\n    return model.invoke(prompt).text\n\n\nnotes = "..."  # raw release notes\n\nchanges = run(f"List every user-visible change as bullets:\\n{notes}")\nlabeled = run(f"Label each bullet as bug fix, improvement or new feature:\\n{changes}")\nemail = run(f"Write a short user-facing changelog email from this list:\\n{labeled}")\nprint(email)',
           codeLanguage: 'python',
@@ -2336,7 +2336,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Comment faire du chaînage de prompts avec LangChain ?',
-              a: 'Chargez un modèle avec `init_chat_model`, appelez `invoke` pour le premier prompt, lisez le texte de la réponse, insérez-le dans le deuxième prompt et recommencez. Pour les branches, boucles ou l\'usage d\'outils, LangChain recommande LangGraph, son framework d\'orchestration bas niveau.',
+              a: 'Chargez un modèle avec `init_chat_model`, appelez `invoke` pour le premier prompt, lisez le texte de la réponse, insérez-le dans le deuxième prompt et recommencez. Pour les besoins avancés, LangChain renvoie vers LangGraph, son framework d\'orchestration bas niveau pour combiner workflows déterministes et agentiques (par exemple branches ou boucles).',
             },
             {
               q: 'Quand ne faut-il pas utiliser le chaînage de prompts ?',
@@ -2400,8 +2400,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: '重要ポイント', anchor: 'key-takeaways' },
         { label: 'プロンプトチェーンはタスクをつながったプロンプトに分ける', anchor: 'what-is' },
         { label: 'チェーンにすると各呼び出しを確認しやすくなる', anchor: 'why-it-matters' },
-        { label: '4つのパターンでほとんどのチェーンを説明できる', anchor: 'patterns' },
-        { label: '3ステップのチェーンは長い1つのプロンプトに勝る', anchor: 'example' },
+        { label: 'プロンプトチェーンのよくある4つのパターン', anchor: 'patterns' },
+        { label: '3ステップのチェーンは長い1つのプロンプトより確認しやすい', anchor: 'example' },
         { label: 'よくある作業でのプロンプトチェーンの例', anchor: 'examples' },
         { label: 'PythonでのLangChainプロンプトチェーンの例', anchor: 'langchain' },
         { label: '固定の工程にはチェーン、小さなタスクには単一プロンプト', anchor: 'when-to-use' },
@@ -2489,7 +2489,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'why-it-matters',
           title: 'チェーンにすると各呼び出しを確認しやすくなる',
           content: [
-            '**実際のタスクの多くは1つのプロンプトで確実にこなすには層が多すぎるため、チェーンが役立ちます。** 理解、計画、生成、確認を分けると、各段階で制御できます。',
+            '**タスクの層が多く、1つのプロンプトでは確実にこなせない場合に、チェーンが役立ちます。** 理解、計画、生成、確認を分けると、各段階で制御できます。',
           ],
           items: [
             '各呼び出しが易しいタスクになります。Anthropicはこれをレイテンシと引き換えに精度を高めることと説明しています。',
@@ -2500,7 +2500,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         patterns: {
           id: 'patterns',
-          title: '4つのパターンでほとんどのチェーンを説明できる',
+          title: 'プロンプトチェーンのよくある4つのパターン',
           content: ['**ほとんどのチェーンは、いくつかの繰り返し現れる形を使っています。** タスクに合うものを選び、ステップを調整してください。'],
           items: [
             '分析 → 計画 → 下書き → 推敲：記事、レポート、戦略。',
@@ -2513,7 +2513,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         example: {
           id: 'example',
-          title: '3ステップのチェーンは長い1つのプロンプトに勝る',
+          title: '3ステップのチェーンは長い1つのプロンプトより確認しやすい',
           content: [
             '**長い1つのプロンプトと短いチェーンで同じ作業をすると、効果が分かりやすくなります。** 課題は、生のリリースノートから顧客向けの変更履歴を作ることです。',
             '**単一のプロンプト**',
@@ -2548,7 +2548,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'PythonでのLangChainプロンプトチェーンの例',
           content: [
             '**LangChainでプロンプトをチェーンにするには、`init_chat_model`でチャットモデルを読み込み、ステップごとに`invoke`を呼んで、各ステップのテキストを次のプロンプトに渡します。** 次のコードは上の変更履歴チェーンを実行します。`langchain`、利用するプロバイダーの連携パッケージ、APIキーが設定済みであることが前提です。',
-            '分岐、ループ、リトライ、ツール利用が必要な場合、LangChainは決定的なワークフローとエージェント型のワークフローを組み合わせる低レベルのオーケストレーション基盤としてLangGraphを案内しています。エージェントは`create_agent`で作成します。',
+            '高度な要件については、LangChainは決定的なワークフローとエージェント型のワークフローを組み合わせる低レベルのオーケストレーション基盤としてLangGraphを案内しています（たとえば分岐やループ）。エージェントは`create_agent`で作成します。',
           ],
           codeBlock: 'from langchain.chat_models import init_chat_model\n\nmodel = init_chat_model("claude-sonnet-4-6")  # any supported chat model\n\n\ndef run(prompt: str) -> str:\n    return model.invoke(prompt).text\n\n\nnotes = "..."  # raw release notes\n\nchanges = run(f"List every user-visible change as bullets:\\n{notes}")\nlabeled = run(f"Label each bullet as bug fix, improvement or new feature:\\n{changes}")\nemail = run(f"Write a short user-facing changelog email from this list:\\n{labeled}")\nprint(email)',
           codeLanguage: 'python',
@@ -2679,7 +2679,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'LangChainでプロンプトチェーンを作るには？',
-              a: '`init_chat_model`でモデルを読み込み、最初のプロンプトで`invoke`を呼び、応答のテキストを読み取って2番目のプロンプトに挿入し、繰り返します。分岐、ループ、ツール利用にはLangChainの低レベルのオーケストレーション基盤であるLangGraphが推奨されています。',
+              a: '`init_chat_model`でモデルを読み込み、最初のプロンプトで`invoke`を呼び、応答のテキストを読み取って2番目のプロンプトに挿入し、繰り返します。高度な要件については、LangChainは決定的なワークフローとエージェント型のワークフローを組み合わせる低レベルのオーケストレーション基盤としてLangGraphを案内しています（たとえば分岐やループ）。',
             },
             {
               q: 'プロンプトチェーンを使わない方がよいのはいつですか？',
@@ -2743,8 +2743,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: '核心要点', anchor: 'key-takeaways' },
         { label: '提示链把一个任务拆成相互衔接的提示', anchor: 'what-is' },
         { label: '串联让每次模型调用更容易检查', anchor: 'why-it-matters' },
-        { label: '四种模式覆盖大多数提示链', anchor: 'patterns' },
-        { label: '三步提示链胜过一个冗长的提示', anchor: 'example' },
+        { label: '提示链的四种常见模式', anchor: 'patterns' },
+        { label: '三步提示链比一个冗长的提示更容易检查', anchor: 'example' },
         { label: '常见任务的提示链示例', anchor: 'examples' },
         { label: 'Python中的LangChain提示链示例', anchor: 'langchain' },
         { label: '固定阶段用提示链，小任务用单个提示', anchor: 'when-to-use' },
@@ -2831,7 +2831,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         benefits: {
           id: 'why-it-matters',
           title: '串联让每次模型调用更容易检查',
-          content: ['**串联有帮助，是因为大多数真实任务层次太多，单个提示难以可靠完成。** 把理解、规划、生成和检查分开，你就能在每个阶段保持控制。'],
+          content: ['**当任务层次太多、单个提示难以可靠完成时，串联就有帮助。** 把理解、规划、生成和检查分开，你就能在每个阶段保持控制。'],
           items: [
             '每次调用都是更简单的任务，Anthropic将其描述为用延迟换取更高准确率。',
             '可以检查并校验中间输出，这是Claude提示指南给出的显式串联的两个理由之一。',
@@ -2841,7 +2841,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         patterns: {
           id: 'patterns',
-          title: '四种模式覆盖大多数提示链',
+          title: '提示链的四种常见模式',
           content: ['**大多数提示链都在重复使用几种固定形态。** 选择与你的任务匹配的一种，再调整步骤。'],
           items: [
             '分析 → 规划 → 起草 → 润色：文章、报告、策略。',
@@ -2854,7 +2854,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         example: {
           id: 'example',
-          title: '三步提示链胜过一个冗长的提示',
+          title: '三步提示链比一个冗长的提示更容易检查',
           content: [
             '**当一个长提示和一条短提示链处理同一任务时，差别最容易看出来。** 任务：把原始发布说明变成面向客户的更新日志。',
             '**单个提示**',
@@ -2887,7 +2887,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Python中的LangChain提示链示例',
           content: [
             '**要在LangChain中串联提示，用`init_chat_model`加载聊天模型，每一步调用一次`invoke`，并把每一步的文本传给下一个提示。** 示例运行上文的更新日志链，前提是已配置`langchain`、你所用提供商的集成包及其API密钥。',
-            '需要分支、循环、重试或工具调用时，LangChain指向LangGraph，这是它用于组合确定性和智能体工作流的底层编排框架。智能体通过`create_agent`创建。',
+            '对于更高级的需求，LangChain指向LangGraph，这是它用于组合确定性和智能体工作流的底层编排框架（例如分支或循环）。智能体通过`create_agent`创建。',
           ],
           codeBlock: 'from langchain.chat_models import init_chat_model\n\nmodel = init_chat_model("claude-sonnet-4-6")  # any supported chat model\n\n\ndef run(prompt: str) -> str:\n    return model.invoke(prompt).text\n\n\nnotes = "..."  # raw release notes\n\nchanges = run(f"List every user-visible change as bullets:\\n{notes}")\nlabeled = run(f"Label each bullet as bug fix, improvement or new feature:\\n{changes}")\nemail = run(f"Write a short user-facing changelog email from this list:\\n{labeled}")\nprint(email)',
           codeLanguage: 'python',
@@ -2997,7 +2997,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '提示链和思维链提示有什么区别？', a: '思维链让模型在一个提示、一个回答中写出推理过程。提示链使用多次独立调用，由你的代码在调用之间传递结果。两者可以结合：在提示链的某一步中使用思维链。' },
             {
               q: '如何在LangChain中实现提示链？',
-              a: '用`init_chat_model`加载模型，对第一个提示调用`invoke`，读取响应文本，把它填入第二个提示，然后重复。需要分支、循环或工具调用时，LangChain推荐使用其底层编排框架LangGraph。',
+              a: '用`init_chat_model`加载模型，对第一个提示调用`invoke`，读取响应文本，把它填入第二个提示，然后重复。对于更高级的需求，LangChain指向LangGraph，这是它用于组合确定性和智能体工作流的底层编排框架（例如分支或循环）。',
             },
             { q: '什么时候不该使用提示链？', a: '对一个提示就能解决的小型一次性任务，以及无需检查中间结果的情形，可以不用。对于无法预先固定步骤的开放性问题，Anthropic建议使用智能体而不是固定工作流。' },
             { q: '提示链应该有多少步？', a: '没有固定数字。使用能让每次调用变简单的最少步骤，因为每一步都会增加延迟、成本和新的出错来源。去掉后不改变输出的步骤应当合并。' },
@@ -3052,8 +3052,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: '핵심 내용', anchor: 'key-takeaways' },
         { label: '프롬프트 체이닝은 작업을 연결된 프롬프트로 나눕니다', anchor: 'what-is' },
         { label: '체이닝하면 각 모델 호출을 점검하기 쉬워집니다', anchor: 'why-it-matters' },
-        { label: '네 가지 패턴이 대부분의 체인을 설명합니다', anchor: 'patterns' },
-        { label: '세 단계 체인이 긴 프롬프트 하나보다 낫습니다', anchor: 'example' },
+        { label: '프롬프트 체인의 일반적인 네 가지 패턴', anchor: 'patterns' },
+        { label: '세 단계 체인은 긴 프롬프트 하나보다 점검하기 쉽습니다', anchor: 'example' },
         { label: '자주 쓰는 작업의 프롬프트 체이닝 예시', anchor: 'examples' },
         { label: 'Python으로 보는 LangChain 프롬프트 체이닝 예제', anchor: 'langchain' },
         { label: '고정된 단계에는 체인, 작은 작업에는 단일 프롬프트', anchor: 'when-to-use' },
@@ -3145,7 +3145,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'why-it-matters',
           title: '체이닝하면 각 모델 호출을 점검하기 쉬워집니다',
           content: [
-            '**실제 작업 대부분은 단일 프롬프트가 안정적으로 처리하기에는 층이 많기 때문에 체이닝이 도움이 됩니다.** 이해, 계획, 생성, 점검을 분리하면 각 단계를 제어할 수 있습니다.',
+            '**작업의 층이 많아 단일 프롬프트가 안정적으로 처리하기 어려울 때 체이닝이 도움이 됩니다.** 이해, 계획, 생성, 점검을 분리하면 각 단계를 제어할 수 있습니다.',
           ],
           items: [
             '각 호출이 더 쉬운 작업이 됩니다. Anthropic은 이를 지연 시간을 정확도와 맞바꾸는 것이라고 설명합니다.',
@@ -3156,7 +3156,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         patterns: {
           id: 'patterns',
-          title: '네 가지 패턴이 대부분의 체인을 설명합니다',
+          title: '프롬프트 체인의 일반적인 네 가지 패턴',
           content: ['**대부분의 체인은 몇 가지 반복되는 형태를 재사용합니다.** 작업에 맞는 형태를 골라 단계를 조정하십시오.'],
           items: [
             '분석 → 계획 → 초안 → 다듬기: 기사, 보고서, 전략.',
@@ -3167,7 +3167,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         example: {
           id: 'example',
-          title: '세 단계 체인이 긴 프롬프트 하나보다 낫습니다',
+          title: '세 단계 체인은 긴 프롬프트 하나보다 점검하기 쉽습니다',
           content: [
             '**긴 프롬프트 하나와 짧은 체인이 같은 작업을 처리할 때 차이가 가장 잘 드러납니다.** 작업은 원본 릴리스 노트를 고객용 변경 내역으로 바꾸는 것입니다.',
             '**단일 프롬프트**',
@@ -3200,7 +3200,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Python으로 보는 LangChain 프롬프트 체이닝 예제',
           content: [
             '**LangChain에서 프롬프트를 체이닝하려면 `init_chat_model`로 채팅 모델을 불러오고, 단계마다 `invoke`를 호출해 각 단계의 텍스트를 다음 프롬프트에 전달합니다.** 아래 예제는 앞의 변경 내역 체인을 실행하며, `langchain`, 사용하는 제공업체의 통합 패키지, API 키가 설정되어 있다고 가정합니다.',
-            '분기, 반복, 재시도, 도구 사용이 필요하면 LangChain은 결정적 워크플로와 에이전트형 워크플로를 결합하는 저수준 오케스트레이션 프레임워크인 LangGraph를 안내합니다. 에이전트는 `create_agent`로 만듭니다.',
+            '고급 요구 사항에는 LangChain은 결정적 워크플로와 에이전트형 워크플로를 결합하는 저수준 오케스트레이션 프레임워크인 LangGraph를 안내합니다 (예: 분기나 반복). 에이전트는 `create_agent`로 만듭니다.',
           ],
           codeBlock: 'from langchain.chat_models import init_chat_model\n\nmodel = init_chat_model("claude-sonnet-4-6")  # any supported chat model\n\n\ndef run(prompt: str) -> str:\n    return model.invoke(prompt).text\n\n\nnotes = "..."  # raw release notes\n\nchanges = run(f"List every user-visible change as bullets:\\n{notes}")\nlabeled = run(f"Label each bullet as bug fix, improvement or new feature:\\n{changes}")\nemail = run(f"Write a short user-facing changelog email from this list:\\n{labeled}")\nprint(email)',
           codeLanguage: 'python',
@@ -3337,7 +3337,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'LangChain에서 프롬프트 체이닝은 어떻게 합니까?',
-              a: '`init_chat_model`로 모델을 불러오고, 첫 프롬프트에 `invoke`를 호출한 뒤 응답 텍스트를 읽어 두 번째 프롬프트에 넣고 반복합니다. 분기, 반복, 도구 사용에는 LangChain이 저수준 오케스트레이션 프레임워크인 LangGraph를 권장합니다.',
+              a: '`init_chat_model`로 모델을 불러오고, 첫 프롬프트에 `invoke`를 호출한 뒤 응답 텍스트를 읽어 두 번째 프롬프트에 넣고 반복합니다. 고급 요구 사항에는 LangChain은 결정적 워크플로와 에이전트형 워크플로를 결합하는 저수준 오케스트레이션 프레임워크인 LangGraph를 안내합니다 (예: 분기나 반복).',
             },
             {
               q: '프롬프트 체이닝을 쓰지 말아야 할 때는 언제입니까?',

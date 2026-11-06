@@ -17,11 +17,11 @@ const TITLE = {
   en: 'What Is Q4_K_M Quantization?',
   de: 'Was ist Q4_K_M-Quantisierung?',
   fr: "Qu'est-ce que la quantisation Q4_K_M ?",
-  ja: 'Q4_K_M量化とは何ですか？',
+  ja: 'Q4_K_M量子化とは何ですか？',
   zh: 'Q4_K_M量化是什么？',
   es: '¿Qué es la cuantización Q4_K_M?',
   pt: 'O que é a quantização Q4_K_M?',
-  ar: 'ما هو ضغط ⁨Q4⁩_⁨K⁩_⁨M⁩؟',
+  ar: 'ما هو تكميم ⁨Q4⁩_⁨K⁩_⁨M⁩؟',
   ko: 'Q4_K_M 양자화란 무엇입니까?',
 }
 const HIGHLIGHTS = {
