@@ -22861,5 +22861,395 @@
       "t14": "2026-11-17",
       "t28": "2026-12-01"
     }
+  },
+  {
+    "id": "438bdaf7-79d6-4936-8aa9-db68490d3439",
+    "slug": "/fr/power-local-llm/facet-review",
+    "date": "2026-11-06T13:28:09.058Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Test de Facet : notation, tri et galerie de photos en local",
+        "new": "Avis sur Facet : notation, tri et galerie de photos en local"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Test de Facet : noter et trier ses photos en local",
+        "new": "Avis sur Facet : noter et trier ses photos en local"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Test de Facet : outil gratuit MIT qui note, trie et parcourt vos photos en local, avec visages regroupés et recherche. Licences et confidentialité.",
+        "new": "Avis sur Facet : outil gratuit MIT qui note, trie et parcourt vos photos en local, avec visages regroupés et recherche. Licences et confidentialité."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). FR wording said \"Test de Facet\" which implied PromptQuorum tested it; now \"Avis sur Facet\" (risk-checker R4). No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "facet review",
+      "facet photo organizer",
+      "facet local ai photos"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "a4bf1167-d06c-4a69-abf3-0be559bef56c",
+    "slug": "/prompt-bites/gguf-vs-gptq-vs-awq",
+    "date": "2026-11-06T13:28:09.133Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "GGUF runs on CPU and GPU via llama.cpp/Ollama; GPTQ and AWQ are GPU-only formats for vLLM/TGI serving. Compare speed, quality, tools and commands.",
+        "new": "GGUF runs on CPU and GPU via llama.cpp/Ollama; GPTQ and AWQ are GPU-only formats for vLLM serving. Compare speed, quality, tools and commands."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). TGI (archived, maintenance mode) removed as a serving option from the meta description; wording kept within budget (risk-checker). No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "gguf vs gptq vs awq",
+      "gguf vs awq",
+      "gptq vs awq"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0b04d240-fae2-4869-809d-e8765a52240b",
+    "slug": "/de/prompt-bites/gguf-vs-gptq-vs-awq",
+    "date": "2026-11-06T13:28:09.166Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "GGUF läuft auf CPU und GPU via llama.cpp/Ollama; GPTQ und AWQ sind GPU-Formate für vLLM/TGI. Vergleich von Geschwindigkeit, Qualität, Tools und Befehlen.",
+        "new": "GGUF läuft auf CPU und GPU via llama.cpp/Ollama; GPTQ und AWQ sind GPU-Formate für vLLM. Vergleich von Geschwindigkeit, Qualität, Tools und Befehlen."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). TGI (archived, maintenance mode) removed as a serving option from the meta description; wording kept within budget (risk-checker). No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "gguf vs gptq vs awq",
+      "gguf vs awq",
+      "gptq vs awq"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "c7a9f7ee-820c-4aad-9d46-f0f8268d7130",
+    "slug": "/fr/prompt-bites/gguf-vs-gptq-vs-awq",
+    "date": "2026-11-06T13:28:09.200Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "GGUF tourne sur CPU et GPU via llama.cpp/Ollama ; GPTQ et AWQ sont des formats GPU pour vLLM/TGI. Comparez vitesse, qualité, outils et commandes.",
+        "new": "GGUF tourne sur CPU et GPU via llama.cpp/Ollama ; GPTQ et AWQ sont des formats GPU pour vLLM. Comparez vitesse, qualité, outils et commandes."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). TGI (archived, maintenance mode) removed as a serving option from the meta description; wording kept within budget (risk-checker). No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "gguf vs gptq vs awq",
+      "gguf vs awq",
+      "gptq vs awq"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "6e930c7a-56c2-4e6a-9cb2-fececfff2160",
+    "slug": "/ja/prompt-bites/gguf-vs-gptq-vs-awq",
+    "date": "2026-11-06T13:28:09.232Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "GGUFはllama.cpp/OllamaでCPUとGPUの両方で動作。GPTQとAWQはvLLM/TGI向けのGPU専用形式です。速度・品質・ツール・コマンドを比較します。",
+        "new": "GGUFはllama.cpp/OllamaでCPUとGPUの両方で動作。GPTQとAWQはvLLM向けのGPU専用形式です。速度・品質・ツール・コマンドを比較します。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). TGI (archived, maintenance mode) removed as a serving option from the meta description; wording kept within budget (risk-checker). No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "gguf vs gptq vs awq",
+      "gguf vs awq",
+      "gptq vs awq"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "445ac596-6ed8-4bb9-8ee5-03b666dd2f48",
+    "slug": "/zh/prompt-bites/gguf-vs-gptq-vs-awq",
+    "date": "2026-11-06T13:28:09.267Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "GGUF 通过 llama.cpp/Ollama 在 CPU 和 GPU 上运行；GPTQ 和 AWQ 是面向 vLLM/TGI 的纯 GPU 格式。对比速度、质量、工具与命令。",
+        "new": "GGUF 通过 llama.cpp/Ollama 在 CPU 和 GPU 上运行；GPTQ 和 AWQ 是面向 vLLM 的纯 GPU 格式。对比速度、质量、工具与命令。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). TGI (archived, maintenance mode) removed as a serving option from the meta description; wording kept within budget (risk-checker). No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "gguf vs gptq vs awq",
+      "gguf vs awq",
+      "gptq vs awq"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "deea16a3-6532-4b0f-9920-75105f927bd3",
+    "slug": "/es/prompt-bites/gguf-vs-gptq-vs-awq",
+    "date": "2026-11-06T13:28:09.301Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "GGUF corre en CPU y GPU con llama.cpp/Ollama; GPTQ y AWQ son formatos solo GPU para vLLM/TGI. Compara velocidad, calidad, herramientas y comandos.",
+        "new": "GGUF corre en CPU y GPU con llama.cpp/Ollama; GPTQ y AWQ son formatos solo GPU para vLLM. Compara velocidad, calidad, herramientas y comandos."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). TGI (archived, maintenance mode) removed as a serving option from the meta description; wording kept within budget (risk-checker). No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "gguf vs gptq vs awq",
+      "gguf vs awq",
+      "gptq vs awq"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "4e24b8c8-a22a-4d61-9780-3c30accdfa21",
+    "slug": "/pt/prompt-bites/gguf-vs-gptq-vs-awq",
+    "date": "2026-11-06T13:28:09.334Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "GGUF roda em CPU e GPU via llama.cpp/Ollama; GPTQ e AWQ são formatos só de GPU para vLLM/TGI. Compare velocidade, qualidade, ferramentas e comandos.",
+        "new": "GGUF roda em CPU e GPU via llama.cpp/Ollama; GPTQ e AWQ são formatos só de GPU para vLLM. Compare velocidade, qualidade, ferramentas e comandos."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). TGI (archived, maintenance mode) removed as a serving option from the meta description; wording kept within budget (risk-checker). No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "gguf vs gptq vs awq",
+      "gguf vs awq",
+      "gptq vs awq"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "71fd40fb-5b27-4c83-a176-dde36a2fce4c",
+    "slug": "/ar/prompt-bites/gguf-vs-gptq-vs-awq",
+    "date": "2026-11-06T13:28:09.368Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "يعمل GGUF على CPU وGPU عبر llama.cpp/Ollama، أما GPTQ وAWQ فتنسيقان لـ GPU فقط لخدمة vLLM/TGI. قارن السرعة والجودة والأدوات والأوامر.",
+        "new": "يعمل GGUF على CPU وGPU عبر llama.cpp/Ollama، أما GPTQ وAWQ فتنسيقان لـ GPU فقط لخدمة vLLM. قارن السرعة والجودة والأدوات والأوامر."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). TGI (archived, maintenance mode) removed as a serving option from the meta description; wording kept within budget (risk-checker). No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "gguf vs gptq vs awq",
+      "gguf vs awq",
+      "gptq vs awq"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "8ed30ccc-14c7-41c9-8e8c-2a3539bdcaf6",
+    "slug": "/ko/prompt-bites/gguf-vs-gptq-vs-awq",
+    "date": "2026-11-06T13:28:09.401Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "GGUF는 llama.cpp/Ollama로 CPU와 GPU에서 실행되고, GPTQ와 AWQ는 vLLM/TGI용 GPU 전용 형식입니다. 속도, 품질, 도구, 명령어를 비교합니다.",
+        "new": "GGUF는 llama.cpp/Ollama로 CPU와 GPU에서 실행되고, GPTQ와 AWQ는 vLLM용 GPU 전용 형식입니다. 속도, 품질, 도구, 명령어를 비교합니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). TGI (archived, maintenance mode) removed as a serving option from the meta description; wording kept within budget (risk-checker). No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "gguf vs gptq vs awq",
+      "gguf vs awq",
+      "gptq vs awq"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "993b29c9-5bea-47f3-9510-5eddc3545df5",
+    "slug": "/fr/prompt-engineering/best-prompt-optimization-tools-for-teams",
+    "date": "2026-11-06T13:28:09.514Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Meilleures outils d'optimisation d'invites pour les équipes",
+        "new": "Meilleurs outils d'optimisation de prompts pour les équipes"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). FR title corrected (\"invites\" mistranslation of prompts); risk-checker R20. No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "prompt optimization tools",
+      "best prompt optimization tools for teams",
+      "prompt management tools"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "34ecd6da-5ed8-47b4-92a2-1e6067e1fa98",
+    "slug": "/prompt-bites/what-is-q4-k-m-quantization",
+    "date": "2026-11-06T13:28:09.574Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M means 4-bit k-quant at medium quality. Better than Q4_0, smaller than Q8_0. Use Q4_K_M as your default for Ollama. Quick guide from PromptQuorum.",
+        "new": "Q4_K_M means 4-bit k-quant at medium quality. Lower perplexity than Q4_0, smaller than Q8_0. Use Q4_K_M as your default for Ollama. Quick guide from PromptQuorum."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). Meta descriptions no longer claim \"better than Q4_0\"; they state lower perplexity (risk-checker R5/R6). No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "what is q4_k_m",
+      "q4_k_m quantization",
+      "q4_k_m meaning"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "908ea828-6c96-40c8-a352-7459176215f8",
+    "slug": "/de/prompt-bites/what-is-q4-k-m-quantization",
+    "date": "2026-11-06T13:28:09.607Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M = 4-Bit-K-Quant auf mittlerem Qualitätsniveau. Besser als Q4_0, kleiner als Q8_0. Verwenden Sie es als Standard. Schnelle Antwort von PromptQuorum.",
+        "new": "Q4_K_M = 4-Bit-K-Quant auf mittlerem Qualitätsniveau. Niedrigere Perplexität als Q4_0, kleiner als Q8_0. Verwenden Sie es als Standard. Schnelle Antwort von PromptQuorum."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). Meta descriptions no longer claim \"better than Q4_0\"; they state lower perplexity (risk-checker R5/R6). No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "what is q4_k_m",
+      "q4_k_m quantization",
+      "q4_k_m meaning"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7efa0f87-7d5b-4c62-99eb-2dd1d0fa37f8",
+    "slug": "/fr/prompt-bites/what-is-q4-k-m-quantization",
+    "date": "2026-11-06T13:28:09.646Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M = k-quant 4 bits à qualité moyenne. Meilleure que Q4_0, plus petite que Q8_0. À utiliser comme standard. Réponse rapide par PromptQuorum.",
+        "new": "Q4_K_M = k-quant 4 bits à qualité moyenne. Perplexité plus basse que Q4_0, plus petite que Q8_0. À utiliser comme standard. Réponse rapide par PromptQuorum."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). Meta descriptions no longer claim \"better than Q4_0\"; they state lower perplexity (risk-checker R5/R6). No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "what is q4_k_m",
+      "q4_k_m quantization",
+      "q4_k_m meaning"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "52049570-a508-4374-855d-e643cc21a46b",
+    "slug": "/ja/prompt-bites/what-is-q4-k-m-quantization",
+    "date": "2026-11-06T13:28:09.679Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_Mは中品質のK-Quant 4ビット量化です。Q4_0より優れ、Q8_0より小さいです。デフォルトとして使用してください。PromptQuorumの解説。",
+        "new": "Q4_K_Mは中品質のK-Quant 4ビット量化です。Q4_0よりパープレキシティが低く、Q8_0より小さいです。デフォルトとして使用してください。PromptQuorumの解説。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). Meta descriptions no longer claim \"better than Q4_0\"; they state lower perplexity (risk-checker R5/R6). No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "what is q4_k_m",
+      "q4_k_m quantization",
+      "q4_k_m meaning"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "392bdeaf-ec36-43f3-9cb3-567b3787818c",
+    "slug": "/zh/prompt-bites/what-is-q4-k-m-quantization",
+    "date": "2026-11-06T13:28:09.713Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M是中等质量的K-Quant 4位量化格式。优于Q4_0，体积小于Q8_0。将其作为默认格式使用。PromptQuorum快速解答。",
+        "new": "Q4_K_M是中等质量的K-Quant 4位量化格式。困惑度低于Q4_0，体积小于Q8_0。将其作为默认格式使用。PromptQuorum快速解答。"
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). Meta descriptions no longer claim \"better than Q4_0\"; they state lower perplexity (risk-checker R5/R6). No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "what is q4_k_m",
+      "q4_k_m quantization",
+      "q4_k_m meaning"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "d652ae1d-37cb-4ef1-88b3-b71bb51064aa",
+    "slug": "/es/prompt-bites/what-is-q4-k-m-quantization",
+    "date": "2026-11-06T13:28:09.745Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M es cuantización de 4 bits k-quant de calidad media: mejor que Q4_0, más pequeña que Q8_0. Úsala por defecto en Ollama. Guía rápida de PromptQuorum.",
+        "new": "Q4_K_M es cuantización de 4 bits k-quant de calidad media: menor perplejidad que Q4_0, más pequeña que Q8_0. Úsala por defecto en Ollama. Guía rápida de PromptQuorum."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). Meta descriptions no longer claim \"better than Q4_0\"; they state lower perplexity (risk-checker R5/R6). No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "what is q4_k_m",
+      "q4_k_m quantization",
+      "q4_k_m meaning"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "ac47365b-df78-4c96-b065-5e2856e289ca",
+    "slug": "/pt/prompt-bites/what-is-q4-k-m-quantization",
+    "date": "2026-11-06T13:28:09.778Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M é quantização de 4 bits k-quant de qualidade média: melhor que Q4_0, menor que Q8_0. Use-a como padrão no Ollama. Guia rápido do PromptQuorum.",
+        "new": "Q4_K_M é quantização de 4 bits k-quant de qualidade média: perplexidade menor que Q4_0, menor que Q8_0. Use-a como padrão no Ollama. Guia rápido do PromptQuorum."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). Meta descriptions no longer claim \"better than Q4_0\"; they state lower perplexity (risk-checker R5/R6). No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "what is q4_k_m",
+      "q4_k_m quantization",
+      "q4_k_m meaning"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "87e96d49-7d11-4cfc-a8a0-bfe0fad55395",
+    "slug": "/ko/prompt-bites/what-is-q4-k-m-quantization",
+    "date": "2026-11-06T13:28:09.813Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M은 중간 품질의 4비트 k-quant 양자화입니다. Q4_0보다 품질이 높고 Q8_0보다 파일 크기가 작습니다. Ollama의 기본 설정으로 사용하십시오.",
+        "new": "Q4_K_M은 중간 품질의 4비트 k-quant 양자화입니다. Q4_0보다 퍼플렉시티가 낮고 Q8_0보다 파일 크기가 작습니다. Ollama의 기본 설정으로 사용하십시오."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 11 (risk-audit pass). Meta descriptions no longer claim \"better than Q4_0\"; they state lower perplexity (risk-checker R5/R6). No GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "what is q4_k_m",
+      "q4_k_m quantization",
+      "q4_k_m meaning"
+    ],
+    "baseline": null,
+    "deployedAt": null
   }
 ]
