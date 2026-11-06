@@ -677,6 +677,7 @@ https://www.promptquorum.com/power-local-llm/weaviate-review
 https://www.promptquorum.com/power-local-llm/web-search-mcp-review
 https://www.promptquorum.com/power-local-llm/wechat-bot-local-llm-personal-assistant-2026
 https://www.promptquorum.com/power-local-llm/wechat-local-llm-integration-2026
+https://www.promptquorum.com/power-local-llm/weesper-neon-flow-review
 https://www.promptquorum.com/power-local-llm/whisper-cpp-review
 https://www.promptquorum.com/power-local-llm/whisper-notes-review
 https://www.promptquorum.com/power-local-llm/willow-inference-server-review
