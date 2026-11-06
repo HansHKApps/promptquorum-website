@@ -300,6 +300,65 @@ const ASK_UI = {
     en: 'No ratings yet', de: 'Noch keine Bewertungen', fr: 'Pas encore d’évaluations', ja: 'まだ評価はありません', zh: '暂无评分',
     es: 'Aún no hay valoraciones', pt: 'Ainda não há avaliações', ar: 'لا توجد تقييمات بعد', ko: '아직 평가가 없습니다',
   },
+  engHeading: {
+    en: 'Use of Ask Hans', de: 'Nutzung von Ask Hans', fr: 'Utilisation d\'Ask Hans', ja: 'Ask Hansの利用状況', zh: 'Ask Hans 的使用情况',
+    es: 'Uso de Ask Hans', pt: 'Uso do Ask Hans', ar: 'استخدام Ask Hans', ko: 'Ask Hans 이용 현황',
+  },
+  engSessions: {
+    en: 'Uses', de: 'Nutzungen', fr: 'Utilisations', ja: '利用回数', zh: '使用次数',
+    es: 'Usos', pt: 'Usos', ar: 'مرات الاستخدام', ko: '이용 횟수',
+  },
+  engReturning: {
+    en: 'Return visits', de: 'Wiederkehrende Besuche', fr: 'Visites répétées', ja: 'リピート訪問', zh: '回访',
+    es: 'Visitas repetidas', pt: 'Visitas recorrentes', ar: 'زيارات متكررة', ko: '재방문',
+  },
+  engReturningShare: {
+    en: 'Share of return visits', de: 'Anteil wiederkehrender Besuche', fr: 'Part des visites répétées', ja: 'リピート訪問の割合', zh: '回访占比',
+    es: 'Proporción de visitas repetidas', pt: 'Proporção de visitas recorrentes', ar: 'نسبة الزيارات المتكررة', ko: '재방문 비율',
+  },
+  engAvg: {
+    en: 'Average time per use', de: 'Durchschnittliche Zeit pro Nutzung', fr: 'Durée moyenne par utilisation', ja: '1回あたりの平均利用時間', zh: '平均每次使用时长',
+    es: 'Tiempo medio por uso', pt: 'Tempo médio por uso', ar: 'متوسط الوقت لكل استخدام', ko: '1회 평균 이용 시간',
+  },
+  engDurHeading: {
+    en: 'Time in Ask Hans per use', de: 'Zeit in Ask Hans pro Nutzung', fr: 'Temps passé dans Ask Hans par utilisation', ja: '1回あたりのAsk Hans利用時間', zh: '每次使用 Ask Hans 的时长',
+    es: 'Tiempo en Ask Hans por uso', pt: 'Tempo no Ask Hans por uso', ar: 'الوقت المقضي في Ask Hans لكل استخدام', ko: '1회당 Ask Hans 이용 시간',
+  },
+  engDurLt30: {
+    en: 'under 30 seconds', de: 'unter 30 Sekunden', fr: 'moins de 30 secondes', ja: '30秒未満', zh: '不到 30 秒',
+    es: 'menos de 30 segundos', pt: 'menos de 30 segundos', ar: 'أقل من 30 ثانية', ko: '30초 미만',
+  },
+  engDur30: {
+    en: '30 seconds to 2 minutes', de: '30 Sekunden bis 2 Minuten', fr: '30 secondes à 2 minutes', ja: '30秒～2分', zh: '30 秒至 2 分钟',
+    es: '30 segundos a 2 minutos', pt: '30 segundos a 2 minutos', ar: 'من 30 ثانية إلى دقيقتين', ko: '30초~2분',
+  },
+  engDur120: {
+    en: '2 to 5 minutes', de: '2 bis 5 Minuten', fr: '2 à 5 minutes', ja: '2～5分', zh: '2 至 5 分钟',
+    es: '2 a 5 minutos', pt: '2 a 5 minutos', ar: 'من دقيقتين إلى 5 دقائق', ko: '2~5분',
+  },
+  engDur300: {
+    en: '5 to 15 minutes', de: '5 bis 15 Minuten', fr: '5 à 15 minutes', ja: '5～15分', zh: '5 至 15 分钟',
+    es: '5 a 15 minutos', pt: '5 a 15 minutos', ar: 'من 5 إلى 15 دقيقة', ko: '5~15분',
+  },
+  engDurGt900: {
+    en: 'over 15 minutes', de: 'über 15 Minuten', fr: 'plus de 15 minutes', ja: '15分以上', zh: '超过 15 分钟',
+    es: 'más de 15 minutos', pt: 'mais de 15 minutos', ar: 'أكثر من 15 دقيقة', ko: '15분 초과',
+  },
+  engPromo: {
+    en: 'Share card shown', de: 'Teilen-Karte angezeigt', fr: 'Carte de partage affichée', ja: 'シェアカードの表示回数', zh: '分享卡片展示次数',
+    es: 'Tarjeta para compartir mostrada', pt: 'Cartão de compartilhamento exibido', ar: 'مرات ظهور بطاقة المشاركة', ko: '공유 카드 표시 횟수',
+  },
+  engNote: {
+    en: 'Counted only for visitors who chose "Yes, I agree". A use ends when the Ask Hans window is closed or the page is left. Only active time counts (window open, tab visible). A return visit is a visit in a later browser session on the same device. Times are shown in ranges; the average is an estimate from those ranges.',
+    de: 'Nur für Besucher gezählt, die „Ja, einverstanden“ gewählt haben. Eine Nutzung endet, wenn das Ask-Hans-Fenster geschlossen oder die Seite verlassen wird. Es zählt nur die aktive Zeit (Fenster offen, Tab sichtbar). Ein wiederkehrender Besuch ist ein Besuch in einer späteren Browsersitzung auf demselben Gerät. Zeiten werden in Bereichen angezeigt; der Durchschnitt ist eine Schätzung aus diesen Bereichen.',
+    fr: 'Compté uniquement pour les visiteurs ayant choisi « Oui, j\'accepte ». Une utilisation se termine à la fermeture de la fenêtre Ask Hans ou à la sortie de la page. Seul le temps actif compte (fenêtre ouverte, onglet visible). Une visite répétée est une visite lors d\'une session de navigateur ultérieure sur le même appareil. Les durées sont indiquées par tranches ; la moyenne est une estimation à partir de ces tranches.',
+    ja: '「はい、同意します」を選んだ訪問者のみを集計しています。Ask Hansのウィンドウを閉じるかページを離れると、1回の利用が終了します。カウントするのは操作可能な時間（ウィンドウが開いていてタブが表示されている間）だけです。リピート訪問とは、同じ端末で後のブラウザーセッションに行われた訪問のことです。時間は範囲で表示し、平均はその範囲からの推定値です。',
+    zh: '仅统计选择“是，我同意”的访问者。关闭 Ask Hans 窗口或离开页面即结束一次使用。只计算活跃时间（窗口打开且标签页可见）。回访是指同一设备上在之后的浏览器会话中的访问。时长按区间显示，平均值是根据这些区间得出的估算值。',
+    es: 'Se cuenta solo a los visitantes que eligieron «Sí, acepto». Un uso termina al cerrar la ventana de Ask Hans o salir de la página. Solo cuenta el tiempo activo (ventana abierta, pestaña visible). Una visita repetida es una visita en una sesión posterior del navegador en el mismo dispositivo. Los tiempos se muestran por rangos; el promedio es una estimación a partir de esos rangos.',
+    pt: 'Contado apenas para visitantes que escolheram «Sim, concordo». Um uso termina quando a janela do Ask Hans é fechada ou a página é abandonada. Conta apenas o tempo ativo (janela aberta, aba visível). Uma visita recorrente é uma visita em uma sessão posterior do navegador no mesmo dispositivo. Os tempos são exibidos em faixas; a média é uma estimativa a partir dessas faixas.',
+    ar: 'تُحتسب فقط لدى الزوار الذين اختاروا «نعم، أوافق». ينتهي الاستخدام عند إغلاق نافذة Ask Hans أو مغادرة الصفحة. يُحتسب الوقت النشط فقط (النافذة مفتوحة والتبويب ظاهر). الزيارة المتكررة هي زيارة في جلسة متصفح لاحقة على الجهاز نفسه. تُعرض الأوقات في نطاقات، والمتوسط تقدير مستخلص من هذه النطاقات.',
+    ko: '"예, 동의합니다"를 선택한 방문자만 집계합니다. Ask Hans 창을 닫거나 페이지를 떠나면 한 번의 이용이 끝납니다. 활성 시간(창이 열려 있고 탭이 보이는 시간)만 계산합니다. 재방문은 같은 기기에서 이후 브라우저 세션에 방문한 경우를 말합니다. 시간은 구간으로 표시하며 평균은 이 구간을 바탕으로 한 추정치입니다.',
+  },
   statCalls: {
     en: 'Tool calls', de: 'Werkzeugaufrufe', fr: "Appels d'outils", ja: 'ツール呼び出し数', zh: '工具调用次数',
     es: 'Llamadas a herramientas', pt: 'Chamadas de ferramentas', ar: 'استدعاءات الأدوات', ko: '도구 호출 수',

@@ -43,7 +43,10 @@ export const ASK_HANS_SPLIT = { chatFr: 2, panelFr: 1 } as const
 export const ASK_HANS_DEFAULT_MODEL = 'claude-haiku-5-5'
 
 /** Bump when the consent text changes; stored with every consent value as proof. */
-export const ASK_HANS_CONSENT_TEXT_VERSION = '2026-11-06-v3'
+export const ASK_HANS_CONSENT_TEXT_VERSION = '2026-11-06-v4'
+
+/** Active seconds with Ask Hans open after which the promo card replaces the topic picture (once per visit). */
+export const ASK_HANS_PROMO_AFTER_S = 120
 
 /** Days a saved conversation stays on the visitor's device (only if they chose to save). */
 export const ASK_HANS_HISTORY_DAYS = 7
@@ -59,6 +62,12 @@ export const ASK_HANS_STORAGE = {
   consent: 'askhans.consent.v1',
   /** sessionStorage: anonymous random visit ID (not linked to a person). */
   visitId: 'askhans.visit.v1',
+  /** localStorage, ONLY with consent "Yes": first-visit day + number of visits (return-visit counter; never sent as such). */
+  usage: 'askhans.usage.v1',
+  /** sessionStorage: this browser session has already been counted as a visit. */
+  usageSession: 'askhans.usage.session.v1',
+  /** sessionStorage: the 2-minute promo card was already shown in this visit. */
+  promoShown: 'askhans.promo.v1',
 } as const
 
 /** window CustomEvent: open Ask Hans; detail: { question?: string } */
