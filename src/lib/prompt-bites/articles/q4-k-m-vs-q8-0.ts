@@ -21,6 +21,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/local-llms/quantization-levels-comparison',
     siblingBites: ['what-is-q4-k-m-quantization', 'how-much-vram-for-local-llm'],
     is_living_page: false,
+    leadAnswerBlock: '**Q4_K_M and Q8_0 are two llama.cpp quantization formats: on Llama 3 8B, Q8_0 is practically identical to f16 by perplexity (+0.02%), while Q4_K_M adds +2.8% but needs a 4.58 GiB file instead of 7.96 GiB.** The choice mostly depends on your VRAM.',
     quickAnswerTop: {
       en: {
         question: 'Q4_K_M vs Q8_0: which should you pick?',
@@ -81,7 +82,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Can I switch between Q4_K_M and Q8_0 for different tasks?',
-            a: 'Only by pulling and running different model tags. In Ollama: <code>ollama pull llama3:8b-q4_K_M</code> and <code>ollama pull llama3:8b-q8_0</code> are separate downloads. You switch by specifying the tag in <code>ollama run</code>.',
+            a: 'Only by pulling and running different model tags. In Ollama: <code>ollama pull llama3:8b-instruct-q4_K_M</code> and <code>ollama pull llama3:8b-instruct-q8_0</code> are separate downloads. You switch by specifying the tag in <code>ollama run</code>.',
           },
           {
             q: 'What about Q4_K_S — is it worth using instead of Q4_K_M?',
@@ -102,6 +103,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    leadAnswerBlock: '**Q4_K_M und Q8_0 sind zwei Quantisierungsformate von llama.cpp: Bei Llama 3 8B liegt Q8_0 bei der Perplexity auf dem Niveau von f16 (+0,02 %), Q4_K_M liegt +2,8 % darüber, braucht aber nur eine 4,58-GiB-Datei statt 7,96 GiB.**',
     quickAnswerTop: {
       de: {
         question: 'Q4_K_M vs. Q8_0: Was sollten Sie wählen?',
@@ -119,7 +121,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '8 GB VRAM oder weniger: Q4_K_M verwenden — die 8B-Datei ist 4,58 GiB groß, Q8_0 (7,95 GiB) passt mit KV-Cache nicht mehr',
+          'Bis 8 GB VRAM: Q4_K_M (4,58 GiB); Q8_0 (7,95 GiB) passt mit KV-Cache nicht mehr',
           '12+ GB VRAM: Q8_0 lohnt sich für nahezu f16-nahe Ausgaben, ist aber langsamer: 50,93 gegenüber 71,93 Tokens/s bei Llama 3.1 8B laut llama.cpp-Quantize-README',
           'Für die meisten Benutzer, die Ollama täglich nutzen, ist Q4_K_M die richtige Wahl',
         ],
@@ -162,7 +164,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Kann ich für verschiedene Aufgaben zwischen Q4_K_M und Q8_0 wechseln?',
-            a: 'Nur durch Herunterladen und Ausführen verschiedener Modell-Tags. In Ollama: <code>ollama pull llama3:8b-q4_K_M</code> und <code>ollama pull llama3:8b-q8_0</code> sind separate Downloads. Sie wechseln, indem Sie den Tag in <code>ollama run</code> angeben.',
+            a: 'Nur durch Herunterladen und Ausführen verschiedener Modell-Tags. In Ollama: <code>ollama pull llama3:8b-instruct-q4_K_M</code> und <code>ollama pull llama3:8b-instruct-q8_0</code> sind separate Downloads. Sie wechseln, indem Sie den Tag in <code>ollama run</code> angeben.',
           },
           {
             q: 'Was ist mit Q4_K_S — lohnt es sich statt Q4_K_M zu nutzen?',
@@ -183,6 +185,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    leadAnswerBlock: '**Q4_K_M et Q8_0 sont deux formats de quantification de llama.cpp : sur Llama 3 8B, Q8_0 est pratiquement identique à f16 en perplexité (+0,02 %), tandis que Q4_K_M ajoute +2,8 % mais tient dans un fichier de 4,58 GiB au lieu de 7,96 GiB.**',
     quickAnswerTop: {
       fr: {
         question: 'Q4_K_M ou Q8_0 : lequel choisir ?',
@@ -243,7 +246,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Puis-je alterner entre Q4_K_M et Q8_0 selon les tâches ?',
-            a: 'Seulement en téléchargeant et exécutant des tags de modèle différents. Dans Ollama : <code>ollama pull llama3:8b-q4_K_M</code> et <code>ollama pull llama3:8b-q8_0</code> sont des téléchargements séparés. Vous basculez en spécifiant le tag dans <code>ollama run</code>.',
+            a: 'Seulement en téléchargeant et exécutant des tags de modèle différents. Dans Ollama : <code>ollama pull llama3:8b-instruct-q4_K_M</code> et <code>ollama pull llama3:8b-instruct-q8_0</code> sont des téléchargements séparés. Vous basculez en spécifiant le tag dans <code>ollama run</code>.',
           },
           {
             q: 'Et Q4_K_S — vaut-il mieux l\'utiliser à la place de Q4_K_M ?',
@@ -264,6 +267,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    leadAnswerBlock: '**Q4_K_MとQ8_0はllama.cppの量子化形式です。Llama 3 8Bでは、Q8_0のperplexityはf16とほぼ同じ（+0.02%）、Q4_K_Mは+2.8%で、ファイルは4.58 GiBです。**',
     quickAnswerTop: {
       ja: {
         question: 'Q4_K_MとQ8_0：どちらを選ぶべきですか？',
@@ -324,7 +328,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '異なるタスクでQ4_K_MとQ8_0を切り替えられますか？',
-            a: '異なるモデルタグをプルして実行することでのみ可能です。Ollamaでは：<code>ollama pull llama3:8b-q4_K_M</code>と<code>ollama pull llama3:8b-q8_0</code>は別々のダウンロードです。<code>ollama run</code>でタグを指定して切り替えます。',
+            a: '異なるモデルタグをプルして実行することでのみ可能です。Ollamaでは：<code>ollama pull llama3:8b-instruct-q4_K_M</code>と<code>ollama pull llama3:8b-instruct-q8_0</code>は別々のダウンロードです。<code>ollama run</code>でタグを指定して切り替えます。',
           },
           {
             q: 'Q4_K_Sはどうですか — Q4_K_Mの代わりに使う価値はありますか？',
@@ -345,6 +349,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    leadAnswerBlock: '**Q4_K_M与Q8_0是llama.cpp的量化格式。在Llama 3 8B上，Q8_0的perplexity与f16基本持平（+0.02%），Q4_K_M高+2.8%，但文件仅4.58 GiB。**',
     quickAnswerTop: {
       zh: {
         question: 'Q4_K_M和Q8_0：该选哪个？',
@@ -405,7 +410,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '我能在不同任务间切换Q4_K_M和Q8_0吗？',
-            a: '只能通过拉取和运行不同的模型标签来实现。在Ollama中：<code>ollama pull llama3:8b-q4_K_M</code>和<code>ollama pull llama3:8b-q8_0</code>是独立的下载。通过在<code>ollama run</code>中指定标签来切换。',
+            a: '只能通过拉取和运行不同的模型标签来实现。在Ollama中：<code>ollama pull llama3:8b-instruct-q4_K_M</code>和<code>ollama pull llama3:8b-instruct-q8_0</code>是独立的下载。通过在<code>ollama run</code>中指定标签来切换。',
           },
           {
             q: 'Q4_K_S怎么样——值得用它代替Q4_K_M吗？',
@@ -426,6 +431,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    leadAnswerBlock: '**Q4_K_M e Q8_0 são dois formatos de quantização do llama.cpp: no Llama 3 8B, o Q8_0 fica no nível de perplexidade do f16 (+0,02%), e o Q4_K_M soma +2,8%, mas usa um arquivo de 4,58 GiB em vez de 7,96 GiB.** A escolha depende principalmente da sua VRAM.',
     quickAnswerTop: {
       pt: {
         question: 'Q4_K_M vs Q8_0: qual escolher?',
@@ -486,7 +492,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Posso alternar entre Q4_K_M e Q8_0 para diferentes tarefas?',
-            a: 'Apenas baixando e executando diferentes tags de modelo. No Ollama: <code>ollama pull llama3:8b-q4_K_M</code> e <code>ollama pull llama3:8b-q8_0</code> são downloads separados. Você alterna especificando a tag em <code>ollama run</code>.',
+            a: 'Apenas baixando e executando diferentes tags de modelo. No Ollama: <code>ollama pull llama3:8b-instruct-q4_K_M</code> e <code>ollama pull llama3:8b-instruct-q8_0</code> são downloads separados. Você alterna especificando a tag em <code>ollama run</code>.',
           },
           {
             q: 'E Q4_K_S — vale a pena usar em vez de Q4_K_M?',
@@ -507,6 +513,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    leadAnswerBlock: '**Q4_K_M y Q8_0 son dos formatos de cuantización de llama.cpp: en Llama 3 8B, Q8_0 es prácticamente idéntico a f16 en perplejidad (+0,02 %), mientras que Q4_K_M suma +2,8 % pero ocupa un archivo de 4,58 GiB en lugar de 7,96 GiB.**',
     quickAnswerTop: {
       es: {
         question: 'Q4_K_M vs Q8_0: ¿cuál elegir?',
@@ -567,7 +574,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Puedo alternar entre Q4_K_M y Q8_0 para diferentes tareas?',
-            a: 'Solo descargando y ejecutando diferentes etiquetas de modelo. En Ollama: <code>ollama pull llama3:8b-q4_K_M</code> y <code>ollama pull llama3:8b-q8_0</code> son descargas separadas. Cambias especificando la etiqueta en <code>ollama run</code>.',
+            a: 'Solo descargando y ejecutando diferentes etiquetas de modelo. En Ollama: <code>ollama pull llama3:8b-instruct-q4_K_M</code> y <code>ollama pull llama3:8b-instruct-q8_0</code> son descargas separadas. Cambias especificando la etiqueta en <code>ollama run</code>.',
           },
           {
             q: '¿Y Q4_K_S — vale la pena usarlo en lugar de Q4_K_M?',
@@ -588,6 +595,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    leadAnswerBlock: '**Q4_K_M وQ8_0 صيغتان للتكميم في llama.cpp: في Llama 3 8B يساوي Q8_0 قيمة perplexity الخاصة بـ f16 تقريبًا (+0.02%)، بينما يزيد Q4_K_M بنسبة +2.8% لكن حجم ملفه 4.58 GiB بدلًا من 7.96 GiB.** ويعتمد الاختيار أساسًا على VRAM لديك.',
     quickAnswerTop: {
       ar: {
         question: 'Q4_K_M مقابل Q8_0: أيهما تختار؟',
@@ -648,7 +656,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'هل يمكنني التبديل بين Q4_K_M و Q8_0 لمهام مختلفة؟',
-            a: 'بالطبع، بتنزيل وتشغيل وسوم نماذج مختلفة. في Ollama: <code>ollama pull llama3:8b-q4_K_M</code> و <code>ollama pull llama3:8b-q8_0</code> تنزيلان منفصلان. تتبادل بينهما بتحديد الوسم في <code>ollama run</code>.',
+            a: 'فقط بتنزيل وتشغيل وسوم نماذج مختلفة. في Ollama: <code>ollama pull llama3:8b-instruct-q4_K_M</code> و <code>ollama pull llama3:8b-instruct-q8_0</code> تنزيلان منفصلان. تتبادل بينهما بتحديد الوسم في <code>ollama run</code>.',
           },
           {
             q: 'وماذا عن Q4_K_S — هل يستحق استخدامه بدلًا من Q4_K_M؟',
@@ -669,6 +677,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-11-03',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    leadAnswerBlock: '**Q4_K_M과 Q8_0은 llama.cpp의 양자화 형식입니다. Llama 3 8B에서 Q8_0의 perplexity는 f16과 거의 같고(+0.02%), Q4_K_M은 +2.8%이며 파일은 4.58 GiB입니다.**',
     quickAnswerTop: {
       ko: {
         question: 'Q4_K_M vs Q8_0: 어느 것을 선택해야 합니까?',
@@ -739,7 +748,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '작업에 따라 Q4_K_M과 Q8_0을 전환할 수 있습니까?',
-            a: '다른 모델 태그를 다운로드하여 실행하면 가능합니다. Ollama에서는 <code>ollama pull llama3:8b-q4_K_M</code>과 <code>ollama pull llama3:8b-q8_0</code>이 별도의 다운로드입니다. <code>ollama run</code>에서 태그를 지정하여 전환합니다.',
+            a: '다른 모델 태그를 다운로드하여 실행하면 가능합니다. Ollama에서는 <code>ollama pull llama3:8b-instruct-q4_K_M</code>과 <code>ollama pull llama3:8b-instruct-q8_0</code>이 별도의 다운로드입니다. <code>ollama run</code>에서 태그를 지정하여 전환합니다.',
           },
           {
             q: 'Q4_K_S는 어떻습니까? Q4_K_M 대신 사용할 가치가 있습니까?',

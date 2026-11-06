@@ -743,6 +743,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Whisper Notes review (Voice, Speech & Multimodal) — 2026-10-18
   'whisper-notes-review',
   'aiko-review',
+  'weesper-neon-flow-review',
 
   // TranscriptionSuite review (Voice, Speech & Multimodal) — 2026-10-18
   'transcriptionsuite-review',

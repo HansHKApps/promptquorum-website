@@ -95,12 +95,12 @@ const UPDATED_LABEL: Partial<Record<Language, string>> = {
 
 const KEY_TAKEAWAYS_LABEL: Partial<Record<Language, string>> = {
   en: 'Key Takeaways',
-  de: 'Wichtigste Punkte',
+  de: 'Wichtigste Erkenntnisse',
   fr: 'Points clés',
   ja: '重要なポイント',
   zh: '关键要点',
-  es: 'Puntos clave',
-  pt: 'Pontos principais', // VERIFY
+  es: 'Conclusiones clave',
+  pt: 'Principais conclusões',
   ar: 'النقاط الرئيسية',
   ko: '핵심 요점',
 }
@@ -588,6 +588,11 @@ export function PromptBitesPostClient({ slug, lang, articleData, availableLangs,
           </div>
         )}
 
+        {/* TLDR — directly under the lead so Key Takeaways are on the first screen (GEO Rule 36) */}
+        {tldrSection?.isTldr && tldrSection.items && tldrSection.items.length > 0 && tldrSection.items[0] !== 'TBD' && (
+          <TldrSection items={tldrSection.items} lang={lang} skin={skin} />
+        )}
+
         {/* Static Hero Image for Discover */}
         {(article as any).heroImage && (
           <figure className="mb-8 rounded-xl overflow-hidden">
@@ -669,11 +674,6 @@ export function PromptBitesPostClient({ slug, lang, articleData, availableLangs,
             </span>
           )}
         </div>
-
-        {/* TLDR */}
-        {tldrSection?.isTldr && tldrSection.items && tldrSection.items.length > 0 && tldrSection.items[0] !== 'TBD' && (
-          <TldrSection items={tldrSection.items} lang={lang} skin={skin} />
-        )}
 
         {/* Body sections */}
         {bodySections.map(([sectionKey, section]) => (
