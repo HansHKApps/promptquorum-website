@@ -5,6 +5,7 @@
 // Conversations are kept in sessionStorage only; nothing is stored on the server.
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import dynamic from 'next/dynamic'
 import { ASK_HANS_LIMITS, ASK_HANS_OPEN_EVENT, ASK_HANS_SPLIT, ASK_HANS_CONSENT_TEXT_VERSION, ASK_HANS_PROMO_AFTER_S, ASK_HANS_STORAGE } from '@/lib/askhans/config'
 import { daysBucket, durationBucket, questionBucket } from '@/lib/askhans/engagement'
 import { DEFAULT_CATEGORY_KEY, type AskHansLink } from '@/lib/askhans/categories'
@@ -23,6 +24,9 @@ import type { AskErrorCode, ChatMsg, ConsentRecord, Conversation, Rect, UiState 
 import { logEvent, streamAnswer } from './useAskStream'
 import { useIsDesktop } from './useIsDesktop'
 import { WelcomeBox } from './WelcomeBox'
+
+// Power Mode (guided setups + report exports) is loaded only when a visitor opens it.
+const PowerShell = dynamic(() => import('./power/PowerShell').then((m) => m.PowerShell), { ssr: false })
 
 const newConversation = (): Conversation => ({ id: uid(), messages: [], category: DEFAULT_CATEGORY_KEY, startedAt: Date.now() })
 
@@ -62,6 +66,9 @@ export function AskHansRoot() {
   const [showHistory, setShowHistory] = useState(true)
   /** the 2-minute promo card replaces the topic picture (once per visit) */
   const [promo, setPromo] = useState(false)
+  /** 'power' = the guided setups screen replaces the chat inside the same window */
+  const [mode, setMode] = useState<'chat' | 'power'>('chat')
+  const powerBackRef = useRef<(() => boolean) | null>(null)
   const visitId = useRef('')
   /** active seconds (window open + tab visible): since the last flushed use session, and in this whole visit */
   const segMs = useRef(0)
@@ -174,6 +181,7 @@ export function AskHansRoot() {
 
   // ---- window actions -------------------------------------------------------------------------
   const closeWindow = useCallback((focusLogo = true) => {
+    setMode('chat')
     setUi((u) => ({ ...u, open: false, everClosed: true }))
     if (focusLogo) setTimeout(() => logoRef.current?.focus(), 30)
   }, [])
@@ -182,6 +190,12 @@ export function AskHansRoot() {
     setUi((u) => ({ ...u, open: true }))
     setTimeout(() => inputRef.current?.focus(), 60)
   }, [])
+
+  // The window is non-modal: Esc only works while focus is inside it. Leaving Power Mode unmounts the focused
+  // element, so put focus back in the chat input (entering Power Mode focuses its own heading).
+  useEffect(() => {
+    if (mode === 'chat' && ui.open) inputRef.current?.focus()
+  }, [mode, ui.open])
 
   const setRect = useCallback((rect: Rect) => setUi((u) => ({ ...u, rect })), [])
 
@@ -282,8 +296,12 @@ export function AskHansRoot() {
   useEffect(() => {
     if (!ready) return
     const on = (e: Event) => {
-      const q = (e as CustomEvent<{ question?: string }>).detail?.question
-      if (q && q.trim()) submitRef.current(q, true)
+      const detail = (e as CustomEvent<{ question?: string; power?: boolean }>).detail
+      const q = detail?.question
+      if (detail?.power) {
+        setMode('power')
+        openWindow()
+      } else if (q && q.trim()) submitRef.current(q, true)
       else openWindow()
     }
     window.addEventListener(ASK_HANS_OPEN_EVENT, on)
@@ -305,7 +323,7 @@ export function AskHansRoot() {
   }, [])
 
   // ---- consent --------------------------------------------------------------------------------
-  const chooseConsent = (value: 'yes' | 'no', saveHistory: boolean) => {
+  const recordConsent = (value: 'yes' | 'no', saveHistory: boolean): ConsentRecord => {
     const rec = saveConsent(value, saveHistory)
     setConsent(rec)
     setConsentOpen(false)
@@ -313,6 +331,11 @@ export function AskHansRoot() {
     if (value === 'yes') usageInfo.current = touchUsage()
     if (value === 'yes') logEvent({ type: 'consent_yes', visitId: visitId.current, textVersion: ASK_HANS_CONSENT_TEXT_VERSION })
     else logEvent({ type: 'consent_no' })
+    return rec
+  }
+
+  const chooseConsent = (value: 'yes' | 'no', saveHistory: boolean) => {
+    const rec = recordConsent(value, saveHistory)
     const q = pendingQuestion
     setPendingQuestion(null)
     if (q) {
@@ -479,8 +502,19 @@ export function AskHansRoot() {
           onClose={() => closeWindow()}
           onToggleMaximize={() => setUi((u) => ({ ...u, maximized: !u.maximized }))}
           onNew={startNew}
-          newDisabled={streaming || !active || active.messages.length === 0}
+          newDisabled={mode === 'power' || streaming || !active || active.messages.length === 0}
+          powerActive={mode === 'power'}
+          onTogglePower={() => setMode((m) => (m === 'power' ? 'chat' : 'power'))}
+          onEscape={() => {
+            if (mode !== 'power') return false
+            if (powerBackRef.current) return powerBackRef.current()
+            setMode('chat')
+            return true
+          }}
         >
+          {mode === 'power' ? (
+            <PowerShell getVisitId={() => visitId.current} consent={consent} onConsent={recordConsent} backRef={powerBackRef} onExit={() => setMode('chat')} />
+          ) : (
           <div className="grid min-h-0 flex-1" style={isDesktop && showPanel ? { gridTemplateColumns: `${ASK_HANS_SPLIT.chatFr}fr ${ASK_HANS_SPLIT.panelFr}fr` } : undefined}>
             <div className="flex min-h-0 min-w-0 flex-col">
               {(previous.length > 0 || !showPanel) && !consentOpen && (
@@ -532,7 +566,7 @@ export function AskHansRoot() {
                   <ConsentNotice pendingQuestion={pendingQuestion} onChoose={chooseConsent} />
                 ) : (
                   <>
-                    <WelcomeBox onPick={(q) => submit(q)} disabled={streaming || atLimit} />
+                    <WelcomeBox onPick={(q) => submit(q)} onPower={() => setMode('power')} disabled={streaming || atLimit} />
 
                     {previous.length > 0 && showHistory && (
                       <section aria-label={tx.panel.historyHeading} className="space-y-2">
@@ -648,6 +682,7 @@ export function AskHansRoot() {
 
             {isDesktop && showPanel && <MarketingPanel variant="side" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onHide={() => setShowPanel(false)} promo={promo} onPromoClose={() => setPromo(false)} />}
           </div>
+          )}
         </AskHansWindow>
       )}
     </>

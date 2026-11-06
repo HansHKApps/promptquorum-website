@@ -8,6 +8,8 @@ export const copy: AskCopy = {
   restore: 'ウィンドウサイズを元に戻す',
   newChat: '新規',
   newChatLabel: '新しい会話を始める',
+  powerSwitch: "パワーモード",
+  powerSwitchTitle: "ガイド付きセットアップと詳細レポート",
   logoLabel: 'Ask Hans を開く',
   logoTitle: 'Ask Hans — クリックで開く',
 

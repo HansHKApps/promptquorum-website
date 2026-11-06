@@ -70,6 +70,7 @@ export function SearchTrigger() {
             isOpen={isOpen}
             onClose={() => setIsOpen(false)}
             onSubmit={(question) => window.dispatchEvent(new CustomEvent(ASK_HANS_OPEN_EVENT, { detail: { question } }))}
+            onPower={() => window.dispatchEvent(new CustomEvent(ASK_HANS_OPEN_EVENT, { detail: { power: true } }))}
           />
         : <SearchModal isOpen={isOpen} onClose={() => setIsOpen(false)} lang={lang} />}
     </>

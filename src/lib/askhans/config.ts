@@ -40,7 +40,24 @@ export const ASK_HANS_WINDOW = {
 /** Marketing panel split inside the window: chat gets 2/3, panel 1/3. */
 export const ASK_HANS_SPLIT = { chatFr: 2, panelFr: 1 } as const
 
+/** Power Mode reports: long, structured, written by a stronger model, so the limits are much tighter than chat. */
+export const ASK_HANS_SOLUTION_LIMITS = {
+  /** Per-IP rate limit: this many reports per window. */
+  rateLimitRequests: 3,
+  rateLimitWindow: '10 m' as const,
+  /** Max reports per anonymous visit ID per 24 h. */
+  maxPerVisit: 6,
+  /** Max MCP tool calls while writing one report. */
+  maxToolCalls: 10,
+  /** Max output tokens of one report. */
+  maxOutputTokens: 6000,
+  /** Hard wall-clock limit for one report (the route's maxDuration is 120 s). */
+  timeoutMs: 110_000,
+} as const
+
 export const ASK_HANS_DEFAULT_MODEL = 'claude-haiku-5-5'
+/** Model that writes Power Mode reports; override with the ASK_HANS_SOLUTION_MODEL env var. */
+export const ASK_HANS_SOLUTION_DEFAULT_MODEL = 'claude-sonnet-5-5'
 
 /** Bump when the consent text changes; stored with every consent value as proof. */
 export const ASK_HANS_CONSENT_TEXT_VERSION = '2026-11-06-v4'
