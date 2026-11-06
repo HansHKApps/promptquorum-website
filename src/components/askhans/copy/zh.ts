@@ -102,6 +102,14 @@ export const copy: AskCopy = {
     copy: "复制",
     copied: "已复制",
     copyAnswer: "复制回答",
+    moreOptions: "更多复制与分享选项",
+    copyFormatted: "带格式复制",
+    copyPlain: "复制为纯文本",
+    shareEmail: "通过邮件发送",
+    shareWhatsApp: "通过 WhatsApp 发送",
+    shareTelegram: "通过 Telegram 发送",
+    shareMore: "分享…",
+    emailSubject: "Ask Hans 的回答（PromptQuorum）",
   },
 
   panel: {

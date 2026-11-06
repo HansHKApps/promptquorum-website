@@ -102,6 +102,14 @@ export const copy: AskCopy = {
     copy: "복사",
     copied: "복사됨",
     copyAnswer: "답변 복사",
+    moreOptions: "복사 및 공유 옵션 더 보기",
+    copyFormatted: "서식 포함 복사",
+    copyPlain: "일반 텍스트로 복사",
+    shareEmail: "이메일로 보내기",
+    shareWhatsApp: "WhatsApp으로 보내기",
+    shareTelegram: "Telegram으로 보내기",
+    shareMore: "공유…",
+    emailSubject: "Ask Hans의 답변 (PromptQuorum)",
   },
 
   panel: {

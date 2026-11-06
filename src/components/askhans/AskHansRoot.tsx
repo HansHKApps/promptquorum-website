@@ -14,7 +14,7 @@ import { useAskCopy, useAskLang } from './copy'
 import { FeedbackBar } from './FeedbackBar'
 import { AskIcon } from './icons'
 import { Markdown } from './markdown'
-import { CopyButton, plainText } from './CopyButton'
+import { ASK_HANS_SHARE_EVENT, CopyButton, type ShareKind, type ShareSource } from './CopyButton'
 import { clickSection, relatedLinks } from './links'
 import { MarketingPanel } from './MarketingPanel'
 import { clearConsent, clearSavedConversations, getVisitId, loadConsent, loadConversations, loadUi, saveConsent, saveConversations, saveUi, uid } from './storage'
@@ -228,6 +228,21 @@ export function AskHansRoot() {
     return () => window.removeEventListener(ASK_HANS_OPEN_EVENT, on)
   }, [ready, openWindow])
 
+  // Anonymous share counter (copy / mail / messenger): only with consent, never any text.
+  const consentRef = useRef(consent)
+  useEffect(() => {
+    consentRef.current = consent
+  })
+  useEffect(() => {
+    const on = (e: Event) => {
+      if (consentRef.current?.value !== 'yes') return
+      const d = (e as CustomEvent<{ source: ShareSource; channel: ShareKind }>).detail
+      logEvent({ type: 'share', visitId: visitId.current, source: d.source, channel: d.channel })
+    }
+    window.addEventListener(ASK_HANS_SHARE_EVENT, on)
+    return () => window.removeEventListener(ASK_HANS_SHARE_EVENT, on)
+  }, [])
+
   // ---- consent --------------------------------------------------------------------------------
   const chooseConsent = (value: 'yes' | 'no', saveHistory: boolean) => {
     const rec = saveConsent(value, saveHistory)
@@ -357,7 +372,7 @@ export function AskHansRoot() {
               )}
               {m.content && !m.pending && (
                 <div className="mt-1 flex justify-end">
-                  <CopyButton text={plainText(m.content)} />
+                  <CopyButton md={m.content} />
                 </div>
               )}
               {m.pending && m.status && <p className="text-[13px] italic text-muted-foreground" role="status">{m.status}</p>}

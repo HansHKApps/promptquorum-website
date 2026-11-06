@@ -5,7 +5,7 @@
 // Never stored: question/answer text, IP address, names.
 //
 // Keys:
-//   askhans:day:<YYYY-MM-DD>      hash of counters  (q:<cat>, tool:<name>, link:<cat>:<id>, app:<slug>, dircat:<key>, click:<text|panel>:<section>,
+//   askhans:day:<YYYY-MM-DD>      hash of counters  (q:<cat>, tool:<name>, link:<cat>:<id>, share:<answer|promo>:<channel>, app:<slug>, dircat:<key>, click:<text|panel>:<section>,
 //                                 answers_clicked, followup_click, new, lang:<xx>, consent_yes/no/withdrawn)
 //   askhans:visits:<YYYY-MM-DD>   set of anonymous visit IDs (random, not linked to a person)
 //   askhans:consent               list of consent proofs {ts, textVersion, visitId, type}  (capped)
@@ -26,6 +26,8 @@ const CONSENT_LIST_MAX = 50_000
 const TOOL_NAME = /^[a-z_]{3,40}$/
 const LINK_IDS = new Set(ASK_HANS_CATEGORIES.flatMap((c) => c.links.map((l) => l.id)))
 const CLICK_SOURCES = new Set(['text', 'panel'])
+const SHARE_SOURCES = new Set(['answer', 'promo'])
+const SHARE_CHANNELS = new Set(['copy', 'copy_plain', 'email', 'whatsapp', 'telegram', 'native', 'link'])
 const CLICK_SECTION = /^[a-z0-9-]{1,40}$/
 const TEXT_VERSION = /^[A-Za-z0-9._-]{1,40}$/
 const VISIT_ID = /^[a-zA-Z0-9-]{8,64}$/
@@ -96,6 +98,12 @@ export async function POST(req: NextRequest) {
         pipe.hincrby(dayKey, `click:${b.source}:${b.section}`, 1)
         // One count per answer: the client sets firstForAnswer on the first internal click of an answer only.
         if (b.firstForAnswer === true && b.section !== 'external') pipe.hincrby(dayKey, 'answers_clicked', 1)
+        break
+      }
+      case 'share': {
+        // Copy / share of an answer or of the promo card: fixed source + channel names only, never the shared text.
+        if (!visitId || typeof b.source !== 'string' || !SHARE_SOURCES.has(b.source) || typeof b.channel !== 'string' || !SHARE_CHANNELS.has(b.channel)) return new NextResponse(null, { status: 400 })
+        pipe.hincrby(dayKey, `share:${b.source}:${b.channel}`, 1)
         break
       }
       case 'followup_click':

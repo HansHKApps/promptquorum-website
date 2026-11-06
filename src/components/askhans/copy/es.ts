@@ -102,6 +102,14 @@ export const copy: AskCopy = {
     copy: "Copiar",
     copied: "Copiado",
     copyAnswer: "Copiar respuesta",
+    moreOptions: "Más opciones para copiar y compartir",
+    copyFormatted: "Copiar con formato",
+    copyPlain: "Copiar como texto sin formato",
+    shareEmail: "Enviar por correo electrónico",
+    shareWhatsApp: "Enviar por WhatsApp",
+    shareTelegram: "Enviar por Telegram",
+    shareMore: "Compartir…",
+    emailSubject: "Respuesta de Ask Hans (PromptQuorum)",
   },
 
   panel: {

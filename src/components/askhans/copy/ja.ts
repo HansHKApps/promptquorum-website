@@ -102,6 +102,14 @@ export const copy: AskCopy = {
     copy: "コピー",
     copied: "コピーしました",
     copyAnswer: "回答をコピー",
+    moreOptions: "コピーと共有のその他の方法",
+    copyFormatted: "書式付きでコピー",
+    copyPlain: "テキストのみでコピー",
+    shareEmail: "メールで送信",
+    shareWhatsApp: "WhatsAppで送信",
+    shareTelegram: "Telegramで送信",
+    shareMore: "共有…",
+    emailSubject: "Ask Hansの回答（PromptQuorum）",
   },
 
   panel: {
