@@ -45,7 +45,7 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { dockerDeploy: true, mcp: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-10-24', // GitHub API pushed_at (newer than release v2.2.20, 2026-10-18), read 2026-10-24
+  lastUpstreamUpdate: '2026-11-06', // GitHub API (latest release or push, whichever is newer), read 2026-11-06
   lastUpstreamUpdateSource: 'https://github.com/lobehub/lobehub',
   pqReview: { date: '2026-10-24', version: '2.2.20', versionSourceUrl: 'https://github.com/lobehub/lobehub/releases/tag/v2.2.20' },
 }
