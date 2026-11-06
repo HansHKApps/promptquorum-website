@@ -8,6 +8,8 @@ export const copy: AskCopy = {
   restore: 'Fenstergröße zurücksetzen',
   newChat: 'Neu',
   newChatLabel: 'Neues Gespräch beginnen',
+  powerSwitch: "Power-Modus",
+  powerSwitchTitle: "Geführte Setups mit ausführlichem Bericht",
   logoLabel: 'Ask Hans öffnen',
   logoTitle: 'Ask Hans — zum Öffnen klicken',
 

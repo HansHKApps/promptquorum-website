@@ -58,10 +58,15 @@ interface Props {
   onToggleMaximize: () => void
   onNew: () => void
   newDisabled?: boolean
+  /** Power Mode (guided setups) is showing instead of the chat */
+  powerActive?: boolean
+  onTogglePower?: () => void
+  /** Esc: return true when something inside the window handled it (Power Mode goes back one level); false closes the window */
+  onEscape?: () => boolean
   children: ReactNode
 }
 
-export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggleMaximize, onNew, newDisabled, children }: Props) {
+export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggleMaximize, onNew, newDisabled, powerActive, onTogglePower, onEscape, children }: Props) {
   const tx = useAskCopy()
   const isDesktop = useIsDesktop()
   const titleId = useId()
@@ -89,8 +94,10 @@ export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggle
 
   // Document-level so Esc and the Tab trap also work when a click on plain text left focus on <body>.
   const onCloseRef = useRef(onClose)
+  const onEscapeRef = useRef(onEscape)
   useEffect(() => {
     onCloseRef.current = onClose
+    onEscapeRef.current = onEscape
   })
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -98,7 +105,8 @@ export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggle
       if (floating && !ref.current?.contains(document.activeElement)) return
       if (e.key === 'Escape') {
         e.preventDefault()
-        onCloseRef.current()
+        // Power Mode: Esc goes up one level (question → list → chat); only the plain chat closes the window.
+        if (!onEscapeRef.current?.()) onCloseRef.current()
         return
       }
       if (floating) return
@@ -213,6 +221,20 @@ export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggle
             <AskIcon name="Plus" className="h-3.5 w-3.5" />
             {tx.newChat}
           </button>
+          {onTogglePower && (
+            <button
+              type="button"
+              onClick={onTogglePower}
+              aria-pressed={!!powerActive}
+              title={tx.powerSwitchTitle}
+              className={`flex items-center gap-1 rounded-lg border px-2.5 py-1.5 text-xs font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary ${
+                powerActive ? 'border-primary bg-primary text-primary-foreground' : 'border-primary bg-secondary text-primary hover:bg-white'
+              }`}
+            >
+              <AskIcon name="Zap" className="h-3.5 w-3.5" />
+              {tx.powerSwitch}
+            </button>
+          )}
           <InfoPanel />
           {isDesktop && (
             <button

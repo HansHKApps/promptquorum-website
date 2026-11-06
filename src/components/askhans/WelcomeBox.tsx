@@ -6,10 +6,12 @@ import { AskIcon } from './icons'
 
 interface Props {
   onPick: (question: string) => void
+  /** Power Mode card: switches the window to the guided setups */
+  onPower?: () => void
   disabled?: boolean
 }
 
-export function WelcomeBox({ onPick, disabled }: Props) {
+export function WelcomeBox({ onPick, onPower, disabled }: Props) {
   const tx = useAskCopy()
   return (
     <section
@@ -26,6 +28,19 @@ export function WelcomeBox({ onPick, disabled }: Props) {
           <p className="mt-1 text-[13px] leading-relaxed text-muted-foreground">{tx.welcomeBody}</p>
         </div>
       </div>
+      {onPower && (
+        <button
+          type="button"
+          onClick={onPower}
+          className="mt-3 flex w-full items-center gap-3 rounded-lg bg-gradient-to-r from-[hsl(265_60%_48%)] to-[hsl(300_60%_52%)] px-3.5 py-2.5 text-start text-white shadow-sm transition-opacity hover:opacity-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+        >
+          <AskIcon name="Zap" className="h-5 w-5 flex-shrink-0" />
+          <span className="min-w-0">
+            <span className="block text-[14px] font-bold leading-snug">{tx.powerSwitch}</span>
+            <span className="block text-[12px] leading-snug text-white/90">{tx.powerSwitchTitle}</span>
+          </span>
+        </button>
+      )}
       <ul className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
         {tx.welcomeCards.map((c) => (
           <li key={c.title}>

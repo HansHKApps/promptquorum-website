@@ -11,12 +11,14 @@ interface Props {
   onClose: () => void
   /** Enter: the typed text is handed to Ask Hans (see SearchTrigger). */
   onSubmit: (question: string) => void
+  /** The Power Mode card: opens the Ask Hans window straight on the guided setups. */
+  onPower?: () => void
 }
 
 // Header search box in every language while Ask Hans is switched on (ASK_HANS_ENABLED=true): the visitor types a
 // question, presses Enter, and the Ask Hans window takes over. Nothing is sent from here. With the flag off,
 // the header falls back to the classic SearchModal (kill switch).
-export function AskHansSearchModal({ isOpen, onClose, onSubmit }: Props) {
+export function AskHansSearchModal({ isOpen, onClose, onSubmit, onPower }: Props) {
   const tx = useAskCopy()
   const t = tx.search
   const [question, setQuestion] = useState('')
@@ -147,6 +149,24 @@ export function AskHansSearchModal({ isOpen, onClose, onSubmit }: Props) {
 
         {/* Example questions */}
         <div className="min-h-0 flex-1 overflow-y-auto px-5 pb-5 pt-3">
+          {onPower && (
+            <button
+              type="button"
+              onClick={() => {
+                onClose()
+                onPower()
+              }}
+              className="mb-3 flex w-full items-center gap-3 rounded-xl border border-[hsl(var(--hero-edge))] bg-gradient-to-r from-[hsl(265_60%_48%)] to-[hsl(300_60%_52%)] px-4 py-3 text-start text-white shadow-sm transition-opacity hover:opacity-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[hsl(var(--primary))]"
+            >
+              <svg className="h-5 w-5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+              <span className="min-w-0">
+                <span className="block text-[14px] font-bold leading-snug">{tx.powerSwitch}</span>
+                <span className="block text-[12px] leading-snug text-white/90">{tx.powerSwitchTitle}</span>
+              </span>
+            </button>
+          )}
           <ul className="flex flex-wrap gap-2">
             {t.examples.map((ex) => (
               <li key={ex}>
