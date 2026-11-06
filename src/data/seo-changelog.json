@@ -22890,7 +22890,11 @@
       "facet local ai photos"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "a4bf1167-d06c-4a69-abf3-0be559bef56c",
@@ -22910,7 +22914,11 @@
       "gptq vs awq"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "0b04d240-fae2-4869-809d-e8765a52240b",
@@ -22930,7 +22938,11 @@
       "gptq vs awq"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "c7a9f7ee-820c-4aad-9d46-f0f8268d7130",
@@ -22950,7 +22962,11 @@
       "gptq vs awq"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "6e930c7a-56c2-4e6a-9cb2-fececfff2160",
@@ -22970,7 +22986,11 @@
       "gptq vs awq"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "445ac596-6ed8-4bb9-8ee5-03b666dd2f48",
@@ -22990,7 +23010,11 @@
       "gptq vs awq"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "deea16a3-6532-4b0f-9920-75105f927bd3",
@@ -23010,7 +23034,11 @@
       "gptq vs awq"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "4e24b8c8-a22a-4d61-9780-3c30accdfa21",
@@ -23030,7 +23058,11 @@
       "gptq vs awq"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "71fd40fb-5b27-4c83-a176-dde36a2fce4c",
@@ -23050,7 +23082,11 @@
       "gptq vs awq"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "8ed30ccc-14c7-41c9-8e8c-2a3539bdcaf6",
@@ -23070,7 +23106,11 @@
       "gptq vs awq"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "993b29c9-5bea-47f3-9510-5eddc3545df5",
@@ -23090,7 +23130,11 @@
       "prompt management tools"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "34ecd6da-5ed8-47b4-92a2-1e6067e1fa98",
@@ -23110,7 +23154,11 @@
       "q4_k_m meaning"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "908ea828-6c96-40c8-a352-7459176215f8",
@@ -23130,7 +23178,11 @@
       "q4_k_m meaning"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "7efa0f87-7d5b-4c62-99eb-2dd1d0fa37f8",
@@ -23150,7 +23202,11 @@
       "q4_k_m meaning"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "52049570-a508-4374-855d-e643cc21a46b",
@@ -23170,7 +23226,11 @@
       "q4_k_m meaning"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "392bdeaf-ec36-43f3-9cb3-567b3787818c",
@@ -23190,7 +23250,11 @@
       "q4_k_m meaning"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "d652ae1d-37cb-4ef1-88b3-b71bb51064aa",
@@ -23210,7 +23274,11 @@
       "q4_k_m meaning"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "ac47365b-df78-4c96-b065-5e2856e289ca",
@@ -23230,7 +23298,11 @@
       "q4_k_m meaning"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   },
   {
     "id": "87e96d49-7d11-4cfc-a8a0-bfe0fad55395",
@@ -23250,6 +23322,10 @@
       "q4_k_m meaning"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-11-06",
+    "measure": {
+      "t14": "2026-11-20",
+      "t28": "2026-12-04"
+    }
   }
 ]
