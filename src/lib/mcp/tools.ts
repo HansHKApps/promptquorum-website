@@ -117,14 +117,15 @@ export interface SearchToolResult {
   lang: string
 }
 
-const PAGE_QUERY_NOISE = new Set(['page', 'pages', 'site', 'website', 'say', 'says', 'seite', 'what'])
+const PAGE_QUERY_NOISE = new Set(['page', 'pages', 'site', 'website', 'say', 'says', 'seite', 'what', 'run', 'local', 'llm', 'llms', 'tool', 'tools'])
 
 /** Articles, reviews and apps (search index) plus the site's other pages (home, About, ... see pages.ts). */
 export function searchPromptquorum(args: { query: string; lang?: string; cluster?: string; limit?: number }): SearchToolResult[] {
   const limit = Math.min(Math.max(args.limit ?? 10, 1), 25)
   const found = searchEntries(args)
   if (args.cluster && args.cluster !== 'site') return found
-  const words = questionKeywords(args.query).filter((w) => !PAGE_QUERY_NOISE.has(w))
+  // "about" is a stop word for article search but the name of a page here ("what does the About page say").
+  const words = [...new Set([...questionKeywords(args.query), ...(/\babout\b/i.test(args.query) ? ['about'] : [])])].filter((w) => !PAGE_QUERY_NOISE.has(w))
   const pages = searchPages(words.join(' '), args.lang, 3).map((p) => ({ title: p.title, description: p.summary, url: p.url, hub: 'site', lang: args.lang ? normalizeLang(args.lang) : 'en' }))
   if (args.cluster === 'site') return pages.slice(0, limit)
   // A page whose title matches a keyword (a question about "the About page") leads; weaker page matches follow the articles.

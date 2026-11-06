@@ -20,7 +20,7 @@ export interface SitePage {
 }
 
 export const SITE_PAGES: SitePage[] = [
-  { path: '/', title: 'PromptQuorum home page', summary: 'Start page: what PromptQuorum is, the software directory, newest apps and articles, hands-on tests, the MCP server and Ask Hans.' },
+  { path: '/', title: 'PromptQuorum home page (homepage, startseite)', summary: 'Start page: what PromptQuorum is, the software directory, newest apps and articles, hands-on tests, the MCP server and Ask Hans.' },
   { path: '/about', title: 'About PromptQuorum', summary: 'Who is behind PromptQuorum, the mission, the three waves of open AI, what the site offers and how it is built.' },
   { path: '/about/state-of-local-ai', title: 'State of local AI', summary: 'Quarterly report on the local-AI landscape: apps, hardware and trends.' },
   { path: '/about/state-of-local-ai/2026-q4', title: 'State of local AI, Q4 report', summary: 'The current quarterly state-of-local-AI report.' },
