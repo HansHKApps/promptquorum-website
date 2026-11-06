@@ -600,6 +600,7 @@ https://www.promptquorum.com/power-local-llm/quivr-self-hosted-knowledge-assista
 https://www.promptquorum.com/power-local-llm/qwen-local-deployment-complete-guide-2026
 https://www.promptquorum.com/power-local-llm/radiant-canvas
 https://www.promptquorum.com/power-local-llm/ragflow-document-understanding-rag-review
+https://www.promptquorum.com/power-local-llm/ramen-review
 https://www.promptquorum.com/power-local-llm/rapid-mlx-review
 https://www.promptquorum.com/power-local-llm/rapr-ai-review
 https://www.promptquorum.com/power-local-llm/real-esrgan-ai-image-upscaler-review
