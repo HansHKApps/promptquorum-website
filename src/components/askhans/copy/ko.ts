@@ -112,6 +112,17 @@ export const copy: AskCopy = {
     emailSubject: "Ask Hans의 답변 (PromptQuorum)",
   },
 
+  promo: {
+    title: "Ask Hans가 마음에 드십니까?",
+    body: "저희가 아는 한, Ask Hans와 PromptQuorum MCP 서버는 사이트 전체를 읽을 수 있는 AI 어시스턴트와 MCP 서버를 모두 갖춘 유일한 로컬 AI 웹사이트입니다. 도움이 되셨다면 친구에게도 공유해 주십시오.",
+    share: "친구에게 공유",
+    copyLink: "링크 복사",
+    linkCopied: "링크를 복사했습니다",
+    shareText: "Ask Hans: 로컬 AI, 하드웨어, 스마트 홈을 다루는 PromptQuorum의 AI 어시스턴트입니다.",
+    close: "숨기기",
+    imageAlt: "Ask Hans와 PromptQuorum MCP: 저희가 아는 한 둘 다 갖춘 유일한 로컬 AI 사이트",
+  },
+
   panel: {
     relatedHeading: "질문과 관련된 내용",
     relatedEarlier: "이전 답변",

@@ -11,6 +11,7 @@ import { getCategory, type AskHansLink } from '@/lib/askhans/categories'
 import { useAskCopy, useAskLang, localizeAskPath } from './copy'
 import { AskIcon } from './icons'
 import type { RelatedLink } from './links'
+import { PromoCard, PromoShare, promoImage } from './PromoCard'
 
 interface Props {
   categoryKey: string
@@ -22,6 +23,9 @@ interface Props {
   onHide: () => void
   /** compact horizontal strip for phones */
   variant: 'side' | 'strip'
+  /** the 2-minute promo is active: promo picture + share card replace the topic picture */
+  promo?: boolean
+  onPromoClose?: () => void
 }
 
 const CARD = 'group flex items-center gap-2.5 rounded-lg border border-border bg-white shadow-sm transition-colors hover:border-primary hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary'
@@ -75,8 +79,9 @@ function HideButton({ onHide }: { onHide: () => void }) {
   )
 }
 
-export function MarketingPanel({ categoryKey, related, onLinkClick, onRelatedClick, onHide, variant }: Props) {
+export function MarketingPanel({ categoryKey, related, onLinkClick, onRelatedClick, onHide, variant, promo, onPromoClose }: Props) {
   const tx = useAskCopy()
+  const lang = useAskLang()
   const cat = getCategory(categoryKey)
   const label = tx.categories[cat.key]?.label ?? cat.label_en
   const hasRelated = related.length > 0
@@ -86,7 +91,20 @@ export function MarketingPanel({ categoryKey, related, onLinkClick, onRelatedCli
   if (variant === 'strip') {
     return (
       <aside aria-label={`${tx.panelLabelPrefix}: ${label}`} className="flex flex-shrink-0 items-stretch gap-2 overflow-x-auto border-t border-border bg-muted/40 px-3 py-2">
-        <img src={cat.image} alt={cat.alt} width={56} height={56} className="h-14 w-14 flex-shrink-0 rounded-md object-cover" />
+        {promo ? (
+          <div className="flex flex-shrink-0 items-center gap-2 rounded-lg border border-primary/40 bg-white p-1.5">
+            <img src={promoImage(lang)} alt={tx.promo.imageAlt} width={168} height={56} className="h-14 w-auto flex-shrink-0 rounded-md" />
+            <div>
+              <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-primary">{tx.promo.share}</p>
+              <PromoShare />
+            </div>
+            <button type="button" onClick={onPromoClose} aria-label={tx.promo.close} title={tx.promo.close} className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary">
+              <AskIcon name="X" className="h-3.5 w-3.5" />
+            </button>
+          </div>
+        ) : (
+          <img src={cat.image} alt={cat.alt} width={56} height={56} className="h-14 w-14 flex-shrink-0 rounded-md object-cover" />
+        )}
         <p className="sr-only">{label}</p>
         {hasRelated
           ? related.map((l) => <RelatedCard key={l.href} link={l} onClick={onRelatedClick} compact />)
@@ -104,8 +122,9 @@ export function MarketingPanel({ categoryKey, related, onLinkClick, onRelatedCli
       </div>
       {/* Top third: topic picture, full width. Inactive in v1 — deliberately no handler, cursor or hover state. */}
       <div className="h-[33%] max-h-48 min-h-[88px] flex-shrink-0 overflow-hidden rounded-lg" style={{ backgroundColor: 'hsl(var(--hero-from))' }}>
-        <img src={cat.image} alt={cat.alt} width={900} height={300} className="h-full w-full select-none object-contain" draggable={false} />
+        <img src={promo ? promoImage(lang) : cat.image} alt={promo ? tx.promo.imageAlt : cat.alt} width={900} height={300} className="h-full w-full select-none object-contain" draggable={false} />
       </div>
+      {promo && onPromoClose && <PromoCard onClose={onPromoClose} />}
       {/* Rest: links that fit the conversation. */}
       <nav aria-label={hasRelated ? tx.panel.relatedHeading : tx.panelLinksHeading} className="flex min-h-0 flex-1 flex-col gap-1.5 overflow-y-auto">
         {hasRelated && currentLinks.length > 0 && <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">{tx.panel.relatedHeading}</p>}

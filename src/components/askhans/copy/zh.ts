@@ -112,6 +112,17 @@ export const copy: AskCopy = {
     emailSubject: "Ask Hans 的回答（PromptQuorum）",
   },
 
+  promo: {
+    title: "喜欢 Ask Hans 吗？",
+    body: "据我们所知，Ask Hans 和 PromptQuorum 的 MCP 服务器，是唯一同时提供能读取整个网站的 AI 助手和 MCP 服务器的本地 AI 网站。如果对您有帮助，欢迎分享给朋友。",
+    share: "分享给朋友",
+    copyLink: "复制链接",
+    linkCopied: "链接已复制",
+    shareText: "Ask Hans：PromptQuorum 的 AI 助手，解答本地 AI、硬件和智能家居问题。",
+    close: "隐藏",
+    imageAlt: "Ask Hans 与 PromptQuorum MCP：据我们所知，唯一同时提供两者的本地 AI 网站",
+  },
+
   panel: {
     relatedHeading: "与您的问题相关",
     relatedEarlier: "之前的回答",

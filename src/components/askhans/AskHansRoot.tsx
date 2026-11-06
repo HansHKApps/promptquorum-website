@@ -595,7 +595,7 @@ export function AskHansRoot() {
                 />
               )}
 
-              {!isDesktop && showPanel && <MarketingPanel variant="strip" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onHide={() => setShowPanel(false)} />}
+              {!isDesktop && showPanel && <MarketingPanel variant="strip" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onHide={() => setShowPanel(false)} promo={promo} onPromoClose={() => setPromo(false)} />}
 
               <form
                 className="flex-shrink-0 border-t border-border bg-white p-2.5"
@@ -646,7 +646,7 @@ export function AskHansRoot() {
               </form>
             </div>
 
-            {isDesktop && showPanel && <MarketingPanel variant="side" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onHide={() => setShowPanel(false)} />}
+            {isDesktop && showPanel && <MarketingPanel variant="side" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onHide={() => setShowPanel(false)} promo={promo} onPromoClose={() => setPromo(false)} />}
           </div>
         </AskHansWindow>
       )}

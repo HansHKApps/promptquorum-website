@@ -112,6 +112,17 @@ export const copy: AskCopy = {
     emailSubject: "Respuesta de Ask Hans (PromptQuorum)",
   },
 
+  promo: {
+    title: "¿Te gusta Ask Hans?",
+    body: "Hasta donde sabemos, Ask Hans y el servidor MCP de PromptQuorum son el único sitio web de IA local con un asistente de IA y un servidor MCP que pueden leer todo el sitio. Si te ayudan, compártelos con tus amigos.",
+    share: "Compartir con amigos",
+    copyLink: "Copiar enlace",
+    linkCopied: "Enlace copiado",
+    shareText: "Ask Hans: el asistente de IA de PromptQuorum para IA local, hardware y hogar inteligente.",
+    close: "Ocultar",
+    imageAlt: "Ask Hans y el MCP de PromptQuorum: hasta donde sabemos, el único sitio de IA local con ambos",
+  },
+
   panel: {
     relatedHeading: "Relacionado con su pregunta",
     relatedEarlier: "Respuestas anteriores",

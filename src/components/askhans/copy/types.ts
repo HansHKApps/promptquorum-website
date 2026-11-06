@@ -134,6 +134,19 @@ export interface AskCopy {
     emailSubject: string
   }
 
+  /** card shown after two minutes in Ask Hans: picture, share request, share buttons */
+  promo: {
+    title: string
+    body: string
+    share: string
+    copyLink: string
+    linkCopied: string
+    /** text that goes into the shared message (the link is added) */
+    shareText: string
+    close: string
+    imageAlt: string
+  }
+
   /** side panel with the topic picture + links, and the strip of earlier conversations */
   panel: {
     relatedHeading: string

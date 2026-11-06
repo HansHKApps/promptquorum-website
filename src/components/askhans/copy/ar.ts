@@ -113,6 +113,17 @@ export const copy: AskCopy = {
     emailSubject: "إجابة من Ask Hans (PromptQuorum)",
   },
 
+  promo: {
+    title: "هل أعجبك Ask Hans؟",
+    body: "على حد علمنا، يُعدّ Ask Hans وخادم MCP الخاص بـ PromptQuorum الموقع الوحيد المعني بالذكاء الاصطناعي المحلي الذي يجمع بين مساعد ذكاء اصطناعي وخادم MCP قادرين على قراءة الموقع كاملًا. إن أفادك فشاركه مع أصدقائك.",
+    share: "شارك مع الأصدقاء",
+    copyLink: "نسخ الرابط",
+    linkCopied: "تم نسخ الرابط",
+    shareText: "Ask Hans: مساعد الذكاء الاصطناعي في PromptQuorum للذكاء الاصطناعي المحلي والعتاد والمنزل الذكي.",
+    close: "إخفاء",
+    imageAlt: "Ask Hans وPromptQuorum MCP: على حد علمنا، الموقع الوحيد للذكاء الاصطناعي المحلي الذي يجمع بينهما",
+  },
+
   panel: {
     relatedHeading: "ما يناسب سؤالكم",
     relatedEarlier: "إجابات سابقة",
