@@ -5,7 +5,7 @@
 // Never stored: question/answer text, IP address, names.
 //
 // Keys:
-//   askhans:day:<YYYY-MM-DD>      hash of counters  (q:<cat>, tool:<name>, link:<cat>:<id>, share:<answer|promo>:<channel>, app:<slug>, dircat:<key>, click:<text|panel>:<section>,
+//   askhans:day:<YYYY-MM-DD>      hash of counters  (q:<cat>, tool:<name>, link:<cat>:<id>, share:<answer|promo>:<channel>, pexport:<copy|md|docx|pdf>, pexport:<process>:<format>, power:<process> (+ total_power), app:<slug>, dircat:<key>, click:<text|panel>:<section>,
 //                                 answers_clicked, followup_click, new, lang:<xx>, consent_yes/no/withdrawn,
 //                                 sessions, ret:<new|back>, days:<bucket>, dur:<bucket>, msgs:<bucket>)
 //   askhans:visits:<YYYY-MM-DD>   set of anonymous visit IDs (random, not linked to a person)
@@ -17,6 +17,7 @@ import { createHash } from 'crypto'
 import { redis } from '@/lib/redis'
 import { isCategoryKey, ASK_HANS_CATEGORIES } from '@/lib/askhans/categories'
 import { cleanTopics } from '@/lib/askhans/topics'
+import { isProcessId } from '@/lib/askhans/solutions/types'
 import { isDaysBucket, isDurationBucket, isQuestionBucket, isReturnKind } from '@/lib/askhans/engagement'
 
 export const runtime = 'nodejs'
@@ -30,6 +31,7 @@ const LINK_IDS = new Set(ASK_HANS_CATEGORIES.flatMap((c) => c.links.map((l) => l
 const CLICK_SOURCES = new Set(['text', 'panel'])
 const SHARE_SOURCES = new Set(['answer', 'promo'])
 const SHARE_CHANNELS = new Set(['copy', 'copy_plain', 'email', 'whatsapp', 'telegram', 'native', 'link'])
+const POWER_EXPORT_CHANNELS = new Set(['copy', 'md', 'docx', 'pdf'])
 const CLICK_SECTION = /^[a-z0-9-]{1,40}$/
 const TEXT_VERSION = /^[A-Za-z0-9._-]{1,40}$/
 const VISIT_ID = /^[a-zA-Z0-9-]{8,64}$/
@@ -106,6 +108,13 @@ export async function POST(req: NextRequest) {
         // Copy / share of an answer or of the promo card: fixed source + channel names only, never the shared text.
         if (!visitId || typeof b.source !== 'string' || !SHARE_SOURCES.has(b.source) || typeof b.channel !== 'string' || !SHARE_CHANNELS.has(b.channel)) return new NextResponse(null, { status: 400 })
         pipe.hincrby(dayKey, `share:${b.source}:${b.channel}`, 1)
+        break
+      }
+      case 'power_export': {
+        // Power Mode report copied or downloaded: fixed process id + format names only, never the report.
+        if (!visitId || !isProcessId(b.process) || typeof b.channel !== 'string' || !POWER_EXPORT_CHANNELS.has(b.channel)) return new NextResponse(null, { status: 400 })
+        pipe.hincrby(dayKey, `pexport:${b.channel}`, 1)
+        pipe.hincrby(dayKey, `pexport:${b.process}:${b.channel}`, 1)
         break
       }
       case 'promo_shown':

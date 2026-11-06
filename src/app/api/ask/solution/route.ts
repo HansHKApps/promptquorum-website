@@ -17,6 +17,7 @@ import { createHash } from 'crypto'
 import Anthropic from '@anthropic-ai/sdk'
 import { Ratelimit } from '@upstash/ratelimit'
 import { redis } from '@/lib/redis'
+import { bumpPower } from '@/lib/askhans/totals'
 import { ASK_HANS_SOLUTION_DEFAULT_MODEL, ASK_HANS_SOLUTION_LIMITS } from '@/lib/askhans/config'
 import { parseAnswers } from '@/lib/askhans/solutions/processes'
 import { SOLUTION_TOOL_ALLOWLIST, buildSolutionSystemPrompt, buildSolutionUserMessage } from '@/lib/askhans/solutions/prompt'
@@ -187,6 +188,7 @@ export async function POST(req: NextRequest): Promise<Response> {
         send({ t: 'error', code: 'failed' satisfies ErrorCode })
         return
       }
+      await bumpPower(processId)
       send({ t: 'done', tools: [...new Set(toolsUsed)] })
     } catch (err) {
       console.error('[askhans-solution] model call failed', err instanceof Error ? `${err.name}: ${err.message}` : err)
