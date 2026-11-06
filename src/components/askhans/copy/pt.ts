@@ -70,10 +70,17 @@ export const copy: AskCopy = {
   feedback: {
     prompt: 'Quão útil é o Ask Hans?',
     star: (n: number) => `${n} de 5 estrelas`,
-    commentPlaceholder: 'Opcional: o que podemos melhorar? Por favor, não informe dados pessoais.',
-    send: 'Enviar feedback',
     thanks: 'Obrigado pelo seu feedback!',
     error: 'Não foi possível enviar o feedback. Por favor, tente novamente mais tarde.',
+    followup: {
+      title: 'Lamentamos que não tenha sido mais útil.',
+      body: 'O que podemos melhorar? Quer nos enviar feedback por e-mail? Preenchemos os detalhes; acrescente suas próprias palavras antes de enviar.',
+      note: 'O e-mail contém sua última pergunta e a resposta. Apague o que não quiser enviar e não inclua dados pessoais.',
+      write: 'Escrever um e-mail',
+      skip: 'Não, obrigado',
+      copied: 'Os detalhes também foram copiados para a área de transferência.',
+      mail: { subject: 'Feedback sobre o Ask Hans ({n}/5)', intro: 'O que podemos melhorar? Escreva aqui:', rating: 'Avaliação', language: 'Idioma', page: 'Página', question: 'Última pergunta', answer: 'Última resposta' },
+    },
   },
   info: {
     label: "Sobre o Ask Hans",

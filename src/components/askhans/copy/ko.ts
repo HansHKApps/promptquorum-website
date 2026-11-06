@@ -70,10 +70,17 @@ export const copy: AskCopy = {
   feedback: {
     prompt: 'Ask Hans는 얼마나 도움이 되셨습니까?',
     star: (n: number) => `5점 만점에 ${n}점`,
-    commentPlaceholder: '선택 사항: 개선할 점이 있다면 알려 주십시오. 개인정보는 입력하지 마십시오.',
-    send: '피드백 보내기',
     thanks: '피드백을 주셔서 감사합니다!',
     error: '피드백을 보내지 못했습니다. 나중에 다시 시도해 주십시오.',
+    followup: {
+      title: '더 도움이 되지 못해 죄송합니다.',
+      body: '무엇을 개선하면 좋을까요? 이메일로 의견을 보내 주시겠습니까? 세부 정보는 미리 채워 드리며, 보내기 전에 직접 내용을 덧붙이실 수 있습니다.',
+      note: '이메일에는 마지막 질문과 답변이 포함됩니다. 보내고 싶지 않은 내용은 삭제하시고, 개인정보는 입력하지 마십시오.',
+      write: '이메일 쓰기',
+      skip: '괜찮습니다',
+      copied: '세부 정보가 클립보드에도 복사되었습니다.',
+      mail: { subject: 'Ask Hans 피드백 ({n}/5)', intro: '무엇을 개선하면 좋을까요? 여기에 적어 주십시오:', rating: '평점', language: '언어', page: '페이지', question: '마지막 질문', answer: '마지막 답변' },
+    },
   },
   info: {
     label: "Ask Hans 소개",

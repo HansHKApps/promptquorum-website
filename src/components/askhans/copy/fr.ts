@@ -70,10 +70,17 @@ export const copy: AskCopy = {
   feedback: {
     prompt: 'Dans quelle mesure Ask Hans vous a-t-il été utile ?',
     star: (n: number) => `${n} étoile${n === 1 ? '' : 's'} sur 5`,
-    commentPlaceholder: 'Facultatif : que pouvons-nous améliorer ? Merci de ne saisir aucune donnée personnelle.',
-    send: 'Envoyer le retour',
     thanks: 'Merci pour votre retour !',
     error: "Le retour n'a pas pu être envoyé. Veuillez réessayer plus tard.",
+    followup: {
+      title: 'Désolé que cela n’ait pas été plus utile.',
+      body: 'Que pouvons-nous améliorer ? Souhaitez-vous nous envoyer un retour par e-mail ? Nous préremplissons les détails ; ajoutez vos propres mots avant l’envoi.',
+      note: 'L’e-mail contient votre dernière question et la réponse. Supprimez ce que vous ne souhaitez pas envoyer et n’ajoutez aucune donnée personnelle.',
+      write: 'Écrire un e-mail',
+      skip: 'Non merci',
+      copied: 'Les détails ont aussi été copiés dans le presse-papiers.',
+      mail: { subject: 'Retour sur Ask Hans ({n}/5)', intro: 'Que pouvons-nous améliorer ? Écrivez ici :', rating: 'Note', language: 'Langue', page: 'Page', question: 'Dernière question', answer: 'Dernière réponse' },
+    },
   },
   info: {
     label: "À propos d'Ask Hans",
