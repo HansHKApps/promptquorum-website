@@ -50,7 +50,7 @@ export const copy: AskCopy = {
   panelLabelPrefix: 'Topic',
   panelLinksHeading: 'Related pages',
 
-  // DRAFT — Hans reviews and approves before launch (see docs/askhans-privacy-draft.de.md).
+  // Final consent text as of 2026-11-06 (see docs/askhans-privacy-draft.de.md). On any change bump ASK_HANS_CONSENT_TEXT_VERSION.
   consentTitle: 'Before we start',
   consentParagraphs: [
     'Ask Hans answers your questions with the help of AI (Claude by Anthropic), based on the content of PromptQuorum. For this, your input is sent to our server and to Anthropic. Please do not enter any personal data.',
@@ -59,6 +59,9 @@ export const copy: AskCopy = {
   ],
   consentPrivacyLink: 'More in the privacy policy.',
   consentPrivacyHref: '/privacy',
+  consentSaveLabel: "Save my conversations on this device for 7 days",
+  consentSaveOn: "Saved in your browser on this computer for 7 days. You can delete them at any time.",
+  consentSaveOff: "Your conversations are not saved. They disappear when you close the page.",
   consentYes: 'Yes, I agree',
   consentNo: 'No, thanks',
   consentQuestionLabel: 'Your question (will be sent after you make your choice):',
@@ -70,10 +73,18 @@ export const copy: AskCopy = {
   feedback: {
     prompt: 'How helpful is Ask Hans?',
     star: (n: number) => `${n} out of 5 stars`,
-    commentPlaceholder: 'Optional: What could we do better? Please do not include personal data.',
-    send: 'Send feedback',
     thanks: 'Thank you for your feedback!',
     error: 'The feedback could not be sent. Please try again later.',
+    followup: {
+      title: 'Sorry this was not more helpful.',
+      body: 'What could we do better? Would you like to give us feedback by email? We prefill the details; add your own words before you send.',
+      include: 'Include my question and the answer in the email, so that Hans can see what went wrong.',
+      note: 'You can edit the email before sending; nothing is sent until you send it. Please add no personal data.',
+      write: 'Write an email',
+      skip: 'No thanks',
+      copied: 'The details were also copied to your clipboard.',
+      mail: { subject: 'Ask Hans feedback ({n}/5)', intro: 'What could be better? Please write here:', rating: 'Rating', language: 'Language', page: 'Page', question: 'Last question', answer: 'Last answer' },
+    },
   },
   info: {
     label: "About Ask Hans",
@@ -82,7 +93,7 @@ export const copy: AskCopy = {
     canTitle: "What it can do",
     can: ["Find and compare local-AI apps from the software directory and name alternatives.", "Check whether your hardware (RAM, VRAM) can run a model.", "Explain software licenses in plain language and suggest a software stack.", "Point you to the matching guides, reviews and hardware pages on this site, in your language."],
     cannotTitle: "What it cannot do",
-    cannot: ["Look anything up outside promptquorum.com: no web search, no news, no weather, no live prices.", "Be right every time: it is an AI and can make mistakes. Check important facts on the linked pages.", "Give legal, medical, financial or electrical-installation advice. For these, ask a qualified professional.", "Remember you after you leave: conversations stay in your browser and are not stored on our server.", "Install, change or buy anything for you, or answer without a limit: {messages} questions per visit, {chars} characters per question."],
+    cannot: ["Look anything up outside promptquorum.com: no web search, no news, no weather, no live prices.", "Be right every time: it is an AI and can make mistakes. Check important facts on the linked pages.", "Give legal, medical, financial or electrical-installation advice. For these, ask a qualified professional.", "Remember you after you leave: conversations stay in your browser (kept for 7 days only if you chose to save them) and are not stored on our server.", "Install, change or buy anything for you, or answer without a limit: {messages} questions per visit, {chars} characters per question."],
     privacy: "Your question is sent to our server and to Anthropic (Claude) to create the answer. Please do not enter personal data.",
     close: "Close",
   },
@@ -101,6 +112,7 @@ export const copy: AskCopy = {
     historyHeading: "Earlier conversations",
     historyHide: "Hide earlier conversations",
     historyShow: (n: number) => `Show earlier conversations (${n})`,
+    historyClear: "Delete saved conversations",
   },
 
   search: {

@@ -7,7 +7,7 @@
 import { readdirSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
 
-const SKIN_CLUSTERS = ['local-llms', 'power-local-llm'] // renderers that implement article-skin
+const SKIN_CLUSTERS = ['local-llms', 'power-local-llm', 'prompt-engineering'] // renderers that implement article-skin
 const LOCALES = ['en', 'de', 'fr', 'es', 'pt', 'ar', 'ja', 'zh', 'ko']
 const args = process.argv.slice(2)
 const all = args.includes('--all')

@@ -3,7 +3,7 @@ import type { AboutCopy } from './types'
 export const de: AboutCopy = {
   kicker: 'Über PromptQuorum',
   h1: 'Ihr Wegweiser zu Open-Weight- und Open-Source-KI.',
-  h1PlainExplainer: '(einfach gesagt: ein KI-Modell kostenlos auf dem eigenen Computer ausführen)',
+  h1PlainExplainer: '(einfach gesagt: ein KI-Modell kostenlos auf dem eigenen Computer ausführen, wobei die Daten lokal bleiben)',
   heroLead:
     'PromptQuorum hilft Ihnen, KI privat auf Ihrer eigenen Hardware zu betreiben, statt sie von einem Cloud-Anbieter zu mieten: ein Verzeichnis mit {{appCount}} lokalen KI-Apps, eine Wissensdatenbank mit {{articleCount}} Artikeln in neun Sprachen und eine kostenlose App, die viele Modelle nebeneinander stellt.',
   heroSub:
@@ -65,14 +65,15 @@ export const de: AboutCopy = {
     'Unabhängigkeit von fremder Kontrolle ist das Thema, das sich durch die gesamte Seite zieht. Deshalb ist das Verzeichnis neutral, deshalb verlinkt jeder Eintrag zur offiziellen Quelle, und deshalb veröffentlichen wir in neun Sprachen.',
   believeItalic:
     'Wir halten Cloud-KI nicht für schlecht. Wir sind überzeugt, dass Sie eine echte Wahl haben sollten – und dass die Entscheidung für lokal genauso einfach sein sollte wie die Entscheidung für die Cloud.',
-  ecosystemH2: 'Ein Ökosystem, vier Teile, die zusammenspielen',
+  ecosystemH2: 'Ein Ökosystem, fünf Teile, die zusammenspielen',
   ecosystemLead:
-    'PromptQuorum ist nicht nur eine App und nicht nur ein Verzeichnis. Es sind vier Teile, die auf dasselbe Ziel ausgerichtet sind, damit Sie von „Was sollte ich nutzen?“ zu einem funktionierenden Setup kommen, ohne die Seite zu verlassen.',
+    'PromptQuorum ist nicht nur eine App und nicht nur ein Verzeichnis. Es sind fünf Teile, die auf dasselbe Ziel ausgerichtet sind, damit Sie von „Was sollte ich nutzen?“ zu einem funktionierenden Setup kommen, ohne die Seite zu verlassen.',
   connectsLabel: 'Zusammenspiel mit dem Rest:',
   findLabel: 'Finden',
   learnLabel: 'Lernen',
   useLabel: 'Nutzen',
   askLabel: 'Fragen',
+  hansLabel: 'Chatten',
   partFindTitle: 'Das Verzeichnis für lokale KI',
   partFindOneLiner: 'Die durchsuchbare, strukturierte Landkarte lokaler KI-Software.',
   partFindBody:
@@ -93,10 +94,16 @@ export const de: AboutCopy = {
   partAskBody:
     'Ein öffentlicher, schreibgeschützter Server für das Model Context Protocol. Claude, Cursor und jeder MCP-fähige Assistent können das Verzeichnis durchsuchen, App-Details abrufen, Anleitungen lesen und Lizenzen erklären. Kein Konto und kein API-Schlüssel nötig. Wenn Ihre KI eine Frage zu lokaler KI beantwortet, kann sie sich auf PromptQuorum stützen, statt zu raten.',
   partAskConnects: 'er liest dasselbe Verzeichnis und dieselben Anleitungen wie diese Website, sodass Ihr Assistent aus derselben Quelle antwortet wie Sie selbst.',
+  partHansTitle: 'Ask Hans',
+  partHansOneLiner: 'Fragen Sie in einfachen Worten und erhalten Sie eine Antwort aus dem Verzeichnis.',
+  partHansBody:
+    'Ein KI-Chat-Assistent auf dieser Website. Fragen Sie, welche App zu einer Aufgabe passt, was auf Ihrer Hardware läuft oder wie eine Lizenz funktioniert, und er antwortet aus demselben Verzeichnis und denselben Anleitungen. Er basiert auf KI, prüfen Sie wichtige Angaben daher in den Verzeichniseinträgen und Anleitungen. Ihr Gespräch bleibt in Ihrem Browser-Tab, und wir speichern weder Frage- noch Antworttexte.',
+  partHansConnects: 'er nutzt dieselben Werkzeuge wie der MCP-Server, sodass Sie die Antworten des Verzeichnisses erhalten, ohne einen eigenen Assistenten einzurichten.',
   ctaOpenDirectory: 'Verzeichnis öffnen',
   ctaReadGuides: 'Anleitungen lesen',
   ctaAboutApp: 'Über die App',
   ctaSeeHowToConnect: 'So verbinden Sie sich',
+  ctaAskHans: 'Ask Hans öffnen',
   practiceH3: 'So funktioniert es in der Praxis',
   practiceIntro: 'Angenommen, Sie haben 16 GB RAM und möchten offline mit Ihren eigenen PDFs chatten.',
   practiceSteps: [

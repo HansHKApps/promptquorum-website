@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "lastbrowser-review",
+        "title": "LastBrowser Review: Free AI Browser With a Local Ollama Sidekick",
+        "url": "/power-local-llm/lastbrowser-review",
+        "dateModified": "2026-11-06",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-m5-local-llm",
         "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
@@ -30,6 +38,14 @@
         "slug": "best-local-llms-customer-support-call-centers-enterprise",
         "title": "Best Local LLM Solutions for Enterprise Customer Support & Call Centers (2026)",
         "url": "/power-local-llm/best-local-llms-customer-support-call-centers-enterprise",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "trilium-notes-review",
+        "title": "Trilium Notes Review: Free Hierarchical Notes With Optional AI",
+        "url": "/power-local-llm/trilium-notes-review",
         "dateModified": "2026-11-03",
         "tier": "about"
       },
@@ -64,25 +80,9 @@
         "url": "/local-llms/local-llm-hardware-guide",
         "dateModified": "2026-11-02",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "nextchat-review",
-        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
-        "url": "/local-llms/nextchat-review",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-11-02",
-        "tier": "about"
       }
     ],
-    "totalCount": 341,
+    "totalCount": 343,
     "capped": true
   },
   "llama.cpp": {
@@ -869,6 +869,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "trilium-notes-review",
+        "title": "Trilium Notes Review: Free Hierarchical Notes With Optional AI",
+        "url": "/power-local-llm/trilium-notes-review",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "vllm-explained",
         "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
         "url": "/power-local-llm/vllm-explained",
@@ -922,17 +930,9 @@
         "url": "/power-local-llm/local-ai-agents-with-mcp",
         "dateModified": "2026-11-02",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "opencode-review",
-        "title": "OpenCode Review: The Open-Source Terminal Coding Agent",
-        "url": "/power-local-llm/opencode-review",
-        "dateModified": "2026-11-02",
-        "tier": "about"
       }
     ],
-    "totalCount": 171,
+    "totalCount": 172,
     "capped": true
   },
   "Atomic Chat": {
@@ -2611,6 +2611,20 @@
       }
     ],
     "totalCount": 5,
+    "capped": false
+  },
+  "LastBrowser": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "lastbrowser-review",
+        "title": "LastBrowser Review: Free AI Browser With a Local Ollama Sidekick",
+        "url": "/power-local-llm/lastbrowser-review",
+        "dateModified": "2026-11-06",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Chatbox": {
@@ -9945,6 +9959,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "trilium-notes-review",
+        "title": "Trilium Notes Review: Free Hierarchical Notes With Optional AI",
+        "url": "/power-local-llm/trilium-notes-review",
+        "dateModified": "2026-11-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "facet-review",
         "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
         "url": "/power-local-llm/facet-review",
@@ -9990,17 +10012,9 @@
         "url": "/power-local-llm/photoview-review",
         "dateModified": "2026-10-30",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tonfotos-review",
-        "title": "Tonfotos Review: Local Face Recognition Photo Manager",
-        "url": "/power-local-llm/tonfotos-review",
-        "dateModified": "2026-10-30",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "FluidVoice": {
@@ -10217,6 +10231,20 @@
         "title": "Hillnote Review: Local-First Markdown Notes With On-Device AI",
         "url": "/power-local-llm/hillnote-review",
         "dateModified": "2026-11-01",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Trilium Notes": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "trilium-notes-review",
+        "title": "Trilium Notes Review: Free Hierarchical Notes With Optional AI",
+        "url": "/power-local-llm/trilium-notes-review",
+        "dateModified": "2026-11-03",
         "tier": "about"
       }
     ],
@@ -12189,6 +12217,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "lastbrowser-review",
+        "title": "LastBrowser Review: Free AI Browser With a Local Ollama Sidekick",
+        "url": "/power-local-llm/lastbrowser-review",
+        "dateModified": "2026-11-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -12204,7 +12240,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "SiYuan": {
@@ -13280,7 +13316,7 @@
         "slug": "greencube-review",
         "title": "GreenCube Review: One-Time-Purchase Offline AI for Windows",
         "url": "/power-local-llm/greencube-review",
-        "dateModified": "2026-10-30",
+        "dateModified": "2026-11-06",
         "tier": "about"
       }
     ],

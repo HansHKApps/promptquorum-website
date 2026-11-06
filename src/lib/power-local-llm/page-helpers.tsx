@@ -910,6 +910,7 @@ const HUB_THEMES: Array<{
       'local-llm-chat-assistants-compared',
       'lm-studio-review',
       'sidekick-review',
+      'lastbrowser-review',
     ],
   },
   {
@@ -1196,6 +1197,7 @@ const HUB_THEMES: Array<{
       'siyuan-review',
       'logseq-review',
       'hillnote-review',
+      'trilium-notes-review',
       'karakeep-review',
       'evershelf-review',
       'ai-file-sorter-review',

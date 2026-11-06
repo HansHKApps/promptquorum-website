@@ -7,6 +7,7 @@ const OG_SLUG = keyToSlug('prompt-governance-production');
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
     last_full_refresh: '2026-11-02',
@@ -311,6 +312,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   de: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
     last_full_refresh: '2026-11-02',
@@ -615,6 +617,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   es: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
     last_full_refresh: '2026-11-02',
@@ -919,6 +922,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
     last_full_refresh: '2026-11-02',
@@ -1223,6 +1227,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
     last_full_refresh: '2026-11-02',
@@ -1527,6 +1532,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
     last_full_refresh: '2026-11-02',
@@ -1831,6 +1837,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
     last_full_refresh: '2026-11-02',
@@ -2135,6 +2142,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
     last_full_refresh: '2026-11-02',
@@ -2439,6 +2447,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-05-02',
     last_full_refresh: '2026-11-02',

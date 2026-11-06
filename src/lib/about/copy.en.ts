@@ -3,7 +3,7 @@ import type { AboutCopy } from './types'
 export const en: AboutCopy = {
   kicker: 'About PromptQuorum',
   h1: 'The discovery engine for open-weight and open-source AI.',
-  h1PlainExplainer: '(in plain terms: running an AI model for free on your own computer)',
+  h1PlainExplainer: '(in plain terms: running an AI model for free on your own computer, with your data staying local)',
   heroLead:
     'PromptQuorum helps you run AI privately, on your own hardware, instead of renting it from a cloud provider: a directory of {{appCount}} local-AI apps, a knowledge base of {{articleCount}} articles in nine languages, and a free app that puts many models side by side.',
   heroSub:
@@ -68,14 +68,15 @@ export const en: AboutCopy = {
   believeItalic:
     'We don’t believe cloud AI is bad. We believe you should have a real choice, and that choosing local should be as easy as choosing cloud.',
 
-  ecosystemH2: 'One ecosystem, four parts that work together',
+  ecosystemH2: 'One ecosystem, five parts that work together',
   ecosystemLead:
-    'PromptQuorum is not just an app, and not just a directory. It is four parts built around the same goal, so you can go from “what should I run?” to a working setup without leaving the site.',
+    'PromptQuorum is not just an app, and not just a directory. It is five parts built around the same goal, so you can go from “what should I run?” to a working setup without leaving the site.',
   connectsLabel: 'Works with the rest:',
   findLabel: 'Find',
   learnLabel: 'Learn',
   useLabel: 'Use',
   askLabel: 'Ask',
+  hansLabel: 'Chat',
   partFindTitle: 'The Local AI Directory',
   partFindOneLiner: 'The searchable, structured map of local-AI software.',
   partFindBody:
@@ -96,10 +97,16 @@ export const en: AboutCopy = {
   partAskBody:
     'A public, read-only server for the Model Context Protocol. Claude, Cursor and any MCP-capable assistant can search the directory, pull app details, read guides and explain licenses. No account and no API key. When your AI answers a question about local AI, it can draw on PromptQuorum instead of guessing.',
   partAskConnects: 'it reads the same directory and guides as this website, so your assistant answers from the same source you do.',
+  partHansTitle: 'Ask Hans',
+  partHansOneLiner: 'Ask in plain words, get an answer from the directory.',
+  partHansBody:
+    'An AI chat assistant on this site. Ask which app fits a job, what runs on your hardware or how a license works, and it answers from the same directory and guides. It is built on AI, so check important details in the directory entries and guides. Your conversation stays in your browser tab, and we do not store the text of questions or answers.',
+  partHansConnects: 'it uses the same tools as the MCP server, so you get the directory’s answers without setting up an assistant of your own.',
   ctaOpenDirectory: 'Open the directory',
   ctaReadGuides: 'Read the guides',
   ctaAboutApp: 'About the app',
   ctaSeeHowToConnect: 'See how to connect',
+  ctaAskHans: 'Open Ask Hans',
   practiceH3: 'How it works in practice',
   practiceIntro: 'Say you have 16 GB of RAM and want to chat with your own PDFs offline.',
   practiceSteps: [

@@ -546,6 +546,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'surf-review',
   'claude-code-local-review',
   'sidekick-review',
+  'lastbrowser-review',
   'lucebox-review',
   'little-coder-review',
   'translate-books-with-llms-review',
@@ -619,6 +620,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'fullmoon-review',
   'reins-review',
   'hillnote-review',
+  'trilium-notes-review',
   'llm-vision-review',
   // picoclaw review (sipeed/picoclaw) — 2026-11-01
   'picoclaw-review',

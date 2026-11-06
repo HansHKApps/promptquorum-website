@@ -17,7 +17,7 @@ import { Markdown } from './markdown'
 import { CopyButton, plainText } from './CopyButton'
 import { clickSection, relatedLinks } from './links'
 import { MarketingPanel } from './MarketingPanel'
-import { clearConsent, getVisitId, loadConsent, loadConversations, loadUi, saveConsent, saveConversations, saveUi, uid } from './storage'
+import { clearConsent, clearSavedConversations, getVisitId, loadConsent, loadConversations, loadUi, saveConsent, saveConversations, saveUi, uid } from './storage'
 import type { AskErrorCode, ChatMsg, ConsentRecord, Conversation, Rect, UiState } from './types'
 import { logEvent, streamAnswer } from './useAskStream'
 import { useIsDesktop } from './useIsDesktop'
@@ -67,17 +67,19 @@ export function AskHansRoot() {
   const inputRef = useRef<HTMLTextAreaElement>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
   const stick = useRef(true)
+  const expandedRef = useRef<HTMLDivElement>(null)
 
   // ---- load / persist -------------------------------------------------------------------------
   // Browser storage only exists after hydration, so the initial load has to happen in an effect.
   /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
     visitId.current = getVisitId()
-    const cs = loadConversations()
+    const c = loadConsent()
+    // Conversations are only restored if the visitor chose "save for 7 days" in the consent step.
+    const cs = c?.saveHistory ? loadConversations() : []
     setConversations(cs)
     setActiveId(cs.length ? cs[cs.length - 1].id : null)
     setUi(loadUi())
-    const c = loadConsent()
     setConsent(c)
     setReady(true)
   }, [])
@@ -96,8 +98,15 @@ export function AskHansRoot() {
   }, [ui.open, ready])
 
   useEffect(() => {
-    if (ready && !streaming) saveConversations(conversations)
-  }, [conversations, streaming, ready])
+    if (!ready || streaming) return
+    if (consent?.saveHistory) saveConversations(conversations)
+    else clearSavedConversations()
+  }, [conversations, streaming, ready, consent?.saveHistory])
+
+  // Opening an earlier conversation renders it below the cards: bring it into view.
+  useEffect(() => {
+    if (expanded.size > 0) expandedRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+  }, [expanded])
 
   const active = conversations.find((c) => c.id === activeId) ?? null
   const previous = conversations.filter((c) => c.id !== active?.id && c.messages.length > 0).reverse()
@@ -127,6 +136,7 @@ export function AskHansRoot() {
 
   const send = useCallback(
     async (text: string, consentValue: ConsentRecord | null) => {
+      window.umami?.track('ask_hans_question', { source_page: window.location.pathname })
       const conv = active ?? newConversation()
       const history = toApiMessages(conv.messages)
       const userMsg: ChatMsg = { id: uid(), role: 'user', content: text }
@@ -219,8 +229,8 @@ export function AskHansRoot() {
   }, [ready, openWindow])
 
   // ---- consent --------------------------------------------------------------------------------
-  const chooseConsent = (value: 'yes' | 'no') => {
-    const rec = saveConsent(value)
+  const chooseConsent = (value: 'yes' | 'no', saveHistory: boolean) => {
+    const rec = saveConsent(value, saveHistory)
     setConsent(rec)
     setConsentOpen(false)
     if (value === 'yes') logEvent({ type: 'consent_yes', visitId: visitId.current, textVersion: ASK_HANS_CONSENT_TEXT_VERSION })
@@ -236,11 +246,21 @@ export function AskHansRoot() {
   const withdrawConsent = () => {
     if (consent?.value === 'yes') logEvent({ type: 'consent_withdrawn', visitId: visitId.current, textVersion: ASK_HANS_CONSENT_TEXT_VERSION })
     clearConsent()
+    clearSavedConversations() // withdrawing also deletes anything saved on this device
     setConsent(null)
     setConsentOpen(true)
   }
 
   // ---- other actions --------------------------------------------------------------------------
+  const clearHistory = () => {
+    if (streaming) return
+    clearSavedConversations()
+    const conv = newConversation()
+    setConversations([conv])
+    setActiveId(conv.id)
+    setExpanded(new Set())
+  }
+
   const startNew = () => {
     if (streaming || !active || active.messages.length === 0) return
     const conv = newConversation()
@@ -364,7 +384,13 @@ export function AskHansRoot() {
 
   return (
     <>
-      {showLogo && <AskHansLogo ref={logoRef} onOpen={openWindow} />}
+      {showLogo && <AskHansLogo
+          ref={logoRef}
+          onOpen={() => {
+            window.umami?.track('ask_hans_button_click', { source_page: window.location.pathname })
+            openWindow()
+          }}
+        />}
       {ui.open && (
         <AskHansWindow
           maximized={ui.maximized}
@@ -391,6 +417,16 @@ export function AskHansRoot() {
                     </button>
                   ) : (
                     <span />
+                  )}
+                  {previous.length > 0 && consent?.saveHistory && (
+                    <button
+                      type="button"
+                      disabled={streaming}
+                      onClick={clearHistory}
+                      className="rounded-md px-1.5 py-1 text-[12px] font-medium text-muted-foreground hover:bg-muted hover:text-foreground disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+                    >
+                      {tx.panel.historyClear}
+                    </button>
                   )}
                   {!showPanel && (
                     <button
@@ -444,7 +480,7 @@ export function AskHansRoot() {
                           })}
                         </ul>
                         {previous.filter((c) => expanded.has(c.id)).map((c) => (
-                          <div key={c.id} className="rounded-xl border border-border bg-white p-3">
+                          <div key={c.id} ref={expandedRef} className="rounded-xl border border-border bg-white p-3">
                             <ul className="space-y-3">{c.messages.map((m) => renderMessage(c.id, m, true))}</ul>
                             <button
                               type="button"
@@ -471,7 +507,13 @@ export function AskHansRoot() {
                 )}
               </div>
 
-              {active && active.messages.some((m) => m.role === 'assistant' && m.content && !m.pending && !m.error) && <FeedbackBar key={active.id} />}
+              {active && active.messages.some((m) => m.role === 'assistant' && m.content && !m.pending && !m.error) && (
+                <FeedbackBar
+                  key={active.id}
+                  lastQuestion={[...active.messages].reverse().find((m) => m.role === 'user')?.content}
+                  lastAnswer={[...active.messages].reverse().find((m) => m.role === 'assistant' && m.content && !m.pending && !m.error)?.content}
+                />
+              )}
 
               {!isDesktop && showPanel && <MarketingPanel variant="strip" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onHide={() => setShowPanel(false)} />}
 

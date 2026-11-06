@@ -102,6 +102,7 @@ import { article as a_fullmoon_review } from './articles/fullmoon-review'
 import { article as a_reins_review } from './articles/reins-review'
 import { article as a_openvoiceos_review } from './articles/openvoiceos-review'
 import { article as a_hillnote_review } from './articles/hillnote-review'
+import { article as a_trilium_notes_review } from './articles/trilium-notes-review'
 import { article as a_llm_vision_review } from './articles/llm-vision-review'
 import { article as a_picoclaw_review } from './articles/picoclaw-review'
 import { article as a_scrypted_review } from './articles/scrypted-review'
@@ -437,6 +438,7 @@ import { article as a_farfalle_review } from './articles/farfalle-review'
 import { article as a_surf_review } from './articles/surf-review'
 import { article as a_claude_code_local_review } from './articles/claude-code-local-review'
 import { article as a_sidekick_review } from './articles/sidekick-review'
+import { article as a_lastbrowser_review } from './articles/lastbrowser-review'
 import { article as a_lucebox_review } from './articles/lucebox-review'
 import { article as a_little_coder_review } from './articles/little-coder-review'
 import { article as a_translate_books_with_llms_review } from './articles/translate-books-with-llms-review'
@@ -798,6 +800,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'reins-review':                                  a_reins_review,
   'openvoiceos-review':                            a_openvoiceos_review,
   'hillnote-review':                               a_hillnote_review,
+  'trilium-notes-review':                          a_trilium_notes_review,
   'llm-vision-review':                             a_llm_vision_review,
   'picoclaw-review':                               a_picoclaw_review,
   'scrypted-review':                               a_scrypted_review,
@@ -932,6 +935,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'surf-review':                                         a_surf_review,
   'claude-code-local-review':                            a_claude_code_local_review,
   'sidekick-review':                                     a_sidekick_review,
+  'lastbrowser-review':                                  a_lastbrowser_review,
   'lucebox-review':                                      a_lucebox_review,
   'little-coder-review':                                 a_little_coder_review,
   'translate-books-with-llms-review':                    a_translate_books_with_llms_review,

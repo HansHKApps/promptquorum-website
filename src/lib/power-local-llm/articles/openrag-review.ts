@@ -2,7 +2,7 @@
 // Slug: openrag-review
 // Companion to: langflow-visual-ai-orchestration-review, ragflow-document-understanding-rag-review, anythingllm-review, dify-ai-workflow-builder-review
 // Sources: docs.openr.ag (what-is-openrag, quickstart, install-options, troubleshoot, configuration reference), openr.ag and the
-// langflow-ai/openrag GitHub repository with its v0.8.0 release page, all checked 2026-10-23 — no hands-on testing. The project
+// langflow-ai/openrag GitHub repository with its v0.8.1 release page, all checked 2026-11-06 — no hands-on testing. The project
 // lists no prices, so there is no currency to localise.
 
 import type { Language } from '@/lib/blog/blogContent'
@@ -13,14 +13,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-23',
-    dateModified: '2026-10-23',
-    next_refresh_due: '2027-04-23',
+    dateModified: '2026-11-06',
+    next_refresh_due: '2027-05-06',
     theme: 'RAG & Document Chat',
     heroImage: '/images/openrag-review-hero-en.webp',
     title: 'OpenRAG Review: Open-Source Agentic RAG Platform',
     seoTitle: 'OpenRAG Review: Open-Source Agentic RAG Platform',
     intro:
-      'OpenRAG is an open-source package that wires Langflow, OpenSearch and Docling together so you can upload documents, search them and chat with them in a browser. It is started from a terminal and runs as containers, so it is aimed at developers. This review reflects its documentation, website and GitHub release page as checked on 23 October 2026.',
+      'OpenRAG is an open-source package that wires Langflow, OpenSearch and Docling together so you can upload documents, search them and chat with them in a browser. It is started from a terminal and runs as containers, so it is aimed at developers. This review reflects its documentation, website and GitHub release page as checked on 6 November 2026.',
     metaDescription:
       'OpenRAG review: Apache-2.0 RAG platform that bundles Langflow, OpenSearch and Docling. Install steps, requirements, data flow and what we could not verify.',
     twitterDescription:
@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Mac', 'Linux PC', 'Windows PC with WSL'],
     leadAnswerBlock:
-      '**OpenRAG (version 0.8.0, released 1 October 2026) is a free, Apache-2.0 platform that bundles Langflow, OpenSearch and Docling so you can upload documents and chat with them through a web interface.** It runs as containers started from a terminal, which makes it a developer tool rather than a double-click app. PromptQuorum has not installed or tested it; every statement here comes from the project\'s own documentation.',
+      '**OpenRAG (version 0.8.1, released 29 October 2026) is a free, Apache-2.0 platform that bundles Langflow, OpenSearch and Docling so you can upload documents and chat with them through a web interface.** It runs as containers started from a terminal, which makes it a developer tool rather than a double-click app. PromptQuorum has not installed or tested it; every statement here comes from the project\'s own documentation.',
     quickAnswerTop: {
       en: {
         question: 'Is OpenRAG a local, private RAG app?',
@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OpenSearch adds hybrid search and multi-tenancy.',
           'Python and TypeScript SDKs let your own code call it.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -88,7 +88,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Maintenance: v0.8.0 was published on 1 October 2026 and the repository changed again on 23 October 2026, so no stale-project warning applies.',
+          'Maintenance: v0.8.1 was published on 29 October 2026 and the repository changed again on 6 November 2026, so no stale-project warning applies.',
           'License: Apache-2.0, with the source on GitHub under the langflow-ai organization.',
           'Cost: the package has no price; your costs are hardware and any model API you connect.',
           'Windows: supported only inside the Windows Subsystem for Linux.',
@@ -97,7 +97,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'This review is based on the OpenRAG documentation, website and GitHub release page, checked on 23 October 2026. PromptQuorum has not installed, tested or benchmarked the software.',
+            text: 'This review is based on the OpenRAG documentation, website and GitHub release page, checked on 6 November 2026. PromptQuorum has not installed, tested or benchmarked the software.',
           },
         ],
       },
@@ -126,7 +126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Option': 'Source code', 'How to get it': '[github.com/langflow-ai/openrag](https://github.com/langflow-ai/openrag)' },
           { 'Option': 'Privacy policy', 'How to get it': 'No own page found; the docs cite [IBM\'s privacy statement](https://www.ibm.com/privacy)' },
         ],
-        note: 'Version reviewed: v0.8.0, published on 1 October 2026 per the [GitHub release page](https://github.com/langflow-ai/openrag/releases); the repository itself was last updated on 23 October 2026. The release ships only a Python wheel and source archive, with no installer or desktop build, so a terminal and a developer environment are required.',
+        note: 'Version reviewed: v0.8.1, published on 29 October 2026 per the [GitHub release page](https://github.com/langflow-ai/openrag/releases); the repository itself was last updated on 6 November 2026. The release ships only a Python wheel and source archive, with no installer or desktop build, so a terminal and a developer environment are required.',
       },
       requirements: {
         id: 'requirements',
@@ -264,15 +264,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'OpenRAG is a free, Apache-2.0 RAG stack that, per its documentation, ships Langflow, OpenSearch and Docling already connected and is actively updated, with a release in early October 2026 and commits through 23 October. Against that, it is heavy to run, supports Windows only through WSL, defaults to OpenAI, and PromptQuorum could not verify its quality, telemetry or fully offline use. It suits developers who want a ready-made, hackable RAG back end; readers who prefer an installable app can compare [AnythingLLM](/power-local-llm/anythingllm-review), and those who want only the flow builder can look at [Langflow](/power-local-llm/langflow-visual-ai-orchestration-review).',
+          'OpenRAG is a free, Apache-2.0 RAG stack that, per its documentation, ships Langflow, OpenSearch and Docling already connected and is actively updated, with a release on 29 October 2026 and commits through 6 November. Against that, it is heavy to run, supports Windows only through WSL, defaults to OpenAI, and PromptQuorum could not verify its quality, telemetry or fully offline use. It suits developers who want a ready-made, hackable RAG back end; readers who prefer an installable app can compare [AnythingLLM](/power-local-llm/anythingllm-review), and those who want only the flow builder can look at [Langflow](/power-local-llm/langflow-visual-ai-orchestration-review).',
       },
       sources: {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[OpenRAG documentation](https://docs.openr.ag) — overview, quickstart, install options, troubleshooting and configuration reference, checked 23 October 2026.',
+          '[OpenRAG documentation](https://docs.openr.ag) — overview, quickstart, install options, troubleshooting and configuration reference, checked 6 November 2026.',
           '[OpenRAG website](https://www.openr.ag) — project homepage.',
-          '[OpenRAG on GitHub](https://github.com/langflow-ai/openrag) and its [v0.8.0 release](https://github.com/langflow-ai/openrag/releases) — source, Apache-2.0 license and release assets.',
+          '[OpenRAG on GitHub](https://github.com/langflow-ai/openrag) and its [v0.8.1 release](https://github.com/langflow-ai/openrag/releases) — source, Apache-2.0 license and release assets.',
         ],
       },
       relatedReading: {
@@ -296,7 +296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/openrag-review',
       inLanguage: 'en',
       datePublished: '2026-10-23',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -324,14 +324,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-23',
-    dateModified: '2026-10-23',
-    next_refresh_due: '2027-04-23',
+    dateModified: '2026-11-06',
+    next_refresh_due: '2027-05-06',
     theme: 'RAG & Document Chat',
     heroImage: '/images/openrag-review-hero-de.webp',
     title: 'OpenRAG-Rezension: Quelloffene Plattform für agentisches RAG',
     seoTitle: 'OpenRAG-Rezension: Quelloffene agentische RAG-Plattform',
     intro:
-      'OpenRAG ist ein quelloffenes Paket, das Langflow, OpenSearch und Docling verbindet, damit Sie Dokumente hochladen, durchsuchen und im Browser mit ihnen chatten können. Es wird im Terminal gestartet und läuft als Container, richtet sich also an Entwickler. Diese Rezension gibt Dokumentation, Website und GitHub-Release-Seite wieder, wie am 23. Oktober 2026 geprüft.',
+      'OpenRAG ist ein quelloffenes Paket, das Langflow, OpenSearch und Docling verbindet, damit Sie Dokumente hochladen, durchsuchen und im Browser mit ihnen chatten können. Es wird im Terminal gestartet und läuft als Container, richtet sich also an Entwickler. Diese Rezension gibt Dokumentation, Website und GitHub-Release-Seite wieder, wie am 6. November 2026 geprüft.',
     metaDescription:
       'OpenRAG-Rezension: RAG-Plattform unter Apache-2.0, die Langflow, OpenSearch und Docling bündelt. Installation, Anforderungen, Datenfluss und offene Punkte.',
     twitterDescription:
@@ -352,7 +352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Mac', 'Linux PC', 'Windows PC with WSL'],
     leadAnswerBlock:
-      '**OpenRAG (Version 0.8.0, veröffentlicht am 1. Oktober 2026) ist eine kostenlose Plattform unter Apache-2.0, die Langflow, OpenSearch und Docling bündelt, sodass Sie Dokumente hochladen und über eine Weboberfläche mit ihnen chatten können.** Sie läuft als Container, die im Terminal gestartet werden, und ist damit ein Entwicklerwerkzeug statt einer App zum Doppelklicken. PromptQuorum hat sie weder installiert noch getestet; alle Aussagen stammen aus der Dokumentation des Projekts.',
+      '**OpenRAG (Version 0.8.1, veröffentlicht am 29. Oktober 2026) ist eine kostenlose Plattform unter Apache-2.0, die Langflow, OpenSearch und Docling bündelt, sodass Sie Dokumente hochladen und über eine Weboberfläche mit ihnen chatten können.** Sie läuft als Container, die im Terminal gestartet werden, und ist damit ein Entwicklerwerkzeug statt einer App zum Doppelklicken. PromptQuorum hat sie weder installiert noch getestet; alle Aussagen stammen aus der Dokumentation des Projekts.',
     quickAnswerTop: {
       de: {
         question: 'Ist OpenRAG eine lokale, private RAG-App?',
@@ -364,7 +364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OpenSearch ergänzt hybride Suche und Mandantenfähigkeit.',
           'Python- und TypeScript-SDKs erlauben den Aufruf aus eigenem Code.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -399,7 +399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Pflege: v0.8.0 erschien am 1. Oktober 2026, und das Repository wurde am 23. Oktober 2026 erneut geändert; ein Warnhinweis für veraltete Projekte entfällt daher.',
+          'Pflege: v0.8.1 erschien am 29. Oktober 2026, und das Repository wurde am 6. November 2026 erneut geändert; ein Warnhinweis für veraltete Projekte entfällt daher.',
           'Lizenz: Apache-2.0, Quellcode auf GitHub in der Organisation langflow-ai.',
           'Kosten: Das Paket hat keinen Preis; Kosten entstehen durch Hardware und jede angebundene Modell-API.',
           'Windows: wird nur innerhalb des Windows-Subsystems für Linux unterstützt.',
@@ -408,7 +408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Diese Rezension basiert auf der OpenRAG-Dokumentation, der Website und der GitHub-Release-Seite, geprüft am 23. Oktober 2026. PromptQuorum hat die Software weder installiert noch getestet oder gemessen.',
+            text: 'Diese Rezension basiert auf der OpenRAG-Dokumentation, der Website und der GitHub-Release-Seite, geprüft am 6. November 2026. PromptQuorum hat die Software weder installiert noch getestet oder gemessen.',
           },
         ],
       },
@@ -437,7 +437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Option': 'Quellcode', 'Bezugsquelle': '[github.com/langflow-ai/openrag](https://github.com/langflow-ai/openrag)' },
           { 'Option': 'Datenschutzerklärung', 'Bezugsquelle': 'Keine eigene Seite gefunden; die Doku verweist auf die [Datenschutzerklärung von IBM](https://www.ibm.com/privacy)' },
         ],
-        note: 'Geprüfte Version: v0.8.0, laut [GitHub-Release-Seite](https://github.com/langflow-ai/openrag/releases) am 1. Oktober 2026 veröffentlicht; das Repository selbst wurde zuletzt am 23. Oktober 2026 aktualisiert. Das Release enthält nur ein Python-Wheel und ein Quellarchiv, keinen Installer und keinen Desktop-Build – ein Terminal und eine Entwicklungsumgebung sind daher erforderlich.',
+        note: 'Geprüfte Version: v0.8.1, laut [GitHub-Release-Seite](https://github.com/langflow-ai/openrag/releases) am 29. Oktober 2026 veröffentlicht; das Repository selbst wurde zuletzt am 6. November 2026 aktualisiert. Das Release enthält nur ein Python-Wheel und ein Quellarchiv, keinen Installer und keinen Desktop-Build – ein Terminal und eine Entwicklungsumgebung sind daher erforderlich.',
       },
       requirements: {
         id: 'requirements',
@@ -575,15 +575,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'OpenRAG ist ein kostenloser RAG-Stack unter Apache-2.0, der laut Dokumentation Langflow, OpenSearch und Docling bereits verbunden mitliefert und aktiv gepflegt wird – mit einem Release Anfang Oktober 2026 und Änderungen bis zum 23. Oktober. Dagegen ist der Betrieb aufwendig, Windows wird nur über WSL unterstützt, OpenAI ist die Voreinstellung, und PromptQuorum konnte weder Qualität noch Telemetrie noch rein offline Nutzung überprüfen. Es eignet sich für Entwickler, die ein fertiges, anpassbares RAG-Backend wollen; wer eine installierbare App bevorzugt, kann [AnythingLLM](/de/power-local-llm/anythingllm-review) vergleichen, und wer nur den Ablauf-Builder braucht, schaut sich [Langflow](/de/power-local-llm/langflow-visual-ai-orchestration-review) an.',
+          'OpenRAG ist ein kostenloser RAG-Stack unter Apache-2.0, der laut Dokumentation Langflow, OpenSearch und Docling bereits verbunden mitliefert und aktiv gepflegt wird – mit einem Release am 29. Oktober 2026 und Änderungen bis zum 6. November. Dagegen ist der Betrieb aufwendig, Windows wird nur über WSL unterstützt, OpenAI ist die Voreinstellung, und PromptQuorum konnte weder Qualität noch Telemetrie noch rein offline Nutzung überprüfen. Es eignet sich für Entwickler, die ein fertiges, anpassbares RAG-Backend wollen; wer eine installierbare App bevorzugt, kann [AnythingLLM](/de/power-local-llm/anythingllm-review) vergleichen, und wer nur den Ablauf-Builder braucht, schaut sich [Langflow](/de/power-local-llm/langflow-visual-ai-orchestration-review) an.',
       },
       sources: {
         id: 'sources',
         title: 'Quellen',
         items: [
-          '[OpenRAG-Dokumentation](https://docs.openr.ag) — Überblick, Schnellstart, Installationsoptionen, Fehlerbehebung und Konfigurationsreferenz, geprüft am 23. Oktober 2026.',
+          '[OpenRAG-Dokumentation](https://docs.openr.ag) — Überblick, Schnellstart, Installationsoptionen, Fehlerbehebung und Konfigurationsreferenz, geprüft am 6. November 2026.',
           '[OpenRAG-Website](https://www.openr.ag) — Startseite des Projekts.',
-          '[OpenRAG auf GitHub](https://github.com/langflow-ai/openrag) und das zugehörige [v0.8.0-Release](https://github.com/langflow-ai/openrag/releases) — Quellcode, Apache-2.0-Lizenz und Release-Dateien.',
+          '[OpenRAG auf GitHub](https://github.com/langflow-ai/openrag) und das zugehörige [v0.8.1-Release](https://github.com/langflow-ai/openrag/releases) — Quellcode, Apache-2.0-Lizenz und Release-Dateien.',
         ],
       },
       relatedReading: {
@@ -603,14 +603,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-23',
-    dateModified: '2026-10-23',
-    next_refresh_due: '2027-04-23',
+    dateModified: '2026-11-06',
+    next_refresh_due: '2027-05-06',
     theme: 'RAG & Document Chat',
     heroImage: '/images/openrag-review-hero-es.webp',
     title: 'Reseña de OpenRAG: plataforma RAG agéntica de código abierto',
     seoTitle: 'Reseña de OpenRAG: plataforma RAG agéntica abierta',
     intro:
-      'OpenRAG es un paquete de código abierto que conecta Langflow, OpenSearch y Docling para que puedas subir documentos, buscarlos y chatear con ellos en el navegador. Se inicia desde una terminal y se ejecuta en contenedores, así que está pensado para desarrolladores. Esta reseña refleja su documentación, su sitio web y su página de versiones en GitHub, según lo comprobado el 23 de octubre de 2026.',
+      'OpenRAG es un paquete de código abierto que conecta Langflow, OpenSearch y Docling para que puedas subir documentos, buscarlos y chatear con ellos en el navegador. Se inicia desde una terminal y se ejecuta en contenedores, así que está pensado para desarrolladores. Esta reseña refleja su documentación, su sitio web y su página de versiones en GitHub, según lo comprobado el 6 de noviembre de 2026.',
     metaDescription:
       'Reseña de OpenRAG: plataforma RAG Apache-2.0 que reúne Langflow, OpenSearch y Docling. Instalación, requisitos, flujo de datos y lo no verificado.',
     twitterDescription:
@@ -631,7 +631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Mac', 'Linux PC', 'Windows PC with WSL'],
     leadAnswerBlock:
-      '**OpenRAG (versión 0.8.0, publicada el 1 de octubre de 2026) es una plataforma gratuita con licencia Apache-2.0 que reúne Langflow, OpenSearch y Docling para que puedas subir documentos y chatear con ellos mediante una interfaz web.** Funciona con contenedores que se inician desde una terminal, por lo que es una herramienta para desarrolladores y no una app de doble clic. PromptQuorum no la ha instalado ni probado; todo lo que se afirma aquí procede de la documentación del propio proyecto.',
+      '**OpenRAG (versión 0.8.1, publicada el 29 de octubre de 2026) es una plataforma gratuita con licencia Apache-2.0 que reúne Langflow, OpenSearch y Docling para que puedas subir documentos y chatear con ellos mediante una interfaz web.** Funciona con contenedores que se inician desde una terminal, por lo que es una herramienta para desarrolladores y no una app de doble clic. PromptQuorum no la ha instalado ni probado; todo lo que se afirma aquí procede de la documentación del propio proyecto.',
     quickAnswerTop: {
       es: {
         question: '¿Es OpenRAG una app RAG local y privada?',
@@ -643,7 +643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OpenSearch añade búsqueda híbrida y multiinquilino.',
           'Los SDK de Python y TypeScript permiten llamarlo desde tu propio código.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -678,7 +678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Mantenimiento: la v0.8.0 se publicó el 1 de octubre de 2026 y el repositorio volvió a cambiar el 23 de octubre de 2026, por lo que no se aplica ninguna advertencia de proyecto abandonado.',
+          'Mantenimiento: la v0.8.1 se publicó el 29 de octubre de 2026 y el repositorio volvió a cambiar el 6 de noviembre de 2026, por lo que no se aplica ninguna advertencia de proyecto abandonado.',
           'Licencia: Apache-2.0, con el código fuente en GitHub dentro de la organización langflow-ai.',
           'Coste: el paquete no tiene precio; tus costes son el hardware y cualquier API de modelos que conectes.',
           'Windows: solo se admite dentro del Subsistema de Windows para Linux.',
@@ -687,7 +687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Esta reseña se basa en la documentación de OpenRAG, su sitio web y su página de versiones en GitHub, comprobados el 23 de octubre de 2026. PromptQuorum no ha instalado, probado ni medido el software.',
+            text: 'Esta reseña se basa en la documentación de OpenRAG, su sitio web y su página de versiones en GitHub, comprobados el 6 de noviembre de 2026. PromptQuorum no ha instalado, probado ni medido el software.',
           },
         ],
       },
@@ -716,7 +716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Opción': 'Código fuente', 'Dónde conseguirlo': '[github.com/langflow-ai/openrag](https://github.com/langflow-ai/openrag)' },
           { 'Opción': 'Política de privacidad', 'Dónde conseguirlo': 'No se encontró una propia; la documentación cita la [declaración de privacidad de IBM](https://www.ibm.com/privacy)' },
         ],
-        note: 'Versión revisada: v0.8.0, publicada el 1 de octubre de 2026 según la [página de versiones de GitHub](https://github.com/langflow-ai/openrag/releases); el repositorio se actualizó por última vez el 23 de octubre de 2026. La versión solo incluye un paquete wheel de Python y un archivo de código fuente, sin instalador ni compilación de escritorio, por lo que hacen falta una terminal y un entorno de desarrollo.',
+        note: 'Versión revisada: v0.8.1, publicada el 29 de octubre de 2026 según la [página de versiones de GitHub](https://github.com/langflow-ai/openrag/releases); el repositorio se actualizó por última vez el 6 de noviembre de 2026. La versión solo incluye un paquete wheel de Python y un archivo de código fuente, sin instalador ni compilación de escritorio, por lo que hacen falta una terminal y un entorno de desarrollo.',
       },
       requirements: {
         id: 'requirements',
@@ -854,15 +854,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'OpenRAG es un stack RAG gratuito con licencia Apache-2.0 que, según su documentación, incluye Langflow, OpenSearch y Docling ya conectados y se mantiene activamente, con una versión a principios de octubre de 2026 y cambios hasta el 23 de octubre. En contra, es pesado de ejecutar, solo admite Windows mediante WSL, usa OpenAI por defecto y PromptQuorum no pudo verificar su calidad, su telemetría ni su uso totalmente sin conexión. Encaja con desarrolladores que quieren un backend RAG listo y modificable; quien prefiera una app instalable puede comparar [AnythingLLM](/es/power-local-llm/anythingllm-review), y quien solo necesite el constructor de flujos puede mirar [Langflow](/es/power-local-llm/langflow-visual-ai-orchestration-review).',
+          'OpenRAG es un stack RAG gratuito con licencia Apache-2.0 que, según su documentación, incluye Langflow, OpenSearch y Docling ya conectados y se mantiene activamente, con una versión el 29 de octubre de 2026 y cambios hasta el 6 de noviembre. En contra, es pesado de ejecutar, solo admite Windows mediante WSL, usa OpenAI por defecto y PromptQuorum no pudo verificar su calidad, su telemetría ni su uso totalmente sin conexión. Encaja con desarrolladores que quieren un backend RAG listo y modificable; quien prefiera una app instalable puede comparar [AnythingLLM](/es/power-local-llm/anythingllm-review), y quien solo necesite el constructor de flujos puede mirar [Langflow](/es/power-local-llm/langflow-visual-ai-orchestration-review).',
       },
       sources: {
         id: 'sources',
         title: 'Fuentes',
         items: [
-          '[Documentación de OpenRAG](https://docs.openr.ag) — visión general, inicio rápido, opciones de instalación, resolución de problemas y referencia de configuración, consultadas el 23 de octubre de 2026.',
+          '[Documentación de OpenRAG](https://docs.openr.ag) — visión general, inicio rápido, opciones de instalación, resolución de problemas y referencia de configuración, consultadas el 6 de noviembre de 2026.',
           '[Sitio web de OpenRAG](https://www.openr.ag) — página principal del proyecto.',
-          '[OpenRAG en GitHub](https://github.com/langflow-ai/openrag) y su [versión v0.8.0](https://github.com/langflow-ai/openrag/releases) — código fuente, licencia Apache-2.0 y archivos de la versión.',
+          '[OpenRAG en GitHub](https://github.com/langflow-ai/openrag) y su [versión v0.8.1](https://github.com/langflow-ai/openrag/releases) — código fuente, licencia Apache-2.0 y archivos de la versión.',
         ],
       },
       relatedReading: {
@@ -882,14 +882,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-23',
-    dateModified: '2026-10-23',
-    next_refresh_due: '2027-04-23',
+    dateModified: '2026-11-06',
+    next_refresh_due: '2027-05-06',
     theme: 'RAG & Document Chat',
     heroImage: '/images/openrag-review-hero-fr.webp',
     title: 'Test d’OpenRAG : plateforme RAG agentique open source',
     seoTitle: 'Test d’OpenRAG : plateforme RAG agentique open source',
     intro:
-      'OpenRAG est un paquet open source qui relie Langflow, OpenSearch et Docling pour que vous puissiez téléverser des documents, les interroger et dialoguer avec eux dans un navigateur. Il se lance depuis un terminal et tourne dans des conteneurs ; il s’adresse donc aux développeurs. Ce test reflète sa documentation, son site web et sa page de versions GitHub, consultés le 23 octobre 2026.',
+      'OpenRAG est un paquet open source qui relie Langflow, OpenSearch et Docling pour que vous puissiez téléverser des documents, les interroger et dialoguer avec eux dans un navigateur. Il se lance depuis un terminal et tourne dans des conteneurs ; il s’adresse donc aux développeurs. Ce test reflète sa documentation, son site web et sa page de versions GitHub, consultés le 6 novembre 2026.',
     metaDescription:
       'Test d’OpenRAG : plateforme RAG Apache-2.0 qui réunit Langflow, OpenSearch et Docling. Installation, prérequis, flux de données, points non vérifiés.',
     twitterDescription:
@@ -910,7 +910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Mac', 'Linux PC', 'Windows PC with WSL'],
     leadAnswerBlock:
-      '**OpenRAG (version 0.8.0, publiée le 1er octobre 2026) est une plateforme gratuite sous licence Apache-2.0 qui réunit Langflow, OpenSearch et Docling pour téléverser des documents et dialoguer avec eux via une interface web.** Elle tourne dans des conteneurs lancés depuis un terminal : c’est un outil de développeur, pas une application à installer d’un double-clic. PromptQuorum ne l’a ni installée ni testée ; tout ce qui suit provient de la documentation du projet.',
+      '**OpenRAG (version 0.8.1, publiée le 29 octobre 2026) est une plateforme gratuite sous licence Apache-2.0 qui réunit Langflow, OpenSearch et Docling pour téléverser des documents et dialoguer avec eux via une interface web.** Elle tourne dans des conteneurs lancés depuis un terminal : c’est un outil de développeur, pas une application à installer d’un double-clic. PromptQuorum ne l’a ni installée ni testée ; tout ce qui suit provient de la documentation du projet.',
     quickAnswerTop: {
       fr: {
         question: 'OpenRAG est-il une application RAG locale et privée ?',
@@ -922,7 +922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OpenSearch ajoute la recherche hybride et le multi-locataire.',
           'Des SDK Python et TypeScript permettent de l’appeler depuis votre propre code.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -957,7 +957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Maintenance : la v0.8.0 est sortie le 1er octobre 2026 et le dépôt a encore évolué le 23 octobre 2026 ; aucun avertissement de projet délaissé ne s’applique.',
+          'Maintenance : la v0.8.1 est sortie le 29 octobre 2026 et le dépôt a encore évolué le 6 novembre 2026 ; aucun avertissement de projet délaissé ne s’applique.',
           'Licence : Apache-2.0, code source sur GitHub dans l’organisation langflow-ai.',
           'Coût : le paquet n’a pas de prix ; vos frais sont le matériel et toute API de modèle que vous branchez.',
           'Windows : pris en charge uniquement dans le sous-système Windows pour Linux.',
@@ -966,7 +966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Ce test s’appuie sur la documentation d’OpenRAG, son site web et sa page de versions GitHub, consultés le 23 octobre 2026. PromptQuorum n’a ni installé, ni testé, ni mesuré le logiciel.',
+            text: 'Ce test s’appuie sur la documentation d’OpenRAG, son site web et sa page de versions GitHub, consultés le 6 novembre 2026. PromptQuorum n’a ni installé, ni testé, ni mesuré le logiciel.',
           },
         ],
       },
@@ -995,7 +995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Option': 'Code source', 'Où l’obtenir': '[github.com/langflow-ai/openrag](https://github.com/langflow-ai/openrag)' },
           { 'Option': 'Politique de confidentialité', 'Où l’obtenir': 'Aucune page propre ; la doc cite la [déclaration de confidentialité d’IBM](https://www.ibm.com/privacy)' },
         ],
-        note: 'Version testée : v0.8.0, publiée le 1er octobre 2026 selon la [page de versions GitHub](https://github.com/langflow-ai/openrag/releases) ; le dépôt lui-même a été mis à jour pour la dernière fois le 23 octobre 2026. La version ne fournit qu’un paquet wheel Python et une archive de sources, sans installateur ni version de bureau : un terminal et un environnement de développement sont donc nécessaires.',
+        note: 'Version testée : v0.8.1, publiée le 29 octobre 2026 selon la [page de versions GitHub](https://github.com/langflow-ai/openrag/releases) ; le dépôt lui-même a été mis à jour pour la dernière fois le 6 novembre 2026. La version ne fournit qu’un paquet wheel Python et une archive de sources, sans installateur ni version de bureau : un terminal et un environnement de développement sont donc nécessaires.',
       },
       requirements: {
         id: 'requirements',
@@ -1133,15 +1133,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'OpenRAG est une pile RAG gratuite sous Apache-2.0 qui, selon sa documentation, fournit Langflow, OpenSearch et Docling déjà reliés et reste activement mise à jour, avec une version début octobre 2026 et des modifications jusqu’au 23 octobre. En revanche, elle est lourde à exécuter, ne prend en charge Windows que via WSL, utilise OpenAI par défaut, et PromptQuorum n’a pu vérifier ni sa qualité, ni sa télémétrie, ni un usage totalement hors ligne. Elle convient aux développeurs qui veulent un backend RAG prêt à l’emploi et modifiable ; qui préfère une application installable peut comparer [AnythingLLM](/fr/power-local-llm/anythingllm-review), et qui ne veut que le constructeur de flux peut regarder [Langflow](/fr/power-local-llm/langflow-visual-ai-orchestration-review).',
+          'OpenRAG est une pile RAG gratuite sous Apache-2.0 qui, selon sa documentation, fournit Langflow, OpenSearch et Docling déjà reliés et reste activement mise à jour, avec une version le 29 octobre 2026 et des modifications jusqu’au 6 novembre. En revanche, elle est lourde à exécuter, ne prend en charge Windows que via WSL, utilise OpenAI par défaut, et PromptQuorum n’a pu vérifier ni sa qualité, ni sa télémétrie, ni un usage totalement hors ligne. Elle convient aux développeurs qui veulent un backend RAG prêt à l’emploi et modifiable ; qui préfère une application installable peut comparer [AnythingLLM](/fr/power-local-llm/anythingllm-review), et qui ne veut que le constructeur de flux peut regarder [Langflow](/fr/power-local-llm/langflow-visual-ai-orchestration-review).',
       },
       sources: {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[Documentation d’OpenRAG](https://docs.openr.ag) — présentation, démarrage rapide, options d’installation, dépannage et référence de configuration, consultés le 23 octobre 2026.',
+          '[Documentation d’OpenRAG](https://docs.openr.ag) — présentation, démarrage rapide, options d’installation, dépannage et référence de configuration, consultés le 6 novembre 2026.',
           '[Site web d’OpenRAG](https://www.openr.ag) — page d’accueil du projet.',
-          '[OpenRAG sur GitHub](https://github.com/langflow-ai/openrag) et sa [version v0.8.0](https://github.com/langflow-ai/openrag/releases) — code source, licence Apache-2.0 et fichiers de la version.',
+          '[OpenRAG sur GitHub](https://github.com/langflow-ai/openrag) et sa [version v0.8.1](https://github.com/langflow-ai/openrag/releases) — code source, licence Apache-2.0 et fichiers de la version.',
         ],
       },
       relatedReading: {
@@ -1161,14 +1161,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-23',
-    dateModified: '2026-10-23',
-    next_refresh_due: '2027-04-23',
+    dateModified: '2026-11-06',
+    next_refresh_due: '2027-05-06',
     theme: 'RAG & Document Chat',
     heroImage: '/images/openrag-review-hero-ja.webp',
     title: 'OpenRAGレビュー：オープンソースのエージェント型RAGプラットフォーム',
     seoTitle: 'OpenRAGレビュー：オープンソースのエージェント型RAG基盤',
     intro:
-      'OpenRAGは、Langflow・OpenSearch・Doclingをつなぎ、文書のアップロード、検索、ブラウザ上でのチャットを可能にするオープンソースのパッケージです。ターミナルから起動し、コンテナで動作するため、開発者向けです。このレビューは、2026年10月23日に確認したドキュメント、公式サイト、GitHubのリリースページに基づきます。',
+      'OpenRAGは、Langflow・OpenSearch・Doclingをつなぎ、文書のアップロード、検索、ブラウザ上でのチャットを可能にするオープンソースのパッケージです。ターミナルから起動し、コンテナで動作するため、開発者向けです。このレビューは、2026年11月6日に確認したドキュメント、公式サイト、GitHubのリリースページに基づきます。',
     metaDescription:
       'OpenRAGレビュー：Langflow・OpenSearch・Doclingを束ねるApache-2.0のRAG基盤。導入手順、動作要件、データの流れ、確認できなかった点を解説します。',
     twitterDescription:
@@ -1189,7 +1189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Mac', 'Linux PC', 'Windows PC with WSL'],
     leadAnswerBlock:
-      '**OpenRAG（バージョン0.8.0、2026年10月1日公開）は、Langflow・OpenSearch・Doclingを束ね、文書をアップロードしてWebインターフェースでチャットできる、Apache-2.0の無料プラットフォームです。**ターミナルから起動するコンテナで動作するため、ダブルクリックで使うアプリではなく開発者向けのツールです。PromptQuorumはインストールもテストもしておらず、記載はすべてプロジェクト自身のドキュメントに基づきます。',
+      '**OpenRAG（バージョン0.8.1、2026年10月29日公開）は、Langflow・OpenSearch・Doclingを束ね、文書をアップロードしてWebインターフェースでチャットできる、Apache-2.0の無料プラットフォームです。**ターミナルから起動するコンテナで動作するため、ダブルクリックで使うアプリではなく開発者向けのツールです。PromptQuorumはインストールもテストもしておらず、記載はすべてプロジェクト自身のドキュメントに基づきます。',
     quickAnswerTop: {
       ja: {
         question: 'OpenRAGはローカルで完結するプライベートなRAGアプリですか？',
@@ -1201,7 +1201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OpenSearchによりハイブリッド検索とマルチテナントに対応します。',
           'PythonとTypeScriptのSDKで、自作コードから呼び出せます。',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1236,7 +1236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '保守状況：v0.8.0は2026年10月1日に公開され、リポジトリは2026年10月23日にも更新されているため、更新停止の警告は不要です。',
+          '保守状況：v0.8.1は2026年10月29日に公開され、リポジトリは2026年11月6日にも更新されているため、更新停止の警告は不要です。',
           'ライセンス：Apache-2.0。ソースコードはGitHubのlangflow-ai組織で公開されています。',
           '費用：パッケージ自体に価格はなく、かかるのはハードウェアと、接続するモデルAPIの料金です。',
           'Windows：Windows Subsystem for Linux内でのみ対応しています。',
@@ -1245,7 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'このレビューは、2026年10月23日に確認したOpenRAGのドキュメント、公式サイト、GitHubのリリースページに基づきます。PromptQuorumはソフトウェアのインストール、テスト、ベンチマークを行っていません。',
+            text: 'このレビューは、2026年11月6日に確認したOpenRAGのドキュメント、公式サイト、GitHubのリリースページに基づきます。PromptQuorumはソフトウェアのインストール、テスト、ベンチマークを行っていません。',
           },
         ],
       },
@@ -1274,7 +1274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '方法': 'ソースコード', '入手先': '[github.com/langflow-ai/openrag](https://github.com/langflow-ai/openrag)' },
           { '方法': 'プライバシーポリシー', '入手先': 'OpenRAG固有のページは見つからず。ドキュメントの同意設定は[IBMのプライバシーステートメント](https://www.ibm.com/privacy)を参照' },
         ],
-        note: '確認したバージョン：v0.8.0。[GitHubのリリースページ](https://github.com/langflow-ai/openrag/releases)によれば2026年10月1日公開で、リポジトリ自体は2026年10月23日に最後に更新されています。リリースにはPythonのwheelとソースアーカイブしかなく、インストーラーやデスクトップ版はないため、ターミナルと開発環境が必要です。',
+        note: '確認したバージョン：v0.8.1。[GitHubのリリースページ](https://github.com/langflow-ai/openrag/releases)によれば2026年10月29日公開で、リポジトリ自体は2026年11月6日に最後に更新されています。リリースにはPythonのwheelとソースアーカイブしかなく、インストーラーやデスクトップ版はないため、ターミナルと開発環境が必要です。',
       },
       requirements: {
         id: 'requirements',
@@ -1412,15 +1412,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '総評',
         content:
-          'OpenRAGは、ドキュメントによれば、Langflow・OpenSearch・Doclingを接続済みで同梱するApache-2.0の無料RAG基盤で、2026年10月初めのリリースと10月23日までの更新があり、活発に保守されています。一方で、動かすには重く、WindowsはWSL経由のみ、既定はOpenAIで、品質、テレメトリ、完全オフラインでの利用はPromptQuorumでは確認できませんでした。すぐ使えて手を入れやすいRAGバックエンドがほしい開発者に向いています。インストール型のアプリが好みなら[AnythingLLM](/ja/power-local-llm/anythingllm-review)、フロービルダーだけなら[Langflow](/ja/power-local-llm/langflow-visual-ai-orchestration-review)も比べてみてください。',
+          'OpenRAGは、ドキュメントによれば、Langflow・OpenSearch・Doclingを接続済みで同梱するApache-2.0の無料RAG基盤で、2026年10月29日のリリースと11月6日までの更新があり、活発に保守されています。一方で、動かすには重く、WindowsはWSL経由のみ、既定はOpenAIで、品質、テレメトリ、完全オフラインでの利用はPromptQuorumでは確認できませんでした。すぐ使えて手を入れやすいRAGバックエンドがほしい開発者に向いています。インストール型のアプリが好みなら[AnythingLLM](/ja/power-local-llm/anythingllm-review)、フロービルダーだけなら[Langflow](/ja/power-local-llm/langflow-visual-ai-orchestration-review)も比べてみてください。',
       },
       sources: {
         id: 'sources',
         title: '情報源',
         items: [
-          '[OpenRAGドキュメント](https://docs.openr.ag) — 概要、クイックスタート、インストールオプション、トラブルシューティング、設定リファレンス。2026年10月23日に確認。',
+          '[OpenRAGドキュメント](https://docs.openr.ag) — 概要、クイックスタート、インストールオプション、トラブルシューティング、設定リファレンス。2026年11月6日に確認。',
           '[OpenRAG公式サイト](https://www.openr.ag) — プロジェクトのトップページ。',
-          '[GitHubのOpenRAG](https://github.com/langflow-ai/openrag)と[v0.8.0リリース](https://github.com/langflow-ai/openrag/releases) — ソースコード、Apache-2.0ライセンス、リリースのファイル。',
+          '[GitHubのOpenRAG](https://github.com/langflow-ai/openrag)と[v0.8.1リリース](https://github.com/langflow-ai/openrag/releases) — ソースコード、Apache-2.0ライセンス、リリースのファイル。',
         ],
       },
       relatedReading: {
@@ -1440,14 +1440,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-23',
-    dateModified: '2026-10-23',
-    next_refresh_due: '2027-04-23',
+    dateModified: '2026-11-06',
+    next_refresh_due: '2027-05-06',
     theme: 'RAG & Document Chat',
     heroImage: '/images/openrag-review-hero-pt.webp',
     title: 'Análise do OpenRAG: plataforma RAG agêntica de código aberto',
     seoTitle: 'Análise do OpenRAG: plataforma RAG agêntica aberta',
     intro:
-      'O OpenRAG é um pacote de código aberto que conecta Langflow, OpenSearch e Docling para que você possa enviar documentos, pesquisá-los e conversar com eles no navegador. Ele é iniciado pelo terminal e roda em contêineres, por isso é voltado a desenvolvedores. Esta análise reflete sua documentação, seu site e a página de versões no GitHub, conforme verificados em 23 de outubro de 2026.',
+      'O OpenRAG é um pacote de código aberto que conecta Langflow, OpenSearch e Docling para que você possa enviar documentos, pesquisá-los e conversar com eles no navegador. Ele é iniciado pelo terminal e roda em contêineres, por isso é voltado a desenvolvedores. Esta análise reflete sua documentação, seu site e a página de versões no GitHub, conforme verificados em 6 de novembro de 2026.',
     metaDescription:
       'Análise do OpenRAG: plataforma RAG Apache-2.0 que reúne Langflow, OpenSearch e Docling. Instalação, requisitos, fluxo de dados e o que não verificamos.',
     twitterDescription:
@@ -1468,7 +1468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Mac', 'Linux PC', 'Windows PC with WSL'],
     leadAnswerBlock:
-      '**O OpenRAG (versão 0.8.0, lançada em 1º de outubro de 2026) é uma plataforma gratuita com licença Apache-2.0 que reúne Langflow, OpenSearch e Docling para que você envie documentos e converse com eles por uma interface web.** Ele roda em contêineres iniciados pelo terminal, o que o torna uma ferramenta para desenvolvedores, e não um app de duplo clique. A PromptQuorum não o instalou nem o testou; tudo o que consta aqui vem da documentação do próprio projeto.',
+      '**O OpenRAG (versão 0.8.1, lançada em 29 de outubro de 2026) é uma plataforma gratuita com licença Apache-2.0 que reúne Langflow, OpenSearch e Docling para que você envie documentos e converse com eles por uma interface web.** Ele roda em contêineres iniciados pelo terminal, o que o torna uma ferramenta para desenvolvedores, e não um app de duplo clique. A PromptQuorum não o instalou nem o testou; tudo o que consta aqui vem da documentação do próprio projeto.',
     quickAnswerTop: {
       pt: {
         question: 'O OpenRAG é um app RAG local e privado?',
@@ -1480,7 +1480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O OpenSearch adiciona busca híbrida e multilocação.',
           'SDKs de Python e TypeScript permitem chamá-lo a partir do seu código.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1515,7 +1515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Manutenção: a v0.8.0 foi publicada em 1º de outubro de 2026 e o repositório mudou de novo em 23 de outubro de 2026, então não se aplica nenhum aviso de projeto parado.',
+          'Manutenção: a v0.8.1 foi publicada em 29 de outubro de 2026 e o repositório mudou de novo em 6 de novembro de 2026, então não se aplica nenhum aviso de projeto parado.',
           'Licença: Apache-2.0, com o código-fonte no GitHub, na organização langflow-ai.',
           'Custo: o pacote não tem preço; seus gastos são o hardware e qualquer API de modelo que você conectar.',
           'Windows: só é compatível dentro do Subsistema do Windows para Linux.',
@@ -1524,7 +1524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Esta análise baseia-se na documentação do OpenRAG, no site e na página de versões do GitHub, verificados em 23 de outubro de 2026. A PromptQuorum não instalou, testou nem mediu o desempenho do software.',
+            text: 'Esta análise baseia-se na documentação do OpenRAG, no site e na página de versões do GitHub, verificados em 6 de novembro de 2026. A PromptQuorum não instalou, testou nem mediu o desempenho do software.',
           },
         ],
       },
@@ -1553,7 +1553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Opção': 'Código-fonte', 'Onde obter': '[github.com/langflow-ai/openrag](https://github.com/langflow-ai/openrag)' },
           { 'Opção': 'Política de privacidade', 'Onde obter': 'Nenhuma própria; a documentação cita a [declaração de privacidade da IBM](https://www.ibm.com/privacy)' },
         ],
-        note: 'Versão analisada: v0.8.0, publicada em 1º de outubro de 2026 segundo a [página de versões do GitHub](https://github.com/langflow-ai/openrag/releases); o repositório em si foi atualizado pela última vez em 23 de outubro de 2026. A versão traz apenas um pacote wheel de Python e um arquivo de código-fonte, sem instalador nem build de desktop, por isso são necessários um terminal e um ambiente de desenvolvimento.',
+        note: 'Versão analisada: v0.8.1, publicada em 29 de outubro de 2026 segundo a [página de versões do GitHub](https://github.com/langflow-ai/openrag/releases); o repositório em si foi atualizado pela última vez em 6 de novembro de 2026. A versão traz apenas um pacote wheel de Python e um arquivo de código-fonte, sem instalador nem build de desktop, por isso são necessários um terminal e um ambiente de desenvolvimento.',
       },
       requirements: {
         id: 'requirements',
@@ -1691,15 +1691,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'O OpenRAG é um stack RAG gratuito com licença Apache-2.0 que, segundo a documentação, traz Langflow, OpenSearch e Docling já conectados e é mantido ativamente, com uma versão no início de outubro de 2026 e alterações até 23 de outubro. Em contrapartida, é pesado de executar, só tem suporte ao Windows via WSL, usa a OpenAI por padrão, e a PromptQuorum não conseguiu verificar sua qualidade, sua telemetria nem o uso totalmente offline. Serve a desenvolvedores que querem um backend RAG pronto e modificável; quem prefere um app instalável pode comparar o [AnythingLLM](/pt/power-local-llm/anythingllm-review), e quem só precisa do construtor de fluxos pode olhar o [Langflow](/pt/power-local-llm/langflow-visual-ai-orchestration-review).',
+          'O OpenRAG é um stack RAG gratuito com licença Apache-2.0 que, segundo a documentação, traz Langflow, OpenSearch e Docling já conectados e é mantido ativamente, com uma versão em 29 de outubro de 2026 e alterações até 6 de novembro. Em contrapartida, é pesado de executar, só tem suporte ao Windows via WSL, usa a OpenAI por padrão, e a PromptQuorum não conseguiu verificar sua qualidade, sua telemetria nem o uso totalmente offline. Serve a desenvolvedores que querem um backend RAG pronto e modificável; quem prefere um app instalável pode comparar o [AnythingLLM](/pt/power-local-llm/anythingllm-review), e quem só precisa do construtor de fluxos pode olhar o [Langflow](/pt/power-local-llm/langflow-visual-ai-orchestration-review).',
       },
       sources: {
         id: 'sources',
         title: 'Fontes',
         items: [
-          '[Documentação do OpenRAG](https://docs.openr.ag) — visão geral, início rápido, opções de instalação, solução de problemas e referência de configuração, verificados em 23 de outubro de 2026.',
+          '[Documentação do OpenRAG](https://docs.openr.ag) — visão geral, início rápido, opções de instalação, solução de problemas e referência de configuração, verificados em 6 de novembro de 2026.',
           '[Site do OpenRAG](https://www.openr.ag) — página inicial do projeto.',
-          '[OpenRAG no GitHub](https://github.com/langflow-ai/openrag) e sua [versão v0.8.0](https://github.com/langflow-ai/openrag/releases) — código-fonte, licença Apache-2.0 e arquivos da versão.',
+          '[OpenRAG no GitHub](https://github.com/langflow-ai/openrag) e sua [versão v0.8.1](https://github.com/langflow-ai/openrag/releases) — código-fonte, licença Apache-2.0 e arquivos da versão.',
         ],
       },
       relatedReading: {
@@ -1719,14 +1719,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-23',
-    dateModified: '2026-10-23',
-    next_refresh_due: '2027-04-23',
+    dateModified: '2026-11-06',
+    next_refresh_due: '2027-05-06',
     theme: 'RAG & Document Chat',
     heroImage: '/images/openrag-review-hero-ar.webp',
     title: 'مراجعة OpenRAG: منصة RAG وكيلية مفتوحة المصدر',
     seoTitle: 'مراجعة OpenRAG: منصة RAG وكيلية مفتوحة المصدر للمستندات',
     intro:
-      'OpenRAG حزمة مفتوحة المصدر تربط Langflow وOpenSearch وDocling لتتمكن من رفع المستندات والبحث فيها والدردشة معها في المتصفح. تُشغَّل من الطرفية وتعمل داخل حاويات، لذا فهي موجّهة للمطورين. تعكس هذه المراجعة وثائقها وموقعها وصفحة الإصدارات على GitHub كما جرى التحقق منها في 23 أكتوبر 2026.',
+      'OpenRAG حزمة مفتوحة المصدر تربط Langflow وOpenSearch وDocling لتتمكن من رفع المستندات والبحث فيها والدردشة معها في المتصفح. تُشغَّل من الطرفية وتعمل داخل حاويات، لذا فهي موجّهة للمطورين. تعكس هذه المراجعة وثائقها وموقعها وصفحة الإصدارات على GitHub كما جرى التحقق منها في 6 نوفمبر 2026.',
     metaDescription:
       'مراجعة OpenRAG: منصة RAG بترخيص Apache-2.0 تجمع Langflow وOpenSearch وDocling. خطوات التثبيت والمتطلبات وتدفق البيانات وما لم نتمكن من التحقق منه.',
     twitterDescription:
@@ -1747,7 +1747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Mac', 'Linux PC', 'Windows PC with WSL'],
     leadAnswerBlock:
-      '**OpenRAG (الإصدار 0.8.0، صدر في 1 أكتوبر 2026) منصة مجانية بترخيص Apache-2.0 تجمع Langflow وOpenSearch وDocling لتتمكن من رفع المستندات والدردشة معها عبر واجهة ويب.** تعمل داخل حاويات تُشغَّل من الطرفية، فهي أداة للمطورين وليست تطبيقًا يُثبَّت بنقرتين. لم تثبّتها PromptQuorum ولم تختبرها؛ كل ما يرد هنا مصدره وثائق المشروع نفسه.',
+      '**OpenRAG (الإصدار 0.8.1، صدر في 29 أكتوبر 2026) منصة مجانية بترخيص Apache-2.0 تجمع Langflow وOpenSearch وDocling لتتمكن من رفع المستندات والدردشة معها عبر واجهة ويب.** تعمل داخل حاويات تُشغَّل من الطرفية، فهي أداة للمطورين وليست تطبيقًا يُثبَّت بنقرتين. لم تثبّتها PromptQuorum ولم تختبرها؛ كل ما يرد هنا مصدره وثائق المشروع نفسه.',
     quickAnswerTop: {
       ar: {
         question: 'هل OpenRAG تطبيق RAG محلي وخاص؟',
@@ -1759,7 +1759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يضيف OpenSearch بحثًا هجينًا ودعمًا لتعدد المستأجرين.',
           'تتيح حزم SDK لـ Python وTypeScript استدعاءه من شيفرتك.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -1794,7 +1794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'الصيانة: صدر الإصدار v0.8.0 في 1 أكتوبر 2026 وتغيّر المستودع مجددًا في 23 أكتوبر 2026، لذا لا ينطبق تحذير المشروع المتوقف.',
+          'الصيانة: صدر الإصدار v0.8.1 في 29 أكتوبر 2026 وتغيّر المستودع مجددًا في 6 نوفمبر 2026، لذا لا ينطبق تحذير المشروع المتوقف.',
           'الترخيص: Apache-2.0، والشيفرة المصدرية على GitHub ضمن منظمة langflow-ai.',
           'التكلفة: لا سعر للحزمة؛ تكاليفك هي العتاد وأي واجهة نموذج تربطها.',
           'Windows: مدعوم فقط داخل نظام Windows الفرعي لـ Linux.',
@@ -1803,7 +1803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'تستند هذه المراجعة إلى وثائق OpenRAG وموقعه وصفحة الإصدارات على GitHub، كما جرى التحقق منها في 23 أكتوبر 2026. لم تثبّت PromptQuorum البرنامج ولم تختبره ولم تقِس أداءه.',
+            text: 'تستند هذه المراجعة إلى وثائق OpenRAG وموقعه وصفحة الإصدارات على GitHub، كما جرى التحقق منها في 6 نوفمبر 2026. لم تثبّت PromptQuorum البرنامج ولم تختبره ولم تقِس أداءه.',
           },
         ],
       },
@@ -1832,7 +1832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الخيار': 'الشيفرة المصدرية', 'مصدر الحصول عليه': '[github.com/langflow-ai/openrag](https://github.com/langflow-ai/openrag)' },
           { 'الخيار': 'سياسة الخصوصية', 'مصدر الحصول عليه': 'لا صفحة خاصة بـ OpenRAG؛ إعداد الموافقة في الوثائق يشير إلى [بيان خصوصية IBM](https://www.ibm.com/privacy)' },
         ],
-        note: 'الإصدار الذي روجع: v0.8.0، صدر في 1 أكتوبر 2026 وفق [صفحة إصدارات GitHub](https://github.com/langflow-ai/openrag/releases)؛ وآخر تحديث للمستودع نفسه كان في 23 أكتوبر 2026. يضم الإصدار حزمة wheel لـ Python وأرشيف مصدر فقط، بلا مثبّت ولا نسخة سطح مكتب، لذا يلزم وجود طرفية وبيئة تطوير.',
+        note: 'الإصدار الذي روجع: v0.8.1، صدر في 29 أكتوبر 2026 وفق [صفحة إصدارات GitHub](https://github.com/langflow-ai/openrag/releases)؛ وآخر تحديث للمستودع نفسه كان في 6 نوفمبر 2026. يضم الإصدار حزمة wheel لـ Python وأرشيف مصدر فقط، بلا مثبّت ولا نسخة سطح مكتب، لذا يلزم وجود طرفية وبيئة تطوير.',
       },
       requirements: {
         id: 'requirements',
@@ -1970,15 +1970,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'OpenRAG حزمة RAG مجانية بترخيص Apache-2.0 تأتي، وفق وثائقها، بـ Langflow وOpenSearch وDocling موصولة مسبقًا، وتُصان بنشاط، مع إصدار في مطلع أكتوبر 2026 وتغييرات حتى 23 أكتوبر. في المقابل هي ثقيلة التشغيل، وتدعم Windows عبر WSL فقط، وتعتمد OpenAI افتراضيًا، ولم تتمكن PromptQuorum من التحقق من جودتها أو قياسها عن بُعد أو استخدامها دون اتصال بالكامل. تناسب المطورين الذين يريدون واجهة خلفية RAG جاهزة وقابلة للتعديل؛ ومن يفضّل تطبيقًا قابلًا للتثبيت يمكنه مقارنة [AnythingLLM](/ar/power-local-llm/anythingllm-review)، ومن يحتاج منشئ التدفقات فقط يمكنه الاطلاع على [Langflow](/ar/power-local-llm/langflow-visual-ai-orchestration-review).',
+          'OpenRAG حزمة RAG مجانية بترخيص Apache-2.0 تأتي، وفق وثائقها، بـ Langflow وOpenSearch وDocling موصولة مسبقًا، وتُصان بنشاط، مع إصدار في 29 أكتوبر 2026 وتغييرات حتى 6 نوفمبر. في المقابل هي ثقيلة التشغيل، وتدعم Windows عبر WSL فقط، وتعتمد OpenAI افتراضيًا، ولم تتمكن PromptQuorum من التحقق من جودتها أو قياسها عن بُعد أو استخدامها دون اتصال بالكامل. تناسب المطورين الذين يريدون واجهة خلفية RAG جاهزة وقابلة للتعديل؛ ومن يفضّل تطبيقًا قابلًا للتثبيت يمكنه مقارنة [AnythingLLM](/ar/power-local-llm/anythingllm-review)، ومن يحتاج منشئ التدفقات فقط يمكنه الاطلاع على [Langflow](/ar/power-local-llm/langflow-visual-ai-orchestration-review).',
       },
       sources: {
         id: 'sources',
         title: 'المصادر',
         items: [
-          '[وثائق OpenRAG](https://docs.openr.ag) — نظرة عامة والبدء السريع وخيارات التثبيت واستكشاف الأخطاء ومرجع الإعداد، روجعت في 23 أكتوبر 2026.',
+          '[وثائق OpenRAG](https://docs.openr.ag) — نظرة عامة والبدء السريع وخيارات التثبيت واستكشاف الأخطاء ومرجع الإعداد، روجعت في 6 نوفمبر 2026.',
           '[موقع OpenRAG](https://www.openr.ag) — الصفحة الرئيسية للمشروع.',
-          '[OpenRAG على GitHub](https://github.com/langflow-ai/openrag) و[إصدار v0.8.0](https://github.com/langflow-ai/openrag/releases) — الشيفرة المصدرية وترخيص Apache-2.0 وملفات الإصدار.',
+          '[OpenRAG على GitHub](https://github.com/langflow-ai/openrag) و[إصدار v0.8.1](https://github.com/langflow-ai/openrag/releases) — الشيفرة المصدرية وترخيص Apache-2.0 وملفات الإصدار.',
         ],
       },
       relatedReading: {
@@ -1998,14 +1998,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-23',
-    dateModified: '2026-10-23',
-    next_refresh_due: '2027-04-23',
+    dateModified: '2026-11-06',
+    next_refresh_due: '2027-05-06',
     theme: 'RAG & Document Chat',
     heroImage: '/images/openrag-review-hero-zh.webp',
     title: 'OpenRAG 评测：开源的智能体 RAG 平台',
     seoTitle: 'OpenRAG 评测：开源智能体 RAG 平台的安装与运行要求',
     intro:
-      'OpenRAG 是一个开源软件包，把 Langflow、OpenSearch 和 Docling 连接在一起，让你可以上传文档、检索文档，并在浏览器里与文档对话。它通过终端启动并以容器方式运行，因此面向开发者。本评测基于 2026 年 10 月 23 日核对的文档、官网和 GitHub 发布页。',
+      'OpenRAG 是一个开源软件包，把 Langflow、OpenSearch 和 Docling 连接在一起，让你可以上传文档、检索文档，并在浏览器里与文档对话。它通过终端启动并以容器方式运行，因此面向开发者。本评测基于 2026 年 11 月 6 日核对的文档、官网和 GitHub 发布页。',
     metaDescription:
       'OpenRAG 评测：整合 Langflow、OpenSearch 和 Docling 的 Apache-2.0 RAG 平台。安装步骤、运行要求、数据流向，以及我们未能核实的内容。',
     twitterDescription:
@@ -2026,7 +2026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Mac', 'Linux PC', 'Windows PC with WSL'],
     leadAnswerBlock:
-      '**OpenRAG（版本 0.8.0，2026 年 10 月 1 日发布）是一个免费的 Apache-2.0 平台，整合了 Langflow、OpenSearch 和 Docling，你可以上传文档并通过网页界面与之对话。**它以容器方式运行，需在终端中启动，因此是开发者工具，而不是双击即用的应用。PromptQuorum 没有安装或测试过它；本文所有说法均来自项目自己的文档。',
+      '**OpenRAG（版本 0.8.1，2026 年 10 月 29 日发布）是一个免费的 Apache-2.0 平台，整合了 Langflow、OpenSearch 和 Docling，你可以上传文档并通过网页界面与之对话。**它以容器方式运行，需在终端中启动，因此是开发者工具，而不是双击即用的应用。PromptQuorum 没有安装或测试过它；本文所有说法均来自项目自己的文档。',
     quickAnswerTop: {
       zh: {
         question: 'OpenRAG 是本地私有的 RAG 应用吗？',
@@ -2038,7 +2038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OpenSearch 提供混合搜索和多租户支持。',
           'Python 和 TypeScript SDK 可让你的代码调用它。',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -2073,7 +2073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '维护状态：v0.8.0 于 2026 年 10 月 1 日发布，仓库在 2026 年 10 月 23 日仍有更新，因此无需显示项目停更警告。',
+          '维护状态：v0.8.1 于 2026 年 10 月 29 日发布，仓库在 2026 年 11 月 6 日仍有更新，因此无需显示项目停更警告。',
           '许可证：Apache-2.0，源代码托管在 GitHub 的 langflow-ai 组织下。',
           '费用：软件包本身没有价格；你的成本是硬件和所接入模型 API 的费用。',
           'Windows：仅支持在 Windows Subsystem for Linux 内运行。',
@@ -2082,7 +2082,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '本评测基于 2026 年 10 月 23 日核对的 OpenRAG 文档、官网和 GitHub 发布页。PromptQuorum 没有安装、测试或跑分该软件。',
+            text: '本评测基于 2026 年 11 月 6 日核对的 OpenRAG 文档、官网和 GitHub 发布页。PromptQuorum 没有安装、测试或跑分该软件。',
           },
         ],
       },
@@ -2111,7 +2111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '方式': '源代码', '获取方式': '[github.com/langflow-ai/openrag](https://github.com/langflow-ai/openrag)' },
           { '方式': '隐私政策', '获取方式': '未找到 OpenRAG 专属页面；文档的同意设置引用 [IBM 隐私声明](https://www.ibm.com/privacy)' },
         ],
-        note: '评测版本：v0.8.0，据 [GitHub 发布页](https://github.com/langflow-ai/openrag/releases)于 2026 年 10 月 1 日发布；仓库本身最近一次更新在 2026 年 10 月 23 日。该版本只提供 Python wheel 包和源码压缩包，没有安装程序或桌面版，因此需要终端和开发环境。',
+        note: '评测版本：v0.8.1，据 [GitHub 发布页](https://github.com/langflow-ai/openrag/releases)于 2026 年 10 月 29 日发布；仓库本身最近一次更新在 2026 年 11 月 6 日。该版本只提供 Python wheel 包和源码压缩包，没有安装程序或桌面版，因此需要终端和开发环境。',
       },
       requirements: {
         id: 'requirements',
@@ -2249,15 +2249,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          'OpenRAG 是一套免费的 Apache-2.0 RAG 方案，按其文档，Langflow、OpenSearch 和 Docling 已预先连通，并且维护活跃：2026 年 10 月初有新版本发布，10 月 23 日仍有更新。另一方面，它运行较重，Windows 只能通过 WSL，默认使用 OpenAI，PromptQuorum 也无法核实它的质量、遥测情况和完全离线使用。它适合想要现成、可深度修改的 RAG 后端的开发者；偏好可安装应用的读者可以对比 [AnythingLLM](/zh/power-local-llm/anythingllm-review)，只需要流程构建器的读者可以看看 [Langflow](/zh/power-local-llm/langflow-visual-ai-orchestration-review)。',
+          'OpenRAG 是一套免费的 Apache-2.0 RAG 方案，按其文档，Langflow、OpenSearch 和 Docling 已预先连通，并且维护活跃：2026 年 10 月 29 日有新版本发布，11 月 6 日仍有更新。另一方面，它运行较重，Windows 只能通过 WSL，默认使用 OpenAI，PromptQuorum 也无法核实它的质量、遥测情况和完全离线使用。它适合想要现成、可深度修改的 RAG 后端的开发者；偏好可安装应用的读者可以对比 [AnythingLLM](/zh/power-local-llm/anythingllm-review)，只需要流程构建器的读者可以看看 [Langflow](/zh/power-local-llm/langflow-visual-ai-orchestration-review)。',
       },
       sources: {
         id: 'sources',
         title: '来源',
         items: [
-          '[OpenRAG 文档](https://docs.openr.ag) — 概览、快速入门、安装选项、故障排查和配置参考，2026 年 10 月 23 日核对。',
+          '[OpenRAG 文档](https://docs.openr.ag) — 概览、快速入门、安装选项、故障排查和配置参考，2026 年 11 月 6 日核对。',
           '[OpenRAG 官网](https://www.openr.ag) — 项目主页。',
-          '[GitHub 上的 OpenRAG](https://github.com/langflow-ai/openrag)及其 [v0.8.0 版本](https://github.com/langflow-ai/openrag/releases) — 源代码、Apache-2.0 许可证和发布文件。',
+          '[GitHub 上的 OpenRAG](https://github.com/langflow-ai/openrag)及其 [v0.8.1 版本](https://github.com/langflow-ai/openrag/releases) — 源代码、Apache-2.0 许可证和发布文件。',
         ],
       },
       relatedReading: {
@@ -2277,14 +2277,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-23',
-    dateModified: '2026-10-23',
-    next_refresh_due: '2027-04-23',
+    dateModified: '2026-11-06',
+    next_refresh_due: '2027-05-06',
     theme: 'RAG & Document Chat',
     heroImage: '/images/openrag-review-hero-ko.webp',
     title: 'OpenRAG 리뷰: 오픈소스 에이전틱 RAG 플랫폼',
     seoTitle: 'OpenRAG 리뷰: 오픈소스 에이전틱 RAG 플랫폼',
     intro:
-      'OpenRAG는 Langflow, OpenSearch, Docling을 연결해 문서를 업로드하고 검색하며 브라우저에서 대화할 수 있게 해 주는 오픈소스 패키지입니다. 터미널에서 실행하고 컨테이너로 동작하므로 개발자를 대상으로 합니다. 이 리뷰는 2026년 10월 23일에 확인한 문서, 공식 웹사이트, GitHub 릴리스 페이지를 바탕으로 합니다.',
+      'OpenRAG는 Langflow, OpenSearch, Docling을 연결해 문서를 업로드하고 검색하며 브라우저에서 대화할 수 있게 해 주는 오픈소스 패키지입니다. 터미널에서 실행하고 컨테이너로 동작하므로 개발자를 대상으로 합니다. 이 리뷰는 2026년 11월 6일에 확인한 문서, 공식 웹사이트, GitHub 릴리스 페이지를 바탕으로 합니다.',
     metaDescription:
       'OpenRAG 리뷰: Langflow, OpenSearch, Docling을 묶은 Apache-2.0 RAG 플랫폼. 설치 방법, 요구 사항, 데이터 흐름, 확인하지 못한 사항을 정리했습니다.',
     twitterDescription:
@@ -2305,7 +2305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Mac', 'Linux PC', 'Windows PC with WSL'],
     leadAnswerBlock:
-      '**OpenRAG(버전 0.8.0, 2026년 10월 1일 공개)는 Langflow, OpenSearch, Docling을 묶어 문서를 업로드하고 웹 인터페이스로 대화할 수 있게 해 주는 Apache-2.0 라이선스의 무료 플랫폼입니다.** 터미널에서 시작하는 컨테이너로 동작하므로 더블클릭으로 설치하는 앱이 아니라 개발자용 도구입니다. PromptQuorum은 설치하거나 테스트하지 않았으며, 이 글의 모든 내용은 프로젝트 자체 문서에 근거합니다.',
+      '**OpenRAG(버전 0.8.1, 2026년 10월 29일 공개)는 Langflow, OpenSearch, Docling을 묶어 문서를 업로드하고 웹 인터페이스로 대화할 수 있게 해 주는 Apache-2.0 라이선스의 무료 플랫폼입니다.** 터미널에서 시작하는 컨테이너로 동작하므로 더블클릭으로 설치하는 앱이 아니라 개발자용 도구입니다. PromptQuorum은 설치하거나 테스트하지 않았으며, 이 글의 모든 내용은 프로젝트 자체 문서에 근거합니다.',
     quickAnswerTop: {
       ko: {
         question: 'OpenRAG는 로컬에서 동작하는 프라이빗 RAG 앱입니까?',
@@ -2317,7 +2317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OpenSearch가 하이브리드 검색과 멀티 테넌시를 더합니다.',
           'Python 및 TypeScript SDK로 직접 작성한 코드에서 호출할 수 있습니다.',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     toc: [
@@ -2352,7 +2352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '유지보수: v0.8.0이 2026년 10월 1일에 공개되었고 저장소가 2026년 10월 23일에도 변경되었으므로, 개발 중단 경고는 해당되지 않습니다.',
+          '유지보수: v0.8.1이 2026년 10월 29일에 공개되었고 저장소가 2026년 11월 6일에도 변경되었으므로, 개발 중단 경고는 해당되지 않습니다.',
           '라이선스: Apache-2.0이며, 소스 코드는 GitHub의 langflow-ai 조직에 있습니다.',
           '비용: 패키지 자체에 가격은 없으며, 비용은 하드웨어와 연결하는 모델 API에서 발생합니다.',
           'Windows: Windows Subsystem for Linux 안에서만 지원됩니다.',
@@ -2361,7 +2361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '이 리뷰는 2026년 10월 23일에 확인한 OpenRAG 문서, 웹사이트, GitHub 릴리스 페이지를 바탕으로 합니다. PromptQuorum은 소프트웨어를 설치하거나 테스트하거나 벤치마크하지 않았습니다.',
+            text: '이 리뷰는 2026년 11월 6일에 확인한 OpenRAG 문서, 웹사이트, GitHub 릴리스 페이지를 바탕으로 합니다. PromptQuorum은 소프트웨어를 설치하거나 테스트하거나 벤치마크하지 않았습니다.',
           },
         ],
       },
@@ -2390,7 +2390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '옵션': '소스 코드', '입수처': '[github.com/langflow-ai/openrag](https://github.com/langflow-ai/openrag)' },
           { '옵션': '개인정보 처리방침', '입수처': 'OpenRAG 전용 페이지는 없으며, 문서의 동의 설정이 [IBM 개인정보 보호 정책](https://www.ibm.com/privacy)을 가리킵니다' },
         ],
-        note: '검토한 버전: v0.8.0이며, [GitHub 릴리스 페이지](https://github.com/langflow-ai/openrag/releases)에 따르면 2026년 10월 1일에 공개되었습니다. 저장소 자체의 마지막 업데이트는 2026년 10월 23일입니다. 릴리스에는 Python wheel과 소스 아카이브만 있고 설치 프로그램이나 데스크톱 빌드가 없으므로 터미널과 개발 환경이 필요합니다.',
+        note: '검토한 버전: v0.8.1이며, [GitHub 릴리스 페이지](https://github.com/langflow-ai/openrag/releases)에 따르면 2026년 10월 29일에 공개되었습니다. 저장소 자체의 마지막 업데이트는 2026년 11월 6일입니다. 릴리스에는 Python wheel과 소스 아카이브만 있고 설치 프로그램이나 데스크톱 빌드가 없으므로 터미널과 개발 환경이 필요합니다.',
       },
       requirements: {
         id: 'requirements',
@@ -2528,15 +2528,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content:
-          'OpenRAG는 문서에 따르면 Langflow, OpenSearch, Docling이 이미 연결된 상태로 제공되는 Apache-2.0 무료 RAG 스택이며, 2026년 10월 초 릴리스와 10월 23일까지의 변경이 있을 만큼 활발히 관리됩니다. 반면 실행이 무겁고, Windows는 WSL로만 지원되며, 기본값이 OpenAI이고, PromptQuorum은 품질, 텔레메트리, 완전한 오프라인 사용을 확인하지 못했습니다. 바로 쓸 수 있고 손보기 쉬운 RAG 백엔드를 원하는 개발자에게 어울립니다. 설치형 앱을 선호한다면 [AnythingLLM](/ko/power-local-llm/anythingllm-review)을 비교해 보시고, 플로우 빌더만 필요하다면 [Langflow](/ko/power-local-llm/langflow-visual-ai-orchestration-review)를 살펴보십시오.',
+          'OpenRAG는 문서에 따르면 Langflow, OpenSearch, Docling이 이미 연결된 상태로 제공되는 Apache-2.0 무료 RAG 스택이며, 2026년 10월 29일 릴리스와 11월 6일까지의 변경이 있을 만큼 활발히 관리됩니다. 반면 실행이 무겁고, Windows는 WSL로만 지원되며, 기본값이 OpenAI이고, PromptQuorum은 품질, 텔레메트리, 완전한 오프라인 사용을 확인하지 못했습니다. 바로 쓸 수 있고 손보기 쉬운 RAG 백엔드를 원하는 개발자에게 어울립니다. 설치형 앱을 선호한다면 [AnythingLLM](/ko/power-local-llm/anythingllm-review)을 비교해 보시고, 플로우 빌더만 필요하다면 [Langflow](/ko/power-local-llm/langflow-visual-ai-orchestration-review)를 살펴보십시오.',
       },
       sources: {
         id: 'sources',
         title: '출처',
         items: [
-          '[OpenRAG 문서](https://docs.openr.ag) — 개요, 빠른 시작, 설치 옵션, 문제 해결, 구성 레퍼런스. 2026년 10월 23일 확인.',
+          '[OpenRAG 문서](https://docs.openr.ag) — 개요, 빠른 시작, 설치 옵션, 문제 해결, 구성 레퍼런스. 2026년 11월 6일 확인.',
           '[OpenRAG 웹사이트](https://www.openr.ag) — 프로젝트 홈페이지.',
-          '[GitHub의 OpenRAG](https://github.com/langflow-ai/openrag)와 [v0.8.0 릴리스](https://github.com/langflow-ai/openrag/releases) — 소스 코드, Apache-2.0 라이선스, 릴리스 파일.',
+          '[GitHub의 OpenRAG](https://github.com/langflow-ai/openrag)와 [v0.8.1 릴리스](https://github.com/langflow-ai/openrag/releases) — 소스 코드, Apache-2.0 라이선스, 릴리스 파일.',
         ],
       },
       relatedReading: {

@@ -8,6 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       last_full_refresh: '2026-11-02',
       theme: 'Fundamentals',
@@ -399,6 +400,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     de: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Grundlagen',
       heroImage: '/images/prompt-engineering-history-overview-hero-de.webp',
@@ -789,6 +791,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     es: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
       heroImage: '/images/prompt-engineering-history-overview-hero-es.webp',
@@ -1179,6 +1182,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     ar: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
       heroImage: '/images/prompt-engineering-history-overview-hero-ar.webp',
@@ -1569,6 +1573,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     pt: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
       heroImage: '/images/prompt-engineering-history-overview-hero-pt.webp',
@@ -1959,6 +1964,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     fr: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Fondamentaux',
       heroImage: '/images/prompt-engineering-history-overview-hero-fr.webp',
@@ -2349,6 +2355,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     ja: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: '基礎',
       heroImage: '/images/prompt-engineering-history-overview-hero-ja.webp',
@@ -2739,6 +2746,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     zh: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: '基础知识',
       heroImage: '/images/prompt-engineering-history-overview-hero-zh.webp',
@@ -3129,6 +3137,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     ko: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: '기초',
       heroImage: '/images/prompt-engineering-history-overview-hero-ko.webp',

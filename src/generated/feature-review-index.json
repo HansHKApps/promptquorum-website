@@ -204,6 +204,11 @@
     "urlSlug": "page-assist-review",
     "url": "/local-llms/page-assist-review"
   },
+  "lastbrowser": {
+    "cluster": "power-local-llm",
+    "urlSlug": "lastbrowser-review",
+    "url": "/power-local-llm/lastbrowser-review"
+  },
   "chatbox": {
     "cluster": "local-llms",
     "urlSlug": "chatbox-review",
@@ -1043,6 +1048,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "hillnote-review",
     "url": "/power-local-llm/hillnote-review"
+  },
+  "trilium-notes": {
+    "cluster": "power-local-llm",
+    "urlSlug": "trilium-notes-review",
+    "url": "/power-local-llm/trilium-notes-review"
   },
   "llm-vision": {
     "cluster": "power-local-llm",

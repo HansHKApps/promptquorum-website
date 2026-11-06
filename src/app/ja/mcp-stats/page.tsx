@@ -8,6 +8,7 @@ import type { Metadata } from 'next'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS, toOutputLocale, ogLocale } from '@/lib/i18n/constants'
 import { getMcpUsageSnapshot } from '@/lib/mcp/usage'
+import { getMcpReport } from '@/lib/mcp/report'
 import { McpStatsContent } from '@/components/tools/McpStatsContent'
 import { t as tMcp } from '@/components/tools/mcp-stats-i18n'
 import { t as tTools } from '@/components/tools/tools-i18n'
@@ -33,13 +34,13 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function McpStatsPage() {
-  const snapshot = await getMcpUsageSnapshot()
+  const [snapshot, report] = await Promise.all([getMcpUsageSnapshot(), getMcpReport()])
   const title = tMcp('pageMetaTitle', LANG)
   const description = tMcp('pageMetaDescription', LANG)
 
   return (
     <>
-      <McpStatsContent lang={LANG} snapshot={snapshot} />
+      <McpStatsContent lang={LANG} snapshot={snapshot} report={report} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

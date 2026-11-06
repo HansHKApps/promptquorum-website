@@ -51,6 +51,7 @@ import { app as app_lobechat } from './apps/lobechat'
 import { app as app_big_agi } from './apps/big-agi'
 import { app as app_nextchat } from './apps/nextchat'
 import { app as app_page_assist } from './apps/page-assist'
+import { app as app_lastbrowser } from './apps/lastbrowser'
 import { app as app_chatbox } from './apps/chatbox'
 import { app as app_continue_dev } from './apps/continue-dev'
 import { app as app_cline } from './apps/cline'
@@ -276,6 +277,7 @@ import { app as app_fullmoon } from './apps/fullmoon'
 import { app as app_reins } from './apps/reins'
 import { app as app_openvoiceos } from './apps/openvoiceos'
 import { app as app_hillnote } from './apps/hillnote'
+import { app as app_trilium_notes } from './apps/trilium-notes'
 import { app as app_llm_vision } from './apps/llm-vision'
 import { app as app_picoclaw } from './apps/picoclaw'
 import { app as app_scrypted } from './apps/scrypted'
@@ -400,6 +402,7 @@ export const localAiApps: ToolRecord[] = [
   app_big_agi,
   app_nextchat,
   app_page_assist,
+  app_lastbrowser,
   app_chatbox,
   app_continue_dev,
   app_cline,
@@ -568,6 +571,7 @@ export const localAiApps: ToolRecord[] = [
   app_reins,
   app_openvoiceos,
   app_hillnote,
+  app_trilium_notes,
   app_llm_vision,
   app_picoclaw,
   app_scrypted,

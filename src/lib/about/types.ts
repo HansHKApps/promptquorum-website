@@ -26,7 +26,7 @@ export interface AboutCopy {
   // Hero
   kicker: string
   h1: string
-  h1PlainExplainer: string // small-print aside under the h1 for non-technical readers, e.g. "in plain terms: running AI for free on your own computer"
+  h1PlainExplainer: string // small-print aside under the h1 for non-technical readers, e.g. "in plain terms: running AI for free on your own computer, with your data staying local"
   heroLead: string // {{appCount}} {{articleCount}}
   heroSub: string
   heroOpenWeightNote: string // one-sentence plain-language definition of "open weight"
@@ -62,6 +62,7 @@ export interface AboutCopy {
   learnLabel: string
   useLabel: string
   askLabel: string
+  hansLabel: string
   partFindTitle: string
   partFindOneLiner: string
   partFindBody: string // {{appCount}} {{groupCount}} {{categoryCount}}
@@ -78,10 +79,15 @@ export interface AboutCopy {
   partAskOneLiner: string
   partAskBody: string
   partAskConnects: string
+  partHansTitle: string
+  partHansOneLiner: string
+  partHansBody: string
+  partHansConnects: string
   ctaOpenDirectory: string
   ctaReadGuides: string
   ctaAboutApp: string
   ctaSeeHowToConnect: string
+  ctaAskHans: string
   practiceH3: string
   practiceIntro: string
   practiceSteps: [string, string, string, string] // paired by index with find/learn/use/askLabel

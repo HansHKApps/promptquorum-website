@@ -50,7 +50,7 @@ export const copy: AskCopy = {
   panelLabelPrefix: '主题',
   panelLinksHeading: '相关页面',
 
-  // DRAFT — Hans reviews and approves before launch (see docs/askhans-privacy-draft.de.md).
+  // Final consent text as of 2026-11-06 (see docs/askhans-privacy-draft.de.md). On any change bump ASK_HANS_CONSENT_TEXT_VERSION.
   consentTitle: '开始之前',
   consentParagraphs: [
     'Ask Hans 借助 AI（Anthropic 的 Claude），基于 PromptQuorum 的内容回答您的问题。为此，您输入的内容将传输至我们的服务器和 Anthropic。请勿输入个人数据。',
@@ -59,6 +59,9 @@ export const copy: AskCopy = {
   ],
   consentPrivacyLink: '详见隐私政策。',
   consentPrivacyHref: '/zh/privacy',
+  consentSaveLabel: "在此设备上保存我的对话 7 天",
+  consentSaveOn: "保存在此电脑的浏览器中，为期 7 天。你可以随时删除。",
+  consentSaveOff: "你的对话不会被保存，关闭页面后即消失。",
   consentYes: '是，我同意',
   consentNo: '不，谢谢',
   consentQuestionLabel: '您的问题（将在您做出选择后发送）：',
@@ -70,10 +73,18 @@ export const copy: AskCopy = {
   feedback: {
     prompt: 'Ask Hans 对您有多大帮助？',
     star: (n: number) => `${n} 星（满分 5 星）`,
-    commentPlaceholder: '选填：我们哪些地方可以做得更好？请勿填写个人数据。',
-    send: '发送反馈',
     thanks: '感谢您的反馈！',
     error: '反馈未能发送。请您稍后重试。',
+    followup: {
+      title: '很抱歉，这次没能更好地帮到您。',
+      body: '我们哪些地方可以做得更好？您愿意通过电子邮件向我们反馈吗？我们会预先填好详细信息，发送前请补充您自己的想法。',
+      include: '在邮件中附上我的提问和回答，以便 Hans 查看问题出在哪里。',
+      note: '发送前您可以编辑邮件；在您点击发送之前不会传输任何内容。请勿填写个人数据。',
+      write: '撰写邮件',
+      skip: '不用了',
+      copied: '详细信息也已复制到剪贴板。',
+      mail: { subject: 'Ask Hans 反馈（{n}/5）', intro: '我们哪里可以改进？请在此填写：', rating: '评分', language: '语言', page: '页面', question: '最近的提问', answer: '最近的回答' },
+    },
   },
   info: {
     label: "关于 Ask Hans",
@@ -82,7 +93,7 @@ export const copy: AskCopy = {
     canTitle: "它能做什么",
     can: ["从软件目录中查找并比较本地 AI 应用，并列出替代方案。", "检查您的硬件（RAM、VRAM）能否运行某个模型。", "用通俗的语言解释软件许可证，并推荐软件组合。", "用您的语言为您指引本网站上相应的指南、评测和硬件页面。"],
     cannotTitle: "它不能做什么",
-    cannot: ["查询 promptquorum.com 以外的任何信息：不提供网络搜索、新闻、天气或实时价格。", "保证每次都正确：它是 AI，可能会出错。请在链接页面上核实重要事实。", "提供法律、医疗、财务或电气安装方面的建议。如有需要，请咨询合格的专业人士。", "在您离开后记住您：对话保留在您的浏览器中，不会存储在我们的服务器上。", "代您安装、更改或购买任何东西，或无限制地回答：每次访问最多 {messages} 个问题，每个问题最多 {chars} 个字符。"],
+    cannot: ["查询 promptquorum.com 以外的任何信息：不提供网络搜索、新闻、天气或实时价格。", "保证每次都正确：它是 AI，可能会出错。请在链接页面上核实重要事实。", "提供法律、医疗、财务或电气安装方面的建议。如有需要，请咨询合格的专业人士。", "在您离开后记住您：对话保留在您的浏览器中（仅在您选择保存时保留 7 天），不会存储在我们的服务器上。", "代您安装、更改或购买任何东西，或无限制地回答：每次访问最多 {messages} 个问题，每个问题最多 {chars} 个字符。"],
     privacy: "您的问题会发送到我们的服务器和 Anthropic（Claude）以生成回答。请勿输入个人数据。",
     close: "关闭",
   },
@@ -101,6 +112,7 @@ export const copy: AskCopy = {
     historyHeading: "以往的对话",
     historyHide: "隐藏以往的对话",
     historyShow: (n: number) => `显示以往的对话（${n}）`,
+    historyClear: "删除已保存的对话",
   },
 
   search: {
