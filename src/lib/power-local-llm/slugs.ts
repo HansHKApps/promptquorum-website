@@ -587,6 +587,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'openvoiceos-review':                       'openvoiceos-review',
   'hillnote-review':                          'hillnote-review',
   'trilium-notes-review':                     'trilium-notes-review',
+  'ramen-review':                             'ramen-review',
   'llm-vision-review':                        'llm-vision-review',
   'picoclaw-review':                          'picoclaw-review',
   'scrypted-review':                          'scrypted-review',
