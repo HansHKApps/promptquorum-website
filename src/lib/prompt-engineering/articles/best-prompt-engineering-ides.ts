@@ -8,6 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tools & Platforms',
     heroImage: '/images/best-prompt-engineering-ides-overview-hero-en.webp',
     title: 'Best Prompt Engineering IDEs and Editors 2026',
@@ -310,6 +311,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tools & Plattformen',
     heroImage: '/images/best-prompt-engineering-ides-overview-hero-de.webp',
     title: 'Beste Prompt-Engineering-IDEs und Editoren (2026)',
@@ -615,6 +617,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tools & Platforms',
     heroImage: '/images/best-prompt-engineering-ides-overview-hero-es.webp',
     title: 'Mejores IDEs y editores de prompt engineering 2026',
@@ -919,6 +922,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   pt: {
+    designSkin: 'hub',
     theme: 'Tools & Platforms',
     heroImage: '/images/best-prompt-engineering-ides-overview-hero-pt.webp',
     title: 'Melhores IDEs e editores de prompt engineering 2026',
@@ -1220,6 +1224,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   fr: {
+    designSkin: 'hub',
     theme: 'Outils et plateformes',
     heroImage: '/images/best-prompt-engineering-ides-overview-hero-fr.webp',
     title: 'Meilleurs IDE et Éditeurs de Prompt Engineering (2026)',
@@ -1523,6 +1528,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'ツール＆プラットフォーム',
     heroImage: '/images/best-prompt-engineering-ides-overview-hero-ja.webp',
     title: 'プロンプトエンジニアリング向けベストIDE・エディタ（2026年）',
@@ -1826,6 +1832,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'AI工具与平台',
     heroImage: '/images/best-prompt-engineering-ides-overview-hero-zh.webp',
     title: '最佳Prompt工程IDE与编辑器（2026）',
@@ -2130,6 +2137,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-01',
     theme: 'Tools & Platforms',
@@ -2397,6 +2405,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ko: {
+    designSkin: 'hub',
     theme: 'Tools & Platforms',
     heroImage: '/images/best-prompt-engineering-ides-overview-hero-ko.webp',
     title: '2026년 최고의 프롬프트 엔지니어링 IDE 및 에디터',
