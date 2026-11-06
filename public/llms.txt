@@ -83,7 +83,7 @@
 PromptQuorum runs a live, public, read-only [Model Context Protocol](https://modelcontextprotocol.io) server exposing the site's own content and software directory to any MCP-compatible client. No account, API key, or authentication required.
 
 - **Transport**: Streamable HTTP — `POST`/`GET` to `https://www.promptquorum.com/api/mcp`
-- **Server version**: 2.0.0 — 17 tools, 5 resources, 4 prompts; rate limit 120 requests/minute/IP
+- **Server version**: 2.1.0 — 19 tools, 5 resources, 4 prompts; rate limit 120 requests/minute/IP
 - **Discovery manifest**: [https://www.promptquorum.com/mcp.json](https://www.promptquorum.com/mcp.json)
 - **Documentation**: [https://www.promptquorum.com/mcp-stats](https://www.promptquorum.com/mcp-stats)
 - **Tools** (find apps):
@@ -94,10 +94,12 @@ PromptQuorum runs a live, public, read-only [Model Context Protocol](https://mod
   - `get_app_alternatives(slug, os?, freeOnly?, easierInstall?)` — similar apps to one the user knows
   - `get_app_details(slug)` — full directory data (license, hardware, platforms, price) for one tool
   - `list_categories()` — valid category/use-case/OS filter values with counts
+  - `list_local_models(tier?, capability?, useCase?, maxDownloadGib?)` — the curated local LLM catalog (about 30 models, one default quantization each), not an exhaustive list
 - **Tools** (decide and check):
   - `compare_apps(slugs[2-5], criteria?)` — criteria matrix, per-need leaders, summary
   - `check_hardware_compatibility(slug, os?, ramGb?, vramGb?, modelBillions?, quantization?)` — fits / too-demanding / unknown, with estimate labelled
   - `estimate_vram(modelBillions, quantization?, contextLength?, availableGb?)` — memory estimate for a model
+  - `recommend_models(os?, ramGb?, vramGb?, useCase?, needs?, app?, contextTokens?)` — local LLMs from a curated catalog that fit the machine, with the ollama pull command; fit is memory only, sizes verified
   - `explain_license(licenseString, useCase?)` — plain-language license rule of thumb; not legal advice
 - **Tools** (read and learn):
   - `search_promptquorum(query, lang?, cluster?, limit?)` — search all guides and the software directory

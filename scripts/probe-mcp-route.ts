@@ -34,7 +34,8 @@ const tools = await rpc('tools/list', {})
 const names: string[] = tools.result.tools.map((t: { name: string }) => t.name)
 console.log('tools:', names.length, names.join(','))
 for (const n of ['start', 'set_consent', 'forget_me', 'my_profile', 'set_language']) check(names.includes(n), `tools/list missing ${n}`)
-check(names.length === 22, `expected 22 tools, got ${names.length}`)
+for (const n of ['recommend_models', 'list_local_models']) check(names.includes(n), `tools/list missing ${n}`)
+check(names.length === 24, `expected 24 tools, got ${names.length}`)
 const byName = Object.fromEntries(tools.result.tools.map((t: { name: string }) => [t.name, t]))
 check(byName.forget_me.annotations?.destructiveHint === true, 'forget_me not destructive-annotated')
 check(byName.start.annotations?.readOnlyHint === true, 'start not read-only-annotated')
@@ -59,6 +60,24 @@ check(!/pq-[a-z2-7]{5}/.test(accept.result.content[0].text), 'accept without sto
 
 const badLang = await rpc('tools/call', { name: 'set_language', arguments: { lang: 'xx' } })
 check(badLang.error || badLang.result?.isError, 'set_language must reject unsupported codes')
+
+// Model catalog tools through the real route (zod validation + wrapper + JSON serialisation).
+const recCall = await rpc('tools/call', { name: 'recommend_models', arguments: { os: 'mac', ramGb: 24, useCase: 'code', app: 'open-webui' } })
+check(recCall.result && !recCall.result.isError, `recommend_models call failed: ${JSON.stringify(recCall).slice(0, 200)}`)
+const rec = recCall.result ? JSON.parse(recCall.result.content[0].text) : null
+console.log('\n--- recommend_models (24 GB Mac, code, open-webui) ---')
+for (const r of rec?.recommendations ?? []) console.log(`${r.name} ${r.quantization} ${r.downloadGib} GiB -> ${r.fit.verdict} (needs ${r.fit.needsGib} of ${r.fit.usableGib} GiB) ${r.ollamaPull}`)
+check(rec?.status === 'ok' && rec.hardware.usableForModelGib === 16, 'route: 24 GB Mac must have 16 GiB usable')
+check(rec?.app?.status === 'ollama', 'route: open-webui should be an Ollama client')
+const badRec = await rpc('tools/call', { name: 'recommend_models', arguments: { os: 'mac', ramGb: 24, useCase: 'banana' } })
+check(badRec.error || badRec.result?.isError, 'recommend_models must reject an unknown useCase')
+const noMem = await rpc('tools/call', { name: 'recommend_models', arguments: {} })
+check(noMem.result && JSON.parse(noMem.result.content[0].text).status === 'needs-hardware', 'route: no memory -> asks for it')
+const listCall = await rpc('tools/call', { name: 'list_local_models', arguments: { capability: 'vision', maxDownloadGib: 10 } })
+const listed = listCall.result ? JSON.parse(listCall.result.content[0].text) : null
+check(listed?.models?.length > 0 && listed.models.every((m: { capabilities: string[]; downloadGib: number }) => m.capabilities.includes('vision') && m.downloadGib <= 10), 'route: list_local_models filters')
+const badApp = await rpc('tools/call', { name: 'recommend_models', arguments: { os: 'mac', ramGb: 24, app: 'no-such-app' } })
+check(badApp.result?.isError === true, 'route: unknown app must be an isError result with did-you-mean')
 
 const existing = await rpc('tools/call', { name: 'list_clusters', arguments: {} })
 check(existing.result && !existing.result.isError, 'existing tool broke')

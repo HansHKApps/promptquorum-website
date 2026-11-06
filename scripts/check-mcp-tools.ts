@@ -15,7 +15,9 @@ import {
   getHandsOnTestFindings,
 } from '../src/lib/mcp/directory-tools'
 import { compareApps, explainLicense, getLatest, findRelatedContent, searchApps, AppNotFoundError } from '../src/lib/mcp/tools'
-import { estimateVram } from '../src/lib/vram'
+import { estimateVram, fitModel, kvCacheGib } from '../src/lib/vram'
+import { recommendModels, listLocalModels } from '../src/lib/mcp/model-tools'
+import { localLlmCatalog } from '../src/lib/local-llm-catalog'
 
 let failures = 0
 const fail = (msg: string) => { failures++; console.error('FAIL', msg) }
@@ -104,6 +106,66 @@ check(latest.items.length > 0 && latest.items.every((i) => i.url.startsWith('htt
 check(latest.items.every((i, n, arr) => n === 0 || arr[n - 1].date >= i.date), 'latest must be sorted newest first')
 const rel = findRelatedContent({ app: 'open-webui' })
 check('app' in rel && rel.app?.slug === 'open-webui', 'related content app')
+
+// 11. model catalog: fit engine math (hand-computed numbers, independent of catalog contents)
+const GIB = 2 ** 30
+// 10 layers x 2 kv heads x (128+128) x 1024 tokens x 2 bytes = 10,485,760 B
+const synthKv = { groups: [{ layers: 10, kvHeads: 2, keyLength: 128, valueLength: 128, windowTokens: null }] }
+check(kvCacheGib(synthKv, 1024) === 10_485_760 / GIB, `kv math: ${kvCacheGib(synthKv, 1024)}`)
+const windowed = { groups: [{ layers: 10, kvHeads: 2, keyLength: 128, valueLength: 128, windowTokens: 512 }] }
+check(kvCacheGib(windowed, 4096) === kvCacheGib(windowed, 512), 'sliding window must cap KV growth')
+check(kvCacheGib(windowed, 256) < kvCacheGib(windowed, 512), 'KV must still grow below the window')
+const synthFit = fitModel({ sizeBytes: 8 * GIB, kv: synthKv, contextTokens: 1024, contextMax: 131072, usableGib: 16 })
+check(synthFit.verdict === 'fits' && synthFit.weightsGib === 8 && synthFit.totalGib === 9.01, `synthetic fit: ${JSON.stringify(synthFit)}`)
+check(fitModel({ sizeBytes: 15.5 * GIB, kv: synthKv, contextTokens: 1024, usableGib: 16 }).verdict === 'too-large', '15.5 GiB + 1 GiB runtime must not fit 16 GiB')
+check(fitModel({ sizeBytes: 14.5 * GIB, kv: synthKv, contextTokens: 1024, usableGib: 16 }).verdict === 'tight', 'under 1 GiB headroom is tight')
+check(fitModel({ sizeBytes: 1 * GIB, kv: null, noContextCost: true, contextTokens: 131072, usableGib: 4 }).kvGib === 0, 'embedding models carry no context cost')
+const maxCtx = fitModel({ sizeBytes: 8 * GIB, kv: synthKv, contextTokens: 1024, contextMax: 10_000_000, usableGib: 16 }).maxContextTokens
+check(maxCtx !== null && kvCacheGib(synthKv, maxCtx) <= 7 && kvCacheGib(synthKv, maxCtx + 1) > 7, `maxContextTokens must be the exact boundary: ${maxCtx}`)
+
+// 12. model catalog data + tools
+const hwOk = { os: 'mac' as const, ramGb: 24 }
+const rec = recommendModels({ ...hwOk })
+check(rec.status === 'ok' && 'recommendations' in rec, 'recommend_models on a 24 GB Mac returned nothing')
+if (rec.status === 'ok' && 'recommendations' in rec) {
+  // The 8 GB macOS reserve is deducted exactly once: 24 total -> 16 usable (not 24, not 8).
+  check(rec.hardware.usableForModelGib === 16, `24 GB Mac must have 16 GiB usable, got ${rec.hardware.usableForModelGib}`)
+  check(rec.hardware.macOsReserveGb === 8, 'mac reserve must be reported')
+  check(rec.recommendations.every((r) => r.fit.needsGib <= r.fit.usableGib), 'a recommended model needs more than the usable memory')
+  check(rec.recommendations.every((r) => r.ollamaPull.startsWith('ollama pull ')), 'ollama pull command missing')
+  check(rec.recommendations.every((r) => !r.capabilities.includes('embedding')), 'embedding models must not be recommended unprompted')
+  const order = rec.recommendations.map((r) => r.fit.verdict)
+  check(order.every((v, i) => i === 0 || !(order[i - 1] === 'tight' && v === 'fits')), 'fits must come before tight')
+  check(rec.caveats.some((c) => c.includes('not speed')), 'memory-not-speed caveat missing')
+}
+const noHw = recommendModels({})
+check(noHw.status === 'needs-hardware', 'missing memory must ask, never guess')
+const tiny = recommendModels({ os: 'mac', ramGb: 8 })
+check(tiny.status === 'none-fit' && 'onlyJustTooLarge' in tiny && (tiny.onlyJustTooLarge?.length ?? 0) > 0, '8 GB Mac (0 usable) must report none-fit with next-size options')
+const gpu = recommendModels({ os: 'win', vramGb: 24 })
+check(gpu.status === 'ok' && 'hardware' in gpu && gpu.hardware.usableForModelGib === 23, 'discrete GPU: 24 GB VRAM minus 1 GB reserve')
+const vis = recommendModels({ os: 'mac', ramGb: 32, needs: ['vision'] })
+check(vis.status === 'ok' && 'recommendations' in vis && vis.recommendations.every((r) => r.capabilities.includes('vision')), 'needs:vision filter')
+const code = recommendModels({ os: 'mac', ramGb: 32, useCase: 'code' })
+check(code.status === 'ok' && 'recommendations' in code && code.recommendations.every((r) => r.bestFor.includes('code')), 'useCase:code filter')
+const emb = recommendModels({ os: 'mac', ramGb: 16, needs: ['embedding'] })
+check(emb.status === 'ok' && 'recommendations' in emb && emb.recommendations.every((r) => r.capabilities.includes('embedding')), 'needs:embedding returns embedding models')
+const withApp = recommendModels({ os: 'mac', ramGb: 24, app: 'open-webui' })
+check('app' in withApp && withApp.app?.status === 'ollama', 'open-webui should link to Ollama')
+const ownRt = recommendModels({ os: 'mac', ramGb: 24, app: 'lm-studio' })
+check('app' in ownRt && ownRt.app?.status === 'own-runtime', 'lm-studio ships its own runtime')
+check(throwsNotFound(() => recommendModels({ os: 'mac', ramGb: 24, app: 'no-such-app' })) !== null, 'unknown app must error with did-you-mean')
+const catalogList = listLocalModels({ maxDownloadGib: 10 })
+check(catalogList.models.length > 0 && catalogList.models.every((m) => m.downloadGib <= 10), 'maxDownloadGib filter')
+check(catalogList.models.every((m, i, a) => i === 0 || a[i - 1].downloadGib <= m.downloadGib), 'list_local_models sorted by size')
+check(listLocalModels({ tier: 'tiny' }).models.every((m) => m.tier === 'tiny'), 'tier filter')
+check(listLocalModels({}).catalog.variants === localLlmCatalog.models.length, 'catalog count')
+const hw = checkHardwareCompatibility({ slug: 'ollama', os: 'mac', ramGb: 24 })
+check(hw.suggestedModels !== null && hw.suggestedModels.models.length > 0 && hw.suggestedModels.models.every((m) => m.needsGib <= 16), 'check_hardware_compatibility must suggest models that fit 16 GiB usable')
+check(checkHardwareCompatibility({ slug: 'ollama' }).suggestedModels === null, 'no hardware given -> no model suggestions')
+const stackWithModels = recommendStack({ goal: 'coding assistant', os: 'mac', ramGb: 32 })
+check(stackWithModels.suggestedModels !== null && stackWithModels.suggestedModels.models.length > 0, 'recommend_stack must carry suggested models when memory is known')
+check(recommendStack({ goal: 'coding assistant' }).suggestedModels === null, 'recommend_stack without memory must not guess models')
 
 if (failures) { console.error(`${failures} check(s) failed`); process.exit(1) }
 console.log('MCP tool checks passed')

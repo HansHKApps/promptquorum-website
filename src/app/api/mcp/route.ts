@@ -39,6 +39,7 @@ import {
   getAppAlternatives,
   getHandsOnTestFindings,
 } from '@/lib/mcp/directory-tools'
+import { recommendModels, listLocalModels } from '@/lib/mcp/model-tools'
 import { STACK_RECIPES } from '@/lib/power-local-llm/stacks'
 import { recordMcpCall, type McpToolName } from '@/lib/mcp/usage'
 import { recordMcpDimensions } from '@/lib/mcp/usage-dimensions'
@@ -86,7 +87,7 @@ function run(toolName: McpToolName, fn: () => unknown) {
 }
 
 const OS_ENUM = z.enum(['mac', 'win', 'linux', 'ios', 'ipados', 'watchos', 'android', 'web'])
-const SERVER_VERSION = '2.0.0'
+const SERVER_VERSION = '2.1.0'
 const SITE = 'https://www.promptquorum.com'
 const mdResource = (uri: URL, text: string) => ({ contents: [{ uri: uri.href, mimeType: 'text/markdown', text }] })
 const jsonResource = (uri: URL, data: unknown) => ({ contents: [{ uri: uri.href, mimeType: 'application/json', text: JSON.stringify(data, null, 2) }] })
@@ -340,6 +341,43 @@ const handler = createMcpHandler(
         }),
       },
       async (args) => run('estimate_vram', () => estimateVramTool(args))
+    )
+
+    server.registerTool(
+      'recommend_models',
+      {
+        title: 'Which local LLM fits my computer (and my app)?',
+        description:
+          'Recommend local LLMs from a curated catalog of widely used models (verified Ollama download sizes, quantization, capabilities, license) that fit the user\'s machine, with the exact ollama pull command. Pass the machine\'s memory: on a Mac os "mac" and ramGb = TOTAL unified memory (8 GB is always kept free for macOS); with a dedicated GPU vramGb; CPU-only machines ramGb. Optionally filter by useCase and needs (vision, tools, reasoning, coding), and pass app (directory slug) to learn how that app gets its models. Returns what fits, what is only just too large (with the memory it would need), and states that fit is memory only, not speed. Example: {"os":"mac","ramGb":24,"useCase":"code","app":"open-webui"}. If memory is unknown the tool asks for it instead of guessing.',
+        inputSchema: z.object({
+          os: OS_ENUM.optional(),
+          ramGb: z.number().min(0).optional().describe('Mac: TOTAL unified memory. Windows/Linux: system RAM (used when no vramGb).'),
+          vramGb: z.number().min(0).optional().describe('Dedicated GPU memory (Windows/Linux)'),
+          useCase: z.enum(['chat', 'code', 'agent', 'docs', 'image', 'phone', 'audio']).optional(),
+          needs: z.array(z.enum(['vision', 'tools', 'reasoning', 'coding', 'embedding'])).optional().describe('Capabilities the model must have'),
+          app: z.string().optional().describe('Directory slug, e.g. "open-webui"; adds how the app loads models'),
+          contextTokens: z.number().int().min(512).max(1048576).optional().describe('Context window in tokens to plan for, default 8192'),
+          limit: z.number().int().min(1).max(8).optional().describe('Default 5'),
+        }),
+      },
+      async (args) => run('recommend_models', () => recommendModels(args))
+    )
+
+    server.registerTool(
+      'list_local_models',
+      {
+        title: 'Browse the local LLM catalog',
+        description:
+          'List the curated local LLM catalog (about 30 widely used models, one default quantization each) with parameters, download size, capabilities, license and the ollama pull command. Filter by tier (tiny, small, mid, large, xl), capability, useCase or maxDownloadGib. Not an exhaustive model list. To check which models fit a specific computer use recommend_models. Example: {"capability":"vision","maxDownloadGib":10}.',
+        inputSchema: z.object({
+          tier: z.enum(['tiny', 'small', 'mid', 'large', 'xl']).optional(),
+          capability: z.enum(['vision', 'tools', 'reasoning', 'coding', 'embedding']).optional(),
+          useCase: z.enum(['chat', 'code', 'agent', 'docs', 'image', 'phone', 'audio']).optional(),
+          maxDownloadGib: z.number().min(0).optional(),
+          limit: z.number().int().min(1).max(50).optional().describe('Default 30'),
+        }),
+      },
+      async (args) => run('list_local_models', () => listLocalModels(args))
     )
 
     server.registerTool(

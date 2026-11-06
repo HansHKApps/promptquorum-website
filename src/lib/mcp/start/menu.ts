@@ -14,9 +14,9 @@ export interface MenuItem {
 export const MENU: readonly MenuItem[] = [
   {
     id: 1,
-    label: 'Find apps for my hardware',
-    examples: ['I have 12 GB VRAM — what can I run for coding?'],
-    tools: ['check_hardware_compatibility', 'find_best_apps', 'estimate_vram'],
+    label: 'Find apps and models for my hardware',
+    examples: ['I have 12 GB VRAM — what can I run for coding?', 'Which local model fits my 24 GB Mac?'],
+    tools: ['check_hardware_compatibility', 'find_best_apps', 'estimate_vram', 'recommend_models', 'list_local_models'],
   },
   {
     id: 2,

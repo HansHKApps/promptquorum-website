@@ -19,6 +19,8 @@ export const MCP_TOOL_NAMES = [
   'check_hardware_compatibility',
   'recommend_stack',
   'estimate_vram',
+  'recommend_models',
+  'list_local_models',
   'find_local_alternative',
   'get_app_alternatives',
   'get_latest',

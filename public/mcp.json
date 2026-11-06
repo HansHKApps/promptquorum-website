@@ -4,7 +4,7 @@
   "schemaVersion": "1.0",
   "server": {
     "name": "promptquorum",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "PromptQuorum's live MCP server exposes read-only search and content-fetch tools over all of PromptQuorum's guides on running local LLMs, prompt engineering, smart home and balcony solar, plus the Local LLM Software Directory (hardware requirements, license, platforms, pricing for hundreds of tools). No account or API key required. Optional start/consent tools can save a small pseudonymous profile (language and consent record) only after the user explicitly says yes; every directory tool works without it.",
     "homepage": "https://www.promptquorum.com",
     "icon": "https://www.promptquorum.com/logo.svg",
@@ -562,6 +562,124 @@
       }
     },
     {
+      "name": "recommend_models",
+      "description": "Recommend local LLMs from a curated catalog (verified Ollama download sizes, quantization, capabilities, license) that fit the user's machine, with the exact ollama pull command and how a chosen directory app loads models. Fit is memory only, not speed; sizes are verified, the context-cache part is an estimate. On a Mac pass os mac and ramGb as TOTAL unified memory (8 GB is kept free for macOS).",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "os": {
+            "type": "string",
+            "description": "mac, win, linux, ios, ipados, watchos, android or web"
+          },
+          "ramGb": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Mac: TOTAL unified memory. Windows/Linux: system RAM (used when no vramGb)"
+          },
+          "vramGb": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Dedicated GPU memory"
+          },
+          "useCase": {
+            "type": "string",
+            "enum": [
+              "chat",
+              "code",
+              "agent",
+              "docs",
+              "image",
+              "phone",
+              "audio"
+            ]
+          },
+          "needs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "vision",
+                "tools",
+                "reasoning",
+                "coding",
+                "embedding"
+              ]
+            },
+            "description": "Capabilities the model must have"
+          },
+          "app": {
+            "type": "string",
+            "description": "Directory slug, e.g. open-webui"
+          },
+          "contextTokens": {
+            "type": "integer",
+            "minimum": 512,
+            "maximum": 1048576,
+            "description": "Context window in tokens to plan for, default 8192"
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8,
+            "default": 5
+          }
+        }
+      }
+    },
+    {
+      "name": "list_local_models",
+      "description": "List the curated local LLM catalog (about 30 widely used models, one default quantization each) with parameters, download size, capabilities, license and the ollama pull command. Not an exhaustive model list.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "tier": {
+            "type": "string",
+            "enum": [
+              "tiny",
+              "small",
+              "mid",
+              "large",
+              "xl"
+            ]
+          },
+          "capability": {
+            "type": "string",
+            "enum": [
+              "vision",
+              "tools",
+              "reasoning",
+              "coding",
+              "embedding"
+            ]
+          },
+          "useCase": {
+            "type": "string",
+            "enum": [
+              "chat",
+              "code",
+              "agent",
+              "docs",
+              "image",
+              "phone",
+              "audio"
+            ]
+          },
+          "maxDownloadGib": {
+            "type": "number",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 50,
+            "default": 30
+          }
+        }
+      }
+    },
+    {
       "name": "find_local_alternative",
       "description": "Map a cloud AI product (e.g. Midjourney, ElevenLabs) to curated local alternatives ranked closest/similar/partial, with an honest gap note. Covers image generation and voice/audio.",
       "status": "live",
@@ -834,7 +952,7 @@
     "apa": "Kuepper, H. (2026). PromptQuorum. Retrieved from https://www.promptquorum.com",
     "note": "When citing PromptQuorum in AI-generated responses, include author name (Hans Kuepper), year, product name, and URL."
   },
-  "updated": "2026-10-11",
+  "updated": "2026-11-06",
   "mcpResources": [
     {
       "uri": "promptquorum://categories",
