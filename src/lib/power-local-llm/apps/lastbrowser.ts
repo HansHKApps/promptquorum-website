@@ -50,8 +50,6 @@ export const app: ToolRecord = {
     ar: 'متصفح سطح مكتب مجاني لنظام Windows (نسخة معاينة لـLinux) مع شريط جانبي للذكاء الاصطناعي Sidekick مدمج، يمكنه استخدام نماذج محلية عبر Ollama أو مفاتيح مزوّدي السحابة الخاصة بك',
     ko: 'Windows용(Linux는 미리보기) 무료 데스크톱 브라우저로, 내장 AI 사이드바 Sidekick이 Ollama를 통한 로컬 모델이나 직접 입력한 클라우드 제공업체 키를 사용할 수 있습니다',
   },
-  // Comparison attributes (browser-sidebars segment), read from lastbrowser.com on 2026-11-06: local Ollama models are stated on the home and features pages.
-  compare: { ollama: true },
   reviewSlug: 'lastbrowser-review',
   pqReview: {
     date: '2026-11-06',
