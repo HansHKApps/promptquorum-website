@@ -1,5 +1,5 @@
 // Ask Hans — the shape of one language's UI texts. One file per site language next to this one
-// (de.ts is the source; the other eight are translations of it). DRAFT legal texts (consent*) need Hans's approval.
+// (de.ts is the source; the other eight are translations of it). Legal texts (consent*) are final as of 2026-11-06; bump the consent text version on any change.
 
 export type AskLang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko'
 
@@ -77,12 +77,17 @@ export interface AskCopy {
     error: string
   }
 
-  // DRAFT — Hans reviews and approves before launch (see docs/askhans-privacy-draft.de.md).
+  // Final consent text as of 2026-11-06 (see docs/askhans-privacy-draft.de.md). On any change bump ASK_HANS_CONSENT_TEXT_VERSION.
   consentTitle: string
   consentParagraphs: string[]
   consentPrivacyLink: string
   /** path of the privacy page in this language, e.g. /de/privacy (English: /privacy) */
   consentPrivacyHref: string
+  /** opt-in checkbox: keep conversations on this device for 7 days */
+  consentSaveLabel: string
+  /** hint shown when ticked / not ticked */
+  consentSaveOn: string
+  consentSaveOff: string
   consentYes: string
   consentNo: string
   consentQuestionLabel: string
@@ -116,6 +121,7 @@ export interface AskCopy {
     historyHeading: string
     historyHide: string
     historyShow: (n: number) => string
+    historyClear: string
   }
 
   /** header search box that hands the question to Ask Hans */

@@ -50,7 +50,7 @@ export const copy: AskCopy = {
   panelLabelPrefix: 'Thema',
   panelLinksHeading: 'Passende Seiten',
 
-  // DRAFT — Hans reviews and approves before launch (see docs/askhans-privacy-draft.de.md).
+  // Final consent text as of 2026-11-06 (see docs/askhans-privacy-draft.de.md). On any change bump ASK_HANS_CONSENT_TEXT_VERSION.
   consentTitle: 'Bevor es losgeht',
   consentParagraphs: [
     'Ask Hans beantwortet Ihre Fragen mit Hilfe von KI (Claude von Anthropic) auf Basis der Inhalte von PromptQuorum. Ihre Eingabe wird dafür an unseren Server und an Anthropic übermittelt. Bitte geben Sie keine personenbezogenen Daten ein.',
@@ -59,6 +59,9 @@ export const copy: AskCopy = {
   ],
   consentPrivacyLink: 'Mehr in der Datenschutzerklärung.',
   consentPrivacyHref: '/de/privacy',
+  consentSaveLabel: "Meine Gespräche 7 Tage auf diesem Gerät speichern",
+  consentSaveOn: "Gespeichert in Ihrem Browser auf diesem Computer, 7 Tage lang. Sie können sie jederzeit löschen.",
+  consentSaveOff: "Ihre Gespräche werden nicht gespeichert. Sie verschwinden, wenn Sie die Seite schließen.",
   consentYes: 'Ja, einverstanden',
   consentNo: 'Nein, danke',
   consentQuestionLabel: 'Ihre Frage (wird nach Ihrer Auswahl gesendet):',
@@ -82,7 +85,7 @@ export const copy: AskCopy = {
     canTitle: "Was Ask Hans kann",
     can: ["Apps für lokale KI aus dem Software-Verzeichnis finden, vergleichen und Alternativen nennen.", "Prüfen, ob Ihre Hardware (RAM, VRAM) ein Modell ausführen kann.", "Software-Lizenzen in einfacher Sprache erklären und einen Software-Stack vorschlagen.", "Sie auf die passenden Guides, Testberichte und Hardware-Seiten dieser Website in Ihrer Sprache hinweisen."],
     cannotTitle: "Was Ask Hans nicht kann",
-    cannot: ["Etwas außerhalb von promptquorum.com nachschlagen: keine Websuche, keine Nachrichten, kein Wetter, keine Live-Preise.", "Immer richtig liegen: Es ist eine KI und kann sich irren. Prüfen Sie wichtige Angaben auf den verlinkten Seiten.", "Rechts-, Medizin-, Finanz- oder Elektroinstallationsberatung geben. Wenden Sie sich dafür an eine qualifizierte Fachperson.", "Sich an Sie erinnern, nachdem Sie die Seite verlassen haben: Gespräche bleiben in Ihrem Browser und werden nicht auf unserem Server gespeichert.", "Für Sie etwas installieren, ändern oder kaufen oder unbegrenzt antworten: {messages} Fragen pro Besuch, {chars} Zeichen pro Frage."],
+    cannot: ["Etwas außerhalb von promptquorum.com nachschlagen: keine Websuche, keine Nachrichten, kein Wetter, keine Live-Preise.", "Immer richtig liegen: Es ist eine KI und kann sich irren. Prüfen Sie wichtige Angaben auf den verlinkten Seiten.", "Rechts-, Medizin-, Finanz- oder Elektroinstallationsberatung geben. Wenden Sie sich dafür an eine qualifizierte Fachperson.", "Sich an Sie erinnern, nachdem Sie die Seite verlassen haben: Gespräche bleiben in Ihrem Browser (nur 7 Tage lang, wenn Sie das Speichern gewählt haben) und werden nicht auf unserem Server gespeichert.", "Für Sie etwas installieren, ändern oder kaufen oder unbegrenzt antworten: {messages} Fragen pro Besuch, {chars} Zeichen pro Frage."],
     privacy: "Ihre Frage wird zur Erstellung der Antwort an unseren Server und an Anthropic (Claude) gesendet. Bitte keine personenbezogenen Daten eingeben.",
     close: "Schließen",
   },
@@ -101,6 +104,7 @@ export const copy: AskCopy = {
     historyHeading: "Frühere Gespräche",
     historyHide: "Frühere Gespräche ausblenden",
     historyShow: (n: number) => `Frühere Gespräche anzeigen (${n})`,
+    historyClear: "Gespeicherte Gespräche löschen",
   },
 
   search: {
