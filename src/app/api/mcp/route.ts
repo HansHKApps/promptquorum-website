@@ -222,7 +222,7 @@ const handler = createMcpHandler(
           category: z.string().optional().describe('Category or group key from list_categories, e.g. "image-generation" or "voice-audio"'),
           useCase: z.enum(['chat', 'code', 'agent', 'docs', 'image', 'audio', 'phone', 'build', 'serve']).optional(),
           os: z.enum(['mac', 'win', 'linux', 'ios', 'ipados', 'watchos', 'android', 'web']).optional().describe("User's operating system"),
-          ramGb: z.number().min(0).optional().describe("User's system RAM in GB; apps needing more are excluded"),
+          ramGb: z.number().min(0).optional().describe("User's system RAM in GB; apps needing more are excluded. For os \"mac\" pass total unified memory: 8 GB is deducted for macOS"),
           vramGb: z.number().min(0).optional().describe("User's GPU VRAM in GB (unified memory counts on Apple Silicon); apps needing more are excluded"),
           price: z.enum(['free', 'freemium', 'paid']).optional(),
           worksWith: z.string().optional().describe('Filter by an integration/backend the app works with, e.g. "Ollama", "LM Studio", "llama.cpp", "MCP". Matches case-insensitively/substring.'),
@@ -329,13 +329,14 @@ const handler = createMcpHandler(
       {
         title: 'Estimate VRAM/memory for a model',
         description:
-          'Estimate the GPU/unified memory a model needs from its size, quantization and context length (the same math as PromptQuorum\'s VRAM calculator). Optionally pass availableGb to get fits / tight / exceeds and a quantization that would fit. The result is a rule-of-thumb estimate, not a benchmark, and says nothing about speed. Example: {"modelBillions":32,"quantization":"Q4","contextLength":"8K","availableGb":24}.',
+          'Estimate the GPU/unified memory a model needs from its size, quantization and context length (the same math as PromptQuorum\'s VRAM calculator). Optionally pass availableGb to get fits / tight / exceeds and a quantization that would fit. For a Mac, pass the TOTAL unified memory as availableGb with os "mac": 8 GB is always deducted for macOS first. The result is a rule-of-thumb estimate, not a benchmark, and says nothing about speed. Example: {"modelBillions":32,"quantization":"Q4","contextLength":"8K","availableGb":24}.',
         inputSchema: z.object({
           modelBillions: z.number().min(0.1).max(2000).describe('Parameters in billions, e.g. 8, 14, 70'),
           quantization: z.string().optional().describe('FP16, Q8, Q6, Q5, Q4 (default), Q3, Q2'),
           contextLength: z.string().optional().describe('Context window like "4K", "8K", "32K", "128K" (default 4K)'),
           batchSize: z.number().int().min(1).max(8).optional().describe('Parallel requests, default 1'),
-          availableGb: z.number().min(0).optional().describe('Memory the user has, to get a fit verdict'),
+          availableGb: z.number().min(0).optional().describe('Memory the user has, to get a fit verdict. On a Mac pass TOTAL unified memory together with os: "mac".'),
+          os: z.enum(['mac', 'other']).optional().describe('Pass "mac" when availableGb is a Mac\'s unified memory: 8 GB is deducted for macOS before the fit verdict.'),
         }),
       },
       async (args) => run('estimate_vram', () => estimateVramTool(args))

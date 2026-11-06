@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-06',
     next_refresh_due: '2026-11-26',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -95,7 +95,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Download everything on a connected machine: Ollama binary, GGUF model, tokeniser configs, and any RAG dependencies',
           'Transfer via USB SSD, internal network share, or air-gapped laptop — never rely on cloud sync',
           'Set `OLLAMA_MODELS` env variable to point to your offline model directory',
-          'Qwen3 14B at Q4_K_M (9.5 GB) is the recommended offline default — wide enough capability, fits on 16 GB unified memory',
+          'Qwen3 14B at Q4_K_M (9.5 GB) is the recommended offline default — wide enough capability, fits on 24 GB unified memory',
           'NAS sizing: plan 20 GB per 7B model, 50 GB per 14B model, and 100 GB per 32B model at Q4_K_M',
           'China Data Security Law: local inference satisfies data residency requirements regardless of model provenance',
         ],
@@ -230,7 +230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-06',
       about: [{ '@type': 'Thing', name: 'Air-gapped LLM' }, { '@type': 'Thing', name: 'Offline AI deployment' }, { '@type': 'Thing', name: 'China Data Security Law' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -295,7 +295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-06',
     next_refresh_due: '2026-11-26',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -348,12 +348,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ] },
       relatedReading: { id: 'related-reading', title: 'Verwandte Artikel', items: ['[Lokales RAG für private Geschäftsdaten](/de/power-local-llm/local-rag-for-private-business-data)', '[Bestes NAS für lokale KI-Modelle 2026](/de/power-local-llm/best-nas-storage-local-ai-models-2026)', '[Qwen Lokal-Deployment-Guide 2026](/de/local-llms/qwen-local-deployment-guide-2026)'] },
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Lokale KI hinter der Firewall: Offline-Deployment-Guide 2026', description: 'Lokale LLMs offline hinter Firewall: vollständige Checkliste, Ollama Air-Gap-Workflow, NAS-Speicherbedarf, DSGVO-Hinweise.', url: 'https://www.promptquorum.com/de/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'de', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-08-29', about: [{ '@type': 'Thing', name: 'Offline LLM' }, { '@type': 'Thing', name: 'DSGVO' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Lokale KI hinter der Firewall: Offline-Deployment-Guide 2026', description: 'Lokale LLMs offline hinter Firewall: vollständige Checkliste, Ollama Air-Gap-Workflow, NAS-Speicherbedarf, DSGVO-Hinweise.', url: 'https://www.promptquorum.com/de/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'de', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-11-06', about: [{ '@type': 'Thing', name: 'Offline LLM' }, { '@type': 'Thing', name: 'DSGVO' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'de', mainEntity: [{ '@type': 'Question', name: 'Macht Ollama Netzwerkaufrufe im Offline-Betrieb?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. `ollama serve` mit lokalem Cache macht keine ausgehenden Verbindungen.' } }, { '@type': 'Question', name: 'Ist das Offline-Deployment DSGVO-konform?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Lokale Inferenz erfordert keinen Auftragsverarbeitungsvertrag nach DSGVO Art. 28.' } }] },
   },
 
   fr: {
-    freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-08-29', next_refresh_due: '2026-11-26',
+    freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-11-06', next_refresh_due: '2026-11-26',
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-fr.webp',
@@ -392,7 +392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ] },
       relatedReading: { id: 'related-reading', title: 'Lectures connexes', items: ['[RAG local pour données professionnelles privées](/fr/power-local-llm/local-rag-for-private-business-data)', '[Meilleur NAS pour modèles IA locaux 2026](/fr/power-local-llm/best-nas-storage-local-ai-models-2026)'] },
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'IA locale derrière un pare-feu : Guide de déploiement hors ligne 2026', description: 'Déployer des LLM locaux hors ligne : liste de contrôle, Ollama air-gap, NAS, RGPD.', url: 'https://www.promptquorum.com/fr/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'fr', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-08-29', about: [{ '@type': 'Thing', name: 'LLM hors ligne' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'IA locale derrière un pare-feu : Guide de déploiement hors ligne 2026', description: 'Déployer des LLM locaux hors ligne : liste de contrôle, Ollama air-gap, NAS, RGPD.', url: 'https://www.promptquorum.com/fr/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'fr', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-11-06', about: [{ '@type': 'Thing', name: 'LLM hors ligne' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'fr', mainEntity: [
           {
             '@type': 'Question',
@@ -414,7 +414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
 
   ja: {
-    freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-08-29', next_refresh_due: '2026-11-26',
+    freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-11-06', next_refresh_due: '2026-11-26',
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-ja.webp',
@@ -453,7 +453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ] },
       relatedReading: { id: 'related-reading', title: '関連記事', items: ['[プライベートビジネスデータ用ローカルRAG](/ja/power-local-llm/local-rag-for-private-business-data)', '[ローカルAIモデル向けNAS 2026](/ja/power-local-llm/best-nas-storage-local-ai-models-2026)'] },
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'ファイアウォール背後のローカルAI：オフライン展開ガイド 2026', description: 'ファイアウォール背後でのオフラインLLM展開：事前チェックリスト・Ollama air-gap・NASサイジング・METIガイドライン対応。', url: 'https://www.promptquorum.com/ja/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'ja', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-08-29', about: [{ '@type': 'Thing', name: 'オフラインLLM' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'ファイアウォール背後のローカルAI：オフライン展開ガイド 2026', description: 'ファイアウォール背後でのオフラインLLM展開：事前チェックリスト・Ollama air-gap・NASサイジング・METIガイドライン対応。', url: 'https://www.promptquorum.com/ja/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'ja', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-11-06', about: [{ '@type': 'Thing', name: 'オフラインLLM' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'ja', mainEntity: [
           {
             '@type': 'Question',
@@ -475,7 +475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
 
   zh: {
-    freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-08-29', next_refresh_due: '2026-11-26',
+    freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-11-06', next_refresh_due: '2026-11-26',
     designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-zh.webp',
@@ -517,7 +517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ] },
       relatedReading: { id: 'related-reading', title: '相关阅读', items: ['[本地RAG用于私人业务数据](/zh/power-local-llm/local-rag-for-private-business-data)', '[本地AI模型最佳NAS存储 2026](/zh/power-local-llm/best-nas-storage-local-ai-models-2026)', '[Qwen本地部署指南 2026](/zh/local-llms/qwen-local-deployment-guide-2026)', '[微信本地LLM集成2026](/zh/power-local-llm/wechat-local-llm-integration-2026) — 将离线Ollama后端接入微信机器人：技术路线与合规注意事项。'] },
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '防火墙后的本地AI：离线部署指南 2026', description: '防火墙后本地LLM离线部署：完整检查清单、Ollama air-gap、NAS存储规划、《数据安全法》/CAC合规说明。', url: 'https://www.promptquorum.com/zh/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'zh', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-08-29', about: [{ '@type': 'Thing', name: '离线LLM' }, { '@type': 'Thing', name: '数据安全法' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '防火墙后的本地AI：离线部署指南 2026', description: '防火墙后本地LLM离线部署：完整检查清单、Ollama air-gap、NAS存储规划、《数据安全法》/CAC合规说明。', url: 'https://www.promptquorum.com/zh/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'zh', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-11-06', about: [{ '@type': 'Thing', name: '离线LLM' }, { '@type': 'Thing', name: '数据安全法' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'zh', mainEntity: [
           {
             '@type': 'Question',
@@ -565,7 +565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-06',
     next_refresh_due: '2026-11-26',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -630,7 +630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Descarga todo en una máquina conectada: binario de Ollama, modelo GGUF, configuraciones del tokenizador y cualquier dependencia de RAG',
           'Transfiere mediante USB SSD, recurso compartido de red interno o portátil air-gapped — nunca dependas de la sincronización en la nube',
           'Establece la variable de entorno `OLLAMA_MODELS` para que apunte a tu directorio de modelos offline',
-          'Qwen3 14B en Q4_K_M (9,5 GB) es el predeterminado offline recomendado — capacidad amplia, cabe en 16 GB de memoria unificada',
+          'Qwen3 14B en Q4_K_M (9,5 GB) es el predeterminado offline recomendado — capacidad amplia, cabe en 24 GB de memoria unificada',
           'Dimensionamiento de NAS: planifica 20 GB por modelo de 7B, 50 GB por modelo de 14B y 100 GB por modelo de 32B en Q4_K_M',
           'Cumplimiento normativo de datos: la inferencia local satisface los requisitos de residencia de datos independientemente del origen del modelo',
         ],
@@ -764,7 +764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-06',
       about: [{ '@type': 'Thing', name: 'LLM air-gapped' }, { '@type': 'Thing', name: 'Despliegue de IA offline' }, { '@type': 'Thing', name: 'Cumplimiento normativo de datos' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -828,7 +828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-06',
     next_refresh_due: '2026-11-26',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -893,7 +893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '연결된 기기에서 모두 다운로드하십시오: Ollama 바이너리, 모델 GGUF, 토크나이저 설정, RAG 의존성 파일',
           'USB SSD, 내부 네트워크 공유, 또는 에어갭 노트북으로 전송하십시오. 클라우드 동기화에 의존하지 마십시오',
           '`OLLAMA_MODELS` 환경 변수를 오프라인 모델 디렉터리로 설정하십시오',
-          'Qwen3 14B Q4_K_M(9.5 GB)이 오프라인 기본값으로 권장됩니다. 16 GB 통합 메모리에서 실행 가능합니다',
+          'Qwen3 14B Q4_K_M(9.5 GB)이 오프라인 기본값으로 권장됩니다. 24 GB 통합 메모리에서 실행 가능합니다',
           'NAS 용량 계획: 7B 모델당 20 GB, 14B 모델당 50 GB, 32B 모델당 100 GB(Q4_K_M 기준)',
           '데이터 컴플라이언스: 로컬 추론은 모델 출처와 무관하게 데이터 레지던시 요구 사항을 충족합니다',
         ],
@@ -1027,7 +1027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-06',
       about: [{ '@type': 'Thing', name: 'LLM 에어갭' }, { '@type': 'Thing', name: '오프라인 AI 배포' }, { '@type': 'Thing', name: '데이터 컴플라이언스' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1046,7 +1046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-06',
     next_refresh_due: '2026-11-26',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -1111,7 +1111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Baixe tudo em uma máquina conectada: binário do Ollama, modelo GGUF, configurações do tokenizador e quaisquer dependências de RAG',
           'Transfira via USB SSD, compartilhamento de rede interno ou notebook air-gapped — nunca dependa da sincronização em nuvem',
           'Defina a variável de ambiente `OLLAMA_MODELS` para apontar para o seu diretório de modelos offline',
-          'Qwen3 14B em Q4_K_M (9,5 GB) é o padrão offline recomendado — capacidade ampla, cabe em 16 GB de memória unificada',
+          'Qwen3 14B em Q4_K_M (9,5 GB) é o padrão offline recomendado — capacidade ampla, cabe em 24 GB de memória unificada',
           'Dimensionamento de NAS: planeje 20 GB por modelo de 7B, 50 GB por modelo de 14B e 100 GB por modelo de 32B em Q4_K_M',
           'Conformidade de dados: a inferência local atende aos requisitos de residência de dados independentemente da origem do modelo',
         ],
@@ -1245,7 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-06',
       about: [{ '@type': 'Thing', name: 'LLM air-gapped' }, { '@type': 'Thing', name: 'Implantação de IA offline' }, { '@type': 'Thing', name: 'Conformidade de residência de dados' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1309,7 +1309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-06',
     next_refresh_due: '2026-11-26',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -1508,7 +1508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-06',
       about: [{ '@type': 'Thing', name: 'LLM معزول air-gapped' }, { '@type': 'Thing', name: 'نشر الذكاء الاصطناعي بدون إنترنت' }, { '@type': 'Thing', name: 'قوانين إقامة البيانات' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },

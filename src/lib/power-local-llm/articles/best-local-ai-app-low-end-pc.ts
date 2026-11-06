@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-23',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Easiest Desktop Apps',
@@ -107,7 +107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Apple M1 8 GB consistently outperforms 8 GB x86 laptops across all four apps in this table. If you have access to an Apple Silicon Mac, it is the best low-RAM hardware for local AI — the unified memory architecture gives the model access to the full 8 GB without the OS overhead penalty that Windows and Linux laptops face.',
+            text: 'Apple M1 8 GB consistently outperforms 8 GB x86 laptops across all four apps in this table. If you have access to an Apple Silicon Mac, it is the best low-RAM hardware for local AI — the unified memory architecture lets the CPU and GPU share the same RAM at high bandwidth. That is a speed advantage, not extra capacity: macOS still needs at least 8 GB of that pool, so on an 8 GB Mac plan only for the smallest models and treat 16 GB as the realistic minimum.',
           },
         ],
         columns: ['App', 'Min RAM', 'Best model (8GB constraint)', 'Tokens/sec (CPU-only)', 'Heat', 'Verdict'],
@@ -533,7 +533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-23',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
@@ -628,7 +628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Apple M1 8 GB übertrifft 8-GB-x86-Laptops konsistent in allen vier Apps dieser Tabelle. Wenn Sie Zugang zu einem Apple-Silicon-Mac haben, ist es die beste Hardware mit wenig RAM für lokale KI — die Unified-Memory-Architektur gibt dem Modell Zugriff auf die vollen 8 GB ohne den OS-Overhead, den Windows- und Linux-Laptops haben.',
+            text: 'Apple M1 8 GB übertrifft 8-GB-x86-Laptops konsistent in allen vier Apps dieser Tabelle. Wenn Sie Zugang zu einem Apple-Silicon-Mac haben, ist es die beste Hardware mit wenig RAM für lokale KI — die Unified-Memory-Architektur lässt CPU und GPU denselben RAM mit hoher Bandbreite teilen. Das ist ein Geschwindigkeits-, kein Kapazitätsvorteil: macOS braucht davon weiterhin mindestens 8 GB, daher sollten Sie auf einem Mac mit 8 GB nur die kleinsten Modelle einplanen und 16 GB als realistisches Minimum ansehen.',
           },
         ],
         columns: ['App', 'Min. RAM', 'Bestes Modell (8-GB-Beschränkung)', 'Tokens/Sek. (CPU-only)', 'Wärme', 'Verdikt'],
@@ -952,7 +952,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-23',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
@@ -1026,7 +1026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Sur un PC modeste avec 8 Go RAM et sans GPU : installez Ollama, exécutez `ollama pull phi4-mini`, puis `ollama run phi4-mini`. Vous obtenez 4–14 tokens par seconde selon votre CPU — lent mais utilisable pour des tâches où vous envoyez un prompt et attendez la réponse. Pour une alternative sans terminal, Jan s\'installe comme une application normale et organise sa liste de modèles autour de ceux qui tiennent en 8 Go.' },
         ],
         callouts: [
-          { type: 'note', text: 'Apple M1 8 Go surpasse régulièrement les portables x86 8 Go dans les quatre apps de ce tableau. Si vous avez accès à un Mac Apple Silicon, c\'est le meilleur matériel à faible RAM pour l\'IA locale — l\'architecture à mémoire unifiée donne au modèle l\'accès aux 8 Go complets sans la pénalité d\'overhead OS que subissent les portables Windows et Linux.' },
+          { type: 'note', text: 'Apple M1 8 Go surpasse régulièrement les portables x86 8 Go dans les quatre apps de ce tableau. Si vous avez accès à un Mac Apple Silicon, c\'est le meilleur matériel à faible RAM pour l\'IA locale — l\'architecture à mémoire unifiée permet au CPU et au GPU de partager la même RAM à haute bande passante. C\'est un avantage de vitesse, pas de capacité : macOS en exige toujours au moins 8 Go, donc sur un Mac 8 Go ne prévoyez que les plus petits modèles et considérez 16 Go comme le minimum réaliste.' },
         ],
         columns: ['Application', 'RAM min.', 'Meilleur modèle (contrainte 8 Go)', 'Tokens/s (CPU seul)', 'Chaleur', 'Verdict'],
         rows: [
@@ -1237,7 +1237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-23',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
@@ -1311,7 +1311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '8GB RAM・GPUなしのロースペックPCでは：Ollamaをインストールし、`ollama pull phi4-mini`を実行、次に`ollama run phi4-mini`を実行します。CPUに応じて4〜14 tok/秒で動作 — 遅いですが、プロンプトを送って回答を待つ用途では実用的です。ターミナル不要の代替手段としては、Janが通常のアプリのようにインストールでき、8GBに収まるモデルにキュレートされたリストを提供します。' },
         ],
         callouts: [
-          { type: 'note', text: 'Apple M1 8GBは、この表内のすべての4アプリで8GB x86ノートPCを一貫して上回ります。Apple Silicon Macが利用可能であれば、それは低RAMハードウェアでローカルAIを動かす最良の選択肢です — ユニファイドメモリアーキテクチャによって、Windows / Linuxノートが抱えるOSオーバーヘッドのペナルティなしに、モデルが8GBフルにアクセスできます。' },
+          { type: 'note', text: 'Apple M1 8GBは、この表内のすべての4アプリで8GB x86ノートPCを一貫して上回ります。Apple Silicon Macが利用可能であれば、それは低RAMハードウェアでローカルAIを動かす最良の選択肢です — ユニファイドメモリアーキテクチャによって、CPUとGPUが同じRAMを高帯域で共有できます。これは速度上の利点であって容量が増えるわけではありません。macOS自体が最低8GBを必要とするため、8GBのMacでは最小のモデルだけを想定し、16GBを現実的な最小構成と考えてください。' },
         ],
         columns: ['アプリ', '最低RAM', 'ベストモデル（8GB制約）', 'tok/秒（CPU専用）', '発熱', '評価'],
         rows: [
@@ -1526,7 +1526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-23',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
@@ -1600,7 +1600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '在8GB内存无GPU的低配PC上：安装Ollama，运行 `ollama pull phi4-mini`，然后 `ollama run phi4-mini`。根据CPU可获得4–14 tokens/秒 — 较慢但适用于发送提示后等待响应的任务。无终端替代方案：Jan像普通应用一样安装，并将模型列表精选为可装入8GB的模型。' },
         ],
         callouts: [
-          { type: 'note', text: 'Apple M1 8GB在本表所有4个应用中始终优于8GB x86笔记本。如果可以使用Apple Silicon Mac，它是低内存本地AI硬件的最佳选择 — 统一内存架构使模型可访问完整8GB，没有Windows和Linux笔记本面临的OS开销负担。' },
+          { type: 'note', text: 'Apple M1 8GB在本表所有4个应用中始终优于8GB x86笔记本。如果可以使用Apple Silicon Mac，它是低内存本地AI硬件的最佳选择 — 统一内存架构让CPU和GPU以高带宽共享同一块内存。这是速度优势，而不是额外容量：macOS本身至少需要8GB，因此8GB的Mac只适合最小的模型，请把16GB视为实际可行的最低配置。' },
         ],
         columns: ['应用', '最低内存', '最佳模型（8GB限制）', 'tokens/秒（CPU专用）', '发热', '评判'],
         rows: [
@@ -1815,7 +1815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-23',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
@@ -1910,7 +1910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'El Apple M1 con 8 GB supera sistemáticamente a los portátiles x86 con 8 GB en las cuatro apps de esta tabla. Si tienes acceso a un Mac con Apple Silicon, es el mejor hardware de bajo RAM para IA local — la arquitectura de memoria unificada permite al modelo acceder a los 8 GB completos sin la penalización de overhead del SO que sufren los portátiles con Windows y Linux.',
+            text: 'El Apple M1 con 8 GB supera sistemáticamente a los portátiles x86 con 8 GB en las cuatro apps de esta tabla. Si tienes acceso a un Mac con Apple Silicon, es el mejor hardware de bajo RAM para IA local — la arquitectura de memoria unificada permite que CPU y GPU compartan la misma RAM con gran ancho de banda. Es una ventaja de velocidad, no de capacidad: macOS sigue necesitando al menos 8 GB de ese conjunto, así que en un Mac de 8 GB planifica solo los modelos más pequeños y considera 16 GB como el mínimo realista.',
           },
         ],
         columns: ['App', 'RAM mín.', 'Mejor modelo (límite 8 GB)', 'Tokens/s (solo CPU)', 'Calor', 'Veredicto'],
@@ -2319,7 +2319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-23',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
@@ -2414,7 +2414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'O Apple M1 com 8 GB supera consistentemente os notebooks x86 de 8 GB nos quatro apps desta tabela. Se você tem acesso a um Mac com Apple Silicon, é o melhor hardware de baixa RAM para IA local — a arquitetura de memória unificada dá ao modelo acesso aos 8 GB completos sem a penalidade de overhead do SO que os notebooks com Windows e Linux enfrentam.',
+            text: 'O Apple M1 com 8 GB supera consistentemente os notebooks x86 de 8 GB nos quatro apps desta tabela. Se você tem acesso a um Mac com Apple Silicon, é o melhor hardware de baixa RAM para IA local — a arquitetura de memória unificada permite que CPU e GPU compartilhem a mesma RAM com alta largura de banda. É uma vantagem de velocidade, não de capacidade: o macOS ainda precisa de pelo menos 8 GB desse conjunto, então em um Mac de 8 GB planeje apenas os menores modelos e considere 16 GB o mínimo realista.',
           },
         ],
         columns: ['App', 'RAM mín.', 'Melhor modelo (limite 8 GB)', 'Tokens/s (só CPU)', 'Calor', 'Veredicto'],
@@ -2823,7 +2823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-23',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
@@ -3327,7 +3327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-23',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',

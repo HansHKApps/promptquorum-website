@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       last_seo_review: '2026-11-02',
       current_models_mentioned: ['Qwen3.8-27B', 'Gemma 4 E2B', 'Gemma 4 26B-A4B', 'Gemma 4 12B', 'Qwen2.5-Coder 7B', 'Phi-4-mini', 'Nemotron 3.5 Lightning', 'Granite 4.2', 'Devstral Small 2'],
       current_benchmarks_used: ['MMLU', 'HumanEval', 'GSM8K', 'SWE-bench Pro', 'LiveCodeBench v6', 'AIME 2026', 'GPQA Diamond', 'EvalPlus'],
-      current_hardware_mentioned: ['RTX 4090', 'RTX 3090', 'Mac unified memory (24 GB+)', 'Raspberry Pi 5'],
+      current_hardware_mentioned: ['RTX 4090', 'RTX 3090', 'Mac unified memory (32 GB+)', 'Raspberry Pi 5'],
       theme: 'Best Models',
       title: 'Best Local LLMs in 2026: Qwen3.8-27B, Gemma 4, and Phi-4-mini Ranked',
       seoTitle: 'Best Local LLMs 2026: Qwen3.8-27B, Gemma 4, Phi-4-mini',
@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Best local LLMs 2026 ranked: Qwen3.8-27B is the best 27B model (89.2% GPQA Diamond, 24 GB). Gemma 4 26B-A4B for reasoning, Qwen2.5-Coder 7B for code.',
       heroImage: '/images/best-local-llms-2026-ranked-comparison-hero-en.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**The best local LLMs in 2026 are Qwen3.8-27B (best overall, native vision-language, ~24 GB RAM), Gemma 4 E2B (best small, ~2 GB RAM), Gemma 4 26B-A4B (best reasoning, 16–19 GB RAM), Qwen2.5-Coder 7B (best small coding model, ~5 GB RAM), and Phi-4-mini (best CPU-only, ~2.5 GB RAM).**',
       audience: 'Beginners running their first local LLM on consumer hardware',
       readTime: '10 min read',
@@ -92,7 +92,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: '#1 Qwen3.8-27B -- Best Overall Local LLM in 2026',
           content: [
             '**Qwen3.8-27B is the best local LLM for most users in 2026.** It scores 89.2% on GPQA Diamond, 61.7% on SWE-bench Pro, and 90.3% on LiveCodeBench v6, while fitting in ~24 GB of RAM at Q4_K_M quantization. The 262K native context window (extensible to 1M tokens) handles long documents. Unlike the previous Qwen3.6 27B, it is a native vision-language model — it understands images and video directly, not just text.',
-            'The dense 28B architecture (Apache 2.0) replaces Qwen3.6 27B, which is now superseded. Its RAM footprint grew from ~17 GB to ~24 GB, so 16-17 GB machines that fit the old model comfortably will want the smaller Qwen3.6-35B-A3B MoE variant or a different model instead — see the Which Model section below. For most users with 24 GB+ VRAM or unified memory, Qwen3.8-27B provides the best quality-per-gigabyte of any dense model in 2026, with the added benefit of vision support.',
+            'The dense 28B architecture (Apache 2.0) replaces Qwen3.6 27B, which is now superseded. Its RAM footprint grew from ~17 GB to ~24 GB, so 16-17 GB machines that fit the old model comfortably will want the smaller Qwen3.6-35B-A3B MoE variant or a different model instead — see the Which Model section below. For most users with 24 GB+ VRAM or 32 GB+ Mac unified memory (macOS reserves about 8 GB), Qwen3.8-27B provides the best quality-per-gigabyte of any dense model in 2026, with the added benefit of vision support.',
           ],
           rows: [
             { 'Spec': 'GPQA Diamond', 'Value': '89.2%' },
@@ -108,7 +108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: '#2 Gemma 4 26B-A4B -- Best for Reasoning Tasks',
           content: [
             '**Gemma 4 26B-A4B is the best local model for reasoning-heavy tasks in 2026.** It scores 88.3% on AIME 2026 — a competition-math benchmark — while using a Mixture-of-Experts design that activates only ~4B parameters per token, generating at close to 4B-model speed despite loading all 26B parameters into memory.',
-            'The Ollama download is 16–19 GB (Ollama does not state the quantization of the default tag), so plan for about that much RAM plus headroom for context; it fits on a single RTX 4090 or 24 GB+ Mac unified memory. Because it is a MoE model, Ollama still loads every expert into memory before inference starts, so the RAM requirement matches a 26B dense model even though only ~4B parameters compute per token. See [DeepSeek vs Qwen Coding Comparison](/power-local-llm/deepseek-vs-qwen-coding-local-2026) for benchmark comparisons against other reasoning-focused picks.',
+            'The Ollama download is 16–19 GB (Ollama does not state the quantization of the default tag), so plan for about that much RAM plus headroom for context; it fits on a single RTX 4090 or a 32 GB+ Mac (about 8 GB of unified memory stays with macOS). Because it is a MoE model, Ollama still loads every expert into memory before inference starts, so the RAM requirement matches a 26B dense model even though only ~4B parameters compute per token. See [DeepSeek vs Qwen Coding Comparison](/power-local-llm/deepseek-vs-qwen-coding-local-2026) for benchmark comparisons against other reasoning-focused picks.',
           ],
           rows: [
             { 'Spec': 'AIME 2026 score', 'Value': '88.3%' },
@@ -254,7 +254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'How much RAM do I need for Qwen3.8-27B?',
-              a: 'Qwen3.8-27B requires approximately 24 GB of RAM at Q4_K_M quantization (the Ollama download itself is 18 GB; the rest is headroom for the context window). A 24 GB VRAM card (RTX 4090, RTX 3090) or 24 GB+ Mac unified memory fits it, though headroom is tighter than the previous Qwen3.6 27B needed (~17 GB). Pull with `ollama pull qwen3.8:27b`. If your hardware has less than 24 GB, use the Qwen3.6-35B-A3B MoE variant or a smaller model instead.',
+              a: 'Qwen3.8-27B requires approximately 24 GB of RAM at Q4_K_M quantization (the Ollama download itself is 18 GB; the rest is headroom for the context window). A 24 GB VRAM card (RTX 4090, RTX 3090) or a Mac with 32 GB+ unified memory (about 8 GB stays with macOS) fits it, though headroom is tighter than the previous Qwen3.6 27B needed (~17 GB). Pull with `ollama pull qwen3.8:27b`. If your hardware has less than 24 GB, use the Qwen3.6-35B-A3B MoE variant or a smaller model instead.',
             },
             {
               q: 'Is Gemma 4 26B-A4B better than Qwen3.8-27B?',
@@ -315,7 +315,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/best-local-llms-2026',
         headline: 'Best Local LLMs 2026: Qwen3.8-27B, Gemma 4 26B-A4B, Qwen2.5-Coder, Phi-4-mini Ranked',
         description: 'Best local LLMs 2026 ranked: Qwen3.8-27B is the best 27B model (89.2% GPQA Diamond, 24 GB). Gemma 4 26B-A4B for reasoning, Qwen2.5-Coder 7B for code.',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         'datePublished': '2026-04-04',
         author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -354,7 +354,7 @@ schema: {
       metaDescription: 'Mejores LLM locales 2026: Qwen3.8-27B gana en general (89.2% GPQA Diamond, 24 GB). Gemma 4 26B-A4B para razonar, Qwen2.5-Coder 7B para código.',
       heroImage: '/images/best-local-llms-2026-ranked-comparison-hero-es.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**Los mejores LLMs locales en 2026: Qwen3.8-27B (general, ~24 GB de RAM), Gemma 4 26B-A4B (razonamiento, 16–19 GB), Qwen2.5-Coder 7B (código, ~5 GB), Phi-4-mini (solo CPU, ~2,5 GB) y Gemma 4 E2B (modelo pequeño, ~2 GB).**',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
       readTime: '10 min de lectura',
@@ -437,7 +437,7 @@ schema: {
           title: '#2 Gemma 4 26B-A4B -- Mejor para razonamiento',
           content: [
             '**Gemma 4 26B-A4B es el mejor modelo local para tareas intensivas en razonamiento en 2026.** Obtiene un 88.3% en AIME 2026 -- un benchmark de matemáticas de competición -- usando un diseño de Mixture-of-Experts que solo activa ~4B parámetros por token, generando texto a una velocidad cercana a la de un modelo de 4B pese a cargar los 26B parámetros en memoria.',
-            'La descarga de Ollama ocupa 16–19 GB (Ollama no indica la cuantización de la etiqueta por defecto), así que cuenta con esa cantidad de RAM más margen para el contexto; cabe en una sola RTX 4090 o en un Mac con 24+ GB de memoria unificada. Al ser un modelo MoE, Ollama carga todos los expertos en memoria antes de la inferencia, por lo que el requisito de RAM corresponde a un modelo denso de 26B aunque solo ~4B parámetros computen por token. Consulta [Comparación de código DeepSeek vs Qwen](/es/power-local-llm/deepseek-vs-qwen-coding-local-2026) para comparaciones con otras opciones centradas en razonamiento.',
+            'La descarga de Ollama ocupa 16–19 GB (Ollama no indica la cuantización de la etiqueta por defecto), así que cuenta con esa cantidad de RAM más margen para el contexto; cabe en una sola RTX 4090 o en un Mac con 32+ GB de memoria unificada (macOS reserva unos 8 GB). Al ser un modelo MoE, Ollama carga todos los expertos en memoria antes de la inferencia, por lo que el requisito de RAM corresponde a un modelo denso de 26B aunque solo ~4B parámetros computen por token. Consulta [Comparación de código DeepSeek vs Qwen](/es/power-local-llm/deepseek-vs-qwen-coding-local-2026) para comparaciones con otras opciones centradas en razonamiento.',
           ],
           rows: [
             { 'Especificación': 'Puntuación AIME 2026', 'Valor': '88.3%' },
@@ -581,7 +581,7 @@ schema: {
             },
             {
               q: '¿Cuánta RAM necesito para Qwen3.8-27B?',
-              a: 'Qwen3.8-27B requiere ~24 GB de RAM con cuantización Q4_K_M. Una GPU con 24 GB de VRAM (RTX 4090, RTX 3090) o un Mac con 24+ GB de memoria unificada resulta cómodo; en tarjetas de 16 GB va justo. Ya está disponible en la librería oficial de Ollama: `ollama pull qwen3.8:27b`. Con menos de 16 GB, usa la variante MoE Qwen3.6-35B-A3B o un modelo más pequeño.',
+              a: 'Qwen3.8-27B requiere ~24 GB de RAM con cuantización Q4_K_M. Una GPU con 24 GB de VRAM (RTX 4090, RTX 3090) o un Mac con 32+ GB de memoria unificada (macOS reserva unos 8 GB) lo ejecuta; en tarjetas de 16 GB va justo. Ya está disponible en la librería oficial de Ollama: `ollama pull qwen3.8:27b`. Con menos de 16 GB, usa la variante MoE Qwen3.6-35B-A3B o un modelo más pequeño.',
             },
             {
               q: '¿Es Gemma 4 26B-A4B mejor que Qwen3.8-27B?',
@@ -642,7 +642,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/best-local-llms-2026',
         headline: 'Mejores LLMs locales en 2026: Qwen3.8-27B, Gemma 4 y Phi-4-mini clasificados',
         description: 'Mejores LLM locales 2026: Qwen3.8-27B gana en general (89.2% GPQA Diamond, 24 GB). Gemma 4 26B-A4B para razonar, Qwen2.5-Coder 7B para código.',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         'datePublished': '2026-04-04',
         author: { '@type': 'Person', 'name': 'Hans Kuepper' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -682,7 +682,7 @@ schema: {
       metaDescription: 'أفضل نماذج ⁨LLM⁩ المحلية ⁨2026⁩: يتصدر ⁨Qwen3.8-27B⁩ (⁨89.2% GPQA Diamond⁩، ⁨24 GB⁩). ⁨Gemma 4 26B-A4B⁩ للاستدلال و⁨Qwen2.5-Coder 7B⁩ للبرمجة.',
       heroImage: '/images/best-local-llms-2026-ranked-comparison-hero-ar.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**أفضل نماذج LLM المحلية في 2026 هي Qwen3.8-27B (الأفضل عموماً)، وGemma 4 26B-A4B (الأفضل للاستدلال)، وQwen2.5-Coder 7B (الأفضل للبرمجة بين النماذج الصغيرة)، وPhi-4-mini (الأفضل لوحدة المعالجة المركزية فقط)، وGemma 4 E2B (أفضل نموذج صغير).**',
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على عتاد استهلاكي',
       readTime: '10 دقائق للقراءة',
@@ -765,7 +765,7 @@ schema: {
           title: '#2 Gemma 4 26B-A4B -- الأفضل لمهام الاستدلال',
           content: [
             '**Gemma 4 26B-A4B هو أفضل نموذج محلي للمهام كثيفة الاستدلال في 2026.** يحقق 88.3% في AIME 2026 -- قياس رياضيات تنافسي -- باستخدام تصميم Mixture-of-Experts الذي يُفعّل ~4B معامل فقط لكل رمز، فيولّد النص بسرعة قريبة من نموذج 4B رغم تحميل 26B معامل كاملة في الذاكرة.',
-            'حجم تنزيل Ollama هو 16–19 GB (لا تذكر Ollama تكميم الوسم الافتراضي)، فخطّط لهذا القدر من RAM مع هامش للسياق؛ يناسب RTX 4090 واحدة أو Mac بذاكرة موحدة 24 GB+. بما أنه نموذج MoE، يحمّل Ollama كل الخبراء في الذاكرة قبل الاستدلال، لذا يطابق متطلب RAM نموذجاً كثيفاً بحجم 26B رغم أن ~4B معامل فقط تُحسب لكل رمز. راجع [مقارنة DeepSeek مقابل Qwen للبرمجة](/ar/power-local-llm/deepseek-vs-qwen-coding-local-2026) لمقارنات مع خيارات أخرى مُركّزة على الاستدلال.',
+            'حجم تنزيل Ollama هو 16–19 GB (لا تذكر Ollama تكميم الوسم الافتراضي)، فخطّط لهذا القدر من RAM مع هامش للسياق؛ يناسب RTX 4090 واحدة أو Mac بذاكرة موحدة 32 GB+ (يحتفظ macOS بنحو 8 GB). بما أنه نموذج MoE، يحمّل Ollama كل الخبراء في الذاكرة قبل الاستدلال، لذا يطابق متطلب RAM نموذجاً كثيفاً بحجم 26B رغم أن ~4B معامل فقط تُحسب لكل رمز. راجع [مقارنة DeepSeek مقابل Qwen للبرمجة](/ar/power-local-llm/deepseek-vs-qwen-coding-local-2026) لمقارنات مع خيارات أخرى مُركّزة على الاستدلال.',
           ],
           rows: [
             { 'المواصفة': 'درجة AIME 2026', 'القيمة': '88.3%' },
@@ -909,7 +909,7 @@ schema: {
             },
             {
               q: 'كم من RAM أحتاج لـ Qwen3.8-27B؟',
-              a: 'يتطلب Qwen3.8-27B نحو 24 GB من RAM بتكميم Q4_K_M؛ بطاقة بـ 24 GB من VRAM (RTX 4090، RTX 3090) أو Mac بذاكرة موحدة 24 GB+ مريحة؛ ضيقة على بطاقات 16 GB. متوفر بالفعل في مكتبة Ollama الرسمية: `ollama pull qwen3.8:27b`. إذا كان لديك أقل من 16 GB، استخدم نسخة MoE من Qwen3.6-35B-A3B أو نموذجاً أصغر.',
+              a: 'يتطلب Qwen3.8-27B نحو 24 GB من RAM بتكميم Q4_K_M؛ بطاقة بـ 24 GB من VRAM (RTX 4090، RTX 3090) أو Mac بذاكرة موحدة 32 GB+ (يحتفظ macOS بنحو 8 GB) تكفي لتشغيله؛ ضيقة على بطاقات 16 GB. متوفر بالفعل في مكتبة Ollama الرسمية: `ollama pull qwen3.8:27b`. إذا كان لديك أقل من 16 GB، استخدم نسخة MoE من Qwen3.6-35B-A3B أو نموذجاً أصغر.',
             },
             {
               q: 'هل Gemma 4 26B-A4B أفضل من Qwen3.8-27B؟',
@@ -971,7 +971,7 @@ schema: {
         'inLanguage': 'ar',
         headline: 'أفضل نماذج ⁨LLM⁩ المحلية في ⁨2026⁩: تصنيف ⁨Qwen3.8-27B⁩ و⁨Gemma 4⁩ و⁨Phi-4-mini⁩',
         description: 'أفضل نماذج LLM المحلية في 2026: Qwen3.8-27B، وGemma 4 26B-A4B، وQwen2.5-Coder 7B، وPhi-4-mini، وGemma 4 E2B -- مع متطلبات RAM ودرجات القياس.',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         'datePublished': '2026-04-04',
         author: { '@type': 'Person', 'name': 'Hans Kuepper' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -1010,7 +1010,7 @@ schema: {
       metaDescription: 'Melhores LLM locais 2026: Qwen3.8-27B vence no geral (89.2% GPQA Diamond, 24 GB). Gemma 4 26B-A4B para raciocínio, Qwen2.5-Coder 7B para código.',
       heroImage: '/images/best-local-llms-2026-ranked-comparison-hero-pt.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**Os melhores LLMs locais em 2026 são Qwen3.8-27B (melhor no geral), Gemma 4 26B-A4B (melhor para raciocínio), Qwen2.5-Coder 7B (melhor modelo pequeno para código), Phi-4-mini (melhor apenas com CPU) e Gemma 4 E2B (melhor modelo pequeno).**',
       audience: 'Iniciantes rodando seu primeiro LLM local em hardware de consumo',
       readTime: '10 min de leitura',
@@ -1092,7 +1092,7 @@ schema: {
           title: '#2 Gemma 4 26B-A4B -- Melhor para raciocínio',
           content: [
             '**Gemma 4 26B-A4B é o melhor modelo local para tarefas de raciocínio em 2026.** Obtém 88.3% no AIME 2026 -- e usa um design Mixture-of-Experts que ativa apenas ~4B parâmetros por token, gerando texto próximo à velocidade de um modelo de 4B mesmo carregando 26B parâmetros na memória.',
-            'Requer 16–19 GB de RAM e cabe em uma RTX 4090 ou em um Mac com 24 GB+ de memória unificada.',
+            'Requer 16–19 GB de RAM e cabe em uma RTX 4090 ou em um Mac com 32 GB+ de memória unificada (o macOS reserva cerca de 8 GB).',
           ],
           rows: [
             { 'Especificação': 'Pontuação AIME 2026', 'Valor': '88.3%' },
@@ -1202,7 +1202,7 @@ schema: {
             { q: 'Qual LLM local tem melhor suporte em português?', a: 'Qwen3.8-27B tem o melhor suporte nativo para português brasileiro entre os modelos desta lista. Para máquinas pequenas, Gemma 4 E2B também funciona bem em português.' },
             { q: 'Qual LLM local é melhor para conformidade com a LGPD?', a: 'Rodar qualquer modelo desta lista localmente pode ajudar a atender a LGPD (Lei nº 13.709/2018), pois nenhum dado sai da infraestrutura da organização; a conformidade, porém, depende do tratamento de dados como um todo, não do modelo. Gemma 4 e Qwen3.8-27B são licenciados sob Apache 2.0, que permite uso comercial.' },
             { q: 'Posso usar LLMs locais sem GPU?', a: 'Sim. Phi-4-mini (~2,5 GB) roda em CPU a 30-50 tok/s; Gemma 4 E2B (~2 GB) também roda bem apenas com CPU. Qwen3.8-27B e Gemma 4 26B-A4B funcionam melhor com uma GPU de 24 GB de VRAM.' },
-            { q: 'Quanta RAM preciso para o Qwen3.8-27B?', a: 'O Qwen3.8-27B requer aproximadamente 24 GB de RAM com quantização Q4_K_M. Uma GPU com 24 GB de VRAM (RTX 4090, RTX 3090) ou um Mac com 24 GB+ de memória unificada roda com folga; fica apertado em placas de 16 GB. Já está disponível na biblioteca oficial do Ollama: `ollama pull qwen3.8:27b`.' },
+            { q: 'Quanta RAM preciso para o Qwen3.8-27B?', a: 'O Qwen3.8-27B requer aproximadamente 24 GB de RAM com quantização Q4_K_M. Uma GPU com 24 GB de VRAM (RTX 4090, RTX 3090) ou um Mac com 32 GB+ de memória unificada (o macOS reserva cerca de 8 GB) roda; fica apertado em placas de 16 GB. Já está disponível na biblioteca oficial do Ollama: `ollama pull qwen3.8:27b`.' },
             { q: 'O Gemma 4 26B-A4B é melhor que o Qwen3.8-27B?', a: 'Depende da tarefa. O Gemma 4 26B-A4B é o único dos dois com pontuação do AIME 2026 publicada (88.3%) e, graças ao design Mixture-of-Experts, gera texto quase na velocidade de um modelo de 4B. Nos benchmarks que ambos os fabricantes publicam, o Qwen3.8-27B está à frente: GPQA Diamond 89.2% contra 82.3% e LiveCodeBench v6 90.3% contra 77.1% (números informados por cada fabricante, com sua própria configuração de avaliação). Para uso geral (escrita, análise, multilíngue, visão), o Qwen3.8-27B é mais versátil e nativamente multimodal. O Gemma 4 26B-A4B precisa de 16–19 GB (tamanho do download no Ollama) e o Qwen3.8-27B de ~24 GB de RAM -- ambos carregam todos os parâmetros na memória, independentemente dos parâmetros ativos.' },
             { q: 'Qual é o melhor LLM local para 8 GB de RAM?', a: 'O Phi-4-mini é a escolha recomendada para máquinas com 8 GB de RAM -- ocupa cerca de 2,5-3,5 GB com Q4_K_M e deixa bastante espaço livre para outros aplicativos, mantendo uma boa qualidade de seguimento de instruções para o seu tamanho. Nem o Qwen3.8-27B (~24 GB) nem o Gemma 4 26B-A4B (16–19 GB) cabem em uma máquina com 8 GB; esses exigem 16-24 GB ou mais.' },
             { q: 'Qual é o melhor LLM local para código em 2026?', a: 'O Qwen2.5-Coder 7B atinge 88% no HumanEval e é uma escolha sólida com menos de 10 GB de RAM; foi treinado especificamente em código. Com 24+ GB de RAM, o Qwen3.8-27B (61,7 no SWE-bench Pro segundo a Qwen, 18 GB) é a escolha mais forte para código, e o Devstral Small 2 (15 GB) serve máquinas de 16 GB. Veja [Melhores LLMs locais para código](/pt/local-llms/best-local-llms-for-coding).' },
@@ -1290,7 +1290,7 @@ schema: {
       metaDescription: 'Beste lokale LLMs 2026 im Vergleich: Qwen3.8-27B gewinnt (89.2% GPQA Diamond, 24 GB). Gemma 4 26B-A4B für Reasoning, Qwen2.5-Coder 7B für Code.',
       heroImage: '/images/best-local-llms-2026-ranked-comparison-hero-de.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**Die besten lokalen LLMs 2026 sind Qwen3.8-27B (bestes Gesamtmodell, natives Vision-Language, ~24 GB RAM), Gemma 4 26B-A4B (bestes Reasoning, 16–19 GB RAM), Qwen2.5-Coder 7B (beste Codierung, ~5 GB RAM), Phi-4-mini (bestes CPU-only-Modell, ~2,5 GB RAM) und Gemma 4 E2B (bestes kleines Modell, ~2 GB RAM).**',
       audience: 'Anfänger, die ihr erstes lokales LLM auf Consumer-Hardware ausführen',
       readTime: '10 Min. Lesezeit',
@@ -1337,7 +1337,7 @@ schema: {
         llama33: {
           id: 'qwen3-8-27b', title: '#1 Qwen3.8-27B -- Bestes lokales LLM 2026', content: ['Qwen3.8-27B ist das beste lokale LLM für die meisten Benutzer 2026. 89,2% GPQA Diamond, 61,7% SWE-bench Pro, und passt in ~24 GB RAM bei Q4_K_M. Anders als das vorherige Qwen3.6 27B ist es ein natives Vision-Language-Modell -- es versteht Bilder und Videos direkt, nicht nur Text. Natives 262K-Kontextfenster (erweiterbar auf 1M). ', 'Diese dichte 27B-Architektur ersetzt die vorherige Qwen3-Generation (nun veraltet) und benötigt deutlich mehr RAM. Maschinen mit 16 GB sollten stattdessen die MoE-Variante Qwen3.6-35B-A3B oder ein kleineres Modell nutzen.'], rows: [{ 'Spezifikation': 'GPQA Diamond', 'Wert': '89,2%' }, { 'Spezifikation': 'SWE-bench Pro', 'Wert': '61,7%' }, { 'Spezifikation': 'Erforderlicher RAM (Q4_K_M)', 'Wert': '~24 GB' }, { 'Spezifikation': 'Kontextfenster', 'Wert': '262K Token (bis 1M erweitert)' }, { 'Spezifikation': 'Ollama-Befehl', 'Wert': 'ollama pull qwen3.8:27b' }], columns: ['Spezifikation', 'Wert'] },
         qwen25_72: {
-          id: 'gemma-4-26b-a4b', title: '#2 Gemma 4 26B-A4B -- Bestes Reasoning', content: ['Gemma 4 26B-A4B ist das beste lokale Modell für reasoning-intensive Aufgaben 2026. 88.3% AIME 2026 -- durch ein Mixture-of-Experts-Design, das nur ~4B Parameter pro Token aktiviert und dabei nahezu die Geschwindigkeit eines 4B-Modells erreicht, obwohl alle 26B Parameter im Speicher liegen.', 'Der Ollama-Download ist 16–19 GB groß (Ollama nennt die Quantisierung des Standard-Tags nicht); planen Sie entsprechend RAM plus Puffer für den Kontext ein; passt auf eine RTX 4090 oder einen Mac mit 24 GB+ Unified Memory. Siehe [DeepSeek vs. Qwen Coding-Vergleich](/de/power-local-llm/deepseek-vs-qwen-coding-local-2026).'], rows: [{ 'Spezifikation': 'AIME-2026-Ergebnis', 'Wert': '88.3%' }, { 'Spezifikation': 'Aktive Parameter', 'Wert': '~4B von 26B (MoE)' }, { 'Spezifikation': 'Erforderlicher RAM (Ollama-Downloadgröße)', 'Wert': '16–19 GB' }, { 'Spezifikation': 'Kontextfenster', 'Wert': '256K Token' }, { 'Spezifikation': 'Ollama-Befehl', 'Wert': 'ollama pull gemma4:26b' }], columns: ['Spezifikation', 'Wert'] },
+          id: 'gemma-4-26b-a4b', title: '#2 Gemma 4 26B-A4B -- Bestes Reasoning', content: ['Gemma 4 26B-A4B ist das beste lokale Modell für reasoning-intensive Aufgaben 2026. 88.3% AIME 2026 -- durch ein Mixture-of-Experts-Design, das nur ~4B Parameter pro Token aktiviert und dabei nahezu die Geschwindigkeit eines 4B-Modells erreicht, obwohl alle 26B Parameter im Speicher liegen.', 'Der Ollama-Download ist 16–19 GB groß (Ollama nennt die Quantisierung des Standard-Tags nicht); planen Sie entsprechend RAM plus Puffer für den Kontext ein; passt auf eine RTX 4090 oder einen Mac mit 32 GB+ Unified Memory (macOS belegt etwa 8 GB). Siehe [DeepSeek vs. Qwen Coding-Vergleich](/de/power-local-llm/deepseek-vs-qwen-coding-local-2026).'], rows: [{ 'Spezifikation': 'AIME-2026-Ergebnis', 'Wert': '88.3%' }, { 'Spezifikation': 'Aktive Parameter', 'Wert': '~4B von 26B (MoE)' }, { 'Spezifikation': 'Erforderlicher RAM (Ollama-Downloadgröße)', 'Wert': '16–19 GB' }, { 'Spezifikation': 'Kontextfenster', 'Wert': '256K Token' }, { 'Spezifikation': 'Ollama-Befehl', 'Wert': 'ollama pull gemma4:26b' }], columns: ['Spezifikation', 'Wert'] },
         mistralSmall: { id: 'qwen25-coder-7b', title: '#3 Qwen2.5-Coder 7B -- Beste Code-Generierung', content: ['Qwen2.5-Coder 7B ist ein starkes kleines lokales Modell für Code: 88% HumanEval, ~5 GB bei Q4_K_M, trainiert auf 80+ Programmiersprachen.', 'Für 24+ GB RAM ist Qwen3.8-27B (61,7 SWE-bench Pro laut Qwen, 18 GB bei Ollama, `ollama run qwen3.8`) die stärkere Coding-Wahl, und Devstral Small 2 (15 GB) passt auf 16-GB-Rechner. Die 7B-Variante ist ein schneller, leichter Einstieg. Siehe [Beste lokale LLMs für Codierung](/de/local-llms/best-local-llms-for-coding).'], rows: [{ 'Spezifikation': 'HumanEval-Ergebnis', 'Wert': '88%' }, { 'Spezifikation': 'EvalPlus-Ergebnis', 'Wert': '78%' }, { 'Spezifikation': 'Erforderlicher RAM (Q4_K_M)', 'Wert': '~5 GB' }, { 'Spezifikation': 'Kontextfenster', 'Wert': '128K Token' }, { 'Spezifikation': 'Ollama-Befehl', 'Wert': 'ollama run qwen2.5-coder:7b' }], columns: ['Spezifikation', 'Wert'] },
         gemma3: { id: 'phi-4-mini', title: '#4 Phi-4-mini -- Bestes CPU-only-Modell', content: ['Microsoft Phi-4-mini erreicht 67,3% im MMLU (5-shot, laut Modellkarte von Microsoft) durch hochwertige synthetische Reasoning-Daten. ~2,5 GB RAM bei Q4_K_M, 30-50 Token/Sekunde auf jeder modernen Laptop-CPU.', 'Empfohlen für 4-8 GB RAM sowie Raspberry Pi/SBC. Die Befehlsausführung übertrifft Gemma 4 E2B bei vergleichbarem RAM.'], rows: [{ 'Spezifikation': 'MMLU-Ergebnis', 'Wert': '67,3%' }, { 'Spezifikation': 'HumanEval-Ergebnis', 'Wert': '—' }, { 'Spezifikation': 'Erforderlicher RAM (Q4_K_M)', 'Wert': '~2,5 GB' }, { 'Spezifikation': 'Kontextfenster', 'Wert': '128K Token' }, { 'Spezifikation': 'Ollama-Befehl', 'Wert': 'ollama run phi4-mini' }], columns: ['Spezifikation', 'Wert'] },
         phi4mini: {
@@ -1354,11 +1354,11 @@ schema: {
         relatedReading: {
           id: 'related-reading', title: 'Weiterführende Literatur', items: ['[Beste Anfänger-Modelle für lokale LLMs](/de/local-llms/best-beginner-local-llm-models) -- Grundmodelle für neue Benutzer', '[So installieren Sie Ollama](/de/local-llms/how-to-install-ollama) -- Installation und Modelleinrichtung', '[Beste lokale LLMs für Codierung](/de/local-llms/best-local-llms-for-coding) -- Für Codierung optimierte Modellvergleiche', '[Beschränkungen lokaler LLMs](/de/local-llms/local-llm-limitations) -- Modellbeschränkungen verstehen', '[Qwen vs. Llama vs. Mistral](/de/local-llms/qwen-vs-llama-vs-mistral) -- Detaillierter Benchmark-Vergleich aller drei Modellfamilien bei jeder Größe', '[Lokaler LLM Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide) -- VRAM und GPU-Anforderungen zum Ausführen von 70B-Modellen einschließlich Dual RTX 4090 und Mac Studio-Konfigurationen', '[MLX vs Ollama vs llama.cpp auf Mac 2026](/de/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Framework-Vergleich für Apple Silicon: Geschwindigkeit, Setup-Zeit und Ökosystem-Überlegungen.', '[Beste AMD Mini-PCs für lokale LLM 2026](/de/local-llms/best-amd-mini-pc-local-llm-2026) -- AMD Ryzen AI Max+ 395: 64–128GB Unified Memory, 50 TOPS NPU, €1.200–2.600.', '[Beste 7B-Modelle für Consumer-Hardware](/de/local-llms/best-7b-models-consumer-hardware) -- beste 7B-Modelle für Consumer-Hardware', '[Die besten lokalen LLMs für Geschäftskorrespondenz 2026: E-Mail, Angebote und Markenstimme](/de/local-llms/best-local-llms-business-writing) -- beste lokale LLMs für Geschäftskorrespondenz', '[Lokale LLM-Modell-Updates 2026](/de/local-llms/local-llm-model-updates-2026) -- vollständige Zeitleiste aller wichtigen Open-Weight-Releases mit Ollama-Verfügbarkeit'] },
         faqSection: {
-          id: 'common-questions', title: 'Häufig gestellte Fragen', faqs: [{ q: 'Was ist das beste lokale LLM 2026?', a: 'Qwen3.8-27B ist 2026 das beste lokale LLM: 89.2% GPQA Diamond, 61.7% SWE-bench Pro, ~24 GB RAM und 262K Kontext. Für spezifische Anwendungsfälle: Gemma 4 26B-A4B für Reasoning (88,3% AIME 2026, 16–19 GB RAM), Qwen2.5-Coder 7B für Code (~5 GB), Phi-4-mini für CPU-only (~2,5 GB) und Gemma 4 E2B für kleine Geräte (~2 GB).' }, { q: 'Wie viel RAM brauche ich für Qwen3.8-27B?', a: 'Qwen3.8-27B erfordert etwa ~24 GB RAM bei Q4_K_M-Quantisierung. Eine GPU mit 24 GB VRAM (RTX 4090, RTX 3090) oder ein Mac mit 24 GB+ Unified Memory läuft komfortabel; bei 16 GB wird es knapp. Es ist bereits offiziell in der Ollama-Bibliothek verfügbar: `ollama pull qwen3.8:27b`. Bei weniger als 16 GB verwenden Sie die MoE-Variante Qwen3.6-35B-A3B oder ein kleineres Modell.' }, { q: 'Ist Gemma 4 26B-A4B besser als Qwen3.8-27B?', a: 'Das hängt von der Aufgabe ab. Gemma 4 26B-A4B ist das einzige der beiden Modelle mit veröffentlichtem AIME-2026-Wert (88.3%) und generiert dank Mixture-of-Experts-Design nahezu mit der Geschwindigkeit eines 4B-Modells. Bei den Benchmarks, die beide Hersteller veröffentlichen, liegt Qwen3.8-27B vorn: GPQA Diamond 89.2% gegenüber 82.3% und LiveCodeBench v6 90.3% gegenüber 77.1% (Herstellerangaben, jeweils mit eigenem Evaluierungs-Setup). Für allgemeine Aufgaben (Schreiben, Analyse, Mehrsprachigkeit, Vision) ist Qwen3.8-27B vielseitiger und nativ multimodal. Gemma 4 26B-A4B benötigt 16–19 GB (Download-Größe in Ollama), Qwen3.8-27B ~24 GB RAM -- beide laden alle Parameter in den Speicher, unabhängig von den aktiven.' }, { q: 'Was ist das beste lokale LLM für 8 GB RAM?', a: 'Phi-4-mini (~2,5-3,5 GB bei Q4_K_M) ist die beste Wahl für 8-GB-Maschinen und lässt viel Platz für Systemprozesse. Weder Qwen3.8-27B (~24 GB) noch Gemma 4 26B-A4B (16–19 GB) passen in 8 GB -- dafür braucht es 16-24 GB oder mehr.' }, { q: 'Was ist das beste lokale LLM für Codierung 2026?', a: 'Qwen2.5-Coder 7B erreicht 88% HumanEval und ist eine starke Wahl unter 10 GB RAM; es wurde gezielt auf Code trainiert. Mit 24+ GB RAM ist Qwen3.8-27B (61,7 SWE-bench Pro laut Qwen, 18 GB) die stärkere Coding-Wahl, und Devstral Small 2 (15 GB) passt auf 16 GB.' }, { q: 'Welche neueren lokalen Modelle sind seit September erschienen?', a: 'Drei bemerkenswerte Neuzugänge bei Ollama: Gemma 4 gibt es jetzt auch als 12B-Modell (256K Kontext, etwa 8 GB) und als dichtes 31B-Modell (256K Kontext, 19–20 GB) neben E2B, E4B und 26B-A4B; NVIDIA Nemotron 3.5 Lightning (`ollama run nemotron-3.5-lightning`) ist ein 30B-Mixture-of-Experts-Modell mit 3B aktiven Parametern, 19–25 GB, gebaut für dauerhaft laufende Agenten mit bis zu 1M Kontext; und IBM Granite 4.2 (`ollama run granite4.2`, Apache 2.0, 128K Kontext) gibt es in 3B (2,2 GB), 8B (5,3 GB) und 30B (18 GB). Keines ändert die obigen Empfehlungen: Qwen3.8-27B bleibt die beste Gesamtwahl für 24 GB, doch Granite 4.2 8B und Gemma 4 12B sind auf Rechnern mit 8–16 GB einen Test wert.' }, { q: 'Sind diese Modelle kostenlos zur kommerziellen Nutzung?', a: 'Ja, alle fünf Modelle sind für kommerzielle Nutzung genehmigt: Qwen3.8-27B, Qwen2.5-Coder 7B und Gemma 4 (sowohl 26B-A4B als auch E2B) stehen laut ihren offiziellen Modellkarten unter der Apache-2.0-Lizenz, und Phi-4-mini ist MIT-lizenziert. Überprüfen Sie immer die Lizenzbedingungen für Ihre Gerichtsbarkeit vor dem Deployment.' }, { q: 'Was bedeutet Q4_K_M-Quantisierung?', a: 'Q4_K_M ist ein 4-Bit-Quantisierungsschema (eine Methode, um Modellgewichte zu komprimieren), das von llama.cpp und Ollama angeboten wird. Es reduziert Qwen3.8-27B von ~56 GB (volle BF16-Präzision) auf ~24 GB (quantisiert) mit minimalem Qualitätsverlust. Ollama wendet Q4_K_M automatisch an.' }, { q: 'Kann ich diese Modelle vollständig offline ausführen?', a: 'Ja. Alle fünf Modelle laufen vollständig offline, sobald sie auf Ihre Maschine heruntergeladen sind. Laden Sie über Ollama herunter, laden Sie lokal und Inferenz findet zu 100% auf Ihrer Hardware ohne Netzwerkaufrufe statt. Dies ist ein Schlüsselvorteil gegenüber Cloud-APIs: gut geeignet für vertrauliche Dokumente, isolierte Netzwerke und datenschutzsensible Workloads (die DSGVO-Konformität hängt weiterhin von Ihrem Gesamtaufbau ab, nicht allein vom Modell).' }, { q: 'Warum zeigt die Benchmark-Tabelle keinen MMLU-, HumanEval- oder AIME-Wert für Qwen3.8-27B?', a: 'Die offizielle Qwen3.8-27B-Modellkarte von Alibaba veröffentlicht keine MMLU-, HumanEval- oder AIME-Werte für dieses Modell -- diese Angaben sind tatsächlich nicht offengelegt, keine Auslassung dieser Seite. Die von Alibaba veröffentlichten Benchmarks sind GPQA Diamond (89,2%), SWE-bench Pro (61,7%), LiveCodeBench v6 (90,3%) und Terminal-Bench 2.1 (73,0%), alle oben aufgeführt. Falls Sie ein ähnlich großes Modell mit veröffentlichtem MMLU-/HumanEval-Wert benötigen: Qwen2.5-Coder 7B (88% HumanEval) und Phi-4-mini (67,3% MMLU) geben diese Werte an. Weitere Qwen3-Größen (8B, 14B, 32B) und der Vergleich mit DeepSeek und Llama finden Sie unter [Qwen vs. Llama vs. Mistral](/de/local-llms/qwen-vs-llama-vs-mistral).' }, { q: 'Wie hoch sind die HumanEval-, GSM8K- und AIME-Werte der Qwen3-Familie, und wie schneidet sie im Hugging Face Open LLM Leaderboard ab?', a: 'Die offiziell vom Qwen-Team veröffentlichten Werte (Technical Report) lauten: Qwen3-8B erreicht 72,0% bei HumanEval und 84,2% bei GSM8K; Qwen3-32B (nach dem Post-Training) erreicht 81,4% bei AIME 2024 und 72,9% bei AIME 2025. Diese Zahlen unterscheiden sich von der oben empfohlenen Auswahl Qwen3.8-27B -- die Qwen3.8-27B-Modellkarte von Alibaba veröffentlicht für dieses spezifische Modell keine HumanEval-, GSM8K- oder MMLU-Werte (siehe vorherige Frage). Wer Qwen3-Größen mit DeepSeek oder Llama bei genau diesen Benchmarks vergleichen möchte, sollte die Qwen3-8B/32B-Werte oben verwenden, nicht die nicht offengelegten Felder von Qwen3.8-27B. Für laufend aktualisierte Open-Weight-Rankings zwischen Qwen, DeepSeek und Llama bei MMLU, HumanEval und MATH siehe das live [Hugging Face Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard) -- die Platzierungen verändern sich mit jedem neu eingereichten Checkpoint, weshalb diese Seite meldet, was jede Modellkarte offiziell offenlegt, statt eine Momentaufnahme eines Live-Leaderboards, die innerhalb weniger Tage veraltet wäre.' }, { q: 'Wie vergleichen sich diese Modelle mit aktuellen Frontier-Cloud-Modellen?', a: 'Qwen3.8-27B und Gemma 4 26B-A4B nähern sich bei Text der Leistung früherer Frontier-Cloud-Modelle. Aktuelle Frontier-Cloud-Modelle bleiben bei komplexem Reasoning und Vision-Aufgaben voraus. Für Nur-Text-Arbeit lohnen sich lokale Modelle vor allem wegen Datenschutz, Kosten und Geschwindigkeit.' }, { q: 'Muss ich bei der Verwendung von lokalen LLMs die DSGVO beachten?', a: 'Ja. Die Datenschutz-Grundverordnung (DSGVO) der EU erlaubt lokale Inferenz als Teil einer rechtmäßigen Datenverarbeitung (Artikel 28), schreibt aber weiterhin Datenschutzmaßnahmen vor (Artikel 32). Lokale LLMs wie Qwen3.8-27B und Gemma 4 26B-A4B laufen vollständig auf lokaler Hardware ohne externe Datenübertragung -- das entfällt die Frage der Drittlandsübermittlung, die eine Cloud-API aufwerfen würde, und unterstützt (erfüllt aber nicht allein) die Sicherheitsanforderungen aus Artikel 32. Die tatsächliche DSGVO-Konformität hängt weiterhin von Ihrer Organisation ab: 1) Modellherkunft dokumentieren, 2) lokale Hardware-Sicherheit gewährleisten, 3) Zugriffskontrolle implementieren, 4) den Datenschutzbeauftragten (falls erforderlich) informieren. Dies ist keine Rechtsberatung; konsultieren Sie für Ihre konkrete Verarbeitung eine Datenschutz-Fachperson.' }, { q: 'Sind diese Modelle für den deutschen Mittelstand geeignet?', a: 'Sie können eine gute Grundlage sein. Qwen3.8-27B und Gemma 4 26B-A4B unterstützen typische IT-Sicherheitsanforderungen im Mittelstand: 1) BSI-Grundschutz: Lokales Deployment erfüllt einen Teil der BSI-Anforderungen zu Datenschutz und Systemzugang, eine vollständige Grundschutz-Konformität hängt aber von der gesamten Systemumgebung ab, nicht vom Modell allein, 2) DACH-Kompatibilität: Modelle laufen auf Standard-Unternehmens-Infrastruktur, 3) Kosteneffizienz: Nach Initial-Hardware-Investment keine Cloud-Gebühren, 4) Datensouveränität: Alle Daten bleiben on-premise.' }] },
+          id: 'common-questions', title: 'Häufig gestellte Fragen', faqs: [{ q: 'Was ist das beste lokale LLM 2026?', a: 'Qwen3.8-27B ist 2026 das beste lokale LLM: 89.2% GPQA Diamond, 61.7% SWE-bench Pro, ~24 GB RAM und 262K Kontext. Für spezifische Anwendungsfälle: Gemma 4 26B-A4B für Reasoning (88,3% AIME 2026, 16–19 GB RAM), Qwen2.5-Coder 7B für Code (~5 GB), Phi-4-mini für CPU-only (~2,5 GB) und Gemma 4 E2B für kleine Geräte (~2 GB).' }, { q: 'Wie viel RAM brauche ich für Qwen3.8-27B?', a: 'Qwen3.8-27B erfordert etwa ~24 GB RAM bei Q4_K_M-Quantisierung. Eine GPU mit 24 GB VRAM (RTX 4090, RTX 3090) oder ein Mac mit 32 GB+ Unified Memory (macOS belegt etwa 8 GB) läuft; bei 16 GB wird es knapp. Es ist bereits offiziell in der Ollama-Bibliothek verfügbar: `ollama pull qwen3.8:27b`. Bei weniger als 16 GB verwenden Sie die MoE-Variante Qwen3.6-35B-A3B oder ein kleineres Modell.' }, { q: 'Ist Gemma 4 26B-A4B besser als Qwen3.8-27B?', a: 'Das hängt von der Aufgabe ab. Gemma 4 26B-A4B ist das einzige der beiden Modelle mit veröffentlichtem AIME-2026-Wert (88.3%) und generiert dank Mixture-of-Experts-Design nahezu mit der Geschwindigkeit eines 4B-Modells. Bei den Benchmarks, die beide Hersteller veröffentlichen, liegt Qwen3.8-27B vorn: GPQA Diamond 89.2% gegenüber 82.3% und LiveCodeBench v6 90.3% gegenüber 77.1% (Herstellerangaben, jeweils mit eigenem Evaluierungs-Setup). Für allgemeine Aufgaben (Schreiben, Analyse, Mehrsprachigkeit, Vision) ist Qwen3.8-27B vielseitiger und nativ multimodal. Gemma 4 26B-A4B benötigt 16–19 GB (Download-Größe in Ollama), Qwen3.8-27B ~24 GB RAM -- beide laden alle Parameter in den Speicher, unabhängig von den aktiven.' }, { q: 'Was ist das beste lokale LLM für 8 GB RAM?', a: 'Phi-4-mini (~2,5-3,5 GB bei Q4_K_M) ist die beste Wahl für 8-GB-Maschinen und lässt viel Platz für Systemprozesse. Weder Qwen3.8-27B (~24 GB) noch Gemma 4 26B-A4B (16–19 GB) passen in 8 GB -- dafür braucht es 16-24 GB oder mehr.' }, { q: 'Was ist das beste lokale LLM für Codierung 2026?', a: 'Qwen2.5-Coder 7B erreicht 88% HumanEval und ist eine starke Wahl unter 10 GB RAM; es wurde gezielt auf Code trainiert. Mit 24+ GB RAM ist Qwen3.8-27B (61,7 SWE-bench Pro laut Qwen, 18 GB) die stärkere Coding-Wahl, und Devstral Small 2 (15 GB) passt auf 16 GB.' }, { q: 'Welche neueren lokalen Modelle sind seit September erschienen?', a: 'Drei bemerkenswerte Neuzugänge bei Ollama: Gemma 4 gibt es jetzt auch als 12B-Modell (256K Kontext, etwa 8 GB) und als dichtes 31B-Modell (256K Kontext, 19–20 GB) neben E2B, E4B und 26B-A4B; NVIDIA Nemotron 3.5 Lightning (`ollama run nemotron-3.5-lightning`) ist ein 30B-Mixture-of-Experts-Modell mit 3B aktiven Parametern, 19–25 GB, gebaut für dauerhaft laufende Agenten mit bis zu 1M Kontext; und IBM Granite 4.2 (`ollama run granite4.2`, Apache 2.0, 128K Kontext) gibt es in 3B (2,2 GB), 8B (5,3 GB) und 30B (18 GB). Keines ändert die obigen Empfehlungen: Qwen3.8-27B bleibt die beste Gesamtwahl für 24 GB, doch Granite 4.2 8B und Gemma 4 12B sind auf Rechnern mit 8–16 GB einen Test wert.' }, { q: 'Sind diese Modelle kostenlos zur kommerziellen Nutzung?', a: 'Ja, alle fünf Modelle sind für kommerzielle Nutzung genehmigt: Qwen3.8-27B, Qwen2.5-Coder 7B und Gemma 4 (sowohl 26B-A4B als auch E2B) stehen laut ihren offiziellen Modellkarten unter der Apache-2.0-Lizenz, und Phi-4-mini ist MIT-lizenziert. Überprüfen Sie immer die Lizenzbedingungen für Ihre Gerichtsbarkeit vor dem Deployment.' }, { q: 'Was bedeutet Q4_K_M-Quantisierung?', a: 'Q4_K_M ist ein 4-Bit-Quantisierungsschema (eine Methode, um Modellgewichte zu komprimieren), das von llama.cpp und Ollama angeboten wird. Es reduziert Qwen3.8-27B von ~56 GB (volle BF16-Präzision) auf ~24 GB (quantisiert) mit minimalem Qualitätsverlust. Ollama wendet Q4_K_M automatisch an.' }, { q: 'Kann ich diese Modelle vollständig offline ausführen?', a: 'Ja. Alle fünf Modelle laufen vollständig offline, sobald sie auf Ihre Maschine heruntergeladen sind. Laden Sie über Ollama herunter, laden Sie lokal und Inferenz findet zu 100% auf Ihrer Hardware ohne Netzwerkaufrufe statt. Dies ist ein Schlüsselvorteil gegenüber Cloud-APIs: gut geeignet für vertrauliche Dokumente, isolierte Netzwerke und datenschutzsensible Workloads (die DSGVO-Konformität hängt weiterhin von Ihrem Gesamtaufbau ab, nicht allein vom Modell).' }, { q: 'Warum zeigt die Benchmark-Tabelle keinen MMLU-, HumanEval- oder AIME-Wert für Qwen3.8-27B?', a: 'Die offizielle Qwen3.8-27B-Modellkarte von Alibaba veröffentlicht keine MMLU-, HumanEval- oder AIME-Werte für dieses Modell -- diese Angaben sind tatsächlich nicht offengelegt, keine Auslassung dieser Seite. Die von Alibaba veröffentlichten Benchmarks sind GPQA Diamond (89,2%), SWE-bench Pro (61,7%), LiveCodeBench v6 (90,3%) und Terminal-Bench 2.1 (73,0%), alle oben aufgeführt. Falls Sie ein ähnlich großes Modell mit veröffentlichtem MMLU-/HumanEval-Wert benötigen: Qwen2.5-Coder 7B (88% HumanEval) und Phi-4-mini (67,3% MMLU) geben diese Werte an. Weitere Qwen3-Größen (8B, 14B, 32B) und der Vergleich mit DeepSeek und Llama finden Sie unter [Qwen vs. Llama vs. Mistral](/de/local-llms/qwen-vs-llama-vs-mistral).' }, { q: 'Wie hoch sind die HumanEval-, GSM8K- und AIME-Werte der Qwen3-Familie, und wie schneidet sie im Hugging Face Open LLM Leaderboard ab?', a: 'Die offiziell vom Qwen-Team veröffentlichten Werte (Technical Report) lauten: Qwen3-8B erreicht 72,0% bei HumanEval und 84,2% bei GSM8K; Qwen3-32B (nach dem Post-Training) erreicht 81,4% bei AIME 2024 und 72,9% bei AIME 2025. Diese Zahlen unterscheiden sich von der oben empfohlenen Auswahl Qwen3.8-27B -- die Qwen3.8-27B-Modellkarte von Alibaba veröffentlicht für dieses spezifische Modell keine HumanEval-, GSM8K- oder MMLU-Werte (siehe vorherige Frage). Wer Qwen3-Größen mit DeepSeek oder Llama bei genau diesen Benchmarks vergleichen möchte, sollte die Qwen3-8B/32B-Werte oben verwenden, nicht die nicht offengelegten Felder von Qwen3.8-27B. Für laufend aktualisierte Open-Weight-Rankings zwischen Qwen, DeepSeek und Llama bei MMLU, HumanEval und MATH siehe das live [Hugging Face Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard) -- die Platzierungen verändern sich mit jedem neu eingereichten Checkpoint, weshalb diese Seite meldet, was jede Modellkarte offiziell offenlegt, statt eine Momentaufnahme eines Live-Leaderboards, die innerhalb weniger Tage veraltet wäre.' }, { q: 'Wie vergleichen sich diese Modelle mit aktuellen Frontier-Cloud-Modellen?', a: 'Qwen3.8-27B und Gemma 4 26B-A4B nähern sich bei Text der Leistung früherer Frontier-Cloud-Modelle. Aktuelle Frontier-Cloud-Modelle bleiben bei komplexem Reasoning und Vision-Aufgaben voraus. Für Nur-Text-Arbeit lohnen sich lokale Modelle vor allem wegen Datenschutz, Kosten und Geschwindigkeit.' }, { q: 'Muss ich bei der Verwendung von lokalen LLMs die DSGVO beachten?', a: 'Ja. Die Datenschutz-Grundverordnung (DSGVO) der EU erlaubt lokale Inferenz als Teil einer rechtmäßigen Datenverarbeitung (Artikel 28), schreibt aber weiterhin Datenschutzmaßnahmen vor (Artikel 32). Lokale LLMs wie Qwen3.8-27B und Gemma 4 26B-A4B laufen vollständig auf lokaler Hardware ohne externe Datenübertragung -- das entfällt die Frage der Drittlandsübermittlung, die eine Cloud-API aufwerfen würde, und unterstützt (erfüllt aber nicht allein) die Sicherheitsanforderungen aus Artikel 32. Die tatsächliche DSGVO-Konformität hängt weiterhin von Ihrer Organisation ab: 1) Modellherkunft dokumentieren, 2) lokale Hardware-Sicherheit gewährleisten, 3) Zugriffskontrolle implementieren, 4) den Datenschutzbeauftragten (falls erforderlich) informieren. Dies ist keine Rechtsberatung; konsultieren Sie für Ihre konkrete Verarbeitung eine Datenschutz-Fachperson.' }, { q: 'Sind diese Modelle für den deutschen Mittelstand geeignet?', a: 'Sie können eine gute Grundlage sein. Qwen3.8-27B und Gemma 4 26B-A4B unterstützen typische IT-Sicherheitsanforderungen im Mittelstand: 1) BSI-Grundschutz: Lokales Deployment erfüllt einen Teil der BSI-Anforderungen zu Datenschutz und Systemzugang, eine vollständige Grundschutz-Konformität hängt aber von der gesamten Systemumgebung ab, nicht vom Modell allein, 2) DACH-Kompatibilität: Modelle laufen auf Standard-Unternehmens-Infrastruktur, 3) Kosteneffizienz: Nach Initial-Hardware-Investment keine Cloud-Gebühren, 4) Datensouveränität: Alle Daten bleiben on-premise.' }] },
         sources: {
           id: 'sources', title: 'Quellen', items: ['**Hugging Face.** (2026). "Open LLM Leaderboard." [huggingface.co/spaces/open-llm-leaderboard](https://huggingface.co/spaces/open-llm-leaderboard) -- Echtzeit MMLU-, HumanEval- und MATH-Benchmark-Platzierungen über alle Open-Weight-Modelle.', '**Ollama.** (2026). "Ollama Model Library." [ollama.com/library](https://ollama.com/library) -- Verfügbare Modelle mit Download-Größen, Quantisierungsoptionen und Ollama-Befehlen.', '**Alibaba Qwen Team.** (2026). "Qwen3.8-27B Model Card." [huggingface.co/Qwen/Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B) -- Offizielle Benchmark-Ergebnisse (GPQA Diamond, SWE-bench Pro, LiveCodeBench v6), Lizenz und Vision-Language-Fähigkeiten von Qwen3.8-27B.', '**Qwen Team.** "Qwen3 Technical Report." [arxiv.org/abs/2505.09388](https://arxiv.org/abs/2505.09388) -- Offizielle HumanEval-, GSM8K- und AIME-Werte für die Basismodelle Qwen3-8B und Qwen3-32B.'] },
       },
-schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'url': 'https://www.promptquorum.com/de/local-llms/best-local-llms-2026', 'inLanguage': 'de', headline: 'Beste lokale LLMs 2026: Qwen3.8-27B, Gemma 4 und Phi-4-mini im Ranking', description: 'Beste lokale LLMs 2026 im Vergleich: Qwen3.8-27B gewinnt (89.2% GPQA Diamond, 24 GB). Gemma 4 26B-A4B für Reasoning, Qwen2.5-Coder 7B für Code.', datePublished: '2026-04-04', dateModified: '2026-11-02', author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, proficiencyLevel: 'Beginner', about: [{ '@type': 'Thing', name: 'Qwen3.8-27B' }, { '@type': 'Thing', name: 'Gemma 4 26B-A4B' }, { '@type': 'Thing', name: 'Qwen2.5-Coder 7B' }, { '@type': 'Thing', name: 'Phi-4-mini' }, { '@type': 'Thing', name: 'MMLU-Benchmark' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
+schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'url': 'https://www.promptquorum.com/de/local-llms/best-local-llms-2026', 'inLanguage': 'de', headline: 'Beste lokale LLMs 2026: Qwen3.8-27B, Gemma 4 und Phi-4-mini im Ranking', description: 'Beste lokale LLMs 2026 im Vergleich: Qwen3.8-27B gewinnt (89.2% GPQA Diamond, 24 GB). Gemma 4 26B-A4B für Reasoning, Qwen2.5-Coder 7B für Code.', datePublished: '2026-04-04', dateModified: '2026-11-06', author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, proficiencyLevel: 'Beginner', about: [{ '@type': 'Thing', name: 'Qwen3.8-27B' }, { '@type': 'Thing', name: 'Gemma 4 26B-A4B' }, { '@type': 'Thing', name: 'Qwen2.5-Coder 7B' }, { '@type': 'Thing', name: 'Phi-4-mini' }, { '@type': 'Thing', name: 'MMLU-Benchmark' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
       itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', 'inLanguage': 'de', name: 'Beste lokale LLMs 2026 -- Benchmark-Vergleich', numberOfItems: 5, itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Qwen3.8-27B', description: 'GPQA Diamond 89.2%, SWE-bench Pro 61.7%. ~24 GB RAM bei Q4_K_M. 262K Kontext. Bestes lokales LLM 2026.' }, { '@type': 'ListItem', position: 2, name: 'Gemma 4 26B-A4B', description: 'AIME 2026: 88,3%. 16–19 GB RAM. MoE-Architektur, ~4B aktive Parameter. Bestes Reasoning.' }, { '@type': 'ListItem', position: 3, name: 'Qwen2.5-Coder 7B', description: 'HumanEval 88%, EvalPlus 78%. ~5 GB RAM. Für Code-Generierung gebaut.' }, { '@type': 'ListItem', position: 4, name: 'Phi-4-mini 3.8B', description: 'MMLU 67.3%. ~2,5 GB RAM. 30-50 Token/Sekunde auf CPU. Bestes CPU-only/Edge-Modell.' }, { '@type': 'ListItem', position: 5, name: 'Gemma 4 E2B', description: '2,3B effektive Parameter. ~2 GB VRAM. 128K Kontext. Bestes kleines Modell für SBC.' }] },
     },
 
@@ -1372,7 +1372,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'url': 'http
       metaDescription: 'Meilleur LLM local 2026 : Qwen3.8-27B en tête (89,2 % GPQA Diamond, 24 GB). Gemma 4 26B-A4B pour le raisonnement, Qwen2.5-Coder 7B pour le code.',
       heroImage: '/images/best-local-llms-2026-ranked-comparison-hero-fr.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**Meilleurs LLM locaux en 2026 : Qwen3.8-27B (global, vision-langage native, ~24 Go de RAM), Gemma 4 26B-A4B (raisonnement, 16–19 Go), Qwen2.5-Coder 7B (code, ~5 Go), Phi-4-mini (CPU uniquement, ~2,5 Go) et Gemma 4 E2B (petit modèle, ~2 Go).**',
       audience: 'Débutants qui utilisent leur premier LLM local sur du matériel grand public',
       readTime: '10 min de lecture',
@@ -1456,7 +1456,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'url': 'http
           title: '#2 Gemma 4 26B-A4B -- Meilleur pour le raisonnement',
           content: [
             '**Gemma 4 26B-A4B est le meilleur modèle local pour les tâches à forte composante de raisonnement en 2026.** 88,3 % AIME 2026 -- grâce à une conception Mixture-of-Experts qui n\'active que ~4B de paramètres par token, générant du texte à une vitesse proche d\'un modèle 4B malgré le chargement de 26B de paramètres en mémoire.',
-            'Le téléchargement Ollama pèse 16–19 GB (Ollama n\'indique pas la quantification de l\'étiquette par défaut) : prévoyez autant de RAM plus une marge pour le contexte ; tient sur une seule RTX 4090 ou un Mac avec 24 GB+ de mémoire unifiée. Consultez [DeepSeek vs Qwen Coding Comparison](/fr/power-local-llm/deepseek-vs-qwen-coding-local-2026).',
+            'Le téléchargement Ollama pèse 16–19 GB (Ollama n\'indique pas la quantification de l\'étiquette par défaut) : prévoyez autant de RAM plus une marge pour le contexte ; tient sur une seule RTX 4090 ou un Mac avec 32 GB+ de mémoire unifiée (macOS en réserve environ 8 GB). Consultez [DeepSeek vs Qwen Coding Comparison](/fr/power-local-llm/deepseek-vs-qwen-coding-local-2026).',
           ],
           rows: [
             { 'Spécification': 'Score AIME 2026', 'Valeur': '88,3 %' },
@@ -1557,7 +1557,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'url': 'http
           title: 'Questions fréquemment posées sur le choix des LLMs locaux',
           faqs: [
             { q: 'Quel est le meilleur LLM local en 2026 ?', a: 'Qwen3.8-27B est le meilleur global (89,2 % GPQA Diamond, 61,7 % SWE-bench Pro, ~24 GB RAM, contexte 262K). Gemma 4 26B-A4B est le meilleur pour le raisonnement (88,3 % AIME 2026, 16–19 GB RAM). Qwen2.5-Coder 7B est le meilleur pour le code (~5 GB RAM). Phi-4-mini est le meilleur en CPU uniquement (~2.5 GB RAM). Gemma 4 E2B est le meilleur petit modèle (~2 GB RAM).' },
-            { q: 'Combien de RAM faut-il pour Qwen3.8-27B ?', a: 'Environ 24 GB avec la quantification Q4_K_M. Une GPU avec 24 GB de VRAM (RTX 4090, RTX 3090) ou un Mac avec 24 GB+ de mémoire unifiée offre une marge confortable ; c\'est juste sur les cartes 16 GB. Il est déjà disponible officiellement dans la bibliothèque Ollama : `ollama pull qwen3.8:27b`.' },
+            { q: 'Combien de RAM faut-il pour Qwen3.8-27B ?', a: 'Environ 24 GB avec la quantification Q4_K_M. Une GPU avec 24 GB de VRAM (RTX 4090, RTX 3090) ou un Mac avec 32 GB+ de mémoire unifiée (macOS en réserve environ 8 GB) convient ; c\'est juste sur les cartes 16 GB. Il est déjà disponible officiellement dans la bibliothèque Ollama : `ollama pull qwen3.8:27b`.' },
             { q: 'Gemma 4 26B-A4B est-il meilleur que Qwen3.8-27B ?', a: 'Cela dépend de la tâche. Gemma 4 26B-A4B est le seul des deux à publier un score AIME 2026 (88,3 %), et sa conception Mixture-of-Experts lui donne une vitesse proche d\'un modèle 4B. Sur les benchmarks publiés par les deux éditeurs, Qwen3.8-27B est devant : GPQA Diamond 89,2 % contre 82,3 % et LiveCodeBench v6 90,3 % contre 77,1 % (chiffres annoncés par chaque éditeur, avec sa propre configuration d\'évaluation). Pour un usage général (écriture, analyse, multilingue, vision), Qwen3.8-27B est plus polyvalent et nativement multimodal. Gemma 4 26B-A4B nécessite 16–19 GB (taille de téléchargement Ollama) contre ~24 GB RAM pour Qwen3.8-27B.' },
             { q: 'Quel est le meilleur LLM local pour 8 GB de RAM ?', a: 'Phi-4-mini (~2.5-3.5 GB) est le meilleur choix pour 8 GB de RAM, laissant de la marge pour le système. Ni Qwen3.8-27B (~24 GB) ni Gemma 4 26B-A4B (16–19 GB) ne tiennent dans 8 GB.' },
             { q: 'Quel est le meilleur LLM local pour le code en 2026 ?', a: 'Qwen2.5-Coder 7B (88 % HumanEval, ~5 GB RAM) est un choix solide sous 10 GB de RAM ; il a été entraîné spécifiquement sur du code. Avec 24 GB de RAM ou plus, Qwen3.8-27B (61,7 SWE-bench Pro selon Qwen, 18 GB) est le choix le plus puissant pour le code, et Devstral Small 2 (15 GB) convient aux machines de 16 GB.' },
@@ -1639,7 +1639,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llms-2026',
         headline: 'Meilleurs LLMs locaux en 2026 : Qwen3.8-27B, Gemma 4 et Phi-4-mini classés',
         description: 'Meilleur LLM local 2026 : Qwen3.8-27B en tête (89,2 % GPQA Diamond, 24 GB). Gemma 4 26B-A4B pour le raisonnement, Qwen2.5-Coder 7B pour le code.',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         'datePublished': '2026-04-04',
         author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1663,7 +1663,7 @@ schema: {
       metaDescription: '2026年のローカルLLMランキング。Qwen3.8-27B（GPQA Diamond 89.2%、約24GB）とGemma 4 26B-A4Bを比較し、コード用・CPU用のおすすめモデルも紹介します。',
       heroImage: '/images/best-local-llms-2026-ranked-comparison-hero-ja.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**2026年現在、最良のローカルLLMはQwen3.8-27B（総合最高、ネイティブのビジョン言語対応、約24GBのRAM）、Gemma 4 26B-A4B（推論最高、16〜19GBのRAM）、Qwen2.5-Coder 7B（コーディング最高、約5GBのRAM）、Phi-4-mini（CPU専用最高、約2.5GBのRAM）、Gemma 4 E2B（小型モデル最高、約2GBのRAM）です。**',
       audience: 'コンシューマー向けハードウェアで初めてローカルLLMを実行する初心者',
       readTime: '10分で読める',
@@ -1747,7 +1747,7 @@ schema: {
           title: '#2 Gemma 4 26B-A4B -- 推論タスク最高',
           content: [
             'Gemma 4 26B-A4Bは、2026年時点で推論を多用するタスクに最適なローカルモデルです。AIME 2026で88.3%を達成しています。トークンごとに約4Bパラメータのみを活性化するMixture-of-Expertsの設計により、26Bのパラメータをメモリに読み込みながらも4Bモデルに近い速度で生成します。',
-            'Ollamaのダウンロードサイズは16〜19GBです（既定タグの量子化はOllamaに明記されていません）。この容量のRAMにコンテキスト用の余裕を加えて見込む必要があり、RTX 4090一枚、または24GB以上のユニファイドメモリを持つMacで動作します。詳細は[DeepSeek vs Qwen コーディング比較](/ja/power-local-llm/deepseek-vs-qwen-coding-local-2026)を参照してください。',
+            'Ollamaのダウンロードサイズは16〜19GBです（既定タグの量子化はOllamaに明記されていません）。この容量のRAMにコンテキスト用の余裕を加えて見込む必要があり、RTX 4090一枚、または32GB以上のユニファイドメモリを持つMac（macOSが約8GBを使用）で動作します。詳細は[DeepSeek vs Qwen コーディング比較](/ja/power-local-llm/deepseek-vs-qwen-coding-local-2026)を参照してください。',
           ],
           rows: [
             { '仕様': 'AIME 2026スコア', '値': '88.3%' },
@@ -1847,7 +1847,7 @@ schema: {
           title: 'よくある質問',
           faqs: [
             { q: '2026年の最高のローカルLLMは何ですか？', a: 'Qwen3.8-27Bが2026年時点の総合最高のローカルLLMです -- GPQA Diamond 89.2%、SWE-bench Pro 61.7%、Q4_K_Mで約24GB RAM、262Kコンテキスト。用途別では、推論と数学にはGemma 4 26B-A4B（AIME 2026 88.3%、16〜19GB RAM）、コーディングにはQwen2.5-Coder 7B（約5GB RAM）、CPU専用にはPhi-4-mini（約2.5GB RAM）、最小RAMフットプリントにはGemma 4 E2B（約2GB RAM）が最適です。' },
-            { q: 'Qwen3.8-27Bにはどれくらいのメモリが必要ですか？', a: 'Qwen3.8-27BはQ4_K_M量子化で約24GBのRAMが必要です。24GBのVRAMを搭載したGPU（RTX 4090、RTX 3090）や24GB以上のユニファイドメモリを持つMacであれば余裕があり、16GBのカードでは厳しくなります。Ollama公式ライブラリに既に登録されています: `ollama pull qwen3.8:27b`。16GB未満の場合はMoEバリアントのQwen3.6-35B-A3Bまたはより小型のモデルを使用してください。' },
+            { q: 'Qwen3.8-27Bにはどれくらいのメモリが必要ですか？', a: 'Qwen3.8-27BはQ4_K_M量子化で約24GBのRAMが必要です。24GBのVRAMを搭載したGPU（RTX 4090、RTX 3090）や32GB以上のユニファイドメモリを持つMac（macOSが約8GBを使用）であれば動作し、16GBのカードでは厳しくなります。Ollama公式ライブラリに既に登録されています: `ollama pull qwen3.8:27b`。16GB未満の場合はMoEバリアントのQwen3.6-35B-A3Bまたはより小型のモデルを使用してください。' },
             { q: 'Gemma 4 26B-A4BはQwen3.8-27Bより優れていますか？', a: '用途によります。Gemma 4 26B-A4Bは、両者のうちAIME 2026のスコア（88.3%）が公表されている唯一のモデルで、Mixture-of-Experts設計により4Bモデルに近い速度で生成します。両社が公表しているベンチマークではQwen3.8-27Bが上回ります：GPQA Diamondは89.2%対82.3%、LiveCodeBench v6は90.3%対77.1%です（各社の公表値で、評価条件はそれぞれ異なります）。汎用タスク（文章作成、分析、多言語、画像理解）ではQwen3.8-27Bの方が幅広く対応でき、ネイティブにマルチモーダルです。必要なメモリは、Gemma 4 26B-A4Bが16〜19GB（Ollamaのダウンロードサイズ）、Qwen3.8-27Bが約24GB RAMで、両モデルとも活性パラメータ数に関わらず全パラメータをメモリに読み込みます。' },
             { q: '8GB RAM向けの最高のローカルLLMは何ですか？', a: 'Phi-4-miniが8GB RAMマシン向けの推奨モデルです -- Q4_K_Mで約2.5〜3.5GBに収まり、他のアプリケーション用に十分な余裕を残しながら、サイズの割に良好な命令追従品質を維持します。Qwen3.8-27B（約24GB）もGemma 4 26B-A4B（16〜19GB）も8GBマシンには収まらず、16〜24GB以上の帯域が必要です。' },
             { q: '2026年のコーディング向け最高のローカルLLMは何ですか？', a: 'Qwen2.5-Coder 7BはHumanEvalで88%を達成し、10GB未満のRAMでは堅実な選択肢です。コード専用に学習されています。24GB以上のRAMがあるならQwen3.8-27B（Qwen公表のSWE-bench Pro 61.7、18GB）がより強力なコーディング向けの選択肢で、16GBにはDevstral Small 2（15GB）が適しています。詳細は[Best Local LLMs for Coding](/ja/local-llms/best-local-llms-for-coding)を参照してください。' },
@@ -1915,7 +1915,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ja/local-llms/best-local-llms-2026',
         headline: '2026年 最高のローカルLLM：Qwen3.8-27B、Gemma 4、Phi-4-miniをランク付け',
         description: '2026年の最高のローカルLLM：Qwen3.8-27B（総合最高、GPQA Diamond 89.2%、約24GB）、Gemma 4 26B-A4B（推論最高）、Qwen2.5-Coder 7B（コード HumanEval 88%）、Phi-4-mini（CPU専用）、Gemma 4 E2B（小型）。',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         'datePublished': '2026-04-04',
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1952,7 +1952,7 @@ schema: {
       metaDescription: '2026年本地大模型排名：Qwen3.8-27B综合最佳（GPQA Diamond 89.2%，约24GB），Gemma 4 26B-A4B擅长推理，Qwen2.5-Coder 7B擅长代码。',
       heroImage: '/images/best-local-llms-2026-ranked-comparison-hero-zh.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**截至2026年，最佳本地大语言模型是Qwen3.8-27B（综合最佳，原生视觉-语言能力，约24GB内存）、Gemma 4 26B-A4B（推理最佳，16-19GB内存）、Qwen2.5-Coder 7B（代码最佳，约5GB内存）、Phi-4-mini（仅CPU最佳，约2.5GB内存）和Gemma 4 E2B（小型模型最佳，约2GB内存）。**',
       audience: '在消费级硬件上首次运行本地大语言模型的初学者',
       readTime: '阅读约10分钟',
@@ -2036,7 +2036,7 @@ schema: {
           title: '#2 Gemma 4 26B-A4B -- 推理任务最佳',
           content: [
             'Gemma 4 26B-A4B是2026年处理推理密集型任务的最佳本地模型。它在AIME 2026上得分88.3%----采用Mixture-of-Experts设计，每个标记仅激活约4B参数，尽管需要将全部26B参数加载到内存中，生成速度却接近4B模型。',
-            'Ollama下载大小为16-19GB（Ollama未标明默认标签的量化方式），需预留相当的RAM并为上下文留出余量；可在单张RTX 4090或拥有24GB以上统一内存的Mac上运行。详见[DeepSeek vs Qwen 代码比较](/zh/power-local-llm/deepseek-vs-qwen-coding-local-2026)。',
+            'Ollama下载大小为16-19GB（Ollama未标明默认标签的量化方式），需预留相当的RAM并为上下文留出余量；可在单张RTX 4090或拥有32GB以上统一内存的Mac（macOS约占用8GB）上运行。详见[DeepSeek vs Qwen 代码比较](/zh/power-local-llm/deepseek-vs-qwen-coding-local-2026)。',
           ],
           rows: [
             { '规格': 'AIME 2026得分', '值': '88.3%' },
@@ -2136,7 +2136,7 @@ schema: {
           title: '常见问题',
           faqs: [
             { q: '2026年最佳的本地大语言模型是什么？', a: 'Qwen3.8-27B是2026年综合性能最佳的本地大语言模型——GPQA Diamond 89.2%，SWE-bench Pro 61.7%，Q4_K_M量化下约需24GB RAM，262K上下文。针对具体场景：推理和数学任务首选Gemma 4 26B-A4B（AIME 2026得分88.3%，需16-19GB RAM），代码任务首选Qwen2.5-Coder 7B（约需5GB RAM），仅CPU环境首选Phi-4-mini（约需2.5GB RAM），最小内存占用首选Gemma 4 E2B（约需2GB RAM）。' },
-            { q: '运行Qwen3.8-27B需要多少内存？', a: 'Qwen3.8-27B在Q4_K_M量化下大约需要24GB内存。配备24GB显存的GPU（RTX 4090、RTX 3090）或拥有24GB以上统一内存的Mac可以轻松运行；16GB显卡则较为紧张。已正式收录于Ollama官方库：`ollama pull qwen3.8:27b`。如果硬件内存低于16GB，请改用MoE变体Qwen3.6-35B-A3B或更小的模型。' },
+            { q: '运行Qwen3.8-27B需要多少内存？', a: 'Qwen3.8-27B在Q4_K_M量化下大约需要24GB内存。配备24GB显存的GPU（RTX 4090、RTX 3090）或拥有32GB以上统一内存的Mac（macOS约占用8GB）可以运行；16GB显卡则较为紧张。已正式收录于Ollama官方库：`ollama pull qwen3.8:27b`。如果硬件内存低于16GB，请改用MoE变体Qwen3.6-35B-A3B或更小的模型。' },
             { q: 'Gemma 4 26B-A4B比Qwen3.8-27B更好吗？', a: '取决于任务。Gemma 4 26B-A4B是两者中唯一公布了AIME 2026得分（88.3%）的模型，得益于Mixture-of-Experts设计，生成速度接近4B模型。在两家厂商都公布的基准上，Qwen3.8-27B领先：GPQA Diamond为89.2%对82.3%，LiveCodeBench v6为90.3%对77.1%（均为厂商自报，评测设置各不相同）。对于通用任务（写作、分析、多语言、视觉），Qwen3.8-27B能力更全面，且原生支持多模态。Gemma 4 26B-A4B需要16-19GB（Ollama下载大小），Qwen3.8-27B约需24GB RAM——两者都会将全部参数加载到内存中，无论激活参数数量多少。' },
             { q: '8GB内存下最佳的本地大语言模型是什么？', a: 'Phi-4-mini是8GB内存机器的推荐选择——在Q4_K_M量化下仅占用约2.5-3.5GB，为其他应用留出充足空间，同时在其体积下保持良好的指令遵循质量。Qwen3.8-27B（约24GB）和Gemma 4 26B-A4B（16-19GB）都无法在8GB机器上运行；这些需要16-24GB以上的档位。' },
             { q: '2026年最佳的本地代码大语言模型是什么？', a: 'Qwen2.5-Coder 7B在HumanEval上得分88%，是10GB以内内存的可靠选择，并专门基于代码训练。对于24GB以上内存，Qwen3.8-27B（Qwen公布的SWE-bench Pro为61.7，18GB）是更强的编程选择，Devstral Small 2（15GB）适合16GB设备。详见[最佳代码本地LLM](/zh/local-llms/best-local-llms-for-coding)。' },
@@ -2204,7 +2204,7 @@ schema: {
         'url': 'https://www.promptquorum.com/zh/local-llms/best-local-llms-2026',
         headline: '2026年最佳本地大语言模型：Qwen3.8-27B、Gemma 4与Phi-4-mini排名',
         description: '2026年本地大模型排名：Qwen3.8-27B综合最佳（GPQA Diamond 89.2%，约24GB），Gemma 4 26B-A4B擅长推理，Qwen2.5-Coder 7B擅长代码。',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         'datePublished': '2026-04-04',
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -2241,7 +2241,7 @@ schema: {
   last_seo_review: '2026-10-17',
   current_models_mentioned: ['Qwen3.8-27B', 'Gemma 4 26B-A4B', 'Qwen2.5-Coder 7B', 'Phi-4-mini', 'Gemma 4 E2B'],
   current_benchmarks_used: ['MMLU', 'HumanEval', 'GSM8K', 'SWE-bench Verified', 'AIME 2026', 'GPQA Diamond', 'EvalPlus'],
-  current_hardware_mentioned: ['RTX 4090', 'RTX 3090', 'Mac unified memory (24 GB+)', 'Raspberry Pi 5'],
+  current_hardware_mentioned: ['RTX 4090', 'RTX 3090', 'Mac unified memory (32 GB+)', 'Raspberry Pi 5'],
   theme: '최고 모델',
   title: '2026년 최고의 로컬 LLM: Qwen3.8-27B, Gemma 4, Phi-4-mini 순위',
   seoTitle: '2026 로컬 LLM 순위: Qwen3.8, Gemma 4',
@@ -2249,7 +2249,7 @@ schema: {
   metaDescription: '2026년 로컬 LLM 순위: Qwen3.8-27B(GPQA Diamond 89.2%), Gemma 4 26B-A4B, Qwen2.5-Coder 7B, Phi-4-mini 비교.',
   heroImage: '/images/best-local-llms-2026-ranked-comparison-hero-ko.webp',
   publishDate: '2026-04-04',
-  dateModified: '2026-11-02',
+  dateModified: '2026-11-06',
   leadAnswerBlock: '**2026년 최고의 로컬 LLM은 Qwen3.8-27B(종합 1위), Gemma 4 26B-A4B(추론 1위), Qwen2.5-Coder 7B(소형 코딩 1위), Phi-4-mini(CPU 전용 1위), Gemma 4 E2B(소형 모델 1위)입니다.**',
   audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
   readTime: '10분 분량',
@@ -2290,7 +2290,7 @@ schema: {
     'inLanguage': 'ko',
     headline: '2026년 최고의 로컬 LLM: Qwen3.8-27B, Gemma 4, Phi-4-mini 순위',
     description: '2026년 로컬 LLM 순위: Qwen3.8-27B(GPQA Diamond 89.2%), Gemma 4 26B-A4B, Qwen2.5-Coder 7B, Phi-4-mini 비교.',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     'datePublished': '2026-04-04',
     author: { '@type': 'Organization', 'name': 'PromptQuorum' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -2366,7 +2366,7 @@ schema: {
       title: '#2 Gemma 4 26B-A4B -- 추론 작업 최고',
       content: [
         '**Gemma 4 26B-A4B는 2026년 추론 집약적 작업에 최고의 로컬 모델입니다.** AIME 2026에서 88.3%를 기록했으며, 토큰당 약 4B 파라미터만 활성화하는 Mixture-of-Experts 설계 덕분에 26B 전체 파라미터를 메모리에 로드하면서도 4B 모델에 가까운 속도로 생성합니다.',
-        'Ollama 다운로드 크기는 16~19GB이며(Ollama는 기본 태그의 양자화 방식을 명시하지 않습니다), 이만큼의 RAM과 컨텍스트용 여유가 필요하고, RTX 4090 한 대 또는 24GB 이상의 통합 메모리를 가진 Mac에서 실행됩니다. [DeepSeek vs Qwen 코딩 비교](/ko/power-local-llm/deepseek-vs-qwen-coding-local-2026)를 참조하십시오.',
+        'Ollama 다운로드 크기는 16~19GB이며(Ollama는 기본 태그의 양자화 방식을 명시하지 않습니다), 이만큼의 RAM과 컨텍스트용 여유가 필요하고, RTX 4090 한 대 또는 32GB 이상의 통합 메모리를 가진 Mac(macOS가 약 8GB 사용)에서 실행됩니다. [DeepSeek vs Qwen 코딩 비교](/ko/power-local-llm/deepseek-vs-qwen-coding-local-2026)를 참조하십시오.',
       ],
       rows: [
         { 'Spec': 'AIME 2026 점수', 'Value': '88.3%' },
@@ -2510,7 +2510,7 @@ schema: {
         },
         {
           q: 'Qwen3.8-27B를 실행하려면 RAM이 얼마나 필요합니까?',
-          a: 'Qwen3.8-27B는 Q4_K_M 양자화 기준 약 24GB의 RAM이 필요합니다. VRAM 24GB GPU(RTX 4090, RTX 3090) 또는 통합 메모리 24GB 이상 Mac이면 여유 있게 실행되며, 16GB 카드에서는 빠듯합니다. 이미 공식 Ollama 라이브러리에 등록되어 있습니다: `ollama pull qwen3.8:27b`. RAM이 16GB 미만이면 MoE 변형 Qwen3.6-35B-A3B나 더 작은 모델을 사용하십시오.',
+          a: 'Qwen3.8-27B는 Q4_K_M 양자화 기준 약 24GB의 RAM이 필요합니다. VRAM 24GB GPU(RTX 4090, RTX 3090) 또는 통합 메모리 32GB 이상 Mac(macOS가 약 8GB 사용)이면 실행되며, 16GB 카드에서는 빠듯합니다. 이미 공식 Ollama 라이브러리에 등록되어 있습니다: `ollama pull qwen3.8:27b`. RAM이 16GB 미만이면 MoE 변형 Qwen3.6-35B-A3B나 더 작은 모델을 사용하십시오.',
         },
         {
           q: 'Gemma 4 26B-A4B가 Qwen3.8-27B보다 낫습니까?',

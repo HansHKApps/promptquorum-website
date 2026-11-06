@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -88,7 +88,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Open WebUI is a browser interface, not a model runner.** It connects to Ollama or other backends; install with Docker or pip.',
           '**Msty and Chatbox are multi-provider chat clients.** Both can use local models and cloud providers, so check the provider setting if privacy matters.',
           '**oMLX is for Apple-native speed.** Apache-2.0 MLX inference server for Apple Silicon with a Mac app; it requires macOS 15 or later.',
-          '**Memory sets the model size, not the app.** Jan\'s README lists about 8 GB of RAM for 3B models and 16 GB for 7B models; any app on this list hits the same limit.',
+          '**Memory sets the model size, not the app.** Jan\'s README lists about 8 GB of RAM for 3B models and 16 GB for 7B models; any app on this list hits the same limit. On a Mac, macOS keeps at least 8 GB of unified memory for itself, so add 8 GB to these figures.',
         ],
       },
       quickFacts: {
@@ -169,7 +169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**What it is:** an open-source desktop app (the directory lists an Apache 2.0 variant license) with a macOS universal download.',
           '**Latest release (checked 31 Oct 2026):** v0.8.8, 28 Oct 2026 ([source](https://github.com/janhq/jan/releases)).',
-          '**Mac requirement:** its README lists macOS 13.6 or later, with about 8 GB of RAM for 3B models and 16 GB for 7B models.',
+          '**Mac requirement:** its README lists macOS 13.6 or later, with about 8 GB of RAM for 3B models and 16 GB for 7B models. On a Mac, macOS keeps at least 8 GB of unified memory for itself, so add 8 GB to these figures.',
           '**Best for:** users who want an open-source alternative to a hosted chat assistant.',
         ],
       },
@@ -239,7 +239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Unified memory is the limit, whichever app you pick.** The app changes the interface, not how much memory a model needs.',
         items: [
-          'Jan\'s README gives a starting guide: about 8 GB of RAM for 3B models, 16 GB for 7B models and 32 GB for 13B models.',
+          'Jan\'s README gives a starting guide: about 8 GB of RAM for 3B models, 16 GB for 7B models and 32 GB for 13B models. On a Mac, macOS keeps at least 8 GB of unified memory for itself, so add 8 GB to these figures.',
           'Larger quantized models need more memory; check the model card before downloading, and leave memory free for macOS.',
           'For hardware advice by Mac model see [Best Mac for Local AI](/power-local-llm/best-mac-for-local-ai-2026) and [Best Ollama models for Apple Silicon](/local-llms/best-models-apple-silicon-2026).',
         ],
@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How much RAM do I need?',
-            a: 'It depends on the model, not the app. Jan\'s README suggests about 8 GB of RAM for 3B models and 16 GB for 7B models. Larger models need more; check each model card.',
+            a: 'It depends on the model, not the app. Jan\'s README suggests about 8 GB of RAM for 3B models and 16 GB for 7B models. On a Mac, macOS keeps at least 8 GB of unified memory for itself, so add 8 GB to these figures. Larger models need more; check each model card.',
           },
         ],
       },
@@ -335,7 +335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -413,7 +413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Open WebUI ist eine Browser-Oberfläche, kein Modell-Runner.** Es verbindet sich mit Ollama oder anderen Backends; Installation mit Docker oder pip.',
           '**Msty und Chatbox sind Chat-Clients für mehrere Anbieter.** Beide können lokale Modelle und Cloud-Anbieter nutzen; prüfen Sie die Anbieter-Einstellung, wenn Datenschutz wichtig ist.',
           '**oMLX ist für Apple-natives Tempo.** Apache-2.0-MLX-Inferenzserver für Apple Silicon mit Mac-App; erfordert macOS 15 oder neuer.',
-          '**Der Arbeitsspeicher bestimmt die Modellgröße, nicht die App.** Das README von Jan nennt etwa 8 GB RAM für 3B-Modelle und 16 GB für 7B-Modelle; jede App dieser Liste stößt an dieselbe Grenze.',
+          '**Der Arbeitsspeicher bestimmt die Modellgröße, nicht die App.** Das README von Jan nennt etwa 8 GB RAM für 3B-Modelle und 16 GB für 7B-Modelle; jede App dieser Liste stößt an dieselbe Grenze. Auf dem Mac behält macOS mindestens 8 GB Unified Memory für sich, rechnen Sie daher 8 GB auf diese Werte auf.',
         ],
       },
       quickFacts: {
@@ -494,7 +494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Was es ist:** eine Open-Source-Desktop-App (das Verzeichnis nennt eine Apache-2.0-Variante als Lizenz) mit einem macOS-Universal-Download.',
           '**Aktuelle Version (geprüft am 31 Okt. 2026):** v0.8.8, 28 Okt. 2026 ([Quelle](https://github.com/janhq/jan/releases)).',
-          '**Mac-Voraussetzung:** laut README macOS 13.6 oder neuer, mit etwa 8 GB RAM für 3B-Modelle und 16 GB für 7B-Modelle.',
+          '**Mac-Voraussetzung:** laut README macOS 13.6 oder neuer, mit etwa 8 GB RAM für 3B-Modelle und 16 GB für 7B-Modelle. Auf dem Mac behält macOS mindestens 8 GB Unified Memory für sich, rechnen Sie daher 8 GB auf diese Werte auf.',
           '**Am besten für:** Nutzer, die eine Open-Source-Alternative zu einem gehosteten Chat-Assistenten möchten.',
         ],
       },
@@ -564,7 +564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Der einheitliche Arbeitsspeicher setzt die Grenze, egal welche App Sie wählen.** Die App ändert die Oberfläche, nicht den Speicherbedarf eines Modells.',
         items: [
-          'Das README von Jan gibt eine Faustregel: etwa 8 GB RAM für 3B-Modelle, 16 GB für 7B-Modelle und 32 GB für 13B-Modelle.',
+          'Das README von Jan gibt eine Faustregel: etwa 8 GB RAM für 3B-Modelle, 16 GB für 7B-Modelle und 32 GB für 13B-Modelle. Auf dem Mac behält macOS mindestens 8 GB Unified Memory für sich, rechnen Sie daher 8 GB auf diese Werte auf.',
           'Größere quantisierte Modelle brauchen mehr Speicher; prüfen Sie die Modellkarte vor dem Download und lassen Sie Speicher für macOS frei.',
           'Hardware-Empfehlungen nach Mac-Modell finden Sie unter [Bester Mac für lokale KI](/de/power-local-llm/best-mac-for-local-ai-2026) und [Beste Ollama-Modelle für Apple Silicon](/de/local-llms/best-models-apple-silicon-2026).',
         ],
@@ -637,7 +637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie viel RAM brauche ich?',
-            a: 'Das hängt vom Modell ab, nicht von der App. Das README von Jan nennt etwa 8 GB RAM für 3B-Modelle und 16 GB für 7B-Modelle. Größere Modelle brauchen mehr; prüfen Sie die jeweilige Modellkarte.',
+            a: 'Das hängt vom Modell ab, nicht von der App. Das README von Jan nennt etwa 8 GB RAM für 3B-Modelle und 16 GB für 7B-Modelle. Auf dem Mac behält macOS mindestens 8 GB Unified Memory für sich, rechnen Sie daher 8 GB auf diese Werte auf. Größere Modelle brauchen mehr; prüfen Sie die jeweilige Modellkarte.',
           },
         ],
       },
@@ -660,7 +660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -738,7 +738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Open WebUIはブラウザのUIで、モデルを実行するものではありません。** OllamaなどのバックエンドにつなぎDockerまたはpipで導入します。',
           '**MstyとChatboxは複数プロバイダー対応のチャットクライアントです。** どちらもローカルモデルとクラウドを使えるため、プライバシーが重要ならプロバイダー設定を確認してください。',
           '**oMLXはApple最適化の速度を求める方向けです。** Apple Silicon向けのApache-2.0のMLX推論サーバーとMacアプリで、macOS 15以降が必要です。',
-          '**モデルサイズを決めるのはアプリではなくメモリです。** JanのREADMEでは3Bモデルに約8 GB、7Bモデルに16 GBのRAMが目安とされており、この一覧のどのアプリでも同じ制約があります。',
+          '**モデルサイズを決めるのはアプリではなくメモリです。** JanのREADMEでは3Bモデルに約8 GB、7Bモデルに16 GBのRAMが目安とされており、この一覧のどのアプリでも同じ制約があります。Macでは macOS が最低 8 GB のユニファイドメモリを確保するため、これらの数値に 8 GB を加えて考えてください。',
         ],
       },
       quickFacts: {
@@ -819,7 +819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**概要：** オープンソースのデスクトップアプリです（ディレクトリではApache 2.0系のライセンスと記載）。macOS向けにユニバーサル版が配布されています。',
           '**最新リリース（2026年10月31日確認）：** v0.8.8、2026年10月28日（[出典](https://github.com/janhq/jan/releases)）。',
-          '**Macの要件：** READMEではmacOS 13.6以降、3Bモデルに約8 GB、7Bモデルに16 GBのRAMが目安です。',
+          '**Macの要件：** READMEではmacOS 13.6以降、3Bモデルに約8 GB、7Bモデルに16 GBのRAMが目安です。Macでは macOS が最低 8 GB のユニファイドメモリを確保するため、これらの数値に 8 GB を加えて考えてください。',
           '**向いている用途：** ホスト型チャットアシスタントのオープンソースの代替が欲しい方。',
         ],
       },
@@ -889,7 +889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**どのアプリを選んでも、制約になるのはユニファイドメモリです。** アプリが変えるのは操作画面であって、モデルに必要なメモリではありません。',
         items: [
-          'JanのREADMEの目安は、3Bモデルに約8 GB、7Bモデルに16 GB、13Bモデルに32 GBのRAMです。',
+          'JanのREADMEの目安は、3Bモデルに約8 GB、7Bモデルに16 GB、13Bモデルに32 GBのRAMです。Macでは macOS が最低 8 GB のユニファイドメモリを確保するため、これらの数値に 8 GB を加えて考えてください。',
           '大きな量子化モデルほどメモリが必要です。ダウンロード前にモデルカードを確認し、macOS用にも空きを残してください。',
           'Mac機種ごとのハードウェアの選び方は[ローカルAIに最適なMac](/ja/power-local-llm/best-mac-for-local-ai-2026)と[Apple Silicon向けOllamaモデルのおすすめ](/ja/local-llms/best-models-apple-silicon-2026)をご覧ください。',
         ],
@@ -962,7 +962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'RAMはどれくらい必要ですか？',
-            a: 'アプリではなくモデルで決まります。JanのREADMEでは3Bモデルに約8 GB、7Bモデルに16 GBが目安です。大きなモデルほど多く必要になるので、各モデルカードを確認してください。',
+            a: 'アプリではなくモデルで決まります。JanのREADMEでは3Bモデルに約8 GB、7Bモデルに16 GBが目安です。Macでは macOS が最低 8 GB のユニファイドメモリを確保するため、これらの数値に 8 GB を加えて考えてください。大きなモデルほど多く必要になるので、各モデルカードを確認してください。',
           },
         ],
       },
@@ -985,7 +985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -1063,7 +1063,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Open WebUI est une interface navigateur, pas un moteur de modèles.** Il se relie à Ollama ou à d’autres backends ; installation avec Docker ou pip.',
           '**Msty et Chatbox sont des clients de chat multi-fournisseurs.** Tous deux peuvent utiliser des modèles locaux et des fournisseurs cloud ; vérifiez le réglage du fournisseur si la confidentialité compte.',
           '**oMLX vise la vitesse native Apple.** Serveur d’inférence MLX Apache-2.0 pour Apple Silicon avec app Mac ; il exige macOS 15 ou plus récent.',
-          '**La mémoire fixe la taille du modèle, pas l’app.** Le README de Jan indique environ 8 Go de RAM pour les modèles 3B et 16 Go pour les modèles 7B ; toutes les apps de cette liste butent sur la même limite.',
+          '**La mémoire fixe la taille du modèle, pas l’app.** Le README de Jan indique environ 8 Go de RAM pour les modèles 3B et 16 Go pour les modèles 7B ; toutes les apps de cette liste butent sur la même limite. Sur un Mac, macOS garde au moins 8 Go de mémoire unifiée pour lui : ajoutez 8 Go à ces chiffres.',
         ],
       },
       quickFacts: {
@@ -1144,7 +1144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Ce que c’est :** une app de bureau open source (l’annuaire indique une variante d’Apache 2.0) avec un téléchargement macOS universel.',
           '**Dernière version (vérifiée le 31 oct. 2026) :** v0.8.8, 28 oct. 2026 ([source](https://github.com/janhq/jan/releases)).',
-          '**Configuration Mac :** son README indique macOS 13.6 ou plus récent, avec environ 8 Go de RAM pour les modèles 3B et 16 Go pour les modèles 7B.',
+          '**Configuration Mac :** son README indique macOS 13.6 ou plus récent, avec environ 8 Go de RAM pour les modèles 3B et 16 Go pour les modèles 7B. Sur un Mac, macOS garde au moins 8 Go de mémoire unifiée pour lui : ajoutez 8 Go à ces chiffres.',
           '**Idéal pour :** ceux qui veulent une alternative open source à un assistant de chat hébergé.',
         ],
       },
@@ -1214,7 +1214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**La mémoire unifiée est la limite, quelle que soit l’app choisie.** L’app change l’interface, pas la mémoire dont un modèle a besoin.',
         items: [
-          'Le README de Jan donne un repère : environ 8 Go de RAM pour les modèles 3B, 16 Go pour les modèles 7B et 32 Go pour les modèles 13B.',
+          'Le README de Jan donne un repère : environ 8 Go de RAM pour les modèles 3B, 16 Go pour les modèles 7B et 32 Go pour les modèles 13B. Sur un Mac, macOS garde au moins 8 Go de mémoire unifiée pour lui : ajoutez 8 Go à ces chiffres.',
           'Les grands modèles quantifiés demandent plus de mémoire ; consultez la fiche du modèle avant de le télécharger et laissez de la mémoire à macOS.',
           'Pour choisir le matériel selon le modèle de Mac, voir [Meilleur Mac pour l’IA locale](/fr/power-local-llm/best-mac-for-local-ai-2026) et [Meilleurs modèles Ollama pour Apple Silicon](/fr/local-llms/best-models-apple-silicon-2026).',
         ],
@@ -1287,7 +1287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'De combien de RAM ai-je besoin ?',
-            a: 'Cela dépend du modèle, pas de l’app. Le README de Jan suggère environ 8 Go de RAM pour les modèles 3B et 16 Go pour les modèles 7B. Les modèles plus grands en demandent plus ; consultez chaque fiche de modèle.',
+            a: 'Cela dépend du modèle, pas de l’app. Le README de Jan suggère environ 8 Go de RAM pour les modèles 3B et 16 Go pour les modèles 7B. Sur un Mac, macOS garde au moins 8 Go de mémoire unifiée pour lui : ajoutez 8 Go à ces chiffres. Les modèles plus grands en demandent plus ; consultez chaque fiche de modèle.',
           },
         ],
       },
@@ -1310,7 +1310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -1388,7 +1388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Open WebUI是浏览器界面，不是模型运行器。** 它连接Ollama等后端；用Docker或pip安装。',
           '**Msty和Chatbox是多服务商聊天客户端。** 两者都能使用本地模型和云服务商；如果在意隐私，请检查服务商设置。',
           '**oMLX面向Apple原生速度。** 面向Apple Silicon的Apache-2.0 MLX推理服务器，附Mac应用；需要macOS 15或更高版本。',
-          '**决定模型大小的是内存，不是应用。** Jan的README列出3B模型约需8 GB内存、7B模型约需16 GB；本列表中的任何应用都受同样的限制。',
+          '**决定模型大小的是内存，不是应用。** Jan的README列出3B模型约需8 GB内存、7B模型约需16 GB；本列表中的任何应用都受同样的限制。在 Mac 上，macOS 自身至少占用 8 GB 统一内存，因此请在这些数字上再加 8 GB。',
         ],
       },
       quickFacts: {
@@ -1469,7 +1469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**简介：** 开源桌面应用（目录记录的许可证为Apache 2.0变体），提供macOS通用版下载。',
           '**最新版本（2026年10月31日核对）：** v0.8.8，2026年10月28日（[来源](https://github.com/janhq/jan/releases)）。',
-          '**Mac要求：** 其README列出macOS 13.6或更高版本，3B模型约需8 GB内存，7B模型约需16 GB。',
+          '**Mac要求：** 其README列出macOS 13.6或更高版本，3B模型约需8 GB内存，7B模型约需16 GB。在 Mac 上，macOS 自身至少占用 8 GB 统一内存，因此请在这些数字上再加 8 GB。',
           '**最适合：** 想要托管聊天助手的开源替代品的用户。',
         ],
       },
@@ -1539,7 +1539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**无论选哪款应用，限制都来自统一内存。** 应用改变的是界面，而不是模型所需的内存。',
         items: [
-          'Jan的README给出了起步参考：3B模型约8 GB内存，7B模型16 GB，13B模型32 GB。',
+          'Jan的README给出了起步参考：3B模型约8 GB内存，7B模型16 GB，13B模型32 GB。在 Mac 上，macOS 自身至少占用 8 GB 统一内存，因此请在这些数字上再加 8 GB。',
           '更大的量化模型需要更多内存；下载前请查看模型卡，并为macOS留出内存。',
           '按Mac型号选择硬件，请参阅[适合本地AI的最佳Mac](/zh/power-local-llm/best-mac-for-local-ai-2026)和[Apple Silicon上最佳Ollama模型](/zh/local-llms/best-models-apple-silicon-2026)。',
         ],
@@ -1612,7 +1612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '我需要多少内存？',
-            a: '取决于模型，而不是应用。Jan的README建议3B模型约8 GB内存，7B模型约16 GB。更大的模型需要更多；请查看各模型卡。',
+            a: '取决于模型，而不是应用。Jan的README建议3B模型约8 GB内存，7B模型约16 GB。在 Mac 上，macOS 自身至少占用 8 GB 统一内存，因此请在这些数字上再加 8 GB。更大的模型需要更多；请查看各模型卡。',
           },
         ],
       },
@@ -1635,7 +1635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -1713,7 +1713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Open WebUI es una interfaz de navegador, no un ejecutor de modelos.** Se conecta a Ollama u otros backends; se instala con Docker o pip.',
           '**Msty y Chatbox son clientes de chat multiproveedor.** Ambos pueden usar modelos locales y proveedores en la nube; revisa el ajuste del proveedor si la privacidad importa.',
           '**oMLX es para velocidad nativa de Apple.** Servidor de inferencia MLX con licencia Apache-2.0 para Apple Silicon con app para Mac; requiere macOS 15 o posterior.',
-          '**La memoria fija el tamaño del modelo, no la app.** El README de Jan indica unos 8 GB de RAM para modelos de 3B y 16 GB para modelos de 7B; cualquier app de esta lista choca con el mismo límite.',
+          '**La memoria fija el tamaño del modelo, no la app.** El README de Jan indica unos 8 GB de RAM para modelos de 3B y 16 GB para modelos de 7B; cualquier app de esta lista choca con el mismo límite. En un Mac, macOS se reserva al menos 8 GB de memoria unificada, así que suma 8 GB a estas cifras.',
         ],
       },
       quickFacts: {
@@ -1794,7 +1794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Qué es:** una app de escritorio de código abierto (el directorio indica una variante de Apache 2.0) con descarga universal para macOS.',
           '**Última versión (comprobada el 31 oct 2026):** v0.8.8, 28 oct 2026 ([fuente](https://github.com/janhq/jan/releases)).',
-          '**Requisito de Mac:** su README indica macOS 13.6 o posterior, con unos 8 GB de RAM para modelos de 3B y 16 GB para modelos de 7B.',
+          '**Requisito de Mac:** su README indica macOS 13.6 o posterior, con unos 8 GB de RAM para modelos de 3B y 16 GB para modelos de 7B. En un Mac, macOS se reserva al menos 8 GB de memoria unificada, así que suma 8 GB a estas cifras.',
           '**Mejor para:** quienes quieren una alternativa de código abierto a un asistente de chat alojado.',
         ],
       },
@@ -1864,7 +1864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**La memoria unificada es el límite, elijas la app que elijas.** La app cambia la interfaz, no la memoria que necesita un modelo.',
         items: [
-          'El README de Jan da una guía inicial: unos 8 GB de RAM para modelos de 3B, 16 GB para modelos de 7B y 32 GB para modelos de 13B.',
+          'El README de Jan da una guía inicial: unos 8 GB de RAM para modelos de 3B, 16 GB para modelos de 7B y 32 GB para modelos de 13B. En un Mac, macOS se reserva al menos 8 GB de memoria unificada, así que suma 8 GB a estas cifras.',
           'Los modelos cuantizados más grandes necesitan más memoria; revisa la ficha del modelo antes de descargarlo y deja memoria libre para macOS.',
           'Para elegir hardware según el modelo de Mac, consulta [Mejor Mac para IA local](/es/power-local-llm/best-mac-for-local-ai-2026) y [Mejores modelos de Ollama para Apple Silicon](/es/local-llms/best-models-apple-silicon-2026).',
         ],
@@ -1937,7 +1937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuánta RAM necesito?',
-            a: 'Depende del modelo, no de la app. El README de Jan sugiere unos 8 GB de RAM para modelos de 3B y 16 GB para modelos de 7B. Los modelos más grandes necesitan más; revisa la ficha de cada modelo.',
+            a: 'Depende del modelo, no de la app. El README de Jan sugiere unos 8 GB de RAM para modelos de 3B y 16 GB para modelos de 7B. En un Mac, macOS se reserva al menos 8 GB de memoria unificada, así que suma 8 GB a estas cifras. Los modelos más grandes necesitan más; revisa la ficha de cada modelo.',
           },
         ],
       },
@@ -1960,7 +1960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -2038,7 +2038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Open WebUI는 브라우저 인터페이스이지 모델 실행기가 아닙니다.** Ollama 등 백엔드에 연결하며 Docker 또는 pip로 설치합니다.',
           '**Msty와 Chatbox는 다중 공급자 채팅 클라이언트입니다.** 둘 다 로컬 모델과 클라우드 공급자를 쓸 수 있으므로 개인정보가 중요하다면 공급자 설정을 확인하십시오.',
           '**oMLX는 Apple 네이티브 속도를 원하는 경우에 맞습니다.** Apple Silicon용 Apache-2.0 MLX 추론 서버와 Mac 앱이며 macOS 15 이상이 필요합니다.',
-          '**모델 크기를 정하는 것은 앱이 아니라 메모리입니다.** Jan의 README는 3B 모델에 약 8 GB, 7B 모델에 16 GB RAM을 안내하며, 이 목록의 어떤 앱도 같은 한계를 따릅니다.',
+          '**모델 크기를 정하는 것은 앱이 아니라 메모리입니다.** Jan의 README는 3B 모델에 약 8 GB, 7B 모델에 16 GB RAM을 안내하며, 이 목록의 어떤 앱도 같은 한계를 따릅니다. Mac에서는 macOS가 통합 메모리를 최소 8 GB 사용하므로 이 수치에 8 GB를 더하십시오.',
         ],
       },
       quickFacts: {
@@ -2119,7 +2119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**개요:** 오픈소스 데스크톱 앱입니다(디렉토리에는 Apache 2.0 변형 라이선스로 기재). macOS 유니버설 다운로드를 제공합니다.',
           '**최신 릴리스(2026년 10월 31일 확인):** v0.8.8, 2026년 10월 28일([출처](https://github.com/janhq/jan/releases)).',
-          '**Mac 요구 사항:** README에는 macOS 13.6 이상, 3B 모델에 약 8 GB, 7B 모델에 16 GB RAM이 안내되어 있습니다.',
+          '**Mac 요구 사항:** README에는 macOS 13.6 이상, 3B 모델에 약 8 GB, 7B 모델에 16 GB RAM이 안내되어 있습니다. Mac에서는 macOS가 통합 메모리를 최소 8 GB 사용하므로 이 수치에 8 GB를 더하십시오.',
           '**추천 대상:** 호스팅형 채팅 비서의 오픈소스 대안을 원하는 사용자.',
         ],
       },
@@ -2189,7 +2189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**어떤 앱을 고르든 한계는 통합 메모리입니다.** 앱이 바꾸는 것은 인터페이스이지 모델이 필요로 하는 메모리가 아닙니다.',
         items: [
-          'Jan의 README가 제시하는 출발 기준은 3B 모델에 약 8 GB, 7B 모델에 16 GB, 13B 모델에 32 GB RAM입니다.',
+          'Jan의 README가 제시하는 출발 기준은 3B 모델에 약 8 GB, 7B 모델에 16 GB, 13B 모델에 32 GB RAM입니다. Mac에서는 macOS가 통합 메모리를 최소 8 GB 사용하므로 이 수치에 8 GB를 더하십시오.',
           '더 큰 양자화 모델은 더 많은 메모리가 필요합니다. 다운로드 전에 모델 카드를 확인하고 macOS를 위한 여유 메모리를 남겨 두십시오.',
           'Mac 모델별 하드웨어 선택은 [로컬 AI에 가장 좋은 Mac](/ko/power-local-llm/best-mac-for-local-ai-2026)과 [Apple Silicon용 최고의 Ollama 모델](/ko/local-llms/best-models-apple-silicon-2026)을 참고하십시오.',
         ],
@@ -2262,7 +2262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'RAM은 얼마나 필요합니까?',
-            a: '앱이 아니라 모델에 따라 다릅니다. Jan의 README는 3B 모델에 약 8 GB, 7B 모델에 16 GB RAM을 제안합니다. 더 큰 모델은 더 많이 필요하므로 각 모델 카드를 확인하십시오.',
+            a: '앱이 아니라 모델에 따라 다릅니다. Jan의 README는 3B 모델에 약 8 GB, 7B 모델에 16 GB RAM을 제안합니다. Mac에서는 macOS가 통합 메모리를 최소 8 GB 사용하므로 이 수치에 8 GB를 더하십시오. 더 큰 모델은 더 많이 필요하므로 각 모델 카드를 확인하십시오.',
           },
         ],
       },
@@ -2285,7 +2285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -2363,7 +2363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**O Open WebUI é uma interface de navegador, não um executor de modelos.** Ele se conecta ao Ollama ou a outros backends; instalação com Docker ou pip.',
           '**Msty e Chatbox são clientes de chat com vários provedores.** Ambos podem usar modelos locais e provedores na nuvem; verifique a configuração do provedor se a privacidade importa.',
           '**O oMLX é para velocidade nativa da Apple.** Servidor de inferência MLX Apache-2.0 para Apple Silicon com app para Mac; exige macOS 15 ou posterior.',
-          '**A memória define o tamanho do modelo, não o app.** O README do Jan indica cerca de 8 GB de RAM para modelos de 3B e 16 GB para modelos de 7B; qualquer app desta lista esbarra no mesmo limite.',
+          '**A memória define o tamanho do modelo, não o app.** O README do Jan indica cerca de 8 GB de RAM para modelos de 3B e 16 GB para modelos de 7B; qualquer app desta lista esbarra no mesmo limite. No Mac, o macOS reserva pelo menos 8 GB de memória unificada para si, então some 8 GB a esses números.',
         ],
       },
       quickFacts: {
@@ -2444,7 +2444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**O que é:** um app de desktop de código aberto (o diretório indica uma variante da Apache 2.0) com download universal para macOS.',
           '**Última versão (verificada em 31 out. 2026):** v0.8.8, 28 out. 2026 ([fonte](https://github.com/janhq/jan/releases)).',
-          '**Requisito de Mac:** o README indica macOS 13.6 ou posterior, com cerca de 8 GB de RAM para modelos de 3B e 16 GB para modelos de 7B.',
+          '**Requisito de Mac:** o README indica macOS 13.6 ou posterior, com cerca de 8 GB de RAM para modelos de 3B e 16 GB para modelos de 7B. No Mac, o macOS reserva pelo menos 8 GB de memória unificada para si, então some 8 GB a esses números.',
           '**Melhor para:** quem quer uma alternativa de código aberto a um assistente de chat hospedado.',
         ],
       },
@@ -2514,7 +2514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A memória unificada é o limite, qualquer que seja o app escolhido.** O app muda a interface, não a memória de que um modelo precisa.',
         items: [
-          'O README do Jan dá um ponto de partida: cerca de 8 GB de RAM para modelos de 3B, 16 GB para modelos de 7B e 32 GB para modelos de 13B.',
+          'O README do Jan dá um ponto de partida: cerca de 8 GB de RAM para modelos de 3B, 16 GB para modelos de 7B e 32 GB para modelos de 13B. No Mac, o macOS reserva pelo menos 8 GB de memória unificada para si, então some 8 GB a esses números.',
           'Modelos quantizados maiores precisam de mais memória; confira a ficha do modelo antes de baixar e deixe memória livre para o macOS.',
           'Para escolher hardware por modelo de Mac, veja [Melhor Mac para IA local](/pt/power-local-llm/best-mac-for-local-ai-2026) e [Melhores modelos Ollama para Apple Silicon](/pt/local-llms/best-models-apple-silicon-2026).',
         ],
@@ -2587,7 +2587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'De quanta RAM eu preciso?',
-            a: 'Depende do modelo, não do app. O README do Jan sugere cerca de 8 GB de RAM para modelos de 3B e 16 GB para modelos de 7B. Modelos maiores precisam de mais; confira a ficha de cada modelo.',
+            a: 'Depende do modelo, não do app. O README do Jan sugere cerca de 8 GB de RAM para modelos de 3B e 16 GB para modelos de 7B. No Mac, o macOS reserva pelo menos 8 GB de memória unificada para si, então some 8 GB a esses números. Modelos maiores precisam de mais; confira a ficha de cada modelo.',
           },
         ],
       },
@@ -2610,7 +2610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-31',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-10-31',
     next_refresh_due: '2027-04-30',
     theme: 'Easiest Desktop Apps',
@@ -2688,7 +2688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Open WebUI واجهة متصفح، لا مشغّل نماذج.** يتصل بـ Ollama أو غيره؛ ويُثبَّت عبر Docker أو pip.',
           '**Msty وChatbox عميلا دردشة متعددا المزوّدين.** يستطيع كلاهما استخدام نماذج محلية ومزوّدين سحابيين؛ راجع إعداد المزوّد إن كانت الخصوصية مهمة.',
           '**oMLX لمن يريد سرعة أصلية على أجهزة Apple.** خادم استدلال MLX بترخيص Apache-2.0 لـ Apple Silicon مع تطبيق Mac؛ يتطلب macOS 15 أو أحدث.',
-          '**الذاكرة هي التي تحدد حجم النموذج، لا التطبيق.** يذكر README الخاص بـ Jan نحو 8 GB من RAM لنماذج 3B و16 GB لنماذج 7B؛ وأي تطبيق في هذه القائمة يواجه الحد نفسه.',
+          '**الذاكرة هي التي تحدد حجم النموذج، لا التطبيق.** يذكر README الخاص بـ Jan نحو 8 GB من RAM لنماذج 3B و16 GB لنماذج 7B؛ وأي تطبيق في هذه القائمة يواجه الحد نفسه. على جهاز Mac يحتفظ macOS بما لا يقل عن 8 GB من الذاكرة الموحّدة لنفسه، لذا أضف 8 GB إلى هذه الأرقام.',
         ],
       },
       quickFacts: {
@@ -2769,7 +2769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**ما هو:** تطبيق سطح مكتب مفتوح المصدر (يذكر الدليل نسخة معدّلة من Apache 2.0) مع تنزيل موحّد لنظام macOS.',
           '**أحدث إصدار (روجع في 31 أكتوبر 2026):** v0.8.8، 28 أكتوبر 2026 ([المصدر](https://github.com/janhq/jan/releases)).',
-          '**متطلبات Mac:** يذكر README نظام macOS 13.6 أو أحدث، مع نحو 8 GB من RAM لنماذج 3B و16 GB لنماذج 7B.',
+          '**متطلبات Mac:** يذكر README نظام macOS 13.6 أو أحدث، مع نحو 8 GB من RAM لنماذج 3B و16 GB لنماذج 7B. على جهاز Mac يحتفظ macOS بما لا يقل عن 8 GB من الذاكرة الموحّدة لنفسه، لذا أضف 8 GB إلى هذه الأرقام.',
           '**الأنسب لـ:** من يريد بديلاً مفتوح المصدر لمساعد دردشة مستضاف.',
         ],
       },
@@ -2839,7 +2839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**الذاكرة الموحّدة هي الحد، أياً كان التطبيق الذي تختاره.** التطبيق يغيّر الواجهة، لا الذاكرة التي يحتاجها النموذج.',
         items: [
-          'يعطي README الخاص بـ Jan نقطة بداية: نحو 8 GB من RAM لنماذج 3B، و16 GB لنماذج 7B، و32 GB لنماذج 13B.',
+          'يعطي README الخاص بـ Jan نقطة بداية: نحو 8 GB من RAM لنماذج 3B، و16 GB لنماذج 7B، و32 GB لنماذج 13B. على جهاز Mac يحتفظ macOS بما لا يقل عن 8 GB من الذاكرة الموحّدة لنفسه، لذا أضف 8 GB إلى هذه الأرقام.',
           'النماذج المكمّمة الأكبر تحتاج إلى ذاكرة أكثر؛ راجع بطاقة النموذج قبل التنزيل واترك ذاكرة لنظام macOS.',
           'لاختيار العتاد بحسب طراز Mac، راجع [أفضل Mac للذكاء الاصطناعي المحلي](/ar/power-local-llm/best-mac-for-local-ai-2026) و[أفضل نماذج Ollama لـ Apple Silicon](/ar/local-llms/best-models-apple-silicon-2026).',
         ],
@@ -2912,7 +2912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كم أحتاج من RAM؟',
-            a: 'يعتمد على النموذج لا على التطبيق. يقترح README الخاص بـ Jan نحو 8 GB من RAM لنماذج 3B و16 GB لنماذج 7B. والنماذج الأكبر تحتاج إلى أكثر؛ راجع بطاقة كل نموذج.',
+            a: 'يعتمد على النموذج لا على التطبيق. يقترح README الخاص بـ Jan نحو 8 GB من RAM لنماذج 3B و16 GB لنماذج 7B. على جهاز Mac يحتفظ macOS بما لا يقل عن 8 GB من الذاكرة الموحّدة لنفسه، لذا أضف 8 GB إلى هذه الأرقام. والنماذج الأكبر تحتاج إلى أكثر؛ راجع بطاقة كل نموذج.',
           },
         ],
       },

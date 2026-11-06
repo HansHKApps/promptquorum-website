@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mac Mini M4 for Local LLMs: 16GB vs 24GB vs 48GB Guide 2026',
     metaDescription: 'Mac Mini M4 for local LLMs: 16GB fits 7-8B models, 24GB is the sweet spot for 14B, 48GB (M4 Pro) reaches 32B class. Apple announced a new M6/M5 Pro generation Aug 25, 2026 — compare before buying.',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-25',
     last_full_refresh: '2026-08-26',
@@ -46,7 +46,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'Is the Mac Mini M4 good for running local LLMs in 2026?',
         answer: 'Yes, for compact local-LLM use at a good price — especially now that Apple has announced a newer generation, which should push M4 prices down. Best value config: M4 with 24GB unified memory. For anything past 14B-class models, prioritize memory over CPU speed.',
         bullets: [
-          'Base M4 (16GB) runs 7-8B models comfortably; 24GB gives real headroom for 14B models.',
+          'Base M4 (16GB) runs 7-8B models with about 8GB left after the 8GB macOS reserve; 24GB (about 16GB left) gives real headroom for 14B models.',
           'Main advantage: unified memory shared between CPU and GPU — no separate VRAM ceiling.',
           'Main disadvantage: memory is fixed at purchase and cannot be upgraded later.',
           'Works out of the box with Ollama, LM Studio, and MLX via Apple Metal — no driver setup.',
@@ -192,7 +192,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Can the Mac Mini M4 run 8B models?',
-            a: 'Yes. The base Mac Mini M4 with 16GB of unified memory runs 8B models at Q4 quantization comfortably. 24GB gives more headroom and also handles most 14B models.',
+            a: 'Yes. The base Mac Mini M4 with 16GB of unified memory runs 8B models at Q4 quantization, but only about 8GB is left for the model once 8GB is reserved for macOS. 24GB (about 16GB left) gives more headroom and also handles most 14B models.',
           },
           {
             q: 'What does unified memory mean for local LLMs?',
@@ -231,7 +231,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mac Mini M4 für lokale LLMs 2026 | Prompt Bites',
     metaDescription: 'Mac Mini M4 für lokale LLMs: 16 GB für 7-8B-Modelle, 24 GB ist der Sweet Spot für 14B, 48 GB (M4 Pro) erreicht 32B. Apple kündigte am 25.8.2026 eine neue M6/M5-Pro-Generation an — Preise vergleichen.',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-25',
     current_models_mentioned: [],
@@ -264,7 +264,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'Ist der Mac Mini M4 2026 gut für lokale LLMs?',
         answer: 'Ja, für kompakte lokale LLM-Nutzung zu einem guten Preis — besonders jetzt, da Apple eine neue Generation angekündigt hat, was M4-Preise drücken dürfte. Beste Konfiguration: M4 mit 24 GB Unified Memory. Für alles über 14B-Modelle priorisieren Sie Speicher vor CPU-Geschwindigkeit.',
         bullets: [
-          'Basis-M4 (16 GB) läuft komfortabel mit 7-8B-Modellen; 24 GB geben echten Spielraum für 14B.',
+          'Basis-M4 (16 GB) führt 7-8B-Modelle aus (nach 8 GB macOS-Reserve bleiben etwa 8 GB); 24 GB (etwa 16 GB frei) geben echten Spielraum für 14B.',
           'Hauptvorteil: Unified Memory zwischen CPU und GPU geteilt — keine separate VRAM-Grenze.',
           'Hauptnachteil: Speicher ist beim Kauf fest und lässt sich später nicht nachrüsten.',
           'Funktioniert sofort mit Ollama, LM Studio und MLX über Apple Metal — keine Treiber nötig.',
@@ -410,7 +410,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Kann der Mac Mini M4 8B-Modelle ausführen?',
-            a: 'Ja. Der Basis-Mac-Mini M4 mit 16 GB Unified Memory führt 8B-Modelle bei Q4-Quantisierung komfortabel aus. 24 GB geben mehr Spielraum und bewältigen auch die meisten 14B-Modelle.',
+            a: 'Ja. Der Basis-Mac-Mini M4 mit 16 GB Unified Memory führt 8B-Modelle bei Q4-Quantisierung aus, doch nach 8 GB Reserve für macOS bleiben nur etwa 8 GB für das Modell. 24 GB (etwa 16 GB frei) geben mehr Spielraum und bewältigen auch die meisten 14B-Modelle.',
           },
           {
             q: 'Was bedeutet Unified Memory für lokale LLMs?',
@@ -449,7 +449,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mac Mini M4 pour LLM local 2026 | Prompt Bites',
     metaDescription: 'Mac Mini M4 pour LLM locaux : 16 Go pour les modèles 7-8B, 24 Go pour 14B, 48 Go (M4 Pro) pour 32B. Apple a annoncé une nouvelle génération M6/M5 Pro le 25 août 2026 — comparez les prix avant d\'acheter.',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-25',
     current_models_mentioned: [],
@@ -482,7 +482,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'Le Mac Mini M4 est-il bon pour les LLM locaux en 2026 ?',
         answer: 'Oui, pour un usage LLM local compact à bon prix — surtout maintenant qu\'Apple a annoncé une nouvelle génération, ce qui devrait faire baisser les prix du M4. Configuration recommandée : M4 avec 24 Go de mémoire unifiée. Au-delà de 14B, privilégiez la mémoire à la vitesse CPU.',
         bullets: [
-          'Le M4 de base (16 Go) exécute confortablement les modèles 7-8B ; 24 Go donnent une vraie marge pour 14B.',
+          'Le M4 de base (16 Go) exécute les modèles 7-8B (environ 8 Go restent après la réserve de 8 Go pour macOS) ; 24 Go (environ 16 Go libres) donnent une vraie marge pour 14B.',
           'Avantage principal : mémoire unifiée partagée entre CPU et GPU — pas de plafond VRAM séparé.',
           'Inconvénient principal : la mémoire est fixée à l\'achat et non évolutive ensuite.',
           'Fonctionne nativement avec Ollama, LM Studio et MLX via Apple Metal — aucun pilote à installer.',
@@ -628,7 +628,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Le Mac Mini M4 peut-il exécuter des modèles 8B ?',
-            a: 'Oui. Le Mac Mini M4 de base avec 16 Go de mémoire unifiée exécute confortablement les modèles 8B en Q4. 24 Go donnent plus de marge et gèrent aussi la plupart des 14B.',
+            a: 'Oui. Le Mac Mini M4 de base avec 16 Go de mémoire unifiée exécute les modèles 8B en Q4, mais il ne reste qu\'environ 8 Go pour le modèle une fois 8 Go réservés à macOS. 24 Go (environ 16 Go libres) donnent plus de marge et gèrent aussi la plupart des 14B.',
           },
           {
             q: 'Que signifie la mémoire unifiée pour les LLM locaux ?',
@@ -667,7 +667,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'ローカルLLM向けMac Mini M4 2026 | Prompt Bites',
     metaDescription: 'Mac Mini M4のローカルLLM適性：16GBは7-8Bモデル、24GBは14Bに最適、48GB（M4 Pro）は32B級まで。Appleは2026年8月25日に新型M6/M5 Pro世代を発表 — 購入前に価格比較を。',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-25',
     current_models_mentioned: [],
@@ -700,7 +700,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: '2026年、Mac Mini M4はローカルLLM実行に適していますか？',
         answer: 'はい、良い価格でコンパクトなローカルLLM用途に適しています — 特にAppleが新世代を発表した今、M4の価格は下がる見込みです。最良の構成：24GBユニファイドメモリのM4。14B級を超えるならCPU速度よりメモリを優先してください。',
         bullets: [
-          'ベースM4（16GB）は7-8Bモデルを快適に実行、24GBは14Bに実用的な余裕を与える。',
+          'ベースM4（16GB）は7-8Bモデルを実行可能（macOS用の8GBを除き約8GB）、24GB（約16GB）は14Bに実用的な余裕を与える。',
           '主な利点：CPUとGPUで共有されるユニファイドメモリ — 別建てのVRAM上限なし。',
           '主な欠点：メモリは購入時に固定され、後から増設できない。',
           'Ollama、LM Studio、MLXがApple Metal経由ですぐ動作 — ドライバ設定不要。',
@@ -846,7 +846,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Mac Mini M4で8Bモデルは動きますか？',
-            a: 'はい。ベースのMac Mini M4（16GBユニファイドメモリ）は8BモデルをQ4量子化で快適に実行します。24GBはさらに余裕を持たせ、多くの14Bモデルも扱えます。',
+            a: 'はい。ベースのMac Mini M4（16GBユニファイドメモリ）は8BモデルをQ4量子化で実行できますが、macOS用に8GBを確保するとモデルに使えるのは約8GBです。24GB（約16GB）はさらに余裕を持たせ、多くの14Bモデルも扱えます。',
           },
           {
             q: 'ローカルLLMにおいてユニファイドメモリとは何ですか？',
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '本地LLM用Mac Mini M4 2026 | Prompt Bites',
     metaDescription: 'Mac Mini M4本地LLM指南：16GB适合7-8B模型，24GB是14B的最佳选择，48GB（M4 Pro）可达32B级别。苹果已于2026年8月25日发布M6/M5 Pro新一代 — 购买前请比价。',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-25',
     current_models_mentioned: [],
@@ -918,7 +918,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: '2026年Mac Mini M4适合运行本地LLM吗？',
         answer: '适合——以不错的价格用于紧凑型本地LLM场景，尤其是苹果已发布新一代产品，M4价格有望下调。最佳配置：24GB统一内存的M4。若需超过14B级别，优先考虑内存而非CPU速度。',
         bullets: [
-          '基础M4（16GB）可舒适运行7-8B模型；24GB为14B模型提供实际余量。',
+          '基础M4（16GB）可运行7-8B模型（预留8GB给macOS后约剩8GB）；24GB（约剩16GB）为14B模型提供实际余量。',
           '主要优势：CPU与GPU共享统一内存——无独立VRAM上限。',
           '主要劣势：内存购买时固定，之后无法升级。',
           '开箱即用支持Ollama、LM Studio和MLX，通过Apple Metal运行——无需驱动配置。',
@@ -1064,7 +1064,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Mac Mini M4能跑8B模型吗？',
-            a: '可以。基础Mac Mini M4（16GB统一内存）可舒适运行Q4量化的8B模型。24GB提供更多余量，还能处理多数14B模型。',
+            a: '可以。基础Mac Mini M4（16GB统一内存）可运行Q4量化的8B模型，但预留8GB给macOS后只剩约8GB供模型使用。24GB（约剩16GB）提供更多余量，还能处理多数14B模型。',
           },
           {
             q: '统一内存对本地LLM意味着什么？',
@@ -1103,7 +1103,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mac Mini M4 para LLMs locais 2026 | Prompt Bites',
     metaDescription: 'Mac Mini M4 para LLMs locais: 16GB para modelos 7-8B, 24GB é o ponto ideal para 14B, 48GB (M4 Pro) chega a 32B. A Apple anunciou a nova geração M6/M5 Pro em 25/8/2026 — compare preços antes de comprar.',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-25',
     current_models_mentioned: [],
@@ -1136,7 +1136,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'O Mac Mini M4 é bom para rodar LLMs locais em 2026?',
         answer: 'Sim, para uso compacto de LLM local a um bom preço — especialmente agora que a Apple anunciou uma nova geração, o que deve derrubar os preços do M4. Melhor configuração: M4 com 24GB de memória unificada. Para além de modelos 14B, priorize memória em vez de velocidade da CPU.',
         bullets: [
-          'O M4 base (16GB) roda modelos 7-8B facilmente; 24GB dá espaço real para modelos 14B.',
+          'O M4 base (16GB) roda modelos 7-8B (sobram cerca de 8GB após os 8GB reservados ao macOS); 24GB (cerca de 16GB livres) dá espaço real para modelos 14B.',
           'Principal vantagem: memória unificada compartilhada entre CPU e GPU — sem teto de VRAM separado.',
           'Principal desvantagem: a memória é fixa na compra e não pode ser ampliada depois.',
           'Funciona de fábrica com Ollama, LM Studio e MLX via Apple Metal — sem configuração de drivers.',
@@ -1282,7 +1282,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'O Mac Mini M4 consegue rodar modelos 8B?',
-            a: 'Sim. O Mac Mini M4 base com 16GB de memória unificada roda modelos 8B em quantização Q4 sem problemas. 24GB dá mais folga e também lida com a maioria dos modelos 14B.',
+            a: 'Sim. O Mac Mini M4 base com 16GB de memória unificada roda modelos 8B em quantização Q4, mas sobram só cerca de 8GB para o modelo depois de reservar 8GB para o macOS. 24GB (cerca de 16GB livres) dá mais folga e também lida com a maioria dos modelos 14B.',
           },
           {
             q: 'O que significa memória unificada para LLMs locais?',
@@ -1321,7 +1321,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mac Mini M4 para LLMs locales 2026 | Prompt Bites',
     metaDescription: 'Mac Mini M4 para LLMs locales: 16GB para modelos 7-8B, 24GB es el punto óptimo para 14B, 48GB (M4 Pro) llega a 32B. Apple anunció la nueva generación M6/M5 Pro el 25/8/2026 — compara precios antes de comprar.',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-25',
     current_models_mentioned: [],
@@ -1354,7 +1354,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: '¿Es el Mac Mini M4 bueno para ejecutar LLMs locales en 2026?',
         answer: 'Sí, para un uso compacto de LLM local a buen precio — sobre todo ahora que Apple ha anunciado una nueva generación, lo que debería bajar los precios del M4. Configuración recomendada: M4 con 24GB de memoria unificada. Más allá de 14B, prioriza la memoria sobre la velocidad de CPU.',
         bullets: [
-          'El M4 base (16GB) ejecuta modelos 7-8B sin problemas; 24GB da margen real para 14B.',
+          'El M4 base (16GB) ejecuta modelos 7-8B (quedan unos 8GB tras reservar 8GB para macOS); 24GB (unos 16GB libres) da margen real para 14B.',
           'Ventaja principal: memoria unificada compartida entre CPU y GPU — sin límite de VRAM separado.',
           'Desventaja principal: la memoria queda fija al comprar y no se puede ampliar después.',
           'Funciona de fábrica con Ollama, LM Studio y MLX vía Apple Metal — sin configurar drivers.',
@@ -1500,7 +1500,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Puede el Mac Mini M4 ejecutar modelos 8B?',
-            a: 'Sí. El Mac Mini M4 base con 16GB de memoria unificada ejecuta modelos 8B en cuantización Q4 sin problemas. 24GB da más margen y también gestiona la mayoría de modelos 14B.',
+            a: 'Sí. El Mac Mini M4 base con 16GB de memoria unificada ejecuta modelos 8B en cuantización Q4, pero solo quedan unos 8GB para el modelo tras reservar 8GB para macOS. 24GB (unos 16GB libres) da más margen y también gestiona la mayoría de modelos 14B.',
           },
           {
             q: '¿Qué significa la memoria unificada para los LLMs locales?',
@@ -1539,7 +1539,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨Mac Mini M4⁩ لتشغيل النماذج ⁨LLM⁩ محلياً ⁨2026⁩',
     metaDescription: '⁨Mac Mini M4⁩ للنماذج المحلية: ⁨16GB⁩ لنماذج ⁨7-8B⁩، و⁨24GB⁩ الأفضل لـ⁨14B⁩، و⁨48GB⁩ (⁨M4 Pro⁩) يصل إلى ⁨32B⁩. أعلنت ⁨Apple⁩ عن جيل ⁨M6/M5 Pro⁩ الجديد في ⁨25⁩ أغسطس ⁨2026⁩ — قارن الأسعار قبل الشراء.',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-25',
     current_models_mentioned: [],
@@ -1572,7 +1572,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'هل ⁨Mac Mini M4⁩ جيد لتشغيل النماذج اللغوية المحلية في ⁨2026⁩؟',
         answer: 'نعم، للاستخدام المدمج بسعر جيد — خاصة أن ⁨Apple⁩ أعلنت جيلاً جديداً، ما يُتوقع أن يخفّض أسعار ⁨M4⁩. أفضل إعداد: ⁨M4⁩ بذاكرة موحدة ⁨24GB⁩. لما هو أكبر من ⁨14B⁩، أعطِ الأولوية للذاكرة على سرعة ⁨CPU⁩.',
         bullets: [
-          'الأساسي ⁨M4⁩ (⁨16GB⁩) يشغّل نماذج ⁨7-8B⁩ بسلاسة؛ ⁨24GB⁩ يمنح هامشاً حقيقياً لـ⁨14B⁩.',
+          'الأساسي ⁨M4⁩ (⁨16GB⁩) يشغّل نماذج ⁨7-8B⁩ (يتبقى نحو ⁨8GB⁩ بعد حجز ⁨8GB⁩ لنظام macOS)؛ ⁨24GB⁩ (يتبقى نحو ⁨16GB⁩) يمنح هامشاً حقيقياً لـ⁨14B⁩.',
           'الميزة الرئيسية: ذاكرة موحدة مشتركة بين ⁨CPU⁩ و⁨GPU⁩ — لا حد ⁨VRAM⁩ منفصل.',
           'العيب الرئيسي: الذاكرة ثابتة عند الشراء ولا يمكن ترقيتها لاحقاً.',
           'يعمل مباشرة مع ⁨Ollama⁩ و⁨LM Studio⁩ و⁨MLX⁩ عبر ⁨Apple Metal⁩ — دون إعداد drivers.',
@@ -1718,7 +1718,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'هل يستطيع ⁨Mac Mini M4⁩ تشغيل نماذج ⁨8B⁩؟',
-            a: 'نعم. ⁨Mac Mini M4⁩ الأساسي بذاكرة موحدة ⁨16GB⁩ يشغّل نماذج ⁨8B⁩ بتكميم ⁨Q4⁩ بسلاسة. ⁨24GB⁩ يمنح هامشاً أكبر ويتعامل أيضاً مع معظم نماذج ⁨14B⁩.',
+            a: 'نعم. ⁨Mac Mini M4⁩ الأساسي بذاكرة موحدة ⁨16GB⁩ يشغّل نماذج ⁨8B⁩ بتكميم ⁨Q4⁩، لكن لا يتبقى للنموذج سوى نحو ⁨8GB⁩ بعد حجز ⁨8GB⁩ لنظام macOS. ⁨24GB⁩ (يتبقى نحو ⁨16GB⁩) يمنح هامشاً أكبر ويتعامل أيضاً مع معظم نماذج ⁨14B⁩.',
           },
           {
             q: 'ما معنى الذاكرة الموحدة بالنسبة للنماذج اللغوية المحلية؟',
@@ -1757,7 +1757,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mac Mini M4 로컬 LLM 2026 | Prompt Bites',
     metaDescription: 'Mac Mini M4 로컬 LLM 가이드: 16GB는 7-8B 모델, 24GB는 14B에 최적, 48GB(M4 Pro)는 32B급까지. Apple은 2026년 8월 25일 M6/M5 Pro 신세대를 발표했습니다 — 구매 전 가격을 비교하세요.',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-25',
     current_models_mentioned: [],
@@ -1797,7 +1797,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'Mac Mini M4는 2026년 로컬 LLM 실행에 적합합니까?',
         answer: '네, 좋은 가격의 컴팩트한 로컬 LLM 용도로 적합합니다 — 특히 Apple이 신세대를 발표한 지금, M4 가격이 내려갈 가능성이 높습니다. 최선의 구성: 24GB 통합 메모리의 M4. 14B급을 넘어서면 CPU 속도보다 메모리를 우선하세요.',
         bullets: [
-          '기본 M4(16GB)는 7-8B 모델을 원활히 실행하며, 24GB는 14B에 실질적인 여유를 줍니다.',
+          '기본 M4(16GB)는 7-8B 모델을 실행할 수 있으며(macOS용 8GB를 확보하면 약 8GB 남음), 24GB(약 16GB 남음)는 14B에 실질적인 여유를 줍니다.',
           '주요 장점: CPU와 GPU가 공유하는 통합 메모리 — 별도의 VRAM 한계 없음.',
           '주요 단점: 메모리는 구매 시 고정되며 이후 업그레이드할 수 없습니다.',
           'Ollama, LM Studio, MLX가 Apple Metal을 통해 즉시 동작 — 드라이버 설정 불필요.',
@@ -1959,7 +1959,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Mac Mini M4는 8B 모델을 실행할 수 있습니까?',
-            a: '네. 16GB 통합 메모리를 탑재한 Mac Mini M4 기본형은 Q4 양자화 8B 모델을 원활하게 실행합니다. 24GB는 더 많은 여유를 주며 대부분의 14B 모델도 처리합니다.',
+            a: '네. 16GB 통합 메모리를 탑재한 Mac Mini M4 기본형은 Q4 양자화 8B 모델을 실행하지만, macOS용 8GB를 확보하면 모델에 쓸 수 있는 용량은 약 8GB뿐입니다. 24GB(약 16GB 남음)는 더 많은 여유를 주며 대부분의 14B 모델도 처리합니다.',
           },
           {
             q: '통합 메모리는 로컬 LLM에 어떤 의미가 있습니까?',

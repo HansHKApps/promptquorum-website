@@ -30805,7 +30805,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'From "What Does It Need" to "Can I Run It"',
           content: [
             'The existing hardware display always answered one question: what does this tool need. The new badge answers a different one: given your machine, will this specific tool actually run.',
-            'The comparison uses a headroom rule rather than a bare pass/fail. Your saved number has to beat a tool\'s requirement by roughly 30% to count as "Runs well". Meeting the requirement without that margin reads as "Marginal" — it will likely run, but slowly or with little memory to spare. Falling short reads as "Won\'t run", unless the tool has a CPU-only fallback, in which case it is graded "Marginal" instead. Apple Silicon numbers are converted from a VRAM figure to an equivalent unified-memory floor, since macOS and other running apps reserve part of that shared pool.',
+            'The comparison uses a headroom rule rather than a bare pass/fail. Your saved number has to beat a tool\'s requirement by roughly 30% to count as "Runs well". Meeting the requirement without that margin reads as "Marginal" — it will likely run, but slowly or with little memory to spare. Falling short reads as "Won\'t run", unless the tool has a CPU-only fallback, in which case it is graded "Marginal" instead. Apple Silicon numbers are converted from a VRAM figure to an equivalent unified-memory floor: a flat 8 GB is deducted from a Mac\'s unified memory for macOS before the comparison, since macOS needs at least that much of the shared pool.',
           ],
         },
         verdicts: {
@@ -30957,7 +30957,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'من "ما الذي تحتاجه" إلى "هل يمكنني تشغيلها"',
           content: [
             'كان عرض الأجهزة الحالي يجيب دائمًا عن سؤال واحد: ما الذي تحتاجه هذه الأداة. أما الشارة الجديدة فتجيب عن سؤال مختلف: بناءً على جهازك، هل ستعمل هذه الأداة تحديدًا فعليًا.',
-            'تستخدم المقارنة قاعدة هامش بدلًا من نجاح أو فشل بسيط. يجب أن يتجاوز الرقم الذي حفظته متطلبات الأداة بنحو 30% ليُحتسب كـ"يعمل بسلاسة". أما تحقيق المتطلبات دون ذلك الهامش فيُصنَّف كـ"على الحد الأدنى" — من المرجح أن تعمل الأداة، لكن ببطء أو بذاكرة متبقية قليلة. وإذا لم تُحقق المتطلبات، يُصنَّف الوضع كـ"لن يعمل"، إلا إذا كانت الأداة تملك وضع احتياطي يعمل بالمعالج فقط، وعندها تُصنَّف كـ"على الحد الأدنى" بدلًا من ذلك. تُحوَّل أرقام Apple Silicon من رقم VRAM إلى حد أدنى مكافئ من الذاكرة الموحدة، لأن macOS والتطبيقات الأخرى قيد التشغيل تحجز جزءًا من تلك الذاكرة المشتركة.',
+            'تستخدم المقارنة قاعدة هامش بدلًا من نجاح أو فشل بسيط. يجب أن يتجاوز الرقم الذي حفظته متطلبات الأداة بنحو 30% ليُحتسب كـ"يعمل بسلاسة". أما تحقيق المتطلبات دون ذلك الهامش فيُصنَّف كـ"على الحد الأدنى" — من المرجح أن تعمل الأداة، لكن ببطء أو بذاكرة متبقية قليلة. وإذا لم تُحقق المتطلبات، يُصنَّف الوضع كـ"لن يعمل"، إلا إذا كانت الأداة تملك وضع احتياطي يعمل بالمعالج فقط، وعندها تُصنَّف كـ"على الحد الأدنى" بدلًا من ذلك. تُحوَّل أرقام Apple Silicon من رقم VRAM إلى حد أدنى مكافئ من الذاكرة الموحدة، حيث يُخصم 8 GB ثابتة من الذاكرة الموحدة لجهاز Mac لصالح macOS قبل المقارنة، لأن macOS يحتاج إلى هذا القدر على الأقل من الذاكرة المشتركة.',
           ],
         },
         verdicts: {
@@ -31109,7 +31109,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Von „Was braucht es" zu „Kann ich es ausführen"',
           content: [
             'Die bestehende Hardware-Anzeige beantwortete immer nur eine Frage: Was braucht dieses Tool. Das neue Badge beantwortet eine andere: Wird dieses konkrete Tool auf Ihrem Rechner tatsächlich laufen.',
-            'Der Vergleich nutzt eine Puffer-Regel statt eines reinen Bestehen-oder-Nicht. Ihr gespeicherter Wert muss die Anforderung eines Tools um rund 30 % übertreffen, um als „Läuft gut" zu zählen. Wird die Anforderung ohne diesen Puffer erreicht, gilt „Grenzwertig" — es läuft wahrscheinlich, aber langsam oder mit wenig Speicherreserve. Wird die Anforderung unterschritten, gilt „Läuft nicht", außer das Tool hat einen reinen CPU-Fallback — dann wird stattdessen „Grenzwertig" vergeben. Apple-Silicon-Werte werden von einer VRAM-Angabe in eine entsprechende Unified-Memory-Untergrenze umgerechnet, da macOS und andere laufende Apps einen Teil dieses gemeinsamen Speichers belegen.',
+            'Der Vergleich nutzt eine Puffer-Regel statt eines reinen Bestehen-oder-Nicht. Ihr gespeicherter Wert muss die Anforderung eines Tools um rund 30 % übertreffen, um als „Läuft gut" zu zählen. Wird die Anforderung ohne diesen Puffer erreicht, gilt „Grenzwertig" — es läuft wahrscheinlich, aber langsam oder mit wenig Speicherreserve. Wird die Anforderung unterschritten, gilt „Läuft nicht", außer das Tool hat einen reinen CPU-Fallback — dann wird stattdessen „Grenzwertig" vergeben. Apple-Silicon-Werte werden von einer VRAM-Angabe in eine entsprechende Unified-Memory-Untergrenze umgerechnet, wobei vor dem Vergleich pauschal 8 GB des Unified Memory eines Macs für macOS abgezogen werden, da macOS mindestens so viel des gemeinsamen Speichers benötigt.',
           ],
         },
         verdicts: {
@@ -31261,7 +31261,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'De "qué necesita" a "puedo ejecutarlo"',
           content: [
             'La visualización de hardware existente siempre respondía a una pregunta: qué necesita esta herramienta. La nueva insignia responde a otra distinta: dado tu equipo, ¿esta herramienta en concreto realmente funcionará?',
-            'La comparación usa una regla de margen en lugar de un simple aprueba/no aprueba. Tu valor guardado debe superar el requisito de una herramienta en aproximadamente un 30% para contar como "Funciona bien". Cumplir el requisito sin ese margen se traduce en "Ajustado" — probablemente funcionará, pero lento o con poca memoria libre. Quedarse corto se traduce en "No funcionará", salvo que la herramienta tenga un modo de reserva solo con CPU, en cuyo caso se califica como "Ajustado". Los valores de Apple Silicon se convierten de una cifra de VRAM a un mínimo equivalente de memoria unificada, ya que macOS y otras apps en ejecución reservan parte de esa memoria compartida.',
+            'La comparación usa una regla de margen en lugar de un simple aprueba/no aprueba. Tu valor guardado debe superar el requisito de una herramienta en aproximadamente un 30% para contar como "Funciona bien". Cumplir el requisito sin ese margen se traduce en "Ajustado" — probablemente funcionará, pero lento o con poca memoria libre. Quedarse corto se traduce en "No funcionará", salvo que la herramienta tenga un modo de reserva solo con CPU, en cuyo caso se califica como "Ajustado". Los valores de Apple Silicon se convierten de una cifra de VRAM a un mínimo equivalente de memoria unificada, descontando 8 GB fijos de la memoria unificada del Mac para macOS antes de comparar, ya que macOS necesita al menos esa parte de la memoria compartida.',
           ],
         },
         verdicts: {
@@ -31413,7 +31413,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'De « De quoi a-t-il besoin » à « Puis-je le faire tourner »',
           content: [
             "L'affichage matériel existant répondait toujours à une seule question : de quoi cet outil a-t-il besoin. Le nouveau badge répond à une question différente : sur votre machine, cet outil précis va-t-il réellement fonctionner.",
-            'La comparaison applique une règle de marge plutôt qu\'un simple réussi/échoué. Votre valeur enregistrée doit dépasser la configuration requise d\'un outil d\'environ 30 % pour compter comme « Fonctionne bien ». L\'atteindre sans cette marge se traduit par « Tout juste » — l\'outil fonctionnera probablement, mais lentement ou avec peu de mémoire disponible. En dessous, le verdict est « Ne fonctionnera pas », sauf si l\'outil dispose d\'un mode CPU seul de repli, auquel cas il est noté « Tout juste ». Les valeurs Apple Silicon sont converties depuis un chiffre de VRAM vers un seuil équivalent de mémoire unifiée, car macOS et les autres applications actives réservent une partie de cette mémoire partagée.',
+            'La comparaison applique une règle de marge plutôt qu\'un simple réussi/échoué. Votre valeur enregistrée doit dépasser la configuration requise d\'un outil d\'environ 30 % pour compter comme « Fonctionne bien ». L\'atteindre sans cette marge se traduit par « Tout juste » — l\'outil fonctionnera probablement, mais lentement ou avec peu de mémoire disponible. En dessous, le verdict est « Ne fonctionnera pas », sauf si l\'outil dispose d\'un mode CPU seul de repli, auquel cas il est noté « Tout juste ». Les valeurs Apple Silicon sont converties depuis un chiffre de VRAM vers un seuil équivalent de mémoire unifiée, en déduisant 8 Go forfaitaires de la mémoire unifiée du Mac pour macOS avant la comparaison, car macOS a besoin d\'au moins cette part de la mémoire partagée.',
           ],
         },
         verdicts: {
@@ -31565,7 +31565,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '「何が必要か」から「自分の環境で動くか」へ',
           content: [
             '既存のハードウェア表示は常に一つの問いに答えていました — このツールには何が必要か。新しいバッジは別の問いに答えます — あなたのマシンで、この具体的なツールが実際に動くかどうかです。',
-            '比較には単純な合否ではなく、余裕度のルールを使います。保存した数値がツールの要件をおよそ30%上回っていれば「快適に動作」と判定されます。その余裕なしに要件を満たすだけなら「ギリギリ」— おそらく動作しますが、遅かったり、空きメモリが少なかったりします。要件に届かない場合は「動作不可」ですが、そのツールにCPUのみのフォールバックがある場合は代わりに「ギリギリ」と判定されます。Apple Siliconの数値は、VRAMの値から相当するユニファイドメモリの下限値に換算されます。macOSや他の実行中アプリがその共有メモリの一部を確保するためです。',
+            '比較には単純な合否ではなく、余裕度のルールを使います。保存した数値がツールの要件をおよそ30%上回っていれば「快適に動作」と判定されます。その余裕なしに要件を満たすだけなら「ギリギリ」— おそらく動作しますが、遅かったり、空きメモリが少なかったりします。要件に届かない場合は「動作不可」ですが、そのツールにCPUのみのフォールバックがある場合は代わりに「ギリギリ」と判定されます。Apple Siliconの数値は、VRAMの値から相当するユニファイドメモリの下限値に換算されます。比較の前に、MacのユニファイドメモリからmacOS用として一律8 GBが差し引かれます。macOSは共有メモリのうち少なくともそれだけを必要とするためです。',
           ],
         },
         verdicts: {
@@ -31717,7 +31717,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '"무엇이 필요한가"에서 "내가 실행할 수 있는가"로',
           content: [
             '기존의 하드웨어 표시는 항상 하나의 질문에만 답했습니다 — 이 도구는 무엇이 필요한가. 새로운 배지는 다른 질문에 답합니다 — 당신의 컴퓨터를 기준으로, 이 특정 도구가 실제로 실행될 것인가.',
-            '이 비교는 단순한 합격/불합격이 아니라 여유율 규칙을 사용합니다. 저장한 수치가 도구의 요구사항을 약 30% 이상 초과해야 "원활하게 실행됨"으로 판정됩니다. 그 여유 없이 요구사항을 충족하는 경우는 "아슬아슬함"으로 판정됩니다 — 실행될 가능성은 높지만 느리거나 남는 메모리가 거의 없을 수 있습니다. 요구사항에 미치지 못하면 "실행 불가"로 판정되지만, 해당 도구에 CPU 전용 대체 모드가 있는 경우에는 대신 "아슬아슬함"으로 판정됩니다. Apple Silicon 수치는 VRAM 값에서 그에 상응하는 통합 메모리 하한선으로 환산됩니다. macOS와 실행 중인 다른 앱들이 그 공유 메모리의 일부를 차지하기 때문입니다.',
+            '이 비교는 단순한 합격/불합격이 아니라 여유율 규칙을 사용합니다. 저장한 수치가 도구의 요구사항을 약 30% 이상 초과해야 "원활하게 실행됨"으로 판정됩니다. 그 여유 없이 요구사항을 충족하는 경우는 "아슬아슬함"으로 판정됩니다 — 실행될 가능성은 높지만 느리거나 남는 메모리가 거의 없을 수 있습니다. 요구사항에 미치지 못하면 "실행 불가"로 판정되지만, 해당 도구에 CPU 전용 대체 모드가 있는 경우에는 대신 "아슬아슬함"으로 판정됩니다. Apple Silicon 수치는 VRAM 값에서 그에 상응하는 통합 메모리 하한선으로 환산됩니다. 비교 전에 Mac의 통합 메모리에서 macOS용으로 8 GB가 일괄 차감됩니다. macOS가 공유 메모리 중 최소 그만큼을 필요로 하기 때문입니다.',
           ],
         },
         verdicts: {
@@ -31869,7 +31869,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'De "o que ela precisa" para "eu consigo rodar"',
           content: [
             'A exibição de hardware existente sempre respondia a uma pergunta: o que essa ferramenta precisa. O novo selo responde a uma pergunta diferente: dado o seu computador, essa ferramenta específica vai realmente rodar.',
-            'A comparação usa uma regra de folga em vez de um simples passa/não passa. O número que você salvou precisa superar o requisito de uma ferramenta em cerca de 30% para contar como "Funciona bem". Atingir o requisito sem essa margem é classificado como "No limite" — provavelmente vai rodar, mas devagar ou com pouca memória sobrando. Ficar abaixo é classificado como "Não vai rodar", a menos que a ferramenta tenha um modo de reserva somente com CPU, caso em que recebe "No limite" em vez disso. Os números de Apple Silicon são convertidos de um valor de VRAM para um piso equivalente de memória unificada, já que o macOS e outros apps em execução reservam parte dessa memória compartilhada.',
+            'A comparação usa uma regra de folga em vez de um simples passa/não passa. O número que você salvou precisa superar o requisito de uma ferramenta em cerca de 30% para contar como "Funciona bem". Atingir o requisito sem essa margem é classificado como "No limite" — provavelmente vai rodar, mas devagar ou com pouca memória sobrando. Ficar abaixo é classificado como "Não vai rodar", a menos que a ferramenta tenha um modo de reserva somente com CPU, caso em que recebe "No limite" em vez disso. Os números de Apple Silicon são convertidos de um valor de VRAM para um piso equivalente de memória unificada, descontando 8 GB fixos da memória unificada do Mac para o macOS antes da comparação, já que o macOS precisa de pelo menos essa parte da memória compartilhada.',
           ],
         },
         verdicts: {
@@ -32021,7 +32021,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '从"它需要什么"到"我能不能运行它"',
           content: [
             '现有的硬件显示始终只回答一个问题:这款工具需要什么。新的徽章回答的是另一个问题:基于你的设备,这款具体工具是否真的能运行。',
-            '这个比对采用余量规则,而不是简单的通过/不通过。你保存的数值需要比工具的需求高出大约30%,才能算作"运行流畅"。刚好达到需求、没有这个余量,会被判定为"勉强够用"——很可能能运行,但速度较慢,或剩余内存较少。低于需求则判定为"无法运行",除非该工具有纯CPU的备用模式,此时会改判为"勉强够用"。Apple Silicon的数值会从显存VRAM数字换算为等效的统一内存下限,因为macOS及其他正在运行的应用会占用这部分共享内存的一部分。',
+            '这个比对采用余量规则,而不是简单的通过/不通过。你保存的数值需要比工具的需求高出大约30%,才能算作"运行流畅"。刚好达到需求、没有这个余量,会被判定为"勉强够用"——很可能能运行,但速度较慢,或剩余内存较少。低于需求则判定为"无法运行",除非该工具有纯CPU的备用模式,此时会改判为"勉强够用"。Apple Silicon的数值会从显存VRAM数字换算为等效的统一内存下限,比对前会从Mac的统一内存中统一扣除8 GB留给macOS,因为macOS至少需要这部分共享内存。',
           ],
         },
         verdicts: {

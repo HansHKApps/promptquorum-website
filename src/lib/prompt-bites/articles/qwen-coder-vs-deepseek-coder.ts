@@ -7,7 +7,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tool Comparisons',
     heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-en.webp',
     title: 'Qwen Coder vs DeepSeek Coder 2026: Which Is Better?',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: 'Qwen Coder vs DeepSeek Coder 2026: Which Is Better?',
     metaDescription: 'Qwen2.5-Coder 14B vs DeepSeek-Coder-V2 16B on a 12 GB GPU, plus Qwen3-Coder 30B for 24 GB cards. Sizes, context windows and licenses compared.',
     publishDate: '2026-05-18',
@@ -52,7 +52,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Model Sizes, Context and Licenses',
         content: [
           '<strong>On a 12 GB GPU the real like-for-like pair is Qwen2.5-Coder 14B and DeepSeek-Coder-V2 16B.</strong> Both are 2024-generation models: the <a href="https://ollama.com/library/qwen2.5-coder" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen2.5-Coder</a> 14B download is 9.0 GB and the <a href="https://ollama.com/library/deepseek-coder-v2" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">DeepSeek-Coder-V2</a> 16B download is 8.9 GB.',
-          'Qwen3-Coder is a different class. On Ollama it exists only as a 30B mixture-of-experts model (30.5B total, 3.3B active) with a 19 GB download and 256K native context, so it targets 24 GB GPUs or Macs with enough unified memory, not a 12 GB card. <a href="https://huggingface.co/Qwen/Qwen3.6-27B" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen3.6 27B</a> (18–19 GB, 256K context, Apache 2.0) is the newer general model with a coding focus; Qwen reports 77.2 on SWE-bench Verified for it using its own agent setup, a vendor figure rather than an independent test.',
+          'Qwen3-Coder is a different class. On Ollama it exists only as a 30B mixture-of-experts model (30.5B total, 3.3B active) with a 19 GB download and 256K native context, so it targets 24 GB GPUs or Macs with 32 GB or more of unified memory (macOS keeps about 8 GB), not a 12 GB card. <a href="https://huggingface.co/Qwen/Qwen3.6-27B" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen3.6 27B</a> (18–19 GB, 256K context, Apache 2.0) is the newer general model with a coding focus; Qwen reports 77.2 on SWE-bench Verified for it using its own agent setup, a vendor figure rather than an independent test.',
           'DeepSeek has no newer small coder model on Ollama that we could find. The deepseek-coder-v2 listing shows 16B and 236B tags and a last-updated date of about two years ago, and DeepSeek\'s newer V3-series flagships have hundreds of billions of parameters, which is not realistic on consumer GPUs.',
           'Neither vendor publishes a head-to-head HumanEval comparison for the 14B and 16B models on its model page, so this page gives no HumanEval ranking. Run both on your own repository before you decide.',
         ],
@@ -67,7 +67,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Which to Pick by Hardware and Workflow',
         content: [
-          '<strong>Pick Qwen3-Coder 30B if you have a 24 GB GPU or a Mac with enough unified memory for the 19 GB download plus context.</strong> It is the most capable option here that still runs on consumer hardware, it ships under Apache 2.0, and its <a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">model card</a> documents tool calling with OpenAI-compatible tool definitions, which suits coding agents.',
+          '<strong>Pick Qwen3-Coder 30B if you have a 24 GB GPU or a Mac with 32 GB or more of unified memory for the 19 GB download plus context (macOS keeps about 8 GB).</strong> It is the most capable option here that still runs on consumer hardware, it ships under Apache 2.0, and its <a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">model card</a> documents tool calling with OpenAI-compatible tool definitions, which suits coding agents.',
           '<strong>Pick Qwen2.5-Coder 14B or DeepSeek-Coder-V2 16B if you are limited to 12 GB.</strong> Choose Qwen2.5-Coder for general coding and Apache 2.0 licensing. Choose DeepSeek-Coder-V2 for codebases that mix less common languages: its <a href="https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">model card</a> lists 338 languages, while the Qwen2.5-Coder announcement cites 40+ for the 32B model.',
           'Context: DeepSeek-Coder-V2 16B lists the longer window on Ollama (160K, against 32K for Qwen2.5-Coder), which helps when you paste large files for review. Usable context is capped by the VRAM left for the KV cache, so set a window you can actually fit. To choose a runtime first, see <a href="/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama vs LM Studio</a>.',
           'For the wider comparison including Mistral, read the <a href="/local-llms/qwen-coder-vs-deepseek-mistral-local-2026" class="text-primary hover:underline">Qwen Coder vs DeepSeek vs Mistral guide</a>; for a ranked list of local coding models, see <a href="/power-local-llm/best-local-coding-models-2026" class="text-primary hover:underline">Best Local Coding Models</a>.',
@@ -123,7 +123,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tool Comparisons',
     heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-de.webp',
     title: 'Qwen Coder vs. DeepSeek Coder 2026: Welcher ist besser?',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: 'Qwen Coder vs. DeepSeek Coder 2026: Welcher ist besser?',
     metaDescription: 'Qwen2.5-Coder 14B vs. DeepSeek-Coder-V2 16B auf einer 12-GB-GPU, dazu Qwen3-Coder 30B für 24-GB-Karten. Größe, Kontext und Lizenzen im Vergleich.',
     publishDate: '2026-05-18',
@@ -160,7 +160,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Modellgrößen, Kontext und Lizenzen',
         content: [
           '<strong>Auf einer 12-GB-GPU ist das echte Vergleichspaar Qwen2.5-Coder 14B und DeepSeek-Coder-V2 16B.</strong> Beide stammen aus der Generation von 2024: Der Download von <a href="https://ollama.com/library/qwen2.5-coder" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen2.5-Coder</a> 14B umfasst 9,0 GB, der von <a href="https://ollama.com/library/deepseek-coder-v2" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">DeepSeek-Coder-V2</a> 16B 8,9 GB.',
-          'Qwen3-Coder gehört zu einer anderen Klasse. Auf Ollama gibt es es nur als 30B-Mixture-of-Experts-Modell (30,5B gesamt, 3,3B aktiv) mit 19 GB Download und 256K nativem Kontext; es zielt auf 24-GB-GPUs oder Macs mit genug Unified Memory, nicht auf eine 12-GB-Karte. <a href="https://huggingface.co/Qwen/Qwen3.6-27B" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen3.6 27B</a> (18–19 GB, 256K Kontext, Apache 2.0) ist das neuere Allzweckmodell mit Coding-Fokus; Qwen gibt dafür 77,2 bei SWE-bench Verified an, gemessen mit eigenem Agent-Setup — eine Herstellerangabe, kein unabhängiger Test.',
+          'Qwen3-Coder gehört zu einer anderen Klasse. Auf Ollama gibt es es nur als 30B-Mixture-of-Experts-Modell (30,5B gesamt, 3,3B aktiv) mit 19 GB Download und 256K nativem Kontext; es zielt auf 24-GB-GPUs oder Macs mit 32 GB oder mehr Unified Memory (macOS belegt etwa 8 GB), nicht auf eine 12-GB-Karte. <a href="https://huggingface.co/Qwen/Qwen3.6-27B" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen3.6 27B</a> (18–19 GB, 256K Kontext, Apache 2.0) ist das neuere Allzweckmodell mit Coding-Fokus; Qwen gibt dafür 77,2 bei SWE-bench Verified an, gemessen mit eigenem Agent-Setup — eine Herstellerangabe, kein unabhängiger Test.',
           'Ein neueres kleines Coder-Modell von DeepSeek auf Ollama haben wir nicht gefunden. Der Eintrag deepseek-coder-v2 zeigt die Tags 16B und 236B und eine letzte Aktualisierung vor etwa zwei Jahren; DeepSeeks neuere V3-Flaggschiffe haben Hunderte Milliarden Parameter und sind auf Consumer-GPUs unrealistisch.',
           'Keiner der Hersteller veröffentlicht auf seiner Model-Seite einen direkten HumanEval-Vergleich der 14B- und 16B-Modelle, daher enthält diese Seite kein HumanEval-Ranking. Testen Sie beide an Ihrem eigenen Repository, bevor Sie entscheiden.',
         ],
@@ -175,7 +175,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Die Wahl nach Hardware und Arbeitsablauf',
         content: [
-          '<strong>Wählen Sie Qwen3-Coder 30B, wenn Sie eine 24-GB-GPU oder einen Mac mit genug Unified Memory für den 19-GB-Download plus Kontext haben.</strong> Es ist hier die leistungsfähigste Option, die noch auf Consumer-Hardware läuft, steht unter Apache 2.0, und die <a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Model Card</a> dokumentiert Tool Calling mit OpenAI-kompatiblen Tool-Definitionen, was zu Coding-Agenten passt.',
+          '<strong>Wählen Sie Qwen3-Coder 30B, wenn Sie eine 24-GB-GPU oder einen Mac mit 32 GB oder mehr Unified Memory für den 19-GB-Download plus Kontext haben (macOS belegt etwa 8 GB).</strong> Es ist hier die leistungsfähigste Option, die noch auf Consumer-Hardware läuft, steht unter Apache 2.0, und die <a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Model Card</a> dokumentiert Tool Calling mit OpenAI-kompatiblen Tool-Definitionen, was zu Coding-Agenten passt.',
           '<strong>Wählen Sie Qwen2.5-Coder 14B oder DeepSeek-Coder-V2 16B, wenn Sie auf 12 GB beschränkt sind.</strong> Qwen2.5-Coder passt für allgemeines Coding und Apache-2.0-Lizenz. DeepSeek-Coder-V2 passt für Codebasen mit selteneren Sprachen: Die <a href="https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Model Card</a> nennt 338 Sprachen, während die Qwen2.5-Coder-Ankündigung für das 32B-Modell 40+ angibt.',
           'Kontext: DeepSeek-Coder-V2 16B nennt auf Ollama das längere Fenster (160K gegenüber 32K bei Qwen2.5-Coder), was beim Einfügen großer Dateien zur Prüfung hilft. Der nutzbare Kontext wird durch den für den KV-Cache verbleibenden VRAM begrenzt; wählen Sie also ein Fenster, das tatsächlich passt. Zur Wahl der Laufzeitumgebung siehe <a href="/de/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama vs. LM Studio</a>.',
           'Für den breiteren Vergleich inklusive Mistral lesen Sie den <a href="/de/local-llms/qwen-coder-vs-deepseek-mistral-local-2026" class="text-primary hover:underline">Leitfaden Qwen Coder vs. DeepSeek vs. Mistral</a>; für eine Rangliste lokaler Coding-Modelle siehe <a href="/de/power-local-llm/best-local-coding-models-2026" class="text-primary hover:underline">Beste lokale Coding-Modelle</a>.',
@@ -231,7 +231,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tool Comparisons',
     heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-es.webp',
     title: 'Qwen Coder vs DeepSeek Coder 2026: ¿cuál es mejor?',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: 'Qwen Coder vs DeepSeek Coder 2026: ¿cuál es mejor?',
     metaDescription: 'Qwen2.5-Coder 14B vs DeepSeek-Coder-V2 16B en una GPU de 12 GB, más Qwen3-Coder 30B para 24 GB. Tamaños, contexto y licencias comparados.',
     publishDate: '2026-05-18',
@@ -268,7 +268,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Tamaños, contexto y licencias de los modelos',
         content: [
           '<strong>En una GPU de 12 GB, la pareja realmente comparable es Qwen2.5-Coder 14B y DeepSeek-Coder-V2 16B.</strong> Ambos son de la generación de 2024: la descarga de <a href="https://ollama.com/library/qwen2.5-coder" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen2.5-Coder</a> 14B pesa 9,0 GB y la de <a href="https://ollama.com/library/deepseek-coder-v2" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">DeepSeek-Coder-V2</a> 16B, 8,9 GB.',
-          'Qwen3-Coder es de otra clase. En Ollama solo existe como modelo Mixture-of-Experts de 30B (30,5B en total, 3,3B activos) con 19 GB de descarga y 256K de contexto nativo, por lo que apunta a GPU de 24 GB o Mac con suficiente memoria unificada, no a una tarjeta de 12 GB. <a href="https://huggingface.co/Qwen/Qwen3.6-27B" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen3.6 27B</a> (18–19 GB, contexto de 256K, Apache 2.0) es el modelo general más reciente con enfoque en código; Qwen informa 77,2 en SWE-bench Verified con su propio entorno de agente, una cifra del fabricante y no una prueba independiente.',
+          'Qwen3-Coder es de otra clase. En Ollama solo existe como modelo Mixture-of-Experts de 30B (30,5B en total, 3,3B activos) con 19 GB de descarga y 256K de contexto nativo, por lo que apunta a GPU de 24 GB o Mac con 32 GB o más de memoria unificada (macOS reserva unos 8 GB), no a una tarjeta de 12 GB. <a href="https://huggingface.co/Qwen/Qwen3.6-27B" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen3.6 27B</a> (18–19 GB, contexto de 256K, Apache 2.0) es el modelo general más reciente con enfoque en código; Qwen informa 77,2 en SWE-bench Verified con su propio entorno de agente, una cifra del fabricante y no una prueba independiente.',
           'No encontramos en Ollama un modelo de código pequeño de DeepSeek más reciente. La ficha deepseek-coder-v2 muestra las etiquetas 16B y 236B y una última actualización hace unos dos años; los modelos insignia V3 de DeepSeek tienen cientos de miles de millones de parámetros, algo poco realista en GPU de consumo.',
           'Ninguno de los dos fabricantes publica en su página de modelo una comparación HumanEval directa entre los modelos de 14B y 16B, así que esta página no ofrece un ranking HumanEval. Prueba ambos en tu propio repositorio antes de decidir.',
         ],
@@ -283,7 +283,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Qué elegir según tu hardware y flujo de trabajo',
         content: [
-          '<strong>Elige Qwen3-Coder 30B si tienes una GPU de 24 GB o un Mac con memoria unificada suficiente para los 19 GB de descarga más el contexto.</strong> Es la opción más capaz de esta comparación que aún corre en hardware de consumo, se publica con Apache 2.0 y su <a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">model card</a> documenta la llamada a herramientas con definiciones compatibles con OpenAI, útil para agentes de código.',
+          '<strong>Elige Qwen3-Coder 30B si tienes una GPU de 24 GB o un Mac con 32 GB o más de memoria unificada para los 19 GB de descarga más el contexto (macOS reserva unos 8 GB).</strong> Es la opción más capaz de esta comparación que aún corre en hardware de consumo, se publica con Apache 2.0 y su <a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">model card</a> documenta la llamada a herramientas con definiciones compatibles con OpenAI, útil para agentes de código.',
           '<strong>Elige Qwen2.5-Coder 14B o DeepSeek-Coder-V2 16B si estás limitado a 12 GB.</strong> Qwen2.5-Coder encaja para programación general y licencia Apache 2.0. DeepSeek-Coder-V2 encaja para bases de código con lenguajes poco comunes: su <a href="https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">model card</a> cita 338 lenguajes, mientras que el anuncio de Qwen2.5-Coder cita más de 40 para el modelo de 32B.',
           'Contexto: DeepSeek-Coder-V2 16B indica en Ollama la ventana más larga (160K frente a 32K de Qwen2.5-Coder), útil al pegar archivos grandes para revisión. El contexto utilizable está limitado por la VRAM que queda para la caché KV, así que fija una ventana que realmente quepa. Para elegir primero el entorno de ejecución, consulta <a href="/es/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama vs LM Studio</a>.',
           'Para la comparación ampliada con Mistral, lee la <a href="/es/local-llms/qwen-coder-vs-deepseek-mistral-local-2026" class="text-primary hover:underline">guía Qwen Coder vs DeepSeek vs Mistral</a>; para un ranking de modelos de código locales, consulta <a href="/es/power-local-llm/best-local-coding-models-2026" class="text-primary hover:underline">Mejores modelos de código locales</a>.',
@@ -339,7 +339,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tool Comparisons',
     heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-pt.webp',
     title: 'Qwen Coder vs DeepSeek Coder 2026: qual é melhor?',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: 'Qwen Coder vs DeepSeek Coder 2026: qual é melhor?',
     metaDescription: 'Qwen2.5-Coder 14B vs DeepSeek-Coder-V2 16B em uma GPU de 12 GB, mais Qwen3-Coder 30B para 24 GB. Tamanhos, contexto e licenças comparados.',
     publishDate: '2026-05-18',
@@ -376,7 +376,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Tamanhos, contexto e licenças dos modelos',
         content: [
           '<strong>Em uma GPU de 12 GB, o par realmente comparável é Qwen2.5-Coder 14B e DeepSeek-Coder-V2 16B.</strong> Ambos são da geração de 2024: o download do <a href="https://ollama.com/library/qwen2.5-coder" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen2.5-Coder</a> 14B tem 9,0 GB e o do <a href="https://ollama.com/library/deepseek-coder-v2" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">DeepSeek-Coder-V2</a> 16B tem 8,9 GB.',
-          'O Qwen3-Coder é de outra classe. No Ollama ele existe apenas como modelo Mixture-of-Experts de 30B (30,5B no total, 3,3B ativos), com 19 GB de download e 256K de contexto nativo; por isso mira GPUs de 24 GB ou Macs com memória unificada suficiente, não uma placa de 12 GB. O <a href="https://huggingface.co/Qwen/Qwen3.6-27B" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen3.6 27B</a> (18–19 GB, contexto de 256K, Apache 2.0) é o modelo geral mais novo com foco em código; a Qwen informa 77,2 no SWE-bench Verified com seu próprio ambiente de agente, um número do fornecedor e não um teste independente.',
+          'O Qwen3-Coder é de outra classe. No Ollama ele existe apenas como modelo Mixture-of-Experts de 30B (30,5B no total, 3,3B ativos), com 19 GB de download e 256K de contexto nativo; por isso mira GPUs de 24 GB ou Macs com 32 GB ou mais de memória unificada (o macOS reserva cerca de 8 GB), não uma placa de 12 GB. O <a href="https://huggingface.co/Qwen/Qwen3.6-27B" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen3.6 27B</a> (18–19 GB, contexto de 256K, Apache 2.0) é o modelo geral mais novo com foco em código; a Qwen informa 77,2 no SWE-bench Verified com seu próprio ambiente de agente, um número do fornecedor e não um teste independente.',
           'Não encontramos no Ollama um modelo de código pequeno mais novo do DeepSeek. A página deepseek-coder-v2 mostra as tags 16B e 236B e uma última atualização há cerca de dois anos; os modelos principais V3 do DeepSeek têm centenas de bilhões de parâmetros, o que não é realista em GPUs de consumo.',
           'Nenhum dos dois fabricantes publica, na página do modelo, uma comparação direta de HumanEval entre os modelos de 14B e 16B; por isso esta página não traz ranking de HumanEval. Teste os dois no seu próprio repositório antes de decidir.',
         ],
@@ -391,7 +391,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Qual escolher conforme o hardware e o fluxo de trabalho',
         content: [
-          '<strong>Escolha o Qwen3-Coder 30B se você tem uma GPU de 24 GB ou um Mac com memória unificada suficiente para os 19 GB de download mais o contexto.</strong> É a opção mais capaz desta comparação que ainda roda em hardware de consumo, sai sob Apache 2.0 e seu <a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">model card</a> documenta a chamada de ferramentas com definições compatíveis com a OpenAI, o que combina com agentes de código.',
+          '<strong>Escolha o Qwen3-Coder 30B se você tem uma GPU de 24 GB ou um Mac com 32 GB ou mais de memória unificada para os 19 GB de download mais o contexto (o macOS reserva cerca de 8 GB).</strong> É a opção mais capaz desta comparação que ainda roda em hardware de consumo, sai sob Apache 2.0 e seu <a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">model card</a> documenta a chamada de ferramentas com definições compatíveis com a OpenAI, o que combina com agentes de código.',
           '<strong>Escolha o Qwen2.5-Coder 14B ou o DeepSeek-Coder-V2 16B se você estiver limitado a 12 GB.</strong> O Qwen2.5-Coder serve para programação geral e licença Apache 2.0. O DeepSeek-Coder-V2 serve para bases de código com linguagens menos comuns: seu <a href="https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">model card</a> cita 338 linguagens, enquanto o anúncio do Qwen2.5-Coder cita mais de 40 para o modelo de 32B.',
           'Contexto: o DeepSeek-Coder-V2 16B indica no Ollama a janela mais longa (160K contra 32K do Qwen2.5-Coder), útil ao colar arquivos grandes para revisão. O contexto utilizável é limitado pela VRAM que sobra para o cache KV, então defina uma janela que realmente caiba. Para escolher antes o ambiente de execução, veja <a href="/pt/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama vs LM Studio</a>.',
           'Para a comparação ampliada com o Mistral, leia o <a href="/pt/local-llms/qwen-coder-vs-deepseek-mistral-local-2026" class="text-primary hover:underline">guia Qwen Coder vs DeepSeek vs Mistral</a>; para um ranking de modelos de código locais, veja <a href="/pt/power-local-llm/best-local-coding-models-2026" class="text-primary hover:underline">Melhores modelos de código locais</a>.',
@@ -447,7 +447,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tool Comparisons',
     heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-fr.webp',
     title: 'Qwen Coder vs DeepSeek Coder 2026 : lequel est le meilleur ?',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: 'Qwen Coder vs DeepSeek Coder 2026 : lequel choisir ?',
     metaDescription: 'Qwen2.5-Coder 14B vs DeepSeek-Coder-V2 16B sur un GPU de 12 Go, plus Qwen3-Coder 30B pour 24 Go. Tailles, contexte et licences comparés.',
     publishDate: '2026-05-18',
@@ -484,7 +484,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Tailles, contexte et licences des modèles',
         content: [
           '<strong>Sur un GPU de 12 Go, le vrai duo comparable est Qwen2.5-Coder 14B et DeepSeek-Coder-V2 16B.</strong> Les deux datent de la génération 2024 : le téléchargement de <a href="https://ollama.com/library/qwen2.5-coder" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen2.5-Coder</a> 14B pèse 9,0 Go et celui de <a href="https://ollama.com/library/deepseek-coder-v2" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">DeepSeek-Coder-V2</a> 16B 8,9 Go.',
-          'Qwen3-Coder est d\'une autre classe. Sur Ollama, il n\'existe qu\'en modèle Mixture-of-Experts de 30B (30,5B au total, 3,3B actifs) avec 19 Go de téléchargement et 256K de contexte natif ; il vise les GPU de 24 Go ou les Mac dotés d\'assez de mémoire unifiée, pas une carte de 12 Go. <a href="https://huggingface.co/Qwen/Qwen3.6-27B" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen3.6 27B</a> (18–19 Go, contexte 256K, Apache 2.0) est le modèle généraliste plus récent axé sur le code ; Qwen annonce 77,2 sur SWE-bench Verified avec son propre dispositif d\'agent, un chiffre du fournisseur et non un test indépendant.',
+          'Qwen3-Coder est d\'une autre classe. Sur Ollama, il n\'existe qu\'en modèle Mixture-of-Experts de 30B (30,5B au total, 3,3B actifs) avec 19 Go de téléchargement et 256K de contexte natif ; il vise les GPU de 24 Go ou les Mac dotés de 32 Go ou plus de mémoire unifiée (macOS en réserve environ 8 Go), pas une carte de 12 Go. <a href="https://huggingface.co/Qwen/Qwen3.6-27B" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen3.6 27B</a> (18–19 Go, contexte 256K, Apache 2.0) est le modèle généraliste plus récent axé sur le code ; Qwen annonce 77,2 sur SWE-bench Verified avec son propre dispositif d\'agent, un chiffre du fournisseur et non un test indépendant.',
           'Nous n\'avons trouvé sur Ollama aucun modèle de code DeepSeek plus récent et de petite taille. La fiche deepseek-coder-v2 affiche les tags 16B et 236B et une dernière mise à jour il y a environ deux ans ; les modèles phares V3 de DeepSeek comptent des centaines de milliards de paramètres, irréaliste sur un GPU grand public.',
           'Aucun des deux éditeurs ne publie, sur sa page de modèle, de comparaison HumanEval directe entre les modèles 14B et 16B ; cette page ne donne donc aucun classement HumanEval. Testez les deux sur votre propre dépôt avant de décider.',
         ],
@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Quel modèle choisir selon le matériel et le flux de travail',
         content: [
-          '<strong>Choisissez Qwen3-Coder 30B si vous avez un GPU de 24 Go ou un Mac avec assez de mémoire unifiée pour les 19 Go de téléchargement plus le contexte.</strong> C\'est l\'option la plus capable ici qui tourne encore sur du matériel grand public, elle est sous Apache 2.0, et sa <a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">model card</a> documente l\'appel d\'outils avec des définitions compatibles OpenAI, adapté aux agents de code.',
+          '<strong>Choisissez Qwen3-Coder 30B si vous avez un GPU de 24 Go ou un Mac avec 32 Go ou plus de mémoire unifiée pour les 19 Go de téléchargement plus le contexte (macOS en réserve environ 8 Go).</strong> C\'est l\'option la plus capable ici qui tourne encore sur du matériel grand public, elle est sous Apache 2.0, et sa <a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">model card</a> documente l\'appel d\'outils avec des définitions compatibles OpenAI, adapté aux agents de code.',
           '<strong>Choisissez Qwen2.5-Coder 14B ou DeepSeek-Coder-V2 16B si vous êtes limité à 12 Go.</strong> Qwen2.5-Coder convient au code généraliste et à la licence Apache 2.0. DeepSeek-Coder-V2 convient aux bases de code mêlant des langages moins courants : sa <a href="https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">model card</a> cite 338 langages, tandis que l\'annonce de Qwen2.5-Coder en cite plus de 40 pour le modèle 32B.',
           'Contexte : DeepSeek-Coder-V2 16B affiche la fenêtre la plus longue sur Ollama (160K contre 32K pour Qwen2.5-Coder), utile pour coller de gros fichiers à relire. Le contexte utilisable est plafonné par la VRAM restante pour le cache KV : choisissez une fenêtre qui tient réellement. Pour choisir d\'abord un environnement d\'exécution, voir <a href="/fr/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama vs LM Studio</a>.',
           'Pour la comparaison élargie avec Mistral, lisez le <a href="/fr/local-llms/qwen-coder-vs-deepseek-mistral-local-2026" class="text-primary hover:underline">guide Qwen Coder vs DeepSeek vs Mistral</a> ; pour un classement des modèles de code locaux, voir <a href="/fr/power-local-llm/best-local-coding-models-2026" class="text-primary hover:underline">Meilleurs modèles de code locaux</a>.',
@@ -555,7 +555,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tool Comparisons',
     heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-ja.webp',
     title: 'Qwen Coder対DeepSeek Coder 2026：どちらが優れているか？',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: 'Qwen Coder対DeepSeek Coder比較 2026｜どちらを選ぶ？',
     metaDescription: '12 GB GPUでのQwen2.5-Coder 14BとDeepSeek-Coder-V2 16B、24 GB向けQwen3-Coder 30Bを比較。サイズ・コンテキスト・ライセンスを整理。',
     publishDate: '2026-05-18',
@@ -592,7 +592,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'モデルサイズ・コンテキスト・ライセンス',
         content: [
           '<strong>12 GB GPUで実際に比較できる組み合わせは、Qwen2.5-Coder 14BとDeepSeek-Coder-V2 16Bです。</strong>どちらも2024年世代のモデルで、<a href="https://ollama.com/library/qwen2.5-coder" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen2.5-Coder</a> 14Bのダウンロードは9.0 GB、<a href="https://ollama.com/library/deepseek-coder-v2" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">DeepSeek-Coder-V2</a> 16Bは8.9 GBです。',
-          'Qwen3-Coderは別のクラスです。Ollamaでは30BのMixture-of-Expertsモデル（合計30.5B、アクティブ3.3B）のみで、ダウンロードは19 GB、ネイティブコンテキストは256Kです。12 GBカードではなく、24 GB GPUや十分なユニファイドメモリを持つMacが対象です。<a href="https://huggingface.co/Qwen/Qwen3.6-27B" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen3.6 27B</a>（18～19 GB、256Kコンテキスト、Apache 2.0）はコーディングに重点を置いた新しい汎用モデルで、Qwenは独自のエージェント環境でSWE-bench Verified 77.2を報告しています。これはベンダー公表値であり、第三者の検証ではありません。',
+          'Qwen3-Coderは別のクラスです。Ollamaでは30BのMixture-of-Expertsモデル（合計30.5B、アクティブ3.3B）のみで、ダウンロードは19 GB、ネイティブコンテキストは256Kです。12 GBカードではなく、24 GB GPUや32 GB以上のユニファイドメモリを持つMac（macOSが約8 GBを使用）が対象です。<a href="https://huggingface.co/Qwen/Qwen3.6-27B" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen3.6 27B</a>（18～19 GB、256Kコンテキスト、Apache 2.0）はコーディングに重点を置いた新しい汎用モデルで、Qwenは独自のエージェント環境でSWE-bench Verified 77.2を報告しています。これはベンダー公表値であり、第三者の検証ではありません。',
           'Ollamaで、DeepSeekのより新しい小型コーダーモデルは見つかりませんでした。deepseek-coder-v2のページには16Bと236Bのタグと約2年前の最終更新が表示されており、DeepSeekの新しいV3系フラッグシップは数千億パラメータで、一般向けGPUでは現実的ではありません。',
           'どちらのベンダーも、14Bと16Bモデルを直接比較したHumanEvalの結果をモデルページで公開していないため、本ページではHumanEvalの順位付けは行いません。決める前に、自分のリポジトリで両方を試してください。',
         ],
@@ -607,7 +607,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'ハードウェアとワークフロー別の選び方',
         content: [
-          '<strong>24 GB GPU、または19 GBのダウンロードとコンテキストを賄えるユニファイドメモリのMacがあるなら、Qwen3-Coder 30Bを選んでください。</strong>一般向けハードウェアで動く中では最も高性能で、Apache 2.0で公開されており、<a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">モデルカード</a>にはOpenAI互換のツール定義によるツール呼び出しが記載されているため、コーディングエージェントに向いています。',
+          '<strong>24 GB GPU、または19 GBのダウンロードとコンテキストを賄える32 GB以上のユニファイドメモリのMac（macOSが約8 GBを使用）があるなら、Qwen3-Coder 30Bを選んでください。</strong>一般向けハードウェアで動く中では最も高性能で、Apache 2.0で公開されており、<a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">モデルカード</a>にはOpenAI互換のツール定義によるツール呼び出しが記載されているため、コーディングエージェントに向いています。',
           '<strong>12 GBに制限される場合は、Qwen2.5-Coder 14BかDeepSeek-Coder-V2 16Bを選んでください。</strong>汎用のコーディングやApache 2.0ライセンスを重視するならQwen2.5-Coder、あまり一般的でない言語が混在するコードベースならDeepSeek-Coder-V2です。<a href="https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">モデルカード</a>は338言語を挙げており、Qwen2.5-Coderの発表は32Bモデルについて40以上の言語と述べています。',
           'コンテキスト：Ollama上ではDeepSeek-Coder-V2 16Bの方が長いウィンドウ（160K、Qwen2.5-Coderは32K）を掲載しており、大きなファイルを貼ってレビューする際に役立ちます。実際に使えるコンテキストはKVキャッシュに残るVRAMで決まるため、収まるウィンドウを設定してください。先に実行環境を選ぶ場合は<a href="/ja/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">OllamaとLM Studioの比較</a>を参照してください。',
           'Mistralを含む幅広い比較は<a href="/ja/local-llms/qwen-coder-vs-deepseek-mistral-local-2026" class="text-primary hover:underline">Qwen Coder・DeepSeek・Mistral比較ガイド</a>、ローカルコーディングモデルのランキングは<a href="/ja/power-local-llm/best-local-coding-models-2026" class="text-primary hover:underline">ローカルコーディングモデルおすすめ</a>をご覧ください。',
@@ -663,7 +663,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tool Comparisons',
     heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-zh.webp',
     title: 'Qwen Coder 对比 DeepSeek Coder 2026：哪个更好？',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: 'Qwen Coder 对比 DeepSeek Coder 2026：哪个更好？',
     metaDescription: '12 GB 显卡上对比 Qwen2.5-Coder 14B 与 DeepSeek-Coder-V2 16B，并介绍适合 24 GB 显卡的 Qwen3-Coder 30B。大小、上下文与许可证一览。',
     publishDate: '2026-05-18',
@@ -700,7 +700,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '模型大小、上下文与许可证',
         content: [
           '<strong>在 12 GB 显卡上，真正可直接对比的一对是 Qwen2.5-Coder 14B 和 DeepSeek-Coder-V2 16B。</strong>两者都是 2024 年一代的模型：<a href="https://ollama.com/library/qwen2.5-coder" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen2.5-Coder</a> 14B 的下载大小为 9.0 GB，<a href="https://ollama.com/library/deepseek-coder-v2" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">DeepSeek-Coder-V2</a> 16B 为 8.9 GB。',
-          'Qwen3-Coder 属于另一个级别。它在 Ollama 上只有 30B 混合专家（MoE）模型（总参数 30.5B，激活参数 3.3B），下载 19 GB，原生上下文 256K，面向 24 GB 显卡或统一内存足够的 Mac，而非 12 GB 显卡。<a href="https://huggingface.co/Qwen/Qwen3.6-27B" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen3.6 27B</a>（18–19 GB，256K 上下文，Apache 2.0）是较新的、侧重编程的通用模型；Qwen 报告其在自家智能体环境下的 SWE-bench Verified 得分为 77.2，这是厂商公布的数据，而非独立测试。',
+          'Qwen3-Coder 属于另一个级别。它在 Ollama 上只有 30B 混合专家（MoE）模型（总参数 30.5B，激活参数 3.3B），下载 19 GB，原生上下文 256K，面向 24 GB 显卡或统一内存 32 GB 及以上的 Mac（macOS 约占用 8 GB），而非 12 GB 显卡。<a href="https://huggingface.co/Qwen/Qwen3.6-27B" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen3.6 27B</a>（18–19 GB，256K 上下文，Apache 2.0）是较新的、侧重编程的通用模型；Qwen 报告其在自家智能体环境下的 SWE-bench Verified 得分为 77.2，这是厂商公布的数据，而非独立测试。',
           '我们在 Ollama 上没有找到 DeepSeek 更新的小型编程模型。deepseek-coder-v2 页面显示 16B 和 236B 两个标签，最后更新约在两年前；DeepSeek 较新的 V3 系列旗舰拥有数千亿参数，在消费级显卡上不现实。',
           '两家厂商都没有在模型页面发布 14B 与 16B 模型的 HumanEval 直接对比，因此本页不给出 HumanEval 排名。决定之前，请在自己的代码仓库上测试两者。',
         ],
@@ -715,7 +715,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '按硬件与工作流程选择',
         content: [
-          '<strong>如果你有 24 GB 显卡，或统一内存足以容纳 19 GB 下载加上下文的 Mac，请选择 Qwen3-Coder 30B。</strong>它是本对比中仍能在消费级硬件上运行的最强选项，采用 Apache 2.0 发布，其<a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">模型卡</a>记录了使用 OpenAI 兼容工具定义的工具调用，适合编程智能体。',
+          '<strong>如果你有 24 GB 显卡，或统一内存 32 GB 及以上、足以容纳 19 GB 下载加上下文的 Mac（macOS 约占用 8 GB），请选择 Qwen3-Coder 30B。</strong>它是本对比中仍能在消费级硬件上运行的最强选项，采用 Apache 2.0 发布，其<a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">模型卡</a>记录了使用 OpenAI 兼容工具定义的工具调用，适合编程智能体。',
           '<strong>如果只有 12 GB，请在 Qwen2.5-Coder 14B 与 DeepSeek-Coder-V2 16B 之间选择。</strong>通用编程和 Apache 2.0 许可证选 Qwen2.5-Coder；代码库混用较少见的语言则选 DeepSeek-Coder-V2：其<a href="https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">模型卡</a>列出 338 种语言，而 Qwen2.5-Coder 的发布说明称 32B 模型在 40 多种语言上表现良好。',
           '上下文：DeepSeek-Coder-V2 16B 在 Ollama 上列出更长的窗口（160K，Qwen2.5-Coder 为 32K），粘贴大文件做审查时更有帮助。可用上下文受留给 KV 缓存的显存限制，请设置你实际放得下的窗口。若想先选运行环境，请参阅<a href="/zh/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama 对比 LM Studio</a>。',
           '包含 Mistral 的更全面对比，请阅读<a href="/zh/local-llms/qwen-coder-vs-deepseek-mistral-local-2026" class="text-primary hover:underline">Qwen Coder 对比 DeepSeek 对比 Mistral 指南</a>；本地编程模型排行榜，请参阅<a href="/zh/power-local-llm/best-local-coding-models-2026" class="text-primary hover:underline">最佳本地编程模型</a>。',
@@ -771,7 +771,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tool Comparisons',
     heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-ar.webp',
     title: '⁨Qwen Coder⁩ مقابل ⁨DeepSeek Coder⁩ 2026: أيهما أفضل؟',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: '⁨Qwen Coder⁩ مقابل ⁨DeepSeek Coder⁩ 2026: أيهما أفضل؟',
     metaDescription: 'مقارنة ⁨Qwen2.5-Coder 14B⁩ و⁨DeepSeek-Coder-V2 16B⁩ على بطاقة 12 GB، مع ⁨Qwen3-Coder 30B⁩ لبطاقات 24 GB: الأحجام والسياق والتراخيص.',
     publishDate: '2026-05-18',
@@ -816,7 +816,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'أحجام النماذج والسياق والتراخيص',
         content: [
           '<strong>على بطاقة 12 GB، الزوج القابل للمقارنة فعلًا هو Qwen2.5-Coder 14B وDeepSeek-Coder-V2 16B.</strong> كلاهما من جيل 2024: حجم تنزيل <a href="https://ollama.com/library/qwen2.5-coder" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen2.5-Coder</a> 14B هو 9.0 GB، وحجم تنزيل <a href="https://ollama.com/library/deepseek-coder-v2" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">DeepSeek-Coder-V2</a> 16B هو 8.9 GB.',
-          'يقع Qwen3-Coder في فئة مختلفة. فهو متاح على Ollama فقط كنموذج مزيج خبراء (MoE) بحجم 30B (إجمالي 30.5B، نشط 3.3B) بتنزيل 19 GB وسياق أصلي 256K، لذا يستهدف بطاقات 24 GB أو أجهزة Mac ذات ذاكرة موحدة كافية، لا بطاقة 12 GB. أما <a href="https://huggingface.co/Qwen/Qwen3.6-27B" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen3.6 27B</a> (‏18–19 GB، سياق 256K، Apache 2.0) فهو النموذج العام الأحدث مع تركيز على البرمجة؛ وتعلن Qwen نتيجة 77.2 في SWE-bench Verified ببيئة الوكيل الخاصة بها، وهو رقم من المورّد وليس اختبارًا مستقلًا.',
+          'يقع Qwen3-Coder في فئة مختلفة. فهو متاح على Ollama فقط كنموذج مزيج خبراء (MoE) بحجم 30B (إجمالي 30.5B، نشط 3.3B) بتنزيل 19 GB وسياق أصلي 256K، لذا يستهدف بطاقات 24 GB أو أجهزة Mac ذات ذاكرة موحدة 32 GB أو أكثر (يحتفظ macOS بنحو 8 GB)، لا بطاقة 12 GB. أما <a href="https://huggingface.co/Qwen/Qwen3.6-27B" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen3.6 27B</a> (‏18–19 GB، سياق 256K، Apache 2.0) فهو النموذج العام الأحدث مع تركيز على البرمجة؛ وتعلن Qwen نتيجة 77.2 في SWE-bench Verified ببيئة الوكيل الخاصة بها، وهو رقم من المورّد وليس اختبارًا مستقلًا.',
           'لم نجد على Ollama نموذج برمجة صغيرًا أحدث من DeepSeek. تعرض صفحة deepseek-coder-v2 الوسمين 16B و236B وآخر تحديث قبل نحو عامين، بينما تضم نماذج DeepSeek الرائدة الأحدث من سلسلة V3 مئات المليارات من المعاملات، وهذا غير واقعي على بطاقات المستهلك.',
           'لا ينشر أي من المطورَين في صفحة النموذج مقارنة مباشرة بمقياس HumanEval بين نموذجي 14B و16B، لذلك لا تقدّم هذه الصفحة ترتيبًا وفق HumanEval. جرّب النموذجين على مستودعك قبل أن تقرر.',
         ],
@@ -831,7 +831,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'ما تختاره بحسب العتاد وسير العمل',
         content: [
-          '<strong>اختر Qwen3-Coder 30B إذا كانت لديك بطاقة 24 GB أو جهاز Mac بذاكرة موحدة تكفي لتنزيل 19 GB مع السياق.</strong> هو أقوى خيار في هذه المقارنة لا يزال يعمل على عتاد المستهلك، ويصدر بترخيص Apache 2.0، وتوثّق <a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">بطاقة نموذجه</a> استدعاء الأدوات بتعريفات متوافقة مع OpenAI، مما يناسب وكلاء البرمجة.',
+          '<strong>اختر Qwen3-Coder 30B إذا كانت لديك بطاقة 24 GB أو جهاز Mac بذاكرة موحدة 32 GB أو أكثر تكفي لتنزيل 19 GB مع السياق (يحتفظ macOS بنحو 8 GB).</strong> هو أقوى خيار في هذه المقارنة لا يزال يعمل على عتاد المستهلك، ويصدر بترخيص Apache 2.0، وتوثّق <a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">بطاقة نموذجه</a> استدعاء الأدوات بتعريفات متوافقة مع OpenAI، مما يناسب وكلاء البرمجة.',
           '<strong>اختر Qwen2.5-Coder 14B أو DeepSeek-Coder-V2 16B إذا كنت مقيدًا بـ 12 GB.</strong> اختر Qwen2.5-Coder للبرمجة العامة وترخيص Apache 2.0. واختر DeepSeek-Coder-V2 لقواعد الشيفرة التي تمزج لغات أقل شيوعًا: إذ تذكر <a href="https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">بطاقة نموذجه</a> 338 لغة، بينما يذكر إعلان Qwen2.5-Coder أكثر من 40 لغة لنموذج 32B.',
           'السياق: يعرض DeepSeek-Coder-V2 16B على Ollama النافذة الأطول (160K مقابل 32K لـ Qwen2.5-Coder)، وهذا يفيد عند لصق ملفات كبيرة للمراجعة. يتحدد السياق القابل للاستخدام بما يتبقى من VRAM لذاكرة KV، فاضبط نافذة تتسع فعلًا. ولاختيار بيئة التشغيل أولًا، راجع <a href="/ar/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama مقابل LM Studio</a>.',
           'للمقارنة الأوسع التي تشمل Mistral، اقرأ <a href="/ar/local-llms/qwen-coder-vs-deepseek-mistral-local-2026" class="text-primary hover:underline">دليل Qwen Coder مقابل DeepSeek مقابل Mistral</a>؛ ولقائمة مرتبة لنماذج البرمجة المحلية، راجع <a href="/ar/power-local-llm/best-local-coding-models-2026" class="text-primary hover:underline">أفضل نماذج البرمجة المحلية</a>.',
@@ -887,7 +887,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tool Comparisons',
     heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-ko.webp',
     title: 'Qwen Coder 대 DeepSeek Coder 2026: 어느 것이 더 낫습니까?',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: 'Qwen Coder 대 DeepSeek Coder 2026 비교',
     metaDescription: '12 GB GPU에서 Qwen2.5-Coder 14B와 DeepSeek-Coder-V2 16B를, 24 GB용 Qwen3-Coder 30B와 함께 비교합니다. 크기, 컨텍스트, 라이선스.',
     publishDate: '2026-05-18',
@@ -944,7 +944,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '모델 크기, 컨텍스트, 라이선스',
         content: [
           '<strong>12 GB GPU에서 실제로 비교할 수 있는 조합은 Qwen2.5-Coder 14B와 DeepSeek-Coder-V2 16B입니다.</strong> 둘 다 2024년 세대 모델로, <a href="https://ollama.com/library/qwen2.5-coder" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen2.5-Coder</a> 14B의 다운로드는 9.0 GB, <a href="https://ollama.com/library/deepseek-coder-v2" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">DeepSeek-Coder-V2</a> 16B는 8.9 GB입니다.',
-          'Qwen3-Coder는 다른 등급입니다. Ollama에서는 30B Mixture-of-Experts 모델(총 30.5B, 활성 3.3B)로만 제공되며 다운로드 19 GB, 기본 컨텍스트 256K이므로, 12 GB 카드가 아니라 24 GB GPU나 통합 메모리가 충분한 Mac을 대상으로 합니다. <a href="https://huggingface.co/Qwen/Qwen3.6-27B" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen3.6 27B</a>(18–19 GB, 256K 컨텍스트, Apache 2.0)는 코딩에 중점을 둔 더 새로운 범용 모델이며, Qwen은 자체 에이전트 환경에서 SWE-bench Verified 77.2를 보고했습니다. 이는 벤더 발표 수치이며 독립 검증이 아닙니다.',
+          'Qwen3-Coder는 다른 등급입니다. Ollama에서는 30B Mixture-of-Experts 모델(총 30.5B, 활성 3.3B)로만 제공되며 다운로드 19 GB, 기본 컨텍스트 256K이므로, 12 GB 카드가 아니라 24 GB GPU나 통합 메모리 32 GB 이상의 Mac(macOS가 약 8 GB 사용)을 대상으로 합니다. <a href="https://huggingface.co/Qwen/Qwen3.6-27B" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Qwen3.6 27B</a>(18–19 GB, 256K 컨텍스트, Apache 2.0)는 코딩에 중점을 둔 더 새로운 범용 모델이며, Qwen은 자체 에이전트 환경에서 SWE-bench Verified 77.2를 보고했습니다. 이는 벤더 발표 수치이며 독립 검증이 아닙니다.',
           'Ollama에서 DeepSeek의 더 새로운 소형 코더 모델은 찾지 못했습니다. deepseek-coder-v2 페이지에는 16B와 236B 태그와 약 2년 전의 마지막 업데이트가 표시되며, DeepSeek의 최신 V3 계열 플래그십은 수천억 개의 파라미터를 가져 소비자용 GPU에서는 현실적이지 않습니다.',
           '두 벤더 모두 모델 페이지에서 14B와 16B 모델의 HumanEval 직접 비교를 공개하지 않으므로, 이 페이지는 HumanEval 순위를 제시하지 않습니다. 결정하기 전에 자신의 저장소에서 두 모델을 모두 테스트하십시오.',
         ],
@@ -959,7 +959,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '하드웨어와 워크플로에 따른 선택 기준',
         content: [
-          '<strong>24 GB GPU가 있거나 19 GB 다운로드와 컨텍스트를 감당할 통합 메모리를 갖춘 Mac이라면 Qwen3-Coder 30B를 선택하십시오.</strong> 소비자용 하드웨어에서 실행되는 옵션 중 가장 강력하고, Apache 2.0으로 공개되며, <a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">모델 카드</a>에 OpenAI 호환 도구 정의를 사용하는 도구 호출이 기재되어 있어 코딩 에이전트에 적합합니다.',
+          '<strong>24 GB GPU가 있거나 19 GB 다운로드와 컨텍스트를 감당할 통합 메모리 32 GB 이상(macOS가 약 8 GB 사용)을 갖춘 Mac이라면 Qwen3-Coder 30B를 선택하십시오.</strong> 소비자용 하드웨어에서 실행되는 옵션 중 가장 강력하고, Apache 2.0으로 공개되며, <a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">모델 카드</a>에 OpenAI 호환 도구 정의를 사용하는 도구 호출이 기재되어 있어 코딩 에이전트에 적합합니다.',
           '<strong>12 GB로 제한된다면 Qwen2.5-Coder 14B 또는 DeepSeek-Coder-V2 16B를 선택하십시오.</strong> 일반 코딩과 Apache 2.0 라이선스에는 Qwen2.5-Coder를, 덜 흔한 언어가 섞인 코드베이스에는 DeepSeek-Coder-V2를 선택하십시오. <a href="https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">모델 카드</a>는 338개 언어를 명시하며, Qwen2.5-Coder 발표는 32B 모델이 40개 이상의 언어에서 우수하다고 밝혔습니다.',
           '컨텍스트: Ollama에서는 DeepSeek-Coder-V2 16B가 더 긴 윈도우(160K, Qwen2.5-Coder는 32K)를 표시하여 큰 파일을 붙여 넣어 검토할 때 유용합니다. 실제로 쓸 수 있는 컨텍스트는 KV 캐시에 남는 VRAM으로 제한되므로, 실제로 들어가는 윈도우를 설정하십시오. 먼저 실행 도구를 고르려면 <a href="/ko/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama 대 LM Studio</a>를 참고하십시오.',
           'Mistral을 포함한 더 넓은 비교는 <a href="/ko/local-llms/qwen-coder-vs-deepseek-mistral-local-2026" class="text-primary hover:underline">Qwen Coder 대 DeepSeek 대 Mistral 가이드</a>를, 로컬 코딩 모델 순위는 <a href="/ko/power-local-llm/best-local-coding-models-2026" class="text-primary hover:underline">최고의 로컬 코딩 모델</a>을 참고하십시오.',

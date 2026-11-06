@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-26',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-en.webp',
@@ -358,7 +358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Do I need a GPU to use a local LLM for novel drafting?',
-            a: 'A GPU speeds up generation significantly but is not required. On Apple Silicon, unified memory lets a MacBook Pro with 16 GB run smaller models (roughly the 8B–14B class at 4-bit, an estimate) — slower than a 24 GB GPU rig, but acceptable when you read and evaluate output between generations. A 24 GB NVIDIA GPU (RTX 4090, RTX 3090) fits 27B–32B-class models at 4-bit (estimate); 70B-class models need roughly 40 GB or more at 4-bit, so they require two GPUs, a 48 GB card, 64 GB of unified memory, or slower CPU offload.',
+            a: 'A GPU speeds up generation significantly but is not required. On Apple Silicon, unified memory lets a MacBook Pro with 16 GB run smaller models (roughly the 8B class at 4-bit, an estimate, because macOS keeps about 8 GB) — slower than a 24 GB GPU rig, but acceptable when you read and evaluate output between generations. A 24 GB NVIDIA GPU (RTX 4090, RTX 3090) fits 27B–32B-class models at 4-bit (estimate); 70B-class models need roughly 40 GB or more at 4-bit, so they require two GPUs, a 48 GB card, 64 GB of unified memory, or slower CPU offload.',
           },
           {
             q: 'Can I use local LLMs with Final Draft or other professional screenwriting software?',
@@ -398,7 +398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-26',
+    dateModified: '2026-11-06',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-es.webp',
     title: 'Redactar novelas y guiones con LLMs locales: guía de flujo de trabajo para más de 100.000 palabras',
@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Necesito una GPU para usar un LLM local en la redacción de novelas?',
-            a: 'Una GPU acelera mucho la generación, pero no es obligatoria. En Apple Silicon, la memoria unificada permite que un MacBook Pro de 16 GB ejecute modelos más pequeños (aproximadamente la clase de 8B–14B a 4 bits, una estimación) — más lento que un equipo con GPU de 24 GB, pero aceptable cuando lees y evalúas la salida entre generaciones. Una GPU NVIDIA de 24 GB (RTX 4090, RTX 3090) admite modelos de la clase 27B–32B a 4 bits (estimación); los modelos de clase 70B necesitan unos 40 GB o más a 4 bits, por lo que requieren dos GPU, una tarjeta de 48 GB, 64 GB de memoria unificada o descarga a la CPU, más lenta.',
+            a: 'Una GPU acelera mucho la generación, pero no es obligatoria. En Apple Silicon, la memoria unificada permite que un MacBook Pro de 16 GB ejecute modelos más pequeños (aproximadamente la clase de 8B a 4 bits, una estimación, porque macOS reserva unos 8 GB) — más lento que un equipo con GPU de 24 GB, pero aceptable cuando lees y evalúas la salida entre generaciones. Una GPU NVIDIA de 24 GB (RTX 4090, RTX 3090) admite modelos de la clase 27B–32B a 4 bits (estimación); los modelos de clase 70B necesitan unos 40 GB o más a 4 bits, por lo que requieren dos GPU, una tarjeta de 48 GB, 64 GB de memoria unificada o descarga a la CPU, más lenta.',
           },
           {
             q: '¿Puedo usar LLMs locales con Final Draft u otro software profesional de guiones?',
@@ -788,7 +788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-screenwriting-and-novel-drafting',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-10-26',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -799,7 +799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-26',
+    dateModified: '2026-11-06',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-de.webp',
     title: 'Romane und Drehbücher mit lokalen LLMs verfassen: Workflow-Leitfaden für 100K+ Wörter',
@@ -1146,7 +1146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Brauche ich eine GPU für ein lokales LLM beim Roman-Drafting?',
-            a: 'Eine GPU beschleunigt die Generierung deutlich, ist aber nicht erforderlich. Bei Apple Silicon erlaubt Unified Memory einem MacBook Pro mit 16 GB, kleinere Modelle auszuführen (grob die 8B–14B-Klasse bei 4 Bit, eine Schätzung) — langsamer als ein 24-GB-GPU-Rechner, aber akzeptabel, wenn man die Ausgabe zwischen den Generierungen liest und bewertet. Eine NVIDIA-GPU mit 24 GB (RTX 4090, RTX 3090) fasst Modelle der 27B–32B-Klasse bei 4 Bit (Schätzung); Modelle der 70B-Klasse brauchen bei 4 Bit grob 40 GB oder mehr und erfordern daher zwei GPUs, eine 48-GB-Karte, 64 GB Unified Memory oder langsameres CPU-Offloading.',
+            a: 'Eine GPU beschleunigt die Generierung deutlich, ist aber nicht erforderlich. Bei Apple Silicon erlaubt Unified Memory einem MacBook Pro mit 16 GB, kleinere Modelle auszuführen (grob die 8B-Klasse bei 4 Bit, eine Schätzung, da macOS etwa 8 GB belegt) — langsamer als ein 24-GB-GPU-Rechner, aber akzeptabel, wenn man die Ausgabe zwischen den Generierungen liest und bewertet. Eine NVIDIA-GPU mit 24 GB (RTX 4090, RTX 3090) fasst Modelle der 27B–32B-Klasse bei 4 Bit (Schätzung); Modelle der 70B-Klasse brauchen bei 4 Bit grob 40 GB oder mehr und erfordern daher zwei GPUs, eine 48-GB-Karte, 64 GB Unified Memory oder langsameres CPU-Offloading.',
           },
           {
             q: 'Kann ich lokale LLMs mit Final Draft oder anderer professioneller Drehbuchsoftware verwenden?',
@@ -1194,7 +1194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-26',
+    dateModified: '2026-11-06',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-fr.webp',
     title: 'Rédiger des romans et des scénarios avec des LLM locaux : guide de workflow 100 000+ mots',
@@ -1541,7 +1541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ai-je besoin d\'un GPU pour utiliser un LLM local pour la rédaction de roman ?',
-            a: 'Un GPU accélère nettement la génération mais n\'est pas indispensable. Sur Apple Silicon, la mémoire unifiée permet à un MacBook Pro de 16 Go d\'exécuter des modèles plus petits (environ la classe 8B–14B en 4 bits, une estimation) — plus lent qu\'une machine à GPU de 24 Go, mais acceptable quand on lit et évalue la sortie entre deux générations. Un GPU NVIDIA de 24 Go (RTX 4090, RTX 3090) accueille des modèles de la classe 27B–32B en 4 bits (estimation) ; les modèles de classe 70B demandent environ 40 Go ou plus en 4 bits et nécessitent donc deux GPU, une carte de 48 Go, 64 Go de mémoire unifiée ou un déchargement vers le CPU, plus lent.',
+            a: 'Un GPU accélère nettement la génération mais n\'est pas indispensable. Sur Apple Silicon, la mémoire unifiée permet à un MacBook Pro de 16 Go d\'exécuter des modèles plus petits (environ la classe 8B en 4 bits, une estimation, car macOS en réserve environ 8 Go) — plus lent qu\'une machine à GPU de 24 Go, mais acceptable quand on lit et évalue la sortie entre deux générations. Un GPU NVIDIA de 24 Go (RTX 4090, RTX 3090) accueille des modèles de la classe 27B–32B en 4 bits (estimation) ; les modèles de classe 70B demandent environ 40 Go ou plus en 4 bits et nécessitent donc deux GPU, une carte de 48 Go, 64 Go de mémoire unifiée ou un déchargement vers le CPU, plus lent.',
           },
           {
             q: 'Puis-je utiliser des LLM locaux avec Final Draft ou d\'autres logiciels de scénario professionnels ?',
@@ -1589,7 +1589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-26',
+    dateModified: '2026-11-06',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-ja.webp',
     title: 'ローカルLLMで小説・脚本を執筆する：10万語以上のワークフロー完全ガイド',
@@ -1940,7 +1940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '小説執筆のためにローカルLLMにGPUが必要ですか？',
-            a: 'GPUは生成速度を大幅に高めますが必須ではありません。Apple Siliconでは、ユニファイドメモリのおかげで16GBのMacBook Proでも小さめのモデル（4ビットでおおむね8B〜14Bクラス、推定）を実行できます——24GB GPUの機材より遅いものの、生成の合間に出力を読んで評価する執筆ワークフローなら許容範囲です。24GBのNVIDIA GPU（RTX 4090、RTX 3090）は4ビットで27B〜32Bクラスのモデルを収められます（推定）。70Bクラスは4ビットで約40GB以上が必要なため、GPU2枚、48GBカード、64GBのユニファイドメモリ、または速度の落ちるCPUオフロードが必要です。',
+            a: 'GPUは生成速度を大幅に高めますが必須ではありません。Apple Siliconでは、ユニファイドメモリのおかげで16GBのMacBook Proでも小さめのモデル（4ビットでおおむね8Bクラス、推定。macOSが約8GBを使用するため）を実行できます——24GB GPUの機材より遅いものの、生成の合間に出力を読んで評価する執筆ワークフローなら許容範囲です。24GBのNVIDIA GPU（RTX 4090、RTX 3090）は4ビットで27B〜32Bクラスのモデルを収められます（推定）。70Bクラスは4ビットで約40GB以上が必要なため、GPU2枚、48GBカード、64GBのユニファイドメモリ、または速度の落ちるCPUオフロードが必要です。',
           },
           {
             q: 'Final Draftや他のプロの脚本ソフトウェアでローカルLLMを使えますか？',
@@ -1988,7 +1988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-26',
+    dateModified: '2026-11-06',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-zh.webp',
     title: '使用本地LLM创作小说与剧本：10万字以上工作流完整指南',
@@ -2339,7 +2339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '小说写作需要GPU才能使用本地LLM吗？',
-            a: 'GPU能显著加快生成速度，但不是必需的。在Apple Silicon上，统一内存让16 GB的MacBook Pro可以运行较小的模型（4位下大约8B–14B级，属估算）——比24 GB GPU的机器慢，但在你于两次生成之间阅读和评估输出时是可以接受的。24 GB的NVIDIA GPU（RTX 4090、RTX 3090）在4位下可容纳27B–32B级模型（估算）；70B级模型在4位下约需40 GB或更多，因此需要两块GPU、48 GB显卡、64 GB统一内存，或速度较慢的CPU卸载。',
+            a: 'GPU能显著加快生成速度，但不是必需的。在Apple Silicon上，统一内存让16 GB的MacBook Pro可以运行较小的模型（4位下大约8B级，属估算，因为macOS约占用8 GB）——比24 GB GPU的机器慢，但在你于两次生成之间阅读和评估输出时是可以接受的。24 GB的NVIDIA GPU（RTX 4090、RTX 3090）在4位下可容纳27B–32B级模型（估算）；70B级模型在4位下约需40 GB或更多，因此需要两块GPU、48 GB显卡、64 GB统一内存，或速度较慢的CPU卸载。',
           },
           {
             q: '我可以将本地LLM与Final Draft或其他专业剧本软件一起使用吗？',
@@ -2387,7 +2387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-26',
+    dateModified: '2026-11-06',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-pt.webp',
     title: 'Redigir romances e roteiros com LLMs locais: guia de fluxo de trabalho para mais de 100.000 palavras',
@@ -2734,7 +2734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Preciso de uma GPU para usar um LLM local na redação de romances?',
-            a: 'Uma GPU acelera bastante a geração, mas não é obrigatória. Em Apple Silicon, a memória unificada permite que um MacBook Pro de 16 GB execute modelos menores (aproximadamente a classe de 8B–14B em 4 bits, uma estimativa) — mais lento que um equipamento com GPU de 24 GB, mas aceitável quando você lê e avalia a saída entre as gerações. Uma GPU NVIDIA de 24 GB (RTX 4090, RTX 3090) comporta modelos da classe 27B–32B em 4 bits (estimativa); modelos da classe 70B precisam de cerca de 40 GB ou mais em 4 bits, portanto exigem duas GPUs, uma placa de 48 GB, 64 GB de memória unificada ou descarga para a CPU, mais lenta.',
+            a: 'Uma GPU acelera bastante a geração, mas não é obrigatória. Em Apple Silicon, a memória unificada permite que um MacBook Pro de 16 GB execute modelos menores (aproximadamente a classe de 8B em 4 bits, uma estimativa, porque o macOS reserva cerca de 8 GB) — mais lento que um equipamento com GPU de 24 GB, mas aceitável quando você lê e avalia a saída entre as gerações. Uma GPU NVIDIA de 24 GB (RTX 4090, RTX 3090) comporta modelos da classe 27B–32B em 4 bits (estimativa); modelos da classe 70B precisam de cerca de 40 GB ou mais em 4 bits, portanto exigem duas GPUs, uma placa de 48 GB, 64 GB de memória unificada ou descarga para a CPU, mais lenta.',
           },
           {
             q: 'Posso usar LLMs locais com o Final Draft ou outro software profissional de roteiros?',
@@ -2777,7 +2777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-screenwriting-and-novel-drafting',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-10-26',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -2787,7 +2787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-26',
+    dateModified: '2026-11-06',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-ar.webp',
     title: 'صياغة الروايات والسيناريوهات بالنماذج اللغوية المحلية: دليل سير العمل لأكثر من ⁨100⁩,⁨000⁩ كلمة',
@@ -3134,7 +3134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل أحتاج GPU لاستخدام نموذج لغوي محلي في كتابة الروايات؟',
-            a: 'تسرّع وحدة GPU التوليد كثيراً لكنها ليست شرطاً. على Apple Silicon تتيح الذاكرة الموحدة لجهاز MacBook Pro بسعة 16 GB تشغيل نماذج أصغر (نحو فئة 8B–14B عند 4 بت، وهو تقدير) — أبطأ من جهاز بـGPU سعة 24 GB لكنه مقبول عندما تقرأ المخرجات وتقيّمها بين عمليات التوليد. تتسع بطاقة NVIDIA بسعة 24 GB (RTX 4090 وRTX 3090) لنماذج فئة 27B–32B عند 4 بت (تقدير)؛ أما نماذج فئة 70B فتحتاج نحو 40 GB أو أكثر عند 4 بت، فتتطلب بطاقتي GPU أو بطاقة 48 GB أو ذاكرة موحدة 64 GB أو تفريغاً إلى المعالج أبطأ.',
+            a: 'تسرّع وحدة GPU التوليد كثيراً لكنها ليست شرطاً. على Apple Silicon تتيح الذاكرة الموحدة لجهاز MacBook Pro بسعة 16 GB تشغيل نماذج أصغر (نحو فئة 8B عند 4 بت، وهو تقدير، لأن macOS يحتفظ بنحو 8 GB) — أبطأ من جهاز بـGPU سعة 24 GB لكنه مقبول عندما تقرأ المخرجات وتقيّمها بين عمليات التوليد. تتسع بطاقة NVIDIA بسعة 24 GB (RTX 4090 وRTX 3090) لنماذج فئة 27B–32B عند 4 بت (تقدير)؛ أما نماذج فئة 70B فتحتاج نحو 40 GB أو أكثر عند 4 بت، فتتطلب بطاقتي GPU أو بطاقة 48 GB أو ذاكرة موحدة 64 GB أو تفريغاً إلى المعالج أبطأ.',
           },
           {
             q: 'هل يمكنني استخدام النماذج اللغوية المحلية مع Final Draft أو برنامج سيناريو مهني آخر؟',
@@ -3177,7 +3177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-llm-screenwriting-and-novel-drafting',
       inLanguage: 'ar',
       datePublished: '2026-05-07',
-      dateModified: '2026-10-26',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3187,7 +3187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-26',
+    dateModified: '2026-11-06',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-ko.webp',
     title: '로컬 LLM으로 소설과 시나리오 집필하기: 10만 단어 이상을 위한 워크플로 가이드',
@@ -3534,7 +3534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '소설 집필에 로컬 LLM을 사용하려면 GPU가 필요합니까?',
-            a: 'GPU는 생성 속도를 크게 높여 주지만 필수는 아닙니다. Apple Silicon에서는 통합 메모리 덕분에 16 GB MacBook Pro도 더 작은 모델(4비트에서 대략 8B–14B급, 추정)을 실행할 수 있습니다 — 24 GB GPU 장비보다 느리지만, 생성 사이에 출력을 읽고 평가하는 집필 워크플로에서는 허용 가능한 수준입니다. 24 GB NVIDIA GPU(RTX 4090, RTX 3090)는 4비트에서 27B–32B급 모델을 담을 수 있습니다(추정). 70B급 모델은 4비트에서 약 40 GB 이상이 필요하므로 GPU 두 장, 48 GB 카드, 64 GB 통합 메모리 또는 속도가 느린 CPU 오프로딩이 필요합니다.',
+            a: 'GPU는 생성 속도를 크게 높여 주지만 필수는 아닙니다. Apple Silicon에서는 통합 메모리 덕분에 16 GB MacBook Pro도 더 작은 모델(4비트에서 대략 8B급, 추정, macOS가 약 8 GB를 사용하므로)을 실행할 수 있습니다 — 24 GB GPU 장비보다 느리지만, 생성 사이에 출력을 읽고 평가하는 집필 워크플로에서는 허용 가능한 수준입니다. 24 GB NVIDIA GPU(RTX 4090, RTX 3090)는 4비트에서 27B–32B급 모델을 담을 수 있습니다(추정). 70B급 모델은 4비트에서 약 40 GB 이상이 필요하므로 GPU 두 장, 48 GB 카드, 64 GB 통합 메모리 또는 속도가 느린 CPU 오프로딩이 필요합니다.',
           },
           {
             q: '로컬 LLM을 Final Draft 또는 다른 전문 시나리오 소프트웨어와 함께 사용할 수 있습니까?',
@@ -3577,7 +3577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-screenwriting-and-novel-drafting',
       inLanguage: 'ko',
       datePublished: '2026-05-24',
-      dateModified: '2026-10-26',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',

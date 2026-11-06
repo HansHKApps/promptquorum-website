@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Qwen 3.6 27B reaches 77.2% SWE-bench and 92.1% HumanEval locally on 16 GB VRAM. Claude Sonnet 5 scores 89.4% HumanEval with no hardware requirement. DeepSeek R2 delivers frontier reasoning at $0.14/1M input tokens. This comparison covers benchmark data, EU GDPR jurisdiction, per-token cost math, and the dispatch layer problem that makes single-model choices obsolete in 2026.',
     metaDescription: 'Compare Qwen 3.6 27B (92.1% HumanEval, 16 GB VRAM), Claude Sonnet 5 (89.4%, $3/1M), and DeepSeek R2 ($0.14/1M). GDPR compliance, cost, and hardware analysis for 2026.',
     publishDate: '2026-05-16',
-    dateModified: '2026-08-27',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-08-27',
     next_seo_review_due: '2026-10-01',
     last_seo_review: '2026-08-27',
@@ -157,7 +157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-reality',
         title: 'Hardware Reality Check',
         content: [
-          'Qwen 3.6 27B requires approximately 15.8 GB VRAM at Q4_K_M quantization, fitting within a single RTX 3090 (24 GB), RTX 4080 (16 GB), or RTX 4090 (24 GB). Apple Silicon M3 Max with 48 GB unified memory runs it at 35–40 tokens/second via MLX. Apple refreshed its Mac mini and Mac Studio lineup on August 25, 2026 (shipping September 22, 2026): the Mac mini M6 (32 GB max unified memory, from $899) comfortably covers Qwen 3.6 27B\'s ~16 GB requirement and is the most cost-effective Apple Silicon inference server; the Mac mini M5 Pro (64 GB max, from $1,699) and Mac Studio M5 Max (128 GB max, from $2,499) add headroom for larger models. Deploy via [Ollama](https://ollama.ai) for simple model management and serving.',
+          'Qwen 3.6 27B requires approximately 15.8 GB VRAM at Q4_K_M quantization, fitting within a single RTX 3090 (24 GB), RTX 4080 (16 GB), or RTX 4090 (24 GB). Apple Silicon M3 Max with 48 GB unified memory runs it at 35–40 tokens/second via MLX. Apple refreshed its Mac mini and Mac Studio lineup on August 25, 2026 (shipping September 22, 2026): the Mac mini M6 (32 GB max unified memory, from $899) covers Qwen 3.6 27B\'s ~16 GB requirement (about 24 GB is usable after macOS keeps 8 GB) and is the most cost-effective Apple Silicon inference server; the Mac mini M5 Pro (64 GB max, from $1,699) and Mac Studio M5 Max (128 GB max, from $2,499) add headroom for larger models. Deploy via [Ollama](https://ollama.ai) for simple model management and serving.',
           'Initial hardware investment replaces cloud API cost. At 10M tokens/day (typical dev team of 5), Claude Sonnet 5 costs $30/day or ~$900/month. An RTX 4080 system at ~€1,200 hardware cost reaches break-even in under 2 months at this usage volume.',
         ],
         items: [
@@ -298,7 +298,7 @@ dispatch_rules:
     intro: 'Qwen 3.6 27B alcanza 92,1% HumanEval y 77,2% SWE-bench de forma local con 16 GB de VRAM. Claude Sonnet 5 logra 89,4% HumanEval sin requerimientos de hardware. DeepSeek R2 ofrece razonamiento frontier a $0,14/1M tokens de entrada. Esta comparativa cubre datos de benchmarks, jurisdicción GDPR de la UE, matemáticas de coste por token y el problema de la capa de despacho que hace obsoletas las estrategias de modelo único en 2026.',
     metaDescription: 'Compara Qwen 3.6 27B (92,1% HumanEval, 16 GB VRAM), Claude Sonnet 5 (89,4%, $3/1M) y DeepSeek R2 ($0,14/1M). Cumplimiento GDPR, coste y hardware 2026.',
     publishDate: '2026-05-16',
-    dateModified: '2026-08-27',
+    dateModified: '2026-11-06',
     readTime: '10 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores y equipos de la UE que eligen entre LLMs locales y en la nube para flujos de trabajo en producción',
@@ -375,7 +375,7 @@ dispatch_rules:
         id: 'hardware-reality',
         title: 'Realidad del hardware',
         content: [
-          'Qwen 3.6 27B requiere aproximadamente 15,8 GB de VRAM con cuantización Q4_K_M, cabiendo en una única RTX 3090 (24 GB), RTX 4080 (16 GB) o RTX 4090 (24 GB). Apple Silicon M3 Max con 48 GB de memoria unificada lo ejecuta a 35–40 tokens/segundo via MLX. Apple renovó su gama Mac mini y Mac Studio el 25 de agosto de 2026 (disponible a partir del 22 de septiembre de 2026): el Mac mini M6 (32 GB máx. de memoria unificada, desde $899) cubre sin problemas el requisito de ~16 GB de Qwen 3.6 27B y es el servidor de inferencia Apple Silicon más económico; el Mac mini M5 Pro (64 GB máx., desde $1.699) y el Mac Studio M5 Max (128 GB máx., desde $2.499) añaden margen para modelos más grandes. Despliégalo via [Ollama](https://ollama.ai) para una gestión y servicio de modelos sencillo.',
+          'Qwen 3.6 27B requiere aproximadamente 15,8 GB de VRAM con cuantización Q4_K_M, cabiendo en una única RTX 3090 (24 GB), RTX 4080 (16 GB) o RTX 4090 (24 GB). Apple Silicon M3 Max con 48 GB de memoria unificada lo ejecuta a 35–40 tokens/segundo via MLX. Apple renovó su gama Mac mini y Mac Studio el 25 de agosto de 2026 (disponible a partir del 22 de septiembre de 2026): el Mac mini M6 (32 GB máx. de memoria unificada, desde $899) cubre el requisito de ~16 GB de Qwen 3.6 27B (quedan unos 24 GB utilizables tras los 8 GB de macOS) y es el servidor de inferencia Apple Silicon más económico; el Mac mini M5 Pro (64 GB máx., desde $1.699) y el Mac Studio M5 Max (128 GB máx., desde $2.499) añaden margen para modelos más grandes. Despliégalo via [Ollama](https://ollama.ai) para una gestión y servicio de modelos sencillo.',
           'La inversión inicial en hardware reemplaza el coste de la API en la nube. Con 10M tokens/día (un equipo de desarrollo típico de 5 personas), Claude Sonnet 5 cuesta $30/día o ~$900/mes. Un sistema RTX 4080 a ~€1.200 de coste en hardware alcanza el punto de equilibrio en menos de 2 meses a este volumen de uso.',
         ],
         items: [
@@ -512,7 +512,7 @@ dispatch_rules:
       description: 'Compara Qwen 3.6 27B (92,1% HumanEval, 16 GB VRAM), Claude Sonnet 5 (89,4%, $3/1M) y DeepSeek R2 ($0,14/1M). Cumplimiento GDPR, coste y análisis de hardware para 2026.',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       datePublished: '2026-05-16',
-      dateModified: '2026-08-27',
+      dateModified: '2026-11-06',
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', 'name': 'Qwen 3.6 27B' },
@@ -544,7 +544,7 @@ dispatch_rules:
     intro: 'يحقق Qwen 3.6 27B نسبة 92.1% HumanEval و77.2% SWE-bench محليًا بـ 16 GB من VRAM. يحقق Claude Sonnet 5 نسبة 89.4% HumanEval دون متطلبات أجهزة. يقدّم DeepSeek R2 استدلالًا حدوديًا بـ $0.14/1M token إدخال. تغطي هذه المقارنة بيانات المعايير والولاية القضائية لـ GDPR في الاتحاد الأوروبي وحسابات تكلفة الـ token ومشكلة طبقة التوزيع التي تجعل استراتيجيات النموذج الواحد عتيقة في 2026.',
     metaDescription: 'قارن ⁨Qwen 3.6 27B⁩ (⁨92.1% HumanEval⁩، ⁨16 GB VRAM⁩) و⁨Claude Sonnet 5⁩ (⁨89.4%⁩، $⁨3/1M⁩) و⁨DeepSeek R2⁩ ($⁨0.14/1M⁩). امتثال ⁨GDPR⁩ والتكلفة والأجهزة ⁨2026⁩.',
     publishDate: '2026-05-16',
-    dateModified: '2026-08-27',
+    dateModified: '2026-11-06',
     readTime: '10 دقائق قراءة',
     educationalLevel: 'Intermediate',
     audience: 'المطورون وفرق الاتحاد الأوروبي الذين يختارون بين نماذج LLM المحلية والسحابية لسير عمل الإنتاج',
@@ -621,7 +621,7 @@ dispatch_rules:
         id: 'hardware-reality',
         title: 'واقع الأجهزة',
         content: [
-          'يتطلب Qwen 3.6 27B نحو 15.8 GB من VRAM بتكميم Q4_K_M، فيتسع في RTX 3090 واحدة (24 GB) أو RTX 4080 (16 GB) أو RTX 4090 (24 GB). يشغّله Apple Silicon M3 Max بذاكرة موحدة 48 GB بـ 35–40 token/ثانية عبر MLX. جددت Apple تشكيلة Mac mini وMac Studio في 25 أغسطس 2026 (الشحن يبدأ 22 سبتمبر 2026): يغطي Mac mini M6 (بذاكرة موحدة تصل إلى 32 GB، ابتداءً من $899) متطلبات Qwen 3.6 27B البالغة ~16 GB بارتياح وهو أرخص خادم استدلال بمعالج Apple Silicon؛ ويضيف Mac mini M5 Pro (حتى 64 GB، ابتداءً من $1,699) وMac Studio M5 Max (حتى 128 GB، ابتداءً من $2,499) هامشاً إضافياً للنماذج الأكبر. انشره عبر [Ollama](https://ollama.ai) لإدارة وخدمة نماذج بسيطة.',
+          'يتطلب Qwen 3.6 27B نحو 15.8 GB من VRAM بتكميم Q4_K_M، فيتسع في RTX 3090 واحدة (24 GB) أو RTX 4080 (16 GB) أو RTX 4090 (24 GB). يشغّله Apple Silicon M3 Max بذاكرة موحدة 48 GB بـ 35–40 token/ثانية عبر MLX. جددت Apple تشكيلة Mac mini وMac Studio في 25 أغسطس 2026 (الشحن يبدأ 22 سبتمبر 2026): يغطي Mac mini M6 (بذاكرة موحدة تصل إلى 32 GB، ابتداءً من $899) متطلبات Qwen 3.6 27B البالغة ~16 GB (يبقى نحو 24 GB قابلة للاستخدام بعد حجز macOS لـ 8 GB) وهو أرخص خادم استدلال بمعالج Apple Silicon؛ ويضيف Mac mini M5 Pro (حتى 64 GB، ابتداءً من $1,699) وMac Studio M5 Max (حتى 128 GB، ابتداءً من $2,499) هامشاً إضافياً للنماذج الأكبر. انشره عبر [Ollama](https://ollama.ai) لإدارة وخدمة نماذج بسيطة.',
           'يحل استثمار الأجهزة الأولي محل تكلفة API السحابي. بـ 10M token/يوم (فريق تطوير نموذجي من 5 أشخاص)، يكلّف Claude Sonnet 5 $30/يوم أو ~$900/شهر. نظام RTX 4080 بتكلفة أجهزة ~€1,200 يبلغ نقطة التعادل في أقل من شهرين عند حجم الاستخدام هذا.',
         ],
         items: [
@@ -758,7 +758,7 @@ dispatch_rules:
       description: 'قارن Qwen 3.6 27B (92.1% HumanEval، 16 GB VRAM) وClaude Sonnet 5 (89.4%، $3/1M) وDeepSeek R2 ($0.14/1M). امتثال GDPR والتكلفة وتحليل الأجهزة لعام 2026.',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       datePublished: '2026-05-16',
-      dateModified: '2026-08-27',
+      dateModified: '2026-11-06',
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', 'name': 'Qwen 3.6 27B' },
@@ -874,7 +874,7 @@ dispatch_rules:
         id: 'hardware-reality',
         title: 'Realidade do hardware',
         content: [
-          'O Qwen 3.6 27B requer aproximadamente 15,8 GB de VRAM com quantização Q4_K_M, cabendo em uma única RTX 3090 (24 GB), RTX 4080 (16 GB) ou RTX 4090 (24 GB). O Apple Silicon M3 Max com 48 GB de memória unificada o executa a 35–40 tokens/segundo via MLX. A Apple renovou sua linha Mac mini e Mac Studio em 25 de agosto de 2026 (disponível a partir de 22 de setembro de 2026): o Mac mini M6 (até 32 GB de memória unificada, a partir de $899) cobre com folga o requisito de ~16 GB do Qwen 3.6 27B e é o servidor de inferência Apple Silicon mais econômico; o Mac mini M5 Pro (até 64 GB, a partir de $1.699) e o Mac Studio M5 Max (até 128 GB, a partir de $2.499) adicionam margem para modelos maiores.',
+          'O Qwen 3.6 27B requer aproximadamente 15,8 GB de VRAM com quantização Q4_K_M, cabendo em uma única RTX 3090 (24 GB), RTX 4080 (16 GB) ou RTX 4090 (24 GB). O Apple Silicon M3 Max com 48 GB de memória unificada o executa a 35–40 tokens/segundo via MLX. A Apple renovou sua linha Mac mini e Mac Studio em 25 de agosto de 2026 (disponível a partir de 22 de setembro de 2026): o Mac mini M6 (até 32 GB de memória unificada, a partir de $899) cobre o requisito de ~16 GB do Qwen 3.6 27B (sobram cerca de 24 GB utilizáveis depois dos 8 GB reservados ao macOS) e é o servidor de inferência Apple Silicon mais econômico; o Mac mini M5 Pro (até 64 GB, a partir de $1.699) e o Mac Studio M5 Max (até 128 GB, a partir de $2.499) adicionam margem para modelos maiores.',
           'O investimento inicial em hardware substitui o custo da API na nuvem. Com 10M tokens/dia (uma equipe de desenvolvimento típica de 5 pessoas), o Claude Sonnet 5 custa $30/dia ou ~$900/mês. Um sistema RTX 4080 a ~R$ 7.000 de custo em hardware atinge o ponto de equilíbrio em menos de 2 meses nesse volume de uso.',
         ],
         items: [
@@ -1016,7 +1016,7 @@ dispatch_rules:
     intro: 'Qwen 3.6 27B erreicht 92,1% HumanEval lokal auf 16 GB VRAM. Claude Sonnet 5 kommt auf 89,4% HumanEval ohne Hardware-Anforderungen. DeepSeek R2 bietet Frontier-Reasoning ab 0,14 $/1M Token. Dieser Vergleich deckt Benchmark-Daten, DSGVO-Jurisdiktion, Token-Kosten und die Dispatch-Layer-Problematik ab.',
     metaDescription: 'Qwen vs. Claude vs. DeepSeek lokal 2026: Benchmarks, Datenschutz und Kosten. Das beste lokale LLM für Entwickler und Unternehmen in Europa.',
     publishDate: '2026-05-16',
-    dateModified: '2026-08-27',
+    dateModified: '2026-11-06',
     readTime: '12 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler und EU-Teams, die zwischen lokalen und Cloud-LLMs für produktive Workflows wählen',
@@ -1092,7 +1092,7 @@ dispatch_rules:
         id: 'hardware-reality',
         title: 'Hardware-Realität',
         content: [
-          'Qwen 3.6 27B benötigt bei Q4_K_M-Quantisierung etwa 15,8 GB VRAM und passt in eine einzelne RTX 3090 (24 GB), RTX 4080 (16 GB) oder RTX 4090 (24 GB). Apple Silicon M3 Max mit 48 GB Unified Memory läuft es mit 35–40 Tokens/Sekunde via MLX. Apple hat am 25. August 2026 seine Mac mini- und Mac-Studio-Reihe überarbeitet (Verkaufsstart 22. September 2026): Der Mac mini M6 (bis zu 32 GB Unified Memory, ab 899 $) deckt den ~16-GB-Bedarf von Qwen 3.6 27B komfortabel ab und ist der kosteneffektivste Apple-Silicon-Inference-Server; Mac mini M5 Pro (bis zu 64 GB, ab 1.699 $) und Mac Studio M5 Max (bis zu 128 GB, ab 2.499 $) bieten mehr Spielraum für größere Modelle. Stellen Sie über [Ollama](https://ollama.ai) bereit für einfaches Modell-Management und Serving.',
+          'Qwen 3.6 27B benötigt bei Q4_K_M-Quantisierung etwa 15,8 GB VRAM und passt in eine einzelne RTX 3090 (24 GB), RTX 4080 (16 GB) oder RTX 4090 (24 GB). Apple Silicon M3 Max mit 48 GB Unified Memory läuft es mit 35–40 Tokens/Sekunde via MLX. Apple hat am 25. August 2026 seine Mac mini- und Mac-Studio-Reihe überarbeitet (Verkaufsstart 22. September 2026): Der Mac mini M6 (bis zu 32 GB Unified Memory, ab 899 $) deckt den ~16-GB-Bedarf von Qwen 3.6 27B ab (rund 24 GB bleiben nutzbar, da macOS 8 GB belegt) und ist der kosteneffektivste Apple-Silicon-Inference-Server; Mac mini M5 Pro (bis zu 64 GB, ab 1.699 $) und Mac Studio M5 Max (bis zu 128 GB, ab 2.499 $) bieten mehr Spielraum für größere Modelle. Stellen Sie über [Ollama](https://ollama.ai) bereit für einfaches Modell-Management und Serving.',
           'Initiale Hardware-Investition ersetzt Cloud-API-Kosten. Bei 10M Tokens/Tag (typisches Dev-Team mit 5 Personen) kostet Claude Sonnet 5 30 $/Tag oder ~900 €/Monat. Ein RTX 4080-System bei ~1.200 € Hardware-Kosten erreicht Break-Even unter 2 Monaten bei diesem Nutzungsvolumen.',
         ],
         items: [
@@ -1237,7 +1237,7 @@ dispatch_rules:
     intro: 'Qwen 3.6 27B atteint 92.1% HumanEval en local sur 16 Go VRAM. Claude Sonnet 5 obtient 89.4% HumanEval sans matériel requis. DeepSeek R2 offre un raisonnement frontier à 0.14 $/1M tokens. Cette comparaison couvre les benchmarks, la juridiction RGPD, le coût par token et le problème de couche dispatch.',
     metaDescription: 'Comparez Qwen 3.6 27B (92,1% HumanEval, 16 Go VRAM), Claude Sonnet 5 (89,4%, 3 $/1M), et DeepSeek R2 (0,14 $/1M). Conformité RGPD, coûts et matériel pour 2026.',
     publishDate: '2026-05-16',
-    dateModified: '2026-08-27',
+    dateModified: '2026-11-06',
     readTime: '9 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs et équipes UE choisissant entre IA locale et cloud pour les workflows productifs',
@@ -1313,7 +1313,7 @@ dispatch_rules:
         id: 'hardware-reality',
         title: 'Réalité du matériel',
         content: [
-          'Qwen 3.6 27B nécessite environ 15.8 Go VRAM en quantisation Q4_K_M, tient dans une RTX 3090 (24 Go), RTX 4080 (16 Go) ou RTX 4090 (24 Go). Apple Silicon M3 Max avec 48 Go mémoire unifiée exécute à 35–40 tokens/sec via MLX. Apple a renouvelé sa gamme Mac mini et Mac Studio le 25 août 2026 (disponibilité le 22 septembre 2026) : le Mac mini M6 (jusqu\'à 32 Go de mémoire unifiée, à partir de 899 $) couvre largement le besoin de ~16 Go de Qwen 3.6 27B et reste le serveur d\'inférence Apple Silicon le plus économique ; le Mac mini M5 Pro (jusqu\'à 64 Go, à partir de 1 699 $) et le Mac Studio M5 Max (jusqu\'à 128 Go, à partir de 2 499 $) ajoutent de la marge pour des modèles plus volumineux. Déployez via [Ollama](https://ollama.ai) pour gestion et service simples.',
+          'Qwen 3.6 27B nécessite environ 15.8 Go VRAM en quantisation Q4_K_M, tient dans une RTX 3090 (24 Go), RTX 4080 (16 Go) ou RTX 4090 (24 Go). Apple Silicon M3 Max avec 48 Go mémoire unifiée exécute à 35–40 tokens/sec via MLX. Apple a renouvelé sa gamme Mac mini et Mac Studio le 25 août 2026 (disponibilité le 22 septembre 2026) : le Mac mini M6 (jusqu\'à 32 Go de mémoire unifiée, à partir de 899 $) couvre le besoin de ~16 Go de Qwen 3.6 27B (environ 24 Go restent utilisables, macOS en réservant 8 Go) et reste le serveur d\'inférence Apple Silicon le plus économique ; le Mac mini M5 Pro (jusqu\'à 64 Go, à partir de 1 699 $) et le Mac Studio M5 Max (jusqu\'à 128 Go, à partir de 2 499 $) ajoutent de la marge pour des modèles plus volumineux. Déployez via [Ollama](https://ollama.ai) pour gestion et service simples.',
           'L\'investissement matériel initial remplace le coût API cloud. À 10M tokens/jour (équipe dev de 5), Claude coûte 30 $/jour ~900 €/mois. Un RTX 4080 à ~€1.200 atteint rentabilité en moins de 2 mois à ce volume.',
         ],
         items: [
@@ -1458,7 +1458,7 @@ dispatch_rules:
     intro: 'Qwen 3.6 27B在16 GB显存下本地运行达到92.1% HumanEval。Claude Sonnet 5无需硬件、89.4% HumanEval。DeepSeek R2为最便宜的前沿推理方案，$0.14/1M令牌。本比较涵盖基准测试数据、中国数据安全法合规性、每令牌成本核算，以及多模型分发架构。',
     metaDescription: '对比Qwen 3.6 27B（92.1% HumanEval、16GB显存）、Claude Sonnet 5（89.4%、$3/1M）、DeepSeek R2（$0.14/1M）。2026年GDPR合规、成本和硬件完整分析。',
     publishDate: '2026-05-16',
-    dateModified: '2026-08-27',
+    dateModified: '2026-11-06',
     readTime: '阅读约10分钟',
     educationalLevel: 'Intermediate',
     audience: '选择本地或云端LLM的企业开发团队和AI负责人',
@@ -1534,7 +1534,7 @@ dispatch_rules:
         id: 'hardware-reality',
         title: '硬件现实检查',
         content: [
-          'Qwen 3.6 27B在Q4_K_M量子化下大约需要15.8 GB显存，可以运行在RTX 3090 (24 GB)、RTX 4080 (16 GB)或RTX 4090 (24 GB)上。Apple Silicon M3 Max配48 GB统合内存可通过MLX实现35-40令牌/秒的推断。苹果公司于2026年8月25日更新了Mac mini和Mac Studio产品线(2026年9月22日开始发售)：Mac mini M6(最高32 GB统合内存，起售价$899)足以覆盖Qwen 3.6 27B约16 GB的显存需求，是最经济实惠的Apple Silicon推断服务器；Mac mini M5 Pro(最高64 GB，起售价$1,699)和Mac Studio M5 Max(最高128 GB，起售价$2,499)为更大模型提供更多余量。通过[Ollama](https://ollama.ai)简化模型管理和服务。',
+          'Qwen 3.6 27B在Q4_K_M量子化下大约需要15.8 GB显存，可以运行在RTX 3090 (24 GB)、RTX 4080 (16 GB)或RTX 4090 (24 GB)上。Apple Silicon M3 Max配48 GB统合内存可通过MLX实现35-40令牌/秒的推断。苹果公司于2026年8月25日更新了Mac mini和Mac Studio产品线(2026年9月22日开始发售)：Mac mini M6(最高32 GB统合内存，起售价$899)可覆盖Qwen 3.6 27B约16 GB的显存需求(macOS占用8 GB后约有24 GB可用)，是最经济实惠的Apple Silicon推断服务器；Mac mini M5 Pro(最高64 GB，起售价$1,699)和Mac Studio M5 Max(最高128 GB，起售价$2,499)为更大模型提供更多余量。通过[Ollama](https://ollama.ai)简化模型管理和服务。',
           '初始硬件投资替代了云端API成本。在每天1000万令牌的典型5人开发团队场景下，Claude Sonnet 5成本为$30/天或约$900/月。RTX 4080系统成本约¥7,600，在这个使用量级别下仅需两个月即可收回投资。',
         ],
         items: [
@@ -1676,7 +1676,7 @@ dispatch_rules:
       description: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2：HumanEval、SWE-bench、每1M令牌成本、数据合规性和硬件要求的2026年完整对比。',
       author: { '@type': 'Organization', 'name': 'PromptQuorum' },
       datePublished: '2026-05-16',
-      dateModified: '2026-08-27',
+      dateModified: '2026-11-06',
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', 'name': 'Qwen 3.6 27B' },
@@ -1723,7 +1723,7 @@ dispatch_rules:
     intro: 'Qwen 3.6 27Bは16 GB VRAMでローカル実行して77.2% SWE-benchと92.1% HumanEvalを達成。Claude Sonnet 5はハードウェア不要で89.4% HumanEval。DeepSeek R2は$0.14/1Mトークンでフロンティア推論を実現。このガイドはベンチマーク、日本のAI規制対応、トークンコスト分析、そして2026年における単一モデル戦略の陳腐化をもたらすディスパッチレイヤー問題をカバーします。',
     metaDescription: 'Qwen 3.6 27B（92.1% HumanEval、16 GB VRAM）とClaude Sonnet 5（89.4%、$3/1M）、DeepSeek R2（$0.14/1M）を徹底比較。GDPR対応、コスト、ハードウェア要件を2026年データで検証。',
     publishDate: '2026-05-16',
-    dateModified: '2026-08-31',
+    dateModified: '2026-11-06',
     readTime: '10分で読める',
     educationalLevel: 'Intermediate',
     audience: 'ローカルLLMとクラウドLLMを選定する日本国内の開発チームとエンタープライズ',
@@ -1800,7 +1800,7 @@ dispatch_rules:
         content: [
           'Qwen 3.6 27B（Q4_K_M量子化）は16 GBのVRAMに収納可能。以下のハードウェアで実現：',
           '**コンシューマGPU（推奨）：** NVIDIA RTX 3090 Ti、RTX 4080、RTX 4090は全て16 GB以上のVRAM搭載。RTX 4090は高速推論推奨（入力→出力で5～8秒）。RTX 4090は2026年第2四半期に生産終了(EOL)となり、日本市場での参考価格は2,000～2,600ユーロ相当（EOL価格、2026年8月時点）。',
-          '**Apple Silicon：** Appleは2026年8月25日にMac miniとMac Studioのラインナップを刷新（発売は2026年9月22日）。Mac mini M6（統合メモリ最大32 GB、899ドルから）はQwen 3.6 27Bの約16 GB要件を十分にカバーする最もコストパフォーマンスの高い選択肢。Mac mini M5 Pro（統合メモリ最大64 GB、1,699ドルから）とMac Studio M5 Max（統合メモリ最大128 GB、2,499ドルから）はより大きなモデルや並行推論タスクに余裕を持たせる。日本国内価格はApple公式サイトで発売時に確認のこと。',
+          '**Apple Silicon：** Appleは2026年8月25日にMac miniとMac Studioのラインナップを刷新（発売は2026年9月22日）。Mac mini M6（統合メモリ最大32 GB、899ドルから）はQwen 3.6 27Bの約16 GB要件をカバーする（macOSが8 GBを使用し、約24 GBが利用可能）最もコストパフォーマンスの高い選択肢。Mac mini M5 Pro（統合メモリ最大64 GB、1,699ドルから）とMac Studio M5 Max（統合メモリ最大128 GB、2,499ドルから）はより大きなモデルや並行推論タスクに余裕を持たせる。日本国内価格はApple公式サイトで発売時に確認のこと。',
           '**サーバGPU：** NVIDIA L40SはClaude互換で16 GBメモリ。L40は48 GBで複数並行推論対応。エンタープライズでは、L40S×2（32 GB）で冗長性確保推奨。',
           '**量子化の影響：** Q4_K_M量子化はモデルサイズを~28 GBから16 GBに削減。品質低下は平均 -0.3～1.2ポイント。コーディングタスクではほぼ無視可能；長形式テキストではわずかな流暢性低下を観測。',
           '**電力構成：** RTX 4090（450W）のサーバは平均 800～1200W。日本の産業用電力レートは約 15～20円/kWh。24時間運用で月約 3,000～5,000円のエネルギーコスト。',
@@ -1994,7 +1994,7 @@ dispatchers:
       inLanguage: 'ja',
       image: 'https://www.promptquorum.com/images/og-qwen-vs-claude-vs-deepseek.webp',
       datePublished: '2026-05-16',
-      dateModified: '2026-08-31',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com?lang=ja' },
       about: [
@@ -2039,7 +2039,7 @@ dispatchers:
     intro: 'Qwen 3.6 27B는 16 GB VRAM 환경에서 로컬로 실행하여 SWE-bench 77.2%, HumanEval 92.1%를 달성합니다. Claude Sonnet 5는 하드웨어 요구 사항 없이 HumanEval 89.4%를 기록합니다. DeepSeek R2는 입력 토큰당 $0.14/1M이라는 최저 비용으로 최전선 추론 성능을 제공합니다. 이 비교 분석은 벤치마크 데이터, EU GDPR 관할권, 토큰당 비용 계산, 그리고 2026년에 단일 모델 선택을 더 이상 유효하지 않게 만드는 디스패치 레이어 문제를 다룹니다.',
     metaDescription: 'Qwen 3.6 27B(HumanEval 92.1%, 16 GB VRAM), Claude Sonnet 5(89.4%, $3/1M), DeepSeek R2($0.14/1M) 비교. 2026년 GDPR 준수, 비용, 하드웨어 분석.',
     publishDate: '2026-05-16',
-    dateModified: '2026-08-27',
+    dateModified: '2026-11-06',
     readTime: '10분 읽기',
     educationalLevel: 'Intermediate',
     audience: '프로덕션 워크플로에서 로컬 LLM과 클라우드 LLM 중 하나를 선택해야 하는 개발자 및 EU 팀',
@@ -2130,7 +2130,7 @@ dispatchers:
         id: 'hardware-reality',
         title: '하드웨어 현실 점검',
         content: [
-          'Qwen 3.6 27B는 Q4_K_M 양자화 기준 약 15.8 GB VRAM이 필요하며, RTX 3090(24 GB), RTX 4080(16 GB), 또는 RTX 4090(24 GB) 단일 GPU에서 실행됩니다. 48 GB 통합 메모리를 갖춘 Apple Silicon M3 Max는 MLX를 통해 초당 35~40 토큰의 속도를 냅니다. Apple은 2026년 8월 25일 Mac mini 및 Mac Studio 라인업을 새로 선보였습니다(2026년 9월 22일 출시): 최대 32 GB 통합 메모리를 갖춘 Mac mini M6(899달러부터)는 Qwen 3.6 27B의 ~16 GB 요구 사항을 여유 있게 충족하는 가장 비용 효율적인 Apple Silicon 추론 서버이며, 최대 64 GB의 Mac mini M5 Pro(1,699달러부터)와 최대 128 GB의 Mac Studio M5 Max(2,499달러부터)는 더 큰 모델을 위한 여유를 제공합니다. 간편한 모델 관리 및 서빙을 위해 [Ollama](https://ollama.ai)를 통해 배포하십시오.',
+          'Qwen 3.6 27B는 Q4_K_M 양자화 기준 약 15.8 GB VRAM이 필요하며, RTX 3090(24 GB), RTX 4080(16 GB), 또는 RTX 4090(24 GB) 단일 GPU에서 실행됩니다. 48 GB 통합 메모리를 갖춘 Apple Silicon M3 Max는 MLX를 통해 초당 35~40 토큰의 속도를 냅니다. Apple은 2026년 8월 25일 Mac mini 및 Mac Studio 라인업을 새로 선보였습니다(2026년 9월 22일 출시): 최대 32 GB 통합 메모리를 갖춘 Mac mini M6(899달러부터)는 Qwen 3.6 27B의 ~16 GB 요구 사항을 충족하는(macOS가 8 GB를 사용하면 약 24 GB 사용 가능) 가장 비용 효율적인 Apple Silicon 추론 서버이며, 최대 64 GB의 Mac mini M5 Pro(1,699달러부터)와 최대 128 GB의 Mac Studio M5 Max(2,499달러부터)는 더 큰 모델을 위한 여유를 제공합니다. 간편한 모델 관리 및 서빙을 위해 [Ollama](https://ollama.ai)를 통해 배포하십시오.',
           '초기 하드웨어 투자는 클라우드 API 비용을 대체합니다. 하루 1,000만 토큰(개발팀 5인 기준) 사용 시 Claude Sonnet 5의 비용은 하루 $30, 월 약 $900입니다. 하드웨어 비용 ~€1,200인 RTX 4080 시스템은 이 사용량에서 2개월 이내에 손익분기점에 도달합니다.',
         ],
         items: [

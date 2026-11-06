@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     parentArticle: '/local-llms/local-llm-hardware-guide',
     leadAnswerBlock: '**The Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU) is the best mini PC for an always-on Ollama server in 2026: runs 7B models at 12–18 tok/s CPU-only, draws 25–45 W under load, and fits inside a drawer.**',
     quickAnswerTop: {
@@ -85,7 +85,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 4,
             title: 'Apple Mac Mini M6 / M5 Pro — Best for macOS',
-            content: 'Apple refreshed the Mac Mini lineup on August 25, 2026, replacing the M4 generation. The Mac Mini M6 starts at $899 with up to 32 GB unified memory and 170 GB/s bandwidth. The Mac Mini M5 Pro starts at $1,699 with up to 64 GB unified memory, 307 GB/s bandwidth, and Thunderbolt 5. Both ship September 22, 2026. For an always-on Ollama server, the memory ceiling is what matters: 32 GB (M6) comfortably fits 7B–13B models with headroom for the OS, while 64 GB (M5 Pro) is what you need to load 30B-class models at Q4 without spilling to swap. No independent Ollama benchmarks exist yet for either chip — PromptQuorum has not tested this hardware, and tok/s figures will follow once real-world numbers are available.',
+            content: 'Apple refreshed the Mac Mini lineup on August 25, 2026, replacing the M4 generation. The Mac Mini M6 starts at $899 with up to 32 GB unified memory and 170 GB/s bandwidth. The Mac Mini M5 Pro starts at $1,699 with up to 64 GB unified memory, 307 GB/s bandwidth, and Thunderbolt 5. Both ship September 22, 2026. For an always-on Ollama server, the memory ceiling is what matters: 32 GB (M6) leaves about 24 GB after the 8 GB macOS needs, which fits 7B–13B models comfortably, while 64 GB (M5 Pro) is what you need to load 30B-class models at Q4 without spilling to swap. No independent Ollama benchmarks exist yet for either chip — PromptQuorum has not tested this hardware, and tok/s figures will follow once real-world numbers are available.',
             affiliateLinks: [
               { label: 'Apple Mac Mini M6 on Amazon', url: 'https://www.amazon.com/s?k=Mac+Mini+M6' },
               { label: 'Apple Mac Mini on Apple.com (M6 and M5 Pro configs)', url: 'https://www.apple.com/shop/buy-mac/mac-mini' },
@@ -162,7 +162,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M6 / M5 Pro', description: 'Best macOS — 32 GB (M6, $899) or 64 GB (M5 Pro, $1,699), ships Sept 22, 2026' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Best Mini PC for an Always-On Ollama Server (2026)', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'en' },
+    schema: { '@type': 'TechArticle', headline: 'Best Mini PC for an Always-On Ollama Server (2026)', datePublished: '2026-05-26', dateModified: '2026-11-06', url: 'https://www.promptquorum.com/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'en' },
   },
 
   de: {
@@ -178,7 +178,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     parentArticle: '/local-llms/local-llm-hardware-guide',
     leadAnswerBlock: '**Der Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU) ist 2026 der beste Mini-PC für einen Always-On-Ollama-Server: 7B-Modelle mit 12–18 Tok/s nur per CPU, 25–45 W unter Last und passt in eine Schublade.**',
     quickAnswerTop: {
@@ -244,7 +244,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 4,
             title: 'Apple Mac Mini M6 / M5 Pro — Bester macOS-Mini-PC',
-            content: 'Apple hat die Mac-Mini-Reihe am 25. August 2026 aufgefrischt und löst damit die M4-Generation ab. Der Mac Mini M6 startet bei 899 € mit bis zu 32 GB Unified Memory und 170 GB/s Bandbreite. Der Mac Mini M5 Pro startet bei 1699 € mit bis zu 64 GB Unified Memory, 307 GB/s Bandbreite und Thunderbolt 5. Beide sind ab dem 22. September 2026 lieferbar. Für einen dauerhaft laufenden Ollama-Server zählt vor allem die Speichergrenze: 32 GB (M6) reichen komfortabel für 7B–13B-Modelle, während 64 GB (M5 Pro) nötig sind, um 30B-Modelle bei Q4 ohne Swap zu laden. Für beide Chips liegen noch keine unabhängigen Ollama-Benchmarks vor — PromptQuorum hat diese Hardware nicht getestet.',
+            content: 'Apple hat die Mac-Mini-Reihe am 25. August 2026 aufgefrischt und löst damit die M4-Generation ab. Der Mac Mini M6 startet bei 899 € mit bis zu 32 GB Unified Memory und 170 GB/s Bandbreite. Der Mac Mini M5 Pro startet bei 1699 € mit bis zu 64 GB Unified Memory, 307 GB/s Bandbreite und Thunderbolt 5. Beide sind ab dem 22. September 2026 lieferbar. Für einen dauerhaft laufenden Ollama-Server zählt vor allem die Speichergrenze: 32 GB (M6) lassen nach den 8 GB für macOS etwa 24 GB nutzbar und reichen damit komfortabel für 7B–13B-Modelle, während 64 GB (M5 Pro) nötig sind, um 30B-Modelle bei Q4 ohne Swap zu laden. Für beide Chips liegen noch keine unabhängigen Ollama-Benchmarks vor — PromptQuorum hat diese Hardware nicht getestet.',
             affiliateLinks: [
               { label: 'Apple Mac Mini M6 bei Amazon.de', url: 'https://www.amazon.de/s?k=Mac+Mini+M6' },
               { label: 'Apple Mac Mini bei Apple.com (M6 und M5 Pro)', url: 'https://www.apple.com/de/shop/buy-mac/mac-mini' },
@@ -293,7 +293,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M6 / M5 Pro', description: 'Bester macOS-Mini-PC — 32 GB (M6, 899 €) oder 64 GB (M5 Pro, 1699 €), ab 22. September 2026' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Bester Mini-PC für Ollama-Server im Dauerbetrieb (2026)', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/de/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'de' },
+    schema: { '@type': 'TechArticle', headline: 'Bester Mini-PC für Ollama-Server im Dauerbetrieb (2026)', datePublished: '2026-05-26', dateModified: '2026-11-06', url: 'https://www.promptquorum.com/de/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'de' },
   },
 
   fr: {
@@ -309,7 +309,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     parentArticle: '/local-llms/local-llm-hardware-guide',
     leadAnswerBlock: '**Le Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 Go de RAM, iGPU Radeon 780M) est le meilleur mini PC pour un serveur Ollama always-on en 2026 : modèles 7B à 12–18 tok/s en CPU seul, 25–45 W sous charge, tient dans un tiroir.**',
     quickAnswerTop: {
@@ -375,7 +375,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 4,
             title: 'Apple Mac Mini M6 / M5 Pro — Meilleur pour macOS',
-            content: 'Apple a renouvelé la gamme Mac Mini le 25 août 2026, remplaçant la génération M4. Le Mac Mini M6 démarre à 899 € avec jusqu\'à 32 Go de mémoire unifiée et 170 Go/s de bande passante. Le Mac Mini M5 Pro démarre à 1699 € avec jusqu\'à 64 Go de mémoire unifiée, 307 Go/s de bande passante et Thunderbolt 5. Les deux sortent le 22 septembre 2026. Pour un serveur Ollama en continu, c\'est le plafond mémoire qui compte : 32 Go (M6) suffisent largement pour les modèles 7B–13B, tandis que 64 Go (M5 Pro) sont nécessaires pour charger des modèles 30B en Q4 sans swap. Aucun benchmark Ollama indépendant n\'existe encore pour ces deux puces — PromptQuorum n\'a pas testé ce matériel.',
+            content: 'Apple a renouvelé la gamme Mac Mini le 25 août 2026, remplaçant la génération M4. Le Mac Mini M6 démarre à 899 € avec jusqu\'à 32 Go de mémoire unifiée et 170 Go/s de bande passante. Le Mac Mini M5 Pro démarre à 1699 € avec jusqu\'à 64 Go de mémoire unifiée, 307 Go/s de bande passante et Thunderbolt 5. Les deux sortent le 22 septembre 2026. Pour un serveur Ollama en continu, c\'est le plafond mémoire qui compte : 32 Go (M6) laissent environ 24 Go après les 8 Go de macOS, ce qui suffit largement pour les modèles 7B–13B, tandis que 64 Go (M5 Pro) sont nécessaires pour charger des modèles 30B en Q4 sans swap. Aucun benchmark Ollama indépendant n\'existe encore pour ces deux puces — PromptQuorum n\'a pas testé ce matériel.',
             affiliateLinks: [
               { label: 'Apple Mac Mini M6 sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Mac+Mini+M6' },
               { label: 'Apple Mac Mini sur Apple.com (configs M6 et M5 Pro)', url: 'https://www.apple.com/fr/shop/buy-mac/mac-mini' },
@@ -420,7 +420,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M6 / M5 Pro', description: 'Meilleur macOS — 32 Go (M6, 899 €) ou 64 Go (M5 Pro, 1699 €), dès le 22 sept. 2026' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Meilleur mini PC pour un serveur Ollama en continu (2026)', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/fr/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'fr' },
+    schema: { '@type': 'TechArticle', headline: 'Meilleur mini PC pour un serveur Ollama en continu (2026)', datePublished: '2026-05-26', dateModified: '2026-11-06', url: 'https://www.promptquorum.com/fr/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'fr' },
   },
 
   ja: {
@@ -436,7 +436,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     parentArticle: '/local-llms/local-llm-hardware-guide',
     leadAnswerBlock: '**Minisforum UM890 Pro（AMD Ryzen 9 8945HS、32〜96GB RAM、Radeon 780M内蔵GPU）は2026年の常時稼働Ollamaサーバー向けミニPCとして最良の選択です：7BモデルをCPUのみで12〜18トークン/秒、負荷時25〜45W、引き出しに収まるサイズ。**',
     quickAnswerTop: {
@@ -502,7 +502,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 4,
             title: 'Apple Mac Mini M6 / M5 Pro — macOS最良',
-            content: 'Appleは2026年8月25日にMac Miniシリーズを刷新し、M4世代を置き換えました。Mac Mini M6は約13万円から、最大32GB統合メモリ、170GB/s帯域幅。Mac Mini M5 Proは約26万円から、最大64GB統合メモリ、307GB/s帯域幅、Thunderbolt 5対応。両モデルとも2026年9月22日発売。常時稼働Ollamaサーバーではメモリ上限が重要です：32GB（M6）は7B〜13Bモデルに十分な余裕がありますが、30B級モデルをQ4でスワップなしに読み込むには64GB（M5 Pro）が必要です。両チップとも独立系のOllamaベンチマークはまだ存在せず、PromptQuorumはこのハードウェアを検証していません。',
+            content: 'Appleは2026年8月25日にMac Miniシリーズを刷新し、M4世代を置き換えました。Mac Mini M6は約13万円から、最大32GB統合メモリ、170GB/s帯域幅。Mac Mini M5 Proは約26万円から、最大64GB統合メモリ、307GB/s帯域幅、Thunderbolt 5対応。両モデルとも2026年9月22日発売。常時稼働Ollamaサーバーではメモリ上限が重要です：32GB（M6）はmacOS用の8GBを除いて約24GBが使えるため、7B〜13Bモデルに十分な余裕がありますが、30B級モデルをQ4でスワップなしに読み込むには64GB（M5 Pro）が必要です。両チップとも独立系のOllamaベンチマークはまだ存在せず、PromptQuorumはこのハードウェアを検証していません。',
             affiliateLinks: [
               { label: 'Apple Mac Mini M6 をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Mac+Mini+M6' },
               { label: 'Apple公式サイトでMac Mini（M6・M5 Pro）を確認', url: 'https://www.apple.com/jp/shop/buy-mac/mac-mini' },
@@ -547,7 +547,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M6 / M5 Pro', description: 'macOS最良 — 32GB（M6、約13万円）または64GB（M5 Pro、約26万円）、2026年9月22日発売' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '常時稼働Ollamaサーバー向けミニPC最おすすめ（2026年）', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/ja/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ja' },
+    schema: { '@type': 'TechArticle', headline: '常時稼働Ollamaサーバー向けミニPC最おすすめ（2026年）', datePublished: '2026-05-26', dateModified: '2026-11-06', url: 'https://www.promptquorum.com/ja/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ja' },
   },
 
   es: {
@@ -563,7 +563,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     parentArticle: '/local-llms/local-llm-hardware-guide',
     leadAnswerBlock: '**El Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU) es el mejor mini PC para servidor Ollama siempre encendido en 2026: ejecuta modelos 7B a 12–18 tok/s solo CPU, consume 25–45 W bajo carga, cabe en un cajón.**',
     quickAnswerTop: {
@@ -646,7 +646,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M6 / M5 Pro', description: 'Mejor macOS — 32 GB (M6, $899) o 64 GB (M5 Pro, $1,699), desde el 22 sept. 2026' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Mejor Mini PC para Servidor Ollama Always-On 2026', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/es/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'es' },
+    schema: { '@type': 'TechArticle', headline: 'Mejor Mini PC para Servidor Ollama Always-On 2026', datePublished: '2026-05-26', dateModified: '2026-11-06', url: 'https://www.promptquorum.com/es/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'es' },
   },
   pt: {
     designSkin: 'hub',
@@ -661,7 +661,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     parentArticle: '/local-llms/local-llm-hardware-guide',
     leadAnswerBlock: '**O Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU) é o melhor mini PC para um servidor Ollama sempre ligado em 2026: executa modelos 7B a 12–18 tok/s somente com CPU, consome 25–45 W sob carga, cabe numa gaveta.**',
     quickAnswerTop: {
@@ -744,7 +744,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M6 / M5 Pro', description: 'Melhor macOS — 32 GB (M6, $899) ou 64 GB (M5 Pro, $1.699), a partir de 22 set. 2026' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Melhor Mini PC para Servidor Ollama Sempre Ligado 2026', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/pt/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'pt-BR' },
+    schema: { '@type': 'TechArticle', headline: 'Melhor Mini PC para Servidor Ollama Sempre Ligado 2026', datePublished: '2026-05-26', dateModified: '2026-11-06', url: 'https://www.promptquorum.com/pt/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'pt-BR' },
   },
   zh: {
     designSkin: 'hub',
@@ -759,7 +759,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     parentArticle: '/local-llms/local-llm-hardware-guide',
     leadAnswerBlock: '**铭凡UM890 Pro（AMD Ryzen 9 8945HS、32–96GB内存、Radeon 780M核显）是2026年常驻Ollama服务器最佳迷你PC：纯CPU运行7B模型12–18 tok/s，负载功耗25–45W，能放进抽屉。**',
     quickAnswerTop: {
@@ -826,7 +826,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 4,
             title: 'Apple Mac Mini M6 / M5 Pro — 最佳macOS选择',
-            content: 'Apple于2026年8月25日更新了Mac Mini系列，取代了M4世代。Mac Mini M6起售价约6300元，最高32GB统一内存，170GB/s带宽。Mac Mini M5 Pro起售价约11900元，最高64GB统一内存，307GB/s带宽，支持Thunderbolt 5。两款均于2026年9月22日上市。对于常驻Ollama服务器来说，内存上限才是关键：32GB（M6）足以舒适运行7B–13B模型，而要在不使用交换内存的情况下以Q4精度加载30B级模型，需要64GB（M5 Pro）。目前两款芯片均无独立的Ollama基准测试数据——PromptQuorum尚未测试过这款硬件。',
+            content: 'Apple于2026年8月25日更新了Mac Mini系列，取代了M4世代。Mac Mini M6起售价约6300元，最高32GB统一内存，170GB/s带宽。Mac Mini M5 Pro起售价约11900元，最高64GB统一内存，307GB/s带宽，支持Thunderbolt 5。两款均于2026年9月22日上市。对于常驻Ollama服务器来说，内存上限才是关键：32GB（M6）在扣除macOS所需的8GB后约有24GB可用，足以舒适运行7B–13B模型，而要在不使用交换内存的情况下以Q4精度加载30B级模型，需要64GB（M5 Pro）。目前两款芯片均无独立的Ollama基准测试数据——PromptQuorum尚未测试过这款硬件。',
             affiliateLinks: [
               { label: '在京东查看Apple Mac Mini M6', url: 'https://search.jd.com/Search?keyword=Mac+Mini+M6' },
               { label: '在Apple官网查看Mac Mini（M6及M5 Pro）', url: 'https://www.apple.com.cn/shop/buy-mac/mac-mini' },
@@ -880,7 +880,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M6 / M5 Pro', description: '最佳macOS — 32GB（M6，约6300元）或64GB（M5 Pro，约11900元），2026年9月22日上市' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026年Ollama常驻服务器最佳迷你电脑推荐', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/zh/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'zh' },
+    schema: { '@type': 'TechArticle', headline: '2026年Ollama常驻服务器最佳迷你电脑推荐', datePublished: '2026-05-26', dateModified: '2026-11-06', url: 'https://www.promptquorum.com/zh/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'zh' },
   },
   ar: {
     designSkin: 'hub',
@@ -895,7 +895,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     parentArticle: '/local-llms/local-llm-hardware-guide',
     leadAnswerBlock: '**Minisforum UM890 Pro (AMD Ryzen 9 8945HS، 32–96 GB RAM، Radeon 780M iGPU) هو أفضل جهاز كمبيوتر مصغر لخادم Ollama الدائم التشغيل في 2026: يشغّل نماذج 7B بـ12–18 رمز/ثانية عبر CPU فقط، ويستهلك 25–45 W تحت الحمل، ويكفي حجم درج صغير.**',
     quickAnswerTop: {
@@ -978,7 +978,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M6 / M5 Pro', description: 'الأفضل لـmacOS — 32 GB (M6، ‎$899) أو 64 GB (M5 Pro، ‎$1,699)، من 22 سبتمبر 2026' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'أفضل جهاز كمبيوتر مصغر لخادم Ollama الدائم التشغيل 2026', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/ar/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ar' },
+    schema: { '@type': 'TechArticle', headline: 'أفضل جهاز كمبيوتر مصغر لخادم Ollama الدائم التشغيل 2026', datePublished: '2026-05-26', dateModified: '2026-11-06', url: 'https://www.promptquorum.com/ar/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ar' },
   },
   ko: {
     designSkin: 'hub',
@@ -993,7 +993,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     parentArticle: '/local-llms/local-llm-hardware-guide',
     leadAnswerBlock: '**Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU)는 2026년 Ollama 상시 서버용 최고의 미니 PC입니다. CPU만으로 7B 모델을 12–18 tok/s 속도로 실행하며, 부하 시 소비 전력은 25–45 W에 불과하고 서랍 안에도 들어갑니다.**',
     quickAnswerTop: {
@@ -1073,7 +1073,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 4,
             title: 'Apple Mac Mini M6 / M5 Pro — macOS 최고 선택',
-            content: 'Apple은 2026년 8월 25일 Mac mini 라인업을 새로 선보이며 M4 세대를 대체했습니다. Mac Mini M6는 $899부터 시작하며 최대 32 GB 통합 메모리, 170 GB/s 대역폭을 제공합니다. Mac Mini M5 Pro는 $1,699부터 시작하며 최대 64 GB 통합 메모리, 307 GB/s 대역폭, Thunderbolt 5를 지원합니다. 두 모델 모두 2026년 9월 22일 출시됩니다. 상시 가동 Ollama 서버에서는 메모리 상한선이 관건입니다. 32 GB(M6)는 7B–13B 모델에 여유롭게 충분하지만, 30B급 모델을 Q4로 스왑 없이 적재하려면 64 GB(M5 Pro)가 필요합니다. 두 칩 모두 아직 독립적인 Ollama 벤치마크가 존재하지 않으며, PromptQuorum은 이 하드웨어를 테스트하지 않았습니다.',
+            content: 'Apple은 2026년 8월 25일 Mac mini 라인업을 새로 선보이며 M4 세대를 대체했습니다. Mac Mini M6는 $899부터 시작하며 최대 32 GB 통합 메모리, 170 GB/s 대역폭을 제공합니다. Mac Mini M5 Pro는 $1,699부터 시작하며 최대 64 GB 통합 메모리, 307 GB/s 대역폭, Thunderbolt 5를 지원합니다. 두 모델 모두 2026년 9월 22일 출시됩니다. 상시 가동 Ollama 서버에서는 메모리 상한선이 관건입니다. 32 GB(M6)는 macOS용 8 GB를 제외하고 약 24 GB를 쓸 수 있어 7B–13B 모델에 여유롭게 충분하지만, 30B급 모델을 Q4로 스왑 없이 적재하려면 64 GB(M5 Pro)가 필요합니다. 두 칩 모두 아직 독립적인 Ollama 벤치마크가 존재하지 않으며, PromptQuorum은 이 하드웨어를 테스트하지 않았습니다.',
             affiliateLinks: [
               { label: 'Amazon에서 Mac Mini M6 보기', url: 'https://www.amazon.com/s?k=Mac+Mini+M6' },
               { label: 'Apple에서 Mac Mini(M6·M5 Pro) 보기', url: 'https://www.apple.com/mac-mini/' },
@@ -1145,6 +1145,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 3, name: '2026년 Ollama 상시 서버용 최고의 미니 PC 추천', item: '[www.promptquorum.com/ko/prompt-bites/best-mini-pc-for-ollama-server-always-on](https://www.promptquorum.com/ko/prompt-bites/best-mini-pc-for-ollama-server-always-on)' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026년 Ollama 상시 서버용 최고의 미니 PC 추천', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/ko/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ko' },
+    schema: { '@type': 'TechArticle', headline: '2026년 Ollama 상시 서버용 최고의 미니 PC 추천', datePublished: '2026-05-26', dateModified: '2026-11-06', url: 'https://www.promptquorum.com/ko/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ko' },
   },
 }

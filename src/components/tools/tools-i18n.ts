@@ -300,6 +300,13 @@ const TOOLS_UI = {
     ja: 'VRAM／ユニファイドメモリ（GB）', zh: 'VRAM／统一内存（GB）', es: 'VRAM / memoria unificada (GB)',
     pt: 'VRAM / memória unificada (GB)', ar: 'VRAM / الذاكرة الموحدة (GB)', ko: 'VRAM / 통합 메모리 (GB)',
   },
+  formMacLabel: {
+    en: "I'm on a Mac (8 GB reserved for macOS)", de: 'Ich nutze einen Mac (8 GB für macOS reserviert)',
+    fr: "J'utilise un Mac (8 Go réservés à macOS)", ja: 'Macを使用（macOS用に8GBを確保）',
+    zh: '我使用 Mac（为 macOS 预留 8GB）', es: 'Uso un Mac (8 GB reservados para macOS)',
+    pt: 'Uso um Mac (8 GB reservados para o macOS)', ar: 'أستخدم جهاز Mac (حجز 8 GB لنظام macOS)',
+    ko: 'Mac 사용 (macOS용 8GB 확보)',
+  },
   formSubmit: {
     en: 'Find apps', de: 'Apps finden', fr: 'Rechercher', ja: '検索する', zh: '开始查找',
     es: 'Buscar', pt: 'Buscar', ar: 'ابحث', ko: '찾기',

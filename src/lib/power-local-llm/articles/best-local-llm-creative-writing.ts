@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-27',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     title: 'Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding',
@@ -218,7 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             Context: '256K',
           },
           {
-            'Your memory': '48 GB or more',
+            'Your memory': '48 GB GPU / 64 GB Mac',
             Model: 'Llama 3.3 70B (`llama3.3:70b`)',
             Weights: '~43 GB',
             Context: '128K',
@@ -227,7 +227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'On a 32 GB Mac, unified memory is shared with macOS. Plan for roughly 24 GB usable for the model plus context, which keeps Gemma 4 31B and Qwen3.8-27B comfortable.',
+            text: 'On a 32 GB Mac, unified memory is shared with macOS. Plan for roughly 24 GB usable for the model plus context, which fits Gemma 4 31B and Qwen3.8-27B with about 4–6 GB left for context.',
           },
         ],
       },
@@ -539,7 +539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What is the best local model with 32 GB of VRAM or unified memory?',
-            a: 'Gemma 4 31B (19–20 GB) or Qwen3.8-27B (18 GB) with a larger context window; the extra memory over 24 GB pays for the KV cache. Gemma 4 26B-A4B is the faster alternative. A 70B model does not fit comfortably below 48 GB.',
+            a: 'Gemma 4 31B (19–20 GB) or Qwen3.8-27B (18 GB) with a larger context window; the extra memory over 24 GB pays for the KV cache. Gemma 4 26B-A4B is the faster alternative. A 70B model does not fit comfortably below 48 GB (64 GB on a Mac, since macOS keeps 8 GB).',
           },
           {
             q: 'What is an uncensored local LLM and when should I use one?',
@@ -588,7 +588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-27',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     title: 'Beste lokale LLMs für kreatives Schreiben (2026): Belletristik, Dialog & Weltenbau',
@@ -797,7 +797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             Kontext: '256K',
           },
           {
-            'Dein Speicher': 'Ab 48 GB',
+            'Dein Speicher': '48-GB-GPU / 64-GB-Mac',
             Modell: 'Llama 3.3 70B (`llama3.3:70b`)',
             Gewichte: '~43 GB',
             Kontext: '128K',
@@ -806,7 +806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Beim 32-GB-Mac teilt sich der Unified Memory mit macOS. Rechne mit etwa 24 GB nutzbar für Modell plus Kontext; damit laufen Gemma 4 31B und Qwen3.8-27B komfortabel.',
+            text: 'Beim 32-GB-Mac teilt sich der Unified Memory mit macOS. Rechne mit etwa 24 GB nutzbar für Modell plus Kontext; damit laufen Gemma 4 31B und Qwen3.8-27B, mit etwa 4–6 GB Rest für den Kontext.',
           },
         ],
       },
@@ -1118,7 +1118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was ist das beste lokale Modell mit 32 GB VRAM oder Unified Memory?',
-            a: 'Gemma 4 31B (19–20 GB) oder Qwen3.8-27B (18 GB) mit größerem Kontextfenster; der Mehrspeicher gegenüber 24 GB bezahlt den KV-Cache. Gemma 4 26B-A4B ist die schnellere Alternative. Ein 70B-Modell passt unter 48 GB nicht komfortabel.',
+            a: 'Gemma 4 31B (19–20 GB) oder Qwen3.8-27B (18 GB) mit größerem Kontextfenster; der Mehrspeicher gegenüber 24 GB bezahlt den KV-Cache. Gemma 4 26B-A4B ist die schnellere Alternative. Ein 70B-Modell passt unter 48 GB nicht komfortabel (auf einem Mac 64 GB, da macOS 8 GB belegt).',
           },
           {
             q: 'Was ist ein uncensored lokales LLM und wann sollte ich eines nutzen?',
@@ -1167,7 +1167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-27',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     title: 'Meilleurs LLM locaux pour l\'écriture créative (2026) : fiction, dialogue et worldbuilding',
@@ -1376,7 +1376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             Contexte: '256K',
           },
           {
-            'Votre mémoire': '48 Go et plus',
+            'Votre mémoire': 'GPU 48 Go / Mac 64 Go',
             'Modèle': 'Llama 3.3 70B (`llama3.3:70b`)',
             Poids: '~43 Go',
             Contexte: '128K',
@@ -1385,7 +1385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Sur un Mac de 32 Go, la mémoire unifiée est partagée avec macOS. Comptez environ 24 Go utilisables pour le modèle et le contexte, ce qui laisse Gemma 4 31B et Qwen3.8-27B à l\'aise.',
+            text: 'Sur un Mac de 32 Go, la mémoire unifiée est partagée avec macOS. Comptez environ 24 Go utilisables pour le modèle et le contexte, ce qui fait tenir Gemma 4 31B et Qwen3.8-27B avec environ 4–6 Go restants pour le contexte.',
           },
         ],
       },
@@ -1697,7 +1697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quel est le meilleur modèle local avec 32 Go de VRAM ou de mémoire unifiée ?',
-            a: 'Gemma 4 31B (19–20 Go) ou Qwen3.8-27B (18 Go) avec une fenêtre de contexte plus grande ; la mémoire supplémentaire par rapport à 24 Go finance le cache KV. Gemma 4 26B-A4B est l\'alternative plus rapide. Un modèle 70B ne tient pas confortablement sous 48 Go.',
+            a: 'Gemma 4 31B (19–20 Go) ou Qwen3.8-27B (18 Go) avec une fenêtre de contexte plus grande ; la mémoire supplémentaire par rapport à 24 Go finance le cache KV. Gemma 4 26B-A4B est l\'alternative plus rapide. Un modèle 70B ne tient pas confortablement sous 48 Go (64 Go sur un Mac, macOS en réservant 8 Go).',
           },
           {
             q: 'Qu\'est-ce qu\'un LLM local uncensored et quand en utiliser un ?',
@@ -1746,7 +1746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-27',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     title: '創作向けベストローカルLLM（2026年）：小説・対話・世界観構築',
@@ -1955,7 +1955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'コンテキスト': '256K',
           },
           {
-            'メモリ': '48GB以上',
+            'メモリ': '48GB GPU / 64GB Mac',
             'モデル': 'Llama 3.3 70B（`llama3.3:70b`）',
             '重み': '約43GB',
             'コンテキスト': '128K',
@@ -1964,7 +1964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '32GBのMacではユニファイドメモリをmacOSと共有します。モデルとコンテキストに使えるのは約24GBと見込むと、Gemma 4 31BとQwen3.8-27Bが余裕を持って動きます。',
+            text: '32GBのMacではユニファイドメモリをmacOSと共有します。モデルとコンテキストに使えるのは約24GBと見込むと、Gemma 4 31BとQwen3.8-27Bが動き、コンテキスト用に約4〜6GBが残ります。',
           },
         ],
       },
@@ -2276,7 +2276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'VRAMまたはユニファイドメモリ32GBでの最適なローカルモデルは？',
-            a: 'Gemma 4 31B（19〜20GB）またはQwen3.8-27B（18GB）を広めのコンテキストウィンドウで使います。24GBを超える分のメモリがKVキャッシュに回ります。Gemma 4 26B-A4Bはより高速な代替です。70Bモデルは48GB未満では快適に収まりません。',
+            a: 'Gemma 4 31B（19〜20GB）またはQwen3.8-27B（18GB）を広めのコンテキストウィンドウで使います。24GBを超える分のメモリがKVキャッシュに回ります。Gemma 4 26B-A4Bはより高速な代替です。70Bモデルは48GB未満では快適に収まりません（MacではmacOSが8GBを使うため64GBが目安です）。',
           },
           {
             q: 'uncensoredなローカルLLMとは何で、いつ使うべきですか？',
@@ -2325,7 +2325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-27',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     title: '2026年创意写作最佳本地LLM：小说、对话与世界观构建',
@@ -2534,7 +2534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '上下文': '256K',
           },
           {
-            '你的内存': '48GB及以上',
+            '你的内存': '48GB显卡 / 64GB Mac',
             '模型': 'Llama 3.3 70B（`llama3.3:70b`）',
             '权重': '约43GB',
             '上下文': '128K',
@@ -2543,7 +2543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '32GB的Mac上，统一内存与macOS共享。模型加上下文大约可用24GB，这样Gemma 4 31B和Qwen3.8-27B都能从容运行。',
+            text: '32GB的Mac上，统一内存与macOS共享。模型加上下文大约可用24GB，这样Gemma 4 31B和Qwen3.8-27B都能运行，约剩4–6GB用于上下文。',
           },
         ],
       },
@@ -2855,7 +2855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '32GB显存或统一内存下最好的本地模型是哪个？',
-            a: 'Gemma 4 31B（19–20GB）或Qwen3.8-27B（18GB），配合更大的上下文窗口；比24GB多出来的内存用于KV缓存。Gemma 4 26B-A4B是更快的替代。70B模型在48GB以下放不舒服。',
+            a: 'Gemma 4 31B（19–20GB）或Qwen3.8-27B（18GB），配合更大的上下文窗口；比24GB多出来的内存用于KV缓存。Gemma 4 26B-A4B是更快的替代。70B模型在48GB以下放不舒服（Mac上因macOS占用8GB，需要64GB）。',
           },
           {
             q: '什么是uncensored本地LLM，什么时候该用？',
@@ -2904,7 +2904,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-27',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     title: 'Mejores LLM locales para escritura creativa (2026): ficción, diálogo y worldbuilding',
@@ -3113,7 +3113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             Contexto: '256K',
           },
           {
-            'Tu memoria': '48 GB o más',
+            'Tu memoria': 'GPU 48 GB / Mac 64 GB',
             Modelo: 'Llama 3.3 70B (`llama3.3:70b`)',
             Pesos: '~43 GB',
             Contexto: '128K',
@@ -3122,7 +3122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'En un Mac de 32 GB, la memoria unificada se comparte con macOS. Cuenta con unos 24 GB utilizables para modelo y contexto, con lo que Gemma 4 31B y Qwen3.8-27B van con holgura.',
+            text: 'En un Mac de 32 GB, la memoria unificada se comparte con macOS. Cuenta con unos 24 GB utilizables para modelo y contexto, con lo que caben Gemma 4 31B y Qwen3.8-27B, con unos 4–6 GB restantes para el contexto.',
           },
         ],
       },
@@ -3434,7 +3434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuál es el mejor modelo local con 32 GB de VRAM o memoria unificada?',
-            a: 'Gemma 4 31B (19–20 GB) o Qwen3.8-27B (18 GB) con una ventana de contexto mayor; la memoria extra sobre 24 GB paga la caché KV. Gemma 4 26B-A4B es la alternativa más rápida. Un modelo de 70B no cabe con comodidad por debajo de 48 GB.',
+            a: 'Gemma 4 31B (19–20 GB) o Qwen3.8-27B (18 GB) con una ventana de contexto mayor; la memoria extra sobre 24 GB paga la caché KV. Gemma 4 26B-A4B es la alternativa más rápida. Un modelo de 70B no cabe con comodidad por debajo de 48 GB (64 GB en un Mac, porque macOS reserva 8 GB).',
           },
           {
             q: '¿Qué es un LLM local uncensored y cuándo debería usar uno?',
@@ -3483,7 +3483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-27',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     title: 'Melhores LLMs locais para escrita criativa (2026): ficção, diálogo e worldbuilding',
@@ -3692,7 +3692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             Contexto: '256K',
           },
           {
-            'Sua memória': '48 GB ou mais',
+            'Sua memória': 'GPU 48 GB / Mac 64 GB',
             Modelo: 'Llama 3.3 70B (`llama3.3:70b`)',
             Pesos: '~43 GB',
             Contexto: '128K',
@@ -3701,7 +3701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Em um Mac de 32 GB, a memória unificada é compartilhada com o macOS. Conte com cerca de 24 GB utilizáveis para modelo e contexto, o que deixa o Gemma 4 31B e o Qwen3.8-27B confortáveis.',
+            text: 'Em um Mac de 32 GB, a memória unificada é compartilhada com o macOS. Conte com cerca de 24 GB utilizáveis para modelo e contexto, o que comporta o Gemma 4 31B e o Qwen3.8-27B, com cerca de 4–6 GB restantes para o contexto.',
           },
         ],
       },
@@ -4013,7 +4013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual é o melhor modelo local com 32 GB de VRAM ou memória unificada?',
-            a: 'Gemma 4 31B (19–20 GB) ou Qwen3.8-27B (18 GB) com uma janela de contexto maior; a memória extra além de 24 GB paga o cache KV. O Gemma 4 26B-A4B é a alternativa mais rápida. Um modelo de 70B não cabe confortavelmente abaixo de 48 GB.',
+            a: 'Gemma 4 31B (19–20 GB) ou Qwen3.8-27B (18 GB) com uma janela de contexto maior; a memória extra além de 24 GB paga o cache KV. O Gemma 4 26B-A4B é a alternativa mais rápida. Um modelo de 70B não cabe confortavelmente abaixo de 48 GB (64 GB em um Mac, porque o macOS reserva 8 GB).',
           },
           {
             q: 'O que é um LLM local uncensored e quando devo usar um?',
@@ -4062,7 +4062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-27',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     title: 'أفضل نماذج LLM المحلية للكتابة الإبداعية (2026): الخيال والحوار وبناء العوالم',
@@ -4271,7 +4271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'السياق': '256K',
           },
           {
-            'ذاكرتك': '48 جيجابايت أو أكثر',
+            'ذاكرتك': 'بطاقة 48 جيجابايت / ماك 64 جيجابايت',
             'النموذج': 'Llama 3.3 70B (`llama3.3:70b`)',
             'الأوزان': '~43 جيجابايت',
             'السياق': '128K',
@@ -4280,7 +4280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'في جهاز ماك بسعة 32 جيجابايت تُشارَك الذاكرة الموحّدة مع macOS. احسب نحو 24 جيجابايت قابلة للاستخدام للنموذج والسياق، وبذلك يعمل نموذجا Gemma 4 31B وQwen3.8-27B براحة.',
+            text: 'في جهاز ماك بسعة 32 جيجابايت تُشارَك الذاكرة الموحّدة مع macOS. احسب نحو 24 جيجابايت قابلة للاستخدام للنموذج والسياق، وبذلك يعمل نموذجا Gemma 4 31B وQwen3.8-27B مع بقاء نحو 4–6 جيجابايت للسياق.',
           },
         ],
       },
@@ -4592,7 +4592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما أفضل نموذج محلي مع 32 جيجابايت من VRAM أو الذاكرة الموحّدة؟',
-            a: 'نموذج Gemma 4 31B (‏19–20 جيجابايت) أو نموذج Qwen3.8-27B (‏18 جيجابايت) مع نافذة سياق أكبر؛ فالذاكرة الإضافية فوق 24 جيجابايت تدفع كلفة ذاكرة KV المؤقتة. ونموذج Gemma 4 26B-A4B بديل أسرع. نموذج 70B لا يتسع براحة دون 48 جيجابايت.',
+            a: 'نموذج Gemma 4 31B (‏19–20 جيجابايت) أو نموذج Qwen3.8-27B (‏18 جيجابايت) مع نافذة سياق أكبر؛ فالذاكرة الإضافية فوق 24 جيجابايت تدفع كلفة ذاكرة KV المؤقتة. ونموذج Gemma 4 26B-A4B بديل أسرع. نموذج 70B لا يتسع براحة دون 48 جيجابايت (و64 جيجابايت على جهاز Mac لأن macOS يحجز 8 جيجابايت).',
           },
           {
             q: 'ما هو LLM المحلي uncensored ومتى أستخدمه؟',
@@ -4641,7 +4641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-27',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     title: '2026년 창작 글쓰기를 위한 최고의 로컬 LLM: 소설, 대화, 세계관 구축',
@@ -4850,7 +4850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '컨텍스트': '256K',
           },
           {
-            '내 메모리': '48GB 이상',
+            '내 메모리': '48GB GPU / 64GB Mac',
             '모델': 'Llama 3.3 70B(`llama3.3:70b`)',
             '가중치': '~43GB',
             '컨텍스트': '128K',
@@ -4859,7 +4859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '32GB Mac에서는 통합 메모리를 macOS와 공유합니다. 모델과 컨텍스트에 쓸 수 있는 양을 약 24GB로 잡으면 Gemma 4 31B와 Qwen3.8-27B가 여유 있게 돌아갑니다.',
+            text: '32GB Mac에서는 통합 메모리를 macOS와 공유합니다. 모델과 컨텍스트에 쓸 수 있는 양을 약 24GB로 잡으면 Gemma 4 31B와 Qwen3.8-27B가 돌아가며 컨텍스트용으로 약 4–6GB가 남습니다.',
           },
         ],
       },
@@ -5171,7 +5171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'VRAM 또는 통합 메모리 32GB에서 가장 좋은 로컬 모델은 무엇입니까?',
-            a: 'Gemma 4 31B(19–20GB) 또는 Qwen3.8-27B(18GB)를 더 큰 컨텍스트 창으로 쓰세요. 24GB를 넘는 메모리는 KV 캐시에 쓰입니다. Gemma 4 26B-A4B는 더 빠른 대안입니다. 70B 모델은 48GB 미만에서는 여유 있게 들어가지 않습니다.',
+            a: 'Gemma 4 31B(19–20GB) 또는 Qwen3.8-27B(18GB)를 더 큰 컨텍스트 창으로 쓰세요. 24GB를 넘는 메모리는 KV 캐시에 쓰입니다. Gemma 4 26B-A4B는 더 빠른 대안입니다. 70B 모델은 48GB 미만에서는 여유 있게 들어가지 않습니다(Mac에서는 macOS가 8GB를 사용하므로 64GB가 필요합니다).',
           },
           {
             q: 'uncensored 로컬 LLM이란 무엇이며 언제 써야 합니까?',
@@ -5223,7 +5223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-local-llm-creative-writing',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
-      dateModified: '2026-10-27',
+      dateModified: '2026-11-06',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
