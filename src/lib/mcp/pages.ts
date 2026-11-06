@@ -154,7 +154,7 @@ export function htmlToText(html: string): { title: string; text: string } {
     .replace(/<[^>]+>/g, ' ')
   const clean = decode(text)
     .split('\n')
-    .map((l) => l.replace(/[ \t ]+/g, ' ').trim())
+    .map((l) => l.replace(/[ \t\u00a0]+/g, ' ').trim())
     .filter(Boolean)
     .join('\n')
   return { title, text: clean }
