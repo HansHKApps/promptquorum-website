@@ -97,7 +97,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       unifiedVsVram: {
         id: 'unified-vs-vram',
         title: 'Is Unified Memory the Same as VRAM?',
-        content: 'Yes — on Apple Silicon, unified memory *is* the GPU\'s VRAM. There is no separate, fixed VRAM pool like on a discrete GPU. The CPU, GPU, and Neural Engine on an M-series chip read and write the same physical memory, so nearly the entire unified memory pool — not a fraction of it — is available to the GPU for running an LLM, once at least 8GB is set aside for macOS.',
+        content: 'Yes — on Apple Silicon, unified memory *is* the GPU\'s VRAM. There is no separate, fixed VRAM pool like on a discrete GPU. The CPU, GPU, and Neural Engine on an M-series chip read and write the same physical memory, so nearly the entire unified memory pool — not a fraction of it — is available to the GPU for running an LLM, once at least 8GB is set aside for macOS. macOS also applies a default GPU memory limit, roughly two-thirds to three-quarters of total RAM depending on size (it can be raised), so treat total minus 8GB as an upper bound, not a guarantee.',
         items: [
           'Discrete GPU (RTX 4070): 12GB VRAM is a hard ceiling for model weights, even if the PC has 64GB of separate system RAM.',
           'Apple Silicon: the GPU can address the full unified memory pool minus at least 8GB for macOS — a 64GB Mac gives the GPU ~56GB, not a fixed 12–24GB VRAM slice.',
@@ -341,7 +341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       unifiedVsVram: {
         id: 'unified-vs-vram',
         title: '¿Es la memoria unificada lo mismo que la VRAM?',
-        content: 'Sí — en Apple Silicon, la memoria unificada *es* la VRAM de la GPU. No existe un conjunto de VRAM fijo y separado como en una GPU discreta. La CPU, la GPU y el Neural Engine de un chip serie M leen y escriben en la misma memoria física, por lo que casi todo el conjunto de memoria unificada — no solo una fracción — está disponible para que la GPU ejecute un LLM, una vez reservados al menos 8GB para macOS.',
+        content: 'Sí — en Apple Silicon, la memoria unificada *es* la VRAM de la GPU. No existe un conjunto de VRAM fijo y separado como en una GPU discreta. La CPU, la GPU y el Neural Engine de un chip serie M leen y escriben en la misma memoria física, por lo que casi todo el conjunto de memoria unificada — no solo una fracción — está disponible para que la GPU ejecute un LLM, una vez reservados al menos 8GB para macOS. macOS también aplica un límite de memoria de GPU por defecto, aproximadamente dos tercios a tres cuartos de la RAM total según el tamaño (se puede ampliar), así que considera el total menos 8GB como un tope, no una garantía.',
         items: [
           'GPU discreta (RTX 4070): 12GB de VRAM es un límite fijo para los pesos del modelo, incluso si el PC tiene 64GB de RAM de sistema separada.',
           'Apple Silicon: la GPU puede acceder a todo el conjunto de memoria unificada menos los 8GB mínimos de macOS — un Mac de 64GB da a la GPU ~56GB, no una porción fija de VRAM de 12-24GB.',
@@ -582,7 +582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       unifiedVsVram: {
         id: 'unified-vs-vram',
         title: 'هل الذاكرة الموحدة هي نفسها VRAM؟',
-        content: 'نعم — في Apple Silicon، الذاكرة الموحدة هي VRAM الخاصة بوحدة معالجة الرسومات فعليًا. لا يوجد مجمّع VRAM ثابت ومنفصل كما في بطاقة رسومات منفصلة. يقرأ ويكتب CPU وGPU ومحرك Neural Engine في شريحة السلسلة M نفس الذاكرة الفعلية، لذا يكون كامل مجمّع الذاكرة الموحدة تقريبًا — وليس جزءًا منه فقط — متاحًا لوحدة الرسومات لتشغيل نموذج LLM، بعد تخصيص 8GB على الأقل لنظام macOS.',
+        content: 'نعم — في Apple Silicon، الذاكرة الموحدة هي VRAM الخاصة بوحدة معالجة الرسومات فعليًا. لا يوجد مجمّع VRAM ثابت ومنفصل كما في بطاقة رسومات منفصلة. يقرأ ويكتب CPU وGPU ومحرك Neural Engine في شريحة السلسلة M نفس الذاكرة الفعلية، لذا يكون كامل مجمّع الذاكرة الموحدة تقريبًا — وليس جزءًا منه فقط — متاحًا لوحدة الرسومات لتشغيل نموذج LLM، بعد تخصيص 8GB على الأقل لنظام macOS. كما يطبّق macOS حدًا افتراضيًا لذاكرة وحدة الرسومات يبلغ نحو الثلثين إلى ثلاثة أرباع إجمالي الذاكرة بحسب حجمها (يمكن رفعه)، لذا اعتبر الإجمالي ناقص 8GB حدًا أقصى لا ضمانًا.',
         items: [
           'بطاقة رسومات منفصلة (RTX 4070): تُعد 12GB من VRAM سقفًا ثابتًا لأوزان النموذج، حتى لو كان الكمبيوتر يملك 64GB من ذاكرة النظام المنفصلة.',
           'Apple Silicon: يمكن لوحدة الرسومات الوصول إلى كامل مجمّع الذاكرة الموحدة ناقص 8GB على الأقل لنظام macOS — يمنح Mac بسعة 64GB وحدة الرسومات نحو 56GB، وليس شريحة VRAM ثابتة بحجم 12-24GB.',
@@ -962,7 +962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       unifiedVsVram: {
         id: 'unified-vs-vram',
         title: 'Ist Unified Memory dasselbe wie VRAM?',
-        content: 'Ja — bei Apple Silicon ist Unified Memory tatsächlich der VRAM der GPU. Es gibt keinen separaten, fest zugewiesenen VRAM-Pool wie bei einer diskreten GPU. CPU, GPU und Neural Engine eines M-Chips lesen und schreiben denselben physischen Speicher, sodass nahezu der gesamte Unified-Memory-Pool — nicht nur ein Bruchteil davon — für die GPU beim Ausführen eines LLM verfügbar ist, sobald mindestens 8 GB für macOS abgezogen sind.',
+        content: 'Ja — bei Apple Silicon ist Unified Memory tatsächlich der VRAM der GPU. Es gibt keinen separaten, fest zugewiesenen VRAM-Pool wie bei einer diskreten GPU. CPU, GPU und Neural Engine eines M-Chips lesen und schreiben denselben physischen Speicher, sodass nahezu der gesamte Unified-Memory-Pool — nicht nur ein Bruchteil davon — für die GPU beim Ausführen eines LLM verfügbar ist, sobald mindestens 8 GB für macOS abgezogen sind. macOS setzt zudem standardmäßig ein GPU-Speicherlimit von etwa zwei Dritteln bis drei Vierteln des Gesamt-RAMs (je nach Größe, lässt sich anheben); die Gesamtmenge minus 8 GB ist daher eine Obergrenze, keine Garantie.',
         items: [
           'Diskrete GPU (RTX 4070): 12 GB VRAM sind eine feste Obergrenze für Modellgewichte, selbst wenn der PC 64 GB separaten Systemspeicher hat.',
           'Apple Silicon: Die GPU kann auf den gesamten Unified-Memory-Pool minus mindestens 8 GB für macOS zugreifen — ein 64-GB-Mac gibt der GPU ~56 GB, keine feste VRAM-Zuteilung von 12-24 GB.',
@@ -1220,7 +1220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       unifiedVsVram: {
         id: 'unified-vs-vram',
         title: 'La mémoire unifiée est-elle la même chose que la VRAM ?',
-        content: "Oui — sur Apple Silicon, la mémoire unifiée *est* la VRAM du GPU. Il n'existe pas de pool de VRAM séparé et fixe comme sur un GPU dédié. Le CPU, le GPU et le Neural Engine d'une puce M lisent et écrivent dans la même mémoire physique, si bien que la quasi-totalité du pool de mémoire unifiée — et non une simple fraction — est disponible pour le GPU lors de l'exécution d'un LLM, une fois au moins 8 Go réservés à macOS.",
+        content: "Oui — sur Apple Silicon, la mémoire unifiée *est* la VRAM du GPU. Il n'existe pas de pool de VRAM séparé et fixe comme sur un GPU dédié. Le CPU, le GPU et le Neural Engine d'une puce M lisent et écrivent dans la même mémoire physique, si bien que la quasi-totalité du pool de mémoire unifiée — et non une simple fraction — est disponible pour le GPU lors de l'exécution d'un LLM, une fois au moins 8 Go réservés à macOS. macOS applique aussi par défaut une limite de mémoire GPU d'environ deux tiers à trois quarts de la RAM totale selon la taille (elle peut être relevée) ; le total moins 8 Go est donc un plafond, pas une garantie.",
         items: [
           'GPU dédié (RTX 4070) : 12 Go de VRAM constituent un plafond fixe pour les poids du modèle, même si le PC dispose de 64 Go de RAM système séparée.',
           "Apple Silicon : le GPU peut accéder à tout le pool de mémoire unifiée moins 8 Go minimum pour macOS — un Mac 64 Go donne au GPU ~56 Go, pas une tranche fixe de VRAM de 12-24 Go.",
@@ -1489,7 +1489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       unifiedVsVram: {
         id: 'unified-vs-vram',
         title: 'ユニファイドメモリはVRAMと同じか？',
-        content: 'はい——Apple Siliconでは、ユニファイドメモリは事実上GPUのVRAMです。ディスクリートGPUのような固定・独立したVRAMプールは存在しません。MシリーズチップのCPU、GPU、Neural Engineは同じ物理メモリを読み書きするため、ユニファイドメモリプールのほぼ全体——一部だけでなく——がLLM実行時にGPUで利用可能です（macOS用に最低8GBを確保した後）。',
+        content: 'はい——Apple Siliconでは、ユニファイドメモリは事実上GPUのVRAMです。ディスクリートGPUのような固定・独立したVRAMプールは存在しません。MシリーズチップのCPU、GPU、Neural Engineは同じ物理メモリを読み書きするため、ユニファイドメモリプールのほぼ全体——一部だけでなく——がLLM実行時にGPUで利用可能です（macOS用に最低8GBを確保した後）。macOSは既定でGPUメモリの上限（搭載メモリの約3分の2〜4分の3、容量により異なり、引き上げ可能）も適用するため、合計から8GBを引いた値は上限であり保証ではありません。',
         items: [
           'ディスクリートGPU（RTX 4070）：PCが64GBの独立したシステムRAMを持っていても、12GBのVRAMがモデル重みの固定上限になる。',
           'Apple Silicon：GPUはmacOS用の最低8GBを除くユニファイドメモリプール全体にアクセス可能——64GB Macなら固定の12〜24GB VRAM枠ではなく、GPUに~56GBを与える。',
@@ -1770,7 +1770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       unifiedVsVram: {
         id: 'unified-vs-vram',
         title: '统一内存和VRAM是一回事吗？',
-        content: '是的——在Apple Silicon上，统一内存实际上就是GPU的VRAM。不存在像独立显卡那样固定、分离的VRAM池。M系列芯片的CPU、GPU和神经网络引擎读写的是同一块物理内存，因此统一内存池的几乎全部——而不仅仅是一部分——都可供GPU用于运行LLM（需先扣除至少8GB给macOS）。',
+        content: '是的——在Apple Silicon上，统一内存实际上就是GPU的VRAM。不存在像独立显卡那样固定、分离的VRAM池。M系列芯片的CPU、GPU和神经网络引擎读写的是同一块物理内存，因此统一内存池的几乎全部——而不仅仅是一部分——都可供GPU用于运行LLM（需先扣除至少8GB给macOS）。macOS还默认限制GPU可用内存（约为总内存的三分之二至四分之三，视容量而定，可调高），因此“总内存减8GB”只是上限，而非保证。',
         items: [
           '独立显卡（RTX 4070）：即使PC拥有64GB独立的系统内存，12GB的VRAM也是模型权重的固定上限。',
           'Apple Silicon：GPU可以访问除macOS至少需要的8GB之外的整个统一内存池——64GB的Mac能给GPU提供约56GB，而不是固定的12–24GB VRAM份额。',
@@ -2000,7 +2000,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       unifiedVsVram: {
         id: 'unified-vs-vram',
         title: '통합 메모리는 VRAM과 같은가요?',
-        content: '네 — Apple Silicon에서 통합 메모리는 실질적으로 GPU의 VRAM입니다. 개별 GPU처럼 고정되고 분리된 VRAM 풀은 존재하지 않습니다. M 시리즈 칩의 CPU, GPU, Neural Engine은 동일한 물리 메모리를 읽고 쓰기 때문에, 통합 메모리 풀의 일부가 아니라 거의 전체가 LLM 실행 시 GPU에서 사용 가능합니다(macOS용 최소 8GB 확보 후).',
+        content: '네 — Apple Silicon에서 통합 메모리는 실질적으로 GPU의 VRAM입니다. 개별 GPU처럼 고정되고 분리된 VRAM 풀은 존재하지 않습니다. M 시리즈 칩의 CPU, GPU, Neural Engine은 동일한 물리 메모리를 읽고 쓰기 때문에, 통합 메모리 풀의 일부가 아니라 거의 전체가 LLM 실행 시 GPU에서 사용 가능합니다(macOS용 최소 8GB 확보 후). macOS는 기본적으로 GPU 메모리 한도(전체 RAM의 약 3분의 2~4분의 3, 용량에 따라 다르며 상향 가능)도 적용하므로, 총량에서 8GB를 뺀 값은 상한일 뿐 보장이 아닙니다.',
         items: [
           '개별 GPU(RTX 4070): PC에 64GB의 별도 시스템 RAM이 있어도 12GB VRAM이 모델 가중치의 고정 상한선입니다.',
           'Apple Silicon: GPU는 macOS용 최소 8GB를 제외한 전체 통합 메모리 풀에 접근할 수 있습니다 — 64GB Mac은 고정된 12–24GB VRAM 조각이 아니라 GPU에 약 56GB를 제공합니다.',

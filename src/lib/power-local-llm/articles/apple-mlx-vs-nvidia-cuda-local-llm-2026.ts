@@ -30,12 +30,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Should I use Apple MLX or NVIDIA CUDA for local LLMs?',
-        answer: 'Use Apple Silicon for 70B+ models and power efficiency — the new Mac Studio M5 Ultra (from $5,499, 96GB) hits ~40–52 tok/s on Llama 3.3 70B; Mac Studio M5 Max 64GB (~$2,499+) also fits it at ~18 tok/s. Use NVIDIA for fastest inference on 7–14B models and full training support. Under $800, RTX 3060 12GB (used ~$210) wins on cost.',
+        answer: 'Use Apple Silicon for 70B+ models and power efficiency — the new Mac Studio M5 Ultra (from $5,499, 96GB) hits ~40–52 tok/s on Llama 3.3 70B; Mac Studio M5 Max 64GB (from $2,499 base price) also fits it at ~18 tok/s. Use NVIDIA for fastest inference on 7–14B models and full training support. Under $800, RTX 3060 12GB (used ~$210) wins on cost.',
         bullets: [
           'Mac Studio M5 Ultra (from $5,499, ships Sept 22, 2026): ~40–52 tok/s on Llama 3.3 70B',
           'Apple M5 Max 128GB: ~75 tok/s on Llama 3 8B, ~18 tok/s on Llama 3 70B',
           'RTX 5090 32GB: ~145 tok/s on Llama 3 8B — but 70B does not fit (needs ~38GB)',
-          'Mac Studio M5 Max 64GB: ~$2,499+ vs 2× RTX 4090 system: ~$7,000+ (Apple wins decisively)',
+          'Mac Studio M5 Max 64GB: from $2,499 base price vs 2× RTX 4090 system: ~$7,000+ (Apple wins decisively)',
           'Apple under LLM load: 25–35W vs RTX 4090 system: ~450W',
         ],
         updatedDate: '2026-08-29',
@@ -68,7 +68,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mac Studio M5 Ultra (announced Aug 25, 2026, ships Sept 22): ~45 tok/s on Llama 3.3 70B, from $5,499 (96GB unified memory)',
           'M5 Max 128GB: ~75 tok/s Llama 3 8B Q4_K_M; ~18 tok/s Llama 3 70B Q4_K_M (fits in memory)',
           'RTX 5090 32GB: ~145 tok/s Llama 3 8B; Llama 3 70B does not fit (needs ~38GB, exceeds 32GB VRAM)',
-          'Cost for 70B capability: Mac Studio M5 Max 64GB ~$2,499+ vs 2× RTX 4090 system ~$7,000+',
+          'Cost for 70B capability: Mac Studio M5 Max 64GB from $2,499 base price vs 2× RTX 4090 system ~$7,000+',
           'Power: Apple 25–35W; RTX 4090 system ~450W — roughly 10× difference per session',
           'Software: NVIDIA dominates (CUDA, PyTorch, vLLM, TensorRT-LLM); Apple growing (MLX, mlx-lm)',
           'Training/fine-tuning: NVIDIA only viable option for serious workloads',
@@ -115,7 +115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Zero-copy tensor operations — no PCIe bus between CPU and GPU',
               'Neural Engine: 38 TOPS for accelerated ML operations',
               'Llama 3 70B Q4_K_M (~38GB) fits in 64GB or 128GB configurations',
-              'Mac Studio M5 Max 64GB from ~$2,499+ (128GB config discontinued); Mac Studio M5 Ultra now available from $5,499 (96GB), ships Sept 22, 2026',
+              'Mac Studio M5 Max 64GB from $2,499 base price; Mac Studio M5 Ultra now available from $5,499 (96GB), ships Sept 22, 2026',
             ],
           },
           {
@@ -171,7 +171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'tip', text: 'Use Llama 3 8B Q4_K_M as your baseline benchmark — it is the most widely tested model and gives reliable cross-hardware comparisons.' },
         ],
         faqs: [
-          { q: 'Is 18 tok/s on Llama 3 70B fast enough for interactive use?', a: 'Yes for most tasks. 18 tok/s produces a 500-word response in roughly 20–25 seconds. Interactive use at 70B quality that previously required a $40,000+ server is now available on a Mac Studio M5 Max 64GB (~$2,499+) or MacBook Pro M5 Max 128GB. The new Mac Studio M5 Ultra (from $5,499) roughly doubles that to ~40–52 tok/s on Llama 3.3 70B.' },
+          { q: 'Is 18 tok/s on Llama 3 70B fast enough for interactive use?', a: 'Yes for most tasks. 18 tok/s produces a 500-word response in roughly 20–25 seconds. Interactive use at 70B quality that previously required a $40,000+ server is now available on a Mac Studio M5 Max 64GB (from $2,499 base price) or MacBook Pro M5 Max 128GB. The new Mac Studio M5 Ultra (from $5,499) roughly doubles that to ~40–52 tok/s on Llama 3.3 70B.' },
           { q: 'Why is NVIDIA faster on small models?', a: 'NVIDIA GDDR7/GDDR6X bandwidth (1,008–1,792 GB/s) exceeds Apple M5 Max bandwidth (614 GB/s). LLM inference is memory-bandwidth-bound — higher bandwidth runs small models faster. Apple\'s advantage is memory capacity, not bandwidth. The M5 Ultra narrows this gap with roughly double M5 Max bandwidth via UltraFusion, but has not yet been independently benchmarked on small models.' },
         ],
       },
@@ -179,10 +179,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost',
         title: 'Cost Comparison: Total System Cost by Model Size',
         image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-en.webp',
-        imageCaption: 'Total system cost to run 7B to 96B models locally: NVIDIA wins under $1,500; Apple wins at the 70B tier (Mac Studio M5 Max 64GB ~$2,499+ vs $7,000+ multi-GPU system).',
+        imageCaption: 'Total system cost to run 7B to 96B models locally: NVIDIA wins under $1,500; Apple wins at the 70B tier (Mac Studio M5 Max 64GB from $2,499 base price vs $7,000+ multi-GPU system).',
         content: 'Total system cost includes GPU card plus PC build for NVIDIA; just the Mac for Apple. The crossover where Apple becomes cheaper is the 32–70B model tier.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'NVIDIA is cheaper for 7–14B models (RTX 3060 12GB used ~$210 + PC); Apple is cheaper for 70B models (Mac Studio M5 Max 64GB ~$2,499+ vs 2× RTX 4090 system ~$7,000+).' },
+          { type: 'one-sentence', text: 'NVIDIA is cheaper for 7–14B models (RTX 3060 12GB used ~$210 + PC); Apple is cheaper for 70B models (Mac Studio M5 Max 64GB from $2,499 base price vs 2× RTX 4090 system ~$7,000+).' },
           { type: 'plain-terms', text: 'Small models favor NVIDIA (buy a used GPU, plug it in). Large models favor Apple (one device instead of two expensive graphics cards plus a whole custom PC).' },
         ],
         columns: ['Target Model', 'Apple Option', 'Apple Cost', 'NVIDIA Option', 'NVIDIA Cost', 'Cheaper'],
@@ -190,7 +190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Target Model': '7B models', 'Apple Option': 'Mac Mini M4 Pro 24GB', 'Apple Cost': '$1,599', 'NVIDIA Option': 'RTX 3060 12GB (used) + PC', 'NVIDIA Cost': '~$700', 'Cheaper': 'NVIDIA (2.3×)' },
           { 'Target Model': '14B models', 'Apple Option': 'Mac Mini M4 Pro 48GB', 'Apple Cost': '~$2,199', 'NVIDIA Option': 'RTX 4060 Ti 16GB + PC', 'NVIDIA Cost': '~$1,200', 'Cheaper': 'NVIDIA (1.8×)' },
           { 'Target Model': '32B models', 'Apple Option': 'Mac Mini M4 Pro 48GB', 'Apple Cost': '~$2,199', 'NVIDIA Option': 'RTX 5090 32GB + PC', 'NVIDIA Cost': '~$5,500', 'Cheaper': 'Apple (2.5×)' },
-          { 'Target Model': '70B models', 'Apple Option': 'Mac Studio M5 Max 64GB', 'Apple Cost': '~$2,499+', 'NVIDIA Option': '2× RTX 4090 + PC', 'NVIDIA Cost': '~$7,000+', 'Cheaper': 'Apple (2×)' },
+          { 'Target Model': '70B models', 'Apple Option': 'Mac Studio M5 Max 64GB', 'Apple Cost': 'from $2,499 base price', 'NVIDIA Option': '2× RTX 4090 + PC', 'NVIDIA Cost': '~$7,000+', 'Cheaper': 'Apple (2×)' },
           { 'Target Model': '96B+ models', 'Apple Option': 'Mac Studio M5 Ultra 96GB', 'Apple Cost': '$5,499', 'NVIDIA Option': '4× A100 40GB server', 'NVIDIA Cost': '~$40,000+', 'Cheaper': 'Apple (7.3×)' },
           { 'Target Model': '200B+ models', 'Apple Option': 'Mac Studio M5 Ultra 256GB', 'Apple Cost': '$9,499', 'NVIDIA Option': '6× A100 40GB server', 'NVIDIA Cost': '~$60,000+', 'Cheaper': 'Apple (6.3×)' },
         ],
@@ -273,13 +273,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'The right hardware depends entirely on your target model size and workflow. These are direct, non-ambiguous recommendations.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Choose Apple Silicon for 70B+ models, silent operation, or portable inference; choose NVIDIA CUDA for fastest 7–14B throughput, training, multi-GPU scaling, or budgets under $1,000.' },
-          { type: 'plain-terms', text: 'If you want Llama 3 70B running privately and affordably, Apple is your only real option today. If you want the fastest 7B assistant and budget is under $1,500, NVIDIA wins.' },
+          { type: 'plain-terms', text: 'If you want Llama 3 70B running privately and affordably, Apple is a practical option today (a single Mac with 64 GB or more). If you want the fastest 7B assistant and budget is under $1,500, NVIDIA wins.' },
         ],
         subsections: [
           {
             title: 'Choose Apple Silicon When:',
             list: [
-              '"I want to run 70B models privately" → Mac Studio M5 Max 64GB (~$2,499+) or MacBook Pro M5 Max 128GB — fits Llama 3 70B Q4_K_M at ~18 tok/s',
+              '"I want to run 70B models privately" → Mac Studio M5 Max 64GB (from $2,499 base price) or MacBook Pro M5 Max 128GB — fits Llama 3 70B Q4_K_M at ~18 tok/s',
               '"I want a silent home office LLM" → Any Mac Studio — completely silent under full inference load',
               '"I need 14B+ models on a laptop" → MacBook Pro M5 Max — runs Qwen 14B Q4_K_M on battery',
               '"I want one device for dev + inference + daily use" → Mac as unified workstation',
@@ -366,7 +366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Factor: 'Large model (70B+) inference', Winner: 'Apple', Why: 'Mac Studio M5 Ultra ~$5,499 hits ~40–52 tok/s on Llama 3.3 70B; RTX 5090 32GB cannot fit 70B at all' },
           { Factor: 'Small model (7–14B) speed', Winner: 'NVIDIA', Why: 'RTX 5090: ~145 tok/s vs M5 Max: ~75 tok/s on Llama 3 8B' },
           { Factor: 'Cost under $1,000', Winner: 'NVIDIA', Why: 'RTX 3060 used ~$210 + PC ~$500 vs cheapest Mac $1,599' },
-          { Factor: 'Cost for 70B models', Winner: 'Apple', Why: 'Mac Studio M5 Max 64GB ~$2,499+ vs 2× RTX 4090 + PC ~$7,000+' },
+          { Factor: 'Cost for 70B models', Winner: 'Apple', Why: 'Mac Studio M5 Max 64GB from $2,499 base price vs 2× RTX 4090 + PC ~$7,000+' },
           { Factor: 'Power efficiency', Winner: 'Apple', Why: '25–35W vs 450W — 8–15× more efficient' },
           { Factor: 'Noise', Winner: 'Apple', Why: 'Silent vs loud active cooling required' },
           { Factor: 'Software ecosystem', Winner: 'NVIDIA', Why: 'CUDA powers PyTorch, vLLM, TensorRT-LLM, all major tools' },
@@ -397,7 +397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Best for 70B Models',
-            content: 'Mac Studio M5 Max 64GB (~$2,499+). Only affordable single-device option that fits Llama 3 70B Q4_K_M at usable speed (~18 tok/s). MacBook Pro M5 Max 128GB also works for portable 70B.',
+            content: 'Mac Studio M5 Max 64GB (from $2,499 base price). An affordable single-device option that fits Llama 3 70B Q4_K_M at usable speed (~18 tok/s). MacBook Pro M5 Max 128GB also works for portable 70B.',
           },
           {
             title: 'Best for Fastest 70B+ or 96B+ Models',
@@ -411,7 +411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           { url: 'https://www.apple.com/shop/buy-mac/mac-mini', productName: 'Mac Mini M4 (24GB)', productCategory: 'apple_silicon_mac', priceRange: '$1,599', label: 'Mac Mini M4 24GB — Apple Store →' },
           { url: 'https://www.apple.com/shop/buy-mac/mac-mini/pro', productName: 'Mac Mini M4 Pro (48GB)', productCategory: 'apple_silicon_mac', priceRange: '$2,199', label: 'Mac Mini M4 Pro 48GB — Apple Store →' },
-          { url: 'https://www.apple.com/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Max (64GB)', productCategory: 'apple_silicon_mac', priceRange: '~$2,499+', label: 'Mac Studio M5 Max 64GB — Apple Store →' },
+          { url: 'https://www.apple.com/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Max (64GB)', productCategory: 'apple_silicon_mac', priceRange: 'from $2,499 base price', label: 'Mac Studio M5 Max 64GB — Apple Store →' },
           { url: 'https://www.apple.com/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Ultra (96GB)', productCategory: 'apple_silicon_mac', priceRange: '$5,499', label: 'Mac Studio M5 Ultra 96GB — Apple Store →' },
           { url: 'https://www.amazon.com/s?k=NVIDIA+RTX+4090+24GB', productName: 'NVIDIA RTX 4090 24GB', productCategory: 'nvidia_gpu', priceRange: '~$2,755 new / ~$2,268 used', label: 'RTX 4090 24GB — Amazon →' },
           { url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB', productName: 'RTX 4060 Ti 16GB', productCategory: 'nvidia_gpu', priceRange: '~$424', label: 'RTX 4060 Ti 16GB — Amazon →' },
@@ -426,7 +426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Does Ollama use MLX or Metal on Apple Silicon?', a: 'Ollama on Apple Silicon uses Metal GPU acceleration by default, not MLX. For MLX-specific optimizations (often faster for certain models), use mlx-lm directly or LM Studio with the MLX backend enabled.' },
             { q: 'Can I use an eGPU with a Mac for NVIDIA CUDA?', a: 'No. macOS dropped CUDA eGPU support in 2019. External NVIDIA GPUs are not compatible with macOS for CUDA compute. The practical alternative is a separate Linux system with a NVIDIA GPU.' },
             { q: 'Which is better for running Mistral Small?', a: 'NVIDIA RTX 4090 at ~150 tok/s vs Apple M5 Max at ~75 tok/s — NVIDIA is 2× faster. Even an RTX 3060 12GB (~$210 used) beats a Mac Mini M4 ($1,599) on pure 7B inference speed.' },
-            { q: 'What is the minimum Apple Mac for running 70B models?', a: 'Mac Studio M5 Max with 64GB unified memory (~$2,499+). Llama 3 70B Q4_K_M needs ~38GB, and macOS needs at least 8 GB of the pool, so 64GB leaves about 56GB usable and fits it with room for context; a 36GB Mac leaves only about 28GB and does not. MacBook Pro M5 Max 128GB also works for portable 70B. The new Mac Studio M5 Ultra (from $5,499, 96GB) ships Sept 22, 2026 and roughly doubles 70B throughput.' },
+            { q: 'What is the minimum Apple Mac for running 70B models?', a: 'Mac Studio M5 Max with 64GB unified memory (from $2,499 base price). Llama 3 70B Q4_K_M needs ~38GB, and macOS needs at least 8 GB of the pool, so 64GB leaves about 56GB usable and fits it with room for context; a 36GB Mac leaves only about 28GB and does not. MacBook Pro M5 Max 128GB also works for portable 70B. The new Mac Studio M5 Ultra (from $5,499, 96GB) ships Sept 22, 2026 and roughly doubles 70B throughput.' },
             { q: 'Is Apple M5 Max better than RTX 4090 for local LLMs?', a: 'Depends on model size. For 7B: RTX 4090 wins (150 tok/s vs 75 tok/s). For 70B: M5 Max 128GB wins by default — RTX 4090 cannot load 70B at all. For training: NVIDIA wins by a wide margin.' },
             { q: 'How does the new Apple M5 Ultra compare to the RTX 5090?', a: 'Apple announced the Mac Studio with M5 Ultra on August 25, 2026 — it starts at $5,499 for 96GB unified memory (256GB is $9,499; a 512GB configuration ships late October). Early figures show ~40–52 tok/s on Llama 3.3 70B, a model the RTX 5090\'s 32GB VRAM cannot load at all. For models that fit in 32GB, the RTX 5090 is still faster per token; for 70B+ models, the M5 Ultra has no consumer NVIDIA equivalent.' },
             { q: 'What is the NVIDIA equivalent of an M5 Max GPU?', a: 'There is no clean equivalent, because the two win on different axes. On raw compute the RTX 5090 is faster, which is why it leads on small models. On memory the comparison inverts: the 5090 has 32 GB of VRAM and cannot load a 70B model at usable quantization, while an M5 Max shares its unified memory with the GPU and can. It is also worth remembering the M5 Max is a laptop chip \u2014 it ships in the MacBook Pro and runs on battery \u2014 while the RTX 5090 is a desktop card with a power budget to match. If your work is small models and throughput, the NVIDIA card wins; if it is large models on a laptop, nothing NVIDIA sells in a portable is equivalent.' },
@@ -472,7 +472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Is 18 tok/s on Llama 3 70B fast enough for interactive use?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes for most tasks. 18 tok/s produces a 500-word response in roughly 20–25 seconds. Interactive use at 70B quality that previously required a $40,000+ server is now available on a Mac Studio M5 Max 64GB (~$2,499+) or MacBook Pro M5 Max 128GB. The new Mac Studio M5 Ultra (from $5,499) roughly doubles that to ~40–52 tok/s on Llama 3.3 70B.',
+              'text': 'Yes for most tasks. 18 tok/s produces a 500-word response in roughly 20–25 seconds. Interactive use at 70B quality that previously required a $40,000+ server is now available on a Mac Studio M5 Max 64GB (from $2,499 base price) or MacBook Pro M5 Max 128GB. The new Mac Studio M5 Ultra (from $5,499) roughly doubles that to ~40–52 tok/s on Llama 3.3 70B.',
             },
           },
           {
@@ -544,7 +544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'What is the minimum Apple Mac for running 70B models?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Mac Studio M5 Max with 64GB unified memory (~$2,499+). Llama 3 70B Q4_K_M needs ~38GB, and macOS needs at least 8 GB of the pool, so 64GB leaves about 56GB usable and fits it with room for context; a 36GB Mac leaves only about 28GB and does not. MacBook Pro M5 Max 128GB also works for portable 70B. The new Mac Studio M5 Ultra (from $5,499, 96GB) ships Sept 22, 2026 and roughly doubles 70B throughput.',
+              'text': 'Mac Studio M5 Max with 64GB unified memory (from $2,499 base price). Llama 3 70B Q4_K_M needs ~38GB, and macOS needs at least 8 GB of the pool, so 64GB leaves about 56GB usable and fits it with room for context; a 36GB Mac leaves only about 28GB and does not. MacBook Pro M5 Max 128GB also works for portable 70B. The new Mac Studio M5 Ultra (from $5,499, 96GB) ships Sept 22, 2026 and roughly doubles 70B throughput.',
             },
           },
           {
@@ -609,11 +609,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Soll ich Apple MLX oder NVIDIA CUDA für lokale LLMs verwenden?',
-        answer: 'Apple Silicon für 70B+ Modelle und Energieeffizienz — Mac Studio M5 Max 64GB fasst Llama 3 70B und kostet ~2.499+ $. NVIDIA für schnellste Inferenz bei 7–14B Modellen und vollem Training-Support. Unter 1.000 € gewinnt NVIDIA RTX 3060 12GB beim Preis-Leistungs-Verhältnis.',
+        answer: 'Apple Silicon für 70B+ Modelle und Energieeffizienz — Mac Studio M5 Max 64GB fasst Llama 3 70B und kostet ab 2.499 $ (Basispreis). NVIDIA für schnellste Inferenz bei 7–14B Modellen und vollem Training-Support. Unter 1.000 € gewinnt NVIDIA RTX 3060 12GB beim Preis-Leistungs-Verhältnis.',
         bullets: [
           'Apple M5 Max 128GB: ~75 Tok/s bei Llama 3 8B, ~18 Tok/s bei Llama 3 70B',
           'RTX 4090 24GB: ~150 Tok/s bei Llama 3 8B — 70B passt nicht in 24GB VRAM',
-          'Mac Studio M5 Max 64GB: ~2.499+ $ vs 2× RTX 4090 System: ~7.000 €',
+          'Mac Studio M5 Max 64GB: ab 2.499 $ (Basispreis) vs 2× RTX 4090 System: ~7.000+ $',
           'Apple unter LLM-Last: 25–35W vs RTX 4090 System: ~450W',
         ],
         updatedDate: '2026-05',
@@ -645,7 +645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'M5 Max 128GB: ~75 Tok/s Llama 3 8B Q4_K_M; ~18 Tok/s Llama 3 70B Q4_K_M (passt in den Speicher)',
           'RTX 4090 24GB: ~150 Tok/s Llama 3 8B; Llama 3 70B passt nicht (benötigt ~38GB VRAM)',
-          'Kosten für 70B-Fähigkeit: Mac Studio M5 Max 64GB ~2.499+ $ vs 2× RTX 4090 System ~7.000 €',
+          'Kosten für 70B-Fähigkeit: Mac Studio M5 Max 64GB ab 2.499 $ (Basispreis) vs 2× RTX 4090 System ~7.000+ $',
           'Strom: Apple 25–35W; RTX 4090 System ~450W — ca. 10-facher Unterschied',
           'Software: NVIDIA dominiert (CUDA, PyTorch, vLLM, TensorRT-LLM); Apple wächst (MLX, mlx-lm)',
           'Training/Fine-Tuning: NVIDIA einzige praktikable Option für ernsthafte Workloads',
@@ -692,7 +692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Zero-Copy Tensor-Operationen — kein PCIe-Bus zwischen CPU und GPU',
               'Neural Engine: 38 TOPS für beschleunigte ML-Operationen',
               'Llama 3 70B Q4_K_M (~38GB) passt in 64GB oder 128GB Konfigurationen',
-              'Mac Studio M5 Max 64GB: ~2.499+ $ — empfohlene Konfiguration für 70B-Modelle; Mac Studio M5 Ultra jetzt verfügbar ab 5.499 $ (96GB), Auslieferung ab 22. September 2026',
+              'Mac Studio M5 Max 64GB: ab 2.499 $ (Basispreis) — empfohlene Konfiguration für 70B-Modelle; Mac Studio M5 Ultra jetzt verfügbar ab 5.499 $ (96GB), Auslieferung ab 22. September 2026',
             ],
           },
           {
@@ -747,7 +747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'note', text: 'Benchmarks aus mlx-community und llama.cpp Community-Tests, Mai 2026. Näherungswerte ±10–15%. Führen Sie llama-bench auf Ihrer Hardware für exakte Werte aus.' },
         ],
         faqs: [
-          { q: 'Ist 18 Tok/s bei Llama 3 70B schnell genug für interaktive Nutzung?', a: 'Ja, für die meisten Aufgaben. 18 Tok/s produziert eine 500-Wort-Antwort in etwa 20–25 Sekunden. Interaktive Nutzung auf 70B-Qualitätsniveau, die früher einen Server für 40.000+ € erforderte, ist nun auf einem Mac Studio M5 Max 64GB für ~2.499+ $ möglich.' },
+          { q: 'Ist 18 Tok/s bei Llama 3 70B schnell genug für interaktive Nutzung?', a: 'Ja, für die meisten Aufgaben. 18 Tok/s produziert eine 500-Wort-Antwort in etwa 20–25 Sekunden. Interaktive Nutzung auf 70B-Qualitätsniveau, die früher einen Server für 40.000+ € erforderte, ist nun auf einem Mac Studio M5 Max 64GB ab 2.499 $ (Basispreis) möglich.' },
           { q: 'Warum ist NVIDIA bei kleinen Modellen schneller?', a: 'NVIDIAs GDDR7/GDDR6X-Bandbreite (1.008–1.792 GB/s) übertrifft Apples M5 Max (614 GB/s). LLM-Inferenz ist speicherbandbreitenbegrenzt — höhere Bandbreite läuft kleine Modelle schneller.' },
         ],
       },
@@ -755,10 +755,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost',
         title: 'Kostenvergleich: Gesamtsystemkosten nach Modellgröße',
         image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-de.webp',
-        imageCaption: 'Gesamtsystemkosten für 7B bis 120B+ Modelle lokal: NVIDIA gewinnt unter 1.500 €; Apple gewinnt auf der 70B-Ebene (Mac Studio M5 Max 64GB ~2.499+ $ vs 7.000+ € Multi-GPU-System).',
+        imageCaption: 'Gesamtsystemkosten für 7B bis 120B+ Modelle lokal: NVIDIA gewinnt unter 1.500 €; Apple gewinnt auf der 70B-Ebene (Mac Studio M5 Max 64GB ab 2.499 $ (Basispreis) vs 7.000+ $ Multi-GPU-System).',
         content: 'Gesamtsystemkosten umfassen GPU-Karte plus PC-Build für NVIDIA; nur den Mac für Apple. Der Schnittpunkt, wo Apple günstiger wird, ist die 70B-Modellebene.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'NVIDIA ist günstiger für 7–14B Modelle (RTX 3060 12GB + PC ~800 €); Apple ist günstiger für 70B Modelle (Mac Studio M5 Max 64GB ~2.499+ $ vs 2× RTX 4090 System ~7.000 €).' },
+          { type: 'one-sentence', text: 'NVIDIA ist günstiger für 7–14B Modelle (RTX 3060 12GB + PC ~800 €); Apple ist günstiger für 70B Modelle (Mac Studio M5 Max 64GB ab 2.499 $ (Basispreis) vs 2× RTX 4090 System ~7.000+ $).' },
           { type: 'plain-terms', text: 'Kleine Modelle bevorzugen NVIDIA (GPU kaufen, einbauen). Große Modelle bevorzugen Apple (ein Gerät statt zwei Grafikkarten plus ganzer Custom-PC).' },
         ],
         columns: ['Zielmodell', 'Apple Option', 'Apple Preis', 'NVIDIA Option', 'NVIDIA Preis', 'Günstiger'],
@@ -766,7 +766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Zielmodell: '7B Modelle', 'Apple Option': 'Mac Mini M4 24GB', 'Apple Preis': '1.599 €', 'NVIDIA Option': 'RTX 3060 12GB + PC', 'NVIDIA Preis': '~800 €', Günstiger: 'NVIDIA (2×)' },
           { Zielmodell: '14B Modelle', 'Apple Option': 'Mac Mini M4 Pro 48GB', 'Apple Preis': '2.199 €', 'NVIDIA Option': 'RTX 4060 Ti 16GB + PC', 'NVIDIA Preis': '~1.200 €', Günstiger: 'NVIDIA (1,8×)' },
           { Zielmodell: '32B Modelle', 'Apple Option': 'Mac Mini M4 Pro 48GB', 'Apple Preis': '2.199 €', 'NVIDIA Option': 'RTX 5090 32GB + PC', 'NVIDIA Preis': '~5.500 €', Günstiger: 'Apple (2,5×)' },
-          { Zielmodell: '70B Modelle', 'Apple Option': 'Mac Studio M5 Max 64GB', 'Apple Preis': '~2.499+ $', 'NVIDIA Option': '2× RTX 4090 + PC', 'NVIDIA Preis': '~7.000 €', Günstiger: 'Apple (2×)' },
+          { Zielmodell: '70B Modelle', 'Apple Option': 'Mac Studio M5 Max 64GB', 'Apple Preis': 'ab 2.499 $ (Basispreis)', 'NVIDIA Option': '2× RTX 4090 + PC', 'NVIDIA Preis': '~7.000+ $', Günstiger: 'Apple (2×)' },
           { Zielmodell: '96B+ Modelle', 'Apple Option': 'Mac Studio M5 Ultra 96GB', 'Apple Preis': '5.499 $', 'NVIDIA Option': '4× A100 40GB Server', 'NVIDIA Preis': '~40.000 €+', Günstiger: 'Apple (7,3×)' },
           { Zielmodell: '200B+ Modelle', 'Apple Option': 'Mac Studio M5 Ultra 256GB', 'Apple Preis': '9.499 $', 'NVIDIA Option': '6× A100 40GB Server', 'NVIDIA Preis': '~60.000 €+', Günstiger: 'Apple (6,3×)' },
         ],
@@ -847,13 +847,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Die richtige Hardware hängt vollständig von Ihrer Zielmodellgröße und Ihrem Workflow ab. Dies sind direkte, eindeutige Empfehlungen.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Wählen Sie Apple Silicon für 70B+ Modelle, lautlosen Betrieb oder portable Inferenz; wählen Sie NVIDIA CUDA für schnellsten 7–14B Durchsatz, Training, Multi-GPU-Skalierung oder Budgets unter 1.000 €.' },
-          { type: 'plain-terms', text: 'Wenn Sie Llama 3 70B privat und erschwinglich möchten, ist Apple heute Ihre einzige echte Option. Wenn Sie den schnellsten 7B-Assistenten bei unter 1.500 € Budget wollen, gewinnt NVIDIA.' },
+          { type: 'plain-terms', text: 'Wenn Sie Llama 3 70B privat und erschwinglich möchten, ist Apple heute eine praktikable Option (ein einzelner Mac mit 64 GB oder mehr). Wenn Sie den schnellsten 7B-Assistenten bei unter 1.500 € Budget wollen, gewinnt NVIDIA.' },
         ],
         subsections: [
           {
             title: 'Wählen Sie Apple Silicon wenn:',
             list: [
-              '"Ich möchte 70B Modelle privat laufen" → Mac Studio M5 Max 64GB (~2.499+ $) — einzige erschwingliche Einzelgerät-Option',
+              '"Ich möchte 70B Modelle privat laufen" → Mac Studio M5 Max 64GB (ab 2.499 $, Basispreis) — eine erschwingliche Einzelgerät-Option',
               '"Ich möchte einen lautlosen Homeoffice-LLM" → Jeder Mac Studio — vollständig lautlos unter voller Inferenzlast',
               '"Ich brauche 14B+ Modelle auf einem Laptop" → MacBook Pro M5 Max — läuft Qwen 14B Q4_K_M per Akku',
               '"Ich möchte ein Gerät für Entwicklung + Inferenz + tägliche Nutzung" → Mac als einheitliche Workstation',
@@ -939,10 +939,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Faktor', 'Gewinner', 'Warum'],
         rows: [
-          { Faktor: 'Großmodell (70B+) Inferenz', Gewinner: 'Apple', Warum: 'Mac Studio M5 Max 64GB ~2.499+ $ vs 7.000 €+ Zwei-GPU-System; RTX 5090 32GB fasst 70B ebenfalls nicht' },
+          { Faktor: 'Großmodell (70B+) Inferenz', Gewinner: 'Apple', Warum: 'Mac Studio M5 Max 64GB ab 2.499 $ (Basispreis) vs 7.000+ $ Zwei-GPU-System; RTX 5090 32GB fasst 70B ebenfalls nicht' },
           { Faktor: 'Kleinmodell (7–14B) Geschwindigkeit', Gewinner: 'NVIDIA', Warum: 'RTX 4090: ~150 Tok/s vs M5 Max: ~75 Tok/s' },
           { Faktor: 'Kosten unter 1.000 €', Gewinner: 'NVIDIA', Warum: 'RTX 3060 + PC ~800 € vs günstigster Mac 1.599 €' },
-          { Faktor: 'Kosten für 70B Modelle', Gewinner: 'Apple', Warum: 'Mac Studio M5 Max 64GB ~2.499+ $ vs 2× RTX 4090 + PC ~7.000 €' },
+          { Faktor: 'Kosten für 70B Modelle', Gewinner: 'Apple', Warum: 'Mac Studio M5 Max 64GB ab 2.499 $ (Basispreis) vs 2× RTX 4090 + PC ~7.000+ $' },
           { Faktor: 'Energieeffizienz', Gewinner: 'Apple', Warum: '25–35W vs 450W — 8–15× effizienter' },
           { Faktor: 'Lärm', Gewinner: 'Apple', Warum: 'Lautlos vs laute aktive Kühlung erforderlich' },
           { Faktor: 'Software-Ökosystem', Gewinner: 'NVIDIA', Warum: 'CUDA betreibt PyTorch, vLLM, TensorRT-LLM, alle wichtigen Tools' },
@@ -973,7 +973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Beste Wahl für 70B Modelle',
-            content: 'Mac Studio M5 Max 64GB (~2.499+ $). Einzige Einzelgeräte-Option die Llama 3 70B Q4_K_M bei nutzbarer Geschwindigkeit (~18 Tok/s) fasst.',
+            content: 'Mac Studio M5 Max 64GB (ab 2.499 $, Basispreis). Eine erschwingliche Einzelgeräte-Option, die Llama 3 70B Q4_K_M bei nutzbarer Geschwindigkeit (~18 Tok/s) fasst.',
           },
           {
             title: 'Beste Wahl für Training + schnelle Inferenz',
@@ -983,7 +983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           { url: 'https://www.apple.com/de/shop/buy-mac/mac-mini', productName: 'Mac Mini M4 (24GB)', productCategory: 'apple_silicon_mac', priceRange: '1.599 €', label: 'Mac Mini M4 24GB — Apple Store DE →' },
           { url: 'https://www.apple.com/de/shop/buy-mac/mac-mini/pro', productName: 'Mac Mini M4 Pro (48GB)', productCategory: 'apple_silicon_mac', priceRange: '2.199 €', label: 'Mac Mini M4 Pro 48GB — Apple Store DE →' },
-          { url: 'https://www.apple.com/de/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Max (64GB)', productCategory: 'apple_silicon_mac', priceRange: '~2.499+ $', label: 'Mac Studio M5 Max 64GB — Apple Store DE →' },
+          { url: 'https://www.apple.com/de/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Max (64GB)', productCategory: 'apple_silicon_mac', priceRange: 'ab 2.499 $ (Basispreis)', label: 'Mac Studio M5 Max 64GB — Apple Store DE →' },
           { url: 'https://www.amazon.de/s?k=NVIDIA+RTX+4090+24GB', productName: 'NVIDIA RTX 4090 24GB', productCategory: 'nvidia_gpu', priceRange: '~2.490 €', label: 'RTX 4090 24GB — Amazon DE →' },
           { url: 'https://www.amazon.de/s?k=RTX+4060+Ti+16GB', productName: 'RTX 4060 Ti 16GB', productCategory: 'nvidia_gpu', priceRange: '~389 €', label: 'RTX 4060 Ti 16GB — Amazon DE →' },
           { url: 'https://www.amazon.de/s?k=RTX+3060+12GB', productName: 'RTX 3060 12GB', productCategory: 'nvidia_gpu', priceRange: '~190 € gebraucht', label: 'RTX 3060 12GB — Amazon DE →' },
@@ -995,7 +995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Kann ich Apple MLX Modelle auf Windows oder Linux nutzen?', a: 'Nein. MLX ist nur macOS und erfordert Apple Silicon. GGUF Modelle über llama.cpp funktionieren auf allen Plattformen. Für plattformübergreifende Nutzung funktioniert Ollama mit GGUF auf Mac und NVIDIA.' },
           { q: 'Nutzt Ollama MLX oder Metal auf Apple Silicon?', a: 'Ollama auf Apple Silicon nutzt Metal GPU-Beschleunigung standardmäßig, nicht MLX. Für MLX-spezifische Optimierungen nutzen Sie mlx-lm direkt oder LM Studio mit aktiviertem MLX-Backend.' },
-          { q: 'Was ist der günstigste Mac für 70B Modelle?', a: 'Mac Studio M5 Max mit 64GB Unified Memory (~2.499+ $). Llama 3 70B Q4_K_M benötigt ~38GB, und macOS braucht mindestens 8 GB des Speichers; bei 64GB bleiben etwa 56GB nutzbar, sodass das Modell samt Kontext hineinpasst. Ein Mac mit 36GB hat nur etwa 28GB nutzbar und reicht dafür nicht.' },
+          { q: 'Was ist der günstigste Mac für 70B Modelle?', a: 'Mac Studio M5 Max mit 64GB Unified Memory (ab 2.499 $, Basispreis). Llama 3 70B Q4_K_M benötigt ~38GB, und macOS braucht mindestens 8 GB des Speichers; bei 64GB bleiben etwa 56GB nutzbar, sodass das Modell samt Kontext hineinpasst. Ein Mac mit 36GB hat nur etwa 28GB nutzbar und reicht dafür nicht.' },
           { q: 'Ist Apple M5 Max besser als RTX 4090 für lokale LLMs?', a: 'Hängt von der Modellgröße ab. Für 7B: RTX 4090 gewinnt (150 Tok/s vs 75 Tok/s). Für 70B: M5 Max 128GB gewinnt automatisch — RTX 4090 kann 70B überhaupt nicht laden. Für Training: NVIDIA gewinnt deutlich.' },
           { q: 'Wie schlägt sich der neue Apple M5 Ultra gegen die RTX 5090?', a: 'Apple kündigte den Mac Studio mit M5 Ultra am 25. August 2026 an — ab 5.499 $ für 96GB Unified Memory (256GB kosten 9.499 $). Erste Zahlen zeigen ~40–52 Tok/s bei Llama 3.3 70B — ein Modell, das die 32GB VRAM der RTX 5090 überhaupt nicht laden können. Für Modelle, die in 32GB passen, bleibt die RTX 5090 pro Token schneller.' },
         ],
@@ -1028,7 +1028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: 'Kann ich Apple MLX Modelle auf Windows oder Linux nutzen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. MLX ist nur macOS und erfordert Apple Silicon. GGUF Modelle über llama.cpp funktionieren auf allen Plattformen. Für plattformübergreifende Nutzung funktioniert Ollama mit GGUF auf Mac und NVIDIA.' } },
         { '@type': 'Question', name: 'Ist Apple M5 Max besser als RTX 4090 für lokale LLMs?', acceptedAnswer: { '@type': 'Answer', text: 'Hängt von der Modellgröße ab. Für 7B: RTX 4090 gewinnt (150 Tok/s vs 75 Tok/s). Für 70B: M5 Max 128GB gewinnt automatisch — RTX 4090 kann 70B überhaupt nicht laden. Für Training: NVIDIA gewinnt deutlich.' } },
-        { '@type': 'Question', name: 'Was ist der günstigste Mac für 70B Modelle?', acceptedAnswer: { '@type': 'Answer', text: 'Mac Studio M5 Max mit 64GB Unified Memory (~2.499+ $). Llama 3 70B Q4_K_M benötigt ~38GB, und macOS braucht mindestens 8 GB des Speichers; bei 64GB bleiben etwa 56GB nutzbar, sodass das Modell samt Kontext hineinpasst. Ein Mac mit 36GB hat nur etwa 28GB nutzbar und reicht dafür nicht.' } },
+        { '@type': 'Question', name: 'Was ist der günstigste Mac für 70B Modelle?', acceptedAnswer: { '@type': 'Answer', text: 'Mac Studio M5 Max mit 64GB Unified Memory (ab 2.499 $, Basispreis). Llama 3 70B Q4_K_M benötigt ~38GB, und macOS braucht mindestens 8 GB des Speichers; bei 64GB bleiben etwa 56GB nutzbar, sodass das Modell samt Kontext hineinpasst. Ein Mac mit 36GB hat nur etwa 28GB nutzbar und reicht dafür nicht.' } },
         { '@type': 'Question', name: 'Wie schlägt sich der neue Apple M5 Ultra gegen die RTX 5090?', acceptedAnswer: { '@type': 'Answer', text: 'Apple kündigte den Mac Studio mit M5 Ultra am 25. August 2026 an — ab 5.499 $ für 96GB Unified Memory (256GB kosten 9.499 $). Erste Zahlen zeigen ~40–52 Tok/s bei Llama 3.3 70B, ein Modell, das die 32GB VRAM der RTX 5090 nicht laden kann.' } },
       ],
     },
@@ -1060,11 +1060,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Dois-je utiliser Apple MLX ou NVIDIA CUDA pour les LLMs locaux ?',
-        answer: 'Apple Silicon pour les modèles 70B+ et l\'efficacité énergétique — Mac Studio M5 Max 64Go contient Llama 3 70B pour ~2 499+ $. NVIDIA pour l\'inférence la plus rapide sur 7–14B et le support complet d\'entraînement. Sous 1 000 €, NVIDIA RTX 3060 12Go gagne en rapport qualité-prix.',
+        answer: 'Apple Silicon pour les modèles 70B+ et l\'efficacité énergétique — Mac Studio M5 Max 64Go contient Llama 3 70B à partir de 2 499 $ (prix de base). NVIDIA pour l\'inférence la plus rapide sur 7–14B et le support complet d\'entraînement. Sous 1 000 €, NVIDIA RTX 3060 12Go gagne en rapport qualité-prix.',
         bullets: [
           'Apple M5 Max 128Go : ~75 tok/s sur Llama 3 8B, ~18 tok/s sur Llama 3 70B',
           'RTX 4090 24Go : ~150 tok/s sur Llama 3 8B — 70B ne tient pas en 24Go VRAM',
-          'Mac Studio M5 Max 64Go : ~2 499+ $ vs système 2× RTX 4090 : ~7 000 €',
+          'Mac Studio M5 Max 64Go : à partir de 2 499 $ (prix de base) vs système 2× RTX 4090 : ~7 000+ $',
           'Apple sous charge LLM : 25–35W vs système RTX 4090 : ~450W',
         ],
         updatedDate: '2026-05',
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'M5 Max 128Go : ~75 tok/s Llama 3 8B Q4_K_M ; ~18 tok/s Llama 3 70B Q4_K_M (tient en mémoire)',
           'RTX 4090 24Go : ~150 tok/s Llama 3 8B ; Llama 3 70B ne tient pas (~38Go VRAM requis)',
-          'Coût pour capacité 70B : Mac Studio M5 Max 64Go ~2 499+ $ vs système 2× RTX 4090 ~7 000 €',
+          'Coût pour capacité 70B : Mac Studio M5 Max 64Go à partir de 2 499 $ (prix de base) vs système 2× RTX 4090 ~7 000+ $',
           'Énergie : Apple 25–35W ; système RTX 4090 ~450W — environ 10× de différence',
           'Logiciels : NVIDIA domine (CUDA, PyTorch, vLLM, TensorRT-LLM) ; Apple croît (MLX, mlx-lm)',
           'Entraînement/fine-tuning : NVIDIA seule option viable pour les charges sérieuses',
@@ -1143,7 +1143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Opérations tensor sans copie — pas de bus PCIe entre CPU et GPU',
               'Neural Engine : 38 TOPS pour les opérations ML accélérées',
               'Llama 3 70B Q4_K_M (~38Go) tient dans les configurations 64Go ou 128Go',
-              'Mac Studio M5 Max 64Go : ~2 499+ $ — configuration recommandée pour les modèles 70B ; Mac Studio M5 Ultra désormais disponible à partir de 5 499 $ (96Go), livraison dès le 22 septembre 2026',
+              'Mac Studio M5 Max 64Go : à partir de 2 499 $ (prix de base) — configuration recommandée pour les modèles 70B ; Mac Studio M5 Ultra désormais disponible à partir de 5 499 $ (96Go), livraison dès le 22 septembre 2026',
             ],
           },
           {
@@ -1198,7 +1198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'note', text: 'Benchmarks issus de tests communautaires mlx-community et llama.cpp, mai 2026. Approximatifs ±10–15%. Exécutez llama-bench sur votre matériel pour des chiffres exacts.' },
         ],
         faqs: [
-          { q: '18 tok/s sur Llama 3 70B est-il suffisant pour une utilisation interactive ?', a: 'Oui pour la plupart des tâches. 18 tok/s produit une réponse de 500 mots en environ 20–25 secondes. Une utilisation interactive à la qualité 70B qui nécessitait auparavant un serveur à 40 000 €+ est maintenant disponible sur un Mac Studio M5 Max 64Go à ~2 499+ $.' },
+          { q: '18 tok/s sur Llama 3 70B est-il suffisant pour une utilisation interactive ?', a: 'Oui pour la plupart des tâches. 18 tok/s produit une réponse de 500 mots en environ 20–25 secondes. Une utilisation interactive à la qualité 70B qui nécessitait auparavant un serveur à 40 000 €+ est maintenant disponible sur un Mac Studio M5 Max 64Go à partir de 2 499 $ (prix de base).' },
           { q: 'Pourquoi NVIDIA est-il plus rapide sur les petits modèles ?', a: 'La bande passante GDDR7/GDDR6X de NVIDIA (1 008–1 792 Go/s) dépasse celle de l\'Apple M5 Max (614 Go/s). L\'inférence LLM est limitée par la bande passante mémoire — une bande passante plus élevée fait tourner les petits modèles plus vite.' },
         ],
       },
@@ -1206,10 +1206,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost',
         title: 'Comparaison des coûts : coût système total par taille de modèle',
         image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-fr.webp',
-        imageCaption: 'Coût système total pour faire tourner des modèles de 7B à 120B+ en local : NVIDIA gagne sous 1 500 € ; Apple gagne au niveau 70B (Mac Studio M5 Max 64Go ~2 499+ $ vs 7 000 €+ système multi-GPU).',
+        imageCaption: 'Coût système total pour faire tourner des modèles de 7B à 120B+ en local : NVIDIA gagne sous 1 500 € ; Apple gagne au niveau 70B (Mac Studio M5 Max 64Go à partir de 2 499 $ (prix de base) vs 7 000+ $ système multi-GPU).',
         content: 'Le coût système total inclut la carte GPU plus le PC pour NVIDIA ; juste le Mac pour Apple. Le point de croisement où Apple devient moins cher est le niveau des modèles 70B.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'NVIDIA est moins cher pour les modèles 7–14B (RTX 3060 12Go + PC ~800 €) ; Apple est moins cher pour les modèles 70B (Mac Studio M5 Max 64Go ~2 499+ $ vs système 2× RTX 4090 ~7 000 €).' },
+          { type: 'one-sentence', text: 'NVIDIA est moins cher pour les modèles 7–14B (RTX 3060 12Go + PC ~800 €) ; Apple est moins cher pour les modèles 70B (Mac Studio M5 Max 64Go à partir de 2 499 $ (prix de base) vs système 2× RTX 4090 ~7 000+ $).' },
           { type: 'plain-terms', text: 'Les petits modèles favorisent NVIDIA (acheter un GPU, le brancher). Les grands modèles favorisent Apple (un appareil au lieu de deux cartes graphiques plus un PC personnalisé entier).' },
         ],
         columns: ['Modèle cible', 'Option Apple', 'Prix Apple', 'Option NVIDIA', 'Prix NVIDIA', 'Moins cher'],
@@ -1217,7 +1217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modèle cible': 'Modèles 7B', 'Option Apple': 'Mac Mini M4 24Go', 'Prix Apple': '1 599 €', 'Option NVIDIA': 'RTX 3060 12Go + PC', 'Prix NVIDIA': '~800 €', 'Moins cher': 'NVIDIA (2×)' },
           { 'Modèle cible': 'Modèles 14B', 'Option Apple': 'Mac Mini M4 Pro 48Go', 'Prix Apple': '2 199 €', 'Option NVIDIA': 'RTX 4060 Ti 16Go + PC', 'Prix NVIDIA': '~1 200 €', 'Moins cher': 'NVIDIA (1,8×)' },
           { 'Modèle cible': 'Modèles 32B', 'Option Apple': 'Mac Mini M4 Pro 48Go', 'Prix Apple': '2 199 €', 'Option NVIDIA': 'RTX 5090 32Go + PC', 'Prix NVIDIA': '~5 500 €', 'Moins cher': 'Apple (2,5×)' },
-          { 'Modèle cible': 'Modèles 70B', 'Option Apple': 'Mac Studio M5 Max 64Go', 'Prix Apple': '~2 499+ $', 'Option NVIDIA': '2× RTX 4090 + PC', 'Prix NVIDIA': '~7 000 €', 'Moins cher': 'Apple (2×)' },
+          { 'Modèle cible': 'Modèles 70B', 'Option Apple': 'Mac Studio M5 Max 64Go', 'Prix Apple': 'à partir de 2 499 $ (prix de base)', 'Option NVIDIA': '2× RTX 4090 + PC', 'Prix NVIDIA': '~7 000+ $', 'Moins cher': 'Apple (2×)' },
           { 'Modèle cible': 'Modèles 96B+', 'Option Apple': 'Mac Studio M5 Ultra 96Go', 'Prix Apple': '5 499 $', 'Option NVIDIA': '4× A100 40Go serveur', 'Prix NVIDIA': '~40 000 €+', 'Moins cher': 'Apple (7,3×)' },
           { 'Modèle cible': 'Modèles 200B+', 'Option Apple': 'Mac Studio M5 Ultra 256Go', 'Prix Apple': '9 499 $', 'Option NVIDIA': '6× A100 40Go serveur', 'Prix NVIDIA': '~60 000 €+', 'Moins cher': 'Apple (6,3×)' },
         ],
@@ -1298,13 +1298,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Le bon matériel dépend entièrement de la taille de votre modèle cible et de votre flux de travail. Ce sont des recommandations directes et sans ambiguïté.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Choisissez Apple Silicon pour les modèles 70B+, le fonctionnement silencieux ou l\'inférence portable ; choisissez NVIDIA CUDA pour le débit 7–14B maximal, l\'entraînement, la mise à l\'échelle multi-GPU ou les budgets sous 1 000 €.' },
-          { type: 'plain-terms', text: 'Si vous voulez Llama 3 70B tournant en privé et à un prix abordable, Apple est votre seule vraie option aujourd\'hui. Si vous voulez l\'assistant 7B le plus rapide avec un budget sous 1 500 €, NVIDIA gagne.' },
+          { type: 'plain-terms', text: 'Si vous voulez Llama 3 70B tournant en privé et à un prix abordable, Apple est une option pratique aujourd\'hui (un seul Mac avec 64 Go ou plus). Si vous voulez l\'assistant 7B le plus rapide avec un budget sous 1 500 €, NVIDIA gagne.' },
         ],
         subsections: [
           {
             title: 'Choisissez Apple Silicon quand :',
             list: [
-              '"Je veux faire tourner des modèles 70B en privé" → Mac Studio M5 Max 64Go (~2 499+ $) — seule option abordable sur un seul appareil',
+              '"Je veux faire tourner des modèles 70B en privé" → Mac Studio M5 Max 64Go (à partir de 2 499 $, prix de base) — une option abordable sur un seul appareil',
               '"Je veux un LLM silencieux pour bureau à domicile" → N\'importe quel Mac Studio — complètement silencieux sous charge d\'inférence complète',
               '"J\'ai besoin de modèles 14B+ sur laptop" → MacBook Pro M5 Max — fait tourner Qwen 14B Q4_K_M sur batterie',
               '"Je veux un appareil pour dev + inférence + usage quotidien" → Mac comme workstation unifiée',
@@ -1390,10 +1390,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Facteur', 'Gagnant', 'Pourquoi'],
         rows: [
-          { Facteur: 'Inférence grands modèles (70B+)', Gagnant: 'Apple', Pourquoi: 'Mac Studio M5 Max 64Go ~2 499+ $ vs système deux GPU 7 000 €+ ; RTX 5090 32Go ne peut pas non plus contenir 70B' },
+          { Facteur: 'Inférence grands modèles (70B+)', Gagnant: 'Apple', Pourquoi: 'Mac Studio M5 Max 64Go à partir de 2 499 $ (prix de base) vs système deux GPU 7 000+ $ ; RTX 5090 32Go ne peut pas non plus contenir 70B' },
           { Facteur: 'Vitesse petits modèles (7–14B)', Gagnant: 'NVIDIA', Pourquoi: 'RTX 4090 : ~150 tok/s vs M5 Max : ~75 tok/s' },
           { Facteur: 'Coût sous 1 000 €', Gagnant: 'NVIDIA', Pourquoi: 'RTX 3060 + PC ~800 € vs Mac le moins cher 1 599 €' },
-          { Facteur: 'Coût pour modèles 70B', Gagnant: 'Apple', Pourquoi: 'Mac Studio M5 Max 64Go ~2 499+ $ vs 2× RTX 4090 + PC ~7 000 €' },
+          { Facteur: 'Coût pour modèles 70B', Gagnant: 'Apple', Pourquoi: 'Mac Studio M5 Max 64Go à partir de 2 499 $ (prix de base) vs 2× RTX 4090 + PC ~7 000+ $' },
           { Facteur: 'Efficacité énergétique', Gagnant: 'Apple', Pourquoi: '25–35W vs 450W — 8–15× plus efficace' },
           { Facteur: 'Bruit', Gagnant: 'Apple', Pourquoi: 'Silencieux vs refroidissement actif bruyant requis' },
           { Facteur: 'Écosystème logiciel', Gagnant: 'NVIDIA', Pourquoi: 'CUDA alimente PyTorch, vLLM, TensorRT-LLM, tous les outils majeurs' },
@@ -1424,7 +1424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Meilleur choix pour modèles 70B',
-            content: 'Mac Studio M5 Max 64Go (~2 499+ $). Seule option sur un seul appareil qui charge Llama 3 70B Q4_K_M à une vitesse utilisable (~18 tok/s).',
+            content: 'Mac Studio M5 Max 64Go (à partir de 2 499 $, prix de base). Une option abordable sur un seul appareil qui charge Llama 3 70B Q4_K_M à une vitesse utilisable (~18 tok/s).',
           },
           {
             title: 'Meilleur choix pour entraînement + inférence rapide',
@@ -1434,7 +1434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           { url: 'https://www.apple.com/fr/shop/buy-mac/mac-mini', productName: 'Mac Mini M4 (24Go)', productCategory: 'apple_silicon_mac', priceRange: '1 599 €', label: 'Mac Mini M4 24Go — Apple Store FR →' },
           { url: 'https://www.apple.com/fr/shop/buy-mac/mac-mini/pro', productName: 'Mac Mini M4 Pro (48Go)', productCategory: 'apple_silicon_mac', priceRange: '2 199 €', label: 'Mac Mini M4 Pro 48Go — Apple Store FR →' },
-          { url: 'https://www.apple.com/fr/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Max (64Go)', productCategory: 'apple_silicon_mac', priceRange: '~2 499+ $', label: 'Mac Studio M5 Max 64Go — Apple Store FR →' },
+          { url: 'https://www.apple.com/fr/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Max (64Go)', productCategory: 'apple_silicon_mac', priceRange: 'à partir de 2 499 $ (prix de base)', label: 'Mac Studio M5 Max 64Go — Apple Store FR →' },
           { url: 'https://www.amazon.fr/s?k=NVIDIA+RTX+4090+24Go', productName: 'NVIDIA RTX 4090 24Go', productCategory: 'nvidia_gpu', priceRange: '~2 490 €', label: 'RTX 4090 24Go — Amazon FR →' },
           { url: 'https://www.amazon.fr/s?k=RTX+4060+Ti+16Go', productName: 'RTX 4060 Ti 16Go', productCategory: 'nvidia_gpu', priceRange: '~389 €', label: 'RTX 4060 Ti 16Go — Amazon FR →' },
           { url: 'https://www.amazon.fr/s?k=RTX+3060+12Go', productName: 'RTX 3060 12Go', productCategory: 'nvidia_gpu', priceRange: '~190 € occasion', label: 'RTX 3060 12Go — Amazon FR →' },
@@ -1446,7 +1446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
             { q: 'Puis-je utiliser les modèles Apple MLX sur Windows ou Linux ?', a: 'Non. MLX est macOS uniquement et nécessite Apple Silicon. Les modèles GGUF via llama.cpp fonctionnent sur toutes les plateformes. Pour un usage multiplateforme, Ollama avec le format GGUF fonctionne sur Mac et systèmes NVIDIA.' },
             { q: 'Ollama utilise-t-il MLX ou Metal sur Apple Silicon ?', a: 'Ollama sur Apple Silicon utilise l\'accélération GPU Metal par défaut, pas MLX. Pour les optimisations spécifiques MLX, utilisez mlx-lm directement ou LM Studio avec le backend MLX activé.' },
-            { q: 'Quel est le Mac minimum pour faire tourner des modèles 70B ?', a: 'Mac Studio M4 Max avec 64Go de mémoire unifiée (~2 999 €). Llama 3 70B Q4_K_M nécessite ~38Go ; macOS en réserve au moins 8Go, donc 64Go laissent environ 56Go utilisables, ce qui suffit pour les poids et le contexte. Avec 36Go, il ne reste qu\'environ 28Go : c\'est insuffisant.' },
+            { q: 'Quel est le Mac minimum pour faire tourner des modèles 70B ?', a: 'Mac Studio M5 Max avec 64Go de mémoire unifiée (à partir de 2 499 $, prix de base). Llama 3 70B Q4_K_M nécessite ~38Go ; macOS en réserve au moins 8Go, donc 64Go laissent environ 56Go utilisables, ce qui suffit pour les poids et le contexte. Avec 36Go, il ne reste qu\'environ 28Go : c\'est insuffisant.' },
             { q: 'Apple M5 Max est-il meilleur que RTX 4090 pour les LLMs locaux ?', a: 'Cela dépend de la taille du modèle. Pour 7B : RTX 4090 gagne (150 tok/s vs 75 tok/s). Pour 70B : M5 Max 128Go gagne par défaut — RTX 4090 ne peut pas du tout charger 70B. Pour l\'entraînement : NVIDIA gagne largement.' },
             { q: 'Comment le nouveau Apple M5 Ultra se compare-t-il au RTX 5090 ?', a: 'Apple a annoncé le Mac Studio avec M5 Ultra le 25 août 2026 — à partir de 5 499 $ pour 96Go de mémoire unifiée (256Go à 9 499 $). Les premiers chiffres montrent ~40–52 tok/s sur Llama 3.3 70B, un modèle que les 32Go de VRAM du RTX 5090 ne peuvent pas charger du tout. Pour les modèles qui tiennent en 32Go, le RTX 5090 reste plus rapide par token.' },
           ],
@@ -1490,7 +1490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '18 tok/s sur Llama 3 70B est-il suffisant pour une utilisation interactive ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Oui pour la plupart des tâches. 18 tok/s produit une réponse de 500 mots en environ 20–25 secondes. Une utilisation interactive à la qualité 70B qui nécessitait auparavant un serveur à 40 000 €+ est maintenant disponible sur un Mac Studio M5 Max 64Go à ~2 499+ $.',
+              'text': 'Oui pour la plupart des tâches. 18 tok/s produit une réponse de 500 mots en environ 20–25 secondes. Une utilisation interactive à la qualité 70B qui nécessitait auparavant un serveur à 40 000 €+ est maintenant disponible sur un Mac Studio M5 Max 64Go à partir de 2 499 $ (prix de base).',
             },
           },
           {
@@ -1538,7 +1538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Quel est le Mac minimum pour faire tourner des modèles 70B ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Mac Studio M4 Max avec 64Go de mémoire unifiée (~2 999 €). Llama 3 70B Q4_K_M nécessite ~38Go ; macOS en réserve au moins 8Go, donc 64Go laissent environ 56Go utilisables, ce qui suffit pour les poids et le contexte. Avec 36Go, il ne reste qu\'environ 28Go : c\'est insuffisant.',
+              'text': 'Mac Studio M5 Max avec 64Go de mémoire unifiée (à partir de 2 499 $, prix de base). Llama 3 70B Q4_K_M nécessite ~38Go ; macOS en réserve au moins 8Go, donc 64Go laissent environ 56Go utilisables, ce qui suffit pour les poids et le contexte. Avec 36Go, il ne reste qu\'environ 28Go : c\'est insuffisant.',
             },
           },
           {
@@ -1587,11 +1587,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'ローカルLLMにApple MLXとNVIDIA CUDAどちらを使うべきか？',
-        answer: 'Apple Siliconは70B以上のモデルと電力効率に最適—Mac Studio M5 Max 64GBはLlama 3 70Bを収容し~2,499+ドル。NVIDIAは7〜14Bの最速推論と完全なトレーニングサポートに最適。10万円以下ではNVIDIA RTX 3060 12GBがコスパで勝利。',
+        answer: 'Apple Siliconは70B以上のモデルと電力効率に最適—Mac Studio M5 Max 64GBはLlama 3 70Bを収容し、価格は2,499ドル〜（基本価格）。NVIDIAは7〜14Bの最速推論と完全なトレーニングサポートに最適。10万円以下ではNVIDIA RTX 3060 12GBがコスパで勝利。',
         bullets: [
           'Apple M5 Max 128GB：Llama 3 8Bで約75トークン/秒、Llama 3 70Bで約18トークン/秒',
           'RTX 4090 24GB：Llama 3 8Bで約150トークン/秒 — 70Bは24GB VRAMに収まらない',
-          'Mac Studio M5 Max 64GB：~2,499+ドル vs 2× RTX 4090システム：約700,000円',
+          'Mac Studio M5 Max 64GB：2,499ドル〜（基本価格） vs 2× RTX 4090システム：約7,000ドル',
           'Apple LLM負荷時：25〜35W vs RTX 4090システム：約450W',
         ],
         updatedDate: '2026-05',
@@ -1623,7 +1623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'M5 Max 128GB：Llama 3 8B Q4_K_M で約75トークン/秒；Llama 3 70B Q4_K_M で約18トークン/秒（メモリに収容）',
           'RTX 4090 24GB：Llama 3 8B で約150トークン/秒；Llama 3 70B は収まらない（約38GB VRAM必要）',
-          '70B対応コスト：Mac Studio M5 Max 64GB ~2,499+ドル vs 2× RTX 4090システム 約700,000円',
+          '70B対応コスト：Mac Studio M5 Max 64GB 2,499ドル〜（基本価格） vs 2× RTX 4090システム 約7,000ドル',
           '電力：Apple 25〜35W；RTX 4090システム 約450W — 約10倍の差',
           'ソフトウェア：NVIDIA優位（CUDA、PyTorch、vLLM、TensorRT-LLM）；Apple成長中（MLX、mlx-lm）',
           'トレーニング/ファインチューニング：NVIDIAのみ本格的なワークロードで実用的',
@@ -1670,7 +1670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'ゼロコピーテンソル演算—CPUとGPU間にPCIeバスなし',
               'Neural Engine：加速されたML演算用38 TOPS',
               'Llama 3 70B Q4_K_M（約38GB）は64GBまたは128GB構成に収容可能',
-              'Mac Studio M5 Max 64GB：~2,499+ドル—70Bモデル推奨構成；Mac Studio M5 Ultraが登場、96GBで5,499ドルから、2026年9月22日出荷開始',
+              'Mac Studio M5 Max 64GB：2,499ドル〜（基本価格）—70Bモデル推奨構成；Mac Studio M5 Ultraが登場、96GBで5,499ドルから、2026年9月22日出荷開始',
             ],
           },
           {
@@ -1725,7 +1725,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'note', text: 'ベンチマークはmlx-communityおよびllama.cppコミュニティテスト（2026年5月）から。近似値±10〜15%。正確な数値はお使いのハードウェアでllama-benchを実行してください。' },
         ],
         faqs: [
-          { q: 'Llama 3 70Bで18トークン/秒はインタラクティブな使用に十分ですか？', a: 'ほとんどのタスクでは十分です。18トークン/秒で500語の応答を生成するには約20〜25秒かかります。以前は4,000,000円以上のサーバーが必要だった70B品質のインタラクティブ使用が、~2,499+ドルのMac Studio M5 Max 64GBで可能になりました。' },
+          { q: 'Llama 3 70Bで18トークン/秒はインタラクティブな使用に十分ですか？', a: 'ほとんどのタスクでは十分です。18トークン/秒で500語の応答を生成するには約20〜25秒かかります。以前は4,000,000円以上のサーバーが必要だった70B品質のインタラクティブ使用が、2,499ドル〜（基本価格）のMac Studio M5 Max 64GBで可能になりました。' },
           { q: 'なぜNVIDIAは小型モデルで速いのですか？', a: 'NVIDIAのGDDR7/GDDR6X帯域幅（1,008〜1,792 GB/s）はApple M5 Maxの帯域幅（614 GB/s）を超えています。LLM推論はメモリ帯域幅に制限される—高い帯域幅で小型モデルを速く実行できます。' },
         ],
       },
@@ -1733,10 +1733,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost',
         title: 'コスト比較：モデルサイズ別総システムコスト',
         image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-ja.webp',
-        imageCaption: '7Bから120B以上のモデルをローカルで実行する総システムコスト：NVIDIAは30万円以下で優位；Appleは70Bレベルで優位（Mac Studio M5 Max 64GB ~2,499+ドル vs マルチGPUシステム700,000円以上）。',
+        imageCaption: '7Bから120B以上のモデルをローカルで実行する総システムコスト：NVIDIAは30万円以下で優位；Appleは70Bレベルで優位（Mac Studio M5 Max 64GB 2,499ドル〜（基本価格） vs マルチGPUシステム7,000ドル以上）。',
         content: '総システムコストにはNVIDIAのGPUカード＋PCビルドが含まれ；Appleの場合はMacだけ。AppleがNVIDIAより安くなる分岐点は70Bモデルレベル。',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'NVIDIAは7〜14Bモデルで安い（RTX 3060 12GB＋PC 約80,000円）；Appleは70Bモデルで安い（Mac Studio M5 Max 64GB ~2,499+ドル vs 2× RTX 4090システム 約700,000円）。' },
+          { type: 'one-sentence', text: 'NVIDIAは7〜14Bモデルで安い（RTX 3060 12GB＋PC 約80,000円）；Appleは70Bモデルで安い（Mac Studio M5 Max 64GB 2,499ドル〜（基本価格） vs 2× RTX 4090システム 約7,000ドル）。' },
           { type: 'plain-terms', text: '小型モデルはNVIDIAが有利（GPUを買って挿すだけ）。大型モデルはAppleが有利（2枚のグラフィックカードとPCの代わりに1台のデバイス）。' },
         ],
         columns: ['ターゲットモデル', 'Appleオプション', 'Apple価格', 'NVIDIAオプション', 'NVIDIA価格', '安い方'],
@@ -1744,7 +1744,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { ターゲットモデル: '7Bモデル', Appleオプション: 'Mac Mini M4 24GB', Apple価格: '159,800円', NVIDIAオプション: 'RTX 3060 12GB + PC', NVIDIA価格: '約80,000円', '安い方': 'NVIDIA（2×）' },
           { ターゲットモデル: '14Bモデル', Appleオプション: 'Mac Mini M4 Pro 48GB', Apple価格: '219,800円', NVIDIAオプション: 'RTX 4060 Ti 16GB + PC', NVIDIA価格: '約120,000円', '安い方': 'NVIDIA（1.8×）' },
           { ターゲットモデル: '32Bモデル', Appleオプション: 'Mac Mini M4 Pro 48GB', Apple価格: '219,800円', NVIDIAオプション: 'RTX 5090 32GB + PC', NVIDIA価格: '約600,000円', '安い方': 'Apple（2.7×）' },
-          { ターゲットモデル: '70Bモデル', Appleオプション: 'Mac Studio M5 Max 64GB', Apple価格: '~2,499+ドル', NVIDIAオプション: '2× RTX 4090 + PC', NVIDIA価格: '約700,000円', '安い方': 'Apple（2×）' },
+          { ターゲットモデル: '70Bモデル', Appleオプション: 'Mac Studio M5 Max 64GB', Apple価格: '2,499ドル〜（基本価格）', NVIDIAオプション: '2× RTX 4090 + PC', NVIDIA価格: '約7,000ドル', '安い方': 'Apple（2×）' },
           { ターゲットモデル: '96B+モデル', Appleオプション: 'Mac Studio M5 Ultra 96GB', Apple価格: '5,499ドル', NVIDIAオプション: '4× A100 40GBサーバー', NVIDIA価格: '約4,000,000円+', '安い方': 'Apple（7.3×）' },
           { ターゲットモデル: '200B+モデル', Appleオプション: 'Mac Studio M5 Ultra 256GB', Apple価格: '9,499ドル', NVIDIAオプション: '6× A100 40GBサーバー', NVIDIA価格: '約6,000,000円+', '安い方': 'Apple（6.3×）' },
         ],
@@ -1825,13 +1825,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '適切なハードウェアはターゲットモデルサイズとワークフローに完全に依存します。これらは直接的で明確な推奨です。',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Apple Siliconを選ぶのは70B以上のモデル、無音動作、ポータブル推論のとき；NVIDIA CUDAを選ぶのは7〜14Bの最速スループット、トレーニング、マルチGPUスケーリング、または15万円以下の予算のとき。' },
-          { type: 'plain-terms', text: 'Llama 3 70Bをプライベートかつ手頃な価格で実行したいなら、今日Appleが唯一の現実的な選択肢です。最速の7Bアシスタントを15万円以下の予算で望むなら、NVIDIAが勝ります。' },
+          { type: 'plain-terms', text: 'Llama 3 70Bをプライベートかつ手頃な価格で実行したいなら、今日Appleは現実的な選択肢のひとつです（64GB以上のMac1台）。最速の7Bアシスタントを15万円以下の予算で望むなら、NVIDIAが勝ります。' },
         ],
         subsections: [
           {
             title: 'Apple Siliconを選ぶとき：',
             list: [
-              '"70Bモデルをプライベートに実行したい" → Mac Studio M5 Max 64GB（~2,499+ドル）—唯一の手頃な単一デバイス選択肢',
+              '"70Bモデルをプライベートに実行したい" → Mac Studio M5 Max 64GB（2,499ドル〜、基本価格）—手頃な単一デバイス選択肢のひとつ',
               '"静かなホームオフィスLLMが欲しい" → 任意のMac Studio—完全推論負荷下で完全に無音',
               '"ラップトップで14B以上のモデルが必要" → MacBook Pro M5 Max—バッテリーでQwen 14B Q4_K_Mを実行',
               '"開発＋推論＋日常使用に1台のデバイスが欲しい" → 統合ワークステーションとしてのMac',
@@ -1917,10 +1917,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['要素', '勝者', '理由'],
         rows: [
-          { 要素: '大型モデル（70B+）推論', 勝者: 'Apple', 理由: 'Mac Studio M5 Max 64GB ~2,499+ドル vs 700,000円以上の2GPUシステム；RTX 5090 32GBも70B非対応' },
+          { 要素: '大型モデル（70B+）推論', 勝者: 'Apple', 理由: 'Mac Studio M5 Max 64GB 2,499ドル〜（基本価格） vs 7,000ドル以上の2GPUシステム；RTX 5090 32GBも70B非対応' },
           { 要素: '小型モデル（7〜14B）速度', 勝者: 'NVIDIA', 理由: 'RTX 4090：約150 tok/s vs M5 Max：約75 tok/s' },
           { 要素: '15万円以下のコスト', 勝者: 'NVIDIA', 理由: 'RTX 3060 + PC 約80,000円 vs 最安Mac 159,800円' },
-          { 要素: '70Bモデルのコスト', 勝者: 'Apple', 理由: 'Mac Studio M5 Max 64GB ~2,499+ドル vs 2× RTX 4090 + PC 約700,000円' },
+          { 要素: '70Bモデルのコスト', 勝者: 'Apple', 理由: 'Mac Studio M5 Max 64GB 2,499ドル〜（基本価格） vs 2× RTX 4090 + PC 約7,000ドル' },
           { 要素: '電力効率', 勝者: 'Apple', 理由: '25〜35W vs 450W — 8〜15倍効率的' },
           { 要素: '騒音', 勝者: 'Apple', 理由: '無音 vs うるさい能動冷却が必要' },
           { 要素: 'ソフトウェアエコシステム', 勝者: 'NVIDIA', 理由: 'CUDAがPyTorch、vLLM、TensorRT-LLM、全主要ツールを動かす' },
@@ -1951,7 +1951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '70Bモデルに最適',
-            content: 'Mac Studio M5 Max 64GB（~2,499+ドル）。Llama 3 70B Q4_K_Mを使用可能な速度（約18 tok/s）で収容できる唯一の単一デバイス選択肢。',
+            content: 'Mac Studio M5 Max 64GB（2,499ドル〜、基本価格）。Llama 3 70B Q4_K_Mを使用可能な速度（約18 tok/s）で収容できる、手頃な単一デバイス選択肢のひとつ。',
           },
           {
             title: 'トレーニング + 高速推論に最適',
@@ -1961,7 +1961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           { url: 'https://www.apple.com/jp/shop/buy-mac/mac-mini', productName: 'Mac Mini M4 (24GB)', productCategory: 'apple_silicon_mac', priceRange: '159,800円', label: 'Mac Mini M4 24GB — Apple Store JP →' },
           { url: 'https://www.apple.com/jp/shop/buy-mac/mac-mini/pro', productName: 'Mac Mini M4 Pro (48GB)', productCategory: 'apple_silicon_mac', priceRange: '219,800円', label: 'Mac Mini M4 Pro 48GB — Apple Store JP →' },
-          { url: 'https://www.apple.com/jp/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Max (64GB)', productCategory: 'apple_silicon_mac', priceRange: '~2,499+ドル', label: 'Mac Studio M5 Max 64GB — Apple Store JP →' },
+          { url: 'https://www.apple.com/jp/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Max (64GB)', productCategory: 'apple_silicon_mac', priceRange: '2,499ドル〜（基本価格）', label: 'Mac Studio M5 Max 64GB — Apple Store JP →' },
           { url: 'https://www.amazon.co.jp/s?k=NVIDIA+RTX+4090+24GB', productName: 'NVIDIA RTX 4090 24GB', productCategory: 'nvidia_gpu', priceRange: '約275,000円', label: 'RTX 4090 24GB — Amazon JP →' },
           { url: 'https://www.amazon.co.jp/s?k=RTX+4060+Ti+16GB', productName: 'RTX 4060 Ti 16GB', productCategory: 'nvidia_gpu', priceRange: '約38,000円', label: 'RTX 4060 Ti 16GB — Amazon JP →' },
           { url: 'https://www.amazon.co.jp/s?k=RTX+3060+12GB', productName: 'RTX 3060 12GB', productCategory: 'nvidia_gpu', priceRange: '約22,000円（中古）', label: 'RTX 3060 12GB — Amazon JP →' },
@@ -1973,7 +1973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
             { q: 'Apple MLXモデルをWindowsやLinuxで使えますか？', a: 'いいえ。MLXはmacOSのみでApple Siliconが必要です。llama.cpp経由のGGUFモデルはすべてのプラットフォームで動作します。クロスプラットフォームの使用には、GGUF形式のOllamaがMacとNVIDIAシステム両方で機能します。' },
             { q: 'OllamaはApple SiliconでMLXまたはMetalを使用しますか？', a: 'Apple SiliconのOllamaはデフォルトでMLXではなくMetal GPU加速を使用します。MLX特有の最適化には、mlx-lmを直接使用するか、MLXバックエンドを有効にしたLM Studioを使用してください。' },
-            { q: '70Bモデルを実行するための最低限のApple Macは何ですか？', a: '64GBユニファイドメモリのMac Studio M4 Max（~419,800円）。Llama 3 70B Q4_K_Mは約38GB必要で、macOSが少なくとも8GBを使うため、64GBなら約56GBが使え、重みとコンテキストが収まります。36GB構成では約28GBしか残らず収まりません。' },
+            { q: '70Bモデルを実行するための最低限のApple Macは何ですか？', a: '64GBユニファイドメモリのMac Studio M5 Max（2,499ドル〜、基本価格）。Llama 3 70B Q4_K_Mは約38GB必要で、macOSが少なくとも8GBを使うため、64GBなら約56GBが使え、重みとコンテキストが収まります。36GB構成では約28GBしか残らず収まりません。' },
             { q: 'Apple M5 MaxはローカルLLMでRTX 4090より優れていますか？', a: 'モデルサイズによります。7B：RTX 4090が勝ち（150 tok/s vs 75 tok/s）。70B：M5 Max 128GBがデフォルトで勝ち—RTX 4090は70Bを全くロードできません。トレーニング：NVIDIAが大差で勝ち。' },
             { q: '新しいApple M5 UltraはRTX 5090と比べてどうですか？', a: 'Appleは2026年8月25日にMac Studio M5 Ultraを発表しました—96GBユニファイドメモリで5,499ドルから（256GBは9,499ドル）。初期のベンチマークではLlama 3.3 70Bで約40〜52 tok/sを記録しており、これはRTX 5090の32GB VRAMではまったくロードできないモデルです。32GBに収まるモデルではRTX 5090がトークンあたりで依然として高速です。' },
           ],
@@ -2017,7 +2017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Llama 3 70Bで18トークン/秒はインタラクティブな使用に十分ですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'ほとんどのタスクでは十分です。18トークン/秒で500語の応答を生成するには約20〜25秒かかります。以前は4,000,000円以上のサーバーが必要だった70B品質のインタラクティブ使用が、~2,499+ドルのMac Studio M5 Max 64GBで可能になりました。',
+              'text': 'ほとんどのタスクでは十分です。18トークン/秒で500語の応答を生成するには約20〜25秒かかります。以前は4,000,000円以上のサーバーが必要だった70B品質のインタラクティブ使用が、2,499ドル〜（基本価格）のMac Studio M5 Max 64GBで可能になりました。',
             },
           },
           {
@@ -2065,7 +2065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '70Bモデルを実行するための最低限のApple Macは何ですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '64GBユニファイドメモリのMac Studio M4 Max（~419,800円）。Llama 3 70B Q4_K_Mは約38GB必要で、macOSが少なくとも8GBを使うため、64GBなら約56GBが使え、重みとコンテキストが収まります。36GB構成では約28GBしか残らず収まりません。',
+              'text': '64GBユニファイドメモリのMac Studio M5 Max（2,499ドル〜、基本価格）。Llama 3 70B Q4_K_Mは約38GB必要で、macOSが少なくとも8GBを使うため、64GBなら約56GBが使え、重みとコンテキストが収まります。36GB構成では約28GBしか残らず収まりません。',
             },
           },
           {
@@ -2114,11 +2114,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '本地LLM应该用Apple MLX还是NVIDIA CUDA？',
-        answer: 'Apple Silicon适合70B以上模型和能效——Mac Studio M5 Max 64GB可容纳Llama 3 70B，售价约$2,499+。NVIDIA适合7–14B最快推理和完整训练支持。预算1万元以下，NVIDIA RTX 3060 12GB性价比更高。',
+        answer: 'Apple Silicon适合70B以上模型和能效——Mac Studio M5 Max 64GB可容纳Llama 3 70B，售价$2,499起（基础价）。NVIDIA适合7–14B最快推理和完整训练支持。预算1万元以下，NVIDIA RTX 3060 12GB性价比更高。',
         bullets: [
           'Apple M5 Max 128GB：Llama 3 8B约75 tok/s，Llama 3 70B约18 tok/s',
           'RTX 4090 24GB：Llama 3 8B约150 tok/s — 70B放不进24GB VRAM',
-          'Mac Studio M5 Max 64GB：约$2,499+ vs 双RTX 4090系统：约$7,000',
+          'Mac Studio M5 Max 64GB：$2,499起（基础价） vs 双RTX 4090系统：约$7,000',
           'Apple LLM负载时：25–35W vs RTX 4090系统：约450W',
         ],
         updatedDate: '2026-05',
@@ -2150,7 +2150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'M5 Max 128GB：Llama 3 8B Q4_K_M约75 tok/s；Llama 3 70B Q4_K_M约18 tok/s（可放入内存）',
           'RTX 4090 24GB：Llama 3 8B约150 tok/s；Llama 3 70B放不进（需约38GB VRAM）',
-          '70B能力成本：Mac Studio M5 Max 64GB约$2,499+ vs 双RTX 4090系统约$7,000',
+          '70B能力成本：Mac Studio M5 Max 64GB$2,499起（基础价） vs 双RTX 4090系统约$7,000',
           '功耗：Apple 25–35W；RTX 4090系统约450W — 差距约10倍',
           '软件：NVIDIA占优（CUDA、PyTorch、vLLM、TensorRT-LLM）；Apple在成长（MLX、mlx-lm）',
           '训练/微调：NVIDIA是严肃工作负载的唯一可行选择',
@@ -2197,7 +2197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               '零拷贝张量运算——CPU和GPU之间没有PCIe总线',
               '神经引擎：38 TOPS用于加速ML运算',
               'Llama 3 70B Q4_K_M（约38GB）可放入64GB或128GB配置',
-              'Mac Studio M5 Max 64GB：约$2,499+——推荐70B模型配置；Mac Studio M5 Ultra现已推出，96GB版本5,499美元起，2026年9月22日开始发货',
+              'Mac Studio M5 Max 64GB：$2,499起（基础价）——推荐70B模型配置；Mac Studio M5 Ultra现已推出，96GB版本5,499美元起，2026年9月22日开始发货',
             ],
           },
           {
@@ -2252,7 +2252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'note', text: '基准来自mlx-community和llama.cpp社区测试，2026年5月。近似值±10–15%。在您的硬件上运行llama-bench获取精确数值。' },
         ],
         faqs: [
-          { q: 'Llama 3 70B的18 tok/s够用于交互吗？', a: '大多数任务够用。18 tok/s生成500字回复大约需要20–25秒。以前需要300,000元以上服务器才能实现的70B质量交互，现在~$2,499+的Mac Studio M5 Max 64GB就能做到。' },
+          { q: 'Llama 3 70B的18 tok/s够用于交互吗？', a: '大多数任务够用。18 tok/s生成500字回复大约需要20–25秒。以前需要300,000元以上服务器才能实现的70B质量交互，现在$2,499起（基础价）的Mac Studio M5 Max 64GB就能做到。' },
           { q: '为什么NVIDIA在小模型上更快？', a: 'NVIDIA的GDDR7/GDDR6X带宽（1,008–1,792 GB/s）超过Apple M5 Max的带宽（614 GB/s）。LLM推理受内存带宽限制——更高带宽运行小模型更快。Apple的优势在容量，不在带宽。' },
         ],
       },
@@ -2260,10 +2260,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost',
         title: '成本对比：各模型大小的总系统成本',
         image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-zh.webp',
-        imageCaption: '本地运行7B到120B以上模型的总系统成本：NVIDIA在15,000元以下更便宜；Apple在70B级别更便宜（Mac Studio M5 Max 64GB约$2,499+ vs $7,000以上多GPU系统）。',
+        imageCaption: '本地运行7B到120B以上模型的总系统成本：NVIDIA在15,000元以下更便宜；Apple在70B级别更便宜（Mac Studio M5 Max 64GB$2,499起（基础价） vs $7,000以上多GPU系统）。',
         content: '总系统成本NVIDIA包含显卡加PC构建；Apple只是Mac本身。Apple变得更便宜的交叉点是70B模型级别。',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'NVIDIA在7–14B模型上更便宜（RTX 3060 12GB + PC约6,000元）；Apple在70B模型上更便宜（Mac Studio M5 Max 64GB约$2,499+ vs 双RTX 4090系统约$7,000）。' },
+          { type: 'one-sentence', text: 'NVIDIA在7–14B模型上更便宜（RTX 3060 12GB + PC约6,000元）；Apple在70B模型上更便宜（Mac Studio M5 Max 64GB$2,499起（基础价） vs 双RTX 4090系统约$7,000）。' },
           { type: 'plain-terms', text: '小模型偏向NVIDIA（买显卡插上就用）。大模型偏向Apple（一台设备代替两张显卡加整套自组PC）。' },
         ],
         columns: ['目标模型', 'Apple方案', 'Apple价格', 'NVIDIA方案', 'NVIDIA价格', '更便宜'],
@@ -2271,9 +2271,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 目标模型: '7B模型', Apple方案: 'Mac Mini M4 24GB', Apple价格: '约10,000元', NVIDIA方案: 'RTX 3060 12GB + PC', NVIDIA价格: '约6,000元', 更便宜: 'NVIDIA（1.7×）' },
           { 目标模型: '14B模型', Apple方案: 'Mac Mini M4 Pro 48GB', Apple价格: '约16,000元', NVIDIA方案: 'RTX 4060 Ti 16GB + PC', NVIDIA价格: '约9,000元', 更便宜: 'NVIDIA（1.8×）' },
           { 目标模型: '32B模型', Apple方案: 'Mac Mini M4 Pro 48GB', Apple价格: '约16,000元', NVIDIA方案: 'RTX 5090 32GB + PC', NVIDIA价格: '约42,000元', 更便宜: 'Apple（2.6×）' },
-          { 目标模型: '70B模型', Apple方案: 'Mac Studio M5 Max 64GB', Apple价格: '约$2,499+', NVIDIA方案: '双RTX 4090 + PC', NVIDIA价格: '约$7,000', 更便宜: 'Apple（2.2×）' },
+          { 目标模型: '70B模型', Apple方案: 'Mac Studio M5 Max 64GB', Apple价格: '$2,499起（基础价）', NVIDIA方案: '双RTX 4090 + PC', NVIDIA价格: '约$7,000', 更便宜: 'Apple（2.2×）' },
           { 目标模型: '96B+模型', Apple方案: 'Mac Studio M5 Ultra 96GB', Apple价格: '5,499美元', NVIDIA方案: '4× A100 40GB服务器', NVIDIA价格: '约300,000元以上', 更便宜: 'Apple（7.3×）' },
-          { 目标模型: '200B+模型', Apple方案: 'Mac Studio M5 Ultra 256GB', Apple价格: '9,499美元', NVIDIA方案: '6× A100 40GB服务器', NVIDIA价格: '约4$7,000以上', 更便宜: 'Apple（6.3×）' },
+          { 目标模型: '200B+模型', Apple方案: 'Mac Studio M5 Ultra 256GB', Apple价格: '9,499美元', NVIDIA方案: '6× A100 40GB服务器', NVIDIA价格: '约$7,000以上', 更便宜: 'Apple（6.3×）' },
         ],
         callouts: [
           { type: 'tip', text: '32B这个关键节点：RTX 5090（32GB）仅显卡就约28,000元加上系统约12,000元。Mac Mini M4 Pro 48GB以约16,000元全包处理32B模型。' },
@@ -2352,13 +2352,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '正确的硬件完全取决于目标模型大小和工作流程。以下是直接、明确的推荐。',
         snippetBlocks: [
           { type: 'one-sentence', text: '选Apple Silicon：70B以上模型、无声运行或便携推理；选NVIDIA CUDA：7–14B最快吞吐量、训练、多GPU扩展或预算1万元以下。' },
-          { type: 'plain-terms', text: '如果想私密且经济实惠地运行Llama 3 70B，Apple是当下唯一真正可行的选择。如果想要最快的7B助手且预算1.5万元以下，NVIDIA胜出。' },
+          { type: 'plain-terms', text: '如果想私密且经济实惠地运行Llama 3 70B，Apple是当下可行的选择之一（一台64GB及以上的Mac）。如果想要最快的7B助手且预算1.5万元以下，NVIDIA胜出。' },
         ],
         subsections: [
           {
             title: '选Apple Silicon的情况：',
             list: [
-              '"我想私密运行70B模型" → Mac Studio M5 Max 64GB（约$2,499+）——唯一实惠的单设备选择',
+              '"我想私密运行70B模型" → Mac Studio M5 Max 64GB（$2,499起，基础价）——实惠的单设备选择之一',
               '"我想要安静的家庭办公室LLM" → 任何Mac Studio——在完整推理负载下完全无声',
               '"我需要笔记本上运行14B以上模型" → MacBook Pro M5 Max——用电池运行Qwen 14B Q4_K_M',
               '"我想要一台用于开发+推理+日常使用的设备" → Mac作为统一工作站',
@@ -2444,10 +2444,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['因素', '胜者', '原因'],
         rows: [
-          { 因素: '大型模型（70B+）推理', 胜者: 'Apple', 原因: 'Mac Studio M5 Max 64GB约$2,499+ vs 约$7,000以上双GPU系统；RTX 5090 32GB也无法装入70B' },
+          { 因素: '大型模型（70B+）推理', 胜者: 'Apple', 原因: 'Mac Studio M5 Max 64GB$2,499起（基础价） vs 约$7,000以上双GPU系统；RTX 5090 32GB也无法装入70B' },
           { 因素: '小型模型（7–14B）速度', 胜者: 'NVIDIA', 原因: 'RTX 4090：约150 tok/s vs M5 Max：约75 tok/s' },
           { 因素: '1万元以下成本', 胜者: 'NVIDIA', 原因: 'RTX 3060 + PC约6,000元 vs 最便宜Mac约10,000元' },
-          { 因素: '70B模型成本', 胜者: 'Apple', 原因: 'Mac Studio M5 Max 64GB约$2,499+ vs 双RTX 4090 + PC约$7,000' },
+          { 因素: '70B模型成本', 胜者: 'Apple', 原因: 'Mac Studio M5 Max 64GB$2,499起（基础价） vs 双RTX 4090 + PC约$7,000' },
           { 因素: '能源效率', 胜者: 'Apple', 原因: '25–35W vs 450W — 8–15倍高效' },
           { 因素: '噪音', 胜者: 'Apple', 原因: '无声 vs 需要嘈杂主动散热' },
           { 因素: '软件生态', 胜者: 'NVIDIA', 原因: 'CUDA驱动PyTorch、vLLM、TensorRT-LLM、所有主要工具' },
@@ -2478,7 +2478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '70B模型最佳选择',
-            content: 'Mac Studio M5 Max 64GB（约$2,499+）。唯一能以可用速度（约18 tok/s）容纳Llama 3 70B Q4_K_M的单设备选择。',
+            content: 'Mac Studio M5 Max 64GB（$2,499起，基础价）。能以可用速度（约18 tok/s）容纳Llama 3 70B Q4_K_M的实惠单设备选择之一。',
           },
           {
             title: '训练+快速推理最佳选择',
@@ -2488,7 +2488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           { url: 'https://www.apple.com/cn/shop/buy-mac/mac-mini', productName: 'Mac Mini M4 (24GB)', productCategory: 'apple_silicon_mac', priceRange: '约10,000元', label: 'Mac Mini M4 24GB — Apple Store CN →' },
           { url: 'https://www.apple.com/cn/shop/buy-mac/mac-mini/pro', productName: 'Mac Mini M4 Pro (48GB)', productCategory: 'apple_silicon_mac', priceRange: '约16,000元', label: 'Mac Mini M4 Pro 48GB — Apple Store CN →' },
-          { url: 'https://www.apple.com/cn/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Max (64GB)', productCategory: 'apple_silicon_mac', priceRange: '约$2,499+', label: 'Mac Studio M5 Max 64GB — Apple Store CN →' },
+          { url: 'https://www.apple.com/cn/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Max (64GB)', productCategory: 'apple_silicon_mac', priceRange: '$2,499起（基础价）', label: 'Mac Studio M5 Max 64GB — Apple Store CN →' },
           { url: 'https://search.jd.com/Search?keyword=NVIDIA+RTX+4090', productName: 'NVIDIA RTX 4090 24GB', productCategory: 'nvidia_gpu', priceRange: '~$2,755新品 / ~$2,268二手', label: 'RTX 4090 24GB — 京东 →' },
           { url: 'https://search.jd.com/Search?keyword=RTX+4060+Ti+16GB', productName: 'RTX 4060 Ti 16GB', productCategory: 'nvidia_gpu', priceRange: '~$424 USD', label: 'RTX 4060 Ti 16GB — 京东 →' },
           { url: 'https://search.jd.com/Search?keyword=RTX+3060+12GB', productName: 'RTX 3060 12GB', productCategory: 'nvidia_gpu', priceRange: '~$205–$220 USD二手', label: 'RTX 3060 12GB — 京东 →' },
@@ -2500,7 +2500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '能在Windows或Linux上使用Apple MLX模型吗？', a: '不能。MLX仅限macOS，需要Apple Silicon。llama.cpp的GGUF模型在所有平台上都可用。跨平台使用时，GGUF格式的Ollama在Mac和NVIDIA系统上都能用。' },
           { q: 'Ollama在Apple Silicon上使用MLX还是Metal？', a: 'Apple Silicon上的Ollama默认使用Metal GPU加速，不是MLX。要获得MLX特有的优化，请直接使用mlx-lm或启用MLX后端的LM Studio。' },
-          { q: '运行70B模型的最低配置Mac是什么？', a: '配备64GB统一内存的Mac Studio M4 Max（约$2,499）。Llama 3 70B Q4_K_M需约38GB，而macOS至少占用8GB，64GB内存约有56GB可用，足以容纳权重和上下文；36GB配置仅约28GB可用，装不下。' },
+          { q: '运行70B模型的最低配置Mac是什么？', a: '配备64GB统一内存的Mac Studio M5 Max（$2,499起，基础价）。Llama 3 70B Q4_K_M需约38GB，而macOS至少占用8GB，64GB内存约有56GB可用，足以容纳权重和上下文；36GB配置仅约28GB可用，装不下。' },
           { q: 'Apple M5 Max对本地LLM比RTX 4090更好吗？', a: '取决于模型大小。7B：RTX 4090胜（150 tok/s vs 75 tok/s）。70B：M5 Max 128GB自动胜——RTX 4090根本无法加载70B。训练：NVIDIA大幅胜出。' },
           { q: '新款Apple M5 Ultra与RTX 5090相比如何？', a: 'Apple于2026年8月25日发布了搭载M5 Ultra的Mac Studio——96GB统一内存版本5,499美元起（256GB版本9,499美元）。早期数据显示其在Llama 3.3 70B上约为40–52 tok/s，而这个模型RTX 5090的32GB显存根本无法加载。对于能装入32GB显存的模型，RTX 5090每token速度仍然更快。' },
         ],
@@ -2533,7 +2533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: '能在Windows或Linux上使用Apple MLX模型吗？', acceptedAnswer: { '@type': 'Answer', text: '不能。MLX仅限macOS，需要Apple Silicon。GGUF格式的Ollama在Mac和NVIDIA系统上跨平台可用。' } },
         { '@type': 'Question', name: 'Apple M5 Max对本地LLM比RTX 4090更好吗？', acceptedAnswer: { '@type': 'Answer', text: '取决于模型大小。7B：RTX 4090胜。70B：M5 Max 128GB自动胜——RTX 4090无法加载70B。训练：NVIDIA大幅胜出。' } },
-        { '@type': 'Question', name: '运行70B模型的最低配置Mac是什么？', acceptedAnswer: { '@type': 'Answer', text: '配备64GB统一内存的Mac Studio M4 Max（约$2,499）。Llama 3 70B Q4_K_M需约38GB，而macOS至少占用8GB，64GB内存约有56GB可用，足以容纳权重和上下文；36GB配置仅约28GB可用，装不下。' } },
+        { '@type': 'Question', name: '运行70B模型的最低配置Mac是什么？', acceptedAnswer: { '@type': 'Answer', text: '配备64GB统一内存的Mac Studio M5 Max（$2,499起，基础价）。Llama 3 70B Q4_K_M需约38GB，而macOS至少占用8GB，64GB内存约有56GB可用，足以容纳权重和上下文；36GB配置仅约28GB可用，装不下。' } },
         { '@type': 'Question', name: '新款Apple M5 Ultra与RTX 5090相比如何？', acceptedAnswer: { '@type': 'Answer', text: 'Apple于2026年8月25日发布了搭载M5 Ultra的Mac Studio——96GB统一内存版本5,499美元起（256GB版本9,499美元）。早期数据显示其在Llama 3.3 70B上约为40–52 tok/s，RTX 5090的32GB显存无法加载该模型。' } },
       ],
     },
@@ -2565,11 +2565,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Debo usar Apple MLX o NVIDIA CUDA para LLMs locales?',
-        answer: 'Usa Apple Silicon para modelos de 70B o más y eficiencia energética — Mac Studio M5 Max 64GB corre Llama 3 70B y cuesta ~$2,499+. Usa NVIDIA para la inferencia más rápida en 7–14B y soporte completo de entrenamiento. Con menos de $1,000, la NVIDIA RTX 3060 12GB gana en relación precio-prestaciones.',
+        answer: 'Usa Apple Silicon para modelos de 70B o más y eficiencia energética — Mac Studio M5 Max 64GB corre Llama 3 70B y cuesta desde $2,499 (precio base). Usa NVIDIA para la inferencia más rápida en 7–14B y soporte completo de entrenamiento. Con menos de $1,000, la NVIDIA RTX 3060 12GB gana en relación precio-prestaciones.',
         bullets: [
           'Apple M5 Max 128GB: ~75 tok/s en Llama 3 8B, ~18 tok/s en Llama 3 70B',
           'RTX 4090 24GB: ~150 tok/s en Llama 3 8B — el 70B no cabe en 24GB de VRAM',
-          'Mac Studio M5 Max 64GB: ~$2,499+ vs sistema 2× RTX 4090: ~$7,000',
+          'Mac Studio M5 Max 64GB: desde $2,499 (precio base) vs sistema 2× RTX 4090: ~$7,000',
           'Apple bajo carga LLM: 25–35W vs sistema RTX 4090: ~450W',
         ],
         updatedDate: '2026-05',
@@ -2601,7 +2601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'M5 Max 128GB: ~75 tok/s Llama 3 8B Q4_K_M; ~18 tok/s Llama 3 70B Q4_K_M (cabe en memoria)',
           'RTX 4090 24GB: ~150 tok/s Llama 3 8B; Llama 3 70B no cabe (~38GB de VRAM necesarios)',
-          'Costo para capacidad 70B: Mac Studio M5 Max 64GB ~$2,499+ vs sistema 2× RTX 4090 ~$7,000',
+          'Costo para capacidad 70B: Mac Studio M5 Max 64GB desde $2,499 (precio base) vs sistema 2× RTX 4090 ~$7,000',
           'Energía: Apple 25–35W; sistema RTX 4090 ~450W — diferencia aproximada de 10×',
           'Software: NVIDIA domina (CUDA, PyTorch, vLLM, TensorRT-LLM); Apple crece (MLX, mlx-lm)',
           'Entrenamiento/fine-tuning: NVIDIA es la única opción viable para cargas de trabajo serias',
@@ -2648,7 +2648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Operaciones tensor sin copia — sin bus PCIe entre CPU y GPU',
               'Neural Engine: 38 TOPS para operaciones ML aceleradas',
               'Llama 3 70B Q4_K_M (~38GB) cabe en configuraciones de 64GB o 128GB',
-              'Mac Studio M5 Max 64GB: ~$2,499+ — configuración recomendada para modelos de 70B; el Mac Studio M5 Ultra ya está disponible desde $5,499 (96GB), con envíos desde el 22 de septiembre de 2026',
+              'Mac Studio M5 Max 64GB: desde $2,499 (precio base) — configuración recomendada para modelos de 70B; el Mac Studio M5 Ultra ya está disponible desde $5,499 (96GB), con envíos desde el 22 de septiembre de 2026',
             ],
           },
           {
@@ -2704,7 +2704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'tip', text: 'Usa Llama 3 8B Q4_K_M como benchmark de referencia — es el modelo más probado y ofrece comparaciones fiables entre plataformas.' },
         ],
         faqs: [
-          { q: '¿Son suficientes 18 tok/s en Llama 3 70B para uso interactivo?', a: 'Sí para la mayoría de tareas. 18 tok/s genera una respuesta de 500 palabras en unos 20–25 segundos. El uso interactivo a calidad 70B que antes requería un servidor de más de $40,000 ahora está disponible en un Mac Studio M5 Max 64GB (~$2,499+).' },
+          { q: '¿Son suficientes 18 tok/s en Llama 3 70B para uso interactivo?', a: 'Sí para la mayoría de tareas. 18 tok/s genera una respuesta de 500 palabras en unos 20–25 segundos. El uso interactivo a calidad 70B que antes requería un servidor de más de $40,000 ahora está disponible en un Mac Studio M5 Max 64GB (desde $2,499, precio base).' },
           { q: '¿Por qué NVIDIA es más rápida en modelos pequeños?', a: 'El ancho de banda GDDR7/GDDR6X de NVIDIA (1,008–1,792 GB/s) supera al del Apple M5 Max (614 GB/s). La inferencia con LLMs está limitada por el ancho de banda de memoria — mayor ancho de banda corre modelos pequeños más rápido. La ventaja de Apple está en la capacidad, no en el ancho de banda.' },
         ],
       },
@@ -2712,10 +2712,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost',
         title: 'Comparativa de costos: costo total del sistema por tamaño de modelo',
         image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-es.webp',
-        imageCaption: 'Costo total del sistema para correr modelos de 7B a 120B+ en local: NVIDIA gana por debajo de $1,500; Apple gana en el nivel de 70B (Mac Studio M5 Max 64GB ~$2,499+ vs más de $7,000 sistema multi-GPU).',
+        imageCaption: 'Costo total del sistema para correr modelos de 7B a 120B+ en local: NVIDIA gana por debajo de $1,500; Apple gana en el nivel de 70B (Mac Studio M5 Max 64GB desde $2,499 (precio base) vs más de $7,000 sistema multi-GPU).',
         content: 'El costo total del sistema incluye la tarjeta GPU más el PC para NVIDIA; solo el Mac para Apple. El punto de cruce donde Apple resulta más barata es el nivel de los modelos de 70B.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'NVIDIA es más barata para modelos de 7–14B (RTX 3060 12GB + PC ~$800); Apple es más barata para modelos de 70B (Mac Studio M5 Max 64GB ~$2,499+ vs sistema 2× RTX 4090 ~$7,000).' },
+          { type: 'one-sentence', text: 'NVIDIA es más barata para modelos de 7–14B (RTX 3060 12GB + PC ~$800); Apple es más barata para modelos de 70B (Mac Studio M5 Max 64GB desde $2,499 (precio base) vs sistema 2× RTX 4090 ~$7,000).' },
           { type: 'plain-terms', text: 'Los modelos pequeños favorecen a NVIDIA (compra una GPU y enchúfala). Los modelos grandes favorecen a Apple (un dispositivo en lugar de dos tarjetas gráficas más todo un PC personalizado).' },
         ],
         columns: ['Modelo objetivo', 'Opción Apple', 'Precio Apple', 'Opción NVIDIA', 'Precio NVIDIA', 'Más barato'],
@@ -2723,7 +2723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo objetivo': 'Modelos 7B', 'Opción Apple': 'Mac Mini M4 24GB', 'Precio Apple': '$1,599', 'Opción NVIDIA': 'RTX 3060 12GB + PC', 'Precio NVIDIA': '~$800', 'Más barato': 'NVIDIA (2×)' },
           { 'Modelo objetivo': 'Modelos 14B', 'Opción Apple': 'Mac Mini M4 Pro 48GB', 'Precio Apple': '$2,199', 'Opción NVIDIA': 'RTX 4060 Ti 16GB + PC', 'Precio NVIDIA': '~$1,200', 'Más barato': 'NVIDIA (1.8×)' },
           { 'Modelo objetivo': 'Modelos 32B', 'Opción Apple': 'Mac Mini M4 Pro 48GB', 'Precio Apple': '$2,199', 'Opción NVIDIA': 'RTX 5090 32GB + PC', 'Precio NVIDIA': '~$5,500', 'Más barato': 'Apple (2.5×)' },
-          { 'Modelo objetivo': 'Modelos 70B', 'Opción Apple': 'Mac Studio M5 Max 64GB', 'Precio Apple': '~$2,499+', 'Opción NVIDIA': '2× RTX 4090 + PC', 'Precio NVIDIA': '~$7,000', 'Más barato': 'Apple (2×)' },
+          { 'Modelo objetivo': 'Modelos 70B', 'Opción Apple': 'Mac Studio M5 Max 64GB', 'Precio Apple': 'desde $2,499 (precio base)', 'Opción NVIDIA': '2× RTX 4090 + PC', 'Precio NVIDIA': '~$7,000', 'Más barato': 'Apple (2×)' },
           { 'Modelo objetivo': 'Modelos 96B+', 'Opción Apple': 'Mac Studio M5 Ultra 96GB', 'Precio Apple': '$5,499', 'Opción NVIDIA': '4× A100 40GB servidor', 'Precio NVIDIA': '~$40,000+', 'Más barato': 'Apple (7.3×)' },
           { 'Modelo objetivo': 'Modelos 200B+', 'Opción Apple': 'Mac Studio M5 Ultra 256GB', 'Precio Apple': '$9,499', 'Opción NVIDIA': '6× A100 40GB servidor', 'Precio NVIDIA': '~$60,000+', 'Más barato': 'Apple (6.3×)' },
         ],
@@ -2806,13 +2806,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'El hardware adecuado depende completamente del tamaño del modelo objetivo y del flujo de trabajo. Estas son recomendaciones directas y sin ambigüedad.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Elige Apple Silicon para modelos de 70B+, operación silenciosa o inferencia portátil; elige NVIDIA CUDA para el mayor rendimiento en 7–14B, entrenamiento, escalado multi-GPU o presupuestos menores de $1,000.' },
-          { type: 'plain-terms', text: 'Si quieres correr Llama 3 70B de forma privada y asequible, Apple es tu única opción real hoy. Si quieres el asistente 7B más rápido con un presupuesto menor de $1,500, NVIDIA gana.' },
+          { type: 'plain-terms', text: 'Si quieres correr Llama 3 70B de forma privada y asequible, Apple es una opción práctica hoy (un solo Mac con 64 GB o más). Si quieres el asistente 7B más rápido con un presupuesto menor de $1,500, NVIDIA gana.' },
         ],
         subsections: [
           {
             title: 'Elige Apple Silicon cuando:',
             list: [
-              '"Quiero correr modelos de 70B de forma privada" → Mac Studio M5 Max 64GB (~$2,499+) — única opción asequible en un solo dispositivo',
+              '"Quiero correr modelos de 70B de forma privada" → Mac Studio M5 Max 64GB (desde $2,499, precio base) — una opción asequible en un solo dispositivo',
               '"Quiero un LLM silencioso para la oficina en casa" → Cualquier Mac Studio — completamente silencioso bajo carga de inferencia total',
               '"Necesito modelos de 14B+ en un laptop" → MacBook Pro M5 Max — corre Qwen 14B Q4_K_M con batería',
               '"Quiero un dispositivo para desarrollo + inferencia + uso diario" → Mac como estación de trabajo unificada',
@@ -2896,10 +2896,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Factor', 'Ganador', 'Por qué'],
         rows: [
-          { Factor: 'Inferencia de modelos grandes (70B+)', Ganador: 'Apple', 'Por qué': 'Mac Studio M5 Max 64GB ~$2,499+ vs sistema de dos GPU a más de $7,000; RTX 5090 32GB tampoco aloja 70B' },
+          { Factor: 'Inferencia de modelos grandes (70B+)', Ganador: 'Apple', 'Por qué': 'Mac Studio M5 Max 64GB desde $2,499 vs dos GPU a más de $7,000; RTX 5090 32GB no aloja 70B' },
           { Factor: 'Velocidad en modelos pequeños (7–14B)', Ganador: 'NVIDIA', 'Por qué': 'RTX 4090: ~150 tok/s vs M5 Max: ~75 tok/s' },
           { Factor: 'Costo menor de $1,000', Ganador: 'NVIDIA', 'Por qué': 'RTX 3060 + PC ~$800 vs Mac más barato $1,599' },
-          { Factor: 'Costo para modelos 70B', Ganador: 'Apple', 'Por qué': 'Mac Studio M5 Max 64GB ~$2,499+ vs 2× RTX 4090 + PC ~$7,000' },
+          { Factor: 'Costo para modelos 70B', Ganador: 'Apple', 'Por qué': 'Mac Studio M5 Max 64GB desde $2,499 (precio base) vs 2× RTX 4090 + PC ~$7,000' },
           { Factor: 'Eficiencia energética', Ganador: 'Apple', 'Por qué': '25–35W vs 450W — 8–15× más eficiente' },
           { Factor: 'Ruido', Ganador: 'Apple', 'Por qué': 'Silencioso vs refrigeración activa ruidosa requerida' },
           { Factor: 'Ecosistema de software', Ganador: 'NVIDIA', 'Por qué': 'CUDA impulsa PyTorch, vLLM, TensorRT-LLM, todas las herramientas principales' },
@@ -2930,7 +2930,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'La mejor opción para modelos 70B',
-            content: 'Mac Studio M5 Max 64GB (~$2,499+). La única opción en un solo dispositivo que aloja Llama 3 70B Q4_K_M a velocidad usable (~18 tok/s).',
+            content: 'Mac Studio M5 Max 64GB (desde $2,499, precio base). Una opción asequible en un solo dispositivo que aloja Llama 3 70B Q4_K_M a velocidad usable (~18 tok/s).',
           },
           {
             title: 'La mejor opción para entrenamiento + inferencia rápida',
@@ -2940,7 +2940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           { url: 'https://www.apple.com/shop/buy-mac/mac-mini', productName: 'Mac Mini M4 (24GB)', productCategory: 'apple_silicon_mac', priceRange: '$1,599', label: 'Mac Mini M4 24GB — Apple Store →' },
           { url: 'https://www.apple.com/shop/buy-mac/mac-mini/pro', productName: 'Mac Mini M4 Pro (48GB)', productCategory: 'apple_silicon_mac', priceRange: '$2,199', label: 'Mac Mini M4 Pro 48GB — Apple Store →' },
-          { url: 'https://www.apple.com/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Max (64GB)', productCategory: 'apple_silicon_mac', priceRange: '~$2,499+', label: 'Mac Studio M5 Max 64GB — Apple Store →' },
+          { url: 'https://www.apple.com/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Max (64GB)', productCategory: 'apple_silicon_mac', priceRange: 'desde $2,499 (precio base)', label: 'Mac Studio M5 Max 64GB — Apple Store →' },
           { url: 'https://www.amazon.com/s?k=NVIDIA+RTX+4090+24GB', productName: 'NVIDIA RTX 4090 24GB', productCategory: 'nvidia_gpu', priceRange: '~$2,490', label: 'RTX 4090 24GB — Amazon →' },
           { url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB', productName: 'RTX 4060 Ti 16GB', productCategory: 'nvidia_gpu', priceRange: '~$389', label: 'RTX 4060 Ti 16GB — Amazon →' },
           { url: 'https://www.amazon.com/s?k=RTX+3060+12GB', productName: 'RTX 3060 12GB', productCategory: 'nvidia_gpu', priceRange: '~$205–$220 used', label: 'RTX 3060 12GB — Amazon →' },
@@ -2954,7 +2954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: '¿Ollama usa MLX o Metal en Apple Silicon?', a: 'Ollama en Apple Silicon usa aceleración GPU Metal por defecto, no MLX. Para optimizaciones específicas de MLX (a menudo más rápidas para ciertos modelos), usa mlx-lm directamente o LM Studio con el backend MLX habilitado.' },
             { q: '¿Puedo usar una eGPU con un Mac para NVIDIA CUDA?', a: 'No. macOS eliminó el soporte de eGPU CUDA en 2019. Las GPU NVIDIA externas no son compatibles con macOS para cómputo CUDA. La alternativa práctica es un sistema Linux separado con una GPU NVIDIA.' },
             { q: '¿Cuál es mejor para correr Mistral Small?', a: 'NVIDIA RTX 4090 a ~150 tok/s vs Apple M5 Max a ~75 tok/s — NVIDIA es 2× más rápida. Incluso una RTX 3060 12GB (~$280 usada) supera a un Mac Mini M4 ($1,599) en velocidad pura de inferencia con 7B.' },
-            { q: '¿Cuál es el Mac mínimo para correr modelos de 70B?', a: 'Mac Studio M5 Max con 64GB de memoria unificada (~$2,499+). Llama 3 70B Q4_K_M necesita ~38GB y macOS reserva al menos 8GB, así que con 64GB quedan unos 56GB utilizables para los pesos y el contexto; con 36GB solo quedan unos 28GB y no alcanza.' },
+            { q: '¿Cuál es el Mac mínimo para correr modelos de 70B?', a: 'Mac Studio M5 Max con 64GB de memoria unificada (desde $2,499, precio base). Llama 3 70B Q4_K_M necesita ~38GB y macOS reserva al menos 8GB, así que con 64GB quedan unos 56GB utilizables para los pesos y el contexto; con 36GB solo quedan unos 28GB y no alcanza.' },
             { q: '¿Apple M5 Max es mejor que RTX 4090 para LLMs locales?', a: 'Depende del tamaño del modelo. Para 7B: RTX 4090 gana (150 tok/s vs 75 tok/s). Para 70B: M5 Max 128GB gana por defecto — RTX 4090 no puede cargar 70B en absoluto. Para entrenamiento: NVIDIA gana por un amplio margen.' },
             { q: '¿Cómo se compara el nuevo Apple M5 Ultra con la RTX 5090?', a: 'Apple anunció el Mac Studio con M5 Ultra el 25 de agosto de 2026 — desde $5,499 por 96GB de memoria unificada (256GB por $9,499). Las primeras cifras muestran ~40–52 tok/s en Llama 3.3 70B, un modelo que los 32GB de VRAM de la RTX 5090 no pueden cargar en absoluto. Para modelos que sí caben en 32GB, la RTX 5090 sigue siendo más rápida por token.' },
           ],
@@ -2999,7 +2999,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '¿Son suficientes 18 tok/s en Llama 3 70B para uso interactivo?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sí para la mayoría de tareas. 18 tok/s genera una respuesta de 500 palabras en unos 20–25 segundos. El uso interactivo a calidad 70B que antes requería un servidor de más de $40,000 ahora está disponible en un Mac Studio M5 Max 64GB (~$2,499+).',
+              'text': 'Sí para la mayoría de tareas. 18 tok/s genera una respuesta de 500 palabras en unos 20–25 segundos. El uso interactivo a calidad 70B que antes requería un servidor de más de $40,000 ahora está disponible en un Mac Studio M5 Max 64GB (desde $2,499, precio base).',
             },
           },
           {
@@ -3071,7 +3071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '¿Cuál es el Mac mínimo para correr modelos de 70B?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Mac Studio M5 Max con 64GB de memoria unificada (~$2,499+). Llama 3 70B Q4_K_M necesita ~38GB y macOS reserva al menos 8GB, así que con 64GB quedan unos 56GB utilizables para los pesos y el contexto; con 36GB solo quedan unos 28GB y no alcanza.',
+              'text': 'Mac Studio M5 Max con 64GB de memoria unificada (desde $2,499, precio base). Llama 3 70B Q4_K_M necesita ~38GB y macOS reserva al menos 8GB, así que con 64GB quedan unos 56GB utilizables para los pesos y el contexto; con 36GB solo quedan unos 28GB y no alcanza.',
             },
           },
           {
@@ -3133,11 +3133,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'Devo usar Apple MLX ou NVIDIA CUDA para LLMs locais?',
-        answer: 'Use Apple Silicon para modelos de 70B ou mais e eficiência energética — o Mac Studio M5 Max 64GB roda o Llama 3 70B e custa ~$2,499+. Use NVIDIA para a inferência mais rápida em modelos de 7–14B e suporte completo a treinamento. Abaixo de $1,000, a NVIDIA RTX 3060 12GB vence em custo.',
+        answer: 'Use Apple Silicon para modelos de 70B ou mais e eficiência energética — o Mac Studio M5 Max 64GB roda o Llama 3 70B e custa a partir de $2,499 (preço base). Use NVIDIA para a inferência mais rápida em modelos de 7–14B e suporte completo a treinamento. Abaixo de $1,000, a NVIDIA RTX 3060 12GB vence em custo.',
         bullets: [
           'Apple M5 Max 128GB: ~75 tok/s no Llama 3 8B, ~18 tok/s no Llama 3 70B',
           'RTX 4090 24GB: ~150 tok/s no Llama 3 8B — o 70B não cabe em 24GB de VRAM',
-          'Mac Studio M5 Max 64GB: ~$2,499+ vs sistema 2× RTX 4090: ~$7,000',
+          'Mac Studio M5 Max 64GB: a partir de $2,499 (preço base) vs sistema 2× RTX 4090: ~$7,000',
           'Apple sob carga de LLM: 25–35W vs sistema RTX 4090: ~450W',
         ],
         updatedDate: '2026-05',
@@ -3169,7 +3169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'M5 Max 128GB: ~75 tok/s Llama 3 8B Q4_K_M; ~18 tok/s Llama 3 70B Q4_K_M (cabe na memória)',
           'RTX 4090 24GB: ~150 tok/s Llama 3 8B; Llama 3 70B não cabe (precisa de ~38GB de VRAM)',
-          'Custo para capacidade de 70B: Mac Studio M5 Max 64GB ~$2,499+ vs sistema 2× RTX 4090 ~$7,000',
+          'Custo para capacidade de 70B: Mac Studio M5 Max 64GB a partir de $2,499 (preço base) vs sistema 2× RTX 4090 ~$7,000',
           'Energia: Apple 25–35W; sistema RTX 4090 ~450W — diferença de cerca de 10× por sessão',
           'Software: NVIDIA domina (CUDA, PyTorch, vLLM, TensorRT-LLM); Apple em crescimento (MLX, mlx-lm)',
           'Treinamento/fine-tuning: NVIDIA é a única opção viável para cargas de trabalho sérias',
@@ -3216,7 +3216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Operações de tensor sem cópia — sem barramento PCIe entre CPU e GPU',
               'Neural Engine: 38 TOPS para operações de ML aceleradas',
               'Llama 3 70B Q4_K_M (~38GB) cabe em configurações de 64GB ou 128GB',
-              'Configurações: 64GB (Mac Studio M4 Max ~$2,499) — recomendado para Llama 3 70B',
+              'Configurações: 64GB (Mac Studio M5 Max, a partir de $2,499) — recomendado para Llama 3 70B',
             ],
           },
           {
@@ -3272,7 +3272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'tip', text: 'Use o Llama 3 8B Q4_K_M como benchmark de referência — é o modelo mais testado e oferece comparações confiáveis entre hardwares.' },
         ],
         faqs: [
-          { q: '18 tok/s no Llama 3 70B é rápido o suficiente para uso interativo?', a: 'Sim, para a maioria das tarefas. 18 tok/s geram uma resposta de 500 palavras em cerca de 20–25 segundos. O uso interativo com qualidade de 70B que antes exigia um servidor de mais de $40,000 agora está disponível em um Mac Studio M5 Max de ~$2,499.' },
+          { q: '18 tok/s no Llama 3 70B é rápido o suficiente para uso interativo?', a: 'Sim, para a maioria das tarefas. 18 tok/s geram uma resposta de 500 palavras em cerca de 20–25 segundos. O uso interativo com qualidade de 70B que antes exigia um servidor de mais de $40,000 agora está disponível em um Mac Studio M5 Max a partir de $2,499 (preço base).' },
           { q: 'Por que a NVIDIA é mais rápida em modelos pequenos?', a: 'A largura de banda GDDR7/GDDR6X da NVIDIA (1.008–1.792 GB/s) supera a do Apple M5 Max (614 GB/s). A inferência com LLMs é limitada pela largura de banda de memória — maior largura de banda roda modelos pequenos mais rápido. A vantagem da Apple é a capacidade de memória, não a largura de banda.' },
         ],
       },
@@ -3280,10 +3280,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost',
         title: 'Comparativo de custos: custo total do sistema por tamanho de modelo',
         image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-pt.webp',
-        imageCaption: 'Custo total do sistema para rodar modelos de 7B a 120B+ localmente: a NVIDIA vence abaixo de $1,500; a Apple vence no nível de 70B (Mac Studio M5 Max 64GB ~$2,499+ em um único dispositivo vs mais de $7,000 em um sistema multi-GPU).',
+        imageCaption: 'Custo total do sistema para rodar modelos de 7B a 120B+ localmente: a NVIDIA vence abaixo de $1,500; a Apple vence no nível de 70B (Mac Studio M5 Max 64GB a partir de $2,499 (preço base) em um único dispositivo vs mais de $7,000 em um sistema multi-GPU).',
         content: 'O custo total do sistema inclui a placa GPU mais o PC para a NVIDIA; apenas o Mac para a Apple. O ponto de cruzamento em que a Apple fica mais barata é o nível dos modelos de 70B.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'A NVIDIA é mais barata para modelos de 7–14B (RTX 3060 12GB + PC ~$800); a Apple é mais barata para modelos de 70B (Mac Studio M5 Max 64GB ~$2,499+ vs sistema 2× RTX 4090 ~$7,000).' },
+          { type: 'one-sentence', text: 'A NVIDIA é mais barata para modelos de 7–14B (RTX 3060 12GB + PC ~$800); a Apple é mais barata para modelos de 70B (Mac Studio M5 Max 64GB a partir de $2,499 (preço base) vs sistema 2× RTX 4090 ~$7,000).' },
           { type: 'plain-terms', text: 'Modelos pequenos favorecem a NVIDIA (compre uma GPU, plugue e use). Modelos grandes favorecem a Apple (um dispositivo em vez de duas placas de vídeo mais um PC personalizado inteiro).' },
         ],
         columns: ['Modelo alvo', 'Opção Apple', 'Custo Apple', 'Opção NVIDIA', 'Custo NVIDIA', 'Mais barato'],
@@ -3291,7 +3291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo alvo': 'Modelos 7B', 'Opção Apple': 'Mac Mini M4 24GB', 'Custo Apple': '$1,599', 'Opção NVIDIA': 'RTX 3060 12GB + PC', 'Custo NVIDIA': '~$800', 'Mais barato': 'NVIDIA (2×)' },
           { 'Modelo alvo': 'Modelos 14B', 'Opção Apple': 'Mac Mini M4 Pro 48GB', 'Custo Apple': '$2,199', 'Opção NVIDIA': 'RTX 4060 Ti 16GB + PC', 'Custo NVIDIA': '~$1,200', 'Mais barato': 'NVIDIA (1.8×)' },
           { 'Modelo alvo': 'Modelos 32B', 'Opção Apple': 'Mac Mini M4 Pro 48GB', 'Custo Apple': '$2,199', 'Opção NVIDIA': 'RTX 5090 32GB + PC', 'Custo NVIDIA': '~$5,500', 'Mais barato': 'Apple (2.5×)' },
-          { 'Modelo alvo': 'Modelos 70B', 'Opção Apple': 'Mac Studio M5 Max 64GB', 'Custo Apple': '~$2,499+', 'Opção NVIDIA': '2× RTX 4090 + PC', 'Custo NVIDIA': '~$7,000', 'Mais barato': 'Apple (2×)' },
+          { 'Modelo alvo': 'Modelos 70B', 'Opção Apple': 'Mac Studio M5 Max 64GB', 'Custo Apple': 'a partir de $2,499 (preço base)', 'Opção NVIDIA': '2× RTX 4090 + PC', 'Custo NVIDIA': '~$7,000', 'Mais barato': 'Apple (2×)' },
           { 'Modelo alvo': 'Modelos 96B+', 'Opção Apple': 'Mac Studio M5 Ultra 96GB', 'Custo Apple': '$5,499', 'Opção NVIDIA': 'Servidor 4× A100 40GB', 'Custo NVIDIA': '~$40,000+', 'Mais barato': 'Apple (7.3×)' },
           { 'Modelo alvo': 'Modelos 200B+', 'Opção Apple': 'Mac Studio M5 Ultra 256GB', 'Custo Apple': '$9,499', 'Opção NVIDIA': 'Servidor 6× A100 40GB', 'Custo NVIDIA': '~$60,000+', 'Mais barato': 'Apple (6.3×)' },
         ],
@@ -3374,13 +3374,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'O hardware certo depende inteiramente do tamanho do modelo alvo e do fluxo de trabalho. Estas são recomendações diretas e sem ambiguidade.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Escolha Apple Silicon para modelos de 70B+, operação silenciosa ou inferência portátil; escolha NVIDIA CUDA para o maior throughput em 7–14B, treinamento, escalonamento multi-GPU ou orçamentos abaixo de $1,000.' },
-          { type: 'plain-terms', text: 'Se você quer rodar o Llama 3 70B de forma privada e acessível, a Apple é sua única opção real hoje. Se você quer o assistente 7B mais rápido com orçamento abaixo de $1,500, a NVIDIA vence.' },
+          { type: 'plain-terms', text: 'Se você quer rodar o Llama 3 70B de forma privada e acessível, a Apple é uma opção prática hoje (um único Mac com 64 GB ou mais). Se você quer o assistente 7B mais rápido com orçamento abaixo de $1,500, a NVIDIA vence.' },
         ],
         subsections: [
           {
             title: 'Escolha Apple Silicon quando:',
             list: [
-              '"Quero rodar modelos de 70B de forma privada" → Mac Studio M5 Max 64GB (~$2,499+) — única opção acessível em um único dispositivo',
+              '"Quero rodar modelos de 70B de forma privada" → Mac Studio M5 Max 64GB (a partir de $2,499, preço base) — uma opção acessível em um único dispositivo',
               '"Quero um LLM silencioso para o home office" → Qualquer Mac Studio — completamente silencioso sob carga total de inferência',
               '"Preciso de modelos de 14B+ em um laptop" → MacBook Pro M5 Max — roda Qwen 14B Q4_K_M na bateria',
               '"Quero um dispositivo para desenvolvimento + inferência + uso diário" → Mac como estação de trabalho unificada',
@@ -3464,10 +3464,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Fator', 'Vencedor', 'Por quê'],
         rows: [
-          { 'Fator': 'Inferência de modelos grandes (70B+)', 'Vencedor': 'Apple', 'Por quê': 'Mac Studio M5 Max 64GB ~$2,499+ vs sistema de duas GPUs a mais de $7,000' },
+          { 'Fator': 'Inferência de modelos grandes (70B+)', 'Vencedor': 'Apple', 'Por quê': 'Mac Studio M5 Max 64GB a partir de $2,499 (preço base) vs sistema de duas GPUs a mais de $7,000' },
           { 'Fator': 'Velocidade em modelos pequenos (7–14B)', 'Vencedor': 'NVIDIA', 'Por quê': 'RTX 4090: ~150 tok/s vs M5 Max: ~75 tok/s' },
           { 'Fator': 'Custo abaixo de $1,000', 'Vencedor': 'NVIDIA', 'Por quê': 'RTX 3060 + PC ~$800 vs Mac mais barato $1,599' },
-          { 'Fator': 'Custo para modelos 70B', 'Vencedor': 'Apple', 'Por quê': 'Mac Studio M5 Max 64GB ~$2,499+ vs 2× RTX 4090 + PC ~$7,000' },
+          { 'Fator': 'Custo para modelos 70B', 'Vencedor': 'Apple', 'Por quê': 'Mac Studio M5 Max 64GB a partir de $2,499 (preço base) vs 2× RTX 4090 + PC ~$7,000' },
           { 'Fator': 'Eficiência energética', 'Vencedor': 'Apple', 'Por quê': '25–35W vs 450W — 8–15× mais eficiente' },
           { 'Fator': 'Ruído', 'Vencedor': 'Apple', 'Por quê': 'Silencioso vs resfriamento ativo barulhento necessário' },
           { 'Fator': 'Ecossistema de software', 'Vencedor': 'NVIDIA', 'Por quê': 'O CUDA impulsiona PyTorch, vLLM, TensorRT-LLM, todas as principais ferramentas' },
@@ -3498,7 +3498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Melhor opção para modelos 70B',
-            content: 'Mac Studio M5 Max 64GB (~$2,499+). A única opção em um único dispositivo que aloja o Llama 3 70B Q4_K_M em velocidade utilizável (~18 tok/s).',
+            content: 'Mac Studio M5 Max 64GB (a partir de $2,499, preço base). Uma opção acessível em um único dispositivo que aloja o Llama 3 70B Q4_K_M em velocidade utilizável (~18 tok/s).',
           },
           {
             title: 'Melhor opção para treinamento + inferência rápida',
@@ -3508,7 +3508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           { url: 'https://www.apple.com/shop/buy-mac/mac-mini', productName: 'Mac Mini M4 (24GB)', productCategory: 'apple_silicon_mac', priceRange: '$1,599', label: 'Mac Mini M4 24GB — Apple Store →' },
           { url: 'https://www.apple.com/shop/buy-mac/mac-mini/pro', productName: 'Mac Mini M4 Pro (48GB)', productCategory: 'apple_silicon_mac', priceRange: '$2,199', label: 'Mac Mini M4 Pro 48GB — Apple Store →' },
-          { url: 'https://www.apple.com/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Max (64GB)', productCategory: 'apple_silicon_mac', priceRange: '~$2,499+', label: 'Mac Studio M5 Max 64GB — Apple Store →' },
+          { url: 'https://www.apple.com/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Max (64GB)', productCategory: 'apple_silicon_mac', priceRange: 'a partir de $2,499 (preço base)', label: 'Mac Studio M5 Max 64GB — Apple Store →' },
           { url: 'https://www.amazon.com/s?k=NVIDIA+RTX+4090+24GB', productName: 'NVIDIA RTX 4090 24GB', productCategory: 'nvidia_gpu', priceRange: '~$2,755 new / ~$2,268 used', label: 'RTX 4090 24GB — Amazon →' },
           { url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB', productName: 'RTX 4060 Ti 16GB', productCategory: 'nvidia_gpu', priceRange: '~$424', label: 'RTX 4060 Ti 16GB — Amazon →' },
           { url: 'https://www.amazon.com/s?k=RTX+3060+12GB', productName: 'RTX 3060 12GB', productCategory: 'nvidia_gpu', priceRange: '~$205–$220 used', label: 'RTX 3060 12GB — Amazon →' },
@@ -3522,7 +3522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'O Ollama usa MLX ou Metal no Apple Silicon?', a: 'O Ollama no Apple Silicon usa aceleração GPU Metal por padrão, não MLX. Para otimizações específicas de MLX (muitas vezes mais rápidas para certos modelos), use o mlx-lm diretamente ou o LM Studio com o backend MLX habilitado.' },
             { q: 'Posso usar uma eGPU com um Mac para NVIDIA CUDA?', a: 'Não. O macOS removeu o suporte a eGPU CUDA em 2019. GPUs NVIDIA externas não são compatíveis com o macOS para processamento CUDA. A alternativa prática é um sistema Linux separado com uma GPU NVIDIA.' },
             { q: 'Qual é melhor para rodar o Mistral Small?', a: 'NVIDIA RTX 4090 a ~150 tok/s vs Apple M5 Max a ~75 tok/s — a NVIDIA é 2× mais rápida. Até uma RTX 3060 12GB (~$280 usada) supera um Mac Mini M4 ($1,599) em pura velocidade de inferência com 7B.' },
-            { q: 'Qual é o Mac mínimo para rodar modelos de 70B?', a: 'Mac Studio M5 Max com 64GB de memória unificada (~$2,499+). O Llama 3 70B Q4_K_M precisa de ~38GB, e o macOS reserva pelo menos 8GB, então com 64GB sobram cerca de 56GB utilizáveis para os pesos mais o contexto; com 36GB sobram só cerca de 28GB, o que não basta.' },
+            { q: 'Qual é o Mac mínimo para rodar modelos de 70B?', a: 'Mac Studio M5 Max com 64GB de memória unificada (a partir de $2,499, preço base). O Llama 3 70B Q4_K_M precisa de ~38GB, e o macOS reserva pelo menos 8GB, então com 64GB sobram cerca de 56GB utilizáveis para os pesos mais o contexto; com 36GB sobram só cerca de 28GB, o que não basta.' },
             { q: 'O Apple M5 Max é melhor que a RTX 4090 para LLMs locais?', a: 'Depende do tamanho do modelo. Para 7B: a RTX 4090 vence (150 tok/s vs 75 tok/s). Para 70B: o M5 Max 128GB vence por padrão — a RTX 4090 não consegue carregar 70B de jeito nenhum. Para treinamento: a NVIDIA vence por uma ampla margem.' },
             { q: 'Como o novo Apple M5 Ultra se compara à RTX 5090?', a: 'A Apple anunciou o Mac Studio com M5 Ultra em 25 de agosto de 2026 — a partir de $5.499 por 96GB de memória unificada (256GB por $9.499). Números iniciais mostram ~40–52 tok/s no Llama 3.3 70B, um modelo que os 32GB de VRAM da RTX 5090 não conseguem carregar de jeito nenhum. Para modelos que cabem em 32GB, a RTX 5090 ainda é mais rápida por token.' },
           ],
@@ -3567,7 +3567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '18 tok/s no Llama 3 70B é rápido o suficiente para uso interativo?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sim, para a maioria das tarefas. 18 tok/s geram uma resposta de 500 palavras em cerca de 20–25 segundos. O uso interativo com qualidade de 70B que antes exigia um servidor de mais de $40,000 agora está disponível em um Mac Studio M5 Max de ~$2,499.',
+              'text': 'Sim, para a maioria das tarefas. 18 tok/s geram uma resposta de 500 palavras em cerca de 20–25 segundos. O uso interativo com qualidade de 70B que antes exigia um servidor de mais de $40,000 agora está disponível em um Mac Studio M5 Max a partir de $2,499 (preço base).',
             },
           },
           {
@@ -3639,7 +3639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Qual é o Mac mínimo para rodar modelos de 70B?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Mac Studio M5 Max com 64GB de memória unificada (~$2,499+). O Llama 3 70B Q4_K_M precisa de ~38GB, e o macOS reserva pelo menos 8GB, então com 64GB sobram cerca de 56GB utilizáveis para os pesos mais o contexto; com 36GB sobram só cerca de 28GB, o que não basta.',
+              'text': 'Mac Studio M5 Max com 64GB de memória unificada (a partir de $2,499, preço base). O Llama 3 70B Q4_K_M precisa de ~38GB, e o macOS reserva pelo menos 8GB, então com 64GB sobram cerca de 56GB utilizáveis para os pesos mais o contexto; com 36GB sobram só cerca de 28GB, o que não basta.',
             },
           },
           {
@@ -3701,11 +3701,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل أستخدم Apple MLX أم NVIDIA CUDA لنماذج اللغة الكبيرة المحلية؟',
-        answer: 'استخدم Apple Silicon لنماذج 70B أو أكبر وللكفاءة في استهلاك الطاقة — جهاز Mac Studio M4 Max بذاكرة 64GB يشغّل Llama 3 70B بسعر ~2,499 دولارًا. استخدم NVIDIA لأسرع استنتاج في نماذج 7–14B ودعم كامل للتدريب. بميزانية دون 1,000 دولار تفوز NVIDIA RTX 3060 12GB في القيمة مقابل السعر.',
+        answer: 'استخدم Apple Silicon لنماذج 70B أو أكبر وللكفاءة في استهلاك الطاقة — جهاز Mac Studio M5 Max بذاكرة 64GB يشغّل Llama 3 70B بسعر يبدأ من 2,499 دولارًا (السعر الأساسي). استخدم NVIDIA لأسرع استنتاج في نماذج 7–14B ودعم كامل للتدريب. بميزانية دون 1,000 دولار تفوز NVIDIA RTX 3060 12GB في القيمة مقابل السعر.',
         bullets: [
           'Apple M5 Max 128GB: ~75 رمز/ثانية في Llama 3 8B، ~18 رمز/ثانية في Llama 3 70B',
           'RTX 4090 24GB: ~150 رمز/ثانية في Llama 3 8B — نموذج 70B لا يتسع في 24GB VRAM',
-          'Mac Studio M5 Max 64GB: ~2,499+ دولارًا مقابل نظام 2× RTX 4090: ~7,000 دولارًا',
+          'Mac Studio M5 Max 64GB: من 2,499 دولارًا (السعر الأساسي) مقابل نظام 2× RTX 4090: ~7,000 دولارًا',
           'جهاز Apple تحت حمل نماذج اللغة الكبيرة: 25–35 واط مقابل نظام RTX 4090: ~450 واط',
         ],
         updatedDate: '2026-05',
@@ -3737,7 +3737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'M5 Max 128GB: ~75 رمز/ثانية في Llama 3 8B Q4_K_M؛ ~18 رمز/ثانية في Llama 3 70B Q4_K_M (يتسع في الذاكرة)',
           'RTX 4090 24GB: ~150 رمز/ثانية في Llama 3 8B؛ Llama 3 70B لا يتسع (يحتاج ~38GB VRAM)',
-          'التكلفة لقدرة 70B: Mac Studio M5 Max 64GB بـ~2,499+ دولارًا مقابل نظام 2× RTX 4090 بـ~7,000 دولارًا',
+          'التكلفة لقدرة 70B: Mac Studio M5 Max 64GB بسعر يبدأ من 2,499 دولارًا (السعر الأساسي) مقابل نظام 2× RTX 4090 بـ~7,000 دولارًا',
           'الطاقة: Apple 25–35 واط؛ نظام RTX 4090 ~450 واط — فارق ~10 أضعاف لكل جلسة',
           'البرمجيات: NVIDIA تهيمن (CUDA، PyTorch، vLLM، TensorRT-LLM)؛ Apple تنمو (MLX، mlx-lm)',
           'التدريب والضبط الدقيق: NVIDIA هي الخيار الوحيد العملي للأعمال الجادة',
@@ -3784,7 +3784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'عمليات المصفوفة بدون نسخ — بدون حافلة PCIe بين CPU وGPU',
               'المحرك العصبي: 38 TOPS للعمليات التعلمية المعجّلة',
               'Llama 3 70B Q4_K_M (~38GB) يتسع في تهيئات 64GB أو 128GB',
-              'التهيئات: 64GB (Mac Studio M4 Max بـ~2,499 دولارًا) — موصى به لـLlama 3 70B',
+              'التهيئات: 64GB (Mac Studio M5 Max بسعر يبدأ من 2,499 دولارًا) — موصى به لـLlama 3 70B',
             ],
           },
           {
@@ -3840,7 +3840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'tip', text: 'استخدم Llama 3 8B Q4_K_M كمعيار مرجعي — إنه النموذج الأكثر اختبارًا ويوفر مقارنات موثوقة عبر المنصات.' },
         ],
         faqs: [
-          { q: 'هل 18 رمز/ثانية في Llama 3 70B كافٍ للاستخدام التفاعلي؟', a: 'نعم في معظم المهام. 18 رمز/ثانية تُنتج ردًا من 500 كلمة في نحو 20–25 ثانية. الاستخدام التفاعلي بجودة 70B الذي كان يتطلب خادمًا بأكثر من 40,000 دولار بات متاحًا على Mac Studio M4 Max بـ~2,499 دولارًا.' },
+          { q: 'هل 18 رمز/ثانية في Llama 3 70B كافٍ للاستخدام التفاعلي؟', a: 'نعم في معظم المهام. 18 رمز/ثانية تُنتج ردًا من 500 كلمة في نحو 20–25 ثانية. الاستخدام التفاعلي بجودة 70B الذي كان يتطلب خادمًا بأكثر من 40,000 دولار بات متاحًا على Mac Studio M5 Max بسعر يبدأ من 2,499 دولارًا (السعر الأساسي) أو MacBook Pro M5 Max 128GB.' },
           { q: 'لماذا NVIDIA أسرع مع النماذج الصغيرة؟', a: 'عرض نطاق GDDR7/GDDR6X لـNVIDIA (1,008–1,792 GB/s) يتفوق على Apple M5 Max (614 GB/s). الاستنتاج في نماذج اللغة الكبيرة محدود بعرض نطاق الذاكرة — عرض نطاق أكبر يشغّل النماذج الصغيرة أسرع. ميزة Apple في السعة لا في عرض النطاق.' },
         ],
       },
@@ -3848,10 +3848,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost',
         title: 'مقارنة التكاليف: التكلفة الإجمالية للنظام حسب حجم النموذج',
         image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-ar.webp',
-        imageCaption: 'التكلفة الإجمالية للنظام لتشغيل نماذج من 7B إلى 120B+ محليًا: NVIDIA تفوز دون 1,500 دولار؛ Apple تفوز عند مستوى 70B (Mac Studio M5 Max 64GB ~2,499+ دولارًا لجهاز واحد مقابل أكثر من 7,000 دولار لنظام متعدد GPU).',
+        imageCaption: 'التكلفة الإجمالية للنظام لتشغيل نماذج من 7B إلى 120B+ محليًا: NVIDIA تفوز دون 1,500 دولار؛ Apple تفوز عند مستوى 70B (Mac Studio M5 Max 64GB من 2,499 دولارًا (السعر الأساسي) لجهاز واحد مقابل أكثر من 7,000 دولار لنظام متعدد GPU).',
         content: 'تشمل التكلفة الإجمالية للنظام لوحة GPU بالإضافة إلى الحاسوب الشخصي لـNVIDIA؛ وجهاز Mac فقط لـApple. نقطة التقاطع حيث تصبح Apple أرخص هي مستوى نماذج 70B.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'NVIDIA أرخص لنماذج 7–14B (RTX 3060 12GB + حاسوب شخصي ~800 دولار)؛ وApple أرخص لنماذج 70B (Mac Studio M5 Max 64GB ~2,499+ دولارًا مقابل نظام 2× RTX 4090 ~7,000 دولارًا).' },
+          { type: 'one-sentence', text: 'NVIDIA أرخص لنماذج 7–14B (RTX 3060 12GB + حاسوب شخصي ~800 دولار)؛ وApple أرخص لنماذج 70B (Mac Studio M5 Max 64GB من 2,499 دولارًا (السعر الأساسي) مقابل نظام 2× RTX 4090 ~7,000 دولارًا).' },
           { type: 'plain-terms', text: 'النماذج الصغيرة تصبّ في مصلحة NVIDIA (اشترِ لوحة GPU وصِلها). النماذج الكبيرة تصبّ في مصلحة Apple (جهاز واحد بدلًا من لوحتي رسومات ومنظومة حاسوب مخصصة).' },
         ],
         columns: ['النموذج المستهدف', 'خيار Apple', 'سعر Apple', 'خيار NVIDIA', 'سعر NVIDIA', 'الأرخص'],
@@ -3859,7 +3859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'النموذج المستهدف': 'نماذج 7B', 'خيار Apple': 'Mac Mini M4 24GB', 'سعر Apple': '1,599 دولارًا', 'خيار NVIDIA': 'RTX 3060 12GB + حاسوب', 'سعر NVIDIA': '~800 دولار', 'الأرخص': 'NVIDIA (2×)' },
           { 'النموذج المستهدف': 'نماذج 14B', 'خيار Apple': 'Mac Mini M4 Pro 48GB', 'سعر Apple': '2,199 دولارًا', 'خيار NVIDIA': 'RTX 4060 Ti 16GB + حاسوب', 'سعر NVIDIA': '~1,200 دولار', 'الأرخص': 'NVIDIA (1.8×)' },
           { 'النموذج المستهدف': 'نماذج 32B', 'خيار Apple': 'Mac Mini M4 Pro 48GB', 'سعر Apple': '2,199 دولارًا', 'خيار NVIDIA': 'RTX 5090 32GB + حاسوب', 'سعر NVIDIA': '~5,500 دولار', 'الأرخص': 'Apple (2.5×)' },
-          { 'النموذج المستهدف': 'نماذج 70B', 'خيار Apple': 'Mac Studio M5 Max 64GB', 'سعر Apple': '~2,499+ دولارًا', 'خيار NVIDIA': '2× RTX 4090 + حاسوب', 'سعر NVIDIA': '~7,000 دولار', 'الأرخص': 'Apple (2×)' },
+          { 'النموذج المستهدف': 'نماذج 70B', 'خيار Apple': 'Mac Studio M5 Max 64GB', 'سعر Apple': 'من 2,499 دولارًا (السعر الأساسي)', 'خيار NVIDIA': '2× RTX 4090 + حاسوب', 'سعر NVIDIA': '~7,000 دولار', 'الأرخص': 'Apple (2×)' },
           { 'النموذج المستهدف': 'نماذج 96B+', 'خيار Apple': 'Mac Studio M5 Ultra 96GB', 'سعر Apple': '5,499 دولارًا', 'خيار NVIDIA': 'خادم 4× A100 40GB', 'سعر NVIDIA': '~40,000 دولار+', 'الأرخص': 'Apple (7.3×)' },
           { 'النموذج المستهدف': 'نماذج 200B+', 'خيار Apple': 'Mac Studio M5 Ultra 256GB', 'سعر Apple': '9,499 دولارًا', 'خيار NVIDIA': 'خادم 6× A100 40GB', 'سعر NVIDIA': '~60,000 دولار+', 'الأرخص': 'Apple (6.3×)' },
         ],
@@ -3942,13 +3942,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'يعتمد العتاد المناسب كليًا على حجم النموذج المستهدف وسير العمل. هذه توصيات مباشرة وبلا غموض.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'اختر Apple Silicon لنماذج 70B+، أو التشغيل الصامت، أو الاستنتاج المحمول؛ واختر NVIDIA CUDA لأعلى إنتاجية في 7–14B، أو التدريب، أو التوسع بوحدات GPU متعددة، أو الميزانيات دون 1,000 دولار.' },
-          { type: 'plain-terms', text: 'إن أردت تشغيل Llama 3 70B بشكل خاص واقتصادي فـApple خيارك الوحيد الفعلي اليوم. وإن أردت أسرع مساعد 7B بميزانية دون 1,500 دولار تفوز NVIDIA.' },
+          { type: 'plain-terms', text: 'إن أردت تشغيل Llama 3 70B بشكل خاص واقتصادي فـApple خيار عملي اليوم (جهاز Mac واحد بذاكرة 64 GB أو أكثر). وإن أردت أسرع مساعد 7B بميزانية دون 1,500 دولار تفوز NVIDIA.' },
         ],
         subsections: [
           {
             title: 'اختر Apple Silicon حين:',
             list: [
-              '"أريد تشغيل نماذج 70B بشكل خاص" ← Mac Studio M5 Max 64GB (~2,499+ دولارًا) — الخيار الوحيد الميسور في جهاز واحد',
+              '"أريد تشغيل نماذج 70B بشكل خاص" ← Mac Studio M5 Max 64GB (يبدأ من 2,499 دولارًا، السعر الأساسي) — أحد الخيارات الميسورة في جهاز واحد',
               '"أريد نموذج لغة كبيرة صامت للمكتب المنزلي" ← أي Mac Studio — صامت تمامًا تحت حمل الاستنتاج الكامل',
               '"أحتاج نماذج 14B+ في حاسوب محمول" ← MacBook Pro M5 Max — يشغّل Qwen 14B Q4_K_M بالبطارية',
               '"أريد جهازًا للتطوير + الاستنتاج + الاستخدام اليومي" ← Mac كمحطة عمل موحّدة',
@@ -4032,10 +4032,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['العامل', 'الفائز', 'السبب'],
         rows: [
-          { 'العامل': 'استنتاج النماذج الكبيرة (70B+)', 'الفائز': 'Apple', 'السبب': 'Mac Studio M5 Max 64GB بـ~2,499+ دولارًا مقابل نظام لوحتَين GPU بأكثر من 7,000 دولار' },
+          { 'العامل': 'استنتاج النماذج الكبيرة (70B+)', 'الفائز': 'Apple', 'السبب': 'Mac Studio M5 Max 64GB بسعر يبدأ من 2,499 دولارًا (السعر الأساسي) مقابل نظام لوحتَين GPU بأكثر من 7,000 دولار' },
           { 'العامل': 'السرعة مع النماذج الصغيرة (7–14B)', 'الفائز': 'NVIDIA', 'السبب': 'RTX 4090: ~150 رمز/ثانية مقابل M5 Max: ~75 رمز/ثانية' },
           { 'العامل': 'التكلفة دون 1,000 دولار', 'الفائز': 'NVIDIA', 'السبب': 'RTX 3060 + حاسوب ~800 دولار مقابل Mac الأرخص 1,599 دولارًا' },
-          { 'العامل': 'التكلفة لنماذج 70B', 'الفائز': 'Apple', 'السبب': 'Mac Studio M5 Max 64GB ~2,499+ دولارًا مقابل 2× RTX 4090 + حاسوب ~7,000 دولار' },
+          { 'العامل': 'التكلفة لنماذج 70B', 'الفائز': 'Apple', 'السبب': 'Mac Studio M5 Max 64GB من 2,499 دولارًا (السعر الأساسي) مقابل 2× RTX 4090 + حاسوب ~7,000 دولار' },
           { 'العامل': 'كفاءة الطاقة', 'الفائز': 'Apple', 'السبب': '25–35 واط مقابل 450 واط — 8–15× أكثر كفاءةً' },
           { 'العامل': 'الضوضاء', 'الفائز': 'Apple', 'السبب': 'صامت مقابل تبريد نشط مزعج' },
           { 'العامل': 'منظومة البرمجيات', 'الفائز': 'NVIDIA', 'السبب': 'CUDA تُشغّل PyTorch وvLLM وTensorRT-LLM وكل الأدوات الرئيسية' },
@@ -4066,7 +4066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'أفضل خيار لنماذج 70B',
-            content: 'Mac Studio M5 Max 64GB (~2,499+ دولارًا). الخيار الوحيد في جهاز واحد الذي يستضيف Llama 3 70B Q4_K_M بسرعة قابلة للاستخدام (~18 رمز/ثانية).',
+            content: 'Mac Studio M5 Max 64GB (يبدأ من 2,499 دولارًا، السعر الأساسي). أحد الخيارات الميسورة في جهاز واحد التي تستضيف Llama 3 70B Q4_K_M بسرعة قابلة للاستخدام (~18 رمز/ثانية).',
           },
           {
             title: 'أفضل خيار للتدريب + الاستنتاج السريع',
@@ -4076,7 +4076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           { url: 'https://www.apple.com/shop/buy-mac/mac-mini', productName: 'Mac Mini M4 (24GB)', productCategory: 'apple_silicon_mac', priceRange: '$1,599', label: 'جهاز Mac Mini M4 24GB — Apple Store ←' },
           { url: 'https://www.apple.com/shop/buy-mac/mac-mini/pro', productName: 'Mac Mini M4 Pro (48GB)', productCategory: 'apple_silicon_mac', priceRange: '$2,199', label: 'جهاز Mac Mini M4 Pro 48GB — Apple Store ←' },
-          { url: 'https://www.apple.com/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Max (64GB)', productCategory: 'apple_silicon_mac', priceRange: '~$2,499+', label: 'جهاز Mac Studio M5 Max 64GB — Apple Store ←' },
+          { url: 'https://www.apple.com/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Max (64GB)', productCategory: 'apple_silicon_mac', priceRange: 'من $2,499', label: 'جهاز Mac Studio M5 Max 64GB — Apple Store ←' },
           { url: 'https://www.amazon.com/s?k=NVIDIA+RTX+4090+24GB', productName: 'NVIDIA RTX 4090 24GB', productCategory: 'nvidia_gpu', priceRange: '~$2,755 new / ~$2,268 used', label: 'لوحة RTX 4090 24GB — Amazon ←' },
           { url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB', productName: 'RTX 4060 Ti 16GB', productCategory: 'nvidia_gpu', priceRange: '~$424', label: 'لوحة RTX 4060 Ti 16GB — Amazon ←' },
           { url: 'https://www.amazon.com/s?k=RTX+3060+12GB', productName: 'RTX 3060 12GB', productCategory: 'nvidia_gpu', priceRange: '~$205–$220 used', label: 'لوحة RTX 3060 12GB — Amazon ←' },
@@ -4090,7 +4090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'هل يستخدم Ollama ذاكرة MLX أو Metal على Apple Silicon؟', a: 'Ollama على Apple Silicon يستخدم تسريع GPU Metal افتراضيًا لا MLX. للحصول على تحسينات MLX الخاصة (الأسرع أحيانًا لبعض النماذج)، استخدم mlx-lm مباشرةً أو LM Studio مع تفعيل الواجهة الخلفية MLX.' },
             { q: 'هل يمكنني استخدام eGPU مع Mac لـNVIDIA CUDA؟', a: 'لا. أزال macOS دعم eGPU لـCUDA في 2019. لوحات NVIDIA الخارجية غير متوافقة مع macOS للحساب عبر CUDA. البديل العملي هو نظام Linux منفصل بلوحة NVIDIA.' },
             { q: 'أيهما أفضل لتشغيل Mistral Small؟', a: 'NVIDIA RTX 4090 بـ~150 رمز/ثانية مقابل Apple M5 Max بـ~75 رمز/ثانية — NVIDIA أسرع بمرتين. حتى RTX 3060 12GB (~280 دولارًا مستعملة) تفوق Mac Mini M4 (1,599 دولارًا) في سرعة الاستنتاج الخام مع نماذج 7B.' },
-            { q: 'ما الحد الأدنى من Mac لتشغيل نماذج 70B؟', a: 'Mac Studio M4 Max بذاكرة موحّدة 64GB (~2,499 دولارًا). Llama 3 70B Q4_K_M يحتاج ~38GB، ويحجز macOS ما لا يقل عن 8GB، لذا تترك تهيئة 64GB نحو 56GB قابلة للاستخدام للأوزان والسياق، أما تهيئة 36GB فتترك نحو 28GB فقط ولا تكفي.' },
+            { q: 'ما الحد الأدنى من Mac لتشغيل نماذج 70B؟', a: 'Mac Studio M5 Max بذاكرة موحّدة 64GB (يبدأ من 2,499 دولارًا، السعر الأساسي). Llama 3 70B Q4_K_M يحتاج ~38GB، ويحجز macOS ما لا يقل عن 8GB، لذا تترك تهيئة 64GB نحو 56GB قابلة للاستخدام للأوزان والسياق، أما تهيئة 36GB فتترك نحو 28GB فقط ولا تكفي.' },
             { q: 'هل Apple M5 Max أفضل من RTX 4090 لنماذج اللغة الكبيرة المحلية؟', a: 'يعتمد على حجم النموذج. لنماذج 7B: RTX 4090 تفوز (150 مقابل 75 رمز/ثانية). لنماذج 70B: M5 Max 128GB تفوز بالضرورة — RTX 4090 لا تستطيع تحميل 70B إطلاقًا. للتدريب: NVIDIA تفوز بفارق واسع.' },
             { q: 'كيف يقارن Apple M5 Ultra الجديد بـRTX 5090؟', a: 'أعلنت Apple عن Mac Studio بمعالج M5 Ultra في 25 أغسطس 2026 — بسعر يبدأ من 5,499 دولارًا مقابل 96GB من الذاكرة الموحّدة (256GB بسعر 9,499 دولارًا). تُظهر الأرقام الأولية نحو 40 إلى 52 رمز/ثانية على Llama 3.3 70B، وهو نموذج لا تستطيع ذاكرة RTX 5090 البالغة 32GB تحميله إطلاقًا. بالنسبة للنماذج التي تناسب 32GB، تبقى RTX 5090 أسرع لكل رمز.' },
           ],
@@ -4135,7 +4135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'هل 18 رمز/ثانية في Llama 3 70B كافٍ للاستخدام التفاعلي؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'نعم في معظم المهام. 18 رمز/ثانية تُنتج ردًا من 500 كلمة في نحو 20–25 ثانية. الاستخدام التفاعلي بجودة 70B الذي كان يتطلب خادمًا بأكثر من 40,000 دولار بات متاحًا على Mac Studio M4 Max بـ~2,499 دولارًا.',
+              'text': 'نعم في معظم المهام. 18 رمز/ثانية تُنتج ردًا من 500 كلمة في نحو 20–25 ثانية. الاستخدام التفاعلي بجودة 70B الذي كان يتطلب خادمًا بأكثر من 40,000 دولار بات متاحًا على Mac Studio M5 Max بسعر يبدأ من 2,499 دولارًا (السعر الأساسي) أو MacBook Pro M5 Max 128GB.',
             },
           },
           {
@@ -4207,7 +4207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'ما الحد الأدنى من Mac لتشغيل نماذج 70B؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Mac Studio M4 Max بذاكرة موحّدة 64GB (~2,499 دولارًا). Llama 3 70B Q4_K_M يحتاج ~38GB، ويحجز macOS ما لا يقل عن 8GB، لذا تترك تهيئة 64GB نحو 56GB قابلة للاستخدام للأوزان والسياق، أما تهيئة 36GB فتترك نحو 28GB فقط ولا تكفي.',
+              'text': 'Mac Studio M5 Max بذاكرة موحّدة 64GB (يبدأ من 2,499 دولارًا، السعر الأساسي). Llama 3 70B Q4_K_M يحتاج ~38GB، ويحجز macOS ما لا يقل عن 8GB، لذا تترك تهيئة 64GB نحو 56GB قابلة للاستخدام للأوزان والسياق، أما تهيئة 36GB فتترك نحو 28GB فقط ولا تكفي.',
             },
           },
           {
@@ -4269,11 +4269,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '로컬 LLM에 Apple MLX와 NVIDIA CUDA 중 어느 것을 사용해야 합니까?',
-        answer: '에너지 효율성과 70B 이상 모델에는 Apple Silicon을 사용하십시오 — Mac Studio M5 Max 64GB는 Llama 3 70B를 실행하며 가격은 ~$2,499+입니다. 7–14B 모델의 빠른 추론과 완전한 학습 지원에는 NVIDIA를 사용하십시오. $1,000 미만 예산에서는 NVIDIA RTX 3060 12GB가 가성비 면에서 우수합니다.',
+        answer: '에너지 효율성과 70B 이상 모델에는 Apple Silicon을 사용하십시오 — Mac Studio M5 Max 64GB는 Llama 3 70B를 실행하며 가격은 $2,499부터(기본 가격)입니다. 7–14B 모델의 빠른 추론과 완전한 학습 지원에는 NVIDIA를 사용하십시오. $1,000 미만 예산에서는 NVIDIA RTX 3060 12GB가 가성비 면에서 우수합니다.',
         bullets: [
           'Apple M5 Max 128GB: Llama 3 8B ~75 tok/s, Llama 3 70B ~18 tok/s',
           'RTX 4090 24GB: Llama 3 8B ~150 tok/s — 70B는 24GB VRAM에 탑재 불가',
-          'Mac Studio M5 Max 64GB: ~$2,499+ vs 2× RTX 4090 시스템: ~$7,000',
+          'Mac Studio M5 Max 64GB: $2,499부터(기본 가격) vs 2× RTX 4090 시스템: ~$7,000',
           'LLM 부하 시 Apple: 25–35W vs RTX 4090 시스템: ~450W',
         ],
         updatedDate: '2026-05',
@@ -4305,7 +4305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'M5 Max 128GB: Llama 3 8B Q4_K_M ~75 tok/s; Llama 3 70B Q4_K_M ~18 tok/s (메모리에 탑재 가능)',
           'RTX 4090 24GB: Llama 3 8B ~150 tok/s; Llama 3 70B는 탑재 불가 (~38GB VRAM 필요)',
-          '70B 용량 비용: Mac Studio M5 Max 64GB ~$2,499+ vs 2× RTX 4090 시스템 ~$7,000',
+          '70B 용량 비용: Mac Studio M5 Max 64GB $2,499부터(기본 가격) vs 2× RTX 4090 시스템 ~$7,000',
           '전력: Apple 25–35W; RTX 4090 시스템 ~450W — 약 10× 차이',
           '소프트웨어: NVIDIA 우세 (CUDA, PyTorch, vLLM, TensorRT-LLM); Apple 성장 중 (MLX, mlx-lm)',
           '학습/파인튜닝: NVIDIA가 본격적인 작업에 유일하게 실용적인 옵션',
@@ -4352,7 +4352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               '복사 없는 텐서 연산 — CPU와 GPU 간 PCIe 버스 없음',
               'Neural Engine: 가속 ML 연산을 위한 38 TOPS',
               'Llama 3 70B Q4_K_M (~38GB)은 64GB 또는 128GB 구성에 탑재 가능',
-              '구성: 64GB (Mac Studio M4 Max ~$2,499) — Llama 3 70B 권장',
+              '구성: 64GB (Mac Studio M5 Max, $2,499부터) — Llama 3 70B 권장',
             ],
           },
           {
@@ -4408,7 +4408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'tip', text: 'Llama 3 8B Q4_K_M을 기준 벤치마크로 사용하십시오 — 가장 많이 테스트된 모델이며 플랫폼 간 신뢰할 수 있는 비교를 제공합니다.' },
         ],
         faqs: [
-          { q: 'Llama 3 70B에서 18 tok/s는 대화형 사용에 충분합니까?', a: '대부분의 작업에서 그렇습니다. 18 tok/s는 500단어 응답을 약 20–25초에 생성합니다. 이전에 $40,000 이상의 서버가 필요했던 70B 품질의 대화형 사용이 이제 Mac Studio M4 Max ~$2,499에서 가능합니다.' },
+          { q: 'Llama 3 70B에서 18 tok/s는 대화형 사용에 충분합니까?', a: '대부분의 작업에서 그렇습니다. 18 tok/s는 500단어 응답을 약 20–25초에 생성합니다. 이전에 $40,000 이상의 서버가 필요했던 70B 품질의 대화형 사용이 이제 Mac Studio M5 Max $2,499부터(기본 가격) 또는 MacBook Pro M5 Max 128GB에서 가능합니다.' },
           { q: 'NVIDIA가 소형 모델에서 더 빠른 이유는 무엇입니까?', a: 'NVIDIA의 GDDR7/GDDR6X 대역폭(1,008–1,792 GB/s)이 Apple M5 Max(614 GB/s)를 능가합니다. LLM 추론은 메모리 대역폭에 제한을 받습니다 — 대역폭이 높을수록 소형 모델이 더 빠릅니다. Apple의 강점은 용량에 있고 대역폭에 있지 않습니다.' },
         ],
       },
@@ -4416,10 +4416,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost',
         title: '비용 비교: 모델 크기별 총 시스템 비용',
         image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-ko.webp',
-        imageCaption: '로컬에서 7B~120B+ 모델 실행을 위한 총 시스템 비용: $1,500 미만에서는 NVIDIA 우세; 70B 수준(Mac Studio M5 Max 64GB ~$2,499+ 단일 장치 vs $7,000+ 멀티 GPU 시스템)에서는 Apple 우세.',
+        imageCaption: '로컬에서 7B~120B+ 모델 실행을 위한 총 시스템 비용: $1,500 미만에서는 NVIDIA 우세; 70B 수준(Mac Studio M5 Max 64GB $2,499부터(기본 가격) 단일 장치 vs $7,000+ 멀티 GPU 시스템)에서는 Apple 우세.',
         content: '총 시스템 비용에는 NVIDIA의 경우 GPU 카드 플러스 PC가 포함되며, Apple의 경우 Mac만 포함됩니다. Apple이 더 저렴해지는 교차점은 70B 모델 수준입니다.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'NVIDIA는 7–14B 모델에서 더 저렴하며 (RTX 3060 12GB + PC ~$800), Apple은 70B 모델에서 더 저렴합니다 (Mac Studio M5 Max 64GB ~$2,499+ vs 2× RTX 4090 시스템 ~$7,000).' },
+          { type: 'one-sentence', text: 'NVIDIA는 7–14B 모델에서 더 저렴하며 (RTX 3060 12GB + PC ~$800), Apple은 70B 모델에서 더 저렴합니다 (Mac Studio M5 Max 64GB $2,499부터(기본 가격) vs 2× RTX 4090 시스템 ~$7,000).' },
           { type: 'plain-terms', text: '소형 모델은 NVIDIA에 유리합니다 (GPU를 구매해서 연결하면 됩니다). 대형 모델은 Apple에 유리합니다 (전체 커스텀 PC에 두 개의 그래픽 카드 대신 하나의 장치).' },
         ],
         columns: ['목표 모델', 'Apple 옵션', 'Apple 가격', 'NVIDIA 옵션', 'NVIDIA 가격', '더 저렴'],
@@ -4427,7 +4427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '목표 모델': '7B 모델', 'Apple 옵션': 'Mac Mini M4 24GB', 'Apple 가격': '$1,599', 'NVIDIA 옵션': 'RTX 3060 12GB + PC', 'NVIDIA 가격': '~$800', '더 저렴': 'NVIDIA (2×)' },
           { '목표 모델': '14B 모델', 'Apple 옵션': 'Mac Mini M4 Pro 48GB', 'Apple 가격': '$2,199', 'NVIDIA 옵션': 'RTX 4060 Ti 16GB + PC', 'NVIDIA 가격': '~$1,200', '더 저렴': 'NVIDIA (1.8×)' },
           { '목표 모델': '32B 모델', 'Apple 옵션': 'Mac Mini M4 Pro 48GB', 'Apple 가격': '$2,199', 'NVIDIA 옵션': 'RTX 5090 32GB + PC', 'NVIDIA 가격': '~$5,500', '더 저렴': 'Apple (2.5×)' },
-          { '목표 모델': '70B 모델', 'Apple 옵션': 'Mac Studio M5 Max 64GB', 'Apple 가격': '~$2,499+', 'NVIDIA 옵션': '2× RTX 4090 + PC', 'NVIDIA 가격': '~$7,000', '더 저렴': 'Apple (2×)' },
+          { '목표 모델': '70B 모델', 'Apple 옵션': 'Mac Studio M5 Max 64GB', 'Apple 가격': '$2,499부터(기본 가격)', 'NVIDIA 옵션': '2× RTX 4090 + PC', 'NVIDIA 가격': '~$7,000', '더 저렴': 'Apple (2×)' },
           { '목표 모델': '96B+ 모델', 'Apple 옵션': 'Mac Studio M5 Ultra 96GB', 'Apple 가격': '$5,499', 'NVIDIA 옵션': '4× A100 40GB 서버', 'NVIDIA 가격': '~$40,000+', '더 저렴': 'Apple (7.3×)' },
           { '목표 모델': '200B+ 모델', 'Apple 옵션': 'Mac Studio M5 Ultra 256GB', 'Apple 가격': '$9,499', 'NVIDIA 옵션': '6× A100 40GB 서버', 'NVIDIA 가격': '~$60,000+', '더 저렴': 'Apple (6.3×)' },
         ],
@@ -4510,13 +4510,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '적합한 하드웨어는 전적으로 목표 모델 크기와 워크플로우에 달려 있습니다. 다음은 명확한 직접적인 권장 사항입니다.',
         snippetBlocks: [
           { type: 'one-sentence', text: '70B+ 모델, 조용한 작동, 또는 휴대용 추론에는 Apple Silicon을 선택하고, 7–14B에서의 최대 성능, 학습, 멀티 GPU 확장, 또는 $1,000 미만 예산에는 NVIDIA CUDA를 선택하십시오.' },
-          { type: 'plain-terms', text: 'Llama 3 70B를 비공개로 저렴하게 실행하고 싶다면 오늘날 Apple이 유일한 실용적 선택입니다. $1,500 미만 예산으로 가장 빠른 7B 어시스턴트를 원한다면 NVIDIA가 우세합니다.' },
+          { type: 'plain-terms', text: 'Llama 3 70B를 비공개로 저렴하게 실행하고 싶다면 오늘날 Apple은 실용적인 선택지 중 하나입니다(64GB 이상 Mac 한 대). $1,500 미만 예산으로 가장 빠른 7B 어시스턴트를 원한다면 NVIDIA가 우세합니다.' },
         ],
         subsections: [
           {
             title: 'Apple Silicon을 선택하는 경우:',
             list: [
-              '"70B 모델을 비공개로 실행하고 싶다" → Mac Studio M5 Max 64GB (~$2,499+) — 단일 장치에서 유일한 저렴한 옵션',
+              '"70B 모델을 비공개로 실행하고 싶다" → Mac Studio M5 Max 64GB ($2,499부터, 기본 가격) — 단일 장치에서 선택할 수 있는 저렴한 옵션 중 하나',
               '"홈 오피스를 위한 조용한 LLM이 필요하다" → 어떤 Mac Studio도 — 완전한 추론 부하에서 완전 무음',
               '"노트북에서 14B+ 모델이 필요하다" → MacBook Pro M5 Max — 배터리로 Qwen 14B Q4_K_M 실행 가능',
               '"개발 + 추론 + 일상적 사용을 위한 하나의 장치를 원한다" → Mac을 통합 워크스테이션으로 사용',
@@ -4600,10 +4600,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['요소', '우세', '이유'],
         rows: [
-          { '요소': '대형 모델 추론 (70B+)', '우세': 'Apple', '이유': 'Mac Studio M5 Max 64GB ~$2,499+ vs 2 GPU 시스템 $7,000+' },
+          { '요소': '대형 모델 추론 (70B+)', '우세': 'Apple', '이유': 'Mac Studio M5 Max 64GB $2,499부터(기본 가격) vs 2 GPU 시스템 $7,000+' },
           { '요소': '소형 모델 속도 (7–14B)', '우세': 'NVIDIA', '이유': 'RTX 4090: ~150 tok/s vs M5 Max: ~75 tok/s' },
           { '요소': '$1,000 미만 비용', '우세': 'NVIDIA', '이유': 'RTX 3060 + PC ~$800 vs 가장 저렴한 Mac $1,599' },
-          { '요소': '70B 모델 비용', '우세': 'Apple', '이유': 'Mac Studio M5 Max 64GB ~$2,499+ vs 2× RTX 4090 + PC ~$7,000' },
+          { '요소': '70B 모델 비용', '우세': 'Apple', '이유': 'Mac Studio M5 Max 64GB $2,499부터(기본 가격) vs 2× RTX 4090 + PC ~$7,000' },
           { '요소': '에너지 효율성', '우세': 'Apple', '이유': '25–35W vs 450W — 8–15배 더 효율적' },
           { '요소': '소음', '우세': 'Apple', '이유': '무음 vs 필요한 소음 큰 능동 냉각' },
           { '요소': '소프트웨어 생태계', '우세': 'NVIDIA', '이유': 'CUDA가 PyTorch, vLLM, TensorRT-LLM, 모든 주요 도구 구동' },
@@ -4634,7 +4634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '70B 모델을 위한 최선의 선택',
-            content: 'Mac Studio M5 Max 64GB (~$2,499+). Llama 3 70B Q4_K_M을 사용 가능한 속도(~18 tok/s)로 단일 장치에 탑재하는 유일한 옵션.',
+            content: 'Mac Studio M5 Max 64GB ($2,499부터, 기본 가격). Llama 3 70B Q4_K_M을 사용 가능한 속도(~18 tok/s)로 단일 장치에 탑재할 수 있는 저렴한 옵션 중 하나.',
           },
           {
             title: '학습 + 빠른 추론을 위한 최선의 선택',
@@ -4644,7 +4644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           { url: 'https://www.apple.com/shop/buy-mac/mac-mini', productName: 'Mac Mini M4 (24GB)', productCategory: 'apple_silicon_mac', priceRange: '$1,599', label: 'Mac Mini M4 24GB — Apple Store →' },
           { url: 'https://www.apple.com/shop/buy-mac/mac-mini/pro', productName: 'Mac Mini M4 Pro (48GB)', productCategory: 'apple_silicon_mac', priceRange: '$2,199', label: 'Mac Mini M4 Pro 48GB — Apple Store →' },
-          { url: 'https://www.apple.com/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Max (64GB)', productCategory: 'apple_silicon_mac', priceRange: '~$2,499+', label: 'Mac Studio M5 Max 64GB — Apple Store →' },
+          { url: 'https://www.apple.com/shop/buy-mac/mac-studio', productName: 'Mac Studio M5 Max (64GB)', productCategory: 'apple_silicon_mac', priceRange: '$2,499부터(기본 가격)', label: 'Mac Studio M5 Max 64GB — Apple Store →' },
           { url: 'https://www.amazon.com/s?k=NVIDIA+RTX+4090+24GB', productName: 'NVIDIA RTX 4090 24GB', productCategory: 'nvidia_gpu', priceRange: '~$2,755 new / ~$2,268 used', label: 'RTX 4090 24GB — Amazon →' },
           { url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB', productName: 'RTX 4060 Ti 16GB', productCategory: 'nvidia_gpu', priceRange: '~$424', label: 'RTX 4060 Ti 16GB — Amazon →' },
           { url: 'https://www.amazon.com/s?k=RTX+3060+12GB', productName: 'RTX 3060 12GB', productCategory: 'nvidia_gpu', priceRange: '~$205–$220 used', label: 'RTX 3060 12GB — Amazon →' },
@@ -4658,7 +4658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Ollama는 Apple Silicon에서 MLX를 사용합니까?', a: 'Apple Silicon의 Ollama는 기본적으로 MLX가 아닌 Metal GPU 가속을 사용합니다. MLX 특화 최적화(특정 모델에서 더 빠른 경우가 많음)를 위해서는 mlx-lm을 직접 사용하거나 MLX 백엔드를 활성화한 LM Studio를 사용하십시오.' },
           { q: 'Mac에서 NVIDIA CUDA를 위해 eGPU를 사용할 수 있습니까?', a: '아니오. macOS는 2019년에 eGPU CUDA 지원을 제거했습니다. 외부 NVIDIA GPU는 CUDA 컴퓨팅에서 macOS와 호환되지 않습니다. 실용적인 대안은 NVIDIA GPU가 있는 별도의 Linux 시스템입니다.' },
           { q: 'Mistral Small을 실행하는 데 어느 것이 더 좋습니까?', a: 'NVIDIA RTX 4090 ~150 tok/s vs Apple M5 Max ~75 tok/s — NVIDIA가 2배 빠릅니다. RTX 3060 12GB (~$280 중고)조차 순수 추론 속도에서 7B 기준으로 Mac Mini M4 ($1,599)를 능가합니다.' },
-          { q: '70B 모델 실행을 위한 최소 Mac은 무엇입니까?', a: '64GB 통합 메모리를 갖춘 Mac Studio M5 Max (~$2,499+). Llama 3 70B Q4_K_M은 ~38GB가 필요하며, macOS가 최소 8GB를 사용하므로 64GB에서는 약 56GB를 쓸 수 있어 가중치와 컨텍스트가 들어갑니다. 36GB 구성은 약 28GB만 남아 부족합니다.' },
+          { q: '70B 모델 실행을 위한 최소 Mac은 무엇입니까?', a: '64GB 통합 메모리를 갖춘 Mac Studio M5 Max ($2,499부터, 기본 가격). Llama 3 70B Q4_K_M은 ~38GB가 필요하며, macOS가 최소 8GB를 사용하므로 64GB에서는 약 56GB를 쓸 수 있어 가중치와 컨텍스트가 들어갑니다. 36GB 구성은 약 28GB만 남아 부족합니다.' },
           { q: 'Apple M5 Max가 로컬 LLM에서 RTX 4090보다 낫습니까?', a: '모델 크기에 따라 다릅니다. 7B의 경우: RTX 4090 우세 (150 tok/s vs 75 tok/s). 70B의 경우: M5 Max 128GB가 기본적으로 우세 — RTX 4090은 70B를 전혀 탑재할 수 없습니다. 학습의 경우: NVIDIA가 큰 차이로 우세합니다.' },
           { q: '새로운 Apple M5 Ultra는 RTX 5090과 비교해 어떻습니까?', a: 'Apple은 2026년 8월 25일 M5 Ultra를 탑재한 Mac Studio를 발표했습니다 — 96GB 통합 메모리 기준 $5,499부터 시작하며(256GB는 $9,499), 초기 수치는 Llama 3.3 70B에서 약 40~52 tok/s를 보여줍니다. 이는 RTX 5090의 32GB VRAM으로는 전혀 로드할 수 없는 모델입니다. 32GB에 맞는 모델의 경우 RTX 5090이 토큰당 여전히 더 빠릅니다.' },
         ],
@@ -4693,7 +4693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Apple MLX 모델을 Windows나 Linux에서 실행할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '아니오. MLX는 macOS 전용이며 Apple Silicon이 필요합니다. llama.cpp를 통한 GGUF 모델은 모든 플랫폼에서 작동합니다. 크로스 플랫폼 사용을 위해서는 GGUF 형식의 Ollama가 Mac과 NVIDIA 시스템 모두에서 작동합니다.' } },
         { '@type': 'Question', name: 'Apple M5 Max가 로컬 LLM에서 RTX 4090보다 낫습니까?', acceptedAnswer: { '@type': 'Answer', text: '모델 크기에 따라 다릅니다. 7B의 경우: RTX 4090 우세 (150 tok/s vs 75 tok/s). 70B의 경우: M5 Max 128GB가 기본적으로 우세 — RTX 4090은 70B를 전혀 탑재할 수 없습니다. 학습의 경우: NVIDIA가 큰 차이로 우세합니다.' } },
         { '@type': 'Question', name: '새로운 Apple M5 Ultra는 RTX 5090과 비교해 어떻습니까?', acceptedAnswer: { '@type': 'Answer', text: 'Apple은 2026년 8월 25일 M5 Ultra를 탑재한 Mac Studio를 발표했습니다 — 96GB 통합 메모리 기준 $5,499부터 시작하며(256GB는 $9,499), 초기 수치는 Llama 3.3 70B에서 약 40~52 tok/s를 보여줍니다. RTX 5090의 32GB VRAM으로는 이 모델을 로드할 수 없습니다.' } },
-        { '@type': 'Question', name: '70B 모델 실행을 위한 최소 Mac은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '64GB 통합 메모리를 갖춘 Mac Studio M5 Max (~$2,499+). Llama 3 70B Q4_K_M은 ~38GB가 필요하며, macOS가 최소 8GB를 사용하므로 64GB에서는 약 56GB를 쓸 수 있어 가중치와 컨텍스트가 들어갑니다. 36GB 구성은 약 28GB만 남아 부족합니다.' } },
+        { '@type': 'Question', name: '70B 모델 실행을 위한 최소 Mac은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '64GB 통합 메모리를 갖춘 Mac Studio M5 Max ($2,499부터, 기본 가격). Llama 3 70B Q4_K_M은 ~38GB가 필요하며, macOS가 최소 8GB를 사용하므로 64GB에서는 약 56GB를 쓸 수 있어 가중치와 컨텍스트가 들어갑니다. 36GB 구성은 약 28GB만 남아 부족합니다.' } },
         { '@type': 'Question', name: 'Ollama는 Apple Silicon에서 MLX를 사용합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Apple Silicon의 Ollama는 기본적으로 Metal GPU 가속을 사용합니다. MLX 특화 성능을 위해서는 mlx-lm을 직접 사용하거나 MLX 백엔드를 활성화한 LM Studio를 사용하십시오.' } },
       ],
     },
