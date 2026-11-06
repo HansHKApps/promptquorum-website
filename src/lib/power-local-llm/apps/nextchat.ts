@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   categories: ['general-chat-clients'],
   interfaces: ['web'],
   locality: 'hybrid',
-  platforms: ['web', 'selfhosted', 'win', 'mac', 'linux', 'ios'], // README: web/self-host, Desktop App (Win/macOS/Linux; newest release with installers v2.15.8), iOS app for the hosted NextChatAI service; no Android build found
+  platforms: ['web', 'selfhosted', 'win', 'mac', 'linux', 'ios'], // README: web/self-host, Desktop App (Win/macOS/Linux; newest release with installers v2.15.8), iOS app linked from the README (not verified whether it needs the hosted NextChatAI service; its App Store listing says bring your own API keys); no Android build found
   worksWith: ['Ollama', 'OpenAI API', 'LocalAI'],
   engine: 'external',
   license: 'MIT',
