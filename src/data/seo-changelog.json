@@ -23327,5 +23327,244 @@
       "t14": "2026-11-20",
       "t28": "2026-12-04"
     }
+  },
+  {
+    "id": "f4f0b0aa-b29c-40e9-b0c4-1053642ec2f0",
+    "slug": "/local-llms/nextchat-review",
+    "date": "2026-11-06T17:11:15.308Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "NextChat Review 2026: Free Chat UI, Deploy and Security",
+        "new": "NextChat Review 2026: Free Self-Hosted Chat UI & Security"
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "nextchat review 2026: lightweight, one-click-deploy chat ui"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "87e83c0f-845b-435e-9a71-7ae6294fc55b",
+    "slug": "/zh/power-local-llm/pydantic-ai-review",
+    "date": "2026-11-06T17:11:15.712Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Pydantic AI是Pydantic团队推出的免费、MIT许可证Python智能体框架——类型安全的结构化输出、依赖注入、模型无关支持。已验证的GitHub数据和安装步骤。",
+        "new": "Pydantic AI是Pydantic团队推出的免费、MIT许可证Python智能体框架：类型安全的输出、安装步骤、定价、许可证与替代方案。"
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "pydantic ai review: features, structured outputs, alternativ"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "34c80c92-8e7d-4401-94ec-d916ce56a244",
+    "slug": "/prompt-bites/gguf-vs-gptq-vs-awq",
+    "date": "2026-11-06T17:11:15.920Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "GGUF runs on CPU and GPU via llama.cpp/Ollama; GPTQ and AWQ are GPU-only formats for vLLM serving. Compare speed, quality, tools and commands.",
+        "new": "GGUF runs on CPU and GPU via llama.cpp/Ollama; GPTQ and AWQ are GPU-focused formats for vLLM serving. Compare speed, quality, tools and commands."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "gguf vs gptq vs awq: differences, speed and which to use"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2ccedaee-8d9f-466a-9ee5-7c4064d1c9e8",
+    "slug": "/de/prompt-bites/gguf-vs-gptq-vs-awq",
+    "date": "2026-11-06T17:11:15.951Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "GGUF läuft auf CPU und GPU via llama.cpp/Ollama; GPTQ und AWQ sind GPU-Formate für vLLM. Vergleich von Geschwindigkeit, Qualität, Tools und Befehlen.",
+        "new": "GGUF läuft auf CPU und GPU via llama.cpp/Ollama; GPTQ und AWQ sind GPU-orientierte Formate für vLLM. Vergleich von Geschwindigkeit, Qualität, Tools und Befehlen."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "gguf vs gptq vs awq: differences, speed and which to use"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "c4ecefbe-c84b-491d-b82b-c4ae0833cd33",
+    "slug": "/fr/prompt-bites/gguf-vs-gptq-vs-awq",
+    "date": "2026-11-06T17:11:15.983Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "GGUF tourne sur CPU et GPU via llama.cpp/Ollama ; GPTQ et AWQ sont des formats GPU pour vLLM. Comparez vitesse, qualité, outils et commandes.",
+        "new": "GGUF tourne sur CPU et GPU via llama.cpp/Ollama ; GPTQ et AWQ sont des formats orientés GPU pour vLLM. Comparez vitesse, qualité, outils et commandes."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "gguf vs gptq vs awq: differences, speed and which to use"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "5f88deaa-0901-4f84-8199-70a9a235c536",
+    "slug": "/ja/prompt-bites/gguf-vs-gptq-vs-awq",
+    "date": "2026-11-06T17:11:16.016Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "GGUFはllama.cpp/OllamaでCPUとGPUの両方で動作。GPTQとAWQはvLLM向けのGPU専用形式です。速度・品質・ツール・コマンドを比較します。",
+        "new": "GGUFはllama.cpp/OllamaでCPUとGPUの両方で動作。GPTQとAWQはvLLM向けのGPU中心の形式です。速度・品質・ツール・コマンドを比較します。"
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "gguf vs gptq vs awq: differences, speed and which to use"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "c9db266f-8f73-42c7-8886-041f5aed6ca0",
+    "slug": "/zh/prompt-bites/gguf-vs-gptq-vs-awq",
+    "date": "2026-11-06T17:11:16.048Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "GGUF 通过 llama.cpp/Ollama 在 CPU 和 GPU 上运行；GPTQ 和 AWQ 是面向 vLLM 的纯 GPU 格式。对比速度、质量、工具与命令。",
+        "new": "GGUF 通过 llama.cpp/Ollama 在 CPU 和 GPU 上运行；GPTQ 和 AWQ 是面向 vLLM、以 GPU 为主的格式。对比速度、质量、工具与命令。"
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "gguf vs gptq vs awq: differences, speed and which to use"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "64a1f0ed-45e4-4a5c-86a9-4ead89238252",
+    "slug": "/es/prompt-bites/gguf-vs-gptq-vs-awq",
+    "date": "2026-11-06T17:11:16.080Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "GGUF corre en CPU y GPU con llama.cpp/Ollama; GPTQ y AWQ son formatos solo GPU para vLLM. Compara velocidad, calidad, herramientas y comandos.",
+        "new": "GGUF corre en CPU y GPU con llama.cpp/Ollama; GPTQ y AWQ son formatos orientados a GPU para vLLM. Compara velocidad, calidad, herramientas y comandos."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "gguf vs gptq vs awq: differences, speed and which to use"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0352cfe6-7c38-41f0-92f5-11a84153ce52",
+    "slug": "/pt/prompt-bites/gguf-vs-gptq-vs-awq",
+    "date": "2026-11-06T17:11:16.111Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "GGUF roda em CPU e GPU via llama.cpp/Ollama; GPTQ e AWQ são formatos só de GPU para vLLM. Compare velocidade, qualidade, ferramentas e comandos.",
+        "new": "GGUF roda em CPU e GPU via llama.cpp/Ollama; GPTQ e AWQ são formatos voltados a GPU para vLLM. Compare velocidade, qualidade, ferramentas e comandos."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "gguf vs gptq vs awq: differences, speed and which to use"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "75e12dde-e4db-41e2-915c-a2e1c8773bcd",
+    "slug": "/ar/prompt-bites/gguf-vs-gptq-vs-awq",
+    "date": "2026-11-06T17:11:16.143Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "يعمل GGUF على CPU وGPU عبر llama.cpp/Ollama، أما GPTQ وAWQ فتنسيقان لـ GPU فقط لخدمة vLLM. قارن السرعة والجودة والأدوات والأوامر.",
+        "new": "يعمل GGUF على CPU وGPU عبر llama.cpp/Ollama، أما GPTQ وAWQ فتنسيقان موجَّهان أساسًا لـ GPU لخدمة vLLM. قارن السرعة والجودة والأدوات والأوامر."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "gguf vs gptq vs awq: differences, speed and which to use"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "bd612462-cb82-4800-9af0-74a4cf5f777a",
+    "slug": "/ko/prompt-bites/gguf-vs-gptq-vs-awq",
+    "date": "2026-11-06T17:11:16.175Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "GGUF는 llama.cpp/Ollama로 CPU와 GPU에서 실행되고, GPTQ와 AWQ는 vLLM용 GPU 전용 형식입니다. 속도, 품질, 도구, 명령어를 비교합니다.",
+        "new": "GGUF는 llama.cpp/Ollama로 CPU와 GPU에서 실행되고, GPTQ와 AWQ는 vLLM용 GPU 중심 형식입니다. 속도, 품질, 도구, 명령어를 비교합니다."
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "gguf vs gptq vs awq: differences, speed and which to use"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "62196379-7391-48dc-ba49-e55fad983a98",
+    "slug": "/ja/prompt-bites/what-is-q4-k-m-quantization",
+    "date": "2026-11-06T17:11:16.244Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Q4_K_M量化とは何ですか？",
+        "new": "Q4_K_M量子化とは何ですか？"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_Mは中品質のK-Quant 4ビット量化です。Q4_0よりパープレキシティが低く、Q8_0より小さいです。デフォルトとして使用してください。PromptQuorumの解説。",
+        "new": "Q4_K_Mは中品質のK-Quant 4ビット量子化です。Q4_0よりパープレキシティが低く、Q8_0より小さいです。デフォルトとして使用してください。PromptQuorumの解説。"
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "what is q4_k_m quantization?"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "eb55f11a-3a1f-43ef-9948-18faaa9f7d2d",
+    "slug": "/ar/prompt-bites/what-is-q4-k-m-quantization",
+    "date": "2026-11-06T17:11:16.277Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "ما هو ضغط ⁨Q4⁩_⁨K⁩_⁨M⁩؟",
+        "new": "ما هو تكميم ⁨Q4⁩_⁨K⁩_⁨M⁩؟"
+      }
+    ],
+    "reason": "Zero-click batch 01 final risk-audit fix wave. Wording corrected for legal/factual accuracy (risk-checker); no GSC pull for this edit (risk fix, not a query retarget).",
+    "queries": [
+      "what is q4_k_m quantization?"
+    ],
+    "baseline": null,
+    "deployedAt": null
   }
 ]
