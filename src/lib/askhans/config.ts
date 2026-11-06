@@ -43,7 +43,7 @@ export const ASK_HANS_SPLIT = { chatFr: 2, panelFr: 1 } as const
 export const ASK_HANS_DEFAULT_MODEL = 'claude-haiku-5-5'
 
 /** Bump when the consent text changes; stored with every consent value as proof. */
-export const ASK_HANS_CONSENT_TEXT_VERSION = '2026-11-06-draft-3'
+export const ASK_HANS_CONSENT_TEXT_VERSION = '2026-11-06-v3'
 
 /** Days a saved conversation stays on the visitor's device (only if they chose to save). */
 export const ASK_HANS_HISTORY_DAYS = 7

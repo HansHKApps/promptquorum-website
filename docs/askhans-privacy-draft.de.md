@@ -1,9 +1,9 @@
 # ENTWURF — Datenschutzhinweis „Ask Hans“ (nicht veröffentlichen)
 
-> **Status: Entwurf, 2026-10-30. Nicht veröffentlicht, nicht in die Datenschutzerklärung eingebunden.**
+> **Status: Text für Abschnitt 2c (Gesprächsverlauf) und der Einwilligungstext sind final (2026-11-06); die Datenschutzerklärung (`src/translations.ts`, `privacyAskHansNote`, 9 Sprachen) ist angeglichen. Die übrigen `[PRÜFEN]`-Punkte betreffen Verträge/Fristen, die nur Hans bestätigen kann.**
 > Dies ist kein Rechtsrat. Jede mit `[PRÜFEN]` markierte Stelle ist unsicher oder hängt von einer Entscheidung/einem Vertrag ab,
 > den Hans bestätigen muss. Der Einwilligungstext im Chatfenster (`src/components/askhans/copy.ts`, Version
-> `2026-10-30-draft-1`) muss zu diesem Text passen; bei jeder Textänderung die Versionsnummer in
+> `2026-11-06-v3`) muss zu diesem Text passen; bei jeder Textänderung die Versionsnummer in
 > `src/lib/askhans/config.ts` (`ASK_HANS_CONSENT_TEXT_VERSION`) erhöhen — dann wird die Einwilligung neu eingeholt.
 
 ## Ask Hans (KI-Assistent)
@@ -29,20 +29,20 @@ Besuchs-ID gezählt, wie viele Nachrichten gesendet wurden (Limit pro Besuch, Ab
 Ablaufzeiten des Rate-Limit-Fensters (aktuell 1 Minute) und ob ein gehashter IP-Wert im Sinne der DSGVO weiterhin als
 personenbezogen gilt (wahrscheinlich ja → in der Rechtsgrundlage berücksichtigen).
 
-**c) Gesprächsverlauf im Browser — lokal, nur auf Wunsch (Stand 2026-11-06, Einwilligungstext Version 2026-11-06-draft-3).**
+**c) Gesprächsverlauf im Browser — lokal, nur auf Wunsch (Stand 2026-11-06, Einwilligungstext Version 2026-11-06-v3).**
 Im Einwilligungsschritt gibt es ein eigenes, standardmäßig NICHT angekreuztes Kästchen „Meine Gespräche 7 Tage auf diesem Gerät
 speichern“. Ohne Haken wird nichts gespeichert (Gespräch nur im Arbeitsspeicher, weg beim Schließen/Neuladen der Seite). Mit Haken
 liegen die Gespräche 7 Tage im `localStorage` Ihres Browsers (Ablauf ab Beginn des jeweiligen Gesprächs, beim Laden geprüft). Sie
 werden nie auf dem Server gespeichert. Löschen: Schaltfläche „Gespeicherte Gespräche löschen“ oder Widerruf der Einwilligung
 (löscht den lokalen Verlauf mit). Rechtsgrundlage: Einwilligung, Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG (nicht „unbedingt
-erforderlich“, daher Einwilligung). `[PRÜFEN]` juristisch freigeben; Auswahl „Speichern“ ist unabhängig von „Ja/Nein“ zur Statistik.
+erforderlich“, daher Einwilligung). Die Auswahl „Speichern“ ist unabhängig von „Ja/Nein“ zur Statistik; der Einwilligungsnachweis (2e) hält fest, ob gespeichert wird.
 
 **d) Anonyme Nutzungsstatistik — nur mit Ihrer Einwilligung („Ja, einverstanden“).**
 Erfasst werden: gewählte Themenkategorie, verwendete Werkzeuge (z. B. „App-Suche“), nachgeschlagene Apps und Verzeichnis-Kategorien (nur Werte aus unserem eigenen Verzeichnis, nie Freitext; bei Empfehlungs-Werkzeugen die ersten drei Treffer), Sprache, Zeitpunkt, angeklickte Links
 (Kategorie und Link-Kennung), ob und in welchen Bereich der Website (nur der erste Pfadabschnitt, z. B. „power-local-llm“) ein Link
 aus einer Antwort angeklickt wurde, Klicks auf „Neu“ und eine zufällige, anonyme Besuchs-ID, die keiner Person zugeordnet ist.
 **Nicht erfasst werden:** Fragetext, Antworttext, IP-Adresse, Namen. Veröffentlicht werden nur zusammengefasste Zahlen (Seite /mcp-stats). Zwecke: Statistik, Verbesserung von Ask Hans und der Inhalte.
-`[PRÜFEN]` Einwilligungstext Version 2026-11-06-draft-3 (neu: Nennung der nachgeschlagenen Apps/Kategorien, Zwecke, Freiwilligkeit, Widerruf mit Wirkung für die Zukunft, Hinweis auf die Gesamtzähler ohne Einwilligung) juristisch freigeben.
+`[PRÜFEN]` Einwilligungstext Version 2026-11-06-v3 (neu: Nennung der nachgeschlagenen Apps/Kategorien, Zwecke, Freiwilligkeit, Widerruf mit Wirkung für die Zukunft, Hinweis auf die Gesamtzähler ohne Einwilligung) juristisch freigeben.
 
 **d2) Anonyme Gesamtzähler — für alle Besucher, ohne Einwilligung.** Es werden nur drei Summen hochgezählt (Anzahl
 geöffneter Fenster, gestellter Anfragen und gegebener Antworten), ohne Besuchs-ID, ohne Text, ohne IP-Adresse. Sie dienen der
@@ -59,7 +59,7 @@ als Nachweis: Zeitpunkt, Textversion und die anonyme Besuchs-ID. Bei „Nein“ 
   an dessen Missbrauchsschutz) `[PRÜFEN]` alternativ lit. b (Nutzung eines von Ihnen angeforderten Dienstes); Interessenabwägung dokumentieren.
 - Nutzungsstatistik (2d) und Einwilligungsnachweis (2e): Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) und, soweit Informationen auf
   Ihrem Endgerät gespeichert oder ausgelesen werden, §25 Abs. 1 TDDDG. `[PRÜFEN]`
-- Speicherung im Browser nach 2c: §25 Abs. 2 Nr. 2 TDDDG. `[PRÜFEN]`
+- Lokale Speicherung des Gesprächsverlaufs nach 2c (nur bei angekreuztem Kästchen): Einwilligung, Art. 6 Abs. 1 lit. a DSGVO und §25 Abs. 1 TDDDG; ohne Haken wird nichts auf dem Endgerät gespeichert.
 
 ### 4. Empfänger und Auftragsverarbeitung
 - **Anthropic** (Claude API) als Auftragsverarbeiter: erhält Ihre Eingabe und den Gesprächsverlauf, um die Antwort zu erzeugen.
