@@ -71,10 +71,21 @@ export interface AskCopy {
     prompt: string
     /** accessible name of one star button, n = 1..5 */
     star: (n: number) => string
-    commentPlaceholder: string
-    send: string
     thanks: string
     error: string
+    /** pop-up after a 1–3 star rating: invites feedback by email */
+    followup: {
+      title: string
+      body: string
+      /** label of the opt-in checkbox: add the last question and answer to the email */
+      include: string
+      note: string
+      write: string
+      skip: string
+      copied: string
+      /** labels of the prefilled email; subject contains {n} for the rating */
+      mail: { subject: string; intro: string; rating: string; language: string; page: string; question: string; answer: string }
+    }
   }
 
   // DRAFT — Hans reviews and approves before launch (see docs/askhans-privacy-draft.de.md).

@@ -39,15 +39,15 @@ const HOME_UI = {
   },
   /** Small-print aside under the tagline for non-technical readers, added 2026-09-23 alongside the About page's h1PlainExplainer (same idea, worded to fit the homepage's shorter hero). */
   heroPlainExplainer: {
-    en: '(in plain terms: running an AI model for free on your own computer)',
-    de: '(einfach gesagt: ein KI-Modell kostenlos auf dem eigenen Computer ausführen)',
-    fr: '(en clair : faire tourner un modèle d\'IA gratuitement sur son propre ordinateur)',
-    ja: '（簡単に言うと：AIモデルを自分のパソコンで無料で動かすこと）',
-    zh: '（通俗地说：在自己的电脑上免费运行一个 AI 模型）',
-    es: '(en términos simples: ejecutar un modelo de IA gratis en tu propio ordenador)',
-    pt: '(em termos simples: rodar um modelo de IA de graça no seu próprio computador)',
-    ar: '(بعبارة بسيطة: تشغيل نموذج ذكاء اصطناعي مجانًا على جهاز الكمبيوتر الخاص بك)',
-    ko: '(쉽게 말하면: 자신의 컴퓨터에서 AI 모델을 무료로 실행하는 것)',
+    en: '(in plain terms: running an AI model for free and in private on your own computer)',
+    de: '(einfach gesagt: ein KI-Modell kostenlos und privat auf dem eigenen Computer ausführen)',
+    fr: '(en clair : faire tourner un modèle d\'IA gratuitement et en toute confidentialité sur son propre ordinateur)',
+    ja: '（簡単に言うと：AIモデルを自分のパソコンで無料かつプライベートに動かすこと）',
+    zh: '（通俗地说：在自己的电脑上免费且私密地运行一个 AI 模型）',
+    es: '(en términos simples: ejecutar un modelo de IA gratis y en privado en tu propio ordenador)',
+    pt: '(em termos simples: rodar um modelo de IA de graça e com privacidade no seu próprio computador)',
+    ar: '(بعبارة بسيطة: تشغيل نموذج ذكاء اصطناعي مجانًا وبخصوصية تامة على جهاز الكمبيوتر الخاص بك)',
+    ko: '(쉽게 말하면: 자신의 컴퓨터에서 AI 모델을 무료로, 비공개로 실행하는 것)',
   },
 
   // --- Intent-Guided Search ---

@@ -70,10 +70,18 @@ export const copy: AskCopy = {
   feedback: {
     prompt: 'Ask Hans 对您有多大帮助？',
     star: (n: number) => `${n} 星（满分 5 星）`,
-    commentPlaceholder: '选填：我们哪些地方可以做得更好？请勿填写个人数据。',
-    send: '发送反馈',
     thanks: '感谢您的反馈！',
     error: '反馈未能发送。请您稍后重试。',
+    followup: {
+      title: '很抱歉，这次没能更好地帮到您。',
+      body: '我们哪些地方可以做得更好？您愿意通过电子邮件向我们反馈吗？我们会预先填好详细信息，发送前请补充您自己的想法。',
+      include: '在邮件中附上我的提问和回答，以便 Hans 查看问题出在哪里。',
+      note: '发送前您可以编辑邮件；在您点击发送之前不会传输任何内容。请勿填写个人数据。',
+      write: '撰写邮件',
+      skip: '不用了',
+      copied: '详细信息也已复制到剪贴板。',
+      mail: { subject: 'Ask Hans 反馈（{n}/5）', intro: '我们哪里可以改进？请在此填写：', rating: '评分', language: '语言', page: '页面', question: '最近的提问', answer: '最近的回答' },
+    },
   },
   info: {
     label: "关于 Ask Hans",
