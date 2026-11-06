@@ -153,22 +153,22 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "tensorrt-llm-explained",
-        "title": "TensorRT-LLM Explained: NVIDIA's GPU-Optimized Inference Engine (2026)",
-        "url": "/power-local-llm/tensorrt-llm-explained",
+        "slug": "ramen-review",
+        "title": "RAMen Review: Local Session Memory for llama.cpp, With a Free Plan",
+        "url": "/power-local-llm/ramen-review",
         "dateModified": "2026-11-06",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "vllm-explained",
-        "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
-        "url": "/power-local-llm/vllm-explained",
-        "dateModified": "2026-11-03",
+        "slug": "tensorrt-llm-explained",
+        "title": "TensorRT-LLM Explained: NVIDIA's GPU-Optimized Inference Engine (2026)",
+        "url": "/power-local-llm/tensorrt-llm-explained",
+        "dateModified": "2026-11-06",
         "tier": "about"
       }
     ],
-    "totalCount": 185,
+    "totalCount": 186,
     "capped": true
   },
   "vLLM": {
@@ -2858,7 +2858,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 45,
+    "totalCount": 46,
     "capped": true
   },
   "Atlarix": {
@@ -3340,7 +3340,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 37,
+    "totalCount": 38,
     "capped": true
   },
   "ShellGPT": {
@@ -8423,6 +8423,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ramen-review",
+        "title": "RAMen Review: Local Session Memory for llama.cpp, With a Free Plan",
+        "url": "/power-local-llm/ramen-review",
+        "dateModified": "2026-11-06",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "lucebox-review",
         "title": "Lucebox Review: Hand-Tuned Inference Engine and the Company Behind It",
         "url": "/power-local-llm/lucebox-review",
@@ -8444,17 +8452,9 @@
         "url": "/power-local-llm/zeno-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "strata-review",
-        "title": "Strata Review: A 125B-Parameter Open Model on a Gaming PC",
-        "url": "/power-local-llm/strata-review",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "MaxKB": {
@@ -10251,6 +10251,28 @@
     "totalCount": 1,
     "capped": false
   },
+  "RAMen": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "ramen-review",
+        "title": "RAMen Review: Local Session Memory for llama.cpp, With a Free Plan",
+        "url": "/power-local-llm/ramen-review",
+        "dateModified": "2026-11-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "70b-models-consumer-hardware",
+        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
+        "url": "/local-llms/70b-models-consumer-hardware",
+        "dateModified": "2026-10-29",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
   "LLM Vision": {
     "articles": [
       {
@@ -11994,7 +12016,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 249,
+    "totalCount": 250,
     "capped": true
   },
   "Qdrant": {
