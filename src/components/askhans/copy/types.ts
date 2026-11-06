@@ -83,6 +83,11 @@ export interface AskCopy {
   consentPrivacyLink: string
   /** path of the privacy page in this language, e.g. /de/privacy (English: /privacy) */
   consentPrivacyHref: string
+  /** opt-in checkbox: keep conversations on this device for 7 days */
+  consentSaveLabel: string
+  /** hint shown when ticked / not ticked */
+  consentSaveOn: string
+  consentSaveOff: string
   consentYes: string
   consentNo: string
   consentQuestionLabel: string
@@ -116,6 +121,7 @@ export interface AskCopy {
     historyHeading: string
     historyHide: string
     historyShow: (n: number) => string
+    historyClear: string
   }
 
   /** header search box that hands the question to Ask Hans */

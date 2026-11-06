@@ -40,6 +40,8 @@ export interface UiState {
 
 export interface ConsentRecord {
   value: 'yes' | 'no'
+  /** visitor chose to keep conversations on this device for ASK_HANS_HISTORY_DAYS days */
+  saveHistory?: boolean
   textVersion: string
   ts: string
 }

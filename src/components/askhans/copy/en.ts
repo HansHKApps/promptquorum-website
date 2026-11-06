@@ -59,6 +59,9 @@ export const copy: AskCopy = {
   ],
   consentPrivacyLink: 'More in the privacy policy.',
   consentPrivacyHref: '/privacy',
+  consentSaveLabel: "Save my conversations on this device for 7 days",
+  consentSaveOn: "Saved in your browser on this computer for 7 days. You can delete them at any time.",
+  consentSaveOff: "Nothing is saved. Your conversations disappear when you close the page.",
   consentYes: 'Yes, I agree',
   consentNo: 'No, thanks',
   consentQuestionLabel: 'Your question (will be sent after you make your choice):',
@@ -82,7 +85,7 @@ export const copy: AskCopy = {
     canTitle: "What it can do",
     can: ["Find and compare local-AI apps from the software directory and name alternatives.", "Check whether your hardware (RAM, VRAM) can run a model.", "Explain software licenses in plain language and suggest a software stack.", "Point you to the matching guides, reviews and hardware pages on this site, in your language."],
     cannotTitle: "What it cannot do",
-    cannot: ["Look anything up outside promptquorum.com: no web search, no news, no weather, no live prices.", "Be right every time: it is an AI and can make mistakes. Check important facts on the linked pages.", "Give legal, medical, financial or electrical-installation advice. For these, ask a qualified professional.", "Remember you after you leave: conversations stay in your browser and are not stored on our server.", "Install, change or buy anything for you, or answer without a limit: {messages} questions per visit, {chars} characters per question."],
+    cannot: ["Look anything up outside promptquorum.com: no web search, no news, no weather, no live prices.", "Be right every time: it is an AI and can make mistakes. Check important facts on the linked pages.", "Give legal, medical, financial or electrical-installation advice. For these, ask a qualified professional.", "Remember you after you leave: conversations stay in your browser (kept for 7 days only if you chose to save them) and are not stored on our server.", "Install, change or buy anything for you, or answer without a limit: {messages} questions per visit, {chars} characters per question."],
     privacy: "Your question is sent to our server and to Anthropic (Claude) to create the answer. Please do not enter personal data.",
     close: "Close",
   },
@@ -101,6 +104,7 @@ export const copy: AskCopy = {
     historyHeading: "Earlier conversations",
     historyHide: "Hide earlier conversations",
     historyShow: (n: number) => `Show earlier conversations (${n})`,
+    historyClear: "Delete saved conversations",
   },
 
   search: {

@@ -1,8 +1,9 @@
-// Browser-side persistence for Ask Hans. Conversations live in sessionStorage only (this visit,
-// this tab) and are never sent to the server except as the current chat request.
+// Browser-side persistence for Ask Hans. Conversations are kept in memory only, unless the visitor chose
+// "save for 7 days" in the consent step: then they go to localStorage and expire after 7 days. They are
+// never sent to the server except as the current chat request.
 // Consent lives in localStorage so the notice is not repeated on every visit.
 
-import { ASK_HANS_CONSENT_TEXT_VERSION, ASK_HANS_STORAGE } from '@/lib/askhans/config'
+import { ASK_HANS_CONSENT_TEXT_VERSION, ASK_HANS_HISTORY_DAYS, ASK_HANS_STORAGE } from '@/lib/askhans/config'
 import type { ConsentRecord, Conversation, UiState } from './types'
 
 function read<T>(storage: Storage | undefined, key: string): T | null {
@@ -26,18 +27,37 @@ export function uid(): string {
   return typeof crypto !== 'undefined' && 'randomUUID' in crypto ? crypto.randomUUID() : `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`
 }
 
+const HISTORY_MS = ASK_HANS_HISTORY_DAYS * 24 * 60 * 60 * 1000
+
+/** Saved conversations of this device (only exists if the visitor chose to save); expired ones are dropped. */
 export function loadConversations(): Conversation[] {
-  const list = read<Conversation[]>(sessionStorage, ASK_HANS_STORAGE.conversations)
+  try {
+    sessionStorage.removeItem(ASK_HANS_STORAGE.conversationsLegacy)
+  } catch {
+    // ignore
+  }
+  const list = read<Conversation[]>(localStorage, ASK_HANS_STORAGE.conversations)
   if (!Array.isArray(list)) return []
+  const cutoff = Date.now() - HISTORY_MS
   // A page reload in the middle of an answer leaves a half-written message behind: mark it as failed.
-  return list.map((c) => ({
-    ...c,
-    messages: c.messages.map((m) => (m.pending ? { ...m, pending: false, status: undefined, error: m.content ? undefined : ('failed' as const) } : m)),
-  }))
+  return list
+    .filter((c) => c && Array.isArray(c.messages) && c.startedAt > cutoff)
+    .map((c) => ({
+      ...c,
+      messages: c.messages.map((m) => (m.pending ? { ...m, pending: false, status: undefined, error: m.content ? undefined : ('failed' as const) } : m)),
+    }))
 }
 
 export function saveConversations(list: Conversation[]): void {
-  write(sessionStorage, ASK_HANS_STORAGE.conversations, list)
+  write(localStorage, ASK_HANS_STORAGE.conversations, list.filter((c) => c.messages.length > 0))
+}
+
+export function clearSavedConversations(): void {
+  try {
+    localStorage.removeItem(ASK_HANS_STORAGE.conversations)
+  } catch {
+    // ignore
+  }
 }
 
 export function loadUi(): UiState {
@@ -67,8 +87,8 @@ export function loadConsent(): ConsentRecord | null {
   return c && c.textVersion === ASK_HANS_CONSENT_TEXT_VERSION && (c.value === 'yes' || c.value === 'no') ? c : null
 }
 
-export function saveConsent(value: 'yes' | 'no'): ConsentRecord {
-  const rec: ConsentRecord = { value, textVersion: ASK_HANS_CONSENT_TEXT_VERSION, ts: new Date().toISOString() }
+export function saveConsent(value: 'yes' | 'no', saveHistory: boolean): ConsentRecord {
+  const rec: ConsentRecord = { value, saveHistory, textVersion: ASK_HANS_CONSENT_TEXT_VERSION, ts: new Date().toISOString() }
   write(localStorage, ASK_HANS_STORAGE.consent, rec)
   return rec
 }

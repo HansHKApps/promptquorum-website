@@ -29,24 +29,27 @@ Besuchs-ID gezählt, wie viele Nachrichten gesendet wurden (Limit pro Besuch, Ab
 Ablaufzeiten des Rate-Limit-Fensters (aktuell 1 Minute) und ob ein gehashter IP-Wert im Sinne der DSGVO weiterhin als
 personenbezogen gilt (wahrscheinlich ja → in der Rechtsgrundlage berücksichtigen).
 
-**c) Gesprächsverlauf im Browser — lokal.**
-Ihre Gespräche bleiben nur in Ihrem Browser (`sessionStorage`) und nur für den Besuch (Tab). Sie werden nicht auf dem Server
-gespeichert. Mit dem Schließen des Tabs sind sie weg. `[PRÜFEN]` §25 TDDDG: Speicherung auf dem Endgerät, technisch erforderlich
-für die gewünschte Funktion (§25 Abs. 2 Nr. 2 TDDDG) — bestätigen.
+**c) Gesprächsverlauf im Browser — lokal, nur auf Wunsch (Stand 2026-11-06, Einwilligungstext Version 2026-11-06-draft-3).**
+Im Einwilligungsschritt gibt es ein eigenes, standardmäßig NICHT angekreuztes Kästchen „Meine Gespräche 7 Tage auf diesem Gerät
+speichern“. Ohne Haken wird nichts gespeichert (Gespräch nur im Arbeitsspeicher, weg beim Schließen/Neuladen der Seite). Mit Haken
+liegen die Gespräche 7 Tage im `localStorage` Ihres Browsers (Ablauf ab Beginn des jeweiligen Gesprächs, beim Laden geprüft). Sie
+werden nie auf dem Server gespeichert. Löschen: Schaltfläche „Gespeicherte Gespräche löschen“ oder Widerruf der Einwilligung
+(löscht den lokalen Verlauf mit). Rechtsgrundlage: Einwilligung, Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG (nicht „unbedingt
+erforderlich“, daher Einwilligung). `[PRÜFEN]` juristisch freigeben; Auswahl „Speichern“ ist unabhängig von „Ja/Nein“ zur Statistik.
 
 **d) Anonyme Nutzungsstatistik — nur mit Ihrer Einwilligung („Ja, einverstanden“).**
 Erfasst werden: gewählte Themenkategorie, verwendete Werkzeuge (z. B. „App-Suche“), nachgeschlagene Apps und Verzeichnis-Kategorien (nur Werte aus unserem eigenen Verzeichnis, nie Freitext; bei Empfehlungs-Werkzeugen die ersten drei Treffer), Sprache, Zeitpunkt, angeklickte Links
 (Kategorie und Link-Kennung), ob und in welchen Bereich der Website (nur der erste Pfadabschnitt, z. B. „power-local-llm“) ein Link
 aus einer Antwort angeklickt wurde, Klicks auf „Neu“ und eine zufällige, anonyme Besuchs-ID, die keiner Person zugeordnet ist.
 **Nicht erfasst werden:** Fragetext, Antworttext, IP-Adresse, Namen. Veröffentlicht werden nur zusammengefasste Zahlen (Seite /mcp-stats). Zwecke: Statistik, Verbesserung von Ask Hans und der Inhalte.
-`[PRÜFEN]` Einwilligungstext Version 2026-11-02-draft-2 (neu: Nennung der nachgeschlagenen Apps/Kategorien, Zwecke, Freiwilligkeit, Widerruf mit Wirkung für die Zukunft, Hinweis auf die Gesamtzähler ohne Einwilligung) juristisch freigeben.
+`[PRÜFEN]` Einwilligungstext Version 2026-11-06-draft-3 (neu: Nennung der nachgeschlagenen Apps/Kategorien, Zwecke, Freiwilligkeit, Widerruf mit Wirkung für die Zukunft, Hinweis auf die Gesamtzähler ohne Einwilligung) juristisch freigeben.
 
 **d2) Anonyme Gesamtzähler — für alle Besucher, ohne Einwilligung.** Es werden nur drei Summen hochgezählt (Anzahl
 geöffneter Fenster, gestellter Anfragen und gegebener Antworten), ohne Besuchs-ID, ohne Text, ohne IP-Adresse. Sie dienen der
 Gesamtstatistik (z. B. auf der Seite /mcp-stats). `[PRÜFEN]` Rechtsgrundlage (berechtigtes Interesse) und Hinweis in der Datenschutzerklärung bestätigen.
 
 **e) Nachweis Ihrer Einwilligung.**
-Ihre Entscheidung (Ja/Nein), die Version des Einwilligungstextes und der Zeitpunkt werden in Ihrem Browser (`localStorage`)
+Ihre Entscheidung (Ja/Nein, sowie ob Sie das lokale Speichern der Gespräche gewählt haben), die Version des Einwilligungstextes und der Zeitpunkt werden in Ihrem Browser (`localStorage`)
 gespeichert, damit die Abfrage nicht bei jedem Öffnen wiederholt wird. Bei „Ja“ und bei Widerruf speichern wir zusätzlich
 als Nachweis: Zeitpunkt, Textversion und die anonyme Besuchs-ID. Bei „Nein“ wird nur ein anonymer Zähler erhöht.
 `[PRÜFEN]` Aufbewahrungsdauer des Einwilligungsnachweises (aktuell unbefristet, max. 50.000 Einträge) festlegen.
@@ -73,7 +76,7 @@ Anthropic prüfen) und/oder Standardvertragsklauseln im Data Processing Addendum
 - Fragen/Antworten: keine Speicherung auf unserem Server. Bei Anthropic: `[PRÜFEN]` Frist laut Vertrag.
 - Rate-Limit-Schlüssel: Sekunden bis Minuten. Besuchs-Nachrichtenzähler: 24 Stunden.
 - Nutzungsstatistik: Tageszähler 400 Tage, danach automatisch gelöscht. `[PRÜFEN]` Frist bestätigen.
-- Gesprächsverlauf im Browser: bis Tab geschlossen wird. Einwilligungsentscheidung im Browser: bis Sie sie widerrufen oder Browserdaten löschen.
+- Gesprächsverlauf im Browser: nichts gespeichert, außer Sie wählen „7 Tage speichern“ — dann 7 Tage (localStorage) bzw. bis Löschen/Widerruf. Einwilligungsentscheidung im Browser: bis Sie sie widerrufen oder Browserdaten löschen.
 
 ### 7. Ihre Rechte, Widerruf
 Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen: im Chatfenster über „Einwilligung widerrufen“.
