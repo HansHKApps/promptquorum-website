@@ -46,7 +46,7 @@ export const MENU: readonly MenuItem[] = [
     id: 6,
     label: 'Learn and read',
     examples: ['Best local coding models', "What's new?"],
-    tools: ['search_promptquorum', 'get_article', 'find_related_content', 'list_clusters', 'get_latest'],
+    tools: ['search_promptquorum', 'get_article', 'find_related_content', 'list_clusters', 'get_latest', 'list_pages', 'get_page'],
   },
   {
     id: 7,

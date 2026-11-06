@@ -344,7 +344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'If you plan to use Facet in a business, check each model\'s licence yourself before relying on the default setup.',
+              'If you plan to use Facet in a business, check each model\'s licence yourself before relying on the default setup. This is not legal advice.',
           },
         ],
       },
@@ -873,7 +873,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'Wenn Sie Facet geschäftlich einsetzen möchten, prüfen Sie die Lizenz jedes Modells selbst, bevor Sie sich auf die Standardeinstellung verlassen.',
+              'Wenn Sie Facet geschäftlich einsetzen möchten, prüfen Sie die Lizenz jedes Modells selbst, bevor Sie sich auf die Standardeinstellung verlassen. Dies ist keine Rechtsberatung.',
           },
         ],
       },
@@ -1329,7 +1329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'Si piensas usar Facet en un negocio, comprueba tú mismo la licencia de cada modelo antes de confiar en la configuración por defecto.',
+              'Si piensas usar Facet en un negocio, comprueba tú mismo la licencia de cada modelo antes de confiar en la configuración por defecto. Esto no es asesoramiento jurídico.',
           },
         ],
       },
@@ -1459,14 +1459,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-02',
     theme: 'Image & Video Generation',
     heroImage: '/images/facet-review-hero-fr.webp',
-    title: 'Test de Facet : notation, tri et galerie de photos en local',
-    seoTitle: 'Test de Facet : noter et trier ses photos en local',
+    title: 'Avis sur Facet : notation, tri et galerie de photos en local',
+    seoTitle: 'Avis sur Facet : noter et trier ses photos en local',
     intro:
-      'Facet est un outil gratuit d’analyse de photos sous licence MIT que vous exécutez vous-même : il note chaque photo, repère les rafales et les quasi-doublons, regroupe les visages et vous permet de chercher dans votre photothèque en langage naturel via une galerie web. Ce n’est pas une application de chat ni de LLM ; l’IA se compose de notation d’images, d’embeddings et de modèles de visages. Ce test reflète son README, sa documentation, ses versions GitHub et son code source, consultés le 2 novembre 2026.',
+      'Facet est un outil gratuit d’analyse de photos sous licence MIT que vous exécutez vous-même : il note chaque photo, repère les rafales et les quasi-doublons, regroupe les visages et vous permet de chercher dans votre photothèque en langage naturel via une galerie web. Ce n’est pas une application de chat ni de LLM ; l’IA se compose de notation d’images, d’embeddings et de modèles de visages. Cet avis reflète son README, sa documentation, ses versions GitHub et son code source, consultés le 2 novembre 2026.',
     metaDescription:
-      'Test de Facet : outil gratuit MIT qui note, trie et parcourt vos photos en local, avec visages regroupés et recherche. Licences et confidentialité.',
+      'Avis sur Facet : outil gratuit MIT qui note, trie et parcourt vos photos en local, avec visages regroupés et recherche. Licences et confidentialité.',
     twitterDescription:
-      'Test de Facet : un outil auto-hébergé pour noter, trier et parcourir ses photos. Installation par Docker ou script, profils CPU et GPU, poids de modèles par défaut non commerciaux, VLM distant facultatif et ce que nous n’avons pas pu vérifier.',
+      'Avis sur Facet : un outil auto-hébergé pour noter, trier et parcourir ses photos. Installation par Docker ou script, profils CPU et GPU, poids de modèles par défaut non commerciaux, VLM distant facultatif et ce que nous n’avons pas pu vérifier.',
     audience:
       'Photographes et auto-hébergeurs disposant d’une grande photothèque locale, qui veulent savoir quel effort l’installation demande, quelle IA s’exécute où, ce que permettent les licences des modèles et ce que les sources ne confirment pas.',
     readTime: '8 min de lecture',
@@ -1594,7 +1594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'Ce test s’appuie sur le site web, le README, la documentation, les versions GitHub et une partie du code source du projet, consultés le 2 novembre 2026. PromptQuorum n’a pas installé Facet : la précision de la notation, la pertinence de la recherche et la vitesse ne sont donc pas évaluées.',
+              'Cet avis s’appuie sur le site web, le README, la documentation, les versions GitHub et une partie du code source du projet, consultés le 2 novembre 2026. PromptQuorum n’a pas installé Facet : la précision de la notation, la pertinence de la recherche et la vitesse ne sont donc pas évaluées.',
           },
         ],
       },
@@ -1648,7 +1648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note:
-          'Version testée : v1.27.0, publiée le 29 octobre 2026 selon la release GitHub ; le dernier push dans le dépôt date du 30 octobre 2026. L’installation exige un terminal, Git et Docker ou Python : c’est une mise en place pour développeurs, pas une installation par double-clic. Aucune page de politique de confidentialité distincte n’a été trouvée sur le site du projet ni dans la documentation lue ; les déclarations de confidentialité figurent dans le README.',
+          'Version examinée : v1.27.0, publiée le 29 octobre 2026 selon la release GitHub ; le dernier push dans le dépôt date du 30 octobre 2026. L’installation exige un terminal, Git et Docker ou Python : c’est une mise en place pour développeurs, pas une installation par double-clic. Aucune page de politique de confidentialité distincte n’a été trouvée sur le site du projet ni dans la documentation lue ; les déclarations de confidentialité figurent dans le README.',
       },
       requirements: {
         id: 'requirements',
@@ -1787,7 +1787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'Si vous comptez utiliser Facet dans une entreprise, vérifiez vous-même la licence de chaque modèle avant de vous fier à la configuration par défaut.',
+              'Si vous comptez utiliser Facet dans une entreprise, vérifiez vous-même la licence de chaque modèle avant de vous fier à la configuration par défaut. Ceci ne constitue pas un conseil juridique.',
           },
         ],
       },
@@ -1816,7 +1816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Concurrents et alternatives',
         content: [
-          'L’annuaire compte trois autres outils testés de photothèque et de bibliothèque d’images dans le même segment.',
+          'L’annuaire compte trois autres outils présentés de photothèque et de bibliothèque d’images dans le même segment.',
         ],
         columns: [
           'Application',
@@ -2227,7 +2227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '業務でFacetを使う予定がある場合は、既定の設定に頼る前に、各モデルのライセンスをご自身で確認してください。',
+            text: '業務でFacetを使う予定がある場合は、既定の設定に頼る前に、各モデルのライセンスをご自身で確認してください。これは法的助言ではありません。',
           },
         ],
       },
@@ -2678,7 +2678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'Se você pretende usar o Facet em um negócio, confira por conta própria a licença de cada modelo antes de confiar na configuração padrão.',
+              'Se você pretende usar o Facet em um negócio, confira por conta própria a licença de cada modelo antes de confiar na configuração padrão. Isto não é aconselhamento jurídico.',
           },
         ],
       },
@@ -3130,7 +3130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text:
-              'إذا كنت تنوي استخدام Facet في عمل تجاري، فتحقق بنفسك من ترخيص كل نموذج قبل الاعتماد على الإعداد الافتراضي.',
+              'إذا كنت تنوي استخدام Facet في عمل تجاري، فتحقق بنفسك من ترخيص كل نموذج قبل الاعتماد على الإعداد الافتراضي. هذا ليس استشارة قانونية.',
           },
         ],
       },
@@ -3567,7 +3567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '如果你打算在业务中使用 Facet，请在依赖默认设置之前，自行核对每个模型的许可证。',
+            text: '如果你打算在业务中使用 Facet，请在依赖默认设置之前，自行核对每个模型的许可证。这不构成法律建议。',
           },
         ],
       },
@@ -4002,7 +4002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '업무에 Facet을 쓸 계획이라면 기본 설정에 의존하기 전에 각 모델의 라이선스를 직접 확인하시기 바랍니다.',
+            text: '업무에 Facet을 쓸 계획이라면 기본 설정에 의존하기 전에 각 모델의 라이선스를 직접 확인하시기 바랍니다. 이는 법률 자문이 아닙니다.',
           },
         ],
       },

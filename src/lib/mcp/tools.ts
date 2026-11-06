@@ -39,6 +39,7 @@ import {
 import type { AppSummary } from '@/lib/power-local-llm/app-search'
 import { HANDS_ON_TEST_SLUGS, handsOnTestUrl } from '@/lib/hands-on-tests/links'
 import { listHandsOnTests } from '@/lib/mcp/directory-tools'
+import { searchPages } from '@/lib/mcp/pages'
 
 export {
   DIRECTORY_DISCLAIMER,
@@ -116,7 +117,24 @@ export interface SearchToolResult {
   lang: string
 }
 
+const PAGE_QUERY_NOISE = new Set(['page', 'pages', 'site', 'website', 'say', 'says', 'seite', 'what', 'run', 'local', 'llm', 'llms', 'tool', 'tools'])
+
+/** Articles, reviews and apps (search index) plus the site's other pages (home, About, ... see pages.ts). */
 export function searchPromptquorum(args: { query: string; lang?: string; cluster?: string; limit?: number }): SearchToolResult[] {
+  const limit = Math.min(Math.max(args.limit ?? 10, 1), 25)
+  const found = searchEntries(args)
+  if (args.cluster && args.cluster !== 'site') return found
+  // "about" is a stop word for article search but the name of a page here ("what does the About page say").
+  const words = [...new Set([...questionKeywords(args.query), ...(/\babout\b/i.test(args.query) ? ['about'] : [])])].filter((w) => !PAGE_QUERY_NOISE.has(w))
+  const pages = searchPages(words.join(' '), args.lang, 3).map((p) => ({ title: p.title, description: p.summary, url: p.url, hub: 'site', lang: args.lang ? normalizeLang(args.lang) : 'en' }))
+  if (args.cluster === 'site') return pages.slice(0, limit)
+  // A page whose title matches a keyword (a question about "the About page") leads; weaker page matches follow the articles.
+  const strong = pages.filter((p) => words.some((w) => p.title.toLowerCase().includes(w)))
+  const weak = pages.filter((p) => !strong.includes(p))
+  return [...strong.slice(0, 2), ...found, ...weak.slice(0, 1)].slice(0, limit)
+}
+
+function searchEntries(args: { query: string; lang?: string; cluster?: string; limit?: number }): SearchToolResult[] {
   const lang = args.lang ? normalizeLang(args.lang) : undefined
   let entries = getSearchEntries()
   if (lang) entries = entries.filter((e) => e.lang === lang)

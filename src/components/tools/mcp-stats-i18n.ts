@@ -61,7 +61,7 @@ const MCP_STATS_UI = {
     zh: '实时使用情况', es: 'Uso en vivo', pt: 'Uso ao vivo', ar: 'الاستخدام المباشر', ko: '실시간 사용 현황',
   },
   usageExplainer: {
-    en: 'Aggregate, PII-free call counters — no IP address, user agent, or other identifier is ever recorded, only how many times each tool has been called. Generated {date} UTC.',
+    en: 'Anonymous call counters. No IP address, user agent or other identifier is ever recorded; only the number of calls per tool is counted. Generated {date} UTC.',
     de: 'Aggregierte, PII-freie Aufrufzähler — es werden weder IP-Adresse noch User-Agent oder andere Kennungen gespeichert, sondern nur, wie oft jedes Tool aufgerufen wurde. Erstellt am {date} UTC.',
     fr: 'Compteurs d\'appels agrégés et sans DCP — aucune adresse IP, user agent ou autre identifiant n\'est jamais enregistré, seulement le nombre d\'appels de chaque outil. Généré le {date} UTC.',
     ja: '集計された、個人を特定できない呼び出しカウンターです。IPアドレスやユーザーエージェントなどの識別情報は一切記録されず、各ツールが呼び出された回数のみを記録します。{date} UTC 時点。',
@@ -91,7 +91,7 @@ const MCP_STATS_UI = {
     pt: 'Chamadas hoje (UTC)', ar: 'الاستدعاءات اليوم (بتوقيت UTC)', ko: '오늘 호출 수 (UTC 기준)',
   },
   rawJsonNote: {
-    en: 'Raw JSON: /api/mcp-status. Directory data is editorial, may be outdated, and download links are not verified by PromptQuorum.',
+    en: 'Raw JSON: /api/mcp-status. Directory data is editorial and may be out of date. PromptQuorum does not verify download links.',
     de: 'Rohdaten (JSON): /api/mcp-status. Verzeichnisdaten sind redaktionell, können veraltet sein, und Download-Links werden nicht von PromptQuorum verifiziert.',
     fr: 'JSON brut : /api/mcp-status. Les données de l\'annuaire sont éditoriales, peuvent être obsolètes, et les liens de téléchargement ne sont pas vérifiés par PromptQuorum.',
     ja: '生のJSON: /api/mcp-status。ディレクトリのデータは編集情報であり、古くなっている場合があります。ダウンロードリンクはPromptQuorumによって検証されていません。',
@@ -327,7 +327,7 @@ const MCP_STATS_UI = {
     ko: '실제 예시',
   },
   exampleIntro: {
-    en: 'What it looks like once connected: you ask in plain language, the assistant calls the tools and answers with links back to the sources.',
+    en: 'Once connected, you ask in everyday language. The assistant calls the tools and answers with links to the sources.',
     de: 'So sieht es nach der Verbindung aus: Sie fragen in normaler Sprache, der Assistent ruft die Tools auf und antwortet mit Links zu den Quellen.',
     fr: 'Voici ce que cela donne une fois connecté : vous posez votre question en langage courant, l\'assistant appelle les outils et répond avec des liens vers les sources.',
     ja: '接続後の流れです。普通の言葉で質問すると、アシスタントがツールを呼び出し、情報源へのリンク付きで回答します。',
@@ -360,7 +360,7 @@ const MCP_STATS_UI = {
     ko: '메모리 24GB Mac을 쓰고 있어요. PDF와 대화하려면 무엇을 쓰면 좋을까요?',
   },
   exampleToolsLabel: {
-    en: 'Tool called',
+    en: 'Tool used',
     de: 'Aufgerufenes Tool',
     fr: 'Outil appelé',
     ja: '呼び出されるツール',
@@ -382,7 +382,7 @@ const MCP_STATS_UI = {
     ko: '어시스턴트',
   },
   exampleAnswer: {
-    en: 'The directory\'s document-chat stack is Ollama as the runtime plus AnythingLLM for loading and asking about your PDFs. Its listed hardware floor is 16 GB of RAM with an optional GPU, which your 24 GB is above. Both are free and run on Mac. The directory has not verified a per-app memory figure, so treat the floor as a stack guideline, not a guarantee.',
+    en: 'For chatting with PDFs, the directory suggests Ollama, which runs the model, together with AnythingLLM, which lets you load your PDFs and ask questions about them. The stack needs about 16 GB of RAM, with a GPU optional, so your 24 GB is enough. Both are free and run on a Mac. The directory has no verified memory figure for each app, so treat 16 GB as a guideline for the whole stack, not a guarantee.',
     de: 'Der Dokument-Chat-Stack des Verzeichnisses ist Ollama als Laufzeit plus AnythingLLM, um PDFs zu laden und Fragen dazu zu stellen. Als Hardware-Untergrenze ist 16 GB RAM mit optionaler GPU angegeben – Ihre 24 GB liegen darüber. Beide sind kostenlos und laufen auf dem Mac. Das Verzeichnis hat keinen App-spezifischen Speicherwert verifiziert; die Untergrenze ist eine Stack-Richtlinie, keine Garantie.',
     fr: 'La pile « discussion avec des documents » de l\'annuaire est Ollama comme moteur d\'exécution, plus AnythingLLM pour charger vos PDF et les interroger. Le minimum matériel indiqué est 16 Go de RAM avec GPU facultatif ; vos 24 Go le dépassent. Les deux sont gratuits et fonctionnent sur Mac. L\'annuaire n\'a pas vérifié de besoin mémoire par application : considérez ce minimum comme une indication, pas une garantie.',
     ja: 'ディレクトリの「ドキュメントチャット」構成は、実行環境のOllamaと、PDFの読み込みと質問に使うAnythingLLMです。記載されているハードウェアの最低ラインはRAM 16GB（GPUは任意）で、24GBならそれを上回ります。どちらも無料でMacで動作します。アプリごとのメモリ要件はディレクトリで検証されていないため、この最低ラインは構成の目安であり、保証ではありません。',
@@ -393,7 +393,7 @@ const MCP_STATS_UI = {
     ko: '디렉터리의 문서 채팅 구성은 실행 환경인 Ollama와, PDF를 불러와 질문하는 AnythingLLM입니다. 표기된 하드웨어 최소 사양은 RAM 16GB(GPU는 선택)이며, 24GB면 이를 웃돕니다. 둘 다 무료이고 Mac에서 실행됩니다. 앱별 메모리 요구량은 디렉터리에서 검증되지 않았으므로, 이 최소 사양은 구성의 참고 값일 뿐 보장은 아닙니다.',
   },
   exampleLinksLabel: {
-    en: 'Links in the answer',
+    en: 'Links the assistant gave',
     de: 'Links in der Antwort',
     fr: 'Liens dans la réponse',
     ja: '回答内のリンク',
@@ -437,7 +437,7 @@ const MCP_STATS_UI = {
     ko: '로컬 지식·검색 도구 비교',
   },
   exampleNote: {
-    en: 'Condensed from a real recommend_stack response. Answers vary by assistant and by what the directory holds when you ask.',
+    en: 'Shortened from a real recommend_stack response. Answers differ between assistants and depend on what the directory contains when you ask.',
     de: 'Gekürzt aus einer echten recommend_stack-Antwort. Antworten unterscheiden sich je nach Assistent und Verzeichnisstand zum Zeitpunkt Ihrer Frage.',
     fr: 'Résumé d\'une vraie réponse de recommend_stack. Les réponses varient selon l\'assistant et le contenu de l\'annuaire au moment de la question.',
     ja: '実際のrecommend_stackの応答を要約したものです。回答はアシスタントや質問時点のディレクトリの内容によって異なります。',

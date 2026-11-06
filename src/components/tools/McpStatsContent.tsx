@@ -35,7 +35,7 @@ const LEGACY_TOOL_KEYS: Partial<Record<McpToolName, { titleKey: Parameters<typeo
 const TOOLS: McpToolName[] = [
   'find_best_apps', 'search_apps', 'recommend_stack', 'find_local_alternative', 'get_app_alternatives', 'get_app_details', 'list_categories',
   'compare_apps', 'check_hardware_compatibility', 'estimate_vram', 'explain_license',
-  'search_promptquorum', 'get_article', 'find_related_content', 'get_hands_on_test', 'get_latest', 'list_clusters',
+  'search_promptquorum', 'get_article', 'find_related_content', 'list_pages', 'get_page', 'get_hands_on_test', 'get_latest', 'list_clusters',
   'start', 'set_consent', 'my_profile', 'forget_me', 'set_language',
 ]
 const GROUP_ORDER: ToolGroup[] = ['find', 'decide', 'learn', 'profile']
@@ -55,7 +55,7 @@ const PROMPTS: { name: string; key: 'promptStart' | 'promptStack' | 'promptCompa
   { name: 'check_commercial_license', key: 'promptLicense' },
 ]
 
-function toolCopy(name: McpToolName, lang: Language): { title: string; desc: string } {
+export function toolCopy(name: McpToolName, lang: Language): { title: string; desc: string } {
   const legacy = LEGACY_TOOL_KEYS[name]
   if (legacy) return { title: t(legacy.titleKey, lang), desc: t(legacy.descKey, lang) }
   const fresh = NEW_TOOL_COPY[name]
@@ -71,7 +71,7 @@ const ENDPOINT = 'https://www.promptquorum.com/api/mcp'
 const GROUP_TONE: Record<ToolGroup, HubTone> = { find: 'azure', decide: 'violet', learn: 'orchid', profile: 'rose' }
 const CYCLE: HubTone[] = ['violet', 'azure', 'indigo', 'orchid', 'rose']
 
-function SectionHeading({ index, tone, children, id }: { index: number; tone: HubTone; children: React.ReactNode; id?: string }) {
+export function SectionHeading({ index, tone, children, id }: { index: number; tone: HubTone; children: React.ReactNode; id?: string }) {
   return (
     <div className="mb-2 flex items-center gap-3">
       <span className={`rounded-[10px] px-3.5 py-1 text-[15px] font-extrabold tracking-wide text-white ${HUB_TONES[tone].solid}`}>{String(index).padStart(2, '0')}</span>

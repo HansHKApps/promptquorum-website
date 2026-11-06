@@ -26,6 +26,16 @@ export interface FeedbackStats {
   all: { count: number; sum: number; low: number; mail: number }
 }
 
+/** Ask Hans engagement (consent "Yes" only): use sessions, how many were return visits, time in the tool per bucket. */
+export interface EngagementStats {
+  sessions: WindowCounts
+  returning: WindowCounts
+  /** sessions per active-time bucket (see src/lib/askhans/engagement.ts for the bucket names) */
+  duration: Record<string, WindowCounts>
+  /** sessions per window with the "promo card shown" counter, for reference */
+  promoShown: WindowCounts
+}
+
 export interface UsageReportBase {
   generatedAt: string
   /** ISO date (UTC) the all-visitor totals started, or null */
@@ -46,6 +56,8 @@ export interface UsageReportBase {
   langs: ReportRow[]
   /** Ask Hans only */
   feedback?: FeedbackStats
+  /** Ask Hans only */
+  engagement?: EngagementStats
 }
 
 export const zeroCounts = (): WindowCounts => ({ today: 0, yesterday: 0, last7: 0, last30: 0 })

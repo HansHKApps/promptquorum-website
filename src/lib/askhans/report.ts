@@ -8,7 +8,8 @@
 import { redis } from '@/lib/redis'
 import { getAskHansTotals } from './totals'
 import { REPORT_DAYS, lastNDaysUtc, rankRows, windowsOf, zeroCounts } from '@/lib/usage/report-types'
-import type { FeedbackStats, ReportRow, ReportWindow, UsageReportBase, WindowCounts } from '@/lib/usage/report-types'
+import type { EngagementStats, FeedbackStats, ReportRow, ReportWindow, UsageReportBase, WindowCounts } from '@/lib/usage/report-types'
+import { DURATION_BUCKETS } from './engagement'
 
 export { REPORT_DAYS }
 export type { ReportWindow, WindowCounts, ReportRow }
@@ -37,7 +38,12 @@ function emptyReport(dates: string[]): AskHansReport {
     tools: [],
     langs: [],
     feedback: { count: zeroCounts(), sum: zeroCounts(), low: zeroCounts(), mail: zeroCounts(), all: { count: 0, sum: 0, low: 0, mail: 0 } },
+    engagement: emptyEngagement(),
   }
+}
+
+function emptyEngagement(): EngagementStats {
+  return { sessions: zeroCounts(), returning: zeroCounts(), duration: Object.fromEntries(DURATION_BUCKETS.map((b) => [b, zeroCounts()])), promoShown: zeroCounts() }
 }
 
 const RATING_KEEP_DAYS = 400 // matches the day-key TTL in /api/ask/feedback
@@ -80,6 +86,7 @@ export async function getAskHansReport(): Promise<AskHansReport> {
     const opensWin = zeroCounts()
     const sampled = zeroCounts()
     const sampledOf = zeroCounts()
+    const eng = emptyEngagement()
     const fb: FeedbackStats = { count: zeroCounts(), sum: zeroCounts(), low: zeroCounts(), mail: zeroCounts(), all: { count: 0, sum: 0, low: 0, mail: 0 } }
 
     const prefixes = { 'q:': 'categories', 'app:': 'apps', 'dircat:': 'dirCats', 'tool:': 'tools', 'lang:': 'langs' } as const
@@ -106,6 +113,10 @@ export async function getAskHansReport(): Promise<AskHansReport> {
         fb.mail[w] += rm
         opensWin[w] += opens
         answersWin[w] += answers
+        eng.sessions[w] += num(day.sessions)
+        eng.returning[w] += num(day['ret:back'])
+        eng.promoShown[w] += num(day.promo_shown)
+        for (const b of DURATION_BUCKETS) eng.duration[b][w] += num(day[`dur:${b}`])
       }
       if (!inBreakdown) return
       for (const w of wins) sampledOf[w] += answers
@@ -131,6 +142,7 @@ export async function getAskHansReport(): Promise<AskHansReport> {
     const older = await olderRatings(totals.since, dates[0])
     fb.all = { count: fb.count.last30 + older.count, sum: fb.sum.last30 + older.sum, low: fb.low.last30 + older.low, mail: fb.mail.last30 + older.mail }
     report.feedback = fb
+    report.engagement = eng
     report.sampled = sampled
     report.sampledOf = sampledOf
     for (const bucket of Object.values(prefixes)) report[bucket] = rankRows(rows[bucket])

@@ -29,6 +29,7 @@ import {
   getAppAlternatives,
   getHandsOnTestFindings,
 } from '@/lib/mcp/directory-tools'
+import { getPage, listPages, PageNotFoundError } from '@/lib/mcp/pages'
 import { ASK_HANS_CATEGORIES, isCategoryKey } from './categories'
 import { withConfidence } from './confidence'
 import { ASK_HANS_LIMITS } from './config'
@@ -36,7 +37,7 @@ import { normalizePagePath } from './paths'
 import { topicsFromToolInput, topicsFromToolResult, mergeTopics, type AnswerTopics } from './topics'
 
 const OS = z.enum(['mac', 'win', 'linux', 'ios', 'ipados', 'watchos', 'android', 'web'])
-const LANG = z.string().optional().describe('Language code; defaults to the visitor\'s page language')
+const LANG = z.string().optional().describe('Ignored: the answer language is fixed by the visitor\'s message')
 
 interface ToolDef {
   description: string
@@ -59,18 +60,29 @@ const TOOLS: Record<string, ToolDef> = {
       limit: z.number().int().min(1).max(10).optional(),
     }),
     run: (a: { query: string; lang?: string; cluster?: string; limit?: number }, c) =>
-      searchPromptquorum({ ...a, lang: a.lang ?? c.lang, limit: a.limit ?? 5 }),
+      searchPromptquorum({ ...a, lang: c.lang, limit: a.limit ?? 5 }),
   },
   get_article: {
     description: 'Full content of one PromptQuorum article by cluster + slug (taken from a search result URL). The result carries the article url: link it whenever you use its content.',
     schema: z.object({ cluster: z.string(), slug: z.string(), lang: LANG }),
     run: (a: { cluster: string; slug: string; lang?: string }, c) => {
-      const res = getArticle({ ...a, lang: a.lang ?? c.lang })
+      const res = getArticle({ ...a, lang: c.lang })
       // getArticle returns no URL; without one the model cannot link the article it just read from.
       const prefix = res.lang === 'en' ? '' : `/${res.lang}`
       const title = typeof res.article.title === 'string' ? res.article.title : res.slug
       return { ...res, title, url: `https://www.promptquorum.com${prefix}/${res.cluster}/${res.slug}` }
     },
+  },
+  list_pages: {
+    description: 'List the pages of promptquorum.com that are not articles (home page, About, PromptQuorum app page, Security, Privacy, Impressum, frameworks, tool pages, section hubs) with URL and short description.',
+    schema: z.object({ lang: LANG }),
+    run: (_a: { lang?: string }, c) => listPages({ lang: c.lang }),
+  },
+  get_page: {
+    description:
+      'Read the text of one page that is not an article, by path from list_pages, e.g. "/" (home page), "/about", "/pq-apps", "/security", "/privacy", "/mcp-stats", "/askhans". Use it for questions about the site itself: what the home or About page says, who runs PromptQuorum, privacy, security. Link the page when you use it.',
+    schema: z.object({ path: z.string(), lang: LANG }),
+    run: async (a: { path: string; lang?: string }, c) => getPage({ path: a.path, lang: c.lang }),
   },
   list_clusters: {
     description: 'List every content section of PromptQuorum with a short description.',
@@ -219,7 +231,7 @@ const TOOLS: Record<string, ToolDef> = {
       lang: LANG,
       limit: z.number().int().min(1).max(10).optional(),
     }),
-    run: (a: { app?: string; topic?: string; lang?: string; limit?: number }, c) => findRelatedContent({ ...a, lang: a.lang ?? c.lang }),
+    run: (a: { app?: string; topic?: string; lang?: string; limit?: number }, c) => findRelatedContent({ ...a, lang: c.lang }),
   },
 }
 
@@ -294,7 +306,7 @@ export async function runTool(name: string, input: unknown, ctx: ToolContext): P
     mergeTopics(topics, topicsFromToolResult(name, result))
     return { content: truncate(JSON.stringify(withConfidence(result))), isError: false, topics, ...(Object.keys(pages).length ? { pages } : {}) }
   } catch (err) {
-    if (err instanceof AppNotFoundError || err instanceof ArticleNotFoundError) return { content: err.message, isError: true }
+    if (err instanceof AppNotFoundError || err instanceof ArticleNotFoundError || err instanceof PageNotFoundError) return { content: err.message, isError: true }
     console.error('[askhans] tool failed', name, err)
     return { content: 'The tool failed. Answer from what you already know from PromptQuorum, or say you cannot.', isError: true }
   }

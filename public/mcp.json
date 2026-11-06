@@ -179,6 +179,41 @@
       }
     },
     {
+      "name": "list_pages",
+      "description": "List every page of promptquorum.com that is not an article (home page, About, PromptQuorum app page, Security, Privacy, Impressum, prompt frameworks, tool pages, cluster hubs) with URL and short description.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "lang": {
+            "type": "string",
+            "description": "Language code, defaults to en."
+          }
+        }
+      }
+    },
+    {
+      "name": "get_page",
+      "description": "Read the text of one PromptQuorum page that is not an article, e.g. the home page, About, Security or Privacy. Pass a path from list_pages.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "path"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Page path from list_pages, e.g. \"/\", \"/about\", \"/pq-apps\"."
+          },
+          "lang": {
+            "type": "string",
+            "description": "Language code, defaults to en."
+          }
+        }
+      }
+    },
+    {
       "name": "list_clusters",
       "description": "List every content section on PromptQuorum (local-llms, prompt-engineering, power-local-llm, etc.) with a short description of each.",
       "status": "live",

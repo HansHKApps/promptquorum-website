@@ -111,3 +111,19 @@ const no = total.consent_no ?? 0
 console.log('\nConsent')
 console.log(`  yes ${yes}   no ${no}   withdrawn ${total.consent_withdrawn ?? 0}   consent rate ${yes + no ? Math.round((100 * yes) / (yes + no)) + ' %' : 'n/a'}`)
 console.log(`  "New" clicks ${total.new ?? 0}   unique anonymous visits (with consent) ${visitors.size}\n`)
+
+// ---- engagement (consent "Yes" only): return visits and time in the tool
+console.log('\nEngagement (visitors who said yes; buckets only)')
+const sessions = total.sessions ?? 0
+const back = total['ret:back'] ?? 0
+console.log(`  uses ${sessions}   return visits ${back} (${sessions ? ((100 * back) / sessions).toFixed(0) + ' %' : 'n/a'})   promo card shown ${total.promo_shown ?? 0}`)
+const MID = { lt30: 15, '30-120': 75, '120-300': 210, '300-900': 600, gt900: 1200 }
+let secs = 0
+for (const [b, mid] of Object.entries(MID)) {
+  const n = total[`dur:${b}`] ?? 0
+  secs += n * mid
+  console.log(`  time ${b.padEnd(8)} ${String(n).padStart(5)}`)
+}
+console.log(`  average time per use (estimate from buckets): ${sessions ? Math.round(secs / sessions) + ' s' : 'n/a'}`)
+for (const [k, v] of sum('days:')) console.log(`  days since first visit ${k.padEnd(5)} ${String(v).padStart(5)}`)
+for (const [k, v] of sum('msgs:')) console.log(`  questions per use      ${k.padEnd(5)} ${String(v).padStart(5)}`)

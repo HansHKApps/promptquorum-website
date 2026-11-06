@@ -26,6 +26,8 @@ export const MCP_TOOL_NAMES = [
   'get_latest',
   'get_hands_on_test',
   'find_related_content',
+  'list_pages',
+  'get_page',
   'start',
   'set_consent',
   'forget_me',

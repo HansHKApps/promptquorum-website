@@ -83,7 +83,7 @@
 PromptQuorum runs a live, public, read-only [Model Context Protocol](https://modelcontextprotocol.io) server exposing the site's own content and software directory to any MCP-compatible client. No account, API key, or authentication required.
 
 - **Transport**: Streamable HTTP — `POST`/`GET` to `https://www.promptquorum.com/api/mcp`
-- **Server version**: 2.1.0 — 19 tools, 5 resources, 4 prompts; rate limit 120 requests/minute/IP
+- **Server version**: 2.1.0 — 21 tools, 5 resources, 4 prompts; rate limit 120 requests/minute/IP
 - **Discovery manifest**: [https://www.promptquorum.com/mcp.json](https://www.promptquorum.com/mcp.json)
 - **Documentation**: [https://www.promptquorum.com/mcp-stats](https://www.promptquorum.com/mcp-stats)
 - **Tools** (find apps):
@@ -104,6 +104,8 @@ PromptQuorum runs a live, public, read-only [Model Context Protocol](https://mod
 - **Tools** (read and learn):
   - `search_promptquorum(query, lang?, cluster?, limit?)` — search all guides and the software directory
   - `get_article(cluster, slug, lang?)` — fetch one article's full content
+  - `list_pages(lang?)` — every page that is not an article (home page, About, PromptQuorum app, Security, Privacy, Impressum, frameworks, tool pages, hubs)
+  - `get_page(path, lang?)` — the readable text of one of those pages
   - `find_related_content(app? | topic?)` — review, hands-on test, comparison and setup articles
   - `get_hands_on_test(slug?)` — PromptQuorum's own hands-on findings with evidence labels; reports untested apps as untested
   - `get_latest(type?, limit?, since?)` — recently added apps, updated articles, new tests
