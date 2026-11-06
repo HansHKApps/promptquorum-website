@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma',
     seoTitle: 'Best Vector Database 2026: Qdrant vs Pinecone vs Chroma',
-    metaDescription: 'Best vector database 2026: Qdrant (35k+ GitHub stars, free-forever cloud tier), Pinecone from $20/month, Weaviate and Chroma compared for RAG.',
+    metaDescription: 'Best vector database 2026: Qdrant (35k+ GitHub stars, free cloud tier), Pinecone from $20/month, Weaviate and Chroma compared for RAG workloads.',
     educationalLevel: 'Advanced',
     audience: 'Developers building RAG applications',
     affiliateDisclosure: true,
@@ -24,12 +24,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'vector database pricing comparison',
       'vector database for RAG',
     ],
-    leadAnswerBlock: '**Qdrant is our default pick for most teams: Apache-2.0, written in Rust, with a free-forever cloud tier. Pinecone suits teams that want zero infrastructure work, from $20/month. Weaviate is strongest for hybrid search, Chroma for fast prototypes. All four now have a free tier.**',
+    leadAnswerBlock: '**Qdrant is our default pick for most teams: Apache-2.0, written in Rust, with a free cloud tier (unused free clusters get suspended). Pinecone suits teams that want zero infrastructure work, from $20/month. Weaviate is strongest for hybrid search, Chroma for fast prototypes. All four now have a free tier.**',
     quickAnswerTop: {
       question: 'What is the best vector database in 2026?',
       answer: '**Qdrant as our default pick if you have any ops capacity, Pinecone if you want zero infrastructure work, Weaviate if hybrid search accuracy is central to retrieval, and Chroma if you are prototyping and want no server at all.** There is no single winner here, and any guide that names one is answering a different question than the one you have. The real decision is whether you run the engine yourself or rent it, and that turns on whether your team has spare engineering hours or spare budget — those are rarely the same constraint.',
       bullets: [
-        '**Best overall:** Qdrant — 35,383 stars, Apache-2.0, written in Rust, free-forever cloud tier at 0.5 vCPU / 1 GB RAM / 4 GB disk',
+        '**Best overall:** Qdrant — 35,383 stars, Apache-2.0, written in Rust, free cloud tier at 0.5 vCPU / 1 GB RAM / 4 GB disk (idle clusters are suspended)',
         '**Best for zero ops:** Pinecone — the most mature serverless product, Builder at $20/month flat, Standard at $50/month minimum',
         '**Best for hybrid search:** Weaviate — native BM25 plus vector, and since June 2026 a free tier with no expiry and no credit card',
         '**Best for prototyping:** Chroma — `pip install chromadb` and it runs in your Python process, no server to stand up',
@@ -84,7 +84,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**You want zero infrastructure work and will pay for it** → Pinecone. The most mature serverless product, and Builder at $20/month flat is a real plan rather than a trial.',
           '**Retrieval accuracy depends on blending keyword and semantic matching** → Weaviate. Native BM25 plus vector is the most mature hybrid implementation here, and the free tier now costs nothing to evaluate.',
           '**You are prototyping in a notebook and want no server** → Chroma. It runs in your Python process, so there is nothing to provision before you have working retrieval.',
-          '**You need data to stay on hardware you control** → Qdrant, Weaviate or Chroma self-hosted. Pinecone has no self-hosted version, so it cannot satisfy a hard residency requirement outside its BYOC Enterprise tier.',
+          '**You need data to stay on hardware you control** → Qdrant, Weaviate or Chroma self-hosted. Pinecone has no self-hosted version, so data stays on hardware you control only through its BYOC option on Enterprise; if you only need a specific region, check Pinecone\'s current region documentation.',
           '**You have under roughly 10,000 vectors** → none of them. pgvector on Postgres covers that scale without adding a service to run, and you skip learning a new query API for a workload that does not need one.',
         ],
         affiliateLinks: [
@@ -231,7 +231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             ],
             cons: [
               'No self-hosted version, so leaving means changing engines rather than moving a deployment',
-              'A hard residency requirement can only be met through Enterprise BYOC at a $500/month minimum',
+              'Keeping data on hardware you control requires Enterprise BYOC (from $500/month); for region-only needs, check the region documentation',
               'Read and write unit consumption is easy to under-model, so bills can surprise you',
             ],
             affiliateLinks: [
@@ -365,7 +365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Small startup team moving fast with no ops hire** → Pinecone Builder at $20/month, or Qdrant Cloud\'s free tier if you expect to self-host later.',
           '**Team with ops capacity optimising cost at scale** → Qdrant, self-hosted or on Standard. Usage-based pricing with no platform fee is a low-cost path for teams with ops capacity; compare against your own volume.',
           '**Retrieval quality is the bottleneck on a technical corpus** → Weaviate, evaluated on the now-free tier, for its hybrid search maturity.',
-          '**Privacy-first or regulated team with a residency requirement** → self-hosted Qdrant or Weaviate. Pinecone can only meet this through Enterprise BYOC at a $500/month minimum.',
+          '**Privacy-first or regulated team with a residency requirement** → self-hosted Qdrant or Weaviate. Pinecone has no self-hosted version; its Enterprise BYOC option (from $500/month) is the route to keeping data in your own environment, and if you only need a specific region, check Pinecone\'s current region documentation.',
           '**Under roughly 10,000 vectors** → pgvector on Postgres. Adding a dedicated engine here is operational cost with no retrieval benefit.',
         ],
       },
@@ -385,7 +385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'China',
-            content: 'Under the Data Security Law (数据安全法) and the CAC rules on cross-border transfers, the compliance problem is sending an index built from mainland user documents to a foreign managed provider, not the vector database itself. Depending on the sector and the data involved, Chinese rules on cross-border transfers may require keeping the index on domestic infrastructure; confirm with counsel. Self-hosted Qdrant, Weaviate or Chroma are all workable here since all three are free to run on your own hardware, and Pinecone is the one option that cannot satisfy this outside a BYOC arrangement — see [running local LLMs in China](/local-llms/deepseek-local-china-data-privacy-2026) for the wider data residency picture.',
+            content: 'Under the Data Security Law (数据安全法) and the CAC rules on cross-border transfers, the compliance problem is sending an index built from mainland user documents to a foreign managed provider, not the vector database itself. Depending on the sector and the data involved, Chinese rules on cross-border transfers may require keeping the index on domestic infrastructure; confirm with counsel. Self-hosted Qdrant, Weaviate or Chroma are all workable here since all three are free to run on your own hardware, and Pinecone has no self-hosted version, so data stays in your own environment only through its Enterprise BYOC option — see [running local LLMs in China](/local-llms/deepseek-local-china-data-privacy-2026) for the wider data residency picture.',
           },
         ],
         note: 'Self-host the vector store in any market where the source documents cannot leave your jurisdiction. Three of the four are free to run on your own hardware, so residency is rarely the expensive constraint here.',
@@ -437,7 +437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which vector database has a free tier?',
-            a: 'All four do as of 2026, which was not true a year ago. Qdrant Cloud has a free-forever single node at 0.5 vCPU, 1 GB RAM and 4 GB disk. Pinecone Starter is free with 2 GB storage, 2M write units and 1M read units a month. Weaviate launched a free tier with no credit card and no expiry on 17 June 2026, offering 100,000 objects, 1 GB memory and 10 GB disk. Chroma Cloud Starter is $0 a month plus usage with $5 in credits, which is a credit balance rather than a standing allowance.',
+            a: 'All four do as of 2026, which was not true a year ago. Qdrant Cloud has a free single-node tier with no expiry date at 0.5 vCPU, 1 GB RAM and 4 GB disk; per the Qdrant documentation, unused free clusters are suspended after one week and deleted after four. Pinecone Starter is free with 2 GB storage, 2M write units and 1M read units a month. Weaviate launched a free tier with no credit card and no expiry on 17 June 2026, offering 100,000 objects, 1 GB memory and 10 GB disk. Chroma Cloud Starter is $0 a month plus usage with $5 in credits, which is a credit balance rather than a standing allowance.',
           },
           {
             q: 'Is Pinecone better than Weaviate for RAG?',
@@ -487,6 +487,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant repository', description: 'Star count of 35,383, Apache-2.0 license and Rust as the implementation language, read from the GitHub API on 2 November 2026.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone pricing', description: 'Starter, Builder, Standard and Enterprise limits including the $20 flat Builder plan and the $50 and $500 monthly minimums.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone partners page', description: 'Confirms the Affiliate Program for content creators alongside Technology, Solution and Referral partner categories.' },
+          { url: 'https://docs.pinecone.io/guides/index-data/create-an-index', title: 'Pinecone docs: create an index', description: 'Shows the cloud and region settings chosen when creating an index; check the current list of supported regions before relying on a specific one.' },
+          { url: 'https://qdrant.tech/documentation/cloud/create-cluster/', title: 'Qdrant Cloud: create a cluster', description: 'States that free-tier clusters are suspended after one week of inactivity and deleted after four weeks unless reactivated.' },
           { url: 'https://weaviate.io/blog/weaviate-free-tier', title: 'Weaviate Cloud is now free to start', description: 'The 17 June 2026 announcement of a free tier with no credit card and no time expiry, replacing the 14-day sandbox.' },
           { url: 'https://weaviate.io/pricing', title: 'Weaviate pricing', description: 'Current free tier allowances of 100,000 objects, 1 GB memory and 10 GB disk, plus Flex from $45/month and Premium from $400/month.' },
           { url: 'https://weaviate.io/blog/weaviate-cloud-pricing-update', title: 'Weaviate Cloud pricing update', description: 'The October 2025 restructuring that introduced Flex, Plus and Premium, useful for dating the pricing changes.' },
@@ -548,7 +550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Which vector database has a free tier?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'All four do as of 2026. Qdrant Cloud is free forever at 0.5 vCPU, 1 GB RAM and 4 GB disk. Pinecone Starter is free with 2 GB storage. Weaviate launched a free tier with no credit card and no expiry on 17 June 2026 offering 100,000 objects, 1 GB memory and 10 GB disk. Chroma Cloud Starter is $0 a month plus usage with $5 in credits.',
+            text: 'All four do as of 2026. Qdrant Cloud has a free single-node tier with no expiry date at 0.5 vCPU, 1 GB RAM and 4 GB disk; unused free clusters are suspended after one week. Pinecone Starter is free with 2 GB storage. Weaviate launched a free tier with no credit card and no expiry on 17 June 2026 offering 100,000 objects, 1 GB memory and 10 GB disk. Chroma Cloud Starter is $0 a month plus usage with $5 in credits.',
           },
         },
         {
@@ -584,7 +586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'en',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Our default pick — Apache-2.0, Rust, a free-forever cloud tier with usage-based Standard pricing' },
+        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Our default pick — Apache-2.0, Rust, a free cloud tier with usage-based Standard pricing' },
         { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Best for zero ops — the most mature serverless product, Builder at $20/month flat, but cloud-only with no self-hosted version' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'Best for hybrid search — native BM25 plus vector, and since June 2026 a free tier with no expiry offering 100,000 objects' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Best for prototyping — runs in-process with no server, Rust core, and Chroma Cloud starting at $0/month plus usage' },
@@ -599,7 +601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'Beste Vektordatenbank 2026: Qdrant vs Pinecone vs Chroma',
     seoTitle: 'Beste Vektordatenbank 2026: Qdrant vs Pinecone vs Chroma',
-    metaDescription: 'Beste Vektordatenbank 2026: Qdrant (35k+ GitHub-Sterne, dauerhaft gratis in der Cloud), Pinecone ab 20 $/Monat, Weaviate und Chroma für RAG im Vergleich.',
+    metaDescription: 'Beste Vektordatenbank 2026: Qdrant (35k+ GitHub-Sterne, kostenlose Cloud-Stufe), Pinecone ab 20 $/Monat, Weaviate und Chroma für RAG im Vergleich.',
     educationalLevel: 'Advanced',
     audience: 'Entwicklerinnen und Entwickler, die RAG-Anwendungen bauen',
     affiliateDisclosure: true,
@@ -614,12 +616,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Vektordatenbank Preisvergleich',
       'Vektordatenbank für RAG',
     ],
-    leadAnswerBlock: '**Qdrant ist unsere Standardempfehlung für die meisten Teams: Apache-2.0, in Rust geschrieben und mit dauerhaft kostenloser Cloud-Stufe. Pinecone passt, wenn Sie keinen Infrastrukturaufwand wollen, ab 20 $/Monat. Weaviate ist stark bei Hybridsuche, Chroma für schnelle Prototypen.**',
+    leadAnswerBlock: '**Qdrant ist unsere Standardempfehlung für die meisten Teams: Apache-2.0, in Rust geschrieben und mit kostenloser Cloud-Stufe (ungenutzte Gratis-Cluster werden pausiert). Pinecone passt, wenn Sie keinen Infrastrukturaufwand wollen, ab 20 $/Monat. Weaviate ist stark bei Hybridsuche, Chroma für schnelle Prototypen.**',
     quickAnswerTop: {
       question: 'Welche Vektordatenbank ist 2026 die beste?',
       answer: '**Qdrant als unsere Standardempfehlung, sofern Sie überhaupt Betriebskapazität haben, Pinecone wenn Sie null Infrastrukturarbeit wollen, Weaviate wenn hybride Suche für die Trefferqualität zentral ist, und Chroma wenn Sie prototypisieren und gar keinen Server wollen.** Einen einzelnen Sieger gibt es hier nicht, und jeder Ratgeber, der einen nennt, beantwortet eine andere Frage als Ihre.',
       bullets: [
-        '**Insgesamt am besten:** Qdrant — 35.383 Sterne, Apache-2.0, Rust, dauerhaft kostenlose Cloud-Stufe (0,5 vCPU / 1 GB RAM)',
+        '**Insgesamt am besten:** Qdrant — 35.383 Sterne, Apache-2.0, Rust, kostenlose Cloud-Stufe (0,5 vCPU / 1 GB RAM; ungenutzte Cluster werden pausiert)',
         '**Am besten ohne Betrieb:** Pinecone — das ausgereifteste Serverless-Produkt, Builder pauschal 20 $/Monat, Standard mindestens 50 $/Monat',
         '**Am besten für hybride Suche:** Weaviate — BM25 und Vektor nativ, und seit Juni 2026 eine Gratisstufe ohne Ablauf und ohne Kreditkarte',
         '**Am besten zum Prototypisieren:** Chroma — `pip install chromadb`, und es läuft in Ihrem Python-Prozess, ohne Server',
@@ -674,7 +676,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sie wollen null Infrastrukturarbeit und zahlen dafür** → Pinecone. Das ausgereifteste Serverless-Produkt, und Builder zu pauschal 20 $/Monat ist ein echter Tarif und keine Testphase.',
           '**Die Trefferqualität hängt daran, Stichwort- und Bedeutungssuche zu verbinden** → Weaviate. BM25 plus Vektor nativ ist die reifste hybride Umsetzung hier, und die Gratisstufe kostet inzwischen nichts zum Ausprobieren.',
           '**Sie prototypisieren im Notebook und wollen keinen Server** → Chroma. Es läuft in Ihrem Python-Prozess, es gibt also nichts bereitzustellen, bevor die Suche funktioniert.',
-          '**Ihre Daten müssen auf eigener Hardware bleiben** → Qdrant, Weaviate oder Chroma selbst betrieben. Pinecone hat keine selbst betriebene Variante und kann eine harte Residenzanforderung außerhalb der BYOC-Enterprise-Stufe nicht erfüllen.',
+          '**Ihre Daten müssen auf eigener Hardware bleiben** → Qdrant, Weaviate oder Chroma selbst betrieben. Pinecone hat keine selbst betriebene Variante; Daten bleiben nur über die BYOC-Option der Enterprise-Stufe in Ihrer eigenen Umgebung. Wenn nur eine bestimmte Region gefordert ist, prüfen Sie die aktuelle Regionen-Dokumentation von Pinecone.',
           '**Sie haben unter rund 10.000 Vektoren** → keine davon. pgvector auf Postgres deckt diese Größenordnung ab, ohne einen Dienst zu betreiben, und Sie sparen sich eine neue Abfrage-API für eine Last, die sie nicht braucht.',
         ],
         affiliateLinks: [
@@ -821,7 +823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             ],
             cons: [
               'Keine selbst betriebene Variante, ein Wegzug bedeutet Engine-Wechsel statt Verlagerung eines Deployments',
-              'Eine harte Residenzanforderung ist nur über Enterprise-BYOC ab 500 $/Monat erfüllbar',
+              'Daten in eigener Umgebung gibt es nur mit Enterprise-BYOC (ab 500 $/Monat); bei reinem Regionsbedarf Regionen-Dokumentation prüfen',
               'Der Verbrauch an Read und Write Units wird leicht unterschätzt, Rechnungen können überraschen',
             ],
             affiliateLinks: [
@@ -955,7 +957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Kleines Startup-Team ohne Betriebspersonal** → Pinecone Builder zu 20 $/Monat, oder die kostenlose Stufe von Qdrant Cloud, wenn Sie später selbst hosten wollen.',
           '**Team mit Betriebskapazität, das die Kosten im Wachstum optimiert** → Qdrant, selbst betrieben oder auf Standard. Nutzungsabhängige Abrechnung ohne Plattformgebühr ist ein kostengünstiger Weg für Teams mit Betriebskapazität; vergleichen Sie mit Ihrem eigenen Volumen.',
           '**Die Trefferqualität ist der Engpass auf einem technischen Korpus** → Weaviate, geprüft auf der nun kostenlosen Stufe, wegen der Reife der hybriden Suche.',
-          '**Datenschutzorientiertes oder reguliertes Team mit Residenzanforderung** → Qdrant oder Weaviate selbst betrieben. Pinecone kann das nur über Enterprise-BYOC ab 500 $/Monat erfüllen.',
+          '**Datenschutzorientiertes oder reguliertes Team mit Residenzanforderung** → Qdrant oder Weaviate selbst betrieben. Pinecone hat keine selbst betriebene Variante; die BYOC-Option der Enterprise-Stufe (ab 500 $/Monat) hält Daten in Ihrer eigenen Umgebung, und bei reinem Regionsbedarf prüfen Sie die aktuelle Regionen-Dokumentation von Pinecone.',
           '**Unter rund 10.000 Vektoren** → pgvector auf Postgres. Eine eigene Engine ist hier Betriebsaufwand ohne Gewinn beim Abruf.',
         ],
       },
@@ -975,7 +977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'China',
-            content: 'Unter dem Datensicherheitsgesetz (数据安全法) und den CAC-Regeln zur grenzüberschreitenden Übermittlung besteht das Compliance-Problem darin, einen aus Festland-Nutzerdokumenten gebildeten Index an einen ausländischen verwalteten Anbieter zu senden, nicht in der Vektordatenbank selbst. Je nach Branche und Datenart können die chinesischen Regeln zur grenzüberschreitenden Übermittlung verlangen, dass der Index auf inländischer Infrastruktur liegt; klären Sie das mit Rechtsberatung. Qdrant, Weaviate und Chroma sind hier alle im Selbstbetrieb praktikabel, da alle drei kostenlos auf eigener Hardware laufen; Pinecone ist die einzige Option, die das außerhalb einer BYOC-Vereinbarung nicht erfüllen kann — siehe [lokale LLMs in China betreiben](/de/local-llms/deepseek-local-china-data-privacy-2026) für das größere Bild der Datenresidenz.',
+            content: 'Unter dem Datensicherheitsgesetz (数据安全法) und den CAC-Regeln zur grenzüberschreitenden Übermittlung besteht das Compliance-Problem darin, einen aus Festland-Nutzerdokumenten gebildeten Index an einen ausländischen verwalteten Anbieter zu senden, nicht in der Vektordatenbank selbst. Je nach Branche und Datenart können die chinesischen Regeln zur grenzüberschreitenden Übermittlung verlangen, dass der Index auf inländischer Infrastruktur liegt; klären Sie das mit Rechtsberatung. Qdrant, Weaviate und Chroma sind hier alle im Selbstbetrieb praktikabel, da alle drei kostenlos auf eigener Hardware laufen; Pinecone hat dagegen keine selbst betriebene Variante, sodass Daten nur über die BYOC-Option der Enterprise-Stufe in Ihrer eigenen Umgebung bleiben — siehe [lokale LLMs in China betreiben](/de/local-llms/deepseek-local-china-data-privacy-2026) für das größere Bild der Datenresidenz.',
           },
         ],
         note: 'Betreiben Sie den Vektorspeicher in jedem Markt selbst, in dem die Quelldokumente Ihre Rechtsordnung nicht verlassen dürfen. Drei der vier laufen kostenlos auf eigener Hardware, Residenz ist hier also selten die teure Beschränkung.',
@@ -1027,7 +1029,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welche Vektordatenbank hat eine Gratisstufe?',
-            a: 'Seit 2026 alle vier, was vor einem Jahr noch nicht galt. Qdrant Cloud hat einen dauerhaft kostenlosen Einzelknoten mit 0,5 vCPU, 1 GB RAM und 4 GB Speicher. Pinecone Starter ist kostenlos mit 2 GB Speicher, 2 Mio. Write Units und 1 Mio. Read Units im Monat. Weaviate führte am 17. Juni 2026 eine Gratisstufe ohne Kreditkarte und ohne Ablauf mit 100.000 Objekten, 1 GB Arbeitsspeicher und 10 GB Platte ein. Chroma Cloud Starter kostet 0 $ im Monat plus Nutzung mit 5 $ Guthaben, was ein Guthabenstand ist und kein laufendes Kontingent.',
+            a: 'Seit 2026 alle vier, was vor einem Jahr noch nicht galt. Qdrant Cloud hat einen kostenlosen Einzelknoten ohne Ablaufdatum mit 0,5 vCPU, 1 GB RAM und 4 GB Speicher; laut Qdrant-Dokumentation werden ungenutzte Gratis-Cluster nach einer Woche pausiert und nach vier Wochen gelöscht. Pinecone Starter ist kostenlos mit 2 GB Speicher, 2 Mio. Write Units und 1 Mio. Read Units im Monat. Weaviate führte am 17. Juni 2026 eine Gratisstufe ohne Kreditkarte und ohne Ablauf mit 100.000 Objekten, 1 GB Arbeitsspeicher und 10 GB Platte ein. Chroma Cloud Starter kostet 0 $ im Monat plus Nutzung mit 5 $ Guthaben, was ein Guthabenstand ist und kein laufendes Kontingent.',
           },
           {
             q: 'Ist Pinecone besser als Weaviate für RAG?',
@@ -1085,6 +1087,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant-Repository', description: 'Sternzahl 35.383, Apache-2.0-Lizenz und Rust als Implementierungssprache, am 2. November 2026 aus der GitHub-API gelesen.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone-Preise', description: 'Grenzen von Starter, Builder, Standard und Enterprise samt Builder-Pauschale von 20 $ und den Mindestbeträgen von 50 $ und 500 $ im Monat.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone-Partnerseite', description: 'Bestätigt das Affiliate-Programm für Content-Ersteller neben den Kategorien Technologie-, Lösungs- und Empfehlungspartner.' },
+          { url: 'https://docs.pinecone.io/guides/index-data/create-an-index', title: 'Pinecone-Doku: Index erstellen', description: 'Zeigt die beim Anlegen eines Index gewählten Cloud- und Regionseinstellungen; prüfen Sie die aktuelle Liste unterstützter Regionen, bevor Sie sich auf eine bestimmte verlassen.' },
+          { url: 'https://qdrant.tech/documentation/cloud/create-cluster/', title: 'Qdrant Cloud: Cluster erstellen', description: 'Nennt, dass Cluster der Gratisstufe nach einer Woche Inaktivität pausiert und nach vier Wochen gelöscht werden, sofern sie nicht reaktiviert werden.' },
           { url: 'https://weaviate.io/blog/weaviate-free-tier', title: 'Weaviate Cloud ist jetzt kostenlos zum Start', description: 'Die Ankündigung vom 17. Juni 2026 zur Gratisstufe ohne Kreditkarte und ohne zeitliche Befristung, die die 14-Tage-Sandbox ersetzt.' },
           { url: 'https://weaviate.io/pricing', title: 'Weaviate-Preise', description: 'Aktuelle Kontingente der Gratisstufe mit 100.000 Objekten, 1 GB Arbeitsspeicher und 10 GB Platte sowie Flex ab 45 $/Monat und Premium ab 400 $/Monat.' },
           { url: 'https://weaviate.io/blog/weaviate-cloud-pricing-update', title: 'Aktualisierung der Weaviate-Cloud-Preise', description: 'Die Umstellung vom Oktober 2025, die Flex, Plus und Premium einführte — nützlich zur zeitlichen Einordnung der Preisänderungen.' },
@@ -1146,7 +1150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Welche Vektordatenbank hat eine Gratisstufe?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Seit 2026 alle vier. Qdrant Cloud ist dauerhaft kostenlos mit 0,5 vCPU, 1 GB RAM und 4 GB Speicher. Pinecone Starter ist kostenlos mit 2 GB Speicher. Weaviate führte am 17. Juni 2026 eine Gratisstufe ohne Kreditkarte und ohne Ablauf mit 100.000 Objekten, 1 GB Arbeitsspeicher und 10 GB Platte ein. Chroma Cloud Starter kostet 0 $ im Monat plus Nutzung mit 5 $ Guthaben.',
+            text: 'Seit 2026 alle vier. Qdrant Cloud hat einen kostenlosen Einzelknoten ohne Ablaufdatum mit 0,5 vCPU, 1 GB RAM und 4 GB Speicher; ungenutzte Gratis-Cluster werden nach einer Woche pausiert. Pinecone Starter ist kostenlos mit 2 GB Speicher. Weaviate führte am 17. Juni 2026 eine Gratisstufe ohne Kreditkarte und ohne Ablauf mit 100.000 Objekten, 1 GB Arbeitsspeicher und 10 GB Platte ein. Chroma Cloud Starter kostet 0 $ im Monat plus Nutzung mit 5 $ Guthaben.',
           },
         },
         {
@@ -1182,7 +1186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'de',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Unsere Standardempfehlung — Apache-2.0, Rust, dauerhaft kostenlose Cloud-Stufe mit nutzungsabhängigem Standard' },
+        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Unsere Standardempfehlung — Apache-2.0, Rust, kostenlose Cloud-Stufe mit nutzungsabhängigem Standard' },
         { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Am besten ohne Betrieb — das ausgereifteste Serverless-Produkt, Builder pauschal 20 $/Monat, aber reine Cloud ohne selbst betriebene Variante' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'Am besten für hybride Suche — BM25 plus Vektor nativ, und seit Juni 2026 eine Gratisstufe ohne Ablauf mit 100.000 Objekten' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Am besten zum Prototypisieren — läuft ohne Server im Prozess, Kern in Rust, und Chroma Cloud ab 0 $/Monat plus Nutzung' },
@@ -1212,12 +1216,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'comparativa de precios de bases de datos vectoriales',
       'base de datos vectorial para RAG',
     ],
-    leadAnswerBlock: '**Qdrant es nuestra opción por defecto para la mayoría de equipos: Apache-2.0, escrito en Rust y con nube gratis para siempre. Pinecone encaja si no quieres gestionar infraestructura, desde 20 $/mes. Weaviate destaca en búsqueda híbrida y Chroma en prototipos rápidos.**',
+    leadAnswerBlock: '**Qdrant es nuestra opción por defecto para la mayoría de equipos: Apache-2.0, escrito en Rust y con nube gratis (los clústeres gratuitos inactivos se suspenden). Pinecone encaja si no quieres gestionar infraestructura, desde 20 $/mes. Weaviate destaca en búsqueda híbrida y Chroma en prototipos rápidos.**',
     quickAnswerTop: {
       question: '¿Cuál es la mejor base de datos vectorial en 2026?',
       answer: '**Qdrant como nuestra opción por defecto si tiene alguna capacidad de operaciones, Pinecone si quiere cero trabajo de infraestructura, Weaviate si la búsqueda híbrida es central para la precisión de la recuperación, y Chroma si está prototipando y no quiere ningún servidor.** Aquí no hay un ganador único, y cualquier guía que nombre uno está respondiendo a una pregunta distinta de la suya.',
       bullets: [
-        '**Mejor en conjunto:** Qdrant — 35.383 estrellas, Apache-2.0, Rust, nube gratis para siempre (0,5 vCPU / 1 GB RAM)',
+        '**Mejor en conjunto:** Qdrant — 35.383 estrellas, Apache-2.0, Rust, nube gratis (0,5 vCPU / 1 GB RAM; los clústeres inactivos se suspenden)',
         '**Mejor sin operaciones:** Pinecone — el producto serverless más maduro, Builder a 20 $/mes fijos, Standard con un mínimo de 50 $/mes',
         '**Mejor para búsqueda híbrida:** Weaviate — BM25 más vector de forma nativa, y desde junio de 2026 un nivel gratuito sin caducidad ni tarjeta de crédito',
         '**Mejor para prototipar:** Chroma — `pip install chromadb` y corre en su proceso de Python, sin servidor que levantar',
@@ -1272,7 +1276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Quiere cero trabajo de infraestructura y va a pagarlo** → Pinecone. El producto serverless más maduro, y Builder a 20 $/mes fijos es un plan de verdad, no una prueba.',
           '**La precisión de la recuperación depende de mezclar coincidencia literal y semántica** → Weaviate. BM25 más vector de forma nativa es la implementación híbrida más madura aquí, y el nivel gratuito ya no cuesta nada para evaluarlo.',
           '**Está prototipando en un notebook y no quiere servidor** → Chroma. Corre en su proceso de Python, así que no hay nada que aprovisionar antes de tener recuperación funcionando.',
-          '**Necesita que los datos permanezcan en hardware que usted controla** → Qdrant, Weaviate o Chroma autoalojados. Pinecone no tiene versión autoalojada, así que no puede satisfacer un requisito duro de residencia fuera de su nivel Enterprise con BYOC.',
+          '**Necesita que los datos permanezcan en hardware que usted controla** → Qdrant, Weaviate o Chroma autoalojados. Pinecone no tiene versión autoalojada; solo con su opción BYOC de Enterprise los datos permanecen en su propio entorno. Si solo necesita una región concreta, consulte la documentación actual de regiones de Pinecone.',
           '**Tiene menos de unos 10.000 vectores** → ninguno. pgvector sobre Postgres cubre esa escala sin añadir un servicio que operar, y se ahorra aprender una API nueva para una carga que no la necesita.',
         ],
         affiliateLinks: [
@@ -1419,7 +1423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             ],
             cons: [
               'Sin versión autoalojada, así que marcharse significa cambiar de motor y no mover un despliegue',
-              'Un requisito duro de residencia solo puede cubrirse con Enterprise y BYOC desde 500 $/mes',
+              'Datos en su propio entorno solo con Enterprise y BYOC (desde 500 $/mes); si basta una región, consulte la documentación',
               'El consumo de unidades de lectura y escritura es fácil de subestimar, y las facturas pueden sorprender',
             ],
             affiliateLinks: [
@@ -1553,7 +1557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Equipo pequeño moviéndose rápido y sin contratación de operaciones** → Pinecone Builder a 20 $/mes, o el nivel gratuito de Qdrant Cloud si espera autoalojar más adelante.',
           '**Equipo con capacidad de operaciones que optimiza el coste a escala** → Qdrant, autoalojado o en Standard. La facturación por consumo sin cuota de plataforma es un camino de bajo coste para equipos con capacidad de operaciones; compárela con su propio volumen.',
           '**La calidad de la recuperación es el cuello de botella en un corpus técnico** → Weaviate, evaluado en el nivel ahora gratuito, por la madurez de su búsqueda híbrida.',
-          '**Equipo con prioridad en privacidad o regulado con requisito de residencia** → Qdrant o Weaviate autoalojados. Pinecone solo puede cubrir esto con Enterprise y BYOC desde 500 $/mes.',
+          '**Equipo con prioridad en privacidad o regulado con requisito de residencia** → Qdrant o Weaviate autoalojados. Pinecone no tiene versión autoalojada; su opción BYOC de Enterprise (desde 500 $/mes) mantiene los datos en su propio entorno, y si solo necesita una región concreta, consulte la documentación actual de regiones de Pinecone.',
           '**Por debajo de unos 10.000 vectores** → pgvector sobre Postgres. Añadir aquí un motor dedicado es coste operativo sin beneficio en la recuperación.',
         ],
       },
@@ -1573,7 +1577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'China',
-            content: 'Bajo la Ley de Seguridad de Datos (数据安全法) y las normas de la CAC sobre transferencias transfronterizas, el problema de cumplimiento es enviar a un proveedor gestionado extranjero un índice construido con documentos de usuarios del continente, no la base de datos vectorial en sí. Según el sector y los datos implicados, las normas chinas sobre transferencias transfronterizas pueden exigir que el índice resida en infraestructura nacional; confírmelo con asesoría jurídica. Qdrant, Weaviate y Chroma autoalojados son viables aquí, ya que los tres son gratuitos de ejecutar en hardware propio, y Pinecone es la única opción que no puede satisfacerlo fuera de un acuerdo BYOC — véase [ejecutar LLM locales en China](/es/local-llms/deepseek-local-china-data-privacy-2026) para el panorama más amplio de residencia de datos.',
+            content: 'Bajo la Ley de Seguridad de Datos (数据安全法) y las normas de la CAC sobre transferencias transfronterizas, el problema de cumplimiento es enviar a un proveedor gestionado extranjero un índice construido con documentos de usuarios del continente, no la base de datos vectorial en sí. Según el sector y los datos implicados, las normas chinas sobre transferencias transfronterizas pueden exigir que el índice resida en infraestructura nacional; confírmelo con asesoría jurídica. Qdrant, Weaviate y Chroma autoalojados son viables aquí, ya que los tres son gratuitos de ejecutar en hardware propio, y Pinecone no tiene versión autoalojada, así que los datos permanecen en su propio entorno solo con su opción BYOC de Enterprise — véase [ejecutar LLM locales en China](/es/local-llms/deepseek-local-china-data-privacy-2026) para el panorama más amplio de residencia de datos.',
           },
         ],
         note: 'Autoaloje el almacén vectorial en cualquier mercado donde los documentos de origen no puedan salir de su jurisdicción. Tres de los cuatro son gratuitos de ejecutar en hardware propio, así que la residencia rara vez es aquí la restricción cara.',
@@ -1625,7 +1629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué base de datos vectorial tiene nivel gratuito?',
-            a: 'Los cuatro en 2026, algo que no era cierto hace un año. Qdrant Cloud tiene un nodo gratuito para siempre con 0,5 vCPU, 1 GB de RAM y 4 GB de disco. Pinecone Starter es gratis con 2 GB de almacenamiento, 2 M de unidades de escritura y 1 M de lectura al mes. Weaviate lanzó el 17 de junio de 2026 un nivel gratuito sin tarjeta y sin caducidad con 100.000 objetos, 1 GB de memoria y 10 GB de disco. Chroma Cloud Starter cuesta 0 $ al mes más consumo con 5 $ de crédito, que es un saldo y no un cupo permanente.',
+            a: 'Los cuatro en 2026, algo que no era cierto hace un año. Qdrant Cloud tiene un nodo gratuito sin fecha de caducidad con 0,5 vCPU, 1 GB de RAM y 4 GB de disco; según la documentación de Qdrant, los clústeres gratuitos sin uso se suspenden tras una semana y se eliminan tras cuatro. Pinecone Starter es gratis con 2 GB de almacenamiento, 2 M de unidades de escritura y 1 M de lectura al mes. Weaviate lanzó el 17 de junio de 2026 un nivel gratuito sin tarjeta y sin caducidad con 100.000 objetos, 1 GB de memoria y 10 GB de disco. Chroma Cloud Starter cuesta 0 $ al mes más consumo con 5 $ de crédito, que es un saldo y no un cupo permanente.',
           },
           {
             q: '¿Es Pinecone mejor que Weaviate para RAG?',
@@ -1675,6 +1679,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/qdrant/qdrant', title: 'Repositorio de Qdrant', description: 'Recuento de 35.383 estrellas, licencia Apache-2.0 y Rust como lenguaje de implementación, leídos de la API de GitHub el 2 de noviembre de 2026.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Precios de Pinecone', description: 'Límites de Starter, Builder, Standard y Enterprise incluidos el plan plano Builder de 20 $ y los mínimos mensuales de 50 $ y 500 $.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Página de socios de Pinecone', description: 'Confirma el programa de afiliados para creadores de contenido junto a las categorías de socios tecnológicos, de soluciones y de referencia.' },
+          { url: 'https://docs.pinecone.io/guides/index-data/create-an-index', title: 'Documentación de Pinecone: crear un índice', description: 'Muestra los ajustes de nube y región elegidos al crear un índice; consulte la lista actual de regiones admitidas antes de confiar en una concreta.' },
+          { url: 'https://qdrant.tech/documentation/cloud/create-cluster/', title: 'Qdrant Cloud: crear un clúster', description: 'Indica que los clústeres del nivel gratuito se suspenden tras una semana de inactividad y se eliminan tras cuatro semanas si no se reactivan.' },
           { url: 'https://weaviate.io/blog/weaviate-free-tier', title: 'Weaviate Cloud ya es gratis para empezar', description: 'El anuncio del 17 de junio de 2026 de un nivel gratuito sin tarjeta de crédito y sin caducidad, que sustituye al sandbox de 14 días.' },
           { url: 'https://weaviate.io/pricing', title: 'Precios de Weaviate', description: 'Cupos actuales del nivel gratuito de 100.000 objetos, 1 GB de memoria y 10 GB de disco, más Flex desde 45 $/mes y Premium desde 400 $/mes.' },
           { url: 'https://weaviate.io/blog/weaviate-cloud-pricing-update', title: 'Actualización de precios de Weaviate Cloud', description: 'La reestructuración de octubre de 2025 que introdujo Flex, Plus y Premium, útil para fechar los cambios de precios.' },
@@ -1736,7 +1742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿Qué base de datos vectorial tiene nivel gratuito?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Los cuatro en 2026. Qdrant Cloud es gratis para siempre con 0,5 vCPU, 1 GB de RAM y 4 GB de disco. Pinecone Starter es gratis con 2 GB. Weaviate lanzó el 17 de junio de 2026 un nivel gratuito sin tarjeta y sin caducidad con 100.000 objetos, 1 GB de memoria y 10 GB de disco. Chroma Cloud Starter cuesta 0 $ al mes más consumo con 5 $ de crédito.',
+            text: 'Los cuatro en 2026. Qdrant Cloud tiene un nodo gratuito sin fecha de caducidad con 0,5 vCPU, 1 GB de RAM y 4 GB de disco; los clústeres gratuitos sin uso se suspenden tras una semana. Pinecone Starter es gratis con 2 GB. Weaviate lanzó el 17 de junio de 2026 un nivel gratuito sin tarjeta y sin caducidad con 100.000 objetos, 1 GB de memoria y 10 GB de disco. Chroma Cloud Starter cuesta 0 $ al mes más consumo con 5 $ de crédito.',
           },
         },
         {
@@ -1772,7 +1778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'es',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Nuestra opción por defecto — Apache-2.0, Rust, un nivel en la nube gratuito para siempre con Standard por consumo' },
+        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Nuestra opción por defecto — Apache-2.0, Rust, un nivel en la nube gratuito con Standard por consumo' },
         { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Mejor sin operaciones — el producto serverless más maduro, Builder a 20 $/mes fijos, pero solo nube y sin versión autoalojada' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'Mejor para búsqueda híbrida — BM25 más vector de forma nativa, y desde junio de 2026 un nivel gratuito sin caducidad con 100.000 objetos' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Mejor para prototipar — corre en el proceso sin servidor, núcleo en Rust, y Chroma Cloud desde 0 $/mes más consumo' },
@@ -1787,7 +1793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'Meilleure base vectorielle 2026 : Qdrant vs Pinecone',
     seoTitle: 'Meilleure base vectorielle 2026 : Qdrant vs Pinecone',
-    metaDescription: 'Meilleure base vectorielle 2026 : Qdrant (35k+ étoiles GitHub, cloud gratuit à vie), Pinecone dès 20 $/mois, Weaviate et Chroma comparés pour le RAG.',
+    metaDescription: 'Meilleure base vectorielle 2026 : Qdrant (35k+ étoiles GitHub, cloud gratuit), Pinecone dès 20 $/mois, Weaviate et Chroma comparés pour le RAG.',
     educationalLevel: 'Advanced',
     audience: 'Developpeurs qui construisent des applications RAG',
     affiliateDisclosure: true,
@@ -1802,12 +1808,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'comparatif des prix des bases vectorielles',
       'base de donnees vectorielle pour RAG',
     ],
-    leadAnswerBlock: '**Qdrant est notre choix par défaut pour la plupart des équipes : Apache-2.0, écrit en Rust, avec une offre cloud gratuite à vie. Pinecone convient si vous voulez zéro infrastructure, dès 20 $/mois. Weaviate excelle en recherche hybride, Chroma pour prototyper vite.**',
+    leadAnswerBlock: '**Qdrant est notre choix par défaut pour la plupart des équipes : Apache-2.0, écrit en Rust, avec une offre cloud gratuite (les clusters gratuits inactifs sont suspendus). Pinecone convient si vous voulez zéro infrastructure, dès 20 $/mois. Weaviate excelle en recherche hybride, Chroma pour prototyper vite.**',
     quickAnswerTop: {
       question: 'Quelle est la meilleure base de donnees vectorielle en 2026 ?',
       answer: '**Qdrant comme choix par défaut si vous avez la moindre capacité d\'exploitation, Pinecone si vous voulez zero travail d infrastructure, Weaviate si la recherche hybride est centrale pour la precision, et Chroma si vous prototypez et ne voulez aucun serveur.** Il n y a pas de vainqueur unique ici, et tout guide qui en designe un repond a une autre question que la votre. La vraie decision est de savoir si vous exploitez le moteur ou si vous le louez, et cela depend de ce qui manque a votre equipe : des heures d ingenierie ou du budget. Ce sont rarement la meme contrainte.',
       bullets: [
-        '**Meilleur globalement :** Qdrant — 35 383 etoiles, Apache-2.0, ecrit en Rust, palier cloud gratuit a vie avec 0,5 vCPU / 1 Go de RAM / 4 Go de disque',
+        '**Meilleur globalement :** Qdrant — 35 383 etoiles, Apache-2.0, ecrit en Rust, palier cloud gratuit avec 0,5 vCPU / 1 Go de RAM / 4 Go de disque (clusters inactifs suspendus)',
         '**Meilleur sans exploitation :** Pinecone — le produit serverless le plus mature, Builder a 20 $/mois forfaitaires, Standard a partir de 50 $/mois',
         '**Meilleur pour la recherche hybride :** Weaviate — BM25 et vecteur en natif, et depuis juin 2026 un palier gratuit sans expiration ni carte bancaire',
         '**Meilleur pour prototyper :** Chroma — `pip install chromadb` et il tourne dans votre processus Python, sans serveur a monter',
@@ -1862,7 +1868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Vous voulez zero travail d infrastructure et acceptez de payer** → Pinecone. Le produit serverless le plus mature, et Builder a 20 $/mois forfaitaires est une vraie offre, pas un essai.',
           '**La precision de la recherche depend du melange entre correspondance litterale et semantique** → Weaviate. BM25 plus vecteur en natif est l implementation hybride la plus mature ici, et le palier gratuit ne coute plus rien pour l evaluer.',
           '**Vous prototypez dans un notebook et ne voulez pas de serveur** → Chroma. Il tourne dans votre processus Python, il n y a donc rien a provisionner avant d avoir une recherche fonctionnelle.',
-          '**Vos donnees doivent rester sur du materiel que vous controlez** → Qdrant, Weaviate ou Chroma auto-heberges. Pinecone n a pas de version auto-hebergee et ne peut donc satisfaire une exigence stricte de residence en dehors de son palier Enterprise avec BYOC.',
+          '**Vos donnees doivent rester sur du materiel que vous controlez** → Qdrant, Weaviate ou Chroma auto-heberges. Pinecone n\'a pas de version auto-hébergée ; seule l\'option BYOC d\'Enterprise garde les données dans votre propre environnement. Si seule une région précise est exigée, consultez la documentation actuelle des régions de Pinecone.',
           '**Vous avez moins d environ 10 000 vecteurs** → aucune d elles. pgvector sur Postgres couvre cette echelle sans ajouter un service a exploiter, et vous evitez d apprendre une nouvelle API pour une charge qui n en a pas besoin.',
         ],
         affiliateLinks: [
@@ -2009,7 +2015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             ],
             cons: [
               'Pas de version auto-hebergee : partir signifie changer de moteur et non deplacer un deploiement',
-              'Une exigence stricte de residence ne peut etre satisfaite que via Enterprise et BYOC des 500 $/mois',
+              'Données dans votre propre environnement uniquement via Enterprise et BYOC (dès 500 $/mois) ; pour une simple région, consulter la documentation',
               'La consommation d unites de lecture et d ecriture est facile a sous-estimer, les factures peuvent surprendre',
             ],
             affiliateLinks: [
@@ -2143,7 +2149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Petite equipe rapide sans recrutement en exploitation** → Pinecone Builder a 20 $/mois, ou le palier gratuit de Qdrant Cloud si vous comptez auto-heberger plus tard.',
           '**Equipe avec capacite d exploitation optimisant le cout a l echelle** → Qdrant, auto-heberge ou en Standard. La facturation à l\'usage sans frais de plateforme est une voie économique pour les équipes disposant de capacité d\'exploitation ; comparez avec votre propre volume.',
           '**La qualite de recherche est le goulet d etranglement sur un corpus technique** → Weaviate, evalue sur le palier desormais gratuit, pour la maturite de sa recherche hybride.',
-          '**Equipe soucieuse de confidentialite ou reglementee avec exigence de residence** → Qdrant ou Weaviate auto-heberges. Pinecone ne peut y repondre que via Enterprise et BYOC des 500 $/mois.',
+          '**Equipe soucieuse de confidentialite ou reglementee avec exigence de residence** → Qdrant ou Weaviate auto-heberges. Pinecone n\'a pas de version auto-hébergée ; son option BYOC d\'Enterprise (dès 500 $/mois) garde les données dans votre propre environnement, et si seule une région précise est exigée, consultez la documentation actuelle des régions de Pinecone.',
           '**Moins d environ 10 000 vecteurs** → pgvector sur Postgres. Ajouter ici un moteur dedie, c est du cout d exploitation sans gain de recherche.',
         ],
       },
@@ -2163,7 +2169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Chine',
-            content: 'Sous la loi sur la securite des donnees (数据安全法) et les regles de la CAC sur les transferts transfrontaliers, le probleme de conformite est d envoyer a un fournisseur gere etranger un index construit a partir de documents d utilisateurs de Chine continentale, et non la base vectorielle en elle-meme. Selon le secteur et les données concernées, les règles chinoises sur les transferts transfrontaliers peuvent exiger que l\'index réside sur une infrastructure nationale ; confirmez-le avec un conseil juridique. Qdrant, Weaviate et Chroma auto-heberges conviennent tous ici, puisque les trois sont gratuits a executer sur votre propre materiel, et Pinecone est la seule option qui ne peut y satisfaire en dehors d un accord BYOC — voyez [executer des LLM locaux en Chine](/fr/local-llms/deepseek-local-china-data-privacy-2026) pour le tableau plus large de la residence des donnees.',
+            content: 'Sous la loi sur la securite des donnees (数据安全法) et les regles de la CAC sur les transferts transfrontaliers, le probleme de conformite est d envoyer a un fournisseur gere etranger un index construit a partir de documents d utilisateurs de Chine continentale, et non la base vectorielle en elle-meme. Selon le secteur et les données concernées, les règles chinoises sur les transferts transfrontaliers peuvent exiger que l\'index réside sur une infrastructure nationale ; confirmez-le avec un conseil juridique. Qdrant, Weaviate et Chroma auto-heberges conviennent tous ici, puisque les trois sont gratuits a executer sur votre propre materiel, et Pinecone n\'a pas de version auto-hébergée, si bien que les données ne restent dans votre propre environnement que via son option BYOC d\'Enterprise — voyez [executer des LLM locaux en Chine](/fr/local-llms/deepseek-local-china-data-privacy-2026) pour le tableau plus large de la residence des donnees.',
           },
         ],
         note: 'Auto-hebergez le magasin vectoriel sur tout marche ou les documents sources ne peuvent pas quitter votre juridiction. Trois des quatre sont gratuits a executer sur votre propre materiel : la residence est donc rarement ici la contrainte couteuse.',
@@ -2215,7 +2221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quelle base vectorielle dispose d un palier gratuit ?',
-            a: 'Les quatre en 2026, ce qui n etait pas vrai il y a un an. Qdrant Cloud propose un noeud gratuit a vie avec 0,5 vCPU, 1 Go de RAM et 4 Go de disque. Pinecone Starter est gratuit avec 2 Go de stockage, 2 M d unites d ecriture et 1 M de lecture par mois. Weaviate a lance le 17 juin 2026 un palier gratuit sans carte et sans expiration avec 100 000 objets, 1 Go de memoire et 10 Go de disque. Chroma Cloud Starter coute 0 $ par mois plus la consommation avec 5 $ de credits, ce qui est un solde et non un quota permanent.',
+            a: 'Les quatre en 2026, ce qui n etait pas vrai il y a un an. Qdrant Cloud propose un nœud gratuit sans date d\'expiration avec 0,5 vCPU, 1 Go de RAM et 4 Go de disque ; selon la documentation de Qdrant, les clusters gratuits inutilisés sont suspendus après une semaine et supprimés après quatre. Pinecone Starter est gratuit avec 2 Go de stockage, 2 M d unites d ecriture et 1 M de lecture par mois. Weaviate a lance le 17 juin 2026 un palier gratuit sans carte et sans expiration avec 100 000 objets, 1 Go de memoire et 10 Go de disque. Chroma Cloud Starter coute 0 $ par mois plus la consommation avec 5 $ de credits, ce qui est un solde et non un quota permanent.',
           },
           {
             q: 'Pinecone est-il meilleur que Weaviate pour le RAG ?',
@@ -2265,6 +2271,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/qdrant/qdrant', title: 'Depot Qdrant', description: 'Compte de 35 383 etoiles, licence Apache-2.0 et Rust comme langage d implementation, lus depuis l API GitHub le 2 novembre 2026.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Tarifs Pinecone', description: 'Limites de Starter, Builder, Standard et Enterprise, dont l offre forfaitaire Builder a 20 $ et les minimums mensuels de 50 $ et 500 $.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Page partenaires de Pinecone', description: 'Confirme le programme d affiliation destine aux createurs de contenu, aux cotes des categories partenaires technologiques, solutions et prescripteurs.' },
+          { url: 'https://docs.pinecone.io/guides/index-data/create-an-index', title: 'Documentation Pinecone : créer un index', description: 'Montre les paramètres de cloud et de région choisis à la création d\'un index ; consultez la liste actuelle des régions prises en charge avant de vous appuyer sur l\'une d\'elles.' },
+          { url: 'https://qdrant.tech/documentation/cloud/create-cluster/', title: 'Qdrant Cloud : créer un cluster', description: 'Indique que les clusters du palier gratuit sont suspendus après une semaine d\'inactivité et supprimés après quatre semaines s\'ils ne sont pas réactivés.' },
           { url: 'https://weaviate.io/blog/weaviate-free-tier', title: 'Weaviate Cloud est desormais gratuit pour demarrer', description: 'L annonce du 17 juin 2026 d un palier gratuit sans carte bancaire et sans expiration, qui remplace le bac a sable de 14 jours.' },
           { url: 'https://weaviate.io/pricing', title: 'Tarifs Weaviate', description: 'Quotas actuels du palier gratuit de 100 000 objets, 1 Go de memoire et 10 Go de disque, plus Flex des 45 $/mois et Premium des 400 $/mois.' },
           { url: 'https://weaviate.io/blog/weaviate-cloud-pricing-update', title: 'Mise a jour des tarifs Weaviate Cloud', description: 'La restructuration d octobre 2025 qui a introduit Flex, Plus et Premium, utile pour dater les changements de tarifs.' },
@@ -2326,7 +2334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Quelle base vectorielle dispose d un palier gratuit ?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Les quatre en 2026. Qdrant Cloud est gratuit a vie avec 0,5 vCPU, 1 Go de RAM et 4 Go de disque. Pinecone Starter est gratuit avec 2 Go. Weaviate a lance le 17 juin 2026 un palier gratuit sans carte et sans expiration avec 100 000 objets, 1 Go de memoire et 10 Go de disque. Chroma Cloud Starter coute 0 $ par mois plus la consommation avec 5 $ de credits.',
+            text: 'Les quatre en 2026. Qdrant Cloud propose un nœud gratuit sans date d\'expiration avec 0,5 vCPU, 1 Go de RAM et 4 Go de disque ; les clusters gratuits inutilisés sont suspendus après une semaine. Pinecone Starter est gratuit avec 2 Go. Weaviate a lance le 17 juin 2026 un palier gratuit sans carte et sans expiration avec 100 000 objets, 1 Go de memoire et 10 Go de disque. Chroma Cloud Starter coute 0 $ par mois plus la consommation avec 5 $ de credits.',
           },
         },
         {
@@ -2362,7 +2370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'fr',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Notre choix par défaut — Apache-2.0, Rust, un palier cloud gratuit a vie avec Standard a la consommation' },
+        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Notre choix par défaut — Apache-2.0, Rust, un palier cloud gratuit avec Standard a la consommation' },
         { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Meilleur sans exploitation — le produit serverless le plus mature, Builder a 20 $/mois forfaitaires, mais cloud uniquement et sans version auto-hebergee' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'Meilleur pour la recherche hybride — BM25 plus vecteur en natif, et depuis juin 2026 un palier gratuit sans expiration offrant 100 000 objets' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Meilleur pour prototyper — tourne dans le processus sans serveur, coeur en Rust, et Chroma Cloud des 0 $/mois plus la consommation' },
@@ -2392,12 +2400,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'comparação de preços de bancos vetoriais',
       'banco de dados vetorial para RAG',
     ],
-    leadAnswerBlock: '**O Qdrant é nossa escolha padrão para a maioria das equipes: Apache-2.0, escrito em Rust e com nuvem grátis para sempre. O Pinecone serve a quem não quer gerir infraestrutura, desde US$ 20/mês. O Weaviate se destaca em busca híbrida, o Chroma em protótipos.**',
+    leadAnswerBlock: '**O Qdrant é nossa escolha padrão para a maioria das equipes: Apache-2.0, escrito em Rust e com nuvem grátis (clusters gratuitos inativos são suspensos). O Pinecone serve a quem não quer gerir infraestrutura, desde US$ 20/mês. O Weaviate se destaca em busca híbrida, o Chroma em protótipos.**',
     quickAnswerTop: {
       question: 'Qual é o melhor banco de dados vetorial em 2026?',
       answer: '**Qdrant como nossa escolha padrão se você tiver alguma capacidade de operações, Pinecone se quiser zero trabalho de infraestrutura, Weaviate se a busca híbrida for central para a precisão da recuperação, e Chroma se estiver prototipando e não quiser servidor algum.** Não há um vencedor único aqui, e qualquer guia que nomeie um está respondendo a uma pergunta diferente da sua. A decisão real é se você opera o motor ou o aluga, e isso depende de a sua equipe ter horas de engenharia sobrando ou orçamento sobrando — raramente são a mesma restrição.',
       bullets: [
-        '**Melhor no geral:** Qdrant — 35.383 estrelas, Apache-2.0, escrito em Rust, nível de nuvem gratuito para sempre com 0,5 vCPU / 1 GB de RAM / 4 GB de disco',
+        '**Melhor no geral:** Qdrant — 35.383 estrelas, Apache-2.0, escrito em Rust, nível de nuvem gratuito com 0,5 vCPU / 1 GB de RAM / 4 GB de disco (clusters inativos são suspensos)',
         '**Melhor sem operações:** Pinecone — o produto serverless mais maduro, Builder a US$ 20/mês fixos, Standard com mínimo de US$ 50/mês',
         '**Melhor para busca híbrida:** Weaviate — BM25 mais vetor de forma nativa, e desde junho de 2026 um nível gratuito sem expiração e sem cartão de crédito',
         '**Melhor para prototipar:** Chroma — `pip install chromadb` e roda no seu processo Python, sem servidor para subir',
@@ -2452,7 +2460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Você quer zero trabalho de infraestrutura e vai pagar por isso** → Pinecone. O produto serverless mais maduro, e o Builder a US$ 20/mês fixos é um plano de verdade, não um teste.',
           '**A precisão da recuperação depende de misturar correspondência literal e semântica** → Weaviate. BM25 mais vetor de forma nativa é a implementação híbrida mais madura aqui, e o nível gratuito já não custa nada para avaliar.',
           '**Você está prototipando em um notebook e não quer servidor** → Chroma. Roda no seu processo Python, então não há nada a provisionar antes de ter recuperação funcionando.',
-          '**Seus dados precisam ficar em hardware que você controla** → Qdrant, Weaviate ou Chroma auto-hospedados. O Pinecone não tem versão auto-hospedada, então não atende a uma exigência dura de residência fora do nível Enterprise com BYOC.',
+          '**Seus dados precisam ficar em hardware que você controla** → Qdrant, Weaviate ou Chroma auto-hospedados. O Pinecone não tem versão auto-hospedada; só com a opção BYOC do Enterprise os dados ficam no seu próprio ambiente. Se basta uma região específica, consulte a documentação atual de regiões do Pinecone.',
           '**Você tem menos de cerca de 10.000 vetores** → nenhum deles. pgvector no Postgres cobre essa escala sem acrescentar um serviço para operar, e você evita aprender uma API nova para uma carga que não precisa dela.',
         ],
         affiliateLinks: [
@@ -2578,7 +2586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             ],
             cons: [
               'Sem versão auto-hospedada, então sair significa trocar de motor e não mover uma instalação',
-              'Uma exigência dura de residência só pode ser atendida via Enterprise com BYOC a partir de US$ 500/mês',
+              'Dados no seu próprio ambiente só com Enterprise e BYOC (a partir de US$ 500/mês); se basta uma região, consulte a documentação',
               'O consumo de unidades de leitura e escrita é fácil de subestimar, e as faturas podem surpreender',
             ],
             affiliateLinks: [
@@ -2712,7 +2720,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Equipe pequena andando rápido e sem contratação de operações** → Pinecone Builder a US$ 20/mês, ou o nível gratuito do Qdrant Cloud se você espera auto-hospedar depois.',
           '**Equipe com capacidade de operações otimizando custo em escala** → Qdrant, auto-hospedado ou no Standard. A cobrança por consumo sem taxa de plataforma é um caminho de baixo custo para equipes com capacidade de operações; compare com o seu próprio volume.',
           '**A qualidade da recuperação é o gargalo em um corpus técnico** → Weaviate, avaliado no nível agora gratuito, pela maturidade da sua busca híbrida.',
-          '**Equipe com prioridade em privacidade ou regulada com exigência de residência** → Qdrant ou Weaviate auto-hospedados. O Pinecone só atende a isso via Enterprise com BYOC a partir de US$ 500/mês.',
+          '**Equipe com prioridade em privacidade ou regulada com exigência de residência** → Qdrant ou Weaviate auto-hospedados. O Pinecone não tem versão auto-hospedada; a opção BYOC do Enterprise (a partir de US$ 500/mês) mantém os dados no seu próprio ambiente, e se basta uma região específica, consulte a documentação atual de regiões do Pinecone.',
           '**Abaixo de cerca de 10.000 vetores** → pgvector no Postgres. Acrescentar aqui um motor dedicado é custo operacional sem ganho na recuperação.',
         ],
       },
@@ -2732,7 +2740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'China',
-            content: 'Sob a Lei de Segurança de Dados (数据安全法) e as regras da CAC sobre transferências transfronteiriças, o problema de conformidade é enviar a um fornecedor gerenciado estrangeiro um índice construído a partir de documentos de usuários do continente, não o banco vetorial em si. Dependendo do setor e dos dados envolvidos, as regras chinesas sobre transferências transfronteiriças podem exigir que o índice fique em infraestrutura nacional; confirme com assessoria jurídica. Qdrant, Weaviate e Chroma auto-hospedados são todos viáveis aqui, já que os três são gratuitos para rodar em hardware próprio, e o Pinecone é a única opção que não atende a isso fora de um acordo BYOC — veja [executar LLMs locais na China](/pt/local-llms/deepseek-local-china-data-privacy-2026) para o quadro mais amplo de residência de dados.',
+            content: 'Sob a Lei de Segurança de Dados (数据安全法) e as regras da CAC sobre transferências transfronteiriças, o problema de conformidade é enviar a um fornecedor gerenciado estrangeiro um índice construído a partir de documentos de usuários do continente, não o banco vetorial em si. Dependendo do setor e dos dados envolvidos, as regras chinesas sobre transferências transfronteiriças podem exigir que o índice fique em infraestrutura nacional; confirme com assessoria jurídica. Qdrant, Weaviate e Chroma auto-hospedados são todos viáveis aqui, já que os três são gratuitos para rodar em hardware próprio, e o Pinecone não tem versão auto-hospedada, então os dados ficam no seu próprio ambiente só com a opção BYOC do Enterprise — veja [executar LLMs locais na China](/pt/local-llms/deepseek-local-china-data-privacy-2026) para o quadro mais amplo de residência de dados.',
           },
         ],
         note: 'Auto-hospede o repositório vetorial em qualquer mercado em que os documentos de origem não possam sair da sua jurisdição. Três dos quatro são gratuitos para rodar em hardware próprio, então residência raramente é aqui a restrição cara.',
@@ -2784,7 +2792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual banco de dados vetorial tem nível gratuito?',
-            a: 'Os quatro em 2026, o que não era verdade há um ano. O Qdrant Cloud tem um nó gratuito para sempre com 0,5 vCPU, 1 GB de RAM e 4 GB de disco. O Pinecone Starter é gratuito com 2 GB de armazenamento, 2 mi de unidades de escrita e 1 mi de leitura por mês. O Weaviate lançou em 17 de junho de 2026 um nível gratuito sem cartão e sem expiração com 100.000 objetos, 1 GB de memória e 10 GB de disco. O Chroma Cloud Starter custa US$ 0 por mês mais consumo com US$ 5 de crédito, que é um saldo e não uma cota permanente.',
+            a: 'Os quatro em 2026, o que não era verdade há um ano. O Qdrant Cloud tem um nó gratuito sem data de expiração com 0,5 vCPU, 1 GB de RAM e 4 GB de disco; segundo a documentação do Qdrant, clusters gratuitos sem uso são suspensos após uma semana e excluídos após quatro. O Pinecone Starter é gratuito com 2 GB de armazenamento, 2 mi de unidades de escrita e 1 mi de leitura por mês. O Weaviate lançou em 17 de junho de 2026 um nível gratuito sem cartão e sem expiração com 100.000 objetos, 1 GB de memória e 10 GB de disco. O Chroma Cloud Starter custa US$ 0 por mês mais consumo com US$ 5 de crédito, que é um saldo e não uma cota permanente.',
           },
           {
             q: 'O Pinecone é melhor que o Weaviate para RAG?',
@@ -2832,6 +2840,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/qdrant/qdrant', title: 'Repositório do Qdrant', description: 'Contagem de 35.383 estrelas, licença Apache-2.0 e Rust como linguagem de implementação, lidos da API do GitHub em 2 de novembro de 2026.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Preços do Pinecone', description: 'Limites de Starter, Builder, Standard e Enterprise, incluindo o plano fixo Builder de US$ 20 e os mínimos mensais de US$ 50 e US$ 500.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Página de parceiros do Pinecone', description: 'Confirma o programa de afiliados para criadores de conteúdo ao lado das categorias de parceiros de tecnologia, de soluções e de indicação.' },
+          { url: 'https://docs.pinecone.io/guides/index-data/create-an-index', title: 'Documentação do Pinecone: criar um índice', description: 'Mostra as configurações de nuvem e região escolhidas ao criar um índice; consulte a lista atual de regiões suportadas antes de depender de uma específica.' },
+          { url: 'https://qdrant.tech/documentation/cloud/create-cluster/', title: 'Qdrant Cloud: criar um cluster', description: 'Indica que clusters do nível gratuito são suspensos após uma semana de inatividade e excluídos após quatro semanas se não forem reativados.' },
           { url: 'https://weaviate.io/blog/weaviate-free-tier', title: 'O Weaviate Cloud agora é gratuito para começar', description: 'O anúncio de 17 de junho de 2026 de um nível gratuito sem cartão de crédito e sem expiração, que substitui o sandbox de 14 dias.' },
           { url: 'https://weaviate.io/pricing', title: 'Preços do Weaviate', description: 'Cotas atuais do nível gratuito de 100.000 objetos, 1 GB de memória e 10 GB de disco, além de Flex a partir de US$ 45/mês e Premium a partir de US$ 400/mês.' },
           { url: 'https://weaviate.io/blog/weaviate-cloud-pricing-update', title: 'Atualização de preços do Weaviate Cloud', description: 'A reestruturação de outubro de 2025 que introduziu Flex, Plus e Premium, útil para datar as mudanças de preços.' },
@@ -2893,7 +2903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Qual banco de dados vetorial tem nível gratuito?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Os quatro em 2026. O Qdrant Cloud é gratuito para sempre com 0,5 vCPU, 1 GB de RAM e 4 GB de disco. O Pinecone Starter é gratuito com 2 GB. O Weaviate lançou em 17 de junho de 2026 um nível gratuito sem cartão e sem expiração com 100.000 objetos, 1 GB de memória e 10 GB de disco. O Chroma Cloud Starter custa US$ 0 por mês mais consumo com US$ 5 de crédito.',
+            text: 'Os quatro em 2026. O Qdrant Cloud tem um nó gratuito sem data de expiração com 0,5 vCPU, 1 GB de RAM e 4 GB de disco; clusters gratuitos sem uso são suspensos após uma semana. O Pinecone Starter é gratuito com 2 GB. O Weaviate lançou em 17 de junho de 2026 um nível gratuito sem cartão e sem expiração com 100.000 objetos, 1 GB de memória e 10 GB de disco. O Chroma Cloud Starter custa US$ 0 por mês mais consumo com US$ 5 de crédito.',
           },
         },
         {
@@ -2929,7 +2939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'pt-BR',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Nossa escolha padrão — Apache-2.0, Rust, um nível de nuvem gratuito para sempre com Standard por consumo' },
+        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'Nossa escolha padrão — Apache-2.0, Rust, um nível de nuvem gratuito com Standard por consumo' },
         { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'Melhor sem operações — o produto serverless mais maduro, Builder a US$ 20/mês fixos, mas só nuvem e sem versão auto-hospedada' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'Melhor para busca híbrida — BM25 mais vetor de forma nativa, e desde junho de 2026 um nível gratuito sem expiração com 100.000 objetos' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'Melhor para prototipar — roda no processo sem servidor, núcleo em Rust, e Chroma Cloud a partir de US$ 0/mês mais consumo' },
@@ -2944,7 +2954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: '2026年 最適なベクトルデータベース：Qdrant・Pinecone・Weaviate・Chroma',
     seoTitle: 'ベクトルDB比較2026：Qdrant・Pinecone',
-    metaDescription: '2026年のベクトルデータベース比較：Qdrant（GitHubスター35k超、永年無料のクラウド枠）、Pineconeは月20ドルから、WeaviateとChromaもRAG向けに比較。',
+    metaDescription: '2026年のベクトルデータベース比較：Qdrant（GitHubスター35k超、無料のクラウド枠）、Pineconeは月20ドルから、WeaviateとChromaもRAG向けに比較。',
     educationalLevel: 'Advanced',
     audience: 'RAGアプリケーションを構築する開発者',
     affiliateDisclosure: true,
@@ -2959,12 +2969,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ベクトルデータベース 料金比較',
       'RAG ベクトルデータベース',
     ],
-    leadAnswerBlock: '**多くのチームにはQdrantを既定の選択肢としています。Apache-2.0でRust製、永年無料のクラウド枠があります。インフラ運用を避けたいならPinecone（月20ドルから）、ハイブリッド検索ならWeaviate、素早い試作ならChroma。4製品とも無料枠があります。**',
+    leadAnswerBlock: '**多くのチームにはQdrantを既定の選択肢としています。Apache-2.0でRust製、無料のクラウド枠があります（未使用の無料クラスターは停止されます）。インフラ運用を避けたいならPinecone（月20ドルから）、ハイブリッド検索ならWeaviate、素早い試作ならChroma。4製品とも無料枠があります。**',
     quickAnswerTop: {
       question: '2026年に最適なベクトルデータベースはどれですか？',
       answer: '**運用の余力が少しでもあるなら既定の選択肢としてQdrant、インフラ作業をゼロにしたいならPinecone、検索精度にハイブリッド検索が効くならWeaviate、試作中でサーバーを一切置きたくないならChromaです。** ここに単独の勝者はなく、1つを名指しするガイドはあなたの問いとは別の問いに答えています。本当の判断は、エンジンを自分で動かすのか借りるのかであり、それはチームに余っているのが工数か予算かで決まります。両方が同じ制約であることはまれです。',
       bullets: [
-        '**総合的に最良：** Qdrant — スター35,383件、Apache-2.0、Rust製、0.5 vCPU / 1 GB RAM / 4 GBディスクの永続無料クラウド枠',
+        '**総合的に最良：** Qdrant — スター35,383件、Apache-2.0、Rust製、0.5 vCPU / 1 GB RAM / 4 GBディスクの無料クラウド枠（未使用時は停止）',
         '**運用ゼロなら最良：** Pinecone — 最も成熟したサーバーレス製品、Builderは月20ドル定額、Standardは月50ドルから',
         '**ハイブリッド検索なら最良：** Weaviate — BM25とベクトルをネイティブに統合し、2026年6月以降はクレジットカード不要・無期限の無料枠',
         '**試作なら最良：** Chroma — `pip install chromadb` でPythonプロセス内で動き、立ち上げるサーバーがない',
@@ -3019,7 +3029,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**インフラ作業をゼロにしたく、その対価を払う** → Pinecone。最も成熟したサーバーレス製品で、月20ドル定額のBuilderは試用ではなく本物のプランです。',
           '**検索精度が字面一致と意味的一致の両立に依存する** → Weaviate。BM25とベクトルのネイティブ統合はここで最も成熟したハイブリッド実装で、無料枠での評価にもう費用はかかりません。',
           '**ノートブックで試作中、サーバーは置きたくない** → Chroma。Pythonプロセス内で動くので、検索が動くまでに用意するものがありません。',
-          '**データを自分の管理下のハードウェアに留める必要がある** → Qdrant、Weaviate、Chromaのいずれかを自己ホスト。Pineconeに自己ホスト版はなく、BYOCのEnterprise以外では厳格な所在地要件を満たせません。',
+          '**データを自分の管理下のハードウェアに留める必要がある** → Qdrant、Weaviate、Chromaのいずれかを自己ホスト。Pineconeに自己ホスト版はなく、データを自社環境に置けるのはEnterpriseのBYOCを使う場合です。特定のリージョンで足りる場合は、Pineconeの最新のリージョン情報をご確認ください。',
           '**ベクトルがおよそ1万未満** → どれも不要です。Postgres上のpgvectorがその規模を賄い、運用対象を増やさずに済み、必要のない新しいクエリAPIを覚えずに済みます。',
         ],
         affiliateLinks: [
@@ -3166,7 +3176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             ],
             cons: [
               '自己ホスト版がないため、離脱は構成の移動ではなくエンジンの入れ替えになる',
-              '厳格な所在地要件は、月500ドルからのEnterpriseとBYOCでしか満たせない',
+              'データを自社環境に置くには月500ドルからのEnterpriseのBYOCが必要。リージョンだけなら最新の公式情報を確認',
               '読み取り・書き込みユニットの消費は見積もりを誤りやすく、請求が予想を超えることがある',
             ],
             affiliateLinks: [
@@ -3300,7 +3310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**運用担当を雇わずに速く動く小さなチーム** → 月20ドルのPinecone Builder、または後で自己ホストするつもりならQdrant Cloudの無料枠。',
           '**運用の余力があり、規模に応じてコストを最適化したいチーム** → Qdrant。自己ホストでもStandardでも。プラットフォーム料金のない従量課金は、運用の余力があるチームにとってコストを抑えやすい道です。ご自身の利用量と比較してください。',
           '**技術文書コーパスで取得の質がボトルネックのチーム** → Weaviate。ハイブリッド検索の成熟度ゆえに、いま無料になった枠で評価を。',
-          '**プライバシー重視または規制下で所在地要件があるチーム** → QdrantかWeaviateを自己ホスト。Pineconeは月500ドルからのEnterpriseとBYOCでしかこれを満たせません。',
+          '**プライバシー重視または規制下で所在地要件があるチーム** → QdrantかWeaviateを自己ホスト。Pineconeに自己ホスト版はなく、データを自社環境に置けるのは月500ドルからのEnterpriseのBYOCを使う場合です。特定のリージョンで足りる場合は、Pineconeの最新のリージョン情報をご確認ください。',
           '**およそ1万ベクトル未満** → Postgres上のpgvector。ここで専用エンジンを足すのは、取得上の利点なしに運用費だけを増やすことです。',
         ],
       },
@@ -3320,7 +3330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '中国',
-            content: 'データセキュリティ法（数据安全法）とCACの越境移転規則の下では、コンプライアンス上の問題はベクトルデータベース自体ではなく、本土の利用者文書から作られたインデックスを国外のマネージド事業者へ送ることにあります。業種や扱うデータによっては、中国の越境移転規則により、インデックスを国内インフラに置くことが求められる場合があります。専門家に確認してください。Qdrant、Weaviate、Chromaはいずれも自己ホストで実行可能で、3つとも自前のハードウェアなら無料で動きます。Pineconeだけが、BYOCの取り決めなしにはこれを満たせません。データ所在地の全体像については[中国でローカルLLMを動かす](/ja/local-llms/deepseek-local-china-data-privacy-2026)をご覧ください。',
+            content: 'データセキュリティ法（数据安全法）とCACの越境移転規則の下では、コンプライアンス上の問題はベクトルデータベース自体ではなく、本土の利用者文書から作られたインデックスを国外のマネージド事業者へ送ることにあります。業種や扱うデータによっては、中国の越境移転規則により、インデックスを国内インフラに置くことが求められる場合があります。専門家に確認してください。Qdrant、Weaviate、Chromaはいずれも自己ホストで実行可能で、3つとも自前のハードウェアなら無料で動きます。Pineconeには自己ホスト版がなく、データを自社環境に置けるのはEnterpriseのBYOCを使う場合です。データ所在地の全体像については[中国でローカルLLMを動かす](/ja/local-llms/deepseek-local-china-data-privacy-2026)をご覧ください。',
           },
         ],
         note: '元文書が管轄外に出せない市場では、ベクトルストアを自己ホストしてください。4つのうち3つは自前のハードウェアで無料で動くため、ここでは所在地が高くつく制約になることはまれです。',
@@ -3372,7 +3382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '無料枠があるベクトルデータベースはどれですか？',
-            a: '2026年時点で4つすべてです。1年前には当てはまりませんでした。Qdrant Cloudは0.5 vCPU、1 GB RAM、4 GBディスクの永続無料ノードを提供します。Pinecone Starterは無料でストレージ2 GB、書き込みユニット月200万、読み取りユニット月100万です。Weaviateは2026年6月17日に、カード不要・無期限でオブジェクト10万件、メモリ1 GB、ディスク10 GBの無料枠を導入しました。Chroma Cloud Starterは月0ドルに従量課金と5ドルのクレジットで、これは継続的な枠ではなく残高です。',
+            a: '2026年時点で4つすべてです。1年前には当てはまりませんでした。Qdrant Cloudは0.5 vCPU、1 GB RAM、4 GBディスクの無料ノードを期限なしで提供します。Qdrantのドキュメントによると、未使用の無料クラスターは1週間後に停止され、4週間後に削除されます。Pinecone Starterは無料でストレージ2 GB、書き込みユニット月200万、読み取りユニット月100万です。Weaviateは2026年6月17日に、カード不要・無期限でオブジェクト10万件、メモリ1 GB、ディスク10 GBの無料枠を導入しました。Chroma Cloud Starterは月0ドルに従量課金と5ドルのクレジットで、これは継続的な枠ではなく残高です。',
           },
           {
             q: 'RAGにはPineconeとWeaviateのどちらが優れていますか？',
@@ -3422,6 +3432,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant リポジトリ', description: 'スター35,383件、Apache-2.0ライセンス、実装言語Rust。2026年11月2日にGitHub APIから取得。' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone の料金', description: 'Starter・Builder・Standard・Enterpriseの上限。20ドルの定額Builderと月50ドル・月500ドルの最低額を含む。' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone パートナーページ', description: '技術・ソリューション・紹介の各パートナー区分と並ぶ、コンテンツ制作者向けアフィリエイトプログラムの確認。' },
+          { url: 'https://docs.pinecone.io/guides/index-data/create-an-index', title: 'Pineconeドキュメント：インデックスの作成', description: 'インデックス作成時に選ぶクラウドとリージョンの設定を示します。特定のリージョンに頼る前に、対応リージョンの最新一覧を確認してください。' },
+          { url: 'https://qdrant.tech/documentation/cloud/create-cluster/', title: 'Qdrant Cloud：クラスターの作成', description: '無料枠のクラスターは1週間使われないと停止され、再開しなければ4週間後に削除されると記載されています。' },
           { url: 'https://weaviate.io/blog/weaviate-free-tier', title: 'Weaviate Cloud が無料で始められるように', description: 'クレジットカード不要・無期限の無料枠を告知した2026年6月17日の記事。14日間のサンドボックスを置き換えたもの。' },
           { url: 'https://weaviate.io/pricing', title: 'Weaviate の料金', description: '無料枠の現行上限であるオブジェクト10万件・メモリ1 GB・ディスク10 GB、およびFlex月45ドルから、Premium月400ドルから。' },
           { url: 'https://weaviate.io/blog/weaviate-cloud-pricing-update', title: 'Weaviate Cloud 料金の更新', description: 'Flex・Plus・Premiumを導入した2025年10月の再編。料金変更の時期を押さえるのに有用。' },
@@ -3483,7 +3495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '無料枠があるベクトルデータベースはどれですか？',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: '2026年時点で4つすべてです。Qdrant Cloudは0.5 vCPU、1 GB RAM、4 GBディスクで永続無料。Pinecone Starterは2 GBで無料。Weaviateは2026年6月17日に、カード不要・無期限でオブジェクト10万件、メモリ1 GB、ディスク10 GBの無料枠を導入。Chroma Cloud Starterは月0ドル＋従量で5ドル分のクレジットです。',
+            text: '2026年時点で4つすべてです。Qdrant Cloudは0.5 vCPU、1 GB RAM、4 GBディスクの無料ノードを期限なしで提供（未使用だと1週間後に停止）。Pinecone Starterは2 GBで無料。Weaviateは2026年6月17日に、カード不要・無期限でオブジェクト10万件、メモリ1 GB、ディスク10 GBの無料枠を導入。Chroma Cloud Starterは月0ドル＋従量で5ドル分のクレジットです。',
           },
         },
         {
@@ -3519,7 +3531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ja',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: '既定の選択肢 — Apache-2.0、Rust、従量課金のStandardを備えた永続無料のクラウド枠' },
+        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: '既定の選択肢 — Apache-2.0、Rust、従量課金のStandardを備えた無料のクラウド枠' },
         { '@type': 'ListItem', position: 2, name: 'Pinecone', description: '運用ゼロなら最良 — 最も成熟したサーバーレス製品、Builderは月20ドル定額。ただしクラウド専用で自己ホスト版はない' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'ハイブリッド検索なら最良 — BM25とベクトルをネイティブに統合し、2026年6月以降はオブジェクト10万件の無期限な無料枠' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: '試作なら最良 — サーバーなしにプロセス内で動き、コアはRust。Chroma Cloudは月0ドル＋従量から' },
@@ -3534,7 +3546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: '2026年最佳向量数据库：Qdrant、Pinecone、Weaviate 还是 Chroma',
     seoTitle: '最佳向量数据库2026：Qdrant vs Pinecone',
-    metaDescription: '2026年最佳向量数据库对比:Qdrant(GitHub星标3.5万+,云端永久免费层)、Pinecone每月20美元起,以及Weaviate和Chroma的RAG适用性。',
+    metaDescription: '2026年最佳向量数据库对比:Qdrant(GitHub星标3.5万+,云端免费层)、Pinecone每月20美元起,以及Weaviate和Chroma的RAG适用性。',
     educationalLevel: 'Advanced',
     audience: '构建 RAG 应用的开发者',
     affiliateDisclosure: true,
@@ -3549,12 +3561,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '向量数据库价格对比',
       'RAG 向量数据库',
     ],
-    leadAnswerBlock: '**对大多数团队,我们的默认推荐是Qdrant:Apache-2.0、Rust编写、云端永久免费层。不想管基础设施选Pinecone(每月20美元起),混合检索选Weaviate,快速原型选Chroma。四者现在都有免费层。**',
+    leadAnswerBlock: '**对大多数团队,我们的默认推荐是Qdrant:Apache-2.0、Rust编写、云端免费层（闲置的免费集群会被暂停）。不想管基础设施选Pinecone(每月20美元起),混合检索选Weaviate,快速原型选Chroma。四者现在都有免费层。**',
     quickAnswerTop: {
       question: '2026 年最好的向量数据库是哪一个？',
       answer: '**只要你有一点运维余力，我们默认推荐 Qdrant；想要零基础设施工作就选 Pinecone；若混合检索对召回精度至关重要就选 Weaviate；在做原型且完全不想要服务器就选 Chroma。** 这里没有单一赢家，任何点名一个的指南，回答的都是与你不同的问题。真正的决定是你自己运行引擎还是租用它，而这取决于你的团队富余的是工程小时还是预算——两者很少是同一种约束。',
       bullets: [
-        '**综合最优：** Qdrant——35,383 星标，Apache-2.0，Rust 编写，永久免费云层级含 0.5 vCPU / 1 GB 内存 / 4 GB 磁盘',
+        '**综合最优：** Qdrant——35,383 星标，Apache-2.0，Rust 编写，免费云层级含 0.5 vCPU / 1 GB 内存 / 4 GB 磁盘（闲置会被暂停）',
         '**零运维最优：** Pinecone——最成熟的无服务器产品，Builder 每月 20 美元固定价，Standard 每月最低 50 美元',
         '**混合检索最优：** Weaviate——原生支持 BM25 加向量，且自 2026 年 6 月起提供不过期、免信用卡的免费层级',
         '**原型开发最优：** Chroma——`pip install chromadb` 即在你的 Python 进程中运行，无需搭建服务器',
@@ -3609,7 +3621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**你想要零基础设施工作，并愿意为此付费** → Pinecone。最成熟的无服务器产品，而每月 20 美元固定价的 Builder 是一个真正的方案，不是试用。',
           '**召回精度取决于字面匹配与语义匹配的结合** → Weaviate。原生的 BM25 加向量是这里最成熟的混合实现，而且免费层级如今评估起来分文不花。',
           '**你在 notebook 里做原型，不想要服务器** → Chroma。它在你的 Python 进程中运行，因此在检索跑通之前没有任何东西需要预置。',
-          '**数据必须留在你自己掌控的硬件上** → 自托管 Qdrant、Weaviate 或 Chroma。Pinecone 没有自托管版本，因此在 BYOC 的 Enterprise 之外无法满足硬性的数据驻留要求。',
+          '**数据必须留在你自己掌控的硬件上** → 自托管 Qdrant、Weaviate 或 Chroma。Pinecone 没有自托管版本，只有使用 Enterprise 的 BYOC 选项才能让数据留在你自己的环境中。如果只需要特定区域，请查阅 Pinecone 当前的区域文档。',
           '**你的向量少于约 1 万条** → 一个都不用。Postgres 上的 pgvector 足以覆盖这一规模，既不必多运维一个服务，也省得为一个用不上的负载去学新的查询 API。',
         ],
         affiliateLinks: [
@@ -3756,7 +3768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             ],
             cons: [
               '没有自托管版本，离开意味着更换引擎而不是搬迁一套部署',
-              '硬性的数据驻留要求只能通过每月 500 美元起的 Enterprise 与 BYOC 满足',
+              '数据留在自有环境需使用每月 500 美元起的 Enterprise BYOC；仅需特定区域请查阅区域文档',
               '读写单元的消耗容易低估，账单可能出乎意料',
             ],
             affiliateLinks: [
@@ -3890,7 +3902,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**尚未招运维、跑得很快的小团队** → 每月 20 美元的 Pinecone Builder，或者如果你预计以后要自托管，就用 Qdrant Cloud 的免费层级。',
           '**有运维余力、要在规模上优化成本的团队** → Qdrant，自托管或用 Standard。按用量计费且无平台费，对有运维余力的团队是成本较低的路径；请对照你自己的用量比较。',
           '**技术语料上检索质量是瓶颈的团队** → Weaviate，在如今免费的层级上评估，看中的是它混合检索的成熟度。',
-          '**隐私优先或受监管、有驻留要求的团队** → 自托管 Qdrant 或 Weaviate。Pinecone 只能通过每月 500 美元起的 Enterprise 与 BYOC 来满足。',
+          '**隐私优先或受监管、有驻留要求的团队** → 自托管 Qdrant 或 Weaviate。Pinecone 没有自托管版本，只有使用每月 500 美元起的 Enterprise BYOC 选项才能让数据留在你自己的环境中；如果只需要特定区域，请查阅 Pinecone 当前的区域文档。',
           '**低于约 1 万条向量** → Postgres 上的 pgvector。在这里加一个专门引擎，是在没有检索收益的情况下增加运维成本。',
         ],
       },
@@ -3910,7 +3922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '中国',
-            content: '在《数据安全法》与网信办的跨境传输规则之下，合规问题在于把由内地用户文档构建的索引发往境外托管厂商，而不在于向量数据库本身。视行业和所涉数据而定，中国关于跨境传输的规则可能要求索引保留在境内基础设施上；请向法律顾问确认。自托管的 Qdrant、Weaviate 与 Chroma 在这里都可行，因为三者在自有硬件上运行均为免费；而 Pinecone 是唯一在 BYOC 安排之外无法满足这一点的选项——数据驻留的整体图景，见[在中国运行本地 LLM](/zh/local-llms/deepseek-local-china-data-privacy-2026)。',
+            content: '在《数据安全法》与网信办的跨境传输规则之下，合规问题在于把由内地用户文档构建的索引发往境外托管厂商，而不在于向量数据库本身。视行业和所涉数据而定，中国关于跨境传输的规则可能要求索引保留在境内基础设施上；请向法律顾问确认。自托管的 Qdrant、Weaviate 与 Chroma 在这里都可行，因为三者在自有硬件上运行均为免费；而 Pinecone 没有自托管版本，只有使用 Enterprise 的 BYOC 选项才能让数据留在你自己的环境中——数据驻留的整体图景，见[在中国运行本地 LLM](/zh/local-llms/deepseek-local-china-data-privacy-2026)。',
           },
         ],
         note: '在任何源文档不得离开司法辖区的市场，都请自托管向量存储。四者中有三者在自有硬件上免费运行，因此驻留在这里很少成为昂贵的约束。',
@@ -3962,7 +3974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '哪些向量数据库有免费层级？',
-            a: '到 2026 年四者都有，这在一年前还不成立。Qdrant Cloud 有永久免费节点，含 0.5 vCPU、1 GB 内存与 4 GB 磁盘。Pinecone Starter 免费，含 2 GB 存储、每月 200 万写入单元与 100 万读取单元。Weaviate 于 2026 年 6 月 17 日推出免信用卡、不过期的免费层级，含 10 万个对象、1 GB 内存与 10 GB 磁盘。Chroma Cloud Starter 每月 0 美元加用量并附 5 美元额度，那是余额而非常设额度。',
+            a: '到 2026 年四者都有，这在一年前还不成立。Qdrant Cloud 有无到期日的免费节点，含 0.5 vCPU、1 GB 内存与 4 GB 磁盘；据 Qdrant 文档，闲置的免费集群一周后会被暂停，四周后被删除。Pinecone Starter 免费，含 2 GB 存储、每月 200 万写入单元与 100 万读取单元。Weaviate 于 2026 年 6 月 17 日推出免信用卡、不过期的免费层级，含 10 万个对象、1 GB 内存与 10 GB 磁盘。Chroma Cloud Starter 每月 0 美元加用量并附 5 美元额度，那是余额而非常设额度。',
           },
           {
             q: '做 RAG 时 Pinecone 比 Weaviate 更好吗？',
@@ -4012,6 +4024,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant 仓库', description: '星标 35,383、Apache-2.0 许可证与 Rust 实现语言，于 2026 年 11 月 2 日读自 GitHub API。' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone 定价', description: 'Starter、Builder、Standard 与 Enterprise 的额度，包括 20 美元的 Builder 固定方案以及每月 50 美元与 500 美元的最低额。' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone 合作伙伴页面', description: '确认面向内容创作者的联盟计划，与技术、解决方案、推荐三类伙伴并列。' },
+          { url: 'https://docs.pinecone.io/guides/index-data/create-an-index', title: 'Pinecone 文档：创建索引', description: '展示创建索引时选择的云与区域设置；依赖某个特定区域前，请查看当前支持区域的最新列表。' },
+          { url: 'https://qdrant.tech/documentation/cloud/create-cluster/', title: 'Qdrant Cloud：创建集群', description: '说明免费层集群闲置一周后会被暂停，若不重新激活，四周后会被删除。' },
           { url: 'https://weaviate.io/blog/weaviate-free-tier', title: 'Weaviate Cloud 现在可免费开始', description: '2026 年 6 月 17 日关于免信用卡、不过期免费层级的公告，取代了 14 天沙箱。' },
           { url: 'https://weaviate.io/pricing', title: 'Weaviate 定价', description: '免费层级当前的 10 万对象、1 GB 内存与 10 GB 磁盘额度，以及 Flex 每月 45 美元起与 Premium 每月 400 美元起。' },
           { url: 'https://weaviate.io/blog/weaviate-cloud-pricing-update', title: 'Weaviate Cloud 定价更新', description: '2025 年 10 月引入 Flex、Plus 与 Premium 的调整，有助于确定价格变动的时间。' },
@@ -4073,7 +4087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '哪些向量数据库有免费层级？',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: '到 2026 年四者都有。Qdrant Cloud 永久免费，含 0.5 vCPU、1 GB 内存与 4 GB 磁盘。Pinecone Starter 免费，含 2 GB。Weaviate 于 2026 年 6 月 17 日推出免信用卡、不过期的免费层级，含 10 万个对象、1 GB 内存与 10 GB 磁盘。Chroma Cloud Starter 每月 0 美元加用量并附 5 美元额度。',
+            text: '到 2026 年四者都有。Qdrant Cloud 有无到期日的免费节点，含 0.5 vCPU、1 GB 内存与 4 GB 磁盘；闲置的免费集群一周后会被暂停。Pinecone Starter 免费，含 2 GB。Weaviate 于 2026 年 6 月 17 日推出免信用卡、不过期的免费层级，含 10 万个对象、1 GB 内存与 10 GB 磁盘。Chroma Cloud Starter 每月 0 美元加用量并附 5 美元额度。',
           },
         },
         {
@@ -4109,7 +4123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'zh',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: '我们的默认推荐——Apache-2.0，Rust，永久免费云层级搭配按用量计费的 Standard' },
+        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: '我们的默认推荐——Apache-2.0，Rust，免费云层级搭配按用量计费的 Standard' },
         { '@type': 'ListItem', position: 2, name: 'Pinecone', description: '零运维最优——最成熟的无服务器产品，Builder 每月 20 美元固定价，但仅限云端且没有自托管版本' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: '混合检索最优——原生 BM25 加向量，自 2026 年 6 月起提供含 10 万对象的不过期免费层级' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: '原型开发最优——无需服务器、进程内运行，Rust 内核，Chroma Cloud 从每月 0 美元加用量起步' },
@@ -4124,7 +4138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'أفضل قاعدة بيانات متجهية 2026: Qdrant أم Pinecone أم Weaviate أم Chroma',
     seoTitle: 'أفضل قاعدة بيانات متجهية 2026: Qdrant مقابل Pinecone',
-    metaDescription: 'أفضل قاعدة بيانات متجهية 2026: Qdrant (أكثر من 35 ألف نجمة، طبقة مجانية دائماً)، وPinecone من 20 دولاراً شهرياً، مع Weaviate وChroma لـ RAG.',
+    metaDescription: 'أفضل قاعدة بيانات متجهية 2026: Qdrant (أكثر من 35 ألف نجمة، طبقة مجانية)، وPinecone من 20 دولاراً شهرياً، مع Weaviate وChroma لـ RAG.',
     educationalLevel: 'Advanced',
     audience: 'المطورون الذين يبنون تطبيقات الاسترجاع المعزز بالتوليد',
     affiliateDisclosure: true,
@@ -4139,12 +4153,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'مقارنة أسعار قواعد البيانات المتجهية',
       'قاعدة بيانات متجهية للاسترجاع المعزز',
     ],
-    leadAnswerBlock: '**Qdrant هو خيارنا الافتراضي لمعظم الفرق: Apache-2.0 ومكتوب بلغة Rust وطبقة سحابية مجانية دائماً. يناسب Pinecone من لا يريد إدارة بنية تحتية بدءاً من 20 دولاراً شهرياً، ويتفوق Weaviate في البحث الهجين وChroma في النماذج الأولية السريعة. للأربعة الآن طبقة مجانية.**',
+    leadAnswerBlock: '**Qdrant هو خيارنا الافتراضي لمعظم الفرق: Apache-2.0 ومكتوب بلغة Rust وطبقة سحابية مجانية (تُعلَّق الكتل المجانية غير المستخدمة). يناسب Pinecone من لا يريد إدارة بنية تحتية بدءاً من 20 دولاراً شهرياً، ويتفوق Weaviate في البحث الهجين وChroma في النماذج الأولية السريعة. للأربعة الآن طبقة مجانية.**',
     quickAnswerTop: {
       question: 'ما أفضل قاعدة بيانات متجهية في 2026؟',
       answer: '**‏Qdrant كخيارنا الافتراضي إن كان لديك أي قدرة تشغيلية، وPinecone إن أردت صفر عمل بنية تحتية، وWeaviate إن كان البحث الهجين محوريًا لدقة الاسترجاع، وChroma إن كنت تبني نموذجًا أوليًا ولا تريد أي خادم.** لا يوجد فائز واحد هنا، وأي دليل يسمّي واحدًا إنما يجيب عن سؤال غير سؤالك. القرار الحقيقي هو: هل تشغّل المحرك بنفسك أم تستأجره؟ وذلك يتوقف على ما يفيض لدى فريقك: ساعات هندسية أم ميزانية. ونادرًا ما يكونان القيد نفسه.',
       bullets: [
-        '**الأفضل إجمالًا:** ‏Qdrant — 35,383 نجمة، Apache-2.0، مكتوب بلغة Rust، وطبقة سحابية مجانية إلى الأبد بـ 0.5 vCPU و1 غيغابايت ذاكرة و4 غيغابايت قرص',
+        '**الأفضل إجمالًا:** ‏Qdrant — 35,383 نجمة، Apache-2.0، مكتوب بلغة Rust، وطبقة سحابية مجانية بـ 0.5 vCPU و1 غيغابايت ذاكرة و4 غيغابايت قرص (تُعلَّق عند الخمول)',
         '**الأفضل بلا تشغيل:** ‏Pinecone — أنضج منتج بلا خوادم، وBuilder بسعر ثابت 20 دولارًا شهريًا، وStandard بحد أدنى 50 دولارًا شهريًا',
         '**الأفضل للبحث الهجين:** ‏Weaviate — دعم أصلي لـ BM25 مع المتجهات، ومنذ يونيو 2026 طبقة مجانية بلا انتهاء وبلا بطاقة ائتمان',
         '**الأفضل للنماذج الأولية:** ‏Chroma — ‏`pip install chromadb` ويعمل داخل عملية Python لديك، بلا خادم تُنشئه',
@@ -4199,7 +4213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**تريد صفر عمل بنية تحتية وتقبل الدفع** ← Pinecone. أنضج منتج بلا خوادم، وBuilder بسعر ثابت 20 دولارًا شهريًا خطة حقيقية لا تجربة.',
           '**دقة الاسترجاع تعتمد على مزج المطابقة الحرفية بالدلالية** ← Weaviate. فدمج BM25 مع المتجهات أصليًا هو أنضج تطبيق هجين هنا، والطبقة المجانية لم تعد تكلّف شيئًا لتقييمه.',
           '**تبني نموذجًا أوليًا في دفتر ملاحظات ولا تريد خادمًا** ← Chroma. يعمل داخل عملية Python لديك، فلا شيء تُهيّئه قبل أن يعمل الاسترجاع.',
-          '**يجب أن تبقى بياناتك على عتاد تتحكم فيه** ← Qdrant أو Weaviate أو Chroma باستضافة ذاتية. فلا نسخة ذاتية الاستضافة من Pinecone، ولا يمكنه تلبية متطلب مقر بيانات صارم خارج طبقة Enterprise مع BYOC.',
+          '**يجب أن تبقى بياناتك على عتاد تتحكم فيه** ← Qdrant أو Weaviate أو Chroma باستضافة ذاتية. لا توجد نسخة ذاتية الاستضافة من Pinecone؛ ولا تبقى البيانات في بيئتك إلا عبر خيار BYOC في طبقة Enterprise. وإذا كنت تحتاج منطقة محددة فقط، فراجع وثائق مناطق Pinecone الحالية.',
           '**لديك أقل من نحو 10 آلاف متجه** ← لا شيء منها. إذ يغطي pgvector على Postgres هذا الحجم دون إضافة خدمة تشغّلها، وتوفّر على نفسك تعلّم واجهة استعلام جديدة لحمل لا يحتاجها.',
         ],
         affiliateLinks: [
@@ -4325,7 +4339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             ],
             cons: [
               'لا نسخة ذاتية الاستضافة، فالمغادرة تعني تغيير المحرك لا نقل نشر قائم',
-              'لا يمكن تلبية متطلب مقر بيانات صارم إلا عبر Enterprise وBYOC من 500 دولار شهريًا',
+              'إبقاء البيانات في بيئتك يتطلب Enterprise وBYOC من 500 دولار شهريًا؛ وللمنطقة فقط راجع الوثائق',
               'استهلاك وحدات القراءة والكتابة يسهل الاستهانة به، وقد تفاجئك الفواتير',
             ],
             affiliateLinks: [
@@ -4459,7 +4473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**فريق ناشئ صغير سريع بلا توظيف تشغيلي** ← Pinecone Builder بـ 20 دولارًا شهريًا، أو الطبقة المجانية من Qdrant Cloud إن كنت تتوقع الاستضافة الذاتية لاحقًا.',
           '**فريق بقدرة تشغيلية يحسّن الكلفة مع التوسّع** ← Qdrant، باستضافة ذاتية أو على Standard. فالاحتساب بالاستهلاك بلا رسوم منصة طريق منخفض التكلفة للفرق ذات القدرة التشغيلية؛ قارنه بحجمك أنت.',
           '**جودة الاسترجاع هي عنق الزجاجة على مدوّنة تقنية** ← Weaviate، مُقيَّمًا على الطبقة المجانية الآن، لنضج بحثه الهجين.',
-          '**فريق يراعي الخصوصية أو خاضع للتنظيم بمتطلب مقر بيانات** ← Qdrant أو Weaviate باستضافة ذاتية. ولا يلبي Pinecone ذلك إلا عبر Enterprise وBYOC من 500 دولار شهريًا.',
+          '**فريق يراعي الخصوصية أو خاضع للتنظيم بمتطلب مقر بيانات** ← Qdrant أو Weaviate باستضافة ذاتية. ولا توجد نسخة ذاتية الاستضافة من Pinecone؛ وخيار BYOC في طبقة Enterprise (من 500 دولار شهريًا) يُبقي البيانات في بيئتك، وإذا كنت تحتاج منطقة محددة فقط فراجع وثائق مناطق Pinecone الحالية.',
           '**دون نحو 10 آلاف متجه** ← pgvector على Postgres. فإضافة محرك مخصّص هنا كلفة تشغيلية بلا مكسب في الاسترجاع.',
         ],
       },
@@ -4479,7 +4493,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'الصين',
-            content: 'بموجب قانون أمن البيانات (数据安全法) وقواعد إدارة الفضاء الإلكتروني بشأن النقل عبر الحدود، تكمن مشكلة الامتثال في إرسال فهرس مبني من مستندات مستخدمي البر الرئيسي إلى مزوّد مُدار أجنبي، لا في قاعدة البيانات المتجهية نفسها. وبحسب القطاع والبيانات المعنية، قد تتطلب القواعد الصينية بشأن النقل عبر الحدود أن يبقى الفهرس على بنية تحتية محلية؛ تأكد من ذلك مع مستشار قانوني. وQdrant وWeaviate وChroma باستضافة ذاتية جميعها عملية هنا، إذ تعمل الثلاثة مجانًا على عتادك الخاص، وPinecone هو الخيار الوحيد الذي لا يمكنه تلبية ذلك خارج ترتيب BYOC — انظر [تشغيل نماذج اللغة محليًا في الصين](/ar/local-llms/deepseek-local-china-data-privacy-2026) للصورة الأوسع عن مقر البيانات.',
+            content: 'بموجب قانون أمن البيانات (数据安全法) وقواعد إدارة الفضاء الإلكتروني بشأن النقل عبر الحدود، تكمن مشكلة الامتثال في إرسال فهرس مبني من مستندات مستخدمي البر الرئيسي إلى مزوّد مُدار أجنبي، لا في قاعدة البيانات المتجهية نفسها. وبحسب القطاع والبيانات المعنية، قد تتطلب القواعد الصينية بشأن النقل عبر الحدود أن يبقى الفهرس على بنية تحتية محلية؛ تأكد من ذلك مع مستشار قانوني. وQdrant وWeaviate وChroma باستضافة ذاتية جميعها عملية هنا، إذ تعمل الثلاثة مجانًا على عتادك الخاص، أما Pinecone فلا توجد منه نسخة ذاتية الاستضافة، ولا تبقى البيانات في بيئتك إلا عبر خيار BYOC في طبقة Enterprise — انظر [تشغيل نماذج اللغة محليًا في الصين](/ar/local-llms/deepseek-local-china-data-privacy-2026) للصورة الأوسع عن مقر البيانات.',
           },
         ],
         note: 'استضف مخزن المتجهات ذاتيًا في أي سوق لا يجوز فيه لمستندات المصدر مغادرة نطاقك القضائي. فثلاثة من الأربعة تعمل مجانًا على عتادك الخاص، ونادرًا ما يكون مقر البيانات هنا هو القيد المكلف.',
@@ -4531,7 +4545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'أي قاعدة بيانات متجهية لديها طبقة مجانية؟',
-            a: 'الأربعة جميعًا في 2026، وهو ما لم يكن صحيحًا قبل عام. فـ Qdrant Cloud لديه عقدة مجانية إلى الأبد بـ 0.5 vCPU و1 غيغابايت ذاكرة و4 غيغابايت قرص. وPinecone Starter مجانية بـ 2 غيغابايت تخزين ومليونَي وحدة كتابة ومليون وحدة قراءة شهريًا. وأطلق Weaviate في 17 يونيو 2026 طبقة مجانية بلا بطاقة وبلا انتهاء بـ 100 ألف كائن و1 غيغابايت ذاكرة و10 غيغابايت قرص. وChroma Cloud Starter بصفر دولار شهريًا زائد الاستهلاك مع رصيد 5 دولارات، وهو رصيد لا حصة دائمة.',
+            a: 'الأربعة جميعًا في 2026، وهو ما لم يكن صحيحًا قبل عام. فـ Qdrant Cloud لديه عقدة مجانية بلا تاريخ انتهاء بـ 0.5 vCPU و1 غيغابايت ذاكرة و4 غيغابايت قرص؛ وبحسب وثائق Qdrant تُعلَّق الكتل المجانية غير المستخدمة بعد أسبوع وتُحذف بعد أربعة أسابيع. وPinecone Starter مجانية بـ 2 غيغابايت تخزين ومليونَي وحدة كتابة ومليون وحدة قراءة شهريًا. وأطلق Weaviate في 17 يونيو 2026 طبقة مجانية بلا بطاقة وبلا انتهاء بـ 100 ألف كائن و1 غيغابايت ذاكرة و10 غيغابايت قرص. وChroma Cloud Starter بصفر دولار شهريًا زائد الاستهلاك مع رصيد 5 دولارات، وهو رصيد لا حصة دائمة.',
           },
           {
             q: 'هل Pinecone أفضل من Weaviate للاسترجاع المعزز؟',
@@ -4579,6 +4593,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/qdrant/qdrant', title: 'مستودع Qdrant', description: 'عدد النجوم 35,383 ورخصة Apache-2.0 ولغة التنفيذ Rust، قُرئت من واجهة GitHub البرمجية في 2 نوفمبر 2026.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'أسعار Pinecone', description: 'حدود Starter وBuilder وStandard وEnterprise، ومنها خطة Builder الثابتة بـ 20 دولارًا والحدان الأدنى 50 و500 دولار شهريًا.' },
           { url: 'https://www.pinecone.io/partners/', title: 'صفحة شركاء Pinecone', description: 'تؤكد برنامج العمولة الموجّه إلى صنّاع المحتوى إلى جانب فئات شركاء التقنية والحلول والإحالة.' },
+          { url: 'https://docs.pinecone.io/guides/index-data/create-an-index', title: 'وثائق Pinecone: إنشاء فهرس', description: 'تعرض إعدادات السحابة والمنطقة المختارة عند إنشاء فهرس؛ راجع القائمة الحالية للمناطق المدعومة قبل الاعتماد على منطقة بعينها.' },
+          { url: 'https://qdrant.tech/documentation/cloud/create-cluster/', title: 'Qdrant Cloud: إنشاء كتلة', description: 'تذكر أن كتل الطبقة المجانية تُعلَّق بعد أسبوع من الخمول وتُحذف بعد أربعة أسابيع ما لم يُعاد تفعيلها.' },
           { url: 'https://weaviate.io/blog/weaviate-free-tier', title: 'صار Weaviate Cloud مجانيًا للبدء', description: 'إعلان 17 يونيو 2026 عن طبقة مجانية بلا بطاقة ائتمان وبلا انتهاء، حلّت محل البيئة التجريبية لـ 14 يومًا.' },
           { url: 'https://weaviate.io/pricing', title: 'أسعار Weaviate', description: 'حصص الطبقة المجانية الحالية البالغة 100 ألف كائن و1 غيغابايت ذاكرة و10 غيغابايت قرص، إضافةً إلى Flex من 45 دولارًا شهريًا وPremium من 400 دولار شهريًا.' },
           { url: 'https://weaviate.io/blog/weaviate-cloud-pricing-update', title: 'تحديث أسعار Weaviate Cloud', description: 'إعادة الهيكلة في أكتوبر 2025 التي أدخلت Flex وPlus وPremium، وهي مفيدة لتأريخ تغيّرات الأسعار.' },
@@ -4640,7 +4656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'أي قاعدة بيانات متجهية لديها طبقة مجانية؟',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'الأربعة جميعًا في 2026. فـ Qdrant Cloud مجاني إلى الأبد بـ 0.5 vCPU و1 غيغابايت ذاكرة و4 غيغابايت قرص. وPinecone Starter مجانية بـ 2 غيغابايت. وأطلق Weaviate في 17 يونيو 2026 طبقة مجانية بلا بطاقة وبلا انتهاء بـ 100 ألف كائن و1 غيغابايت ذاكرة و10 غيغابايت قرص. وChroma Cloud Starter بصفر دولار شهريًا زائد الاستهلاك مع رصيد 5 دولارات.',
+            text: 'الأربعة جميعًا في 2026. فـ Qdrant Cloud لديه عقدة مجانية بلا تاريخ انتهاء بـ 0.5 vCPU و1 غيغابايت ذاكرة و4 غيغابايت قرص؛ وتُعلَّق الكتل المجانية غير المستخدمة بعد أسبوع. وPinecone Starter مجانية بـ 2 غيغابايت. وأطلق Weaviate في 17 يونيو 2026 طبقة مجانية بلا بطاقة وبلا انتهاء بـ 100 ألف كائن و1 غيغابايت ذاكرة و10 غيغابايت قرص. وChroma Cloud Starter بصفر دولار شهريًا زائد الاستهلاك مع رصيد 5 دولارات.',
           },
         },
         {
@@ -4676,7 +4692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ar',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'خيارنا الافتراضي — Apache-2.0، Rust، وطبقة سحابية مجانية إلى الأبد مع Standard بالاستهلاك' },
+        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: 'خيارنا الافتراضي — Apache-2.0، Rust، وطبقة سحابية مجانية مع Standard بالاستهلاك' },
         { '@type': 'ListItem', position: 2, name: 'Pinecone', description: 'الأفضل بلا تشغيل — أنضج منتج بلا خوادم، وBuilder بسعر ثابت 20 دولارًا شهريًا، لكنه سحابي فقط وبلا نسخة ذاتية الاستضافة' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: 'الأفضل للبحث الهجين — BM25 مع المتجهات أصليًا، ومنذ يونيو 2026 طبقة مجانية بلا انتهاء بـ 100 ألف كائن' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: 'الأفضل للنماذج الأولية — يعمل داخل العملية بلا خادم، ونواته بلغة Rust، وChroma Cloud من صفر دولار شهريًا زائد الاستهلاك' },
@@ -4691,7 +4707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: '2026년 최고의 벡터 데이터베이스: Qdrant, Pinecone, Weaviate, Chroma',
     seoTitle: '최고의 벡터 DB 2026: Qdrant vs Pinecone',
-    metaDescription: '2026 최고의 벡터 데이터베이스: Qdrant(GitHub 스타 3.5만+, 영구 무료 클라우드), Pinecone 월 20달러부터, Weaviate와 Chroma를 RAG 기준으로 비교.',
+    metaDescription: '2026 최고의 벡터 데이터베이스: Qdrant(GitHub 스타 3.5만+, 무료 클라우드), Pinecone 월 20달러부터, Weaviate와 Chroma를 RAG 기준으로 비교.',
     educationalLevel: 'Advanced',
     audience: 'RAG 애플리케이션을 만드는 개발자',
     affiliateDisclosure: true,
@@ -4706,12 +4722,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '벡터 데이터베이스 가격 비교',
       'RAG 벡터 데이터베이스',
     ],
-    leadAnswerBlock: '**대부분의 팀에는 Qdrant를 기본 선택으로 권합니다. Apache-2.0, Rust 기반, 영구 무료 클라우드 티어를 제공합니다. 인프라 관리를 피하려면 Pinecone(월 20달러부터), 하이브리드 검색은 Weaviate, 빠른 프로토타입은 Chroma입니다. 네 제품 모두 무료 티어가 있습니다.**',
+    leadAnswerBlock: '**대부분의 팀에는 Qdrant를 기본 선택으로 권합니다. Apache-2.0, Rust 기반, 무료 클라우드 티어를 제공합니다(미사용 무료 클러스터는 일시 중지됩니다). 인프라 관리를 피하려면 Pinecone(월 20달러부터), 하이브리드 검색은 Weaviate, 빠른 프로토타입은 Chroma입니다. 네 제품 모두 무료 티어가 있습니다.**',
     quickAnswerTop: {
       question: '2026년에 가장 좋은 벡터 데이터베이스는 무엇인가요?',
       answer: '**운영 여력이 조금이라도 있다면 기본 선택인 Qdrant, 인프라 작업을 0으로 만들고 싶다면 Pinecone, 검색 정확도에 하이브리드 검색이 핵심이라면 Weaviate, 프로토타입 중이고 서버를 전혀 두고 싶지 않다면 Chroma입니다.** 여기에 단일 승자는 없고, 하나를 지목하는 가이드는 당신의 질문이 아닌 다른 질문에 답하고 있는 것입니다. 진짜 결정은 엔진을 직접 운영할 것인가 빌릴 것인가이며, 이는 팀에 남는 것이 엔지니어링 시간인지 예산인지에 달려 있습니다. 둘이 같은 제약인 경우는 드뭅니다.',
       bullets: [
-        '**종합 최고:** Qdrant — 스타 35,383개, Apache-2.0, Rust 작성, 0.5 vCPU / 1GB RAM / 4GB 디스크의 영구 무료 클라우드 등급',
+        '**종합 최고:** Qdrant — 스타 35,383개, Apache-2.0, Rust 작성, 0.5 vCPU / 1GB RAM / 4GB 디스크의 무료 클라우드 등급(미사용 시 일시 중지)',
         '**운영 없이 쓰기 최적:** Pinecone — 가장 성숙한 서버리스 제품, Builder 월 20달러 정액, Standard 월 최소 50달러',
         '**하이브리드 검색 최적:** Weaviate — BM25와 벡터를 네이티브로 결합, 2026년 6월부터 만료 없고 신용카드도 필요 없는 무료 등급',
         '**프로토타이핑 최적:** Chroma — `pip install chromadb` 하면 파이썬 프로세스 안에서 돌아가고, 세울 서버가 없습니다',
@@ -4766,7 +4782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**인프라 작업을 0으로 만들고 그 대가를 낼 생각이다** → Pinecone. 가장 성숙한 서버리스 제품이며, 월 20달러 정액의 Builder는 체험판이 아니라 진짜 요금제입니다.',
           '**검색 정확도가 글자 그대로의 일치와 의미적 일치의 결합에 달려 있다** → Weaviate. BM25와 벡터의 네이티브 결합은 여기서 가장 성숙한 하이브리드 구현이며, 무료 등급이라 평가에 돈이 들지 않습니다.',
           '**노트북에서 프로토타입 중이고 서버를 두고 싶지 않다** → Chroma. 파이썬 프로세스 안에서 돌아가므로 검색이 동작하기 전에 준비할 것이 없습니다.',
-          '**데이터가 내가 통제하는 하드웨어에 있어야 한다** → Qdrant, Weaviate, Chroma 중 하나를 자체 호스팅. Pinecone은 자체 호스팅 버전이 없어 BYOC의 Enterprise가 아니면 엄격한 데이터 소재지 요건을 충족할 수 없습니다.',
+          '**데이터가 내가 통제하는 하드웨어에 있어야 한다** → Qdrant, Weaviate, Chroma 중 하나를 자체 호스팅. Pinecone은 자체 호스팅 버전이 없어, Enterprise의 BYOC 옵션을 쓸 때만 데이터가 자체 환경에 남습니다. 특정 리전만 필요하다면 Pinecone의 최신 리전 문서를 확인하세요.',
           '**벡터가 약 1만 개 미만이다** → 넷 다 필요 없습니다. Postgres의 pgvector가 그 규모를 감당하며, 운영할 서비스를 늘리지 않아도 되고 필요 없는 새 쿼리 API를 배우지 않아도 됩니다.',
         ],
         affiliateLinks: [
@@ -4892,7 +4908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             ],
             cons: [
               '자체 호스팅 버전이 없어 떠나는 것은 배포를 옮기는 게 아니라 엔진을 바꾸는 일입니다',
-              '엄격한 소재지 요건은 월 500달러부터인 Enterprise와 BYOC로만 충족됩니다',
+              '데이터를 자체 환경에 두려면 월 500달러부터인 Enterprise BYOC가 필요합니다. 리전만 필요하면 문서를 확인하세요',
               '읽기·쓰기 단위 소비는 과소평가하기 쉬워 청구서가 예상을 벗어날 수 있습니다',
             ],
             affiliateLinks: [
@@ -5026,7 +5042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**운영 인력 없이 빠르게 움직이는 작은 스타트업 팀** → 월 20달러 Pinecone Builder, 또는 나중에 자체 호스팅할 생각이면 Qdrant Cloud 무료 등급.',
           '**운영 여력이 있고 규모에 맞춰 비용을 최적화하는 팀** → Qdrant. 자체 호스팅이든 Standard든. 플랫폼 요금 없는 사용량 과금은 운영 여력이 있는 팀에게 비용을 낮추기 좋은 길입니다. 직접 사용량과 비교해 보세요.',
           '**기술 문서 말뭉치에서 검색 품질이 병목인 팀** → Weaviate. 하이브리드 검색의 성숙도 때문이며, 이제 무료가 된 등급에서 평가하세요.',
-          '**프라이버시 우선이거나 규제를 받으며 소재지 요건이 있는 팀** → Qdrant나 Weaviate 자체 호스팅. Pinecone은 월 500달러부터인 Enterprise와 BYOC로만 이를 충족합니다.',
+          '**프라이버시 우선이거나 규제를 받으며 소재지 요건이 있는 팀** → Qdrant나 Weaviate 자체 호스팅. Pinecone은 자체 호스팅 버전이 없어, 월 500달러부터인 Enterprise의 BYOC 옵션을 쓸 때만 데이터가 자체 환경에 남습니다. 특정 리전만 필요하다면 Pinecone의 최신 리전 문서를 확인하세요.',
           '**약 1만 벡터 미만** → Postgres의 pgvector. 여기서 전용 엔진을 더하는 것은 검색상의 이득 없이 운영 비용만 늘리는 일입니다.',
         ],
       },
@@ -5046,7 +5062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '중국',
-            content: '데이터보안법(数据安全法)과 국가인터넷정보판공실의 국경 간 이전 규정 아래에서 컴플라이언스 문제는 벡터 데이터베이스 자체가 아니라, 본토 사용자 문서로 구축한 인덱스를 해외 매니지드 사업자에게 보내는 데 있습니다. 업종과 관련 데이터에 따라 중국의 국경 간 이전 규정이 인덱스를 국내 인프라에 둘 것을 요구할 수 있으므로 법률 전문가와 확인하세요. 자체 호스팅 Qdrant, Weaviate, Chroma 모두 여기서 실행 가능한데 셋 다 자체 하드웨어에서 무료로 돌아가기 때문이며, Pinecone만이 BYOC 방식이 아니고서는 이를 충족할 수 없습니다. 데이터 소재지의 큰 그림은 [중국에서 로컬 LLM 실행하기](/ko/local-llms/deepseek-local-china-data-privacy-2026)를 보세요.',
+            content: '데이터보안법(数据安全法)과 국가인터넷정보판공실의 국경 간 이전 규정 아래에서 컴플라이언스 문제는 벡터 데이터베이스 자체가 아니라, 본토 사용자 문서로 구축한 인덱스를 해외 매니지드 사업자에게 보내는 데 있습니다. 업종과 관련 데이터에 따라 중국의 국경 간 이전 규정이 인덱스를 국내 인프라에 둘 것을 요구할 수 있으므로 법률 전문가와 확인하세요. 자체 호스팅 Qdrant, Weaviate, Chroma 모두 여기서 실행 가능한데 셋 다 자체 하드웨어에서 무료로 돌아가기 때문이며, Pinecone은 자체 호스팅 버전이 없어, Enterprise의 BYOC 옵션을 쓸 때만 데이터가 자체 환경에 남습니다. 데이터 소재지의 큰 그림은 [중국에서 로컬 LLM 실행하기](/ko/local-llms/deepseek-local-china-data-privacy-2026)를 보세요.',
           },
         ],
         note: '원본 문서가 관할권을 벗어날 수 없는 시장이라면 어디서든 벡터 저장소를 자체 호스팅하세요. 넷 중 셋은 자체 하드웨어에서 무료로 돌아가므로, 여기서 소재지가 값비싼 제약이 되는 일은 드뭅니다.',
@@ -5098,7 +5114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '무료 등급이 있는 벡터 데이터베이스는 무엇인가요?',
-            a: '2026년 기준 넷 다 있으며, 1년 전에는 사실이 아니었습니다. Qdrant Cloud는 0.5 vCPU, 1GB RAM, 4GB 디스크의 영구 무료 노드를 제공합니다. Pinecone Starter는 무료로 스토리지 2GB, 월 200만 쓰기 단위와 100만 읽기 단위를 줍니다. Weaviate는 2026년 6월 17일 카드 없이 만료도 없는 무료 등급을 내놓아 객체 10만 개, 메모리 1GB, 디스크 10GB를 제공합니다. Chroma Cloud Starter는 월 0달러에 사용량 과금과 크레딧 5달러이며, 이는 상시 한도가 아니라 잔액입니다.',
+            a: '2026년 기준 넷 다 있으며, 1년 전에는 사실이 아니었습니다. Qdrant Cloud는 0.5 vCPU, 1GB RAM, 4GB 디스크의 무료 노드를 만료일 없이 제공합니다. Qdrant 문서에 따르면 미사용 무료 클러스터는 1주 뒤 일시 중지되고 4주 뒤 삭제됩니다. Pinecone Starter는 무료로 스토리지 2GB, 월 200만 쓰기 단위와 100만 읽기 단위를 줍니다. Weaviate는 2026년 6월 17일 카드 없이 만료도 없는 무료 등급을 내놓아 객체 10만 개, 메모리 1GB, 디스크 10GB를 제공합니다. Chroma Cloud Starter는 월 0달러에 사용량 과금과 크레딧 5달러이며, 이는 상시 한도가 아니라 잔액입니다.',
           },
           {
             q: 'RAG에는 Pinecone이 Weaviate보다 나은가요?',
@@ -5146,6 +5162,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant 저장소', description: '스타 35,383개, Apache-2.0 라이선스, 구현 언어 Rust. 2026년 11월 2일 GitHub API에서 확인.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone 요금', description: 'Starter, Builder, Standard, Enterprise 한도. 20달러 정액 Builder와 월 50달러·500달러 최소 금액 포함.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone 파트너 페이지', description: '기술·솔루션·추천 파트너 범주와 나란히 있는 콘텐츠 제작자 대상 제휴 프로그램 확인.' },
+          { url: 'https://docs.pinecone.io/guides/index-data/create-an-index', title: 'Pinecone 문서: 인덱스 만들기', description: '인덱스를 만들 때 고르는 클라우드와 리전 설정을 보여 줍니다. 특정 리전에 의존하기 전에 지원 리전의 최신 목록을 확인하세요.' },
+          { url: 'https://qdrant.tech/documentation/cloud/create-cluster/', title: 'Qdrant Cloud: 클러스터 만들기', description: '무료 등급 클러스터는 1주간 사용하지 않으면 일시 중지되고, 다시 활성화하지 않으면 4주 뒤 삭제된다고 명시합니다.' },
           { url: 'https://weaviate.io/blog/weaviate-free-tier', title: 'Weaviate Cloud, 이제 무료로 시작', description: '신용카드 없이 만료도 없는 무료 등급을 알린 2026년 6월 17일 공지. 14일 샌드박스를 대체.' },
           { url: 'https://weaviate.io/pricing', title: 'Weaviate 요금', description: '무료 등급의 현행 한도인 객체 10만 개, 메모리 1GB, 디스크 10GB와 Flex 월 45달러부터, Premium 월 400달러부터.' },
           { url: 'https://weaviate.io/blog/weaviate-cloud-pricing-update', title: 'Weaviate Cloud 요금 개편', description: 'Flex, Plus, Premium을 도입한 2025년 10월 개편. 가격 변경 시점을 짚는 데 유용.' },
@@ -5207,7 +5225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '무료 등급이 있는 벡터 데이터베이스는 무엇인가요?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: '2026년 기준 넷 다 있습니다. Qdrant Cloud는 0.5 vCPU, 1GB RAM, 4GB 디스크로 영구 무료입니다. Pinecone Starter는 2GB로 무료입니다. Weaviate는 2026년 6월 17일 카드 없이 만료도 없는 무료 등급을 내놓아 객체 10만 개, 메모리 1GB, 디스크 10GB를 제공합니다. Chroma Cloud Starter는 월 0달러＋사용량에 크레딧 5달러입니다.',
+            text: '2026년 기준 넷 다 있습니다. Qdrant Cloud는 0.5 vCPU, 1GB RAM, 4GB 디스크의 무료 노드를 만료일 없이 제공하며, 미사용 무료 클러스터는 1주 뒤 일시 중지됩니다. Pinecone Starter는 2GB로 무료입니다. Weaviate는 2026년 6월 17일 카드 없이 만료도 없는 무료 등급을 내놓아 객체 10만 개, 메모리 1GB, 디스크 10GB를 제공합니다. Chroma Cloud Starter는 월 0달러＋사용량에 크레딧 5달러입니다.',
           },
         },
         {
@@ -5243,7 +5261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ko',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: '기본 선택 — Apache-2.0, Rust, 사용량 과금 Standard를 갖춘 영구 무료 클라우드 등급' },
+        { '@type': 'ListItem', position: 1, name: 'Qdrant', description: '기본 선택 — Apache-2.0, Rust, 사용량 과금 Standard를 갖춘 무료 클라우드 등급' },
         { '@type': 'ListItem', position: 2, name: 'Pinecone', description: '운영 없이 쓰기 최적 — 가장 성숙한 서버리스 제품, Builder 월 20달러 정액. 다만 클라우드 전용이고 자체 호스팅 버전이 없음' },
         { '@type': 'ListItem', position: 3, name: 'Weaviate', description: '하이브리드 검색 최적 — BM25와 벡터를 네이티브로 결합, 2026년 6월부터 객체 10만 개의 만료 없는 무료 등급' },
         { '@type': 'ListItem', position: 4, name: 'Chroma', description: '프로토타이핑 최적 — 서버 없이 프로세스 안에서 실행, Rust 코어, Chroma Cloud는 월 0달러＋사용량부터' },

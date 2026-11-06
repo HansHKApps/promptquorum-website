@@ -61,7 +61,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Air-gapped infrastructure has no network connection to the internet or any external system.** All data and computation stays on isolated hardware.',
             '**Absolute isolation:** No WiFi, no Ethernet to external networks, no USB connections to internet-connected devices.',
-            '**Data never leaves:** Inference happens locally, results stay locally.',
+            '**Data stays local by design:** Inference runs locally and results stay local; data can still leave through removable media, insiders or physical access.',
             '**Updates are manual:** Cannot auto-download model updates. Updates require physical media (USB drive, SD card) or internal network transfer.',
           ],
         },
@@ -169,11 +169,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Can we use standard tools (Ollama, vLLM) in air-gapped environments?',
-              a: 'Yes. Both tools work without internet. Deploy once, then no internet connectivity needed. Ensure all dependencies are installed offline.',
+              a: 'Yes. Both tools work without internet. Once models and dependencies are installed offline, and with update checks and telemetry disabled, no internet connectivity is needed.',
             },
             {
               q: 'What if we need GDPR compliance but don\'t need full air-gapping?',
-              a: 'For workloads where air-gapping isn\'t required but GDPR is, [EU-compliant cloud GPU options →](/local-llms/eu-cloud-gpu-gdpr-2026) (Hetzner, Scaleway, OVHcloud) offer EU data residency without isolation complexity.',
+              a: 'For workloads where air-gapping isn\'t required but GDPR is, [EU-hosted cloud GPU options →](/local-llms/eu-cloud-gpu-gdpr-2026) (Hetzner, Scaleway, OVHcloud) offer EU data residency without isolation complexity. Overall GDPR compliance still depends on your lawful basis, contracts and safeguards. This is not legal advice.',
             },
           ],
         },
@@ -252,7 +252,7 @@ schema: {
             'name': 'Can we use standard tools (Ollama, vLLM) in air-gapped environments?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes. Both tools work without internet. Deploy once, then no internet connectivity needed. Ensure all dependencies are installed offline.',
+              'text': 'Yes. Both tools work without internet. Once models and dependencies are installed offline, and with update checks and telemetry disabled, no internet connectivity is needed.',
             },
           },
         ],
@@ -267,7 +267,7 @@ schema: {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Complete Network Isolation',
-            'description': 'Air-gapped infrastructure has no network connection to the internet or any external system, ensuring zero external access.',
+            'description': 'Air-gapped infrastructure has no network connection to the internet or any external system, which removes the remote-access path.',
           },
           {
             '@type': 'ListItem',
@@ -279,7 +279,7 @@ schema: {
             '@type': 'ListItem',
             'position': 3,
             'name': 'Enhanced Security',
-            'description': 'Protects classified data in government, military, and financial environments requiring maximum data protection.',
+            'description': 'Reduces exposure of sensitive and classified data in government, military and financial environments that require strong data protection.',
           },
         ],
       },
@@ -336,7 +336,7 @@ schema: {
           content: [
             '**La infraestructura air-gapped no tiene conexión de red a internet ni a ningún sistema externo.** Todos los datos y la computación permanecen en hardware aislado.',
             '**Aislamiento absoluto:** sin WiFi, sin Ethernet a redes externas, sin conexiones USB a dispositivos conectados a internet.',
-            '**Los datos nunca salen:** la inferencia ocurre localmente, los resultados se quedan localmente.',
+            '**Los datos permanecen locales por diseño:** la inferencia se ejecuta localmente y los resultados se quedan localmente; los datos aún pueden salir mediante medios extraíbles, personal interno o acceso físico.',
             '**Las actualizaciones son manuales:** no se pueden descargar actualizaciones de modelos automáticamente. Las actualizaciones requieren medios físicos (USB, tarjeta SD) o transferencia por red interna.',
           ],
         },
@@ -444,11 +444,11 @@ schema: {
             },
             {
               q: '¿Podemos usar herramientas estándar (Ollama, vLLM) en entornos air-gapped?',
-              a: 'Sí. Ambas herramientas funcionan sin internet. Se despliegan una vez y no necesitan conectividad a internet. Asegúrate de que todas las dependencias estén instaladas offline.',
+              a: 'Sí. Ambas herramientas funcionan sin internet. Una vez instalados offline los modelos y las dependencias, y con las comprobaciones de actualización y la telemetría desactivadas, no necesitan conectividad a internet.',
             },
             {
               q: '¿Qué pasa si necesitamos cumplir con el RGPD pero no necesitamos air-gapping completo?',
-              a: 'Para cargas de trabajo donde el air-gapping no es necesario pero sí el RGPD, las [opciones de GPU en la nube conformes con la UE →](/es/local-llms/eu-cloud-gpu-gdpr-2026) (Hetzner, Scaleway, OVHcloud) ofrecen residencia de datos en la UE sin la complejidad del aislamiento.',
+              a: 'Para cargas de trabajo donde el air-gapping no es necesario pero sí el RGPD, las [opciones de GPU en la nube alojadas en la UE →](/es/local-llms/eu-cloud-gpu-gdpr-2026) (Hetzner, Scaleway, OVHcloud) ofrecen residencia de datos en la UE sin la complejidad del aislamiento. El cumplimiento general del RGPD sigue dependiendo de tu base legal, tus contratos y tus salvaguardas. Esto no es asesoramiento legal.',
             },
           ],
         },
@@ -527,7 +527,7 @@ schema: {
             'name': '¿Podemos usar herramientas estándar (Ollama, vLLM) en entornos air-gapped?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sí. Ambas herramientas funcionan sin internet. Se despliegan una vez y no necesitan conectividad a internet. Asegúrate de que todas las dependencias estén instaladas offline.',
+              'text': 'Sí. Ambas herramientas funcionan sin internet. Una vez instalados offline los modelos y las dependencias, y con las comprobaciones de actualización y la telemetría desactivadas, no necesitan conectividad a internet.',
             },
           },
         ],
@@ -542,7 +542,7 @@ schema: {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Aislamiento de red completo',
-            'description': 'La infraestructura air-gapped no tiene conexión de red a internet ni a ningún sistema externo, garantizando cero acceso externo.',
+            'description': 'La infraestructura air-gapped no tiene conexión de red a internet ni a ningún sistema externo, lo que elimina la vía de acceso remoto.',
           },
           {
             '@type': 'ListItem',
@@ -554,7 +554,7 @@ schema: {
             '@type': 'ListItem',
             'position': 3,
             'name': 'Seguridad mejorada',
-            'description': 'Protege datos clasificados en entornos gubernamentales, militares y financieros que requieren la máxima protección de datos.',
+            'description': 'Reduce la exposición de datos sensibles y clasificados en entornos gubernamentales, militares y financieros que requieren una protección sólida de datos.',
           },
         ],
       },
@@ -611,7 +611,7 @@ schema: {
           content: [
             '**البنية التحتية المعزولة بلا اتصال شبكي بالإنترنت أو بأي نظام خارجي.** تبقى جميع البيانات والحوسبة على عتاد معزول.',
             '**عزل مطلق:** بلا WiFi، بلا Ethernet لشبكات خارجية، بلا اتصالات USB بأجهزة موصولة بالإنترنت.',
-            '**البيانات لا تغادر أبدًا:** يحدث الاستدلال محليًا، وتبقى النتائج محليًا.',
+            '**البيانات تبقى محلية بحكم التصميم:** يجري الاستدلال محليًا وتبقى النتائج محليًا؛ لكن قد تخرج البيانات عبر الوسائط القابلة للإزالة أو العاملين الداخليين أو الوصول المادي.',
             '**التحديثات يدوية:** لا يمكن تنزيل تحديثات النماذج تلقائيًا. تتطلب التحديثات وسائط مادية (USB، بطاقة SD) أو نقلًا عبر شبكة داخلية.',
           ],
         },
@@ -719,11 +719,11 @@ schema: {
             },
             {
               q: 'هل يمكننا استخدام أدوات قياسية (Ollama، vLLM) في البيئات المعزولة؟',
-              a: 'نعم. كلتا الأداتين تعملان دون إنترنت. تُنشَران مرة واحدة ولا تحتاجان لاتصال بالإنترنت. تأكد من تثبيت جميع التبعيات دون اتصال.',
+              a: 'نعم. كلتا الأداتين تعملان دون إنترنت. بعد تثبيت النماذج والتبعيات دون اتصال، وبعد تعطيل فحوصات التحديث والقياس عن بُعد، لا تحتاجان إلى اتصال بالإنترنت.',
             },
             {
               q: 'ماذا لو احتجنا الامتثال للوائح حماية البيانات لكن لا نحتاج عزلًا كاملًا؟',
-              a: 'لأحمال العمل التي لا تحتاج عزلًا لكنها تحتاج امتثالًا لحماية البيانات، توفّر [خيارات GPU السحابية الممتثلة لحماية البيانات →](/ar/local-llms/eu-cloud-gpu-gdpr-2026) إقامة بيانات إقليمية دون تعقيد العزل.',
+              a: 'لأحمال العمل التي لا تحتاج عزلًا لكنها تحتاج امتثالًا لحماية البيانات، توفّر [خيارات GPU السحابية مع إقامة البيانات داخل الاتحاد الأوروبي →](/ar/local-llms/eu-cloud-gpu-gdpr-2026) إقامة بيانات إقليمية دون تعقيد العزل. ويظل الامتثال العام لحماية البيانات معتمدًا على أساسك القانوني وعقودك وضماناتك. هذا ليس استشارة قانونية.',
             },
           ],
         },
@@ -802,7 +802,7 @@ schema: {
             'name': 'هل يمكننا استخدام أدوات قياسية (Ollama، vLLM) في البيئات المعزولة؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'نعم. كلتا الأداتين تعملان دون إنترنت. تُنشَران مرة واحدة ولا تحتاجان لاتصال بالإنترنت. تأكد من تثبيت جميع التبعيات دون اتصال.',
+              'text': 'نعم. كلتا الأداتين تعملان دون إنترنت. بعد تثبيت النماذج والتبعيات دون اتصال، وبعد تعطيل فحوصات التحديث والقياس عن بُعد، لا تحتاجان إلى اتصال بالإنترنت.',
             },
           },
         ],
@@ -817,7 +817,7 @@ schema: {
             '@type': 'ListItem',
             'position': 1,
             'name': 'عزل شبكة كامل',
-            'description': 'البنية التحتية المعزولة بلا اتصال شبكي بالإنترنت أو بأي نظام خارجي، ما يضمن صفر وصول خارجي.',
+            'description': 'البنية التحتية المعزولة بلا اتصال شبكي بالإنترنت أو بأي نظام خارجي، ما يزيل مسار الوصول عن بُعد.',
           },
           {
             '@type': 'ListItem',
@@ -829,7 +829,7 @@ schema: {
             '@type': 'ListItem',
             'position': 3,
             'name': 'أمان مُعزَّز',
-            'description': 'يحمي البيانات المصنّفة في البيئات الحكومية والعسكرية والمالية التي تتطلب أقصى حماية للبيانات.',
+            'description': 'يقلّل من تعرّض البيانات الحساسة والمصنّفة في البيئات الحكومية والعسكرية والمالية التي تتطلب حماية قوية للبيانات.',
           },
         ],
       },
@@ -886,7 +886,7 @@ schema: {
           content: [
             '**A infraestrutura air-gapped não tem conexão de rede com a internet nem com nenhum sistema externo.** Todos os dados e a computação permanecem em hardware isolado.',
             '**Isolamento absoluto:** sem Wi-Fi, sem Ethernet para redes externas, sem conexões USB para dispositivos conectados à internet.',
-            '**Os dados nunca saem:** a inferência ocorre localmente, os resultados ficam localmente.',
+            '**Os dados permanecem locais por design:** a inferência ocorre localmente e os resultados ficam locais; os dados ainda podem sair por mídias removíveis, pessoas internas ou acesso físico.',
             '**As atualizações são manuais:** não é possível baixar atualizações de modelos automaticamente. As atualizações requerem mídia física (USB, cartão SD) ou transferência por rede interna.',
           ],
         },
@@ -988,11 +988,11 @@ schema: {
             },
             {
               q: 'Podemos usar ferramentas padrão (Ollama, vLLM) em ambientes air-gapped?',
-              a: 'Sim. Ambas as ferramentas funcionam sem internet. Implante uma vez e depois não é necessária conectividade com a internet. Garanta que todas as dependências sejam instaladas offline.',
+              a: 'Sim. Ambas as ferramentas funcionam sem internet. Depois que modelos e dependências forem instalados offline, e com verificações de atualização e telemetria desativadas, não é necessária conectividade com a internet.',
             },
             {
               q: 'E se precisarmos de conformidade com o GDPR mas não precisarmos de air-gapping completo?',
-              a: 'Para workloads em que o air-gapping não é necessário mas o GDPR é, [opções de GPU em nuvem compatíveis com a UE →](/pt/local-llms/eu-cloud-gpu-gdpr-2026) (Hetzner, Scaleway, OVHcloud) oferecem residência de dados na UE sem a complexidade do isolamento.',
+              a: 'Para workloads em que o air-gapping não é necessário mas o GDPR é, [opções de GPU em nuvem com residência de dados na UE →](/pt/local-llms/eu-cloud-gpu-gdpr-2026) (Hetzner, Scaleway, OVHcloud) oferecem residência de dados na UE sem a complexidade do isolamento. A conformidade geral com o GDPR continua dependendo da sua base legal, dos contratos e das salvaguardas. Isto não é aconselhamento jurídico.',
             },
           ],
         },
@@ -1039,7 +1039,7 @@ schema: {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Isolamento Completo de Rede',
-            'description': 'A infraestrutura air-gapped não possui conexão de rede com a internet ou qualquer sistema externo, garantindo acesso externo zero.',
+            'description': 'A infraestrutura air-gapped não possui conexão de rede com a internet ou qualquer sistema externo, o que elimina o caminho de acesso remoto.',
           },
           {
             '@type': 'ListItem',
@@ -1051,7 +1051,7 @@ schema: {
             '@type': 'ListItem',
             'position': 3,
             'name': 'Segurança Aprimorada',
-            'description': 'Protege dados classificados em ambientes governamentais, militares e financeiros que exigem proteção máxima de dados.',
+            'description': 'Reduz a exposição de dados sensíveis e classificados em ambientes governamentais, militares e financeiros que exigem proteção forte de dados.',
           },
         ],
       },
@@ -1108,7 +1108,7 @@ schema: {
           content: [
             '**Air-Gapped-Infrastruktur hat keine Netzwerkverbindung zum Internet oder zu externen Systemen.** Alle Daten und Berechnungen bleiben auf isolierter Hardware.',
             '**Absolute Isolierung:** Kein WLAN, kein Ethernet zu externen Netzwerken, keine USB-Verbindungen zu internetverbundenen Geräten.',
-            '**Daten verlassen das System nie:** Inferenzen finden lokal statt, Ergebnisse bleiben lokal.',
+            '**Daten bleiben konstruktionsbedingt lokal:** Inferenzen finden lokal statt, Ergebnisse bleiben lokal; Daten können weiterhin über Wechselmedien, Insider oder physischen Zugriff abfließen.',
             '**Updates sind manuell:** Kann Modell-Updates nicht automatisch herunterladen. Updates erfordern physische Medien (USB-Stick, SD-Karte) oder interne Netzwerkübertragung.',
           ],
         },
@@ -1217,7 +1217,7 @@ schema: {
             },
             {
               q: 'Können Sie Standard-Tools (Ollama, vLLM) in Air-Gapped-Umgebungen verwenden?',
-              a: 'Ja. Beide Tools funktionieren ohne Internet. Einmalige Bereitstellung, dann keine Internetverbindung erforderlich. Stellen Sie sicher, dass alle Abhängigkeiten offline installiert sind.',
+              a: 'Ja. Beide Tools funktionieren ohne Internet. Sobald Modelle und Abhängigkeiten offline installiert sind und Update-Prüfungen sowie Telemetrie deaktiviert wurden, ist keine Internetverbindung erforderlich.',
             },
             {
               q: 'Muss ich bei Air-Gapped-Bereitstellung die DSGVO beachten?',
@@ -1225,7 +1225,7 @@ schema: {
             },
             {
               q: 'Ist Air-Gapped für den deutschen Mittelstand geeignet?',
-              a: 'Ja, wenn Daten sensibel sind (Finanzen, Kundendaten, Betriebsgeheimnisse). Kleine bis mittlere Unternehmen können luftgapped Systeme mit 2–3 Servern + NAS-Backup wirtschaftlich betreiben. Eine Zertifizierung nach ISO 27001 auf Basis von IT-Grundschutz ist grundsätzlich möglich. Ob sie für eine konkrete öffentliche Ausschreibung verlangt wird, steht in den jeweiligen Vergabeunterlagen; Quelle: [BSI IT-Grundschutz](https://www.bsi.bund.de/grundschutz). Dies ist keine Rechtsberatung.',
+              a: 'Ja, wenn Daten sensibel sind (Finanzen, Kundendaten, Betriebsgeheimnisse). Ob sich der Betrieb wirtschaftlich lohnt, hängt von Umfang und Anforderungen ab; holen Sie Angebote ein. Eine Zertifizierung nach ISO 27001 auf Basis von IT-Grundschutz ist grundsätzlich möglich. Ob sie für eine konkrete öffentliche Ausschreibung verlangt wird, steht in den jeweiligen Vergabeunterlagen; Quelle: [BSI IT-Grundschutz](https://www.bsi.bund.de/grundschutz). Dies ist keine Rechtsberatung.',
             },
           ],
         },
@@ -1271,9 +1271,9 @@ schema: {
           { '@type': 'Question', 'name': 'Können wir Cloud-Backups für Air-Gapped-Systeme verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Cloud-Backups erfordern Internetverbindung (aufheben Air-Gapping). Verwenden Sie physische Backups (verschlüsselte Festplatten) in separater sicherer Einrichtung.' } },
           { '@type': 'Question', 'name': 'Ist Air-Gapped wirklich sicher gegen alle Angriffe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Größtenteils, aber Insider-Bedrohungen bleiben. Air-Gapped ist sicher gegen Remote-Angriffe, aber physischer oder Insider-Zugang kann es kompromittieren.' } },
           { '@type': 'Question', 'name': 'Wie teuer ist Air-Gapped-Bereitstellung?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Die Kosten hängen stark vom Umfang ab. Die Hardware liegt typischerweise im Bereich einer normalen On-Prem-Installation; die Betriebskosten steigen, weil Updates, Auditing und Change-Control manuell erfolgen. Holen Sie Angebote für Ihre Anforderungen ein.' } },
-          { '@type': 'Question', 'name': 'Können Sie Standard-Tools (Ollama, vLLM) in Air-Gapped-Umgebungen verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Beide Tools funktionieren ohne Internet. Einmalige Bereitstellung, dann keine Internetverbindung erforderlich. Stellen Sie sicher, dass alle Abhängigkeiten offline installiert sind.' } },
+          { '@type': 'Question', 'name': 'Können Sie Standard-Tools (Ollama, vLLM) in Air-Gapped-Umgebungen verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Beide Tools funktionieren ohne Internet. Sobald Modelle und Abhängigkeiten offline installiert sind und Update-Prüfungen sowie Telemetrie deaktiviert wurden, ist keine Internetverbindung erforderlich.' } },
           { '@type': 'Question', 'name': 'Muss ich bei Air-Gapped-Bereitstellung die DSGVO beachten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, die DSGVO gilt weiterhin für personenbezogene Daten. Ein Air-Gapped-System kann technische Maßnahmen nach Art. 32 DSGVO unterstützen und verhindert, dass Inferenzdaten an externe Dienstleister gelangen. Ob Ihr Gesamtbetrieb DSGVO-konform ist, hängt von Rechtsgrundlage (Art. 6), Verzeichnis, technisch-organisatorischen Maßnahmen und ggf. einer Datenschutz-Folgenabschätzung (Art. 35) ab; klären Sie das mit Ihrem Datenschutzbeauftragten. Dies ist keine Rechtsberatung.' } },
-          { '@type': 'Question', 'name': 'Ist Air-Gapped für den deutschen Mittelstand geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, wenn Daten sensibel sind (Finanzen, Kundendaten, Betriebsgeheimnisse). Kleine bis mittlere Unternehmen können Air-Gapped-Systeme mit 2–3 Servern + NAS-Backup wirtschaftlich betreiben. Eine Zertifizierung nach ISO 27001 auf Basis von IT-Grundschutz ist grundsätzlich möglich. Ob sie für eine konkrete öffentliche Ausschreibung verlangt wird, steht in den jeweiligen Vergabeunterlagen (Quelle: BSI, IT-Grundschutz). Dies ist keine Rechtsberatung.' } },
+          { '@type': 'Question', 'name': 'Ist Air-Gapped für den deutschen Mittelstand geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, wenn Daten sensibel sind (Finanzen, Kundendaten, Betriebsgeheimnisse). Ob sich der Betrieb wirtschaftlich lohnt, hängt von Umfang und Anforderungen ab; holen Sie Angebote ein. Eine Zertifizierung nach ISO 27001 auf Basis von IT-Grundschutz ist grundsätzlich möglich. Ob sie für eine konkrete öffentliche Ausschreibung verlangt wird, steht in den jeweiligen Vergabeunterlagen (Quelle: BSI, IT-Grundschutz). Dies ist keine Rechtsberatung.' } },
         ],
       },
       itemListSchema: {
@@ -1282,9 +1282,9 @@ schema: {
         'name': 'Air-Gapped-Isolierungskomponenten',
         'numberOfItems': 3,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Vollständige Netzwerkisolierung', 'description': 'Air-Gapped-Infrastruktur hat keine Netzwerkverbindung zum Internet oder zu externen Systemen und stellt Null-Zugang von außen sicher.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Vollständige Netzwerkisolierung', 'description': 'Air-Gapped-Infrastruktur hat keine Netzwerkverbindung zum Internet oder zu externen Systemen und beseitigt damit den Weg für Fernzugriff.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Manuelle Update-Verfahren', 'description': 'Modell-Updates erfordern physische Medien (USB-Stick) oder nur interne sichere Netzwerke; kein Cloud-Zugriff.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Erhöhte Sicherheit', 'description': 'Schützt klassifizierte Daten in Behörden-, Militär- und Finanzumgebungen, die maximalen Datenschutz erfordern.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Erhöhte Sicherheit', 'description': 'Verringert die Gefährdung sensibler und klassifizierter Daten in Behörden-, Militär- und Finanzumgebungen, die starken Datenschutz erfordern.' },
         ],
       },
     },
@@ -1340,7 +1340,7 @@ schema: {
           content: [
             '**Une infrastructure air-gapped n\'a aucune connexion réseau à Internet ou à tout système externe.** Toutes les données et tous les calculs restent sur matériel isolé.',
             '**Isolement absolu:** pas de WiFi, pas d\'Ethernet vers des réseaux externes, pas de connexions USB vers des appareils connectés à Internet.',
-            '**Les données ne partent jamais:** l\'inférence se fait localement, les résultats restent locaux.',
+            '**Les données restent locales par conception :** l\'inférence se fait localement et les résultats restent locaux ; des données peuvent toutefois sortir via des supports amovibles, des personnes internes ou un accès physique.',
             '**Les mises à jour sont manuelles:** impossible de télécharger automatiquement les mises à jour. Exigent des supports physiques (clé USB, carte SD) ou transfert réseau interne.',
           ],
         },
@@ -1406,7 +1406,7 @@ schema: {
           title: 'Comment garantissez-vous la sécurité dans les systèmes air-gapped?',
           content: [
             '**Air-gapped est intrinsèquement plus sûr (pas d\'attaques externes), mais de nouveaux risques émergent:**',
-            '**Conformité CNIL:** la CNIL recommande l\'inférence locale pour les données sensibles. Air-gapped satisfait les exigences les plus strictes de résidence des données et de sécurité du traitement.',
+            '**Repères CNIL :** la CNIL a publié des fiches pratiques sur l\'IA et le RGPD (voir la source liée). Une inférence locale peut réduire les transferts de données vers des tiers, et un système air-gapped peut soutenir les mesures de sécurité du traitement (art. 32 RGPD). La conformité dépend toutefois de la base légale, des mesures organisationnelles et de l\'analyse d\'impact du responsable de traitement. Ceci ne constitue pas un conseil juridique.',
           ],
           items: [
             '**Menaces d\'initiés:** employés avec accès pourraient copier des données via USB. Exiger intégrité à deux personnes.',
@@ -1449,7 +1449,7 @@ schema: {
             },
             {
               q: 'Pouvons-nous utiliser les outils standards (Ollama, vLLM) dans les environnements air-gapped?',
-              a: 'Oui. Les deux outils fonctionnent sans Internet. Déploiement une fois, puis aucune connectivité Internet requise. Assurez-vous que toutes les dépendances sont installées hors ligne.',
+              a: 'Oui. Les deux outils fonctionnent sans Internet. Une fois les modèles et dépendances installés hors ligne, et les vérifications de mise à jour et la télémétrie désactivées, aucune connectivité Internet n\'est requise.',
             },
           ],
         },
@@ -1469,7 +1469,7 @@ schema: {
           title: 'Sources',
           items: [
             '[Cadre de cybersécurité NIST](https://www.nist.gov/cyberframework)',
-            'Recommandations CNIL sur l\'IA -- cnil.fr',
+            '[Les fiches pratiques IA de la CNIL](https://www.cnil.fr/fr/les-fiches-pratiques-ia)',
             '[BSI IT-Grundschutz](https://www.bsi.bund.de/grundschutz)',
           ],
         },
@@ -1495,7 +1495,7 @@ schema: {
           { '@type': 'Question', 'name': 'Pouvons-nous utiliser des sauvegardes cloud pour les systèmes air-gapped?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. Les sauvegardes cloud exigent connexion Internet (annulent air-gapping). Utilisez sauvegardes physiques (disques durs chiffrés) stockés dans installation sécurisée séparée.' } },
           { '@type': 'Question', 'name': 'Air-gapped est-il vraiment sûr contre toutes les attaques?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Généralement, mais les menaces d\'initiés persistent. Air-gapped protège contre les attaques distantes, mais accès physique ou accès d\'initié peuvent le compromettre.' } },
           { '@type': 'Question', 'name': 'Quel est le coût du déploiement air-gapped?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Le coût dépend fortement du périmètre. Le matériel est généralement comparable à un déploiement on-prem classique ; les coûts d\'exploitation augmentent car mises à jour, audit et contrôle des changements sont manuels. Demandez des devis adaptés à votre besoin.' } },
-          { '@type': 'Question', 'name': 'Pouvons-nous utiliser les outils standards (Ollama, vLLM) dans les environnements air-gapped?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Les deux outils fonctionnent sans Internet. Déploiement une fois, puis aucune connectivité Internet requise. Assurez-vous que toutes les dépendances sont installées hors ligne.' } },
+          { '@type': 'Question', 'name': 'Pouvons-nous utiliser les outils standards (Ollama, vLLM) dans les environnements air-gapped?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Les deux outils fonctionnent sans Internet. Une fois les modèles et dépendances installés hors ligne, et les vérifications de mise à jour et la télémétrie désactivées, aucune connectivité Internet n\'est requise.' } },
         ],
       },
       itemListSchema: {
@@ -1504,9 +1504,9 @@ schema: {
         'name': 'Composants d\'isolement air-gapped',
         'numberOfItems': 3,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Isolement réseau complet', 'description': 'L\'infrastructure air-gapped n\'a aucune connexion réseau à Internet ou à systèmes externes, assurant zéro accès externe.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Isolement réseau complet', 'description': 'L\'infrastructure air-gapped n\'a aucune connexion réseau à Internet ou aux systèmes externes, ce qui supprime la voie d\'accès à distance.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Procédures de mise à jour manuelle', 'description': 'Les mises à jour de modèles exigent supports physiques (clé USB) ou seulement réseaux internes sécurisés; aucun accès cloud.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Sécurité renforcée', 'description': 'Protège les données classifiées dans les environnements gouvernementaux, militaires et financiers exigeant protection maximale.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Sécurité renforcée', 'description': 'Réduit l\'exposition des données sensibles et classifiées dans les environnements gouvernementaux, militaires et financiers exigeant une forte protection.' },
         ],
       },
     },
@@ -1572,7 +1572,7 @@ schema: {
           title: 'アーキテクチャ設計',
           content: 'エアギャップLLM最小構成: GPU、CPU、メモリ、ローカルストレージ、管理端末。',
           items: [
-            '**計算層:** RTX 4090 × 2 (70B推論)、または NVIDIA A100 (政府標準)。',
+            '**計算層:** 例として RTX 4090 × 2(70B推論の一例)や、NVIDIA A100 などのデータセンター向けGPU。構成は要件によって異なります。',
             '**ストレージ:** 暗号化NVMe (LUKS/BitLocker)、12-24TB (モデル + キャッシュ)。',
             '**ネットワーク:** 物理的に隔離。内部LANのみ。外部接続ケーブル完全削除。',
             '**管理:** エアギャップ内の管理ワークステーション、シリアルコンソール、物理キーボード。',
@@ -1665,11 +1665,11 @@ schema: {
             },
             {
               q: 'エアギャップ環境で標準ツール(Ollama、vLLM)を使用できますか?',
-              a: 'はい。どちらのツールもインターネットなしで動作します。一度デプロイすれば、その後はインターネット接続は不要です。すべての依存関係がオフラインでインストールされていることを確認してください。',
+              a: 'はい。どちらのツールもインターネットなしで動作します。モデルと依存関係をオフラインでインストールし、更新確認とテレメトリを無効にすれば、インターネット接続は不要です。',
             },
             {
-              q: '完全なエアギャップは不要だがGDPR準拠が必要な場合はどうすればよいですか?',
-              a: 'エアギャップが不要でGDPR準拠が必要なワークロードには、[EU準拠のクラウドGPUオプション →](/ja/local-llms/eu-cloud-gpu-gdpr-2026)(Hetzner、Scaleway、OVHcloud)が、隔離の複雑さなしにEUデータ所在地を提供します。',
+              q: '完全なエアギャップは不要だがGDPRへの対応が必要な場合はどうすればよいですか?',
+              a: 'エアギャップが不要でGDPRへの対応が必要なワークロードには、[EUデータ所在地を選べるクラウドGPUオプション →](/ja/local-llms/eu-cloud-gpu-gdpr-2026)(Hetzner、Scaleway、OVHcloud)が、隔離の複雑さなしにEUデータ所在地を提供します。ただし、GDPR全般への適合は、法的根拠、契約、保護措置によって左右されます。法的助言ではありません。',
             },
           ],
         },
@@ -1714,7 +1714,7 @@ schema: {
             '@type': 'ListItem',
             'position': 1,
             'name': '完全なネットワーク隔離',
-            'description': 'エアギャップインフラはインターネットや外部システムへのネットワーク接続を一切持たず、外部アクセスをゼロに保ちます。',
+            'description': 'エアギャップインフラはインターネットや外部システムへのネットワーク接続を一切持たず、リモートアクセスの経路をなくします。',
           },
           {
             '@type': 'ListItem',
@@ -1726,7 +1726,7 @@ schema: {
             '@type': 'ListItem',
             'position': 3,
             'name': '強化されたセキュリティ',
-            'description': '政府、軍事、金融環境における機密データを保護し、最大限のデータ保護を実現します。',
+            'description': '政府、軍事、金融など強いデータ保護が求められる環境で、機密データの露出を低減します。',
           },
         ],
       },
@@ -1783,7 +1783,7 @@ schema: {
           content: [
             '**气隙基础设施与互联网或任何外部系统都没有网络连接。** 所有数据和计算都保留在隔离硬件上。',
             '**绝对隔离:** 无WiFi、无连接到外部网络的以太网、无连接到互联网设备的USB连接。',
-            '**数据永不离开:** 推理在本地进行，结果保留在本地。',
+            '**数据设计上保留在本地:** 推理在本地进行，结果保留在本地；但数据仍可能通过可移动介质、内部人员或物理接触外泄。',
             '**更新手动进行:** 无法自动下载模型更新。更新需要物理媒体 (USB驱动器、SD卡) 或内部网络传输。',
           ],
         },
@@ -1891,7 +1891,7 @@ schema: {
             },
             {
               q: '我们可以在气隙环境中使用标准工具 (Ollama、vLLM) 吗?',
-              a: '可以。两种工具都可以在没有互联网的情况下工作。部署一次，然后不需要互联网连接。确保所有依赖项都是离线安装的。',
+              a: '可以。两种工具都可以在没有互联网的情况下工作。在模型和依赖项离线安装完毕、并关闭更新检查和遥测后，不需要互联网连接。',
             },
           ],
         },
@@ -1975,7 +1975,7 @@ schema: {
             'name': '我们可以在气隙环境中使用标准工具 (Ollama、vLLM) 吗?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '可以。两种工具都可以在没有互联网的情况下工作。部署一次，然后不需要互联网连接。确保所有依赖项都是离线安装的。',
+              'text': '可以。两种工具都可以在没有互联网的情况下工作。在模型和依赖项离线安装完毕、并关闭更新检查和遥测后，不需要互联网连接。',
             },
           },
         ],
@@ -1990,7 +1990,7 @@ schema: {
             '@type': 'ListItem',
             'position': 1,
             'name': '完全网络隔离',
-            'description': '气隙基础设施与互联网或任何外部系统都没有网络连接，确保零外部访问。',
+            'description': '气隙基础设施与互联网或任何外部系统都没有网络连接，从而消除了远程访问路径。',
           },
           {
             '@type': 'ListItem',
@@ -2002,7 +2002,7 @@ schema: {
             '@type': 'ListItem',
             'position': 3,
             'name': '增强的安全性',
-            'description': '保护政府、军事和金融环境中的分类数据，需要最大的数据保护。',
+            'description': '降低政府、军事和金融等需要强数据保护的环境中敏感及涉密数据的暴露风险。',
           },
         ],
       },
@@ -2059,7 +2059,7 @@ schema: {
           content: [
             '**에어갭 인프라는 인터넷이나 외부 시스템에 대한 네트워크 연결이 전혀 없습니다.** 모든 데이터와 연산은 격리된 하드웨어 내에서만 이루어집니다.',
             '**완전한 격리:** WiFi 없음, 외부 네트워크로의 이더넷 없음, 인터넷 연결 기기와의 USB 연결 없음.',
-            '**데이터 외부 유출 불가:** 추론은 로컬에서 실행되고, 결과는 로컬에 저장됩니다.',
+            '**설계상 데이터는 로컬에 머뭅니다:** 추론은 로컬에서 실행되고 결과는 로컬에 저장됩니다. 다만 이동식 매체, 내부자, 물리적 접근을 통한 반출 위험은 남아 있습니다.',
             '**업데이트는 수동:** 모델 업데이트 자동 다운로드 불가. 업데이트는 물리적 매체(USB 드라이브, SD 카드) 또는 내부 네트워크 이전이 필요합니다.',
           ],
         },
@@ -2167,11 +2167,11 @@ schema: {
             },
             {
               q: '에어갭 환경에서 표준 도구(Ollama, vLLM)를 사용할 수 있습니까?',
-              a: '예. 두 도구 모두 인터넷 없이 작동합니다. 한 번 배포하면 인터넷 연결이 필요 없습니다. 모든 의존성이 오프라인으로 설치되었는지 확인하십시오.',
+              a: '예. 두 도구 모두 인터넷 없이 작동합니다. 모델과 의존성을 오프라인으로 설치하고 업데이트 확인과 텔레메트리를 비활성화하면 인터넷 연결이 필요 없습니다.',
             },
             {
               q: 'GDPR 준수가 필요하지만 완전한 에어갭이 필요하지 않은 경우는 어떻게 합니까?',
-              a: '에어갭이 필요하지 않지만 GDPR이 적용되는 워크로드의 경우, [EU 준수 클라우드 GPU 옵션 →](/ko/local-llms/eu-cloud-gpu-gdpr-2026)(Hetzner, Scaleway, OVHcloud)이 격리 복잡성 없이 EU 데이터 상주를 제공합니다.',
+              a: '에어갭이 필요하지 않지만 GDPR이 적용되는 워크로드의 경우, [EU 데이터 상주를 제공하는 클라우드 GPU 옵션 →](/ko/local-llms/eu-cloud-gpu-gdpr-2026)(Hetzner, Scaleway, OVHcloud)이 격리 복잡성 없이 EU 데이터 상주를 제공합니다. 다만 GDPR 전반의 준수 여부는 법적 근거, 계약 및 보호 조치에 따라 달라집니다. 법률 자문이 아닙니다.',
             },
           ],
         },
@@ -2206,7 +2206,7 @@ schema: {
             '@type': 'ListItem',
             'position': 1,
             'name': '완전한 네트워크 격리',
-            'description': '에어갭 인프라는 인터넷이나 외부 시스템과의 네트워크 연결이 전혀 없어 외부 접근을 원천 차단합니다.',
+            'description': '에어갭 인프라는 인터넷이나 외부 시스템과의 네트워크 연결이 전혀 없어 원격 접근 경로를 제거합니다.',
           },
           {
             '@type': 'ListItem',
@@ -2218,7 +2218,7 @@ schema: {
             '@type': 'ListItem',
             'position': 3,
             'name': '강화된 보안',
-            'description': '최대 수준의 데이터 보호가 필요한 정부, 군사, 금융 환경의 기밀 데이터를 보호합니다.',
+            'description': '강력한 데이터 보호가 필요한 정부, 군사, 금융 환경에서 기밀 데이터의 노출을 줄입니다.',
           },
         ],
       },

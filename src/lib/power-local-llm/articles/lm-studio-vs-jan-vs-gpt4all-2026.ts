@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/lm-studio-vs-jan-vs-gpt4all-2026-overview-hero-en.webp',
     title: 'LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026',
     seoTitle: 'LM Studio vs Jan vs GPT4All 2026: Which Local AI App?',
-    intro: 'LM Studio, Jan, and GPT4All are three of the most popular beginner-friendly desktop apps for running local LLMs in 2026. LM Studio has the biggest model library and the most controls, Jan is open source with a privacy-first design, and GPT4All has the lightest requirements but has had no release since February 2025.',
+    intro: 'LM Studio, Jan, and GPT4All are three of the most popular beginner-friendly desktop apps for running local LLMs in 2026. LM Studio has the largest in-app model browser and the most controls, Jan is open source with a privacy-first design, and GPT4All has the lightest requirements but has had no release since February 2025.',
     metaDescription: 'LM Studio vs Jan vs GPT4All compared: model library, privacy and telemetry, licenses, platforms and maintenance status. Which local AI app in 2026?',
     twitterDescription: 'LM Studio vs Jan vs GPT4All — three apps, three scenarios: model library, privacy, license and maintenance status compared.',
     current_models_mentioned: ['Llama 3.1 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
@@ -31,11 +31,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'best local ai app 2026',
       'local llm desktop app comparison',
     ],
-    leadAnswerBlock: '**LM Studio wins for power users — biggest model library, most controls. Jan wins for privacy-conscious users — open source, no telemetry by default. GPT4All suits slow PCs but has had no release since February 2025, so prefer Jan for a maintained app. All three are free.**',
+    leadAnswerBlock: '**LM Studio wins for power users — largest in-app model browser, most controls. Jan wins for privacy-conscious users — open source, no telemetry by default. GPT4All suits slow PCs but has had no release since February 2025, so prefer Jan for a maintained app. All three are free.**',
     quickAnswerTop: {
       en: {
         question: 'Which local AI app should I install: LM Studio, Jan, or GPT4All?',
-        answer: 'Pick LM Studio if you want the biggest model library and the most controls. Pick Jan if you want a clean UI, fully open-source code, and no telemetry by default. Pick GPT4All only if you have an older PC (8 GB RAM, no GPU) and accept that it has had no release since February 2025.',
+        answer: 'Pick LM Studio if you want the largest in-app model browser and the most controls. Pick Jan if you want a clean UI, fully open-source code, and no telemetry by default. Pick GPT4All only if you have an older PC (8 GB RAM, no GPU) and accept that it has had no release since February 2025.',
         bullets: [
           'LM Studio — richest model browser and most controls; best for power users',
           'Jan — fully open source, no telemetry by default, native dark mode; best for privacy-first users',
@@ -66,7 +66,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'LM Studio has the biggest model library and the most controls — wins for power users.',
+          'LM Studio has the largest in-app model browser and the most controls — wins for power users.',
           'Jan is fully open source with no telemetry by default — wins for privacy-first users.',
           'GPT4All has the lightest requirements but no release since February 2025 — use it only on very old hardware.',
           'All three are free, offline after install, and load standard GGUF models.',
@@ -102,7 +102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Which One Should You Pick?',
         content: '**The right choice depends on your hardware, your privacy posture, and how technical you are.** Use this decision shortcut:',
         rows: [
-          { 'Your situation': 'I want the biggest model library and the most controls', 'Pick': 'LM Studio' },
+          { 'Your situation': 'I want the largest in-app model browser and the most controls', 'Pick': 'LM Studio' },
           { 'Your situation': 'I want fully open-source code and no telemetry by default', 'Pick': 'Jan' },
           { 'Your situation': 'I have a 4-year-old laptop, 8 GB RAM, no GPU', 'Pick': 'GPT4All' },
           { 'Your situation': 'I want to chat with my PDFs out of the box', 'Pick': 'LM Studio' },
@@ -116,9 +116,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'How Deep Is Each App\'s Model Library?',
         content: 'All three apps can load any GGUF file from disk. The difference is what they show in their built-in browser.',
         items: [
-          '**LM Studio** — In-app browser pulls live from Hugging Face. Filters by VRAM, license, family, quantization. ~5,000 model variants visible.',
-          '**Jan** — Curated catalog of ~150 models, with a "Hugging Face URL" import for everything else. Less overwhelming for beginners.',
-          '**GPT4All** — Featured catalog of ~30 popular models. Manual GGUF import for anything else. Smallest browser.',
+          '**LM Studio** — In-app browser pulls live from Hugging Face. Filters by VRAM, license, family, quantization.',
+          '**Jan** — Curated catalog, with a "Hugging Face URL" import for everything else. Less overwhelming for beginners.',
+          '**GPT4All** — Short featured catalog of popular models. Manual GGUF import for anything else. Smallest browser.',
           'All three load custom GGUF files via drag-and-drop or "import" — so a smaller built-in browser does not lock you out of any model.',
         ],
       },
@@ -156,7 +156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: 'Which Should You Install First in 2026?',
-        content: '**Most users should start with LM Studio.** It has the largest model library and the most controls. Jan is the pick if open-source code and privacy matter most; GPT4All is only for very old hardware, given its maintenance status.',
+        content: '**Most users should start with LM Studio.** It has the largest in-app model browser and the most controls. Jan is the pick if open-source code and privacy matter most; GPT4All is only for very old hardware, given its maintenance status.',
         callouts: [
           {
             type: 'warning',
@@ -208,7 +208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is LM Studio better than GPT4All?',
-            a: 'For most people, yes. LM Studio has a larger in-app model browser and is updated regularly. GPT4All is the better fit only on machines with very little RAM or when you need an MIT-licensed code base.',
+            a: 'For most people who want a large in-app model browser and regular updates, yes. LM Studio has a larger in-app model browser and is updated regularly. GPT4All is the better fit only on machines with very little RAM or when you need an MIT-licensed code base.',
           },
           {
             q: 'Is GPT4All still maintained?',
@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/lm-studio-vs-jan-vs-gpt4all-2026-overview-hero-de.webp',
     title: 'LM Studio vs Jan vs GPT4All: Welche lokale KI-App gewinnt 2026?',
     seoTitle: 'LM Studio vs Jan vs GPT4All 2026: Welche lokale KI-App?',
-    intro: 'LM Studio, Jan und GPT4All gehören 2026 zu den beliebtesten anfängerfreundlichen Desktop-Apps für lokale LLMs. LM Studio bietet die größte Modellbibliothek und die meisten Einstellungen, Jan ist quelloffen mit Fokus auf Datenschutz, und GPT4All hat die geringsten Anforderungen, wurde aber seit Februar 2025 nicht mehr aktualisiert.',
+    intro: 'LM Studio, Jan und GPT4All gehören 2026 zu den beliebtesten anfängerfreundlichen Desktop-Apps für lokale LLMs. LM Studio bietet den größten App-internen Modell-Browser und die meisten Einstellungen, Jan ist quelloffen mit Fokus auf Datenschutz, und GPT4All hat die geringsten Anforderungen, wurde aber seit Februar 2025 nicht mehr aktualisiert.',
     metaDescription: 'LM Studio, Jan und GPT4All im Vergleich: Modellbibliothek, Datenschutz und Telemetrie, Lizenzen, Plattformen und Wartungsstatus. Welche lokale KI-App 2026?',
     twitterDescription: 'LM Studio vs Jan vs GPT4All — drei Apps, drei Szenarien: Modellbibliothek, Datenschutz, Lizenz und Wartungsstatus im Vergleich.',
     current_models_mentioned: ['Llama 3.1 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
@@ -326,11 +326,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'beste lokale ki-app 2026',
       'lokale llm desktop-app vergleich',
     ],
-    leadAnswerBlock: '**LM Studio gewinnt bei Power-Usern — größte Modellbibliothek, meiste Einstellungen. Jan gewinnt bei Datenschutz — Open Source, standardmäßig keine Telemetrie. GPT4All passt auf schwache PCs, hat aber seit Februar 2025 kein Release mehr; für eine gepflegte App ist Jan besser. Alle drei sind kostenlos.**',
+    leadAnswerBlock: '**LM Studio gewinnt bei Power-Usern — größter App-interner Modell-Browser, meiste Einstellungen. Jan gewinnt bei Datenschutz — Open Source, standardmäßig keine Telemetrie. GPT4All passt auf schwache PCs, hat aber seit Februar 2025 kein Release mehr; für eine gepflegte App ist Jan besser. Alle drei sind kostenlos.**',
     quickAnswerTop: {
       de: {
         question: 'Welche lokale KI-App soll ich installieren: LM Studio, Jan oder GPT4All?',
-        answer: 'Wählen Sie LM Studio, wenn Sie die größte Modellbibliothek und die meisten Einstellungen wollen. Wählen Sie Jan für eine saubere Oberfläche, vollständig quelloffenen Code und standardmäßig keine Telemetrie. Wählen Sie GPT4All nur für einen älteren PC (8 GB RAM, keine GPU) und nur, wenn Sie in Kauf nehmen, dass es seit Februar 2025 kein Release gab.',
+        answer: 'Wählen Sie LM Studio, wenn Sie den größten App-internen Modell-Browser und die meisten Einstellungen wollen. Wählen Sie Jan für eine saubere Oberfläche, vollständig quelloffenen Code und standardmäßig keine Telemetrie. Wählen Sie GPT4All nur für einen älteren PC (8 GB RAM, keine GPU) und nur, wenn Sie in Kauf nehmen, dass es seit Februar 2025 kein Release gab.',
         bullets: [
           'LM Studio — reichhaltigster Modell-Browser und meiste Einstellungen; ideal für Power-User',
           'Jan — vollständig Open Source, standardmäßig keine Telemetrie, nativer Dark Mode; ideal für datenschutzbewusste Nutzer',
@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'LM Studio hat die größte Modellbibliothek und die meisten Einstellungen — ideal für Power-User.',
+          'LM Studio hat den größten App-internen Modell-Browser und die meisten Einstellungen — ideal für Power-User.',
           'Jan ist vollständig Open Source mit Telemetrie standardmäßig aus — und gewinnt damit für datenschutzbewusste Nutzer.',
           'GPT4All hat die geringsten Anforderungen, aber seit Februar 2025 kein Release — nur für sehr alte Hardware.',
           'Alle drei Apps sind kostenlos, nach der Installation offline-fähig und laden Standard-GGUF-Modelle.',
@@ -397,7 +397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Welche App sollten Sie wählen?',
         content: '**Die richtige Wahl hängt von Ihrer Hardware, Ihrer Datenschutz-Haltung und Ihrem technischen Niveau ab.** Nutzen Sie diese Entscheidungshilfe als Schnellweg:',
         rows: [
-          { 'Ihre Situation': 'Ich möchte die größte Modellbibliothek und die meisten Einstellungen', 'Wahl': 'LM Studio' },
+          { 'Ihre Situation': 'Ich möchte den größten App-internen Modell-Browser und die meisten Einstellungen', 'Wahl': 'LM Studio' },
           { 'Ihre Situation': 'Ich will vollständig quelloffenen Code und Telemetrie standardmäßig aus', 'Wahl': 'Jan' },
           { 'Ihre Situation': 'Ich habe einen 4 Jahre alten Laptop mit 8 GB RAM und ohne GPU', 'Wahl': 'GPT4All' },
           { 'Ihre Situation': 'Ich möchte direkt mit meinen PDFs chatten können', 'Wahl': 'LM Studio' },
@@ -411,9 +411,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wie tief ist die Modell-Bibliothek jeder App?',
         content: 'Alle drei Apps können beliebige GGUF-Dateien von der Festplatte laden. Der Unterschied liegt darin, was sie in ihrem eingebauten Browser anzeigen.',
         items: [
-          '**LM Studio** — Der App-interne Browser zieht live von Hugging Face. Filtert nach VRAM, Lizenz, Modellfamilie und Quantisierung. Etwa 5.000 Modellvarianten sichtbar.',
-          '**Jan** — Kuratierter Katalog mit etwa 150 Modellen, plus „Hugging Face URL"-Import für alles andere. Weniger erschlagend für Einsteiger.',
-          '**GPT4All** — Empfohlener Katalog mit etwa 30 populären Modellen. Manueller GGUF-Import für alles andere. Kleinster Browser.',
+          '**LM Studio** — Der App-interne Browser zieht live von Hugging Face. Filtert nach VRAM, Lizenz, Modellfamilie und Quantisierung.',
+          '**Jan** — Kuratierter Katalog, plus „Hugging Face URL"-Import für alles andere. Weniger erschlagend für Einsteiger.',
+          '**GPT4All** — Kurzer empfohlener Katalog populärer Modelle. Manueller GGUF-Import für alles andere. Kleinster Browser.',
           'Alle drei laden eigene GGUF-Dateien per Drag-and-Drop oder „Importieren" — ein kleinerer Built-in-Browser sperrt Sie also von keinem Modell aus.',
         ],
       },
@@ -451,7 +451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: 'Welche App sollten Sie 2026 zuerst installieren?',
-        content: '**Die meisten sollten mit LM Studio starten.** Es hat die größte Modellbibliothek und die meisten Einstellungen. Jan ist die Wahl, wenn quelloffener Code und Datenschutz am wichtigsten sind; GPT4All nur für sehr alte Hardware, angesichts seines Wartungsstatus.',
+        content: '**Die meisten sollten mit LM Studio starten.** Es hat den größten App-internen Modell-Browser und die meisten Einstellungen. Jan ist die Wahl, wenn quelloffener Code und Datenschutz am wichtigsten sind; GPT4All nur für sehr alte Hardware, angesichts seines Wartungsstatus.',
         callouts: [
           {
             type: 'warning',
@@ -503,7 +503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist LM Studio besser als GPT4All?',
-            a: 'Für die meisten Nutzer ja. LM Studio hat einen größeren App-internen Modell-Browser und wird regelmäßig aktualisiert. GPT4All passt nur auf Rechnern mit sehr wenig RAM besser oder wenn Sie eine MIT-lizenzierte Codebasis brauchen.',
+            a: 'Für die meisten Nutzer, die einen großen App-internen Modell-Browser und regelmäßige Updates wollen, ja. LM Studio hat einen größeren App-internen Modell-Browser und wird regelmäßig aktualisiert. GPT4All passt nur auf Rechnern mit sehr wenig RAM besser oder wenn Sie eine MIT-lizenzierte Codebasis brauchen.',
           },
           {
             q: 'Wird GPT4All noch gepflegt?',
@@ -613,7 +613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/lm-studio-vs-jan-vs-gpt4all-2026-overview-hero-fr.webp',
     title: 'LM Studio vs Jan vs GPT4All : quelle app IA locale gagne en 2026 ?',
     seoTitle: 'LM Studio vs Jan vs GPT4All 2026: quelle app IA locale?',
-    intro: 'LM Studio, Jan et GPT4All figurent parmi les applications de bureau les plus populaires et accessibles aux débutants pour exécuter des LLM locaux en 2026. LM Studio offre la plus grande bibliothèque de modèles et le plus de réglages, Jan est open source avec une approche axée sur la confidentialité, et GPT4All a les exigences les plus légères mais n\'a plus de version depuis février 2025.',
+    intro: 'LM Studio, Jan et GPT4All figurent parmi les applications de bureau les plus populaires et accessibles aux débutants pour exécuter des LLM locaux en 2026. LM Studio offre le plus grand navigateur de modèles intégré et le plus de réglages, Jan est open source avec une approche axée sur la confidentialité, et GPT4All a les exigences les plus légères mais n\'a plus de version depuis février 2025.',
     metaDescription: 'LM Studio, Jan et GPT4All comparés : bibliothèque de modèles, confidentialité, télémétrie, licences, plateformes et maintenance. Quelle app IA locale ?',
     twitterDescription: 'LM Studio vs Jan vs GPT4All — trois apps, trois scénarios : bibliothèque de modèles, confidentialité, licence et état de maintenance comparés.',
     current_models_mentioned: ['Llama 3.1 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
@@ -627,11 +627,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'meilleure app ia locale 2026',
       'comparaison app llm local desktop',
     ],
-    leadAnswerBlock: '**LM Studio gagne pour les utilisateurs avancés — grande bibliothèque de modèles, nombreux réglages. Jan gagne pour la confidentialité — open source, sans télémétrie par défaut. GPT4All convient aux PC modestes mais n\'a plus de version depuis février 2025 : préférez Jan pour une app maintenue. Tous gratuits.**',
+    leadAnswerBlock: '**LM Studio gagne pour les utilisateurs avancés — grand navigateur de modèles intégré, nombreux réglages. Jan gagne pour la confidentialité — open source, sans télémétrie par défaut. GPT4All convient aux PC modestes mais n\'a plus de version depuis février 2025 : préférez Jan pour une app maintenue. Tous gratuits.**',
     quickAnswerTop: {
       fr: {
         question: 'Quelle app IA locale installer : LM Studio, Jan ou GPT4All ?',
-        answer: 'Choisissez LM Studio pour la plus grande bibliothèque de modèles et le plus de réglages. Choisissez Jan pour une interface claire, un code entièrement open source et pas de télémétrie par défaut. Choisissez GPT4All seulement pour un ancien PC (8 Go de RAM, sans GPU) en acceptant qu\'il n\'a plus de version depuis février 2025.',
+        answer: 'Choisissez LM Studio pour le plus grand navigateur de modèles intégré et le plus de réglages. Choisissez Jan pour une interface claire, un code entièrement open source et pas de télémétrie par défaut. Choisissez GPT4All seulement pour un ancien PC (8 Go de RAM, sans GPU) en acceptant qu\'il n\'a plus de version depuis février 2025.',
         bullets: [
           'LM Studio — navigateur de modèles le plus riche et le plus de réglages ; idéal pour les utilisateurs avancés',
           'Jan — entièrement open source, sans télémétrie par défaut, mode sombre natif ; idéal pour la confidentialité',
@@ -662,7 +662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'LM Studio a la plus grande bibliothèque de modèles et le plus de réglages — idéal pour les utilisateurs avancés.',
+          'LM Studio a le plus grand navigateur de modèles intégré et le plus de réglages — idéal pour les utilisateurs avancés.',
           'Jan est entièrement open source, télémétrie désactivée par défaut — choix des utilisateurs vie-privée d\'abord.',
           'GPT4All a les exigences les plus légères mais plus de version depuis février 2025 — à réserver aux très anciens PC.',
           'Les trois sont gratuites, hors ligne après installation, et chargent les modèles GGUF standard.',
@@ -699,7 +699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Laquelle devez-vous choisir ?',
         content: '**Le bon choix dépend de votre matériel, de votre posture vie privée et de votre niveau technique.** Suivez ce raccourci de décision :',
         rows: [
-          { 'Votre situation': 'Je veux la plus grande bibliothèque de modèles et le plus de réglages', 'Choix': 'LM Studio' },
+          { 'Votre situation': 'Je veux le plus grand navigateur de modèles intégré et le plus de réglages', 'Choix': 'LM Studio' },
           { 'Votre situation': 'Code 100 % open source et télémétrie désactivée par défaut', 'Choix': 'Jan' },
           { 'Votre situation': 'Portable de 4 ans, 8 Go de RAM, sans GPU', 'Choix': 'GPT4All' },
           { 'Votre situation': 'Discuter avec mes PDF dès l\'installation', 'Choix': 'LM Studio' },
@@ -713,9 +713,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quelle est la profondeur de chaque bibliothèque ?',
         content: 'Les trois apps chargent n\'importe quel fichier GGUF du disque. La différence se joue sur ce qu\'elles affichent dans leur navigateur intégré.',
         items: [
-          '**LM Studio** — Navigateur intégré branché en direct sur Hugging Face. Filtres VRAM, licence, famille, quantification. Environ 5 000 variantes visibles.',
-          '**Jan** — Catalogue choisi d\'environ 150 modèles, plus import « URL Hugging Face » pour le reste. Moins étourdissant pour les débutants.',
-          '**GPT4All** — Catalogue mis en avant d\'environ 30 modèles populaires. Import GGUF manuel pour le reste. Navigateur le plus restreint.',
+          '**LM Studio** — Navigateur intégré branché en direct sur Hugging Face. Filtres VRAM, licence, famille, quantification.',
+          '**Jan** — Catalogue choisi, plus import « URL Hugging Face » pour le reste. Moins étourdissant pour les débutants.',
+          '**GPT4All** — Court catalogue mis en avant de modèles populaires. Import GGUF manuel pour le reste. Navigateur le plus restreint.',
           'Les trois chargent vos GGUF par glisser-déposer ou « importer » — un navigateur intégré plus léger ne vous coupe d\'aucun modèle.',
         ],
       },
@@ -753,7 +753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: 'Laquelle installer en premier en 2026 ?',
-        content: '**La plupart des utilisateurs devraient commencer par LM Studio.** Il offre la plus grande bibliothèque de modèles et le plus de réglages. Jan est le choix si le code open source et la confidentialité priment ; GPT4All seulement pour du matériel très ancien, vu son état de maintenance.',
+        content: '**La plupart des utilisateurs devraient commencer par LM Studio.** Il offre le plus grand navigateur de modèles intégré et le plus de réglages. Jan est le choix si le code open source et la confidentialité priment ; GPT4All seulement pour du matériel très ancien, vu son état de maintenance.',
         callouts: [
           {
             type: 'warning',
@@ -805,7 +805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'LM Studio est-elle meilleure que GPT4All ?',
-            a: 'Pour la plupart des gens, oui. LM Studio propose un navigateur de modèles intégré plus grand et est mise à jour régulièrement. GPT4All convient mieux seulement sur des machines avec très peu de RAM ou si vous avez besoin d\'une base de code sous licence MIT.',
+            a: 'Pour la plupart des gens qui veulent un grand navigateur de modèles intégré et des mises à jour régulières, oui. LM Studio propose un navigateur de modèles intégré plus grand et est mise à jour régulièrement. GPT4All convient mieux seulement sur des machines avec très peu de RAM ou si vous avez besoin d\'une base de code sous licence MIT.',
           },
           {
             q: 'GPT4All est-elle encore maintenue ?',
@@ -907,7 +907,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/lm-studio-vs-jan-vs-gpt4all-2026-overview-hero-ja.webp',
     title: 'LM Studio vs Jan vs GPT4All：2026年のローカルAIアプリ徹底比較',
     seoTitle: 'LM Studio・Jan・GPT4All比較 2026',
-    intro: 'LM Studio、Jan、GPT4Allは、2026年にローカルLLMを動かすための初心者向けデスクトップアプリとして特に人気の3つです。LM Studioは最大のモデルライブラリと豊富な設定、Janはプライバシー重視のオープンソース、GPT4Allは動作要件が最も軽い一方で2025年2月以降リリースがありません。',
+    intro: 'LM Studio、Jan、GPT4Allは、2026年にローカルLLMを動かすための初心者向けデスクトップアプリとして特に人気の3つです。LM Studioはアプリ内最大級のモデルブラウザと豊富な設定、Janはプライバシー重視のオープンソース、GPT4Allは動作要件が最も軽い一方で2025年2月以降リリースがありません。',
     metaDescription: 'LM Studio・Jan・GPT4Allを比較：モデルライブラリ、プライバシーとテレメトリ、ライセンス、対応OS、メンテナンス状況。どのローカルAIアプリを選ぶ？',
     twitterDescription: 'LM Studio vs Jan vs GPT4All — 3つのアプリ、3つのシナリオ。モデルライブラリ、プライバシー、ライセンス、メンテナンス状況を比較。',
     current_models_mentioned: ['Llama 3.1 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
@@ -921,7 +921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルAIアプリ 2026',
       'ローカルllm デスクトップアプリ 比較',
     ],
-    leadAnswerBlock: '**LM Studioは上級者向けで最大のモデルライブラリと豊富な設定、Janはプライバシー重視でオープンソース・デフォルトでテレメトリなし。GPT4Allは低スペックPC向けですが2025年2月以降リリースがないため、メンテナンスされたアプリならJanがおすすめです。3つとも無料です。**',
+    leadAnswerBlock: '**LM Studioは上級者向けでアプリ内最大級のモデルブラウザと豊富な設定、Janはプライバシー重視でオープンソース・デフォルトでテレメトリなし。GPT4Allは低スペックPC向けですが2025年2月以降リリースがないため、メンテナンスされたアプリならJanがおすすめです。3つとも無料です。**',
     quickAnswerTop: {
       ja: {
         question: 'LM Studio、Jan、GPT4Allのどれをインストールすべきですか？',
@@ -957,7 +957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'LM Studioは最大のモデルライブラリと豊富な設定を備え、上級者向けです。',
+          'LM Studioはアプリ内最大級のモデルブラウザと豊富な設定を備え、上級者向けです。',
           'Janは完全オープンソース、デフォルトでテレメトリなし — プライバシー重視ユーザーに最適。',
           'GPT4Allは要件が最も軽い一方、2025年2月以降リリースがないため、ごく古いハードウェア向けにとどめてください。',
           '3つとも無料、インストール後はオフライン動作、標準GGUFモデルを読み込み可能。',
@@ -993,7 +993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'どれを選ぶべきですか？',
         content: '**最適な選択は、ハードウェア、プライバシー姿勢、技術レベルの3軸で決まります。** 以下の意思決定ショートカットを参照してください：',
         rows: [
-          { 'あなたの状況': '最大のモデルライブラリと豊富な設定がほしい', '推奨': 'LM Studio' },
+          { 'あなたの状況': 'アプリ内最大級のモデルブラウザと豊富な設定がほしい', '推奨': 'LM Studio' },
           { 'あなたの状況': '完全オープンソース、デフォルトでテレメトリなしを求める', '推奨': 'Jan' },
           { 'あなたの状況': '4年前のノートPC、8 GB RAM、GPUなし', '推奨': 'GPT4All' },
           { 'あなたの状況': 'PDFと直接対話したい', '推奨': 'LM Studio' },
@@ -1007,9 +1007,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'モデルライブラリの深さは？',
         content: '3アプリとも、ディスク上の任意のGGUFファイルを読み込めます。違いは内蔵ブラウザに表示される内容です。',
         items: [
-          '**LM Studio** — Hugging Faceからライブで取得する内蔵ブラウザ。VRAM、ライセンス、ファミリー、量子化でフィルタ可能。約5,000モデルバリアントを表示。',
-          '**Jan** — 約150モデルのキュレーションカタログ、それ以外は「Hugging Face URL」インポート。初心者には圧倒されにくい設計。',
-          '**GPT4All** — 約30の人気モデルのフィーチャーカタログ。それ以外は手動GGUFインポート。最小のブラウザ。',
+          '**LM Studio** — Hugging Faceからライブで取得する内蔵ブラウザ。VRAM、ライセンス、ファミリー、量子化でフィルタ可能。',
+          '**Jan** — キュレーションカタログ、それ以外は「Hugging Face URL」インポート。初心者には圧倒されにくい設計。',
+          '**GPT4All** — 人気モデルの短いフィーチャーカタログ。それ以外は手動GGUFインポート。最小のブラウザ。',
           '3アプリすべて、ドラッグ＆ドロップまたは「インポート」で独自GGUFを読み込めるため、ブラウザが小さくてもモデルにアクセスできなくなることはありません。',
         ],
       },
@@ -1047,7 +1047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: '2026年に最初にインストールすべきアプリは？',
-        content: '**多くの人はまずLM Studioから始めるのがおすすめです。** 最大のモデルライブラリと豊富な設定を備えています。オープンソースとプライバシーを最優先するならJan、GPT4Allはメンテナンス状況を踏まえるとごく古いハードウェア向けです。',
+        content: '**多くの人はまずLM Studioから始めるのがおすすめです。** アプリ内最大級のモデルブラウザと豊富な設定を備えています。オープンソースとプライバシーを最優先するならJan、GPT4Allはメンテナンス状況を踏まえるとごく古いハードウェア向けです。',
         callouts: [
           {
             type: 'warning',
@@ -1110,7 +1110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'LM StudioはGPT4Allより優れていますか？',
-            a: 'ほとんどの人にとってはそうです。LM Studioはアプリ内のモデルブラウザが大きく、定期的に更新されています。GPT4Allが適しているのは、RAMが非常に少ないマシンか、MITライセンスのコードベースが必要な場合に限られます。',
+            a: '大きなアプリ内モデルブラウザと定期的な更新を求めるほとんどの人にとってはそうです。LM Studioはアプリ内のモデルブラウザが大きく、定期的に更新されています。GPT4Allが適しているのは、RAMが非常に少ないマシンか、MITライセンスのコードベースが必要な場合に限られます。',
           },
           {
             q: 'GPT4Allはまだメンテナンスされていますか？',
@@ -1212,7 +1212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/lm-studio-vs-jan-vs-gpt4all-2026-overview-hero-zh.webp',
     title: 'LM Studio vs Jan vs GPT4All：2026年本地AI应用谁是赢家？',
     seoTitle: 'LM Studio、Jan、GPT4All对比 2026',
-    intro: 'LM Studio、Jan和GPT4All是2026年运行本地LLM最受欢迎的三款对新手友好的桌面应用。LM Studio拥有最大的模型库和最多的设置，Jan是注重隐私的开源应用，GPT4All对硬件要求最低，但自2025年2月以来没有新版本。',
+    intro: 'LM Studio、Jan和GPT4All是2026年运行本地LLM最受欢迎的三款对新手友好的桌面应用。LM Studio拥有应用内最大的模型浏览器和最多的设置，Jan是注重隐私的开源应用，GPT4All对硬件要求最低，但自2025年2月以来没有新版本。',
     metaDescription: 'LM Studio、Jan、GPT4All对比:模型库、隐私与遥测、许可证、支持平台和维护状态。2026年该选哪款本地AI应用,一文快速看懂。',
     twitterDescription: 'LM Studio vs Jan vs GPT4All — 三款应用，三种场景:模型库、隐私、许可证和维护状态对比。',
     current_models_mentioned: ['Llama 3.1 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
@@ -1226,11 +1226,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '本地AI应用 2026',
       '本地llm桌面应用对比',
     ],
-    leadAnswerBlock: '**LM Studio适合进阶用户——模型库最大、设置最多;Jan适合注重隐私的用户——开源、默认无遥测。GPT4All适合低配电脑,但2025年2月后再无新版本,需要持续维护的应用请选Jan。三者均免费。**',
+    leadAnswerBlock: '**LM Studio适合进阶用户——应用内模型浏览器最大、设置最多;Jan适合注重隐私的用户——开源、默认无遥测。GPT4All适合低配电脑,但2025年2月后再无新版本,需要持续维护的应用请选Jan。三者均免费。**',
     quickAnswerTop: {
       zh: {
         question: '应该安装哪款本地AI应用：LM Studio、Jan还是GPT4All？',
-        answer: '想要最大的模型库和最多的设置，选LM Studio。想要简洁界面、完全开源代码和默认无遥测，选Jan。只有在使用旧电脑（8 GB内存、无GPU）并接受其自2025年2月以来没有新版本时，才选GPT4All。',
+        answer: '想要应用内最大的模型浏览器和最多的设置，选LM Studio。想要简洁界面、完全开源代码和默认无遥测，选Jan。只有在使用旧电脑（8 GB内存、无GPU）并接受其自2025年2月以来没有新版本时，才选GPT4All。',
         bullets: [
           'LM Studio——模型浏览器最丰富、设置最多；适合进阶用户',
           'Jan——完全开源、默认无遥测、原生暗色模式；隐私优先用户首选',
@@ -1262,7 +1262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'LM Studio拥有最大的模型库和最多的设置——适合进阶用户。',
+          'LM Studio拥有应用内最大的模型浏览器和最多的设置——适合进阶用户。',
           'Jan完全开源、默认无遥测——隐私优先用户首选。',
           'GPT4All要求最低，但2025年2月以来没有新版本——仅适用于非常旧的硬件。',
           '三款均免费、安装后离线工作、可加载标准GGUF模型。',
@@ -1298,7 +1298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '应该选哪一款？',
         content: '**正确选择取决于你的硬件、隐私态度和技术水平。** 用以下决策快捷表：',
         rows: [
-          { '你的情况': '我想要最大的模型库和最多的设置', '建议': 'LM Studio' },
+          { '你的情况': '我想要应用内最大的模型浏览器和最多的设置', '建议': 'LM Studio' },
           { '你的情况': '要完全开源代码和默认无遥测', '建议': 'Jan' },
           { '你的情况': '4年旧笔记本、8 GB RAM、无GPU', '建议': 'GPT4All' },
           { '你的情况': '想直接和PDF对话', '建议': 'LM Studio' },
@@ -1312,16 +1312,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '每款应用的模型库有多深？',
         content: '三款应用都能加载磁盘上任何GGUF文件。区别在于内置浏览器中显示什么。',
         items: [
-          '**LM Studio**——内置浏览器从Hugging Face实时拉取。可按VRAM、许可证、家族、量化筛选。约5,000个模型变体可见。',
-          '**Jan**——精选目录约150个模型，加上"Hugging Face URL"导入支持其他所有模型。对新手不那么吓人。',
-          '**GPT4All**——精选目录约30个流行模型。其他模型需手动GGUF导入。浏览器最小。',
+          '**LM Studio**——内置浏览器从Hugging Face实时拉取。可按VRAM、许可证、家族、量化筛选。',
+          '**Jan**——精选目录，加上"Hugging Face URL"导入支持其他所有模型。对新手不那么吓人。',
+          '**GPT4All**——简短的精选目录，收录流行模型。其他模型需手动GGUF导入。浏览器最小。',
           '三款都通过拖放或"导入"加载自定义GGUF——较小的内置浏览器并不会让你与任何模型隔绝。',
         ],
       },
       privacyTelemetry: {
         id: 'privacy-telemetry',
         title: '这些应用会把数据发到哪里吗？',
-        content: '**在隐私态度上Jan遥遥领先。** 每款应用对遥测的处理方式不同：',
+        content: '**在隐私态度上Jan更胜一筹。** 每款应用对遥测的处理方式不同：',
         items: [
           '**LM Studio**——隐私政策称无遥测、无针对用户的跟踪。检查更新会发送应用版本、操作系统和IP地址；模型搜索和下载会发送匿名化的搜索查询。聊天和文档保留在设备上。',
           '**Jan**——默认无遥测。仅在首次启动时同意后才启用匿名使用分析(PostHog EU)。源代码在GitHub上可审计（Apache 2.0）。',
@@ -1352,7 +1352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: '2026年应该先安装哪款？',
-        content: '**大多数用户应先从LM Studio开始。** 它拥有最大的模型库和最多的设置。若最看重开源代码与隐私，选Jan；鉴于维护状态，GPT4All仅适合非常旧的硬件。',
+        content: '**大多数用户应先从LM Studio开始。** 它拥有应用内最大的模型浏览器和最多的设置。若最看重开源代码与隐私，选Jan；鉴于维护状态，GPT4All仅适合非常旧的硬件。',
         callouts: [
           {
             type: 'warning',
@@ -1415,7 +1415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'LM Studio比GPT4All更好吗？',
-            a: '对大多数人来说是的。LM Studio应用内模型浏览器更大，并且定期更新。GPT4All仅更适合内存很小的机器，或需要MIT许可证代码库的情况。',
+            a: '对于想要大型应用内模型浏览器和定期更新的大多数人来说是的。LM Studio应用内模型浏览器更大，并且定期更新。GPT4All仅更适合内存很小的机器，或需要MIT许可证代码库的情况。',
           },
           {
             q: 'GPT4All还在维护吗？',
@@ -1517,7 +1517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/lm-studio-vs-jan-vs-gpt4all-2026-overview-hero-es.webp',
     title: 'LM Studio vs Jan vs GPT4All: qué app de IA local gana en 2026',
     seoTitle: 'LM Studio vs Jan vs GPT4All 2026: ¿qué app de IA local?',
-    intro: 'LM Studio, Jan y GPT4All son tres de las apps de escritorio más populares y accesibles para ejecutar LLM locales en 2026. LM Studio tiene la mayor biblioteca de modelos y más ajustes, Jan es de código abierto con un diseño centrado en la privacidad, y GPT4All tiene los requisitos más ligeros pero no ha publicado versiones desde febrero de 2025.',
+    intro: 'LM Studio, Jan y GPT4All son tres de las apps de escritorio más populares y accesibles para ejecutar LLM locales en 2026. LM Studio tiene el navegador de modelos integrado más grande y más ajustes, Jan es de código abierto con un diseño centrado en la privacidad, y GPT4All tiene los requisitos más ligeros pero no ha publicado versiones desde febrero de 2025.',
     metaDescription: 'LM Studio, Jan y GPT4All comparados: biblioteca de modelos, privacidad y telemetría, licencias, plataformas y mantenimiento. ¿Qué app de IA local en 2026?',
     twitterDescription: 'LM Studio vs Jan vs GPT4All — tres apps, tres escenarios: biblioteca de modelos, privacidad, licencia y mantenimiento comparados.',
     current_models_mentioned: ['Llama 3.1 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
@@ -1531,11 +1531,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mejor app de ia local 2026',
       'comparativa apps llm local escritorio',
     ],
-    leadAnswerBlock: '**LM Studio gana para usuarios avanzados — mayor biblioteca de modelos, más ajustes. Jan gana en privacidad — código abierto, sin telemetría por defecto. GPT4All sirve para PC modestos, pero no tiene versiones desde febrero de 2025: prefiere Jan para una app mantenida. Los tres son gratis.**',
+    leadAnswerBlock: '**LM Studio gana para usuarios avanzados — navegador de modelos integrado más grande, más ajustes. Jan gana en privacidad — código abierto, sin telemetría por defecto. GPT4All sirve para PC modestos, pero no tiene versiones desde febrero de 2025: prefiere Jan para una app mantenida. Los tres son gratis.**',
     quickAnswerTop: {
       es: {
         question: '¿Qué app de IA local instalo: LM Studio, Jan o GPT4All?',
-        answer: 'Elige LM Studio si quieres la mayor biblioteca de modelos y más ajustes. Elige Jan si quieres una interfaz limpia, código totalmente abierto y sin telemetría por defecto. Elige GPT4All solo si tienes un PC antiguo (8 GB de RAM, sin GPU) y aceptas que no ha publicado versiones desde febrero de 2025.',
+        answer: 'Elige LM Studio si quieres el navegador de modelos integrado más grande y más ajustes. Elige Jan si quieres una interfaz limpia, código totalmente abierto y sin telemetría por defecto. Elige GPT4All solo si tienes un PC antiguo (8 GB de RAM, sin GPU) y aceptas que no ha publicado versiones desde febrero de 2025.',
         bullets: [
           'LM Studio — el navegador de modelos más completo y más ajustes; ideal para usuarios avanzados',
           'Jan — completamente open source, sin telemetría por defecto, modo oscuro nativo; ideal para usuarios que priorizan la privacidad',
@@ -1565,7 +1565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'LM Studio tiene la mayor biblioteca de modelos y más ajustes: ideal para usuarios avanzados.',
+          'LM Studio tiene el navegador de modelos integrado más grande y más ajustes: ideal para usuarios avanzados.',
           'Jan es completamente open source con telemetría desactivada por defecto — gana para usuarios que priorizan la privacidad.',
           'GPT4All tiene los requisitos más ligeros pero no publica versiones desde febrero de 2025: solo para hardware muy antiguo.',
           'Las tres son gratuitas, funcionan sin conexión tras la instalación y cargan modelos GGUF estándar.',
@@ -1601,7 +1601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Cuál deberías elegir?',
         content: '**La elección correcta depende de tu hardware, tu postura de privacidad y tu nivel técnico.** Usa este atajo de decisión:',
         rows: [
-          { 'Tu situación': 'Quiero la mayor biblioteca de modelos y más ajustes', 'Elige': 'LM Studio' },
+          { 'Tu situación': 'Quiero el navegador de modelos integrado más grande y más ajustes', 'Elige': 'LM Studio' },
           { 'Tu situación': 'Quiero código completamente open source y telemetría desactivada por defecto', 'Elige': 'Jan' },
           { 'Tu situación': 'Tengo un laptop de 4 años, 8 GB de RAM, sin GPU', 'Elige': 'GPT4All' },
           { 'Tu situación': 'Quiero chatear con mis PDFs desde el primer momento', 'Elige': 'LM Studio' },
@@ -1615,9 +1615,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Qué profundidad tiene la biblioteca de modelos de cada app?',
         content: 'Las tres apps pueden cargar cualquier archivo GGUF desde el disco. La diferencia está en lo que muestran en su navegador integrado.',
         items: [
-          '**LM Studio** — El navegador integrado se conecta en tiempo real a Hugging Face. Filtra por VRAM, licencia, familia y cuantización. Muestra ~5.000 variantes de modelos.',
-          '**Jan** — Catálogo seleccionado de ~150 modelos, con importación por "URL de Hugging Face" para todo lo demás. Menos abrumador para principiantes.',
-          '**GPT4All** — Catálogo destacado de ~30 modelos populares. Importación manual de GGUF para el resto. El navegador más pequeño.',
+          '**LM Studio** — El navegador integrado se conecta en tiempo real a Hugging Face. Filtra por VRAM, licencia, familia y cuantización.',
+          '**Jan** — Catálogo seleccionado, con importación por "URL de Hugging Face" para todo lo demás. Menos abrumador para principiantes.',
+          '**GPT4All** — Catálogo destacado corto de modelos populares. Importación manual de GGUF para el resto. El navegador más pequeño.',
           'Las tres cargan archivos GGUF personalizados mediante arrastrar y soltar o "importar", por lo que un navegador integrado más pequeño no te impide acceder a ningún modelo.',
         ],
       },
@@ -1655,7 +1655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: '¿Cuál instalar primero en 2026?',
-        content: '**La mayoría debería empezar con LM Studio.** Tiene la mayor biblioteca de modelos y más ajustes. Jan es la opción si importan el código abierto y la privacidad; GPT4All solo para hardware muy antiguo, dado su estado de mantenimiento.',
+        content: '**La mayoría debería empezar con LM Studio.** Tiene el navegador de modelos integrado más grande y más ajustes. Jan es la opción si importan el código abierto y la privacidad; GPT4All solo para hardware muy antiguo, dado su estado de mantenimiento.',
         callouts: [
           {
             type: 'warning',
@@ -1689,7 +1689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Es LM Studio mejor que GPT4All?',
-            a: 'Para la mayoría de las personas, sí. LM Studio tiene un navegador de modelos integrado más grande y se actualiza con regularidad. GPT4All encaja mejor solo en equipos con muy poca RAM o cuando necesitas una base de código con licencia MIT.',
+            a: 'Para la mayoría de las personas que quieren un navegador de modelos integrado grande y actualizaciones regulares, sí. LM Studio tiene un navegador de modelos integrado más grande y se actualiza con regularidad. GPT4All encaja mejor solo en equipos con muy poca RAM o cuando necesitas una base de código con licencia MIT.',
           },
           {
             q: '¿Se sigue manteniendo GPT4All?',
@@ -1791,7 +1791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/lm-studio-vs-jan-vs-gpt4all-2026-overview-hero-ko.webp',
     title: 'LM Studio vs Jan vs GPT4All: 2026년 어느 로컬 AI 앱이 이깁니까',
     seoTitle: 'LM Studio·Jan·GPT4All 비교 2026',
-    intro: 'LM Studio, Jan, GPT4All은 2026년 로컬 LLM 실행을 위한 대표적인 초보자 친화 데스크톱 앱입니다. LM Studio는 가장 큰 모델 라이브러리와 가장 많은 설정을, Jan은 프라이버시 중심의 오픈소스를, GPT4All은 가장 낮은 요구 사양을 제공하지만 2025년 2월 이후 새 릴리스가 없습니다.',
+    intro: 'LM Studio, Jan, GPT4All은 2026년 로컬 LLM 실행을 위한 대표적인 초보자 친화 데스크톱 앱입니다. LM Studio는 앱 내 가장 큰 모델 브라우저와 가장 많은 설정을, Jan은 프라이버시 중심의 오픈소스를, GPT4All은 가장 낮은 요구 사양을 제공하지만 2025년 2월 이후 새 릴리스가 없습니다.',
     metaDescription: 'LM Studio·Jan·GPT4All 비교: 모델 라이브러리, 프라이버시와 텔레메트리, 라이선스, 지원 플랫폼, 유지 관리 상태. 어떤 로컬 AI 앱을 설치할까요?',
     twitterDescription: 'LM Studio vs Jan vs GPT4All — 세 가지 앱, 세 가지 시나리오. 모델 라이브러리, 프라이버시, 라이선스, 유지 관리 상태 비교.',
     current_models_mentioned: ['Llama 3.1 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
@@ -1805,11 +1805,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026 최고 로컬 AI 앱',
       '로컬 LLM 데스크톱 앱 비교',
     ],
-    leadAnswerBlock: '**LM Studio는 파워 유저에게 최적 — 가장 큰 모델 라이브러리와 가장 많은 설정. Jan은 프라이버시 중시 사용자에게 최적 — 오픈소스, 기본 설정에서 텔레메트리 없음. GPT4All은 저사양 PC에 적합하지만 2025년 2월 이후 새 릴리스가 없으므로 유지 관리되는 앱은 Jan을 권장합니다. 세 앱 모두 무료입니다.**',
+    leadAnswerBlock: '**LM Studio는 파워 유저에게 최적 — 앱 내 가장 큰 모델 브라우저와 가장 많은 설정. Jan은 프라이버시 중시 사용자에게 최적 — 오픈소스, 기본 설정에서 텔레메트리 없음. GPT4All은 저사양 PC에 적합하지만 2025년 2월 이후 새 릴리스가 없으므로 유지 관리되는 앱은 Jan을 권장합니다. 세 앱 모두 무료입니다.**',
     quickAnswerTop: {
       ko: {
         question: '어떤 로컬 AI 앱을 설치해야 합니까: LM Studio, Jan, GPT4All?',
-        answer: '가장 큰 모델 라이브러리와 많은 설정을 원하면 LM Studio를 고르세요. 깔끔한 UI, 완전 오픈소스 코드, 기본 설정에서 텔레메트리 없음을 원하면 Jan을 고르세요. GPT4All은 오래된 PC(RAM 8 GB, GPU 없음)이면서 2025년 2월 이후 새 릴리스가 없다는 점을 감수할 때만 고르세요.',
+        answer: '앱 내 가장 큰 모델 브라우저와 많은 설정을 원하면 LM Studio를 고르세요. 깔끔한 UI, 완전 오픈소스 코드, 기본 설정에서 텔레메트리 없음을 원하면 Jan을 고르세요. GPT4All은 오래된 PC(RAM 8 GB, GPU 없음)이면서 2025년 2월 이후 새 릴리스가 없다는 점을 감수할 때만 고르세요.',
         bullets: [
           'LM Studio — 가장 풍부한 모델 브라우저와 가장 많은 설정, 파워 유저에게 적합',
           'Jan — 완전 오픈소스, 기본 설정에서 텔레메트리 없음, 기본 다크 모드; 개인정보를 중시하는 사용자에게 적합',
@@ -1839,7 +1839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'LM Studio는 가장 큰 모델 라이브러리와 가장 많은 설정을 갖춰 파워 유저에게 적합합니다.',
+          'LM Studio는 앱 내 가장 큰 모델 브라우저와 가장 많은 설정을 갖춰 파워 유저에게 적합합니다.',
           'Jan은 기본적으로 텔레메트리가 없는 완전 오픈소스입니다 — 개인정보를 중시하는 사용자에게 유리합니다.',
           'GPT4All은 요구 사양이 가장 낮지만 2025년 2월 이후 릴리스가 없으므로 매우 오래된 하드웨어에서만 쓰세요.',
           '세 가지 모두 무료이며 설치 후 오프라인에서 작동하고 표준 GGUF 모델을 로드합니다.',
@@ -1875,7 +1875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '어떤 것을 선택해야 합니까?',
         content: '**올바른 선택은 하드웨어, 개인정보 입장, 기술 수준에 따라 달라집니다.** 이 결정 단축키를 사용하십시오:',
         rows: [
-          { '상황': '가장 큰 모델 라이브러리와 많은 설정을 원합니다', '선택': 'LM Studio' },
+          { '상황': '앱 내 가장 큰 모델 브라우저와 많은 설정을 원합니다', '선택': 'LM Studio' },
           { '상황': '완전 오픈소스 코드와 기본 설정에서 텔레메트리 없음을 원합니다', '선택': 'Jan' },
           { '상황': '4년 된 노트북, RAM 8 GB, GPU 없습니다', '선택': 'GPT4All' },
           { '상황': '처음부터 PDF와 채팅하고 싶습니다', '선택': 'LM Studio' },
@@ -1889,9 +1889,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '각 앱의 모델 라이브러리 깊이',
         content: '세 앱 모두 디스크에서 GGUF 파일을 로드할 수 있습니다. 차이는 내장 브라우저에서 표시하는 내용에 있습니다.',
         items: [
-          '**LM Studio** — 내장 브라우저가 HuggingFace에 실시간으로 연결됩니다. VRAM, 라이선스, 계열, 양자화로 필터링합니다. ~5,000개의 모델 변형을 표시합니다.',
-          '**Jan** — ~150개 모델의 선별된 카탈로그, 나머지는 "HuggingFace URL" 가져오기. 초보자에게 덜 부담스럽습니다.',
-          '**GPT4All** — ~30개의 인기 모델 큐레이션 카탈로그. 나머지는 수동 GGUF 가져오기. 가장 작은 브라우저.',
+          '**LM Studio** — 내장 브라우저가 HuggingFace에 실시간으로 연결됩니다. VRAM, 라이선스, 계열, 양자화로 필터링합니다.',
+          '**Jan** — 선별된 카탈로그, 나머지는 "HuggingFace URL" 가져오기. 초보자에게 덜 부담스럽습니다.',
+          '**GPT4All** — 인기 모델의 짧은 큐레이션 카탈로그. 나머지는 수동 GGUF 가져오기. 가장 작은 브라우저.',
           '세 앱 모두 드래그 앤 드롭 또는 "가져오기"를 통해 사용자 지정 GGUF 파일을 로드하므로 내장 브라우저가 작아도 어떤 모델이든 접근할 수 있습니다.',
         ],
       },
@@ -1929,7 +1929,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: '2026년에 어떤 것을 먼저 설치합니까?',
-        content: '**대부분의 사용자는 LM Studio로 시작하는 것이 좋습니다.** 가장 큰 모델 라이브러리와 가장 많은 설정을 갖추고 있습니다. 오픈소스와 프라이버시가 가장 중요하면 Jan, GPT4All은 유지 관리 상태를 고려해 매우 오래된 하드웨어에만 권합니다.',
+        content: '**대부분의 사용자는 LM Studio로 시작하는 것이 좋습니다.** 앱 내 가장 큰 모델 브라우저와 가장 많은 설정을 갖추고 있습니다. 오픈소스와 프라이버시가 가장 중요하면 Jan, GPT4All은 유지 관리 상태를 고려해 매우 오래된 하드웨어에만 권합니다.',
         callouts: [
           {
             type: 'warning',
@@ -1963,7 +1963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'LM Studio가 GPT4All보다 낫습니까?',
-            a: '대부분의 사용자에게는 그렇습니다. LM Studio는 앱 내 모델 브라우저가 더 크며 정기적으로 업데이트됩니다. GPT4All이 더 적합한 경우는 RAM이 매우 적은 기기이거나 MIT 라이선스 코드 기반이 필요할 때뿐입니다.',
+            a: '큰 앱 내 모델 브라우저와 정기 업데이트를 원하는 대부분의 사용자에게는 그렇습니다. LM Studio는 앱 내 모델 브라우저가 더 크며 정기적으로 업데이트됩니다. GPT4All이 더 적합한 경우는 RAM이 매우 적은 기기이거나 MIT 라이선스 코드 기반이 필요할 때뿐입니다.',
           },
           {
             q: 'GPT4All은 아직 유지 관리되고 있습니까?',
@@ -2065,7 +2065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/lm-studio-vs-jan-vs-gpt4all-2026-overview-hero-pt.webp',
     title: 'LM Studio vs Jan vs GPT4All: qual app de IA local vence em 2026',
     seoTitle: 'LM Studio vs Jan vs GPT4All 2026: qual app de IA local?',
-    intro: 'LM Studio, Jan e GPT4All são três dos apps de desktop mais populares e amigáveis para iniciantes para rodar LLMs locais em 2026. O LM Studio tem a maior biblioteca de modelos e mais ajustes, o Jan é de código aberto com foco em privacidade, e o GPT4All tem os requisitos mais leves, mas não lança versão nova desde fevereiro de 2025.',
+    intro: 'LM Studio, Jan e GPT4All são três dos apps de desktop mais populares e amigáveis para iniciantes para rodar LLMs locais em 2026. O LM Studio tem o maior navegador de modelos integrado e mais ajustes, o Jan é de código aberto com foco em privacidade, e o GPT4All tem os requisitos mais leves, mas não lança versão nova desde fevereiro de 2025.',
     metaDescription: 'LM Studio, Jan e GPT4All comparados: biblioteca de modelos, privacidade e telemetria, licenças, plataformas e manutenção. Qual app de IA local em 2026?',
     twitterDescription: 'LM Studio vs Jan vs GPT4All — três apps, três cenários: biblioteca de modelos, privacidade, licença e manutenção comparados.',
     current_models_mentioned: ['Llama 3.1 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
@@ -2079,11 +2079,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'melhor app de ia local 2026',
       'comparativo apps llm local desktop',
     ],
-    leadAnswerBlock: '**LM Studio vence para usuários avançados — maior biblioteca de modelos, mais ajustes. Jan vence em privacidade — código aberto, sem telemetria por padrão. O GPT4All serve para PCs modestos, mas não tem versão nova desde fevereiro de 2025: prefira o Jan para um app mantido. Os três são gratuitos.**',
+    leadAnswerBlock: '**LM Studio vence para usuários avançados — maior navegador de modelos integrado, mais ajustes. Jan vence em privacidade — código aberto, sem telemetria por padrão. O GPT4All serve para PCs modestos, mas não tem versão nova desde fevereiro de 2025: prefira o Jan para um app mantido. Todos são gratuitos.**',
     quickAnswerTop: {
       pt: {
         question: 'Qual app de IA local devo instalar: LM Studio, Jan ou GPT4All?',
-        answer: 'Escolha o LM Studio se quer a maior biblioteca de modelos e mais ajustes. Escolha o Jan se quer uma interface limpa, código totalmente aberto e sem telemetria por padrão. Escolha o GPT4All só se tem um PC antigo (8 GB de RAM, sem GPU) e aceita que ele não lança versão nova desde fevereiro de 2025.',
+        answer: 'Escolha o LM Studio se quer o maior navegador de modelos integrado e mais ajustes. Escolha o Jan se quer uma interface limpa, código totalmente aberto e sem telemetria por padrão. Escolha o GPT4All só se tem um PC antigo (8 GB de RAM, sem GPU) e aceita que ele não lança versão nova desde fevereiro de 2025.',
         bullets: [
           'LM Studio — navegador de modelos mais completo e mais ajustes; ideal para usuários avançados',
           'Jan — totalmente open source, sem telemetria por padrão, modo escuro nativo; ideal para usuários que priorizam a privacidade',
@@ -2113,7 +2113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'O LM Studio tem a maior biblioteca de modelos e mais ajustes — ideal para usuários avançados.',
+          'O LM Studio tem o maior navegador de modelos integrado e mais ajustes — ideal para usuários avançados.',
           'O Jan é totalmente open source com telemetria desativada por padrão — vence para usuários que priorizam a privacidade.',
           'O GPT4All tem os requisitos mais leves, mas não lança versão desde fevereiro de 2025 — só para hardware muito antigo.',
           'Os três são gratuitos, funcionam offline após a instalação e carregam modelos GGUF padrão.',
@@ -2149,7 +2149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qual você deve escolher?',
         content: '**A escolha certa depende do seu hardware, da sua postura de privacidade e do seu nível técnico.** Use este atalho de decisão:',
         rows: [
-          { 'Your situation': 'Quero a maior biblioteca de modelos e mais ajustes', 'Pick': 'LM Studio' },
+          { 'Your situation': 'Quero o maior navegador de modelos integrado e mais ajustes', 'Pick': 'LM Studio' },
           { 'Your situation': 'Quero código totalmente open source e telemetria desativada por padrão', 'Pick': 'Jan' },
           { 'Your situation': 'Tenho um laptop de 4 anos, 8 GB de RAM, sem GPU', 'Pick': 'GPT4All' },
           { 'Your situation': 'Quero conversar com meus PDFs desde o início', 'Pick': 'LM Studio' },
@@ -2163,9 +2163,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quão profunda é a biblioteca de modelos de cada app?',
         content: 'Os três apps podem carregar qualquer arquivo GGUF do disco. A diferença está no que eles mostram em seu navegador integrado.',
         items: [
-          '**LM Studio** — O navegador integrado se conecta ao vivo ao Hugging Face. Filtra por VRAM, licença, família e quantização. ~5.000 variantes de modelos visíveis.',
-          '**Jan** — Catálogo selecionado de ~150 modelos, com importação por "URL do Hugging Face" para todo o resto. Menos sobrecarregante para iniciantes.',
-          '**GPT4All** — Catálogo em destaque de ~30 modelos populares. Importação manual de GGUF para qualquer outro. O menor navegador.',
+          '**LM Studio** — O navegador integrado se conecta ao vivo ao Hugging Face. Filtra por VRAM, licença, família e quantização.',
+          '**Jan** — Catálogo selecionado, com importação por "URL do Hugging Face" para todo o resto. Menos sobrecarregante para iniciantes.',
+          '**GPT4All** — Catálogo em destaque curto de modelos populares. Importação manual de GGUF para qualquer outro. O menor navegador.',
           'Os três carregam arquivos GGUF personalizados por arrastar e soltar ou "importar" — então um navegador integrado menor não impede o acesso a nenhum modelo.',
         ],
       },
@@ -2203,7 +2203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: 'Qual instalar primeiro em 2026?',
-        content: '**A maioria deve começar pelo LM Studio.** Ele tem a maior biblioteca de modelos e mais ajustes. O Jan é a escolha se código aberto e privacidade importam mais; o GPT4All só para hardware muito antigo, dado seu status de manutenção.',
+        content: '**A maioria deve começar pelo LM Studio.** Ele tem o maior navegador de modelos integrado e mais ajustes. O Jan é a escolha se código aberto e privacidade importam mais; o GPT4All só para hardware muito antigo, dado seu status de manutenção.',
         callouts: [
           {
             type: 'warning',
@@ -2237,7 +2237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'O LM Studio é melhor que o GPT4All?',
-            a: 'Para a maioria das pessoas, sim. O LM Studio tem um navegador de modelos integrado maior e é atualizado com regularidade. O GPT4All é a melhor opção apenas em máquinas com muito pouca RAM ou quando você precisa de uma base de código com licença MIT.',
+            a: 'Para a maioria das pessoas que querem um navegador de modelos integrado grande e atualizações regulares, sim. O LM Studio tem um navegador de modelos integrado maior e é atualizado com regularidade. O GPT4All é a melhor opção apenas em máquinas com muito pouca RAM ou quando você precisa de uma base de código com licença MIT.',
           },
           {
             q: 'O GPT4All ainda é mantido?',
@@ -2339,7 +2339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/lm-studio-vs-jan-vs-gpt4all-2026-overview-hero-ar.webp',
     title: '⁨LM Studio⁩ مقابل ⁨Jan⁩ مقابل ⁨GPT4All⁩: أيّ تطبيق ذكاء اصطناعي محلي يفوز في ⁨2026⁩',
     seoTitle: 'LM Studio مقابل Jan وGPT4All 2026: مقارنة',
-    intro: 'LM Studio وJan وGPT4All من أشهر تطبيقات سطح المكتب الملائمة للمبتدئين لتشغيل نماذج LLM محلياً في 2026. يتميز LM Studio بأكبر مكتبة نماذج وأكثر الإعدادات، وJan مفتوح المصدر بتصميم يركّز على الخصوصية، وGPT4All أخفّها متطلبات لكنه بلا إصدار جديد منذ فبراير 2025.',
+    intro: 'LM Studio وJan وGPT4All من أشهر تطبيقات سطح المكتب الملائمة للمبتدئين لتشغيل نماذج LLM محلياً في 2026. يتميز LM Studio بأكبر متصفح نماذج مدمج وأكثر الإعدادات، وJan مفتوح المصدر بتصميم يركّز على الخصوصية، وGPT4All أخفّها متطلبات لكنه بلا إصدار جديد منذ فبراير 2025.',
     metaDescription: 'مقارنة LM Studio وJan وGPT4All: مكتبة النماذج والخصوصية والقياس عن بُعد والتراخيص والمنصات وحالة الصيانة. أي تطبيق ذكاء اصطناعي محلي تثبّت في 2026؟',
     twitterDescription: 'LM Studio مقابل Jan وGPT4All — ثلاثة تطبيقات وثلاثة سيناريوهات: مكتبة النماذج والخصوصية والترخيص وحالة الصيانة.',
     current_models_mentioned: ['Llama 3.1 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
@@ -2353,14 +2353,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'أفضل تطبيق ذكاء اصطناعي محلي 2026',
       'مقارنة تطبيقات النماذج اللغوية المحلية',
     ],
-    leadAnswerBlock: '**LM Studio الأفضل للمستخدمين المتقدمين — أكبر مكتبة نماذج وأكثر الإعدادات. Jan الأفضل للخصوصية — مفتوح المصدر وبلا تتبّع افتراضياً. GPT4All يناسب الأجهزة المتواضعة لكن لا إصدار جديد منه منذ فبراير 2025، لذا فضّل Jan لتطبيق مُصان. الثلاثة مجانية.**',
+    leadAnswerBlock: '**LM Studio الأفضل للمستخدمين المتقدمين — أكبر متصفح نماذج مدمج وأكثر الإعدادات. Jan الأفضل للخصوصية — مفتوح المصدر وبلا تتبّع افتراضياً. GPT4All يناسب الأجهزة المتواضعة لكن لا إصدار جديد منه منذ فبراير 2025، لذا فضّل Jan لتطبيق مُصان. الثلاثة مجانية.**',
     quickAnswerTop: {
       ar: {
         question: 'أيّ تطبيق ذكاء اصطناعي محلي أثبّت: LM Studio أم Jan أم GPT4All؟',
-        answer: 'اختر LM Studio إن أردت أكبر مكتبة نماذج وأكثر الإعدادات. واختر Jan إن أردت واجهة نظيفة وشفرة مفتوحة بالكامل وبلا تتبّع افتراضياً. واختر GPT4All فقط إن كان جهازك قديماً (8 GB RAM، بلا GPU) وتقبل أنه بلا إصدار جديد منذ فبراير 2025.',
+        answer: 'اختر LM Studio إن أردت أكبر متصفح نماذج مدمج وأكثر الإعدادات. واختر Jan إن أردت واجهة نظيفة وشفرة مفتوحة بالكامل وبلا تتبّع افتراضياً. واختر GPT4All فقط إن كان جهازك قديماً (8 GB RAM، بلا GPU) وتقبل أنه بلا إصدار جديد منذ فبراير 2025.',
         bullets: [
           'LM Studio — أغنى متصفح للنماذج وأكثر الإعدادات؛ الأفضل للمستخدمين المتقدمين',
-          'Jan — مفتوح المصدر بالكامل، بلا قياس عن بُعد، وضع داكن أصلي؛ الأفضل للمستخدمين المهتمين بالخصوصية',
+          'Jan — مفتوح المصدر بالكامل، بلا قياس عن بُعد افتراضياً، وضع داكن أصلي؛ الأفضل للمستخدمين المهتمين بالخصوصية',
           'GPT4All — متطلبات خفيفة للأجهزة القديمة، لكن بلا إصدار منذ فبراير 2025',
           'الثلاثة مجانية وتعمل بدون اتصال بعد التثبيت وتحمّل ملفات نماذج GGUF',
           'الثلاثة تستطيع الدردشة مع الملفات المحلية: LM Studio وJan يرفقان المستندات داخل المحادثة، وGPT4All يستخدم ميزة LocalDocs المدمجة',
@@ -2387,8 +2387,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'يتميز LM Studio بأكبر مكتبة نماذج وأكثر الإعدادات — الأنسب للمستخدمين المتقدمين.',
-          'Jan مفتوح المصدر بالكامل مع صفر قياس عن بُعد — يفوز للمستخدمين المهتمين بالخصوصية.',
+          'يتميز LM Studio بأكبر متصفح نماذج مدمج وأكثر الإعدادات — الأنسب للمستخدمين المتقدمين.',
+          'Jan مفتوح المصدر بالكامل وبلا قياس عن بُعد افتراضياً — يفوز للمستخدمين المهتمين بالخصوصية.',
           'GPT4All أخفّها متطلبات لكنه بلا إصدار منذ فبراير 2025 — للأجهزة القديمة جداً فقط.',
           'الثلاثة مجانية وتعمل بدون اتصال بعد التثبيت وتحمّل نماذج GGUF القياسية.',
           'الثلاثة تستطيع الدردشة مع الملفات المحلية: LM Studio وJan يرفقان المستندات داخل المحادثة، وGPT4All يستخدم LocalDocs.',
@@ -2424,8 +2424,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'أيّها يجب أن تختار؟',
         content: '**الاختيار الصحيح يعتمد على أجهزتك وموقفك من الخصوصية ومستواك التقني.** استخدم هذا الاختصار في اتخاذ القرار:',
         rows: [
-          { 'حالتك': 'أريد أكبر مكتبة نماذج وأكثر الإعدادات', 'اختر': 'LM Studio' },
-          { 'حالتك': 'أريد شفرة مفتوحة المصدر بالكامل وصفر قياس عن بُعد', 'اختر': 'Jan' },
+          { 'حالتك': 'أريد أكبر متصفح نماذج مدمج وأكثر الإعدادات', 'اختر': 'LM Studio' },
+          { 'حالتك': 'أريد شفرة مفتوحة المصدر بالكامل وبلا قياس عن بُعد افتراضياً', 'اختر': 'Jan' },
           { 'حالتك': 'لديّ حاسوب محمول عمره 4 سنوات، 8 جيجابايت RAM، بدون GPU', 'اختر': 'GPT4All' },
           { 'حالتك': 'أريد الدردشة مع ملفات PDF من اللحظة الأولى', 'اختر': 'LM Studio' },
           { 'حالتك': 'أريد تقليل القياس عن بُعد وتوثيق إعدادي لمراجعة حماية البيانات', 'اختر': 'Jan' },
@@ -2438,9 +2438,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما عمق مكتبة النماذج في كل تطبيق؟',
         content: 'يمكن للتطبيقات الثلاثة تحميل أي ملف GGUF من القرص. الفارق يكمن في ما تعرضه في متصفحها المدمج.',
         items: [
-          '**LM Studio** — المتصفح المدمج يتصل في الوقت الفعلي بـHugging Face. يتيح التصفية حسب VRAM والترخيص والعائلة والكمية. يعرض ~5,000 متغير نماذج.',
-          '**Jan** — كتالوج منتقى من ~150 نموذجاً، مع استيراد عبر "رابط Hugging Face" لكل شيء آخر. أقل إرباكاً للمبتدئين.',
-          '**GPT4All** — كتالوج مميّز من ~30 نموذجاً شائعاً. استيراد GGUF يدوي للبقية. أصغر متصفح.',
+          '**LM Studio** — المتصفح المدمج يتصل في الوقت الفعلي بـHugging Face. يتيح التصفية حسب VRAM والترخيص والعائلة والكمية.',
+          '**Jan** — كتالوج منتقى، مع استيراد عبر "رابط Hugging Face" لكل شيء آخر. أقل إرباكاً للمبتدئين.',
+          '**GPT4All** — كتالوج مميّز قصير من النماذج الشائعة. استيراد GGUF يدوي للبقية. أصغر متصفح.',
           'يحمّل الثلاثة ملفات GGUF مخصصة عبر السحب والإفلات أو "الاستيراد"، لذا فإن المتصفح المدمج الأصغر لا يمنعك من الوصول إلى أي نموذج.',
         ],
       },
@@ -2478,7 +2478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: 'أيّها تثبّت أولاً في 2026؟',
-        content: '**على معظم المستخدمين البدء بـ LM Studio.** فهو يملك أكبر مكتبة نماذج وأكثر الإعدادات. وJan هو الخيار إذا كان المصدر المفتوح والخصوصية الأهم؛ أما GPT4All فللأجهزة القديمة جداً فقط نظراً إلى حالة صيانته.',
+        content: '**على معظم المستخدمين البدء بـ LM Studio.** فهو يملك أكبر متصفح نماذج مدمج وأكثر الإعدادات. وJan هو الخيار إذا كان المصدر المفتوح والخصوصية الأهم؛ أما GPT4All فللأجهزة القديمة جداً فقط نظراً إلى حالة صيانته.',
         callouts: [
           {
             type: 'warning',
@@ -2487,7 +2487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'اختر **LM Studio** ما لم يكن لديك سبب محدد — فهو التوصية الافتراضية لمعظم المستخدمين.',
-          'اختر **Jan** إذا كنت تحتاج تحديداً إلى شفرة مفتوحة المصدر أو صفر قياس عن بُعد أو واجهة أنظف للاستخدام اليومي.',
+          'اختر **Jan** إذا كنت تحتاج تحديداً إلى شفرة مفتوحة المصدر أو بلا قياس عن بُعد افتراضياً أو واجهة أنظف للاستخدام اليومي.',
           'اختر **GPT4All** إذا كانت أجهزتك محدودة (8 جيجابايت RAM، بدون GPU) — إنها الأكثر تسامحاً مع الأنظمة ذات الإمكانيات المنخفضة.',
           'يمكنك تثبيت الثلاثة بالتوازي؛ تتشارك ملفات النماذج GGUF، لذا فإن تكلفة القرص لتجربة تطبيقات متعددة صغيرة.',
         ],
@@ -2512,7 +2512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل LM Studio أفضل من GPT4All؟',
-            a: 'لمعظم الناس، نعم. لدى LM Studio متصفح نماذج مدمج أكبر ويُحدَّث بانتظام. GPT4All أنسب فقط على الأجهزة ذات ذاكرة RAM قليلة جداً أو حين تحتاج قاعدة شفرة بترخيص MIT.',
+            a: 'لمعظم الناس الذين يريدون متصفح نماذج مدمجاً كبيراً وتحديثات منتظمة، نعم. لدى LM Studio متصفح نماذج مدمج أكبر ويُحدَّث بانتظام. GPT4All أنسب فقط على الأجهزة ذات ذاكرة RAM قليلة جداً أو حين تحتاج قاعدة شفرة بترخيص MIT.',
           },
           {
             q: 'هل GPT4All لا يزال مُصاناً؟',
