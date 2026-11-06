@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-11-06",
+  "note": "Memory available to a model per machine class. Mac usable memory is NOT stored here: it is computed by macUsableGb() in src/lib/vram.ts (owner rule 2026-11-06: flat 8 GB reserved for macOS) so there is one source of truth. reserve_gb below applies to non-Mac classes only and is an assumption, labelled as such.",
+  "profiles": [
+    { "id": "mac-8",   "label": "Mac, 8 GB unified memory",   "kind": "mac-unified", "total_gb": 8 },
+    { "id": "mac-16",  "label": "Mac, 16 GB unified memory",  "kind": "mac-unified", "total_gb": 16 },
+    { "id": "mac-24",  "label": "Mac, 24 GB unified memory",  "kind": "mac-unified", "total_gb": 24 },
+    { "id": "mac-32",  "label": "Mac, 32 GB unified memory",  "kind": "mac-unified", "total_gb": 32 },
+    { "id": "mac-36",  "label": "Mac, 36 GB unified memory",  "kind": "mac-unified", "total_gb": 36 },
+    { "id": "mac-48",  "label": "Mac, 48 GB unified memory",  "kind": "mac-unified", "total_gb": 48 },
+    { "id": "mac-64",  "label": "Mac, 64 GB unified memory",  "kind": "mac-unified", "total_gb": 64 },
+    { "id": "mac-96",  "label": "Mac, 96 GB unified memory",  "kind": "mac-unified", "total_gb": 96 },
+    { "id": "mac-128", "label": "Mac, 128 GB unified memory", "kind": "mac-unified", "total_gb": 128 },
+
+    { "id": "gpu-8",   "label": "NVIDIA/AMD GPU, 8 GB VRAM",  "kind": "discrete-gpu", "total_gb": 8,  "reserve_gb": 1, "reserve_basis": "assumption: display/driver overhead" },
+    { "id": "gpu-12",  "label": "NVIDIA/AMD GPU, 12 GB VRAM", "kind": "discrete-gpu", "total_gb": 12, "reserve_gb": 1, "reserve_basis": "assumption: display/driver overhead" },
+    { "id": "gpu-16",  "label": "NVIDIA/AMD GPU, 16 GB VRAM", "kind": "discrete-gpu", "total_gb": 16, "reserve_gb": 1, "reserve_basis": "assumption: display/driver overhead" },
+    { "id": "gpu-24",  "label": "NVIDIA/AMD GPU, 24 GB VRAM", "kind": "discrete-gpu", "total_gb": 24, "reserve_gb": 1, "reserve_basis": "assumption: display/driver overhead" },
+    { "id": "gpu-32",  "label": "NVIDIA/AMD GPU, 32 GB VRAM", "kind": "discrete-gpu", "total_gb": 32, "reserve_gb": 1, "reserve_basis": "assumption: display/driver overhead" },
+
+    { "id": "pc-16",   "label": "PC, 16 GB RAM (CPU only)",   "kind": "cpu-ram", "total_gb": 16, "reserve_gb": 8, "reserve_basis": "assumption: OS + apps, same flat reserve as the Mac rule" },
+    { "id": "pc-32",   "label": "PC, 32 GB RAM (CPU only)",   "kind": "cpu-ram", "total_gb": 32, "reserve_gb": 8, "reserve_basis": "assumption: OS + apps, same flat reserve as the Mac rule" },
+    { "id": "pc-64",   "label": "PC, 64 GB RAM (CPU only)",   "kind": "cpu-ram", "total_gb": 64, "reserve_gb": 8, "reserve_basis": "assumption: OS + apps, same flat reserve as the Mac rule" }
+  ]
+}
