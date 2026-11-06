@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/qwen-14b-vs-llama-8b-overview-hero-en.webp',
     title: 'Qwen 14B vs Llama 3 8B: Which Runs Better Locally?',
@@ -217,6 +218,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/qwen-14b-vs-llama-8b-overview-hero-de.webp',
     title: 'Qwen 14B vs. Llama 3 8B: Welches läuft lokal besser?',
@@ -343,6 +345,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/qwen-14b-vs-llama-8b-overview-hero-fr.webp',
     title: 'Qwen 14B vs Llama 3 8B : lequel tourne mieux en local ?',
@@ -469,6 +472,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/qwen-14b-vs-llama-8b-overview-hero-ja.webp',
     title: 'Qwen 14B対Llama 3 8B：ローカルでどちらが優れているか？',
@@ -595,6 +599,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/qwen-14b-vs-llama-8b-overview-hero-zh.webp',
     title: 'Qwen 14B 对比 Llama 3 8B：哪款本地运行更好？',
@@ -721,6 +726,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/qwen-14b-vs-llama-8b-overview-hero-pt.webp',
     title: 'Qwen 14B vs Llama 3 8B: qual funciona melhor localmente?',
@@ -847,6 +853,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/qwen-14b-vs-llama-8b-overview-hero-es.webp',
     title: 'Qwen 14B vs Llama 3 8B: ¿cuál funciona mejor en local?',
@@ -973,6 +980,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/qwen-14b-vs-llama-8b-overview-hero-ar.webp',
     title: '⁨Qwen 14B⁩ مقابل ⁨Llama 3 8B⁩: أيهما يعمل بشكل أفضل محليًا؟',
@@ -1099,6 +1107,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/qwen-14b-vs-llama-8b-overview-hero-ko.webp',
     title: 'Qwen 14B vs Llama 3 8B: 로컬에서 어느 쪽이 더 잘 실행됩니까?',

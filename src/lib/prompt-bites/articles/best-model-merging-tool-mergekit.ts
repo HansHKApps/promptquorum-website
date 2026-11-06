@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware Extension',
     heroImage: '/images/best-model-merging-tool-mergekit-overview-hero-en.webp',
     title: 'Mergekit and Alternatives for Merging Local Model Weights',
@@ -175,6 +176,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware Extension',
     heroImage: '/images/best-model-merging-tool-mergekit-overview-hero-de.webp',
     title: 'Mergekit und Alternativen zum Zusammenführen lokaler Modellgewichte',
@@ -347,6 +349,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware Extension',
     heroImage: '/images/best-model-merging-tool-mergekit-overview-hero-fr.webp',
     title: 'Mergekit et alternatives pour fusionner des poids de modèles locaux',
@@ -519,6 +522,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware Extension',
     heroImage: '/images/best-model-merging-tool-mergekit-overview-hero-ja.webp',
     title: 'ローカルモデルの重みをマージするMergekitと代替ツール',
@@ -691,6 +695,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware Extension',
     heroImage: '/images/best-model-merging-tool-mergekit-overview-hero-zh.webp',
     title: 'Mergekit及合并本地模型权重的替代方案',
@@ -863,6 +868,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware Extension',
     heroImage: '/images/best-model-merging-tool-mergekit-overview-hero-es.webp',
     title: 'Mergekit y alternativas para fusionar pesos de modelos locales',
@@ -1035,6 +1041,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware Extension',
     heroImage: '/images/best-model-merging-tool-mergekit-overview-hero-pt.webp',
     title: 'Mergekit e alternativas para fundir pesos de modelos locais',
@@ -1207,6 +1214,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware Extension',
     heroImage: '/images/best-model-merging-tool-mergekit-overview-hero-ar.webp',
     title: 'Mergekit والبدائل لدمج أوزان النماذج المحلية',
@@ -1379,6 +1387,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware Extension',
     heroImage: '/images/best-model-merging-tool-mergekit-overview-hero-ko.webp',
     title: '로컬 모델 가중치를 병합하는 Mergekit과 대안 도구',

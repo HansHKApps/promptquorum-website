@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: 'Best Local LLM for 6 GB VRAM?',
     dateModified: '2026-11-06',
@@ -177,6 +178,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: 'Bestes lokales LLM für 6 GB VRAM?',
     seoTitle: 'Bestes LLM für 6 GB VRAM 2026: Qwen3.5 4B | PromptQuorum',
@@ -294,6 +296,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: 'Meilleur LLM local pour 6 Go de VRAM ?',
     seoTitle: 'Meilleur LLM 6 Go de VRAM 2026 : Qwen3.5 4B | PromptQuorum',
@@ -411,6 +414,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: '6 GB VRAMに最適なローカルLLMは？',
     seoTitle: '6 GB VRAM向けLLM 2026：Qwen3.5 4B',
@@ -528,6 +532,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: '6 GB显存最佳本地LLM是什么？',
     seoTitle: '6 GB显存最佳LLM 2026：Qwen3.5 4B',
@@ -645,6 +650,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: '¿Mejor LLM local para 6 GB de VRAM?',
     seoTitle: 'Mejor LLM para 6 GB de VRAM 2026: Qwen3.5 4B | PromptQuorum',
@@ -762,6 +768,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: 'Melhor LLM local para 6 GB de VRAM?',
     seoTitle: 'Melhor LLM 6 GB de VRAM 2026: Qwen3.5 4B | PromptQuorum',
@@ -879,6 +886,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: 'أفضل نموذج لغوي محلي لـ ⁨6 GB⁩ من ⁨VRAM⁩؟',
     seoTitle: 'أفضل LLM لـ 6 GB VRAM في 2026: Qwen3.5 4B',
@@ -996,6 +1004,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: '6 GB VRAM에 최적인 로컬 LLM은?',
     seoTitle: '6 GB VRAM 최적 LLM 2026: Qwen3.5 4B',

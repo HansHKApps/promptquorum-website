@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Which Local LLM Models Support Japanese Best?',
     dateModified: '2026-11-06',
@@ -140,6 +141,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Welche lokalen LLM-Modelle unterstützen Japanisch am besten?',
     seoTitle: 'Lokale LLMs für Japanisch 2026 | Prompt Bites | PromptQuorum',
@@ -230,6 +232,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Quels modèles LLM locaux prennent le mieux en charge le japonais ?',
     seoTitle: 'LLMs locaux japonais 2026 | Prompt Bites | PromptQuorum',
@@ -320,6 +323,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: '日本語対応のローカルLLMモデルはどれがベスト？',
     seoTitle: '日本語対応ローカルLLMモデル比較2026 | Prompt Bites | PromptQuorum',
@@ -410,6 +414,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: '哪些本地LLM模型对日语支持最好？',
     seoTitle: '最佳日语本地LLM模型2026 | Prompt Bites | PromptQuorum',
@@ -501,6 +506,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   es: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: '¿Qué modelos LLM locales admiten mejor el japonés?',
     seoTitle: 'Mejores LLMs locales en japonés 2026 | PromptQuorum',
@@ -603,6 +609,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'ما أفضل النماذج اللغوية الكبيرة المحلية لدعم اللغة اليابانية؟',
     seoTitle: 'أفضل ⁨LLMs⁩ محلية لليابانية ⁨2026⁩: ⁨Rinna⁩ و⁨ELYZA⁩ و⁨Qwen3⁩',
@@ -700,6 +707,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Quais modelos LLM locais têm melhor suporte ao japonês?',
     seoTitle: 'Melhores LLMs locais em japonês 2026 | PromptQuorum',
@@ -812,6 +820,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: '일본어를 가장 잘 지원하는 로컬 LLM 모델은 무엇입니까?',
     seoTitle: '최고의 일본어 로컬 LLM 2026 | PromptQuorum',

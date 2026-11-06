@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-en.webp',
     title: 'Ollama vs vLLM vs TGI: Which Should You Use for Local Serving?',
@@ -136,6 +137,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-ar.webp',
     title: 'Ollama مقابل vLLM مقابل TGI: أيهما يجب أن تستخدمه للتقديم المحلي؟',
@@ -269,6 +271,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-de.webp',
     title: 'Ollama vs. vLLM vs. TGI: Was sollten Sie für lokales Serving verwenden?',
@@ -402,6 +405,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-es.webp',
     title: 'Ollama vs vLLM vs TGI: ¿Cuál Deberías Usar para Servicio Local?',
@@ -535,6 +539,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-fr.webp',
     title: 'Ollama vs vLLM vs TGI : lequel utiliser pour le déploiement local ?',
@@ -668,6 +673,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-ja.webp',
     title: 'Ollama vs vLLM vs TGI: ローカルサービングにどれを使うべき?',
@@ -801,6 +807,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-ko.webp',
     title: 'Ollama 대 vLLM 대 TGI: 로컬 서빙에 무엇을 사용해야 하는가?',
@@ -934,6 +941,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-pt.webp',
     title: 'Ollama vs vLLM vs TGI: Qual Você Deve Usar para Servir Localmente?',
@@ -1067,6 +1075,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-zh.webp',
     title: 'Ollama 对比 vLLM 对比 TGI：本地服务应该使用哪个？',

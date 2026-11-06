@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/can-local-llm-help-gdpr-overview-hero-en.webp',
     title: 'Can a Local LLM Help with GDPR Compliance?',
@@ -100,6 +101,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/can-local-llm-help-gdpr-overview-hero-de.webp',
     title: 'Kann ein lokales LLM bei der DSGVO-Compliance helfen?',
@@ -177,6 +179,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/can-local-llm-help-gdpr-overview-hero-fr.webp',
     title: 'Un LLM local peut-il aider à la conformité RGPD ?',
@@ -254,6 +257,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/can-local-llm-help-gdpr-overview-hero-ja.webp',
     title: 'ローカルLLMはGDPRコンプライアンスに役立ちますか？',
@@ -331,6 +335,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/can-local-llm-help-gdpr-overview-hero-zh.webp',
     title: '本地LLM能帮助GDPR合规吗？',
@@ -408,6 +413,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/can-local-llm-help-gdpr-overview-hero-pt.webp',
     title: 'Um LLM local pode ajudar com a conformidade do RGPD?',
@@ -493,6 +499,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/can-local-llm-help-gdpr-overview-hero-es.webp',
     title: '¿Puede un LLM local ayudar con el cumplimiento del RGPD?',
@@ -578,6 +585,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/can-local-llm-help-gdpr-overview-hero-ar.webp',
     title: 'هل يمكن لنموذج ⁨LLM⁩ المحلي المساعدة في الامتثال للائحة ⁨GDPR⁩؟',
@@ -663,6 +671,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/can-local-llm-help-gdpr-overview-hero-ko.webp',
     title: '로컬 LLM이 GDPR 컴플라이언스에 도움이 됩니까?',

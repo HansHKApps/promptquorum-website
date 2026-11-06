@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-en.webp',
     title: 'Q4_K_M vs Q8_0: Which Should You Pick?',
@@ -91,6 +92,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-de.webp',
     title: 'Q4_K_M vs. Q8_0: Was sollten Sie wählen?',
@@ -171,6 +173,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-fr.webp',
     title: 'Q4_K_M ou Q8_0 : lequel choisir ?',
@@ -251,6 +254,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-ja.webp',
     title: 'Q4_K_M vs Q8_0：どちらを選ぶべきですか？',
@@ -331,6 +335,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-zh.webp',
     title: 'Q4_K_M与Q8_0：该如何选择？',
@@ -411,6 +416,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-pt.webp',
     title: 'Q4_K_M vs Q8_0: qual escolher?',
@@ -491,6 +497,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-es.webp',
     title: 'Q4_K_M vs Q8_0: ¿cuál elegir?',
@@ -571,6 +578,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-ar.webp',
     title: '⁨Q4⁩_⁨K⁩_⁨M⁩ مقابل ⁨Q8⁩_⁨0⁩: أيهما تختار؟',
@@ -651,6 +659,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-ko.webp',
     title: 'Q4_K_M vs Q8_0: 어느 것을 선택해야 합니까?',

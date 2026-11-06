@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Ollama',
     title: 'Best Ollama Models for CPU Only?',
     dateModified: '2026-10-17',
@@ -114,6 +115,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Ollama',
     title: 'Die besten Ollama-Modelle nur für die CPU?',
     seoTitle: 'Beste Ollama-Modelle ohne GPU 2026 | PromptQuorum',
@@ -213,6 +215,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Ollama',
     title: 'Meilleurs modèles Ollama en mode CPU uniquement ?',
     seoTitle: 'Meilleurs modèles Ollama sans GPU 2026 | PromptQuorum',
@@ -312,6 +315,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Ollama',
     title: 'CPU専用で使えるOllamaの最適モデルは？',
     seoTitle: 'GPU不要Ollamaモデル2026：CPU専用ベスト4選 | PromptQuorum',
@@ -411,6 +415,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Ollama',
     title: '仅用 CPU 运行 Ollama 的最佳模型？',
     seoTitle: '无GPU纯CPU运行Ollama 2026：最佳四款模型 | PromptQuorum',
@@ -510,6 +515,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Ollama',
     title: '¿Los mejores modelos de Ollama solo para CPU?',
     seoTitle: 'Mejores modelos de Ollama sin GPU 2026 | PromptQuorum',
@@ -609,6 +615,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Ollama',
     title: 'Melhores modelos Ollama somente para CPU?',
     seoTitle: 'Melhores modelos Ollama sem GPU 2026 | PromptQuorum',
@@ -708,6 +715,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Ollama',
     title: 'أفضل نماذج ⁨Ollama⁩ للـ⁨CPU⁩ فقط؟',
     seoTitle: 'أفضل نماذج ⁨Ollama⁩ بدون ⁨GPU 2026⁩ | ⁨PromptQuorum⁩',
@@ -807,6 +815,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Ollama',
     title: 'CPU 전용 최고의 Ollama 모델은 무엇입니까?',
     seoTitle: 'GPU 없이 사용하는 최고의 Ollama 모델 2026 | PromptQuorum',

@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/runpod-vs-vastai-pricing-overview-hero-en.webp',
     title: 'RunPod vs Vast.ai: Which Should You Use in 2026?',
@@ -193,6 +194,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/runpod-vs-vastai-pricing-overview-hero-de.webp',
     title: 'RunPod vs Vast.ai: Was sollten Sie 2026 nutzen?',
@@ -384,6 +386,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/runpod-vs-vastai-pricing-overview-hero-fr.webp',
     title: 'RunPod vs Vast.ai : lequel utiliser en 2026 ?',
@@ -575,6 +578,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/runpod-vs-vastai-pricing-overview-hero-ja.webp',
     title: '2026年、RunPodとVast.aiのどちらを使うべきですか？',
@@ -766,6 +770,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/runpod-vs-vastai-pricing-overview-hero-zh.webp',
     title: '2026年RunPod与Vast.ai该用哪个？',
@@ -957,6 +962,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/runpod-vs-vastai-pricing-overview-hero-pt.webp',
     title: 'RunPod vs Vast.ai: qual usar em 2026?',
@@ -1148,6 +1154,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/runpod-vs-vastai-pricing-overview-hero-es.webp',
     title: 'RunPod vs Vast.ai: ¿cuál usar en 2026?',
@@ -1339,6 +1346,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/runpod-vs-vastai-pricing-overview-hero-ar.webp',
     title: '⁨RunPod⁩ مقابل ⁨Vast.ai⁩: أيهما تستخدم في ⁨2026⁩؟',
@@ -1530,6 +1538,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/runpod-vs-vastai-pricing-overview-hero-ko.webp',
     title: 'RunPod 대 Vast.ai: 2026년에 어느 쪽을 사용해야 합니까?',

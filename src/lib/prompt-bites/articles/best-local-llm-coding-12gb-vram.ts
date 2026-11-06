@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     title: 'Best Local LLM for Coding with 12 GB VRAM?',
     dateModified: '2026-10-17',
@@ -149,6 +150,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     title: 'Bestes lokales LLM für Coding mit 12 GB VRAM?',
     seoTitle: 'Bestes Coding-Modell für 12 GB VRAM: Gemma 4 12B (2026)',
@@ -248,6 +250,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     title: 'Meilleur LLM local pour le coding avec 12 Go de VRAM ?',
     seoTitle: 'Meilleur modèle de code 12 Go VRAM : Gemma 4 12B (2026)',
@@ -347,6 +350,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     title: '12 GB VRAMでコーディングに最適なローカルLLMは？',
     seoTitle: '12GB VRAM最適コーディングLLM：Gemma 4 12B（2026）',
@@ -446,6 +450,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     title: '12 GB VRAM 编程最佳本地 LLM 是哪款？',
     seoTitle: '12GB显存最佳编程模型：Gemma 4 12B（2026）',
@@ -545,6 +550,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     title: '¿Mejor LLM local para programar con 12 GB de VRAM?',
     seoTitle: 'Mejor modelo de código para 12 GB VRAM: Gemma 4 12B (2026)',
@@ -644,6 +650,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     title: 'Melhor LLM local para programação com 12 GB de VRAM?',
     seoTitle: 'Melhor modelo de código para 12 GB VRAM: Gemma 4 12B (2026)',
@@ -743,6 +750,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     title: 'ما أفضل نموذج لغوي كبير محلي للبرمجة بـ⁨12⁩ جيجابايت ⁨VRAM⁩؟',
     seoTitle: 'أفضل نموذج برمجة لـ12 GB VRAM: Gemma 4 12B (2026)',
@@ -842,6 +850,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     title: '12 GB VRAM으로 코딩에 최적인 로컬 LLM은?',
     seoTitle: '12GB VRAM 코딩 최적 모델: Gemma 4 12B (2026)',

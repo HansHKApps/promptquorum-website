@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-en.webp',
     title: 'Best GPU Under $600 for Local LLMs in 2026?',
@@ -130,6 +131,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-de.webp',
     title: 'Beste GPU unter 600 € für lokale LLMs 2026?',
@@ -258,6 +260,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-fr.webp',
     title: 'Meilleure GPU à moins de 600 € pour les LLM locaux en 2026 ?',
@@ -385,6 +388,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-ja.webp',
     title: '2026年版 600ドル以下でローカルLLMに最適なGPUは？',
@@ -512,6 +516,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-zh.webp',
     title: '2026年600美元以下本地LLM最佳GPU是什么？',
@@ -639,6 +644,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-es.webp',
     title: '¿Mejor GPU por menos de 600 $ para LLMs locales en 2026?',
@@ -766,6 +772,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-ar.webp',
     title: 'أفضل بطاقة رسومات بأقل من 600 دولار للنماذج اللغوية المحلية في 2026؟',
@@ -893,6 +900,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-pt.webp',
     title: 'Melhor GPU Abaixo de US$ 600 para LLMs Locais em 2026?',
@@ -1020,6 +1028,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-ko.webp',
     title: '2026년 로컬 LLM용 $600 이하 최고의 GPU는?',

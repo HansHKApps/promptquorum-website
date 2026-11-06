@@ -7,6 +7,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-virginia-overview-hero-en.webp',
     title: 'Is Balcony Solar Legal in Virginia?',
@@ -114,6 +115,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-virginia-overview-hero-de.webp',
     title: 'Ist Balkonsolar in Virginia legal?',
@@ -221,6 +223,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-virginia-overview-hero-fr.webp',
     title: 'Le solaire de balcon est-il légal en Virginie ?',
@@ -328,6 +331,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-virginia-overview-hero-ja.webp',
     title: 'バージニア州でベランダソーラーは合法ですか？',
@@ -435,6 +439,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-virginia-overview-hero-zh.webp',
     title: '弗吉尼亚州的阳台太阳能合法吗？',
@@ -542,6 +547,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-virginia-overview-hero-es.webp',
     title: '¿Es legal la energía solar de balcón en Virginia?',
@@ -649,6 +655,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-virginia-overview-hero-pt.webp',
     title: 'A energia solar de varanda é legal na Virgínia?',
@@ -756,6 +763,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-virginia-overview-hero-ar.webp',
     title: 'هل الطاقة الشمسية للشرفات قانونية في فيرجينيا؟',
@@ -863,6 +871,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-virginia-overview-hero-ko.webp',
     title: '버지니아주에서 발코니 태양광은 합법입니까?',

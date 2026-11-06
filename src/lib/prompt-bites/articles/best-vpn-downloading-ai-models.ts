@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-en.webp',
     title: 'Best VPN for Downloading AI Models in 2026',
@@ -242,6 +243,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-de.webp',
     title: 'Bestes VPN zum Herunterladen von KI-Modellen 2026',
@@ -429,6 +431,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-fr.webp',
     title: 'Meilleur VPN pour télécharger des modèles IA en 2026',
@@ -616,6 +619,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-ja.webp',
     title: '2026年AIモデルダウンロードに最適なVPN',
@@ -803,6 +807,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-zh.webp',
     title: '2026年下载AI模型最佳VPN',
@@ -990,6 +995,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-pt.webp',
     title: 'As melhores VPNs para baixar modelos de IA em 2026',
@@ -1177,6 +1183,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-es.webp',
     title: 'Las mejores VPN para descargar modelos de IA en 2026',
@@ -1364,6 +1371,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-ar.webp',
     title: 'أفضل ⁨VPN⁩ لتنزيل نماذج الذكاء الاصطناعي في ⁨2026⁩',
@@ -1551,6 +1559,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-ko.webp',
     title: 'AI 모델 다운로드를 위한 최고의 VPN 2026',

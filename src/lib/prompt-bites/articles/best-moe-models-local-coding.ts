@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Best MoE Models for Local Coding?',
     dateModified: '2026-11-06',
@@ -139,6 +140,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Beste MoE-Modelle für lokales Coding?',
     seoTitle: 'Beste MoE-Modelle für lokales Coding 2026 (16–32 GB)',
@@ -266,6 +268,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Meilleurs modèles MoE pour le codage local ?',
     seoTitle: 'Meilleurs modèles MoE pour coder en local 2026 (16–32 Go)',
@@ -393,6 +396,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'ローカルコーディングに最適な MoE モデルは？',
     seoTitle: 'ローカル開発向けMoEモデル比較2026（16〜32GB）',
@@ -520,6 +524,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: '本地编程最佳 MoE 模型是什么？',
     seoTitle: '本地编程最佳MoE模型2026（16–32GB）',
@@ -647,6 +652,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: '¿Los mejores modelos MoE para coding local?',
     seoTitle: 'Mejores modelos MoE para programar en local 2026 (16–32 GB)',
@@ -774,6 +780,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Melhores modelos MoE para programação local?',
     seoTitle: 'Melhores modelos MoE para programar local 2026 (16–32 GB)',
@@ -901,6 +908,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'أفضل نماذج ⁨MoE⁩ للبرمجة المحلية؟',
     seoTitle: 'أفضل نماذج ⁨MoE⁩ للبرمجة محليًا ⁨2026⁩ (⁨16⁩–⁨32 GB⁩)',
@@ -1028,6 +1036,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: '로컬 코딩을 위한 최적 MoE 모델은?',
     seoTitle: '로컬 코딩 최적 MoE 모델 2026 (16~32GB)',

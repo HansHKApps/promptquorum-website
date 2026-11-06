@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-en.webp',
     title: 'Best Local LLM for Coding on AMD 5700X + RTX 3070 Ti?',
@@ -123,6 +124,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-de.webp',
     title: 'Bestes lokales Coding-LLM für AMD 5700X + RTX 3070 Ti?',
@@ -236,6 +238,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-fr.webp',
     title: 'Meilleur LLM local pour coder avec AMD 5700X + RTX 3070 Ti ?',
@@ -349,6 +352,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-ja.webp',
     title: 'AMD 5700X + RTX 3070 Tiでコーディングに最適なローカルLLMは？',
@@ -462,6 +466,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-zh.webp',
     title: 'AMD 5700X + RTX 3070 Ti 最适合哪款本地编程 LLM？',
@@ -575,6 +580,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-es.webp',
     title: '¿Mejor LLM local para programar con AMD 5700X + RTX 3070 Ti?',
@@ -688,6 +694,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-pt.webp',
     title: 'Melhor LLM local para programar com AMD 5700X + RTX 3070 Ti?',
@@ -801,6 +808,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-ar.webp',
     title: 'ما أفضل نموذج لغوي محلي للبرمجة على AMD 5700X + RTX 3070 Ti؟',
@@ -914,6 +922,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-ko.webp',
     title: 'AMD 5700X + RTX 3070 Ti에서 코딩용으로 가장 좋은 로컬 LLM은?',

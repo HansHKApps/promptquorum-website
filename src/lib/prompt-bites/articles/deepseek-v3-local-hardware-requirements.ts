@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-en.webp',
     title: 'DeepSeek-V3 Local Hardware Requirements?',
@@ -185,6 +186,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   de: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-de.webp',
     title: 'DeepSeek-V3 lokale Hardware-Anforderungen?',
@@ -366,6 +368,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   fr: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-fr.webp',
     title: 'Prérequis matériels pour DeepSeek-V3 en local ?',
@@ -547,6 +550,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   ja: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-ja.webp',
     title: 'DeepSeek V3のローカル実行ハードウェア要件は？',
@@ -728,6 +732,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   zh: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-zh.webp',
     title: 'DeepSeek V3本地运行硬件要求？',
@@ -916,6 +921,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   pt: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-pt.webp',
     title: 'Quais são os requisitos de hardware para rodar o DeepSeek-V3 localmente?',
@@ -1097,6 +1103,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-es.webp',
     title: '¿Cuáles son los requisitos de hardware para ejecutar DeepSeek-V3 en local?',
@@ -1278,6 +1285,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-ar.webp',
     title: 'ما هي متطلبات الأجهزة لتشغيل ⁨DeepSeek-V3⁩ محلياً؟',
@@ -1458,6 +1466,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-ko.webp',
     title: 'DeepSeek V3를 로컬에서 실행하려면 어떤 하드웨어가 필요합니까?',

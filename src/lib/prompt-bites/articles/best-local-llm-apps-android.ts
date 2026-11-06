@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     title: 'Best Local LLM Apps for Android?',
     seoTitle: 'Best Local LLM Apps for Android 2026: 3 Top Picks',
@@ -153,6 +154,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     title: 'Die besten lokalen LLM-Apps für Android?',
     seoTitle: 'Beste LLM-Apps für Android 2026: Schnelle Empfehlungen',
@@ -256,6 +258,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     title: 'Meilleures applications LLM locales pour Android ?',
     seoTitle: 'Apps LLM Offline Android 2026 : Sélection Rapide',
@@ -359,6 +362,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     title: 'Androidで最良のローカルLLMアプリは？',
     seoTitle: 'Androidローカル AI アプリ 2026年：おすすめ 3 選クイックガイド',
@@ -462,6 +466,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     title: 'Android 上最好的本地 LLM 应用？',
     seoTitle: 'Android 本地 LLM 应用 2026：精选快速推荐',
@@ -565,6 +570,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     title: '¿Las mejores apps de LLM local para Android?',
     seoTitle: 'Mejores Apps LLM Offline Android 2026: Picks Rápidos',
@@ -672,6 +678,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     title: 'Quais são os melhores apps de LLM local para Android?',
     seoTitle: 'Melhores Apps LLM Offline Android 2026: Escolhas Rápidas',
@@ -779,6 +786,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     title: 'ما أفضل تطبيقات النماذج اللغوية الكبيرة المحلية لنظام ⁨Android⁩؟',
     seoTitle: 'أفضل تطبيقات ⁨AI⁩ بلا إنترنت على ⁨Android 2026⁩',
@@ -886,6 +894,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     title: 'Android용 최고의 로컬 LLM 앱은 무엇입니까?',
     seoTitle: 'Android 오프라인 AI 앱 2026: 빠른 추천 3선',

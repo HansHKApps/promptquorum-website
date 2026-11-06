@@ -9,6 +9,7 @@ const PAGE_UPDATED = '2026-10-19';
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     is_living_page: true,
@@ -235,6 +236,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     theme: 'Knowledge & Research',
@@ -291,6 +293,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     theme: 'Knowledge & Research',
@@ -363,6 +366,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     theme: 'Knowledge & Research',
@@ -435,6 +439,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     theme: 'Knowledge & Research',
@@ -507,6 +512,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     theme: 'Knowledge & Research',
@@ -579,6 +585,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     theme: 'Knowledge & Research',
@@ -651,6 +658,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     theme: 'Knowledge & Research',
@@ -723,6 +731,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     theme: 'Knowledge & Research',

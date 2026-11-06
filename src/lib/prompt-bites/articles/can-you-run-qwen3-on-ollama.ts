@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/can-you-run-qwen3-on-ollama-overview-hero-en.webp',
     title: 'Can You Run Qwen 3 on Ollama?',
@@ -95,6 +96,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/can-you-run-qwen3-on-ollama-overview-hero-de.webp',
     title: 'Kann man Qwen 3 mit Ollama ausführen?',
@@ -175,6 +177,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/can-you-run-qwen3-on-ollama-overview-hero-fr.webp',
     title: 'Peut-on exécuter Qwen 3 avec Ollama ?',
@@ -255,6 +258,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/can-you-run-qwen3-on-ollama-overview-hero-ja.webp',
     title: 'Qwen 3 は Ollama で動かせますか？',
@@ -335,6 +339,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/can-you-run-qwen3-on-ollama-overview-hero-zh.webp',
     title: '可以在Ollama上运行Qwen 3吗？',
@@ -415,6 +420,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/can-you-run-qwen3-on-ollama-overview-hero-pt.webp',
     title: 'Você pode executar Qwen 3 no Ollama?',
@@ -495,6 +501,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/can-you-run-qwen3-on-ollama-overview-hero-es.webp',
     title: '¿Se puede ejecutar Qwen 3 en Ollama?',
@@ -575,6 +582,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/can-you-run-qwen3-on-ollama-overview-hero-ar.webp',
     title: 'هل يمكن تشغيل ⁨Qwen 3⁩ على ⁨Ollama⁩؟',
@@ -655,6 +663,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/can-you-run-qwen3-on-ollama-overview-hero-ko.webp',
     title: 'Ollama에서 Qwen 3를 실행할 수 있습니까?',

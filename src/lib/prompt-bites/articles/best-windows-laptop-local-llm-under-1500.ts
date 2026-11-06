@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-en.webp',
     title: 'Best Windows Laptop for Local LLMs Under $1,500 in 2026?',
@@ -187,6 +188,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-ar.webp',
     title: 'أفضل جهاز Windows محمول لتشغيل LLM محليًا بأقل من 1,500 دولار في 2026؟',
@@ -371,6 +373,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-de.webp',
     title: 'Der beste Windows-Laptop für lokale LLMs unter 1.500 $ in 2026?',
@@ -555,6 +558,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-es.webp',
     title: '¿Cuál es el Mejor Portátil Windows para LLMs Locales por Menos de $1,500 en 2026?',
@@ -739,6 +743,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-fr.webp',
     title: 'Quel est le meilleur ordinateur portable Windows pour les LLM locaux à moins de 1 500 $ en 2026 ?',
@@ -923,6 +928,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-ja.webp',
     title: '2026年版 15万円台のローカルLLM向け最良のWindowsノートPCは？',
@@ -1108,6 +1114,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-ko.webp',
     title: '2026년 1,500달러 이하 로컬 LLM용 최고의 Windows 노트북은?',
@@ -1292,6 +1299,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-pt.webp',
     title: 'Melhor Notebook Windows para LLMs Locais Até US$ 1.500 em 2026?',
@@ -1476,6 +1484,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-zh.webp',
     title: '2026年1500美元以内本地LLM最佳Windows笔记本电脑是什么？',

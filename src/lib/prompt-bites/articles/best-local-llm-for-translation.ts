@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-translation-overview-hero-en.webp',
     title: 'Best Local LLM for Translation Tasks?',
@@ -103,6 +104,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-translation-overview-hero-de.webp',
     title: 'Das beste lokale LLM für Übersetzungsaufgaben?',
@@ -203,6 +205,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-translation-overview-hero-fr.webp',
     title: 'Meilleur LLM local pour les tâches de traduction ?',
@@ -303,6 +306,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-translation-overview-hero-ja.webp',
     title: '翻訳タスクに最適なローカルLLMは？',
@@ -403,6 +407,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-translation-overview-hero-zh.webp',
     title: '哪种本地LLM最适合翻译任务？',
@@ -503,6 +508,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-translation-overview-hero-es.webp',
     title: '¿Cuál es el mejor LLM local para tareas de traducción?',
@@ -603,6 +609,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-translation-overview-hero-pt.webp',
     title: 'Qual o melhor LLM local para tarefas de tradução?',
@@ -703,6 +710,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-translation-overview-hero-ar.webp',
     title: 'ما هو أفضل نموذج لغوي محلي لمهام الترجمة؟',
@@ -803,6 +811,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-translation-overview-hero-ko.webp',
     title: '번역 작업에 가장 적합한 로컬 LLM은 무엇입니까?',

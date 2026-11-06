@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/mlx-vs-ollama-vs-llamacpp-overview-hero-en.webp',
     title: 'MLX vs Ollama vs llama.cpp: Which Inference Engine Should You Use?',
@@ -149,6 +150,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/mlx-vs-ollama-vs-llamacpp-overview-hero-de.webp',
     title: 'MLX vs Ollama vs llama.cpp: Welche Inferenz-Engine sollten Sie verwenden?',
@@ -248,6 +250,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/mlx-vs-ollama-vs-llamacpp-overview-hero-fr.webp',
     title: 'MLX vs Ollama vs llama.cpp : quel moteur d\'inférence utiliser ?',
@@ -347,6 +350,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/mlx-vs-ollama-vs-llamacpp-overview-hero-ja.webp',
     title: 'MLX vs Ollama vs llama.cpp：どの推論エンジンを使うべきですか？',
@@ -446,6 +450,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/mlx-vs-ollama-vs-llamacpp-overview-hero-pt.webp',
     title: 'MLX vs Ollama vs llama.cpp: Qual motor de inferência usar?',
@@ -552,6 +557,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/mlx-vs-ollama-vs-llamacpp-overview-hero-es.webp',
     title: 'MLX vs Ollama vs llama.cpp: ¿Cuál motor de inferencia deberías usar?',
@@ -658,6 +664,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/mlx-vs-ollama-vs-llamacpp-overview-hero-zh.webp',
     title: 'MLX vs Ollama vs llama.cpp：应该选哪个推理引擎？',
@@ -757,6 +764,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/mlx-vs-ollama-vs-llamacpp-overview-hero-ar.webp',
     title: '⁨MLX⁩ مقابل ⁨Ollama⁩ مقابل ⁨llama.cpp⁩: أي محرك استنتاج يجب أن تستخدم؟',
@@ -863,6 +871,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/mlx-vs-ollama-vs-llamacpp-overview-hero-ko.webp',
     title: 'MLX vs Ollama vs llama.cpp: 어떤 추론 엔진을 사용해야 합니까?',

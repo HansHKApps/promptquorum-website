@@ -7,6 +7,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maryland-overview-hero-en.webp',
     title: 'Is Balcony Solar Legal in Maryland?',
@@ -113,6 +114,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maryland-overview-hero-de.webp',
     title: 'Ist Balkonsolar in Maryland legal?',
@@ -219,6 +221,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maryland-overview-hero-fr.webp',
     title: 'Le solaire de balcon est-il légal dans le Maryland ?',
@@ -325,6 +328,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maryland-overview-hero-ja.webp',
     title: 'メリーランド州でバルコニーソーラーは合法ですか？',
@@ -431,6 +435,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maryland-overview-hero-zh.webp',
     title: '在马里兰州安装阳台太阳能合法吗？',
@@ -537,6 +542,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maryland-overview-hero-es.webp',
     title: '¿Es legal la energía solar de balcón en Maryland?',
@@ -643,6 +649,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maryland-overview-hero-pt.webp',
     title: 'A energia solar de varanda é legal em Maryland?',
@@ -749,6 +756,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maryland-overview-hero-ar.webp',
     title: 'هل الطاقة الشمسية للشرفات قانونية في ولاية ماريلاند؟',
@@ -855,6 +863,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maryland-overview-hero-ko.webp',
     title: '메릴랜드주에서 발코니 태양광은 합법입니까?',

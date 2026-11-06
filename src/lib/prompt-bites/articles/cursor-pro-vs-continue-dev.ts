@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/cursor-pro-vs-continue-dev-overview-hero-en.webp',
     title: 'Continue.dev Acquired by Cursor: Shutdown and Alternatives',
@@ -157,6 +158,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/cursor-pro-vs-continue-dev-overview-hero-de.webp',
     title: 'Continue.dev von Cursor übernommen: Einstellung und Alternativen',
@@ -311,6 +313,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/cursor-pro-vs-continue-dev-overview-hero-fr.webp',
     title: 'Continue.dev racheté par Cursor : arrêt et alternatives',
@@ -465,6 +468,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/cursor-pro-vs-continue-dev-overview-hero-ja.webp',
     title: 'Continue.devがCursorに買収：終了と代替ツール',
@@ -619,6 +623,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/cursor-pro-vs-continue-dev-overview-hero-zh.webp',
     title: 'Continue.dev被Cursor收购：停运与替代方案',
@@ -773,6 +778,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/cursor-pro-vs-continue-dev-overview-hero-pt.webp',
     title: 'Continue.dev adquirido pela Cursor: encerramento e alternativas',
@@ -927,6 +933,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/cursor-pro-vs-continue-dev-overview-hero-es.webp',
     title: 'Cursor adquiere Continue.dev: cierre y alternativas',
@@ -1081,6 +1088,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/cursor-pro-vs-continue-dev-overview-hero-ar.webp',
     title: 'استحواذ Cursor على Continue.dev: الإغلاق والبدائل',
@@ -1235,6 +1243,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/cursor-pro-vs-continue-dev-overview-hero-ko.webp',
     title: 'Continue.dev, Cursor에 인수: 종료와 대안',

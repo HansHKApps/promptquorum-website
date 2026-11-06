@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-korean-language-models-local-overview-hero-en.webp',
     title: 'Best Korean LLMs to Run Locally',
@@ -123,6 +124,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-korean-language-models-local-overview-hero-ar.webp',
     title: 'أفضل نماذج LLM الكورية للتشغيل محليًا',
@@ -243,6 +245,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-korean-language-models-local-overview-hero-de.webp',
     title: 'Die besten koreanischen LLMs für den lokalen Betrieb',
@@ -363,6 +366,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-korean-language-models-local-overview-hero-es.webp',
     title: 'Mejores LLM coreanos para ejecutar en local',
@@ -483,6 +487,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-korean-language-models-local-overview-hero-fr.webp',
     title: 'Meilleurs LLM coréens à exécuter en local',
@@ -603,6 +608,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-korean-language-models-local-overview-hero-ja.webp',
     title: 'ローカルで動かせる韓国語LLMのおすすめ',
@@ -723,6 +729,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-korean-language-models-local-overview-hero-ko.webp',
     title: '로컬에서 실행할 수 있는 한국어 LLM 추천',
@@ -843,6 +850,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-korean-language-models-local-overview-hero-pt.webp',
     title: 'Melhores LLMs coreanos para rodar localmente',
@@ -963,6 +971,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-korean-language-models-local-overview-hero-zh.webp',
     title: '适合本地运行的韩语 LLM 推荐',

@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-en.webp',
     title: 'What Hardware Do You Need to Fine-Tune a 7B Model Locally?',
@@ -146,6 +147,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-ar.webp',
     title: 'ما العتاد اللازم للضبط الدقيق لنموذج 7B محليًا؟',
@@ -289,6 +291,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-de.webp',
     title: 'Welche Hardware braucht man, um ein 7B-Modell lokal zu fine-tunen?',
@@ -432,6 +435,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-es.webp',
     title: '¿Qué Hardware Necesitas para Hacer Fine-Tuning de un Modelo de 7B Localmente?',
@@ -575,6 +579,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-fr.webp',
     title: 'Quel matériel faut-il pour effectuer un fine-tuning local d\'un modèle 7B ?',
@@ -718,6 +723,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-ja.webp',
     title: '7Bモデルをローカルでファインチューニングするために必要なハードウェアは?',
@@ -861,6 +867,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-ko.webp',
     title: '7B 모델을 로컬에서 파인튜닝하려면 어떤 하드웨어가 필요한가?',
@@ -1004,6 +1011,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-pt.webp',
     title: 'Qual Hardware Você Precisa para Fazer Fine-Tuning de um Modelo de 7B Localmente?',
@@ -1147,6 +1155,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-zh.webp',
     title: '本地微调 7B 模型需要什么硬件？',

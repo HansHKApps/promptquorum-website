@@ -345,6 +345,7 @@ const DIR_UI = {
   // mention this tool" count, both of which stay unchanged.
   featureArticleBadge: { en: 'Feature Article', de: 'Ausführliche Rezension', fr: 'Article dédié', ja: '特集記事', zh: '专题文章', es: 'Artículo destacado', pt: 'Artigo destacado', ar: 'مقال متخصص', ko: '심층 리뷰' },
   archivedBadge: { en: 'Archived', de: 'Archiviert', fr: 'Archivé', ja: 'アーカイブ済み', zh: '已归档', es: 'Archivado', pt: 'Arquivado', ar: 'مؤرشف', ko: '보관됨' },
+  delistedBadge: { en: 'Not found in store', de: 'Nicht mehr im Store', fr: 'Introuvable dans le store', ja: 'ストアで見つかりません', zh: '商店中已找不到', es: 'No aparece en la tienda', pt: 'Não encontrado na loja', ar: 'غير موجود في المتجر', ko: '스토어에서 찾을 수 없음' },
   unmaintainedBadge: { en: 'No longer maintained', de: 'Nicht mehr gepflegt', fr: 'Plus maintenu', ja: 'メンテナンス終了', zh: '已停止维护', es: 'Sin mantenimiento', pt: 'Sem manutenção', ar: 'لم يعد مُصانًا', ko: '유지보수 종료' },
   staleListingBadgeWarn: { en: 'Not verified in 6+ months', de: 'Seit über 6 Monaten nicht geprüft', fr: 'Non vérifié depuis plus de 6 mois', ja: '6ヶ月以上未確認', zh: '超过6个月未核实', es: 'Sin verificar desde hace más de 6 meses', pt: 'Não verificado há mais de 6 meses', ar: 'لم يُتحقَّق منه منذ أكثر من 6 أشهر', ko: '6개월 넘게 확인되지 않음' },
   staleListingTooltipWarn: {

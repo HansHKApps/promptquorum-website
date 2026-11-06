@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Best 14B Model for Coding?',
     dateModified: '2026-10-17',
@@ -173,6 +174,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     last_full_refresh: '2026-10-17',
   },
   de: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Bestes 14B-Modell für Coding?',
     seoTitle: 'Beste 14B-Modelle 2026: Coding und Allgemeinnutzung',
@@ -280,6 +282,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Meilleur modèle 14B pour le coding ?',
     seoTitle: 'Meilleurs modèles 14B 2026 : coding et usage général',
@@ -387,6 +390,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'コーディングに最適な14Bモデルは？',
     seoTitle: '最適な14Bモデル2026：コーディングと汎用向け',
@@ -494,6 +498,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: '编程最佳14B模型是哪款？',
     seoTitle: '2026年最佳14B模型：编程与通用场景推荐对比',
@@ -601,6 +606,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: '¿El mejor modelo 14B para coding?',
     seoTitle: 'Mejores modelos 14B 2026: coding y uso general',
@@ -708,6 +714,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: '¿El mejor modelo 14B para coding?',
     seoTitle: 'Melhores modelos 14B 2026: programação e uso geral',
@@ -815,6 +822,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'أفضل نموذج ⁨14B⁩ للبرمجة؟',
     seoTitle: 'أفضل نماذج ⁨14B⁩ لعام ⁨2026⁩: للبرمجة وللاستخدام العام',
@@ -922,6 +930,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: '코딩에 최적인 14B 모델은 무엇입니까?',
     seoTitle: '2026 최고의 14B 모델: 코딩·범용 추천 비교',

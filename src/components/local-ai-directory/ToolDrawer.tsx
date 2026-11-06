@@ -306,7 +306,7 @@ export function ToolDrawer({
 
               {app.upstreamStatus && (
                 <span className="mb-4 inline-flex w-fit items-center gap-1 rounded-full border border-gray-300 bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-700">
-                  {t(app.upstreamStatus.state === 'archived' ? 'archivedBadge' : 'unmaintainedBadge', ui)}
+                  {t(app.upstreamStatus.state === 'archived' ? 'archivedBadge' : app.upstreamStatus.state === 'delisted' ? 'delistedBadge' : 'unmaintainedBadge', ui)}
                 </span>
               )}
 

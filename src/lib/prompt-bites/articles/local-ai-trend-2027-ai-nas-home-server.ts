@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-ai-nas-home-server-overview-hero-en.webp',
     title: 'Local AI Trends 2027, Part 7 of 10: The NAS Is Becoming an AI Memory Layer, Unevenly',
@@ -135,6 +136,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-ai-nas-home-server-overview-hero-de.webp',
     title: 'Local AI Trends 2027, Teil 7 von 10: Das NAS wird zur KI-Gedächtnisebene, aber ungleichmäßig',
@@ -267,6 +269,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-ai-nas-home-server-overview-hero-fr.webp',
     title: 'Tendances de l\'IA locale 2027, partie 7 sur 10 : le NAS devient une couche de mémoire IA, mais de façon inégale',
@@ -399,6 +402,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-ai-nas-home-server-overview-hero-ja.webp',
     title: 'ローカルAIトレンド2027、全10回中第7回:NASはAIメモリ層になりつつあるが、進み方にはばらつきがある',
@@ -531,6 +535,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-ai-nas-home-server-overview-hero-zh.webp',
     title: '本地AI趋势2027,第7篇(共10篇):NAS正在成为AI记忆层,但进展并不均衡',
@@ -663,6 +668,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-ai-nas-home-server-overview-hero-es.webp',
     title: 'Tendencias de IA local 2027, parte 7 de 10: el NAS se convierte en una capa de memoria de IA, pero de forma desigual',
@@ -795,6 +801,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-ai-nas-home-server-overview-hero-pt.webp',
     title: 'Tendências de IA local 2027, parte 7 de 10: o NAS está virando uma camada de memória de IA, mas de forma desigual',
@@ -927,6 +934,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-ai-nas-home-server-overview-hero-ar.webp',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 7 من 10: يتحول NAS إلى طبقة ذاكرة للذكاء الاصطناعي، لكن بوتيرة متفاوتة',
@@ -1059,6 +1067,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-ai-nas-home-server-overview-hero-ko.webp',
     title: '로컬 AI 트렌드 2027, 10부 중 7부: NAS가 AI 메모리 계층이 되어 가고 있지만 속도는 고르지 않습니다',

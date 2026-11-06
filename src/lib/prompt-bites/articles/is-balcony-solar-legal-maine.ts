@@ -7,6 +7,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maine-overview-hero-en.webp',
     title: 'Is Balcony Solar Legal in Maine?',
@@ -113,6 +114,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maine-overview-hero-de.webp',
     title: 'Ist Balkonsolar in Maine legal?',
@@ -219,6 +221,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maine-overview-hero-fr.webp',
     title: 'Le solaire de balcon est-il légal dans le Maine ?',
@@ -325,6 +328,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maine-overview-hero-ja.webp',
     title: 'メイン州でバルコニーソーラーは合法ですか?',
@@ -431,6 +435,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maine-overview-hero-zh.webp',
     title: '缅因州的阳台太阳能合法吗?',
@@ -537,6 +542,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maine-overview-hero-es.webp',
     title: '¿Es legal la energía solar de balcón en Maine?',
@@ -643,6 +649,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maine-overview-hero-pt.webp',
     title: 'A energia solar de varanda é legal no Maine?',
@@ -749,6 +756,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maine-overview-hero-ar.webp',
     title: 'هل الطاقة الشمسية للشرفات قانونية في ولاية مين؟',
@@ -855,6 +863,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maine-overview-hero-ko.webp',
     title: '메인주에서 발코니 태양광이 합법입니까?',

@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Hardware & Performance',
@@ -220,6 +221,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   de: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Hardware & Performance',
@@ -437,6 +439,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Hardware & Performance',
@@ -654,6 +657,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Hardware & Performance',
@@ -871,6 +875,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Hardware & Performance',
@@ -1088,6 +1093,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   es: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Hardware & Performance',
@@ -1304,6 +1310,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: { '@type': 'TechArticle', headline: 'eGPU para MacBook e IA local: qué funciona en 2026', datePublished: '2026-05-26', dateModified: '2026-10-17', url: 'https://www.promptquorum.com/es/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'es' },
   },
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Hardware & Performance',
@@ -1520,6 +1527,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: { '@type': 'TechArticle', headline: 'eGPU para MacBook e IA local: o que funciona em 2026', datePublished: '2026-05-26', dateModified: '2026-10-17', url: 'https://www.promptquorum.com/pt/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'pt-BR' },
   },
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Hardware & Performance',
@@ -1736,6 +1744,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: { '@type': 'TechArticle', headline: 'eGPU مع MacBook والذكاء الاصطناعي المحلي: ما الذي يعمل في 2026؟', datePublished: '2026-05-26', dateModified: '2026-10-17', url: 'https://www.promptquorum.com/ar/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'ar' },
   },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Hardware & Performance',

@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-en.webp',
     title: 'Best Local LLM + Obsidian Integration in 2026',
@@ -184,6 +185,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-de.webp',
     title: 'Beste lokale LLM- + Obsidian-Integration 2026',
@@ -365,6 +367,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-fr.webp',
     title: 'Meilleure intégration LLM local + Obsidian en 2026',
@@ -546,6 +549,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-ja.webp',
     title: '2026年版 最良のローカルLLM + Obsidian連携',
@@ -727,6 +731,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-zh.webp',
     title: '2026年最佳本地LLM + Obsidian集成方案',
@@ -908,6 +913,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-es.webp',
     title: 'Mejor integración de LLM local + Obsidian en 2026',
@@ -1089,6 +1095,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-pt.webp',
     title: 'Melhor Integração de LLM Local + Obsidian em 2026',
@@ -1270,6 +1277,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-ar.webp',
     title: 'أفضل تكامل بين نموذج لغوي محلي و Obsidian في 2026',
@@ -1451,6 +1459,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-ko.webp',
     title: '2026년 최고의 로컬 LLM + Obsidian 통합',

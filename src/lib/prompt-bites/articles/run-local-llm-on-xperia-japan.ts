@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-en.webp',
     title: 'Can You Run a Local LLM on an Xperia Phone?',
@@ -162,6 +163,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-de.webp',
     title: 'Kann man auf einem Xperia ein lokales LLM ausführen?',
@@ -268,6 +270,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-fr.webp',
     title: 'Peut-on exécuter un LLM local sur un Xperia ?',
@@ -374,6 +377,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-ja.webp',
     title: 'XperiaでローカルLLMを動かせる？',
@@ -480,6 +484,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-pt.webp',
     title: 'Você pode executar um LLM local em um telefone Xperia?',
@@ -586,6 +591,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-es.webp',
     title: '¿Puedes ejecutar un LLM local en un teléfono Xperia?',
@@ -692,6 +698,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-zh.webp',
     title: 'Xperia手机能运行本地LLM吗？',
@@ -798,6 +805,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-ar.webp',
     title: 'هل يمكنك تشغيل نموذج لغة محلي على هاتف ⁨Xperia⁩؟',
@@ -904,6 +912,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware Guides',
     heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-ko.webp',
     title: 'Xperia 스마트폰에서 로컬 LLM을 실행할 수 있습니까?',

@@ -23,6 +23,7 @@ const siblingBites = [
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-en.webp',
     title: 'Local AI Trends 2027, Part 1 of 10: Cloud AI Prices Diverge',
@@ -153,6 +154,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-de.webp',
     title: 'Lokale-KI-Trends 2027, Teil 1 von 10: Cloud-KI-Preise laufen auseinander',
@@ -283,6 +285,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-fr.webp',
     title: 'Tendances IA locale 2027, partie 1 sur 10 : les prix de l’IA cloud divergent',
@@ -413,6 +416,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-ja.webp',
     title: 'ローカルAIトレンド2027、第1部/全10部:クラウドAI価格の二極化',
@@ -543,6 +547,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-zh.webp',
     title: '本地AI趋势2027,第1部分(共10部分):云端AI价格走向分化',
@@ -673,6 +678,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-es.webp',
     title: 'Tendencias de IA local 2027, parte 1 de 10: los precios de la IA en la nube divergen',
@@ -803,6 +809,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-pt.webp',
     title: 'Tendências de IA local 2027, parte 1 de 10: os preços da IA na nuvem divergem',
@@ -933,6 +940,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-ar.webp',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 1 من 10: أسعار الذكاء الاصطناعي السحابي تتباعد',
@@ -1063,6 +1071,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-ko.webp',
     title: '로컬 AI 트렌드 2027, 10부 중 1부: 클라우드 AI 가격의 양극화',

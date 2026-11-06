@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: 'Best Ollama Models for 4 GB VRAM?',
     heroImage: '/images/best-ollama-models-4gb-vram-overview-hero-en.webp',
@@ -189,6 +190,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: 'Beste Ollama-Modelle für 4 GB VRAM?',
     heroImage: '/images/best-ollama-models-4gb-vram-overview-hero-de.webp',
@@ -305,6 +307,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: 'Meilleurs modèles Ollama pour 4 Go de VRAM ?',
     heroImage: '/images/best-ollama-models-4gb-vram-overview-hero-fr.webp',
@@ -421,6 +424,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: '4 GB VRAM向け最良Ollamaモデルは？',
     heroImage: '/images/best-ollama-models-4gb-vram-overview-hero-ja.webp',
@@ -537,6 +541,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: '4 GB显存最佳Ollama模型？',
     heroImage: '/images/best-ollama-models-4gb-vram-overview-hero-zh.webp',
@@ -653,6 +658,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: '¿Mejores modelos Ollama para 4 GB de VRAM?',
     heroImage: '/images/best-ollama-models-4gb-vram-overview-hero-es.webp',
@@ -769,6 +775,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: 'Melhores modelos Ollama para 4 GB de VRAM?',
     heroImage: '/images/best-ollama-models-4gb-vram-overview-hero-pt.webp',
@@ -897,6 +904,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: 'أفضل نماذج ⁨Ollama⁩ لـ⁨4 GB VRAM⁩؟',
     heroImage: '/images/best-ollama-models-4gb-vram-overview-hero-ar.webp',
@@ -1025,6 +1033,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: '4GB VRAM에 최적화된 Ollama 모델은?',
     heroImage: '/images/best-ollama-models-4gb-vram-overview-hero-ko.webp',

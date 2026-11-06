@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Best Mini PC for Local LLM?',
     heroImage: '/images/best-mini-pc-for-local-llm-overview-hero-en.webp',
@@ -150,6 +151,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Bester Mini-PC für lokale LLMs?',
     heroImage: '/images/best-mini-pc-for-local-llm-overview-hero-de.webp',
@@ -247,6 +249,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Meilleur mini PC pour LLM local ?',
     heroImage: '/images/best-mini-pc-for-local-llm-overview-hero-fr.webp',
@@ -344,6 +347,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'ローカルLLMに最適なミニPCは？',
     heroImage: '/images/best-mini-pc-for-local-llm-overview-hero-ja.webp',
@@ -441,6 +445,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: '本地 LLM 最佳迷你电脑是什么？',
     heroImage: '/images/best-mini-pc-for-local-llm-overview-hero-zh.webp',
@@ -538,6 +543,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: '¿El mejor mini PC para LLM local?',
     heroImage: '/images/best-mini-pc-for-local-llm-overview-hero-es.webp',
@@ -635,6 +641,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Melhor mini PC para LLM local?',
     heroImage: '/images/best-mini-pc-for-local-llm-overview-hero-pt.webp',
@@ -732,6 +739,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'أفضل جهاز كمبيوتر مصغر لتشغيل نماذج اللغة الكبيرة محلياً؟',
     heroImage: '/images/best-mini-pc-for-local-llm-overview-hero-ar.webp',
@@ -829,6 +837,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: '로컬 LLM용 최고의 미니 PC는?',
     heroImage: '/images/best-mini-pc-for-local-llm-overview-hero-ko.webp',

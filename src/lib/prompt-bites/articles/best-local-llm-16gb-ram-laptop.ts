@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-en.webp',
     title: 'Best Local LLM for a 16 GB RAM Laptop (2026)?',
@@ -158,6 +159,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-de.webp',
     title: 'Bestes lokales LLM für einen 16-GB-RAM-Laptop (2026)?',
@@ -262,6 +264,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-fr.webp',
     title: 'Meilleur LLM local pour un laptop avec 16 Go de RAM (2026) ?',
@@ -366,6 +369,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-ja.webp',
     title: '16 GB RAM ラップトップに最適なローカル LLM は？（2026）',
@@ -470,6 +474,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-es.webp',
     title: '¿Qué LLM Local es Mejor para un Laptop con 16 GB de RAM (2026)?',
@@ -574,6 +579,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-pt.webp',
     title: 'Qual é o Melhor LLM Local para um Notebook com 16 GB de RAM (2026)?',
@@ -678,6 +684,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-ar.webp',
     title: 'ما أفضل نموذج لغوي كبير محلي لحاسب محمول بـ⁨16⁩ جيجابايت ⁨RAM⁩؟ (⁨2026⁩)',
@@ -782,6 +789,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-zh.webp',
     title: '16 GB 内存笔记本最适合哪款本地 LLM？（2026）',
@@ -886,6 +894,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-ko.webp',
     title: '16 GB RAM 노트북에 가장 적합한 로컬 LLM은 무엇입니까? (2026)',

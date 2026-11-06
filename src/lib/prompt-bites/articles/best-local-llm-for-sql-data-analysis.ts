@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-en.webp',
     title: 'Best Local LLM for SQL and Data Analysis?',
@@ -124,6 +125,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-de.webp',
     title: 'Das beste lokale LLM für SQL und Datenanalyse?',
@@ -245,6 +247,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-fr.webp',
     title: 'Meilleur LLM local pour le SQL et l\'analyse de données ?',
@@ -366,6 +369,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-ja.webp',
     title: 'SQLとデータ分析に最適なローカルLLMは？',
@@ -487,6 +491,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-zh.webp',
     title: '哪种本地LLM最适合SQL和数据分析？',
@@ -608,6 +613,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-es.webp',
     title: '¿Cuál es el mejor LLM local para SQL y análisis de datos?',
@@ -729,6 +735,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-pt.webp',
     title: 'Qual o melhor LLM local para SQL e análise de dados?',
@@ -850,6 +857,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-ar.webp',
     title: 'ما هو أفضل نموذج لغوي محلي لـ SQL وتحليل البيانات؟',
@@ -971,6 +979,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-ko.webp',
     title: 'SQL 및 데이터 분석에 가장 적합한 로컬 LLM은 무엇입니까?',

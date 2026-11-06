@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-en.webp',
     title: 'Chinese vs English Prompting: Which is Better?',
@@ -228,6 +229,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   de: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-de.webp',
     title: 'Chinesisch vs. Englisch beim Prompting: Was ist besser?',
@@ -404,6 +406,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   fr: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-fr.webp',
     title: 'Prompting en chinois vs anglais : lequel est meilleur ?',
@@ -584,6 +587,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   ja: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-ja.webp',
     title: '中国語 vs 英語プロンプト：どちらが優れている？',
@@ -765,6 +769,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   zh: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-zh.webp',
     title: '中文 vs 英文提示词：哪种更好？',
@@ -971,6 +976,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   pt: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-pt.webp',
     title: 'Prompts em chinês vs inglês: qual é melhor para LLMs locais?',
@@ -1153,6 +1159,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-es.webp',
     title: 'Prompts en chino vs inglés: ¿cuál es mejor para LLMs locales?',
@@ -1335,6 +1342,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-ar.webp',
     title: 'الكتابة بالصينية مقابل الإنجليزية: أيهما أفضل لنماذج ⁨LLM⁩ المحلية؟',
@@ -1511,6 +1519,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-ko.webp',
     title: '중국어 vs 영어 프롬프팅: 로컬 LLM에는 어느 쪽이 더 낫습니까?',

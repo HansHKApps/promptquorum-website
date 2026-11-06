@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-local-llm-legal-medical-privacy-overview-hero-en.webp',
     title: 'Best Local LLM Setup for Legal and Medical Document Privacy?',
@@ -128,6 +129,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-local-llm-legal-medical-privacy-overview-hero-ar.webp',
     title: 'أفضل إعداد LLM محلي لخصوصية المستندات القانونية والطبية؟',
@@ -250,6 +252,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-local-llm-legal-medical-privacy-overview-hero-de.webp',
     title: 'Das beste lokale LLM-Setup für den Schutz juristischer und medizinischer Dokumente?',
@@ -372,6 +375,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-local-llm-legal-medical-privacy-overview-hero-es.webp',
     title: '¿Cuál es la Mejor Configuración de LLM Local para la Privacidad de Documentos Legales y Médicos?',
@@ -494,6 +498,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-local-llm-legal-medical-privacy-overview-hero-fr.webp',
     title: 'Quelle est la meilleure configuration de LLM local pour la confidentialité des documents juridiques et médicaux ?',
@@ -616,6 +621,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-local-llm-legal-medical-privacy-overview-hero-ja.webp',
     title: '法務・医療文書のプライバシーに最適なローカルLLMセットアップは?',
@@ -738,6 +744,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-local-llm-legal-medical-privacy-overview-hero-ko.webp',
     title: '법률 및 의료 문서 프라이버시를 위한 최적의 로컬 LLM 설정은?',
@@ -860,6 +867,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-local-llm-legal-medical-privacy-overview-hero-pt.webp',
     title: 'Qual a Melhor Configuração de LLM Local para Privacidade de Documentos Jurídicos e Médicos?',
@@ -982,6 +990,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/best-local-llm-legal-medical-privacy-overview-hero-zh.webp',
     title: '法律和医疗文档隐私的最佳本地 LLM 配置是什么？',

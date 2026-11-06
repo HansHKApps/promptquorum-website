@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/can-you-run-rag-on-2gb-ram-overview-hero-en.webp',
     title: 'Can You Run RAG on 2 GB RAM?',
@@ -142,6 +143,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/can-you-run-rag-on-2gb-ram-overview-hero-de.webp',
     title: 'Kann man RAG mit 2 GB RAM betreiben?',
@@ -234,6 +236,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/can-you-run-rag-on-2gb-ram-overview-hero-fr.webp',
     title: 'Peut-on exécuter RAG avec 2 Go de RAM ?',
@@ -326,6 +329,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/can-you-run-rag-on-2gb-ram-overview-hero-ja.webp',
     title: '2 GB RAMでRAGを実行できますか？',
@@ -418,6 +422,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/can-you-run-rag-on-2gb-ram-overview-hero-pt.webp',
     title: 'Você pode executar RAG com 2 GB de RAM?',
@@ -510,6 +515,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/can-you-run-rag-on-2gb-ram-overview-hero-es.webp',
     title: '¿Puedes Ejecutar RAG con 2 GB de RAM?',
@@ -602,6 +608,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/can-you-run-rag-on-2gb-ram-overview-hero-zh.webp',
     title: '2 GB 内存能运行 RAG 吗？',
@@ -694,6 +701,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/can-you-run-rag-on-2gb-ram-overview-hero-ar.webp',
     title: 'هل يمكنك تشغيل ⁨RAG⁩ بذاكرة ⁨2 GB RAM⁩؟',
@@ -786,6 +794,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/can-you-run-rag-on-2gb-ram-overview-hero-ko.webp',
     title: '2 GB RAM으로 RAG를 실행할 수 있습니까?',

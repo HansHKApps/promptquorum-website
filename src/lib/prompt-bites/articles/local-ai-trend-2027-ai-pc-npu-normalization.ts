@@ -15,6 +15,7 @@ const SIBLING_BITES = [
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-ai-pc-npu-normalization-overview-hero-en.webp',
     title: 'Local AI Trends 2027, Part 2 of 10: NPUs Are Standard, but Memory Prices Slowed AI PC Sales',
@@ -161,6 +162,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-ai-pc-npu-normalization-overview-hero-de.webp',
     title: 'Local AI Trends 2027, Teil 2 von 10: NPUs sind Standard, doch Speicherpreise bremsen den KI-PC-Absatz',
@@ -306,6 +308,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-ai-pc-npu-normalization-overview-hero-fr.webp',
     title: 'Tendances IA Locale 2027, Partie 2 sur 10 : Les NPU sont la norme, mais le prix de la mémoire freine les PC IA',
@@ -451,6 +454,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-ai-pc-npu-normalization-overview-hero-ja.webp',
     title: 'ローカルAIトレンド2027 第2回(全10回):NPUは標準に、だがメモリ価格がAI PCの販売を鈍らせた',
@@ -596,6 +600,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-ai-pc-npu-normalization-overview-hero-zh.webp',
     title: '本地AI趋势2027,第2/10篇:NPU已成标配,但内存涨价拖慢了AI PC销量',
@@ -741,6 +746,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-ai-pc-npu-normalization-overview-hero-es.webp',
     title: 'Tendencias de IA Local 2027, Parte 2 de 10: Las NPU ya son estándar, pero el precio de la memoria frena las PC con IA',
@@ -886,6 +892,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-ai-pc-npu-normalization-overview-hero-pt.webp',
     title: 'Tendências de IA Local 2027, Parte 2 de 10: NPUs já são padrão, mas o preço da memória freou os PCs com IA',
@@ -1031,6 +1038,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-ai-pc-npu-normalization-overview-hero-ar.webp',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 2 من 10: وحدات NPU أصبحت معيارًا، لكن أسعار الذاكرة أبطأت مبيعات أجهزة الكمبيوتر الذكية',
@@ -1176,6 +1184,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-ai-pc-npu-normalization-overview-hero-ko.webp',
     title: '로컬 AI 트렌드 2027, 10편 중 2편: NPU는 기본이 됐지만 메모리 가격이 AI PC 판매를 늦췄다',

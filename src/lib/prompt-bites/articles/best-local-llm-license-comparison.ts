@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/best-local-llm-license-comparison-overview-hero-en.webp',
     title: 'Open-Weight Model License Comparison for Commercial Use',
@@ -142,6 +143,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/best-local-llm-license-comparison-overview-hero-de.webp',
     title: 'Lizenzvergleich für Open-Weight-Modelle bei kommerzieller Nutzung',
@@ -281,6 +283,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/best-local-llm-license-comparison-overview-hero-fr.webp',
     title: 'Comparatif des licences de modèles Open-Weight pour un usage commercial',
@@ -420,6 +423,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/best-local-llm-license-comparison-overview-hero-ja.webp',
     title: '商用利用のためのOpen-Weightモデルライセンス比較',
@@ -559,6 +563,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/best-local-llm-license-comparison-overview-hero-zh.webp',
     title: '开放权重模型商用许可对比',
@@ -698,6 +703,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/best-local-llm-license-comparison-overview-hero-es.webp',
     title: 'Comparativa de licencias de modelos Open-Weight para uso comercial',
@@ -837,6 +843,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/best-local-llm-license-comparison-overview-hero-pt.webp',
     title: 'Comparativo de licenças de modelos Open-Weight para uso comercial',
@@ -976,6 +983,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/best-local-llm-license-comparison-overview-hero-ar.webp',
     title: 'مقارنة تراخيص نماذج Open-Weight للاستخدام التجاري',
@@ -1115,6 +1123,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/best-local-llm-license-comparison-overview-hero-ko.webp',
     title: '상업적 이용을 위한 Open-Weight 모델 라이선스 비교',

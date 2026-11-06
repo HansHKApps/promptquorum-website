@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: 'What Is Q4_K_M Quantization?',
     dateModified: '2026-11-03',
@@ -143,6 +144,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: 'Was ist Q4_K_M-Quantisierung?',
     seoTitle: 'Q4_K_M erklärt: k-quant 2026 | Prompt Bites | PromptQuorum',
@@ -226,6 +228,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: 'Qu\'est-ce que la quantisation Q4_K_M ?',
     seoTitle: 'Q4_K_M : format k-quant 2026 | Prompt Bites | PromptQuorum',
@@ -309,6 +312,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: 'Q4_K_M量化とは何ですか？',
     seoTitle: 'Q4_K_M量化の完全解説 2026 | Prompt Bites | PromptQuorum',
@@ -392,6 +396,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: 'Q4_K_M量化是什么？',
     seoTitle: 'Q4_K_M量化格式完整解析 2026 | Prompt Bites | PromptQuorum',
@@ -475,6 +480,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: 'O que é a quantização Q4_K_M?',
     seoTitle: 'Guia de quantização Q4_K_M 2026 | PromptQuorum',
@@ -558,6 +564,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: '¿Qué es la cuantización Q4_K_M?',
     seoTitle: 'Guía de cuantización Q4_K_M 2026 | PromptQuorum',
@@ -641,6 +648,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: 'ما هو ضغط ⁨Q4⁩_⁨K⁩_⁨M⁩؟',
     seoTitle: '⁨Q4⁩_⁨K⁩_⁨M⁩: ضغط ⁨k-quant 4-bit 2026⁩ | ⁨PromptQuorum⁩',
@@ -724,6 +732,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     title: 'Q4_K_M 양자화란 무엇입니까?',
     seoTitle: 'Q4_K_M 양자화 완전 가이드 2026 | PromptQuorum',

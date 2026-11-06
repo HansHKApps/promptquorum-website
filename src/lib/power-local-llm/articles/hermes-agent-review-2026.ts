@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
     publishDate: '2026-09-03',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     educationalLevel: 'Advanced',
     audience: 'Developers and self-hosters evaluating whether to run an autonomous personal AI agent on their own infrastructure instead of a hosted assistant',
     primaryTerm: 'Hermes Agent',
@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Is Hermes Agent free and can it run fully offline?',
-        answer: 'Yes to both, with a condition on offline: the software is MIT-licensed and free ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). It runs fully offline only when pointed at a local model through a custom endpoint such as Ollama; any cloud provider needs an internet connection and that provider\'s own API costs.',
+        answer: 'Yes to both, with a condition on offline: the software is MIT-licensed and free ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). Model calls run fully offline only when pointed at a local model through a custom endpoint such as Ollama (messaging channels, MCP servers and web tools still need a network); any cloud provider needs an internet connection and that provider\'s own API costs.',
         bullets: [
           'MIT license, confirmed in the repo LICENSE file',
           'Local models: Ollama, vLLM, llama.cpp, or LM Studio via a custom endpoint',
@@ -73,8 +73,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Official site: hermes-agent.org. No affiliate program exists for Hermes Agent on this site — every link below is a plain, disclosed link.',
         ],
         callouts: [
-          { type: 'note', text: 'Press reports (TechCrunch, WSJ, October 2026) say Nous Research raised about $90M at a $1.5B valuation. The valuation comes from press reporting, not from a primary announcement this site has seen, so treat it as company context.' },
-          { type: 'warning', text: 'Hermes Agent has a real, disclosed vulnerability history, not just theoretical risk. An independent audit published April 11, 2026 reported 4 Critical and 9 High-severity issues in its default configuration, and [OpenCVE lists 45 published CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) against the project, including a CVSS 8.8 remote-code-execution issue. See the "Realistic Expectations and Risks" section below before deploying.' },
+          { type: 'note', text: 'Nous Research is a private AI research company; check its official site for current company information.' },
+          { type: 'warning', text: 'Hermes Agent has a real, disclosed vulnerability history, not just theoretical risk. An independent researcher\'s audit of version 0.8.0, published April 11, 2026, reported 4 Critical and 9 High-severity issues in that version\'s default configuration, and [OpenCVE lists published CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) against the project, including a CVSS 8.8 remote-code-execution issue. See the "Realistic Expectations and Risks" section below before deploying.' },
         ],
       },
       overview: {
@@ -118,7 +118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         faqs: [
           { q: 'Does Hermes Agent require a GPU to run locally?', a: 'Only if you run the model yourself. A local model through Ollama has the same hardware dependency as any local LLM: a capable GPU speeds up inference substantially, and CPU-only inference is possible but slower. With a hosted provider the agent process itself needs far less compute. Model-specific VRAM needs depend on the model you choose, so check that model\'s own documentation.' },
-          { q: 'Can Hermes Agent run without any internet connection?', a: 'Yes, if you configure it to use a local OpenAI-compatible endpoint such as Ollama for its model calls. Any hosted provider requires an internet connection and incurs that provider\'s own per-token API costs, separate from Hermes Agent itself being free software.' },
+          { q: 'Can Hermes Agent run without any internet connection?', a: 'Yes, if you configure it to use a local OpenAI-compatible endpoint such as Ollama for its model calls; messaging channels, MCP servers and web-facing tools still need a network connection. Any hosted provider requires an internet connection and incurs that provider\'s own per-token API costs, separate from Hermes Agent itself being free software.' },
         ],
       },
       deployment: {
@@ -154,7 +154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Nous Research, the company behind it',
-            content: 'Nous Research is the organization behind Hermes Agent, the Hermes model family, and the official Hermes Agent site at hermes-agent.org. Press reports (TechCrunch, WSJ, October 2026) say Nous Research raised about $90M at a $1.5B valuation. That valuation comes from press reporting rather than a primary announcement this site has seen, so check current reporting before relying on it.',
+            content: 'Nous Research is the organization behind Hermes Agent, the Hermes model family, and the official Hermes Agent site at hermes-agent.org. Nous Research is a private AI research company; check its official site for current company information.',
           },
         ],
         callouts: [
@@ -166,18 +166,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Are Realistic Expectations for Running Hermes Agent?',
         content: '**An autonomous agent with persistent memory and a self-improving skill loop needs closer supervision than a stateless chatbot, because its behavior accumulates over time instead of resetting each session — and Hermes Agent specifically has an active, disclosed vulnerability history you should account for before deploying it, not just an architectural "supervise it closely" caveat.**',
         items: [
-          'An independent security audit by researcher @Anic888, published April 11, 2026, found 4 Critical and 9 High-severity findings in Hermes Agent\'s default configuration: unrestricted shell execution that bypasses the built-in command-detection guard, unrestricted credential-file access (the audit lists SSH private keys, API key files, browser profiles, git credential caches, and cloud-provider config files as readable with no deny list), container environments that unconditionally skip approval checks, and a persistent skill-injection path where an attacker can write files to `~/.hermes/skills/` that keep running across sessions',
-          '[OpenCVE lists 45 published CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) against NousResearch/hermes-agent, including CVE-2026-71963 (CVSS 8.8, remote code execution via a malicious git config file) and CVE-2026-82021 (CVSS 8.3, a supply-chain vulnerability in the bundled MCP catalog that could propagate malicious code to every host that installed an affected catalog entry). CVE counts and severities change as new issues are filed and old ones are patched, so check the current list for the version you plan to run before deploying',
+          'An independent security audit published on April 11, 2026 (summarised in [Cloud Security Alliance\'s research note](https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/)) reported 4 Critical and 9 High-severity findings in the default configuration at that time: unrestricted shell execution that bypasses the built-in command-detection guard, unrestricted credential-file access (the audit lists SSH private keys, API key files, browser profiles, git credential caches, and cloud-provider config files as readable with no deny list), container environments that unconditionally skip approval checks, and a persistent skill-injection path where an attacker can write files to `~/.hermes/skills/` that keep running across sessions',
+          '[OpenCVE lists published CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) against NousResearch/hermes-agent, including CVE-2026-71963 (CVSS 8.8, remote code execution via a malicious git config file) and CVE-2026-82021 (CVSS 8.3, a supply-chain vulnerability in the bundled MCP catalog that could propagate malicious code to every host that installed an affected catalog entry). CVE counts and severities change as new issues are filed and old ones are patched, so check the current list for the version you plan to run before deploying',
           'Security researchers at Repello.ai also describe risk classes that will not show up as individual CVE numbers: indirect prompt injection through the agent\'s own memory store (an attacker who can write into memory can plant instructions the agent later retrieves and executes) and unverified Model Context Protocol servers that can inject instructions into a connected agent without the user approving each one',
           'Persistent memory means mistakes or bad assumptions the agent makes can persist and compound across sessions if unreviewed — periodically check what it has stored, and treat the memory store itself as sensitive data, since a security review by [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business) notes it can accumulate account details and client information over time',
           'Self-written skills are, by definition, code or routines the agent produced itself; review the contents of `~/.hermes/skills/` before letting it run unattended on sensitive tasks — this directory is specifically the mechanism the April 2026 audit flagged for persistent skill injection, so check the files themselves, not just what the agent reports doing',
           'Messaging-platform access widens the agent\'s attack surface compared with a terminal-only tool. Treat bot tokens and API credentials for Telegram, Discord, Slack, WhatsApp, and Signal with the same care as any other credential that grants access to an automated process',
           'Model choice affects both cost and privacy: a local model through Ollama keeps data on your own infrastructure, while a hosted provider such as OpenRouter, Anthropic, or OpenAI receives your requests, subject to that provider\'s own data-handling terms',
-          'Update to the current release before deploying, and disable any "skip all approval checks" / unrestricted-autonomy setting for production use — several of the critical findings above are specifically about approval checks being bypassed or absent by default, not about a missing convenience feature',
+          'Update to the current release before deploying, and disable any "skip all approval checks" / unrestricted-autonomy setting for production use — several of the critical findings above are specifically about approval checks being bypassed or absent in the audited version, not about a missing convenience feature',
           'This site has not run its own long-duration test of Hermes Agent\'s skill-loop or memory behavior at the time of writing; the architecture points above describe documented behavior, and the vulnerability points are sourced to the named independent audit and CVE database, not to an incident this site observed directly',
         ],
         callouts: [
-          { type: 'warning', text: 'This is disclosed, architecture-level vulnerability risk, not a report of a specific completed breach. No independently verified report of a successful attack via these vectors against a real deployment was found at the time of writing — the point is that these are real, patchable weaknesses in default configurations, confirmed by an outside audit and a public CVE record, not hypothetical ones. Patch to the current release and review the configuration above before trusting the agent with sensitive tasks, files, or credentials.' },
+          { type: 'warning', text: 'This is disclosed, architecture-level vulnerability risk, not a report of a specific completed breach. No independently verified report of a successful attack via these vectors against a real deployment was found at the time of writing — the point is that these are real, patchable weaknesses in default configurations, reported by an independent researcher in the default configuration at that time, alongside two separately published CVEs, not hypothetical ones. Patch to the current release and review the configuration above before trusting the agent with sensitive tasks, files, or credentials.' },
         ],
       },
       whoShouldUse: {
@@ -232,7 +232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Mistake 3: Treating press-reported funding figures as confirmed fact',
-            content: 'Press reports (TechCrunch, WSJ, October 2026) say Nous Research raised about $90M at a $1.5B valuation. That valuation comes from press reporting rather than a primary announcement this site has seen, so treat it as company context and check current reporting.',
+            content: 'This site does not state funding or valuation figures for Nous Research, because it has not seen a primary announcement. Check Nous Research\'s official site for current company information before relying on any figure.',
           },
           {
             title: 'Mistake 4: Skipping credential hygiene for messaging channels',
@@ -240,7 +240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Mistake 5: Deploying the default configuration without checking known vulnerabilities',
-            content: 'An independent audit published April 11, 2026 reported 4 Critical and 9 High-severity issues in Hermes Agent\'s default configuration, including unrestricted shell execution and unrestricted credential-file access, and [OpenCVE lists 45 published CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) against the project, including a CVSS 8.8 remote-code-execution issue. Update to the current release, disable unrestricted-autonomy and "skip approval" settings, and check the CVE list for your target version before trusting the agent with sensitive tasks. Treat this as ongoing patch hygiene, not a one-time setup step.',
+            content: 'An independent researcher\'s audit of version 0.8.0, published April 11, 2026, reported 4 Critical and 9 High-severity issues in that version\'s default configuration of Hermes Agent, including unrestricted shell execution and unrestricted credential-file access, and [OpenCVE lists published CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) against the project, including a CVSS 8.8 remote-code-execution issue. Update to the current release, disable unrestricted-autonomy and "skip approval" settings, and check the CVE list for your target version before trusting the agent with sensitive tasks. Treat this as ongoing patch hygiene, not a one-time setup step.',
           },
         ],
       },
@@ -254,12 +254,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Which models can Hermes Agent use?', a: 'Hermes Agent supports dozens of providers, including Nous Portal, OpenRouter, Anthropic, OpenAI, Google Gemini, DeepSeek, and Hugging Face, plus any OpenAI-compatible endpoint for local models.' },
           { q: 'What messaging platforms can I use to talk to Hermes Agent?', a: 'Telegram, Discord, Slack, WhatsApp, and Signal, in addition to a terminal interface. Each channel needs its own bot token or API credential set up per that platform\'s standard process.' },
           { q: 'How much does it cost to self-host Hermes Agent?', a: 'The software is free; hosting cost depends on where you run it. Supported backends are local, Docker, SSH, Modal, Daytona, and Vercel Sandbox. Actual pricing depends on the provider you choose and changes over time, so confirm current rates directly with that provider.' },
-          { q: 'Is Hermes Agent the same as AutoGPT?', a: 'No. Both are MIT-licensed, self-hostable autonomous agent projects, but Hermes Agent is built by Nous Research with a persistent-memory, self-improving-skill architecture and multi-platform messaging access, while classic AutoGPT is an unscoped planning-loop agent with terminal-only access and no built-in persistent-memory or skill-authoring system.' },
-          { q: 'Who makes Hermes Agent?', a: 'Nous Research, the organization also behind the Hermes model family and the official hermes-agent.org site. Press reports (TechCrunch, WSJ, October 2026) say it raised about $90M at a $1.5B valuation; that comes from press reporting, not a primary announcement this site has seen.' },
-          { q: 'Can Hermes Agent run completely offline with no internet access?', a: 'Yes, if configured to use a local model endpoint such as Ollama rather than a hosted provider, which requires an internet connection to reach its models.' },
+          { q: 'Is Hermes Agent the same as AutoGPT?', a: 'No. Both are MIT-licensed, self-hostable autonomous agent projects, but Hermes Agent is built by Nous Research with a persistent-memory, self-improving-skill architecture and multi-platform messaging access, while classic AutoGPT, according to its [repository documentation](https://github.com/Significant-Gravitas/AutoGPT), centres on a terminal-run planning loop and does not describe a skill-authoring system like Hermes Agent\'s. Check that repository for its current capabilities.' },
+          { q: 'Who makes Hermes Agent?', a: 'Nous Research, the organization also behind the Hermes model family and the official hermes-agent.org site. Nous Research is a private AI research company; check its official site for current company information.' },
+          { q: 'Can Hermes Agent run completely offline with no internet access?', a: 'Yes for model calls, if configured to use a local model endpoint such as Ollama rather than a hosted provider, which requires an internet connection to reach its models. Messaging channels, MCP servers and any web-facing tools still need a network connection.' },
           { q: 'Is it safe to give Hermes Agent access to my Telegram or Discord account?', a: 'That depends on how carefully you manage the credentials and how closely you supervise the agent\'s memory and self-written skills. Because Hermes Agent persists state and can modify its own skills over time, review what it has stored and treat its messaging-channel credentials with the same caution you would apply to any automation with broad account access.' },
-          { q: 'Does Hermes Agent have known security vulnerabilities?', a: 'Yes. [OpenCVE lists 45 published CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) against NousResearch/hermes-agent, including CVE-2026-71963 (CVSS 8.8, remote code execution via a malicious git config file) and CVE-2026-82021 (CVSS 8.3, a supply-chain vulnerability in the bundled MCP catalog). A separate independent audit published April 11, 2026 reported 4 Critical and 9 High-severity issues in the default configuration, including unrestricted shell execution and unrestricted credential-file access. Check the current CVE list and update to the latest release before deploying.' },
-          { q: 'Is Hermes Agent safe to use for business or production workloads?', a: 'Treat it as software with a real, disclosed vulnerability history rather than as pre-hardened for production. Independent security reviewers ([Repello.ai](https://repello.ai/blog/hermes-agent-security), [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)) recommend permission scoping, memory-access policies, and human approval gates rather than running it unattended with broad file, shell, or credential access. The project is also young: its GitHub repository dates from July 2025, so it has less production hardening behind it than older agent frameworks.' },
+          { q: 'Does Hermes Agent have known security vulnerabilities?', a: 'Yes. [OpenCVE lists published CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) against NousResearch/hermes-agent, including CVE-2026-71963 (CVSS 8.8, remote code execution via a malicious git config file) and CVE-2026-82021 (CVSS 8.3, a supply-chain vulnerability in the bundled MCP catalog). A separate audit by an independent researcher, published April 11, 2026 for version 0.8.0 ([summary by Cloud Security Alliance](https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/)), reported 4 Critical and 9 High-severity findings in the default configuration of that version, including unrestricted shell execution and unrestricted credential-file access. Check the current release notes and CVE list, and update to the latest release before deploying.' },
+          { q: 'Is Hermes Agent safe to use for business or production workloads?', a: 'Treat it as software with a real, disclosed vulnerability history rather than as pre-hardened for production. Independent security reviewers ([Repello.ai](https://repello.ai/blog/hermes-agent-security), [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)) recommend permission scoping, memory-access policies, and human approval gates rather than running it unattended with broad file, shell, or credential access. The project is also young: its [GitHub repository](https://github.com/NousResearch/hermes-agent) was created in July 2025, so it has a shorter production track record than long-established frameworks.' },
         ],
       },
       sources: {
@@ -293,7 +293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
     publishDate: '2026-09-03',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     educationalLevel: 'Advanced',
     audience: 'Entwickler und Self-Hoster, die prüfen, ob sie einen autonomen persönlichen KI-Agenten auf eigener Infrastruktur betreiben wollen statt einen gehosteten Assistenten zu nutzen',
     primaryTerm: 'Hermes Agent',
@@ -313,7 +313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Ist Hermes Agent kostenlos und läuft er komplett offline?',
-        answer: 'Beides trifft zu, mit einer Einschränkung beim Offline-Betrieb: Die Software ist MIT-lizenziert und kostenlos ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). Vollständig offline läuft sie nur mit einem lokalen Modell über einen eigenen Endpunkt wie Ollama; jeder Cloud-Anbieter braucht eine Internetverbindung und verursacht die API-Kosten des jeweiligen Anbieters.',
+        answer: 'Beides trifft zu, mit einer Einschränkung beim Offline-Betrieb: Die Software ist MIT-lizenziert und kostenlos ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). Modellaufrufe laufen nur mit einem lokalen Modell über einen eigenen Endpunkt wie Ollama vollständig offline (Messaging-Kanäle, MCP-Server und Web-Werkzeuge brauchen weiterhin ein Netzwerk); jeder Cloud-Anbieter braucht eine Internetverbindung und verursacht die API-Kosten des jeweiligen Anbieters.',
         bullets: [
           'MIT-Lizenz, bestätigt in der LICENSE-Datei des Repos',
           'Lokale Modelle: Ollama, vLLM, llama.cpp oder LM Studio über einen eigenen Endpunkt',
@@ -357,8 +357,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Offizielle Website: hermes-agent.org. Für Hermes Agent existiert auf dieser Seite kein Affiliate-Programm — jeder Link unten ist ein einfacher, offengelegter Link.',
         ],
         callouts: [
-          { type: 'note', text: 'Presseberichten zufolge (TechCrunch, WSJ, Oktober 2026) hat Nous Research rund 90 Mio. $ bei einer Bewertung von 1,5 Mrd. $ eingesammelt. Die Bewertung stammt aus der Berichterstattung, nicht aus einer Primärmeldung, die diese Seite gesehen hat — als Unternehmenskontext behandeln.' },
-          { type: 'warning', text: 'Hermes Agent hat eine reale, offengelegte Sicherheitslücken-Historie, kein rein theoretisches Risiko. Ein am 11. April 2026 veröffentlichtes unabhängiges Audit meldete 4 kritische und 9 hohe Schweregrade in der Standardkonfiguration, und [OpenCVE listet 45 veröffentlichte CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) für das Projekt, darunter eine Remote-Code-Execution-Lücke mit CVSS 8,8. Siehe den Abschnitt "Realistische Erwartungen und Risiken" unten vor dem Einsatz.' },
+          { type: 'note', text: 'Nous Research ist ein privates KI-Forschungsunternehmen; aktuelle Unternehmensangaben stehen auf der offiziellen Website.' },
+          { type: 'warning', text: 'Hermes Agent hat eine reale, offengelegte Sicherheitslücken-Historie, kein rein theoretisches Risiko. Ein am 11. April 2026 veröffentlichtes unabhängiges Audit eines Forschers für Version 0.8.0 meldete 4 kritische und 9 hohe Schweregrade in der Standardkonfiguration dieser Version, und [OpenCVE listet veröffentlichte CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) für das Projekt, darunter eine Remote-Code-Execution-Lücke mit CVSS 8,8. Siehe den Abschnitt "Realistische Erwartungen und Risiken" unten vor dem Einsatz.' },
         ],
       },
       overview: {
@@ -402,7 +402,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         faqs: [
           { q: 'Braucht Hermes Agent eine GPU für den lokalen Betrieb?', a: 'Nur wenn man das Modell selbst betreibt. Ein lokales Modell über Ollama hat dieselbe Hardware-Abhängigkeit wie jedes lokale LLM: Eine leistungsfähige GPU beschleunigt die Inferenz erheblich, reine CPU-Inferenz ist möglich, aber langsamer. Mit einem gehosteten Anbieter braucht der Agent-Prozess selbst deutlich weniger Rechenleistung. Der VRAM-Bedarf hängt vom gewählten Modell ab, daher in dessen eigener Dokumentation prüfen.' },
-          { q: 'Kann Hermes Agent ganz ohne Internetverbindung laufen?', a: 'Ja, wenn er so konfiguriert ist, dass er für seine Modellaufrufe einen lokalen OpenAI-kompatiblen Endpunkt wie Ollama nutzt. Jeder gehostete Anbieter erfordert eine Internetverbindung und verursacht die Pro-Token-API-Kosten des Anbieters, unabhängig davon, dass Hermes Agent selbst kostenlose Software ist.' },
+          { q: 'Kann Hermes Agent ganz ohne Internetverbindung laufen?', a: 'Ja, wenn er so konfiguriert ist, dass er für seine Modellaufrufe einen lokalen OpenAI-kompatiblen Endpunkt wie Ollama nutzt; Messaging-Kanäle, MCP-Server und webbasierte Werkzeuge benötigen weiterhin eine Netzwerkverbindung. Jeder gehostete Anbieter erfordert eine Internetverbindung und verursacht die Pro-Token-API-Kosten des Anbieters, unabhängig davon, dass Hermes Agent selbst kostenlose Software ist.' },
         ],
       },
       deployment: {
@@ -438,7 +438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Nous Research, das Unternehmen dahinter',
-            content: 'Nous Research ist die Organisation hinter Hermes Agent, der Hermes-Modellfamilie und der offiziellen Hermes-Agent-Website unter hermes-agent.org. Presseberichten zufolge (TechCrunch, WSJ, Oktober 2026) hat Nous Research rund 90 Mio. $ bei einer Bewertung von 1,5 Mrd. $ eingesammelt. Diese Bewertung stammt aus der Berichterstattung und nicht aus einer Primärmeldung, die diese Seite gesehen hat — aktuelle Berichterstattung vor einer Verwendung prüfen.',
+            content: 'Nous Research ist die Organisation hinter Hermes Agent, der Hermes-Modellfamilie und der offiziellen Hermes-Agent-Website unter hermes-agent.org. Nous Research ist ein privates KI-Forschungsunternehmen; aktuelle Unternehmensangaben stehen auf der offiziellen Website.',
           },
         ],
         callouts: [
@@ -450,18 +450,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was sind realistische Erwartungen beim Betrieb von Hermes Agent?',
         content: '**Ein autonomer Agent mit persistentem Gedächtnis und selbstverbessernder Skill-Loop braucht engere Beaufsichtigung als ein zustandsloser Chatbot, weil sich sein Verhalten über die Zeit aufbaut, statt sich bei jeder Sitzung zurückzusetzen — und bei Hermes Agent kommt eine aktive, offengelegte Sicherheitslücken-Historie dazu, die vor dem Einsatz zu berücksichtigen ist, nicht nur ein architektonischer "genau beaufsichtigen"-Hinweis.**',
         items: [
-          'Ein unabhängiges Sicherheitsaudit des Forschers @Anic888, veröffentlicht am 11. April 2026, fand 4 kritische und 9 hohe Schweregrade in der Standardkonfiguration von Hermes Agent: uneingeschränkte Shell-Ausführung, die die eingebaute Befehlserkennung umgeht, uneingeschränkter Zugriff auf Zugangsdaten-Dateien (das Audit listet SSH-Private-Keys, API-Key-Dateien, Browser-Profile, Git-Zugangsdaten-Caches und Cloud-Provider-Konfigurationsdateien als ohne Sperrliste lesbar), Container-Umgebungen, die Freigabeprüfungen bedingungslos überspringen, sowie einen Pfad für persistente Skill-Injection, bei dem Angreifer Dateien nach `~/.hermes/skills/` schreiben können, die sitzungsübergreifend weiterlaufen',
-          '[OpenCVE listet 45 veröffentlichte CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) für NousResearch/hermes-agent, darunter CVE-2026-71963 (CVSS 8,8 — Remote Code Execution über eine manipulierte git-Konfigurationsdatei) und CVE-2026-82021 (CVSS 8,3 — eine Supply-Chain-Schwachstelle im mitgelieferten MCP-Katalog, die bösartigen Code auf jeden Host verteilen konnte, der einen betroffenen Katalogeintrag installierte). CVE-Zahlen und Schweregrade ändern sich laufend, da neue Einträge hinzukommen und alte gepatcht werden — vor dem Einsatz die aktuelle Liste für die geplante Version prüfen',
+          'Ein am 11. April 2026 veröffentlichtes unabhängiges Sicherheitsaudit (zusammengefasst in der [Research Note der Cloud Security Alliance](https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/)) meldete damals 4 kritische und 9 hohe Befunde in der Standardkonfiguration: uneingeschränkte Shell-Ausführung, die die eingebaute Befehlserkennung umgeht, uneingeschränkter Zugriff auf Zugangsdaten-Dateien (das Audit listet SSH-Private-Keys, API-Key-Dateien, Browser-Profile, Git-Zugangsdaten-Caches und Cloud-Provider-Konfigurationsdateien als ohne Sperrliste lesbar), Container-Umgebungen, die Freigabeprüfungen bedingungslos überspringen, sowie einen Pfad für persistente Skill-Injection, bei dem Angreifer Dateien nach `~/.hermes/skills/` schreiben können, die sitzungsübergreifend weiterlaufen',
+          '[OpenCVE listet veröffentlichte CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) für NousResearch/hermes-agent, darunter CVE-2026-71963 (CVSS 8,8 — Remote Code Execution über eine manipulierte git-Konfigurationsdatei) und CVE-2026-82021 (CVSS 8,3 — eine Supply-Chain-Schwachstelle im mitgelieferten MCP-Katalog, die bösartigen Code auf jeden Host verteilen konnte, der einen betroffenen Katalogeintrag installierte). CVE-Zahlen und Schweregrade ändern sich laufend, da neue Einträge hinzukommen und alte gepatcht werden — vor dem Einsatz die aktuelle Liste für die geplante Version prüfen',
           'Sicherheitsforscher von Repello.ai beschreiben zudem Risikoklassen, die nicht als einzelne CVE-Nummer auftauchen: indirekte Prompt-Injection über den eigenen Gedächtnisspeicher des Agenten (wer in das Gedächtnis schreiben kann, kann Anweisungen platzieren, die der Agent später abruft und ausführt) sowie ungeprüfte Model-Context-Protocol-Server, die einem verbundenen Agenten Anweisungen unterschieben können, ohne dass Nutzer jede einzelne freigeben',
           'Persistentes Gedächtnis bedeutet, dass Fehler oder falsche Annahmen des Agenten unbemerkt über Sitzungen hinweg fortbestehen und sich aufsummieren können — regelmäßig prüfen, was gespeichert wurde, und den Gedächtnisspeicher selbst als sensible Daten behandeln, da ein Sicherheitsreview von [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business) festhält, dass sich dort über die Zeit Kontodaten und Kundeninformationen ansammeln können',
           'Selbst geschriebene Skills sind per Definition Code oder Routinen, die der Agent selbst erzeugt hat; den Inhalt von `~/.hermes/skills/` prüfen, bevor er unbeaufsichtigt mit sensiblen Aufgaben betraut wird — genau dieses Verzeichnis war der Mechanismus, den das Audit vom April 2026 für persistente Skill-Injection markierte, also die Dateien selbst prüfen, nicht nur, was der Agent über sein Tun berichtet',
           'Zugriff über Messaging-Plattformen vergrößert die Angriffsfläche gegenüber einem reinen Terminal-Tool — Bot-Tokens und API-Zugangsdaten für Telegram, Discord, Slack, WhatsApp und Signal mit derselben Sorgfalt behandeln wie jede andere Zugangsberechtigung für einen automatisierten Prozess',
           'Die Modellwahl beeinflusst Kosten und Datenschutz gleichermaßen: Ein lokales Modell über Ollama hält Daten auf der eigenen Infrastruktur, während ein gehosteter Anbieter wie OpenRouter, Anthropic oder OpenAI die Anfragen erhält, vorbehaltlich von dessen eigenen Datenverarbeitungsbedingungen',
-          'Vor dem Einsatz auf die aktuelle Version aktualisieren und jede "alle Freigabeprüfungen überspringen"-Einstellung für den produktiven Betrieb deaktivieren — mehrere der oben genannten kritischen Befunde betreffen genau umgangene oder standardmäßig fehlende Freigabeprüfungen, nicht ein fehlendes Komfortfeature',
+          'Vor dem Einsatz auf die aktuelle Version aktualisieren und jede "alle Freigabeprüfungen überspringen"-Einstellung für den produktiven Betrieb deaktivieren — mehrere der oben genannten kritischen Befunde betreffen genau umgangene oder in der geprüften Version fehlende Freigabeprüfungen, nicht ein fehlendes Komfortfeature',
           'Diese Seite hat zum Zeitpunkt der Veröffentlichung keinen eigenen Langzeittest des Skill-Loop- oder Gedächtnisverhaltens von Hermes Agent durchgeführt; die Architekturpunkte oben beschreiben dokumentiertes Verhalten, die Sicherheitslücken-Punkte stammen aus dem genannten unabhängigen Audit und der öffentlichen CVE-Datenbank, nicht aus einem von dieser Seite selbst beobachteten Vorfall',
         ],
         callouts: [
-          { type: 'warning', text: 'Dies ist offengelegtes Risiko auf Architekturebene, kein Bericht über einen konkreten, abgeschlossenen Einbruch. Zum Zeitpunkt der Veröffentlichung wurde kein unabhängig bestätigter Bericht über einen erfolgreichen Angriff über diese Vektoren gegen ein reales Deployment gefunden — der Punkt ist, dass es sich um reale, behebbare Schwächen in Standardkonfigurationen handelt, bestätigt durch ein externes Audit und eine öffentliche CVE-Historie, nicht um hypothetische. Vor dem Anvertrauen sensibler Aufgaben, Dateien oder Zugangsdaten auf die aktuelle Version patchen und die obige Konfiguration prüfen.' },
+          { type: 'warning', text: 'Dies ist offengelegtes Risiko auf Architekturebene, kein Bericht über einen konkreten, abgeschlossenen Einbruch. Zum Zeitpunkt der Veröffentlichung wurde kein unabhängig bestätigter Bericht über einen erfolgreichen Angriff über diese Vektoren gegen ein reales Deployment gefunden — der Punkt ist, dass es sich um reale, behebbare Schwächen in Standardkonfigurationen handelt, die ein unabhängiger Forscher für die damalige Standardkonfiguration gemeldet hat, daneben zwei separat veröffentlichte CVEs, nicht um hypothetische. Vor dem Anvertrauen sensibler Aufgaben, Dateien oder Zugangsdaten auf die aktuelle Version patchen und die obige Konfiguration prüfen.' },
         ],
       },
       whoShouldUse: {
@@ -516,7 +516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Fehler 3: Presseberichte zur Finanzierung als bestätigte Tatsache behandeln',
-            content: 'Presseberichten zufolge (TechCrunch, WSJ, Oktober 2026) hat Nous Research rund 90 Mio. $ bei einer Bewertung von 1,5 Mrd. $ eingesammelt. Diese Bewertung stammt aus der Berichterstattung und nicht aus einer Primärmeldung, die diese Seite gesehen hat — als Unternehmenskontext behandeln und aktuelle Berichterstattung prüfen.',
+            content: 'Diese Seite nennt keine Finanzierungs- oder Bewertungszahlen für Nous Research, da ihr keine Primärmeldung vorliegt. Aktuelle Unternehmensangaben stehen auf der offiziellen Website von Nous Research; prüfen Sie sie dort, bevor Sie sich auf eine Zahl verlassen.',
           },
           {
             title: 'Fehler 4: Zugangsdaten-Hygiene bei Messaging-Kanälen vernachlässigen',
@@ -524,7 +524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Fehler 5: Die Standardkonfiguration einsetzen, ohne bekannte Sicherheitslücken zu prüfen',
-            content: 'Ein am 11. April 2026 veröffentlichtes unabhängiges Audit meldete 4 kritische und 9 hohe Schweregrade in der Standardkonfiguration von Hermes Agent, darunter uneingeschränkte Shell-Ausführung und uneingeschränkten Zugriff auf Zugangsdaten-Dateien, und [OpenCVE listet 45 veröffentlichte CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) für das Projekt, darunter eine Remote-Code-Execution-Lücke mit CVSS 8,8. Vor dem Anvertrauen sensibler Aufgaben auf die aktuelle Version aktualisieren, Einstellungen für uneingeschränkte Autonomie und zum Überspringen von Freigabeprüfungen deaktivieren und die CVE-Liste für die eigene Zielversion prüfen — als laufende Patch-Hygiene behandeln, nicht als einmaligen Einrichtungsschritt.',
+            content: 'Ein am 11. April 2026 veröffentlichtes unabhängiges Audit eines Forschers für Version 0.8.0 meldete 4 kritische und 9 hohe Schweregrade in der Standardkonfiguration dieser Version von Hermes Agent, darunter uneingeschränkte Shell-Ausführung und uneingeschränkten Zugriff auf Zugangsdaten-Dateien, und [OpenCVE listet veröffentlichte CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) für das Projekt, darunter eine Remote-Code-Execution-Lücke mit CVSS 8,8. Vor dem Anvertrauen sensibler Aufgaben auf die aktuelle Version aktualisieren, Einstellungen für uneingeschränkte Autonomie und zum Überspringen von Freigabeprüfungen deaktivieren und die CVE-Liste für die eigene Zielversion prüfen — als laufende Patch-Hygiene behandeln, nicht als einmaligen Einrichtungsschritt.',
           },
         ],
       },
@@ -538,12 +538,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Welche Modelle kann Hermes Agent nutzen?', a: 'Hermes Agent unterstützt Dutzende Anbieter, darunter Nous Portal, OpenRouter, Anthropic, OpenAI, Google Gemini, DeepSeek und Hugging Face, sowie jeden OpenAI-kompatiblen Endpunkt für lokale Modelle.' },
           { q: 'Über welche Messaging-Plattformen kann ich mit Hermes Agent sprechen?', a: 'Telegram, Discord, Slack, WhatsApp und Signal, zusätzlich zu einer Terminal-Schnittstelle. Jeder Kanal benötigt einen eigenen Bot-Token oder API-Zugangsdatensatz gemäß dem Standardprozess der jeweiligen Plattform.' },
           { q: 'Wie viel kostet der Self-Hosting-Betrieb von Hermes Agent?', a: 'Die Software ist kostenlos; die Hostingkosten hängen davon ab, wo sie betrieben wird. Unterstützte Backends sind lokal, Docker, SSH, Modal, Daytona und Vercel Sandbox. Die tatsächlichen Preise hängen vom gewählten Anbieter ab und ändern sich mit der Zeit, daher aktuelle Preise direkt beim jeweiligen Anbieter prüfen.' },
-          { q: 'Ist Hermes Agent dasselbe wie AutoGPT?', a: 'Nein. Beide sind MIT-lizenzierte, selbst hostbare autonome Agent-Projekte, aber Hermes Agent stammt von Nous Research mit einer Architektur aus persistentem Gedächtnis und selbstverbessernden Skills sowie Zugriff über mehrere Messaging-Plattformen, während klassisches AutoGPT ein unbegrenzter Planungs-Loop-Agent mit reinem Terminal-Zugriff und ohne eingebautes persistentes Gedächtnis- oder Skill-Erstellungssystem ist.' },
-          { q: 'Wer entwickelt Hermes Agent?', a: 'Nous Research, die Organisation, die auch hinter der Hermes-Modellfamilie und der offiziellen Website hermes-agent.org steht. Presseberichten zufolge (TechCrunch, WSJ, Oktober 2026) hat das Unternehmen rund 90 Mio. $ bei einer Bewertung von 1,5 Mrd. $ eingesammelt; das stammt aus der Berichterstattung, nicht aus einer Primärmeldung, die diese Seite gesehen hat.' },
-          { q: 'Kann Hermes Agent komplett ohne Internetzugang laufen?', a: 'Ja, wenn er auf einen lokalen Modell-Endpunkt wie Ollama statt auf einen gehosteten Anbieter konfiguriert ist, der für den Zugriff auf seine Modelle eine Internetverbindung benötigt.' },
+          { q: 'Ist Hermes Agent dasselbe wie AutoGPT?', a: 'Nein. Beide sind MIT-lizenzierte, selbst hostbare autonome Agent-Projekte, aber Hermes Agent stammt von Nous Research mit einer Architektur aus persistentem Gedächtnis und selbstverbessernden Skills sowie Zugriff über mehrere Messaging-Plattformen, während sich klassisches AutoGPT laut [Repository-Dokumentation](https://github.com/Significant-Gravitas/AutoGPT) auf einen im Terminal ausgeführten Planungs-Loop konzentriert und kein Skill-Erstellungssystem wie Hermes Agent beschreibt. Aktuelle Funktionen bitte im Repository prüfen.' },
+          { q: 'Wer entwickelt Hermes Agent?', a: 'Nous Research, die Organisation, die auch hinter der Hermes-Modellfamilie und der offiziellen Website hermes-agent.org steht. Nous Research ist ein privates KI-Forschungsunternehmen; aktuelle Unternehmensangaben stehen auf der offiziellen Website.' },
+          { q: 'Kann Hermes Agent komplett ohne Internetzugang laufen?', a: 'Ja für Modellaufrufe, wenn er auf einen lokalen Modell-Endpunkt wie Ollama statt auf einen gehosteten Anbieter konfiguriert ist, der für den Zugriff auf seine Modelle eine Internetverbindung benötigt. Messaging-Kanäle, MCP-Server und webbasierte Werkzeuge benötigen weiterhin eine Netzwerkverbindung.' },
           { q: 'Ist es sicher, Hermes Agent Zugriff auf mein Telegram- oder Discord-Konto zu geben?', a: 'Das hängt davon ab, wie sorgfältig die Zugangsdaten verwaltet werden und wie eng Gedächtnis und selbst geschriebene Skills des Agenten beaufsichtigt werden. Da Hermes Agent Zustand über Zeit speichert und eigene Skills verändern kann, sollte regelmäßig geprüft werden, was gespeichert wurde, und die Zugangsdaten der Messaging-Kanäle sollten mit derselben Vorsicht behandelt werden wie bei jeder Automatisierung mit weitreichendem Kontozugriff.' },
-          { q: 'Hat Hermes Agent bekannte Sicherheitslücken?', a: 'Ja. [OpenCVE listet 45 veröffentlichte CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) für NousResearch/hermes-agent, darunter CVE-2026-71963 (CVSS 8,8, Remote Code Execution über eine manipulierte git-Konfigurationsdatei) und CVE-2026-82021 (CVSS 8,3, eine Supply-Chain-Schwachstelle im mitgelieferten MCP-Katalog). Ein separates, am 11. April 2026 veröffentlichtes unabhängiges Audit meldete 4 kritische und 9 hohe Schweregrade in der Standardkonfiguration, darunter uneingeschränkte Shell-Ausführung und uneingeschränkten Zugriff auf Zugangsdaten-Dateien. Vor dem Einsatz die aktuelle CVE-Liste prüfen und auf die neueste Version aktualisieren.' },
-          { q: 'Ist Hermes Agent für den geschäftlichen oder produktiven Einsatz sicher?', a: 'Als Software mit einer realen, offengelegten Sicherheitslücken-Historie behandeln, nicht als für den Produktivbetrieb vorgehärtet. Unabhängige Sicherheitsprüfer ([Repello.ai](https://repello.ai/blog/hermes-agent-security), [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)) empfehlen eingeschränkte Berechtigungen, Richtlinien für den Gedächtniszugriff und manuelle Freigabe-Schritte, statt ihn unbeaufsichtigt mit weitreichendem Datei-, Shell- oder Zugangsdaten-Zugriff laufen zu lassen. Das Projekt ist zudem jung: Sein GitHub-Repository stammt von Juli 2025, daher steckt weniger Produktivhärtung dahinter als bei älteren Agent-Frameworks.' },
+          { q: 'Hat Hermes Agent bekannte Sicherheitslücken?', a: 'Ja. [OpenCVE listet veröffentlichte CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) für NousResearch/hermes-agent, darunter CVE-2026-71963 (CVSS 8,8, Remote Code Execution über eine manipulierte git-Konfigurationsdatei) und CVE-2026-82021 (CVSS 8,3, eine Supply-Chain-Schwachstelle im mitgelieferten MCP-Katalog). Ein separates Audit eines unabhängigen Forschers, veröffentlicht am 11. April 2026 für Version 0.8.0 ([Zusammenfassung der Cloud Security Alliance](https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/)), meldete für die Standardkonfiguration dieser Version 4 kritische und 9 hohe Befunde, darunter uneingeschränkte Shell-Ausführung und uneingeschränkten Zugriff auf Zugangsdaten-Dateien. Vor dem Einsatz aktuelle Release Notes und CVE-Liste prüfen und auf die neueste Version aktualisieren.' },
+          { q: 'Ist Hermes Agent für den geschäftlichen oder produktiven Einsatz sicher?', a: 'Als Software mit einer realen, offengelegten Sicherheitslücken-Historie behandeln, nicht als für den Produktivbetrieb vorgehärtet. Unabhängige Sicherheitsprüfer ([Repello.ai](https://repello.ai/blog/hermes-agent-security), [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)) empfehlen eingeschränkte Berechtigungen, Richtlinien für den Gedächtniszugriff und manuelle Freigabe-Schritte, statt ihn unbeaufsichtigt mit weitreichendem Datei-, Shell- oder Zugangsdaten-Zugriff laufen zu lassen. Das Projekt ist zudem jung: Sein [GitHub-Repository](https://github.com/NousResearch/hermes-agent) wurde im Juli 2025 angelegt, daher hat es eine kürzere Praxisbilanz im Produktivbetrieb als lange etablierte Frameworks.' },
         ],
       },
       sources: {
@@ -577,7 +577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
     publishDate: '2026-09-03',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     educationalLevel: 'Advanced',
     audience: 'Développeurs et adeptes du self-hosting évaluant s\'ils doivent faire tourner un agent IA personnel autonome sur leur propre infrastructure plutôt qu\'un assistant hébergé',
     primaryTerm: 'Hermes Agent',
@@ -597,7 +597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Hermes Agent est-il gratuit et peut-il fonctionner entièrement hors ligne ?',
-        answer: 'Oui aux deux, avec une condition pour le hors ligne : le logiciel est sous licence MIT et gratuit ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). Il ne fonctionne entièrement hors ligne que s\'il pointe vers un modèle local via un point de terminaison personnalisé comme Ollama ; tout fournisseur cloud exige une connexion internet et facture ses propres coûts d\'API.',
+        answer: 'Oui aux deux, avec une condition pour le hors ligne : le logiciel est sous licence MIT et gratuit ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). Les appels au modèle ne se font entièrement hors ligne que si l\'agent pointe vers un modèle local via un point de terminaison personnalisé comme Ollama (les canaux de messagerie, les serveurs MCP et les outils web exigent toujours un réseau) ; tout fournisseur cloud exige une connexion internet et facture ses propres coûts d\'API.',
         bullets: [
           'Licence MIT, confirmée dans le fichier LICENSE du dépôt',
           'Modèles locaux : Ollama, vLLM, llama.cpp ou LM Studio via un point de terminaison personnalisé',
@@ -641,8 +641,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Site officiel : hermes-agent.org. Aucun programme d\'affiliation n\'existe pour Hermes Agent sur ce site — chaque lien ci-dessous est un lien simple et déclaré.',
         ],
         callouts: [
-          { type: 'note', text: 'Selon la presse (TechCrunch, WSJ, octobre 2026), Nous Research a levé environ 90 M$ pour une valorisation de 1,5 Md$. Cette valorisation provient de la presse et non d\'une annonce primaire que ce site a pu consulter : considérez-la comme un contexte d\'entreprise.' },
-          { type: 'warning', text: 'Hermes Agent a un historique de vulnérabilités réel et documenté, pas seulement un risque théorique. Un audit indépendant publié le 11 avril 2026 a relevé 4 failles critiques et 9 de sévérité élevée dans sa configuration par défaut, et [OpenCVE recense 45 CVE publiées](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contre le projet, dont une faille d\'exécution de code à distance notée CVSS 8,8. Voir la section « Attentes réalistes et risques » ci-dessous avant tout déploiement.' },
+          { type: 'note', text: 'Nous Research est une société privée de recherche en IA ; les informations d\'entreprise à jour figurent sur son site officiel.' },
+          { type: 'warning', text: 'Hermes Agent a un historique de vulnérabilités réel et documenté, pas seulement un risque théorique. Un audit indépendant, mené par un chercheur pour la version 0.8.0 et publié le 11 avril 2026, a relevé 4 failles critiques et 9 de sévérité élevée dans la configuration par défaut de cette version, et [OpenCVE recense des CVE publiées](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contre le projet, dont une faille d\'exécution de code à distance notée CVSS 8,8. Voir la section « Attentes réalistes et risques » ci-dessous avant tout déploiement.' },
         ],
       },
       overview: {
@@ -686,7 +686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         faqs: [
           { q: 'Hermes Agent nécessite-t-il un GPU pour fonctionner en local ?', a: 'Seulement si vous faites tourner le modèle vous-même. Un modèle local via Ollama présente la même dépendance matérielle que tout LLM local : un GPU performant accélère nettement l\'inférence, l\'inférence CPU seule est possible mais plus lente. Avec un fournisseur hébergé, le processus de l\'agent lui-même demande bien moins de calcul. Les besoins en VRAM dépendent du modèle choisi : consultez la documentation de ce modèle.' },
-          { q: 'Hermes Agent peut-il fonctionner sans aucune connexion internet ?', a: 'Oui, s\'il est configuré pour utiliser un point de terminaison local compatible OpenAI comme Ollama pour ses appels de modèle. Tout fournisseur hébergé exige une connexion internet et entraîne les coûts d\'API par jeton propres à ce fournisseur, distincts du fait que Hermes Agent lui-même soit un logiciel gratuit.' },
+          { q: 'Hermes Agent peut-il fonctionner sans aucune connexion internet ?', a: 'Oui, s\'il est configuré pour utiliser un point de terminaison local compatible OpenAI comme Ollama pour ses appels de modèle ; les canaux de messagerie, les serveurs MCP et les outils web exigent toujours une connexion réseau. Tout fournisseur hébergé exige une connexion internet et entraîne les coûts d\'API par jeton propres à ce fournisseur, distincts du fait que Hermes Agent lui-même soit un logiciel gratuit.' },
         ],
       },
       deployment: {
@@ -722,7 +722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Nous Research, l\'entreprise derrière le projet',
-            content: 'Nous Research est l\'organisation derrière Hermes Agent, la famille de modèles Hermes et le site officiel de Hermes Agent, hermes-agent.org. Selon la presse (TechCrunch, WSJ, octobre 2026), Nous Research a levé environ 90 M$ pour une valorisation de 1,5 Md$. Cette valorisation provient de la presse et non d\'une annonce primaire que ce site a pu consulter : vérifiez l\'actualité récente avant de vous y fier.',
+            content: 'Nous Research est l\'organisation derrière Hermes Agent, la famille de modèles Hermes et le site officiel de Hermes Agent, hermes-agent.org. Nous Research est une société privée de recherche en IA ; les informations d\'entreprise à jour figurent sur son site officiel.',
           },
         ],
         callouts: [
@@ -734,18 +734,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quelles sont les attentes réalistes pour faire tourner Hermes Agent ?',
         content: '**Un agent autonome doté d\'une mémoire persistante et d\'une boucle de compétences auto-améliorante nécessite une surveillance plus étroite qu\'un chatbot sans état, car son comportement s\'accumule dans le temps au lieu de se réinitialiser à chaque session — et Hermes Agent a en plus un historique de vulnérabilités actif et documenté à prendre en compte avant tout déploiement, pas seulement une mise en garde architecturale de type « surveillez-le de près ».**',
         items: [
-          'Un audit de sécurité indépendant mené par le chercheur @Anic888, publié le 11 avril 2026, a relevé 4 failles critiques et 9 de sévérité élevée dans la configuration par défaut de Hermes Agent : une exécution shell sans restriction qui contourne le garde-fou intégré de détection de commandes, un accès sans restriction aux fichiers d\'identifiants (l\'audit liste comme lisibles, sans liste de blocage, les clés SSH privées, les fichiers de clés API, les profils de navigateur, les caches d\'identifiants git et les fichiers de configuration des fournisseurs cloud), des environnements conteneurisés qui ignorent systématiquement les contrôles de validation, et une voie d\'injection persistante de compétences permettant à un attaquant d\'écrire des fichiers dans `~/.hermes/skills/` qui continuent de s\'exécuter d\'une session à l\'autre',
-          '[OpenCVE recense 45 CVE publiées](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contre NousResearch/hermes-agent, dont CVE-2026-71963 (CVSS 8,8 — exécution de code à distance via un fichier de configuration git malveillant) et CVE-2026-82021 (CVSS 8,3 — une vulnérabilité de la chaîne d\'approvisionnement dans le catalogue MCP fourni, capable de propager du code malveillant à chaque hôte ayant installé une entrée de catalogue affectée). Le nombre et la sévérité des CVE évoluent au fil des nouveaux signalements et des correctifs : vérifiez la liste actuelle pour la version que vous envisagez de déployer avant tout déploiement',
+          'Un audit de sécurité indépendant publié le 11 avril 2026 (résumé dans la [note de recherche de la Cloud Security Alliance](https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/)) a relevé à l\'époque 4 constats critiques et 9 élevés dans la configuration par défaut : une exécution shell sans restriction qui contourne le garde-fou intégré de détection de commandes, un accès sans restriction aux fichiers d\'identifiants (l\'audit liste comme lisibles, sans liste de blocage, les clés SSH privées, les fichiers de clés API, les profils de navigateur, les caches d\'identifiants git et les fichiers de configuration des fournisseurs cloud), des environnements conteneurisés qui ignorent systématiquement les contrôles de validation, et une voie d\'injection persistante de compétences permettant à un attaquant d\'écrire des fichiers dans `~/.hermes/skills/` qui continuent de s\'exécuter d\'une session à l\'autre',
+          '[OpenCVE recense des CVE publiées](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contre NousResearch/hermes-agent, dont CVE-2026-71963 (CVSS 8,8 — exécution de code à distance via un fichier de configuration git malveillant) et CVE-2026-82021 (CVSS 8,3 — une vulnérabilité de la chaîne d\'approvisionnement dans le catalogue MCP fourni, capable de propager du code malveillant à chaque hôte ayant installé une entrée de catalogue affectée). Le nombre et la sévérité des CVE évoluent au fil des nouveaux signalements et des correctifs : vérifiez la liste actuelle pour la version que vous envisagez de déployer avant tout déploiement',
           'Des chercheurs en sécurité de Repello.ai décrivent aussi des classes de risque qui n\'apparaissent pas comme des CVE individuelles : l\'injection indirecte de prompt via la mémoire propre de l\'agent (un attaquant capable d\'écrire dans la mémoire peut y placer des instructions que l\'agent récupérera et exécutera plus tard) et des serveurs Model Context Protocol non vérifiés capables d\'injecter des instructions à un agent connecté sans validation individuelle par l\'utilisateur',
           'La mémoire persistante signifie que les erreurs ou hypothèses erronées de l\'agent peuvent persister et s\'accumuler d\'une session à l\'autre si elles ne sont pas revues — vérifiez périodiquement ce qu\'il a stocké, et traitez la mémoire elle-même comme une donnée sensible, une analyse de sécurité de [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business) notant qu\'elle peut accumuler dans le temps des informations de compte et des données clients',
           'Les compétences auto-écrites sont, par définition, du code ou des routines produits par l\'agent lui-même ; examinez le contenu de `~/.hermes/skills/` avant de le laisser tourner sans surveillance sur des tâches sensibles — c\'est précisément ce répertoire que l\'audit d\'avril 2026 a identifié comme vecteur d\'injection persistante de compétences, donc vérifiez les fichiers eux-mêmes, pas seulement ce que l\'agent rapporte avoir fait',
           'L\'accès via plateformes de messagerie élargit la surface d\'attaque par rapport à un outil limité au terminal. Traitez les tokens de bot et identifiants d\'API pour Telegram, Discord, Slack, WhatsApp et Signal avec la même prudence que tout autre identifiant donnant accès à un processus automatisé',
           'Le choix du modèle affecte à la fois le coût et la confidentialité : un modèle local via Ollama garde les données sur votre propre infrastructure, tandis qu\'un fournisseur hébergé comme OpenRouter, Anthropic ou OpenAI reçoit vos requêtes, selon ses propres conditions de traitement des données',
-          'Mettez à jour vers la version actuelle avant tout déploiement, et désactivez tout paramètre de type « ignorer tous les contrôles de validation » ou d\'autonomie sans restriction pour un usage en production — plusieurs des failles critiques ci-dessus concernent précisément des contrôles de validation contournés ou absents par défaut, pas une fonctionnalité de confort manquante',
+          'Mettez à jour vers la version actuelle avant tout déploiement, et désactivez tout paramètre de type « ignorer tous les contrôles de validation » ou d\'autonomie sans restriction pour un usage en production — plusieurs des failles critiques ci-dessus concernent précisément des contrôles de validation contournés ou absents dans la version auditée, pas une fonctionnalité de confort manquante',
           'Ce site n\'a pas mené son propre test de longue durée du comportement de la boucle de compétences ou de la mémoire de Hermes Agent à ce jour ; les points d\'architecture ci-dessus décrivent un comportement documenté, et les points de vulnérabilité s\'appuient sur l\'audit indépendant cité et la base de données CVE publique, pas sur un incident observé directement par ce site',
         ],
         callouts: [
-          { type: 'warning', text: 'Il s\'agit d\'un risque de vulnérabilité documenté au niveau de l\'architecture, pas du signalement d\'une intrusion réelle et confirmée. Aucun rapport indépendamment vérifié d\'attaque réussie via ces vecteurs contre un déploiement réel n\'a été trouvé à ce jour — le point est que ce sont des faiblesses réelles et corrigeables dans les configurations par défaut, confirmées par un audit externe et un historique CVE public, pas des risques hypothétiques. Mettez à jour vers la version actuelle et vérifiez la configuration ci-dessus avant de confier à l\'agent des tâches, fichiers ou identifiants sensibles.' },
+          { type: 'warning', text: 'Il s\'agit d\'un risque de vulnérabilité documenté au niveau de l\'architecture, pas du signalement d\'une intrusion réelle et confirmée. Aucun rapport indépendamment vérifié d\'attaque réussie via ces vecteurs contre un déploiement réel n\'a été trouvé à ce jour — le point est que ce sont des faiblesses réelles et corrigeables dans les configurations par défaut, signalées par un chercheur indépendant dans la configuration par défaut de l\'époque, en plus de deux CVE publiées séparément, pas des risques hypothétiques. Mettez à jour vers la version actuelle et vérifiez la configuration ci-dessus avant de confier à l\'agent des tâches, fichiers ou identifiants sensibles.' },
         ],
       },
       whoShouldUse: {
@@ -800,7 +800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Erreur 3 : traiter les chiffres de financement rapportés par la presse comme des faits confirmés',
-            content: 'Selon la presse (TechCrunch, WSJ, octobre 2026), Nous Research a levé environ 90 M$ pour une valorisation de 1,5 Md$. Cette valorisation provient de la presse et non d\'une annonce primaire que ce site a pu consulter : considérez-la comme un contexte d\'entreprise et vérifiez l\'actualité récente.',
+            content: 'Ce site n\'indique aucun chiffre de financement ni de valorisation pour Nous Research, faute d\'annonce primaire. Consultez le site officiel de Nous Research pour les informations d\'entreprise à jour avant de vous fier à un chiffre.',
           },
           {
             title: 'Erreur 4 : négliger l\'hygiène des identifiants pour les canaux de messagerie',
@@ -808,7 +808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Erreur 5 : déployer la configuration par défaut sans vérifier les vulnérabilités connues',
-            content: 'Un audit indépendant publié le 11 avril 2026 a relevé 4 failles critiques et 9 de sévérité élevée dans la configuration par défaut de Hermes Agent, dont une exécution shell sans restriction et un accès sans restriction aux fichiers d\'identifiants, et [OpenCVE recense 45 CVE publiées](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contre le projet, dont une faille d\'exécution de code à distance notée CVSS 8,8. Mettez à jour vers la version actuelle, désactivez les paramètres d\'autonomie sans restriction et d\'omission des validations, et vérifiez la liste des CVE pour la version ciblée avant de confier des tâches sensibles à l\'agent. Traitez cela comme une hygiène de correctifs continue, pas comme une étape de configuration ponctuelle.',
+            content: 'Un audit indépendant mené par un chercheur pour la version 0.8.0 et publié le 11 avril 2026 a relevé 4 failles critiques et 9 de sévérité élevée dans la configuration par défaut de cette version de Hermes Agent, dont une exécution shell sans restriction et un accès sans restriction aux fichiers d\'identifiants, et [OpenCVE recense des CVE publiées](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contre le projet, dont une faille d\'exécution de code à distance notée CVSS 8,8. Mettez à jour vers la version actuelle, désactivez les paramètres d\'autonomie sans restriction et d\'omission des validations, et vérifiez la liste des CVE pour la version ciblée avant de confier des tâches sensibles à l\'agent. Traitez cela comme une hygiène de correctifs continue, pas comme une étape de configuration ponctuelle.',
           },
         ],
       },
@@ -822,12 +822,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Quels modèles Hermes Agent peut-il utiliser ?', a: 'Hermes Agent prend en charge des dizaines de fournisseurs, dont Nous Portal, OpenRouter, Anthropic, OpenAI, Google Gemini, DeepSeek et Hugging Face, ainsi que tout point de terminaison compatible OpenAI pour les modèles locaux.' },
           { q: 'Quelles plateformes de messagerie permettent de parler à Hermes Agent ?', a: 'Telegram, Discord, Slack, WhatsApp et Signal, en plus d\'une interface terminal. Chaque canal nécessite son propre token de bot ou jeu d\'identifiants API configuré selon le processus standard de cette plateforme.' },
           { q: 'Combien coûte l\'auto-hébergement de Hermes Agent ?', a: 'Le logiciel est gratuit ; le coût d\'hébergement dépend de l\'endroit où vous le faites tourner. Les backends pris en charge sont local, Docker, SSH, Modal, Daytona et Vercel Sandbox. Le tarif réel dépend du fournisseur choisi et évolue dans le temps, donc vérifiez les tarifs actuels directement auprès de ce fournisseur.' },
-          { q: 'Hermes Agent est-il la même chose qu\'AutoGPT ?', a: 'Non. Les deux sont des projets d\'agents autonomes sous licence MIT et auto-hébergeables, mais Hermes Agent est créé par Nous Research avec une architecture de mémoire persistante et de compétences auto-améliorantes, ainsi qu\'un accès multiplateforme de messagerie, tandis qu\'AutoGPT classique est un agent à boucle de planification non circonscrite, accessible uniquement par terminal, sans système intégré de mémoire persistante ou de création de compétences.' },
-          { q: 'Qui développe Hermes Agent ?', a: 'Nous Research, l\'organisation également derrière la famille de modèles Hermes et le site officiel hermes-agent.org. Selon la presse (TechCrunch, WSJ, octobre 2026), elle a levé environ 90 M$ pour une valorisation de 1,5 Md$ ; cela provient de la presse et non d\'une annonce primaire que ce site a pu consulter.' },
-          { q: 'Hermes Agent peut-il fonctionner complètement sans accès internet ?', a: 'Oui, s\'il est configuré pour utiliser un point de terminaison de modèle local comme Ollama plutôt qu\'un fournisseur hébergé, qui exige une connexion internet pour accéder à ses modèles.' },
+          { q: 'Hermes Agent est-il la même chose qu\'AutoGPT ?', a: 'Non. Les deux sont des projets d\'agents autonomes sous licence MIT et auto-hébergeables, mais Hermes Agent est créé par Nous Research avec une architecture de mémoire persistante et de compétences auto-améliorantes, ainsi qu\'un accès multiplateforme de messagerie, tandis que, selon sa [documentation](https://github.com/Significant-Gravitas/AutoGPT), AutoGPT classique repose sur une boucle de planification lancée depuis le terminal et ne décrit pas de système de création de compétences comme celui de Hermes Agent. Vérifiez ses fonctions actuelles dans le dépôt.' },
+          { q: 'Qui développe Hermes Agent ?', a: 'Nous Research, l\'organisation également derrière la famille de modèles Hermes et le site officiel hermes-agent.org. Nous Research est une société privée de recherche en IA ; les informations d\'entreprise à jour figurent sur son site officiel.' },
+          { q: 'Hermes Agent peut-il fonctionner complètement sans accès internet ?', a: 'Oui pour les appels au modèle, s\'il est configuré pour utiliser un point de terminaison de modèle local comme Ollama plutôt qu\'un fournisseur hébergé, qui exige une connexion internet pour accéder à ses modèles. Les canaux de messagerie, les serveurs MCP et les outils web exigent toujours une connexion réseau.' },
           { q: 'Est-il sûr de donner à Hermes Agent accès à mon compte Telegram ou Discord ?', a: 'Cela dépend du soin apporté à la gestion des identifiants et du niveau de supervision de la mémoire et des compétences auto-écrites de l\'agent. Comme Hermes Agent conserve un état dans le temps et peut modifier ses propres compétences, vérifiez ce qu\'il a stocké et traitez les identifiants de ses canaux de messagerie avec la même prudence que pour toute automatisation ayant un accès étendu à un compte.' },
-          { q: 'Hermes Agent a-t-il des vulnérabilités de sécurité connues ?', a: 'Oui. [OpenCVE recense 45 CVE publiées](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contre NousResearch/hermes-agent, dont CVE-2026-71963 (CVSS 8,8, exécution de code à distance via un fichier de configuration git malveillant) et CVE-2026-82021 (CVSS 8,3, une vulnérabilité de la chaîne d\'approvisionnement dans le catalogue MCP fourni). Un audit indépendant distinct, publié le 11 avril 2026, a relevé 4 failles critiques et 9 de sévérité élevée dans la configuration par défaut, dont une exécution shell sans restriction et un accès sans restriction aux fichiers d\'identifiants. Vérifiez la liste actuelle des CVE et mettez à jour vers la dernière version avant tout déploiement.' },
-          { q: 'Hermes Agent est-il sûr pour un usage professionnel ou en production ?', a: 'Traitez-le comme un logiciel doté d\'un historique de vulnérabilités réel et documenté, pas comme préalablement renforcé pour la production. Des évaluateurs de sécurité indépendants ([Repello.ai](https://repello.ai/blog/hermes-agent-security), [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)) recommandent de restreindre les permissions, d\'établir des politiques d\'accès à la mémoire et d\'exiger une validation humaine, plutôt que de le faire tourner sans surveillance avec un accès étendu aux fichiers, au shell ou aux identifiants. Le projet est aussi jeune : son dépôt GitHub date de juillet 2025, il dispose donc de moins de durcissement en production que des frameworks d\'agents plus anciens.' },
+          { q: 'Hermes Agent a-t-il des vulnérabilités de sécurité connues ?', a: 'Oui. [OpenCVE recense des CVE publiées](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contre NousResearch/hermes-agent, dont CVE-2026-71963 (CVSS 8,8, exécution de code à distance via un fichier de configuration git malveillant) et CVE-2026-82021 (CVSS 8,3, une vulnérabilité de la chaîne d\'approvisionnement dans le catalogue MCP fourni). Un audit distinct, mené par un chercheur indépendant et publié le 11 avril 2026 pour la version 0.8.0 ([synthèse de la Cloud Security Alliance](https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/)), a relevé dans la configuration par défaut de cette version 4 constats critiques et 9 élevés, dont une exécution shell sans restriction et un accès sans restriction aux fichiers d\'identifiants. Vérifiez les notes de version et la liste des CVE, puis mettez à jour vers la dernière version avant tout déploiement.' },
+          { q: 'Hermes Agent est-il sûr pour un usage professionnel ou en production ?', a: 'Traitez-le comme un logiciel doté d\'un historique de vulnérabilités réel et documenté, pas comme préalablement renforcé pour la production. Des évaluateurs de sécurité indépendants ([Repello.ai](https://repello.ai/blog/hermes-agent-security), [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)) recommandent de restreindre les permissions, d\'établir des politiques d\'accès à la mémoire et d\'exiger une validation humaine, plutôt que de le faire tourner sans surveillance avec un accès étendu aux fichiers, au shell ou aux identifiants. Le projet est aussi jeune : son [dépôt GitHub](https://github.com/NousResearch/hermes-agent) a été créé en juillet 2025, il a donc moins de recul en production que des frameworks établis de longue date.' },
         ],
       },
       sources: {
@@ -861,7 +861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
     publishDate: '2026-09-03',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     educationalLevel: 'Advanced',
     audience: 'Desarrolladores y usuarios de self-hosting que evalúan si conviene ejecutar un agente de IA personal autónomo en su propia infraestructura en lugar de un asistente alojado',
     primaryTerm: 'Hermes Agent',
@@ -881,7 +881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Hermes Agent es gratuito y puede funcionar totalmente sin conexión?',
-        answer: 'Sí a ambas, con una condición para lo offline: el software tiene licencia MIT y es gratuito ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). Funciona totalmente sin conexión solo con un modelo local a través de un endpoint personalizado como Ollama; cualquier proveedor en la nube requiere internet y los costes de API de ese proveedor.',
+        answer: 'Sí a ambas, con una condición para lo offline: el software tiene licencia MIT y es gratuito ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). Las llamadas al modelo funcionan totalmente sin conexión solo con un modelo local a través de un endpoint personalizado como Ollama (los canales de mensajería, los servidores MCP y las herramientas web siguen necesitando red); cualquier proveedor en la nube requiere internet y los costes de API de ese proveedor.',
         bullets: [
           'Licencia MIT, confirmada en el archivo LICENSE del repositorio',
           'Modelos locales: Ollama, vLLM, llama.cpp o LM Studio mediante un endpoint personalizado',
@@ -925,8 +925,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Sitio oficial: hermes-agent.org. No existe programa de afiliados para Hermes Agent en este sitio — cada enlace de abajo es un enlace simple y declarado.',
         ],
         callouts: [
-          { type: 'note', text: 'Según informes de prensa (TechCrunch, WSJ, octubre de 2026), Nous Research recaudó unos 90 M$ con una valoración de 1.500 M$. La valoración procede de la prensa, no de un anuncio primario que este sitio haya visto, así que trátala como contexto de la empresa.' },
-          { type: 'warning', text: 'Hermes Agent tiene un historial real y documentado de vulnerabilidades, no solo un riesgo teórico. Una auditoría independiente publicada el 11 de abril de 2026 reportó 4 hallazgos críticos y 9 de severidad alta en su configuración por defecto, y [OpenCVE registra 45 CVE publicadas](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra el proyecto, incluyendo una vulnerabilidad de ejecución remota de código con CVSS 8,8. Consulta la sección "Expectativas realistas y riesgos" más abajo antes de desplegarlo.' },
+          { type: 'note', text: 'Nous Research es una empresa privada de investigación en IA; la información actual de la empresa está en su sitio oficial.' },
+          { type: 'warning', text: 'Hermes Agent tiene un historial real y documentado de vulnerabilidades, no solo un riesgo teórico. Una auditoría independiente de un investigador externo, publicada el 11 de abril de 2026 para la versión 0.8.0, reportó 4 hallazgos críticos y 9 de severidad alta en la configuración por defecto de esa versión, y [OpenCVE registra CVE publicadas](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra el proyecto, incluyendo una vulnerabilidad de ejecución remota de código con CVSS 8,8. Consulta la sección "Expectativas realistas y riesgos" más abajo antes de desplegarlo.' },
         ],
       },
       overview: {
@@ -970,7 +970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         faqs: [
           { q: '¿Hermes Agent necesita una GPU para funcionar en local?', a: 'Solo si ejecutas tú mismo el modelo. Un modelo local vía Ollama tiene la misma dependencia de hardware que cualquier LLM local: una GPU capaz acelera considerablemente la inferencia, y la inferencia solo con CPU es posible pero más lenta. Con un proveedor alojado, el propio proceso del agente necesita mucho menos cómputo. Las necesidades de VRAM dependen del modelo que elijas, así que consulta la documentación de ese modelo.' },
-          { q: '¿Puede Hermes Agent funcionar sin ninguna conexión a internet?', a: 'Sí, si se configura para usar un endpoint local compatible con OpenAI como Ollama para sus llamadas de modelo. Cualquier proveedor alojado requiere conexión a internet y conlleva los costes de API por token propios de ese proveedor, independientes de que Hermes Agent en sí sea software gratuito.' },
+          { q: '¿Puede Hermes Agent funcionar sin ninguna conexión a internet?', a: 'Sí, si se configura para usar un endpoint local compatible con OpenAI como Ollama para sus llamadas de modelo; los canales de mensajería, los servidores MCP y las herramientas web siguen necesitando conexión de red. Cualquier proveedor alojado requiere conexión a internet y conlleva los costes de API por token propios de ese proveedor, independientes de que Hermes Agent en sí sea software gratuito.' },
         ],
       },
       deployment: {
@@ -1006,7 +1006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Nous Research, la empresa detrás del proyecto',
-            content: 'Nous Research es la organización detrás de Hermes Agent, la familia de modelos Hermes y el sitio oficial de Hermes Agent, hermes-agent.org. Según informes de prensa (TechCrunch, WSJ, octubre de 2026), Nous Research recaudó unos 90 M$ con una valoración de 1.500 M$. Esa valoración procede de la prensa y no de un anuncio primario que este sitio haya visto, así que revisa la información más reciente antes de basarte en ella.',
+            content: 'Nous Research es la organización detrás de Hermes Agent, la familia de modelos Hermes y el sitio oficial de Hermes Agent, hermes-agent.org. Nous Research es una empresa privada de investigación en IA; la información actual de la empresa está en su sitio oficial.',
           },
         ],
         callouts: [
@@ -1018,18 +1018,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Cuáles son las expectativas realistas al ejecutar Hermes Agent?',
         content: '**Un agente autónomo con memoria persistente y un bucle de habilidades autosuperador necesita una supervisión más estrecha que un chatbot sin estado, porque su comportamiento se acumula con el tiempo en lugar de reiniciarse en cada sesión — y Hermes Agent, en concreto, tiene un historial de vulnerabilidades activo y documentado que hay que tener en cuenta antes de desplegarlo, no solo una advertencia arquitectónica de "supervísalo de cerca".**',
         items: [
-          'Una auditoría de seguridad independiente del investigador @Anic888, publicada el 11 de abril de 2026, encontró 4 hallazgos críticos y 9 de severidad alta en la configuración por defecto de Hermes Agent: ejecución de shell sin restricciones que evita la protección integrada de detección de comandos, acceso sin restricciones a archivos de credenciales (la auditoría enumera claves SSH privadas, archivos de claves de API, perfiles de navegador, cachés de credenciales de git y archivos de configuración de proveedores cloud como legibles sin ninguna lista de bloqueo), entornos en contenedores que omiten incondicionalmente las comprobaciones de aprobación, y una vía de inyección persistente de habilidades por la que un atacante puede escribir archivos en `~/.hermes/skills/` que siguen ejecutándose entre sesiones',
-          '[OpenCVE registra 45 CVE publicadas](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra NousResearch/hermes-agent, incluyendo CVE-2026-71963 (CVSS 8,8 — ejecución remota de código mediante un archivo de configuración de git malicioso) y CVE-2026-82021 (CVSS 8,3 — una vulnerabilidad de cadena de suministro en el catálogo MCP incluido, capaz de propagar código malicioso a cada host que instalara una entrada de catálogo afectada). El número y la severidad de las CVE cambian a medida que se registran nuevos problemas y se corrigen los antiguos — comprueba la lista actual para la versión que planeas usar antes de desplegarla',
+          'Una auditoría de seguridad independiente publicada el 11 de abril de 2026 (resumida en la [nota de investigación de Cloud Security Alliance](https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/)) reportó entonces 4 hallazgos críticos y 9 de severidad alta en la configuración por defecto: ejecución de shell sin restricciones que evita la protección integrada de detección de comandos, acceso sin restricciones a archivos de credenciales (la auditoría enumera claves SSH privadas, archivos de claves de API, perfiles de navegador, cachés de credenciales de git y archivos de configuración de proveedores cloud como legibles sin ninguna lista de bloqueo), entornos en contenedores que omiten incondicionalmente las comprobaciones de aprobación, y una vía de inyección persistente de habilidades por la que un atacante puede escribir archivos en `~/.hermes/skills/` que siguen ejecutándose entre sesiones',
+          '[OpenCVE registra CVE publicadas](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra NousResearch/hermes-agent, incluyendo CVE-2026-71963 (CVSS 8,8 — ejecución remota de código mediante un archivo de configuración de git malicioso) y CVE-2026-82021 (CVSS 8,3 — una vulnerabilidad de cadena de suministro en el catálogo MCP incluido, capaz de propagar código malicioso a cada host que instalara una entrada de catálogo afectada). El número y la severidad de las CVE cambian a medida que se registran nuevos problemas y se corrigen los antiguos — comprueba la lista actual para la versión que planeas usar antes de desplegarla',
           'Investigadores de seguridad de Repello.ai también describen clases de riesgo que no aparecen como números de CVE individuales: inyección indirecta de prompts a través de la propia memoria del agente (un atacante que pueda escribir en la memoria puede dejar instrucciones que el agente recupere y ejecute más adelante) y servidores de Model Context Protocol no verificados capaces de inyectar instrucciones en un agente conectado sin que el usuario apruebe cada uno',
           'La memoria persistente implica que los errores o suposiciones equivocadas del agente pueden persistir y acumularse entre sesiones si no se revisan — comprueba periódicamente qué ha almacenado, y trata la propia memoria como datos sensibles, ya que una revisión de seguridad de [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business) señala que puede acumular con el tiempo datos de cuentas e información de clientes',
           'Las habilidades autoescritas son, por definición, código o rutinas producidos por el propio agente; revisa el contenido de `~/.hermes/skills/` antes de dejarlo funcionar sin supervisión en tareas sensibles — precisamente ese directorio es el mecanismo que la auditoría de abril de 2026 señaló para la inyección persistente de habilidades, así que revisa los archivos en sí, no solo lo que el agente informa haber hecho',
           'El acceso por plataformas de mensajería amplía la superficie de ataque respecto a una herramienta limitada a la terminal. Trata los tokens de bot y las credenciales de API de Telegram, Discord, Slack, WhatsApp y Signal con el mismo cuidado que cualquier otra credencial que dé acceso a un proceso automatizado',
           'La elección del modelo afecta tanto al coste como a la privacidad: un modelo local vía Ollama mantiene los datos en tu propia infraestructura, mientras que un proveedor alojado como OpenRouter, Anthropic u OpenAI recibe tus solicitudes, sujeto a las condiciones de manejo de datos de ese proveedor',
-          'Actualiza a la versión actual antes de desplegar, y desactiva cualquier configuración de tipo "omitir todas las comprobaciones de aprobación" o de autonomía sin restricciones para uso en producción — varios de los hallazgos críticos anteriores tratan precisamente sobre comprobaciones de aprobación evitadas o ausentes por defecto, no sobre una función de conveniencia que falte',
+          'Actualiza a la versión actual antes de desplegar, y desactiva cualquier configuración de tipo "omitir todas las comprobaciones de aprobación" o de autonomía sin restricciones para uso en producción — varios de los hallazgos críticos anteriores tratan precisamente sobre comprobaciones de aprobación evitadas o ausentes en la versión auditada, no sobre una función de conveniencia que falte',
           'Este sitio no ha realizado su propia prueba de larga duración del comportamiento del bucle de habilidades o de la memoria de Hermes Agent a la fecha de publicación; los puntos de arquitectura anteriores describen comportamiento documentado, y los puntos de vulnerabilidad proceden de la auditoría independiente citada y de la base de datos pública de CVE, no de un incidente observado directamente por este sitio',
         ],
         callouts: [
-          { type: 'warning', text: 'Se trata de un riesgo de vulnerabilidad documentado a nivel de arquitectura, no del informe de una brecha concreta y confirmada. No se ha encontrado, a la fecha de publicación, ningún informe independientemente verificado de un ataque exitoso mediante estos vectores contra un despliegue real — el punto es que son debilidades reales y corregibles en las configuraciones por defecto, confirmadas por una auditoría externa y un historial público de CVE, no hipotéticas. Actualiza a la versión actual y revisa la configuración anterior antes de confiarle al agente tareas, archivos o credenciales sensibles.' },
+          { type: 'warning', text: 'Se trata de un riesgo de vulnerabilidad documentado a nivel de arquitectura, no del informe de una brecha concreta y confirmada. No se ha encontrado, a la fecha de publicación, ningún informe independientemente verificado de un ataque exitoso mediante estos vectores contra un despliegue real — el punto es que son debilidades reales y corregibles en las configuraciones por defecto, reportadas por un investigador independiente en la configuración por defecto de entonces, además de dos CVE publicadas por separado, no hipotéticas. Actualiza a la versión actual y revisa la configuración anterior antes de confiarle al agente tareas, archivos o credenciales sensibles.' },
         ],
       },
       whoShouldUse: {
@@ -1084,7 +1084,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Error 3: tratar las cifras de financiación publicadas por la prensa como hechos confirmados',
-            content: 'Según informes de prensa (TechCrunch, WSJ, octubre de 2026), Nous Research recaudó unos 90 M$ con una valoración de 1.500 M$. Esa valoración procede de la prensa y no de un anuncio primario que este sitio haya visto, así que trátala como contexto de la empresa y revisa la información más reciente.',
+            content: 'Este sitio no indica cifras de financiación ni de valoración de Nous Research, porque no ha visto un anuncio primario. Consulta el sitio oficial de Nous Research para ver la información actual de la empresa antes de fiarte de cualquier cifra.',
           },
           {
             title: 'Error 4: descuidar la higiene de credenciales en los canales de mensajería',
@@ -1092,7 +1092,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Error 5: desplegar la configuración por defecto sin comprobar las vulnerabilidades conocidas',
-            content: 'Una auditoría independiente publicada el 11 de abril de 2026 reportó 4 hallazgos críticos y 9 de severidad alta en la configuración por defecto de Hermes Agent, incluyendo ejecución de shell sin restricciones y acceso sin restricciones a archivos de credenciales, y [OpenCVE registra 45 CVE publicadas](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra el proyecto, incluyendo una vulnerabilidad de ejecución remota de código con CVSS 8,8. Actualiza a la versión actual, desactiva las configuraciones de autonomía sin restricciones y de omisión de aprobaciones, y comprueba la lista de CVE para la versión que uses antes de confiarle tareas sensibles al agente. Trátalo como higiene continua de parches, no como un paso de configuración único.',
+            content: 'Una auditoría independiente de un investigador externo, publicada el 11 de abril de 2026 para la versión 0.8.0, reportó 4 hallazgos críticos y 9 de severidad alta en la configuración por defecto de esa versión de Hermes Agent, incluyendo ejecución de shell sin restricciones y acceso sin restricciones a archivos de credenciales, y [OpenCVE registra CVE publicadas](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra el proyecto, incluyendo una vulnerabilidad de ejecución remota de código con CVSS 8,8. Actualiza a la versión actual, desactiva las configuraciones de autonomía sin restricciones y de omisión de aprobaciones, y comprueba la lista de CVE para la versión que uses antes de confiarle tareas sensibles al agente. Trátalo como higiene continua de parches, no como un paso de configuración único.',
           },
         ],
       },
@@ -1106,12 +1106,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Qué modelos puede usar Hermes Agent?', a: 'Hermes Agent admite decenas de proveedores, entre ellos Nous Portal, OpenRouter, Anthropic, OpenAI, Google Gemini, DeepSeek y Hugging Face, además de cualquier endpoint compatible con OpenAI para modelos locales.' },
           { q: '¿Con qué plataformas de mensajería puedo hablar con Hermes Agent?', a: 'Telegram, Discord, Slack, WhatsApp y Signal, además de una interfaz de terminal. Cada canal necesita su propio token de bot o conjunto de credenciales de API configurado según el proceso estándar de esa plataforma.' },
           { q: '¿Cuánto cuesta autoalojar Hermes Agent?', a: 'El software es gratuito; el coste de hosting depende de dónde lo ejecutes. Los backends compatibles son local, Docker, SSH, Modal, Daytona y Vercel Sandbox. El precio real depende del proveedor elegido y cambia con el tiempo, así que confirma las tarifas actuales directamente con ese proveedor.' },
-          { q: '¿Hermes Agent es lo mismo que AutoGPT?', a: 'No. Ambos son proyectos de agentes autónomos con licencia MIT y autoalojables, pero Hermes Agent está creado por Nous Research con una arquitectura de memoria persistente y habilidades autosuperadoras, además de acceso multiplataforma de mensajería, mientras que el AutoGPT clásico es un agente de bucle de planificación no acotado, con acceso solo por terminal y sin sistema integrado de memoria persistente ni creación de habilidades.' },
-          { q: '¿Quién desarrolla Hermes Agent?', a: 'Nous Research, la organización también responsable de la familia de modelos Hermes y del sitio oficial hermes-agent.org. Según informes de prensa (TechCrunch, WSJ, octubre de 2026), recaudó unos 90 M$ con una valoración de 1.500 M$; esa información procede de la prensa, no de un anuncio primario que este sitio haya visto.' },
-          { q: '¿Puede Hermes Agent funcionar completamente sin acceso a internet?', a: 'Sí, si se configura para usar un endpoint de modelo local como Ollama en lugar de un proveedor alojado, que necesita conexión a internet para acceder a sus modelos.' },
+          { q: '¿Hermes Agent es lo mismo que AutoGPT?', a: 'No. Ambos son proyectos de agentes autónomos con licencia MIT y autoalojables, pero Hermes Agent está creado por Nous Research con una arquitectura de memoria persistente y habilidades autosuperadoras, además de acceso multiplataforma de mensajería, mientras que, según su [documentación](https://github.com/Significant-Gravitas/AutoGPT), el AutoGPT clásico se centra en un bucle de planificación ejecutado en terminal y no describe un sistema de creación de habilidades como el de Hermes Agent. Consulta el repositorio para ver sus capacidades actuales.' },
+          { q: '¿Quién desarrolla Hermes Agent?', a: 'Nous Research, la organización también responsable de la familia de modelos Hermes y del sitio oficial hermes-agent.org. Nous Research es una empresa privada de investigación en IA; la información actual de la empresa está en su sitio oficial.' },
+          { q: '¿Puede Hermes Agent funcionar completamente sin acceso a internet?', a: 'Sí para las llamadas al modelo, si se configura para usar un endpoint de modelo local como Ollama en lugar de un proveedor alojado, que necesita conexión a internet para acceder a sus modelos. Los canales de mensajería, los servidores MCP y las herramientas web siguen necesitando conexión de red.' },
           { q: '¿Es seguro dar a Hermes Agent acceso a mi cuenta de Telegram o Discord?', a: 'Eso depende de cuán cuidadosamente gestiones las credenciales y de qué tan de cerca supervises la memoria y las habilidades autoescritas del agente. Como Hermes Agent conserva estado a lo largo del tiempo y puede modificar sus propias habilidades, revisa qué ha almacenado y trata las credenciales de sus canales de mensajería con la misma precaución que aplicarías a cualquier automatización con acceso amplio a una cuenta.' },
-          { q: '¿Tiene Hermes Agent vulnerabilidades de seguridad conocidas?', a: 'Sí. [OpenCVE registra 45 CVE publicadas](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra NousResearch/hermes-agent, incluyendo CVE-2026-71963 (CVSS 8,8, ejecución remota de código mediante un archivo de configuración de git malicioso) y CVE-2026-82021 (CVSS 8,3, una vulnerabilidad de cadena de suministro en el catálogo MCP incluido). Una auditoría independiente distinta, publicada el 11 de abril de 2026, reportó 4 hallazgos críticos y 9 de severidad alta en la configuración por defecto, incluyendo ejecución de shell sin restricciones y acceso sin restricciones a archivos de credenciales. Comprueba la lista actual de CVE y actualiza a la última versión antes de desplegarlo.' },
-          { q: '¿Es seguro usar Hermes Agent para cargas de trabajo empresariales o de producción?', a: 'Trátalo como software con un historial real y documentado de vulnerabilidades, no como algo ya reforzado para producción. Revisores de seguridad independientes ([Repello.ai](https://repello.ai/blog/hermes-agent-security), [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)) recomiendan limitar permisos, establecer políticas de acceso a la memoria y exigir aprobación humana, en lugar de ejecutarlo sin supervisión con acceso amplio a archivos, shell o credenciales. Además, el proyecto es joven: su repositorio de GitHub data de julio de 2025, por lo que tiene menos endurecimiento en producción que frameworks de agentes más antiguos.' },
+          { q: '¿Tiene Hermes Agent vulnerabilidades de seguridad conocidas?', a: 'Sí. [OpenCVE registra CVE publicadas](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra NousResearch/hermes-agent, incluyendo CVE-2026-71963 (CVSS 8,8, ejecución remota de código mediante un archivo de configuración de git malicioso) y CVE-2026-82021 (CVSS 8,3, una vulnerabilidad de cadena de suministro en el catálogo MCP incluido). Una auditoría independiente distinta, de un investigador externo y publicada el 11 de abril de 2026 para la versión 0.8.0 ([resumen de Cloud Security Alliance](https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/)), reportó en la configuración por defecto de esa versión 4 hallazgos críticos y 9 altos, incluidos ejecución de shell sin restricciones y acceso sin restricciones a archivos de credenciales. Comprueba las notas de versión y la lista de CVE, y actualiza a la última versión antes de desplegarlo.' },
+          { q: '¿Es seguro usar Hermes Agent para cargas de trabajo empresariales o de producción?', a: 'Trátalo como software con un historial real y documentado de vulnerabilidades, no como algo ya reforzado para producción. Revisores de seguridad independientes ([Repello.ai](https://repello.ai/blog/hermes-agent-security), [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)) recomiendan limitar permisos, establecer políticas de acceso a la memoria y exigir aprobación humana, en lugar de ejecutarlo sin supervisión con acceso amplio a archivos, shell o credenciales. Además, el proyecto es joven: su [repositorio de GitHub](https://github.com/NousResearch/hermes-agent) se creó en julio de 2025, por lo que tiene un historial de producción más corto que los frameworks consolidados desde hace tiempo.' },
         ],
       },
       sources: {
@@ -1145,7 +1145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
     publishDate: '2026-09-03',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     educationalLevel: 'Advanced',
     audience: 'Desenvolvedores e usuários de self-hosting avaliando se vale a pena rodar um agente de IA pessoal autônomo na própria infraestrutura em vez de um assistente hospedado',
     primaryTerm: 'Hermes Agent',
@@ -1165,7 +1165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'O Hermes Agent é gratuito e pode rodar totalmente offline?',
-        answer: 'Sim para ambos, com uma condição para o offline: o software tem licença MIT e é gratuito ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). Ele roda totalmente offline apenas quando aponta para um modelo local por meio de um endpoint personalizado, como o Ollama; qualquer provedor em nuvem exige conexão com a internet e gera os custos de API do próprio provedor.',
+        answer: 'Sim para ambos, com uma condição para o offline: o software tem licença MIT e é gratuito ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). As chamadas ao modelo rodam totalmente offline apenas quando ele aponta para um modelo local por meio de um endpoint personalizado, como o Ollama (canais de mensagens, servidores MCP e ferramentas web continuam precisando de rede); qualquer provedor em nuvem exige conexão com a internet e gera os custos de API do próprio provedor.',
         bullets: [
           'Licença MIT, confirmada no arquivo LICENSE do repositório',
           'Modelos locais: Ollama, vLLM, llama.cpp ou LM Studio por endpoint personalizado',
@@ -1209,8 +1209,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Site oficial: hermes-agent.org. Não existe programa de afiliados para o Hermes Agent neste site — cada link abaixo é um link simples e declarado.',
         ],
         callouts: [
-          { type: 'note', text: 'Reportagens da imprensa (TechCrunch, WSJ, outubro de 2026) dizem que a Nous Research levantou cerca de US$ 90 milhões com avaliação de US$ 1,5 bi. A avaliação vem de reportagens, não de um anúncio primário visto por este site — trate isso como contexto sobre a empresa.' },
-          { type: 'warning', text: 'O Hermes Agent tem um histórico real e documentado de vulnerabilidades, não apenas um risco teórico. Uma auditoria independente publicada em 11 de abril de 2026 relatou 4 problemas críticos e 9 de severidade alta na configuração padrão, e [o OpenCVE lista 45 CVEs publicados](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra o projeto, incluindo uma falha de execução remota de código com CVSS 8,8. Veja a seção "Expectativas realistas e riscos" abaixo antes de colocar em produção.' },
+          { type: 'note', text: 'A Nous Research é uma empresa privada de pesquisa em IA; as informações atuais da empresa estão no site oficial.' },
+          { type: 'warning', text: 'O Hermes Agent tem um histórico real e documentado de vulnerabilidades, não apenas um risco teórico. Uma auditoria independente de um pesquisador externo, publicada em 11 de abril de 2026 para a versão 0.8.0, relatou 4 problemas críticos e 9 de severidade alta na configuração padrão dessa versão, e [o OpenCVE lista CVEs publicados](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra o projeto, incluindo uma falha de execução remota de código com CVSS 8,8. Veja a seção "Expectativas realistas e riscos" abaixo antes de colocar em produção.' },
         ],
       },
       overview: {
@@ -1254,7 +1254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         faqs: [
           { q: 'O Hermes Agent precisa de GPU para rodar localmente?', a: 'Só se você mesmo rodar o modelo. Um modelo local via Ollama tem a mesma dependência de hardware de qualquer LLM local: uma GPU capaz acelera bastante a inferência, e a inferência só em CPU é possível, mas mais lenta. Com um provedor hospedado, o processo do agente em si exige muito menos poder computacional. A necessidade de VRAM depende do modelo escolhido, então consulte a documentação desse modelo.' },
-          { q: 'O Hermes Agent pode rodar sem nenhuma conexão com a internet?', a: 'Sim, se configurado para usar um endpoint local compatível com a OpenAI, como o Ollama, para suas chamadas de modelo. Qualquer provedor hospedado exige conexão com a internet e gera os custos de API por token do próprio provedor, separados do fato de o Hermes Agent em si ser software gratuito.' },
+          { q: 'O Hermes Agent pode rodar sem nenhuma conexão com a internet?', a: 'Sim, se configurado para usar um endpoint local compatível com a OpenAI, como o Ollama, para suas chamadas de modelo; canais de mensagens, servidores MCP e ferramentas web continuam precisando de conexão de rede. Qualquer provedor hospedado exige conexão com a internet e gera os custos de API por token do próprio provedor, separados do fato de o Hermes Agent em si ser software gratuito.' },
         ],
       },
       deployment: {
@@ -1290,7 +1290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Nous Research, a empresa por trás do projeto',
-            content: 'A Nous Research é a organização por trás do Hermes Agent, da família de modelos Hermes e do site oficial do Hermes Agent, hermes-agent.org. Reportagens da imprensa (TechCrunch, WSJ, outubro de 2026) dizem que a Nous Research levantou cerca de US$ 90 milhões com avaliação de US$ 1,5 bi. Essa avaliação vem de reportagens, não de um anúncio primário visto por este site — confira as reportagens mais recentes antes de se basear nela.',
+            content: 'A Nous Research é a organização por trás do Hermes Agent, da família de modelos Hermes e do site oficial do Hermes Agent, hermes-agent.org. A Nous Research é uma empresa privada de pesquisa em IA; as informações atuais da empresa estão no site oficial.',
           },
         ],
         callouts: [
@@ -1302,18 +1302,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quais são as expectativas realistas ao rodar o Hermes Agent?',
         content: '**Um agente autônomo com memória persistente e loop de habilidades autoaperfeiçoável precisa de supervisão mais próxima do que um chatbot sem estado, porque seu comportamento se acumula ao longo do tempo em vez de reiniciar a cada sessão — e o Hermes Agent, especificamente, tem um histórico de vulnerabilidades ativo e documentado a considerar antes de colocar em produção, não apenas um aviso arquitetural de "supervisione de perto".**',
         items: [
-          'Uma auditoria de segurança independente do pesquisador @Anic888, publicada em 11 de abril de 2026, encontrou 4 problemas críticos e 9 de severidade alta na configuração padrão do Hermes Agent: execução de shell sem restrições que contorna a proteção embutida de detecção de comandos, acesso sem restrições a arquivos de credenciais (a auditoria lista chaves SSH privadas, arquivos de chaves de API, perfis de navegador, caches de credenciais git e arquivos de configuração de provedores de nuvem como legíveis sem nenhuma lista de bloqueio), ambientes em contêiner que pulam incondicionalmente as verificações de aprovação, e um caminho de injeção persistente de habilidades pelo qual um invasor pode escrever arquivos em `~/.hermes/skills/` que continuam rodando entre sessões',
-          '[O OpenCVE lista 45 CVEs publicados](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra o NousResearch/hermes-agent, incluindo o CVE-2026-71963 (CVSS 8,8 — execução remota de código via um arquivo de configuração git malicioso) e o CVE-2026-82021 (CVSS 8,3 — uma vulnerabilidade de cadeia de suprimentos no catálogo MCP incluído, capaz de propagar código malicioso para todo host que instalasse uma entrada afetada do catálogo). O número e a severidade dos CVEs mudam conforme novos problemas são registrados e antigos são corrigidos — verifique a lista atual para a versão que você pretende rodar antes de colocar em produção',
+          'Uma auditoria de segurança independente publicada em 11 de abril de 2026 (resumida na [nota de pesquisa da Cloud Security Alliance](https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/)) relatou na época 4 achados críticos e 9 de severidade alta na configuração padrão: execução de shell sem restrições que contorna a proteção embutida de detecção de comandos, acesso sem restrições a arquivos de credenciais (a auditoria lista chaves SSH privadas, arquivos de chaves de API, perfis de navegador, caches de credenciais git e arquivos de configuração de provedores de nuvem como legíveis sem nenhuma lista de bloqueio), ambientes em contêiner que pulam incondicionalmente as verificações de aprovação, e um caminho de injeção persistente de habilidades pelo qual um invasor pode escrever arquivos em `~/.hermes/skills/` que continuam rodando entre sessões',
+          '[O OpenCVE lista CVEs publicados](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra o NousResearch/hermes-agent, incluindo o CVE-2026-71963 (CVSS 8,8 — execução remota de código via um arquivo de configuração git malicioso) e o CVE-2026-82021 (CVSS 8,3 — uma vulnerabilidade de cadeia de suprimentos no catálogo MCP incluído, capaz de propagar código malicioso para todo host que instalasse uma entrada afetada do catálogo). O número e a severidade dos CVEs mudam conforme novos problemas são registrados e antigos são corrigidos — verifique a lista atual para a versão que você pretende rodar antes de colocar em produção',
           'Pesquisadores de segurança da Repello.ai também descrevem classes de risco que não aparecem como números de CVE individuais: injeção indireta de prompt através da própria memória do agente (um invasor que consiga escrever na memória pode plantar instruções que o agente recupera e executa depois) e servidores de Model Context Protocol não verificados capazes de injetar instruções em um agente conectado sem que o usuário aprove cada um',
           'Memória persistente significa que erros ou suposições ruins do agente podem persistir e se acumular entre sessões se não forem revisados — verifique periodicamente o que ele armazenou, e trate a própria memória como dado sensível, já que uma análise de segurança da [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business) observa que ela pode acumular dados de contas e informações de clientes ao longo do tempo',
           'Habilidades autoescritas são, por definição, código ou rotinas produzidos pelo próprio agente; revise o conteúdo de `~/.hermes/skills/` antes de deixá-lo rodar sem supervisão em tarefas sensíveis — esse diretório é exatamente o mecanismo que a auditoria de abril de 2026 apontou para injeção persistente de habilidades, então verifique os arquivos em si, não só o que o agente relata ter feito',
           'O acesso por plataformas de mensagens amplia a superfície de ataque em comparação com uma ferramenta só de terminal. Trate tokens de bot e credenciais de API do Telegram, Discord, Slack, WhatsApp e Signal com o mesmo cuidado que qualquer outra credencial que dê acesso a um processo automatizado',
           'A escolha do modelo afeta custo e privacidade: um modelo local via Ollama mantém os dados na sua própria infraestrutura, enquanto um provedor hospedado, como OpenRouter, Anthropic ou OpenAI, recebe suas solicitações, sujeitas aos termos de tratamento de dados desse provedor',
-          'Atualize para a versão atual antes de colocar em produção, e desative qualquer configuração do tipo "pular todas as verificações de aprovação" / autonomia irrestrita para uso em produção — vários dos achados críticos acima tratam exatamente de verificações de aprovação contornadas ou ausentes por padrão, não de um recurso de conveniência faltando',
+          'Atualize para a versão atual antes de colocar em produção, e desative qualquer configuração do tipo "pular todas as verificações de aprovação" / autonomia irrestrita para uso em produção — vários dos achados críticos acima tratam exatamente de verificações de aprovação contornadas ou ausentes na versão auditada, não de um recurso de conveniência faltando',
           'Este site não realizou seu próprio teste de longa duração do comportamento do loop de habilidades ou da memória do Hermes Agent até o momento; os pontos de arquitetura acima descrevem comportamento documentado, e os pontos de vulnerabilidade vêm da auditoria independente citada e do banco de dados público de CVEs, não de um incidente observado diretamente por este site',
         ],
         callouts: [
-          { type: 'warning', text: 'Isso é risco de vulnerabilidade documentado no nível de arquitetura, não o relato de uma invasão concreta e confirmada. Nenhum relato independentemente verificado de um ataque bem-sucedido através desses vetores contra um deployment real foi encontrado até o momento — o ponto é que são fraquezas reais e corrigíveis em configurações padrão, confirmadas por uma auditoria externa e um histórico público de CVEs, não hipotéticas. Atualize para a versão atual e revise a configuração acima antes de confiar ao agente tarefas, arquivos ou credenciais sensíveis.' },
+          { type: 'warning', text: 'Isso é risco de vulnerabilidade documentado no nível de arquitetura, não o relato de uma invasão concreta e confirmada. Nenhum relato independentemente verificado de um ataque bem-sucedido através desses vetores contra um deployment real foi encontrado até o momento — o ponto é que são fraquezas reais e corrigíveis em configurações padrão, relatadas por um pesquisador independente na configuração padrão da época, além de dois CVEs publicados separadamente, não hipotéticas. Atualize para a versão atual e revise a configuração acima antes de confiar ao agente tarefas, arquivos ou credenciais sensíveis.' },
         ],
       },
       whoShouldUse: {
@@ -1368,7 +1368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Erro 3: tratar valores de investimento divulgados pela imprensa como fato confirmado',
-            content: 'Reportagens da imprensa (TechCrunch, WSJ, outubro de 2026) dizem que a Nous Research levantou cerca de US$ 90 milhões com avaliação de US$ 1,5 bi. Essa avaliação vem de reportagens, não de um anúncio primário visto por este site — trate-a como contexto sobre a empresa e confira as reportagens mais recentes.',
+            content: 'Este site não informa números de financiamento ou avaliação da Nous Research, porque não viu um anúncio primário. Consulte o site oficial da Nous Research para ver as informações atuais da empresa antes de confiar em qualquer número.',
           },
           {
             title: 'Erro 4: negligenciar a higiene de credenciais dos canais de mensagens',
@@ -1376,7 +1376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Erro 5: colocar a configuração padrão em produção sem checar vulnerabilidades conhecidas',
-            content: 'Uma auditoria independente publicada em 11 de abril de 2026 relatou 4 problemas críticos e 9 de severidade alta na configuração padrão do Hermes Agent, incluindo execução de shell sem restrições e acesso sem restrições a arquivos de credenciais, e [o OpenCVE lista 45 CVEs publicados](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra o projeto, incluindo uma falha de execução remota de código com CVSS 8,8. Atualize para a versão atual, desative as configurações de autonomia irrestrita e de "pular aprovação", e confira a lista de CVEs para a versão que você vai usar antes de confiar tarefas sensíveis ao agente. Trate isso como higiene contínua de patches, não como um passo único de configuração.',
+            content: 'Uma auditoria independente de um pesquisador externo, publicada em 11 de abril de 2026 para a versão 0.8.0, relatou 4 problemas críticos e 9 de severidade alta na configuração padrão dessa versão do Hermes Agent, incluindo execução de shell sem restrições e acesso sem restrições a arquivos de credenciais, e [o OpenCVE lista CVEs publicados](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra o projeto, incluindo uma falha de execução remota de código com CVSS 8,8. Atualize para a versão atual, desative as configurações de autonomia irrestrita e de "pular aprovação", e confira a lista de CVEs para a versão que você vai usar antes de confiar tarefas sensíveis ao agente. Trate isso como higiene contínua de patches, não como um passo único de configuração.',
           },
         ],
       },
@@ -1390,12 +1390,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Quais modelos o Hermes Agent pode usar?', a: 'O Hermes Agent suporta dezenas de provedores, incluindo Nous Portal, OpenRouter, Anthropic, OpenAI, Google Gemini, DeepSeek e Hugging Face, além de qualquer endpoint compatível com a OpenAI para modelos locais.' },
           { q: 'Quais plataformas de mensagens dá para usar para falar com o Hermes Agent?', a: 'Telegram, Discord, Slack, WhatsApp e Signal, além de uma interface de terminal. Cada canal precisa do próprio token de bot ou conjunto de credenciais de API, configurado conforme o processo padrão daquela plataforma.' },
           { q: 'Quanto custa auto-hospedar o Hermes Agent?', a: 'O software é gratuito; o custo de hospedagem depende de onde você o roda. Os backends suportados são local, Docker, SSH, Modal, Daytona e Vercel Sandbox. O preço real depende do provedor escolhido e muda com o tempo, então confirme as tarifas atuais diretamente com esse provedor.' },
-          { q: 'O Hermes Agent é a mesma coisa que o AutoGPT?', a: 'Não. Ambos são projetos de agentes autônomos licenciados sob MIT e auto-hospedáveis, mas o Hermes Agent é criado pela Nous Research com uma arquitetura de memória persistente e habilidades autoaperfeiçoáveis, além de acesso multiplataforma de mensagens, enquanto o AutoGPT clássico é um agente de loop de planejamento não delimitado, com acesso só por terminal e sem sistema embutido de memória persistente ou criação de habilidades.' },
-          { q: 'Quem desenvolve o Hermes Agent?', a: 'A Nous Research, organização também responsável pela família de modelos Hermes e pelo site oficial hermes-agent.org. Reportagens da imprensa (TechCrunch, WSJ, outubro de 2026) dizem que ela levantou cerca de US$ 90 milhões com avaliação de US$ 1,5 bi; isso vem de reportagens, não de um anúncio primário visto por este site.' },
-          { q: 'O Hermes Agent pode rodar completamente sem acesso à internet?', a: 'Sim, se configurado para usar um endpoint de modelo local, como o Ollama, em vez de um provedor hospedado, que exige conexão com a internet para acessar seus modelos.' },
+          { q: 'O Hermes Agent é a mesma coisa que o AutoGPT?', a: 'Não. Ambos são projetos de agentes autônomos licenciados sob MIT e auto-hospedáveis, mas o Hermes Agent é criado pela Nous Research com uma arquitetura de memória persistente e habilidades autoaperfeiçoáveis, além de acesso multiplataforma de mensagens, enquanto, segundo a [documentação](https://github.com/Significant-Gravitas/AutoGPT), o AutoGPT clássico se concentra em um loop de planejamento executado no terminal e não descreve um sistema de criação de habilidades como o do Hermes Agent. Consulte o repositório para ver os recursos atuais.' },
+          { q: 'Quem desenvolve o Hermes Agent?', a: 'A Nous Research, organização também responsável pela família de modelos Hermes e pelo site oficial hermes-agent.org. A Nous Research é uma empresa privada de pesquisa em IA; as informações atuais da empresa estão no site oficial.' },
+          { q: 'O Hermes Agent pode rodar completamente sem acesso à internet?', a: 'Sim para as chamadas ao modelo, se configurado para usar um endpoint de modelo local, como o Ollama, em vez de um provedor hospedado, que exige conexão com a internet para acessar seus modelos. Canais de mensagens, servidores MCP e ferramentas web continuam precisando de conexão de rede.' },
           { q: 'É seguro dar ao Hermes Agent acesso à minha conta do Telegram ou Discord?', a: 'Isso depende de quão cuidadosamente você gerencia as credenciais e de quão de perto supervisiona a memória e as habilidades autoescritas do agente. Como o Hermes Agent mantém estado ao longo do tempo e pode modificar suas próprias habilidades, verifique o que ele armazenou e trate as credenciais de seus canais de mensagens com a mesma cautela que aplicaria a qualquer automação com acesso amplo a uma conta.' },
-          { q: 'O Hermes Agent tem vulnerabilidades de segurança conhecidas?', a: 'Sim. [O OpenCVE lista 45 CVEs publicados](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra o NousResearch/hermes-agent, incluindo o CVE-2026-71963 (CVSS 8,8, execução remota de código via um arquivo de configuração git malicioso) e o CVE-2026-82021 (CVSS 8,3, uma vulnerabilidade de cadeia de suprimentos no catálogo MCP incluído). Uma auditoria independente separada, publicada em 11 de abril de 2026, relatou 4 problemas críticos e 9 de severidade alta na configuração padrão, incluindo execução de shell sem restrições e acesso sem restrições a arquivos de credenciais. Confira a lista atual de CVEs e atualize para a versão mais recente antes de colocar em produção.' },
-          { q: 'O Hermes Agent é seguro para uso empresarial ou em produção?', a: 'Trate-o como um software com um histórico real e documentado de vulnerabilidades, não como algo já preparado para produção. Revisores de segurança independentes ([Repello.ai](https://repello.ai/blog/hermes-agent-security), [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)) recomendam limitar permissões, definir políticas de acesso à memória e exigir aprovação humana, em vez de deixá-lo rodar sem supervisão com acesso amplo a arquivos, shell ou credenciais. O projeto também é recente: o repositório no GitHub data de julho de 2025, então tem menos blindagem em produção do que frameworks de agentes mais antigos.' },
+          { q: 'O Hermes Agent tem vulnerabilidades de segurança conhecidas?', a: 'Sim. [O OpenCVE lista CVEs publicados](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra o NousResearch/hermes-agent, incluindo o CVE-2026-71963 (CVSS 8,8, execução remota de código via um arquivo de configuração git malicioso) e o CVE-2026-82021 (CVSS 8,3, uma vulnerabilidade de cadeia de suprimentos no catálogo MCP incluído). Uma auditoria separada, de um pesquisador independente e publicada em 11 de abril de 2026 para a versão 0.8.0 ([resumo da Cloud Security Alliance](https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/)), relatou na configuração padrão dessa versão 4 achados críticos e 9 de severidade alta, incluindo execução de shell sem restrições e acesso sem restrições a arquivos de credenciais. Confira as notas de versão e a lista de CVEs e atualize para a versão mais recente antes de colocar em produção.' },
+          { q: 'O Hermes Agent é seguro para uso empresarial ou em produção?', a: 'Trate-o como um software com um histórico real e documentado de vulnerabilidades, não como algo já preparado para produção. Revisores de segurança independentes ([Repello.ai](https://repello.ai/blog/hermes-agent-security), [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)) recomendam limitar permissões, definir políticas de acesso à memória e exigir aprovação humana, em vez de deixá-lo rodar sem supervisão com acesso amplo a arquivos, shell ou credenciais. O projeto também é recente: o [repositório no GitHub](https://github.com/NousResearch/hermes-agent) foi criado em julho de 2025, então tem um histórico de produção mais curto do que frameworks consolidados há mais tempo.' },
         ],
       },
       sources: {
@@ -1429,7 +1429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
     publishDate: '2026-09-03',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     educationalLevel: 'Advanced',
     audience: 'ホスト型アシスタントではなく自前のインフラで自律型パーソナルAIエージェントを運用すべきか検討している開発者・セルフホスト志向のユーザー',
     primaryTerm: 'Hermes Agent',
@@ -1449,7 +1449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'Hermes Agentは無料で、完全オフラインで動作しますか？',
-        answer: 'どちらもイエスですが、オフラインには条件があります。ソフトウェアはMITライセンスで無料です（[github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)）。完全オフラインで動くのは、Ollamaなどのカスタムエンドポイント経由でローカルモデルを指定した場合のみで、クラウドプロバイダーを使う場合はインターネット接続とそのプロバイダーのAPI費用が必要です。',
+        answer: 'どちらもイエスですが、オフラインには条件があります。ソフトウェアはMITライセンスで無料です（[github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)）。モデル呼び出しが完全オフラインで動くのは、Ollamaなどのカスタムエンドポイント経由でローカルモデルを指定した場合のみで（メッセージングチャンネル、MCPサーバー、Webツールには引き続きネットワークが必要）、クラウドプロバイダーを使う場合はインターネット接続とそのプロバイダーのAPI費用が必要です。',
         bullets: [
           'MITライセンス（リポジトリのLICENSEファイルで確認）',
           'ローカルモデル：カスタムエンドポイント経由のOllama、vLLM、llama.cpp、LM Studio',
@@ -1493,8 +1493,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '公式サイト：hermes-agent.org。本サイトにHermes Agentのアフィリエイトプログラムは存在せず、以下のリンクはすべて開示済みの通常リンクである。',
         ],
         callouts: [
-          { type: 'note', text: '報道（TechCrunch、WSJ、2026年10月）によると、Nous Researchは評価額15億ドルで約9,000万ドルを調達したとされる。この評価額は報道に基づくもので、本サイトが確認した一次発表ではないため、企業に関する文脈として扱うこと。' },
-          { type: 'warning', text: 'Hermes Agentには、単なる理論上のリスクではなく、実際に開示されている脆弱性の履歴があります。2026年4月11日に公開された独立監査では、デフォルト設定に4件のCriticalと9件のHighの重大度の問題が報告されており、[OpenCVEは45件の公開CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)を本プロジェクトに対して掲載しています。その中にはCVSS 8.8のリモートコード実行の脆弱性も含まれます。導入前に、下記の「現実的な期待値とリスク」セクションを確認してください。' },
+          { type: 'note', text: 'Nous Researchは民間のAI研究企業です。最新の企業情報は公式サイトをご確認ください。' },
+          { type: 'warning', text: 'Hermes Agentには、単なる理論上のリスクではなく、実際に開示されている脆弱性の履歴があります。独立した研究者によるバージョン0.8.0の監査（2026年4月11日公開）では、そのバージョンのデフォルト設定に4件のCriticalと9件のHighの重大度の問題が報告されており、[OpenCVEは公開CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)を本プロジェクトに対して掲載しています。その中にはCVSS 8.8のリモートコード実行の脆弱性も含まれます。導入前に、下記の「現実的な期待値とリスク」セクションを確認してください。' },
         ],
       },
       overview: {
@@ -1538,7 +1538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         faqs: [
           { q: 'Hermes Agentをローカルで動かすにはGPUが必要ですか？', a: 'モデルを自分で動かす場合のみ必要です。Ollama経由のローカルモデルには、他のローカルLLMと同じハードウェア依存性があります。高性能なGPUは推論を大幅に高速化し、CPUのみでの推論も可能ですが速度は落ちます。ホスト型プロバイダーを使う場合、エージェントプロセス自体に必要な計算能力ははるかに小さくなります。モデル固有のVRAM目安は選ぶモデルによって異なるため、そのモデルのドキュメントを確認してください。' },
-          { q: 'Hermes Agentはインターネット接続なしで動作できますか？', a: 'はい、モデル呼び出しにOllamaなどのローカルOpenAI互換エンドポイントを使うよう設定した場合に可能です。ホスト型プロバイダーを使う場合はインターネット接続が必要で、Hermes Agent自体が無料ソフトウェアであることとは別に、そのプロバイダー独自のトークン単位のAPI費用が発生します。' },
+          { q: 'Hermes Agentはインターネット接続なしで動作できますか？', a: 'はい、モデル呼び出しにOllamaなどのローカルOpenAI互換エンドポイントを使うよう設定した場合に可能です。メッセージングチャンネル、MCPサーバー、Webツールには引き続きネットワーク接続が必要です。ホスト型プロバイダーを使う場合はインターネット接続が必要で、Hermes Agent自体が無料ソフトウェアであることとは別に、そのプロバイダー独自のトークン単位のAPI費用が発生します。' },
         ],
       },
       deployment: {
@@ -1574,7 +1574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: '開発元の企業、Nous Research',
-            content: 'Nous Researchは、Hermes Agent、Hermesモデルファミリー、そしてHermes Agentの公式サイトhermes-agent.orgを手がける組織である。報道（TechCrunch、WSJ、2026年10月）によると、Nous Researchは評価額15億ドルで約9,000万ドルを調達したとされる。この評価額は一次発表ではなく報道に基づくものであり、本サイトは一次発表を確認していないため、頼りにする前に最新の報道を確認すること。',
+            content: 'Nous Researchは、Hermes Agent、Hermesモデルファミリー、そしてHermes Agentの公式サイトhermes-agent.orgを手がける組織である。Nous Researchは民間のAI研究企業です。最新の企業情報は公式サイトをご確認ください。',
           },
         ],
         callouts: [
@@ -1586,18 +1586,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Hermes Agentを運用する際の現実的な期待値とは？',
         content: '**永続的な記憶と自己改善型スキルループを持つ自律型エージェントは、セッションごとにリセットされる無状態のチャットボットよりも、挙動が時間とともに蓄積されていくため、より綿密な監督を必要とします。さらにHermes Agentの場合、「綿密に監督すべき」という設計上の注意にとどまらず、導入前に考慮すべき実際に開示されている脆弱性の履歴があります。**',
         items: [
-          '研究者@Anic888による独立セキュリティ監査（2026年4月11日公開）では、Hermes Agentのデフォルト設定に4件のCriticalと9件のHighの重大度の問題が見つかりました。組み込みのコマンド検出をすり抜ける無制限のシェル実行、拒否リストなしでSSH秘密鍵・APIキーファイル・ブラウザプロファイル・gitの認証情報キャッシュ・クラウドプロバイダーの設定ファイルが読み取り可能となる無制限の認証情報ファイルアクセス、承認チェックを無条件にスキップするコンテナ環境、そして攻撃者が`~/.hermes/skills/`にファイルを書き込みセッションをまたいで実行し続けられる永続的なスキルインジェクションの経路です',
-          '[OpenCVEはNousResearch/hermes-agentに対して45件の公開CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)を掲載しています。その中には、悪意あるgit設定ファイルによるリモートコード実行のCVE-2026-71963（CVSS 8.8）と、同梱のMCPカタログのサプライチェーン脆弱性で影響を受けるカタログエントリをインストールした全ホストに悪意あるコードを伝播しうるCVE-2026-82021（CVSS 8.3）が含まれます。CVEの件数と重大度は新規の報告や修正に応じて常に変動するため、導入予定のバージョンについて最新の一覧を確認してください',
+          '2026年4月11日に公開された独立セキュリティ監査（[Cloud Security Allianceのリサーチノート](https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/)で要約）では、当時のデフォルト設定に4件のCriticalと9件のHighの指摘が報告されました。組み込みのコマンド検出をすり抜ける無制限のシェル実行、拒否リストなしでSSH秘密鍵・APIキーファイル・ブラウザプロファイル・gitの認証情報キャッシュ・クラウドプロバイダーの設定ファイルが読み取り可能となる無制限の認証情報ファイルアクセス、承認チェックを無条件にスキップするコンテナ環境、そして攻撃者が`~/.hermes/skills/`にファイルを書き込みセッションをまたいで実行し続けられる永続的なスキルインジェクションの経路です',
+          '[OpenCVEはNousResearch/hermes-agentに対して公開CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)を掲載しています。その中には、悪意あるgit設定ファイルによるリモートコード実行のCVE-2026-71963（CVSS 8.8）と、同梱のMCPカタログのサプライチェーン脆弱性で影響を受けるカタログエントリをインストールした全ホストに悪意あるコードを伝播しうるCVE-2026-82021（CVSS 8.3）が含まれます。CVEの件数と重大度は新規の報告や修正に応じて常に変動するため、導入予定のバージョンについて最新の一覧を確認してください',
           'Repello.aiのセキュリティ研究者は、個別のCVE番号としては現れないリスクの種類も指摘しています。エージェント自身の記憶ストアを介した間接的なプロンプトインジェクション（記憶に書き込める攻撃者は、エージェントが後で取得・実行する指示を仕込める）と、ユーザーが個別に承認せずとも接続済みエージェントに指示を注入できる未検証のModel Context Protocolサーバーです',
           '永続的な記憶は、エージェントのミスや誤った前提がレビューされないままセッションをまたいで持続・蓄積しうることを意味します — 何が保存されているか定期的に確認し、[Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)のセキュリティレビューが指摘するように、記憶自体にアカウント情報や顧客情報が時間とともに蓄積しうる機密データとして扱ってください',
           '自己記述型スキルは、定義上エージェント自身が生成したコードやルーチンです。無人で機密性の高いタスクを任せる前に`~/.hermes/skills/`の中身を確認してください — 2026年4月の監査が永続的なスキルインジェクションの手段として指摘したのはまさにこのディレクトリであり、エージェントが報告する内容だけでなく、ファイル自体を確認する必要があります',
           'メッセージングプラットフォーム経由のアクセスは、ターミナルのみのツールと比べて攻撃対象領域を広げます — Telegram、Discord、Slack、WhatsApp、SignalのBotトークンやAPI認証情報は、自動化プロセスへのアクセスを許可する他の認証情報と同じ注意で扱ってください',
           'モデルの選択はコストとプライバシーの両方に影響します：Ollama経由のローカルモデルはデータを自前のインフラにとどめますが、OpenRouter、Anthropic、OpenAIなどのホスト型プロバイダーはリクエストを受け取り、そのプロバイダー独自のデータ取扱条件が適用されます',
-          '導入前に最新版へアップデートし、本番運用では「すべての承認チェックをスキップする」といった無制限の自律動作の設定を無効化してください — 上記の重大な問題の多くは、便利機能が欠けているという話ではなく、承認チェックがデフォルトで回避または欠落していること自体を指摘しています',
+          '導入前に最新版へアップデートし、本番運用では「すべての承認チェックをスキップする」といった無制限の自律動作の設定を無効化してください — 上記の重大な問題の多くは、便利機能が欠けているという話ではなく、承認チェックが監査対象のバージョンで回避または欠落していること自体を指摘しています',
           '執筆時点で本サイトはHermes Agentのスキルループや記憶の挙動について独自の長時間テストを実施していません。上記のアーキテクチャに関するポイントは文書化された挙動の説明であり、脆弱性に関するポイントは本サイトが直接観測した事象ではなく、上記の独立監査と公開CVEデータベースを出典としています',
         ],
         callouts: [
-          { type: 'warning', text: 'これは設計レベルで開示されている脆弱性リスクの説明であり、実際に発生・確認された侵害の報告ではありません。執筆時点で、これらの経路を通じた実際のデプロイへの攻撃が成功したという独立検証済みの報告は見つかっていません。要点は、これらが外部監査と公開CVE履歴によって確認された、デフォルト設定における現実的かつ修正可能な弱点であり、仮説上のものではないということです。機密性の高いタスク・ファイル・認証情報をエージェントに任せる前に、最新版へパッチを当て、上記の設定を確認してください。' },
+          { type: 'warning', text: 'これは設計レベルで開示されている脆弱性リスクの説明であり、実際に発生・確認された侵害の報告ではありません。執筆時点で、これらの経路を通じた実際のデプロイへの攻撃が成功したという独立検証済みの報告は見つかっていません。要点は、これらが、当時のデフォルト設定について独立した研究者が報告した現実的かつ修正可能な弱点と、別途公開された2件のCVEであり、仮説上のものではないということです。機密性の高いタスク・ファイル・認証情報をエージェントに任せる前に、最新版へパッチを当て、上記の設定を確認してください。' },
         ],
       },
       whoShouldUse: {
@@ -1652,7 +1652,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '誤解3：報道された資金調達額を確定した事実と捉える',
-            content: '報道（TechCrunch、WSJ、2026年10月）によると、Nous Researchは評価額15億ドルで約9,000万ドルを調達したとされる。この評価額は一次発表ではなく報道に基づくものであり、本サイトは一次発表を確認していないため、企業に関する文脈として扱い、最新の報道を確認すること。',
+            content: '本サイトはNous Researchの資金調達額や評価額を記載していません。一次発表を確認していないためです。数字に頼る前に、Nous Researchの公式サイトで最新の企業情報をご確認ください。',
           },
           {
             title: '誤解4：メッセージングチャンネルの認証情報管理を軽視する',
@@ -1660,7 +1660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '誤解5：既知の脆弱性を確認せずにデフォルト設定を導入する',
-            content: '2026年4月11日公開の独立監査では、Hermes Agentのデフォルト設定に無制限のシェル実行や無制限の認証情報ファイルアクセスを含む4件のCriticalと9件のHighの重大度の問題が報告されており、[OpenCVEは45件の公開CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)を本プロジェクトに対して掲載している。その中にはCVSS 8.8のリモートコード実行の脆弱性も含まれる。機密性の高いタスクをエージェントに任せる前に、最新版へアップデートし、無制限の自律動作や承認チェックをスキップする設定を無効化し、対象バージョンのCVE一覧を確認すること — これは一度きりのセットアップ手順ではなく、継続的なパッチ管理として扱うべきである。',
+            content: '独立した研究者によるバージョン0.8.0の監査（2026年4月11日公開）では、Hermes Agentの当該バージョンのデフォルト設定に無制限のシェル実行や無制限の認証情報ファイルアクセスを含む4件のCriticalと9件のHighの重大度の問題が報告されており、[OpenCVEは公開CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)を本プロジェクトに対して掲載している。その中にはCVSS 8.8のリモートコード実行の脆弱性も含まれる。機密性の高いタスクをエージェントに任せる前に、最新版へアップデートし、無制限の自律動作や承認チェックをスキップする設定を無効化し、対象バージョンのCVE一覧を確認すること — これは一度きりのセットアップ手順ではなく、継続的なパッチ管理として扱うべきである。',
           },
         ],
       },
@@ -1674,12 +1674,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Hermes Agentではどのモデルを使えますか？', a: 'Hermes Agentは、Nous Portal、OpenRouter、Anthropic、OpenAI、Google Gemini、DeepSeek、Hugging Faceなど数十のプロバイダーに対応しており、ローカルモデル用にはOpenAI互換のエンドポイントも使える。' },
           { q: 'Hermes Agentと話すにはどのメッセージングプラットフォームが使えますか？', a: 'ターミナルインターフェースに加え、Telegram、Discord、Slack、WhatsApp、Signalが使える。各チャンネルは、そのプラットフォームの標準的なプロセスに従って設定した独自のBotトークンまたはAPI認証情報が必要になる。' },
           { q: 'Hermes Agentのセルフホストにはいくらかかりますか？', a: 'ソフトウェア自体は無料であり、ホスティング費用はどこで実行するかによる。対応バックエンドはローカル、Docker、SSH、Modal、Daytona、Vercel Sandboxである。実際の料金は選んだプロバイダーによって異なり、時間とともに変化するため、そのプロバイダーに直接最新の料金を確認すること。' },
-          { q: 'Hermes AgentはAutoGPTと同じものですか？', a: 'いいえ。どちらもMITライセンスでセルフホスト可能な自律型エージェントプロジェクトだが、Hermes Agentは永続的な記憶と自己改善型スキルというアーキテクチャ、複数プラットフォームでのメッセージングアクセスを備えたNous Research製であるのに対し、classic AutoGPTは範囲を限定しないプランニングループ型エージェントで、ターミナルからのアクセスのみを持ち、組み込みの永続的記憶やスキル作成の仕組みはない。' },
-          { q: 'Hermes Agentを開発しているのは誰ですか？', a: 'Nous Researchであり、同社はHermesモデルファミリーや公式サイトhermes-agent.orgも手がけている。報道（TechCrunch、WSJ、2026年10月）によると、評価額15億ドルで約9,000万ドルを調達したとされるが、これは報道に基づくもので、本サイトが確認した一次発表ではない。' },
-          { q: 'Hermes Agentはインターネットアクセスが全くない状態で完全に動作できますか？', a: 'はい、ホスト型プロバイダー（モデルへのアクセスにインターネット接続が必要）ではなく、Ollamaなどのローカルモデルのエンドポイントを使うよう設定した場合に限られる。' },
+          { q: 'Hermes AgentはAutoGPTと同じものですか？', a: 'いいえ。どちらもMITライセンスでセルフホスト可能な自律型エージェントプロジェクトだが、Hermes Agentは永続的な記憶と自己改善型スキルというアーキテクチャ、複数プラットフォームでのメッセージングアクセスを備えたNous Research製であるのに対し、classic AutoGPTは[リポジトリのドキュメント](https://github.com/Significant-Gravitas/AutoGPT)によれば、ターミナルで動かすプランニングループが中心で、Hermes Agentのようなスキル作成の仕組みは記載されていません。最新の機能はリポジトリでご確認ください。' },
+          { q: 'Hermes Agentを開発しているのは誰ですか？', a: 'Nous Researchであり、同社はHermesモデルファミリーや公式サイトhermes-agent.orgも手がけている。Nous Researchは民間のAI研究企業です。最新の企業情報は公式サイトをご確認ください。' },
+          { q: 'Hermes Agentはインターネットアクセスが全くない状態で完全に動作できますか？', a: 'モデル呼び出しについては、ホスト型プロバイダー（モデルへのアクセスにインターネット接続が必要）ではなく、Ollamaなどのローカルモデルのエンドポイントを使うよう設定した場合に限り、完全オフラインで動作できる。メッセージングチャンネル、MCPサーバー、Webツールには引き続きネットワーク接続が必要である。' },
           { q: 'Hermes AgentにTelegramやDiscordのアカウントへのアクセスを許可しても安全ですか？', a: 'それは認証情報をどれだけ慎重に管理し、エージェントの記憶や自分で書いたスキルをどれだけ綿密に監督するかによる。Hermes Agentは時間の経過とともに状態を保持し、自分のスキルを変更しうるため、何が保存されているかを確認し、メッセージングチャンネルの認証情報は、アカウントへの広範なアクセス権を持つ他の自動化と同じ注意で扱うこと。' },
-          { q: 'Hermes Agentには既知のセキュリティ脆弱性がありますか？', a: 'はい。[OpenCVEはNousResearch/hermes-agentに対して45件の公開CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)を掲載しており、その中には悪意あるgit設定ファイルによるリモートコード実行のCVE-2026-71963（CVSS 8.8）と、同梱MCPカタログのサプライチェーン脆弱性であるCVE-2026-82021（CVSS 8.3）が含まれる。別の独立監査（2026年4月11日公開）でも、無制限のシェル実行や無制限の認証情報ファイルアクセスを含む4件のCriticalと9件のHighの重大度の問題がデフォルト設定に報告されている。導入前に最新のCVE一覧を確認し、最新版へアップデートすること。' },
-          { q: 'Hermes Agentはビジネス用途や本番環境で安全に使えますか？', a: '本番向けにあらかじめ堅牢化されたソフトウェアとしてではなく、実際に開示されている脆弱性履歴を持つソフトウェアとして扱ってください。独立系のセキュリティレビュアー（[Repello.ai](https://repello.ai/blog/hermes-agent-security)、[Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)）は、ファイル・シェル・認証情報への広範なアクセス権を持たせたまま無人で稼働させるのではなく、権限のスコープ制限、記憶アクセスに関するポリシー、人間による承認ゲートを推奨している。またプロジェクトは新しく、GitHubリポジトリは2025年7月に作られたもので、より古いエージェントフレームワークと比べて本番運用での実績は少ない。' },
+          { q: 'Hermes Agentには既知のセキュリティ脆弱性がありますか？', a: 'はい。[OpenCVEはNousResearch/hermes-agentに対して公開CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)を掲載しており、その中には悪意あるgit設定ファイルによるリモートコード実行のCVE-2026-71963（CVSS 8.8）と、同梱MCPカタログのサプライチェーン脆弱性であるCVE-2026-82021（CVSS 8.3）が含まれる。独立した研究者による別の監査（2026年4月11日公開、対象はバージョン0.8.0、[Cloud Security Allianceの要約](https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/)）では、そのバージョンのデフォルト設定に4件のCriticalと9件のHighの指摘が報告され、無制限のシェル実行や無制限の認証情報ファイルアクセスが含まれていた。導入前に最新のリリースノートとCVE一覧を確認し、最新版へアップデートすること。' },
+          { q: 'Hermes Agentはビジネス用途や本番環境で安全に使えますか？', a: '本番向けにあらかじめ堅牢化されたソフトウェアとしてではなく、実際に開示されている脆弱性履歴を持つソフトウェアとして扱ってください。独立系のセキュリティレビュアー（[Repello.ai](https://repello.ai/blog/hermes-agent-security)、[Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)）は、ファイル・シェル・認証情報への広範なアクセス権を持たせたまま無人で稼働させるのではなく、権限のスコープ制限、記憶アクセスに関するポリシー、人間による承認ゲートを推奨している。またプロジェクトは新しく、[GitHubリポジトリ](https://github.com/NousResearch/hermes-agent)は2025年7月に作成されたもので、長く確立されたフレームワークと比べて本番運用での実績は短い。' },
         ],
       },
       sources: {
@@ -1713,7 +1713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
     publishDate: '2026-09-03',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     educationalLevel: 'Advanced',
     audience: '正在评估是否应在自有基础设施上运行自主个人AI代理、而非使用托管助手的开发者和自托管用户',
     primaryTerm: 'Hermes Agent',
@@ -1733,7 +1733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       zh: {
         question: 'Hermes Agent是免费的吗？能完全离线运行吗？',
-        answer: '两者都是肯定的，但离线运行有一个前提：软件本身是MIT许可、免费的（[github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)）。只有通过自定义端点（例如Ollama）指向本地模型时才能完全离线运行；任何云服务商都需要联网，并产生该服务商自己的API费用。',
+        answer: '两者都是肯定的，但离线运行有一个前提：软件本身是MIT许可、免费的（[github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)）。模型调用只有通过自定义端点（例如Ollama）指向本地模型时才能完全离线运行（消息渠道、MCP服务器和网络工具仍需联网）；任何云服务商都需要联网，并产生该服务商自己的API费用。',
         bullets: [
           'MIT许可证，已在仓库LICENSE文件中确认',
           '本地模型：通过自定义端点使用Ollama、vLLM、llama.cpp或LM Studio',
@@ -1777,8 +1777,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '官方网站：hermes-agent.org。本站没有Hermes Agent的联盟计划——下方每个链接都是普通的、已披露的链接。',
         ],
         callouts: [
-          { type: 'note', text: '媒体报道（TechCrunch、WSJ，2026年10月）称，Nous Research以15亿美元估值融资约9000万美元。该估值来自媒体报道，而非本站见到的官方公告，请将其视为公司背景信息。' },
-          { type: 'warning', text: 'Hermes Agent存在真实、已公开披露的漏洞记录，而非仅仅是理论风险。2026年4月11日发布的一份独立审计报告称，其默认配置中存在4个严重（Critical）和9个高危（High）级别的问题，[OpenCVE列出了针对该项目的45个已公开CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)，其中包括一个CVSS评分为8.8的远程代码执行漏洞。部署前请先阅读下方"现实预期与风险"一节。' },
+          { type: 'note', text: 'Nous Research是一家私营AI研究公司；最新公司信息请查阅其官方网站。' },
+          { type: 'warning', text: 'Hermes Agent存在真实、已公开披露的漏洞记录，而非仅仅是理论风险。独立研究人员针对0.8.0版本的审计（2026年4月11日发布）称，该版本默认配置中存在4个严重（Critical）和9个高危（High）级别的问题，[OpenCVE列出了针对该项目的已公开CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)，其中包括一个CVSS评分为8.8的远程代码执行漏洞。部署前请先阅读下方"现实预期与风险"一节。' },
         ],
       },
       overview: {
@@ -1822,7 +1822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         faqs: [
           { q: 'Hermes Agent在本地运行需要GPU吗？', a: '只有在你自己运行模型时才需要。通过Ollama运行本地模型与任何本地LLM有相同的硬件依赖：性能强劲的GPU能大幅加速推理，纯CPU推理也可行，但速度较慢。使用托管服务商时，代理进程本身所需的算力要少得多。具体模型的VRAM需求取决于你选择的模型，请查阅该模型自己的文档。' },
-          { q: 'Hermes Agent能在完全没有互联网连接的情况下运行吗？', a: '可以，但前提是将其配置为使用兼容OpenAI的本地端点（例如Ollama）进行模型调用。任何托管服务商都需要联网，并会产生该服务商自身按token计费的API费用，这与Hermes Agent本身是免费软件是两回事。' },
+          { q: 'Hermes Agent能在完全没有互联网连接的情况下运行吗？', a: '可以，但前提是将其配置为使用兼容OpenAI的本地端点（例如Ollama）进行模型调用；消息渠道、MCP服务器和网络工具仍需联网。任何托管服务商都需要联网，并会产生该服务商自身按token计费的API费用，这与Hermes Agent本身是免费软件是两回事。' },
         ],
       },
       deployment: {
@@ -1858,7 +1858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: '背后的公司：Nous Research',
-            content: 'Nous Research是Hermes Agent、Hermes模型家族以及Hermes Agent官方网站hermes-agent.org背后的组织。媒体报道（TechCrunch、WSJ，2026年10月）称，Nous Research以15亿美元估值融资约9000万美元。该估值来自媒体报道，而非本站见到的官方公告，因此在依赖它之前请核对最新报道。',
+            content: 'Nous Research是Hermes Agent、Hermes模型家族以及Hermes Agent官方网站hermes-agent.org背后的组织。Nous Research是一家私营AI研究公司；最新公司信息请查阅其官方网站。',
           },
         ],
         callouts: [
@@ -1870,18 +1870,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '运行Hermes Agent有哪些现实预期？',
         content: '**具备持久记忆和自我改进技能循环的自主代理，比每次会话都会重置的无状态聊天机器人需要更密切的监督，因为它的行为会随时间累积，而不是每次重置。而Hermes Agent的特殊之处在于，它还有一份真实、已公开披露的漏洞记录，需要在部署前加以考虑，而不仅仅是架构层面"需密切监督"的提醒。**',
         items: [
-          '研究者@Anic888于2026年4月11日发布的一份独立安全审计发现，Hermes Agent默认配置中存在4个严重（Critical）和9个高危（High）级别的问题：绕过内置命令检测防护的无限制Shell执行、无限制的凭据文件访问（该审计列出SSH私钥、API密钥文件、浏览器配置文件、git凭据缓存和云服务商配置文件均可在没有任何拒绝列表的情况下读取）、容器环境无条件跳过审批检查，以及攻击者可向`~/.hermes/skills/`写入文件、使其跨会话持续运行的持久技能注入路径',
-          '[OpenCVE列出了针对NousResearch/hermes-agent的45个已公开CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)，其中包括CVE-2026-71963（CVSS 8.8——通过恶意git配置文件实现远程代码执行）和CVE-2026-82021（CVSS 8.3——内置MCP目录中的供应链漏洞，可能将恶意代码传播到每个安装了受影响目录条目的主机）。CVE的数量和严重程度会随着新问题的报告和旧问题的修复而不断变化——部署前请核实你计划使用的版本的最新列表',
+          '2026年4月11日发布的一份独立安全审计（[Cloud Security Alliance研究简报](https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/)对其有概述）称，当时的默认配置中存在4项严重和9项高危发现：绕过内置命令检测防护的无限制Shell执行、无限制的凭据文件访问（该审计列出SSH私钥、API密钥文件、浏览器配置文件、git凭据缓存和云服务商配置文件均可在没有任何拒绝列表的情况下读取）、容器环境无条件跳过审批检查，以及攻击者可向`~/.hermes/skills/`写入文件、使其跨会话持续运行的持久技能注入路径',
+          '[OpenCVE列出了针对NousResearch/hermes-agent的已公开CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)，其中包括CVE-2026-71963（CVSS 8.8——通过恶意git配置文件实现远程代码执行）和CVE-2026-82021（CVSS 8.3——内置MCP目录中的供应链漏洞，可能将恶意代码传播到每个安装了受影响目录条目的主机）。CVE的数量和严重程度会随着新问题的报告和旧问题的修复而不断变化——部署前请核实你计划使用的版本的最新列表',
           'Repello.ai的安全研究人员还指出了一些不会以单独CVE编号出现的风险类别：通过代理自身记忆存储进行的间接提示注入（能够写入记忆的攻击者可以植入指令，供代理稍后检索并执行），以及未经验证的Model Context Protocol服务器，可以在用户未逐一批准的情况下向已连接的代理注入指令',
           '持久记忆意味着，如果不加审查，代理的错误或错误假设可能会跨会话持续存在并累积——请定期检查它存储了什么，并将记忆存储本身视为敏感数据，[Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)的安全审查指出，它可能会随时间累积账户信息和客户资料',
           '自写技能从定义上讲就是代理自己生成的代码或例程；在让代理无人值守地处理敏感任务之前，请检查`~/.hermes/skills/`目录的内容——2026年4月的审计指出的持久技能注入机制正是这个目录，因此请检查文件本身，而不仅仅是代理报告自己做了什么',
           '通过消息平台访问会比仅限终端的工具带来更大的攻击面——对待Telegram、Discord、Slack、WhatsApp和Signal的机器人令牌与API凭据，应像对待任何能访问自动化进程的其他凭据一样谨慎',
           '模型选择同时影响成本和隐私：通过Ollama使用本地模型会将数据保留在你自己的基础设施上，而OpenRouter、Anthropic或OpenAI等托管服务商会接收你的请求，并受该服务商自身的数据处理条款约束',
-          '部署前请更新到当前版本，并在生产环境中禁用任何"跳过所有审批检查"或不受限制的自主运行类设置——上述多项严重问题都恰恰涉及审批检查被绕过或默认缺失，而非缺少某个便利功能',
+          '部署前请更新到当前版本，并在生产环境中禁用任何"跳过所有审批检查"或不受限制的自主运行类设置——上述多项严重问题都恰恰涉及审批检查在被审计的版本中被绕过或缺失，而非缺少某个便利功能',
           '截至撰稿时，本站尚未对Hermes Agent的技能循环或记忆行为进行自己的长期测试；以上关于架构的要点描述的是文档中记载的行为，而关于漏洞的要点则来自上述独立审计和公开CVE数据库，而非本站直接观察到的事件',
         ],
         callouts: [
-          { type: 'warning', text: '这是架构层面已公开披露的漏洞风险，而非某次具体、已确认入侵事件的报告。截至撰稿时，尚未发现任何经独立验证的报告显示有人通过这些途径成功攻击了真实部署环境——关键在于，这些是经外部审计和公开CVE记录证实的默认配置中真实存在、可修复的弱点，而非假设性的问题。在把敏感任务、文件或凭据交给代理之前，请更新到当前版本，并核查上述配置。' },
+          { type: 'warning', text: '这是架构层面已公开披露的漏洞风险，而非某次具体、已确认入侵事件的报告。截至撰稿时，尚未发现任何经独立验证的报告显示有人通过这些途径成功攻击了真实部署环境——关键在于，这些是独立研究人员报告的当时默认配置中真实存在、可修复的弱点，另有两项单独公开的CVE，而非假设性的问题。在把敏感任务、文件或凭据交给代理之前，请更新到当前版本，并核查上述配置。' },
         ],
       },
       whoShouldUse: {
@@ -1936,7 +1936,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '误区3：把媒体报道的融资数字当作已确认的事实',
-            content: '媒体报道（TechCrunch、WSJ，2026年10月）称，Nous Research以15亿美元估值融资约9000万美元。该估值来自媒体报道，而非本站见到的官方公告，因此请将其视为公司背景信息，并核对最新报道。',
+            content: '本站不提供Nous Research的融资或估值数字，因为尚未见到官方的一手公告。在依赖任何数字之前，请查阅Nous Research官方网站上的最新公司信息。',
           },
           {
             title: '误区4：忽视消息渠道的凭据管理',
@@ -1944,7 +1944,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '误区5：不检查已知漏洞就部署默认配置',
-            content: '2026年4月11日发布的一份独立审计报告称，Hermes Agent默认配置中存在4个严重（Critical）和9个高危（High）级别的问题，包括无限制的Shell执行和无限制的凭据文件访问，[OpenCVE列出了针对该项目的45个已公开CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)，其中包括一个CVSS评分为8.8的远程代码执行漏洞。请更新到当前版本，禁用不受限制的自主运行和"跳过审批"类设置，并在把敏感任务交给代理之前核查目标版本的CVE列表。请把这当作持续的补丁维护工作，而不是一次性的配置步骤。',
+            content: '独立研究人员针对0.8.0版本的审计（2026年4月11日发布）称，Hermes Agent该版本默认配置中存在4个严重（Critical）和9个高危（High）级别的问题，包括无限制的Shell执行和无限制的凭据文件访问，[OpenCVE列出了针对该项目的已公开CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)，其中包括一个CVSS评分为8.8的远程代码执行漏洞。请更新到当前版本，禁用不受限制的自主运行和"跳过审批"类设置，并在把敏感任务交给代理之前核查目标版本的CVE列表。请把这当作持续的补丁维护工作，而不是一次性的配置步骤。',
           },
         ],
       },
@@ -1958,12 +1958,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Hermes Agent可以使用哪些模型？', a: 'Hermes Agent支持数十家提供商，包括Nous Portal、OpenRouter、Anthropic、OpenAI、Google Gemini、DeepSeek和Hugging Face，以及用于本地模型的任何兼容OpenAI的端点。' },
           { q: '可以用哪些消息平台与Hermes Agent对话？', a: '除终端界面外，还可以使用Telegram、Discord、Slack、WhatsApp和Signal。每个渠道都需要按照该平台的标准流程配置自己的机器人令牌或API凭据。' },
           { q: '自托管Hermes Agent要花多少钱？', a: '软件本身免费；托管费用取决于你在哪里运行它。支持的后端有本机、Docker、SSH、Modal、Daytona和Vercel Sandbox。实际价格取决于你选择的提供商，并会随时间变化，因此请直接向该提供商核实当前费率。' },
-          { q: 'Hermes Agent与AutoGPT是同一回事吗？', a: '不是。两者都是MIT许可、可自托管的自主代理项目，但Hermes Agent由Nous Research打造，具备持久记忆与自我改进技能的架构，以及多平台消息访问能力；而经典版AutoGPT是一个范围不受限制的规划循环代理，仅支持终端访问，没有内置的持久记忆或技能创建系统。' },
-          { q: '谁在开发Hermes Agent？', a: 'Nous Research，该组织还打造了Hermes模型家族以及官方网站hermes-agent.org。媒体报道（TechCrunch、WSJ，2026年10月）称其以15亿美元估值融资约9000万美元；该信息来自媒体报道，而非本站见到的官方公告。' },
-          { q: 'Hermes Agent能在完全没有互联网接入的情况下运行吗？', a: '可以，但前提是将其配置为使用Ollama等本地模型端点，而不是需要联网才能访问其模型的托管服务商。' },
+          { q: 'Hermes Agent与AutoGPT是同一回事吗？', a: '不是。两者都是MIT许可、可自托管的自主代理项目，但Hermes Agent由Nous Research打造，具备持久记忆与自我改进技能的架构，以及多平台消息访问能力；而classic AutoGPT根据其[仓库文档](https://github.com/Significant-Gravitas/AutoGPT)，以在终端运行的规划循环为核心，文档中未描述类似Hermes Agent的技能创建系统。最新功能请查阅该仓库。' },
+          { q: '谁在开发Hermes Agent？', a: 'Nous Research，该组织还打造了Hermes模型家族以及官方网站hermes-agent.org。Nous Research是一家私营AI研究公司；最新公司信息请查阅其官方网站。' },
+          { q: 'Hermes Agent能在完全没有互联网接入的情况下运行吗？', a: '模型调用方面可以，但前提是将其配置为使用Ollama等本地模型端点，而不是需要联网才能访问其模型的托管服务商。消息渠道、MCP服务器和网络工具仍需联网。' },
           { q: '让Hermes Agent访问我的Telegram或Discord账户安全吗？', a: '这取决于你对凭据的管理有多谨慎，以及你对代理的记忆和自写技能的监督有多密切。由于Hermes Agent会随时间保留状态，并可能修改自己的技能，请检查它存储了哪些内容，并像对待任何拥有广泛账户访问权限的自动化流程一样，谨慎处理其消息渠道的凭据。' },
-          { q: 'Hermes Agent有已知的安全漏洞吗？', a: '有。[OpenCVE列出了针对NousResearch/hermes-agent的45个已公开CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)，其中包括CVE-2026-71963（CVSS 8.8，通过恶意git配置文件实现远程代码执行）和CVE-2026-82021（CVSS 8.3，内置MCP目录中的供应链漏洞）。另一份独立审计报告（2026年4月11日发布）称，默认配置中存在4个严重（Critical）和9个高危（High）级别的问题，包括无限制的Shell执行和无限制的凭据文件访问。部署前请核实最新的CVE列表并更新到最新版本。' },
-          { q: 'Hermes Agent能安全地用于企业或生产环境吗？', a: '请将其视为一款拥有真实、已公开披露漏洞记录的软件，而非已针对生产环境预先加固的产品。独立安全评审机构（[Repello.ai](https://repello.ai/blog/hermes-agent-security)、[Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)）建议限制权限范围、制定记忆访问策略并设置人工审批环节，而不是让它在拥有广泛文件、Shell或凭据访问权限的情况下无人值守运行。此外，该项目还很年轻：其GitHub仓库创建于2025年7月，相比更成熟的代理框架，其生产环境的实践积累也更少。' },
+          { q: 'Hermes Agent有已知的安全漏洞吗？', a: '有。[OpenCVE列出了针对NousResearch/hermes-agent的已公开CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)，其中包括CVE-2026-71963（CVSS 8.8，通过恶意git配置文件实现远程代码执行）和CVE-2026-82021（CVSS 8.3，内置MCP目录中的供应链漏洞）。另一位独立研究人员的审计（2026年4月11日发布，针对0.8.0版本，[Cloud Security Alliance概述](https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/)）称，该版本默认配置中存在4项严重和9项高危发现，包括无限制的Shell执行和无限制的凭据文件访问。部署前请核查最新发行说明和CVE列表，并更新到最新版本。' },
+          { q: 'Hermes Agent能安全地用于企业或生产环境吗？', a: '请将其视为一款拥有真实、已公开披露漏洞记录的软件，而非已针对生产环境预先加固的产品。独立安全评审机构（[Repello.ai](https://repello.ai/blog/hermes-agent-security)、[Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)）建议限制权限范围、制定记忆访问策略并设置人工审批环节，而不是让它在拥有广泛文件、Shell或凭据访问权限的情况下无人值守运行。此外，该项目还很年轻：其[GitHub仓库](https://github.com/NousResearch/hermes-agent)创建于2025年7月，相比长期成熟的框架，其生产环境的实践记录更短。' },
         ],
       },
       sources: {
@@ -1997,7 +1997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
     publishDate: '2026-09-03',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     educationalLevel: 'Advanced',
     audience: 'مطورون ومستخدمو الاستضافة الذاتية يقيّمون ما إذا كان تشغيل وكيل ذكاء اصطناعي شخصي مستقل على بنيتهم التحتية الخاصة أفضل من مساعد مستضاف',
     primaryTerm: 'Hermes Agent',
@@ -2017,7 +2017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل Hermes Agent مجاني وهل يعمل بلا اتصال بالإنترنت بالكامل؟',
-        answer: 'نعم لكليهما، مع شرط للعمل دون اتصال: البرنامج مرخّص بموجب MIT ومجاني ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). يعمل بلا اتصال بالكامل فقط عند ضبطه على نموذج محلي عبر نقطة نهاية مخصصة مثل Ollama؛ أي مزوّد سحابي يتطلب اتصالًا بالإنترنت وتكاليف واجهة برمجة التطبيقات الخاصة به.',
+        answer: 'نعم لكليهما، مع شرط للعمل دون اتصال: البرنامج مرخّص بموجب MIT ومجاني ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). تعمل استدعاءات النموذج بلا اتصال بالكامل فقط عند ضبطه على نموذج محلي عبر نقطة نهاية مخصصة مثل Ollama (وتظل قنوات المراسلة وخوادم MCP وأدوات الويب بحاجة إلى شبكة)؛ أي مزوّد سحابي يتطلب اتصالًا بالإنترنت وتكاليف واجهة برمجة التطبيقات الخاصة به.',
         bullets: [
           'ترخيص MIT، مؤكَّد في ملف LICENSE بالمستودع',
           'النماذج المحلية: Ollama أو vLLM أو llama.cpp أو LM Studio عبر نقطة نهاية مخصصة',
@@ -2061,8 +2061,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الموقع الرسمي: hermes-agent.org. لا يوجد برنامج تسويق بالعمولة لـ Hermes Agent على هذا الموقع — كل رابط أدناه هو رابط بسيط ومُصرَّح عنه.',
         ],
         callouts: [
-          { type: 'note', text: 'تفيد تقارير صحفية (TechCrunch وWSJ، أكتوبر 2026) بأن Nous Research جمعت نحو 90 مليون دولار بتقييم 1.5 مليار دولار. يأتي هذا التقييم من التقارير الصحفية لا من إعلان رسمي اطلع عليه هذا الموقع، لذا اعتبره سياقًا عن الشركة.' },
-          { type: 'warning', text: 'لدى Hermes Agent سجل ثغرات حقيقي ومُعلَن عنه، لا مجرد مخاطرة نظرية. أفاد تدقيق أمني مستقل نُشر في 11 أبريل 2026 بوجود 4 مشكلات حرجة (Critical) و9 مشكلات عالية الخطورة (High) في الإعداد الافتراضي، ويسرد [OpenCVE 45 ثغرة CVE منشورة](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) ضد المشروع، من بينها ثغرة تنفيذ تعليمات برمجية عن بُعد بدرجة CVSS تبلغ 8.8. راجع قسم "توقعات واقعية ومخاطر" أدناه قبل النشر الفعلي.' },
+          { type: 'note', text: 'Nous Research شركة خاصة لأبحاث الذكاء الاصطناعي؛ تتوفر معلومات الشركة الحالية على موقعها الرسمي.' },
+          { type: 'warning', text: 'لدى Hermes Agent سجل ثغرات حقيقي ومُعلَن عنه، لا مجرد مخاطرة نظرية. أفاد تدقيق أجراه باحث مستقل للإصدار 0.8.0 ونُشر في 11 أبريل 2026 بوجود 4 مشكلات حرجة (Critical) و9 مشكلات عالية الخطورة (High) في الإعداد الافتراضي لذلك الإصدار، ويسرد [OpenCVE ثغرات CVE منشورة](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) ضد المشروع، من بينها ثغرة تنفيذ تعليمات برمجية عن بُعد بدرجة CVSS تبلغ 8.8. راجع قسم "توقعات واقعية ومخاطر" أدناه قبل النشر الفعلي.' },
         ],
       },
       overview: {
@@ -2106,7 +2106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         faqs: [
           { q: 'هل يحتاج Hermes Agent إلى وحدة معالجة رسومات (GPU) للعمل محليًا؟', a: 'فقط إذا شغّلت النموذج بنفسك. للنموذج المحلي عبر Ollama نفس الاعتماد على العتاد الذي يخص أي نموذج لغوي محلي: تسرّع وحدة معالجة رسومات قوية الاستدلال بشكل كبير، ويظل الاستدلال بالمعالج المركزي وحده ممكنًا لكنه أبطأ. مع مزوّد مستضاف تحتاج عملية الوكيل نفسها إلى حوسبة أقل بكثير. تعتمد متطلبات ذاكرة الفيديو على النموذج الذي تختاره، فراجع وثائق ذلك النموذج.' },
-          { q: 'هل يمكن تشغيل Hermes Agent دون أي اتصال بالإنترنت؟', a: 'نعم، إذا ضبطته على نقطة نهاية محلية متوافقة مع OpenAI مثل Ollama لاستدعاءات نموذجه. أي مزوّد مستضاف يتطلب اتصالًا بالإنترنت ويترتب عليه تكاليف واجهة برمجة التطبيقات الخاصة به لكل رمز (token)، بمعزل عن كون Hermes Agent نفسه برنامجًا مجانيًا.' },
+          { q: 'هل يمكن تشغيل Hermes Agent دون أي اتصال بالإنترنت؟', a: 'نعم، إذا ضبطته على نقطة نهاية محلية متوافقة مع OpenAI مثل Ollama لاستدعاءات نموذجه؛ وتظل قنوات المراسلة وخوادم MCP وأدوات الويب بحاجة إلى اتصال بالشبكة. أي مزوّد مستضاف يتطلب اتصالًا بالإنترنت ويترتب عليه تكاليف واجهة برمجة التطبيقات الخاصة به لكل رمز (token)، بمعزل عن كون Hermes Agent نفسه برنامجًا مجانيًا.' },
         ],
       },
       deployment: {
@@ -2142,7 +2142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Nous Research، الشركة القائمة على المشروع',
-            content: 'Nous Research هي المنظمة القائمة على Hermes Agent وعائلة نماذج Hermes والموقع الرسمي لـ Hermes Agent على hermes-agent.org. تفيد تقارير صحفية (TechCrunch وWSJ، أكتوبر 2026) بأن Nous Research جمعت نحو 90 مليون دولار بتقييم 1.5 مليار دولار. يأتي هذا التقييم من التقارير الصحفية لا من إعلان رسمي اطلع عليه هذا الموقع، لذا تحقق من أحدث التقارير قبل الاعتماد عليه.',
+            content: 'Nous Research هي المنظمة القائمة على Hermes Agent وعائلة نماذج Hermes والموقع الرسمي لـ Hermes Agent على hermes-agent.org. Nous Research شركة خاصة لأبحاث الذكاء الاصطناعي؛ تتوفر معلومات الشركة الحالية على موقعها الرسمي.',
           },
         ],
         callouts: [
@@ -2154,18 +2154,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما هي التوقعات الواقعية لتشغيل Hermes Agent؟',
         content: '**يحتاج وكيل مستقل يمتلك ذاكرة دائمة وحلقة مهارات ذاتية التحسين إلى إشراف أوثق من روبوت دردشة عديم الحالة، لأن سلوكه يتراكم مع الوقت بدلًا من إعادة الضبط في كل جلسة — ولدى Hermes Agent تحديدًا سجل ثغرات نشط ومُعلَن عنه يجب أخذه بالحسبان قبل النشر الفعلي، لا مجرد تنبيه معماري بـ"الإشراف عن كثب".**',
         items: [
-          'وجد تدقيق أمني مستقل أجراه الباحث @Anic888 ونُشر في 11 أبريل 2026 أربع مشكلات حرجة (Critical) وتسع مشكلات عالية الخطورة (High) في الإعداد الافتراضي لـ Hermes Agent: تنفيذ أوامر طرفية بلا قيود يتجاوز آلية كشف الأوامر المدمجة، ووصول غير مقيَّد إلى ملفات بيانات الاعتماد (يُدرج التدقيق مفاتيح SSH الخاصة، وملفات مفاتيح واجهة برمجة التطبيقات، وملفات تعريف المتصفح، وذواكر بيانات اعتماد git المؤقتة، وملفات إعداد مزوّدي الخدمات السحابية كقابلة للقراءة دون أي قائمة حظر)، وبيئات حاويات تتخطى فحوصات الموافقة دون قيد أو شرط، ومسار حقن مهارات دائم يتيح لمهاجم كتابة ملفات في `~/.hermes/skills/` تستمر في العمل عبر الجلسات',
-          '[يسرد OpenCVE 45 ثغرة CVE منشورة](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) ضد NousResearch/hermes-agent، من بينها CVE-2026-71963 (بدرجة CVSS 8.8 — تنفيذ تعليمات برمجية عن بُعد عبر ملف إعداد git ضار) وCVE-2026-82021 (بدرجة CVSS 8.3 — ثغرة في سلسلة التوريد داخل كتالوج MCP المُضمَّن، قادرة على نشر تعليمات برمجية ضارة إلى كل مضيف ثبّت عنصر كتالوج متأثرًا). يتغير عدد وخطورة ثغرات CVE باستمرار مع تسجيل مشكلات جديدة وإصلاح القديمة — تحقق من القائمة الحالية للإصدار الذي تنوي تشغيله قبل النشر الفعلي',
+          'أفاد تدقيق أمني مستقل نُشر في 11 أبريل 2026 (مُلخَّص في [مذكرة أبحاث Cloud Security Alliance](https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/)) بوجود 4 نتائج حرجة و9 عالية الخطورة في الإعداد الافتراضي آنذاك: تنفيذ أوامر طرفية بلا قيود يتجاوز آلية كشف الأوامر المدمجة، ووصول غير مقيَّد إلى ملفات بيانات الاعتماد (يُدرج التدقيق مفاتيح SSH الخاصة، وملفات مفاتيح واجهة برمجة التطبيقات، وملفات تعريف المتصفح، وذواكر بيانات اعتماد git المؤقتة، وملفات إعداد مزوّدي الخدمات السحابية كقابلة للقراءة دون أي قائمة حظر)، وبيئات حاويات تتخطى فحوصات الموافقة دون قيد أو شرط، ومسار حقن مهارات دائم يتيح لمهاجم كتابة ملفات في `~/.hermes/skills/` تستمر في العمل عبر الجلسات',
+          '[يسرد OpenCVE ثغرات CVE منشورة](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) ضد NousResearch/hermes-agent، من بينها CVE-2026-71963 (بدرجة CVSS 8.8 — تنفيذ تعليمات برمجية عن بُعد عبر ملف إعداد git ضار) وCVE-2026-82021 (بدرجة CVSS 8.3 — ثغرة في سلسلة التوريد داخل كتالوج MCP المُضمَّن، قادرة على نشر تعليمات برمجية ضارة إلى كل مضيف ثبّت عنصر كتالوج متأثرًا). يتغير عدد وخطورة ثغرات CVE باستمرار مع تسجيل مشكلات جديدة وإصلاح القديمة — تحقق من القائمة الحالية للإصدار الذي تنوي تشغيله قبل النشر الفعلي',
           'يصف باحثو أمن من Repello.ai أيضًا فئات مخاطر لا تظهر كأرقام CVE منفردة: حقن أوامر غير مباشر عبر مخزن ذاكرة الوكيل نفسه (يمكن لمهاجم قادر على الكتابة في الذاكرة زرع تعليمات يستردها الوكيل وينفذها لاحقًا)، وخوادم بروتوكول سياق النموذج (MCP) غير موثَّقة يمكنها حقن تعليمات في وكيل متصل دون موافقة المستخدم على كل واحدة',
           'تعني الذاكرة الدائمة أن أخطاء الوكيل أو افتراضاته الخاطئة قد تستمر وتتراكم عبر الجلسات إن لم تُراجَع — تحقق دوريًا مما خزّنه، وتعامل مع مخزن الذاكرة نفسه كبيانات حساسة، إذ تشير مراجعة أمنية من [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business) إلى أنه قد يُراكم تفاصيل حسابات ومعلومات عملاء مع الوقت',
           'المهارات المكتوبة ذاتيًا هي، بحكم تعريفها، كود أو روتينات أنتجها الوكيل نفسه؛ راجع محتوى `~/.hermes/skills/` قبل تركه يعمل دون إشراف في مهام حساسة — هذا المجلد بالتحديد هو الآلية التي أشار إليها تدقيق أبريل 2026 لحقن المهارات الدائم، لذا راجع الملفات نفسها لا ما يبلّغ عنه الوكيل فقط',
           'يوسّع الوصول عبر منصات المراسلة سطح الهجوم مقارنة بأداة تقتصر على الطرفية — تعامل مع رموز بوت وبيانات اعتماد واجهة برمجة تطبيقات Telegram وDiscord وSlack وWhatsApp وSignal بنفس الحذر الذي تعامل به أي بيانات اعتماد أخرى تمنح وصولًا إلى عملية آلية',
           'يؤثر اختيار النموذج على التكلفة والخصوصية معًا: يُبقي النموذج المحلي عبر Ollama البيانات داخل بنيتك التحتية الخاصة، بينما يتلقى مزوّد مستضاف مثل OpenRouter أو Anthropic أو OpenAI طلباتك، وتخضع لشروط معالجة البيانات الخاصة بذلك المزوّد',
-          'حدِّث إلى الإصدار الحالي قبل النشر الفعلي، وعطِّل أي إعداد من نوع "تخطي جميع فحوصات الموافقة" للاستخدام الإنتاجي — يتعلق العديد من النتائج الحرجة أعلاه تحديدًا بفحوصات موافقة مُتجاوَزة أو غائبة افتراضيًا، لا بميزة راحة مفقودة',
+          'حدِّث إلى الإصدار الحالي قبل النشر الفعلي، وعطِّل أي إعداد من نوع "تخطي جميع فحوصات الموافقة" للاستخدام الإنتاجي — يتعلق العديد من النتائج الحرجة أعلاه تحديدًا بفحوصات موافقة مُتجاوَزة أو غائبة في الإصدار الذي خضع للتدقيق، لا بميزة راحة مفقودة',
           'لم يُجرِ هذا الموقع اختباره الخاص طويل المدى لسلوك حلقة المهارات أو الذاكرة في Hermes Agent حتى وقت كتابة هذا المقال؛ تصف نقاط البنية أعلاه سلوكًا موثَّقًا، أما نقاط الثغرات فمصدرها التدقيق المستقل المذكور وقاعدة بيانات CVE العلنية، لا حادثة لاحظها هذا الموقع مباشرة',
         ],
         callouts: [
-          { type: 'warning', text: 'هذه مخاطرة ثغرات موثَّقة على مستوى البنية، لا تقرير عن اختراق فعلي ومؤكد. لم يُعثر حتى وقت كتابة هذا المقال على أي تقرير مُتحقَّق منه بشكل مستقل عن هجوم ناجح عبر هذه المسارات ضد نشر فعلي — الفكرة أن هذه نقاط ضعف حقيقية وقابلة للإصلاح في الإعدادات الافتراضية، أكدها تدقيق خارجي وسجل CVE علني، لا افتراضية. حدِّث إلى الإصدار الحالي وراجع الإعدادات أعلاه قبل تكليف الوكيل بمهام أو ملفات أو بيانات اعتماد حساسة.' },
+          { type: 'warning', text: 'هذه مخاطرة ثغرات موثَّقة على مستوى البنية، لا تقرير عن اختراق فعلي ومؤكد. لم يُعثر حتى وقت كتابة هذا المقال على أي تقرير مُتحقَّق منه بشكل مستقل عن هجوم ناجح عبر هذه المسارات ضد نشر فعلي — الفكرة أن هذه نقاط ضعف حقيقية وقابلة للإصلاح في الإعدادات الافتراضية، أبلغ عنها باحث مستقل في الإعداد الافتراضي آنذاك، إضافة إلى ثغرتي CVE نُشرتا بشكل منفصل، لا افتراضية. حدِّث إلى الإصدار الحالي وراجع الإعدادات أعلاه قبل تكليف الوكيل بمهام أو ملفات أو بيانات اعتماد حساسة.' },
         ],
       },
       whoShouldUse: {
@@ -2220,7 +2220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'الخطأ 3: التعامل مع أرقام التمويل المنقولة صحفيًا كحقيقة مؤكدة',
-            content: 'تفيد تقارير صحفية (TechCrunch وWSJ، أكتوبر 2026) بأن Nous Research جمعت نحو 90 مليون دولار بتقييم 1.5 مليار دولار. يأتي هذا التقييم من التقارير الصحفية لا من إعلان رسمي اطلع عليه هذا الموقع، لذا اعتبره سياقًا عن الشركة وتحقق من أحدث التقارير.',
+            content: 'لا يذكر هذا الموقع أرقام التمويل أو التقييم الخاصة بـ Nous Research لأنه لم يطّلع على إعلان رسمي أولي. راجع الموقع الرسمي لـ Nous Research للحصول على معلومات الشركة الحالية قبل الاعتماد على أي رقم.',
           },
           {
             title: 'الخطأ 4: إهمال نظافة بيانات الاعتماد الخاصة بقنوات المراسلة',
@@ -2228,7 +2228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'الخطأ 5: نشر الإعداد الافتراضي دون التحقق من الثغرات المعروفة',
-            content: 'أفاد تدقيق مستقل نُشر في 11 أبريل 2026 بوجود 4 مشكلات حرجة (Critical) و9 مشكلات عالية الخطورة (High) في الإعداد الافتراضي لـ Hermes Agent، من بينها تنفيذ أوامر طرفية بلا قيود ووصول غير مقيَّد إلى ملفات بيانات الاعتماد، ويسرد [OpenCVE 45 ثغرة CVE منشورة](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) ضد المشروع، من بينها ثغرة تنفيذ تعليمات برمجية عن بُعد بدرجة CVSS تبلغ 8.8. حدِّث إلى الإصدار الحالي، وعطِّل إعدادات الاستقلالية غير المقيّدة وتخطي فحوصات الموافقة، وتحقق من قائمة CVE الخاصة بالإصدار المستهدف قبل تكليف الوكيل بمهام حساسة — تعامل مع هذا كصيانة تحديثات مستمرة، لا خطوة إعداد لمرة واحدة.',
+            content: 'أفاد تدقيق أجراه باحث مستقل للإصدار 0.8.0 ونُشر في 11 أبريل 2026 بوجود 4 مشكلات حرجة (Critical) و9 مشكلات عالية الخطورة (High) في الإعداد الافتراضي لذلك الإصدار من Hermes Agent، من بينها تنفيذ أوامر طرفية بلا قيود ووصول غير مقيَّد إلى ملفات بيانات الاعتماد، ويسرد [OpenCVE ثغرات CVE منشورة](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) ضد المشروع، من بينها ثغرة تنفيذ تعليمات برمجية عن بُعد بدرجة CVSS تبلغ 8.8. حدِّث إلى الإصدار الحالي، وعطِّل إعدادات الاستقلالية غير المقيّدة وتخطي فحوصات الموافقة، وتحقق من قائمة CVE الخاصة بالإصدار المستهدف قبل تكليف الوكيل بمهام حساسة — تعامل مع هذا كصيانة تحديثات مستمرة، لا خطوة إعداد لمرة واحدة.',
           },
         ],
       },
@@ -2242,12 +2242,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ما النماذج التي يستطيع Hermes Agent استخدامها؟', a: 'يدعم Hermes Agent عشرات المزوّدين، منهم Nous Portal وOpenRouter وAnthropic وOpenAI وGoogle Gemini وDeepSeek وHugging Face، إضافة إلى أي نقطة نهاية متوافقة مع OpenAI للنماذج المحلية.' },
           { q: 'ما منصات المراسلة التي يمكن استخدامها للتحدث مع Hermes Agent؟', a: 'Telegram وDiscord وSlack وWhatsApp وSignal، إلى جانب واجهة الطرفية. تحتاج كل قناة إلى رمز بوت أو مجموعة بيانات اعتماد واجهة برمجة تطبيقات خاصة بها، مُعدَّة وفق العملية المعيارية لتلك المنصة.' },
           { q: 'كم تكلفة الاستضافة الذاتية لـ Hermes Agent؟', a: 'البرنامج مجاني؛ وتعتمد تكلفة الاستضافة على مكان تشغيله. الخلفيات المدعومة هي المحلي وDocker وSSH وModal وDaytona وVercel Sandbox. يعتمد السعر الفعلي على مزوّد الخدمة الذي تختاره ويتغير مع الوقت، لذا تحقق من الأسعار الحالية مباشرة لدى ذلك المزوّد.' },
-          { q: 'هل Hermes Agent هو نفسه AutoGPT؟', a: 'لا. كلاهما مشروعا وكيل مستقل مرخّصان بموجب MIT وقابلان للاستضافة الذاتية، لكن Hermes Agent من تطوير Nous Research وله بنية ذاكرة دائمة ومهارات ذاتية التحسين، إضافة إلى وصول عبر منصات مراسلة متعددة، بينما AutoGPT الكلاسيكي وكيل حلقة تخطيط غير محدود النطاق، لا يُوصَل إليه إلا عبر الطرفية، ودون نظام مدمج للذاكرة الدائمة أو إنشاء المهارات.' },
-          { q: 'من يطوّر Hermes Agent؟', a: 'Nous Research، المنظمة نفسها القائمة على عائلة نماذج Hermes والموقع الرسمي hermes-agent.org. تفيد تقارير صحفية (TechCrunch وWSJ، أكتوبر 2026) بأنها جمعت نحو 90 مليون دولار بتقييم 1.5 مليار دولار؛ وهذا مصدره التقارير الصحفية لا إعلان رسمي اطلع عليه هذا الموقع.' },
-          { q: 'هل يمكن تشغيل Hermes Agent دون أي وصول للإنترنت على الإطلاق؟', a: 'نعم، إذا تم ضبطه لاستخدام نقطة نهاية نموذج محلية مثل Ollama بدلًا من مزوّد مستضاف، إذ يحتاج المزوّد المستضاف إلى اتصال بالإنترنت للوصول إلى نماذجه.' },
+          { q: 'هل Hermes Agent هو نفسه AutoGPT؟', a: 'لا. كلاهما مشروعا وكيل مستقل مرخّصان بموجب MIT وقابلان للاستضافة الذاتية، لكن Hermes Agent من تطوير Nous Research وله بنية ذاكرة دائمة ومهارات ذاتية التحسين، إضافة إلى وصول عبر منصات مراسلة متعددة، بينما يتمحور AutoGPT الكلاسيكي، بحسب [وثائق مستودعه](https://github.com/Significant-Gravitas/AutoGPT)، حول حلقة تخطيط تعمل من الطرفية ولا يصف نظامًا لإنشاء المهارات مثل Hermes Agent. راجع المستودع لمعرفة قدراته الحالية.' },
+          { q: 'من يطوّر Hermes Agent؟', a: 'Nous Research، المنظمة نفسها القائمة على عائلة نماذج Hermes والموقع الرسمي hermes-agent.org. Nous Research شركة خاصة لأبحاث الذكاء الاصطناعي؛ تتوفر معلومات الشركة الحالية على موقعها الرسمي.' },
+          { q: 'هل يمكن تشغيل Hermes Agent دون أي وصول للإنترنت على الإطلاق؟', a: 'نعم بالنسبة لاستدعاءات النموذج، إذا تم ضبطه لاستخدام نقطة نهاية نموذج محلية مثل Ollama بدلًا من مزوّد مستضاف، إذ يحتاج المزوّد المستضاف إلى اتصال بالإنترنت للوصول إلى نماذجه. وتظل قنوات المراسلة وخوادم MCP وأدوات الويب بحاجة إلى اتصال بالشبكة.' },
           { q: 'هل من الآمن منح Hermes Agent وصولًا إلى حساب Telegram أو Discord الخاص بي؟', a: 'يعتمد ذلك على مدى حرصك في إدارة بيانات الاعتماد ومدى دقة إشرافك على ذاكرة الوكيل والمهارات التي يكتبها بنفسه. وبما أن Hermes Agent يحتفظ بحالته مع الوقت ويمكنه تعديل مهاراته الخاصة، راجع ما خزّنه وتعامل مع بيانات اعتماد قنوات مراسلته بنفس الحذر الذي تطبّقه على أي أتمتة ذات وصول واسع لحساب ما.' },
-          { q: 'هل لدى Hermes Agent ثغرات أمنية معروفة؟', a: 'نعم. [يسرد OpenCVE 45 ثغرة CVE منشورة](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) ضد NousResearch/hermes-agent، من بينها CVE-2026-71963 (بدرجة CVSS 8.8، تنفيذ تعليمات برمجية عن بُعد عبر ملف إعداد git ضار) وCVE-2026-82021 (بدرجة CVSS 8.3، ثغرة في سلسلة التوريد داخل كتالوج MCP المُضمَّن). كما أفاد تدقيق مستقل منفصل نُشر في 11 أبريل 2026 بوجود 4 مشكلات حرجة و9 مشكلات عالية الخطورة في الإعداد الافتراضي، من بينها تنفيذ أوامر طرفية بلا قيود ووصول غير مقيَّد إلى ملفات بيانات الاعتماد. تحقق من قائمة CVE الحالية وحدِّث إلى أحدث إصدار قبل النشر الفعلي.' },
-          { q: 'هل Hermes Agent آمن للاستخدام في بيئات العمل أو الإنتاج؟', a: 'تعامل معه كبرنامج له سجل ثغرات حقيقي ومُعلَن عنه، لا كبرنامج مُحصَّن مسبقًا للإنتاج. يوصي مراجعو أمن مستقلون ([Repello.ai](https://repello.ai/blog/hermes-agent-security)، [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)) بتقييد الصلاحيات، ووضع سياسات للوصول إلى الذاكرة، واشتراط موافقة بشرية، بدلًا من تشغيله دون إشراف مع وصول واسع إلى الملفات أو الطرفية أو بيانات الاعتماد. كما أن المشروع حديث: يعود مستودعه على GitHub إلى يوليو 2025، ما يعني أن تحصينه في بيئات الإنتاج أقل من أطر عمل وكلاء أقدم.' },
+          { q: 'هل لدى Hermes Agent ثغرات أمنية معروفة؟', a: 'نعم. [يسرد OpenCVE ثغرات CVE منشورة](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) ضد NousResearch/hermes-agent، من بينها CVE-2026-71963 (بدرجة CVSS 8.8، تنفيذ تعليمات برمجية عن بُعد عبر ملف إعداد git ضار) وCVE-2026-82021 (بدرجة CVSS 8.3، ثغرة في سلسلة التوريد داخل كتالوج MCP المُضمَّن). كما أفاد تدقيق منفصل أجراه باحث مستقل ونُشر في 11 أبريل 2026 للإصدار 0.8.0 ([ملخص Cloud Security Alliance](https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/)) بوجود 4 نتائج حرجة و9 عالية الخطورة في الإعداد الافتراضي لذلك الإصدار، من بينها تنفيذ أوامر طرفية بلا قيود ووصول غير مقيَّد إلى ملفات بيانات الاعتماد. تحقق من ملاحظات الإصدار الحالية وقائمة CVE وحدِّث إلى أحدث إصدار قبل النشر الفعلي.' },
+          { q: 'هل Hermes Agent آمن للاستخدام في بيئات العمل أو الإنتاج؟', a: 'تعامل معه كبرنامج له سجل ثغرات حقيقي ومُعلَن عنه، لا كبرنامج مُحصَّن مسبقًا للإنتاج. يوصي مراجعو أمن مستقلون ([Repello.ai](https://repello.ai/blog/hermes-agent-security)، [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)) بتقييد الصلاحيات، ووضع سياسات للوصول إلى الذاكرة، واشتراط موافقة بشرية، بدلًا من تشغيله دون إشراف مع وصول واسع إلى الملفات أو الطرفية أو بيانات الاعتماد. كما أن المشروع حديث: أُنشئ [مستودعه على GitHub](https://github.com/NousResearch/hermes-agent) في يوليو 2025، ما يعني أن سجله في بيئات الإنتاج أقصر من أطر العمل الراسخة منذ زمن طويل.' },
         ],
       },
       sources: {
@@ -2281,7 +2281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
     publishDate: '2026-09-03',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     educationalLevel: 'Advanced',
     audience: '호스팅형 어시스턴트 대신 자체 인프라에서 자율형 개인 AI 에이전트를 운영할지 검토하는 개발자 및 셀프 호스팅 이용자',
     primaryTerm: 'Hermes Agent',
@@ -2301,7 +2301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ko: {
         question: 'Hermes Agent는 무료이며 완전히 오프라인으로 작동할 수 있나요?',
-        answer: '둘 다 그렇다. 다만 오프라인 작동에는 조건이 있다: 소프트웨어 자체는 MIT 라이선스로 무료다([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). Ollama 같은 사용자 지정 엔드포인트로 로컬 모델에 연결한 경우에만 완전히 오프라인으로 작동하며, 클라우드 제공업체를 쓰면 인터넷 연결과 해당 제공업체의 API 비용이 필요하다.',
+        answer: '둘 다 그렇다. 다만 오프라인 작동에는 조건이 있다: 소프트웨어 자체는 MIT 라이선스로 무료다([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). 모델 호출은 Ollama 같은 사용자 지정 엔드포인트로 로컬 모델에 연결한 경우에만 완전히 오프라인으로 작동하며(메시징 채널, MCP 서버, 웹 도구는 여전히 네트워크가 필요하다), 클라우드 제공업체를 쓰면 인터넷 연결과 해당 제공업체의 API 비용이 필요하다.',
         bullets: [
           '리포지토리 LICENSE 파일에서 확인된 MIT 라이선스',
           '로컬 모델: 사용자 지정 엔드포인트로 Ollama, vLLM, llama.cpp, LM Studio 연결',
@@ -2345,8 +2345,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '공식 사이트: hermes-agent.org. 이 사이트에는 Hermes Agent 제휴 프로그램이 없다 — 아래 모든 링크는 단순히 공개된 링크다.',
         ],
         callouts: [
-          { type: 'note', text: '언론 보도(TechCrunch, WSJ, 2026년 10월)에 따르면 Nous Research는 15억 달러 밸류에이션으로 약 9,000만 달러($90M)를 조달했다. 이 밸류에이션은 이 사이트가 확인한 1차 발표가 아니라 언론 보도에 근거하므로, 회사에 관한 배경 정보로만 취급할 것.' },
-          { type: 'warning', text: 'Hermes Agent에는 단순한 이론적 위험이 아니라 실제로 공개된 취약점 이력이 있습니다. 2026년 4월 11일 공개된 독립 감사에서는 기본 설정에서 Critical 4건과 High 9건의 심각도 문제가 보고되었으며, [OpenCVE는 이 프로젝트에 대해 45건의 공개 CVE를 나열](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)하고 있습니다. 그중에는 CVSS 8.8의 원격 코드 실행 취약점도 포함됩니다. 배포하기 전에 아래 "현실적인 기대치와 위험 요소" 섹션을 확인하십시오.' },
+          { type: 'note', text: 'Nous Research는 민간 AI 연구 기업입니다. 최신 회사 정보는 공식 웹사이트에서 확인하십시오.' },
+          { type: 'warning', text: 'Hermes Agent에는 단순한 이론적 위험이 아니라 실제로 공개된 취약점 이력이 있습니다. 독립 연구자가 0.8.0 버전을 대상으로 한 감사(2026년 4월 11일 공개)에서는 해당 버전의 기본 설정에서 Critical 4건과 High 9건의 심각도 문제가 보고되었으며, [OpenCVE는 이 프로젝트에 대해 공개 CVE를 나열](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)하고 있습니다. 그중에는 CVSS 8.8의 원격 코드 실행 취약점도 포함됩니다. 배포하기 전에 아래 "현실적인 기대치와 위험 요소" 섹션을 확인하십시오.' },
         ],
       },
       overview: {
@@ -2390,7 +2390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         faqs: [
           { q: 'Hermes Agent를 로컬에서 실행하려면 GPU가 필요한가요?', a: '모델을 직접 실행하는 경우에만 필요하다. Ollama를 통한 로컬 모델은 다른 모든 로컬 LLM과 동일한 하드웨어 의존성을 가진다: 성능 좋은 GPU는 추론 속도를 크게 높이며, CPU만으로도 추론은 가능하지만 더 느리다. 호스팅 제공업체를 쓰면 에이전트 프로세스 자체에는 훨씬 적은 컴퓨팅 자원만 필요하다. 모델별 VRAM 요구 사항은 선택한 모델에 따라 다르므로 해당 모델의 문서를 확인할 것.' },
-          { q: 'Hermes Agent는 인터넷 연결 없이 실행할 수 있나요?', a: '가능하다. 모델 호출에 Ollama 같은 로컬 OpenAI 호환 엔드포인트를 사용하도록 설정한 경우에 한한다. 호스팅 제공업체를 쓰려면 인터넷 연결이 필요하며, Hermes Agent 자체가 무료 소프트웨어인 것과는 별개로 해당 제공업체의 토큰당 API 비용이 발생한다.' },
+          { q: 'Hermes Agent는 인터넷 연결 없이 실행할 수 있나요?', a: '가능하다. 모델 호출에 Ollama 같은 로컬 OpenAI 호환 엔드포인트를 사용하도록 설정한 경우에 한한다. 메시징 채널, MCP 서버, 웹 도구는 여전히 네트워크 연결이 필요하다. 호스팅 제공업체를 쓰려면 인터넷 연결이 필요하며, Hermes Agent 자체가 무료 소프트웨어인 것과는 별개로 해당 제공업체의 토큰당 API 비용이 발생한다.' },
         ],
       },
       deployment: {
@@ -2426,7 +2426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: '이를 만든 기업, Nous Research',
-            content: 'Nous Research는 Hermes Agent, Hermes 모델 패밀리, 그리고 Hermes Agent 공식 사이트 hermes-agent.org를 만든 조직이다. 언론 보도(TechCrunch, WSJ, 2026년 10월)에 따르면 Nous Research는 15억 달러 밸류에이션으로 약 9,000만 달러($90M)를 조달했다. 이 밸류에이션은 이 사이트가 확인한 1차 발표가 아니라 언론 보도에 근거하므로, 신뢰하기 전에 최신 보도를 확인할 것.',
+            content: 'Nous Research는 Hermes Agent, Hermes 모델 패밀리, 그리고 Hermes Agent 공식 사이트 hermes-agent.org를 만든 조직이다. Nous Research는 민간 AI 연구 기업입니다. 최신 회사 정보는 공식 웹사이트에서 확인하십시오.',
           },
         ],
         callouts: [
@@ -2438,18 +2438,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Hermes Agent를 운영할 때 현실적인 기대치는 무엇인가?',
         content: '**영구 메모리와 자기개선형 스킬 루프를 가진 자율형 에이전트는, 세션마다 초기화되는 상태 없는 챗봇보다 더 밀접한 감독이 필요하다. 행동이 시간이 지나며 초기화되지 않고 누적되기 때문이다. 게다가 Hermes Agent에는 "면밀히 감독하라"는 아키텍처 차원의 주의만이 아니라, 배포 전에 반드시 고려해야 할 실제로 공개된 취약점 이력이 존재한다.**',
         items: [
-          '연구자 @Anic888이 2026년 4월 11일 공개한 독립 보안 감사에서는 Hermes Agent의 기본 설정에서 Critical 4건과 High 9건의 심각도 문제가 발견되었습니다: 내장된 명령어 탐지 방어를 우회하는 무제한 셸 실행, 거부 목록 없이 SSH 개인 키·API 키 파일·브라우저 프로필·git 자격 증명 캐시·클라우드 제공업체 설정 파일을 읽을 수 있는 무제한 자격 증명 파일 접근, 승인 검사를 무조건 건너뛰는 컨테이너 환경, 그리고 공격자가 `~/.hermes/skills/`에 파일을 써서 세션 간에도 계속 실행되게 하는 영구적인 스킬 인젝션 경로입니다',
-          '[OpenCVE는 NousResearch/hermes-agent에 대해 45건의 공개 CVE를 나열](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)하고 있으며, 여기에는 악성 git 설정 파일을 통한 원격 코드 실행 취약점인 CVE-2026-71963(CVSS 8.8)과, 영향받은 카탈로그 항목을 설치한 모든 호스트에 악성 코드를 전파할 수 있는 번들 MCP 카탈로그의 공급망 취약점인 CVE-2026-82021(CVSS 8.3)이 포함됩니다. CVE 건수와 심각도는 새 문제가 보고되고 기존 문제가 수정되면서 계속 변하므로, 배포하려는 버전에 대한 최신 목록을 반드시 확인하십시오',
+          '2026년 4월 11일 공개된 독립 보안 감사([Cloud Security Alliance 리서치 노트](https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/)에 요약)에서는 당시 기본 설정에서 Critical 4건과 High 9건이 보고되었습니다: 내장된 명령어 탐지 방어를 우회하는 무제한 셸 실행, 거부 목록 없이 SSH 개인 키·API 키 파일·브라우저 프로필·git 자격 증명 캐시·클라우드 제공업체 설정 파일을 읽을 수 있는 무제한 자격 증명 파일 접근, 승인 검사를 무조건 건너뛰는 컨테이너 환경, 그리고 공격자가 `~/.hermes/skills/`에 파일을 써서 세션 간에도 계속 실행되게 하는 영구적인 스킬 인젝션 경로입니다',
+          '[OpenCVE는 NousResearch/hermes-agent에 대해 공개 CVE를 나열](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)하고 있으며, 여기에는 악성 git 설정 파일을 통한 원격 코드 실행 취약점인 CVE-2026-71963(CVSS 8.8)과, 영향받은 카탈로그 항목을 설치한 모든 호스트에 악성 코드를 전파할 수 있는 번들 MCP 카탈로그의 공급망 취약점인 CVE-2026-82021(CVSS 8.3)이 포함됩니다. CVE 건수와 심각도는 새 문제가 보고되고 기존 문제가 수정되면서 계속 변하므로, 배포하려는 버전에 대한 최신 목록을 반드시 확인하십시오',
           'Repello.ai의 보안 연구자들은 개별 CVE 번호로는 드러나지 않는 위험 유형도 지적합니다: 에이전트 자신의 메모리 저장소를 통한 간접 프롬프트 인젝션(메모리에 쓸 수 있는 공격자는 에이전트가 나중에 가져와 실행할 지시를 심어둘 수 있음)과, 사용자가 하나하나 승인하지 않아도 연결된 에이전트에 지시를 주입할 수 있는 검증되지 않은 Model Context Protocol 서버입니다',
           '영구 메모리는 에이전트의 실수나 잘못된 가정이 검토되지 않으면 세션 간 지속되고 누적될 수 있다는 뜻입니다 — 무엇이 저장되었는지 주기적으로 확인하고, [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)의 보안 리뷰가 지적하듯 메모리 저장소 자체를 시간이 지나며 계정 정보와 고객 정보가 쌓일 수 있는 민감한 데이터로 취급하십시오',
           '스스로 작성한 스킬은 정의상 에이전트 자신이 만들어낸 코드나 루틴입니다; 민감한 작업을 무감독으로 맡기기 전에 `~/.hermes/skills/`의 내용을 직접 검토하십시오 — 2026년 4월 감사가 영구적인 스킬 인젝션 수단으로 지목한 것이 바로 이 디렉터리이므로, 에이전트가 보고하는 내용만이 아니라 파일 자체를 확인해야 합니다',
           '메시징 플랫폼을 통한 접근은 터미널 전용 도구에 비해 공격 표면을 넓힙니다 — Telegram, Discord, Slack, WhatsApp, Signal의 봇 토큰과 API 자격 증명은 자동화 프로세스에 대한 접근 권한을 부여하는 다른 모든 자격 증명과 동일한 주의로 다루십시오',
           '모델 선택은 비용과 프라이버시 모두에 영향을 미칩니다: Ollama를 통한 로컬 모델은 데이터를 자체 인프라에 유지하는 반면, OpenRouter, Anthropic, OpenAI 같은 호스팅 제공업체는 요청을 직접 받으며 그 제공업체 자체의 데이터 처리 조건이 적용됩니다',
-          '배포 전에 최신 버전으로 업데이트하고, 프로덕션 사용에서는 "모든 승인 검사 건너뛰기" 같은 무제한 자율 설정을 비활성화하십시오 — 위에서 언급한 여러 심각한 문제는 편의 기능이 빠진 것이 아니라, 승인 검사가 기본값에서 우회되거나 아예 없는 것 자체를 지적하고 있습니다',
+          '배포 전에 최신 버전으로 업데이트하고, 프로덕션 사용에서는 "모든 승인 검사 건너뛰기" 같은 무제한 자율 설정을 비활성화하십시오 — 위에서 언급한 여러 심각한 문제는 편의 기능이 빠진 것이 아니라, 승인 검사가 감사 대상 버전에서 우회되거나 아예 없는 것 자체를 지적하고 있습니다',
           '이 사이트는 작성 시점 기준으로 Hermes Agent의 스킬 루프나 메모리 동작에 대한 자체 장기 테스트를 실시하지 않았습니다; 위의 아키텍처 관련 내용은 문서화된 동작을 설명한 것이며, 취약점 관련 내용은 이 사이트가 직접 관찰한 사건이 아니라 앞서 언급한 독립 감사와 공개 CVE 데이터베이스를 출처로 합니다',
         ],
         callouts: [
-          { type: 'warning', text: '이는 아키텍처 수준에서 공개된 취약점 위험에 대한 설명이지, 실제로 발생하고 확인된 침해 사고 보고가 아닙니다. 작성 시점 기준으로 이러한 경로를 통해 실제 배포 환경에 대한 공격이 성공했다는 독립적으로 검증된 보고는 발견되지 않았습니다 — 핵심은 이것이 가설이 아니라, 외부 감사와 공개 CVE 이력으로 확인된 기본 설정상의 실제 수정 가능한 약점이라는 점입니다. 민감한 작업, 파일, 자격 증명을 에이전트에 맡기기 전에 최신 버전으로 패치하고 위의 설정을 점검하십시오.' },
+          { type: 'warning', text: '이는 아키텍처 수준에서 공개된 취약점 위험에 대한 설명이지, 실제로 발생하고 확인된 침해 사고 보고가 아닙니다. 작성 시점 기준으로 이러한 경로를 통해 실제 배포 환경에 대한 공격이 성공했다는 독립적으로 검증된 보고는 발견되지 않았습니다 — 핵심은 이것이 가설이 아니라, 독립 연구자가 당시 기본 설정에서 보고한 실제 수정 가능한 약점과 별도로 공개된 CVE 2건이라는 점입니다. 민감한 작업, 파일, 자격 증명을 에이전트에 맡기기 전에 최신 버전으로 패치하고 위의 설정을 점검하십시오.' },
         ],
       },
       whoShouldUse: {
@@ -2504,7 +2504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '오해 3: 언론이 보도한 투자 금액을 확정된 사실로 취급하는 것',
-            content: '언론 보도(TechCrunch, WSJ, 2026년 10월)에 따르면 Nous Research는 15억 달러 밸류에이션으로 약 9,000만 달러($90M)를 조달했다. 이 밸류에이션은 이 사이트가 확인한 1차 발표가 아니라 언론 보도에 근거하므로, 회사에 관한 배경 정보로만 취급하고 최신 보도를 확인할 것.',
+            content: '이 사이트는 1차 발표를 확인하지 못했기 때문에 Nous Research의 투자 또는 밸류에이션 수치를 제시하지 않습니다. 어떤 수치를 신뢰하기 전에 Nous Research 공식 웹사이트에서 최신 회사 정보를 확인하십시오.',
           },
           {
             title: '오해 4: 메시징 채널의 자격 증명 관리를 소홀히 하는 것',
@@ -2512,7 +2512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '오해 5: 알려진 취약점을 확인하지 않고 기본 설정을 배포하는 것',
-            content: '2026년 4월 11일 공개된 독립 감사에서는 무제한 셸 실행과 무제한 자격 증명 파일 접근을 포함해 Hermes Agent의 기본 설정에서 Critical 4건과 High 9건의 심각도 문제가 보고되었으며, [OpenCVE는 이 프로젝트에 대해 45건의 공개 CVE를 나열](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)하고 있습니다. 그중에는 CVSS 8.8의 원격 코드 실행 취약점도 포함됩니다. 최신 버전으로 업데이트하고, 무제한 자율 및 "승인 검사 건너뛰기" 설정을 비활성화하며, 민감한 작업을 에이전트에 맡기기 전에 대상 버전의 CVE 목록을 확인하십시오 — 이는 한 번으로 끝나는 설정 단계가 아니라 지속적인 패치 관리로 다루어야 합니다.',
+            content: '독립 연구자가 0.8.0 버전을 대상으로 한 감사(2026년 4월 11일 공개)에서는 무제한 셸 실행과 무제한 자격 증명 파일 접근을 포함해 Hermes Agent 해당 버전의 기본 설정에서 Critical 4건과 High 9건의 심각도 문제가 보고되었으며, [OpenCVE는 이 프로젝트에 대해 공개 CVE를 나열](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)하고 있습니다. 그중에는 CVSS 8.8의 원격 코드 실행 취약점도 포함됩니다. 최신 버전으로 업데이트하고, 무제한 자율 및 "승인 검사 건너뛰기" 설정을 비활성화하며, 민감한 작업을 에이전트에 맡기기 전에 대상 버전의 CVE 목록을 확인하십시오 — 이는 한 번으로 끝나는 설정 단계가 아니라 지속적인 패치 관리로 다루어야 합니다.',
           },
         ],
       },
@@ -2526,12 +2526,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Hermes Agent는 어떤 모델을 사용할 수 있나요?', a: 'Hermes Agent는 Nous Portal, OpenRouter, Anthropic, OpenAI, Google Gemini, DeepSeek, Hugging Face를 포함한 수십 개 제공업체와, 로컬 모델용 OpenAI 호환 엔드포인트를 지원한다.' },
           { q: 'Hermes Agent와 대화할 수 있는 메시징 플랫폼은 무엇인가요?', a: '터미널 인터페이스 외에도 Telegram, Discord, Slack, WhatsApp, Signal을 사용할 수 있다. 각 채널은 해당 플랫폼의 표준 절차에 따라 설정한 자체 봇 토큰이나 API 자격 증명 세트가 필요하다.' },
           { q: 'Hermes Agent를 셀프 호스팅하는 데 비용이 얼마나 드나요?', a: '소프트웨어는 무료이며, 호스팅 비용은 어디서 실행하느냐에 달려 있다. 지원되는 백엔드는 로컬, Docker, SSH, Modal, Daytona, Vercel Sandbox다. 실제 가격은 선택한 제공업체에 따라 다르고 시간이 지나며 변하므로, 그 제공업체에 직접 현재 요금을 확인할 것.' },
-          { q: 'Hermes Agent는 AutoGPT와 같은 것인가요?', a: '아니다. 둘 다 MIT 라이선스로 셀프 호스팅 가능한 자율형 에이전트 프로젝트이지만, Hermes Agent는 영구 메모리와 자기개선형 스킬 아키텍처, 다중 메시징 플랫폼 접근을 갖춘 Nous Research 제품인 반면, 클래식 AutoGPT는 범위가 한정되지 않은 계획 루프 에이전트로 터미널 접근만 가능하고 내장된 영구 메모리나 스킬 작성 시스템이 없다.' },
-          { q: 'Hermes Agent는 누가 만드나요?', a: 'Nous Research로, Hermes 모델 패밀리와 공식 사이트 hermes-agent.org도 함께 만드는 조직이다. 언론 보도(TechCrunch, WSJ, 2026년 10월)에 따르면 15억 달러 밸류에이션으로 약 9,000만 달러($90M)를 조달했으며, 이는 이 사이트가 확인한 1차 발표가 아니라 언론 보도에 근거한다.' },
-          { q: 'Hermes Agent는 인터넷 접근이 전혀 없이 완전히 작동할 수 있나요?', a: '그렇다. 호스팅 제공업체(모델에 접근하려면 인터넷 연결이 필요함) 대신 Ollama 같은 로컬 모델 엔드포인트를 사용하도록 설정한 경우에 한한다.' },
+          { q: 'Hermes Agent는 AutoGPT와 같은 것인가요?', a: '아니다. 둘 다 MIT 라이선스로 셀프 호스팅 가능한 자율형 에이전트 프로젝트이지만, Hermes Agent는 영구 메모리와 자기개선형 스킬 아키텍처, 다중 메시징 플랫폼 접근을 갖춘 Nous Research 제품인 반면, 클래식 AutoGPT는 [저장소 문서](https://github.com/Significant-Gravitas/AutoGPT)에 따르면 터미널에서 실행하는 계획 루프가 중심이며 Hermes Agent와 같은 스킬 작성 시스템은 문서에 기술되어 있지 않습니다. 최신 기능은 저장소에서 확인하십시오.' },
+          { q: 'Hermes Agent는 누가 만드나요?', a: 'Nous Research로, Hermes 모델 패밀리와 공식 사이트 hermes-agent.org도 함께 만드는 조직이다. Nous Research는 민간 AI 연구 기업입니다. 최신 회사 정보는 공식 웹사이트에서 확인하십시오.' },
+          { q: 'Hermes Agent는 인터넷 접근이 전혀 없이 완전히 작동할 수 있나요?', a: '모델 호출에 한해 그렇다. 호스팅 제공업체(모델에 접근하려면 인터넷 연결이 필요함) 대신 Ollama 같은 로컬 모델 엔드포인트를 사용하도록 설정한 경우에 한한다. 메시징 채널, MCP 서버, 웹 도구는 여전히 네트워크 연결이 필요하다.' },
           { q: 'Hermes Agent에 내 Telegram, Discord 계정 접근 권한을 주는 것이 안전한가요?', a: '이는 자격 증명을 얼마나 신중하게 관리하는지, 에이전트의 메모리와 스스로 작성한 스킬을 얼마나 면밀히 감독하는지에 달려 있다. Hermes Agent는 시간이 지나며 상태를 유지하고 자신의 스킬을 수정할 수 있으므로, 무엇이 저장되었는지 확인하고, 광범위한 계정 접근 권한을 가진 다른 모든 자동화와 동일한 주의로 메시징 채널의 자격 증명을 다룰 것.' },
-          { q: 'Hermes Agent에 알려진 보안 취약점이 있나요?', a: '있습니다. [OpenCVE는 NousResearch/hermes-agent에 대해 45건의 공개 CVE를 나열](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)하고 있으며, 여기에는 악성 git 설정 파일을 통한 원격 코드 실행 취약점인 CVE-2026-71963(CVSS 8.8)과 번들 MCP 카탈로그의 공급망 취약점인 CVE-2026-82021(CVSS 8.3)이 포함됩니다. 별도의 독립 감사(2026년 4월 11일 공개)에서도 무제한 셸 실행과 무제한 자격 증명 파일 접근을 포함해 기본 설정에서 Critical 4건과 High 9건의 심각도 문제가 보고되었습니다. 배포하기 전에 최신 CVE 목록을 확인하고 최신 버전으로 업데이트하십시오.' },
-          { q: 'Hermes Agent를 비즈니스 용도나 프로덕션 환경에서 안전하게 사용할 수 있나요?', a: '이를 프로덕션용으로 미리 강화된 소프트웨어가 아니라, 실제로 공개된 취약점 이력이 있는 소프트웨어로 취급하십시오. 독립 보안 검토 기관([Repello.ai](https://repello.ai/blog/hermes-agent-security), [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business))은 파일·셸·자격 증명에 대한 광범위한 접근 권한을 준 채로 무감독 실행하기보다, 권한 범위를 제한하고 메모리 접근 정책을 마련하며 사람의 승인 절차를 두라고 권장합니다. 또한 이 프로젝트는 비교적 새롭습니다. GitHub 리포지토리는 2025년 7월에 만들어졌으므로, 더 오래된 에이전트 프레임워크에 비해 프로덕션 환경에서의 검증 기간이 짧습니다.' },
+          { q: 'Hermes Agent에 알려진 보안 취약점이 있나요?', a: '있습니다. [OpenCVE는 NousResearch/hermes-agent에 대해 공개 CVE를 나열](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)하고 있으며, 여기에는 악성 git 설정 파일을 통한 원격 코드 실행 취약점인 CVE-2026-71963(CVSS 8.8)과 번들 MCP 카탈로그의 공급망 취약점인 CVE-2026-82021(CVSS 8.3)이 포함됩니다. 독립 연구자의 별도 감사(0.8.0 버전 대상, 2026년 4월 11일 공개, [Cloud Security Alliance 요약](https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/))에서는 해당 버전의 기본 설정에서 Critical 4건과 High 9건이 보고되었으며, 여기에는 무제한 셸 실행과 무제한 자격 증명 파일 접근이 포함됩니다. 배포하기 전에 최신 릴리스 노트와 CVE 목록을 확인하고 최신 버전으로 업데이트하십시오.' },
+          { q: 'Hermes Agent를 비즈니스 용도나 프로덕션 환경에서 안전하게 사용할 수 있나요?', a: '이를 프로덕션용으로 미리 강화된 소프트웨어가 아니라, 실제로 공개된 취약점 이력이 있는 소프트웨어로 취급하십시오. 독립 보안 검토 기관([Repello.ai](https://repello.ai/blog/hermes-agent-security), [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business))은 파일·셸·자격 증명에 대한 광범위한 접근 권한을 준 채로 무감독 실행하기보다, 권한 범위를 제한하고 메모리 접근 정책을 마련하며 사람의 승인 절차를 두라고 권장합니다. 또한 이 프로젝트는 비교적 새롭습니다. [GitHub 리포지토리](https://github.com/NousResearch/hermes-agent)는 2025년 7월에 만들어졌으므로, 오래전에 자리 잡은 프레임워크에 비해 프로덕션 환경에서의 검증 기간이 짧습니다.' },
         ],
       },
       sources: {

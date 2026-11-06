@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-local-llm-under-8b-realtime-chat-overview-hero-en.webp',
     title: 'Best 8B-Class Local LLM for Real-Time Chat?',
@@ -128,6 +129,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-local-llm-under-8b-realtime-chat-overview-hero-ar.webp',
     title: 'ما أفضل نموذج محلي من فئة 8B للدردشة الفورية؟',
@@ -253,6 +255,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-local-llm-under-8b-realtime-chat-overview-hero-de.webp',
     title: 'Das beste lokale 8B-Modell für Echtzeit-Chat?',
@@ -378,6 +381,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-local-llm-under-8b-realtime-chat-overview-hero-es.webp',
     title: '¿Cuál es el Mejor LLM Local de Clase 8B para Chat en Tiempo Real?',
@@ -503,6 +507,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-local-llm-under-8b-realtime-chat-overview-hero-fr.webp',
     title: 'Quel est le meilleur LLM local de classe 8B pour le chat en temps réel ?',
@@ -628,6 +633,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-local-llm-under-8b-realtime-chat-overview-hero-ja.webp',
     title: 'リアルタイムチャットに最適な8Bクラスのローカルモデルは?',
@@ -753,6 +759,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-local-llm-under-8b-realtime-chat-overview-hero-ko.webp',
     title: '실시간 채팅에 가장 적합한 8B급 로컬 모델은?',
@@ -878,6 +885,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-local-llm-under-8b-realtime-chat-overview-hero-pt.webp',
     title: 'Qual o Melhor LLM Local da Classe 8B para Chat em Tempo Real?',
@@ -1003,6 +1011,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-local-llm-under-8b-realtime-chat-overview-hero-zh.webp',
     title: '实时聊天的最佳 8B 级本地模型是什么？',

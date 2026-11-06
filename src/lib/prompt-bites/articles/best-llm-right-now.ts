@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Prompt Engineering',
     heroImage: '/images/best-llm-right-now-overview-hero-en.webp',
     title: 'Best LLM Right Now?',
@@ -96,6 +97,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Prompt Engineering',
     heroImage: '/images/best-llm-right-now-overview-hero-de.webp',
     title: 'Welches LLM ist aktuell das beste?',
@@ -183,6 +185,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Prompt Engineering',
     heroImage: '/images/best-llm-right-now-overview-hero-fr.webp',
     title: 'Quel est le meilleur LLM en ce moment ?',
@@ -270,6 +273,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Prompt Engineering',
     heroImage: '/images/best-llm-right-now-overview-hero-ja.webp',
     title: '現在最良のLLMは何ですか？',
@@ -357,6 +361,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Prompt Engineering',
     heroImage: '/images/best-llm-right-now-overview-hero-es.webp',
     title: '¿Cuál es el mejor LLM ahora mismo?',
@@ -450,6 +455,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Prompt Engineering',
     heroImage: '/images/best-llm-right-now-overview-hero-pt.webp',
     title: 'Qual é o melhor LLM agora?',
@@ -543,6 +549,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Prompt Engineering',
     heroImage: '/images/best-llm-right-now-overview-hero-zh.webp',
     title: '当前最好的 LLM 是什么？',
@@ -630,6 +637,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Prompt Engineering',
     heroImage: '/images/best-llm-right-now-overview-hero-ar.webp',
     title: 'ما أفضل نموذج لغوي كبير الآن؟',
@@ -723,6 +731,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Prompt Engineering',
     heroImage: '/images/best-llm-right-now-overview-hero-ko.webp',
     title: '지금 가장 좋은 LLM은 무엇입니까?',

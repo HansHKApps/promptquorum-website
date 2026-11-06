@@ -10,6 +10,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-jersey-overview-hero-en.webp',
     title: 'Is Balcony Solar Legal in New Jersey?',
@@ -117,6 +118,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-jersey-overview-hero-de.webp',
     title: 'Ist Balkonsolar in New Jersey legal?',
@@ -224,6 +226,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-jersey-overview-hero-es.webp',
     title: '¿Es legal la energía solar de balcón en Nueva Jersey?',
@@ -331,6 +334,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-jersey-overview-hero-fr.webp',
     title: 'Le solaire de balcon est-il légal dans le New Jersey ?',
@@ -438,6 +442,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-jersey-overview-hero-ja.webp',
     title: 'ニュージャージー州でバルコニーソーラーは合法ですか？',
@@ -545,6 +550,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-jersey-overview-hero-zh.webp',
     title: '新泽西州的阳台太阳能合法吗？',
@@ -652,6 +658,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-jersey-overview-hero-pt.webp',
     title: 'A energia solar de varanda é legal em Nova Jersey?',
@@ -759,6 +766,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-jersey-overview-hero-ar.webp',
     title: 'هل الطاقة الشمسية للشرفات قانونية في نيوجيرسي؟',
@@ -866,6 +874,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-jersey-overview-hero-ko.webp',
     title: '뉴저지주에서 발코니 태양광은 합법입니까?',

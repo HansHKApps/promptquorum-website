@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/sglang-vs-vllm-local-serving-overview-hero-en.webp',
     title: 'SGLang vs vLLM for Local Model Serving?',
@@ -163,6 +164,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/sglang-vs-vllm-local-serving-overview-hero-de.webp',
     title: 'SGLang oder vLLM für lokales Model-Serving?',
@@ -323,6 +325,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/sglang-vs-vllm-local-serving-overview-hero-fr.webp',
     title: 'SGLang ou vLLM pour le serving local de modèles ?',
@@ -483,6 +486,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/sglang-vs-vllm-local-serving-overview-hero-ja.webp',
     title: 'ローカルモデルサービングにはSGLangとvLLMどちらが良いですか?',
@@ -643,6 +647,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/sglang-vs-vllm-local-serving-overview-hero-zh.webp',
     title: '本地模型服务该选SGLang还是vLLM?',
@@ -803,6 +808,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/sglang-vs-vllm-local-serving-overview-hero-es.webp',
     title: '¿SGLang o vLLM para el serving local de modelos?',
@@ -963,6 +969,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/sglang-vs-vllm-local-serving-overview-hero-pt.webp',
     title: 'SGLang ou vLLM para servir modelos localmente?',
@@ -1123,6 +1130,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/sglang-vs-vllm-local-serving-overview-hero-ar.webp',
     title: 'SGLang أم vLLM لخدمة النماذج محليًا؟',
@@ -1283,6 +1291,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/sglang-vs-vllm-local-serving-overview-hero-ko.webp',
     title: '로컬 모델 서빙에는 SGLang과 vLLM 중 무엇을 선택해야 합니까?',

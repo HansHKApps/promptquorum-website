@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-qwen-model-for-coding-overview-hero-en.webp',
     title: 'Best Qwen Model for Coding?',
@@ -113,6 +114,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   de: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-qwen-model-for-coding-overview-hero-de.webp',
     title: 'Bestes Qwen-Modell für Coding?',
@@ -219,6 +221,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   fr: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-qwen-model-for-coding-overview-hero-fr.webp',
     title: 'Meilleur modèle Qwen pour le codage ?',
@@ -325,6 +328,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   ja: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-qwen-model-for-coding-overview-hero-ja.webp',
     title: 'コーディングに最適なQwenモデルは？',
@@ -431,6 +435,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   zh: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-qwen-model-for-coding-overview-hero-zh.webp',
     title: '编程最佳Qwen模型是哪个？',
@@ -537,6 +542,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   es: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-qwen-model-for-coding-overview-hero-es.webp',
     title: '¿Cuál es el mejor modelo Qwen para programar?',
@@ -643,6 +649,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   pt: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-qwen-model-for-coding-overview-hero-pt.webp',
     title: 'Qual é o melhor modelo Qwen para programar?',
@@ -749,6 +756,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   ar: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-qwen-model-for-coding-overview-hero-ar.webp',
     title: 'ما هو أفضل نموذج Qwen للبرمجة؟',
@@ -855,6 +863,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   ko: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/best-qwen-model-for-coding-overview-hero-ko.webp',
     title: '코딩에 가장 좋은 Qwen 모델은?',

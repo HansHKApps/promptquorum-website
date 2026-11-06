@@ -215,7 +215,7 @@ export interface ToolRecord {
   // next to an otherwise normal-looking entry. 'archived' = the GitHub repository is archived (read-only,
   // verified via the GitHub API); 'unmaintained' = the project's own README says it is no longer maintained
   // but GitHub does not flag it archived. `since` is the ISO date the status began, when a review states it.
-  upstreamStatus?: { state: 'archived' | 'unmaintained'; since?: string }
+  upstreamStatus?: { state: 'archived' | 'unmaintained' | 'delisted'; since?: string }
   // Category-specific comparison attributes, keyed by the attribute keys defined in
   // ./compare-schema.ts for this tool's primary category group. Feeds the category article's
   // comparison table and the homepage comparison tool. Unset/missing key = "not yet researched",

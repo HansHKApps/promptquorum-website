@@ -346,7 +346,7 @@ export function ToolCard({
 
           {app.upstreamStatus && (
             <span className="inline-flex w-fit items-center gap-1 rounded-full border border-gray-300 bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-700 mb-1.5">
-              {t(app.upstreamStatus.state === 'archived' ? 'archivedBadge' : 'unmaintainedBadge', lang)}
+              {t(app.upstreamStatus.state === 'archived' ? 'archivedBadge' : app.upstreamStatus.state === 'delisted' ? 'delistedBadge' : 'unmaintainedBadge', lang)}
             </span>
           )}
 

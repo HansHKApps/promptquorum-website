@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/mistral-small-24b-vs-qwen-14b-vs-llama-8b-overview-hero-en.webp',
     title: 'Mistral Small 24B vs Qwen3 14B vs Llama 3.1 8B: Which to Run Locally?',
@@ -190,6 +191,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     last_full_refresh: '2026-10-17',
   },
   de: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/mistral-small-24b-vs-qwen-14b-vs-llama-8b-overview-hero-de.webp',
     title: 'Mistral Small 24B vs. Qwen3 14B vs. Llama 3.1 8B: Welches lokal ausführen?',
@@ -318,6 +320,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/mistral-small-24b-vs-qwen-14b-vs-llama-8b-overview-hero-fr.webp',
     title: 'Mistral Small 24B vs Qwen3 14B vs Llama 3.1 8B : lequel lancer en local ?',
@@ -446,6 +449,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/mistral-small-24b-vs-qwen-14b-vs-llama-8b-overview-hero-ja.webp',
     title: 'Mistral Small 24B・Qwen3 14B・Llama 3.1 8B：ローカルでどれを動かすべきか？',
@@ -574,6 +578,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/mistral-small-24b-vs-qwen-14b-vs-llama-8b-overview-hero-zh.webp',
     title: 'Mistral Small 24B 对比 Qwen3 14B 对比 Llama 3.1 8B：本地运行选哪个？',
@@ -702,6 +707,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/mistral-small-24b-vs-qwen-14b-vs-llama-8b-overview-hero-pt.webp',
     title: 'Mistral Small 24B vs Qwen3 14B vs Llama 3.1 8B: qual rodar localmente?',
@@ -830,6 +836,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/mistral-small-24b-vs-qwen-14b-vs-llama-8b-overview-hero-es.webp',
     title: 'Mistral Small 24B vs Qwen3 14B vs Llama 3.1 8B: ¿cuál ejecutar en local?',
@@ -958,6 +965,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/mistral-small-24b-vs-qwen-14b-vs-llama-8b-overview-hero-ar.webp',
     title: '⁨Mistral Small 24B⁩ مقابل ⁨Qwen3 14B⁩ مقابل ⁨Llama 3.1 8B⁩: أيهما تشغّل محلياً؟',
@@ -1086,6 +1094,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/mistral-small-24b-vs-qwen-14b-vs-llama-8b-overview-hero-ko.webp',
     title: 'Mistral Small 24B vs Qwen3 14B vs Llama 3.1 8B: 로컬에서 무엇을 실행할까?',

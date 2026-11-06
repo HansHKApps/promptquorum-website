@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Cost & Comparisons',
@@ -201,6 +202,7 @@ schema: { '@type': 'TechArticle', headline: 'Best Cloud GPU for LLM Fine-Tuning 
   },
 
   de: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Cost & Comparisons',
@@ -399,6 +401,7 @@ schema: { '@type': 'TechArticle', headline: 'Günstigste Cloud-GPU für LLM-Fine
   },
 
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Cost & Comparisons',
@@ -597,6 +600,7 @@ schema: { '@type': 'TechArticle', headline: 'Meilleur GPU cloud pour fine-tuner 
   },
 
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Cost & Comparisons',
@@ -795,6 +799,7 @@ schema: { '@type': 'TechArticle', headline: 'LLMファインチューニング�
   },
 
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Cost & Comparisons',
@@ -993,6 +998,7 @@ schema: { '@type': 'TechArticle', headline: '2026年最便宜LLM微调云GPU（�
   },
 
   es: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Cost & Comparisons',
@@ -1191,6 +1197,7 @@ schema: { '@type': 'TechArticle', headline: 'Mejor GPU cloud para fine-tuning de
   },
 
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Cost & Comparisons',
@@ -1389,6 +1396,7 @@ schema: { '@type': 'TechArticle', headline: 'Melhor GPU cloud para fine-tuning d
   },
 
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Cost & Comparisons',
@@ -1587,6 +1595,7 @@ schema: { '@type': 'TechArticle', headline: 'أفضل معالج رسومات س
   },
 
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Cost & Comparisons',

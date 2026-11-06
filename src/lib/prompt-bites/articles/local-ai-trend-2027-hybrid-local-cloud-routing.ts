@@ -12,6 +12,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-en.webp',
     title: 'Local AI Trends 2027, Part 6 of 10: Hybrid Routing Becomes a Product Category',
@@ -128,6 +129,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-de.webp',
     title: 'Local AI Trends 2027, Teil 6 von 10: Hybrides Routing wird zur eigenen Produktkategorie',
@@ -244,6 +246,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-fr.webp',
     title: 'Tendances de l\'IA locale 2027, partie 6 sur 10 : le routage hybride devient une catégorie de produits',
@@ -360,6 +363,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-ja.webp',
     title: 'ローカルAIトレンド2027 第6回（全10回）：ハイブリッドルーティングが製品カテゴリになる',
@@ -476,6 +480,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-zh.webp',
     title: '2027本地AI趋势 第6篇（共10篇）：混合路由成为独立产品类别',
@@ -592,6 +597,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-es.webp',
     title: 'Tendencias de IA local 2027, parte 6 de 10: el enrutamiento híbrido se convierte en una categoría de producto',
@@ -708,6 +714,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-pt.webp',
     title: 'Tendências de IA local 2027, parte 6 de 10: o roteamento híbrido se torna uma categoria de produto',
@@ -824,6 +831,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-ar.webp',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 6 من 10: التوجيه الهجين يصبح فئة منتجات',
@@ -940,6 +948,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-ko.webp',
     title: '2027 로컬 AI 트렌드, 10부작 중 6부: 하이브리드 라우팅이 제품 카테고리가 되다',

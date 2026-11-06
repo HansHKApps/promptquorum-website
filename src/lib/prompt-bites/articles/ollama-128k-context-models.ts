@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/ollama-128k-context-models-overview-hero-en.webp',
     title: 'Which Ollama Models Support 128K Context?',
@@ -108,6 +109,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/ollama-128k-context-models-overview-hero-de.webp',
     title: 'Welche Ollama-Modelle unterstützen 128K Kontext?',
@@ -200,6 +202,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/ollama-128k-context-models-overview-hero-fr.webp',
     title: 'Quels modèles Ollama supportent le contexte 128K ?',
@@ -292,6 +295,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/ollama-128k-context-models-overview-hero-ja.webp',
     title: 'Ollamaで128Kコンテキストに対応するモデルは？',
@@ -384,6 +388,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/ollama-128k-context-models-overview-hero-zh.webp',
     title: 'Ollama上哪些模型支持128K上下文？',
@@ -476,6 +481,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/ollama-128k-context-models-overview-hero-pt.webp',
     title: 'Quais modelos do Ollama suportam contexto de 128K?',
@@ -568,6 +574,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/ollama-128k-context-models-overview-hero-es.webp',
     title: '¿Qué modelos de Ollama admiten contexto de 128K?',
@@ -660,6 +667,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/ollama-128k-context-models-overview-hero-ar.webp',
     title: 'ما نماذج ⁨Ollama⁩ التي تدعم سياق ⁨128K⁩؟',
@@ -752,6 +760,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/ollama-128k-context-models-overview-hero-ko.webp',
     title: 'Ollama에서 128K 컨텍스트를 지원하는 모델은 무엇입니까?',

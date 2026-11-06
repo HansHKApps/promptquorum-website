@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware Extension',
     heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-en.webp',
     title: 'Ollama on Windows vs WSL2 vs Linux: Which Should You Pick?',
@@ -145,6 +146,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   de: {
+    designSkin: 'hub',
     theme: 'Hardware Extension',
     heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-de.webp',
     title: 'Ollama: Windows, WSL2 oder Linux – was passt am besten?',
@@ -287,6 +289,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware Extension',
     heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-fr.webp',
     title: 'Ollama sous Windows, WSL2 ou Linux : que choisir ?',
@@ -429,6 +432,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware Extension',
     heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-ja.webp',
     title: 'OllamaはWindows・WSL2・Linuxのどれで動かすべきか',
@@ -571,6 +575,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware Extension',
     heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-zh.webp',
     title: 'Ollama 该用 Windows、WSL2 还是 Linux？',
@@ -713,6 +718,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   es: {
+    designSkin: 'hub',
     theme: 'Hardware Extension',
     heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-es.webp',
     title: 'Ollama en Windows, WSL2 o Linux: ¿cuál elegir?',
@@ -855,6 +861,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware Extension',
     heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-pt.webp',
     title: 'Ollama no Windows, WSL2 ou Linux: qual escolher?',
@@ -997,6 +1004,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware Extension',
     heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-ar.webp',
     title: 'Ollama على Windows أم WSL2 أم Linux: أيّها تختار؟',
@@ -1139,6 +1147,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware Extension',
     heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-ko.webp',
     title: 'Ollama는 Windows, WSL2, Linux 중 무엇으로 실행할까요?',

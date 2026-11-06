@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-en.webp',
     title: 'GGUF vs GPTQ vs AWQ: Differences, Speed and Which to Use',
@@ -181,6 +182,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-ar.webp',
     title: 'GGUF مقابل GPTQ مقابل AWQ: الفروق والسرعة وأيّها تختار',
@@ -359,6 +361,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-de.webp',
     title: 'GGUF vs. GPTQ vs. AWQ: Unterschiede, Geschwindigkeit und Auswahl',
@@ -537,6 +540,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-es.webp',
     title: 'GGUF vs GPTQ vs AWQ: diferencias, velocidad y cuál usar',
@@ -715,6 +719,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-fr.webp',
     title: 'GGUF vs GPTQ vs AWQ : différences, vitesse et choix',
@@ -893,6 +898,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-ja.webp',
     title: 'GGUF vs GPTQ vs AWQ: 違い・速度・選び方',
@@ -1071,6 +1077,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-ko.webp',
     title: 'GGUF 대 GPTQ 대 AWQ: 차이, 속도, 선택 기준',
@@ -1249,6 +1256,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-pt.webp',
     title: 'GGUF vs GPTQ vs AWQ: diferenças, velocidade e qual usar',
@@ -1427,6 +1435,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-zh.webp',
     title: 'GGUF 对比 GPTQ 对比 AWQ：差异、速度与选择',

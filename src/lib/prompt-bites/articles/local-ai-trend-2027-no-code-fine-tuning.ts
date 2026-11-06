@@ -12,6 +12,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-no-code-fine-tuning-overview-hero-en.webp',
     title: 'Local AI Trends 2027, Part 10 of 10: Fine-Tuning Without Writing a Training Script',
@@ -123,6 +124,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-no-code-fine-tuning-overview-hero-de.webp',
     title: 'Local AI Trends 2027, Teil 10 von 10: Fine-Tuning ohne eigenes Trainingsskript',
@@ -234,6 +236,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-no-code-fine-tuning-overview-hero-fr.webp',
     title: 'Local AI Trends 2027, partie 10/10 : le fine-tuning sans écrire de script d\'entraînement',
@@ -345,6 +348,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-no-code-fine-tuning-overview-hero-ja.webp',
     title: 'Local AI Trends 2027 第10回（全10回）：トレーニングスクリプトを書かないファインチューニング',
@@ -456,6 +460,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-no-code-fine-tuning-overview-hero-zh.webp',
     title: 'Local AI Trends 2027 第10篇（共10篇）：无需编写训练脚本的微调',
@@ -567,6 +572,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-no-code-fine-tuning-overview-hero-es.webp',
     title: 'Local AI Trends 2027, parte 10 de 10: fine-tuning sin escribir un script de entrenamiento',
@@ -678,6 +684,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-no-code-fine-tuning-overview-hero-pt.webp',
     title: 'Local AI Trends 2027, parte 10 de 10: fine-tuning sem escrever um script de treinamento',
@@ -789,6 +796,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-no-code-fine-tuning-overview-hero-ar.webp',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 10 من 10: الضبط الدقيق بدون كتابة سكربت تدريب',
@@ -900,6 +908,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-no-code-fine-tuning-overview-hero-ko.webp',
     title: '로컬 AI 트렌드 2027, 10부작 중 10부: 학습 스크립트 없이 하는 파인튜닝',

@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-vram-for-local-llm-overview-hero-en.webp',
     title: 'How Much VRAM Do You Need for a Local LLM?',
@@ -91,6 +92,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-vram-for-local-llm-overview-hero-de.webp',
     title: 'Wie viel VRAM brauchen Sie für ein lokales LLM?',
@@ -172,6 +174,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-vram-for-local-llm-overview-hero-fr.webp',
     title: 'De combien de VRAM avez-vous besoin pour un LLM local ?',
@@ -253,6 +256,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-vram-for-local-llm-overview-hero-ja.webp',
     title: 'ローカルLLMに必要なVRAM量は？',
@@ -334,6 +338,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-vram-for-local-llm-overview-hero-zh.webp',
     title: '运行本地LLM需要多少显存？',
@@ -415,6 +420,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-vram-for-local-llm-overview-hero-pt.webp',
     title: 'Quanta VRAM você precisa para um LLM local?',
@@ -496,6 +502,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-vram-for-local-llm-overview-hero-es.webp',
     title: '¿Cuánta VRAM necesitas para un LLM local?',
@@ -577,6 +584,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-vram-for-local-llm-overview-hero-ar.webp',
     title: 'كم ⁨VRAM⁩ تحتاج للنماذج اللغوية المحلية؟',
@@ -658,6 +666,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-vram-for-local-llm-overview-hero-ko.webp',
     title: '로컬 LLM에 VRAM이 얼마나 필요합니까?',

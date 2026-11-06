@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-en.webp',
     title: 'How Much Does a Cloud GPU Cost Per Hour in 2026?',
@@ -201,6 +202,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-de.webp',
     title: 'Wie viel kostet eine Cloud-GPU pro Stunde 2026?',
@@ -400,6 +402,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-fr.webp',
     title: 'Combien coûte un GPU cloud par heure en 2026 ?',
@@ -599,6 +602,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-ja.webp',
     title: '2026年、クラウドGPUの時間料金はいくら？',
@@ -798,6 +802,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-zh.webp',
     title: '2026年云GPU每小时多少钱？',
@@ -997,6 +1002,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-pt.webp',
     title: 'Quanto custa uma GPU na nuvem por hora em 2026?',
@@ -1196,6 +1202,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-es.webp',
     title: '¿Cuánto cuesta un GPU en la nube por hora en 2026?',
@@ -1395,6 +1402,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-ar.webp',
     title: 'كم تكلّف وحدة ⁨GPU⁩ السحابية في الساعة عام ⁨2026⁩؟',
@@ -1594,6 +1602,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-ko.webp',
     title: '2026년 클라우드 GPU 시간당 비용은 얼마입니까?',

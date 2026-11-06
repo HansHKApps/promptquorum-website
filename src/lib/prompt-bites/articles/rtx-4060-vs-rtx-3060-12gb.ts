@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-en.webp',
     title: 'RTX 4060 vs RTX 3060 12GB for Ollama and Local LLMs',
@@ -148,6 +149,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-ar.webp',
     title: 'RTX 4060 مقابل RTX 3060 12GB لتشغيل Ollama وLLM محليًا',
@@ -293,6 +295,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-de.webp',
     title: 'RTX 4060 vs. RTX 3060 12GB für Ollama und lokale LLMs',
@@ -438,6 +441,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-es.webp',
     title: 'RTX 4060 vs RTX 3060 12GB para Ollama y LLMs Locales',
@@ -583,6 +587,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-fr.webp',
     title: 'RTX 4060 vs RTX 3060 12 Go pour Ollama et les LLM locaux',
@@ -728,6 +733,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-ja.webp',
     title: 'RTX 4060 vs RTX 3060 12GB: Ollamaとローカルllmに良いのはどちら?',
@@ -873,6 +879,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-ko.webp',
     title: 'RTX 4060 대 RTX 3060 12GB: Ollama와 로컬 LLM 비교',
@@ -1018,6 +1025,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-pt.webp',
     title: 'RTX 4060 vs RTX 3060 12GB para Ollama e LLMs Locais',
@@ -1163,6 +1171,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-zh.webp',
     title: 'RTX 4060 对比 RTX 3060 12GB：Ollama 与本地 LLM 之选',

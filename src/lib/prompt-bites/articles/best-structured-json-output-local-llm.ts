@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/best-structured-json-output-local-llm-overview-hero-en.webp',
     title: 'Best Local LLM for Reliable Structured JSON Output?',
@@ -103,6 +104,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/best-structured-json-output-local-llm-overview-hero-de.webp',
     title: 'Welches lokale LLM liefert zuverlässige strukturierte JSON-Ausgabe?',
@@ -203,6 +205,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/best-structured-json-output-local-llm-overview-hero-fr.webp',
     title: 'Quel LLM local fournit une sortie JSON structurée fiable ?',
@@ -303,6 +306,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/best-structured-json-output-local-llm-overview-hero-ja.webp',
     title: '信頼性の高い構造化JSON出力に最適なローカルLLMは？',
@@ -403,6 +407,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/best-structured-json-output-local-llm-overview-hero-zh.webp',
     title: '哪种本地LLM能可靠输出结构化JSON？',
@@ -502,6 +507,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/best-structured-json-output-local-llm-overview-hero-es.webp',
     title: '¿Qué LLM local ofrece salida JSON estructurada fiable?',
@@ -602,6 +608,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/best-structured-json-output-local-llm-overview-hero-pt.webp',
     title: 'Qual LLM local oferece saída JSON estruturada confiável?',
@@ -702,6 +709,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/best-structured-json-output-local-llm-overview-hero-ar.webp',
     title: 'ما هو أفضل نموذج لغوي محلي لإخراج JSON منظم وموثوق؟',
@@ -802,6 +810,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Technique & Concept Explainers',
     heroImage: '/images/best-structured-json-output-local-llm-overview-hero-ko.webp',
     title: '신뢰할 수 있는 구조화된 JSON 출력에 가장 좋은 로컬 LLM은?',

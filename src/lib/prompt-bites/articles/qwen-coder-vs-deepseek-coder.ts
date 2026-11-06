@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-en.webp',
     title: 'Qwen Coder vs DeepSeek Coder 2026: Which Is Better?',
@@ -118,6 +119,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-de.webp',
     title: 'Qwen Coder vs. DeepSeek Coder 2026: Welcher ist besser?',
@@ -225,6 +227,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-es.webp',
     title: 'Qwen Coder vs DeepSeek Coder 2026: ¿cuál es mejor?',
@@ -332,6 +335,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-pt.webp',
     title: 'Qwen Coder vs DeepSeek Coder 2026: qual é melhor?',
@@ -439,6 +443,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-fr.webp',
     title: 'Qwen Coder vs DeepSeek Coder 2026 : lequel est le meilleur ?',
@@ -546,6 +551,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-ja.webp',
     title: 'Qwen Coder対DeepSeek Coder 2026：どちらが優れているか？',
@@ -653,6 +659,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-zh.webp',
     title: 'Qwen Coder 对比 DeepSeek Coder 2026：哪个更好？',
@@ -760,6 +767,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-ar.webp',
     title: '⁨Qwen Coder⁩ مقابل ⁨DeepSeek Coder⁩ 2026: أيهما أفضل؟',
@@ -875,6 +883,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Tool Comparisons',
     heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-ko.webp',
     title: 'Qwen Coder 대 DeepSeek Coder 2026: 어느 것이 더 낫습니까?',

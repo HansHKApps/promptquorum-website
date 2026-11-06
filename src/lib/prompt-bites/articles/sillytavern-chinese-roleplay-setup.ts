@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'SillyTavern Chinese Roleplay Setup',
     seoTitle: 'SillyTavern Chinese Roleplay 2026: Qwen3 & Yi-34B',
@@ -268,6 +269,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'SillyTavern Chinesisches Rollenspiel Einrichten',
     seoTitle: 'SillyTavern Chinesisch Rollenspiel 2026: Qwen3 & Yi-34B',
@@ -515,6 +517,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Configuration SillyTavern pour le jeu de rôle en chinois',
     seoTitle: 'SillyTavern jeu de rôle chinois 2026 : Qwen3 & Yi-34B',
@@ -753,6 +756,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'SillyTavern 中国語ロールプレイ設定ガイド',
     seoTitle: 'SillyTavern 中国語ロールプレイ設定 2026：Qwen3・Yi-34B最適ガイド',
@@ -971,6 +975,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'SillyTavern 中文角色扮演配置指南',
     seoTitle: 'SillyTavern 中文角色扮演 2026：Qwen3、Yi-34B最优模型与配置完整指南',
@@ -1214,6 +1219,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
 
   pt: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Configuração do SillyTavern para roleplay em chinês',
     seoTitle: 'SillyTavern roleplay chinês 2026: Qwen3 e Yi-34B',
@@ -1456,6 +1462,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Configuración de SillyTavern para roleplay en chino',
     seoTitle: 'SillyTavern roleplay chino 2026: Qwen3 y Yi-34B',
@@ -1698,6 +1705,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'إعداد ⁨SillyTavern⁩ للعب الأدوار باللغة الصينية',
     seoTitle: '⁨SillyTavern⁩ لعب أدوار صيني ⁨2026⁩: ⁨Qwen3-72B⁩ و ⁨Yi-34B⁩',
@@ -1910,6 +1918,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'SillyTavern 중국어 롤플레이 설정 가이드',
     seoTitle: 'SillyTavern 중국어 롤플레이 2026: Qwen3 및 Yi-34B',

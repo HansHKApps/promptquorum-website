@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Developers and teams running LLM applications in production',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     readTime: '14 min read',
     primaryTerm: 'LLM observability tool',
     targetKeywords: [
@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'best prompt monitoring tool',
       'Langfuse ClickHouse acquisition',
     ],
-    leadAnswerBlock: '**Langfuse is the best default for most production teams: free to self-host with broad framework coverage. LangSmith fits LangChain and LangGraph stacks, from $39 per seat per month. Helicone is the fastest to adopt as a proxy, from $79 a month. Langfuse now belongs to ClickHouse.**',
+    leadAnswerBlock: '**Our default pick for most production teams is Langfuse: free to self-host with broad framework coverage. LangSmith fits LangChain and LangGraph stacks, from $39 per seat per month. Helicone is the fastest to adopt as a proxy, from $79 a month. Langfuse now belongs to ClickHouse.**',
     quickAnswerTop: {
       question: 'Which LLM observability tool is best in 2026?',
       answer: '**Langfuse for flexibility and self-hosting, LangSmith if you are already on LangChain, Helicone if you want cost visibility with a one-line integration, and PromptLayer only if you need prompt versioning rather than full observability.** The choice is mostly structural: LangSmith and Langfuse instrument your code with an SDK, Helicone sits in front of the API as a proxy and captures every call without instrumentation. That difference decides what data you get. A proxy sees requests and costs; an SDK tracer sees the reasoning steps inside a multi-agent run.',
@@ -36,7 +36,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**Langfuse now belongs to ClickHouse** — acquired 16 January 2026 alongside a $400M Series D, which is a roadmap consideration',
         '**Skip all four** if you are pre-production making a few dozen calls a day: provider dashboards cover it',
       ],
-      updatedDate: '2026-11-02',
+      updatedDate: '2026-11-03',
     },
     toc: [
       { label: 'Key takeaways', anchor: 'tldr' },
@@ -66,11 +66,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**Langfuse** — 36.9k GitHub stars, the largest open-source footprint here. Cloud Hobby is free with 50,000 units a month, 30 days of data access and 2 users; Core is $29/mo with 100,000 units and unlimited users; Pro is $199/mo with three years of retention; Enterprise is $2,499/mo. Self-hosting the open-source core is free and unlimited.',
-          '**A correction worth making:** Langfuse is widely described as MIT-licensed with no feature gate. Its own README says the repository is "MIT licensed, except for the `ee` folders", and its self-host page lists nine Enterprise-only features — server-side data masking, project-level RBAC, data retention management, SCIM, audit logs and more. Core observability and evals are genuinely free; governance features are not.',
+          '**A correction worth making:** Some comparisons describe Langfuse as MIT-licensed with no feature gate. Its own README says the repository is "MIT licensed, except for the `ee` folders", and its self-host page lists nine Enterprise-only features — server-side data masking, project-level RBAC, data retention management, SCIM, audit logs and more. Core observability and evals are genuinely free; governance features are not.',
           '**Langfuse was acquired by ClickHouse, Inc. on 16 January 2026**, announced alongside ClickHouse\'s $400M Series D. The repository LICENSE now reads "Copyright (c) 2023-2026 ClickHouse, Inc." That is not a reason to avoid it, but it is a roadmap consideration worth five minutes before you standardise on it.',
           '**LangSmith** — Developer is free with up to 5,000 base traces a month and one seat. Plus is $39 per seat per month with up to 10,000 base traces, then usage-based billing in LangChain Standard Units (LSU), at $1.00 per LSU. Enterprise is custom with self-hosted and hybrid options.',
-          '**Helicone** — a proxy rather than an SDK, so integration is one line and it captures every call without instrumentation. Hobby is free with 10,000 requests, 1 GB and 7-day retention; Pro is $79/mo with unlimited seats and 1-month retention; Team is $799/mo with SOC-2 and HIPAA and 3-month retention.',
-          '**Helicone is also open source**, under Apache-2.0 with 6.3k stars — a fact most comparisons miss. The nuance is that its pricing page sells on-prem only at Enterprise and documents no supported free self-host path, so the code being open does not mean the vendor supports you running it.',
+          '**Helicone** — a proxy rather than an SDK, so integration is one line and it captures every call without instrumentation. Hobby is free with 10,000 requests, 1 GB and 7-day retention; Pro is $79/mo with unlimited seats and 1-month retention; Team is $799/mo with 3-month retention, and its pricing page lists SOC-2 and HIPAA support.',
+          '**Helicone is also open source**, under Apache-2.0, a fact some comparisons miss. The nuance is that its pricing page lists on-prem deployment only at Enterprise, so the code being open does not tell you what support the vendor gives if you run it yourself.',
           '**PromptLayer** — the narrowest of the four. Free gives 2,500 requests a month, 5 users and 10 prompts; Pro is $49/mo with $0.003 per transaction overage; Team is $500/mo with 100,000+ requests and 25 users. Self-hosting on GCP, AWS or Azure is Enterprise-only.',
           'None of the four publishes a public affiliate or referral programme. LangChain runs a Partner Network, but that is a technology-integration programme, not a commission scheme. Every link on this page is unpaid.',
         ],
@@ -148,13 +148,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Criterion: 'Free tier', Langfuse: '50,000 units/mo, 30-day access', LangSmith: '5,000 traces/mo, 1 seat', Helicone: '10,000 requests, 7-day', PromptLayer: '2,500 requests, 10 prompts' },
           { Criterion: 'Paid entry', Langfuse: 'Core $29/mo', LangSmith: 'Plus $39/seat/mo + usage', Helicone: 'Pro $79/mo', PromptLayer: 'Pro $49/mo' },
           { Criterion: 'Free self-hosting', Langfuse: 'Yes, core features', LangSmith: 'No, Enterprise only', Helicone: 'Code is open, not sold', PromptLayer: 'No, Enterprise only' },
-          { Criterion: 'Compliance tier', Langfuse: 'Pro adds SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team $799 adds SOC-2, HIPAA', PromptLayer: 'Enterprise' },
+          { Criterion: 'Compliance tier', Langfuse: 'Pro lists SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team $799 lists SOC-2, HIPAA', PromptLayer: 'Enterprise' },
           { Criterion: 'Affiliate programme', Langfuse: 'None found', LangSmith: 'None found', Helicone: 'None found', PromptLayer: 'None found' },
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'Comparisons routinely call Langfuse "the only open-source option here". Helicone is Apache-2.0 with 6.3k stars, so that is not accurate. What is accurate is that Langfuse documents and supports a free self-hosted deployment, while Helicone sells on-prem only at Enterprise and describes no supported free self-host path on its pricing page.',
+            text: 'Comparisons routinely call Langfuse "the only open-source option here". Helicone is Apache-2.0 with 6.3k stars, so that is not accurate. What is accurate is that Langfuse\'s pricing and self-host pages describe a free self-hosted deployment, while Helicone\'s pricing page lists on-prem only at Enterprise.',
           },
         ],
       },
@@ -167,7 +167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Langfuse — best overall',
             tagline: '36.9k stars, free self-hosted core, broadest framework coverage',
-            verdict: 'Langfuse covers observability, evals, prompt management and datasets in one product, and its integration list is the longest of the four: OpenAI SDK, LangChain, LlamaIndex, Haystack, LiteLLM, Vercel AI SDK, Ollama and Amazon Bedrock natively, with community integrations beyond that. For a mixed stack — some LangChain, some raw SDK calls, LlamaIndex for retrieval — that breadth means you instrument once rather than per framework. Cloud pricing is Hobby free with 50,000 units a month and 30 days of data access, Core at $29/mo with 100,000 units and unlimited users, Pro at $199/mo with three years of retention plus SOC2, ISO27001 and a BAA for HIPAA, and Enterprise at $2,499/mo. Overage is graduated, from $8 per 100,000 units down to $6 at volume. Self-hosting the open-source core is free and genuinely unlimited in usage.',
+            verdict: 'Langfuse covers observability, evals, prompt management and datasets in one product, and its integration list is the longest of the four: OpenAI SDK, LangChain, LlamaIndex, Haystack, LiteLLM, Vercel AI SDK, Ollama and Amazon Bedrock natively, with community integrations beyond that. For a mixed stack — some LangChain, some raw SDK calls, LlamaIndex for retrieval — that breadth means you instrument once rather than per framework. Cloud pricing is Hobby free with 50,000 units a month and 30 days of data access, Core at $29/mo with 100,000 units and unlimited users, Pro at $199/mo with three years of retention (its pricing page lists SOC2 and ISO27001 reports and a BAA for HIPAA), and Enterprise at $2,499/mo. Overage is graduated, from $8 per 100,000 units down to $6 at volume. Self-hosting the open-source core is free and genuinely unlimited in usage.',
             pros: [
               'Broadest native framework coverage of the four, so a mixed stack instruments once',
               'Free self-hosted core with unlimited usage, deployable via Docker Compose, Kubernetes or cloud templates',
@@ -235,7 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Helicone — fastest to adopt, best for cost visibility',
             tagline: 'One-line proxy integration, Apache-2.0, free for 10,000 requests then $79/mo',
-            verdict: 'Because Helicone is a proxy, adopting it is a change of base URL rather than an instrumentation project, and it captures cost and request data on every call by default without you deciding what to trace. That makes it the fastest of the four to get value from, and it is why cost tracking is its strongest surface: per-request cost breakdowns and spend visibility across many keys and models are the core product rather than a reporting view layered on tracing. Hobby is free with 10,000 requests, 1 GB of storage and 7 days of retention; Pro is $79 a month with unlimited seats and one month of retention; Team is $799 a month adding SOC-2 and HIPAA compliance and three months of retention; Enterprise adds on-prem deployment, SAML SSO and unlimited retention. The code is Apache-2.0 with 6.3k stars, though the pricing page markets on-prem only at Enterprise.',
+            verdict: 'Because Helicone is a proxy, adopting it is a change of base URL rather than an instrumentation project, and it captures cost and request data on every call by default without you deciding what to trace. That makes it the fastest of the four to get value from, and it is why cost tracking is its strongest surface: per-request cost breakdowns and spend visibility across many keys and models are the core product rather than a reporting view layered on tracing. Hobby is free with 10,000 requests, 1 GB of storage and 7 days of retention; Pro is $79 a month with unlimited seats and one month of retention; Team is $799 a month with three months of retention and SOC-2 and HIPAA support listed on its pricing page; Enterprise adds on-prem deployment, SAML SSO and unlimited retention. The code is Apache-2.0 with 6.3k stars, though the pricing page markets on-prem only at Enterprise.',
             pros: [
               'One line to integrate — no SDK rewrite, works with any OpenAI-compatible endpoint',
               'Cost tracking is the core product, not a secondary reporting tab',
@@ -269,7 +269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'PromptLayer — best when you only need prompt versioning',
             tagline: 'Free for 2,500 requests a month, Pro $49/mo',
-            verdict: 'PromptLayer focuses on keeping a versioned history of your prompts alongside a log of the requests that used them, which is a real need that arrives before full observability does. The free tier gives 2,500 requests a month, 5 users and 10 prompts. Pro is $49 a month with 5 users and overage at $0.003 per transaction. Team is $500 a month with 100,000+ requests, 25 users and cheaper overage at $0.002. Self-hosting on GCP, AWS or Azure exists only on custom Enterprise. It is the only one of the four with no meaningful open-source presence: the public repository is a client library at 0.8k stars, not the platform. Treat it as a prompt management tool that logs, rather than an observability platform that also manages prompts.',
+            verdict: 'PromptLayer focuses on keeping a versioned history of your prompts alongside a log of the requests that used them, which is a real need that arrives before full observability does. The free tier gives 2,500 requests a month, 5 users and 10 prompts. Pro is $49 a month with 5 users and overage at $0.003 per transaction. Team is $500 a month with 100,000+ requests, 25 users and cheaper overage at $0.002. Self-hosting on GCP, AWS or Azure exists only on custom Enterprise. Its public repository is a client library at 0.8k stars, not the platform. Treat it as a prompt management tool that logs, rather than an observability platform that also manages prompts.',
             pros: [
               'Simplest of the four to understand and adopt',
               'Prompt versioning is first-class rather than a feature of a bigger product',
@@ -297,7 +297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       clickhouseAcquisition: {
         id: 'clickhouse-acquisition',
         title: 'What the ClickHouse acquisition means for Langfuse',
-        content: '**ClickHouse, Inc. acquired Langfuse on 16 January 2026, announced alongside ClickHouse\'s $400 million Series D led by Dragoneer.** The acquisition was reported at the time by SiliconANGLE and confirmed on ClickHouse\'s own blog, in a Langfuse GitHub discussion, and by the law firm that advised on the deal.\n\nThe clearest evidence is in the repository itself: the LICENSE file now opens with "Copyright (c) 2023-2026 ClickHouse, Inc." The project remains actively developed and was pushed the day this page was checked.\n\nThere is a coherent logic to it. Langfuse already stored traces in ClickHouse, so the acquirer owns the database underneath the product rather than being an unrelated buyer. That is a better setup than most acquisitions in this category. The consideration is still worth naming: roadmap priorities after an acquisition follow the acquirer\'s commercial interest, and Langfuse self-hosted now depends on a company that also sells ClickHouse Cloud. The Enterprise self-hosted tier is explicitly bundled with ClickHouse Cloud or BYOC, with those costs additive.',
+        content: '**ClickHouse, Inc. acquired Langfuse on 16 January 2026, announced alongside ClickHouse\'s $400 million Series D led by Dragoneer.** The acquisition was reported at the time by SiliconANGLE and announced on ClickHouse\'s own blog (both linked under Sources).\n\nThe clearest evidence is in the repository itself: the LICENSE file now opens with "Copyright (c) 2023-2026 ClickHouse, Inc." The project remains actively developed and was pushed the day this page was checked.\n\nThere is a coherent logic to it. Langfuse already stored traces in ClickHouse, so the acquirer owns the database underneath the product rather than being an unrelated buyer. That is a better setup than most acquisitions in this category. The consideration is still worth naming: roadmap priorities after an acquisition follow the acquirer\'s commercial interest, and Langfuse self-hosted now depends on a company that also sells ClickHouse Cloud. The Enterprise self-hosted tier is explicitly bundled with ClickHouse Cloud or BYOC, with those costs additive.',
         callouts: [
           {
             type: 'note',
@@ -309,7 +309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       selfHosting: {
         id: 'self-hosting',
         title: 'Self-hosting and the Enterprise feature gate',
-        content: '**Langfuse is the only one of the four that documents and supports a free self-hosted deployment — but the widely repeated claim that there is no feature gate between free and paid is wrong.** Langfuse\'s own self-host page lists nine capabilities as Enterprise-only: server-side data masking, project-level RBAC, data retention management, SCIM user provisioning, organization creators, UI customisation, audit logs, admin and instance management APIs, and protected deployment labels.\n\nRead that list against who self-hosting is usually for. Teams choose to self-host because of data residency or regulatory pressure, and RBAC, audit logs and data masking are exactly what a regulated team needs. The free tier genuinely covers observability, evals, prompt management, datasets, tracing and cost tracking with unlimited usage. It does not cover governance.\n\nThe other three are more straightforward. LangSmith restricts self-hosting to Enterprise with custom pricing. PromptLayer offers single-tenant self-hosting on GCP, AWS or Azure at Enterprise only. Helicone is the interesting case: the code is Apache-2.0 and public, but the pricing page sells on-prem only at Enterprise and documents no supported free self-host path, so open source and supported self-hosting are not the same thing here.',
+        content: '**Of the four, Langfuse is the one whose pricing and self-host pages describe a free self-hosted deployment — but the widely repeated claim that there is no feature gate between free and paid is wrong.** Langfuse\'s own self-host page lists nine capabilities as Enterprise-only: server-side data masking, project-level RBAC, data retention management, SCIM user provisioning, organization creators, UI customisation, audit logs, admin and instance management APIs, and protected deployment labels.\n\nRead that list against who self-hosting is usually for. Teams choose to self-host because of data residency or regulatory pressure, and RBAC, audit logs and data masking are exactly what a regulated team needs. The free tier genuinely covers observability, evals, prompt management, datasets, tracing and cost tracking with unlimited usage. It does not cover governance.\n\nThe other three are more straightforward. LangSmith restricts self-hosting to Enterprise with custom pricing. PromptLayer offers single-tenant self-hosting on GCP, AWS or Azure at Enterprise only. Helicone is the interesting case: the code is Apache-2.0 and public, but the pricing page lists on-prem only at Enterprise, so open source and vendor-supported self-hosting are not the same thing here.',
         callouts: [
           {
             type: 'warning',
@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Tier: 'Entry paid', Langfuse: 'Core $29/mo', LangSmith: 'Plus $39/seat/mo', Helicone: 'Pro $79/mo', PromptLayer: 'Pro $49/mo' },
           { Tier: 'Usage billing', Langfuse: '$8 per 100,000 units, graduated', LangSmith: 'LSU usage, $1.00 each', Helicone: 'Usage-based beyond free quota', PromptLayer: '$0.003 per transaction' },
           { Tier: 'Mid tier', Langfuse: 'Pro $199/mo, 3-year retention', LangSmith: 'Enterprise custom', Helicone: 'Team $799/mo', PromptLayer: 'Team $500/mo' },
-          { Tier: 'Compliance', Langfuse: 'Pro: SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team: SOC-2, HIPAA', PromptLayer: 'Enterprise' },
+          { Tier: 'Compliance', Langfuse: 'Pro lists SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team lists SOC-2, HIPAA', PromptLayer: 'Enterprise' },
           { Tier: 'Self-host cost', Langfuse: 'Free for core features', LangSmith: 'Enterprise only', Helicone: 'Enterprise only', PromptLayer: 'Enterprise only' },
         ],
         callouts: [
@@ -357,7 +357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Small team wanting data residency control** → Langfuse self-hosted, with the Enterprise feature list checked first if RBAC or audit logs are required.',
           '**Team running 10,000+ calls a day, not on LangChain** → Langfuse Cloud or Helicone. LangSmith\'s advantage does not apply to you and its usage billing will.',
           '**Team whose pain is API cost sprawl** → Helicone Pro at $79/mo, where cost tracking is the product.',
-          '**Regulated industry needing SOC-2 or HIPAA** → Helicone Team at $799/mo or Langfuse Pro at $199/mo, which includes SOC2, ISO27001 and a BAA.',
+          '**Regulated industry needing SOC-2 or HIPAA** → Helicone Team at $799/mo or Langfuse Pro at $199/mo. Helicone\'s pricing page lists SOC-2 and HIPAA support on Team, and Langfuse\'s pricing page lists SOC2, ISO27001 and a BAA on Pro. Request the current report and agreement from the vendor before relying on them.',
           '**Team that only needs prompt version control** → PromptLayer free or Pro, and revisit when regression testing becomes the need.',
         ],
       },
@@ -365,21 +365,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'regional-context',
         title: 'Observability in the EU, Japan and China',
         content: 'Observability traces contain the full prompt and completion, which means they contain whatever your users typed. That makes the hosted-versus-self-hosted decision a data-protection question in three major markets.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'This section is general information, not legal advice. Check your lawful basis, processor agreements and transfer rules with your data protection officer or counsel.',
+          },
+        ],
         subsections: [
           {
             title: 'European Union',
-            content: 'A trace store holds user inputs verbatim, so under the GDPR it is processing like any other, and a US-hosted observability vendor receiving those traces is a transfer within the meaning of Articles 44 to 49 unless the vendor\'s terms and infrastructure say otherwise. You need an Article 28 processor agreement with whichever platform you adopt. This is the strongest practical argument for Langfuse self-hosted in the EU, because the traces never leave your infrastructure — but note that server-side data masking, the feature that would let you strip personal data before storage, is one of the Enterprise-gated capabilities. France\'s CNIL has pointed in the same direction with its guidance favouring local processing for sensitive business data.',
+            content: 'A trace store holds user inputs verbatim, so under the GDPR it is processing like any other, and a US-hosted observability vendor receiving those traces is a transfer within the meaning of Articles 44 to 49 unless the vendor\'s terms and infrastructure say otherwise. You need an Article 28 processor agreement with whichever platform you adopt. This is the strongest practical argument for Langfuse self-hosted in the EU, because the traces never leave your infrastructure — but note that server-side data masking, the feature that would let you strip personal data before storage, is one of the Enterprise-gated capabilities.',
           },
           {
             title: 'Japan',
-            content: 'METI\'s AI governance work pushes firms towards auditable data paths, and observability is where that audit trail actually lives — it is the record of what the system did. That makes retention windows a governance question rather than a convenience: Helicone\'s free tier keeps 7 days and Langfuse Hobby gives 30 days of access, both shorter than most audit expectations. If you need to reconstruct behaviour months later, price a tier with real retention, or self-host where you control it. Langfuse Pro\'s three-year retention is the longest published here.',
+            content: 'Observability is where an audit trail actually lives — it is the record of what the system did. That makes retention windows a governance question rather than a convenience: Helicone\'s free tier keeps 7 days and Langfuse Hobby gives 30 days of access, so check both against your own audit requirements. If you need to reconstruct behaviour months later, price a tier with real retention, or self-host where you control it. Langfuse Pro\'s three-year retention is the longest published here.',
           },
           {
             title: 'China',
-            content: 'Under the Data Security Law (数据安全法) and the CAC\'s cross-border transfer rules, sending traces built from mainland user traffic to a foreign observability vendor is the compliance problem, not observability itself. Deployments serving mainland teams generally need the trace store on domestic infrastructure. Langfuse self-hosted is the practical route, since it is the only one of the four with a documented free self-hosted deployment — see [running local LLMs in China](/local-llms/deepseek-local-china-data-privacy-2026) for the wider data-residency picture.',
+            content: 'Under the Data Security Law (数据安全法) and the CAC\'s cross-border transfer rules, sending traces built from mainland user traffic to a foreign observability vendor is the compliance problem, not observability itself. Deployments serving mainland teams generally need the trace store on domestic infrastructure. Langfuse self-hosted is the practical route, since its pricing and self-host pages describe a free self-hosted deployment — see [running local LLMs in China](/local-llms/deepseek-local-china-data-privacy-2026) for the wider data-residency picture.',
           },
         ],
-        note: 'Self-host the trace store in any market where prompts and completions cannot leave your jurisdiction. Langfuse is the only one of the four where that path is free and documented.',
+        note: 'Self-host the trace store in any market where prompts and completions cannot leave your jurisdiction. Langfuse\'s pricing and self-host pages describe a free self-hosted path.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -391,7 +397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Calling Langfuse the only open-source option',
-            whyItMatters: 'Helicone is Apache-2.0 with 6.3k stars. The accurate distinction is that Langfuse documents a supported free self-hosted deployment while Helicone sells on-prem at Enterprise, not that one is open and the other is not.',
+            whyItMatters: 'Helicone is Apache-2.0 with 6.3k stars. The accurate distinction is that Langfuse\'s pricing and self-host pages describe a free self-hosted deployment while Helicone\'s pricing page lists on-prem at Enterprise, not that one is open and the other is not.',
           },
           {
             title: 'Reading LangSmith\'s $39 seat price as the whole bill',
@@ -444,7 +450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is Helicone open source?',
-            a: 'Yes, under Apache-2.0 with about 6,300 GitHub stars, which many comparisons of this category miss. The nuance is that Helicone\'s pricing page sells on-prem deployment only at the Enterprise tier and documents no supported free self-hosted path, so the code being open does not mean the vendor supports you running it yourself.',
+            a: 'Yes, under Apache-2.0 with about 6,300 GitHub stars, which many comparisons of this category miss. The nuance is that Helicone\'s pricing page lists on-prem deployment only at the Enterprise tier, so the code being open does not tell you what support the vendor gives if you run it yourself.',
           },
           {
             q: 'Do any of these have affiliate programmes?',
@@ -501,7 +507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Best LLM Observability Tool 2026: Langfuse vs LangSmith vs Helicone',
       description: 'Compares Langfuse, LangSmith, Helicone and PromptLayer for LLM observability, with verified pricing, licences, retention windows, the ClickHouse acquisition and the Enterprise self-hosting feature gate.',
       datePublished: '2026-08-28',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       url: 'https://www.promptquorum.com/local-llms/best-llm-observability-tools',
       inLanguage: 'en',
       proficiencyLevel: 'Advanced',
@@ -561,7 +567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Is Helicone open source?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes, under Apache-2.0 with about 6,300 GitHub stars. However its pricing page sells on-prem deployment only at Enterprise and documents no supported free self-hosted path.',
+            text: 'Yes, under Apache-2.0 with about 6,300 GitHub stars. However its pricing page lists on-prem deployment only at Enterprise.',
           },
         },
       ],
@@ -573,7 +579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'en',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Best overall — 36.9k stars, free self-hosted core, broadest framework coverage, though nine features are Enterprise-only' },
+        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Our pick — 36.9k stars, free self-hosted core, broadest framework coverage, though nine features are Enterprise-only' },
         { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'Best for LangChain and LangGraph teams — native zero-config tracing, $39/seat/mo plus usage-based LSU billing' },
         { '@type': 'ListItem', position: 3, name: 'Helicone', description: 'Fastest to adopt and best for cost tracking — Apache-2.0 proxy, one-line integration, free for 10,000 requests then $79/mo' },
         { '@type': 'ListItem', position: 4, name: 'PromptLayer', description: 'Lightest option — prompt versioning and logging, free for 2,500 requests a month, Pro $49/mo' },
@@ -593,7 +599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Entwickler und Teams, die LLM-Anwendungen produktiv betreiben',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     readTime: '14 Min. Lesezeit',
     primaryTerm: 'LLM-Observability-Tool',
     targetKeywords: [
@@ -603,7 +609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'bestes Prompt-Monitoring-Tool',
       'Langfuse ClickHouse Übernahme',
     ],
-    leadAnswerBlock: '**Langfuse ist die beste Standardwahl für die meisten Produktionsteams: kostenlos selbst hostbar, breite Framework-Abdeckung. LangSmith passt zu LangChain- und LangGraph-Stacks, ab 39 $ pro Platz und Monat. Helicone lässt sich als Proxy am schnellsten einführen, ab 79 $ im Monat.**',
+    leadAnswerBlock: '**Unsere Standardempfehlung für die meisten Produktionsteams ist Langfuse: kostenlos selbst hostbar, breite Framework-Abdeckung. LangSmith passt zu LangChain- und LangGraph-Stacks, ab 39 $ pro Platz und Monat. Helicone lässt sich als Proxy am schnellsten einführen, ab 79 $ im Monat.**',
     quickAnswerTop: {
       question: 'Welches LLM-Observability-Tool ist 2026 das beste?',
       answer: '**Langfuse für Flexibilität und Selbstbetrieb, LangSmith wenn Sie ohnehin auf LangChain sind, Helicone für Kostentransparenz mit einzeiliger Integration, und PromptLayer nur, wenn Sie Prompt-Versionierung statt vollständiger Observability brauchen.** Die Wahl ist vor allem strukturell: LangSmith und Langfuse instrumentieren Ihren Code per SDK, Helicone sitzt als Proxy vor der API und erfasst jeden Aufruf ohne Instrumentierung. Dieser Unterschied entscheidet, welche Daten Sie erhalten. Ein Proxy sieht Anfragen und Kosten; ein SDK-Tracer sieht die Denkschritte innerhalb eines Multi-Agenten-Laufs.',
@@ -615,7 +621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**Langfuse gehört jetzt ClickHouse** — Übernahme am 16. Januar 2026 samt 400-Mio.-$-Series-D, was für die Roadmap zählt',
         '**Verzichten Sie auf alle vier,** wenn Sie vor der Produktion stehen und ein paar Dutzend Aufrufe am Tag machen: die Anbieter-Dashboards genügen',
       ],
-      updatedDate: '2026-11-02',
+      updatedDate: '2026-11-03',
     },
     toc: [
       { label: 'Kernaussagen', anchor: 'tldr' },
@@ -645,13 +651,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**Langfuse** — 36,9k GitHub-Sterne, die größte Open-Source-Präsenz hier. Cloud Hobby ist kostenlos mit 50.000 Einheiten im Monat, 30 Tagen Datenzugriff und 2 Nutzenden; Core kostet 29 $/Monat mit 100.000 Einheiten und unbegrenzt vielen Nutzenden; Pro 199 $/Monat mit drei Jahren Aufbewahrung',
-          '**Eine Korrektur, die sich lohnt:** Langfuse wird verbreitet als MIT-lizenziert ohne Funktionsschranke beschrieben. Die eigene README sagt, das Repository sei „MIT licensed, except for the `ee` folders", und die Self-Host-Seite listet neun Enterprise-Funktionen — serverseitige Datenmaskierung, projektbezogenes RBAC, Verwaltung der Aufbewahrung, SCIM, Audit-Logs und weitere. Kern-Observability und Evaluationen sind wirklich kostenlos; Governance-Funktionen nicht.',
+          '**Eine Korrektur, die sich lohnt:** Langfuse wird in manchen Vergleichen als MIT-lizenziert ohne Funktionsschranke beschrieben. Die eigene README sagt, das Repository sei „MIT licensed, except for the `ee` folders", und die Self-Host-Seite listet neun Enterprise-Funktionen — serverseitige Datenmaskierung, projektbezogenes RBAC, Verwaltung der Aufbewahrung, SCIM, Audit-Logs und weitere. Kern-Observability und Evaluationen sind wirklich kostenlos; Governance-Funktionen nicht.',
           '**Langfuse wurde am 16. Januar 2026 von ClickHouse, Inc. übernommen**, angekündigt zusammen mit der 400-Mio.-$-Series-D von ClickHouse. Die LICENSE-Datei im Repository beginnt nun mit „Copyright (c) 2023-2026 ClickHouse, Inc." Das ist kein Grund, Langfuse zu meiden, aber ein Roadmap-Aspekt, der fünf Minuten Prüfung verdient, bevor Sie sich festlegen.',
           '**LangSmith** — Developer ist kostenlos mit bis zu 5.000 Basis-Traces im Monat und einem Platz. Plus kostet 39 $ pro Platz und Monat mit bis zu 10.000 Basis-Traces, danach nutzungsabhängig in LangChain Standard Units (LSU), 1,00 $ je LSU. Enterprise ist individuell mit selbst gehosteten und hybriden Optionen.',
-          '**Helicone** — ein Proxy statt eines SDK, die Integration ist also eine Zeile und erfasst jeden Aufruf ohne Instrumentierung. Hobby ist kostenlos mit 10.000 Anfragen, 1 GB und 7 Tagen Aufbewahrung; Pro kostet 79 $/Monat mit unbegrenzten Plätzen und einem Monat Aufbewahrung; Team 799 $/Monat mit SOC-2 und HIPAA und drei Monaten Aufbewahrung.',
-          '**Auch Helicone ist quelloffen**, unter Apache-2.0 mit 6,3k Sternen — was die meisten Vergleiche übersehen. Die Nuance: Die Preisseite verkauft On-Premises nur in der Enterprise-Stufe und dokumentiert keinen unterstützten kostenlosen Selbstbetrieb. Offener Quelltext heißt hier nicht, dass der Anbieter den Eigenbetrieb unterstützt.',
+          '**Helicone** — ein Proxy statt eines SDK, die Integration ist also eine Zeile und erfasst jeden Aufruf ohne Instrumentierung. Hobby ist kostenlos mit 10.000 Anfragen, 1 GB und 7 Tagen Aufbewahrung; Pro kostet 79 $/Monat mit unbegrenzten Plätzen und einem Monat Aufbewahrung; Team 799 $/Monat mit drei Monaten Aufbewahrung; laut Preisseite werden dort SOC-2 und HIPAA-Unterstützung aufgeführt.',
+          '**Auch Helicone ist quelloffen**, unter Apache-2.0, was manche Vergleiche übersehen. Die Nuance: Die Preisseite führt On-Premises nur in der Enterprise-Stufe auf. Offener Quelltext sagt daher nicht, welche Unterstützung der Anbieter beim Eigenbetrieb bietet.',
           '**PromptLayer** — das schmalste der vier. Kostenlos sind 2.500 Anfragen im Monat, 5 Nutzende und 10 Prompts; Pro kostet 49 $/Monat mit 0,003 $ je Transaktion über dem Kontingent; Team 500 $/Monat mit über 100.000 Anfragen und 25 Nutzenden. Selbstbetrieb auf GCP, AWS oder Azure gibt es nur mit Enterprise.',
-          'Keiner der vier veröffentlicht ein Affiliate- oder Empfehlungsprogramm. LangChain betreibt ein Partner Network, doch das ist ein Programm für technische Integrationen, keine Provisionsvereinbarung. Sämtliche Links auf dieser Seite sind unvergütet.',
+          'Auf den Seiten der vier Anbieter wurde kein öffentliches Affiliate- oder Empfehlungsprogramm gefunden. LangChain betreibt ein Partner Network, doch das ist ein Programm für technische Integrationen, keine Provisionsvereinbarung. Sämtliche Links auf dieser Seite sind unvergütet.',
         ],
       },
       bestChoice: {
@@ -727,13 +733,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Kriterium: 'Kostenlose Stufe', Langfuse: '50.000 Einheiten/Monat, 30 Tage', LangSmith: '5.000 Traces/Monat, 1 Platz', Helicone: '10.000 Anfragen, 7 Tage', PromptLayer: '2.500 Anfragen, 10 Prompts' },
           { Kriterium: 'Bezahlter Einstieg', Langfuse: 'Core 29 $/Monat', LangSmith: 'Plus 39 $/Platz/Monat + Nutzung', Helicone: 'Pro 79 $/Monat', PromptLayer: 'Pro 49 $/Monat' },
           { Kriterium: 'Kostenloser Selbstbetrieb', Langfuse: 'Ja, Kernfunktionen', LangSmith: 'Nein, nur Enterprise', Helicone: 'Code offen, nicht verkauft', PromptLayer: 'Nein, nur Enterprise' },
-          { Kriterium: 'Compliance-Stufe', Langfuse: 'Pro: SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team 799 $: SOC-2, HIPAA', PromptLayer: 'Enterprise' },
+          { Kriterium: 'Compliance-Stufe', Langfuse: 'Pro nennt SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team 799 $: nennt SOC-2, HIPAA', PromptLayer: 'Enterprise' },
           { Kriterium: 'Affiliate-Programm', Langfuse: 'Keines gefunden', LangSmith: 'Keines gefunden', Helicone: 'Keines gefunden', PromptLayer: 'Keines gefunden' },
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'Vergleiche nennen Langfuse regelmäßig „die einzige quelloffene Option hier". Helicone steht unter Apache-2.0 mit 6,3k Sternen, das trifft also nicht zu. Richtig ist: Langfuse dokumentiert und unterstützt einen kostenlosen Selbstbetrieb, während Helicone On-Premises nur mit Enterprise verkauft und auf seiner Preisseite keinen unterstützten kostenlosen Selbstbetrieb beschreibt.',
+            text: 'Vergleiche nennen Langfuse regelmäßig „die einzige quelloffene Option hier". Helicone steht unter Apache-2.0 mit 6,3k Sternen, das trifft also nicht zu. Richtig ist: Auf den Preis- und Self-Host-Seiten von Langfuse wird ein kostenloser Selbstbetrieb beschrieben, während die Preisseite von Helicone On-Premises nur mit Enterprise aufführt.',
           },
         ],
       },
@@ -746,7 +752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Langfuse — insgesamt am besten',
             tagline: '36,9k Sterne, kostenloser selbst gehosteter Kern, breiteste Framework-Abdeckung',
-            verdict: 'Langfuse deckt Observability, Evaluationen, Prompt-Verwaltung und Datensätze in einem Produkt ab, und seine Integrationsliste ist die längste der vier: OpenAI SDK, LangChain, LlamaIndex, Haystack, LiteLLM, Vercel AI SDK, Ollama und Amazon Bedrock nativ, dazu Community-Integrationen. Bei einem gemischten Stack — etwas LangChain, einige rohe SDK-Aufrufe, LlamaIndex für Retrieval — bedeutet diese Breite, dass Sie einmal instrumentieren statt je Framework. Die Cloud-Preise: Hobby kostenlos mit 50.000 Einheiten im Monat und 30 Tagen Datenzugriff, Core zu 29 $/Monat mit 100.000 Einheiten und unbegrenzt vielen Nutzenden, Pro zu 199 $/Monat mit drei Jahren Aufbewahrung sowie SOC2, ISO27001 und einem BAA für HIPAA, und Enterprise zu 2.499 $/Monat. Der Mehrverbrauch ist gestaffelt, von 8 $ je 100.000 Einheiten hinunter auf 6 $ bei Volumen. Der Selbstbetrieb des quelloffenen Kerns ist kostenlos und in der Nutzung tatsächlich unbegrenzt.',
+            verdict: 'Langfuse deckt Observability, Evaluationen, Prompt-Verwaltung und Datensätze in einem Produkt ab, und seine Integrationsliste ist die längste der vier: OpenAI SDK, LangChain, LlamaIndex, Haystack, LiteLLM, Vercel AI SDK, Ollama und Amazon Bedrock nativ, dazu Community-Integrationen. Bei einem gemischten Stack — etwas LangChain, einige rohe SDK-Aufrufe, LlamaIndex für Retrieval — bedeutet diese Breite, dass Sie einmal instrumentieren statt je Framework. Die Cloud-Preise: Hobby kostenlos mit 50.000 Einheiten im Monat und 30 Tagen Datenzugriff, Core zu 29 $/Monat mit 100.000 Einheiten und unbegrenzt vielen Nutzenden, Pro zu 199 $/Monat mit drei Jahren Aufbewahrung (laut Preisseite mit SOC2- und ISO27001-Berichten sowie einem BAA für HIPAA), und Enterprise zu 2.499 $/Monat. Der Mehrverbrauch ist gestaffelt, von 8 $ je 100.000 Einheiten hinunter auf 6 $ bei Volumen. Der Selbstbetrieb des quelloffenen Kerns ist kostenlos und in der Nutzung tatsächlich unbegrenzt.',
             pros: [
               'Breiteste native Framework-Abdeckung der vier, ein gemischter Stack wird einmal instrumentiert',
               'Kostenloser selbst gehosteter Kern mit unbegrenzter Nutzung, über Docker Compose, Kubernetes oder Cloud-Vorlagen',
@@ -814,7 +820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Helicone — am schnellsten eingeführt, am besten für Kostentransparenz',
             tagline: 'Einzeilige Proxy-Integration, Apache-2.0, kostenlos bis 10.000 Anfragen, danach 79 $/Monat',
-            verdict: 'Weil Helicone ein Proxy ist, ist die Einführung ein Wechsel der Basis-URL statt eines Instrumentierungsprojekts, und es erfasst Kosten- und Anfragedaten bei jedem Aufruf standardmäßig, ohne dass jemand entscheiden muss, was getract wird. Das macht es zum schnellsten der vier und erklärt, warum Kostenverfolgung seine stärkste Seite ist: Kostenaufschlüsselung pro Anfrage und Ausgabentransparenz über viele Schlüssel und Modelle sind das Kernprodukt statt einer auf das Tracing gelegten Auswertung. Hobby ist kostenlos mit 10.000 Anfragen, 1 GB Speicher und 7 Tagen Aufbewahrung; Pro kostet 79 $ im Monat mit unbegrenzten Plätzen und einem Monat Aufbewahrung; Team 799 $ im Monat mit SOC-2- und HIPAA-Konformität und drei Monaten Aufbewahrung; Enterprise ergänzt On-Premises, SAML-SSO und unbegrenzte Aufbewahrung. Der Quelltext steht unter Apache-2.0 mit 6,3k Sternen, auch wenn die Preisseite On-Premises nur mit Enterprise bewirbt.',
+            verdict: 'Weil Helicone ein Proxy ist, ist die Einführung ein Wechsel der Basis-URL statt eines Instrumentierungsprojekts, und es erfasst Kosten- und Anfragedaten bei jedem Aufruf standardmäßig, ohne dass jemand entscheiden muss, was getract wird. Das macht es zum schnellsten der vier und erklärt, warum Kostenverfolgung seine stärkste Seite ist: Kostenaufschlüsselung pro Anfrage und Ausgabentransparenz über viele Schlüssel und Modelle sind das Kernprodukt statt einer auf das Tracing gelegten Auswertung. Hobby ist kostenlos mit 10.000 Anfragen, 1 GB Speicher und 7 Tagen Aufbewahrung; Pro kostet 79 $ im Monat mit unbegrenzten Plätzen und einem Monat Aufbewahrung; Team 799 $ im Monat mit drei Monaten Aufbewahrung, laut Preisseite von Helicone mit SOC-2- und HIPAA-Unterstützung (Nachweise und Vereinbarungen beim Anbieter anfordern); Enterprise ergänzt On-Premises, SAML-SSO und unbegrenzte Aufbewahrung. Der Quelltext steht unter Apache-2.0 mit 6,3k Sternen, auch wenn die Preisseite On-Premises nur mit Enterprise bewirbt.',
             pros: [
               'Eine Zeile zur Integration — kein SDK-Umbau, funktioniert mit jedem OpenAI-kompatiblen Endpunkt',
               'Kostenverfolgung ist das Kernprodukt, kein nachrangiger Auswertungsreiter',
@@ -848,7 +854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'PromptLayer — am besten, wenn Sie nur Prompt-Versionierung brauchen',
             tagline: 'Kostenlos bis 2.500 Anfragen im Monat, Pro 49 $/Monat',
-            verdict: 'PromptLayer konzentriert sich darauf, eine versionierte Historie Ihrer Prompts samt Protokoll der Anfragen zu führen, die sie genutzt haben — ein realer Bedarf, der früher auftritt als vollständige Observability. Die kostenlose Stufe bietet 2.500 Anfragen im Monat, 5 Nutzende und 10 Prompts. Pro kostet 49 $ im Monat mit 5 Nutzenden und 0,003 $ je Transaktion über dem Kontingent. Team kostet 500 $ im Monat mit über 100.000 Anfragen, 25 Nutzenden und günstigerem Mehrverbrauch von 0,002 $. Selbstbetrieb auf GCP, AWS oder Azure gibt es nur mit individuellem Enterprise. Es ist das einzige der vier ohne nennenswerte Open-Source-Präsenz: Das öffentliche Repository ist eine Client-Bibliothek mit 0,8k Sternen, nicht die Plattform. Betrachten Sie es als Prompt-Management-Werkzeug, das protokolliert, nicht als Observability-Plattform, die auch Prompts verwaltet.',
+            verdict: 'PromptLayer konzentriert sich darauf, eine versionierte Historie Ihrer Prompts samt Protokoll der Anfragen zu führen, die sie genutzt haben — ein realer Bedarf, der früher auftritt als vollständige Observability. Die kostenlose Stufe bietet 2.500 Anfragen im Monat, 5 Nutzende und 10 Prompts. Pro kostet 49 $ im Monat mit 5 Nutzenden und 0,003 $ je Transaktion über dem Kontingent. Team kostet 500 $ im Monat mit über 100.000 Anfragen, 25 Nutzenden und günstigerem Mehrverbrauch von 0,002 $. Selbstbetrieb auf GCP, AWS oder Azure gibt es nur mit individuellem Enterprise. Das öffentliche Repository ist eine Client-Bibliothek mit 0,8k Sternen, nicht die Plattform. Betrachten Sie es als Prompt-Management-Werkzeug, das protokolliert, nicht als Observability-Plattform, die auch Prompts verwaltet.',
             pros: [
               'Das am einfachsten zu verstehende und einzuführende der vier',
               'Prompt-Versionierung ist erstklassig statt Nebenfunktion eines größeren Produkts',
@@ -876,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       clickhouseAcquisition: {
         id: 'clickhouse-acquisition',
         title: 'Was die ClickHouse-Übernahme für Langfuse bedeutet',
-        content: '**ClickHouse, Inc. hat Langfuse am 16. Januar 2026 übernommen, angekündigt zusammen mit der 400 Millionen Dollar schweren Series D von ClickHouse unter Führung von Dragoneer.** Über die Übernahme berichtete damals SiliconANGLE; bestätigt ist sie im ClickHouse-Blog, in einer Langfuse-GitHub-Diskussion und durch die beratende Kanzlei.\n\nDer deutlichste Beleg steckt im Repository selbst: Die LICENSE-Datei beginnt nun mit „Copyright (c) 2023-2026 ClickHouse, Inc." Das Projekt wird weiter aktiv entwickelt und wurde am Prüftag dieser Seite aktualisiert.\n\nEs steckt eine schlüssige Logik darin. Langfuse speicherte seine Traces ohnehin in ClickHouse, der Käufer besitzt also die Datenbank unter dem Produkt und ist kein sachfremder Erwerber. Das ist eine bessere Ausgangslage als bei den meisten Übernahmen dieser Kategorie. Der Aspekt bleibt dennoch nennenswert: Roadmap-Prioritäten folgen nach einer Übernahme dem kommerziellen Interesse des Käufers, und Langfuse im Selbstbetrieb hängt nun an einem Unternehmen, das zugleich ClickHouse Cloud verkauft. Die Enterprise-Variante des Selbstbetriebs ist ausdrücklich an ClickHouse Cloud oder BYOC gekoppelt, deren Kosten additiv sind.',
+        content: '**ClickHouse, Inc. hat Langfuse am 16. Januar 2026 übernommen, angekündigt zusammen mit der 400 Millionen Dollar schweren Series D von ClickHouse unter Führung von Dragoneer.** Über die Übernahme berichtete damals SiliconANGLE; sie wurde im ClickHouse-Blog angekündigt (beide Quellen unten verlinkt).\n\nDer deutlichste Beleg steckt im Repository selbst: Die LICENSE-Datei beginnt nun mit „Copyright (c) 2023-2026 ClickHouse, Inc." Das Projekt wird weiter aktiv entwickelt und wurde am Prüftag dieser Seite aktualisiert.\n\nEs steckt eine schlüssige Logik darin. Langfuse speicherte seine Traces ohnehin in ClickHouse, der Käufer besitzt also die Datenbank unter dem Produkt und ist kein sachfremder Erwerber. Das ist eine bessere Ausgangslage als bei den meisten Übernahmen dieser Kategorie. Der Aspekt bleibt dennoch nennenswert: Roadmap-Prioritäten folgen nach einer Übernahme dem kommerziellen Interesse des Käufers, und Langfuse im Selbstbetrieb hängt nun an einem Unternehmen, das zugleich ClickHouse Cloud verkauft. Die Enterprise-Variante des Selbstbetriebs ist ausdrücklich an ClickHouse Cloud oder BYOC gekoppelt, deren Kosten additiv sind.',
         callouts: [
           {
             type: 'note',
@@ -888,7 +894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       selfHosting: {
         id: 'self-hosting',
         title: 'Selbstbetrieb und die Enterprise-Schranke',
-        content: '**Langfuse ist das einzige der vier, das einen kostenlosen Selbstbetrieb dokumentiert und unterstützt — doch die vielfach wiederholte Behauptung, es gebe keine Funktionsschranke zwischen kostenlos und bezahlt, ist falsch.** Die eigene Self-Host-Seite listet neun Fähigkeiten als Enterprise-exklusiv: serverseitige Datenmaskierung, projektbezogenes RBAC, Verwaltung der Aufbewahrung, SCIM-Nutzerbereitstellung, Organisationsersteller, UI-Anpassung, Audit-Logs, Admin- und Instanz-Management-APIs sowie geschützte Deployment-Labels.\n\nLesen Sie diese Liste vor dem Hintergrund, für wen Selbstbetrieb üblicherweise gedacht ist. Teams hosten selbst wegen Datenresidenz oder regulatorischem Druck — und RBAC, Audit-Logs und Datenmaskierung sind genau das, was ein reguliertes Team braucht. Die kostenlose Stufe deckt Observability, Evaluationen, Prompt-Verwaltung, Datensätze, Tracing und Kostenverfolgung mit unbegrenzter Nutzung wirklich ab. Governance deckt sie nicht ab.\n\nDie anderen drei sind unkomplizierter. LangSmith beschränkt den Selbstbetrieb auf Enterprise mit individuellem Preis. PromptLayer bietet Single-Tenant-Selbstbetrieb auf GCP, AWS oder Azure nur mit Enterprise. Helicone ist der interessante Fall: Der Quelltext steht unter Apache-2.0 und ist öffentlich, doch die Preisseite verkauft On-Premises nur mit Enterprise und dokumentiert keinen unterstützten kostenlosen Selbstbetrieb — quelloffen und unterstützter Eigenbetrieb sind hier also nicht dasselbe.',
+        content: '**Unter den vier beschreiben nur die Preis- und Self-Host-Seiten von Langfuse einen kostenlosen Selbstbetrieb — doch die vielfach wiederholte Behauptung, es gebe keine Funktionsschranke zwischen kostenlos und bezahlt, ist falsch.** Die eigene Self-Host-Seite listet neun Fähigkeiten als Enterprise-exklusiv: serverseitige Datenmaskierung, projektbezogenes RBAC, Verwaltung der Aufbewahrung, SCIM-Nutzerbereitstellung, Organisationsersteller, UI-Anpassung, Audit-Logs, Admin- und Instanz-Management-APIs sowie geschützte Deployment-Labels.\n\nLesen Sie diese Liste vor dem Hintergrund, für wen Selbstbetrieb üblicherweise gedacht ist. Teams hosten selbst wegen Datenresidenz oder regulatorischem Druck — und RBAC, Audit-Logs und Datenmaskierung sind genau das, was ein reguliertes Team braucht. Die kostenlose Stufe deckt Observability, Evaluationen, Prompt-Verwaltung, Datensätze, Tracing und Kostenverfolgung mit unbegrenzter Nutzung wirklich ab. Governance deckt sie nicht ab.\n\nDie anderen drei sind unkomplizierter. LangSmith beschränkt den Selbstbetrieb auf Enterprise mit individuellem Preis. PromptLayer bietet Single-Tenant-Selbstbetrieb auf GCP, AWS oder Azure nur mit Enterprise. Helicone ist der interessante Fall: Der Quelltext steht unter Apache-2.0 und ist öffentlich, doch die Preisseite führt On-Premises nur mit Enterprise auf — quelloffen und vom Anbieter unterstützter Eigenbetrieb sind hier also nicht dasselbe.',
         callouts: [
           {
             type: 'warning',
@@ -910,7 +916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Stufe: 'Bezahlter Einstieg', Langfuse: 'Core 29 $/Monat', LangSmith: 'Plus 39 $/Platz/Monat', Helicone: 'Pro 79 $/Monat', PromptLayer: 'Pro 49 $/Monat' },
           { Stufe: 'Nutzungsabrechnung', Langfuse: '8 $ je 100.000 Einheiten, gestaffelt', LangSmith: 'LSU-Nutzung, je 1,00 $', Helicone: 'Nutzungsabhängig über dem Kontingent', PromptLayer: '0,003 $ je Transaktion' },
           { Stufe: 'Mittlere Stufe', Langfuse: 'Pro 199 $/Monat, 3 Jahre Aufbewahrung', LangSmith: 'Enterprise individuell', Helicone: 'Team 799 $/Monat', PromptLayer: 'Team 500 $/Monat' },
-          { Stufe: 'Compliance', Langfuse: 'Pro: SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team: SOC-2, HIPAA', PromptLayer: 'Enterprise' },
+          { Stufe: 'Compliance', Langfuse: 'Pro nennt SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team nennt SOC-2, HIPAA', PromptLayer: 'Enterprise' },
           { Stufe: 'Kosten Selbstbetrieb', Langfuse: 'Kostenlos für Kernfunktionen', LangSmith: 'Nur Enterprise', Helicone: 'Nur Enterprise', PromptLayer: 'Nur Enterprise' },
         ],
         callouts: [
@@ -936,7 +942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Kleines Team, das Datenresidenz kontrollieren will** → Langfuse selbst gehostet, zuvor mit Blick auf die Enterprise-Liste, falls RBAC oder Audit-Logs nötig sind.',
           '**Team mit über 10.000 Aufrufen am Tag, nicht auf LangChain** → Langfuse Cloud oder Helicone. LangSmiths Vorteil greift bei Ihnen nicht, seine Nutzungsabrechnung schon.',
           '**Team, dessen Problem Kostenwildwuchs bei APIs ist** → Helicone Pro zu 79 $/Monat, wo Kostenverfolgung das Produkt ist.',
-          '**Regulierte Branche mit SOC-2- oder HIPAA-Bedarf** → Helicone Team zu 799 $/Monat oder Langfuse Pro zu 199 $/Monat, das SOC2, ISO27001 und ein BAA enthält.',
+          '**Regulierte Branche mit SOC-2- oder HIPAA-Bedarf** → Helicone Team zu 799 $/Monat oder Langfuse Pro zu 199 $/Monat; laut den Preisseiten der Anbieter sind dort SOC-2 bzw. SOC2, ISO27001 und ein BAA aufgeführt. Fordern Sie die aktuellen Nachweise beim Anbieter an.',
           '**Team, das nur Prompt-Versionsverwaltung braucht** → PromptLayer kostenlos oder Pro, und erneut prüfen, sobald Regressionstests nötig werden.',
         ],
       },
@@ -944,21 +950,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'regional-context',
         title: 'Observability in der EU, in Japan und in China',
         content: 'Observability-Traces enthalten den vollständigen Prompt und die Antwort — und damit alles, was Ihre Nutzenden getippt haben. Das macht die Entscheidung zwischen gehostet und selbst betrieben in drei wichtigen Märkten zur Datenschutzfrage.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'Dieser Abschnitt ist allgemeine Information und keine Rechtsberatung. Klären Sie Rechtsgrundlage, Auftragsverarbeitungsvertrag und Übermittlungen mit Ihrem Datenschutzbeauftragten oder Ihrer Rechtsberatung.',
+          },
+        ],
         subsections: [
           {
             title: 'Europäische Union',
-            content: 'Ein Trace-Speicher hält Nutzereingaben wortgetreu vor, ist nach der DSGVO also eine Verarbeitung wie jede andere, und ein in den USA gehosteter Observability-Anbieter, der diese Traces empfängt, stellt eine Übermittlung im Sinne der Artikel 44 bis 49 dar, sofern Vertragsbedingungen und Infrastruktur nichts anderes vorsehen. Sie brauchen einen Auftragsverarbeitungsvertrag nach Artikel 28 mit der gewählten Plattform. Das ist das stärkste praktische Argument für Langfuse im Selbstbetrieb innerhalb der EU, weil die Traces Ihre Infrastruktur nie verlassen — beachten Sie aber, dass die serverseitige Datenmaskierung, mit der Sie personenbezogene Daten vor der Speicherung entfernen könnten, zu den Enterprise-Funktionen gehört. Die französische CNIL weist mit ihrer Empfehlung lokaler Verarbeitung für sensible Geschäftsdaten in dieselbe Richtung.',
+            content: 'Ein Trace-Speicher hält Nutzereingaben wortgetreu vor, ist nach der DSGVO also eine Verarbeitung wie jede andere, und ein in den USA gehosteter Observability-Anbieter, der diese Traces empfängt, stellt eine Übermittlung im Sinne der Artikel 44 bis 49 dar, sofern Vertragsbedingungen und Infrastruktur nichts anderes vorsehen. Sie brauchen einen Auftragsverarbeitungsvertrag nach Artikel 28 mit der gewählten Plattform. Das ist das stärkste praktische Argument für Langfuse im Selbstbetrieb innerhalb der EU, weil die Traces Ihre Infrastruktur nie verlassen — beachten Sie aber, dass die serverseitige Datenmaskierung, mit der Sie personenbezogene Daten vor der Speicherung entfernen könnten, zu den Enterprise-Funktionen gehört.',
           },
           {
             title: 'Japan',
-            content: 'Die AI-Governance-Arbeit des METI drängt Unternehmen zu auditierbaren Datenwegen, und Observability ist der Ort, an dem dieser Prüfpfad tatsächlich liegt — sie ist die Aufzeichnung dessen, was das System getan hat. Damit werden Aufbewahrungsfristen zur Governance-Frage statt zur Bequemlichkeit: Helicones kostenlose Stufe hält 7 Tage, Langfuse Hobby gewährt 30 Tage Zugriff, beides kürzer als die meisten Prüferwartungen. Wenn Sie Verhalten Monate später rekonstruieren müssen, kalkulieren Sie eine Stufe mit echter Aufbewahrung oder betreiben Sie selbst. Die drei Jahre bei Langfuse Pro sind die längste hier veröffentlichte Frist.',
+            content: 'Observability ist der Ort, an dem dieser Prüfpfad tatsächlich liegt — sie ist die Aufzeichnung dessen, was das System getan hat. Damit werden Aufbewahrungsfristen zur Governance-Frage statt zur Bequemlichkeit: Helicones kostenlose Stufe hält 7 Tage, Langfuse Hobby gewährt 30 Tage Zugriff, prüfen Sie beides gegen Ihre eigenen Prüfanforderungen. Wenn Sie Verhalten Monate später rekonstruieren müssen, kalkulieren Sie eine Stufe mit echter Aufbewahrung oder betreiben Sie selbst. Die drei Jahre bei Langfuse Pro sind die längste hier veröffentlichte Frist.',
           },
           {
             title: 'China',
-            content: 'Unter dem Datensicherheitsgesetz (数据安全法) und den CAC-Regeln zur grenzüberschreitenden Übermittlung besteht das Compliance-Problem darin, aus Festland-Nutzerverkehr gebildete Traces an einen ausländischen Observability-Anbieter zu senden, nicht in der Observability selbst. Bereitstellungen für Festlandteams verlangen in der Regel, dass der Trace-Speicher auf inländischer Infrastruktur liegt. Langfuse im Selbstbetrieb ist der praktikable Weg, da es als einziges der vier einen dokumentierten kostenlosen Selbstbetrieb bietet — siehe [lokale LLMs in China betreiben](/de/local-llms/deepseek-local-china-data-privacy-2026) für das größere Bild der Datenresidenz.',
+            content: 'Unter dem Datensicherheitsgesetz (数据安全法) und den CAC-Regeln zur grenzüberschreitenden Übermittlung besteht das Compliance-Problem darin, aus Festland-Nutzerverkehr gebildete Traces an einen ausländischen Observability-Anbieter zu senden, nicht in der Observability selbst. Bereitstellungen für Festlandteams verlangen in der Regel, dass der Trace-Speicher auf inländischer Infrastruktur liegt. Langfuse im Selbstbetrieb ist der praktikable Weg, da dessen Preis- und Self-Host-Seiten einen kostenlosen Selbstbetrieb beschreiben — siehe [lokale LLMs in China betreiben](/de/local-llms/deepseek-local-china-data-privacy-2026) für das größere Bild der Datenresidenz.',
           },
         ],
-        note: 'Betreiben Sie den Trace-Speicher in jedem Markt selbst, in dem Prompts und Antworten Ihre Rechtsordnung nicht verlassen dürfen. Langfuse ist das einzige der vier, bei dem dieser Weg kostenlos und dokumentiert ist.',
+        note: 'Betreiben Sie den Trace-Speicher in jedem Markt selbst, in dem Prompts und Antworten Ihre Rechtsordnung nicht verlassen dürfen. Auf den Preis- und Self-Host-Seiten von Langfuse wird dieser Weg als kostenlos beschrieben.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -970,7 +982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Langfuse als einzige quelloffene Option bezeichnen',
-            whyItMatters: 'Helicone steht unter Apache-2.0 mit 6,3k Sternen. Die zutreffende Unterscheidung lautet, dass Langfuse einen unterstützten kostenlosen Selbstbetrieb dokumentiert, während Helicone On-Premises mit Enterprise verkauft — nicht, dass das eine offen und das andere geschlossen wäre.',
+            whyItMatters: 'Helicone steht unter Apache-2.0 mit 6,3k Sternen. Die zutreffende Unterscheidung lautet, dass Langfuse einen kostenlosen Selbstbetrieb beschreibt, während Helicone On-Premises mit Enterprise aufführt — nicht, dass das eine offen und das andere geschlossen wäre.',
           },
           {
             title: 'LangSmiths 39-$-Platzpreis für die ganze Rechnung halten',
@@ -1023,7 +1035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist Helicone quelloffen?',
-            a: 'Ja, unter Apache-2.0 mit rund 6.300 GitHub-Sternen, was viele Vergleiche dieser Kategorie übersehen. Die Nuance ist, dass Helicones Preisseite On-Premises nur in der Enterprise-Stufe verkauft und keinen unterstützten kostenlosen Selbstbetrieb dokumentiert — offener Quelltext heißt also nicht, dass der Anbieter Ihren Eigenbetrieb unterstützt.',
+            a: 'Ja, unter Apache-2.0 mit rund 6.300 GitHub-Sternen, was viele Vergleiche dieser Kategorie übersehen. Die Nuance ist, dass Helicones Preisseite On-Premises nur in der Enterprise-Stufe aufführt — offener Quelltext sagt also nicht, welche Unterstützung der Anbieter bei Ihrem Eigenbetrieb bietet.',
           },
           {
             q: 'Haben diese Anbieter Affiliate-Programme?',
@@ -1034,12 +1046,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Observability beobachtet den Live-Verkehr nach dem Release und sagt Ihnen, was das System gerade tut. Evaluation lässt vor dem Ausliefern einen festen Datensatz laufen und sagt Ihnen, ob eine Änderung die Qualität verbessert oder verschlechtert hat. Mehrere dieser Werkzeuge können beides, doch die Fragen unterscheiden sich — siehe [die besten LLM-Evaluationstools](/de/local-llms/best-llm-evaluation-tools) für die Hälfte vor dem Release.',
           },
           {
-            q: 'Ist DSGVO-konforme Observability mit einem US-Anbieter möglich?',
-            a: 'Möglich ja, aber aufwendiger als der Selbstbetrieb. Traces enthalten Prompts und Antworten wortgetreu, also reale Nutzereingaben, weshalb Sie einen Auftragsverarbeitungsvertrag nach Artikel 28 und eine tragfähige Übermittlungsgrundlage nach den Artikeln 44 bis 49 brauchen. Erschwerend kommt hinzu, dass ein Trace-Speicher dauerhaft vorgehalten wird, um Vergleiche über die Zeit zu erlauben. Für sensible Anwendungen ist Langfuse im Selbstbetrieb der deutlich einfachere Weg — beachten Sie aber, dass die serverseitige Datenmaskierung dort Enterprise-pflichtig ist.',
+            q: 'Ist Observability mit einem US-Anbieter nach der DSGVO möglich?',
+            a: 'Das hängt von Ihrer Rechtsgrundlage, einem Auftragsverarbeitungsvertrag nach Art. 28 DSGVO und einer tragfähigen Übermittlungsgrundlage nach Art. 44 ff. ab. Das ist keine Rechtsberatung; klären Sie es mit Ihrem Datenschutzbeauftragten. Ein Selbstbetrieb vermeidet die Übermittlung an Dritte, serverseitige Datenmaskierung ist dort jedoch Enterprise-pflichtig.',
           },
           {
             q: 'Welches Tool passt zu einem Mittelständler ohne eigenes Plattformteam?',
-            a: 'In den meisten Fällen Helicone Pro zu 79 $ im Monat, weil die Einführung eine geänderte Basis-URL ist und niemand eine Datenbank betreiben muss — für ein Team ohne Plattformzuständigkeit ist das der entscheidende Punkt. Langfuse Cloud Core zu 29 $ ist günstiger und funktional breiter, verlangt aber SDK-Instrumentierung. Langfuse im Selbstbetrieb sollten Sie nur wählen, wenn jemand Postgres und ClickHouse dauerhaft betreuen kann; andernfalls sparen Sie Lizenzkosten und zahlen mit Betriebsrisiko.',
+            a: 'Je nach Teamgröße kann Helicone Pro (79 $/Monat laut Preisseite) die einfachere Einführung sein, weil nur die Basis-URL geändert wird. Langfuse Cloud Core (29 $/Monat) verlangt SDK-Instrumentierung. Selbstbetrieb lohnt sich nur, wenn jemand Postgres und ClickHouse dauerhaft betreut.',
           },
         ],
       },
@@ -1088,7 +1100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Bestes LLM-Observability-Tool 2026: Langfuse, LangSmith oder Helicone',
       description: 'Vergleicht Langfuse, LangSmith, Helicone und PromptLayer zur LLM-Observability, mit geprüften Preisen, Lizenzen, Aufbewahrungsfristen, der ClickHouse-Übernahme und der Enterprise-Schranke beim Selbstbetrieb.',
       datePublished: '2026-08-28',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       url: 'https://www.promptquorum.com/de/local-llms/best-llm-observability-tools',
       inLanguage: 'de',
       proficiencyLevel: 'Advanced',
@@ -1148,7 +1160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Ist Helicone quelloffen?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ja, unter Apache-2.0 mit rund 6.300 GitHub-Sternen. Die Preisseite verkauft On-Premises jedoch nur in der Enterprise-Stufe und dokumentiert keinen unterstützten kostenlosen Selbstbetrieb.',
+            text: 'Ja, unter Apache-2.0 mit rund 6.300 GitHub-Sternen. Die Preisseite führt On-Premises jedoch nur in der Enterprise-Stufe auf.',
           },
         },
       ],
@@ -1160,7 +1172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'de',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Insgesamt am besten — 36,9k Sterne, kostenloser selbst gehosteter Kern, breiteste Framework-Abdeckung, doch neun Funktionen sind Enterprise-exklusiv' },
+        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Unsere Empfehlung — 36,9k Sterne, kostenloser selbst gehosteter Kern, breiteste Framework-Abdeckung, doch neun Funktionen sind Enterprise-exklusiv' },
         { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'Am besten für LangChain- und LangGraph-Teams — natives Tracing ohne Konfiguration, 39 $/Platz/Monat plus nutzungsabhängige LSU-Abrechnung' },
         { '@type': 'ListItem', position: 3, name: 'Helicone', description: 'Am schnellsten eingeführt und am besten für Kostenverfolgung — Apache-2.0-Proxy, einzeilige Integration, kostenlos bis 10.000 Anfragen, danach 79 $/Monat' },
         { '@type': 'ListItem', position: 4, name: 'PromptLayer', description: 'Schlankeste Option — Prompt-Versionierung und Logging, kostenlos bis 2.500 Anfragen im Monat, Pro 49 $/Monat' },
@@ -1180,7 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Desarrolladores y equipos que ejecutan aplicaciones de LLM en producción',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     readTime: '14 min de lectura',
     primaryTerm: 'herramienta de observabilidad de LLM',
     targetKeywords: [
@@ -1190,7 +1202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mejor herramienta de monitorización de prompts',
       'Langfuse adquisición ClickHouse',
     ],
-    leadAnswerBlock: '**Langfuse es la mejor opción por defecto para la mayoría de equipos: autoalojamiento gratis y amplia cobertura de frameworks. LangSmith encaja con LangChain y LangGraph, desde 39 $ por puesto al mes. Helicone, un proxy, es el más rápido de adoptar, desde 79 $ al mes.**',
+    leadAnswerBlock: '**Nuestra recomendación por defecto para la mayoría de equipos es Langfuse: autoalojamiento gratis y amplia cobertura de frameworks. LangSmith encaja con LangChain y LangGraph, desde 39 $ por puesto al mes. Helicone, un proxy, es el más rápido de adoptar, desde 79 $ al mes.**',
     quickAnswerTop: {
       question: '¿Qué herramienta de observabilidad de LLM es mejor en 2026?',
       answer: '**Langfuse por flexibilidad y autoalojamiento, LangSmith si ya está en LangChain, Helicone si quiere visibilidad de costes con una integración de una línea, y PromptLayer solo si necesita versionado de prompts en lugar de observabilidad completa.** La decisión es sobre todo estructural: LangSmith y Langfuse instrumentan su código con un SDK, mientras que Helicone se sitúa delante de la API como proxy y captura cada llamada sin instrumentación. Esa diferencia decide qué datos obtiene. Un proxy ve peticiones y costes; un trazador SDK ve los pasos de razonamiento dentro de una ejecución multiagente.',
@@ -1202,7 +1214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**Langfuse ya pertenece a ClickHouse** — adquirida el 16 de enero de 2026 junto a una ronda Serie D de 400 M$, lo que cuenta para la hoja de ruta',
         '**Prescinda de las cuatro** si está antes de producción con unas pocas decenas de llamadas al día: los paneles del proveedor bastan',
       ],
-      updatedDate: '2026-11-02',
+      updatedDate: '2026-11-03',
     },
     toc: [
       { label: 'Puntos clave', anchor: 'tldr' },
@@ -1232,13 +1244,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**Langfuse** — 36,9k estrellas en GitHub, la mayor presencia de código abierto aquí. Hobby en la nube es gratis con 50.000 unidades al mes, 30 días de acceso a datos y 2 usuarios; Core cuesta 29 $/mes con 100.000 unidades y usuarios ilimitados; Pro 199 $/mes con tres años de retención',
-          '**Una corrección que conviene hacer:** se describe ampliamente a Langfuse como licenciada bajo MIT sin muro de funciones. Su propio README dice que el repositorio está «MIT licensed, except for the `ee` folders», y su página de autoalojamiento enumera nueve funciones exclusivas de Enterprise: enmascarado de datos en servidor, RBAC por proyecto, gestión de retención, SCIM, registros de auditoría y más. La observabilidad y las evaluaciones básicas sí son gratuitas; las funciones de gobernanza no.',
+          '**Una corrección que conviene hacer:** algunas comparativas describen a Langfuse como licenciada bajo MIT sin muro de funciones. Su propio README dice que el repositorio está «MIT licensed, except for the `ee` folders», y su página de autoalojamiento enumera nueve funciones exclusivas de Enterprise: enmascarado de datos en servidor, RBAC por proyecto, gestión de retención, SCIM, registros de auditoría y más. La observabilidad y las evaluaciones básicas sí son gratuitas; las funciones de gobernanza no.',
           '**Langfuse fue adquirida por ClickHouse, Inc. el 16 de enero de 2026**, anunciado junto a la ronda Serie D de 400 M$ de ClickHouse. El archivo LICENSE del repositorio empieza ahora por «Copyright (c) 2023-2026 ClickHouse, Inc.». No es motivo para descartarla, pero sí una consideración de hoja de ruta que merece cinco minutos antes de estandarizarla.',
           '**LangSmith** — Developer es gratis con hasta 5.000 trazas base al mes y un puesto. Plus cuesta 39 $ por puesto y mes con hasta 10.000 trazas base, y después facturación por consumo en LangChain Standard Units (LSU), a 1,00 $ por LSU. Enterprise es personalizado con opciones autoalojada e híbrida.',
-          '**Helicone** — un proxy en lugar de un SDK, así que la integración es una línea y captura cada llamada sin instrumentación. Hobby es gratis con 10.000 peticiones, 1 GB y 7 días de retención; Pro cuesta 79 $/mes con puestos ilimitados y un mes de retención; Team 799 $/mes con SOC-2 y HIPAA y tres meses de retención.',
-          '**Helicone también es de código abierto**, bajo Apache-2.0 con 6,3k estrellas, algo que la mayoría de comparativas omite. El matiz es que su página de precios vende on-premise solo en Enterprise y no documenta una vía gratuita de autoalojamiento con soporte, así que que el código sea abierto no significa que el proveedor respalde que lo ejecute usted.',
+          '**Helicone** — un proxy en lugar de un SDK, así que la integración es una línea y captura cada llamada sin instrumentación. Hobby es gratis con 10.000 peticiones, 1 GB y 7 días de retención; Pro cuesta 79 $/mes con puestos ilimitados y un mes de retención; Team 799 $/mes con tres meses de retención; según su página de precios, incluye soporte SOC-2 y HIPAA.',
+          '**Helicone también es de código abierto**, bajo Apache-2.0, algo que algunas comparativas omiten. El matiz es que su página de precios lista on-premise solo en Enterprise, así que que el código sea abierto no indica qué soporte da el proveedor si lo ejecuta usted.',
           '**PromptLayer** — la más estrecha de las cuatro. El nivel gratuito da 2.500 peticiones al mes, 5 usuarios y 10 prompts; Pro cuesta 49 $/mes con 0,003 $ por transacción excedente; Team 500 $/mes con más de 100.000 peticiones y 25 usuarios. El autoalojamiento en GCP, AWS o Azure es exclusivo de Enterprise.',
-          'Ninguna de las cuatro publica un programa de afiliados o referidos. LangChain tiene una Partner Network, pero es un programa de integración tecnológica, no un esquema de comisiones. Todos los enlaces de esta página son no remunerados.',
+          'En las páginas de las cuatro no se encontró ningún programa público de afiliados o referidos. LangChain tiene una Partner Network, pero es un programa de integración tecnológica, no un esquema de comisiones. Todos los enlaces de esta página son no remunerados.',
         ],
       },
       bestChoice: {
@@ -1314,13 +1326,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Criterio: 'Nivel gratuito', Langfuse: '50.000 unidades/mes, 30 días', LangSmith: '5.000 trazas/mes, 1 puesto', Helicone: '10.000 peticiones, 7 días', PromptLayer: '2.500 peticiones, 10 prompts' },
           { Criterio: 'Entrada de pago', Langfuse: 'Core 29 $/mes', LangSmith: 'Plus 39 $/puesto/mes + consumo', Helicone: 'Pro 79 $/mes', PromptLayer: 'Pro 49 $/mes' },
           { Criterio: 'Autoalojamiento gratuito', Langfuse: 'Sí, funciones centrales', LangSmith: 'No, solo Enterprise', Helicone: 'Código abierto, no vendido', PromptLayer: 'No, solo Enterprise' },
-          { Criterio: 'Nivel de cumplimiento', Langfuse: 'Pro: SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team 799 $: SOC-2, HIPAA', PromptLayer: 'Enterprise' },
+          { Criterio: 'Nivel de cumplimiento', Langfuse: 'Pro indica SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team 799 $: indica SOC-2, HIPAA', PromptLayer: 'Enterprise' },
           { Criterio: 'Programa de afiliados', Langfuse: 'No encontrado', LangSmith: 'No encontrado', Helicone: 'No encontrado', PromptLayer: 'No encontrado' },
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'Las comparativas llaman habitualmente a Langfuse «la única opción de código abierto aquí». Helicone es Apache-2.0 con 6,3k estrellas, así que eso no es exacto. Lo que sí es exacto es que Langfuse documenta y respalda un despliegue autoalojado gratuito, mientras que Helicone vende on-premise solo en Enterprise y no describe ninguna vía gratuita de autoalojamiento con soporte en su página de precios.',
+            text: 'Las comparativas llaman habitualmente a Langfuse «la única opción de código abierto aquí». Helicone es Apache-2.0 con 6,3k estrellas, así que eso no es exacto. Lo que sí es exacto es que las páginas de precios y de autoalojamiento de Langfuse describen un despliegue autoalojado gratuito, mientras que la página de precios de Helicone lista on-premise solo en Enterprise.',
           },
         ],
       },
@@ -1333,7 +1345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Langfuse — mejor en conjunto',
             tagline: '36,9k estrellas, núcleo autoalojado gratuito, cobertura de frameworks más amplia',
-            verdict: 'Langfuse cubre observabilidad, evaluaciones, gestión de prompts y conjuntos de datos en un solo producto, y su lista de integraciones es la más larga de las cuatro: OpenAI SDK, LangChain, LlamaIndex, Haystack, LiteLLM, Vercel AI SDK, Ollama y Amazon Bedrock de forma nativa, más integraciones de la comunidad. Para un stack mixto — algo de LangChain, algunas llamadas SDK en crudo, LlamaIndex para recuperación — esa amplitud significa instrumentar una vez en lugar de por framework. Los precios de la nube: Hobby gratis con 50.000 unidades al mes y 30 días de acceso a datos, Core a 29 $/mes con 100.000 unidades y usuarios ilimitados, Pro a 199 $/mes con tres años de retención más SOC2, ISO27001 y un BAA para HIPAA, y Enterprise a 2.499 $/mes. El exceso es escalonado, desde 8 $ por 100.000 unidades hasta 6 $ a volumen. Autoalojar el núcleo de código abierto es gratis y realmente ilimitado en uso.',
+            verdict: 'Langfuse cubre observabilidad, evaluaciones, gestión de prompts y conjuntos de datos en un solo producto, y su lista de integraciones es la más larga de las cuatro: OpenAI SDK, LangChain, LlamaIndex, Haystack, LiteLLM, Vercel AI SDK, Ollama y Amazon Bedrock de forma nativa, más integraciones de la comunidad. Para un stack mixto — algo de LangChain, algunas llamadas SDK en crudo, LlamaIndex para recuperación — esa amplitud significa instrumentar una vez en lugar de por framework. Los precios de la nube: Hobby gratis con 50.000 unidades al mes y 30 días de acceso a datos, Core a 29 $/mes con 100.000 unidades y usuarios ilimitados, Pro a 199 $/mes con tres años de retención (su página de precios menciona informes SOC2 e ISO27001 y un BAA para HIPAA), y Enterprise a 2.499 $/mes. El exceso es escalonado, desde 8 $ por 100.000 unidades hasta 6 $ a volumen. Autoalojar el núcleo de código abierto es gratis y realmente ilimitado en uso.',
             pros: [
               'La cobertura nativa de frameworks más amplia de las cuatro: un stack mixto se instrumenta una vez',
               'Núcleo autoalojado gratuito con uso ilimitado, desplegable con Docker Compose, Kubernetes o plantillas en la nube',
@@ -1401,7 +1413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Helicone — la más rápida de adoptar y la mejor para costes',
             tagline: 'Integración proxy de una línea, Apache-2.0, gratis hasta 10.000 peticiones y luego 79 $/mes',
-            verdict: 'Como Helicone es un proxy, adoptarla es cambiar la URL base en lugar de emprender un proyecto de instrumentación, y captura datos de coste y petición en cada llamada por defecto sin que nadie decida qué trazar. Eso la convierte en la más rápida de las cuatro en dar valor, y explica por qué el seguimiento de costes es su punto más fuerte: el desglose de coste por petición y la visibilidad del gasto entre muchas claves y modelos son el producto central en lugar de una vista de informes montada sobre el trazado. Hobby es gratis con 10.000 peticiones, 1 GB de almacenamiento y 7 días de retención; Pro cuesta 79 $ al mes con puestos ilimitados y un mes de retención; Team 799 $ al mes añadiendo cumplimiento SOC-2 y HIPAA y tres meses de retención; Enterprise añade despliegue on-premise, SSO SAML y retención ilimitada. El código es Apache-2.0 con 6,3k estrellas, aunque la página de precios comercializa on-premise solo en Enterprise.',
+            verdict: 'Como Helicone es un proxy, adoptarla es cambiar la URL base en lugar de emprender un proyecto de instrumentación, y captura datos de coste y petición en cada llamada por defecto sin que nadie decida qué trazar. Eso la convierte en la más rápida de las cuatro en dar valor, y explica por qué el seguimiento de costes es su punto más fuerte: el desglose de coste por petición y la visibilidad del gasto entre muchas claves y modelos son el producto central en lugar de una vista de informes montada sobre el trazado. Hobby es gratis con 10.000 peticiones, 1 GB de almacenamiento y 7 días de retención; Pro cuesta 79 $ al mes con puestos ilimitados y un mes de retención; Team 799 $ al mes con tres meses de retención y, según su página de precios, soporte SOC-2 y HIPAA; Enterprise añade despliegue on-premise, SSO SAML y retención ilimitada. El código es Apache-2.0 con 6,3k estrellas, aunque la página de precios comercializa on-premise solo en Enterprise.',
             pros: [
               'Una línea para integrar: sin reescritura de SDK, funciona con cualquier endpoint compatible con OpenAI',
               'El seguimiento de costes es el producto central, no una pestaña de informes secundaria',
@@ -1435,7 +1447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'PromptLayer — mejor cuando solo necesita versionado de prompts',
             tagline: 'Gratis hasta 2.500 peticiones al mes, Pro 49 $/mes',
-            verdict: 'PromptLayer se centra en mantener un historial versionado de sus prompts junto a un registro de las peticiones que los usaron, una necesidad real que aparece antes que la observabilidad completa. El nivel gratuito da 2.500 peticiones al mes, 5 usuarios y 10 prompts. Pro cuesta 49 $ al mes con 5 usuarios y exceso a 0,003 $ por transacción. Team cuesta 500 $ al mes con más de 100.000 peticiones, 25 usuarios y exceso más barato a 0,002 $. El autoalojamiento en GCP, AWS o Azure existe solo en Enterprise personalizado. Es la única de las cuatro sin presencia significativa de código abierto: el repositorio público es una biblioteca cliente con 0,8k estrellas, no la plataforma. Trátela como una herramienta de gestión de prompts que registra, no como una plataforma de observabilidad que además gestiona prompts.',
+            verdict: 'PromptLayer se centra en mantener un historial versionado de sus prompts junto a un registro de las peticiones que los usaron, una necesidad real que aparece antes que la observabilidad completa. El nivel gratuito da 2.500 peticiones al mes, 5 usuarios y 10 prompts. Pro cuesta 49 $ al mes con 5 usuarios y exceso a 0,003 $ por transacción. Team cuesta 500 $ al mes con más de 100.000 peticiones, 25 usuarios y exceso más barato a 0,002 $. El autoalojamiento en GCP, AWS o Azure existe solo en Enterprise personalizado. El repositorio público es una biblioteca cliente con 0,8k estrellas, no la plataforma. Trátela como una herramienta de gestión de prompts que registra, no como una plataforma de observabilidad que además gestiona prompts.',
             pros: [
               'La más sencilla de entender y adoptar de las cuatro',
               'El versionado de prompts es de primera clase, no una función de un producto mayor',
@@ -1463,7 +1475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       clickhouseAcquisition: {
         id: 'clickhouse-acquisition',
         title: 'Qué significa para Langfuse la adquisición por ClickHouse',
-        content: '**ClickHouse, Inc. adquirió Langfuse el 16 de enero de 2026, anunciado junto a la ronda Serie D de 400 millones de dólares de ClickHouse liderada por Dragoneer.** La adquisición fue recogida entonces por SiliconANGLE y confirmada en el blog de ClickHouse, en una discusión de GitHub de Langfuse y por el despacho que asesoró la operación.\n\nLa evidencia más clara está en el propio repositorio: el archivo LICENSE empieza ahora por «Copyright (c) 2023-2026 ClickHouse, Inc.». El proyecto sigue en desarrollo activo y recibió cambios el día en que se comprobó esta página.\n\nHay una lógica coherente detrás. Langfuse ya almacenaba sus trazas en ClickHouse, así que el comprador es dueño de la base de datos que hay bajo el producto y no un adquirente ajeno. Ese es mejor punto de partida que el de la mayoría de adquisiciones de esta categoría. La consideración sigue mereciendo mención: tras una adquisición, las prioridades de la hoja de ruta siguen el interés comercial del comprador, y Langfuse autoalojada depende ahora de una empresa que también vende ClickHouse Cloud. El nivel Enterprise autoalojado se vincula explícitamente a ClickHouse Cloud o BYOC, con esos costes añadidos.',
+        content: '**ClickHouse, Inc. adquirió Langfuse el 16 de enero de 2026, anunciado junto a la ronda Serie D de 400 millones de dólares de ClickHouse liderada por Dragoneer.** La adquisición fue recogida entonces por SiliconANGLE y anunciada en el blog de ClickHouse (ambos enlazados en Fuentes).\n\nLa evidencia más clara está en el propio repositorio: el archivo LICENSE empieza ahora por «Copyright (c) 2023-2026 ClickHouse, Inc.». El proyecto sigue en desarrollo activo y recibió cambios el día en que se comprobó esta página.\n\nHay una lógica coherente detrás. Langfuse ya almacenaba sus trazas en ClickHouse, así que el comprador es dueño de la base de datos que hay bajo el producto y no un adquirente ajeno. Ese es mejor punto de partida que el de la mayoría de adquisiciones de esta categoría. La consideración sigue mereciendo mención: tras una adquisición, las prioridades de la hoja de ruta siguen el interés comercial del comprador, y Langfuse autoalojada depende ahora de una empresa que también vende ClickHouse Cloud. El nivel Enterprise autoalojado se vincula explícitamente a ClickHouse Cloud o BYOC, con esos costes añadidos.',
         callouts: [
           {
             type: 'note',
@@ -1475,7 +1487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       selfHosting: {
         id: 'self-hosting',
         title: 'Autoalojamiento y el muro de Enterprise',
-        content: '**Langfuse es la única de las cuatro que documenta y respalda un despliegue autoalojado gratuito, pero la afirmación tan repetida de que no hay muro de funciones entre lo gratuito y lo de pago es falsa.** Su propia página de autoalojamiento enumera nueve capacidades como exclusivas de Enterprise: enmascarado de datos en servidor, RBAC por proyecto, gestión de retención de datos, aprovisionamiento de usuarios SCIM, creadores de organizaciones, personalización de la interfaz, registros de auditoría, APIs de administración y de gestión de la instancia, y etiquetas de despliegue protegidas.\n\nLea esa lista pensando en para quién suele ser el autoalojamiento. Los equipos autoalojan por residencia de datos o presión regulatoria, y RBAC, registros de auditoría y enmascarado de datos son exactamente lo que necesita un equipo regulado. El nivel gratuito cubre de verdad observabilidad, evaluaciones, gestión de prompts, conjuntos de datos, trazado y seguimiento de costes con uso ilimitado. No cubre la gobernanza.\n\nLas otras tres son más directas. LangSmith restringe el autoalojamiento a Enterprise con precio personalizado. PromptLayer ofrece autoalojamiento de inquilino único en GCP, AWS o Azure solo en Enterprise. Helicone es el caso interesante: el código es Apache-2.0 y público, pero la página de precios vende on-premise solo en Enterprise y no documenta ninguna vía gratuita de autoalojamiento con soporte, así que aquí código abierto y autoalojamiento respaldado no son lo mismo.',
+        content: '**De las cuatro, Langfuse es la única cuyas páginas de precios y de autoalojamiento describen un despliegue autoalojado gratuito, pero la afirmación tan repetida de que no hay muro de funciones entre lo gratuito y lo de pago es falsa.** Su propia página de autoalojamiento enumera nueve capacidades como exclusivas de Enterprise: enmascarado de datos en servidor, RBAC por proyecto, gestión de retención de datos, aprovisionamiento de usuarios SCIM, creadores de organizaciones, personalización de la interfaz, registros de auditoría, APIs de administración y de gestión de la instancia, y etiquetas de despliegue protegidas.\n\nLea esa lista pensando en para quién suele ser el autoalojamiento. Los equipos autoalojan por residencia de datos o presión regulatoria, y RBAC, registros de auditoría y enmascarado de datos son exactamente lo que necesita un equipo regulado. El nivel gratuito cubre de verdad observabilidad, evaluaciones, gestión de prompts, conjuntos de datos, trazado y seguimiento de costes con uso ilimitado. No cubre la gobernanza.\n\nLas otras tres son más directas. LangSmith restringe el autoalojamiento a Enterprise con precio personalizado. PromptLayer ofrece autoalojamiento de inquilino único en GCP, AWS o Azure solo en Enterprise. Helicone es el caso interesante: el código es Apache-2.0 y público, pero la página de precios lista on-premise solo en Enterprise, así que aquí código abierto y autoalojamiento respaldado por el proveedor no son lo mismo.',
         callouts: [
           {
             type: 'warning',
@@ -1497,7 +1509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Nivel: 'Entrada de pago', Langfuse: 'Core 29 $/mes', LangSmith: 'Plus 39 $/puesto/mes', Helicone: 'Pro 79 $/mes', PromptLayer: 'Pro 49 $/mes' },
           { Nivel: 'Facturación por uso', Langfuse: '8 $ por 100.000 unidades, escalonado', LangSmith: 'Consumo en LSU, 1,00 $ cada una', Helicone: 'Por consumo sobre la cuota gratuita', PromptLayer: '0,003 $ por transacción' },
           { Nivel: 'Nivel medio', Langfuse: 'Pro 199 $/mes, 3 años de retención', LangSmith: 'Enterprise personalizado', Helicone: 'Team 799 $/mes', PromptLayer: 'Team 500 $/mes' },
-          { Nivel: 'Cumplimiento', Langfuse: 'Pro: SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team: SOC-2, HIPAA', PromptLayer: 'Enterprise' },
+          { Nivel: 'Cumplimiento', Langfuse: 'Pro indica SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team indica SOC-2, HIPAA', PromptLayer: 'Enterprise' },
           { Nivel: 'Coste de autoalojar', Langfuse: 'Gratis para funciones centrales', LangSmith: 'Solo Enterprise', Helicone: 'Solo Enterprise', PromptLayer: 'Solo Enterprise' },
         ],
         callouts: [
@@ -1523,7 +1535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Equipo pequeño que quiere controlar la residencia de datos** → Langfuse autoalojada, revisando antes la lista de Enterprise si necesita RBAC o registros de auditoría.',
           '**Equipo con más de 10.000 llamadas al día, sin LangChain** → Langfuse Cloud o Helicone. La ventaja de LangSmith no le aplica y su facturación por consumo sí.',
           '**Equipo cuyo dolor es el descontrol de costes de API** → Helicone Pro a 79 $/mes, donde el seguimiento de costes es el producto.',
-          '**Industria regulada que necesita SOC-2 o HIPAA** → Helicone Team a 799 $/mes o Langfuse Pro a 199 $/mes, que incluye SOC2, ISO27001 y un BAA.',
+          '**Industria regulada que necesita SOC-2 o HIPAA** → Helicone Team a 799 $/mes o Langfuse Pro a 199 $/mes; según las páginas de precios de los proveedores, figuran allí SOC-2 y HIPAA en Helicone, y SOC2, ISO27001 y un BAA en Langfuse. Solicite al proveedor el informe y el acuerdo vigentes.',
           '**Equipo que solo necesita control de versiones de prompts** → PromptLayer gratis o Pro, y revisar cuando las pruebas de regresión se vuelvan necesarias.',
         ],
       },
@@ -1531,21 +1543,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'regional-context',
         title: 'Observabilidad en la UE, Japón y China',
         content: 'Las trazas de observabilidad contienen el prompt y la respuesta completos, lo que significa que contienen lo que sus usuarios escribieron. Eso convierte la decisión entre alojado y autoalojado en una cuestión de protección de datos en tres mercados importantes.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'Esta sección es información general y no asesoramiento legal. Verifique base jurídica, contrato de encargado y transferencias con su DPD o asesor jurídico.',
+          },
+        ],
         subsections: [
           {
             title: 'Unión Europea',
-            content: 'Un almacén de trazas guarda las entradas de los usuarios literalmente, así que bajo el RGPD es tratamiento como cualquier otro, y un proveedor de observabilidad alojado en Estados Unidos que reciba esas trazas constituye una transferencia en el sentido de los artículos 44 a 49 salvo que sus términos e infraestructura digan otra cosa. Necesita un contrato de encargado del artículo 28 con la plataforma que adopte. Este es el argumento práctico más fuerte a favor de Langfuse autoalojada en la UE, porque las trazas nunca salen de su infraestructura — pero tenga en cuenta que el enmascarado de datos en servidor, la función que le permitiría eliminar datos personales antes de almacenarlos, es una de las capacidades reservadas a Enterprise. La CNIL francesa ha apuntado en la misma dirección con su recomendación de procesamiento local para datos empresariales sensibles.',
+            content: 'Un almacén de trazas guarda las entradas de los usuarios literalmente, así que bajo el RGPD es tratamiento como cualquier otro, y un proveedor de observabilidad alojado en Estados Unidos que reciba esas trazas constituye una transferencia en el sentido de los artículos 44 a 49 salvo que sus términos e infraestructura digan otra cosa. Necesita un contrato de encargado del artículo 28 con la plataforma que adopte. Este es el argumento práctico más fuerte a favor de Langfuse autoalojada en la UE, porque las trazas nunca salen de su infraestructura — pero tenga en cuenta que el enmascarado de datos en servidor, la función que le permitiría eliminar datos personales antes de almacenarlos, es una de las capacidades reservadas a Enterprise.',
           },
           {
             title: 'Japón',
-            content: 'El trabajo de gobernanza de IA del METI empuja a las empresas hacia rutas de datos auditables, y la observabilidad es donde vive realmente ese rastro de auditoría: es el registro de lo que hizo el sistema. Eso convierte las ventanas de retención en una cuestión de gobernanza más que de comodidad: el nivel gratuito de Helicone guarda 7 días y Langfuse Hobby da 30 días de acceso, ambos más cortos que lo que espera la mayoría de auditorías. Si necesita reconstruir el comportamiento meses después, presupueste un nivel con retención real, o autoaloje donde usted la controle. Los tres años de Langfuse Pro son la retención publicada más larga aquí.',
+            content: 'La observabilidad es donde vive realmente ese rastro de auditoría: es el registro de lo que hizo el sistema. Eso convierte las ventanas de retención en una cuestión de gobernanza más que de comodidad: el nivel gratuito de Helicone guarda 7 días y Langfuse Hobby da 30 días de acceso, compárelos con sus propios requisitos de auditoría. Si necesita reconstruir el comportamiento meses después, presupueste un nivel con retención real, o autoaloje donde usted la controle. Los tres años de Langfuse Pro son la retención publicada más larga aquí.',
           },
           {
             title: 'China',
-            content: 'Bajo la Ley de Seguridad de Datos (数据安全法) y las normas de la CAC sobre transferencias transfronterizas, enviar trazas construidas con tráfico de usuarios de China continental a un proveedor extranjero de observabilidad es el problema de cumplimiento, no la observabilidad en sí. Los despliegues que dan servicio a equipos del continente suelen requerir que el almacén de trazas esté en infraestructura nacional. Langfuse autoalojada es la vía práctica, ya que es la única de las cuatro con un despliegue autoalojado gratuito documentado — véase [ejecutar LLM locales en China](/es/local-llms/deepseek-local-china-data-privacy-2026) para el panorama más amplio de residencia de datos.',
+            content: 'Bajo la Ley de Seguridad de Datos (数据安全法) y las normas de la CAC sobre transferencias transfronterizas, enviar trazas construidas con tráfico de usuarios de China continental a un proveedor extranjero de observabilidad es el problema de cumplimiento, no la observabilidad en sí. Los despliegues que dan servicio a equipos del continente suelen requerir que el almacén de trazas esté en infraestructura nacional. Langfuse autoalojada es la vía práctica, ya que sus páginas de precios y de autoalojamiento describen un despliegue autoalojado gratuito — véase [ejecutar LLM locales en China](/es/local-llms/deepseek-local-china-data-privacy-2026) para el panorama más amplio de residencia de datos.',
           },
         ],
-        note: 'Autoaloje el almacén de trazas en cualquier mercado donde los prompts y las respuestas no puedan salir de su jurisdicción. Langfuse es la única de las cuatro donde esa vía es gratuita y está documentada.',
+        note: 'Autoaloje el almacén de trazas en cualquier mercado donde los prompts y las respuestas no puedan salir de su jurisdicción. Las páginas de precios y de autoalojamiento de Langfuse describen esa vía como gratuita.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1557,7 +1575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Llamar a Langfuse la única opción de código abierto',
-            whyItMatters: 'Helicone es Apache-2.0 con 6,3k estrellas. La distinción exacta es que Langfuse documenta un despliegue autoalojado gratuito con soporte mientras que Helicone vende on-premise en Enterprise, no que una sea abierta y la otra no.',
+            whyItMatters: 'Helicone es Apache-2.0 con 6,3k estrellas. La distinción exacta es que las páginas de Langfuse describen un despliegue autoalojado gratuito mientras que la de Helicone lista on-premise en Enterprise, no que una sea abierta y la otra no.',
           },
           {
             title: 'Leer el precio de 39 $ por puesto de LangSmith como la factura entera',
@@ -1610,7 +1628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Helicone es de código abierto?',
-            a: 'Sí, bajo Apache-2.0 con unas 6.300 estrellas en GitHub, algo que muchas comparativas de esta categoría omiten. El matiz es que la página de precios de Helicone vende el despliegue on-premise solo en el nivel Enterprise y no documenta ninguna vía gratuita de autoalojamiento con soporte, así que que el código sea abierto no significa que el proveedor respalde que lo ejecute usted.',
+            a: 'Sí, bajo Apache-2.0 con unas 6.300 estrellas en GitHub, algo que muchas comparativas de esta categoría omiten. El matiz es que la página de precios de Helicone lista el despliegue on-premise solo en el nivel Enterprise, así que que el código sea abierto no indica qué soporte da el proveedor si lo ejecuta usted.',
           },
           {
             q: '¿Alguna tiene programa de afiliados?',
@@ -1667,7 +1685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Mejor herramienta de observabilidad de LLM 2026: Langfuse, LangSmith o Helicone',
       description: 'Compara Langfuse, LangSmith, Helicone y PromptLayer para observabilidad de LLM, con precios, licencias y ventanas de retención verificados, la adquisición por ClickHouse y el muro de funciones de Enterprise en el autoalojamiento.',
       datePublished: '2026-08-28',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       url: 'https://www.promptquorum.com/es/local-llms/best-llm-observability-tools',
       inLanguage: 'es',
       proficiencyLevel: 'Advanced',
@@ -1727,7 +1745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿Helicone es de código abierto?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Sí, bajo Apache-2.0 con unas 6.300 estrellas en GitHub. Sin embargo su página de precios vende el despliegue on-premise solo en Enterprise y no documenta ninguna vía gratuita de autoalojamiento con soporte.',
+            text: 'Sí, bajo Apache-2.0 con unas 6.300 estrellas en GitHub. Sin embargo su página de precios lista el despliegue on-premise solo en Enterprise.',
           },
         },
       ],
@@ -1739,7 +1757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'es',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Mejor en conjunto — 36,9k estrellas, núcleo autoalojado gratuito, cobertura de frameworks más amplia, aunque nueve funciones son exclusivas de Enterprise' },
+        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Nuestra recomendación — 36,9k estrellas, núcleo autoalojado gratuito, cobertura de frameworks más amplia, aunque nueve funciones son exclusivas de Enterprise' },
         { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'Mejor para equipos de LangChain y LangGraph — trazado nativo sin configuración, 39 $/puesto/mes más facturación por consumo en LSU' },
         { '@type': 'ListItem', position: 3, name: 'Helicone', description: 'La más rápida de adoptar y la mejor para costes — proxy Apache-2.0, integración de una línea, gratis hasta 10.000 peticiones y luego 79 $/mes' },
         { '@type': 'ListItem', position: 4, name: 'PromptLayer', description: 'Opción más ligera — versionado de prompts y registro, gratis hasta 2.500 peticiones al mes, Pro 49 $/mes' },
@@ -1759,7 +1777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Developpeurs et equipes exploitant des applications LLM en production',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     readTime: '14 min de lecture',
     primaryTerm: 'outil d observabilite LLM',
     targetKeywords: [
@@ -1769,7 +1787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'meilleur outil de suivi des prompts',
       'Langfuse acquisition ClickHouse',
     ],
-    leadAnswerBlock: '**Langfuse est le meilleur choix par défaut pour la plupart des équipes : auto-hébergement gratuit, large couverture de frameworks. LangSmith convient aux stacks LangChain et LangGraph, dès 39 $ par siège. Helicone, un proxy, s\'adopte le plus vite, dès 79 $.**',
+    leadAnswerBlock: '**Notre choix par défaut pour la plupart des équipes est Langfuse : auto-hébergement gratuit, large couverture de frameworks. LangSmith convient aux stacks LangChain et LangGraph, dès 39 $ par siège. Helicone, un proxy, s\'adopte le plus vite, dès 79 $.**',
     quickAnswerTop: {
       question: 'Quel est le meilleur outil d observabilite LLM en 2026 ?',
       answer: '**Langfuse pour la souplesse et l auto-hebergement, LangSmith si vous etes deja sur LangChain, Helicone si vous voulez de la visibilite sur les couts avec une integration en une ligne, et PromptLayer seulement si vous avez besoin de versionner des prompts plutot que d une observabilite complete.** Le choix est avant tout structurel : LangSmith et Langfuse instrumentent votre code via un SDK, tandis qu Helicone se place devant l API comme un proxy et capte chaque appel sans instrumentation. Cette difference determine les donnees que vous obtenez. Un proxy voit les requetes et les couts ; un traceur SDK voit les etapes de raisonnement a l interieur d une execution multi-agents.',
@@ -1781,7 +1799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**Langfuse appartient desormais a ClickHouse** — rachat du 16 janvier 2026, annonce avec une serie D de 400 M$, ce qui compte pour la feuille de route',
         '**Passez votre chemin sur les quatre** si vous etes avant la production avec quelques dizaines d appels par jour : les tableaux de bord des fournisseurs suffisent',
       ],
-      updatedDate: '2026-11-02',
+      updatedDate: '2026-11-03',
     },
     toc: [
       { label: 'Points cles', anchor: 'tldr' },
@@ -1811,13 +1829,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**Langfuse** — 36,9k etoiles sur GitHub, la plus forte presence open source ici. L offre cloud Hobby est gratuite avec 50 000 unites par mois, 30 jours d acces aux donnees et 2 utilisateurs ; Core coute 29 $/mois avec 100 000 unites et un nombre illimite d utilisateurs ; Pro 199 $/mois.',
-          '**Une correction qui merite d etre faite :** Langfuse est largement decrit comme sous licence MIT sans mur de fonctionnalites. Son propre README indique que le depot est « MIT licensed, except for the `ee` folders », et sa page d auto-hebergement enumere neuf fonctionnalites Enterprise : masquage des donnees cote serveur, RBAC par projet, gestion de la retention, SCIM, journaux d audit et d autres. L observabilite et les evaluations de base sont bien gratuites ; les fonctions de gouvernance ne le sont pas.',
+          '**Une correction qui merite d etre faite :** Langfuse est decrit par certains comparatifs comme sous licence MIT sans mur de fonctionnalites. Son propre README indique que le depot est « MIT licensed, except for the `ee` folders », et sa page d auto-hebergement enumere neuf fonctionnalites Enterprise : masquage des donnees cote serveur, RBAC par projet, gestion de la retention, SCIM, journaux d audit et d autres. L observabilite et les evaluations de base sont bien gratuites ; les fonctions de gouvernance ne le sont pas.',
           '**Langfuse a ete rachete par ClickHouse, Inc. le 16 janvier 2026**, annonce en meme temps que la serie D de 400 M$ de ClickHouse. Le fichier LICENSE du depot commence desormais par « Copyright (c) 2023-2026 ClickHouse, Inc. » Ce n est pas une raison d ecarter Langfuse, mais une consideration de feuille de route qui merite cinq minutes avant de standardiser dessus.',
           '**LangSmith** — Developer est gratuit avec jusqu a 5 000 traces de base par mois et un siege. Plus coute 39 $ par siege et par mois avec jusqu a 10 000 traces de base, puis une facturation a l usage en LangChain Standard Units (LSU), a 1,00 $ par LSU. Enterprise est sur devis avec des options auto-hebergee et hybride.',
-          '**Helicone** — un proxy plutot qu un SDK, l integration tient donc en une ligne et capte chaque appel sans instrumentation. Hobby est gratuit avec 10 000 requetes, 1 Go et 7 jours de retention ; Pro coute 79 $/mois avec des sieges illimites et un mois de retention ; Team 799 $/mois avec SOC-2 et HIPAA et trois mois de retention.',
-          '**Helicone est aussi open source**, sous Apache-2.0 avec 6,3k etoiles, ce que la plupart des comparatifs omettent. La nuance : sa page tarifaire ne vend l on-premise qu au niveau Enterprise et ne documente aucune voie d auto-hebergement gratuite et prise en charge. Code ouvert ne signifie pas ici que l editeur soutient votre propre exploitation.',
+          '**Helicone** — un proxy plutot qu un SDK, l integration tient donc en une ligne et capte chaque appel sans instrumentation. Hobby est gratuit avec 10 000 requetes, 1 Go et 7 jours de retention ; Pro coute 79 $/mois avec des sieges illimites et un mois de retention ; Team 799 $/mois avec trois mois de retention ; sa page tarifaire mentionne le support SOC-2 et HIPAA.',
+          '**Helicone est aussi open source**, sous Apache-2.0, ce que certains comparatifs omettent. La nuance : sa page tarifaire ne liste l on-premise qu au niveau Enterprise. Code ouvert n indique donc pas quel soutien l editeur apporte a votre propre exploitation.',
           '**PromptLayer** — le plus etroit des quatre. Le niveau gratuit offre 2 500 requetes par mois, 5 utilisateurs et 10 prompts ; Pro coute 49 $/mois avec 0,003 $ par transaction au-dela ; Team 500 $/mois avec plus de 100 000 requetes et 25 utilisateurs. L auto-hebergement sur GCP, AWS ou Azure est reserve a Enterprise.',
-          'Aucun des quatre ne publie de programme d affiliation ou de parrainage. LangChain anime un Partner Network, mais il s agit d un programme d integration technique, pas d un dispositif de commissions. Tous les liens de cette page sont non remuneres.',
+          'Sur les pages des quatre editeurs, aucun programme public d affiliation ou de parrainage n a ete trouve. LangChain anime un Partner Network, mais il s agit d un programme d integration technique, pas d un dispositif de commissions. Tous les liens de cette page sont non remuneres.',
         ],
       },
       bestChoice: {
@@ -1893,13 +1911,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Critere: 'Niveau gratuit', Langfuse: '50 000 unites/mois, 30 jours', LangSmith: '5 000 traces/mois, 1 siege', Helicone: '10 000 requetes, 7 jours', PromptLayer: '2 500 requetes, 10 prompts' },
           { Critere: 'Entree payante', Langfuse: 'Core 29 $/mois', LangSmith: 'Plus 39 $/siege/mois + usage', Helicone: 'Pro 79 $/mois', PromptLayer: 'Pro 49 $/mois' },
           { Critere: 'Auto-hebergement gratuit', Langfuse: 'Oui, fonctions centrales', LangSmith: 'Non, Enterprise seulement', Helicone: 'Code ouvert, non vendu', PromptLayer: 'Non, Enterprise seulement' },
-          { Critere: 'Niveau de conformite', Langfuse: 'Pro : SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team 799 $ : SOC-2, HIPAA', PromptLayer: 'Enterprise' },
+          { Critere: 'Niveau de conformite', Langfuse: 'Pro : indique SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team 799 $ : indique SOC-2, HIPAA', PromptLayer: 'Enterprise' },
           { Critere: 'Programme d affiliation', Langfuse: 'Aucun trouve', LangSmith: 'Aucun trouve', Helicone: 'Aucun trouve', PromptLayer: 'Aucun trouve' },
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'Les comparatifs qualifient regulierement Langfuse de « seule option open source ici ». Helicone est sous Apache-2.0 avec 6,3k etoiles, cette affirmation est donc inexacte. Ce qui est exact : Langfuse documente et prend en charge un deploiement auto-heberge gratuit, tandis qu Helicone ne vend l on-premise qu au niveau Enterprise et ne decrit aucune voie d auto-hebergement gratuite et soutenue sur sa page tarifaire.',
+            text: 'Les comparatifs qualifient regulierement Langfuse de « seule option open source ici ». Helicone est sous Apache-2.0 avec 6,3k etoiles, cette affirmation est donc inexacte. Ce qui est exact : les pages tarifaire et d auto-hebergement de Langfuse decrivent un deploiement auto-heberge gratuit, tandis que la page tarifaire d Helicone ne liste l on-premise qu au niveau Enterprise.',
           },
         ],
       },
@@ -1912,7 +1930,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Langfuse — meilleur globalement',
             tagline: '36,9k etoiles, coeur auto-heberge gratuit, couverture de frameworks la plus large',
-            verdict: 'Langfuse couvre l observabilite, les evaluations, la gestion des prompts et les jeux de donnees dans un seul produit, et sa liste d integrations est la plus longue des quatre : SDK OpenAI, LangChain, LlamaIndex, Haystack, LiteLLM, Vercel AI SDK, Ollama et Amazon Bedrock en natif, plus des integrations communautaires. Pour une pile mixte — un peu de LangChain, quelques appels SDK bruts, LlamaIndex pour la recherche — cette ampleur signifie instrumenter une fois plutot que par framework. Les tarifs cloud : Hobby gratuit avec 50 000 unites par mois et 30 jours d acces aux donnees, Core a 29 $/mois avec 100 000 unites et des utilisateurs illimites, Pro a 199 $/mois avec trois ans de retention plus SOC2, ISO27001 et un BAA pour HIPAA, et Enterprise a 2 499 $/mois. Le depassement est degressif, de 8 $ par 100 000 unites jusqu a 6 $ au volume. Auto-heberger le coeur open source est gratuit et reellement illimite a l usage.',
+            verdict: 'Langfuse couvre l observabilite, les evaluations, la gestion des prompts et les jeux de donnees dans un seul produit, et sa liste d integrations est la plus longue des quatre : SDK OpenAI, LangChain, LlamaIndex, Haystack, LiteLLM, Vercel AI SDK, Ollama et Amazon Bedrock en natif, plus des integrations communautaires. Pour une pile mixte — un peu de LangChain, quelques appels SDK bruts, LlamaIndex pour la recherche — cette ampleur signifie instrumenter une fois plutot que par framework. Les tarifs cloud : Hobby gratuit avec 50 000 unites par mois et 30 jours d acces aux donnees, Core a 29 $/mois avec 100 000 unites et des utilisateurs illimites, Pro a 199 $/mois avec trois ans de retention (sa page tarifaire mentionne des rapports SOC2 et ISO27001 et un BAA pour HIPAA), et Enterprise a 2 499 $/mois. Le depassement est degressif, de 8 $ par 100 000 unites jusqu a 6 $ au volume. Auto-heberger le coeur open source est gratuit et reellement illimite a l usage.',
             pros: [
               'La couverture native de frameworks la plus large des quatre : une pile mixte s instrumente une seule fois',
               'Coeur auto-heberge gratuit a usage illimite, deployable via Docker Compose, Kubernetes ou des modeles cloud',
@@ -1980,7 +1998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Helicone — le plus rapide a adopter, le meilleur pour les couts',
             tagline: 'Integration proxy en une ligne, Apache-2.0, gratuit jusqu a 10 000 requetes puis 79 $/mois',
-            verdict: 'Parce qu Helicone est un proxy, l adoption consiste a changer l URL de base plutot qu a mener un projet d instrumentation, et il capte les donnees de cout et de requete a chaque appel par defaut, sans que personne ait a decider quoi tracer. Cela en fait le plus rapide des quatre a produire de la valeur, et explique pourquoi le suivi des couts est son point fort : la ventilation du cout par requete et la visibilite de la depense entre de nombreuses cles et modeles sont le produit central plutot qu une vue de reporting posee sur le tracage. Hobby est gratuit avec 10 000 requetes, 1 Go de stockage et 7 jours de retention ; Pro coute 79 $ par mois avec des sieges illimites et un mois de retention ; Team 799 $ par mois en ajoutant la conformite SOC-2 et HIPAA et trois mois de retention ; Enterprise ajoute le deploiement on-premise, le SSO SAML et une retention illimitee. Le code est sous Apache-2.0 avec 6,3k etoiles, meme si la page tarifaire ne commercialise l on-premise qu en Enterprise.',
+            verdict: 'Parce qu Helicone est un proxy, l adoption consiste a changer l URL de base plutot qu a mener un projet d instrumentation, et il capte les donnees de cout et de requete a chaque appel par defaut, sans que personne ait a decider quoi tracer. Cela en fait le plus rapide des quatre a produire de la valeur, et explique pourquoi le suivi des couts est son point fort : la ventilation du cout par requete et la visibilite de la depense entre de nombreuses cles et modeles sont le produit central plutot qu une vue de reporting posee sur le tracage. Hobby est gratuit avec 10 000 requetes, 1 Go de stockage et 7 jours de retention ; Pro coute 79 $ par mois avec des sieges illimites et un mois de retention ; Team 799 $ par mois avec trois mois de retention et, selon sa page tarifaire, le support SOC-2 et HIPAA ; Enterprise ajoute le deploiement on-premise, le SSO SAML et une retention illimitee. Le code est sous Apache-2.0 avec 6,3k etoiles, meme si la page tarifaire ne commercialise l on-premise qu en Enterprise.',
             pros: [
               'Une ligne pour integrer : aucune reecriture SDK, fonctionne avec tout point de terminaison compatible OpenAI',
               'Le suivi des couts est le produit central, pas un onglet de reporting secondaire',
@@ -2014,7 +2032,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'PromptLayer — meilleur quand vous n avez besoin que de versionner des prompts',
             tagline: 'Gratuit jusqu a 2 500 requetes par mois, Pro a 49 $/mois',
-            verdict: 'PromptLayer se concentre sur la tenue d un historique versionne de vos prompts, accompagne d un journal des requetes qui les ont utilises — un besoin reel qui apparait avant l observabilite complete. Le niveau gratuit offre 2 500 requetes par mois, 5 utilisateurs et 10 prompts. Pro coute 49 $ par mois avec 5 utilisateurs et un depassement a 0,003 $ par transaction. Team coute 500 $ par mois avec plus de 100 000 requetes, 25 utilisateurs et un depassement moins cher a 0,002 $. L auto-hebergement sur GCP, AWS ou Azure n existe qu en Enterprise sur devis. C est le seul des quatre sans presence open source significative : le depot public est une bibliotheque cliente a 0,8k etoiles, pas la plateforme. Voyez-le comme un outil de gestion de prompts qui journalise, pas comme une plateforme d observabilite qui gere aussi des prompts.',
+            verdict: 'PromptLayer se concentre sur la tenue d un historique versionne de vos prompts, accompagne d un journal des requetes qui les ont utilises — un besoin reel qui apparait avant l observabilite complete. Le niveau gratuit offre 2 500 requetes par mois, 5 utilisateurs et 10 prompts. Pro coute 49 $ par mois avec 5 utilisateurs et un depassement a 0,003 $ par transaction. Team coute 500 $ par mois avec plus de 100 000 requetes, 25 utilisateurs et un depassement moins cher a 0,002 $. L auto-hebergement sur GCP, AWS ou Azure n existe qu en Enterprise sur devis. Le depot public est une bibliotheque cliente a 0,8k etoiles, pas la plateforme. Voyez-le comme un outil de gestion de prompts qui journalise, pas comme une plateforme d observabilite qui gere aussi des prompts.',
             pros: [
               'Le plus simple a comprendre et a adopter des quatre',
               'Le versionnement des prompts est de premier ordre, pas une fonction annexe d un produit plus vaste',
@@ -2042,7 +2060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       clickhouseAcquisition: {
         id: 'clickhouse-acquisition',
         title: 'Ce que le rachat par ClickHouse signifie pour Langfuse',
-        content: '**ClickHouse, Inc. a rachete Langfuse le 16 janvier 2026, annonce en meme temps que la serie D de 400 millions de dollars de ClickHouse menee par Dragoneer.** Le rachat a ete rapporte a l epoque par SiliconANGLE, et il est confirme par le blog de ClickHouse, une discussion GitHub de Langfuse et le cabinet ayant conseille l operation.\n\nLa preuve la plus nette se trouve dans le depot lui-meme : le fichier LICENSE commence desormais par « Copyright (c) 2023-2026 ClickHouse, Inc. » Le projet reste en developpement actif et a recu des modifications le jour ou cette page a ete verifiee.\n\nLa logique se tient. Langfuse stockait deja ses traces dans ClickHouse, l acquereur possede donc la base de donnees qui soutient le produit et n est pas un repreneur etranger au sujet. C est un meilleur point de depart que la plupart des rachats de cette categorie. La consideration merite tout de meme d etre citee : apres un rachat, les priorites de la feuille de route suivent l interet commercial de l acquereur, et Langfuse auto-heberge depend desormais d une entreprise qui vend aussi ClickHouse Cloud. Le niveau Enterprise auto-heberge est explicitement lie a ClickHouse Cloud ou BYOC, dont les couts s ajoutent.',
+        content: '**ClickHouse, Inc. a rachete Langfuse le 16 janvier 2026, annonce en meme temps que la serie D de 400 millions de dollars de ClickHouse menee par Dragoneer.** Le rachat a ete rapporte a l epoque par SiliconANGLE et annonce sur le blog de ClickHouse (les deux sont lies dans Sources).\n\nLa preuve la plus nette se trouve dans le depot lui-meme : le fichier LICENSE commence desormais par « Copyright (c) 2023-2026 ClickHouse, Inc. » Le projet reste en developpement actif et a recu des modifications le jour ou cette page a ete verifiee.\n\nLa logique se tient. Langfuse stockait deja ses traces dans ClickHouse, l acquereur possede donc la base de donnees qui soutient le produit et n est pas un repreneur etranger au sujet. C est un meilleur point de depart que la plupart des rachats de cette categorie. La consideration merite tout de meme d etre citee : apres un rachat, les priorites de la feuille de route suivent l interet commercial de l acquereur, et Langfuse auto-heberge depend desormais d une entreprise qui vend aussi ClickHouse Cloud. Le niveau Enterprise auto-heberge est explicitement lie a ClickHouse Cloud ou BYOC, dont les couts s ajoutent.',
         callouts: [
           {
             type: 'note',
@@ -2054,7 +2072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       selfHosting: {
         id: 'self-hosting',
         title: 'Auto-hebergement et mur Enterprise',
-        content: '**Langfuse est le seul des quatre a documenter et prendre en charge un deploiement auto-heberge gratuit, mais l affirmation souvent repetee selon laquelle il n y aurait pas de mur de fonctionnalites entre le gratuit et le payant est fausse.** Sa propre page d auto-hebergement enumere neuf capacites reservees a Enterprise : masquage des donnees cote serveur, RBAC par projet, gestion de la retention, provisionnement des utilisateurs SCIM, createurs d organisations, personnalisation de l interface, journaux d audit, API d administration et de gestion de l instance, et etiquettes de deploiement protegees.\n\nLisez cette liste en pensant a qui vise habituellement l auto-hebergement. Les equipes auto-hebergent pour la residence des donnees ou sous pression reglementaire, et le RBAC, les journaux d audit et le masquage des donnees sont exactement ce dont une equipe reglementee a besoin. Le niveau gratuit couvre reellement l observabilite, les evaluations, la gestion des prompts, les jeux de donnees, le tracage et le suivi des couts a usage illimite. Il ne couvre pas la gouvernance.\n\nLes trois autres sont plus directs. LangSmith reserve l auto-hebergement a Enterprise sur devis. PromptLayer propose un auto-hebergement mono-locataire sur GCP, AWS ou Azure en Enterprise seulement. Helicone est le cas interessant : le code est sous Apache-2.0 et public, mais la page tarifaire ne vend l on-premise qu en Enterprise et ne documente aucune voie d auto-hebergement gratuite et soutenue. Ici, open source et auto-hebergement pris en charge ne sont donc pas la meme chose.',
+        content: '**Parmi les quatre, Langfuse est celui dont les pages tarifaire et d auto-hebergement decrivent un deploiement auto-heberge gratuit, mais l affirmation souvent repetee selon laquelle il n y aurait pas de mur de fonctionnalites entre le gratuit et le payant est fausse.** Sa propre page d auto-hebergement enumere neuf capacites reservees a Enterprise : masquage des donnees cote serveur, RBAC par projet, gestion de la retention, provisionnement des utilisateurs SCIM, createurs d organisations, personnalisation de l interface, journaux d audit, API d administration et de gestion de l instance, et etiquettes de deploiement protegees.\n\nLisez cette liste en pensant a qui vise habituellement l auto-hebergement. Les equipes auto-hebergent pour la residence des donnees ou sous pression reglementaire, et le RBAC, les journaux d audit et le masquage des donnees sont exactement ce dont une equipe reglementee a besoin. Le niveau gratuit couvre reellement l observabilite, les evaluations, la gestion des prompts, les jeux de donnees, le tracage et le suivi des couts a usage illimite. Il ne couvre pas la gouvernance.\n\nLes trois autres sont plus directs. LangSmith reserve l auto-hebergement a Enterprise sur devis. PromptLayer propose un auto-hebergement mono-locataire sur GCP, AWS ou Azure en Enterprise seulement. Helicone est le cas interessant : le code est sous Apache-2.0 et public, mais la page tarifaire ne liste l on-premise qu en Enterprise. Ici, open source et auto-hebergement soutenu par l editeur ne sont donc pas la meme chose.',
         callouts: [
           {
             type: 'warning',
@@ -2076,7 +2094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Niveau: 'Entree payante', Langfuse: 'Core 29 $/mois', LangSmith: 'Plus 39 $/siege/mois', Helicone: 'Pro 79 $/mois', PromptLayer: 'Pro 49 $/mois' },
           { Niveau: 'Facturation a l usage', Langfuse: '8 $ par 100 000 unites, degressif', LangSmith: 'Usage en LSU, 1,00 $ chacune', Helicone: 'A l usage au-dela du quota gratuit', PromptLayer: '0,003 $ par transaction' },
           { Niveau: 'Niveau intermediaire', Langfuse: 'Pro 199 $/mois, 3 ans de retention', LangSmith: 'Enterprise sur devis', Helicone: 'Team 799 $/mois', PromptLayer: 'Team 500 $/mois' },
-          { Niveau: 'Conformite', Langfuse: 'Pro : SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team : SOC-2, HIPAA', PromptLayer: 'Enterprise' },
+          { Niveau: 'Conformite', Langfuse: 'Pro : indique SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team : indique SOC-2, HIPAA', PromptLayer: 'Enterprise' },
           { Niveau: 'Cout d auto-hebergement', Langfuse: 'Gratuit pour les fonctions centrales', LangSmith: 'Enterprise seulement', Helicone: 'Enterprise seulement', PromptLayer: 'Enterprise seulement' },
         ],
         callouts: [
@@ -2102,7 +2120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Petite equipe voulant maitriser la residence des donnees** → Langfuse auto-heberge, en verifiant d abord la liste Enterprise si le RBAC ou les journaux d audit sont necessaires.',
           '**Equipe a plus de 10 000 appels par jour, hors LangChain** → Langfuse Cloud ou Helicone. L avantage de LangSmith ne vous concerne pas, sa facturation a l usage si.',
           '**Equipe dont le probleme est la derive des couts d API** → Helicone Pro a 79 $/mois, ou le suivi des couts est le produit.',
-          '**Secteur reglemente exigeant SOC-2 ou HIPAA** → Helicone Team a 799 $/mois ou Langfuse Pro a 199 $/mois, qui inclut SOC2, ISO27001 et un BAA.',
+          '**Secteur reglemente exigeant SOC-2 ou HIPAA** → Helicone Team a 799 $/mois ou Langfuse Pro a 199 $/mois ; selon les pages tarifaires des editeurs, elles mentionnent respectivement SOC-2 et HIPAA, et SOC2, ISO27001 et un BAA. Demandez a l editeur le rapport et l accord en vigueur.',
           '**Equipe n ayant besoin que du controle de version des prompts** → PromptLayer gratuit ou Pro, a reevaluer quand les tests de regression deviennent necessaires.',
         ],
       },
@@ -2110,21 +2128,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'regional-context',
         title: 'Observabilite dans l UE, au Japon et en Chine',
         content: 'Les traces d observabilite contiennent le prompt et la reponse complets, donc ce que vos utilisateurs ont saisi. Cela transforme le choix entre heberge et auto-heberge en question de protection des donnees sur trois marches importants.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'Cette section est une information générale et non un conseil juridique. Vérifiez base légale, contrat de sous-traitance et transferts avec votre DPO ou un avocat.',
+          },
+        ],
         subsections: [
           {
             title: 'Union europeenne',
-            content: 'Un magasin de traces conserve les saisies des utilisateurs telles quelles, il s agit donc au sens du RGPD d un traitement comme un autre, et un fournisseur d observabilite heberge aux Etats-Unis qui recoit ces traces constitue un transfert au sens des articles 44 a 49, sauf mention contraire dans ses conditions et son infrastructure. Vous avez besoin d un contrat de sous-traitance au titre de l article 28 avec la plateforme retenue. C est l argument pratique le plus fort en faveur de Langfuse auto-heberge dans l UE, parce que les traces ne quittent jamais votre infrastructure — notez toutefois que le masquage des donnees cote serveur, la fonction qui vous permettrait de retirer les donnees personnelles avant stockage, fait partie des capacites reservees a Enterprise. La CNIL francaise pointe dans la meme direction avec sa recommandation de traitement local pour les donnees d entreprise sensibles.',
+            content: 'Un magasin de traces conserve les saisies des utilisateurs telles quelles, il s agit donc au sens du RGPD d un traitement comme un autre, et un fournisseur d observabilite heberge aux Etats-Unis qui recoit ces traces constitue un transfert au sens des articles 44 a 49, sauf mention contraire dans ses conditions et son infrastructure. Vous avez besoin d un contrat de sous-traitance au titre de l article 28 avec la plateforme retenue. C est l argument pratique le plus fort en faveur de Langfuse auto-heberge dans l UE, parce que les traces ne quittent jamais votre infrastructure — notez toutefois que le masquage des donnees cote serveur, la fonction qui vous permettrait de retirer les donnees personnelles avant stockage, fait partie des capacites reservees a Enterprise.',
           },
           {
             title: 'Japon',
-            content: 'Les travaux du METI sur la gouvernance de l IA poussent les entreprises vers des chemins de donnees auditables, et l observabilite est precisement la ou reside cette piste d audit : c est le registre de ce que le systeme a fait. Les fenetres de retention deviennent donc une question de gouvernance plutot que de confort : le niveau gratuit d Helicone conserve 7 jours et Langfuse Hobby donne 30 jours d acces, deux durees plus courtes que ce qu attendent la plupart des audits. Si vous devez reconstituer un comportement des mois plus tard, budgetez un niveau offrant une vraie retention, ou auto-hebergez pour la maitriser. Les trois ans de Langfuse Pro constituent la plus longue retention publiee ici.',
+            content: 'L observabilite est precisement la ou reside une piste d audit : c est le registre de ce que le systeme a fait. Les fenetres de retention deviennent donc une question de gouvernance plutot que de confort : le niveau gratuit d Helicone conserve 7 jours et Langfuse Hobby donne 30 jours d acces, a comparer avec vos propres exigences d audit. Si vous devez reconstituer un comportement des mois plus tard, budgetez un niveau offrant une vraie retention, ou auto-hebergez pour la maitriser. Les trois ans de Langfuse Pro constituent la plus longue retention publiee ici.',
           },
           {
             title: 'Chine',
-            content: 'Sous la loi sur la securite des donnees (数据安全法) et les regles de la CAC sur les transferts transfrontaliers, le probleme de conformite est d envoyer a un fournisseur d observabilite etranger des traces construites a partir du trafic d utilisateurs de Chine continentale, pas l observabilite en elle-meme. Les deploiements servant des equipes continentales exigent generalement que le magasin de traces reside sur une infrastructure nationale. Langfuse auto-heberge est la voie praticable, puisque c est le seul des quatre a proposer un deploiement auto-heberge gratuit documente — voyez [executer des LLM locaux en Chine](/fr/local-llms/deepseek-local-china-data-privacy-2026) pour le tableau plus large de la residence des donnees.',
+            content: 'Sous la loi sur la securite des donnees (数据安全法) et les regles de la CAC sur les transferts transfrontaliers, le probleme de conformite est d envoyer a un fournisseur d observabilite etranger des traces construites a partir du trafic d utilisateurs de Chine continentale, pas l observabilite en elle-meme. Les deploiements servant des equipes continentales exigent generalement que le magasin de traces reside sur une infrastructure nationale. Langfuse auto-heberge est la voie praticable, puisque ses pages tarifaire et d auto-hebergement decrivent un deploiement auto-heberge gratuit — voyez [executer des LLM locaux en Chine](/fr/local-llms/deepseek-local-china-data-privacy-2026) pour le tableau plus large de la residence des donnees.',
           },
         ],
-        note: 'Auto-hebergez le magasin de traces sur tout marche ou les prompts et les reponses ne peuvent pas quitter votre juridiction. Langfuse est le seul des quatre ou cette voie est gratuite et documentee.',
+        note: 'Auto-hebergez le magasin de traces sur tout marche ou les prompts et les reponses ne peuvent pas quitter votre juridiction. Les pages tarifaire et d auto-hebergement de Langfuse decrivent cette voie comme gratuite.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2136,7 +2160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Presenter Langfuse comme la seule option open source',
-            whyItMatters: 'Helicone est sous Apache-2.0 avec 6,3k etoiles. La distinction exacte est que Langfuse documente un deploiement auto-heberge gratuit et pris en charge tandis qu Helicone vend l on-premise en Enterprise, pas que l un serait ouvert et l autre ferme.',
+            whyItMatters: 'Helicone est sous Apache-2.0 avec 6,3k etoiles. La distinction exacte est que les pages de Langfuse decrivent un deploiement auto-heberge gratuit tandis que la page tarifaire d Helicone liste l on-premise en Enterprise, pas que l un serait ouvert et l autre ferme.',
           },
           {
             title: 'Lire le prix de 39 $ par siege de LangSmith comme la facture entiere',
@@ -2189,7 +2213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Helicone est-il open source ?',
-            a: 'Oui, sous Apache-2.0 avec environ 6 100 etoiles sur GitHub, ce que beaucoup de comparatifs de cette categorie omettent. La nuance est que la page tarifaire d Helicone ne vend le deploiement on-premise qu au niveau Enterprise et ne documente aucune voie d auto-hebergement gratuite et prise en charge : code ouvert ne signifie donc pas que l editeur soutient votre propre exploitation.',
+            a: 'Oui, sous Apache-2.0 avec environ 6 300 etoiles sur GitHub, ce que beaucoup de comparatifs de cette categorie omettent. La nuance est que la page tarifaire d Helicone ne liste le deploiement on-premise qu au niveau Enterprise : code ouvert n indique donc pas quel soutien l editeur apporte a votre propre exploitation.',
           },
           {
             q: 'Ces editeurs ont-ils des programmes d affiliation ?',
@@ -2246,7 +2270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Meilleur outil d observabilite LLM 2026 : Langfuse, LangSmith ou Helicone',
       description: 'Compare Langfuse, LangSmith, Helicone et PromptLayer pour l observabilite LLM, avec tarifs, licences et fenetres de retention verifies, le rachat par ClickHouse et le mur de fonctionnalites Enterprise en auto-hebergement.',
       datePublished: '2026-08-28',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       url: 'https://www.promptquorum.com/fr/local-llms/best-llm-observability-tools',
       inLanguage: 'fr',
       proficiencyLevel: 'Advanced',
@@ -2306,7 +2330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Helicone est-il open source ?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Oui, sous Apache-2.0 avec environ 6 100 etoiles sur GitHub. Sa page tarifaire ne vend toutefois le deploiement on-premise qu au niveau Enterprise et ne documente aucune voie d auto-hebergement gratuite et prise en charge.',
+            text: 'Oui, sous Apache-2.0 avec environ 6 300 etoiles sur GitHub. Sa page tarifaire ne liste toutefois le deploiement on-premise qu au niveau Enterprise.',
           },
         },
       ],
@@ -2318,7 +2342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'fr',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Meilleur globalement — 36,9k etoiles, coeur auto-heberge gratuit, couverture de frameworks la plus large, mais neuf fonctionnalites sont reservees a Enterprise' },
+        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Notre choix — 36,9k etoiles, coeur auto-heberge gratuit, couverture de frameworks la plus large, mais neuf fonctionnalites sont reservees a Enterprise' },
         { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'Meilleur pour les equipes LangChain et LangGraph — tracage natif sans configuration, 39 $/siege/mois plus un usage facture en LSU' },
         { '@type': 'ListItem', position: 3, name: 'Helicone', description: 'Le plus rapide a adopter et le meilleur pour les couts — proxy Apache-2.0, integration en une ligne, gratuit jusqu a 10 000 requetes puis 79 $/mois' },
         { '@type': 'ListItem', position: 4, name: 'PromptLayer', description: 'Option la plus legere — versionnement des prompts et journalisation, gratuit jusqu a 2 500 requetes par mois, Pro a 49 $/mois' },
@@ -2338,7 +2362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Desenvolvedores e equipes que operam aplicações de LLM em produção',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     readTime: '14 min de leitura',
     primaryTerm: 'ferramenta de observabilidade de LLM',
     targetKeywords: [
@@ -2348,7 +2372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'melhor ferramenta de monitoramento de prompts',
       'Langfuse aquisição ClickHouse',
     ],
-    leadAnswerBlock: '**O Langfuse é a melhor escolha padrão para a maioria das equipes: auto-hospedagem gratuita e ampla cobertura. O LangSmith serve a stacks LangChain e LangGraph, desde US$ 39 por assento. O Helicone, um proxy, é o mais rápido de adotar, desde US$ 79.**',
+    leadAnswerBlock: '**Nossa escolha padrão para a maioria das equipes é o Langfuse: auto-hospedagem gratuita e ampla cobertura. O LangSmith serve a stacks LangChain e LangGraph, desde US$ 39 por assento. O Helicone, um proxy, é o mais rápido de adotar, desde US$ 79.**',
     quickAnswerTop: {
       question: 'Qual é a melhor ferramenta de observabilidade de LLM em 2026?',
       answer: '**Langfuse para flexibilidade e auto-hospedagem, LangSmith se você já está no LangChain, Helicone para visibilidade de custos com integração de uma linha e PromptLayer apenas se você precisa de versionamento de prompts em vez de observabilidade completa.** A decisão é sobretudo estrutural: LangSmith e Langfuse instrumentam seu código via SDK, enquanto o Helicone fica à frente da API como proxy e captura cada chamada sem instrumentação. Essa diferença determina quais dados você obtém. Um proxy vê requisições e custos; um rastreador de SDK vê os passos de raciocínio dentro de uma execução multiagente.',
@@ -2360,7 +2384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**O Langfuse agora pertence à ClickHouse** — aquisição em 16 de janeiro de 2026, anunciada junto a uma Série D de US$ 400 milhões, o que importa para o roadmap',
         '**Dispense os quatro** se você está antes da produção com algumas dezenas de chamadas por dia: os painéis dos fornecedores bastam',
       ],
-      updatedDate: '2026-11-02',
+      updatedDate: '2026-11-03',
     },
     toc: [
       { label: 'Pontos principais', anchor: 'tldr' },
@@ -2390,13 +2414,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**Langfuse** — 36,9 mil estrelas no GitHub, a maior presença de código aberto aqui. O Hobby na nuvem é gratuito com 50 mil unidades por mês, 30 dias de acesso aos dados e 2 usuários; o Core custa US$ 29/mês com 100 mil unidades e usuários ilimitados; o Pro US$ 199/mês com três anos de retenção',
-          '**Uma correção que vale a pena:** o Langfuse é amplamente descrito como licenciado sob MIT sem muro de recursos. O próprio README diz que o repositório é "MIT licensed, except for the `ee` folders", e a página de auto-hospedagem lista nove recursos exclusivos do Enterprise: mascaramento de dados no servidor, RBAC por projeto, gestão de retenção, SCIM, registros de auditoria e outros. Observabilidade e avaliações básicas são realmente gratuitas; os recursos de governança não são.',
+          '**Uma correção que vale a pena:** o Langfuse é descrito por algumas comparações como licenciado sob MIT sem muro de recursos. O próprio README diz que o repositório é "MIT licensed, except for the `ee` folders", e a página de auto-hospedagem lista nove recursos exclusivos do Enterprise: mascaramento de dados no servidor, RBAC por projeto, gestão de retenção, SCIM, registros de auditoria e outros. Observabilidade e avaliações básicas são realmente gratuitas; os recursos de governança não são.',
           '**O Langfuse foi adquirido pela ClickHouse, Inc. em 16 de janeiro de 2026**, anunciado junto à Série D de US$ 400 milhões da ClickHouse. O arquivo LICENSE do repositório agora começa com "Copyright (c) 2023-2026 ClickHouse, Inc." Isso não é motivo para descartar o Langfuse, mas é uma consideração de roadmap que merece cinco minutos antes de padronizar em cima dele.',
           '**LangSmith** — o Developer é gratuito com até 5.000 traces base por mês e um assento. O Plus custa US$ 39 por assento ao mês com até 10 mil traces base e, acima disso, cobrança por consumo em LangChain Standard Units (LSU), a US$ 1,00 por LSU. O Enterprise é sob consulta, com opções auto-hospedada e híbrida.',
-          '**Helicone** — um proxy em vez de um SDK, então a integração é uma linha e captura cada chamada sem instrumentação. O Hobby é gratuito com 10 mil requisições, 1 GB e 7 dias de retenção; o Pro custa US$ 79/mês com assentos ilimitados e um mês de retenção; o Team US$ 799/mês com SOC-2 e HIPAA e três meses de retenção.',
-          '**O Helicone também é de código aberto**, sob Apache-2.0 com 6,3 mil estrelas, o que a maioria das comparações omite. A nuance é que sua página de preços vende on-premise apenas no Enterprise e não documenta nenhum caminho gratuito de auto-hospedagem com suporte. Código aberto aqui não significa que o fornecedor apoia você operando por conta própria.',
+          '**Helicone** — um proxy em vez de um SDK, então a integração é uma linha e captura cada chamada sem instrumentação. O Hobby é gratuito com 10 mil requisições, 1 GB e 7 dias de retenção; o Pro custa US$ 79/mês com assentos ilimitados e um mês de retenção; o Team US$ 799/mês com três meses de retenção, e a página de preços menciona suporte a SOC-2 e HIPAA.',
+          '**O Helicone também é de código aberto**, sob Apache-2.0, o que algumas comparações omitem. A nuance é que sua página de preços lista on-premise apenas no Enterprise. Código aberto, portanto, não indica que suporte o fornecedor dá se você operar por conta própria.',
           '**PromptLayer** — o mais estreito dos quatro. O nível gratuito oferece 2.500 requisições por mês, 5 usuários e 10 prompts; o Pro custa US$ 49/mês com US$ 0,003 por transação excedente; o Team US$ 500/mês com mais de 100 mil requisições e 25 usuários. A auto-hospedagem em GCP, AWS ou Azure é exclusiva do Enterprise.',
-          'Nenhum dos quatro publica programa de afiliados ou indicação. A LangChain mantém uma Partner Network, mas é um programa de integração técnica, não um esquema de comissões. Todos os links desta página são não remunerados.',
+          'Nas páginas dos quatro, não foi encontrado nenhum programa público de afiliados ou indicação. A LangChain mantém uma Partner Network, mas é um programa de integração técnica, não um esquema de comissões. Todos os links desta página são não remunerados.',
         ],
       },
       bestChoice: {
@@ -2472,13 +2496,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Critério: 'Nível gratuito', Langfuse: '50 mil unidades/mês, 30 dias', LangSmith: '5 mil traces/mês, 1 assento', Helicone: '10 mil requisições, 7 dias', PromptLayer: '2.500 requisições, 10 prompts' },
           { Critério: 'Entrada paga', Langfuse: 'Core US$ 29/mês', LangSmith: 'Plus US$ 39/assento/mês + consumo', Helicone: 'Pro US$ 79/mês', PromptLayer: 'Pro US$ 49/mês' },
           { Critério: 'Auto-hospedagem gratuita', Langfuse: 'Sim, recursos centrais', LangSmith: 'Não, só Enterprise', Helicone: 'Código aberto, não vendido', PromptLayer: 'Não, só Enterprise' },
-          { Critério: 'Nível de conformidade', Langfuse: 'Pro: SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team US$ 799: SOC-2, HIPAA', PromptLayer: 'Enterprise' },
+          { Critério: 'Nível de conformidade', Langfuse: 'Pro cita SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team US$ 799: cita SOC-2, HIPAA', PromptLayer: 'Enterprise' },
           { Critério: 'Programa de afiliados', Langfuse: 'Nenhum encontrado', LangSmith: 'Nenhum encontrado', Helicone: 'Nenhum encontrado', PromptLayer: 'Nenhum encontrado' },
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'Comparações costumam chamar o Langfuse de "a única opção de código aberto aqui". O Helicone é Apache-2.0 com 6,3 mil estrelas, então isso não procede. O que procede é que o Langfuse documenta e apoia uma implantação auto-hospedada gratuita, enquanto o Helicone vende on-premise apenas no Enterprise e não descreve nenhum caminho gratuito de auto-hospedagem com suporte em sua página de preços.',
+            text: 'Comparações costumam chamar o Langfuse de "a única opção de código aberto aqui". O Helicone é Apache-2.0 com 6,3 mil estrelas, então isso não procede. O que procede é que as páginas de preços e de auto-hospedagem do Langfuse descrevem uma implantação auto-hospedada gratuita, enquanto a página de preços do Helicone lista on-premise apenas no Enterprise.',
           },
         ],
       },
@@ -2491,7 +2515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Langfuse — melhor no geral',
             tagline: '36,9 mil estrelas, núcleo auto-hospedado gratuito, maior cobertura de frameworks',
-            verdict: 'O Langfuse cobre observabilidade, avaliações, gestão de prompts e conjuntos de dados em um único produto, e sua lista de integrações é a mais longa dos quatro: SDK da OpenAI, LangChain, LlamaIndex, Haystack, LiteLLM, Vercel AI SDK, Ollama e Amazon Bedrock nativamente, além de integrações da comunidade. Para uma stack mista — um pouco de LangChain, algumas chamadas de SDK diretas, LlamaIndex para recuperação — essa amplitude significa instrumentar uma vez em vez de por framework. Preços na nuvem: Hobby gratuito com 50 mil unidades por mês e 30 dias de acesso aos dados, Core a US$ 29/mês com 100 mil unidades e usuários ilimitados, Pro a US$ 199/mês com três anos de retenção mais SOC2, ISO27001 e um BAA para HIPAA, e Enterprise a US$ 2.499/mês. O excedente é escalonado, de US$ 8 por 100 mil unidades até US$ 6 em volume. Auto-hospedar o núcleo de código aberto é gratuito e de fato ilimitado no uso.',
+            verdict: 'O Langfuse cobre observabilidade, avaliações, gestão de prompts e conjuntos de dados em um único produto, e sua lista de integrações é a mais longa dos quatro: SDK da OpenAI, LangChain, LlamaIndex, Haystack, LiteLLM, Vercel AI SDK, Ollama e Amazon Bedrock nativamente, além de integrações da comunidade. Para uma stack mista — um pouco de LangChain, algumas chamadas de SDK diretas, LlamaIndex para recuperação — essa amplitude significa instrumentar uma vez em vez de por framework. Preços na nuvem: Hobby gratuito com 50 mil unidades por mês e 30 dias de acesso aos dados, Core a US$ 29/mês com 100 mil unidades e usuários ilimitados, Pro a US$ 199/mês com três anos de retenção (a página de preços menciona relatórios SOC2 e ISO27001 e um BAA para HIPAA), e Enterprise a US$ 2.499/mês. O excedente é escalonado, de US$ 8 por 100 mil unidades até US$ 6 em volume. Auto-hospedar o núcleo de código aberto é gratuito e de fato ilimitado no uso.',
             pros: [
               'A maior cobertura nativa de frameworks dos quatro: uma stack mista é instrumentada uma só vez',
               'Núcleo auto-hospedado gratuito com uso ilimitado, implantável via Docker Compose, Kubernetes ou modelos de nuvem',
@@ -2559,7 +2583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Helicone — mais rápido de adotar e melhor para custos',
             tagline: 'Integração proxy de uma linha, Apache-2.0, gratuito até 10 mil requisições e depois US$ 79/mês',
-            verdict: 'Como o Helicone é um proxy, adotá-lo é trocar a URL base em vez de tocar um projeto de instrumentação, e ele captura dados de custo e requisição em cada chamada por padrão, sem que ninguém precise decidir o que rastrear. Isso o torna o mais rápido dos quatro a entregar valor e explica por que o acompanhamento de custos é seu ponto mais forte: o detalhamento de custo por requisição e a visibilidade do gasto entre muitas chaves e modelos são o produto central, não uma visão de relatórios montada sobre o rastreamento. O Hobby é gratuito com 10 mil requisições, 1 GB de armazenamento e 7 dias de retenção; o Pro custa US$ 79 ao mês com assentos ilimitados e um mês de retenção; o Team US$ 799 ao mês acrescentando conformidade SOC-2 e HIPAA e três meses de retenção; o Enterprise adiciona implantação on-premise, SSO SAML e retenção ilimitada. O código é Apache-2.0 com 6,3 mil estrelas, ainda que a página de preços comercialize on-premise apenas no Enterprise.',
+            verdict: 'Como o Helicone é um proxy, adotá-lo é trocar a URL base em vez de tocar um projeto de instrumentação, e ele captura dados de custo e requisição em cada chamada por padrão, sem que ninguém precise decidir o que rastrear. Isso o torna o mais rápido dos quatro a entregar valor e explica por que o acompanhamento de custos é seu ponto mais forte: o detalhamento de custo por requisição e a visibilidade do gasto entre muitas chaves e modelos são o produto central, não uma visão de relatórios montada sobre o rastreamento. O Hobby é gratuito com 10 mil requisições, 1 GB de armazenamento e 7 dias de retenção; o Pro custa US$ 79 ao mês com assentos ilimitados e um mês de retenção; o Team US$ 799 ao mês com três meses de retenção e, segundo a página de preços, suporte a SOC-2 e HIPAA; o Enterprise adiciona implantação on-premise, SSO SAML e retenção ilimitada. O código é Apache-2.0 com 6,3 mil estrelas, ainda que a página de preços comercialize on-premise apenas no Enterprise.',
             pros: [
               'Uma linha para integrar: sem reescrita de SDK, funciona com qualquer endpoint compatível com OpenAI',
               'O acompanhamento de custos é o produto central, não uma aba de relatórios secundária',
@@ -2593,7 +2617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'PromptLayer — melhor quando você só precisa versionar prompts',
             tagline: 'Gratuito até 2.500 requisições por mês, Pro a US$ 49/mês',
-            verdict: 'O PromptLayer concentra-se em manter um histórico versionado dos seus prompts junto a um registro das requisições que os usaram, uma necessidade real que aparece antes da observabilidade completa. O nível gratuito oferece 2.500 requisições por mês, 5 usuários e 10 prompts. O Pro custa US$ 49 ao mês com 5 usuários e excedente a US$ 0,003 por transação. O Team custa US$ 500 ao mês com mais de 100 mil requisições, 25 usuários e excedente mais barato a US$ 0,002. A auto-hospedagem em GCP, AWS ou Azure existe apenas no Enterprise sob consulta. É o único dos quatro sem presença relevante de código aberto: o repositório público é uma biblioteca cliente com 0,8 mil estrelas, não a plataforma. Trate-o como uma ferramenta de gestão de prompts que registra, não como uma plataforma de observabilidade que também gerencia prompts.',
+            verdict: 'O PromptLayer concentra-se em manter um histórico versionado dos seus prompts junto a um registro das requisições que os usaram, uma necessidade real que aparece antes da observabilidade completa. O nível gratuito oferece 2.500 requisições por mês, 5 usuários e 10 prompts. O Pro custa US$ 49 ao mês com 5 usuários e excedente a US$ 0,003 por transação. O Team custa US$ 500 ao mês com mais de 100 mil requisições, 25 usuários e excedente mais barato a US$ 0,002. A auto-hospedagem em GCP, AWS ou Azure existe apenas no Enterprise sob consulta. O repositório público é uma biblioteca cliente com 0,8 mil estrelas, não a plataforma. Trate-o como uma ferramenta de gestão de prompts que registra, não como uma plataforma de observabilidade que também gerencia prompts.',
             pros: [
               'O mais simples de entender e adotar entre os quatro',
               'O versionamento de prompts é de primeira classe, não um recurso lateral de um produto maior',
@@ -2621,7 +2645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       clickhouseAcquisition: {
         id: 'clickhouse-acquisition',
         title: 'O que a aquisição pela ClickHouse significa para o Langfuse',
-        content: '**A ClickHouse, Inc. adquiriu o Langfuse em 16 de janeiro de 2026, anunciado junto à rodada Série D de 400 milhões de dólares da ClickHouse liderada pela Dragoneer.** A aquisição foi noticiada à época pelo SiliconANGLE e está confirmada no blog da ClickHouse, em uma discussão no GitHub do Langfuse e pelo escritório que assessorou a operação.\n\nA evidência mais clara está no próprio repositório: o arquivo LICENSE agora começa com "Copyright (c) 2023-2026 ClickHouse, Inc." O projeto segue em desenvolvimento ativo e recebeu alterações no dia em que esta página foi verificada.\n\nHá uma lógica coerente por trás. O Langfuse já armazenava seus traces no ClickHouse, então a compradora é dona do banco de dados sob o produto e não uma adquirente alheia ao tema. Esse é um ponto de partida melhor que o da maioria das aquisições nessa categoria. A consideração ainda merece registro: depois de uma aquisição, as prioridades de roadmap seguem o interesse comercial da compradora, e o Langfuse auto-hospedado agora depende de uma empresa que também vende ClickHouse Cloud. O nível Enterprise auto-hospedado está explicitamente atrelado a ClickHouse Cloud ou BYOC, cujos custos se somam.',
+        content: '**A ClickHouse, Inc. adquiriu o Langfuse em 16 de janeiro de 2026, anunciado junto à rodada Série D de 400 milhões de dólares da ClickHouse liderada pela Dragoneer.** A aquisição foi noticiada à época pelo SiliconANGLE e anunciada no blog da ClickHouse (ambos linkados em Fontes).\n\nA evidência mais clara está no próprio repositório: o arquivo LICENSE agora começa com "Copyright (c) 2023-2026 ClickHouse, Inc." O projeto segue em desenvolvimento ativo e recebeu alterações no dia em que esta página foi verificada.\n\nHá uma lógica coerente por trás. O Langfuse já armazenava seus traces no ClickHouse, então a compradora é dona do banco de dados sob o produto e não uma adquirente alheia ao tema. Esse é um ponto de partida melhor que o da maioria das aquisições nessa categoria. A consideração ainda merece registro: depois de uma aquisição, as prioridades de roadmap seguem o interesse comercial da compradora, e o Langfuse auto-hospedado agora depende de uma empresa que também vende ClickHouse Cloud. O nível Enterprise auto-hospedado está explicitamente atrelado a ClickHouse Cloud ou BYOC, cujos custos se somam.',
         callouts: [
           {
             type: 'note',
@@ -2633,7 +2657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       selfHosting: {
         id: 'self-hosting',
         title: 'Auto-hospedagem e o muro do Enterprise',
-        content: '**O Langfuse é o único dos quatro que documenta e apoia uma implantação auto-hospedada gratuita, mas a afirmação tão repetida de que não há muro de recursos entre o gratuito e o pago é falsa.** A própria página de auto-hospedagem lista nove capacidades como exclusivas do Enterprise: mascaramento de dados no servidor, RBAC por projeto, gestão de retenção de dados, provisionamento de usuários por SCIM, criadores de organizações, personalização da interface, registros de auditoria, APIs de administração e de gestão da instância, e rótulos de implantação protegidos.\n\nLeia essa lista pensando em para quem a auto-hospedagem costuma existir. Equipes auto-hospedam por residência de dados ou pressão regulatória, e RBAC, registros de auditoria e mascaramento de dados são exatamente do que uma equipe regulada precisa. O nível gratuito de fato cobre observabilidade, avaliações, gestão de prompts, conjuntos de dados, rastreamento e acompanhamento de custos com uso ilimitado. O que ele não cobre é governança.\n\nOs outros três são mais diretos. O LangSmith restringe a auto-hospedagem ao Enterprise sob consulta. O PromptLayer oferece auto-hospedagem de locatário único em GCP, AWS ou Azure apenas no Enterprise. O Helicone é o caso interessante: o código é Apache-2.0 e público, mas a página de preços vende on-premise apenas no Enterprise e não documenta nenhum caminho gratuito de auto-hospedagem com suporte — aqui, código aberto e auto-hospedagem apoiada não são a mesma coisa.',
+        content: '**Entre os quatro, o Langfuse é aquele cujas páginas de preços e de auto-hospedagem descrevem uma implantação auto-hospedada gratuita, mas a afirmação tão repetida de que não há muro de recursos entre o gratuito e o pago é falsa.** A própria página de auto-hospedagem lista nove capacidades como exclusivas do Enterprise: mascaramento de dados no servidor, RBAC por projeto, gestão de retenção de dados, provisionamento de usuários por SCIM, criadores de organizações, personalização da interface, registros de auditoria, APIs de administração e de gestão da instância, e rótulos de implantação protegidos.\n\nLeia essa lista pensando em para quem a auto-hospedagem costuma existir. Equipes auto-hospedam por residência de dados ou pressão regulatória, e RBAC, registros de auditoria e mascaramento de dados são exatamente do que uma equipe regulada precisa. O nível gratuito de fato cobre observabilidade, avaliações, gestão de prompts, conjuntos de dados, rastreamento e acompanhamento de custos com uso ilimitado. O que ele não cobre é governança.\n\nOs outros três são mais diretos. O LangSmith restringe a auto-hospedagem ao Enterprise sob consulta. O PromptLayer oferece auto-hospedagem de locatário único em GCP, AWS ou Azure apenas no Enterprise. O Helicone é o caso interessante: o código é Apache-2.0 e público, mas a página de preços lista on-premise apenas no Enterprise — aqui, código aberto e auto-hospedagem apoiada pelo fornecedor não são a mesma coisa.',
         callouts: [
           {
             type: 'warning',
@@ -2655,7 +2679,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Nível: 'Entrada paga', Langfuse: 'Core US$ 29/mês', LangSmith: 'Plus US$ 39/assento/mês', Helicone: 'Pro US$ 79/mês', PromptLayer: 'Pro US$ 49/mês' },
           { Nível: 'Cobrança por uso', Langfuse: 'US$ 8 por 100 mil unidades, escalonado', LangSmith: 'Consumo em LSU, US$ 1,00 cada', Helicone: 'Por consumo acima da cota gratuita', PromptLayer: 'US$ 0,003 por transação' },
           { Nível: 'Nível intermediário', Langfuse: 'Pro US$ 199/mês, 3 anos de retenção', LangSmith: 'Enterprise sob consulta', Helicone: 'Team US$ 799/mês', PromptLayer: 'Team US$ 500/mês' },
-          { Nível: 'Conformidade', Langfuse: 'Pro: SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team: SOC-2, HIPAA', PromptLayer: 'Enterprise' },
+          { Nível: 'Conformidade', Langfuse: 'Pro cita SOC2, ISO27001, BAA', LangSmith: 'Enterprise', Helicone: 'Team cita SOC-2, HIPAA', PromptLayer: 'Enterprise' },
           { Nível: 'Custo de auto-hospedar', Langfuse: 'Gratuito para recursos centrais', LangSmith: 'Só Enterprise', Helicone: 'Só Enterprise', PromptLayer: 'Só Enterprise' },
         ],
         callouts: [
@@ -2681,7 +2705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Equipe pequena querendo controlar a residência dos dados** → Langfuse auto-hospedado, conferindo antes a lista do Enterprise se precisar de RBAC ou registros de auditoria.',
           '**Equipe com mais de 10 mil chamadas por dia, fora do LangChain** → Langfuse Cloud ou Helicone. A vantagem do LangSmith não se aplica a você, mas a cobrança por consumo sim.',
           '**Equipe cuja dor é descontrole de custos de API** → Helicone Pro a US$ 79/mês, onde acompanhamento de custos é o produto.',
-          '**Setor regulado que precisa de SOC-2 ou HIPAA** → Helicone Team a US$ 799/mês ou Langfuse Pro a US$ 199/mês, que inclui SOC2, ISO27001 e um BAA.',
+          '**Setor regulado que precisa de SOC-2 ou HIPAA** → Helicone Team a US$ 799/mês ou Langfuse Pro a US$ 199/mês; segundo as páginas de preços dos fornecedores, constam ali SOC-2 e HIPAA no Helicone e SOC2, ISO27001 e um BAA no Langfuse. Solicite ao fornecedor o relatório e o acordo vigentes.',
           '**Equipe que só precisa de controle de versão de prompts** → PromptLayer gratuito ou Pro, reavaliando quando testes de regressão se tornarem necessários.',
         ],
       },
@@ -2689,21 +2713,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'regional-context',
         title: 'Observabilidade na UE, no Japão e na China',
         content: 'Traces de observabilidade contêm o prompt e a resposta completos, ou seja, contêm o que seus usuários digitaram. Isso transforma a escolha entre hospedado e auto-hospedado em uma questão de proteção de dados em três mercados importantes.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'Esta seção é informação geral e não aconselhamento jurídico. Confirme base legal, contrato de operador e transferências com seu encarregado ou advogado.',
+          },
+        ],
         subsections: [
           {
             title: 'União Europeia',
-            content: 'Um repositório de traces guarda as entradas dos usuários literalmente, então sob o RGPD é tratamento como qualquer outro, e um fornecedor de observabilidade hospedado nos Estados Unidos que recebe esses traces constitui uma transferência nos termos dos artigos 44 a 49, salvo se os termos e a infraestrutura disserem o contrário. Você precisa de um contrato de operador do artigo 28 com a plataforma adotada. Esse é o argumento prático mais forte a favor do Langfuse auto-hospedado na UE, porque os traces nunca deixam sua infraestrutura — mas note que o mascaramento de dados no servidor, o recurso que permitiria remover dados pessoais antes do armazenamento, está entre as capacidades reservadas ao Enterprise. A CNIL francesa aponta na mesma direção com sua recomendação de processamento local para dados empresariais sensíveis.',
+            content: 'Um repositório de traces guarda as entradas dos usuários literalmente, então sob o RGPD é tratamento como qualquer outro, e um fornecedor de observabilidade hospedado nos Estados Unidos que recebe esses traces constitui uma transferência nos termos dos artigos 44 a 49, salvo se os termos e a infraestrutura disserem o contrário. Você precisa de um contrato de operador do artigo 28 com a plataforma adotada. Esse é o argumento prático mais forte a favor do Langfuse auto-hospedado na UE, porque os traces nunca deixam sua infraestrutura — mas note que o mascaramento de dados no servidor, o recurso que permitiria remover dados pessoais antes do armazenamento, está entre as capacidades reservadas ao Enterprise.',
           },
           {
             title: 'Japão',
-            content: 'O trabalho de governança de IA do METI empurra as empresas para caminhos de dados auditáveis, e a observabilidade é onde essa trilha de auditoria de fato reside: é o registro do que o sistema fez. Isso torna as janelas de retenção uma questão de governança em vez de conveniência: o nível gratuito do Helicone guarda 7 dias e o Langfuse Hobby dá 30 dias de acesso, ambos mais curtos do que a maioria das auditorias espera. Se você precisa reconstruir comportamento meses depois, reserve orçamento para um nível com retenção real, ou auto-hospede para controlá-la. Os três anos do Langfuse Pro são a maior retenção publicada aqui.',
+            content: 'A observabilidade é onde uma trilha de auditoria de fato reside: é o registro do que o sistema fez. Isso torna as janelas de retenção uma questão de governança em vez de conveniência: o nível gratuito do Helicone guarda 7 dias e o Langfuse Hobby dá 30 dias de acesso, compare ambos com seus próprios requisitos de auditoria. Se você precisa reconstruir comportamento meses depois, reserve orçamento para um nível com retenção real, ou auto-hospede para controlá-la. Os três anos do Langfuse Pro são a maior retenção publicada aqui.',
           },
           {
             title: 'China',
-            content: 'Sob a Lei de Segurança de Dados (数据安全法) e as regras da CAC sobre transferências transfronteiriças, o problema de conformidade é enviar traces construídos a partir de tráfego de usuários do continente a um fornecedor estrangeiro de observabilidade, não a observabilidade em si. Implantações que atendem equipes do continente geralmente exigem que o repositório de traces fique em infraestrutura nacional. O Langfuse auto-hospedado é o caminho prático, já que é o único dos quatro com implantação auto-hospedada gratuita documentada — veja [executar LLMs locais na China](/pt/local-llms/deepseek-local-china-data-privacy-2026) para o quadro mais amplo de residência de dados.',
+            content: 'Sob a Lei de Segurança de Dados (数据安全法) e as regras da CAC sobre transferências transfronteiriças, o problema de conformidade é enviar traces construídos a partir de tráfego de usuários do continente a um fornecedor estrangeiro de observabilidade, não a observabilidade em si. Implantações que atendem equipes do continente geralmente exigem que o repositório de traces fique em infraestrutura nacional. O Langfuse auto-hospedado é o caminho prático, já que suas páginas de preços e de auto-hospedagem descrevem uma implantação auto-hospedada gratuita — veja [executar LLMs locais na China](/pt/local-llms/deepseek-local-china-data-privacy-2026) para o quadro mais amplo de residência de dados.',
           },
         ],
-        note: 'Auto-hospede o repositório de traces em qualquer mercado em que prompts e respostas não possam sair da sua jurisdição. O Langfuse é o único dos quatro em que esse caminho é gratuito e documentado.',
+        note: 'Auto-hospede o repositório de traces em qualquer mercado em que prompts e respostas não possam sair da sua jurisdição. As páginas de preços e de auto-hospedagem do Langfuse descrevem esse caminho como gratuito.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2715,7 +2745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Chamar o Langfuse de única opção de código aberto',
-            whyItMatters: 'O Helicone é Apache-2.0 com 6,3 mil estrelas. A distinção correta é que o Langfuse documenta uma implantação auto-hospedada gratuita e apoiada enquanto o Helicone vende on-premise no Enterprise, não que um seja aberto e o outro fechado.',
+            whyItMatters: 'O Helicone é Apache-2.0 com 6,3 mil estrelas. A distinção correta é que as páginas do Langfuse descrevem uma implantação auto-hospedada gratuita enquanto a página de preços do Helicone lista on-premise no Enterprise, não que um seja aberto e o outro fechado.',
           },
           {
             title: 'Ler o preço de US$ 39 por assento do LangSmith como a fatura inteira',
@@ -2768,7 +2798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'O Helicone é de código aberto?',
-            a: 'Sim, sob Apache-2.0 com cerca de 6.300 estrelas no GitHub, algo que muitas comparações dessa categoria omitem. A nuance é que a página de preços do Helicone vende a implantação on-premise apenas no nível Enterprise e não documenta nenhum caminho gratuito de auto-hospedagem com suporte, então código aberto não significa que o fornecedor apoia você operando por conta própria.',
+            a: 'Sim, sob Apache-2.0 com cerca de 6.300 estrelas no GitHub, algo que muitas comparações dessa categoria omitem. A nuance é que a página de preços do Helicone lista a implantação on-premise apenas no nível Enterprise, então código aberto não indica que suporte o fornecedor dá se você operar por conta própria.',
           },
           {
             q: 'Algum deles tem programa de afiliados?',
@@ -2825,7 +2855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Melhor ferramenta de observabilidade de LLM 2026: Langfuse, LangSmith ou Helicone',
       description: 'Compara Langfuse, LangSmith, Helicone e PromptLayer para observabilidade de LLM, com preços, licenças e janelas de retenção verificados, a aquisição pela ClickHouse e o muro de recursos do Enterprise na auto-hospedagem.',
       datePublished: '2026-08-28',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       url: 'https://www.promptquorum.com/pt/local-llms/best-llm-observability-tools',
       inLanguage: 'pt-BR',
       proficiencyLevel: 'Advanced',
@@ -2885,7 +2915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'O Helicone é de código aberto?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Sim, sob Apache-2.0 com cerca de 6.300 estrelas no GitHub. Sua página de preços, porém, vende a implantação on-premise apenas no nível Enterprise e não documenta nenhum caminho gratuito de auto-hospedagem com suporte.',
+            text: 'Sim, sob Apache-2.0 com cerca de 6.300 estrelas no GitHub. Sua página de preços, porém, lista a implantação on-premise apenas no nível Enterprise.',
           },
         },
       ],
@@ -2897,7 +2927,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'pt-BR',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Melhor no geral — 36,9 mil estrelas, núcleo auto-hospedado gratuito, maior cobertura de frameworks, embora nove recursos sejam exclusivos do Enterprise' },
+        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'Nossa escolha — 36,9 mil estrelas, núcleo auto-hospedado gratuito, maior cobertura de frameworks, embora nove recursos sejam exclusivos do Enterprise' },
         { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'Melhor para times de LangChain e LangGraph — rastreamento nativo sem configuração, US$ 39/assento/mês mais cobrança por consumo em LSU' },
         { '@type': 'ListItem', position: 3, name: 'Helicone', description: 'Mais rápido de adotar e melhor para custos — proxy Apache-2.0, integração de uma linha, gratuito até 10 mil requisições e depois US$ 79/mês' },
         { '@type': 'ListItem', position: 4, name: 'PromptLayer', description: 'Opção mais enxuta — versionamento de prompts e registro, gratuito até 2.500 requisições por mês, Pro a US$ 49/mês' },
@@ -2917,7 +2947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'LLMアプリケーションを本番運用する開発者とチーム',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     readTime: '14分で読めます',
     primaryTerm: 'LLMオブザーバビリティツール',
     targetKeywords: [
@@ -2927,7 +2957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'プロンプト監視ツール おすすめ',
       'Langfuse ClickHouse 買収',
     ],
-    leadAnswerBlock: '**多くの本番チームにはLangfuseが最適です。セルフホストは無料で、対応フレームワークも幅広いです。LangChainやLangGraph中心ならLangSmith（1席月39ドルから）。導入の速さはプロキシ型のHelicone（月79ドルから）が一番です。LangfuseはClickHouse傘下になりました。**',
+    leadAnswerBlock: '**多くの本番チームへの既定の推奨はLangfuseです。セルフホストは無料で、対応フレームワークも幅広いです。LangChainやLangGraph中心ならLangSmith（1席月39ドルから）。導入の速さはプロキシ型のHelicone（月79ドルから）が一番です。LangfuseはClickHouse傘下になりました。**',
     quickAnswerTop: {
       question: '2026年に最適なLLMオブザーバビリティツールはどれですか？',
       answer: '**柔軟性と自己ホストならLangfuse、すでにLangChainを使っているならLangSmith、1行の導入でコストを可視化したいならHelicone、完全なオブザーバビリティではなくプロンプトのバージョン管理が必要なだけならPromptLayerです。** この選択はおもに構造の問題です。LangSmithとLangfuseはSDKでコードを計装しますが、HeliconeはAPIの手前にプロキシとして入り、計装なしですべての呼び出しを取得します。この違いが得られるデータを決めます。プロキシはリクエストとコストを見ますが、SDKトレーサーはマルチエージェント実行の内部にある推論ステップまで見えます。',
@@ -2939,7 +2969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**LangfuseはClickHouse傘下** — 2026年1月16日の買収で、4億ドルのシリーズDと同時発表。ロードマップ上の論点',
         '**4つとも不要なケース** — 本番前で1日数十回の呼び出しなら、各社の管理画面で十分',
       ],
-      updatedDate: '2026-11-02',
+      updatedDate: '2026-11-03',
     },
     toc: [
       { label: '要点', anchor: 'tldr' },
@@ -2969,11 +2999,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**Langfuse** — GitHubスター36,900件で、ここで最大のオープンソース基盤です。クラウドのHobbyは無料で月5万ユニット、データ参照30日間、2ユーザー。Coreは月29ドルで10万ユニットとユーザー数無制限、Proは月199ドルで3年間の保持、Enterpriseは月2,499ドルです。オープンソースのコアを自己ホストする分には無料かつ無制限です。',
-          '**訂正しておきたい点：** Langfuseは「機能制限のないMITライセンス」と広く説明されますが、公式READMEは「This repository is MIT licensed, except for the `ee` folders」と述べ、自己ホストの料金ページはサーバー側のデータマスキング、プロジェクト単位のRBAC、保持期間の管理、SCIM、監査ログなど9つの機能をEnterprise限定として挙げています。基本のオブザーバビリティと評価は本当に無料ですが、ガバナンス機能は無料ではありません。',
+          '**訂正しておきたい点：** 一部の比較記事はLangfuseを「機能制限のないMITライセンス」と説明していますが、公式READMEは「This repository is MIT licensed, except for the `ee` folders」と述べ、自己ホストの料金ページはサーバー側のデータマスキング、プロジェクト単位のRBAC、保持期間の管理、SCIM、監査ログなど9つの機能をEnterprise限定として挙げています。基本のオブザーバビリティと評価は本当に無料ですが、ガバナンス機能は無料ではありません。',
           '**Langfuseは2026年1月16日にClickHouse, Inc.に買収されました。** ClickHouseの4億ドルのシリーズDと同時に発表されたものです。リポジトリのLICENSEファイルは現在「Copyright (c) 2023-2026 ClickHouse, Inc.」で始まります。Langfuseを避ける理由にはなりませんが、標準として採用する前に5分だけ確認する価値のあるロードマップ上の論点です。',
           '**LangSmith** — Developerは無料で、月5,000件までの基本トレースと1席が付きます。Plusは1席あたり月39ドルで基本トレース1万件までが含まれ、それを超えると従量課金となり、LangChain Standard Unit（LSU）単位で、1 LSUは1.00ドルです。Enterpriseは個別見積もりで、自己ホストとハイブリッドの選択肢があります。',
-          '**Helicone** — SDKではなくプロキシなので、導入は1行で済み、計装なしにすべての呼び出しを取得します。Hobbyは無料で1万リクエスト、1GB、保持7日間。Proは月79ドルで席数無制限、保持1か月。Teamは月799ドルでSOC-2とHIPAAに対応し、保持3か月です。',
-          '**Heliconeもオープンソースです。** Apache-2.0でスター6,300件ですが、これは多くの比較記事が見落としています。ただし料金ページはオンプレミスをEnterpriseでのみ販売しており、サポートされた無料の自己ホスト経路は示されていません。ソースが公開されていることと、ベンダーが自前運用を支援することは別です。',
+          '**Helicone** — SDKではなくプロキシなので、導入は1行で済み、計装なしにすべての呼び出しを取得します。Hobbyは無料で1万リクエスト、1GB、保持7日間。Proは月79ドルで席数無制限、保持1か月。Teamは月799ドルで保持3か月、料金ページにはSOC-2とHIPAAへの対応が記載されています。',
+          '**Heliconeもオープンソースです。** Apache-2.0ですが、この点を取り上げていない比較記事もあります。ただし料金ページはオンプレミスをEnterpriseでのみ掲載しています。ソースが公開されていても、自前運用でベンダーがどこまで支援するかは分かりません。',
           '**PromptLayer** — 4つのなかで最も対象範囲が狭い製品です。無料枠は月2,500リクエスト、5ユーザー、10プロンプト。Proは月49ドルで超過分は1トランザクション0.003ドル。Teamは月500ドルで10万リクエスト超、25ユーザーです。GCP・AWS・Azureでの自己ホストはEnterprise限定です。',
           '4社ともアフィリエイトや紹介プログラムを公開していません。LangChainはPartner Networkを運営していますが、これは技術連携のプログラムであり報酬制度ではありません。本ページのリンクはすべて報酬を伴いません。',
         ],
@@ -3051,13 +3081,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 項目: '無料枠', Langfuse: '月5万ユニット、30日', LangSmith: '月5,000トレース、1席', Helicone: '1万リクエスト、7日', PromptLayer: '2,500リクエスト、10プロンプト' },
           { 項目: '有料の入口', Langfuse: 'Core月29ドル', LangSmith: 'Plus1席月39ドル＋従量', Helicone: 'Pro月79ドル', PromptLayer: 'Pro月49ドル' },
           { 項目: '無料の自己ホスト', Langfuse: '可、コア機能', LangSmith: '不可、Enterpriseのみ', Helicone: '公開だが販売なし', PromptLayer: '不可、Enterpriseのみ' },
-          { 項目: '準拠の段階', Langfuse: 'Pro：SOC2・ISO27001・BAA', LangSmith: 'Enterprise', Helicone: 'Team799ドル：SOC-2・HIPAA', PromptLayer: 'Enterprise' },
+          { 項目: '準拠の段階', Langfuse: 'Pro：SOC2・ISO27001・BAA記載', LangSmith: 'Enterprise', Helicone: 'Team799ドル：SOC-2・HIPAA記載', PromptLayer: 'Enterprise' },
           { 項目: 'アフィリエイト', Langfuse: '見当たらず', LangSmith: '見当たらず', Helicone: '見当たらず', PromptLayer: '見当たらず' },
         ],
         callouts: [
           {
             type: 'warning',
-            text: '比較記事はしばしばLangfuseを「ここで唯一のオープンソース」と呼びますが、HeliconeもApache-2.0でスター6,300件なので正確ではありません。正確に言えば、Langfuseは無料の自己ホスト構成を文書化して支援しているのに対し、HeliconeはオンプレミスをEnterprise段階でのみ販売し、料金ページにサポートされた無料の自己ホスト経路を記載していない、という違いです。',
+            text: '比較記事はしばしばLangfuseを「ここで唯一のオープンソース」と呼びますが、HeliconeもApache-2.0でスター6,300件なので正確ではありません。正確に言えば、Langfuseは料金ページと自己ホストページで無料の自己ホスト構成を説明しているのに対し、Heliconeの料金ページはオンプレミスをEnterprise段階でのみ掲載している、という違いです。',
           },
         ],
       },
@@ -3070,7 +3100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Langfuse — 総合的に最良',
             tagline: 'スター36,900件、自己ホストのコアが無料、フレームワーク対応が最も広い',
-            verdict: 'Langfuseはオブザーバビリティ、評価、プロンプト管理、データセットを1つの製品で扱い、連携リストは4製品で最長です。OpenAI SDK、LangChain、LlamaIndex、Haystack、LiteLLM、Vercel AI SDK、Ollama、Amazon Bedrockにネイティブ対応し、さらにコミュニティ製の連携があります。LangChainを少し使い、素のSDK呼び出しもあり、検索にLlamaIndexを使うといった混在スタックでは、この幅広さのおかげでフレームワークごとではなく一度の計装で済みます。クラウドの料金は、Hobbyが無料で月5万ユニットとデータ参照30日間、Coreが月29ドルで10万ユニットとユーザー数無制限、Proが月199ドルで3年間の保持に加えSOC2・ISO27001とHIPAA向けのBAA、Enterpriseが月2,499ドルです。超過分は段階制で、10万ユニットあたり8ドルから、量が増えると6ドルまで下がります。オープンソースのコアの自己ホストは無料で、使用量も実際に無制限です。',
+            verdict: 'Langfuseはオブザーバビリティ、評価、プロンプト管理、データセットを1つの製品で扱い、連携リストは4製品で最長です。OpenAI SDK、LangChain、LlamaIndex、Haystack、LiteLLM、Vercel AI SDK、Ollama、Amazon Bedrockにネイティブ対応し、さらにコミュニティ製の連携があります。LangChainを少し使い、素のSDK呼び出しもあり、検索にLlamaIndexを使うといった混在スタックでは、この幅広さのおかげでフレームワークごとではなく一度の計装で済みます。クラウドの料金は、Hobbyが無料で月5万ユニットとデータ参照30日間、Coreが月29ドルで10万ユニットとユーザー数無制限、Proが月199ドルで3年間の保持（料金ページにはSOC2・ISO27001のレポートとHIPAA向けのBAAが記載）、Enterpriseが月2,499ドルです。超過分は段階制で、10万ユニットあたり8ドルから、量が増えると6ドルまで下がります。オープンソースのコアの自己ホストは無料で、使用量も実際に無制限です。',
             pros: [
               '4製品で最も広いネイティブ連携。混在スタックでも計装は一度で済む',
               '使用量無制限の無料自己ホストコア。Docker Compose、Kubernetes、クラウドのテンプレートで構築できる',
@@ -3138,7 +3168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Helicone — 導入が最速、コスト把握に最良',
             tagline: '1行で入るプロキシ、Apache-2.0、1万リクエストまで無料、以降は月79ドル',
-            verdict: 'Heliconeはプロキシなので、導入は計装プロジェクトではなくベースURLの変更で済み、何をトレースするか誰かが決めるまでもなく、既定ですべての呼び出しでコストとリクエストのデータを取得します。そのため4製品で最も早く価値が出ますし、コスト把握が最大の強みである理由もここにあります。リクエスト単位のコスト内訳と、多数のキーやモデルにまたがる支出の可視化が中核の製品であり、トレーシングの上に載せたレポート画面ではありません。Hobbyは無料で1万リクエスト、ストレージ1GB、保持7日間。Proは月79ドルで席数無制限、保持1か月。Teamは月799ドルでSOC-2とHIPAAへの準拠と保持3か月が加わります。Enterpriseではオンプレミス構成、SAML SSO、無制限の保持が付きます。コードはApache-2.0でスター6,300件ですが、料金ページ上はオンプレミスをEnterpriseでのみ扱っています。',
+            verdict: 'Heliconeはプロキシなので、導入は計装プロジェクトではなくベースURLの変更で済み、何をトレースするか誰かが決めるまでもなく、既定ですべての呼び出しでコストとリクエストのデータを取得します。そのため4製品で最も早く価値が出ますし、コスト把握が最大の強みである理由もここにあります。リクエスト単位のコスト内訳と、多数のキーやモデルにまたがる支出の可視化が中核の製品であり、トレーシングの上に載せたレポート画面ではありません。Hobbyは無料で1万リクエスト、ストレージ1GB、保持7日間。Proは月79ドルで席数無制限、保持1か月。Teamは月799ドルで保持3か月が加わり、料金ページにはSOC-2とHIPAAへの対応が記載されています（証明書や契約はベンダーに確認してください）。Enterpriseではオンプレミス構成、SAML SSO、無制限の保持が付きます。コードはApache-2.0でスター6,300件ですが、料金ページ上はオンプレミスをEnterpriseでのみ扱っています。',
             pros: [
               '導入は1行。SDKの書き換えが不要で、OpenAI互換のエンドポイントなら何にでも使える',
               'コスト把握が中核の製品であり、二次的なレポートのタブではない',
@@ -3172,7 +3202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'PromptLayer — プロンプトのバージョン管理だけが必要なときに最良',
             tagline: '月2,500リクエストまで無料、Proは月49ドル',
-            verdict: 'PromptLayerは、プロンプトのバージョン付き履歴と、それを使ったリクエストのログを併せて残すことに集中しています。これは完全なオブザーバビリティより早い段階で生じる実際の需要です。無料枠は月2,500リクエスト、5ユーザー、10プロンプト。Proは月49ドルで5ユーザー、超過分は1トランザクション0.003ドル。Teamは月500ドルで10万リクエスト超、25ユーザー、超過分は0.002ドルと安くなります。GCP・AWS・Azureでの自己ホストは個別見積もりのEnterpriseのみです。4製品で唯一、目立ったオープンソースの実体がありません。公開リポジトリはスター800件のクライアントライブラリであって、基盤そのものではないためです。ログも取るプロンプト管理ツールと捉えるべきで、プロンプトも扱うオブザーバビリティ基盤ではありません。',
+            verdict: 'PromptLayerは、プロンプトのバージョン付き履歴と、それを使ったリクエストのログを併せて残すことに集中しています。これは完全なオブザーバビリティより早い段階で生じる実際の需要です。無料枠は月2,500リクエスト、5ユーザー、10プロンプト。Proは月49ドルで5ユーザー、超過分は1トランザクション0.003ドル。Teamは月500ドルで10万リクエスト超、25ユーザー、超過分は0.002ドルと安くなります。GCP・AWS・Azureでの自己ホストは個別見積もりのEnterpriseのみです。公開リポジトリはスター800件のクライアントライブラリであって、基盤そのものではないためです。ログも取るプロンプト管理ツールと捉えるべきで、プロンプトも扱うオブザーバビリティ基盤ではありません。',
             pros: [
               '4製品のなかで理解も導入も最も簡単',
               'プロンプトのバージョン管理が主役であり、大きな製品の付随機能ではない',
@@ -3200,7 +3230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       clickhouseAcquisition: {
         id: 'clickhouse-acquisition',
         title: 'ClickHouseによる買収がLangfuseにとって意味すること',
-        content: '**ClickHouse, Inc.は2026年1月16日にLangfuseを買収しました。Dragoneerが主導した4億ドルのシリーズDと同時に発表されたものです。** 買収は当時SiliconANGLEが報じ、ClickHouseの公式ブログ、LangfuseのGitHubディスカッション、案件を担当した法律事務所によって確認できます。\n\n最も明確な裏付けはリポジトリ自体にあります。LICENSEファイルは現在「Copyright (c) 2023-2026 ClickHouse, Inc.」で始まります。プロジェクトは活発に開発が続いており、本ページの確認日にも更新がありました。\n\nこの組み合わせには筋が通っています。Langfuseはもともとトレースの保存先にClickHouseを使っており、買い手は製品の土台となるデータベースの持ち主であって、無関係な買収者ではありません。この分野の買収としては良い出発点です。それでも論点は挙げておく価値があります。買収後のロードマップの優先順位は買い手の商業的関心に従いますし、自己ホストのLangfuseは、ClickHouse Cloudも販売する企業に依存することになりました。Enterpriseの自己ホスト構成はClickHouse CloudまたはBYOCと明示的に結び付いており、その費用は上乗せになります。',
+        content: '**ClickHouse, Inc.は2026年1月16日にLangfuseを買収しました。Dragoneerが主導した4億ドルのシリーズDと同時に発表されたものです。** 買収は当時SiliconANGLEが報じ、ClickHouseの公式ブログで発表されました（いずれも出典欄にリンクあり）。\n\n最も明確な裏付けはリポジトリ自体にあります。LICENSEファイルは現在「Copyright (c) 2023-2026 ClickHouse, Inc.」で始まります。プロジェクトは活発に開発が続いており、本ページの確認日にも更新がありました。\n\nこの組み合わせには筋が通っています。Langfuseはもともとトレースの保存先にClickHouseを使っており、買い手は製品の土台となるデータベースの持ち主であって、無関係な買収者ではありません。この分野の買収としては良い出発点です。それでも論点は挙げておく価値があります。買収後のロードマップの優先順位は買い手の商業的関心に従いますし、自己ホストのLangfuseは、ClickHouse Cloudも販売する企業に依存することになりました。Enterpriseの自己ホスト構成はClickHouse CloudまたはBYOCと明示的に結び付いており、その費用は上乗せになります。',
         callouts: [
           {
             type: 'note',
@@ -3212,7 +3242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       selfHosting: {
         id: 'self-hosting',
         title: '自己ホストとEnterpriseの壁',
-        content: '**Langfuseは4製品で唯一、無料の自己ホスト構成を文書化して支援していますが、「無料版と有料版のあいだに機能の壁はない」という繰り返し語られる主張は誤りです。** 公式の自己ホストページは、サーバー側のデータマスキング、プロジェクト単位のRBAC、データ保持期間の管理、SCIMによるユーザープロビジョニング、組織作成者、UIのカスタマイズ、監査ログ、管理およびインスタンス管理API、保護されたデプロイラベルという9つの機能をEnterprise限定として挙げています。\n\nこの一覧は、自己ホストが誰のためのものかを踏まえて読んでください。チームが自己ホストを選ぶのはデータ所在地や規制上の要請が理由であり、RBAC、監査ログ、データマスキングはまさに規制下のチームが必要とするものです。無料枠はオブザーバビリティ、評価、プロンプト管理、データセット、トレーシング、コスト把握を使用量無制限で確かに含みます。含まないのはガバナンスです。\n\n他の3つはより単純です。LangSmithは自己ホストをEnterpriseの個別見積もりに限定しています。PromptLayerはGCP・AWS・Azure上のシングルテナント自己ホストをEnterpriseでのみ提供します。興味深いのはHeliconeで、コードはApache-2.0で公開されている一方、料金ページはオンプレミスをEnterpriseでのみ販売し、サポートされた無料の自己ホスト経路を記載していません。ここではオープンソースであることと、支援された自己ホストがあることは同義ではありません。',
+        content: '**4製品のうち、料金ページと自己ホストページで無料の自己ホスト構成を説明しているのはLangfuseですが、「無料版と有料版のあいだに機能の壁はない」という繰り返し語られる主張は誤りです。** 公式の自己ホストページは、サーバー側のデータマスキング、プロジェクト単位のRBAC、データ保持期間の管理、SCIMによるユーザープロビジョニング、組織作成者、UIのカスタマイズ、監査ログ、管理およびインスタンス管理API、保護されたデプロイラベルという9つの機能をEnterprise限定として挙げています。\n\nこの一覧は、自己ホストが誰のためのものかを踏まえて読んでください。チームが自己ホストを選ぶのはデータ所在地や規制上の要請が理由であり、RBAC、監査ログ、データマスキングはまさに規制下のチームが必要とするものです。無料枠はオブザーバビリティ、評価、プロンプト管理、データセット、トレーシング、コスト把握を使用量無制限で確かに含みます。含まないのはガバナンスです。\n\n他の3つはより単純です。LangSmithは自己ホストをEnterpriseの個別見積もりに限定しています。PromptLayerはGCP・AWS・Azure上のシングルテナント自己ホストをEnterpriseでのみ提供します。興味深いのはHeliconeで、コードはApache-2.0で公開されている一方、料金ページはオンプレミスをEnterpriseでのみ掲載しています。ここではオープンソースであることと、ベンダーが支援する自己ホストがあることは同義ではありません。',
         callouts: [
           {
             type: 'warning',
@@ -3234,7 +3264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 段階: '有料の入口', Langfuse: 'Core月29ドル', LangSmith: 'Plus1席月39ドル', Helicone: 'Pro月79ドル', PromptLayer: 'Pro月49ドル' },
           { 段階: '従量課金', Langfuse: '10万ユニット8ドル、段階制', LangSmith: 'LSU従量課金、1 LSU = 1.00ドル', Helicone: '無料枠超過分は従量', PromptLayer: '1トランザクション0.003ドル' },
           { 段階: '中間の段階', Langfuse: 'Pro月199ドル、保持3年', LangSmith: 'Enterpriseは個別', Helicone: 'Team月799ドル', PromptLayer: 'Team月500ドル' },
-          { 段階: '準拠', Langfuse: 'Pro：SOC2・ISO27001・BAA', LangSmith: 'Enterprise', Helicone: 'Team：SOC-2・HIPAA', PromptLayer: 'Enterprise' },
+          { 段階: '準拠', Langfuse: 'Pro：SOC2・ISO27001・BAA記載', LangSmith: 'Enterprise', Helicone: 'Team：SOC-2・HIPAA記載', PromptLayer: 'Enterprise' },
           { 段階: '自己ホスト費用', Langfuse: 'コア機能は無料', LangSmith: 'Enterpriseのみ', Helicone: 'Enterpriseのみ', PromptLayer: 'Enterpriseのみ' },
         ],
         callouts: [
@@ -3260,7 +3290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**データ所在地を自分で管理したい小規模チーム** → 自己ホストのLangfuse。RBACや監査ログが必要なら、先にEnterpriseの一覧を確認してください。',
           '**1日1万回超の呼び出しがあり、LangChainではないチーム** → Langfuse CloudかHelicone。LangSmithの利点は効きませんが、従量課金は効いてしまいます。',
           '**APIコストの膨張が痛みになっているチーム** → 月79ドルのHelicone Pro。コスト把握そのものが製品です。',
-          '**SOC-2やHIPAAが必要な規制業種** → 月799ドルのHelicone Team、またはSOC2・ISO27001・BAAを含む月199ドルのLangfuse Pro。',
+          '**SOC-2やHIPAAが必要な規制業種** → 月799ドルのHelicone Team、または月199ドルのLangfuse Pro。各社の料金ページには、前者にSOC-2とHIPAA、後者にSOC2・ISO27001・BAAが記載されています。最新のレポートと契約はベンダーに確認してください。',
           '**プロンプトのバージョン管理だけが必要なチーム** → PromptLayerの無料枠かPro。回帰テストが必要になった時点で見直してください。',
         ],
       },
@@ -3268,21 +3298,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'regional-context',
         title: 'EU・日本・中国におけるオブザーバビリティ',
         content: 'オブザーバビリティのトレースには、プロンプトと応答が丸ごと入ります。つまり利用者が入力した内容がそのまま含まれます。そのため、ホスト型か自己ホストかという選択は、主要な3つの市場でデータ保護の問題になります。',
+        callouts: [
+          {
+            type: 'note',
+            text: 'このセクションは一般的な情報であり、法的助言ではありません。適法性の根拠、委託契約、越境移転は、データ保護責任者または弁護士にご確認ください。',
+          },
+        ],
         subsections: [
           {
             title: '欧州連合',
-            content: 'トレースの保管庫は利用者の入力をそのまま保持するため、GDPRの下では他と変わらない取扱いにあたります。そのトレースを受け取る米国ホストのオブザーバビリティ事業者は、契約条件とインフラが別段の定めをしていない限り、第44条から第49条の意味での移転を構成します。採用する基盤とは第28条の処理者契約が必要です。トレースが自社インフラから出ないため、これはEUで自己ホストのLangfuseを選ぶ最も強い実務上の論拠になります。ただし、保存前に個人データを取り除けるサーバー側のデータマスキングがEnterprise限定の機能である点には注意してください。フランスのCNILも、機微な業務データについて手元での処理を推奨しており、同じ方向を指しています。',
+            content: 'トレースの保管庫は利用者の入力をそのまま保持するため、GDPRの下では他と変わらない取扱いにあたります。そのトレースを受け取る米国ホストのオブザーバビリティ事業者は、契約条件とインフラが別段の定めをしていない限り、第44条から第49条の意味での移転を構成します。採用する基盤とは第28条の処理者契約が必要です。トレースが自社インフラから出ないため、これはEUで自己ホストのLangfuseを選ぶ最も強い実務上の論拠になります。ただし、保存前に個人データを取り除けるサーバー側のデータマスキングがEnterprise限定の機能である点には注意してください。',
           },
           {
             title: '日本',
-            content: '経済産業省のAIガバナンスの取り組みは、企業を監査可能なデータ経路へと促していますが、その監査証跡が実際に置かれる場所こそオブザーバビリティです。システムが何をしたかの記録そのものだからです。そのため保持期間は利便性ではなくガバナンスの問題になります。Heliconeの無料枠は7日間、LangfuseのHobbyはデータ参照30日間で、どちらも一般的な監査の期待より短いです。数か月後に挙動を再構成する必要があるなら、実用的な保持期間のあるプランを見込むか、自分で保持を管理できる自己ホストを選んでください。Langfuse Proの3年間は、ここで公表されている最長の保持期間です。',
+            content: '監査証跡が実際に置かれる場所こそオブザーバビリティです。システムが何をしたかの記録そのものだからです。そのため保持期間は利便性ではなくガバナンスの問題になります。Heliconeの無料枠は7日間、LangfuseのHobbyはデータ参照30日間で、どちらも自社の監査要件と照らして確認してください。数か月後に挙動を再構成する必要があるなら、実用的な保持期間のあるプランを見込むか、自分で保持を管理できる自己ホストを選んでください。Langfuse Proの3年間は、ここで公表されている最長の保持期間です。',
           },
           {
             title: '中国',
-            content: 'データセキュリティ法（数据安全法）とCACの越境移転規則の下では、コンプライアンス上の問題はオブザーバビリティ自体ではなく、本土の利用者トラフィックから作られたトレースを国外の事業者に送ることにあります。本土のチームに提供する構成では、トレースの保管庫を国内インフラに置くことが通常求められます。無料の自己ホスト構成が文書化されている唯一の製品であるため、自己ホストのLangfuseが現実的な道です。データ所在地の全体像については[中国でローカルLLMを動かす](/ja/local-llms/deepseek-local-china-data-privacy-2026)をご覧ください。',
+            content: 'データセキュリティ法（数据安全法）とCACの越境移転規則の下では、コンプライアンス上の問題はオブザーバビリティ自体ではなく、本土の利用者トラフィックから作られたトレースを国外の事業者に送ることにあります。本土のチームに提供する構成では、トレースの保管庫を国内インフラに置くことが通常求められます。料金ページと自己ホストページで無料の自己ホスト構成が説明されているため、自己ホストのLangfuseが現実的な道です。データ所在地の全体像については[中国でローカルLLMを動かす](/ja/local-llms/deepseek-local-china-data-privacy-2026)をご覧ください。',
           },
         ],
-        note: 'プロンプトと応答が管轄外に出せない市場では、トレースの保管庫を自己ホストしてください。その経路が無料かつ文書化されているのは4製品でLangfuseだけです。',
+        note: 'プロンプトと応答が管轄外に出せない市場では、トレースの保管庫を自己ホストしてください。Langfuseの料金ページと自己ホストページは、その経路を無料として説明しています。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -3294,7 +3330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Langfuseを唯一のオープンソースだと述べる',
-            whyItMatters: 'HeliconeはApache-2.0でスター6,300件です。正確な区別は、Langfuseが支援された無料の自己ホスト構成を文書化しているのに対し、HeliconeはオンプレミスをEnterprise段階で販売しているという点であって、一方が公開でもう一方が非公開という話ではありません。',
+            whyItMatters: 'HeliconeはApache-2.0でスター6,300件です。正確な区別は、Langfuseのページが無料の自己ホスト構成を説明しているのに対し、Heliconeの料金ページはオンプレミスをEnterprise段階で掲載しているという点であって、一方が公開でもう一方が非公開という話ではありません。',
           },
           {
             title: 'LangSmithの1席39ドルを請求額のすべてだと読む',
@@ -3347,7 +3383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Heliconeはオープンソースですか？',
-            a: 'はい。Apache-2.0でGitHubスターは約6,300件ですが、この分野の比較記事の多くが見落としています。ただしHeliconeの料金ページはオンプレミス構成をEnterprise段階でのみ販売しており、サポートされた無料の自己ホスト経路は記載されていません。ソースが公開されていることと、ベンダーが自前運用を支援することは別です。',
+            a: 'はい。Apache-2.0でGitHubスターは約6,300件ですが、この分野の比較記事の多くが見落としています。ただしHeliconeの料金ページはオンプレミス構成をEnterprise段階でのみ掲載しています。ソースが公開されていても、自前運用でベンダーがどこまで支援するかは分かりません。',
           },
           {
             q: 'これらにアフィリエイトプログラムはありますか？',
@@ -3404,7 +3440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026年 最適なLLMオブザーバビリティツール：Langfuse・LangSmith・Helicone',
       description: 'LLMオブザーバビリティ向けにLangfuse、LangSmith、Helicone、PromptLayerを比較。確認済みの料金、ライセンス、保持期間に加え、ClickHouseによる買収と自己ホストにおけるEnterpriseの機能の壁を扱います。',
       datePublished: '2026-08-28',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       url: 'https://www.promptquorum.com/ja/local-llms/best-llm-observability-tools',
       inLanguage: 'ja',
       proficiencyLevel: 'Advanced',
@@ -3464,7 +3500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Heliconeはオープンソースですか？',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'はい。Apache-2.0でGitHubスターは約6,300件です。ただし料金ページはオンプレミス構成をEnterprise段階でのみ販売しており、サポートされた無料の自己ホスト経路は記載されていません。',
+            text: 'はい。Apache-2.0でGitHubスターは約6,300件です。ただし料金ページはオンプレミス構成をEnterprise段階でのみ掲載しています。',
           },
         },
       ],
@@ -3476,7 +3512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ja',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: '総合的に最良 — スター36,900件、自己ホストのコアが無料、フレームワーク対応が最も広い。ただし9機能はEnterprise限定' },
+        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: '当サイトの推奨 — スター36,900件、自己ホストのコアが無料、フレームワーク対応が最も広い。ただし9機能はEnterprise限定' },
         { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'LangChainとLangGraphのチームに最良 — 設定不要のネイティブトレーシング、1席あたり月39ドルとLSU単位の従量課金' },
         { '@type': 'ListItem', position: 3, name: 'Helicone', description: '導入が最速でコスト把握に最良 — Apache-2.0のプロキシ、1行で導入、1万リクエストまで無料、以降は月79ドル' },
         { '@type': 'ListItem', position: 4, name: 'PromptLayer', description: '最も軽量 — プロンプトのバージョン管理とログ、月2,500リクエストまで無料、Proは月49ドル' },
@@ -3496,7 +3532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: '在生产环境运行 LLM 应用的开发者与团队',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     readTime: '约 14 分钟阅读',
     primaryTerm: 'LLM 可观测性工具',
     targetKeywords: [
@@ -3506,7 +3542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '最佳提示词监控工具',
       'Langfuse ClickHouse 收购',
     ],
-    leadAnswerBlock: '**对多数生产团队,Langfuse是最佳默认选择:可免费自托管,框架覆盖广。LangChain和LangGraph技术栈适合LangSmith,每席每月39美元起。Helicone作为代理上手最快,每月79美元起。Langfuse现已隶属于ClickHouse。**',
+    leadAnswerBlock: '**对多数生产团队,我们的默认推荐是Langfuse:可免费自托管,框架覆盖广。LangChain和LangGraph技术栈适合LangSmith,每席每月39美元起。Helicone作为代理上手最快,每月79美元起。Langfuse现已隶属于ClickHouse。**',
     quickAnswerTop: {
       question: '2026 年最好的 LLM 可观测性工具是哪一个？',
       answer: '**要灵活性和自托管选 Langfuse，已经在用 LangChain 选 LangSmith，想一行代码接入并看清成本选 Helicone，只需要提示词版本管理而非完整可观测性则选 PromptLayer。** 这个选择主要是结构性的：LangSmith 与 Langfuse 通过 SDK 对代码做插桩，而 Helicone 作为代理挡在 API 前面，无需插桩即可捕获每一次调用。这一差别决定了你能拿到什么数据。代理看到的是请求与成本；SDK 追踪器看得到多智能体运行内部的推理步骤。',
@@ -3518,7 +3554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**Langfuse 已归属 ClickHouse**——2026 年 1 月 16 日收购，与 4 亿美元 D 轮同步宣布，这关系到产品路线',
         '**四者都可以不用**——若你尚未上生产、每天只有几十次调用，各家厂商的控制台就够了',
       ],
-      updatedDate: '2026-11-02',
+      updatedDate: '2026-11-03',
     },
     toc: [
       { label: '要点速览', anchor: 'tldr' },
@@ -3548,11 +3584,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**Langfuse**——GitHub 星标 3.69 万，是这里开源体量最大的一个。云端 Hobby 免费，每月 5 万单元、30 天数据可查、2 个用户；Core 每月 29 美元，含 10 万单元且用户数不限；Pro 每月 199 美元，保留三年；Enterprise 每月 2499 美元。自托管开源内核免费且不限量。',
-          '**一处值得更正的说法：** Langfuse 常被描述为「MIT 许可、没有功能墙」。但它自己的 README 写着仓库「MIT licensed, except for the `ee` folders」，其自托管定价页更列出九项 Enterprise 专有功能：服务端数据脱敏、按项目 RBAC、保留期管理、SCIM、审计日志等。核心的可观测性与评估确实免费；治理类功能不免费。',
+          '**一处值得更正的说法：** 部分对比文章将 Langfuse 描述为「MIT 许可、没有功能墙」。但它自己的 README 写着仓库「MIT licensed, except for the `ee` folders」，其自托管定价页更列出九项 Enterprise 专有功能：服务端数据脱敏、按项目 RBAC、保留期管理、SCIM、审计日志等。核心的可观测性与评估确实免费；治理类功能不免费。',
           '**Langfuse 已于 2026 年 1 月 16 日被 ClickHouse, Inc. 收购**，与 ClickHouse 的 4 亿美元 D 轮同步宣布。仓库中的 LICENSE 文件现在以「Copyright (c) 2023-2026 ClickHouse, Inc.」开头。这不构成排除 Langfuse 的理由，但在把它定为标准之前，值得花五分钟看看这条路线上的变量。',
           '**LangSmith**——Developer 免费，每月最多 5000 条基础追踪、1 个席位。Plus 每席位每月 39 美元，含最多 1 万条基础追踪，超出后按 LangChain Standard Unit（LSU）按量计费，1 LSU = 1.00 美元。Enterprise 为定制报价，提供自托管与混合部署。',
-          '**Helicone**——是代理而非 SDK，因此接入只需一行，无需插桩即可捕获每一次调用。Hobby 免费，含 1 万次请求、1 GB、7 天保留；Pro 每月 79 美元，席位不限、保留一个月；Team 每月 799 美元，具备 SOC-2 与 HIPAA，保留三个月。',
-          '**Helicone 同样是开源的**，采用 Apache-2.0，星标 6100，这一点多数对比文章都漏掉了。需要区分的是：其定价页只在 Enterprise 层出售本地部署，并未给出受支持的免费自托管路径。源码开放，不等于厂商支持你自己运行。',
+          '**Helicone**——是代理而非 SDK，因此接入只需一行，无需插桩即可捕获每一次调用。Hobby 免费，含 1 万次请求、1 GB、7 天保留；Pro 每月 79 美元，席位不限、保留一个月；Team 每月 799 美元，保留三个月，其定价页列有 SOC-2 与 HIPAA 支持。',
+          '**Helicone 同样是开源的**，采用 Apache-2.0，这一点有些对比文章没有提到。需要区分的是：其定价页只在 Enterprise 层列出本地部署。源码开放，并不说明厂商在你自己运行时提供什么支持。',
           '**PromptLayer**——四者中范围最窄。免费层提供每月 2500 次请求、5 个用户、10 条提示词；Pro 每月 49 美元，超出部分每笔 0.003 美元；Team 每月 500 美元，含 10 万次以上请求与 25 个用户。在 GCP、AWS 或 Azure 上自托管为 Enterprise 专有。',
           '四家均未公开联盟或推荐计划。LangChain 设有 Partner Network，但那是技术集成计划，不是佣金机制。本页所有链接均无报酬。',
         ],
@@ -3630,13 +3666,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 维度: '免费层', Langfuse: '每月 5 万单元，30 天', LangSmith: '每月 5000 追踪，1 席位', Helicone: '1 万次请求，7 天', PromptLayer: '2500 次请求，10 提示词' },
           { 维度: '付费起点', Langfuse: 'Core 每月 29 美元', LangSmith: 'Plus 每席位 39 美元＋用量', Helicone: 'Pro 每月 79 美元', PromptLayer: 'Pro 每月 49 美元' },
           { 维度: '免费自托管', Langfuse: '可以，核心功能', LangSmith: '不可，仅 Enterprise', Helicone: '源码开放但不售卖', PromptLayer: '不可，仅 Enterprise' },
-          { 维度: '合规层级', Langfuse: 'Pro：SOC2、ISO27001、BAA', LangSmith: 'Enterprise', Helicone: 'Team 799 美元：SOC-2、HIPAA', PromptLayer: 'Enterprise' },
+          { 维度: '合规层级', Langfuse: 'Pro：列有 SOC2、ISO27001、BAA', LangSmith: 'Enterprise', Helicone: 'Team 799 美元：列有 SOC-2、HIPAA', PromptLayer: 'Enterprise' },
           { 维度: '联盟计划', Langfuse: '未发现', LangSmith: '未发现', Helicone: '未发现', PromptLayer: '未发现' },
         ],
         callouts: [
           {
             type: 'warning',
-            text: '对比文章经常把 Langfuse 称作「这里唯一的开源选项」。Helicone 采用 Apache-2.0，星标 6100，所以这个说法并不准确。准确的说法是：Langfuse 记录并支持一套免费的自托管部署，而 Helicone 只在 Enterprise 层出售本地部署，其定价页并未描述任何受支持的免费自托管路径。',
+            text: '对比文章经常把 Langfuse 称作「这里唯一的开源选项」。Helicone 采用 Apache-2.0，星标 6300，所以这个说法并不准确。准确的说法是：Langfuse 的定价页与自托管页描述了一套免费的自托管部署，而 Helicone 的定价页只在 Enterprise 层列出本地部署。',
           },
         ],
       },
@@ -3649,7 +3685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Langfuse——综合最优',
             tagline: '3.69 万星标，自托管内核免费，框架覆盖最广',
-            verdict: 'Langfuse 在一个产品里覆盖了可观测性、评估、提示词管理与数据集，集成清单是四者中最长的：原生支持 OpenAI SDK、LangChain、LlamaIndex、Haystack、LiteLLM、Vercel AI SDK、Ollama 与 Amazon Bedrock，另有社区集成。对于混合技术栈——一点 LangChain、几处原始 SDK 调用、检索用 LlamaIndex——这种广度意味着插桩一次即可，而不是按框架各做一遍。云端价格：Hobby 免费，每月 5 万单元、30 天数据可查；Core 每月 29 美元，含 10 万单元且用户数不限；Pro 每月 199 美元，保留三年，并含 SOC2、ISO27001 与面向 HIPAA 的 BAA；Enterprise 每月 2499 美元。超量按阶梯计价，从每 10 万单元 8 美元降至放量后的 6 美元。自托管开源内核免费，用量确实不限。',
+            verdict: 'Langfuse 在一个产品里覆盖了可观测性、评估、提示词管理与数据集，集成清单是四者中最长的：原生支持 OpenAI SDK、LangChain、LlamaIndex、Haystack、LiteLLM、Vercel AI SDK、Ollama 与 Amazon Bedrock，另有社区集成。对于混合技术栈——一点 LangChain、几处原始 SDK 调用、检索用 LlamaIndex——这种广度意味着插桩一次即可，而不是按框架各做一遍。云端价格：Hobby 免费，每月 5 万单元、30 天数据可查；Core 每月 29 美元，含 10 万单元且用户数不限；Pro 每月 199 美元，保留三年（其定价页列有 SOC2 与 ISO27001 报告以及面向 HIPAA 的 BAA）；Enterprise 每月 2499 美元。超量按阶梯计价，从每 10 万单元 8 美元降至放量后的 6 美元。自托管开源内核免费，用量确实不限。',
             pros: [
               '四者中原生框架覆盖最广，混合技术栈插桩一次即可',
               '免费自托管内核且用量不限，可通过 Docker Compose、Kubernetes 或云模板部署',
@@ -3717,7 +3753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Helicone——上手最快，成本可见性最佳',
             tagline: '一行接入的代理，Apache-2.0，1 万次请求内免费，之后每月 79 美元',
-            verdict: '因为 Helicone 是代理，接入就是换个基础 URL，而不是启动一个插桩项目；它默认在每次调用上捕获成本与请求数据，不需要谁去决定追踪什么。这让它成为四者中见效最快的一个，也解释了为什么成本跟踪是它最强的一面：按请求拆解成本、跨多个密钥与模型看清花销，本身就是核心产品，而不是架在追踪之上的报表视图。Hobby 免费，含 1 万次请求、1 GB 存储与 7 天保留；Pro 每月 79 美元，席位不限、保留一个月；Team 每月 799 美元，增加 SOC-2 与 HIPAA 合规以及三个月保留；Enterprise 增加本地部署、SAML 单点登录与不限保留。源码采用 Apache-2.0，星标 6100，尽管定价页只在 Enterprise 层推销本地部署。',
+            verdict: '因为 Helicone 是代理，接入就是换个基础 URL，而不是启动一个插桩项目；它默认在每次调用上捕获成本与请求数据，不需要谁去决定追踪什么。这让它成为四者中见效最快的一个，也解释了为什么成本跟踪是它最强的一面：按请求拆解成本、跨多个密钥与模型看清花销，本身就是核心产品，而不是架在追踪之上的报表视图。Hobby 免费，含 1 万次请求、1 GB 存储与 7 天保留；Pro 每月 79 美元，席位不限、保留一个月；Team 每月 799 美元，增加三个月保留，其定价页列有 SOC-2 与 HIPAA 支持（证明与协议请向厂商索取）；Enterprise 增加本地部署、SAML 单点登录与不限保留。源码采用 Apache-2.0，星标 6300，尽管定价页只在 Enterprise 层推销本地部署。',
             pros: [
               '一行即可接入：无需改写 SDK，适用于任何兼容 OpenAI 的端点',
               '成本跟踪是核心产品，而非次要的报表标签页',
@@ -3751,7 +3787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'PromptLayer——只需要提示词版本管理时最优',
             tagline: '每月 2500 次请求内免费，Pro 每月 49 美元',
-            verdict: 'PromptLayer 专注于保留提示词的带版本历史，并附上使用了这些提示词的请求日志——这是一种真实需求，而且比完整可观测性出现得更早。免费层提供每月 2500 次请求、5 个用户与 10 条提示词。Pro 每月 49 美元，含 5 个用户，超出部分每笔 0.003 美元。Team 每月 500 美元，含 10 万次以上请求、25 个用户，超量更便宜，为每笔 0.002 美元。在 GCP、AWS 或 Azure 上自托管仅存在于定制的 Enterprise 层。它是四者中唯一没有实质开源体量的：其公开仓库是一个星标 800 的客户端库，而不是平台本身。把它当作一个顺带记日志的提示词管理工具，而不是一个也能管提示词的可观测性平台。',
+            verdict: 'PromptLayer 专注于保留提示词的带版本历史，并附上使用了这些提示词的请求日志——这是一种真实需求，而且比完整可观测性出现得更早。免费层提供每月 2500 次请求、5 个用户与 10 条提示词。Pro 每月 49 美元，含 5 个用户，超出部分每笔 0.003 美元。Team 每月 500 美元，含 10 万次以上请求、25 个用户，超量更便宜，为每笔 0.002 美元。在 GCP、AWS 或 Azure 上自托管仅存在于定制的 Enterprise 层。其公开仓库是一个星标 800 的客户端库，而不是平台本身。把它当作一个顺带记日志的提示词管理工具，而不是一个也能管提示词的可观测性平台。',
             pros: [
               '四者中最容易理解、最容易接入',
               '提示词版本管理是一等公民，而非大产品的附带功能',
@@ -3779,7 +3815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       clickhouseAcquisition: {
         id: 'clickhouse-acquisition',
         title: 'ClickHouse 收购对 Langfuse 意味着什么',
-        content: '**ClickHouse, Inc. 于 2026 年 1 月 16 日收购了 Langfuse，与由 Dragoneer 领投的 4 亿美元 D 轮同步宣布。** 该收购当时由 SiliconANGLE 报道，并可在 ClickHouse 官方博客、Langfuse 的 GitHub 讨论以及为此案提供咨询的律所处得到确认。\n\n最直接的证据就在仓库里：LICENSE 文件现在以「Copyright (c) 2023-2026 ClickHouse, Inc.」开头。项目仍在活跃开发，本页核实当天仍有更新。\n\n这桩组合有其内在逻辑。Langfuse 本来就把追踪数据存在 ClickHouse 里，因此买方拥有产品底下那套数据库，并不是一个外行收购者。这个起点比该品类的多数收购要好。但这个变量仍值得一提：收购之后，路线图的优先级会跟随买方的商业利益，而自托管的 Langfuse 如今依赖于一家同时也在卖 ClickHouse Cloud 的公司。Enterprise 版的自托管明确与 ClickHouse Cloud 或 BYOC 绑定，这部分费用是叠加的。',
+        content: '**ClickHouse, Inc. 于 2026 年 1 月 16 日收购了 Langfuse，与由 Dragoneer 领投的 4 亿美元 D 轮同步宣布。** 当时 SiliconANGLE 对该收购作了报道，ClickHouse 官方博客也发布了公告（两者均链接于「来源」）。\n\n最直接的证据就在仓库里：LICENSE 文件现在以「Copyright (c) 2023-2026 ClickHouse, Inc.」开头。项目仍在活跃开发，本页核实当天仍有更新。\n\n这桩组合有其内在逻辑。Langfuse 本来就把追踪数据存在 ClickHouse 里，因此买方拥有产品底下那套数据库，并不是一个外行收购者。这个起点比该品类的多数收购要好。但这个变量仍值得一提：收购之后，路线图的优先级会跟随买方的商业利益，而自托管的 Langfuse 如今依赖于一家同时也在卖 ClickHouse Cloud 的公司。Enterprise 版的自托管明确与 ClickHouse Cloud 或 BYOC 绑定，这部分费用是叠加的。',
         callouts: [
           {
             type: 'note',
@@ -3791,7 +3827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       selfHosting: {
         id: 'self-hosting',
         title: '自托管与 Enterprise 那道墙',
-        content: '**Langfuse 是四者中唯一记录并支持免费自托管部署的，但那句被反复重复的「免费版与付费版之间没有功能墙」是错的。** 它自己的自托管页面把九项能力列为 Enterprise 专有：服务端数据脱敏、按项目 RBAC、数据保留期管理、SCIM 用户预置、组织创建者、界面定制、审计日志、管理与实例管理 API，以及受保护的部署标签。\n\n读这份清单时，想想自托管通常是为谁准备的。团队选择自托管，是为了数据驻留或监管压力，而 RBAC、审计日志与数据脱敏恰恰是受监管团队需要的东西。免费层确实覆盖了可观测性、评估、提示词管理、数据集、追踪与成本跟踪，且用量不限。它没有覆盖的是治理。\n\n另外三者更直白。LangSmith 把自托管限制在定制报价的 Enterprise。PromptLayer 只在 Enterprise 提供 GCP、AWS 或 Azure 上的单租户自托管。Helicone 是个有意思的例子：源码是 Apache-2.0 且公开，但定价页只在 Enterprise 出售本地部署，也没有记录任何受支持的免费自托管路径——在这里，开源与「受支持的自托管」并不是一回事。',
+        content: '**四者之中，只有 Langfuse 的定价页与自托管页描述了免费自托管部署，但那句被反复重复的「免费版与付费版之间没有功能墙」是错的。** 它自己的自托管页面把九项能力列为 Enterprise 专有：服务端数据脱敏、按项目 RBAC、数据保留期管理、SCIM 用户预置、组织创建者、界面定制、审计日志、管理与实例管理 API，以及受保护的部署标签。\n\n读这份清单时，想想自托管通常是为谁准备的。团队选择自托管，是为了数据驻留或监管压力，而 RBAC、审计日志与数据脱敏恰恰是受监管团队需要的东西。免费层确实覆盖了可观测性、评估、提示词管理、数据集、追踪与成本跟踪，且用量不限。它没有覆盖的是治理。\n\n另外三者更直白。LangSmith 把自托管限制在定制报价的 Enterprise。PromptLayer 只在 Enterprise 提供 GCP、AWS 或 Azure 上的单租户自托管。Helicone 是个有意思的例子：源码是 Apache-2.0 且公开，但定价页只在 Enterprise 层列出本地部署——在这里，开源与「厂商支持的自托管」并不是一回事。',
         callouts: [
           {
             type: 'warning',
@@ -3813,7 +3849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 层级: '付费起点', Langfuse: 'Core 每月 29 美元', LangSmith: 'Plus 每席位每月 39 美元', Helicone: 'Pro 每月 79 美元', PromptLayer: 'Pro 每月 49 美元' },
           { 层级: '用量计费', Langfuse: '每 10 万单元 8 美元，阶梯', LangSmith: '按 LSU 计费，1 LSU = 1.00 美元', Helicone: '超出免费额度按量计费', PromptLayer: '每笔 0.003 美元' },
           { 层级: '中间层', Langfuse: 'Pro 每月 199 美元，保留 3 年', LangSmith: 'Enterprise 定制', Helicone: 'Team 每月 799 美元', PromptLayer: 'Team 每月 500 美元' },
-          { 层级: '合规', Langfuse: 'Pro：SOC2、ISO27001、BAA', LangSmith: 'Enterprise', Helicone: 'Team：SOC-2、HIPAA', PromptLayer: 'Enterprise' },
+          { 层级: '合规', Langfuse: 'Pro：列有 SOC2、ISO27001、BAA', LangSmith: 'Enterprise', Helicone: 'Team：列有 SOC-2、HIPAA', PromptLayer: 'Enterprise' },
           { 层级: '自托管成本', Langfuse: '核心功能免费', LangSmith: '仅 Enterprise', Helicone: '仅 Enterprise', PromptLayer: '仅 Enterprise' },
         ],
         callouts: [
@@ -3839,7 +3875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**想自己掌控数据驻留的小团队** → 自托管 Langfuse；若需要 RBAC 或审计日志，先核对 Enterprise 清单。',
           '**每天超过 1 万次调用、且不用 LangChain 的团队** → Langfuse Cloud 或 Helicone。LangSmith 的优势对你不成立，但它的按量计费会照常生效。',
           '**痛点是 API 成本失控的团队** → 每月 79 美元的 Helicone Pro，成本跟踪就是产品本身。',
-          '**需要 SOC-2 或 HIPAA 的受监管行业** → 每月 799 美元的 Helicone Team，或每月 199 美元、含 SOC2、ISO27001 与 BAA 的 Langfuse Pro。',
+          '**需要 SOC-2 或 HIPAA 的受监管行业** → 每月 799 美元的 Helicone Team，或每月 199 美元的 Langfuse Pro；两家的定价页分别列有 SOC-2 与 HIPAA 支持、SOC2、ISO27001 与 BAA。请向厂商索取当前的报告与协议。',
           '**只需要提示词版本控制的团队** → PromptLayer 免费层或 Pro，等回归测试成为必需时再重新评估。',
         ],
       },
@@ -3847,21 +3883,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'regional-context',
         title: '欧盟、日本与中国的可观测性',
         content: '可观测性的追踪数据里装着完整的提示词与响应，也就是说装着用户输入的内容。这让「托管还是自托管」在三个重要市场变成了数据保护问题。',
+        callouts: [
+          {
+            type: 'note',
+            text: '本节为一般性信息,不构成法律建议。请就合法性依据、委托处理协议与跨境传输向数据保护负责人或律师确认。',
+          },
+        ],
         subsections: [
           {
             title: '欧盟',
-            content: '追踪存储会原样保留用户输入，因此在 GDPR 之下这与其他处理并无二致；而一家位于美国的托管可观测性厂商接收这些追踪，除非其条款与基础设施另有安排，否则构成第 44 至 49 条意义上的传输。你需要与所采用的平台签订第 28 条的处理者合同。这也是在欧盟选择自托管 Langfuse 最有力的现实理由，因为追踪从不离开你的基础设施——但要注意，能让你在存储前剥离个人数据的服务端数据脱敏，正属于 Enterprise 保留的能力之一。法国 CNIL 建议敏感业务数据本地处理，指向的是同一个方向。',
+            content: '追踪存储会原样保留用户输入，因此在 GDPR 之下这与其他处理并无二致；而一家位于美国的托管可观测性厂商接收这些追踪，除非其条款与基础设施另有安排，否则构成第 44 至 49 条意义上的传输。你需要与所采用的平台签订第 28 条的处理者合同。这也是在欧盟选择自托管 Langfuse 最有力的现实理由，因为追踪从不离开你的基础设施——但要注意，能让你在存储前剥离个人数据的服务端数据脱敏，正属于 Enterprise 保留的能力之一。',
           },
           {
             title: '日本',
-            content: '日本经济产业省的人工智能治理工作正推动企业走向可审计的数据路径，而可观测性正是这条审计轨迹的实际所在——它就是系统做了什么的记录。于是保留窗口成了治理问题而非便利问题：Helicone 免费层保留 7 天，Langfuse Hobby 给 30 天可查，都短于多数审计的预期。如果你需要在数月之后重建行为，请把预算放在有实质保留期的层级上，或者通过自托管自己掌控。Langfuse Pro 的三年，是这里公布的最长保留期。',
+            content: '可观测性正是审计轨迹的实际所在——它就是系统做了什么的记录。于是保留窗口成了治理问题而非便利问题：Helicone 免费层保留 7 天，Langfuse Hobby 给 30 天可查，请对照自身的审计要求核对。如果你需要在数月之后重建行为，请把预算放在有实质保留期的层级上，或者通过自托管自己掌控。Langfuse Pro 的三年，是这里公布的最长保留期。',
           },
           {
             title: '中国',
-            content: '在《数据安全法》与网信办的跨境传输规则之下，合规问题在于把由内地用户流量构成的追踪数据发往境外可观测性厂商，而不在于可观测性本身。面向内地团队的部署通常要求追踪存储落在境内基础设施上。自托管 Langfuse 是可行路径，因为它是四者中唯一有文档记载的免费自托管部署——数据驻留的整体图景，见[在中国运行本地 LLM](/zh/local-llms/deepseek-local-china-data-privacy-2026)。',
+            content: '在《数据安全法》与网信办的跨境传输规则之下，合规问题在于把由内地用户流量构成的追踪数据发往境外可观测性厂商，而不在于可观测性本身。面向内地团队的部署通常要求追踪存储落在境内基础设施上。自托管 Langfuse 是可行路径，因为其定价页与自托管页描述了免费自托管部署——数据驻留的整体图景，见[在中国运行本地 LLM](/zh/local-llms/deepseek-local-china-data-privacy-2026)。',
           },
         ],
-        note: '在任何提示词与响应不得离开司法辖区的市场，都请自托管追踪存储。四者之中，只有 Langfuse 的这条路是免费且有文档的。',
+        note: '在任何提示词与响应不得离开司法辖区的市场，都请自托管追踪存储。Langfuse 的定价页与自托管页将这条路描述为免费。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -3873,7 +3915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '把 Langfuse 说成唯一的开源选项',
-            whyItMatters: 'Helicone 采用 Apache-2.0，星标 6100。准确的区分是：Langfuse 记录了一套受支持的免费自托管部署，而 Helicone 在 Enterprise 层出售本地部署——而不是一个开源、一个闭源。',
+            whyItMatters: 'Helicone 采用 Apache-2.0，星标 6300。准确的区分是：Langfuse 的页面描述了一套免费自托管部署，而 Helicone 的定价页在 Enterprise 层列出本地部署——而不是一个开源、一个闭源。',
           },
           {
             title: '把 LangSmith 每席位 39 美元当成账单全部',
@@ -3926,7 +3968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Helicone 是开源的吗？',
-            a: '是的，采用 Apache-2.0，GitHub 星标约 6100，这一点该品类的许多对比文章都漏掉了。需要区分的是：Helicone 的定价页只在 Enterprise 层出售本地部署，并未记录任何受支持的免费自托管路径——源码开放并不等于厂商支持你自己运行。',
+            a: '是的，采用 Apache-2.0，GitHub 星标约 6300，这一点该品类的许多对比文章都漏掉了。需要区分的是：Helicone 的定价页只在 Enterprise 层列出本地部署——源码开放并不说明厂商在你自己运行时提供什么支持。',
           },
           {
             q: '这些厂商有联盟计划吗？',
@@ -3983,7 +4025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026年最佳 LLM 可观测性工具：Langfuse、LangSmith 还是 Helicone',
       description: '对比 Langfuse、LangSmith、Helicone 与 PromptLayer 的 LLM 可观测性能力，包含核实过的价格、许可证与保留窗口，以及 ClickHouse 收购和自托管中的 Enterprise 功能墙。',
       datePublished: '2026-08-28',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       url: 'https://www.promptquorum.com/zh/local-llms/best-llm-observability-tools',
       inLanguage: 'zh',
       proficiencyLevel: 'Advanced',
@@ -4043,7 +4085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Helicone 是开源的吗？',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: '是的，采用 Apache-2.0，GitHub 星标约 6100。不过其定价页只在 Enterprise 层出售本地部署，并未记录任何受支持的免费自托管路径。',
+            text: '是的，采用 Apache-2.0，GitHub 星标约 6300。不过其定价页只在 Enterprise 层列出本地部署。',
           },
         },
       ],
@@ -4055,7 +4097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'zh',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: '综合最优——3.69 万星标，自托管内核免费，框架覆盖最广，但有九项功能为 Enterprise 专有' },
+        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: '我们的推荐——3.69 万星标，自托管内核免费，框架覆盖最广，但有九项功能为 Enterprise 专有' },
         { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'LangChain 与 LangGraph 团队最优——无需配置的原生追踪，每席位每月 39 美元加按 LSU 计的按量计费' },
         { '@type': 'ListItem', position: 3, name: 'Helicone', description: '上手最快且成本可见性最佳——Apache-2.0 代理，一行接入，1 万次请求内免费，之后每月 79 美元' },
         { '@type': 'ListItem', position: 4, name: 'PromptLayer', description: '最轻量——提示词版本管理与日志，每月 2500 次请求内免费，Pro 每月 49 美元' },
@@ -4075,7 +4117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'المطورون والفرق التي تشغّل تطبيقات نماذج اللغة الكبيرة في بيئة الإنتاج',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     readTime: 'قراءة 14 دقيقة',
     primaryTerm: 'أداة مراقبة نماذج اللغة الكبيرة',
     targetKeywords: [
@@ -4085,7 +4127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'أفضل أداة لمراقبة المطالبات',
       'استحواذ ClickHouse على Langfuse',
     ],
-    leadAnswerBlock: '**Langfuse هو الخيار الافتراضي الأفضل لمعظم فرق الإنتاج: استضافة ذاتية مجانية وتغطية واسعة للأطر. يناسب LangSmith حزم LangChain وLangGraph، من 39 دولاراً للمقعد شهرياً. وHelicone الأسرع اعتماداً لأنه وكيل (proxy)، من 79 دولاراً شهرياً. وأصبح Langfuse تابعاً لـ ClickHouse.**',
+    leadAnswerBlock: '**توصيتنا الافتراضية لمعظم فرق الإنتاج هي Langfuse: استضافة ذاتية مجانية وتغطية واسعة للأطر. يناسب LangSmith حزم LangChain وLangGraph، من 39 دولاراً للمقعد شهرياً. وHelicone الأسرع اعتماداً لأنه وكيل (proxy)، من 79 دولاراً شهرياً. وأصبح Langfuse تابعاً لـ ClickHouse.**',
     quickAnswerTop: {
       question: 'ما أفضل أداة لمراقبة نماذج اللغة الكبيرة في 2026؟',
       answer: '**‏Langfuse للمرونة والاستضافة الذاتية، وLangSmith إن كنت أصلًا على LangChain، وHelicone لوضوح التكاليف بتكامل من سطر واحد، وPromptLayer فقط إن كنت تحتاج إلى إدارة إصدارات المطالبات لا إلى مراقبة كاملة.** القرار بنيوي في جوهره: يعتمد LangSmith وLangfuse على حزمة تطوير تُجهّز شيفرتك، بينما يقف Helicone أمام الواجهة البرمجية بوصفه وكيلًا فيلتقط كل نداء دون أي تجهيز. هذا الفارق يحدد البيانات التي تحصل عليها. الوكيل يرى الطلبات والتكاليف؛ أما متتبّع حزمة التطوير فيرى خطوات الاستدلال داخل تشغيلة متعددة الوكلاء.',
@@ -4097,7 +4139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**‏Langfuse صار ملكًا لـ ClickHouse** — استحواذ في 16 يناير 2026 أُعلن مع جولة تمويل من الفئة D بقيمة 400 مليون دولار، وهو ما يهمّ خارطة الطريق',
         '**استغنِ عن الأربعة جميعًا** إن كنت قبل مرحلة الإنتاج بعشرات النداءات يوميًا: لوحات المزوّدين تكفي',
       ],
-      updatedDate: '2026-11-02',
+      updatedDate: '2026-11-03',
     },
     toc: [
       { label: 'أبرز النقاط', anchor: 'tldr' },
@@ -4127,11 +4169,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**‏Langfuse** — 36.9 ألف نجمة على GitHub، وهو الأكبر حضورًا في المصادر المفتوحة هنا. خطة Hobby السحابية مجانية بـ 50 ألف وحدة شهريًا و30 يومًا للوصول إلى البيانات ومستخدمَين؛ وCore بـ 29 دولارًا شهريًا مع 100 ألف وحدة ومستخدمين بلا حد؛ وPro بـ 199 دولارًا شهريًا مع احتفاظ لثلاث سنوات؛ وEnterprise بـ 2499 دولارًا شهريًا. أما استضافة النواة مفتوحة المصدر ذاتيًا فمجانية وبلا حدود.',
-          '**تصحيح يستحق الإيراد:** يُوصف Langfuse على نطاق واسع بأنه مرخّص بـ MIT دون أي جدار للميزات. لكن ملف README الخاص به يقول إن المستودع «MIT licensed, except for the `ee` folders»، وصفحة الاستضافة الذاتية تُدرج تسع ميزات حصرية لمستوى Enterprise: إخفاء البيانات على الخادم، والتحكم بالصلاحيات على مستوى المشروع، وإدارة مدة الاحتفاظ، وSCIM، وسجلات التدقيق وغيرها. المراقبة والتقييمات الأساسية مجانية فعلًا؛ أما ميزات الحوكمة فلا.',
+          '**تصحيح يستحق الإيراد:** بعض المقارنات تصف Langfuse بأنه مرخّص بـ MIT دون أي جدار للميزات. لكن ملف README الخاص به يقول إن المستودع «MIT licensed, except for the `ee` folders»، وصفحة الاستضافة الذاتية تُدرج تسع ميزات حصرية لمستوى Enterprise: إخفاء البيانات على الخادم، والتحكم بالصلاحيات على مستوى المشروع، وإدارة مدة الاحتفاظ، وSCIM، وسجلات التدقيق وغيرها. المراقبة والتقييمات الأساسية مجانية فعلًا؛ أما ميزات الحوكمة فلا.',
           '**استحوذت ClickHouse, Inc. على Langfuse في 16 يناير 2026**، وأُعلن ذلك مع جولة التمويل من الفئة D بقيمة 400 مليون دولار. وملف LICENSE في المستودع صار يبدأ بعبارة «Copyright (c) 2023-2026 ClickHouse, Inc.». هذا ليس سببًا لاستبعاد Langfuse، لكنه اعتبار يخصّ خارطة الطريق ويستحق خمس دقائق قبل اعتماده معيارًا.',
           '**‏LangSmith** — مستوى Developer مجاني بحد أقصى 5000 تتبّع أساسي شهريًا ومقعد واحد. وPlus بـ 39 دولارًا للمقعد شهريًا بحد أقصى 10 آلاف تتبّع أساسي، ثم فوترة بالاستهلاك بوحدات LangChain Standard Units (LSU)، بواقع 1.00 دولار لكل وحدة. وEnterprise بسعر مخصص مع خيارات للاستضافة الذاتية والهجينة.',
-          '**‏Helicone** — وكيل بدل حزمة تطوير، فالتكامل سطر واحد ويلتقط كل نداء دون تجهيز. خطة Hobby مجانية بـ 10 آلاف طلب و1 غيغابايت واحتفاظ 7 أيام؛ وPro بـ 79 دولارًا شهريًا بمقاعد بلا حد واحتفاظ شهر واحد؛ وTeam بـ 799 دولارًا شهريًا مع SOC-2 وHIPAA واحتفاظ ثلاثة أشهر.',
-          '**‏Helicone مفتوح المصدر أيضًا**، برخصة Apache-2.0 و6.3 ألف نجمة، وهو ما تغفله معظم المقارنات. والفارق الدقيق أن صفحة أسعاره تبيع النشر داخل المؤسسة في مستوى Enterprise فقط ولا توثّق أي مسار مجاني مدعوم للاستضافة الذاتية. فكون الشيفرة مفتوحة لا يعني هنا أن المزوّد يدعم تشغيلك لها بنفسك.',
+          '**‏Helicone** — وكيل بدل حزمة تطوير، فالتكامل سطر واحد ويلتقط كل نداء دون تجهيز. خطة Hobby مجانية بـ 10 آلاف طلب و1 غيغابايت واحتفاظ 7 أيام؛ وPro بـ 79 دولارًا شهريًا بمقاعد بلا حد واحتفاظ شهر واحد؛ وTeam بـ 799 دولارًا شهريًا مع احتفاظ ثلاثة أشهر، وتذكر صفحة أسعاره دعم SOC-2 وHIPAA.',
+          '**‏Helicone مفتوح المصدر أيضًا**، برخصة Apache-2.0، وهو ما تغفله بعض المقارنات. والفارق الدقيق أن صفحة أسعاره تدرج النشر داخل المؤسسة في مستوى Enterprise فقط. فكون الشيفرة مفتوحة لا يبيّن نوع الدعم الذي يقدمه المزوّد إذا شغّلتها بنفسك.',
           '**‏PromptLayer** — الأضيق نطاقًا بين الأربعة. المستوى المجاني يمنح 2500 طلب شهريًا و5 مستخدمين و10 مطالبات؛ وPro بـ 49 دولارًا شهريًا مع 0.003 دولار لكل عملية تتجاوز الحد؛ وTeam بـ 500 دولار شهريًا مع أكثر من 100 ألف طلب و25 مستخدمًا. والاستضافة الذاتية على GCP أو AWS أو Azure حصرية لمستوى Enterprise.',
           'لا ينشر أيٌّ من الأربعة برنامج عمولة أو إحالة. وتدير LangChain شبكة شركاء، لكنها برنامج تكامل تقني لا نظام عمولات. وجميع الروابط في هذه الصفحة غير مدفوعة.',
         ],
@@ -4209,13 +4251,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { المعيار: 'المستوى المجاني', Langfuse: '50 ألف وحدة شهريًا، 30 يومًا', LangSmith: '5000 تتبّع شهريًا، مقعد', Helicone: '10 آلاف طلب، 7 أيام', PromptLayer: '2500 طلب، 10 مطالبات' },
           { المعيار: 'بداية المدفوع', Langfuse: 'Core 29 دولارًا شهريًا', LangSmith: 'Plus 39 دولارًا للمقعد + استهلاك', Helicone: 'Pro 79 دولارًا شهريًا', PromptLayer: 'Pro 49 دولارًا شهريًا' },
           { المعيار: 'استضافة ذاتية مجانية', Langfuse: 'نعم، الميزات الأساسية', LangSmith: 'لا، Enterprise فقط', Helicone: 'الشيفرة مفتوحة وغير مُباعة', PromptLayer: 'لا، Enterprise فقط' },
-          { المعيار: 'مستوى الامتثال', Langfuse: 'Pro: SOC2 وISO27001 وBAA', LangSmith: 'Enterprise', Helicone: 'Team 799: SOC-2 وHIPAA', PromptLayer: 'Enterprise' },
+          { المعيار: 'مستوى الامتثال', Langfuse: 'Pro: يذكر SOC2 وISO27001 وBAA', LangSmith: 'Enterprise', Helicone: 'Team 799: يذكر SOC-2 وHIPAA', PromptLayer: 'Enterprise' },
           { المعيار: 'برنامج عمولة', Langfuse: 'لم يُعثر عليه', LangSmith: 'لم يُعثر عليه', Helicone: 'لم يُعثر عليه', PromptLayer: 'لم يُعثر عليه' },
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'تصف المقارنات Langfuse بانتظام بأنه «الخيار المفتوح المصدر الوحيد هنا». وHelicone مرخّص بـ Apache-2.0 وله 6.3 ألف نجمة، فالوصف غير دقيق. والدقيق أن Langfuse يوثّق ويدعم نشرًا ذاتيًا مجانيًا، بينما يبيع Helicone النشر داخل المؤسسة في مستوى Enterprise فقط ولا يصف أي مسار مجاني مدعوم للاستضافة الذاتية في صفحة أسعاره.',
+            text: 'تصف المقارنات Langfuse بانتظام بأنه «الخيار المفتوح المصدر الوحيد هنا». وHelicone مرخّص بـ Apache-2.0 وله 6.3 ألف نجمة، فالوصف غير دقيق. والدقيق أن صفحتي الأسعار والاستضافة الذاتية لدى Langfuse تصفان نشرًا ذاتيًا مجانيًا، بينما تدرج صفحة أسعار Helicone النشر داخل المؤسسة في مستوى Enterprise فقط.',
           },
         ],
       },
@@ -4228,7 +4270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: '‏Langfuse — الأفضل إجمالًا',
             tagline: '36.9 ألف نجمة، نواة مجانية للاستضافة الذاتية، أوسع تغطية لأطر العمل',
-            verdict: 'يغطي Langfuse المراقبة والتقييمات وإدارة المطالبات ومجموعات البيانات في منتج واحد، وقائمة تكاملاته هي الأطول بين الأربعة: حزمة OpenAI وLangChain وLlamaIndex وHaystack وLiteLLM وحزمة Vercel AI وOllama وAmazon Bedrock بصورة أصلية، إضافة إلى تكاملات من المجتمع. ولمنظومة مختلطة — شيء من LangChain، وبعض نداءات الحزمة المباشرة، وLlamaIndex للاسترجاع — يعني هذا الاتساع أن تجهّز مرة واحدة بدل التجهيز لكل إطار على حدة. أما أسعار السحابة فهي: Hobby مجانية بـ 50 ألف وحدة شهريًا و30 يومًا للوصول إلى البيانات، وCore بـ 29 دولارًا شهريًا مع 100 ألف وحدة ومستخدمين بلا حد، وPro بـ 199 دولارًا شهريًا مع احتفاظ لثلاث سنوات إضافة إلى SOC2 وISO27001 واتفاقية شريك أعمال لأغراض HIPAA، وEnterprise بـ 2499 دولارًا شهريًا. والتجاوز متدرّج، من 8 دولارات لكل 100 ألف وحدة نزولًا إلى 6 دولارات عند الحجم الكبير. واستضافة النواة مفتوحة المصدر ذاتيًا مجانية وبلا حد فعلي في الاستخدام.',
+            verdict: 'يغطي Langfuse المراقبة والتقييمات وإدارة المطالبات ومجموعات البيانات في منتج واحد، وقائمة تكاملاته هي الأطول بين الأربعة: حزمة OpenAI وLangChain وLlamaIndex وHaystack وLiteLLM وحزمة Vercel AI وOllama وAmazon Bedrock بصورة أصلية، إضافة إلى تكاملات من المجتمع. ولمنظومة مختلطة — شيء من LangChain، وبعض نداءات الحزمة المباشرة، وLlamaIndex للاسترجاع — يعني هذا الاتساع أن تجهّز مرة واحدة بدل التجهيز لكل إطار على حدة. أما أسعار السحابة فهي: Hobby مجانية بـ 50 ألف وحدة شهريًا و30 يومًا للوصول إلى البيانات، وCore بـ 29 دولارًا شهريًا مع 100 ألف وحدة ومستخدمين بلا حد، وPro بـ 199 دولارًا شهريًا مع احتفاظ لثلاث سنوات (تذكر صفحة أسعاره تقارير SOC2 وISO27001 واتفاقية شريك أعمال لأغراض HIPAA)، وEnterprise بـ 2499 دولارًا شهريًا. والتجاوز متدرّج، من 8 دولارات لكل 100 ألف وحدة نزولًا إلى 6 دولارات عند الحجم الكبير. واستضافة النواة مفتوحة المصدر ذاتيًا مجانية وبلا حد فعلي في الاستخدام.',
             pros: [
               'أوسع تغطية أصلية لأطر العمل بين الأربعة، فالمنظومة المختلطة تُجهَّز مرة واحدة',
               'نواة مجانية للاستضافة الذاتية بلا حد للاستخدام، تُنشر عبر Docker Compose أو Kubernetes أو قوالب سحابية',
@@ -4296,7 +4338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: '‏Helicone — الأسرع تبنّيًا والأفضل لوضوح التكاليف',
             tagline: 'تكامل وكيل من سطر واحد، Apache-2.0، مجاني حتى 10 آلاف طلب ثم 79 دولارًا شهريًا',
-            verdict: 'لأن Helicone وكيل، فإن تبنّيه يعني تغيير عنوان الأساس لا إطلاق مشروع تجهيز، وهو يلتقط بيانات التكلفة والطلب في كل نداء افتراضيًا دون أن يقرر أحد ما الذي يُتتبَّع. وهذا يجعله الأسرع بين الأربعة في تحقيق قيمة، ويفسّر لماذا تتبّع التكاليف أقوى جوانبه: فتفصيل التكلفة لكل طلب ووضوح الإنفاق عبر مفاتيح ونماذج كثيرة هما المنتج الأساسي لا واجهة تقارير موضوعة فوق التتبّع. خطة Hobby مجانية بـ 10 آلاف طلب و1 غيغابايت تخزينًا واحتفاظ 7 أيام؛ وPro بـ 79 دولارًا شهريًا بمقاعد بلا حد واحتفاظ شهر؛ وTeam بـ 799 دولارًا شهريًا تضيف امتثال SOC-2 وHIPAA واحتفاظ ثلاثة أشهر؛ وEnterprise يضيف النشر داخل المؤسسة والدخول الموحّد عبر SAML واحتفاظًا بلا حد. والشيفرة مرخّصة بـ Apache-2.0 ولها 6.3 ألف نجمة، وإن كانت صفحة الأسعار تسوّق النشر داخل المؤسسة في مستوى Enterprise فقط.',
+            verdict: 'لأن Helicone وكيل، فإن تبنّيه يعني تغيير عنوان الأساس لا إطلاق مشروع تجهيز، وهو يلتقط بيانات التكلفة والطلب في كل نداء افتراضيًا دون أن يقرر أحد ما الذي يُتتبَّع. وهذا يجعله الأسرع بين الأربعة في تحقيق قيمة، ويفسّر لماذا تتبّع التكاليف أقوى جوانبه: فتفصيل التكلفة لكل طلب ووضوح الإنفاق عبر مفاتيح ونماذج كثيرة هما المنتج الأساسي لا واجهة تقارير موضوعة فوق التتبّع. خطة Hobby مجانية بـ 10 آلاف طلب و1 غيغابايت تخزينًا واحتفاظ 7 أيام؛ وPro بـ 79 دولارًا شهريًا بمقاعد بلا حد واحتفاظ شهر؛ وTeam بـ 799 دولارًا شهريًا تضيف احتفاظ ثلاثة أشهر، وتذكر صفحة أسعاره دعم SOC-2 وHIPAA (اطلب الشهادات والاتفاقيات من المزوّد)؛ وEnterprise يضيف النشر داخل المؤسسة والدخول الموحّد عبر SAML واحتفاظًا بلا حد. والشيفرة مرخّصة بـ Apache-2.0 ولها 6.3 ألف نجمة، وإن كانت صفحة الأسعار تسوّق النشر داخل المؤسسة في مستوى Enterprise فقط.',
             pros: [
               'سطر واحد للتكامل: بلا إعادة كتابة للحزمة، ويعمل مع أي نقطة نهاية متوافقة مع OpenAI',
               'تتبّع التكاليف هو المنتج الأساسي لا تبويب تقارير ثانوي',
@@ -4330,7 +4372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: '‏PromptLayer — الأفضل حين تحتاج إلى إدارة إصدارات المطالبات فقط',
             tagline: 'مجاني حتى 2500 طلب شهريًا، وPro بـ 49 دولارًا شهريًا',
-            verdict: 'يركّز PromptLayer على حفظ سجل مُصدَّر لمطالباتك مع سجل للطلبات التي استخدمتها، وهي حاجة حقيقية تظهر قبل المراقبة الكاملة. المستوى المجاني يمنح 2500 طلب شهريًا و5 مستخدمين و10 مطالبات. وPro بـ 49 دولارًا شهريًا مع 5 مستخدمين وتجاوز بـ 0.003 دولار لكل عملية. وTeam بـ 500 دولار شهريًا مع أكثر من 100 ألف طلب و25 مستخدمًا وتجاوز أرخص عند 0.002 دولار. والاستضافة الذاتية على GCP أو AWS أو Azure لا توجد إلا في Enterprise المخصص. وهو الوحيد بين الأربعة بلا حضور يُذكر في المصادر المفتوحة: فالمستودع العام مكتبة عميل بـ 0.8 ألف نجمة لا المنصة نفسها. تعامل معه بوصفه أداة لإدارة المطالبات تسجّل أيضًا، لا منصة مراقبة تدير المطالبات كذلك.',
+            verdict: 'يركّز PromptLayer على حفظ سجل مُصدَّر لمطالباتك مع سجل للطلبات التي استخدمتها، وهي حاجة حقيقية تظهر قبل المراقبة الكاملة. المستوى المجاني يمنح 2500 طلب شهريًا و5 مستخدمين و10 مطالبات. وPro بـ 49 دولارًا شهريًا مع 5 مستخدمين وتجاوز بـ 0.003 دولار لكل عملية. وTeam بـ 500 دولار شهريًا مع أكثر من 100 ألف طلب و25 مستخدمًا وتجاوز أرخص عند 0.002 دولار. والاستضافة الذاتية على GCP أو AWS أو Azure لا توجد إلا في Enterprise المخصص. والمستودع العام مكتبة عميل بـ 0.8 ألف نجمة لا المنصة نفسها. تعامل معه بوصفه أداة لإدارة المطالبات تسجّل أيضًا، لا منصة مراقبة تدير المطالبات كذلك.',
             pros: [
               'الأسهل فهمًا وتبنّيًا بين الأربعة',
               'إدارة إصدارات المطالبات مواطن من الدرجة الأولى لا ميزة جانبية في منتج أكبر',
@@ -4358,7 +4400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       clickhouseAcquisition: {
         id: 'clickhouse-acquisition',
         title: 'ماذا يعني استحواذ ClickHouse بالنسبة إلى Langfuse',
-        content: '**استحوذت ClickHouse, Inc. على Langfuse في 16 يناير 2026، وأُعلن ذلك مع جولة التمويل من الفئة D بقيمة 400 مليون دولار التي قادتها Dragoneer.** ونقل الخبر حينها موقع SiliconANGLE، ويمكن التحقق منه في مدونة ClickHouse الرسمية، وفي نقاش على GitHub لدى Langfuse، ولدى مكتب المحاماة الذي قدّم الاستشارة في الصفقة.\n\nوأوضح دليل موجود في المستودع نفسه: ملف LICENSE صار يبدأ بعبارة «Copyright (c) 2023-2026 ClickHouse, Inc.». والمشروع لا يزال قيد تطوير نشط، وقد تلقى تعديلات في اليوم الذي جرى فيه التحقق من هذه الصفحة.\n\nوثمة منطق متماسك هنا. فقد كان Langfuse أصلًا يخزّن تتبّعاته في ClickHouse، أي إن المشتري يملك قاعدة البيانات التي يقوم عليها المنتج، وليس مستحوذًا غريبًا عن المجال. وهذه نقطة انطلاق أفضل من معظم عمليات الاستحواذ في هذه الفئة. ومع ذلك يستحق الاعتبار الذكر: فبعد الاستحواذ تتبع أولويات خارطة الطريق مصلحة المشتري التجارية، وصار Langfuse المستضاف ذاتيًا معتمدًا على شركة تبيع كذلك ClickHouse Cloud. كما أن نسخة Enterprise للاستضافة الذاتية مرتبطة صراحةً بـ ClickHouse Cloud أو بنموذج BYOC، وتكاليف ذلك تُضاف فوق ما سبق.',
+        content: '**استحوذت ClickHouse, Inc. على Langfuse في 16 يناير 2026، وأُعلن ذلك مع جولة التمويل من الفئة D بقيمة 400 مليون دولار التي قادتها Dragoneer.** نشرت SiliconANGLE خبر الاستحواذ حينها، وأُعلن عنه في مدونة ClickHouse الرسمية (والمصدران مرتبطان في قسم المصادر).\n\nوأوضح دليل موجود في المستودع نفسه: ملف LICENSE صار يبدأ بعبارة «Copyright (c) 2023-2026 ClickHouse, Inc.». والمشروع لا يزال قيد تطوير نشط، وقد تلقى تعديلات في اليوم الذي جرى فيه التحقق من هذه الصفحة.\n\nوثمة منطق متماسك هنا. فقد كان Langfuse أصلًا يخزّن تتبّعاته في ClickHouse، أي إن المشتري يملك قاعدة البيانات التي يقوم عليها المنتج، وليس مستحوذًا غريبًا عن المجال. وهذه نقطة انطلاق أفضل من معظم عمليات الاستحواذ في هذه الفئة. ومع ذلك يستحق الاعتبار الذكر: فبعد الاستحواذ تتبع أولويات خارطة الطريق مصلحة المشتري التجارية، وصار Langfuse المستضاف ذاتيًا معتمدًا على شركة تبيع كذلك ClickHouse Cloud. كما أن نسخة Enterprise للاستضافة الذاتية مرتبطة صراحةً بـ ClickHouse Cloud أو بنموذج BYOC، وتكاليف ذلك تُضاف فوق ما سبق.',
         callouts: [
           {
             type: 'note',
@@ -4370,7 +4412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       selfHosting: {
         id: 'self-hosting',
         title: 'الاستضافة الذاتية وجدار Enterprise',
-        content: '**‏Langfuse هو الوحيد بين الأربعة الذي يوثّق ويدعم نشرًا ذاتيًا مجانيًا، لكن المقولة المكررة بأنه لا يوجد جدار ميزات بين المجاني والمدفوع مقولة خاطئة.** فصفحة الاستضافة الذاتية الخاصة به تُدرج تسع قدرات بوصفها حصرية لمستوى Enterprise: إخفاء البيانات على الخادم، والتحكم بالصلاحيات على مستوى المشروع، وإدارة مدة الاحتفاظ بالبيانات، وتزويد المستخدمين عبر SCIM، ومنشئو المؤسسات، وتخصيص الواجهة، وسجلات التدقيق، وواجهات إدارة النظام والنسخة، وعلامات النشر المحمية.\n\nاقرأ هذه القائمة وأنت تفكر فيمن تُوجَّه إليه الاستضافة الذاتية عادةً. الفرق تستضيف ذاتيًا بدافع مقر البيانات أو الضغط التنظيمي، والتحكم بالصلاحيات وسجلات التدقيق وإخفاء البيانات هي بالضبط ما يحتاجه فريق خاضع للتنظيم. المستوى المجاني يغطي فعلًا المراقبة والتقييمات وإدارة المطالبات ومجموعات البيانات والتتبّع وتتبّع التكاليف بلا حد للاستخدام. وما لا يغطيه هو الحوكمة.\n\nأما الثلاثة الأخرى فأكثر مباشرة. يقصر LangSmith الاستضافة الذاتية على Enterprise بسعر مخصص. ويوفّر PromptLayer استضافة ذاتية أحادية المستأجر على GCP أو AWS أو Azure في Enterprise فقط. وHelicone هو الحالة اللافتة: فالشيفرة مرخّصة بـ Apache-2.0 وعلنية، لكن صفحة الأسعار تبيع النشر داخل المؤسسة في Enterprise فقط ولا توثّق أي مسار مجاني مدعوم للاستضافة الذاتية — فكون المشروع مفتوح المصدر لا يعني هنا وجود استضافة ذاتية مدعومة.',
+        content: '**من بين الأربعة، Langfuse هو الذي تصف صفحتا الأسعار والاستضافة الذاتية لديه نشرًا ذاتيًا مجانيًا، لكن المقولة المكررة بأنه لا يوجد جدار ميزات بين المجاني والمدفوع مقولة خاطئة.** فصفحة الاستضافة الذاتية الخاصة به تُدرج تسع قدرات بوصفها حصرية لمستوى Enterprise: إخفاء البيانات على الخادم، والتحكم بالصلاحيات على مستوى المشروع، وإدارة مدة الاحتفاظ بالبيانات، وتزويد المستخدمين عبر SCIM، ومنشئو المؤسسات، وتخصيص الواجهة، وسجلات التدقيق، وواجهات إدارة النظام والنسخة، وعلامات النشر المحمية.\n\nاقرأ هذه القائمة وأنت تفكر فيمن تُوجَّه إليه الاستضافة الذاتية عادةً. الفرق تستضيف ذاتيًا بدافع مقر البيانات أو الضغط التنظيمي، والتحكم بالصلاحيات وسجلات التدقيق وإخفاء البيانات هي بالضبط ما يحتاجه فريق خاضع للتنظيم. المستوى المجاني يغطي فعلًا المراقبة والتقييمات وإدارة المطالبات ومجموعات البيانات والتتبّع وتتبّع التكاليف بلا حد للاستخدام. وما لا يغطيه هو الحوكمة.\n\nأما الثلاثة الأخرى فأكثر مباشرة. يقصر LangSmith الاستضافة الذاتية على Enterprise بسعر مخصص. ويوفّر PromptLayer استضافة ذاتية أحادية المستأجر على GCP أو AWS أو Azure في Enterprise فقط. وHelicone هو الحالة اللافتة: فالشيفرة مرخّصة بـ Apache-2.0 وعلنية، لكن صفحة الأسعار تدرج النشر داخل المؤسسة في Enterprise فقط — فكون المشروع مفتوح المصدر لا يعني هنا وجود استضافة ذاتية يدعمها المزوّد.',
         callouts: [
           {
             type: 'warning',
@@ -4392,7 +4434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { المستوى: 'بداية المدفوع', Langfuse: 'Core 29 دولارًا شهريًا', LangSmith: 'Plus 39 دولارًا للمقعد شهريًا', Helicone: 'Pro 79 دولارًا شهريًا', PromptLayer: 'Pro 49 دولارًا شهريًا' },
           { المستوى: 'فوترة الاستهلاك', Langfuse: '8 دولارات لكل 100 ألف وحدة، متدرّجة', LangSmith: 'استهلاك بوحدات LSU، 1.00 دولار للوحدة', Helicone: 'بالاستهلاك فوق الحصة المجانية', PromptLayer: '0.003 دولار لكل عملية' },
           { المستوى: 'المستوى المتوسط', Langfuse: 'Pro 199 دولارًا شهريًا، احتفاظ 3 سنوات', LangSmith: 'Enterprise مخصص', Helicone: 'Team 799 دولارًا شهريًا', PromptLayer: 'Team 500 دولار شهريًا' },
-          { المستوى: 'الامتثال', Langfuse: 'Pro: SOC2 وISO27001 وBAA', LangSmith: 'Enterprise', Helicone: 'Team: SOC-2 وHIPAA', PromptLayer: 'Enterprise' },
+          { المستوى: 'الامتثال', Langfuse: 'Pro: يذكر SOC2 وISO27001 وBAA', LangSmith: 'Enterprise', Helicone: 'Team: يذكر SOC-2 وHIPAA', PromptLayer: 'Enterprise' },
           { المستوى: 'كلفة الاستضافة الذاتية', Langfuse: 'مجانية للميزات الأساسية', LangSmith: 'Enterprise فقط', Helicone: 'Enterprise فقط', PromptLayer: 'Enterprise فقط' },
         ],
         callouts: [
@@ -4418,7 +4460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**فريق صغير يريد التحكم في مقر البيانات** ← Langfuse مستضافًا ذاتيًا، مع مراجعة قائمة Enterprise أولًا إن لزمه التحكم بالصلاحيات أو سجلات التدقيق.',
           '**فريق يتجاوز 10 آلاف نداء يوميًا وليس على LangChain** ← Langfuse Cloud أو Helicone. ميزة LangSmith لا تنطبق عليك، لكن فوترته بالاستهلاك تنطبق.',
           '**فريق وجعه تضخّم تكاليف الواجهات البرمجية** ← Helicone Pro بـ 79 دولارًا شهريًا، حيث تتبّع التكاليف هو المنتج.',
-          '**قطاع خاضع للتنظيم يحتاج إلى SOC-2 أو HIPAA** ← Helicone Team بـ 799 دولارًا شهريًا، أو Langfuse Pro بـ 199 دولارًا شهريًا الذي يشمل SOC2 وISO27001 واتفاقية شريك أعمال.',
+          '**قطاع خاضع للتنظيم يحتاج إلى SOC-2 أو HIPAA** ← Helicone Team بـ 799 دولارًا شهريًا، أو Langfuse Pro بـ 199 دولارًا شهريًا؛ وفق صفحتي أسعار المزوّدين يُذكر SOC-2 وHIPAA لدى Helicone، وSOC2 وISO27001 واتفاقية شريك أعمال لدى Langfuse. اطلب من المزوّد التقرير والاتفاقية الساريين.',
           '**فريق يحتاج إلى ضبط إصدارات المطالبات فقط** ← PromptLayer المجاني أو Pro، مع إعادة النظر حين تصير اختبارات الانحدار ضرورية.',
         ],
       },
@@ -4426,21 +4468,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'regional-context',
         title: 'المراقبة في الاتحاد الأوروبي واليابان والصين',
         content: 'تحتوي تتبّعات المراقبة على المطالبة والاستجابة كاملتين، أي إنها تحتوي على ما كتبه مستخدموك. وهذا يحوّل الاختيار بين الاستضافة لدى مزوّد والاستضافة الذاتية إلى مسألة حماية بيانات في ثلاثة أسواق مهمة.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'هذا القسم معلومات عامة ولا يُعد استشارة قانونية. تحقق من الأساس القانوني واتفاقية المعالجة ونقل البيانات مع مسؤول حماية البيانات أو مستشار قانوني.',
+          },
+        ],
         subsections: [
           {
             title: 'الاتحاد الأوروبي',
-            content: 'مخزن التتبّعات يحفظ مدخلات المستخدمين حرفيًا، فهو بموجب اللائحة العامة لحماية البيانات معالجة كأي معالجة أخرى، ومزوّد مراقبة مستضاف في الولايات المتحدة يستقبل هذه التتبّعات يشكّل نقلًا بمفهوم المواد 44 إلى 49 ما لم تنص شروطه وبنيته التحتية على خلاف ذلك. وستحتاج إلى عقد معالج بموجب المادة 28 مع المنصة التي تعتمدها. وهذه أقوى حجة عملية لاستضافة Langfuse ذاتيًا داخل الاتحاد الأوروبي، لأن التتبّعات لا تغادر بنيتك التحتية إطلاقًا — لكن انتبه إلى أن إخفاء البيانات على الخادم، وهو ما يتيح لك إزالة البيانات الشخصية قبل التخزين، من القدرات المحجوزة لمستوى Enterprise. وتشير الهيئة الفرنسية CNIL إلى الاتجاه نفسه بتوصيتها بالمعالجة المحلية للبيانات التجارية الحساسة.',
+            content: 'مخزن التتبّعات يحفظ مدخلات المستخدمين حرفيًا، فهو بموجب اللائحة العامة لحماية البيانات معالجة كأي معالجة أخرى، ومزوّد مراقبة مستضاف في الولايات المتحدة يستقبل هذه التتبّعات يشكّل نقلًا بمفهوم المواد 44 إلى 49 ما لم تنص شروطه وبنيته التحتية على خلاف ذلك. وستحتاج إلى عقد معالج بموجب المادة 28 مع المنصة التي تعتمدها. وهذه أقوى حجة عملية لاستضافة Langfuse ذاتيًا داخل الاتحاد الأوروبي، لأن التتبّعات لا تغادر بنيتك التحتية إطلاقًا — لكن انتبه إلى أن إخفاء البيانات على الخادم، وهو ما يتيح لك إزالة البيانات الشخصية قبل التخزين، من القدرات المحجوزة لمستوى Enterprise.',
           },
           {
             title: 'اليابان',
-            content: 'يدفع عمل وزارة الاقتصاد والتجارة والصناعة اليابانية في حوكمة الذكاء الاصطناعي الشركات نحو مسارات بيانات قابلة للتدقيق، والمراقبة هي المكان الذي يقيم فيه أثر التدقيق فعليًا: فهي سجل ما فعله النظام. وهذا يجعل نوافذ الاحتفاظ مسألة حوكمة لا مسألة راحة: المستوى المجاني لدى Helicone يحفظ 7 أيام، وHobby لدى Langfuse تمنح 30 يومًا للوصول، وكلاهما أقصر مما تتوقعه معظم عمليات التدقيق. وإن كنت ستحتاج إلى إعادة بناء السلوك بعد شهور، فخصّص ميزانية لمستوى ذي احتفاظ حقيقي، أو استضف ذاتيًا لتتحكم فيه. وثلاث سنوات لدى Langfuse Pro هي أطول مدة احتفاظ معلنة هنا.',
+            content: 'يُعدّ سجل ما فعله النظام أثر التدقيق الفعلي، ولذلك تصبح نوافذ الاحتفاظ مسألة حوكمة لا مسألة راحة: المستوى المجاني لدى Helicone يحفظ 7 أيام، وHobby لدى Langfuse تمنح 30 يومًا للوصول، فقارن كليهما بمتطلبات التدقيق لديك. وإن كنت ستحتاج إلى إعادة بناء السلوك بعد شهور، فخصّص ميزانية لمستوى ذي احتفاظ حقيقي، أو استضف ذاتيًا لتتحكم فيه. وثلاث سنوات لدى Langfuse Pro هي أطول مدة احتفاظ معلنة هنا.',
           },
           {
             title: 'الصين',
-            content: 'بموجب قانون أمن البيانات (数据安全法) وقواعد إدارة الفضاء الإلكتروني بشأن النقل عبر الحدود، تكمن مشكلة الامتثال في إرسال تتبّعات مبنية على حركة مستخدمي البر الرئيسي إلى مزوّد مراقبة أجنبي، لا في المراقبة نفسها. وعمليات النشر التي تخدم فرقًا في البر الرئيسي تتطلب عادةً أن يقيم مخزن التتبّعات على بنية تحتية محلية. واستضافة Langfuse ذاتيًا هي المسار العملي، لأنه الوحيد بين الأربعة الذي يوفّر نشرًا ذاتيًا مجانيًا موثّقًا — انظر [تشغيل نماذج اللغة محليًا في الصين](/ar/local-llms/deepseek-local-china-data-privacy-2026) للصورة الأوسع عن مقر البيانات.',
+            content: 'بموجب قانون أمن البيانات (数据安全法) وقواعد إدارة الفضاء الإلكتروني بشأن النقل عبر الحدود، تكمن مشكلة الامتثال في إرسال تتبّعات مبنية على حركة مستخدمي البر الرئيسي إلى مزوّد مراقبة أجنبي، لا في المراقبة نفسها. وعمليات النشر التي تخدم فرقًا في البر الرئيسي تتطلب عادةً أن يقيم مخزن التتبّعات على بنية تحتية محلية. واستضافة Langfuse ذاتيًا هي المسار العملي، لأن صفحتي الأسعار والاستضافة الذاتية لديه تصفان نشرًا ذاتيًا مجانيًا — انظر [تشغيل نماذج اللغة محليًا في الصين](/ar/local-llms/deepseek-local-china-data-privacy-2026) للصورة الأوسع عن مقر البيانات.',
           },
         ],
-        note: 'استضف مخزن التتبّعات ذاتيًا في أي سوق لا يجوز فيه للمطالبات والاستجابات مغادرة نطاقك القضائي. وLangfuse هو الوحيد بين الأربعة الذي يكون فيه هذا المسار مجانيًا وموثّقًا.',
+        note: 'استضف مخزن التتبّعات ذاتيًا في أي سوق لا يجوز فيه للمطالبات والاستجابات مغادرة نطاقك القضائي. وصفحتا الأسعار والاستضافة الذاتية لدى Langfuse تصفان هذا المسار بأنه مجاني.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -4452,7 +4500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'وصف Langfuse بأنه الخيار المفتوح المصدر الوحيد',
-            whyItMatters: '‏Helicone مرخّص بـ Apache-2.0 وله 6.3 ألف نجمة. والتمييز الدقيق هو أن Langfuse يوثّق نشرًا ذاتيًا مجانيًا ومدعومًا بينما يبيع Helicone النشر داخل المؤسسة في Enterprise، لا أن أحدهما مفتوح والآخر مغلق.',
+            whyItMatters: '‏Helicone مرخّص بـ Apache-2.0 وله 6.3 ألف نجمة. والتمييز الدقيق هو أن صفحات Langfuse تصف نشرًا ذاتيًا مجانيًا بينما تدرج صفحة أسعار Helicone النشر داخل المؤسسة في Enterprise، لا أن أحدهما مفتوح والآخر مغلق.',
           },
           {
             title: 'قراءة سعر المقعد 39 دولارًا لدى LangSmith بوصفه الفاتورة كاملة',
@@ -4505,7 +4553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل Helicone مفتوح المصدر؟',
-            a: 'نعم، برخصة Apache-2.0 وبنحو 6100 نجمة على GitHub، وهو ما تغفله كثير من مقارنات هذه الفئة. والفارق الدقيق أن صفحة أسعار Helicone تبيع النشر داخل المؤسسة في مستوى Enterprise فقط ولا توثّق أي مسار مجاني مدعوم للاستضافة الذاتية — فانفتاح الشيفرة لا يعني أن المزوّد يدعم تشغيلك لها بنفسك.',
+            a: 'نعم، برخصة Apache-2.0 وبنحو 6300 نجمة على GitHub، وهو ما تغفله كثير من مقارنات هذه الفئة. والفارق الدقيق أن صفحة أسعار Helicone تدرج النشر داخل المؤسسة في مستوى Enterprise فقط — فانفتاح الشيفرة لا يبيّن نوع الدعم الذي يقدمه المزوّد إذا شغّلتها بنفسك.',
           },
           {
             q: 'هل لدى هذه الشركات برامج عمولة؟',
@@ -4562,7 +4610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'أفضل أداة لمراقبة نماذج اللغة الكبيرة 2026: Langfuse أم LangSmith أم Helicone',
       description: 'مقارنة بين Langfuse وLangSmith وHelicone وPromptLayer لمراقبة نماذج اللغة الكبيرة، مع أسعار ورخص ومدد احتفاظ جرى التحقق منها، إضافة إلى استحواذ ClickHouse وجدار ميزات Enterprise في الاستضافة الذاتية. جرى.',
       datePublished: '2026-08-28',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       url: 'https://www.promptquorum.com/ar/local-llms/best-llm-observability-tools',
       inLanguage: 'ar',
       proficiencyLevel: 'Advanced',
@@ -4622,7 +4670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'هل Helicone مفتوح المصدر؟',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'نعم، برخصة Apache-2.0 وبنحو 6100 نجمة على GitHub. لكن صفحة أسعاره تبيع النشر داخل المؤسسة في مستوى Enterprise فقط ولا توثّق أي مسار مجاني مدعوم للاستضافة الذاتية.',
+            text: 'نعم، برخصة Apache-2.0 وبنحو 6300 نجمة على GitHub. لكن صفحة أسعاره تدرج النشر داخل المؤسسة في مستوى Enterprise فقط.',
           },
         },
       ],
@@ -4634,7 +4682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ar',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'الأفضل إجمالًا — 36.9 ألف نجمة، نواة مجانية للاستضافة الذاتية، أوسع تغطية لأطر العمل، وإن كانت تسع ميزات حصرية لمستوى Enterprise' },
+        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: 'توصيتنا — 36.9 ألف نجمة، نواة مجانية للاستضافة الذاتية، أوسع تغطية لأطر العمل، وإن كانت تسع ميزات حصرية لمستوى Enterprise' },
         { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'الأفضل لفرق LangChain وLangGraph — تتبّع أصلي بلا إعداد، 39 دولارًا للمقعد شهريًا زائد فوترة بالاستهلاك بوحدات LSU' },
         { '@type': 'ListItem', position: 3, name: 'Helicone', description: 'الأسرع تبنّيًا والأفضل لوضوح التكاليف — وكيل برخصة Apache-2.0، تكامل من سطر واحد، مجاني حتى 10 آلاف طلب ثم 79 دولارًا شهريًا' },
         { '@type': 'ListItem', position: 4, name: 'PromptLayer', description: 'الخيار الأخف — إدارة إصدارات المطالبات والتسجيل، مجاني حتى 2500 طلب شهريًا، وPro بـ 49 دولارًا شهريًا' },
@@ -4654,7 +4702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'LLM 애플리케이션을 프로덕션에서 운영하는 개발자와 팀',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     readTime: '14분 분량',
     primaryTerm: 'LLM 옵저버빌리티 도구',
     targetKeywords: [
@@ -4664,7 +4712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '최고의 프롬프트 모니터링 도구',
       'Langfuse ClickHouse 인수',
     ],
-    leadAnswerBlock: '**대부분의 프로덕션 팀에는 Langfuse가 기본 선택입니다. 무료 셀프 호스팅과 폭넓은 프레임워크 지원을 제공합니다. LangChain·LangGraph 스택에는 LangSmith(좌석당 월 39달러부터), 도입 속도는 프록시 방식의 Helicone(월 79달러부터)이 가장 빠릅니다. Langfuse는 이제 ClickHouse 소속입니다.**',
+    leadAnswerBlock: '**대부분의 프로덕션 팀에 대한 당사의 기본 추천은 Langfuse입니다. 무료 셀프 호스팅과 폭넓은 프레임워크 지원을 제공합니다. LangChain·LangGraph 스택에는 LangSmith(좌석당 월 39달러부터), 도입 속도는 프록시 방식의 Helicone(월 79달러부터)이 가장 빠릅니다. Langfuse는 이제 ClickHouse 소속입니다.**',
     quickAnswerTop: {
       question: '2026년에 가장 좋은 LLM 옵저버빌리티 도구는 무엇인가요?',
       answer: '**유연성과 자체 호스팅이라면 Langfuse, 이미 LangChain을 쓰고 있다면 LangSmith, 한 줄 연동으로 비용을 들여다보고 싶다면 Helicone, 완전한 옵저버빌리티가 아니라 프롬프트 버전 관리만 필요하다면 PromptLayer입니다.** 이 선택은 본질적으로 구조의 문제입니다. LangSmith와 Langfuse는 SDK로 코드를 계측하지만, Helicone은 API 앞에 프록시로 서서 계측 없이 모든 호출을 잡아냅니다. 이 차이가 어떤 데이터를 얻는지를 결정합니다. 프록시는 요청과 비용을 보고, SDK 트레이서는 멀티 에이전트 실행 내부의 추론 단계까지 봅니다.',
@@ -4676,7 +4724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**Langfuse는 이제 ClickHouse 소유** — 2026년 1월 16일 인수, 4억 달러 시리즈 D와 함께 발표됐고 로드맵에 영향',
         '**넷 다 건너뛰어도 되는 경우** — 프로덕션 이전 단계로 하루 수십 번 호출이라면 각 사업자의 대시보드로 충분',
       ],
-      updatedDate: '2026-11-02',
+      updatedDate: '2026-11-03',
     },
     toc: [
       { label: '핵심 요약', anchor: 'tldr' },
@@ -4706,11 +4754,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**Langfuse** — GitHub 스타 3만 6,900개로, 여기서 오픈소스 기반이 가장 큽니다. 클라우드 Hobby는 무료이며 월 5만 유닛, 데이터 조회 30일, 사용자 2명입니다. Core는 월 29달러로 10만 유닛에 사용자 수 무제한, Pro는 월 199달러로 3년 보존, Enterprise는 월 2,499달러입니다. 오픈소스 코어를 자체 호스팅하는 것은 무료이며 제한이 없습니다.',
-          '**바로잡을 만한 대목:** Langfuse는 흔히 "기능 장벽 없는 MIT 라이선스"로 소개됩니다. 하지만 공식 README는 저장소가 "MIT licensed, except for the `ee` folders"라고 밝히고 있고, 자체 호스팅 요금 페이지는 서버 측 데이터 마스킹, 프로젝트 단위 RBAC, 보존 기간 관리, SCIM, 감사 로그 등 아홉 가지를 Enterprise 전용으로 명시합니다. 기본 옵저버빌리티와 평가는 실제로 무료지만, 거버넌스 기능은 그렇지 않습니다.',
+          '**바로잡을 만한 대목:** 일부 비교 글은 Langfuse를 "기능 장벽 없는 MIT 라이선스"로 소개합니다. 하지만 공식 README는 저장소가 "MIT licensed, except for the `ee` folders"라고 밝히고 있고, 자체 호스팅 요금 페이지는 서버 측 데이터 마스킹, 프로젝트 단위 RBAC, 보존 기간 관리, SCIM, 감사 로그 등 아홉 가지를 Enterprise 전용으로 명시합니다. 기본 옵저버빌리티와 평가는 실제로 무료지만, 거버넌스 기능은 그렇지 않습니다.',
           '**Langfuse는 2026년 1월 16일 ClickHouse, Inc.에 인수됐습니다.** ClickHouse의 4억 달러 시리즈 D와 함께 발표됐습니다. 저장소의 LICENSE 파일은 이제 "Copyright (c) 2023-2026 ClickHouse, Inc."로 시작합니다. Langfuse를 배제할 이유는 아니지만, 표준으로 삼기 전에 5분쯤 살펴볼 가치가 있는 로드맵 상의 변수입니다.',
           '**LangSmith** — Developer는 무료이며 월 최대 5,000건의 기본 트레이스와 좌석 1개를 제공합니다. Plus는 좌석당 월 39달러로 기본 트레이스 1만 건까지 포함하고, 초과분은 사용량 과금으로 LangChain Standard Unit(LSU) 단위이며 1 LSU는 1.00달러입니다. Enterprise는 맞춤 견적이며 자체 호스팅과 하이브리드 옵션을 제공합니다.',
-          '**Helicone** — SDK가 아닌 프록시라서 연동이 한 줄이면 되고, 계측 없이 모든 호출을 잡습니다. Hobby는 무료로 1만 요청, 1GB, 보존 7일입니다. Pro는 월 79달러로 좌석 무제한에 보존 1개월, Team은 월 799달러로 SOC-2와 HIPAA를 갖추고 보존 3개월입니다.',
-          '**Helicone도 오픈소스입니다.** Apache-2.0에 스타 6,300개인데, 대부분의 비교 글이 이 점을 놓칩니다. 다만 요금 페이지는 온프레미스를 Enterprise 단계에서만 판매하며, 지원되는 무료 자체 호스팅 경로를 문서화하지 않았습니다. 소스가 공개돼 있다는 것이 곧 사업자가 직접 운영을 지원한다는 뜻은 아닙니다.',
+          '**Helicone** — SDK가 아닌 프록시라서 연동이 한 줄이면 되고, 계측 없이 모든 호출을 잡습니다. Hobby는 무료로 1만 요청, 1GB, 보존 7일입니다. Pro는 월 79달러로 좌석 무제한에 보존 1개월, Team은 월 799달러로 보존 3개월이며, 요금 페이지에는 SOC-2와 HIPAA 지원이 기재돼 있습니다.',
+          '**Helicone도 오픈소스입니다.** Apache-2.0 라이선스인데, 일부 비교 글은 이 점을 다루지 않습니다. 다만 요금 페이지는 온프레미스를 Enterprise 단계에서만 기재합니다. 소스가 공개돼 있어도 직접 운영할 때 사업자가 어디까지 지원하는지는 알 수 없습니다.',
           '**PromptLayer** — 넷 중 범위가 가장 좁습니다. 무료 등급은 월 2,500요청, 사용자 5명, 프롬프트 10개입니다. Pro는 월 49달러이고 초과분은 트랜잭션당 0.003달러, Team은 월 500달러로 10만 요청 초과와 사용자 25명을 제공합니다. GCP, AWS, Azure에서의 자체 호스팅은 Enterprise 전용입니다.',
           '네 곳 모두 제휴나 추천 프로그램을 공개하지 않습니다. LangChain은 Partner Network를 운영하지만 이는 기술 연동 프로그램이지 수수료 제도가 아닙니다. 이 페이지의 모든 링크에는 대가가 없습니다.',
         ],
@@ -4788,13 +4836,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 항목: '무료 등급', Langfuse: '월 5만 유닛, 30일', LangSmith: '월 5,000 트레이스, 1좌석', Helicone: '1만 요청, 7일', PromptLayer: '2,500요청, 10프롬프트' },
           { 항목: '유료 시작가', Langfuse: 'Core 월 29달러', LangSmith: 'Plus 좌석당 39달러＋사용량', Helicone: 'Pro 월 79달러', PromptLayer: 'Pro 월 49달러' },
           { 항목: '무료 자체 호스팅', Langfuse: '가능, 핵심 기능', LangSmith: '불가, Enterprise만', Helicone: '소스 공개, 판매 안 함', PromptLayer: '불가, Enterprise만' },
-          { 항목: '컴플라이언스', Langfuse: 'Pro: SOC2·ISO27001·BAA', LangSmith: 'Enterprise', Helicone: 'Team 799달러: SOC-2·HIPAA', PromptLayer: 'Enterprise' },
+          { 항목: '컴플라이언스', Langfuse: 'Pro: SOC2·ISO27001·BAA 기재', LangSmith: 'Enterprise', Helicone: 'Team 799달러: SOC-2·HIPAA 기재', PromptLayer: 'Enterprise' },
           { 항목: '제휴 프로그램', Langfuse: '확인되지 않음', LangSmith: '확인되지 않음', Helicone: '확인되지 않음', PromptLayer: '확인되지 않음' },
         ],
         callouts: [
           {
             type: 'warning',
-            text: '비교 글들은 Langfuse를 "여기서 유일한 오픈소스"라고 자주 부릅니다. Helicone도 Apache-2.0에 스타 6,300개이므로 정확한 표현이 아닙니다. 정확히 말하면 Langfuse는 무료 자체 호스팅 배포를 문서화하고 지원하는 반면, Helicone은 온프레미스를 Enterprise 단계에서만 판매하며 요금 페이지에 지원되는 무료 자체 호스팅 경로를 밝히지 않았다는 차이입니다.',
+            text: '비교 글들은 Langfuse를 "여기서 유일한 오픈소스"라고 자주 부릅니다. Helicone도 Apache-2.0에 스타 6,300개이므로 정확한 표현이 아닙니다. 정확히 말하면 Langfuse는 요금 페이지와 자체 호스팅 페이지에서 무료 자체 호스팅 배포를 설명하는 반면, Helicone의 요금 페이지는 온프레미스를 Enterprise 단계에서만 기재한다는 차이입니다.',
           },
         ],
       },
@@ -4807,7 +4855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Langfuse — 종합 최고',
             tagline: '스타 3만 6,900개, 무료 자체 호스팅 코어, 가장 넓은 프레임워크 지원',
-            verdict: 'Langfuse는 옵저버빌리티, 평가, 프롬프트 관리, 데이터셋을 한 제품에서 다루며, 연동 목록은 넷 중 가장 깁니다. OpenAI SDK, LangChain, LlamaIndex, Haystack, LiteLLM, Vercel AI SDK, Ollama, Amazon Bedrock을 네이티브로 지원하고 커뮤니티 연동도 더해집니다. LangChain을 조금 쓰고, 원시 SDK 호출도 있고, 검색에는 LlamaIndex를 쓰는 혼합 스택이라면, 이 넓이 덕분에 프레임워크마다가 아니라 한 번만 계측하면 됩니다. 클라우드 가격은 Hobby가 무료로 월 5만 유닛과 데이터 조회 30일, Core가 월 29달러로 10만 유닛과 사용자 수 무제한, Pro가 월 199달러로 3년 보존에 SOC2·ISO27001과 HIPAA용 BAA, Enterprise가 월 2,499달러입니다. 초과분은 구간제로 10만 유닛당 8달러에서 물량이 늘면 6달러까지 내려갑니다. 오픈소스 코어의 자체 호스팅은 무료이고 사용량도 실제로 제한이 없습니다.',
+            verdict: 'Langfuse는 옵저버빌리티, 평가, 프롬프트 관리, 데이터셋을 한 제품에서 다루며, 연동 목록은 넷 중 가장 깁니다. OpenAI SDK, LangChain, LlamaIndex, Haystack, LiteLLM, Vercel AI SDK, Ollama, Amazon Bedrock을 네이티브로 지원하고 커뮤니티 연동도 더해집니다. LangChain을 조금 쓰고, 원시 SDK 호출도 있고, 검색에는 LlamaIndex를 쓰는 혼합 스택이라면, 이 넓이 덕분에 프레임워크마다가 아니라 한 번만 계측하면 됩니다. 클라우드 가격은 Hobby가 무료로 월 5만 유닛과 데이터 조회 30일, Core가 월 29달러로 10만 유닛과 사용자 수 무제한, Pro가 월 199달러로 3년 보존(요금 페이지에는 SOC2·ISO27001 보고서와 HIPAA용 BAA가 기재), Enterprise가 월 2,499달러입니다. 초과분은 구간제로 10만 유닛당 8달러에서 물량이 늘면 6달러까지 내려갑니다. 오픈소스 코어의 자체 호스팅은 무료이고 사용량도 실제로 제한이 없습니다.',
             pros: [
               '넷 중 네이티브 프레임워크 지원이 가장 넓어, 혼합 스택도 한 번만 계측하면 됨',
               '사용량 제한 없는 무료 자체 호스팅 코어. Docker Compose, 쿠버네티스, 클라우드 템플릿으로 구축 가능',
@@ -4875,7 +4923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'Helicone — 도입이 가장 빠르고 비용 가시성에 최적',
             tagline: '한 줄로 붙는 프록시, Apache-2.0, 1만 요청까지 무료 이후 월 79달러',
-            verdict: 'Helicone은 프록시이므로 도입이 계측 프로젝트가 아니라 베이스 URL 변경으로 끝나고, 무엇을 트레이싱할지 누군가 정할 필요 없이 기본적으로 모든 호출에서 비용과 요청 데이터를 수집합니다. 그래서 넷 중 가치가 가장 빨리 나오며, 비용 추적이 가장 강한 면인 이유도 여기 있습니다. 요청 단위 비용 분해와 여러 키·모델에 걸친 지출 가시성이 핵심 제품이지, 트레이싱 위에 얹은 리포트 화면이 아닙니다. Hobby는 무료로 1만 요청, 스토리지 1GB, 보존 7일입니다. Pro는 월 79달러로 좌석 무제한에 보존 1개월, Team은 월 799달러로 SOC-2와 HIPAA 준수 및 보존 3개월이 더해지고, Enterprise는 온프레미스 배포와 SAML SSO, 무제한 보존을 추가합니다. 소스는 Apache-2.0에 스타 6,300개이지만, 요금 페이지에서는 온프레미스를 Enterprise 단계에서만 다룹니다.',
+            verdict: 'Helicone은 프록시이므로 도입이 계측 프로젝트가 아니라 베이스 URL 변경으로 끝나고, 무엇을 트레이싱할지 누군가 정할 필요 없이 기본적으로 모든 호출에서 비용과 요청 데이터를 수집합니다. 그래서 넷 중 가치가 가장 빨리 나오며, 비용 추적이 가장 강한 면인 이유도 여기 있습니다. 요청 단위 비용 분해와 여러 키·모델에 걸친 지출 가시성이 핵심 제품이지, 트레이싱 위에 얹은 리포트 화면이 아닙니다. Hobby는 무료로 1만 요청, 스토리지 1GB, 보존 7일입니다. Pro는 월 79달러로 좌석 무제한에 보존 1개월, Team은 월 799달러로 보존 3개월이 더해지며 요금 페이지에 SOC-2와 HIPAA 지원이 기재돼 있고(인증서와 계약은 사업자에 확인하세요), Enterprise는 온프레미스 배포와 SAML SSO, 무제한 보존을 추가합니다. 소스는 Apache-2.0에 스타 6,300개이지만, 요금 페이지에서는 온프레미스를 Enterprise 단계에서만 다룹니다.',
             pros: [
               '연동은 한 줄. SDK를 고칠 필요가 없고 OpenAI 호환 엔드포인트라면 무엇이든 동작',
               '비용 추적이 핵심 제품이며 부수적인 리포트 탭이 아님',
@@ -4909,7 +4957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'PromptLayer — 프롬프트 버전 관리만 필요할 때 최적',
             tagline: '월 2,500요청까지 무료, Pro 월 49달러',
-            verdict: 'PromptLayer는 프롬프트의 버전별 이력과, 그 프롬프트를 사용한 요청 로그를 함께 남기는 데 집중합니다. 완전한 옵저버빌리티보다 먼저 생기는 실제 수요입니다. 무료 등급은 월 2,500요청, 사용자 5명, 프롬프트 10개를 제공합니다. Pro는 월 49달러로 사용자 5명에 초과분은 트랜잭션당 0.003달러, Team은 월 500달러로 10만 요청 초과와 사용자 25명, 초과분은 0.002달러로 더 저렴합니다. GCP, AWS, Azure에서의 자체 호스팅은 맞춤 견적 Enterprise에만 있습니다. 넷 중 유일하게 이렇다 할 오픈소스 실체가 없습니다. 공개 저장소는 스타 800개의 클라이언트 라이브러리이지 플랫폼 자체가 아니기 때문입니다. 로그도 남기는 프롬프트 관리 도구로 보아야지, 프롬프트도 관리하는 옵저버빌리티 플랫폼으로 볼 것은 아닙니다.',
+            verdict: 'PromptLayer는 프롬프트의 버전별 이력과, 그 프롬프트를 사용한 요청 로그를 함께 남기는 데 집중합니다. 완전한 옵저버빌리티보다 먼저 생기는 실제 수요입니다. 무료 등급은 월 2,500요청, 사용자 5명, 프롬프트 10개를 제공합니다. Pro는 월 49달러로 사용자 5명에 초과분은 트랜잭션당 0.003달러, Team은 월 500달러로 10만 요청 초과와 사용자 25명, 초과분은 0.002달러로 더 저렴합니다. GCP, AWS, Azure에서의 자체 호스팅은 맞춤 견적 Enterprise에만 있습니다. 공개 저장소는 스타 800개의 클라이언트 라이브러리이지 플랫폼 자체가 아니기 때문입니다. 로그도 남기는 프롬프트 관리 도구로 보아야지, 프롬프트도 관리하는 옵저버빌리티 플랫폼으로 볼 것은 아닙니다.',
             pros: [
               '넷 중 이해하기도 도입하기도 가장 쉬움',
               '프롬프트 버전 관리가 주역이며 큰 제품의 부수 기능이 아님',
@@ -4937,7 +4985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       clickhouseAcquisition: {
         id: 'clickhouse-acquisition',
         title: 'ClickHouse 인수가 Langfuse에 뜻하는 것',
-        content: '**ClickHouse, Inc.는 2026년 1월 16일 Langfuse를 인수했으며, Dragoneer가 주도한 4억 달러 규모 시리즈 D와 함께 발표됐습니다.** 인수는 당시 SiliconANGLE이 보도했고, ClickHouse 공식 블로그, Langfuse의 GitHub 논의, 그리고 이 거래를 자문한 로펌에서 확인할 수 있습니다.\n\n가장 분명한 근거는 저장소 자체에 있습니다. LICENSE 파일은 이제 "Copyright (c) 2023-2026 ClickHouse, Inc."로 시작합니다. 프로젝트는 여전히 활발히 개발되고 있으며, 이 페이지를 확인한 당일에도 변경이 있었습니다.\n\n여기에는 나름의 논리가 있습니다. Langfuse는 원래 트레이스를 ClickHouse에 저장하고 있었으므로, 인수자는 제품 밑단의 데이터베이스를 소유한 쪽이지 분야 밖의 매수자가 아닙니다. 이 분야의 여느 인수보다 나은 출발점입니다. 그럼에도 짚어둘 만합니다. 인수 이후 로드맵 우선순위는 인수자의 상업적 이해를 따르고, 자체 호스팅 Langfuse는 이제 ClickHouse Cloud도 파는 회사에 기대게 됐습니다. Enterprise 자체 호스팅은 ClickHouse Cloud 또는 BYOC와 명시적으로 묶여 있고 그 비용은 별도로 더해집니다.',
+        content: '**ClickHouse, Inc.는 2026년 1월 16일 Langfuse를 인수했으며, Dragoneer가 주도한 4억 달러 규모 시리즈 D와 함께 발표됐습니다.** 인수는 당시 SiliconANGLE이 보도했고 ClickHouse 공식 블로그에서 발표됐습니다(두 출처 모두 출처 섹션에 링크됨).\n\n가장 분명한 근거는 저장소 자체에 있습니다. LICENSE 파일은 이제 "Copyright (c) 2023-2026 ClickHouse, Inc."로 시작합니다. 프로젝트는 여전히 활발히 개발되고 있으며, 이 페이지를 확인한 당일에도 변경이 있었습니다.\n\n여기에는 나름의 논리가 있습니다. Langfuse는 원래 트레이스를 ClickHouse에 저장하고 있었으므로, 인수자는 제품 밑단의 데이터베이스를 소유한 쪽이지 분야 밖의 매수자가 아닙니다. 이 분야의 여느 인수보다 나은 출발점입니다. 그럼에도 짚어둘 만합니다. 인수 이후 로드맵 우선순위는 인수자의 상업적 이해를 따르고, 자체 호스팅 Langfuse는 이제 ClickHouse Cloud도 파는 회사에 기대게 됐습니다. Enterprise 자체 호스팅은 ClickHouse Cloud 또는 BYOC와 명시적으로 묶여 있고 그 비용은 별도로 더해집니다.',
         callouts: [
           {
             type: 'note',
@@ -4949,7 +4997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       selfHosting: {
         id: 'self-hosting',
         title: '자체 호스팅과 Enterprise 장벽',
-        content: '**Langfuse는 넷 중 유일하게 무료 자체 호스팅 배포를 문서화하고 지원하지만, 무료와 유료 사이에 기능 장벽이 없다는 자주 반복되는 주장은 사실이 아닙니다.** 공식 자체 호스팅 페이지는 아홉 가지를 Enterprise 전용으로 명시합니다. 서버 측 데이터 마스킹, 프로젝트 단위 RBAC, 데이터 보존 기간 관리, SCIM 사용자 프로비저닝, 조직 생성자, UI 커스터마이징, 감사 로그, 관리 및 인스턴스 관리 API, 보호된 배포 라벨입니다.\n\n이 목록은 자체 호스팅이 대개 누구를 위한 것인지 염두에 두고 읽어야 합니다. 팀이 자체 호스팅을 택하는 이유는 데이터 소재지나 규제 압력이고, RBAC와 감사 로그, 데이터 마스킹은 바로 규제 대상 팀이 필요로 하는 것들입니다. 무료 등급은 옵저버빌리티, 평가, 프롬프트 관리, 데이터셋, 트레이싱, 비용 추적을 사용량 제한 없이 실제로 포함합니다. 포함하지 않는 것은 거버넌스입니다.\n\n나머지 셋은 더 단순합니다. LangSmith는 자체 호스팅을 맞춤 견적 Enterprise로 한정합니다. PromptLayer는 GCP, AWS, Azure에서의 단일 테넌트 자체 호스팅을 Enterprise에서만 제공합니다. 흥미로운 쪽은 Helicone입니다. 소스는 Apache-2.0으로 공개돼 있지만, 요금 페이지는 온프레미스를 Enterprise에서만 판매하고 지원되는 무료 자체 호스팅 경로를 문서화하지 않았습니다. 여기서 오픈소스라는 것과 지원되는 자체 호스팅이 있다는 것은 같은 말이 아닙니다.',
+        content: '**넷 중 요금 페이지와 자체 호스팅 페이지에서 무료 자체 호스팅 배포를 설명하는 것은 Langfuse이지만, 무료와 유료 사이에 기능 장벽이 없다는 자주 반복되는 주장은 사실이 아닙니다.** 공식 자체 호스팅 페이지는 아홉 가지를 Enterprise 전용으로 명시합니다. 서버 측 데이터 마스킹, 프로젝트 단위 RBAC, 데이터 보존 기간 관리, SCIM 사용자 프로비저닝, 조직 생성자, UI 커스터마이징, 감사 로그, 관리 및 인스턴스 관리 API, 보호된 배포 라벨입니다.\n\n이 목록은 자체 호스팅이 대개 누구를 위한 것인지 염두에 두고 읽어야 합니다. 팀이 자체 호스팅을 택하는 이유는 데이터 소재지나 규제 압력이고, RBAC와 감사 로그, 데이터 마스킹은 바로 규제 대상 팀이 필요로 하는 것들입니다. 무료 등급은 옵저버빌리티, 평가, 프롬프트 관리, 데이터셋, 트레이싱, 비용 추적을 사용량 제한 없이 실제로 포함합니다. 포함하지 않는 것은 거버넌스입니다.\n\n나머지 셋은 더 단순합니다. LangSmith는 자체 호스팅을 맞춤 견적 Enterprise로 한정합니다. PromptLayer는 GCP, AWS, Azure에서의 단일 테넌트 자체 호스팅을 Enterprise에서만 제공합니다. 흥미로운 쪽은 Helicone입니다. 소스는 Apache-2.0으로 공개돼 있지만, 요금 페이지는 온프레미스를 Enterprise에서만 기재합니다. 여기서 오픈소스라는 것과 사업자가 지원하는 자체 호스팅이 있다는 것은 같은 말이 아닙니다.',
         callouts: [
           {
             type: 'warning',
@@ -4971,7 +5019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 등급: '유료 시작가', Langfuse: 'Core 월 29달러', LangSmith: 'Plus 좌석당 월 39달러', Helicone: 'Pro 월 79달러', PromptLayer: 'Pro 월 49달러' },
           { 등급: '사용량 과금', Langfuse: '10만 유닛당 8달러, 구간제', LangSmith: 'LSU 사용량 과금, 1 LSU = 1.00달러', Helicone: '무료 한도 초과분 사용량 과금', PromptLayer: '트랜잭션당 0.003달러' },
           { 등급: '중간 등급', Langfuse: 'Pro 월 199달러, 보존 3년', LangSmith: 'Enterprise 맞춤', Helicone: 'Team 월 799달러', PromptLayer: 'Team 월 500달러' },
-          { 등급: '컴플라이언스', Langfuse: 'Pro: SOC2·ISO27001·BAA', LangSmith: 'Enterprise', Helicone: 'Team: SOC-2·HIPAA', PromptLayer: 'Enterprise' },
+          { 등급: '컴플라이언스', Langfuse: 'Pro: SOC2·ISO27001·BAA 기재', LangSmith: 'Enterprise', Helicone: 'Team: SOC-2·HIPAA 기재', PromptLayer: 'Enterprise' },
           { 등급: '자체 호스팅 비용', Langfuse: '핵심 기능 무료', LangSmith: 'Enterprise만', Helicone: 'Enterprise만', PromptLayer: 'Enterprise만' },
         ],
         callouts: [
@@ -4997,7 +5045,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**데이터 소재지를 직접 통제하려는 소규모 팀** → 자체 호스팅 Langfuse. RBAC나 감사 로그가 필요하다면 Enterprise 목록을 먼저 확인하세요.',
           '**하루 1만 회 넘게 호출하고 LangChain을 쓰지 않는 팀** → Langfuse Cloud 또는 Helicone. LangSmith의 이점은 해당되지 않지만 사용량 과금은 그대로 적용됩니다.',
           '**API 비용 증가가 통증인 팀** → 월 79달러 Helicone Pro. 비용 추적 자체가 제품입니다.',
-          '**SOC-2나 HIPAA가 필요한 규제 산업** → 월 799달러 Helicone Team, 또는 SOC2·ISO27001·BAA를 포함한 월 199달러 Langfuse Pro.',
+          '**SOC-2나 HIPAA가 필요한 규제 산업** → 월 799달러 Helicone Team 또는 월 199달러 Langfuse Pro. 각 사 요금 페이지에는 전자에 SOC-2와 HIPAA, 후자에 SOC2·ISO27001·BAA가 기재돼 있습니다. 최신 보고서와 계약은 사업자에 요청하세요.',
           '**프롬프트 버전 관리만 필요한 팀** → PromptLayer 무료 등급 또는 Pro. 회귀 테스트가 필요해지면 다시 검토하세요.',
         ],
       },
@@ -5005,21 +5053,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'regional-context',
         title: 'EU, 일본, 중국에서의 옵저버빌리티',
         content: '옵저버빌리티 트레이스에는 프롬프트와 응답이 통째로 담깁니다. 곧 사용자가 입력한 내용이 그대로 담긴다는 뜻입니다. 그래서 호스팅형이냐 자체 호스팅이냐의 선택이 주요 세 시장에서 데이터 보호 문제가 됩니다.',
+        callouts: [
+          {
+            type: 'note',
+            text: '이 섹션은 일반 정보이며 법률 자문이 아닙니다. 적법 근거, 처리 위탁 계약, 국외 이전은 개인정보 보호 책임자 또는 변호사와 확인하세요.',
+          },
+        ],
         subsections: [
           {
             title: '유럽연합',
-            content: '트레이스 저장소는 사용자 입력을 그대로 보관하므로 GDPR 아래에서는 다른 처리와 다를 바 없으며, 이 트레이스를 받는 미국 호스팅 옵저버빌리티 사업자는 약관과 인프라가 달리 정하지 않는 한 제44조에서 제49조가 말하는 이전에 해당합니다. 채택한 플랫폼과 제28조에 따른 처리자 계약이 필요합니다. 트레이스가 자사 인프라를 결코 벗어나지 않으므로 이는 EU에서 Langfuse 자체 호스팅을 택할 가장 강력한 실무적 근거입니다. 다만 저장 전에 개인정보를 제거할 수 있게 해주는 서버 측 데이터 마스킹이 Enterprise 전용 기능에 속한다는 점은 유의하세요. 프랑스 CNIL도 민감한 업무 데이터의 로컬 처리를 권고하며 같은 방향을 가리킵니다.',
+            content: '트레이스 저장소는 사용자 입력을 그대로 보관하므로 GDPR 아래에서는 다른 처리와 다를 바 없으며, 이 트레이스를 받는 미국 호스팅 옵저버빌리티 사업자는 약관과 인프라가 달리 정하지 않는 한 제44조에서 제49조가 말하는 이전에 해당합니다. 채택한 플랫폼과 제28조에 따른 처리자 계약이 필요합니다. 트레이스가 자사 인프라를 결코 벗어나지 않으므로 이는 EU에서 Langfuse 자체 호스팅을 택할 가장 강력한 실무적 근거입니다. 다만 저장 전에 개인정보를 제거할 수 있게 해주는 서버 측 데이터 마스킹이 Enterprise 전용 기능에 속한다는 점은 유의하세요.',
           },
           {
             title: '일본',
-            content: '일본 경제산업성의 AI 거버넌스 작업은 기업을 감사 가능한 데이터 경로로 이끌고 있는데, 그 감사 추적이 실제로 놓이는 곳이 바로 옵저버빌리티입니다. 시스템이 무엇을 했는지에 대한 기록 그 자체이기 때문입니다. 그래서 보존 기간은 편의가 아니라 거버넌스의 문제가 됩니다. Helicone 무료 등급은 7일, Langfuse Hobby는 조회 30일로, 둘 다 통상적인 감사 기대보다 짧습니다. 수개월 뒤에 동작을 재구성해야 한다면 실질적인 보존 기간을 갖춘 등급을 예산에 잡거나, 직접 통제할 수 있도록 자체 호스팅하세요. Langfuse Pro의 3년은 여기 공개된 가장 긴 보존 기간입니다.',
+            content: '감사 추적이 실제로 놓이는 곳이 바로 옵저버빌리티입니다. 시스템이 무엇을 했는지에 대한 기록 그 자체이기 때문입니다. 그래서 보존 기간은 편의가 아니라 거버넌스의 문제가 됩니다. Helicone 무료 등급은 7일, Langfuse Hobby는 조회 30일로, 둘 다 자사 감사 요건과 대조해 확인하세요. 수개월 뒤에 동작을 재구성해야 한다면 실질적인 보존 기간을 갖춘 등급을 예산에 잡거나, 직접 통제할 수 있도록 자체 호스팅하세요. Langfuse Pro의 3년은 여기 공개된 가장 긴 보존 기간입니다.',
           },
           {
             title: '중국',
-            content: '데이터보안법(数据安全法)과 국가인터넷정보판공실의 국경 간 이전 규정 아래에서 컴플라이언스 문제는 옵저버빌리티 자체가 아니라, 본토 사용자 트래픽으로 만들어진 트레이스를 해외 옵저버빌리티 사업자에게 보내는 데 있습니다. 본토 팀을 대상으로 하는 배포는 대개 트레이스 저장소가 국내 인프라에 있을 것을 요구합니다. 넷 중 유일하게 문서화된 무료 자체 호스팅 배포를 제공하므로 자체 호스팅 Langfuse가 현실적인 경로입니다. 데이터 소재지의 큰 그림은 [중국에서 로컬 LLM 실행하기](/ko/local-llms/deepseek-local-china-data-privacy-2026)를 참고하세요.',
+            content: '데이터보안법(数据安全法)과 국가인터넷정보판공실의 국경 간 이전 규정 아래에서 컴플라이언스 문제는 옵저버빌리티 자체가 아니라, 본토 사용자 트래픽으로 만들어진 트레이스를 해외 옵저버빌리티 사업자에게 보내는 데 있습니다. 본토 팀을 대상으로 하는 배포는 대개 트레이스 저장소가 국내 인프라에 있을 것을 요구합니다. 요금 페이지와 자체 호스팅 페이지에서 무료 자체 호스팅 배포를 설명하므로 자체 호스팅 Langfuse가 현실적인 경로입니다. 데이터 소재지의 큰 그림은 [중국에서 로컬 LLM 실행하기](/ko/local-llms/deepseek-local-china-data-privacy-2026)를 참고하세요.',
           },
         ],
-        note: '프롬프트와 응답이 관할권을 벗어날 수 없는 시장이라면 어디서든 트레이스 저장소를 자체 호스팅하세요. 넷 중 그 경로가 무료이고 문서화된 것은 Langfuse뿐입니다.',
+        note: '프롬프트와 응답이 관할권을 벗어날 수 없는 시장이라면 어디서든 트레이스 저장소를 자체 호스팅하세요. Langfuse의 요금 페이지와 자체 호스팅 페이지는 그 경로를 무료로 설명합니다.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -5031,7 +5085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Langfuse를 유일한 오픈소스 선택지로 소개하는 것',
-            whyItMatters: 'Helicone은 Apache-2.0에 스타 6,300개입니다. 정확한 구분은 Langfuse가 지원되는 무료 자체 호스팅 배포를 문서화한 반면 Helicone은 온프레미스를 Enterprise에서 판매한다는 점이지, 한쪽은 공개이고 다른 쪽은 비공개라는 이야기가 아닙니다.',
+            whyItMatters: 'Helicone은 Apache-2.0에 스타 6,300개입니다. 정확한 구분은 Langfuse의 페이지가 무료 자체 호스팅 배포를 설명하는 반면 Helicone의 요금 페이지는 온프레미스를 Enterprise에서 기재한다는 점이지, 한쪽은 공개이고 다른 쪽은 비공개라는 이야기가 아닙니다.',
           },
           {
             title: 'LangSmith의 좌석당 39달러를 청구액 전부로 읽는 것',
@@ -5084,7 +5138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Helicone은 오픈소스인가요?',
-            a: '네, Apache-2.0이며 GitHub 스타는 약 6,300개인데 이 분야 비교 글 다수가 이를 놓칩니다. 다만 Helicone 요금 페이지는 온프레미스 배포를 Enterprise 단계에서만 판매하고 지원되는 무료 자체 호스팅 경로를 문서화하지 않았습니다. 소스가 공개돼 있다는 것이 사업자가 직접 운영을 지원한다는 뜻은 아닙니다.',
+            a: '네, Apache-2.0이며 GitHub 스타는 약 6,300개인데 이 분야 비교 글 다수가 이를 놓칩니다. 다만 Helicone 요금 페이지는 온프레미스 배포를 Enterprise 단계에서만 기재합니다. 소스가 공개돼 있어도 직접 운영할 때 사업자가 어디까지 지원하는지는 알 수 없습니다.',
           },
           {
             q: '이 제품들에 제휴 프로그램이 있나요?',
@@ -5141,7 +5195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026년 최고의 LLM 옵저버빌리티 도구: Langfuse, LangSmith, Helicone',
       description: 'LLM 옵저버빌리티를 위한 Langfuse, LangSmith, Helicone, PromptLayer 비교. 확인된 가격과 라이선스, 보존 기간에 더해 ClickHouse 인수와 자체 호스팅의 Enterprise 기능 장벽을 다룹니다.',
       datePublished: '2026-08-28',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       url: 'https://www.promptquorum.com/ko/local-llms/best-llm-observability-tools',
       inLanguage: 'ko',
       proficiencyLevel: 'Advanced',
@@ -5201,7 +5255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Helicone은 오픈소스인가요?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: '네, Apache-2.0이며 GitHub 스타는 약 6,300개입니다. 다만 요금 페이지는 온프레미스 배포를 Enterprise 단계에서만 판매하고 지원되는 무료 자체 호스팅 경로를 문서화하지 않았습니다.',
+            text: '네, Apache-2.0이며 GitHub 스타는 약 6,300개입니다. 다만 요금 페이지는 온프레미스 배포를 Enterprise 단계에서만 기재합니다.',
           },
         },
       ],
@@ -5213,7 +5267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ko',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: '종합 최고 — 스타 3만 6,900개, 무료 자체 호스팅 코어, 가장 넓은 프레임워크 지원. 다만 아홉 기능은 Enterprise 전용' },
+        { '@type': 'ListItem', position: 1, name: 'Langfuse', description: '당사 추천 — 스타 3만 6,900개, 무료 자체 호스팅 코어, 가장 넓은 프레임워크 지원. 다만 아홉 기능은 Enterprise 전용' },
         { '@type': 'ListItem', position: 2, name: 'LangSmith', description: 'LangChain·LangGraph 팀에 최적 — 설정 없는 네이티브 트레이싱, 좌석당 월 39달러에 사용량 기반 LSU 과금' },
         { '@type': 'ListItem', position: 3, name: 'Helicone', description: '도입이 가장 빠르고 비용 가시성에 최적 — Apache-2.0 프록시, 한 줄 연동, 1만 요청까지 무료 이후 월 79달러' },
         { '@type': 'ListItem', position: 4, name: 'PromptLayer', description: '가장 가벼운 선택 — 프롬프트 버전 관리와 로깅, 월 2,500요청까지 무료, Pro 월 49달러' },

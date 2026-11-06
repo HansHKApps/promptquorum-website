@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-local-llm-document-summarization-overview-hero-en.webp',
     title: 'Best Local LLM for Document Summarization?',
@@ -143,6 +144,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-local-llm-document-summarization-overview-hero-ar.webp',
     title: 'أفضل LLM محلي لتلخيص المستندات؟',
@@ -283,6 +285,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-local-llm-document-summarization-overview-hero-de.webp',
     title: 'Das beste lokale LLM für Dokumentenzusammenfassung?',
@@ -423,6 +426,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-local-llm-document-summarization-overview-hero-es.webp',
     title: '¿Cuál es el Mejor LLM Local para Resumir Documentos?',
@@ -563,6 +567,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-local-llm-document-summarization-overview-hero-fr.webp',
     title: 'Quel est le meilleur LLM local pour la synthèse de documents ?',
@@ -703,6 +708,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-local-llm-document-summarization-overview-hero-ja.webp',
     title: '文書要約に最適なローカルLLMは?',
@@ -843,6 +849,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-local-llm-document-summarization-overview-hero-ko.webp',
     title: '문서 요약을 위한 최적의 로컬 LLM은?',
@@ -983,6 +990,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-local-llm-document-summarization-overview-hero-pt.webp',
     title: 'Qual o Melhor LLM Local para Resumo de Documentos?',
@@ -1123,6 +1131,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Quick Answers',
     heroImage: '/images/best-local-llm-document-summarization-overview-hero-zh.webp',
     title: '文档摘要的最佳本地 LLM 是什么？',

@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-en.webp',
     title: 'Apple M4 Max vs M4 Pro: Which Is Better for Local LLMs?',
@@ -131,6 +132,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-ar.webp',
     title: 'Apple M4 Max مقابل M4 Pro: أيهما أفضل لتشغيل LLM محليًا؟',
@@ -259,6 +261,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-de.webp',
     title: 'Apple M4 Max vs. M4 Pro: Was ist besser für lokale LLMs?',
@@ -387,6 +390,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-es.webp',
     title: 'Apple M4 Max vs M4 Pro: ¿Cuál es Mejor para LLMs Locales?',
@@ -515,6 +519,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-fr.webp',
     title: 'Apple M4 Max vs M4 Pro : lequel est le meilleur pour les LLM locaux ?',
@@ -643,6 +648,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-ja.webp',
     title: 'Apple M4 Max vs M4 Pro: ローカルLLMに良いのはどちら?',
@@ -771,6 +777,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-ko.webp',
     title: 'Apple M4 Max 대 M4 Pro: 로컬 LLM에 어느 것이 더 나은가?',
@@ -899,6 +906,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-pt.webp',
     title: 'Apple M4 Max vs M4 Pro: Qual É Melhor para LLMs Locais?',
@@ -1027,6 +1035,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Model Comparisons',
     heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-zh.webp',
     title: 'Apple M4 Max 对比 M4 Pro：哪个更适合本地 LLM？',

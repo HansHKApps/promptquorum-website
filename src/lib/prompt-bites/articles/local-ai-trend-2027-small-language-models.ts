@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-small-language-models-overview-hero-en.webp',
     title: 'Local AI Trends 2027, Part 3 of 10: Small Models Take Over the Boring Jobs',
@@ -113,6 +114,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-small-language-models-overview-hero-de.webp',
     title: 'Local AI Trends 2027, Teil 3 von 10: Kleine Modelle übernehmen die Routineaufgaben',
@@ -223,6 +225,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-small-language-models-overview-hero-fr.webp',
     title: "Tendances IA locale 2027, partie 3 sur 10 : les petits modèles reprennent les tâches répétitives",
@@ -333,6 +336,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-small-language-models-overview-hero-ja.webp',
     title: 'ローカルAIトレンド2027、第3回/全10回：小型モデルが単調な業務を引き受ける',
@@ -443,6 +447,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-small-language-models-overview-hero-zh.webp',
     title: '2027本地AI趋势系列第3篇（共10篇）：小模型接管枯燥的日常任务',
@@ -553,6 +558,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-small-language-models-overview-hero-es.webp',
     title: 'Tendencias de IA local 2027, parte 3 de 10: los modelos pequeños se hacen cargo de las tareas rutinarias',
@@ -663,6 +669,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-small-language-models-overview-hero-pt.webp',
     title: 'Tendências de IA local 2027, parte 3 de 10: os modelos pequenos assumem as tarefas repetitivas',
@@ -773,6 +780,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-small-language-models-overview-hero-ar.webp',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 3 من 10: النماذج الصغيرة تتولى المهام الروتينية',
@@ -883,6 +891,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Industry Trends & Predictions',
     heroImage: '/images/local-ai-trend-2027-small-language-models-overview-hero-ko.webp',
     title: '로컬 AI 트렌드 2027, 10부작 중 3부: 소형 모델이 지루한 업무를 맡는다',

@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/which-ollama-models-support-vision-overview-hero-en.webp',
     title: 'Which Ollama Models Support Vision?',
@@ -110,6 +111,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/which-ollama-models-support-vision-overview-hero-de.webp',
     title: 'Welche Ollama-Modelle unterstützen Vision?',
@@ -210,6 +212,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/which-ollama-models-support-vision-overview-hero-fr.webp',
     title: 'Quels modèles Ollama supportent la vision ?',
@@ -310,6 +313,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/which-ollama-models-support-vision-overview-hero-ja.webp',
     title: 'OllamaでVisionに対応しているモデルは？',
@@ -410,6 +414,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/which-ollama-models-support-vision-overview-hero-zh.webp',
     title: '哪些Ollama模型支持视觉功能？',
@@ -510,6 +515,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/which-ollama-models-support-vision-overview-hero-pt.webp',
     title: 'Quais modelos do Ollama suportam visão?',
@@ -610,6 +616,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/which-ollama-models-support-vision-overview-hero-es.webp',
     title: '¿Qué modelos de Ollama son compatibles con visión?',
@@ -710,6 +717,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/which-ollama-models-support-vision-overview-hero-ar.webp',
     title: 'ما نماذج ⁨Ollama⁩ التي تدعم الرؤية؟',
@@ -810,6 +818,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Ollama',
     heroImage: '/images/which-ollama-models-support-vision-overview-hero-ko.webp',
     title: 'Ollama에서 비전을 지원하는 모델은 무엇인가요?',

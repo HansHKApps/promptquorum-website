@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Enterprise',
       title: 'On-Prem Air-Gapped Local LLMs: Isolated Deployment for Classified Environments',
       heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-en.webp',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       seoTitle: 'Air-Gapped LLM Deployment: Architecture, Updates, Security',
       intro: 'An air-gapped LLM runs on infrastructure with no internet connection, so prompts and documents cannot reach external APIs. Governments, defense and regulated industries use this pattern for classified or highly sensitive data. Models, updates and logs move in only through controlled, offline transfer steps.',
       metaDescription: 'How an air-gapped LLM deployment works: isolated architecture, offline model updates and network security for government and regulated data.',
@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           snippetBlocks: [
             { type: 'one-sentence', text: 'Air-gapped deployment means zero network connectivity between the LLM infrastructure and the internet or any external system -- models and updates move only via physical media or isolated internal networks.' },
-            { type: 'plain-terms', text: 'An air-gapped AI server is completely disconnected from the internet, like a computer with no network cable and no WiFi. This is the highest level of data protection available: nothing can be hacked remotely because there is no remote connection to attack. The tradeoff is that updating the AI model takes manual work instead of an automatic download.' },
+            { type: 'plain-terms', text: 'An air-gapped AI server is completely disconnected from the internet, like a computer with no network cable and no WiFi. Air-gapping removes the remote-attack path, which makes it one of the strongest isolation measures for sensitive data. It does not protect against insiders, compromised removable media or physical access. The tradeoff is that updating the AI model takes manual work instead of an automatic download.' },
           ],
           items: [
             'Air-gapped = completely isolated from internet. Zero network connectivity to external systems.',
@@ -52,7 +52,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Network isolation:** Firewalls, air-gap appliances, and network segmentation prevent any external communication.',
             '**Model management:** Transfer models via USB, secure media, or internal networks only; no cloud access.',
             '**Updates:** Manual process -- test updates offline first, then deploy via secure channels.',
-            'Air-gapped deployment is standard practice for government agencies and defense contractors handling classified data.',
+            'Air-gapped deployment is a common pattern for government agencies and defense contractors handling classified data.',
           ],
         },
         whatIsAirGapped: {
@@ -61,7 +61,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Air-gapped infrastructure has no network connection to the internet or any external system.** All data and computation stays on isolated hardware.',
             '**Absolute isolation:** No WiFi, no Ethernet to external networks, no USB connections to internet-connected devices.',
-            '**Data never leaves:** Inference happens locally, results stay locally.',
+            '**Data stays local by design:** Inference runs locally and results stay local; data can still leave through removable media, insiders or physical access.',
             '**Updates are manual:** Cannot auto-download model updates. Updates require physical media (USB drive, SD card) or internal network transfer.',
           ],
         },
@@ -165,15 +165,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'How expensive is air-gapped deployment?',
-              a: 'Hardware costs $50k-500k (not much more than regular on-prem). Operational costs (security, auditing, training) are 5-10× higher due to manual processes.',
+              a: 'Cost depends heavily on scope. Hardware is typically comparable to a regular on-prem deployment; operating costs rise because updates, auditing and change control are manual. Get quotes for your own requirements.',
             },
             {
               q: 'Can we use standard tools (Ollama, vLLM) in air-gapped environments?',
-              a: 'Yes. Both tools work without internet. Deploy once, then no internet connectivity needed. Ensure all dependencies are installed offline.',
+              a: 'Yes. Both tools work without internet. Once models and dependencies are installed offline, and with update checks and telemetry disabled, no internet connectivity is needed.',
             },
             {
               q: 'What if we need GDPR compliance but don\'t need full air-gapping?',
-              a: 'For workloads where air-gapping isn\'t required but GDPR is, [EU-compliant cloud GPU options →](/local-llms/eu-cloud-gpu-gdpr-2026) (Hetzner, Scaleway, OVHcloud) offer EU data residency without isolation complexity.',
+              a: 'For workloads where air-gapping isn\'t required but GDPR is, [EU-hosted cloud GPU options →](/local-llms/eu-cloud-gpu-gdpr-2026) (Hetzner, Scaleway, OVHcloud) offer EU data residency without isolation complexity. Overall GDPR compliance still depends on your lawful basis, contracts and safeguards. This is not legal advice.',
             },
           ],
         },
@@ -192,9 +192,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'sources',
           title: 'Sources',
           items: [
-            'NIST Cybersecurity Framework -- nist.gov/cyberframework',
-            'DoD Data Management -- defense.gov/News/Releases/',
-            'Air-Gap Security Guidelines -- ietf.org (RFC documents on network isolation)',
+            '[NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)',
+            '[NIST SP 800-53 Rev. 5 -- Security and Privacy Controls](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)',
+            '[BSI IT-Grundschutz](https://www.bsi.bund.de/grundschutz)',
           ],
         },
       },
@@ -205,7 +205,7 @@ schema: {
         'description': 'Air-gapped local LLM deployment: complete isolation architecture, network security, updates management, and classified data handling.',
         'url': 'https://www.promptquorum.com/local-llms/on-prem-air-gapped-local-llm',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-28',
+        'dateModified': '2026-11-03',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Advanced',
@@ -244,7 +244,7 @@ schema: {
             'name': 'How expensive is air-gapped deployment?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Hardware costs $50k-500k (not much more than regular on-prem). Operational costs (security, auditing, training) are 5-10× higher due to manual processes.',
+              'text': 'Cost depends heavily on scope. Hardware is typically comparable to a regular on-prem deployment; operating costs rise because updates, auditing and change control are manual. Get quotes for your own requirements.',
             },
           },
           {
@@ -252,7 +252,7 @@ schema: {
             'name': 'Can we use standard tools (Ollama, vLLM) in air-gapped environments?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes. Both tools work without internet. Deploy once, then no internet connectivity needed. Ensure all dependencies are installed offline.',
+              'text': 'Yes. Both tools work without internet. Once models and dependencies are installed offline, and with update checks and telemetry disabled, no internet connectivity is needed.',
             },
           },
         ],
@@ -267,7 +267,7 @@ schema: {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Complete Network Isolation',
-            'description': 'Air-gapped infrastructure has no network connection to the internet or any external system, ensuring zero external access.',
+            'description': 'Air-gapped infrastructure has no network connection to the internet or any external system, which removes the remote-access path.',
           },
           {
             '@type': 'ListItem',
@@ -279,7 +279,7 @@ schema: {
             '@type': 'ListItem',
             'position': 3,
             'name': 'Enhanced Security',
-            'description': 'Protects classified data in government, military, and financial environments requiring maximum data protection.',
+            'description': 'Reduces exposure of sensitive and classified data in government, military and financial environments that require strong data protection.',
           },
         ],
       },
@@ -317,7 +317,7 @@ schema: {
           isTldr: true,
           snippetBlocks: [
             { type: 'one-sentence', text: 'El despliegue air-gapped implica cero conectividad de red entre la infraestructura del LLM e internet o cualquier sistema externo -- los modelos y las actualizaciones se transfieren solo mediante medios físicos o redes internas aisladas.' },
-            { type: 'plain-terms', text: 'Un servidor de IA air-gapped está completamente desconectado de internet, como un ordenador sin cable de red ni WiFi. Es el nivel más alto de protección de datos disponible: nada puede ser hackeado remotamente porque no existe conexión remota que atacar. La contrapartida es que actualizar el modelo de IA requiere trabajo manual en lugar de una descarga automática.' },
+            { type: 'plain-terms', text: 'Un servidor de IA air-gapped está completamente desconectado de internet, como un ordenador sin cable de red ni WiFi. El air-gap elimina la vía de ataque remoto y es una de las medidas de aislamiento más sólidas para datos sensibles. No protege frente a personas internas, medios extraíbles comprometidos ni acceso físico. La contrapartida es que actualizar el modelo de IA requiere trabajo manual en lugar de una descarga automática.' },
           ],
           items: [
             'Air-gapped = completamente aislado de internet. Cero conectividad de red con sistemas externos.',
@@ -327,7 +327,7 @@ schema: {
             '**Aislamiento de red:** firewalls, appliances air-gap y segmentación de red previenen cualquier comunicación externa.',
             '**Gestión de modelos:** transfiere modelos solo por USB, medios seguros o redes internas; sin acceso a la nube.',
             '**Actualizaciones:** proceso manual -- prueba las actualizaciones offline primero, luego despliégalas por canales seguros.',
-            'Air-gapped es una práctica estándar para agencias gubernamentales y contratistas de defensa que manejan datos clasificados.',
+            'El air-gap es un patrón habitual en agencias gubernamentales y contratistas de defensa que manejan datos clasificados.',
           ],
         },
         whatIsAirGapped: {
@@ -336,7 +336,7 @@ schema: {
           content: [
             '**La infraestructura air-gapped no tiene conexión de red a internet ni a ningún sistema externo.** Todos los datos y la computación permanecen en hardware aislado.',
             '**Aislamiento absoluto:** sin WiFi, sin Ethernet a redes externas, sin conexiones USB a dispositivos conectados a internet.',
-            '**Los datos nunca salen:** la inferencia ocurre localmente, los resultados se quedan localmente.',
+            '**Los datos permanecen locales por diseño:** la inferencia se ejecuta localmente y los resultados se quedan localmente; los datos aún pueden salir mediante medios extraíbles, personal interno o acceso físico.',
             '**Las actualizaciones son manuales:** no se pueden descargar actualizaciones de modelos automáticamente. Las actualizaciones requieren medios físicos (USB, tarjeta SD) o transferencia por red interna.',
           ],
         },
@@ -440,15 +440,15 @@ schema: {
             },
             {
               q: '¿Cuánto cuesta un despliegue air-gapped?',
-              a: 'El hardware cuesta entre $50k y $500k (no mucho más que un despliegue on-prem regular). Los costos operativos (seguridad, auditoría, formación) son entre 5 y 10 veces más altos debido a los procesos manuales.',
+              a: 'El costo depende mucho del alcance. El hardware suele ser comparable al de un despliegue on-prem regular; los costos operativos aumentan porque las actualizaciones, la auditoría y el control de cambios son manuales. Solicita presupuestos para tus propios requisitos.',
             },
             {
               q: '¿Podemos usar herramientas estándar (Ollama, vLLM) en entornos air-gapped?',
-              a: 'Sí. Ambas herramientas funcionan sin internet. Se despliegan una vez y no necesitan conectividad a internet. Asegúrate de que todas las dependencias estén instaladas offline.',
+              a: 'Sí. Ambas herramientas funcionan sin internet. Una vez instalados offline los modelos y las dependencias, y con las comprobaciones de actualización y la telemetría desactivadas, no necesitan conectividad a internet.',
             },
             {
               q: '¿Qué pasa si necesitamos cumplir con el RGPD pero no necesitamos air-gapping completo?',
-              a: 'Para cargas de trabajo donde el air-gapping no es necesario pero sí el RGPD, las [opciones de GPU en la nube conformes con la UE →](/es/local-llms/eu-cloud-gpu-gdpr-2026) (Hetzner, Scaleway, OVHcloud) ofrecen residencia de datos en la UE sin la complejidad del aislamiento.',
+              a: 'Para cargas de trabajo donde el air-gapping no es necesario pero sí el RGPD, las [opciones de GPU en la nube alojadas en la UE →](/es/local-llms/eu-cloud-gpu-gdpr-2026) (Hetzner, Scaleway, OVHcloud) ofrecen residencia de datos en la UE sin la complejidad del aislamiento. El cumplimiento general del RGPD sigue dependiendo de tu base legal, tus contratos y tus salvaguardas. Esto no es asesoramiento legal.',
             },
           ],
         },
@@ -467,9 +467,9 @@ schema: {
           id: 'sources',
           title: 'Fuentes',
           items: [
-            'NIST Cybersecurity Framework -- nist.gov/cyberframework',
-            'DoD Data Management -- defense.gov/News/Releases/',
-            'Guías de seguridad air-gap -- ietf.org (documentos RFC sobre aislamiento de red)',
+            '[Marco de ciberseguridad del NIST](https://www.nist.gov/cyberframework)',
+            '[NIST SP 800-53 Rev. 5 -- Controles de seguridad y privacidad](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)',
+            '[BSI IT-Grundschutz](https://www.bsi.bund.de/grundschutz)',
           ],
         },
       },
@@ -480,7 +480,7 @@ schema: {
         'description': 'Despliegue de LLM local con air-gap: arquitectura de aislamiento completo, seguridad de red, gestión de actualizaciones y manejo de datos clasificados.',
         'url': 'https://www.promptquorum.com/es/local-llms/on-prem-air-gapped-local-llm',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-28',
+        'dateModified': '2026-11-03',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Advanced',
@@ -519,7 +519,7 @@ schema: {
             'name': '¿Cuánto cuesta un despliegue air-gapped?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'El hardware cuesta entre $50k y $500k (no mucho más que un despliegue on-prem regular). Los costos operativos (seguridad, auditoría, formación) son entre 5 y 10 veces más altos debido a los procesos manuales.',
+              'text': 'El costo depende mucho del alcance. El hardware suele ser comparable al de un despliegue on-prem regular; los costos operativos aumentan porque las actualizaciones, la auditoría y el control de cambios son manuales. Solicita presupuestos para tus propios requisitos.',
             },
           },
           {
@@ -527,7 +527,7 @@ schema: {
             'name': '¿Podemos usar herramientas estándar (Ollama, vLLM) en entornos air-gapped?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sí. Ambas herramientas funcionan sin internet. Se despliegan una vez y no necesitan conectividad a internet. Asegúrate de que todas las dependencias estén instaladas offline.',
+              'text': 'Sí. Ambas herramientas funcionan sin internet. Una vez instalados offline los modelos y las dependencias, y con las comprobaciones de actualización y la telemetría desactivadas, no necesitan conectividad a internet.',
             },
           },
         ],
@@ -542,7 +542,7 @@ schema: {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Aislamiento de red completo',
-            'description': 'La infraestructura air-gapped no tiene conexión de red a internet ni a ningún sistema externo, garantizando cero acceso externo.',
+            'description': 'La infraestructura air-gapped no tiene conexión de red a internet ni a ningún sistema externo, lo que elimina la vía de acceso remoto.',
           },
           {
             '@type': 'ListItem',
@@ -554,7 +554,7 @@ schema: {
             '@type': 'ListItem',
             'position': 3,
             'name': 'Seguridad mejorada',
-            'description': 'Protege datos clasificados en entornos gubernamentales, militares y financieros que requieren la máxima protección de datos.',
+            'description': 'Reduce la exposición de datos sensibles y clasificados en entornos gubernamentales, militares y financieros que requieren una protección sólida de datos.',
           },
         ],
       },
@@ -592,7 +592,7 @@ schema: {
           isTldr: true,
           snippetBlocks: [
             { type: 'one-sentence', text: 'يعني النشر المعزول (air-gapped) انعدام أي اتصال شبكي بين بنية LLM التحتية والإنترنت أو أي نظام خارجي -- تُنقل النماذج والتحديثات فقط عبر وسائط فعلية أو شبكات داخلية معزولة.' },
-            { type: 'plain-terms', text: 'خادم الذكاء الاصطناعي المعزول غير متصل بالإنترنت إطلاقًا، تمامًا مثل حاسوب بلا كابل شبكة وبلا WiFi. هذا أعلى مستوى حماية للبيانات متاح: لا يمكن اختراقه عن بُعد لأنه لا يوجد اتصال عن بُعد يمكن مهاجمته. الثمن هو أن تحديث نموذج الذكاء الاصطناعي يتطلب عملاً يدويًا بدلاً من تنزيل تلقائي.' },
+            { type: 'plain-terms', text: 'خادم الذكاء الاصطناعي المعزول غير متصل بالإنترنت إطلاقًا، تمامًا مثل حاسوب بلا كابل شبكة وبلا WiFi. يزيل العزل (air-gap) مسار الهجوم عن بُعد، وهو من أقوى تدابير العزل للبيانات الحساسة، لكنه لا يحمي من المطّلعين الداخليين أو الوسائط القابلة للإزالة المصابة أو الوصول المادي. الثمن هو أن تحديث نموذج الذكاء الاصطناعي يتطلب عملاً يدويًا بدلاً من تنزيل تلقائي.' },
           ],
           items: [
             'معزول = منعزل تمامًا عن الإنترنت. صفر اتصال شبكي بالأنظمة الخارجية.',
@@ -602,7 +602,7 @@ schema: {
             '**عزل الشبكة:** جدران الحماية وأجهزة العزل وتجزئة الشبكة تمنع أي اتصال خارجي.',
             '**إدارة النماذج:** انقل النماذج فقط عبر USB أو وسائط آمنة أو شبكات داخلية؛ بلا وصول للسحابة.',
             '**التحديثات:** عملية يدوية -- اختبر التحديثات دون اتصال أولًا، ثم انشرها عبر قنوات آمنة.',
-            'النشر المعزول ممارسة معيارية للجهات الحكومية ومقاولي الدفاع الذين يتعاملون مع بيانات مصنّفة.',
+            'النشر المعزول نمط شائع لدى الجهات الحكومية ومقاولي الدفاع الذين يتعاملون مع بيانات مصنّفة.',
           ],
         },
         whatIsAirGapped: {
@@ -611,7 +611,7 @@ schema: {
           content: [
             '**البنية التحتية المعزولة بلا اتصال شبكي بالإنترنت أو بأي نظام خارجي.** تبقى جميع البيانات والحوسبة على عتاد معزول.',
             '**عزل مطلق:** بلا WiFi، بلا Ethernet لشبكات خارجية، بلا اتصالات USB بأجهزة موصولة بالإنترنت.',
-            '**البيانات لا تغادر أبدًا:** يحدث الاستدلال محليًا، وتبقى النتائج محليًا.',
+            '**البيانات تبقى محلية بحكم التصميم:** يجري الاستدلال محليًا وتبقى النتائج محليًا؛ لكن قد تخرج البيانات عبر الوسائط القابلة للإزالة أو العاملين الداخليين أو الوصول المادي.',
             '**التحديثات يدوية:** لا يمكن تنزيل تحديثات النماذج تلقائيًا. تتطلب التحديثات وسائط مادية (USB، بطاقة SD) أو نقلًا عبر شبكة داخلية.',
           ],
         },
@@ -715,15 +715,15 @@ schema: {
             },
             {
               q: 'كم يكلّف النشر المعزول؟',
-              a: 'يكلّف العتاد بين 50 ألف و500 ألف دولار (ليس أكثر بكثير من نشر عادي في الموقع). التكاليف التشغيلية (أمان، تدقيق، تدريب) أعلى بـ 5 إلى 10 أضعاف بسبب العمليات اليدوية.',
+              a: 'تعتمد التكلفة بدرجة كبيرة على نطاق المشروع. يكون العتاد عادةً مماثلًا لنشر عادي في الموقع؛ وترتفع التكاليف التشغيلية لأن التحديثات والتدقيق وضبط التغييرات تتم يدويًا. احصل على عروض أسعار تناسب متطلباتك.',
             },
             {
               q: 'هل يمكننا استخدام أدوات قياسية (Ollama، vLLM) في البيئات المعزولة؟',
-              a: 'نعم. كلتا الأداتين تعملان دون إنترنت. تُنشَران مرة واحدة ولا تحتاجان لاتصال بالإنترنت. تأكد من تثبيت جميع التبعيات دون اتصال.',
+              a: 'نعم. كلتا الأداتين تعملان دون إنترنت. بعد تثبيت النماذج والتبعيات دون اتصال، وبعد تعطيل فحوصات التحديث والقياس عن بُعد، لا تحتاجان إلى اتصال بالإنترنت.',
             },
             {
               q: 'ماذا لو احتجنا الامتثال للوائح حماية البيانات لكن لا نحتاج عزلًا كاملًا؟',
-              a: 'لأحمال العمل التي لا تحتاج عزلًا لكنها تحتاج امتثالًا لحماية البيانات، توفّر [خيارات GPU السحابية الممتثلة لحماية البيانات →](/ar/local-llms/eu-cloud-gpu-gdpr-2026) إقامة بيانات إقليمية دون تعقيد العزل.',
+              a: 'لأحمال العمل التي لا تحتاج عزلًا لكنها تحتاج امتثالًا لحماية البيانات، توفّر [خيارات GPU السحابية مع إقامة البيانات داخل الاتحاد الأوروبي →](/ar/local-llms/eu-cloud-gpu-gdpr-2026) إقامة بيانات إقليمية دون تعقيد العزل. ويظل الامتثال العام لحماية البيانات معتمدًا على أساسك القانوني وعقودك وضماناتك. هذا ليس استشارة قانونية.',
             },
           ],
         },
@@ -742,9 +742,9 @@ schema: {
           id: 'sources',
           title: 'المصادر',
           items: [
-            'NIST Cybersecurity Framework -- nist.gov/cyberframework',
-            'DoD Data Management -- defense.gov/News/Releases/',
-            'أدلة أمان العزل -- ietf.org (مستندات RFC حول عزل الشبكة)',
+            '[إطار الأمن السيبراني من NIST](https://www.nist.gov/cyberframework)',
+            '[NIST SP 800-53 Rev. 5 -- ضوابط الأمن والخصوصية](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)',
+            '[BSI IT-Grundschutz](https://www.bsi.bund.de/grundschutz)',
           ],
         },
       },
@@ -755,7 +755,7 @@ schema: {
         'description': 'نشر LLM محلي معزول: بنية عزل كاملة، أمان الشبكة، إدارة التحديثات، والتعامل مع البيانات المصنّفة.',
         'url': 'https://www.promptquorum.com/ar/local-llms/on-prem-air-gapped-local-llm',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-28',
+        'dateModified': '2026-11-03',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Advanced',
@@ -794,7 +794,7 @@ schema: {
             'name': 'كم يكلّف النشر المعزول؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'يكلّف العتاد بين 50 ألف و500 ألف دولار (ليس أكثر بكثير من نشر عادي في الموقع). التكاليف التشغيلية (أمان، تدقيق، تدريب) أعلى بـ 5 إلى 10 أضعاف بسبب العمليات اليدوية.',
+              'text': 'تعتمد التكلفة بدرجة كبيرة على نطاق المشروع. يكون العتاد عادةً مماثلًا لنشر عادي في الموقع؛ وترتفع التكاليف التشغيلية لأن التحديثات والتدقيق وضبط التغييرات تتم يدويًا. احصل على عروض أسعار تناسب متطلباتك.',
             },
           },
           {
@@ -802,7 +802,7 @@ schema: {
             'name': 'هل يمكننا استخدام أدوات قياسية (Ollama، vLLM) في البيئات المعزولة؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'نعم. كلتا الأداتين تعملان دون إنترنت. تُنشَران مرة واحدة ولا تحتاجان لاتصال بالإنترنت. تأكد من تثبيت جميع التبعيات دون اتصال.',
+              'text': 'نعم. كلتا الأداتين تعملان دون إنترنت. بعد تثبيت النماذج والتبعيات دون اتصال، وبعد تعطيل فحوصات التحديث والقياس عن بُعد، لا تحتاجان إلى اتصال بالإنترنت.',
             },
           },
         ],
@@ -817,7 +817,7 @@ schema: {
             '@type': 'ListItem',
             'position': 1,
             'name': 'عزل شبكة كامل',
-            'description': 'البنية التحتية المعزولة بلا اتصال شبكي بالإنترنت أو بأي نظام خارجي، ما يضمن صفر وصول خارجي.',
+            'description': 'البنية التحتية المعزولة بلا اتصال شبكي بالإنترنت أو بأي نظام خارجي، ما يزيل مسار الوصول عن بُعد.',
           },
           {
             '@type': 'ListItem',
@@ -829,7 +829,7 @@ schema: {
             '@type': 'ListItem',
             'position': 3,
             'name': 'أمان مُعزَّز',
-            'description': 'يحمي البيانات المصنّفة في البيئات الحكومية والعسكرية والمالية التي تتطلب أقصى حماية للبيانات.',
+            'description': 'يقلّل من تعرّض البيانات الحساسة والمصنّفة في البيئات الحكومية والعسكرية والمالية التي تتطلب حماية قوية للبيانات.',
           },
         ],
       },
@@ -841,7 +841,7 @@ schema: {
       title: 'LLMs Locais On-Prem Air-Gapped: Implantação Isolada para Ambientes Classificados',
       heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-pt.webp',
       seoTitle: 'Implantação de LLM air-gapped: arquitetura e atualizações',
-      intro: 'Um LLM air-gapped roda em infraestrutura sem conexão com a internet, de modo que prompts e documentos não conseguem chegar a APIs externas. Governos, defesa e setores regulados usam esse padrão para dados classificados ou muito sensíveis. Modelos, atualizações e logs entram apenas por etapas de transferência offline controladas. No Brasil, organizações sujeitas à LGPD que processam dados sensíveis (saúde, finanças, dados pessoais de alto risco) se beneficiam especialmente de implantações air-gapped para atender às exigências da ANPD.',
+      intro: 'Um LLM air-gapped roda em infraestrutura sem conexão com a internet, de modo que prompts e documentos não conseguem chegar a APIs externas. Governos, defesa e setores regulados usam esse padrão para dados classificados ou muito sensíveis. Modelos, atualizações e logs entram apenas por etapas de transferência offline controladas. No Brasil, organizações sujeitas à LGPD que processam dados sensíveis (saúde, finanças, dados pessoais de alto risco) podem usar implantações air-gapped como uma das medidas técnicas de segurança; a conformidade geral depende de outras medidas.',
       metaDescription: 'Como funciona uma implantação de LLM air-gapped: arquitetura isolada, atualizações offline de modelos e segurança de rede para dados sensíveis.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Um LLM air-gapped roda em infraestrutura sem conexão com a internet, de modo que prompts e documentos não conseguem chegar a APIs externas. Governos, defesa e setores regulados usam esse padrão para dados classificados ou muito sensíveis. Modelos, atualizações e logs entram apenas por etapas de transferência offline controladas.**',
@@ -867,17 +867,17 @@ schema: {
           isTldr: true,
           snippetBlocks: [
             { type: 'one-sentence', text: 'A implantação air-gapped significa zero conectividade de rede entre a infraestrutura do LLM e a internet ou qualquer sistema externo -- os modelos e as atualizações são transferidos apenas por mídia física ou redes internas isoladas.' },
-            { type: 'plain-terms', text: 'Um servidor de IA air-gapped está completamente desconectado da internet, como um computador sem cabo de rede e sem WiFi. Esse é o nível mais alto de proteção de dados disponível: nada pode ser invadido remotamente porque não existe conexão remota para atacar. A contrapartida é que atualizar o modelo de IA exige trabalho manual em vez de um download automático.' },
+            { type: 'plain-terms', text: 'Um servidor de IA air-gapped está completamente desconectado da internet, como um computador sem cabo de rede e sem WiFi. O air-gap elimina o caminho de ataque remoto e é uma das medidas de isolamento mais fortes para dados sensíveis. Não protege contra pessoas internas, mídias removíveis comprometidas nem acesso físico. A contrapartida é que atualizar o modelo de IA exige trabalho manual em vez de um download automático.' },
           ],
           items: [
             'Air-gapped = completamente isolado da internet. Zero conectividade de rede com sistemas externos.',
-            'Caso de uso: governo (classificado), forças armadas (cenários de combate), finanças (alta segurança), saúde (HIPAA/CFM ultrassensível), LGPD (dados de alto risco no Brasil).',
+            'Caso de uso: governo (classificado), forças armadas (cenários de combate), finanças (alta segurança), saúde (HIPAA/CFM ultrassensível), LGPD (dados sensíveis no Brasil; o air-gap é uma medida técnica entre outras).',
             'Desafio: não é possível atualizar automaticamente modelos, embeddings ou dependências. Requer procedimentos manuais.',
             'Arquitetura: hardware dedicado, armazenamento criptografado, acesso restrito de usuários, segurança física.',
             '**Isolamento de rede:** firewalls, appliances air-gap e segmentação de rede impedem qualquer comunicação externa.',
             '**Gestão de modelos:** transfira modelos apenas por USB, mídias seguras ou redes internas; sem acesso à nuvem.',
             '**Atualizações:** processo manual — teste as atualizações offline primeiro, depois implante por canais seguros.',
-            'Air-gapped é uma prática padrão para órgãos governamentais e contratantes de defesa que lidam com dados classificados.',
+            'Air-gapped é um padrão comum em órgãos governamentais e contratantes de defesa que lidam com dados classificados.',
           ],
         },
         whatIsAirGapped: {
@@ -886,7 +886,7 @@ schema: {
           content: [
             '**A infraestrutura air-gapped não tem conexão de rede com a internet nem com nenhum sistema externo.** Todos os dados e a computação permanecem em hardware isolado.',
             '**Isolamento absoluto:** sem Wi-Fi, sem Ethernet para redes externas, sem conexões USB para dispositivos conectados à internet.',
-            '**Os dados nunca saem:** a inferência ocorre localmente, os resultados ficam localmente.',
+            '**Os dados permanecem locais por design:** a inferência ocorre localmente e os resultados ficam locais; os dados ainda podem sair por mídias removíveis, pessoas internas ou acesso físico.',
             '**As atualizações são manuais:** não é possível baixar atualizações de modelos automaticamente. As atualizações requerem mídia física (USB, cartão SD) ou transferência por rede interna.',
           ],
         },
@@ -952,7 +952,7 @@ schema: {
             '**Controle de prompts:** implemente filtragem de entrada para prevenir prompt injection que poderia exfiltrar dados.',
             '**Logs de auditoria:** registre todas as consultas ao LLM com timestamps, usuário e hash do prompt para conformidade.',
             '**Criptografia de dados em trânsito:** mesmo dentro da rede air-gapped, use TLS para comunicação entre serviços.',
-            '**Conformidade LGPD:** para organizações brasileiras processando dados pessoais sensíveis, o relatório de impacto à proteção de dados (RIPD) deve documentar o ambiente air-gapped como medida de segurança adequada, conforme art. 38 da LGPD.',
+            '**LGPD:** a ANPD pode exigir do controlador um relatório de impacto à proteção de dados pessoais (RIPD, art. 38). Um ambiente air-gapped pode ser descrito nesse relatório como medida técnica de segurança, mas a adequação do tratamento depende de base legal, medidas organizacionais e avaliação do controlador. Isto não é aconselhamento jurídico.',
           ],
         },
         commonMistakes: {
@@ -984,15 +984,15 @@ schema: {
             },
             {
               q: 'Quanto custa uma implantação air-gapped?',
-              a: 'O hardware custa entre US$ 50 mil e US$ 500 mil (não muito mais que um ambiente on-prem regular). Os custos operacionais (segurança, auditoria, treinamento) são de 5 a 10 vezes maiores devido aos processos manuais.',
+              a: 'O custo depende muito do escopo. O hardware costuma ser comparável ao de um ambiente on-prem regular; os custos operacionais aumentam porque atualizações, auditoria e controle de mudanças são manuais. Peça orçamentos para os seus próprios requisitos.',
             },
             {
               q: 'Podemos usar ferramentas padrão (Ollama, vLLM) em ambientes air-gapped?',
-              a: 'Sim. Ambas as ferramentas funcionam sem internet. Implante uma vez e depois não é necessária conectividade com a internet. Garanta que todas as dependências sejam instaladas offline.',
+              a: 'Sim. Ambas as ferramentas funcionam sem internet. Depois que modelos e dependências forem instalados offline, e com verificações de atualização e telemetria desativadas, não é necessária conectividade com a internet.',
             },
             {
               q: 'E se precisarmos de conformidade com o GDPR mas não precisarmos de air-gapping completo?',
-              a: 'Para workloads em que o air-gapping não é necessário mas o GDPR é, [opções de GPU em nuvem compatíveis com a UE →](/pt/local-llms/eu-cloud-gpu-gdpr-2026) (Hetzner, Scaleway, OVHcloud) oferecem residência de dados na UE sem a complexidade do isolamento.',
+              a: 'Para workloads em que o air-gapping não é necessário mas o GDPR é, [opções de GPU em nuvem com residência de dados na UE →](/pt/local-llms/eu-cloud-gpu-gdpr-2026) (Hetzner, Scaleway, OVHcloud) oferecem residência de dados na UE sem a complexidade do isolamento. A conformidade geral com o GDPR continua dependendo da sua base legal, dos contratos e das salvaguardas. Isto não é aconselhamento jurídico.',
             },
           ],
         },
@@ -1010,10 +1010,10 @@ schema: {
           id: 'sources',
           title: 'Fontes',
           items: [
-            'NIST SP 800-53 — Controles de Segurança e Privacidade para Sistemas de Informação Federais',
-            'LGPD (Lei nº 13.709/2018) — Lei Geral de Proteção de Dados do Brasil, art. 38 (RIPD)',
-            'ANPD — Guia Orientativo de Segurança da Informação, Autoridade Nacional de Proteção de Dados',
-            'NSA/CISA — Guia de Boas Práticas para Ambientes Air-Gapped',
+            '[NIST SP 800-53 — Controles de Segurança e Privacidade para Sistemas de Informação Federais](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)',
+            '[LGPD (Lei nº 13.709/2018) — Lei Geral de Proteção de Dados do Brasil, art. 38 (RIPD)](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm)',
+            '[ANPD — Autoridade Nacional de Proteção de Dados](https://www.gov.br/anpd/pt-br)',
+            '[NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)',
           ],
         },
       },
@@ -1039,7 +1039,7 @@ schema: {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Isolamento Completo de Rede',
-            'description': 'A infraestrutura air-gapped não possui conexão de rede com a internet ou qualquer sistema externo, garantindo acesso externo zero.',
+            'description': 'A infraestrutura air-gapped não possui conexão de rede com a internet ou qualquer sistema externo, o que elimina o caminho de acesso remoto.',
           },
           {
             '@type': 'ListItem',
@@ -1051,7 +1051,7 @@ schema: {
             '@type': 'ListItem',
             'position': 3,
             'name': 'Segurança Aprimorada',
-            'description': 'Protege dados classificados em ambientes governamentais, militares e financeiros que exigem proteção máxima de dados.',
+            'description': 'Reduz a exposição de dados sensíveis e classificados em ambientes governamentais, militares e financeiros que exigem proteção forte de dados.',
           },
         ],
       },
@@ -1089,7 +1089,7 @@ schema: {
           isTldr: true,
           snippetBlocks: [
             { type: 'one-sentence', text: 'Air-Gapped-Bereitstellung bedeutet null Netzwerkverbindung zwischen der LLM-Infrastruktur und dem Internet oder jedem externen System -- Modelle und Updates werden ausschließlich über physische Datenträger oder isolierte interne Netzwerke übertragen.' },
-            { type: 'plain-terms', text: 'Ein Air-Gapped-KI-Server ist vollständig vom Internet getrennt, wie ein Computer ohne Netzwerkkabel und ohne WLAN. Das ist der höchste verfügbare Schutzgrad für Daten: Nichts kann aus der Ferne gehackt werden, da keine Fernverbindung existiert, die angegriffen werden könnte. Der Nachteil: Die Aktualisierung des KI-Modells erfordert manuelle Arbeit statt eines automatischen Downloads.' },
+            { type: 'plain-terms', text: 'Ein Air-Gapped-KI-Server ist vollständig vom Internet getrennt, wie ein Computer ohne Netzwerkkabel und ohne WLAN. Eine Air-Gap-Isolierung beseitigt den Fernzugriffsweg und ist damit eine der stärksten Isolationsmaßnahmen für sensible Daten. Sie schützt nicht vor Insidern, manipulierten Wechselmedien oder physischem Zugriff. Der Nachteil: Die Aktualisierung des KI-Modells erfordert manuelle Arbeit statt eines automatischen Downloads.' },
           ],
           items: [
             'Air-Gapped = vollständig vom Internet isoliert. Null Netzwerkverbindung zu externen Systemen.',
@@ -1099,7 +1099,7 @@ schema: {
             '**Netzwerkisolation:** Firewalls, Air-Gap-Appliances und Netzwerksegmentierung verhindern externe Kommunikation.',
             '**Modellverwaltung:** Modelle nur per USB, sichere Medien oder interne Netzwerke übertragen; kein Cloud-Zugriff.',
             '**Updates:** Manueller Prozess -- Updates zunächst offline testen, dann über sichere Kanäle bereitstellen.',
-            'Air-Gapped ist gängige Praxis für Behörden und Rüstungsunternehmen, die mit klassifizierten Daten arbeiten.',
+            'Air-Gapped-Betrieb ist ein verbreitetes Muster bei Behörden und Rüstungsunternehmen, die klassifizierte Daten verarbeiten.',
           ],
         },
         whatIsAirGapped: {
@@ -1108,7 +1108,7 @@ schema: {
           content: [
             '**Air-Gapped-Infrastruktur hat keine Netzwerkverbindung zum Internet oder zu externen Systemen.** Alle Daten und Berechnungen bleiben auf isolierter Hardware.',
             '**Absolute Isolierung:** Kein WLAN, kein Ethernet zu externen Netzwerken, keine USB-Verbindungen zu internetverbundenen Geräten.',
-            '**Daten verlassen das System nie:** Inferenzen finden lokal statt, Ergebnisse bleiben lokal.',
+            '**Daten bleiben konstruktionsbedingt lokal:** Inferenzen finden lokal statt, Ergebnisse bleiben lokal; Daten können weiterhin über Wechselmedien, Insider oder physischen Zugriff abfließen.',
             '**Updates sind manuell:** Kann Modell-Updates nicht automatisch herunterladen. Updates erfordern physische Medien (USB-Stick, SD-Karte) oder interne Netzwerkübertragung.',
           ],
         },
@@ -1117,7 +1117,7 @@ schema: {
           title: 'Wie sieht typische Air-Gapped-Architektur aus?',
           content: [
             '**Eine einzelne Maschine oder ein kleiner Cluster, vollständig isoliert, mit eingeschränktem physischem Zugang.**',
-            '**BSI-Grundschutz-Kataloge:** Deutsche Unternehmen sollten die BSI-Grundschutz-Anforderungen für die IT-Sicherheit von Air-Gapped-Systemen erfüllen.',
+            '**BSI-Grundschutz-Kataloge:** Deutsche Unternehmen können sich an den BSI-IT-Grundschutz-Bausteinen für die IT-Sicherheit von Air-Gapped-Systemen orientieren. Dies ist keine Rechtsberatung.',
           ],
           numberedItems: [
             '**Dedizierte Hardware:** Server nur für LLM-Inferenz, nichts anderes.',
@@ -1213,19 +1213,19 @@ schema: {
             },
             {
               q: 'Wie teuer ist Air-Gapped-Bereitstellung?',
-              a: 'Hardware-Kosten ca. 48k–480k € (nicht viel mehr als regulär On-Prem). Operational-Kosten (Sicherheit, Auditing, Training) sind 5–10× höher aufgrund manueller Prozesse.',
+              a: 'Die Kosten hängen stark vom Umfang ab. Die Hardware liegt typischerweise im Bereich einer normalen On-Prem-Installation; die Betriebskosten steigen, weil Updates, Auditing und Change-Control manuell erfolgen. Holen Sie Angebote für Ihre Anforderungen ein.',
             },
             {
               q: 'Können Sie Standard-Tools (Ollama, vLLM) in Air-Gapped-Umgebungen verwenden?',
-              a: 'Ja. Beide Tools funktionieren ohne Internet. Einmalige Bereitstellung, dann keine Internetverbindung erforderlich. Stellen Sie sicher, dass alle Abhängigkeiten offline installiert sind.',
+              a: 'Ja. Beide Tools funktionieren ohne Internet. Sobald Modelle und Abhängigkeiten offline installiert sind und Update-Prüfungen sowie Telemetrie deaktiviert wurden, ist keine Internetverbindung erforderlich.',
             },
             {
               q: 'Muss ich bei Air-Gapped-Bereitstellung die DSGVO beachten?',
-              a: 'Ja. Air-Gapped-Systeme sind ein Kontrollmechanismus für die DSGVO Artikel 28 (Datenverarbeitung). Sie erfüllen automatisch strenge Anforderungen für Datenresidenz und Sicherheit. Dokumentieren Sie alle Zugriffe und Änderungen für Compliance-Audits.',
+              a: 'Ja, die DSGVO gilt weiterhin für personenbezogene Daten. Ein Air-Gapped-System kann technische Maßnahmen nach Art. 32 DSGVO unterstützen und verhindert, dass Inferenzdaten an externe Dienstleister gelangen. Ob Ihr Gesamtbetrieb DSGVO-konform ist, hängt von Rechtsgrundlage (Art. 6), Verzeichnis, technisch-organisatorischen Maßnahmen und ggf. einer Datenschutz-Folgenabschätzung (Art. 35) ab; klären Sie das mit Ihrem Datenschutzbeauftragten. Dies ist keine Rechtsberatung.',
             },
             {
               q: 'Ist Air-Gapped für den deutschen Mittelstand geeignet?',
-              a: 'Ja, wenn Daten sensibel sind (Finanzen, Kundendaten, Betriebsgeheimnisse). Kleine bis mittlere Unternehmen können luftgapped Systeme mit 2–3 Servern + NAS-Backup wirtschaftlich betreiben. BSI-Grundschutz-Zertifizierung ist möglich und empfohlen für öffentliche Ausschreibungen.',
+              a: 'Ja, wenn Daten sensibel sind (Finanzen, Kundendaten, Betriebsgeheimnisse). Ob sich der Betrieb wirtschaftlich lohnt, hängt von Umfang und Anforderungen ab; holen Sie Angebote ein. Eine Zertifizierung nach ISO 27001 auf Basis von IT-Grundschutz ist grundsätzlich möglich. Ob sie für eine konkrete öffentliche Ausschreibung verlangt wird, steht in den jeweiligen Vergabeunterlagen; Quelle: [BSI IT-Grundschutz](https://www.bsi.bund.de/grundschutz). Dies ist keine Rechtsberatung.',
             },
           ],
         },
@@ -1244,9 +1244,9 @@ schema: {
           id: 'sources',
           title: 'Quellen',
           items: [
-            'NIST Cybersecurity Framework -- nist.gov/cyberframework',
-            'BSI Grundschutz-Kataloge -- bsi.bund.de',
-            'Air-Gap-Sicherheitsrichtlinien -- ietf.org (RFC-Dokumente zur Netzwerkisolation)',
+            '[NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)',
+            '[BSI IT-Grundschutz](https://www.bsi.bund.de/grundschutz)',
+            '[NIST SP 800-53 Rev. 5 -- Sicherheits- und Datenschutzmaßnahmen](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)',
           ],
         },
       },
@@ -1257,7 +1257,7 @@ schema: {
         'description': 'Air-Gapped Local LLM Bereitstellung: komplette Isolierungsarchitektur, Netzwerksicherheit, Update-Verwaltung und Klassifizierungsdaten-Handling.',
         'url': 'https://www.promptquorum.com/de/local-llms/on-prem-air-gapped-local-llm',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-28',
+        'dateModified': '2026-11-03',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Advanced',
@@ -1270,10 +1270,10 @@ schema: {
           { '@type': 'Question', 'name': 'Wie aktualisieren Sie Modelle in einem Air-Gapped-System?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Manuell per verschlüsseltem USB oder über ein internes, vom Internet isoliertes sicheres Netzwerk. Alle Updates erfordern Change-Control-Genehmigung und Audit-Trails.' } },
           { '@type': 'Question', 'name': 'Können wir Cloud-Backups für Air-Gapped-Systeme verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Cloud-Backups erfordern Internetverbindung (aufheben Air-Gapping). Verwenden Sie physische Backups (verschlüsselte Festplatten) in separater sicherer Einrichtung.' } },
           { '@type': 'Question', 'name': 'Ist Air-Gapped wirklich sicher gegen alle Angriffe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Größtenteils, aber Insider-Bedrohungen bleiben. Air-Gapped ist sicher gegen Remote-Angriffe, aber physischer oder Insider-Zugang kann es kompromittieren.' } },
-          { '@type': 'Question', 'name': 'Wie teuer ist Air-Gapped-Bereitstellung?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Hardware-Kosten ca. 48k–480k € (nicht viel mehr als regulär On-Prem). Operational-Kosten (Sicherheit, Auditing, Training) sind 5–10× höher aufgrund manueller Prozesse.' } },
-          { '@type': 'Question', 'name': 'Können Sie Standard-Tools (Ollama, vLLM) in Air-Gapped-Umgebungen verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Beide Tools funktionieren ohne Internet. Einmalige Bereitstellung, dann keine Internetverbindung erforderlich. Stellen Sie sicher, dass alle Abhängigkeiten offline installiert sind.' } },
-          { '@type': 'Question', 'name': 'Muss ich bei Air-Gapped-Bereitstellung die DSGVO beachten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Air-Gapped-Systeme sind ein Kontrollmechanismus für die DSGVO Artikel 28 (Datenverarbeitung). Sie erfüllen automatisch strenge Anforderungen für Datenresidenz und Sicherheit. Dokumentieren Sie alle Zugriffe und Änderungen für Compliance-Audits.' } },
-          { '@type': 'Question', 'name': 'Ist Air-Gapped für den deutschen Mittelstand geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, wenn Daten sensibel sind (Finanzen, Kundendaten, Betriebsgeheimnisse). Kleine bis mittlere Unternehmen können Air-Gapped-Systeme mit 2–3 Servern + NAS-Backup wirtschaftlich betreiben. BSI-Grundschutz-Zertifizierung ist möglich und empfohlen für öffentliche Ausschreibungen.' } },
+          { '@type': 'Question', 'name': 'Wie teuer ist Air-Gapped-Bereitstellung?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Die Kosten hängen stark vom Umfang ab. Die Hardware liegt typischerweise im Bereich einer normalen On-Prem-Installation; die Betriebskosten steigen, weil Updates, Auditing und Change-Control manuell erfolgen. Holen Sie Angebote für Ihre Anforderungen ein.' } },
+          { '@type': 'Question', 'name': 'Können Sie Standard-Tools (Ollama, vLLM) in Air-Gapped-Umgebungen verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Beide Tools funktionieren ohne Internet. Sobald Modelle und Abhängigkeiten offline installiert sind und Update-Prüfungen sowie Telemetrie deaktiviert wurden, ist keine Internetverbindung erforderlich.' } },
+          { '@type': 'Question', 'name': 'Muss ich bei Air-Gapped-Bereitstellung die DSGVO beachten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, die DSGVO gilt weiterhin für personenbezogene Daten. Ein Air-Gapped-System kann technische Maßnahmen nach Art. 32 DSGVO unterstützen und verhindert, dass Inferenzdaten an externe Dienstleister gelangen. Ob Ihr Gesamtbetrieb DSGVO-konform ist, hängt von Rechtsgrundlage (Art. 6), Verzeichnis, technisch-organisatorischen Maßnahmen und ggf. einer Datenschutz-Folgenabschätzung (Art. 35) ab; klären Sie das mit Ihrem Datenschutzbeauftragten. Dies ist keine Rechtsberatung.' } },
+          { '@type': 'Question', 'name': 'Ist Air-Gapped für den deutschen Mittelstand geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, wenn Daten sensibel sind (Finanzen, Kundendaten, Betriebsgeheimnisse). Ob sich der Betrieb wirtschaftlich lohnt, hängt von Umfang und Anforderungen ab; holen Sie Angebote ein. Eine Zertifizierung nach ISO 27001 auf Basis von IT-Grundschutz ist grundsätzlich möglich. Ob sie für eine konkrete öffentliche Ausschreibung verlangt wird, steht in den jeweiligen Vergabeunterlagen (Quelle: BSI, IT-Grundschutz). Dies ist keine Rechtsberatung.' } },
         ],
       },
       itemListSchema: {
@@ -1282,9 +1282,9 @@ schema: {
         'name': 'Air-Gapped-Isolierungskomponenten',
         'numberOfItems': 3,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Vollständige Netzwerkisolierung', 'description': 'Air-Gapped-Infrastruktur hat keine Netzwerkverbindung zum Internet oder zu externen Systemen und stellt Null-Zugang von außen sicher.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Vollständige Netzwerkisolierung', 'description': 'Air-Gapped-Infrastruktur hat keine Netzwerkverbindung zum Internet oder zu externen Systemen und beseitigt damit den Weg für Fernzugriff.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Manuelle Update-Verfahren', 'description': 'Modell-Updates erfordern physische Medien (USB-Stick) oder nur interne sichere Netzwerke; kein Cloud-Zugriff.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Erhöhte Sicherheit', 'description': 'Schützt klassifizierte Daten in Behörden-, Militär- und Finanzumgebungen, die maximalen Datenschutz erfordern.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Erhöhte Sicherheit', 'description': 'Verringert die Gefährdung sensibler und klassifizierter Daten in Behörden-, Militär- und Finanzumgebungen, die starken Datenschutz erfordern.' },
         ],
       },
     },
@@ -1321,7 +1321,7 @@ schema: {
           isTldr: true,
           snippetBlocks: [
             { type: 'one-sentence', text: "Le déploiement air-gapped signifie une connectivité réseau nulle entre l'infrastructure LLM et Internet ou tout système externe -- les modèles et les mises à jour ne circulent que via des supports physiques ou des réseaux internes isolés." },
-            { type: 'plain-terms', text: "Un serveur d'IA air-gapped est totalement déconnecté d'Internet, comme un ordinateur sans câble réseau et sans WiFi. C'est le niveau de protection des données le plus élevé qui soit : rien ne peut être piraté à distance puisqu'il n'existe aucune connexion distante à attaquer. La contrepartie est que la mise à jour du modèle d'IA demande un travail manuel plutôt qu'un téléchargement automatique." },
+            { type: 'plain-terms', text: "Un serveur d'IA air-gapped est totalement déconnecté d'Internet, comme un ordinateur sans câble réseau et sans WiFi. L'air-gap supprime la voie d'attaque à distance et constitue l'une des mesures d'isolement les plus solides pour des données sensibles. Il ne protège pas contre les initiés, les supports amovibles compromis ni l'accès physique. La contrepartie est que la mise à jour du modèle d'IA demande un travail manuel plutôt qu'un téléchargement automatique." },
           ],
           items: [
             'Air-gapped = complètement isolé d\'Internet. Zéro connectivité réseau vers les systèmes externes.',
@@ -1331,7 +1331,7 @@ schema: {
             '**Isolation réseau:** pare-feu, appliances air-gap et segmentation réseau empêchent toute communication externe.',
             '**Gestion des modèles:** transférez via USB, supports sécurisés ou réseaux internes uniquement; aucun accès cloud.',
             '**Mises à jour:** processus manuel -- testez les mises à jour hors ligne d\'abord, puis déployez via canaux sécurisés.',
-            'L\'air-gapped est une pratique standard pour les agences gouvernementales et les entrepreneurs de défense traitant des données classifiées.',
+            'L\'air-gap est un schéma courant chez les agences gouvernementales et les entrepreneurs de défense traitant des données classifiées.',
           ],
         },
         whatIsAirGapped: {
@@ -1340,7 +1340,7 @@ schema: {
           content: [
             '**Une infrastructure air-gapped n\'a aucune connexion réseau à Internet ou à tout système externe.** Toutes les données et tous les calculs restent sur matériel isolé.',
             '**Isolement absolu:** pas de WiFi, pas d\'Ethernet vers des réseaux externes, pas de connexions USB vers des appareils connectés à Internet.',
-            '**Les données ne partent jamais:** l\'inférence se fait localement, les résultats restent locaux.',
+            '**Les données restent locales par conception :** l\'inférence se fait localement et les résultats restent locaux ; des données peuvent toutefois sortir via des supports amovibles, des personnes internes ou un accès physique.',
             '**Les mises à jour sont manuelles:** impossible de télécharger automatiquement les mises à jour. Exigent des supports physiques (clé USB, carte SD) ou transfert réseau interne.',
           ],
         },
@@ -1406,7 +1406,7 @@ schema: {
           title: 'Comment garantissez-vous la sécurité dans les systèmes air-gapped?',
           content: [
             '**Air-gapped est intrinsèquement plus sûr (pas d\'attaques externes), mais de nouveaux risques émergent:**',
-            '**Conformité CNIL:** la CNIL recommande l\'inférence locale pour les données sensibles. Air-gapped satisfait les exigences les plus strictes de résidence des données et de sécurité du traitement.',
+            '**Repères CNIL :** la CNIL a publié des fiches pratiques sur l\'IA et le RGPD (voir la source liée). Une inférence locale peut réduire les transferts de données vers des tiers, et un système air-gapped peut soutenir les mesures de sécurité du traitement (art. 32 RGPD). La conformité dépend toutefois de la base légale, des mesures organisationnelles et de l\'analyse d\'impact du responsable de traitement. Ceci ne constitue pas un conseil juridique.',
           ],
           items: [
             '**Menaces d\'initiés:** employés avec accès pourraient copier des données via USB. Exiger intégrité à deux personnes.',
@@ -1445,11 +1445,11 @@ schema: {
             },
             {
               q: 'Quel est le coût du déploiement air-gapped?',
-              a: 'Coûts matériel 48 000–480 000 € (pas beaucoup plus qu\'on-prem régulier). Coûts opérationnels (sécurité, audit, formation) sont 5–10× plus élevés en raison des processus manuels.',
+              a: 'Le coût dépend fortement du périmètre. Le matériel est généralement comparable à un déploiement on-prem classique ; les coûts d\'exploitation augmentent car mises à jour, audit et contrôle des changements sont manuels. Demandez des devis adaptés à votre besoin.',
             },
             {
               q: 'Pouvons-nous utiliser les outils standards (Ollama, vLLM) dans les environnements air-gapped?',
-              a: 'Oui. Les deux outils fonctionnent sans Internet. Déploiement une fois, puis aucune connectivité Internet requise. Assurez-vous que toutes les dépendances sont installées hors ligne.',
+              a: 'Oui. Les deux outils fonctionnent sans Internet. Une fois les modèles et dépendances installés hors ligne, et les vérifications de mise à jour et la télémétrie désactivées, aucune connectivité Internet n\'est requise.',
             },
           ],
         },
@@ -1468,9 +1468,9 @@ schema: {
           id: 'sources',
           title: 'Sources',
           items: [
-            'Cadre de cybersécurité NIST -- nist.gov/cyberframework',
-            'Recommandations CNIL sur l\'IA -- cnil.fr',
-            'Directives de sécurité air-gap -- ietf.org (documents RFC sur l\'isolement réseau)',
+            '[Cadre de cybersécurité NIST](https://www.nist.gov/cyberframework)',
+            '[Les fiches pratiques IA de la CNIL](https://www.cnil.fr/fr/les-fiches-pratiques-ia)',
+            '[BSI IT-Grundschutz](https://www.bsi.bund.de/grundschutz)',
           ],
         },
       },
@@ -1481,7 +1481,7 @@ schema: {
         'description': 'Déploiement air-gapped d\'LLM local: architecture d\'isolement complet, sécurité réseau, gestion des mises à jour et données classifiées.',
         'url': 'https://www.promptquorum.com/fr/local-llms/on-prem-air-gapped-local-llm',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-28',
+        'dateModified': '2026-11-03',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Advanced',
@@ -1494,8 +1494,8 @@ schema: {
           { '@type': 'Question', 'name': 'Comment mettez-vous à jour les modèles dans un système air-gapped?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Manuellement via USB chiffré, ou via un réseau sécurisé isolé interne. Toutes les mises à jour exigent approbation du contrôle des changements et pistes d\'audit.' } },
           { '@type': 'Question', 'name': 'Pouvons-nous utiliser des sauvegardes cloud pour les systèmes air-gapped?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. Les sauvegardes cloud exigent connexion Internet (annulent air-gapping). Utilisez sauvegardes physiques (disques durs chiffrés) stockés dans installation sécurisée séparée.' } },
           { '@type': 'Question', 'name': 'Air-gapped est-il vraiment sûr contre toutes les attaques?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Généralement, mais les menaces d\'initiés persistent. Air-gapped protège contre les attaques distantes, mais accès physique ou accès d\'initié peuvent le compromettre.' } },
-          { '@type': 'Question', 'name': 'Quel est le coût du déploiement air-gapped?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Coûts matériel 48 000–480 000 € (pas beaucoup plus qu\'on-prem régulier). Coûts opérationnels (sécurité, audit, formation) sont 5–10× plus élevés en raison des processus manuels.' } },
-          { '@type': 'Question', 'name': 'Pouvons-nous utiliser les outils standards (Ollama, vLLM) dans les environnements air-gapped?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Les deux outils fonctionnent sans Internet. Déploiement une fois, puis aucune connectivité Internet requise. Assurez-vous que toutes les dépendances sont installées hors ligne.' } },
+          { '@type': 'Question', 'name': 'Quel est le coût du déploiement air-gapped?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Le coût dépend fortement du périmètre. Le matériel est généralement comparable à un déploiement on-prem classique ; les coûts d\'exploitation augmentent car mises à jour, audit et contrôle des changements sont manuels. Demandez des devis adaptés à votre besoin.' } },
+          { '@type': 'Question', 'name': 'Pouvons-nous utiliser les outils standards (Ollama, vLLM) dans les environnements air-gapped?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Les deux outils fonctionnent sans Internet. Une fois les modèles et dépendances installés hors ligne, et les vérifications de mise à jour et la télémétrie désactivées, aucune connectivité Internet n\'est requise.' } },
         ],
       },
       itemListSchema: {
@@ -1504,9 +1504,9 @@ schema: {
         'name': 'Composants d\'isolement air-gapped',
         'numberOfItems': 3,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Isolement réseau complet', 'description': 'L\'infrastructure air-gapped n\'a aucune connexion réseau à Internet ou à systèmes externes, assurant zéro accès externe.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Isolement réseau complet', 'description': 'L\'infrastructure air-gapped n\'a aucune connexion réseau à Internet ou aux systèmes externes, ce qui supprime la voie d\'accès à distance.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Procédures de mise à jour manuelle', 'description': 'Les mises à jour de modèles exigent supports physiques (clé USB) ou seulement réseaux internes sécurisés; aucun accès cloud.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Sécurité renforcée', 'description': 'Protège les données classifiées dans les environnements gouvernementaux, militaires et financiers exigeant protection maximale.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Sécurité renforcée', 'description': 'Réduit l\'exposition des données sensibles et classifiées dans les environnements gouvernementaux, militaires et financiers exigeant une forte protection.' },
         ],
       },
     },
@@ -1543,7 +1543,7 @@ schema: {
           isTldr: true,
           snippetBlocks: [
             { type: 'one-sentence', text: 'エアギャップ展開とは、LLMインフラとインターネットまたは外部システムとの間のネットワーク接続がゼロであることを意味します。モデルと更新は物理メディアまたは隔離された内部ネットワークを通じてのみ移動します。' },
-            { type: 'plain-terms', text: 'エアギャップAIサーバーは、ネットワークケーブルもWiFiもないコンピューターのように、インターネットから完全に切断されています。これは利用可能な最高レベルのデータ保護です。攻撃対象となるリモート接続が存在しないため、リモートからハッキングされることはありません。その代償として、AIモデルの更新は自動ダウンロードではなく手動作業が必要になります。' },
+            { type: 'plain-terms', text: 'エアギャップAIサーバーは、ネットワークケーブルもWiFiもないコンピューターのように、インターネットから完全に切断されています。エアギャップはリモート攻撃の経路をなくすため、機密データ向けの最も強力な隔離手段の一つです。ただし、内部者、侵害されたリムーバブルメディア、物理的アクセスからは守れません。その代償として、AIモデルの更新は自動ダウンロードではなく手動作業が必要になります。' },
           ],
           items: [
             'エアギャップ = インターネットから完全隔離。外部システムへのネットワーク接続ゼロ。',
@@ -1553,7 +1553,7 @@ schema: {
             '**ネットワーク隔離:** ファイアウォール、エアギャップアプライアンス、ネットワークセグメンテーション。',
             '**モデル管理:** USB、セキュアメディア、内部ネットワーク経由のみ; クラウドアクセスなし。',
             '**更新:** 手動プロセス―オフラインで更新テスト、セキュアチャネル経由でデプロイ。',
-            'エアギャップは、機密データを扱う政府機関や防衛関連企業にとって標準的な運用です。',
+            'エアギャップは、機密データを扱う政府機関や防衛関連企業でよく見られる運用形態です。',
           ],
         },
         'what-is-air-gapped': {
@@ -1562,9 +1562,9 @@ schema: {
           content: 'エアギャップはネットワーク接続を物理的・論理的に切断すること。インターネット0、外部接続0。',
           items: [
             '**定義:** LLMと外部ネットワーク間に「エアギャップ」(物理的隔離)がある状態。',
-            '**目的:** データ流出防止、機密保護、規制遵守(HIPAA, FedRAMP, 政府機密)。',
+            '**目的:** データ流出リスクの低減と機密保護。HIPAAやFedRAMPなどの規制への適合は、隔離だけでなく組織的な管理策全体で判断されます。',
             '**制約:** 自動更新不可、外部リソース利用不可、手動管理必須。',
-            '**セキュリティ効果:** 外部からのハッキング、マルウェア侵入、データ盗難 すべて物理的に不可能。',
+            '**セキュリティ効果:** インターネット経由の外部からの攻撃経路を断ちますが、内部者、リムーバブルメディア、物理的アクセスによるリスクは残ります。',
           ],
         },
         'architecture': {
@@ -1572,7 +1572,7 @@ schema: {
           title: 'アーキテクチャ設計',
           content: 'エアギャップLLM最小構成: GPU、CPU、メモリ、ローカルストレージ、管理端末。',
           items: [
-            '**計算層:** RTX 4090 × 2 (70B推論)、または NVIDIA A100 (政府標準)。',
+            '**計算層:** 例として RTX 4090 × 2(70B推論の一例)や、NVIDIA A100 などのデータセンター向けGPU。構成は要件によって異なります。',
             '**ストレージ:** 暗号化NVMe (LUKS/BitLocker)、12-24TB (モデル + キャッシュ)。',
             '**ネットワーク:** 物理的に隔離。内部LANのみ。外部接続ケーブル完全削除。',
             '**管理:** エアギャップ内の管理ワークステーション、シリアルコンソール、物理キーボード。',
@@ -1661,15 +1661,15 @@ schema: {
             },
             {
               q: 'エアギャップデプロイメントのコストはどれくらいですか?',
-              a: 'ハードウェアコストは5万〜50万ドル(通常のオンプレミスとさほど変わりません)。運用コスト(セキュリティ、監査、トレーニング)は手動プロセスのため5〜10倍高くなります。',
+              a: 'コストは規模によって大きく変わります。ハードウェアは通常のオンプレミスと同程度であることが多い一方、更新・監査・変更管理が手作業になるため運用コストは増えます。要件に合わせて見積もりを取ってください。',
             },
             {
               q: 'エアギャップ環境で標準ツール(Ollama、vLLM)を使用できますか?',
-              a: 'はい。どちらのツールもインターネットなしで動作します。一度デプロイすれば、その後はインターネット接続は不要です。すべての依存関係がオフラインでインストールされていることを確認してください。',
+              a: 'はい。どちらのツールもインターネットなしで動作します。モデルと依存関係をオフラインでインストールし、更新確認とテレメトリを無効にすれば、インターネット接続は不要です。',
             },
             {
-              q: '完全なエアギャップは不要だがGDPR準拠が必要な場合はどうすればよいですか?',
-              a: 'エアギャップが不要でGDPR準拠が必要なワークロードには、[EU準拠のクラウドGPUオプション →](/ja/local-llms/eu-cloud-gpu-gdpr-2026)(Hetzner、Scaleway、OVHcloud)が、隔離の複雑さなしにEUデータ所在地を提供します。',
+              q: '完全なエアギャップは不要だがGDPRへの対応が必要な場合はどうすればよいですか?',
+              a: 'エアギャップが不要でGDPRへの対応が必要なワークロードには、[EUデータ所在地を選べるクラウドGPUオプション →](/ja/local-llms/eu-cloud-gpu-gdpr-2026)(Hetzner、Scaleway、OVHcloud)が、隔離の複雑さなしにEUデータ所在地を提供します。ただし、GDPR全般への適合は、法的根拠、契約、保護措置によって左右されます。法的助言ではありません。',
             },
           ],
         },
@@ -1687,9 +1687,9 @@ schema: {
           id: 'sources',
           title: '情報源',
           items: [
-            'NIST Cybersecurity Framework (エアギャップ設計基準)',
-            'DoD Security Requirements (米国防総省セキュリティ要件)',
-            'HIPAA/FedRAMP ガイドライン (医療・政府規制)',
+            '[NIST Cybersecurity Framework (エアギャップ設計基準)](https://www.nist.gov/cyberframework)',
+            '[NIST SP 800-53 Rev. 5 (セキュリティおよびプライバシー管理策)](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)',
+            '[HIPAA Security Rule (米国HHS)](https://www.hhs.gov/hipaa/for-professionals/security/index.html) / [FedRAMP](https://www.fedramp.gov/)',
           ],
         },
       },
@@ -1714,7 +1714,7 @@ schema: {
             '@type': 'ListItem',
             'position': 1,
             'name': '完全なネットワーク隔離',
-            'description': 'エアギャップインフラはインターネットや外部システムへのネットワーク接続を一切持たず、外部アクセスをゼロに保ちます。',
+            'description': 'エアギャップインフラはインターネットや外部システムへのネットワーク接続を一切持たず、リモートアクセスの経路をなくします。',
           },
           {
             '@type': 'ListItem',
@@ -1726,7 +1726,7 @@ schema: {
             '@type': 'ListItem',
             'position': 3,
             'name': '強化されたセキュリティ',
-            'description': '政府、軍事、金融環境における機密データを保護し、最大限のデータ保護を実現します。',
+            'description': '政府、軍事、金融など強いデータ保護が求められる環境で、機密データの露出を低減します。',
           },
         ],
       },
@@ -1764,7 +1764,7 @@ schema: {
           isTldr: true,
           snippetBlocks: [
             { type: 'one-sentence', text: '气隙部署意味着LLM基础设施与互联网或任何外部系统之间零网络连接——模型和更新只能通过物理介质或隔离的内部网络传输。' },
-            { type: 'plain-terms', text: '气隙AI服务器完全与互联网断开连接，就像一台没有网线也没有WiFi的电脑。这是可用的最高级别数据保护：由于不存在可供攻击的远程连接，因此无法远程入侵。代价是更新AI模型需要手动操作，而不是自动下载。' },
+            { type: 'plain-terms', text: '气隙AI服务器完全与互联网断开连接，就像一台没有网线也没有WiFi的电脑。气隙消除了远程攻击路径，是保护敏感数据最有力的隔离措施之一，但无法防范内部人员、被入侵的可移动介质或物理接触。代价是更新AI模型需要手动操作，而不是自动下载。' },
           ],
           items: [
             '气隙 = 完全隔离于互联网。零外部系统网络连接。',
@@ -1774,7 +1774,7 @@ schema: {
             '**网络隔离:** 防火墙、气隙设备和网络分段防止任何外部通信。',
             '**模型管理:** 通过USB、安全媒体或内部网络传输模型；无云访问。',
             '**更新:** 手动流程 -- 首先离线测试更新，然后通过安全渠道部署。',
-            '气隙部署是处理分类数据的政府机构和国防承包商的标准做法。',
+            '气隙部署是处理分类数据的政府机构和国防承包商中常见的做法。',
           ],
         },
         whatIsAirGapped: {
@@ -1783,7 +1783,7 @@ schema: {
           content: [
             '**气隙基础设施与互联网或任何外部系统都没有网络连接。** 所有数据和计算都保留在隔离硬件上。',
             '**绝对隔离:** 无WiFi、无连接到外部网络的以太网、无连接到互联网设备的USB连接。',
-            '**数据永不离开:** 推理在本地进行，结果保留在本地。',
+            '**数据设计上保留在本地:** 推理在本地进行，结果保留在本地；但数据仍可能通过可移动介质、内部人员或物理接触外泄。',
             '**更新手动进行:** 无法自动下载模型更新。更新需要物理媒体 (USB驱动器、SD卡) 或内部网络传输。',
           ],
         },
@@ -1887,11 +1887,11 @@ schema: {
             },
             {
               q: '气隙部署的成本是多少?',
-              a: '硬件成本$50k-$500k (比常规本地部署多不了多少)。运营成本 (安全、审计、培训) 由于手动流程而高5-10倍。',
+              a: '成本在很大程度上取决于项目范围。硬件通常与常规本地部署相当；由于更新、审计和变更控制需要手动完成，运营成本会上升。请根据自身需求获取报价。',
             },
             {
               q: '我们可以在气隙环境中使用标准工具 (Ollama、vLLM) 吗?',
-              a: '可以。两种工具都可以在没有互联网的情况下工作。部署一次，然后不需要互联网连接。确保所有依赖项都是离线安装的。',
+              a: '可以。两种工具都可以在没有互联网的情况下工作。在模型和依赖项离线安装完毕、并关闭更新检查和遥测后，不需要互联网连接。',
             },
           ],
         },
@@ -1910,9 +1910,9 @@ schema: {
           id: 'sources',
           title: '信息来源',
           items: [
-            'NIST网络安全框架 -- nist.gov/cyberframework',
-            'DoD数据管理 -- defense.gov/News/Releases/',
-            '气隙安全指南 -- ietf.org (RFC关于网络隔离的文档)',
+            '[NIST网络安全框架](https://www.nist.gov/cyberframework)',
+            '[NIST SP 800-53 Rev. 5 -- 安全与隐私控制](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)',
+            '[BSI IT-Grundschutz](https://www.bsi.bund.de/grundschutz)',
           ],
         },
       },
@@ -1923,7 +1923,7 @@ schema: {
         'description': '了解如何在完全隔离的网络环境中部署本地LLM: 包括网络隔离架构设计、模型离线管理、安全更新流程和分类信息保护。',
         'url': 'https://www.promptquorum.com/zh/local-llms/on-prem-air-gapped-local-llm',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-28',
+        'dateModified': '2026-11-03',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Advanced',
@@ -1967,7 +1967,7 @@ schema: {
             'name': '气隙部署的成本是多少?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '硬件成本$50k-$500k (比常规本地部署多不了多少)。运营成本 (安全、审计、培训) 由于手动流程而高5-10倍。',
+              'text': '成本在很大程度上取决于项目范围。硬件通常与常规本地部署相当；由于更新、审计和变更控制需要手动完成，运营成本会上升。请根据自身需求获取报价。',
             },
           },
           {
@@ -1975,7 +1975,7 @@ schema: {
             'name': '我们可以在气隙环境中使用标准工具 (Ollama、vLLM) 吗?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '可以。两种工具都可以在没有互联网的情况下工作。部署一次，然后不需要互联网连接。确保所有依赖项都是离线安装的。',
+              'text': '可以。两种工具都可以在没有互联网的情况下工作。在模型和依赖项离线安装完毕、并关闭更新检查和遥测后，不需要互联网连接。',
             },
           },
         ],
@@ -1990,7 +1990,7 @@ schema: {
             '@type': 'ListItem',
             'position': 1,
             'name': '完全网络隔离',
-            'description': '气隙基础设施与互联网或任何外部系统都没有网络连接，确保零外部访问。',
+            'description': '气隙基础设施与互联网或任何外部系统都没有网络连接，从而消除了远程访问路径。',
           },
           {
             '@type': 'ListItem',
@@ -2002,7 +2002,7 @@ schema: {
             '@type': 'ListItem',
             'position': 3,
             'name': '增强的安全性',
-            'description': '保护政府、军事和金融环境中的分类数据，需要最大的数据保护。',
+            'description': '降低政府、军事和金融等需要强数据保护的环境中敏感及涉密数据的暴露风险。',
           },
         ],
       },
@@ -2040,7 +2040,7 @@ schema: {
           isTldr: true,
           snippetBlocks: [
             { type: 'one-sentence', text: '에어갭 배포란 LLM 인프라와 인터넷 또는 외부 시스템 간의 네트워크 연결이 전혀 없음을 의미합니다. 모델과 업데이트는 오직 물리적 매체나 격리된 내부 네트워크를 통해서만 이동합니다.' },
-            { type: 'plain-terms', text: '에어갭 AI 서버는 네트워크 케이블도 와이파이도 없는 컴퓨터처럼 인터넷과 완전히 단절되어 있습니다. 이는 이용 가능한 최고 수준의 데이터 보호입니다. 공격할 수 있는 원격 연결이 존재하지 않기 때문에 원격으로 해킹될 수 없습니다. 대신 AI 모델을 업데이트하려면 자동 다운로드가 아닌 수동 작업이 필요합니다.' },
+            { type: 'plain-terms', text: '에어갭 AI 서버는 네트워크 케이블도 와이파이도 없는 컴퓨터처럼 인터넷과 완전히 단절되어 있습니다. 에어갭은 원격 공격 경로를 없애므로 민감한 데이터를 위한 가장 강력한 격리 수단 중 하나입니다. 다만 내부자, 오염된 이동식 미디어, 물리적 접근은 막지 못합니다. 대신 AI 모델을 업데이트하려면 자동 다운로드가 아닌 수동 작업이 필요합니다.' },
           ],
           items: [
             '에어갭 = 인터넷으로부터 완전 격리. 외부 시스템과의 네트워크 연결 제로.',
@@ -2050,7 +2050,7 @@ schema: {
             '**네트워크 격리:** 방화벽, 에어갭 어플라이언스, 네트워크 세분화로 외부 통신 차단.',
             '**모델 관리:** USB, 보안 매체, 내부 네트워크를 통해서만 모델 이전. 클라우드 접근 불가.',
             '**업데이트:** 수동 절차 — 오프라인에서 먼저 테스트 후, 보안 채널을 통해 배포.',
-            '에어갭은 기밀 데이터를 다루는 정부 기관 및 국방 계약업체의 표준 관행입니다.',
+            '에어갭은 기밀 데이터를 다루는 정부 기관 및 국방 계약업체에서 흔히 쓰이는 방식입니다.',
           ],
         },
         whatIsAirGapped: {
@@ -2059,7 +2059,7 @@ schema: {
           content: [
             '**에어갭 인프라는 인터넷이나 외부 시스템에 대한 네트워크 연결이 전혀 없습니다.** 모든 데이터와 연산은 격리된 하드웨어 내에서만 이루어집니다.',
             '**완전한 격리:** WiFi 없음, 외부 네트워크로의 이더넷 없음, 인터넷 연결 기기와의 USB 연결 없음.',
-            '**데이터 외부 유출 불가:** 추론은 로컬에서 실행되고, 결과는 로컬에 저장됩니다.',
+            '**설계상 데이터는 로컬에 머뭅니다:** 추론은 로컬에서 실행되고 결과는 로컬에 저장됩니다. 다만 이동식 매체, 내부자, 물리적 접근을 통한 반출 위험은 남아 있습니다.',
             '**업데이트는 수동:** 모델 업데이트 자동 다운로드 불가. 업데이트는 물리적 매체(USB 드라이브, SD 카드) 또는 내부 네트워크 이전이 필요합니다.',
           ],
         },
@@ -2163,15 +2163,15 @@ schema: {
             },
             {
               q: '에어갭 배포는 얼마나 비용이 듭니까?',
-              a: '하드웨어 비용은 $50,000~$500,000(일반 온프레미스와 큰 차이 없음). 운영 비용(보안, 감사, 교육)은 수동 프로세스로 인해 5~10배 더 높습니다.',
+              a: '비용은 범위에 따라 크게 달라집니다. 하드웨어는 일반적으로 일반 온프레미스와 비슷한 수준이지만, 업데이트·감사·변경 관리가 수동이어서 운영 비용이 증가합니다. 요구 사항에 맞는 견적을 받으십시오.',
             },
             {
               q: '에어갭 환경에서 표준 도구(Ollama, vLLM)를 사용할 수 있습니까?',
-              a: '예. 두 도구 모두 인터넷 없이 작동합니다. 한 번 배포하면 인터넷 연결이 필요 없습니다. 모든 의존성이 오프라인으로 설치되었는지 확인하십시오.',
+              a: '예. 두 도구 모두 인터넷 없이 작동합니다. 모델과 의존성을 오프라인으로 설치하고 업데이트 확인과 텔레메트리를 비활성화하면 인터넷 연결이 필요 없습니다.',
             },
             {
               q: 'GDPR 준수가 필요하지만 완전한 에어갭이 필요하지 않은 경우는 어떻게 합니까?',
-              a: '에어갭이 필요하지 않지만 GDPR이 적용되는 워크로드의 경우, [EU 준수 클라우드 GPU 옵션 →](/ko/local-llms/eu-cloud-gpu-gdpr-2026)(Hetzner, Scaleway, OVHcloud)이 격리 복잡성 없이 EU 데이터 상주를 제공합니다.',
+              a: '에어갭이 필요하지 않지만 GDPR이 적용되는 워크로드의 경우, [EU 데이터 상주를 제공하는 클라우드 GPU 옵션 →](/ko/local-llms/eu-cloud-gpu-gdpr-2026)(Hetzner, Scaleway, OVHcloud)이 격리 복잡성 없이 EU 데이터 상주를 제공합니다. 다만 GDPR 전반의 준수 여부는 법적 근거, 계약 및 보호 조치에 따라 달라집니다. 법률 자문이 아닙니다.',
             },
           ],
         },
@@ -2190,9 +2190,9 @@ schema: {
           id: 'sources',
           title: '출처',
           items: [
-            'NIST 사이버보안 프레임워크 -- nist.gov/cyberframework',
-            'DoD 데이터 관리 -- defense.gov/News/Releases/',
-            '에어갭 보안 가이드라인 -- ietf.org (네트워크 격리에 관한 RFC 문서)',
+            '[NIST 사이버보안 프레임워크](https://www.nist.gov/cyberframework)',
+            '[NIST SP 800-53 Rev. 5 -- 보안 및 개인정보 보호 통제](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)',
+            '[BSI IT-Grundschutz](https://www.bsi.bund.de/grundschutz)',
           ],
         },
       },
@@ -2206,7 +2206,7 @@ schema: {
             '@type': 'ListItem',
             'position': 1,
             'name': '완전한 네트워크 격리',
-            'description': '에어갭 인프라는 인터넷이나 외부 시스템과의 네트워크 연결이 전혀 없어 외부 접근을 원천 차단합니다.',
+            'description': '에어갭 인프라는 인터넷이나 외부 시스템과의 네트워크 연결이 전혀 없어 원격 접근 경로를 제거합니다.',
           },
           {
             '@type': 'ListItem',
@@ -2218,7 +2218,7 @@ schema: {
             '@type': 'ListItem',
             'position': 3,
             'name': '강화된 보안',
-            'description': '최대 수준의 데이터 보호가 필요한 정부, 군사, 금융 환경의 기밀 데이터를 보호합니다.',
+            'description': '강력한 데이터 보호가 필요한 정부, 군사, 금융 환경에서 기밀 데이터의 노출을 줄입니다.',
           },
         ],
       },

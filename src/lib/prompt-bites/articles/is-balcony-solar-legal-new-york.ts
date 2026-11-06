@@ -14,6 +14,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-york-overview-hero-en.webp',
     title: 'Is Balcony Solar Legal in New York?',
@@ -121,6 +122,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-york-overview-hero-de.webp',
     title: 'Ist Balkonsolar in New York legal?',
@@ -228,6 +230,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-york-overview-hero-es.webp',
     title: '¿Es legal la energía solar de balcón en Nueva York?',
@@ -335,6 +338,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-york-overview-hero-fr.webp',
     title: 'Le solaire de balcon est-il légal à New York ?',
@@ -442,6 +446,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-york-overview-hero-ja.webp',
     title: 'ニューヨーク州でバルコニーソーラーは合法ですか？',
@@ -549,6 +554,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-york-overview-hero-zh.webp',
     title: '纽约州的阳台太阳能合法吗？',
@@ -656,6 +662,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-york-overview-hero-pt.webp',
     title: 'A energia solar de varanda é legal em Nova York?',
@@ -763,6 +770,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-york-overview-hero-ar.webp',
     title: 'هل الطاقة الشمسية للشرفات قانونية في نيويورك؟',
@@ -870,6 +878,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-york-overview-hero-ko.webp',
     title: '뉴욕주에서 발코니 태양광은 합법입니까?',

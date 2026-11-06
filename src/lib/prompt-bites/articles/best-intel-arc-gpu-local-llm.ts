@@ -3,6 +3,7 @@ import type { PromptBiteArticle } from '../types'
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-intel-arc-gpu-local-llm-overview-hero-en.webp',
     title: 'Best Intel Arc GPU for Local LLMs?',
@@ -158,6 +159,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-intel-arc-gpu-local-llm-overview-hero-ar.webp',
     title: 'أفضل بطاقة Intel Arc لتشغيل LLM محليًا؟',
@@ -301,6 +303,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-intel-arc-gpu-local-llm-overview-hero-de.webp',
     title: 'Die beste Intel-Arc-GPU für lokale LLMs?',
@@ -444,6 +447,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-intel-arc-gpu-local-llm-overview-hero-es.webp',
     title: '¿Cuál es la Mejor GPU Intel Arc para LLMs Locales?',
@@ -587,6 +591,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-intel-arc-gpu-local-llm-overview-hero-fr.webp',
     title: 'Meilleur GPU Intel Arc pour les LLM locaux ?',
@@ -730,6 +735,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-intel-arc-gpu-local-llm-overview-hero-ja.webp',
     title: 'ローカルLLMに最適なIntel Arc GPUは?',
@@ -873,6 +879,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-intel-arc-gpu-local-llm-overview-hero-ko.webp',
     title: '로컬 LLM에 최적의 Intel Arc GPU는?',
@@ -1016,6 +1023,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-intel-arc-gpu-local-llm-overview-hero-pt.webp',
     title: 'Qual a Melhor GPU Intel Arc para LLMs Locais?',
@@ -1159,6 +1167,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-intel-arc-gpu-local-llm-overview-hero-zh.webp',
     title: '本地 LLM 的最佳 Intel Arc GPU 是什么？',
