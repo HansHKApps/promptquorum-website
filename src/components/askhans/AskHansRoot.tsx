@@ -507,7 +507,13 @@ export function AskHansRoot() {
                 )}
               </div>
 
-              {active && active.messages.some((m) => m.role === 'assistant' && m.content && !m.pending && !m.error) && <FeedbackBar key={active.id} />}
+              {active && active.messages.some((m) => m.role === 'assistant' && m.content && !m.pending && !m.error) && (
+                <FeedbackBar
+                  key={active.id}
+                  lastQuestion={[...active.messages].reverse().find((m) => m.role === 'user')?.content}
+                  lastAnswer={[...active.messages].reverse().find((m) => m.role === 'assistant' && m.content && !m.pending && !m.error)?.content}
+                />
+              )}
 
               {!isDesktop && showPanel && <MarketingPanel variant="strip" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onHide={() => setShowPanel(false)} />}
 

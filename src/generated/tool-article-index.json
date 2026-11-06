@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "lastbrowser-review",
+        "title": "LastBrowser Review: Free AI Browser With a Local Ollama Sidekick",
+        "url": "/power-local-llm/lastbrowser-review",
+        "dateModified": "2026-11-06",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-m5-local-llm",
         "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
@@ -72,17 +80,9 @@
         "url": "/local-llms/local-llm-hardware-guide",
         "dateModified": "2026-11-02",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "nextchat-review",
-        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
-        "url": "/local-llms/nextchat-review",
-        "dateModified": "2026-11-02",
-        "tier": "about"
       }
     ],
-    "totalCount": 342,
+    "totalCount": 343,
     "capped": true
   },
   "llama.cpp": {
@@ -2611,6 +2611,20 @@
       }
     ],
     "totalCount": 5,
+    "capped": false
+  },
+  "LastBrowser": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "lastbrowser-review",
+        "title": "LastBrowser Review: Free AI Browser With a Local Ollama Sidekick",
+        "url": "/power-local-llm/lastbrowser-review",
+        "dateModified": "2026-11-06",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Chatbox": {
@@ -12203,6 +12217,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "lastbrowser-review",
+        "title": "LastBrowser Review: Free AI Browser With a Local Ollama Sidekick",
+        "url": "/power-local-llm/lastbrowser-review",
+        "dateModified": "2026-11-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -12218,7 +12240,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "SiYuan": {
@@ -13294,7 +13316,7 @@
         "slug": "greencube-review",
         "title": "GreenCube Review: One-Time-Purchase Offline AI for Windows",
         "url": "/power-local-llm/greencube-review",
-        "dateModified": "2026-10-30",
+        "dateModified": "2026-11-06",
         "tier": "about"
       }
     ],

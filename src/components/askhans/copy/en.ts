@@ -73,10 +73,18 @@ export const copy: AskCopy = {
   feedback: {
     prompt: 'How helpful is Ask Hans?',
     star: (n: number) => `${n} out of 5 stars`,
-    commentPlaceholder: 'Optional: What could we do better? Please do not include personal data.',
-    send: 'Send feedback',
     thanks: 'Thank you for your feedback!',
     error: 'The feedback could not be sent. Please try again later.',
+    followup: {
+      title: 'Sorry this was not more helpful.',
+      body: 'What could we do better? Would you like to give us feedback by email? We prefill the details; add your own words before you send.',
+      include: 'Include my question and the answer in the email, so that Hans can see what went wrong.',
+      note: 'You can edit the email before sending; nothing is sent until you send it. Please add no personal data.',
+      write: 'Write an email',
+      skip: 'No thanks',
+      copied: 'The details were also copied to your clipboard.',
+      mail: { subject: 'Ask Hans feedback ({n}/5)', intro: 'What could be better? Please write here:', rating: 'Rating', language: 'Language', page: 'Page', question: 'Last question', answer: 'Last answer' },
+    },
   },
   info: {
     label: "About Ask Hans",

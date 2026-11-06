@@ -3,8 +3,8 @@
 // Anonymous: no visit ID, no IP, no conversation text is stored or mailed. What happens with a submission:
 //   1. an aggregate counter in Redis (askhans:day:<date> → rating:<n>, rating_count, rating_sum, fb_lang:<xx>),
 //      read by `npm run askhans:stats`;
-//   2. a notification mail to the site owner via Resend (rating, language, the optional comment).
-// The comment is free text the visitor typed on purpose; the UI asks them not to enter personal data.
+//   2. a notification mail to the site owner via Resend (rating and language only; no free text is accepted).
+// Written feedback goes through the visitor's own mail program (see FeedbackBar), never through this route.
 
 import { NextRequest, NextResponse } from 'next/server'
 import { createHash } from 'crypto'
@@ -16,7 +16,6 @@ export const runtime = 'nodejs'
 
 const OWNER_EMAIL = 'hello@promptquorum.com'
 const LANGS = new Set(['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'])
-const COMMENT_MAX = 500
 const DAY_TTL_S = 400 * 86_400
 
 const limiter = new Ratelimit({ redis, limiter: Ratelimit.slidingWindow(6, '1 h'), prefix: 'rl:askhans:feedback' })
@@ -43,7 +42,6 @@ export async function POST(req: NextRequest) {
   const rating = typeof b.rating === 'number' && Number.isInteger(b.rating) && b.rating >= 1 && b.rating <= 5 ? b.rating : null
   if (!rating) return new NextResponse(null, { status: 400 })
   const lang = typeof b.lang === 'string' && LANGS.has(b.lang) ? b.lang : 'en'
-  const comment = typeof b.comment === 'string' ? b.comment.trim().slice(0, COMMENT_MAX) : ''
 
   try {
     const dayKey = `askhans:day:${new Date().toISOString().slice(0, 10)}`
@@ -64,7 +62,7 @@ export async function POST(req: NextRequest) {
       from: 'PromptQuorum <noreply@promptquorum.com>',
       to: OWNER_EMAIL,
       subject: `Ask Hans feedback: ${'★'.repeat(rating)}${'☆'.repeat(5 - rating)} (${lang})`,
-      text: `Rating: ${rating} / 5\nLanguage: ${lang}\n\n${comment || '(no comment)'}`,
+      text: `Rating: ${rating} / 5\nLanguage: ${lang}`,
     })
   } catch (err) {
     console.error('[askhans] feedback mail failed', err instanceof Error ? err.message : err)

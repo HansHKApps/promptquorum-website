@@ -204,6 +204,11 @@
     "urlSlug": "page-assist-review",
     "url": "/local-llms/page-assist-review"
   },
+  "lastbrowser": {
+    "cluster": "power-local-llm",
+    "urlSlug": "lastbrowser-review",
+    "url": "/power-local-llm/lastbrowser-review"
+  },
   "chatbox": {
     "cluster": "local-llms",
     "urlSlug": "chatbox-review",
