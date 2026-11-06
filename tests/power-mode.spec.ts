@@ -170,6 +170,28 @@ test.describe('Power Mode', () => {
     expect(html).toContain('<table>')
   })
 
+  test('share menu: brand logos, fully inside the window even for a report at the top', async ({ page }) => {
+    await prepare(page)
+    await page.route('**/api/ask/solution', (r) => r.fulfill({ status: 200, contentType: 'application/x-ndjson', body: ndjson(REPORT) }))
+    await openPower(page)
+    await fillMax(page)
+    const dialog = askDialog(page)
+    await expect(dialog.getByRole('heading', { name: 'Your report: MAX – Full Setup' })).toBeVisible()
+    await dialog.getByRole('button', { name: 'More copy and share options' }).first().click()
+    const menu = page.getByRole('menu')
+    await expect(menu).toBeVisible()
+    await expect(menu.getByRole('menuitem')).toHaveCount(5) // formatted, plain, email, WhatsApp, Telegram (no native share in headless)
+    await expect(menu.getByRole('menuitem', { name: /WhatsApp/ }).locator('svg')).toHaveCount(1)
+    await expect(menu.getByRole('menuitem', { name: /Telegram/ }).locator('svg')).toHaveCount(1)
+    const box = await menu.boundingBox()
+    const vp = page.viewportSize()!
+    expect(box!.y).toBeGreaterThanOrEqual(0)
+    expect(box!.y + box!.height).toBeLessThanOrEqual(vp.height)
+    expect(box!.x).toBeGreaterThanOrEqual(0)
+    expect(box!.x + box!.width).toBeLessThanOrEqual(vp.width)
+    await page.screenshot({ path: process.env.SHARE_SHOT ?? 'test-results/share-menu.png' })
+  })
+
   test('hardware is NOT saved to the website tool unless the box is ticked', async ({ page }) => {
     await prepare(page)
     await page.route('**/api/ask/solution', (r) => r.fulfill({ status: 200, contentType: 'application/x-ndjson', body: ndjson(REPORT) }))
