@@ -65,14 +65,15 @@ export const fr: AboutCopy = {
     'L’indépendance vis-à-vis de tout contrôle est le fil conducteur de ce site. C’est pourquoi l’annuaire est neutre, pourquoi chaque fiche renvoie vers la source officielle, et pourquoi nous publions en neuf langues.',
   believeItalic:
     'Nous ne pensons pas que l’IA cloud soit mauvaise. Nous pensons que vous devriez avoir un vrai choix, et que choisir le local devrait être aussi simple que choisir le cloud.',
-  ecosystemH2: 'Un écosystème, quatre éléments qui fonctionnent ensemble',
+  ecosystemH2: 'Un écosystème, cinq éléments qui fonctionnent ensemble',
   ecosystemLead:
-    'PromptQuorum n’est ni une simple application, ni un simple annuaire. Ce sont quatre éléments construits autour du même objectif, pour vous permettre de passer de « qu’est-ce que je devrais utiliser ? » à une installation fonctionnelle sans quitter le site.',
+    'PromptQuorum n’est ni une simple application, ni un simple annuaire. Ce sont cinq éléments construits autour du même objectif, pour vous permettre de passer de « qu’est-ce que je devrais utiliser ? » à une installation fonctionnelle sans quitter le site.',
   connectsLabel: 'Fonctionne avec le reste :',
   findLabel: 'Trouver',
   learnLabel: 'Apprendre',
   useLabel: 'Utiliser',
   askLabel: 'Demander',
+  hansLabel: 'Discuter',
   partFindTitle: 'L’annuaire de l’IA locale',
   partFindOneLiner: 'La carte structurée et consultable des logiciels d’IA locale.',
   partFindBody:
@@ -93,10 +94,16 @@ export const fr: AboutCopy = {
   partAskBody:
     'Un serveur public, en lecture seule, pour le Model Context Protocol. Claude, Cursor et tout assistant compatible MCP peuvent parcourir l’annuaire, récupérer les détails d’une application, lire les guides et expliquer les licences. Sans compte ni clé API. Quand votre IA répond à une question sur l’IA locale, elle peut s’appuyer sur PromptQuorum plutôt que d’improviser.',
   partAskConnects: 'il s’appuie sur le même annuaire et les mêmes guides que ce site, pour que votre assistant réponde à partir de la même source que vous.',
+  partHansTitle: 'Ask Hans',
+  partHansOneLiner: 'Posez votre question simplement et obtenez une réponse tirée de l’annuaire.',
+  partHansBody:
+    'Un assistant de chat IA sur ce site. Demandez quelle application convient à une tâche, ce qui tourne sur votre matériel ou comment fonctionne une licence : il répond à partir du même annuaire et des mêmes guides. Il repose sur l’IA ; vérifiez donc les détails importants dans les fiches de l’annuaire et les guides. Votre conversation reste dans l’onglet de votre navigateur et nous ne conservons pas le texte des questions ni des réponses.',
+  partHansConnects: 'il utilise les mêmes outils que le serveur MCP, vous obtenez donc les réponses de l’annuaire sans configurer votre propre assistant.',
   ctaOpenDirectory: 'Ouvrir l’annuaire',
   ctaReadGuides: 'Lire les guides',
   ctaAboutApp: 'À propos de l’application',
   ctaSeeHowToConnect: 'Voir comment se connecter',
+  ctaAskHans: 'Ouvrir Ask Hans',
   practiceH3: 'Comment cela fonctionne en pratique',
   practiceIntro: 'Supposons que vous ayez 16 Go de RAM et que vous vouliez discuter avec vos propres PDF hors ligne.',
   practiceSteps: [
