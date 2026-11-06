@@ -43,11 +43,16 @@ export const ASK_HANS_SPLIT = { chatFr: 2, panelFr: 1 } as const
 export const ASK_HANS_DEFAULT_MODEL = 'claude-haiku-5-5'
 
 /** Bump when the consent text changes; stored with every consent value as proof. */
-export const ASK_HANS_CONSENT_TEXT_VERSION = '2026-11-02-draft-2'
+export const ASK_HANS_CONSENT_TEXT_VERSION = '2026-11-06-v3'
+
+/** Days a saved conversation stays on the visitor's device (only if they chose to save). */
+export const ASK_HANS_HISTORY_DAYS = 7
 
 export const ASK_HANS_STORAGE = {
-  /** sessionStorage: conversations of this visit. */
-  conversations: 'askhans.conversations.v1',
+  /** localStorage, ONLY if the visitor ticked "save for 7 days" in the consent step: saved conversations. */
+  conversations: 'askhans.conversations.v2',
+  /** old sessionStorage key (v1): removed on load. */
+  conversationsLegacy: 'askhans.conversations.v1',
   /** sessionStorage: window open/closed/maximized + size. */
   ui: 'askhans.ui.v1',
   /** localStorage: consent value + text version + timestamp. */

@@ -50,7 +50,7 @@ export const copy: AskCopy = {
   panelLabelPrefix: 'Tema',
   panelLinksHeading: 'Páginas relacionadas',
 
-  // DRAFT — Hans reviews and approves before launch (see docs/askhans-privacy-draft.de.md).
+  // Final consent text as of 2026-11-06 (see docs/askhans-privacy-draft.de.md). On any change bump ASK_HANS_CONSENT_TEXT_VERSION.
   consentTitle: 'Antes de empezar',
   consentParagraphs: [
     'Ask Hans responde a sus preguntas con ayuda de una IA (Claude, de Anthropic) a partir de los contenidos de PromptQuorum. Para ello, su entrada se transmite a nuestro servidor y a Anthropic. No introduzca datos personales.',
@@ -59,6 +59,9 @@ export const copy: AskCopy = {
   ],
   consentPrivacyLink: 'Más información en la política de privacidad.',
   consentPrivacyHref: '/es/privacy',
+  consentSaveLabel: "Guardar mis conversaciones en este dispositivo durante 7 días",
+  consentSaveOn: "Se guardan en su navegador, en este ordenador, durante 7 días. Puede eliminarlas en cualquier momento.",
+  consentSaveOff: "Sus conversaciones no se guardan. Desaparecen al cerrar la página.",
   consentYes: 'Sí, de acuerdo',
   consentNo: 'No, gracias',
   consentQuestionLabel: 'Su pregunta (se enviará según su elección):',
@@ -90,7 +93,7 @@ export const copy: AskCopy = {
     canTitle: "Lo que puede hacer",
     can: ["Encontrar y comparar apps de IA local del directorio de software y mencionar alternativas.", "Comprobar si su hardware (RAM, VRAM) puede ejecutar un modelo.", "Explicar las licencias de software en lenguaje sencillo y sugerir un stack de software.", "Indicarle las guías, reseñas y páginas de hardware correspondientes de este sitio, en su idioma."],
     cannotTitle: "Lo que no puede hacer",
-    cannot: ["Consultar nada fuera de promptquorum.com: sin búsqueda en la web, sin noticias, sin el tiempo, sin precios en vivo.", "Acertar siempre: es una IA y puede equivocarse. Verifique los datos importantes en las páginas enlazadas.", "Dar asesoramiento legal, médico, financiero o de instalaciones eléctricas. Para ello, consulte a un profesional cualificado.", "Recordarle cuando se vaya: las conversaciones permanecen en su navegador y no se almacenan en nuestro servidor.", "Instalar, cambiar o comprar nada por usted, ni responder sin límite: {messages} preguntas por visita, {chars} caracteres por pregunta."],
+    cannot: ["Consultar nada fuera de promptquorum.com: sin búsqueda en la web, sin noticias, sin el tiempo, sin precios en vivo.", "Acertar siempre: es una IA y puede equivocarse. Verifique los datos importantes en las páginas enlazadas.", "Dar asesoramiento legal, médico, financiero o de instalaciones eléctricas. Para ello, consulte a un profesional cualificado.", "Recordarle cuando se vaya: las conversaciones permanecen en su navegador (7 días solo si eligió guardarlas) y no se almacenan en nuestro servidor.", "Instalar, cambiar o comprar nada por usted, ni responder sin límite: {messages} preguntas por visita, {chars} caracteres por pregunta."],
     privacy: "Su pregunta se envía a nuestro servidor y a Anthropic (Claude) para generar la respuesta. No introduzca datos personales.",
     close: "Cerrar",
   },
@@ -109,6 +112,7 @@ export const copy: AskCopy = {
     historyHeading: "Conversaciones anteriores",
     historyHide: "Ocultar conversaciones anteriores",
     historyShow: (n: number) => `Mostrar conversaciones anteriores (${n})`,
+    historyClear: "Eliminar conversaciones guardadas",
   },
 
   search: {

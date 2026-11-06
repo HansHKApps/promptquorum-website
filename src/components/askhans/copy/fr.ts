@@ -50,7 +50,7 @@ export const copy: AskCopy = {
   panelLabelPrefix: 'Thème',
   panelLinksHeading: 'Pages associées',
 
-  // DRAFT — Hans reviews and approves before launch (see docs/askhans-privacy-draft.de.md).
+  // Final consent text as of 2026-11-06 (see docs/askhans-privacy-draft.de.md). On any change bump ASK_HANS_CONSENT_TEXT_VERSION.
   consentTitle: 'Avant de commencer',
   consentParagraphs: [
     "Ask Hans répond à vos questions à l'aide d'une IA (Claude d'Anthropic) à partir des contenus de PromptQuorum. Pour cela, votre saisie est transmise à notre serveur et à Anthropic. Merci de ne saisir aucune donnée personnelle.",
@@ -59,6 +59,9 @@ export const copy: AskCopy = {
   ],
   consentPrivacyLink: 'Plus de détails dans la politique de confidentialité.',
   consentPrivacyHref: '/fr/privacy',
+  consentSaveLabel: "Enregistrer mes conversations sur cet appareil pendant 7 jours",
+  consentSaveOn: "Enregistrées dans votre navigateur sur cet ordinateur pendant 7 jours. Vous pouvez les supprimer à tout moment.",
+  consentSaveOff: "Vos conversations ne sont pas enregistrées. Elles disparaissent à la fermeture de la page.",
   consentYes: "Oui, j'accepte",
   consentNo: 'Non, merci',
   consentQuestionLabel: 'Votre question (envoyée après votre choix) :',
@@ -90,7 +93,7 @@ export const copy: AskCopy = {
     canTitle: "Ce qu'il peut faire",
     can: ["Trouver et comparer des applications d'IA locale de l'annuaire de logiciels, et citer des alternatives.", "Vérifier si votre matériel (RAM, VRAM) peut exécuter un modèle.", "Expliquer les licences logicielles en langage clair et suggérer une pile logicielle.", "Vous orienter vers les guides, tests et pages matériel correspondants de ce site, dans votre langue."],
     cannotTitle: "Ce qu'il ne peut pas faire",
-    cannot: ["Chercher quoi que ce soit en dehors de promptquorum.com : pas de recherche web, pas d'actualités, pas de météo, pas de prix en direct.", "Avoir raison à chaque fois : c'est une IA et elle peut se tromper. Vérifiez les informations importantes sur les pages liées.", "Donner des conseils juridiques, médicaux, financiers ou d'installation électrique. Pour cela, adressez-vous à un professionnel qualifié.", "Se souvenir de vous après votre départ : les conversations restent dans votre navigateur et ne sont pas enregistrées sur notre serveur.", "Installer, modifier ou acheter quoi que ce soit à votre place, ni répondre sans limite : {messages} questions par visite, {chars} caractères par question."],
+    cannot: ["Chercher quoi que ce soit en dehors de promptquorum.com : pas de recherche web, pas d'actualités, pas de météo, pas de prix en direct.", "Avoir raison à chaque fois : c'est une IA et elle peut se tromper. Vérifiez les informations importantes sur les pages liées.", "Donner des conseils juridiques, médicaux, financiers ou d'installation électrique. Pour cela, adressez-vous à un professionnel qualifié.", "Se souvenir de vous après votre départ : les conversations restent dans votre navigateur (conservées 7 jours seulement si vous avez choisi de les enregistrer) et ne sont pas enregistrées sur notre serveur.", "Installer, modifier ou acheter quoi que ce soit à votre place, ni répondre sans limite : {messages} questions par visite, {chars} caractères par question."],
     privacy: "Votre question est envoyée à notre serveur et à Anthropic (Claude) pour générer la réponse. Merci de ne saisir aucune donnée personnelle.",
     close: "Fermer",
   },
@@ -109,6 +112,7 @@ export const copy: AskCopy = {
     historyHeading: "Conversations précédentes",
     historyHide: "Masquer les conversations précédentes",
     historyShow: (n: number) => `Afficher les conversations précédentes (${n})`,
+    historyClear: "Supprimer les conversations enregistrées",
   },
 
   search: {
