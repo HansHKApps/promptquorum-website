@@ -127,6 +127,7 @@ export function AskHansRoot() {
 
   const send = useCallback(
     async (text: string, consentValue: ConsentRecord | null) => {
+      window.umami?.track('ask_hans_question', { source_page: window.location.pathname })
       const conv = active ?? newConversation()
       const history = toApiMessages(conv.messages)
       const userMsg: ChatMsg = { id: uid(), role: 'user', content: text }
@@ -364,7 +365,13 @@ export function AskHansRoot() {
 
   return (
     <>
-      {showLogo && <AskHansLogo ref={logoRef} onOpen={openWindow} />}
+      {showLogo && <AskHansLogo
+          ref={logoRef}
+          onOpen={() => {
+            window.umami?.track('ask_hans_button_click', { source_page: window.location.pathname })
+            openWindow()
+          }}
+        />}
       {ui.open && (
         <AskHansWindow
           maximized={ui.maximized}
