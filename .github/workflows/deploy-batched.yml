@@ -49,12 +49,16 @@ jobs:
         id: decide
         run: |
           set -euo pipefail
-          last=$(git log --grep='\[force-deploy\]' -1 --format=%H main || true)
-          if [ -z "$last" ]; then
-            echo "No previous [force-deploy] commit found; deploying."
-            echo "deploy=true" >> "$GITHUB_OUTPUT"; echo "reason=no previous deploy" >> "$GITHUB_OUTPUT"; exit 0
+          # Compare against what is actually LIVE (build-info.json is written by every successful
+          # production build), not against the last deploy commit: a failed build must not count as shipped.
+          info=$(curl -fsS --max-time 20 https://www.promptquorum.com/build-info.json || true)
+          last=$(printf '%s' "$info" | jq -r '.commit // empty' 2>/dev/null || true)
+          started_ms=$(printf '%s' "$info" | jq -r '.buildStartedAt // empty' 2>/dev/null || true)
+          if [ -z "$last" ] || ! git cat-file -e "${last}^{commit}" 2>/dev/null; then
+            echo "Live commit unknown or not in history ('$last'); deploying."
+            echo "deploy=true" >> "$GITHUB_OUTPUT"; echo "reason=live commit unknown" >> "$GITHUB_OUTPUT"; exit 0
           fi
-          last_ts=$(git log -1 --format=%ct "$last")
+          if [ -n "$started_ms" ]; then last_ts=$(( started_ms / 1000 )); else last_ts=$(git log -1 --format=%ct "$last"); fi
           age_days=$(( ( $(date +%s) - last_ts ) / 86400 ))
           changed=$(git diff --name-only "$last" HEAD \
             | grep -vE '^(docs/|\.github/)|\.md$|^src/data/seo-changelog\.json$|^src/generated/home-content-feed\.json$' || true)
