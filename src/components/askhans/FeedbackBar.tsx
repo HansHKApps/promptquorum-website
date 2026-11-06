@@ -13,8 +13,8 @@ import { useAskCopy, useAskLang, ASK_HANS_CONTACT_EMAIL } from './copy'
 type Phase = 'idle' | 'sending' | 'sent' | 'error'
 
 const AUTO_SEND_MS = 1000
-const Q_MAX = 300
-const A_MAX = 800
+const Q_MAX = 500
+const A_MAX = 1200
 
 function Star({ filled }: { filled: boolean }) {
   return (
@@ -34,6 +34,7 @@ export function FeedbackBar({ lastQuestion, lastAnswer }: { lastQuestion?: strin
   const [phase, setPhase] = useState<Phase>('idle')
   const [dialog, setDialog] = useState(false)
   const [copiedOk, setCopiedOk] = useState(false)
+  const [includeChat, setIncludeChat] = useState(true)
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const clear = () => {
@@ -76,8 +77,8 @@ export function FeedbackBar({ lastQuestion, lastAnswer }: { lastQuestion?: strin
       `${m.language}: ${lang}`,
       `${m.page}: ${page}`,
     ]
-    if (lastQuestion) lines.push(`${m.question}: ${clip(lastQuestion, Q_MAX)}`)
-    if (lastAnswer) lines.push(`${m.answer}: ${clip(lastAnswer, A_MAX)}`)
+    if (includeChat && lastQuestion) lines.push(`${m.question}: ${clip(lastQuestion, Q_MAX)}`)
+    if (includeChat && lastAnswer) lines.push(`${m.answer}: ${clip(lastAnswer, A_MAX)}`)
     return { subject: m.subject.replace('{n}', String(rating)), intro: m.intro, details: lines.join('\n') }
   }
 
@@ -113,6 +114,12 @@ export function FeedbackBar({ lastQuestion, lastAnswer }: { lastQuestion?: strin
       >
         <h2 id="askhans-followup-title" className="text-[15px] font-bold text-foreground">{f.followup.title}</h2>
         <p className="mt-2 text-[13px] leading-snug text-foreground">{f.followup.body}</p>
+        {(lastQuestion || lastAnswer) && (
+          <label className="mt-3 flex cursor-pointer items-start gap-2 text-[12px] leading-snug text-foreground">
+            <input type="checkbox" checked={includeChat} onChange={(e) => setIncludeChat(e.target.checked)} className="mt-0.5 h-4 w-4 flex-shrink-0 accent-primary" />
+            <span>{f.followup.include}</span>
+          </label>
+        )}
         <p className="mt-2 text-[11px] leading-snug text-muted-foreground">{f.followup.note}</p>
         {copiedOk && <p role="status" className="mt-2 text-[11px] font-medium text-foreground">{f.followup.copied}</p>}
         <div className="mt-4 flex justify-end gap-2">

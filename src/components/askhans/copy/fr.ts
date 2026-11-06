@@ -75,7 +75,8 @@ export const copy: AskCopy = {
     followup: {
       title: 'Désolé que cela n’ait pas été plus utile.',
       body: 'Que pouvons-nous améliorer ? Souhaitez-vous nous envoyer un retour par e-mail ? Nous préremplissons les détails ; ajoutez vos propres mots avant l’envoi.',
-      note: 'L’e-mail contient votre dernière question et la réponse. Supprimez ce que vous ne souhaitez pas envoyer et n’ajoutez aucune donnée personnelle.',
+      include: 'Inclure ma question et la réponse dans l’e-mail, pour que Hans voie ce qui n’a pas fonctionné.',
+      note: 'Vous pouvez modifier l’e-mail avant l’envoi ; rien n’est transmis tant que vous ne l’envoyez pas. N’ajoutez aucune donnée personnelle.',
       write: 'Écrire un e-mail',
       skip: 'Non merci',
       copied: 'Les détails ont aussi été copiés dans le presse-papiers.',

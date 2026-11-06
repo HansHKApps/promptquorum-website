@@ -77,6 +77,8 @@ export interface AskCopy {
     followup: {
       title: string
       body: string
+      /** label of the opt-in checkbox: add the last question and answer to the email */
+      include: string
       note: string
       write: string
       skip: string
