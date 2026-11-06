@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
@@ -43,7 +43,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'All three are free, work offline after install, and load GGUF model files',
           'All three can chat with local files: LM Studio and Jan attach documents in a chat, GPT4All uses its built-in LocalDocs',
         ],
-        updatedDate: '2026-11-02',
+        updatedDate: '2026-11-03',
       },
     },
     toc: [
@@ -130,7 +130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**LM Studio** — Its privacy policy states no telemetry or user-specific tracking. Update checks send app version, OS and IP address; model search and downloads send anonymized search queries. Chats and documents stay on the device.',
           '**Jan** — No telemetry by default. Optional anonymous analytics (PostHog EU) only if you allow it at first launch. Source code is auditable on GitHub (Apache 2.0).',
           '**GPT4All** — Telemetry is opt-in (off by default). Source on GitHub (MIT).',
-          'None of the three send your prompts, your conversations, or your loaded model files anywhere — local inference is local in all cases.',
+          'With purely local inference, none of the three apps sends your prompts or conversations to a model provider. Network traffic still occurs for update checks, model search and downloads, and, in Jan, whenever you connect a cloud provider or MCP server.',
         ],
         callouts: [
           {
@@ -160,7 +160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Maintenance status: GPT4All\'s most recent release is v3.10.0, dated 25 February 2025 - more than 20 months without a new build. It still installs and still runs on low-end hardware, which is why it keeps its slot here, but the bundled model catalogue has not moved since that build (newer models such as Gemma 4 E2B are absent) and no security patches have shipped since. Prefer Jan if you want a maintained GUI; reach for GPT4All when its remaining advantages apply - a 4 GB RAM ceiling, or a locked-down machine where you cannot get admin rights.',
+            text: 'Maintenance status: GPT4All\'s most recent release is v3.10.0, dated 25 February 2025 - more than 20 months without a new build. It still installs and still runs on low-end hardware, which is why it keeps its slot here, but the bundled model catalogue has not been updated since that release (newer models such as Gemma 4 E2B are absent), and the project release list shows no newer build, so any fixes made after v3.10.0 are not available in a release. Prefer Jan if you want a maintained GUI; reach for GPT4All when its remaining advantages apply - a 4 GB RAM ceiling, or a locked-down machine where you cannot get admin rights.',
           },
         ],
         items: [
@@ -204,7 +204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Are LM Studio, Jan, and GPT4All free?',
-            a: 'All three apps are 100% free for personal and commercial use. Jan and GPT4All are open source (Apache 2.0 and MIT respectively); LM Studio is free but proprietary.',
+            a: 'All three apps are free for personal and commercial use. Jan and GPT4All are open source (Apache 2.0 and MIT respectively); LM Studio is free but proprietary.',
           },
           {
             q: 'Is LM Studio better than GPT4All?',
@@ -295,7 +295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
       inLanguage: 'en',
       datePublished: '2026-05-07',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -304,7 +304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
@@ -338,7 +338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Alle drei sind kostenlos, funktionieren nach der Installation offline und laden GGUF-Modelldateien',
           'Alle drei können mit lokalen Dateien chatten: LM Studio und Jan hängen Dokumente direkt im Chat an, GPT4All nutzt das eingebaute LocalDocs',
         ],
-        updatedDate: '2026-11-02',
+        updatedDate: '2026-11-03',
       },
     },
     toc: [
@@ -425,7 +425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**LM Studio** — Laut Datenschutzerklärung keine Telemetrie und kein nutzerbezogenes Tracking. Update-Prüfungen übermitteln App-Version, Betriebssystem und IP-Adresse; Modellsuche und Downloads übermitteln anonymisierte Suchanfragen. Chats und Dokumente bleiben auf dem Gerät.',
           '**Jan** — Standardmäßig keine Telemetrie. Optionale anonyme Analytics (PostHog EU) nur, wenn Sie beim ersten Start zustimmen. Quellcode auf GitHub einsehbar (Apache 2.0).',
           '**GPT4All** — Telemetrie ist opt-in (standardmäßig deaktiviert). Quellcode auf GitHub (MIT).',
-          'Keine der drei Apps sendet Ihre Prompts, Ihre Konversationen oder Ihre geladenen Modelldateien irgendwohin — lokale Inferenz ist in allen Fällen wirklich lokal.',
+          'Bei rein lokaler Inferenz sendet keine der drei Apps Ihre Prompts oder Konversationen an einen Modellanbieter. Netzwerkverkehr entsteht dennoch bei Update-Prüfungen, Modellsuche und Downloads sowie in Jan, sobald Sie einen Cloud-Anbieter oder MCP-Server anbinden.',
         ],
         callouts: [
           {
@@ -455,7 +455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Wartungsstatus: Die juengste Version von GPT4All ist v3.10.0 vom 25. Februar 2025 - mehr als 20 Monate ohne neuen Build. Die App laesst sich weiterhin installieren und laeuft auf schwacher Hardware, weshalb sie ihren Platz hier behaelt; der mitgelieferte Modellkatalog hat sich seit diesem Build jedoch nicht veraendert (neuere Modelle wie Gemma 4 E2B fehlen), und seither wurden keine Sicherheitspatches veroeffentlicht. Waehlen Sie Jan, wenn Sie eine gepflegte GUI wollen; greifen Sie zu GPT4All, wenn seine verbliebenen Vorteile zaehlen - eine 4-GB-RAM-Grenze oder ein gesperrtes Geraet ohne Admin-Rechte.',
+            text: 'Wartungsstatus: Die juengste Version von GPT4All ist v3.10.0 vom 25. Februar 2025 - mehr als 20 Monate ohne neuen Build. Die App laesst sich weiterhin installieren und laeuft auf schwacher Hardware, weshalb sie ihren Platz hier behaelt; der mitgelieferte Modellkatalog wurde seit diesem Release jedoch nicht aktualisiert (neuere Modelle wie Gemma 4 E2B fehlen), und die Release-Liste des Projekts zeigt keinen neueren Build; Korrekturen nach v3.10.0 stehen daher in keinem Release zur Verfuegung. Waehlen Sie Jan, wenn Sie eine gepflegte GUI wollen; greifen Sie zu GPT4All, wenn seine verbliebenen Vorteile zaehlen - eine 4-GB-RAM-Grenze oder ein gesperrtes Geraet ohne Admin-Rechte.',
           },
         ],
         items: [
@@ -483,7 +483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**DSGVO** — Bei rein lokaler Inferenz geht kein Prompt an einen externen LLM-Anbieter, daher entfällt für diesen Schritt in der Regel ein Auftragsverarbeitungsvertrag. Rechtsgrundlage, Verzeichnis der Verarbeitungstätigkeiten und technische und organisatorische Maßnahmen bleiben Ihre Aufgabe. In Österreich und der Schweiz gilt zusätzlich das jeweilige nationale Datenschutzrecht.',
           '**BSI IT-Grundschutz** — Behörden und Betreiber kritischer Infrastrukturen sollten prüfen, welche Bausteine des [BSI IT-Grundschutz](https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/IT-Grundschutz/it-grundschutz_node.html) für ihr Setup gelten. Das ergibt sich aus der eigenen Risikoanalyse. Ist Quellcode-Einsicht wichtig, hat Jan einsehbaren Apache 2.0-Quellcode.',
           '**Mittelstand: einfacher Einstieg** — Für kleine und mittlere Unternehmen mit Office-Laptops (8 GB RAM, keine GPU) hat GPT4All die niedrigste Einstiegshürde. Beachten Sie jedoch, dass seine jüngste Version v3.10.0 vom 25. Februar 2025 stammt.',
-          '**Mittelstand: vorhandene Hardware** — Stehen bereits NVIDIA-Workstations im Haus, etwa in Konstruktion oder Engineering, ist LM Studio die schnellste der drei Apps. Es ist Closed Source; laut Datenschutzerklärung gibt es keine Telemetrie.',
+          '**Mittelstand: vorhandene Hardware** — Stehen bereits NVIDIA-Workstations im Haus, etwa in Konstruktion oder Engineering, kann LM Studio durch seine GPU-Unterstützung (CUDA) Vorteile bieten; messbare Unterschiede hängen von Modell und Hardware ab. Es ist Closed Source; laut Datenschutzerklärung gibt es keine Telemetrie.',
           '**Jeden Einsatz dokumentieren** — Halten Sie App-Version, Hash der Modelldatei und Telemetrie-Einstellung fest und laden Sie Installer nur von den offiziellen Release-Seiten (Prüfsummen vergleichen, wo veröffentlicht).',
         ],
         callouts: [
@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Sind LM Studio, Jan und GPT4All kostenlos?',
-            a: 'Alle drei Apps sind zu 100 % kostenlos für die private und kommerzielle Nutzung. Jan und GPT4All sind quelloffen (Apache 2.0 bzw. MIT); LM Studio ist kostenlos, aber proprietär.',
+            a: 'Alle drei Apps sind kostenlos für die private und kommerzielle Nutzung. Jan und GPT4All sind quelloffen (Apache 2.0 bzw. MIT); LM Studio ist kostenlos, aber proprietär.',
           },
           {
             q: 'Ist LM Studio besser als GPT4All?',
@@ -596,7 +596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
       inLanguage: 'de',
       datePublished: '2026-05-07',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -605,7 +605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
@@ -639,7 +639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les trois sont gratuites, fonctionnent hors ligne après installation et chargent les fichiers GGUF',
           'Les trois peuvent discuter avec des fichiers locaux : LM Studio et Jan joignent des documents dans un chat, GPT4All utilise son module intégré LocalDocs',
         ],
-        updatedDate: '2026-11-02',
+        updatedDate: '2026-11-03',
       },
     },
     toc: [
@@ -727,7 +727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**LM Studio** — Sa politique de confidentialité indique ni télémétrie ni suivi propre à l\'utilisateur. Les vérifications de mise à jour envoient version de l\'app, OS et adresse IP ; la recherche et le téléchargement de modèles envoient des requêtes anonymisées. Conversations et documents restent sur l\'appareil.',
           '**Jan** — Aucune télémétrie par défaut. Analytique anonyme optionnelle (PostHog EU) uniquement si vous l\'autorisez au premier lancement. Code source auditable sur GitHub (Apache 2.0).',
           '**GPT4All** — Télémétrie en opt-in (désactivée par défaut). Code source sur GitHub (MIT).',
-          'Aucune des trois n\'envoie vos prompts, vos conversations ou vos modèles ailleurs — l\'inférence locale est bien locale dans tous les cas.',
+          'En inférence purement locale, aucune des trois apps n\'envoie vos prompts ou conversations à un fournisseur de modèles. Du trafic réseau subsiste pour les mises à jour, la recherche et le téléchargement de modèles, et dans Jan dès que vous connectez un fournisseur cloud ou un serveur MCP.',
         ],
         callouts: [
           {
@@ -757,7 +757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Statut de maintenance : la version la plus recente de GPT4All est la v3.10.0 du 25 fevrier 2025 - plus de 20 mois sans nouveau build. L\'application s\'installe et fonctionne toujours sur du materiel modeste, ce qui lui vaut de garder sa place ici, mais le catalogue de modeles fourni n\'a pas bouge depuis (des modeles plus recents comme Gemma 4 E2B en sont absents) et aucun correctif de securite n\'a ete publie depuis. Preferez Jan pour une interface maintenue ; gardez GPT4All pour ses deux avantages restants - un plafond de 4 Go de RAM, ou une machine verrouillee sans droits admin.',
+            text: 'Statut de maintenance : la version la plus recente de GPT4All est la v3.10.0 du 25 fevrier 2025 - plus de 20 mois sans nouveau build. L\'application s\'installe et fonctionne toujours sur du materiel modeste, ce qui lui vaut de garder sa place ici, mais le catalogue de modeles fourni n\'a pas ete mis a jour depuis cette version (des modeles plus recents comme Gemma 4 E2B en sont absents) et la liste des versions du projet n\'indique aucun build plus recent ; les correctifs eventuels posterieurs a v3.10.0 ne sont donc disponibles dans aucune version. Preferez Jan pour une interface maintenue ; gardez GPT4All pour ses deux avantages restants - un plafond de 4 Go de RAM, ou une machine verrouillee sans droits admin.',
           },
         ],
         items: [
@@ -785,7 +785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**RGPD et sous-traitance (article 28)** — avec une inférence purement locale, aucune donnée de prompt ne part vers un fournisseur de LLM externe : il n\'y a donc en général pas de contrat de sous-traitance à signer pour cette étape. Votre base légale, votre registre des traitements et vos mesures de sécurité restent à traiter. À valider avec votre délégué à la protection des données.',
           '**CNIL** — la CNIL publie des [recommandations sur l\'intelligence artificielle](https://www.cnil.fr/fr/intelligence-artificielle) et les données personnelles ; lisez-les avant de traiter des données professionnelles sensibles (santé, juridique, finance) avec une app d\'IA locale.',
           '**Belgique et Suisse romande** — mêmes questions à se poser ; en Suisse, la nLPD s\'applique en plus aux données personnelles, notamment pour les flux transfrontaliers.',
-          '**Cas d\'usage francophones** — rédaction et marketing créatif (LM Studio pour la vitesse), discussion avec des PDF et documents (LM Studio ou Jan, qui les joignent dans un chat), revue de code source par un DPO ou une administration (Jan, code Apache 2.0 auditable), parcs informatiques anciens ou postes verrouillés sans droits administrateur (GPT4All, avec ses 4 Go de RAM minimum, mais sans nouvelle version depuis le 25 février 2025).',
+          '**Cas d\'usage francophones** — rédaction et marketing créatif (LM Studio, avec son navigateur de modèles intégré), discussion avec des PDF et documents (LM Studio ou Jan, qui les joignent dans un chat), revue de code source par un DPO ou une administration (Jan, code Apache 2.0 auditable), parcs informatiques anciens ou postes verrouillés sans droits administrateur (GPT4All, avec ses 4 Go de RAM minimum, mais sans nouvelle version depuis le 25 février 2025).',
           '**Documentez chaque déploiement** — notez la version de l\'app, l\'empreinte (hash) du fichier de modèle et le réglage de la télémétrie, et téléchargez les installeurs uniquement depuis les pages de versions officielles (vérifiez les sommes de contrôle quand elles sont publiées).',
         ],
         callouts: [
@@ -801,7 +801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'LM Studio, Jan et GPT4All sont-elles gratuites ?',
-            a: 'Les trois apps sont 100 % gratuites pour usage personnel et commercial. Jan et GPT4All sont open source (Apache 2.0 et MIT respectivement) ; LM Studio est gratuite mais propriétaire.',
+            a: 'Les trois apps sont gratuites pour usage personnel et commercial. Jan et GPT4All sont open source (Apache 2.0 et MIT respectivement) ; LM Studio est gratuite mais propriétaire.',
           },
           {
             q: 'LM Studio est-elle meilleure que GPT4All ?',
@@ -890,7 +890,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
       inLanguage: 'fr',
       datePublished: '2026-05-07',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -899,7 +899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
@@ -933,7 +933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '3つとも無料、インストール後はオフライン動作、GGUFモデルファイルを読み込み可能',
           '3つともローカルファイルとチャット可能：LM StudioとJanはチャットに文書を添付、GPT4Allは内蔵のLocalDocsを使用',
         ],
-        updatedDate: '2026-11-02',
+        updatedDate: '2026-11-03',
       },
     },
     toc: [
@@ -1021,7 +1021,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**LM Studio** — プライバシーポリシーではテレメトリやユーザー固有のトラッキングなしと明記。アップデート確認ではアプリのバージョン、OS、IPアドレス、モデル検索・ダウンロードでは匿名化された検索クエリが送信されます。チャットとドキュメントは端末内に留まります。',
           '**Jan** — デフォルトでテレメトリなし。匿名の利用分析（PostHog EU）は初回起動時に許可した場合のみ。GitHubでソースコード閲覧可能（Apache 2.0）。',
           '**GPT4All** — テレメトリはオプトイン（デフォルトでオフ）。GitHubでソース公開（MIT）。',
-          '3アプリとも、プロンプト、会話、ロード済みモデルファイルをどこにも送信しません — ローカル推論はすべての場合で本当にローカルです。',
+          '完全にローカルで推論する場合、3アプリはいずれもプロンプトや会話をモデル提供元に送信しません。ただし、更新確認、モデル検索・ダウンロード、またJanでクラウドプロバイダーやMCPサーバーを接続した場合には通信が発生します。',
         ],
         callouts: [
           {
@@ -1051,7 +1051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'メンテナンス状況：GPT4Allの最新リリースは2025年2月25日のv3.10.0で、20か月以上新しいビルドがありません。インストールも低スペック環境での動作も可能なため本記事では引き続き取り上げますが、同梱のモデルカタログはそのビルド以降更新されておらず（Gemma 4 E2Bのような新しいモデルは含まれません）、以降セキュリティ修正も公開されていません。メンテナンスされたGUIが必要ならJanを、4GB RAMの上限や管理者権限のない端末といった残る利点が当てはまる場合にのみGPT4Allを選んでください。',
+            text: 'メンテナンス状況：GPT4Allの最新リリースは2025年2月25日のv3.10.0で、20か月以上新しいビルドがありません。インストールも低スペック環境での動作も可能なため本記事では引き続き取り上げますが、同梱のモデルカタログはそのリリース以降更新されておらず（Gemma 4 E2Bのような新しいモデルは含まれません）、プロジェクトのリリース一覧にもそれ以降のビルドは載っていないため、v3.10.0より後の修正はどのリリースにも含まれていません。メンテナンスされたGUIが必要ならJanを、4GB RAMの上限や管理者権限のない端末といった残る利点が当てはまる場合にのみGPT4Allを選んでください。',
           },
         ],
         items: [
@@ -1106,7 +1106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'LM Studio、Jan、GPT4Allは無料ですか？',
-            a: '3アプリとも個人利用・商用利用ともに100 %無料です。JanとGPT4Allはオープンソース（それぞれApache 2.0とMIT）、LM Studioは無料ですがプロプライエタリです。',
+            a: '3アプリとも個人利用・商用利用ともに無料です。JanとGPT4Allはオープンソース（それぞれApache 2.0とMIT）、LM Studioは無料ですがプロプライエタリです。',
           },
           {
             q: 'LM StudioはGPT4Allより優れていますか？',
@@ -1195,7 +1195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
       inLanguage: 'ja',
       datePublished: '2026-05-07',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       author: { '@type': 'Organization', 'name': 'PromptQuorum' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -1204,7 +1204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
@@ -1238,7 +1238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '三款均免费、安装后离线工作、可加载GGUF模型文件',
           '三款都能与本地文件对话：LM Studio和Jan在聊天中附加文档，GPT4All使用内置的LocalDocs',
         ],
-        updatedDate: '2026-11-02',
+        updatedDate: '2026-11-03',
       },
     },
     toc: [
@@ -1326,7 +1326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**LM Studio**——隐私政策称无遥测、无针对用户的跟踪。检查更新会发送应用版本、操作系统和IP地址；模型搜索和下载会发送匿名化的搜索查询。聊天和文档保留在设备上。',
           '**Jan**——默认无遥测。仅在首次启动时同意后才启用匿名使用分析(PostHog EU)。源代码在GitHub上可审计（Apache 2.0）。',
           '**GPT4All**——遥测为可选加入（默认关闭）。源代码在GitHub上（MIT）。',
-          '三款都不会把你的提示词、对话或已加载模型文件发送到任何地方——本地推理在所有情况下都是真本地。',
+          '纯本地推理时，三款应用都不会把提示词或对话发送给模型提供方。但更新检查、模型搜索与下载，以及在Jan中连接云服务商或MCP服务器时，仍会产生网络通信。',
         ],
         callouts: [
           {
@@ -1356,7 +1356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '维护状态：GPT4All 的最新版本是2025年2月25日的 v3.10.0，已超过20个月没有新构建。它仍可安装并在低配硬件上运行，因此在本文中保留其位置，但内置模型目录自该版本以来未再更新（不包含 Gemma 4 E2B 等较新模型），此后也没有发布安全补丁。若需要持续维护的图形界面请选择 Jan；仅当 GPT4All 仅存的优势成立时再用它——4GB 内存上限，或没有管理员权限的受限设备。',
+            text: '维护状态：GPT4All 的最新版本是2025年2月25日的 v3.10.0，已超过20个月没有新构建。它仍可安装并在低配硬件上运行，因此在本文中保留其位置，但内置模型目录自该版本以来未再更新（不包含 Gemma 4 E2B 等较新模型），项目发布列表中也没有更新的构建，因此 v3.10.0 之后的任何修复都没有包含在正式版本中。若需要持续维护的图形界面请选择 Jan；仅当 GPT4All 仅存的优势成立时再用它——4GB 内存上限，或没有管理员权限的受限设备。',
           },
         ],
         items: [
@@ -1383,7 +1383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**中国（数据安全法）**——《数据安全法》和《个人信息保护法》均自2021年起施行，对数据处理和数据出境作出规定。本地推理避免把提示词发送到境外，但数据分类分级和安全保护等义务依然适用。',
           '**亚太地区（数据跨境）**——各国和地区对数据出境的要求不同，常见路径包括安全评估、标准合同或认证等。具体适用哪一种，取决于数据类型和业务场景，请以主管部门的最新规定和你自己的评估为准。',
-          '**企业部署**——金融、医疗、法律等行业若需要审阅源代码，可优先考虑Jan（Apache 2.0源码可审计）。已有NVIDIA工作站的设计或工程团队可选LM Studio获得更高速度。办公电脑配置较低（8 GB RAM、无独显）时，可考虑GPT4All，但请注意它自2025年2月起没有新版本。',
+          '**企业部署**——金融、医疗、法律等行业若需要审阅源代码，可优先考虑Jan（Apache 2.0源码可审计）。已有NVIDIA工作站的设计或工程团队可选LM Studio，其GPU（CUDA）支持可能带来优势；实际差异取决于模型和硬件。办公电脑配置较低（8 GB RAM、无独显）时，可考虑GPT4All，但请注意它自2025年2月起没有新版本。',
           '**记录每次部署**——记录应用版本、模型文件哈希和遥测设置，并只从官方发布页面下载安装包（有公布校验和时请核对）。',
         ],
         callouts: [
@@ -1411,7 +1411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'LM Studio、Jan和GPT4All都是免费的吗？',
-            a: '三款应用均100 %免费，可用于个人和商业用途。Jan和GPT4All是开源的（分别为Apache 2.0和MIT许可证）；LM Studio免费但为专有软件。',
+            a: '三款应用均免费，可用于个人和商业用途。Jan和GPT4All是开源的（分别为Apache 2.0和MIT许可证）；LM Studio免费但为专有软件。',
           },
           {
             q: 'LM Studio比GPT4All更好吗？',
@@ -1500,7 +1500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
       inLanguage: 'zh',
       datePublished: '2026-05-07',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       author: { '@type': 'Organization', 'name': 'PromptQuorum' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -1509,7 +1509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
@@ -1543,7 +1543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Las tres son gratuitas, funcionan sin conexión tras la instalación y cargan archivos de modelo GGUF',
           'Las tres pueden chatear con archivos locales: LM Studio y Jan adjuntan documentos en el chat, GPT4All usa su función integrada LocalDocs',
         ],
-        updatedDate: '2026-11-02',
+        updatedDate: '2026-11-03',
       },
     },
     toc: [
@@ -1629,7 +1629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**LM Studio** — Su política de privacidad indica que no hay telemetría ni seguimiento específico del usuario. Las comprobaciones de actualización envían versión de la app, SO y dirección IP; la búsqueda y descarga de modelos envían consultas anonimizadas. Chats y documentos permanecen en el dispositivo.',
           '**Jan** — Sin telemetría por defecto. Analítica anónima opcional (PostHog EU) solo si la permites al primer inicio. Código fuente auditable en GitHub (Apache 2.0).',
           '**GPT4All** — La telemetría es opt-in (desactivada por defecto). Código fuente en GitHub (MIT).',
-          'Ninguna de las tres envía tus prompts, tus conversaciones ni los archivos de modelos cargados a ningún lugar — la inferencia local es local en todos los casos.',
+          'Con inferencia puramente local, ninguna de las tres envía tus prompts ni conversaciones a un proveedor de modelos. Sigue habiendo tráfico de red en las comprobaciones de actualización, la búsqueda y descarga de modelos y, en Jan, al conectar un proveedor en la nube o un servidor MCP.',
         ],
         callouts: [
           {
@@ -1659,7 +1659,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Estado de mantenimiento: la version mas reciente de GPT4All es la v3.10.0, del 25 de febrero de 2025 - mas de 20 meses sin una compilacion nueva. Sigue instalandose y funcionando en hardware modesto, por lo que conserva su sitio aqui, pero el catalogo de modelos incluido no se ha movido desde entonces (faltan modelos mas recientes como Gemma 4 E2B) y desde entonces no se han publicado parches de seguridad. Elige Jan si quieres una interfaz mantenida; recurre a GPT4All solo cuando apliquen sus ventajas restantes: un techo de 4 GB de RAM, o un equipo bloqueado sin permisos de administrador.',
+            text: 'Estado de mantenimiento: la version mas reciente de GPT4All es la v3.10.0, del 25 de febrero de 2025 - mas de 20 meses sin una compilacion nueva. Sigue instalandose y funcionando en hardware modesto, por lo que conserva su sitio aqui, pero el catalogo de modelos incluido no se ha actualizado desde esa version (faltan modelos mas recientes como Gemma 4 E2B) y la lista de versiones del proyecto no muestra ninguna mas reciente, por lo que las correcciones posteriores a la v3.10.0 no estan disponibles en ninguna version. Elige Jan si quieres una interfaz mantenida; recurre a GPT4All solo cuando apliquen sus ventajas restantes: un techo de 4 GB de RAM, o un equipo bloqueado sin permisos de administrador.',
           },
         ],
         items: [
@@ -1685,7 +1685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Son gratuitas LM Studio, Jan y GPT4All?',
-            a: 'Las tres apps son 100 % gratuitas para uso personal y comercial. Jan y GPT4All son open source (Apache 2.0 y MIT respectivamente); LM Studio es gratuita pero propietaria.',
+            a: 'Las tres apps son gratuitas para uso personal y comercial. Jan y GPT4All son open source (Apache 2.0 y MIT respectivamente); LM Studio es gratuita pero propietaria.',
           },
           {
             q: '¿Es LM Studio mejor que GPT4All?',
@@ -1774,7 +1774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
       inLanguage: 'es',
       datePublished: '2026-05-07',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -1783,7 +1783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
@@ -1817,7 +1817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '세 가지 모두 무료이며 설치 후 오프라인에서 작동하고 GGUF 모델 파일을 로드합니다',
           '세 가지 모두 로컬 파일과 채팅할 수 있습니다: LM Studio와 Jan은 채팅에 문서를 첨부하고, GPT4All은 내장 LocalDocs를 사용합니다',
         ],
-        updatedDate: '2026-11-02',
+        updatedDate: '2026-11-03',
       },
     },
     toc: [
@@ -1903,7 +1903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**LM Studio** — 개인정보 처리방침상 텔레메트리와 사용자별 추적이 없습니다. 업데이트 확인 시 앱 버전, OS, IP 주소가, 모델 검색·다운로드 시 익명화된 검색어가 전송됩니다. 채팅과 문서는 기기에 남습니다.',
           '**Jan** — 기본적으로 텔레메트리 없음. 익명 사용 분석(PostHog EU)은 첫 실행 때 허용한 경우에만 사용됩니다. GitHub에서 소스 코드 감사 가능(Apache 2.0).',
           '**GPT4All** — 텔레메트리는 opt-in(기본 비활성화). GitHub에서 소스 코드(MIT).',
-          '세 앱 모두 프롬프트, 대화, 로드된 모델 파일을 어디로도 보내지 않습니다 — 로컬 추론은 모든 경우에 로컬입니다.',
+          '순수 로컬 추론에서는 세 앱 모두 프롬프트와 대화를 모델 제공업체로 보내지 않습니다. 다만 업데이트 확인, 모델 검색·다운로드, 그리고 Jan에서 클라우드 제공업체나 MCP 서버를 연결할 때는 네트워크 통신이 발생합니다.',
         ],
         callouts: [
           {
@@ -1933,7 +1933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '유지 관리 상태: GPT4All의 최신 릴리스는 2025년 2월 25일의 v3.10.0으로, 20개월 넘게 새 빌드가 없습니다. 설치도 되고 저사양 하드웨어에서 실행도 되므로 이 글에서는 자리를 유지하지만, 기본 제공 모델 카탈로그는 그 빌드 이후 갱신되지 않았고(Gemma 4 E2B 같은 최신 모델이 없습니다) 그 이후 보안 패치도 배포되지 않았습니다. 유지 관리되는 GUI가 필요하면 Jan을 선택하고, GPT4All은 남은 장점이 해당될 때만 사용하십시오 — 4GB RAM 한계, 또는 관리자 권한이 없는 잠긴 기기.',
+            text: '유지 관리 상태: GPT4All의 최신 릴리스는 2025년 2월 25일의 v3.10.0으로, 20개월 넘게 새 빌드가 없습니다. 설치도 되고 저사양 하드웨어에서 실행도 되므로 이 글에서는 자리를 유지하지만, 기본 제공 모델 카탈로그는 해당 릴리스 이후 갱신되지 않았고(Gemma 4 E2B 같은 최신 모델이 없습니다) 프로젝트 릴리스 목록에도 더 새로운 빌드가 없으므로, v3.10.0 이후의 수정 사항은 어떤 릴리스에도 포함되어 있지 않습니다. 유지 관리되는 GUI가 필요하면 Jan을 선택하고, GPT4All은 남은 장점이 해당될 때만 사용하십시오 — 4GB RAM 한계, 또는 관리자 권한이 없는 잠긴 기기.',
           },
         ],
         items: [
@@ -1959,7 +1959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'LM Studio, Jan, GPT4All은 무료입니까?',
-            a: '세 앱 모두 개인 및 상업적 사용에 100% 무료입니다. Jan과 GPT4All은 오픈소스(각각 Apache 2.0, MIT)이고 LM Studio는 무료이지만 독점입니다.',
+            a: '세 앱 모두 개인 및 상업적 사용에 무료입니다. Jan과 GPT4All은 오픈소스(각각 Apache 2.0, MIT)이고 LM Studio는 무료이지만 독점입니다.',
           },
           {
             q: 'LM Studio가 GPT4All보다 낫습니까?',
@@ -2048,7 +2048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -2057,7 +2057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
@@ -2091,7 +2091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Os três são gratuitos, funcionam offline após a instalação e carregam arquivos de modelo GGUF',
           'Os três conversam com arquivos locais: LM Studio e Jan anexam documentos no chat, o GPT4All usa o LocalDocs integrado',
         ],
-        updatedDate: '2026-11-02',
+        updatedDate: '2026-11-03',
       },
     },
     toc: [
@@ -2177,7 +2177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**LM Studio** — Sua política de privacidade afirma não haver telemetria nem rastreamento específico do usuário. Verificações de atualização enviam versão do app, SO e endereço IP; busca e download de modelos enviam consultas anonimizadas. Chats e documentos ficam no dispositivo.',
           '**Jan** — Sem telemetria por padrão. Analytics anônimo opcional (PostHog EU) só se você permitir na primeira execução. O código-fonte é auditável no GitHub (Apache 2.0).',
           '**GPT4All** — A telemetria é opt-in (desativada por padrão). Código-fonte no GitHub (MIT).',
-          'Nenhum dos três envia seus prompts, suas conversas ou seus arquivos de modelo carregados para qualquer lugar — a inferência local é local em todos os casos.',
+          'Com inferência puramente local, nenhum dos três envia seus prompts ou conversas a um provedor de modelos. Ainda há tráfego de rede em verificações de atualização, busca e download de modelos e, no Jan, ao conectar um provedor em nuvem ou servidor MCP.',
         ],
         callouts: [
           {
@@ -2207,7 +2207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Status de manutencao: a versao mais recente do GPT4All e a v3.10.0, de 25 de fevereiro de 2025 - mais de 20 meses sem uma nova build. Ele ainda instala e roda em hardware modesto, por isso mantem seu lugar aqui, mas o catalogo de modelos embutido nao mudou desde entao (modelos mais recentes como o Gemma 4 E2B nao estao la) e nenhuma correcao de seguranca foi publicada desde entao. Prefira o Jan se quiser uma interface mantida; use o GPT4All apenas quando suas vantagens restantes se aplicarem: um teto de 4 GB de RAM, ou uma maquina bloqueada sem direitos de administrador.',
+            text: 'Status de manutencao: a versao mais recente do GPT4All e a v3.10.0, de 25 de fevereiro de 2025 - mais de 20 meses sem uma nova build. Ele ainda instala e roda em hardware modesto, por isso mantem seu lugar aqui, mas o catalogo de modelos embutido nao foi atualizado desde essa versao (modelos mais recentes como o Gemma 4 E2B nao estao la) e a lista de versoes do projeto nao mostra build mais recente, portanto correcoes posteriores a v3.10.0 nao estao disponiveis em nenhuma versao. Prefira o Jan se quiser uma interface mantida; use o GPT4All apenas quando suas vantagens restantes se aplicarem: um teto de 4 GB de RAM, ou uma maquina bloqueada sem direitos de administrador.',
           },
         ],
         items: [
@@ -2233,7 +2233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'O LM Studio, o Jan e o GPT4All são gratuitos?',
-            a: 'Os três apps são 100% gratuitos para uso pessoal e comercial. O Jan e o GPT4All são open source (Apache 2.0 e MIT respectivamente); o LM Studio é gratuito, mas proprietário.',
+            a: 'Os três apps são gratuitos para uso pessoal e comercial. O Jan e o GPT4All são open source (Apache 2.0 e MIT respectivamente); o LM Studio é gratuito, mas proprietário.',
           },
           {
             q: 'O LM Studio é melhor que o GPT4All?',
@@ -2322,7 +2322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-07',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -2331,7 +2331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
@@ -2365,7 +2365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الثلاثة مجانية وتعمل بدون اتصال بعد التثبيت وتحمّل ملفات نماذج GGUF',
           'الثلاثة تستطيع الدردشة مع الملفات المحلية: LM Studio وJan يرفقان المستندات داخل المحادثة، وGPT4All يستخدم ميزة LocalDocs المدمجة',
         ],
-        updatedDate: '2026-11-02',
+        updatedDate: '2026-11-03',
       },
     },
     toc: [
@@ -2452,7 +2452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**LM Studio** — تنص سياسة الخصوصية على عدم وجود قياس عن بُعد أو تتبّع خاص بالمستخدم. فحص التحديثات يرسل إصدار التطبيق ونظام التشغيل وعنوان IP؛ والبحث عن النماذج وتنزيلها يرسلان استعلامات بحث مجهولة الهوية. تبقى المحادثات والمستندات على الجهاز.',
           '**Jan** — بلا قياس عن بُعد افتراضياً. تحليلات مجهولة اختيارية (PostHog EU) فقط إذا سمحت بها عند أول تشغيل. الشفرة المصدرية قابلة للتدقيق على GitHub (Apache 2.0).',
           '**GPT4All** — القياس عن بُعد اختياري (معطّل افتراضياً). الشفرة المصدرية على GitHub (MIT).',
-          'لا أيٌّ منها يرسل prompts إدخالاتك أو محادثاتك أو ملفات النماذج المحمّلة إلى أي مكان — الاستنتاج المحلي محلي في جميع الحالات.',
+          'عند الاستدلال المحلي البحت لا يرسل أيٌّ من التطبيقات الثلاثة مطالباتك أو محادثاتك إلى مزوّد نماذج. تبقى هناك حركة شبكة عند فحص التحديثات والبحث عن النماذج وتنزيلها، وفي Jan عند ربط مزوّد سحابي أو خادم MCP.',
         ],
         callouts: [
           {
@@ -2482,7 +2482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'حالة الصيانة: أحدث إصدار من GPT4All هو v3.10.0 بتاريخ 25 فبراير 2025 - أي أكثر من 20 شهراً بلا بناء جديد. لا يزال يُثبَّت ويعمل على أجهزة متواضعة، ولذلك يحتفظ بمكانه هنا، لكن كتالوج النماذج المرفق لم يتغيّر منذ ذلك البناء (ولا تظهر فيه نماذج أحدث مثل Gemma 4 E2B)، ولم تصدر تصحيحات أمنية منذ ذلك الحين. فضّل Jan إن أردت واجهة رسومية مُصانة، ولا تلجأ إلى GPT4All إلا حين تنطبق ميزتاه المتبقيتان: سقف 4 GB من الـRAM، أو جهاز مقيَّد بلا صلاحيات admin.',
+            text: 'حالة الصيانة: أحدث إصدار من GPT4All هو v3.10.0 بتاريخ 25 فبراير 2025 - أي أكثر من 20 شهراً بلا بناء جديد. لا يزال يُثبَّت ويعمل على أجهزة متواضعة، ولذلك يحتفظ بمكانه هنا، لكن كتالوج النماذج المرفق لم يُحدَّث منذ ذلك الإصدار (ولا تظهر فيه نماذج أحدث مثل Gemma 4 E2B)، ولا تُظهر قائمة إصدارات المشروع بناءً أحدث، لذا فإن أي إصلاحات بعد v3.10.0 غير متاحة في أي إصدار. فضّل Jan إن أردت واجهة رسومية مُصانة، ولا تلجأ إلى GPT4All إلا حين تنطبق ميزتاه المتبقيتان: سقف 4 GB من الـRAM، أو جهاز مقيَّد بلا صلاحيات admin.',
           },
         ],
         items: [
@@ -2508,7 +2508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل تطبيقات LM Studio وJan وGPT4All مجانية؟',
-            a: 'الثلاثة مجانية 100% للاستخدام الشخصي والتجاري. Jan وGPT4All مفتوحا المصدر (Apache 2.0 وMIT على التوالي)؛ LM Studio مجاني لكن مملوك.',
+            a: 'الثلاثة مجانية للاستخدام الشخصي والتجاري. Jan وGPT4All مفتوحا المصدر (Apache 2.0 وMIT على التوالي)؛ LM Studio مجاني لكن مملوك.',
           },
           {
             q: 'هل LM Studio أفضل من GPT4All؟',
@@ -2597,7 +2597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all',
       inLanguage: 'ar',
       datePublished: '2026-05-07',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-03',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
