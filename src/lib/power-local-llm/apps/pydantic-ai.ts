@@ -37,6 +37,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
   compare: { ollama: true, mcp: true, multiAgent: true, toolCalling: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-10-30', // GitHub release v2.64.0 (latest substantive upstream update; later main commits are CI/test only), read 2026-11-02
-  lastUpstreamUpdateSource: 'https://github.com/pydantic/pydantic-ai',
+  lastUpstreamUpdate: '2026-11-04', // GitHub release v2.66.0 (PyPI and GitHub releases API), read 2026-11-06
+  lastUpstreamUpdateSource: 'https://github.com/pydantic/pydantic-ai/releases',
 }
