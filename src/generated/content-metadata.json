@@ -938,7 +938,7 @@
       "images": []
     },
     "nextchat-review": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-11",
       "hasSections": true,
@@ -956,7 +956,7 @@
       "images": []
     },
     "page-assist-review": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-11",
       "hasSections": true,
@@ -2007,7 +2007,7 @@
       ]
     },
     "on-prem-air-gapped-local-llm": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -3923,7 +3923,7 @@
       "images": []
     },
     "best-llm-observability-tools-2026": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-08-28",
       "hasSections": true,
@@ -3941,7 +3941,7 @@
       "images": []
     },
     "best-vector-database-2026": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-08-28",
       "hasSections": true,
@@ -5777,7 +5777,7 @@
   },
   "power-local-llm": {
     "hermes-agent-review-2026": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
       "hasSections": true,
@@ -5865,7 +5865,7 @@
       ]
     },
     "babyagi-review-autonomous-agent": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-02",
       "hasSections": true,
@@ -6610,7 +6610,7 @@
       ]
     },
     "lm-studio-vs-jan-vs-gpt4all-2026": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -11838,7 +11838,7 @@
       "images": []
     },
     "openrag-review": {
-      "dateModified": "2026-11-06",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-10-23",
       "hasSections": true,
@@ -12792,7 +12792,7 @@
       "images": []
     },
     "comfyui-review": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
@@ -13476,7 +13476,7 @@
       "images": []
     },
     "milvus-review": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-18",
       "hasSections": true,
@@ -13638,7 +13638,7 @@
       "images": []
     },
     "weaviate-review": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-19",
       "hasSections": true,
