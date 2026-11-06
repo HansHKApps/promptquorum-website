@@ -306,7 +306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'NextChat ([nextchat.club](https://nextchat.club), Quellcode auf [github.com/ChatGPTNextWeb/NextChat](https://github.com/ChatGPTNextWeb/NextChat)) ist eine kostenlose, quelloffene, MIT-lizenzierte Chat-Oberfläche, früher bekannt als ChatGPT-Next-Web. Sie verbindet sich von Haus aus mit OpenAI, Anthropic Claude, Google Gemini und DeepSeek, plus jedem OpenAI-kompatiblen Endpunkt, einschließlich eines lokalen [Ollama](/de/local-llms/how-to-install-ollama)- oder LM-Studio-Servers, und lässt sich per echtem Ein-Klick-Vercel-Button bei einer Erstladung von rund 100 KB deployen. Diese Rezension zeigt, was NextChat wirklich kann, welche Lizenz gilt, wie Sie es per Docker oder Vercel selbst hosten, was es kostet und wie es im Vergleich zu anderen selbst gehosteten Chat-Oberflächen abschneidet.',
     metaDescription: 'NextChat im Test: kostenlose MIT-Chat-Oberfläche mit Ein-Klick-Vercel-Deploy und Docker, dazu eine MCP-Sicherheitskorrektur vom Oktober 2026 ohne Release.',
     publishDate: '2026-09-11',
-    leadAnswerBlock: '**NextChat ist eine kostenlose, MIT-lizenzierte Chat-Oberfläche (früher ChatGPT-Next-Web) für OpenAI, Claude, Gemini, DeepSeek sowie lokale Ollama- oder LM-Studio-Server. Sie lässt sich per Klick auf Vercel oder mit Docker deployen. Laut zugehörigem Pull Request wurde am 20. Oktober 2026 eine MCP-Lücke ohne Authentifizierung in main behoben, aber nicht in einem Release.**',
+    leadAnswerBlock: '**NextChat ist eine kostenlose, MIT-lizenzierte Chat-Oberfläche (früher ChatGPT-Next-Web) für OpenAI, Claude, Gemini, DeepSeek sowie lokale Ollama- oder LM-Studio-Server. Sie lässt sich per Klick auf Vercel oder mit Docker deployen. Laut Pull Request wurde eine MCP-Lücke ohne Authentifizierung am 20. Oktober 2026 in main behoben, nicht in einem Release.**',
     audience: 'Entwickler und Self-Hoster, die den schnellstmöglichen Weg zu einer privaten, Multi-Provider-Chat-Oberfläche ohne Plugin-Ökosystem wollen',
     readTime: '8 Min. Lesezeit',
     educationalLevel: 'Intermediate',
@@ -404,7 +404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'NextChat führt keine KI-Modelle selbst aus -- es ist ein Chat-Fenster, ähnlich der ChatGPT-Website, das Sie in unter zwei Minuten mit einem Klick auf Vercel deployen oder selbst per Docker betreiben, und es speichert den Gesprächsverlauf standardmäßig in Ihrem Browser statt auf einem fremden Server.' },
         ],
         items: [
-          'NextChat ([nextchat.club](https://nextchat.club), Quellcode auf [github.com/ChatGPTNextWeb/NextChat](https://github.com/ChatGPTNextWeb/NextChat)) ist eine kostenlose, MIT-lizenzierte Chat-Oberfläche, früher bekannt als ChatGPT-Next-Web.',
+          'NextChat ([nextchat.club](https://nextchat.club), Quellcode auf [GitHub](https://github.com/ChatGPTNextWeb/NextChat)) ist eine kostenlose, MIT-lizenzierte Chat-Oberfläche, früher ChatGPT-Next-Web.',
           'Sie verbindet sich von Haus aus mit OpenAI, Anthropic Claude, Google Gemini und DeepSeek, plus jedem OpenAI-kompatiblen Endpunkt, einschließlich lokaler Ollama- oder LM-Studio-Server.',
           'Ein echter Ein-Klick-Vercel-Deploy-Button bringt eine private Instanz in unter zwei Minuten online; laut Projekt-README beträgt die Erstladung rund 100 KB.',
           'Weitere integrierte Funktionen sind native Apps für Windows, macOS, Linux, iOS und Android, PWA-Unterstützung und standardmäßig lokale Gesprächsspeicherung im Browser.',

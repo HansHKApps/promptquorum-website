@@ -18,6 +18,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "openrag-review",
+        "title": "OpenRAG Review: Open-Source Agentic RAG Platform",
+        "url": "/power-local-llm/openrag-review",
+        "dateModified": "2026-11-06",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-m5-local-llm",
         "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
@@ -34,6 +42,30 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "nextchat-review",
+        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
+        "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "babyagi-review-autonomous-agent",
+        "title": "BabyAGI: What the First AI Agent Became",
+        "url": "/power-local-llm/babyagi-review-autonomous-agent",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "best-local-llms-customer-support-call-centers-enterprise",
         "title": "Best Local LLM Solutions for Enterprise Customer Support & Call Centers (2026)",
@@ -43,42 +75,10 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "trilium-notes-review",
-        "title": "Trilium Notes Review: Free Hierarchical Notes With Optional AI",
-        "url": "/power-local-llm/trilium-notes-review",
+        "slug": "hermes-agent-review-2026",
+        "title": "Hermes Agent Review: Self-Hosted AI Agent",
+        "url": "/power-local-llm/hermes-agent-review",
         "dateModified": "2026-11-03",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "vllm-explained",
-        "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
-        "url": "/power-local-llm/vllm-explained",
-        "dateModified": "2026-11-03",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-local-llm-guide-2026",
-        "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
-        "url": "/local-llms/apple-silicon-local-llm-guide-2026",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llms-2026",
-        "title": "Best Local LLMs in 2026: Qwen3.8-27B, Gemma 4, and Phi-4-mini Ranked",
-        "url": "/local-llms/best-local-llms-2026",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-hardware-guide",
-        "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
-        "url": "/local-llms/local-llm-hardware-guide",
-        "dateModified": "2026-11-02",
         "tier": "about"
       }
     ],
@@ -732,7 +732,7 @@
         "slug": "page-assist-review",
         "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
         "url": "/local-llms/page-assist-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "mentioned"
       },
       {
@@ -868,6 +868,38 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "nextchat-review",
+        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
+        "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "babyagi-review-autonomous-agent",
+        "title": "BabyAGI: What the First AI Agent Became",
+        "url": "/power-local-llm/babyagi-review-autonomous-agent",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
+        "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
+        "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "trilium-notes-review",
         "title": "Trilium Notes Review: Free Hierarchical Notes With Optional AI",
@@ -888,38 +920,6 @@
         "slug": "apple-silicon-local-llm-guide-2026",
         "title": "Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide",
         "url": "/local-llms/apple-silicon-local-llm-guide-2026",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "nextchat-review",
-        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
-        "url": "/local-llms/nextchat-review",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "page-assist-review",
-        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
-        "url": "/local-llms/page-assist-review",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "babyagi-review-autonomous-agent",
-        "title": "BabyAGI: What the First AI Agent Became",
-        "url": "/power-local-llm/babyagi-review-autonomous-agent",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
-        "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
-        "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -996,7 +996,7 @@
         "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
         "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
         "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -1082,7 +1082,7 @@
         "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
         "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
         "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -1164,18 +1164,18 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
         "cluster": "power-local-llm",
         "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
         "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
         "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "open-webui-review",
+        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
+        "url": "/local-llms/open-webui-review",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -1348,7 +1348,7 @@
         "slug": "nextchat-review",
         "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
         "url": "/local-llms/nextchat-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "mentioned"
       },
       {
@@ -2084,7 +2084,7 @@
         "slug": "nextchat-review",
         "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
         "url": "/local-llms/nextchat-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -2092,7 +2092,7 @@
         "slug": "page-assist-review",
         "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
         "url": "/local-llms/page-assist-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -2452,7 +2452,7 @@
         "slug": "nextchat-review",
         "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
         "url": "/local-llms/nextchat-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "mentioned"
       },
       {
@@ -2490,7 +2490,7 @@
         "slug": "nextchat-review",
         "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
         "url": "/local-llms/nextchat-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -2498,7 +2498,7 @@
         "slug": "page-assist-review",
         "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
         "url": "/local-llms/page-assist-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -2528,7 +2528,7 @@
         "slug": "nextchat-review",
         "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
         "url": "/local-llms/nextchat-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -2544,7 +2544,7 @@
         "slug": "page-assist-review",
         "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
         "url": "/local-llms/page-assist-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -2574,7 +2574,7 @@
         "slug": "page-assist-review",
         "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
         "url": "/local-llms/page-assist-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -3510,7 +3510,7 @@
         "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
         "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
         "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "mentioned"
       },
       {
@@ -3836,7 +3836,7 @@
         "slug": "openrag-review",
         "title": "OpenRAG Review: Open-Source Agentic RAG Platform",
         "url": "/power-local-llm/openrag-review",
-        "dateModified": "2026-10-23",
+        "dateModified": "2026-11-06",
         "tier": "about"
       },
       {
@@ -3890,7 +3890,7 @@
         "slug": "milvus-review",
         "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
         "url": "/power-local-llm/milvus-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -4132,7 +4132,7 @@
         "slug": "milvus-review",
         "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
         "url": "/power-local-llm/milvus-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "mentioned"
       },
       {
@@ -4140,7 +4140,7 @@
         "slug": "weaviate-review",
         "title": "Weaviate Review: The Self-Hostable Vector Database for RAG",
         "url": "/power-local-llm/weaviate-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "mentioned"
       },
       {
@@ -4170,7 +4170,7 @@
         "slug": "best-llm-observability-tools-2026",
         "title": "Best LLM Observability Tool 2026: Langfuse vs LangSmith vs Helicone",
         "url": "/local-llms/best-llm-observability-tools",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -4178,7 +4178,7 @@
         "slug": "milvus-review",
         "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
         "url": "/power-local-llm/milvus-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -4544,7 +4544,7 @@
         "slug": "best-llm-observability-tools-2026",
         "title": "Best LLM Observability Tool 2026: Langfuse vs LangSmith vs Helicone",
         "url": "/local-llms/best-llm-observability-tools",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -4986,7 +4986,7 @@
         "slug": "hermes-agent-review-2026",
         "title": "Hermes Agent Review: Self-Hosted AI Agent",
         "url": "/power-local-llm/hermes-agent-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -6831,17 +6831,17 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "automatic1111-review",
-        "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
-        "url": "/power-local-llm/automatic1111-review",
-        "dateModified": "2026-11-02",
+        "slug": "comfyui-review",
+        "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
+        "url": "/power-local-llm/comfyui-review",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "comfyui-review",
-        "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
-        "url": "/power-local-llm/comfyui-review",
+        "slug": "automatic1111-review",
+        "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
+        "url": "/power-local-llm/automatic1111-review",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -6904,7 +6904,7 @@
         "slug": "comfyui-review",
         "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
         "url": "/power-local-llm/comfyui-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -6998,7 +6998,7 @@
         "slug": "comfyui-review",
         "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
         "url": "/power-local-llm/comfyui-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -7095,17 +7095,17 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "automatic1111-review",
-        "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
-        "url": "/power-local-llm/automatic1111-review",
-        "dateModified": "2026-11-02",
+        "slug": "comfyui-review",
+        "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
+        "url": "/power-local-llm/comfyui-review",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "comfyui-review",
-        "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
-        "url": "/power-local-llm/comfyui-review",
+        "slug": "automatic1111-review",
+        "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
+        "url": "/power-local-llm/automatic1111-review",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -7254,7 +7254,7 @@
         "slug": "comfyui-review",
         "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
         "url": "/power-local-llm/comfyui-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "mentioned"
       },
       {
@@ -7788,7 +7788,7 @@
         "slug": "babyagi-review-autonomous-agent",
         "title": "BabyAGI: What the First AI Agent Became",
         "url": "/power-local-llm/babyagi-review-autonomous-agent",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -10108,7 +10108,7 @@
         "slug": "openrag-review",
         "title": "OpenRAG Review: Open-Source Agentic RAG Platform",
         "url": "/power-local-llm/openrag-review",
-        "dateModified": "2026-10-23",
+        "dateModified": "2026-11-06",
         "tier": "about"
       }
     ],
@@ -10778,6 +10778,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-vector-database-2026",
+        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
+        "url": "/local-llms/best-vector-database",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
         "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Vector Database Comparison (2026)",
@@ -10786,19 +10794,11 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
-        "slug": "best-vector-database-2026",
-        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
-        "url": "/local-llms/best-vector-database",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
         "cluster": "power-local-llm",
         "slug": "weaviate-review",
         "title": "Weaviate Review: The Self-Hostable Vector Database for RAG",
         "url": "/power-local-llm/weaviate-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -11250,7 +11250,7 @@
         "slug": "best-llm-observability-tools-2026",
         "title": "Best LLM Observability Tool 2026: Langfuse vs LangSmith vs Helicone",
         "url": "/local-llms/best-llm-observability-tools",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -11274,7 +11274,7 @@
         "slug": "openrag-review",
         "title": "OpenRAG Review: Open-Source Agentic RAG Platform",
         "url": "/power-local-llm/openrag-review",
-        "dateModified": "2026-10-23",
+        "dateModified": "2026-11-06",
         "tier": "mentioned"
       },
       {
@@ -11552,7 +11552,7 @@
         "slug": "milvus-review",
         "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
         "url": "/power-local-llm/milvus-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -11592,7 +11592,7 @@
         "slug": "weaviate-review",
         "title": "Weaviate Review: The Self-Hostable Vector Database for RAG",
         "url": "/power-local-llm/weaviate-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
         "tier": "mentioned"
       },
       {
@@ -11931,9 +11931,41 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "best-vector-database-2026",
+        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
+        "url": "/local-llms/best-vector-database",
+        "dateModified": "2026-11-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-11-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "nextchat-review",
+        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
+        "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-11-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-11-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "babyagi-review-autonomous-agent",
+        "title": "BabyAGI: What the First AI Agent Became",
+        "url": "/power-local-llm/babyagi-review-autonomous-agent",
         "dateModified": "2026-11-03",
         "tier": "mentioned"
       },
@@ -11960,38 +11992,6 @@
         "url": "/power-local-llm/hiwaifu-review",
         "dateModified": "2026-11-03",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
-        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Vector Database Comparison (2026)",
-        "url": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
-        "dateModified": "2026-11-03",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "us-state-ai-employment-laws-compliance",
-        "title": "US State AI Employment Laws: What Actually Applies to Your Hiring Process",
-        "url": "/power-local-llm/us-state-ai-employment-laws-compliance",
-        "dateModified": "2026-11-03",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-vector-database-2026",
-        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
-        "url": "/local-llms/best-vector-database",
-        "dateModified": "2026-11-02",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mram-in-memory-computing-local-ai-2026",
-        "title": "MRAM and In-Memory Computing: The Next Leap for On-Device AI?",
-        "url": "/local-llms/mram-in-memory-computing-local-ai",
-        "dateModified": "2026-11-02",
-        "tier": "mentioned"
       }
     ],
     "totalCount": 249,
@@ -12008,10 +12008,26 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-vector-database-2026",
+        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
+        "url": "/local-llms/best-vector-database",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "enterprise-rag-vector-database-deployment-guide-2026",
         "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
         "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "milvus-review",
+        "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
+        "url": "/power-local-llm/milvus-review",
         "dateModified": "2026-11-03",
         "tier": "about"
       },
@@ -12024,19 +12040,11 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
-        "slug": "best-vector-database-2026",
-        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
-        "url": "/local-llms/best-vector-database",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
         "cluster": "power-local-llm",
-        "slug": "milvus-review",
-        "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
-        "url": "/power-local-llm/milvus-review",
-        "dateModified": "2026-11-02",
+        "slug": "weaviate-review",
+        "title": "Weaviate Review: The Self-Hostable Vector Database for RAG",
+        "url": "/power-local-llm/weaviate-review",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -12044,14 +12052,6 @@
         "slug": "self-hosted-ai-starter-kit-review",
         "title": "Self-Hosted AI Starter Kit Review: n8n + Ollama + Qdrant in One Compose File",
         "url": "/power-local-llm/self-hosted-ai-starter-kit-review",
-        "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "weaviate-review",
-        "title": "Weaviate Review: The Self-Hostable Vector Database for RAG",
-        "url": "/power-local-llm/weaviate-review",
         "dateModified": "2026-11-02",
         "tier": "about"
       },
@@ -12444,7 +12444,15 @@
         "slug": "weaviate-review",
         "title": "Weaviate Review: The Self-Hostable Vector Database for RAG",
         "url": "/power-local-llm/weaviate-review",
-        "dateModified": "2026-11-02",
+        "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-vector-database-2026",
+        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
+        "url": "/local-llms/best-vector-database",
+        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -12461,14 +12469,6 @@
         "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Vector Database Comparison (2026)",
         "url": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
         "dateModified": "2026-11-03",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-vector-database-2026",
-        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
-        "url": "/local-llms/best-vector-database",
-        "dateModified": "2026-11-02",
         "tier": "about"
       },
       {

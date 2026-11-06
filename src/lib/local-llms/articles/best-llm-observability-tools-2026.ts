@@ -81,7 +81,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**The structural question is whether you instrument your code or put a proxy in front of it, and that decides what you can see.** Read down and stop at the first line that describes you.',
         items: [
           '**You want flexibility and the option to self-host later** → Langfuse. Broadest integrations, free self-hosted core, and the lowest switching cost if your needs change — but read the Enterprise feature list before assuming governance features are included.',
-          '**Your stack is LangChain or LangGraph** → LangSmith. Tracing is native and zero-config there, which no other tool matches for that specific ecosystem.',
+          '**Your stack is LangChain or LangGraph** → LangSmith. Tracing is native and zero-config there, which is hard to match inside that specific ecosystem.',
           '**You want observability today with no SDK rewrite** → Helicone. A proxy means one line of code, and cost data on every request by default.',
           '**Cost sprawl across many keys and models is your actual pain** → Helicone. Per-request cost breakdowns are its core product, not a reporting tab bolted onto tracing.',
           '**You only need prompt versioning and request logs** → PromptLayer. Free for 2,500 requests a month, and honest about being narrower than the other three.',
@@ -195,7 +195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       langsmith: {
         id: 'langsmith',
         title: 'LangSmith: the LangChain choice',
-        content: '**If your application is built on LangChain or LangGraph, LangSmith traces it with no configuration at all, and nothing else matches that.** Outside that ecosystem the argument weakens considerably.',
+        content: '**If your application is built on LangChain or LangGraph, LangSmith traces it with no configuration at all, which is hard to match inside that ecosystem.** Outside that ecosystem the argument weakens considerably.',
         rankedItems: [
           {
             rank: 1,
@@ -203,7 +203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             tagline: 'Native zero-config tracing, $39/seat/mo plus usage-based units',
             verdict: 'LangSmith comes from the LangChain team, and inside LangChain or LangGraph the tracing is automatic — you get step-level visibility into an agent run without writing instrumentation. Outside that ecosystem you use a `traceable()` wrapper around OpenAI or Anthropic SDK calls, which works but removes the main advantage. Pricing is a Developer tier at $0 per seat with up to 5,000 base traces a month and a single seat, Plus at $39 per seat per month with up to 10,000 base traces and one free small serverless deployment, and custom Enterprise with self-hosted and hybrid options. Beyond the included allowance, billing is usage-based in LangChain Standard Units (LSU), at $1.00 per LSU. That is the part to model before committing: the bill scales with agent complexity and trace volume, not with headcount, so a team that adds LangGraph steps can see cost move independently of seats.',
             pros: [
-              'Zero-config tracing inside LangChain and LangGraph, unmatched for that stack',
+              'Zero-config tracing inside LangChain and LangGraph, its main advantage for that stack',
               'Mature dataset-driven evaluation and experiment tooling',
               'Free Developer tier is enough for a solo developer prototyping',
               'Enterprise offers self-hosted and hybrid deployment',
@@ -650,7 +650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Langfuse** — 36,9k GitHub-Sterne, die größte Open-Source-Präsenz hier. Cloud Hobby ist kostenlos mit 50.000 Einheiten im Monat, 30 Tagen Datenzugriff und 2 Nutzenden; Core kostet 29 $/Monat mit 100.000 Einheiten und unbegrenzt vielen Nutzenden; Pro 199 $/Monat mit drei Jahren Aufbewahrung',
+          '**Langfuse** — 36,9k GitHub-Sterne, die größte Open-Source-Präsenz hier. Cloud Hobby ist kostenlos (50.000 Einheiten/Monat, 2 Nutzende); Core 29 $/Monat, Pro 199 $/Monat',
           '**Eine Korrektur, die sich lohnt:** Langfuse wird in manchen Vergleichen als MIT-lizenziert ohne Funktionsschranke beschrieben. Die eigene README sagt, das Repository sei „MIT licensed, except for the `ee` folders", und die Self-Host-Seite listet neun Enterprise-Funktionen — serverseitige Datenmaskierung, projektbezogenes RBAC, Verwaltung der Aufbewahrung, SCIM, Audit-Logs und weitere. Kern-Observability und Evaluationen sind wirklich kostenlos; Governance-Funktionen nicht.',
           '**Langfuse wurde am 16. Januar 2026 von ClickHouse, Inc. übernommen**, angekündigt zusammen mit der 400-Mio.-$-Series-D von ClickHouse. Die LICENSE-Datei im Repository beginnt nun mit „Copyright (c) 2023-2026 ClickHouse, Inc." Das ist kein Grund, Langfuse zu meiden, aber ein Roadmap-Aspekt, der fünf Minuten Prüfung verdient, bevor Sie sich festlegen.',
           '**LangSmith** — Developer ist kostenlos mit bis zu 5.000 Basis-Traces im Monat und einem Platz. Plus kostet 39 $ pro Platz und Monat mit bis zu 10.000 Basis-Traces, danach nutzungsabhängig in LangChain Standard Units (LSU), 1,00 $ je LSU. Enterprise ist individuell mit selbst gehosteten und hybriden Optionen.',
@@ -666,7 +666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Die strukturelle Frage lautet, ob Sie Ihren Code instrumentieren oder einen Proxy davorsetzen — und das entscheidet, was Sie sehen können.** Lesen Sie von oben und halten Sie bei der ersten Zeile inne, die auf Sie zutrifft.',
         items: [
           '**Sie wollen Flexibilität und die Option, später selbst zu hosten** → Langfuse. Breiteste Integrationen, kostenloser selbst gehosteter Kern und die geringsten Wechselkosten — prüfen Sie aber die Enterprise-Liste, bevor Sie Governance-Funktionen voraussetzen.',
-          '**Ihr Stack ist LangChain oder LangGraph** → LangSmith. Dort ist Tracing nativ und ohne Konfiguration, was kein anderes Tool für dieses Ökosystem erreicht.',
+          '**Ihr Stack ist LangChain oder LangGraph** → LangSmith. Dort ist Tracing nativ und ohne Konfiguration, was innerhalb dieses Ökosystems schwer zu übertreffen ist.',
           '**Sie wollen heute Observability ohne SDK-Umbau** → Helicone. Ein Proxy bedeutet eine Zeile Code und Kostendaten bei jeder Anfrage.',
           '**Kostenwildwuchs über viele Schlüssel und Modelle ist Ihr eigentliches Problem** → Helicone. Kostenaufschlüsselung pro Anfrage ist das Kernprodukt, kein an das Tracing angehängter Reiter.',
           '**Sie brauchen nur Prompt-Versionierung und Request-Logs** → PromptLayer. Kostenlos bis 2.500 Anfragen im Monat und ehrlich darin, schmaler zu sein als die anderen drei.',
@@ -780,7 +780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       langsmith: {
         id: 'langsmith',
         title: 'LangSmith: die LangChain-Wahl',
-        content: '**Wenn Ihre Anwendung auf LangChain oder LangGraph aufbaut, tracet LangSmith sie ohne jede Konfiguration, und darin erreicht es nichts anderes.** Außerhalb dieses Ökosystems wird das Argument deutlich schwächer.',
+        content: '**Wenn Ihre Anwendung auf LangChain oder LangGraph aufbaut, tracet LangSmith sie ohne jede Konfiguration, was innerhalb dieses Ökosystems schwer zu übertreffen ist.** Außerhalb dieses Ökosystems wird das Argument deutlich schwächer.',
         rankedItems: [
           {
             rank: 1,
@@ -788,7 +788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             tagline: 'Natives Tracing ohne Konfiguration, 39 $/Platz/Monat plus nutzungsabhängige LSU-Abrechnung',
             verdict: 'LangSmith stammt vom LangChain-Team, und innerhalb von LangChain oder LangGraph läuft das Tracing automatisch: Sie erhalten Einblick auf Schrittebene in einen Agentenlauf, ohne Instrumentierung zu schreiben. Außerhalb nutzen Sie einen `traceable()`-Wrapper um OpenAI- oder Anthropic-Aufrufe, was funktioniert, aber den Hauptvorteil aufhebt. Die Preise: eine Developer-Stufe zu 0 $ pro Platz mit bis zu 5.000 Basis-Traces im Monat und einem einzigen Platz, Plus zu 39 $ pro Platz und Monat mit bis zu 10.000 Basis-Traces und einem kostenlosen kleinen Serverless-Deployment, sowie individuelles Enterprise mit selbst gehosteten und hybriden Optionen. Über dem Kontingent wird nutzungsabhängig abgerechnet: in LangChain Standard Units (LSU), 1,00 $ je LSU. Genau das sollten Sie vorher modellieren, denn die Rechnung skaliert mit Agenten-Komplexität und Trace-Volumen, nicht mit der Kopfzahl.',
             pros: [
-              'Tracing ohne Konfiguration in LangChain und LangGraph, dafür unerreicht',
+              'Tracing ohne Konfiguration in LangChain und LangGraph, der Hauptvorteil für diesen Stack',
               'Ausgereifte, datensatzgetriebene Evaluations- und Experimentwerkzeuge',
               'Die kostenlose Developer-Stufe reicht für eine Einzelperson im Prototypenbau',
               'Enterprise bietet selbst gehostete und hybride Bereitstellung',
@@ -1259,7 +1259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**La pregunta estructural es si instrumenta su código o pone un proxy delante, y eso decide qué puede ver.** Lea hacia abajo y deténgase en la primera línea que le describa.',
         items: [
           '**Quiere flexibilidad y la opción de autoalojar más adelante** → Langfuse. Las integraciones más amplias, núcleo autoalojado gratuito y el menor coste de cambio — pero lea la lista de Enterprise antes de dar por incluidas las funciones de gobernanza.',
-          '**Su stack es LangChain o LangGraph** → LangSmith. Allí el trazado es nativo y sin configuración, algo que ninguna otra herramienta iguala para ese ecosistema.',
+          '**Su stack es LangChain o LangGraph** → LangSmith. Allí el trazado es nativo y sin configuración, algo difícil de igualar dentro de ese ecosistema.',
           '**Quiere observabilidad hoy sin reescribir con un SDK** → Helicone. Un proxy significa una línea de código y datos de coste en cada petición por defecto.',
           '**El descontrol de costes entre muchas claves y modelos es su verdadero problema** → Helicone. El desglose de coste por petición es su producto central, no una pestaña de informes añadida al trazado.',
           '**Solo necesita versionado de prompts y registros de peticiones** → PromptLayer. Gratis hasta 2.500 peticiones al mes y honesta sobre ser más estrecha que las otras tres.',
@@ -1373,7 +1373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       langsmith: {
         id: 'langsmith',
         title: 'LangSmith: la opción LangChain',
-        content: '**Si su aplicación está construida sobre LangChain o LangGraph, LangSmith la traza sin ninguna configuración, y en eso nada más se le acerca.** Fuera de ese ecosistema el argumento se debilita bastante.',
+        content: '**Si su aplicación está construida sobre LangChain o LangGraph, LangSmith la traza sin ninguna configuración, algo difícil de igualar dentro de ese ecosistema.** Fuera de ese ecosistema el argumento se debilita bastante.',
         rankedItems: [
           {
             rank: 1,
@@ -1381,7 +1381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             tagline: 'Trazado nativo sin configuración, 39 $/puesto/mes más unidades por consumo',
             verdict: 'LangSmith viene del equipo de LangChain, y dentro de LangChain o LangGraph el trazado es automático: obtiene visibilidad a nivel de paso de una ejecución de agente sin escribir instrumentación. Fuera de ahí se usa un envoltorio `traceable()` alrededor de las llamadas a los SDK de OpenAI o Anthropic, que funciona pero elimina la ventaja principal. Los precios: un nivel Developer a 0 $ por puesto con hasta 5.000 trazas base al mes y un único puesto, Plus a 39 $ por puesto y mes con hasta 10.000 trazas base y un despliegue serverless pequeño gratuito, y Enterprise personalizado con opciones autoalojada e híbrida. Por encima de la cuota, la facturación es por consumo en LangChain Standard Units (LSU), a 1,00 $ por LSU. Esa es la parte a modelar antes de comprometerse: la factura escala con la complejidad del agente y el volumen de trazas, no con la plantilla.',
             pros: [
-              'Trazado sin configuración dentro de LangChain y LangGraph, insuperable para ese stack',
+              'Trazado sin configuración dentro de LangChain y LangGraph, su principal ventaja en ese stack',
               'Herramientas maduras de evaluación y experimentación basadas en conjuntos de datos',
               'El nivel Developer gratuito basta para una persona sola prototipando',
               'Enterprise ofrece despliegue autoalojado e híbrido',
@@ -1844,7 +1844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**La question structurelle est de savoir si vous instrumentez votre code ou si vous placez un proxy devant, et cela determine ce que vous pouvez voir.** Lisez vers le bas et arretez-vous a la premiere ligne qui vous decrit.',
         items: [
           '**Vous voulez de la souplesse et la possibilite d auto-heberger plus tard** → Langfuse. Les integrations les plus larges, un coeur auto-heberge gratuit et le cout de sortie le plus faible — mais lisez la liste Enterprise avant de tenir les fonctions de gouvernance pour acquises.',
-          '**Votre pile est LangChain ou LangGraph** → LangSmith. Le tracage y est natif et sans configuration, ce qu aucun autre outil n egale pour cet ecosysteme.',
+          '**Votre pile est LangChain ou LangGraph** → LangSmith. Le tracage y est natif et sans configuration, ce qui est difficile a egaler dans cet ecosysteme.',
           '**Vous voulez de l observabilite des aujourd hui sans reecriture SDK** → Helicone. Un proxy, c est une ligne de code et des donnees de cout a chaque requete par defaut.',
           '**La derive des couts entre de nombreuses cles et de nombreux modeles est votre vrai probleme** → Helicone. La ventilation du cout par requete est le produit central, pas un onglet de reporting greffe sur le tracage.',
           '**Vous n avez besoin que du versionnement des prompts et des journaux de requetes** → PromptLayer. Gratuit jusqu a 2 500 requetes par mois et honnete sur le fait d etre plus etroit que les trois autres.',
@@ -1958,7 +1958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       langsmith: {
         id: 'langsmith',
         title: 'LangSmith : le choix LangChain',
-        content: '**Si votre application repose sur LangChain ou LangGraph, LangSmith la trace sans aucune configuration, et rien d autre n en approche.** En dehors de cet ecosysteme, l argument s affaiblit nettement.',
+        content: '**Si votre application repose sur LangChain ou LangGraph, LangSmith la trace sans aucune configuration, ce qui est difficile a egaler dans cet ecosysteme.** En dehors de cet ecosysteme, l argument s affaiblit nettement.',
         rankedItems: [
           {
             rank: 1,
@@ -1966,7 +1966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             tagline: 'Tracage natif sans configuration, 39 $/siege/mois plus des unites facturees a l usage',
             verdict: 'LangSmith vient de l equipe LangChain, et a l interieur de LangChain ou LangGraph le tracage est automatique : vous obtenez une visibilite au niveau des etapes d une execution d agent sans ecrire d instrumentation. En dehors, vous utilisez un wrapper `traceable()` autour des appels aux SDK OpenAI ou Anthropic, ce qui fonctionne mais annule l avantage principal. Les tarifs : un niveau Developer a 0 $ par siege avec jusqu a 5 000 traces de base par mois et un seul siege, Plus a 39 $ par siege et par mois avec jusqu a 10 000 traces de base et un petit deploiement serverless gratuit, et Enterprise sur devis avec des options auto-hebergee et hybride. Au-dela du quota, la facturation passe a l usage : en LangChain Standard Units (LSU), a 1,00 $ par LSU. C est la partie a modeliser avant de s engager, car la facture evolue avec la complexite des agents et le volume de traces, pas avec l effectif.',
             pros: [
-              'Tracage sans configuration dans LangChain et LangGraph, imbattable pour cette pile',
+              'Tracage sans configuration dans LangChain et LangGraph, son principal atout pour cette pile',
               'Outils matures d evaluation et d experimentation pilotes par jeux de donnees',
               'Le niveau Developer gratuit suffit a une personne seule qui prototype',
               'Enterprise propose un deploiement auto-heberge et hybride',
@@ -2429,7 +2429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**A questão estrutural é se você instrumenta seu código ou coloca um proxy à frente, e isso decide o que você consegue enxergar.** Leia de cima para baixo e pare na primeira linha que descreva você.',
         items: [
           '**Você quer flexibilidade e a opção de auto-hospedar depois** → Langfuse. As integrações mais amplas, núcleo auto-hospedado gratuito e o menor custo de troca — mas leia a lista do Enterprise antes de contar com os recursos de governança.',
-          '**Sua stack é LangChain ou LangGraph** → LangSmith. Ali o rastreamento é nativo e sem configuração, algo que nenhuma outra ferramenta iguala nesse ecossistema.',
+          '**Sua stack é LangChain ou LangGraph** → LangSmith. Ali o rastreamento é nativo e sem configuração, algo difícil de igualar nesse ecossistema.',
           '**Você quer observabilidade hoje sem reescrever com SDK** → Helicone. Um proxy significa uma linha de código e dados de custo em cada requisição por padrão.',
           '**Descontrole de custos entre muitas chaves e modelos é o seu problema real** → Helicone. O detalhamento de custo por requisição é o produto central, não uma aba de relatórios acoplada ao rastreamento.',
           '**Você só precisa de versionamento de prompts e registros de requisições** → PromptLayer. Gratuito até 2.500 requisições por mês e honesto ao ser mais estreito que os outros três.',
@@ -2543,7 +2543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       langsmith: {
         id: 'langsmith',
         title: 'LangSmith: a escolha LangChain',
-        content: '**Se sua aplicação é construída sobre LangChain ou LangGraph, o LangSmith a rastreia sem configuração alguma, e nada mais chega perto disso.** Fora desse ecossistema, o argumento enfraquece bastante.',
+        content: '**Se sua aplicação é construída sobre LangChain ou LangGraph, o LangSmith a rastreia sem configuração alguma, algo difícil de igualar nesse ecossistema.** Fora desse ecossistema, o argumento enfraquece bastante.',
         rankedItems: [
           {
             rank: 1,
@@ -2551,7 +2551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             tagline: 'Rastreamento nativo sem configuração, US$ 39/assento/mês mais unidades por consumo',
             verdict: 'O LangSmith vem do time do LangChain, e dentro de LangChain ou LangGraph o rastreamento é automático: você obtém visibilidade em nível de passo de uma execução de agente sem escrever instrumentação. Fora disso, usa-se um wrapper `traceable()` em torno das chamadas aos SDKs da OpenAI ou Anthropic, o que funciona mas elimina a vantagem principal. Os preços: um nível Developer a US$ 0 por assento com até 5.000 traces base por mês e um único assento, Plus a US$ 39 por assento ao mês com até 10 mil traces base e uma implantação serverless pequena gratuita, e Enterprise sob consulta com opções auto-hospedada e híbrida. Acima da cota, a cobrança passa a ser por consumo: em LangChain Standard Units (LSU), a US$ 1,00 por LSU. Essa é a parte a modelar antes de se comprometer, porque a fatura escala com a complexidade dos agentes e o volume de traces, não com o número de pessoas.',
             pros: [
-              'Rastreamento sem configuração dentro de LangChain e LangGraph, imbatível para essa stack',
+              'Rastreamento sem configuração dentro de LangChain e LangGraph, sua principal vantagem nessa stack',
               'Ferramentas maduras de avaliação e experimentação orientadas por conjuntos de dados',
               'O nível Developer gratuito basta para uma pessoa sozinha prototipando',
               'O Enterprise oferece implantação auto-hospedada e híbrida',
@@ -3014,7 +3014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**構造上の問いは、自分のコードを計装するのか、手前にプロキシを置くのかであり、それが何を見られるかを決めます。** 上から読み、自分に当てはまる最初の行で止めてください。',
         items: [
           '**柔軟性と、あとから自己ホストする選択肢がほしい** → Langfuse。連携が最も広く、自己ホストのコアが無料で、乗り換えコストも最小です。ただしガバナンス機能を前提にする前にEnterpriseの一覧を読んでください。',
-          '**スタックがLangChainまたはLangGraph** → LangSmith。そこではトレーシングがネイティブかつ設定不要で、このエコシステムで並ぶものはありません。',
+          '**スタックがLangChainまたはLangGraph** → LangSmith。そこではトレーシングがネイティブかつ設定不要で、このエコシステム内では他に並びにくい強みです。',
           '**SDKの書き換えなしで今日オブザーバビリティがほしい** → Helicone。プロキシなのでコードは1行で、既定ですべてのリクエストにコストデータが付きます。',
           '**多数のキーとモデルにまたがるコストの膨張が本当の課題** → Helicone。リクエスト単位のコスト内訳が中核の製品であり、トレーシングに後付けしたレポート画面ではありません。',
           '**必要なのはプロンプトのバージョン管理とリクエストログだけ** → PromptLayer。月2,500リクエストまで無料で、他の3つより狭い範囲であることを率直に示しています。',
@@ -3128,7 +3128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       langsmith: {
         id: 'langsmith',
         title: 'LangSmith：LangChain向けの選択肢',
-        content: '**アプリケーションがLangChainやLangGraphの上に構築されているなら、LangSmithは設定なしでトレースします。この点で並ぶものはありません。** そのエコシステムの外では、利点はかなり弱まります。',
+        content: '**アプリケーションがLangChainやLangGraphの上に構築されているなら、LangSmithは設定なしでトレースします。この点はそのエコシステム内では他に並びにくい強みです。** そのエコシステムの外では、利点はかなり弱まります。',
         rankedItems: [
           {
             rank: 1,
@@ -3136,7 +3136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             tagline: '設定不要のネイティブトレーシング、1席あたり月39ドルと従量ユニット',
             verdict: 'LangSmithはLangChainチームによる製品で、LangChainやLangGraphの内側ではトレーシングが自動で働きます。計装を書かずに、エージェント実行のステップ単位の可視性が得られます。その外では、OpenAIやAnthropicのSDK呼び出しを`traceable()`でラップする形になり、動きはしますが主要な利点は失われます。料金は、Developerが1席0ドルで月5,000件までの基本トレースと1席のみ、Plusが1席あたり月39ドルで基本トレース1万件までと小規模なサーバーレス構成を1つ無料で含み、Enterpriseは個別見積もりで自己ホストとハイブリッドの選択肢があります。上限を超えると従量課金となり、LangChain Standard Unit（LSU）単位で、1 LSUは1.00ドルです。決める前に見積もるべきはここで、請求額は人数ではなくエージェントの複雑さとトレース量に比例して伸びます。',
             pros: [
-              'LangChainとLangGraphの内側では設定不要でトレースでき、このスタックでは無敵',
+              'LangChainとLangGraphの内側では設定不要でトレースでき、このスタックでの主な強み',
               'データセット駆動の評価と実験の機能が成熟している',
               '無料のDeveloper枠は1人で試作する範囲なら十分',
               'Enterpriseでは自己ホストとハイブリッドの構成が選べる',
@@ -3599,7 +3599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**结构性的问题是：你要给自己的代码插桩，还是在前面加一个代理——这决定了你能看到什么。** 从上往下读，停在第一条符合你情况的。',
         items: [
           '**你想要灵活性，并保留日后自托管的可能** → Langfuse。集成最广、自托管内核免费、迁移成本最低——但在把治理功能视为理所当然之前，先读一遍 Enterprise 清单。',
-          '**你的技术栈是 LangChain 或 LangGraph** → LangSmith。那里的追踪是原生且免配置的，这一生态里没有别的工具能比。',
+          '**你的技术栈是 LangChain 或 LangGraph** → LangSmith。那里的追踪是原生且免配置的，这一点在这一生态内很难被超越。',
           '**你想今天就有可观测性，且不想改 SDK** → Helicone。代理意味着一行代码，并默认在每次请求上带出成本数据。',
           '**跨多个密钥与模型的成本失控才是你的真问题** → Helicone。按请求拆解成本是它的核心产品，而不是挂在追踪之上的报表标签页。',
           '**你只需要提示词版本管理与请求日志** → PromptLayer。每月 2500 次请求内免费，并且坦率承认自己比另外三者窄。',
@@ -3713,7 +3713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       langsmith: {
         id: 'langsmith',
         title: 'LangSmith：LangChain 之选',
-        content: '**如果你的应用建立在 LangChain 或 LangGraph 之上，LangSmith 无需任何配置即可完成追踪，这一点没有别的工具能接近。** 出了这个生态，说服力就明显减弱。',
+        content: '**如果你的应用建立在 LangChain 或 LangGraph 之上，LangSmith 无需任何配置即可完成追踪，这一点在这一生态内很难被超越。** 出了这个生态，说服力就明显减弱。',
         rankedItems: [
           {
             rank: 1,
@@ -3721,7 +3721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             tagline: '无需配置的原生追踪，每席位每月 39 美元加按量计费的单元',
             verdict: 'LangSmith 出自 LangChain 团队，在 LangChain 或 LangGraph 内部追踪是自动的：不用写插桩就能获得智能体运行的步骤级可见性。在生态之外，你要用 `traceable()` 包装 OpenAI 或 Anthropic 的 SDK 调用，能跑，但主要优势也就没了。价格方面：Developer 层每席位 0 美元，每月最多 5000 条基础追踪且仅 1 个席位；Plus 每席位每月 39 美元，含最多 1 万条基础追踪与一个免费的小型无服务器部署；Enterprise 为定制报价，提供自托管与混合部署。超出额度后转为按量计费：按 LangChain Standard Unit（LSU）计，1 LSU = 1.00 美元。这正是签约前该测算的部分，因为账单随智能体复杂度与追踪量增长，而不是随人数。',
             pros: [
-              '在 LangChain 与 LangGraph 内部免配置追踪，这一栈无可匹敌',
+              '在 LangChain 与 LangGraph 内部免配置追踪，是该技术栈的主要优势',
               '数据集驱动的评估与实验工具成熟',
               '免费的 Developer 层足够一个人做原型',
               'Enterprise 提供自托管与混合部署',
@@ -4184,7 +4184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**السؤال البنيوي هو: هل تجهّز شيفرتك أم تضع وكيلًا أمامها؟ وهذا ما يحدد ما يمكنك رؤيته.** اقرأ من أعلى وتوقّف عند أول سطر ينطبق عليك.',
         items: [
           '**تريد المرونة وإمكانية الاستضافة الذاتية لاحقًا** ← Langfuse. أوسع التكاملات، ونواة مجانية للاستضافة الذاتية، وأقل كلفة للانتقال — لكن اقرأ قائمة Enterprise قبل أن تفترض توفّر ميزات الحوكمة.',
-          '**منظومتك هي LangChain أو LangGraph** ← LangSmith. التتبّع هناك أصلي وبلا إعداد، ولا تضاهيه أداة أخرى في هذه المنظومة.',
+          '**منظومتك هي LangChain أو LangGraph** ← LangSmith. التتبّع هناك أصلي وبلا إعداد، وهذا يصعب مجاراته داخل هذه المنظومة.',
           '**تريد مراقبة اليوم دون إعادة كتابة بحزمة تطوير** ← Helicone. الوكيل يعني سطرًا واحدًا وبيانات تكلفة مع كل طلب افتراضيًا.',
           '**تضخّم التكاليف عبر مفاتيح ونماذج كثيرة هو مشكلتك الحقيقية** ← Helicone. تفصيل التكلفة لكل طلب هو المنتج الأساسي، لا تبويب تقارير ملحقًا بالتتبّع.',
           '**كل ما تحتاجه هو إدارة إصدارات المطالبات وسجلات الطلبات** ← PromptLayer. مجاني حتى 2500 طلب شهريًا، وصريح في كونه أضيق من الثلاثة الأخرى.',
@@ -4298,7 +4298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       langsmith: {
         id: 'langsmith',
         title: '‏LangSmith: خيار LangChain',
-        content: '**إن كان تطبيقك مبنيًا على LangChain أو LangGraph، فإن LangSmith يتتبّعه دون أي إعداد، ولا شيء يقترب منه في ذلك.** أما خارج هذه المنظومة فالحجة تضعف كثيرًا.',
+        content: '**إن كان تطبيقك مبنيًا على LangChain أو LangGraph، فإن LangSmith يتتبّعه دون أي إعداد، وهذا يصعب مجاراته داخل هذه المنظومة.** أما خارج هذه المنظومة فالحجة تضعف كثيرًا.',
         rankedItems: [
           {
             rank: 1,
@@ -4306,7 +4306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             tagline: 'تتبّع أصلي بلا إعداد، 39 دولارًا للمقعد شهريًا زائد وحدات بالاستهلاك',
             verdict: 'صدر LangSmith عن فريق LangChain، وداخل LangChain أو LangGraph يعمل التتبّع تلقائيًا: تحصل على رؤية على مستوى الخطوة داخل تشغيلة وكيل دون كتابة أي تجهيز. وخارج ذلك تستخدم غلاف `traceable()` حول نداءات حزمتَي OpenAI أو Anthropic، وهو يعمل لكنه يلغي الميزة الأساسية. أما الأسعار فهي: مستوى Developer بصفر دولار للمقعد بحد أقصى 5000 تتبّع أساسي شهريًا ومقعد واحد فقط، وPlus بـ 39 دولارًا للمقعد شهريًا بحد أقصى 10 آلاف تتبّع أساسي مع نشر صغير بلا خوادم مجانًا، وEnterprise بسعر مخصص مع خيارات للاستضافة الذاتية والهجينة. وفوق الحصة تتحول الفوترة إلى الاستهلاك: بوحدات LangChain Standard Units (LSU)، بواقع 1.00 دولار لكل وحدة. وهذا بالضبط ما ينبغي حسابه قبل الالتزام، لأن الفاتورة تكبر مع تعقيد الوكلاء وحجم التتبّعات لا مع عدد الأشخاص.',
             pros: [
-              'تتبّع بلا إعداد داخل LangChain وLangGraph، ولا يُبارى في هذه المنظومة',
+              'تتبّع بلا إعداد داخل LangChain وLangGraph، وهي ميزته الرئيسية في هذه المنظومة',
               'أدوات ناضجة للتقييم والتجريب مبنية على مجموعات البيانات',
               'مستوى Developer المجاني يكفي شخصًا واحدًا يبني نموذجًا أوليًا',
               'يوفّر Enterprise نشرًا ذاتيًا وهجينًا',
@@ -4769,7 +4769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**구조적인 질문은 내 코드를 계측할 것인가, 앞에 프록시를 둘 것인가이며, 이것이 무엇을 볼 수 있는지를 결정합니다.** 위에서부터 읽다가 자신에게 해당하는 첫 줄에서 멈추세요.',
         items: [
           '**유연성과 나중에 자체 호스팅할 여지를 원한다** → Langfuse. 가장 넓은 연동, 무료 자체 호스팅 코어, 가장 낮은 전환 비용입니다. 다만 거버넌스 기능을 당연하게 여기기 전에 Enterprise 목록을 읽어보세요.',
-          '**스택이 LangChain 또는 LangGraph다** → LangSmith. 그곳에서는 트레이싱이 네이티브이고 설정이 필요 없으며, 이 생태계에서 이를 따라올 도구는 없습니다.',
+          '**스택이 LangChain 또는 LangGraph다** → LangSmith. 그곳에서는 트레이싱이 네이티브이고 설정이 필요 없으며, 이 생태계 안에서는 이 점을 따라잡기 어렵습니다.',
           '**SDK를 고치지 않고 오늘 당장 옵저버빌리티가 필요하다** → Helicone. 프록시라서 코드 한 줄이면 되고, 기본적으로 모든 요청에 비용 데이터가 붙습니다.',
           '**여러 키와 모델에 걸친 비용 증가가 진짜 문제다** → Helicone. 요청 단위 비용 분해가 핵심 제품이지, 트레이싱에 덧붙인 리포트 탭이 아닙니다.',
           '**필요한 것은 프롬프트 버전 관리와 요청 로그뿐이다** → PromptLayer. 월 2,500요청까지 무료이며, 다른 셋보다 범위가 좁다는 점을 솔직하게 밝히고 있습니다.',
@@ -4883,7 +4883,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       langsmith: {
         id: 'langsmith',
         title: 'LangSmith: LangChain을 위한 선택',
-        content: '**애플리케이션이 LangChain이나 LangGraph 위에 있다면 LangSmith는 아무 설정 없이 트레이싱합니다. 이 점에서는 견줄 상대가 없습니다.** 그 생태계 밖으로 나가면 설득력이 상당히 약해집니다.',
+        content: '**애플리케이션이 LangChain이나 LangGraph 위에 있다면 LangSmith는 아무 설정 없이 트레이싱합니다. 이 점은 그 생태계 안에서 따라잡기 어렵습니다.** 그 생태계 밖으로 나가면 설득력이 상당히 약해집니다.',
         rankedItems: [
           {
             rank: 1,
@@ -4891,7 +4891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             tagline: '설정 없는 네이티브 트레이싱, 좌석당 월 39달러에 사용량 단위 추가',
             verdict: 'LangSmith는 LangChain 팀이 만든 제품으로, LangChain이나 LangGraph 안에서는 트레이싱이 자동으로 동작합니다. 계측을 쓰지 않아도 에이전트 실행의 단계 단위 가시성을 얻습니다. 그 밖에서는 OpenAI나 Anthropic SDK 호출을 `traceable()`로 감싸는데, 동작은 하지만 핵심 이점은 사라집니다. 가격은 Developer 등급이 좌석당 0달러로 월 최대 5,000건의 기본 트레이스와 좌석 1개, Plus가 좌석당 월 39달러로 기본 트레이스 1만 건까지와 소규모 서버리스 배포 1개 무료, Enterprise는 맞춤 견적으로 자체 호스팅과 하이브리드를 제공합니다. 한도를 넘으면 사용량 과금으로 전환되어 LangChain Standard Unit(LSU) 단위이며 1 LSU는 1.00달러입니다. 계약 전에 계산해야 할 부분이 바로 이것으로, 청구액은 인원수가 아니라 에이전트 복잡도와 트레이스 양에 따라 늘어납니다.',
             pros: [
-              'LangChain과 LangGraph 안에서는 설정 없이 트레이싱되며, 이 스택에서는 대적할 상대가 없음',
+              'LangChain과 LangGraph 안에서는 설정 없이 트레이싱되며, 이 스택에서의 주된 강점',
               '데이터셋 기반 평가·실험 도구가 성숙함',
               '무료 Developer 등급은 혼자 프로토타입을 만드는 데 충분함',
               'Enterprise에서 자체 호스팅과 하이브리드 배포를 제공',
