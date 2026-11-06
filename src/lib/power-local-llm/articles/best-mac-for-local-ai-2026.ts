@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     next_seo_review_due: '2026-11-17',
@@ -425,7 +425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-needs',
         title: 'How Much Unified Memory Do You Need?',
         content:
-          '**At Q4_K_M quantization a model needs roughly 0.6 GB of unified memory per billion parameters, plus 2-4 GB for context and tooling — and on a Mac that memory is also shared with macOS itself.** Leave headroom for the operating system: a 16 GB Mac is not a 16 GB model budget.',
+          '**At Q4_K_M quantization a model needs roughly 0.6 GB of unified memory per billion parameters, plus 2-4 GB for context and tooling — and on a Mac that memory is also shared with macOS itself.** Always plan at least 8 GB of unified memory for macOS: a 16 GB Mac leaves about 8 GB for the model, a 32 GB Mac about 24 GB.',
         items: [
           '**8B models — 8-9 GB:** fit any Mac with 16 GB or more, including the Mac Mini M6. A 32 GB Mac leaves comfortable headroom.',
           '**13-14B models — 11-13 GB:** need 32 GB once macOS and context overhead are counted. Mac Mini M6 (32 GB) and up.',
@@ -598,7 +598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-17',
     theme: 'Overview & Reference',
     title: 'El mejor Mac para IA local 2026: Mac Mini vs Mac Studio vs MacBook Pro',
@@ -1000,7 +1000,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-needs',
         title: '¿Cuánta memoria unificada necesitas?',
         content:
-          '**Con cuantización Q4_K_M un modelo necesita aproximadamente 0.6 GB de memoria unificada por cada mil millones de parámetros, más 2-4 GB para contexto y herramientas — y en un Mac esa memoria también se comparte con el propio macOS.** Deja margen para el sistema operativo: un Mac de 16 GB no es un presupuesto de modelo de 16 GB.',
+          '**Con cuantización Q4_K_M un modelo necesita aproximadamente 0.6 GB de memoria unificada por cada mil millones de parámetros, más 2-4 GB para contexto y herramientas — y en un Mac esa memoria también se comparte con el propio macOS.** Reserva siempre al menos 8 GB de memoria unificada para macOS: un Mac de 16 GB deja unos 8 GB para el modelo y uno de 32 GB, unos 24 GB.',
         items: [
           '**Modelos 8B — 8-9 GB:** caben en cualquier Mac con 16 GB o más, incluido el Mac Mini M6. Un Mac de 32 GB deja un margen cómodo.',
           '**Modelos 13-14B — 11-13 GB:** necesitan 32 GB una vez contados macOS y el overhead de contexto. Mac Mini M6 (32 GB) en adelante.',
@@ -1175,7 +1175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/best-mac-for-local-ai-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1185,7 +1185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     next_seo_review_due: '2026-11-17',
@@ -1590,7 +1590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-needs',
         title: 'Wie viel Unified Memory brauchen Sie?',
         content:
-          '**Bei Q4_K_M-Quantisierung braucht ein Modell rund 0,6 GB Unified Memory pro Milliarde Parameter, plus 2-4 GB für Kontext und Tooling — und auf einem Mac teilt sich dieser Speicher zusätzlich mit macOS selbst.** Lassen Sie dem Betriebssystem Reserve: Ein Mac mit 16 GB ist kein Modellbudget von 16 GB.',
+          '**Bei Q4_K_M-Quantisierung braucht ein Modell rund 0,6 GB Unified Memory pro Milliarde Parameter, plus 2-4 GB für Kontext und Tooling — und auf einem Mac teilt sich dieser Speicher zusätzlich mit macOS selbst.** Planen Sie immer mindestens 8 GB Unified Memory für macOS ein: Ein Mac mit 16 GB lässt etwa 8 GB für das Modell, ein Mac mit 32 GB etwa 24 GB.',
         items: [
           '**8B-Modelle — 8-9 GB:** passen in jeden Mac mit 16 GB oder mehr, einschließlich dem Mac Mini M6. Ein Mac mit 32 GB lässt komfortable Reserve.',
           '**13-14B-Modelle — 11-13 GB:** brauchen 32 GB, sobald macOS und der Kontext-Overhead mitgezählt werden. Mac Mini M6 (32 GB) und mehr.',
@@ -1770,7 +1770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     next_seo_review_due: '2026-11-17',
@@ -2175,7 +2175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-needs',
         title: 'Combien de mémoire unifiée vous faut-il ?',
         content:
-          '**En quantification Q4_K_M, un modèle a besoin d\'environ 0,6 Go de mémoire unifiée par milliard de paramètres, plus 2-4 Go pour le contexte et l\'outillage — et sur un Mac cette mémoire est aussi partagée avec macOS lui-même.** Laissez de la marge au système d\'exploitation : un Mac de 16 Go n\'est pas un budget modèle de 16 Go.',
+          '**En quantification Q4_K_M, un modèle a besoin d\'environ 0,6 Go de mémoire unifiée par milliard de paramètres, plus 2-4 Go pour le contexte et l\'outillage — et sur un Mac cette mémoire est aussi partagée avec macOS lui-même.** Prévoyez toujours au moins 8 Go de mémoire unifiée pour macOS : un Mac de 16 Go laisse environ 8 Go au modèle, un Mac de 32 Go environ 24 Go.',
         items: [
           '**Modèles 8B — 8-9 Go :** tiennent sur tout Mac doté de 16 Go ou plus, y compris le Mac mini M6. Un Mac de 32 Go laisse une marge confortable.',
           '**Modèles 13-14B — 11-13 Go :** nécessitent 32 Go une fois macOS et la surcharge de contexte comptés. Mac mini M6 (32 Go) et au-delà.',
@@ -2347,7 +2347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     next_seo_review_due: '2026-11-17',
@@ -2752,7 +2752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-needs',
         title: 'unified memoryはどれくらい必要か？',
         content:
-          '**Q4_K_M量子化では、モデルはパラメータ10億あたり約0.6GBのunified memoryに加え、コンテキストとツール用に2-4GBを必要とします——そしてMacではそのメモリはmacOS自体とも共有されます。** OS用に余裕を残してください：16GBのMacは16GBのモデル予算ではありません。',
+          '**Q4_K_M量子化では、モデルはパラメータ10億あたり約0.6GBのunified memoryに加え、コンテキストとツール用に2-4GBを必要とします——そしてMacではそのメモリはmacOS自体とも共有されます。** macOS用に常に最低8GBのユニファイドメモリを見込んでください：16GBのMacでモデルに使えるのは約8GB、32GBのMacでは約24GBです。',
         items: [
           '**8Bモデル——8-9GB：** 16GB以上のあらゆるMacに収まります（Mac mini M6を含む）。32GBのMacなら快適な余裕が残ります。',
           '**13-14Bモデル——11-13GB：** macOSとコンテキストのオーバーヘッドを数えると32GBが必要です。Mac mini M6（32GB）以上。',
@@ -2924,7 +2924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     next_seo_review_due: '2026-11-17',
@@ -3329,7 +3329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-needs',
         title: '你需要多少统一内存？',
         content:
-          '**在 Q4_K_M 量化下，一个模型每十亿参数大约需要 0.6 GB 统一内存，再加上 2-4 GB 用于上下文和工具链——而在 Mac 上，这块内存还要与 macOS 本身共用。** 给操作系统留出余量：一台 16 GB 的 Mac 并不等于 16 GB 的模型预算。',
+          '**在 Q4_K_M 量化下，一个模型每十亿参数大约需要 0.6 GB 统一内存，再加上 2-4 GB 用于上下文和工具链——而在 Mac 上，这块内存还要与 macOS 本身共用。** 请始终为 macOS 至少预留 8 GB 统一内存：16 GB 的 Mac 留给模型约 8 GB，32 GB 的 Mac 约 24 GB。',
         items: [
           '**8B 模型——8-9 GB：** 适用于任何 16 GB 或以上的 Mac，包括 Mac mini M6。32 GB 的 Mac 留有宽裕余量。',
           '**13-14B 模型——11-13 GB：** 计入 macOS 和上下文开销后需要 32 GB。Mac mini M6（32 GB）及以上。',
@@ -3501,7 +3501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     next_seo_review_due: '2026-11-17',
@@ -3906,7 +3906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-needs',
         title: 'Quanta memória unificada você precisa?',
         content:
-          '**Com quantização Q4_K_M um modelo precisa de aproximadamente 0.6 GB de memória unificada por bilhão de parâmetros, mais 2-4 GB para contexto e ferramentas — e em um Mac essa memória também é compartilhada com o próprio macOS.** Deixe margem para o sistema operacional: um Mac de 16 GB não é um orçamento de modelo de 16 GB.',
+          '**Com quantização Q4_K_M um modelo precisa de aproximadamente 0.6 GB de memória unificada por bilhão de parâmetros, mais 2-4 GB para contexto e ferramentas — e em um Mac essa memória também é compartilhada com o próprio macOS.** Reserve sempre pelo menos 8 GB de memória unificada para o macOS: um Mac de 16 GB deixa cerca de 8 GB para o modelo e um de 32 GB, cerca de 24 GB.',
         items: [
           '**Modelos 8B — 8-9 GB:** cabem em qualquer Mac com 16 GB ou mais, incluindo o Mac Mini M6. Um Mac de 32 GB deixa uma margem confortável.',
           '**Modelos 13-14B — 11-13 GB:** precisam de 32 GB depois de contados o macOS e o overhead de contexto. Mac Mini M6 (32 GB) em diante.',
@@ -4081,7 +4081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-mac-for-local-ai-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -4092,7 +4092,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     next_seo_review_due: '2026-11-17',
@@ -4497,7 +4497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-needs',
         title: 'كم ذاكرة موحّدة تحتاج؟',
         content:
-          '**مع تكميم Q4_K_M، يحتاج النموذج حوالي 0.6 GB ذاكرة موحّدة لكل مليار معامل، بالإضافة إلى 2-4 GB للسياق والأدوات — وعلى Mac تُشارَك هذه الذاكرة أيضاً مع نظام macOS نفسه.** اترك هامشاً لنظام التشغيل: Mac بذاكرة 16 GB ليس ميزانية نموذج بـ16 GB.',
+          '**مع تكميم Q4_K_M، يحتاج النموذج حوالي 0.6 GB ذاكرة موحّدة لكل مليار معامل، بالإضافة إلى 2-4 GB للسياق والأدوات — وعلى Mac تُشارَك هذه الذاكرة أيضاً مع نظام macOS نفسه.** خصّص دائماً 8 GB على الأقل من الذاكرة الموحّدة لنظام macOS: يترك Mac بذاكرة 16 GB نحو 8 GB للنموذج، و32 GB نحو 24 GB.',
         items: [
           '**نماذج 8B — 8-9 GB:** تتسع في أي Mac بذاكرة 16 GB أو أكثر، بما في ذلك Mac Mini M6. Mac بذاكرة 32 GB يترك هامشاً مريحاً.',
           '**نماذج 13-14B — 11-13 GB:** تحتاج 32 GB بعد احتساب macOS وعبء السياق. Mac Mini M6 (بذاكرة 32 GB) فما فوق.',
@@ -4672,7 +4672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-mac-for-local-ai-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-22',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -4682,7 +4682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     next_seo_review_due: '2026-11-17',
@@ -5087,7 +5087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-needs',
         title: '필요한 통합 메모리 용량',
         content:
-          '**Q4_K_M 양자화에서 모델은 10억 파라미터당 약 0.6GB의 통합 메모리가 필요하며, 컨텍스트 및 도구용으로 2-4GB가 추가됩니다. Mac에서는 해당 메모리를 macOS와 공유합니다.** 운영 체제에 여유를 남겨두십시오. 16GB Mac은 16GB 모델 예산이 아닙니다.',
+          '**Q4_K_M 양자화에서 모델은 10억 파라미터당 약 0.6GB의 통합 메모리가 필요하며, 컨텍스트 및 도구용으로 2-4GB가 추가됩니다. Mac에서는 해당 메모리를 macOS와 공유합니다.** macOS용으로 항상 최소 8GB의 통합 메모리를 확보하십시오. 16GB Mac은 모델에 약 8GB, 32GB Mac은 약 24GB를 남깁니다.',
         items: [
           '**8B 모델 — 8-9GB:** Mac Mini M6를 포함해 16GB 이상의 모든 Mac에서 실행 가능합니다. 32GB Mac은 충분한 여유를 제공합니다.',
           '**13-14B 모델 — 11-13GB:** macOS 및 컨텍스트 오버헤드를 포함하면 32GB가 필요합니다. Mac Mini M6(32GB)부터.',
@@ -5262,7 +5262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-mac-for-local-ai-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-22',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',

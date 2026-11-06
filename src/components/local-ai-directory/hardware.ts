@@ -7,6 +7,7 @@ import type { EngineKey, OSKey, ToolRecordHardware } from '@/lib/power-local-llm
 import type { InterfaceKey } from '@/lib/power-local-llm/apps/categories'
 import type { Language } from '@/lib/blog/blogContent'
 import { t } from './directory-i18n'
+import { MAC_OS_RESERVE_GB, macUsableGb } from '@/lib/vram'
 
 /**
  * The two facts needed to tell whether a tool is available on the viewer's
@@ -187,14 +188,14 @@ function derivedFromEngine(engine: EngineKey | 'TODO' | undefined, lang: Languag
 
 /**
  * Apple Silicon uses unified memory, so a VRAM requirement is converted to an
- * approximate unified-memory floor: unifiedMin = max(ramGb, ceil(vramGb / 0.7))
- * — the 0.7 accounts for macOS + other apps reserving ~30% of unified memory,
- * per the plan's HardwareBlock spec. Shared by computeHardwareDisplay,
+ * approximate unified-memory floor: unifiedMin = max(ramGb, ceil(vramGb) + 8)
+ * — macOS needs a flat 8 GB of unified memory (owner rule 2026-11-06, see
+ * MAC_OS_RESERVE_GB). Shared by computeHardwareDisplay,
  * hardwareSortValue and computeCompatibilityVerdict so the conversion math
  * only lives in one place.
  */
 export function unifiedMemoryFloor(ramGb: number | null | undefined, vramGb: number | null | undefined): number {
-  const vramFloor = vramGb != null ? Math.ceil(vramGb / 0.7) : 0
+  const vramFloor = vramGb != null ? Math.ceil(vramGb) + MAC_OS_RESERVE_GB : 0
   return Math.max(ramGb ?? 0, vramFloor)
 }
 
@@ -208,15 +209,15 @@ const MODEL_FIT_CONTEXT_OVERHEAD_GB = 2
 
 /**
  * How much of the viewer's saved memory figure is actually available for
- * model weights, once OS/runtime overhead is accounted for. Apple's 0.7
- * factor matches unifiedMemoryFloor's own macOS-overhead assumption above;
+ * model weights, once OS/runtime overhead is accounted for. Apple deducts
+ * the flat 8 GB macOS reserve (same as unifiedMemoryFloor above);
  * discrete GPU VRAM is already dedicated so it gets the least deduction;
  * CPU/mobile RAM is shared with the OS and other apps so it gets the most.
  */
 function usableMemoryGb(profile: HardwareProfile): number {
   switch (profile.machine) {
     case 'apple':
-      return profile.unifiedGb * 0.7
+      return macUsableGb(profile.unifiedGb)
     case 'dgpu':
       return profile.vramGb * 0.9
     case 'cpu':

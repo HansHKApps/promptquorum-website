@@ -7,7 +7,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Hardware Setups',
     title: 'Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared',
-    dateModified: '2026-11-03',
+    dateModified: '2026-11-06',
     seoTitle: 'M5 Memory Bandwidth 2026: Pro vs Max vs Ultra for LLMs',
     metaDescription: 'M5 memory bandwidth: Pro 307 GB/s, Max 460 or 614 GB/s, Ultra 1.2 TB/s. What each chip means for LLM tokens/sec, plus Mac mini vs Studio vs MacBook Pro.',
     heroImage: '/images/apple-silicon-m5-local-llm-config-comparison-hero-en.webp',
@@ -180,7 +180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'All M5 Pro/Max configs: 307–614 GB/s memory bandwidth (RTX 4090 at 1,008 GB/s but limited to 24GB VRAM). M5 Ultra reaches up to 1.2 TB/s.',
           'Quiet operation: MacBook Pro fans become audible during sustained inference; Mac Studio and Mac mini fans rarely spin up under typical local LLM loads.',
           'MLX is typically the fastest runtime on Apple Silicon. Ollama added an MLX backend in March 2026 (preview, Ollama 0.19, initially for select models on Macs with more than 32GB); other models still run on llama.cpp\'s Metal backend.',
-          'Unified memory: 24GB (Mac mini M5 Pro base) up to 512GB (Mac Studio M5 Ultra) available for any model. No separate VRAM cap like discrete GPUs.',
+          'Unified memory: 24GB (Mac mini M5 Pro base) up to 512GB (Mac Studio M5 Ultra) of total memory, shared with macOS (deduct about 8GB for the OS). No separate VRAM cap like discrete GPUs.',
         ],
       },
       'update-block': {
@@ -194,7 +194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Unified memory architecture:** M5 Pro and M5 Max share a single fast memory pool (24GB up to 128GB) accessible by CPU, GPU, and Neural Engine simultaneously. No VRAM/RAM bottleneck. Models stay in fast memory, inference stays responsive.',
           '**Memory bandwidth as the true bottleneck:** LLM generation is memory-bound, not compute-bound — every generated token reads the model weights once. M5 Max at 460–614 GB/s trails the RTX 4090\'s 1,008 GB/s on small models, but it holds up to 128GB against 24GB, so it runs models a 4090 cannot fit. M5 Ultra\'s up to 1.2 TB/s passes the 4090 while holding up to 512GB.',
-          '**"VRAM" on a Mac is unified memory:** there is no separate VRAM pool. The GPU draws from the same memory as macOS, and by default macOS lets the GPU wire roughly two-thirds to three-quarters of total RAM (the share varies with RAM size). On a 64GB Mac, plan for about 48GB of model plus context; the limit can be raised with `sudo sysctl iogpu.wired_limit_mb=<MB>` (resets on reboot). Raising it too far can make macOS unstable or freeze it if too little memory is left for the system, so leave headroom.',
+          '**"VRAM" on a Mac is unified memory:** there is no separate VRAM pool. The GPU draws from the same memory as macOS, and by default macOS lets the GPU wire roughly two-thirds to three-quarters of total RAM (the share varies with RAM size). On a 64GB Mac, plan for about 48GB of model plus context (macOS itself needs at least 8GB, so never count on more than 56GB); the limit can be raised with `sudo sysctl iogpu.wired_limit_mb=<MB>` (resets on reboot). Raising it too far can make macOS unstable or freeze it if too little memory is left for the system, so leave headroom.',
           '**Apple Fusion Architecture (new in M5):** M5 Pro and M5 Max separate CPU and GPU into distinct 3nm dies on a single package, enabling independent scaling and thermal optimization. This modular design improves power efficiency and reduces waste heat compared to monolithic chip designs.',
           '**Neural Accelerator in every GPU core:** Each GPU core includes a dedicated neural accelerator for AI workloads, complementing the shared Neural Engine. Runtimes that use them, such as MLX and Ollama\'s MLX backend, process prompts faster on M5-family chips.',
           '**Generational gain vs M4:** Apple claims up to 30% faster multithreaded CPU performance over M4 Pro and M4 Max. For LLM generation the relevant gain is bandwidth: M5 Pro 307 GB/s vs M4 Pro 273 GB/s (+12%), and 614 GB/s vs 546 GB/s on the top M5 Max vs M4 Max (+12%). Prompt processing gains are larger because of the per-core neural accelerators.',
@@ -270,7 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Reading the table:** values are theoretical ceilings in tokens/sec. Multiply by 0.6–0.8 for a realistic range — for Llama 3.3 70B Q4 on a 614 GB/s M5 Max that is roughly 9–12 tokens/sec.',
           '**Independent check:** [MacStories](https://www.macstories.net/stories/m5-ultra-mac-studio-review-the-dream-mac-for-local-ai-agents/) measured 48 tokens/sec generating with Qwen3.8 27B on an M5 Ultra Mac Studio (6,091-token prompt), against 59 tokens/sec on an RTX 5090 (1.79 TB/s bandwidth). Actual speed tracked bandwidth rather than core count.',
-          '**Sizing rule:** the model file plus KV cache must fit in roughly two-thirds to three-quarters of unified memory, so a 70B Q4 model (~42.5GB) wants a 64GB machine; Q5 and Q8 variants want 128GB.',
+          '**Sizing rule:** the model file plus KV cache must fit in roughly two-thirds to three-quarters of unified memory (and never more than total minus 8GB for macOS), so a 70B Q4 model (~42.5GB) wants a 64GB machine; Q5 and Q8 variants want 128GB.',
         ],
       },
       'mac-mini-m5-pro': {
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Same silicon as MacBook Pro: identical 460 GB/s bandwidth at the 32-core GPU tier — no form-factor penalty.',
         ],
         weaknesses: [
-          '36GB caps you around 14B–32B models comfortably; 70B Q4 (~42.5GB) does not fit.',
+          '36GB (about 28GB usable after macOS) fits models of roughly 14B–32B; 70B Q4 (~42.5GB) does not fit.',
           'Estimates, not measurements: no independent benchmark for this exact configuration was available at the time of this update.',
           'Storage upgrade expensive: 512GB base, expanding to 2TB carries a real premium.',
         ],
@@ -471,7 +471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Apple Silicon M5 vs PC Workstation for Local LLM',
         content: 'Apple Silicon and NVIDIA are different philosophies. Here is the honest comparison.',
         items: [
-          '## Mac Studio M5 Max/Ultra Wins For:\n• Unified memory: up to 128GB (M5 Max) or 512GB (M5 Ultra) available for any model, no VRAM cap\n• Power efficiency: roughly 100W vs 600W+ for an equivalent PC (a rough estimate, not a PromptQuorum measurement)\n• Quiet operation: fans rarely audible under typical loads\n• macOS ecosystem: MLX, Metal, Core ML integration\n• Total cost of ownership: lower electricity over 3 years\n• Models above 32GB: an RTX 5090 tops out at 32GB of VRAM',
+          '## Mac Studio M5 Max/Ultra Wins For:\n• Unified memory: up to 128GB (M5 Max) or 512GB (M5 Ultra) of total memory (minus about 8GB for macOS) usable for any model, no VRAM cap\n• Power efficiency: roughly 100W vs 600W+ for an equivalent PC (a rough estimate, not a PromptQuorum measurement)\n• Quiet operation: fans rarely audible under typical loads\n• macOS ecosystem: MLX, Metal, Core ML integration\n• Total cost of ownership: lower electricity over 3 years\n• Models above 32GB: an RTX 5090 tops out at 32GB of VRAM',
           '## PC Workstation (RTX 4090/5090) Wins For:\n• Raw speed on models that fit in VRAM: MacStories measured an RTX 5090 at 59 tokens/sec vs 48 on M5 Ultra for Qwen3.8 27B, and about 1.8× faster prompt reading (3,031 vs 1,701 tokens/sec)\n• CUDA ecosystem breadth: more models, tools, research code\n• Fine-tuning: PyTorch + CUDA dominates over MLX\n• Upgrade flexibility: swap GPUs, add more VRAM\n• Price at lower tiers: budget RTX 4070 Ti ($800–1,200; approximate street prices, vary by market and date) beats M5 Pro on small-model speed\n• Non-LLM AI: Stable Diffusion, training, multimodal are generally faster on NVIDIA',
           '## The Honest Verdict\nFor pure local LLM inference at 30B–70B models, Mac Studio M5 Max 128GB ($5,099) competes directly with $4,500+ PC builds (approximate street prices, vary by market and date), and Mac Studio M5 Ultra pushes the ceiling to models that need 256GB or 512GB. The unified memory advantage is real and measurable.\n\nFor models that fit in 24–32GB of VRAM, a PC with an RTX 4090 or 5090 is usually faster than a Mac. Apple\'s advantage shrinks at smaller models.\n\nFor fine-tuning, training, Stable Diffusion at scale, or production PyTorch, PC + NVIDIA wins. MLX is improving but gaps remain.',
         ],
@@ -566,7 +566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What is the memory bandwidth of M5 Pro, M5 Max, and M5 Ultra?', a: 'M5 is 153.6 GB/s, M5 Pro is 307 GB/s, M5 Max is 460 GB/s (32-core GPU) or 614 GB/s (40-core GPU), and M5 Ultra is up to 1.2 TB/s (1,228.8 GB/s). For LLM generation bandwidth matters more than GPU core count, because every token reads the model weights from memory once.' },
-          { q: 'How much VRAM does an M5 Mac have?', a: 'None separately — an M5 Mac has unified memory shared by the CPU and GPU. By default macOS lets the GPU use roughly two-thirds to three-quarters of total RAM, so a 64GB Mac gives a model about 48GB. M5 Pro goes up to 64GB, M5 Max up to 128GB, and M5 Ultra up to 512GB.' },
+          { q: 'How much VRAM does an M5 Mac have?', a: 'None separately — an M5 Mac has unified memory shared by the CPU and GPU. By default macOS lets the GPU use roughly two-thirds to three-quarters of total RAM, so a 64GB Mac gives a model about 48GB (macOS itself needs at least 8GB, so never count on more than 56GB). M5 Pro goes up to 64GB, M5 Max up to 128GB, and M5 Ultra up to 512GB.' },
           { q: 'How do I make Ollama run faster on a MacBook Pro M5?', a: 'Pick a model that fits your bandwidth, confirm it is 100% on GPU with `ollama ps`, close memory-heavy background apps, lower `num_ctx` if you don\'t need a long context window, use Q4_K_M quantization instead of Q5/Q8, enable `OLLAMA_FLASH_ATTENTION=1`, and keep the MacBook Pro plugged in and elevated for sessions longer than 2–3 hours. See the speed optimization section above for the full checklist.' },
           { q: 'Can Mac Studio M5 Max run Llama 3.3 70B?', a: 'Yes, with 64GB or 128GB. 70B Q4 (~42.5GB) needs 64GB and runs at an estimated 6–9 tokens/sec on the 460 GB/s chip and 9–12 tokens/sec on the 614 GB/s chip. 70B Q5 (~50GB) wants the 128GB configuration and runs at an estimated 7–10 tokens/sec.' },
           { q: 'How does M5 Max compare to RTX 4090 for local LLM?', a: 'M5 Max is slower on small models that fit in 24GB (an estimated 75–100 vs 90–120 tokens/sec for Llama 8B). On 70B models the 4090 cannot hold the model, so it falls back to CPU offload at about 6–10 tokens/sec (RTX 4090 figures here are rough community-style estimates, not PromptQuorum measurements), while an M5 Max with 614 GB/s runs it at an estimated 9–12 tokens/sec using roughly a third of the power.' },
@@ -669,7 +669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Todas las configuraciones M5 Pro/Max: 307–614 GB/s de ancho de banda (RTX 4090 con 1.008 GB/s, pero limitada a 24 GB de VRAM). El M5 Ultra alcanza hasta 1,2 TB/s.',
           'Funcionamiento silencioso: los ventiladores del MacBook Pro se oyen con inferencia sostenida; los del Mac Studio y el Mac mini rara vez se activan con cargas típicas de LLM local.',
           'MLX suele ser el motor más rápido en Apple Silicon. Ollama añadió un backend MLX en marzo de 2026 (vista previa, Ollama 0.19, al principio para modelos seleccionados en Macs con más de 32 GB); el resto de modelos siguen usando el backend Metal de llama.cpp.',
-          'Memoria unificada: de 24 GB (Mac mini M5 Pro base) a 512 GB (Mac Studio M5 Ultra) disponibles para cualquier modelo. Sin un tope de VRAM separado como en las GPU dedicadas.',
+          'Memoria unificada: de 24 GB (Mac mini M5 Pro base) a 512 GB (Mac Studio M5 Ultra) de memoria total, compartida con macOS (descuenta unos 8 GB para el sistema). Sin un tope de VRAM separado como en las GPU dedicadas.',
         ],
       },
       'update-block': {
@@ -683,7 +683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Arquitectura de memoria unificada:** M5 Pro y M5 Max comparten un único conjunto de memoria rápida (de 24 a 128 GB) al que acceden CPU, GPU y Neural Engine a la vez. Sin cuello de botella VRAM/RAM. Los modelos permanecen en memoria rápida y la inferencia sigue ágil.',
           '**El ancho de banda de memoria es el verdadero cuello de botella:** la generación de un LLM está limitada por la memoria, no por el cálculo: cada token generado lee los pesos del modelo una vez. El M5 Max, con 460–614 GB/s, queda por detrás de los 1.008 GB/s de la RTX 4090 en modelos pequeños, pero admite hasta 128 GB frente a 24 GB, así que ejecuta modelos que una 4090 no puede alojar. El M5 Ultra supera a la 4090 con hasta 1,2 TB/s y admite hasta 512 GB.',
-          '**La «VRAM» en un Mac es memoria unificada:** no existe un conjunto de VRAM separado. La GPU usa la misma memoria que macOS y, por defecto, macOS permite a la GPU reservar aproximadamente entre dos tercios y tres cuartos de la RAM total (la proporción varía con el tamaño). En un Mac de 64 GB, cuenta con unos 48 GB para modelo más contexto; el límite se puede subir con `sudo sysctl iogpu.wired_limit_mb=<MB>` (se restablece al reiniciar). Subirlo demasiado puede volver inestable macOS o bloquearlo si queda muy poca memoria para el sistema; deja margen.',
+          '**La «VRAM» en un Mac es memoria unificada:** no existe un conjunto de VRAM separado. La GPU usa la misma memoria que macOS y, por defecto, macOS permite a la GPU reservar aproximadamente entre dos tercios y tres cuartos de la RAM total (la proporción varía con el tamaño). En un Mac de 64 GB, cuenta con unos 48 GB para modelo más contexto (macOS necesita al menos 8 GB, así que nunca cuentes con más de 56 GB); el límite se puede subir con `sudo sysctl iogpu.wired_limit_mb=<MB>` (se restablece al reiniciar). Subirlo demasiado puede volver inestable macOS o bloquearlo si queda muy poca memoria para el sistema; deja margen.',
           '**Arquitectura Apple Fusion (nueva en M5):** M5 Pro y M5 Max separan CPU y GPU en dos dies de 3 nm distintos dentro de un mismo paquete, lo que permite escalar y optimizar la térmica de forma independiente y mejora la eficiencia energética frente a chips monolíticos.',
           '**Neural Accelerator en cada núcleo de GPU:** cada núcleo de GPU incluye un acelerador neuronal dedicado que complementa al Neural Engine compartido. Los motores que los aprovechan, como MLX y el backend MLX de Ollama, procesan los prompts más rápido en chips de la familia M5.',
           '**Salto generacional frente a M4:** Apple afirma hasta un 30 % más de rendimiento de CPU multihilo frente a M4 Pro y M4 Max. Para la generación de LLM lo relevante es el ancho de banda: M5 Pro 307 GB/s frente a 273 GB/s del M4 Pro (+12 %), y 614 GB/s frente a 546 GB/s en el M5 Max y M4 Max superiores (+12 %). El procesamiento de prompts mejora más gracias a los aceleradores neuronales por núcleo.',
@@ -759,7 +759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Cómo leer la tabla:** los valores son techos teóricos en tokens/s. Multiplica por 0,6–0,8 para un rango realista: para Llama 3.3 70B Q4 en un M5 Max de 614 GB/s son aproximadamente 9–12 tokens/s.',
           '**Comprobación independiente:** [MacStories](https://www.macstories.net/stories/m5-ultra-mac-studio-review-the-dream-mac-for-local-ai-agents/) midió 48 tokens/s generando con Qwen3.8 27B en un Mac Studio M5 Ultra (prompt de 6.091 tokens), frente a 59 tokens/s en una RTX 5090 (1,79 TB/s de ancho de banda). La velocidad real siguió al ancho de banda, no al número de núcleos.',
-          '**Regla de dimensionamiento:** el archivo del modelo más la caché KV deben caber en aproximadamente dos tercios a tres cuartos de la memoria unificada, así que un modelo 70B Q4 (~42,5 GB) pide un Mac de 64 GB; Q5 y Q8 piden 128 GB.',
+          '**Regla de dimensionamiento:** el archivo del modelo más la caché KV deben caber en aproximadamente dos tercios a tres cuartos de la memoria unificada (y nunca más que el total menos 8 GB para macOS), así que un modelo 70B Q4 (~42,5 GB) pide un Mac de 64 GB; Q5 y Q8 piden 128 GB.',
         ],
       },
       'mac-mini-m5-pro': {
@@ -818,7 +818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mismo silicio que el MacBook Pro: 460 GB/s idénticos en el nivel de GPU de 32 núcleos, sin penalización por formato.',
         ],
         weaknesses: [
-          '36 GB te limitan cómodamente a modelos de unos 14B–32B; 70B Q4 (~42,5 GB) no cabe.',
+          '36 GB (unos 28 GB utilizables tras macOS) admiten modelos de unos 14B–32B; 70B Q4 (~42,5 GB) no cabe.',
           'Estimaciones, no mediciones: en el momento de esta actualización no había un benchmark independiente de esta configuración exacta.',
           'Ampliar el almacenamiento es caro: base de 512 GB, y pasar a 2 TB supone un sobrecoste real.',
         ],
@@ -960,7 +960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Apple Silicon M5 vs workstation PC para LLM local',
         content: 'Apple Silicon y NVIDIA son filosofías distintas. Esta es la comparación honesta.',
         items: [
-          '## Mac Studio M5 Max/Ultra gana en:\n• Memoria unificada: hasta 128 GB (M5 Max) o 512 GB (M5 Ultra) disponibles para cualquier modelo, sin tope de VRAM\n• Eficiencia energética: aprox. 100 W frente a más de 600 W en un PC equivalente (estimación aproximada, no una medición de PromptQuorum)\n• Funcionamiento silencioso: ventiladores rara vez audibles con cargas típicas\n• Ecosistema macOS: integración con MLX, Metal y Core ML\n• Coste total de propiedad: menos electricidad a 3 años\n• Modelos de más de 32 GB: una RTX 5090 llega como máximo a 32 GB de VRAM',
+          '## Mac Studio M5 Max/Ultra gana en:\n• Memoria unificada: hasta 128 GB (M5 Max) o 512 GB (M5 Ultra) de memoria total (menos unos 8 GB para macOS) utilizables por cualquier modelo, sin tope de VRAM\n• Eficiencia energética: aprox. 100 W frente a más de 600 W en un PC equivalente (estimación aproximada, no una medición de PromptQuorum)\n• Funcionamiento silencioso: ventiladores rara vez audibles con cargas típicas\n• Ecosistema macOS: integración con MLX, Metal y Core ML\n• Coste total de propiedad: menos electricidad a 3 años\n• Modelos de más de 32 GB: una RTX 5090 llega como máximo a 32 GB de VRAM',
           '## La workstation PC (RTX 4090/5090) gana en:\n• Velocidad bruta con modelos que caben en la VRAM: MacStories midió una RTX 5090 a 59 tokens/s frente a 48 en el M5 Ultra con Qwen3.8 27B, y una lectura de prompt unas 1,8× más rápida (3.031 frente a 1.701 tokens/s)\n• Amplitud del ecosistema CUDA: más modelos, herramientas y código de investigación\n• Ajuste fino: PyTorch + CUDA domina frente a MLX\n• Flexibilidad de actualización: cambiar GPU, añadir más VRAM\n• Precio en niveles bajos: una RTX 4070 Ti económica (800–1.200 $; precios de calle aproximados, varían según mercado y fecha) supera al M5 Pro con modelos pequeños\n• IA que no es LLM: Stable Diffusion, entrenamiento y multimodal suelen ser más rápidos en NVIDIA',
           '## El veredicto honesto\nPara inferencia de LLM local pura con modelos de 30B–70B, el Mac Studio M5 Max de 128 GB (5.099 $) compite directamente con PC de más de 4.500 $ (precios de calle aproximados, varían según mercado y fecha), y el Mac Studio M5 Ultra eleva el techo a modelos que necesitan 256 GB o 512 GB. La ventaja de la memoria unificada es real y medible.\n\nPara modelos que caben en 24–32 GB de VRAM, un PC con RTX 4090 o 5090 suele ser más rápido que un Mac. La ventaja de Apple se reduce con modelos más pequeños.\n\nPara ajuste fino, entrenamiento, Stable Diffusion a gran escala o PyTorch en producción, gana PC + NVIDIA. MLX mejora, pero quedan diferencias.',
         ],
@@ -1055,7 +1055,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Cuál es el ancho de banda de memoria del M5 Pro, M5 Max y M5 Ultra?', a: 'El M5 tiene 153,6 GB/s, el M5 Pro 307 GB/s, el M5 Max 460 GB/s (GPU de 32 núcleos) o 614 GB/s (GPU de 40 núcleos) y el M5 Ultra hasta 1,2 TB/s (1.228,8 GB/s). Para la generación de LLM importa más el ancho de banda que el número de núcleos de GPU, porque cada token lee una vez los pesos del modelo desde la memoria.' },
-          { q: '¿Cuánta VRAM tiene un Mac M5?', a: 'Ninguna por separado: un Mac M5 tiene memoria unificada compartida por CPU y GPU. Por defecto, macOS permite a la GPU usar aproximadamente entre dos tercios y tres cuartos de la RAM total, así que un Mac de 64 GB ofrece unos 48 GB a un modelo. El M5 Pro llega a 64 GB, el M5 Max a 128 GB y el M5 Ultra a 512 GB.' },
+          { q: '¿Cuánta VRAM tiene un Mac M5?', a: 'Ninguna por separado: un Mac M5 tiene memoria unificada compartida por CPU y GPU. Por defecto, macOS permite a la GPU usar aproximadamente entre dos tercios y tres cuartos de la RAM total, así que un Mac de 64 GB ofrece unos 48 GB a un modelo (macOS necesita al menos 8 GB, así que nunca cuentes con más de 56 GB). El M5 Pro llega a 64 GB, el M5 Max a 128 GB y el M5 Ultra a 512 GB.' },
           { q: '¿Cómo hago que Ollama vaya más rápido en un MacBook Pro M5?', a: 'Elige un modelo adecuado a tu ancho de banda, confirma con `ollama ps` que corre al 100 % en GPU, cierra aplicaciones que consuman mucha memoria, reduce `num_ctx` si no necesitas un contexto largo, usa cuantización Q4_K_M en lugar de Q5/Q8, activa `OLLAMA_FLASH_ATTENTION=1` y mantén el MacBook Pro conectado y elevado en sesiones de más de 2–3 horas. Consulta la sección de aceleración arriba para la lista completa.' },
           { q: '¿Puede el Mac Studio M5 Max ejecutar Llama 3.3 70B?', a: 'Sí, con 64 GB o 128 GB. 70B Q4 (~42,5 GB) necesita 64 GB y corre a unos 6–9 tokens/s estimados en el chip de 460 GB/s y 9–12 tokens/s en el de 614 GB/s. 70B Q5 (~50 GB) pide la configuración de 128 GB y corre a unos 7–10 tokens/s estimados.' },
           { q: '¿Cómo se compara el M5 Max con la RTX 4090 para LLM local?', a: 'El M5 Max es más lento con modelos pequeños que caben en 24 GB (unos 75–100 frente a 90–120 tokens/s estimados con Llama 8B). Con modelos 70B la 4090 no puede alojarlos y recurre a descarga a CPU con unos 6–10 tokens/s (las cifras de la RTX 4090 son estimaciones aproximadas de tipo comunitario, no mediciones de PromptQuorum), mientras que un M5 Max de 614 GB/s los ejecuta a unos 9–12 tokens/s estimados con aproximadamente un tercio del consumo.' },
@@ -1108,7 +1108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/local-llms/apple-silicon-m5-local-llm',
       inLanguage: 'es',
       datePublished: '2026-05-18',
-      dateModified: '2026-11-03',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1170,7 +1170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'جميع تهيئات M5 Pro/Max: عرض نطاق 307–614 GB/s (بطاقة RTX 4090 بسرعة 1,008 GB/s لكن بسعة VRAM لا تتجاوز 24 GB). ويصل M5 Ultra إلى 1.2 TB/s.',
           'تشغيل هادئ: تصبح مراوح MacBook Pro مسموعة أثناء الاستدلال المستمر؛ أما مراوح Mac Studio وMac mini فنادرًا ما تعمل بقوة تحت أحمال LLM المحلية المعتادة.',
           'يُعد MLX عادةً أسرع بيئة تشغيل على Apple Silicon. أضافت Ollama واجهة MLX في مارس 2026 (معاينة، Ollama 0.19، لنماذج مختارة في البداية على أجهزة Mac بأكثر من 32 GB)؛ وتعمل بقية النماذج عبر واجهة Metal في llama.cpp.',
-          'الذاكرة الموحدة: من 24 GB (Mac mini M5 Pro الأساسي) إلى 512 GB (Mac Studio M5 Ultra) متاحة لأي نموذج. لا سقف VRAM منفصل كما في بطاقات الرسوميات المنفصلة.',
+          'الذاكرة الموحدة: من 24 GB (Mac mini M5 Pro الأساسي) إلى 512 GB (Mac Studio M5 Ultra) ذاكرة إجمالية، مشتركة مع macOS (اخصم نحو 8 GB للنظام). لا سقف VRAM منفصل كما في بطاقات الرسوميات المنفصلة.',
         ],
       },
       'update-block': {
@@ -1184,7 +1184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**بنية الذاكرة الموحدة:** يتشارك M5 Pro وM5 Max مجمّع ذاكرة سريعًا واحدًا (من 24 إلى 128 GB) يصل إليه المعالج ووحدة الرسوميات وNeural Engine في آن واحد. لا اختناق بين VRAM وRAM. تبقى النماذج في الذاكرة السريعة وتظل الاستجابة سريعة.',
           '**عرض نطاق الذاكرة هو الاختناق الحقيقي:** توليد LLM محدود بالذاكرة لا بالحوسبة — كل رمز يُولَّد يقرأ أوزان النموذج مرة واحدة. يتخلف M5 Max بسرعة 460–614 GB/s عن 1,008 GB/s لبطاقة RTX 4090 في النماذج الصغيرة، لكنه يستوعب حتى 128 GB مقابل 24 GB، فيشغّل نماذج لا تتسع لها 4090. ويتجاوز M5 Ultra بسرعة تصل إلى 1.2 TB/s بطاقة 4090 ويستوعب حتى 512 GB.',
-          '**«VRAM» في Mac هي الذاكرة الموحدة:** لا يوجد مجمّع VRAM منفصل. تستخدم وحدة الرسوميات الذاكرة نفسها التي يستخدمها macOS، وبشكل افتراضي يسمح macOS لها بتثبيت ما يقارب ثلثي إلى ثلاثة أرباع الذاكرة الكلية (تختلف النسبة بحسب حجم الذاكرة). في جهاز Mac بسعة 64 GB خطّط لنحو 48 GB للنموذج والسياق؛ ويمكن رفع الحد بالأمر `sudo sysctl iogpu.wired_limit_mb=<MB>` (يُعاد ضبطه عند إعادة التشغيل). قد يؤدي رفعه أكثر من اللازم إلى عدم استقرار macOS أو تجمّده إذا بقيت ذاكرة قليلة جدًا للنظام، لذا اترك هامشًا.',
+          '**«VRAM» في Mac هي الذاكرة الموحدة:** لا يوجد مجمّع VRAM منفصل. تستخدم وحدة الرسوميات الذاكرة نفسها التي يستخدمها macOS، وبشكل افتراضي يسمح macOS لها بتثبيت ما يقارب ثلثي إلى ثلاثة أرباع الذاكرة الكلية (تختلف النسبة بحسب حجم الذاكرة). في جهاز Mac بسعة 64 GB خطّط لنحو 48 GB للنموذج والسياق (يحتاج macOS نفسه إلى 8 GB على الأقل، فلا تعتمد على أكثر من 56 GB)؛ ويمكن رفع الحد بالأمر `sudo sysctl iogpu.wired_limit_mb=<MB>` (يُعاد ضبطه عند إعادة التشغيل). قد يؤدي رفعه أكثر من اللازم إلى عدم استقرار macOS أو تجمّده إذا بقيت ذاكرة قليلة جدًا للنظام، لذا اترك هامشًا.',
           '**بنية Apple Fusion (جديدة في M5):** يفصل M5 Pro وM5 Max المعالج ووحدة الرسوميات في قالبين منفصلين بدقة 3 نانومتر داخل حزمة واحدة، ما يتيح التوسع والتحسين الحراري باستقلال ويحسّن كفاءة الطاقة مقارنة بالشرائح الأحادية.',
           '**مسرّع عصبي في كل نواة رسوميات:** تتضمن كل نواة رسوميات مسرّعًا عصبيًا مخصصًا لأحمال الذكاء الاصطناعي، يكمّل Neural Engine المشترك. تعالج بيئات التشغيل التي تستخدمها، مثل MLX وواجهة MLX في Ollama، الأوامر النصية أسرع على شرائح عائلة M5.',
           '**القفزة الجيلية مقارنة بـ M4:** تدّعي Apple أداءً أعلى بنحو 30% في المعالج متعدد الخيوط مقارنة بـ M4 Pro وM4 Max. أما في توليد LLM فالمهم هو عرض النطاق: M5 Pro بسرعة 307 GB/s مقابل 273 GB/s لـ M4 Pro (+12%)، و614 GB/s مقابل 546 GB/s في أعلى M5 Max وM4 Max (+12%). وتكون المكاسب في معالجة الأوامر النصية أكبر بفضل المسرّعات العصبية في كل نواة.',
@@ -1260,7 +1260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**كيف تقرأ الجدول:** القيم حدود نظرية بالرموز/ثانية. اضربها في 0.6–0.8 للحصول على نطاق واقعي — لنموذج Llama 3.3 70B Q4 على M5 Max بسرعة 614 GB/s يعني ذلك نحو 9–12 رمزًا/ثانية.',
           '**تحقق مستقل:** قاست [MacStories](https://www.macstories.net/stories/m5-ultra-mac-studio-review-the-dream-mac-for-local-ai-agents/) سرعة 48 رمزًا/ثانية في التوليد بنموذج Qwen3.8 27B على Mac Studio M5 Ultra (أمر نصي من 6,091 رمزًا)، مقابل 59 رمزًا/ثانية على RTX 5090 (عرض نطاق 1.79 TB/s). تبعت السرعة الفعلية عرض النطاق لا عدد الأنوية.',
-          '**قاعدة التحجيم:** يجب أن يتسع ملف النموذج مع ذاكرة KV في نحو ثلثي إلى ثلاثة أرباع الذاكرة الموحدة، لذا يحتاج نموذج 70B Q4 (~42.5 GB) إلى جهاز Mac بسعة 64 GB؛ وتحتاج صيغ Q5 وQ8 إلى 128 GB.',
+          '**قاعدة التحجيم:** يجب أن يتسع ملف النموذج مع ذاكرة KV في نحو ثلثي إلى ثلاثة أرباع الذاكرة الموحدة (وألا يتجاوز الإجمالي ناقص 8 GB لنظام macOS)، لذا يحتاج نموذج 70B Q4 (~42.5 GB) إلى جهاز Mac بسعة 64 GB؛ وتحتاج صيغ Q5 وQ8 إلى 128 GB.',
         ],
       },
       'mac-mini-m5-pro': {
@@ -1319,7 +1319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'السيليكون نفسه في MacBook Pro: 460 GB/s متطابقة عند فئة الـ 32 نواة — دون خسارة بسبب الشكل.',
         ],
         weaknesses: [
-          '36 GB تحصرك براحة في نماذج بحدود 14B–32B؛ ونموذج 70B Q4 (~42.5 GB) لا يتسع.',
+          '36 GB (نحو 28 GB قابلة للاستخدام بعد macOS) تتسع لنماذج بحدود 14B–32B؛ ونموذج 70B Q4 (~42.5 GB) لا يتسع.',
           'تقديرات لا قياسات: لم يتوفر وقت هذا التحديث اختبار أداء مستقل لهذه التهيئة بعينها.',
           'ترقية التخزين مكلفة: 512 GB أساسية، والانتقال إلى 2 TB يحمل علاوة حقيقية.',
         ],
@@ -1461,7 +1461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Apple Silicon M5 مقابل محطة عمل PC للـ LLM المحلي',
         content: 'يمثل Apple Silicon وNVIDIA فلسفتين مختلفتين. إليك المقارنة الصريحة.',
         items: [
-          '## يتفوق Mac Studio M5 Max/Ultra في:\n• الذاكرة الموحدة: حتى 128 GB (M5 Max) أو 512 GB (M5 Ultra) لأي نموذج، بلا سقف VRAM\n• كفاءة الطاقة: نحو 100 واط مقابل أكثر من 600 واط لحاسوب مكافئ (تقدير تقريبي، وليس قياسًا من PromptQuorum)\n• التشغيل الهادئ: مراوح نادرًا ما تُسمع تحت الأحمال المعتادة\n• منظومة macOS: تكامل MLX وMetal وCore ML\n• التكلفة الإجمالية للملكية: كهرباء أقل على مدى 3 سنوات\n• النماذج فوق 32 GB: تتوقف RTX 5090 عند 32 GB من VRAM',
+          '## يتفوق Mac Studio M5 Max/Ultra في:\n• الذاكرة الموحدة: حتى 128 GB (M5 Max) أو 512 GB (M5 Ultra) ذاكرة إجمالية (ناقص نحو 8 GB لنظام macOS) لأي نموذج، بلا سقف VRAM\n• كفاءة الطاقة: نحو 100 واط مقابل أكثر من 600 واط لحاسوب مكافئ (تقدير تقريبي، وليس قياسًا من PromptQuorum)\n• التشغيل الهادئ: مراوح نادرًا ما تُسمع تحت الأحمال المعتادة\n• منظومة macOS: تكامل MLX وMetal وCore ML\n• التكلفة الإجمالية للملكية: كهرباء أقل على مدى 3 سنوات\n• النماذج فوق 32 GB: تتوقف RTX 5090 عند 32 GB من VRAM',
           '## تتفوق محطة عمل PC (RTX 4090/5090) في:\n• السرعة الخام للنماذج التي تتسع في VRAM: قاست MacStories بطاقة RTX 5090 بسرعة 59 رمزًا/ثانية مقابل 48 على M5 Ultra مع Qwen3.8 27B، وقراءة أمر نصي أسرع بنحو 1.8× (3,031 مقابل 1,701 رمزًا/ثانية)\n• اتساع منظومة CUDA: نماذج وأدوات وأكواد بحثية أكثر\n• الضبط الدقيق: يهيمن PyTorch + CUDA على MLX\n• مرونة الترقية: استبدال البطاقات وإضافة VRAM\n• السعر في الفئات الأدنى: بطاقة RTX 4070 Ti الاقتصادية (800–1,200 دولار؛ أسعار تقريبية تختلف بحسب السوق والتاريخ) تتفوق على M5 Pro في النماذج الصغيرة\n• الذكاء الاصطناعي خارج LLM: عادةً ما تعمل Stable Diffusion والتدريب والوسائط المتعددة أسرع على NVIDIA',
           '## الحكم الصريح\nللاستدلال المحلي الخالص لنماذج 30B–70B، ينافس Mac Studio M5 Max بسعة 128 GB (5,099 دولار) مباشرةً حواسيب بأكثر من 4,500 دولار (أسعار تقريبية تختلف بحسب السوق والتاريخ)، ويرفع Mac Studio M5 Ultra السقف إلى نماذج تحتاج 256 GB أو 512 GB. ميزة الذاكرة الموحدة حقيقية وقابلة للقياس.\n\nأما للنماذج التي تتسع في 24–32 GB من VRAM فحاسوب بـ RTX 4090 أو 5090 غالبًا أسرع من Mac. وتتقلص ميزة Apple مع النماذج الأصغر.\n\nوللضبط الدقيق والتدريب وStable Diffusion على نطاق واسع أو PyTorch في الإنتاج، يتفوق PC + NVIDIA. يتحسن MLX لكن الفجوات قائمة.',
         ],
@@ -1556,7 +1556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'ما عرض نطاق ذاكرة M5 Pro وM5 Max وM5 Ultra؟', a: 'يبلغ عرض نطاق M5 نحو 153.6 GB/s، وM5 Pro نحو 307 GB/s، وM5 Max نحو 460 GB/s (معالج رسوميات 32 نواة) أو 614 GB/s (40 نواة)، وM5 Ultra حتى 1.2 TB/s (1,228.8 GB/s). في توليد LLM يهم عرض النطاق أكثر من عدد أنوية الرسوميات، لأن كل رمز يقرأ أوزان النموذج من الذاكرة مرة واحدة.' },
-          { q: 'كم VRAM يملك جهاز Mac بشريحة M5؟', a: 'لا يملك VRAM منفصلة — لدى جهاز M5 ذاكرة موحدة يتشاركها المعالج ووحدة الرسوميات. افتراضيًا يسمح macOS للرسوميات باستخدام نحو ثلثي إلى ثلاثة أرباع الذاكرة الكلية، فيمنح جهاز 64 GB النموذج نحو 48 GB. يصل M5 Pro إلى 64 GB وM5 Max إلى 128 GB وM5 Ultra إلى 512 GB.' },
+          { q: 'كم VRAM يملك جهاز Mac بشريحة M5؟', a: 'لا يملك VRAM منفصلة — لدى جهاز M5 ذاكرة موحدة يتشاركها المعالج ووحدة الرسوميات. افتراضيًا يسمح macOS للرسوميات باستخدام نحو ثلثي إلى ثلاثة أرباع الذاكرة الكلية، فيمنح جهاز 64 GB النموذج نحو 48 GB (يحتاج macOS نفسه إلى 8 GB على الأقل، فلا تعتمد على أكثر من 56 GB). يصل M5 Pro إلى 64 GB وM5 Max إلى 128 GB وM5 Ultra إلى 512 GB.' },
           { q: 'كيف أجعل Ollama تعمل أسرع على MacBook Pro M5؟', a: 'اختر نموذجًا يناسب عرض نطاقك، وتأكد عبر `ollama ps` أنه يعمل 100% على وحدة الرسوميات، وأغلق التطبيقات المستهلكة للذاكرة، وقلّل `num_ctx` إن لم تحتج سياقًا طويلًا، واستخدم تكميم Q4_K_M بدل Q5/Q8، وفعّل `OLLAMA_FLASH_ATTENTION=1`، وأبقِ MacBook Pro موصولًا ومرفوعًا للجلسات التي تتجاوز 2–3 ساعات. راجع قسم التسريع أعلاه للقائمة الكاملة.' },
           { q: 'هل يستطيع Mac Studio M5 Max تشغيل Llama 3.3 70B؟', a: 'نعم، بسعة 64 GB أو 128 GB. يحتاج 70B Q4 (~42.5 GB) إلى 64 GB ويعمل بنحو 6–9 رموز/ثانية تقديرًا على الشريحة بسرعة 460 GB/s و9–12 رمزًا/ثانية على الشريحة بسرعة 614 GB/s. أما 70B Q5 (~50 GB) فيحتاج تهيئة 128 GB ويعمل بنحو 7–10 رموز/ثانية تقديرًا.' },
           { q: 'كيف يقارن M5 Max بـ RTX 4090 للـ LLM المحلي؟', a: 'M5 Max أبطأ في النماذج الصغيرة التي تتسع لـ 24 GB (نحو 75–100 مقابل 90–120 رمزًا/ثانية تقديرًا مع Llama 8B). أما نماذج 70B فلا تتسع لها 4090 وتلجأ إلى التفريغ على المعالج بنحو 6–10 رموز/ثانية (أرقام RTX 4090 تقديرات تقريبية على نمط تقديرات المجتمع، وليست قياسات من PromptQuorum)، بينما يشغّلها M5 Max بسرعة 614 GB/s بنحو 9–12 رمزًا/ثانية تقديرًا وبنحو ثلث استهلاك الطاقة.' },
@@ -1609,7 +1609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/local-llms/apple-silicon-m5-local-llm',
       inLanguage: 'ar',
       datePublished: '2026-05-18',
-      dateModified: '2026-11-03',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1620,7 +1620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     theme: 'Hardware Setups',
     title: 'Apple Silicon para LLM local 2026: M5 Pro vs M5 Max vs Mac Studio comparados',
-    dateModified: '2026-11-03',
+    dateModified: '2026-11-06',
     seoTitle: 'M5 Pro vs M5 Max 2026: largura de banda 307 vs 614 GB/s',
     metaDescription: 'Largura de banda de memória do Apple M5: M5 Pro 307, M5 Max 460–614 GB/s, M5 Ultra 1,2 TB/s. Tokens/s de LLM, dicas de Ollama e comparação de Macs.',
     heroImage: '/images/apple-silicon-m5-local-llm-config-comparison-hero-pt.webp',
@@ -1672,7 +1672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Todas as configurações M5 Pro/Max: 307–614 GB/s de largura de banda (RTX 4090 com 1.008 GB/s, mas limitada a 24 GB de VRAM). O M5 Ultra chega a até 1,2 TB/s.',
           'Operação silenciosa: as ventoinhas do MacBook Pro ficam audíveis sob inferência sustentada; as do Mac Studio e do Mac mini raramente aceleram em cargas típicas de LLM local.',
           'O MLX costuma ser o mecanismo mais rápido no Apple Silicon. O Ollama adicionou um backend MLX em março de 2026 (prévia, Ollama 0.19, inicialmente para modelos selecionados em Macs com mais de 32 GB); os demais modelos continuam usando o backend Metal do llama.cpp.',
-          'Memória unificada: de 24 GB (Mac mini M5 Pro, base) a 512 GB (Mac Studio M5 Ultra) disponíveis para qualquer modelo. Sem um teto de VRAM separado como nas GPUs dedicadas.',
+          'Memória unificada: de 24 GB (Mac mini M5 Pro, base) a 512 GB (Mac Studio M5 Ultra) de memória total, compartilhada com o macOS (desconte cerca de 8 GB para o sistema). Sem um teto de VRAM separado como nas GPUs dedicadas.',
         ],
       },
       'update-block': {
@@ -1686,7 +1686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Arquitetura de memória unificada:** M5 Pro e M5 Max compartilham um único pool de memória rápida (de 24 a 128 GB) acessado ao mesmo tempo por CPU, GPU e Neural Engine. Sem gargalo entre VRAM e RAM. Os modelos ficam em memória rápida e a inferência continua ágil.',
           '**A largura de banda de memória é o verdadeiro gargalo:** a geração de um LLM é limitada pela memória, não pelo cálculo: cada token gerado lê os pesos do modelo uma vez. O M5 Max, com 460–614 GB/s, fica atrás dos 1.008 GB/s da RTX 4090 em modelos pequenos, mas comporta até 128 GB contra 24 GB e roda modelos que uma 4090 não consegue carregar. O M5 Ultra supera a 4090 com até 1,2 TB/s e comporta até 512 GB.',
-          '**A «VRAM» de um Mac é memória unificada:** não existe um pool de VRAM separado. A GPU usa a mesma memória do macOS e, por padrão, o macOS deixa a GPU reservar cerca de dois terços a três quartos da RAM total (a proporção varia com o tamanho da RAM). Em um Mac de 64 GB, conte com uns 48 GB para modelo mais contexto; o limite pode ser elevado com `sudo sysctl iogpu.wired_limit_mb=<MB>` (volta ao padrão ao reiniciar). Elevá-lo demais pode deixar o macOS instável ou travá-lo se sobrar pouca memória para o sistema; deixe uma margem.',
+          '**A «VRAM» de um Mac é memória unificada:** não existe um pool de VRAM separado. A GPU usa a mesma memória do macOS e, por padrão, o macOS deixa a GPU reservar cerca de dois terços a três quartos da RAM total (a proporção varia com o tamanho da RAM). Em um Mac de 64 GB, conte com uns 48 GB para modelo mais contexto (o próprio macOS precisa de pelo menos 8 GB, então nunca conte com mais de 56 GB); o limite pode ser elevado com `sudo sysctl iogpu.wired_limit_mb=<MB>` (volta ao padrão ao reiniciar). Elevá-lo demais pode deixar o macOS instável ou travá-lo se sobrar pouca memória para o sistema; deixe uma margem.',
           '**Arquitetura Apple Fusion (novidade do M5):** M5 Pro e M5 Max separam CPU e GPU em dois dies de 3 nm distintos em um único pacote, permitindo escalar e otimizar a térmica de forma independente e melhorando a eficiência energética em relação a chips monolíticos.',
           '**Neural Accelerator em cada núcleo de GPU:** cada núcleo de GPU inclui um acelerador neural dedicado que complementa o Neural Engine compartilhado. Mecanismos que os aproveitam, como o MLX e o backend MLX do Ollama, processam prompts mais rápido em chips da família M5.',
           '**Salto geracional em relação ao M4:** a Apple afirma até 30 % mais desempenho de CPU multithread sobre M4 Pro e M4 Max. Para a geração de LLM, o que importa é a largura de banda: M5 Pro 307 GB/s contra 273 GB/s do M4 Pro (+12 %) e 614 GB/s contra 546 GB/s nos M5 Max e M4 Max topo de linha (+12 %). O processamento de prompts melhora mais, graças aos aceleradores neurais por núcleo.',
@@ -1762,7 +1762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Como ler a tabela:** os valores são tetos teóricos em tokens/s. Multiplique por 0,6–0,8 para uma faixa realista — para Llama 3.3 70B Q4 em um M5 Max de 614 GB/s, isso dá cerca de 9–12 tokens/s.',
           '**Verificação independente:** a [MacStories](https://www.macstories.net/stories/m5-ultra-mac-studio-review-the-dream-mac-for-local-ai-agents/) mediu 48 tokens/s gerando com Qwen3.8 27B em um Mac Studio M5 Ultra (prompt de 6.091 tokens), contra 59 tokens/s em uma RTX 5090 (1,79 TB/s de largura de banda). A velocidade real acompanhou a largura de banda, não a contagem de núcleos.',
-          '**Regra de dimensionamento:** o arquivo do modelo mais o cache KV precisam caber em cerca de dois terços a três quartos da memória unificada; um modelo 70B Q4 (~42,5 GB) pede um Mac de 64 GB, e as variantes Q5 e Q8 pedem 128 GB.',
+          '**Regra de dimensionamento:** o arquivo do modelo mais o cache KV precisam caber em cerca de dois terços a três quartos da memória unificada (e nunca mais que o total menos 8 GB para o macOS); um modelo 70B Q4 (~42,5 GB) pede um Mac de 64 GB, e as variantes Q5 e Q8 pedem 128 GB.',
         ],
       },
       'mac-mini-m5-pro': {
@@ -1821,7 +1821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mesmo silício do MacBook Pro: 460 GB/s idênticos no nível de GPU de 32 núcleos, sem penalidade de formato.',
         ],
         weaknesses: [
-          '36 GB limitam você confortavelmente a modelos de cerca de 14B–32B; 70B Q4 (~42,5 GB) não cabe.',
+          '36 GB (cerca de 28 GB utilizáveis após o macOS) comportam modelos de cerca de 14B–32B; 70B Q4 (~42,5 GB) não cabe.',
           'Estimativas, não medições: no momento desta atualização não havia benchmark independente desta configuração exata.',
           'Upgrade de armazenamento caro: base de 512 GB, e subir para 2 TB tem um custo real.',
         ],
@@ -1963,7 +1963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Apple Silicon M5 vs estação de trabalho PC para LLM local',
         content: 'Apple Silicon e NVIDIA têm filosofias diferentes. Veja a comparação honesta.',
         items: [
-          '## Mac Studio M5 Max/Ultra vence em:\n• Memória unificada: até 128 GB (M5 Max) ou 512 GB (M5 Ultra) disponíveis para qualquer modelo, sem teto de VRAM\n• Eficiência energética: cerca de 100 W contra mais de 600 W em um PC equivalente (estimativa aproximada, não uma medição da PromptQuorum)\n• Operação silenciosa: ventoinhas raramente audíveis em cargas típicas\n• Ecossistema macOS: integração com MLX, Metal e Core ML\n• Custo total de propriedade: menos eletricidade em 3 anos\n• Modelos acima de 32 GB: uma RTX 5090 chega no máximo a 32 GB de VRAM',
+          '## Mac Studio M5 Max/Ultra vence em:\n• Memória unificada: até 128 GB (M5 Max) ou 512 GB (M5 Ultra) de memória total (menos cerca de 8 GB para o macOS) utilizáveis por qualquer modelo, sem teto de VRAM\n• Eficiência energética: cerca de 100 W contra mais de 600 W em um PC equivalente (estimativa aproximada, não uma medição da PromptQuorum)\n• Operação silenciosa: ventoinhas raramente audíveis em cargas típicas\n• Ecossistema macOS: integração com MLX, Metal e Core ML\n• Custo total de propriedade: menos eletricidade em 3 anos\n• Modelos acima de 32 GB: uma RTX 5090 chega no máximo a 32 GB de VRAM',
           '## A estação PC (RTX 4090/5090) vence em:\n• Velocidade bruta em modelos que cabem na VRAM: a MacStories mediu uma RTX 5090 a 59 tokens/s contra 48 no M5 Ultra com Qwen3.8 27B, e leitura de prompt cerca de 1,8× mais rápida (3.031 contra 1.701 tokens/s)\n• Amplitude do ecossistema CUDA: mais modelos, ferramentas e código de pesquisa\n• Fine-tuning: PyTorch + CUDA domina em relação ao MLX\n• Flexibilidade de upgrade: trocar a GPU, adicionar mais VRAM\n• Preço em níveis baixos: uma RTX 4070 Ti econômica (US$800–1.200; preços de rua aproximados, variam conforme mercado e data) supera o M5 Pro em modelos pequenos\n• IA além de LLM: Stable Diffusion, treinamento e multimodal costumam ser mais rápidos em NVIDIA',
           '## O veredito honesto\nPara inferência pura de LLM local com modelos de 30B–70B, o Mac Studio M5 Max de 128 GB (US$5.099) compete diretamente com PCs de mais de US$4.500 (preços de rua aproximados, variam conforme mercado e data), e o Mac Studio M5 Ultra eleva o teto para modelos que pedem 256 GB ou 512 GB. A vantagem da memória unificada é real e mensurável.\n\nPara modelos que cabem em 24–32 GB de VRAM, um PC com RTX 4090 ou 5090 costuma ser mais rápido que um Mac. A vantagem da Apple diminui em modelos menores.\n\nPara fine-tuning, treinamento, Stable Diffusion em escala ou PyTorch em produção, PC + NVIDIA vence. O MLX está melhorando, mas ainda há lacunas.',
         ],
@@ -2058,7 +2058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'Qual é a largura de banda de memória do M5 Pro, M5 Max e M5 Ultra?', a: 'O M5 tem 153,6 GB/s, o M5 Pro 307 GB/s, o M5 Max 460 GB/s (GPU de 32 núcleos) ou 614 GB/s (GPU de 40 núcleos) e o M5 Ultra até 1,2 TB/s (1.228,8 GB/s). Para a geração de LLM, a largura de banda importa mais que a contagem de núcleos de GPU, porque cada token lê uma vez os pesos do modelo na memória.' },
-          { q: 'Quanta VRAM tem um Mac M5?', a: 'Nenhuma separada: um Mac M5 tem memória unificada compartilhada por CPU e GPU. Por padrão, o macOS deixa a GPU usar cerca de dois terços a três quartos da RAM total, então um Mac de 64 GB oferece uns 48 GB a um modelo. O M5 Pro vai até 64 GB, o M5 Max até 128 GB e o M5 Ultra até 512 GB.' },
+          { q: 'Quanta VRAM tem um Mac M5?', a: 'Nenhuma separada: um Mac M5 tem memória unificada compartilhada por CPU e GPU. Por padrão, o macOS deixa a GPU usar cerca de dois terços a três quartos da RAM total, então um Mac de 64 GB oferece uns 48 GB a um modelo (o próprio macOS precisa de pelo menos 8 GB, então nunca conte com mais de 56 GB). O M5 Pro vai até 64 GB, o M5 Max até 128 GB e o M5 Ultra até 512 GB.' },
           { q: 'Como faço o Ollama rodar mais rápido em um MacBook Pro M5?', a: 'Escolha um modelo adequado à sua largura de banda, confirme com `ollama ps` que ele roda 100% na GPU, feche apps que consomem muita memória, reduza o `num_ctx` se não precisar de contexto longo, use quantização Q4_K_M em vez de Q5/Q8, ative `OLLAMA_FLASH_ATTENTION=1` e mantenha o MacBook Pro na tomada e elevado em sessões de mais de 2–3 horas. Veja a seção de aceleração acima para a lista completa.' },
           { q: 'O Mac Studio M5 Max roda Llama 3.3 70B?', a: 'Sim, com 64 GB ou 128 GB. O 70B Q4 (~42,5 GB) precisa de 64 GB e roda a cerca de 6–9 tokens/s estimados no chip de 460 GB/s e 9–12 tokens/s no de 614 GB/s. O 70B Q5 (~50 GB) pede a configuração de 128 GB e roda a cerca de 7–10 tokens/s estimados.' },
           { q: 'Como o M5 Max se compara à RTX 4090 para LLM local?', a: 'O M5 Max é mais lento em modelos pequenos que cabem em 24 GB (cerca de 75–100 contra 90–120 tokens/s estimados com Llama 8B). Em modelos 70B, a 4090 não os comporta e recorre à descarga para a CPU, com uns 6–10 tokens/s (os números da RTX 4090 são estimativas aproximadas no estilo de relatos da comunidade, não medições da PromptQuorum), enquanto um M5 Max de 614 GB/s os roda a cerca de 9–12 tokens/s estimados com mais ou menos um terço do consumo.' },
@@ -2111,7 +2111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/local-llms/apple-silicon-m5-local-llm',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-18',
-      dateModified: '2026-11-03',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -2173,7 +2173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Alle M5-Pro/Max-Konfigurationen: 307–614 GB/s Speicherbandbreite (RTX 4090 mit 1.008 GB/s, aber nur 24 GB VRAM). Der M5 Ultra erreicht bis zu 1,2 TB/s.',
           'Leiser Betrieb: Beim MacBook Pro sind die Lüfter unter Dauerlast hörbar; Mac Studio und Mac mini laufen bei typischen lokalen LLM-Lasten selten hörbar hoch.',
           'MLX ist auf Apple Silicon in der Regel die schnellste Laufzeit. Ollama hat im März 2026 ein MLX-Backend ergänzt (Vorschau, Ollama 0.19, zunächst für ausgewählte Modelle auf Macs mit mehr als 32 GB); andere Modelle laufen weiter über das Metal-Backend von llama.cpp.',
-          'Unified Memory: von 24 GB (Mac mini M5 Pro, Basis) bis 512 GB (Mac Studio M5 Ultra) für jedes Modell nutzbar. Kein separates VRAM-Limit wie bei dedizierten GPUs.',
+          'Unified Memory: von 24 GB (Mac mini M5 Pro, Basis) bis 512 GB (Mac Studio M5 Ultra) Gesamtspeicher, geteilt mit macOS (etwa 8 GB für das System abziehen). Kein separates VRAM-Limit wie bei dedizierten GPUs.',
         ],
       },
       'update-block': {
@@ -2187,7 +2187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Unified-Memory-Architektur:** M5 Pro und M5 Max teilen sich einen einzigen schnellen Speicherpool (24 bis 128 GB), auf den CPU, GPU und Neural Engine gleichzeitig zugreifen. Kein VRAM/RAM-Flaschenhals. Modelle bleiben im schnellen Speicher, die Inferenz bleibt reaktionsschnell.',
           '**Speicherbandbreite als eigentlicher Flaschenhals:** Die LLM-Generierung ist speichergebunden, nicht rechengebunden — jedes erzeugte Token liest die Modellgewichte einmal. Der M5 Max mit 460–614 GB/s liegt bei kleinen Modellen hinter den 1.008 GB/s der RTX 4090, fasst aber bis zu 128 GB statt 24 GB und führt damit Modelle aus, die in eine 4090 nicht passen. Der M5 Ultra übertrifft mit bis zu 1,2 TB/s die 4090 und fasst bis zu 512 GB.',
-          '**„VRAM“ am Mac ist Unified Memory:** Es gibt keinen separaten VRAM-Pool. Die GPU nutzt denselben Speicher wie macOS; standardmäßig erlaubt macOS der GPU, grob zwei Drittel bis drei Viertel des gesamten RAM fest zu belegen (der Anteil hängt von der RAM-Größe ab). Bei einem Mac mit 64 GB sollten Sie mit etwa 48 GB für Modell plus Kontext planen; das Limit lässt sich mit `sudo sysctl iogpu.wired_limit_mb=<MB>` anheben (wird beim Neustart zurückgesetzt). Setzen Sie es zu hoch an, kann macOS instabil werden oder einfrieren, wenn zu wenig Speicher für das System bleibt; lassen Sie Spielraum.',
+          '**„VRAM“ am Mac ist Unified Memory:** Es gibt keinen separaten VRAM-Pool. Die GPU nutzt denselben Speicher wie macOS; standardmäßig erlaubt macOS der GPU, grob zwei Drittel bis drei Viertel des gesamten RAM fest zu belegen (der Anteil hängt von der RAM-Größe ab). Bei einem Mac mit 64 GB sollten Sie mit etwa 48 GB für Modell plus Kontext planen (macOS selbst braucht mindestens 8 GB, rechnen Sie also nie mit mehr als 56 GB); das Limit lässt sich mit `sudo sysctl iogpu.wired_limit_mb=<MB>` anheben (wird beim Neustart zurückgesetzt). Setzen Sie es zu hoch an, kann macOS instabil werden oder einfrieren, wenn zu wenig Speicher für das System bleibt; lassen Sie Spielraum.',
           '**Apple-Fusion-Architektur (neu im M5):** M5 Pro und M5 Max trennen CPU und GPU auf zwei eigene 3-nm-Dies in einem Gehäuse. Das ermöglicht unabhängige Skalierung und thermische Optimierung und verbessert die Energieeffizienz gegenüber monolithischen Chips.',
           '**Neural Accelerator in jedem GPU-Kern:** Jeder GPU-Kern enthält einen eigenen Neural Accelerator für KI-Workloads, der die gemeinsame Neural Engine ergänzt. Laufzeiten, die sie nutzen — etwa MLX und das MLX-Backend von Ollama —, verarbeiten Prompts auf M5-Chips schneller.',
           '**Generationssprung gegenüber M4:** Apple nennt bis zu 30 % mehr Multithread-CPU-Leistung gegenüber M4 Pro und M4 Max. Für die LLM-Generierung zählt die Bandbreite: M5 Pro 307 GB/s vs. M4 Pro 273 GB/s (+12 %) sowie 614 GB/s vs. 546 GB/s beim jeweils größten M5 Max bzw. M4 Max (+12 %). Beim Prompt-Processing fallen die Gewinne dank der Neural Accelerators pro Kern größer aus.',
@@ -2263,7 +2263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**So lesen Sie die Tabelle:** Die Werte sind theoretische Obergrenzen in Tokens/s. Multiplizieren Sie mit 0,6–0,8 für einen realistischen Bereich — für Llama 3.3 70B Q4 auf einem M5 Max mit 614 GB/s sind das grob 9–12 Tokens/s.',
           '**Unabhängige Gegenprobe:** [MacStories](https://www.macstories.net/stories/m5-ultra-mac-studio-review-the-dream-mac-for-local-ai-agents/) maß 48 Tokens/s bei der Generierung mit Qwen3.8 27B auf einem M5-Ultra-Mac-Studio (Prompt mit 6.091 Tokens), gegenüber 59 Tokens/s auf einer RTX 5090 (1,79 TB/s Bandbreite). Das tatsächliche Tempo folgte der Bandbreite, nicht der Kernzahl.',
-          '**Faustregel zur Dimensionierung:** Modelldatei plus KV-Cache müssen in etwa zwei Drittel bis drei Viertel des Unified Memory passen — ein 70B-Q4-Modell (~42,5 GB) braucht also einen Mac mit 64 GB; Q5 und Q8 brauchen 128 GB.',
+          '**Faustregel zur Dimensionierung:** Modelldatei plus KV-Cache müssen in etwa zwei Drittel bis drei Viertel des Unified Memory passen (und nie mehr als Gesamtspeicher minus 8 GB für macOS) — ein 70B-Q4-Modell (~42,5 GB) braucht also einen Mac mit 64 GB; Q5 und Q8 brauchen 128 GB.',
         ],
       },
       'mac-mini-m5-pro': {
@@ -2322,7 +2322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gleiches Silizium wie im MacBook Pro: identische 460 GB/s in der 32-Kern-GPU-Stufe — kein Nachteil durch die Bauform.',
         ],
         weaknesses: [
-          '36 GB begrenzen Sie komfortabel auf etwa 14B–32B-Modelle; 70B Q4 (~42,5 GB) passt nicht.',
+          '36 GB (etwa 28 GB nutzbar nach macOS) fassen Modelle von etwa 14B–32B; 70B Q4 (~42,5 GB) passt nicht.',
           'Schätzungen, keine Messungen: Zum Zeitpunkt dieses Updates lag kein unabhängiger Benchmark für genau diese Konfiguration vor.',
           'Speicher-Upgrade teuer: 512 GB Basis, der Ausbau auf 2 TB kostet einen spürbaren Aufpreis.',
         ],
@@ -2464,7 +2464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Apple Silicon M5 vs. PC-Workstation für lokale LLMs',
         content: 'Apple Silicon und NVIDIA verfolgen unterschiedliche Philosophien. Hier der ehrliche Vergleich.',
         items: [
-          '## Mac Studio M5 Max/Ultra gewinnt bei:\n• Unified Memory: bis 128 GB (M5 Max) oder 512 GB (M5 Ultra) für jedes Modell, kein VRAM-Limit\n• Energieeffizienz: grob 100 W vs. 600 W+ bei einem vergleichbaren PC (grobe Schätzung, keine Messung von PromptQuorum)\n• Leiser Betrieb: Lüfter bei typischen Lasten selten hörbar\n• macOS-Ökosystem: MLX, Metal, Core ML\n• Gesamtkosten: geringere Stromkosten über 3 Jahre\n• Modelle über 32 GB: Eine RTX 5090 endet bei 32 GB VRAM',
+          '## Mac Studio M5 Max/Ultra gewinnt bei:\n• Unified Memory: bis 128 GB (M5 Max) oder 512 GB (M5 Ultra) Gesamtspeicher (abzüglich etwa 8 GB für macOS) für jedes Modell, kein VRAM-Limit\n• Energieeffizienz: grob 100 W vs. 600 W+ bei einem vergleichbaren PC (grobe Schätzung, keine Messung von PromptQuorum)\n• Leiser Betrieb: Lüfter bei typischen Lasten selten hörbar\n• macOS-Ökosystem: MLX, Metal, Core ML\n• Gesamtkosten: geringere Stromkosten über 3 Jahre\n• Modelle über 32 GB: Eine RTX 5090 endet bei 32 GB VRAM',
           '## PC-Workstation (RTX 4090/5090) gewinnt bei:\n• Rohtempo bei Modellen, die in den VRAM passen: MacStories maß eine RTX 5090 mit 59 Tokens/s gegenüber 48 auf dem M5 Ultra bei Qwen3.8 27B und etwa 1,8-fach schnellere Prompt-Verarbeitung (3.031 vs. 1.701 Tokens/s)\n• Breite des CUDA-Ökosystems: mehr Modelle, Tools, Forschungscode\n• Fine-Tuning: PyTorch + CUDA dominiert gegenüber MLX\n• Upgrade-Flexibilität: GPUs tauschen, mehr VRAM ergänzen\n• Preis in niedrigeren Stufen: Eine günstige RTX 4070 Ti (800–1.200 $; ungefähre Marktpreise, je nach Markt und Datum verschieden) schlägt den M5 Pro bei kleinen Modellen\n• KI jenseits von LLMs: Stable Diffusion, Training und Multimodal laufen auf NVIDIA in der Regel schneller',
           '## Das ehrliche Fazit\nBei reiner lokaler LLM-Inferenz mit 30B–70B-Modellen konkurriert der Mac Studio M5 Max mit 128 GB (5.099 $) direkt mit PC-Builds ab 4.500 $ (ungefähre Marktpreise, je nach Markt und Datum verschieden), und der Mac Studio M5 Ultra hebt die Obergrenze auf Modelle, die 256 GB oder 512 GB brauchen. Der Unified-Memory-Vorteil ist real und messbar.\n\nBei Modellen, die in 24–32 GB VRAM passen, ist ein PC mit RTX 4090 oder 5090 in der Regel schneller als ein Mac. Der Vorteil von Apple schrumpft bei kleineren Modellen.\n\nFür Fine-Tuning, Training, Stable Diffusion in großem Maßstab oder produktives PyTorch gewinnt PC + NVIDIA. MLX wird besser, aber Lücken bleiben.',
         ],
@@ -2559,7 +2559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Wie hoch ist die Speicherbandbreite von M5 Pro, M5 Max und M5 Ultra?', a: 'Der M5 hat 153,6 GB/s, der M5 Pro 307 GB/s, der M5 Max 460 GB/s (32-Kern-GPU) oder 614 GB/s (40-Kern-GPU) und der M5 Ultra bis zu 1,2 TB/s (1.228,8 GB/s). Für die LLM-Generierung zählt die Bandbreite mehr als die GPU-Kernzahl, weil jedes Token die Modellgewichte einmal aus dem Speicher liest.' },
-          { q: 'Wie viel VRAM hat ein M5-Mac?', a: 'Keinen separaten — ein M5-Mac hat Unified Memory, das sich CPU und GPU teilen. Standardmäßig erlaubt macOS der GPU grob zwei Drittel bis drei Viertel des gesamten RAM, ein Mac mit 64 GB bietet einem Modell also etwa 48 GB. Der M5 Pro geht bis 64 GB, der M5 Max bis 128 GB und der M5 Ultra bis 512 GB.' },
+          { q: 'Wie viel VRAM hat ein M5-Mac?', a: 'Keinen separaten — ein M5-Mac hat Unified Memory, das sich CPU und GPU teilen. Standardmäßig erlaubt macOS der GPU grob zwei Drittel bis drei Viertel des gesamten RAM, ein Mac mit 64 GB bietet einem Modell also etwa 48 GB (macOS selbst braucht mindestens 8 GB, rechnen Sie also nie mit mehr als 56 GB). Der M5 Pro geht bis 64 GB, der M5 Max bis 128 GB und der M5 Ultra bis 512 GB.' },
           { q: 'Wie läuft Ollama auf einem MacBook Pro M5 schneller?', a: 'Wählen Sie ein zur Bandbreite passendes Modell, prüfen Sie mit `ollama ps`, dass es zu 100 % auf der GPU läuft, schließen Sie speicherhungrige Hintergrund-Apps, verkleinern Sie `num_ctx`, wenn Sie kein langes Kontextfenster brauchen, nutzen Sie Q4_K_M statt Q5/Q8, aktivieren Sie `OLLAMA_FLASH_ATTENTION=1` und halten Sie das MacBook Pro bei Sitzungen über 2–3 Stunden am Netz und erhöht. Die vollständige Checkliste steht im Abschnitt zur Beschleunigung oben.' },
           { q: 'Kann der Mac Studio M5 Max Llama 3.3 70B ausführen?', a: 'Ja, mit 64 GB oder 128 GB. 70B Q4 (~42,5 GB) braucht 64 GB und läuft mit geschätzt 6–9 Tokens/s auf dem Chip mit 460 GB/s und 9–12 Tokens/s auf dem Chip mit 614 GB/s. 70B Q5 (~50 GB) braucht die 128-GB-Konfiguration und läuft mit geschätzt 7–10 Tokens/s.' },
           { q: 'Wie schneidet der M5 Max im Vergleich zur RTX 4090 für lokale LLMs ab?', a: 'Der M5 Max ist bei kleinen Modellen, die in 24 GB passen, langsamer (geschätzt 75–100 vs. 90–120 Tokens/s bei Llama 8B). 70B-Modelle fasst die 4090 nicht und weicht auf CPU-Offload mit etwa 6–10 Tokens/s aus (die RTX-4090-Werte sind grobe Schätzungen nach Community-Art, keine Messungen von PromptQuorum), während ein M5 Max mit 614 GB/s sie mit geschätzt 9–12 Tokens/s bei rund einem Drittel der Leistungsaufnahme ausführt.' },
@@ -2661,7 +2661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Toutes les configurations M5 Pro/Max : 307–614 Go/s de bande passante (RTX 4090 à 1 008 Go/s mais limitée à 24 Go de VRAM). Le M5 Ultra atteint jusqu\'à 1,2 To/s.',
           'Fonctionnement silencieux : les ventilateurs du MacBook Pro deviennent audibles en inférence soutenue ; ceux du Mac Studio et du Mac mini s\'activent rarement sous charge LLM locale typique.',
           'MLX est généralement le moteur le plus rapide sur Apple Silicon. Ollama a ajouté un backend MLX en mars 2026 (préversion, Ollama 0.19, d\'abord pour certains modèles sur Mac de plus de 32 Go) ; les autres modèles passent toujours par le backend Metal de llama.cpp.',
-          'Mémoire unifiée : de 24 Go (Mac mini M5 Pro, base) à 512 Go (Mac Studio M5 Ultra) disponibles pour n\'importe quel modèle. Pas de plafond VRAM distinct comme sur les GPU dédiés.',
+          'Mémoire unifiée : de 24 Go (Mac mini M5 Pro, base) à 512 Go (Mac Studio M5 Ultra) de mémoire totale, partagée avec macOS (déduisez environ 8 Go pour le système). Pas de plafond VRAM distinct comme sur les GPU dédiés.',
         ],
       },
       'update-block': {
@@ -2675,7 +2675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Architecture de mémoire unifiée :** M5 Pro et M5 Max partagent un unique pool de mémoire rapide (24 à 128 Go) accessible simultanément par le CPU, le GPU et le Neural Engine. Pas de goulot VRAM/RAM. Les modèles restent en mémoire rapide et l\'inférence reste réactive.',
           '**La bande passante mémoire est le vrai goulot :** la génération d\'un LLM est limitée par la mémoire, pas par le calcul : chaque token généré lit une fois les poids du modèle. Avec 460–614 Go/s, le M5 Max reste derrière les 1 008 Go/s de la RTX 4090 sur les petits modèles, mais accueille jusqu\'à 128 Go contre 24 Go et exécute donc des modèles qu\'une 4090 ne peut pas contenir. Le M5 Ultra dépasse la 4090 avec jusqu\'à 1,2 To/s et accueille jusqu\'à 512 Go.',
-          '**La « VRAM » d\'un Mac est la mémoire unifiée :** il n\'existe pas de pool de VRAM séparé. Le GPU puise dans la même mémoire que macOS ; par défaut, macOS autorise le GPU à réserver environ deux tiers à trois quarts de la RAM totale (la part varie selon la taille de la RAM). Sur un Mac de 64 Go, comptez environ 48 Go pour modèle plus contexte ; la limite peut être relevée avec `sudo sysctl iogpu.wired_limit_mb=<Mo>` (réinitialisée au redémarrage). Une valeur trop élevée peut rendre macOS instable ou le figer s\'il reste trop peu de mémoire pour le système ; gardez une marge.',
+          '**La « VRAM » d\'un Mac est la mémoire unifiée :** il n\'existe pas de pool de VRAM séparé. Le GPU puise dans la même mémoire que macOS ; par défaut, macOS autorise le GPU à réserver environ deux tiers à trois quarts de la RAM totale (la part varie selon la taille de la RAM). Sur un Mac de 64 Go, comptez environ 48 Go pour modèle plus contexte (macOS lui-même a besoin d\'au moins 8 Go, ne comptez donc jamais sur plus de 56 Go) ; la limite peut être relevée avec `sudo sysctl iogpu.wired_limit_mb=<Mo>` (réinitialisée au redémarrage). Une valeur trop élevée peut rendre macOS instable ou le figer s\'il reste trop peu de mémoire pour le système ; gardez une marge.',
           '**Architecture Apple Fusion (nouveauté M5) :** M5 Pro et M5 Max séparent CPU et GPU en deux dies 3 nm distincts dans un même boîtier, ce qui permet un dimensionnement et une optimisation thermique indépendants et améliore l\'efficacité énergétique par rapport aux puces monolithiques.',
           '**Neural Accelerator dans chaque cœur GPU :** chaque cœur GPU intègre un accélérateur neuronal dédié qui complète le Neural Engine partagé. Les moteurs qui les exploitent, comme MLX et le backend MLX d\'Ollama, traitent les prompts plus vite sur les puces M5.',
           '**Gain générationnel par rapport au M4 :** Apple annonce jusqu\'à 30 % de performances CPU multicœur en plus par rapport aux M4 Pro et M4 Max. Pour la génération de LLM, c\'est la bande passante qui compte : M5 Pro 307 Go/s contre 273 Go/s pour le M4 Pro (+12 %), et 614 Go/s contre 546 Go/s pour les M5 Max et M4 Max haut de gamme (+12 %). Le traitement des prompts progresse davantage grâce aux accélérateurs neuronaux par cœur.',
@@ -2751,7 +2751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Lire le tableau :** les valeurs sont des plafonds théoriques en tokens/s. Multipliez par 0,6–0,8 pour une plage réaliste — pour Llama 3.3 70B Q4 sur un M5 Max à 614 Go/s, cela donne environ 9–12 tokens/s.',
           '**Vérification indépendante :** [MacStories](https://www.macstories.net/stories/m5-ultra-mac-studio-review-the-dream-mac-for-local-ai-agents/) a mesuré 48 tokens/s en génération avec Qwen3.8 27B sur un Mac Studio M5 Ultra (prompt de 6 091 tokens), contre 59 tokens/s sur une RTX 5090 (1,79 To/s de bande passante). La vitesse réelle a suivi la bande passante, pas le nombre de cœurs.',
-          '**Règle de dimensionnement :** le fichier du modèle plus le cache KV doivent tenir dans environ deux tiers à trois quarts de la mémoire unifiée ; un modèle 70B Q4 (~42,5 Go) demande donc un Mac de 64 Go, et les variantes Q5 et Q8 demandent 128 Go.',
+          '**Règle de dimensionnement :** le fichier du modèle plus le cache KV doivent tenir dans environ deux tiers à trois quarts de la mémoire unifiée (et jamais plus que le total moins 8 Go pour macOS) ; un modèle 70B Q4 (~42,5 Go) demande donc un Mac de 64 Go, et les variantes Q5 et Q8 demandent 128 Go.',
         ],
       },
       'mac-mini-m5-pro': {
@@ -2810,7 +2810,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Même silicium que le MacBook Pro : 460 Go/s identiques au niveau GPU 32 cœurs, sans pénalité de format.',
         ],
         weaknesses: [
-          '36 Go vous limitent confortablement à des modèles d\'environ 14B–32B ; le 70B Q4 (~42,5 Go) n\'y tient pas.',
+          '36 Go (environ 28 Go utilisables après macOS) accueillent des modèles d\'environ 14B–32B ; le 70B Q4 (~42,5 Go) n\'y tient pas.',
           'Estimations, pas mesures : aucun benchmark indépendant de cette configuration exacte n\'était disponible lors de cette mise à jour.',
           'Extension de stockage coûteuse : 512 Go de base, et passer à 2 To représente un vrai surcoût.',
         ],
@@ -2952,7 +2952,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Apple Silicon M5 vs station de travail PC pour le LLM local',
         content: 'Apple Silicon et NVIDIA sont deux philosophies différentes. Voici la comparaison honnête.',
         items: [
-          '## Le Mac Studio M5 Max/Ultra l\'emporte pour :\n• Mémoire unifiée : jusqu\'à 128 Go (M5 Max) ou 512 Go (M5 Ultra) pour n\'importe quel modèle, sans plafond VRAM\n• Efficacité énergétique : environ 100 W contre plus de 600 W pour un PC équivalent (estimation approximative, pas une mesure de PromptQuorum)\n• Fonctionnement silencieux : ventilateurs rarement audibles sous charge typique\n• Écosystème macOS : intégration MLX, Metal, Core ML\n• Coût total de possession : électricité moindre sur 3 ans\n• Modèles de plus de 32 Go : une RTX 5090 plafonne à 32 Go de VRAM',
+          '## Le Mac Studio M5 Max/Ultra l\'emporte pour :\n• Mémoire unifiée : jusqu\'à 128 Go (M5 Max) ou 512 Go (M5 Ultra) de mémoire totale (moins environ 8 Go pour macOS) pour n\'importe quel modèle, sans plafond VRAM\n• Efficacité énergétique : environ 100 W contre plus de 600 W pour un PC équivalent (estimation approximative, pas une mesure de PromptQuorum)\n• Fonctionnement silencieux : ventilateurs rarement audibles sous charge typique\n• Écosystème macOS : intégration MLX, Metal, Core ML\n• Coût total de possession : électricité moindre sur 3 ans\n• Modèles de plus de 32 Go : une RTX 5090 plafonne à 32 Go de VRAM',
           '## La station PC (RTX 4090/5090) l\'emporte pour :\n• Vitesse brute sur les modèles tenant en VRAM : MacStories a mesuré une RTX 5090 à 59 tokens/s contre 48 sur M5 Ultra avec Qwen3.8 27B, et une lecture de prompt environ 1,8× plus rapide (3 031 contre 1 701 tokens/s)\n• Étendue de l\'écosystème CUDA : plus de modèles, d\'outils et de code de recherche\n• Fine-tuning : PyTorch + CUDA domine MLX\n• Évolutivité : changer de GPU, ajouter de la VRAM\n• Prix aux niveaux bas : une RTX 4070 Ti économique (800–1 200 $ ; prix constatés approximatifs, variables selon marché et date) bat le M5 Pro sur les petits modèles\n• IA hors LLM : Stable Diffusion, entraînement et multimodal sont généralement plus rapides sur NVIDIA',
           '## Le verdict honnête\nPour l\'inférence LLM locale pure sur des modèles 30B–70B, le Mac Studio M5 Max 128 Go (5 099 $) rivalise directement avec des PC à plus de 4 500 $ (prix constatés approximatifs, variables selon marché et date), et le Mac Studio M5 Ultra repousse le plafond vers des modèles qui demandent 256 Go ou 512 Go. L\'avantage de la mémoire unifiée est réel et mesurable.\n\nPour les modèles qui tiennent dans 24–32 Go de VRAM, un PC avec RTX 4090 ou 5090 est généralement plus rapide qu\'un Mac. L\'avantage d\'Apple se réduit sur les petits modèles.\n\nPour le fine-tuning, l\'entraînement, Stable Diffusion à grande échelle ou PyTorch en production, PC + NVIDIA l\'emporte. MLX progresse, mais des écarts subsistent.',
         ],
@@ -3047,7 +3047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquentes',
         faqs: [
           { q: 'Quelle est la bande passante mémoire des M5 Pro, M5 Max et M5 Ultra ?', a: 'Le M5 offre 153,6 Go/s, le M5 Pro 307 Go/s, le M5 Max 460 Go/s (GPU 32 cœurs) ou 614 Go/s (GPU 40 cœurs) et le M5 Ultra jusqu\'à 1,2 To/s (1 228,8 Go/s). Pour la génération de LLM, la bande passante compte plus que le nombre de cœurs GPU, car chaque token lit une fois les poids du modèle en mémoire.' },
-          { q: 'Combien de VRAM possède un Mac M5 ?', a: 'Aucune séparée : un Mac M5 dispose d\'une mémoire unifiée partagée par le CPU et le GPU. Par défaut, macOS autorise le GPU à utiliser environ deux tiers à trois quarts de la RAM totale ; un Mac de 64 Go offre donc environ 48 Go à un modèle. Le M5 Pro monte à 64 Go, le M5 Max à 128 Go et le M5 Ultra à 512 Go.' },
+          { q: 'Combien de VRAM possède un Mac M5 ?', a: 'Aucune séparée : un Mac M5 dispose d\'une mémoire unifiée partagée par le CPU et le GPU. Par défaut, macOS autorise le GPU à utiliser environ deux tiers à trois quarts de la RAM totale ; un Mac de 64 Go offre donc environ 48 Go à un modèle (macOS lui-même a besoin d\'au moins 8 Go, ne comptez donc jamais sur plus de 56 Go). Le M5 Pro monte à 64 Go, le M5 Max à 128 Go et le M5 Ultra à 512 Go.' },
           { q: 'Comment faire tourner Ollama plus vite sur un MacBook Pro M5 ?', a: 'Choisissez un modèle adapté à votre bande passante, confirmez avec `ollama ps` qu\'il tourne à 100 % sur GPU, fermez les applications gourmandes en mémoire, réduisez `num_ctx` si vous n\'avez pas besoin d\'un long contexte, utilisez la quantification Q4_K_M plutôt que Q5/Q8, activez `OLLAMA_FLASH_ATTENTION=1` et gardez le MacBook Pro branché et surélevé pour les sessions de plus de 2–3 heures. Voir la section sur l\'accélération plus haut pour la liste complète.' },
           { q: 'Le Mac Studio M5 Max peut-il exécuter Llama 3.3 70B ?', a: 'Oui, avec 64 Go ou 128 Go. Le 70B Q4 (~42,5 Go) demande 64 Go et tourne à environ 6–9 tokens/s estimés sur la puce à 460 Go/s et 9–12 tokens/s sur celle à 614 Go/s. Le 70B Q5 (~50 Go) demande la configuration de 128 Go et tourne à environ 7–10 tokens/s estimés.' },
           { q: 'Comment le M5 Max se compare-t-il à la RTX 4090 pour le LLM local ?', a: 'Le M5 Max est plus lent sur les petits modèles tenant dans 24 Go (environ 75–100 contre 90–120 tokens/s estimés avec Llama 8B). Sur les modèles 70B, la 4090 ne peut pas les contenir et passe par un délestage CPU à environ 6–10 tokens/s (chiffres RTX 4090 : estimations approximatives de type communautaire, pas des mesures de PromptQuorum), tandis qu\'un M5 Max à 614 Go/s les exécute à environ 9–12 tokens/s estimés pour un tiers de la consommation.' },
@@ -3116,14 +3116,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'LM Studio' },
       ],
       datePublished: '2026-05-18',
-      dateModified: '2026-11-03',
+      dateModified: '2026-11-06',
     },
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
         { '@type': 'Question', name: 'Quelle est la bande passante mémoire des M5 Pro, M5 Max et M5 Ultra ?', acceptedAnswer: { '@type': 'Answer', text: 'Le M5 offre 153,6 Go/s, le M5 Pro 307 Go/s, le M5 Max 460 Go/s (GPU 32 cœurs) ou 614 Go/s (GPU 40 cœurs) et le M5 Ultra jusqu\'à 1,2 To/s (1 228,8 Go/s). Pour la génération de LLM, la bande passante compte plus que le nombre de cœurs GPU, car chaque token lit une fois les poids du modèle en mémoire.' } },
-        { '@type': 'Question', name: 'Combien de VRAM possède un Mac M5 ?', acceptedAnswer: { '@type': 'Answer', text: 'Aucune séparée : un Mac M5 dispose d\'une mémoire unifiée partagée par le CPU et le GPU. Par défaut, macOS autorise le GPU à utiliser environ deux tiers à trois quarts de la RAM totale ; un Mac de 64 Go offre donc environ 48 Go à un modèle. Le M5 Pro monte à 64 Go, le M5 Max à 128 Go et le M5 Ultra à 512 Go.' } },
+        { '@type': 'Question', name: 'Combien de VRAM possède un Mac M5 ?', acceptedAnswer: { '@type': 'Answer', text: 'Aucune séparée : un Mac M5 dispose d\'une mémoire unifiée partagée par le CPU et le GPU. Par défaut, macOS autorise le GPU à utiliser environ deux tiers à trois quarts de la RAM totale ; un Mac de 64 Go offre donc environ 48 Go à un modèle (macOS lui-même a besoin d\'au moins 8 Go, ne comptez donc jamais sur plus de 56 Go). Le M5 Pro monte à 64 Go, le M5 Max à 128 Go et le M5 Ultra à 512 Go.' } },
         { '@type': 'Question', name: 'Comment faire tourner Ollama plus vite sur un MacBook Pro M5 ?', acceptedAnswer: { '@type': 'Answer', text: 'Choisissez un modèle adapté à votre bande passante, confirmez avec `ollama ps` qu\'il tourne à 100 % sur GPU, fermez les applications gourmandes en mémoire, réduisez `num_ctx` si vous n\'avez pas besoin d\'un long contexte, utilisez la quantification Q4_K_M plutôt que Q5/Q8, activez `OLLAMA_FLASH_ATTENTION=1` et gardez le MacBook Pro branché et surélevé pour les sessions de plus de 2–3 heures. Voir la section sur l\'accélération plus haut pour la liste complète.' } },
         { '@type': 'Question', name: 'Le Mac Studio M5 Max peut-il exécuter Llama 3.3 70B ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, avec 64 Go ou 128 Go. Le 70B Q4 (~42,5 Go) demande 64 Go et tourne à environ 6–9 tokens/s estimés sur la puce à 460 Go/s et 9–12 tokens/s sur celle à 614 Go/s. Le 70B Q5 (~50 Go) demande la configuration de 128 Go et tourne à environ 7–10 tokens/s estimés.' } },
         { '@type': 'Question', name: 'Comment le M5 Max se compare-t-il à la RTX 4090 pour le LLM local ?', acceptedAnswer: { '@type': 'Answer', text: 'Le M5 Max est plus lent sur les petits modèles tenant dans 24 Go (environ 75–100 contre 90–120 tokens/s estimés avec Llama 8B). Sur les modèles 70B, la 4090 ne peut pas les contenir et passe par un délestage CPU à environ 6–10 tokens/s (chiffres RTX 4090 : estimations approximatives de type communautaire, pas des mesures de PromptQuorum), tandis qu\'un M5 Max à 614 Go/s les exécute à environ 9–12 tokens/s estimés pour un tiers de la consommation.' } },
@@ -3205,7 +3205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'M5 Pro/Maxの全構成：メモリ帯域幅307〜614GB/s（RTX 4090は1,008GB/sだがVRAMは24GBまで）。M5 Ultraは最大1.2TB/sに達します。',
           '静音性：MacBook Proは持続的な推論でファンが聞こえるようになります。Mac StudioとMac miniは典型的なローカルLLM負荷ではファンがほとんど回りません。',
           'MLXはApple Silicon上で通常最速のランタイムです。OllamaはMLXバックエンドを2026年3月に追加しました（プレビュー、Ollama 0.19、当初は32GB超のMac上の一部モデル向け）。その他のモデルはllama.cppのMetalバックエンドで動作します。',
-          'ユニファイドメモリ：24GB（Mac mini M5 Pro基本構成）から512GB（Mac Studio M5 Ultra）まで、どのモデルにも利用可能。ディスクリートGPUのような専用VRAM上限はありません。',
+          'ユニファイドメモリ：24GB（Mac mini M5 Pro基本構成）から512GB（Mac Studio M5 Ultra）までの総メモリで、macOSと共有されます（OS用に約8GBを差し引いてください）。ディスクリートGPUのような専用VRAM上限はありません。',
         ],
       },
       'update-block': {
@@ -3219,7 +3219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**ユニファイドメモリアーキテクチャ：** M5 ProとM5 Maxは、CPU・GPU・Neural Engineが同時にアクセスできる単一の高速メモリプール（24〜128GB）を共有します。VRAMとRAMのボトルネックはなく、モデルは高速メモリに載ったまま応答性を保ちます。',
           '**真のボトルネックはメモリ帯域幅：** LLMの生成は演算ではなくメモリに律速され、トークンを1つ生成するたびにモデルの重みを1回読み込みます。M5 Maxの460〜614GB/sは、小型モデルではRTX 4090の1,008GB/sに及びませんが、24GBに対して最大128GBを扱えるため、4090に載らないモデルも動かせます。M5 Ultraは最大1.2TB/sで4090を上回り、最大512GBを扱えます。',
-          '**MacでのVRAMはユニファイドメモリ：** 専用のVRAMプールはありません。GPUはmacOSと同じメモリを使い、既定ではGPUが固定できるのはRAM全体のおよそ3分の2〜4分の3です（RAM容量により異なります）。64GBのMacではモデルとコンテキストに約48GBを見込んでください。上限は`sudo sysctl iogpu.wired_limit_mb=<MB>`で引き上げられます（再起動でリセット）。上げすぎてシステム用のメモリが不足すると、macOSが不安定になったりフリーズしたりすることがあるため、余裕を残してください。',
+          '**MacでのVRAMはユニファイドメモリ：** 専用のVRAMプールはありません。GPUはmacOSと同じメモリを使い、既定ではGPUが固定できるのはRAM全体のおよそ3分の2〜4分の3です（RAM容量により異なります）。64GBのMacではモデルとコンテキストに約48GBを見込んでください（macOS自体に最低8GB必要なので、56GBを超える見込みは禁物です）。上限は`sudo sysctl iogpu.wired_limit_mb=<MB>`で引き上げられます（再起動でリセット）。上げすぎてシステム用のメモリが不足すると、macOSが不安定になったりフリーズしたりすることがあるため、余裕を残してください。',
           '**Apple Fusion Architecture（M5の新機能）：** M5 ProとM5 Maxは、CPUとGPUを1パッケージ内の別々の3nmダイに分離し、独立したスケーリングと熱設計を可能にします。モノリシックなチップより電力効率が良く、廃熱も抑えられます。',
           '**全GPUコアにニューラルアクセラレータ：** 各GPUコアにAI処理向けのニューラルアクセラレータが入り、共有のNeural Engineを補完します。MLXやOllamaのMLXバックエンドなど、これを利用するランタイムではM5系チップでプロンプト処理が速くなります。',
           '**M4からの世代間向上：** AppleはM4 Pro/M4 Max比でマルチスレッドCPU性能が最大30%向上としています。LLM生成で重要なのは帯域幅で、M5 Pro 307GB/s対M4 Pro 273GB/s（+12%）、最上位のM5 Max 614GB/s対M4 Max 546GB/s（+12%）です。コアごとのニューラルアクセラレータにより、プロンプト処理の向上幅はさらに大きくなります。',
@@ -3295,7 +3295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**表の読み方：** 数値は理論上のトークン/秒の上限です。現実的な範囲は0.6〜0.8を掛けてください。614GB/sのM5 MaxでのLlama 3.3 70B Q4なら、およそ9〜12トークン/秒です。',
           '**独立した検証：**[MacStories](https://www.macstories.net/stories/m5-ultra-mac-studio-review-the-dream-mac-for-local-ai-agents/)は、M5 Ultra搭載Mac StudioでQwen3.8 27Bの生成を48トークン/秒（6,091トークンのプロンプト）と計測しました。RTX 5090（帯域幅1.79TB/s）は59トークン/秒です。実際の速度はコア数ではなく帯域幅に沿っていました。',
-          '**サイズの目安：** モデルファイルとKVキャッシュはユニファイドメモリの約3分の2〜4分の3に収まる必要があります。70B Q4モデル（約42.5GB）には64GBのMacが必要で、Q5・Q8には128GBが必要です。',
+          '**サイズの目安：** モデルファイルとKVキャッシュはユニファイドメモリの約3分の2〜4分の3（かつ、合計からmacOS用8GBを引いた量以内）に収まる必要があります。70B Q4モデル（約42.5GB）には64GBのMacが必要で、Q5・Q8には128GBが必要です。',
         ],
       },
       'mac-mini-m5-pro': {
@@ -3354,7 +3354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'MacBook Proと同じシリコン：32コアGPU構成で同一の460GB/s。筐体による不利はありません。',
         ],
         weaknesses: [
-          '36GBでは約14B〜32Bのモデルが快適な上限で、70B Q4（約42.5GB）は載りません。',
+          '36GB（macOS後に使えるのは約28GB）では約14B〜32Bのモデルが収まり、70B Q4（約42.5GB）は載りません。',
           '推定値で実測ではない：本更新時点でこの構成の独立ベンチマークはありませんでした。',
           'ストレージ増設は割高：基本512GBから2TBへの増設には相応の追加費用がかかります。',
         ],
@@ -3496,7 +3496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Apple Silicon M5 vs PCワークステーション（ローカルLLM）',
         content: 'Apple SiliconとNVIDIAは設計思想が異なります。率直に比較します。',
         items: [
-          '## Mac Studio M5 Max/Ultraが優れる点：\n• ユニファイドメモリ：最大128GB（M5 Max）または512GB（M5 Ultra）をどのモデルにも利用可能、VRAM上限なし\n• 電力効率：同等のPCが600W超に対し、約100W（大まかな推定で、PromptQuorumの実測ではありません）\n• 静音性：典型的な負荷ではファンがほとんど聞こえません\n• macOSエコシステム：MLX、Metal、Core MLとの統合\n• 総所有コスト：3年間で電気代が少なくて済みます\n• 32GB超のモデル：RTX 5090のVRAMは最大32GBです',
+          '## Mac Studio M5 Max/Ultraが優れる点：\n• ユニファイドメモリ：最大128GB（M5 Max）または512GB（M5 Ultra）の総メモリ（macOS用に約8GBを除く）をどのモデルにも利用可能、VRAM上限なし\n• 電力効率：同等のPCが600W超に対し、約100W（大まかな推定で、PromptQuorumの実測ではありません）\n• 静音性：典型的な負荷ではファンがほとんど聞こえません\n• macOSエコシステム：MLX、Metal、Core MLとの統合\n• 総所有コスト：3年間で電気代が少なくて済みます\n• 32GB超のモデル：RTX 5090のVRAMは最大32GBです',
           '## PCワークステーション（RTX 4090/5090）が優れる点：\n• VRAMに収まるモデルの生のスピード：MacStoriesの計測では、Qwen3.8 27BでRTX 5090が59トークン/秒、M5 Ultraが48トークン/秒、プロンプト読み込みは約1.8倍高速（3,031対1,701トークン/秒）\n• CUDAエコシステムの広さ：モデル・ツール・研究コードが豊富\n• ファインチューニング：PyTorch＋CUDAがMLXを上回ります\n• 拡張性：GPUの交換やVRAMの追加が可能\n• 低価格帯：安価なRTX 4070 Ti（800〜1,200ドル。目安の実勢価格で、市場や時期により異なります）は小型モデルでM5 Proを上回ります\n• LLM以外のAI：Stable Diffusion、学習、マルチモーダルは一般にNVIDIAが速い',
           '## 率直な結論\n30B〜70Bモデルの純粋なローカルLLM推論では、Mac Studio M5 Max 128GB（5,099ドル）は4,500ドル以上（目安の実勢価格で、市場や時期により異なります）のPC構成と直接競合し、Mac Studio M5 Ultraは256GBや512GBが必要なモデルまで上限を引き上げます。ユニファイドメモリの優位性は現実的で、計測可能です。\n\nVRAM 24〜32GBに収まるモデルでは、RTX 4090/5090搭載PCは通常Macより高速です。モデルが小さいほどAppleの優位は縮まります。\n\nファインチューニング、学習、大規模なStable Diffusion、本番のPyTorchではPC＋NVIDIAが優位です。MLXは改善していますが差は残っています。',
         ],
@@ -3591,7 +3591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: 'M5 Pro・M5 Max・M5 Ultraのメモリ帯域幅は？', a: 'M5は153.6GB/s、M5 Proは307GB/s、M5 Maxは460GB/s（32コアGPU）または614GB/s（40コアGPU）、M5 Ultraは最大1.2TB/s（1,228.8GB/s）です。トークン生成のたびにモデルの重みをメモリから1回読み込むため、LLM生成ではGPUコア数より帯域幅が重要です。' },
-          { q: 'M5 MacのVRAMはどれくらい？', a: '専用VRAMはありません。M5 MacはCPUとGPUが共有するユニファイドメモリを備えます。既定ではmacOSがGPUに許可するのはRAM全体のおよそ3分の2〜4分の3なので、64GBのMacならモデルに約48GBです。M5 Proは最大64GB、M5 Maxは最大128GB、M5 Ultraは最大512GBです。' },
+          { q: 'M5 MacのVRAMはどれくらい？', a: '専用VRAMはありません。M5 MacはCPUとGPUが共有するユニファイドメモリを備えます。既定ではmacOSがGPUに許可するのはRAM全体のおよそ3分の2〜4分の3なので、64GBのMacならモデルに約48GBです（macOS自体に最低8GB必要なので、56GBを超える見込みは禁物です）。M5 Proは最大64GB、M5 Maxは最大128GB、M5 Ultraは最大512GBです。' },
           { q: 'MacBook Pro M5でOllamaを速くするには？', a: '帯域幅に見合うモデルを選び、`ollama ps`で100% GPUか確認し、メモリを多く使うバックグラウンドアプリを閉じ、長いコンテキストが不要なら`num_ctx`を下げ、Q5/Q8ではなくQ4_K_Mを使い、`OLLAMA_FLASH_ATTENTION=1`を有効にし、2〜3時間を超えるセッションではMacBook Proを電源接続して持ち上げて使います。完全なチェックリストは上の高速化セクションをご覧ください。' },
           { q: 'Mac Studio M5 MaxでLlama 3.3 70Bは動きますか？', a: 'はい、64GBまたは128GBで動きます。70B Q4（約42.5GB）は64GBが必要で、460GB/sのチップで推定約6〜9トークン/秒、614GB/sのチップで9〜12トークン/秒です。70B Q5（約50GB）は128GB構成が望ましく、推定約7〜10トークン/秒です。' },
           { q: 'ローカルLLMでM5 MaxはRTX 4090とどう比べられますか？', a: '24GBに収まる小型モデルではM5 Maxのほうが遅くなります（Llama 8Bで推定75〜100対90〜120トークン/秒）。70Bモデルは4090には載らず、CPUオフロードで約6〜10トークン/秒になります（RTX 4090の数値はコミュニティ流の大まかな推定で、PromptQuorumの実測ではありません）が、614GB/sのM5 Maxは推定約9〜12トークン/秒で、消費電力は約3分の1です。' },
@@ -3693,7 +3693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '所有M5 Pro/Max配置：内存带宽307–614GB/s（RTX 4090为1,008GB/s，但显存仅24GB）。M5 Ultra最高可达1.2TB/s。',
           '运行安静：MacBook Pro在持续推理时风扇会变得可闻；Mac Studio和Mac mini在典型本地LLM负载下风扇很少高速运转。',
           'MLX通常是Apple Silicon上最快的运行时。Ollama于2026年3月加入了MLX后端（预览版，Ollama 0.19，最初面向32GB以上Mac上的部分模型）；其他模型仍通过llama.cpp的Metal后端运行。',
-          '统一内存：从24GB（Mac mini M5 Pro基础款）到512GB（Mac Studio M5 Ultra），任何模型均可使用。没有独立显卡那样的显存上限。',
+          '统一内存：从24GB（Mac mini M5 Pro基础款）到512GB（Mac Studio M5 Ultra），为总内存，与macOS共用（需为系统扣除约8GB）。没有独立显卡那样的显存上限。',
         ],
       },
       'update-block': {
@@ -3707,7 +3707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**统一内存架构：**M5 Pro和M5 Max共用单一的高速内存池（24GB至128GB），CPU、GPU和神经网络引擎可同时访问。没有显存/内存瓶颈，模型驻留在高速内存中，推理保持流畅。',
           '**内存带宽才是真正的瓶颈：**LLM生成受限于内存而非算力——每生成一个token都要读取一遍模型权重。M5 Max的460–614GB/s在小模型上不及RTX 4090的1,008GB/s，但它可容纳最高128GB（4090仅24GB），因此能运行4090放不下的模型。M5 Ultra最高1.2TB/s，超过4090，且可容纳最高512GB。',
-          '**Mac上的“显存”就是统一内存：**不存在独立的显存池。GPU与macOS共用同一块内存，默认情况下macOS允许GPU锁定大约三分之二到四分之三的总内存（比例随内存大小而变）。64GB的Mac可为模型和上下文预留约48GB；可用`sudo sysctl iogpu.wired_limit_mb=<MB>`提高上限（重启后恢复）。调得过高、给系统留的内存太少时，macOS可能变得不稳定或卡死，请留出余量。',
+          '**Mac上的“显存”就是统一内存：**不存在独立的显存池。GPU与macOS共用同一块内存，默认情况下macOS允许GPU锁定大约三分之二到四分之三的总内存（比例随内存大小而变）。64GB的Mac可为模型和上下文预留约48GB（macOS自身至少需要8GB，因此最多不要指望超过56GB）；可用`sudo sysctl iogpu.wired_limit_mb=<MB>`提高上限（重启后恢复）。调得过高、给系统留的内存太少时，macOS可能变得不稳定或卡死，请留出余量。',
           '**Apple Fusion架构（M5新增）：**M5 Pro和M5 Max将CPU和GPU拆分到同一封装内两个独立的3nm芯片上，可独立扩展并优化散热，相比单片式芯片提升能效。',
           '**每个GPU核心内置神经加速器：**每个GPU核心都包含专用神经加速器，与共享的神经网络引擎互补。MLX以及Ollama的MLX后端等能利用它们的运行时，在M5系列芯片上处理提示词更快。',
           '**相比M4的代际提升：**苹果宣称多线程CPU性能比M4 Pro和M4 Max最高提升30%。对LLM生成而言，关键是带宽：M5 Pro为307GB/s，M4 Pro为273GB/s（+12%）；顶配M5 Max为614GB/s，M4 Max为546GB/s（+12%）。得益于每核心的神经加速器，提示词处理的提升更大。',
@@ -3783,7 +3783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**如何阅读此表：**数值为理论上限（token/秒）。乘以0.6–0.8即得到现实区间——614GB/s的M5 Max运行Llama 3.3 70B Q4，大约为9–12 token/秒。',
           '**独立验证：**[MacStories](https://www.macstories.net/stories/m5-ultra-mac-studio-review-the-dream-mac-for-local-ai-agents/)在M5 Ultra Mac Studio上用Qwen3.8 27B生成测得48 token/秒（6,091个token的提示词），RTX 5090（带宽1.79TB/s）为59 token/秒。实际速度跟随的是带宽而非核心数。',
-          '**容量估算规则：**模型文件加KV缓存必须装进统一内存的约三分之二到四分之三，因此70B Q4模型（约42.5GB）需要64GB的Mac；Q5和Q8版本需要128GB。',
+          '**容量估算规则：**模型文件加KV缓存必须装进统一内存的约三分之二到四分之三（且不超过总量减去macOS所需的8GB），因此70B Q4模型（约42.5GB）需要64GB的Mac；Q5和Q8版本需要128GB。',
         ],
       },
       'mac-mini-m5-pro': {
@@ -3842,7 +3842,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '与MacBook Pro同款芯片：32核GPU档位带宽同为460GB/s，没有机身形态带来的损失。',
         ],
         weaknesses: [
-          '36GB只能舒适地运行约14B–32B的模型；70B Q4（约42.5GB）放不下。',
+          '36GB（macOS占用后约28GB可用）可运行约14B–32B的模型；70B Q4（约42.5GB）放不下。',
           '是估计而非实测：本次更新时没有该配置的独立基准测试。',
           '存储升级昂贵：基础512GB，升级到2TB溢价明显。',
         ],
@@ -3984,7 +3984,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Apple Silicon M5 vs PC工作站（本地LLM）',
         content: 'Apple Silicon与NVIDIA理念不同。以下是坦率的对比。',
         items: [
-          '## Mac Studio M5 Max/Ultra胜出之处：\n• 统一内存：最高128GB（M5 Max）或512GB（M5 Ultra）可用于任何模型，没有显存上限\n• 能效：约100W，同等PC则超过600W（粗略估计，并非PromptQuorum实测）\n• 运行安静：典型负载下风扇很少可闻\n• macOS生态：MLX、Metal、Core ML集成\n• 总拥有成本：3年内电费更低\n• 32GB以上的模型：RTX 5090的显存最高只有32GB',
+          '## Mac Studio M5 Max/Ultra胜出之处：\n• 统一内存：最高128GB（M5 Max）或512GB（M5 Ultra）总内存（扣除macOS所需约8GB后）可用于任何模型，没有显存上限\n• 能效：约100W，同等PC则超过600W（粗略估计，并非PromptQuorum实测）\n• 运行安静：典型负载下风扇很少可闻\n• macOS生态：MLX、Metal、Core ML集成\n• 总拥有成本：3年内电费更低\n• 32GB以上的模型：RTX 5090的显存最高只有32GB',
           '## PC工作站（RTX 4090/5090）胜出之处：\n• 装得进显存的模型的原始速度：MacStories测得Qwen3.8 27B上RTX 5090为59 token/秒，M5 Ultra为48，提示词读取约快1.8倍（3,031对1,701 token/秒）\n• CUDA生态广度：更多的模型、工具和研究代码\n• 微调：PyTorch + CUDA对MLX占优\n• 升级灵活：可更换GPU、增加显存\n• 低价位档次：入门的RTX 4070 Ti（$800–1,200；大致市场价，因市场和时间而异）在小模型上胜过M5 Pro\n• LLM以外的AI：Stable Diffusion、训练、多模态在NVIDIA上通常更快',
           '## 坦率的结论\n对于30B–70B模型的纯本地LLM推理，Mac Studio M5 Max 128GB（$5,099）可直接与$4,500以上（大致市场价，因市场和时间而异）的PC整机竞争，而Mac Studio M5 Ultra把上限推到了需要256GB或512GB的模型。统一内存的优势是真实且可衡量的。\n\n对于能装进24–32GB显存的模型，搭载RTX 4090或5090的PC通常比Mac更快。模型越小，苹果的优势越小。\n\n对于微调、训练、大规模Stable Diffusion或生产环境的PyTorch，PC + NVIDIA更胜一筹。MLX在进步，但差距仍在。',
         ],
@@ -4079,7 +4079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           { q: 'M5 Pro、M5 Max和M5 Ultra的内存带宽是多少？', a: 'M5为153.6GB/s，M5 Pro为307GB/s，M5 Max为460GB/s（32核GPU）或614GB/s（40核GPU），M5 Ultra最高1.2TB/s（1,228.8GB/s）。对LLM生成而言，带宽比GPU核心数更重要，因为每个token都要从内存读取一遍模型权重。' },
-          { q: 'M5 Mac有多少显存？', a: '没有独立显存——M5 Mac采用CPU和GPU共用的统一内存。默认情况下macOS允许GPU使用约三分之二到四分之三的总内存，因此64GB的Mac可给模型约48GB。M5 Pro最高64GB，M5 Max最高128GB，M5 Ultra最高512GB。' },
+          { q: 'M5 Mac有多少显存？', a: '没有独立显存——M5 Mac采用CPU和GPU共用的统一内存。默认情况下macOS允许GPU使用约三分之二到四分之三的总内存，因此64GB的Mac可给模型约48GB（macOS自身至少需要8GB，因此最多不要指望超过56GB）。M5 Pro最高64GB，M5 Max最高128GB，M5 Ultra最高512GB。' },
           { q: '如何让Ollama在MacBook Pro M5上跑得更快？', a: '选择与带宽匹配的模型，用`ollama ps`确认其100%在GPU上运行，关闭占用内存的后台应用，不需要长上下文时降低`num_ctx`，使用Q4_K_M量化而非Q5/Q8，启用`OLLAMA_FLASH_ATTENTION=1`，并在超过2–3小时的会话中让MacBook Pro接通电源并垫高。完整清单见上方加速章节。' },
           { q: 'Mac Studio M5 Max能运行Llama 3.3 70B吗？', a: '可以，配64GB或128GB。70B Q4（约42.5GB）需要64GB，460GB/s的芯片上估计约6–9 token/秒，614GB/s的芯片上9–12 token/秒。70B Q5（约50GB）需要128GB配置，估计约7–10 token/秒。' },
           { q: 'M5 Max与RTX 4090在本地LLM上相比如何？', a: '在24GB能装下的小模型上，M5 Max更慢（Llama 8B估计75–100对90–120 token/秒）。对70B模型，4090放不下，只能回退到CPU卸载，约6–10 token/秒（RTX 4090数据为社区式的粗略估计，并非PromptQuorum实测），而614GB/s的M5 Max估计约9–12 token/秒，功耗约为三分之一。' },
@@ -4181,7 +4181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '모든 M5 Pro/Max 구성: 메모리 대역폭 307–614GB/s(RTX 4090은 1,008GB/s이지만 VRAM은 24GB). M5 Ultra는 최대 1.2TB/s에 이릅니다.',
           '조용한 동작: MacBook Pro는 지속적인 추론 시 팬 소음이 들리지만, Mac Studio와 Mac mini는 일반적인 로컬 LLM 부하에서 팬이 거의 돌지 않습니다.',
           'MLX는 보통 Apple Silicon에서 가장 빠른 런타임입니다. Ollama는 2026년 3월 MLX 백엔드를 추가했습니다(프리뷰, Ollama 0.19, 처음에는 32GB 초과 Mac의 일부 모델 대상). 나머지 모델은 llama.cpp의 Metal 백엔드로 실행됩니다.',
-          '통합 메모리: 24GB(Mac mini M5 Pro 기본)부터 512GB(Mac Studio M5 Ultra)까지 어떤 모델에도 사용할 수 있습니다. 개별 GPU처럼 별도의 VRAM 상한이 없습니다.',
+          '통합 메모리: 24GB(Mac mini M5 Pro 기본)부터 512GB(Mac Studio M5 Ultra)까지가 총 메모리이며 macOS와 공유합니다(OS용 약 8GB 제외). 개별 GPU처럼 별도의 VRAM 상한이 없습니다.',
         ],
       },
       'update-block': {
@@ -4195,7 +4195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**통합 메모리 아키텍처:** M5 Pro와 M5 Max는 CPU, GPU, Neural Engine이 동시에 접근하는 단일 고속 메모리 풀(24GB–128GB)을 공유합니다. VRAM/RAM 병목이 없고, 모델이 고속 메모리에 머물러 추론 응답성이 유지됩니다.',
           '**메모리 대역폭이 진짜 병목:** LLM 생성은 연산이 아니라 메모리에 좌우되며, 토큰 하나를 생성할 때마다 모델 가중치를 한 번 읽습니다. M5 Max의 460–614GB/s는 소형 모델에서 RTX 4090의 1,008GB/s에 못 미치지만, 24GB 대비 최대 128GB를 담을 수 있어 4090에 들어가지 않는 모델을 실행합니다. M5 Ultra는 최대 1.2TB/s로 4090을 넘어서며 최대 512GB를 담습니다.',
-          '**Mac의 \'VRAM\'은 통합 메모리:** 별도의 VRAM 풀은 없습니다. GPU는 macOS와 같은 메모리를 사용하며, 기본적으로 macOS는 GPU가 전체 RAM의 약 3분의 2에서 4분의 3을 고정하도록 허용합니다(비율은 RAM 크기에 따라 다름). 64GB Mac에서는 모델과 컨텍스트에 약 48GB를 예상하세요. 한도는 `sudo sysctl iogpu.wired_limit_mb=<MB>`로 올릴 수 있습니다(재부팅 시 초기화). 너무 높이면 시스템에 남는 메모리가 부족해 macOS가 불안정해지거나 멈출 수 있으므로 여유를 남겨 두세요.',
+          '**Mac의 \'VRAM\'은 통합 메모리:** 별도의 VRAM 풀은 없습니다. GPU는 macOS와 같은 메모리를 사용하며, 기본적으로 macOS는 GPU가 전체 RAM의 약 3분의 2에서 4분의 3을 고정하도록 허용합니다(비율은 RAM 크기에 따라 다름). 64GB Mac에서는 모델과 컨텍스트에 약 48GB를 예상하세요(macOS 자체에 최소 8GB가 필요하므로 56GB 이상은 기대하지 마세요). 한도는 `sudo sysctl iogpu.wired_limit_mb=<MB>`로 올릴 수 있습니다(재부팅 시 초기화). 너무 높이면 시스템에 남는 메모리가 부족해 macOS가 불안정해지거나 멈출 수 있으므로 여유를 남겨 두세요.',
           '**Apple Fusion 아키텍처(M5 신규):** M5 Pro와 M5 Max는 CPU와 GPU를 한 패키지 안의 별도 3nm 다이로 분리하여 독립적인 확장과 열 최적화를 가능하게 하고, 모놀리식 칩보다 전력 효율을 높입니다.',
           '**모든 GPU 코어의 뉴럴 액셀러레이터:** 각 GPU 코어에 AI 워크로드용 전용 뉴럴 액셀러레이터가 있어 공유 Neural Engine을 보완합니다. MLX나 Ollama의 MLX 백엔드처럼 이를 활용하는 런타임에서는 M5 계열 칩에서 프롬프트 처리가 더 빨라집니다.',
           '**M4 대비 세대 향상:** Apple은 M4 Pro/M4 Max 대비 멀티스레드 CPU 성능이 최대 30% 향상되었다고 밝힙니다. LLM 생성에서 중요한 것은 대역폭입니다. M5 Pro 307GB/s 대 M4 Pro 273GB/s(+12%), 최상위 M5 Max 614GB/s 대 M4 Max 546GB/s(+12%)입니다. 코어별 뉴럴 액셀러레이터 덕분에 프롬프트 처리 향상 폭은 더 큽니다.',
@@ -4271,7 +4271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**표 읽는 법:** 값은 이론상 토큰/초 상한입니다. 현실적인 범위는 0.6–0.8을 곱해 구하세요. 614GB/s M5 Max에서 Llama 3.3 70B Q4는 대략 9–12토큰/초입니다.',
           '**독립 검증:** [MacStories](https://www.macstories.net/stories/m5-ultra-mac-studio-review-the-dream-mac-for-local-ai-agents/)는 M5 Ultra Mac Studio에서 Qwen3.8 27B 생성 속도를 48토큰/초(6,091토큰 프롬프트)로 측정했으며, RTX 5090(대역폭 1.79TB/s)은 59토큰/초였습니다. 실제 속도는 코어 수가 아니라 대역폭을 따랐습니다.',
-          '**용량 산정 기준:** 모델 파일과 KV 캐시는 통합 메모리의 약 3분의 2에서 4분의 3 안에 들어가야 하므로, 70B Q4 모델(약 42.5GB)에는 64GB Mac이 필요하고 Q5와 Q8에는 128GB가 필요합니다.',
+          '**용량 산정 기준:** 모델 파일과 KV 캐시는 통합 메모리의 약 3분의 2에서 4분의 3(그리고 총량에서 macOS용 8GB를 뺀 양) 안에 들어가야 하므로, 70B Q4 모델(약 42.5GB)에는 64GB Mac이 필요하고 Q5와 Q8에는 128GB가 필요합니다.',
         ],
       },
       'mac-mini-m5-pro': {
@@ -4330,7 +4330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'MacBook Pro와 같은 실리콘: 32코어 GPU 등급에서 동일한 460GB/s이며 폼팩터로 인한 손해가 없습니다.',
         ],
         weaknesses: [
-          '36GB로는 약 14B–32B 모델까지가 여유 있는 한계이며, 70B Q4(약 42.5GB)는 들어가지 않습니다.',
+          '36GB(macOS 이후 사용 가능 약 28GB)로는 약 14B–32B 모델까지 들어가며, 70B Q4(약 42.5GB)는 들어가지 않습니다.',
           '측정이 아닌 추정: 이번 업데이트 시점에 이 구성의 독립 벤치마크는 없었습니다.',
           '저장 장치 업그레이드 비용이 큼: 기본 512GB에서 2TB로 늘리면 상당한 추가 비용이 듭니다.',
         ],
@@ -4472,7 +4472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Apple Silicon M5 vs PC 워크스테이션(로컬 LLM)',
         content: 'Apple Silicon과 NVIDIA는 철학이 다릅니다. 솔직한 비교는 다음과 같습니다.',
         items: [
-          '## Mac Studio M5 Max/Ultra가 앞서는 점:\n• 통합 메모리: 최대 128GB(M5 Max) 또는 512GB(M5 Ultra)를 어떤 모델에도 사용 가능, VRAM 상한 없음\n• 전력 효율: 동급 PC의 600W+ 대비 약 100W(대략적인 추정이며 PromptQuorum의 측정값이 아닙니다)\n• 조용한 동작: 일반적인 부하에서 팬 소리가 거의 들리지 않음\n• macOS 생태계: MLX, Metal, Core ML 통합\n• 총소유비용: 3년간 전기요금이 적음\n• 32GB 초과 모델: RTX 5090의 VRAM은 최대 32GB',
+          '## Mac Studio M5 Max/Ultra가 앞서는 점:\n• 통합 메모리: 최대 128GB(M5 Max) 또는 512GB(M5 Ultra) 총 메모리(macOS용 약 8GB 제외)를 어떤 모델에도 사용 가능, VRAM 상한 없음\n• 전력 효율: 동급 PC의 600W+ 대비 약 100W(대략적인 추정이며 PromptQuorum의 측정값이 아닙니다)\n• 조용한 동작: 일반적인 부하에서 팬 소리가 거의 들리지 않음\n• macOS 생태계: MLX, Metal, Core ML 통합\n• 총소유비용: 3년간 전기요금이 적음\n• 32GB 초과 모델: RTX 5090의 VRAM은 최대 32GB',
           '## PC 워크스테이션(RTX 4090/5090)이 앞서는 점:\n• VRAM에 들어가는 모델의 순수 속도: MacStories는 Qwen3.8 27B에서 RTX 5090 59토큰/초, M5 Ultra 48토큰/초를 측정했고 프롬프트 읽기는 약 1.8배 빠름(3,031 대 1,701토큰/초)\n• CUDA 생태계의 폭: 더 많은 모델, 도구, 연구 코드\n• 파인튜닝: PyTorch + CUDA가 MLX보다 우세\n• 업그레이드 유연성: GPU 교체, VRAM 추가\n• 저가 등급 가격: 저렴한 RTX 4070 Ti($800–1,200; 대략적인 시중 가격이며 시장과 시점에 따라 다름)가 소형 모델에서 M5 Pro를 앞섬\n• LLM 이외의 AI: Stable Diffusion, 학습, 멀티모달은 일반적으로 NVIDIA가 더 빠름',
           '## 솔직한 결론\n30B–70B 모델의 순수 로컬 LLM 추론에서는 Mac Studio M5 Max 128GB($5,099)가 $4,500 이상(대략적인 시중 가격이며 시장과 시점에 따라 다름)의 PC 빌드와 직접 경쟁하며, Mac Studio M5 Ultra는 256GB나 512GB가 필요한 모델까지 상한을 끌어올립니다. 통합 메모리의 이점은 실제이며 측정 가능합니다.\n\nVRAM 24–32GB에 들어가는 모델에서는 RTX 4090 또는 5090 PC가 대체로 Mac보다 빠릅니다. 모델이 작을수록 Apple의 이점은 줄어듭니다.\n\n파인튜닝, 학습, 대규모 Stable Diffusion, 운영 환경 PyTorch에서는 PC + NVIDIA가 앞섭니다. MLX가 개선되고 있지만 격차는 남아 있습니다.',
         ],
@@ -4567,7 +4567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           { q: 'M5 Pro, M5 Max, M5 Ultra의 메모리 대역폭은 얼마입니까?', a: 'M5는 153.6GB/s, M5 Pro는 307GB/s, M5 Max는 460GB/s(32코어 GPU) 또는 614GB/s(40코어 GPU), M5 Ultra는 최대 1.2TB/s(1,228.8GB/s)입니다. 토큰마다 모델 가중치를 메모리에서 한 번씩 읽기 때문에, LLM 생성에서는 GPU 코어 수보다 대역폭이 더 중요합니다.' },
-          { q: 'M5 Mac의 VRAM은 얼마입니까?', a: '별도의 VRAM은 없습니다. M5 Mac은 CPU와 GPU가 공유하는 통합 메모리를 갖습니다. 기본적으로 macOS는 GPU가 전체 RAM의 약 3분의 2에서 4분의 3을 쓰도록 허용하므로, 64GB Mac은 모델에 약 48GB를 줍니다. M5 Pro는 최대 64GB, M5 Max는 최대 128GB, M5 Ultra는 최대 512GB입니다.' },
+          { q: 'M5 Mac의 VRAM은 얼마입니까?', a: '별도의 VRAM은 없습니다. M5 Mac은 CPU와 GPU가 공유하는 통합 메모리를 갖습니다. 기본적으로 macOS는 GPU가 전체 RAM의 약 3분의 2에서 4분의 3을 쓰도록 허용하므로, 64GB Mac은 모델에 약 48GB를 줍니다(macOS 자체에 최소 8GB가 필요하므로 56GB 이상은 기대하지 마세요). M5 Pro는 최대 64GB, M5 Max는 최대 128GB, M5 Ultra는 최대 512GB입니다.' },
           { q: 'MacBook Pro M5에서 Ollama를 더 빠르게 하려면 어떻게 합니까?', a: '대역폭에 맞는 모델을 고르고, `ollama ps`로 100% GPU에서 실행되는지 확인하고, 메모리를 많이 쓰는 백그라운드 앱을 닫고, 긴 컨텍스트가 필요 없다면 `num_ctx`를 낮추고, Q5/Q8 대신 Q4_K_M 양자화를 쓰고, `OLLAMA_FLASH_ATTENTION=1`을 켜고, 2–3시간을 넘는 세션에서는 MacBook Pro를 전원에 연결해 높이세요. 전체 체크리스트는 위 속도 최적화 섹션을 참고하세요.' },
           { q: 'Mac Studio M5 Max로 Llama 3.3 70B를 실행할 수 있습니까?', a: '예, 64GB 또는 128GB 구성에서 가능합니다. 70B Q4(약 42.5GB)는 64GB가 필요하며 460GB/s 칩에서 추정 약 6–9토큰/초, 614GB/s 칩에서 9–12토큰/초입니다. 70B Q5(약 50GB)는 128GB 구성이 적합하며 추정 약 7–10토큰/초입니다.' },
           { q: '로컬 LLM에서 M5 Max는 RTX 4090과 어떻게 비교됩니까?', a: '24GB에 들어가는 소형 모델에서는 M5 Max가 더 느립니다(Llama 8B 기준 추정 75–100 대 90–120토큰/초). 70B 모델은 4090이 담을 수 없어 CPU 오프로드로 약 6–10토큰/초가 나오는 반면(RTX 4090 수치는 커뮤니티식의 대략적인 추정이며 PromptQuorum의 측정값이 아닙니다), 614GB/s M5 Max는 약 3분의 1의 전력으로 추정 약 9–12토큰/초로 실행합니다.' },
@@ -4620,7 +4620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/local-llms/apple-silicon-m5-local-llm',
       inLanguage: 'ko',
       datePublished: '2026-05-18',
-      dateModified: '2026-11-03',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',

@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-02-27',
     designSkin: 'hub',
@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Tool-call reliability is a model property, not a harness property.** The same harness paired with a small general-purpose model fails; paired with a tool-call-tuned 27B+ model it succeeds. Pick the model first.',
         items: [
-          '**Gemma 4 31B (`gemma4:31b`).** Best general-purpose tool-caller in August 2026. Fits in 16 GB unified memory or 24 GB VRAM at Q4_K_M. Reliable on document intake, email triage, and invoice processing. Slightly conservative on chained tool calls — fine for business workflows where each step has explicit approval anyway.',
+          '**Gemma 4 31B (`gemma4:31b`).** Best general-purpose tool-caller in August 2026. Fits in 32 GB unified memory (about 4–6 GB left for context) or 24 GB VRAM at Q4_K_M. Reliable on document intake, email triage, and invoice processing. Slightly conservative on chained tool calls — fine for business workflows where each step has explicit approval anyway.',
           '**GLM-4.7 Flash (`glm-4.7-flash`).** 128K context out of the box. Strong tool-call reliability. The pick for compliance reporting and meeting summarisation where the input is long. Wants 24 GB+ VRAM at Q4_K_M for unconstrained context.',
           '**Qwen3 32B (`qwen3:32b`).** Well-rounded, very reliable on multi-step plans. Good fallback when Gemma 4 is conservative. 32K context out of the box; fine for most business tasks.',
           '**Llama 3.3 70B (`llama3.3:70b`).** Highest ceiling, heaviest hardware. 48 GB+ VRAM or 64 GB unified memory at Q4_K_M. Use for compliance reports and exception handling where reliability matters more than speed.',
@@ -366,7 +366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-02-27',
     designSkin: 'hub',
@@ -566,7 +566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Tool-Call-Zuverlässigkeit ist eine Modelleigenschaft, keine Harness-Eigenschaft.** Dieselbe Harness mit einem kleinen Allzweckmodell scheitert; mit einem auf Tool-Calls trainierten 27B+-Modell gelingt sie. Wählen Sie zuerst das Modell.',
         items: [
-          '**Gemma 4 31B (`gemma4:31b`).** Bester Allzweck-Tool-Caller im August 2026. Passt in 16 GB Unified Memory oder 24 GB VRAM bei Q4_K_M. Zuverlässig bei Dokumentenannahme, E-Mail-Triage und Rechnungsverarbeitung. Etwas konservativ bei verketteten Tool-Aufrufen — passt zu Geschäftsworkflows, in denen jeder Schritt ohnehin explizit freigegeben wird.',
+          '**Gemma 4 31B (`gemma4:31b`).** Bester Allzweck-Tool-Caller im August 2026. Passt in 32 GB Unified Memory (etwa 4–6 GB bleiben für den Kontext) oder 24 GB VRAM bei Q4_K_M. Zuverlässig bei Dokumentenannahme, E-Mail-Triage und Rechnungsverarbeitung. Etwas konservativ bei verketteten Tool-Aufrufen — passt zu Geschäftsworkflows, in denen jeder Schritt ohnehin explizit freigegeben wird.',
           '**GLM-4.7 Flash (`glm-4.7-flash`).** 128K Kontext out-of-the-box. Starke Tool-Call-Zuverlässigkeit. Die Wahl für Compliance-Reporting und Meeting-Zusammenfassungen mit langer Eingabe. Möchte 24 GB+ VRAM bei Q4_K_M für vollen Kontext.',
           '**Qwen3 32B (`qwen3:32b`).** Ausgewogen, sehr zuverlässig bei mehrstufigen Plänen. Guter Fallback, wenn Gemma 4 zu konservativ ist. 32K Kontext out-of-the-box; passt für die meisten Geschäftsaufgaben.',
           '**Llama 3.3 70B (`llama3.3:70b`).** Höchste Decke, schwerste Hardware. 48 GB+ VRAM oder 64 GB Unified Memory bei Q4_K_M. Verwenden Sie es für Compliance-Reports und Ausnahmebehandlung, wenn Zuverlässigkeit wichtiger ist als Geschwindigkeit.',
@@ -681,7 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-02-27',
     designSkin: 'hub',
@@ -881,7 +881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**La fiabilité du tool-calling est une propriété du modèle, pas du harness.** Le même harness associé à un petit modèle généraliste échoue ; associé à un modèle 27B+ entraîné au tool-calling, il réussit. Choisissez d\'abord le modèle.',
         items: [
-          '**Gemma 4 31B (`gemma4:31b`).** Meilleur tool-caller généraliste en août 2026. Tient sur 16 GB de mémoire unifiée ou 24 GB VRAM en Q4_K_M. Fiable sur ingestion documentaire, tri d\'e-mails et traitement de factures. Légèrement conservateur sur les enchaînements d\'outils — adapté aux workflows métier où chaque étape est de toute façon explicitement validée.',
+          '**Gemma 4 31B (`gemma4:31b`).** Meilleur tool-caller généraliste en août 2026. Tient sur 32 GB de mémoire unifiée (environ 4–6 GB restent pour le contexte) ou 24 GB VRAM en Q4_K_M. Fiable sur ingestion documentaire, tri d\'e-mails et traitement de factures. Légèrement conservateur sur les enchaînements d\'outils — adapté aux workflows métier où chaque étape est de toute façon explicitement validée.',
           '**GLM-4.7 Flash (`glm-4.7-flash`).** 128K de contexte par défaut. Fiabilité tool-calling forte. Le choix pour le reporting de conformité et la synthèse de réunions à entrée longue. Demande 24 GB+ VRAM en Q4_K_M pour un contexte étendu.',
           '**Qwen3 32B (`qwen3:32b`).** Bien équilibré, très fiable sur les plans multi-étapes. Bon repli quand Gemma 4 est trop conservateur. 32K de contexte par défaut ; convient à la plupart des tâches métier.',
           '**Llama 3.3 70B (`llama3.3:70b`).** Plafond le plus élevé, matériel le plus lourd. 48 GB+ VRAM ou 64 GB de mémoire unifiée en Q4_K_M. À utiliser pour les rapports de conformité et la gestion d\'exceptions où la fiabilité prime sur la vitesse.',
@@ -988,7 +988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-02-27',
     designSkin: 'hub',
@@ -1188,7 +1188,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Tool-callの信頼性はモデルのプロパティであり、ハーネスのプロパティではありません。** 同じハーネスでも小さな汎用モデルと組み合わせると失敗、tool-call調整済み27B+モデルと組み合わせると成功。先にモデルを選びましょう。',
         items: [
-          '**Gemma 4 31B（`gemma4:31b`）。** 2026年8月時点で最高の汎用tool-caller。16 GB ユニファイドメモリまたは Q4_K_M で 24 GB VRAM に収まる。文書取り込み、メールトリアージ、請求書処理で信頼性が高い。連鎖tool-callでやや保守的——各ステップが明示的承認を伴う業務ワークフローに適合。',
+          '**Gemma 4 31B（`gemma4:31b`）。** 2026年8月時点で最高の汎用tool-caller。32 GB ユニファイドメモリ（コンテキスト用に残るのは約 4–6 GB）または Q4_K_M で 24 GB VRAM に収まる。文書取り込み、メールトリアージ、請求書処理で信頼性が高い。連鎖tool-callでやや保守的——各ステップが明示的承認を伴う業務ワークフローに適合。',
           '**GLM-4.7 Flash（`glm-4.7-flash`）。** デフォルトで128Kコンテキスト。Tool-call信頼性が強い。長い入力（コンプライアンスレポート、1時間級議事録）のコンプライアンスレポートと議事録要約に最適。コンテキスト無制約で Q4_K_M で 24 GB+ VRAM が望ましい。',
           '**Qwen3 32B（`qwen3:32b`）。** バランスが良く、複数ステップ計画で非常に信頼できる。Gemma 4が保守的すぎる場合の良いフォールバック。デフォルトで32Kコンテキスト；多くの業務タスクに十分。',
           '**Llama 3.3 70B（`llama3.3:70b`）。** 最高の天井、最重量ハードウェア。Q4_K_M で 48 GB+ VRAM または 64 GB ユニファイドメモリ。速度より信頼性が重要なコンプライアンスレポートと例外処理に使用。',
@@ -1295,7 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-02-27',
     designSkin: 'hub',
@@ -1495,7 +1495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**工具调用可靠性是模型属性，而非harness属性。** 同一harness配以小型通用模型会失败；配以27B+工具调用调优模型则成功。先选模型。',
         items: [
-          '**Gemma 4 31B（`gemma4:31b`）。** 2026年8月最佳通用工具调用模型。在16 GB统一内存或24 GB显存（Q4_K_M）下运行。在文档摄入、邮件分流和发票处理上可靠。链式工具调用略保守——很适合业务工作流，因为每步本就有显式批准。',
+          '**Gemma 4 31B（`gemma4:31b`）。** 2026年8月最佳通用工具调用模型。在32 GB统一内存（留给上下文约 4–6 GB）或24 GB显存（Q4_K_M）下运行。在文档摄入、邮件分流和发票处理上可靠。链式工具调用略保守——很适合业务工作流，因为每步本就有显式批准。',
           '**GLM-4.7 Flash（`glm-4.7-flash`）。** 默认128K上下文。工具调用可靠性强。输入较长时（合规报告、一小时会议转录）的最佳选择。完整上下文需24 GB+显存（Q4_K_M）。',
           '**Qwen3 32B（`qwen3:32b`）。** 各方面均衡，多步规划下非常可靠。Gemma 4过于保守时的良好回退。默认32K上下文；适合多数业务任务。',
           '**Llama 3.3 70B（`llama3.3:70b`）。** 最高上限，最重硬件。Q4_K_M需48 GB+显存或64 GB统一内存。可靠性比速度更重要的合规报告和异常处理使用。',
@@ -1602,7 +1602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-02-27',
     designSkin: 'hub',
@@ -1851,7 +1851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**La fiabilidad del tool-calling es una propiedad del modelo, no del harness.** El mismo harness combinado con un modelo pequeño de propósito general falla; combinado con un modelo de 27B+ ajustado para tool-calling funciona. Elige primero el modelo.',
         items: [
-          '**Gemma 4 31B (`gemma4:31b`).** El mejor modelo de tool-calling de propósito general en agosto de 2026. Cabe en 16 GB de memoria unificada o 24 GB de VRAM en Q4_K_M. Fiable en ingesta de documentos, triaje de correos y procesamiento de facturas. Algo conservador en llamadas encadenadas a herramientas, lo que encaja bien con flujos de trabajo empresariales donde cada paso tiene aprobación explícita de todos modos.',
+          '**Gemma 4 31B (`gemma4:31b`).** El mejor modelo de tool-calling de propósito general en agosto de 2026. Cabe en 32 GB de memoria unificada (quedan unos 4–6 GB para el contexto) o 24 GB de VRAM en Q4_K_M. Fiable en ingesta de documentos, triaje de correos y procesamiento de facturas. Algo conservador en llamadas encadenadas a herramientas, lo que encaja bien con flujos de trabajo empresariales donde cada paso tiene aprobación explícita de todos modos.',
           '**GLM-4.7 Flash (`glm-4.7-flash`).** 128K de contexto de serie. Fuerte fiabilidad de tool-calling. La opción para informes de cumplimiento y resúmenes de reuniones con entradas largas. Necesita 24 GB+ de VRAM en Q4_K_M para contexto sin restricciones.',
           '**Qwen3 32B (`qwen3:32b`).** Equilibrado, muy fiable en planes de múltiples pasos. Buen respaldo cuando Gemma 4 es demasiado conservador. 32K de contexto de serie; suficiente para la mayoría de las tareas empresariales.',
           '**Llama 3.3 70B (`llama3.3:70b`).** Mayor techo, hardware más pesado. 48 GB+ de VRAM o 64 GB de memoria unificada en Q4_K_M. Úsalo para informes de cumplimiento y gestión de excepciones donde la fiabilidad importa más que la velocidad.',
@@ -1970,7 +1970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-02-27',
     designSkin: 'hub',
@@ -2192,7 +2192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A confiabilidade do tool-calling é uma propriedade do modelo, não do harness.** Escolha primeiro o modelo.',
         items: [
-          '**Gemma 4 31B (`gemma4:31b`).** O melhor modelo de tool-calling de propósito geral em agosto de 2026. Cabe em 16 GB de memória unificada ou 24 GB de VRAM em Q4_K_M.',
+          '**Gemma 4 31B (`gemma4:31b`).** O melhor modelo de tool-calling de propósito geral em agosto de 2026. Cabe em 32 GB de memória unificada (sobram cerca de 4–6 GB para o contexto) ou 24 GB de VRAM em Q4_K_M.',
           '**GLM-4.7 Flash (`glm-4.7-flash`).** 128K de contexto nativo. Forte confiabilidade de tool-calling. A opção para relatórios de conformidade e resumos de reuniões com entradas longas.',
           '**Qwen3 32B (`qwen3:32b`).** Equilibrado, muito confiável em planos de múltiplas etapas. Bom substituto quando o Gemma 4 é muito conservador.',
           '**Llama 3.3 70B (`llama3.3:70b`).** Maior teto, hardware mais pesado. 48 GB+ de VRAM ou 64 GB de memória unificada em Q4_K_M.',
@@ -2305,7 +2305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-02-27',
     designSkin: 'hub',
@@ -2543,7 +2543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**موثوقية استدعاء الأدوات خاصية تعتمد على النموذج لا على إطار التشغيل.** نفس الإطار مع نموذج صغير للأغراض العامة يفشل؛ مع نموذج 27B+ مُضبوط دقيقاً لاستدعاء الأدوات ينجح. اختر النموذج أولاً.',
         items: [
-          '**Gemma 4 31B (`gemma4:31b`).** أفضل نموذج استدعاء أدوات للأغراض العامة في أغسطس 2026. يتسع في 16 جيجابايت ذاكرة موحدة أو 24 جيجابايت VRAM بـQ4_K_M. موثوق في استيعاب المستندات وفرز البريد الإلكتروني ومعالجة الفواتير.',
+          '**Gemma 4 31B (`gemma4:31b`).** أفضل نموذج استدعاء أدوات للأغراض العامة في أغسطس 2026. يتسع في 32 جيجابايت ذاكرة موحدة (يتبقى نحو 4–6 جيجابايت للسياق) أو 24 جيجابايت VRAM بـQ4_K_M. موثوق في استيعاب المستندات وفرز البريد الإلكتروني ومعالجة الفواتير.',
           '**GLM-4.7 Flash (`glm-4.7-flash`).** سياق 128K أصلي. موثوقية قوية في استدعاء الأدوات. الخيار لتقارير الامتثال وملخصات الاجتماعات بالمدخلات الطويلة. يحتاج 24 جيجابايت+ VRAM بـQ4_K_M للسياق غير المقيد.',
           '**Qwen3 32B (`qwen3:32b`).** متوازن وموثوق جداً في الخطط متعددة الخطوات. بديل جيد حين يكون Gemma 4 محافظاً جداً. سياق 32K أصلي؛ كافٍ لمعظم المهام المؤسسية.',
           '**Llama 3.3 70B (`llama3.3:70b`).** السقف الأعلى، أجهزة أثقل. 48 جيجابايت+ VRAM أو 64 جيجابايت ذاكرة موحدة بـQ4_K_M. استخدمه لتقارير الامتثال وإدارة الاستثناءات حيث الموثوقية أهم من السرعة.',
@@ -2654,7 +2654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-02-27',
     designSkin: 'hub',
@@ -2913,7 +2913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**tool-calling 신뢰성은 하네스가 아닌 모델의 속성입니다.** 동일한 하네스가 소형 범용 모델과 결합하면 실패하고, 27B 이상의 tool-calling에 맞게 조정된 모델과 결합하면 작동합니다. 먼저 모델을 선택하십시오.',
         items: [
-          '**Gemma 4 31B (`gemma4:31b`).** 2026년 8월 범용 tool-calling의 최고 모델. Q4_K_M에서 통합 메모리 16GB 또는 VRAM 24GB에 맞습니다. 문서 수집, 이메일 분류, 청구서 처리에 신뢰할 수 있습니다. 연쇄 도구 호출에서 다소 보수적인데, 이는 어차피 모든 단계에 명시적 승인이 있는 기업 워크플로에 잘 맞습니다.',
+          '**Gemma 4 31B (`gemma4:31b`).** 2026년 8월 범용 tool-calling의 최고 모델. Q4_K_M에서 통합 메모리 32GB(컨텍스트에 남는 공간은 약 4~6GB) 또는 VRAM 24GB에 맞습니다. 문서 수집, 이메일 분류, 청구서 처리에 신뢰할 수 있습니다. 연쇄 도구 호출에서 다소 보수적인데, 이는 어차피 모든 단계에 명시적 승인이 있는 기업 워크플로에 잘 맞습니다.',
           '**GLM-4.7 Flash (`glm-4.7-flash`).** 기본 제공 128K 컨텍스트. 강력한 tool-calling 신뢰성. 긴 입력이 있는 규정 준수 보고서 및 회의록 요약을 위한 선택. Q4_K_M에서 무제한 컨텍스트를 위해 24GB 이상의 VRAM 필요.',
           '**Qwen3 32B (`qwen3:32b`).** 균형 잡혔고, 다단계 계획에서 매우 신뢰할 수 있습니다. Gemma 4가 너무 보수적일 때 좋은 대안. 기본 제공 32K 컨텍스트; 대부분의 기업 작업에 충분합니다.',
           '**Llama 3.3 70B (`llama3.3:70b`).** 더 높은 한계, 더 무거운 하드웨어. Q4_K_M에서 48GB 이상의 VRAM 또는 통합 메모리 64GB. 신뢰성이 속도보다 중요한 규정 준수 보고서 및 예외 관리에 사용하십시오.',

@@ -167,13 +167,14 @@ const TOOLS: Record<string, ToolDef> = {
     run: (a: Parameters<typeof recommendStack>[0]) => recommendStack(a),
   },
   estimate_vram: {
-    description: 'Rule-of-thumb GPU/unified memory estimate for a model (size, quantization, context). Optionally pass availableGb for a fit verdict. Not a benchmark.',
+    description: 'Rule-of-thumb GPU/unified memory estimate for a model (size, quantization, context). Optionally pass availableGb for a fit verdict (on a Mac pass total unified memory with os "mac"; 8 GB is deducted for macOS). Not a benchmark.',
     schema: z.object({
       modelBillions: z.number().min(0.1).max(2000),
       quantization: z.string().optional(),
       contextLength: z.string().optional(),
       batchSize: z.number().int().min(1).max(8).optional(),
       availableGb: z.number().min(0).optional(),
+      os: z.enum(['mac', 'other']).optional(),
     }),
     run: (a: Parameters<typeof estimateVramTool>[0]) => estimateVramTool(a),
   },

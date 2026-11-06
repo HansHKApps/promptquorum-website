@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
     title: 'Which Local LLM Models Support Japanese Best?',
-    dateModified: '2026-08-30',
+    dateModified: '2026-11-06',
     seoTitle: 'Best Local LLMs for Japanese 2026: Rinna, ELYZA, Qwen3',
     metaDescription: 'Rinna 3.6B, ELYZA-7B, Qwen3 8B (best for JA/EN/ZH translation), and Phi-4: 4 local LLMs for Japanese chat, writing, and translation via Ollama.',
     heroImage: '/images/best-japanese-language-models-local-model-comparison-hero-en.webp',
@@ -129,7 +129,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Does a Japanese model run on an 8 GB MacBook?',
-            a: 'Yes. Rinna 3.6B Q4 and ELYZA-7B Q4_K_M both run on a MacBook with 8 GB unified memory via Ollama. Apple Silicon treats system RAM as unified memory, so the full 8 GB is available to the model. Expect ~8–12 tok/s on M1/M2 hardware at these sizes.',
+            a: 'Not realistically. macOS itself needs at least 8 GB of unified memory, so an 8 GB MacBook has almost nothing left for the model. Plan on a 16 GB Mac instead: Rinna 3.6B Q4 and ELYZA-7B Q4_K_M run there via Ollama with about 8 GB left. Expect ~8–12 tok/s on M1/M2 hardware at these sizes.',
           },
           {
             q: 'How do I start a Japanese model in Ollama?',
@@ -146,7 +146,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Rinna 3.6B (4 GB), ELYZA-7B (6 GB), Qwen3 8B (JA/ZH/EN), Phi-4 (10–12 GB): vier lokale LLMs für japanische Texte — alle über Ollama ausführbar.',
     heroImage: '/images/best-japanese-language-models-local-model-comparison-hero-de.webp',
     publishDate: '2026-05-27',
-    dateModified: '2026-08-30',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     quickAnswerTop: {
@@ -219,7 +219,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Läuft ein japanisches Modell auf einem 8-GB-MacBook?',
-            a: 'Ja. Rinna 3.6B Q4 und ELYZA-7B Q4_K_M laufen beide auf einem MacBook mit 8 GB Unified Memory via Ollama. Apple Silicon behandelt System-RAM als Unified Memory, sodass die vollen 8 GB dem Modell zur Verfügung stehen. Auf M1/M2-Hardware sind bei diesen Größen ~8–12 tok/s zu erwarten.',
+            a: 'Realistisch nicht. macOS selbst braucht mindestens 8 GB Unified Memory, sodass auf einem MacBook mit 8 GB für das Modell fast nichts übrig bleibt. Planen Sie stattdessen einen Mac mit 16 GB ein: Rinna 3.6B Q4 und ELYZA-7B Q4_K_M laufen dort via Ollama mit etwa 8 GB Rest. Auf M1/M2-Hardware sind bei diesen Größen ~8–12 tok/s zu erwarten.',
           },
           {
             q: 'Wie starte ich ein japanisches Modell in Ollama?',
@@ -236,7 +236,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Rinna 3.6B (4 Go), ELYZA-7B (6 Go), Qwen3 8B (JA/ZH/EN), Phi-4 (10–12 Go) : quatre LLM locaux pour le japonais, tous compatibles Ollama en 2026.',
     heroImage: '/images/best-japanese-language-models-local-model-comparison-hero-fr.webp',
     publishDate: '2026-05-27',
-    dateModified: '2026-08-30',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     quickAnswerTop: {
@@ -309,7 +309,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Un modèle japonais tourne-t-il sur un MacBook 8 Go ?',
-            a: 'Oui. Rinna 3.6B Q4 et ELYZA-7B Q4_K_M fonctionnent tous deux sur un MacBook avec 8 Go de mémoire unifiée via Ollama. Apple Silicon traite la RAM système comme mémoire unifiée, donc les 8 Go complets sont disponibles pour le modèle. Attendez ~8–12 tok/s sur hardware M1/M2 à ces tailles.',
+            a: 'Pas de façon réaliste. macOS lui-même exige au moins 8 Go de mémoire unifiée, il ne reste donc presque rien pour le modèle sur un MacBook 8 Go. Prévoyez plutôt un Mac 16 Go : Rinna 3.6B Q4 et ELYZA-7B Q4_K_M y fonctionnent via Ollama avec environ 8 Go restants. Attendez ~8–12 tok/s sur hardware M1/M2 à ces tailles.',
           },
           {
             q: 'Comment démarrer un modèle japonais dans Ollama ?',
@@ -326,7 +326,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Rinna 3.6Bは4 GB RAMで動作する最軽量の日本語ネイティブモデル。ELYZA-7Bは指示追従に最適。Qwen3 8BはJA/ZH/ENの多言語とコーディングをカバー。すべてOllama経由。',
     heroImage: '/images/best-japanese-language-models-local-model-comparison-hero-ja.webp',
     publishDate: '2026-05-27',
-    dateModified: '2026-08-30',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     quickAnswerTop: {
@@ -399,7 +399,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '8 GBのMacBookで日本語モデルは動きますか？',
-            a: 'はい。Rinna 3.6B Q4とELYZA-7B Q4_K_Mはどちらも8 GBユニファイドメモリのMacBook上でOllama経由で動作します。Apple SiliconはシステムRAMをユニファイドメモリとして扱うため、8 GB全体がモデルに利用可能です。M1/M2ハードウェアではこれらのサイズで~8–12 tok/sが期待できます。',
+            a: '現実的には難しいです。macOS自体が最低8 GBのユニファイドメモリを必要とするため、8 GBのMacBookではモデルに使える容量がほとんど残りません。代わりに16 GBのMacを想定してください。Rinna 3.6B Q4とELYZA-7B Q4_K_MはそのMacでOllama経由で約8 GBの余裕を残して動作します。M1/M2ハードウェアではこれらのサイズで~8–12 tok/sが期待できます。',
           },
           {
             q: 'Ollamaで日本語モデルを起動するには？',
@@ -416,7 +416,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Rinna 3.6B最低4 GB内存即可运行，是最轻量的日语原生本地LLM。ELYZA-7B在指令跟随方面领先。Qwen3 8B覆盖JA/ZH/EN多语言和编码。均可通过Ollama运行。',
     heroImage: '/images/best-japanese-language-models-local-model-comparison-hero-zh.webp',
     publishDate: '2026-05-27',
-    dateModified: '2026-08-30',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     quickAnswerTop: {
@@ -489,7 +489,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '8 GB MacBook能运行日语模型吗？',
-            a: '可以。Rinna 3.6B Q4和ELYZA-7B Q4_K_M都能在8 GB统一内存的MacBook上通过Ollama运行。Apple Silicon将系统内存作为统一内存处理，因此全部8 GB都可供模型使用。在M1/M2硬件上，这些规模预计可达~8–12 tok/s。',
+            a: '实际上不太可行。macOS本身至少需要8 GB统一内存，因此8 GB的MacBook几乎没有内存留给模型。请改用16 GB的Mac：Rinna 3.6B Q4和ELYZA-7B Q4_K_M在其上通过Ollama运行，约剩8 GB。在M1/M2硬件上，这些规模预计可达~8–12 tok/s。',
           },
           {
             q: '如何在Ollama中启动日语模型？',
@@ -507,7 +507,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Rinna 3.6B (4 GB), ELYZA-7B (6 GB), Qwen3 8B (multilingüe JA/ZH/EN), Phi-4 (10–12 GB): cuatro LLMs locales para tareas en japonés, todos vía Ollama en 2026.',
     heroImage: '/images/best-japanese-language-models-local-model-comparison-hero-es.webp',
     publishDate: '2026-05-27',
-    dateModified: '2026-08-30',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'CyberAgent CALM3-22B', 'Qwen3 8B', 'Phi-4'],
@@ -592,7 +592,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Funciona un modelo en japonés en un MacBook de 8 GB?',
-            a: 'Sí. Rinna 3.6B Q4 y ELYZA-7B Q4_K_M funcionan ambos en un MacBook con 8 GB de memoria unificada vía Ollama. Apple Silicon trata la RAM del sistema como memoria unificada, por lo que los 8 GB completos están disponibles para el modelo. Espera ~8–12 tok/s en hardware M1/M2 con estos tamaños.',
+            a: 'No de forma realista. macOS necesita por sí solo al menos 8 GB de memoria unificada, así que en un MacBook de 8 GB casi no queda nada para el modelo. Planifica un Mac de 16 GB: Rinna 3.6B Q4 y ELYZA-7B Q4_K_M funcionan ahí vía Ollama con unos 8 GB restantes. Espera ~8–12 tok/s en hardware M1/M2 con estos tamaños.',
           },
           {
             q: '¿Cómo inicio un modelo en japonés en Ollama?',
@@ -609,7 +609,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: '⁨Rinna 3.6B⁩ يعمل بـ⁨4 GB RAM⁩، و⁨ELYZA-7B⁩ بـ⁨6 GB⁩ للتعليمات، و⁨Qwen3 8B⁩ يغطي ⁨JA/ZH/EN⁩ — جميعها تعمل محلياً عبر ⁨Ollama⁩ بتكميم ⁨Q4⁩_⁨K⁩_⁨M⁩.',
     heroImage: '/images/best-japanese-language-models-local-model-comparison-hero-ar.webp',
     publishDate: '2026-05-27',
-    dateModified: '2026-08-30',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'CyberAgent CALM3-22B', 'Qwen3 8B', 'Phi-4'],
@@ -689,7 +689,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'هل يعمل نموذج ياباني على MacBook بـ8 جيجابايت؟',
-            a: 'نعم. يعمل Rinna 3.6B Q4 وELYZA-7B Q4_K_M كلاهما على MacBook بـ8 جيجابايت ذاكرة موحدة عبر Ollama. يعامل Apple Silicon RAM النظام كذاكرة موحدة، لذا تتوفر الـ8 جيجابايت كاملة للنموذج. توقّع ~8–12 رمز/ثانية على أجهزة M1/M2 بهذه الأحجام.',
+            a: 'ليس بشكل واقعي. يحتاج macOS نفسه إلى 8 جيجابايت ذاكرة موحدة على الأقل، لذا لا يتبقى للنموذج شيء تقريبًا على MacBook بـ8 جيجابايت. خطّط بدلًا من ذلك لجهاز Mac بـ16 جيجابايت: يعمل Rinna 3.6B Q4 وELYZA-7B Q4_K_M عليه عبر Ollama مع بقاء نحو 8 جيجابايت. توقّع ~8–12 رمز/ثانية على أجهزة M1/M2 بهذه الأحجام.',
           },
           {
             q: 'كيف أُشغّل نموذجاً يابانياً في Ollama؟',
@@ -706,7 +706,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Rinna 3.6B (4 GB), ELYZA-7B (6 GB), Qwen3 8B (multilíngue JA/ZH/EN), Phi-4 (10–12 GB): quatro LLMs locais para tarefas em japonês, todos via Ollama em 2026.',
     heroImage: '/images/best-japanese-language-models-local-model-comparison-hero-pt.webp',
     publishDate: '2026-05-27',
-    dateModified: '2026-08-30',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'CyberAgent CALM3-22B', 'Qwen3 8B', 'Phi-4'],
@@ -801,7 +801,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Um modelo em japonês funciona em um MacBook de 8 GB?',
-            a: 'Sim. Rinna 3.6B Q4 e ELYZA-7B Q4_K_M funcionam ambos em um MacBook com 8 GB de memória unificada via Ollama. O Apple Silicon trata a RAM do sistema como memória unificada, então os 8 GB completos ficam disponíveis para o modelo. Espere ~8–12 tok/s em hardware M1/M2 com esses tamanhos.',
+            a: 'Na prática, não. O próprio macOS precisa de pelo menos 8 GB de memória unificada, então em um MacBook de 8 GB quase nada sobra para o modelo. Planeje um Mac de 16 GB: o Rinna 3.6B Q4 e o ELYZA-7B Q4_K_M rodam nele via Ollama com cerca de 8 GB restantes. Espere ~8–12 tok/s em hardware M1/M2 com esses tamanhos.',
           },
           {
             q: 'Como inicio um modelo em japonês no Ollama?',
@@ -818,7 +818,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Rinna 3.6B (4 GB), ELYZA-7B (6 GB), Qwen3 8B (다국어 JA/ZH/EN), Phi-4 (10–12 GB): 2026년 Ollama를 통해 실행하는 일본어 작업용 로컬 LLM 4종 비교.',
     heroImage: '/images/best-japanese-language-models-local-model-comparison-hero-ko.webp',
     publishDate: '2026-05-27',
-    dateModified: '2026-08-30',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'CyberAgent CALM3-22B', 'Qwen3 8B', 'Phi-4'],
@@ -908,7 +908,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '8 GB MacBook에서 일본어 모델이 작동합니까?',
-            a: '예. Rinna 3.6B Q4와 ELYZA-7B Q4_K_M 모두 Ollama를 통해 8 GB 통합 메모리를 갖춘 MacBook에서 실행됩니다. Apple Silicon은 시스템 RAM을 통합 메모리로 처리하므로 8 GB 전체가 모델에 사용됩니다. M1/M2 하드웨어에서 이 크기의 모델은 약 8–12 tok/s를 기대할 수 있습니다.',
+            a: '현실적으로는 어렵습니다. macOS 자체가 최소 8 GB의 통합 메모리를 필요로 하므로 8 GB MacBook에서는 모델에 쓸 용량이 거의 남지 않습니다. 대신 16 GB Mac을 계획하십시오. Rinna 3.6B Q4와 ELYZA-7B Q4_K_M은 Ollama를 통해 약 8 GB가 남는 상태로 실행됩니다. M1/M2 하드웨어에서 이 크기의 모델은 약 8–12 tok/s를 기대할 수 있습니다.',
           },
           {
             q: 'Ollama에서 일본어 모델을 시작하는 방법은 무엇입니까?',

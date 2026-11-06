@@ -2,12 +2,14 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
 import { useLang } from '@/hooks/useLang';
-import { MODEL_SIZES, QUANT_BITS, CONTEXT_OVERHEAD, BATCH_MULTIPLIER, estimateVram } from '@/lib/vram';
+import { MODEL_SIZES, QUANT_BITS, CONTEXT_OVERHEAD, BATCH_MULTIPLIER, MAC_OS_RESERVE_GB, estimateVram, macUsableGb } from '@/lib/vram';
 
 interface GPU {
   name: string;
   vram: number;
   price?: number;
+  /** Apple unified memory: macOS needs a flat 8 GB, so only vram - 8 is usable for the model. */
+  unified?: boolean;
 }
 
 interface Tooltip {
@@ -396,10 +398,10 @@ const GPUS: GPU[] = [
   { name: 'RTX 4080 Super', vram: 16, price: 1150 },
   { name: 'RTX 4090', vram: 24, price: 2500 },
   { name: 'RTX 5090', vram: 32, price: 3949 },
-  { name: 'Mac Mini M6 (32 GB)', vram: 32, price: 899 },
-  { name: 'Mac Mini M5 Pro (64 GB)', vram: 64, price: 1699 },
-  { name: 'Mac Studio M5 Max (128 GB)', vram: 128, price: 2499 },
-  { name: 'Mac Studio M5 Ultra (96 GB+)', vram: 96, price: 5499 },
+  { name: 'Mac Mini M6 (32 GB)', vram: 32, price: 899, unified: true },
+  { name: 'Mac Mini M5 Pro (64 GB)', vram: 64, price: 1699, unified: true },
+  { name: 'Mac Studio M5 Max (128 GB)', vram: 128, price: 2499, unified: true },
+  { name: 'Mac Studio M5 Ultra (96 GB+)', vram: 96, price: 5499, unified: true },
 ];
 
 export function VramCalculator() {
@@ -704,15 +706,16 @@ export function VramCalculator() {
         <h3 className="text-sm font-semibold text-slate-800">{t.compatibleGPUs}</h3>
         <div className="space-y-2">
           {GPUS.map((gpu) => {
-            const fit = getGpuFit(required, gpu.vram);
+            const usable = gpu.unified ? macUsableGb(gpu.vram) : gpu.vram;
+            const fit = getGpuFit(required, usable);
             return (
               <div key={gpu.name} className={`${fit.color} border border-slate-200 rounded-lg p-3 flex items-center justify-between`}>
                 <div>
-                  <p className={`font-semibold ${fit.text}`}>{gpu.name} ({gpu.vram} GB)</p>
+                  <p className={`font-semibold ${fit.text}`}>{gpu.name} ({gpu.unified ? `−${MAC_OS_RESERVE_GB} GB macOS = ${usable} GB` : `${gpu.vram} GB`})</p>
                   <p className="text-xs text-slate-600">
-                    {gpu.vram >= required
-                      ? `${(gpu.vram - required).toFixed(1)} ${t.headroom}`
-                      : `${t.shortBy} ${(required - gpu.vram).toFixed(1)} GB`}
+                    {usable >= required
+                      ? `${(usable - required).toFixed(1)} ${t.headroom}`
+                      : `${t.shortBy} ${(required - usable).toFixed(1)} GB`}
                   </p>
                 </div>
                 <span className="text-lg font-bold">{fit.status}</span>

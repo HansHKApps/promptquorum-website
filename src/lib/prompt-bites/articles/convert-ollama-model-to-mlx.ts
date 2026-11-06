@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tool Comparisons',
     heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-en.webp',
     title: 'How to Convert Ollama Models to MLX Format',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: 'Convert Ollama Model to MLX 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'You cannot directly convert Ollama models to MLX. Instead, use Hugging Face weights + mlx-lm convert. Most popular models already have pre-converted MLX versions on Hugging Face.',
     publishDate: '2026-05-22',
@@ -126,7 +126,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'What quantization should I use when converting to MLX?',
-            a: 'For most 7B–14B models on 16 GB unified memory, use 4-bit quantization (the default with the <code>-q</code> flag). For a 7B model, this produces a ~4 GB model that runs well on M1/M2/M3/M4 chips. Use 8-bit only if you have 32 GB or more and need higher output quality.',
+            a: 'For 7B–8B models on 16 GB unified memory (about 8 GB usable after macOS) and 14B models on 24 GB, use 4-bit quantization (the default with the <code>-q</code> flag). For a 7B model, this produces a ~4 GB model that runs well on M1/M2/M3/M4 chips. Use 8-bit only if you have 32 GB or more and need higher output quality.',
           },
           {
             q: 'Does Ollama now run models on MLX?',
@@ -152,7 +152,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama-Modell zu MLX konvertieren 2026',
     metaDescription: 'Ollama-Modelle lassen sich nicht direkt in MLX konvertieren. Nutzen Sie Hugging-Face-Gewichte + mlx-lm convert. Viele Modelle gibt es bereits vorkonvertiert.',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
@@ -221,7 +221,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Welche Quantisierung sollte ich bei der MLX-Konvertierung verwenden?',
-            a: 'Für die meisten 7B–14B-Modelle mit 16 GB Unified Memory empfiehlt sich 4-Bit-Quantisierung (Standard mit dem Flag <code>-q</code>). Bei einem 7B-Modell ergibt das ein ~4 GB großes Modell, das auf M1/M2/M3/M4-Chips gut läuft. Verwenden Sie 8-Bit nur, wenn Sie 32 GB oder mehr haben und höhere Ausgabequalität benötigen.',
+            a: 'Für 7B–8B-Modelle mit 16 GB Unified Memory (nach macOS bleiben etwa 8 GB nutzbar) und 14B-Modelle mit 24 GB empfiehlt sich 4-Bit-Quantisierung (Standard mit dem Flag <code>-q</code>). Bei einem 7B-Modell ergibt das ein ~4 GB großes Modell, das auf M1/M2/M3/M4-Chips gut läuft. Verwenden Sie 8-Bit nur, wenn Sie 32 GB oder mehr haben und höhere Ausgabequalität benötigen.',
           },
           {
             q: 'Führt Ollama Modelle inzwischen über MLX aus?',
@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Convertir un modèle Ollama en MLX 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Vous ne pouvez pas convertir directement les modèles Ollama en MLX. Utilisez plutôt les poids Hugging Face + mlx-lm convert. La plupart des modèles populaires disposent déjà de versions MLX pré-converties sur Hugging Face.',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
@@ -316,7 +316,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quelle quantification utiliser lors de la conversion en MLX ?',
-            a: 'Pour la plupart des modèles 7B–14B sur 16 Go de mémoire unifiée, utilisez la quantification en 4 bits (la valeur par défaut avec le flag <code>-q</code>). Pour un modèle 7B, cela produit un modèle d\'environ 4 Go qui fonctionne bien sur les puces M1/M2/M3/M4. Utilisez 8 bits uniquement si vous disposez de 32 Go ou plus et avez besoin d\'une meilleure qualité de sortie.',
+            a: 'Pour les modèles 7B–8B sur 16 Go de mémoire unifiée (environ 8 Go utilisables après macOS) et les modèles 14B sur 24 Go, utilisez la quantification en 4 bits (la valeur par défaut avec le flag <code>-q</code>). Pour un modèle 7B, cela produit un modèle d\'environ 4 Go qui fonctionne bien sur les puces M1/M2/M3/M4. Utilisez 8 bits uniquement si vous disposez de 32 Go ou plus et avez besoin d\'une meilleure qualité de sortie.',
           },
           {
             q: 'Ollama exécute-t-il désormais des modèles via MLX ?',
@@ -342,7 +342,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'OllamaモデルをMLXに変換 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'OllamaモデルをMLXに直接変換することはできません。代わりにHugging Faceの重みとmlx-lm convertを使用してください。Qwen 3をはじめ多くの人気モデルはHugging Faceにすでに事前変換済みMLXバージョンが存在します。',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
@@ -411,7 +411,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'MLXに変換する際にどの量子化を使用すべきですか？',
-            a: '16 GBのユニファイドメモリを持つほとんどの7B〜14BモデルにはM1/M2/M3/M4チップで4ビット量子化（<code>-q</code>フラグのデフォルト）を使用してください。7Bモデルの場合、約4 GBのモデルが生成され、良好に動作します。8ビットは32 GB以上の場合で、より高い出力品質が必要な場合のみ使用してください。',
+            a: '16 GBのユニファイドメモリ（macOS分を除き約8 GBが使用可能）の7B〜8Bモデルと24 GBの14BモデルにはM1/M2/M3/M4チップで4ビット量子化（<code>-q</code>フラグのデフォルト）を使用してください。7Bモデルの場合、約4 GBのモデルが生成され、良好に動作します。8ビットは32 GB以上の場合で、より高い出力品質が必要な場合のみ使用してください。',
           },
           {
             q: 'OllamaはすでにMLXでモデルを実行できますか？',
@@ -437,7 +437,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '将 Ollama 模型转换为 MLX 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '您无法直接将 Ollama 模型转换为 MLX 格式。请改用 Hugging Face 权重 + mlx-lm convert。大多数流行模型在 Hugging Face 上已有预转换的 MLX 版本。',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
@@ -506,7 +506,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '转换为 MLX 时应使用哪种量化方式？',
-            a: '对于 16 GB 统一内存上的大多数 7B–14B 模型，请使用 4 位量化（<code>-q</code> 标志的默认值）。对于 7B 模型，这会生成约 4 GB 的模型，在 M1/M2/M3/M4 芯片上运行良好。仅在拥有 32 GB 或以上内存且需要更高输出质量时才使用 8 位量化。',
+            a: '对于 16 GB 统一内存（扣除 macOS 后约有 8 GB 可用）上的 7B–8B 模型和 24 GB 上的 14B 模型，请使用 4 位量化（<code>-q</code> 标志的默认值）。对于 7B 模型，这会生成约 4 GB 的模型，在 M1/M2/M3/M4 芯片上运行良好。仅在拥有 32 GB 或以上内存且需要更高输出质量时才使用 8 位量化。',
           },
           {
             q: 'Ollama 现在能通过 MLX 运行模型吗？',
@@ -532,7 +532,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Converter modelos do Ollama para MLX 2026 | PromptQuorum',
     metaDescription: 'Você não pode converter modelos do Ollama para MLX diretamente. Use pesos do Hugging Face + mlx-lm convert. A maioria dos modelos populares já tem versão MLX pré-convertida.',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     current_models_mentioned: ['Llama 3', 'Qwen3.5', 'Mistral', 'DeepSeek V4.1 Flash'],
@@ -608,7 +608,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Qual quantização devo usar ao converter para MLX?',
-            a: 'Para a maioria dos modelos de 7B a 14B com 16 GB de memória unificada, use quantização de 4 bits (o padrão com a flag <code>-q</code>). Para um modelo de 7B, isso gera cerca de 4 GB e roda bem em chips M1/M2/M3/M4. Use 8 bits apenas com 32 GB ou mais e se precisar de maior qualidade de saída.',
+            a: 'Para modelos de 7B a 8B com 16 GB de memória unificada (sobram cerca de 8 GB utilizáveis após o macOS) e modelos de 14B com 24 GB, use quantização de 4 bits (o padrão com a flag <code>-q</code>). Para um modelo de 7B, isso gera cerca de 4 GB e roda bem em chips M1/M2/M3/M4. Use 8 bits apenas com 32 GB ou mais e se precisar de maior qualidade de saída.',
           },
           {
             q: 'O Ollama já executa modelos via MLX?',
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Convertir modelos de Ollama a MLX 2026 | PromptQuorum',
     metaDescription: 'No puedes convertir modelos de Ollama a MLX directamente. Usa pesos de Hugging Face + mlx-lm convert. La mayoría de modelos populares ya tienen versión MLX.',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     current_models_mentioned: ['Llama 3', 'Qwen3.5', 'Mistral', 'DeepSeek V4.1 Flash'],
@@ -710,7 +710,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Qué cuantización debo usar al convertir a MLX?',
-            a: 'Para la mayoría de los modelos de 7B a 14B con 16 GB de memoria unificada, usa cuantización de 4 bits (el valor por defecto con la opción <code>-q</code>). En un modelo de 7B resulta en unos 4 GB y funciona bien en chips M1/M2/M3/M4. Usa 8 bits solo con 32 GB o más y si necesitas mayor calidad de salida.',
+            a: 'Para modelos de 7B a 8B con 16 GB de memoria unificada (quedan unos 8 GB utilizables tras macOS) y modelos de 14B con 24 GB, usa cuantización de 4 bits (el valor por defecto con la opción <code>-q</code>). En un modelo de 7B resulta en unos 4 GB y funciona bien en chips M1/M2/M3/M4. Usa 8 bits solo con 32 GB o más y si necesitas mayor calidad de salida.',
           },
           {
             q: '¿Ejecuta ya Ollama modelos mediante MLX?',
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'تحويل نماذج ⁨Ollama⁩ إلى ⁨MLX 2026⁩ | ⁨PromptQuorum⁩',
     metaDescription: 'معظم نماذج ⁨Llama 3⁩ و⁨Qwen⁩ و⁨Mistral⁩ لها نسخ ⁨MLX⁩ جاهزة على ⁨Hugging Face⁩. لا يمكن تحويل نماذج ⁨Ollama⁩ مباشرةً؛ استخدم ⁨mlx-lm convert⁩.',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     current_models_mentioned: ['Llama 3', 'Qwen3.5', 'Mistral', 'DeepSeek V4.1 Flash'],
@@ -812,7 +812,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'ما مستوى التكميم المناسب عند التحويل إلى MLX؟',
-            a: 'لمعظم نماذج 7B–14B على ذاكرة موحّدة 16 GB، استخدم تكميم 4 بت (الإعداد الافتراضي مع الخيار <code>-q</code>). ينتج عنه لنموذج 7B حجم نحو 4 GB يعمل جيدًا على رقائق M1/M2/M3/M4. استخدم 8 بت فقط إذا كانت لديك ذاكرة 32 GB أو أكثر وتحتاج إلى جودة إخراج أعلى.',
+            a: 'لنماذج 7B–8B على ذاكرة موحّدة 16 GB (يتبقى نحو 8 GB قابلة للاستخدام بعد macOS) ولنماذج 14B على 24 GB، استخدم تكميم 4 بت (الإعداد الافتراضي مع الخيار <code>-q</code>). ينتج عنه لنموذج 7B حجم نحو 4 GB يعمل جيدًا على رقائق M1/M2/M3/M4. استخدم 8 بت فقط إذا كانت لديك ذاكرة 32 GB أو أكثر وتحتاج إلى جودة إخراج أعلى.',
           },
           {
             q: 'هل يشغّل Ollama النماذج عبر MLX الآن؟',
@@ -838,7 +838,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama 모델 MLX 변환 2026 | PromptQuorum',
     metaDescription: 'Ollama 모델을 MLX로 직접 변환할 수 없습니다. Hugging Face 가중치와 mlx-lm convert를 사용하십시오. 대부분의 인기 모델은 이미 MLX 버전이 존재합니다.',
     publishDate: '2026-05-22',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     current_models_mentioned: ['Llama 3', 'Qwen3.5', 'Mistral', 'DeepSeek V4.1 Flash'],
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'MLX로 변환할 때 어떤 양자화를 사용해야 합니까?',
-            a: '통합 메모리 16 GB의 7B~14B 모델 대부분에는 4비트 양자화(<code>-q</code> 플래그의 기본값)를 사용하십시오. 7B 모델은 약 4 GB가 되어 M1/M2/M3/M4 칩에서 잘 실행됩니다. 8비트는 32 GB 이상이면서 더 높은 출력 품질이 필요할 때만 사용하십시오.',
+            a: '통합 메모리 16 GB(macOS 사용분을 제외하고 약 8 GB 사용 가능)의 7B~8B 모델과 24 GB의 14B 모델에는 4비트 양자화(<code>-q</code> 플래그의 기본값)를 사용하십시오. 7B 모델은 약 4 GB가 되어 M1/M2/M3/M4 칩에서 잘 실행됩니다. 8비트는 32 GB 이상이면서 더 높은 출력 품질이 필요할 때만 사용하십시오.',
           },
           {
             q: 'Ollama는 이제 MLX로 모델을 실행합니까?',

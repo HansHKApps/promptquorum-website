@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-en.webp',
     twitterDescription: 'Which Mac for local LLMs? M6, M5 Pro, M5 Max, M5 Ultra: memory tiers, 1.2 TB/s bandwidth, first independent M5 Ultra benchmarks, buying guide.',
     publishDate: '2026-05-15',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-11-02',
     next_seo_review_due: '2027-01-01',
     last_seo_review: '2026-11-02',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Apple Silicon for local LLMs',
     targetKeywords: ['Apple Silicon LLM', 'M5 Max local LLM', 'M5 Pro local LLM', 'M5 Ultra LLM', 'M6 local LLM', 'MacBook Air M5 local LLM', 'unified memory vs VRAM'],
     ctaText: 'Running an LLM on Apple Silicon? Compare your local model output against GPT-4, Claude, Gemini, and 22 other cloud models in a single dispatch with PromptQuorum — see where your local setup matches cloud quality and where it falls short.',
-    leadAnswerBlock: '**Apple Silicon has no separate VRAM limit: the model can use all unified memory, from 16GB (Mac mini M6) to 512GB (Mac Studio M5 Ultra). Estimated speeds: 15–20 tok/s for 34B models on an M5 Pro (64GB) and 12–18 tok/s for 70B models on an M5 Max (128GB).**',
+    leadAnswerBlock: '**Apple Silicon has no separate VRAM limit: models use unified memory minus the 8GB macOS needs, on Macs from 16GB (Mac mini M6) to 512GB (Mac Studio M5 Ultra). Estimated speeds: 15–20 tok/s for 34B models on an M5 Pro (64GB) and 12–18 tok/s for 70B models on an M5 Max (128GB).**',
     quickAnswerTop: {
       en: {
         question: 'What Apple Silicon Mac should I buy for local LLMs in 2026?',
@@ -65,11 +65,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         snippetBlocks: [
           { type: 'one-sentence', text: 'Apple\'s August 25, 2026 refresh (on sale since September 22) brought the M6 chip to Mac mini ($899 for 16GB, up to 32GB) and M5 Max/M5 Ultra (1.2 TB/s, up to 512GB) to Mac Studio; M5 Pro (64 GB) runs 8B models at 45–55 tok/s (estimate) and 34B at 15–20 tok/s (estimate), M5 Max (128 GB) runs 70B at 12–18 tok/s (estimate) — with no VRAM limits thanks to unified memory.' },
-          { type: 'plain-terms', text: 'Unified memory means the CPU, GPU, and AI engine all share the same pool of memory — so a Mac Studio with the top M5 Ultra configuration can use up to 512 GB for a model, unlike a GPU which is capped at its VRAM (max 24 GB for RTX 4090). That\'s why Macs can run 70B- and now 120B+-parameter models that no NVIDIA consumer GPU can fit.' },
+          { type: 'plain-terms', text: 'Unified memory means the CPU, GPU, and AI engine all share the same pool of memory — so a Mac Studio with the top M5 Ultra configuration can use roughly 504 GB (512 GB minus the 8 GB macOS needs) for a model, unlike a GPU which is capped at its VRAM (max 24 GB for RTX 4090). That\'s why Macs can run 70B- and now 120B+-parameter models that no NVIDIA consumer GPU can fit.' },
         ],
         items: [
           'Apple refreshed Mac mini (M6, M5 Pro) and Mac Studio (M5 Max, M5 Ultra) on August 25, 2026 — on sale since September 22, 2026; the 512GB M5 Ultra configuration became orderable on October 28, 2026 (from $22,299).',
-          'Apple Silicon removes VRAM limits — unified memory from 16 GB (Mac mini M6 base) up to 512 GB (Mac Studio M5 Ultra top config) is available to models. RTX 4090 maxes out at 24GB discrete VRAM.',
+          'Apple Silicon removes VRAM limits — unified memory from 16 GB (Mac mini M6 base) up to 512 GB (Mac Studio M5 Ultra top config) is shared between macOS and models; deduct about 8 GB for macOS. RTX 4090 maxes out at 24GB discrete VRAM.',
           'M5 Pro (64GB) runs 8B models at 45–55 tok/s (estimate) and 34B models at 15–20 tok/s (estimate). M5 Max (128GB) runs 70B models at 12–18 tok/s (estimate). M5 Ultra\'s memory ceiling opens up 120B+ models for the first time on consumer hardware.',
           'Estimated annual electricity for 24/7 LLM inference (illustrative, at $0.15/kWh; not measured): $35–55 on Mac Mini M6 vs $300–400 on a desktop RTX 4090 — roughly a 10× difference.',
           'Metal GPU acceleration works automatically in Ollama, MLX, llama.cpp. Zero driver configuration needed.',
@@ -94,11 +94,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-apple-silicon',
         title: 'Why Apple Silicon for Local LLMs?',
         content: [
-          'Apple Silicon excels at local LLM inference for one reason: unified memory. When you buy a Mac with 64GB RAM, all 64GB is available to your LLM model. A discrete GPU like RTX 4090 has 24GB VRAM (separate from your system RAM) — models larger than 24GB simply do not fit without complex multi-GPU setups.',
+          'Apple Silicon excels at local LLM inference for one reason: unified memory. When you buy a Mac with 64GB RAM, about 56GB (64GB minus the 8GB macOS needs) is available to your LLM model. A discrete GPU like RTX 4090 has 24GB VRAM (separate from your system RAM) — models larger than 24GB simply do not fit without complex multi-GPU setups.',
           'This single architectural difference is transformative:',
         ],
         items: [
-          'Unified memory: entire RAM available (16GB to 512GB depending on chip). RTX 4090: discrete VRAM only (24GB hard limit).',
+          'Unified memory: RAM minus about 8GB for macOS available (16GB to 512GB total depending on chip). RTX 4090: discrete VRAM only (24GB hard limit).',
           'Metal acceleration: GPU inference without CUDA dependency or proprietary drivers.',
           'Power efficiency: 20–100W under load vs 300W+ for desktop GPU. Enables fanless or near-silent operation.',
           'Silence: MacBook Air is fanless; Apple lists 5 dBA at idle for Mac mini.',
@@ -157,7 +157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Memory Bandwidth Matters More Than Memory Size',
         content: [
           'LLM inference is memory-bandwidth-bound, not compute-bound. This means token generation speed scales linearly with bandwidth, not GPU cores.',
-          'M5 Max at 614 GB/s vs RTX 4090 at 1,008 GB/s looks like NVIDIA wins on raw bandwidth. But Apple Silicon users have ALL memory available (no discrete VRAM limit), so they can load larger models that NVIDIA cannot fit into 24GB. The real comparison: M5 Max at 614 GB/s running a 70B model vs an RTX 4090 that cannot hold the 70B model entirely in its 24GB (CPU offload is possible but much slower).',
+          'M5 Max at 614 GB/s vs RTX 4090 at 1,008 GB/s looks like NVIDIA wins on raw bandwidth. But Apple Silicon users can use nearly all memory (total minus about 8GB for macOS, no discrete VRAM limit), so they can load larger models that NVIDIA cannot fit into 24GB. The real comparison: M5 Max at 614 GB/s running a 70B model vs an RTX 4090 that cannot hold the 70B model entirely in its 24GB (CPU offload is possible but much slower).',
           'Within the M-series lineup, bandwidth differences directly translate to token/sec:',
         ],
         items: [
@@ -268,7 +268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can a MacBook Air M5 run local LLMs?',
-            a: 'Yes, with limitations. MacBook Air M5 (16–32GB) runs 7–13B models comfortably. Thermal throttling kicks in after 10–15 minutes of sustained inference on the fanless design. For occasional use: fine. For always-on inference: Mac Mini M5 Pro is a better fit.',
+            a: 'Yes, with limitations. MacBook Air M5 runs 7–8B models on 16GB (about 8GB left after macOS) and up to 13B models on 24–32GB. Thermal throttling kicks in after 10–15 minutes of sustained inference on the fanless design. For occasional use: fine. For always-on inference: Mac Mini M5 Pro is a better fit.',
           },
             { q: 'What is the Apple M6 local LLM performance?', a: 'Apple has published only relative claims: up to 4x faster AI performance and 40% faster CPU than the M4 Mac mini. In Apple\'s August 2026 refresh the M6 debuted in the Mac mini only ($899 for 16GB, up to 32GB, up to 170 GB/s). Because generation speed follows memory bandwidth, expect it to land near the M5 base chip rather than M5 Pro; we have not verified independent M6 tok/s figures yet.' },
             { q: 'What is the best local LLM setup for an M1 Mac with 32GB?', a: 'An M1 Pro or M1 Max with 32GB (200 GB/s and 400 GB/s) fits 13B models at Q4 comfortably, which is the sweet spot in the chip table above; an M1 Max with 64GB reaches 34B at Q4. The original M1 tops out at 16GB, so stay at 7B Q4 there.' },
@@ -315,7 +315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-es.webp',
     twitterDescription: 'Apple Silicon para LLMs locales: M1→M6, renovación de Mac mini/Studio ago 2026, memoria unificada, GPU Metal, MLX vs Ollama. Guía completa 2026.',
     publishDate: '2026-05-15',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     current_models_mentioned: ['Llama 3.1 8B', 'Llama 3.3 70B', 'Mistral Small', 'Phi-4', 'Whisper large-v3', 'LLaVA 7B'],
     current_hardware_mentioned: ['M1', 'M1 Pro', 'M1 Max', 'M1 Ultra', 'M2', 'M2 Pro', 'M2 Max', 'M2 Ultra', 'M3', 'M3 Pro', 'M3 Max', 'M4', 'M4 Pro', 'M4 Max', 'M5', 'M5 Pro', 'M5 Max', 'M5 Ultra', 'M6', 'RTX 4090'],
     audience: 'Usuarios de Mac que consideran o ya ejecutan LLMs locales, compradores que evalúan configuraciones de Mac para cargas de trabajo de IA.',
@@ -324,7 +324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Apple Silicon para LLMs locales',
     targetKeywords: ['Apple Silicon LLM', 'M5 Pro M5 Max LLM local', 'M5 Ultra LLM', 'M6 LLM local', 'MacBook Air M5 LLM local', 'memoria unificada vs VRAM'],
     ctaText: '¿Ejecutas un LLM en Apple Silicon? Compara la salida de tu modelo M5 local con GPT-4, Claude, Gemini y otros 22 modelos en la nube en un solo despacho con PromptQuorum — descubre dónde tu configuración local iguala la calidad de la nube y dónde se queda corta.',
-    leadAnswerBlock: '**Apple Silicon no tiene un límite de VRAM aparte: el modelo puede usar toda la memoria unificada, desde 16GB (Mac mini M6) hasta 512GB (Mac Studio M5 Ultra). Velocidades estimadas: 15–20 tok/s con modelos 34B en M5 Pro (64GB) y 12–18 tok/s con modelos 70B en M5 Max (128GB).**',
+    leadAnswerBlock: '**Apple Silicon no tiene un límite de VRAM aparte: el modelo usa la memoria unificada menos los 8GB que necesita macOS, en Macs desde 16GB (Mac mini M6) hasta 512GB (Mac Studio M5 Ultra). Velocidades estimadas: 15–20 tok/s con modelos 34B en M5 Pro (64GB) y 12–18 tok/s con modelos 70B en M5 Max (128GB).**',
     quickAnswerTop: {
       es: {
         question: '¿Qué Mac Apple Silicon debo comprar para LLMs locales en 2026?',
@@ -359,10 +359,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         snippetBlocks: [
           { type: 'one-sentence', text: 'La renovación de Apple del 25 ago 2026 (a la venta desde el 22 sep) llevó el M6 al Mac mini ($899 con 16GB, hasta 32GB) y M5 Max/M5 Ultra (1.2 TB/s, hasta 512GB) al Mac Studio; el M5 Pro (64 GB) ejecuta modelos 8B a 45–55 tok/s (estimación) y 34B a 15–20 tok/s (estimación), el M5 Max (128 GB) ejecuta 70B a 12–18 tok/s (estimación) — sin límites de VRAM gracias a la memoria unificada.' },
-          { type: 'plain-terms', text: 'La memoria unificada significa que CPU, GPU y motor IA comparten el mismo pool de memoria. Un Mac de 128 GB puede usar todo ese espacio para un modelo, a diferencia de una GPU limitada a su VRAM (máx. 24 GB para RTX 4090). Por eso los Macs pueden ejecutar modelos 70B que ninguna GPU NVIDIA de consumo puede alojar.' },
+          { type: 'plain-terms', text: 'La memoria unificada significa que CPU, GPU y motor IA comparten el mismo pool de memoria. Un Mac de 128 GB puede usar unos 120 GB (128 GB menos los 8 GB de macOS) para un modelo, a diferencia de una GPU limitada a su VRAM (máx. 24 GB para RTX 4090). Por eso los Macs pueden ejecutar modelos 70B que ninguna GPU NVIDIA de consumo puede alojar.' },
         ],
         items: [
-          'Apple Silicon elimina los límites de VRAM — toda la memoria unificada, desde 16 GB (Mac mini M6 base) hasta 512 GB (Mac Studio M5 Ultra, configuración máxima), está disponible para los modelos. El RTX 4090 tiene un máximo de 24GB de VRAM discreta.',
+          'Apple Silicon elimina los límites de VRAM — la memoria unificada, desde 16 GB (Mac mini M6 base) hasta 512 GB (Mac Studio M5 Ultra, configuración máxima), se comparte entre macOS y los modelos; descuenta unos 8 GB para macOS. El RTX 4090 tiene un máximo de 24GB de VRAM discreta.',
           'M5 Pro (64GB) ejecuta modelos 8B a 45–55 tok/s (estimación) y modelos 34B a 15–20 tok/s (estimación). M5 Max (128GB) ejecuta modelos 70B a 12–18 tok/s (estimación).',
           'Costo anual estimado de electricidad para inferencia 24/7 (orientativo, a $0,15/kWh; no medido): $35–55 en Mac Mini M6 vs $300–400 en un RTX 4090 de escritorio — una diferencia de aproximadamente 10×.',
           'La aceleración GPU Metal funciona automáticamente en Ollama, MLX y llama.cpp. Sin configuración de drivers necesaria.',
@@ -387,11 +387,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-apple-silicon',
         title: '¿Por qué Apple Silicon para LLMs locales?',
         content: [
-          'Apple Silicon destaca en la inferencia LLM local por una razón: la memoria unificada. Cuando compras un Mac con 64GB de RAM, los 64GB completos están disponibles para tu modelo LLM. Una GPU discreta como el RTX 4090 tiene 24GB de VRAM (separados de tu RAM del sistema) — los modelos más grandes de 24GB simplemente no caben sin configuraciones multi-GPU complejas.',
+          'Apple Silicon destaca en la inferencia LLM local por una razón: la memoria unificada. Cuando compras un Mac con 64GB de RAM, quedan unos 56GB (64GB menos los 8GB que necesita macOS) disponibles para tu modelo LLM. Una GPU discreta como el RTX 4090 tiene 24GB de VRAM (separados de tu RAM del sistema) — los modelos más grandes de 24GB simplemente no caben sin configuraciones multi-GPU complejas.',
           'Esta única diferencia arquitectónica es transformadora:',
         ],
         items: [
-          'Memoria unificada: toda la RAM disponible (de 16GB a 512GB según el chip). RTX 4090: solo VRAM discreta (límite duro de 24GB).',
+          'Memoria unificada: RAM disponible menos unos 8GB para macOS (de 16GB a 512GB en total según el chip). RTX 4090: solo VRAM discreta (límite duro de 24GB).',
           'Aceleración Metal: inferencia GPU sin dependencia de CUDA ni drivers propietarios.',
           'Eficiencia energética: 20–100W bajo carga vs 300W+ para GPU de escritorio. Permite operación sin ventilador o casi silenciosa.',
           'Silencio: el MacBook Air no tiene ventilador; Apple indica 5 dBA en reposo para el Mac mini.',
@@ -450,7 +450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'El ancho de banda de memoria importa más que el tamaño de memoria',
         content: [
           'La inferencia LLM está limitada por el ancho de banda de memoria, no por la capacidad de cómputo. Esto significa que la velocidad de generación de tokens escala linealmente con el ancho de banda, no con los núcleos GPU.',
-          'M5 Max a 614 GB/s vs RTX 4090 a 1.008 GB/s parece que NVIDIA gana en ancho de banda bruto. Pero los usuarios de Apple Silicon tienen TODA la memoria disponible (sin límite de VRAM discreta), por lo que pueden cargar modelos más grandes que NVIDIA no puede alojar en 24GB. La comparación real: M5 Max a 614 GB/s ejecutando un modelo 70B vs un RTX 4090 que no puede alojar el modelo 70B entero en sus 24GB (se puede descargar parte a la CPU, pero es mucho más lento).',
+          'M5 Max a 614 GB/s vs RTX 4090 a 1.008 GB/s parece que NVIDIA gana en ancho de banda bruto. Pero los usuarios de Apple Silicon pueden usar casi toda la memoria (el total menos unos 8GB para macOS, sin límite de VRAM discreta), por lo que pueden cargar modelos más grandes que NVIDIA no puede alojar en 24GB. La comparación real: M5 Max a 614 GB/s ejecutando un modelo 70B vs un RTX 4090 que no puede alojar el modelo 70B entero en sus 24GB (se puede descargar parte a la CPU, pero es mucho más lento).',
           'Dentro de la línea M, las diferencias de ancho de banda se traducen directamente en tok/s:',
         ],
         items: [
@@ -563,7 +563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puede un MacBook Air M5 ejecutar LLMs locales?',
-            a: 'Sí, con limitaciones. MacBook Air M5 (16–32GB) ejecuta modelos 7–13B cómodamente. El throttling térmico aparece después de 10–15 minutos de inferencia continua en el diseño sin ventilador. Para uso ocasional: perfecto. Para inferencia siempre activa: Mac Mini M5 Pro es más adecuado.',
+            a: 'Sí, con limitaciones. MacBook Air M5 ejecuta modelos 7–8B con 16GB (quedan unos 8GB tras macOS) y hasta 13B con 24–32GB. El throttling térmico aparece después de 10–15 minutos de inferencia continua en el diseño sin ventilador. Para uso ocasional: perfecto. Para inferencia siempre activa: Mac Mini M5 Pro es más adecuado.',
           },
           {
             q: '¿Cuál es el rendimiento del Apple M6 con LLMs locales?',
@@ -614,7 +614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/local-llms/apple-silicon-local-llm-guide-2026',
       inLanguage: 'es',
       datePublished: '2026-05-15',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -632,7 +632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ar.webp',
     twitterDescription: '⁨Apple Silicon⁩ لنماذج ⁨LLM⁩ المحلية: ⁨M1⁩→⁨M6⁩، تحديث ⁨Mac mini⁩/⁨Studio⁩ أغسطس ⁨2026⁩، الذاكرة الموحدة، ⁨GPU Metal⁩، ⁨MLX⁩ مقابل ⁨Ollama⁩. دليل كامل ⁨2026⁩.',
     publishDate: '2026-05-15',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     current_models_mentioned: ['Llama 3.1 8B', 'Llama 3.3 70B', 'Mistral Small', 'Phi-4', 'Whisper large-v3', 'LLaVA 7B'],
     current_hardware_mentioned: ['M1', 'M1 Pro', 'M1 Max', 'M1 Ultra', 'M2', 'M2 Pro', 'M2 Max', 'M2 Ultra', 'M3', 'M3 Pro', 'M3 Max', 'M4', 'M4 Pro', 'M4 Max', 'M5', 'M5 Pro', 'M5 Max', 'M5 Ultra', 'M6', 'RTX 4090'],
     audience: 'مستخدمو Mac الذين يفكرون في تشغيل نماذج LLM المحلية أو يشغّلونها فعلًا، والمشترون الذين يقيّمون تهيئات Mac لأحمال الذكاء الاصطناعي.',
@@ -641,7 +641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Apple Silicon لنماذج LLM المحلية',
     targetKeywords: ['Apple Silicon LLM', 'نماذج LLM المحلية على Mac', 'M5 Pro وM5 Max وM5 Ultra', 'M6 LLM', 'الذاكرة الموحدة مقابل VRAM', 'تسريع GPU عبر Metal'],
     ctaText: 'هل تشغّل نموذج LLM على Apple Silicon؟ قارن مُخرج نموذجك المحلي على M5 مع GPT-4 وClaude وGemini و22 نموذجًا سحابيًا آخر في إرسال واحد عبر PromptQuorum — اكتشف أين تضاهي تهيئتك المحلية جودة السحابة وأين تقصّر.',
-    leadAnswerBlock: '**لا يفرض Apple Silicon حد VRAM منفصلًا: يستطيع النموذج استخدام كامل الذاكرة الموحدة، من 16GB (Mac mini M6) إلى 512GB (Mac Studio M5 Ultra). السرعات تقديرية: 15–20 tok/s لنماذج 34B على M5 Pro (64GB) و12–18 tok/s لنماذج 70B على M5 Max (128GB).**',
+    leadAnswerBlock: '**لا يفرض Apple Silicon حد VRAM منفصلًا: يستخدم النموذج الذاكرة الموحدة بعد خصم 8GB يحتاجها macOS، في أجهزة Mac من 16GB (Mac mini M6) إلى 512GB (Mac Studio M5 Ultra). السرعات تقديرية: 15–20 tok/s لنماذج 34B على M5 Pro (64GB) و12–18 tok/s لنماذج 70B على M5 Max (128GB).**',
     quickAnswerTop: {
       question: 'أي جهاز Mac بمعالج Apple Silicon يجب أن أشتري لنماذج LLM المحلية في 2026؟',
       answer: 'اشترِ أقصى تهيئة ذاكرة تسمح بها ميزانيتك: يبدأ Mac mini M6 من 899 دولارًا بسعة 16GB (نماذج 7–8B) ويصل إلى 32GB (نماذج 13B). Mac mini أو MacBook Pro بشريحة M5 Pro وسعة 64GB (من 1,699 دولارًا) هو النقطة المثلى لنماذج 34B ومحطات عمل الذكاء الاصطناعي المحمولة. أما Mac Studio M5 Max بسعة 128GB (2,499 دولارًا) فيشغّل نماذج 70B دون تعقيد تعدد كروت الرسوميات. ويُعد Mac Studio M5 Ultra (5,499 دولارًا بسعة 96GB، حتى 512GB من 22,299 دولارًا) من القلائل بين عتاد المستهلك الذي يشغّل نماذج 120B فأكثر. لا يمكن ترقية ذاكرة Apple Silicon بعد الشراء. الأسعار هي أسعار القائمة في الولايات المتحدة وقد تتفاوت حسب بلدك.',
@@ -674,10 +674,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         snippetBlocks: [
           { type: 'one-sentence', text: 'جلب تحديث Apple في 25 أغسطس 2026 (متاح للبيع منذ 22 سبتمبر) شريحة M6 إلى Mac mini (899 دولارًا لسعة 16GB، حتى 32GB) وM5 Max/M5 Ultra (1.2 TB/s، حتى 512GB) إلى Mac Studio؛ يشغّل M5 Pro (64 جيجابايت) نماذج 8B بسرعة 45–55 رمزاً/ثانية (تقدير) و34B بسرعة 15–20 رمزاً/ثانية (تقدير)، ويشغّل M5 Max (128 جيجابايت) نماذج 70B بسرعة 12–18 رمزاً/ثانية (تقدير) — بدون قيود VRAM بفضل الذاكرة الموحدة.' },
-          { type: 'plain-terms', text: 'الذاكرة الموحدة تعني أن وحدة المعالجة المركزية وبطاقة الرسومات ومحرك الذكاء الاصطناعي تشترك في نفس مجموعة الذاكرة. يمكن لجهاز Mac بسعة 128 جيجابايت استخدام الكل للنموذج، على عكس بطاقة الرسومات المحدودة بـ VRAM الخاصة بها (24 جيجابايت كحد أقصى لبطاقة RTX 4090). لهذا يمكن لأجهزة Mac تشغيل نماذج 70B التي لا تسعها أي بطاقة NVIDIA للمستهلكين.' },
+          { type: 'plain-terms', text: 'الذاكرة الموحدة تعني أن وحدة المعالجة المركزية وبطاقة الرسومات ومحرك الذكاء الاصطناعي تشترك في نفس مجموعة الذاكرة. يمكن لجهاز Mac بسعة 128 جيجابايت استخدام نحو 120 جيجابايت (128 جيجابايت ناقص 8 جيجابايت يحتاجها macOS) للنموذج، على عكس بطاقة الرسومات المحدودة بـ VRAM الخاصة بها (24 جيجابايت كحد أقصى لبطاقة RTX 4090). لهذا يمكن لأجهزة Mac تشغيل نماذج 70B التي لا تسعها أي بطاقة NVIDIA للمستهلكين.' },
         ],
         items: [
-          'يزيل Apple Silicon حدود VRAM — كامل الذاكرة الموحدة، من 16GB (Mac mini M6 الأساسي) حتى 512GB (Mac Studio M5 Ultra، التهيئة القصوى)، متاح للنماذج. يملك RTX 4090 حدًا أقصى 24GB من VRAM المنفصلة.',
+          'يزيل Apple Silicon حدود VRAM — الذاكرة الموحدة، من 16GB (Mac mini M6 الأساسي) حتى 512GB (Mac Studio M5 Ultra، التهيئة القصوى)، مشتركة بين macOS والنماذج؛ اخصم نحو 8GB لنظام macOS. يملك RTX 4090 حدًا أقصى 24GB من VRAM المنفصلة.',
           'يشغّل M5 Pro (64GB) نماذج 8B بسرعة 45–55 tok/s (تقدير) ونماذج 34B بسرعة 15–20 tok/s (تقدير). ويشغّل M5 Max (128GB) نماذج 70B بسرعة 12–18 tok/s (تقدير).',
           'التكلفة السنوية التقديرية للكهرباء للاستدلال على مدار الساعة (تقدير توضيحي بسعر 0.15 دولار/kWh دون قياس): 35–55 دولارًا على Mac Mini M6 مقابل 300–400 دولار على RTX 4090 المكتبي — فارق يقارب 10 أضعاف.',
           'يعمل تسريع GPU عبر Metal تلقائيًا في Ollama وMLX وllama.cpp. لا حاجة لتهيئة برامج تشغيل.',
@@ -702,11 +702,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-apple-silicon',
         title: 'لماذا Apple Silicon لنماذج LLM المحلية؟',
         content: [
-          'يتفوق Apple Silicon في استدلال LLM المحلي لسبب واحد: الذاكرة الموحدة. عندما تشتري جهاز Mac بذاكرة 64GB، تكون الـ 64GB كاملةً متاحة لنموذج LLM لديك. أما GPU منفصل مثل RTX 4090 فيملك 24GB من VRAM (منفصلة عن ذاكرة النظام) — والنماذج الأكبر من 24GB ببساطة لا تتسع دون تهيئات تعدد كروت رسوميات معقّدة.',
+          'يتفوق Apple Silicon في استدلال LLM المحلي لسبب واحد: الذاكرة الموحدة. عندما تشتري جهاز Mac بذاكرة 64GB، يتبقى نحو 56GB (64GB ناقص 8GB يحتاجها macOS) متاحة لنموذج LLM لديك. أما GPU منفصل مثل RTX 4090 فيملك 24GB من VRAM (منفصلة عن ذاكرة النظام) — والنماذج الأكبر من 24GB ببساطة لا تتسع دون تهيئات تعدد كروت رسوميات معقّدة.',
           'هذا الفارق المعماري الوحيد تحويلي:',
         ],
         items: [
-          'ذاكرة موحدة: كل الذاكرة متاحة (من 16GB إلى 512GB حسب الشريحة). RTX 4090: VRAM منفصلة فقط (حد صارم 24GB).',
+          'ذاكرة موحدة: الذاكرة المتاحة بعد خصم نحو 8GB لنظام macOS (من 16GB إلى 512GB إجمالًا حسب الشريحة). RTX 4090: VRAM منفصلة فقط (حد صارم 24GB).',
           'تسريع Metal: استدلال GPU دون اعتماد على CUDA أو برامج تشغيل مملوكة.',
           'كفاءة الطاقة: 30–70 واط تحت الحمل مقابل 300 واط فأكثر لكرت رسوميات سطح المكتب. يتيح تشغيلًا بلا مروحة أو شبه صامت.',
           'الصمت: MacBook Air بلا مروحة، وتذكر Apple مستوى 5 dBA في الخمول لجهاز Mac mini.',
@@ -765,7 +765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'عرض نطاق الذاكرة أهم من حجم الذاكرة',
         content: [
           'استدلال LLM محدود بعرض نطاق الذاكرة، لا بقدرة الحوسبة. هذا يعني أن سرعة توليد الـ tokens تتناسب خطيًا مع عرض النطاق، لا مع أنوية GPU.',
-          'M5 Max عند 614 GB/s مقابل RTX 4090 عند 1,008 GB/s يبدو أن NVIDIA تفوز في عرض النطاق الخام. لكن مستخدمي Apple Silicon يملكون كل الذاكرة متاحة (دون حد VRAM منفصلة)، لذا يمكنهم تحميل نماذج أكبر لا يستطيع NVIDIA استضافتها في 24GB. المقارنة الحقيقية: M5 Max عند 614 GB/s يشغّل نموذج 70B مقابل RTX 4090 الذي لا يستوعب نموذج 70B كاملًا في 24GB (يمكن تفريغ جزء منه إلى المعالج لكن ببطء شديد).',
+          'M5 Max عند 614 GB/s مقابل RTX 4090 عند 1,008 GB/s يبدو أن NVIDIA تفوز في عرض النطاق الخام. لكن مستخدمي Apple Silicon يستطيعون استخدام معظم الذاكرة (الإجمالي ناقص نحو 8GB لنظام macOS، دون حد VRAM منفصلة)، لذا يمكنهم تحميل نماذج أكبر لا يستطيع NVIDIA استضافتها في 24GB. المقارنة الحقيقية: M5 Max عند 614 GB/s يشغّل نموذج 70B مقابل RTX 4090 الذي لا يستوعب نموذج 70B كاملًا في 24GB (يمكن تفريغ جزء منه إلى المعالج لكن ببطء شديد).',
           'داخل خط M، تترجم فروق عرض النطاق مباشرةً إلى tok/s:',
         ],
         items: [
@@ -878,7 +878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يستطيع MacBook Air M5 تشغيل نماذج LLM المحلية؟',
-            a: 'نعم، مع قيود. يشغّل MacBook Air M5 (16–32GB) نماذج 7–13B بأريحية. يظهر خنق حراري بعد 10–15 دقيقة من الاستدلال المستمر في التصميم بلا مروحة. للاستخدام العرضي: مثالي. أما للاستدلال دائم التشغيل: فإن Mac Mini M5 Pro أنسب.',
+            a: 'نعم، مع قيود. يشغّل MacBook Air M5 نماذج 7–8B بسعة 16GB (يتبقى نحو 8GB بعد macOS) ونماذج حتى 13B بسعة 24–32GB. يظهر خنق حراري بعد 10–15 دقيقة من الاستدلال المستمر في التصميم بلا مروحة. للاستخدام العرضي: مثالي. أما للاستدلال دائم التشغيل: فإن Mac Mini M5 Pro أنسب.',
           },
           {
             q: 'ما أداء Apple M6 مع نماذج LLM المحلية؟',
@@ -929,7 +929,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/local-llms/apple-silicon-local-llm-guide-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-15',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -947,7 +947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-pt.webp',
     twitterDescription: 'Apple Silicon para LLMs locais: M1→M6, renovação de Mac mini/Studio ago 2026, memória unificada, GPU Metal, MLX vs Ollama. Guia completo 2026.',
     publishDate: '2026-05-15',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     current_models_mentioned: ['Llama 3.1 8B', 'Llama 3.3 70B', 'Mistral Small', 'Phi-4', 'Whisper large-v3', 'LLaVA 7B'],
     current_hardware_mentioned: ['M1', 'M1 Pro', 'M1 Max', 'M1 Ultra', 'M2', 'M2 Pro', 'M2 Max', 'M2 Ultra', 'M3', 'M3 Pro', 'M3 Max', 'M4', 'M4 Pro', 'M4 Max', 'M5', 'M5 Pro', 'M5 Max', 'M5 Ultra', 'M6', 'RTX 4090'],
     audience: 'Usuários de Mac que consideram ou já rodam LLMs locais, compradores avaliando configurações de Mac para cargas de trabalho de IA.',
@@ -956,7 +956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Apple Silicon para LLMs locais',
     targetKeywords: ['Apple Silicon LLM', 'M5 Pro M5 Max LLM local', 'M5 Ultra LLM', 'M6 LLM local', 'MacBook Air M5 LLM local', 'memória unificada vs VRAM'],
     ctaText: 'Você está rodando um LLM no Apple Silicon? Compare a saída do seu modelo M5 local com GPT-4, Claude, Gemini e outros 22 modelos na nuvem em um único despacho com o PromptQuorum.',
-    leadAnswerBlock: '**O Apple Silicon não tem limite de VRAM separado: o modelo usa toda a memória unificada, de 16 GB (Mac mini M6) a 512 GB (Mac Studio M5 Ultra). Estimativa de velocidade: 15-20 tok/s (34B, M5 Pro 64 GB) e 12-18 tok/s (70B, M5 Max 128 GB).**',
+    leadAnswerBlock: '**O Apple Silicon não tem limite de VRAM separado: o modelo usa a memória unificada descontando os 8 GB de que o macOS precisa, em Macs de 16 GB (Mac mini M6) a 512 GB (Mac Studio M5 Ultra). Estimativa de velocidade: 15-20 tok/s (34B, M5 Pro 64 GB) e 12-18 tok/s (70B, M5 Max 128 GB).**',
     quickAnswerTop: {
       pt: {
         question: 'Qual Mac Apple Silicon devo comprar para LLMs locais em 2026?',
@@ -990,10 +990,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         snippetBlocks: [
           { type: 'one-sentence', text: 'A renovação da Apple de 25/8/2026 (à venda desde 22/9) trouxe o M6 ao Mac mini (US$ 899 com 16 GB, até 32 GB) e M5 Max/M5 Ultra (1.2 TB/s, até 512 GB) ao Mac Studio; o M5 Pro (64 GB) roda modelos 8B a 45–55 tok/s (estimativa) e 34B a 15–20 tok/s (estimativa), o M5 Max (128 GB) roda 70B a 12–18 tok/s (estimativa) — sem limites de VRAM graças à memória unificada.' },
-          { type: 'plain-terms', text: 'Memória unificada significa que CPU, GPU e motor de IA compartilham o mesmo pool de memória. Um Mac de 128 GB pode usar tudo isso para um modelo, ao contrário de uma GPU limitada à sua VRAM (máx. 24 GB para RTX 4090). Por isso os Macs podem rodar modelos de 70B que nenhuma GPU NVIDIA para consumidor consegue comportar.' },
+          { type: 'plain-terms', text: 'Memória unificada significa que CPU, GPU e motor de IA compartilham o mesmo pool de memória. Um Mac de 128 GB pode usar cerca de 120 GB (128 GB menos os 8 GB do macOS) para um modelo, ao contrário de uma GPU limitada à sua VRAM (máx. 24 GB para RTX 4090). Por isso os Macs podem rodar modelos de 70B que nenhuma GPU NVIDIA para consumidor consegue comportar.' },
         ],
         items: [
-          'O Apple Silicon elimina os limites de VRAM -- toda a memória unificada, de 16 GB (Mac mini M6 base) até 512 GB (Mac Studio M5 Ultra, configuração máxima), fica disponível para os modelos. O RTX 4090 tem limite de 24 GB de VRAM discreta.',
+          'O Apple Silicon elimina os limites de VRAM -- a memória unificada, de 16 GB (Mac mini M6 base) até 512 GB (Mac Studio M5 Ultra, configuração máxima), é compartilhada entre o macOS e os modelos; desconte cerca de 8 GB para o macOS. O RTX 4090 tem limite de 24 GB de VRAM discreta.',
           'M5 Pro (64 GB) roda modelos 8B a 45-55 tok/s (estimativa) e modelos 34B a 15-20 tok/s (estimativa). M5 Max (128 GB) roda modelos 70B a 12-18 tok/s (estimativa).',
           'Custo anual estimado de eletricidade para inferência 24/7 (ilustrativo, a US$ 0,15/kWh; não medido): US$ 35-55 no Mac Mini M6 vs US$ 300-400 em um RTX 4090 de mesa -- diferença de cerca de 10×.',
           'A aceleração GPU Metal funciona automaticamente no Ollama, MLX e llama.cpp. Sem configuração de drivers necessária.',
@@ -1018,11 +1018,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-apple-silicon',
         title: 'Por que Apple Silicon para LLMs locais?',
         content: [
-          'O Apple Silicon se destaca na inferência LLM local por uma razão: memória unificada. Quando você compra um Mac com 64 GB de RAM, todos os 64 GB estão disponíveis para o seu modelo LLM. Uma GPU discreta como a RTX 4090 tem 24 GB de VRAM (separado da RAM do sistema) -- modelos maiores que 24 GB simplesmente não cabem sem configurações multi-GPU complexas.',
+          'O Apple Silicon se destaca na inferência LLM local por uma razão: memória unificada. Quando você compra um Mac com 64 GB de RAM, cerca de 56 GB (64 GB menos os 8 GB de que o macOS precisa) ficam disponíveis para o seu modelo LLM. Uma GPU discreta como a RTX 4090 tem 24 GB de VRAM (separado da RAM do sistema) -- modelos maiores que 24 GB simplesmente não cabem sem configurações multi-GPU complexas.',
           'Essa única diferença arquitetural é transformadora:',
         ],
         items: [
-          'Memória unificada: toda a RAM disponível (de 16 GB a 512 GB conforme o chip). RTX 4090: apenas VRAM discreta (limite rígido de 24 GB).',
+          'Memória unificada: RAM disponível menos cerca de 8 GB para o macOS (de 16 GB a 512 GB no total conforme o chip). RTX 4090: apenas VRAM discreta (limite rígido de 24 GB).',
           'Aceleração Metal: inferência GPU sem dependência de CUDA ou drivers proprietários.',
           'Eficiência energética: 20-100 W sob carga vs 300 W+ para GPU de mesa. Permite operação sem ventilador ou quase silenciosa.',
           'Silêncio: o MacBook Air não tem ventilador; a Apple indica 5 dBA em repouso para o Mac mini.',
@@ -1081,7 +1081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'A largura de banda de memória importa mais do que o tamanho da memória',
         content: [
           'A inferência LLM é limitada pela largura de banda de memória, não pela capacidade de computação. Isso significa que a velocidade de geração de tokens escala linearmente com a largura de banda, não com os núcleos GPU.',
-          'M5 Max a 614 GB/s vs RTX 4090 a 1.008 GB/s parece que a NVIDIA vence em largura de banda bruta. Mas os usuários do Apple Silicon têm TODA a memória disponível (sem limite de VRAM discreta), portanto podem carregar modelos maiores que a NVIDIA não consegue acomodar em 24 GB. A comparação real: M5 Max a 614 GB/s rodando um modelo 70B vs um RTX 4090 que não comporta o modelo 70B inteiro nos 24 GB (descarregar parte na CPU é possível, mas bem mais lento).',
+          'M5 Max a 614 GB/s vs RTX 4090 a 1.008 GB/s parece que a NVIDIA vence em largura de banda bruta. Mas os usuários do Apple Silicon podem usar quase toda a memória (o total menos cerca de 8 GB para o macOS, sem limite de VRAM discreta), portanto podem carregar modelos maiores que a NVIDIA não consegue acomodar em 24 GB. A comparação real: M5 Max a 614 GB/s rodando um modelo 70B vs um RTX 4090 que não comporta o modelo 70B inteiro nos 24 GB (descarregar parte na CPU é possível, mas bem mais lento).',
           'Dentro da linha M, as diferenças de largura de banda se traduzem diretamente em tok/s:',
         ],
         items: [
@@ -1194,7 +1194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Um MacBook Air M5 consegue rodar LLMs locais?',
-            a: 'Sim, com limitações. MacBook Air M5 (16-32 GB) roda modelos 7-13B confortavelmente. O throttling térmico ocorre após 10-15 minutos de inferência contínua no design sem ventilador. Para uso ocasional: ótimo. Para inferência sempre ativa: Mac Mini M5 Pro é mais adequado.',
+            a: 'Sim, com limitações. MacBook Air M5 roda modelos 7-8B com 16 GB (sobram cerca de 8 GB após o macOS) e até 13B com 24-32 GB. O throttling térmico ocorre após 10-15 minutos de inferência contínua no design sem ventilador. Para uso ocasional: ótimo. Para inferência sempre ativa: Mac Mini M5 Pro é mais adequado.',
           },
           {
             q: 'Qual é o desempenho do Apple M6 com LLMs locais?',
@@ -1245,7 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/local-llms/apple-silicon-local-llm-guide-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-15',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1263,7 +1263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-de.webp',
     twitterDescription: 'Apple Silicon für lokale LLMs: M1→M6, Mac-mini/Studio-Refresh Aug. 2026, einheitlicher Speicher, Metal GPU, MLX vs Ollama. 2026-Leitfaden.',
     publishDate: '2026-05-15',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     current_models_mentioned: ['Llama 3.1 8B', 'Llama 3.3 70B', 'Mistral Small', 'Phi-4', 'Whisper large-v3', 'LLaVA 7B'],
     current_hardware_mentioned: ['M1', 'M1 Pro', 'M1 Max', 'M5', 'M5 Pro', 'M5 Max', 'M5 Ultra', 'M6', 'RTX 4090'],
     audience: 'Mac-Benutzer, die lokale LLMs in Betracht ziehen oder bereits ausführen, sowie Käufer, die eine Mac-Konfiguration auswählen.',
@@ -1271,7 +1271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'Apple Silicon für lokale LLMs',
     targetKeywords: ['Apple Silicon LLM', 'M5 Pro M5 Max', 'M5 Ultra LLM', 'M6 lokales LLM', 'MacBook Air M5 lokales LLM', 'einheitlicher Speicher vs VRAM'],
-    leadAnswerBlock: '**Apple Silicon hat keine getrennte VRAM-Grenze: Das Modell kann den gesamten einheitlichen Speicher nutzen, von 16 GB (Mac mini M6) bis 512 GB (Mac Studio M5 Ultra). Geschätzte Geschwindigkeit: 15–20 tok/s bei 34B-Modellen auf dem M5 Pro (64 GB) und 12–18 tok/s bei 70B-Modellen auf dem M5 Max (128 GB).**',
+    leadAnswerBlock: '**Apple Silicon hat keine getrennte VRAM-Grenze: Das Modell nutzt den einheitlichen Speicher abzüglich der 8 GB, die macOS braucht, bei Macs von 16 GB (Mac mini M6) bis 512 GB (Mac Studio M5 Ultra). Geschätzte Geschwindigkeit: 15–20 tok/s bei 34B-Modellen auf dem M5 Pro (64 GB) und 12–18 tok/s bei 70B-Modellen auf dem M5 Max (128 GB).**',
     quickAnswerTop: {
       de: {
         question: 'Welchen Apple-Silicon-Mac sollte ich 2026 für lokale LLMs kaufen?',
@@ -1306,10 +1306,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         snippetBlocks: [
           { type: 'one-sentence', text: 'Apples Refresh vom 25.8.2026 (seit 22.9. erhältlich) brachte den M6 in den Mac mini (899 $ mit 16 GB, bis 32 GB) und M5 Max/M5 Ultra (1,2 TB/s, bis 512 GB) in den Mac Studio; Apple M5 Pro (64 GB) läuft mit 8B-Modellen bei 45–55 Tok/s (Schätzung) und 34B bei 15–20 Tok/s (Schätzung), M5 Max (128 GB) mit 70B bei 12–18 Tok/s (Schätzung) — ohne VRAM-Grenzen dank Unified Memory.' },
-          { type: 'plain-terms', text: 'Unified Memory bedeutet: CPU, GPU und KI-Engine teilen denselben Speicher. Ein Mac mit 128 GB kann alle 128 GB für ein Modell nutzen, anders als eine GPU, die auf ihren VRAM begrenzt ist (max. 24 GB beim RTX 4090). Deshalb können Macs 70B-Modelle ausführen, die kein Consumer-GPU von NVIDIA fassen kann.' },
+          { type: 'plain-terms', text: 'Unified Memory bedeutet: CPU, GPU und KI-Engine teilen denselben Speicher. Ein Mac mit 128 GB kann etwa 120 GB (128 GB abzüglich der 8 GB für macOS) für ein Modell nutzen, anders als eine GPU, die auf ihren VRAM begrenzt ist (max. 24 GB beim RTX 4090). Deshalb können Macs 70B-Modelle ausführen, die kein Consumer-GPU von NVIDIA fassen kann.' },
         ],
         items: [
-          'Apple Silicon eliminiert VRAM-Grenzen — der gesamte einheitliche Speicher, von 16 GB (Mac mini M6, Basis) bis 512 GB (Mac Studio M5 Ultra, Spitzenkonfiguration), steht dem Modell zur Verfügung. RTX 4090 hat eine harte 24 GB-Grenze.',
+          'Apple Silicon eliminiert VRAM-Grenzen — der einheitliche Speicher, von 16 GB (Mac mini M6, Basis) bis 512 GB (Mac Studio M5 Ultra, Spitzenkonfiguration), wird von macOS und dem Modell gemeinsam genutzt; rechnen Sie etwa 8 GB für macOS ab. RTX 4090 hat eine harte 24 GB-Grenze.',
           'M5 Pro (64 GB) erzeugt 34B-Modelle bei 15–20 Token/Sekunde (Schätzung). M5 Max (128 GB) erzeugt 70B-Modelle bei 12–18 tok/s (Schätzung). Beides bei 20–100 W Stromverbrauch gegenüber 300–450 W für Desktop-GPUs.',
           'Metal-GPU-Beschleunigung funktioniert automatisch in Ollama, MLX und llama.cpp. Keine Treiber-Abstimmung erforderlich.',
           'Speicherbandbreite (Mac mini M6 bis 170 GB/s, M5 Pro 307 GB/s, M5 Max 460–614 GB/s, M5 Ultra 1,2 TB/s) ist der Engpass, nicht GPU-Kernzahl. M5 Pro liefert etwa 1/3 der RTX-4090-Geschwindigkeit basierend auf reiner Bandbreite.',
@@ -1333,11 +1333,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-apple-silicon',
         title: 'Warum Apple Silicon für lokale LLMs?',
         content: [
-          'Apple Silicon zeichnet sich beim lokalen LLM-Inferencing aus einem Grund aus: einheitlicher Speicher. Wenn Sie einen Mac mit 64 GB RAM kaufen, stehen alle 64 GB dem LLM-Modell zur Verfügung. Eine diskrete GPU wie RTX 4090 hat nur 24 GB VRAM (getrennt von Ihrem Arbeitsspeicher) — Modelle größer als 24 GB passen einfach nicht ohne komplexe Multi-GPU-Setups und zusätzliche Hardwarekosten.',
+          'Apple Silicon zeichnet sich beim lokalen LLM-Inferencing aus einem Grund aus: einheitlicher Speicher. Wenn Sie einen Mac mit 64 GB RAM kaufen, stehen etwa 56 GB (64 GB abzüglich der 8 GB, die macOS braucht) dem LLM-Modell zur Verfügung. Eine diskrete GPU wie RTX 4090 hat nur 24 GB VRAM (getrennt von Ihrem Arbeitsspeicher) — Modelle größer als 24 GB passen einfach nicht ohne komplexe Multi-GPU-Setups und zusätzliche Hardwarekosten.',
           'Dieser architektonische Unterschied ist transformativ für lokale KI:',
         ],
         items: [
-          'Einheitlicher Speicher: Der gesamte RAM ist verfügbar (16–512 GB je nach Chip). RTX 4090: nur diskreter VRAM (24 GB hartkodiert).',
+          'Einheitlicher Speicher: RAM abzüglich etwa 8 GB für macOS verfügbar (insgesamt 16–512 GB je nach Chip). RTX 4090: nur diskreter VRAM (24 GB hartkodiert).',
           'Metal-Beschleunigung: GPU-Inferencing ohne CUDA-Abhängigkeit oder proprietäre Treiber-Updates.',
           'Stromeffizienz: 20–100 W unter Last versus 300 W+ für Desktop-GPU. Ermöglicht lüfterloses oder fast lautloses Betrieb.',
           'Stille: Das MacBook Air ist lüfterlos; für den Mac mini nennt Apple 5 dBA im Leerlauf.',
@@ -1396,7 +1396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Speicherbandbreite ist wichtiger als Speichergröße',
         content: [
           'LLM-Inferencing ist speicherbandbreitenbegrenzt, nicht rechenbegrenzt. Das bedeutet, die Token-Generierungsgeschwindigkeit skaliert linear mit der Bandbreite, nicht mit GPU-Kernzahl.',
-          'M5 Max bei 614 GB/s gegenüber RTX 4090 bei 1.008 GB/s könnte den Anschein erwecken, dass NVIDIA bei Rohbandbreite gewinnt. Aber Apple-Silicon-Benutzer haben den GESAMTEN Speicher verfügbar (keine diskrete VRAM-Grenze), daher können sie größere Modelle laden, die NVIDIA nicht in 24 GB Speicher passen kann. Der echte Vergleich: M5 Max beim Ausführen eines 70B-Modells versus eine RTX 4090, die das 70B-Modell nicht vollständig in ihren 24 GB halten kann (Auslagerung auf die CPU ist möglich, aber deutlich langsamer).',
+          'M5 Max bei 614 GB/s gegenüber RTX 4090 bei 1.008 GB/s könnte den Anschein erwecken, dass NVIDIA bei Rohbandbreite gewinnt. Aber Apple-Silicon-Benutzer können fast den gesamten Speicher nutzen (Gesamtspeicher abzüglich etwa 8 GB für macOS, keine diskrete VRAM-Grenze), daher können sie größere Modelle laden, die NVIDIA nicht in 24 GB Speicher passen kann. Der echte Vergleich: M5 Max beim Ausführen eines 70B-Modells versus eine RTX 4090, die das 70B-Modell nicht vollständig in ihren 24 GB halten kann (Auslagerung auf die CPU ist möglich, aber deutlich langsamer).',
         ],
         items: [
           'M5 Basis (150 GB/s) → ~25–30 tok/s (Schätzung) auf Llama 3.1 8B Q4',
@@ -1474,7 +1474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Ändert der M5 Ultra mit bis zu 512 GB Speicher etwas?', a: 'Ja. Der M5 Ultra (Mac Studio, ab 5.499 $ mit 96 GB, 1,2 TB/s Bandbreite, bis 512 GB ab 22.299 $) führt 70B-Modelle in FP16 (unquantisiert, ohne Quantisierungsverlust) aus und ermöglicht erstmals 120B+-Modelle auf Verbraucher-Hardware. Der erste von uns geprüfte unabhängige Test (BGR, 21. September 2026, 256-GB-Modell) maß rund 55 tok/s mit einem 4-Bit-Qwen-3.8-27B gegenüber rund 40 auf einem M3 Ultra. PromptQuorum hat keine eigenen M5-Ultra-Benchmarks durchgeführt.' },
           { q: 'Brauche ich Ollama, MLX oder llama.cpp?', a: 'Beginnen Sie mit Ollama (am einfachsten). Wenn Sie schnellere Inferenz oder Fine-Tuning brauchen, wechseln Sie zu MLX. Für plattformübergreifende Kompatibilität nutzen Sie llama.cpp. Alle drei laufen auf Apple Silicon.' },
           { q: 'Lohnt sich Apple Silicon für lokale LLMs im Jahr 2026?', a: 'Ja, besonders für Modelle ab 34B. Apple Silicon ist eine der wenigen Verbraucher-Optionen, die 70B-Modelle ohne komplexe Multi-GPU-Setups ausführt, und der Mac Studio M5 Ultra ist eine der wenigen, die 120B+-Modelle fasst. Bei 8B-Modellen, die in NVIDIA-VRAM passen, ist die RTX 4090 schneller, im Betrieb aber teurer.' },
-          { q: 'Kann ein MacBook Air M5 lokale LLMs ausführen?', a: 'Ja, mit Einschränkungen. Ein MacBook Air M5 (16–32 GB) führt 7–13B-Modelle komfortabel aus. Bei dauerhafter Inferenz setzt nach 10–15 Minuten thermisches Throttling ein, weil das Design lüfterlos ist. Für gelegentliche Nutzung: gut. Für Dauerbetrieb: ein Mac mini M5 Pro passt besser.' },
+          { q: 'Kann ein MacBook Air M5 lokale LLMs ausführen?', a: 'Ja, mit Einschränkungen. Ein MacBook Air M5 führt 7–8B-Modelle mit 16 GB aus (etwa 8 GB bleiben nach macOS) und bis zu 13B-Modelle mit 24–32 GB. Bei dauerhafter Inferenz setzt nach 10–15 Minuten thermisches Throttling ein, weil das Design lüfterlos ist. Für gelegentliche Nutzung: gut. Für Dauerbetrieb: ein Mac mini M5 Pro passt besser.' },
           { q: 'Wie ist die Leistung des Apple M6 bei lokalen LLMs?', a: 'Apple hat nur relative Angaben veröffentlicht: bis zu 4x KI-Leistung und 40 % schnellere CPU gegenüber dem Mac mini M4. Beim Refresh im August 2026 debütierte der M6 nur im Mac mini (899 $ mit 16 GB, bis 32 GB, bis zu 170 GB/s). Da die Generierungsgeschwindigkeit der Speicherbandbreite folgt, ist ein Niveau nahe am M5 Basis zu erwarten, nicht am M5 Pro; unabhängige tok/s-Werte für den M6 haben wir noch nicht geprüft.' },
           { q: 'Welche lokale LLM-Konfiguration passt zu einem M1 Mac mit 32 GB?', a: 'Ein M1 Pro oder M1 Max mit 32 GB (200 GB/s bzw. 400 GB/s) führt 13B-Modelle in Q4 komfortabel aus, das Optimum in der Chip-Tabelle oben; ein M1 Max mit 64 GB erreicht 34B in Q4. Der ursprüngliche M1 endet bei 16 GB, dort bleiben Sie bei 7B Q4.' },
           { q: 'Wie schneidet der M3 Ultra im Vergleich zum M5 Max bei lokalen LLMs ab?', a: 'Ein M3 Ultra schlägt einen M5 Max bei der Speicherkapazität (bis 512 GB gegenüber 128 GB) und fasst deshalb die größten Modelle. Bei der Geschwindigkeit berichtete BGR, ein MacBook Pro mit M5 Max habe im 27B-Test ähnlich wie ein Mac Studio mit M3 Ultra abgeschnitten, der M5 Ultra liege im Schnitt 30–40 % über dem M3 Ultra. Ein M5 Pro mit 48 GB liegt unter beiden und ist das Optimum für alle, die Reserve ohne Ultra-Preise wollen.' },
@@ -1515,7 +1515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-fr.webp',
     twitterDescription: 'Apple Silicon pour LLMs locaux : M1→M6, renouvellement Mac mini/Studio août 2026, mémoire unifiée, GPU Metal, MLX vs Ollama. Guide complet 2026.',
     publishDate: '2026-05-15',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     current_models_mentioned: ['Llama 3.1 8B', 'Llama 3.3 70B', 'Mistral Small', 'Phi-4', 'Whisper large-v3', 'LLaVA 7B'],
     current_hardware_mentioned: ['M1', 'M1 Pro', 'M1 Max', 'M5', 'M5 Pro', 'M5 Max', 'M5 Ultra', 'M6', 'RTX 4090'],
     audience: 'Utilisateurs Mac envisageant ou exécutant déjà des LLMs locaux, acheteurs choisissant une configuration Mac.',
@@ -1523,7 +1523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'Apple Silicon pour LLMs locaux',
     targetKeywords: ['Apple Silicon LLM', 'M5 Pro M5 Max', 'M5 Ultra LLM', 'M6 LLM local', 'MacBook Air M5 LLM local', 'mémoire unifiée vs VRAM'],
-    leadAnswerBlock: '**Apple Silicon n\'a pas de limite de VRAM séparée : le modèle utilise toute la mémoire unifiée, de 16 Go (Mac mini M6) à 512 Go (Mac Studio M5 Ultra). Vitesses estimées : 15–20 tok/s (34B, M5 Pro 64 Go) et 12–18 tok/s (70B, M5 Max 128 Go).**',
+    leadAnswerBlock: '**Apple Silicon n\'a pas de limite de VRAM séparée : le modèle utilise la mémoire unifiée moins les 8 Go dont macOS a besoin, sur des Mac de 16 Go (Mac mini M6) à 512 Go (Mac Studio M5 Ultra). Vitesses estimées : 15–20 tok/s (34B, M5 Pro 64 Go) et 12–18 tok/s (70B, M5 Max 128 Go).**',
     quickAnswerTop: {
       fr: {
         question: 'Quel Mac Apple Silicon dois-je acheter pour les LLMs locaux en 2026 ?',
@@ -1557,10 +1557,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         snippetBlocks: [
           { type: 'one-sentence', text: 'Le renouvellement d\'Apple du 25/8/2026 (en vente depuis le 22/9) a apporté le M6 au Mac mini (899 $ avec 16 Go, jusqu\'à 32 Go) et le M5 Max/M5 Ultra (1.2 TB/s, jusqu\'à 512 Go) au Mac Studio ; l\'Apple M5 Pro (64 Go) fait tourner les modèles 8B à 45–55 tok/s (estimation) et 34B à 15–20 tok/s (estimation), le M5 Max (128 Go) les 70B à 12–18 tok/s (estimation) — sans limite de VRAM grâce à la mémoire unifiée.' },
-          { type: 'plain-terms', text: 'La mémoire unifiée signifie que le CPU, le GPU et le moteur IA partagent le même pool de mémoire. Un Mac avec 128 Go peut utiliser tout cet espace pour un modèle, contrairement à un GPU limité à sa VRAM (max 24 Go pour la RTX 4090). C\'est pourquoi les Macs peuvent faire tourner des modèles 70B qu\'aucun GPU NVIDIA grand public ne peut contenir.' },
+          { type: 'plain-terms', text: 'La mémoire unifiée signifie que le CPU, le GPU et le moteur IA partagent le même pool de mémoire. Un Mac avec 128 Go peut utiliser environ 120 Go (128 Go moins les 8 Go de macOS) pour un modèle, contrairement à un GPU limité à sa VRAM (max 24 Go pour la RTX 4090). C\'est pourquoi les Macs peuvent faire tourner des modèles 70B qu\'aucun GPU NVIDIA grand public ne peut contenir.' },
         ],
         items: [
-          'Apple Silicon élimine les limites VRAM — toute la mémoire unifiée, de 16 GB (Mac mini M6 de base) à 512 GB (Mac Studio M5 Ultra, configuration maximale), est disponible au modèle. RTX 4090 est limité à 24 GB VRAM discrets.',
+          'Apple Silicon élimine les limites VRAM — la mémoire unifiée, de 16 GB (Mac mini M6 de base) à 512 GB (Mac Studio M5 Ultra, configuration maximale), est partagée entre macOS et le modèle ; déduisez environ 8 GB pour macOS. RTX 4090 est limité à 24 GB VRAM discrets.',
           'M5 Pro (64 GB) exécute les modèles 34B à 15–20 tok/s (estimation). M5 Max (128 GB) exécute les modèles 70B à 12–18 tok/s (estimation). Les deux avec 20–100 W versus 300–450 W pour les GPUs de bureau.',
           'L\'accélération GPU Metal fonctionne automatiquement dans Ollama, MLX et llama.cpp. Aucun réglage de pilote requis.',
           'La bande passante mémoire (Mac mini M6 jusqu\'à 170 GB/s, M5 Pro 307 GB/s, M5 Max 460–614 GB/s, M5 Ultra 1.2 TB/s) est le goulot d\'étranglement, pas le nombre de cœurs GPU.',
@@ -1584,11 +1584,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-apple-silicon',
         title: 'Pourquoi Apple Silicon pour LLMs locaux ?',
         content: [
-          'Apple Silicon excelle à l\'inférence LLM locale pour une raison : mémoire unifiée. Quand vous achetez un Mac avec 64 GB RAM, tous les 64 GB sont disponibles pour le modèle LLM. Un GPU discret comme RTX 4090 a seulement 24 GB VRAM (séparé de votre RAM système) — les modèles plus grands que 24 GB ne rentrent simplement pas sans configurations multi-GPU complexes.',
+          'Apple Silicon excelle à l\'inférence LLM locale pour une raison : mémoire unifiée. Quand vous achetez un Mac avec 64 GB RAM, environ 56 GB (64 GB moins les 8 GB dont macOS a besoin) sont disponibles pour le modèle LLM. Un GPU discret comme RTX 4090 a seulement 24 GB VRAM (séparé de votre RAM système) — les modèles plus grands que 24 GB ne rentrent simplement pas sans configurations multi-GPU complexes.',
           'Cette différence architecturale unique est transformatrice :',
         ],
         items: [
-          'Mémoire unifiée : RAM entière disponible (16–512 GB selon la puce). RTX 4090 : VRAM discret uniquement (24 GB codé en dur).',
+          'Mémoire unifiée : RAM disponible moins environ 8 GB pour macOS (16–512 GB au total selon la puce). RTX 4090 : VRAM discret uniquement (24 GB codé en dur).',
           'Accélération Metal : inférence GPU sans dépendance CUDA ni pilotes propriétaires.',
           'Efficacité énergétique : 20–100 W sous charge vs 300 W+ pour GPU de bureau. Permet opération sans ventilateur ou presque silencieuse.',
           'Silence : le MacBook Air est sans ventilateur ; Apple indique 5 dBA au repos pour le Mac mini.',
@@ -1647,7 +1647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'La bande passante mémoire est plus importante que la taille mémoire',
         content: [
           'L\'inférence LLM est limitée bande passante, pas calcul-limitée. Cela signifie que la vitesse génération token met à l\'échelle linéairement avec bande passante, pas cœurs GPU.',
-          'M5 Max à 614 GB/s vs RTX 4090 à 1 008 GB/s semble que NVIDIA gagne sur bande brute. Mais utilisateurs Apple Silicon ont TOUTE mémoire disponible (aucune limite VRAM discret), donc peuvent charger modèles plus grands qu\'NVIDIA ne peut pas adapter à 24GB.',
+          'M5 Max à 614 GB/s vs RTX 4090 à 1 008 GB/s semble que NVIDIA gagne sur bande brute. Mais utilisateurs Apple Silicon peuvent utiliser presque toute la mémoire (le total moins environ 8 Go pour macOS, aucune limite VRAM discret), donc peuvent charger modèles plus grands qu\'NVIDIA ne peut pas adapter à 24GB.',
         ],
         items: [
           'M5 base (150 GB/s) → ~25–30 tok/s (estimation) Llama 3.1 8B Q4',
@@ -1725,7 +1725,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Le M5 Ultra avec jusqu\'à 512 Go change-t-il quelque chose ?', a: 'Oui. Le M5 Ultra (Mac Studio, à partir de 5 499 $ avec 96 Go, 1.2 TB/s de bande passante, jusqu\'à 512 Go à partir de 22 299 $) exécute les modèles 70B en FP16 (non quantifié, sans perte due à la quantification) et permet pour la première fois les modèles 120B+ sur matériel grand public. Le premier test indépendant que nous avons vérifié (BGR, 21 septembre 2026, modèle 256 Go) a mesuré environ 55 tok/s sur un Qwen 3.8 27B en 4 bits contre environ 40 sur un M3 Ultra. PromptQuorum n\'a pas réalisé ses propres benchmarks du M5 Ultra.' },
           { q: 'Ai-je besoin d\'Ollama, MLX ou llama.cpp ?', a: 'Commencez avec Ollama (le plus simple). Si vous avez besoin d\'une inférence plus rapide ou de fine-tuning, passez à MLX. Pour une compatibilité multiplateforme, utilisez llama.cpp. Les trois fonctionnent sur Apple Silicon.' },
           { q: 'Apple Silicon vaut-il le coup pour les LLMs locaux en 2026 ?', a: 'Oui, surtout pour les modèles 34B+. Apple Silicon est l\'une des rares options grand public qui exécutent les modèles 70B sans configuration multi-GPU complexe, et le Mac Studio M5 Ultra est l\'un des rares qui accueillent des modèles 120B+. Pour les modèles 8B qui tiennent dans la VRAM NVIDIA, la RTX 4090 est plus rapide mais coûte plus cher à exploiter.' },
-          { q: 'Un MacBook Air M5 peut-il faire tourner des LLMs locaux ?', a: 'Oui, avec des limites. Un MacBook Air M5 (16–32 Go) exécute confortablement les modèles 7–13B. Le throttling thermique apparaît après 10–15 minutes d\'inférence continue sur ce design sans ventilateur. Pour un usage occasionnel : parfait. Pour de l\'inférence permanente : un Mac mini M5 Pro est plus adapté.' },
+          { q: 'Un MacBook Air M5 peut-il faire tourner des LLMs locaux ?', a: 'Oui, avec des limites. Un MacBook Air M5 exécute les modèles 7–8B avec 16 Go (environ 8 Go restent après macOS) et jusqu\'à 13B avec 24–32 Go. Le throttling thermique apparaît après 10–15 minutes d\'inférence continue sur ce design sans ventilateur. Pour un usage occasionnel : parfait. Pour de l\'inférence permanente : un Mac mini M5 Pro est plus adapté.' },
           { q: 'Quelles performances attendre de l\'Apple M6 pour les LLMs locaux ?', a: 'Apple n\'a publié que des affirmations relatives : jusqu\'à 4x de performance IA et un CPU 40 % plus rapide que le Mac mini M4. Lors du renouvellement d\'août 2026, le M6 n\'a débuté que dans le Mac mini (899 $ avec 16 Go, jusqu\'à 32 Go, jusqu\'à 170 GB/s). La vitesse de génération suivant la bande passante mémoire, attendez-vous à un niveau proche du M5 de base plutôt que du M5 Pro ; nous n\'avons pas encore vérifié de chiffres tok/s indépendants pour le M6.' },
           { q: 'Quelle configuration LLM locale pour un Mac M1 avec 32 Go ?', a: 'Un M1 Pro ou M1 Max avec 32 Go (200 GB/s et 400 GB/s) exécute confortablement les modèles 13B en Q4, soit l\'optimum du tableau des puces ci-dessus ; un M1 Max 64 Go atteint le 34B en Q4. Le M1 d\'origine plafonne à 16 Go : restez sur du 7B Q4.' },
           { q: 'Comment le M3 Ultra se compare-t-il au M5 Max pour les LLMs locaux ?', a: 'Un M3 Ultra dépasse un M5 Max en capacité mémoire (jusqu\'à 512 Go contre 128 Go), ce qui lui permet d\'accueillir les plus gros modèles. Côté vitesse, BGR a indiqué qu\'un MacBook Pro M5 Max avait des performances proches d\'un Mac Studio M3 Ultra sur son test 27B, et que le M5 Ultra était en moyenne 30–40 % meilleur que le M3 Ultra. Un M5 Pro 48 Go se situe en dessous des deux et reste l\'optimum pour qui veut de la marge sans tarif Ultra.' },
@@ -1766,7 +1766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ja.webp',
     twitterDescription: 'Apple SiliconローカルLLM：M1→M6、2026年8月Mac mini/Studio刷新、統一メモリ、Metal GPU、MLX vs Ollama。完全2026ガイド。',
     publishDate: '2026-05-15',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     current_models_mentioned: ['Llama 3.1 8B', 'Llama 3.3 70B', 'Mistral Small', 'Phi-4', 'Whisper large-v3', 'LLaVA 7B'],
     current_hardware_mentioned: ['M1', 'M1 Pro', 'M1 Max', 'M5', 'M5 Pro', 'M5 Max', 'M5 Ultra', 'M6', 'RTX 4090'],
     audience: 'ローカルLLMを検討中または既に実行中のMacユーザー、Mac構成を決定している購買者。',
@@ -1774,7 +1774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'Apple SiliconのローカルLLM',
     targetKeywords: ['Apple Silicon LLM', 'M5 Pro M5 Max', 'M5 Ultra LLM 消費電力', 'M6 ローカルLLM', 'Mac mini M6 LLM', '統一メモリ vs VRAM'],
-    leadAnswerBlock: '**Apple Siliconには別枠のVRAM制限がなく、モデルは統一メモリ全体（16GBのMac mini M6から512GBのMac Studio M5 Ultraまで）を使えます。推定速度は、M5 Pro（64GB）で34Bモデルが15～20 tok/s、M5 Max（128GB）で70Bモデルが12～18 tok/sです。**',
+    leadAnswerBlock: '**Apple Siliconには別枠のVRAM制限がなく、モデルは統一メモリからmacOSに必要な8GBを差し引いた分を使えます（16GBのMac mini M6から512GBのMac Studio M5 Ultraまで）。推定速度は、M5 Pro（64GB）で34Bモデルが15～20 tok/s、M5 Max（128GB）で70Bモデルが12～18 tok/sです。**',
     quickAnswerTop: {
       ja: {
         question: '2026年にローカルLLMs用に購入すべきApple SiliconのMacは？',
@@ -1801,10 +1801,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         snippetBlocks: [
           { type: 'one-sentence', text: 'Appleの2026年8月25日の刷新（9月22日から販売）で、Mac miniにM6（899ドル、16GB、最大32GB）、Mac StudioにM5 Max/M5 Ultra（1.2 TB/s、最大512GB）が登場しました。M5 Pro（64 GB）は8Bモデルを45〜55トークン/秒（推定）、34Bを15〜20トークン/秒（推定）で、M5 Max（128 GB）は70Bを12〜18トークン/秒（推定）で実行します。ユニファイドメモリのおかげでVRAM制限はありません。' },
-          { type: 'plain-terms', text: 'ユニファイドメモリとは、CPU・GPU・AIエンジンが同じメモリプールを共有することです。128 GBのMacはそのすべてをモデルに使えますが、GPUはVRAMの上限（RTX 4090で最大24 GB）に制限されます。そのため、Macは一般消費者向けNVIDIA GPUでは収まりきらない70Bモデルを実行できます。' },
+          { type: 'plain-terms', text: 'ユニファイドメモリとは、CPU・GPU・AIエンジンが同じメモリプールを共有することです。128 GBのMacはmacOS用の8 GBを除く約120 GBをモデルに使えますが、GPUはVRAMの上限（RTX 4090で最大24 GB）に制限されます。そのため、Macは一般消費者向けNVIDIA GPUでは収まりきらない70Bモデルを実行できます。' },
         ],
         items: [
-          'Apple SiliconはVRAM制限を排除します。16GB（Mac mini M6の基本構成）から512GB（Mac Studio M5 Ultraの最大構成）まで、統一メモリ全体をモデルが利用できます。RTX 4090は24GB離散VRAMが上限です。',
+          'Apple SiliconはVRAM制限を排除します。16GB（Mac mini M6の基本構成）から512GB（Mac Studio M5 Ultraの最大構成）まで、統一メモリはmacOSとモデルで共有されるため、macOS用に約8GBを差し引いてください。RTX 4090は24GB離散VRAMが上限です。',
           'M5 Pro（64GB）は34Bモデルを15～20 tok/s（推定）実行。M5 Max（128GB）は70Bモデルを12～18 tok/s（推定）実行。双方とも20～100W対デスクトップGPU300～450W。',
           'Metal GPU加速はOllama、MLX、llama.cppで自動動作。設定不要。',
           'メモリ帯域幅（Mac mini M6は最大170 GB/s、M5 Pro 307 GB/s、M5 Max 460～614 GB/s、M5 Ultra 1.2 TB/s）がボトルネックであり、GPUコア数ではありません。',
@@ -1828,10 +1828,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-apple-silicon',
         title: 'Apple SiliconがローカルLLMに最適な理由',
         content: [
-          'Apple Siliconはローカル LLM推論で優れている一つの理由：統一メモリ。64GB RAMのMacを購入すると、64GBすべてLLMモデルで利用可能。RTX 4090などの離散GPUは24GB VRAM（システムRAMから分離）を持つ——24GBより大きいモデルは複雑マルチGPUセットアップなしで単に適合しません。',
+          'Apple Siliconはローカル LLM推論で優れている一つの理由：統一メモリ。64GB RAMのMacを購入すると、macOSに必要な8GBを除く約56GBをLLMモデルで利用可能。RTX 4090などの離散GPUは24GB VRAM（システムRAMから分離）を持つ——24GBより大きいモデルは複雑マルチGPUセットアップなしで単に適合しません。',
         ],
         items: [
-          '統一メモリ：RAM全体を利用可能（チップにより16～512GB）。RTX 4090：離散VRAMのみ（ハード24GB上限）。',
+          '統一メモリ：macOS用の約8GBを除くRAMを利用可能（チップにより合計16～512GB）。RTX 4090：離散VRAMのみ（ハード24GB上限）。',
           'Metal加速：CUDA依存性や独自ドライバなしのGPU推論。',
           '電力効率：負荷時20～100W対デスクトップGPU 300W+。ファンレスまたはほぼ無音運用可能。',
           '静寂：MacBook Airはファンレスで、Mac miniはApple公表でアイドル時5 dBAです。',
@@ -1872,7 +1872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'メモリ帯域幅がメモリサイズより重要',
         content: [
           'LLM推論はメモリ帯域幅限定で、計算限定ではない。つまりトークン生成速度は帯域幅と線形スケールし、GPU coresではない。',
-          'M5 Max 614 GB/sが RTX 4090 1,008 GB/s対は、NVIDIAが生帯域で勝つように見える。しかしApple Siliconユーザーはすべてメモリ利用可能（離散VRAM制限なし）なので、NVIDIAが24GBに適合できない大きいモデルを読み込める。',
+          'M5 Max 614 GB/sが RTX 4090 1,008 GB/s対は、NVIDIAが生帯域で勝つように見える。しかしApple Siliconユーザーはほぼすべてのメモリを利用可能（合計からmacOS用の約8GBを引いた分、離散VRAM制限なし）なので、NVIDIAが24GBに適合できない大きいモデルを読み込める。',
         ],
         items: [
           'M5ベース（150 GB/s）→ Llama 3.1 8B Q4で~25～30 tok/s（推定）',
@@ -1969,7 +1969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'OllamaとMLXとllama.cppどれ使う？', a: 'Ollama（最簡単）から開始。高速推論またはファインチューニング必要ならMLXに切り替え。クロスプラットフォーム互換性必要ならllama.cpp。すべてApple Siliconで動作。' },
           { q: 'M5 Ultraが最大512GBメモリで何変わる？', a: 'はい、変わります。M5 Ultra（Mac Studio、96GBで5,499ドルから、1.2 TB/s、最大512GBは22,299ドルから）は70BモデルをFP16（量子化なし、量子化による劣化なし）で実行でき、民生用ハードウェアとして初めて120B+モデルに対応します。確認できた最初の独立テスト（BGR、2026年9月21日、256GBモデル）では、4ビットQwen 3.8 27Bが約55 tok/sで、M3 Ultraの約40 tok/sを上回りました。PromptQuorumは独自のM5 Ultraベンチマークを実施していません。' },
           { q: '2026年にApple Siliconはローカルに価値？', a: 'はい、特に34B+モデルなら。Apple Siliconは複雑なマルチGPUセットアップなしで70Bモデルを実行できる数少ない民生ハードウェアの一つであり、Mac Studio M5 Ultraは120B+モデルを収容できる数少ない民生用ハードウェアの一つです。24GB NVIDIAに収まる8Bモデルではマシン高速ですが、運用費高。ほぼユーザーはMac mini M5 Pro 64GB（1,699ドル）をベスト value-performanceとして落ち着く。' },
-          { q: 'MacBook Air M5でローカルLLMを実行できる？', a: 'はい、制限あり。MacBook Air M5（16～32GB）は7～13Bモデル快適実行。熱スロットル15分以上持続推論後開始、ファンレス設計。時々使用：問題なし。常時推論：Mac mini M5 Proが最適。' },
+          { q: 'MacBook Air M5でローカルLLMを実行できる？', a: 'はい、制限あり。MacBook Air M5は16GBで7～8Bモデル（macOS後に約8GB残る）、24～32GBで13Bまで実行可能。熱スロットル15分以上持続推論後開始、ファンレス設計。時々使用：問題なし。常時推論：Mac mini M5 Proが最適。' },
           { q: 'Apple M6のローカルLLM性能はどのくらい？', a: 'Appleが公開しているのは相対的な主張のみで、M4 Mac mini比でAI性能最大4倍、CPU 40%高速です。2026年8月の刷新では、M6はMac miniにのみ搭載されました（899ドル、16GB、最大32GB、最大170 GB/s）。生成速度はメモリ帯域幅に比例するため、M5 ProではなくベースのM5に近い水準と予想されます。M6の独立したtok/s数値は未確認です。' },
           { q: '32GBのM1 MacにはどんなローカルLLM構成が最適？', a: '32GBのM1 ProまたはM1 Max（200 GB/sと400 GB/s）は、上のチップ比較表の最適点である13B Q4モデルを余裕をもって実行できます。64GBのM1 Maxなら34B Q4まで届きます。無印のM1は最大16GBなので、7B Q4が目安です。' },
           { q: 'ローカルLLMでM3 UltraとM5 Maxはどう違う？', a: 'M3 Ultraはメモリ容量でM5 Maxを上回り（最大512GB対128GB）、最大級のモデルを収容できます。速度についてBGRは、27BテストでM5 Max搭載MacBook ProがM3 Ultra搭載Mac Studioと同程度の性能で、M5 Ultraは平均でM3 Ultraより30～40%優れていたと報告しています。48GBのM5 Proは両者の下に位置し、Ultraの価格なしで余裕を求める人に最適です。' },
@@ -2017,7 +2017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-zh.webp',
     twitterDescription: 'Apple Silicon本地LLM：M1→M6、2026年8月Mac mini/Studio更新、统一内存、Metal GPU、MLX vs Ollama。完整2026指南。',
     publishDate: '2026-05-15',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     current_models_mentioned: ['Llama 3.1 8B', 'Llama 3.3 70B', 'Mistral Small', 'Phi-4', 'Whisper large-v3', 'LLaVA 7B'],
     current_hardware_mentioned: ['M1', 'M1 Pro', 'M1 Max', 'M5', 'M5 Pro', 'M5 Max', 'M5 Ultra', 'M6', 'RTX 4090'],
     audience: '正在考虑或已运行本地LLM的Mac用户、正在决定Mac配置的购买者。',
@@ -2025,7 +2025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'Apple Silicon本地LLM',
     targetKeywords: ['Apple Silicon LLM', 'M5 Pro M5 Max', 'M5 Ultra LLM', 'M6 本地LLM', 'Mac 本地大模型', '统一内存对比VRAM'],
-    leadAnswerBlock: '**Apple Silicon没有独立的VRAM限制，模型可以使用全部统一内存，从16GB（Mac mini M6）到512GB（Mac Studio M5 Ultra）。估算速度：M5 Pro（64GB）运行34B模型约15–20 tok/s，M5 Max（128GB）运行70B模型约12–18 tok/s。**',
+    leadAnswerBlock: '**Apple Silicon没有独立的VRAM限制，模型可以使用统一内存扣除macOS所需8GB后的部分，机型从16GB（Mac mini M6）到512GB（Mac Studio M5 Ultra）。估算速度：M5 Pro（64GB）运行34B模型约15–20 tok/s，M5 Max（128GB）运行70B模型约12–18 tok/s。**',
     quickAnswerTop: {
       zh: {
         question: '2026年应购买哪种Apple Silicon Mac用于本地LLM？',
@@ -2053,10 +2053,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         snippetBlocks: [
           { type: 'one-sentence', text: 'Apple于2026年8月25日的更新（9月22日起发售）为Mac mini带来M6（899美元，16GB，最高32GB），为Mac Studio带来M5 Max/M5 Ultra（1.2 TB/s，最高512GB）；M5 Pro（64 GB）运行8B模型达45–55 tok/s（估算），34B达15–20 tok/s（估算），M5 Max（128 GB）运行70B达12–18 tok/s（估算）——统一内存无VRAM限制。' },
-          { type: 'plain-terms', text: '统一内存意味着CPU、GPU和AI引擎共享同一内存池。128 GB的Mac可将全部内存用于模型，而GPU受限于显存上限（RTX 4090最多24 GB）。因此，Mac可以运行消费级NVIDIA GPU无法容纳的70B模型。' },
+          { type: 'plain-terms', text: '统一内存意味着CPU、GPU和AI引擎共享同一内存池。128 GB的Mac可将扣除macOS所需8 GB后的约120 GB用于模型，而GPU受限于显存上限（RTX 4090最多24 GB）。因此，Mac可以运行消费级NVIDIA GPU无法容纳的70B模型。' },
         ],
         items: [
-          'Apple Silicon消除VRAM限制——从16GB（Mac mini M6基础款）到512GB（Mac Studio M5 Ultra顶配）的统一内存均可供模型使用。RTX 4090限制在24GB离散VRAM。',
+          'Apple Silicon消除VRAM限制——从16GB（Mac mini M6基础款）到512GB（Mac Studio M5 Ultra顶配）的统一内存由macOS与模型共享，需扣除macOS所需的约8GB。RTX 4090限制在24GB离散VRAM。',
           'M5 Pro（64GB）以15-20 tok/s（估算）运行34B模型。M5 Max（128GB）以12-18 tok/s（估算）运行70B模型。双者均为20-100W功耗对比台式GPU的300-450W。',
           'Metal GPU加速在Ollama、MLX、llama.cpp中自动运行。无需配置。',
           '内存带宽（Mac mini M6最高170 GB/s，M5 Pro 307 GB/s，M5 Max 460-614 GB/s，M5 Ultra 1.2 TB/s）是瓶颈，非GPU核心。',
@@ -2080,10 +2080,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-apple-silicon',
         title: 'Apple Silicon为何适合本地LLM',
         content: [
-          'Apple Silicon在本地LLM推理中表现突出，原因很简单：统一内存。当您购买具有64GB RAM的Mac时，所有64GB都可供LLM模型使用。离散GPU（如RTX 4090）拥有24GB VRAM（独立于系统RAM）——大于24GB的模型在不采用复杂多GPU设置的情况下根本无法适配。',
+          'Apple Silicon在本地LLM推理中表现突出，原因很简单：统一内存。当您购买具有64GB RAM的Mac时，扣除macOS所需的8GB后，约56GB可供LLM模型使用。离散GPU（如RTX 4090）拥有24GB VRAM（独立于系统RAM）——大于24GB的模型在不采用复杂多GPU设置的情况下根本无法适配。',
         ],
         items: [
-          '统一内存：整个RAM可用（视芯片为16-512GB）。RTX 4090：仅限离散VRAM（24GB硬限制）。',
+          '统一内存：扣除macOS所需约8GB后的RAM可用（视芯片总计16-512GB）。RTX 4090：仅限离散VRAM（24GB硬限制）。',
           'Metal加速：无CUDA依赖或专有驱动的GPU推理。',
           '功耗效率：负载时20-100W对比台式GPU的300W+。支持无风扇或近乎无声操作。',
           '静音：MacBook Air无风扇；Apple标称Mac mini空闲时为5 dBA。',
@@ -2124,7 +2124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '内存带宽比内存大小更重要',
         content: [
           'LLM推理受内存带宽限制，而非计算限制。这意味着令牌生成速度与带宽线性扩展，而非GPU核心数。',
-          'M5 Max在614 GB/s对比RTX 4090的1,008 GB/s看起来NVIDIA在原始带宽上赢了。但Apple Silicon用户拥有所有可用内存（无离散VRAM限制），因此可加载NVIDIA无法适配24GB的更大模型。',
+          'M5 Max在614 GB/s对比RTX 4090的1,008 GB/s看起来NVIDIA在原始带宽上赢了。但Apple Silicon用户可使用几乎全部内存（总量减去macOS所需的约8GB，无离散VRAM限制），因此可加载NVIDIA无法适配24GB的更大模型。',
         ],
         items: [
           'M5基础（150 GB/s）→ Llama 3.1 8B Q4时~25-30 tok/s（估算）',
@@ -2235,7 +2235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '个人做视频剪辑、三维和本地大模型，M5、M5 Pro、M5 Max 该怎么选？', a: '按最吃资源的那一项定档。只做日常问答和写作，M5 基础版加 32GB 就够。要跑 34B 级模型或做较重的剪辑，选 M5 Pro 加 64GB——它的 307 GB/s 带宽是基础版的两倍。要跑 70B 模型或做三维渲染，才需要 M5 Max 加 128GB（614 GB/s）。注意三种用途的瓶颈不同：剪辑看媒体引擎和 GPU 核心，三维看 GPU 与容量，大模型几乎只看内存带宽和容量。' },
           { q: '32GB 还是 64GB 更合适？', a: '看你要跑多大的模型。32GB 能稳妥地跑 13B 以内，适合日常问答、写作和代码补全；64GB 才能跑到 34B 级别，是想认真用本地大模型的实际起点。Mac 的内存无法在购买后升级，因此如果预算允许且打算长期使用，64GB 比 32GB 更保险。如果只把本地模型当辅助工具，32GB 完全够用，把预算留给存储更划算。' },
-          { q: 'Mac mini M5 Pro 64GB 能跑什么模型？', a: '可以跑到 34B 级别的模型，速度约 40-50 tok/s（估算）。它的内存带宽为 307 GB/s，是 M5 基础版 150 GB/s 的两倍，在 Llama 3.1 8B Q4 上约 50-60 tok/s（估算）。64GB 统一内存全部可供模型使用，没有独立显卡那样的显存上限，所以能装下 24GB 显存的 NVIDIA 显卡装不下的模型。' },
+          { q: 'Mac mini M5 Pro 64GB 能跑什么模型？', a: '可以跑到 34B 级别的模型，速度约 40-50 tok/s（估算）。它的内存带宽为 307 GB/s，是 M5 基础版 150 GB/s 的两倍，在 Llama 3.1 8B Q4 上约 50-60 tok/s（估算）。64GB 统一内存扣除macOS所需的8GB后，约56GB可供模型使用，没有独立显卡那样的显存上限，所以能装下 24GB 显存的 NVIDIA 显卡装不下的模型。' },
           { q: 'M5 Ultra 的内存带宽是多少？', a: 'Apple 在 Mac Studio 规格页公布的 M5 Ultra 内存带宽为 1.2 TB/s；作为参考，M5 Max 为 460-614 GB/s（视配置而定）。BGR 报告称，在 256GB 机型上用 4 位 Qwen 3.8 27B 测得约 55 tok/s，同一测试中 M3 Ultra（带宽约 819 GB/s）约 40 tok/s——带宽约高 1.5 倍，生成速度约高 1.4 倍。PromptQuorum 未自行测试 M5 Ultra。512GB 配置决定它能装下多大的模型，但装得下不等于跑得快。' },
           { q: 'Apple于2026年8月25日为Mac mini和Mac Studio发布了什么？', a: 'Apple以全新M6芯片（899美元，16GB，可选配至32GB）和M5 Pro（1,699美元，最高64GB）更新了Mac mini，并以M5 Max（2,499美元，最高128GB）和M5 Ultra（5,499美元，96GB起，最高512GB）更新了Mac Studio。全部自2026年9月22日起发售；M5 Ultra的512GB配置自2026年10月28日起可订购，起价22,299美元。' },
           { q: 'M5 Pro或M5 Max哪个更适合本地LLM？', a: 'M5 Pro（64GB）提供最佳价值——运行34B模型良好且起价1,699美元。M5 Max（起价2,499美元）仅在定期需要70B模型时才值得。大多数用户对M5 Pro满意。' },
@@ -2244,7 +2244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '需要Ollama、MLX还是llama.cpp？', a: '从Ollama（最简单）开始。如需更快推理或微调，切换至MLX。如需跨平台兼容性，使用llama.cpp。三者均可在Apple Silicon上运行。' },
           { q: 'M5 Ultra最高512GB内存会改变什么？', a: '会。M5 Ultra（Mac Studio，96GB起5,499美元，带宽1.2 TB/s，最高512GB起价22,299美元）以FP16（未量化，无量化损失）运行70B模型，并首次在消费级硬件上启用120B+模型。我们核实的首个独立测试（BGR，2026年9月21日，256GB机型）显示，4位Qwen 3.8 27B约55 tok/s，M3 Ultra约40 tok/s。PromptQuorum未自行进行M5 Ultra基准测试。' },
           { q: '2026年Apple Silicon对本地LLM值得投资吗？', a: '值得，特别是34B+模型。Apple Silicon是少数能在无多GPU复杂性前提下运行70B模型的消费级硬件之一，而Mac Studio M5 Ultra是少数能容纳120B+模型的消费级硬件之一。对于适配24GB NVIDIA VRAM的8B模型，RTX 4090更快但运营成本高。大多数本地LLM用户倾向于Mac mini M5 Pro 64GB（1,699美元）作为性价比最优选择。' },
-          { q: 'MacBook Air M5能运行本地LLM吗？', a: '可以，但有限制。MacBook Air M5（16-32GB）能舒适运行7-13B模型。在无风扇设计下，15分钟持续推理后开始热节流。偶尔使用：没问题。持续推理：Mac mini M5 Pro更合适。' },
+          { q: 'MacBook Air M5能运行本地LLM吗？', a: '可以，但有限制。MacBook Air M5在16GB下可运行7-8B模型（macOS占用后约剩8GB），24-32GB下可运行至13B模型。在无风扇设计下，15分钟持续推理后开始热节流。偶尔使用：没问题。持续推理：Mac mini M5 Pro更合适。' },
           { q: 'Apple M6的本地LLM性能如何？', a: 'Apple仅公布了相对宣称：AI性能比M4 Mac mini最高提升4倍，CPU快40%。在2026年8月的更新中，M6只出现在Mac mini上（899美元，16GB，最高32GB，带宽最高170 GB/s）。由于生成速度取决于内存带宽，预计接近M5基础版而非M5 Pro；M6的独立tok/s数据我们尚未核实。' },
           { q: '32GB的M1 Mac适合什么本地LLM配置？', a: '32GB的M1 Pro或M1 Max（带宽200 GB/s和400 GB/s）可以从容运行13B Q4模型，这也是上方芯片对比表中的最优点；64GB的M1 Max可达34B Q4。原版M1最高只有16GB，建议使用7B Q4。' },
           { q: '本地LLM上，M3 Ultra和M5 Max相比如何？', a: 'M3 Ultra在内存容量上胜过M5 Max（最高512GB对128GB），因此能装下最大的模型。速度方面，BGR报告称在27B测试中M5 Max的MacBook Pro与M3 Ultra的Mac Studio表现相近，而M5 Ultra平均比M3 Ultra高30-40%。48GB的M5 Pro低于两者，是想要余量又不想付Ultra价格的用户的最优点。' },
@@ -2292,7 +2292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ko.webp',
     twitterDescription: 'Apple Silicon 로컬 LLM: M1→M6, 2026년 8월 Mac mini/Studio 개편, 통합 메모리, Metal GPU, MLX vs Ollama. 2026년 완전 가이드.',
     publishDate: '2026-05-15',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     current_models_mentioned: ['Llama 3.1 8B', 'Llama 3.3 70B', 'Mistral Small', 'Phi-4', 'Whisper large-v3', 'LLaVA 7B'],
     current_hardware_mentioned: ['M1', 'M1 Pro', 'M1 Max', 'M1 Ultra', 'M2', 'M2 Pro', 'M2 Max', 'M2 Ultra', 'M3', 'M3 Pro', 'M3 Max', 'M4', 'M4 Pro', 'M4 Max', 'M5', 'M5 Pro', 'M5 Max', 'M5 Ultra', 'M6', 'RTX 4090'],
     audience: '로컬 LLM 실행을 고려 중이거나 이미 실행 중인 Mac 사용자, AI 워크로드용 Mac 구성을 평가하는 구매자 및 개발자.',
@@ -2301,7 +2301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Apple Silicon 로컬 LLM',
     targetKeywords: ['Apple Silicon LLM', 'M5 Pro M5 Max 로컬 LLM', 'M5 Ultra LLM', 'M6 로컬 LLM', '맥북 로컬 LLM', '통합 메모리 vs VRAM'],
     ctaText: 'Apple Silicon에서 LLM을 실행 중이십니까? PromptQuorum으로 로컬 M5 모델 출력을 GPT-4, Claude, Gemini 등 22개 클라우드 모델과 한 번에 비교해 보십시오. 로컬 설정이 클라우드 품질과 어디서 일치하고 어디서 부족한지 확인할 수 있습니다.',
-    leadAnswerBlock: '**Apple Silicon에는 별도의 VRAM 한계가 없어 모델이 통합 메모리 전체를 사용할 수 있습니다(16GB Mac mini M6부터 512GB Mac Studio M5 Ultra까지). 추정 속도는 M5 Pro(64GB)에서 34B 모델 15–20 tok/s, M5 Max(128GB)에서 70B 모델 12–18 tok/s입니다.**',
+    leadAnswerBlock: '**Apple Silicon에는 별도의 VRAM 한계가 없어 모델이 통합 메모리에서 macOS에 필요한 8GB를 뺀 만큼을 사용할 수 있습니다(16GB Mac mini M6부터 512GB Mac Studio M5 Ultra까지). 추정 속도는 M5 Pro(64GB)에서 34B 모델 15–20 tok/s, M5 Max(128GB)에서 70B 모델 12–18 tok/s입니다.**',
     quickAnswerTop: {
       ko: {
         question: '2026년 로컬 LLM용으로 어떤 Apple Silicon Mac을 구매해야 합니까?',
@@ -2335,10 +2335,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         snippetBlocks: [
           { type: 'one-sentence', text: 'Apple의 2026년 8월 25일 개편(9월 22일부터 판매)으로 Mac mini에 M6($899, 16GB, 최대 32GB)가, Mac Studio에 M5 Max/M5 Ultra(1.2 TB/s, 최대 512GB)가 도입되었습니다. M5 Pro(64 GB)는 8B 모델을 45–55 tok/s (추정), 34B를 15–20 tok/s (추정)로, M5 Max(128 GB)는 70B를 12–18 tok/s (추정)로 실행하며 통합 메모리 덕분에 VRAM 제한이 없습니다.' },
-          { type: 'plain-terms', text: '통합 메모리는 CPU, GPU, AI 엔진이 동일한 메모리 풀을 공유한다는 의미입니다. 128 GB Mac은 전체 메모리를 모델에 사용할 수 있지만, GPU는 VRAM 한도(RTX 4090 기준 최대 24 GB)에 제한됩니다. 그래서 Mac은 소비자용 NVIDIA GPU가 수용할 수 없는 70B 모델을 실행할 수 있습니다.' },
+          { type: 'plain-terms', text: '통합 메모리는 CPU, GPU, AI 엔진이 동일한 메모리 풀을 공유한다는 의미입니다. 128 GB Mac은 macOS용 8 GB를 뺀 약 120 GB를 모델에 사용할 수 있지만, GPU는 VRAM 한도(RTX 4090 기준 최대 24 GB)에 제한됩니다. 그래서 Mac은 소비자용 NVIDIA GPU가 수용할 수 없는 70B 모델을 실행할 수 있습니다.' },
         ],
         items: [
-          'Apple Silicon은 VRAM 한계를 제거합니다. 16GB(Mac mini M6 기본)부터 512GB(Mac Studio M5 Ultra 최고 구성)까지 통합 메모리 전체를 모델에 사용할 수 있습니다. RTX 4090은 독립형 VRAM이 24GB에서 최대입니다.',
+          'Apple Silicon은 VRAM 한계를 제거합니다. 16GB(Mac mini M6 기본)부터 512GB(Mac Studio M5 Ultra 최고 구성)까지 통합 메모리는 macOS와 모델이 공유하므로 macOS용 약 8GB를 빼고 계산해야 합니다. RTX 4090은 독립형 VRAM이 24GB에서 최대입니다.',
           'M5 Pro(64GB)는 8B 모델을 45–55 tok/s (추정), 34B 모델을 15–20 tok/s (추정)로 실행합니다. M5 Max(128GB)는 70B 모델을 12–18 tok/s (추정)로 실행합니다.',
           '24/7 LLM 추론의 연간 전기 요금 추정(예시값, $0.15/kWh 기준, 실측 아님): Mac Mini M6에서 $35–55 대 데스크탑 RTX 4090의 $300–400. 약 10배 차이입니다.',
           'Metal GPU 가속은 Ollama, MLX, llama.cpp에서 자동으로 작동합니다. 드라이버 설정이 필요 없습니다.',
@@ -2363,11 +2363,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'why-apple-silicon',
         title: '로컬 LLM에 Apple Silicon이 좋은 이유',
         content: [
-          'Apple Silicon이 로컬 LLM 추론에서 뛰어난 이유는 하나입니다. 바로 통합 메모리입니다. 64GB RAM이 탑재된 Mac을 구매하면 64GB 전체를 LLM 모델에 사용할 수 있습니다. RTX 4090 같은 독립형 GPU는 24GB VRAM을 가지며(시스템 RAM과 별도), 24GB보다 큰 모델은 복잡한 멀티 GPU 설정 없이는 단순히 들어가지 않습니다.',
+          'Apple Silicon이 로컬 LLM 추론에서 뛰어난 이유는 하나입니다. 바로 통합 메모리입니다. 64GB RAM이 탑재된 Mac을 구매하면 macOS에 필요한 8GB를 뺀 약 56GB를 LLM 모델에 사용할 수 있습니다. RTX 4090 같은 독립형 GPU는 24GB VRAM을 가지며(시스템 RAM과 별도), 24GB보다 큰 모델은 복잡한 멀티 GPU 설정 없이는 단순히 들어가지 않습니다.',
           '이 단일 아키텍처 차이는 변혁적입니다.',
         ],
         items: [
-          '통합 메모리: 전체 RAM 사용 가능(칩에 따라 16GB–512GB). RTX 4090: 독립형 VRAM만 사용(24GB 하드 한계).',
+          '통합 메모리: macOS용 약 8GB를 뺀 RAM 사용 가능(칩에 따라 총 16GB–512GB). RTX 4090: 독립형 VRAM만 사용(24GB 하드 한계).',
           'Metal 가속: CUDA 의존성이나 독점 드라이버 없이 GPU 추론 가능.',
           '전력 효율: 부하 시 20–100W 대 데스크탑 GPU 300W 이상. 팬리스 또는 거의 무음 운용이 가능합니다.',
           '정숙성: MacBook Air는 팬리스이며, Mac mini는 Apple 공시 기준 유휴 시 5 dBA입니다.',
@@ -2426,7 +2426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '메모리 크기보다 메모리 대역폭이 더 중요합니다',
         content: [
           'LLM 추론은 메모리 대역폭에 제한되며 계산 성능에 제한되지 않습니다. 이는 토큰 생성 속도가 GPU 코어 수가 아닌 대역폭에 따라 선형적으로 증가함을 의미합니다.',
-          'M5 Max(614 GB/s) 대 RTX 4090(1,008 GB/s)을 비교하면 순수 대역폭에서 NVIDIA가 유리해 보입니다. 그러나 Apple Silicon 사용자는 전체 메모리를 사용할 수 있어(독립형 VRAM 한계 없음) NVIDIA가 24GB에 맞출 수 없는 더 큰 모델을 로드할 수 있습니다. 실제 비교: 70B 모델을 실행하는 M5 Max(614 GB/s) 대 70B 모델 전체를 24GB에 담지 못하는 RTX 4090(일부를 CPU로 오프로드할 수는 있으나 훨씬 느림).',
+          'M5 Max(614 GB/s) 대 RTX 4090(1,008 GB/s)을 비교하면 순수 대역폭에서 NVIDIA가 유리해 보입니다. 그러나 Apple Silicon 사용자는 거의 전체 메모리(총량에서 macOS용 약 8GB 제외)를 사용할 수 있어(독립형 VRAM 한계 없음) NVIDIA가 24GB에 맞출 수 없는 더 큰 모델을 로드할 수 있습니다. 실제 비교: 70B 모델을 실행하는 M5 Max(614 GB/s) 대 70B 모델 전체를 24GB에 담지 못하는 RTX 4090(일부를 CPU로 오프로드할 수는 있으나 훨씬 느림).',
           'M 시리즈 라인업 내에서 대역폭 차이는 tok/s로 직접 변환됩니다.',
         ],
         items: [
@@ -2539,7 +2539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'MacBook Air M5에서 로컬 LLM을 실행할 수 있습니까?',
-            a: '예, 단 제한이 있습니다. MacBook Air M5(16–32GB)는 7–13B 모델을 편안하게 실행합니다. 팬리스 설계 특성상 10–15분 지속 추론 후 열 스로틀링이 발생합니다. 가끔 사용: 문제없습니다. 상시 추론: Mac Mini M5 Pro가 더 적합합니다.',
+            a: '예, 단 제한이 있습니다. MacBook Air M5는 16GB에서 7–8B 모델(macOS 이후 약 8GB 남음), 24–32GB에서 최대 13B 모델을 실행합니다. 팬리스 설계 특성상 10–15분 지속 추론 후 열 스로틀링이 발생합니다. 가끔 사용: 문제없습니다. 상시 추론: Mac Mini M5 Pro가 더 적합합니다.',
           },
           {
             q: 'Apple M6의 로컬 LLM 성능은 어느 정도입니까?',
@@ -2590,7 +2590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/local-llms/apple-silicon-local-llm-guide-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-15',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',

@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: 'Laptops are portable but thermally limited (7-13B models max, ~15 tok/sec, throttle after 15-20 min). Desktops offer unlimited scalability (any model, 100+ tok/sec, no throttle). The cost gap: $19 per tok/sec (desktop) vs $100+ per tok/sec (laptop). Choose laptop for mobility, desktop for power and reliability.',
       metaDescription: 'Desktop RTX 4070 Ti: 80 tok/sec sustained at $19/tok/sec. MacBook M5 Max: 55-70 tok/sec (est.), throttles after 15-18 min, $100/tok/sec. Full thermal data, cost analysis, M5 Max 70B capability, and 2026 buying guide.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**Laptops are portable but thermally limited (7-13B models max, ~15 tok/sec, throttle after 15-20 min). Desktops offer unlimited scalability (any model, 100+ tok/sec, no throttle). The cost gap: $19 per tok/sec (desktop) vs $100+ per tok/sec (laptop). Choose laptop for mobility, desktop for power and reliability.**',
       audience: 'Beginners running their first local LLM on consumer hardware',
       readTime: '9 min read',
@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'apple-silicon',
           title: 'Apple Silicon for Local LLMs: M3 vs M4 vs M5 vs Mac Studio',
           content: [
-            '**Apple unified memory architecture changes the laptop vs desktop equation.** Unlike discrete GPUs, Apple Silicon uses shared RAM/VRAM — a 128 GB MacBook Pro M5 Max has 128 GB of usable LLM memory. But thermal limits still apply to laptops; only Mac Studio avoids throttling.',
+            '**Apple unified memory architecture changes the laptop vs desktop equation.** Unlike discrete GPUs, Apple Silicon uses shared RAM/VRAM — a 128 GB MacBook Pro M5 Max has about 120 GB of usable LLM memory (macOS needs at least 8 GB). But thermal limits still apply to laptops; only Mac Studio avoids throttling.',
             '**M5 Pro and M5 Max (2026):** M5 Pro features 64 GB unified memory with 307 GB/s bandwidth — capable of 40-50 tok/sec on Llama 4 Scout. M5 Max offers up to 128 GB unified memory with 460-614 GB/s bandwidth — capable of 55-70 tok/sec (est.), making it the first laptop that can technically load Llama 3.3 70B at Q4_K_M (~40 GB). However, thermal throttling limits sustained 70B use to 15-18 minutes. For sustained 70B work, Mac Studio M5 Max or a desktop RTX 5090 remains the recommended choice.',
             '**Mac mini and Mac Studio refresh (Sept 2026 shipping):** Apple updated its desktop Apple Silicon lineup on August 25, 2026. Mac mini now starts at $899 with the M6 chip (32 GB max unified memory, 170 GB/s bandwidth) or $1,699 with M5 Pro (64 GB max, 307 GB/s). Mac Studio starts at $2,499 with M5 Max (128 GB max) or $5,499 with M5 Ultra (96 GB base, up to 256 GB — a 512 GB configuration ships late October 2026 at a substantially higher price). All four ship September 22, 2026 (except the 512 GB Mac Studio M5 Ultra). No independent LLM benchmarks exist yet for these chips — figures below are memory-based capacity estimates, not measured speeds.',
           ],
@@ -197,7 +197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'warning-unified-memory',
           title: '⚠️ Warning: Unified Memory ≠ Unlimited VRAM',
           content: [
-            'Apple\'s "128 GB unified memory" does NOT mean 128 GB of dedicated VRAM. Unified memory is shared between CPU, GPU, OS, and user applications. A 70B model at Q4 requires ~40 GB. With macOS, background apps, and Ollama overhead, a 128 GB M5 Max has ~90-100 GB available for model weights — tight but workable. A 64 GB M5 Pro cannot run 70B at all; max practical model size is 30B at Q4.',
+            'Apple\'s "128 GB unified memory" does NOT mean 128 GB of dedicated VRAM. Unified memory is shared between CPU, GPU, OS, and user applications. A 70B model at Q4 requires ~40 GB. macOS needs at least 8 GB, so a 128 GB M5 Max has about 120 GB left before other apps and Ollama overhead — enough for a 70B model. A 64 GB M5 Pro has about 56 GB left: 70B at Q4 (~40 GB) fits but leaves only about 16 GB for context and other apps, so 30B at Q4 is the comfortable maximum.',
           ],
           callouts: [
             { type: '⚠️', text: 'Always subtract 30-40 GB from the advertised unified memory when estimating available LLM memory.' },
@@ -381,7 +381,7 @@ schema: {
       intro: 'Los laptops son portátiles pero están limitados térmicamente (máximo modelos 7-13B, ~15 tok/seg, throttling después de 15-20 min). Los escritorios ofrecen escalabilidad ilimitada (cualquier modelo, 100+ tok/seg, sin throttling). La brecha de costo: $19 por tok/seg (escritorio) vs $100+ por tok/seg (laptop). Elige laptop para movilidad, escritorio para potencia y fiabilidad.',
       metaDescription: 'Escritorio RTX 4070 Ti: 80 tok/s sostenidos a $19/tok/s. MacBook M5 Max: 55–70 tok/s, con throttling tras 15–18 min, $100/tok/s. Datos térmicos y de costos.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**Los laptops son portátiles pero están limitados térmicamente (máximo modelos 7-13B, ~15 tok/seg, throttling después de 15-20 min). Los escritorios ofrecen escalabilidad ilimitada (cualquier modelo, 100+ tok/seg, sin throttling). La brecha de costo: $19 por tok/seg (escritorio) vs $100+ por tok/seg (laptop). Elige laptop para movilidad, escritorio para potencia y fiabilidad.**',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
       readTime: '9 min de lectura',
@@ -524,7 +524,7 @@ schema: {
           id: 'apple-silicon',
           title: 'Apple Silicon para LLMs locales: M3 vs M4 vs M5 vs Mac Studio',
           content: [
-            '**La arquitectura de memoria unificada de Apple cambia la ecuación laptop vs escritorio.** A diferencia de las GPUs discretas, Apple Silicon usa RAM/VRAM compartida — un MacBook Pro M5 Max de 128 GB tiene 128 GB de memoria LLM utilizable. Pero los límites térmicos siguen aplicando a los laptops; solo el Mac Studio evita el throttling.',
+            '**La arquitectura de memoria unificada de Apple cambia la ecuación laptop vs escritorio.** A diferencia de las GPUs discretas, Apple Silicon usa RAM/VRAM compartida — un MacBook Pro M5 Max de 128 GB tiene unos 120 GB de memoria LLM utilizable (macOS necesita al menos 8 GB). Pero los límites térmicos siguen aplicando a los laptops; solo el Mac Studio evita el throttling.',
             '**M5 Pro y M5 Max (2026):** M5 Pro cuenta con 64 GB de memoria unificada con 307 GB/s de ancho de banda — capaz de 40-50 tok/seg en Llama 4 Scout. M5 Max ofrece hasta 128 GB de memoria unificada con 460-614 GB/s de ancho de banda — capaz de 55-70 tok/seg (est.), siendo el primer laptop que puede técnicamente cargar Llama 3.3 70B en Q4_K_M (~40 GB). Sin embargo, el throttling térmico limita el uso 70B sostenido a 15-18 minutos. Para trabajo 70B sostenido, el Mac Studio M5 Max o un escritorio RTX 5090 sigue siendo la opción recomendada.',
             '**Renovación de Mac mini y Mac Studio (envíos en septiembre 2026):** Apple actualizó su línea de escritorio Apple Silicon el 25 de agosto de 2026. El Mac mini ahora parte de $899 con el chip M6 (32 GB máx. de memoria unificada, 170 GB/s de ancho de banda) o $1,699 con M5 Pro (64 GB máx., 307 GB/s). El Mac Studio parte de $2,499 con M5 Max (128 GB máx.) o $5,499 con M5 Ultra (96 GB base, hasta 256 GB — la configuración de 512 GB se envía a finales de octubre de 2026 a un precio considerablemente mayor). Aún no existen benchmarks independientes de LLM para estos chips.',
           ],
@@ -555,7 +555,7 @@ schema: {
           id: 'warning-unified-memory',
           title: '⚠️ Aviso: Memoria unificada ≠ VRAM ilimitada',
           content: [
-            'Los "128 GB de memoria unificada" de Apple NO significa 128 GB de VRAM dedicada. La memoria unificada se comparte entre CPU, GPU, sistema operativo y aplicaciones de usuario. Un modelo 70B en Q4 requiere ~40 GB. Con macOS, aplicaciones en segundo plano y el overhead de Ollama, un M5 Max de 128 GB tiene ~90-100 GB disponibles para pesos del modelo — ajustado pero funcional. Un M5 Pro de 64 GB no puede ejecutar 70B en absoluto; el tamaño máximo práctico es 30B en Q4.',
+            'Los "128 GB de memoria unificada" de Apple NO significa 128 GB de VRAM dedicada. La memoria unificada se comparte entre CPU, GPU, sistema operativo y aplicaciones de usuario. Un modelo 70B en Q4 requiere ~40 GB. macOS necesita al menos 8 GB, así que un M5 Max de 128 GB deja unos 120 GB antes de otras aplicaciones y del overhead de Ollama — suficiente para un modelo 70B. Un M5 Pro de 64 GB deja unos 56 GB: 70B en Q4 (~40 GB) cabe, pero quedan solo unos 16 GB para el contexto y otras aplicaciones, así que 30B en Q4 es el máximo cómodo.',
           ],
           callouts: [
             { type: '⚠️', text: 'Siempre resta 30-40 GB de la memoria unificada anunciada al estimar la memoria LLM disponible.' },
@@ -739,7 +739,7 @@ schema: {
       intro: 'الحواسيب المحمولة قابلة للحمل لكنها محدودة حراريًا (نماذج 7-13B كحد أقصى، ~15 tok/sec، اختناق بعد 15-20 دقيقة). توفر الحواسيب المكتبية توسّعًا غير محدود (أي نموذج، 100+ tok/sec، دون اختناق). فجوة التكلفة: 19$ لكل tok/sec (مكتبي) مقابل 100$+ لكل tok/sec (محمول). اختر المحمول للتنقل، والمكتبي للقوة والموثوقية.',
       metaDescription: 'مكتبي ⁨RTX 4070 Ti⁩ يُنتج ⁨80 tok/s⁩ مستدامة بـ ⁨19⁩$/⁨tok/s⁩؛ ⁨MacBook M5 Max⁩ يختنق بعد ⁨18⁩ دقيقة عند ⁨100⁩$/⁨tok/s⁩. مقارنة حرارية وتكلفة شاملة.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**الحواسيب المحمولة قابلة للحمل لكنها محدودة حراريًا (نماذج 7-13B كحد أقصى، ~15 tok/sec، اختناق بعد 15-20 دقيقة). توفر الحواسيب المكتبية توسّعًا غير محدود (أي نموذج، 100+ tok/sec، دون اختناق). فجوة التكلفة: 19$ لكل tok/sec (مكتبي) مقابل 100$+ لكل tok/sec (محمول). اختر المحمول للتنقل، والمكتبي للقوة والموثوقية.**',
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على أجهزة استهلاكية',
       readTime: '9 دقائق للقراءة',
@@ -882,7 +882,7 @@ schema: {
           id: 'apple-silicon',
           title: 'Apple Silicon لنماذج LLM المحلية: M3 مقابل M4 مقابل M5 مقابل Mac Studio',
           content: [
-            '**تغيّر بنية الذاكرة الموحدة من Apple معادلة المحمول مقابل المكتبي.** خلافًا لـ GPU المنفصلة، يستخدم Apple Silicon ذاكرة RAM/VRAM مشتركة — يمتلك MacBook Pro M5 Max بسعة 128 GB ذاكرة LLM قابلة للاستخدام بسعة 128 GB. لكن الحدود الحرارية لا تزال تنطبق على المحمولات؛ و Mac Studio وحده يتجنّب الاختناق.',
+            '**تغيّر بنية الذاكرة الموحدة من Apple معادلة المحمول مقابل المكتبي.** خلافًا لـ GPU المنفصلة، يستخدم Apple Silicon ذاكرة RAM/VRAM مشتركة — يمتلك MacBook Pro M5 Max بسعة 128 GB نحو 120 GB من ذاكرة LLM القابلة للاستخدام (يحتاج macOS إلى 8 GB على الأقل). لكن الحدود الحرارية لا تزال تنطبق على المحمولات؛ و Mac Studio وحده يتجنّب الاختناق.',
             '**M5 Pro و M5 Max (2026):** يضم M5 Pro ذاكرة موحدة 64 GB بعرض نطاق 307 GB/s — قادر على 40-50 tok/sec على Llama 4 Scout. ويقدّم M5 Max حتى 128 GB ذاكرة موحدة بعرض نطاق 460-614 GB/s — قادر على 55-70 tok/sec (تقديري)، وهو أول حاسوب محمول يستطيع تقنيًا تحميل Llama 3.3 70B بـ Q4_K_M (~40 GB). ومع ذلك، يحدّ الاختناق الحراري الاستخدام المستدام لـ 70B بـ 15-18 دقيقة. وللعمل المستدام بـ 70B، يبقى Mac Studio M5 Max أو مكتبي RTX 5090 الخيار الموصى به.',
             '**تحديث Mac mini و Mac Studio (الشحن في سبتمبر 2026):** حدّثت Apple خط أجهزتها المكتبية القائمة على Apple Silicon في 25 أغسطس 2026. يبدأ Mac mini من 899$ بشريحة M6 (32 GB كحد أقصى من الذاكرة الموحدة، عرض نطاق 170 GB/s) أو 1699$ بشريحة M5 Pro (64 GB كحد أقصى، 307 GB/s). ويبدأ Mac Studio من 2499$ بشريحة M5 Max (حتى 128 GB) أو 5499$ بشريحة M5 Ultra (96 GB أساسي، حتى 256 GB — ويُشحن إصدار 512 GB في أواخر أكتوبر 2026 بسعر أعلى بكثير). لا توجد بعد اختبارات أداء مستقلة لنماذج LLM على هذه الشرائح.',
           ],
@@ -913,7 +913,7 @@ schema: {
           id: 'warning-unified-memory',
           title: '⚠️ تنبيه: الذاكرة الموحدة ≠ VRAM غير محدودة',
           content: [
-            '"128 GB من الذاكرة الموحدة" من Apple لا تعني 128 GB من VRAM مخصصة. تُشارَك الذاكرة الموحدة بين CPU و GPU ونظام التشغيل وتطبيقات المستخدم. يتطلب نموذج 70B بـ Q4 نحو ~40 GB. ومع macOS وتطبيقات الخلفية وعبء Ollama، يملك M5 Max بسعة 128 GB نحو ~90-100 GB متاحة لأوزان النموذج — ضيّق لكنه عملي. ولا يستطيع M5 Pro بسعة 64 GB تشغيل 70B إطلاقًا؛ الحجم الأقصى العملي هو 30B بـ Q4.',
+            '"128 GB من الذاكرة الموحدة" من Apple لا تعني 128 GB من VRAM مخصصة. تُشارَك الذاكرة الموحدة بين CPU و GPU ونظام التشغيل وتطبيقات المستخدم. يتطلب نموذج 70B بـ Q4 نحو ~40 GB. ويحتاج macOS إلى 8 GB على الأقل، لذا يبقى في M5 Max بسعة 128 GB نحو 120 GB قبل التطبيقات الأخرى وعبء Ollama — وهذا يكفي لنموذج 70B. أما M5 Pro بسعة 64 GB فيبقى فيه نحو 56 GB: يتسع 70B بـ Q4 (~40 GB) لكن لا يتبقى سوى نحو 16 GB للسياق والتطبيقات الأخرى، لذا فإن 30B بـ Q4 هو الحد الأقصى المريح.',
           ],
           callouts: [
             { type: '⚠️', text: 'اطرح دائمًا 30-40 GB من الذاكرة الموحدة المعلنة عند تقدير ذاكرة LLM المتاحة.' },
@@ -1247,7 +1247,7 @@ schema: {
       intro: 'Laptops sind tragbar, aber thermisch begrenzt (7–13B-Modelle maximal, ~15 Tok/Sek). Desktops bieten unbegrenzte Skalierbarkeit (beliebige Modelle, 100+ Tok/Sek). Stand April 2026: Laptop für Mobilität, Desktop für Leistung.',
       metaDescription: 'RTX 4070 Ti: 80 Tok/Sek, 21 €/Tok/Sek. MacBook M4 Max: 35 Tok/Sek, Drosselung nach 18 Min. 70B-Modelle: Desktop oder Mac Studio. Kaufratgeber 2026.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**Laptops sind tragbar, aber thermisch begrenzt (7–13B-Modelle maximal, ~15 Tok/Sek). Desktops bieten unbegrenzte Skalierbarkeit (beliebige Modelle, 100+ Tok/Sek). Stand April 2026: Laptop für Mobilität, Desktop für Leistung.**',
       audience: 'Einsteiger, die ihr erstes lokales LLM auf Consumer-Hardware betreiben',
       readTime: '9 Min. Lesezeit',
@@ -1385,7 +1385,7 @@ schema: {
         appleSilicon: {
           id: 'apple-silicon',
           title: 'Apple Silicon für lokale LLMs: M3 vs. M4 vs. Mac Studio',
-          content: ['**Apples Unified-Memory-Architektur verändert die Laptop-vs.-Desktop-Gleichung.** Im Gegensatz zu diskreten GPUs teilt Apple Silicon RAM und VRAM — ein MacBook Pro M4 Max mit 128 GB verfügt über 128 GB nutzbaren LLM-Speicher. Thermische Grenzen gelten jedoch weiterhin für Laptops; nur der Mac Studio vermeidet Throttling.'],
+          content: ['**Apples Unified-Memory-Architektur verändert die Laptop-vs.-Desktop-Gleichung.** Im Gegensatz zu diskreten GPUs teilt Apple Silicon RAM und VRAM — ein MacBook Pro M4 Max mit 128 GB verfügt über etwa 120 GB nutzbaren LLM-Speicher (macOS benötigt mindestens 8 GB). Thermische Grenzen gelten jedoch weiterhin für Laptops; nur der Mac Studio vermeidet Throttling.'],
           columns: ['Chip', 'RAM-Optionen', 'Geschwindigkeit (8B)', 'Max. Modell', 'Drosselt?'],
           rows: [
             { 'Chip': 'M3 (Laptop)', 'RAM-Optionen': '8–24 GB', 'Geschwindigkeit (8B)': '10–15 Tok/Sek', 'Max. Modell': '7B Q4', 'Drosselt?': 'Nach 10 Min.' },
@@ -1579,7 +1579,7 @@ schema: {
       intro: 'Les laptops sont portables mais thermiquement limités (modèles 7–13B max, ~15 tok/s). Les bureaux offrent une scalabilité illimitée (n\'importe quel modèle, 100+ tok/s). En avril 2026 : laptop pour la mobilité, bureau pour la puissance.',
       metaDescription: 'RTX 4070 Ti : 80 tok/s, 21 €/tok/s. MacBook M4 Max : 35 tok/s, throttling après 18 min. Modèles 70B nécessitent un bureau. Guide d\'achat avril 2026.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**Les laptops sont portables mais thermiquement limités (modèles 7–13B max, ~15 tok/s). Les bureaux offrent une scalabilité illimitée (n\'importe quel modèle, 100+ tok/s). En avril 2026 : laptop pour la mobilité, bureau pour la puissance.**',
       audience: 'Débutants configurant leur premier LLM local sur du matériel grand public',
       readTime: '9 min de lecture',
@@ -1717,7 +1717,7 @@ schema: {
         appleSilicon: {
           id: 'apple-silicon',
           title: 'Apple Silicon pour les LLMs locaux : M3 vs M4 vs Mac Studio',
-          content: ['**L\'architecture mémoire unifiée d\'Apple change l\'équation laptop vs bureau.** Contrairement aux GPU discrets, Apple Silicon partage RAM et VRAM — un MacBook Pro M4 Max avec 128 Go dispose de 128 Go de mémoire LLM utilisable. Les limites thermiques s\'appliquent toutefois aux laptops ; seul le Mac Studio évite le throttling.'],
+          content: ['**L\'architecture mémoire unifiée d\'Apple change l\'équation laptop vs bureau.** Contrairement aux GPU discrets, Apple Silicon partage RAM et VRAM — un MacBook Pro M4 Max avec 128 Go dispose d\'environ 120 Go de mémoire LLM utilisable (macOS en réserve au moins 8 Go). Les limites thermiques s\'appliquent toutefois aux laptops ; seul le Mac Studio évite le throttling.'],
           columns: ['Puce', 'Options RAM', 'Vitesse (8B)', 'Modèle max', 'Throttle ?'],
           rows: [
             { 'Puce': 'M3 (laptop)', 'Options RAM': '8–24 Go', 'Vitesse (8B)': '10–15 tok/s', 'Modèle max': '7B Q4', 'Throttle ?': 'Après 10 min' },
@@ -1892,7 +1892,7 @@ schema: {
       intro: 'ラップトップは携帯性に優れますが熱的制約があります（最大7〜13Bモデル、約15トークン/秒）。デスクトップは無限のスケーラビリティを提供します（任意のモデル、100トークン/秒以上）。移動性ならラップトップ、性能ならデスクトップを選択してください。',
       metaDescription: 'RTX 4070 Ti：80トークン/秒、コスト19ドル/トークン/秒。MacBook M4 Max：35トークン/秒（18分後にスロットリング）、約100ドル/トークン/秒。70Bモデルの実行にはデスクトップまたはMac Studio M5 Maxが必要。2026年8月更新の購入ガイド。',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**ラップトップは携帯性に優れますが熱的制約があります（最大7〜13Bモデル、約15トークン/秒）。デスクトップは無限のスケーラビリティを提供します（任意のモデル、100トークン/秒以上）。移動性ならラップトップ、性能ならデスクトップを選択してください。**',
       audience: '初めてローカルLLMをコンシューマーハードウェアで動かす初心者',
       readTime: '9分で読める',
@@ -2030,7 +2030,7 @@ schema: {
         appleSilicon: {
           id: 'apple-silicon',
           title: 'Apple SiliconとローカルLLM：M3 vs M4 vs Mac Studio',
-          content: ['**Appleのユニファイドメモリアーキテクチャはラップトップ vs デスクトップの方程式を変えます。** 個別GPUとは異なり、Apple SiliconはRAMとVRAMを共有 — 128GB MacBook Pro M4 Maxには128GBのLLMメモリが使用可能。ただし熱的制約はラップトップには依然として適用；スロットリングを回避できるのはMac Studioのみ。'],
+          content: ['**Appleのユニファイドメモリアーキテクチャはラップトップ vs デスクトップの方程式を変えます。** 個別GPUとは異なり、Apple SiliconはRAMとVRAMを共有 — 128GB MacBook Pro M4 Maxでは、macOSが最低8GBを必要とするため、約120GBをLLMメモリとして使用可能。ただし熱的制約はラップトップには依然として適用；スロットリングを回避できるのはMac Studioのみ。'],
           columns: ['チップ', 'RAMオプション', '速度 (8B)', '最大モデル', 'スロットリング？'],
           rows: [
             { 'チップ': 'M3（ラップトップ）', 'RAMオプション': '8〜24 GB', '速度 (8B)': '10〜15トークン/秒', '最大モデル': '7B Q4', 'スロットリング？': '10分後' },
@@ -2205,7 +2205,7 @@ schema: {
       intro: '笔记本便于携带但受散热限制（最大7~13B模型，约15令牌/秒）。台式机提供无限扩展能力（任意模型，100令牌/秒以上）。移动性选笔记本，性能选台式机。',
       metaDescription: 'RTX 4070 Ti：80令牌/秒，成本19美元/令牌/秒。MacBook M4 Max：35令牌/秒（18分钟后降频），约100美元/令牌/秒。运行70B模型需要台式机或Mac Studio M5 Max。2026年8月更新的购买指南。',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**笔记本便于携带但受散热限制（最大7~13B模型，约15令牌/秒）。台式机提供无限扩展能力（任意模型，100令牌/秒以上）。移动性选笔记本，性能选台式机。**',
       audience: '首次在消费级硬件上运行本地LLM的初级用户',
       readTime: '阅读约9分钟',
@@ -2343,7 +2343,7 @@ schema: {
         appleSilicon: {
           id: 'apple-silicon',
           title: 'Apple Silicon用于本地LLM：M3 vs M4 vs Mac Studio',
-          content: ['**Apple统一内存架构改变了笔记本 vs 台式机的方程式。** 与独立GPU不同，Apple Silicon共享RAM和VRAM — 128GB MacBook Pro M4 Max有128GB可用LLM内存。但散热限制仍适用于笔记本；只有Mac Studio能避免降频。'],
+          content: ['**Apple统一内存架构改变了笔记本 vs 台式机的方程式。** 与独立GPU不同，Apple Silicon共享RAM和VRAM — 128GB MacBook Pro M4 Max约有120GB可用LLM内存（macOS至少需要8GB）。但散热限制仍适用于笔记本；只有Mac Studio能避免降频。'],
           columns: ['芯片', 'RAM选项', '速度 (8B)', '最大模型', '是否降频？'],
           rows: [
             { '芯片': 'M3（笔记本）', 'RAM选项': '8~24 GB', '速度 (8B)': '10~15令牌/秒', '最大模型': '7B Q4', '是否降频？': '10分钟后' },
@@ -2521,7 +2521,7 @@ schema: {
       intro: '노트북은 휴대성이 있지만 열 제한이 있습니다(최대 7-13B 모델, ~15 tok/sec, 15-20분 후 스로틀링). 데스크톱은 무제한 확장성을 제공합니다(모든 모델, 100+ tok/sec, 스로틀링 없음). 비용 격차: 데스크톱은 tok/sec당 $19, 노트북은 tok/sec당 $100 이상입니다. 이동성이 필요하면 노트북을, 성능과 안정성이 필요하면 데스크톱을 선택하십시오.',
       metaDescription: '데스크톱 RTX 4070 Ti: 지속 80 tok/s, tok/s당 $19. MacBook M5 Max: 55-70 tok/s, 15-18분 후 스로틀링, tok/s당 $100. 전체 열 데이터와 비용 분석, 2026 구매 가이드.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**노트북은 휴대성이 있지만 열 제한이 있습니다(최대 7-13B 모델, ~15 tok/sec, 15-20분 후 스로틀링). 데스크톱은 무제한 확장성을 제공합니다(모든 모델, 100+ tok/sec, 스로틀링 없음). 비용 격차: 데스크톱은 tok/sec당 $19, 노트북은 tok/sec당 $100 이상입니다. 이동성이 필요하면 노트북을, 성능과 안정성이 필요하면 데스크톱을 선택하십시오.**',
       audience: '소비자 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
       readTime: '9분 읽기',
@@ -2664,7 +2664,7 @@ schema: {
           id: 'apple-silicon',
           title: '로컬 LLM용 Apple Silicon: M3 vs M4 vs M5 vs Mac Studio',
           content: [
-            '**Apple 통합 메모리 아키텍처는 노트북 vs 데스크톱 방정식을 바꿉니다.** 독립형 GPU와 달리 Apple Silicon은 공유 RAM/VRAM을 사용합니다 — 128 GB MacBook Pro M5 Max는 128 GB의 LLM 메모리를 사용할 수 있습니다. 하지만 열 제한은 여전히 노트북에 적용되며, Mac Studio만이 스로틀링을 피할 수 있습니다.',
+            '**Apple 통합 메모리 아키텍처는 노트북 vs 데스크톱 방정식을 바꿉니다.** 독립형 GPU와 달리 Apple Silicon은 공유 RAM/VRAM을 사용합니다 — 128 GB MacBook Pro M5 Max는 약 120 GB의 LLM 메모리를 사용할 수 있습니다(macOS에 최소 8 GB가 필요합니다). 하지만 열 제한은 여전히 노트북에 적용되며, Mac Studio만이 스로틀링을 피할 수 있습니다.',
             '**M5 Pro 및 M5 Max (2026):** M5 Pro는 307 GB/s 대역폭의 64 GB 통합 메모리를 갖추어 Llama 4 Scout에서 40-50 tok/sec를 지원합니다. M5 Max는 460-614 GB/s 대역폭의 최대 128 GB 통합 메모리를 제공하여 55-70 tok/sec(추정)를 달성하며, Q4_K_M 포맷의 Llama 3.3 70B(~40 GB)를 기술적으로 로드할 수 있는 최초의 노트북입니다. 그러나 열 스로틀링으로 인해 지속적인 70B 사용은 15-18분으로 제한됩니다. 지속적인 70B 작업에는 Mac Studio M5 Max 또는 데스크톱 RTX 5090을 권장합니다.',
             '**Mac mini 및 Mac Studio 리프레시 (2026년 9월 출시):** Apple은 2026년 8월 25일 데스크톱 Apple Silicon 라인업을 업데이트했습니다. Mac mini는 M6 칩(최대 32 GB 통합 메모리, 170 GB/s 대역폭)이 $899부터, M5 Pro(최대 64 GB, 307 GB/s)가 $1,699부터 시작합니다. Mac Studio는 M5 Max(최대 128 GB)가 $2,499부터, M5 Ultra(기본 96 GB, 최대 256 GB — 512 GB 구성은 2026년 10월 말 상당히 높은 가격에 출시)가 $5,499부터 시작합니다. 이들 칩에 대한 독립적인 LLM 벤치마크는 아직 존재하지 않습니다.',
           ],
@@ -2695,7 +2695,7 @@ schema: {
           id: 'warning-unified-memory',
           title: '⚠️ 경고: 통합 메모리 ≠ 무제한 VRAM',
           content: [
-            'Apple의 "128 GB 통합 메모리"는 128 GB의 전용 VRAM을 의미하지 않습니다. 통합 메모리는 CPU, GPU, OS, 사용자 애플리케이션 간에 공유됩니다. Q4 포맷의 70B 모델은 ~40 GB가 필요합니다. macOS, 백그라운드 앱, Ollama 오버헤드를 고려하면, 128 GB M5 Max는 모델 가중치에 약 90-100 GB를 사용할 수 있습니다 — 빡빡하지만 가능합니다. 64 GB M5 Pro는 70B를 전혀 실행할 수 없으며, 실질적인 최대 모델 크기는 Q4 포맷의 30B입니다.',
+            'Apple의 "128 GB 통합 메모리"는 128 GB의 전용 VRAM을 의미하지 않습니다. 통합 메모리는 CPU, GPU, OS, 사용자 애플리케이션 간에 공유됩니다. Q4 포맷의 70B 모델은 ~40 GB가 필요합니다. macOS에 최소 8 GB가 필요하므로 128 GB M5 Max에는 다른 앱과 Ollama 오버헤드를 제외하기 전 약 120 GB가 남아 70B 모델에 충분합니다. 64 GB M5 Pro에는 약 56 GB가 남습니다. Q4 포맷의 70B(~40 GB)는 들어가지만 컨텍스트와 다른 앱에 쓸 수 있는 공간은 약 16 GB뿐이므로, 여유 있게 쓸 수 있는 최대 크기는 Q4 포맷의 30B입니다.',
           ],
           callouts: [
             { type: '⚠️', text: '사용 가능한 LLM 메모리를 추산할 때는 광고된 통합 메모리에서 항상 30-40 GB를 빼십시오.' },

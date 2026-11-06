@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'M4 Max vs M4 Pro for Local LLMs 2026 | Prompt Bites',
     metaDescription: 'M4 Max beats M4 Pro for local LLMs: more memory bandwidth (546 vs 273 GB/s), higher unified memory ceiling (128GB vs 48GB) — faster tokens/sec.',
     publishDate: '2026-07-14',
-    dateModified: '2026-09-25',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
     last_full_refresh: '2026-09-25',
@@ -51,7 +51,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'M4 Max memory bandwidth: up to 546 GB/s vs M4 Pro\'s 273 GB/s — nearly double, and bandwidth drives tokens/sec',
           'M4 Max unified memory ceiling: up to 128 GB vs M4 Pro\'s 48 GB — the Max alone can fit 70B-class models',
           'For any model size both chips can load, the M4 Max is meaningfully faster, not just capable of more',
-          'The M4 Pro remains the better value pick if your target model size fits comfortably within 48 GB',
+          'The M4 Pro remains the better value pick if your target model size fits comfortably within about 40 GB (48 GB minus 8 GB for macOS)',
         ],
       },
       bestPick: {
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>The Apple M4 Max outperforms the M4 Pro for local LLMs because local inference speed is primarily bound by memory bandwidth once a model fits in unified memory — and the M4 Max\'s bandwidth (up to 546 GB/s on the highest-core-count configuration) is nearly double the M4 Pro\'s 273 GB/s.</strong> This means the M4 Max runs identical models faster, not just larger ones.',
           'The M4 Max also raises the unified memory ceiling to 128 GB, versus the M4 Pro\'s 48 GB maximum. That unlocks model sizes the M4 Pro simply cannot load at all — including 70B-class models at reasonable quantization, which need far more than 48 GB.',
-          'The M4 Pro remains the better value choice if your target models fit comfortably within its 48 GB ceiling — for example, sticking to 14B-32B models. You pay a real premium for the M4 Max\'s extra bandwidth and memory headroom, and it is only worth it if you actually need one or both.',
+          'The M4 Pro remains the better value choice if your target models fit comfortably within the roughly 40 GB it leaves usable (48 GB minus 8 GB for macOS) — for example, sticking to 14B-32B models. You pay a real premium for the M4 Max\'s extra bandwidth and memory headroom, and it is only worth it if you actually need one or both.',
         ],
         callouts: [
           { type: 'tip', text: '<strong>Hardware update (September 2026):</strong> Apple has moved on from the M4 generation. The MacBook Pro has shipped M5 Pro and M5 Max chips since March 2026, and as of September 22, 2026 Apple also brought M6/M5 Pro to the Mac mini (from $899/$1,699) and M5 Max/M5 Ultra to the Mac Studio (from $2,499/$5,499). The M4 Max and M4 Pro compared below are now two generations behind and best considered for used or refurbished purchases. See the <a href="/local-llms/m5-pro-max-llm-benchmarks-2026">M5 Pro vs M5 Max LLM benchmarks</a> for the current-generation comparison.' },
@@ -87,7 +87,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'M4 Max vs M4 Pro — Spec by Spec',
         content: [
           'Memory bandwidth is the headline difference: the M4 Pro tops out at 273 GB/s, while the M4 Max ranges from 410 GB/s (lower-core-count config) to 546 GB/s (higher-core-count config) depending on which M4 Max variant you buy — check the exact configuration before assuming the top bandwidth figure applies.',
-          'Unified memory ceiling is the other major factor: 48 GB maximum on the M4 Pro versus up to 128 GB on the M4 Max. If your model sizes will always fit within 48 GB, the bandwidth gap is the only thing you\'re paying for with the Max; if you need more than 48 GB of usable memory, the M4 Pro is not an option at all.',
+          'Unified memory ceiling is the other major factor: 48 GB maximum on the M4 Pro versus up to 128 GB on the M4 Max. If your model sizes will always fit within about 40 GB (48 GB minus the 8 GB macOS needs), the bandwidth gap is the only thing you\'re paying for with the Max; if you need more than about 40 GB of usable memory, the M4 Pro is not an option at all.',
           'Both chips are now two generations behind Apple\'s current lineup — the bandwidth and memory relationship described above still holds between the M4 Pro and M4 Max, it just no longer represents Apple\'s fastest available silicon.',
         ],
       },
@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'M4 Max مقابل M4 Pro لتشغيل LLM محليًا 2026 | Prompt Bites',
     metaDescription: 'يتفوق M4 Max على M4 Pro لتشغيل LLM محليًا في عرض نطاق الذاكرة (حتى 546 GB/s مقابل 273 GB/s) وسقف الذاكرة الموحدة (حتى 128GB مقابل 48GB) — أداء أسرع في كل حجم نموذج.',
     publishDate: '2026-07-14',
-    dateModified: '2026-09-25',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
     last_full_refresh: '2026-09-25',
@@ -179,7 +179,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'عرض نطاق ذاكرة M4 Max: حتى 546 GB/s مقابل 273 GB/s لـ M4 Pro — تقريبًا الضعف، وعرض النطاق يقود الرموز في الثانية',
           'سقف الذاكرة الموحدة لـ M4 Max: حتى 128 GB مقابل 48 GB لـ M4 Pro — Max وحده يمكنه استيعاب نماذج من فئة 70B',
           'لأي حجم نموذج تستوعبه كلتا الشريحتين، M4 Max أسرع بشكل ملحوظ، وليس فقط قادرًا على المزيد',
-          'يبقى M4 Pro اختيار القيمة الأفضل إذا كان حجم نموذجك المستهدف يستوعب بارتياح ضمن 48 GB',
+          'يبقى M4 Pro اختيار القيمة الأفضل إذا كان حجم نموذجك المستهدف يستوعب بارتياح ضمن نحو 40 GB (48 GB ناقص 8 GB لنظام macOS)',
         ],
       },
       bestPick: {
@@ -188,7 +188,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>يتفوق Apple M4 Max على M4 Pro لتشغيل LLM محليًا لأن سرعة الاستدلال المحلي محكومة أساسًا بعرض نطاق الذاكرة بمجرد أن يستوعب النموذج في الذاكرة الموحدة — وعرض نطاق M4 Max (حتى 546 GB/s في تكوين أعلى عدد أنوية) هو تقريبًا ضعف عرض نطاق M4 Pro البالغ 273 GB/s.</strong> هذا يعني أن M4 Max يشغّل نفس النماذج أسرع، وليس فقط نماذج أكبر.',
           'يرفع M4 Max أيضًا سقف الذاكرة الموحدة إلى 128 GB، مقابل حد أقصى 48 GB لـ M4 Pro. هذا يفتح أحجام نماذج لا يمكن لـ M4 Pro تحميلها إطلاقًا — بما فيها نماذج من فئة 70B بتكميم معقول، التي تحتاج أكثر بكثير من 48 GB.',
-          'يبقى M4 Pro الخيار الأفضل من حيث القيمة إذا كانت نماذجك المستهدفة تستوعب بارتياح ضمن سقف الـ48 GB — على سبيل المثال، الالتزام بنماذج 14B-32B. تدفع علاوة حقيقية مقابل عرض النطاق الإضافي وهامش الذاكرة لـ M4 Max، ولا يستحق ذلك إلا إذا احتجت فعليًا أحدهما أو كليهما.',
+          'يبقى M4 Pro الخيار الأفضل من حيث القيمة إذا كانت نماذجك المستهدفة تستوعب بارتياح ضمن نحو 40 GB القابلة للاستخدام (48 GB ناقص 8 GB لنظام macOS) — على سبيل المثال، الالتزام بنماذج 14B-32B. تدفع علاوة حقيقية مقابل عرض النطاق الإضافي وهامش الذاكرة لـ M4 Max، ولا يستحق ذلك إلا إذا احتجت فعليًا أحدهما أو كليهما.',
         ],
         callouts: [
           { type: 'tip', text: '<strong>تحديث الأجهزة (سبتمبر 2026):</strong> انتقلت آبل بعيدًا عن جيل M4. يشحن MacBook Pro شرائح M5 Pro وM5 Max منذ مارس 2026، وابتداءً من 22 سبتمبر 2026 جلبت آبل أيضًا M6/M5 Pro إلى Mac mini (بدءًا من 899/1,699 دولارًا) وM5 Max/M5 Ultra إلى Mac Studio (بدءًا من 2,499/5,499 دولارًا). أصبح M4 Max وM4 Pro المقارنان أدناه الآن متأخرين بجيلين، ويُفضّل اعتبارهما خيارات للشراء المستعمل أو المجدد. راجع <a href="/ar/local-llms/m5-pro-max-llm-benchmarks-2026">مقارنة أداء M5 Pro مقابل M5 Max لتشغيل LLM</a> للمقارنة بالجيل الحالي.' },
@@ -215,7 +215,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'M4 Max مقابل M4 Pro — مواصفة بمواصفة',
         content: [
           'عرض نطاق الذاكرة هو الفرق الرئيسي: يصل M4 Pro إلى ذروته عند 273 GB/s، بينما يتراوح M4 Max من 410 GB/s (تكوين أقل عدد أنوية) إلى 546 GB/s (تكوين أعلى عدد أنوية) حسب متغير M4 Max الذي تشتريه — تحقق من التكوين الدقيق قبل افتراض أن رقم عرض النطاق الأعلى ينطبق.',
-          'سقف الذاكرة الموحدة هو العامل الرئيسي الآخر: 48 GB كحد أقصى على M4 Pro مقابل حتى 128 GB على M4 Max. إذا كانت أحجام نماذجك ستستوعب دائمًا ضمن 48 GB، فإن فجوة عرض النطاق هي الشيء الوحيد الذي تدفع مقابله مع Max؛ إذا احتجت أكثر من 48 GB من الذاكرة القابلة للاستخدام، فإن M4 Pro ليس خيارًا إطلاقًا.',
+          'سقف الذاكرة الموحدة هو العامل الرئيسي الآخر: 48 GB كحد أقصى على M4 Pro مقابل حتى 128 GB على M4 Max. إذا كانت أحجام نماذجك ستستوعب دائمًا ضمن نحو 40 GB (48 GB ناقص 8 GB لنظام macOS)، فإن فجوة عرض النطاق هي الشيء الوحيد الذي تدفع مقابله مع Max؛ إذا احتجت أكثر من نحو 40 GB من الذاكرة القابلة للاستخدام، فإن M4 Pro ليس خيارًا إطلاقًا.',
           'أصبحت كلتا الشريحتين الآن متأخرتين بجيلين عن التشكيلة الحالية لآبل — العلاقة بين عرض النطاق والذاكرة الموضحة أعلاه لا تزال صحيحة بين M4 Pro وM4 Max، لكنها لم تعد تمثل أسرع شريحة متاحة من آبل.',
         ],
       },
@@ -265,7 +265,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'M4 Max vs. M4 Pro für lokale LLMs 2026 | Prompt Bites',
     metaDescription: 'M4 Max schlägt M4 Pro bei lokalen LLMs: mehr Speicherbandbreite (546 vs. 273 GB/s), höhere Unified-Memory-Grenze (128GB vs. 48GB) — schnellere Tokens/Sek.',
     publishDate: '2026-07-14',
-    dateModified: '2026-09-25',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
     last_full_refresh: '2026-09-25',
@@ -307,7 +307,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'M4-Max-Speicherbandbreite: bis zu 546 GB/s gegenüber 273 GB/s beim M4 Pro — fast doppelt so viel, und Bandbreite treibt die Tokens/Sek.',
           'M4-Max-Unified-Memory-Obergrenze: bis zu 128 GB gegenüber 48 GB beim M4 Pro — nur der Max fasst 70B-Modelle',
           'Bei jeder Modellgröße, die beide Chips laden können, ist der M4 Max merklich schneller, nicht nur fähiger',
-          'Der M4 Pro bleibt die bessere Preis-Leistungs-Wahl, wenn Ihre Zielmodellgröße komfortabel in 48 GB passt',
+          'Der M4 Pro bleibt die bessere Preis-Leistungs-Wahl, wenn Ihre Zielmodellgröße komfortabel in rund 40 GB passt (48 GB abzüglich 8 GB für macOS)',
         ],
       },
       bestPick: {
@@ -316,7 +316,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Der Apple M4 Max übertrifft den M4 Pro bei lokalen LLMs, weil lokale Inferenzgeschwindigkeit primär durch Speicherbandbreite begrenzt ist, sobald ein Modell in den Unified Memory passt — und die Bandbreite des M4 Max (bis zu 546 GB/s bei der Konfiguration mit höchster Kernzahl) ist fast doppelt so hoch wie die 273 GB/s des M4 Pro.</strong> Das bedeutet, der M4 Max läuft identische Modelle schneller, nicht nur größere.',
           'Der M4 Max hebt zudem die Unified-Memory-Obergrenze auf 128 GB an, gegenüber dem 48-GB-Maximum des M4 Pro. Das schaltet Modellgrößen frei, die der M4 Pro überhaupt nicht laden kann — darunter 70B-Modelle bei vernünftiger Quantisierung, die weit mehr als 48 GB benötigen.',
-          'Der M4 Pro bleibt die bessere Preis-Leistungs-Wahl, wenn Ihre Zielmodelle komfortabel in seine 48-GB-Obergrenze passen — etwa bei 14B-32B-Modellen. Sie zahlen einen echten Aufpreis für die zusätzliche Bandbreite und Speicherreserve des M4 Max, und er lohnt sich nur, wenn Sie eines von beidem tatsächlich brauchen.',
+          'Der M4 Pro bleibt die bessere Preis-Leistungs-Wahl, wenn Ihre Zielmodelle komfortabel in die rund 40 GB nutzbaren Speicher passen (48 GB abzüglich 8 GB für macOS) — etwa bei 14B-32B-Modellen. Sie zahlen einen echten Aufpreis für die zusätzliche Bandbreite und Speicherreserve des M4 Max, und er lohnt sich nur, wenn Sie eines von beidem tatsächlich brauchen.',
         ],
         callouts: [
           { type: 'tip', text: '<strong>Hardware-Update (September 2026):</strong> Apple ist inzwischen von der M4-Generation weitergezogen. Das MacBook Pro liefert seit März 2026 M5-Pro- und M5-Max-Chips aus, und seit dem 22. September 2026 hat Apple außerdem M6/M5 Pro ins Mac mini (ab 899 $/1.699 $) und M5 Max/M5 Ultra in den Mac Studio (ab 2.499 $/5.499 $) gebracht. Der unten verglichene M4 Max und M4 Pro liegen nun zwei Generationen zurück und eignen sich am besten für gebrauchte oder generalüberholte Käufe. Sehen Sie die <a href="/de/local-llms/m5-pro-max-llm-benchmarks-2026">M5-Pro-vs-M5-Max-LLM-Benchmarks</a> für den aktuellen Generationsvergleich.' },
@@ -343,7 +343,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'M4 Max vs. M4 Pro — Spec für Spec',
         content: [
           'Die Speicherbandbreite ist der Hauptunterschied: Der M4 Pro erreicht maximal 273 GB/s, während der M4 Max je nach gekaufter Variante zwischen 410 GB/s (Konfiguration mit niedrigerer Kernzahl) und 546 GB/s (Konfiguration mit höchster Kernzahl) liegt — prüfen Sie die genaue Konfiguration, bevor Sie von der höchsten Bandbreitenzahl ausgehen.',
-          'Die Unified-Memory-Obergrenze ist der andere große Faktor: 48 GB maximal beim M4 Pro gegenüber bis zu 128 GB beim M4 Max. Passen Ihre Modellgrößen immer in 48 GB, ist die Bandbreitenlücke das Einzige, wofür Sie beim Max zahlen; brauchen Sie mehr als 48 GB nutzbaren Speicher, ist der M4 Pro überhaupt keine Option.',
+          'Die Unified-Memory-Obergrenze ist der andere große Faktor: 48 GB maximal beim M4 Pro gegenüber bis zu 128 GB beim M4 Max. Passen Ihre Modellgrößen immer in rund 40 GB (48 GB abzüglich 8 GB für macOS), ist die Bandbreitenlücke das Einzige, wofür Sie beim Max zahlen; brauchen Sie mehr als rund 40 GB nutzbaren Speicher, ist der M4 Pro überhaupt keine Option.',
           'Beide Chips liegen inzwischen zwei Generationen hinter Apples aktuellem Angebot zurück — das oben beschriebene Verhältnis von Bandbreite und Speicher zwischen M4 Pro und M4 Max gilt weiterhin, es ist nur nicht mehr Apples schnellste verfügbare Chip-Generation.',
         ],
       },
@@ -393,7 +393,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'M4 Max vs M4 Pro para LLMs Locales 2026 | Prompt Bites',
     metaDescription: 'El M4 Max supera al M4 Pro en LLMs locales: más ancho de banda (546 vs 273 GB/s), mayor techo de memoria unificada (128GB vs 48GB) — más tokens/seg.',
     publishDate: '2026-07-14',
-    dateModified: '2026-09-25',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
     last_full_refresh: '2026-09-25',
@@ -435,7 +435,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Ancho de banda de memoria del M4 Max: hasta 546 GB/s frente a los 273 GB/s del M4 Pro — casi el doble, y el ancho de banda impulsa los tokens/seg',
           'Techo de memoria unificada del M4 Max: hasta 128 GB frente a los 48 GB del M4 Pro — solo el Max puede cargar modelos de clase 70B',
           'Para cualquier tamaño de modelo que ambos chips puedan cargar, el M4 Max es considerablemente más rápido, no solo capaz de más',
-          'El M4 Pro sigue siendo la mejor opción de valor si el tamaño de modelo objetivo cabe cómodamente dentro de 48 GB',
+          'El M4 Pro sigue siendo la mejor opción de valor si el tamaño de modelo objetivo cabe cómodamente dentro de unos 40 GB (48 GB menos 8 GB para macOS)',
         ],
       },
       bestPick: {
@@ -444,7 +444,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>El Apple M4 Max supera al M4 Pro para LLMs locales porque la velocidad de inferencia local está limitada principalmente por el ancho de banda de memoria una vez que un modelo cabe en memoria unificada — y el ancho de banda del M4 Max (hasta 546 GB/s en la configuración con más núcleos) es casi el doble que los 273 GB/s del M4 Pro.</strong> Esto significa que el M4 Max ejecuta modelos idénticos más rápido, no solo modelos más grandes.',
           'El M4 Max también eleva el techo de memoria unificada a 128 GB, frente al máximo de 48 GB del M4 Pro. Eso desbloquea tamaños de modelo que el M4 Pro simplemente no puede cargar en absoluto — incluidos modelos de clase 70B con cuantización razonable, que necesitan mucho más de 48 GB.',
-          'El M4 Pro sigue siendo la mejor elección de valor si tus modelos objetivo caben cómodamente dentro de su techo de 48 GB — por ejemplo, quedándote en modelos de 14B-32B. Pagas una prima real por el ancho de banda extra y el margen de memoria del M4 Max, y solo vale la pena si realmente necesitas uno o ambos.',
+          'El M4 Pro sigue siendo la mejor elección de valor si tus modelos objetivo caben cómodamente en los 40 GB utilizables que deja (48 GB menos 8 GB para macOS) — por ejemplo, quedándote en modelos de 14B-32B. Pagas una prima real por el ancho de banda extra y el margen de memoria del M4 Max, y solo vale la pena si realmente necesitas uno o ambos.',
         ],
         callouts: [
           { type: 'tip', text: '<strong>Actualización de hardware (septiembre de 2026):</strong> Apple ya dejó atrás la generación M4. El MacBook Pro viene con chips M5 Pro y M5 Max desde marzo de 2026, y desde el 22 de septiembre de 2026 Apple también llevó el M6/M5 Pro al Mac mini (desde $899/$1,699) y el M5 Max/M5 Ultra al Mac Studio (desde $2,499/$5,499). El M4 Max y el M4 Pro comparados abajo ya tienen dos generaciones de retraso y son más adecuados como compra usada o reacondicionada. Consulta la <a href="/es/local-llms/m5-pro-max-llm-benchmarks-2026">comparativa de rendimiento M5 Pro vs M5 Max</a> para la generación actual.' },
@@ -471,7 +471,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'M4 Max vs M4 Pro — Especificación por Especificación',
         content: [
           'El ancho de banda de memoria es la diferencia principal: el M4 Pro alcanza un máximo de 273 GB/s, mientras que el M4 Max varía entre 410 GB/s (configuración con menos núcleos) y 546 GB/s (configuración con más núcleos) según la variante de M4 Max que compres — revisa la configuración exacta antes de asumir que aplica la cifra de ancho de banda máxima.',
-          'El techo de memoria unificada es el otro factor importante: 48 GB máximo en el M4 Pro frente a hasta 128 GB en el M4 Max. Si tus tamaños de modelo siempre caben dentro de 48 GB, la brecha de ancho de banda es lo único que estás pagando con el Max; si necesitas más de 48 GB de memoria utilizable, el M4 Pro no es una opción en absoluto.',
+          'El techo de memoria unificada es el otro factor importante: 48 GB máximo en el M4 Pro frente a hasta 128 GB en el M4 Max. Si tus tamaños de modelo siempre caben dentro de unos 40 GB (48 GB menos 8 GB para macOS), la brecha de ancho de banda es lo único que estás pagando con el Max; si necesitas más de 40 GB de memoria utilizable, el M4 Pro no es una opción en absoluto.',
           'Ambos chips ya tienen dos generaciones de retraso frente a la gama actual de Apple — la relación de ancho de banda y memoria descrita arriba entre el M4 Pro y el M4 Max sigue siendo válida, solo que ya no representa el silicio más rápido disponible de Apple.',
         ],
       },
@@ -521,7 +521,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'M4 Max vs M4 Pro pour LLM locaux 2026 | Prompt Bites',
     metaDescription: 'Le M4 Max surpasse le M4 Pro pour les LLM locaux en bande passante (546 Go/s vs 273 Go/s) et plafond mémoire (128 Go vs 48 Go) — plus rapide partout.',
     publishDate: '2026-07-14',
-    dateModified: '2026-09-25',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
     last_full_refresh: '2026-09-25',
@@ -563,7 +563,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Bande passante mémoire du M4 Max : jusqu\'à 546 Go/s contre 273 Go/s pour le M4 Pro — presque le double, et la bande passante détermine les tokens/seconde',
           'Plafond de mémoire unifiée du M4 Max : jusqu\'à 128 Go contre 48 Go pour le M4 Pro — seul le Max peut charger les modèles de la classe 70B',
           'Pour toute taille de modèle que les deux puces peuvent charger, le M4 Max est nettement plus rapide, pas seulement capable de plus',
-          'Le M4 Pro reste le meilleur rapport qualité-prix si la taille de modèle visée tient confortablement dans 48 Go',
+          'Le M4 Pro reste le meilleur rapport qualité-prix si la taille de modèle visée tient confortablement dans environ 40 Go (48 Go moins 8 Go pour macOS)',
         ],
       },
       bestPick: {
@@ -572,7 +572,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>L\'Apple M4 Max surpasse le M4 Pro pour les LLM locaux car la vitesse d\'inférence locale est principalement limitée par la bande passante mémoire dès qu\'un modèle tient en mémoire unifiée — et la bande passante du M4 Max (jusqu\'à 546 Go/s sur la configuration avec le plus grand nombre de cœurs) est presque le double des 273 Go/s du M4 Pro.</strong> Cela signifie que le M4 Max exécute des modèles identiques plus rapidement, pas seulement des modèles plus grands.',
           'Le M4 Max relève également le plafond de mémoire unifiée à 128 Go, contre un maximum de 48 Go pour le M4 Pro. Cela débloque des tailles de modèles que le M4 Pro ne peut tout simplement pas charger — y compris des modèles de la classe 70B en quantification raisonnable, qui nécessitent bien plus de 48 Go.',
-          'Le M4 Pro reste le meilleur choix en termes de rapport qualité-prix si vos modèles cibles tiennent confortablement dans son plafond de 48 Go — par exemple, en restant sur des modèles 14B-32B. Vous payez une réelle prime pour la bande passante et la marge mémoire supplémentaires du M4 Max, et cela n\'en vaut la peine que si vous en avez réellement besoin, de l\'une ou l\'autre, ou des deux.',
+          'Le M4 Pro reste le meilleur choix en termes de rapport qualité-prix si vos modèles cibles tiennent confortablement dans les 40 Go environ utilisables (48 Go moins 8 Go pour macOS) — par exemple, en restant sur des modèles 14B-32B. Vous payez une réelle prime pour la bande passante et la marge mémoire supplémentaires du M4 Max, et cela n\'en vaut la peine que si vous en avez réellement besoin, de l\'une ou l\'autre, ou des deux.',
         ],
         callouts: [
           { type: 'tip', text: '<strong>Mise à jour matérielle (septembre 2026) :</strong> Apple est depuis passé à la génération suivante. Le MacBook Pro embarque des puces M5 Pro et M5 Max depuis mars 2026, et depuis le 22 septembre 2026, Apple a également apporté le M6/M5 Pro au Mac mini (à partir de 899 $/1 699 $) et le M5 Max/M5 Ultra au Mac Studio (à partir de 2 499 $/5 499 $). Le M4 Max et le M4 Pro comparés ci-dessous accusent désormais deux générations de retard et conviennent surtout à un achat d\'occasion ou reconditionné. Consultez les <a href="/fr/local-llms/m5-pro-max-llm-benchmarks-2026">benchmarks LLM M5 Pro vs M5 Max</a> pour la comparaison de la génération actuelle.' },
@@ -599,7 +599,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'M4 Max vs M4 Pro — comparaison détaillée',
         content: [
           'La bande passante mémoire est la différence majeure : le M4 Pro plafonne à 273 Go/s, tandis que le M4 Max varie de 410 Go/s (configuration à nombre de cœurs réduit) à 546 Go/s (configuration à nombre de cœurs élevé) selon la variante de M4 Max achetée — vérifiez la configuration exacte avant de supposer que le chiffre de bande passante maximal s\'applique.',
-          'Le plafond de mémoire unifiée est l\'autre facteur majeur : 48 Go maximum sur le M4 Pro contre jusqu\'à 128 Go sur le M4 Max. Si vos tailles de modèles tiennent toujours dans 48 Go, l\'écart de bande passante est la seule chose que vous payez avec le Max ; si vous avez besoin de plus de 48 Go de mémoire utilisable, le M4 Pro n\'est tout simplement pas une option.',
+          'Le plafond de mémoire unifiée est l\'autre facteur majeur : 48 Go maximum sur le M4 Pro contre jusqu\'à 128 Go sur le M4 Max. Si vos tailles de modèles tiennent toujours dans environ 40 Go (48 Go moins 8 Go pour macOS), l\'écart de bande passante est la seule chose que vous payez avec le Max ; si vous avez besoin de plus de 40 Go environ de mémoire utilisable, le M4 Pro n\'est tout simplement pas une option.',
           'Les deux puces accusent désormais deux générations de retard sur la gamme actuelle d\'Apple — le rapport entre bande passante et mémoire décrit ci-dessus entre le M4 Pro et le M4 Max reste valable, il ne représente simplement plus la puce Apple la plus rapide disponible.',
         ],
       },
@@ -649,7 +649,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '2026年版 M4 Max vs M4 Pro ローカルLLM比較 | Prompt Bites',
     metaDescription: 'M4 Maxはメモリ帯域幅(最大546GB/s対273GB/s)と統合メモリ上限(最大128GB対48GB)でM4 Proを上回ります — あらゆるモデルサイズでトークン毎秒が高速。',
     publishDate: '2026-07-14',
-    dateModified: '2026-09-25',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
     last_full_refresh: '2026-09-25',
@@ -691,7 +691,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'M4 Maxのメモリ帯域幅: 最大546GB/s対M4 Proの273GB/s — ほぼ2倍で、帯域幅がトークン毎秒を左右する',
           'M4 Maxの統合メモリ上限: 最大128GB対M4 Proの48GB — Maxだけが70Bクラスのモデルを収められる',
           '両チップが読み込めるどのモデルサイズでも、M4 Maxは単に容量が大きいだけでなく実質的に高速',
-          '目標のモデルサイズが48GBに快適に収まるなら、M4 Proは依然としてより良いコストパフォーマンスの選択',
+          '目標のモデルサイズが約40GB（48GBからmacOS用の8GBを除いた分）に快適に収まるなら、M4 Proは依然としてより良いコストパフォーマンスの選択',
         ],
       },
       bestPick: {
@@ -700,7 +700,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Apple M4 MaxがローカルLLMでM4 Proを上回る理由は、モデルが統合メモリに収まった後、ローカル推論速度は主にメモリ帯域幅に律速されるためです — M4 Maxの帯域幅(最高コア数構成で最大546GB/s)はM4 Proの273GB/sのほぼ2倍です。</strong>これはM4 Maxが単により大きなモデルだけでなく、同一のモデルをより速く動かすことを意味します。',
           'M4 Maxはまた統合メモリの上限をM4 Proの最大48GBに対して128GBまで引き上げます。これはM4 Proが全く読み込めないモデルサイズ — 48GBをはるかに超えるモデルサイズが必要な、妥当な量子化での70Bクラスのモデルを含む — を解放します。',
-          '目標のモデルが48GBの上限に快適に収まる場合 — 例えば14B-32Bモデルにとどまる場合 — はM4 Proが依然としてより良いコストパフォーマンスの選択です。M4 Maxの追加の帯域幅とメモリ余裕には実質的なプレミアムを支払うことになり、それが実際に必要な場合にのみ価値があります。',
+          '目標のモデルが、使える約40GB（48GBからmacOS用の8GBを除いた分）に快適に収まる場合 — 例えば14B-32Bモデルにとどまる場合 — はM4 Proが依然としてより良いコストパフォーマンスの選択です。M4 Maxの追加の帯域幅とメモリ余裕には実質的なプレミアムを支払うことになり、それが実際に必要な場合にのみ価値があります。',
         ],
         callouts: [
           { type: 'tip', text: '<strong>ハードウェア更新情報(2026年9月):</strong> AppleはすでにM4世代から移行しています。MacBook Proは2026年3月以降M5 Pro/M5 Maxチップを搭載しており、2026年9月22日以降はMac miniにもM6/M5 Pro(899ドル/1,699ドルから)、Mac StudioにもM5 Max/M5 Ultra(2,499ドル/5,499ドルから)が導入されました。以下で比較しているM4 MaxとM4 Proは現在世代として2世代遅れており、中古または整備済み品としての購入が最適です。現行世代の比較は<a href="/ja/local-llms/m5-pro-max-llm-benchmarks-2026">M5 Pro対M5 Max LLMベンチマーク</a>をご覧ください。' },
@@ -727,7 +727,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'M4 Max vs M4 Pro — スペック比較',
         content: [
           'メモリ帯域幅が主要な違いです: M4 Proは273GB/sが上限ですが、M4 Maxは購入するバリアントによって410GB/s(低コア数構成)から546GB/s(高コア数構成)まで幅があります — 最高の帯域幅の数値が当てはまると仮定する前に、正確な構成を確認してください。',
-          '統合メモリの上限がもう一つの主要な要因です: M4 Proの48GB上限対M4 Maxの最大128GB。モデルサイズが常に48GBに収まるなら、Maxで支払うのは帯域幅のギャップだけです。48GBを超える実用メモリが必要なら、M4 Proは選択肢に入りません。',
+          '統合メモリの上限がもう一つの主要な要因です: M4 Proの48GB上限対M4 Maxの最大128GB。モデルサイズが常に約40GB（48GBからmacOS用の8GBを除いた分）に収まるなら、Maxで支払うのは帯域幅のギャップだけです。約40GBを超える実用メモリが必要なら、M4 Proは選択肢に入りません。',
           '両チップとも現在はApple現行ラインナップから2世代遅れています — 上記のM4 ProとM4 Maxの帯域幅とメモリの関係自体は依然として成り立ちますが、もはやAppleが提供する最速のチップではありません。',
         ],
       },
@@ -777,7 +777,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'M4 Max 대 M4 Pro 로컬 LLM 비교 2026 | Prompt Bites',
     metaDescription: 'M4 Max는 메모리 대역폭(546GB/s 대 273GB/s)과 통합 메모리 한계(128GB 대 48GB)에서 M4 Pro를 능가, 모든 모델 크기에서 토큰 속도가 더 빠릅니다.',
     publishDate: '2026-07-14',
-    dateModified: '2026-09-25',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
     last_full_refresh: '2026-09-25',
@@ -819,7 +819,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'M4 Max 메모리 대역폭: 최대 546GB/s 대 M4 Pro의 273GB/s — 거의 두 배이며, 대역폭이 초당 토큰 수를 좌우합니다',
           'M4 Max 통합 메모리 한계: 최대 128GB 대 M4 Pro의 48GB — Max만이 70B급 모델을 수용할 수 있습니다',
           '두 칩 모두 로드 가능한 모델 크기라면, M4 Max는 더 많은 것을 처리할 수 있을 뿐 아니라 의미 있게 더 빠릅니다',
-          '목표 모델 크기가 48GB 안에 편안하게 맞는다면 M4 Pro가 여전히 더 나은 가성비 선택입니다',
+          '목표 모델 크기가 약 40GB(48GB에서 macOS용 8GB를 제외한 용량) 안에 편안하게 맞는다면 M4 Pro가 여전히 더 나은 가성비 선택입니다',
         ],
       },
       bestPick: {
@@ -828,7 +828,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Apple M4 Max는 로컬 추론 속도가 모델이 통합 메모리에 맞은 이후 주로 메모리 대역폭에 좌우되기 때문에 로컬 LLM에서 M4 Pro를 능가합니다 — M4 Max의 대역폭(최고 코어 수 구성에서 최대 546GB/s)은 M4 Pro의 273GB/s의 거의 두 배입니다.</strong> 이는 M4 Max가 더 큰 모델뿐 아니라 동일한 모델도 더 빠르게 구동한다는 의미입니다.',
           'M4 Max는 또한 통합 메모리 한계를 M4 Pro의 최대 48GB 대비 128GB까지 끌어올립니다. 이는 M4 Pro가 전혀 로드할 수 없는 모델 크기 — 48GB를 훨씬 초과하는 합리적인 양자화의 70B급 모델을 포함하여 — 를 열어줍니다.',
-          '목표 모델이 48GB 한계 안에 편안하게 맞는다면, 예를 들어 14B-32B 모델에 머문다면 M4 Pro가 여전히 더 나은 가성비 선택입니다. M4 Max의 추가 대역폭과 메모리 여유에는 실질적인 프리미엄을 지불하게 되며, 실제로 둘 중 하나 또는 둘 다가 필요한 경우에만 가치가 있습니다.',
+          '목표 모델이 사용 가능한 약 40GB(48GB에서 macOS용 8GB를 제외한 용량) 안에 편안하게 맞는다면, 예를 들어 14B-32B 모델에 머문다면 M4 Pro가 여전히 더 나은 가성비 선택입니다. M4 Max의 추가 대역폭과 메모리 여유에는 실질적인 프리미엄을 지불하게 되며, 실제로 둘 중 하나 또는 둘 다가 필요한 경우에만 가치가 있습니다.',
         ],
         callouts: [
           { type: 'tip', text: '<strong>하드웨어 업데이트(2026년 9월):</strong> Apple은 이미 M4 세대에서 넘어갔습니다. MacBook Pro는 2026년 3월부터 M5 Pro/M5 Max 칩을 탑재해 왔으며, 2026년 9월 22일부로 Apple은 Mac mini에도 M6/M5 Pro($899/$1,699부터)를, Mac Studio에도 M5 Max/M5 Ultra($2,499/$5,499부터)를 도입했습니다. 아래에서 비교하는 M4 Max와 M4 Pro는 이제 두 세대 뒤처져 있으며 중고 또는 리퍼비시 구매에 가장 적합합니다. 최신 세대 비교는 <a href="/ko/local-llms/m5-pro-max-llm-benchmarks-2026">M5 Pro 대 M5 Max LLM 벤치마크</a>를 참고하십시오.' },
@@ -855,7 +855,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'M4 Max 대 M4 Pro — 사양별 비교',
         content: [
           '메모리 대역폭이 핵심 차이입니다. M4 Pro는 273GB/s에서 한계에 도달하는 반면, M4 Max는 구매하는 M4 Max 변형에 따라 410GB/s(낮은 코어 수 구성)에서 546GB/s(높은 코어 수 구성)까지 다양합니다 — 최고 대역폭 수치가 적용된다고 가정하기 전에 정확한 구성을 확인하십시오.',
-          '통합 메모리 한계는 또 다른 주요 요소입니다. M4 Pro의 최대 48GB 대비 M4 Max는 최대 128GB입니다. 모델 크기가 항상 48GB 안에 맞는다면 대역폭 격차만이 Max에 지불하는 대가입니다. 48GB 이상의 사용 가능한 메모리가 필요하다면 M4 Pro는 아예 선택지가 아닙니다.',
+          '통합 메모리 한계는 또 다른 주요 요소입니다. M4 Pro의 최대 48GB 대비 M4 Max는 최대 128GB입니다. 모델 크기가 항상 약 40GB(48GB에서 macOS용 8GB를 제외한 용량) 안에 맞는다면 대역폭 격차만이 Max에 지불하는 대가입니다. 약 40GB 이상의 사용 가능한 메모리가 필요하다면 M4 Pro는 아예 선택지가 아닙니다.',
           '두 칩 모두 이제 Apple 현재 라인업보다 두 세대 뒤처져 있습니다 — 위에서 설명한 M4 Pro와 M4 Max 간의 대역폭 및 메모리 관계 자체는 여전히 유효하지만, 더 이상 Apple이 제공하는 가장 빠른 칩을 의미하지는 않습니다.',
         ],
       },
@@ -905,7 +905,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'M4 Max vs M4 Pro para LLMs Locais 2026',
     metaDescription: 'O M4 Max supera o M4 Pro para LLMs locais: mais banda (546 vs 273 GB/s), maior teto de memória unificada (128GB vs 48GB) — tokens/s mais rápidos.',
     publishDate: '2026-07-14',
-    dateModified: '2026-09-25',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
     last_full_refresh: '2026-09-25',
@@ -947,7 +947,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Largura de banda de memória do M4 Max: até 546 GB/s contra os 273 GB/s do M4 Pro — quase o dobro, e largura de banda determina tokens/s',
           'Teto de memória unificada do M4 Max: até 128 GB contra os 48 GB do M4 Pro — só o Max comporta modelos de classe 70B',
           'Para qualquer tamanho de modelo que ambos os chips carreguem, o M4 Max é significativamente mais rápido, não apenas capaz de mais',
-          'O M4 Pro continua sendo a melhor escolha em custo-benefício se o tamanho do seu modelo alvo cabe confortavelmente em 48 GB',
+          'O M4 Pro continua sendo a melhor escolha em custo-benefício se o tamanho do seu modelo alvo cabe confortavelmente em cerca de 40 GB (48 GB menos 8 GB para o macOS)',
         ],
       },
       bestPick: {
@@ -956,7 +956,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>O Apple M4 Max supera o M4 Pro para LLMs locais porque a inferência local é limitada principalmente pela largura de banda de memória quando um modelo cabe na memória unificada — e a largura de banda do M4 Max (até 546 GB/s na configuração de maior contagem de núcleos) é quase o dobro dos 273 GB/s do M4 Pro.</strong> Isso significa que o M4 Max roda modelos idênticos mais rápido, não apenas modelos maiores.',
           'O M4 Max também eleva o teto de memória unificada para 128 GB, contra o máximo de 48 GB do M4 Pro. Isso desbloqueia tamanhos de modelo que o M4 Pro simplesmente não consegue carregar de forma alguma — incluindo modelos de classe 70B em quantização razoável, que precisam de bem mais que 48 GB.',
-          'O M4 Pro continua sendo a escolha melhor em custo-benefício se seus modelos alvo couberem confortavelmente dentro do teto de 48 GB — por exemplo, ficando em modelos de 14B-32B. Você paga um preço premium real pela largura de banda extra e pela folga de memória do M4 Max, e só vale a pena se você realmente precisar de um ou ambos.',
+          'O M4 Pro continua sendo a escolha melhor em custo-benefício se seus modelos alvo couberem confortavelmente nos cerca de 40 GB utilizáveis (48 GB menos 8 GB para o macOS) — por exemplo, ficando em modelos de 14B-32B. Você paga um preço premium real pela largura de banda extra e pela folga de memória do M4 Max, e só vale a pena se você realmente precisar de um ou ambos.',
         ],
         callouts: [
           { type: 'tip', text: '<strong>Atualização de hardware (setembro de 2026):</strong> a Apple já deixou a geração M4 para trás. O MacBook Pro traz chips M5 Pro e M5 Max desde março de 2026, e a partir de 22 de setembro de 2026 a Apple também levou o M6/M5 Pro ao Mac mini (a partir de $899/$1.699) e o M5 Max/M5 Ultra ao Mac Studio (a partir de $2.499/$5.499). O M4 Max e o M4 Pro comparados abaixo agora estão duas gerações atrás e são mais indicados para compra usada ou recondicionada. Veja os <a href="/pt/local-llms/m5-pro-max-llm-benchmarks-2026">benchmarks de LLM M5 Pro vs M5 Max</a> para a comparação da geração atual.' },
@@ -983,7 +983,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'M4 Max vs M4 Pro — Especificação por Especificação',
         content: [
           'A largura de banda de memória é a diferença principal: o M4 Pro tem teto de 273 GB/s, enquanto o M4 Max varia de 410 GB/s (configuração de menor contagem de núcleos) a 546 GB/s (configuração de maior contagem de núcleos), dependendo de qual variante do M4 Max você comprar — verifique a configuração exata antes de assumir que o número de largura de banda máxima se aplica.',
-          'O teto de memória unificada é o outro fator importante: máximo de 48 GB no M4 Pro contra até 128 GB no M4 Max. Se os tamanhos dos seus modelos sempre couberem em 48 GB, a diferença de largura de banda é a única coisa que você está pagando com o Max; se você precisa de mais de 48 GB de memória utilizável, o M4 Pro simplesmente não é uma opção.',
+          'O teto de memória unificada é o outro fator importante: máximo de 48 GB no M4 Pro contra até 128 GB no M4 Max. Se os tamanhos dos seus modelos sempre couberem em cerca de 40 GB (48 GB menos 8 GB para o macOS), a diferença de largura de banda é a única coisa que você está pagando com o Max; se você precisa de mais de 40 GB de memória utilizável, o M4 Pro simplesmente não é uma opção.',
           'Os dois chips agora estão duas gerações atrás da linha atual da Apple — a relação de largura de banda e memória descrita acima entre o M4 Pro e o M4 Max continua válida, só não representa mais o silício mais rápido disponível da Apple.',
         ],
       },
@@ -1033,7 +1033,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '2026 年 M4 Max 对比 M4 Pro 本地 LLM | Prompt Bites',
     metaDescription: 'M4 Max 在本地 LLM 上胜过 M4 Pro，得益于显存带宽（最高 546 GB/s 对比 273 GB/s）和统一内存上限（最高 128GB 对比 48GB）——在各种模型规模下每秒 token 数都更快。',
     publishDate: '2026-07-14',
-    dateModified: '2026-09-25',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
     last_full_refresh: '2026-09-25',
@@ -1075,7 +1075,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'M4 Max 显存带宽：最高 546 GB/s 对比 M4 Pro 的 273 GB/s——接近翻倍，带宽决定每秒 token 数',
           'M4 Max 统一内存上限：最高 128 GB 对比 M4 Pro 的 48 GB——只有 Max 能容纳 70B 级模型',
           '对于两款芯片都能加载的任何模型规模，M4 Max 都明显更快，而不只是能容纳更多',
-          '如果你的目标模型规模能舒适地容纳在 48 GB 内，M4 Pro 仍是性价比更高的选择',
+          '如果你的目标模型规模能舒适地容纳在约 40 GB（48 GB 减去 macOS 所需的 8 GB）内，M4 Pro 仍是性价比更高的选择',
         ],
       },
       bestPick: {
@@ -1084,7 +1084,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Apple M4 Max 在本地 LLM 上优于 M4 Pro，因为一旦模型装入统一内存，本地推理速度主要受显存带宽限制——而 M4 Max 的带宽（在核心数最高配置上最高达 546 GB/s）几乎是 M4 Pro 273 GB/s 的两倍。</strong>这意味着 M4 Max 运行相同的模型速度更快，而不只是能运行更大的模型。',
           'M4 Max 还将统一内存上限提升到 128 GB，而 M4 Pro 最高只有 48 GB。这解锁了 M4 Pro 完全无法加载的模型规模——包括在合理量化下需要远超 48 GB 的 70B 级模型。',
-          '如果你的目标模型能舒适地容纳在 48 GB 上限内——例如坚持使用 14B-32B 模型——M4 Pro 仍是性价比更高的选择。你需要为 M4 Max 额外的带宽和内存余量支付真实的溢价，只有在你确实需要其中一项或两项时才值得。',
+          '如果你的目标模型能舒适地容纳在约 40 GB 可用内存（48 GB 减去 macOS 所需的 8 GB）内——例如坚持使用 14B-32B 模型——M4 Pro 仍是性价比更高的选择。你需要为 M4 Max 额外的带宽和内存余量支付真实的溢价，只有在你确实需要其中一项或两项时才值得。',
         ],
         callouts: [
           { type: 'tip', text: '<strong>硬件更新(2026 年 9 月)：</strong>苹果此后已从 M4 世代转向。MacBook Pro 自 2026 年 3 月起搭载 M5 Pro 和 M5 Max 芯片，截至 2026 年 9 月 22 日，苹果还为 Mac mini 带来了 M6/M5 Pro（起售价 899/1,699 美元），为 Mac Studio 带来了 M5 Max/M5 Ultra（起售价 2,499/5,499 美元）。下文对比的 M4 Max 和 M4 Pro 现已落后两代，更适合作为二手或翻新购买的选择。当前世代对比请参见<a href="/zh/local-llms/m5-pro-max-llm-benchmarks-2026">M5 Pro 对比 M5 Max LLM 基准测试</a>。' },
@@ -1111,7 +1111,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'M4 Max 对比 M4 Pro——规格逐项对比',
         content: [
           '显存带宽是最主要的差异：M4 Pro 上限为 273 GB/s，而 M4 Max 根据具体购买的变体从 410 GB/s（核心数较低配置）到 546 GB/s（核心数最高配置）不等——购买前请核实具体配置，不要假设最高带宽数值适用。',
-          '统一内存上限是另一个主要因素：M4 Pro 最高 48 GB，而 M4 Max 最高可达 128 GB。如果你的模型规模始终能容纳在 48 GB 内，带宽差距是你为 Max 支付的唯一价值；如果你需要超过 48 GB 的可用内存，M4 Pro 根本不是一个选项。',
+          '统一内存上限是另一个主要因素：M4 Pro 最高 48 GB，而 M4 Max 最高可达 128 GB。如果你的模型规模始终能容纳在约 40 GB（48 GB 减去 macOS 所需的 8 GB）内，带宽差距是你为 Max 支付的唯一价值；如果你需要超过约 40 GB 的可用内存，M4 Pro 根本不是一个选项。',
           '这两款芯片现在都落后于苹果当前产品线两代——上文描述的 M4 Pro 与 M4 Max 之间的带宽和内存关系依然成立，只是不再代表苹果目前最快的芯片。',
         ],
       },

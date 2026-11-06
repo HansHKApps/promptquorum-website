@@ -7,9 +7,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-en.webp',
     title: 'Best Local LLM for a Mac with 32GB Unified Memory in 2026',
     seoTitle: 'Best Local LLM for 32GB Unified Memory Mac 2026',
-    metaDescription: 'Best local LLM for a 32GB unified memory Mac: 32B models at Q4 (~18-20GB), leaving headroom for macOS. Mac mini vs MacBook Pro, and when to go 48GB or 64GB instead.',
+    metaDescription: 'Best local LLM for a 32GB unified memory Mac: 32B models at Q4 (~18-20GB), with 8GB reserved for macOS. Mac mini vs MacBook Pro, and when to go 48GB or 64GB instead.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-26',
     last_full_refresh: '2026-08-26',
@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/power-local-llm/best-mac-for-local-ai-2026',
     siblingBites: ['mac-mini-m4-local-llm', 'best-local-llm-macbook-air-no-egpu'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>On a 32GB unified memory Mac, the best local LLM is a 32B model — like Qwen3 32B — at Q4 quantization, which needs roughly 18-20GB and leaves 12-14GB for macOS and context.</strong> 32GB is a good practical target for 32B Q4 models, not a hard minimum — actual headroom depends on quantization, context length, and what else is running. For anything past 32B, 48GB or 64GB is the better choice. Checked August 26, 2026: Apple\'s Mac mini lineup just moved to M6/M5 Pro chips (shipping September 22), and MacBook Pro has moved to M5 Pro/M5 Max — buy on unified memory capacity, not a specific chip generation.',
+    leadAnswerBlock: '<strong>On a 32GB unified memory Mac, the best local LLM is a 32B model — like Qwen3 32B — at Q4 quantization, which needs roughly 18-20GB and, after the 8GB reserved for macOS, leaves roughly 4-6GB for context.</strong> 32GB is a good practical target for 32B Q4 models, not a hard minimum — actual headroom depends on quantization, context length, and what else is running. For anything past 32B, 48GB or 64GB is the better choice. Checked August 26, 2026: Apple\'s Mac mini lineup just moved to M6/M5 Pro chips (shipping September 22), and MacBook Pro has moved to M5 Pro/M5 Max — buy on unified memory capacity, not a specific chip generation.',
     toc: [
       { label: 'Best Pick: 32B Models at Q4', anchor: '#best-pick' },
       { label: 'Which 32GB Mac?', anchor: '#which-mac' },
@@ -34,10 +34,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'What is the best local LLM for a 32GB unified memory Mac?',
-        answer: 'Qwen3 32B at Q4 is the best fit for a 32GB unified memory Mac — it needs ~18-20GB, leaving comfortable headroom for macOS. Buy the Mac for its unified memory capacity, not a specific chip generation: Apple\'s current lineup (checked August 26, 2026) spans M6/M5 Pro Mac minis and M5 Pro/M5 Max MacBook Pros, with 32GB available as a configuration option on several of them.',
+        answer: 'Qwen3 32B at Q4 is the best fit for a 32GB unified memory Mac — it needs ~18-20GB, leaving roughly 4-6GB for context once 8GB is reserved for macOS. Buy the Mac for its unified memory capacity, not a specific chip generation: Apple\'s current lineup (checked August 26, 2026) spans M6/M5 Pro Mac minis and M5 Pro/M5 Max MacBook Pros, with 32GB available as a configuration option on several of them.',
         bullets: [
-          'A 32B model at Q4_K_M needs roughly 18-20GB — fits with 12-14GB left for macOS and context on a 32GB Mac.',
-          'macOS itself typically uses 4-6GB at idle, so treat ~26-28GB as the practical usable ceiling, not the full 32GB.',
+          'A 32B model at Q4_K_M needs roughly 18-20GB — fits on a 32GB Mac with roughly 4-6GB left for context after the 8GB macOS reserve.',
+          'Always plan at least 8GB for macOS, so treat ~24GB as the practical usable ceiling, not the full 32GB.',
           'For 70B-class quality, 32GB is too tight at a useful quantization level — look at 48GB or 64GB instead.',
         ],
         updatedDate: '2026-08',
@@ -49,7 +49,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Best pick: a 32B model (e.g. Qwen3 32B) at Q4 — needs ~18-20GB, comfortable on 32GB total',
-          'Treat ~26-28GB as the practical usable ceiling — macOS itself reserves 4-6GB at idle',
+          'Treat ~24GB as the practical usable ceiling — always plan at least 8GB for macOS',
           '70B at Q4 doesn\'t fit comfortably on 32GB — go 48GB+ if that\'s the goal',
           'Buy on unified memory capacity, not chip generation — Apple\'s Mac mini and MacBook Pro lineups both moved chips in 2026',
         ],
@@ -58,8 +58,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Best Pick: 32B Models at Q4',
         content: [
-          '<strong>A 32GB unified memory Mac is a good practical target for 32B-class models at Q4 quantization — the model needs roughly 18-20GB, leaving 12-14GB for macOS, background apps, and the context window.</strong> This is the same unified-memory-equals-VRAM logic that applies across all Apple Silicon Macs: there is no separate GPU memory pool to worry about.',
-          'Don\'t plan around the full 32GB figure on the spec sheet. macOS itself typically reserves 4-6GB at idle, and background processes add more. Treat roughly 26-28GB as the realistic usable ceiling for model plus context, not the advertised 32GB.',
+          '<strong>A 32GB unified memory Mac is a good practical target for 32B-class models at Q4 quantization — the model needs roughly 18-20GB, leaving roughly 4-6GB for the context window and background apps once 8GB is reserved for macOS.</strong> This is the same unified-memory-equals-VRAM logic that applies across all Apple Silicon Macs: there is no separate GPU memory pool to worry about.',
+          'Don\'t plan around the full 32GB figure on the spec sheet. Always plan at least 8GB for macOS itself, and background processes can add more. Treat roughly 24GB as the realistic usable ceiling for model plus context, not the advertised 32GB.',
           'A 70B model doesn\'t fit at a useful quantization level on 32GB: it needs about 40GB at Q4. If you specifically need 70B-class quality, look at a 48GB or 64GB unified memory configuration instead — don\'t buy 32GB expecting to run 70B.',
         ],
         affiliateLinks: [
@@ -104,7 +104,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: '14B vs 32B vs 70B on 32GB',
         content: [
-          'A 14B model at Q4 runs with heavy headroom on 32GB — an easy fit. A 32B model at Q4 is the sweet spot: well-calibrated quantization with minimal quality loss versus full precision, and it uses most of the practical 26-28GB ceiling without overrunning it. A 70B model doesn\'t fit at a useful quantization level (Q4 needs ~40GB); an aggressive Q2_K squeeze is technically possible but trades enough quality that it\'s rarely the better choice over a well-quantized 32B model for precision-sensitive tasks.',
+          'A 14B model at Q4 runs with heavy headroom on 32GB — an easy fit. A 32B model at Q4 is the sweet spot: well-calibrated quantization with minimal quality loss versus full precision, and it uses most of the practical ~24GB ceiling (32GB minus 8GB for macOS), leaving only about 4-6GB for context. A 70B model doesn\'t fit at a useful quantization level (Q4 needs ~40GB); an aggressive Q2_K squeeze is technically possible but trades enough quality that it\'s rarely the better choice over a well-quantized 32B model for precision-sensitive tasks.',
           'Don\'t buy a 32GB Mac specifically to run 70B — if 70B-class quality is the actual goal, a 48GB or 64GB configuration is the right target from the start.',
         ],
       },
@@ -113,8 +113,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           {
-            q: 'How much unified memory does macOS actually use at idle?',
-            a: 'Roughly 4-6GB on a freshly booted system, more once you open a browser and other apps. Budget for this when sizing a model — don\'t assume the full advertised unified memory figure is available to the LLM.',
+            q: 'How much unified memory should I reserve for macOS?',
+            a: 'Plan at least 8GB. macOS alone uses roughly 4-6GB on a freshly booted system and more once you open a browser and other apps, so always deduct 8GB from the advertised total. Budget for this when sizing a model — don\'t assume the full advertised unified memory figure is available to the LLM.',
           },
           {
             q: 'Is 32GB unified memory the same as 32GB of VRAM?',
@@ -151,9 +151,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-ar.webp',
     title: 'أفضل LLM محلي لجهاز Mac بذاكرة موحدة 32GB في 2026',
     seoTitle: 'أفضل LLM محلي لجهاز Mac بذاكرة موحدة 32GB 2026',
-    metaDescription: 'أفضل LLM محلي لجهاز Mac بذاكرة موحدة 32GB: نماذج 32B بدقة Q4 (~18-20GB) مع هامش لنظام macOS. مقارنة Mac mini وMacBook Pro، ومتى تختار 48GB أو 64GB بدلاً من ذلك.',
+    metaDescription: 'أفضل LLM محلي لجهاز Mac بذاكرة موحدة 32GB: نماذج 32B بدقة Q4 (~18-20GB) مع حجز 8GB لنظام macOS. مقارنة Mac mini وMacBook Pro، ومتى تختار 48GB أو 64GB بدلاً من ذلك.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-26',
     last_full_refresh: '2026-08-26',
@@ -167,7 +167,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/power-local-llm/best-mac-for-local-ai-2026',
     siblingBites: ['mac-mini-m4-local-llm', 'best-local-llm-macbook-air-no-egpu'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>على جهاز Mac بذاكرة موحدة 32GB، أفضل LLM محلي هو نموذج 32B — مثل Qwen3 32B — بتكميم Q4، الذي يحتاج تقريبًا 18-20GB ويترك 12-14GB لنظام macOS والسياق.</strong> تُعد 32GB هدفًا عمليًا جيدًا لنماذج 32B بدقة Q4، وليست حدًا أدنى صارمًا — يعتمد الهامش الفعلي المتاح على التكميم وطول السياق وما يعمل بالتوازي على الجهاز. لأي شيء يتجاوز 32B، يُعد 48GB أو 64GB الخيار الأفضل. تم التحقق في 26 أغسطس 2026: انتقلت تشكيلة Mac mini من آبل للتو إلى شرائح M6/M5 Pro (يبدأ الشحن 22 سبتمبر)، وانتقل MacBook Pro إلى M5 Pro/M5 Max — اشترِ بناءً على سعة الذاكرة الموحدة، وليس جيل شريحة معين.',
+    leadAnswerBlock: '<strong>على جهاز Mac بذاكرة موحدة 32GB، أفضل LLM محلي هو نموذج 32B — مثل Qwen3 32B — بتكميم Q4، الذي يحتاج تقريبًا 18-20GB ويترك بعد حجز 8GB لنظام macOS نحو 4-6GB للسياق.</strong> تُعد 32GB هدفًا عمليًا جيدًا لنماذج 32B بدقة Q4، وليست حدًا أدنى صارمًا — يعتمد الهامش الفعلي المتاح على التكميم وطول السياق وما يعمل بالتوازي على الجهاز. لأي شيء يتجاوز 32B، يُعد 48GB أو 64GB الخيار الأفضل. تم التحقق في 26 أغسطس 2026: انتقلت تشكيلة Mac mini من آبل للتو إلى شرائح M6/M5 Pro (يبدأ الشحن 22 سبتمبر)، وانتقل MacBook Pro إلى M5 Pro/M5 Max — اشترِ بناءً على سعة الذاكرة الموحدة، وليس جيل شريحة معين.',
     toc: [
       { label: 'أفضل اختيار: نماذج 32B بدقة Q4', anchor: '#best-pick' },
       { label: 'أي جهاز Mac بذاكرة 32GB؟', anchor: '#which-mac' },
@@ -178,10 +178,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'ما هو أفضل LLM محلي لجهاز Mac بذاكرة موحدة 32GB؟',
-        answer: 'يُعد Qwen3 32B بدقة Q4 الأنسب لجهاز Mac بذاكرة موحدة 32GB — يحتاج ~18-20GB، مع ترك هامش مريح لنظام macOS. اشترِ الجهاز بناءً على سعة الذاكرة الموحدة، وليس جيل شريحة معين: تشمل تشكيلة آبل الحالية (بحسب التحقق في 26 أغسطس 2026) أجهزة Mac mini بشرائح M6/M5 Pro وأجهزة MacBook Pro بشرائح M5 Pro/M5 Max، مع توفر خيار 32GB كإعداد اختياري على عدة طرازات منها.',
+        answer: 'يُعد Qwen3 32B بدقة Q4 الأنسب لجهاز Mac بذاكرة موحدة 32GB — يحتاج ~18-20GB، مع ترك نحو 4-6GB للسياق بعد حجز 8GB لنظام macOS. اشترِ الجهاز بناءً على سعة الذاكرة الموحدة، وليس جيل شريحة معين: تشمل تشكيلة آبل الحالية (بحسب التحقق في 26 أغسطس 2026) أجهزة Mac mini بشرائح M6/M5 Pro وأجهزة MacBook Pro بشرائح M5 Pro/M5 Max، مع توفر خيار 32GB كإعداد اختياري على عدة طرازات منها.',
         bullets: [
-          'نموذج 32B بدقة Q4_K_M يحتاج تقريبًا 18-20GB — يستوعب مع بقاء 12-14GB لنظام macOS والسياق على جهاز Mac بذاكرة 32GB.',
-          'يستخدم macOS نفسه عادةً 4-6GB عند الخمول، لذا عامل ~26-28GB كسقف الاستخدام العملي، وليس الـ32GB الكاملة.',
+          'نموذج 32B بدقة Q4_K_M يحتاج تقريبًا 18-20GB — يستوعب على جهاز Mac بذاكرة 32GB مع بقاء نحو 4-6GB للسياق بعد حجز 8GB لنظام macOS.',
+          'خطّط دائمًا لتخصيص 8GB على الأقل لنظام macOS، لذا عامل ~24GB كسقف الاستخدام العملي، وليس الـ32GB الكاملة.',
           'بالنسبة لجودة من فئة 70B، تُعد 32GB ضيقة جدًا عند مستوى تكميم مفيد — انظر إلى 48GB أو 64GB بدلاً من ذلك.',
         ],
         updatedDate: '2026-08',
@@ -193,7 +193,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'أفضل اختيار: نموذج 32B (مثل Qwen3 32B) بدقة Q4 — يحتاج ~18-20GB، مريح على 32GB إجمالية',
-          'عامل ~26-28GB كسقف الاستخدام العملي — يحجز macOS نفسه 4-6GB عند الخمول',
+          'عامل ~24GB كسقف الاستخدام العملي — خصّص دائمًا 8GB على الأقل لنظام macOS',
           'نموذج 70B بدقة Q4 لا يستوعب بشكل مريح على 32GB — انتقل إلى 48GB+ إذا كان ذلك هو الهدف',
           'اشترِ بناءً على سعة الذاكرة الموحدة، وليس جيل الشريحة — انتقلت تشكيلتا Mac mini وMacBook Pro من آبل إلى شرائح جديدة في 2026',
         ],
@@ -202,8 +202,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'أفضل اختيار: نماذج 32B بدقة Q4',
         content: [
-          '<strong>جهاز Mac بذاكرة موحدة 32GB هدف عملي جيد لنماذج من فئة 32B بتكميم Q4 — يحتاج النموذج تقريبًا 18-20GB، مع ترك 12-14GB لنظام macOS والتطبيقات الخلفية ونافذة السياق.</strong> هذا نفس منطق "الذاكرة الموحدة تساوي VRAM" المطبّق عبر كل أجهزة Apple Silicon: لا يوجد مجمّع ذاكرة GPU منفصل يدعو للقلق بشأنه.',
-          'لا تخطط حول رقم الـ32GB الكامل على ورقة المواصفات. يحجز macOS نفسه عادةً 4-6GB عند الخمول، وتضيف العمليات الخلفية المزيد. عامل تقريبًا 26-28GB كسقف واقعي قابل للاستخدام للنموذج بالإضافة إلى السياق، وليس الـ32GB المُعلنة.',
+          '<strong>جهاز Mac بذاكرة موحدة 32GB هدف عملي جيد لنماذج من فئة 32B بتكميم Q4 — يحتاج النموذج تقريبًا 18-20GB، مع ترك نحو 4-6GB لنافذة السياق والتطبيقات الخلفية بعد حجز 8GB لنظام macOS.</strong> هذا نفس منطق "الذاكرة الموحدة تساوي VRAM" المطبّق عبر كل أجهزة Apple Silicon: لا يوجد مجمّع ذاكرة GPU منفصل يدعو للقلق بشأنه.',
+          'لا تخطط حول رقم الـ32GB الكامل على ورقة المواصفات. خصّص دائمًا 8GB على الأقل لنظام macOS نفسه، وقد تضيف العمليات الخلفية المزيد. عامل تقريبًا 24GB كسقف واقعي قابل للاستخدام للنموذج بالإضافة إلى السياق، وليس الـ32GB المُعلنة.',
           'لا يستوعب نموذج 70B عند مستوى تكميم مفيد على 32GB: يحتاج حوالي 40GB بدقة Q4. إذا احتجت تحديدًا جودة من فئة 70B، فانظر إلى تكوين ذاكرة موحدة 48GB أو 64GB بدلًا من ذلك — لا تشترِ 32GB متوقعًا تشغيل 70B.',
         ],
         affiliateLinks: [
@@ -248,7 +248,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: '14B مقابل 32B مقابل 70B على 32GB',
         content: [
-          'يعمل نموذج 14B بدقة Q4 بهامش كبير على 32GB — يستوعب بسهولة. يُعد نموذج 32B بدقة Q4 نقطة التوازن المثالية: مستوى تكميم مضبوط جيدًا بفقدان جودة ضئيل مقارنة بالدقة الكاملة، ويستخدم معظم السقف العملي البالغ 26-28GB دون تجاوزه. لا يستوعب نموذج 70B عند مستوى تكميم مفيد (يحتاج Q4 حوالي 40GB)؛ ضغط Q2_K العدواني ممكن تقنيًا لكنه يقايض جودة كافية بحيث نادرًا ما يكون الخيار الأفضل مقارنة بنموذج 32B مكمَّم جيدًا للمهام الحساسة للدقة.',
+          'يعمل نموذج 14B بدقة Q4 بهامش كبير على 32GB — يستوعب بسهولة. يُعد نموذج 32B بدقة Q4 نقطة التوازن المثالية: مستوى تكميم مضبوط جيدًا بفقدان جودة ضئيل مقارنة بالدقة الكاملة، ويستخدم معظم السقف العملي البالغ نحو 24GB (32GB ناقص 8GB لنظام macOS)، ولا يترك سوى 4-6GB للسياق. لا يستوعب نموذج 70B عند مستوى تكميم مفيد (يحتاج Q4 حوالي 40GB)؛ ضغط Q2_K العدواني ممكن تقنيًا لكنه يقايض جودة كافية بحيث نادرًا ما يكون الخيار الأفضل مقارنة بنموذج 32B مكمَّم جيدًا للمهام الحساسة للدقة.',
           'لا تشترِ جهاز Mac بذاكرة 32GB خصيصًا لتشغيل 70B — إذا كانت جودة من فئة 70B هي الهدف الفعلي، فإن تكوين 48GB أو 64GB هو الهدف الصحيح منذ البداية.',
         ],
       },
@@ -257,8 +257,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           {
-            q: 'كم من الذاكرة الموحدة يستخدمها macOS فعليًا عند الخمول؟',
-            a: 'حوالي 4-6GB على نظام تم إقلاعه حديثًا، وأكثر بمجرد فتح متصفح وتطبيقات أخرى. ضع هذا في الميزانية عند تحديد حجم النموذج — لا تفترض أن رقم الذاكرة الموحدة المُعلن بالكامل متاح لـ LLM.',
+            q: 'كم من الذاكرة الموحدة يجب حجزها لنظام macOS؟',
+            a: 'خصّص 8GB على الأقل. يستخدم macOS وحده نحو 4-6GB على نظام تم إقلاعه حديثًا، وأكثر بمجرد فتح متصفح وتطبيقات أخرى، لذا اطرح دائمًا 8GB من الرقم المُعلن. ضع هذا في الميزانية عند تحديد حجم النموذج — لا تفترض أن رقم الذاكرة الموحدة المُعلن بالكامل متاح لـ LLM.',
           },
           {
             q: 'هل ذاكرة موحدة 32GB هي نفسها 32GB من VRAM؟',
@@ -297,7 +297,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Bestes lokales LLM für 32GB Unified Memory Mac 2026',
     metaDescription: 'Bestes lokales LLM für einen Mac mit 32GB Unified Memory: 32B-Modelle bei Q4 (~18-20GB), mit Reserve für macOS. Mac mini vs. MacBook Pro, und wann sich 48GB oder 64GB mehr lohnen.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-26',
     last_full_refresh: '2026-08-26',
@@ -311,7 +311,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/power-local-llm/best-mac-for-local-ai-2026',
     siblingBites: ['mac-mini-m4-local-llm', 'best-local-llm-macbook-air-no-egpu'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>Auf einem Mac mit 32 GB Unified Memory ist das beste lokale LLM ein 32B-Modell — etwa Qwen3 32B — bei Q4-Quantisierung, das rund 18-20 GB benötigt und 12-14 GB für macOS und Kontext übrig lässt.</strong> 32 GB sind ein guter praktischer Richtwert für 32B-Q4-Modelle, kein hartes Minimum — der tatsächliche Spielraum hängt von Quantisierung, Kontextlänge und laufenden Hintergrundprozessen ab. Für alles jenseits von 32B sind 48 GB oder 64 GB die bessere Wahl. Stand 26. August 2026: Apples Mac-mini-Reihe ist gerade auf M6/M5-Pro-Chips umgestiegen (Auslieferung ab 22. September), und das MacBook Pro nutzt jetzt M5 Pro/M5 Max — kaufen Sie nach Unified-Memory-Kapazität, nicht nach einer bestimmten Chip-Generation.',
+    leadAnswerBlock: '<strong>Auf einem Mac mit 32 GB Unified Memory ist das beste lokale LLM ein 32B-Modell — etwa Qwen3 32B — bei Q4-Quantisierung, das rund 18-20 GB benötigt und nach 8 GB Reserve für macOS rund 4-6 GB für den Kontext übrig lässt.</strong> 32 GB sind ein guter praktischer Richtwert für 32B-Q4-Modelle, kein hartes Minimum — der tatsächliche Spielraum hängt von Quantisierung, Kontextlänge und laufenden Hintergrundprozessen ab. Für alles jenseits von 32B sind 48 GB oder 64 GB die bessere Wahl. Stand 26. August 2026: Apples Mac-mini-Reihe ist gerade auf M6/M5-Pro-Chips umgestiegen (Auslieferung ab 22. September), und das MacBook Pro nutzt jetzt M5 Pro/M5 Max — kaufen Sie nach Unified-Memory-Kapazität, nicht nach einer bestimmten Chip-Generation.',
     toc: [
       { label: 'Beste Wahl: 32B-Modelle bei Q4', anchor: '#best-pick' },
       { label: 'Welcher 32-GB-Mac?', anchor: '#which-mac' },
@@ -322,10 +322,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Was ist das beste lokale LLM für einen Mac mit 32 GB Unified Memory?',
-        answer: 'Qwen3 32B bei Q4 passt am besten zu einem Mac mit 32 GB Unified Memory — es benötigt ~18-20 GB und lässt komfortablen Spielraum für macOS. Kaufen Sie den Mac nach seiner Unified-Memory-Kapazität, nicht nach einer bestimmten Chip-Generation: Apples aktuelle Reihe (Stand 26. August 2026) umfasst M6/M5-Pro-Mac-minis und M5-Pro/M5-Max-MacBook-Pros, bei denen 32 GB auf mehreren Modellen als Konfigurationsoption verfügbar sind.',
+        answer: 'Qwen3 32B bei Q4 passt am besten zu einem Mac mit 32 GB Unified Memory — es benötigt ~18-20 GB und lässt nach 8 GB Reserve für macOS rund 4-6 GB für den Kontext. Kaufen Sie den Mac nach seiner Unified-Memory-Kapazität, nicht nach einer bestimmten Chip-Generation: Apples aktuelle Reihe (Stand 26. August 2026) umfasst M6/M5-Pro-Mac-minis und M5-Pro/M5-Max-MacBook-Pros, bei denen 32 GB auf mehreren Modellen als Konfigurationsoption verfügbar sind.',
         bullets: [
-          'Ein 32B-Modell bei Q4_K_M benötigt rund 18-20 GB — passt mit 12-14 GB Reserve für macOS und Kontext auf einen 32-GB-Mac.',
-          'macOS selbst nutzt im Leerlauf typischerweise 4-6 GB, rechnen Sie also mit ~26-28 GB als praktischer Nutzobergrenze, nicht den vollen 32 GB.',
+          'Ein 32B-Modell bei Q4_K_M benötigt rund 18-20 GB — passt auf einen 32-GB-Mac und lässt nach 8 GB Reserve für macOS rund 4-6 GB für den Kontext.',
+          'Planen Sie immer mindestens 8 GB für macOS ein und rechnen Sie daher mit ~24 GB als praktischer Nutzobergrenze, nicht den vollen 32 GB.',
           'Für Qualität auf 70B-Niveau ist 32 GB bei einer sinnvollen Quantisierungsstufe zu knapp — greifen Sie stattdessen zu 48 GB oder 64 GB.',
         ],
         updatedDate: '2026-08',
@@ -337,7 +337,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Beste Wahl: ein 32B-Modell (z. B. Qwen3 32B) bei Q4 — benötigt ~18-20 GB, komfortabel bei 32 GB insgesamt',
-          'Rechnen Sie mit ~26-28 GB als praktischer Nutzobergrenze — macOS selbst reserviert im Leerlauf 4-6 GB',
+          'Rechnen Sie mit ~24 GB als praktischer Nutzobergrenze — planen Sie immer mindestens 8 GB für macOS ein',
           '70B bei Q4 passt nicht komfortabel auf 32 GB — greifen Sie bei diesem Ziel zu 48 GB oder mehr',
           'Kaufen Sie nach Unified-Memory-Kapazität, nicht nach Chip-Generation — Apples Mac-mini- und MacBook-Pro-Reihen sind 2026 beide auf neue Chips umgestiegen',
         ],
@@ -346,8 +346,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Beste Wahl: 32B-Modelle bei Q4',
         content: [
-          '<strong>Ein Mac mit 32 GB Unified Memory ist ein guter praktischer Richtwert für Modelle der 32B-Klasse bei Q4-Quantisierung — das Modell benötigt rund 18-20 GB und lässt 12-14 GB für macOS, Hintergrund-Apps und das Kontextfenster übrig.</strong> Das ist dieselbe Logik „Unified Memory gleich VRAM", die für alle Apple-Silicon-Macs gilt: Es gibt keinen separaten GPU-Speicherpool, um den man sich Sorgen machen müsste.',
-          'Planen Sie nicht mit der vollen 32-GB-Zahl auf dem Datenblatt. macOS selbst reserviert im Leerlauf typischerweise 4-6 GB, und Hintergrundprozesse kommen hinzu. Betrachten Sie rund 26-28 GB als realistische Nutzobergrenze für Modell plus Kontext, nicht die beworbenen 32 GB.',
+          '<strong>Ein Mac mit 32 GB Unified Memory ist ein guter praktischer Richtwert für Modelle der 32B-Klasse bei Q4-Quantisierung — das Modell benötigt rund 18-20 GB und lässt nach 8 GB Reserve für macOS rund 4-6 GB für Kontextfenster und Hintergrund-Apps übrig.</strong> Das ist dieselbe Logik „Unified Memory gleich VRAM", die für alle Apple-Silicon-Macs gilt: Es gibt keinen separaten GPU-Speicherpool, um den man sich Sorgen machen müsste.',
+          'Planen Sie nicht mit der vollen 32-GB-Zahl auf dem Datenblatt. Planen Sie immer mindestens 8 GB für macOS selbst ein; Hintergrundprozesse können mehr beanspruchen. Betrachten Sie rund 24 GB als realistische Nutzobergrenze für Modell plus Kontext, nicht die beworbenen 32 GB.',
           'Ein 70B-Modell passt bei keiner sinnvollen Quantisierungsstufe auf 32 GB: Es benötigt etwa 40 GB bei Q4. Wenn Sie speziell Qualität auf 70B-Niveau brauchen, greifen Sie stattdessen zu einer Konfiguration mit 48 GB oder 64 GB Unified Memory — kaufen Sie nicht 32 GB in der Erwartung, damit 70B zu betreiben.',
         ],
         affiliateLinks: [
@@ -392,7 +392,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: '14B vs. 32B vs. 70B auf 32 GB',
         content: [
-          'Ein 14B-Modell bei Q4 läuft mit viel Reserve auf 32 GB — problemlos. Ein 32B-Modell bei Q4 ist der Sweet Spot: gut kalibrierte Quantisierung mit minimalem Qualitätsverlust gegenüber voller Präzision, und es nutzt fast die gesamte praktische Obergrenze von 26-28 GB, ohne sie zu überschreiten. Ein 70B-Modell passt bei keiner sinnvollen Quantisierungsstufe (Q4 benötigt ~40 GB); ein aggressives Q2_K-Downsizing ist technisch möglich, opfert aber genug Qualität, dass es gegenüber einem gut quantisierten 32B-Modell bei präzisionssensiblen Aufgaben selten die bessere Wahl ist.',
+          'Ein 14B-Modell bei Q4 läuft mit viel Reserve auf 32 GB — problemlos. Ein 32B-Modell bei Q4 ist der Sweet Spot: gut kalibrierte Quantisierung mit minimalem Qualitätsverlust gegenüber voller Präzision, und es nutzt fast die gesamte praktische Obergrenze von rund 24 GB (32 GB minus 8 GB für macOS) und lässt nur etwa 4-6 GB für den Kontext. Ein 70B-Modell passt bei keiner sinnvollen Quantisierungsstufe (Q4 benötigt ~40 GB); ein aggressives Q2_K-Downsizing ist technisch möglich, opfert aber genug Qualität, dass es gegenüber einem gut quantisierten 32B-Modell bei präzisionssensiblen Aufgaben selten die bessere Wahl ist.',
           'Kaufen Sie keinen 32-GB-Mac speziell für 70B — wenn Qualität auf 70B-Niveau tatsächlich das Ziel ist, ist eine Konfiguration mit 48 GB oder 64 GB von Anfang an die richtige Wahl.',
         ],
       },
@@ -401,8 +401,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           {
-            q: 'Wie viel Unified Memory nutzt macOS tatsächlich im Leerlauf?',
-            a: 'Rund 4-6 GB auf einem frisch gestarteten System, mehr sobald Sie einen Browser und weitere Apps öffnen. Kalkulieren Sie das bei der Modellgrößenwahl ein — gehen Sie nicht davon aus, dass die volle beworbene Unified-Memory-Zahl dem LLM zur Verfügung steht.',
+            q: 'Wie viel Unified Memory sollte ich für macOS reservieren?',
+            a: 'Planen Sie mindestens 8 GB ein. macOS allein belegt auf einem frisch gestarteten System rund 4-6 GB, mehr sobald Sie einen Browser und weitere Apps öffnen — ziehen Sie daher immer 8 GB von der beworbenen Gesamtzahl ab. Kalkulieren Sie das bei der Modellgrößenwahl ein — gehen Sie nicht davon aus, dass die volle beworbene Unified-Memory-Zahl dem LLM zur Verfügung steht.',
           },
           {
             q: 'Ist 32 GB Unified Memory dasselbe wie 32 GB VRAM?',
@@ -441,7 +441,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejor LLM Local para Mac 32GB Memoria Unificada 2026',
     metaDescription: 'Mejor LLM local para un Mac con 32GB de memoria unificada: modelos de 32B en Q4 (~18-20GB), con margen para macOS. Mac mini vs MacBook Pro, y cuándo elegir 48GB o 64GB.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-26',
     last_full_refresh: '2026-08-26',
@@ -455,7 +455,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/power-local-llm/best-mac-for-local-ai-2026',
     siblingBites: ['mac-mini-m4-local-llm', 'best-local-llm-macbook-air-no-egpu'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>En un Mac con 32GB de memoria unificada, el mejor LLM local es un modelo de 32B — como Qwen3 32B — con cuantización Q4, que necesita aproximadamente 18-20GB y deja 12-14GB para macOS y el contexto.</strong> 32GB es un buen objetivo práctico para modelos de 32B en Q4, no un mínimo estricto — el margen real depende de la cuantización, la longitud del contexto y qué más esté en ejecución. Para cualquier cosa más allá de 32B, 48GB o 64GB es la mejor opción. Verificado el 26 de agosto de 2026: la línea Mac mini de Apple acaba de pasar a chips M6/M5 Pro (con envíos el 22 de septiembre), y el MacBook Pro ha pasado a M5 Pro/M5 Max — compra según la capacidad de memoria unificada, no según una generación de chip específica.',
+    leadAnswerBlock: '<strong>En un Mac con 32GB de memoria unificada, el mejor LLM local es un modelo de 32B — como Qwen3 32B — con cuantización Q4, que necesita aproximadamente 18-20GB y, tras reservar 8GB para macOS, deja unos 4-6GB para el contexto.</strong> 32GB es un buen objetivo práctico para modelos de 32B en Q4, no un mínimo estricto — el margen real depende de la cuantización, la longitud del contexto y qué más esté en ejecución. Para cualquier cosa más allá de 32B, 48GB o 64GB es la mejor opción. Verificado el 26 de agosto de 2026: la línea Mac mini de Apple acaba de pasar a chips M6/M5 Pro (con envíos el 22 de septiembre), y el MacBook Pro ha pasado a M5 Pro/M5 Max — compra según la capacidad de memoria unificada, no según una generación de chip específica.',
     toc: [
       { label: 'Mejor Opción: Modelos de 32B en Q4', anchor: '#best-pick' },
       { label: '¿Qué Mac de 32GB?', anchor: '#which-mac' },
@@ -466,10 +466,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Cuál es el mejor LLM local para un Mac con 32GB de memoria unificada?',
-        answer: 'Qwen3 32B en Q4 es la mejor opción para un Mac con 32GB de memoria unificada — necesita ~18-20GB, dejando un margen cómodo para macOS. Compra el Mac según su capacidad de memoria unificada, no según una generación de chip específica: la línea actual de Apple (verificada el 26 de agosto de 2026) abarca Mac mini M6/M5 Pro y MacBook Pro M5 Pro/M5 Max, con 32GB disponible como opción de configuración en varios de ellos.',
+        answer: 'Qwen3 32B en Q4 es la mejor opción para un Mac con 32GB de memoria unificada — necesita ~18-20GB, dejando unos 4-6GB para el contexto tras reservar 8GB para macOS. Compra el Mac según su capacidad de memoria unificada, no según una generación de chip específica: la línea actual de Apple (verificada el 26 de agosto de 2026) abarca Mac mini M6/M5 Pro y MacBook Pro M5 Pro/M5 Max, con 32GB disponible como opción de configuración en varios de ellos.',
         bullets: [
-          'Un modelo de 32B en Q4_K_M necesita aproximadamente 18-20GB — cabe con 12-14GB restantes para macOS y contexto en un Mac de 32GB.',
-          'macOS por sí solo típicamente usa 4-6GB en reposo, así que trata ~26-28GB como el techo práctico utilizable, no los 32GB completos.',
+          'Un modelo de 32B en Q4_K_M necesita aproximadamente 18-20GB — cabe en un Mac de 32GB y deja unos 4-6GB para el contexto tras reservar 8GB para macOS.',
+          'Reserva siempre al menos 8GB para macOS, así que trata ~24GB como el techo práctico utilizable, no los 32GB completos.',
           'Para calidad de clase 70B, 32GB es demasiado ajustado a un nivel de cuantización útil — considera 48GB o 64GB en su lugar.',
         ],
         updatedDate: '2026-08',
@@ -481,7 +481,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Mejor opción: un modelo de 32B (p. ej., Qwen3 32B) en Q4 — necesita ~18-20GB, cómodo en 32GB totales',
-          'Trata ~26-28GB como el techo práctico utilizable — macOS por sí solo reserva 4-6GB en reposo',
+          'Trata ~24GB como el techo práctico utilizable — reserva siempre al menos 8GB para macOS',
           '70B en Q4 no cabe cómodamente en 32GB — opta por 48GB+ si ese es el objetivo',
           'Compra según la capacidad de memoria unificada, no según la generación del chip — las líneas Mac mini y MacBook Pro de Apple cambiaron de chip en 2026',
         ],
@@ -490,8 +490,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Mejor Opción: Modelos de 32B en Q4',
         content: [
-          '<strong>Un Mac con 32GB de memoria unificada es un buen objetivo práctico para modelos de clase 32B con cuantización Q4 — el modelo necesita aproximadamente 18-20GB, dejando 12-14GB para macOS, aplicaciones en segundo plano y la ventana de contexto.</strong> Es la misma lógica de memoria-unificada-es-igual-a-VRAM que se aplica en todos los Mac con Apple Silicon: no hay un grupo de memoria de GPU separado del cual preocuparse.',
-          'No planifiques en torno a la cifra completa de 32GB de la ficha técnica. macOS por sí solo típicamente reserva 4-6GB en reposo, y los procesos en segundo plano añaden más. Trata aproximadamente 26-28GB como el techo utilizable realista para el modelo más el contexto, no los 32GB anunciados.',
+          '<strong>Un Mac con 32GB de memoria unificada es un buen objetivo práctico para modelos de clase 32B con cuantización Q4 — el modelo necesita aproximadamente 18-20GB, dejando unos 4-6GB para la ventana de contexto y las aplicaciones en segundo plano tras reservar 8GB para macOS.</strong> Es la misma lógica de memoria-unificada-es-igual-a-VRAM que se aplica en todos los Mac con Apple Silicon: no hay un grupo de memoria de GPU separado del cual preocuparse.',
+          'No planifiques en torno a la cifra completa de 32GB de la ficha técnica. Reserva siempre al menos 8GB para macOS en sí, y los procesos en segundo plano pueden añadir más. Trata aproximadamente 24GB como el techo utilizable realista para el modelo más el contexto, no los 32GB anunciados.',
           'Un modelo de 70B no cabe a un nivel de cuantización útil en 32GB: necesita cerca de 40GB en Q4. Si necesitas específicamente calidad de clase 70B, considera una configuración de memoria unificada de 48GB o 64GB en su lugar — no compres 32GB esperando ejecutar un 70B.',
         ],
         affiliateLinks: [
@@ -536,7 +536,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: '14B vs 32B vs 70B en 32GB',
         content: [
-          'Un modelo de 14B en Q4 se ejecuta con mucho margen en 32GB — cabe sin problema. Un modelo de 32B en Q4 es el punto óptimo: una cuantización bien calibrada con pérdida mínima de calidad frente a la precisión completa, y usa la mayor parte del techo práctico de 26-28GB sin sobrepasarlo. Un modelo de 70B no cabe a un nivel de cuantización útil (Q4 necesita ~40GB); un ajuste agresivo en Q2_K es técnicamente posible, pero sacrifica suficiente calidad como para que rara vez sea mejor opción que un modelo de 32B bien cuantizado en tareas sensibles a la precisión.',
+          'Un modelo de 14B en Q4 se ejecuta con mucho margen en 32GB — cabe sin problema. Un modelo de 32B en Q4 es el punto óptimo: una cuantización bien calibrada con pérdida mínima de calidad frente a la precisión completa, y usa la mayor parte del techo práctico de unos 24GB (32GB menos 8GB para macOS), dejando solo unos 4-6GB para el contexto. Un modelo de 70B no cabe a un nivel de cuantización útil (Q4 necesita ~40GB); un ajuste agresivo en Q2_K es técnicamente posible, pero sacrifica suficiente calidad como para que rara vez sea mejor opción que un modelo de 32B bien cuantizado en tareas sensibles a la precisión.',
           'No compres un Mac de 32GB específicamente para ejecutar un 70B — si el objetivo real es calidad de clase 70B, una configuración de 48GB o 64GB es la meta correcta desde el principio.',
         ],
       },
@@ -545,8 +545,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Preguntas Frecuentes',
         faqs: [
           {
-            q: '¿Cuánta memoria unificada usa realmente macOS en reposo?',
-            a: 'Aproximadamente 4-6GB en un sistema recién iniciado, más una vez que abres un navegador y otras aplicaciones. Ten esto en cuenta al dimensionar un modelo — no asumas que toda la cifra de memoria unificada anunciada está disponible para el LLM.',
+            q: '¿Cuánta memoria unificada debo reservar para macOS?',
+            a: 'Reserva al menos 8GB. macOS por sí solo usa aproximadamente 4-6GB en un sistema recién iniciado y más cuando abres un navegador y otras aplicaciones, así que resta siempre 8GB de la cifra anunciada. Ten esto en cuenta al dimensionar un modelo — no asumas que toda la cifra de memoria unificada anunciada está disponible para el LLM.',
           },
           {
             q: '¿32GB de memoria unificada es lo mismo que 32GB de VRAM?',
@@ -583,9 +583,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-fr.webp',
     title: 'Meilleur LLM Local pour un Mac à 32 Go de Mémoire Unifiée en 2026',
     seoTitle: 'Meilleur LLM local pour Mac 32 Go mémoire unifiée 2026',
-    metaDescription: 'Meilleur LLM local pour un Mac 32 Go de mémoire unifiée : modèles 32B en Q4 (~18-20 Go), avec marge pour macOS. Mac mini ou MacBook Pro, et quand opter pour 48 ou 64 Go.',
+    metaDescription: 'Meilleur LLM local pour un Mac 32 Go de mémoire unifiée : modèles 32B en Q4 (~18-20 Go), avec 8 Go réservés à macOS. Mac mini ou MacBook Pro, et quand opter pour 48 ou 64 Go.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-26',
     last_full_refresh: '2026-08-26',
@@ -599,7 +599,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/power-local-llm/best-mac-for-local-ai-2026',
     siblingBites: ['mac-mini-m4-local-llm', 'best-local-llm-macbook-air-no-egpu'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>Sur un Mac à 32 Go de mémoire unifiée, le meilleur LLM local est un modèle 32B — comme Qwen3 32B — en quantification Q4, qui nécessite environ 18-20 Go et laisse 12-14 Go pour macOS et le contexte.</strong> 32 Go est une cible pratique pour des modèles 32B en Q4, pas un minimum strict — la marge réelle dépend de la quantification, de la longueur du contexte et des autres processus actifs. Au-delà de 32B, optez plutôt pour 48 Go ou 64 Go. Vérifié le 26 août 2026 : la gamme Mac mini d\'Apple vient de passer aux puces M6/M5 Pro (livraison le 22 septembre), et le MacBook Pro est passé aux puces M5 Pro/M5 Max — achetez en fonction de la capacité de mémoire unifiée, pas d\'une génération de puce spécifique.',
+    leadAnswerBlock: '<strong>Sur un Mac à 32 Go de mémoire unifiée, le meilleur LLM local est un modèle 32B — comme Qwen3 32B — en quantification Q4, qui nécessite environ 18-20 Go et laisse, après les 8 Go réservés à macOS, environ 4-6 Go pour le contexte.</strong> 32 Go est une cible pratique pour des modèles 32B en Q4, pas un minimum strict — la marge réelle dépend de la quantification, de la longueur du contexte et des autres processus actifs. Au-delà de 32B, optez plutôt pour 48 Go ou 64 Go. Vérifié le 26 août 2026 : la gamme Mac mini d\'Apple vient de passer aux puces M6/M5 Pro (livraison le 22 septembre), et le MacBook Pro est passé aux puces M5 Pro/M5 Max — achetez en fonction de la capacité de mémoire unifiée, pas d\'une génération de puce spécifique.',
     toc: [
       { label: 'Meilleur choix : modèles 32B en Q4', anchor: '#best-pick' },
       { label: 'Quel Mac de 32 Go choisir ?', anchor: '#which-mac' },
@@ -610,10 +610,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Quel est le meilleur LLM local pour un Mac à 32 Go de mémoire unifiée ?',
-        answer: 'Qwen3 32B en Q4 est le meilleur choix pour un Mac à 32 Go de mémoire unifiée — il nécessite ~18-20 Go, laissant une marge confortable pour macOS. Achetez le Mac pour sa capacité de mémoire unifiée, pas pour une génération de puce spécifique : la gamme actuelle d\'Apple (vérifiée le 26 août 2026) comprend des Mac mini M6/M5 Pro et des MacBook Pro M5 Pro/M5 Max, avec 32 Go disponibles en option de configuration sur plusieurs d\'entre eux.',
+        answer: 'Qwen3 32B en Q4 est le meilleur choix pour un Mac à 32 Go de mémoire unifiée — il nécessite ~18-20 Go, laissant environ 4-6 Go pour le contexte une fois 8 Go réservés à macOS. Achetez le Mac pour sa capacité de mémoire unifiée, pas pour une génération de puce spécifique : la gamme actuelle d\'Apple (vérifiée le 26 août 2026) comprend des Mac mini M6/M5 Pro et des MacBook Pro M5 Pro/M5 Max, avec 32 Go disponibles en option de configuration sur plusieurs d\'entre eux.',
         bullets: [
-          'Un modèle 32B en Q4_K_M nécessite environ 18-20 Go — il tient avec 12-14 Go restants pour macOS et le contexte sur un Mac de 32 Go.',
-          'macOS utilise généralement 4-6 Go au repos, considérez donc ~26-28 Go comme le plafond réellement utilisable, pas les 32 Go complets.',
+          'Un modèle 32B en Q4_K_M nécessite environ 18-20 Go — il tient sur un Mac de 32 Go et laisse environ 4-6 Go pour le contexte après les 8 Go réservés à macOS.',
+          'Prévoyez toujours au moins 8 Go pour macOS, considérez donc ~24 Go comme le plafond réellement utilisable, pas les 32 Go complets.',
           'Pour une qualité de classe 70B, 32 Go est trop juste à un niveau de quantification utile — visez plutôt 48 Go ou 64 Go.',
         ],
         updatedDate: '2026-08',
@@ -625,7 +625,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Meilleur choix : un modèle 32B (ex. Qwen3 32B) en Q4 — nécessite ~18-20 Go, confortable sur 32 Go au total',
-          'Considérez ~26-28 Go comme le plafond réellement utilisable — macOS réserve lui-même 4-6 Go au repos',
+          'Considérez ~24 Go comme le plafond réellement utilisable — prévoyez toujours au moins 8 Go pour macOS',
           '70B en Q4 ne tient pas confortablement sur 32 Go — visez 48 Go ou plus pour cet objectif',
           'Achetez en fonction de la capacité de mémoire unifiée, pas de la génération de puce — les gammes Mac mini et MacBook Pro d\'Apple ont toutes deux changé de puce en 2026',
         ],
@@ -634,8 +634,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Meilleur choix : modèles 32B en Q4',
         content: [
-          '<strong>Un Mac à 32 Go de mémoire unifiée est une cible pratique pour les modèles de classe 32B en quantification Q4 — le modèle nécessite environ 18-20 Go, laissant 12-14 Go pour macOS, les applications en arrière-plan et la fenêtre de contexte.</strong> C\'est la même logique « mémoire unifiée égale VRAM » qui s\'applique à tous les Mac Apple Silicon : il n\'existe pas de pool de mémoire GPU distinct.',
-          'Ne planifiez pas sur les 32 Go complets de la fiche technique. macOS réserve généralement 4-6 Go au repos, et les processus en arrière-plan en ajoutent davantage. Considérez environ 26-28 Go comme le plafond réaliste pour le modèle et le contexte, et non les 32 Go annoncés.',
+          '<strong>Un Mac à 32 Go de mémoire unifiée est une cible pratique pour les modèles de classe 32B en quantification Q4 — le modèle nécessite environ 18-20 Go, laissant environ 4-6 Go pour la fenêtre de contexte et les applications en arrière-plan une fois 8 Go réservés à macOS.</strong> C\'est la même logique « mémoire unifiée égale VRAM » qui s\'applique à tous les Mac Apple Silicon : il n\'existe pas de pool de mémoire GPU distinct.',
+          'Ne planifiez pas sur les 32 Go complets de la fiche technique. Prévoyez toujours au moins 8 Go pour macOS lui-même ; les processus en arrière-plan peuvent en consommer davantage. Considérez environ 24 Go comme le plafond réaliste pour le modèle et le contexte, et non les 32 Go annoncés.',
           'Un modèle 70B ne tient pas à un niveau de quantification utile sur 32 Go : il nécessite environ 40 Go en Q4. Si vous avez spécifiquement besoin d\'une qualité de classe 70B, optez plutôt pour une configuration de 48 Go ou 64 Go — n\'achetez pas 32 Go en espérant faire tourner un 70B.',
         ],
         affiliateLinks: [
@@ -680,7 +680,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: '14B vs 32B vs 70B sur 32 Go',
         content: [
-          'Un modèle 14B en Q4 tourne avec une large marge sur 32 Go — un ajustement facile. Un modèle 32B en Q4 est le point d\'équilibre optimal : une quantification bien calibrée avec une perte de qualité minimale par rapport à la pleine précision, utilisant l\'essentiel du plafond pratique de 26-28 Go sans le dépasser. Un modèle 70B ne tient pas à un niveau de quantification utile (Q4 nécessite ~40 Go) ; une compression agressive en Q2_K est techniquement possible mais sacrifie assez de qualité pour rarement surpasser un modèle 32B bien quantifié sur des tâches sensibles à la précision.',
+          'Un modèle 14B en Q4 tourne avec une large marge sur 32 Go — un ajustement facile. Un modèle 32B en Q4 est le point d\'équilibre optimal : une quantification bien calibrée avec une perte de qualité minimale par rapport à la pleine précision, utilisant l\'essentiel du plafond pratique d\'environ 24 Go (32 Go moins 8 Go pour macOS), avec seulement 4-6 Go pour le contexte. Un modèle 70B ne tient pas à un niveau de quantification utile (Q4 nécessite ~40 Go) ; une compression agressive en Q2_K est techniquement possible mais sacrifie assez de qualité pour rarement surpasser un modèle 32B bien quantifié sur des tâches sensibles à la précision.',
           'N\'achetez pas un Mac de 32 Go spécifiquement pour faire tourner un 70B — si une qualité de classe 70B est l\'objectif réel, une configuration de 48 Go ou 64 Go est le bon choix dès le départ.',
         ],
       },
@@ -689,8 +689,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Questions fréquentes',
         faqs: [
           {
-            q: 'Quelle quantité de mémoire unifiée macOS utilise-t-il réellement au repos ?',
-            a: 'Environ 4-6 Go sur un système fraîchement démarré, davantage dès que vous ouvrez un navigateur et d\'autres applications. Prévoyez cette marge lors du dimensionnement d\'un modèle — ne supposez pas que la totalité de la mémoire unifiée annoncée est disponible pour le LLM.',
+            q: 'Quelle quantité de mémoire unifiée faut-il réserver à macOS ?',
+            a: 'Prévoyez au moins 8 Go. macOS seul utilise environ 4-6 Go sur un système fraîchement démarré, davantage dès que vous ouvrez un navigateur et d\'autres applications ; déduisez donc toujours 8 Go du total annoncé. Prévoyez cette marge lors du dimensionnement d\'un modèle — ne supposez pas que la totalité de la mémoire unifiée annoncée est disponible pour le LLM.',
           },
           {
             q: '32 Go de mémoire unifiée équivalent-ils à 32 Go de VRAM ?',
@@ -727,9 +727,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-ja.webp',
     title: '2026年、32GB統合メモリMacに最適なローカルLLMは?',
     seoTitle: '2026年版 32GB統合メモリMacに最適なローカルLLM',
-    metaDescription: '32GB統合メモリMacに最適なローカルLLM: Q4量子化の32Bモデル(約18-20GB)でmacOS用の余裕を確保。Mac miniとMacBook Proの比較、48GBや64GBを検討すべきタイミングも解説。',
+    metaDescription: '32GB統合メモリMacに最適なローカルLLM: Q4量子化の32Bモデル(約18-20GB)でmacOS用に8GBを確保。Mac miniとMacBook Proの比較、48GBや64GBを検討すべきタイミングも解説。',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-26',
     last_full_refresh: '2026-08-26',
@@ -743,7 +743,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/power-local-llm/best-mac-for-local-ai-2026',
     siblingBites: ['mac-mini-m4-local-llm', 'best-local-llm-macbook-air-no-egpu'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>32GB統合メモリのMacでは、最適なローカルLLMは32Bモデル — Qwen3 32Bなど — をQ4量子化で動かすことです。必要容量は約18-20GBで、macOSとコンテキスト用に12-14GBが残ります。</strong>32GBは32B・Q4モデルにとって現実的な目安であり、絶対的な最低条件ではありません。実際の余裕は量子化方式やコンテキスト長、他に何を動かしているかによって変わります。32Bを超えるモデルを使いたい場合は、48GBか64GBを選ぶ方が確実です。2026年8月26日時点の確認: AppleのMac miniラインナップはM6/M5 Proチップに移行したばかりで(出荷は9月22日)、MacBook ProもM5 Pro/M5 Maxに移行しています — 特定のチップ世代ではなく、統合メモリの容量で選んでください。',
+    leadAnswerBlock: '<strong>32GB統合メモリのMacでは、最適なローカルLLMは32Bモデル — Qwen3 32Bなど — をQ4量子化で動かすことです。必要容量は約18-20GBで、macOS用の8GBを確保した後、コンテキスト用に約4-6GBが残ります。</strong>32GBは32B・Q4モデルにとって現実的な目安であり、絶対的な最低条件ではありません。実際の余裕は量子化方式やコンテキスト長、他に何を動かしているかによって変わります。32Bを超えるモデルを使いたい場合は、48GBか64GBを選ぶ方が確実です。2026年8月26日時点の確認: AppleのMac miniラインナップはM6/M5 Proチップに移行したばかりで(出荷は9月22日)、MacBook ProもM5 Pro/M5 Maxに移行しています — 特定のチップ世代ではなく、統合メモリの容量で選んでください。',
     toc: [
       { label: 'ベストピック: Q4の32Bモデル', anchor: '#best-pick' },
       { label: 'どのMacを選ぶか?', anchor: '#which-mac' },
@@ -754,10 +754,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ja: {
         question: '32GB統合メモリMacに最適なローカルLLMは?',
-        answer: 'Q4のQwen3 32Bが32GB統合メモリMacに最適です — 必要容量は約18-20GBで、macOS用に快適な余裕が残ります。Macは特定のチップ世代ではなく、統合メモリの容量で選んでください。Appleの現行ラインナップ(2026年8月26日時点)はM6/M5 Pro搭載のMac miniとM5 Pro/M5 Max搭載のMacBook Proにまたがり、いくつかのモデルで32GB構成を選択できます。',
+        answer: 'Q4のQwen3 32Bが32GB統合メモリMacに最適です — 必要容量は約18-20GBで、macOS用の8GBを確保した後、コンテキスト用に約4-6GBが残ります。Macは特定のチップ世代ではなく、統合メモリの容量で選んでください。Appleの現行ラインナップ(2026年8月26日時点)はM6/M5 Pro搭載のMac miniとM5 Pro/M5 Max搭載のMacBook Proにまたがり、いくつかのモデルで32GB構成を選択できます。',
         bullets: [
-          '32BモデルはQ4_K_Mで約18-20GBが必要 — 32GB Macでは12-14GBがmacOSとコンテキスト用に残ります。',
-          'macOS自体がアイドル時に通常4-6GBを使用するため、フルの32GBではなく約26-28GBを実用上の上限と考えてください。',
+          '32BモデルはQ4_K_Mで約18-20GBが必要 — 32GB MacではmacOS用の8GBを確保した後、コンテキスト用に約4-6GBが残ります。',
+          'macOS用に常に最低8GBを見込む必要があるため、フルの32GBではなく約24GBを実用上の上限と考えてください。',
           '70Bクラスの品質を求めるなら、実用的な量子化レベルでは32GBでは厳しすぎます — 代わりに48GBか64GBを検討してください。',
         ],
         updatedDate: '2026-08',
@@ -769,7 +769,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'ベストピック: 32Bモデル(Qwen3 32Bなど)をQ4で — 約18-20GB必要、32GB合計で快適',
-          '約26-28GBを実用上の上限と考えること — macOS自体がアイドル時に4-6GBを確保する',
+          '約24GBを実用上の上限と考えること — macOS用に常に最低8GBを確保する',
           '70BモデルはQ4で32GBに余裕を持って収まらない — それが目標なら48GB以上を選ぶこと',
           'チップ世代ではなく統合メモリの容量で選ぶこと — AppleのMac miniとMacBook Proは共に2026年にチップを刷新した',
         ],
@@ -778,8 +778,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'ベストピック: Q4の32Bモデル',
         content: [
-          '<strong>32GB統合メモリのMacは、Q4量子化の32Bクラスモデルにとって現実的な目安です — モデルは約18-20GBを必要とし、macOS、バックグラウンドアプリ、コンテキストウィンドウ用に12-14GBが残ります。</strong>これは、すべてのApple Silicon Macに共通する「統合メモリ=VRAM」という考え方と同じで、別個のGPUメモリプールを気にする必要はありません。',
-          'スペックシート上のフルの32GBという数字を前提に計画しないでください。macOS自体は通常アイドル時に4-6GBを確保し、バックグラウンドプロセスがさらに追加されます。広告されている32GBではなく、モデル+コンテキストの現実的な実用上の上限として約26-28GBを想定してください。',
+          '<strong>32GB統合メモリのMacは、Q4量子化の32Bクラスモデルにとって現実的な目安です — モデルは約18-20GBを必要とし、macOS用の8GBを確保した後、コンテキストウィンドウとバックグラウンドアプリ用に約4-6GBが残ります。</strong>これは、すべてのApple Silicon Macに共通する「統合メモリ=VRAM」という考え方と同じで、別個のGPUメモリプールを気にする必要はありません。',
+          'スペックシート上のフルの32GBという数字を前提に計画しないでください。macOS自体には常に最低8GBを見込む必要があり、バックグラウンドプロセスがさらに追加されることもあります。広告されている32GBではなく、モデル+コンテキストの現実的な実用上の上限として約24GBを想定してください。',
           '70Bモデルは32GBでは実用的な量子化レベルで収まりません。Q4では約40GBが必要です。特に70Bクラスの品質が必要な場合は、代わりに48GBか64GBの統合メモリ構成を検討してください — 70Bを動かすつもりで32GBを購入しないでください。',
         ],
         affiliateLinks: [
@@ -824,7 +824,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: '32GBでの14B・32B・70B比較',
         content: [
-          '14BモデルはQ4で32GBに大きな余裕を持って収まります — 簡単にフィットします。32BモデルはQ4がスイートスポットです。フル精度と比べて品質低下が最小限に抑えられた、よく較正された量子化レベルであり、実用上の上限である26-28GBの大部分を超過せずに使い切ります。70Bモデルは実用的な量子化レベルでは収まりません(Q4では約40GBが必要)。積極的なQ2_Kへの圧縮は技術的には可能ですが、品質を大きく犠牲にするため、精度が重要なタスクではよく較正された32Bモデルより優れた選択になることはほとんどありません。',
+          '14BモデルはQ4で32GBに大きな余裕を持って収まります — 簡単にフィットします。32BモデルはQ4がスイートスポットです。フル精度と比べて品質低下が最小限に抑えられた、よく較正された量子化レベルであり、実用上の上限である約24GB（32GBからmacOS用の8GBを引いた値）の大部分を使い切り、コンテキスト用には約4-6GBしか残りません。70Bモデルは実用的な量子化レベルでは収まりません(Q4では約40GBが必要)。積極的なQ2_Kへの圧縮は技術的には可能ですが、品質を大きく犠牲にするため、精度が重要なタスクではよく較正された32Bモデルより優れた選択になることはほとんどありません。',
           '70Bを動かすことを目的に32GBのMacを購入しないでください — 70Bクラスの品質が本来の目標であれば、最初から48GBか64GBの構成を選ぶのが正解です。',
         ],
       },
@@ -833,8 +833,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'よくある質問',
         faqs: [
           {
-            q: 'macOSはアイドル時に実際どれくらいの統合メモリを使いますか?',
-            a: '起動直後のシステムではおおよそ4-6GB、ブラウザや他のアプリを開くとさらに増えます。モデルのサイズを決める際はこれを見込んでください — 広告されているフルの統合メモリ量がLLMに使えると想定しないでください。',
+            q: 'macOS用にどれくらいの統合メモリを確保すべきですか?',
+            a: '最低8GBを見込んでください。macOS単体でも起動直後のシステムでおおよそ4-6GB、ブラウザや他のアプリを開くとさらに増えるため、広告されている合計から常に8GBを差し引いてください。モデルのサイズを決める際はこれを見込んでください — 広告されているフルの統合メモリ量がLLMに使えると想定しないでください。',
           },
           {
             q: '32GBの統合メモリは32GBのVRAMと同じですか?',
@@ -871,9 +871,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-ko.webp',
     title: '2026년 32GB 통합 메모리 Mac을 위한 최적의 로컬 LLM은?',
     seoTitle: '32GB 통합 메모리 Mac 최적 로컬 LLM 2026',
-    metaDescription: '32GB 통합 메모리 Mac을 위한 최적의 로컬 LLM: Q4의 32B 모델(약 18-20GB)로 macOS를 위한 여유 공간이 남습니다. Mac mini와 MacBook Pro 비교, 48GB나 64GB를 선택해야 하는 경우도 안내합니다.',
+    metaDescription: '32GB 통합 메모리 Mac을 위한 최적의 로컬 LLM: Q4의 32B 모델(약 18-20GB)로 macOS용 8GB를 확보합니다. Mac mini와 MacBook Pro 비교, 48GB나 64GB를 선택해야 하는 경우도 안내합니다.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-26',
     current_models_mentioned: ['Qwen3 32B'],
@@ -884,7 +884,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/power-local-llm/best-mac-for-local-ai-2026',
     siblingBites: ['mac-mini-m4-local-llm', 'best-local-llm-macbook-air-no-egpu'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>32GB 통합 메모리 Mac에서 최적의 로컬 LLM은 Qwen3 32B와 같은 32B 모델을 Q4 양자화로 구동하는 것이며, 약 18-20GB가 필요해 macOS와 컨텍스트를 위한 12-14GB가 남습니다.</strong> 32GB는 32B Q4 모델에 적합한 실질적인 목표치이지 절대적인 최소치는 아닙니다 — 실제 여유 공간은 양자화 수준, 컨텍스트 길이, 함께 실행 중인 다른 프로그램에 따라 달라집니다. 32B를 넘어서는 경우에는 48GB나 64GB가 더 나은 선택입니다. 2026년 8월 26일 기준: Apple의 Mac mini 라인업은 방금 M6/M5 Pro 칩으로 전환되었으며(9월 22일 출시), MacBook Pro는 M5 Pro/M5 Max로 전환되었습니다 — 특정 칩 세대가 아니라 통합 메모리 용량을 기준으로 구매하십시오.',
+    leadAnswerBlock: '<strong>32GB 통합 메모리 Mac에서 최적의 로컬 LLM은 Qwen3 32B와 같은 32B 모델을 Q4 양자화로 구동하는 것이며, 약 18-20GB가 필요해 macOS용 8GB를 확보하면 컨텍스트용으로 약 4-6GB가 남습니다.</strong> 32GB는 32B Q4 모델에 적합한 실질적인 목표치이지 절대적인 최소치는 아닙니다 — 실제 여유 공간은 양자화 수준, 컨텍스트 길이, 함께 실행 중인 다른 프로그램에 따라 달라집니다. 32B를 넘어서는 경우에는 48GB나 64GB가 더 나은 선택입니다. 2026년 8월 26일 기준: Apple의 Mac mini 라인업은 방금 M6/M5 Pro 칩으로 전환되었으며(9월 22일 출시), MacBook Pro는 M5 Pro/M5 Max로 전환되었습니다 — 특정 칩 세대가 아니라 통합 메모리 용량을 기준으로 구매하십시오.',
     toc: [
       { label: '최적의 선택: Q4의 32B 모델', anchor: '#best-pick' },
       { label: '어떤 32GB Mac을 선택할까?', anchor: '#which-mac' },
@@ -895,10 +895,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '32GB 통합 메모리 Mac을 위한 최적의 로컬 LLM은 무엇입니까?',
-        answer: 'Q4의 Qwen3 32B가 32GB 통합 메모리 Mac에 가장 적합합니다 — 약 18-20GB가 필요해 macOS를 위한 편안한 여유 공간이 남습니다. 특정 칩 세대가 아니라 통합 메모리 용량을 기준으로 Mac을 구매하십시오. Apple의 현재 라인업(2026년 8월 26일 기준)은 M6/M5 Pro Mac mini와 M5 Pro/M5 Max MacBook Pro로 구성되며, 이 중 여러 모델에서 32GB를 구성 옵션으로 선택할 수 있습니다.',
+        answer: 'Q4의 Qwen3 32B가 32GB 통합 메모리 Mac에 가장 적합합니다 — 약 18-20GB가 필요해 macOS용 8GB를 확보하면 컨텍스트용으로 약 4-6GB가 남습니다. 특정 칩 세대가 아니라 통합 메모리 용량을 기준으로 Mac을 구매하십시오. Apple의 현재 라인업(2026년 8월 26일 기준)은 M6/M5 Pro Mac mini와 M5 Pro/M5 Max MacBook Pro로 구성되며, 이 중 여러 모델에서 32GB를 구성 옵션으로 선택할 수 있습니다.',
         bullets: [
-          'Q4_K_M의 32B 모델은 약 18-20GB가 필요합니다 — 32GB Mac에서 macOS와 컨텍스트를 위한 12-14GB가 남습니다.',
-          'macOS 자체가 유휴 상태에서 일반적으로 4-6GB를 사용하므로, 전체 32GB가 아니라 약 26-28GB를 실질적인 사용 가능 한계로 취급하십시오.',
+          'Q4_K_M의 32B 모델은 약 18-20GB가 필요합니다 — 32GB Mac에서 macOS용 8GB를 확보하면 컨텍스트용으로 약 4-6GB가 남습니다.',
+          'macOS용으로 항상 최소 8GB를 확보해야 하므로, 전체 32GB가 아니라 약 24GB를 실질적인 사용 가능 한계로 취급하십시오.',
           '70B급 품질을 원한다면 32GB는 실용적인 양자화 수준에서 너무 빠듯합니다 — 대신 48GB나 64GB를 고려하십시오.',
         ],
         updatedDate: '2026-08',
@@ -910,7 +910,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           '최적의 선택: 32B 모델(예: Qwen3 32B)을 Q4에서 — 약 18-20GB가 필요하며 총 32GB에서 편안합니다',
-          '약 26-28GB를 실질적인 사용 가능 한계로 취급하십시오 — macOS 자체가 유휴 상태에서 4-6GB를 예약합니다',
+          '약 24GB를 실질적인 사용 가능 한계로 취급하십시오 — macOS용으로 항상 최소 8GB를 확보하십시오',
           '70B 모델은 Q4에서 32GB에 편안하게 맞지 않습니다 — 그것이 목표라면 48GB 이상을 선택하십시오',
           '칩 세대가 아니라 통합 메모리 용량을 기준으로 구매하십시오 — Apple의 Mac mini와 MacBook Pro 라인업 모두 2026년에 칩이 바뀌었습니다',
         ],
@@ -919,8 +919,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: '최적의 선택: Q4의 32B 모델',
         content: [
-          '<strong>32GB 통합 메모리 Mac은 Q4 양자화의 32B급 모델에 적합한 실질적인 목표치입니다 — 모델은 약 18-20GB가 필요해 macOS, 백그라운드 앱, 컨텍스트 윈도우를 위한 12-14GB가 남습니다.</strong> 이는 모든 Apple Silicon Mac에 적용되는 것과 동일한 통합 메모리가 곧 VRAM이라는 논리입니다 — 별도의 GPU 메모리 풀을 걱정할 필요가 없습니다.',
-          '사양표의 전체 32GB 수치를 기준으로 계획하지 마십시오. macOS 자체가 유휴 상태에서 일반적으로 4-6GB를 예약하며, 백그라운드 프로세스가 더 추가됩니다. 광고된 32GB가 아니라 모델과 컨텍스트를 합쳐 약 26-28GB를 현실적인 사용 가능 한계로 취급하십시오.',
+          '<strong>32GB 통합 메모리 Mac은 Q4 양자화의 32B급 모델에 적합한 실질적인 목표치입니다 — 모델은 약 18-20GB가 필요해 macOS용 8GB를 확보하면 컨텍스트 윈도우와 백그라운드 앱용으로 약 4-6GB가 남습니다.</strong> 이는 모든 Apple Silicon Mac에 적용되는 것과 동일한 통합 메모리가 곧 VRAM이라는 논리입니다 — 별도의 GPU 메모리 풀을 걱정할 필요가 없습니다.',
+          '사양표의 전체 32GB 수치를 기준으로 계획하지 마십시오. macOS 자체를 위해 항상 최소 8GB를 확보해야 하며, 백그라운드 프로세스가 더 추가될 수 있습니다. 광고된 32GB가 아니라 모델과 컨텍스트를 합쳐 약 24GB를 현실적인 사용 가능 한계로 취급하십시오.',
           '70B 모델은 32GB에서 실용적인 양자화 수준으로 맞지 않습니다. Q4에서 약 40GB가 필요합니다. 70B급 품질이 특별히 필요하다면 48GB나 64GB 통합 메모리 구성을 대신 검토하십시오 — 70B를 구동할 것을 기대하며 32GB를 구매하지 마십시오.',
         ],
         affiliateLinks: [
@@ -965,7 +965,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: '32GB에서 14B 대 32B 대 70B',
         content: [
-          'Q4의 14B 모델은 32GB에서 큰 여유를 두고 실행됩니다 — 쉽게 맞습니다. Q4의 32B 모델은 최적점입니다: 전체 정밀도 대비 최소한의 품질 손실로 잘 조정된 양자화이며, 실질적인 26-28GB 한계의 대부분을 초과 없이 사용합니다. 70B 모델은 실용적인 양자화 수준으로 맞지 않습니다(Q4는 약 40GB가 필요합니다). 공격적인 Q2_K 압축은 기술적으로 가능하지만 충분한 품질을 희생하기 때문에, 정밀도에 민감한 작업에서는 잘 양자화된 32B 모델보다 나은 선택이 되는 경우가 드뭅니다.',
+          'Q4의 14B 모델은 32GB에서 큰 여유를 두고 실행됩니다 — 쉽게 맞습니다. Q4의 32B 모델은 최적점입니다: 전체 정밀도 대비 최소한의 품질 손실로 잘 조정된 양자화이며, 실질적인 약 24GB 한계(32GB에서 macOS용 8GB를 뺀 값)의 대부분을 사용하며, 컨텍스트용으로는 약 4-6GB만 남습니다. 70B 모델은 실용적인 양자화 수준으로 맞지 않습니다(Q4는 약 40GB가 필요합니다). 공격적인 Q2_K 압축은 기술적으로 가능하지만 충분한 품질을 희생하기 때문에, 정밀도에 민감한 작업에서는 잘 양자화된 32B 모델보다 나은 선택이 되는 경우가 드뭅니다.',
           '70B를 구동할 목적으로만 32GB Mac을 구매하지 마십시오 — 70B급 품질이 실제 목표라면 처음부터 48GB나 64GB 구성이 올바른 선택입니다.',
         ],
       },
@@ -974,8 +974,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           {
-            q: 'macOS는 유휴 상태에서 실제로 얼마나 많은 통합 메모리를 사용합니까?',
-            a: '갓 부팅한 시스템에서 대략 4-6GB이며, 브라우저와 다른 앱을 열면 더 늘어납니다. 모델 크기를 산정할 때 이를 고려하십시오 — 광고된 전체 통합 메모리 수치가 LLM에서 모두 사용 가능하다고 가정하지 마십시오.',
+            q: 'macOS용으로 통합 메모리를 얼마나 확보해야 합니까?',
+            a: '최소 8GB를 확보하십시오. macOS 자체만으로도 갓 부팅한 시스템에서 대략 4-6GB를 사용하며, 브라우저와 다른 앱을 열면 더 늘어나므로 광고된 총량에서 항상 8GB를 빼십시오. 모델 크기를 산정할 때 이를 고려하십시오 — 광고된 전체 통합 메모리 수치가 LLM에서 모두 사용 가능하다고 가정하지 마십시오.',
           },
           {
             q: '32GB 통합 메모리는 32GB VRAM과 같습니까?',
@@ -1014,7 +1014,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhor LLM Local para Mac com 32GB de Memória Unificada 2026',
     metaDescription: 'Melhor LLM local para um Mac com 32GB de memória unificada: modelos 32B em Q4 (~18-20GB), com espaço para o macOS. Mac Mini vs MacBook Pro, e quando optar por 48GB ou 64GB.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-26',
     last_full_refresh: '2026-08-26',
@@ -1028,7 +1028,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/power-local-llm/best-mac-for-local-ai-2026',
     siblingBites: ['mac-mini-m4-local-llm', 'best-local-llm-macbook-air-no-egpu'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>Em um Mac com 32GB de memória unificada, o melhor LLM local é um modelo de 32B — como o Qwen3 32B — em quantização Q4, que precisa de aproximadamente 18-20GB e deixa 12-14GB para o macOS e o contexto.</strong> 32GB é um bom alvo prático para modelos 32B em Q4, não um mínimo rígido — a folga real depende da quantização, do tamanho do contexto e do que mais está rodando. Para qualquer coisa além de 32B, 48GB ou 64GB é a escolha melhor. Verificado em 26 de agosto de 2026: a linha Mac Mini da Apple acabou de migrar para os chips M6/M5 Pro (lançamento em 22 de setembro), e o MacBook Pro passou para M5 Pro/M5 Max — compre pela capacidade de memória unificada, não por uma geração específica de chip.',
+    leadAnswerBlock: '<strong>Em um Mac com 32GB de memória unificada, o melhor LLM local é um modelo de 32B — como o Qwen3 32B — em quantização Q4, que precisa de aproximadamente 18-20GB e, após os 8GB reservados para o macOS, deixa cerca de 4-6GB para o contexto.</strong> 32GB é um bom alvo prático para modelos 32B em Q4, não um mínimo rígido — a folga real depende da quantização, do tamanho do contexto e do que mais está rodando. Para qualquer coisa além de 32B, 48GB ou 64GB é a escolha melhor. Verificado em 26 de agosto de 2026: a linha Mac Mini da Apple acabou de migrar para os chips M6/M5 Pro (lançamento em 22 de setembro), e o MacBook Pro passou para M5 Pro/M5 Max — compre pela capacidade de memória unificada, não por uma geração específica de chip.',
     toc: [
       { label: 'Melhor Escolha: Modelos de 32B em Q4', anchor: '#best-pick' },
       { label: 'Qual Mac de 32GB Escolher?', anchor: '#which-mac' },
@@ -1039,10 +1039,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'Qual é o melhor LLM local para um Mac com 32GB de memória unificada?',
-        answer: 'O Qwen3 32B em Q4 é o melhor ajuste para um Mac com 32GB de memória unificada — precisa de ~18-20GB, deixando espaço confortável para o macOS. Compre o Mac pela capacidade de memória unificada, não por uma geração específica de chip: a linha atual da Apple (verificada em 26 de agosto de 2026) abrange Mac Minis M6/M5 Pro e MacBook Pros M5 Pro/M5 Max, com 32GB disponível como opção de configuração em vários deles.',
+        answer: 'O Qwen3 32B em Q4 é o melhor ajuste para um Mac com 32GB de memória unificada — precisa de ~18-20GB, deixando cerca de 4-6GB para o contexto após reservar 8GB para o macOS. Compre o Mac pela capacidade de memória unificada, não por uma geração específica de chip: a linha atual da Apple (verificada em 26 de agosto de 2026) abrange Mac Minis M6/M5 Pro e MacBook Pros M5 Pro/M5 Max, com 32GB disponível como opção de configuração em vários deles.',
         bullets: [
-          'Um modelo de 32B em Q4_K_M precisa de aproximadamente 18-20GB — cabe com 12-14GB restantes para o macOS e contexto em um Mac de 32GB.',
-          'O próprio macOS geralmente usa 4-6GB em repouso, então trate ~26-28GB como o teto prático utilizável, não os 32GB completos.',
+          'Um modelo de 32B em Q4_K_M precisa de aproximadamente 18-20GB — cabe em um Mac de 32GB e deixa cerca de 4-6GB para o contexto após os 8GB reservados para o macOS.',
+          'Reserve sempre pelo menos 8GB para o macOS, então trate ~24GB como o teto prático utilizável, não os 32GB completos.',
           'Para qualidade de classe 70B, 32GB é apertado demais em um nível de quantização útil — procure 48GB ou 64GB.',
         ],
         updatedDate: '2026-08',
@@ -1054,7 +1054,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Melhor escolha: um modelo de 32B (ex.: Qwen3 32B) em Q4 — precisa de ~18-20GB, confortável em 32GB totais',
-          'Trate ~26-28GB como o teto prático utilizável — o próprio macOS reserva 4-6GB em repouso',
+          'Trate ~24GB como o teto prático utilizável — reserve sempre pelo menos 8GB para o macOS',
           '70B em Q4 não cabe confortavelmente em 32GB — vá de 48GB+ se esse for o objetivo',
           'Compre pela capacidade de memória unificada, não pela geração do chip — as linhas Mac Mini e MacBook Pro da Apple mudaram de chip em 2026',
         ],
@@ -1063,8 +1063,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Melhor Escolha: Modelos de 32B em Q4',
         content: [
-          '<strong>Um Mac com 32GB de memória unificada é um bom alvo prático para modelos de classe 32B em quantização Q4 — o modelo precisa de aproximadamente 18-20GB, deixando 12-14GB para o macOS, apps em segundo plano e a janela de contexto.</strong> Essa é a mesma lógica de memória-unificada-equivale-a-VRAM que se aplica em todos os Macs Apple Silicon: não há um pool de memória de GPU separado a se preocupar.',
-          'Não planeje em torno do número completo de 32GB da ficha técnica. O próprio macOS geralmente reserva de 4-6GB em repouso, e processos em segundo plano adicionam mais. Trate aproximadamente 26-28GB como o teto realista utilizável para modelo mais contexto, não os 32GB anunciados.',
+          '<strong>Um Mac com 32GB de memória unificada é um bom alvo prático para modelos de classe 32B em quantização Q4 — o modelo precisa de aproximadamente 18-20GB, deixando cerca de 4-6GB para a janela de contexto e os apps em segundo plano após reservar 8GB para o macOS.</strong> Essa é a mesma lógica de memória-unificada-equivale-a-VRAM que se aplica em todos os Macs Apple Silicon: não há um pool de memória de GPU separado a se preocupar.',
+          'Não planeje em torno do número completo de 32GB da ficha técnica. Reserve sempre pelo menos 8GB para o próprio macOS, e processos em segundo plano podem adicionar mais. Trate aproximadamente 24GB como o teto realista utilizável para modelo mais contexto, não os 32GB anunciados.',
           'Um modelo de 70B não cabe em um nível de quantização útil em 32GB: precisa de cerca de 40GB em Q4. Se você precisa especificamente de qualidade de classe 70B, procure uma configuração de memória unificada de 48GB ou 64GB — não compre 32GB esperando rodar 70B.',
         ],
         affiliateLinks: [
@@ -1109,7 +1109,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: '14B vs 32B vs 70B em 32GB',
         content: [
-          'Um modelo de 14B em Q4 roda com folga generosa em 32GB — um encaixe fácil. Um modelo de 32B em Q4 é o ponto ideal: quantização bem calibrada com perda mínima de qualidade em relação à precisão total, e usa a maior parte do teto prático de 26-28GB sem ultrapassá-lo. Um modelo de 70B não cabe em um nível de quantização útil (Q4 precisa de ~40GB); um Q2_K agressivo é tecnicamente possível, mas troca qualidade suficiente para raramente ser a escolha melhor do que um 32B bem quantizado em tarefas sensíveis à precisão.',
+          'Um modelo de 14B em Q4 roda com folga generosa em 32GB — um encaixe fácil. Um modelo de 32B em Q4 é o ponto ideal: quantização bem calibrada com perda mínima de qualidade em relação à precisão total, e usa a maior parte do teto prático de cerca de 24GB (32GB menos 8GB para o macOS), deixando só cerca de 4-6GB para o contexto. Um modelo de 70B não cabe em um nível de quantização útil (Q4 precisa de ~40GB); um Q2_K agressivo é tecnicamente possível, mas troca qualidade suficiente para raramente ser a escolha melhor do que um 32B bem quantizado em tarefas sensíveis à precisão.',
           'Não compre um Mac de 32GB especificamente para rodar 70B — se qualidade de classe 70B é realmente o objetivo, uma configuração de 48GB ou 64GB é o alvo certo desde o início.',
         ],
       },
@@ -1118,8 +1118,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Perguntas Frequentes',
         faqs: [
           {
-            q: 'Quanta memória unificada o macOS realmente usa em repouso?',
-            a: 'Aproximadamente 4-6GB em um sistema recém-inicializado, mais uma vez que você abre um navegador e outros apps. Considere isso ao dimensionar um modelo — não presuma que o número completo de memória unificada anunciado está disponível para o LLM.',
+            q: 'Quanta memória unificada devo reservar para o macOS?',
+            a: 'Reserve pelo menos 8GB. O macOS sozinho usa aproximadamente 4-6GB em um sistema recém-inicializado e mais quando você abre um navegador e outros apps, então subtraia sempre 8GB do valor anunciado. Considere isso ao dimensionar um modelo — não presuma que o número completo de memória unificada anunciado está disponível para o LLM.',
           },
           {
             q: '32GB de memória unificada é o mesmo que 32GB de VRAM?',
@@ -1156,9 +1156,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-zh.webp',
     title: '2026年32GB统一内存Mac的最佳本地LLM是什么？',
     seoTitle: '2026年32GB统一内存Mac最佳本地LLM',
-    metaDescription: '2026年32GB统一内存Mac的最佳本地LLM：Q4下的32B模型（约18-20GB），为macOS留有余量。Mac mini对比MacBook Pro，以及何时该选48GB或64GB。',
+    metaDescription: '2026年32GB统一内存Mac的最佳本地LLM：Q4下的32B模型（约18-20GB），并为macOS预留8GB。Mac mini对比MacBook Pro，以及何时该选48GB或64GB。',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-26',
     last_full_refresh: '2026-08-26',
@@ -1172,7 +1172,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/power-local-llm/best-mac-for-local-ai-2026',
     siblingBites: ['mac-mini-m4-local-llm', 'best-local-llm-macbook-air-no-egpu'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>在32GB统一内存Mac上，最佳本地LLM是32B模型——例如Qwen3 32B——采用Q4量化，大约需要18-20GB，为macOS和上下文留出12-14GB。</strong>32GB是32B Q4模型的一个实用目标，而非硬性下限——实际余量取决于量化方式、上下文长度以及同时运行的其他程序。如果需要超过32B的模型，48GB或64GB是更好的选择。截至2026年8月26日：苹果的Mac mini系列刚刚换代为M6/M5 Pro芯片（9月22日发货），MacBook Pro已换代为M5 Pro/M5 Max芯片——购买时应关注统一内存容量，而非具体芯片世代。',
+    leadAnswerBlock: '<strong>在32GB统一内存Mac上，最佳本地LLM是32B模型——例如Qwen3 32B——采用Q4量化，大约需要18-20GB，预留8GB给macOS后，还剩约4-6GB用于上下文。</strong>32GB是32B Q4模型的一个实用目标，而非硬性下限——实际余量取决于量化方式、上下文长度以及同时运行的其他程序。如果需要超过32B的模型，48GB或64GB是更好的选择。截至2026年8月26日：苹果的Mac mini系列刚刚换代为M6/M5 Pro芯片（9月22日发货），MacBook Pro已换代为M5 Pro/M5 Max芯片——购买时应关注统一内存容量，而非具体芯片世代。',
     toc: [
       { label: '最佳选择：Q4下的32B模型', anchor: '#best-pick' },
       { label: '该选哪款32GB Mac？', anchor: '#which-mac' },
@@ -1183,10 +1183,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '32GB统一内存Mac的最佳本地LLM是什么？',
-        answer: 'Q4版本的Qwen3 32B最适合32GB统一内存Mac——大约需要18-20GB，为macOS留有充足余量。购买时应关注Mac的统一内存容量，而非具体芯片世代：苹果目前的产品线（截至2026年8月26日）涵盖搭载M6/M5 Pro芯片的Mac mini和搭载M5 Pro/M5 Max芯片的MacBook Pro，其中多款机型都提供32GB配置选项。',
+        answer: 'Q4版本的Qwen3 32B最适合32GB统一内存Mac——大约需要18-20GB，预留8GB给macOS后，还剩约4-6GB用于上下文。购买时应关注Mac的统一内存容量，而非具体芯片世代：苹果目前的产品线（截至2026年8月26日）涵盖搭载M6/M5 Pro芯片的Mac mini和搭载M5 Pro/M5 Max芯片的MacBook Pro，其中多款机型都提供32GB配置选项。',
         bullets: [
-          '32B模型在Q4_K_M下大约需要18-20GB——在32GB Mac上可以装下，并为macOS和上下文留出12-14GB。',
-          'macOS本身在空闲状态下通常占用4-6GB，因此应把约26-28GB视为实际可用上限，而非完整的32GB。',
+          '32B模型在Q4_K_M下大约需要18-20GB——在32GB Mac上可以装下，预留8GB给macOS后，还剩约4-6GB用于上下文。',
+          '应始终为macOS至少预留8GB，因此应把约24GB视为实际可用上限，而非完整的32GB。',
           '对于70B级别的质量，32GB在实用的量化水平下过于紧张——应考虑48GB或64GB。',
         ],
         updatedDate: '2026-08',
@@ -1198,7 +1198,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           '最佳选择：32B模型（如Qwen3 32B）的Q4版本——大约需要18-20GB，在32GB总量下轻松容纳',
-          '把约26-28GB当作实际可用上限——macOS本身在空闲时就占用4-6GB',
+          '把约24GB当作实际可用上限——始终为macOS至少预留8GB',
           '70B在Q4下无法舒适地装入32GB——如果这是你的目标，应选择48GB以上',
           '购买时应关注统一内存容量，而非芯片世代——苹果的Mac mini和MacBook Pro系列在2026年都完成了芯片换代',
         ],
@@ -1207,8 +1207,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: '最佳选择：Q4下的32B模型',
         content: [
-          '<strong>32GB统一内存Mac是Q4量化的32B级模型的一个实用目标——模型大约需要18-20GB，为macOS、后台应用和上下文窗口留出12-14GB。</strong>这与适用于所有Apple Silicon Mac的「统一内存等于显存」逻辑相同：不存在需要担心的独立GPU内存池。',
-          '不要按规格表上完整的32GB数字来规划。macOS本身在空闲时通常占用4-6GB，后台进程还会占用更多。将大约26-28GB视为模型加上下文的实际可用上限，而非宣传的32GB。',
+          '<strong>32GB统一内存Mac是Q4量化的32B级模型的一个实用目标——模型大约需要18-20GB，预留8GB给macOS后，为上下文窗口和后台应用留出约4-6GB。</strong>这与适用于所有Apple Silicon Mac的「统一内存等于显存」逻辑相同：不存在需要担心的独立GPU内存池。',
+          '不要按规格表上完整的32GB数字来规划。应始终为macOS本身至少预留8GB，后台进程还可能占用更多。将大约24GB视为模型加上下文的实际可用上限，而非宣传的32GB。',
           '70B模型在实用的量化水平下无法装入32GB：它在Q4下大约需要40GB。如果你确实需要70B级别的质量，应改为选择48GB或64GB的统一内存配置——不要抱着运行70B的期望购买32GB机型。',
         ],
         affiliateLinks: [
@@ -1253,7 +1253,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: '32GB上的14B对比32B对比70B',
         content: [
-          '14B模型在Q4下运行时余量充裕，轻松适配32GB。32B模型在Q4下是最佳平衡点：量化校准良好，相比全精度模型质量损失极小，且能充分利用约26-28GB的实际上限而不超出。70B模型在实用的量化水平下无法装入（Q4需要约40GB）；技术上可以通过激进的Q2_K压缩勉强装下，但在对精度敏感的任务上，这种压缩带来的质量损失通常使其不如经过良好量化的32B模型。',
+          '14B模型在Q4下运行时余量充裕，轻松适配32GB。32B模型在Q4下是最佳平衡点：量化校准良好，相比全精度模型质量损失极小，且能充分利用约24GB的实际上限（32GB减去给macOS的8GB），仅为上下文留下约4-6GB。70B模型在实用的量化水平下无法装入（Q4需要约40GB）；技术上可以通过激进的Q2_K压缩勉强装下，但在对精度敏感的任务上，这种压缩带来的质量损失通常使其不如经过良好量化的32B模型。',
           '不要专门为运行70B而购买32GB的Mac——如果70B级别的质量才是真正的目标，从一开始就应该选择48GB或64GB配置。',
         ],
       },
@@ -1262,8 +1262,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '常见问题',
         faqs: [
           {
-            q: 'macOS空闲时实际占用多少统一内存？',
-            a: '刚启动的系统上大约4-6GB，打开浏览器和其他应用后会更多。规划模型规模时要考虑这一点——不要假设完整的宣传统一内存数字都可供LLM使用。',
+            q: '应为macOS预留多少统一内存？',
+            a: '至少预留8GB。macOS本身在刚启动的系统上就占用约4-6GB，打开浏览器和其他应用后会更多，因此应始终从宣传的总容量中扣除8GB。规划模型规模时要考虑这一点——不要假设完整的宣传统一内存数字都可供LLM使用。',
           },
           {
             q: '32GB统一内存等同于32GB显存吗？',

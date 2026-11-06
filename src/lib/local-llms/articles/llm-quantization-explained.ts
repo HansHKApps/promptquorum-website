@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Q4_K_M is the default 4-bit GGUF quant: ~4.5 GB per 7B model, 1–3% quality loss. Compare Q4_K_S, Q5_K_M, Q6_K and Q8_0 by VRAM to pick yours in 2026.',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-en.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       lastFactChecked: '2026-08-27',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M5 Max', 'Mac Studio M5 Ultra'],
@@ -420,7 +420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '**Downloading Q4_0 instead of Q4_K_M** -- Q4_0 is an older quantization method without K-Quant improvements. Q4_K_M is 5-8% better quality at the same RAM footprint. When both are available, always choose Q4_K_M.',
             '**Assuming higher quantization always means worse quality** -- Higher Q number = more bits = better quality. Q8_0 is better than Q4_K_M. Q5_K_M is better than Q4_K_M. A Q4_K_M 70B model will outperform a Q8_0 7B model on most tasks.',
-            '**Not checking RAM headroom before loading a model** -- The model size is not the only RAM consumer. OS, browser, and other applications use RAM too. On an 8 GB machine, a 4.5 GB Q4_K_M 7B model leaves only 3.5 GB for everything else. Rule: model file size + 2 GB OS overhead + 1 GB headroom = minimum required RAM.',
+            '**Not checking RAM headroom before loading a model** -- The model size is not the only RAM consumer. OS, browser, and other applications use RAM too. On an 8 GB machine, a 4.5 GB Q4_K_M 7B model leaves only 3.5 GB for everything else. Rule: model file size + 2 GB OS overhead (8 GB on a Mac, because macOS needs at least 8 GB of the unified memory) + 1 GB headroom = minimum required RAM.',
           ],
         },
         relatedReading: {
@@ -794,7 +794,7 @@ schema: {
       metaDescription: 'Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M y Q8_0 vs Q8_K_XL comparados. Bits, VRAM por 7B, pérdida de calidad y qué cuantización GGUF elegir para tu VRAM en 2026.',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-es.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-11-06',
       lastFactChecked: '2026-08-27',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M5 Max', 'Mac Studio M5 Ultra'],
@@ -1126,7 +1126,7 @@ schema: {
           items: [
             '**Descargar Q4_0 en vez de Q4_K_M** — Q4_0 es un método de cuantización más antiguo sin las mejoras de K-Quant. Q4_K_M es un 5-8% mejor en calidad con el mismo uso de RAM. Cuando ambos estén disponibles, elige siempre Q4_K_M.',
             '**Asumir que mayor cuantización siempre significa peor calidad** — Mayor número Q = más bits = mejor calidad. Q8_0 es mejor que Q4_K_M. Q5_K_M es mejor que Q4_K_M. Un modelo Q4_K_M de 70B superará a un modelo Q8_0 de 7B en la mayoría de tareas.',
-            '**No verificar el espacio libre de RAM antes de cargar un modelo** — El tamaño del modelo no es el único consumidor de RAM. El SO, el navegador y otras aplicaciones también usan RAM. En una máquina de 8 GB, un modelo 7B Q4_K_M de 4,5 GB deja solo 3,5 GB para todo lo demás. Regla: tamaño del archivo del modelo + 2 GB de overhead del SO + 1 GB de margen = RAM mínima requerida.',
+            '**No verificar el espacio libre de RAM antes de cargar un modelo** — El tamaño del modelo no es el único consumidor de RAM. El SO, el navegador y otras aplicaciones también usan RAM. En una máquina de 8 GB, un modelo 7B Q4_K_M de 4,5 GB deja solo 3,5 GB para todo lo demás. Regla: tamaño del archivo del modelo + 2 GB de overhead del SO (8 GB en un Mac, porque macOS necesita al menos 8 GB de la memoria unificada) + 1 GB de margen = RAM mínima requerida.',
           ],
         },
         relatedReading: {
@@ -1437,7 +1437,7 @@ schema: {
       metaDescription: 'مقارنة ⁨Q4⁩_⁨K⁩_⁨M⁩ مقابل ⁨Q4⁩_⁨0⁩ و⁨Q8⁩_⁨0⁩ و⁨Q4⁩_⁨K⁩_⁨S⁩: البتات و⁨VRAM⁩ لكل ⁨7B⁩ وفقدان الجودة، وأي تكميم ⁨GGUF⁩ تختار لذاكرة ⁨VRAM⁩ لديك في ⁨2026⁩.',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-ar.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-11-06',
       lastFactChecked: '2026-08-27',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M5 Max', 'Mac Studio M5 Ultra'],
@@ -1769,7 +1769,7 @@ schema: {
           items: [
             '**تنزيل Q4_0 بدلاً من Q4_K_M** — Q4_0 طريقة تكميم أقدم دون تحسينات K-Quant. Q4_K_M أفضل بنسبة 5-8% في الجودة بنفس استخدام RAM. عند توفر كليهما، اختر دائماً Q4_K_M.',
             '**افتراض أن تكميماً أعلى يعني دائماً جودة أسوأ** — رقم Q أعلى = بتات أكثر = جودة أفضل. Q8_0 أفضل من Q4_K_M. Q5_K_M أفضل من Q4_K_M. نموذج Q4_K_M بحجم 70B سيتفوق على نموذج Q8_0 بحجم 7B في معظم المهام.',
-            '**عدم التحقق من مساحة RAM الحرة قبل تحميل نموذج** — حجم النموذج ليس المستهلك الوحيد لـ RAM. نظام التشغيل والمتصفح والتطبيقات الأخرى تستخدم RAM أيضاً. على جهاز بسعة 8 GB، نموذج 7B Q4_K_M بحجم 4.5 GB يترك 3.5 GB فقط لكل شيء آخر. القاعدة: حجم ملف النموذج + 2 GB عبء نظام التشغيل + 1 GB هامش = الحد الأدنى المطلوب من RAM.',
+            '**عدم التحقق من مساحة RAM الحرة قبل تحميل نموذج** — حجم النموذج ليس المستهلك الوحيد لـ RAM. نظام التشغيل والمتصفح والتطبيقات الأخرى تستخدم RAM أيضاً. على جهاز بسعة 8 GB، نموذج 7B Q4_K_M بحجم 4.5 GB يترك 3.5 GB فقط لكل شيء آخر. القاعدة: حجم ملف النموذج + 2 GB عبء نظام التشغيل (8 GB على جهاز Mac، لأن macOS يحتاج إلى 8 GB على الأقل من الذاكرة الموحدة) + 1 GB هامش = الحد الأدنى المطلوب من RAM.',
           ],
         },
         relatedReading: {
@@ -2080,7 +2080,7 @@ schema: {
       metaDescription: 'Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M e Q8_0 vs Q8_K_XL comparados. Bits, VRAM por 7B, perda de qualidade e qual quant GGUF escolher para sua VRAM em 2026.',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-pt.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-11-06',
       lastFactChecked: '2026-08-27',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M5 Max', 'Mac Studio M5 Ultra'],
@@ -2574,7 +2574,7 @@ schema: {
           items: [
             '**Baixar Q4_0 em vez de Q4_K_M** — Q4_0 é um método de quantização mais antigo sem melhorias K-Quant. Q4_K_M é 5–8% melhor em qualidade com o mesmo tamanho de RAM. Quando ambos estiverem disponíveis, sempre escolha Q4_K_M.',
             '**Assumir que quantização maior sempre significa pior qualidade** — Número Q maior = mais bits = melhor qualidade. Q8_0 é melhor que Q4_K_M. Q5_K_M é melhor que Q4_K_M. Um modelo 70B em Q4_K_M superará um modelo 7B em Q8_0 na maioria das tarefas.',
-            '**Não verificar o headroom de RAM antes de carregar um modelo** — O tamanho do modelo não é o único consumidor de RAM. SO, navegador e outros aplicativos também usam RAM. Regra: tamanho do arquivo de modelo + 2 GB overhead do SO + 1 GB de headroom = RAM mínima necessária.',
+            '**Não verificar o headroom de RAM antes de carregar um modelo** — O tamanho do modelo não é o único consumidor de RAM. SO, navegador e outros aplicativos também usam RAM. Regra: tamanho do arquivo de modelo + 2 GB overhead do SO (8 GB em um Mac, porque o macOS precisa de pelo menos 8 GB da memória unificada) + 1 GB de headroom = RAM mínima necessária.',
           ],
         },
         relatedReading: {
@@ -2674,7 +2674,7 @@ schema: {
       metaDescription: 'Q4_K_M ist für die meisten die richtige Wahl: ~4,5 GB pro 7B-Modell bei 1–3% Qualitätsverlust. Vergleich mit Q4_K_S, Q4_K_XL, Q5_K_M und Q8_0 nach VRAM.',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-de.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-30',
+      dateModified: '2026-11-06',
       lastFactChecked: '2026-08-27',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M5 Max', 'Mac Studio M5 Ultra'],
@@ -2997,7 +2997,7 @@ schema: {
           items: [
             '**Q4_0 statt Q4_K_M herunterladen** -- Q4_0 ist eine ältere Quantisierungsmethode ohne K-Quant-Verbesserungen. Q4_K_M ist 5-8% bessere Qualität beim gleichen RAM-Fußabdruck. Wenn beide auf Hugging Face verfügbar sind, wählen Sie immer Q4_K_M.',
             '**Annahme, dass höhere Quantisierung immer schlechtere Qualität bedeutet** -- Die Zahlen sind kontraintuitiv: höhere Q-Zahl = mehr Bits = bessere Qualität. Q8_0 ist besser als Q4_K_M. Q5_K_M ist besser als Q4_K_M. Das "höher = bessere Qualität"-Regel gilt innerhalb des gleichen Modells. Der Vergleich über Modelle hinweg ist anders -- ein Q4_K_M 70B-Modell wird bei den meisten Aufgaben ein Q8_0 7B-Modell outperformen.',
-            '**Nicht den RAM-Puffer vor dem Laden eines Modells überprüfen** -- Die Modellgröße ist nicht der einzige RAM-Verbraucher. OS, Browser und andere Anwendungen nutzen auch RAM. Bei einer 8-GB-Maschine lässt ein 4,5-GB-Q4_K_M 7B-Modell nur 3,5 GB für alles andere -- was eng ist. Schließen Sie Browser vor dem Laden von 7B-Modellen auf 8-GB-Maschinen. Faustregel: Modell-Dateigröße + 2 GB OS-Overhead + 1 GB Puffer = erforderlicher RAM.',
+            '**Nicht den RAM-Puffer vor dem Laden eines Modells überprüfen** -- Die Modellgröße ist nicht der einzige RAM-Verbraucher. OS, Browser und andere Anwendungen nutzen auch RAM. Bei einer 8-GB-Maschine lässt ein 4,5-GB-Q4_K_M 7B-Modell nur 3,5 GB für alles andere -- was eng ist. Schließen Sie Browser vor dem Laden von 7B-Modellen auf 8-GB-Maschinen. Faustregel: Modell-Dateigröße + 2 GB OS-Overhead (auf einem Mac 8 GB, da macOS mindestens 8 GB des Unified Memory benötigt) + 1 GB Puffer = erforderlicher RAM.',
           ],
         },
         relatedReading: {
@@ -3348,7 +3348,7 @@ schema: {
       metaDescription: 'Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M et Q8_0 vs Q8_K_XL comparés. Bits, VRAM par 7B, perte de qualité et quelle quantification GGUF choisir selon votre VRAM en 2026.',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-fr.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-11-06',
       lastFactChecked: '2026-08-27',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M5 Max', 'Mac Studio M5 Ultra'],
@@ -3667,7 +3667,7 @@ schema: {
           items: [
             '**Télécharger Q4_0 au lieu de Q4_K_M** -- Q4_0 est une méthode de quantification plus ancienne sans améliorations K-Quant. Q4_K_M est 5-8% meilleure qualité au même encombrement de RAM. Choisissez toujours Q4_K_M lorsque les deux sont disponibles.',
             '**Supposer qu\'une quantification plus élevée signifie toujours une pire qualité** -- Les chiffres sont contre-intuitifs : nombre Q plus élevé = plus de bits = meilleure qualité. Q8_0 est meilleur que Q4_K_M. Un modèle 70B Q4_K_M surpassera un modèle 7B Q8_0 sur la plupart des tâches.',
-            '**Ne pas vérifier l\'espace RAM avant de charger un modèle** -- La taille du modèle n\'est pas le seul consommateur de RAM. L\'OS, le navigateur et les autres applications utilisent aussi RAM. Sur une machine 8 GB, un modèle 4.5 GB Q4_K_M 7B ne laisse que 3.5 GB pour le reste -- ce qui est serré. Fermez les navigateurs avant de charger les modèles 7B sur les machines 8 GB. Règle : taille du fichier modèle + 2 GB surcharge OS + 1 GB marge = RAM requise minimum.',
+            '**Ne pas vérifier l\'espace RAM avant de charger un modèle** -- La taille du modèle n\'est pas le seul consommateur de RAM. L\'OS, le navigateur et les autres applications utilisent aussi RAM. Sur une machine 8 GB, un modèle 4.5 GB Q4_K_M 7B ne laisse que 3.5 GB pour le reste -- ce qui est serré. Fermez les navigateurs avant de charger les modèles 7B sur les machines 8 GB. Règle : taille du fichier modèle + 2 GB surcharge OS (8 GB sur un Mac, car macOS réserve au moins 8 GB de la mémoire unifiée) + 1 GB marge = RAM requise minimum.',
           ],
         },
         relatedReading: {
@@ -4009,7 +4009,7 @@ schema: {
       metaDescription: 'Q4_K_M vs Q4_0、Q4_K_M vs Q4_K_S、Q8_0 vs Q4_K_M、Q8_0 vs Q8_K_XLを比較。ビット数、7BあたりのVRAM、品質低下、2026年に自分のVRAMで選ぶべきGGUF量子化を解説。',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-ja.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-11-06',
       lastFactChecked: '2026-08-27',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M5 Max', 'Mac Studio M5 Ultra'],
@@ -4328,7 +4328,7 @@ schema: {
           items: [
             '**Q4_K_MではなくQ4_0をダウンロード** -- Q4_0は古い量子化法で、K-Quant改善がありません。Q4_K_Mは同じRAMフットプリントで5～8%優れた品質です。両方が利用可能な場合は、常にQ4_K_Mを選択してください。',
             '**より高い量子化は常により悪い品質を意味すると仮定** -- より高いQ数=より多くのビット=より良い品質。Q8_0はQ4_K_Mより優れています。Q5_K_MはQ4_K_Mより優れています。Q4_K_M 70BモデルはほとんどのタスクでQ8_0 7Bモデルを上回ります。',
-            '**モデルを読み込む前にRAMヘッドルームをチェックしない** -- モデルサイズは唯一のRAM消費者ではありません。OS、ブラウザ、その他のアプリケーションもRAMを使用します。8GBマシンでは、4.5GB Q4_K_M 7Bモデルは他のすべてに3.5GBしか残しません。ルール：モデルファイルサイズ + 2GB OSオーバーヘッド + 1GBヘッドルーム = 必要最小限RAM。',
+            '**モデルを読み込む前にRAMヘッドルームをチェックしない** -- モデルサイズは唯一のRAM消費者ではありません。OS、ブラウザ、その他のアプリケーションもRAMを使用します。8GBマシンでは、4.5GB Q4_K_M 7Bモデルは他のすべてに3.5GBしか残しません。ルール：モデルファイルサイズ + 2GB OSオーバーヘッド（MacではmacOSが統合メモリのうち最低8GBを必要とするため8GB）+ 1GBヘッドルーム = 必要最小限RAM。',
           ],
         },
         relatedReading: {
@@ -4688,7 +4688,7 @@ schema: {
       metaDescription: 'Q4_K_M vs Q4_0、Q4_K_M vs Q4_K_S、Q8_0 vs Q4_K_M 以及 Q8_0 vs Q8_K_XL 全面对比。位数、每7B的VRAM、质量损失，以及2026年应为您的VRAM选择哪种GGUF量化。',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-zh.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-11-06',
       lastFactChecked: '2026-08-27',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M5 Max', 'Mac Studio M5 Ultra'],
@@ -5007,7 +5007,7 @@ schema: {
           items: [
             '**下载Q4_0而不是Q4_K_M**----Q4_0是不具有K-Quant改进的较旧量化方法。Q4_K_M在相同RAM占用下质量好5～8%。当两者都可用时，始终选择Q4_K_M。',
             '**假设更高的量化始终意味着更差的质量**----更高的Q数=更多位=更好的质量。Q8_0优于Q4_K_M。Q5_K_M优于Q4_K_M。Q4_K_M 70B模型在大多数任务上优于Q8_0 7B模型。',
-            '**在加载模型前不检查RAM余量**----模型大小不是唯一的RAM消费者。操作系统、浏览器和其他应用也消耗RAM。在8GB机器上，4.5GB Q4_K_M 7B模型仅为其他所有内容留下3.5GB。规则：模型文件大小 + 2GB OS开销 + 1GB余量 = 最小所需RAM。',
+            '**在加载模型前不检查RAM余量**----模型大小不是唯一的RAM消费者。操作系统、浏览器和其他应用也消耗RAM。在8GB机器上，4.5GB Q4_K_M 7B模型仅为其他所有内容留下3.5GB。规则：模型文件大小 + 2GB OS开销（Mac上为8GB，因为macOS至少需要8GB统一内存）+ 1GB余量 = 最小所需RAM。',
           ],
         },
         relatedReading: {
@@ -5340,7 +5340,7 @@ schema: {
       metaDescription: 'Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M, Q8_0 vs Q8_K_XL 비교. 비트 수, 7B 모델별 VRAM, 품질 손실, 그리고 2026년 본인 VRAM에 맞는 GGUF 양자화 선택법을 정리합니다.',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-ko.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-11-06',
       lastFactChecked: '2026-08-27',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M5 Max', 'Mac Studio M5 Ultra'],
@@ -5919,7 +5919,7 @@ schema: {
           items: [
             '**Q4_K_M 대신 Q4_0 다운로드** — Q4_0은 K-퀀트 개선이 없는 구형 양자화 방법입니다. Q4_K_M은 동일한 RAM 사용량에서 5–8% 더 나은 품질을 제공합니다. 두 가지가 모두 제공될 때는 항상 Q4_K_M을 선택하십시오.',
             '**양자화 번호가 높을수록 항상 품질이 낮다는 오해** — Q 번호가 높을수록 비트가 많고 품질이 더 좋습니다. Q8_0이 Q4_K_M보다 좋습니다. Q5_K_M이 Q4_K_M보다 좋습니다. Q4_K_M으로 양자화된 70B 모델은 대부분의 작업에서 Q8_0 7B 모델을 능가합니다.',
-            '**모델 로드 전 RAM 여유 공간 미확인** — 모델 크기가 유일한 RAM 소비원이 아닙니다. OS, 브라우저 및 기타 애플리케이션도 RAM을 사용합니다. 8 GB 머신에서 4.5 GB Q4_K_M 7B 모델은 나머지 모든 작업에 3.5 GB만 남깁니다. 원칙: 모델 파일 크기 + 2 GB OS 오버헤드 + 1 GB 여유 공간 = 최소 필요 RAM.',
+            '**모델 로드 전 RAM 여유 공간 미확인** — 모델 크기가 유일한 RAM 소비원이 아닙니다. OS, 브라우저 및 기타 애플리케이션도 RAM을 사용합니다. 8 GB 머신에서 4.5 GB Q4_K_M 7B 모델은 나머지 모든 작업에 3.5 GB만 남깁니다. 원칙: 모델 파일 크기 + 2 GB OS 오버헤드(Mac에서는 macOS에 통합 메모리 중 최소 8 GB가 필요하므로 8 GB) + 1 GB 여유 공간 = 최소 필요 RAM.',
           ],
         },
         relatedReading: {

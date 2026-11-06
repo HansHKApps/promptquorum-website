@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
     title: 'Best Local LLM for 6 GB VRAM?',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-06',
     seoTitle: 'Best LLM for 6 GB VRAM 2026: Qwen3.5 4B | PromptQuorum',
     metaDescription: 'Qwen3.5 4B Q4_K_M (3.3 GB) is the best fit for 6 GB VRAM; Qwen3 8B (5.2 GB) is stronger but tight. Coding model picks, 6 GB GPUs and Ollama tags.',
     heroImage: '/images/best-local-llm-6gb-vram-model-comparison-hero-en.webp',
@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Common 6 GB cards are the GTX 1060 6 GB, GTX 1660 Super, RTX 2060 (6 GB version), RTX 3050 6 GB, RTX 3060 Laptop and RTX 4050 Laptop.</strong> Ollama runs on all of them through CUDA; older cards such as the GTX 1060 work but generate more slowly because they lack tensor cores.',
           'If a model does not fit, Ollama moves some layers to system RAM and the CPU. The model still runs, but generation slows sharply, so Qwen3 8B on a 6 GB card is a trade-off, not a free upgrade. Run <code>ollama ps</code> to see the GPU/CPU split.',
-          'Apple Silicon is a different case: a Mac shares unified memory between CPU and GPU, and by default macOS lets the GPU use roughly two-thirds of it on a 16 GB machine, so a 16 GB MacBook can run models this page lists as too large. See <a href="/prompt-bites/best-local-llm-16gb-ram-laptop" class="text-primary hover:underline">best local LLM for a 16 GB RAM laptop</a>.',
+          'Apple Silicon is a different case: a Mac shares unified memory between CPU and GPU, and by default macOS lets the GPU use roughly two-thirds of it on a 16 GB machine, but macOS itself needs at least 8 GB, so a 16 GB MacBook has about 8 GB left for a model, a little more than a 6 GB GPU. See <a href="/prompt-bites/best-local-llm-16gb-ram-laptop" class="text-primary hover:underline">best local LLM for a 16 GB RAM laptop</a>.',
           'Moving from 6 GB to 8 GB lets Qwen3 8B Q4_K_M run with room for context. For 12 GB options and 14B models, see <a href="/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">best Ollama models for RTX 3060 12 GB</a>. For the full VRAM reference, see <a href="/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">how much VRAM a local LLM needs</a>.',
         ],
       },
@@ -183,7 +183,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Qwen3.5 4B Q4_K_M (3,3 GB) passt am besten zu 6 GB VRAM; Qwen3 8B (5,2 GB) ist stärker, aber knapp. Coding-Tipps, GPUs und Ollama-Tags im Überblick.',
     heroImage: '/images/best-local-llm-6gb-vram-model-comparison-hero-de.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-19',
     quickAnswerTop: {
@@ -228,7 +228,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Gängige 6-GB-Karten sind GTX 1060 6 GB, GTX 1660 Super, RTX 2060 (6-GB-Version), RTX 3050 6 GB, RTX 3060 Laptop und RTX 4050 Laptop.</strong> Ollama läuft auf allen über CUDA; ältere Karten wie die GTX 1060 funktionieren, erzeugen aber langsamer, weil ihnen Tensor-Kerne fehlen.',
           'Passt ein Modell nicht, verlagert Ollama einzelne Schichten in den Arbeitsspeicher und auf die CPU. Das Modell läuft weiter, aber die Erzeugung wird deutlich langsamer — Qwen3 8B auf einer 6-GB-Karte ist also ein Kompromiss, kein kostenloses Upgrade. Mit <code>ollama ps</code> sehen Sie die GPU/CPU-Aufteilung.',
-          'Apple Silicon ist ein anderer Fall: Ein Mac teilt Unified Memory zwischen CPU und GPU, und macOS lässt die GPU bei 16 GB standardmäßig etwa zwei Drittel davon nutzen — ein MacBook mit 16 GB kann also Modelle ausführen, die diese Seite als zu groß einstuft. Siehe <a href="/de/prompt-bites/best-local-llm-16gb-ram-laptop" class="text-primary hover:underline">bestes lokales LLM für einen Laptop mit 16 GB RAM</a>.',
+          'Apple Silicon ist ein anderer Fall: Ein Mac teilt Unified Memory zwischen CPU und GPU, und macOS lässt die GPU bei 16 GB standardmäßig etwa zwei Drittel davon nutzen — macOS selbst benötigt jedoch mindestens 8 GB, sodass einem MacBook mit 16 GB etwa 8 GB für ein Modell bleiben, etwas mehr als bei einer GPU mit 6 GB. Siehe <a href="/de/prompt-bites/best-local-llm-16gb-ram-laptop" class="text-primary hover:underline">bestes lokales LLM für einen Laptop mit 16 GB RAM</a>.',
           'Der Wechsel von 6 GB auf 8 GB lässt Qwen3 8B Q4_K_M mit Platz für Kontext laufen. Für 12-GB-Optionen und 14B-Modelle siehe <a href="/de/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">beste Ollama-Modelle für RTX 3060 12 GB</a>. Die vollständige VRAM-Referenz finden Sie unter <a href="/de/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">wie viel VRAM ein lokales LLM benötigt</a>.',
         ],
       },
@@ -300,7 +300,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Qwen3.5 4B Q4_K_M (3,3 Go) convient le mieux à 6 Go de VRAM ; Qwen3 8B (5,2 Go) est plus puissant mais juste. Choix pour le code, GPU et tags Ollama.',
     heroImage: '/images/best-local-llm-6gb-vram-model-comparison-hero-fr.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-19',
     quickAnswerTop: {
@@ -345,7 +345,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Les cartes courantes à 6 Go sont la GTX 1060 6 Go, la GTX 1660 Super, la RTX 2060 (version 6 Go), la RTX 3050 6 Go, la RTX 3060 Laptop et la RTX 4050 Laptop.</strong> Ollama fonctionne sur toutes via CUDA ; les cartes plus anciennes comme la GTX 1060 marchent mais génèrent plus lentement faute de cœurs Tensor.',
           'Si un modèle ne tient pas, Ollama déplace certaines couches vers la RAM système et le CPU. Le modèle tourne encore, mais la génération ralentit fortement : Qwen3 8B sur une carte de 6 Go est donc un compromis, pas une mise à niveau gratuite. Lancez <code>ollama ps</code> pour voir la répartition GPU/CPU.',
-          'Apple Silicon est un autre cas : un Mac partage la mémoire unifiée entre CPU et GPU, et macOS laisse par défaut le GPU en utiliser environ les deux tiers sur une machine de 16 Go ; un MacBook de 16 Go peut donc exécuter des modèles que cette page juge trop gros. Voir <a href="/fr/prompt-bites/best-local-llm-16gb-ram-laptop" class="text-primary hover:underline">le meilleur LLM local pour un portable avec 16 Go de RAM</a>.',
+          'Apple Silicon est un autre cas : un Mac partage la mémoire unifiée entre CPU et GPU, et macOS laisse par défaut le GPU en utiliser environ les deux tiers sur une machine de 16 Go , mais macOS lui-même a besoin d\'au moins 8 Go : un MacBook de 16 Go laisse donc environ 8 Go à un modèle, un peu plus qu\'un GPU de 6 Go. Voir <a href="/fr/prompt-bites/best-local-llm-16gb-ram-laptop" class="text-primary hover:underline">le meilleur LLM local pour un portable avec 16 Go de RAM</a>.',
           'Passer de 6 à 8 Go permet d\'exécuter Qwen3 8B Q4_K_M avec de la marge pour le contexte. Pour les options 12 Go et les modèles 14B, voir <a href="/fr/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">les meilleurs modèles Ollama pour RTX 3060 12 Go</a>. Pour la référence complète sur la VRAM, voir <a href="/fr/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">la VRAM nécessaire à un LLM local</a>.',
         ],
       },
@@ -417,7 +417,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: '6 GB VRAMにはQwen3.5 4B Q4_K_M（3.3 GB）が最適。Qwen3 8B（5.2 GB）は高性能ですが余裕が少なめ。コーディング向けとGPUも解説。',
     heroImage: '/images/best-local-llm-6gb-vram-model-comparison-hero-ja.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-19',
     quickAnswerTop: {
@@ -462,7 +462,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>6 GBの代表的なカードは、GTX 1060 6 GB、GTX 1660 Super、RTX 2060（6 GB版）、RTX 3050 6 GB、RTX 3060 Laptop、RTX 4050 Laptopです。</strong>OllamaはCUDA経由でいずれも動作します。GTX 1060のような古いカードも動きますが、Tensorコアがないため生成は遅くなります。',
           'モデルが収まらない場合、Ollamaは一部のレイヤーをシステムRAMとCPUに移します。動作はしますが生成速度は大きく落ちるため、6 GBカードでのQwen3 8Bは無料のアップグレードではなくトレードオフです。<code>ollama ps</code>でGPU/CPUの割合を確認できます。',
-          'Apple Siliconは別のケースです。Macはユニファイドメモリを CPUとGPUで共有し、macOSは既定で16 GBのマシンではその約3分の2をGPUに使わせるため、16 GBのMacBookではこのページが大きすぎるとするモデルも動かせます。<a href="/ja/prompt-bites/best-local-llm-16gb-ram-laptop" class="text-primary hover:underline">16 GB RAMノートPC向けベストローカルLLM</a>をご覧ください。',
+          'Apple Siliconは別のケースです。Macはユニファイドメモリを CPUとGPUで共有し、macOSは既定で16 GBのマシンではその約3分の2をGPUに使わせるため、ただしmacOS自体に少なくとも8 GBが必要なため、16 GBのMacBookでモデルに使えるのは約8 GBで、6 GBのGPUよりわずかに多い程度です。<a href="/ja/prompt-bites/best-local-llm-16gb-ram-laptop" class="text-primary hover:underline">16 GB RAMノートPC向けベストローカルLLM</a>をご覧ください。',
           '6 GBから8 GBにすると、Qwen3 8B Q4_K_Mをコンテキストの余裕を持って動かせます。12 GBの選択肢と14Bモデルは<a href="/ja/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">RTX 3060 12 GB向けベストOllamaモデル</a>を、VRAMの詳しい基準は<a href="/ja/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">ローカルLLMに必要なVRAM</a>をご覧ください。',
         ],
       },
@@ -534,7 +534,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Qwen3.5 4B Q4_K_M（3.3 GB）最适合6 GB显存；Qwen3 8B（5.2 GB）更强但余量紧张。含编码模型与显卡对照。',
     heroImage: '/images/best-local-llm-6gb-vram-model-comparison-hero-zh.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-19',
     quickAnswerTop: {
@@ -579,7 +579,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>常见的6 GB显卡有GTX 1060 6 GB、GTX 1660 Super、RTX 2060（6 GB版）、RTX 3050 6 GB、RTX 3060笔记本版和RTX 4050笔记本版。</strong>Ollama通过CUDA可在这些显卡上运行；GTX 1060等旧卡也能用，但因缺少Tensor核心而生成更慢。',
           '如果模型放不下，Ollama会把部分层移到系统内存和CPU。模型仍能运行，但生成速度会明显下降，因此在6 GB显卡上运行Qwen3 8B是权衡，不是免费升级。运行<code>ollama ps</code>可查看GPU/CPU的分配比例。',
-          'Apple芯片是另一种情况：Mac的CPU和GPU共享统一内存，macOS默认允许GPU使用16 GB机器上约三分之二的内存，因此16 GB的MacBook可以运行本页认为过大的模型。参见<a href="/zh/prompt-bites/best-local-llm-16gb-ram-laptop" class="text-primary hover:underline">16 GB内存笔记本的最佳本地LLM</a>。',
+          'Apple芯片是另一种情况：Mac的CPU和GPU共享统一内存，macOS默认允许GPU使用16 GB机器上约三分之二的内存，但macOS自身至少需要8 GB，因此16 GB的MacBook留给模型的只有约8 GB，仅比6 GB显卡略多。参见<a href="/zh/prompt-bites/best-local-llm-16gb-ram-laptop" class="text-primary hover:underline">16 GB内存笔记本的最佳本地LLM</a>。',
           '从6 GB升级到8 GB后，Qwen3 8B Q4_K_M可带着上下文余量运行。12 GB方案和14B模型请参见<a href="/zh/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">RTX 3060 12 GB最佳Ollama模型</a>；完整的显存参考请参见<a href="/zh/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">本地LLM需要多少显存</a>。',
         ],
       },
@@ -651,7 +651,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Qwen3.5 4B Q4_K_M (3,3 GB) es la mejor opción para 6 GB de VRAM; Qwen3 8B (5,2 GB) rinde más pero va justo. Opciones para código, GPU y tags de Ollama.',
     heroImage: '/images/best-local-llm-6gb-vram-model-comparison-hero-es.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-19',
     quickAnswerTop: {
@@ -696,7 +696,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Las tarjetas habituales de 6 GB son la GTX 1060 6 GB, la GTX 1660 Super, la RTX 2060 (versión de 6 GB), la RTX 3050 6 GB, la RTX 3060 Laptop y la RTX 4050 Laptop.</strong> Ollama funciona en todas mediante CUDA; las tarjetas antiguas como la GTX 1060 sirven, pero generan más despacio porque no tienen núcleos Tensor.',
           'Si un modelo no cabe, Ollama mueve algunas capas a la RAM del sistema y a la CPU. El modelo sigue funcionando, pero la generación se ralentiza mucho, así que Qwen3 8B en una tarjeta de 6 GB es un compromiso, no una mejora gratuita. Ejecuta <code>ollama ps</code> para ver el reparto GPU/CPU.',
-          'Apple Silicon es otro caso: un Mac comparte la memoria unificada entre CPU y GPU, y por defecto macOS deja que la GPU use aproximadamente dos tercios en una máquina de 16 GB, así que un MacBook de 16 GB puede ejecutar modelos que esta página considera demasiado grandes. Consulta <a href="/es/prompt-bites/best-local-llm-16gb-ram-laptop" class="text-primary hover:underline">el mejor LLM local para un portátil con 16 GB de RAM</a>.',
+          'Apple Silicon es otro caso: un Mac comparte la memoria unificada entre CPU y GPU, y por defecto macOS deja que la GPU use aproximadamente dos tercios en una máquina de 16 GB, pero macOS necesita al menos 8 GB para sí mismo, así que un MacBook de 16 GB deja unos 8 GB para un modelo, algo más que una GPU de 6 GB. Consulta <a href="/es/prompt-bites/best-local-llm-16gb-ram-laptop" class="text-primary hover:underline">el mejor LLM local para un portátil con 16 GB de RAM</a>.',
           'Pasar de 6 GB a 8 GB permite ejecutar Qwen3 8B Q4_K_M con margen para el contexto. Para opciones de 12 GB y modelos de 14B, consulta <a href="/es/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">los mejores modelos de Ollama para RTX 3060 12 GB</a>. Para la referencia completa de VRAM, consulta <a href="/es/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">cuánta VRAM necesita un LLM local</a>.',
         ],
       },
@@ -768,7 +768,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Qwen3.5 4B Q4_K_M (3,3 GB) é a melhor opção para 6 GB de VRAM; Qwen3 8B (5,2 GB) rende mais, mas fica apertado. Opções para código, GPUs e tags do Ollama.',
     heroImage: '/images/best-local-llm-6gb-vram-model-comparison-hero-pt.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-19',
     quickAnswerTop: {
@@ -813,7 +813,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>As placas comuns de 6 GB são a GTX 1060 6 GB, a GTX 1660 Super, a RTX 2060 (versão de 6 GB), a RTX 3050 6 GB, a RTX 3060 Laptop e a RTX 4050 Laptop.</strong> O Ollama roda em todas via CUDA; placas mais antigas, como a GTX 1060, funcionam, mas geram mais devagar por não terem núcleos Tensor.',
           'Se um modelo não cabe, o Ollama move algumas camadas para a RAM do sistema e a CPU. O modelo continua rodando, mas a geração fica bem mais lenta, então o Qwen3 8B numa placa de 6 GB é uma troca, não um upgrade grátis. Execute <code>ollama ps</code> para ver a divisão GPU/CPU.',
-          'O Apple Silicon é outro caso: o Mac compartilha a memória unificada entre CPU e GPU, e por padrão o macOS deixa a GPU usar cerca de dois terços dela em uma máquina de 16 GB, então um MacBook de 16 GB pode rodar modelos que esta página considera grandes demais. Veja <a href="/pt/prompt-bites/best-local-llm-16gb-ram-laptop" class="text-primary hover:underline">o melhor LLM local para um notebook com 16 GB de RAM</a>.',
+          'O Apple Silicon é outro caso: o Mac compartilha a memória unificada entre CPU e GPU, e por padrão o macOS deixa a GPU usar cerca de dois terços dela em uma máquina de 16 GB, mas o próprio macOS precisa de pelo menos 8 GB, então um MacBook de 16 GB deixa cerca de 8 GB para um modelo, um pouco mais que uma GPU de 6 GB. Veja <a href="/pt/prompt-bites/best-local-llm-16gb-ram-laptop" class="text-primary hover:underline">o melhor LLM local para um notebook com 16 GB de RAM</a>.',
           'Passar de 6 GB para 8 GB permite rodar o Qwen3 8B Q4_K_M com margem para o contexto. Para opções de 12 GB e modelos 14B, veja <a href="/pt/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">os melhores modelos Ollama para RTX 3060 12 GB</a>. Para a referência completa de VRAM, veja <a href="/pt/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">quanta VRAM um LLM local precisa</a>.',
         ],
       },
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: '⁨Qwen3.5 4B Q4⁩_⁨K⁩_⁨M⁩ (⁨3.3 GB⁩) هو الأنسب لـ⁨6 GB VRAM⁩؛ و⁨Qwen3 8B⁩ (⁨5.2 GB⁩) أقوى لكن الهامش ضيق. خيارات البرمجة وبطاقات الرسوميات.',
     heroImage: '/images/best-local-llm-6gb-vram-model-comparison-hero-ar.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-19',
     quickAnswerTop: {
@@ -930,7 +930,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>بطاقات 6 GB الشائعة هي GTX 1060 6 GB وGTX 1660 Super وRTX 2060 (إصدار 6 GB) وRTX 3050 6 GB وRTX 3060 Laptop وRTX 4050 Laptop.</strong> يعمل Ollama عليها جميعًا عبر CUDA؛ والبطاقات الأقدم مثل GTX 1060 تعمل لكنها تولّد أبطأ لأنها بلا أنوية Tensor.',
           'إذا لم يتسع النموذج، ينقل Ollama بعض الطبقات إلى ذاكرة النظام ووحدة المعالجة المركزية. يستمر النموذج بالعمل لكن التوليد يبطؤ كثيرًا، فتشغيل Qwen3 8B على بطاقة 6 GB مفاضلة وليس ترقية مجانية. نفّذ <code>ollama ps</code> لرؤية توزيع GPU/CPU.',
-          'Apple Silicon حالة مختلفة: يتشارك Mac الذاكرة الموحدة بين المعالج والرسوميات، ويسمح macOS افتراضيًا للرسوميات باستخدام نحو ثلثيها في جهاز 16 GB، لذا يستطيع MacBook بذاكرة 16 GB تشغيل نماذج تعدّها هذه الصفحة كبيرة جدًا. راجع <a href="/ar/prompt-bites/best-local-llm-16gb-ram-laptop" class="text-primary hover:underline">أفضل LLM محلي للابتوب بذاكرة 16 GB</a>.',
+          'Apple Silicon حالة مختلفة: يتشارك Mac الذاكرة الموحدة بين المعالج والرسوميات، ويسمح macOS افتراضيًا للرسوميات باستخدام نحو ثلثيها في جهاز 16 GB، لكن macOS نفسه يحتاج إلى 8 GB على الأقل، فيتبقى لنموذج على MacBook بذاكرة 16 GB نحو 8 GB فقط، أي أكثر قليلًا من GPU بذاكرة 6 GB. راجع <a href="/ar/prompt-bites/best-local-llm-16gb-ram-laptop" class="text-primary hover:underline">أفضل LLM محلي للابتوب بذاكرة 16 GB</a>.',
           'الانتقال من 6 GB إلى 8 GB يتيح تشغيل Qwen3 8B Q4_K_M مع هامش للسياق. لخيارات 12 GB ونماذج 14B راجع <a href="/ar/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">أفضل نماذج Ollama لبطاقة RTX 3060 12 GB</a>. وللمرجع الكامل عن VRAM راجع <a href="/ar/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">كم VRAM يحتاج LLM محلي</a>.',
         ],
       },
@@ -1002,7 +1002,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: '6 GB VRAM에는 Qwen3.5 4B Q4_K_M(3.3 GB)이 가장 적합합니다. Qwen3 8B(5.2 GB)는 더 강력하지만 여유가 빠듯합니다. 코딩 모델과 GPU 정리.',
     heroImage: '/images/best-local-llm-6gb-vram-model-comparison-hero-ko.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-19',
     quickAnswerTop: {
@@ -1047,7 +1047,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>흔한 6 GB 카드는 GTX 1060 6 GB, GTX 1660 Super, RTX 2060(6 GB 버전), RTX 3050 6 GB, RTX 3060 Laptop, RTX 4050 Laptop입니다.</strong> Ollama는 CUDA를 통해 모두에서 동작하며, GTX 1060 같은 오래된 카드도 작동하지만 Tensor 코어가 없어 생성이 더 느립니다.',
           '모델이 들어가지 않으면 Ollama는 일부 레이어를 시스템 RAM과 CPU로 옮깁니다. 모델은 계속 실행되지만 생성 속도가 크게 떨어지므로, 6 GB 카드에서 Qwen3 8B는 공짜 업그레이드가 아니라 절충입니다. <code>ollama ps</code>로 GPU/CPU 분배를 확인하세요.',
-          'Apple Silicon은 다른 경우입니다. Mac은 CPU와 GPU가 통합 메모리를 공유하고, macOS는 기본적으로 16 GB 기기에서 GPU가 그 약 3분의 2를 쓰게 하므로 16 GB MacBook은 이 페이지가 너무 크다고 보는 모델도 실행할 수 있습니다. <a href="/ko/prompt-bites/best-local-llm-16gb-ram-laptop" class="text-primary hover:underline">16 GB RAM 노트북용 최고의 로컬 LLM</a>을 참고하세요.',
+          'Apple Silicon은 다른 경우입니다. Mac은 CPU와 GPU가 통합 메모리를 공유하고, macOS는 기본적으로 16 GB 기기에서 GPU가 그 약 3분의 2를 쓰게 하므로 다만 macOS 자체가 최소 8 GB를 필요로 하므로 16 GB MacBook에서 모델에 쓸 수 있는 메모리는 약 8 GB이며, 6 GB GPU보다 조금 많은 수준입니다. <a href="/ko/prompt-bites/best-local-llm-16gb-ram-laptop" class="text-primary hover:underline">16 GB RAM 노트북용 최고의 로컬 LLM</a>을 참고하세요.',
           '6 GB에서 8 GB로 올리면 Qwen3 8B Q4_K_M을 컨텍스트 여유를 두고 실행할 수 있습니다. 12 GB 옵션과 14B 모델은 <a href="/ko/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">RTX 3060 12 GB용 최고의 Ollama 모델</a>을, VRAM 전체 기준은 <a href="/ko/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">로컬 LLM에 필요한 VRAM</a>을 참고하세요.',
         ],
       },
