@@ -55,7 +55,7 @@ const PROMPTS: { name: string; key: 'promptStart' | 'promptStack' | 'promptCompa
   { name: 'check_commercial_license', key: 'promptLicense' },
 ]
 
-function toolCopy(name: McpToolName, lang: Language): { title: string; desc: string } {
+export function toolCopy(name: McpToolName, lang: Language): { title: string; desc: string } {
   const legacy = LEGACY_TOOL_KEYS[name]
   if (legacy) return { title: t(legacy.titleKey, lang), desc: t(legacy.descKey, lang) }
   const fresh = NEW_TOOL_COPY[name]
@@ -71,7 +71,7 @@ const ENDPOINT = 'https://www.promptquorum.com/api/mcp'
 const GROUP_TONE: Record<ToolGroup, HubTone> = { find: 'azure', decide: 'violet', learn: 'orchid', profile: 'rose' }
 const CYCLE: HubTone[] = ['violet', 'azure', 'indigo', 'orchid', 'rose']
 
-function SectionHeading({ index, tone, children, id }: { index: number; tone: HubTone; children: React.ReactNode; id?: string }) {
+export function SectionHeading({ index, tone, children, id }: { index: number; tone: HubTone; children: React.ReactNode; id?: string }) {
   return (
     <div className="mb-2 flex items-center gap-3">
       <span className={`rounded-[10px] px-3.5 py-1 text-[15px] font-extrabold tracking-wide text-white ${HUB_TONES[tone].solid}`}>{String(index).padStart(2, '0')}</span>
