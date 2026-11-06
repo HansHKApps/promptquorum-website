@@ -397,7 +397,7 @@
       ]
     },
     "best-local-llms-2026": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -490,7 +490,7 @@
       ]
     },
     "best-local-llms-for-coding": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -589,7 +589,7 @@
       "images": []
     },
     "llm-quantization-explained": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-06",
       "lastFactChecked": "2026-08-27",
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -938,7 +938,7 @@
       "images": []
     },
     "nextchat-review": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-09-11",
       "hasSections": true,
@@ -956,7 +956,7 @@
       "images": []
     },
     "page-assist-review": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-09-11",
       "hasSections": true,
@@ -1028,7 +1028,7 @@
       "images": []
     },
     "lobechat-bigagi-nextchat-pageassist-chatbox-compared": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-02",
       "hasSections": true,
@@ -1292,7 +1292,7 @@
       "images": []
     },
     "local-llm-hardware-guide": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": "2026-11-02",
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1338,7 +1338,7 @@
         },
         {
           "url": "/images/mac-hardware-comparison-en.svg",
-          "title": "Mac hardware comparison: 8 GB M-series (3-4B models), M3 Pro 16\" (18GB, 7-8B), Mac mini M6 (16–32GB, 8-14B, $899), M5 Pro (64GB, 32B, $1,699), M5 Max (128GB, 70B at Q4_K_M ~12-15 tok/sec, $2,499), Mac Studio M5 Ultra (up to 512GB, 70B+/GLM-5.3 capacity, $5,499). 16 GB unified is the comfortable minimum for 7B models on a Mac."
+          "title": "Mac hardware comparison: 8 GB M-series (3-4B models), M3 Pro 16\" (18GB, 7-8B), Mac mini M6 (16–32GB, 7-8B at 16GB / 14B at 32GB, $899), M5 Pro (64GB, 32B, $1,699), M5 Max (128GB, 70B at Q4_K_M ~12-15 tok/sec, from $2,499), Mac Studio M5 Ultra (up to 512GB, 70B+/GLM-5.3 capacity, $5,499). 16 GB unified (about 8 GB left after macOS) is the practical minimum for 7B models on a Mac."
         },
         {
           "url": "/images/server-vs-consumer-en.svg",
@@ -1394,7 +1394,7 @@
       ]
     },
     "gpu-vs-cpu-vs-apple-silicon": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1425,7 +1425,7 @@
       ]
     },
     "apple-silicon-vs-nvidia-gpu-local-llm": {
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -1594,7 +1594,7 @@
       ]
     },
     "laptop-vs-desktop-local-llm": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -2007,7 +2007,7 @@
       ]
     },
     "on-prem-air-gapped-local-llm": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -2314,7 +2314,7 @@
       ]
     },
     "best-laptops-local-llm": {
-      "dateModified": "2026-07-30",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2332,7 +2332,7 @@
       "images": [
         {
           "url": "/images/best-laptops-local-llm-vram-fit-chart-hero-en.webp",
-          "title": "VRAM and unified memory tiers mapped to local LLM model sizes: 8 GB (RTX 5070) fits 7B only, 12–16 GB (RTX 5070 Ti, RTX 5080) comfortably runs 7B–14B, 24 GB and 36 GB+ (Apple M5 Pro, M5 Max) handle 30B and 70B models at Q4."
+          "title": "VRAM and unified memory tiers mapped to local LLM model sizes: 8 GB (RTX 5070) fits 7B only, 12–16 GB (RTX 5070 Ti, RTX 5080) comfortably runs 7B–14B, 24 GB (Apple M5 Pro) handles up to 14B, 36 GB handles 30B, and 64 GB+ (M5 Max) handles 70B models at Q4."
         },
         {
           "url": "/images/best-laptops-local-llm-comparison-table-hero-en.webp",
@@ -2960,7 +2960,7 @@
       "images": []
     },
     "apple-silicon-m5-local-llm": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -2987,7 +2987,7 @@
       ]
     },
     "apple-silicon-local-llm-guide-2026": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -3041,7 +3041,7 @@
       ]
     },
     "how-much-unified-memory-for-local-llm": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -3095,7 +3095,7 @@
       ]
     },
     "ollama-on-mac-apple-silicon-setup-2026": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -3117,7 +3117,7 @@
         },
         {
           "url": "/images/ollama-mac-multi-model-memory-budget-en.svg",
-          "title": "Multi-model memory budget on a 36 GB Mac: Llama 3.1 8B (8 GB) + LLaVA 7B Vision (7 GB) + macOS overhead (4 GB) = 19 GB used, leaving 17 GB free with OLLAMA_MAX_LOADED_MODELS=3."
+          "title": "Multi-model memory budget on a 36 GB Mac: Llama 3.1 8B (8 GB) + LLaVA 7B Vision (7 GB) + macOS reserve (8 GB) = 23 GB used, leaving 13 GB free with OLLAMA_MAX_LOADED_MODELS=3."
         }
       ]
     },
@@ -3203,7 +3203,7 @@
       ]
     },
     "running-70b-models-apple-silicon-m5-max": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -3230,7 +3230,7 @@
       ]
     },
     "qwen-vs-claude-vs-deepseek-local-2026": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-16",
       "hasSections": true,
@@ -3284,7 +3284,7 @@
       ]
     },
     "qwen-coder-vs-deepseek-mistral-local-2026": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-16",
       "hasSections": true,
@@ -3419,7 +3419,7 @@
       "images": []
     },
     "qwen-local-deployment-guide-2026": {
-      "dateModified": "2026-10-23",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -3653,7 +3653,7 @@
       ]
     },
     "mram-in-memory-computing-local-ai-2026": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-06-15",
       "hasSections": true,
@@ -3671,11 +3671,7 @@
       "images": [
         {
           "url": "/images/mram-in-memory-computing-local-ai-2026-energy-cost-comparison-en.svg",
-          "title": "Energy cost per 32-bit operation: DRAM access costs 500+ pJ (>130x a 32-bit floating-point multiply), SRAM access ~5 pJ, and the multiply itself only ~3.7 pJ — up to 90% of local LLM inference energy goes to data movement."
-        },
-        {
-          "url": "/images/mram-in-memory-computing-local-ai-2026-mram-timeline-roadmap-en.svg",
-          "title": "MRAM roadmap for AI: 28nm eMRAM (2019) and 14nm (2024) production are done; 8nm eMRAM and the SemiFive/ICYTech tape-out (May 2026) are confirmed; 5nm eMRAM (2027) is on track; edge AI SoCs (2028-2029) and consumer smartphone MRAM (2029-2031) remain plausible but unconfirmed."
+          "title": "Energy cost per 32-bit operation: DRAM access costs 500+ pJ (>130x a 32-bit floating-point multiply), SRAM access ~5 pJ, and the multiply itself only ~3.7 pJ (approximate 45 nm figures, Horowitz, ISSCC 2014; modern process nodes differ)."
         }
       ]
     },
@@ -3923,7 +3919,7 @@
       "images": []
     },
     "best-llm-observability-tools-2026": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-08-28",
       "hasSections": true,
@@ -3941,7 +3937,7 @@
       "images": []
     },
     "best-vector-database-2026": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-08-28",
       "hasSections": true,
@@ -3977,7 +3973,7 @@
       "images": []
     },
     "soc2-iso27001-self-hosted-llm-compliance": {
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-02",
       "hasSections": true,
@@ -4949,8 +4945,8 @@
       "images": []
     },
     "chain-of-thought-prompting": {
-      "dateModified": "2026-11-02",
-      "lastFactChecked": "2026-11-02",
+      "dateModified": "2026-11-06",
+      "lastFactChecked": "2026-11-06",
       "publishDate": "2026-03-26",
       "hasSections": true,
       "langs": [
@@ -5777,7 +5773,7 @@
   },
   "power-local-llm": {
     "hermes-agent-review-2026": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
       "hasSections": true,
@@ -5865,7 +5861,7 @@
       ]
     },
     "babyagi-review-autonomous-agent": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-09-02",
       "hasSections": true,
@@ -5953,7 +5949,7 @@
       ]
     },
     "best-mac-for-local-ai-2026": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -6182,7 +6178,7 @@
       ]
     },
     "best-laptop-for-local-llm": {
-      "dateModified": "2026-10-23",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -6254,7 +6250,7 @@
       "images": []
     },
     "best-local-ai-app-low-end-pc": {
-      "dateModified": "2026-10-23",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6394,7 +6390,7 @@
       ]
     },
     "best-local-llm-apps-mac": {
-      "dateModified": "2026-10-31",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-10-31",
       "hasSections": true,
@@ -6430,7 +6426,7 @@
       "images": []
     },
     "best-local-llm-creative-writing": {
-      "dateModified": "2026-10-27",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6448,7 +6444,7 @@
       "images": []
     },
     "best-local-models-tool-calling-2026": {
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6565,7 +6561,7 @@
       ]
     },
     "local-ai-agents-business-workflows-eu-compliance": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6583,7 +6579,7 @@
       "images": []
     },
     "local-ai-agents-with-mcp": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6610,7 +6606,7 @@
       ]
     },
     "lm-studio-vs-jan-vs-gpt4all-2026": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6698,7 +6694,7 @@
       ]
     },
     "local-coding-llm-without-internet": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6728,7 +6724,7 @@
         },
         {
           "url": "/images/local-coding-llm-model-choice-en.svg",
-          "title": "Local coding models for offline work: Qwen3-Coder 30B Q4_K_M (~18 GB, 24 GB RAM) is the recommended default; Qwen2.5-Coder 7B (~5 GB, 8 GB RAM) is the lightweight fallback at 80–85% quality; DeepSeek-V3 (~25 GB) for 128K-context workflows; Codestral 22B for fastest autocomplete."
+          "title": "Local coding models for offline work: Qwen3-Coder 30B Q4_K_M (~18 GB, 24 GB RAM) is the recommended default; Qwen2.5-Coder 7B (~5 GB, 8 GB RAM) is the lightweight fallback; DeepSeek-V3 (~25 GB) for 128K-context workflows; Codestral 22B for fastest autocomplete."
         },
         {
           "url": "/images/local-coding-llm-what-breaks-en.svg",
@@ -6773,7 +6769,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 14 categories of a local LLM stack: 347 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and eight more groups from Agents & Automation to At the Edge."
+          "title": "The 14 categories of a local LLM stack: 348 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and eight more groups from Agents & Automation to At the Edge."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -7245,7 +7241,7 @@
       ]
     },
     "local-llm-prompts-for-fiction-writers": {
-      "dateModified": "2026-10-26",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -7272,7 +7268,7 @@
       ]
     },
     "local-llm-screenwriting-and-novel-drafting": {
-      "dateModified": "2026-10-26",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -7437,7 +7433,7 @@
       ]
     },
     "local-vision-models-llava-ollama-2026": {
-      "dateModified": "2026-10-23",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-14",
       "hasSections": true,
@@ -7581,7 +7577,7 @@
       ]
     },
     "apple-mlx-vs-nvidia-cuda-local-llm-2026": {
-      "dateModified": "2026-09-25",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-24",
       "hasSections": true,
@@ -7607,7 +7603,7 @@
         },
         {
           "url": "/images/apple-mlx-vs-nvidia-cuda-cost-hero-en.webp",
-          "title": "Total system cost to run 7B to 96B models locally: NVIDIA wins under $1,500; Apple wins at the 70B tier (Mac Studio M5 Max 36GB ~$2,499 vs $7,000+ multi-GPU system)."
+          "title": "Total system cost to run 7B to 96B models locally: NVIDIA wins under $1,500; Apple wins at the 70B tier (Mac Studio M5 Max 64GB from $2,499 base price vs $7,000+ multi-GPU system)."
         }
       ]
     },
@@ -7846,7 +7842,7 @@
       ]
     },
     "local-ai-behind-firewall-offline-2026": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -8395,7 +8391,7 @@
       "images": []
     },
     "pydantic-ai-review": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-11",
       "hasSections": true,
@@ -8629,7 +8625,7 @@
       "images": []
     },
     "best-local-llms-customer-support-call-centers-enterprise": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
       "hasSections": true,
@@ -10416,7 +10412,7 @@
       "images": []
     },
     "tensorrt-llm-explained": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
@@ -11261,6 +11257,24 @@
       ],
       "images": []
     },
+    "weesper-neon-flow-review": {
+      "dateModified": "2026-11-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-11-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "transcriptionsuite-review": {
       "dateModified": "2026-10-18",
       "lastFactChecked": null,
@@ -11838,7 +11852,7 @@
       "images": []
     },
     "openrag-review": {
-      "dateModified": "2026-10-23",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-10-23",
       "hasSections": true,
@@ -12792,7 +12806,7 @@
       "images": []
     },
     "comfyui-review": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
@@ -13476,7 +13490,7 @@
       "images": []
     },
     "milvus-review": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-09-18",
       "hasSections": true,
@@ -13638,7 +13652,7 @@
       "images": []
     },
     "weaviate-review": {
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-03",
       "lastFactChecked": null,
       "publishDate": "2026-09-19",
       "hasSections": true,
@@ -14540,7 +14554,7 @@
       "images": []
     },
     "whatIsQ4KMQuantization": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -14559,10 +14573,6 @@
         {
           "url": "/images/what-is-q4-k-m-quantization-letter-breakdown-hero-en.webp",
           "title": "What Each Letter in Q4_K_M Means -- Decoding the format name"
-        },
-        {
-          "url": "/images/what-is-q4-k-m-quantization-size-quality-hero-en.webp",
-          "title": "Q4_K_M vs Other Quantizations -- File size and perplexity (Llama 3 8B)"
         }
       ]
     },
@@ -14657,7 +14667,7 @@
       "images": []
     },
     "bestLocalLlm6gbVram": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -14806,7 +14816,7 @@
       "images": []
     },
     "qwenCoderVsDeepseekCoder": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -14950,7 +14960,7 @@
       ]
     },
     "bestMiniPcForLocalLlm": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -14968,7 +14978,7 @@
       "images": []
     },
     "bestMoeModelsLocalCoding": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -15229,7 +15239,7 @@
       "images": []
     },
     "macMiniM4LocalLlm": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -15373,7 +15383,7 @@
       "images": []
     },
     "convertOllamaModelToMlx": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -15463,7 +15473,7 @@
       "images": []
     },
     "bestQwenModelForCoding": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -15562,7 +15572,7 @@
       "images": []
     },
     "bestMiniPcForOllamaServerAlwaysOn": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -15634,7 +15644,7 @@
       "images": []
     },
     "bestOpenSourceAlternativesToChatgptPlus": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -15688,7 +15698,7 @@
       "images": []
     },
     "bestJapaneseLanguageModelsLocal": {
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-05-27",
       "hasSections": true,
@@ -15913,7 +15923,7 @@
       "images": []
     },
     "bestLocalLlmMacbookAirNoEgpu": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -15931,7 +15941,7 @@
       "images": []
     },
     "bestLocalLlm32gbUnifiedMemoryMac": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -15985,7 +15995,7 @@
       "images": []
     },
     "m4MaxVsM4ProLocalLlm": {
-      "dateModified": "2026-09-25",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -16147,7 +16157,7 @@
       "images": []
     },
     "bestLocalLlmLegalMedicalPrivacy": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-11-06",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
