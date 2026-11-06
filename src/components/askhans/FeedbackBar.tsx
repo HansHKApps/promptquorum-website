@@ -34,7 +34,7 @@ export function FeedbackBar({ lastQuestion, lastAnswer }: { lastQuestion?: strin
   const [phase, setPhase] = useState<Phase>('idle')
   const [dialog, setDialog] = useState(false)
   const [copiedOk, setCopiedOk] = useState(false)
-  const [includeChat, setIncludeChat] = useState(true)
+  const [includeChat, setIncludeChat] = useState(false)
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const clear = () => {
