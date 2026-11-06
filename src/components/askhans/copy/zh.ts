@@ -54,7 +54,7 @@ export const copy: AskCopy = {
   consentTitle: '开始之前',
   consentParagraphs: [
     'Ask Hans 借助 AI（Anthropic 的 Claude），基于 PromptQuorum 的内容回答您的问题。为此，您输入的内容将传输至我们的服务器和 Anthropic。请勿输入个人数据。',
-    '选择“是，我同意”，即表示您允许我们出于统计目的并为改进 Ask Hans 及我们的内容，以匿名方式记录：您提问的主题、Ask Hans 为回答而查询的应用、目录类别和工具、语言、您点击的链接、您使用的功能（例如推荐的后续问题或开始新对话）、时间，以及一个与您本人无关联的随机访问 ID。统计数据不包含提问或回答的文本、IP 地址和姓名。我们仅公布汇总数字。',
+    '选择“是，我同意”，即表示您允许我们出于统计目的并为改进 Ask Hans 及我们的内容，以匿名方式记录：您提问的主题、Ask Hans 为回答而查询的应用、目录类别和工具、语言、您点击的链接、您使用的功能（例如推荐的后续问题或开始新对话）、时间，以及一个与您本人无关联的随机访问 ID。统计数据不包含提问或回答的文本、IP 地址和姓名。我们仅公布汇总数字。 我们还会按大致区间统计是否为回访，以及 Ask Hans 打开的时长。为此，您的浏览器会在您的设备上（而非我们的服务器上）记住首次访问的日期和使用 Ask Hans 的次数；撤回同意后，这些信息将被删除。',
     '同意出于自愿。不同意也可以使用 Ask Hans，您可随时撤回同意，撤回对今后生效。作为您选择的凭证，我们会保存其时间、文本版本和随机访问 ID。无论您如何选择，我们都会以匿名方式统计 Ask Hans 被打开的次数和给出回答的次数（仅为总数：不含 ID，不含文本）。',
   ],
   consentPrivacyLink: '详见隐私政策。',
@@ -102,6 +102,25 @@ export const copy: AskCopy = {
     copy: "复制",
     copied: "已复制",
     copyAnswer: "复制回答",
+    moreOptions: "更多复制与分享选项",
+    copyFormatted: "带格式复制",
+    copyPlain: "复制为纯文本",
+    shareEmail: "通过邮件发送",
+    shareWhatsApp: "通过 WhatsApp 发送",
+    shareTelegram: "通过 Telegram 发送",
+    shareMore: "分享…",
+    emailSubject: "Ask Hans 的回答（PromptQuorum）",
+  },
+
+  promo: {
+    title: "喜欢 Ask Hans 吗？",
+    body: "据我们所知，Ask Hans 和 PromptQuorum 的 MCP 服务器，是唯一同时提供能读取整个网站的 AI 助手和 MCP 服务器的本地 AI 网站。如果对您有帮助，欢迎分享给朋友。",
+    share: "分享给朋友",
+    copyLink: "复制链接",
+    linkCopied: "链接已复制",
+    shareText: "Ask Hans：PromptQuorum 的 AI 助手，解答本地 AI、硬件和智能家居问题。",
+    close: "隐藏",
+    imageAlt: "Ask Hans 与 PromptQuorum MCP：据我们所知，唯一同时提供两者的本地 AI 网站",
   },
 
   panel: {

@@ -13,6 +13,7 @@ import { AskHansReport } from './AskHansReport'
 import { AppLink as Link } from '@/components/AppLink'
 import { t as tTools } from './tools-i18n'
 import { tAsk } from './ask-hans-block-i18n'
+import { AskHansDocs } from './AskHansDocs'
 
 export async function AskHansBlock({ lang }: { lang: Language }) {
   if (process.env.ASK_HANS_ENABLED !== 'true') return null
@@ -23,6 +24,7 @@ export async function AskHansBlock({ lang }: { lang: Language }) {
   const homeHref = lang === 'en' ? '/' : `/${lang}`
 
   return (
+    <>
     <section id="ask-hans" aria-labelledby="ask-hans-heading" className={`border-b ${tone.tint} ${tone.edge}`}>
       <div className="mx-auto w-full max-w-[1180px] px-5 pb-12 pt-24 sm:px-8">
         <nav aria-label="Breadcrumb" className="mb-3.5 text-[13px] text-text-secondary">
@@ -68,8 +70,14 @@ export async function AskHansBlock({ lang }: { lang: Language }) {
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <AskHansDocs lang={lang} />
+    <section id="usage" className="scroll-mt-20 border-t border-border bg-hub-cyan-tint">
+      <div className="mx-auto w-full max-w-[1180px] px-5 py-12 sm:px-8">
         <AskHansReport lang={lang} report={report} />
       </div>
     </section>
+    </>
   )
 }
