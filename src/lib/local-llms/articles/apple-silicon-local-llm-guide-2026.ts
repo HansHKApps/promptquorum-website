@@ -157,7 +157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Memory Bandwidth Matters More Than Memory Size',
         content: [
           'LLM inference is memory-bandwidth-bound, not compute-bound. This means token generation speed scales linearly with bandwidth, not GPU cores.',
-          'M5 Max at 614 GB/s vs RTX 4090 at 1,008 GB/s looks like NVIDIA wins on raw bandwidth. But Apple Silicon users can use nearly all memory (total minus about 8GB for macOS, no discrete VRAM limit), so they can load larger models that NVIDIA cannot fit into 24GB. The real comparison: M5 Max at 614 GB/s running a 70B model vs an RTX 4090 that cannot hold the 70B model entirely in its 24GB (CPU offload is possible but much slower).',
+          'M5 Max at 614 GB/s vs RTX 4090 at 1,008 GB/s looks like NVIDIA wins on raw bandwidth. But Apple Silicon users can use most of their memory (total minus about 8GB for macOS, up to the default macOS GPU memory limit, which can be raised), so they can load larger models that NVIDIA cannot fit into 24GB. The real comparison: M5 Max at 614 GB/s running a 70B model vs an RTX 4090 that cannot hold the 70B model entirely in its 24GB (CPU offload is possible but much slower).',
           'Within the M-series lineup, bandwidth differences directly translate to token/sec:',
         ],
         items: [
@@ -450,7 +450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'El ancho de banda de memoria importa más que el tamaño de memoria',
         content: [
           'La inferencia LLM está limitada por el ancho de banda de memoria, no por la capacidad de cómputo. Esto significa que la velocidad de generación de tokens escala linealmente con el ancho de banda, no con los núcleos GPU.',
-          'M5 Max a 614 GB/s vs RTX 4090 a 1.008 GB/s parece que NVIDIA gana en ancho de banda bruto. Pero los usuarios de Apple Silicon pueden usar casi toda la memoria (el total menos unos 8GB para macOS, sin límite de VRAM discreta), por lo que pueden cargar modelos más grandes que NVIDIA no puede alojar en 24GB. La comparación real: M5 Max a 614 GB/s ejecutando un modelo 70B vs un RTX 4090 que no puede alojar el modelo 70B entero en sus 24GB (se puede descargar parte a la CPU, pero es mucho más lento).',
+          'M5 Max a 614 GB/s vs RTX 4090 a 1.008 GB/s parece que NVIDIA gana en ancho de banda bruto. Pero los usuarios de Apple Silicon pueden usar la mayor parte de la memoria (el total menos unos 8GB para macOS, hasta el límite de memoria de GPU de macOS por defecto, que se puede ampliar), por lo que pueden cargar modelos más grandes que NVIDIA no puede alojar en 24GB. La comparación real: M5 Max a 614 GB/s ejecutando un modelo 70B vs un RTX 4090 que no puede alojar el modelo 70B entero en sus 24GB (se puede descargar parte a la CPU, pero es mucho más lento).',
           'Dentro de la línea M, las diferencias de ancho de banda se traducen directamente en tok/s:',
         ],
         items: [
@@ -765,7 +765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'عرض نطاق الذاكرة أهم من حجم الذاكرة',
         content: [
           'استدلال LLM محدود بعرض نطاق الذاكرة، لا بقدرة الحوسبة. هذا يعني أن سرعة توليد الـ tokens تتناسب خطيًا مع عرض النطاق، لا مع أنوية GPU.',
-          'M5 Max عند 614 GB/s مقابل RTX 4090 عند 1,008 GB/s يبدو أن NVIDIA تفوز في عرض النطاق الخام. لكن مستخدمي Apple Silicon يستطيعون استخدام معظم الذاكرة (الإجمالي ناقص نحو 8GB لنظام macOS، دون حد VRAM منفصلة)، لذا يمكنهم تحميل نماذج أكبر لا يستطيع NVIDIA استضافتها في 24GB. المقارنة الحقيقية: M5 Max عند 614 GB/s يشغّل نموذج 70B مقابل RTX 4090 الذي لا يستوعب نموذج 70B كاملًا في 24GB (يمكن تفريغ جزء منه إلى المعالج لكن ببطء شديد).',
+          'M5 Max عند 614 GB/s مقابل RTX 4090 عند 1,008 GB/s يبدو أن NVIDIA تفوز في عرض النطاق الخام. لكن مستخدمي Apple Silicon يستطيعون استخدام معظم الذاكرة (الإجمالي ناقص نحو 8GB لنظام macOS، حتى الحد الافتراضي لذاكرة الرسومات في macOS الذي يمكن رفعه)، لذا يمكنهم تحميل نماذج أكبر لا يستطيع NVIDIA استضافتها في 24GB. المقارنة الحقيقية: M5 Max عند 614 GB/s يشغّل نموذج 70B مقابل RTX 4090 الذي لا يستوعب نموذج 70B كاملًا في 24GB (يمكن تفريغ جزء منه إلى المعالج لكن ببطء شديد).',
           'داخل خط M، تترجم فروق عرض النطاق مباشرةً إلى tok/s:',
         ],
         items: [
@@ -1081,7 +1081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'A largura de banda de memória importa mais do que o tamanho da memória',
         content: [
           'A inferência LLM é limitada pela largura de banda de memória, não pela capacidade de computação. Isso significa que a velocidade de geração de tokens escala linearmente com a largura de banda, não com os núcleos GPU.',
-          'M5 Max a 614 GB/s vs RTX 4090 a 1.008 GB/s parece que a NVIDIA vence em largura de banda bruta. Mas os usuários do Apple Silicon podem usar quase toda a memória (o total menos cerca de 8 GB para o macOS, sem limite de VRAM discreta), portanto podem carregar modelos maiores que a NVIDIA não consegue acomodar em 24 GB. A comparação real: M5 Max a 614 GB/s rodando um modelo 70B vs um RTX 4090 que não comporta o modelo 70B inteiro nos 24 GB (descarregar parte na CPU é possível, mas bem mais lento).',
+          'M5 Max a 614 GB/s vs RTX 4090 a 1.008 GB/s parece que a NVIDIA vence em largura de banda bruta. Mas os usuários do Apple Silicon podem usar a maior parte da memória (o total menos cerca de 8 GB para o macOS, até o limite padrão de memória da GPU do macOS, que pode ser elevado), portanto podem carregar modelos maiores que a NVIDIA não consegue acomodar em 24 GB. A comparação real: M5 Max a 614 GB/s rodando um modelo 70B vs um RTX 4090 que não comporta o modelo 70B inteiro nos 24 GB (descarregar parte na CPU é possível, mas bem mais lento).',
           'Dentro da linha M, as diferenças de largura de banda se traduzem diretamente em tok/s:',
         ],
         items: [
@@ -1396,7 +1396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Speicherbandbreite ist wichtiger als Speichergröße',
         content: [
           'LLM-Inferencing ist speicherbandbreitenbegrenzt, nicht rechenbegrenzt. Das bedeutet, die Token-Generierungsgeschwindigkeit skaliert linear mit der Bandbreite, nicht mit GPU-Kernzahl.',
-          'M5 Max bei 614 GB/s gegenüber RTX 4090 bei 1.008 GB/s könnte den Anschein erwecken, dass NVIDIA bei Rohbandbreite gewinnt. Aber Apple-Silicon-Benutzer können fast den gesamten Speicher nutzen (Gesamtspeicher abzüglich etwa 8 GB für macOS, keine diskrete VRAM-Grenze), daher können sie größere Modelle laden, die NVIDIA nicht in 24 GB Speicher passen kann. Der echte Vergleich: M5 Max beim Ausführen eines 70B-Modells versus eine RTX 4090, die das 70B-Modell nicht vollständig in ihren 24 GB halten kann (Auslagerung auf die CPU ist möglich, aber deutlich langsamer).',
+          'M5 Max bei 614 GB/s gegenüber RTX 4090 bei 1.008 GB/s könnte den Anschein erwecken, dass NVIDIA bei Rohbandbreite gewinnt. Aber Apple-Silicon-Benutzer können den größten Teil des Speichers nutzen (Gesamtspeicher abzüglich etwa 8 GB für macOS, bis zum standardmäßigen GPU-Speicherlimit von macOS, das sich anheben lässt), daher können sie größere Modelle laden, die NVIDIA nicht in 24 GB Speicher passen kann. Der echte Vergleich: M5 Max beim Ausführen eines 70B-Modells versus eine RTX 4090, die das 70B-Modell nicht vollständig in ihren 24 GB halten kann (Auslagerung auf die CPU ist möglich, aber deutlich langsamer).',
         ],
         items: [
           'M5 Basis (150 GB/s) → ~25–30 tok/s (Schätzung) auf Llama 3.1 8B Q4',
@@ -1647,7 +1647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'La bande passante mémoire est plus importante que la taille mémoire',
         content: [
           'L\'inférence LLM est limitée bande passante, pas calcul-limitée. Cela signifie que la vitesse génération token met à l\'échelle linéairement avec bande passante, pas cœurs GPU.',
-          'M5 Max à 614 GB/s vs RTX 4090 à 1 008 GB/s semble que NVIDIA gagne sur bande brute. Mais utilisateurs Apple Silicon peuvent utiliser presque toute la mémoire (le total moins environ 8 Go pour macOS, aucune limite VRAM discret), donc peuvent charger modèles plus grands qu\'NVIDIA ne peut pas adapter à 24GB.',
+          'M5 Max à 614 GB/s vs RTX 4090 à 1 008 GB/s semble que NVIDIA gagne sur bande brute. Mais utilisateurs Apple Silicon peuvent utiliser l\'essentiel de la mémoire (le total moins environ 8 Go pour macOS, jusqu\'à la limite de mémoire GPU par défaut de macOS, qui peut être relevée), donc peuvent charger modèles plus grands qu\'NVIDIA ne peut pas adapter à 24GB.',
         ],
         items: [
           'M5 base (150 GB/s) → ~25–30 tok/s (estimation) Llama 3.1 8B Q4',
@@ -2426,7 +2426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '메모리 크기보다 메모리 대역폭이 더 중요합니다',
         content: [
           'LLM 추론은 메모리 대역폭에 제한되며 계산 성능에 제한되지 않습니다. 이는 토큰 생성 속도가 GPU 코어 수가 아닌 대역폭에 따라 선형적으로 증가함을 의미합니다.',
-          'M5 Max(614 GB/s) 대 RTX 4090(1,008 GB/s)을 비교하면 순수 대역폭에서 NVIDIA가 유리해 보입니다. 그러나 Apple Silicon 사용자는 거의 전체 메모리(총량에서 macOS용 약 8GB 제외)를 사용할 수 있어(독립형 VRAM 한계 없음) NVIDIA가 24GB에 맞출 수 없는 더 큰 모델을 로드할 수 있습니다. 실제 비교: 70B 모델을 실행하는 M5 Max(614 GB/s) 대 70B 모델 전체를 24GB에 담지 못하는 RTX 4090(일부를 CPU로 오프로드할 수는 있으나 훨씬 느림).',
+          'M5 Max(614 GB/s) 대 RTX 4090(1,008 GB/s)을 비교하면 순수 대역폭에서 NVIDIA가 유리해 보입니다. 그러나 Apple Silicon 사용자는 대부분의 메모리(총량에서 macOS용 약 8GB 제외, macOS 기본 GPU 메모리 한도 내에서 상향 가능)를 사용할 수 있어 NVIDIA가 24GB에 맞출 수 없는 더 큰 모델을 로드할 수 있습니다. 실제 비교: 70B 모델을 실행하는 M5 Max(614 GB/s) 대 70B 모델 전체를 24GB에 담지 못하는 RTX 4090(일부를 CPU로 오프로드할 수는 있으나 훨씬 느림).',
           'M 시리즈 라인업 내에서 대역폭 차이는 tok/s로 직접 변환됩니다.',
         ],
         items: [
