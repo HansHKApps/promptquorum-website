@@ -8,9 +8,13 @@ import { AppLink as Link } from '@/components/AppLink'
 import type { Language } from '@/lib/blog/blogContent'
 import { getLangDir, toOutputLocale } from '@/lib/i18n/constants'
 import type { McpToolName, UsageSnapshot } from '@/lib/mcp/usage'
+import type { McpReport } from '@/lib/mcp/report'
+import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { HUB_TONES, type HubTone } from '@/components/hub-template/palette'
 import { t as tTools } from './tools-i18n'
 import { t } from './mcp-stats-i18n'
+import { tAsk } from './ask-hans-block-i18n'
+import { UsageReportView } from './UsageReportView'
 import { CopyEndpointButton } from './CopyEndpointButton'
 import { NEW_TOOL_COPY, TOOL_GROUPS, TOOL_GROUP_OF, tDocs, toolAsk, type ToolGroup } from './mcp-docs-i18n'
 
@@ -58,39 +62,6 @@ function toolCopy(name: McpToolName, lang: Language): { title: string; desc: str
   return fresh ? { title: fresh.title[lang] ?? fresh.title.en, desc: fresh.desc[lang] ?? fresh.desc.en } : { title: name, desc: '' }
 }
 
-function median(values: number[]): number {
-  const sorted = [...values].sort((a, b) => a - b)
-  const mid = Math.floor(sorted.length / 2)
-  return sorted.length % 2 ? sorted[mid] : Math.round((sorted[mid - 1] + sorted[mid]) / 2)
-}
-
-// Plain SVG bars, no chart library: this page is a server component.
-function DailyBars({ days, label }: { days: UsageSnapshot['days']; label: string }) {
-  const max = Math.max(1, ...days.map((d) => d.calls))
-  const barW = 10
-  const gap = 4
-  const height = 96
-  const width = days.length * (barW + gap) - gap
-  return (
-    <svg
-      role="img"
-      aria-label={label}
-      viewBox={`0 0 ${width} ${height}`}
-      preserveAspectRatio="none"
-      className="h-28 w-full text-hub-azure"
-    >
-      {days.map((d, i) => {
-        const h = d.calls === 0 ? 1 : Math.max(2, (d.calls / max) * height)
-        return (
-          <rect key={d.date} x={i * (barW + gap)} y={height - h} width={barW} height={h} rx={1} fill="currentColor" opacity={d.calls === 0 ? 0.25 : 0.85}>
-            <title>{`${d.date}: ${d.calls.toLocaleString()}`}</title>
-          </rect>
-        )
-      })}
-    </svg>
-  )
-}
-
 function localizedPath(lang: Language, path: string): string {
   return lang === 'en' ? path : `/${lang}${path}`
 }
@@ -119,7 +90,7 @@ function Stat({ label, value, tone }: { label: string; value: string; tone: HubT
   )
 }
 
-export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: UsageSnapshot }) {
+export function McpStatsContent({ lang, snapshot, report }: { lang: Language; snapshot: UsageSnapshot; report: McpReport }) {
   const dir = getLangDir(lang)
   const loc = toOutputLocale(lang)
   const fmt = (n: number) => n.toLocaleString(loc)
@@ -131,10 +102,6 @@ export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: 
 
   const last7Total = Object.values(snapshot.last7).reduce((a, b) => a + b, 0)
   const last30Total = Object.values(snapshot.last30).reduce((a, b) => a + b, 0)
-  const medianDay = median(snapshot.days.map((d) => d.calls))
-  // Busiest tools first, so the table answers "what do assistants actually call?"
-  // at a glance; ties keep the grouped display order.
-  const rankedTools = [...TOOLS].sort((a, b) => snapshot.byTool[b] - snapshot.byTool[a])
 
   const jump: { id: string; label: string; tone: HubTone }[] = [
     { id: 'start', label: tDocs('startHeading', lang), tone: 'azure' },
@@ -178,15 +145,24 @@ export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: 
             </div>
           </div>
 
-          <div className="min-w-0 flex-[1_1_400px]">
+          <div className="min-w-0 flex-[1_1_320px]">
             <div className={`box-border rounded-2xl border bg-white p-5 lg:self-start ${HUB_TONES.azure.edge}`}>
-              <div className="mb-3.5 text-[13px] font-bold">{t('trendHeading', lang)}</div>
-              <DailyBars days={snapshot.days} label={t('trendChartLabel', lang)} />
-              <div dir="ltr" className="mt-1 flex justify-between text-xs text-text-muted">
-                <span>{snapshot.days[0]?.date}</span>
-                <span>{snapshot.days[snapshot.days.length - 1]?.date}</span>
-              </div>
-              <div className="mt-3.5 text-xs font-medium text-text-secondary">{t('usageExplainer', lang, { date: generatedDate })}</div>
+              <div className="mb-3.5 text-[13px] font-bold">{tAsk('mcpStatsHeading', lang)}</div>
+              <dl className="grid grid-cols-2 gap-3">
+                <div>
+                  <dd className="text-3xl font-extrabold tabular-nums">{fmt(report.headline[0].all)}</dd>
+                  <dt className="text-xs font-medium text-text-secondary">{tAsk('statCalls', lang)}</dt>
+                </div>
+                <div>
+                  <dd className="text-3xl font-extrabold tabular-nums">{fmt(report.headline[1].all)}</dd>
+                  <dt className="text-xs font-medium text-text-secondary">{tAsk('statStarts', lang)}</dt>
+                </div>
+              </dl>
+              <p className="mt-3.5 text-xs font-medium text-text-secondary">
+                {report.breakdownSince ? `${tAsk('since', lang)} ${formatDisplayDate(report.breakdownSince, lang)}. ` : ''}
+                {tAsk('mcpStatsNote', lang)}
+              </p>
+              <div className="mt-3 text-xs font-medium text-text-secondary">{t('usageExplainer', lang, { date: generatedDate })}</div>
             </div>
           </div>
         </div>
@@ -341,47 +317,7 @@ export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: 
         <div className={`${MAX_WIDTH} py-14`}>
           <SectionHeading index={6} tone="cyan">{t('usageHeading', lang)}</SectionHeading>
           <p className="mb-5 max-w-[640px] text-base leading-relaxed text-text-secondary">{t('usageExplainer', lang, { date: generatedDate })}</p>
-          <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-            {[
-              { label: t('totalAllTime', lang), value: snapshot.total, tone: 'violet' as const },
-              { label: t('trendLast30', lang), value: last30Total, tone: 'azure' as const },
-              { label: t('trendLast7', lang), value: last7Total, tone: 'indigo' as const },
-              { label: t('trendMedianDay', lang), value: medianDay, tone: 'orchid' as const },
-            ].map((k) => (
-              <div key={k.label} className="rounded-[14px] border border-hub-cyan-edge bg-white p-5">
-                <div className={`mb-2 inline-block rounded-lg px-2.5 py-0.5 text-xs font-bold text-white ${HUB_TONES[k.tone].solid}`}>{k.label}</div>
-                <div className="text-3xl font-bold tabular-nums">{fmt(k.value)}</div>
-              </div>
-            ))}
-          </div>
-          <p className="mt-3 text-xs text-text-muted">{t('trendNote', lang)}</p>
-
-          <div className="mt-6 overflow-x-auto rounded-[14px] border border-hub-cyan-edge bg-white">
-            <table className="w-full border-collapse text-sm">
-              <thead>
-                <tr className={`${HUB_TONES.cyan.tint} ${HUB_TONES.cyan.ink}`}>
-                  <th scope="col" className="px-4 py-3 text-start font-bold">{t('tableTool', lang)}</th>
-                  <th scope="col" className="px-4 py-3 text-end font-bold">{t('tableTotalCalls', lang)}</th>
-                  <th scope="col" className="px-4 py-3 text-end font-bold">{t('tableLast30', lang)}</th>
-                  <th scope="col" className="px-4 py-3 text-end font-bold">{t('tableLast7', lang)}</th>
-                  <th scope="col" className="px-4 py-3 text-end font-bold">{t('tableCallsToday', lang)}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {rankedTools.map((name) => (
-                  <tr key={name} className="border-t border-border">
-                    <td dir="ltr" className="px-4 py-2.5 text-left font-mono text-xs font-semibold text-text-primary">{name}</td>
-                    <td className="px-4 py-2.5 text-end tabular-nums text-text-primary">
-                      {snapshot.byTool[name] === 0 ? <span className="text-text-muted">{t('noCallsYet', lang)}</span> : fmt(snapshot.byTool[name])}
-                    </td>
-                    {([snapshot.last30, snapshot.last7, snapshot.today] as const).map((col, i) => (
-                      <td key={i} className={`px-4 py-2.5 text-end tabular-nums ${col[name] === 0 ? 'text-text-muted' : 'text-text-primary'}`}>{fmt(col[name])}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <UsageReportView lang={lang} report={report} kind="mcp" />
           <p className="mt-4 text-xs text-text-muted">{t('rawJsonNote', lang)}</p>
         </div>
       </section>
