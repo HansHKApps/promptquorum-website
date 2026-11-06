@@ -9,13 +9,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Best Qwen Model for Coding (2026): Pick by GPU VRAM',
     metaDescription: 'Best Qwen model for coding: Qwen3.8-27B on 24 GB, Qwen2.5-Coder 14B on 12 GB, 7B on 8 GB. There is no Qwen3-Coder 14B. Sizes, Ollama tags, VRAM.',
     publishDate: '2026-05-26',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     current_models_mentioned: ['Qwen3.8-27B', 'Qwen3.6 35B-A3B', 'Qwen3-Coder-30B-A3B', 'Qwen2.5-Coder 14B', 'Qwen2.5-Coder 7B', 'Qwen3.5 9B'],
     current_benchmarks_used: ['HumanEval', 'SWE-bench Pro', 'Terminal Bench 2.1', 'LiveCodeBench v6'],
-    current_hardware_mentioned: ['RTX 3060', 'RTX 4060', 'RTX 4070', 'RTX 3090', 'RTX 4090', 'Mac 24 GB'],
+    current_hardware_mentioned: ['RTX 3060', 'RTX 4060', 'RTX 4070', 'RTX 3090', 'RTX 4090', 'Mac 32 GB'],
     educationalLevel: 'Intermediate',
     audience: 'Developers choosing a Qwen model for local coding',
     parentArticle: '/power-local-llm/best-local-coding-models-2026',
@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best Qwen model for coding?',
-        answer: 'Qwen3.8-27B is the best Qwen model for coding on a 24 GB GPU or Mac (18 GB download, Apache 2.0, 256K context). On 12 GB, Qwen2.5-Coder 14B (9.0 GB) is the dedicated Qwen coder that fits; on 8 GB, Qwen2.5-Coder 7B (4.7 GB). There is no Qwen3-Coder 14B: Qwen3-Coder starts at a 30B mixture-of-experts model (19 GB). This ranking rests on Qwen\'s own reported benchmarks, which we did not reproduce.',
+        answer: 'Qwen3.8-27B is the best Qwen model for coding on a 24 GB GPU or a 32 GB Mac (18 GB download, Apache 2.0, 256K context). On 12 GB, Qwen2.5-Coder 14B (9.0 GB) is the dedicated Qwen coder that fits; on 8 GB, Qwen2.5-Coder 7B (4.7 GB). There is no Qwen3-Coder 14B: Qwen3-Coder starts at a 30B mixture-of-experts model (19 GB). This ranking rests on Qwen\'s own reported benchmarks, which we did not reproduce.',
         bullets: [
           '24 GB: Qwen3.8-27B (18 GB), or Qwen3-Coder-30B-A3B (19 GB, 3.3B active) for a coder-tuned model',
           '12 GB: Qwen2.5-Coder 14B (9.0 GB, 89.6 HumanEval)',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ['Model', 'Ollama download', 'Context', 'Best for'],
         rows: [
-            { 'Model': 'Qwen3.8-27B', 'Ollama download': '18 GB', 'Context': '256K', 'Best for': '24 GB GPU or Mac: newest, general' },
+            { 'Model': 'Qwen3.8-27B', 'Ollama download': '18 GB', 'Context': '256K', 'Best for': '24 GB GPU or 32 GB Mac: newest, general' },
             { 'Model': 'Qwen3.6 35B-A3B', 'Ollama download': '23–24 GB', 'Context': '256K', 'Best for': '32 GB memory: MoE, 3B active' },
             { 'Model': 'Qwen3-Coder-30B-A3B', 'Ollama download': '19 GB', 'Context': '256K', 'Best for': '24 GB GPU: coder-tuned MoE' },
             { 'Model': 'Qwen2.5-Coder 14B', 'Ollama download': '9.0 GB', 'Context': '32K', 'Best for': '12 GB GPU (RTX 3060 / 4070)' },
@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'verdict',
         title: 'Pick a Qwen Coding Model by VRAM Tier',
         content: [
-          '<strong>24 GB (RTX 3090, RTX 4090, Mac with 24 GB or more):</strong> Qwen3.8-27B (<code>qwen3.8:27b</code>, 18 GB). <a href="https://unsloth.ai/docs/models/qwen3.8" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Unsloth</a> lists 16–19 GB of memory for 4-bit, so leave room for context. Choose Qwen3-Coder-30B-A3B (19 GB) if you want a coder-tuned model: only 3.3B parameters are active per token, and its model card documents a tool-calling format for coding agents.',
+          '<strong>24 GB (RTX 3090, RTX 4090) or a Mac with 32 GB or more (macOS reserves about 8 GB):</strong> Qwen3.8-27B (<code>qwen3.8:27b</code>, 18 GB). <a href="https://unsloth.ai/docs/models/qwen3.8" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Unsloth</a> lists 16–19 GB of memory for 4-bit, so leave room for context. Choose Qwen3-Coder-30B-A3B (19 GB) if you want a coder-tuned model: only 3.3B parameters are active per token, and its model card documents a tool-calling format for coding agents.',
           '<strong>12–16 GB (RTX 3060 12 GB, RTX 4070):</strong> Qwen2.5-Coder 14B (9.0 GB). It is a November 2024 model with a 32K context window on Ollama, but it is still the newest dedicated Qwen coder at this size.',
           '<strong>8 GB (RTX 3060 8 GB, RTX 4060):</strong> Qwen2.5-Coder 7B (4.7 GB) for autocomplete and short functions. Qwen3.5 9B (6.6–7.6 GB) is the alternative if you also want chat and image input.',
           '<strong>No GPU:</strong> a 7B or smaller model in system RAM works for occasional generation. Speed depends on memory bandwidth, so test it before you rely on it for live autocomplete.',
@@ -119,7 +119,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Bestes Qwen-Modell für Coding (2026): nach GPU-VRAM',
     metaDescription: 'Bestes Qwen-Modell für Coding: Qwen3.8-27B bei 24 GB, Qwen2.5-Coder 14B bei 12 GB, 7B bei 8 GB. Ein Qwen3-Coder 14B existiert nicht. Größen, Ollama-Tags, VRAM.',
     publishDate: '2026-05-26',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     educationalLevel: 'Intermediate',
@@ -130,7 +130,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Bestes Qwen-Modell für Coding?',
-        answer: 'Qwen3.8-27B ist das beste Qwen-Modell für Coding auf einer 24-GB-GPU oder einem Mac (18 GB Download, Apache 2.0, 256K Kontext). Mit 12 GB passt Qwen2.5-Coder 14B (9,0 GB) als dedizierter Qwen-Coder, mit 8 GB Qwen2.5-Coder 7B (4,7 GB). Ein Qwen3-Coder 14B gibt es nicht: Qwen3-Coder beginnt bei einem 30B-Mixture-of-Experts-Modell (19 GB). Dieses Ranking beruht auf Qwens eigenen Benchmark-Angaben, die wir nicht nachgemessen haben.',
+        answer: 'Qwen3.8-27B ist das beste Qwen-Modell für Coding auf einer 24-GB-GPU oder einem Mac mit 32 GB (18 GB Download, Apache 2.0, 256K Kontext). Mit 12 GB passt Qwen2.5-Coder 14B (9,0 GB) als dedizierter Qwen-Coder, mit 8 GB Qwen2.5-Coder 7B (4,7 GB). Ein Qwen3-Coder 14B gibt es nicht: Qwen3-Coder beginnt bei einem 30B-Mixture-of-Experts-Modell (19 GB). Dieses Ranking beruht auf Qwens eigenen Benchmark-Angaben, die wir nicht nachgemessen haben.',
         bullets: [
           '24 GB: Qwen3.8-27B (18 GB) oder Qwen3-Coder-30B-A3B (19 GB, 3,3B aktiv) als auf Code abgestimmtes Modell',
           '12 GB: Qwen2.5-Coder 14B (9,0 GB, 89,6 HumanEval)',
@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ['Modell', 'Ollama-Download', 'Kontext', 'Geeignet für'],
         rows: [
-            { 'Modell': 'Qwen3.8-27B', 'Ollama-Download': '18 GB', 'Kontext': '256K', 'Geeignet für': '24-GB-GPU oder Mac: neu, allgemein' },
+            { 'Modell': 'Qwen3.8-27B', 'Ollama-Download': '18 GB', 'Kontext': '256K', 'Geeignet für': '24-GB-GPU oder 32-GB-Mac: neu, allgemein' },
             { 'Modell': 'Qwen3.6 35B-A3B', 'Ollama-Download': '23–24 GB', 'Kontext': '256K', 'Geeignet für': '32 GB Speicher: MoE, 3B aktiv' },
             { 'Modell': 'Qwen3-Coder-30B-A3B', 'Ollama-Download': '19 GB', 'Kontext': '256K', 'Geeignet für': '24-GB-GPU: Coder-MoE' },
             { 'Modell': 'Qwen2.5-Coder 14B', 'Ollama-Download': '9,0 GB', 'Kontext': '32K', 'Geeignet für': '12-GB-GPU (RTX 3060 / 4070)' },
@@ -178,7 +178,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'verdict',
         title: 'Qwen-Coding-Modell nach VRAM-Stufe wählen',
         content: [
-          '<strong>24 GB (RTX 3090, RTX 4090, Mac mit 24 GB oder mehr):</strong> Qwen3.8-27B (<code>qwen3.8:27b</code>, 18 GB). <a href="https://unsloth.ai/docs/models/qwen3.8" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Unsloth</a> nennt 16–19 GB Speicher für 4-Bit, lassen Sie also Platz für den Kontext. Wählen Sie Qwen3-Coder-30B-A3B (19 GB), wenn Sie ein auf Code abgestimmtes Modell wollen: Pro Token sind nur 3,3B Parameter aktiv, und die Model Card dokumentiert ein Tool-Calling-Format für Coding-Agenten.',
+          '<strong>24 GB (RTX 3090, RTX 4090) oder ein Mac mit 32 GB oder mehr (macOS belegt etwa 8 GB):</strong> Qwen3.8-27B (<code>qwen3.8:27b</code>, 18 GB). <a href="https://unsloth.ai/docs/models/qwen3.8" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Unsloth</a> nennt 16–19 GB Speicher für 4-Bit, lassen Sie also Platz für den Kontext. Wählen Sie Qwen3-Coder-30B-A3B (19 GB), wenn Sie ein auf Code abgestimmtes Modell wollen: Pro Token sind nur 3,3B Parameter aktiv, und die Model Card dokumentiert ein Tool-Calling-Format für Coding-Agenten.',
           '<strong>12–16 GB (RTX 3060 12 GB, RTX 4070):</strong> Qwen2.5-Coder 14B (9,0 GB). Es ist ein Modell von November 2024 mit 32K Kontextfenster auf Ollama, aber weiterhin der neueste dedizierte Qwen-Coder dieser Größe.',
           '<strong>8 GB (RTX 3060 8 GB, RTX 4060):</strong> Qwen2.5-Coder 7B (4,7 GB) für Autovervollständigung und kurze Funktionen. Qwen3.5 9B (6,6–7,6 GB) ist die Alternative, wenn Sie zusätzlich Chat und Bildeingabe wollen.',
           '<strong>Ohne GPU:</strong> Ein Modell mit 7B oder weniger im Arbeitsspeicher genügt für gelegentliche Generierung. Die Geschwindigkeit hängt von der Speicherbandbreite ab, testen Sie also, bevor Sie sich für Live-Autovervollständigung darauf verlassen.',
@@ -225,7 +225,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Meilleur modèle Qwen pour coder (2026) : selon la VRAM',
     metaDescription: 'Meilleur modèle Qwen pour coder : Qwen3.8-27B à 24 Go, Qwen2.5-Coder 14B à 12 Go, 7B à 8 Go. Qwen3-Coder 14B n’existe pas. Tailles, tags Ollama, VRAM.',
     publishDate: '2026-05-26',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     educationalLevel: 'Intermediate',
@@ -236,7 +236,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Meilleur modèle Qwen pour le codage ?',
-        answer: 'Qwen3.8-27B est le meilleur modèle Qwen pour coder sur un GPU ou un Mac de 24 Go (18 Go à télécharger, Apache 2.0, contexte 256K). À 12 Go, Qwen2.5-Coder 14B (9,0 Go) est le modèle Qwen dédié au code qui convient ; à 8 Go, Qwen2.5-Coder 7B (4,7 Go). Qwen3-Coder 14B n’existe pas : Qwen3-Coder commence à un modèle à mélange d’experts de 30B (19 Go). Ce classement repose sur les benchmarks publiés par Qwen, que nous n’avons pas reproduits.',
+        answer: 'Qwen3.8-27B est le meilleur modèle Qwen pour coder sur un GPU de 24 Go ou un Mac de 32 Go (18 Go à télécharger, Apache 2.0, contexte 256K). À 12 Go, Qwen2.5-Coder 14B (9,0 Go) est le modèle Qwen dédié au code qui convient ; à 8 Go, Qwen2.5-Coder 7B (4,7 Go). Qwen3-Coder 14B n’existe pas : Qwen3-Coder commence à un modèle à mélange d’experts de 30B (19 Go). Ce classement repose sur les benchmarks publiés par Qwen, que nous n’avons pas reproduits.',
         bullets: [
           '24 Go : Qwen3.8-27B (18 Go), ou Qwen3-Coder-30B-A3B (19 Go, 3,3B actifs) pour un modèle orienté code',
           '12 Go : Qwen2.5-Coder 14B (9,0 Go, 89,6 HumanEval)',
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ['Modèle', 'Téléchargement Ollama', 'Contexte', 'Idéal pour'],
         rows: [
-            { 'Modèle': 'Qwen3.8-27B', 'Téléchargement Ollama': '18 GB', 'Contexte': '256K', 'Idéal pour': 'GPU ou Mac 24 Go : récent, généraliste' },
+            { 'Modèle': 'Qwen3.8-27B', 'Téléchargement Ollama': '18 GB', 'Contexte': '256K', 'Idéal pour': 'GPU 24 Go ou Mac 32 Go : récent, généraliste' },
             { 'Modèle': 'Qwen3.6 35B-A3B', 'Téléchargement Ollama': '23–24 GB', 'Contexte': '256K', 'Idéal pour': '32 Go de mémoire : MoE, 3B actifs' },
             { 'Modèle': 'Qwen3-Coder-30B-A3B', 'Téléchargement Ollama': '19 GB', 'Contexte': '256K', 'Idéal pour': 'GPU 24 Go : MoE orienté code' },
             { 'Modèle': 'Qwen2.5-Coder 14B', 'Téléchargement Ollama': '9,0 GB', 'Contexte': '32K', 'Idéal pour': 'GPU 12 Go (RTX 3060 / 4070)' },
@@ -284,7 +284,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'verdict',
         title: 'Choisir un modèle Qwen pour coder selon la VRAM',
         content: [
-          '<strong>24 Go (RTX 3090, RTX 4090, Mac avec 24 Go ou plus) :</strong> Qwen3.8-27B (<code>qwen3.8:27b</code>, 18 Go). <a href="https://unsloth.ai/docs/models/qwen3.8" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Unsloth</a> indique 16–19 Go de mémoire en 4 bits, prévoyez donc de la place pour le contexte. Choisissez Qwen3-Coder-30B-A3B (19 Go) si vous voulez un modèle orienté code : seuls 3,3B paramètres sont actifs par token, et sa fiche modèle documente un format d’appel d’outils pour les agents de codage.',
+          '<strong>24 Go (RTX 3090, RTX 4090) ou Mac avec 32 Go ou plus (macOS en réserve environ 8 Go) :</strong> Qwen3.8-27B (<code>qwen3.8:27b</code>, 18 Go). <a href="https://unsloth.ai/docs/models/qwen3.8" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Unsloth</a> indique 16–19 Go de mémoire en 4 bits, prévoyez donc de la place pour le contexte. Choisissez Qwen3-Coder-30B-A3B (19 Go) si vous voulez un modèle orienté code : seuls 3,3B paramètres sont actifs par token, et sa fiche modèle documente un format d’appel d’outils pour les agents de codage.',
           '<strong>12–16 Go (RTX 3060 12 Go, RTX 4070) :</strong> Qwen2.5-Coder 14B (9,0 Go). C’est un modèle de novembre 2024 avec une fenêtre de contexte de 32K sur Ollama, mais c’est toujours le modèle Qwen dédié au code le plus récent à cette taille.',
           '<strong>8 Go (RTX 3060 8 Go, RTX 4060) :</strong> Qwen2.5-Coder 7B (4,7 Go) pour l’autocomplétion et les fonctions courtes. Qwen3.5 9B (6,6–7,6 Go) est l’alternative si vous voulez aussi le chat et l’entrée image.',
           '<strong>Sans GPU :</strong> un modèle de 7B ou moins en RAM convient à une génération occasionnelle. La vitesse dépend de la bande passante mémoire ; testez avant de compter dessus pour l’autocomplétion en direct.',
@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'コーディング向けQwenモデル最適解2026｜VRAM別',
     metaDescription: 'コーディング向けQwen：24 GBはQwen3.8-27B、12 GBはQwen2.5-Coder 14B、8 GBは7B。Qwen3-Coder 14Bは存在しません。サイズ・Ollamaタグ・VRAMを整理。',
     publishDate: '2026-05-26',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     educationalLevel: 'Intermediate',
@@ -342,7 +342,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'コーディングに最適なQwenモデルは？',
-        answer: '24 GBのGPUまたはMacならQwen3.8-27Bが最適です（ダウンロード18 GB、Apache 2.0、256Kコンテキスト）。12 GBで収まるコード専用Qwenは Qwen2.5-Coder 14B（9.0 GB）、8 GBならQwen2.5-Coder 7B（4.7 GB）です。Qwen3-Coder 14Bは存在せず、Qwen3-Coderは30Bのエキスパート混合モデル（19 GB）から始まります。このランキングはQwen自身が報告したベンチマークに基づいており、当サイトでは再現していません。',
+        answer: '24 GBのGPUまたは32 GBのMacならQwen3.8-27Bが最適です（ダウンロード18 GB、Apache 2.0、256Kコンテキスト）。12 GBで収まるコード専用Qwenは Qwen2.5-Coder 14B（9.0 GB）、8 GBならQwen2.5-Coder 7B（4.7 GB）です。Qwen3-Coder 14Bは存在せず、Qwen3-Coderは30Bのエキスパート混合モデル（19 GB）から始まります。このランキングはQwen自身が報告したベンチマークに基づいており、当サイトでは再現していません。',
         bullets: [
           '24 GB：Qwen3.8-27B（18 GB）、またはコード特化のQwen3-Coder-30B-A3B（19 GB、アクティブ3.3B）',
           '12 GB：Qwen2.5-Coder 14B（9.0 GB、HumanEval 89.6）',
@@ -378,7 +378,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ['モデル', 'Ollama DLサイズ', 'コンテキスト', '向いている環境'],
         rows: [
-            { 'モデル': 'Qwen3.8-27B', 'Ollama DLサイズ': '18 GB', 'コンテキスト': '256K', '向いている環境': '24 GB GPU/Mac：最新・汎用' },
+            { 'モデル': 'Qwen3.8-27B', 'Ollama DLサイズ': '18 GB', 'コンテキスト': '256K', '向いている環境': '24 GB GPUまたは32 GB Mac：最新・汎用' },
             { 'モデル': 'Qwen3.6 35B-A3B', 'Ollama DLサイズ': '23–24 GB', 'コンテキスト': '256K', '向いている環境': '32 GBメモリ：MoE、3Bアクティブ' },
             { 'モデル': 'Qwen3-Coder-30B-A3B', 'Ollama DLサイズ': '19 GB', 'コンテキスト': '256K', '向いている環境': '24 GB GPU：コード特化MoE' },
             { 'モデル': 'Qwen2.5-Coder 14B', 'Ollama DLサイズ': '9.0 GB', 'コンテキスト': '32K', '向いている環境': '12 GB GPU（RTX 3060/4070）' },
@@ -390,7 +390,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'verdict',
         title: 'VRAM別のQwenコーディングモデルの選び方',
         content: [
-          '<strong>24 GB（RTX 3090、RTX 4090、24 GB以上のMac）：</strong>Qwen3.8-27B（<code>qwen3.8:27b</code>、18 GB）。<a href="https://unsloth.ai/docs/models/qwen3.8" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Unsloth</a>は4ビットで16〜19 GBのメモリを挙げているため、コンテキスト用の余裕を残してください。コード特化モデルが欲しければQwen3-Coder-30B-A3B（19 GB）を選びます。トークンごとにアクティブなパラメータは3.3Bのみで、モデルカードにはコーディングエージェント向けのツール呼び出し形式が記載されています。',
+          '<strong>24 GB（RTX 3090、RTX 4090）または32 GB以上のMac（macOSが約8 GBを使用）：</strong>Qwen3.8-27B（<code>qwen3.8:27b</code>、18 GB）。<a href="https://unsloth.ai/docs/models/qwen3.8" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Unsloth</a>は4ビットで16〜19 GBのメモリを挙げているため、コンテキスト用の余裕を残してください。コード特化モデルが欲しければQwen3-Coder-30B-A3B（19 GB）を選びます。トークンごとにアクティブなパラメータは3.3Bのみで、モデルカードにはコーディングエージェント向けのツール呼び出し形式が記載されています。',
           '<strong>12〜16 GB（RTX 3060 12 GB、RTX 4070）：</strong>Qwen2.5-Coder 14B（9.0 GB）。2024年11月のモデルでOllamaでは32Kコンテキストですが、このサイズでは最新のコード専用Qwenです。',
           '<strong>8 GB（RTX 3060 8 GB、RTX 4060）：</strong>オートコンプリートや短い関数にはQwen2.5-Coder 7B（4.7 GB）。チャットや画像入力も使いたい場合はQwen3.5 9B（6.6〜7.6 GB）が代替です。',
           '<strong>GPUなし：</strong>7B以下のモデルをシステムRAMで動かせば、時々の生成には使えます。速度はメモリ帯域に左右されるため、リアルタイムの補完に使う前に試してください。',
@@ -437,7 +437,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '编程最佳Qwen模型（2026）：按显存选择',
     metaDescription: '编程最佳Qwen模型：24 GB选Qwen3.8-27B，12 GB选Qwen2.5-Coder 14B，8 GB选7B。不存在Qwen3-Coder 14B。尺寸、Ollama标签与显存对照。',
     publishDate: '2026-05-26',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     educationalLevel: 'Intermediate',
@@ -448,7 +448,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '编程最佳Qwen模型是哪个？',
-        answer: '在24 GB显存的GPU或Mac上，Qwen3.8-27B是编程的最佳Qwen模型（下载18 GB，Apache 2.0，256K上下文）。12 GB显存可用的专用Qwen编程模型是Qwen2.5-Coder 14B（9.0 GB），8 GB则选Qwen2.5-Coder 7B（4.7 GB）。不存在Qwen3-Coder 14B：Qwen3-Coder从30B混合专家模型（19 GB）起步。该排名基于Qwen自己报告的基准成绩，我们未复现。',
+        answer: '在24 GB显存的GPU或32 GB内存的Mac上，Qwen3.8-27B是编程的最佳Qwen模型（下载18 GB，Apache 2.0，256K上下文）。12 GB显存可用的专用Qwen编程模型是Qwen2.5-Coder 14B（9.0 GB），8 GB则选Qwen2.5-Coder 7B（4.7 GB）。不存在Qwen3-Coder 14B：Qwen3-Coder从30B混合专家模型（19 GB）起步。该排名基于Qwen自己报告的基准成绩，我们未复现。',
         bullets: [
           '24 GB：Qwen3.8-27B（18 GB），或面向代码的Qwen3-Coder-30B-A3B（19 GB，激活参数3.3B）',
           '12 GB：Qwen2.5-Coder 14B（9.0 GB，HumanEval 89.6）',
@@ -484,7 +484,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ['模型', 'Ollama下载大小', '上下文', '适用环境'],
         rows: [
-            { '模型': 'Qwen3.8-27B', 'Ollama下载大小': '18 GB', '上下文': '256K', '适用环境': '24 GB GPU或Mac：最新、通用' },
+            { '模型': 'Qwen3.8-27B', 'Ollama下载大小': '18 GB', '上下文': '256K', '适用环境': '24 GB GPU或32 GB Mac：最新、通用' },
             { '模型': 'Qwen3.6 35B-A3B', 'Ollama下载大小': '23–24 GB', '上下文': '256K', '适用环境': '32 GB内存：MoE，激活3B' },
             { '模型': 'Qwen3-Coder-30B-A3B', 'Ollama下载大小': '19 GB', '上下文': '256K', '适用环境': '24 GB GPU：面向代码的MoE' },
             { '模型': 'Qwen2.5-Coder 14B', 'Ollama下载大小': '9.0 GB', '上下文': '32K', '适用环境': '12 GB GPU（RTX 3060 / 4070）' },
@@ -496,7 +496,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'verdict',
         title: '按显存档位选择Qwen编程模型',
         content: [
-          '<strong>24 GB（RTX 3090、RTX 4090、24 GB及以上的Mac）：</strong>Qwen3.8-27B（<code>qwen3.8:27b</code>，18 GB）。<a href="https://unsloth.ai/docs/models/qwen3.8" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Unsloth</a>给出4位量化需要16–19 GB内存，请为上下文留出空间。如果想要面向代码的模型，选Qwen3-Coder-30B-A3B（19 GB）：每个token只激活3.3B参数，其模型卡记录了面向编程智能体的工具调用格式。',
+          '<strong>24 GB（RTX 3090、RTX 4090）或32 GB及以上的Mac（macOS约占用8 GB）：</strong>Qwen3.8-27B（<code>qwen3.8:27b</code>，18 GB）。<a href="https://unsloth.ai/docs/models/qwen3.8" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Unsloth</a>给出4位量化需要16–19 GB内存，请为上下文留出空间。如果想要面向代码的模型，选Qwen3-Coder-30B-A3B（19 GB）：每个token只激活3.3B参数，其模型卡记录了面向编程智能体的工具调用格式。',
           '<strong>12–16 GB（RTX 3060 12 GB、RTX 4070）：</strong>Qwen2.5-Coder 14B（9.0 GB）。它是2024年11月的模型，在Ollama上上下文为32K，但仍是该尺寸下最新的专用Qwen编程模型。',
           '<strong>8 GB（RTX 3060 8 GB、RTX 4060）：</strong>用Qwen2.5-Coder 7B（4.7 GB）做代码补全和短函数。若还想要聊天和图像输入，可选Qwen3.5 9B（6.6–7.6 GB）。',
           '<strong>无GPU：</strong>在系统内存中运行7B或更小的模型，适合偶尔生成。速度取决于内存带宽，用于实时补全之前请先测试。',
@@ -543,7 +543,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejor modelo Qwen para programar (2026): según VRAM',
     metaDescription: 'Mejor modelo Qwen para programar: Qwen3.8-27B con 24 GB, Qwen2.5-Coder 14B con 12 GB, 7B con 8 GB. No existe Qwen3-Coder 14B. Tamaños, tags de Ollama, VRAM.',
     publishDate: '2026-05-26',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     educationalLevel: 'Intermediate',
@@ -554,7 +554,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Cuál es el mejor modelo Qwen para programar?',
-        answer: 'Qwen3.8-27B es el mejor modelo Qwen para programar en una GPU o Mac de 24 GB (descarga de 18 GB, Apache 2.0, contexto de 256K). Con 12 GB, Qwen2.5-Coder 14B (9,0 GB) es el Qwen dedicado a código que cabe; con 8 GB, Qwen2.5-Coder 7B (4,7 GB). No existe Qwen3-Coder 14B: Qwen3-Coder empieza en un modelo de mezcla de expertos de 30B (19 GB). Esta clasificación se basa en los benchmarks que publica Qwen, que no hemos reproducido.',
+        answer: 'Qwen3.8-27B es el mejor modelo Qwen para programar en una GPU de 24 GB o un Mac de 32 GB (descarga de 18 GB, Apache 2.0, contexto de 256K). Con 12 GB, Qwen2.5-Coder 14B (9,0 GB) es el Qwen dedicado a código que cabe; con 8 GB, Qwen2.5-Coder 7B (4,7 GB). No existe Qwen3-Coder 14B: Qwen3-Coder empieza en un modelo de mezcla de expertos de 30B (19 GB). Esta clasificación se basa en los benchmarks que publica Qwen, que no hemos reproducido.',
         bullets: [
           '24 GB: Qwen3.8-27B (18 GB), o Qwen3-Coder-30B-A3B (19 GB, 3,3B activos) como modelo orientado a código',
           '12 GB: Qwen2.5-Coder 14B (9,0 GB, 89,6 HumanEval)',
@@ -590,7 +590,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ['Modelo', 'Descarga Ollama', 'Contexto', 'Ideal para'],
         rows: [
-            { 'Modelo': 'Qwen3.8-27B', 'Descarga Ollama': '18 GB', 'Contexto': '256K', 'Ideal para': 'GPU o Mac de 24 GB: reciente, general' },
+            { 'Modelo': 'Qwen3.8-27B', 'Descarga Ollama': '18 GB', 'Contexto': '256K', 'Ideal para': 'GPU de 24 GB o Mac de 32 GB: reciente, general' },
             { 'Modelo': 'Qwen3.6 35B-A3B', 'Descarga Ollama': '23–24 GB', 'Contexto': '256K', 'Ideal para': '32 GB de memoria: MoE, 3B activos' },
             { 'Modelo': 'Qwen3-Coder-30B-A3B', 'Descarga Ollama': '19 GB', 'Contexto': '256K', 'Ideal para': 'GPU de 24 GB: MoE para código' },
             { 'Modelo': 'Qwen2.5-Coder 14B', 'Descarga Ollama': '9,0 GB', 'Contexto': '32K', 'Ideal para': 'GPU de 12 GB (RTX 3060 / 4070)' },
@@ -602,7 +602,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'verdict',
         title: 'Elige un modelo Qwen para programar según la VRAM',
         content: [
-          '<strong>24 GB (RTX 3090, RTX 4090, Mac con 24 GB o más):</strong> Qwen3.8-27B (<code>qwen3.8:27b</code>, 18 GB). <a href="https://unsloth.ai/docs/models/qwen3.8" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Unsloth</a> indica 16–19 GB de memoria en 4 bits, así que deja espacio para el contexto. Elige Qwen3-Coder-30B-A3B (19 GB) si quieres un modelo orientado a código: solo 3,3B parámetros están activos por token y su ficha documenta un formato de llamada a herramientas para agentes de programación.',
+          '<strong>24 GB (RTX 3090, RTX 4090) o Mac con 32 GB o más (macOS reserva unos 8 GB):</strong> Qwen3.8-27B (<code>qwen3.8:27b</code>, 18 GB). <a href="https://unsloth.ai/docs/models/qwen3.8" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Unsloth</a> indica 16–19 GB de memoria en 4 bits, así que deja espacio para el contexto. Elige Qwen3-Coder-30B-A3B (19 GB) si quieres un modelo orientado a código: solo 3,3B parámetros están activos por token y su ficha documenta un formato de llamada a herramientas para agentes de programación.',
           '<strong>12–16 GB (RTX 3060 12 GB, RTX 4070):</strong> Qwen2.5-Coder 14B (9,0 GB). Es un modelo de noviembre de 2024 con ventana de contexto de 32K en Ollama, pero sigue siendo el Qwen dedicado a código más reciente de este tamaño.',
           '<strong>8 GB (RTX 3060 8 GB, RTX 4060):</strong> Qwen2.5-Coder 7B (4,7 GB) para autocompletado y funciones cortas. Qwen3.5 9B (6,6–7,6 GB) es la alternativa si también quieres chat y entrada de imagen.',
           '<strong>Sin GPU:</strong> un modelo de 7B o menos en la RAM sirve para generación ocasional. La velocidad depende del ancho de banda de memoria, así que pruébalo antes de usarlo para autocompletado en vivo.',
@@ -649,7 +649,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhor modelo Qwen para programar (2026): por VRAM',
     metaDescription: 'Melhor modelo Qwen para programar: Qwen3.8-27B com 24 GB, Qwen2.5-Coder 14B com 12 GB, 7B com 8 GB. Não existe Qwen3-Coder 14B. Tamanhos, tags do Ollama, VRAM.',
     publishDate: '2026-05-26',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     educationalLevel: 'Intermediate',
@@ -660,7 +660,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'Qual é o melhor modelo Qwen para programar?',
-        answer: 'O Qwen3.8-27B é o melhor modelo Qwen para programar em uma GPU ou Mac de 24 GB (download de 18 GB, Apache 2.0, contexto de 256K). Com 12 GB, o Qwen2.5-Coder 14B (9,0 GB) é o Qwen dedicado a código que cabe; com 8 GB, o Qwen2.5-Coder 7B (4,7 GB). Não existe Qwen3-Coder 14B: o Qwen3-Coder começa em um modelo de mistura de especialistas de 30B (19 GB). Este ranking se baseia nos benchmarks divulgados pela Qwen, que não reproduzimos.',
+        answer: 'O Qwen3.8-27B é o melhor modelo Qwen para programar em uma GPU de 24 GB ou Mac de 32 GB (download de 18 GB, Apache 2.0, contexto de 256K). Com 12 GB, o Qwen2.5-Coder 14B (9,0 GB) é o Qwen dedicado a código que cabe; com 8 GB, o Qwen2.5-Coder 7B (4,7 GB). Não existe Qwen3-Coder 14B: o Qwen3-Coder começa em um modelo de mistura de especialistas de 30B (19 GB). Este ranking se baseia nos benchmarks divulgados pela Qwen, que não reproduzimos.',
         bullets: [
           '24 GB: Qwen3.8-27B (18 GB) ou Qwen3-Coder-30B-A3B (19 GB, 3,3B ativos) como modelo voltado a código',
           '12 GB: Qwen2.5-Coder 14B (9,0 GB, 89,6 HumanEval)',
@@ -696,7 +696,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ['Modelo', 'Download no Ollama', 'Contexto', 'Ideal para'],
         rows: [
-            { 'Modelo': 'Qwen3.8-27B', 'Download no Ollama': '18 GB', 'Contexto': '256K', 'Ideal para': 'GPU ou Mac de 24 GB: recente, geral' },
+            { 'Modelo': 'Qwen3.8-27B', 'Download no Ollama': '18 GB', 'Contexto': '256K', 'Ideal para': 'GPU de 24 GB ou Mac de 32 GB: recente, geral' },
             { 'Modelo': 'Qwen3.6 35B-A3B', 'Download no Ollama': '23–24 GB', 'Contexto': '256K', 'Ideal para': '32 GB de memória: MoE, 3B ativos' },
             { 'Modelo': 'Qwen3-Coder-30B-A3B', 'Download no Ollama': '19 GB', 'Contexto': '256K', 'Ideal para': 'GPU de 24 GB: MoE para código' },
             { 'Modelo': 'Qwen2.5-Coder 14B', 'Download no Ollama': '9,0 GB', 'Contexto': '32K', 'Ideal para': 'GPU de 12 GB (RTX 3060 / 4070)' },
@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'verdict',
         title: 'Escolha um modelo Qwen para programar por faixa de VRAM',
         content: [
-          '<strong>24 GB (RTX 3090, RTX 4090, Mac com 24 GB ou mais):</strong> Qwen3.8-27B (<code>qwen3.8:27b</code>, 18 GB). A <a href="https://unsloth.ai/docs/models/qwen3.8" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Unsloth</a> informa 16–19 GB de memória em 4 bits, então deixe espaço para o contexto. Escolha o Qwen3-Coder-30B-A3B (19 GB) se quiser um modelo voltado a código: apenas 3,3B parâmetros ficam ativos por token, e a ficha do modelo documenta um formato de chamada de ferramentas para agentes de programação.',
+          '<strong>24 GB (RTX 3090, RTX 4090) ou Mac com 32 GB ou mais (o macOS reserva cerca de 8 GB):</strong> Qwen3.8-27B (<code>qwen3.8:27b</code>, 18 GB). A <a href="https://unsloth.ai/docs/models/qwen3.8" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Unsloth</a> informa 16–19 GB de memória em 4 bits, então deixe espaço para o contexto. Escolha o Qwen3-Coder-30B-A3B (19 GB) se quiser um modelo voltado a código: apenas 3,3B parâmetros ficam ativos por token, e a ficha do modelo documenta um formato de chamada de ferramentas para agentes de programação.',
           '<strong>12–16 GB (RTX 3060 12 GB, RTX 4070):</strong> Qwen2.5-Coder 14B (9,0 GB). É um modelo de novembro de 2024 com janela de contexto de 32K no Ollama, mas continua sendo o Qwen dedicado a código mais recente nesse tamanho.',
           '<strong>8 GB (RTX 3060 8 GB, RTX 4060):</strong> Qwen2.5-Coder 7B (4,7 GB) para autocompletar e funções curtas. O Qwen3.5 9B (6,6–7,6 GB) é a alternativa se você também quiser chat e entrada de imagem.',
           '<strong>Sem GPU:</strong> um modelo de 7B ou menos na RAM serve para geração ocasional. A velocidade depende da largura de banda da memória, então teste antes de contar com ele para autocompletar ao vivo.',
@@ -755,7 +755,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل نموذج Qwen للبرمجة (2026): حسب VRAM',
     metaDescription: 'أفضل نموذج Qwen للبرمجة: Qwen3.8-27B عند 24 GB، وQwen2.5-Coder 14B عند 12 GB، و7B عند 8 GB. لا يوجد Qwen3-Coder 14B. الأحجام ووسوم Ollama وVRAM.',
     publishDate: '2026-05-26',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     educationalLevel: 'Intermediate',
@@ -766,7 +766,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'ما هو أفضل نموذج Qwen للبرمجة؟',
-        answer: 'Qwen3.8-27B هو أفضل نموذج Qwen للبرمجة على بطاقة GPU أو جهاز Mac بذاكرة 24 GB (تنزيل 18 GB، ترخيص Apache 2.0، سياق 256K). عند 12 GB يناسبك Qwen2.5-Coder 14B (9.0 GB) وهو نموذج Qwen المخصص للبرمجة، وعند 8 GB يناسبك Qwen2.5-Coder 7B (4.7 GB). لا يوجد Qwen3-Coder 14B: يبدأ Qwen3-Coder من نموذج مزيج خبراء بحجم 30B (19 GB). يستند هذا الترتيب إلى معايير أعلنتها Qwen نفسها ولم نعد إنتاجها.',
+        answer: 'Qwen3.8-27B هو أفضل نموذج Qwen للبرمجة على بطاقة GPU بذاكرة 24 GB أو جهاز Mac بذاكرة 32 GB (تنزيل 18 GB، ترخيص Apache 2.0، سياق 256K). عند 12 GB يناسبك Qwen2.5-Coder 14B (9.0 GB) وهو نموذج Qwen المخصص للبرمجة، وعند 8 GB يناسبك Qwen2.5-Coder 7B (4.7 GB). لا يوجد Qwen3-Coder 14B: يبدأ Qwen3-Coder من نموذج مزيج خبراء بحجم 30B (19 GB). يستند هذا الترتيب إلى معايير أعلنتها Qwen نفسها ولم نعد إنتاجها.',
         bullets: [
           '24 GB: Qwen3.8-27B (18 GB)، أو Qwen3-Coder-30B-A3B (19 GB، 3.3B نشطة) كنموذج موجّه للبرمجة',
           '12 GB: Qwen2.5-Coder 14B (9.0 GB، HumanEval 89.6)',
@@ -802,7 +802,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ['النموذج', 'تنزيل Ollama', 'السياق', 'الأنسب لـ'],
         rows: [
-            { 'النموذج': 'Qwen3.8-27B', 'تنزيل Ollama': '18 GB', 'السياق': '256K', 'الأنسب لـ': 'GPU أو Mac بـ24 GB: أحدث، عام' },
+            { 'النموذج': 'Qwen3.8-27B', 'تنزيل Ollama': '18 GB', 'السياق': '256K', 'الأنسب لـ': 'GPU بـ24 GB أو Mac بـ32 GB: أحدث، عام' },
             { 'النموذج': 'Qwen3.6 35B-A3B', 'تنزيل Ollama': '23–24 GB', 'السياق': '256K', 'الأنسب لـ': 'ذاكرة 32 GB: MoE، 3B نشطة' },
             { 'النموذج': 'Qwen3-Coder-30B-A3B', 'تنزيل Ollama': '19 GB', 'السياق': '256K', 'الأنسب لـ': 'GPU بـ24 GB: MoE للبرمجة' },
             { 'النموذج': 'Qwen2.5-Coder 14B', 'تنزيل Ollama': '9.0 GB', 'السياق': '32K', 'الأنسب لـ': 'GPU بـ12 GB (RTX 3060 / 4070)' },
@@ -814,7 +814,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'verdict',
         title: 'اختر نموذج Qwen للبرمجة حسب فئة VRAM',
         content: [
-          '<strong>24 GB (RTX 3090 وRTX 4090 وMac بذاكرة 24 GB أو أكثر):</strong> Qwen3.8-27B (<code>qwen3.8:27b</code>، 18 GB). تذكر <a href="https://unsloth.ai/docs/models/qwen3.8" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Unsloth</a> ما بين 16 و19 GB من الذاكرة لـ4 بت، فاترك مساحة للسياق. اختر Qwen3-Coder-30B-A3B (19 GB) إن أردت نموذجاً موجهاً للبرمجة: 3.3B معاملات فقط نشطة لكل رمز، وتوثق بطاقته صيغة استدعاء أدوات لوكلاء البرمجة.',
+          '<strong>24 GB (RTX 3090 وRTX 4090) أو Mac بذاكرة 32 GB أو أكثر (يحتفظ macOS بنحو 8 GB):</strong> Qwen3.8-27B (<code>qwen3.8:27b</code>، 18 GB). تذكر <a href="https://unsloth.ai/docs/models/qwen3.8" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Unsloth</a> ما بين 16 و19 GB من الذاكرة لـ4 بت، فاترك مساحة للسياق. اختر Qwen3-Coder-30B-A3B (19 GB) إن أردت نموذجاً موجهاً للبرمجة: 3.3B معاملات فقط نشطة لكل رمز، وتوثق بطاقته صيغة استدعاء أدوات لوكلاء البرمجة.',
           '<strong>12–16 GB (RTX 3060 12 GB وRTX 4070):</strong> Qwen2.5-Coder 14B (9.0 GB). نموذج من نوفمبر 2024 بنافذة سياق 32K في Ollama، لكنه يظل أحدث نموذج Qwen مخصص للبرمجة بهذا الحجم.',
           '<strong>8 GB (RTX 3060 8 GB وRTX 4060):</strong> Qwen2.5-Coder 7B (4.7 GB) للإكمال التلقائي والدوال القصيرة. وQwen3.5 9B (6.6–7.6 GB) بديل إن أردت المحادثة وإدخال الصور أيضاً.',
           '<strong>بلا GPU:</strong> نموذج بحجم 7B أو أقل في ذاكرة النظام يصلح للتوليد العرضي. تعتمد السرعة على عرض نطاق الذاكرة، فاختبره قبل الاعتماد عليه في الإكمال التلقائي الفوري.',
@@ -861,7 +861,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '코딩용 최고의 Qwen 모델(2026): VRAM별 선택',
     metaDescription: '코딩용 최고의 Qwen 모델: 24 GB는 Qwen3.8-27B, 12 GB는 Qwen2.5-Coder 14B, 8 GB는 7B. Qwen3-Coder 14B는 없습니다. 크기, Ollama 태그, VRAM 정리.',
     publishDate: '2026-05-26',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     educationalLevel: 'Intermediate',
@@ -872,7 +872,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '코딩에 가장 좋은 Qwen 모델은?',
-        answer: '24 GB GPU나 Mac에서는 Qwen3.8-27B가 코딩에 가장 좋은 Qwen 모델입니다(다운로드 18 GB, Apache 2.0, 256K 컨텍스트). 12 GB에서 들어가는 코딩 전용 Qwen은 Qwen2.5-Coder 14B(9.0 GB)이고, 8 GB에서는 Qwen2.5-Coder 7B(4.7 GB)입니다. Qwen3-Coder 14B는 없습니다. Qwen3-Coder는 30B 전문가 혼합 모델(19 GB)부터 시작합니다. 이 순위는 Qwen이 직접 보고한 벤치마크에 근거하며 우리가 재현하지 않았습니다.',
+        answer: '24 GB GPU나 32 GB Mac에서는 Qwen3.8-27B가 코딩에 가장 좋은 Qwen 모델입니다(다운로드 18 GB, Apache 2.0, 256K 컨텍스트). 12 GB에서 들어가는 코딩 전용 Qwen은 Qwen2.5-Coder 14B(9.0 GB)이고, 8 GB에서는 Qwen2.5-Coder 7B(4.7 GB)입니다. Qwen3-Coder 14B는 없습니다. Qwen3-Coder는 30B 전문가 혼합 모델(19 GB)부터 시작합니다. 이 순위는 Qwen이 직접 보고한 벤치마크에 근거하며 우리가 재현하지 않았습니다.',
         bullets: [
           '24 GB: Qwen3.8-27B(18 GB), 또는 코드 특화 Qwen3-Coder-30B-A3B(19 GB, 활성 3.3B)',
           '12 GB: Qwen2.5-Coder 14B(9.0 GB, HumanEval 89.6)',
@@ -908,7 +908,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ['모델', 'Ollama 다운로드', '컨텍스트', '적합한 환경'],
         rows: [
-            { '모델': 'Qwen3.8-27B', 'Ollama 다운로드': '18 GB', '컨텍스트': '256K', '적합한 환경': '24 GB GPU/Mac: 최신, 범용' },
+            { '모델': 'Qwen3.8-27B', 'Ollama 다운로드': '18 GB', '컨텍스트': '256K', '적합한 환경': '24 GB GPU 또는 32 GB Mac: 최신, 범용' },
             { '모델': 'Qwen3.6 35B-A3B', 'Ollama 다운로드': '23–24 GB', '컨텍스트': '256K', '적합한 환경': '32 GB 메모리: MoE, 활성 3B' },
             { '모델': 'Qwen3-Coder-30B-A3B', 'Ollama 다운로드': '19 GB', '컨텍스트': '256K', '적합한 환경': '24 GB GPU: 코드 특화 MoE' },
             { '모델': 'Qwen2.5-Coder 14B', 'Ollama 다운로드': '9.0 GB', '컨텍스트': '32K', '적합한 환경': '12 GB GPU(RTX 3060 / 4070)' },
@@ -920,7 +920,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'verdict',
         title: 'VRAM 구간별 Qwen 코딩 모델 선택',
         content: [
-          '<strong>24 GB(RTX 3090, RTX 4090, 24 GB 이상 Mac):</strong> Qwen3.8-27B(<code>qwen3.8:27b</code>, 18 GB). <a href="https://unsloth.ai/docs/models/qwen3.8" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Unsloth</a>는 4비트에 16~19 GB 메모리를 제시하므로 컨텍스트 공간을 남겨 두십시오. 코드 특화 모델을 원하면 Qwen3-Coder-30B-A3B(19 GB)를 고르십시오. 토큰당 활성 파라미터는 3.3B뿐이며, 모델 카드에는 코딩 에이전트용 도구 호출 형식이 문서화되어 있습니다.',
+          '<strong>24 GB(RTX 3090, RTX 4090) 또는 32 GB 이상 Mac(macOS가 약 8 GB 사용):</strong> Qwen3.8-27B(<code>qwen3.8:27b</code>, 18 GB). <a href="https://unsloth.ai/docs/models/qwen3.8" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Unsloth</a>는 4비트에 16~19 GB 메모리를 제시하므로 컨텍스트 공간을 남겨 두십시오. 코드 특화 모델을 원하면 Qwen3-Coder-30B-A3B(19 GB)를 고르십시오. 토큰당 활성 파라미터는 3.3B뿐이며, 모델 카드에는 코딩 에이전트용 도구 호출 형식이 문서화되어 있습니다.',
           '<strong>12~16 GB(RTX 3060 12 GB, RTX 4070):</strong> Qwen2.5-Coder 14B(9.0 GB). 2024년 11월 모델로 Ollama에서는 32K 컨텍스트이지만, 이 크기에서는 여전히 가장 새로운 코딩 전용 Qwen입니다.',
           '<strong>8 GB(RTX 3060 8 GB, RTX 4060):</strong> 자동 완성과 짧은 함수에는 Qwen2.5-Coder 7B(4.7 GB). 채팅과 이미지 입력도 원하면 Qwen3.5 9B(6.6~7.6 GB)가 대안입니다.',
           '<strong>GPU 없음:</strong> 7B 이하 모델을 시스템 RAM에서 돌리면 가끔 생성하는 용도로는 충분합니다. 속도는 메모리 대역폭에 좌우되므로 실시간 자동 완성에 쓰기 전에 직접 테스트하십시오.',

@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     title: 'Best Mini PC for Local LLM?',
     heroImage: '/images/best-mini-pc-for-local-llm-overview-hero-en.webp',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     seoTitle: 'Best Mini PC for Local LLM 2026 | PromptQuorum',
     metaDescription: 'Mac Mini M4 hits ~18 tok/s on 7B Q4. Minisforum UM790 Pro scales to 64 GB DDR5. Beelink SER8: ~8 tok/s on a budget. Three mini PC picks for local LLM 2026.',
     publishDate: '2026-05-18',
@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Can the Mac Mini M4 run a 13B model locally?',
-            a: 'Yes, with the 16 GB version at Q4 quantization the model fits with ~1 GB to spare. The 32 GB Mac Mini M4 Pro can comfortably run 13B and 30B Q4 models. Inference speed drops to ~10 tok/s for 13B Q4 on the base 16 GB M4. The outgoing M4 Pro maxed out at 64 GB; its successor, the M5 Pro (announced August 25, 2026), also reaches a 64 GB maximum, while the new base-tier M6 tops out lower at 32 GB.',
+            a: 'Only barely: the 16 GB version has about 8 GB usable after macOS reserves 8 GB, so a 13B Q4 model (~8 GB) leaves no room for context and 7–8B models are the realistic choice. The 32 GB Mac Mini M4 Pro (about 24 GB usable) runs 13B Q4 models with room to spare and 30B Q4 models (~18 GB) with limited context. Inference speed drops to ~10 tok/s for 13B Q4 on the base 16 GB M4. The outgoing M4 Pro maxed out at 64 GB; its successor, the M5 Pro (announced August 25, 2026), also reaches a 64 GB maximum, while the new base-tier M6 tops out lower at 32 GB.',
           },
           {
             q: 'Does the Minisforum UM790 Pro need ROCm for GPU acceleration?',
@@ -156,7 +156,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Bester Mini-PC für lokale LLMs 2026 | PromptQuorum',
     metaDescription: 'Mac Mini M4: ~18 tok/s bei 7B Q4. Minisforum UM790 Pro: bis 64 GB DDR5 skalierbar. Beelink SER8: ~8 tok/s günstig. Drei Mini-PC-Picks für lokale LLMs 2026.',
     publishDate: '2026-05-18',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -213,7 +213,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Kann der Mac Mini M4 ein 13B-Modell lokal ausführen?',
-            a: 'Ja, mit der 16-GB-Version bei Q4-Quantisierung passt das Modell mit ~1 GB Spielraum. Der Mac Mini M4 Pro mit 32 GB kann 13B- und 30B-Q4-Modelle problemlos ausführen. Die Inferenzgeschwindigkeit sinkt auf ~10 tok/s bei 13B Q4 auf dem Basis-M4 mit 16 GB. Der auslaufende M4 Pro erreichte maximal 64 GB; sein Nachfolger, der M5 Pro (angekündigt am 25. August 2026), erreicht ebenfalls maximal 64 GB, während der neue Basis-M6 mit 32 GB niedriger liegt.',
+            a: 'Nur knapp: Die 16-GB-Version hat nach den 8 GB, die macOS reserviert, etwa 8 GB nutzbar, sodass ein 13B-Q4-Modell (~8 GB) keinen Platz für den Kontext lässt; realistisch sind 7–8B-Modelle. Der Mac Mini M4 Pro mit 32 GB (etwa 24 GB nutzbar) führt 13B-Q4-Modelle mit Reserve und 30B-Q4-Modelle (~18 GB) mit begrenztem Kontext aus. Die Inferenzgeschwindigkeit sinkt auf ~10 tok/s bei 13B Q4 auf dem Basis-M4 mit 16 GB. Der auslaufende M4 Pro erreichte maximal 64 GB; sein Nachfolger, der M5 Pro (angekündigt am 25. August 2026), erreicht ebenfalls maximal 64 GB, während der neue Basis-M6 mit 32 GB niedriger liegt.',
           },
           {
             q: 'Benötigt der Minisforum UM790 Pro ROCm für GPU-Beschleunigung?',
@@ -253,7 +253,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Meilleur mini PC pour LLM local 2026 | PromptQuorum',
     metaDescription: 'Mac Mini M4 : ~18 tok/s, le plus rapide. UM790 Pro : 64 Go DDR5. Beelink SER8 : ~8 tok/s économique. Trois picks mini PC pour LLM local 2026.',
     publishDate: '2026-05-18',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -310,7 +310,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Le Mac Mini M4 peut-il faire tourner un modèle 13B localement ?',
-            a: 'Oui, avec la version 16 Go en quantification Q4, le modèle tient avec ~1 Go de marge. Le Mac Mini M4 Pro 32 Go peut exécuter confortablement des modèles 13B et 30B Q4. La vitesse d\'inférence descend à ~10 tok/s pour 13B Q4 sur le M4 de base 16 Go. Le M4 Pro sortant plafonnait à 64 Go ; son successeur, le M5 Pro (annoncé le 25 août 2026), atteint également 64 Go maximum, tandis que le nouveau M6 de base plafonne plus bas, à 32 Go.',
+            a: 'Tout juste : la version 16 Go dispose d\'environ 8 Go utilisables une fois les 8 Go de macOS réservés, si bien qu\'un modèle 13B Q4 (~8 Go) ne laisse aucune place au contexte ; les modèles 7–8B sont le choix réaliste. Le Mac Mini M4 Pro 32 Go (environ 24 Go utilisables) exécute les modèles 13B Q4 avec de la marge et les modèles 30B Q4 (~18 Go) avec un contexte limité. La vitesse d\'inférence descend à ~10 tok/s pour 13B Q4 sur le M4 de base 16 Go. Le M4 Pro sortant plafonnait à 64 Go ; son successeur, le M5 Pro (annoncé le 25 août 2026), atteint également 64 Go maximum, tandis que le nouveau M6 de base plafonne plus bas, à 32 Go.',
           },
           {
             q: 'Le Minisforum UM790 Pro nécessite-t-il ROCm pour l\'accélération GPU ?',
@@ -350,7 +350,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'ローカルLLM向けミニPC 2026：Mac Mini M4・UM790 Pro・Beelink',
     metaDescription: 'Mac Mini M4：最速、~18 tok/s。Minisforum UM790 Pro：64 GB RAM スケーリング。Beelink SER8：予算オプション。ローカルLLM向け 3 選。PromptQuorum による簡潔な回答。',
     publishDate: '2026-05-18',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -407,7 +407,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Mac Mini M4は13Bモデルをローカルで実行できますか？',
-            a: 'はい。Q4量子化での16 GBバージョンは、約1 GBの余裕を持ってモデルが収まります。32 GB Mac Mini M4 Proは13Bと30B Q4モデルを快適に実行できます。ベース16 GB M4での13B Q4の推論速度は~10 tok/sに低下します。現行のM4 Proは最大64GBでした。後継のM5 Pro（2026年8月25日発表）も最大64GBに達しますが、新しいベースM6はそれより低い32GBが上限です。',
+            a: 'ぎりぎりです。16 GB版はmacOSが8 GBを確保するため使えるのは約8 GBで、13B Q4モデル（約8 GB）ではコンテキストの余地がなく、現実的なのは7～8Bモデルです。32 GB Mac Mini M4 Pro（使用可能は約24 GB）なら13B Q4モデルは余裕を持って、30B Q4モデル（約18 GB）はコンテキストを抑えれば実行できます。ベース16 GB M4での13B Q4の推論速度は~10 tok/sに低下します。現行のM4 Proは最大64GBでした。後継のM5 Pro（2026年8月25日発表）も最大64GBに達しますが、新しいベースM6はそれより低い32GBが上限です。',
           },
           {
             q: 'Minisforum UM790 ProはGPUアクセラレーションにROCmが必要ですか？',
@@ -447,7 +447,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '本地LLM最佳迷你电脑 2026：Mac Mini M4・UM790 Pro・Beelink',
     metaDescription: 'Mac Mini M4：最快、约 18 tok/s。Minisforum UM790 Pro：64 GB 内存扩展。Beelink SER8：经济选择。本地 LLM 三大选择。PromptQuorum 快速解答。',
     publishDate: '2026-05-18',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -504,7 +504,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Mac Mini M4 可以在本地运行 13B 模型吗？',
-            a: '可以，16 GB 版本在 Q4 量化下模型可以放入，还有约 1 GB 余量。32 GB Mac Mini M4 Pro 可以舒适地运行 13B 和 30B Q4 模型。基础版 16 GB M4 上 13B Q4 的推理速度降至约 10 tok/s。现售的M4 Pro最高为64GB；其继任者M5 Pro（2026年8月25日发布）同样最高支持64GB，而新款基础版M6上限更低，为32GB。',
+            a: '勉强可以：16 GB 版本在 macOS 预留 8 GB 后只有约 8 GB 可用，13B Q4 模型（约 8 GB）没有给上下文留下空间，现实的选择是 7–8B 模型。32 GB Mac Mini M4 Pro（约 24 GB 可用）可以从容运行 13B Q4 模型，并能在上下文受限的情况下运行 30B Q4 模型（约 18 GB）。基础版 16 GB M4 上 13B Q4 的推理速度降至约 10 tok/s。现售的M4 Pro最高为64GB；其继任者M5 Pro（2026年8月25日发布）同样最高支持64GB，而新款基础版M6上限更低，为32GB。',
           },
           {
             q: 'Minisforum UM790 Pro 需要 ROCm 才能进行 GPU 加速吗？',
@@ -544,7 +544,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejor mini PC para LLM local 2026 | PromptQuorum',
     metaDescription: 'Mac Mini M4 alcanza ~18 tok/s en 7B Q4. Minisforum UM790 Pro escala a 64 GB DDR5. Beelink SER8: ~8 tok/s a buen precio. Tres mini PCs para LLM local en 2026.',
     publishDate: '2026-05-18',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -601,7 +601,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Puede el Mac Mini M4 ejecutar un modelo de 13B en local?',
-            a: 'Sí, con la versión de 16 GB en cuantización Q4 el modelo cabe con ~1 GB de margen. El Mac Mini M4 Pro de 32 GB puede ejecutar cómodamente modelos Q4 de 13B y 30B. La velocidad de inferencia baja a ~10 tok/s para 13B Q4 en el M4 base de 16 GB. El M4 Pro saliente alcanzaba un máximo de 64 GB; su sucesor, el M5 Pro (anunciado el 25 de agosto de 2026), también llega a un máximo de 64 GB, mientras que el nuevo M6 base tiene un tope inferior de 32 GB.',
+            a: 'Apenas: la versión de 16 GB tiene unos 8 GB utilizables tras los 8 GB que reserva macOS, así que un modelo 13B Q4 (~8 GB) no deja espacio para el contexto; lo realista son modelos de 7–8B. El Mac Mini M4 Pro de 32 GB (unos 24 GB utilizables) ejecuta modelos 13B Q4 con margen y modelos 30B Q4 (~18 GB) con contexto limitado. La velocidad de inferencia baja a ~10 tok/s para 13B Q4 en el M4 base de 16 GB. El M4 Pro saliente alcanzaba un máximo de 64 GB; su sucesor, el M5 Pro (anunciado el 25 de agosto de 2026), también llega a un máximo de 64 GB, mientras que el nuevo M6 base tiene un tope inferior de 32 GB.',
           },
           {
             q: '¿Necesita el Minisforum UM790 Pro ROCm para aceleración GPU?',
@@ -641,7 +641,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhor mini PC para LLM local 2026 | PromptQuorum',
     metaDescription: 'Mac Mini M4 alcança ~18 tok/s em 7B Q4. Minisforum UM790 Pro escala até 64 GB DDR5. Beelink SER8: ~8 tok/s com bom custo-benefício. Três mini PCs para LLM local em 2026.',
     publishDate: '2026-05-18',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -698,7 +698,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'O Mac Mini M4 consegue executar um modelo de 13B em local?',
-            a: 'Sim, com a versão de 16 GB em quantização Q4 o modelo cabe com ~1 GB de sobra. O Mac Mini M4 Pro de 32 GB pode executar confortavelmente modelos Q4 de 13B e 30B. A velocidade de inferência cai para ~10 tok/s para 13B Q4 no M4 base de 16 GB. O M4 Pro que está saindo de linha chegava a um máximo de 64GB; seu sucessor, o M5 Pro (anunciado em 25 de agosto de 2026), também chega a um máximo de 64GB, enquanto o novo M6 base tem um teto menor, de 32GB.',
+            a: 'Por pouco: a versão de 16 GB tem cerca de 8 GB utilizáveis depois dos 8 GB reservados ao macOS, então um modelo 13B Q4 (~8 GB) não deixa espaço para o contexto; o realista são modelos de 7–8B. O Mac Mini M4 Pro de 32 GB (cerca de 24 GB utilizáveis) executa modelos 13B Q4 com folga e modelos 30B Q4 (~18 GB) com contexto limitado. A velocidade de inferência cai para ~10 tok/s para 13B Q4 no M4 base de 16 GB. O M4 Pro que está saindo de linha chegava a um máximo de 64GB; seu sucessor, o M5 Pro (anunciado em 25 de agosto de 2026), também chega a um máximo de 64GB, enquanto o novo M6 base tem um teto menor, de 32GB.',
           },
           {
             q: 'O Minisforum UM790 Pro precisa de ROCm para aceleração de GPU?',
@@ -738,7 +738,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل جهاز مصغر لتشغيل ⁨LLM⁩ محلياً ⁨2026⁩ | ⁨PromptQuorum⁩',
     metaDescription: '⁨Mac Mini M4⁩ يحقق ~⁨18⁩ رمز/ثانية في ⁨7B Q4. UM790 Pro⁩ يتوسع حتى ⁨64 GB DDR5. Beelink SER8⁩: ~⁨8⁩ رمز/ثانية بسعر معقول. ⁨3⁩ أجهزة مصغرة لنماذج ⁨LLM 2026⁩.',
     publishDate: '2026-05-18',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'هل يمكن لـMac Mini M4 تشغيل نموذج 13B محلياً؟',
-            a: 'نعم، بنسخة 16 GB مع تكميم Q4 يتسع النموذج مع ~1 GB متبقٍ. Mac Mini M4 Pro بـ32 GB يمكنه تشغيل نماذج Q4 من 13B و30B براحة. سرعة الاستدلال تنخفض إلى ~10 رمز/ثانية لنموذج 13B Q4 على M4 الأساسي بـ16 GB. كانت شريحة M4 Pro الخارجة من الإنتاج تصل إلى حد أقصى 64GB؛ وخليفتها، M5 Pro (المُعلن عنها في 25 أغسطس 2026)، تصل أيضاً إلى حد أقصى 64GB، بينما الشريحة الأساسية الجديدة M6 حدها الأقصى أقل عند 32GB.',
+            a: 'بالكاد: تتوفر في نسخة 16 GB نحو 8 GB قابلة للاستخدام بعد أن يحجز macOS مقدار 8 GB، لذلك لا يترك نموذج 13B Q4 (~8 GB) مساحة للسياق، والخيار الواقعي هو نماذج 7–8B. أما Mac Mini M4 Pro بسعة 32 GB (نحو 24 GB قابلة للاستخدام) فيشغّل نماذج 13B Q4 بسعة مريحة ونماذج 30B Q4 (~18 GB) مع سياق محدود. سرعة الاستدلال تنخفض إلى ~10 رمز/ثانية لنموذج 13B Q4 على M4 الأساسي بـ16 GB. كانت شريحة M4 Pro الخارجة من الإنتاج تصل إلى حد أقصى 64GB؛ وخليفتها، M5 Pro (المُعلن عنها في 25 أغسطس 2026)، تصل أيضاً إلى حد أقصى 64GB، بينما الشريحة الأساسية الجديدة M6 حدها الأقصى أقل عند 32GB.',
           },
           {
             q: 'هل يحتاج Minisforum UM790 Pro إلى ROCm لتسريع GPU؟',
@@ -835,7 +835,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '로컬 LLM용 최고의 미니 PC 2026 | PromptQuorum',
     metaDescription: 'Mac Mini M4는 7B Q4에서 ~18 tok/s 달성. Minisforum UM790 Pro는 64 GB DDR5까지 확장 가능. Beelink SER8: ~8 tok/s의 가성비 선택. 2026년 로컬 LLM용 미니 PC 3종 비교.',
     publishDate: '2026-05-18',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     schema: {
@@ -907,7 +907,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Mac Mini M4로 13B 모델을 로컬에서 실행할 수 있습니까?',
-            a: '예, 16 GB 버전에서 Q4 양자화로 약 1 GB 여유를 두고 모델이 맞습니다. 32 GB Mac Mini M4 Pro는 13B 및 30B Q4 모델을 편안하게 실행할 수 있습니다. 기본 16 GB M4에서 13B Q4의 추론 속도는 ~10 tok/s로 낮아집니다. 단종 예정인 M4 Pro는 최대 64GB였습니다. 후속 모델인 M5 Pro(2026년 8월 25일 발표)도 최대 64GB에 도달하지만, 새로운 기본형 M6는 그보다 낮은 32GB가 상한입니다.',
+            a: '간신히 가능합니다. 16 GB 버전은 macOS가 8 GB를 확보하면 사용 가능한 용량이 약 8 GB이므로 13B Q4 모델(~8 GB)은 컨텍스트를 위한 공간이 남지 않으며, 현실적인 선택은 7–8B 모델입니다. 32 GB Mac Mini M4 Pro(사용 가능 약 24 GB)는 13B Q4 모델을 여유 있게, 30B Q4 모델(~18 GB)을 제한된 컨텍스트로 실행할 수 있습니다. 기본 16 GB M4에서 13B Q4의 추론 속도는 ~10 tok/s로 낮아집니다. 단종 예정인 M4 Pro는 최대 64GB였습니다. 후속 모델인 M5 Pro(2026년 8월 25일 발표)도 최대 64GB에 도달하지만, 새로운 기본형 M6는 그보다 낮은 32GB가 상한입니다.',
           },
           {
             q: 'Minisforum UM790 Pro에서 GPU 가속을 위해 ROCm이 필요합니까?',

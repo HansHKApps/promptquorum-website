@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-open-source-alternatives-to-chatgpt-plus-overview-hero-en.webp',
     type: 'comparison',
     title: 'Best Open-Source Alternatives to ChatGPT Plus 2026',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: 'Best Free Alternatives to ChatGPT Plus 2026 (Open-Source)',
     metaDescription: 'Free language models like ChatGPT Plus: run gpt-oss or Qwen3.6 locally with Ollama + Open WebUI, Jan or LM Studio. Compare 5 options, no subscription.',
     educationalLevel: 'Beginner',
@@ -242,7 +242,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'What hardware do I need to run a free ChatGPT alternative locally?',
-            a: 'Minimum: 8 GB RAM for small 3B models on CPU. Better: 16 GB for gpt-oss:20b. Best: about 24 GB of GPU or unified memory for Qwen3.6 27B. Apple Silicon Macs use unified memory and handle these models well.',
+            a: 'Minimum: 8 GB RAM for small 3B models on CPU. Better: 16 GB for gpt-oss:20b. Best: about 24 GB of GPU memory for Qwen3.6 27B, or 32 GB of unified memory on a Mac (macOS reserves about 8 GB). Apple Silicon Macs use unified memory and handle these models well.',
           },
           {
             q: 'Is Groq really free?',
@@ -289,7 +289,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           name: 'What hardware do I need to run a free ChatGPT alternative locally?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Minimum: 8 GB RAM for small 3B models on CPU. Better: 16 GB for gpt-oss:20b. Best: about 24 GB of GPU or unified memory for Qwen3.6 27B. Apple Silicon Macs use unified memory and handle these models well.',
+            text: 'Minimum: 8 GB RAM for small 3B models on CPU. Better: 16 GB for gpt-oss:20b. Best: about 24 GB of GPU memory for Qwen3.6 27B, or 32 GB of unified memory on a Mac (macOS reserves about 8 GB). Apple Silicon Macs use unified memory and handle these models well.',
           },
         },
         {
@@ -356,7 +356,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         name: 'PromptQuorum',
       },
       datePublished: '2026-05-26',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       url: 'https://www.promptquorum.com/prompt-bites/best-open-source-alternatives-to-chatgpt-plus',
       inLanguage: 'en',
     },
@@ -368,7 +368,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-open-source-alternatives-to-chatgpt-plus-overview-hero-de.webp',
     type: 'comparison',
     title: 'Beste Open-Source-Alternativen zu ChatGPT Plus 2026',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: 'Kostenlose Open-Source-Alternativen zu ChatGPT Plus 2026',
     metaDescription: 'Kostenlose Sprachmodelle wie ChatGPT Plus: gpt-oss oder Qwen3.6 lokal mit Ollama + Open WebUI, Jan oder LM Studio. 5 Optionen im Vergleich, ohne Abo.',
     educationalLevel: 'Beginner',
@@ -593,7 +593,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Welche Hardware brauche ich für eine kostenlose ChatGPT-Alternative lokal?',
-            a: 'Minimum: 8 GB RAM für kleine 3B-Modelle auf der CPU. Besser: 16 GB für gpt-oss:20b. Optimal: etwa 24 GB GPU- oder Unified-Speicher für Qwen3.6 27B. Apple-Silicon-Macs nutzen Unified Memory und verarbeiten diese Modelle gut.',
+            a: 'Minimum: 8 GB RAM für kleine 3B-Modelle auf der CPU. Besser: 16 GB für gpt-oss:20b. Optimal: etwa 24 GB GPU-Speicher für Qwen3.6 27B, auf einem Mac 32 GB Unified Memory (macOS belegt etwa 8 GB). Apple-Silicon-Macs nutzen Unified Memory und verarbeiten diese Modelle gut.',
           },
           {
             q: 'Ist Groq wirklich kostenlos?',
@@ -640,7 +640,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           name: 'Welche Hardware brauche ich für eine kostenlose ChatGPT-Alternative lokal?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Minimum: 8 GB RAM für kleine 3B-Modelle auf der CPU. Besser: 16 GB für gpt-oss:20b. Optimal: etwa 24 GB GPU- oder Unified-Speicher für Qwen3.6 27B. Apple-Silicon-Macs nutzen Unified Memory und verarbeiten diese Modelle gut.',
+            text: 'Minimum: 8 GB RAM für kleine 3B-Modelle auf der CPU. Besser: 16 GB für gpt-oss:20b. Optimal: etwa 24 GB GPU-Speicher für Qwen3.6 27B, auf einem Mac 32 GB Unified Memory (macOS belegt etwa 8 GB). Apple-Silicon-Macs nutzen Unified Memory und verarbeiten diese Modelle gut.',
           },
         },
         {
@@ -669,7 +669,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         name: 'PromptQuorum',
       },
       datePublished: '2026-05-26',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       url: 'https://www.promptquorum.com/de/prompt-bites/best-open-source-alternatives-to-chatgpt-plus',
       inLanguage: 'de',
     },
@@ -681,7 +681,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-open-source-alternatives-to-chatgpt-plus-overview-hero-fr.webp',
     type: 'comparison',
     title: 'Meilleures alternatives open source à ChatGPT Plus 2026',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: 'Meilleures alternatives gratuites à ChatGPT Plus 2026',
     metaDescription: 'Modèles de langage gratuits comme ChatGPT Plus : gpt-oss ou Qwen3.6 en local avec Ollama + Open WebUI, Jan ou LM Studio. 5 options comparées, sans abonnement.',
     educationalLevel: 'Beginner',
@@ -906,7 +906,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'De quel matériel ai-je besoin pour une alternative gratuite à ChatGPT en local ?',
-            a: 'Minimum : 8 Go de RAM pour de petits modèles 3B sur CPU. Mieux : 16 Go pour gpt-oss:20b. Idéal : environ 24 Go de mémoire GPU ou unifiée pour Qwen3.6 27B. Les Mac Apple Silicon utilisent la mémoire unifiée et gèrent bien ces modèles.',
+            a: 'Minimum : 8 Go de RAM pour de petits modèles 3B sur CPU. Mieux : 16 Go pour gpt-oss:20b. Idéal : environ 24 Go de mémoire GPU pour Qwen3.6 27B, ou 32 Go de mémoire unifiée sur un Mac (macOS en réserve environ 8 Go). Les Mac Apple Silicon utilisent la mémoire unifiée et gèrent bien ces modèles.',
           },
           {
             q: 'Groq est-il vraiment gratuit ?',
@@ -953,7 +953,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           name: 'De quel matériel ai-je besoin pour une alternative gratuite à ChatGPT en local ?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Minimum : 8 Go de RAM pour de petits modèles 3B sur CPU. Mieux : 16 Go pour gpt-oss:20b. Idéal : environ 24 Go de mémoire GPU ou unifiée pour Qwen3.6 27B. Les Mac Apple Silicon utilisent la mémoire unifiée et gèrent bien ces modèles.',
+            text: 'Minimum : 8 Go de RAM pour de petits modèles 3B sur CPU. Mieux : 16 Go pour gpt-oss:20b. Idéal : environ 24 Go de mémoire GPU pour Qwen3.6 27B, ou 32 Go de mémoire unifiée sur un Mac (macOS en réserve environ 8 Go). Les Mac Apple Silicon utilisent la mémoire unifiée et gèrent bien ces modèles.',
           },
         },
         {
@@ -982,7 +982,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         name: 'PromptQuorum',
       },
       datePublished: '2026-05-26',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       url: 'https://www.promptquorum.com/fr/prompt-bites/best-open-source-alternatives-to-chatgpt-plus',
       inLanguage: 'fr',
     },
@@ -994,7 +994,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-open-source-alternatives-to-chatgpt-plus-overview-hero-ja.webp',
     type: 'comparison',
     title: 'ChatGPT Plusの代替オープンソース 2026年ベスト',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: 'ChatGPT Plus無料代替ツール比較 2026年版',
     metaDescription: 'ChatGPT Plusのような無料の言語モデル。gpt-ossやQwen3.6をOllama+Open WebUI、Jan、LM Studioでローカル実行。5つの代替を比較、月額不要。',
     educationalLevel: 'Beginner',
@@ -1219,7 +1219,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'ChatGPT代替をローカルで動かすのに必要なハードウェアは？',
-            a: '最小：小型の3Bモデルを動かすCPUと8GB RAM。推奨：gpt-oss:20bに16GB。理想：Qwen3.6 27Bに約24GBのGPUまたはユニファイドメモリ。Apple SiliconのMacはユニファイドメモリを使い、これらのモデルをうまく処理できます。',
+            a: '最小：小型の3Bモデルを動かすCPUと8GB RAM。推奨：gpt-oss:20bに16GB。理想：Qwen3.6 27Bに約24GBのGPUメモリ、Macならユニファイドメモリ32GB（macOSが約8GBを使用）。Apple SiliconのMacはユニファイドメモリを使い、これらのモデルをうまく処理できます。',
           },
           {
             q: 'Groqは本当に無料ですか？',
@@ -1266,7 +1266,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           name: 'ChatGPT代替をローカルで動かすのに必要なハードウェアは？',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: '最小：小型の3Bモデルを動かすCPUと8GB RAM。推奨：gpt-oss:20bに16GB。理想：Qwen3.6 27Bに約24GBのGPUまたはユニファイドメモリ。Apple SiliconのMacはユニファイドメモリを使い、これらのモデルをうまく処理できます。',
+            text: '最小：小型の3Bモデルを動かすCPUと8GB RAM。推奨：gpt-oss:20bに16GB。理想：Qwen3.6 27Bに約24GBのGPUメモリ、Macならユニファイドメモリ32GB（macOSが約8GBを使用）。Apple SiliconのMacはユニファイドメモリを使い、これらのモデルをうまく処理できます。',
           },
         },
         {
@@ -1295,7 +1295,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         name: 'PromptQuorum',
       },
       datePublished: '2026-05-26',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       url: 'https://www.promptquorum.com/ja/prompt-bites/best-open-source-alternatives-to-chatgpt-plus',
       inLanguage: 'ja',
     },
@@ -1307,7 +1307,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-open-source-alternatives-to-chatgpt-plus-overview-hero-es.webp',
     type: 'comparison',
     title: 'Mejores Alternativas Open Source a ChatGPT Plus 2026',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: 'Alternativas open source gratuitas a ChatGPT Plus 2026',
     metaDescription: 'Modelos de lenguaje gratis como ChatGPT Plus: gpt-oss o Qwen3.6 en local con Ollama + Open WebUI, Jan o LM Studio. Compara 5 opciones, sin suscripción.',
     educationalLevel: 'Beginner',
@@ -1532,7 +1532,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Qué hardware necesito para ejecutar localmente una alternativa gratuita a ChatGPT?',
-            a: 'Mínimo: 8 GB de RAM para modelos pequeños de 3B en CPU. Mejor: 16 GB para gpt-oss:20b. Óptimo: unos 24 GB de memoria de GPU o unificada para Qwen3.6 27B. Los Mac con Apple Silicon usan memoria unificada y manejan bien estos modelos.',
+            a: 'Mínimo: 8 GB de RAM para modelos pequeños de 3B en CPU. Mejor: 16 GB para gpt-oss:20b. Óptimo: unos 24 GB de memoria de GPU para Qwen3.6 27B, o 32 GB de memoria unificada en un Mac (macOS reserva unos 8 GB). Los Mac con Apple Silicon usan memoria unificada y manejan bien estos modelos.',
           },
           {
             q: '¿Groq es realmente gratis?',
@@ -1579,7 +1579,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           name: '¿Qué hardware necesito para ejecutar localmente una alternativa gratuita a ChatGPT?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Mínimo: 8 GB de RAM para modelos pequeños de 3B en CPU. Mejor: 16 GB para gpt-oss:20b. Óptimo: unos 24 GB de memoria de GPU o unificada para Qwen3.6 27B. Los Mac con Apple Silicon usan memoria unificada y manejan bien estos modelos.',
+            text: 'Mínimo: 8 GB de RAM para modelos pequeños de 3B en CPU. Mejor: 16 GB para gpt-oss:20b. Óptimo: unos 24 GB de memoria de GPU para Qwen3.6 27B, o 32 GB de memoria unificada en un Mac (macOS reserva unos 8 GB). Los Mac con Apple Silicon usan memoria unificada y manejan bien estos modelos.',
           },
         },
         {
@@ -1608,7 +1608,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         name: 'PromptQuorum',
       },
       datePublished: '2026-05-26',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       url: 'https://www.promptquorum.com/es/prompt-bites/best-open-source-alternatives-to-chatgpt-plus',
       inLanguage: 'es',
     },
@@ -1620,7 +1620,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-open-source-alternatives-to-chatgpt-plus-overview-hero-zh.webp',
     type: 'comparison',
     title: '2026年ChatGPT Plus最佳开源替代方案',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: '2026年ChatGPT Plus最佳免费开源替代',
     metaDescription: '类似ChatGPT Plus的免费语言模型：用Ollama+Open WebUI、Jan或LM Studio在本地运行gpt-oss和Qwen3.6。对比5种方案，无需订阅。',
     educationalLevel: 'Beginner',
@@ -1845,7 +1845,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '在本地运行免费ChatGPT替代需要什么硬件？',
-            a: '最低：8 GB内存，用CPU运行小型3B模型。更好：16 GB运行gpt-oss:20b。最佳：约24 GB显存或统一内存运行Qwen3.6 27B。Apple Silicon Mac使用统一内存，能很好地运行这些模型。',
+            a: '最低：8 GB内存，用CPU运行小型3B模型。更好：16 GB运行gpt-oss:20b。最佳：约24 GB显存运行Qwen3.6 27B，Mac则需32 GB统一内存（macOS约占用8 GB）。Apple Silicon Mac使用统一内存，能很好地运行这些模型。',
           },
           {
             q: 'Groq真的免费吗？',
@@ -1892,7 +1892,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           name: '在本地运行免费ChatGPT替代需要什么硬件？',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: '最低：8 GB内存，用CPU运行小型3B模型。更好：16 GB运行gpt-oss:20b。最佳：约24 GB显存或统一内存运行Qwen3.6 27B。Apple Silicon Mac使用统一内存，能很好地运行这些模型。',
+            text: '最低：8 GB内存，用CPU运行小型3B模型。更好：16 GB运行gpt-oss:20b。最佳：约24 GB显存运行Qwen3.6 27B，Mac则需32 GB统一内存（macOS约占用8 GB）。Apple Silicon Mac使用统一内存，能很好地运行这些模型。',
           },
         },
         {
@@ -1921,7 +1921,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         name: 'PromptQuorum',
       },
       datePublished: '2026-05-26',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       url: 'https://www.promptquorum.com/zh/prompt-bites/best-open-source-alternatives-to-chatgpt-plus',
       inLanguage: 'zh',
     },
@@ -1933,7 +1933,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-open-source-alternatives-to-chatgpt-plus-overview-hero-pt.webp',
     type: 'comparison',
     title: 'Melhores Alternativas Open Source ao ChatGPT Plus 2026',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: 'Melhores Alternativas Gratuitas Open Source ao ChatGPT Plus 2026',
     metaDescription: 'Modelos de linguagem gratuitos como o ChatGPT Plus: rode gpt-oss ou Qwen3.6 localmente com Ollama + Open WebUI, Jan ou LM Studio. Compare 5 opções, sem assinatura.',
     educationalLevel: 'Beginner',
@@ -2158,7 +2158,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'De que hardware preciso para rodar localmente uma alternativa gratuita ao ChatGPT?',
-            a: 'Mínimo: 8 GB de RAM para modelos pequenos de 3B na CPU. Melhor: 16 GB para o gpt-oss:20b. Ideal: cerca de 24 GB de memória de GPU ou unificada para o Qwen3.6 27B. Macs com Apple Silicon usam memória unificada e lidam bem com esses modelos.',
+            a: 'Mínimo: 8 GB de RAM para modelos pequenos de 3B na CPU. Melhor: 16 GB para o gpt-oss:20b. Ideal: cerca de 24 GB de memória de GPU para o Qwen3.6 27B, ou 32 GB de memória unificada em um Mac (o macOS reserva cerca de 8 GB). Macs com Apple Silicon usam memória unificada e lidam bem com esses modelos.',
           },
           {
             q: 'A Groq é realmente gratuita?',
@@ -2205,7 +2205,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           name: 'De que hardware preciso para rodar localmente uma alternativa gratuita ao ChatGPT?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Mínimo: 8 GB de RAM para modelos pequenos de 3B na CPU. Melhor: 16 GB para o gpt-oss:20b. Ideal: cerca de 24 GB de memória de GPU ou unificada para o Qwen3.6 27B. Macs com Apple Silicon usam memória unificada e lidam bem com esses modelos.',
+            text: 'Mínimo: 8 GB de RAM para modelos pequenos de 3B na CPU. Melhor: 16 GB para o gpt-oss:20b. Ideal: cerca de 24 GB de memória de GPU para o Qwen3.6 27B, ou 32 GB de memória unificada em um Mac (o macOS reserva cerca de 8 GB). Macs com Apple Silicon usam memória unificada e lidam bem com esses modelos.',
           },
         },
         {
@@ -2234,7 +2234,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         name: 'PromptQuorum',
       },
       datePublished: '2026-05-26',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       url: 'https://www.promptquorum.com/pt/prompt-bites/best-open-source-alternatives-to-chatgpt-plus',
       inLanguage: 'pt',
     },
@@ -2246,7 +2246,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-open-source-alternatives-to-chatgpt-plus-overview-hero-ar.webp',
     type: 'comparison',
     title: 'أفضل بدائل مفتوحة المصدر لـ⁨ChatGPT Plus 2026⁩',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: 'أفضل بدائل مجانية لـ⁨ChatGPT Plus 2026⁩ | ⁨PromptQuorum⁩',
     metaDescription: 'نماذج لغوية مجانية مثل ⁨ChatGPT Plus⁩: شغّل ⁨gpt-oss⁩ أو ⁨Qwen3.6⁩ محلياً عبر ⁨Ollama + Open WebUI⁩ أو ⁨Jan⁩ أو ⁨LM Studio⁩. قارن ⁨5⁩ خيارات بلا اشتراك.',
     educationalLevel: 'Beginner',
@@ -2471,7 +2471,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'ما العتاد اللازم لتشغيل بديل ChatGPT مجاني محلياً؟',
-            a: 'الحد الأدنى: ذاكرة 8 GB لنماذج 3B الصغيرة على المعالج. الأفضل: 16 GB لـgpt-oss:20b. الأمثل: نحو 24 GB من ذاكرة المعالج الرسومي أو الموحدة لـQwen3.6 27B. أجهزة Mac بمعالجات Apple Silicon تستخدم ذاكرة موحدة وتتعامل جيداً مع هذه النماذج.',
+            a: 'الحد الأدنى: ذاكرة 8 GB لنماذج 3B الصغيرة على المعالج. الأفضل: 16 GB لـgpt-oss:20b. الأمثل: نحو 24 GB من ذاكرة المعالج الرسومي لـQwen3.6 27B، أو 32 GB من الذاكرة الموحدة على جهاز Mac (يحتفظ macOS بنحو 8 GB). أجهزة Mac بمعالجات Apple Silicon تستخدم ذاكرة موحدة وتتعامل جيداً مع هذه النماذج.',
           },
           {
             q: 'هل Groq مجانية حقاً؟',
@@ -2518,7 +2518,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           name: 'ما العتاد اللازم لتشغيل بديل ChatGPT مجاني محلياً؟',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'الحد الأدنى: ذاكرة 8 GB لنماذج 3B الصغيرة على المعالج. الأفضل: 16 GB لـgpt-oss:20b. الأمثل: نحو 24 GB من ذاكرة المعالج الرسومي أو الموحدة لـQwen3.6 27B. أجهزة Mac بمعالجات Apple Silicon تستخدم ذاكرة موحدة وتتعامل جيداً مع هذه النماذج.',
+            text: 'الحد الأدنى: ذاكرة 8 GB لنماذج 3B الصغيرة على المعالج. الأفضل: 16 GB لـgpt-oss:20b. الأمثل: نحو 24 GB من ذاكرة المعالج الرسومي لـQwen3.6 27B، أو 32 GB من الذاكرة الموحدة على جهاز Mac (يحتفظ macOS بنحو 8 GB). أجهزة Mac بمعالجات Apple Silicon تستخدم ذاكرة موحدة وتتعامل جيداً مع هذه النماذج.',
           },
         },
         {
@@ -2547,7 +2547,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         name: 'PromptQuorum',
       },
       datePublished: '2026-05-26',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       url: 'https://www.promptquorum.com/ar/prompt-bites/best-open-source-alternatives-to-chatgpt-plus',
       inLanguage: 'ar',
     },
@@ -2559,7 +2559,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-open-source-alternatives-to-chatgpt-plus-overview-hero-ko.webp',
     type: 'comparison',
     title: 'ChatGPT Plus 최고의 오픈소스 대안 2026',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: 'ChatGPT Plus 무료 오픈소스 대안 2026 비교',
     metaDescription: 'ChatGPT Plus 같은 무료 언어 모델: Ollama+Open WebUI, Jan, LM Studio로 gpt-oss와 Qwen3.6을 로컬에서 실행하세요. 5가지 대안 비교, 구독 불필요.',
     educationalLevel: 'Beginner',
@@ -2784,7 +2784,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'ChatGPT 대안을 로컬에서 실행하려면 어떤 하드웨어가 필요합니까?',
-            a: '최소: CPU에서 작은 3B 모델을 위한 8GB RAM. 권장: gpt-oss:20b를 위한 16GB. 최적: Qwen3.6 27B를 위한 약 24GB의 GPU 또는 통합 메모리. Apple Silicon Mac은 통합 메모리를 사용해 이 모델들을 잘 처리합니다.',
+            a: '최소: CPU에서 작은 3B 모델을 위한 8GB RAM. 권장: gpt-oss:20b를 위한 16GB. 최적: Qwen3.6 27B를 위한 약 24GB의 GPU 메모리, Mac에서는 통합 메모리 32GB(macOS가 약 8GB 사용). Apple Silicon Mac은 통합 메모리를 사용해 이 모델들을 잘 처리합니다.',
           },
           {
             q: 'Groq는 정말 무료입니까?',
@@ -2831,7 +2831,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           name: 'ChatGPT 대안을 로컬에서 실행하려면 어떤 하드웨어가 필요합니까?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: '최소: CPU에서 작은 3B 모델을 위한 8GB RAM. 권장: gpt-oss:20b를 위한 16GB. 최적: Qwen3.6 27B를 위한 약 24GB의 GPU 또는 통합 메모리. Apple Silicon Mac은 통합 메모리를 사용해 이 모델들을 잘 처리합니다.',
+            text: '최소: CPU에서 작은 3B 모델을 위한 8GB RAM. 권장: gpt-oss:20b를 위한 16GB. 최적: Qwen3.6 27B를 위한 약 24GB의 GPU 메모리, Mac에서는 통합 메모리 32GB(macOS가 약 8GB 사용). Apple Silicon Mac은 통합 메모리를 사용해 이 모델들을 잘 처리합니다.',
           },
         },
         {
@@ -2860,7 +2860,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         name: 'PromptQuorum',
       },
       datePublished: '2026-05-26',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       url: 'https://www.promptquorum.com/ko/prompt-bites/best-open-source-alternatives-to-chatgpt-plus',
       inLanguage: 'ko',
     },

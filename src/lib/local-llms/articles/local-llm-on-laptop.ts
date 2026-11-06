@@ -333,7 +333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "Can You Run a Local LLM on a Laptop?",
         "content": [
           "**Yes -- with the right model size.** A laptop with 8 GB RAM runs a 3B–4B model at Q4_K_M at an estimated 15–30 tok/s on dual-channel RAM (Llama 3.2 3B: 18–30, Phi-4-mini: 15–25). An Apple Silicon laptop with 16 GB runs an 8B model at an estimated 13–26 tok/s depending on the chip. That is slower than most cloud APIs but fast enough to read along.",
-          "The practical ceiling on an 8 GB laptop is a 3B–4B model; 7B–8B files (4.4–5.2 GB) leave little room for the operating system and a browser. A 14B model at Q4_K_M (Qwen3 14B: 9.3 GB file) fits a 16 GB machine only with a short context and other apps closed.",
+          "The practical ceiling on an 8 GB laptop is a 3B–4B model; 7B–8B files (4.4–5.2 GB) leave little room for the operating system and a browser. A 14B model at Q4_K_M (Qwen3 14B: 9.3 GB file) fits a 16 GB machine only with a short context and other apps closed. On a Mac, macOS needs at least 8 GB, so a 16 GB Mac has about 8 GB left and a 14B model does not fit.",
           "Speeds here are PromptQuorum estimates derived from memory bandwidth, not lab measurements. For tiers below 8 GB and the full bandwidth rule, see **[Fastest Local LLMs for Low-End PCs](/local-llms/fastest-local-llms-low-end-pcs)**; for laptops without a GPU, see **[Best CPU-Only Local LLMs 2026](/local-llms/best-cpu-only-llm)**."
         ]
       },
@@ -1273,7 +1273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "Kann man ein lokales LLM auf einem Laptop ausführen?",
         "content": [
           "**Ja – mit der passenden Modellgröße.** Ein Laptop mit 8 GB RAM führt ein 3B–4B-Modell mit Q4_K_M bei Dual-Channel-RAM mit geschätzten 15–30 tok/s aus (Llama 3.2 3B: 18–30, Phi-4-mini: 15–25). Ein Apple-Silicon-Laptop mit 16 GB schafft ein 8B-Modell je nach Chip mit geschätzten 13–26 tok/s. Das ist langsamer als die meisten Cloud-APIs, aber schnell genug zum Mitlesen.",
-          "Die praktische Obergrenze auf einem Laptop mit 8 GB ist ein 3B–4B-Modell; 7B–8B-Dateien (4,4–5,2 GB) lassen kaum Platz für Betriebssystem und Browser. Ein 14B-Modell mit Q4_K_M (Qwen3 14B: 9,3 GB große Datei) passt nur mit kurzem Kontext und geschlossenen Apps auf einen Rechner mit 16 GB.",
+          "Die praktische Obergrenze auf einem Laptop mit 8 GB ist ein 3B–4B-Modell; 7B–8B-Dateien (4,4–5,2 GB) lassen kaum Platz für Betriebssystem und Browser. Ein 14B-Modell mit Q4_K_M (Qwen3 14B: 9,3 GB große Datei) passt nur mit kurzem Kontext und geschlossenen Apps auf einen Rechner mit 16 GB. Auf einem Mac braucht macOS mindestens 8 GB, ein Mac mit 16 GB hat also nur etwa 8 GB übrig, und ein 14B-Modell passt nicht.",
           "Die Geschwindigkeiten hier sind PromptQuorum-Schätzungen aus der Speicherbandbreite, keine Labormessungen. Zu Stufen unter 8 GB und zur vollständigen Bandbreitenregel siehe **[Schnellste lokale LLMs für Low-End-PCs](/de/local-llms/fastest-local-llms-low-end-pcs)**; für Laptops ohne GPU siehe **[Beste reine CPU-LLMs 2026](/de/local-llms/best-cpu-only-llm)**."
         ]
       },
@@ -2213,7 +2213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "Peut-on faire tourner un LLM local sur un portable ?",
         "content": [
           "**Oui -- avec la bonne taille de modèle.** Un portable de 8 GB de RAM fait tourner un modèle 3B–4B en Q4_K_M à 15–30 tok/s estimés en RAM dual-channel (Llama 3.2 3B : 18–30, Phi-4-mini : 15–25). Un portable Apple Silicon de 16 GB fait tourner un modèle 8B à 13–26 tok/s estimés selon la puce. C'est plus lent que la plupart des API cloud, mais assez rapide pour lire au fil de l'eau.",
-          "Le plafond pratique d'un portable de 8 GB est un modèle 3B–4B ; les fichiers 7B–8B (4.4–5.2 GB) laissent peu de place au système et à un navigateur. Un modèle 14B en Q4_K_M (Qwen3 14B : fichier de 9.3 GB) ne tient sur une machine de 16 GB qu'avec un contexte court et les autres applications fermées.",
+          "Le plafond pratique d'un portable de 8 GB est un modèle 3B–4B ; les fichiers 7B–8B (4.4–5.2 GB) laissent peu de place au système et à un navigateur. Un modèle 14B en Q4_K_M (Qwen3 14B : fichier de 9.3 GB) ne tient sur une machine de 16 GB qu'avec un contexte court et les autres applications fermées. Sur un Mac, macOS a besoin d'au moins 8 GB : un Mac de 16 GB en garde environ 8 GB et un modèle 14B n'y tient pas.",
           "Les vitesses ci-dessus sont des estimations PromptQuorum dérivées de la bande passante mémoire, pas des mesures de laboratoire. Pour les paliers sous 8 GB et la règle complète de bande passante, voir **[LLM locaux les plus rapides pour PC d'entrée de gamme](/fr/local-llms/fastest-local-llms-low-end-pcs)** ; pour les portables sans GPU, voir **[Meilleurs LLM locaux CPU seul 2026](/fr/local-llms/best-cpu-only-llm)**."
         ]
       },
@@ -3153,7 +3153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "ノートPCでローカルLLMを実行できますか？",
         "content": [
           "**はい。ただし、適切なサイズのモデルを選ぶことが条件です。** RAM 8 GBのノートPCでは、Q4_K_Mの3B–4Bモデルがデュアルチャネル RAMで推定15–30 tok/sで動きます（Llama 3.2 3B：18–30、Phi-4-mini：15–25）。16 GBのApple Siliconノートなら、チップによって8Bモデルが推定13–26 tok/sで動きます。多くのクラウドAPIより遅いものの、読みながら使える速さです。",
-          "8 GBのノートPCで現実的な上限は3B–4Bモデルです。7B–8Bのファイル（4.4–5.2 GB）では、OSとブラウザに回すメモリがほとんど残りません。Q4_K_Mの14Bモデル（Qwen3 14B：ファイル9.3 GB）は、コンテキストを短くして他のアプリを閉じた場合に限り、16 GBのマシンに収まります。",
+          "8 GBのノートPCで現実的な上限は3B–4Bモデルです。7B–8Bのファイル（4.4–5.2 GB）では、OSとブラウザに回すメモリがほとんど残りません。Q4_K_Mの14Bモデル（Qwen3 14B：ファイル9.3 GB）は、コンテキストを短くして他のアプリを閉じた場合に限り、16 GBのマシンに収まります。Macの場合、macOSが少なくとも8 GBを必要とするため、16 GBのMacで使えるのは約8 GBで、14Bモデルは収まりません。",
           "ここでの速度は、メモリ帯域から導いたPromptQuorumの推定値で、実測ではありません。8 GB未満の構成と帯域の考え方の全体は **[低スペックPC向け最速ローカルLLM](/ja/local-llms/fastest-local-llms-low-end-pcs)** を、GPUのないノートPCについては **[CPUのみで動くおすすめローカルLLM 2026](/ja/local-llms/best-cpu-only-llm)** を参照してください。"
         ]
       },
@@ -4092,7 +4092,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "笔记本电脑能运行本地LLM吗？",
         "content": [
           "**可以——关键是选对模型规模。** 8 GB内存的笔记本电脑可运行Q4_K_M量化的3B–4B模型，在双通道内存上估算为15–30 tok/s（Llama 3.2 3B：18–30，Phi-4-mini：15–25）。16 GB的Apple Silicon笔记本电脑运行8B模型，视芯片不同估算为13–26 tok/s。这比大多数云API慢，但足以边生成边阅读。",
-          "8 GB笔记本电脑的实际上限是3B–4B模型；7B–8B的文件（4.4–5.2 GB）会让操作系统和浏览器几乎没有余量。Q4_K_M量化的14B模型（Qwen3 14B：文件9.3 GB）只有在上下文较短且关闭其他应用时才能装进16 GB的机器。",
+          "8 GB笔记本电脑的实际上限是3B–4B模型；7B–8B的文件（4.4–5.2 GB）会让操作系统和浏览器几乎没有余量。Q4_K_M量化的14B模型（Qwen3 14B：文件9.3 GB）只有在上下文较短且关闭其他应用时才能装进16 GB的机器。在Mac上，macOS至少需要8 GB，因此16 GB的Mac只剩约8 GB，装不下14B模型。",
           "这里的速度是PromptQuorum根据内存带宽得出的估算，并非实验室实测。8 GB以下的档位和完整的带宽规则，请参见**[低配电脑上最快的本地LLM](/zh/local-llms/fastest-local-llms-low-end-pcs)**；没有GPU的笔记本电脑，请参见**[最佳纯CPU本地LLM 2026](/zh/local-llms/best-cpu-only-llm)**。"
         ]
       },
@@ -5031,7 +5031,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "¿Se puede ejecutar un LLM local en un portátil?",
         "content": [
           "**Sí, con el tamaño de modelo adecuado.** Un portátil con 8 GB de RAM ejecuta un modelo de 3B–4B en Q4_K_M a unos 15–30 tok/s estimados con RAM de doble canal (Llama 3.2 3B: 18–30, Phi-4-mini: 15–25). Un portátil con Apple Silicon y 16 GB ejecuta un modelo de 8B a unos 13–26 tok/s estimados según el chip. Es más lento que la mayoría de las API en la nube, pero suficientemente rápido para ir leyendo mientras se genera.",
-          "El techo práctico en un portátil de 8 GB es un modelo de 3B–4B; los archivos de 7B–8B (4.4–5.2 GB) dejan poco espacio para el sistema operativo y un navegador. Un modelo de 14B en Q4_K_M (Qwen3 14B: archivo de 9.3 GB) cabe en un equipo de 16 GB solo con un contexto corto y las demás aplicaciones cerradas.",
+          "El techo práctico en un portátil de 8 GB es un modelo de 3B–4B; los archivos de 7B–8B (4.4–5.2 GB) dejan poco espacio para el sistema operativo y un navegador. Un modelo de 14B en Q4_K_M (Qwen3 14B: archivo de 9.3 GB) cabe en un equipo de 16 GB solo con un contexto corto y las demás aplicaciones cerradas. En un Mac, macOS necesita al menos 8 GB, así que un Mac de 16 GB tiene unos 8 GB libres y un modelo de 14B no cabe.",
           "Las velocidades de aquí son estimaciones de PromptQuorum derivadas del ancho de banda de memoria, no mediciones de laboratorio. Para los niveles por debajo de 8 GB y la regla completa del ancho de banda, consulta **[LLMs locales más rápidos para PCs de gama baja](/es/local-llms/fastest-local-llms-low-end-pcs)**; para portátiles sin GPU, consulta **[Mejores LLMs locales solo con CPU 2026](/es/local-llms/best-cpu-only-llm)**."
         ]
       },
@@ -5971,7 +5971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "É Possível Rodar um LLM Local em um Notebook?",
         "content": [
           "**Sim -- com o tamanho de modelo certo.** Um notebook com 8 GB de RAM roda um modelo 3B–4B em Q4_K_M a cerca de 15–30 tok/s estimados com RAM dual-channel (Llama 3.2 3B: 18–30, Phi-4-mini: 15–25). Um notebook Apple Silicon com 16 GB roda um modelo 8B a 13–26 tok/s estimados, dependendo do chip. Isso é mais lento que a maioria das APIs na nuvem, mas rápido o bastante para acompanhar a leitura.",
-          "O teto prático em um notebook de 8 GB é um modelo 3B–4B; arquivos de modelos 7B–8B (4.4–5.2 GB) deixam pouca folga para o sistema operacional e o navegador. Um modelo 14B em Q4_K_M (Qwen3 14B: arquivo de 9.3 GB) cabe em uma máquina de 16 GB apenas com contexto curto e outros aplicativos fechados.",
+          "O teto prático em um notebook de 8 GB é um modelo 3B–4B; arquivos de modelos 7B–8B (4.4–5.2 GB) deixam pouca folga para o sistema operacional e o navegador. Um modelo 14B em Q4_K_M (Qwen3 14B: arquivo de 9.3 GB) cabe em uma máquina de 16 GB apenas com contexto curto e outros aplicativos fechados. Em um Mac, o macOS precisa de pelo menos 8 GB, então um Mac de 16 GB fica com cerca de 8 GB livres e um modelo 14B não cabe.",
           "As velocidades aqui são estimativas da PromptQuorum derivadas da largura de banda da memória, não medições de laboratório. Para faixas abaixo de 8 GB e a regra completa de largura de banda, veja **[LLMs locais mais rápidos para PCs básicos](/pt/local-llms/fastest-local-llms-low-end-pcs)**; para notebooks sem GPU, veja **[Melhores LLMs Locais Somente CPU 2026](/pt/local-llms/best-cpu-only-llm)**."
         ]
       },
@@ -6911,7 +6911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "هل يمكن تشغيل LLM محلي على حاسوب محمول؟",
         "content": [
           "**نعم -- مع اختيار حجم النموذج المناسب.** الحاسوب المحمول بذاكرة 8 GB يشغّل نموذج 3B–4B بتكميم Q4_K_M بسرعة تقديرية 15–30 tok/s على ذاكرة ثنائية القناة (Llama 3.2 3B: 18–30، Phi-4-mini: 15–25). وحاسوب Apple Silicon بذاكرة 16 GB يشغّل نموذج 8B بسرعة تقديرية 13–26 tok/s بحسب الشريحة. هذا أبطأ من معظم واجهات API السحابية، لكنه سريع بما يكفي لمتابعة القراءة أثناء التوليد.",
-          "السقف العملي على حاسوب محمول بذاكرة 8 GB هو نموذج 3B–4B؛ أما ملفات 7B–8B (بحجم 4.4–5.2 GB) فتترك مساحة ضيقة لنظام التشغيل والمتصفح. ونموذج 14B بتكميم Q4_K_M (Qwen3 14B: ملف بحجم 9.3 GB) يتسع في جهاز بذاكرة 16 GB فقط مع سياق قصير وإغلاق التطبيقات الأخرى.",
+          "السقف العملي على حاسوب محمول بذاكرة 8 GB هو نموذج 3B–4B؛ أما ملفات 7B–8B (بحجم 4.4–5.2 GB) فتترك مساحة ضيقة لنظام التشغيل والمتصفح. ونموذج 14B بتكميم Q4_K_M (Qwen3 14B: ملف بحجم 9.3 GB) يتسع في جهاز بذاكرة 16 GB فقط مع سياق قصير وإغلاق التطبيقات الأخرى. أما على جهاز Mac فيحتاج macOS إلى 8 GB على الأقل، لذا يبقى في جهاز Mac بذاكرة 16 GB نحو 8 GB فقط ولا يتسع نموذج 14B.",
           "السرعات هنا تقديرات من PromptQuorum مشتقة من عرض نطاق الذاكرة، وليست قياسات مخبرية. للفئات الأقل من 8 GB وللقاعدة الكاملة لعرض النطاق راجع **[أسرع نماذج LLM المحلية للحواسيب منخفضة المواصفات](/ar/local-llms/fastest-local-llms-low-end-pcs)**؛ وللحواسيب المحمولة بلا GPU راجع **[أفضل نماذج LLM المحلية على CPU فقط 2026](/ar/local-llms/best-cpu-only-llm)**."
         ]
       },
@@ -7850,7 +7850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "노트북에서 로컬 LLM을 실행할 수 있나요?",
         "content": [
           "**네, 모델 크기만 알맞게 고르면 됩니다.** RAM 8 GB 노트북은 Q4_K_M 3B–4B 모델을 듀얼 채널 RAM에서 추정 15–30 tok/s로 실행합니다(Llama 3.2 3B: 18–30, Phi-4-mini: 15–25). 16 GB Apple Silicon 노트북은 칩에 따라 8B 모델을 추정 13–26 tok/s로 실행합니다. 대부분의 클라우드 API보다는 느리지만 읽으면서 따라가기에는 충분히 빠릅니다.",
-          "8 GB 노트북의 현실적인 상한은 3B–4B 모델입니다. 7B–8B 파일(4.4–5.2 GB)은 운영체제와 브라우저를 위한 여유가 거의 남지 않습니다. Q4_K_M 14B 모델(Qwen3 14B: 파일 9.3 GB)은 컨텍스트를 짧게 하고 다른 앱을 닫은 경우에만 16 GB 기기에 들어갑니다.",
+          "8 GB 노트북의 현실적인 상한은 3B–4B 모델입니다. 7B–8B 파일(4.4–5.2 GB)은 운영체제와 브라우저를 위한 여유가 거의 남지 않습니다. Q4_K_M 14B 모델(Qwen3 14B: 파일 9.3 GB)은 컨텍스트를 짧게 하고 다른 앱을 닫은 경우에만 16 GB 기기에 들어갑니다. Mac에서는 macOS가 최소 8 GB를 필요로 하므로 16 GB Mac에는 약 8 GB만 남아 14B 모델이 들어가지 않습니다.",
           "여기의 속도는 메모리 대역폭에서 산출한 PromptQuorum의 추정치이며 실험실 측정값이 아닙니다. 8 GB 미만 구간과 전체 대역폭 법칙은 **[저사양 PC용 가장 빠른 로컬 LLM](/ko/local-llms/fastest-local-llms-low-end-pcs)**을, GPU가 없는 노트북은 **[CPU 전용 최고의 로컬 LLM 2026](/ko/local-llms/best-cpu-only-llm)**을 참고하십시오."
         ]
       },

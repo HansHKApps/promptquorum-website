@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Qwen3.8 27B is the best local coding LLM for a 24 GB GPU (18 GB, 61.7 SWE-bench Pro). Compare Devstral Small 2, Laguna XS 2.1 and Qwen3 8B by VRAM.',
       heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-en.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**The best local LLM for coding in 2026 is Qwen3.8 27B (Alibaba, Apache 2.0, dense 27B): Qwen reports 61.7 on SWE-bench Pro, and it runs in 18 GB with a 256K context window via `ollama run qwen3.8`. Devstral Small 2 (24B, 15 GB) is the best agentic-coding model for 16 GB machines, Laguna XS 2.1 (Poolside, 20 GB) targets long-horizon agentic sessions, Codestral 22B remains the FIM pick for IDE autocomplete, and Qwen3 8B is the pick for 8 GB RAM.** Kimi K2.6 and Kimi K2.7 Code are the largest open coders, but at 1T parameters they are cloud-only on Ollama and need roughly 300 GB or more of memory to run locally. SWE-bench Pro and SWE-bench Verified are the primary benchmarks; scores are vendor-reported on different harnesses, so read them as directional.',
       quickAnswerTop: {
         en: {
@@ -153,7 +153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Best for 8 GB RAM:** Qwen3 8B — 5 GB VRAM used, best quality-speed tradeoff.',
             '**Frontier-scale open weights:** Kimi K2.6 and Kimi K2.7 Code (Moonshot AI) — 1T total / 32B active MoE, 256K context. Ollama offers only `:cloud` tags; local GGUF builds need about 310–470 GB depending on quantization.',
             '**Benchmark shift:** SWE-bench Pro and Verified (real GitHub issues) are the primary metrics for practical coding. HumanEval (single Python functions) is still useful for small-model comparison.',
-            '**Recommended setup:** 24 GB GPU or 32 GB unified memory (runs Qwen3.8 27B with headroom); 16 GB is enough for Devstral Small 2.',
+            '**Recommended setup:** 24 GB GPU or 32 GB unified memory (runs Qwen3.8 27B; macOS keeps about 8 GB of a Mac\'s memory); 16 GB is enough for Devstral Small 2.',
           ],
         },
         bestModelsQuickPicks: {
@@ -167,13 +167,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Best for repository-aware completion on 24 GB:** Qwen3-Coder 30B — 30B/3.3B active MoE, 19 GB, 256K context. `ollama run qwen3-coder:30b`',
             '**Best for IDE autocomplete:** Codestral 22B — FIM-optimized for Continue.dev, 13 GB. `ollama run codestral:22b`',
             '**Best for 8 GB RAM:** Qwen3 8B — 5 GB VRAM. `ollama run qwen3:8b`',
-            '👉 **If unsure: use Qwen3 8B on 8–16 GB laptops, Qwen3.8 27B on anything with 24 GB of GPU or unified memory.**',
+            '👉 **If unsure: use Qwen3 8B on 8–16 GB laptops, Qwen3.8 27B on a 24 GB GPU or a 32 GB Mac.**',
             '👉 **If you have 16 GB:** Devstral Small 2 is the best agentic fit; Qwen3.8 27B (18 GB) needs a 24 GB card or a 32 GB Mac.',
             '👉 **If you need long agentic sessions:** try Laguna XS 2.1 or Devstral Small 2.',
             '👉 **If you need IDE completion:** use Codestral 22B with Continue.dev.',
           ],
           callouts: [
-            { type: 'practice', text: 'Match model size to your hardware first. With 8 GB, use Qwen3 8B. With 16 GB, use Devstral Small 2. With 24 GB of GPU or unified memory, use Qwen3.8 27B. Kimi K2.6 and K2.7 Code are not practical local picks: Ollama offers them only as cloud tags and local builds need 300 GB or more.' },
+            { type: 'practice', text: 'Match model size to your hardware first. With 8 GB, use Qwen3 8B. With 16 GB, use Devstral Small 2. With a 24 GB GPU or a 32 GB Mac, use Qwen3.8 27B. Kimi K2.6 and K2.7 Code are not practical local picks: Ollama offers them only as cloud tags and local builds need 300 GB or more.' },
           ],
         },
         inOneSentence: {
@@ -400,7 +400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Privacy-critical environments (GDPR, HIPAA, proprietary code):** Any local model above via Ollama (not a `:cloud` tag) -- no external API calls for inference, so your code stays on your machine as long as your editor plugins and other tools also make no network calls.',
           ],
           callouts: [
-            { type: 'warning', text: '❌ **Avoid:** Running Qwen3.8 27B (18 GB) on machines with less than about 24 GB of GPU or unified memory. Once the model spills into system RAM, speed falls sharply. Use Qwen3 8B or Devstral Small 2 on smaller machines.' },
+            { type: 'warning', text: '❌ **Avoid:** Running Qwen3.8 27B (18 GB) on machines without a 24 GB GPU or a 32 GB Mac. Once the model spills into system RAM, speed falls sharply. Use Qwen3 8B or Devstral Small 2 on smaller machines.' },
             { type: 'warning', text: '❌ **Avoid:** Using general-purpose models (Llama 3.1 8B) when you need IDE autocomplete. Only code-specific models with FIM support work for in-editor completion -- Codestral 22B, Qwen3 8B.' },
             { type: 'insight', text: 'Beginner → intermediate → advanced is also a progression in hardware requirements. Start with Qwen3 8B (8 GB), upgrade to Devstral Small 2 (16 GB) as you add tools and workflows, and move to Qwen3.8 27B (24 GB+) when you need maximum reasoning quality.' },
           ],
@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'What is HumanEval and why does it matter?', a: 'HumanEval is a benchmark of 164 Python programming problems. The model must generate a correct function body for each. Pass@1 (percentage solved on first attempt) is the standard metric. It is still widely used to compare small coding models, but it tests single functions rather than real projects.' },
             { q: 'What is fill-in-the-middle (FIM) and which models support it?', a: 'FIM is the ability to complete code given both the code before and after the cursor -- the pattern used by IDE autocomplete. Codestral 22B, Qwen3-Coder, DeepSeek-Coder, and Starcoder2 support FIM. Llama 3.1 8B general does not. For IDE integration, use an FIM-capable model.' },
             { q: 'Can local coding models replace GitHub Copilot?', a: 'Codestral 22B via Continue.dev can cover most autocomplete tasks. For complex multi-file reasoning, cloud models still tend to have an edge on the hardest tasks. Trade-off: local models are slower but fully private and run on your own hardware.' },
-            { q: 'How much RAM do I need for local coding LLMs?', a: 'Minimum 4 GB (tiny 3B models), practically 8 GB+ for usable coding. 16 GB runs Devstral Small 2 (15 GB). 24 GB of GPU memory or a 32 GB Mac runs Qwen3.8 27B (18 GB) with headroom. A rule of thumb: Q4_K_M weights take roughly 0.6 GB per billion parameters, plus memory for the context window.' },
+            { q: 'How much RAM do I need for local coding LLMs?', a: 'Minimum 4 GB (tiny 3B models), practically 8 GB+ for usable coding. 16 GB runs Devstral Small 2 (15 GB). 24 GB of GPU memory or a 32 GB Mac runs Qwen3.8 27B (18 GB); on the Mac, about 6 GB remains for context after macOS takes 8 GB. A rule of thumb: Q4_K_M weights take roughly 0.6 GB per billion parameters, plus memory for the context window.' },
             { q: 'How much context does a 500-line Python file use?', a: "Approximately 2,000-3,000 tokens for a 500-line Python file. Ollama's runtime default (VRAM-scaled) token context may be insufficient. Set `PARAMETER num_ctx 16384` minimum for single-file code review. For multi-file analysis, use 32768 or 65536 context." },
             { q: 'Are local coding models fast enough for development?', a: 'Yes for iterative workflows. Speed depends on your GPU, quantization and context length. Smaller models such as Qwen3 8B respond quickly on laptops; larger models are slower per token. Waiting several seconds per response is acceptable for request-and-review use, but not for keystroke-level autocomplete, where you should use a small FIM model.' },
             { q: 'Can local LLMs replace GPT-5.6 for coding?', a: 'Not entirely. Local models (Qwen3.8 27B, Devstral Small 2) lag frontier cloud models on latest framework knowledge (APIs after the training cutoff), very long multi-file reasoning (100k+ tokens), and debugging accuracy. They have narrowed the gap on everyday multi-file coding tasks and keep your code private.' },
@@ -623,7 +623,7 @@ schema: {
             'name': 'How much RAM do I need for local coding LLMs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Minimum 4 GB (tiny 3B models), practically 8 GB+ for usable coding. 16 GB runs Devstral Small 2 (15 GB). 24 GB of GPU memory or a 32 GB Mac runs Qwen3.8 27B (18 GB) with headroom. A rule of thumb: Q4_K_M weights take roughly 0.6 GB per billion parameters, plus memory for the context window.',
+              'text': 'Minimum 4 GB (tiny 3B models), practically 8 GB+ for usable coding. 16 GB runs Devstral Small 2 (15 GB). 24 GB of GPU memory or a 32 GB Mac runs Qwen3.8 27B (18 GB); on the Mac, about 6 GB remains for context after macOS takes 8 GB. A rule of thumb: Q4_K_M weights take roughly 0.6 GB per billion parameters, plus memory for the context window.',
             },
           },
           {
@@ -721,7 +721,7 @@ schema: {
       metaDescription: 'Qwen3.8 27B es el mejor LLM local para programar en una GPU de 24 GB (18 GB, 61,7 SWE-bench Pro). Compara Devstral Small 2, Laguna XS 2.1 y Qwen3 8B por VRAM.',
       heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-es.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**El mejor LLM local para programar en 2026 es Qwen3.8 27B (Alibaba, Apache 2.0, modelo denso de 27B): Qwen informa 61,7 en SWE-bench Pro y funciona con 18 GB y una ventana de contexto de 256K mediante `ollama run qwen3.8`. Devstral Small 2 (24B, 15 GB) es el mejor modelo de programación agéntica para equipos de 16 GB, Laguna XS 2.1 (Poolside, 20 GB) apunta a sesiones agénticas largas, Codestral 22B sigue siendo la opción FIM para autocompletado en el IDE y Qwen3 8B es la opción para 8 GB de RAM.** Kimi K2.6 y Kimi K2.7 Code son los mayores modelos de código abiertos, pero con 1T de parámetros solo están en la nube en Ollama y requieren unos 300 GB de memoria o más en local. SWE-bench Pro y SWE-bench Verified son los benchmarks principales; las puntuaciones las informan los fabricantes con arneses distintos, así que son orientativas.',
       quickAnswerTop: {
         es: {
@@ -795,7 +795,7 @@ schema: {
             '**Mejor para 8 GB de RAM:** Qwen3 8B — usa 5 GB de VRAM, la mejor relación calidad-velocidad.',
             '**Pesos abiertos a escala frontera:** Kimi K2.6 y Kimi K2.7 Code (Moonshot AI) — MoE 1T total / 32B activos, contexto 256K. Ollama solo ofrece etiquetas `:cloud`; las compilaciones GGUF locales necesitan entre 310 y 470 GB según la cuantización.',
             '**Cambio de benchmark:** SWE-bench Pro y Verified (incidencias reales de GitHub) son las métricas principales para programación práctica. HumanEval (funciones Python aisladas) sigue siendo útil para comparar modelos pequeños.',
-            '**Configuración recomendada:** GPU de 24 GB o 32 GB de memoria unificada (Qwen3.8 27B con margen); 16 GB bastan para Devstral Small 2.',
+            '**Configuración recomendada:** GPU de 24 GB o 32 GB de memoria unificada (Qwen3.8 27B; macOS reserva unos 8 GB en un Mac); 16 GB bastan para Devstral Small 2.',
           ],
         },
         bestModelsQuickPicks: {
@@ -809,13 +809,13 @@ schema: {
             '**Mejor para completado consciente del repositorio con 24 GB:** Qwen3-Coder 30B — MoE 30B/3,3B activos, 19 GB, contexto 256K. `ollama run qwen3-coder:30b`',
             '**Mejor para autocompletado en el IDE:** Codestral 22B — optimizado para FIM con Continue.dev, 13 GB. `ollama run codestral:22b`',
             '**Mejor para 8 GB de RAM:** Qwen3 8B — 5 GB de VRAM. `ollama run qwen3:8b`',
-            '👉 **Si dudas: Qwen3 8B en portátiles de 8–16 GB, Qwen3.8 27B con 24 GB de memoria de GPU o unificada.**',
+            '👉 **Si dudas: Qwen3 8B en portátiles de 8–16 GB, Qwen3.8 27B con una GPU de 24 GB o un Mac de 32 GB.**',
             '👉 **Con 16 GB:** Devstral Small 2 encaja mejor para programación agéntica; Qwen3.8 27B (18 GB) necesita una tarjeta de 24 GB o un Mac de 32 GB.',
             '👉 **Para sesiones agénticas largas:** prueba Laguna XS 2.1 o Devstral Small 2.',
             '👉 **Para completado en el IDE:** usa Codestral 22B con Continue.dev.',
           ],
           callouts: [
-            { type: 'practice', text: 'Ajusta primero el tamaño del modelo a tu hardware. Con 8 GB usa Qwen3 8B; con 16 GB, Devstral Small 2; con 24 GB de memoria de GPU o unificada, Qwen3.8 27B. Kimi K2.6 y K2.7 Code no son opciones locales prácticas: Ollama solo los ofrece como etiquetas en la nube y las compilaciones locales requieren 300 GB o más.' },
+            { type: 'practice', text: 'Ajusta primero el tamaño del modelo a tu hardware. Con 8 GB usa Qwen3 8B; con 16 GB, Devstral Small 2; con una GPU de 24 GB o un Mac de 32 GB, Qwen3.8 27B. Kimi K2.6 y K2.7 Code no son opciones locales prácticas: Ollama solo los ofrece como etiquetas en la nube y las compilaciones locales requieren 300 GB o más.' },
           ],
         },
         inOneSentence: {
@@ -1042,7 +1042,7 @@ schema: {
             '**Entornos críticos para la privacidad (RGPD, HIPAA, código propietario):** cualquier modelo local anterior con Ollama (no una etiqueta `:cloud`) -- sin llamadas externas a API para la inferencia, así que tu código permanece en tu equipo siempre que tus plugins de editor y otras herramientas tampoco usen la red.',
           ],
           callouts: [
-            { type: 'warning', text: '❌ **Evita:** ejecutar Qwen3.8 27B (18 GB) en equipos con menos de unos 24 GB de memoria de GPU o unificada. En cuanto el modelo desborda a la RAM del sistema, la velocidad cae mucho. Usa Qwen3 8B o Devstral Small 2 en equipos más pequeños.' },
+            { type: 'warning', text: '❌ **Evita:** ejecutar Qwen3.8 27B (18 GB) en equipos sin una GPU de 24 GB ni un Mac de 32 GB. En cuanto el modelo desborda a la RAM del sistema, la velocidad cae mucho. Usa Qwen3 8B o Devstral Small 2 en equipos más pequeños.' },
             { type: 'warning', text: '❌ **Evita:** usar modelos generales (Llama 3.1 8B) cuando necesitas autocompletado en el IDE. Solo los modelos específicos de código con soporte FIM funcionan para completado en el editor -- Codestral 22B, Qwen3 8B.' },
             { type: 'insight', text: 'Principiante → intermedio → avanzado es también una progresión de requisitos de hardware. Empieza con Qwen3 8B (8 GB), pasa a Devstral Small 2 (16 GB) cuando añadas herramientas y flujos de trabajo, y llega a Qwen3.8 27B (24 GB o más) cuando necesites la máxima calidad de razonamiento.' },
           ],
@@ -1140,7 +1140,7 @@ schema: {
             { q: '¿Qué es HumanEval y por qué importa?', a: 'HumanEval es un benchmark de 164 problemas de programación en Python. El modelo debe generar un cuerpo de función correcto para cada uno. El pass@1 (porcentaje resuelto al primer intento) es la métrica estándar. Se sigue usando para comparar modelos de código pequeños, pero prueba funciones aisladas y no proyectos reales.' },
             { q: '¿Qué es fill-in-the-middle (FIM) y qué modelos lo admiten?', a: 'FIM es la capacidad de completar código con el código anterior y posterior al cursor -- el patrón del autocompletado en el IDE. Codestral 22B, Qwen3-Coder, DeepSeek-Coder y Starcoder2 admiten FIM. Llama 3.1 8B (general) no. Para integrar con el IDE, usa un modelo compatible con FIM.' },
             { q: '¿Pueden los modelos de código locales sustituir a GitHub Copilot?', a: 'Codestral 22B con Continue.dev puede cubrir la mayoría de las tareas de autocompletado. En razonamiento complejo multiarchivo, los modelos en la nube suelen conservar ventaja en las tareas más difíciles. Compromiso: los modelos locales son más lentos pero totalmente privados y funcionan en tu propio hardware.' },
-            { q: '¿Cuánta RAM necesito para LLMs de código locales?', a: 'Mínimo 4 GB (modelos diminutos de 3B), en la práctica 8 GB o más para un código utilizable. Con 16 GB se ejecuta Devstral Small 2 (15 GB). Con 24 GB de memoria de GPU o un Mac de 32 GB se ejecuta Qwen3.8 27B (18 GB) con margen. Regla práctica: los pesos Q4_K_M ocupan unos 0,6 GB por cada mil millones de parámetros, más memoria para la ventana de contexto.' },
+            { q: '¿Cuánta RAM necesito para LLMs de código locales?', a: 'Mínimo 4 GB (modelos diminutos de 3B), en la práctica 8 GB o más para un código utilizable. Con 16 GB se ejecuta Devstral Small 2 (15 GB). Con 24 GB de memoria de GPU o un Mac de 32 GB se ejecuta Qwen3.8 27B (18 GB); en el Mac quedan unos 6 GB para el contexto tras los 8 GB de macOS. Regla práctica: los pesos Q4_K_M ocupan unos 0,6 GB por cada mil millones de parámetros, más memoria para la ventana de contexto.' },
             { q: '¿Cuánto contexto usa un archivo Python de 500 líneas?', a: 'Aproximadamente 2.000-3.000 tokens para un archivo Python de 500 líneas. El contexto por defecto de Ollama (escalado según la VRAM) puede ser insuficiente. Configura al menos `PARAMETER num_ctx 16384` para revisar un solo archivo. Para análisis multiarchivo, usa 32768 o 65536.' },
             { q: '¿Son los modelos de código locales lo bastante rápidos para desarrollar?', a: 'Sí para flujos iterativos. La velocidad depende de tu GPU, la cuantización y la longitud de contexto. Los modelos pequeños como Qwen3 8B responden rápido en portátiles; los grandes son más lentos por token. Esperar unos segundos por respuesta es aceptable para pedir y revisar, pero no para autocompletado a cada pulsación, donde conviene un modelo FIM pequeño.' },
             { q: '¿Pueden los LLMs locales sustituir a GPT-5.6 para programar?', a: 'No del todo. Los modelos locales (Qwen3.8 27B, Devstral Small 2) van por detrás de los modelos en la nube de vanguardia en conocimiento reciente de frameworks (APIs posteriores al corte de entrenamiento), razonamiento multiarchivo muy largo (100k+ tokens) y precisión de depuración. Han reducido la brecha en tareas multiarchivo cotidianas y mantienen tu código privado.' },
@@ -1262,7 +1262,7 @@ schema: {
             'name': '¿Cuánta RAM necesito para LLMs de código locales?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Mínimo 4 GB (modelos diminutos de 3B), en la práctica 8 GB o más para un código utilizable. Con 16 GB se ejecuta Devstral Small 2 (15 GB). Con 24 GB de memoria de GPU o un Mac de 32 GB se ejecuta Qwen3.8 27B (18 GB) con margen. Regla práctica: los pesos Q4_K_M ocupan unos 0,6 GB por cada mil millones de parámetros, más memoria para la ventana de contexto.',
+              'text': 'Mínimo 4 GB (modelos diminutos de 3B), en la práctica 8 GB o más para un código utilizable. Con 16 GB se ejecuta Devstral Small 2 (15 GB). Con 24 GB de memoria de GPU o un Mac de 32 GB se ejecuta Qwen3.8 27B (18 GB); en el Mac quedan unos 6 GB para el contexto tras los 8 GB de macOS. Regla práctica: los pesos Q4_K_M ocupan unos 0,6 GB por cada mil millones de parámetros, más memoria para la ventana de contexto.',
             },
           },
           {
@@ -1360,7 +1360,7 @@ schema: {
       metaDescription: 'Qwen3.8 27B هو أفضل LLM محلي للبرمجة على GPU بسعة 24 GB (18 GB، و61.7 في SWE-bench Pro). قارن Devstral Small 2 وLaguna XS 2.1 وQwen3 8B حسب VRAM.',
       heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-ar.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**أفضل LLM محلي للبرمجة في 2026 هو Qwen3.8 27B (من Alibaba، بترخيص Apache 2.0، نموذج كثيف بحجم 27B): تعلن Qwen نتيجة 61.7 في SWE-bench Pro، ويعمل بذاكرة 18 GB ونافذة سياق 256K عبر `ollama run qwen3.8`. ويُعدّ Devstral Small 2 (بحجم 24B و15 GB) أفضل نموذج للبرمجة الوكيلية على أجهزة 16 GB، ويستهدف Laguna XS 2.1 (من Poolside، 20 GB) الجلسات الوكيلية الطويلة، ويبقى Codestral 22B خيار FIM للإكمال التلقائي في IDE، ويناسب Qwen3 8B ذاكرة 8 GB من RAM.** أما Kimi K2.6 وKimi K2.7 Code فهما أكبر نماذج البرمجة المفتوحة، لكنهما بحجم 1T معامل سحابيان فقط في Ollama ويحتاجان نحو 300 GB من الذاكرة أو أكثر للتشغيل المحلي. المعياران الرئيسيان هما SWE-bench Pro وSWE-bench Verified؛ والنتائج معلنة من الشركات المطوّرة بأطر اختبار مختلفة، لذا تُقرأ كمؤشرات تقريبية لا كمقارنة مباشرة.',
       quickAnswerTop: {
         ar: {
@@ -1779,7 +1779,7 @@ schema: {
             { q: 'ما هو HumanEval ولماذا هو مهم؟', a: 'HumanEval معيار من 164 مسألة برمجة بلغة Python. على النموذج توليد متن دالة صحيح لكل مسألة. المقياس القياسي هو pass@1 (نسبة الحل من المحاولة الأولى). ما زال يُستخدم لمقارنة نماذج الكود الصغيرة، لكنه يختبر دوالَّ منفردة لا مشاريع حقيقية.' },
             { q: 'ما هو الإكمال في المنتصف (FIM) وأي النماذج تدعمه؟', a: 'FIM هو القدرة على إكمال الكود بالاعتماد على الكود قبل المؤشر وبعده -- النمط الذي يستخدمه الإكمال التلقائي في IDE. يدعم FIM كل من Codestral 22B وQwen3-Coder وDeepSeek-Coder وStarcoder2، ولا يدعمه Llama 3.1 8B العام. للتكامل مع IDE استخدم نموذجاً يدعم FIM.' },
             { q: 'هل يمكن لنماذج البرمجة المحلية استبدال GitHub Copilot؟', a: 'يمكن لـ Codestral 22B عبر Continue.dev تغطية معظم مهام الإكمال التلقائي. وفي الاستدلال المعقد على ملفات متعددة تحتفظ النماذج السحابية عادةً بأفضلية في أصعب المهام. المقايضة: النماذج المحلية أبطأ لكنها خاصة تماماً وتعمل على عتادك أنت.' },
-            { q: 'كم من RAM أحتاج لنماذج LLM المحلية للبرمجة؟', a: 'الحد الأدنى 4 GB (نماذج صغيرة بحجم 3B)، وعملياً 8 GB فأكثر لبرمجة قابلة للاستخدام. تشغّل 16 GB نموذج Devstral Small 2 (15 GB). وتشغّل 24 GB من ذاكرة GPU أو Mac بذاكرة 32 GB نموذج Qwen3.8 27B (18 GB) بمساحة كافية. قاعدة تقريبية: أوزان Q4_K_M تشغل نحو 0.6 GB لكل مليار معامل، إضافة إلى ذاكرة نافذة السياق.' },
+            { q: 'كم من RAM أحتاج لنماذج LLM المحلية للبرمجة؟', a: 'الحد الأدنى 4 GB (نماذج صغيرة بحجم 3B)، وعملياً 8 GB فأكثر لبرمجة قابلة للاستخدام. تشغّل 16 GB نموذج Devstral Small 2 (15 GB). وتشغّل 24 GB من ذاكرة GPU أو Mac بذاكرة 32 GB نموذج Qwen3.8 27B (18 GB)؛ وعلى جهاز Mac يبقى نحو 6 GB للسياق بعد أن يحجز macOS ما مقداره 8 GB. قاعدة تقريبية: أوزان Q4_K_M تشغل نحو 0.6 GB لكل مليار معامل، إضافة إلى ذاكرة نافذة السياق.' },
             { q: 'كم من السياق يستهلك ملف Python من 500 سطر؟', a: 'نحو 2,000-3,000 رمز لملف Python من 500 سطر. قد يكون سياق Ollama الافتراضي (المتدرج بحسب VRAM) غير كافٍ. اضبط `PARAMETER num_ctx 16384` كحد أدنى لمراجعة ملف واحد. وللتحليل متعدد الملفات استخدم 32768 أو 65536.' },
             { q: 'هل نماذج البرمجة المحلية سريعة بما يكفي للتطوير؟', a: 'نعم لسير العمل التكراري. تعتمد السرعة على GPU والتكميم وطول السياق. النماذج الصغيرة مثل Qwen3 8B تستجيب بسرعة على الحواسيب المحمولة؛ والنماذج الكبيرة أبطأ لكل رمز. انتظار بضع ثوانٍ لكل استجابة مقبول في نمط الطلب والمراجعة، لكنه غير مقبول للإكمال عند كل ضغطة مفتاح حيث ينبغي استخدام نموذج FIM صغير.' },
             { q: 'هل يمكن لنماذج LLM المحلية استبدال GPT-5.6 في البرمجة؟', a: 'ليس بالكامل. تتأخر النماذج المحلية (Qwen3.8 27B وDevstral Small 2) عن النماذج السحابية الرائدة في المعرفة الحديثة بالأطر (واجهات API الصادرة بعد تاريخ قطع التدريب)، والاستدلال متعدد الملفات الطويل جداً (100k+ رمز)، ودقة التصحيح. وقد ضيّقت الفجوة في مهام الملفات المتعددة اليومية وتُبقي كودك خاصاً.' },
@@ -1901,7 +1901,7 @@ schema: {
             'name': 'كم من RAM أحتاج لنماذج LLM المحلية للبرمجة؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'الحد الأدنى 4 GB (نماذج صغيرة بحجم 3B)، وعملياً 8 GB فأكثر لبرمجة قابلة للاستخدام. تشغّل 16 GB نموذج Devstral Small 2 (15 GB). وتشغّل 24 GB من ذاكرة GPU أو Mac بذاكرة 32 GB نموذج Qwen3.8 27B (18 GB) بمساحة كافية. قاعدة تقريبية: أوزان Q4_K_M تشغل نحو 0.6 GB لكل مليار معامل، إضافة إلى ذاكرة نافذة السياق.',
+              'text': 'الحد الأدنى 4 GB (نماذج صغيرة بحجم 3B)، وعملياً 8 GB فأكثر لبرمجة قابلة للاستخدام. تشغّل 16 GB نموذج Devstral Small 2 (15 GB). وتشغّل 24 GB من ذاكرة GPU أو Mac بذاكرة 32 GB نموذج Qwen3.8 27B (18 GB)؛ وعلى جهاز Mac يبقى نحو 6 GB للسياق بعد أن يحجز macOS ما مقداره 8 GB. قاعدة تقريبية: أوزان Q4_K_M تشغل نحو 0.6 GB لكل مليار معامل، إضافة إلى ذاكرة نافذة السياق.',
             },
           },
           {
@@ -1999,7 +1999,7 @@ schema: {
       metaDescription: 'O Qwen3.8 27B é o melhor LLM local para programar em uma GPU de 24 GB (18 GB, 61,7 SWE-bench Pro). Compare Devstral Small 2, Laguna XS 2.1 e Qwen3 8B por VRAM.',
       heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-pt.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**O melhor LLM local para programar em 2026 é o Qwen3.8 27B (Alibaba, Apache 2.0, modelo denso de 27B): a Qwen informa 61,7 no SWE-bench Pro, e ele roda com 18 GB e janela de contexto de 256K via `ollama run qwen3.8`. O Devstral Small 2 (24B, 15 GB) é o melhor modelo de programação agêntica para máquinas de 16 GB, o Laguna XS 2.1 (Poolside, 20 GB) mira sessões agênticas longas, o Codestral 22B continua sendo a opção FIM para autocompletar no IDE e o Qwen3 8B é a escolha para 8 GB de RAM.** Kimi K2.6 e Kimi K2.7 Code são os maiores modelos de código abertos, mas com 1T de parâmetros estão disponíveis apenas na nuvem no Ollama e exigem cerca de 300 GB de memória ou mais para rodar localmente. SWE-bench Pro e SWE-bench Verified são os benchmarks principais; as pontuações são informadas pelos fabricantes com protocolos diferentes e servem como referência, não como comparação direta.',
       quickAnswerTop: {
         pt: {
@@ -2078,7 +2078,7 @@ schema: {
             '**Melhor para 8 GB de RAM:** Qwen3 8B — usa 5 GB de VRAM, melhor equilíbrio entre qualidade e velocidade.',
             '**Pesos abertos em escala de fronteira:** Kimi K2.6 e Kimi K2.7 Code (Moonshot AI) — MoE 1T total / 32B ativos, contexto 256K. O Ollama oferece apenas tags `:cloud`; builds GGUF locais precisam de cerca de 310 a 470 GB conforme a quantização.',
             '**Mudança de benchmark:** SWE-bench Pro e Verified (issues reais do GitHub) são as métricas principais para programação prática. O HumanEval (funções Python isoladas) continua útil para comparar modelos pequenos.',
-            '**Configuração recomendada:** GPU de 24 GB ou 32 GB de memória unificada (Qwen3.8 27B com folga); 16 GB bastam para o Devstral Small 2.',
+            '**Configuração recomendada:** GPU de 24 GB ou 32 GB de memória unificada (Qwen3.8 27B; o macOS reserva cerca de 8 GB em um Mac); 16 GB bastam para o Devstral Small 2.',
           ],
         },
         bestModelsQuickPicks: {
@@ -2092,13 +2092,13 @@ schema: {
             '**Melhor para completar com consciência do repositório em 24 GB:** Qwen3-Coder 30B — MoE 30B/3,3B ativos, 19 GB, contexto 256K. `ollama run qwen3-coder:30b`',
             '**Melhor para autocompletar no IDE:** Codestral 22B — otimizado para FIM com Continue.dev, 13 GB. `ollama run codestral:22b`',
             '**Melhor para 8 GB de RAM:** Qwen3 8B — 5 GB de VRAM. `ollama run qwen3:8b`',
-            '👉 **Na dúvida: Qwen3 8B em notebooks de 8–16 GB, Qwen3.8 27B com 24 GB de memória de GPU ou unificada.**',
+            '👉 **Na dúvida: Qwen3 8B em notebooks de 8–16 GB, Qwen3.8 27B com uma GPU de 24 GB ou um Mac de 32 GB.**',
             '👉 **Com 16 GB:** o Devstral Small 2 é o que melhor se encaixa para programação agêntica; o Qwen3.8 27B (18 GB) pede uma placa de 24 GB ou um Mac de 32 GB.',
             '👉 **Para sessões agênticas longas:** experimente o Laguna XS 2.1 ou o Devstral Small 2.',
             '👉 **Para completar no IDE:** use o Codestral 22B com Continue.dev.',
           ],
           callouts: [
-            { type: 'practice', text: 'Ajuste primeiro o tamanho do modelo ao seu hardware. Com 8 GB, use o Qwen3 8B; com 16 GB, o Devstral Small 2; com 24 GB de memória de GPU ou unificada, o Qwen3.8 27B. Kimi K2.6 e K2.7 Code não são escolhas locais práticas: o Ollama os oferece apenas como tags na nuvem e os builds locais exigem 300 GB ou mais.' },
+            { type: 'practice', text: 'Ajuste primeiro o tamanho do modelo ao seu hardware. Com 8 GB, use o Qwen3 8B; com 16 GB, o Devstral Small 2; com uma GPU de 24 GB ou um Mac de 32 GB, o Qwen3.8 27B. Kimi K2.6 e K2.7 Code não são escolhas locais práticas: o Ollama os oferece apenas como tags na nuvem e os builds locais exigem 300 GB ou mais.' },
           ],
         },
         inOneSentence: {
@@ -2325,7 +2325,7 @@ schema: {
             '**Ambientes críticos para privacidade (LGPD, HIPAA, código proprietário):** qualquer modelo local acima via Ollama (não uma tag `:cloud`) -- sem chamadas externas de API na inferência, então seu código fica na sua máquina enquanto plugins do editor e outras ferramentas também não usarem a rede.',
           ],
           callouts: [
-            { type: 'warning', text: '❌ **Evite:** rodar o Qwen3.8 27B (18 GB) em máquinas com menos de cerca de 24 GB de memória de GPU ou unificada. Quando o modelo transborda para a RAM do sistema, a velocidade cai muito. Use o Qwen3 8B ou o Devstral Small 2 em máquinas menores.' },
+            { type: 'warning', text: '❌ **Evite:** rodar o Qwen3.8 27B (18 GB) em máquinas sem uma GPU de 24 GB nem um Mac de 32 GB. Quando o modelo transborda para a RAM do sistema, a velocidade cai muito. Use o Qwen3 8B ou o Devstral Small 2 em máquinas menores.' },
             { type: 'warning', text: '❌ **Evite:** usar modelos de uso geral (Llama 3.1 8B) quando precisar de autocompletar no IDE. Apenas modelos específicos de código com suporte a FIM funcionam para completar no editor -- Codestral 22B, Qwen3 8B.' },
             { type: 'insight', text: 'Iniciante → intermediário → avançado também é uma progressão de requisitos de hardware. Comece com o Qwen3 8B (8 GB), passe para o Devstral Small 2 (16 GB) ao adicionar ferramentas e fluxos de trabalho, e chegue ao Qwen3.8 27B (24 GB ou mais) quando precisar da máxima qualidade de raciocínio.' },
           ],
@@ -2403,7 +2403,7 @@ schema: {
             { q: 'O que é o HumanEval e por que ele importa?', a: 'O HumanEval é um benchmark de 164 problemas de programação em Python. O modelo deve gerar um corpo de função correto para cada um. O pass@1 (porcentagem resolvida na primeira tentativa) é a métrica padrão. Ainda é usado para comparar modelos de código pequenos, mas testa funções isoladas, não projetos reais.' },
             { q: 'O que é fill-in-the-middle (FIM) e quais modelos o suportam?', a: 'FIM é a capacidade de completar código com o código antes e depois do cursor -- o padrão do autocompletar no IDE. Codestral 22B, Qwen3-Coder, DeepSeek-Coder e Starcoder2 suportam FIM. O Llama 3.1 8B (geral) não. Para integração com IDE, use um modelo compatível com FIM.' },
             { q: 'Modelos de código locais podem substituir o GitHub Copilot?', a: 'O Codestral 22B via Continue.dev pode cobrir a maioria das tarefas de autocompletar. Em raciocínio complexo com vários arquivos, modelos na nuvem costumam manter vantagem nas tarefas mais difíceis. Compromisso: modelos locais são mais lentos, mas totalmente privados e rodam no seu próprio hardware.' },
-            { q: 'De quanta RAM preciso para LLMs de código locais?', a: 'Mínimo de 4 GB (modelos minúsculos de 3B), na prática 8 GB ou mais para um código utilizável. 16 GB rodam o Devstral Small 2 (15 GB). 24 GB de memória de GPU ou um Mac de 32 GB rodam o Qwen3.8 27B (18 GB) com folga. Regra prática: pesos Q4_K_M ocupam cerca de 0,6 GB por bilhão de parâmetros, mais memória para a janela de contexto.' },
+            { q: 'De quanta RAM preciso para LLMs de código locais?', a: 'Mínimo de 4 GB (modelos minúsculos de 3B), na prática 8 GB ou mais para um código utilizável. 16 GB rodam o Devstral Small 2 (15 GB). 24 GB de memória de GPU ou um Mac de 32 GB rodam o Qwen3.8 27B (18 GB); no Mac sobram cerca de 6 GB para o contexto depois dos 8 GB do macOS. Regra prática: pesos Q4_K_M ocupam cerca de 0,6 GB por bilhão de parâmetros, mais memória para a janela de contexto.' },
             { q: 'Quanto contexto um arquivo Python de 500 linhas usa?', a: 'Aproximadamente 2.000-3.000 tokens para um arquivo Python de 500 linhas. O contexto padrão do Ollama (escalado pela VRAM) pode ser insuficiente. Defina pelo menos `PARAMETER num_ctx 16384` para revisar um único arquivo. Para análise de vários arquivos, use 32768 ou 65536.' },
             { q: 'Modelos de código locais são rápidos o bastante para desenvolvimento?', a: 'Sim, para fluxos iterativos. A velocidade depende da GPU, da quantização e do tamanho do contexto. Modelos pequenos como o Qwen3 8B respondem rápido em notebooks; modelos grandes são mais lentos por token. Esperar alguns segundos por resposta é aceitável para pedir e revisar, mas não para autocompletar a cada tecla, em que convém um modelo FIM pequeno.' },
             { q: 'LLMs locais podem substituir o GPT-5.6 para programar?', a: 'Não totalmente. Modelos locais (Qwen3.8 27B, Devstral Small 2) ficam atrás dos modelos de nuvem de ponta em conhecimento recente de frameworks (APIs posteriores ao corte de treinamento), raciocínio muito longo em vários arquivos (100 mil+ tokens) e precisão de depuração. Eles reduziram a distância em tarefas cotidianas com vários arquivos e mantêm seu código privado.' },
@@ -2472,7 +2472,7 @@ schema: {
       metaDescription: 'Qwen3.8 27B ist das beste lokale Coding-LLM für eine 24-GB-GPU (18 GB, 61,7 SWE-bench Pro). Vergleich mit Devstral Small 2, Laguna XS 2.1 und Qwen3 8B nach VRAM.',
       heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-de.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**Das beste lokale LLM für Programmierung 2026 ist Qwen3.8 27B (Alibaba, Apache 2.0, dichtes 27B-Modell): Qwen gibt 61,7 auf SWE-bench Pro an, es läuft mit 18 GB und 256K Kontextfenster über `ollama run qwen3.8`. Devstral Small 2 (24B, 15 GB) ist das beste agentische Coding-Modell für 16-GB-Rechner, Laguna XS 2.1 (Poolside, 20 GB) zielt auf lange agentische Sitzungen, Codestral 22B bleibt die FIM-Wahl für IDE-Autovervollständigung, und Qwen3 8B ist die Wahl für 8 GB RAM.** Kimi K2.6 und Kimi K2.7 Code sind die größten offenen Coding-Modelle, bei Ollama aber mit 1T Parametern nur als Cloud-Tag verfügbar und lokal erst ab etwa 300 GB Speicher nutzbar. SWE-bench Pro und SWE-bench Verified sind die Hauptbenchmarks; die Werte stammen von den Herstellern und nutzen unterschiedliche Testumgebungen, sie sind daher nur als Richtwerte zu lesen.',
       audience: 'Anfänger, die ihr erstes lokales LLM auf Consumer-Hardware ausführen',
       readTime: '9 Min. Lesezeit',
@@ -2527,7 +2527,7 @@ schema: {
             '**Am besten für 8 GB RAM:** Qwen3 8B — nutzt 5 GB VRAM, bestes Qualität-Geschwindigkeit-Verhältnis.',
             '**Offene Gewichte im Frontier-Maßstab:** Kimi K2.6 und Kimi K2.7 Code (Moonshot AI) — 1T gesamt / 32B aktiv (MoE), 256K Kontext. Ollama bietet nur `:cloud`-Tags; lokale GGUF-Builds brauchen je nach Quantisierung etwa 310–470 GB.',
             '**Benchmark-Wechsel:** SWE-bench Pro und Verified (echte GitHub-Issues) sind die Hauptmetriken für praktisches Coding. HumanEval (einzelne Python-Funktionen) bleibt für den Vergleich kleiner Modelle nützlich.',
-            '**Empfohlene Ausstattung:** 24-GB-GPU oder 32 GB Unified Memory (Qwen3.8 27B mit Reserve); 16 GB genügen für Devstral Small 2.',
+            '**Empfohlene Ausstattung:** 24-GB-GPU oder 32 GB Unified Memory (Qwen3.8 27B; macOS belegt auf einem Mac etwa 8 GB); 16 GB genügen für Devstral Small 2.',
           ],
         },
         bestModelsQuickPicks: {
@@ -2541,13 +2541,13 @@ schema: {
             '**Am besten für repository-bewusste Vervollständigung mit 24 GB:** Qwen3-Coder 30B — 30B/3,3B aktiv (MoE), 19 GB, 256K Kontext. `ollama run qwen3-coder:30b`',
             '**Am besten für IDE-Autovervollständigung:** Codestral 22B — FIM-optimiert für Continue.dev, 13 GB. `ollama run codestral:22b`',
             '**Am besten für 8 GB RAM:** Qwen3 8B — 5 GB VRAM. `ollama run qwen3:8b`',
-            '👉 **Wenn du unsicher bist: Qwen3 8B auf Laptops mit 8–16 GB, Qwen3.8 27B ab 24 GB GPU- oder Unified Memory.**',
+            '👉 **Wenn du unsicher bist: Qwen3 8B auf Laptops mit 8–16 GB, Qwen3.8 27B mit einer 24-GB-GPU oder einem 32-GB-Mac.**',
             '👉 **Mit 16 GB:** Devstral Small 2 passt am besten für agentisches Coding; Qwen3.8 27B (18 GB) braucht eine 24-GB-Karte oder einen Mac mit 32 GB.',
             '👉 **Für lange agentische Sitzungen:** Laguna XS 2.1 oder Devstral Small 2.',
             '👉 **Für IDE-Vervollständigung:** Codestral 22B mit Continue.dev.',
           ],
           callouts: [
-            { type: 'practice', text: 'Passe die Modellgröße zuerst an deine Hardware an. Mit 8 GB nimm Qwen3 8B, mit 16 GB Devstral Small 2, mit 24 GB GPU- oder Unified Memory Qwen3.8 27B. Kimi K2.6 und K2.7 Code sind keine praktische lokale Wahl: Ollama bietet sie nur als Cloud-Tags, lokale Builds brauchen 300 GB oder mehr.' },
+            { type: 'practice', text: 'Passe die Modellgröße zuerst an deine Hardware an. Mit 8 GB nimm Qwen3 8B, mit 16 GB Devstral Small 2, mit einer 24-GB-GPU oder einem 32-GB-Mac Qwen3.8 27B. Kimi K2.6 und K2.7 Code sind keine praktische lokale Wahl: Ollama bietet sie nur als Cloud-Tags, lokale Builds brauchen 300 GB oder mehr.' },
           ],
         },
         inOneSentence: {
@@ -2774,7 +2774,7 @@ schema: {
             '**Datenschutzkritische Umgebungen (DSGVO, HIPAA, proprietärer Code):** Jedes lokale Modell oben über Ollama (kein `:cloud`-Tag) -- keine externen API-Aufrufe bei der Inferenz, der Code bleibt also auf deinem Rechner, solange auch Editor-Plugins und andere Tools keine Netzwerkverbindungen aufbauen.',
           ],
           callouts: [
-            { type: 'warning', text: '❌ **Vermeiden:** Qwen3.8 27B (18 GB) auf Rechnern mit weniger als etwa 24 GB GPU- oder Unified Memory ausführen. Sobald das Modell in den Arbeitsspeicher ausweicht, bricht die Geschwindigkeit stark ein. Nutze auf kleineren Rechnern Qwen3 8B oder Devstral Small 2.' },
+            { type: 'warning', text: '❌ **Vermeiden:** Qwen3.8 27B (18 GB) auf Rechnern ohne 24-GB-GPU oder 32-GB-Mac ausführen. Sobald das Modell in den Arbeitsspeicher ausweicht, bricht die Geschwindigkeit stark ein. Nutze auf kleineren Rechnern Qwen3 8B oder Devstral Small 2.' },
             { type: 'warning', text: '❌ **Vermeiden:** Allgemeine Modelle (Llama 3.1 8B) verwenden, wenn du IDE-Autovervollständigung brauchst. Nur code-spezifische Modelle mit FIM-Unterstützung funktionieren für Vervollständigung im Editor -- Codestral 22B, Qwen3 8B.' },
             { type: 'insight', text: 'Einsteiger → Fortgeschrittene ist auch eine Steigerung der Hardware-Anforderungen. Starte mit Qwen3 8B (8 GB), wechsle zu Devstral Small 2 (16 GB), sobald du Tools und Workflows ergänzt, und steige auf Qwen3.8 27B (ab 24 GB) um, wenn du maximale Reasoning-Qualität brauchst.' },
           ],
@@ -2871,7 +2871,7 @@ schema: {
             { q: 'Was ist HumanEval und warum ist es wichtig?', a: 'HumanEval ist ein Benchmark mit 164 Python-Programmieraufgaben. Das Modell muss für jede einen korrekten Funktionskörper erzeugen. Pass@1 (Anteil beim ersten Versuch gelöster Aufgaben) ist die Standardmetrik. Er wird weiterhin zum Vergleich kleiner Coding-Modelle genutzt, testet aber einzelne Funktionen statt echter Projekte.' },
             { q: 'Was ist Fill-in-the-Middle (FIM) und welche Modelle unterstützen es?', a: 'FIM ist die Fähigkeit, Code anhand des Codes vor und nach dem Cursor zu vervollständigen -- das Muster der IDE-Autovervollständigung. Codestral 22B, Qwen3-Coder, DeepSeek-Coder und Starcoder2 unterstützen FIM. Llama 3.1 8B (allgemein) nicht. Nutze für die IDE-Integration ein FIM-fähiges Modell.' },
             { q: 'Können lokale Coding-Modelle GitHub Copilot ersetzen?', a: 'Codestral 22B über Continue.dev kann die meisten Autovervollständigungs-Aufgaben abdecken. Bei komplexem Reasoning über mehrere Dateien haben Cloud-Modelle bei den schwierigsten Aufgaben meist weiter die Nase vorn. Der Kompromiss: Lokale Modelle sind langsamer, aber vollständig privat und laufen auf deiner eigenen Hardware.' },
-            { q: 'Wie viel RAM brauche ich für lokale Coding-LLMs?', a: 'Minimum 4 GB (winzige 3B-Modelle), praktisch 8 GB+ für brauchbares Coding. 16 GB führen Devstral Small 2 (15 GB) aus. 24 GB GPU-Speicher oder ein Mac mit 32 GB führen Qwen3.8 27B (18 GB) mit Reserve aus. Faustregel: Q4_K_M-Gewichte brauchen etwa 0,6 GB pro Milliarde Parameter, plus Speicher für das Kontextfenster.' },
+            { q: 'Wie viel RAM brauche ich für lokale Coding-LLMs?', a: 'Minimum 4 GB (winzige 3B-Modelle), praktisch 8 GB+ für brauchbares Coding. 16 GB führen Devstral Small 2 (15 GB) aus. 24 GB GPU-Speicher oder ein Mac mit 32 GB führen Qwen3.8 27B (18 GB) aus; beim Mac bleiben nach den 8 GB für macOS etwa 6 GB für den Kontext. Faustregel: Q4_K_M-Gewichte brauchen etwa 0,6 GB pro Milliarde Parameter, plus Speicher für das Kontextfenster.' },
             { q: 'Wie viele Tokens verbraucht eine 500-zeilige Python-Datei?', a: 'Ungefähr 2.000-3.000 Tokens für eine 500-zeilige Python-Datei. Ollamas laufzeitabhängiger Standardkontext (nach VRAM skaliert) kann zu klein sein. Setze mindestens `PARAMETER num_ctx 16384` für Code-Review einzelner Dateien. Für Analysen über mehrere Dateien nutze 32768 oder 65536 Kontext.' },
             { q: 'Sind lokale Coding-Modelle schnell genug für die Entwicklung?', a: 'Ja für iterative Workflows. Die Geschwindigkeit hängt von GPU, Quantisierung und Kontextlänge ab. Kleinere Modelle wie Qwen3 8B antworten auf Laptops zügig; größere Modelle sind pro Token langsamer. Mehrere Sekunden Wartezeit pro Antwort sind für Anfrage-und-Review-Nutzung akzeptabel, nicht aber für Autovervollständigung auf Tastendruck-Ebene, wofür du ein kleines FIM-Modell nutzen solltest.' },
             { q: 'Können lokale LLMs GPT-5.6 für Programmierung ersetzen?', a: 'Nicht vollständig. Lokale Modelle (Qwen3.8 27B, Devstral Small 2) liegen bei aktuellem Framework-Wissen (APIs nach dem Trainings-Cutoff), sehr langem Multi-Datei-Reasoning (100k+ Tokens) und Debugging-Genauigkeit hinter Frontier-Cloud-Modellen zurück. Bei alltäglichen Multi-Datei-Aufgaben haben sie aufgeholt und halten deinen Code privat.' },
@@ -2993,7 +2993,7 @@ schema: {
             'name': 'Wie viel RAM brauche ich für lokale Coding-LLMs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Minimum 4 GB (winzige 3B-Modelle), praktisch 8 GB+ für brauchbares Coding. 16 GB führen Devstral Small 2 (15 GB) aus. 24 GB GPU-Speicher oder ein Mac mit 32 GB führen Qwen3.8 27B (18 GB) mit Reserve aus. Faustregel: Q4_K_M-Gewichte brauchen etwa 0,6 GB pro Milliarde Parameter, plus Speicher für das Kontextfenster.',
+              'text': 'Minimum 4 GB (winzige 3B-Modelle), praktisch 8 GB+ für brauchbares Coding. 16 GB führen Devstral Small 2 (15 GB) aus. 24 GB GPU-Speicher oder ein Mac mit 32 GB führen Qwen3.8 27B (18 GB) aus; beim Mac bleiben nach den 8 GB für macOS etwa 6 GB für den Kontext. Faustregel: Q4_K_M-Gewichte brauchen etwa 0,6 GB pro Milliarde Parameter, plus Speicher für das Kontextfenster.',
             },
           },
           {
@@ -3091,7 +3091,7 @@ schema: {
       metaDescription: 'Qwen3.8 27B est le meilleur LLM local pour coder sur un GPU de 24 Go (18 Go, 61,7 SWE-bench Pro). Comparez Devstral Small 2, Laguna XS 2.1 et Qwen3 8B par VRAM.',
       heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-fr.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**Le meilleur LLM local pour coder en 2026 est Qwen3.8 27B (Alibaba, Apache 2.0, modèle dense de 27B) : Qwen annonce 61,7 sur SWE-bench Pro, et il tourne avec 18 Go et une fenêtre de contexte de 256K via `ollama run qwen3.8`. Devstral Small 2 (24B, 15 Go) est le meilleur modèle de codage agentique pour les machines de 16 Go, Laguna XS 2.1 (Poolside, 20 Go) vise les longues sessions agentiques, Codestral 22B reste le choix FIM pour l\'autocomplétion en IDE, et Qwen3 8B convient aux machines de 8 Go de RAM.** Kimi K2.6 et Kimi K2.7 Code sont les plus grands modèles de code ouverts, mais avec 1T de paramètres ils ne sont disponibles qu\'en cloud sur Ollama et demandent environ 300 Go de mémoire ou plus en local. SWE-bench Pro et SWE-bench Verified sont les benchmarks principaux ; les scores sont annoncés par les éditeurs avec des protocoles différents et sont à lire comme des ordres de grandeur.',
       audience: 'Débutants exécutant leur premier LLM local sur du matériel grand public',
       readTime: '9 min de lecture',
@@ -3146,7 +3146,7 @@ schema: {
             '**Meilleur pour 8 Go de RAM :** Qwen3 8B — 5 Go de VRAM utilisés, meilleur compromis qualité-vitesse.',
             '**Poids ouverts à l\'échelle frontière :** Kimi K2.6 et Kimi K2.7 Code (Moonshot AI) — MoE 1T total / 32B actifs, contexte 256K. Ollama ne propose que des tags `:cloud` ; les builds GGUF locaux demandent environ 310 à 470 Go selon la quantification.',
             '**Changement de benchmark :** SWE-bench Pro et Verified (vrais tickets GitHub) sont les métriques principales pour le code pratique. HumanEval (fonctions Python isolées) reste utile pour comparer de petits modèles.',
-            '**Configuration recommandée :** GPU de 24 Go ou 32 Go de mémoire unifiée (Qwen3.8 27B avec marge) ; 16 Go suffisent pour Devstral Small 2.',
+            '**Configuration recommandée :** GPU de 24 Go ou 32 Go de mémoire unifiée (Qwen3.8 27B ; macOS en réserve environ 8 Go sur un Mac) ; 16 Go suffisent pour Devstral Small 2.',
           ],
         },
         bestModelsQuickPicks: {
@@ -3160,13 +3160,13 @@ schema: {
             '**Meilleur pour la complétion consciente du dépôt avec 24 Go :** Qwen3-Coder 30B — MoE 30B/3,3B actifs, 19 Go, contexte 256K. `ollama run qwen3-coder:30b`',
             '**Meilleur pour l\'autocomplétion en IDE :** Codestral 22B — optimisé FIM pour Continue.dev, 13 Go. `ollama run codestral:22b`',
             '**Meilleur pour 8 Go de RAM :** Qwen3 8B — 5 Go de VRAM. `ollama run qwen3:8b`',
-            '👉 **En cas de doute : Qwen3 8B sur les portables de 8 à 16 Go, Qwen3.8 27B dès 24 Go de mémoire GPU ou unifiée.**',
+            '👉 **En cas de doute : Qwen3 8B sur les portables de 8 à 16 Go, Qwen3.8 27B avec un GPU de 24 Go ou un Mac de 32 Go.**',
             '👉 **Avec 16 Go :** Devstral Small 2 convient le mieux au codage agentique ; Qwen3.8 27B (18 Go) demande une carte de 24 Go ou un Mac de 32 Go.',
             '👉 **Pour les longues sessions agentiques :** essayez Laguna XS 2.1 ou Devstral Small 2.',
             '👉 **Pour la complétion en IDE :** utilisez Codestral 22B avec Continue.dev.',
           ],
           callouts: [
-            { type: 'practice', text: 'Adaptez d\'abord la taille du modèle à votre matériel. Avec 8 Go, utilisez Qwen3 8B ; avec 16 Go, Devstral Small 2 ; avec 24 Go de mémoire GPU ou unifiée, Qwen3.8 27B. Kimi K2.6 et K2.7 Code ne sont pas des choix locaux pratiques : Ollama ne les propose qu\'en tags cloud et les builds locaux demandent 300 Go ou plus.' },
+            { type: 'practice', text: 'Adaptez d\'abord la taille du modèle à votre matériel. Avec 8 Go, utilisez Qwen3 8B ; avec 16 Go, Devstral Small 2 ; avec un GPU de 24 Go ou un Mac de 32 Go, Qwen3.8 27B. Kimi K2.6 et K2.7 Code ne sont pas des choix locaux pratiques : Ollama ne les propose qu\'en tags cloud et les builds locaux demandent 300 Go ou plus.' },
           ],
         },
         inOneSentence: {
@@ -3393,7 +3393,7 @@ schema: {
             '**Environnements sensibles à la confidentialité (RGPD, HIPAA, code propriétaire) :** n\'importe quel modèle local ci-dessus via Ollama (pas un tag `:cloud`) -- aucun appel d\'API externe pour l\'inférence, donc votre code reste sur votre machine tant que vos plugins d\'éditeur et autres outils n\'utilisent pas non plus le réseau.',
           ],
           callouts: [
-            { type: 'warning', text: '❌ **À éviter :** exécuter Qwen3.8 27B (18 Go) sur des machines avec moins d\'environ 24 Go de mémoire GPU ou unifiée. Dès que le modèle déborde en RAM système, la vitesse chute fortement. Utilisez Qwen3 8B ou Devstral Small 2 sur les machines plus petites.' },
+            { type: 'warning', text: '❌ **À éviter :** exécuter Qwen3.8 27B (18 Go) sur des machines sans GPU de 24 Go ni Mac de 32 Go. Dès que le modèle déborde en RAM système, la vitesse chute fortement. Utilisez Qwen3 8B ou Devstral Small 2 sur les machines plus petites.' },
             { type: 'warning', text: '❌ **À éviter :** utiliser des modèles généralistes (Llama 3.1 8B) quand vous avez besoin d\'autocomplétion en IDE. Seuls les modèles spécialisés en code avec prise en charge FIM fonctionnent pour la complétion dans l\'éditeur -- Codestral 22B, Qwen3 8B.' },
             { type: 'insight', text: 'Débutant → intermédiaire → avancé est aussi une progression des besoins matériels. Commencez avec Qwen3 8B (8 Go), passez à Devstral Small 2 (16 Go) quand vous ajoutez des outils et des workflows, puis à Qwen3.8 27B (24 Go et plus) quand il vous faut la meilleure qualité de raisonnement.' },
           ],
@@ -3486,7 +3486,7 @@ schema: {
             { q: 'Qu\'est-ce que HumanEval et pourquoi est-ce important ?', a: 'HumanEval est un benchmark de 164 problèmes de programmation Python. Le modèle doit générer un corps de fonction correct pour chacun. Le pass@1 (pourcentage résolu du premier coup) est la métrique standard. Il sert encore à comparer de petits modèles de code, mais teste des fonctions isolées plutôt que de vrais projets.' },
             { q: 'Qu\'est-ce que le fill-in-the-middle (FIM) et quels modèles le prennent en charge ?', a: 'Le FIM est la capacité de compléter du code à partir du code situé avant et après le curseur -- le schéma de l\'autocomplétion en IDE. Codestral 22B, Qwen3-Coder, DeepSeek-Coder et Starcoder2 prennent en charge le FIM. Llama 3.1 8B (généraliste) non. Pour l\'intégration IDE, utilisez un modèle compatible FIM.' },
             { q: 'Les modèles de code locaux peuvent-ils remplacer GitHub Copilot ?', a: 'Codestral 22B via Continue.dev peut couvrir la plupart des tâches d\'autocomplétion. Pour le raisonnement complexe multi-fichiers, les modèles cloud gardent généralement l\'avantage sur les tâches les plus difficiles. Compromis : les modèles locaux sont plus lents mais entièrement privés et tournent sur votre propre matériel.' },
-            { q: 'De quelle RAM ai-je besoin pour les LLM de code locaux ?', a: 'Minimum 4 Go (petits modèles 3B), en pratique 8 Go et plus pour un code utilisable. 16 Go font tourner Devstral Small 2 (15 Go). 24 Go de mémoire GPU ou un Mac de 32 Go font tourner Qwen3.8 27B (18 Go) avec de la marge. Règle empirique : les poids Q4_K_M occupent environ 0,6 Go par milliard de paramètres, plus la mémoire de la fenêtre de contexte.' },
+            { q: 'De quelle RAM ai-je besoin pour les LLM de code locaux ?', a: 'Minimum 4 Go (petits modèles 3B), en pratique 8 Go et plus pour un code utilisable. 16 Go font tourner Devstral Small 2 (15 Go). 24 Go de mémoire GPU ou un Mac de 32 Go font tourner Qwen3.8 27B (18 Go) ; sur le Mac, il reste environ 6 Go pour le contexte après les 8 Go de macOS. Règle empirique : les poids Q4_K_M occupent environ 0,6 Go par milliard de paramètres, plus la mémoire de la fenêtre de contexte.' },
             { q: 'Combien de contexte utilise un fichier Python de 500 lignes ?', a: 'Environ 2 000 à 3 000 tokens pour un fichier Python de 500 lignes. Le contexte par défaut d\'Ollama (adapté à la VRAM) peut être insuffisant. Définissez au minimum `PARAMETER num_ctx 16384` pour la revue d\'un seul fichier. Pour l\'analyse multi-fichiers, utilisez 32768 ou 65536.' },
             { q: 'Les modèles de code locaux sont-ils assez rapides pour le développement ?', a: 'Oui pour les workflows itératifs. La vitesse dépend du GPU, de la quantification et de la longueur du contexte. Les petits modèles comme Qwen3 8B répondent vite sur portable ; les grands modèles sont plus lents par token. Attendre quelques secondes par réponse est acceptable pour demander puis relire, mais pas pour l\'autocomplétion à chaque frappe, où il faut un petit modèle FIM.' },
             { q: 'Les LLM locaux peuvent-ils remplacer GPT-5.6 pour coder ?', a: 'Pas entièrement. Les modèles locaux (Qwen3.8 27B, Devstral Small 2) restent derrière les modèles cloud de pointe sur les connaissances récentes des frameworks (API postérieures à la date limite d\'entraînement), le raisonnement multi-fichiers très long (100k+ tokens) et la précision du débogage. Ils ont réduit l\'écart sur les tâches multi-fichiers courantes et gardent votre code privé.' },
@@ -3608,7 +3608,7 @@ schema: {
             'name': 'De quelle RAM ai-je besoin pour les LLM de code locaux ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Minimum 4 Go (petits modèles 3B), en pratique 8 Go et plus pour un code utilisable. 16 Go font tourner Devstral Small 2 (15 Go). 24 Go de mémoire GPU ou un Mac de 32 Go font tourner Qwen3.8 27B (18 Go) avec de la marge. Règle empirique : les poids Q4_K_M occupent environ 0,6 Go par milliard de paramètres, plus la mémoire de la fenêtre de contexte.',
+              'text': 'Minimum 4 Go (petits modèles 3B), en pratique 8 Go et plus pour un code utilisable. 16 Go font tourner Devstral Small 2 (15 Go). 24 Go de mémoire GPU ou un Mac de 32 Go font tourner Qwen3.8 27B (18 Go) ; sur le Mac, il reste environ 6 Go pour le contexte après les 8 Go de macOS. Règle empirique : les poids Q4_K_M occupent environ 0,6 Go par milliard de paramètres, plus la mémoire de la fenêtre de contexte.',
             },
           },
           {
@@ -3706,7 +3706,7 @@ schema: {
       metaDescription: 'Qwen3.8 27Bは24GB GPU向けの最高のローカルコーディングLLM（18GB、SWE-bench Pro 61.7）。Devstral Small 2、Laguna XS 2.1、Qwen3 8BをVRAM別に比較。',
       heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-ja.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**2026年コーディング向け最高のローカルLLMはQwen3.8 27B（Alibaba、Apache 2.0、27B密集モデル）です。Qwenの公表値でSWE-bench Pro 61.7、`ollama run qwen3.8`で18GB・256Kコンテキストで動作します。Devstral Small 2（24B、15GB）は16GBマシン向けの最高のエージェントコーディングモデル、Laguna XS 2.1（Poolside、20GB）は長時間のエージェントセッション向け、Codestral 22BはIDEオートコンプリート向けFIMの定番、Qwen3 8Bは8GB RAM向けです。** Kimi K2.6とKimi K2.7 Codeは最大級のオープンなコーディングモデルですが、1TパラメータでOllamaではクラウド専用、ローカル実行には約300GB以上のメモリが必要です。主要ベンチマークはSWE-bench ProとSWE-bench Verifiedです。スコアは各社の公表値で評価環境が異なるため、目安として読んでください。',
       audience: 'コンシューマハードウェア上で初めてのローカルLLMを実行している初心者',
       readTime: '9分で読める',
@@ -3780,7 +3780,7 @@ schema: {
             '**8GB RAMに最適：** Qwen3 8B — VRAM 5GB使用、品質と速度のバランスが最良。',
             '**フロンティア規模のオープンウェイト：** Kimi K2.6とKimi K2.7 Code（Moonshot AI）— 1T総計/32BアクティブのMoE、256Kコンテキスト。Ollamaは`:cloud`タグのみ。ローカルのGGUFビルドは量子化により約310〜470GB必要。',
             '**ベンチマークの移行：** 実用的なコーディングの主要指標はSWE-bench ProとVerified（実際のGitHub issue）。HumanEval（単一のPython関数）は小型モデルの比較に引き続き有用。',
-            '**推奨環境：** 24GB GPUまたは32GBユニファイドメモリ（Qwen3.8 27Bに余裕あり）。Devstral Small 2なら16GBで十分。',
+            '**推奨環境：** 24GB GPUまたは32GBユニファイドメモリ（Qwen3.8 27B向け。MacではmacOSが約8GBを使用）。Devstral Small 2なら16GBで十分。',
           ],
         },
         bestModelsQuickPicks: {
@@ -3794,13 +3794,13 @@ schema: {
             '**24GBでのリポジトリ認識型補完に最適：** Qwen3-Coder 30B — 30B/3.3BアクティブMoE、19GB、256Kコンテキスト。`ollama run qwen3-coder:30b`',
             '**IDEオートコンプリートに最適：** Codestral 22B — Continue.dev向けFIM最適化、13GB。`ollama run codestral:22b`',
             '**8GB RAMに最適：** Qwen3 8B — VRAM 5GB。`ollama run qwen3:8b`',
-            '👉 **迷ったら：8〜16GBのノートPCはQwen3 8B、GPUまたはユニファイドメモリが24GB以上ならQwen3.8 27B。**',
+            '👉 **迷ったら：8〜16GBのノートPCはQwen3 8B、24GB GPUまたは32GB MacならQwen3.8 27B。**',
             '👉 **16GBの場合：** エージェントコーディングにはDevstral Small 2が最適。Qwen3.8 27B（18GB）には24GBカードまたは32GB Macが必要です。',
             '👉 **長時間のエージェントセッションなら：** Laguna XS 2.1またはDevstral Small 2を試してください。',
             '👉 **IDE補完なら：** Continue.devとCodestral 22Bを使います。',
           ],
           callouts: [
-            { type: 'practice', text: 'まずハードウェアに合わせてモデルサイズを選びます。8GBならQwen3 8B、16GBならDevstral Small 2、GPUまたはユニファイドメモリが24GBならQwen3.8 27B。Kimi K2.6とK2.7 Codeは現実的なローカル選択肢ではありません。Ollamaではクラウドタグのみで、ローカルビルドには300GB以上が必要です。' },
+            { type: 'practice', text: 'まずハードウェアに合わせてモデルサイズを選びます。8GBならQwen3 8B、16GBならDevstral Small 2、24GB GPUまたは32GB MacならQwen3.8 27B。Kimi K2.6とK2.7 Codeは現実的なローカル選択肢ではありません。Ollamaではクラウドタグのみで、ローカルビルドには300GB以上が必要です。' },
           ],
         },
         inOneSentence: {
@@ -4027,7 +4027,7 @@ schema: {
             '**プライバシー重視の環境（GDPR、HIPAA、独自コード）：** 上記のいずれかのローカルモデルをOllama経由で（`:cloud`タグは不可）-- 推論に外部APIコールはないため、エディタのプラグインなど他のツールもネットワークを使わない限り、コードはマシンの外に出ません。',
           ],
           callouts: [
-            { type: 'warning', text: '❌ **避けるべき：** GPUまたはユニファイドメモリが約24GB未満のマシンでQwen3.8 27B（18GB）を動かすこと。モデルがシステムRAMにあふれると速度が大きく低下します。小型マシンではQwen3 8BまたはDevstral Small 2を使ってください。' },
+            { type: 'warning', text: '❌ **避けるべき：** 24GB GPUも32GB Macもないマシンで Qwen3.8 27B（18GB）を動かすこと。モデルがシステムRAMにあふれると速度が大きく低下します。小型マシンではQwen3 8BまたはDevstral Small 2を使ってください。' },
             { type: 'warning', text: '❌ **避けるべき：** IDEオートコンプリートが必要なときに汎用モデル（Llama 3.1 8B）を使うこと。エディタ内補完に使えるのはFIM対応のコード特化モデル（Codestral 22B、Qwen3 8B）だけです。' },
             { type: 'insight', text: '初心者→中級者→上級者は、ハードウェア要件の段階的な引き上げでもあります。Qwen3 8B（8GB）から始め、ツールやワークフローを増やす段階でDevstral Small 2（16GB）へ、最高の推論品質が必要になったらQwen3.8 27B（24GB以上）へ進みます。' },
           ],
@@ -4110,7 +4110,7 @@ schema: {
             { q: 'HumanEvalとは何で、なぜ重要ですか？', a: 'HumanEvalは164問のPythonプログラミング問題のベンチマークです。モデルは各問題に対して正しい関数本体を生成する必要があり、pass@1（1回目で解けた割合）が標準指標です。小型コーディングモデルの比較には今も使われますが、実際のプロジェクトではなく単一関数を測定します。' },
             { q: 'fill-in-the-middle（FIM）とは何で、どのモデルが対応していますか？', a: 'FIMは、カーソルの前後のコードをもとにコードを補完する能力で、IDEオートコンプリートの方式です。Codestral 22B、Qwen3-Coder、DeepSeek-Coder、Starcoder2が対応しています。汎用のLlama 3.1 8Bは非対応です。IDE連携にはFIM対応モデルを使ってください。' },
             { q: 'ローカルのコーディングモデルでGitHub Copilotの代わりになりますか？', a: 'Codestral 22BとContinue.devの組み合わせで、ほとんどのオートコンプリートはカバーできます。複雑なマルチファイル推論では、最も難しいタスクで依然としてクラウドモデルが優位な傾向があります。トレードオフとして、ローカルモデルは遅い一方、完全にプライベートで自分のハードウェア上で動作します。' },
-            { q: 'ローカルのコーディングLLMにはどのくらいのRAMが必要ですか？', a: '最小4GB（極小の3Bモデル）、実用的には8GB以上。16GBならDevstral Small 2（15GB）が動きます。24GBのGPUメモリまたは32GB MacならQwen3.8 27B（18GB）が余裕を持って動作します。目安として、Q4_K_Mの重みは10億パラメータあたり約0.6GBに、コンテキスト分のメモリを加えた量です。' },
+            { q: 'ローカルのコーディングLLMにはどのくらいのRAMが必要ですか？', a: '最小4GB（極小の3Bモデル）、実用的には8GB以上。16GBならDevstral Small 2（15GB）が動きます。24GBのGPUメモリまたは32GB MacならQwen3.8 27B（18GB）が動作します。MacではmacOSの8GBを除き、コンテキスト用に約6GBが残ります。目安として、Q4_K_Mの重みは10億パラメータあたり約0.6GBに、コンテキスト分のメモリを加えた量です。' },
             { q: '500行のPythonファイルはどのくらいのコンテキストを使いますか？', a: '500行のPythonファイルでおよそ2,000〜3,000トークンです。Ollamaの実行時既定コンテキスト（VRAMに応じて変動）では足りない場合があります。単一ファイルのコードレビューには少なくとも`PARAMETER num_ctx 16384`、複数ファイルの分析には32768または65536を設定してください。' },
             { q: 'ローカルのコーディングモデルは開発に十分な速度ですか？', a: '反復的なワークフローには十分です。速度はGPU、量子化、コンテキスト長に依存します。Qwen3 8Bのような小型モデルはノートPCでも素早く応答し、大型モデルはトークンあたりが遅くなります。依頼して確認する使い方なら数秒の待ち時間は許容できますが、キー入力ごとのオートコンプリートには小型のFIMモデルを使うべきです。' },
             { q: 'ローカルLLMはGPT-5.6の代わりになりますか？', a: '完全にはなりません。ローカルモデル（Qwen3.8 27B、Devstral Small 2）は、最新フレームワークの知識（訓練カットオフ以降のAPI）、非常に長いマルチファイル推論（100k+トークン）、デバッグ精度でフロンティアのクラウドモデルに及びません。日常的なマルチファイルのタスクでは差を縮め、コードを外部に出さずに済みます。' },
@@ -4145,7 +4145,7 @@ schema: {
         headline: '2026年コーディング向け最高のローカルLLM：Qwen3.8 27B・Devstral・Laguna',
         description: 'Qwen3.8 27B（18GB、Qwen公表のSWE-bench Pro 61.7）は24GB GPU向けの最高のローカルコーディングLLM。Devstral Small 2、Laguna XS 2.1、Codestral 22B、Qwen3 8BをVRAM別に比較。',
         datePublished: '2026-04-04',
-        dateModified: '2026-10-17',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/ja/local-llms/best-local-llms-for-coding',
         inLanguage: 'ja',
         author: { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -4235,7 +4235,7 @@ schema: {
             'name': 'ローカルのコーディングLLMにはどのくらいのRAMが必要ですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '最小4GB（極小の3Bモデル）、実用的には8GB以上。16GBならDevstral Small 2（15GB）が動きます。24GBのGPUメモリまたは32GB MacならQwen3.8 27B（18GB）が余裕を持って動作します。目安として、Q4_K_Mの重みは10億パラメータあたり約0.6GBに、コンテキスト分のメモリを加えた量です。',
+              'text': '最小4GB（極小の3Bモデル）、実用的には8GB以上。16GBならDevstral Small 2（15GB）が動きます。24GBのGPUメモリまたは32GB MacならQwen3.8 27B（18GB）が動作します。MacではmacOSの8GBを除き、コンテキスト用に約6GBが残ります。目安として、Q4_K_Mの重みは10億パラメータあたり約0.6GBに、コンテキスト分のメモリを加えた量です。',
             },
           },
           {
@@ -4333,7 +4333,7 @@ schema: {
       metaDescription: 'Qwen3.8 27B是24GB显卡上最佳的本地编程LLM（18GB，SWE-bench Pro 61.7）。按显存对比Devstral Small 2、Laguna XS 2.1与Qwen3 8B。',
       heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-zh.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**2026年最佳本地编程LLM是Qwen3.8 27B（Alibaba，Apache 2.0，27B密集模型）：Qwen公布SWE-bench Pro为61.7，通过`ollama run qwen3.8`以18GB内存和256K上下文窗口运行。Devstral Small 2（24B，15GB）是16GB设备上最佳的代理编码模型，Laguna XS 2.1（Poolside，20GB）面向长时间代理会话，Codestral 22B仍是IDE自动补全的FIM首选，Qwen3 8B适合8GB内存。** Kimi K2.6和Kimi K2.7 Code是最大的开源编程模型，但拥有1T参数，在Ollama上仅提供云端版本，本地运行需要约300GB或更多内存。主要基准是SWE-bench Pro和SWE-bench Verified；分数均由厂商公布且评测框架不同，仅供参考，不能直接比较。',
       audience: '在消费级硬件上运行首个本地LLM的初学者',
       readTime: '阅读约9分钟',
@@ -4407,7 +4407,7 @@ schema: {
             '**8GB内存最佳：** Qwen3 8B — 占用5GB显存，质量与速度的最佳平衡。',
             '**前沿规模的开放权重：** Kimi K2.6和Kimi K2.7 Code（Moonshot AI）— 1T总参数/32B激活的MoE，256K上下文。Ollama仅提供`:cloud`标签；本地GGUF版本按量化程度需要约310–470GB。',
             '**基准转变：** 实用编程的主要指标是SWE-bench Pro和Verified（真实GitHub问题）。HumanEval（单个Python函数）仍可用于比较小型模型。',
-            '**推荐配置：** 24GB显卡或32GB统一内存（运行Qwen3.8 27B有余量）；16GB足以运行Devstral Small 2。',
+            '**推荐配置：** 24GB显卡或32GB统一内存（运行Qwen3.8 27B；Mac上macOS约占用8GB）；16GB足以运行Devstral Small 2。',
           ],
         },
         bestModelsQuickPicks: {
@@ -4421,13 +4421,13 @@ schema: {
             '**24GB上感知代码库的补全最佳：** Qwen3-Coder 30B — 30B/3.3B激活MoE，19GB，256K上下文。`ollama run qwen3-coder:30b`',
             '**IDE自动补全最佳：** Codestral 22B — 为Continue.dev优化的FIM，13GB。`ollama run codestral:22b`',
             '**8GB内存最佳：** Qwen3 8B — 5GB显存。`ollama run qwen3:8b`',
-            '👉 **拿不准时：8–16GB笔记本选Qwen3 8B，显存或统一内存达24GB以上选Qwen3.8 27B。**',
+            '👉 **拿不准时：8–16GB笔记本选Qwen3 8B，24GB显卡或32GB Mac选Qwen3.8 27B。**',
             '👉 **16GB时：** 代理编码最合适的是Devstral Small 2；Qwen3.8 27B（18GB）需要24GB显卡或32GB Mac。',
             '👉 **需要长时间代理会话时：** 试试Laguna XS 2.1或Devstral Small 2。',
             '👉 **需要IDE补全时：** 在Continue.dev中使用Codestral 22B。',
           ],
           callouts: [
-            { type: 'practice', text: '先让模型大小匹配你的硬件。8GB用Qwen3 8B，16GB用Devstral Small 2，24GB显存或统一内存用Qwen3.8 27B。Kimi K2.6和K2.7 Code不是实用的本地选择：Ollama仅提供云端标签，本地版本需要300GB或更多内存。' },
+            { type: 'practice', text: '先让模型大小匹配你的硬件。8GB用Qwen3 8B，16GB用Devstral Small 2，24GB显卡或32GB Mac用Qwen3.8 27B。Kimi K2.6和K2.7 Code不是实用的本地选择：Ollama仅提供云端标签，本地版本需要300GB或更多内存。' },
           ],
         },
         inOneSentence: {
@@ -4654,7 +4654,7 @@ schema: {
             '**隐私敏感环境（GDPR、HIPAA、专有代码）：** 通过Ollama使用上述任一本地模型（不要用`:cloud`标签）-- 推理不产生外部API调用，因此只要编辑器插件等其他工具也不联网，代码就不会离开你的机器。',
           ],
           callouts: [
-            { type: 'warning', text: '❌ **避免：** 在显存或统一内存不足约24GB的设备上运行Qwen3.8 27B（18GB）。一旦模型溢出到系统内存，速度会大幅下降。较小的设备请使用Qwen3 8B或Devstral Small 2。' },
+            { type: 'warning', text: '❌ **避免：** 在没有24GB显卡或32GB Mac的设备上运行Qwen3.8 27B（18GB）。一旦模型溢出到系统内存，速度会大幅下降。较小的设备请使用Qwen3 8B或Devstral Small 2。' },
             { type: 'warning', text: '❌ **避免：** 需要IDE自动补全时使用通用模型（Llama 3.1 8B）。只有支持FIM的代码专用模型才能用于编辑器内补全 -- Codestral 22B、Qwen3 8B。' },
             { type: 'insight', text: '初学者 → 中级 → 高级，也是硬件要求逐步提高的过程。从Qwen3 8B（8GB）起步，添加工具和工作流时升级到Devstral Small 2（16GB），需要最高推理质量时再用Qwen3.8 27B（24GB以上）。' },
           ],
@@ -4737,7 +4737,7 @@ schema: {
             { q: '什么是HumanEval，为什么重要？', a: 'HumanEval是包含164道Python编程题的基准。模型需要为每道题生成正确的函数体。pass@1（首次尝试解决的比例）是标准指标。它仍用于比较小型编程模型，但测试的是单个函数而非真实项目。' },
             { q: '什么是中间填充（FIM），哪些模型支持？', a: 'FIM是根据光标前后的代码补全代码的能力——IDE自动补全使用的模式。Codestral 22B、Qwen3-Coder、DeepSeek-Coder和Starcoder2支持FIM，通用的Llama 3.1 8B不支持。IDE集成请使用支持FIM的模型。' },
             { q: '本地编程模型能替代GitHub Copilot吗？', a: '通过Continue.dev使用Codestral 22B可以覆盖大多数自动补全任务。对于复杂的多文件推理，云端模型在最难的任务上通常仍有优势。取舍：本地模型更慢，但完全私密，并运行在你自己的硬件上。' },
-            { q: '本地编程LLM需要多少内存？', a: '最低4GB（微型3B模型），实用至少8GB以上。16GB可运行Devstral Small 2（15GB）。24GB显存或32GB Mac可运行Qwen3.8 27B（18GB）并留有余量。经验法则：Q4_K_M权重每十亿参数约占0.6GB，再加上上下文窗口所需的内存。' },
+            { q: '本地编程LLM需要多少内存？', a: '最低4GB（微型3B模型），实用至少8GB以上。16GB可运行Devstral Small 2（15GB）。24GB显存或32GB Mac可运行Qwen3.8 27B（18GB）；Mac上扣除macOS的8GB后，约剩6GB用于上下文。经验法则：Q4_K_M权重每十亿参数约占0.6GB，再加上上下文窗口所需的内存。' },
             { q: '500行的Python文件占用多少上下文？', a: '500行的Python文件大约需要2,000–3,000个token。Ollama运行时的默认上下文（随显存调整）可能不够。单文件代码审查请至少设置`PARAMETER num_ctx 16384`；多文件分析请使用32768或65536。' },
             { q: '本地编程模型的速度够开发使用吗？', a: '对迭代式工作流够用。速度取决于GPU、量化和上下文长度。Qwen3 8B这样的小模型在笔记本上响应很快；大模型每个token更慢。对于提问后审阅的用法，等待几秒可以接受，但逐键自动补全不行，那种场景应使用小型FIM模型。' },
             { q: '本地LLM能替代GPT-5.6用于编程吗？', a: '不能完全替代。本地模型（Qwen3.8 27B、Devstral Small 2）在最新框架知识（训练截止之后的API）、超长多文件推理（100k+ token）和调试准确度上落后于前沿云端模型。它们在日常多文件任务上已缩小差距，并让代码保持私密。' },
@@ -4772,7 +4772,7 @@ schema: {
         headline: '2026年最佳本地编程LLM：Qwen3.8 27B、Devstral、Laguna',
         description: 'Qwen3.8 27B（18GB，Qwen公布的SWE-bench Pro为61.7）是24GB显卡上最佳的本地编程LLM。按显存对比Devstral Small 2、Laguna XS 2.1、Codestral 22B和Qwen3 8B。',
         datePublished: '2026-04-04',
-        dateModified: '2026-10-17',
+        dateModified: '2026-11-06',
         url: 'https://www.promptquorum.com/zh/local-llms/best-local-llms-for-coding',
         inLanguage: 'zh',
         author: { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -4862,7 +4862,7 @@ schema: {
             'name': '本地编程LLM需要多少内存？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '最低4GB（微型3B模型），实用至少8GB以上。16GB可运行Devstral Small 2（15GB）。24GB显存或32GB Mac可运行Qwen3.8 27B（18GB）并留有余量。经验法则：Q4_K_M权重每十亿参数约占0.6GB，再加上上下文窗口所需的内存。',
+              'text': '最低4GB（微型3B模型），实用至少8GB以上。16GB可运行Devstral Small 2（15GB）。24GB显存或32GB Mac可运行Qwen3.8 27B（18GB）；Mac上扣除macOS的8GB后，约剩6GB用于上下文。经验法则：Q4_K_M权重每十亿参数约占0.6GB，再加上上下文窗口所需的内存。',
             },
           },
           {
@@ -4964,7 +4964,7 @@ schema: {
       metaDescription: 'Qwen3.8 27B는 24GB GPU용 최고의 로컬 코딩 LLM입니다(18GB, SWE-bench Pro 61.7). Devstral Small 2, Laguna XS 2.1, Qwen3 8B를 VRAM별로 비교하세요.',
       heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-ko.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-17',
+      dateModified: '2026-11-06',
       leadAnswerBlock: '**2026년 코딩용 최고의 로컬 LLM은 Qwen3.8 27B(Alibaba, Apache 2.0, 27B 밀집 모델)입니다. Qwen은 SWE-bench Pro 61.7을 발표했으며, `ollama run qwen3.8`로 18GB 메모리와 256K 컨텍스트 창에서 실행됩니다. Devstral Small 2(24B, 15GB)는 16GB 기기에서 가장 좋은 에이전트 코딩 모델이고, Laguna XS 2.1(Poolside, 20GB)은 장시간 에이전트 세션을 겨냥하며, Codestral 22B는 IDE 자동 완성용 FIM의 표준으로 남아 있고, Qwen3 8B는 8GB RAM에 적합합니다.** Kimi K2.6과 Kimi K2.7 Code는 가장 큰 오픈 코딩 모델이지만 1T 파라미터이므로 Ollama에서는 클라우드 전용이며 로컬 실행에는 약 300GB 이상의 메모리가 필요합니다. 주요 벤치마크는 SWE-bench Pro와 SWE-bench Verified이며, 점수는 각 개발사가 서로 다른 평가 환경에서 발표한 값이므로 직접 비교가 아닌 참고용으로 읽어야 합니다.',
       quickAnswerTop: {
         ko: {
@@ -5038,7 +5038,7 @@ schema: {
             '**8GB RAM 최고:** Qwen3 8B — VRAM 5GB 사용, 품질과 속도의 균형이 가장 좋음.',
             '**프런티어급 오픈 웨이트:** Kimi K2.6과 Kimi K2.7 Code(Moonshot AI) — 총 1T/활성 32B MoE, 256K 컨텍스트. Ollama는 `:cloud` 태그만 제공하며, 로컬 GGUF 빌드는 양자화에 따라 약 310~470GB가 필요합니다.',
             '**벤치마크 전환:** 실용적인 코딩의 주요 지표는 SWE-bench Pro와 Verified(실제 GitHub 이슈)입니다. HumanEval(단일 Python 함수)은 소형 모델 비교에 여전히 유용합니다.',
-            '**권장 환경:** 24GB GPU 또는 32GB 통합 메모리(Qwen3.8 27B를 여유 있게 실행). Devstral Small 2는 16GB로 충분합니다.',
+            '**권장 환경:** 24GB GPU 또는 32GB 통합 메모리(Qwen3.8 27B 실행, Mac에서는 macOS가 약 8GB 사용). Devstral Small 2는 16GB로 충분합니다.',
           ],
         },
         bestModelsQuickPicks: {
@@ -5052,13 +5052,13 @@ schema: {
             '**24GB에서 저장소 인식 완성 최고:** Qwen3-Coder 30B — 30B/활성 3.3B MoE, 19GB, 256K 컨텍스트. `ollama run qwen3-coder:30b`',
             '**IDE 자동 완성 최고:** Codestral 22B — Continue.dev용 FIM 최적화, 13GB. `ollama run codestral:22b`',
             '**8GB RAM 최고:** Qwen3 8B — VRAM 5GB. `ollama run qwen3:8b`',
-            '👉 **잘 모르겠다면: 8~16GB 노트북은 Qwen3 8B, GPU 또는 통합 메모리가 24GB 이상이면 Qwen3.8 27B.**',
+            '👉 **잘 모르겠다면: 8~16GB 노트북은 Qwen3 8B, 24GB GPU 또는 32GB Mac이면 Qwen3.8 27B.**',
             '👉 **16GB라면:** 에이전트 코딩에는 Devstral Small 2가 가장 적합합니다. Qwen3.8 27B(18GB)에는 24GB 카드 또는 32GB Mac이 필요합니다.',
             '👉 **장시간 에이전트 세션이 필요하다면:** Laguna XS 2.1 또는 Devstral Small 2를 사용해 보세요.',
             '👉 **IDE 완성이 필요하다면:** Continue.dev와 함께 Codestral 22B를 사용하세요.',
           ],
           callouts: [
-            { type: 'practice', text: '먼저 하드웨어에 맞게 모델 크기를 고르세요. 8GB면 Qwen3 8B, 16GB면 Devstral Small 2, GPU 또는 통합 메모리가 24GB면 Qwen3.8 27B입니다. Kimi K2.6과 K2.7 Code는 현실적인 로컬 선택지가 아닙니다. Ollama에서는 클라우드 태그로만 제공되며 로컬 빌드는 300GB 이상이 필요합니다.' },
+            { type: 'practice', text: '먼저 하드웨어에 맞게 모델 크기를 고르세요. 8GB면 Qwen3 8B, 16GB면 Devstral Small 2, 24GB GPU 또는 32GB Mac이면 Qwen3.8 27B입니다. Kimi K2.6과 K2.7 Code는 현실적인 로컬 선택지가 아닙니다. Ollama에서는 클라우드 태그로만 제공되며 로컬 빌드는 300GB 이상이 필요합니다.' },
           ],
         },
         inOneSentence: {
@@ -5285,7 +5285,7 @@ schema: {
             '**프라이버시가 중요한 환경(GDPR, HIPAA, 자체 코드):** 위의 로컬 모델 중 하나를 Ollama로 실행(`:cloud` 태그는 제외) -- 추론에 외부 API 호출이 없으므로, 에디터 플러그인 등 다른 도구도 네트워크를 사용하지 않는 한 코드가 기기를 떠나지 않습니다.',
           ],
           callouts: [
-            { type: 'warning', text: '❌ **피할 것:** GPU 또는 통합 메모리가 약 24GB 미만인 기기에서 Qwen3.8 27B(18GB)를 실행하는 것. 모델이 시스템 RAM으로 넘치면 속도가 크게 떨어집니다. 작은 기기에서는 Qwen3 8B 또는 Devstral Small 2를 사용하세요.' },
+            { type: 'warning', text: '❌ **피할 것:** 24GB GPU나 32GB Mac이 없는 기기에서 Qwen3.8 27B(18GB)를 실행하는 것. 모델이 시스템 RAM으로 넘치면 속도가 크게 떨어집니다. 작은 기기에서는 Qwen3 8B 또는 Devstral Small 2를 사용하세요.' },
             { type: 'warning', text: '❌ **피할 것:** IDE 자동 완성이 필요한데 범용 모델(Llama 3.1 8B)을 쓰는 것. 에디터 내 완성에는 FIM을 지원하는 코드 전용 모델(Codestral 22B, Qwen3 8B)만 쓸 수 있습니다.' },
             { type: 'insight', text: '입문 → 중급 → 고급은 하드웨어 요구 사항이 올라가는 과정이기도 합니다. Qwen3 8B(8GB)로 시작해, 도구와 워크플로를 늘리면 Devstral Small 2(16GB)로, 최고의 추론 품질이 필요해지면 Qwen3.8 27B(24GB 이상)로 올라가세요.' },
           ],
@@ -5384,7 +5384,7 @@ schema: {
             { q: 'HumanEval이란 무엇이고 왜 중요한가요?', a: 'HumanEval은 164개의 Python 프로그래밍 문제로 이루어진 벤치마크입니다. 모델은 각 문제에 맞는 함수 본문을 생성해야 하며, pass@1(첫 시도에서 해결한 비율)이 표준 지표입니다. 소형 코딩 모델 비교에는 여전히 쓰이지만, 실제 프로젝트가 아니라 단일 함수를 측정합니다.' },
             { q: 'fill-in-the-middle(FIM)이란 무엇이고 어떤 모델이 지원하나요?', a: 'FIM은 커서 앞뒤의 코드를 바탕으로 코드를 완성하는 능력으로, IDE 자동 완성의 방식입니다. Codestral 22B, Qwen3-Coder, DeepSeek-Coder, Starcoder2가 FIM을 지원하며 범용 Llama 3.1 8B는 지원하지 않습니다. IDE 연동에는 FIM을 지원하는 모델을 쓰세요.' },
             { q: '로컬 코딩 모델이 GitHub Copilot을 대체할 수 있나요?', a: 'Continue.dev와 함께 쓰는 Codestral 22B는 대부분의 자동 완성 작업을 충당할 수 있습니다. 복잡한 다중 파일 추론에서는 가장 어려운 작업에서 여전히 클라우드 모델이 우위인 경향이 있습니다. 트레이드오프: 로컬 모델은 더 느리지만 완전히 비공개이며 내 하드웨어에서 실행됩니다.' },
-            { q: '로컬 코딩 LLM에는 RAM이 얼마나 필요한가요?', a: '최소 4GB(아주 작은 3B 모델), 실용적으로는 8GB 이상입니다. 16GB에서는 Devstral Small 2(15GB)가 실행됩니다. 24GB GPU 메모리 또는 32GB Mac에서는 Qwen3.8 27B(18GB)가 여유 있게 실행됩니다. 경험칙: Q4_K_M 가중치는 10억 파라미터당 약 0.6GB이며, 여기에 컨텍스트 창용 메모리가 더해집니다.' },
+            { q: '로컬 코딩 LLM에는 RAM이 얼마나 필요한가요?', a: '최소 4GB(아주 작은 3B 모델), 실용적으로는 8GB 이상입니다. 16GB에서는 Devstral Small 2(15GB)가 실행됩니다. 24GB GPU 메모리 또는 32GB Mac에서는 Qwen3.8 27B(18GB)가 실행됩니다. Mac에서는 macOS가 8GB를 쓰고 나면 컨텍스트용으로 약 6GB가 남습니다. 경험칙: Q4_K_M 가중치는 10억 파라미터당 약 0.6GB이며, 여기에 컨텍스트 창용 메모리가 더해집니다.' },
             { q: '500줄짜리 Python 파일은 컨텍스트를 얼마나 사용하나요?', a: '500줄짜리 Python 파일은 약 2,000~3,000 토큰입니다. Ollama의 런타임 기본 컨텍스트(VRAM에 따라 조정됨)는 부족할 수 있습니다. 단일 파일 코드 리뷰에는 최소 `PARAMETER num_ctx 16384`를, 다중 파일 분석에는 32768 또는 65536을 설정하세요.' },
             { q: '로컬 코딩 모델은 개발에 충분히 빠른가요?', a: '반복적인 워크플로에는 충분합니다. 속도는 GPU, 양자화, 컨텍스트 길이에 따라 달라집니다. Qwen3 8B 같은 소형 모델은 노트북에서도 빠르게 응답하고, 큰 모델은 토큰당 더 느립니다. 요청하고 검토하는 방식이라면 응답당 몇 초 대기는 괜찮지만, 키 입력마다 완성하는 자동 완성에는 소형 FIM 모델을 써야 합니다.' },
             { q: '로컬 LLM이 코딩에서 GPT-5.6을 대체할 수 있나요?', a: '완전히는 아닙니다. 로컬 모델(Qwen3.8 27B, Devstral Small 2)은 최신 프레임워크 지식(학습 시점 이후 API), 매우 긴 다중 파일 추론(100k+ 토큰), 디버깅 정확도에서 최상위 클라우드 모델에 뒤처집니다. 일상적인 다중 파일 작업에서는 격차를 좁혔고 코드를 비공개로 유지할 수 있습니다.' },

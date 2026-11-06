@@ -9,7 +9,7 @@
 // not just a filtered-out silence.
 
 import { NextResponse } from 'next/server'
-import { getAppDetails, hardwareFit, summarize, AppNotFoundError, DIRECTORY_DISCLAIMER } from '@/lib/power-local-llm/app-search'
+import { getAppDetails, hardwareFit, summarize, withMacReserve, AppNotFoundError, DIRECTORY_DISCLAIMER } from '@/lib/power-local-llm/app-search'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -27,8 +27,12 @@ export function GET(request: Request) {
     return NextResponse.json({ error: 'Missing required "slug" parameter.' }, { status: 400 })
   }
 
-  const ramGb = parseNumber(searchParams.get('ramGb'))
-  const vramGb = parseNumber(searchParams.get('vramGb'))
+  // os=mac: the reported figures are total unified memory; 8 GB is reserved for macOS.
+  const { ramGb, vramGb } = withMacReserve({
+    os: searchParams.get('os') || undefined,
+    ramGb: parseNumber(searchParams.get('ramGb')),
+    vramGb: parseNumber(searchParams.get('vramGb')),
+  })
 
   try {
     const app = getAppDetails({ slug })

@@ -36,6 +36,7 @@ export function CanIRunThisClient({ lang, appIndex }: { lang: Language; appIndex
   const [selected, setSelected] = useState<AppPickerEntry | null>(null)
   const [ramGb, setRamGb] = useState('')
   const [vramGb, setVramGb] = useState('')
+  const [isMac, setIsMac] = useState(false)
   const [verdict, setVerdict] = useState<Verdict | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -88,6 +89,7 @@ export function CanIRunThisClient({ lang, appIndex }: { lang: Language; appIndex
       const params = new URLSearchParams({ slug: selected.slug })
       if (ramGb) params.set('ramGb', ramGb)
       if (vramGb) params.set('vramGb', vramGb)
+      if (isMac) params.set('os', 'mac')
       const res = await fetch(`/api/tools/can-i-run-this?${params.toString()}`)
       if (!res.ok) throw new Error('lookup failed')
       const data = await res.json()
@@ -150,6 +152,10 @@ export function CanIRunThisClient({ lang, appIndex }: { lang: Language; appIndex
             className="w-full px-3 py-2 rounded-lg border border-border bg-surface text-text-primary"
           />
         </div>
+        <label className="sm:col-span-4 flex items-center gap-2 text-sm text-text-secondary">
+          <input type="checkbox" checked={isMac} onChange={(e) => setIsMac(e.target.checked)} />
+          {t('formMacLabel', lang)}
+        </label>
         <div className="sm:col-span-4">
           <button
             type="submit"

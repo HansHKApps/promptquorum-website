@@ -1146,7 +1146,7 @@ export const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: 'How much VRAM do I need for a local LLM?',
-      a: '8 GB of VRAM runs 7–8B models at Q4 quantization (about 5 GB of weights). 16 GB handles 13–14B models comfortably. A 70B model needs about 42 GB for its Q4 weights, so a 48 GB setup (for example two RTX 4090s) is the practical minimum. Apple Silicon unified memory counts as VRAM.'
+      a: '8 GB of VRAM runs 7–8B models at Q4 quantization (about 5 GB of weights). 16 GB handles 13–14B models comfortably. A 70B model needs about 42 GB for its Q4 weights, so a 48 GB setup (for example two RTX 4090s) is the practical minimum. Apple Silicon unified memory counts as VRAM, minus the 8 GB macOS keeps for itself.'
     },
     {
       q: 'What is the difference between Ollama and LM Studio?',
@@ -1204,7 +1204,7 @@ export const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: 'Wie viel VRAM benötige ich für ein lokales LLM?',
-      a: '8 GB VRAM führen 7–8B-Modelle bei Q4-Quantisierung aus (etwa 5 GB Gewichte). 16 GB verarbeiten 13–14B-Modelle komfortabel. Ein 70B-Modell braucht für seine Q4-Gewichte etwa 42 GB; ein Aufbau mit 48 GB (z. B. zwei RTX 4090) ist daher das praktische Minimum. Apple-Silicon-Unified-Memory zählt als VRAM.'
+      a: '8 GB VRAM führen 7–8B-Modelle bei Q4-Quantisierung aus (etwa 5 GB Gewichte). 16 GB verarbeiten 13–14B-Modelle komfortabel. Ein 70B-Modell braucht für seine Q4-Gewichte etwa 42 GB; ein Aufbau mit 48 GB (z. B. zwei RTX 4090) ist daher das praktische Minimum. Apple-Silicon-Unified-Memory zählt als VRAM, abzüglich der 8 GB, die macOS für sich behält.'
     },
     {
       q: 'Was ist der Unterschied zwischen Ollama und LM Studio?',
@@ -1270,7 +1270,7 @@ export const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: 'De combien de VRAM ai-je besoin pour un LLM local ?',
-      a: '8 GB de VRAM exécutent des modèles 7–8B en quantification Q4 (environ 5 GB de poids). 16 GB gèrent confortablement les modèles 13–14B. Un modèle 70B demande environ 42 GB pour ses poids Q4 ; une configuration de 48 GB (par exemple deux RTX 4090) est donc le minimum pratique. La mémoire unifiée Apple Silicon compte comme VRAM.'
+      a: '8 GB de VRAM exécutent des modèles 7–8B en quantification Q4 (environ 5 GB de poids). 16 GB gèrent confortablement les modèles 13–14B. Un modèle 70B demande environ 42 GB pour ses poids Q4 ; une configuration de 48 GB (par exemple deux RTX 4090) est donc le minimum pratique. La mémoire unifiée Apple Silicon compte comme VRAM, moins les 8 Go que macOS garde pour lui.'
     },
     {
       q: 'Quelle est la différence entre Ollama et LM Studio ?',
@@ -1328,7 +1328,7 @@ export const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: 'ローカルLLMにはどの程度のVRAMが必要ですか？',
-      a: '8 GB VRAMでQ4量子化の7〜8Bモデル（重みは約5 GB）を実行できます。16 GBなら13〜14Bモデルを快適に動かせます。70BモデルはQ4の重みだけで約42 GBが必要なため、48 GB構成（例：RTX 4090を2枚）が現実的な最小ラインです。Apple SiliconのUnified MemoryはVRAMとして数えられます。'
+      a: '8 GB VRAMでQ4量子化の7〜8Bモデル（重みは約5 GB）を実行できます。16 GBなら13〜14Bモデルを快適に動かせます。70BモデルはQ4の重みだけで約42 GBが必要なため、48 GB構成（例：RTX 4090を2枚）が現実的な最小ラインです。Apple SiliconのUnified MemoryはVRAMとして数えられますが、macOSが確保する8 GBは差し引きます。'
     },
     {
       q: 'OllamaとLM Studioの違いは何ですか？',
@@ -1386,7 +1386,7 @@ export const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: '本地LLM需要多少VRAM？',
-      a: '8 GB VRAM可运行Q4量化的7–8B模型（权重约5 GB）。16 GB可流畅运行13–14B模型。70B模型的Q4权重约需42 GB，因此48 GB配置（例如两张RTX 4090）是实际可行的最低要求。Apple Silicon统一内存计为VRAM。'
+      a: '8 GB VRAM可运行Q4量化的7–8B模型（权重约5 GB）。16 GB可流畅运行13–14B模型。70B模型的Q4权重约需42 GB，因此48 GB配置（例如两张RTX 4090）是实际可行的最低要求。Apple Silicon统一内存可计为VRAM，但需扣除macOS自身保留的8 GB。'
     },
     {
       q: 'Ollama和LM Studio有什么区别？',
@@ -1444,7 +1444,7 @@ export const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: '¿Cuánta VRAM necesito para un LLM local?',
-      a: '8 GB de VRAM ejecutan modelos 7–8B con cuantización Q4 (unos 5 GB de pesos). 16 GB gestionan modelos 13–14B cómodamente. Un modelo 70B necesita unos 42 GB para sus pesos Q4, así que una configuración de 48 GB (por ejemplo, dos RTX 4090) es el mínimo práctico. La memoria unificada de Apple Silicon cuenta como VRAM.'
+      a: '8 GB de VRAM ejecutan modelos 7–8B con cuantización Q4 (unos 5 GB de pesos). 16 GB gestionan modelos 13–14B cómodamente. Un modelo 70B necesita unos 42 GB para sus pesos Q4, así que una configuración de 48 GB (por ejemplo, dos RTX 4090) es el mínimo práctico. La memoria unificada de Apple Silicon cuenta como VRAM, menos los 8 GB que macOS se reserva.'
     },
     {
       q: '¿Cuál es la diferencia entre Ollama y LM Studio?',
@@ -1502,7 +1502,7 @@ export const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: 'Quanta VRAM eu preciso para um LLM local?',
-      a: '8 GB de VRAM rodam modelos 7–8B com quantização Q4 (cerca de 5 GB de pesos). 16 GB lidam com modelos 13–14B confortavelmente. Um modelo 70B precisa de cerca de 42 GB para os pesos Q4, então uma configuração de 48 GB (por exemplo, duas RTX 4090) é o mínimo prático. A memória unificada do Apple Silicon conta como VRAM.'
+      a: '8 GB de VRAM rodam modelos 7–8B com quantização Q4 (cerca de 5 GB de pesos). 16 GB lidam com modelos 13–14B confortavelmente. Um modelo 70B precisa de cerca de 42 GB para os pesos Q4, então uma configuração de 48 GB (por exemplo, duas RTX 4090) é o mínimo prático. A memória unificada do Apple Silicon conta como VRAM, menos os 8 GB que o macOS reserva para si.'
     },
     {
       q: 'Qual é a diferença entre Ollama e LM Studio?',
@@ -1560,7 +1560,7 @@ export const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: '로컬 LLM에는 VRAM이 얼마나 필요합니까?',
-      a: '8 GB VRAM으로 Q4 양자화의 7~8B 모델(가중치 약 5 GB)을 실행할 수 있습니다. 16 GB면 13~14B 모델을 여유 있게 처리합니다. 70B 모델은 Q4 가중치만 약 42 GB가 필요하므로 48 GB 구성(예: RTX 4090 두 장)이 현실적인 최소 사양입니다. Apple Silicon의 통합 메모리는 VRAM으로 계산됩니다.'
+      a: '8 GB VRAM으로 Q4 양자화의 7~8B 모델(가중치 약 5 GB)을 실행할 수 있습니다. 16 GB면 13~14B 모델을 여유 있게 처리합니다. 70B 모델은 Q4 가중치만 약 42 GB가 필요하므로 48 GB 구성(예: RTX 4090 두 장)이 현실적인 최소 사양입니다. Apple Silicon의 통합 메모리는 VRAM으로 계산되지만, macOS가 자체적으로 확보하는 8 GB는 제외해야 합니다.'
     },
     {
       q: 'Ollama와 LM Studio의 차이는 무엇입니까?',
@@ -1618,7 +1618,7 @@ export const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: 'كم ⁨VRAM⁩ أحتاج للنموذج اللغوي المحلي؟',
-      a: 'تشغّل ⁨8 GB VRAM⁩ نماذج 7-⁨8B⁩ بتكميم ⁨Q4⁩ (نحو ⁨5 GB⁩ للأوزان). وتتعامل ⁨16 GB⁩ مع نماذج 13-⁨14B⁩ بسهولة. ويحتاج نموذج ⁨70B⁩ إلى نحو ⁨42 GB⁩ لأوزانه بتكميم ⁨Q4⁩، لذا فإن إعدادًا بذاكرة ⁨48 GB⁩ (مثل بطاقتَي ⁨RTX 4090⁩) هو الحد الأدنى العملي. الذاكرة الموحّدة في ⁨Apple Silicon⁩ تُحتسب كـ⁨VRAM.⁩'
+      a: 'تشغّل ⁨8 GB VRAM⁩ نماذج 7-⁨8B⁩ بتكميم ⁨Q4⁩ (نحو ⁨5 GB⁩ للأوزان). وتتعامل ⁨16 GB⁩ مع نماذج 13-⁨14B⁩ بسهولة. ويحتاج نموذج ⁨70B⁩ إلى نحو ⁨42 GB⁩ لأوزانه بتكميم ⁨Q4⁩، لذا فإن إعدادًا بذاكرة ⁨48 GB⁩ (مثل بطاقتَي ⁨RTX 4090⁩) هو الحد الأدنى العملي. الذاكرة الموحّدة في ⁨Apple Silicon⁩ تُحتسب كـ⁨VRAM⁩ بعد خصم ⁨8 GB⁩ يحتفظ بها ⁨macOS⁩ لنفسه.'
     },
     {
       q: 'ما الفرق بين ⁨Ollama⁩ و⁨LM Studio⁩؟',
@@ -1908,7 +1908,7 @@ export const HUB_FAQS_BOTTOM: Record<string, { q: string; a: string }[]> = {
     },
     {
       q: 'How much RAM do I need to run a local LLM?',
-      a: 'Minimum: 8 GB RAM to run a 7B model at Q4 quantization. Recommended: 16 GB for 13B models and about 48 GB for 70B models (about 42 GB of Q4 weights plus headroom). Apple Silicon unified memory counts fully toward this — an M3 Mac with 18 GB can run a 13B model well. GPU VRAM is equivalent to RAM for GPU inference.'
+      a: 'Minimum: 8 GB RAM to run a 7B model at Q4 quantization. Recommended: 16 GB for 13B models and about 48 GB for 70B models (about 42 GB of Q4 weights plus headroom). On a Mac, unified memory is shared with macOS, which needs at least 8 GB, so subtract 8 GB from the total — a Mac with 24 GB has about 16 GB usable and runs a 13B model well, and a 70B model at Q4 needs a 64 GB Mac. GPU VRAM is equivalent to RAM for GPU inference.'
     },
     {
       q: 'How do I run a local LLM?',
@@ -1934,7 +1934,7 @@ export const HUB_FAQS_BOTTOM: Record<string, { q: string; a: string }[]> = {
     },
     {
       q: 'Wie viel RAM benötige ich für ein lokales LLM?',
-      a: 'Minimum: 8 GB RAM für ein 7B-Modell in Q4-Quantisierung. Empfohlen: 16 GB für 13B-Modelle und etwa 48 GB für 70B-Modelle (rund 42 GB Q4-Gewichte plus Reserve). Der Unified Memory von Apple Silicon zählt vollständig dazu — ein M3 Mac mit 18 GB kann ein 13B-Modell gut ausführen. Bei GPU-Inferenz entspricht der VRAM dem RAM.'
+      a: 'Minimum: 8 GB RAM für ein 7B-Modell in Q4-Quantisierung. Empfohlen: 16 GB für 13B-Modelle und etwa 48 GB für 70B-Modelle (rund 42 GB Q4-Gewichte plus Reserve). Beim Mac teilen sich macOS und Modell den Unified Memory, und macOS braucht mindestens 8 GB: Ziehen Sie daher pauschal 8 GB vom Gesamtspeicher ab — ein Mac mit 24 GB hat etwa 16 GB nutzbar und führt ein 13B-Modell gut aus, ein 70B-Modell in Q4 braucht einen Mac mit 64 GB. Bei GPU-Inferenz entspricht der VRAM dem RAM.'
     },
     {
       q: 'Wie führe ich ein lokales LLM aus?',
@@ -1960,7 +1960,7 @@ export const HUB_FAQS_BOTTOM: Record<string, { q: string; a: string }[]> = {
     },
     {
       q: 'Combien de RAM faut-il pour exécuter un LLM local ?',
-      a: 'Minimum : 8 Go de RAM pour un modèle 7B en quantification Q4. Recommandé : 16 Go pour les modèles 13B et environ 48 Go pour les modèles 70B (environ 42 Go de poids Q4 plus une marge). La mémoire unifiée d\'Apple Silicon compte intégralement — un Mac M3 avec 18 Go exécute bien un modèle 13B. Le VRAM du GPU équivaut à la RAM pour l\'inférence GPU.'
+      a: 'Minimum : 8 Go de RAM pour un modèle 7B en quantification Q4. Recommandé : 16 Go pour les modèles 13B et environ 48 Go pour les modèles 70B (environ 42 Go de poids Q4 plus une marge). Sur un Mac, la mémoire unifiée est partagée avec macOS, qui en réclame au moins 8 Go : retranchez donc 8 Go du total — un Mac avec 24 Go offre environ 16 Go utilisables et exécute bien un modèle 13B, tandis qu\'un modèle 70B en Q4 exige un Mac de 64 Go. Le VRAM du GPU équivaut à la RAM pour l\'inférence GPU.'
     },
     {
       q: 'Comment exécuter un LLM local ?',
@@ -1986,7 +1986,7 @@ export const HUB_FAQS_BOTTOM: Record<string, { q: string; a: string }[]> = {
     },
     {
       q: 'ローカルLLMの実行にはどれくらいのRAMが必要ですか?',
-      a: '最低: 7BモデルをQ4量子化で実行するには8GB RAM。推奨: 13Bモデルには16GB、70Bモデルには約48GB（Q4の重み約42GBに余裕分を加えた量）。Apple Siliconのユニファイドメモリはこれに完全にカウントされます — 18GBのM3 Macなら13Bモデルを問題なく実行できます。GPU推論の場合、GPU VRAMはRAMと同等です。'
+      a: '最低: 7BモデルをQ4量子化で実行するには8GB RAM。推奨: 13Bモデルには16GB、70Bモデルには約48GB（Q4の重み約42GBに余裕分を加えた量）。Macではユニファイドメモリを macOS と共有し、macOS には最低 8GB が必要なため、合計から 8GB を差し引いて考えます — 24GBのMacなら使用可能は約16GBで13Bモデルを問題なく実行でき、70BモデルをQ4で動かすには64GBのMacが必要です。GPU推論の場合、GPU VRAMはRAMと同等です。'
     },
     {
       q: 'ローカルLLMはどうやって実行しますか?',
@@ -2012,7 +2012,7 @@ export const HUB_FAQS_BOTTOM: Record<string, { q: string; a: string }[]> = {
     },
     {
       q: '运行本地LLM需要多少RAM?',
-      a: '最低要求:8 GB RAM可运行Q4量化的7B模型。推荐配置:13B模型需16 GB,70B模型需约48 GB(Q4权重约42 GB再加余量)。Apple Silicon的统一内存可完全计入——配备18 GB内存的M3 Mac可流畅运行13B模型。对于GPU推理,GPU VRAM相当于RAM。'
+      a: '最低要求:8 GB RAM可运行Q4量化的7B模型。推荐配置:13B模型需16 GB,70B模型需约48 GB(Q4权重约42 GB再加余量)。Mac的统一内存与macOS共享，而macOS至少需要8 GB，因此应从总内存中扣除8 GB——配备24 GB内存的Mac约有16 GB可用，可流畅运行13B模型；70B模型的Q4量化需要64 GB的Mac。对于GPU推理,GPU VRAM相当于RAM。'
     },
     {
       q: '如何运行本地LLM?',
@@ -2038,7 +2038,7 @@ export const HUB_FAQS_BOTTOM: Record<string, { q: string; a: string }[]> = {
     },
     {
       q: '¿Cuánta RAM necesito para ejecutar un LLM local?',
-      a: 'Mínimo: 8 GB de RAM para un modelo 7B con cuantización Q4. Recomendado: 16 GB para modelos 13B y unos 48 GB para modelos 70B (unos 42 GB de pesos Q4 más margen). La memoria unificada de Apple Silicon cuenta por completo — un Mac M3 con 18 GB ejecuta bien un modelo 13B. La VRAM de la GPU equivale a la RAM en inferencia por GPU.'
+      a: 'Mínimo: 8 GB de RAM para un modelo 7B con cuantización Q4. Recomendado: 16 GB para modelos 13B y unos 48 GB para modelos 70B (unos 42 GB de pesos Q4 más margen). En un Mac, la memoria unificada se comparte con macOS, que necesita al menos 8 GB: resta 8 GB del total — un Mac con 24 GB tiene unos 16 GB utilizables y ejecuta bien un modelo 13B, y un modelo 70B en Q4 necesita un Mac de 64 GB. La VRAM de la GPU equivale a la RAM en inferencia por GPU.'
     },
     {
       q: '¿Cómo ejecuto un LLM local?',
@@ -2064,7 +2064,7 @@ export const HUB_FAQS_BOTTOM: Record<string, { q: string; a: string }[]> = {
     },
     {
       q: 'Quanta RAM eu preciso para rodar um LLM local?',
-      a: 'Mínimo: 8 GB de RAM para um modelo 7B com quantização Q4. Recomendado: 16 GB para modelos 13B e cerca de 48 GB para modelos 70B (cerca de 42 GB de pesos Q4 mais margem). A memória unificada do Apple Silicon conta por completo — um Mac M3 com 18 GB roda bem um modelo 13B. A VRAM da GPU equivale à RAM na inferência por GPU.'
+      a: 'Mínimo: 8 GB de RAM para um modelo 7B com quantização Q4. Recomendado: 16 GB para modelos 13B e cerca de 48 GB para modelos 70B (cerca de 42 GB de pesos Q4 mais margem). No Mac, a memória unificada é compartilhada com o macOS, que precisa de pelo menos 8 GB: subtraia 8 GB do total — um Mac com 24 GB tem cerca de 16 GB utilizáveis e roda bem um modelo 13B, e um modelo 70B em Q4 exige um Mac de 64 GB. A VRAM da GPU equivale à RAM na inferência por GPU.'
     },
     {
       q: 'Como eu rodo um LLM local?',
@@ -2090,7 +2090,7 @@ export const HUB_FAQS_BOTTOM: Record<string, { q: string; a: string }[]> = {
     },
     {
       q: '로컬 LLM을 실행하려면 RAM이 얼마나 필요합니까?',
-      a: '최소: Q4 양자화의 7B 모델에 8 GB RAM. 권장: 13B 모델에 16 GB, 70B 모델에 약 48 GB(Q4 가중치 약 42 GB에 여유분 추가). Apple Silicon의 통합 메모리는 전부 계산됩니다 — 18 GB의 M3 Mac은 13B 모델을 잘 실행합니다. GPU 추론에서는 VRAM이 RAM과 같은 역할을 합니다.'
+      a: '최소: Q4 양자화의 7B 모델에 8 GB RAM. 권장: 13B 모델에 16 GB, 70B 모델에 약 48 GB(Q4 가중치 약 42 GB에 여유분 추가). Mac의 통합 메모리는 macOS와 공유되며 macOS에는 최소 8 GB가 필요하므로 전체에서 8 GB를 뺍니다 — 24 GB Mac은 약 16 GB를 쓸 수 있어 13B 모델을 잘 실행하고, Q4 70B 모델에는 64 GB Mac이 필요합니다. GPU 추론에서는 VRAM이 RAM과 같은 역할을 합니다.'
     },
     {
       q: '로컬 LLM은 어떻게 실행합니까?',
@@ -2116,7 +2116,7 @@ export const HUB_FAQS_BOTTOM: Record<string, { q: string; a: string }[]> = {
     },
     {
       q: 'كم ذاكرة ⁨RAM⁩ أحتاج لتشغيل نموذج لغوي محلي؟',
-      a: 'الحد الأدنى: ⁨8 GB RAM⁩ لتشغيل نموذج ⁨7B⁩ بتكميم ⁨Q4.⁩ الموصى به: ⁨16 GB⁩ لنماذج ⁨13B⁩، ونحو ⁨48 GB⁩ لنماذج ⁨70B⁩ (نحو ⁨42 GB⁩ لأوزان ⁨Q4⁩ مع هامش إضافي). تُحتسب الذاكرة الموحّدة في ⁨Apple Silicon⁩ بالكامل ضمن هذا — جهاز ⁨M3 Mac⁩ بذاكرة ⁨18 GB⁩ يشغّل نموذج ⁨13B⁩ بشكل جيد. ذاكرة ⁨VRAM⁩ تعادل ذاكرة ⁨RAM⁩ في استدلال ⁨GPU.⁩'
+      a: 'الحد الأدنى: ⁨8 GB RAM⁩ لتشغيل نموذج ⁨7B⁩ بتكميم ⁨Q4.⁩ الموصى به: ⁨16 GB⁩ لنماذج ⁨13B⁩، ونحو ⁨48 GB⁩ لنماذج ⁨70B⁩ (نحو ⁨42 GB⁩ لأوزان ⁨Q4⁩ مع هامش إضافي). في جهاز ⁨Mac⁩ تُشارَك الذاكرة الموحّدة مع ⁨macOS⁩ الذي يحتاج إلى ⁨8 GB⁩ على الأقل، لذا اطرح ⁨8 GB⁩ من الإجمالي — جهاز ⁨Mac⁩ بذاكرة ⁨24 GB⁩ يتوفر له نحو ⁨16 GB⁩ قابلة للاستخدام ويشغّل نموذج ⁨13B⁩ بشكل جيد، ويحتاج نموذج ⁨70B⁩ بتكميم ⁨Q4⁩ إلى جهاز ⁨Mac⁩ بذاكرة ⁨64 GB⁩. ذاكرة ⁨VRAM⁩ تعادل ذاكرة ⁨RAM⁩ في استدلال ⁨GPU.⁩'
     },
     {
       q: 'كيف أشغّل نموذجًا لغويًا محليًا؟',

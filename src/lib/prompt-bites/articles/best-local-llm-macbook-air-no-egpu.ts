@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Best Local LLM for MacBook Air (No eGPU) 2026',
     metaDescription: 'The M5 MacBook Air is one of the best portable local-LLM laptops without an eGPU. For local AI, choose 24GB or 32GB unified memory — not the 16GB base model.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     last_full_refresh: '2026-08-26',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Best MacBook Air Configuration for Local LLMs',
         content: [
           '<strong>If local AI is one of the main reasons you\'re buying an M5 MacBook Air, configure it with 32 GB of unified memory.</strong> Apple Silicon shares memory between CPU and GPU, so the unified-memory figure on the spec sheet — not a separate VRAM number — is what determines which models fit. 32 GB gives comfortable headroom for 14B-class models and room to experiment with larger quantized models.',
-          'If budget matters more than maximum headroom, 24 GB is the practical sweet spot: enough for 7B-14B class models with room left for macOS and a browser, at a real price step down from 32 GB. Skip the 16 GB base configuration if local LLMs are a genuine reason you\'re buying the Air — it handles small models fine, but memory can\'t be added after purchase, so buying too little now is a decision you\'re stuck with.',
+          'If budget matters more than maximum headroom, 24 GB is the practical sweet spot: enough for 7B-14B class models with about 16 GB usable after the 8 GB macOS needs, at a real price step down from 32 GB. Skip the 16 GB base configuration if local LLMs are a genuine reason you\'re buying the Air — it handles small models fine, but memory can\'t be added after purchase, so buying too little now is a decision you\'re stuck with.',
           'M5 itself is a real upgrade for this, not just a name change: Apple\'s M5 GPU adds a Neural Accelerator to every core, and Apple markets the chip specifically around running large language models on-device, backed by 153 GB/s of memory bandwidth — about 28% faster than M4.',
         ],
         affiliateLinks: [
@@ -89,7 +89,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { '0': '7B-8B', '1': '🟢 Excellent', '2': '🟢 Excellent' },
           { '0': '13B-14B', '1': '🟢 Comfortable', '2': '🟢 Plenty of room' },
-          { '0': '20B-30B', '1': '🟡 Tight, quant-dependent', '2': '🟢 Comfortable at Q4' },
+          { '0': '20B-30B', '1': '🟡 About 20B at Q4; 30B does not fit', '2': '🟢 Fits at Q4, tight with long context' },
           { '0': '70B', '1': '🔴 Not realistic', '2': '🔴 Not what to buy this for' },
         ],
       },
@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل LLM محلي لـ MacBook Air (بدون eGPU) 2026',
     metaDescription: 'MacBook Air بمعالج M5 من أفضل أجهزة اللابتوب لتشغيل LLM محليًا دون eGPU. للذكاء الاصطناعي المحلي، اختر ذاكرة موحدة 24GB أو 32GB — وليس الطراز الأساسي بسعة 16GB.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     last_full_refresh: '2026-08-26',
@@ -188,7 +188,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'أفضل تكوين لجهاز MacBook Air لتشغيل LLM محليًا',
         content: [
           '<strong>إذا كان الذكاء الاصطناعي المحلي أحد الأسباب الرئيسية لشرائك MacBook Air بمعالج M5، فاختر تكوينًا بذاكرة موحدة سعة 32GB.</strong> يشارك Apple Silicon الذاكرة بين CPU وGPU، لذا فإن رقم الذاكرة الموحدة في ورقة المواصفات — وليس رقم VRAM منفصلًا — هو ما يحدد النماذج التي تناسب الجهاز. توفر 32GB هامشًا مريحًا لنماذج فئة 14B ومساحة للتجربة مع نماذج مكممة أكبر.',
-          'إذا كانت الميزانية أهم من أقصى هامش متاح، فإن 24GB هي النقطة المثلى عمليًا: تكفي لنماذج فئة 7B-14B مع بقاء مساحة لنظام macOS ومتصفح، بفارق سعري حقيقي أقل من 32GB. تجنب التكوين الأساسي بسعة 16GB إذا كان تشغيل LLM محليًا سببًا حقيقيًا لشرائك جهاز Air — فهو يتعامل بشكل جيد مع النماذج الصغيرة، لكن لا يمكن إضافة ذاكرة بعد الشراء، لذا فإن شراء سعة قليلة جدًا الآن قرار ستضطر للالتزام به.',
+          'إذا كانت الميزانية أهم من أقصى هامش متاح، فإن 24GB هي النقطة المثلى عمليًا: تكفي لنماذج فئة 7B-14B مع بقاء نحو 16GB قابلة للاستخدام بعد 8GB يحتاجها macOS، بفارق سعري حقيقي أقل من 32GB. تجنب التكوين الأساسي بسعة 16GB إذا كان تشغيل LLM محليًا سببًا حقيقيًا لشرائك جهاز Air — فهو يتعامل بشكل جيد مع النماذج الصغيرة، لكن لا يمكن إضافة ذاكرة بعد الشراء، لذا فإن شراء سعة قليلة جدًا الآن قرار ستضطر للالتزام به.',
           'يمثل M5 نفسه ترقية حقيقية في هذا الجانب، وليس مجرد تغيير في الاسم: تضيف وحدة معالجة الرسومات في M5 من Apple وحدة Neural Accelerator إلى كل نواة، وتسوّق Apple للشريحة تحديدًا حول تشغيل نماذج اللغة الكبيرة على الجهاز، مدعومة بعرض نطاق ترددي للذاكرة يبلغ 153GB/s — أسرع بنحو 28% من M4.',
         ],
         affiliateLinks: [
@@ -217,7 +217,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { '0': '7B-8B', '1': '🟢 ممتاز', '2': '🟢 ممتاز' },
           { '0': '13B-14B', '1': '🟢 مريح', '2': '🟢 مساحة وفيرة' },
-          { '0': '20B-30B', '1': '🟡 ضيق، يعتمد على التكميم', '2': '🟢 مريح عند Q4' },
+          { '0': '20B-30B', '1': '🟡 نحو 20B عند Q4؛ 30B لا يتسع', '2': '🟢 يتسع عند Q4، ضيق مع السياق الطويل' },
           { '0': '70B', '1': '🔴 غير واقعي', '2': '🔴 ليس الغرض من الشراء' },
         ],
       },
@@ -265,7 +265,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Bestes lokales LLM für MacBook Air (ohne eGPU) 2026',
     metaDescription: 'Das MacBook Air M5 zählt zu den besten tragbaren Laptops für lokale LLMs ohne eGPU. Wählen Sie 24 GB oder 32 GB Unified Memory, nicht die 16-GB-Basis.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     current_models_mentioned: ['Qwen3 8B'],
@@ -313,7 +313,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Beste MacBook-Air-Konfiguration für lokale LLMs',
         content: [
           '<strong>Wenn lokale KI einer der Hauptgründe für den Kauf eines MacBook Air M5 ist, konfigurieren Sie es mit 32 GB Unified Memory.</strong> Apple Silicon teilt den Speicher zwischen CPU und GPU, daher entscheidet die Unified-Memory-Zahl auf dem Datenblatt — nicht eine separate VRAM-Angabe — darüber, welche Modelle passen. 32 GB bieten komfortablen Spielraum für Modelle der 14B-Klasse und Raum, um mit größeren quantisierten Modellen zu experimentieren.',
-          'Wenn das Budget wichtiger ist als maximaler Spielraum, ist 24 GB der praktische Sweet Spot: ausreichend für Modelle der 7B-14B-Klasse mit Reserve für macOS und einen Browser, bei einem echten Preisschritt unter 32 GB. Überspringen Sie die 16-GB-Basiskonfiguration, wenn lokale LLMs ein echter Grund für den Kauf des Air sind — sie bewältigt kleine Modelle problemlos, aber Speicher lässt sich nach dem Kauf nicht nachrüsten, sodass eine zu knapp bemessene Entscheidung jetzt eine bleibende Einschränkung ist.',
+          'Wenn das Budget wichtiger ist als maximaler Spielraum, ist 24 GB der praktische Sweet Spot: ausreichend für Modelle der 7B-14B-Klasse mit rund 16 GB nutzbar nach den 8 GB, die macOS benötigt, bei einem echten Preisschritt unter 32 GB. Überspringen Sie die 16-GB-Basiskonfiguration, wenn lokale LLMs ein echter Grund für den Kauf des Air sind — sie bewältigt kleine Modelle problemlos, aber Speicher lässt sich nach dem Kauf nicht nachrüsten, sodass eine zu knapp bemessene Entscheidung jetzt eine bleibende Einschränkung ist.',
           'Der M5 selbst ist hierfür ein echtes Upgrade, nicht nur eine Namensänderung: Apples M5-GPU fügt jedem Kern einen Neural Accelerator hinzu, und Apple bewirbt den Chip gezielt für das Ausführen großer Sprachmodelle direkt auf dem Gerät, unterstützt von 153 GB/s Speicherbandbreite — rund 28 % schneller als M4.',
         ],
         affiliateLinks: [
@@ -342,7 +342,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { '0': '7B-8B', '1': '🟢 Hervorragend', '2': '🟢 Hervorragend' },
           { '0': '13B-14B', '1': '🟢 Komfortabel', '2': '🟢 Viel Spielraum' },
-          { '0': '20B-30B', '1': '🟡 Knapp, je nach Quant', '2': '🟢 Komfortabel bei Q4' },
+          { '0': '20B-30B', '1': '🟡 Nur ca. 20B bei Q4; 30B passt nicht', '2': '🟢 Passt bei Q4, knapp bei langem Kontext' },
           { '0': '70B', '1': '🔴 Unrealistisch', '2': '🔴 Dafür nicht geeignet' },
         ],
       },
@@ -390,7 +390,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejor LLM Local para MacBook Air (Sin eGPU) 2026',
     metaDescription: 'El MacBook Air M5 es una de las mejores laptops portátiles para LLM local sin eGPU. Para IA local, elige 24GB o 32GB de memoria unificada — no el modelo base de 16GB.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     last_full_refresh: '2026-08-26',
@@ -441,7 +441,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Mejor Configuración de MacBook Air para LLMs Locales',
         content: [
           '<strong>Si la IA local es una de las razones principales por las que compras un MacBook Air M5, configúralo con 32 GB de memoria unificada.</strong> Apple Silicon comparte la memoria entre CPU y GPU, así que la cifra de memoria unificada en la ficha técnica — no un número de VRAM separado — es lo que determina qué modelos caben. 32 GB da margen cómodo para modelos de clase 14B y espacio para experimentar con modelos cuantizados más grandes.',
-          'Si el presupuesto importa más que el margen máximo, 24 GB es el punto óptimo práctico: suficiente para modelos de clase 7B-14B con margen para macOS y un navegador, a un precio real más bajo que 32 GB. Evita la configuración base de 16 GB si los LLMs locales son una razón genuina de tu compra del Air — maneja bien modelos pequeños, pero la memoria no se puede añadir después de la compra, así que comprar poca memoria ahora es una decisión de la que no podrás salir después.',
+          'Si el presupuesto importa más que el margen máximo, 24 GB es el punto óptimo práctico: suficiente para modelos de clase 7B-14B con unos 16 GB utilizables tras los 8 GB que necesita macOS, a un precio real más bajo que 32 GB. Evita la configuración base de 16 GB si los LLMs locales son una razón genuina de tu compra del Air — maneja bien modelos pequeños, pero la memoria no se puede añadir después de la compra, así que comprar poca memoria ahora es una decisión de la que no podrás salir después.',
           'El M5 en sí es una mejora real para esto, no solo un cambio de nombre: la GPU M5 de Apple añade un Neural Accelerator a cada núcleo, y Apple comercializa el chip específicamente en torno a ejecutar modelos de lenguaje grandes on-device, respaldado por 153 GB/s de ancho de banda de memoria — alrededor de un 28% más rápido que el M4.',
         ],
         affiliateLinks: [
@@ -470,7 +470,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { '0': '7B-8B', '1': '🟢 Excelente', '2': '🟢 Excelente' },
           { '0': '13B-14B', '1': '🟢 Cómodo', '2': '🟢 Amplio margen' },
-          { '0': '20B-30B', '1': '🟡 Ajustado, según quant', '2': '🟢 Cómodo en Q4' },
+          { '0': '20B-30B', '1': '🟡 Unos 20B en Q4; 30B no cabe', '2': '🟢 Cabe en Q4, justo con contexto largo' },
           { '0': '70B', '1': '🔴 No es realista', '2': '🔴 No es para esto' },
         ],
       },
@@ -518,7 +518,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Meilleur LLM local pour MacBook Air (sans eGPU) 2026',
     metaDescription: 'Le MacBook Air M5 est l\'un des meilleurs portables pour LLM local sans eGPU. Pour l\'IA locale, choisissez 24 Go ou 32 Go de mémoire unifiée — pas le modèle 16 Go de base.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     last_full_refresh: '2026-08-26',
@@ -569,7 +569,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Meilleure Configuration de MacBook Air pour les LLM Locaux',
         content: [
           '<strong>Si l\'IA locale est l\'une des principales raisons pour lesquelles vous achetez un MacBook Air M5, configurez-le avec 32 Go de mémoire unifiée.</strong> Apple Silicon partage la mémoire entre le CPU et le GPU : c\'est donc le chiffre de mémoire unifiée sur la fiche technique — et non un chiffre de VRAM distinct — qui détermine les modèles qui tiennent en mémoire. 32 Go offre une marge confortable pour les modèles de classe 14B et de la place pour expérimenter avec des modèles quantifiés plus grands.',
-          'Si le budget compte plus que la marge maximale, 24 Go est le point d\'équilibre pratique : suffisant pour les modèles de classe 7B-14B avec de la place pour macOS et un navigateur, à un prix réellement inférieur à celui du 32 Go. Évitez la configuration 16 Go de base si les LLM locaux sont une vraie raison d\'acheter l\'Air — elle fait bien tourner les petits modèles, mais la mémoire ne peut pas être ajoutée après l\'achat, donc acheter trop peu maintenant est une décision définitive.',
+          'Si le budget compte plus que la marge maximale, 24 Go est le point d\'équilibre pratique : suffisant pour les modèles de classe 7B-14B avec environ 16 Go utilisables après les 8 Go réservés à macOS, à un prix réellement inférieur à celui du 32 Go. Évitez la configuration 16 Go de base si les LLM locaux sont une vraie raison d\'acheter l\'Air — elle fait bien tourner les petits modèles, mais la mémoire ne peut pas être ajoutée après l\'achat, donc acheter trop peu maintenant est une décision définitive.',
           'Le M5 lui-même constitue une réelle amélioration sur ce plan, pas seulement un changement de nom : le GPU M5 d\'Apple ajoute un Neural Accelerator à chaque cœur, et Apple présente la puce spécifiquement pour l\'exécution de grands modèles de langage sur l\'appareil, avec 153 Go/s de bande passante mémoire à l\'appui — environ 28 % plus rapide que le M4.',
         ],
         affiliateLinks: [
@@ -598,7 +598,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { '0': '7B-8B', '1': '🟢 Excellent', '2': '🟢 Excellent' },
           { '0': '13B-14B', '1': '🟢 Confortable', '2': '🟢 Large marge' },
-          { '0': '20B-30B', '1': '🟡 Juste, selon quant.', '2': '🟢 Confortable en Q4' },
+          { '0': '20B-30B', '1': '🟡 Environ 20B en Q4 ; 30B ne tient pas', '2': '🟢 Tient en Q4, juste avec un long contexte' },
           { '0': '70B', '1': '🔴 Pas réaliste', '2': '🔴 Pas fait pour ça' },
         ],
       },
@@ -646,7 +646,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '2026年版 MacBook Air(eGPUなし)に最適なローカルLLM',
     metaDescription: 'M5 MacBook Airは、eGPUなしでも使えるポータブルローカルLLM向けノートPCとして優れた選択肢です。ローカルAI用途では16GBベースモデルではなく、24GBか32GBの統合メモリを選んでください。',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     last_full_refresh: '2026-08-26',
@@ -697,7 +697,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'ローカルLLMに最適なMacBook Air構成',
         content: [
           '<strong>ローカルAIがM5 MacBook Air購入の主な理由の一つなら、32GBの統合メモリで構成してください。</strong>Apple SiliconはCPUとGPUでメモリを共有するため、別個のVRAM数値ではなく、スペックシート上の統合メモリの数値がどのモデルが動くかを左右します。32GBは14Bクラスのモデルに余裕を持たせ、より大きな量子化モデルを試す余地も残します。',
-          '予算のほうが最大の余裕より重要なら、24GBが現実的なスイートスポットです。7B-14Bクラスのモデルには十分で、macOSとブラウザの分の余裕も残しつつ、32GBより実質的に価格を抑えられます。ローカルLLMが本当にAirを買う理由なら、16GBベース構成は避けてください — 小さいモデルなら問題なく動きますが、購入後にメモリを追加することはできないため、今メモリを少なく買うと後で取り返しがつきません。',
+          '予算のほうが最大の余裕より重要なら、24GBが現実的なスイートスポットです。7B-14Bクラスのモデルには十分で、macOSが必要とする8GBを除いた約16GBが使える状態で、32GBより実質的に価格を抑えられます。ローカルLLMが本当にAirを買う理由なら、16GBベース構成は避けてください — 小さいモデルなら問題なく動きますが、購入後にメモリを追加することはできないため、今メモリを少なく買うと後で取り返しがつきません。',
           'M5自体も名称変更だけではない、実質的なアップグレードです。AppleのM5 GPUは各コアにNeural Acceleratorを追加し、Appleはこのチップを大規模言語モデルのオンデバイス実行向けに明確に訴求しています。153GB/sのメモリ帯域幅に支えられており、これはM4よりおよそ28%高速です。',
         ],
         affiliateLinks: [
@@ -726,7 +726,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { '0': '7B-8B', '1': '🟢 優秀', '2': '🟢 優秀' },
           { '0': '13B-14B', '1': '🟢 快適', '2': '🟢 余裕あり' },
-          { '0': '20B-30B', '1': '🟡 やや厳しい(量子化次第)', '2': '🟢 Q4で快適' },
+          { '0': '20B-30B', '1': '🟡 Q4で約20Bまで(30Bは収まりません)', '2': '🟢 Q4で収まります(長いコンテキストでは厳しめ)' },
           { '0': '70B', '1': '🔴 現実的でない', '2': '🔴 用途外' },
         ],
       },
@@ -774,7 +774,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'eGPU 없는 MacBook Air 최적 로컬 LLM (2026)',
     metaDescription: 'M5 MacBook Air는 eGPU 없이도 최고 수준의 휴대용 로컬 LLM 노트북입니다. 로컬 AI용으로는 16GB 기본 모델 대신 24GB 또는 32GB 통합 메모리를 선택하십시오.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     last_full_refresh: '2026-08-26',
@@ -825,7 +825,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '로컬 LLM을 위한 최적의 MacBook Air 구성',
         content: [
           '<strong>로컬 AI가 M5 MacBook Air를 구매하는 주된 이유 중 하나라면 32GB 통합 메모리로 구성하십시오.</strong> Apple Silicon은 CPU와 GPU 간에 메모리를 공유하므로, 별도의 VRAM 수치가 아니라 사양표에 적힌 통합 메모리 수치가 어떤 모델이 들어맞는지를 결정합니다. 32GB는 14B급 모델에 여유로운 공간을 제공하며, 더 큰 양자화 모델을 실험할 여지도 있습니다.',
-          '최대 여유보다 예산이 더 중요하다면, 24GB가 실용적인 최적점입니다. macOS와 브라우저를 위한 공간을 남기면서 7B-14B급 모델에 충분하며, 32GB보다 실질적으로 저렴합니다. 로컬 LLM이 Air를 구매하는 진짜 이유라면 16GB 기본 구성은 피하십시오 — 작은 모델은 문제없이 돌아가지만, 메모리는 구매 후 추가할 수 없으므로 지금 너무 적게 사면 나중에 되돌릴 수 없는 선택이 됩니다.',
+          '최대 여유보다 예산이 더 중요하다면, 24GB가 실용적인 최적점입니다. macOS에 필요한 8GB를 제외하고도 약 16GB를 쓸 수 있어 7B-14B급 모델에 충분하며, 32GB보다 실질적으로 저렴합니다. 로컬 LLM이 Air를 구매하는 진짜 이유라면 16GB 기본 구성은 피하십시오 — 작은 모델은 문제없이 돌아가지만, 메모리는 구매 후 추가할 수 없으므로 지금 너무 적게 사면 나중에 되돌릴 수 없는 선택이 됩니다.',
           'M5 자체도 이름만 바뀐 것이 아니라 실질적인 업그레이드입니다. Apple의 M5 GPU는 모든 코어에 Neural Accelerator를 추가했고, Apple은 이 칩을 온디바이스 대규모 언어 모델 실행에 특화된 제품으로 마케팅하며, 153GB/s의 메모리 대역폭 — M4보다 약 28% 빠름 — 이 이를 뒷받침합니다.',
         ],
         affiliateLinks: [
@@ -854,7 +854,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { '0': '7B-8B', '1': '🟢 우수', '2': '🟢 우수' },
           { '0': '13B-14B', '1': '🟢 여유로움', '2': '🟢 충분한 여유' },
-          { '0': '20B-30B', '1': '🟡 빠듯함, 양자화 의존', '2': '🟢 Q4에서 여유로움' },
+          { '0': '20B-30B', '1': '🟡 Q4에서 약 20B까지, 30B는 들어가지 않음', '2': '🟢 Q4에서 들어맞으나 긴 컨텍스트에서는 빠듯함' },
           { '0': '70B', '1': '🔴 비현실적', '2': '🔴 이 용도로는 비추천' },
         ],
       },
@@ -902,7 +902,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhor LLM Local para MacBook Air (Sem eGPU) 2026',
     metaDescription: 'O MacBook Air M5 é um dos melhores notebooks para LLM local sem eGPU. Para IA local, escolha 24GB ou 32GB de memória unificada, não o 16GB básico.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     current_models_mentioned: ['Qwen3 8B'],
@@ -950,7 +950,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Melhor Configuração de MacBook Air para LLMs Locais',
         content: [
           '<strong>Se IA local for um dos principais motivos de você comprar um MacBook Air M5, configure-o com 32 GB de memória unificada.</strong> O Apple Silicon compartilha memória entre CPU e GPU, então o número de memória unificada na ficha técnica — não um número separado de VRAM — é o que determina quais modelos cabem. 32 GB dá folga confortável para modelos de classe 14B e espaço para experimentar com modelos quantizados maiores.',
-          'Se o orçamento importar mais do que a folga máxima, 24 GB é o ponto ideal prático: suficiente para modelos de classe 7B-14B com espaço restante para o macOS e um navegador, a um preço real mais baixo do que os 32 GB. Pule a configuração básica de 16 GB se LLMs locais forem um motivo genuíno para você comprar o Air — ela lida bem com modelos pequenos, mas a memória não pode ser adicionada depois da compra, então comprar pouco demais agora é uma decisão da qual você fica preso.',
+          'Se o orçamento importar mais do que a folga máxima, 24 GB é o ponto ideal prático: suficiente para modelos de classe 7B-14B com cerca de 16 GB utilizáveis após os 8 GB de que o macOS precisa, a um preço real mais baixo do que os 32 GB. Pule a configuração básica de 16 GB se LLMs locais forem um motivo genuíno para você comprar o Air — ela lida bem com modelos pequenos, mas a memória não pode ser adicionada depois da compra, então comprar pouco demais agora é uma decisão da qual você fica preso.',
           'O próprio M5 é um upgrade real para isso, não apenas uma mudança de nome: a GPU M5 da Apple adiciona um Neural Accelerator a cada núcleo, e a Apple divulga o chip especificamente em torno da execução de modelos de linguagem grandes on-device, apoiado por 153 GB/s de largura de banda de memória — cerca de 28% mais rápido que o M4.',
         ],
         affiliateLinks: [
@@ -979,7 +979,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { '0': '7B-8B', '1': '🟢 Excelente', '2': '🟢 Excelente' },
           { '0': '13B-14B', '1': '🟢 Confortável', '2': '🟢 Bastante espaço' },
-          { '0': '20B-30B', '1': '🟡 Apertado, depende da quant.', '2': '🟢 Confortável em Q4' },
+          { '0': '20B-30B', '1': '🟡 Cerca de 20B em Q4; 30B não cabe', '2': '🟢 Cabe em Q4, apertado com contexto longo' },
           { '0': '70B', '1': '🔴 Não é realista', '2': '🔴 Não é para isso' },
         ],
       },
@@ -1027,7 +1027,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '2026 年 MacBook Air（无 eGPU）最佳本地 LLM',
     metaDescription: 'M5 MacBook Air 是无需 eGPU 的最佳便携本地 LLM 笔记本电脑之一。本地 AI 场景请选择 24GB 或 32GB 统一内存，而非 16GB 基础版。',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     last_full_refresh: '2026-08-26',
@@ -1078,7 +1078,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '本地 LLM 的最佳 MacBook Air 配置',
         content: [
           '<strong>如果本地 AI 是你购买 M5 MacBook Air 的主要原因之一，请选择 32GB 统一内存配置。</strong>Apple Silicon 在 CPU 和 GPU 之间共享内存，因此规格表上的统一内存数字——而非独立的显存数字——决定了哪些模型能够运行。32GB 为 14B 级别模型提供舒适的余量，也留有空间尝试更大的量化模型。',
-          '如果预算比最大余量更重要，24GB 是实用的甜蜜点：足以运行 7B-14B 级别模型，同时为 macOS 和浏览器留有空间，价格也比 32GB 版本实实在在地便宜一档。如果本地 LLM 确实是你购买 Air 的原因，请跳过 16GB 基础配置——它能应付小模型，但内存购买后无法加装，现在买少了就只能将就。',
+          '如果预算比最大余量更重要，24GB 是实用的甜蜜点：足以运行 7B-14B 级别模型，扣除 macOS 所需的 8GB 后仍有约 16GB 可用，价格也比 32GB 版本实实在在地便宜一档。如果本地 LLM 确实是你购买 Air 的原因，请跳过 16GB 基础配置——它能应付小模型，但内存购买后无法加装，现在买少了就只能将就。',
           'M5 本身是一次真正的升级，而不只是换了个名字：苹果的 M5 GPU 为每个核心都增加了神经加速器，苹果也专门围绕设备端运行大语言模型来宣传这颗芯片，背后是 153GB/s 的内存带宽——比 M4 快约 28%。',
         ],
         affiliateLinks: [
@@ -1107,7 +1107,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { '0': '7B-8B', '1': '🟢 优秀', '2': '🟢 优秀' },
           { '0': '13B-14B', '1': '🟢 舒适', '2': '🟢 空间充裕' },
-          { '0': '20B-30B', '1': '🟡 紧张，视量化而定', '2': '🟢 Q4 下舒适' },
+          { '0': '20B-30B', '1': '🟡 Q4 下约 20B；30B 放不下', '2': '🟢 Q4 下可运行，长上下文时偏紧' },
           { '0': '70B', '1': '🔴 不现实', '2': '🔴 非该配置的目标场景' },
         ],
       },

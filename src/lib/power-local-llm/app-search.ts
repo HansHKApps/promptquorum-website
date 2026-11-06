@@ -12,6 +12,7 @@
 // so routes that need just hardware matching don't pay that cost.
 
 import Fuse from 'fuse.js'
+import { macUsableGb } from '@/lib/vram'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 import featureReviewIndex from '@/generated/feature-review-index.json'
 import toolArticleIndex from '@/generated/tool-article-index.json'
@@ -407,6 +408,20 @@ function buildWhyMatched(
   return reasons.length ? reasons.join('; ') : 'listed in the directory (no filters applied)'
 }
 
+/**
+ * On a Mac (os === 'mac') the memory the user reports is total unified memory;
+ * deduct the flat macOS reserve before any fit comparison. Call exactly once per
+ * request, at the outermost entry that does the comparing.
+ */
+export function withMacReserve<T extends { os?: string; ramGb?: number; vramGb?: number }>(args: T): T {
+  if (args.os !== 'mac') return args
+  return {
+    ...args,
+    ramGb: args.ramGb === undefined ? undefined : macUsableGb(args.ramGb),
+    vramGb: args.vramGb === undefined ? undefined : macUsableGb(args.vramGb),
+  }
+}
+
 export function searchApps(args: {
   query?: string
   category?: string
@@ -439,6 +454,8 @@ export function searchApps(args: {
   // LLM context budget, so it needs a much higher ceiling — see its route.ts caller.
   const limit = Math.min(Math.max(args.limit ?? 5, 1), 60)
   const offset = Math.max(args.offset ?? 0, 0)
+  // Mac: unified memory is shared with macOS, which needs a flat 8 GB (owner rule 2026-11-06).
+  args = withMacReserve(args)
 
   let pool: ToolRecord[]
   let matchedKeysBySlug: Map<string, Set<string>> | undefined

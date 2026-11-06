@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
     title: 'Best MoE Models for Local Coding?',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     seoTitle: 'Best MoE Models for Local Coding 2026 (16–32 GB)',
     metaDescription: 'gpt-oss-20b runs in 16 GB, Qwen3-Coder-30B-A3B in 24 GB, Qwen3.6-35B-A3B in 32 GB. Compare active parameters, Ollama sizes and SWE-bench scores.',
     heroImage: '/images/best-moe-models-local-coding-moe-comparison-hero-en.webp',
@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     last_full_refresh: '2026-10-17',
     current_models_mentioned: ['Qwen3.6-35B-A3B', 'Qwen3-Coder-30B-A3B', 'Qwen3-Coder-Next', 'GLM-4.7-Flash', 'gpt-oss-20b', 'gpt-oss-120b'],
     current_benchmarks_used: ['SWE-bench Verified'],
-    current_hardware_mentioned: ['16 GB VRAM', '24 GB GPU', '32 GB unified memory', '64 GB unified memory', '80 GB GPU'],
+    current_hardware_mentioned: ['16 GB VRAM', '24 GB GPU', '48 GB unified memory', '64 GB unified memory', '80 GB GPU'],
     educationalLevel: 'Advanced',
     audience: 'Developers evaluating MoE models for local coding tasks',
     parentArticle: '/local-llms/best-local-llms-for-coding',
@@ -70,7 +70,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>For 16 GB of VRAM, run gpt-oss-20b: 21B total, 3.6B active, 14 GB on Ollama.</strong> That leaves about 2 GB for context on a 16 GB card, so keep the context window modest.',
           'For a 24 GB GPU, run Qwen3-Coder-30B-A3B (19 GB, 256K context, tuned for code) or GLM-4.7-Flash (19 GB, MIT license). Both are 30B-A3B MoE models with 3–3.3B active parameters.',
-          'For 32 GB of unified memory or a 32 GB GPU, run Qwen3.6-35B-A3B (about 24 GB, 256K context, Apache 2.0). It is tight on a 24 GB GPU, where part of the model spills into system RAM and speed drops.',
+          'For a 32 GB GPU, run Qwen3.6-35B-A3B (about 24 GB, 256K context, Apache 2.0); on a Mac, plan for 48 GB of unified memory, because macOS keeps about 8 GB. It is tight on a 24 GB GPU, where part of the model spills into system RAM and speed drops.',
           'For 64–80 GB, Qwen3-Coder-Next (80B total, 3B active, 52 GB at Q4_K_M) suits a 64 GB machine, and gpt-oss-120b (117B total, 5.1B active, 65 GB) targets a single 80 GB GPU according to OpenAI\'s model card.',
           'Below 16 GB, MoE stops being practical; see the <a href="/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">best 14B models for coding</a> for dense alternatives.',
         ],
@@ -145,7 +145,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'gpt-oss-20b läuft mit 16 GB, Qwen3-Coder-30B-A3B mit 24 GB, Qwen3.6-35B-A3B mit 32 GB. Aktive Parameter, Ollama-Größen und SWE-bench im Vergleich.',
     heroImage: '/images/best-moe-models-local-coding-moe-comparison-hero-de.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
@@ -197,7 +197,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Für 16 GB VRAM eignet sich gpt-oss-20b: 21B gesamt, 3,6B aktiv, 14 GB auf Ollama.</strong> Auf einer 16-GB-Karte bleiben etwa 2 GB für den Kontext, halten Sie das Kontextfenster daher moderat.',
           'Für eine 24-GB-GPU eignen sich Qwen3-Coder-30B-A3B (19 GB, 256K Kontext, auf Code abgestimmt) oder GLM-4.7-Flash (19 GB, MIT-Lizenz). Beide sind 30B-A3B-MoE-Modelle mit 3–3,3B aktiven Parametern.',
-          'Für 32 GB Unified Memory oder eine 32-GB-GPU eignet sich Qwen3.6-35B-A3B (etwa 24 GB, 256K Kontext, Apache 2.0). Auf einer 24-GB-GPU wird es knapp: Teile des Modells landen im Arbeitsspeicher und die Geschwindigkeit sinkt.',
+          'Für eine 32-GB-GPU eignet sich Qwen3.6-35B-A3B (etwa 24 GB, 256K Kontext, Apache 2.0); auf einem Mac planen Sie 48 GB Unified Memory ein, weil macOS etwa 8 GB belegt. Auf einer 24-GB-GPU wird es knapp: Teile des Modells landen im Arbeitsspeicher und die Geschwindigkeit sinkt.',
           'Für 64–80 GB passt Qwen3-Coder-Next (80B gesamt, 3B aktiv, 52 GB bei Q4_K_M) auf einen 64-GB-Rechner; gpt-oss-120b (117B gesamt, 5,1B aktiv, 65 GB) zielt laut OpenAI-Model-Card auf eine einzelne 80-GB-GPU.',
           'Unter 16 GB sind MoE-Modelle kaum praktikabel; Dense-Alternativen finden Sie bei den <a href="/de/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">besten 14B-Modellen für Coding</a>.',
         ],
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'gpt-oss-20b tient dans 16 Go, Qwen3-Coder-30B-A3B dans 24 Go, Qwen3.6-35B-A3B dans 32 Go. Paramètres actifs, tailles Ollama et scores SWE-bench comparés.',
     heroImage: '/images/best-moe-models-local-coding-moe-comparison-hero-fr.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
@@ -324,7 +324,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Pour 16 Go de VRAM, lancez gpt-oss-20b : 21B au total, 3,6B actifs, 14 Go sur Ollama.</strong> Il reste environ 2 Go pour le contexte sur une carte de 16 Go ; gardez une fenêtre de contexte modeste.',
           'Pour un GPU de 24 Go, lancez Qwen3-Coder-30B-A3B (19 Go, contexte 256K, conçu pour le code) ou GLM-4.7-Flash (19 Go, licence MIT). Ce sont deux MoE 30B-A3B avec 3 à 3,3B de paramètres actifs.',
-          'Pour 32 Go de mémoire unifiée ou un GPU de 32 Go, lancez Qwen3.6-35B-A3B (environ 24 Go, contexte 256K, Apache 2.0). C\'est juste sur un GPU de 24 Go : une partie du modèle déborde en RAM et la vitesse chute.',
+          'Pour un GPU de 32 Go, lancez Qwen3.6-35B-A3B (environ 24 Go, contexte 256K, Apache 2.0) ; sur un Mac, prévoyez 48 Go de mémoire unifiée, car macOS en réserve environ 8 Go. C\'est juste sur un GPU de 24 Go : une partie du modèle déborde en RAM et la vitesse chute.',
           'Pour 64 à 80 Go, Qwen3-Coder-Next (80B au total, 3B actifs, 52 Go en Q4_K_M) convient à une machine de 64 Go, et gpt-oss-120b (117B au total, 5,1B actifs, 65 Go) vise un seul GPU de 80 Go selon la fiche modèle d\'OpenAI.',
           'Sous 16 Go, le MoE n\'est plus pratique ; voyez les <a href="/fr/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">meilleurs modèles 14B pour le codage</a> pour des alternatives denses.',
         ],
@@ -399,7 +399,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'gpt-oss-20bは16GB、Qwen3-Coder-30B-A3Bは24GB、Qwen3.6-35B-A3Bは32GBで動作。アクティブパラメータ、Ollamaのサイズ、SWE-benchを比較。',
     heroImage: '/images/best-moe-models-local-coding-moe-comparison-hero-ja.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
@@ -451,7 +451,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>VRAM 16GBならgpt-oss-20bです。総計21B、アクティブ3.6B、Ollamaで14GBです。</strong>16GBのカードではコンテキスト用に約2GBしか残らないため、コンテキストウィンドウは控えめにしてください。',
           '24GBのGPUならQwen3-Coder-30B-A3B（19GB、256Kコンテキスト、コード向けに調整）かGLM-4.7-Flash（19GB、MITライセンス）です。どちらも30B-A3BのMoEで、アクティブは3〜3.3Bです。',
-          '32GBのユニファイドメモリまたは32GBのGPUならQwen3.6-35B-A3B（約24GB、256Kコンテキスト、Apache 2.0）です。24GBのGPUでは厳しく、一部がシステムRAMに溢れて速度が落ちます。',
+          '32GBのGPUならQwen3.6-35B-A3B（約24GB、256Kコンテキスト、Apache 2.0）です。Macではユニファイドメモリ48GBを見込んでください（macOSが約8GBを使用するため）。24GBのGPUでは厳しく、一部がシステムRAMに溢れて速度が落ちます。',
           '64〜80GBなら、Qwen3-Coder-Next（総計80B、アクティブ3B、Q4_K_Mで52GB）は64GBのマシン向けで、gpt-oss-120b（総計117B、アクティブ5.1B、65GB）はOpenAIのモデルカードによると80GBのGPU1枚を想定しています。',
           '16GB未満ではMoEは実用的ではありません。Denseの代替は<a href="/ja/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">コーディング向け14Bモデル比較</a>をご覧ください。',
         ],
@@ -526,7 +526,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'gpt-oss-20b 可在 16GB 运行，Qwen3-Coder-30B-A3B 需 24GB，Qwen3.6-35B-A3B 需 32GB。对比激活参数、Ollama 体积与 SWE-bench 成绩。',
     heroImage: '/images/best-moe-models-local-coding-moe-comparison-hero-zh.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
@@ -578,7 +578,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>16GB 显存请用 gpt-oss-20b：总计 21B，激活 3.6B，Ollama 14GB。</strong>16GB 显卡上只剩约 2GB 给上下文，因此请保持较小的上下文窗口。',
           '24GB 显卡请用 Qwen3-Coder-30B-A3B（19GB，256K 上下文，针对代码调优）或 GLM-4.7-Flash（19GB，MIT 许可证）。两者都是 30B-A3B MoE，激活参数 3–3.3B。',
-          '32GB 统一内存或 32GB 显卡请用 Qwen3.6-35B-A3B（约 24GB，256K 上下文，Apache 2.0）。在 24GB 显卡上会很紧张：部分模型溢出到系统内存，速度下降。',
+          '32GB 显卡请用 Qwen3.6-35B-A3B（约 24GB，256K 上下文，Apache 2.0）；Mac 请按 48GB 统一内存规划，因为 macOS 约占用 8GB。在 24GB 显卡上会很紧张：部分模型溢出到系统内存，速度下降。',
           '64–80GB 时，Qwen3-Coder-Next（总计 80B，激活 3B，Q4_K_M 为 52GB）适合 64GB 的机器；根据 OpenAI 的模型卡，gpt-oss-120b（总计 117B，激活 5.1B，65GB）面向单张 80GB 显卡。',
           '16GB 以下 MoE 不再实用；稠密模型的替代方案见<a href="/zh/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">最佳 14B 编程模型</a>。',
         ],
@@ -653,7 +653,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'gpt-oss-20b cabe en 16 GB, Qwen3-Coder-30B-A3B en 24 GB y Qwen3.6-35B-A3B en 32 GB. Parámetros activos, tamaños en Ollama y SWE-bench comparados.',
     heroImage: '/images/best-moe-models-local-coding-moe-comparison-hero-es.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
@@ -705,7 +705,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Con 16 GB de VRAM, usa gpt-oss-20b: 21B totales, 3,6B activos, 14 GB en Ollama.</strong> Quedan unos 2 GB para el contexto en una tarjeta de 16 GB, así que mantén la ventana de contexto moderada.',
           'Con una GPU de 24 GB, usa Qwen3-Coder-30B-A3B (19 GB, contexto de 256K, orientado a código) o GLM-4.7-Flash (19 GB, licencia MIT). Ambos son MoE 30B-A3B con 3–3,3B de parámetros activos.',
-          'Con 32 GB de memoria unificada o una GPU de 32 GB, usa Qwen3.6-35B-A3B (unos 24 GB, contexto de 256K, Apache 2.0). En una GPU de 24 GB va justo: parte del modelo pasa a la RAM del sistema y la velocidad cae.',
+          'Con una GPU de 32 GB, usa Qwen3.6-35B-A3B (unos 24 GB, contexto de 256K, Apache 2.0); en un Mac, cuenta con 48 GB de memoria unificada, porque macOS reserva unos 8 GB. En una GPU de 24 GB va justo: parte del modelo pasa a la RAM del sistema y la velocidad cae.',
           'Con 64–80 GB, Qwen3-Coder-Next (80B totales, 3B activos, 52 GB en Q4_K_M) encaja en un equipo de 64 GB, y gpt-oss-120b (117B totales, 5,1B activos, 65 GB) apunta a una sola GPU de 80 GB según la ficha de OpenAI.',
           'Por debajo de 16 GB, el MoE deja de ser práctico; consulta los <a href="/es/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">mejores modelos de 14B para coding</a> como alternativas densas.',
         ],
@@ -780,7 +780,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'gpt-oss-20b roda em 16 GB, Qwen3-Coder-30B-A3B em 24 GB e Qwen3.6-35B-A3B em 32 GB. Parâmetros ativos, tamanhos no Ollama e SWE-bench comparados.',
     heroImage: '/images/best-moe-models-local-coding-moe-comparison-hero-pt.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
@@ -832,7 +832,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Com 16 GB de VRAM, use o gpt-oss-20b: 21B no total, 3,6B ativos, 14 GB no Ollama.</strong> Sobram cerca de 2 GB para o contexto em uma placa de 16 GB, então mantenha a janela de contexto modesta.',
           'Com uma GPU de 24 GB, use o Qwen3-Coder-30B-A3B (19 GB, contexto de 256K, voltado a código) ou o GLM-4.7-Flash (19 GB, licença MIT). Ambos são MoE 30B-A3B com 3–3,3B de parâmetros ativos.',
-          'Com 32 GB de memória unificada ou uma GPU de 32 GB, use o Qwen3.6-35B-A3B (cerca de 24 GB, contexto de 256K, Apache 2.0). Em uma GPU de 24 GB fica apertado: parte do modelo vai para a RAM do sistema e a velocidade cai.',
+          'Com uma GPU de 32 GB, use o Qwen3.6-35B-A3B (cerca de 24 GB, contexto de 256K, Apache 2.0); em um Mac, conte com 48 GB de memória unificada, porque o macOS reserva cerca de 8 GB. Em uma GPU de 24 GB fica apertado: parte do modelo vai para a RAM do sistema e a velocidade cai.',
           'Com 64–80 GB, o Qwen3-Coder-Next (80B no total, 3B ativos, 52 GB em Q4_K_M) serve a uma máquina de 64 GB, e o gpt-oss-120b (117B no total, 5,1B ativos, 65 GB) mira uma única GPU de 80 GB, segundo a ficha da OpenAI.',
           'Abaixo de 16 GB, o MoE deixa de ser prático; veja os <a href="/pt/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">melhores modelos de 14B para programação</a> como alternativas densas.',
         ],
@@ -907,7 +907,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'يعمل ⁨gpt-oss-20b⁩ بذاكرة ⁨16 GB⁩ و⁨Qwen3-Coder-30B-A3B⁩ بذاكرة ⁨24 GB⁩ و⁨Qwen3.6-35B-A3B⁩ بذاكرة ⁨32 GB.⁩ مقارنة المعاملات النشطة وأحجام ⁨Ollama⁩ ونتائج ⁨SWE-bench.⁩',
     heroImage: '/images/best-moe-models-local-coding-moe-comparison-hero-ar.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
@@ -959,7 +959,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>مع ⁨16 GB⁩ من ⁨VRAM⁩ استخدم ⁨gpt-oss-20b:⁩ إجمالي ⁨21B⁩، نشط ⁨3.6B⁩، وحجمه ⁨14 GB⁩ على ⁨Ollama.⁩</strong> يتبقى نحو ⁨2 GB⁩ للسياق على بطاقة ⁨16 GB⁩، فأبقِ نافذة السياق معتدلة.',
           'مع بطاقة ⁨24 GB⁩ استخدم ⁨Qwen3-Coder-30B-A3B⁩ (حجمه ⁨19 GB⁩، سياق ⁨256K⁩، مضبوط للشيفرة) أو ⁨GLM-4.7-Flash⁩ (حجمه ⁨19 GB⁩، ترخيص ⁨MIT⁩). كلاهما ⁨MoE⁩ من فئة ⁨30B-A3B⁩ بمعاملات نشطة ⁨3⁩–⁨3.3B.⁩',
-          'مع ذاكرة موحدة ⁨32 GB⁩ أو بطاقة ⁨32 GB⁩ استخدم ⁨Qwen3.6-35B-A3B⁩ (نحو ⁨24 GB⁩، سياق ⁨256K⁩، ترخيص ⁨Apache 2.0⁩). الأمر ضيق على بطاقة ⁨24 GB⁩ حيث يفيض جزء من النموذج إلى ذاكرة النظام وتنخفض السرعة.',
+          'مع بطاقة ⁨32 GB⁩ استخدم ⁨Qwen3.6-35B-A3B⁩ (نحو ⁨24 GB⁩، سياق ⁨256K⁩، ترخيص ⁨Apache 2.0⁩)؛ وعلى جهاز Mac خطّط لذاكرة موحدة ⁨48 GB⁩ لأن macOS يحتفظ بنحو ⁨8 GB⁩. الأمر ضيق على بطاقة ⁨24 GB⁩ حيث يفيض جزء من النموذج إلى ذاكرة النظام وتنخفض السرعة.',
           'مع ⁨64⁩–⁨80 GB⁩ يناسب ⁨Qwen3-Coder-Next⁩ (إجمالي ⁨80B⁩، نشط ⁨3B⁩، حجمه ⁨52 GB⁩ بصيغة ⁨Q4_K_M⁩) جهازًا بذاكرة ⁨64 GB⁩، ويستهدف ⁨gpt-oss-120b⁩ (إجمالي ⁨117B⁩، نشط ⁨5.1B⁩، حجمه ⁨65 GB⁩) بطاقة واحدة بذاكرة ⁨80 GB⁩ وفق بطاقة نموذج ⁨OpenAI.⁩',
           'دون ⁨16 GB⁩ لا يعود ⁨MoE⁩ عمليًا؛ راجع <a href="/ar/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">أفضل نماذج ⁨14B⁩ للبرمجة</a> للبدائل الكثيفة.',
         ],
@@ -1034,7 +1034,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'gpt-oss-20b는 16GB, Qwen3-Coder-30B-A3B는 24GB, Qwen3.6-35B-A3B는 32GB에서 실행됩니다. 활성 파라미터, Ollama 크기, SWE-bench를 비교합니다.',
     heroImage: '/images/best-moe-models-local-coding-moe-comparison-hero-ko.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-06',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
@@ -1086,7 +1086,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>VRAM 16GB에는 gpt-oss-20b를 쓰십시오. 전체 21B, 활성 3.6B, Ollama 14GB입니다.</strong> 16GB 카드에서는 컨텍스트에 약 2GB만 남으므로 컨텍스트 창을 적당히 유지하십시오.',
           '24GB GPU에는 Qwen3-Coder-30B-A3B(19GB, 256K 컨텍스트, 코드에 맞춰 조정) 또는 GLM-4.7-Flash(19GB, MIT 라이선스)를 쓰십시오. 둘 다 활성 3~3.3B의 30B-A3B MoE입니다.',
-          '32GB 통합 메모리나 32GB GPU에는 Qwen3.6-35B-A3B(약 24GB, 256K 컨텍스트, Apache 2.0)를 쓰십시오. 24GB GPU에서는 빠듯하며, 모델 일부가 시스템 RAM으로 넘치면서 속도가 떨어집니다.',
+          '32GB GPU에는 Qwen3.6-35B-A3B(약 24GB, 256K 컨텍스트, Apache 2.0)를 쓰십시오. Mac에서는 macOS가 약 8GB를 사용하므로 통합 메모리 48GB를 기준으로 하십시오. 24GB GPU에서는 빠듯하며, 모델 일부가 시스템 RAM으로 넘치면서 속도가 떨어집니다.',
           '64~80GB에서는 Qwen3-Coder-Next(전체 80B, 활성 3B, Q4_K_M 52GB)가 64GB 장비에 맞고, gpt-oss-120b(전체 117B, 활성 5.1B, 65GB)는 OpenAI 모델 카드에 따르면 80GB GPU 한 장을 목표로 합니다.',
           '16GB 미만에서는 MoE가 실용적이지 않습니다. 밀집 모델 대안은 <a href="/ko/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">코딩용 최적 14B 모델</a>을 참조하십시오.',
         ],

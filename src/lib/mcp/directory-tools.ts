@@ -16,6 +16,7 @@ import {
   findApp,
   hardwareFit,
   searchApps,
+  withMacReserve,
   summarize,
   type AppSummary,
 } from '@/lib/power-local-llm/app-search'
@@ -25,7 +26,7 @@ import { STACK_RECIPES } from '@/lib/power-local-llm/stacks'
 import { ALL_CLOUD_APPS, matchCloudApp, normalizeQuery } from '@/lib/power-local-llm/alternatives/match'
 import { HANDS_ON_TEST_SLUGS, handsOnTestUrl } from '@/lib/hands-on-tests/links'
 import { getHandsOnTest } from '@/lib/hands-on-tests'
-import { MODEL_SIZES, QUANT_BITS, CONTEXT_OVERHEAD, BATCH_MULTIPLIER, estimateVram } from '@/lib/vram'
+import { MODEL_SIZES, QUANT_BITS, CONTEXT_OVERHEAD, BATCH_MULTIPLIER, MAC_OS_RESERVE_GB, estimateVram, macUsableGb } from '@/lib/vram'
 
 const SITE = 'https://www.promptquorum.com'
 const VRAM_CALCULATOR_URL = `${SITE}/local-llms/vram-calculator-local-llm`
@@ -155,8 +156,11 @@ export function checkHardwareCompatibility(args: CheckHardwareArgs) {
         ? { status: 'supported', note: `${app.name} is listed for ${args.os}.` }
         : { status: 'not-listed', note: `${app.name} is not listed for ${args.os} (listed: ${app.platforms.join(', ')}).` }
 
-  const appFit = hardwareFit(app, args.ramGb, args.vramGb)
-  const summary = summarize(app, appFit, { ramGb: args.ramGb, vramGb: args.vramGb })
+  // Mac: deduct the flat 8 GB macOS reserve from the reported unified memory.
+  // searchApps below (alternatives) deducts on its own, so it keeps the raw args.
+  const adj = withMacReserve(args)
+  const appFit = hardwareFit(app, adj.ramGb, adj.vramGb)
+  const summary = summarize(app, appFit, { ramGb: adj.ramGb, vramGb: adj.vramGb })
 
   // Model estimate: only when a model size is given. Unified memory (Apple
   // Silicon) counts toward VRAM, so the caller passes it as ramGb/vramGb and
@@ -170,7 +174,7 @@ export function checkHardwareCompatibility(args: CheckHardwareArgs) {
     } else {
       const ctxKey = nearestContext(args.contextLength ?? '4K')
       const est = estimateVram({ modelBillions: args.modelBillions, quantBits, contextGb: CONTEXT_OVERHEAD[ctxKey], batchGb: BATCH_MULTIPLIER['1'] })
-      const available = Math.max(args.vramGb ?? 0, args.ramGb ?? 0)
+      const available = Math.max(adj.vramGb ?? 0, adj.ramGb ?? 0)
       const status: Verdict = available === 0 ? 'unknown' : est.recommendedGb <= available ? 'fits' : 'too-demanding'
       modelCheck = {
         status,
@@ -181,6 +185,7 @@ export function checkHardwareCompatibility(args: CheckHardwareArgs) {
         estimatedGb: round(est.totalGb),
         recommendedGb: round(est.recommendedGb),
         availableGb: available || null,
+        ...(args.os === 'mac' ? { macOsReserveGb: MAC_OS_RESERVE_GB } : {}),
         note: 'Rule-of-thumb estimate (weights + context + overhead, +25% margin), not a benchmark. Real use varies by runtime and KV-cache settings; RAM size alone does not predict speed.',
       }
     }
@@ -243,7 +248,10 @@ export interface EstimateVramArgs {
   quantization?: string
   contextLength?: string
   batchSize?: number
+  /** Total memory the user has. On a Mac this is total unified memory. */
   availableGb?: number
+  /** Pass 'mac' when availableGb is a Mac's unified memory: 8 GB is deducted for macOS. */
+  os?: string
 }
 
 export function estimateVramTool(args: EstimateVramArgs) {
@@ -256,9 +264,11 @@ export function estimateVramTool(args: EstimateVramArgs) {
 
   let fit: Record<string, unknown> | null = null
   if (args.availableGb !== undefined) {
-    const headroom = args.availableGb - est.recommendedGb
+    const usableGb = args.os === 'mac' ? macUsableGb(args.availableGb) : args.availableGb
+    const headroom = usableGb - est.recommendedGb
     fit = {
       availableGb: args.availableGb,
+      ...(args.os === 'mac' ? { macOsReserveGb: MAC_OS_RESERVE_GB, usableForModelGb: usableGb } : {}),
       status: headroom < 0 ? 'exceeds' : headroom < 1 ? 'tight' : 'fits',
       headroomGb: round(headroom),
     }
@@ -268,7 +278,7 @@ export function estimateVramTool(args: EstimateVramArgs) {
         .filter(([, b]) => b < bits)
         .sort((a, b) => b[1] - a[1])
         .map(([q, b]) => ({ q, rec: estimateVram({ modelBillions: args.modelBillions, quantBits: b, contextGb: CONTEXT_OVERHEAD[ctx], batchGb: BATCH_MULTIPLIER[batchKey] }).recommendedGb }))
-        .find((o) => o.rec <= args.availableGb!)
+        .find((o) => o.rec <= usableGb)
       if (options) fit.suggestion = `${options.q} should fit (about ${round(options.rec)} GB recommended) at a quality cost.`
     }
   }
@@ -287,7 +297,7 @@ export function estimateVramTool(args: EstimateVramArgs) {
     basis: 'estimate',
     caveats: [
       'Rule-of-thumb estimate, not a measurement: weights = params × bits / 8, plus a context allowance, batch allowance and 1 GB system overhead, then a 25% safety margin.',
-      'Mixture-of-experts models still need all weights resident; unified-memory Macs share RAM with the OS, so leave headroom.',
+      'Mixture-of-experts models still need all weights resident. On a Mac, macOS needs at least 8 GB of the unified memory: subtract 8 GB from the total before comparing (pass os: "mac" with availableGb and this is done for you).',
       'Memory fit says nothing about speed; throughput depends on memory bandwidth and the runtime.',
     ],
     calculatorUrl: VRAM_CALCULATOR_URL,
@@ -309,6 +319,7 @@ export function recommendStack(args: RecommendStackArgs) {
   const limit = Math.min(Math.max(args.limit ?? 3, 1), 6)
   const tokens = args.goal.toLowerCase().split(/[^a-z0-9]+/).filter((t) => t.length > 1)
   const goalLower = args.goal.toLowerCase()
+  const adj = withMacReserve(args) // Mac: flat 8 GB macOS reserve
 
   const scored = STACK_RECIPES.map((r) => {
     let score = 0
@@ -318,15 +329,15 @@ export function recommendStack(args: RecommendStackArgs) {
     }
     if (goalLower.includes(r.goal.toLowerCase())) score += 3
     const osOk = !r.platforms || !args.os || r.platforms.includes(args.os)
-    const memory = Math.max(args.vramGb ?? 0, args.ramGb ?? 0)
+    const memory = Math.max(adj.vramGb ?? 0, adj.ramGb ?? 0)
     // Hardware verdict from the recipe's numeric floor only; null floor = unknown.
     let hardware: Verdict = 'unknown'
-    if (args.ramGb !== undefined || args.vramGb !== undefined) {
+    if (adj.ramGb !== undefined || adj.vramGb !== undefined) {
       const needRam = r.floor.ramGb
       const needVram = r.floor.vramGb
-      const ramBad = needRam !== null && args.ramGb !== undefined && args.ramGb < needRam
-      const vramBad = needVram !== null && !r.floor.cpuOnly && args.vramGb !== undefined && args.vramGb < needVram && memory < needVram
-      const unresearched = (needRam === null && needVram === null) || (needRam !== null && args.ramGb === undefined && needVram === null)
+      const ramBad = needRam !== null && adj.ramGb !== undefined && adj.ramGb < needRam
+      const vramBad = needVram !== null && !r.floor.cpuOnly && adj.vramGb !== undefined && adj.vramGb < needVram && memory < needVram
+      const unresearched = (needRam === null && needVram === null) || (needRam !== null && adj.ramGb === undefined && needVram === null)
       hardware = ramBad || vramBad ? 'too-demanding' : unresearched ? 'unknown' : 'fits'
     }
     return { r, score, osOk, hardware }
@@ -345,7 +356,7 @@ export function recommendStack(args: RecommendStackArgs) {
     hardwareFit: hardware,
     apps: r.appSlugs.map((slug) => {
       const app: ToolRecord | undefined = localAiApps.find((a) => a.slug === slug)
-      return app ? summarize(app, hardwareFit(app, args.ramGb, args.vramGb), { ramGb: args.ramGb, vramGb: args.vramGb }) : { slug, name: slug }
+      return app ? summarize(app, hardwareFit(app, adj.ramGb, adj.vramGb), { ramGb: adj.ramGb, vramGb: adj.vramGb }) : { slug, name: slug }
     }),
     articleUrl: `${SITE}/directory#stacks`,
   }))

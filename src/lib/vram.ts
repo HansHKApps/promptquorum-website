@@ -42,3 +42,15 @@ export function estimateVram(args: { modelBillions: number; quantBits: number; c
   const recommendedGb = Math.ceil(totalGb * SAFETY_FACTOR * 4) / 4
   return { baseGb, contextGb: args.contextGb, batchGb: args.batchGb, systemGb: SYSTEM_GB, totalGb, recommendedGb }
 }
+
+/**
+ * Owner rule (2026-11-06): on a Mac, plan at least 8 GB of unified memory for
+ * macOS itself. Every "does it fit" check for a Mac deducts this flat amount
+ * from the machine's total memory before comparing it to a model or app.
+ */
+export const MAC_OS_RESERVE_GB = 8
+
+/** Unified memory left for models/apps on a Mac after the flat macOS reserve. */
+export function macUsableGb(unifiedGb: number): number {
+  return Math.max(unifiedGb - MAC_OS_RESERVE_GB, 0)
+}

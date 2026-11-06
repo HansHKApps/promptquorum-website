@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     next_seo_review_due: '2027-01-01',
@@ -195,7 +195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Goose is the simplest path to a working local MCP agent.** It is an open-source agent (originally from Block, now developed at `aaif-goose/goose`) with a CLI and native [Ollama](https://ollama.com/) support, an interactive chat surface, and one config file for all your [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) servers. Continue.dev, Cline, and LM Studio work too — Goose has the lowest setup tax for a first run.',
         items: [
           '**Step 1 — install Ollama.** Download from [ollama.com/download](https://ollama.com/) (macOS/Windows/Linux). Confirm the service is running with `curl http://127.0.0.1:11434/api/tags`.',
-          '**Step 2 — pull a tool-calling model.** Pick from Gemma 4 31B (`gemma4:31b`), GLM-4.7 Flash (`glm-4.7-flash`), Qwen3.6 27B (`qwen3.6:27b`), Qwen3 32B (`qwen3:32b`), or Llama 3.3 70B (`llama3.3:70b`). 32 GB unified memory or 24 GB VRAM handles 26B–32B at Q4_K_M comfortably.',
+          '**Step 2 — pull a tool-calling model.** Pick from Gemma 4 31B (`gemma4:31b`), GLM-4.7 Flash (`glm-4.7-flash`), Qwen3.6 27B (`qwen3.6:27b`), Qwen3 32B (`qwen3:32b`), or Llama 3.3 70B (`llama3.3:70b`). 24 GB VRAM handles 26B–32B at Q4_K_M comfortably; a Mac with 32 GB unified memory fits them with roughly 4–6 GB left for context (macOS needs 8 GB).',
           '**Step 3 — install Goose.** On macOS or Linux run `curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash` (or `brew install block-goose-cli`). On Windows use the PowerShell installer from the Goose docs, or WSL. The CLI installs as `goose`.',
           '**Step 4 — configure Ollama as the provider.** Run `goose configure`, pick `ollama` as the provider, set the model to the one you pulled, and set the host to `http://127.0.0.1:11434` (blank also means localhost:11434). Goose writes this to `~/.config/goose/config.yaml`. Ollama\'s default context window can be small (the Goose docs mention 4096 tokens), which can make Goose ignore its extensions — start Ollama with `OLLAMA_CONTEXT_LENGTH=32768` (or higher).',
           '**Step 5 — add the filesystem MCP server.** Run `goose configure`, choose Add Extension, then Command-line Extension, or add an `extensions` block to `~/.config/goose/config.yaml` (example below). For a one-off test, `goose session --with-extension "npx -y @modelcontextprotocol/server-filesystem /path/to/workspace"` enables it for that session only. Start `goose session` and ask it to list files in your test directory. The first turn confirms the server is wired up.',
@@ -342,10 +342,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Tool-call reliability scales with model size and training, not with the harness.** A model that emits malformed tool calls in Cline will emit malformed tool calls in Goose for the same reason.',
         items: [
-          '**Gemma 4 31B (`gemma4:31b`)** — Google\'s tool-call training is best-in-class for the size. Fits in 16 GB unified memory or 24 GB VRAM at Q4_K_M. Good general reasoning; somewhat conservative on chained tool calls.',
+          '**Gemma 4 31B (`gemma4:31b`)** — Google\'s tool-call training is best-in-class for the size. Fits in 32 GB unified memory (about 4–6 GB left for context) or 24 GB VRAM at Q4_K_M. Good general reasoning; somewhat conservative on chained tool calls.',
           '**GLM-4.7 Flash (`glm-4.7-flash`)** — Zhipu\'s model has very strong tool-call reliability and a 128K context window out of the box. Slightly heavier than Gemma 4; fits comfortably on a 24 GB GPU.',
           '**Qwen3.6 27B (`qwen3.6:27b`)** — the newer Qwen option on Ollama (about 18–19 GB, 256K context, tool calling supported). **Qwen3 32B (`qwen3:32b`)** — well-rounded; the dense 32B handles MCP cleanly and is happy in a long agent loop. **Qwen3-Coder 30B (`qwen3-coder:30b`)** is the best pick if your agent work is code-shaped.',
-          '**Llama 3.3 70B (`llama3.3:70b`)** — the highest ceiling but the heaviest. 48 GB+ unified memory or 2× 24 GB GPUs at Q4_K_M. Use only if your hardware accommodates it; the smaller models are usually enough.',
+          '**Llama 3.3 70B (`llama3.3:70b`)** — the highest ceiling but the heaviest. 64 GB+ unified memory or 2× 24 GB GPUs at Q4_K_M. Use only if your hardware accommodates it; the smaller models are usually enough.',
           '**Avoid for MCP work:** anything under 7B and any general-purpose model without explicit tool-call training. They will emit malformed calls, the loop will stall, and you will blame the harness — but the harness is fine.',
           'For structured prompting techniques that improve tool-call quality on any model, see [chain-of-thought prompting](/prompt-engineering/chain-of-thought-prompting).',
           'For the head-to-head data, see [Best Local Models for Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026).',
@@ -469,7 +469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     next_seo_review_due: '2027-01-01',
@@ -656,7 +656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Goose ist der einfachste Weg zu einem funktionierenden lokalen MCP-Agenten.** Es ist ein Open-Source-Agent (ursprünglich von Block, heute unter `aaif-goose/goose` entwickelt) mit CLI und nativer [Ollama](https://ollama.com/)-Unterstützung, einer interaktiven Chat-Oberfläche und einer einzigen Konfigurationsdatei für alle Ihre [Model-Context-Protocol-(MCP)](https://modelcontextprotocol.io/)-Server. Continue.dev, Cline und LM Studio funktionieren ebenfalls — Goose hat den geringsten Setup-Aufwand für den ersten Lauf.',
         items: [
           '**Schritt 1 — Ollama installieren.** Download von [ollama.com/download](https://ollama.com/) (macOS/Windows/Linux). Bestätigen Sie, dass der Dienst läuft, mit `curl http://127.0.0.1:11434/api/tags`.',
-          '**Schritt 2 — ein Tool-Calling-Modell ziehen.** Wählen Sie aus Gemma 4 31B (`gemma4:31b`), GLM-4.7 Flash (`glm-4.7-flash`), Qwen3.6 27B (`qwen3.6:27b`), Qwen3 32B (`qwen3:32b`) oder Llama 3.3 70B (`llama3.3:70b`). 32 GB Unified Memory oder 24 GB VRAM bewältigen 26B–32B bei Q4_K_M komfortabel.',
+          '**Schritt 2 — ein Tool-Calling-Modell ziehen.** Wählen Sie aus Gemma 4 31B (`gemma4:31b`), GLM-4.7 Flash (`glm-4.7-flash`), Qwen3.6 27B (`qwen3.6:27b`), Qwen3 32B (`qwen3:32b`) oder Llama 3.3 70B (`llama3.3:70b`). 24 GB VRAM bewältigen 26B–32B bei Q4_K_M komfortabel; ein Mac mit 32 GB Unified Memory fasst sie mit etwa 4–6 GB Rest für den Kontext (macOS braucht 8 GB).',
           '**Schritt 3 — Goose installieren.** Unter macOS oder Linux führen Sie `curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash` aus (oder `brew install block-goose-cli`). Unter Windows nutzen Sie den PowerShell-Installer aus der Goose-Dokumentation oder WSL. Die CLI installiert sich als `goose`.',
           '**Schritt 4 — Ollama als Provider konfigurieren.** Führen Sie `goose configure` aus, wählen Sie `ollama` als Provider, setzen Sie das Modell auf das gezogene und den Host auf `http://127.0.0.1:11434` (leer bedeutet ebenfalls localhost:11434). Goose schreibt das in `~/.config/goose/config.yaml`. Das Standard-Kontextfenster von Ollama kann klein sein (die Goose-Dokumentation nennt 4096 Tokens), wodurch Goose seine Extensions ignorieren kann — starten Sie Ollama mit `OLLAMA_CONTEXT_LENGTH=32768` (oder höher).',
           '**Schritt 5 — den Filesystem-MCP-Server hinzufügen.** Führen Sie `goose configure` aus, wählen Sie Add Extension und dann Command-line Extension, oder ergänzen Sie einen `extensions`-Block in `~/.config/goose/config.yaml` (Konfigurationsbeispiel unten). Für einen einmaligen Test aktiviert `goose session --with-extension "npx -y @modelcontextprotocol/server-filesystem /path/to/workspace"` ihn nur für diese Session. Starten Sie `goose session` und bitten Sie es, Dateien in Ihrem Test-Verzeichnis aufzulisten. Der erste Turn bestätigt, dass der Server angebunden ist.',
@@ -803,10 +803,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Tool-Call-Zuverlässigkeit skaliert mit Modellgröße und Training, nicht mit dem Harness.** Ein Modell, das in Cline fehlerhafte Tool-Calls ausgibt, wird in Goose aus demselben Grund fehlerhafte Tool-Calls ausgeben.',
         items: [
-          '**Gemma 4 31B (`gemma4:31b`)** — Googles Tool-Call-Training ist Best-in-Class für die Größe. Passt in 16 GB Unified Memory oder 24 GB VRAM bei Q4_K_M. Gutes allgemeines Reasoning; etwas konservativ bei verketteten Tool-Calls.',
+          '**Gemma 4 31B (`gemma4:31b`)** — Googles Tool-Call-Training ist Best-in-Class für die Größe. Passt in 32 GB Unified Memory (etwa 4–6 GB bleiben für den Kontext) oder 24 GB VRAM bei Q4_K_M. Gutes allgemeines Reasoning; etwas konservativ bei verketteten Tool-Calls.',
           '**GLM-4.7 Flash (`glm-4.7-flash`)** — Zhipus Modell hat sehr starke Tool-Call-Zuverlässigkeit und ein 128K-Context-Fenster ab Werk. Etwas schwerer als Gemma 4; passt komfortabel auf eine 24-GB-GPU.',
           '**Qwen3.6 27B (`qwen3.6:27b`)** — die neuere Qwen-Option auf Ollama (rund 18–19 GB, 256K Context, Tool Calling unterstützt). **Qwen3 32B (`qwen3:32b`)** — gut ausbalanciert; das dichte 32B verarbeitet MCP sauber und ist in einer langen Agent-Schleife glücklich. **Qwen3-Coder 30B (`qwen3-coder:30b`)** ist die beste Wahl, wenn Ihre Agent-Arbeit codeförmig ist.',
-          '**Llama 3.3 70B (`llama3.3:70b`)** — die höchste Decke, aber die schwerste. 48 GB+ Unified Memory oder 2× 24 GB GPUs bei Q4_K_M. Nur einsetzen, wenn Ihre Hardware das verträgt; die kleineren Modelle reichen meist.',
+          '**Llama 3.3 70B (`llama3.3:70b`)** — die höchste Decke, aber die schwerste. 64 GB+ Unified Memory oder 2× 24 GB GPUs bei Q4_K_M. Nur einsetzen, wenn Ihre Hardware das verträgt; die kleineren Modelle reichen meist.',
           '**Vermeiden Sie für MCP-Arbeit:** alles unter 7B und jedes general-purpose-Modell ohne explizites Tool-Call-Training. Sie geben fehlerhafte Calls aus, der Loop blockiert, und Sie werden den Harness beschuldigen — aber der Harness ist in Ordnung.',
           'Für strukturierte Prompting-Techniken, die die Tool-Call-Qualität bei jedem Modell verbessern, siehe [Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting).',
           'Für Head-to-Head-Daten siehe [Beste lokale Modelle für Tool Calling 2026](/de/power-local-llm/best-local-models-tool-calling-2026).',
@@ -952,7 +952,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     next_seo_review_due: '2027-01-01',
@@ -1141,7 +1141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Goose est le chemin le plus court vers un agent MCP local fonctionnel.** C'est un agent open source (issu à l'origine de Block, développé désormais sur `aaif-goose/goose`) avec une CLI et un support natif d'[Ollama](https://ollama.com/), une interface de chat interactive et un seul fichier de configuration pour tous vos serveurs [Model Context Protocol (MCP)](https://modelcontextprotocol.io/). Continue.dev, Cline et LM Studio fonctionnent aussi — Goose a juste le coût d'installation le plus faible pour une première mise en route.",
         items: [
           '**Étape 1 — installer Ollama.** Téléchargez depuis [ollama.com/download](https://ollama.com/) (macOS/Windows/Linux). Vérifiez que le service tourne avec `curl http://127.0.0.1:11434/api/tags`.',
-          "**Étape 2 — récupérer un modèle compatible tool calling.** Choisissez parmi Gemma 4 31B (`gemma4:31b`), GLM-4.7 Flash (`glm-4.7-flash`), Qwen3.6 27B (`qwen3.6:27b`), Qwen3 32B (`qwen3:32b`) ou Llama 3.3 70B (`llama3.3:70b`). 32 Go de mémoire unifiée ou 24 Go de VRAM gèrent confortablement 26B–32B en Q4_K_M.",
+          "**Étape 2 — récupérer un modèle compatible tool calling.** Choisissez parmi Gemma 4 31B (`gemma4:31b`), GLM-4.7 Flash (`glm-4.7-flash`), Qwen3.6 27B (`qwen3.6:27b`), Qwen3 32B (`qwen3:32b`) ou Llama 3.3 70B (`llama3.3:70b`). 24 Go de VRAM gèrent confortablement 26B–32B en Q4_K_M ; un Mac avec 32 Go de mémoire unifiée les fait tenir avec environ 4–6 Go restants pour le contexte (macOS en réserve 8 Go).",
           "**Étape 3 — installer Goose.** Sous macOS ou Linux, lancez `curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash` (ou `brew install block-goose-cli`). Sous Windows, utilisez l'installateur PowerShell de la documentation Goose, ou WSL. La CLI s'installe sous le nom `goose`.",
           "**Étape 4 — configurer Ollama comme provider.** Lancez `goose configure`, choisissez `ollama` comme provider, fixez le modèle sur celui que vous avez récupéré et le host sur `http://127.0.0.1:11434` (vide, cela signifie aussi localhost:11434). Goose écrit cela dans `~/.config/goose/config.yaml`. La fenêtre de contexte par défaut d'Ollama peut être petite (la documentation de Goose mentionne 4096 tokens), ce qui peut conduire Goose à ignorer ses extensions — démarrez Ollama avec `OLLAMA_CONTEXT_LENGTH=32768` (ou plus).",
           "**Étape 5 — ajouter le serveur MCP filesystem.** Lancez `goose configure`, choisissez Add Extension, puis Command-line Extension, ou ajoutez un bloc `extensions` à `~/.config/goose/config.yaml` (exemple ci-dessous). Pour un test ponctuel, `goose session --with-extension \"npx -y @modelcontextprotocol/server-filesystem /path/to/workspace\"` l'active pour cette session uniquement. Lancez `goose session` et demandez la liste des fichiers dans votre répertoire de test. Le premier tour confirme que le serveur est bien câblé.",
@@ -1288,10 +1288,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           "**La fiabilité des appels d'outils croît avec la taille et l'entraînement, pas avec le harness.** Un modèle qui émet des appels malformés dans Cline en émettra de la même manière dans Goose.",
         items: [
-          "**Gemma 4 31B (`gemma4:31b`)** — l'entraînement tool calling de Google est best-in-class pour la taille. Tient en 16 Go de mémoire unifiée ou 24 Go de VRAM en Q4_K_M. Bon raisonnement général ; un peu conservateur sur les chaînes d'appels d'outils.",
+          "**Gemma 4 31B (`gemma4:31b`)** — l'entraînement tool calling de Google est best-in-class pour la taille. Tient en 32 Go de mémoire unifiée (environ 4–6 Go restent pour le contexte) ou 24 Go de VRAM en Q4_K_M. Bon raisonnement général ; un peu conservateur sur les chaînes d'appels d'outils.",
           "**GLM-4.7 Flash (`glm-4.7-flash`)** — le modèle de Zhipu a une fiabilité tool calling très forte et une fenêtre de contexte 128K d'origine. Légèrement plus lourd que Gemma 4 ; tient confortablement sur un GPU 24 Go.",
           "**Qwen3.6 27B (`qwen3.6:27b`)** — l'option Qwen la plus récente sur Ollama (environ 18–19 Go, contexte 256K, tool calling supporté). **Qwen3 32B (`qwen3:32b`)** — bien équilibré ; le 32B dense gère MCP proprement et se sent à l'aise dans une boucle d'agent longue. **Qwen3-Coder 30B (`qwen3-coder:30b`)** est le meilleur choix si votre travail d'agent est code.",
-          "**Llama 3.3 70B (`llama3.3:70b`)** — le plafond le plus haut, mais le plus lourd. 48 Go+ de mémoire unifiée ou 2× 24 Go de GPUs en Q4_K_M. À utiliser seulement si votre matériel suit ; les modèles plus petits suffisent généralement.",
+          "**Llama 3.3 70B (`llama3.3:70b`)** — le plafond le plus haut, mais le plus lourd. 64 Go+ de mémoire unifiée ou 2× 24 Go de GPUs en Q4_K_M. À utiliser seulement si votre matériel suit ; les modèles plus petits suffisent généralement.",
           "**À éviter pour MCP :** tout ce qui est sous 7B et tout modèle généraliste sans entraînement explicite tool calling. Ils émettent des appels malformés, la boucle bloque, et vous accuserez le harness — mais le harness va bien.",
           "Pour des techniques de prompting structuré qui améliorent la qualité des appels d'outils sur n'importe quel modèle, voir [Chain-of-Thought Prompting](/fr/prompt-engineering/chain-of-thought-prompting).",
           "Pour les benchmarks tête-à-tête, voir [Meilleurs modèles locaux pour tool calling 2026](/fr/power-local-llm/best-local-models-tool-calling-2026).",
@@ -1429,7 +1429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     next_seo_review_due: '2027-01-01',
@@ -1616,7 +1616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Goose は動作するローカル MCP エージェントへの最短ルートです。** オープンソースのエージェント（元は Block 発、現在は `aaif-goose/goose` で開発）で、CLI、ネイティブな [Ollama](https://ollama.com/) 対応、対話型チャットインターフェース、すべての [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) サーバー設定を 1 ファイルに集約する仕組みを備えています。Continue.dev、Cline、LM Studio でも動作しますが、初回セットアップのコストは Goose が最も低いです。',
         items: [
           '**Step 1 — Ollama をインストール。** [ollama.com/download](https://ollama.com/)（macOS/Windows/Linux）からダウンロード。`curl http://127.0.0.1:11434/api/tags` でサービスが動作していることを確認してください。',
-          '**Step 2 — tool calling モデルを pull。** Gemma 4 31B（`gemma4:31b`）、GLM-4.7 Flash（`glm-4.7-flash`）、Qwen3.6 27B（`qwen3.6:27b`）、Qwen3 32B（`qwen3:32b`）または Llama 3.3 70B（`llama3.3:70b`）から選択。32 GB unified memory または 24 GB VRAM で 26B–32B を Q4_K_M で快適に動かせます。',
+          '**Step 2 — tool calling モデルを pull。** Gemma 4 31B（`gemma4:31b`）、GLM-4.7 Flash（`glm-4.7-flash`）、Qwen3.6 27B（`qwen3.6:27b`）、Qwen3 32B（`qwen3:32b`）または Llama 3.3 70B（`llama3.3:70b`）から選択。24 GB VRAM なら 26B–32B を Q4_K_M で快適に動かせます。32 GB unified memory の Mac でも収まりますが、コンテキスト用に残るのは約 4–6 GB です（macOS に 8 GB 必要）。',
           '**Step 3 — Goose をインストール。** macOS または Linux では `curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash`（または `brew install block-goose-cli`）を実行します。Windows では Goose ドキュメントの PowerShell インストーラか WSL を使ってください。CLI は `goose` としてインストールされます。',
           '**Step 4 — Ollama をプロバイダーとして設定。** `goose configure` を実行、`ollama` をプロバイダーに選択、モデルを pull したものに、host を `http://127.0.0.1:11434` に設定（空欄でも localhost:11434 になります）。Goose は `~/.config/goose/config.yaml` に書き込みます。Ollama の既定コンテキストウィンドウは小さいことがあり（Goose のドキュメントでは 4096 トークンとされています）、その場合 Goose が extension を無視することがあります — `OLLAMA_CONTEXT_LENGTH=32768`（またはそれ以上）を付けて Ollama を起動してください。',
           '**Step 5 — filesystem の MCPサーバーを追加。** `goose configure` を実行して Add Extension、続いて Command-line Extension を選ぶか、`~/.config/goose/config.yaml` に `extensions` ブロックを追加します（下に設定例）。一度だけ試すなら `goose session --with-extension "npx -y @modelcontextprotocol/server-filesystem /path/to/workspace"` でそのセッションに限って有効にできます。`goose session` を開始し、テストディレクトリのファイル一覧を尋ねてください。最初のターンでサーバー接続が確認できます。',
@@ -1763,10 +1763,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**tool call の信頼性はモデルサイズと学習に依存し、ハーネスではありません。** Cline で形式不正な tool call を出すモデルは、Goose でも同じ理由で形式不正な tool call を出します。',
         items: [
-          '**Gemma 4 31B（`gemma4:31b`）** — Google の tool call 学習はサイズに対して best-in-class。16 GB unified memory または 24 GB VRAM で Q4_K_M に収まります。一般推論は良好；連鎖した tool call にはやや保守的です。',
+          '**Gemma 4 31B（`gemma4:31b`）** — Google の tool call 学習はサイズに対して best-in-class。32 GB unified memory（コンテキスト用に残るのは約 4–6 GB）または 24 GB VRAM で Q4_K_M に収まります。一般推論は良好；連鎖した tool call にはやや保守的です。',
           '**GLM-4.7 Flash（`glm-4.7-flash`）** — Zhipu のモデルは tool call 信頼性が非常に高く、out of the box で 128K コンテキストウィンドウ。Gemma 4 よりやや重め；24 GB GPU に余裕で収まります。',
           '**Qwen3.6 27B（`qwen3.6:27b`）** — Ollama で使える新しい Qwen の選択肢（約 18–19 GB、256K コンテキスト、tool calling 対応）。**Qwen3 32B（`qwen3:32b`）** — バランスが良く、dense な 32B が MCP をクリーンに処理し、長時間エージェントループでも安定します。**Qwen3-Coder 30B（`qwen3-coder:30b`）** はエージェント作業がコード形態の場合の最良の選択です。',
-          '**Llama 3.3 70B（`llama3.3:70b`）** — 最高の天井ですが最も重い。Q4_K_M で 48 GB+ unified memory または 2× 24 GB GPU。ハードウェアが対応している場合のみ；通常は小さいモデルで十分です。',
+          '**Llama 3.3 70B（`llama3.3:70b`）** — 最高の天井ですが最も重い。Q4_K_M で 64 GB+ unified memory または 2× 24 GB GPU。ハードウェアが対応している場合のみ；通常は小さいモデルで十分です。',
           '**MCP 作業で避けるべきもの：** 7B 未満すべて、明示的な tool call 学習のない汎用モデルすべて。形式不正な call を出してループが止まり、ハーネスを責めることになりますが — ハーネスは問題ありません。',
           '任意のモデルで tool call 品質を改善する構造化プロンプティング手法は、[Chain-of-Thought Prompting](/ja/prompt-engineering/chain-of-thought-prompting) を参照してください。',
           '頭ごなしの比較データは、[2026 年のローカル tool calling 最強モデル](/ja/power-local-llm/best-local-models-tool-calling-2026) を参照してください。',
@@ -1912,7 +1912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
@@ -2097,7 +2097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Goose 是通往可工作的本地 MCP 智能体的最短路径。** 这是一个开源智能体（最初来自 Block，现在在 `aaif-goose/goose` 开发），提供 CLI 并原生支持 [Ollama](https://ollama.com/)，有交互式聊天界面，并将所有 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) 服务器配置集中到一个文件。Continue.dev、Cline、LM Studio 也能用，但 Goose 在初次搭建上的成本最低。',
         items: [
           '**Step 1 —— 安装 Ollama。** 从 [ollama.com/download](https://ollama.com/) 下载（macOS/Windows/Linux）。用 `curl http://127.0.0.1:11434/api/tags` 确认服务运行。',
-          '**Step 2 —— 拉取支持 tool calling 的模型。** 在 Gemma 4 31B (`gemma4:31b`)、GLM-4.7 Flash (`glm-4.7-flash`)、Qwen3.6 27B (`qwen3.6:27b`)、Qwen3 32B (`qwen3:32b`) 或 Llama 3.3 70B (`llama3.3:70b`) 中选一个。32 GB 统一内存或 24 GB VRAM 在 Q4_K_M 下从容运行 26B–32B。',
+          '**Step 2 —— 拉取支持 tool calling 的模型。** 在 Gemma 4 31B (`gemma4:31b`)、GLM-4.7 Flash (`glm-4.7-flash`)、Qwen3.6 27B (`qwen3.6:27b`)、Qwen3 32B (`qwen3:32b`) 或 Llama 3.3 70B (`llama3.3:70b`) 中选一个。24 GB VRAM 在 Q4_K_M 下可从容运行 26B–32B；32 GB 统一内存的 Mac 也装得下，但留给上下文的仅约 4–6 GB（macOS 需占用 8 GB）。',
           '**Step 3 —— 安装 Goose。** 在 macOS 或 Linux 上运行 `curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash`（或 `brew install block-goose-cli`）。在 Windows 上使用 Goose 文档中的 PowerShell 安装程序，或使用 WSL。CLI 安装为 `goose`。',
           '**Step 4 —— 将 Ollama 配置为 provider。** 运行 `goose configure`，选择 `ollama` 作为 provider，将模型设为已拉取的那个，host 设为 `http://127.0.0.1:11434`（留空也表示 localhost:11434）。Goose 会写入 `~/.config/goose/config.yaml`。Ollama 的默认上下文窗口可能很小（Goose 文档提到 4096 token），可能导致 Goose 忽略其扩展——请用 `OLLAMA_CONTEXT_LENGTH=32768`（或更高）启动 Ollama。',
           '**Step 5 —— 加入 filesystem MCP 服务器。** 运行 `goose configure`，选择 Add Extension，再选 Command-line Extension，或在 `~/.config/goose/config.yaml` 中加入 `extensions` 块（配置示例见下）。如只想一次性测试，`goose session --with-extension "npx -y @modelcontextprotocol/server-filesystem /path/to/workspace"` 仅为该会话启用它。启动 `goose session` 并请求列出测试目录的文件。第一轮即可确认服务器接入。',
@@ -2244,10 +2244,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**tool call 可靠性随模型规模与训练扩展，不是 harness 决定的。** 一个在 Cline 中输出格式错误 tool call 的模型，在 Goose 中也会因同一原因输出格式错误的 tool call。',
         items: [
-          '**Gemma 4 31B (`gemma4:31b`)** —— Google 的 tool call 训练在同尺寸中处于业内最佳。Q4_K_M 下可装入 16 GB 统一内存或 24 GB VRAM。通用推理良好；在链式 tool call 上略偏保守。',
+          '**Gemma 4 31B (`gemma4:31b`)** —— Google 的 tool call 训练在同尺寸中处于业内最佳。Q4_K_M 下可装入 32 GB 统一内存（留给上下文约 4–6 GB）或 24 GB VRAM。通用推理良好；在链式 tool call 上略偏保守。',
           '**GLM-4.7 Flash (`glm-4.7-flash`)** —— 智谱的模型 tool call 可靠性极强，开箱 128K 上下文窗口。比 Gemma 4 略重；24 GB GPU 上从容运行。',
           '**Qwen3.6 27B (`qwen3.6:27b`)** —— Ollama 上较新的 Qwen 选项（约 18–19 GB，256K 上下文，支持 tool calling）。**Qwen3 32B (`qwen3:32b`)** —— 综合均衡；dense 32B 干净处理 MCP，在长智能体循环中稳定。**Qwen3-Coder 30B (`qwen3-coder:30b`)** 是代码形态智能体工作的最佳选择。',
-          '**Llama 3.3 70B (`llama3.3:70b`)** —— 上限最高但最重。Q4_K_M 下需要 48 GB+ 统一内存或 2× 24 GB GPU。仅在硬件允许时使用；通常更小的模型已足够。',
+          '**Llama 3.3 70B (`llama3.3:70b`)** —— 上限最高但最重。Q4_K_M 下需要 64 GB+ 统一内存或 2× 24 GB GPU。仅在硬件允许时使用；通常更小的模型已足够。',
           '**MCP 工作避免：** 任何 7B 以下，以及任何没有显式 tool call 训练的通用模型。它们会输出格式错误的 call、循环卡住，而你会怪罪 harness——但 harness 没问题。',
           '提升任何模型 tool call 质量的结构化提示工程方法，参见 [Chain-of-Thought Prompting](/zh/prompt-engineering/chain-of-thought-prompting)。',
           '逐项基准对比，参见 [2026 年最佳本地 tool calling 模型](/zh/power-local-llm/best-local-models-tool-calling-2026)。',
@@ -2393,7 +2393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
@@ -2577,7 +2577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Goose es el camino más sencillo hacia un agente MCP local funcional.** Es un agente de código abierto (originario de Block, hoy desarrollado en `aaif-goose/goose`) con un CLI y soporte nativo de [Ollama](https://ollama.com/), una interfaz de chat interactiva y un único archivo de configuración para todos tus servidores [Model Context Protocol (MCP)](https://modelcontextprotocol.io/). Continue.dev, Cline y LM Studio también funcionan — Goose tiene el menor coste de configuración para una primera ejecución.',
         items: [
           '**Paso 1 — instala Ollama.** Descárgalo desde [ollama.com/download](https://ollama.com/) (macOS/Windows/Linux). Confirma que el servicio está corriendo con `curl http://127.0.0.1:11434/api/tags`.',
-          '**Paso 2 — descarga un modelo con tool calling.** Elige entre Gemma 4 31B (`gemma4:31b`), GLM-4.7 Flash (`glm-4.7-flash`), Qwen3.6 27B (`qwen3.6:27b`), Qwen3 32B (`qwen3:32b`) o Llama 3.3 70B (`llama3.3:70b`). 32 GB de memoria unificada o 24 GB de VRAM manejan cómodamente 26B–32B en Q4_K_M.',
+          '**Paso 2 — descarga un modelo con tool calling.** Elige entre Gemma 4 31B (`gemma4:31b`), GLM-4.7 Flash (`glm-4.7-flash`), Qwen3.6 27B (`qwen3.6:27b`), Qwen3 32B (`qwen3:32b`) o Llama 3.3 70B (`llama3.3:70b`). 24 GB de VRAM manejan cómodamente 26B–32B en Q4_K_M; un Mac con 32 GB de memoria unificada los aloja con unos 4–6 GB libres para el contexto (macOS necesita 8 GB).',
           '**Paso 3 — instala Goose.** En macOS o Linux ejecuta `curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash` (o `brew install block-goose-cli`). En Windows usa el instalador de PowerShell de la documentación de Goose, o WSL. El CLI se instala como `goose`.',
           '**Paso 4 — configura Ollama como proveedor.** Ejecuta `goose configure`, elige `ollama` como proveedor, establece el modelo al que descargaste y el host en `http://127.0.0.1:11434` (en blanco también equivale a localhost:11434). Goose escribe esto en `~/.config/goose/config.yaml`. La ventana de contexto predeterminada de Ollama puede ser pequeña (la documentación de Goose menciona 4096 tokens), lo que puede hacer que Goose ignore sus extensiones — inicia Ollama con `OLLAMA_CONTEXT_LENGTH=32768` (o más).',
           '**Paso 5 — añade el servidor MCP de filesystem.** Ejecuta `goose configure`, elige Add Extension y luego Command-line Extension, o añade un bloque `extensions` a `~/.config/goose/config.yaml` (ejemplo a continuación). Para una prueba puntual, `goose session --with-extension "npx -y @modelcontextprotocol/server-filesystem /path/to/workspace"` lo activa solo para esa sesión. Inicia `goose session` y pídele que liste los archivos en tu directorio de prueba. El primer turno confirma que el servidor está conectado.',
@@ -2724,10 +2724,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**La fiabilidad del tool calling escala con el tamaño y el entrenamiento del modelo, no con el harness.** Un modelo que emite tool calls malformados en Cline los emitirá en Goose por la misma razón.',
         items: [
-          '**Gemma 4 31B (`gemma4:31b`)** — el entrenamiento de tool calling de Google es el mejor en su clase para este tamaño. Cabe en 16 GB de memoria unificada o 24 GB de VRAM en Q4_K_M. Buen razonamiento general; algo conservador en tool calls encadenados.',
+          '**Gemma 4 31B (`gemma4:31b`)** — el entrenamiento de tool calling de Google es el mejor en su clase para este tamaño. Cabe en 32 GB de memoria unificada (quedan unos 4–6 GB para el contexto) o 24 GB de VRAM en Q4_K_M. Buen razonamiento general; algo conservador en tool calls encadenados.',
           '**GLM-4.7 Flash (`glm-4.7-flash`)** — el modelo de Zhipu tiene una fiabilidad de tool calling muy alta y una ventana de contexto de 128K de serie. Ligeramente más pesado que Gemma 4; cabe cómodamente en una GPU de 24 GB.',
           '**Qwen3.6 27B (`qwen3.6:27b`)** — la opción Qwen más reciente en Ollama (unos 18–19 GB, contexto de 256K, con soporte de tool calling). **Qwen3 32B (`qwen3:32b`)** — equilibrado; el 32B denso maneja MCP sin problemas y se desenvuelve bien en un bucle de agente largo. **Qwen3-Coder 30B (`qwen3-coder:30b`)** es la mejor opción si tu trabajo de agente está orientado al código.',
-          '**Llama 3.3 70B (`llama3.3:70b`)** — el techo más alto pero el más pesado. 48 GB+ de memoria unificada o 2× 24 GB de GPUs en Q4_K_M. Úsalo solo si tu hardware lo admite; los modelos más pequeños suelen ser suficientes.',
+          '**Llama 3.3 70B (`llama3.3:70b`)** — el techo más alto pero el más pesado. 64 GB+ de memoria unificada o 2× 24 GB de GPUs en Q4_K_M. Úsalo solo si tu hardware lo admite; los modelos más pequeños suelen ser suficientes.',
           '**Evita para trabajo con MCP:** cualquier cosa por debajo de 7B y cualquier modelo de uso general sin entrenamiento explícito de tool calling. Emitirán llamadas malformadas, el bucle se bloqueará y culparás al harness — pero el harness está bien.',
           'Para técnicas de prompting estructurado que mejoran la calidad del tool calling en cualquier modelo, consulta [Chain-of-thought prompting](/es/prompt-engineering/chain-of-thought-prompting).',
           'Para los datos comparativos, consulta [Mejores modelos locales para tool calling en 2026](/es/power-local-llm/best-local-models-tool-calling-2026).',
@@ -2855,7 +2855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/local-ai-agents-with-mcp',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -2864,7 +2864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
@@ -3048,7 +3048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**O Goose é o caminho mais simples para um agente MCP local funcional.** É um agente open source (originalmente do Block, hoje desenvolvido em `aaif-goose/goose`) com um CLI e suporte nativo ao [Ollama](https://ollama.com/), uma interface de chat interativa e um único arquivo de configuração para todos os seus servidores do [Model Context Protocol (MCP)](https://modelcontextprotocol.io/). Continue.dev, Cline e LM Studio também funcionam — o Goose é o que dá menos trabalho na primeira execução.',
         items: [
           '**Passo 1 — instale o Ollama.** Baixe em [ollama.com/download](https://ollama.com/) (macOS/Windows/Linux). Confirme que o serviço está rodando com `curl http://127.0.0.1:11434/api/tags`.',
-          '**Passo 2 — baixe um modelo com tool calling.** Escolha entre Gemma 4 31B (`gemma4:31b`), GLM-4.7 Flash (`glm-4.7-flash`), Qwen3.6 27B (`qwen3.6:27b`), Qwen3 32B (`qwen3:32b`) ou Llama 3.3 70B (`llama3.3:70b`). 32 GB de memória unificada ou 24 GB de VRAM lidam confortavelmente com 26B–32B em Q4_K_M.',
+          '**Passo 2 — baixe um modelo com tool calling.** Escolha entre Gemma 4 31B (`gemma4:31b`), GLM-4.7 Flash (`glm-4.7-flash`), Qwen3.6 27B (`qwen3.6:27b`), Qwen3 32B (`qwen3:32b`) ou Llama 3.3 70B (`llama3.3:70b`). 24 GB de VRAM lidam confortavelmente com 26B–32B em Q4_K_M; um Mac com 32 GB de memória unificada comporta esses modelos com cerca de 4–6 GB livres para o contexto (o macOS precisa de 8 GB).',
           '**Passo 3 — instale o Goose.** No macOS ou Linux, execute `curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash` (ou `brew install block-goose-cli`). No Windows, use o instalador PowerShell da documentação do Goose, ou o WSL. O CLI se instala como `goose`.',
           '**Passo 4 — configure o Ollama como provedor.** Execute `goose configure`, escolha `ollama` como provedor, defina o modelo que você baixou e o host como `http://127.0.0.1:11434` (em branco também significa localhost:11434). O Goose escreve isso em `~/.config/goose/config.yaml`. A janela de contexto padrão do Ollama pode ser pequena (a documentação do Goose menciona 4096 tokens), o que pode fazer o Goose ignorar suas extensões — inicie o Ollama com `OLLAMA_CONTEXT_LENGTH=32768` (ou mais).',
           '**Passo 5 — adicione o servidor MCP de filesystem.** Execute `goose configure`, escolha Add Extension e depois Command-line Extension, ou adicione um bloco `extensions` a `~/.config/goose/config.yaml` (exemplo abaixo). Para um teste pontual, `goose session --with-extension "npx -y @modelcontextprotocol/server-filesystem /path/to/workspace"` o ativa apenas naquela sessão. Inicie `goose session` e peça que liste os arquivos no seu diretório de teste. O primeiro turno confirma que o servidor está conectado.',
@@ -3195,10 +3195,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A confiabilidade do tool calling escala com o tamanho e o treinamento do modelo, não com o harness.** Um modelo que emite tool calls malformados no Cline os emitirá no Goose pela mesma razão.',
         items: [
-          '**Gemma 4 31B (`gemma4:31b`)** — o treinamento de tool calling do Google é o melhor da categoria para esse tamanho. Cabe em 16 GB de memória unificada ou 24 GB de VRAM em Q4_K_M. Bom raciocínio geral; um pouco conservador em tool calls encadeados.',
+          '**Gemma 4 31B (`gemma4:31b`)** — o treinamento de tool calling do Google é o melhor da categoria para esse tamanho. Cabe em 32 GB de memória unificada (sobram cerca de 4–6 GB para o contexto) ou 24 GB de VRAM em Q4_K_M. Bom raciocínio geral; um pouco conservador em tool calls encadeados.',
           '**GLM-4.7 Flash (`glm-4.7-flash`)** — o modelo da Zhipu tem confiabilidade de tool calling muito alta e uma janela de contexto de 128K nativa. Um pouco mais pesado que o Gemma 4; cabe confortavelmente em uma GPU de 24 GB.',
           '**Qwen3.6 27B (`qwen3.6:27b`)** — a opção mais nova da família Qwen no Ollama (cerca de 18–19 GB, contexto de 256K, com suporte a tool calling). **Qwen3 32B (`qwen3:32b`)** — equilibrado; o 32B denso lida com MCP sem problemas e se sente bem em um loop de agente longo. **Qwen3-Coder 30B (`qwen3-coder:30b`)** é a melhor opção se seu trabalho de agente é orientado a código.',
-          '**Llama 3.3 70B (`llama3.3:70b`)** — o maior teto, mas o mais pesado. 48 GB+ de memória unificada ou 2× 24 GB de GPUs em Q4_K_M. Use apenas se seu hardware comportar; os modelos menores geralmente bastam.',
+          '**Llama 3.3 70B (`llama3.3:70b`)** — o maior teto, mas o mais pesado. 64 GB+ de memória unificada ou 2× 24 GB de GPUs em Q4_K_M. Use apenas se seu hardware comportar; os modelos menores geralmente bastam.',
           '**Evite para trabalho com MCP:** qualquer coisa abaixo de 7B e qualquer modelo de uso geral sem treinamento explícito de tool calling. Eles emitirão chamadas malformadas, o loop vai travar e você vai culpar o harness — mas o harness está bem.',
           'Para técnicas de prompting estruturado que melhoram a qualidade do tool calling em qualquer modelo, veja [chain-of-thought prompting](/pt/prompt-engineering/chain-of-thought-prompting).',
           'Para os dados comparativos, veja [Melhores modelos locais para tool calling em 2026](/pt/power-local-llm/best-local-models-tool-calling-2026).',
@@ -3326,7 +3326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-ai-agents-with-mcp',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -3335,7 +3335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     next_seo_review_due: '2027-01-01',
@@ -3521,7 +3521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Goose هو أبسط طريق إلى وكيل MCP محلي يعمل.** وكيل مفتوح المصدر (أصله من Block ويُطوَّر الآن في `aaif-goose/goose`) بواجهة سطر أوامر ودعم أصلي لـ[Ollama](https://ollama.com/)، وسطح محادثة تفاعلي، وملف إعداد واحد لجميع خوادم [بروتوكول سياق النموذج (MCP)](https://modelcontextprotocol.io/). Continue.dev وCline وLM Studio تعمل أيضاً — لكن Goose أقل كلفة إعداد في أول تجربة.',
         items: [
           '**الخطوة 1 — ثبّت Ollama.** نزّله من [ollama.com/download](https://ollama.com/) (macOS/Windows/Linux). تأكد أن الخدمة تعمل بالأمر `curl http://127.0.0.1:11434/api/tags`.',
-          '**الخطوة 2 — نزّل نموذجاً يدعم استدعاء الأدوات.** اختر من Gemma 4 31B (`gemma4:31b`) أو GLM-4.7 Flash (`glm-4.7-flash`) أو Qwen3.6 27B (`qwen3.6:27b`) أو Qwen3 32B (`qwen3:32b`) أو Llama 3.3 70B (`llama3.3:70b`). ذاكرة موحدة بحجم 32 GB أو 24 GB من VRAM تشغّل نماذج 26B–32B عند Q4_K_M بارتياح.',
+          '**الخطوة 2 — نزّل نموذجاً يدعم استدعاء الأدوات.** اختر من Gemma 4 31B (`gemma4:31b`) أو GLM-4.7 Flash (`glm-4.7-flash`) أو Qwen3.6 27B (`qwen3.6:27b`) أو Qwen3 32B (`qwen3:32b`) أو Llama 3.3 70B (`llama3.3:70b`). 24 GB من VRAM تشغّل نماذج 26B–32B عند Q4_K_M بارتياح؛ وجهاز Mac بذاكرة موحدة 32 GB يستوعبها مع بقاء نحو 4–6 GB فقط للسياق (يحتاج macOS إلى 8 GB).',
           '**الخطوة 3 — ثبّت Goose.** على macOS أو Linux شغّل `curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash` (أو `brew install block-goose-cli`). على Windows استخدم مثبّت PowerShell من وثائق Goose، أو WSL. تُثبَّت الأداة باسم `goose`.',
           '**الخطوة 4 — اضبط Ollama كمزوّد.** شغّل `goose configure`، واختر `ollama` كمزوّد، واضبط النموذج على الذي نزّلته، واضبط المضيف على `http://127.0.0.1:11434` (ترك الحقل فارغاً يعني localhost:11434 أيضاً). يكتب Goose ذلك في `~/.config/goose/config.yaml`. قد تكون نافذة السياق الافتراضية في Ollama صغيرة (توثيق Goose يذكر 4096 توكن)، وقد يجعل ذلك Goose يتجاهل إضافاته — شغّل Ollama مع `OLLAMA_CONTEXT_LENGTH=32768` (أو أعلى).',
           '**الخطوة 5 — أضف خادم filesystem MCP.** شغّل `goose configure`، واختر Add Extension، ثم Command-line Extension، أو أضف كتلة `extensions` إلى `~/.config/goose/config.yaml` (المثال أدناه). للتجربة السريعة، الأمر `goose session --with-extension "npx -y @modelcontextprotocol/server-filesystem /path/to/workspace"` يفعّله لتلك الجلسة فقط. ابدأ `goose session` واطلب منه سرد الملفات في دليل الاختبار. الدور الأول يؤكد أن الخادم متصل.',
@@ -3663,10 +3663,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**موثوقية استدعاء الأدوات تزداد مع حجم النموذج وتدريبه، لا مع أداة التشغيل.** النموذج الذي يُصدر tool calls مشوّهة في Cline سيُصدر مثلها في Goose للسبب نفسه.',
         items: [
-          '**Gemma 4 31B (`gemma4:31b`)** — تدريب Google على استدعاء الأدوات هو الأفضل في فئته لهذا الحجم. يتسع في ذاكرة موحدة 16 GB أو 24 GB VRAM عند Q4_K_M. استدلال عام جيد؛ ومحافظ نوعاً ما في الاستدعاءات المتسلسلة.',
+          '**Gemma 4 31B (`gemma4:31b`)** — تدريب Google على استدعاء الأدوات هو الأفضل في فئته لهذا الحجم. يتسع في ذاكرة موحدة 32 GB (يتبقى نحو 4–6 GB للسياق) أو 24 GB VRAM عند Q4_K_M. استدلال عام جيد؛ ومحافظ نوعاً ما في الاستدعاءات المتسلسلة.',
           '**GLM-4.7 Flash (`glm-4.7-flash`)** — نموذج Zhipu يتمتع بموثوقية قوية جداً في استدعاء الأدوات ونافذة سياق 128K جاهزة. أثقل قليلاً من Gemma 4؛ ويتسع بارتياح على بطاقة 24 GB.',
           '**Qwen3.6 27B (`qwen3.6:27b`)** — خيار Qwen الأحدث على Ollama (نحو 18–19 GB، وسياق 256K، واستدعاء الأدوات مدعوم). **Qwen3 32B (`qwen3:32b`)** — متوازن؛ نموذج كثيف بحجم 32B يتعامل مع MCP بشكل نظيف ويرتاح في حلقة وكيل طويلة. **Qwen3-Coder 30B (`qwen3-coder:30b`)** هو الأفضل إذا كان عمل وكيلك مرتكزاً على الكود.',
-          '**Llama 3.3 70B (`llama3.3:70b`)** — أعلى سقف لكنه الأثقل. ذاكرة موحدة 48 GB+ أو بطاقتان 24 GB عند Q4_K_M. استخدمه فقط إذا كان عتادك يتحمله؛ فالنماذج الأصغر تكفي غالباً.',
+          '**Llama 3.3 70B (`llama3.3:70b`)** — أعلى سقف لكنه الأثقل. ذاكرة موحدة 64 GB+ أو بطاقتان 24 GB عند Q4_K_M. استخدمه فقط إذا كان عتادك يتحمله؛ فالنماذج الأصغر تكفي غالباً.',
           '**تجنّب لأعمال MCP:** أي نموذج أقل من 7B وأي نموذج للأغراض العامة بلا تدريب صريح على استدعاء الأدوات. سيُصدر استدعاءات مشوّهة، وستتوقف الحلقة، وستلوم أداة التشغيل — لكنها سليمة.',
           'لتقنيات الصياغة المنظمة التي تحسّن جودة استدعاء الأدوات على أي نموذج، راجع [chain-of-thought prompting](/ar/prompt-engineering/chain-of-thought-prompting).',
           'للبيانات المقارنة المباشرة، راجع [أفضل النماذج المحلية لاستدعاء الأدوات في 2026](/ar/power-local-llm/best-local-models-tool-calling-2026).',
@@ -3794,7 +3794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-ai-agents-with-mcp',
       inLanguage: 'ar',
       datePublished: '2026-05-24',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -3803,7 +3803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-06',
     last_full_refresh: '2026-11-02',
     next_refresh_due: '2027-05-02',
     next_seo_review_due: '2027-01-01',
@@ -3989,7 +3989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Goose는 작동하는 로컬 MCP 에이전트로 가는 가장 간단한 경로입니다.** 오픈 소스 에이전트(원래 Block에서 시작, 현재는 `aaif-goose/goose`에서 개발)로, CLI와 [Ollama](https://ollama.com/) 기본 지원, 대화형 채팅 인터페이스, 모든 [Model Context Protocol(MCP)](https://modelcontextprotocol.io/) 서버를 위한 단일 설정 파일을 갖추고 있습니다. Continue.dev, Cline, LM Studio도 작동합니다. Goose는 첫 실행의 설정 부담이 가장 낮습니다.',
         items: [
           '**1단계 — Ollama 설치.** [ollama.com/download](https://ollama.com/)(macOS/Windows/Linux)에서 다운로드하십시오. `curl http://127.0.0.1:11434/api/tags`로 서비스가 실행 중인지 확인하십시오.',
-          '**2단계 — tool calling 모델 다운로드.** Gemma 4 31B(`gemma4:31b`), GLM-4.7 Flash(`glm-4.7-flash`), Qwen3.6 27B(`qwen3.6:27b`), Qwen3 32B(`qwen3:32b`), Llama 3.3 70B(`llama3.3:70b`) 중에서 선택하십시오. 32GB 통합 메모리 또는 24GB VRAM이면 Q4_K_M에서 26B~32B를 여유 있게 처리할 수 있습니다.',
+          '**2단계 — tool calling 모델 다운로드.** Gemma 4 31B(`gemma4:31b`), GLM-4.7 Flash(`glm-4.7-flash`), Qwen3.6 27B(`qwen3.6:27b`), Qwen3 32B(`qwen3:32b`), Llama 3.3 70B(`llama3.3:70b`) 중에서 선택하십시오. 24GB VRAM이면 Q4_K_M에서 26B~32B를 여유 있게 처리할 수 있습니다. 32GB 통합 메모리 Mac에서도 들어가지만 컨텍스트에 남는 공간은 약 4~6GB입니다(macOS가 8GB를 사용합니다).',
           '**3단계 — Goose 설치.** macOS 또는 Linux에서는 `curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash`를 실행하십시오(또는 `brew install block-goose-cli`). Windows에서는 Goose 문서의 PowerShell 설치 프로그램이나 WSL을 사용하십시오. CLI는 `goose`로 설치됩니다.',
           '**4단계 — Ollama를 제공자로 구성.** `goose configure`를 실행하고, `ollama`를 제공자로 선택하고, 모델을 다운로드한 것으로 설정하고, 호스트를 `http://127.0.0.1:11434`로 설정하십시오(비워 두어도 localhost:11434를 의미합니다). Goose가 이 내용을 `~/.config/goose/config.yaml`에 기록합니다. Ollama의 기본 컨텍스트 창은 작을 수 있으며(Goose 문서는 4096 토큰을 언급합니다), Goose가 extension을 무시할 수 있으므로, Ollama를 `OLLAMA_CONTEXT_LENGTH=32768`(또는 더 높게)로 시작하십시오.',
           '**5단계 — filesystem MCP 서버 추가.** `goose configure`를 실행해 Add Extension을 선택한 다음 Command-line Extension을 고르거나, `~/.config/goose/config.yaml`에 `extensions` 블록을 추가하십시오(아래 예시). 일회성 테스트라면 `goose session --with-extension "npx -y @modelcontextprotocol/server-filesystem /path/to/workspace"`로 해당 세션에서만 활성화할 수 있습니다. `goose session`을 시작하고 테스트 디렉터리의 파일 목록을 요청하십시오. 첫 번째 턴이 서버가 연결되었음을 확인해 줍니다.',
@@ -4131,10 +4131,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**tool calling 신뢰성은 harness가 아니라 모델 크기와 훈련에 따라 달라집니다.** Cline에서 잘못된 형식의 tool call을 생성하는 모델은 같은 이유로 Goose에서도 생성합니다.',
         items: [
-          '**Gemma 4 31B(`gemma4:31b`)** — Google의 tool calling 훈련은 이 크기에서 최고 수준입니다. Q4_K_M에서 16GB 통합 메모리 또는 24GB VRAM에 들어갑니다. 일반 추론이 좋고, 연쇄 tool call에서는 다소 보수적입니다.',
+          '**Gemma 4 31B(`gemma4:31b`)** — Google의 tool calling 훈련은 이 크기에서 최고 수준입니다. Q4_K_M에서 32GB 통합 메모리(컨텍스트에 남는 공간은 약 4~6GB) 또는 24GB VRAM에 들어갑니다. 일반 추론이 좋고, 연쇄 tool call에서는 다소 보수적입니다.',
           '**GLM-4.7 Flash(`glm-4.7-flash`)** — Zhipu의 모델은 tool calling 신뢰성이 매우 높고 기본으로 128K 컨텍스트 창을 제공합니다. Gemma 4보다 약간 무겁지만 24GB GPU에 여유 있게 들어갑니다.',
           '**Qwen3.6 27B(`qwen3.6:27b`)** — Ollama에서 쓸 수 있는 더 새로운 Qwen 선택지입니다(약 18~19GB, 256K 컨텍스트, tool calling 지원). **Qwen3 32B(`qwen3:32b`)** — 균형이 잘 잡혀 있고, 조밀한 32B는 MCP를 문제없이 처리하며 긴 에이전트 루프에서도 잘 작동합니다. **Qwen3-Coder 30B(`qwen3-coder:30b`)**는 에이전트 작업이 코드 중심이라면 최선의 선택입니다.',
-          '**Llama 3.3 70B(`llama3.3:70b`)** — 성능 한계는 가장 높지만 가장 무겁습니다. Q4_K_M에서 48GB 이상 통합 메모리 또는 2× 24GB GPU가 필요합니다. 하드웨어가 허용하는 경우에만 사용하십시오. 더 작은 모델로 충분한 경우가 많습니다.',
+          '**Llama 3.3 70B(`llama3.3:70b`)** — 성능 한계는 가장 높지만 가장 무겁습니다. Q4_K_M에서 64GB 이상 통합 메모리 또는 2× 24GB GPU가 필요합니다. 하드웨어가 허용하는 경우에만 사용하십시오. 더 작은 모델로 충분한 경우가 많습니다.',
           '**MCP 작업에서 피해야 할 것:** 7B 미만의 모든 모델, 그리고 명시적인 tool calling 훈련이 없는 범용 모델. 잘못된 형식의 호출을 생성하고, 루프가 멈추고, harness를 탓하게 됩니다. 하지만 harness는 문제가 없습니다.',
           '어떤 모델에서든 tool calling 품질을 높이는 구조적 프롬프팅 기법은 [Chain-of-thought 프롬프팅](/ko/prompt-engineering/chain-of-thought-prompting)을 참조하십시오.',
           '비교 데이터는 [2026년 tool calling을 위한 최고의 로컬 모델](/ko/power-local-llm/best-local-models-tool-calling-2026)을 참조하십시오.',
@@ -4262,7 +4262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-ai-agents-with-mcp',
       inLanguage: 'ko',
       datePublished: '2026-05-24',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',

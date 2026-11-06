@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-09-01',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-03-01',
     designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
@@ -198,7 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gemma-4',
         title: 'Gemma 4 27B: The Default Pick for 24 GB Rigs',
         content:
-          '**Gemma 4 27B is the model most teams should install first.** Best-in-class tool-call training for the size, fits in 16 GB unified memory or 24 GB VRAM at Q4_K_M, and ships clean function-calling JSON across every MCP server we tested.',
+          '**Gemma 4 27B is the model most teams should install first.** Best-in-class tool-call training for the size, fits in 32 GB unified memory or 24 GB VRAM at Q4_K_M, and ships clean function-calling JSON across every MCP server we tested.',
         items: [
           '**Strengths:** strict adherence to tool schemas (low malformed-call rate), good general reasoning on tool selection, comfortable on 24 GB consumer GPUs and Apple M-series machines.',
           '**Failure mode:** conservative on chained tool calls. Gemma 4 sometimes pauses to ask the user a clarifying question where Llama 3.3 would have called the next tool. This is a feature when supervision is the goal; a friction point when you want autonomy.',
@@ -373,7 +373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What is the best small local model for tool calling?',
-            a: 'Gemma 4 27B is the best small pick that stays reliable: ~95% well-formed calls at ~16 GB VRAM (Q4_K_M), so it fits 24 GB of VRAM or 16 GB of unified memory. Qwen3-Coder 30B (~18 GB) is the pick for code-shaped tools. Below that, Llama 3.2 3B (4–8 GB VRAM) is fine for single-tool triage and classification but not for multi-step plans, and models under 7B emit malformed calls in our tests. On a 16 GB machine, start with Gemma 4 27B at Q4_K_M and move to a larger model only if chained calls fail.',
+            a: 'Gemma 4 27B is the best small pick that stays reliable: ~95% well-formed calls at ~16 GB VRAM (Q4_K_M), so it fits 24 GB of VRAM or 32 GB of unified memory. Qwen3-Coder 30B (~18 GB) is the pick for code-shaped tools. Below that, Llama 3.2 3B (4–8 GB VRAM) is fine for single-tool triage and classification but not for multi-step plans, and models under 7B emit malformed calls in our tests. On a 16 GB machine, start with Gemma 4 27B at Q4_K_M and move to a larger model only if chained calls fail.',
           },
           {
             q: 'How do I benchmark tool-calling accuracy for a local LLM?',
@@ -398,7 +398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-09-01',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-03-01',
     designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
@@ -588,7 +588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gemma-4',
         title: 'Gemma 4 27B: Die Standard-Wahl für 24-GB-Rigs',
         content:
-          '**Gemma 4 27B ist das Modell, das die meisten Teams zuerst installieren sollten.** Best-in-Class-Tool-Call-Training für die Größe, passt in 16 GB einheitlichen Speicher oder 24 GB VRAM bei Q4_K_M und liefert sauberes Function-Calling-JSON über jeden MCP-Server, den wir getestet haben.',
+          '**Gemma 4 27B ist das Modell, das die meisten Teams zuerst installieren sollten.** Best-in-Class-Tool-Call-Training für die Größe, passt in 32 GB einheitlichen Speicher oder 24 GB VRAM bei Q4_K_M und liefert sauberes Function-Calling-JSON über jeden MCP-Server, den wir getestet haben.',
         items: [
           '**Stärken:** strikte Einhaltung von Tool-Schemas (niedrige Malformed-Call-Rate), gutes allgemeines Reasoning bei der Tool-Auswahl, komfortabel auf 24-GB-Consumer-GPUs und Apple-M-Series-Maschinen.',
           '**Fehlermodus:** konservativ bei verketteten Tool Calls. Gemma 4 pausiert manchmal, um den Benutzer nach einer klärenden Frage zu fragen, wo Llama 3.3 den nächsten Tool aufgerufen hätte. Dies ist eine Funktion, wenn Aufsicht das Ziel ist; ein Reibungspunkt, wenn Sie Autonomie möchten.',
@@ -788,7 +788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was ist das beste kleine lokale Modell für Tool Calling?',
-            a: 'Gemma 4 27B ist die beste kleine Wahl, die zuverlässig bleibt: ca. 95 % wohlgeformte Aufrufe bei ~16 GB VRAM (Q4_K_M). Es passt in 24 GB VRAM oder 16 GB Unified Memory. Qwen3-Coder 30B (~18 GB) ist die Wahl für codenahe Tools. Darunter eignet sich Llama 3.2 3B (4–8 GB VRAM) für Triage und Klassifikation mit einem einzelnen Tool, nicht für mehrstufige Pläne; Modelle unter 7B erzeugen in unseren Tests fehlerhafte Aufrufe. Starten Sie auf einem 16-GB-Rechner mit Gemma 4 27B in Q4_K_M und wechseln Sie erst dann zu einem größeren Modell, wenn verkettete Aufrufe scheitern.',
+            a: 'Gemma 4 27B ist die beste kleine Wahl, die zuverlässig bleibt: ca. 95 % wohlgeformte Aufrufe bei ~16 GB VRAM (Q4_K_M). Es passt in 24 GB VRAM oder 32 GB Unified Memory. Qwen3-Coder 30B (~18 GB) ist die Wahl für codenahe Tools. Darunter eignet sich Llama 3.2 3B (4–8 GB VRAM) für Triage und Klassifikation mit einem einzelnen Tool, nicht für mehrstufige Pläne; Modelle unter 7B erzeugen in unseren Tests fehlerhafte Aufrufe. Starten Sie auf einem 16-GB-Rechner mit Gemma 4 27B in Q4_K_M und wechseln Sie erst dann zu einem größeren Modell, wenn verkettete Aufrufe scheitern.',
           },
           {
             q: 'Wie teste ich die Tool-Calling-Genauigkeit eines lokalen LLM?',
@@ -813,7 +813,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-09-01',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-03-01',
     designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
@@ -1002,7 +1002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gemma-4',
         title: 'Gemma 4 27B : Le choix par défaut pour 24 GB',
         content:
-          '**Gemma 4 27B est le modèle que la plupart des équipes devraient installer en premier.** Entraînement Tool Call au meilleur rapport qualité/prix pour la taille, tient dans 16 GB de mémoire unifiée ou 24 GB VRAM à Q4_K_M, et fournit du JSON d\'appel de fonction propre sur chaque serveur MCP que nous avons testé.',
+          '**Gemma 4 27B est le modèle que la plupart des équipes devraient installer en premier.** Entraînement Tool Call au meilleur rapport qualité/prix pour la taille, tient dans 32 GB de mémoire unifiée ou 24 GB VRAM à Q4_K_M, et fournit du JSON d\'appel de fonction propre sur chaque serveur MCP que nous avons testé.',
         items: [
           '**Points forts :** adhérence stricte aux schémas d\'outils (faible taux d\'appel mal formé), bon raisonnement général sur sélection d\'outil, confortable sur GPU grand public 24 GB et machines Apple M-series.',
           '**Mode de défaillance :** conservateur sur appels d\'outils chaînés. Gemma 4 s\'arrête parfois pour demander à l\'utilisateur une question clarifiante où Llama 3.3 aurait appelé l\'outil suivant. C\'est une fonctionnalité quand la supervision est l\'objectif ; un point de friction quand vous voulez l\'autonomie.',
@@ -1183,7 +1183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quel est le meilleur petit modèle local pour le tool calling ?',
-            a: 'Gemma 4 27B est le meilleur petit choix qui reste fiable : environ 95 % d\'appels bien formés pour ~16 GB de VRAM (Q4_K_M), soit 24 GB de VRAM ou 16 GB de mémoire unifiée. Qwen3-Coder 30B (~18 GB) convient aux outils orientés code. En dessous, Llama 3.2 3B (4–8 GB de VRAM) suffit pour le tri et la classification avec un seul outil, pas pour des plans en plusieurs étapes ; dans nos tests, les modèles de moins de 7B produisent des appels mal formés. Sur une machine de 16 GB, commencez par Gemma 4 27B en Q4_K_M et ne passez à un modèle plus grand que si les appels enchaînés échouent.',
+            a: 'Gemma 4 27B est le meilleur petit choix qui reste fiable : environ 95 % d\'appels bien formés pour ~16 GB de VRAM (Q4_K_M), soit 24 GB de VRAM ou 32 GB de mémoire unifiée. Qwen3-Coder 30B (~18 GB) convient aux outils orientés code. En dessous, Llama 3.2 3B (4–8 GB de VRAM) suffit pour le tri et la classification avec un seul outil, pas pour des plans en plusieurs étapes ; dans nos tests, les modèles de moins de 7B produisent des appels mal formés. Sur une machine de 16 GB, commencez par Gemma 4 27B en Q4_K_M et ne passez à un modèle plus grand que si les appels enchaînés échouent.',
           },
           {
             q: 'Comment mesurer la précision du tool calling d\'un LLM local ?',
@@ -1208,7 +1208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-09-01',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-03-01',
     designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
@@ -1397,7 +1397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gemma-4',
         title: 'Gemma 4 27B: 24GBリグの標準的な選択肢',
         content:
-          '**Gemma 4 27Bは、ほとんどのチームが最初にインストールする必要があるモデルです。** サイズのベストインクラスツール呼び出しトレーニング、16GBの統合メモリまたは24GB VRAMをQ4_K_Mで保持、そしてテストした各MCPサーバー上でクリーンなJSON関数呼び出しを配信します。',
+          '**Gemma 4 27Bは、ほとんどのチームが最初にインストールする必要があるモデルです。** サイズのベストインクラスツール呼び出しトレーニング、32GBの統合メモリまたは24GB VRAMをQ4_K_Mで保持、そしてテストした各MCPサーバー上でクリーンなJSON関数呼び出しを配信します。',
         items: [
           '強み: ツール スキーマ への厳密な準拠(低い不正形成呼び出しレート)、ツール選択で優れた一般的な推論、24GBコンシューマGPUとApple Mシリーズマシンで快適。',
           '障害モード: チェーンされたツール呼び出しで保守的。Gemma 4は、Llama 3.3が次のツールを呼び出したであろう場所で、ユーザーに明確化の質問を求めることがあります。',
@@ -1578,7 +1578,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ツール呼び出しに最適な小型ローカルモデルはどれですか？',
-            a: '信頼性を保てる小型モデルの最有力は Gemma 4 27B です。Q4_K_M で VRAM 約16 GB、整形式の呼び出し率は約95%で、24 GB の VRAM または 16 GB のユニファイドメモリに収まります。コード系ツールには Qwen3-Coder 30B（約18 GB）が向いています。それより小さい Llama 3.2 3B（VRAM 4〜8 GB）は、単一ツールのトリアージや分類には使えますが、複数ステップの計画には不十分です。今回のテストでは 7B 未満のモデルは不正な形式の呼び出しを出力しました。16 GB のマシンではまず Gemma 4 27B（Q4_K_M）を試し、連鎖呼び出しが失敗する場合のみ大きなモデルに移行してください。',
+            a: '信頼性を保てる小型モデルの最有力は Gemma 4 27B です。Q4_K_M で VRAM 約16 GB、整形式の呼び出し率は約95%で、24 GB の VRAM または 32 GB のユニファイドメモリに収まります。コード系ツールには Qwen3-Coder 30B（約18 GB）が向いています。それより小さい Llama 3.2 3B（VRAM 4〜8 GB）は、単一ツールのトリアージや分類には使えますが、複数ステップの計画には不十分です。今回のテストでは 7B 未満のモデルは不正な形式の呼び出しを出力しました。16 GB のマシンではまず Gemma 4 27B（Q4_K_M）を試し、連鎖呼び出しが失敗する場合のみ大きなモデルに移行してください。',
           },
           {
             q: 'ローカルLLMのツール呼び出し精度はどう測定しますか？',
@@ -1603,7 +1603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-09-01',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-03-01',
     designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
@@ -1792,7 +1792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gemma-4',
         title: 'Gemma 4 27B：24GB Rig的标准选择',
         content:
-          '**Gemma 4 27B是大多数团队应该首先安装的模型。** 该大小最佳的工具调用训练，在Q4_K_M处于16GB统一内存或24GB VRAM，并在我们测试过的每个MCP服务器上传送干净的函数调用JSON。',
+          '**Gemma 4 27B是大多数团队应该首先安装的模型。** 该大小最佳的工具调用训练，在Q4_K_M处于32GB统一内存或24GB VRAM，并在我们测试过的每个MCP服务器上传送干净的函数调用JSON。',
         items: [
           '**优点：** 严格遵守工具模式（低畸形调用率）、工具选择上的良好一般推理、24GB消费者GPU和Apple M系列机器上舒适。',
           '**故障模式：** 链式工具调用上保守。Gemma 4有时会在Llama 3.3会调用下一个工具的地方暂停要求用户澄清。监督是目标时这是功能；想要自主时是摩擦点。',
@@ -1973,7 +1973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '工具调用最佳的小型本地模型是哪个？',
-            a: 'Gemma 4 27B 是仍能保持可靠的最佳小型选择：Q4_K_M 下约占 16 GB VRAM，格式正确的调用率约 95%，可在 24 GB VRAM 或 16 GB 统一内存上运行。偏代码的工具可选 Qwen3-Coder 30B（约 18 GB）。更小的 Llama 3.2 3B（4–8 GB VRAM）适合单工具的分流和分类，不适合多步骤规划；在我们的测试中，7B 以下的模型会输出格式错误的调用。16 GB 的机器建议先用 Q4_K_M 的 Gemma 4 27B，只有链式调用失败时再换更大的模型。',
+            a: 'Gemma 4 27B 是仍能保持可靠的最佳小型选择：Q4_K_M 下约占 16 GB VRAM，格式正确的调用率约 95%，可在 24 GB VRAM 或 32 GB 统一内存上运行。偏代码的工具可选 Qwen3-Coder 30B（约 18 GB）。更小的 Llama 3.2 3B（4–8 GB VRAM）适合单工具的分流和分类，不适合多步骤规划；在我们的测试中，7B 以下的模型会输出格式错误的调用。16 GB 的机器建议先用 Q4_K_M 的 Gemma 4 27B，只有链式调用失败时再换更大的模型。',
           },
           {
             q: '如何测试本地 LLM 的工具调用准确率？',
@@ -1998,7 +1998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-09-01',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-03-01',
     designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
@@ -2187,7 +2187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gemma-4',
         title: 'Gemma 4 27B: La opción por defecto para rigs de 24 GB',
         content:
-          '**Gemma 4 27B es el modelo que la mayoría de los equipos debería instalar primero.** El mejor entrenamiento para tool calling de su tamaño, cabe en 16 GB de memoria unificada o 24 GB de VRAM con Q4_K_M, y emite JSON de function calling limpio en todos los servidores MCP que probamos.',
+          '**Gemma 4 27B es el modelo que la mayoría de los equipos debería instalar primero.** El mejor entrenamiento para tool calling de su tamaño, cabe en 32 GB de memoria unificada o 24 GB de VRAM con Q4_K_M, y emite JSON de function calling limpio en todos los servidores MCP que probamos.',
         items: [
           '**Fortalezas:** adherencia estricta a los esquemas de herramientas (baja tasa de llamadas malformadas), buena razonamiento general en la selección de herramientas, cómodo en GPUs de consumo de 24 GB y máquinas Apple M-series.',
           '**Modo de fallo:** conservador en llamadas encadenadas a herramientas. Gemma 4 a veces pausa para hacerle al usuario una pregunta aclaratoria donde Llama 3.3 habría llamado a la siguiente herramienta. Esto es una funcionalidad cuando el objetivo es la supervisión; un punto de fricción cuando se quiere autonomía.',
@@ -2368,7 +2368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuál es el mejor modelo local pequeño para tool calling?',
-            a: 'Gemma 4 27B es la mejor opción pequeña que sigue siendo fiable: ~95 % de llamadas bien formadas con ~16 GB de VRAM (Q4_K_M), así que cabe en 24 GB de VRAM o en 16 GB de memoria unificada. Qwen3-Coder 30B (~18 GB) es la elección para herramientas orientadas a código. Por debajo, Llama 3.2 3B (4–8 GB de VRAM) sirve para triaje y clasificación con una sola herramienta, no para planes de varios pasos; en nuestras pruebas, los modelos de menos de 7B generan llamadas mal formadas. En un equipo de 16 GB, empieza con Gemma 4 27B en Q4_K_M y pasa a un modelo mayor solo si fallan las llamadas encadenadas.',
+            a: 'Gemma 4 27B es la mejor opción pequeña que sigue siendo fiable: ~95 % de llamadas bien formadas con ~16 GB de VRAM (Q4_K_M), así que cabe en 24 GB de VRAM o en 32 GB de memoria unificada. Qwen3-Coder 30B (~18 GB) es la elección para herramientas orientadas a código. Por debajo, Llama 3.2 3B (4–8 GB de VRAM) sirve para triaje y clasificación con una sola herramienta, no para planes de varios pasos; en nuestras pruebas, los modelos de menos de 7B generan llamadas mal formadas. En un equipo de 16 GB, empieza con Gemma 4 27B en Q4_K_M y pasa a un modelo mayor solo si fallan las llamadas encadenadas.',
           },
           {
             q: '¿Cómo mido la precisión de tool calling de un LLM local?',
@@ -2393,7 +2393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-09-01',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-03-01',
     designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
@@ -2582,7 +2582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gemma-4',
         title: 'Gemma 4 27B: A opção padrão para rigs de 24 GB',
         content:
-          '**O Gemma 4 27B é o modelo que a maioria das equipes deveria instalar primeiro.** O melhor treinamento para tool calling do seu tamanho, cabe em 16 GB de memória unificada ou 24 GB de VRAM com Q4_K_M, e emite JSON de function calling limpo em todos os servidores MCP que testamos.',
+          '**O Gemma 4 27B é o modelo que a maioria das equipes deveria instalar primeiro.** O melhor treinamento para tool calling do seu tamanho, cabe em 32 GB de memória unificada ou 24 GB de VRAM com Q4_K_M, e emite JSON de function calling limpo em todos os servidores MCP que testamos.',
         items: [
           '**Pontos fortes:** aderência estrita aos esquemas de ferramentas (baixa taxa de chamadas malformadas), bom raciocínio geral na seleção de ferramentas, confortável em GPUs de consumo de 24 GB e máquinas Apple M-series.',
           '**Modo de falha:** conservador em chamadas encadeadas a ferramentas. O Gemma 4 às vezes pausa para fazer ao usuário uma pergunta esclarecedora onde o Llama 3.3 teria chamado a próxima ferramenta. Isso é um recurso quando o objetivo é a supervisão; um ponto de atrito quando se quer autonomia.',
@@ -2763,7 +2763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual é o melhor modelo local pequeno para tool calling?',
-            a: 'O Gemma 4 27B é a melhor escolha pequena que continua confiável: ~95% de chamadas bem formadas com ~16 GB de VRAM (Q4_K_M), então cabe em 24 GB de VRAM ou em 16 GB de memória unificada. O Qwen3-Coder 30B (~18 GB) é a escolha para ferramentas voltadas a código. Abaixo disso, o Llama 3.2 3B (4–8 GB de VRAM) serve para triagem e classificação com uma única ferramenta, não para planos de vários passos; nos nossos testes, modelos abaixo de 7B geram chamadas malformadas. Em uma máquina de 16 GB, comece com o Gemma 4 27B em Q4_K_M e só passe para um modelo maior se as chamadas encadeadas falharem.',
+            a: 'O Gemma 4 27B é a melhor escolha pequena que continua confiável: ~95% de chamadas bem formadas com ~16 GB de VRAM (Q4_K_M), então cabe em 24 GB de VRAM ou em 32 GB de memória unificada. O Qwen3-Coder 30B (~18 GB) é a escolha para ferramentas voltadas a código. Abaixo disso, o Llama 3.2 3B (4–8 GB de VRAM) serve para triagem e classificação com uma única ferramenta, não para planos de vários passos; nos nossos testes, modelos abaixo de 7B geram chamadas malformadas. Em uma máquina de 16 GB, comece com o Gemma 4 27B em Q4_K_M e só passe para um modelo maior se as chamadas encadeadas falharem.',
           },
           {
             q: 'Como medir a precisão de tool calling de um LLM local?',
@@ -2789,7 +2789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-09-01',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-03-01',
     designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
@@ -2978,7 +2978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gemma-4',
         title: 'Gemma 4 27B: الخيار الافتراضي لأجهزة 24 GB',
         content:
-          '**Gemma 4 27B هو النموذج الذي ينبغي لمعظم الفرق تثبيته أولاً.** أفضل تدريب على استدعاء الأدوات في فئته، يتسع في 16 GB من الذاكرة الموحدة أو 24 GB من VRAM مع Q4_K_M، ويُصدر JSON نظيفاً لاستدعاء الوظائف على جميع خوادم MCP التي اختبرناها.',
+          '**Gemma 4 27B هو النموذج الذي ينبغي لمعظم الفرق تثبيته أولاً.** أفضل تدريب على استدعاء الأدوات في فئته، يتسع في 32 GB من الذاكرة الموحدة أو 24 GB من VRAM مع Q4_K_M، ويُصدر JSON نظيفاً لاستدعاء الوظائف على جميع خوادم MCP التي اختبرناها.',
         items: [
           '**نقاط القوة:** التزام صارم بمخططات الأدوات (معدل استدعاءات مشوّهة منخفض)، استدلال عام جيد في اختيار الأداة، مريح على GPUs الاستهلاكية بسعة 24 GB وأجهزة Apple M-series.',
           '**وضع الفشل:** محافظ في الاستدعاءات المتسلسلة للأدوات. أحياناً يتوقف Gemma 4 لطرح سؤال توضيحي على المستخدم حيث كان Llama 3.3 سيستدعي الأداة التالية. هذا ميزة حين الهدف هو الإشراف؛ نقطة احتكاك حين تريد الاستقلالية.',
@@ -3159,7 +3159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما أفضل نموذج محلي صغير لاستدعاء الأدوات؟',
-            a: 'يُعد Gemma 4 27B أفضل خيار صغير يحافظ على الموثوقية: نحو 95% من الاستدعاءات سليمة البنية مع نحو 16 GB من VRAM (Q4_K_M)، فيعمل ضمن 24 GB من VRAM أو 16 GB من الذاكرة الموحدة. ويناسب Qwen3-Coder 30B (نحو 18 GB) الأدوات المرتبطة بالشيفرة. أما Llama 3.2 3B (من 4 إلى 8 GB من VRAM) فيكفي لفرز المهام وتصنيفها بأداة واحدة، لا للخطط متعددة الخطوات؛ وفي اختباراتنا تُنتج النماذج الأصغر من 7B استدعاءات مشوّهة. على جهاز بسعة 16 GB ابدأ بـ Gemma 4 27B بصيغة Q4_K_M، ولا تنتقل إلى نموذج أكبر إلا إذا فشلت الاستدعاءات المتسلسلة.',
+            a: 'يُعد Gemma 4 27B أفضل خيار صغير يحافظ على الموثوقية: نحو 95% من الاستدعاءات سليمة البنية مع نحو 16 GB من VRAM (Q4_K_M)، فيعمل ضمن 24 GB من VRAM أو 32 GB من الذاكرة الموحدة. ويناسب Qwen3-Coder 30B (نحو 18 GB) الأدوات المرتبطة بالشيفرة. أما Llama 3.2 3B (من 4 إلى 8 GB من VRAM) فيكفي لفرز المهام وتصنيفها بأداة واحدة، لا للخطط متعددة الخطوات؛ وفي اختباراتنا تُنتج النماذج الأصغر من 7B استدعاءات مشوّهة. على جهاز بسعة 16 GB ابدأ بـ Gemma 4 27B بصيغة Q4_K_M، ولا تنتقل إلى نموذج أكبر إلا إذا فشلت الاستدعاءات المتسلسلة.',
           },
           {
             q: 'كيف أقيس دقة استدعاء الأدوات في نموذج LLM محلي؟',
@@ -3184,7 +3184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-09-01',
+    dateModified: '2026-11-06',
     next_refresh_due: '2027-03-01',
     designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
@@ -3373,7 +3373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gemma-4',
         title: 'Gemma 4 27B: 24GB 환경의 기본 선택',
         content:
-          '**Gemma 4 27B는 대부분의 팀이 먼저 설치해야 할 모델입니다.** 해당 크기에서 최고의 tool calling 훈련, Q4_K_M으로 16GB 통합 메모리 또는 24GB VRAM에 맞으며, 테스트한 모든 MCP 서버에서 깨끗한 function calling JSON을 발행합니다.',
+          '**Gemma 4 27B는 대부분의 팀이 먼저 설치해야 할 모델입니다.** 해당 크기에서 최고의 tool calling 훈련, Q4_K_M으로 32GB 통합 메모리 또는 24GB VRAM에 맞으며, 테스트한 모든 MCP 서버에서 깨끗한 function calling JSON을 발행합니다.',
         items: [
           '**강점:** 도구 스키마에 대한 엄격한 준수(낮은 오형성 호출 비율), 도구 선택에서 좋은 일반적 추론, 24GB 소비자 GPU와 Apple M-series 머신에서 편안함.',
           '**실패 모드:** 체인 도구 호출에서 보수적. Gemma 4는 Llama 3.3이 다음 도구를 호출했을 곳에서 때때로 사용자에게 명확화 질문을 하기 위해 멈춥니다. 목표가 감독이면 기능이고; 자율성을 원할 때는 마찰점입니다.',
@@ -3554,7 +3554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '가장 좋은 소형 로컬 Tool Calling 모델은 무엇입니까?',
-            a: '신뢰성을 유지하는 소형 모델 중에서는 Gemma 4 27B가 가장 좋습니다. Q4_K_M 기준 VRAM 약 16 GB에서 올바른 형식의 호출 비율이 약 95%이며, 24 GB VRAM 또는 16 GB 통합 메모리에 들어갑니다. 코드 중심 도구에는 Qwen3-Coder 30B(약 18 GB)가 적합합니다. 그보다 작은 Llama 3.2 3B(VRAM 4~8 GB)는 단일 도구 분류·트리아지에는 쓸 수 있지만 다단계 계획에는 부족하며, 저희 테스트에서 7B 미만 모델은 잘못된 형식의 호출을 생성했습니다. 16 GB 머신에서는 Gemma 4 27B(Q4_K_M)로 시작하고, 연쇄 호출이 실패할 때만 더 큰 모델로 옮기십시오.',
+            a: '신뢰성을 유지하는 소형 모델 중에서는 Gemma 4 27B가 가장 좋습니다. Q4_K_M 기준 VRAM 약 16 GB에서 올바른 형식의 호출 비율이 약 95%이며, 24 GB VRAM 또는 32 GB 통합 메모리에 들어갑니다. 코드 중심 도구에는 Qwen3-Coder 30B(약 18 GB)가 적합합니다. 그보다 작은 Llama 3.2 3B(VRAM 4~8 GB)는 단일 도구 분류·트리아지에는 쓸 수 있지만 다단계 계획에는 부족하며, 저희 테스트에서 7B 미만 모델은 잘못된 형식의 호출을 생성했습니다. 16 GB 머신에서는 Gemma 4 27B(Q4_K_M)로 시작하고, 연쇄 호출이 실패할 때만 더 큰 모델로 옮기십시오.',
           },
           {
             q: '로컬 LLM의 Tool Calling 정확도는 어떻게 벤치마크합니까?',
