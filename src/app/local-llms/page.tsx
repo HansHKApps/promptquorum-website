@@ -9,7 +9,7 @@ import { buildLLMHubData } from '@/lib/local-llms/hub-data'
 import { LocalLlmsHubTemplate, usesLocalLlmsHubTemplate } from '@/lib/local-llms/hub-template'
 
 export const dynamic = 'force-static'
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 export async function generateMetadata(): Promise<Metadata> {
   const selectedLang = 'en'

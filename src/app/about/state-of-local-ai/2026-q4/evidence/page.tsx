@@ -3,7 +3,7 @@ import { getIssue, issuePath, evidencePath, loadFragment, HUB_PATH, SERIES, SITE
 import { Breadcrumb, JsonLd, Hero, Lede, crumbSchema, pageMetadata, hubCrumbs } from '@/components/state-of-local-ai/shared'
 
 export const dynamic = 'force-static'
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 const issue = getIssue('2026-q4')!
 const TITLE = `Evidence file: ${issue.title}`

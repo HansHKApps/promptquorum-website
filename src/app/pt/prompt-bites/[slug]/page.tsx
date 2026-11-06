@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildArticleMetadata, buildArticlePageElement } from '@/lib/prompt-bites/page-helpers'
 
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 export function generateStaticParams() {
   return []

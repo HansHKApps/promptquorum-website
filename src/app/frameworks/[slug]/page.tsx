@@ -9,7 +9,7 @@ import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
 
 export const dynamic = 'force-static'
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 export function generateStaticParams() {
   return FRAMEWORK_SLUGS.map(slug => ({ slug }))

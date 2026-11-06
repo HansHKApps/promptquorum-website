@@ -4,7 +4,7 @@ import {
   buildArticlePageElement,
 } from '@/lib/blog/page-helpers'
 
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 interface PageProps {
   params: Promise<{ slug: string }>

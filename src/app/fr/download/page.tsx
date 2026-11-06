@@ -6,7 +6,7 @@ import { DownloadClient } from '@/components/DownloadClient'
 import type { Lang } from '@/hooks/useLang'
 
 export const dynamic = 'force-static'
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 const LANG: Lang = 'fr'
 

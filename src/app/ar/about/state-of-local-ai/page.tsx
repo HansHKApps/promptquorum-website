@@ -5,7 +5,7 @@ import { pageMetadata } from '@/components/state-of-local-ai/shared'
 import { HubView } from '@/components/state-of-local-ai/HubView'
 
 export const dynamic = 'force-static'
-export const revalidate = 86400
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 const LANG = 'ar' as const
 

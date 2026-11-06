@@ -3,7 +3,7 @@ import { buildHubMetadata, buildHubPageElement } from '@/lib/balcony-solar/page-
 
 // Enable caching: this route doesn't fetch dynamic data
 export const dynamic = 'force-static'
-export const revalidate = 86400 // 24 hours
+export const revalidate = false // content only changes on deploy; no timed regeneration
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildHubMetadata('en')
