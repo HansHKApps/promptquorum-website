@@ -39,9 +39,24 @@ export async function POST(req: NextRequest) {
     return new NextResponse(null, { status: 400 })
   }
 
+  const lang = typeof b.lang === 'string' && LANGS.has(b.lang) ? b.lang : 'en'
+
+  // "Write an email" pressed in the low-rating pop-up: anonymous counter only (no rating, no text, no owner mail).
+  if (b.event === 'mail') {
+    try {
+      const dayKey = `askhans:day:${new Date().toISOString().slice(0, 10)}`
+      const pipe = redis.pipeline()
+      pipe.hincrby(dayKey, 'fb_mail', 1)
+      pipe.expire(dayKey, DAY_TTL_S)
+      await pipe.exec()
+    } catch (err) {
+      console.error('[askhans] mail counter failed', err instanceof Error ? err.message : err)
+    }
+    return NextResponse.json({ success: true })
+  }
+
   const rating = typeof b.rating === 'number' && Number.isInteger(b.rating) && b.rating >= 1 && b.rating <= 5 ? b.rating : null
   if (!rating) return new NextResponse(null, { status: 400 })
-  const lang = typeof b.lang === 'string' && LANGS.has(b.lang) ? b.lang : 'en'
 
   try {
     const dayKey = `askhans:day:${new Date().toISOString().slice(0, 10)}`

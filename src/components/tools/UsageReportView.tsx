@@ -9,7 +9,7 @@ import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 import { CATEGORY_SUB_LABEL } from '@/lib/power-local-llm/apps/categories'
 import type { CategorySubKey } from '@/lib/power-local-llm/apps/categories'
 import { ASK_HANS_CATEGORIES } from '@/lib/askhans/categories'
-import type { ReportRow, ReportWindow, UsageReportBase } from '@/lib/usage/report-types'
+import type { FeedbackStats, ReportRow, ReportWindow, UsageReportBase } from '@/lib/usage/report-types'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { HUB_TONES } from '@/components/hub-template/palette'
 import { t as tMcp } from './mcp-stats-i18n'
@@ -84,6 +84,53 @@ function BreakdownTable({ heading, firstCol, rows, label, mono, lang }: { headin
   )
 }
 
+function RatingsCard({ feedback, lang }: { feedback: FeedbackStats; lang: Language }) {
+  const loc = toOutputLocale(lang)
+  const fmt = (n: number) => n.toLocaleString(loc)
+  const avg = (sum: number, count: number) => (count ? (sum / count).toLocaleString(loc, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : '–')
+  const tone = HUB_TONES.violet
+  const rows: { label: string; win: (w: ReportWindow) => string; all: string }[] = [
+    { label: tAsk('ratingCount', lang), win: (w) => fmt(feedback.count[w]), all: fmt(feedback.all.count) },
+    { label: tAsk('ratingAvg', lang), win: (w) => avg(feedback.sum[w], feedback.count[w]), all: avg(feedback.all.sum, feedback.all.count) },
+    { label: tAsk('ratingLow', lang), win: (w) => fmt(feedback.low[w]), all: fmt(feedback.all.low) },
+    { label: tAsk('ratingMail', lang), win: (w) => fmt(feedback.mail[w]), all: fmt(feedback.all.mail) },
+  ]
+  return (
+    <div className={`mt-4 min-w-0 rounded-[14px] border bg-white ${tone.edge}`}>
+      <h3 className="px-4 pb-1 pt-4 text-[15px] font-bold">{tAsk('ratingHeading', lang)}</h3>
+      {feedback.all.count === 0 ? (
+        <p className="px-4 pb-4 pt-1 text-sm text-text-muted">{tAsk('ratingNone', lang)}</p>
+      ) : (
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className={`${tone.tint} ${tone.ink}`}>
+                <th scope="col" className="px-4 py-2"><span className="sr-only">{tAsk('ratingHeading', lang)}</span></th>
+                {WINDOWS.map((w) => (
+                  <th key={w.key} scope="col" className="px-3 py-2 text-end font-bold">{w.label(lang)}</th>
+                ))}
+                <th scope="col" className="px-3 py-2 text-end font-bold">{tAsk('colAllTime', lang)}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((r) => (
+                <tr key={r.label} className="border-t border-border">
+                  <th scope="row" className="px-4 py-2 text-start font-semibold">{r.label}</th>
+                  {WINDOWS.map((w) => (
+                    <td key={w.key} className="px-3 py-2 text-end tabular-nums">{r.win(w.key)}</td>
+                  ))}
+                  <td className="px-3 py-2 text-end font-bold tabular-nums">{r.all}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+      <p className="border-t border-border px-4 py-2.5 text-xs leading-relaxed text-text-secondary">{tAsk('ratingNote', lang)}</p>
+    </div>
+  )
+}
+
 export type UsageReportKind = 'askhans' | 'mcp'
 
 const HEADLINE_LABEL = { answers: 'statAnswers', opens: 'statOpens', calls: 'statCalls', starts: 'statStarts' } as const
@@ -146,6 +193,8 @@ export function UsageReportView({ lang, report, kind }: { lang: Language; report
           <div className="mt-2 text-xs font-medium text-text-secondary">{tAsk(mcp ? 'mcpChartLabel' : 'chartLabel', lang)}</div>
         </div>
       </div>
+
+      {!mcp && report.feedback && <RatingsCard feedback={report.feedback} lang={lang} />}
 
       <div className="mt-4 grid gap-4 lg:grid-cols-2">
         {!mcp && <BreakdownTable heading={tAsk('topicsHeading', lang)} firstCol={tAsk('topicsHeading', lang)} rows={report.categories} label={topicLabel} lang={lang} />}

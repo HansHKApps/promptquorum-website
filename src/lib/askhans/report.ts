@@ -8,7 +8,7 @@
 import { redis } from '@/lib/redis'
 import { getAskHansTotals } from './totals'
 import { REPORT_DAYS, lastNDaysUtc, rankRows, windowsOf, zeroCounts } from '@/lib/usage/report-types'
-import type { ReportRow, ReportWindow, UsageReportBase, WindowCounts } from '@/lib/usage/report-types'
+import type { FeedbackStats, ReportRow, ReportWindow, UsageReportBase, WindowCounts } from '@/lib/usage/report-types'
 
 export { REPORT_DAYS }
 export type { ReportWindow, WindowCounts, ReportRow }
@@ -36,7 +36,34 @@ function emptyReport(dates: string[]): AskHansReport {
     dirCats: [],
     tools: [],
     langs: [],
+    feedback: { count: zeroCounts(), sum: zeroCounts(), low: zeroCounts(), mail: zeroCounts(), all: { count: 0, sum: 0, low: 0, mail: 0 } },
   }
+}
+
+const RATING_KEEP_DAYS = 400 // matches the day-key TTL in /api/ask/feedback
+
+const num = (v: unknown) => Number(v ?? 0) || 0
+const lowOf = (h: Record<string, string | number>) => num(h['rating:1']) + num(h['rating:2']) + num(h['rating:3'])
+
+/** Lifetime rating counters: sum the day hashes older than the report window (up to the day-key TTL, from the day counting began). */
+async function olderRatings(since: string | null, firstWindowDay: string): Promise<{ count: number; sum: number; low: number; mail: number }> {
+  const out = { count: 0, sum: 0, low: 0, mail: 0 }
+  if (!since || since >= firstWindowDay) return out
+  const start = Date.parse(`${since}T00:00:00Z`)
+  const end = Date.parse(`${firstWindowDay}T00:00:00Z`)
+  const n = Math.min(RATING_KEEP_DAYS, Math.round((end - start) / 86_400_000))
+  if (n <= 0) return out
+  const pipe = redis.pipeline()
+  for (let i = 1; i <= n; i++) pipe.hmget(`askhans:day:${new Date(end - i * 86_400_000).toISOString().slice(0, 10)}`, 'rating_count', 'rating_sum', 'rating:1', 'rating:2', 'rating:3', 'fb_mail')
+  const rows = await pipe.exec<(Record<string, string | number> | null)[]>()
+  for (const r of rows) {
+    if (!r) continue
+    out.count += num(r.rating_count)
+    out.sum += num(r.rating_sum)
+    out.low += num(r['rating:1']) + num(r['rating:2']) + num(r['rating:3'])
+    out.mail += num(r.fb_mail)
+  }
+  return out
 }
 
 export async function getAskHansReport(): Promise<AskHansReport> {
@@ -53,6 +80,7 @@ export async function getAskHansReport(): Promise<AskHansReport> {
     const opensWin = zeroCounts()
     const sampled = zeroCounts()
     const sampledOf = zeroCounts()
+    const fb: FeedbackStats = { count: zeroCounts(), sum: zeroCounts(), low: zeroCounts(), mail: zeroCounts(), all: { count: 0, sum: 0, low: 0, mail: 0 } }
 
     const prefixes = { 'q:': 'categories', 'app:': 'apps', 'dircat:': 'dirCats', 'tool:': 'tools', 'lang:': 'langs' } as const
     const rows: Record<string, Map<string, WindowCounts>> = { categories: new Map(), apps: new Map(), dirCats: new Map(), tools: new Map(), langs: new Map() }
@@ -67,7 +95,15 @@ export async function getAskHansReport(): Promise<AskHansReport> {
       const opens = Number(day.total_opens ?? 0) || 0
       const answers = Number(day.total_answers ?? 0) || 0
       report.days[i].count = answers
+      const rc = num(day.rating_count)
+      const rs = num(day.rating_sum)
+      const rl = lowOf(day)
+      const rm = num(day.fb_mail)
       for (const w of wins) {
+        fb.count[w] += rc
+        fb.sum[w] += rs
+        fb.low[w] += rl
+        fb.mail[w] += rm
         opensWin[w] += opens
         answersWin[w] += answers
       }
@@ -92,6 +128,9 @@ export async function getAskHansReport(): Promise<AskHansReport> {
       { key: 'answers', win: answersWin, all: totals.answers },
       { key: 'opens', win: opensWin, all: totals.opens },
     ]
+    const older = await olderRatings(totals.since, dates[0])
+    fb.all = { count: fb.count.last30 + older.count, sum: fb.sum.last30 + older.sum, low: fb.low.last30 + older.low, mail: fb.mail.last30 + older.mail }
+    report.feedback = fb
     report.sampled = sampled
     report.sampledOf = sampledOf
     for (const bucket of Object.values(prefixes)) report[bucket] = rankRows(rows[bucket])
