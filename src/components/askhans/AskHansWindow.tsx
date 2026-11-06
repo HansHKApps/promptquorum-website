@@ -74,15 +74,17 @@ export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggle
     return () => window.removeEventListener('resize', on)
   }, [])
 
+  const floating = isDesktop && !maximized
+
+  // Full screen (phone / maximized) blocks the page behind it; the floating desktop window leaves the page usable.
   useEffect(() => {
+    if (floating) return
     const prev = document.body.style.overflow
     document.body.style.overflow = 'hidden'
     return () => {
       document.body.style.overflow = prev
     }
-  }, [])
-
-  const floating = isDesktop && !maximized
+  }, [floating])
   const effective: Rect = floating ? clampRect(rect ?? defaultRect(vp.w, vp.h), vp.w, vp.h) : { x: 0, y: 0, w: vp.w, h: vp.h }
 
   // Document-level so Esc and the Tab trap also work when a click on plain text left focus on <body>.
@@ -92,11 +94,14 @@ export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggle
   })
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
+      // Floating window = non-modal: Esc and the Tab trap only apply while focus is inside it.
+      if (floating && !ref.current?.contains(document.activeElement)) return
       if (e.key === 'Escape') {
         e.preventDefault()
         onCloseRef.current()
         return
       }
+      if (floating) return
       if (e.key !== 'Tab' || !ref.current) return
       const items = Array.from(ref.current.querySelectorAll<HTMLElement>(FOCUSABLE)).filter((el) => el.offsetParent !== null)
       if (!items.length) return
@@ -116,7 +121,7 @@ export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggle
     }
     document.addEventListener('keydown', onKeyDown)
     return () => document.removeEventListener('keydown', onKeyDown)
-  }, [])
+  }, [floating])
 
   const startResize = (edge: Edge) => (e: ReactPointerEvent<HTMLDivElement>) => {
     e.preventDefault()
@@ -152,20 +157,45 @@ export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggle
     target.addEventListener('pointercancel', up)
   }
 
+  // Drag by the header (not by its buttons). The window stays fully inside the viewport.
+  const startDrag = (e: ReactPointerEvent<HTMLElement>) => {
+    if (!floating || e.button !== 0 || (e.target as HTMLElement).closest('button,a,input,textarea')) return
+    e.preventDefault()
+    const target = e.currentTarget
+    target.setPointerCapture(e.pointerId)
+    const startX = e.clientX
+    const startY = e.clientY
+    const start = effective
+    const move = (ev: PointerEvent) => {
+      onRectChange(clampRect({ ...start, x: start.x + ev.clientX - startX, y: start.y + ev.clientY - startY }, vp.w, vp.h))
+    }
+    const up = () => {
+      target.removeEventListener('pointermove', move)
+      target.removeEventListener('pointerup', up)
+      target.removeEventListener('pointercancel', up)
+    }
+    target.addEventListener('pointermove', move)
+    target.addEventListener('pointerup', up)
+    target.addEventListener('pointercancel', up)
+  }
+
   return createPortal(
     <>
-      <div className="fixed inset-0 z-[99] bg-black/30" aria-hidden="true" />
+      {!floating && <div className="fixed inset-0 z-[99] bg-black/30" aria-hidden="true" />}
       <div
         ref={ref}
         role="dialog"
-        aria-modal="true"
+        aria-modal={!floating}
         aria-labelledby={titleId}
         dir={tx.dir}
         tabIndex={-1}
         className={`fixed z-[100] flex flex-col overflow-hidden bg-white text-foreground shadow-2xl outline-none ${floating ? 'rounded-xl border border-border' : ''}`}
         style={floating ? { left: effective.x, top: effective.y, width: effective.w, height: effective.h } : { left: 0, top: 0, width: '100vw', height: '100dvh' }}
       >
-        <header className="flex flex-shrink-0 items-center gap-2 border-b border-border bg-white px-3 py-2">
+        <header
+          onPointerDown={startDrag}
+          className={`flex flex-shrink-0 items-center gap-2 border-b border-border bg-white px-3 py-2 ${floating ? 'cursor-move touch-none select-none' : ''}`}
+        >
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-secondary" aria-hidden="true">
             <Logo size={22} role="presentation" aria-hidden="true" />
           </span>
