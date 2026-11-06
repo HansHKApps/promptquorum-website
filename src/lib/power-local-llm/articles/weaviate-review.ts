@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
     publishDate: '2026-09-19',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     educationalLevel: 'Intermediate',
     audience: 'Developers and ML engineers choosing a self-hostable vector database for RAG, semantic search, or agentic AI applications',
     primaryTerm: 'Weaviate',
@@ -127,7 +127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Run a fully local RAG pipeline with Ollama',
-            content: 'Start Weaviate via Docker Compose, configure the `text2vec-ollama` module to point at a local Ollama instance for embeddings, and connect a local LLM through Ollama for generative search. Every request — embedding, storage, retrieval, and generation — stays on your own machine or network, with no external API calls.',
+            content: 'Start Weaviate via Docker Compose, configure the `text2vec-ollama` module to point at a local Ollama instance for embeddings, and connect a local LLM through Ollama for generative search. Every request — embedding, storage, retrieval, and generation — stays on your own machine or network, with no calls to external model APIs (Weaviate\'s default usage telemetry is separate and can be disabled with DISABLE_TELEMETRY=true).',
           },
           {
             title: 'Combine keyword and semantic search for product or document search',
@@ -251,7 +251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'What is Weaviate?', a: 'Weaviate ([weaviate.io](https://weaviate.io), source at [github.com/weaviate/weaviate](https://github.com/weaviate/weaviate)) is an open-core vector database that stores both structured objects and their vector embeddings, supporting vector search, BM25 keyword search, hybrid search, and built-in generative search (RAG).' },
           { q: 'Is Weaviate free?', a: 'The BSD-3-Clause-licensed core is free to self-host. A defined set of features inside the repository\'s `wl/` directory require a paid Weaviate License key to activate. Weaviate Cloud, the managed hosting option, is a separate usage-based service with a free tier.' },
           { q: 'Is Weaviate open source? What license does it use?', a: 'Partially. Weaviate\'s core is licensed under [BSD-3-Clause](https://github.com/weaviate/weaviate/blob/main/LICENSE-BSD). A defined set of features scoped to the `wl/` directory in the repository are covered by a separate, proprietary [Weaviate License](https://github.com/weaviate/weaviate/blob/main/LICENSE) that only activates with a paid license key. GitHub\'s repository metadata classifies the overall license as "Other" because of this split, rather than a single OSI-approved license covering the entire codebase.' },
-          { q: 'Can Weaviate run fully offline or air-gapped?', a: 'Yes, for the core database itself — it runs entirely on your own infrastructure with no external calls required. If you configure a vectorizer or generative-search module for a cloud provider (OpenAI, Cohere, and others), those specific calls need internet access; point those modules at a locally hosted engine like Ollama for a fully offline pipeline.' },
+          { q: 'Can Weaviate run fully offline or air-gapped?', a: 'Yes, for the core database itself — it runs entirely on your own infrastructure needing no external services for storage and queries. Weaviate sends usage telemetry by default, so set DISABLE_TELEMETRY=true for an air-gapped setup. If you configure a vectorizer or generative-search module for a cloud provider (OpenAI, Cohere, and others), those specific calls need internet access; point those modules at a locally hosted engine like Ollama for a fully offline pipeline.' },
           { q: 'Does Weaviate support hybrid search?', a: 'Yes. Weaviate combines vector similarity search with BM25 keyword search in a single hybrid query, with a tunable alpha parameter to weight one mode over the other.' },
           { q: 'Does Weaviate have a GraphQL API?', a: 'Yes. Weaviate exposes REST, GraphQL, and gRPC APIs, with official client libraries for Python, TypeScript/JavaScript, Go, Java, and C#/.NET.' },
           { q: 'How do I install Weaviate?', a: 'The fastest path is a single Docker command (`docker run -p 8080:8080 -p 50051:50051 cr.weaviate.io/semitechnologies/weaviate:<version>`). For production, use Docker Compose or the official Kubernetes/Helm chart; for local prototyping in Python, use the embedded client. See the install table above for details.' },
@@ -292,7 +292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
     publishDate: '2026-09-19',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler und ML-Engineers, die eine selbst hostbare Vektordatenbank für RAG, semantische Suche oder agentenbasierte KI-Anwendungen suchen',
     primaryTerm: 'Weaviate',
@@ -411,7 +411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Eine vollständig lokale RAG-Pipeline mit Ollama betreiben',
-            content: 'Weaviate über Docker Compose starten, das Modul `text2vec-ollama` so konfigurieren, dass es auf eine lokale Ollama-Instanz für Embeddings zeigt, und ein lokales LLM über Ollama für generative Suche anbinden. Jede Anfrage — Embedding, Speicherung, Abruf und Generierung — bleibt auf der eigenen Maschine oder im eigenen Netzwerk, ohne externe API-Aufrufe.',
+            content: 'Weaviate über Docker Compose starten, das Modul `text2vec-ollama` so konfigurieren, dass es auf eine lokale Ollama-Instanz für Embeddings zeigt, und ein lokales LLM über Ollama für generative Suche anbinden. Jede Anfrage — Embedding, Speicherung, Abruf und Generierung — bleibt auf der eigenen Maschine oder im eigenen Netzwerk, ohne Aufrufe externer Modell-APIs (die standardmäßige Nutzungstelemetrie von Weaviate ist davon getrennt und lässt sich mit DISABLE_TELEMETRY=true abschalten).',
           },
           {
             title: 'Keyword- und semantische Suche für Produkt- oder Dokumentensuche kombinieren',
@@ -535,7 +535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Was ist Weaviate?', a: 'Weaviate ([weaviate.io](https://weaviate.io), Quellcode unter [github.com/weaviate/weaviate](https://github.com/weaviate/weaviate)) ist eine Open-Core-Vektordatenbank, die sowohl strukturierte Objekte als auch ihre Vektor-Embeddings speichert und Vektorsuche, BM25-Keyword-Suche, Hybrid-Suche sowie eingebaute generative Suche (RAG) unterstützt.' },
           { q: 'Ist Weaviate kostenlos?', a: 'Der unter BSD-3-Clause lizenzierte Kern ist zum Self-Hosting kostenlos. Ein definierter Satz von Funktionen im `wl/`-Verzeichnis des Repositories erfordert zur Aktivierung einen kostenpflichtigen Weaviate-License-Schlüssel. Weaviate Cloud, die Managed-Hosting-Option, ist ein separater, nutzungsbasierter Service mit kostenloser Stufe.' },
           { q: 'Ist Weaviate Open Source? Welche Lizenz kommt zum Einsatz?', a: 'Teilweise. Weaviates Kern ist unter [BSD-3-Clause](https://github.com/weaviate/weaviate/blob/main/LICENSE-BSD) lizenziert. Ein definierter Satz von Funktionen im `wl/`-Verzeichnis des Repositories fällt unter eine separate, proprietäre [Weaviate License](https://github.com/weaviate/weaviate/blob/main/LICENSE), die erst mit einem kostenpflichtigen Lizenzschlüssel aktiviert wird. GitHubs Repository-Metadaten stufen die Gesamtlizenz deshalb als "Other" ein, statt als eine einzige, OSI-anerkannte Lizenz für die gesamte Codebasis.' },
-          { q: 'Kann Weaviate vollständig offline oder air-gapped laufen?', a: 'Ja, für die Kerndatenbank selbst — sie läuft vollständig auf der eigenen Infrastruktur ohne erforderliche externe Aufrufe. Wird ein Vectorizer- oder Generative-Search-Modul für einen Cloud-Anbieter (OpenAI, Cohere und andere) konfiguriert, benötigen genau diese Aufrufe Internetzugang; für eine vollständig offline laufende Pipeline diese Module stattdessen auf eine lokal gehostete Engine wie Ollama richten.' },
+          { q: 'Kann Weaviate vollständig offline oder air-gapped laufen?', a: 'Ja, für die Kerndatenbank selbst — sie läuft vollständig auf der eigenen Infrastruktur ohne externe Dienste für Speicherung und Abfragen. Weaviate sendet standardmäßig Nutzungstelemetrie; für eine abgeschottete Umgebung DISABLE_TELEMETRY=true setzen. Wird ein Vectorizer- oder Generative-Search-Modul für einen Cloud-Anbieter (OpenAI, Cohere und andere) konfiguriert, benötigen genau diese Aufrufe Internetzugang; für eine vollständig offline laufende Pipeline diese Module stattdessen auf eine lokal gehostete Engine wie Ollama richten.' },
           { q: 'Unterstützt Weaviate Hybrid-Suche?', a: 'Ja. Weaviate kombiniert Vektor-Ähnlichkeitssuche mit BM25-Keyword-Suche in einer einzigen Hybrid-Abfrage, mit einem einstellbaren Alpha-Parameter, um einen der Modi stärker zu gewichten.' },
           { q: 'Hat Weaviate eine GraphQL-API?', a: 'Ja. Weaviate stellt REST-, GraphQL- und gRPC-APIs bereit, mit offiziellen Client-Bibliotheken für Python, TypeScript/JavaScript, Go, Java und C#/.NET.' },
           { q: 'Wie installiert man Weaviate?', a: 'Der schnellste Weg ist ein einzelner Docker-Befehl (`docker run -p 8080:8080 -p 50051:50051 cr.weaviate.io/semitechnologies/weaviate:<version>`). Für den Produktivbetrieb Docker Compose oder den offiziellen Kubernetes/Helm-Chart verwenden; für lokales Prototyping in Python den eingebetteten Client. Details in der Installationstabelle oben.' },
@@ -576,7 +576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
     publishDate: '2026-09-19',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs et ingénieurs ML choisissant une base de données vectorielle auto-hébergeable pour le RAG, la recherche sémantique ou les applications d\'IA agentique',
     primaryTerm: 'Weaviate',
@@ -695,7 +695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Exécuter un pipeline RAG entièrement local avec Ollama',
-            content: 'Démarrer Weaviate via Docker Compose, configurer le module `text2vec-ollama` pour pointer vers une instance Ollama locale pour les embeddings, et connecter un LLM local via Ollama pour la recherche générative. Chaque requête — embedding, stockage, récupération et génération — reste sur votre propre machine ou réseau, sans aucun appel API externe.',
+            content: 'Démarrer Weaviate via Docker Compose, configurer le module `text2vec-ollama` pour pointer vers une instance Ollama locale pour les embeddings, et connecter un LLM local via Ollama pour la recherche générative. Chaque requête — embedding, stockage, récupération et génération — reste sur votre propre machine ou réseau, sans appel à des API de modèles externes (la télémétrie d\'usage activée par défaut dans Weaviate est distincte et se désactive avec DISABLE_TELEMETRY=true).',
           },
           {
             title: 'Combiner recherche par mots-clés et recherche sémantique pour la recherche de produits ou de documents',
@@ -819,7 +819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Qu\'est-ce que Weaviate ?', a: 'Weaviate ([weaviate.io](https://weaviate.io), code source sur [github.com/weaviate/weaviate](https://github.com/weaviate/weaviate)) est une base de données vectorielle open-core qui stocke à la fois des objets structurés et leurs embeddings vectoriels, prenant en charge la recherche vectorielle, la recherche par mots-clés BM25, la recherche hybride et une recherche générative (RAG) intégrée.' },
           { q: 'Weaviate est-il gratuit ?', a: 'Le cœur sous licence BSD-3-Clause est gratuit à auto-héberger. Un ensemble défini de fonctionnalités du répertoire `wl/` du dépôt nécessite une clé Weaviate License payante pour être activé. Weaviate Cloud, l\'option d\'hébergement géré, est un service distinct à l\'usage avec un palier gratuit.' },
           { q: 'Weaviate est-il open source ? Quelle licence utilise-t-il ?', a: 'Partiellement. Le cœur de Weaviate est sous licence [BSD-3-Clause](https://github.com/weaviate/weaviate/blob/main/LICENSE-BSD). Un ensemble défini de fonctionnalités du répertoire `wl/` du dépôt relève d\'une [Weaviate License](https://github.com/weaviate/weaviate/blob/main/LICENSE) propriétaire distincte, qui ne s\'active qu\'avec une clé de licence payante. Les métadonnées du dépôt GitHub classent la licence globale comme "Other" en raison de cette scission, plutôt que comme une licence unique approuvée par l\'OSI couvrant l\'ensemble du code.' },
-          { q: 'Weaviate peut-il fonctionner entièrement hors ligne ou en environnement isolé ?', a: 'Oui, pour la base de données centrale elle-même — elle s\'exécute entièrement sur votre propre infrastructure sans appel externe requis. Si vous configurez un module de vectorisation ou de recherche générative pour un fournisseur cloud (OpenAI, Cohere et autres), ces appels précis nécessitent un accès Internet ; orientez ces modules vers un moteur hébergé localement comme Ollama pour un pipeline entièrement hors ligne.' },
+          { q: 'Weaviate peut-il fonctionner entièrement hors ligne ou en environnement isolé ?', a: 'Oui, pour la base de données centrale elle-même — elle s\'exécute entièrement sur votre propre infrastructure sans service externe pour le stockage et les requêtes. Weaviate envoie par défaut de la télémétrie d\'usage ; définissez DISABLE_TELEMETRY=true pour un environnement isolé. Si vous configurez un module de vectorisation ou de recherche générative pour un fournisseur cloud (OpenAI, Cohere et autres), ces appels précis nécessitent un accès Internet ; orientez ces modules vers un moteur hébergé localement comme Ollama pour un pipeline entièrement hors ligne.' },
           { q: 'Weaviate prend-il en charge la recherche hybride ?', a: 'Oui. Weaviate combine la recherche par similarité vectorielle avec la recherche par mots-clés BM25 en une seule requête hybride, avec un paramètre alpha ajustable pour pondérer l\'un des modes.' },
           { q: 'Weaviate dispose-t-il d\'une API GraphQL ?', a: 'Oui. Weaviate expose des API REST, GraphQL et gRPC, avec des bibliothèques clientes officielles pour Python, TypeScript/JavaScript, Go, Java et C#/.NET.' },
           { q: 'Comment installer Weaviate ?', a: 'Le chemin le plus rapide est une simple commande Docker (`docker run -p 8080:8080 -p 50051:50051 cr.weaviate.io/semitechnologies/weaviate:<version>`). Pour la production, utilisez Docker Compose ou le chart officiel Kubernetes/Helm ; pour le prototypage local en Python, utilisez le client embarqué. Voir le tableau d\'installation ci-dessus pour le détail.' },
@@ -860,7 +860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
     publishDate: '2026-09-19',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores e ingenieros de ML que buscan una base de datos vectorial autoalojable para RAG, búsqueda semántica o aplicaciones de IA agéntica',
     primaryTerm: 'Weaviate',
@@ -979,7 +979,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Ejecutar una canalización RAG totalmente local con Ollama',
-            content: 'Inicia Weaviate mediante Docker Compose, configura el módulo `text2vec-ollama` para que apunte a una instancia local de Ollama para los embeddings, y conecta un LLM local a través de Ollama para la búsqueda generativa. Cada solicitud — embedding, almacenamiento, recuperación y generación — permanece en tu propia máquina o red, sin llamadas a API externas.',
+            content: 'Inicia Weaviate mediante Docker Compose, configura el módulo `text2vec-ollama` para que apunte a una instancia local de Ollama para los embeddings, y conecta un LLM local a través de Ollama para la búsqueda generativa. Cada solicitud — embedding, almacenamiento, recuperación y generación — permanece en tu propia máquina o red, sin llamadas a API de modelos externas (la telemetría de uso que Weaviate activa por defecto es independiente y se desactiva con DISABLE_TELEMETRY=true).',
           },
           {
             title: 'Combinar búsqueda por palabras clave y semántica para búsqueda de productos o documentos',
@@ -1103,7 +1103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Qué es Weaviate?', a: 'Weaviate ([weaviate.io](https://weaviate.io), código fuente en [github.com/weaviate/weaviate](https://github.com/weaviate/weaviate)) es una base de datos vectorial open-core que almacena tanto objetos estructurados como sus embeddings vectoriales, y admite búsqueda vectorial, búsqueda por palabras clave BM25, búsqueda híbrida y búsqueda generativa (RAG) incorporada.' },
           { q: '¿Es gratuito Weaviate?', a: 'El núcleo con licencia BSD-3-Clause es gratuito para autoalojar. Un conjunto definido de funciones dentro del directorio `wl/` del repositorio requiere una clave de Weaviate License de pago para activarse. Weaviate Cloud, la opción de alojamiento gestionado, es un servicio independiente basado en uso con un nivel gratuito.' },
           { q: '¿Es Weaviate de código abierto? ¿Qué licencia usa?', a: 'Parcialmente. El núcleo de Weaviate tiene licencia [BSD-3-Clause](https://github.com/weaviate/weaviate/blob/main/LICENSE-BSD). Un conjunto definido de funciones dentro del directorio `wl/` del repositorio está cubierto por una [Weaviate License](https://github.com/weaviate/weaviate/blob/main/LICENSE) propietaria independiente, que solo se activa con una clave de licencia de pago. Los metadatos del repositorio en GitHub clasifican la licencia general como "Other" por esta división, en lugar de como una única licencia aprobada por la OSI que cubra todo el código.' },
-          { q: '¿Puede Weaviate funcionar totalmente sin conexión o de forma aislada?', a: 'Sí, para la base de datos principal en sí — se ejecuta por completo en tu propia infraestructura sin necesitar llamadas externas. Si configuras un módulo de vectorización o de búsqueda generativa para un proveedor en la nube (OpenAI, Cohere y otros), esas llamadas concretas necesitan acceso a internet; dirige esos módulos a un motor alojado localmente como Ollama para una canalización totalmente sin conexión.' },
+          { q: '¿Puede Weaviate funcionar totalmente sin conexión o de forma aislada?', a: 'Sí, para la base de datos principal en sí — se ejecuta por completo en tu propia infraestructura sin servicios externos para el almacenamiento y las consultas. Weaviate envía telemetría de uso por defecto; establece DISABLE_TELEMETRY=true para un entorno aislado. Si configuras un módulo de vectorización o de búsqueda generativa para un proveedor en la nube (OpenAI, Cohere y otros), esas llamadas concretas necesitan acceso a internet; dirige esos módulos a un motor alojado localmente como Ollama para una canalización totalmente sin conexión.' },
           { q: '¿Weaviate admite búsqueda híbrida?', a: 'Sí. Weaviate combina la búsqueda por similitud vectorial con la búsqueda por palabras clave BM25 en una sola consulta híbrida, con un parámetro alpha ajustable para ponderar un modo sobre el otro.' },
           { q: '¿Weaviate tiene una API GraphQL?', a: 'Sí. Weaviate expone APIs REST, GraphQL y gRPC, con bibliotecas cliente oficiales para Python, TypeScript/JavaScript, Go, Java y C#/.NET.' },
           { q: '¿Cómo se instala Weaviate?', a: 'La vía más rápida es un único comando Docker (`docker run -p 8080:8080 -p 50051:50051 cr.weaviate.io/semitechnologies/weaviate:<version>`). Para producción, usa Docker Compose o el chart oficial de Kubernetes/Helm; para prototipado local en Python, usa el cliente integrado. Consulta la tabla de instalación de arriba para más detalles.' },
@@ -1144,7 +1144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
     publishDate: '2026-09-19',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores e engenheiros de ML que estão escolhendo um banco de dados vetorial auto-hospedável para RAG, busca semântica ou aplicações de IA agêntica',
     primaryTerm: 'Weaviate',
@@ -1263,7 +1263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Rodar um pipeline RAG totalmente local com o Ollama',
-            content: 'Inicie o Weaviate via Docker Compose, configure o módulo `text2vec-ollama` para apontar para uma instância local do Ollama para os embeddings, e conecte um LLM local via Ollama para a busca generativa. Cada requisição — embedding, armazenamento, recuperação e geração — permanece na sua própria máquina ou rede, sem chamadas de API externas.',
+            content: 'Inicie o Weaviate via Docker Compose, configure o módulo `text2vec-ollama` para apontar para uma instância local do Ollama para os embeddings, e conecte um LLM local via Ollama para a busca generativa. Cada requisição — embedding, armazenamento, recuperação e geração — permanece na sua própria máquina ou rede, sem chamadas a APIs de modelos externas (a telemetria de uso ativada por padrão no Weaviate é separada e pode ser desativada com DISABLE_TELEMETRY=true).',
           },
           {
             title: 'Combinar busca por palavras-chave e semântica para busca de produtos ou documentos',
@@ -1387,7 +1387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'O que é o Weaviate?', a: 'O Weaviate ([weaviate.io](https://weaviate.io), código-fonte em [github.com/weaviate/weaviate](https://github.com/weaviate/weaviate)) é um banco de dados vetorial open-core que armazena tanto objetos estruturados quanto seus embeddings vetoriais, suportando busca vetorial, busca por palavras-chave BM25, busca híbrida e busca generativa (RAG) integrada.' },
           { q: 'O Weaviate é gratuito?', a: 'O núcleo licenciado sob BSD-3-Clause é gratuito para auto-hospedar. Um conjunto definido de recursos dentro do diretório `wl/` do repositório exige uma chave de Weaviate License paga para ser ativado. O Weaviate Cloud, a opção de hospedagem gerenciada, é um serviço separado baseado em uso com nível gratuito.' },
           { q: 'O Weaviate é open source? Qual licença ele usa?', a: 'Parcialmente. O núcleo do Weaviate é licenciado sob [BSD-3-Clause](https://github.com/weaviate/weaviate/blob/main/LICENSE-BSD). Um conjunto definido de recursos dentro do diretório `wl/` do repositório é coberto por uma [Weaviate License](https://github.com/weaviate/weaviate/blob/main/LICENSE) proprietária separada, que só é ativada com uma chave de licença paga. Os metadados do repositório no GitHub classificam a licença geral como "Other" por causa dessa divisão, em vez de uma única licença aprovada pela OSI cobrindo toda a base de código.' },
-          { q: 'O Weaviate pode rodar totalmente offline ou isolado da rede?', a: 'Sim, para o banco de dados principal em si — ele roda inteiramente na sua própria infraestrutura sem exigir chamadas externas. Se você configurar um módulo de vetorização ou de busca generativa para um provedor em nuvem (OpenAI, Cohere e outros), essas chamadas específicas precisam de acesso à internet; aponte esses módulos para um motor hospedado localmente, como o Ollama, para um pipeline totalmente offline.' },
+          { q: 'O Weaviate pode rodar totalmente offline ou isolado da rede?', a: 'Sim, para o banco de dados principal em si — ele roda inteiramente na sua própria infraestrutura sem serviços externos para armazenamento e consultas. O Weaviate envia telemetria de uso por padrão; defina DISABLE_TELEMETRY=true para um ambiente isolado. Se você configurar um módulo de vetorização ou de busca generativa para um provedor em nuvem (OpenAI, Cohere e outros), essas chamadas específicas precisam de acesso à internet; aponte esses módulos para um motor hospedado localmente, como o Ollama, para um pipeline totalmente offline.' },
           { q: 'O Weaviate suporta busca híbrida?', a: 'Sim. O Weaviate combina busca por similaridade vetorial com busca por palavras-chave BM25 em uma única consulta híbrida, com um parâmetro alpha ajustável para dar mais peso a um dos modos.' },
           { q: 'O Weaviate tem uma API GraphQL?', a: 'Sim. O Weaviate expõe APIs REST, GraphQL e gRPC, com bibliotecas cliente oficiais para Python, TypeScript/JavaScript, Go, Java e C#/.NET.' },
           { q: 'Como instalar o Weaviate?', a: 'O caminho mais rápido é um único comando Docker (`docker run -p 8080:8080 -p 50051:50051 cr.weaviate.io/semitechnologies/weaviate:<version>`). Para produção, use Docker Compose ou o chart oficial de Kubernetes/Helm; para prototipagem local em Python, use o cliente embutido. Veja a tabela de instalação acima para mais detalhes.' },
@@ -1428,7 +1428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
     publishDate: '2026-09-19',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     educationalLevel: 'Intermediate',
     audience: 'RAG、セマンティック検索、エージェント型AIアプリケーション向けにセルフホスト可能なベクトルデータベースを選定する開発者およびMLエンジニア',
     primaryTerm: 'Weaviate',
@@ -1547,7 +1547,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Ollamaで完全ローカルなRAGパイプラインを構築する',
-            content: 'Docker ComposeでWeaviateを起動し、`text2vec-ollama`モジュールをローカルのOllamaインスタンスに向けて埋め込み用に設定し、生成検索用にローカルLLMをOllama経由で接続します。埋め込み・保存・検索・生成のすべてのリクエストが自分のマシンまたはネットワーク内にとどまり、外部APIコールは発生しません。',
+            content: 'Docker ComposeでWeaviateを起動し、`text2vec-ollama`モジュールをローカルのOllamaインスタンスに向けて埋め込み用に設定し、生成検索用にローカルLLMをOllama経由で接続します。埋め込み・保存・検索・生成のすべてのリクエストが自分のマシンまたはネットワーク内にとどまり、外部モデルAPIへの呼び出しは発生しません（Weaviateが既定で有効にしている利用状況テレメトリは別であり、DISABLE_TELEMETRY=trueで無効化できます）。',
           },
           {
             title: '製品検索やドキュメント検索でキーワード検索とセマンティック検索を組み合わせる',
@@ -1671,7 +1671,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Weaviateとは何ですか？', a: 'Weaviate（[weaviate.io](https://weaviate.io)、ソースは[github.com/weaviate/weaviate](https://github.com/weaviate/weaviate)）は、構造化オブジェクトとそのベクトル埋め込みの両方を保存するオープンコアのベクトルデータベースで、ベクトル検索、BM25キーワード検索、ハイブリッド検索、組み込みの生成検索（RAG）をサポートします。' },
           { q: 'Weaviateは無料ですか？', a: 'BSD-3-Clauseライセンスのコアはセルフホストであれば無料です。リポジトリ内の`wl/`ディレクトリにある特定の機能群は、有料のWeaviate Licenseキーで有効化する必要があります。マネージドホスティングのオプションであるWeaviate Cloudは、無料枠を備えた別途の従量課金サービスです。' },
           { q: 'Weaviateはオープンソースですか？どのライセンスを使用していますか？', a: '部分的にです。Weaviateのコアは[BSD-3-Clause](https://github.com/weaviate/weaviate/blob/main/LICENSE-BSD)の下でライセンスされています。リポジトリの`wl/`ディレクトリに限定された特定の機能群は、有料ライセンスキーでのみ有効化される別のプロプライエタリな[Weaviate License](https://github.com/weaviate/weaviate/blob/main/LICENSE)の対象です。GitHubのリポジトリメタデータは、コードベース全体を単一のOSI承認ライセンスで覆うのではなく、この分割ゆえに全体のライセンスを「Other」に分類しています。' },
-          { q: 'Weaviateは完全にオフライン、エアギャップ環境で動作しますか？', a: 'コアのデータベース自体については可能です。自社インフラ上で完全に稼働し、外部呼び出しは不要です。クラウドプロバイダー（OpenAI、Cohereなど）向けにベクトライザや生成検索モジュールを設定した場合、その特定の呼び出しにはインターネットアクセスが必要です。完全にオフラインのパイプラインにするには、それらのモジュールをOllamaのようなローカルホスト型エンジンに向けてください。' },
+          { q: 'Weaviateは完全にオフライン、エアギャップ環境で動作しますか？', a: 'コアのデータベース自体については可能です。自社インフラ上で完全に稼働し、ストレージとクエリに外部サービスは不要です。Weaviateは既定で利用状況テレメトリを送信するため、隔離環境ではDISABLE_TELEMETRY=trueを設定してください。クラウドプロバイダー（OpenAI、Cohereなど）向けにベクトライザや生成検索モジュールを設定した場合、その特定の呼び出しにはインターネットアクセスが必要です。完全にオフラインのパイプラインにするには、それらのモジュールをOllamaのようなローカルホスト型エンジンに向けてください。' },
           { q: 'Weaviateはハイブリッド検索をサポートしていますか？', a: 'はい。Weaviateはベクトル類似検索とBM25キーワード検索を単一のハイブリッドクエリで組み合わせ、どちらのモードを重視するか調整可能なalphaパラメータを備えています。' },
           { q: 'WeaviateにGraphQL APIはありますか？', a: 'あります。WeaviateはREST、GraphQL、gRPCのAPIを公開し、Python、TypeScript/JavaScript、Go、Java、C#/.NET向けの公式クライアントライブラリを提供します。' },
           { q: 'Weaviateはどのようにインストールしますか？', a: '最速の方法は単一のDockerコマンド（`docker run -p 8080:8080 -p 50051:50051 cr.weaviate.io/semitechnologies/weaviate:<version>`）です。本番環境ではDocker Composeまたは公式のKubernetes/Helmチャートを使用し、Pythonでのローカルプロトタイピングには組み込みクライアントを使用してください。詳細は上記のインストール表を参照してください。' },
@@ -1712,7 +1712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
     publishDate: '2026-09-19',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     educationalLevel: 'Intermediate',
     audience: '为RAG、语义搜索或代理式AI应用选择可自托管向量数据库的开发者与机器学习工程师',
     primaryTerm: 'Weaviate',
@@ -1831,7 +1831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: '使用Ollama运行完全本地化的RAG流水线',
-            content: '通过Docker Compose启动Weaviate，将`text2vec-ollama`模块配置为指向本地Ollama实例以生成嵌入，并通过Ollama连接本地LLM以进行生成式搜索。嵌入、存储、检索和生成的每一步请求都留在你自己的机器或网络内，不产生任何外部API调用。',
+            content: '通过Docker Compose启动Weaviate，将`text2vec-ollama`模块配置为指向本地Ollama实例以生成嵌入，并通过Ollama连接本地LLM以进行生成式搜索。嵌入、存储、检索和生成的每一步请求都留在你自己的机器或网络内，不会调用外部模型API（Weaviate默认开启的使用情况遥测与此无关，可通过DISABLE_TELEMETRY=true关闭）。',
           },
           {
             title: '结合关键词搜索和语义搜索用于产品或文档搜索',
@@ -1955,7 +1955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Weaviate是什么？', a: 'Weaviate（[weaviate.io](https://weaviate.io)，源码见[github.com/weaviate/weaviate](https://github.com/weaviate/weaviate)）是一个开放核心的向量数据库，同时存储结构化对象及其向量嵌入，支持向量搜索、BM25关键词搜索、混合搜索以及内置的生成式搜索（RAG）。' },
           { q: 'Weaviate是免费的吗？', a: 'BSD-3-Clause许可的核心自托管免费。仓库`wl/`目录内一组特定功能需要付费的Weaviate License密钥才能激活。托管服务选项Weaviate Cloud是一项独立的按使用量计费服务，附带免费层。' },
           { q: 'Weaviate是开源的吗？它使用什么许可证？', a: '部分开源。Weaviate的核心采用[BSD-3-Clause](https://github.com/weaviate/weaviate/blob/main/LICENSE-BSD)许可。仓库中限定于`wl/`目录的一组特定功能，受另一份仅在购买许可证密钥后才激活的专有[Weaviate License](https://github.com/weaviate/weaviate/blob/main/LICENSE)约束。正因这种分裂结构，GitHub仓库元数据将整体许可证归类为"Other"，而非用单一经OSI批准的许可证覆盖整个代码库。' },
-          { q: 'Weaviate能完全离线或在隔离网络环境中运行吗？', a: '就核心数据库本身而言可以——它完全运行在你自己的基础设施上，无需任何外部调用。如果你为云端提供商（OpenAI、Cohere等）配置了向量化或生成式搜索模块，这些特定调用需要互联网访问；若要实现完全离线的流水线，请将这些模块指向本地托管的引擎，如Ollama。' },
+          { q: 'Weaviate能完全离线或在隔离网络环境中运行吗？', a: '就核心数据库本身而言可以——它完全运行在你自己的基础设施上，存储和查询无需外部服务。Weaviate默认会发送使用情况遥测，在隔离网络环境中请设置DISABLE_TELEMETRY=true。如果你为云端提供商（OpenAI、Cohere等）配置了向量化或生成式搜索模块，这些特定调用需要互联网访问；若要实现完全离线的流水线，请将这些模块指向本地托管的引擎，如Ollama。' },
           { q: 'Weaviate支持混合搜索吗？', a: '支持。Weaviate在单次混合查询中结合向量相似度搜索与BM25关键词搜索，并提供可调节的alpha参数来决定偏重哪种模式。' },
           { q: 'Weaviate有GraphQL API吗？', a: '有。Weaviate提供REST、GraphQL和gRPC API，并附带Python、TypeScript/JavaScript、Go、Java和C#/.NET的官方客户端库。' },
           { q: '如何安装Weaviate？', a: '最快的方式是使用单条Docker命令（`docker run -p 8080:8080 -p 50051:50051 cr.weaviate.io/semitechnologies/weaviate:<version>`）。生产环境请使用Docker Compose或官方Kubernetes/Helm chart；如需在Python中进行本地原型开发，可使用内嵌客户端。详情见上文安装表格。' },
@@ -1996,7 +1996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
     publishDate: '2026-09-19',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     educationalLevel: 'Intermediate',
     audience: 'المطورون ومهندسو تعلم الآلة الذين يختارون قاعدة بيانات متجهية قابلة للاستضافة الذاتية لتطبيقات RAG أو البحث الدلالي أو الذكاء الاصطناعي الوكيلي',
     primaryTerm: 'Weaviate',
@@ -2115,7 +2115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'تشغيل خط أنابيب RAG محلي بالكامل مع Ollama',
-            content: 'شغّل Weaviate عبر Docker Compose، وأعِدّ وحدة `text2vec-ollama` لتشير إلى نسخة Ollama محلية من أجل التضمينات، واربط نموذجًا لغويًا محليًا عبر Ollama للبحث التوليدي. يبقى كل طلب — التضمين والتخزين والاسترجاع والتوليد — على جهازك أو شبكتك الخاصة، دون أي استدعاءات API خارجية.',
+            content: 'شغّل Weaviate عبر Docker Compose، وأعِدّ وحدة `text2vec-ollama` لتشير إلى نسخة Ollama محلية من أجل التضمينات، واربط نموذجًا لغويًا محليًا عبر Ollama للبحث التوليدي. يبقى كل طلب — التضمين والتخزين والاسترجاع والتوليد — على جهازك أو شبكتك الخاصة، دون استدعاء أي واجهات برمجة نماذج خارجية (تُعدّ القياسات عن بُعد التي يفعّلها Weaviate افتراضيًا منفصلة ويمكن تعطيلها عبر DISABLE_TELEMETRY=true).',
           },
           {
             title: 'الجمع بين البحث النصي والدلالي لبحث المنتجات أو المستندات',
@@ -2239,7 +2239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ما هي Weaviate؟', a: 'Weaviate ([weaviate.io](https://weaviate.io)، والمصدر على [github.com/weaviate/weaviate](https://github.com/weaviate/weaviate)) قاعدة بيانات متجهية مفتوحة النواة تخزّن الكائنات المهيكلة وتضميناتها المتجهية معًا، وتدعم البحث المتجهي والبحث النصي BM25 والبحث الهجين والبحث التوليدي (RAG) المدمج.' },
           { q: 'هل Weaviate مجانية؟', a: 'النواة المرخصة بموجب BSD-3-Clause مجانية للاستضافة الذاتية. مجموعة محددة من الميزات داخل مجلد `wl/` في المستودع تتطلب مفتاح ترخيص Weaviate License مدفوع للتفعيل. أما Weaviate Cloud، خيار الاستضافة المُدارة، فهي خدمة منفصلة قائمة على الاستخدام مع طبقة مجانية.' },
           { q: 'هل Weaviate مفتوحة المصدر؟ وما الترخيص الذي تستخدمه؟', a: 'جزئيًا. نواة Weaviate مرخصة بموجب [BSD-3-Clause](https://github.com/weaviate/weaviate/blob/main/LICENSE-BSD). مجموعة محددة من الميزات مقتصرة على مجلد `wl/` في المستودع تخضع لترخيص [Weaviate License](https://github.com/weaviate/weaviate/blob/main/LICENSE) الخاص المنفصل، الذي لا يُفعَّل إلا بمفتاح ترخيص مدفوع. تصنّف بيانات GitHub الوصفية للمستودع الترخيص العام كـ"Other" بسبب هذا الانقسام، بدلًا من ترخيص واحد معتمد من OSI يغطي قاعدة الشيفرة بأكملها.' },
-          { q: 'هل يمكن تشغيل Weaviate بالكامل دون اتصال أو في بيئة معزولة؟', a: 'نعم، بالنسبة لقاعدة البيانات الأساسية نفسها — إذ تعمل بالكامل على بنيتك التحتية الخاصة دون الحاجة لأي استدعاءات خارجية. إذا أعددت وحدة تمثيل متجهي أو بحث توليدي لمزوّد سحابي (OpenAI وCohere وغيرهما)، فإن تلك الاستدعاءات المحددة تحتاج اتصالًا بالإنترنت؛ وجّه تلك الوحدات نحو محرك مستضاف محليًا مثل Ollama لخط أنابيب معزول بالكامل عن الإنترنت.' },
+          { q: 'هل يمكن تشغيل Weaviate بالكامل دون اتصال أو في بيئة معزولة؟', a: 'نعم، بالنسبة لقاعدة البيانات الأساسية نفسها — إذ تعمل بالكامل على بنيتك التحتية الخاصة دون خدمات خارجية للتخزين والاستعلام. يرسل Weaviate قياسات استخدام عن بُعد افتراضيًا، فاضبط DISABLE_TELEMETRY=true في البيئات المعزولة. إذا أعددت وحدة تمثيل متجهي أو بحث توليدي لمزوّد سحابي (OpenAI وCohere وغيرهما)، فإن تلك الاستدعاءات المحددة تحتاج اتصالًا بالإنترنت؛ وجّه تلك الوحدات نحو محرك مستضاف محليًا مثل Ollama لخط أنابيب معزول بالكامل عن الإنترنت.' },
           { q: 'هل تدعم Weaviate البحث الهجين؟', a: 'نعم. تجمع Weaviate بين البحث بالتشابه المتجهي والبحث النصي BM25 في استعلام هجين واحد، مع معامل alpha قابل للضبط لترجيح أحد النمطين.' },
           { q: 'هل تمتلك Weaviate واجهة GraphQL؟', a: 'نعم. تعرض Weaviate واجهات REST وGraphQL وgRPC، مع مكتبات عملاء رسمية لـ Python وTypeScript/JavaScript وGo وJava وC#/.NET.' },
           { q: 'كيف أثبّت Weaviate؟', a: 'أسرع طريقة هي أمر Docker واحد (`docker run -p 8080:8080 -p 50051:50051 cr.weaviate.io/semitechnologies/weaviate:<version>`). للإنتاج، استخدم Docker Compose أو رسم Helm الرسمي لـ Kubernetes؛ وللنماذج الأولية المحلية بلغة Python، استخدم العميل المضمّن. راجع جدول التثبيت أعلاه للتفاصيل.' },
@@ -2280,7 +2280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
     publishDate: '2026-09-19',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     educationalLevel: 'Intermediate',
     audience: 'RAG, 시맨틱 검색, 에이전트형 AI 애플리케이션을 위해 셀프 호스팅 가능한 벡터 데이터베이스를 선택하려는 개발자 및 ML 엔지니어',
     primaryTerm: 'Weaviate',
@@ -2399,7 +2399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Ollama로 완전한 로컬 RAG 파이프라인 실행하기',
-            content: 'Docker Compose로 Weaviate를 시작하고, `text2vec-ollama` 모듈이 임베딩을 위해 로컬 Ollama 인스턴스를 가리키도록 설정한 다음, 생성형 검색을 위해 Ollama를 통해 로컬 LLM을 연결합니다. 임베딩, 저장, 검색, 생성에 이르는 모든 요청이 자신의 머신이나 네트워크 안에 머무르며, 외부 API 호출이 전혀 발생하지 않습니다.',
+            content: 'Docker Compose로 Weaviate를 시작하고, `text2vec-ollama` 모듈이 임베딩을 위해 로컬 Ollama 인스턴스를 가리키도록 설정한 다음, 생성형 검색을 위해 Ollama를 통해 로컬 LLM을 연결합니다. 임베딩, 저장, 검색, 생성에 이르는 모든 요청이 자신의 머신이나 네트워크 안에 머무르며, 외부 모델 API 호출 없이 진행됩니다(Weaviate가 기본으로 켜 두는 사용 현황 텔레메트리는 별개이며 DISABLE_TELEMETRY=true로 끌 수 있습니다).',
           },
           {
             title: '제품 또는 문서 검색을 위해 키워드 검색과 시맨틱 검색 결합하기',
@@ -2523,7 +2523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Weaviate란 무엇인가요?', a: 'Weaviate([weaviate.io](https://weaviate.io), 소스는 [github.com/weaviate/weaviate](https://github.com/weaviate/weaviate))는 구조화된 객체와 그 벡터 임베딩을 모두 저장하는 오픈 코어 벡터 데이터베이스로, 벡터 검색, BM25 키워드 검색, 하이브리드 검색, 그리고 내장된 생성형 검색(RAG)을 지원합니다.' },
           { q: 'Weaviate는 무료인가요?', a: 'BSD-3-Clause 라이선스가 적용된 코어는 셀프 호스팅 시 무료입니다. 저장소의 `wl/` 디렉터리 내 특정 기능 집합은 활성화하려면 유료 Weaviate License 키가 필요합니다. 관리형 호스팅 옵션인 Weaviate Cloud는 무료 플랜이 있는 별도의 사용량 기반 서비스입니다.' },
           { q: 'Weaviate는 오픈소스인가요? 어떤 라이선스를 사용하나요?', a: '부분적으로 그렇습니다. Weaviate의 코어는 [BSD-3-Clause](https://github.com/weaviate/weaviate/blob/main/LICENSE-BSD) 라이선스를 따릅니다. 저장소의 `wl/` 디렉터리로 한정된 특정 기능 집합은 유료 라이선스 키가 있어야만 활성화되는 별도의 독점 [Weaviate License](https://github.com/weaviate/weaviate/blob/main/LICENSE)가 적용됩니다. GitHub의 저장소 메타데이터는 전체 코드베이스를 단일한 OSI 승인 라이선스로 적용하는 대신, 이 분리 구조 때문에 전체 라이선스를 "Other"로 분류합니다.' },
-          { q: 'Weaviate는 완전히 오프라인이나 에어갭 환경에서 실행될 수 있나요?', a: '핵심 데이터베이스 자체는 가능합니다 — 외부 호출 없이 전적으로 자체 인프라에서 실행됩니다. OpenAI, Cohere 등 클라우드 제공자용으로 벡터라이저나 생성형 검색 모듈을 설정한 경우, 해당 특정 호출에는 인터넷 접속이 필요합니다. 완전히 오프라인인 파이프라인을 원한다면 해당 모듈을 Ollama 같은 로컬 호스팅 엔진으로 지정하세요.' },
+          { q: 'Weaviate는 완전히 오프라인이나 에어갭 환경에서 실행될 수 있나요?', a: '핵심 데이터베이스 자체는 가능합니다 — 저장과 쿼리에 외부 서비스가 필요하지 않습니다. Weaviate는 기본적으로 사용 현황 텔레메트리를 전송하므로, 격리 환경에서는 DISABLE_TELEMETRY=true를 설정하세요. OpenAI, Cohere 등 클라우드 제공자용으로 벡터라이저나 생성형 검색 모듈을 설정한 경우, 해당 특정 호출에는 인터넷 접속이 필요합니다. 완전히 오프라인인 파이프라인을 원한다면 해당 모듈을 Ollama 같은 로컬 호스팅 엔진으로 지정하세요.' },
           { q: 'Weaviate는 하이브리드 검색을 지원하나요?', a: '네. Weaviate는 벡터 유사도 검색과 BM25 키워드 검색을 단일 하이브리드 쿼리로 결합하며, 어느 모드를 더 중시할지 조정할 수 있는 alpha 매개변수를 제공합니다.' },
           { q: 'Weaviate에 GraphQL API가 있나요?', a: '있습니다. Weaviate는 REST, GraphQL, gRPC API를 제공하며, Python, TypeScript/JavaScript, Go, Java, C#/.NET용 공식 클라이언트 라이브러리를 갖추고 있습니다.' },
           { q: 'Weaviate는 어떻게 설치하나요?', a: '가장 빠른 방법은 단일 Docker 명령어(`docker run -p 8080:8080 -p 50051:50051 cr.weaviate.io/semitechnologies/weaviate:<version>`)입니다. 프로덕션 환경에서는 Docker Compose나 공식 Kubernetes/Helm 차트를 사용하고, Python에서의 로컬 프로토타이핑에는 내장형 클라이언트를 사용하세요. 자세한 내용은 위의 설치 표를 참조하세요.' },

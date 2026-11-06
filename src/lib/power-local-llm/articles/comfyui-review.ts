@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
@@ -165,7 +165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'ComfyUI is released under the [GNU General Public License version 3.0 (GPL-3.0)](https://github.com/comfyanonymous/ComfyUI/blob/master/LICENSE), a copyleft open-source license. This means the software is free to download, run, modify, and redistribute — including for commercial purposes — with no revenue threshold and no registration step, unlike the Stability AI Community License that covers newer Stable Diffusion versions (see [our Stable Diffusion review](/power-local-llm/stable-diffusion-review) for that distinction).',
           'GPL-3.0\'s copyleft condition matters mainly for developers, not for readers who just want to generate images: if you modify ComfyUI\'s core code and distribute that modified version, GPL-3.0 requires you to release your changes under the same license. According to a [maintainer discussion on the official repository](https://github.com/comfyanonymous/ComfyUI/issues/3362), custom nodes that extend ComfyUI through its plugin interface (living in the `custom_nodes` folder) are generally treated as separate works that can carry their own license — but a fork or direct modification of ComfyUI\'s own core code is a derivative work and must stay GPL-3.0. Verify the license of any specific custom node you install, since community-authored nodes are not covered by ComfyUI\'s own license and vary in terms.',
-          '**ComfyUI\'s GPL-3.0 license says nothing about what you may do with the images you generate — that is governed entirely by the license of whichever diffusion model you load.** Stable Diffusion 1.5, SD 2.1, and SDXL use the CreativeML Open RAIL-M / RAIL++-M license with no commercial revenue cap; SD 3 and SD 3.5 use the Stability AI Community License, free only under $1,000,000 in annual revenue; Flux.1 schnell is Apache 2.0 (unrestricted), while Flux.1 dev requires a separate commercial license from [Black Forest Labs](https://blackforestlabs.ai) for commercial use. Running any of these models inside ComfyUI does not change or override their license terms.',
+          '**ComfyUI\'s GPL-3.0 license says nothing about what you may do with the images you generate — that is governed entirely by the license of whichever diffusion model you load.** Stable Diffusion 1.5, SD 2.1, and SDXL use the CreativeML Open RAIL-M / RAIL++-M license with no commercial revenue cap; SD 3 and SD 3.5 use the Stability AI Community License, free only under $1,000,000 in annual revenue; Flux.1 schnell is Apache 2.0 (unrestricted), while FLUX.1 [dev] is published under the Black Forest Labs non-commercial license, whose terms on commercial use of the model and its outputs are not fully consistent; check the [license text](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md) or ask [Black Forest Labs](https://blackforestlabs.ai) before commercial use. Running any of these models inside ComfyUI does not change or override their license terms.',
         ],
         note: 'License terms are legal text, not marketing copy — this section summarizes publicly published terms at the time of the last update but is not legal advice. Read the actual `LICENSE` file on the GitHub repository, and the license for whichever model you load, before commercial deployment.',
       },
@@ -357,7 +357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
@@ -500,7 +500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'ComfyUI wird unter der [GNU General Public License Version 3.0 (GPL-3.0)](https://github.com/comfyanonymous/ComfyUI/blob/master/LICENSE) veröffentlicht, einer Copyleft-Open-Source-Lizenz. Das bedeutet: Die Software ist kostenlos herunterzuladen, auszuführen, zu verändern und weiterzugeben — auch kommerziell — ohne Umsatzschwelle und ohne Registrierungsschritt, anders als die Stability AI Community License, die neuere Stable-Diffusion-Versionen abdeckt (siehe [unseren Stable-Diffusion-Rezension](/de/power-local-llm/stable-diffusion-review) für diese Unterscheidung).',
           'Die Copyleft-Bedingung von GPL-3.0 ist vor allem für Entwickler relevant, nicht für Leser, die nur Bilder erzeugen wollen: Wer den Kerncode von ComfyUI verändert und diese veränderte Version weitergibt, muss laut GPL-3.0 seine Änderungen unter derselben Lizenz veröffentlichen. Laut einer [Maintainer-Diskussion im offiziellen Repository](https://github.com/comfyanonymous/ComfyUI/issues/3362) werden Custom Nodes, die ComfyUI über seine Plugin-Schnittstelle erweitern (im `custom_nodes`-Ordner), grundsätzlich als eigenständige Werke mit eigener Lizenz behandelt — ein Fork oder eine direkte Änderung des ComfyUI-Kerncodes ist dagegen ein abgeleitetes Werk und muss GPL-3.0 bleiben. Prüfen Sie die Lizenz jedes einzelnen Custom Nodes, den Sie installieren, da von der Community erstellte Nodes nicht unter ComfyUIs eigener Lizenz stehen und in den Bedingungen variieren.',
-          '**ComfyUIs GPL-3.0-Lizenz sagt nichts darüber aus, was Sie mit erzeugten Bildern tun dürfen — das wird ausschließlich durch die Lizenz des jeweils geladenen Diffusionsmodells geregelt.** Stable Diffusion 1.5, SD 2.1 und SDXL stehen unter der CreativeML-Open-RAIL-M-/RAIL++-M-Lizenz ohne kommerzielle Umsatzgrenze; SD 3 und SD 3.5 nutzen die Stability AI Community License, kostenlos nur unter 1 Mio. USD Jahresumsatz; FLUX.1 schnell steht unter Apache 2.0 (unbeschränkt), während FLUX.1 dev für kommerzielle Nutzung eine separate kommerzielle Lizenz von [Black Forest Labs](https://blackforestlabs.ai) erfordert. Diese Modelle in ComfyUI auszuführen ändert oder überschreibt deren Lizenzbedingungen nicht.',
+          '**ComfyUIs GPL-3.0-Lizenz sagt nichts darüber aus, was Sie mit erzeugten Bildern tun dürfen — das wird ausschließlich durch die Lizenz des jeweils geladenen Diffusionsmodells geregelt.** Stable Diffusion 1.5, SD 2.1 und SDXL stehen unter der CreativeML-Open-RAIL-M-/RAIL++-M-Lizenz ohne kommerzielle Umsatzgrenze; SD 3 und SD 3.5 nutzen die Stability AI Community License, kostenlos nur unter 1 Mio. USD Jahresumsatz; FLUX.1 schnell steht unter Apache 2.0 (unbeschränkt), während FLUX.1 [dev] unter der Non-Commercial-Lizenz von Black Forest Labs steht; deren Regelungen zur kommerziellen Nutzung des Modells und seiner Ausgaben sind nicht ganz widerspruchsfrei. Lesen Sie den [Lizenztext](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md) oder fragen Sie [Black Forest Labs](https://blackforestlabs.ai), bevor Sie es kommerziell einsetzen. Diese Modelle in ComfyUI auszuführen ändert oder überschreibt deren Lizenzbedingungen nicht.',
         ],
         note: 'Lizenzbedingungen sind Rechtstext, kein Marketingtext — dieser Abschnitt fasst öffentlich veröffentlichte Bedingungen zum Zeitpunkt der letzten Aktualisierung zusammen, ist aber keine Rechtsberatung. Lesen Sie vor kommerziellem Einsatz die tatsächliche `LICENSE`-Datei im GitHub-Repository sowie die Lizenz des jeweils geladenen Modells.',
       },
@@ -692,7 +692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
@@ -835,7 +835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'ComfyUI se publica bajo la [Licencia Pública General de GNU versión 3.0 (GPL-3.0)](https://github.com/comfyanonymous/ComfyUI/blob/master/LICENSE), una licencia copyleft de código abierto. Esto significa que el software es gratuito para descargar, ejecutar, modificar y redistribuir — incluso con fines comerciales — sin umbral de ingresos ni paso de registro, a diferencia de la Stability AI Community License que cubre las versiones más recientes de Stable Diffusion (ver [nuestro análisis de Stable Diffusion](/es/power-local-llm/stable-diffusion-review) para esa distinción).',
           'La condición copyleft de GPL-3.0 importa sobre todo a los desarrolladores, no a los lectores que solo quieren generar imágenes: si modificas el código del núcleo de ComfyUI y distribuyes esa versión modificada, GPL-3.0 exige publicar tus cambios bajo la misma licencia. Según una [discusión de mantenedores en el repositorio oficial](https://github.com/comfyanonymous/ComfyUI/issues/3362), los nodos personalizados que extienden ComfyUI a través de su interfaz de plugins (ubicados en la carpeta `custom_nodes`) generalmente se tratan como obras independientes que pueden tener su propia licencia — pero un fork o una modificación directa del código del núcleo de ComfyUI es una obra derivada y debe seguir bajo GPL-3.0. Verifica la licencia de cualquier nodo personalizado concreto que instales, ya que los nodos creados por la comunidad no están cubiertos por la licencia propia de ComfyUI y varían en sus términos.',
-          '**La licencia GPL-3.0 de ComfyUI no dice nada sobre lo que puedes hacer con las imágenes que generas — eso lo regula por completo la licencia del modelo de difusión que cargues.** Stable Diffusion 1.5, SD 2.1 y SDXL usan la licencia CreativeML Open RAIL-M / RAIL++-M sin límite de ingresos comerciales; SD 3 y SD 3.5 usan la Stability AI Community License, gratuita solo por debajo de 1.000.000 USD de ingresos anuales; FLUX.1 schnell es Apache 2.0 (sin restricciones), mientras que FLUX.1 dev requiere una licencia comercial aparte de [Black Forest Labs](https://blackforestlabs.ai) para uso comercial. Ejecutar cualquiera de estos modelos dentro de ComfyUI no cambia ni anula sus condiciones de licencia.',
+          '**La licencia GPL-3.0 de ComfyUI no dice nada sobre lo que puedes hacer con las imágenes que generas — eso lo regula por completo la licencia del modelo de difusión que cargues.** Stable Diffusion 1.5, SD 2.1 y SDXL usan la licencia CreativeML Open RAIL-M / RAIL++-M sin límite de ingresos comerciales; SD 3 y SD 3.5 usan la Stability AI Community License, gratuita solo por debajo de 1.000.000 USD de ingresos anuales; FLUX.1 schnell es Apache 2.0 (sin restricciones), mientras que FLUX.1 [dev] se publica bajo la licencia no comercial de Black Forest Labs, cuyas condiciones sobre el uso comercial del modelo y de sus resultados no son del todo coherentes entre sí; revisa el [texto de la licencia](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md) o consulta a [Black Forest Labs](https://blackforestlabs.ai) antes de usarlo comercialmente. Ejecutar cualquiera de estos modelos dentro de ComfyUI no cambia ni anula sus condiciones de licencia.',
         ],
         note: 'Los términos de licencia son texto legal, no texto de marketing — esta sección resume términos publicados públicamente en el momento de la última actualización, pero no es asesoramiento legal. Lee el archivo `LICENSE` real en el repositorio de GitHub, y la licencia del modelo que cargues, antes de un despliegue comercial.',
       },
@@ -1027,7 +1027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
@@ -1170,7 +1170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'ComfyUI est publié sous la [Licence Publique Générale GNU version 3.0 (GPL-3.0)](https://github.com/comfyanonymous/ComfyUI/blob/master/LICENSE), une licence open source copyleft. Cela signifie que le logiciel est gratuit à télécharger, exécuter, modifier et redistribuer — y compris à des fins commerciales — sans seuil de revenu ni étape d\'enregistrement, contrairement à la Stability AI Community License qui couvre les versions récentes de Stable Diffusion (voir [notre avis Stable Diffusion](/fr/power-local-llm/stable-diffusion-review) pour cette distinction).',
           'La condition copyleft de la GPL-3.0 concerne surtout les développeurs, pas les lecteurs qui veulent simplement générer des images : si vous modifiez le code central de ComfyUI et distribuez cette version modifiée, la GPL-3.0 exige de publier vos changements sous la même licence. Selon une [discussion de mainteneurs sur le dépôt officiel](https://github.com/comfyanonymous/ComfyUI/issues/3362), les nœuds personnalisés qui étendent ComfyUI via son interface de plugins (situés dans le dossier `custom_nodes`) sont généralement traités comme des œuvres distinctes pouvant porter leur propre licence — mais un fork ou une modification directe du code central de ComfyUI est une œuvre dérivée et doit rester sous GPL-3.0. Vérifiez la licence de chaque nœud personnalisé précis que vous installez, car les nœuds créés par la communauté ne sont pas couverts par la licence propre de ComfyUI et leurs conditions varient.',
-          '**La licence GPL-3.0 de ComfyUI ne dit rien de ce que vous pouvez faire des images que vous générez — cela est entièrement régi par la licence du modèle de diffusion que vous chargez.** Stable Diffusion 1.5, SD 2.1 et SDXL utilisent la licence CreativeML Open RAIL-M / RAIL++-M sans plafond de revenu commercial ; SD 3 et SD 3.5 utilisent la Stability AI Community License, gratuite seulement en dessous de 1 000 000 USD de revenu annuel ; FLUX.1 schnell est sous Apache 2.0 (sans restriction), tandis que FLUX.1 dev exige une licence commerciale séparée de [Black Forest Labs](https://blackforestlabs.ai) pour un usage commercial. Exécuter l\'un de ces modèles dans ComfyUI ne modifie ni n\'annule leurs conditions de licence.',
+          '**La licence GPL-3.0 de ComfyUI ne dit rien de ce que vous pouvez faire des images que vous générez — cela est entièrement régi par la licence du modèle de diffusion que vous chargez.** Stable Diffusion 1.5, SD 2.1 et SDXL utilisent la licence CreativeML Open RAIL-M / RAIL++-M sans plafond de revenu commercial ; SD 3 et SD 3.5 utilisent la Stability AI Community License, gratuite seulement en dessous de 1 000 000 USD de revenu annuel ; FLUX.1 schnell est sous Apache 2.0 (sans restriction), tandis que FLUX.1 [dev] est publié sous la licence non commerciale de Black Forest Labs, dont les dispositions sur l\'usage commercial du modèle et de ses sorties ne sont pas entièrement cohérentes ; consultez le [texte de la licence](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md) ou interrogez [Black Forest Labs](https://blackforestlabs.ai) avant tout usage commercial. Exécuter l\'un de ces modèles dans ComfyUI ne modifie ni n\'annule leurs conditions de licence.',
         ],
         note: 'Les conditions de licence sont un texte juridique, pas un texte marketing — cette section résume des conditions publiées publiquement à la date de la dernière mise à jour, mais ne constitue pas un conseil juridique. Lisez le fichier `LICENSE` réel sur le dépôt GitHub, ainsi que la licence du modèle que vous chargez, avant tout déploiement commercial.',
       },
@@ -1362,7 +1362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
@@ -1505,7 +1505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'ComfyUIは[GNU General Public License version 3.0(GPL-3.0)](https://github.com/comfyanonymous/ComfyUI/blob/master/LICENSE)の下で公開されている、コピーレフト型のオープンソースライセンスだ。これは、ソフトウェアをダウンロード、実行、改変、再配布(商用目的を含む)することが、収益しきい値や登録手続きなしに無料であることを意味する——新しいバージョンのStable Diffusionをカバーする、Stability AI Community Licenseとはこの点で異なる(その違いについては[当サイトのStable Diffusionレビュー](/ja/power-local-llm/stable-diffusion-review)を参照)。',
           'GPL-3.0のコピーレフト条件は、単に画像を生成したいだけの読者ではなく、主に開発者にとって重要である:ComfyUIのコアコードを改変し、その改変版を配布する場合、GPL-3.0は同じライセンスの下で変更を公開することを要求する。[公式リポジトリでのメンテナーの議論](https://github.com/comfyanonymous/ComfyUI/issues/3362)によれば、プラグインインターフェース経由でComfyUIを拡張するカスタムノード(`custom_nodes`フォルダ内にあるもの)は、一般的に独自のライセンスを持てる別個の著作物として扱われる——一方、ComfyUIのコアコード自体をフォークしたり直接改変したりするのは二次的著作物にあたり、GPL-3.0のままである必要がある。インストールする個々のカスタムノードのライセンスは確認すること。コミュニティ製のノードはComfyUI自体のライセンスの対象外であり、条件はさまざまである。',
-          '**ComfyUIのGPL-3.0ライセンスは、生成した画像で何ができるかについては何も規定していない——それは完全に、読み込んだ拡散モデルのライセンスによって決まる。** Stable Diffusion 1.5、SD 2.1、SDXLはCreativeML Open RAIL-M/RAIL++-Mライセンスを使用しており、商用収益の上限はない。SD 3とSD 3.5はStability AI Community Licenseを使用しており、年間収益100万USD未満でのみ無料である。FLUX.1 schnellはApache 2.0(無制限)である一方、FLUX.1 devは商用利用に[Black Forest Labs](https://blackforestlabs.ai)からの別個の商用ライセンスを必要とする。これらのモデルをComfyUI内で実行しても、そのライセンス条件が変更または上書きされることはない。',
+          '**ComfyUIのGPL-3.0ライセンスは、生成した画像で何ができるかについては何も規定していない——それは完全に、読み込んだ拡散モデルのライセンスによって決まる。** Stable Diffusion 1.5、SD 2.1、SDXLはCreativeML Open RAIL-M/RAIL++-Mライセンスを使用しており、商用収益の上限はない。SD 3とSD 3.5はStability AI Community Licenseを使用しており、年間収益100万USD未満でのみ無料である。FLUX.1 schnellはApache 2.0(無制限)である一方、FLUX.1 [dev]はBlack Forest Labsの非商用ライセンスで公開されており、モデルおよびその出力の商用利用に関する条項は完全には整合していない。商用利用の前に[ライセンス本文](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md)を確認するか、[Black Forest Labs](https://blackforestlabs.ai)に問い合わせてほしい。これらのモデルをComfyUI内で実行しても、そのライセンス条件が変更または上書きされることはない。',
         ],
         note: 'ライセンス条件は法的文書であり、マーケティング文言ではない——本セクションは最終更新時点で公開されている条件を要約したものであり、法的助言ではない。商用展開の前に、GitHubリポジトリ上の実際の`LICENSE`ファイルと、読み込むモデルのライセンスを確認すること。',
       },
@@ -1697,7 +1697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
@@ -1840,7 +1840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'O ComfyUI é distribuído sob a [Licença Pública Geral GNU versão 3.0 (GPL-3.0)](https://github.com/comfyanonymous/ComfyUI/blob/master/LICENSE), uma licença copyleft de código aberto. Isso significa que o software é gratuito para baixar, executar, modificar e redistribuir — inclusive para fins comerciais — sem teto de receita nem etapa de registro, ao contrário da Stability AI Community License que cobre as versões mais recentes do Stable Diffusion (veja [nossa análise do Stable Diffusion](/pt/power-local-llm/stable-diffusion-review) para essa distinção).',
           'A condição copyleft da GPL-3.0 importa principalmente para desenvolvedores, não para leitores que só querem gerar imagens: se você modificar o código central do ComfyUI e distribuir essa versão modificada, a GPL-3.0 exige que você publique suas mudanças sob a mesma licença. Segundo uma [discussão de mantenedores no repositório oficial](https://github.com/comfyanonymous/ComfyUI/issues/3362), nós personalizados que estendem o ComfyUI por meio de sua interface de plugins (localizados na pasta `custom_nodes`) geralmente são tratados como obras separadas que podem ter sua própria licença — mas um fork ou uma modificação direta do código central do ComfyUI é uma obra derivada e deve permanecer sob GPL-3.0. Verifique a licença de cada nó personalizado específico que você instalar, já que nós criados pela comunidade não são cobertos pela licença própria do ComfyUI e variam nos termos.',
-          '**A licença GPL-3.0 do ComfyUI não diz nada sobre o que você pode fazer com as imagens que gera — isso é regido inteiramente pela licença do modelo de difusão que você carrega.** Stable Diffusion 1.5, SD 2.1 e SDXL usam a licença CreativeML Open RAIL-M / RAIL++-M, sem teto de receita comercial; SD 3 e SD 3.5 usam a Stability AI Community License, gratuita apenas abaixo de 1.000.000 USD de receita anual; o FLUX.1 schnell é Apache 2.0 (sem restrições), enquanto o FLUX.1 dev exige uma licença comercial separada da [Black Forest Labs](https://blackforestlabs.ai) para uso comercial. Rodar qualquer um desses modelos dentro do ComfyUI não muda nem anula os termos de licença deles.',
+          '**A licença GPL-3.0 do ComfyUI não diz nada sobre o que você pode fazer com as imagens que gera — isso é regido inteiramente pela licença do modelo de difusão que você carrega.** Stable Diffusion 1.5, SD 2.1 e SDXL usam a licença CreativeML Open RAIL-M / RAIL++-M, sem teto de receita comercial; SD 3 e SD 3.5 usam a Stability AI Community License, gratuita apenas abaixo de 1.000.000 USD de receita anual; o FLUX.1 schnell é Apache 2.0 (sem restrições), enquanto o FLUX.1 [dev] é publicado sob a licença não comercial da Black Forest Labs, cujos termos sobre o uso comercial do modelo e de suas saídas não são totalmente consistentes; confira o [texto da licença](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md) ou consulte a [Black Forest Labs](https://blackforestlabs.ai) antes de usá-lo comercialmente. Rodar qualquer um desses modelos dentro do ComfyUI não muda nem anula os termos de licença deles.',
         ],
         note: 'Termos de licença são texto jurídico, não texto de marketing — esta seção resume termos publicados publicamente no momento da última atualização, mas não é aconselhamento jurídico. Leia o arquivo `LICENSE` real no repositório do GitHub, e a licença do modelo que você carregar, antes de qualquer uso comercial.',
       },
@@ -2032,7 +2032,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
@@ -2175,7 +2175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'تُصدر ComfyUI بموجب [رخصة جنو العمومية العامة الإصدار 3.0 (GPL-3.0)](https://github.com/comfyanonymous/ComfyUI/blob/master/LICENSE)، وهي رخصة مفتوحة المصدر من نوع copyleft. هذا يعني أن البرنامج مجاني للتنزيل والتشغيل والتعديل وإعادة التوزيع — بما في ذلك للأغراض التجارية — دون عتبة إيرادات أو خطوة تسجيل، بخلاف رخصة Stability AI Community License التي تغطي إصدارات Stable Diffusion الأحدث (راجع [مراجعتنا لـ Stable Diffusion](/ar/power-local-llm/stable-diffusion-review) لهذا التمييز).',
           'شرط copyleft في GPL-3.0 يهم المطورين بشكل أساسي، وليس القراء الذين يريدون فقط توليد الصور: إذا عدّلت الكود الأساسي لـ ComfyUI ووزّعت تلك النسخة المعدّلة، فإن GPL-3.0 تلزمك بإصدار تعديلاتك بموجب الرخصة نفسها. وفقًا لـ[نقاش بين القائمين على المستودع الرسمي](https://github.com/comfyanonymous/ComfyUI/issues/3362)، تُعامل العُقد المخصصة التي توسّع ComfyUI عبر واجهة الإضافات الخاصة بها (الموجودة في مجلد `custom_nodes`) عمومًا كأعمال منفصلة يمكن أن تحمل رخصتها الخاصة — أما التفريع أو التعديل المباشر لكود ComfyUI الأساسي فهو عمل مشتق ويجب أن يبقى بموجب GPL-3.0. تحقق من رخصة أي عقدة مخصصة معينة تثبّتها، لأن العُقد التي ينشئها المجتمع لا تخضع لرخصة ComfyUI الخاصة وتتفاوت شروطها.',
-          '**رخصة GPL-3.0 الخاصة بـ ComfyUI لا تقول شيئًا عمّا يُسمح لك بفعله بالصور التي تولّدها — فذلك تحكمه بالكامل رخصة نموذج الانتشار الذي تحمّله.** تستخدم Stable Diffusion 1.5 وSD 2.1 وSDXL رخصة CreativeML Open RAIL-M / RAIL++-M دون سقف إيرادات تجارية؛ بينما تستخدم SD 3 وSD 3.5 رخصة Stability AI Community License، وهي مجانية فقط لمن تقل إيراداته السنوية عن 1,000,000 دولار أمريكي؛ أما FLUX.1 schnell فهو بموجب Apache 2.0 (دون قيود)، في حين يتطلب FLUX.1 dev رخصة تجارية منفصلة من [Black Forest Labs](https://blackforestlabs.ai) للاستخدام التجاري. تشغيل أي من هذه النماذج داخل ComfyUI لا يغيّر أو يلغي شروط رخصتها.',
+          '**رخصة GPL-3.0 الخاصة بـ ComfyUI لا تقول شيئًا عمّا يُسمح لك بفعله بالصور التي تولّدها — فذلك تحكمه بالكامل رخصة نموذج الانتشار الذي تحمّله.** تستخدم Stable Diffusion 1.5 وSD 2.1 وSDXL رخصة CreativeML Open RAIL-M / RAIL++-M دون سقف إيرادات تجارية؛ بينما تستخدم SD 3 وSD 3.5 رخصة Stability AI Community License، وهي مجانية فقط لمن تقل إيراداته السنوية عن 1,000,000 دولار أمريكي؛ أما FLUX.1 schnell فهو بموجب Apache 2.0 (دون قيود)، في حين يُنشر FLUX.1 [dev] برخصة Black Forest Labs غير التجارية، وشروطها بشأن الاستخدام التجاري للنموذج ولمخرجاته غير متسقة تماماً؛ راجع [نص الرخصة](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md) أو اسأل [Black Forest Labs](https://blackforestlabs.ai) قبل أي استخدام تجاري. تشغيل أي من هذه النماذج داخل ComfyUI لا يغيّر أو يلغي شروط رخصتها.',
         ],
         note: 'شروط الرخصة نص قانوني وليست نصًا تسويقيًا — يلخّص هذا القسم شروطًا منشورة علنًا وقت آخر تحديث، لكنه ليس استشارة قانونية. اقرأ ملف `LICENSE` الفعلي على مستودع GitHub، ورخصة النموذج الذي تحمّله، قبل أي نشر تجاري.',
       },
@@ -2367,7 +2367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
@@ -2510,7 +2510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'ComfyUI在[GNU通用公共许可证3.0版(GPL-3.0)](https://github.com/comfyanonymous/ComfyUI/blob/master/LICENSE)下发布,这是一种著佐权(copyleft)开源许可证。这意味着该软件可以免费下载、运行、修改和再分发——包括用于商业目的——没有收入门槛,也无需注册步骤,这与涵盖较新版本Stable Diffusion的Stability AI Community License不同(相关区别参见[我们的Stable Diffusion评测](/zh/power-local-llm/stable-diffusion-review))。',
           'GPL-3.0的著佐权条款主要与开发者相关,而非只想生成图像的读者:如果你修改了ComfyUI的核心代码并分发该修改版本,GPL-3.0要求你以相同许可证发布你的改动。根据[官方代码仓库上一场维护者的讨论](https://github.com/comfyanonymous/ComfyUI/issues/3362),通过其插件接口扩展ComfyUI的自定义节点(位于`custom_nodes`文件夹中)通常被视为可拥有自己许可证的独立作品——但对ComfyUI核心代码本身的分叉或直接修改属于衍生作品,必须继续遵循GPL-3.0。请核实你所安装的每一个具体自定义节点的许可证,因为社区编写的节点不受ComfyUI自身许可证的约束,条款各不相同。',
-          '**ComfyUI的GPL-3.0许可证并未规定你可以对生成的图像做什么——这完全由你所加载的扩散模型的许可证决定。** Stable Diffusion 1.5、SD 2.1和SDXL采用CreativeML Open RAIL-M/RAIL++-M许可证,没有商业收入上限;SD 3和SD 3.5采用Stability AI Community License,仅在年收入低于100万美元时免费;FLUX.1 schnell采用Apache 2.0许可证(无限制),而FLUX.1 dev的商业使用则需要向[Black Forest Labs](https://blackforestlabs.ai)单独获取商业许可证。在ComfyUI中运行这些模型并不会改变或覆盖它们各自的许可条款。',
+          '**ComfyUI的GPL-3.0许可证并未规定你可以对生成的图像做什么——这完全由你所加载的扩散模型的许可证决定。** Stable Diffusion 1.5、SD 2.1和SDXL采用CreativeML Open RAIL-M/RAIL++-M许可证,没有商业收入上限;SD 3和SD 3.5采用Stability AI Community License,仅在年收入低于100万美元时免费;FLUX.1 schnell采用Apache 2.0许可证(无限制),而FLUX.1 [dev]采用Black Forest Labs的非商业许可证发布,其中关于模型及其输出商业使用的条款并不完全一致;商业使用前请查阅[许可证文本](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md)或咨询[Black Forest Labs](https://blackforestlabs.ai)。在ComfyUI中运行这些模型并不会改变或覆盖它们各自的许可条款。',
         ],
         note: '许可条款是法律文本,不是营销文案——本节概述了最近一次更新时公开发布的条款,但不构成法律建议。在进行任何商业部署之前,请阅读GitHub代码仓库上实际的`LICENSE`文件,以及你所加载模型的许可证。',
       },
@@ -2702,7 +2702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     next_refresh_due: '2027-05-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
@@ -2845,7 +2845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'ComfyUI는 [GNU 일반 공중 사용 허가서 3.0판(GPL-3.0)](https://github.com/comfyanonymous/ComfyUI/blob/master/LICENSE) 아래 공개되어 있으며, 이는 카피레프트 오픈소스 라이선스다. 즉 소프트웨어를 다운로드, 실행, 수정, 재배포 — 상업적 목적을 포함해 — 하는 데 수익 임계값도, 등록 절차도 필요 없이 무료라는 뜻이다. 이는 최신 버전의 Stable Diffusion을 다루는 Stability AI Community License와는 다르다(그 차이는 [저희 Stable Diffusion 리뷰](/ko/power-local-llm/stable-diffusion-review) 참고).',
           'GPL-3.0의 카피레프트 조건은 이미지를 만들고 싶을 뿐인 독자보다는 주로 개발자에게 중요하다: ComfyUI의 코어 코드를 수정하고 그 수정 버전을 배포한다면, GPL-3.0은 그 변경 사항을 같은 라이선스로 공개할 것을 요구한다. [공식 저장소의 메인테이너 토론](https://github.com/comfyanonymous/ComfyUI/issues/3362)에 따르면, ComfyUI를 플러그인 인터페이스를 통해 확장하는 커스텀 노드(`custom_nodes` 폴더 안에 위치)는 일반적으로 자체 라이선스를 가질 수 있는 별개의 저작물로 취급된다 — 반면 ComfyUI 코어 코드 자체를 포크하거나 직접 수정하는 것은 2차적 저작물이며 GPL-3.0을 유지해야 한다. 설치하는 각 커스텀 노드의 라이선스는 개별적으로 확인해야 한다. 커뮤니티가 작성한 노드는 ComfyUI 자체의 라이선스에 포함되지 않으며 조건이 제각각이다.',
-          '**ComfyUI의 GPL-3.0 라이선스는 생성한 이미지로 무엇을 할 수 있는지 전혀 규정하지 않는다 — 이는 전적으로 불러온 확산 모델의 라이선스가 관장한다.** Stable Diffusion 1.5, SD 2.1, SDXL은 상업적 수익 상한이 없는 CreativeML Open RAIL-M / RAIL++-M 라이선스를 사용한다. SD 3과 SD 3.5는 Stability AI Community License를 사용하며, 연간 매출 100만 달러 미만일 때만 무료다. FLUX.1 schnell은 Apache 2.0(제한 없음)이며, FLUX.1 dev는 상업적 사용을 위해 [Black Forest Labs](https://blackforestlabs.ai)로부터 별도의 상업용 라이선스가 필요하다. 이 모델들을 ComfyUI 안에서 실행한다고 해서 각각의 라이선스 조건이 바뀌거나 무효화되지는 않는다.',
+          '**ComfyUI의 GPL-3.0 라이선스는 생성한 이미지로 무엇을 할 수 있는지 전혀 규정하지 않는다 — 이는 전적으로 불러온 확산 모델의 라이선스가 관장한다.** Stable Diffusion 1.5, SD 2.1, SDXL은 상업적 수익 상한이 없는 CreativeML Open RAIL-M / RAIL++-M 라이선스를 사용한다. SD 3과 SD 3.5는 Stability AI Community License를 사용하며, 연간 매출 100만 달러 미만일 때만 무료다. FLUX.1 schnell은 Apache 2.0(제한 없음)이며, FLUX.1 [dev]는 Black Forest Labs의 비상업 라이선스로 배포되며, 모델과 그 출력물의 상업적 사용에 관한 조항이 완전히 일치하지는 않는다. 상업적으로 사용하기 전에 [라이선스 본문](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md)을 확인하거나 [Black Forest Labs](https://blackforestlabs.ai)에 문의하라. 이 모델들을 ComfyUI 안에서 실행한다고 해서 각각의 라이선스 조건이 바뀌거나 무효화되지는 않는다.',
         ],
         note: '라이선스 조건은 법률 문서이지 마케팅 문구가 아니다 — 이 섹션은 최근 업데이트 시점에 공개된 조건을 요약한 것이며 법률 자문이 아니다. 상업적 배포 전에 GitHub 저장소의 실제 `LICENSE` 파일과 불러오는 모델의 라이선스를 읽어보라.',
       },
