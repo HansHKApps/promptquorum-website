@@ -1054,6 +1054,11 @@
     "urlSlug": "trilium-notes-review",
     "url": "/power-local-llm/trilium-notes-review"
   },
+  "ramen": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ramen-review",
+    "url": "/power-local-llm/ramen-review"
+  },
   "llm-vision": {
     "cluster": "power-local-llm",
     "urlSlug": "llm-vision-review",
@@ -1693,6 +1698,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "aiko-review",
     "url": "/power-local-llm/aiko-review"
+  },
+  "weesper-neon-flow": {
+    "cluster": "power-local-llm",
+    "urlSlug": "weesper-neon-flow-review",
+    "url": "/power-local-llm/weesper-neon-flow-review"
   },
   "anyllm": {
     "cluster": "power-local-llm",

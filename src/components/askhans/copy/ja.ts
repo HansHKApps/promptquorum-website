@@ -52,7 +52,7 @@ export const copy: AskCopy = {
   panelLabelPrefix: 'トピック',
   panelLinksHeading: '関連ページ',
 
-  // Final consent text as of 2026-11-06 (see docs/askhans-privacy-draft.de.md). On any change bump ASK_HANS_CONSENT_TEXT_VERSION.
+  // Consent text as of 2026-11-06 (see docs/askhans-privacy.de.md). On any change bump ASK_HANS_CONSENT_TEXT_VERSION.
   consentTitle: '始める前に',
   consentParagraphs: [
     'Ask Hans は、PromptQuorum のコンテンツに基づき、AI(Anthropic の Claude)を使ってご質問にお答えします。そのため、入力内容は当社のサーバーと Anthropic に送信されます。個人情報は入力しないでください。',

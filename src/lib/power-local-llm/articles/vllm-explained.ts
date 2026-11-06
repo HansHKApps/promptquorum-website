@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'vLLM',
     title: 'vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)',
     seoTitle: 'vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)',
-    intro: 'vLLM is a free, Apache 2.0-licensed library for LLM inference and serving that originated in the Sky Computing Lab at [UC Berkeley](https://github.com/vllm-project/vllm) and is now maintained by a large open-source community. Its core technical contribution is PagedAttention, a memory-management technique for the attention key-value (KV) cache that lets a GPU serve far more concurrent requests from the same memory than naive attention implementations, combined with continuous batching that keeps a GPU busy across many simultaneous requests instead of processing them one fixed batch at a time. vLLM ships a built-in OpenAI-compatible API server and targets production, multi-user GPU serving — it is a different kind of tool than single-user desktop apps like Ollama or LM Studio.',
+    intro: 'vLLM is a free, Apache 2.0-licensed library for LLM inference and serving that originated in the Sky Computing Lab at UC Berkeley and is now maintained by a large open-source community. Its core technical contribution is PagedAttention, a memory-management technique for the attention key-value (KV) cache that lets a GPU serve far more concurrent requests from the same memory than naive attention implementations, combined with continuous batching that keeps a GPU busy across many simultaneous requests instead of processing them one fixed batch at a time. PagedAttention stores that cache in non-contiguous, page-sized blocks, similar in spirit to operating-system virtual memory, so a GPU does not over-allocate memory for each request. vLLM also supports quantization formats including AWQ, GPTQ, and FP8, and tensor-parallel multi-GPU serving. vLLM ships a built-in OpenAI-compatible API server and targets production, multi-user GPU serving — it is a different kind of tool than single-user desktop apps like Ollama or LM Studio.',
     metaDescription: 'vLLM is the free, Apache 2.0-licensed inference server built around PagedAttention and continuous batching. What it is, how it differs from Ollama, TGI, and TensorRT-LLM, and how to run it.',
     readTime: '13 min read',
     targetKeywords: [
@@ -26,13 +26,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'vLLM vs TGI',
       '[github.com/vllm-project/vllm](https://github.com/vllm-project/vllm)',
     ],
-    leadAnswerBlock: '**vLLM is a free, open-source (Apache 2.0) library for high-throughput LLM inference and serving, originated by the Sky Computing Lab at [UC Berkeley](https://github.com/vllm-project/vllm) and now maintained by a large open-source community.** Its key technical differentiator is PagedAttention, which manages the attention KV cache in non-contiguous, page-sized blocks — similar in spirit to how an operating system manages virtual memory — so a GPU can hold far more concurrent request state without over-allocating memory for each one. Combined with continuous batching, this lets vLLM serve many simultaneous users from one GPU (or a tensor-parallel multi-GPU setup) with less wasted memory than a naive serving loop. vLLM ships a built-in OpenAI-compatible API server (`vllm serve`), supports quantization formats including AWQ, GPTQ, and FP8, and is built for production and multi-tenant serving — not for the single-user, point-and-click local-chat use case that tools like Ollama and LM Studio target.',
+    leadAnswerBlock: '**vLLM is a free, open-source (Apache 2.0) library for high-throughput LLM inference and serving.** It uses PagedAttention and continuous batching to serve many concurrent requests from one GPU, and ships an OpenAI-compatible API server (`vllm serve`).',
     quickAnswerTop: {
       en: {
         question: 'What is vLLM and how does it work?',
         answer: 'vLLM is a free, Apache 2.0-licensed library for LLM inference and serving, originated by the Sky Computing Lab at UC Berkeley. It manages the attention KV cache with PagedAttention — splitting it into page-sized blocks instead of one contiguous allocation per request — and combines that with continuous batching to serve many concurrent users efficiently from a GPU. It ships a built-in OpenAI-compatible server and is built for production serving, not single-user desktop chat.',
         bullets: [
-          'Apache 2.0-licensed, originated at the [UC Berkeley](https://github.com/vllm-project/vllm) Sky Computing Lab',
+          'Apache 2.0-licensed, originated at the UC Berkeley Sky Computing Lab',
           'PagedAttention: page-sized, non-contiguous KV-cache memory management',
           'Continuous batching keeps the GPU busy across many concurrent requests',
           'Built-in OpenAI-compatible API server via the `vllm serve` command',
@@ -66,7 +66,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Instead of a desktop chat app, vLLM is server software: you point it at a model and it exposes an API that many people or applications can call at once, packing GPU memory more efficiently than a simple one-request-at-a-time setup.' },
         ],
         items: [
-          'Free and Apache 2.0-licensed open-source, originated at the [UC Berkeley](https://github.com/vllm-project/vllm) Sky Computing Lab',
+          'Free and Apache 2.0-licensed open-source, originated at the UC Berkeley Sky Computing Lab',
           'PagedAttention manages the KV cache in page-sized, non-contiguous blocks to reduce wasted GPU memory',
           'Continuous batching processes many concurrent requests instead of one fixed batch at a time',
           'Ships a built-in OpenAI-compatible API server, started with the `vllm serve` command',
@@ -82,13 +82,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-vllm',
         title: 'What Is vLLM?',
-        content: 'vLLM is a free, Apache 2.0-licensed library and server for running large language model inference at scale. It originated as a research project in the Sky Computing Lab at [UC Berkeley](https://github.com/vllm-project/vllm) and has since grown into one of the most widely used open-source LLM serving engines, with contributions from thousands of developers across academic and industry organizations. Unlike tools built primarily for a single user chatting with a model on their own machine, vLLM is designed to serve many concurrent requests — from multiple users or applications — off of shared GPU capacity as efficiently as possible.',
+        content: 'vLLM is a free, Apache 2.0-licensed library and server for running large language model inference at scale. It originated as a research project in the Sky Computing Lab at UC Berkeley and has since grown into a widely used open-source LLM serving engine with a large contributor community across academic and industry organizations. Unlike tools built primarily for a single user chatting with a model on their own machine, vLLM is designed to serve many concurrent requests — from multiple users or applications — off of shared GPU capacity as efficiently as possible.',
         items: [
-          'Originated in the Sky Computing Lab at [UC Berkeley](https://github.com/vllm-project/vllm), now a community-governed open-source project',
+          'Originated in the Sky Computing Lab at UC Berkeley, now a community-governed open-source project',
           'Apache 2.0-licensed: source code is publicly available for use, modification, and redistribution under the license terms',
           'Loads models in the Hugging Face Transformers-compatible format, giving it broad architecture coverage — Llama, Mistral, Qwen, DeepSeek, and many other model families — without needing a separate model-conversion step for most models',
           'Built around serving many concurrent requests efficiently, not just running a single conversation quickly',
-          'One of the most widely referenced open-source LLM serving projects on GitHub',
+          'Developed in the open on GitHub, with public releases and documentation',
         ],
         note: 'vLLM is server infrastructure, not a consumer chat app — there is no graphical installer and no "download and click" experience. If you want a point-and-click local chat app instead, tools like Ollama or LM Studio are built for that use case; see the comparison table below.',
       },
@@ -140,7 +140,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Running `vllm serve` starts an HTTP server that implements the OpenAI API protocol, so applications and SDKs already built against the OpenAI API can often point at a self-hosted vLLM instance with only a base-URL and model-name change.',
         items: [
           'OpenAI-compatible chat completions and completions endpoints, usable as a drop-in replacement for OpenAI-API-based client code',
-          'Configurable host and port (the server listens on `http://localhost:8000` by default)',
+          'Configurable host and port (default port 8000; set `--host` to choose which network interfaces the server listens on)',
+          'Optional `--api-key` flag requires a key in the request header, but per the [vLLM CLI reference](https://docs.vllm.ai/en/latest/cli/serve/) it only authenticates the `/v1`, `/v2`, and `/inference` path prefixes — other endpoints stay open, so do not expose the server to untrusted networks without a firewall or reverse proxy',
           'Engine flags for tensor-parallel size, GPU memory utilization target, and quantization format, set at server startup',
           'Support for serving multiple LoRA adapters against a single loaded base model',
           'Structured-output and function/tool-calling support for compatible request formats',
@@ -157,7 +158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Start the OpenAI-compatible server with a model from [Hugging Face](https://huggingface.co/models), for example: `vllm serve meta-llama/Llama-3.1-8B-Instruct`.',
           'For a pre-quantized model, pass the matching flag, for example: `vllm serve TheBloke/Llama-2-13B-AWQ --quantization awq`.',
           'For multi-GPU serving, add a tensor-parallel flag, for example: `vllm serve <model> --tensor-parallel-size 2` to split the model across two GPUs.',
-          'By default the server listens on `http://localhost:8000`; send a request to its `/v1/chat/completions` endpoint with any OpenAI-API-compatible client library, or `curl`.',
+          'The server\'s default port is 8000; send a request to its `/v1/chat/completions` endpoint (on the same machine, for example `http://localhost:8000/v1/chat/completions`) with any OpenAI-API-compatible client library, or `curl`.',
           'Point existing OpenAI-API client code at your self-hosted server by changing only its base URL and model name.',
         ],
         faqs: [
@@ -210,7 +211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Avoid using vLLM if',
             list: [
               'You want to run a model on your own laptop or desktop for personal, single-user chat — Ollama or LM Studio fit that need far better',
-              'You do not have a supported GPU — vLLM\'s CPU backend is not its focus, and it has no meaningful support for Apple Silicon the way llama.cpp or Ollama does',
+              'You do not have a supported GPU — vLLM\'s CPU backend is not its focus, and its Apple Silicon support is not first-class the way llama.cpp\'s or Ollama\'s is',
               'You want a graphical, point-and-click interface rather than an API server and command-line flags',
               'You are not comfortable troubleshooting CUDA drivers, Python dependency conflicts, or GPU memory configuration',
             ],
@@ -251,7 +252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Mistake 1: Trying to run it on a laptop with no dedicated GPU',
-            content: 'vLLM\'s CPU backend exists but is not its focus, and it has no meaningful support for Apple Silicon the way llama.cpp or Ollama does. Attempting to run it on a CPU-only laptop or an Apple Silicon Mac typically leads to poor performance or setup friction that a purpose-built local tool would avoid entirely.',
+            content: 'vLLM\'s CPU backend exists but is not its focus, and its Apple Silicon support is not first-class the way llama.cpp\'s or Ollama\'s is. Attempting to run it on a CPU-only laptop or an Apple Silicon Mac typically leads to poor performance or setup friction that a purpose-built local tool would avoid entirely.',
           },
           {
             title: 'Mistake 2: Expecting a graphical installer or chat window',
@@ -315,7 +316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'vLLM',
     title: 'vLLM erklärt: Hochleistungs-LLM-Serving mit PagedAttention (2026)',
     seoTitle: 'vLLM erklärt: Hochleistungs-LLM-Serving mit PagedAttention (2026)',
-    intro: 'vLLM ist eine kostenlose, Apache-2.0-lizenzierte Bibliothek für LLM-Inferenz und -Serving, die im Sky Computing Lab der [UC Berkeley](https://github.com/vllm-project/vllm) entstand und heute von einer großen Open-Source-Community gepflegt wird. Der zentrale technische Beitrag ist PagedAttention, eine Speicherverwaltungstechnik für den Attention-Key-Value-Cache (KV-Cache), die es einer GPU erlaubt, aus dem gleichen Speicher deutlich mehr gleichzeitige Anfragen zu bedienen als bei naiven Attention-Implementierungen — kombiniert mit Continuous Batching, das eine GPU über viele gleichzeitige Anfragen hinweg ausgelastet hält, statt sie in festen Batches nacheinander abzuarbeiten. vLLM bringt einen eingebauten OpenAI-kompatiblen API-Server mit und zielt auf Produktions-Serving für viele Nutzer ab — ein anderes Werkzeug als Einzelnutzer-Desktop-Apps wie Ollama oder LM Studio.',
+    intro: 'vLLM ist eine kostenlose, Apache-2.0-lizenzierte Bibliothek für LLM-Inferenz und -Serving, die im Sky Computing Lab der UC Berkeley entstand und heute von einer großen Open-Source-Community gepflegt wird. Der zentrale technische Beitrag ist PagedAttention, eine Speicherverwaltungstechnik für den Attention-Key-Value-Cache (KV-Cache), die es einer GPU erlaubt, aus dem gleichen Speicher deutlich mehr gleichzeitige Anfragen zu bedienen als bei naiven Attention-Implementierungen — kombiniert mit Continuous Batching, das eine GPU über viele gleichzeitige Anfragen hinweg ausgelastet hält, statt sie in festen Batches nacheinander abzuarbeiten. PagedAttention legt diesen Cache in nicht zusammenhängenden, seitengroßen Blöcken ab — ähnlich wie ein Betriebssystem virtuellen Speicher verwaltet —, sodass eine GPU nicht für jede Anfrage übermäßig Speicher reserviert. vLLM unterstützt zudem Quantisierungsformate wie AWQ, GPTQ und FP8 sowie Tensor-Parallel-Serving über mehrere GPUs. vLLM bringt einen eingebauten OpenAI-kompatiblen API-Server mit und zielt auf Produktions-Serving für viele Nutzer ab — ein anderes Werkzeug als Einzelnutzer-Desktop-Apps wie Ollama oder LM Studio.',
     metaDescription: 'vLLM ist der kostenlose, Apache-2.0-lizenzierte Inferenz-Server rund um PagedAttention und Continuous Batching. Was es ist, Unterschiede zu Ollama, TGI und TensorRT-LLM, und wie man es betreibt.',
     readTime: '13 Min. Lesezeit',
     targetKeywords: [
@@ -326,13 +327,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'vLLM vs TGI',
       '[github.com/vllm-project/vllm](https://github.com/vllm-project/vllm)',
     ],
-    leadAnswerBlock: '**vLLM ist eine kostenlose, quelloffene (Apache 2.0) Bibliothek für hochperformante LLM-Inferenz und -Serving, entstanden im Sky Computing Lab der [UC Berkeley](https://github.com/vllm-project/vllm) und heute von einer großen Open-Source-Community gepflegt.** Das technische Alleinstellungsmerkmal ist PagedAttention, das den Attention-KV-Cache in nicht zusammenhängenden, seitengroßen Blöcken verwaltet — ähnlich wie ein Betriebssystem virtuellen Speicher verwaltet —, sodass eine GPU deutlich mehr gleichzeitigen Anfrage-Zustand halten kann, ohne für jede Anfrage übermäßig Speicher zu reservieren. Zusammen mit Continuous Batching erlaubt das vLLM, viele gleichzeitige Nutzer von einer GPU (oder einem Tensor-Parallel-Multi-GPU-Setup) mit weniger verschwendetem Speicher zu bedienen als eine naive Serving-Schleife. vLLM bringt einen eingebauten OpenAI-kompatiblen API-Server (`vllm serve`) mit, unterstützt Quantisierungsformate wie AWQ, GPTQ und FP8 und ist für Produktions- und Multi-Tenant-Serving gebaut — nicht für den Einzelnutzer-Klick-Anwendungsfall, auf den Tools wie Ollama und LM Studio zielen.',
+    leadAnswerBlock: '**vLLM ist eine kostenlose, quelloffene (Apache 2.0) Bibliothek für hochperformante LLM-Inferenz und -Serving.** Sie nutzt PagedAttention und Continuous Batching, um viele gleichzeitige Anfragen von einer GPU zu bedienen, und bringt einen eingebauten OpenAI-kompatiblen API-Server (`vllm serve`) mit.',
     quickAnswerTop: {
       de: {
         question: 'Was ist vLLM und wie funktioniert es?',
         answer: 'vLLM ist eine kostenlose, Apache-2.0-lizenzierte Bibliothek für LLM-Inferenz und -Serving, entstanden im Sky Computing Lab der UC Berkeley. Sie verwaltet den Attention-KV-Cache mit PagedAttention — aufgeteilt in seitengroße Blöcke statt einer zusammenhängenden Zuweisung pro Anfrage — und kombiniert das mit Continuous Batching, um viele gleichzeitige Nutzer effizient von einer GPU zu bedienen. Sie bringt einen eingebauten OpenAI-kompatiblen Server mit und ist für Produktions-Serving gebaut, nicht für Einzelnutzer-Desktop-Chat.',
         bullets: [
-          'Apache-2.0-lizenziert, entstanden im Sky Computing Lab der [UC Berkeley](https://github.com/vllm-project/vllm)',
+          'Apache-2.0-lizenziert, entstanden im Sky Computing Lab der UC Berkeley',
           'PagedAttention: seitengroße, nicht zusammenhängende KV-Cache-Speicherverwaltung',
           'Continuous Batching hält die GPU über viele gleichzeitige Anfragen hinweg ausgelastet',
           'Eingebauter OpenAI-kompatibler API-Server über den Befehl `vllm serve`',
@@ -366,7 +367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Statt einer Desktop-Chat-App ist vLLM Server-Software: Man richtet sie auf ein Modell aus, und sie stellt eine API bereit, die viele Personen oder Anwendungen gleichzeitig aufrufen können — mit effizienterer GPU-Speichernutzung als bei einem einfachen Ein-Anfrage-nach-der-anderen-Aufbau.' },
         ],
         items: [
-          'Kostenlos und Apache-2.0-lizenziert quelloffen, entstanden im Sky Computing Lab der [UC Berkeley](https://github.com/vllm-project/vllm)',
+          'Kostenlos und Apache-2.0-lizenziert quelloffen, entstanden im Sky Computing Lab der UC Berkeley',
           'PagedAttention verwaltet den KV-Cache in seitengroßen, nicht zusammenhängenden Blöcken, um verschwendeten GPU-Speicher zu reduzieren',
           'Continuous Batching verarbeitet viele gleichzeitige Anfragen statt eines festen Batches nach dem anderen',
           'Bringt einen eingebauten OpenAI-kompatiblen API-Server mit, gestartet mit dem Befehl `vllm serve`',
@@ -382,13 +383,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-vllm',
         title: 'Was ist vLLM?',
-        content: 'vLLM ist eine kostenlose, Apache-2.0-lizenzierte Bibliothek und ein Server für LLM-Inferenz im großen Maßstab. Es entstand als Forschungsprojekt im Sky Computing Lab der [UC Berkeley](https://github.com/vllm-project/vllm) und hat sich seitdem zu einer der meistgenutzten Open-Source-LLM-Serving-Engines entwickelt, mit Beiträgen von Tausenden Entwicklern aus Wissenschaft und Industrie. Anders als Tools, die vor allem für einen einzelnen Nutzer gebaut sind, der auf seiner eigenen Maschine mit einem Modell chattet, ist vLLM darauf ausgelegt, viele gleichzeitige Anfragen — von mehreren Nutzern oder Anwendungen — möglichst effizient aus gemeinsamer GPU-Kapazität zu bedienen.',
+        content: 'vLLM ist eine kostenlose, Apache-2.0-lizenzierte Bibliothek und ein Server für LLM-Inferenz im großen Maßstab. Es entstand als Forschungsprojekt im Sky Computing Lab der UC Berkeley und hat sich seitdem zu einer weit verbreiteten Open-Source-LLM-Serving-Engine mit einer großen Contributor-Community aus Wissenschaft und Industrie entwickelt. Anders als Tools, die vor allem für einen einzelnen Nutzer gebaut sind, der auf seiner eigenen Maschine mit einem Modell chattet, ist vLLM darauf ausgelegt, viele gleichzeitige Anfragen — von mehreren Nutzern oder Anwendungen — möglichst effizient aus gemeinsamer GPU-Kapazität zu bedienen.',
         items: [
-          'Entstanden im Sky Computing Lab der [UC Berkeley](https://github.com/vllm-project/vllm), heute ein community-geführtes Open-Source-Projekt',
+          'Entstanden im Sky Computing Lab der UC Berkeley, heute ein community-geführtes Open-Source-Projekt',
           'Apache-2.0-lizenziert: der Quellcode ist öffentlich verfügbar zur Nutzung, Änderung und Weitergabe gemäß den Lizenzbedingungen',
           'Lädt Modelle im Hugging-Transformers-kompatiblen Format, was breite Architekturabdeckung ermöglicht — Llama, Mistral, Qwen, DeepSeek und viele weitere Modellfamilien — meist ohne separaten Konvertierungsschritt',
           'Ausgelegt auf effizientes Bedienen vieler gleichzeitiger Anfragen, nicht nur auf ein schnelles Einzelgespräch',
-          'Eines der meistreferenzierten Open-Source-LLM-Serving-Projekte auf GitHub',
+          'Offen auf GitHub entwickelt, mit öffentlichen Releases und Dokumentation',
         ],
         note: 'vLLM ist Server-Infrastruktur, keine Consumer-Chat-App — es gibt keinen grafischen Installer und kein „Herunterladen und Klicken"-Erlebnis. Wer eine Klick-Chat-App für lokale Nutzung möchte, ist bei Tools wie Ollama oder LM Studio besser aufgehoben; siehe die Vergleichstabelle unten.',
       },
@@ -440,7 +441,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Der Befehl `vllm serve` startet einen HTTP-Server, der das OpenAI-API-Protokoll implementiert, sodass Anwendungen und SDKs, die bereits gegen die OpenAI-API gebaut sind, oft nur mit geänderter Basis-URL und Modellname auf eine selbst gehostete vLLM-Instanz zeigen können.',
         items: [
           'OpenAI-kompatible Chat-Completions- und Completions-Endpunkte, nutzbar als direkter Ersatz für OpenAI-API-basierten Client-Code',
-          'Konfigurierbarer Host und Port (der Server lauscht standardmäßig auf `http://localhost:8000`)',
+          'Konfigurierbarer Host und Port (Standardport 8000; mit `--host` legen Sie fest, auf welchen Netzwerkschnittstellen der Server lauscht)',
+          'Optionales Flag `--api-key` verlangt einen Schlüssel im Request-Header, authentifiziert laut [vLLM-CLI-Referenz](https://docs.vllm.ai/en/latest/cli/serve/) aber nur die Pfadpräfixe `/v1`, `/v2` und `/inference` — andere Endpunkte bleiben offen; den Server daher nicht ohne Firewall oder Reverse-Proxy in nicht vertrauenswürdige Netzwerke exponieren',
           'Engine-Flags für Tensor-Parallel-Größe, GPU-Speicherauslastungsziel und Quantisierungsformat, gesetzt beim Serverstart',
           'Unterstützung für das Serving mehrerer LoRA-Adapter gegen ein einzelnes geladenes Basismodell',
           'Unterstützung für strukturierte Ausgaben und Function-/Tool-Calling bei kompatiblen Anfrageformaten',
@@ -457,7 +459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Den OpenAI-kompatiblen Server mit einem Modell von [Hugging Face](https://huggingface.co/models) starten, z. B.: `vllm serve meta-llama/Llama-3.1-8B-Instruct`.',
           'Für ein vorquantisiertes Modell das passende Flag übergeben, z. B.: `vllm serve TheBloke/Llama-2-13B-AWQ --quantization awq`.',
           'Für Multi-GPU-Serving ein Tensor-Parallel-Flag hinzufügen, z. B.: `vllm serve <model> --tensor-parallel-size 2`, um das Modell auf zwei GPUs zu verteilen.',
-          'Standardmäßig lauscht der Server auf `http://localhost:8000`; eine Anfrage an den `/v1/chat/completions`-Endpunkt mit einer beliebigen OpenAI-API-kompatiblen Client-Bibliothek oder `curl` senden.',
+          'Der Standardport des Servers ist 8000; eine Anfrage an den `/v1/chat/completions`-Endpunkt (auf demselben Rechner z. B. `http://localhost:8000/v1/chat/completions`) mit einer beliebigen OpenAI-API-kompatiblen Client-Bibliothek oder `curl` senden.',
           'Bestehenden OpenAI-API-Client-Code nur durch Ändern von Basis-URL und Modellname auf den selbst gehosteten Server richten.',
         ],
         faqs: [
@@ -510,7 +512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Vermeiden Sie vLLM, wenn',
             list: [
               'Sie ein Modell auf dem eigenen Laptop oder Desktop für persönlichen Einzelnutzer-Chat ausführen wollen — Ollama oder LM Studio passen dafür deutlich besser',
-              'Sie keine unterstützte GPU haben — vLLMs CPU-Backend ist nicht der Fokus, und es gibt keine nennenswerte Apple-Silicon-Unterstützung wie bei llama.cpp oder Ollama',
+              'Sie keine unterstützte GPU haben — vLLMs CPU-Backend ist nicht der Fokus, und die Apple-Silicon-Unterstützung ist nicht erstklassig wie bei llama.cpp oder Ollama',
               'Sie eine grafische Klick-Oberfläche statt eines API-Servers und Kommandozeilen-Flags wollen',
               'Sie sich nicht sicher im Umgang mit CUDA-Treibern, Python-Abhängigkeitskonflikten oder GPU-Speicherkonfiguration fühlen',
             ],
@@ -551,7 +553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Fehler 1: Der Versuch, es auf einem Laptop ohne dedizierte GPU auszuführen',
-            content: 'vLLMs CPU-Backend existiert, ist aber nicht der Fokus, und es gibt keine nennenswerte Apple-Silicon-Unterstützung wie bei llama.cpp oder Ollama. Der Versuch, es auf einem reinen CPU-Laptop oder einem Apple-Silicon-Mac auszuführen, führt typischerweise zu schlechter Performance oder Setup-Reibung, die ein dafür gebautes lokales Tool ganz vermeiden würde.',
+            content: 'vLLMs CPU-Backend existiert, ist aber nicht der Fokus, und die Apple-Silicon-Unterstützung ist nicht erstklassig wie bei llama.cpp oder Ollama. Der Versuch, es auf einem reinen CPU-Laptop oder einem Apple-Silicon-Mac auszuführen, führt typischerweise zu schlechter Performance oder Setup-Reibung, die ein dafür gebautes lokales Tool ganz vermeiden würde.',
           },
           {
             title: 'Fehler 2: Einen grafischen Installer oder ein Chat-Fenster erwarten',
@@ -615,7 +617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'vLLM',
     title: 'vLLM expliqué : le serveur LLM haute performance avec PagedAttention (2026)',
     seoTitle: 'vLLM expliqué : le serveur LLM haute performance avec PagedAttention (2026)',
-    intro: 'vLLM est une bibliothèque gratuite, sous licence Apache 2.0, pour l\'inférence et le service de LLM, née au Sky Computing Lab de l\'[UC Berkeley](https://github.com/vllm-project/vllm) et aujourd\'hui maintenue par une large communauté open source. Sa contribution technique centrale est PagedAttention, une technique de gestion mémoire pour le cache d\'attention clé-valeur (KV) qui permet à un GPU de servir bien plus de requêtes simultanées à partir de la même mémoire qu\'avec une implémentation d\'attention naïve, combinée à un batching continu qui garde le GPU occupé sur de nombreuses requêtes simultanées plutôt que de les traiter par lots fixes. vLLM embarque un serveur d\'API compatible OpenAI et cible le service en production multi-utilisateurs — un outil différent des applications de bureau mono-utilisateur comme Ollama ou LM Studio.',
+    intro: 'vLLM est une bibliothèque gratuite, sous licence Apache 2.0, pour l\'inférence et le service de LLM, née au Sky Computing Lab de l\'UC Berkeley et aujourd\'hui maintenue par une large communauté open source. Sa contribution technique centrale est PagedAttention, une technique de gestion mémoire pour le cache d\'attention clé-valeur (KV) qui permet à un GPU de servir bien plus de requêtes simultanées à partir de la même mémoire qu\'avec une implémentation d\'attention naïve, combinée à un batching continu qui garde le GPU occupé sur de nombreuses requêtes simultanées plutôt que de les traiter par lots fixes. PagedAttention stocke ce cache en blocs non contigus de la taille d\'une page, un peu comme un système d\'exploitation gère la mémoire virtuelle, de sorte qu\'un GPU ne suralloue pas de mémoire pour chaque requête. vLLM prend aussi en charge des formats de quantification comme AWQ, GPTQ et FP8, ainsi que le service multi-GPU en parallélisme tensoriel. vLLM embarque un serveur d\'API compatible OpenAI et cible le service en production multi-utilisateurs — un outil différent des applications de bureau mono-utilisateur comme Ollama ou LM Studio.',
     metaDescription: 'vLLM est le serveur d\'inférence gratuit, sous licence Apache 2.0, construit autour de PagedAttention et du batching continu. Ce que c\'est, ses différences avec Ollama, TGI et TensorRT-LLM, et comment l\'exécuter.',
     readTime: '13 min de lecture',
     targetKeywords: [
@@ -626,13 +628,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'vLLM vs TGI',
       '[github.com/vllm-project/vllm](https://github.com/vllm-project/vllm)',
     ],
-    leadAnswerBlock: '**vLLM est une bibliothèque gratuite et open source (Apache 2.0) pour l\'inférence et le service de LLM à haut débit, née au Sky Computing Lab de l\'[UC Berkeley](https://github.com/vllm-project/vllm) et aujourd\'hui maintenue par une large communauté open source.** Sa particularité technique majeure est PagedAttention, qui gère le cache KV d\'attention en blocs non contigus de taille fixe — un peu comme un système d\'exploitation gère la mémoire virtuelle —, permettant à un GPU de conserver l\'état de bien plus de requêtes simultanées sans surallouer de mémoire pour chacune. Combiné au batching continu, cela permet à vLLM de servir de nombreux utilisateurs simultanés depuis un GPU (ou une configuration multi-GPU en parallélisme tensoriel) avec moins de mémoire gaspillée qu\'une boucle de service naïve. vLLM embarque un serveur d\'API compatible OpenAI (`vllm serve`), prend en charge des formats de quantification comme AWQ, GPTQ et FP8, et est conçu pour le service en production et multi-tenant — pas pour l\'usage mono-utilisateur à cliquer que ciblent des outils comme Ollama et LM Studio.',
+    leadAnswerBlock: '**vLLM est une bibliothèque gratuite et open source (Apache 2.0) pour l\'inférence et le service de LLM à haut débit.** Elle s\'appuie sur PagedAttention et le batching continu pour servir de nombreuses requêtes simultanées depuis un GPU, et embarque un serveur d\'API compatible OpenAI (`vllm serve`).',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que vLLM et comment ça marche ?',
         answer: 'vLLM est une bibliothèque gratuite, sous licence Apache 2.0, pour l\'inférence et le service de LLM, née au Sky Computing Lab de l\'UC Berkeley. Elle gère le cache KV d\'attention avec PagedAttention — en le découpant en blocs de taille fixe plutôt qu\'en une allocation contiguë par requête — et combine cela à un batching continu pour servir efficacement de nombreux utilisateurs simultanés depuis un GPU. Elle embarque un serveur compatible OpenAI et est conçue pour le service en production, pas pour le chat de bureau mono-utilisateur.',
         bullets: [
-          'Sous licence Apache 2.0, née au Sky Computing Lab de l\'[UC Berkeley](https://github.com/vllm-project/vllm)',
+          'Sous licence Apache 2.0, née au Sky Computing Lab de l\'UC Berkeley',
           'PagedAttention : gestion mémoire du cache KV en blocs non contigus de taille fixe',
           'Le batching continu garde le GPU occupé sur de nombreuses requêtes simultanées',
           'Serveur d\'API compatible OpenAI intégré via la commande `vllm serve`',
@@ -666,7 +668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Au lieu d\'une application de chat de bureau, vLLM est un logiciel serveur : on le pointe vers un modèle et il expose une API que de nombreuses personnes ou applications peuvent appeler en même temps, en utilisant la mémoire GPU plus efficacement qu\'une configuration simple traitant une requête à la fois.' },
         ],
         items: [
-          'Gratuit et open source sous licence Apache 2.0, né au Sky Computing Lab de l\'[UC Berkeley](https://github.com/vllm-project/vllm)',
+          'Gratuit et open source sous licence Apache 2.0, né au Sky Computing Lab de l\'UC Berkeley',
           'PagedAttention gère le cache KV en blocs non contigus de taille fixe pour réduire le gaspillage de mémoire GPU',
           'Le batching continu traite de nombreuses requêtes simultanées au lieu d\'un lot fixe à la fois',
           'Embarque un serveur d\'API compatible OpenAI, lancé avec la commande `vllm serve`',
@@ -682,13 +684,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-vllm',
         title: 'Qu\'est-ce que vLLM ?',
-        content: 'vLLM est une bibliothèque et un serveur gratuits, sous licence Apache 2.0, pour exécuter l\'inférence de grands modèles de langage à grande échelle. Le projet est né comme projet de recherche au Sky Computing Lab de l\'[UC Berkeley](https://github.com/vllm-project/vllm) et est depuis devenu l\'un des moteurs de service LLM open source les plus utilisés, avec des contributions de milliers de développeurs issus du monde académique et industriel. Contrairement aux outils conçus principalement pour un utilisateur unique discutant avec un modèle sur sa propre machine, vLLM est conçu pour servir de nombreuses requêtes simultanées — de plusieurs utilisateurs ou applications — aussi efficacement que possible à partir d\'une capacité GPU partagée.',
+        content: 'vLLM est une bibliothèque et un serveur gratuits, sous licence Apache 2.0, pour exécuter l\'inférence de grands modèles de langage à grande échelle. Le projet est né comme projet de recherche au Sky Computing Lab de l\'UC Berkeley et est depuis devenu un moteur de service LLM open source largement utilisé, avec une vaste communauté de contributeurs issus du monde académique et industriel. Contrairement aux outils conçus principalement pour un utilisateur unique discutant avec un modèle sur sa propre machine, vLLM est conçu pour servir de nombreuses requêtes simultanées — de plusieurs utilisateurs ou applications — aussi efficacement que possible à partir d\'une capacité GPU partagée.',
         items: [
-          'Né au Sky Computing Lab de l\'[UC Berkeley](https://github.com/vllm-project/vllm), aujourd\'hui un projet open source gouverné par la communauté',
+          'Né au Sky Computing Lab de l\'UC Berkeley, aujourd\'hui un projet open source gouverné par la communauté',
           'Sous licence Apache 2.0 : le code source est publiquement disponible pour utilisation, modification et redistribution selon les termes de la licence',
           'Charge les modèles au format compatible Hugging Face Transformers, offrant une large couverture d\'architectures — Llama, Mistral, Qwen, DeepSeek et bien d\'autres familles de modèles — sans étape de conversion séparée pour la plupart des modèles',
           'Conçu pour servir efficacement de nombreuses requêtes simultanées, pas seulement pour exécuter rapidement une seule conversation',
-          'L\'un des projets de service LLM open source les plus référencés sur GitHub',
+          'Développé ouvertement sur GitHub, avec des versions publiques et une documentation',
         ],
         note: 'vLLM est une infrastructure serveur, pas une application de chat grand public — il n\'y a pas d\'installateur graphique ni d\'expérience « télécharger et cliquer ». Pour une application de chat locale à cliquer, des outils comme Ollama ou LM Studio sont conçus pour cet usage ; voir le tableau comparatif ci-dessous.',
       },
@@ -740,7 +742,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Exécuter `vllm serve` démarre un serveur HTTP qui implémente le protocole de l\'API OpenAI, si bien que les applications et SDK déjà construits sur l\'API OpenAI peuvent souvent pointer vers une instance vLLM auto-hébergée en ne changeant que l\'URL de base et le nom du modèle.',
         items: [
           'Points de terminaison compatibles OpenAI pour les chat completions et completions, utilisables comme remplacement direct de code client basé sur l\'API OpenAI',
-          'Hôte et port configurables (le serveur écoute par défaut sur `http://localhost:8000`)',
+          'Hôte et port configurables (port par défaut 8000 ; `--host` définit les interfaces réseau sur lesquelles le serveur écoute)',
+          'L\'option facultative `--api-key` exige une clé dans l\'en-tête de la requête, mais selon la [référence CLI de vLLM](https://docs.vllm.ai/en/latest/cli/serve/) elle n\'authentifie que les préfixes de chemin `/v1`, `/v2` et `/inference` — les autres points de terminaison restent ouverts ; n\'exposez donc pas le serveur à des réseaux non fiables sans pare-feu ni proxy inverse',
           'Options moteur pour la taille du parallélisme tensoriel, la cible d\'utilisation mémoire GPU et le format de quantification, définies au démarrage du serveur',
           'Prise en charge du service de plusieurs adaptateurs LoRA sur un même modèle de base chargé',
           'Prise en charge des sorties structurées et de l\'appel de fonctions/outils pour les formats de requête compatibles',
@@ -757,7 +760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Démarrer le serveur compatible OpenAI avec un modèle de [Hugging Face](https://huggingface.co/models), par exemple : `vllm serve meta-llama/Llama-3.1-8B-Instruct`.',
           'Pour un modèle pré-quantifié, passer l\'option correspondante, par exemple : `vllm serve TheBloke/Llama-2-13B-AWQ --quantization awq`.',
           'Pour un service multi-GPU, ajouter une option de parallélisme tensoriel, par exemple : `vllm serve <model> --tensor-parallel-size 2` pour répartir le modèle sur deux GPU.',
-          'Par défaut, le serveur écoute sur `http://localhost:8000` ; envoyer une requête à son point de terminaison `/v1/chat/completions` avec n\'importe quelle bibliothèque cliente compatible OpenAI, ou `curl`.',
+          'Le port par défaut du serveur est 8000 ; envoyer une requête à son point de terminaison `/v1/chat/completions` (sur la même machine, par exemple `http://localhost:8000/v1/chat/completions`) avec n\'importe quelle bibliothèque cliente compatible OpenAI, ou `curl`.',
           'Pointer le code client OpenAI existant vers votre serveur auto-hébergé en ne changeant que l\'URL de base et le nom du modèle.',
         ],
         faqs: [
@@ -810,7 +813,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Évitez vLLM si',
             list: [
               'Vous voulez exécuter un modèle sur votre propre ordinateur portable ou de bureau pour un chat personnel mono-utilisateur — Ollama ou LM Studio conviennent bien mieux',
-              'Vous n\'avez pas de GPU pris en charge — le backend CPU de vLLM n\'est pas son focus, et il n\'a pas de support significatif d\'Apple Silicon comme llama.cpp ou Ollama',
+              'Vous n\'avez pas de GPU pris en charge — le backend CPU de vLLM n\'est pas son focus, et son support d\'Apple Silicon n\'est pas de premier plan comme celui de llama.cpp ou Ollama',
               'Vous voulez une interface graphique à cliquer plutôt qu\'un serveur d\'API et des options en ligne de commande',
               'Vous n\'êtes pas à l\'aise pour dépanner des pilotes CUDA, des conflits de dépendances Python ou une configuration de mémoire GPU',
             ],
@@ -851,7 +854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Erreur 1 : essayer de le faire tourner sur un ordinateur portable sans GPU dédié',
-            content: 'Le backend CPU de vLLM existe mais n\'est pas son focus, et il n\'a pas de support significatif d\'Apple Silicon comme llama.cpp ou Ollama. Essayer de le faire tourner sur un ordinateur portable CPU seul ou un Mac Apple Silicon mène généralement à de mauvaises performances ou à des frictions d\'installation qu\'un outil local conçu pour cet usage éviterait entièrement.',
+            content: 'Le backend CPU de vLLM existe mais n\'est pas son focus, et son support d\'Apple Silicon n\'est pas de premier plan comme celui de llama.cpp ou Ollama. Essayer de le faire tourner sur un ordinateur portable CPU seul ou un Mac Apple Silicon mène généralement à de mauvaises performances ou à des frictions d\'installation qu\'un outil local conçu pour cet usage éviterait entièrement.',
           },
           {
             title: 'Erreur 2 : s\'attendre à un installateur graphique ou une fenêtre de chat',
@@ -912,7 +915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'vLLM',
     title: 'vLLM explicado: servidor de inferencia LLM de alto rendimiento con PagedAttention (2026)',
     seoTitle: 'vLLM explicado: servidor de inferencia LLM de alto rendimiento con PagedAttention (2026)',
-    intro: 'vLLM es una biblioteca gratuita, con licencia Apache 2.0, para inferencia y servicio de LLM, originada en el Sky Computing Lab de la [UC Berkeley](https://github.com/vllm-project/vllm) y mantenida hoy por una gran comunidad de código abierto. Su aporte técnico principal es PagedAttention, una técnica de gestión de memoria para la caché de clave-valor (KV) de atención que permite a una GPU atender muchas más solicitudes simultáneas desde la misma memoria que con implementaciones de atención ingenuas, combinada con batching continuo que mantiene la GPU ocupada con muchas solicitudes simultáneas en lugar de procesarlas en lotes fijos. vLLM incluye un servidor de API compatible con OpenAI y apunta al servicio de producción multiusuario — una herramienta distinta de las apps de escritorio para un solo usuario como Ollama o LM Studio.',
+    intro: 'vLLM es una biblioteca gratuita, con licencia Apache 2.0, para inferencia y servicio de LLM, originada en el Sky Computing Lab de la UC Berkeley y mantenida hoy por una gran comunidad de código abierto. Su aporte técnico principal es PagedAttention, una técnica de gestión de memoria para la caché de clave-valor (KV) de atención que permite a una GPU atender muchas más solicitudes simultáneas desde la misma memoria que con implementaciones de atención ingenuas, combinada con batching continuo que mantiene la GPU ocupada con muchas solicitudes simultáneas en lugar de procesarlas en lotes fijos. PagedAttention almacena esa caché en bloques no contiguos del tamaño de una página, de forma similar a como un sistema operativo gestiona la memoria virtual, de modo que una GPU no sobrerreserva memoria para cada solicitud. vLLM también soporta formatos de cuantización como AWQ, GPTQ y FP8, y servicio multi-GPU con paralelismo de tensores. vLLM incluye un servidor de API compatible con OpenAI y apunta al servicio de producción multiusuario — una herramienta distinta de las apps de escritorio para un solo usuario como Ollama o LM Studio.',
     metaDescription: 'vLLM es el servidor de inferencia gratuito, con licencia Apache 2.0, construido sobre PagedAttention y el batching continuo. Qué es, en qué se diferencia de Ollama, TGI y TensorRT-LLM, y cómo ejecutarlo.',
     readTime: '13 min de lectura',
     targetKeywords: [
@@ -923,13 +926,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'vLLM vs TGI',
       '[github.com/vllm-project/vllm](https://github.com/vllm-project/vllm)',
     ],
-    leadAnswerBlock: '**vLLM es una biblioteca gratuita y de código abierto (Apache 2.0) para inferencia y servicio de LLM de alto rendimiento, originada en el Sky Computing Lab de la [UC Berkeley](https://github.com/vllm-project/vllm) y hoy mantenida por una gran comunidad de código abierto.** Su diferenciador técnico clave es PagedAttention, que gestiona la caché KV de atención en bloques no contiguos de tamaño fijo — de forma similar a como un sistema operativo gestiona la memoria virtual —, permitiendo que una GPU mantenga el estado de muchas más solicitudes simultáneas sin sobrerreservar memoria para cada una. Combinado con el batching continuo, esto permite a vLLM atender a muchos usuarios simultáneos desde una GPU (o una configuración multi-GPU con paralelismo de tensores) con menos memoria desperdiciada que un bucle de servicio ingenuo. vLLM incluye un servidor de API compatible con OpenAI (`vllm serve`), soporta formatos de cuantización como AWQ, GPTQ y FP8, y está construido para servicio de producción y multiinquilino — no para el caso de uso de un solo usuario haciendo clic que buscan herramientas como Ollama y LM Studio.',
+    leadAnswerBlock: '**vLLM es una biblioteca gratuita y de código abierto (Apache 2.0) para inferencia y servicio de LLM de alto rendimiento.** Usa PagedAttention y batching continuo para atender muchas solicitudes simultáneas desde una GPU, e incluye un servidor de API compatible con OpenAI (`vllm serve`).',
     quickAnswerTop: {
       es: {
         question: '¿Qué es vLLM y cómo funciona?',
         answer: 'vLLM es una biblioteca gratuita, con licencia Apache 2.0, para inferencia y servicio de LLM, originada en el Sky Computing Lab de la UC Berkeley. Gestiona la caché KV de atención con PagedAttention — dividiéndola en bloques de tamaño fijo en lugar de una asignación contigua por solicitud — y combina esto con batching continuo para atender eficientemente a muchos usuarios simultáneos desde una GPU. Incluye un servidor compatible con OpenAI y está construido para servicio de producción, no para chat de escritorio de un solo usuario.',
         bullets: [
-          'Con licencia Apache 2.0, originada en el Sky Computing Lab de la [UC Berkeley](https://github.com/vllm-project/vllm)',
+          'Con licencia Apache 2.0, originada en el Sky Computing Lab de la UC Berkeley',
           'PagedAttention: gestión de memoria de la caché KV en bloques no contiguos de tamaño fijo',
           'El batching continuo mantiene la GPU ocupada con muchas solicitudes simultáneas',
           'Servidor de API compatible con OpenAI integrado mediante el comando `vllm serve`',
@@ -963,7 +966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'En lugar de una app de chat de escritorio, vLLM es software de servidor: se apunta a un modelo y expone una API que muchas personas o aplicaciones pueden llamar a la vez, aprovechando la memoria de la GPU con más eficiencia que un esquema simple de una solicitud a la vez.' },
         ],
         items: [
-          'Gratuito y de código abierto con licencia Apache 2.0, originado en el Sky Computing Lab de la [UC Berkeley](https://github.com/vllm-project/vllm)',
+          'Gratuito y de código abierto con licencia Apache 2.0, originado en el Sky Computing Lab de la UC Berkeley',
           'PagedAttention gestiona la caché KV en bloques no contiguos de tamaño fijo para reducir el desperdicio de memoria de GPU',
           'El batching continuo procesa muchas solicitudes simultáneas en lugar de un lote fijo a la vez',
           'Incluye un servidor de API compatible con OpenAI, iniciado con el comando `vllm serve`',
@@ -979,13 +982,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-vllm',
         title: '¿Qué es vLLM?',
-        content: 'vLLM es una biblioteca y servidor gratuitos, con licencia Apache 2.0, para ejecutar inferencia de grandes modelos de lenguaje a escala. Se originó como proyecto de investigación en el Sky Computing Lab de la [UC Berkeley](https://github.com/vllm-project/vllm) y desde entonces ha crecido hasta ser uno de los motores de servicio de LLM de código abierto más usados, con contribuciones de miles de desarrolladores de organizaciones académicas e industriales. A diferencia de herramientas pensadas principalmente para un solo usuario conversando con un modelo en su propia máquina, vLLM está diseñado para atender muchas solicitudes simultáneas — de varios usuarios o aplicaciones — de la forma más eficiente posible desde capacidad de GPU compartida.',
+        content: 'vLLM es una biblioteca y servidor gratuitos, con licencia Apache 2.0, para ejecutar inferencia de grandes modelos de lenguaje a escala. Se originó como proyecto de investigación en el Sky Computing Lab de la UC Berkeley y desde entonces ha crecido hasta ser un motor de servicio de LLM de código abierto ampliamente usado, con una gran comunidad de contribuyentes de organizaciones académicas e industriales. A diferencia de herramientas pensadas principalmente para un solo usuario conversando con un modelo en su propia máquina, vLLM está diseñado para atender muchas solicitudes simultáneas — de varios usuarios o aplicaciones — de la forma más eficiente posible desde capacidad de GPU compartida.',
         items: [
-          'Originado en el Sky Computing Lab de la [UC Berkeley](https://github.com/vllm-project/vllm), hoy un proyecto de código abierto gobernado por la comunidad',
+          'Originado en el Sky Computing Lab de la UC Berkeley, hoy un proyecto de código abierto gobernado por la comunidad',
           'Con licencia Apache 2.0: el código fuente está disponible públicamente para uso, modificación y redistribución según los términos de la licencia',
           'Carga modelos en el formato compatible con Hugging Face Transformers, lo que le da amplia cobertura de arquitecturas — Llama, Mistral, Qwen, DeepSeek y muchas otras familias de modelos — sin un paso de conversión separado para la mayoría de los modelos',
           'Construido para atender de forma eficiente muchas solicitudes simultáneas, no solo para ejecutar rápido una única conversación',
-          'Uno de los proyectos de servicio de LLM de código abierto más referenciados en GitHub',
+          'Desarrollado abiertamente en GitHub, con versiones públicas y documentación',
         ],
         note: 'vLLM es infraestructura de servidor, no una app de chat para consumidores — no hay instalador gráfico ni experiencia de "descargar y hacer clic". Si busca una app de chat local para hacer clic, herramientas como Ollama o LM Studio están construidas para ese caso de uso; vea la tabla comparativa abajo.',
       },
@@ -1037,7 +1040,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Ejecutar `vllm serve` inicia un servidor HTTP que implementa el protocolo de la API de OpenAI, de modo que aplicaciones y SDKs ya construidos sobre la API de OpenAI a menudo pueden apuntar a una instancia de vLLM autoalojada cambiando solo la URL base y el nombre del modelo.',
         items: [
           'Endpoints compatibles con OpenAI para chat completions y completions, utilizables como reemplazo directo de código cliente basado en la API de OpenAI',
-          'Host y puerto configurables (el servidor escucha por defecto en `http://localhost:8000`)',
+          'Host y puerto configurables (puerto predeterminado 8000; `--host` define en qué interfaces de red escucha el servidor)',
+          'La opción `--api-key` exige una clave en la cabecera de la solicitud, pero según la [referencia CLI de vLLM](https://docs.vllm.ai/en/latest/cli/serve/) solo autentica los prefijos de ruta `/v1`, `/v2` e `/inference`; los demás endpoints siguen abiertos, así que no expongas el servidor a redes no confiables sin cortafuegos o proxy inverso',
           'Flags del motor para el tamaño del paralelismo de tensores, el objetivo de utilización de memoria de GPU y el formato de cuantización, definidos al iniciar el servidor',
           'Soporte para servir varios adaptadores LoRA sobre un mismo modelo base cargado',
           'Soporte de salidas estructuradas y llamadas a funciones/herramientas para formatos de solicitud compatibles',
@@ -1054,7 +1058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Inicie el servidor compatible con OpenAI con un modelo de [Hugging Face](https://huggingface.co/models), por ejemplo: `vllm serve meta-llama/Llama-3.1-8B-Instruct`.',
           'Para un modelo precuantizado, pase el flag correspondiente, por ejemplo: `vllm serve TheBloke/Llama-2-13B-AWQ --quantization awq`.',
           'Para servicio multi-GPU, añada un flag de paralelismo de tensores, por ejemplo: `vllm serve <model> --tensor-parallel-size 2` para repartir el modelo entre dos GPU.',
-          'Por defecto el servidor escucha en `http://localhost:8000`; envíe una solicitud a su endpoint `/v1/chat/completions` con cualquier biblioteca cliente compatible con la API de OpenAI, o con `curl`.',
+          'El puerto predeterminado del servidor es 8000; envía una solicitud a su endpoint `/v1/chat/completions` (en la misma máquina, por ejemplo `http://localhost:8000/v1/chat/completions`) con cualquier biblioteca cliente compatible con la API de OpenAI, o con `curl`.',
           'Apunte código cliente de OpenAI existente a su servidor autoalojado cambiando solo la URL base y el nombre del modelo.',
         ],
         faqs: [
@@ -1107,7 +1111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Evite vLLM si',
             list: [
               'Quiere ejecutar un modelo en su propio portátil o escritorio para chat personal de un solo usuario — Ollama o LM Studio encajan mucho mejor',
-              'No tiene una GPU soportada — el backend de CPU de vLLM no es su foco, y no tiene soporte significativo de Apple Silicon como llama.cpp u Ollama',
+              'No tiene una GPU soportada — el backend de CPU de vLLM no es su foco, y su soporte de Apple Silicon no es de primera clase como el de llama.cpp u Ollama',
               'Quiere una interfaz gráfica para hacer clic en lugar de un servidor de API y flags de línea de comandos',
               'No se siente cómodo resolviendo problemas de drivers CUDA, conflictos de dependencias de Python o configuración de memoria de GPU',
             ],
@@ -1148,7 +1152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Error 1: intentar ejecutarlo en un portátil sin GPU dedicada',
-            content: 'El backend de CPU de vLLM existe pero no es su foco, y no tiene soporte significativo de Apple Silicon como llama.cpp u Ollama. Intentar ejecutarlo en un portátil solo con CPU o un Mac con Apple Silicon suele llevar a un rendimiento pobre o a fricción de instalación que una herramienta local diseñada para eso evitaría por completo.',
+            content: 'El backend de CPU de vLLM existe pero no es su foco, y su soporte de Apple Silicon no es de primera clase como el de llama.cpp u Ollama. Intentar ejecutarlo en un portátil solo con CPU o un Mac con Apple Silicon suele llevar a un rendimiento pobre o a fricción de instalación que una herramienta local diseñada para eso evitaría por completo.',
           },
           {
             title: 'Error 2: esperar un instalador gráfico o una ventana de chat',
@@ -1209,7 +1213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'vLLM',
     title: 'vLLM explicado: serving de LLM de alto desempenho com PagedAttention (2026)',
     seoTitle: 'vLLM explicado: serving de LLM de alto desempenho com PagedAttention (2026)',
-    intro: 'vLLM é uma biblioteca gratuita, sob licença Apache 2.0, para inferência e serving de LLM, originada no Sky Computing Lab da [UC Berkeley](https://github.com/vllm-project/vllm) e hoje mantida por uma grande comunidade open source. Sua principal contribuição técnica é o PagedAttention, uma técnica de gerenciamento de memória para o cache de chave-valor (KV) de atenção que permite a uma GPU atender muito mais requisições simultâneas a partir da mesma memória do que implementações de atenção ingênuas, combinada com continuous batching, que mantém a GPU ocupada com muitas requisições simultâneas em vez de processá-las em lotes fixos. O vLLM traz embutido um servidor de API compatível com OpenAI e mira o serving de produção multiusuário — uma ferramenta diferente de apps de desktop de usuário único como Ollama ou LM Studio.',
+    intro: 'vLLM é uma biblioteca gratuita, sob licença Apache 2.0, para inferência e serving de LLM, originada no Sky Computing Lab da UC Berkeley e hoje mantida por uma grande comunidade open source. Sua principal contribuição técnica é o PagedAttention, uma técnica de gerenciamento de memória para o cache de chave-valor (KV) de atenção que permite a uma GPU atender muito mais requisições simultâneas a partir da mesma memória do que implementações de atenção ingênuas, combinada com continuous batching, que mantém a GPU ocupada com muitas requisições simultâneas em vez de processá-las em lotes fixos. O PagedAttention armazena esse cache em blocos não contíguos do tamanho de uma página, de forma parecida com um sistema operacional gerenciando memória virtual, de modo que a GPU não reserva memória em excesso para cada requisição. O vLLM também suporta formatos de quantização como AWQ, GPTQ e FP8, e serving multi-GPU com paralelismo de tensores. O vLLM traz embutido um servidor de API compatível com OpenAI e mira o serving de produção multiusuário — uma ferramenta diferente de apps de desktop de usuário único como Ollama ou LM Studio.',
     metaDescription: 'vLLM é o servidor de inferência gratuito, sob licença Apache 2.0, construído em torno do PagedAttention e do continuous batching. O que é, como difere de Ollama, TGI e TensorRT-LLM, e como executá-lo.',
     readTime: '13 min de leitura',
     targetKeywords: [
@@ -1220,13 +1224,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'vLLM vs TGI',
       '[github.com/vllm-project/vllm](https://github.com/vllm-project/vllm)',
     ],
-    leadAnswerBlock: '**vLLM é uma biblioteca gratuita e de código aberto (Apache 2.0) para inferência e serving de LLM de alto desempenho, originada no Sky Computing Lab da [UC Berkeley](https://github.com/vllm-project/vllm) e hoje mantida por uma grande comunidade open source.** Seu principal diferencial técnico é o PagedAttention, que gerencia o cache KV de atenção em blocos não contíguos de tamanho fixo — de forma parecida com um sistema operacional gerenciando memória virtual —, permitindo que uma GPU mantenha o estado de muito mais requisições simultâneas sem reservar memória em excesso para cada uma. Combinado com o continuous batching, isso permite que o vLLM atenda muitos usuários simultâneos a partir de uma GPU (ou uma configuração multi-GPU com paralelismo de tensores) com menos memória desperdiçada do que um loop de serving ingênuo. O vLLM traz embutido um servidor de API compatível com OpenAI (`vllm serve`), suporta formatos de quantização como AWQ, GPTQ e FP8, e é construído para serving de produção e multi-tenant — não para o caso de uso de usuário único ao clicar que ferramentas como Ollama e LM Studio miram.',
+    leadAnswerBlock: '**vLLM é uma biblioteca gratuita e de código aberto (Apache 2.0) para inferência e serving de LLM de alto desempenho.** Usa PagedAttention e continuous batching para atender muitas requisições simultâneas a partir de uma GPU e traz embutido um servidor de API compatível com OpenAI (`vllm serve`).',
     quickAnswerTop: {
       pt: {
         question: 'O que é vLLM e como funciona?',
         answer: 'vLLM é uma biblioteca gratuita, sob licença Apache 2.0, para inferência e serving de LLM, originada no Sky Computing Lab da UC Berkeley. Ele gerencia o cache KV de atenção com PagedAttention — dividindo-o em blocos de tamanho fixo em vez de uma alocação contígua por requisição — e combina isso com continuous batching para atender muitos usuários simultâneos de forma eficiente a partir de uma GPU. Traz embutido um servidor compatível com OpenAI e é construído para serving de produção, não para chat de desktop de usuário único.',
         bullets: [
-          'Sob licença Apache 2.0, originado no Sky Computing Lab da [UC Berkeley](https://github.com/vllm-project/vllm)',
+          'Sob licença Apache 2.0, originado no Sky Computing Lab da UC Berkeley',
           'PagedAttention: gerenciamento de memória do cache KV em blocos não contíguos de tamanho fixo',
           'O continuous batching mantém a GPU ocupada com muitas requisições simultâneas',
           'Servidor de API compatível com OpenAI embutido via comando `vllm serve`',
@@ -1260,7 +1264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Em vez de um app de chat de desktop, o vLLM é software de servidor: você o aponta para um modelo e ele expõe uma API que muitas pessoas ou aplicações podem chamar ao mesmo tempo, aproveitando a memória da GPU com mais eficiência do que um esquema simples de uma requisição por vez.' },
         ],
         items: [
-          'Gratuito e de código aberto sob licença Apache 2.0, originado no Sky Computing Lab da [UC Berkeley](https://github.com/vllm-project/vllm)',
+          'Gratuito e de código aberto sob licença Apache 2.0, originado no Sky Computing Lab da UC Berkeley',
           'O PagedAttention gerencia o cache KV em blocos não contíguos de tamanho fixo para reduzir o desperdício de memória da GPU',
           'O continuous batching processa muitas requisições simultâneas em vez de um lote fixo por vez',
           'Traz embutido um servidor de API compatível com OpenAI, iniciado com o comando `vllm serve`',
@@ -1276,13 +1280,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-vllm',
         title: 'O que é vLLM?',
-        content: 'vLLM é uma biblioteca e servidor gratuitos, sob licença Apache 2.0, para executar inferência de grandes modelos de linguagem em escala. Surgiu como projeto de pesquisa no Sky Computing Lab da [UC Berkeley](https://github.com/vllm-project/vllm) e desde então cresceu até se tornar um dos motores de serving de LLM open source mais usados, com contribuições de milhares de desenvolvedores de organizações acadêmicas e da indústria. Diferente de ferramentas construídas principalmente para um único usuário conversando com um modelo na própria máquina, o vLLM é projetado para atender muitas requisições simultâneas — de múltiplos usuários ou aplicações — da forma mais eficiente possível a partir de capacidade de GPU compartilhada.',
+        content: 'vLLM é uma biblioteca e servidor gratuitos, sob licença Apache 2.0, para executar inferência de grandes modelos de linguagem em escala. Surgiu como projeto de pesquisa no Sky Computing Lab da UC Berkeley e desde então cresceu até se tornar um motor de serving de LLM open source amplamente usado, com uma grande comunidade de contribuidores de organizações acadêmicas e da indústria. Diferente de ferramentas construídas principalmente para um único usuário conversando com um modelo na própria máquina, o vLLM é projetado para atender muitas requisições simultâneas — de múltiplos usuários ou aplicações — da forma mais eficiente possível a partir de capacidade de GPU compartilhada.',
         items: [
-          'Originado no Sky Computing Lab da [UC Berkeley](https://github.com/vllm-project/vllm), hoje um projeto open source governado pela comunidade',
+          'Originado no Sky Computing Lab da UC Berkeley, hoje um projeto open source governado pela comunidade',
           'Sob licença Apache 2.0: o código-fonte está disponível publicamente para uso, modificação e redistribuição conforme os termos da licença',
           'Carrega modelos no formato compatível com Hugging Face Transformers, dando ampla cobertura de arquiteturas — Llama, Mistral, Qwen, DeepSeek e muitas outras famílias de modelos — sem uma etapa separada de conversão para a maioria dos modelos',
           'Construído para atender com eficiência muitas requisições simultâneas, não apenas para rodar rápido uma única conversa',
-          'Um dos projetos de serving de LLM open source mais referenciados no GitHub',
+          'Desenvolvido abertamente no GitHub, com versões públicas e documentação',
         ],
         note: 'O vLLM é infraestrutura de servidor, não um app de chat para consumidores — não há instalador gráfico nem experiência de "baixar e clicar". Se você quer um app de chat local para clicar, ferramentas como Ollama ou LM Studio são feitas para esse caso de uso; veja a tabela comparativa abaixo.',
       },
@@ -1334,7 +1338,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Executar `vllm serve` inicia um servidor HTTP que implementa o protocolo da API da OpenAI, de modo que aplicações e SDKs já construídos sobre a API da OpenAI muitas vezes podem apontar para uma instância vLLM auto-hospedada mudando apenas a URL base e o nome do modelo.',
         items: [
           'Endpoints compatíveis com OpenAI para chat completions e completions, utilizáveis como substituto direto de código cliente baseado na API da OpenAI',
-          'Host e porta configuráveis (o servidor escuta por padrão em `http://localhost:8000`)',
+          'Host e porta configuráveis (porta padrão 8000; `--host` define em quais interfaces de rede o servidor escuta)',
+          'A opção `--api-key` exige uma chave no cabeçalho da requisição, mas segundo a [referência CLI do vLLM](https://docs.vllm.ai/en/latest/cli/serve/) autentica apenas os prefixos de caminho `/v1`, `/v2` e `/inference`; os demais endpoints continuam abertos, então não exponha o servidor a redes não confiáveis sem firewall ou proxy reverso',
           'Flags do motor para o tamanho do paralelismo de tensores, a meta de utilização de memória da GPU e o formato de quantização, definidos ao iniciar o servidor',
           'Suporte para servir vários adaptadores LoRA sobre um mesmo modelo base carregado',
           'Suporte a saídas estruturadas e chamadas de função/ferramenta para formatos de requisição compatíveis',
@@ -1351,7 +1356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Inicie o servidor compatível com OpenAI com um modelo do [Hugging Face](https://huggingface.co/models), por exemplo: `vllm serve meta-llama/Llama-3.1-8B-Instruct`.',
           'Para um modelo pré-quantizado, passe a flag correspondente, por exemplo: `vllm serve TheBloke/Llama-2-13B-AWQ --quantization awq`.',
           'Para serving multi-GPU, adicione uma flag de paralelismo de tensores, por exemplo: `vllm serve <model> --tensor-parallel-size 2` para dividir o modelo entre duas GPUs.',
-          'Por padrão o servidor escuta em `http://localhost:8000`; envie uma requisição ao endpoint `/v1/chat/completions` com qualquer biblioteca cliente compatível com a API da OpenAI, ou `curl`.',
+          'A porta padrão do servidor é 8000; envie uma requisição ao endpoint `/v1/chat/completions` (na mesma máquina, por exemplo `http://localhost:8000/v1/chat/completions`) com qualquer biblioteca cliente compatível com a API da OpenAI, ou `curl`.',
           'Aponte código cliente OpenAI existente para o seu servidor auto-hospedado mudando apenas a URL base e o nome do modelo.',
         ],
         faqs: [
@@ -1404,7 +1409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Evite o vLLM se',
             list: [
               'Você quer rodar um modelo no seu próprio notebook ou desktop para chat pessoal de usuário único — Ollama ou LM Studio se encaixam muito melhor',
-              'Você não tem uma GPU suportada — o backend de CPU do vLLM não é seu foco, e não há suporte relevante a Apple Silicon como no llama.cpp ou Ollama',
+              'Você não tem uma GPU suportada — o backend de CPU do vLLM não é seu foco, e o suporte a Apple Silicon não é de primeira classe como no llama.cpp ou Ollama',
               'Você quer uma interface gráfica para clicar em vez de um servidor de API e flags de linha de comando',
               'Você não se sente confortável resolvendo problemas de drivers CUDA, conflitos de dependência do Python ou configuração de memória de GPU',
             ],
@@ -1445,7 +1450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Erro 1: tentar rodá-lo em um notebook sem GPU dedicada',
-            content: 'O backend de CPU do vLLM existe, mas não é seu foco, e não há suporte relevante a Apple Silicon como no llama.cpp ou Ollama. Tentar rodá-lo em um notebook somente com CPU ou um Mac com Apple Silicon geralmente leva a desempenho ruim ou atrito de instalação que uma ferramenta local feita para isso evitaria completamente.',
+            content: 'O backend de CPU do vLLM existe, mas não é seu foco, e o suporte a Apple Silicon não é de primeira classe como no llama.cpp ou Ollama. Tentar rodá-lo em um notebook somente com CPU ou um Mac com Apple Silicon geralmente leva a desempenho ruim ou atrito de instalação que uma ferramenta local feita para isso evitaria completamente.',
           },
           {
             title: 'Erro 2: esperar um instalador gráfico ou uma janela de chat',
@@ -1506,7 +1511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'vLLM',
     title: 'vLLMとは？PagedAttentionで実現する高スループット推論サーバーを解説（2026）',
     seoTitle: 'vLLMとは？PagedAttentionで実現する高スループット推論サーバーを解説（2026）',
-    intro: 'vLLMは、[UC Berkeley](https://github.com/vllm-project/vllm)のSky Computing Labで生まれ、現在は大規模なオープンソースコミュニティによって保守されている、無料でApache 2.0ライセンスのLLM推論・サービングライブラリです。中核となる技術的な貢献はPagedAttentionで、アテンションのキー・バリュー（KV）キャッシュを管理するメモリ管理技術であり、単純なアテンション実装よりも同じメモリからはるかに多くの同時リクエストをGPUで処理できるようにします。これに、固定バッチで順番に処理するのではなく多数の同時リクエストにわたってGPUを稼働させ続けるcontinuous batching（継続的バッチング）を組み合わせています。vLLMはOpenAI互換のAPIサーバーを内蔵しており、本番環境での複数ユーザー向けサービングを対象としています——OllamaやLM Studioのような単一ユーザー向けデスクトップアプリとは異なる種類のツールです。',
+    intro: 'vLLMは、UC BerkeleyのSky Computing Labで生まれ、現在は大規模なオープンソースコミュニティによって保守されている、無料でApache 2.0ライセンスのLLM推論・サービングライブラリです。中核となる技術的な貢献はPagedAttentionで、アテンションのキー・バリュー（KV）キャッシュを管理するメモリ管理技術であり、単純なアテンション実装よりも同じメモリからはるかに多くの同時リクエストをGPUで処理できるようにします。これに、固定バッチで順番に処理するのではなく多数の同時リクエストにわたってGPUを稼働させ続けるcontinuous batching（継続的バッチング）を組み合わせています。PagedAttentionはこのキャッシュを、オペレーティングシステムが仮想メモリを管理する発想に似た、ページ単位の非連続なブロックに格納するため、GPUはリクエストごとにメモリを過剰に確保しません。vLLMはAWQ、GPTQ、FP8などの量子化フォーマットや、テンソル並列によるマルチGPUサービングもサポートしています。vLLMはOpenAI互換のAPIサーバーを内蔵しており、本番環境での複数ユーザー向けサービングを対象としています——OllamaやLM Studioのような単一ユーザー向けデスクトップアプリとは異なる種類のツールです。',
     metaDescription: 'vLLMは、PagedAttentionとcontinuous batchingを中心に構築された、無料でApache 2.0ライセンスの推論サーバーです。それが何か、Ollama・TGI・TensorRT-LLMとの違い、実行方法を解説。',
     readTime: '13分で読めます',
     targetKeywords: [
@@ -1517,13 +1522,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'vLLM vs TGI',
       '[github.com/vllm-project/vllm](https://github.com/vllm-project/vllm)',
     ],
-    leadAnswerBlock: '**vLLMは、[UC Berkeley](https://github.com/vllm-project/vllm)のSky Computing Labで生まれ、現在は大規模なオープンソースコミュニティが保守している、無料でオープンソース（Apache 2.0）の高スループットLLM推論・サービングライブラリです。** 主要な技術的差別化要因はPagedAttentionで、アテンションKVキャッシュを固定サイズの非連続なブロック（ページ）で管理します——オペレーティングシステムが仮想メモリを管理する発想に似ています——これにより、GPUは各リクエストにメモリを過剰に割り当てることなく、はるかに多くの同時リクエストの状態を保持できます。continuous batchingと組み合わせることで、vLLMは1台のGPU（またはテンソル並列のマルチGPU構成）から、単純なサービングループよりも無駄なメモリを抑えて多数の同時ユーザーにサービスを提供できます。vLLMはOpenAI互換のAPIサーバー（`vllm serve`）を内蔵し、AWQ、GPTQ、FP8などの量子化フォーマットをサポートし、本番環境・マルチテナントのサービングのために構築されています——OllamaやLM Studioのようなツールが対象とする単一ユーザーのクリック操作向けの用途ではありません。',
+    leadAnswerBlock: '**vLLMは、無料でオープンソース（Apache 2.0）の高スループットLLM推論・サービングライブラリです。** PagedAttentionとcontinuous batchingにより1台のGPUから多数の同時リクエストを処理でき、OpenAI互換のAPIサーバー（`vllm serve`）を内蔵しています。',
     quickAnswerTop: {
       ja: {
         question: 'vLLMとは何で、どう動作しますか？',
         answer: 'vLLMは、UC BerkeleyのSky Computing Labで生まれた、無料でApache 2.0ライセンスのLLM推論・サービングライブラリです。PagedAttentionでアテンションKVキャッシュを管理します——リクエストごとに1つの連続した領域を割り当てるのではなく、固定サイズのブロックに分割します——これをcontinuous batchingと組み合わせて、1台のGPUから多数の同時ユーザーを効率的に処理します。OpenAI互換サーバーを内蔵しており、単一ユーザー向けデスクトップチャットではなく本番サービング向けに構築されています。',
         bullets: [
-          'Apache 2.0ライセンス。[UC Berkeley](https://github.com/vllm-project/vllm)のSky Computing Labで誕生',
+          'Apache 2.0ライセンス。UC BerkeleyのSky Computing Labで誕生',
           'PagedAttention：固定サイズの非連続なブロックによるKVキャッシュのメモリ管理',
           'continuous batchingにより、多数の同時リクエストにわたってGPUを稼働させ続ける',
           '`vllm serve`コマンドで起動するOpenAI互換APIサーバーを内蔵',
@@ -1557,7 +1562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'デスクトップのチャットアプリではなく、vLLMはサーバーソフトウェアです。モデルを指定すると、多くの人やアプリケーションが同時に呼び出せるAPIを公開し、単純な「1リクエストずつ処理」の構成よりもGPUメモリを効率的に使います。' },
         ],
         items: [
-          '無料でApache 2.0ライセンスのオープンソース。[UC Berkeley](https://github.com/vllm-project/vllm)のSky Computing Labで誕生',
+          '無料でApache 2.0ライセンスのオープンソース。UC BerkeleyのSky Computing Labで誕生',
           'PagedAttentionが固定サイズの非連続なブロックでKVキャッシュを管理し、GPUメモリの無駄を減らす',
           'continuous batchingにより、固定バッチを1つずつ処理するのではなく、多数の同時リクエストを処理する',
           '`vllm serve`コマンドで起動する、内蔵のOpenAI互換APIサーバー',
@@ -1573,13 +1578,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-vllm',
         title: 'vLLMとは何か？',
-        content: 'vLLMは、大規模言語モデルの推論を大規模に実行するための、無料でApache 2.0ライセンスのライブラリ兼サーバーです。[UC Berkeley](https://github.com/vllm-project/vllm)のSky Computing Labの研究プロジェクトとして始まり、その後、学術機関や企業の何千人もの開発者が貢献する、最も広く使われているオープンソースLLMサービングエンジンの一つに成長しました。自分のマシンでモデルとチャットする単一ユーザー向けに主に構築されたツールとは異なり、vLLMは複数のユーザーやアプリケーションからの多数の同時リクエストを、共有GPUキャパシティからできる限り効率的に処理するよう設計されています。',
+        content: 'vLLMは、大規模言語モデルの推論を大規模に実行するための、無料でApache 2.0ライセンスのライブラリ兼サーバーです。UC BerkeleyのSky Computing Labの研究プロジェクトとして始まり、その後、学術機関や企業の多くの開発者が貢献する、広く使われているオープンソースLLMサービングエンジンに成長しました。自分のマシンでモデルとチャットする単一ユーザー向けに主に構築されたツールとは異なり、vLLMは複数のユーザーやアプリケーションからの多数の同時リクエストを、共有GPUキャパシティからできる限り効率的に処理するよう設計されています。',
         items: [
-          '[UC Berkeley](https://github.com/vllm-project/vllm)のSky Computing Labで誕生し、現在はコミュニティ主導のオープンソースプロジェクト',
+          'UC BerkeleyのSky Computing Labで誕生し、現在はコミュニティ主導のオープンソースプロジェクト',
           'Apache 2.0ライセンス：ソースコードはライセンス条項の下で利用・改変・再配布のために公開されている',
           'Hugging Face Transformers互換フォーマットでモデルを読み込むため、Llama、Mistral、Qwen、DeepSeekなど幅広いモデルファミリーのアーキテクチャをカバーし、多くのモデルで別途の変換ステップを必要としない',
           '単一の会話を素早く処理することだけでなく、多数の同時リクエストを効率的に処理することを目的として構築されている',
-          'GitHub上で最も参照されているオープンソースLLMサービングプロジェクトの一つ',
+          'GitHub上でオープンに開発され、公開リリースとドキュメントがある',
         ],
         note: 'vLLMはサーバーインフラストラクチャであり、コンシューマー向けチャットアプリではありません——グラフィカルなインストーラーも「ダウンロードしてクリック」という体験もありません。クリック操作のローカルチャットアプリが欲しい場合は、OllamaやLM Studioのようなツールがその用途向けに作られています。下の比較表を参照してください。',
       },
@@ -1631,7 +1636,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '`vllm serve`を実行すると、OpenAI APIプロトコルを実装したHTTPサーバーが起動するため、すでにOpenAI API向けに構築されているアプリケーションやSDKは、多くの場合ベースURLとモデル名を変更するだけで自己ホストのvLLMインスタンスを指せます。',
         items: [
           'チャット補完・補完向けのOpenAI互換エンドポイントで、OpenAI APIベースのクライアントコードの直接的な置き換えとして利用できる',
-          '設定可能なホストとポート（サーバーはデフォルトで`http://localhost:8000`で待ち受ける）',
+          '設定可能なホストとポート（デフォルトのポートは8000。`--host`でサーバーが待ち受けるネットワークインターフェースを指定します）',
+          'オプションの`--api-key`フラグはリクエストヘッダーのキーを要求しますが、[vLLM CLIリファレンス](https://docs.vllm.ai/en/latest/cli/serve/)によると認証されるのは`/v1`、`/v2`、`/inference`のパスプレフィックスのみで、他のエンドポイントは開いたままです。ファイアウォールやリバースプロキシなしで信頼できないネットワークにサーバーを公開しないでください',
           'サーバー起動時に設定する、テンソル並列サイズ、GPUメモリ利用率の目標、量子化フォーマットのエンジンフラグ',
           '1つのロード済みベースモデルに対して複数のLoRAアダプタをサービングするサポート',
           '互換性のあるリクエスト形式に対する構造化出力と関数・ツール呼び出しのサポート',
@@ -1648,7 +1654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Hugging Face](https://huggingface.co/models)のモデルでOpenAI互換サーバーを起動する。例：`vllm serve meta-llama/Llama-3.1-8B-Instruct`。',
           '事前量子化モデルの場合は対応するフラグを渡す。例：`vllm serve TheBloke/Llama-2-13B-AWQ --quantization awq`。',
           'マルチGPUサービングの場合はテンソル並列フラグを追加する。例：`vllm serve <model> --tensor-parallel-size 2`でモデルを2つのGPUに分割する。',
-          'デフォルトでサーバーは`http://localhost:8000`で待ち受ける。任意のOpenAI API互換クライアントライブラリや`curl`で`/v1/chat/completions`エンドポイントにリクエストを送信する。',
+          'サーバーのデフォルトポートは8000です。任意のOpenAI API互換クライアントライブラリや`curl`で`/v1/chat/completions`エンドポイント（同じマシンなら`http://localhost:8000/v1/chat/completions`など）にリクエストを送信します。',
           '既存のOpenAI APIクライアントコードのベースURLとモデル名だけを変更し、自己ホストサーバーを指すようにする。',
         ],
         faqs: [
@@ -1701,7 +1707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: '次の場合はvLLMを避ける',
             list: [
               '個人利用の単一ユーザーチャットのために自分のノートPCやデスクトップでモデルを動かしたい——OllamaやLM Studioの方がはるかに適している',
-              'サポートされているGPUがない——vLLMのCPUバックエンドは主眼ではなく、llama.cppやOllamaのような意味のあるApple Siliconサポートもない',
+              'サポートされているGPUがない——vLLMのCPUバックエンドは主眼ではなく、Apple Siliconサポートはllama.cppやOllamaのような第一級の経路ではない',
               'APIサーバーとコマンドラインフラグではなく、グラフィカルなクリック操作のインターフェースが欲しい',
               'CUDAドライバ、Pythonの依存関係の競合、GPUメモリ設定のトラブルシューティングに抵抗がある',
             ],
@@ -1742,7 +1748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: '間違い1：専用GPUのないノートPCで動かそうとする',
-            content: 'vLLMのCPUバックエンドは存在しますが主眼ではなく、llama.cppやOllamaのような意味のあるApple Siliconサポートもありません。CPU専用のノートPCやApple SiliconのMacで動かそうとすると、通常は性能が悪くなるか、専用に作られたローカルツールなら完全に避けられるセットアップの手間が生じます。',
+            content: 'vLLMのCPUバックエンドは存在しますが主眼ではなく、Apple Siliconサポートはllama.cppやOllamaのような第一級の経路ではありません。CPU専用のノートPCやApple SiliconのMacで動かそうとすると、通常は性能が悪くなるか、専用に作られたローカルツールなら完全に避けられるセットアップの手間が生じます。',
           },
           {
             title: '間違い2：グラフィカルなインストーラーやチャットウィンドウを期待する',
@@ -1803,7 +1809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'vLLM',
     title: 'vLLM详解：基于PagedAttention的高吞吐量推理服务（2026）',
     seoTitle: 'vLLM详解：基于PagedAttention的高吞吐量推理服务（2026）',
-    intro: 'vLLM是一个免费、Apache 2.0许可的LLM推理与服务库，起源于[UC Berkeley](https://github.com/vllm-project/vllm)的Sky Computing Lab，如今由庞大的开源社区维护。其核心技术贡献是PagedAttention——一种针对注意力键值（KV）缓存的内存管理技术，相比朴素的注意力实现，能让GPU用相同的内存服务多得多的并发请求，并结合continuous batching（连续批处理）让GPU在众多并发请求间保持忙碌，而不是按固定批次逐一处理。vLLM内置OpenAI兼容的API服务器，面向多用户的生产环境服务——这是一种与Ollama或LM Studio等单用户桌面应用不同的工具。',
+    intro: 'vLLM是一个免费、Apache 2.0许可的LLM推理与服务库，起源于UC Berkeley的Sky Computing Lab，如今由庞大的开源社区维护。其核心技术贡献是PagedAttention——一种针对注意力键值（KV）缓存的内存管理技术，相比朴素的注意力实现，能让GPU用相同的内存服务多得多的并发请求，并结合continuous batching（连续批处理）让GPU在众多并发请求间保持忙碌，而不是按固定批次逐一处理。PagedAttention以页大小的非连续块存储该缓存，思路类似操作系统管理虚拟内存，因此GPU不会为每个请求过度预留内存。vLLM还支持AWQ、GPTQ、FP8等量化格式以及张量并行的多GPU服务。vLLM内置OpenAI兼容的API服务器，面向多用户的生产环境服务——这是一种与Ollama或LM Studio等单用户桌面应用不同的工具。',
     metaDescription: 'vLLM是围绕PagedAttention和连续批处理构建的免费、Apache 2.0许可推理服务器。它是什么、与Ollama、TGI和TensorRT-LLM有何不同，以及如何运行它。',
     readTime: '13分钟阅读',
     targetKeywords: [
@@ -1814,13 +1820,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'vLLM vs TGI',
       '[github.com/vllm-project/vllm](https://github.com/vllm-project/vllm)',
     ],
-    leadAnswerBlock: '**vLLM是一个免费、开源（Apache 2.0）的高吞吐量LLM推理与服务库，起源于[UC Berkeley](https://github.com/vllm-project/vllm)的Sky Computing Lab，如今由庞大的开源社区维护。** 其关键技术差异化点是PagedAttention，它以非连续的固定大小块（page）管理注意力KV缓存——类似操作系统管理虚拟内存的思路——使GPU无需为每个请求过度预留内存，就能容纳更多并发请求的状态。结合continuous batching，这让vLLM能够从一块GPU（或张量并行的多GPU配置）中，以比朴素服务循环更少的内存浪费服务众多并发用户。vLLM内置OpenAI兼容的API服务器（`vllm serve`），支持AWQ、GPTQ、FP8等量化格式，专为生产环境和多租户服务而构建——而不是Ollama和LM Studio等工具所面向的单用户点选场景。',
+    leadAnswerBlock: '**vLLM是一个免费、开源（Apache 2.0）的高吞吐量LLM推理与服务库。** 它借助PagedAttention和continuous batching，从一块GPU服务众多并发请求，并内置OpenAI兼容的API服务器（`vllm serve`）。',
     quickAnswerTop: {
       zh: {
         question: 'vLLM是什么，它是如何工作的？',
         answer: 'vLLM是一个免费、Apache 2.0许可的LLM推理与服务库，起源于UC Berkeley的Sky Computing Lab。它用PagedAttention管理注意力KV缓存——将其拆分为固定大小的块，而不是为每个请求分配一整块连续内存——并结合continuous batching从一块GPU高效服务众多并发用户。它内置OpenAI兼容服务器，专为生产环境服务而构建，而非单用户桌面聊天。',
         bullets: [
-          'Apache 2.0许可，起源于[UC Berkeley](https://github.com/vllm-project/vllm)的Sky Computing Lab',
+          'Apache 2.0许可，起源于UC Berkeley的Sky Computing Lab',
           'PagedAttention：以固定大小、非连续的块管理KV缓存内存',
           'continuous batching让GPU在众多并发请求间保持忙碌',
           '通过`vllm serve`命令启动的内置OpenAI兼容API服务器',
@@ -1854,7 +1860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'vLLM不是桌面聊天应用，而是服务器软件：把它指向一个模型，它就会暴露一个API，供许多用户或应用同时调用，比简单的逐个请求处理方案更高效地利用GPU内存。' },
         ],
         items: [
-          '免费、Apache 2.0许可的开源项目，起源于[UC Berkeley](https://github.com/vllm-project/vllm)的Sky Computing Lab',
+          '免费、Apache 2.0许可的开源项目，起源于UC Berkeley的Sky Computing Lab',
           'PagedAttention以固定大小、非连续的块管理KV缓存，减少GPU内存浪费',
           'continuous batching处理众多并发请求，而不是一次处理一个固定批次',
           '内置OpenAI兼容的API服务器，通过`vllm serve`命令启动',
@@ -1870,13 +1876,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-vllm',
         title: 'vLLM是什么？',
-        content: 'vLLM是一个免费、Apache 2.0许可的库和服务器，用于大规模执行大语言模型推理。它起源于[UC Berkeley](https://github.com/vllm-project/vllm)的Sky Computing Lab的一个研究项目，此后发展成为使用最广泛的开源LLM服务引擎之一，来自学术和产业机构的数千名开发者为其贡献代码。与主要为在自己机器上与模型对话的单一用户而构建的工具不同，vLLM旨在从共享的GPU容量中尽可能高效地服务来自多个用户或应用的众多并发请求。',
+        content: 'vLLM是一个免费、Apache 2.0许可的库和服务器，用于大规模执行大语言模型推理。它起源于UC Berkeley的Sky Computing Lab的一个研究项目，此后发展成为被广泛使用的开源LLM服务引擎，来自学术和产业机构的众多开发者为其贡献代码。与主要为在自己机器上与模型对话的单一用户而构建的工具不同，vLLM旨在从共享的GPU容量中尽可能高效地服务来自多个用户或应用的众多并发请求。',
         items: [
-          '起源于[UC Berkeley](https://github.com/vllm-project/vllm)的Sky Computing Lab，如今是一个由社区治理的开源项目',
+          '起源于UC Berkeley的Sky Computing Lab，如今是一个由社区治理的开源项目',
           'Apache 2.0许可：源代码根据许可条款公开可用，可用于使用、修改和再分发',
           '以Hugging Face Transformers兼容格式加载模型，覆盖广泛的架构——Llama、Mistral、Qwen、DeepSeek及许多其他模型系列——大多数模型无需单独的转换步骤',
           '专为高效服务众多并发请求而构建，而不仅仅是快速处理单次对话',
-          'GitHub上被引用最多的开源LLM服务项目之一',
+          '在GitHub上公开开发，提供公开发布版本和文档',
         ],
         note: 'vLLM是服务器基础设施，不是面向消费者的聊天应用——没有图形安装程序，也没有"下载并点击"的体验。如果想要点选式的本地聊天应用，Ollama或LM Studio等工具正是为该用例而构建的；参见下方的比较表。',
       },
@@ -1928,7 +1934,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '运行`vllm serve`会启动一个实现OpenAI API协议的HTTP服务器，因此已经基于OpenAI API构建的应用和SDK通常只需更改基础URL和模型名称，就能指向自托管的vLLM实例。',
         items: [
           '兼容OpenAI的聊天补全和补全端点，可作为基于OpenAI API的客户端代码的直接替代',
-          '可配置的主机和端口（服务器默认监听`http://localhost:8000`）',
+          '可配置的主机和端口（默认端口为8000；通过`--host`指定服务器监听的网络接口）',
+          '可选的`--api-key`参数要求请求头携带密钥，但根据[vLLM CLI参考](https://docs.vllm.ai/en/latest/cli/serve/)，它只对`/v1`、`/v2`和`/inference`路径前缀进行认证，其他端点仍然开放；因此不要在没有防火墙或反向代理的情况下将服务器暴露给不受信任的网络',
           '在服务器启动时设置的引擎参数，用于张量并行大小、GPU内存利用率目标和量化格式',
           '支持在同一个已加载的基础模型上服务多个LoRA适配器',
           '对兼容请求格式支持结构化输出和函数/工具调用',
@@ -1945,7 +1952,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '使用来自[Hugging Face](https://huggingface.co/models)的模型启动OpenAI兼容服务器，例如：`vllm serve meta-llama/Llama-3.1-8B-Instruct`。',
           '对于预量化模型，传入相应的参数，例如：`vllm serve TheBloke/Llama-2-13B-AWQ --quantization awq`。',
           '如需多GPU服务，添加张量并行参数，例如：`vllm serve <model> --tensor-parallel-size 2`将模型拆分到两块GPU上。',
-          '默认情况下服务器监听`http://localhost:8000`；使用任意兼容OpenAI API的客户端库或`curl`向其`/v1/chat/completions`端点发送请求。',
+          '服务器默认端口为8000；使用任意兼容OpenAI API的客户端库或`curl`向其`/v1/chat/completions`端点（在同一台机器上例如`http://localhost:8000/v1/chat/completions`）发送请求。',
           '只需更改基础URL和模型名称，即可让现有的OpenAI API客户端代码指向你的自托管服务器。',
         ],
         faqs: [
@@ -1998,7 +2005,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: '在以下情况避免使用vLLM',
             list: [
               '你想在自己的笔记本或台式机上运行模型，用于个人单用户聊天——Ollama或LM Studio更适合这个需求',
-              '你没有受支持的GPU——vLLM的CPU后端不是其重点，也没有像llama.cpp或Ollama那样有意义的Apple Silicon支持',
+              '你没有受支持的GPU——vLLM的CPU后端不是其重点，对Apple Silicon的支持也不像llama.cpp或Ollama那样是一流路径',
               '你想要图形化的点选界面，而不是API服务器和命令行参数',
               '你不习惯排查CUDA驱动问题、Python依赖冲突或GPU内存配置',
             ],
@@ -2039,7 +2046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: '错误1：试图在没有独立GPU的笔记本上运行它',
-            content: 'vLLM的CPU后端确实存在，但不是其重点，也没有像llama.cpp或Ollama那样有意义的Apple Silicon支持。试图在纯CPU笔记本或Apple Silicon Mac上运行它，通常会导致性能不佳，或者出现专为该场景设计的本地工具完全可以避免的安装麻烦。',
+            content: 'vLLM的CPU后端确实存在，但不是其重点，对Apple Silicon的支持也不像llama.cpp或Ollama那样是一流路径。试图在纯CPU笔记本或Apple Silicon Mac上运行它，通常会导致性能不佳，或者出现专为该场景设计的本地工具完全可以避免的安装麻烦。',
           },
           {
             title: '错误2：期待图形安装程序或聊天窗口',
@@ -2100,7 +2107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'vLLM',
     title: 'شرح vLLM: خادم استدلال نماذج اللغة عالي الإنتاجية مع PagedAttention (2026)',
     seoTitle: 'شرح vLLM: خادم استدلال نماذج اللغة عالي الإنتاجية مع PagedAttention (2026)',
-    intro: 'vLLM مكتبة مجانية مرخّصة بموجب Apache 2.0 لاستدلال وخدمة نماذج اللغة الكبيرة، نشأت في مختبر Sky Computing Lab بجامعة [UC Berkeley](https://github.com/vllm-project/vllm) وتصونها اليوم مجتمعة مفتوحة المصدر كبيرة. مساهمتها التقنية الأساسية هي PagedAttention، وهي تقنية لإدارة الذاكرة الخاصة بذاكرة التخزين المؤقت للانتباه (مفتاح-قيمة، KV) تتيح لوحدة معالجة الرسومات خدمة عدد أكبر بكثير من الطلبات المتزامنة من نفس الذاكرة مقارنة بتطبيقات الانتباه التقليدية، إلى جانب التجميع المستمر (continuous batching) الذي يبقي وحدة المعالجة الرسومية مشغولة عبر طلبات متزامنة عديدة بدلاً من معالجتها في دفعات ثابتة. يأتي vLLM مزودًا بخادم API متوافق مع OpenAI، ويستهدف الخدمة الإنتاجية متعددة المستخدمين — وهو أداة مختلفة عن تطبيقات سطح المكتب أحادية المستخدم مثل Ollama أو LM Studio.',
+    intro: 'vLLM مكتبة مجانية مرخّصة بموجب Apache 2.0 لاستدلال وخدمة نماذج اللغة الكبيرة، نشأت في مختبر Sky Computing Lab بجامعة UC Berkeley وتصونها اليوم مجتمعة مفتوحة المصدر كبيرة. مساهمتها التقنية الأساسية هي PagedAttention، وهي تقنية لإدارة الذاكرة الخاصة بذاكرة التخزين المؤقت للانتباه (مفتاح-قيمة، KV) تتيح لوحدة معالجة الرسومات خدمة عدد أكبر بكثير من الطلبات المتزامنة من نفس الذاكرة مقارنة بتطبيقات الانتباه التقليدية، إلى جانب التجميع المستمر (continuous batching) الذي يبقي وحدة المعالجة الرسومية مشغولة عبر طلبات متزامنة عديدة بدلاً من معالجتها في دفعات ثابتة. تخزّن PagedAttention هذه الذاكرة في كتل غير متجاورة بحجم صفحة، بأسلوب يشبه إدارة نظام التشغيل للذاكرة الافتراضية، فلا تحجز وحدة معالجة الرسومات ذاكرة زائدة لكل طلب. كما يدعم vLLM صيغ تكميم مثل AWQ وGPTQ وFP8، والخدمة متعددة وحدات المعالجة الرسومية بالتوازي الموتري. يأتي vLLM مزودًا بخادم API متوافق مع OpenAI، ويستهدف الخدمة الإنتاجية متعددة المستخدمين — وهو أداة مختلفة عن تطبيقات سطح المكتب أحادية المستخدم مثل Ollama أو LM Studio.',
     metaDescription: 'vLLM هو خادم الاستدلال المجاني المرخّص بموجب Apache 2.0 والمبني حول PagedAttention والتجميع المستمر. ما هو، وكيف يختلف عن Ollama وTGI وTensorRT-LLM، وكيفية تشغيله.',
     readTime: '13 دقيقة قراءة',
     targetKeywords: [
@@ -2111,13 +2118,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'vLLM مقابل TGI',
       '[github.com/vllm-project/vllm](https://github.com/vllm-project/vllm)',
     ],
-    leadAnswerBlock: '**vLLM مكتبة مجانية ومفتوحة المصدر (Apache 2.0) لاستدلال وخدمة نماذج اللغة الكبيرة بإنتاجية عالية، نشأت في مختبر Sky Computing Lab بجامعة [UC Berkeley](https://github.com/vllm-project/vllm) وتصونها اليوم مجتمعة مفتوحة المصدر كبيرة.** الميزة التقنية الأساسية التي تميزها هي PagedAttention، التي تدير ذاكرة التخزين المؤقت KV الخاصة بالانتباه في كتل غير متجاورة بحجم ثابت — بأسلوب يشبه إدارة نظام التشغيل للذاكرة الافتراضية — مما يتيح لوحدة معالجة الرسومات الاحتفاظ بحالة عدد أكبر بكثير من الطلبات المتزامنة دون حجز ذاكرة زائدة لكل طلب. وبالجمع مع التجميع المستمر، يتيح ذلك لـ vLLM خدمة عدد كبير من المستخدمين المتزامنين من وحدة معالجة رسومية واحدة (أو إعداد متعدد وحدات المعالجة الرسومية بالتوازي الموتري) مع هدر أقل للذاكرة مقارنة بحلقة خدمة تقليدية. يأتي vLLM مزودًا بخادم API متوافق مع OpenAI (‏`vllm serve`‏)، ويدعم صيغ تكميم مثل AWQ وGPTQ وFP8، وهو مبني للخدمة الإنتاجية ومتعددة المستأجرين — وليس لحالة الاستخدام الفردي بالنقر التي تستهدفها أدوات مثل Ollama وLM Studio.',
+    leadAnswerBlock: '**vLLM مكتبة مجانية ومفتوحة المصدر (Apache 2.0) لاستدلال وخدمة نماذج اللغة الكبيرة بإنتاجية عالية.** تعتمد على PagedAttention والتجميع المستمر لخدمة طلبات متزامنة كثيرة من وحدة معالجة رسومية واحدة، وتأتي مزودة بخادم API متوافق مع OpenAI (`vllm serve`).',
     quickAnswerTop: {
       ar: {
         question: 'ما هو vLLM وكيف يعمل؟',
         answer: 'vLLM مكتبة مجانية مرخّصة بموجب Apache 2.0 لاستدلال وخدمة نماذج اللغة الكبيرة، نشأت في مختبر Sky Computing Lab بجامعة UC Berkeley. تدير ذاكرة التخزين المؤقت KV الخاصة بالانتباه عبر PagedAttention — بتقسيمها إلى كتل بحجم ثابت بدلاً من تخصيص متجاور واحد لكل طلب — وتجمع ذلك مع التجميع المستمر لخدمة عدد كبير من المستخدمين المتزامنين بكفاءة من وحدة معالجة رسومية واحدة. تأتي مزودة بخادم متوافق مع OpenAI وهي مبنية للخدمة الإنتاجية، لا لدردشة سطح المكتب أحادية المستخدم.',
         bullets: [
-          'مرخّصة بموجب Apache 2.0، نشأت في مختبر Sky Computing Lab بجامعة [UC Berkeley](https://github.com/vllm-project/vllm)',
+          'مرخّصة بموجب Apache 2.0، نشأت في مختبر Sky Computing Lab بجامعة UC Berkeley',
           'PagedAttention: إدارة ذاكرة التخزين المؤقت KV في كتل غير متجاورة بحجم ثابت',
           'التجميع المستمر يبقي وحدة معالجة الرسومات مشغولة عبر طلبات متزامنة عديدة',
           'خادم API متوافق مع OpenAI مدمج عبر أمر `vllm serve`',
@@ -2151,7 +2158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'بدلاً من تطبيق دردشة لسطح المكتب، فإن vLLM برنامج خادم: توجّهه إلى نموذج فيعرض واجهة برمجية يمكن لعدد كبير من الأشخاص أو التطبيقات استدعاؤها في الوقت نفسه، مستغلًا ذاكرة وحدة معالجة الرسومات بكفاءة أكبر من إعداد بسيط يعالج طلبًا واحدًا في كل مرة.' },
         ],
         items: [
-          'مجانية ومفتوحة المصدر بموجب رخصة Apache 2.0، نشأت في مختبر Sky Computing Lab بجامعة [UC Berkeley](https://github.com/vllm-project/vllm)',
+          'مجانية ومفتوحة المصدر بموجب رخصة Apache 2.0، نشأت في مختبر Sky Computing Lab بجامعة UC Berkeley',
           'PagedAttention تدير ذاكرة التخزين المؤقت KV في كتل غير متجاورة بحجم ثابت لتقليل هدر ذاكرة وحدة معالجة الرسومات',
           'التجميع المستمر يعالج عددًا كبيرًا من الطلبات المتزامنة بدلاً من دفعة ثابتة واحدة في كل مرة',
           'تأتي مزودة بخادم API متوافق مع OpenAI، يُشغَّل بأمر `vllm serve`',
@@ -2167,13 +2174,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-vllm',
         title: 'ما هو vLLM؟',
-        content: 'vLLM مكتبة وخادم مجانيان مرخّصان بموجب Apache 2.0 لتشغيل استدلال نماذج اللغة الكبيرة على نطاق واسع. نشأ كمشروع بحثي في مختبر Sky Computing Lab بجامعة [UC Berkeley](https://github.com/vllm-project/vllm)، وأصبح منذ ذلك الحين أحد أكثر محركات خدمة نماذج اللغة الكبيرة مفتوحة المصدر استخدامًا، بمساهمات من آلاف المطورين من مؤسسات أكاديمية وصناعية. وعلى عكس الأدوات المصممة أساسًا لمستخدم واحد يتحدث إلى نموذج على جهازه الخاص، صُمم vLLM لخدمة عدد كبير من الطلبات المتزامنة — من عدة مستخدمين أو تطبيقات — بأكبر قدر ممكن من الكفاءة من سعة وحدة معالجة رسومية مشتركة.',
+        content: 'vLLM مكتبة وخادم مجانيان مرخّصان بموجب Apache 2.0 لتشغيل استدلال نماذج اللغة الكبيرة على نطاق واسع. نشأ كمشروع بحثي في مختبر Sky Computing Lab بجامعة UC Berkeley، وأصبح منذ ذلك الحين محرك خدمة مفتوح المصدر لنماذج اللغة الكبيرة واسع الاستخدام، بمساهمات مجتمع كبير من المطورين من مؤسسات أكاديمية وصناعية. وعلى عكس الأدوات المصممة أساسًا لمستخدم واحد يتحدث إلى نموذج على جهازه الخاص، صُمم vLLM لخدمة عدد كبير من الطلبات المتزامنة — من عدة مستخدمين أو تطبيقات — بأكبر قدر ممكن من الكفاءة من سعة وحدة معالجة رسومية مشتركة.',
         items: [
-          'نشأ في مختبر Sky Computing Lab بجامعة [UC Berkeley](https://github.com/vllm-project/vllm)، وهو اليوم مشروع مفتوح المصدر تحكمه المجتمعة',
+          'نشأ في مختبر Sky Computing Lab بجامعة UC Berkeley، وهو اليوم مشروع مفتوح المصدر تحكمه المجتمعة',
           'مرخّص بموجب Apache 2.0: الشيفرة المصدرية متاحة للجمهور للاستخدام والتعديل وإعادة التوزيع وفق شروط الرخصة',
           'يحمّل النماذج بصيغة متوافقة مع Hugging Face Transformers، مما يمنحه تغطية واسعة للمعماريات — Llama وMistral وQwen وDeepSeek والعديد من عائلات النماذج الأخرى — دون الحاجة إلى خطوة تحويل منفصلة لمعظم النماذج',
           'مبني لخدمة عدد كبير من الطلبات المتزامنة بكفاءة، وليس فقط لتشغيل محادثة واحدة بسرعة',
-          'أحد أكثر مشاريع خدمة نماذج اللغة الكبيرة مفتوحة المصدر إشارة إليها على GitHub',
+          'يُطوَّر علنًا على GitHub مع إصدارات عامة ووثائق',
         ],
         note: 'vLLM بنية تحتية لخادم، وليس تطبيق دردشة موجّهًا للمستهلكين — لا يوجد مثبّت رسومي ولا تجربة "تنزيل ثم نقر". إذا كنت تريد تطبيق دردشة محلي يُدار بالنقر، فأدوات مثل Ollama أو LM Studio مصممة لهذا الاستخدام؛ راجع جدول المقارنة أدناه.',
       },
@@ -2225,7 +2232,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'يؤدي تشغيل `vllm serve` إلى بدء تشغيل خادم HTTP يطبّق بروتوكول واجهة برمجة تطبيقات OpenAI، بحيث يمكن للتطبيقات وحِزم التطوير (SDKs) المبنية أصلًا على واجهة OpenAI أن تشير غالبًا إلى نسخة vLLM مستضافة ذاتيًا بمجرد تغيير عنوان URL الأساسي واسم النموذج.',
         items: [
           'نقاط نهاية متوافقة مع OpenAI لإكمالات الدردشة والإكمالات، قابلة للاستخدام كبديل مباشر لشيفرة العميل المعتمدة على واجهة OpenAI',
-          'مضيف ومنفذ قابلان للتهيئة (يستمع الخادم افتراضيًا على `http://localhost:8000`)',
+          'مضيف ومنفذ قابلان للتهيئة (المنفذ الافتراضي 8000؛ يحدد الخيار `--host` واجهات الشبكة التي يستمع عليها الخادم)',
+          'يتطلب الخيار الاختياري `--api-key` مفتاحًا في ترويسة الطلب، لكنه وفق [مرجع CLI الخاص بـ vLLM](https://docs.vllm.ai/en/latest/cli/serve/) يصادق فقط على بادئات المسارات `/v1` و`/v2` و`/inference`، وتبقى نقاط النهاية الأخرى مفتوحة؛ لذا لا تعرّض الخادم لشبكات غير موثوقة دون جدار حماية أو وكيل عكسي',
           'أعلام محرك لحجم التوازي الموتري، وهدف استخدام ذاكرة وحدة معالجة الرسومات، وصيغة التكميم، تُضبط عند بدء تشغيل الخادم',
           'دعم لخدمة عدة محوّلات LoRA على نفس النموذج الأساسي المحمَّل',
           'دعم للمخرجات المهيكلة واستدعاء الدوال/الأدوات لصيغ الطلبات المتوافقة',
@@ -2242,7 +2250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'شغّل الخادم المتوافق مع OpenAI بنموذج من [Hugging Face](https://huggingface.co/models)، مثال: `vllm serve meta-llama/Llama-3.1-8B-Instruct`.',
           'لنموذج مكمَّم مسبقًا، مرّر العلم المطابق، مثال: `vllm serve TheBloke/Llama-2-13B-AWQ --quantization awq`.',
           'للخدمة عبر عدة وحدات معالجة رسومية، أضف علم التوازي الموتري، مثال: `vllm serve <model> --tensor-parallel-size 2` لتوزيع النموذج على وحدتي معالجة رسومية.',
-          'يستمع الخادم افتراضيًا على `http://localhost:8000`؛ أرسل طلبًا إلى نقطة النهاية `/v1/chat/completions` باستخدام أي مكتبة عميل متوافقة مع واجهة OpenAI، أو باستخدام `curl`.',
+          'المنفذ الافتراضي للخادم هو 8000؛ أرسل طلبًا إلى نقطة النهاية `/v1/chat/completions` (على الجهاز نفسه مثلًا `http://localhost:8000/v1/chat/completions`) باستخدام أي مكتبة عميل متوافقة مع واجهة OpenAI، أو باستخدام `curl`.',
           'وجّه شيفرة عميل OpenAI الحالية إلى خادمك المستضاف ذاتيًا بتغيير عنوان URL الأساسي واسم النموذج فقط.',
         ],
         faqs: [
@@ -2295,7 +2303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'تجنّب vLLM إذا',
             list: [
               'أردت تشغيل نموذج على حاسوبك المحمول أو المكتبي الخاص لدردشة شخصية أحادية المستخدم — تناسب Ollama أو LM Studio هذه الحاجة بشكل أفضل بكثير',
-              'لا تملك وحدة معالجة رسومية مدعومة — خلفية المعالج المركزي في vLLM ليست محور تركيزه، ولا يوجد دعم فعلي لـ Apple Silicon كما هو الحال في llama.cpp أو Ollama',
+              'لا تملك وحدة معالجة رسومية مدعومة — خلفية المعالج المركزي في vLLM ليست محور تركيزه، ودعمه لـ Apple Silicon ليس من الدرجة الأولى كما هو الحال في llama.cpp أو Ollama',
               'تريد واجهة رسومية تُدار بالنقر بدلاً من خادم API وأعلام سطر الأوامر',
               'لا تشعر بالارتياح في استكشاف مشكلات تعريفات CUDA أو تعارضات تبعيات بايثون أو تهيئة ذاكرة وحدة معالجة الرسومات وإصلاحها',
             ],
@@ -2336,7 +2344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'الخطأ الأول: محاولة تشغيله على حاسوب محمول دون وحدة معالجة رسومية مخصصة',
-            content: 'خلفية المعالج المركزي في vLLM موجودة لكنها ليست محور تركيزه، ولا يوجد دعم فعلي لـ Apple Silicon كما هو الحال في llama.cpp أو Ollama. محاولة تشغيله على حاسوب محمول يعتمد على المعالج المركزي فقط أو جهاز Mac بمعالج Apple Silicon تؤدي عادةً إلى أداء ضعيف أو احتكاك في الإعداد كانت أداة محلية مصممة لهذا الغرض ستتجنبه تمامًا.',
+            content: 'خلفية المعالج المركزي في vLLM موجودة لكنها ليست محور تركيزه، ودعمه لـ Apple Silicon ليس من الدرجة الأولى كما هو الحال في llama.cpp أو Ollama. محاولة تشغيله على حاسوب محمول يعتمد على المعالج المركزي فقط أو جهاز Mac بمعالج Apple Silicon تؤدي عادةً إلى أداء ضعيف أو احتكاك في الإعداد كانت أداة محلية مصممة لهذا الغرض ستتجنبه تمامًا.',
           },
           {
             title: 'الخطأ الثاني: توقّع مثبّت رسومي أو نافذة دردشة',
@@ -2397,7 +2405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'vLLM',
     title: 'vLLM이란? PagedAttention 기반 고성능 LLM 서빙 엔진 해설 (2026)',
     seoTitle: 'vLLM이란? PagedAttention 기반 고성능 LLM 서빙 엔진 해설 (2026)',
-    intro: 'vLLM은 [UC Berkeley](https://github.com/vllm-project/vllm)의 Sky Computing Lab에서 시작되어 현재는 대규모 오픈소스 커뮤니티가 관리하는, 무료이며 Apache 2.0 라이선스인 LLM 추론·서빙 라이브러리입니다. 핵심 기술적 기여는 PagedAttention으로, 어텐션 키-값(KV) 캐시를 관리하는 메모리 관리 기법입니다. 이를 통해 단순한 어텐션 구현보다 같은 메모리로 훨씬 더 많은 동시 요청을 GPU에서 처리할 수 있으며, 고정 배치를 순서대로 처리하는 대신 다수의 동시 요청 동안 GPU를 계속 바쁘게 유지하는 continuous batching(연속 배칭)과 결합됩니다. vLLM은 OpenAI 호환 API 서버를 내장하고 있으며 다중 사용자 프로덕션 서빙을 대상으로 합니다 — Ollama나 LM Studio 같은 단일 사용자 데스크톱 앱과는 다른 종류의 도구입니다.',
+    intro: 'vLLM은 UC Berkeley의 Sky Computing Lab에서 시작되어 현재는 대규모 오픈소스 커뮤니티가 관리하는, 무료이며 Apache 2.0 라이선스인 LLM 추론·서빙 라이브러리입니다. 핵심 기술적 기여는 PagedAttention으로, 어텐션 키-값(KV) 캐시를 관리하는 메모리 관리 기법입니다. 이를 통해 단순한 어텐션 구현보다 같은 메모리로 훨씬 더 많은 동시 요청을 GPU에서 처리할 수 있으며, 고정 배치를 순서대로 처리하는 대신 다수의 동시 요청 동안 GPU를 계속 바쁘게 유지하는 continuous batching(연속 배칭)과 결합됩니다. PagedAttention은 이 캐시를 운영체제가 가상 메모리를 관리하는 방식과 비슷하게 페이지 크기의 비연속 블록으로 저장하므로, GPU가 요청마다 메모리를 과도하게 할당하지 않습니다. 또한 vLLM은 AWQ·GPTQ·FP8 등의 양자화 포맷과 텐서 병렬 멀티 GPU 서빙을 지원합니다. vLLM은 OpenAI 호환 API 서버를 내장하고 있으며 다중 사용자 프로덕션 서빙을 대상으로 합니다 — Ollama나 LM Studio 같은 단일 사용자 데스크톱 앱과는 다른 종류의 도구입니다.',
     metaDescription: 'vLLM은 PagedAttention과 continuous batching을 중심으로 구축된 무료, Apache 2.0 라이선스 추론 서버입니다. 정의, Ollama·TGI·TensorRT-LLM과의 차이, 실행 방법을 설명합니다.',
     readTime: '13분 소요',
     targetKeywords: [
@@ -2408,13 +2416,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'vLLM vs TGI',
       '[github.com/vllm-project/vllm](https://github.com/vllm-project/vllm)',
     ],
-    leadAnswerBlock: '**vLLM은 [UC Berkeley](https://github.com/vllm-project/vllm)의 Sky Computing Lab에서 시작되어 현재는 대규모 오픈소스 커뮤니티가 관리하는, 무료이며 오픈소스(Apache 2.0)인 고성능 LLM 추론·서빙 라이브러리입니다.** 핵심 기술적 차별점은 PagedAttention으로, 운영체제가 가상 메모리를 관리하는 방식과 비슷하게 어텐션 KV 캐시를 고정 크기의 비연속 블록으로 관리합니다. 이를 통해 GPU는 각 요청에 메모리를 과도하게 할당하지 않고도 훨씬 더 많은 동시 요청의 상태를 유지할 수 있습니다. continuous batching과 결합하면, vLLM은 단순한 서빙 루프보다 적은 메모리 낭비로 한 대의 GPU(또는 텐서 병렬 멀티 GPU 구성)에서 다수의 동시 사용자를 처리할 수 있습니다. vLLM은 내장 OpenAI 호환 API 서버(`vllm serve`)를 제공하고, AWQ·GPTQ·FP8 등의 양자화 포맷을 지원하며, 프로덕션 및 멀티테넌트 서빙을 위해 만들어졌습니다 — Ollama나 LM Studio 같은 도구가 대상으로 하는 단일 사용자 클릭형 사용 사례를 위한 것이 아닙니다.',
+    leadAnswerBlock: '**vLLM은 무료이며 오픈소스(Apache 2.0)인 고성능 LLM 추론·서빙 라이브러리입니다.** PagedAttention과 continuous batching으로 한 대의 GPU에서 다수의 동시 요청을 처리하며, 내장 OpenAI 호환 API 서버(`vllm serve`)를 제공합니다.',
     quickAnswerTop: {
       ko: {
         question: 'vLLM이란 무엇이고 어떻게 작동하나요?',
         answer: 'vLLM은 UC Berkeley의 Sky Computing Lab에서 시작된, 무료이며 Apache 2.0 라이선스인 LLM 추론·서빙 라이브러리입니다. PagedAttention으로 어텐션 KV 캐시를 관리하는데, 요청마다 하나의 연속된 메모리를 할당하는 대신 고정 크기 블록으로 나눕니다. 여기에 continuous batching을 결합해 한 대의 GPU에서 다수의 동시 사용자를 효율적으로 처리합니다. OpenAI 호환 서버를 내장하고 있으며 단일 사용자 데스크톱 채팅이 아니라 프로덕션 서빙을 위해 만들어졌습니다.',
         bullets: [
-          'Apache 2.0 라이선스, [UC Berkeley](https://github.com/vllm-project/vllm)의 Sky Computing Lab에서 시작',
+          'Apache 2.0 라이선스, UC Berkeley의 Sky Computing Lab에서 시작',
           'PagedAttention: 고정 크기의 비연속 블록으로 KV 캐시 메모리 관리',
           'continuous batching으로 다수의 동시 요청 동안 GPU를 계속 바쁘게 유지',
           '`vllm serve` 명령으로 실행하는 내장 OpenAI 호환 API 서버',
@@ -2448,7 +2456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '데스크톱 채팅 앱이 아니라, vLLM은 서버 소프트웨어입니다. 모델을 지정하면 많은 사람이나 애플리케이션이 동시에 호출할 수 있는 API를 제공하며, 요청을 하나씩 처리하는 단순한 구성보다 GPU 메모리를 더 효율적으로 사용합니다.' },
         ],
         items: [
-          '무료이며 Apache 2.0 라이선스 오픈소스, [UC Berkeley](https://github.com/vllm-project/vllm)의 Sky Computing Lab에서 시작',
+          '무료이며 Apache 2.0 라이선스 오픈소스, UC Berkeley의 Sky Computing Lab에서 시작',
           'PagedAttention이 고정 크기의 비연속 블록으로 KV 캐시를 관리해 GPU 메모리 낭비를 줄임',
           'continuous batching이 고정 배치를 하나씩 처리하는 대신 다수의 동시 요청을 처리함',
           '`vllm serve` 명령으로 실행하는 내장 OpenAI 호환 API 서버',
@@ -2464,13 +2472,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-vllm',
         title: 'vLLM이란 무엇인가?',
-        content: 'vLLM은 대규모로 대형 언어 모델 추론을 실행하기 위한, 무료이며 Apache 2.0 라이선스인 라이브러리이자 서버입니다. [UC Berkeley](https://github.com/vllm-project/vllm)의 Sky Computing Lab의 연구 프로젝트로 시작되었으며, 이후 학계와 업계의 수천 명의 개발자가 기여하는 가장 널리 사용되는 오픈소스 LLM 서빙 엔진 중 하나로 성장했습니다. 자신의 기기에서 모델과 대화하는 단일 사용자를 주로 대상으로 만들어진 도구와 달리, vLLM은 여러 사용자나 애플리케이션의 다수 동시 요청을 공유 GPU 용량에서 가능한 한 효율적으로 처리하도록 설계되었습니다.',
+        content: 'vLLM은 대규모로 대형 언어 모델 추론을 실행하기 위한, 무료이며 Apache 2.0 라이선스인 라이브러리이자 서버입니다. UC Berkeley의 Sky Computing Lab의 연구 프로젝트로 시작되었으며, 이후 학계와 업계의 많은 개발자가 기여하는, 널리 사용되는 오픈소스 LLM 서빙 엔진으로 성장했습니다. 자신의 기기에서 모델과 대화하는 단일 사용자를 주로 대상으로 만들어진 도구와 달리, vLLM은 여러 사용자나 애플리케이션의 다수 동시 요청을 공유 GPU 용량에서 가능한 한 효율적으로 처리하도록 설계되었습니다.',
         items: [
-          '[UC Berkeley](https://github.com/vllm-project/vllm)의 Sky Computing Lab에서 시작되었으며, 현재는 커뮤니티가 주도하는 오픈소스 프로젝트',
+          'UC Berkeley의 Sky Computing Lab에서 시작되었으며, 현재는 커뮤니티가 주도하는 오픈소스 프로젝트',
           'Apache 2.0 라이선스: 소스 코드는 라이선스 조건에 따라 사용, 수정, 재배포를 위해 공개되어 있음',
           'Hugging Face Transformers 호환 포맷으로 모델을 로드해 Llama, Mistral, Qwen, DeepSeek 등 다양한 모델 계열의 아키텍처를 폭넓게 지원하며, 대부분의 모델에서 별도의 변환 단계가 필요 없음',
           '단일 대화를 빠르게 처리하는 것뿐 아니라 다수의 동시 요청을 효율적으로 처리하도록 만들어짐',
-          'GitHub에서 가장 많이 참조되는 오픈소스 LLM 서빙 프로젝트 중 하나',
+          'GitHub에서 공개적으로 개발되며 공개 릴리스와 문서를 제공',
         ],
         note: 'vLLM은 서버 인프라이지 소비자용 채팅 앱이 아닙니다 — 그래픽 설치 프로그램도, "다운로드 후 클릭"하는 경험도 없습니다. 클릭 한 번으로 쓰는 로컬 채팅 앱을 원한다면 Ollama나 LM Studio 같은 도구가 그 용도에 맞게 만들어져 있습니다. 아래 비교표를 참고하세요.',
       },
@@ -2522,7 +2530,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '`vllm serve`를 실행하면 OpenAI API 프로토콜을 구현한 HTTP 서버가 시작되므로, 이미 OpenAI API용으로 만들어진 애플리케이션과 SDK는 흔히 기본 URL과 모델 이름만 바꿔서 자체 호스팅된 vLLM 인스턴스를 가리킬 수 있습니다.',
         items: [
           'OpenAI API 기반 클라이언트 코드의 직접적인 대체재로 사용할 수 있는, OpenAI 호환 채팅 완성 및 완성 엔드포인트',
-          '설정 가능한 호스트와 포트(서버는 기본적으로 `http://localhost:8000`에서 대기)',
+          '설정 가능한 호스트와 포트(기본 포트는 8000이며, `--host`로 서버가 대기할 네트워크 인터페이스를 지정)',
+          '선택적 `--api-key` 플래그는 요청 헤더에 키를 요구하지만, [vLLM CLI 레퍼런스](https://docs.vllm.ai/en/latest/cli/serve/)에 따르면 `/v1`, `/v2`, `/inference` 경로 접두사만 인증하며 다른 엔드포인트는 열려 있으므로, 방화벽이나 리버스 프록시 없이 신뢰할 수 없는 네트워크에 서버를 노출하지 마십시오',
           '서버 시작 시 설정하는, 텐서 병렬 크기·GPU 메모리 사용률 목표·양자화 포맷에 대한 엔진 플래그',
           '하나의 로드된 기본 모델에 대해 여러 LoRA 어댑터를 서빙하는 지원',
           '호환되는 요청 형식에 대한 구조화된 출력 및 함수/도구 호출 지원',
@@ -2539,7 +2548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Hugging Face](https://huggingface.co/models)의 모델로 OpenAI 호환 서버를 시작합니다. 예: `vllm serve meta-llama/Llama-3.1-8B-Instruct`.',
           '사전 양자화된 모델의 경우 해당 플래그를 전달합니다. 예: `vllm serve TheBloke/Llama-2-13B-AWQ --quantization awq`.',
           '멀티 GPU 서빙의 경우 텐서 병렬 플래그를 추가합니다. 예: `vllm serve <model> --tensor-parallel-size 2`로 모델을 두 개의 GPU에 분산합니다.',
-          '기본적으로 서버는 `http://localhost:8000`에서 대기합니다. 아무 OpenAI API 호환 클라이언트 라이브러리나 `curl`로 `/v1/chat/completions` 엔드포인트에 요청을 보냅니다.',
+          '서버의 기본 포트는 8000입니다. 아무 OpenAI API 호환 클라이언트 라이브러리나 `curl`로 `/v1/chat/completions` 엔드포인트(같은 머신에서는 `http://localhost:8000/v1/chat/completions` 등)에 요청을 보냅니다.',
           '기존 OpenAI API 클라이언트 코드는 기본 URL과 모델 이름만 바꿔서 자체 호스팅 서버를 가리키게 합니다.',
         ],
         faqs: [
@@ -2592,7 +2601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: '다음의 경우 vLLM을 피하세요',
             list: [
               '개인적인 단일 사용자 채팅을 위해 자신의 노트북이나 데스크톱에서 모델을 실행하고 싶은 경우 — Ollama나 LM Studio가 훨씬 더 적합함',
-              '지원되는 GPU가 없는 경우 — vLLM의 CPU 백엔드는 초점이 아니며, llama.cpp나 Ollama처럼 의미 있는 Apple Silicon 지원도 없음',
+              '지원되는 GPU가 없는 경우 — vLLM의 CPU 백엔드는 초점이 아니며, Apple Silicon 지원은 llama.cpp나 Ollama처럼 최우선 경로가 아님',
               'API 서버와 명령줄 플래그 대신 그래픽 클릭 인터페이스를 원하는 경우',
               'CUDA 드라이버, 파이썬 의존성 충돌, GPU 메모리 설정을 트러블슈팅하는 데 익숙하지 않은 경우',
             ],
@@ -2633,7 +2642,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: '실수 1: 전용 GPU 없는 노트북에서 실행하려고 하기',
-            content: 'vLLM의 CPU 백엔드는 존재하지만 초점이 아니며, llama.cpp나 Ollama처럼 의미 있는 Apple Silicon 지원도 없습니다. CPU 전용 노트북이나 Apple Silicon Mac에서 실행하려고 하면 대개 성능이 떨어지거나, 이를 위해 만들어진 로컬 도구라면 완전히 피할 수 있었을 설치상의 어려움이 생깁니다.',
+            content: 'vLLM의 CPU 백엔드는 존재하지만 초점이 아니며, Apple Silicon 지원은 llama.cpp나 Ollama처럼 최우선 경로가 아닙니다. CPU 전용 노트북이나 Apple Silicon Mac에서 실행하려고 하면 대개 성능이 떨어지거나, 이를 위해 만들어진 로컬 도구라면 완전히 피할 수 있었을 설치상의 어려움이 생깁니다.',
           },
           {
             title: '실수 2: 그래픽 설치 프로그램이나 채팅 창을 기대하기',

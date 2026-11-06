@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'Prompt chaining turns one overloaded prompt into a short pipeline of focused model calls. This guide gives the definition, examples, a LangChain code sample and the cases where you should not chain.',
       leadAnswerBlock: '**Prompt chaining splits a complex task into a sequence of smaller prompts, where each model call takes the previous step\'s output as its input. Use it when a task breaks into fixed steps that you want to inspect, test and reuse separately.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       lastFactChecked: '2026-11-02 — Anthropic workflow description, Claude prompting guide, LangChain documentation and the Wu et al. and Khattab et al. papers re-checked against the primary sources',
       toc: [
         { label: 'Key Takeaways', anchor: 'key-takeaways' },
@@ -59,7 +59,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Prompt Chaining: Examples, LangChain Code and Patterns',
         description: 'Prompt chaining explained: what it is, worked examples, a LangChain code sample, common patterns and when a single prompt is the better choice.',
         datePublished: '2026-03-26',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: {
@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Prompt chaining splits one task into a sequence of prompts; each LLM call processes the output of the previous one.',
             'It fits tasks that decompose cleanly into fixed subtasks. Anthropic describes the goal as trading latency for higher accuracy by making each call an easier task.',
-            'Chain explicitly when you need to inspect intermediate outputs or enforce a pipeline structure; Claude\'s prompting guide names this as the remaining reason to chain.',
+            'Chain explicitly when you need to inspect intermediate outputs or enforce a pipeline structure; these are the two reasons Claude\'s prompting guide gives for explicit chaining.',
             'Chaining is not chain-of-thought: chain-of-thought is reasoning written out inside one prompt, a chain is several separate calls.',
             'In LangChain, load a model with `init_chat_model`, call `invoke` once per step and pass each result into the next prompt; use LangGraph when you need branching or loops.',
             'Every extra step adds latency, cost and a new place to fail. Add a step only when it makes its call clearly simpler.',
@@ -146,7 +146,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Each call is an easier task, which Anthropic describes as trading latency for higher accuracy.',
-            'You can inspect and validate intermediate outputs, the main reason Claude\'s prompting guide gives for chaining explicitly.',
+            'You can inspect and validate intermediate outputs, one of the two reasons Claude\'s prompting guide gives for chaining explicitly.',
             'Steps are reusable: "summarize", "extract entities" or "translate" can be shared across workflows.',
             'You can assign a different model to each step, for example a small fast model for extraction and a stronger one for writing.',
           ],
@@ -422,7 +422,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'Prompt Chaining macht aus einem überladenen Prompt eine kurze Pipeline fokussierter Modellaufrufe. Dieser Leitfaden liefert Definition, Beispiele, ein LangChain-Codebeispiel und die Fälle, in denen Sie nicht verketten sollten.',
       leadAnswerBlock: '**Prompt Chaining zerlegt eine komplexe Aufgabe in eine Folge kleinerer Prompts, wobei jeder Modellaufruf die Ausgabe des vorherigen Schritts als Eingabe erhält. Nutzen Sie es, wenn sich die Aufgabe in feste Schritte teilen lässt, die Sie getrennt prüfen, testen und wiederverwenden möchten.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       lastFactChecked: '2026-11-02 — Beschreibung des Workflows bei Anthropic, Claude-Prompting-Leitfaden, LangChain-Dokumentation sowie die Arbeiten von Wu et al. und Khattab et al. anhand der Primärquellen erneut geprüft',
       toc: [
         { label: 'Zusammenfassung', anchor: 'key-takeaways' },
@@ -459,7 +459,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Prompt Chaining: Beispiele, LangChain-Code und Muster',
         description: 'Prompt Chaining erklärt: Definition, Beispiele für Prompt-Ketten, ein LangChain-Codebeispiel, typische Muster und wann ein einzelner Prompt reicht.',
         datePublished: '2026-03-26',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: {
@@ -511,7 +511,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Prompt Chaining zerlegt eine Aufgabe in eine Folge von Prompts; jeder LLM-Aufruf verarbeitet die Ausgabe des vorherigen.',
             'Es passt zu Aufgaben, die sich sauber in feste Teilaufgaben zerlegen lassen. Anthropic beschreibt das Ziel als Tausch von Latenz gegen höhere Genauigkeit, weil jeder Aufruf leichter wird.',
-            'Verketten Sie ausdrücklich, wenn Sie Zwischenergebnisse prüfen oder eine Pipeline-Struktur erzwingen wollen; der Prompting-Leitfaden für Claude nennt genau das als verbleibenden Grund.',
+            'Verketten Sie ausdrücklich, wenn Sie Zwischenergebnisse prüfen oder eine Pipeline-Struktur erzwingen wollen; das sind die beiden Gründe, die der Prompting-Leitfaden für Claude für ausdrückliches Verketten nennt.',
             'Chaining ist nicht Chain-of-Thought: Chain-of-Thought ist ausgeschriebenes Denken innerhalb eines Prompts, eine Kette besteht aus mehreren getrennten Aufrufen.',
             'In LangChain laden Sie ein Modell mit `init_chat_model`, rufen pro Schritt `invoke` auf und reichen jedes Ergebnis an den nächsten Prompt weiter; für Verzweigungen oder Schleifen nutzen Sie LangGraph.',
             'Jeder zusätzliche Schritt kostet Latenz und Geld und ist eine neue Fehlerquelle. Fügen Sie einen Schritt nur hinzu, wenn er seinen Aufruf spürbar einfacher macht.',
@@ -546,7 +546,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Jeder Aufruf ist eine leichtere Aufgabe; Anthropic beschreibt das als Tausch von Latenz gegen höhere Genauigkeit.',
-            'Sie können Zwischenergebnisse prüfen und validieren, der Hauptgrund für ausdrückliches Verketten im Prompting-Leitfaden für Claude.',
+            'Sie können Zwischenergebnisse prüfen und validieren, einer von zwei Gründen, die der Prompting-Leitfaden für Claude für ausdrückliches Verketten nennt.',
             'Schritte sind wiederverwendbar: „Zusammenfassen“, „Entitäten extrahieren“ oder „Übersetzen“ lassen sich in mehreren Workflows teilen.',
             'Sie können jedem Schritt ein anderes Modell zuweisen, etwa ein kleines schnelles Modell für die Extraktion und ein stärkeres für das Schreiben.',
           ],
@@ -822,7 +822,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'El encadenamiento de prompts convierte un prompt sobrecargado en una canalización corta de llamadas al modelo. Esta guía incluye la definición, ejemplos, un código con LangChain y los casos en los que no conviene encadenar.',
       leadAnswerBlock: '**El encadenamiento de prompts (prompt chaining) divide una tarea compleja en una secuencia de prompts más pequeños, donde cada llamada al modelo recibe como entrada la salida del paso anterior. Úsalo cuando la tarea se pueda dividir en pasos fijos que quieras revisar, probar y reutilizar por separado.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       lastFactChecked: '2026-11-02 — descripción del flujo en Anthropic, guía de prompting de Claude, documentación de LangChain y los trabajos de Wu et al. y Khattab et al. comprobados de nuevo en las fuentes primarias',
       toc: [
         { label: 'Puntos clave', anchor: 'key-takeaways' },
@@ -859,7 +859,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Encadenamiento de prompts: ejemplos y código LangChain',
         description: 'Encadenamiento de prompts explicado: qué es, ejemplos de cadenas, un código de ejemplo con LangChain, patrones habituales y cuándo basta un solo prompt.',
         datePublished: '2026-03-26',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: {
@@ -911,7 +911,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'El encadenamiento de prompts divide una tarea en una secuencia de prompts; cada llamada al LLM procesa la salida de la anterior.',
             'Encaja en tareas que se descomponen con claridad en subtareas fijas. Anthropic describe el objetivo como cambiar latencia por mayor precisión, haciendo que cada llamada sea más fácil.',
-            'Encadena de forma explícita cuando necesites inspeccionar resultados intermedios o imponer una estructura de canalización; la guía de prompting de Claude lo indica como la razón que sigue vigente.',
+            'Encadena de forma explícita cuando necesites inspeccionar resultados intermedios o imponer una estructura de canalización; son las dos razones que da la guía de prompting de Claude para el encadenamiento explícito.',
             'Encadenar no es chain-of-thought: chain-of-thought es razonamiento escrito dentro de un solo prompt, una cadena son varias llamadas separadas.',
             'En LangChain, carga un modelo con `init_chat_model`, llama a `invoke` en cada paso y pasa cada resultado al siguiente prompt; usa LangGraph si necesitas ramas o bucles.',
             'Cada paso extra añade latencia, coste y un nuevo punto de fallo. Añade un paso solo si hace claramente más simple su llamada.',
@@ -946,7 +946,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Cada llamada es una tarea más fácil; Anthropic lo describe como cambiar latencia por mayor precisión.',
-            'Puedes inspeccionar y validar los resultados intermedios, el motivo principal que da la guía de prompting de Claude para encadenar de forma explícita.',
+            'Puedes inspeccionar y validar los resultados intermedios, una de las dos razones que da la guía de prompting de Claude para encadenar de forma explícita.',
             'Los pasos son reutilizables: «resumir», «extraer entidades» o «traducir» se pueden compartir entre flujos.',
             'Puedes asignar un modelo distinto a cada paso, por ejemplo uno pequeño y rápido para extraer y otro más potente para redactar.',
           ],
@@ -1222,7 +1222,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'يحوّل ربط البرومبتات برومبتًا واحدًا مثقلًا إلى خط معالجة قصير من استدعاءات مركّزة للنموذج. يقدّم هذا الدليل التعريف والأمثلة وكود LangChain والحالات التي لا يناسبها الربط.',
       leadAnswerBlock: '**يقسّم ربط البرومبتات (Prompt Chaining) المهمة المعقدة إلى سلسلة من البرومبتات الأصغر، ويتلقى كل استدعاء للنموذج مخرجات الخطوة السابقة مدخلًا له. استخدمه عندما تنقسم المهمة إلى خطوات ثابتة تريد فحصها واختبارها وإعادة استخدامها كلًّا على حدة.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       lastFactChecked: '2026-11-02 — أُعيد التحقق من وصف Anthropic لسير العمل ودليل Claude للبرومبتات ووثائق LangChain وورقتَي Wu وآخرين وKhattab وآخرين في المصادر الأولية',
       toc: [
         { label: 'النقاط الرئيسية', anchor: 'key-takeaways' },
@@ -1259,7 +1259,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'ربط البرومبتات: أمثلة وكود LangChain وأنماط',
         description: 'شرح ربط البرومبتات (Prompt Chaining): تعريفه وأمثلة عملية وكود LangChain وأنماط شائعة، ومتى يكفي برومبت واحد بدلًا من سلسلة.',
         datePublished: '2026-03-26',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: {
@@ -1303,7 +1303,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'يقسّم ربط البرومبتات المهمة إلى سلسلة برومبتات، ويعالج كل استدعاء للنموذج اللغوي مخرجات الاستدعاء السابق.',
             'يناسب المهام التي تنقسم بوضوح إلى مهام فرعية ثابتة. تصف Anthropic الهدف بأنه مبادلة زمن الاستجابة بدقة أعلى عبر جعل كل استدعاء أسهل.',
-            'اربط صراحةً عندما تحتاج إلى فحص المخرجات الوسيطة أو فرض بنية معينة لخط المعالجة؛ ويذكر دليل Claude للبرومبتات ذلك سببًا ما زال قائمًا.',
+            'اربط صراحةً عندما تحتاج إلى فحص المخرجات الوسيطة أو فرض بنية معينة لخط المعالجة؛ وهذان هما السببان اللذان يذكرهما دليل Claude للبرومبتات للربط الصريح.',
             'الربط ليس سلسلة التفكير (chain-of-thought): سلسلة التفكير استدلال يُكتب داخل برومبت واحد، أما السلسلة فاستدعاءات منفصلة متعددة.',
             'في LangChain حمّل نموذجًا بـ `init_chat_model` واستدعِ `invoke` في كل خطوة ومرّر النتيجة إلى البرومبت التالي؛ واستخدم LangGraph عند الحاجة إلى التفرع أو الحلقات.',
             'كل خطوة إضافية تزيد زمن الاستجابة والتكلفة وتضيف نقطة فشل جديدة. أضف خطوة فقط إذا جعلت استدعاءها أبسط بوضوح.',
@@ -1336,7 +1336,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'كل استدعاء مهمة أسهل، وتصف Anthropic ذلك بمبادلة زمن الاستجابة بدقة أعلى.',
-            'يمكنك فحص المخرجات الوسيطة والتحقق منها، وهو السبب الرئيسي الذي يذكره دليل Claude للبرومبتات للربط الصريح.',
+            'يمكنك فحص المخرجات الوسيطة والتحقق منها، وهو أحد السببين اللذين يذكرهما دليل Claude للبرومبتات للربط الصريح.',
             'الخطوات قابلة لإعادة الاستخدام: «التلخيص» أو «استخراج الكيانات» أو «الترجمة» يمكن مشاركتها بين سير العمل.',
             'يمكنك إسناد نموذج مختلف لكل خطوة، مثل نموذج صغير سريع للاستخراج ونموذج أقوى للكتابة.',
           ],
@@ -1600,7 +1600,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'O encadeamento de prompts transforma um prompt sobrecarregado em um pipeline curto de chamadas focadas ao modelo. Este guia traz a definição, exemplos, um código com LangChain e os casos em que você não deve encadear.',
       leadAnswerBlock: '**O encadeamento de prompts (prompt chaining) divide uma tarefa complexa em uma sequência de prompts menores, em que cada chamada ao modelo recebe como entrada a saída da etapa anterior. Use quando a tarefa se divide em etapas fixas que você quer inspecionar, testar e reutilizar separadamente.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       lastFactChecked: '2026-11-02 — descrição do fluxo na Anthropic, guia de prompting do Claude, documentação do LangChain e os trabalhos de Wu et al. e Khattab et al. conferidos novamente nas fontes primárias',
       toc: [
         { label: 'Pontos principais', anchor: 'key-takeaways' },
@@ -1637,7 +1637,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Encadeamento de prompts: exemplos e código LangChain',
         description: 'Encadeamento de prompts explicado: o que é, exemplos de cadeias, um código de exemplo com LangChain, padrões comuns e quando um único prompt basta.',
         datePublished: '2026-03-26',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: {
@@ -1689,7 +1689,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'O encadeamento de prompts divide uma tarefa em uma sequência de prompts; cada chamada ao LLM processa a saída da anterior.',
             'Serve para tarefas que se decompõem de forma limpa em subtarefas fixas. A Anthropic descreve o objetivo como trocar latência por mais precisão, tornando cada chamada mais fácil.',
-            'Encadeie explicitamente quando precisar inspecionar saídas intermediárias ou impor uma estrutura de pipeline; o guia de prompting do Claude aponta isso como o motivo que continua válido.',
+            'Encadeie explicitamente quando precisar inspecionar saídas intermediárias ou impor uma estrutura de pipeline; são os dois motivos que o guia de prompting do Claude dá para o encadeamento explícito.',
             'Encadear não é chain-of-thought: chain-of-thought é raciocínio escrito dentro de um único prompt, uma cadeia tem várias chamadas separadas.',
             'No LangChain, carregue um modelo com `init_chat_model`, chame `invoke` a cada etapa e passe cada resultado ao prompt seguinte; use LangGraph para ramificações ou laços.',
             'Cada etapa extra aumenta latência, custo e um novo ponto de falha. Adicione uma etapa só se ela simplificar claramente a chamada.',
@@ -1722,7 +1722,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Cada chamada é uma tarefa mais fácil; a Anthropic descreve isso como trocar latência por mais precisão.',
-            'Você pode inspecionar e validar as saídas intermediárias, principal motivo que o guia de prompting do Claude dá para encadear explicitamente.',
+            'Você pode inspecionar e validar as saídas intermediárias, um dos dois motivos que o guia de prompting do Claude dá para encadear explicitamente.',
             'As etapas são reutilizáveis: «resumir», «extrair entidades» ou «traduzir» podem ser compartilhadas entre fluxos.',
             'Você pode atribuir um modelo diferente a cada etapa, por exemplo um modelo pequeno e rápido para extrair e outro mais forte para redigir.',
           ],
@@ -1994,7 +1994,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'Le chaînage de prompts transforme un prompt surchargé en un court pipeline d\'appels ciblés au modèle. Ce guide donne la définition, des exemples, un code LangChain et les cas où il vaut mieux ne pas chaîner.',
       leadAnswerBlock: '**Le chaînage de prompts (prompt chaining) découpe une tâche complexe en une suite de prompts plus petits, où chaque appel au modèle reçoit en entrée la sortie de l\'étape précédente. Utilisez-le quand la tâche se divise en étapes fixes que vous voulez inspecter, tester et réutiliser séparément.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       lastFactChecked: '2026-11-02 — description du workflow chez Anthropic, guide de prompting de Claude, documentation LangChain et travaux de Wu et al. et Khattab et al. revérifiés dans les sources primaires',
       toc: [
         { label: 'Points clés', anchor: 'key-takeaways' },
@@ -2031,7 +2031,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Chaînage de prompts : exemples et code LangChain',
         description: 'Chaînage de prompts expliqué : définition, exemples de chaînes, exemple de code LangChain, schémas courants et cas où un seul prompt suffit.',
         datePublished: '2026-03-26',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: {
@@ -2083,7 +2083,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Le chaînage de prompts découpe une tâche en une suite de prompts ; chaque appel au LLM traite la sortie du précédent.',
             'Il convient aux tâches qui se décomposent proprement en sous-tâches fixes. Anthropic décrit l\'objectif comme un échange de latence contre plus de précision, en rendant chaque appel plus simple.',
-            'Chaînez explicitement quand vous devez inspecter des sorties intermédiaires ou imposer une structure de pipeline ; le guide de prompting de Claude cite cette raison comme toujours valable.',
+            'Chaînez explicitement quand vous devez inspecter des sorties intermédiaires ou imposer une structure de pipeline ; ce sont les deux raisons que donne le guide de prompting de Claude pour le chaînage explicite.',
             'Le chaînage n\'est pas le chain-of-thought : le chain-of-thought est un raisonnement écrit dans un seul prompt, une chaîne compte plusieurs appels distincts.',
             'Dans LangChain, chargez un modèle avec `init_chat_model`, appelez `invoke` à chaque étape et transmettez chaque résultat au prompt suivant ; utilisez LangGraph pour les branches ou les boucles.',
             'Chaque étape supplémentaire ajoute de la latence, du coût et un nouveau point de défaillance. N\'ajoutez une étape que si elle simplifie nettement son appel.',
@@ -2118,7 +2118,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Chaque appel est une tâche plus simple ; Anthropic décrit cela comme un échange de latence contre plus de précision.',
-            'Vous pouvez inspecter et valider les sorties intermédiaires, raison principale donnée par le guide de prompting de Claude pour chaîner explicitement.',
+            'Vous pouvez inspecter et valider les sorties intermédiaires, l\'une des deux raisons données par le guide de prompting de Claude pour chaîner explicitement.',
             'Les étapes sont réutilisables : « résumer », « extraire des entités » ou « traduire » peuvent servir à plusieurs workflows.',
             'Vous pouvez affecter un modèle différent à chaque étape, par exemple un petit modèle rapide pour l\'extraction et un modèle plus puissant pour la rédaction.',
           ],
@@ -2394,7 +2394,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'プロンプトチェーンは、詰め込みすぎた1つのプロンプトを、役割の絞られた短い呼び出しの連なりに変える手法です。このガイドでは定義、例、LangChainのコード例、チェーンにしない方がよい場面を説明します。',
       leadAnswerBlock: '**プロンプトチェーンとは、複雑なタスクを小さなプロンプトの連なりに分け、各モデル呼び出しが前のステップの出力を入力として受け取る手法です。タスクを固定のステップに分けられ、それぞれを確認・テスト・再利用したいときに使います。**',
       publishDate: '2026-03-26',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       lastFactChecked: '2026-11-02 — Anthropicのワークフロー説明、Claudeのプロンプトガイド、LangChainのドキュメント、Wuら・Khattabらの論文を一次情報で再確認',
       toc: [
         { label: '重要ポイント', anchor: 'key-takeaways' },
@@ -2431,7 +2431,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'プロンプトチェーンの例とLangChainコード',
         description: 'プロンプトチェーン（プロンプトチェイニング）とは何かを、具体例、LangChainのコード例、代表的なパターン、単一プロンプトで十分なケースまで解説します。',
         datePublished: '2026-03-26',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: {
@@ -2464,7 +2464,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'プロンプトチェーンはタスクをプロンプトの連なりに分け、各LLM呼び出しが前の呼び出しの出力を処理します。',
             '固定のサブタスクにきれいに分解できるタスク向けです。Anthropicは、各呼び出しを易しくすることでレイテンシと引き換えに精度を高める手法と説明しています。',
-            '中間出力を確認したい、またはパイプライン構造を強制したいときは、明示的にチェーンにします。Claudeのプロンプトガイドもこれを引き続き有効な理由として挙げています。',
+            '中間出力を確認したい、またはパイプライン構造を強制したいときは、明示的にチェーンにします。Claudeのプロンプトガイドは、明示的なチェーンの理由としてこの2点を挙げています。',
             'チェーンはchain-of-thoughtとは別物です。chain-of-thoughtは1つのプロンプト内で推論を書き出すもので、チェーンは複数の別々の呼び出しです。',
             'LangChainでは`init_chat_model`でモデルを読み込み、ステップごとに`invoke`を呼んで結果を次のプロンプトに渡します。分岐やループにはLangGraphを使います。',
             'ステップを増やすごとにレイテンシとコストが増え、失敗箇所も増えます。その呼び出しが明らかに易しくなる場合だけ追加してください。',
@@ -2493,7 +2493,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '各呼び出しが易しいタスクになります。Anthropicはこれをレイテンシと引き換えに精度を高めることと説明しています。',
-            '中間出力を確認・検証できます。Claudeのプロンプトガイドが明示的にチェーンにする主な理由として挙げています。',
+            '中間出力を確認・検証できます。Claudeのプロンプトガイドが明示的にチェーンにする理由として挙げる2点のうちの1つです。',
             'ステップは再利用できます。「要約」「エンティティ抽出」「翻訳」などを複数のワークフローで共有できます。',
             'ステップごとに別のモデルを割り当てられます。例えば抽出には小さく速いモデル、執筆にはより強力なモデルを使います。',
           ],
@@ -2737,7 +2737,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: '提示链把一个过载的提示拆成一条由专注调用组成的短流水线。本文给出定义、示例、LangChain代码示例，以及不该使用提示链的情形。',
       leadAnswerBlock: '**提示链（Prompt Chaining）把复杂任务拆成一系列较小的提示，每次模型调用都以上一步的输出作为输入。当任务可以拆成固定步骤，并且你希望分别检查、测试和复用每一步时，就适合使用它。**',
       publishDate: '2026-03-26',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       lastFactChecked: '2026-11-02 — 已对照一手资料重新核对Anthropic的工作流说明、Claude提示指南、LangChain文档以及Wu等人和Khattab等人的论文',
       toc: [
         { label: '核心要点', anchor: 'key-takeaways' },
@@ -2774,7 +2774,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '提示链：复杂任务分步示例与LangChain代码',
         description: '提示链（Prompt Chaining）详解：定义、复杂任务的分步示例、LangChain代码示例、常见模式，以及什么时候单个提示就已足够。',
         datePublished: '2026-03-26',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: {
@@ -2807,7 +2807,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '提示链把一个任务拆成一系列提示，每次LLM调用都处理上一次调用的输出。',
             '它适合能清晰拆成固定子任务的任务。Anthropic把目标描述为用延迟换取更高准确率，让每次调用变得更容易。',
-            '需要检查中间输出或强制流水线结构时，再显式串联；Claude提示指南把这一点列为仍然成立的理由。',
+            '需要检查中间输出或强制流水线结构时，再显式串联；这是Claude提示指南给出的显式串联的两个理由。',
             '提示链不是思维链（chain-of-thought）：思维链是在单个提示内写出推理过程，提示链则是多次独立调用。',
             '在LangChain中，用`init_chat_model`加载模型，每一步调用一次`invoke`，把结果传给下一个提示；需要分支或循环时使用LangGraph。',
             '每增加一步都会增加延迟、成本和新的出错点。只有当这一步明显让调用更简单时才增加。',
@@ -2834,7 +2834,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: ['**串联有帮助，是因为大多数真实任务层次太多，单个提示难以可靠完成。** 把理解、规划、生成和检查分开，你就能在每个阶段保持控制。'],
           items: [
             '每次调用都是更简单的任务，Anthropic将其描述为用延迟换取更高准确率。',
-            '可以检查并校验中间输出，这是Claude提示指南给出的显式串联的主要理由。',
+            '可以检查并校验中间输出，这是Claude提示指南给出的显式串联的两个理由之一。',
             '步骤可复用：“摘要”“提取实体”“翻译”等可以在多个工作流之间共享。',
             '可以为每一步分配不同的模型，例如用小而快的模型做提取，用更强的模型做写作。',
           ],
@@ -3046,7 +3046,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: '프롬프트 체이닝은 과부하된 프롬프트 하나를 역할이 분명한 짧은 호출 파이프라인으로 바꿉니다. 이 글은 정의, 예시, LangChain 코드 예제, 체이닝하지 말아야 할 경우를 다룹니다.',
       leadAnswerBlock: '**프롬프트 체이닝은 복잡한 작업을 작은 프롬프트의 연속으로 나누고, 각 모델 호출이 이전 단계의 출력을 입력으로 받게 하는 기법입니다. 작업을 고정된 단계로 나눌 수 있고 각 단계를 따로 점검, 테스트, 재사용하려 할 때 사용합니다.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-11-02',
+      dateModified: '2026-11-06',
       lastFactChecked: '2026-11-02 — Anthropic의 워크플로 설명, Claude 프롬프트 가이드, LangChain 문서, Wu 외와 Khattab 외의 논문을 1차 자료로 다시 확인',
       toc: [
         { label: '핵심 내용', anchor: 'key-takeaways' },
@@ -3083,7 +3083,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '프롬프트 체이닝: 예시와 LangChain 코드 예제',
         description: '프롬프트 체이닝이란 무엇인지, 복잡한 작업을 단계로 나누는 예시, LangChain 코드 예제, 대표 패턴과 단일 프롬프트가 나은 경우를 설명합니다.',
         datePublished: '2026-03-26',
-        dateModified: '2026-11-02',
+        dateModified: '2026-11-06',
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: {
@@ -3116,7 +3116,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '프롬프트 체이닝은 작업을 프롬프트의 연속으로 나누며, 각 LLM 호출은 이전 호출의 출력을 처리합니다.',
             '고정된 하위 작업으로 깔끔하게 분해되는 작업에 적합합니다. Anthropic은 각 호출을 더 쉽게 만들어 지연 시간을 정확도와 맞바꾸는 것이 목표라고 설명합니다.',
-            '중간 출력을 점검하거나 파이프라인 구조를 강제해야 할 때 명시적으로 체이닝합니다. Claude 프롬프트 가이드도 이를 여전히 유효한 이유로 듭니다.',
+            '중간 출력을 점검하거나 파이프라인 구조를 강제해야 할 때 명시적으로 체이닝합니다. Claude 프롬프트 가이드는 명시적 체이닝의 이유로 이 두 가지를 듭니다.',
             '체이닝은 chain-of-thought가 아닙니다. chain-of-thought는 하나의 프롬프트 안에서 추론을 풀어 쓰는 것이고, 체인은 여러 개의 별도 호출입니다.',
             'LangChain에서는 `init_chat_model`로 모델을 불러오고, 단계마다 `invoke`를 호출해 결과를 다음 프롬프트에 전달합니다. 분기나 반복이 필요하면 LangGraph를 사용합니다.',
             '단계가 늘수록 지연 시간과 비용이 늘고 실패 지점도 늘어납니다. 해당 호출이 분명히 쉬워질 때만 단계를 추가하십시오.',
@@ -3149,7 +3149,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '각 호출이 더 쉬운 작업이 됩니다. Anthropic은 이를 지연 시간을 정확도와 맞바꾸는 것이라고 설명합니다.',
-            '중간 출력을 점검하고 검증할 수 있습니다. Claude 프롬프트 가이드가 명시적 체이닝의 주된 이유로 드는 점입니다.',
+            '중간 출력을 점검하고 검증할 수 있습니다. Claude 프롬프트 가이드가 명시적 체이닝의 이유로 드는 두 가지 중 하나입니다.',
             '단계를 재사용할 수 있습니다. "요약", "개체 추출", "번역" 같은 단계를 여러 워크플로에서 공유합니다.',
             '단계마다 다른 모델을 배정할 수 있습니다. 예를 들어 추출에는 작고 빠른 모델을, 작성에는 더 강력한 모델을 씁니다.',
           ],

@@ -164,6 +164,7 @@ import { app as app_obscurify } from './apps/obscurify'
 import { app as app_genva } from './apps/genva'
 import { app as app_whisper_notes } from './apps/whisper-notes'
 import { app as app_aiko } from './apps/aiko'
+import { app as app_weesper_neon_flow } from './apps/weesper-neon-flow'
 import { app as app_anyllm } from './apps/anyllm'
 import { app as app_local_ai_geetmark } from './apps/local-ai-geetmark'
 import { app as app_local_ai_mail } from './apps/local-ai-mail'
@@ -278,6 +279,7 @@ import { app as app_reins } from './apps/reins'
 import { app as app_openvoiceos } from './apps/openvoiceos'
 import { app as app_hillnote } from './apps/hillnote'
 import { app as app_trilium_notes } from './apps/trilium-notes'
+import { app as app_ramen } from './apps/ramen'
 import { app as app_llm_vision } from './apps/llm-vision'
 import { app as app_picoclaw } from './apps/picoclaw'
 import { app as app_scrypted } from './apps/scrypted'
@@ -572,6 +574,7 @@ export const localAiApps: ToolRecord[] = [
   app_openvoiceos,
   app_hillnote,
   app_trilium_notes,
+  app_ramen,
   app_llm_vision,
   app_picoclaw,
   app_scrypted,
@@ -700,6 +703,7 @@ export const localAiApps: ToolRecord[] = [
   app_genva,
   app_whisper_notes,
   app_aiko,
+  app_weesper_neon_flow,
   app_anyllm,
   app_local_ai_geetmark,
   app_local_ai_mail,

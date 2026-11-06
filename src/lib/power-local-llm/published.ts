@@ -621,6 +621,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'reins-review',
   'hillnote-review',
   'trilium-notes-review',
+  'ramen-review',
   'llm-vision-review',
   // picoclaw review (sipeed/picoclaw) — 2026-11-01
   'picoclaw-review',
@@ -743,6 +744,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Whisper Notes review (Voice, Speech & Multimodal) — 2026-10-18
   'whisper-notes-review',
   'aiko-review',
+  'weesper-neon-flow-review',
 
   // TranscriptionSuite review (Voice, Speech & Multimodal) — 2026-10-18
   'transcriptionsuite-review',

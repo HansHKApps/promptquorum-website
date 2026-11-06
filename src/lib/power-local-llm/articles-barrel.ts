@@ -62,6 +62,7 @@ import { article as a_photoprism_review } from './articles/photoprism-review'
 import { article as a_photoview_review } from './articles/photoview-review'
 import { article as a_whisper_notes_review } from './articles/whisper-notes-review'
 import { article as a_aiko_review } from './articles/aiko-review'
+import { article as a_weesper_neon_flow_review } from './articles/weesper-neon-flow-review'
 import { article as a_transcriptionsuite_review } from './articles/transcriptionsuite-review'
 import { article as a_parrot_review } from './articles/parrot-review'
 import { article as a_hiwaifu_review } from './articles/hiwaifu-review'
@@ -103,6 +104,7 @@ import { article as a_reins_review } from './articles/reins-review'
 import { article as a_openvoiceos_review } from './articles/openvoiceos-review'
 import { article as a_hillnote_review } from './articles/hillnote-review'
 import { article as a_trilium_notes_review } from './articles/trilium-notes-review'
+import { article as a_ramen_review } from './articles/ramen-review'
 import { article as a_llm_vision_review } from './articles/llm-vision-review'
 import { article as a_picoclaw_review } from './articles/picoclaw-review'
 import { article as a_scrypted_review } from './articles/scrypted-review'
@@ -760,6 +762,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'photoview-review':                              a_photoview_review,
   'whisper-notes-review':                          a_whisper_notes_review,
   'aiko-review':                                   a_aiko_review,
+  'weesper-neon-flow-review':                      a_weesper_neon_flow_review,
   'transcriptionsuite-review':                     a_transcriptionsuite_review,
   'parrot-review':                                 a_parrot_review,
   'hiwaifu-review':                                a_hiwaifu_review,
@@ -801,6 +804,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'openvoiceos-review':                            a_openvoiceos_review,
   'hillnote-review':                               a_hillnote_review,
   'trilium-notes-review':                          a_trilium_notes_review,
+  'ramen-review':                                  a_ramen_review,
   'llm-vision-review':                             a_llm_vision_review,
   'picoclaw-review':                               a_picoclaw_review,
   'scrypted-review':                               a_scrypted_review,

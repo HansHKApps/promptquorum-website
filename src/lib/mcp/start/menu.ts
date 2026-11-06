@@ -14,9 +14,9 @@ export interface MenuItem {
 export const MENU: readonly MenuItem[] = [
   {
     id: 1,
-    label: 'Find apps for my hardware',
-    examples: ['I have 12 GB VRAM — what can I run for coding?'],
-    tools: ['check_hardware_compatibility', 'find_best_apps', 'estimate_vram'],
+    label: 'Find apps and models for my hardware',
+    examples: ['I have 12 GB VRAM — what can I run for coding?', 'Which local model fits my 24 GB Mac?'],
+    tools: ['check_hardware_compatibility', 'find_best_apps', 'estimate_vram', 'recommend_models', 'list_local_models'],
   },
   {
     id: 2,
@@ -46,7 +46,7 @@ export const MENU: readonly MenuItem[] = [
     id: 6,
     label: 'Learn and read',
     examples: ['Best local coding models', "What's new?"],
-    tools: ['search_promptquorum', 'get_article', 'find_related_content', 'list_clusters', 'get_latest'],
+    tools: ['search_promptquorum', 'get_article', 'find_related_content', 'list_clusters', 'get_latest', 'list_pages', 'get_page'],
   },
   {
     id: 7,

@@ -1,0 +1,1857 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-11-06",
+  "generated_by": "scripts/catalog-build.mjs from data/catalog-candidates.json",
+  "size_note": "size_bytes is the exact byte size of the weights Ollama downloads (plus vision projector where present). Compare to memory in GiB (bytes / 2^30), not to Ollama's decimal \"GB\" label.",
+  "kv_note": "kv.groups comes from the GGUF header of the served file (per-layer KV heads, sliding-window pattern, full-attention interval). kv.exactness is \"modeled\" when the header fully describes the layers and \"upper-bound\" when it does not (full attention is then assumed, so the KV estimate is conservative).",
+  "models": [
+    {
+      "id": "gpt-oss-20b",
+      "registry_model": "gpt-oss-20b",
+      "family": "gpt-oss",
+      "company": "OpenAI",
+      "variant": "gpt-oss 20B",
+      "params_b": 20.9,
+      "active_params_b": 3.6,
+      "active_params_source": "https://huggingface.co/openai/gpt-oss-20b",
+      "context_max": 131072,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/gpt-oss:20b",
+      "capabilities": {
+        "vision": false,
+        "tools": true,
+        "reasoning": true,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "chat-template",
+      "runtimes": {
+        "ollama": "gpt-oss:20b"
+      },
+      "quants": [
+        {
+          "name": "MXFP4",
+          "ollama_tag": "20b",
+          "default": true,
+          "size_bytes": 13793422816,
+          "projector_bytes": 0,
+          "source_url": "https://ollama.com/library/gpt-oss:20b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "gpt-oss",
+        "layers_total": 24,
+        "groups": [
+          {
+            "layers": 24,
+            "kv_heads": 8,
+            "key_length": 64,
+            "value_length": 64,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "upper-bound",
+        "exactness_note": "header gives a 128-token sliding window but not which layers use it; full attention assumed on every layer",
+        "expert_count": 32,
+        "expert_used_count": 4,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/gpt-oss:20b"
+      },
+      "tier": "mid",
+      "best_for": [
+        "chat",
+        "agent",
+        "code"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 17,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/gpt-oss:20b"
+    },
+    {
+      "id": "gpt-oss-120b",
+      "registry_model": "gpt-oss-120b",
+      "family": "gpt-oss",
+      "company": "OpenAI",
+      "variant": "gpt-oss 120B",
+      "params_b": 116.8,
+      "active_params_b": 5.1,
+      "active_params_source": "https://huggingface.co/openai/gpt-oss-120b",
+      "context_max": 131072,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/gpt-oss:120b",
+      "capabilities": {
+        "vision": false,
+        "tools": true,
+        "reasoning": true,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "chat-template",
+      "runtimes": {
+        "ollama": "gpt-oss:120b"
+      },
+      "quants": [
+        {
+          "name": "MXFP4",
+          "ollama_tag": "120b",
+          "default": true,
+          "size_bytes": 65369800832,
+          "projector_bytes": 0,
+          "source_url": "https://ollama.com/library/gpt-oss:120b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "gpt-oss",
+        "layers_total": 36,
+        "groups": [
+          {
+            "layers": 36,
+            "kv_heads": 8,
+            "key_length": 64,
+            "value_length": 64,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "upper-bound",
+        "exactness_note": "header gives a 128-token sliding window but not which layers use it; full attention assumed on every layer",
+        "expert_count": 128,
+        "expert_used_count": 4,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/gpt-oss:120b"
+      },
+      "tier": "xl",
+      "best_for": [
+        "chat",
+        "agent",
+        "code"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 17,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/gpt-oss:120b"
+    },
+    {
+      "id": "qwen3.6-27b",
+      "registry_model": "Qwen 3.6 27B",
+      "family": "qwen3.6",
+      "company": "Alibaba / Qwen",
+      "variant": "Qwen3.6 27B",
+      "params_b": 27.3,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 262144,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/qwen3.6:27b",
+      "capabilities": {
+        "vision": true,
+        "tools": true,
+        "reasoning": true,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "ollama-family-badges",
+      "runtimes": {
+        "ollama": "qwen3.6:27b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "27b",
+          "default": true,
+          "size_bytes": 17769065248,
+          "projector_bytes": 931145568,
+          "source_url": "https://ollama.com/library/qwen3.6:27b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "qwen35",
+        "layers_total": 65,
+        "groups": [
+          {
+            "layers": 16,
+            "kv_heads": 4,
+            "key_length": 256,
+            "value_length": 256,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "attention KV on 1 of every 4 layers; constant-size SSM state not modeled (covered by the flat runtime overhead)",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/qwen3.6:27b"
+      },
+      "tier": "large",
+      "best_for": [
+        "chat",
+        "agent",
+        "code",
+        "docs"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 26,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/qwen3.6:27b"
+    },
+    {
+      "id": "qwen3.6-35b-a3b",
+      "registry_model": "Qwen3.6-35B-A3B",
+      "family": "qwen3.6",
+      "company": "Alibaba / Qwen",
+      "variant": "Qwen3.6 35B-A3B",
+      "params_b": 35.5,
+      "active_params_b": 3,
+      "active_params_source": "https://ollama.com/library/qwen3.6:35b-a3b",
+      "context_max": 262144,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/qwen3.6:35b-a3b",
+      "capabilities": {
+        "vision": true,
+        "tools": true,
+        "reasoning": true,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "ollama-family-badges",
+      "runtimes": {
+        "ollama": "qwen3.6:35b-a3b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "35b-a3b",
+          "default": true,
+          "size_bytes": 22621302688,
+          "projector_bytes": 902821728,
+          "source_url": "https://ollama.com/library/qwen3.6:35b-a3b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "qwen35moe",
+        "layers_total": 41,
+        "groups": [
+          {
+            "layers": 10,
+            "kv_heads": 2,
+            "key_length": 256,
+            "value_length": 256,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "attention KV on 1 of every 4 layers; constant-size SSM state not modeled (covered by the flat runtime overhead)",
+        "expert_count": 256,
+        "expert_used_count": 8,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/qwen3.6:35b-a3b"
+      },
+      "tier": "large",
+      "best_for": [
+        "chat",
+        "agent",
+        "code",
+        "docs"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 26,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/qwen3.6:35b-a3b"
+    },
+    {
+      "id": "qwen3.8-27b",
+      "registry_model": "Qwen3.8-27B",
+      "family": "qwen3.8",
+      "company": "Alibaba / Qwen",
+      "variant": "Qwen3.8 27B",
+      "params_b": 27.3,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 262144,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/qwen3.8:27b",
+      "capabilities": {
+        "vision": true,
+        "tools": true,
+        "reasoning": true,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "ollama-family-badges",
+      "runtimes": {
+        "ollama": "qwen3.8:27b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "27b",
+          "default": true,
+          "size_bytes": 17741860480,
+          "projector_bytes": 931146016,
+          "source_url": "https://ollama.com/library/qwen3.8:27b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "qwen35",
+        "layers_total": 65,
+        "groups": [
+          {
+            "layers": 16,
+            "kv_heads": 4,
+            "key_length": 256,
+            "value_length": 256,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "attention KV on 1 of every 4 layers; constant-size SSM state not modeled (covered by the flat runtime overhead)",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/qwen3.8:27b"
+      },
+      "tier": "large",
+      "best_for": [
+        "chat",
+        "agent",
+        "code",
+        "docs"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 30,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/qwen3.8:27b"
+    },
+    {
+      "id": "qwen3.5-9b",
+      "registry_model": "Qwen3.5 9B",
+      "family": "qwen3.5",
+      "company": "Alibaba / Qwen",
+      "variant": "Qwen3.5 9B",
+      "params_b": 9,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 262144,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/qwen3.5:9b",
+      "capabilities": {
+        "vision": true,
+        "tools": true,
+        "reasoning": true,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "ollama-family-badges",
+      "runtimes": {
+        "ollama": "qwen3.5:9b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "9b",
+          "default": true,
+          "size_bytes": 6550813952,
+          "projector_bytes": 921704832,
+          "source_url": "https://ollama.com/library/qwen3.5:9b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "qwen35",
+        "layers_total": 32,
+        "groups": [
+          {
+            "layers": 8,
+            "kv_heads": 4,
+            "key_length": 256,
+            "value_length": 256,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "attention KV on 1 of every 4 layers; constant-size SSM state not modeled (covered by the flat runtime overhead)",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/qwen3.5:9b"
+      },
+      "tier": "small",
+      "best_for": [
+        "chat",
+        "docs"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 12,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/qwen3.5:9b"
+    },
+    {
+      "id": "qwen3.5-4b",
+      "registry_model": "Qwen3.5 4B",
+      "family": "qwen3.5",
+      "company": "Alibaba / Qwen",
+      "variant": "Qwen3.5 4B",
+      "params_b": 4.2,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 262144,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/qwen3.5:4b",
+      "capabilities": {
+        "vision": true,
+        "tools": true,
+        "reasoning": true,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "ollama-family-badges",
+      "runtimes": {
+        "ollama": "qwen3.5:4b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "4b",
+          "default": true,
+          "size_bytes": 3324162336,
+          "projector_bytes": 675569120,
+          "source_url": "https://ollama.com/library/qwen3.5:4b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "qwen35",
+        "layers_total": 32,
+        "groups": [
+          {
+            "layers": 8,
+            "kv_heads": 4,
+            "key_length": 256,
+            "value_length": 256,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "attention KV on 1 of every 4 layers; constant-size SSM state not modeled (covered by the flat runtime overhead)",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/qwen3.5:4b"
+      },
+      "tier": "small",
+      "best_for": [
+        "chat",
+        "phone"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 12,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/qwen3.5:4b"
+    },
+    {
+      "id": "qwen3-14b",
+      "registry_model": "Qwen3 14B",
+      "family": "qwen3",
+      "company": "Alibaba / Qwen",
+      "variant": "Qwen3 14B",
+      "params_b": 14.8,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 40960,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/qwen3:14b",
+      "capabilities": {
+        "vision": false,
+        "tools": true,
+        "reasoning": true,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "chat-template",
+      "runtimes": {
+        "ollama": "qwen3:14b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "14b",
+          "default": true,
+          "size_bytes": 9276184896,
+          "projector_bytes": 0,
+          "source_url": "https://ollama.com/library/qwen3:14b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "qwen3",
+        "layers_total": 40,
+        "groups": [
+          {
+            "layers": 40,
+            "kv_heads": 8,
+            "key_length": 128,
+            "value_length": 128,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "full attention on every layer",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/qwen3:14b"
+      },
+      "tier": "mid",
+      "best_for": [
+        "chat",
+        "docs"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 6,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/qwen3:14b"
+    },
+    {
+      "id": "qwen3-8b",
+      "registry_model": "Qwen3 8B",
+      "family": "qwen3",
+      "company": "Alibaba / Qwen",
+      "variant": "Qwen3 8B",
+      "params_b": 8.2,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 40960,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/qwen3:8b",
+      "capabilities": {
+        "vision": false,
+        "tools": true,
+        "reasoning": true,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "chat-template",
+      "runtimes": {
+        "ollama": "qwen3:8b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "8b",
+          "default": true,
+          "size_bytes": 5225374496,
+          "projector_bytes": 0,
+          "source_url": "https://ollama.com/library/qwen3:8b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "qwen3",
+        "layers_total": 36,
+        "groups": [
+          {
+            "layers": 36,
+            "kv_heads": 8,
+            "key_length": 128,
+            "value_length": 128,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "full attention on every layer",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/qwen3:8b"
+      },
+      "tier": "small",
+      "best_for": [
+        "chat",
+        "docs"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 6,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/qwen3:8b"
+    },
+    {
+      "id": "qwen3-30b-a3b",
+      "registry_model": "Qwen3-30B-A3B",
+      "family": "qwen3",
+      "company": "Alibaba / Qwen",
+      "variant": "Qwen3 30B-A3B",
+      "params_b": 30.5,
+      "active_params_b": 3,
+      "active_params_source": "https://ollama.com/library/qwen3:30b-a3b",
+      "context_max": 262144,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/qwen3:30b",
+      "capabilities": {
+        "vision": false,
+        "tools": true,
+        "reasoning": true,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "chat-template",
+      "runtimes": {
+        "ollama": "qwen3:30b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "30b",
+          "default": true,
+          "size_bytes": 18556685856,
+          "projector_bytes": 0,
+          "source_url": "https://ollama.com/library/qwen3:30b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "qwen3moe",
+        "layers_total": 48,
+        "groups": [
+          {
+            "layers": 48,
+            "kv_heads": 4,
+            "key_length": 128,
+            "value_length": 128,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "full attention on every layer",
+        "expert_count": 128,
+        "expert_used_count": 8,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/qwen3:30b"
+      },
+      "tier": "large",
+      "best_for": [
+        "chat",
+        "agent",
+        "docs"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 6,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/qwen3:30b"
+    },
+    {
+      "id": "qwen3-coder-30b",
+      "registry_model": "Qwen3-Coder-30B-A3B",
+      "family": "qwen3-coder",
+      "company": "Alibaba / Qwen",
+      "variant": "Qwen3-Coder 30B-A3B",
+      "params_b": 30.5,
+      "active_params_b": 3,
+      "active_params_source": "https://ollama.com/library/qwen3-coder:30b-a3b-q4_K_M",
+      "context_max": 262144,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/qwen3-coder:30b",
+      "capabilities": {
+        "vision": false,
+        "tools": true,
+        "reasoning": false,
+        "coding": true,
+        "embedding": false
+      },
+      "capabilities_basis": "ollama-family-badges",
+      "runtimes": {
+        "ollama": "qwen3-coder:30b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "30b",
+          "default": true,
+          "size_bytes": 18556688736,
+          "projector_bytes": 0,
+          "source_url": "https://ollama.com/library/qwen3-coder:30b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "qwen3moe",
+        "layers_total": 48,
+        "groups": [
+          {
+            "layers": 48,
+            "kv_heads": 4,
+            "key_length": 128,
+            "value_length": 128,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "full attention on every layer",
+        "expert_count": 128,
+        "expert_used_count": 8,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/qwen3-coder:30b"
+      },
+      "tier": "large",
+      "best_for": [
+        "code",
+        "agent"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 18,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/qwen3-coder:30b"
+    },
+    {
+      "id": "qwen2.5-coder-7b",
+      "registry_model": "Qwen2.5-Coder 7B",
+      "family": "qwen2.5-coder",
+      "company": "Alibaba / Qwen",
+      "variant": "Qwen2.5-Coder 7B",
+      "params_b": 7.6,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 32768,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/qwen2.5-coder:7b",
+      "capabilities": {
+        "vision": false,
+        "tools": true,
+        "reasoning": false,
+        "coding": true,
+        "embedding": false
+      },
+      "capabilities_basis": "chat-template",
+      "runtimes": {
+        "ollama": "qwen2.5-coder:7b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "7b",
+          "default": true,
+          "size_bytes": 4683074048,
+          "projector_bytes": 0,
+          "source_url": "https://ollama.com/library/qwen2.5-coder:7b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "qwen2",
+        "layers_total": 28,
+        "groups": [
+          {
+            "layers": 28,
+            "kv_heads": 4,
+            "key_length": 128,
+            "value_length": 128,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "full attention on every layer",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/qwen2.5-coder:7b"
+      },
+      "tier": "small",
+      "best_for": [
+        "code"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 13,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/qwen2.5-coder:7b"
+    },
+    {
+      "id": "qwen2.5vl-7b",
+      "registry_model": "Qwen2.5-VL",
+      "family": "qwen2.5vl",
+      "company": "Alibaba / Qwen",
+      "variant": "Qwen2.5-VL 7B",
+      "params_b": 8.3,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 128000,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/qwen2.5vl:7b",
+      "capabilities": {
+        "vision": true,
+        "tools": false,
+        "reasoning": false,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "chat-template",
+      "runtimes": {
+        "ollama": "qwen2.5vl:7b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "7b",
+          "default": true,
+          "size_bytes": 5969233408,
+          "projector_bytes": 0,
+          "source_url": "https://ollama.com/library/qwen2.5vl:7b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "qwen25vl",
+        "layers_total": 28,
+        "groups": [
+          {
+            "layers": 28,
+            "kv_heads": 4,
+            "key_length": 128,
+            "value_length": 128,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "full attention on every layer",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/qwen2.5vl:7b"
+      },
+      "tier": "small",
+      "best_for": [
+        "docs",
+        "image"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 31,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/qwen2.5vl:7b"
+    },
+    {
+      "id": "gemma4-e4b",
+      "registry_model": "Gemma 4",
+      "family": "gemma4",
+      "company": "Google DeepMind",
+      "variant": "Gemma 4 E4B",
+      "params_b": 7.5,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 131072,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/gemma4:e4b",
+      "capabilities": {
+        "vision": true,
+        "tools": true,
+        "reasoning": true,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "ollama-family-badges",
+      "runtimes": {
+        "ollama": "gemma4:e4b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "e4b",
+          "default": true,
+          "size_bytes": 6484991552,
+          "projector_bytes": 991552256,
+          "source_url": "https://ollama.com/library/gemma4:e4b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "gemma4",
+        "layers_total": 42,
+        "groups": [
+          {
+            "layers": 35,
+            "kv_heads": 2,
+            "key_length": 256,
+            "value_length": 256,
+            "window_tokens": 512
+          },
+          {
+            "layers": 7,
+            "kv_heads": 2,
+            "key_length": 512,
+            "value_length": 512,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "sliding-window layers capped at the window; global layers cache full context",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/gemma4:e4b"
+      },
+      "tier": "small",
+      "best_for": [
+        "chat",
+        "phone",
+        "image"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 10,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/gemma4:e4b"
+    },
+    {
+      "id": "gemma4-12b",
+      "registry_model": "Gemma 4",
+      "family": "gemma4",
+      "company": "Google DeepMind",
+      "variant": "Gemma 4 12B",
+      "params_b": 11.9,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 262144,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/gemma4:12b",
+      "capabilities": {
+        "vision": true,
+        "tools": true,
+        "reasoning": true,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "ollama-family-badges",
+      "runtimes": {
+        "ollama": "gemma4:12b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "12b",
+          "default": true,
+          "size_bytes": 7556499296,
+          "projector_bytes": 175115616,
+          "source_url": "https://ollama.com/library/gemma4:12b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "gemma4",
+        "layers_total": 48,
+        "groups": [
+          {
+            "layers": 40,
+            "kv_heads": 8,
+            "key_length": 256,
+            "value_length": 256,
+            "window_tokens": 1024
+          },
+          {
+            "layers": 8,
+            "kv_heads": 1,
+            "key_length": 512,
+            "value_length": 512,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "sliding-window layers capped at the window; global layers cache full context",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/gemma4:12b"
+      },
+      "tier": "small",
+      "best_for": [
+        "chat",
+        "docs",
+        "image"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 10,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/gemma4:12b"
+    },
+    {
+      "id": "gemma4-26b-a4b",
+      "registry_model": "Gemma 4",
+      "family": "gemma4",
+      "company": "Google DeepMind",
+      "variant": "Gemma 4 26B-A4B",
+      "params_b": 25.2,
+      "active_params_b": 4,
+      "active_params_source": "https://ollama.com/library/gemma4:26b-a4b",
+      "context_max": 262144,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/gemma4:26b",
+      "capabilities": {
+        "vision": true,
+        "tools": true,
+        "reasoning": true,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "ollama-family-badges",
+      "runtimes": {
+        "ollama": "gemma4:26b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "26b",
+          "default": true,
+          "size_bytes": 18269247200,
+          "projector_bytes": 1194828128,
+          "source_url": "https://ollama.com/library/gemma4:26b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "gemma4",
+        "layers_total": 30,
+        "groups": [
+          {
+            "layers": 25,
+            "kv_heads": 8,
+            "key_length": 256,
+            "value_length": 256,
+            "window_tokens": 1024
+          },
+          {
+            "layers": 5,
+            "kv_heads": 2,
+            "key_length": 512,
+            "value_length": 512,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "sliding-window layers capped at the window; global layers cache full context",
+        "expert_count": 128,
+        "expert_used_count": 8,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/gemma4:26b"
+      },
+      "tier": "large",
+      "best_for": [
+        "chat",
+        "agent",
+        "image"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 10,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/gemma4:26b"
+    },
+    {
+      "id": "gemma4-31b",
+      "registry_model": "Gemma 4",
+      "family": "gemma4",
+      "company": "Google DeepMind",
+      "variant": "Gemma 4 31B",
+      "params_b": 30.7,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 262144,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/gemma4:31b",
+      "capabilities": {
+        "vision": true,
+        "tools": true,
+        "reasoning": true,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "ollama-family-badges",
+      "runtimes": {
+        "ollama": "gemma4:31b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "31b",
+          "default": true,
+          "size_bytes": 19870759488,
+          "projector_bytes": 1200726368,
+          "source_url": "https://ollama.com/library/gemma4:31b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "gemma4",
+        "layers_total": 60,
+        "groups": [
+          {
+            "layers": 50,
+            "kv_heads": 16,
+            "key_length": 256,
+            "value_length": 256,
+            "window_tokens": 1024
+          },
+          {
+            "layers": 10,
+            "kv_heads": 4,
+            "key_length": 512,
+            "value_length": 512,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "sliding-window layers capped at the window; global layers cache full context",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/gemma4:31b"
+      },
+      "tier": "large",
+      "best_for": [
+        "chat",
+        "docs",
+        "image"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 10,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/gemma4:31b"
+    },
+    {
+      "id": "llama3.3-70b",
+      "registry_model": "Llama 3.3 70B",
+      "family": "llama3.3",
+      "company": "Meta",
+      "variant": "Llama 3.3 70B",
+      "params_b": 70.6,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 131072,
+      "license": "Llama 3.3 Community License",
+      "license_source": "https://ollama.com/library/llama3.3:70b",
+      "capabilities": {
+        "vision": false,
+        "tools": true,
+        "reasoning": false,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "chat-template",
+      "runtimes": {
+        "ollama": "llama3.3:70b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "70b",
+          "default": true,
+          "size_bytes": 42520398528,
+          "projector_bytes": 0,
+          "source_url": "https://ollama.com/library/llama3.3:70b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "llama",
+        "layers_total": 80,
+        "groups": [
+          {
+            "layers": 80,
+            "kv_heads": 8,
+            "key_length": 128,
+            "value_length": 128,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "full attention on every layer",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/llama3.3:70b"
+      },
+      "tier": "large",
+      "best_for": [
+        "chat",
+        "docs"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 37,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/llama3.3:70b"
+    },
+    {
+      "id": "llama3.1-8b",
+      "registry_model": "Llama 3.1 8B",
+      "family": "llama3.1",
+      "company": "Meta",
+      "variant": "Llama 3.1 8B",
+      "params_b": 8,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 131072,
+      "license": "Llama 3.1 Community License",
+      "license_source": "https://ollama.com/library/llama3.1:8b",
+      "capabilities": {
+        "vision": false,
+        "tools": true,
+        "reasoning": false,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "chat-template",
+      "runtimes": {
+        "ollama": "llama3.1:8b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "8b",
+          "default": true,
+          "size_bytes": 4920738944,
+          "projector_bytes": 0,
+          "source_url": "https://ollama.com/library/llama3.1:8b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "llama",
+        "layers_total": 32,
+        "groups": [
+          {
+            "layers": 32,
+            "kv_heads": 8,
+            "key_length": 128,
+            "value_length": 128,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "full attention on every layer",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/llama3.1:8b"
+      },
+      "tier": "small",
+      "best_for": [
+        "chat"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 1,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/llama3.1:8b"
+    },
+    {
+      "id": "llama3.2-3b",
+      "registry_model": "Llama 3.2 3B",
+      "family": "llama3.2",
+      "company": "Meta",
+      "variant": "Llama 3.2 3B",
+      "params_b": 3.2,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 131072,
+      "license": "Llama 3.2 Community License",
+      "license_source": "https://ollama.com/library/llama3.2:3b",
+      "capabilities": {
+        "vision": false,
+        "tools": true,
+        "reasoning": false,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "chat-template",
+      "runtimes": {
+        "ollama": "llama3.2:3b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "3b",
+          "default": true,
+          "size_bytes": 2019377376,
+          "projector_bytes": 0,
+          "source_url": "https://ollama.com/library/llama3.2:3b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "llama",
+        "layers_total": 28,
+        "groups": [
+          {
+            "layers": 28,
+            "kv_heads": 8,
+            "key_length": 128,
+            "value_length": 128,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "full attention on every layer",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/llama3.2:3b"
+      },
+      "tier": "tiny",
+      "best_for": [
+        "chat",
+        "phone"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 4,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/llama3.2:3b"
+    },
+    {
+      "id": "phi4-14b",
+      "registry_model": "Phi-4",
+      "family": "phi4",
+      "company": "Microsoft",
+      "variant": "Phi-4 14B",
+      "params_b": 14.7,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 16384,
+      "license": "MIT",
+      "license_source": "https://ollama.com/library/phi4:14b",
+      "capabilities": {
+        "vision": false,
+        "tools": false,
+        "reasoning": false,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "chat-template",
+      "runtimes": {
+        "ollama": "phi4:14b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "14b",
+          "default": true,
+          "size_bytes": 9053114464,
+          "projector_bytes": 0,
+          "source_url": "https://ollama.com/library/phi4:14b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "phi3",
+        "layers_total": 40,
+        "groups": [
+          {
+            "layers": 40,
+            "kv_heads": 10,
+            "key_length": 128,
+            "value_length": 128,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "upper-bound",
+        "exactness_note": "header gives a 131072-token sliding window but not which layers use it; full attention assumed on every layer",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/phi4:14b"
+      },
+      "tier": "mid",
+      "best_for": [
+        "chat",
+        "docs"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 24,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/phi4:14b"
+    },
+    {
+      "id": "mistral-small-24b",
+      "registry_model": "Mistral Small 3 24B",
+      "family": "mistral-small",
+      "company": "Mistral AI",
+      "variant": "Mistral Small 3 24B",
+      "params_b": 23.6,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 32768,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/mistral-small:24b",
+      "capabilities": {
+        "vision": false,
+        "tools": true,
+        "reasoning": false,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "chat-template",
+      "runtimes": {
+        "ollama": "mistral-small:24b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "24b",
+          "default": true,
+          "size_bytes": 14333908384,
+          "projector_bytes": 0,
+          "source_url": "https://ollama.com/library/mistral-small:24b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "llama",
+        "layers_total": 40,
+        "groups": [
+          {
+            "layers": 40,
+            "kv_heads": 8,
+            "key_length": 128,
+            "value_length": 128,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "full attention on every layer",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/mistral-small:24b"
+      },
+      "tier": "mid",
+      "best_for": [
+        "chat",
+        "docs"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 46,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/mistral-small:24b"
+    },
+    {
+      "id": "devstral-small-2-24b",
+      "registry_model": "Devstral Small 2 24B",
+      "family": "devstral-small-2",
+      "company": "Mistral AI",
+      "variant": "Devstral Small 2 24B",
+      "params_b": 24,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 393216,
+      "license": "Apache-2.0",
+      "license_source": "https://huggingface.co/mistralai/Devstral-Small-2-24B-Instruct-2512",
+      "capabilities": {
+        "vision": true,
+        "tools": true,
+        "reasoning": false,
+        "coding": true,
+        "embedding": false
+      },
+      "capabilities_basis": "chat-template",
+      "runtimes": {
+        "ollama": "devstral-small-2:24b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "24b",
+          "default": true,
+          "size_bytes": 15177370240,
+          "projector_bytes": 0,
+          "source_url": "https://ollama.com/library/devstral-small-2:24b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "mistral3",
+        "layers_total": 40,
+        "groups": [
+          {
+            "layers": 40,
+            "kv_heads": 8,
+            "key_length": 128,
+            "value_length": 128,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "full attention on every layer",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/devstral-small-2:24b"
+      },
+      "tier": "mid",
+      "best_for": [
+        "code",
+        "agent"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 56,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/devstral-small-2:24b"
+    },
+    {
+      "id": "deepseek-r1-7b",
+      "registry_model": "DeepSeek-R1 7B",
+      "family": "deepseek-r1",
+      "company": "DeepSeek",
+      "variant": "DeepSeek-R1 7B (distill)",
+      "params_b": 7.6,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 131072,
+      "license": "MIT",
+      "license_source": "https://ollama.com/library/deepseek-r1:7b",
+      "capabilities": {
+        "vision": false,
+        "tools": false,
+        "reasoning": true,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "chat-template",
+      "runtimes": {
+        "ollama": "deepseek-r1:7b"
+      },
+      "quants": [
+        {
+          "name": "Q4_K_M",
+          "ollama_tag": "7b",
+          "default": true,
+          "size_bytes": 4683073184,
+          "projector_bytes": 0,
+          "source_url": "https://ollama.com/library/deepseek-r1:7b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "qwen2",
+        "layers_total": 28,
+        "groups": [
+          {
+            "layers": 28,
+            "kv_heads": 4,
+            "key_length": 128,
+            "value_length": 128,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "full attention on every layer",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/deepseek-r1:7b"
+      },
+      "tier": "small",
+      "best_for": [
+        "chat"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 3,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/deepseek-r1:7b"
+    },
+    {
+      "id": "minicpm-v-8b",
+      "registry_model": "MiniCPM-V",
+      "family": "minicpm-v",
+      "company": "OpenBMB",
+      "variant": "MiniCPM-V 8B",
+      "params_b": 7.6,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 32768,
+      "license": "MiniCPM Model License (OpenBMB)",
+      "license_source": "https://ollama.com/library/minicpm-v:8b",
+      "capabilities": {
+        "vision": true,
+        "tools": false,
+        "reasoning": false,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "chat-template",
+      "runtimes": {
+        "ollama": "minicpm-v:8b"
+      },
+      "quants": [
+        {
+          "name": "Q4_0",
+          "ollama_tag": "8b",
+          "default": true,
+          "size_bytes": 5473831680,
+          "projector_bytes": 1044425152,
+          "source_url": "https://ollama.com/library/minicpm-v:8b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "qwen2",
+        "layers_total": 28,
+        "groups": [
+          {
+            "layers": 28,
+            "kv_heads": 4,
+            "key_length": 128,
+            "value_length": 128,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "full attention on every layer",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/minicpm-v:8b"
+      },
+      "tier": "small",
+      "best_for": [
+        "image",
+        "docs"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 33,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/minicpm-v:8b"
+    },
+    {
+      "id": "smollm2-1.7b",
+      "registry_model": "SmolLM2 1.7B",
+      "family": "smollm2",
+      "company": "Hugging Face",
+      "variant": "SmolLM2 1.7B",
+      "params_b": 1.7,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 8192,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/smollm2:1.7b",
+      "capabilities": {
+        "vision": false,
+        "tools": true,
+        "reasoning": false,
+        "coding": false,
+        "embedding": false
+      },
+      "capabilities_basis": "chat-template",
+      "runtimes": {
+        "ollama": "smollm2:1.7b"
+      },
+      "quants": [
+        {
+          "name": "Q8_0",
+          "ollama_tag": "1.7b",
+          "default": true,
+          "size_bytes": 1820414656,
+          "projector_bytes": 0,
+          "source_url": "https://ollama.com/library/smollm2:1.7b",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": {
+        "arch": "llama",
+        "layers_total": 24,
+        "groups": [
+          {
+            "layers": 24,
+            "kv_heads": 32,
+            "key_length": 64,
+            "value_length": 64,
+            "window_tokens": null
+          }
+        ],
+        "exactness": "modeled",
+        "exactness_note": "full attention on every layer",
+        "expert_count": null,
+        "expert_used_count": null,
+        "basis": "gguf-header",
+        "source_url": "https://ollama.com/library/smollm2:1.7b"
+      },
+      "tier": "tiny",
+      "best_for": [
+        "chat",
+        "phone"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 39,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/smollm2:1.7b"
+    },
+    {
+      "id": "nomic-embed-text",
+      "registry_model": "nomic-embed-text",
+      "family": "nomic-embed-text",
+      "company": "Nomic AI",
+      "variant": "nomic-embed-text",
+      "params_b": 0.137,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 2048,
+      "license": "Apache-2.0",
+      "license_source": "https://ollama.com/library/nomic-embed-text:latest",
+      "capabilities": {
+        "vision": false,
+        "tools": false,
+        "reasoning": false,
+        "coding": false,
+        "embedding": true
+      },
+      "capabilities_basis": "ollama-family-badges",
+      "runtimes": {
+        "ollama": "nomic-embed-text:latest"
+      },
+      "quants": [
+        {
+          "name": "F16",
+          "ollama_tag": "latest",
+          "default": true,
+          "size_bytes": 274290656,
+          "projector_bytes": 0,
+          "source_url": "https://ollama.com/library/nomic-embed-text:latest",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": null,
+      "tier": "tiny",
+      "best_for": [
+        "docs"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 2,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/nomic-embed-text:latest"
+    },
+    {
+      "id": "bge-m3",
+      "registry_model": "BGE-M3",
+      "family": "bge-m3",
+      "company": "BAAI",
+      "variant": "BGE-M3",
+      "params_b": 0.567,
+      "active_params_b": null,
+      "active_params_source": null,
+      "context_max": 8192,
+      "license": "MIT",
+      "license_source": "https://ollama.com/library/bge-m3:latest",
+      "capabilities": {
+        "vision": false,
+        "tools": false,
+        "reasoning": false,
+        "coding": false,
+        "embedding": true
+      },
+      "capabilities_basis": "ollama-family-badges",
+      "runtimes": {
+        "ollama": "bge-m3:latest"
+      },
+      "quants": [
+        {
+          "name": "F16",
+          "ollama_tag": "latest",
+          "default": true,
+          "size_bytes": 1157671200,
+          "projector_bytes": 0,
+          "source_url": "https://ollama.com/library/bge-m3:latest",
+          "verified_date": "2026-11-06"
+        }
+      ],
+      "kv": null,
+      "tier": "tiny",
+      "best_for": [
+        "docs"
+      ],
+      "rank": {
+        "ollama_popularity_rank": 21,
+        "ranked_on": "2026-11-06",
+        "basis": "position in ollama.com/library?sort=popular"
+      },
+      "verified_date": "2026-11-06",
+      "source_url": "https://ollama.com/library/bge-m3:latest"
+    }
+  ]
+}

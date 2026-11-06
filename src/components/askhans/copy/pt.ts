@@ -52,7 +52,7 @@ export const copy: AskCopy = {
   panelLabelPrefix: 'Tema',
   panelLinksHeading: 'Páginas relacionadas',
 
-  // Final consent text as of 2026-11-06 (see docs/askhans-privacy-draft.de.md). On any change bump ASK_HANS_CONSENT_TEXT_VERSION.
+  // Consent text as of 2026-11-06 (see docs/askhans-privacy.de.md). On any change bump ASK_HANS_CONSENT_TEXT_VERSION.
   consentTitle: 'Antes de começar',
   consentParagraphs: [
     'O Ask Hans responde às suas perguntas com a ajuda de IA (Claude, da Anthropic), com base no conteúdo do PromptQuorum. Para isso, o texto que você digita é enviado ao nosso servidor e à Anthropic. Por favor, não informe dados pessoais.',
